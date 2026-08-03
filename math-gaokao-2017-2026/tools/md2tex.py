@@ -46,16 +46,32 @@ FIGMAP = {
     "2020理-t18-圆锥": "f2020li_t18_cone",
     "2020文-t9-程序框图": "f2020wen_t9_flow",
     "2020文-t19-圆锥": "f2020wen_t19_cone",
+    "2020-Ⅱ-t9-复工复产折线图": "f2020x2_t9_lines",
+    "2020-Ⅱ-t11-正弦图象": "f2020x2_t11_sine",
+    "2020-Ⅱ-t16-零件截面": "f2020x2_t16_part",
+    "2020-Ⅱ-t20-四棱锥": "f2020x2_t20_pyr",
     "2021-t20-三棱锥": "f2021_t20_tetra",
     "2021-Ⅱ-t10-正方体": "f2021x2_t10_cubes",
     "2021-Ⅱ-t19-四棱锥": "f2021x2_t19_pyr",
     "2022-t19-棱柱": "f2022_t19_prism",
+    "2022-Ⅱ-t3-举架结构": "f2022x2_t3_jiajia",
+    "2022-Ⅱ-t3-屋顶截面": "f2022x2_t3_roof",
+    "2022-Ⅱ-t11-正方形垂线": "f2022x2_t11_sq",
+    "2022-Ⅱ-t19-频率分布直方图": "f2022x2_t19_hist",
+    "2022-Ⅱ-t20-三棱锥": "f2022x2_t20_tetra",
     "2023-t18-棱柱": "f2023_t18_prism",
+    "2023-Ⅱ-t16-三角函数图象": "f2023x2_t16_sine",
+    "2023-Ⅱ-t19-频率分布直方图": "f2023x2_t19_hist",
+    "2023-Ⅱ-t20-三棱锥": "f2023x2_t20_tetra",
     "2024-t11-曲线": "f2024_t11_curve",
     "2024-t17-四棱锥": "f2024_t17_pyramid",
+    "2024-Ⅱ-t17-翻折": "f2024x2_t17_fold",
     "2025-t6-风速": "f2025_t6_wind",
     "2025-t17-四棱锥": "f2025_t17_pyramid",
+    "2025-2-t17-翻折四边形": "f2025g2_t17_fold",
     "2026-t15-棱柱": "f2026_t15_prism",
+    "2026-2-t15-直方图": "f2026g2_t15_hist",
+    "2026-2-t16-三棱锥": "f2026g2_t16_tetra",
 }
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"
@@ -219,12 +235,25 @@ def convert_block(lines: list[str]) -> list[str]:
 
         # --- 显示公式 ---
         if ln.strip().startswith("$$"):
-            body = ln.strip()
+            s = ln.strip()
+            m = re.match(r"^\$\$(.+?)\$\$(.*)$", s)
+            if m:                       # 单行 $$...$$，允许带尾随文字（如括号段收尾）
+                out += ["\\[" + m.group(1) + "\\]"]
+                if m.group(2).strip():
+                    out += [conv_inline(m.group(2).strip())]
+                i += 1
+                continue
+            body = s
             j = i
-            while not (body.endswith("$$") and len(body) > 2):
+            while j + 1 < n and not (body.endswith("$$") and len(body) > 2):
                 j += 1
                 body += "\n" + lines[j].strip()
-            out += ["\\[" + body[2:-2] + "\\]"]
+            if body.endswith("$$") and len(body) > 2:
+                out += ["\\[" + body[2:-2] + "\\]"]
+            else:                       # 越界护栏：未闭合不崩溃，按行内文本退化并告警
+                warnings.append(f"未闭合的 $$ 块：{s[:50]}")
+                out += [conv_inline(s)]
+                j = i
             i = j + 1
             continue
 
