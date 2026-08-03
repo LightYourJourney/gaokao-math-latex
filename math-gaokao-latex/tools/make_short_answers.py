@@ -110,6 +110,9 @@ def md_path(p):
     if p["track"]:
         t = "理" if p["track"] == "理科" else "文"
         return EXAMS / str(y) / f"{y}_数学真题_{t}_答案要点.md"
+    if p.get("variant"):
+        # 同年多卷别（如新高考Ⅱ、全国2）：文件名带卷别段，见 index.json 的 variant 字段
+        return EXAMS / str(y) / f"{y}_数学真题_{p['variant']}_答案要点.md"
     return EXAMS / str(y) / f"{y}_数学真题_答案要点.md"
 
 
@@ -208,7 +211,7 @@ def main():
         for e in errors:
             print("  ✗", e)
         sys.exit(1)
-    print("\n全部通过：14 份 answers_short.tex 已生成。")
+    print(f"\n全部通过：{len(index['papers'])} 份 answers_short.tex 已生成。")
 
 
 if __name__ == "__main__":

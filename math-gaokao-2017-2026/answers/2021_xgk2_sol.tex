@@ -1,0 +1,1610 @@
+% 由 tools/md2tex.py 自 2021_数学真题_新高考Ⅱ_含解析.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{来源说明}：试题原文取自 deekur/gaokaomath（commit \texttt{34c13a6}，CC BY 4.0）之「2021新高考2」PDF，逐题照图转录。
+
+\textbf{解析归属}：本文档全部解析由本库编写者根据试题独立推导，\textbf{非官方标准答案}。推导过程完整给出以便核验；若与官方发布版本不一致，以官方为准。
+\end{gknotice}
+
+\par\medskip
+
+\gkpart{一、单选题（每小题 5 分，共 40 分）}
+
+\gksolhead{1}{}
+
+\textbf{题目}　复数 $\dfrac{2-\mathrm i}{1-3\mathrm i}$ 在复平面内对应的点所在的象限为（　　）
+
+\textbf{解析}
+
+\textbf{分母实数化}：分子分母同乘分母的共轭 $1+3\mathrm i$。
+
+\[\frac{2-\mathrm i}{1-3\mathrm i}=\frac{(2-\mathrm i)(1+3\mathrm i)}{(1-3\mathrm i)(1+3\mathrm i)}\]
+
+\textbf{分母}（平方差公式，注意 $\mathrm i^{2}=-1$）：
+\[(1-3\mathrm i)(1+3\mathrm i)=1^{2}-(3\mathrm i)^{2}=1+9=10\]
+
+\textbf{分子}：
+\[(2-\mathrm i)(1+3\mathrm i)=2+6\mathrm i-\mathrm i-3\mathrm i^{2}=2+5\mathrm i+3=5+5\mathrm i\]
+
+\textbf{相除}：
+\[\frac{5+5\mathrm i}{10}=\frac12+\frac12\mathrm i\]
+
+对应点为 $\left(\dfrac12,\dfrac12\right)$，横纵坐标均为正，位于\textbf{第一象限}。
+
+\gkanswer{答案：A}
+
+\begin{gktip}
+\textbf{易错点}：复数 $a+b\mathrm i$ 对应的点是 $(a,b)$，即实部作横坐标、虚部（\textbf{不含 $\mathrm i$}）作纵坐标。把 $\dfrac12\mathrm i$ 整体当纵坐标是常见笔误。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{2}{}
+
+\textbf{题目}　若全集 $U=\{1,2,3,4,5,6\}$，集合 $A=\{1,3,6\}$，$B=\{2,3,4\}$，则 $A\cap\left(\complement_U B\right)=$（　　）
+
+\textbf{解析}
+
+\textbf{第一步，求补集}（在 $U$ 中去掉 $B$ 的元素）：
+\[\complement_U B=\{1,2,3,4,5,6\}\setminus\{2,3,4\}=\{1,5,6\}\]
+
+\textbf{第二步，求交集}（同时属于 $A$ 与 $\complement_U B$ 的元素）：
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+元素 & $1$ & $3$ & $6$ \\
+\midrule
+在 $A$ 中 &  &  &  \\
+在 $\complement_U B$ 中 &  & （$3\in B$） &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\[A\cap\left(\complement_U B\right)=\{1,6\}\]
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{方法总结}：「先补后交」比「先交后补」更稳。也可用等价式 $A\cap\complement_U B=A\setminus B$，直接从 $A=\{1,3,6\}$ 里划掉属于 $B$ 的 $3$，一步得到 $\{1,6\}$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{3}{}
+
+\textbf{题目}　若抛物线 $y^{2}=2px\ (p>0)$ 的焦点到直线 $y=x+1$ 的距离为 $\sqrt2$，则 $p=$（　　）
+
+\textbf{解析}
+
+\textbf{第一步，写出焦点。} 抛物线 $y^{2}=2px$ 的焦点为
+\[F\left(\frac p2,\ 0\right)\]
+
+\textbf{第二步，把直线化为一般式。}
+\[y=x+1\ \Longrightarrow\ x-y+1=0\]
+
+\textbf{第三步，用点到直线的距离公式。}
+\[d=\frac{\left|\dfrac p2-0+1\right|}{\sqrt{1^{2}+(-1)^{2}}}=\frac{\left|\dfrac p2+1\right|}{\sqrt2}=\sqrt2\]
+
+\[\left|\frac p2+1\right|=2\ \Longrightarrow\ \frac p2+1=2\ \text{或}\ \frac p2+1=-2\]
+
+\[p=2\qquad\text{或}\qquad p=-6\]
+
+\textbf{第四步，用条件筛选。} 题设 $p>0$，故 $p=-6$ 舍去。
+
+\[p=2\]
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{易错点}：绝对值方程一定有两支，$p=-6$ 是命题人埋的增根。凡题干带 $(p>0)$ 这类括注，最后一步必须回头检验。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{4}{}
+
+\textbf{题目}　北斗三号全球卫星导航系统是我国航天事业的重要成果。在卫星导航系统中，地球静止同步轨道卫星的轨道位于地球赤道所在平面，轨道高度为 $36000\ \mathrm{km}$（轨道高度是指卫星到地球表面的最短距离），把地球看成一个球心为 $O$，半径 $r$ 为 $6400\ \mathrm{km}$ 的球，其上点 $A$ 的纬度是指 $OA$ 与赤道所在平面所成角的度数，地球表面能直接观测到的一颗地球静止同步轨道卫星的点的纬度的最大值记为 $\alpha$，该卫星信号覆盖的地球表面面积 $S=2\pi r^{2}(1-\cos\alpha)$（单位：$\mathrm{km}^{2}$），则 $S$ 占地球表面积的百分比约为（　　）
+
+\textbf{解析}
+
+\textbf{第一步，定出卫星到地心的距离。}
+
+轨道高度是\textbf{到地球表面}的最短距离，故卫星 $Q$ 到地心 $O$ 的距离为
+\[|OQ|=r+36000=6400+36000=42400\ (\mathrm{km})\]
+
+\textbf{第二步（本题的题眼）：纬度最大的可观测点就是切点。}
+
+设 $A$ 是地球表面上恰好能"擦边"看到卫星的点，即 $QA$ 与地球相切。切线垂直于过切点的半径：
+\[OA\perp AQ\]
+
+在直角三角形 $OAQ$ 中（直角在 $A$），$\angle AOQ$ 就是 $A$ 的纬度 $\alpha$（因为 $OQ$ 在赤道平面内），于是
+\[\cos\alpha=\frac{|OA|}{|OQ|}=\frac r{r+36000}=\frac{6400}{42400}=\frac{8}{53}\approx0.1509\]
+
+\textbf{第三步，算百分比。} 地球表面积为 $4\pi r^{2}$：
+
+\[\frac S{4\pi r^{2}}=\frac{2\pi r^{2}(1-\cos\alpha)}{4\pi r^{2}}=\frac{1-\cos\alpha}2\]
+
+\textbf{注意 $r^{2}$ 被约掉了}——结果只与 $\cos\alpha$ 有关：
+
+\[\frac{1-0.1509}2=\frac{0.8491}2\approx0.4245=42.45\%\]
+
+最接近 $42\%$。
+
+\gkanswer{答案：C}
+
+\begin{gktip}
+\textbf{方法总结}：这类"航天情境题"的信息量大，但真正要用的只有三条——① 轨道高度要加上地球半径才是到地心的距离；② 观测的极限位置一定是\textbf{切线}，切点处 $OA\perp AQ$；③ 求"占比"时先把公式相除，$r^{2}$ 往往自动消去，根本不用代 $6400$。
+
+顺带记住：$\dfrac{8}{53}$ 约为 $0.15$，所以答案约为 $\dfrac{1-0.15}2=0.425$，口算即可锁定 C。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{5}{}
+
+\textbf{题目}　正四棱台的上、下底面的边长为 $2$，$4$，侧棱长为 $2$，则其体积为（　　）
+
+\textbf{解析}
+
+\textbf{第一步，求台体的高。}
+
+正四棱台上下底面都是正方形且中心连线垂直于底面。设上底面正方形边长 $a_1=2$、下底面 $a_2=4$，则它们的\textbf{半对角线}分别为
+\[\frac{\sqrt2}2a_1=\sqrt2,\qquad \frac{\sqrt2}2a_2=2\sqrt2\]
+
+把上底面的一个顶点竖直投影到下底面，投影点到下底面中心的距离是 $\sqrt2$，而下底面对应顶点到中心的距离是 $2\sqrt2$，故侧棱在底面上的\textbf{水平投影长}为
+\[2\sqrt2-\sqrt2=\sqrt2\]
+
+侧棱长为 $2$，由勾股定理得高
+\[h=\sqrt{2^{2}-\left(\sqrt2\right)^{2}}=\sqrt{4-2}=\sqrt2\]
+
+\textbf{第二步，代台体体积公式。}
+\[V=\frac h3\left(S_1+S_2+\sqrt{S_1S_2}\right)\]
+
+其中 $S_1=2^{2}=4$、$S_2=4^{2}=16$，$\sqrt{S_1S_2}=\sqrt{64}=8$：
+
+\[V=\frac{\sqrt2}3\left(4+16+8\right)=\frac{28\sqrt2}3\]
+
+\gkanswer{答案：D}
+
+\begin{gktip}
+\textbf{易错点}：① \textbf{侧棱不是高}。本题若误把 $2$ 当高，会得到 $\dfrac{56}3$，正是选项 C。② 水平投影长要用\textbf{半对角线之差}（$\sqrt2$），不是边长之差的一半（$1$）——后者对应的是"斜高"而非侧棱。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{6}{}
+
+\textbf{题目}　某物理量的测量结果服从正态分布 $N\left(10,\sigma^{2}\right)$，则下列结论中不正确的是（　　）
+
+\textbf{解析}
+
+正态分布 $N\left(10,\sigma^{2}\right)$ 的图象关于直线 $x=10$ \textbf{对称}，且 $\sigma$ 越小图象越"高瘦"（数据越向 $10$ 集中）。逐项检验：
+
+\par\medskip
+
+\textbf{A （正确）}
+
+区间 $(9.9,10.1)$ 关于 $10$ 对称，
+\[P(9.9<X<10.1)=2\Phi\left(\frac{0.1}\sigma\right)-1\]
+
+$\sigma$ 越小，$\dfrac{0.1}\sigma$ 越大，$\Phi$ 是增函数，故概率越大。这正是"$\sigma$ 越小越集中"的直接表述。
+
+\par\medskip
+
+\textbf{B （正确）}
+
+$10$ 是对称轴（也是均值），故
+\[P(X>10)=0.5\]
+
+\par\medskip
+
+\textbf{C （正确）}
+
+$9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
+\[P(X<9.99)=P(X>10.01)\]
+
+\par\medskip
+
+\textbf{D （不正确，即所求）}
+
+两个区间\textbf{长度相同}（都是 $0.3$），但相对于对称轴 $10$ 的位置不同：
+
+\[(9.9,10.2)=(10-0.1,\ 10+0.2),\qquad (10,10.3)=(10+0,\ 10+0.3)\]
+
+作差（把公共部分 $(10,10.2)$ 消掉）：
+
+\[P(9.9<X<10.2)-P(10<X<10.3)=\underbrace{P(9.9<X<10)}_{\text{离对称轴 }0\sim0.1}-\underbrace{P(10.2<X<10.3)}_{\text{离对称轴 }0.2\sim0.3}\]
+
+由对称性 $P(9.9<X<10)=P(10<X<10.1)$，于是上式等于
+
+\[P(10<X<10.1)-P(10.2<X<10.3)\]
+
+两个区间\textbf{长度相等}，但正态密度函数在 $x>10$ 上\textbf{严格递减}，靠近对称轴的那段密度更高，所以
+
+\[P(10<X<10.1)>P(10.2<X<10.3)>0\]
+
+差为正，两概率\textbf{不相等}，D 错误。
+
+\gkanswer{答案：D}
+
+\begin{gktip}
+\textbf{方法总结}：正态分布选择题只需两个事实——\textbf{关于均值对称}、\textbf{密度在均值两侧单调}。判断两个等长区间的概率大小，看谁\textbf{离对称轴更近}即可，完全不必查表。
+
+本题四个选项中 A、B、C 都是"对称/集中"的标准结论，D 则偷换成"等长但不等距"，是唯一的破绽。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{7}{}
+
+\textbf{题目}　若 $a=\log_52$，$b=\log_83$，$c=\dfrac12$，则（　　）
+
+\textbf{解析}
+
+\textbf{策略：全部与中间量 $c=\dfrac12$ 比较}（$\dfrac12$ 恰好是"开平方"的对数形式）。
+
+\par\medskip
+
+\textbf{比较 $a$ 与 $\dfrac12$：}
+
+\[a=\log_52<\frac12\iff 2<5^{\frac12}=\sqrt5\]
+
+因 $2=\sqrt4<\sqrt5$，成立，故
+\[a<c\]
+
+\par\medskip
+
+\textbf{比较 $b$ 与 $\dfrac12$：}
+
+\[b=\log_83>\frac12\iff 3>8^{\frac12}=2\sqrt2\]
+
+比较 $3$ 与 $2\sqrt2$，平方得 $9>8$，成立，故
+\[b>c\]
+
+\par\medskip
+
+\textbf{综合}：
+\[a<c<b\]
+
+\gkanswer{答案：C}
+
+\begin{gktip}
+\textbf{方法总结}：不同底的对数比较大小，首选\textbf{插入中间值}（常用 $0$、$\dfrac12$、$1$）。$\log_ab$ 与 $\dfrac12$ 比较等价于 $b$ 与 $\sqrt a$ 比较，把对数问题降级成开方比较，是最省力的一步。
+
+校验：$a=\log_52\approx0.431$，$b=\log_83\approx0.528$，$c=0.5$，确实 $a<c<b$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{8}{}
+
+\textbf{题目}　设函数 $f(x)$ 的定义域为 $\mathbf R$，且 $f(x+2)$ 为偶函数，$f(2x+1)$ 为奇函数，则（　　）
+
+\textbf{解析}
+
+\textbf{第一步，把两个条件翻译成 $f$ 自身的对称性。}
+
+\textbf{条件一}：$f(x+2)$ 为偶函数，即 $f(-x+2)=f(x+2)$ 对一切 $x$ 成立。这说明 $f$ 的图象关于\textbf{直线 $x=2$ 轴对称}：
+
+\[f(2-t)=f(2+t)\quad\Longleftrightarrow\quad f(x)=f(4-x)\tag{i}\]
+
+\textbf{条件二}：$f(2x+1)$ 为奇函数，即 $f(-2x+1)=-f(2x+1)$。令 $u=2x$（$u$ 取遍 $\mathbf R$）得 $f(1-u)=-f(1+u)$，这说明 $f$ 的图象关于\textbf{点 $(1,0)$ 中心对称}：
+
+\[f(x)=-f(2-x)\tag{ii}\]
+
+\textbf{第二步，由 (ii) 直接读出一个零点。}
+
+在 (ii) 中令 $x=1$：
+\[f(1)=-f(1)\ \Longrightarrow\ f(1)=0\]
+
+\textbf{第三步，把两个对称性合成周期。}
+
+由 (i)：$f(4-x)=f(x)$；由 (ii) 把 $x$ 换成 $2-x$ 得 $f(2-x)=-f(x)$，即 $f(x)=-f(2-x)$。
+
+在 (i) 中令 $x\to x+2$：$f(x+2)=f(4-(x+2))=f(2-x)=-f(x)$，即
+
+\[f(x+2)=-f(x)\tag{iii}\]
+
+再用一次：
+\[f(x+4)=-f(x+2)=f(x)\]
+
+故 $f$ 是\textbf{周期为 $4$} 的函数。
+
+\textbf{第四步，逐项检验。}
+
+\begin{itemize}
+\item \textbf{B }：由 (iii) 得 $f(3)=f(1+2)=-f(1)=0$；再由周期 $4$，
+\end{itemize}
+\[f(-1)=f(-1+4)=f(3)=0\]
+\begin{itemize}
+\item \textbf{A }：$f\left(-\dfrac12\right)$ 由已知条件推不出为 $0$。
+\item \textbf{C }：由 (iii) 得 $f(2)=-f(0)$，而 $f(0)$ 的值不确定。
+\item \textbf{D }：由周期 $4$ 得 $f(4)=f(0)$，同样不确定。
+\end{itemize}
+
+\textbf{反例（说明 A、C、D 确实不恒成立）}：取
+\[f(x)=\cos\frac{\pi x}2\]
+
+检验：$f(x+2)=\cos\left(\dfrac{\pi x}2+\pi\right)=-\cos\dfrac{\pi x}2$ 是偶函数 ；$f(2x+1)=\cos\left(\pi x+\dfrac\pi2\right)=-\sin\pi x$ 是奇函数 。
+
+而 $f\left(-\dfrac12\right)=\cos\left(-\dfrac\pi4\right)=\dfrac{\sqrt2}2\ne0$，$f(2)=\cos\pi=-1\ne0$，$f(4)=\cos2\pi=1\ne0$，但 $f(-1)=\cos\left(-\dfrac\pi2\right)=0$ 。
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{方法总结}：抽象函数题的通法是\textbf{把复合函数的奇偶性翻译成 $f$ 自身的对称性}——
+\begin{itemize}
+\item $f(x+a)$ 为偶函数 $\Longrightarrow$ $f$ 关于直线 $x=a$ 对称；
+\item $f(x+a)$ 为奇函数 $\Longrightarrow$ $f$ 关于点 $(a,0)$ 对称。
+\end{itemize}
+
+注意本题第二个条件里的 $2x$ 只是"横向压缩"，\textbf{不改变对称中心的横坐标}（$2x+1=0$ 给出 $x=-\dfrac12$，但对 $f$ 而言对称中心仍是 $1$）——这是本题最大的陷阱，选项 A 正为此设置。
+
+又：\textbf{一线一点两种对称并存必产生周期}，周期为对称轴与对称中心横坐标之差的 $4$ 倍（本题 $4\times|2-1|=4$）。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{二、多选题（每小题 5 分，共 20 分）}
+
+\gksolhead{9}{}
+
+\textbf{题目}　下列统计量中可用于度量样本 $x_1,x_2,\cdots,x_n$ 离散程度的有（　　）
+
+\textbf{解析}
+
+统计量按功能分两大类：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+类别 & 度量什么 & 常见统计量 \\
+\midrule
+\textbf{集中趋势}（位置） & 数据聚集在哪里 & 平均数、中位数、众数 \\
+\textbf{离散程度}（分散） & 数据散得有多开 & 方差、标准差、极差、四分位距 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+逐项判断：
+
+\begin{itemize}
+\item \textbf{A  标准差}：$s=\sqrt{\dfrac1n\sum\left(x_i-\bar x\right)^{2}}$，直接刻画各数据对平均数的偏离，是最典型的离散程度度量。
+\item \textbf{B  中位数}：把数据从小到大排列后处于中间位置的数，刻画的是\textbf{位置}。
+\item \textbf{C  极差}：$x_{\max}-x_{\min}$，刻画数据的\textbf{跨度}，是最粗糙但确实有效的离散程度度量。
+\item \textbf{D  平均数}：$\bar x=\dfrac1n\sum x_i$，刻画的是\textbf{集中趋势}。
+\end{itemize}
+
+\gkanswer{答案：AC}
+
+\begin{gktip}
+\textbf{一句话判据}：把全体数据\textbf{整体平移}（每个数加同一常数 $c$），值会变的是位置类统计量，值不变的是离散类统计量。中位数、平均数都随之平移 $c$，标准差、极差纹丝不动。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{10}{}
+
+\textbf{题目}　如图，下列各正方体中，$O$ 为下底面的中心，$M$，$N$ 为顶点，$P$ 为所在棱的中点，则满足 $MN\perp OP$ 的是（　　）
+
+\begin{center}\input{figures/f2021x2_t10_cubes}\end{center}
+
+\textbf{解析}
+
+\textbf{统一建系}（一次建系，四个选项通吃）：设正方体棱长为 $2$（取偶数是为了让棱中点的坐标都是整数），以下底面的一个顶点为原点、三条棱为坐标轴，使正方体占据 $[0,2]\times[0,2]\times[0,2]$，其中 $z$ 轴竖直向上。
+
+于是\textbf{下底面中心恒为}
+\[O(1,1,0)\]
+
+按图中标注读出四个选项中 $M$、$N$、$P$ 的位置：
+
+\begin{itemize}
+\item \textbf{A}：$M$ 为上底面的一个顶点，$N$ 为上底面与之\textbf{面对角}相对的顶点，$P$ 为过 $N$ 的那条竖直棱的中点；
+\item \textbf{B}：$M$ 为上底面的一个顶点，$N$ 为下底面的顶点且 $MN$ 是某个\textbf{侧面的对角线}，$P$ 为过 $N$ 的竖直棱（即 $MN$ 所在侧面上、与 $M$ 同侧的那条竖直棱）的中点；
+\item \textbf{C}：$M$ 为上底面的一个顶点，$N$ 为下底面的顶点且 $MN$ 是某个\textbf{侧面的对角线}，$P$ 为与该侧面\textbf{相对}的侧面上、那条竖直棱的中点；
+\item \textbf{D}：$M$ 为上底面的一个顶点，$N$ 为下底面的顶点且 $MN$ 是\textbf{下底面所在侧面的对角线}（$M$、$N$ 在同一竖直面内），$P$ 为上底面某条棱的中点。
+\end{itemize}
+
+写成坐标并逐项验算：
+
+\begin{center}
+\begin{tabular}{clllllcc}
+\toprule
+选项 & $M$ & $N$ & $P$ & $\overrightarrow{MN}$ & $\overrightarrow{OP}$ & $\overrightarrow{MN}\cdot\overrightarrow{OP}$ & 是否垂直 \\
+\midrule
+A & $(0,0,2)$ & $(2,2,2)$ & $(2,2,1)$ & $(2,2,0)$ & $(1,1,1)$ & $2+2+0=4$ &  \\
+B & $(0,2,2)$ & $(0,0,0)$ & $(0,0,1)$ & $(0,-2,-2)$ & $(-1,-1,1)$ & $0+2-2=0$ &  \\
+C & $(2,0,2)$ & $(2,2,0)$ & $(0,2,1)$ & $(0,2,-2)$ & $(-1,1,1)$ & $0+2-2=0$ &  \\
+D & $(2,2,2)$ & $(0,2,0)$ & $(1,0,2)$ & $(-2,0,-2)$ & $(0,-1,2)$ & $0+0-4=-4$ &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\par\medskip
+
+\textbf{逐项复核}
+
+\textbf{A }：$\overrightarrow{MN}=(2,2,0)$ 是水平向量（$z$ 分量为 $0$），而 $\overrightarrow{OP}=(1,1,1)$ 的水平投影 $(1,1)$ 与 $(2,2)$ \textbf{同向}，数量积必为正，不可能垂直。
+
+\textbf{B }：$\overrightarrow{MN}\cdot\overrightarrow{OP}=0\times(-1)+(-2)\times(-1)+(-2)\times1=2-2=0$ 
+
+\textbf{C }：$\overrightarrow{MN}\cdot\overrightarrow{OP}=0\times(-1)+2\times1+(-2)\times1=2-2=0$ 
+
+\textbf{D }：$\overrightarrow{MN}\cdot\overrightarrow{OP}=(-2)\times0+0\times(-1)+(-2)\times2=-4\ne0$ 
+
+\gkanswer{答案：BC}
+
+\begin{gktip}
+\textbf{方法总结}：正方体中的"某某垂直吗"类选择题，\textbf{建系算数量积永远是最短路径}——四个选项共用一套坐标系，每项只需读三个点的坐标再做一次三项乘加，比逐个找垂直平面、作辅助线快得多。
+
+\textbf{建系技巧}：棱长取 $2$（而非 $1$）可以让所有棱中点的坐标都是整数，全程避开分数。
+
+\textbf{快速排除}：若 $\overrightarrow{MN}$ 是水平向量而 $\overrightarrow{OP}$ 的水平投影与之不垂直，立刻可判否（A 项即此类），根本不用算完。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{11}{}
+
+\textbf{题目}　已知直线 $l:ax+by-r^{2}=0$ 与圆 $C:x^{2}+y^{2}=r^{2}$，点 $A(a,b)$，则下列说法正确的是（　　）
+
+\textbf{解析}
+
+\textbf{核心量：圆心到直线的距离。} 圆心为原点 $O(0,0)$，半径为 $|r|$（不妨设 $r>0$）。由点到直线距离公式：
+
+\[d=\frac{\left|a\cdot0+b\cdot0-r^{2}\right|}{\sqrt{a^{2}+b^{2}}}=\frac{r^{2}}{\sqrt{a^{2}+b^{2}}}\]
+
+\textbf{关键观察}：记 $|OA|=\sqrt{a^{2}+b^{2}}$，则上式就是
+
+\[\boxed{\ d=\frac{r^{2}}{|OA|}\quad\Longleftrightarrow\quad d\cdot|OA|=r^{2}\ }\]
+
+也就是说，\textbf{$d$ 与 $|OA|$ 的乘积恒为 $r^{2}$}——两者一个大另一个必小，以 $r$ 为分界。（这正是"点关于圆的反演"关系。）
+
+于是三种位置关系一一对应：
+
+\begin{center}
+\begin{tabular}{lccl}
+\toprule
+$A$ 的位置 & $\lvert OA\rvert$ & $d=\dfrac{r^{2}}{\lvert OA\rvert}$ & $l$ 与 $C$ \\
+\midrule
+圆上 & $=r$ & $=r$ & \textbf{相切} \\
+圆内 & $<r$ & $>r$ & \textbf{相离} \\
+圆外 & $>r$ & $<r$ & \textbf{相交} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（$A$ 在圆内时还需 $a$、$b$ 不同时为零，否则 $ax+by-r^{2}=0$ 退化为 $-r^{2}=0$ 不表示直线；题设已给出 $l$ 是直线，故这一退化情形自动排除。）
+
+\par\medskip
+
+\textbf{逐项判断}
+
+\textbf{A }：$A$ 在圆 $C$ 上 $\Rightarrow|OA|=r\Rightarrow d=r$，直线与圆\textbf{相切} 
+
+\textbf{B }：$A$ 在圆 $C$ 内 $\Rightarrow|OA|<r\Rightarrow d=\dfrac{r^{2}}{|OA|}>\dfrac{r^{2}}r=r$，\textbf{相离} 
+
+\textbf{C }：$A$ 在圆 $C$ 外 $\Rightarrow|OA|>r\Rightarrow d<r$，是\textbf{相交}而非相离 
+
+\textbf{D }：$A(a,b)$ 在直线 $l$ 上，代入得
+\[a\cdot a+b\cdot b-r^{2}=0\ \Longrightarrow\ a^{2}+b^{2}=r^{2}\]
+
+这恰好说明 $A$ 在圆 $C$ 上，回到 A 项的情形，故\textbf{相切} 
+
+\gkanswer{答案：ABD}
+
+\begin{gktip}
+\textbf{方法总结}：直线 $ax+by=r^{2}$ 与圆 $x^{2}+y^{2}=r^{2}$ 是一对经典搭档——当 $A(a,b)$ 在圆上时，$l$ 就是圆在 $A$ 处的\textbf{切线}（切线方程 $x_0x+y_0y=r^{2}$）。记住这个模型，A、D 两项可以秒判。
+
+\textbf{恒等式 $d\cdot|OA|=r^{2}$ 是本题的钥匙}：它把"点的位置"与"直线的位置"完全对应起来，四个选项一次性解决。C 项把"相交"写成"相离"，是唯一的错项。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{12}{}
+
+\textbf{题目}　设正整数 $n=a_0\cdot2^{0}+a_1\cdot2^{1}+\cdots+a_{k-1}\cdot2^{k-1}+a_k\cdot2^{k}$，其中 $a_i\in\{0,1\}$，记 $\omega(n)=a_0+a_1+\cdots+a_k$。则（　　）
+
+\textbf{解析}
+
+\textbf{读懂定义}：题目给的就是 $n$ 的\textbf{二进制表示}，$\omega(n)$ 就是 $n$ 的二进制表示中 \textbf{$1$ 的个数}（数字之和）。
+
+约定用 $\overline{\cdots}_2$ 表示二进制串，例如 $13=\overline{1101}_2$，$\omega(13)=3$。
+
+\par\medskip
+
+\textbf{A }
+
+\[2n=n\times2\]
+
+二进制乘 $2$ 就是\textbf{整体左移一位、末尾补 $0$}：若 $n=\overline{a_k\cdots a_1a_0}_2$，则 $2n=\overline{a_k\cdots a_1a_00}_2$。
+
+新添的是 $0$，不改变 $1$ 的个数：
+\[\omega(2n)=\omega(n)\quad\checkmark\]
+
+\par\medskip
+
+\textbf{B }
+
+$2n+3=2n+2+1=2(n+1)+1$，这里出现了 $n+1$，而 $n\to n+1$ 会引发\textbf{进位连锁}，$\omega$ 的变化毫无规律。
+
+\textbf{举反例}：取 $n=2$。
+\[2n+3=7=\overline{111}_2,\qquad \omega(7)=3\]
+\[\omega(n)+1=\omega(2)+1=1+1=2\]
+
+$3\ne2$，B 错误 
+
+（再取 $n=1$：$2n+3=5=\overline{101}_2$，$\omega=2$；$\omega(1)+1=2$，此时恰好相等——\textbf{这正是命题人设的陷阱}：只验一个小数会误判为真。）
+
+\par\medskip
+
+\textbf{C }
+
+\textbf{左边}：$8n+5=8n+4+1$。因 $8n=n\times2^{3}$ 是把 $n$ 左移三位，而 $4+1=\overline{101}_2$ 恰好占据最低三位且不与 $8n$ 冲突，故
+\[8n+5=\overline{(n)101}_2\ \Longrightarrow\ \omega(8n+5)=\omega(n)+2\]
+
+\textbf{右边}：$4n+3=4n+2+1$。同理 $4n$ 是把 $n$ 左移两位，$2+1=\overline{11}_2$ 占据最低两位，故
+\[4n+3=\overline{(n)11}_2\ \Longrightarrow\ \omega(4n+3)=\omega(n)+2\]
+
+两者相等 
+
+\textbf{验证}：$n=3$ 时 $8n+5=29=\overline{11101}_2$（$\omega=4$），$4n+3=15=\overline{1111}_2$（$\omega=4$）
+
+\par\medskip
+
+\textbf{D }
+
+\[2^{n}-1=\underbrace{\overline{11\cdots1}}_{n\ \text{个}\ 1}{}_2\]
+
+（因为 $2^{n}-1=2^{0}+2^{1}+\cdots+2^{n-1}$，即 $a_0=a_1=\cdots=a_{n-1}=1$。）
+
+共 $n$ 个 $1$，故
+\[\omega\left(2^{n}-1\right)=n\quad\checkmark\]
+
+\textbf{验证}：$n=4$ 时 $2^{4}-1=15=\overline{1111}_2$，$\omega=4$ 
+
+\gkanswer{答案：ACD}
+
+\begin{gktip}
+\textbf{方法总结}：本题看似"新定义"，实为\textbf{二进制常识题}。抓住两条规律即可全部解决——
+① \textbf{乘 $2^{k}$ = 左移 $k$ 位}，$\omega$ 不变；
+② 若在左移腾出的低位上填入一个\textbf{小于 $2^{k}$ 的数} $m$，则 $\omega\left(2^{k}n+m\right)=\omega(n)+\omega(m)$（低位与高位互不干扰，\textbf{不发生进位}）。
+
+C 项正是 ② 的两次应用（$\omega(5)=\omega(\overline{101}_2)=2$，$\omega(3)=\omega(\overline{11}_2)=2$，相等）。
+
+\textbf{B 项的教训}：加法一旦跨过 $2^{k}$ 的界就会\textbf{进位}，规律立刻失效。判断这类命题时\textbf{必须多取几个 $n$ 试}——本题 $n=1$ 恰好成立、$n=2$ 就崩，只试一个数会栽跟头。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{三、填空题（每小题 5 分，共 20 分）}
+
+\gksolhead{13}{}
+
+\textbf{题目}　已知双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\ (a>0,b>0)$ 的离心率 $e=2$，则双曲线 $C$ 的渐近线方程为 \gkblank{}．
+
+\textbf{解析}
+
+\textbf{第一步，由离心率求 $\dfrac ba$。}
+
+对焦点在 $x$ 轴上的双曲线，$c^{2}=a^{2}+b^{2}$，$e=\dfrac ca=2$，故 $c=2a$：
+
+\[b^{2}=c^{2}-a^{2}=(2a)^{2}-a^{2}=3a^{2}\]
+
+\[\frac{b}{a}=\sqrt3\qquad(a,b>0)\]
+
+\textbf{第二步，写渐近线。}
+
+$\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$ 的渐近线为 $\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=0$，即
+
+\[y=\pm\frac ba x=\pm\sqrt3\,x\]
+
+\gkanswer{答案：$y=\pm\sqrt3\,x$}
+
+\begin{gktip}
+\textbf{方法总结}：离心率与渐近线斜率是"一对"，关系式
+\[e^{2}=1+\frac{b^{2}}{a^{2}}\]
+记住后可双向秒算：本题 $e=2\Rightarrow\dfrac{b^{2}}{a^{2}}=e^{2}-1=3\Rightarrow$ 斜率 $\pm\sqrt3$。
+
+\textbf{注意}：题目只给出焦点在 $x$ 轴上的标准形式，故渐近线斜率是 $\pm\dfrac ba$ 而非 $\pm\dfrac ab$；答案必须\textbf{写成方程}（含 $y=$），只写 $\pm\sqrt3$ 不得分。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{14}{}
+
+\textbf{题目}　写出一个同时具有下列性质①②③的函数 $f(x)=$ \gkblank{}．
+① $f\left(x_1x_2\right)=f\left(x_1\right)f\left(x_2\right)$；
+② 当 $x\in(0,+\infty)$ 时，$f'(x)>0$；
+③ $f'(x)$ 是奇函数．
+
+\textbf{解析}
+
+\textbf{第一步，由性质①锁定函数族。}
+
+$f\left(x_1x_2\right)=f\left(x_1\right)f\left(x_2\right)$ 是"\textbf{积化积}"的乘性方程，其典型解是\textbf{幂函数}
+
+\[f(x)=x^{\alpha}\]
+
+（验证：$\left(x_1x_2\right)^{\alpha}=x_1^{\alpha}x_2^{\alpha}$ ）
+
+\textbf{第二步，由性质②定出 $\alpha$ 的符号。}
+
+\[f'(x)=\alpha x^{\alpha-1}\]
+
+当 $x>0$ 时 $x^{\alpha-1}>0$，故 $f'(x)>0\iff\alpha>0$。
+
+\textbf{第三步（本题的关键）：由性质③定出 $\alpha$ 的奇偶。}
+
+$f'(x)=\alpha x^{\alpha-1}$ 是奇函数，要求幂 $x^{\alpha-1}$ 为奇函数，即
+
+\[\alpha-1\ \text{为奇数}\quad\Longrightarrow\quad \alpha\ \text{为偶数}\]
+
+\textbf{第四步，取最简的一个。}
+
+$\alpha$ 为\textbf{正偶数}，最小的是 $\alpha=2$：
+
+\[f(x)=x^{2}\]
+
+\textbf{逐条检验}：
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+性质 & 检验 \\
+\midrule
+① & $\left(x_1x_2\right)^{2}=x_1^{2}x_2^{2}$  \\
+② & $f'(x)=2x$，$x>0$ 时 $f'(x)=2x>0$  \\
+③ & $f'(x)=2x$，$f'(-x)=-2x=-f'(x)$，是奇函数  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{答案：$f(x)=x^{2}$（答案不唯一，$x^{4}$、$x^{6}$ 等一切 $f(x)=x^{2k}\ (k\in\mathbf N^{*})$ 均可）}
+
+\begin{gktip}
+\textbf{方法总结}：开放型填空题的通法是"\textbf{先按最强的那条性质锁定函数族，再用其余性质定参数}"。本题性质①最强（直接指向幂函数），②③只是筛选指数。
+
+\textbf{易错点}：若只看①②会写出 $f(x)=x$ 或 $f(x)=x^{3}$，但它们的导数 $1$、$3x^{2}$ 都是\textbf{偶函数}，违反③。\textbf{"$f$ 是偶函数 $\Rightarrow$ $f'$ 是奇函数"}——本题③其实是在暗示 $f$ 必须是偶函数，从这个角度也能一步锁定 $x^{2}$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{15}{}
+
+\textbf{题目}　已知向量 $\boldsymbol a+\boldsymbol b+\boldsymbol c=\boldsymbol 0$，$|\boldsymbol a|=1$，$|\boldsymbol b|=|\boldsymbol c|=2$，则 $\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a=$ \gkblank{}．
+
+\textbf{解析}
+
+\textbf{核心技巧：对向量等式两边取模的平方。}
+
+由 $\boldsymbol a+\boldsymbol b+\boldsymbol c=\boldsymbol 0$ 得
+
+\[|\boldsymbol a+\boldsymbol b+\boldsymbol c|^{2}=0\]
+
+\textbf{展开左边}（三项和的平方公式，向量版）：
+
+\[|\boldsymbol a+\boldsymbol b+\boldsymbol c|^{2}=|\boldsymbol a|^{2}+|\boldsymbol b|^{2}+|\boldsymbol c|^{2}+2\left(\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a\right)\]
+
+\textbf{代入已知模长}：
+
+\[0=1^{2}+2^{2}+2^{2}+2\left(\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a\right)\]
+
+\[0=1+4+4+2S=9+2S\]
+
+其中 $S=\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a$。解得
+
+\[S=-\frac92\]
+
+\gkanswer{答案：$-\dfrac92$}
+
+\begin{gktip}
+\textbf{合理性检验}：三个向量首尾相接构成一个三角形，边长为 $1$、$2$、$2$（满足三角不等式，构型确实存在），故答案有效。
+
+\textbf{方法总结}：见到"\textbf{向量的和为零 + 只给模长 + 求数量积的对称和}"，标准动作只有一个——\textbf{两边平方}。因为 $|\boldsymbol v|^{2}=\boldsymbol v\cdot\boldsymbol v$，平方之后模长与数量积就被一个恒等式串起来了，完全不需要求出任何一个夹角。
+
+\textbf{通用公式}（值得背）：若 $\boldsymbol a+\boldsymbol b+\boldsymbol c=\boldsymbol 0$，则
+\[\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a=-\frac{|\boldsymbol a|^{2}+|\boldsymbol b|^{2}+|\boldsymbol c|^{2}}2\]
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{16}{}
+
+\textbf{题目}　已知函数 $f(x)=\left|\mathrm e^{x}-1\right|$，$x_1<0$，$x_2>0$，函数 $f(x)$ 的图象在点 $A\left(x_1,f\left(x_1\right)\right)$ 和点 $B\left(x_2,f\left(x_2\right)\right)$ 处的两条切线互相垂直，且分别交 $y$ 轴于 $M$，$N$ 两点，则 $\dfrac{|AM|}{|BN|}$ 的取值范围是 \gkblank{}．
+
+\textbf{解析}
+
+\textbf{第一步，脱去绝对值分段写出 $f$ 与 $f'$。}
+
+$\mathrm e^{x}-1$ 的符号以 $x=0$ 为界：
+
+\[f(x)=\begin{cases}1-\mathrm e^{x},&x<0\\ \mathrm e^{x}-1,&x\ge0\end{cases}\qquad f'(x)=\begin{cases}-\mathrm e^{x},&x<0\\ \mathrm e^{x},&x>0\end{cases}\]
+
+记 $x_1=t<0$、$x_2=s>0$，两条切线的斜率分别为
+
+\[k_A=-\mathrm e^{t},\qquad k_B=\mathrm e^{s}\]
+
+\textbf{第二步（本题的题眼）：由垂直条件锁死 $s$ 与 $t$ 的关系。}
+
+\[k_Ak_B=-1\ \Longrightarrow\ -\mathrm e^{t}\cdot\mathrm e^{s}=-1\ \Longrightarrow\ \mathrm e^{t+s}=1\]
+
+\[t+s=0\quad\Longrightarrow\quad s=-t\]
+
+\textbf{两个切点的横坐标互为相反数}——这一步把双参数问题降为单参数。
+
+\textbf{第三步，求 $|AM|$。}
+
+$A\left(t,\ 1-\mathrm e^{t}\right)$，切线方程
+
+\[y-\left(1-\mathrm e^{t}\right)=-\mathrm e^{t}(x-t)\]
+
+令 $x=0$ 得 $M$ 的纵坐标：
+
+\[y_M=1-\mathrm e^{t}+t\mathrm e^{t}\]
+
+于是
+
+\[|AM|=\sqrt{(t-0)^{2}+\left[\left(1-\mathrm e^{t}\right)-y_M\right]^{2}}=\sqrt{t^{2}+\left(t\mathrm e^{t}\right)^{2}}=|t|\sqrt{1+\mathrm e^{2t}}\]
+
+\textbf{第四步，求 $|BN|$。}
+
+$B\left(s,\ \mathrm e^{s}-1\right)$，切线方程
+
+\[y-\left(\mathrm e^{s}-1\right)=\mathrm e^{s}(x-s)\]
+
+令 $x=0$ 得 $y_N=\mathrm e^{s}-1-s\mathrm e^{s}$，于是
+
+\[|BN|=\sqrt{s^{2}+\left(s\mathrm e^{s}\right)^{2}}=s\sqrt{1+\mathrm e^{2s}}\qquad(s>0)\]
+
+\textbf{统一记号}：从切点到 $y$ 轴的这段切线长为
+
+\[\text{切点横坐标的绝对值}\times\sqrt{1+(\text{斜率})^{2}}\]
+
+\textbf{第五步，作比并化简（关键的约分）。}
+
+代入 $s=-t$（注意 $|t|=s$）：
+
+\[\frac{|AM|}{|BN|}=\frac{|t|\sqrt{1+\mathrm e^{2t}}}{s\sqrt{1+\mathrm e^{-2t}}}=\frac{\sqrt{1+\mathrm e^{2t}}}{\sqrt{1+\mathrm e^{-2t}}}\]
+
+令 $u=\mathrm e^{2t}$。因 $t<0$，有 $u\in(0,1)$。上式化为
+
+\[\sqrt{\frac{1+u}{1+\dfrac1u}}=\sqrt{\frac{1+u}{\dfrac{u+1}u}}=\sqrt{\frac{(1+u)\,u}{u+1}}=\sqrt u=\mathrm e^{t}\]
+
+\textbf{结果出奇地简洁}：
+
+\[\frac{|AM|}{|BN|}=\mathrm e^{x_1}\]
+
+\textbf{第六步，定值域。}
+
+$x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不到：$t\to-\infty$ 时趋于 $0$ 但不等于 $0$；$t\to0^{-}$ 时趋于 $1$ 但 $t=0$ 不允许）。
+
+\[\frac{|AM|}{|BN|}\in(0,1)\]
+
+\gkanswer{答案：$(0,1)$}
+
+\begin{gktip}
+\textbf{方法总结}：本题三步走，每一步都有明确的目的——
+1. \textbf{垂直条件}把两个自变量捆成一个（$s=-t$），这是所有"两切线垂直"题的第一动作；
+2. \textbf{切线与坐标轴交点的距离}不必真去解交点再算距离，用公式
+\[\text{（切点到 }y\text{ 轴的切线段长）}=\left|x_0\right|\sqrt{1+k^{2}}\]
+可以直接写出（水平位移是 $\left|x_0\right|$，斜率为 $k$ 时斜边是它的 $\sqrt{1+k^{2}}$ 倍）；
+3. \textbf{约分}：$\dfrac{\sqrt{1+u}}{\sqrt{1+u^{-1}}}=\sqrt u$ 是本题设计得最精巧的一步，它让答案坍缩成 $\mathrm e^{x_1}$，值域一眼可见。
+
+\textbf{易错点}：区间\textbf{两端都是开的}。写成 $(0,1]$（误以为 $t=0$ 可取）或 $[0,1)$ 都不对——$t=0$ 处 $f$ 不可导，$t\to-\infty$ 时比值只是无限接近 $0$。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{四、解答题（共 70 分）}
+
+\gksolhead{17}{10 分}
+
+\textbf{题目}　记 $S_n$ 是公差不为 $0$ 的等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $a_3=S_5$，$a_2a_4=S_4$．
+
+  (1) 求数列 $\left\{a_n\right\}$ 的通项公式；
+
+  (2) 求使 $S_n>a_n$ 成立的 $n$ 的最小值．
+
+\par\medskip
+
+\textbf{(1) 解}
+
+设首项为 $a_1$、公差为 $d\ (d\ne0)$。
+
+\textbf{把两个条件都翻译成关于 $a_1$、$d$ 的方程。}
+
+\textbf{条件一}：$a_3=S_5$。
+\[a_3=a_1+2d,\qquad S_5=5a_1+\frac{5\times4}2d=5a_1+10d\]
+
+\[a_1+2d=5a_1+10d\ \Longrightarrow\ 0=4a_1+8d\ \Longrightarrow\ \boxed{a_1=-2d}\]
+
+\textbf{条件二}：$a_2a_4=S_4$。
+\[a_2=a_1+d,\qquad a_4=a_1+3d,\qquad S_4=4a_1+\frac{4\times3}2d=4a_1+6d\]
+
+代入 $a_1=-2d$：
+
+\[a_2=-2d+d=-d,\qquad a_4=-2d+3d=d\]
+\[S_4=4(-2d)+6d=-8d+6d=-2d\]
+
+于是
+
+\[(-d)\cdot d=-2d\ \Longrightarrow\ -d^{2}=-2d\ \Longrightarrow\ d^{2}-2d=0\ \Longrightarrow\ d(d-2)=0\]
+
+因 $d\ne0$，得
+
+\[d=2,\qquad a_1=-2d=-4\]
+
+\textbf{通项公式}：
+
+\[a_n=a_1+(n-1)d=-4+2(n-1)=2n-6\]
+
+\textbf{检验}：$a_3=0$，$S_5=a_1+\cdots+a_5=(-4)+(-2)+0+2+4=0$ ；$a_2a_4=(-2)\times2=-4$，$S_4=(-4)+(-2)+0+2=-4$ 
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{先写出 $S_n$。}
+
+\[S_n=\frac{n\left(a_1+a_n\right)}2=\frac{n\left[(-4)+(2n-6)\right]}2=\frac{n(2n-10)}2=n(n-5)=n^{2}-5n\]
+
+\textbf{列不等式 $S_n>a_n$：}
+
+\[n^{2}-5n>2n-6\]
+
+\[n^{2}-7n+6>0\]
+
+\[(n-1)(n-6)>0\]
+
+解得
+
+\[n<1\qquad\text{或}\qquad n>6\]
+
+\textbf{在正整数范围内筛选}：$n\ge1$，故 $n<1$ 无解；$n>6$ 给出 $n\ge7$。
+
+\textbf{所以 $n$ 的最小值为 $7$。}
+
+\textbf{验证边界}：
+\begin{itemize}
+\item $n=6$：$S_6=36-30=6$，$a_6=12-6=6$，$S_6=a_6$（\textbf{取等，不满足严格大于}）；
+\item $n=7$：$S_7=49-35=14$，$a_7=14-6=8$，$14>8$ 
+\end{itemize}
+
+\gkanswer{答案：(1) $a_n=2n-6$；(2) $7$}
+
+\begin{gktip}
+\textbf{方法总结}：等差数列"知二求全"，本题两个条件恰好定出 $a_1$ 与 $d$。\textbf{先用较简单的那个条件（$a_3=S_5$）解出 $a_1$ 与 $d$ 的比例关系并回代}，可以把第二个方程从二元降为一元，比联立硬解省力得多。
+
+\textbf{易错点}：解出 $(n-1)(n-6)>0$ 后，$n=1$ 与 $n=6$ 都是\textbf{取等}的临界点，必须排除；很多同学写成 $n\ge6$ 而答 $6$。做完务必回代边界验算。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{18}{12 分}
+
+\textbf{题目}　在 $\triangle ABC$ 中，角 $A$，$B$，$C$ 所对的边分别为 $a$，$b$，$c$，$b=a+1$，$c=a+2$．
+
+  (1) 若 $2\sin C=3\sin A$，求 $\triangle ABC$ 的面积；
+
+  (2) 是否存在正整数 $a$，使得 $\triangle ABC$ 为钝角三角形？若存在，求 $a$；若不存在，说明理由．
+
+\par\medskip
+
+\textbf{(1) 解}
+
+\textbf{第一步，把角的条件化为边的条件。}
+
+由\textbf{正弦定理} $\dfrac a{\sin A}=\dfrac c{\sin C}$，可将 $\sin A$、$\sin C$ 换成 $a$、$c$：
+
+\[2\sin C=3\sin A\ \Longrightarrow\ 2c=3a\]
+
+\textbf{第二步，解出三边。}
+
+代入 $c=a+2$：
+
+\[2(a+2)=3a\ \Longrightarrow\ 2a+4=3a\ \Longrightarrow\ a=4\]
+
+于是
+
+\[a=4,\qquad b=a+1=5,\qquad c=a+2=6\]
+
+（三角形不等式 $4+5>6$ 成立 ）
+
+\textbf{第三步，求一个角的余弦，再求正弦。}
+
+用\textbf{余弦定理}求最大角 $C$（对边 $c=6$）：
+
+\[\cos C=\frac{a^{2}+b^{2}-c^{2}}{2ab}=\frac{16+25-36}{2\times4\times5}=\frac5{40}=\frac18\]
+
+因 $C\in(0,\pi)$，$\sin C>0$：
+
+\[\sin C=\sqrt{1-\left(\frac18\right)^{2}}=\sqrt{1-\frac1{64}}=\sqrt{\frac{63}{64}}=\frac{3\sqrt7}8\]
+
+\textbf{第四步，求面积。}
+
+\[S=\frac12ab\sin C=\frac12\times4\times5\times\frac{3\sqrt7}8=10\times\frac{3\sqrt7}8=\frac{15\sqrt7}4\]
+
+\gkanswer{答案：$S_{\triangle ABC}=\dfrac{15\sqrt7}4$}
+
+\textbf{验证（海伦公式）}：$p=\dfrac{4+5+6}2=\dfrac{15}2$，
+\[S=\sqrt{p(p-a)(p-b)(p-c)}=\sqrt{\frac{15}2\cdot\frac72\cdot\frac52\cdot\frac32}=\sqrt{\frac{1575}{16}}=\frac{\sqrt{1575}}4=\frac{15\sqrt7}4\ \checkmark\]
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{结论：存在，且 $a=2$。}
+
+\textbf{第一步，先定出 $a$ 的取值范围（三角形存在性）。}
+
+三边为 $a$、$a+1$、$a+2$，最大边是 $a+2$。构成三角形当且仅当\textbf{较小两边之和大于最大边}：
+
+\[a+(a+1)>a+2\ \Longrightarrow\ 2a+1>a+2\ \Longrightarrow\ a>1\]
+
+$a$ 为正整数，故 $a\ge2$。
+
+\textbf{第二步，找出"钝角"对应哪个角。}
+
+三边中 $c=a+2$ 最大，故 $C$ 是\textbf{最大角}。三角形至多有一个钝角，且钝角必是最大角，因此
+
+\[\triangle ABC\ \text{为钝角三角形}\iff\cos C<0\]
+
+\textbf{第三步，把 $\cos C<0$ 化成关于 $a$ 的不等式。}
+
+\[\cos C=\frac{a^{2}+b^{2}-c^{2}}{2ab}=\frac{a^{2}+(a+1)^{2}-(a+2)^{2}}{2a(a+1)}\]
+
+\textbf{算分子}：
+\[a^{2}+\left(a^{2}+2a+1\right)-\left(a^{2}+4a+4\right)=a^{2}-2a-3=(a-3)(a+1)\]
+
+\textbf{约分}（$a+1>0$）：
+\[\cos C=\frac{(a-3)(a+1)}{2a(a+1)}=\frac{a-3}{2a}\]
+
+\textbf{分母 $2a>0$，故}
+
+\[\cos C<0\iff a-3<0\iff a<3\]
+
+\textbf{第四步，取交集。}
+
+\[a\ge2\quad\text{且}\quad a<3\quad\Longrightarrow\quad a=2\]
+
+\textbf{验证 $a=2$}：三边为 $2$、$3$、$4$。
+\begin{itemize}
+\item 三角形不等式：$2+3=5>4$ 
+\item $\cos C=\dfrac{2^{2}+3^{2}-4^{2}}{2\times2\times3}=\dfrac{4+9-16}{12}=-\dfrac14<0$  故 $C$ 为钝角。
+\end{itemize}
+
+\textbf{所以存在正整数 $a$，且 $a=2$。}
+
+\gkanswer{答案：(1) $\dfrac{15\sqrt7}4$；(2) 存在，$a=2$}
+
+\begin{gktip}
+\textbf{方法总结}：判断三角形形状的标准流程是"\textbf{只查最大角}"——因为一个三角形最多一个非锐角，它必定在最大边所对处。用余弦定理算出 $\cos C$ 后，\textbf{分母恒正}，符号完全由分子决定。
+
+本题分子 $a^{2}-2a-3$ 可以因式分解成 $(a-3)(a+1)$ 并与分母的 $(a+1)$ 约掉，得到极简的 $\cos C=\dfrac{a-3}{2a}$——这一步约分是命题人给的"礼物"，做出来说明方向正确。
+
+\textbf{易错点}：\textbf{千万别忘了三角形不等式}。若只解 $\cos C<0$ 会得到 $a<3$，从而误答"$a=1$ 或 $a=2$"；而 $a=1$ 时三边为 $1,2,3$，$1+2=3$ 退化成一条线段，根本不是三角形。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{19}{12 分}
+
+\textbf{题目}　如图，在四棱锥 $Q\text{-}ABCD$ 中，底面 $ABCD$ 是正方形，$AD=2$，$QD=QA=\sqrt5$，$QC=3$．
+
+\begin{center}\input{figures/f2021x2_t19_pyr}\end{center}
+
+  (1) 证明：平面 $QAD\perp$ 平面 $ABCD$；
+
+  (2) 求二面角 $B\text{-}QD\text{-}A$ 的余弦值．
+
+\par\medskip
+
+\textbf{(1) 证明}
+
+\textbf{取 $AD$ 的中点 $O$，连接 $QO$、$OC$。}
+
+\textbf{第一步，$QO\perp AD$。}
+
+在 $\triangle QAD$ 中，$QA=QD=\sqrt5$，故它是等腰三角形；$O$ 为底边 $AD$ 的中点，由\textbf{等腰三角形三线合一}：
+
+\[QO\perp AD\]
+
+\textbf{求 $QO$ 的长}：$AO=\dfrac{AD}2=1$，在直角三角形 $QOA$ 中
+
+\[QO=\sqrt{QA^{2}-AO^{2}}=\sqrt{5-1}=2\]
+
+\textbf{第二步，$QO\perp OC$（本问的关键，要把 $QC=3$ 用上）。}
+
+底面 $ABCD$ 是边长 $2$ 的正方形，$CD\perp AD$ 且 $CD=2$。因 $O$ 在 $AD$ 上、$OD=1$，在直角三角形 $ODC$ 中
+
+\[OC=\sqrt{OD^{2}+DC^{2}}=\sqrt{1+4}=\sqrt5\]
+
+现在检验 $\triangle QOC$：
+
+\[QO^{2}+OC^{2}=2^{2}+\left(\sqrt5\right)^{2}=4+5=9=3^{2}=QC^{2}\]
+
+由\textbf{勾股定理的逆定理}，$\triangle QOC$ 是以 $O$ 为直角顶点的直角三角形：
+
+\[QO\perp OC\]
+
+\textbf{第三步，线面垂直。}
+
+$AD$ 与 $OC$ 是平面 $ABCD$ 内的\textbf{两条相交直线}（交于 $O$），而 $QO$ 同时垂直于二者，由\textbf{线面垂直的判定定理}：
+
+\[QO\perp\text{平面 }ABCD\]
+
+\textbf{第四步，面面垂直。}
+
+$QO\subset$ 平面 $QAD$，且 $QO\perp$ 平面 $ABCD$，由\textbf{面面垂直的判定定理}：
+
+\[\text{平面 }QAD\perp\text{平面 }ABCD\qquad\blacksquare\]
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{建系}：由 (1) 知 $QO\perp$ 平面 $ABCD$，故以 $O$ 为原点、$OA$ 所在直线为 $x$ 轴、$OQ$ 所在直线为 $z$ 轴，$y$ 轴在底面内与 $AD$ 垂直，建立空间直角坐标系。
+
+由 $AD=2$、$O$ 为 $AD$ 中点、$QO=2$：
+
+\[O(0,0,0),\quad A(1,0,0),\quad D(-1,0,0),\quad Q(0,0,2)\]
+
+正方形 $ABCD$ 中 $AB\perp AD$ 且 $AB=2$，故（取 $B$ 在 $y$ 轴正方向一侧）
+
+\[B(1,2,0),\quad C(-1,2,0)\]
+
+\textbf{校验坐标}：$DC=|C-D|=|(0,2,0)|=2$ ；$BC=|C-B|=|(-2,0,0)|=2$ ；
+\[QC=|C-Q|=\left|(-1,2,-2)\right|=\sqrt{1+4+4}=3\ \checkmark\]
+（$QC=3$ 得到验证，说明建系无误。）
+
+\textbf{求两个半平面的法向量}（二面角的棱为 $QD$）。
+
+\textbf{平面 $QDA$}：三点 $Q(0,0,2)$、$D(-1,0,0)$、$A(1,0,0)$ 的 $y$ 坐标全为 $0$，故平面 $QDA$ 就是 $y=0$ 平面（$xOz$ 平面），法向量取
+
+\[\boldsymbol n_1=(0,1,0)\]
+
+\textbf{平面 $QDB$}：
+\[\overrightarrow{DQ}=Q-D=(1,0,2),\qquad \overrightarrow{DB}=B-D=(2,2,0)\]
+
+\[\boldsymbol n_2=\overrightarrow{DQ}\times\overrightarrow{DB}=\begin{vmatrix}\boldsymbol i&\boldsymbol j&\boldsymbol k\\ 1&0&2\\ 2&2&0\end{vmatrix}=(0\cdot0-2\cdot2)\boldsymbol i-(1\cdot0-2\cdot2)\boldsymbol j+(1\cdot2-0\cdot2)\boldsymbol k=(-4,\ 4,\ 2)\]
+
+\textbf{求夹角}：
+
+\[\left|\boldsymbol n_2\right|=\sqrt{16+16+4}=\sqrt{36}=6\]
+
+\[\cos\left\langle\boldsymbol n_1,\boldsymbol n_2\right\rangle=\frac{\boldsymbol n_1\cdot\boldsymbol n_2}{\left|\boldsymbol n_1\right|\left|\boldsymbol n_2\right|}=\frac{4}{1\times6}=\frac23\]
+
+\textbf{判断二面角的锐钝}（法向量夹角与二面角可能互补，必须确认）：直接用棱上的垂线验算。取棱 $QD$ 上的点 $D$，把 $\overrightarrow{DA}$、$\overrightarrow{DB}$ 各自减去在 $\overrightarrow{DQ}$ 方向上的投影：
+
+\[\overrightarrow{DA}=(2,0,0),\qquad \frac{\overrightarrow{DA}\cdot\overrightarrow{DQ}}{\left|\overrightarrow{DQ}\right|^{2}}\overrightarrow{DQ}=\frac25(1,0,2)=\left(\frac25,0,\frac45\right)\]
+
+\[\boldsymbol u=\overrightarrow{DA}-\left(\frac25,0,\frac45\right)=\left(\frac85,\ 0,\ -\frac45\right)\]
+
+\[\overrightarrow{DB}=(2,2,0),\qquad \frac{\overrightarrow{DB}\cdot\overrightarrow{DQ}}{\left|\overrightarrow{DQ}\right|^{2}}\overrightarrow{DQ}=\frac25(1,0,2)=\left(\frac25,0,\frac45\right)\]
+
+\[\boldsymbol v=\overrightarrow{DB}-\left(\frac25,0,\frac45\right)=\left(\frac85,\ 2,\ -\frac45\right)\]
+
+$\boldsymbol u$、$\boldsymbol v$ 都与棱 $QD$ 垂直，且分别指向含 $A$、含 $B$ 的半平面，它们的夹角\textbf{就是}二面角 $B\text{-}QD\text{-}A$：
+
+\[\boldsymbol u\cdot\boldsymbol v=\frac{64}{25}+0+\frac{16}{25}=\frac{80}{25}=\frac{16}5\]
+
+\[|\boldsymbol u|=\sqrt{\frac{64}{25}+\frac{16}{25}}=\sqrt{\frac{80}{25}}=\frac{4\sqrt5}5,\qquad |\boldsymbol v|=\sqrt{\frac{64}{25}+4+\frac{16}{25}}=\sqrt{\frac{180}{25}}=\frac{6\sqrt5}5\]
+
+\[\cos\theta=\frac{\dfrac{16}5}{\dfrac{4\sqrt5}5\cdot\dfrac{6\sqrt5}5}=\frac{\dfrac{16}5}{\dfrac{24\times5}{25}}=\frac{\dfrac{16}5}{\dfrac{24}5}=\frac{16}{24}=\frac23\]
+
+两法结果一致。
+
+\textbf{所以二面角 $B\text{-}QD\text{-}A$ 的余弦值为 $\dfrac23$。}
+
+\gkanswer{答案：$\dfrac23$}
+
+\begin{gktip}
+\textbf{方法总结}：
+① 第 (1) 问的套路是"\textbf{等腰三角形取底边中点 → 得垂线 → 再用勾股逆定理补上第二条垂直 → 线面垂直 → 面面垂直}"。题目给出的 $QC=3$ 看似多余，实则正是为勾股逆定理准备的——\textbf{解答题里没有一个数据是白给的}，若某个条件一直没用上，说明思路还不完整。
+② 第 (2) 问建系的合法性完全来自第 (1) 问（$QO\perp$ 底面才能当 $z$ 轴）。
+③ 若二面角的一个面恰好是\textbf{坐标平面}（本题的 $y=0$），其法向量直接写 $(0,1,0)$，省去一次叉乘。
+④ \textbf{法向量夹角与二面角可能相等也可能互补}，稳妥做法是像上面那样在棱上取垂线向量直接算，或者用几何直观判断二面角是锐是钝再定符号。本题二面角为锐角，故取 $+\dfrac23$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{20}{12 分}
+
+\textbf{题目}　已知椭圆 $C:\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\ (a>b>0)$，右焦点为 $F\left(\sqrt2,0\right)$，其离心率为 $\dfrac{\sqrt6}3$．
+
+  (1) 求椭圆 $C$ 的方程；
+
+  (2) 设 $M$，$N$ 是椭圆 $C$ 上的两点，直线 $MN$ 与曲线 $x^{2}+y^{2}=b^{2}\ (x>0)$ 相切．证明：$M$，$N$，$F$ 三点共线的充要条件是 $|MN|=\sqrt3$．
+
+\par\medskip
+
+\textbf{(1) 解}
+
+由右焦点 $F\left(\sqrt2,0\right)$ 得
+
+\[c=\sqrt2\]
+
+由离心率
+
+\[e=\frac ca=\frac{\sqrt6}3\ \Longrightarrow\ a=\frac c e=\frac{\sqrt2}{\dfrac{\sqrt6}3}=\frac{3\sqrt2}{\sqrt6}=\frac{3\sqrt2}{\sqrt6}\cdot\frac{\sqrt6}{\sqrt6}=\frac{3\sqrt{12}}6=\frac{6\sqrt3}6=\sqrt3\]
+
+于是
+
+\[a^{2}=3,\qquad b^{2}=a^{2}-c^{2}=3-2=1\]
+
+\[C:\ \frac{x^{2}}3+y^{2}=1\]
+
+（此时 $b=1$，题设中的辅助曲线即 $x^{2}+y^{2}=1\ (x>0)$，是\textbf{单位圆的右半部分}。）
+
+\par\medskip
+
+\textbf{(2) 证明}
+
+\textbf{准备：把"相切"与"弦长"都用直线的参数表出来。}
+
+先处理\textbf{竖直切线}的特殊情形。与右半单位圆相切的竖直直线只有 $x=1$（切点 $(1,0)$，$x>0$ ）。此时代入椭圆：
+
+\[\frac13+y^{2}=1\ \Longrightarrow\ y^{2}=\frac23\ \Longrightarrow\ |MN|=2\sqrt{\frac23}=\frac{2\sqrt6}3\]
+
+而 $\dfrac{2\sqrt6}3=\sqrt{\dfrac{24}9}=\sqrt{\dfrac83}\ne\sqrt3$，且直线 $x=1$ 显然不过 $F\left(\sqrt2,0\right)$。\textbf{故竖直情形下两个命题都不成立，可一并排除}，以下只需讨论非竖直直线。
+
+设 $MN:\ y=kx+m$。
+
+\textbf{相切条件}：原点到直线的距离等于半径 $1$，
+
+\[\frac{|m|}{\sqrt{1+k^{2}}}=1\ \Longrightarrow\ m^{2}=1+k^{2}\tag{$\ast$}\]
+
+（相应地切点为 $\left(\dfrac{-km}{1+k^{2}},\ \dfrac m{1+k^{2}}\right)$，$x>0$ 要求 $km<0$。）
+
+\textbf{联立椭圆}（把 $\dfrac{x^{2}}3+y^{2}=1$ 写成 $x^{2}+3y^{2}=3$）：
+
+\[x^{2}+3(kx+m)^{2}=3\]
+
+\[\left(1+3k^{2}\right)x^{2}+6kmx+3m^{2}-3=0\]
+
+由韦达定理
+
+\[x_1+x_2=\frac{-6km}{1+3k^{2}},\qquad x_1x_2=\frac{3m^{2}-3}{1+3k^{2}}\]
+
+\[\left(x_1-x_2\right)^{2}=\left(x_1+x_2\right)^{2}-4x_1x_2=\frac{36k^{2}m^{2}-4\left(3m^{2}-3\right)\left(1+3k^{2}\right)}{\left(1+3k^{2}\right)^{2}}\]
+
+\textbf{展开分子}：
+\[36k^{2}m^{2}-\left(12m^{2}-12\right)\left(1+3k^{2}\right)=36k^{2}m^{2}-12m^{2}-36k^{2}m^{2}+12+36k^{2}=-12m^{2}+12+36k^{2}\]
+
+\textbf{代入相切条件 $(\ast)$}（$m^{2}=1+k^{2}$）：
+
+\[-12\left(1+k^{2}\right)+12+36k^{2}=-12-12k^{2}+12+36k^{2}=24k^{2}\]
+
+于是
+
+\[\left(x_1-x_2\right)^{2}=\frac{24k^{2}}{\left(1+3k^{2}\right)^{2}}\]
+
+\[|MN|^{2}=\left(1+k^{2}\right)\left(x_1-x_2\right)^{2}=\frac{24k^{2}\left(1+k^{2}\right)}{\left(1+3k^{2}\right)^{2}}\tag{$\ast\ast$}\]
+
+\par\medskip
+
+\textbf{必要性（$\Longrightarrow$）：若 $M$、$N$、$F$ 三点共线，则 $|MN|=\sqrt3$。}
+
+三点共线即直线 $MN$ 过 $F\left(\sqrt2,0\right)$，代入 $y=kx+m$ 得
+
+\[0=\sqrt2k+m\ \Longrightarrow\ m=-\sqrt2k\]
+
+代入相切条件 $(\ast)$：
+
+\[2k^{2}=1+k^{2}\ \Longrightarrow\ k^{2}=1\ \Longrightarrow\ k=\pm1,\quad m=\mp\sqrt2\]
+
+（两组均满足 $km=-\sqrt2k^{2}<0$，切点横坐标 $\dfrac{-km}{1+k^{2}}=\dfrac{\sqrt2}2>0$ ，确实与右半圆相切。）
+
+代入 $(\ast\ast)$，取 $k^{2}=1$：
+
+\[|MN|^{2}=\frac{24\times1\times(1+1)}{(1+3)^{2}}=\frac{48}{16}=3\]
+
+\[|MN|=\sqrt3\qquad\checkmark\]
+
+\par\medskip
+
+\textbf{充分性（$\Longleftarrow$）：若 $|MN|=\sqrt3$，则 $M$、$N$、$F$ 三点共线。}
+
+由 $(\ast\ast)$ 令 $|MN|^{2}=3$：
+
+\[\frac{24k^{2}\left(1+k^{2}\right)}{\left(1+3k^{2}\right)^{2}}=3\]
+
+\[8k^{2}\left(1+k^{2}\right)=\left(1+3k^{2}\right)^{2}\]
+
+\[8k^{2}+8k^{4}=1+6k^{2}+9k^{4}\]
+
+\[0=k^{4}-2k^{2}+1=\left(k^{2}-1\right)^{2}\]
+
+\textbf{唯一解}
+
+\[k^{2}=1\ \Longrightarrow\ k=\pm1\]
+
+再由 $(\ast)$：$m^{2}=1+1=2$，即 $m=\pm\sqrt2$；由切点在右半圆要求 $km<0$，故
+
+\[(k,m)=(1,-\sqrt2)\quad\text{或}\quad(k,m)=(-1,\sqrt2)\]
+
+两条直线分别是
+
+\[y=x-\sqrt2\qquad\text{与}\qquad y=-x+\sqrt2\]
+
+把 $x=\sqrt2$ 代入，两者都得 $y=0$，即\textbf{都经过点 $F\left(\sqrt2,0\right)$}。
+
+故 $M$、$N$、$F$ 三点共线 $\qquad\checkmark$
+
+\par\medskip
+
+\textbf{综上，$M$、$N$、$F$ 三点共线的充要条件是 $|MN|=\sqrt3$。} $\blacksquare$
+
+\gkanswer{答案：(1) $\dfrac{x^{2}}3+y^{2}=1$；(2) 见上述证明}
+
+\begin{gktip}
+\textbf{方法总结}：
+① \textbf{充要条件必须两个方向都证}。本题的巧妙之处在于，两个方向共用同一个弦长公式 $(\ast\ast)$——正向把 $k^{2}=1$ 代进去算长度，反向把长度 $=\sqrt3$ 代进去解 $k$。\textbf{先把 $|MN|^{2}$ 表示成 $k$ 的函数，是一次投入、两次收益的写法。}
+② 化简 $(\ast\ast)$ 的关键是\textbf{尽早代入相切条件 $m^{2}=1+k^{2}$}，让分子从含 $m$ 的四项塌缩成一个 $24k^{2}$。
+③ 反向解出的方程是\textbf{完全平方} $\left(k^{2}-1\right)^{2}=0$，只有 $k^{2}=1$ 一个解，这保证了"没有别的直线也能达到 $\sqrt3$"，充分性才真正成立。若这里出现两个不同的 $k^{2}$，命题就不成立了。
+④ \textbf{不要漏掉竖直直线}：设 $y=kx+m$ 时已经默认斜率存在，必须先单独验算 $x=1$（本题给出 $\dfrac{2\sqrt6}3\ne\sqrt3$，顺利排除）。这是圆锥曲线解答题最常见的扣分点。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{21}{12 分}
+
+\textbf{题目}　一种微生物群体可以经过自身繁殖不断生存下来，设一个这种微生物为第 $0$ 代，经过一次繁殖后为第 $1$ 代，再经过一次繁殖后为第 $2$ 代……该微生物每代繁殖的个数是相互独立的且有相同的分布列，设 $X$ 表示 $1$ 个微生物个体繁殖下一代的个数，$P(X=i)=p_i>0\ (i=0,1,2,3)$．
+
+  (1) 已知 $p_0=0.4$，$p_1=0.3$，$p_2=0.2$，$p_3=0.1$，求 $E(X)$；
+
+  (2) 设 $p$ 表示该种微生物经过多代繁殖后临近灭绝的概率，$p$ 是关于 $x$ 的方程：$p_0+p_1x+p_2x^{2}+p_3x^{3}=x$ 的一个最小正实根，求证：当 $E(X)\le1$ 时，$p=1$，当 $E(X)>1$ 时，$p<1$；
+
+  (3) 根据你的理解说明 (2) 问结论的实际含义．
+
+\par\medskip
+
+\textbf{(1) 解}
+
+$X$ 的可能取值为 $0,1,2,3$，分布列为
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+$X$ & $0$ & $1$ & $2$ & $3$ \\
+\midrule
+$P$ & $0.4$ & $0.3$ & $0.2$ & $0.1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{校验}：$0.4+0.3+0.2+0.1=1$ 
+
+\[E(X)=0\times0.4+1\times0.3+2\times0.2+3\times0.1=0+0.3+0.4+0.3=1\]
+
+\gkanswer{答案：$E(X)=1$}
+
+\par\medskip
+
+\textbf{(2) 证明}
+
+\textbf{构造函数}：把方程移项，令
+
+\[f(x)=p_0+p_1x+p_2x^{2}+p_3x^{3}-x,\qquad x\ge0\]
+
+则 $p$ 就是 $f$ 在 $(0,+\infty)$ 上的最小零点。
+
+\textbf{三个基本事实（先备好）}：
+
+\textbf{事实一}：$x=1$ 恒为零点。因为 $p_0+p_1+p_2+p_3=1$（分布列概率之和为 $1$）：
+
+\[f(1)=\left(p_0+p_1+p_2+p_3\right)-1=1-1=0\]
+
+\textbf{事实二}：$f(0)=p_0>0$（题设 $p_i>0$）。
+
+\textbf{事实三}：$f'(1)=E(X)-1$。事实上
+
+\[f'(x)=p_1+2p_2x+3p_3x^{2}-1\]
+
+\[f'(1)=p_1+2p_2+3p_3-1=\underbrace{\left(0\cdot p_0+1\cdot p_1+2\cdot p_2+3\cdot p_3\right)}_{=E(X)}-1=E(X)-1\]
+
+并且
+
+\[f''(x)=2p_2+6p_3x>0\qquad(x\ge0,\ p_2>0,\ p_3>0)\]
+
+故 \textbf{$f'$ 在 $[0,+\infty)$ 上严格递增}（这是全部论证的支点）。
+
+\par\medskip
+
+\textbf{情形一：$E(X)\le1$，证 $p=1$。}
+
+此时 $f'(1)=E(X)-1\le0$。
+
+由 $f'$ 严格递增，对一切 $x\in[0,1)$ 有
+
+\[f'(x)<f'(1)\le0\]
+
+故 $f$ 在 $[0,1]$ 上\textbf{严格递减}。于是对 $x\in[0,1)$：
+
+\[f(x)>f(1)=0\]
+
+即 $f$ 在 $(0,1)$ 上\textbf{没有零点}。而 $f(1)=0$，所以 $f$ 在 $(0,+\infty)$ 上的最小零点就是 $1$：
+
+\[p=1\qquad\checkmark\]
+
+\par\medskip
+
+\textbf{情形二：$E(X)>1$，证 $p<1$。}
+
+此时 $f'(1)=E(X)-1>0$。
+
+\textbf{第一步，说明 $f'$ 在 $[0,1)$ 内必有变号点。}
+
+反证：若 $f'(x)>0$ 对一切 $x\in[0,1]$ 成立，则 $f$ 在 $[0,1]$ 上严格递增，从而
+
+\[f(0)<f(1)=0\]
+
+这与事实二 $f(0)=p_0>0$ \textbf{矛盾}。
+
+故存在 $x_1\in[0,1)$ 使 $f'\left(x_1\right)\le0$。又 $f'$ 连续且严格递增、$f'(1)>0$，故存在\textbf{唯一}的
+
+\[c\in\left[x_1,\ 1\right)\subset[0,1)\quad\text{使}\quad f'(c)=0\]
+
+且 $f$ 在 $[0,c]$ 上递减、在 $[c,1]$ 上\textbf{严格递增}。
+
+\textbf{第二步，定出 $f(c)<0$。}
+
+因 $f$ 在 $[c,1]$ 上严格递增且 $c<1$：
+
+\[f(c)<f(1)=0\]
+
+\textbf{第三步，用零点存在定理。}
+
+在区间 $[0,c]$ 上，$f$ 连续，且
+
+\[f(0)=p_0>0,\qquad f(c)<0\]
+
+故存在 $x_0\in(0,c)$ 使 $f\left(x_0\right)=0$。
+
+因 $x_0<c<1$，$f$ 在 $(0,1)$ 内\textbf{确有零点}，其最小正实根满足
+
+\[p\le x_0<1\qquad\checkmark\]
+
+\textbf{综上：$E(X)\le1$ 时 $p=1$；$E(X)>1$ 时 $p<1$。} $\blacksquare$
+
+\par\medskip
+
+\textbf{(3) 解}
+
+$E(X)$ 是\textbf{每个微生物个体平均繁殖出的下一代个数}，$p$ 是这一微生物群体最终灭绝的概率。第 (2) 问的结论说明：
+
+\begin{itemize}
+\item \textbf{当 $E(X)\le1$ 时 $p=1$}：如果平均每个个体繁殖的后代\textbf{不超过 $1$ 个}，那么这个微生物群体\textbf{必然（以概率 $1$）走向灭绝}——即便偶尔某些个体多繁殖了几个，长期看总量无法维持，最终仍会消亡。
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{当 $E(X)>1$ 时 $p<1$}：如果平均每个个体繁殖的后代\textbf{多于 $1$ 个}，那么灭绝的概率严格小于 $1$，即群体有\textbf{正的概率永远繁衍下去}（存活概率为 $1-p>0$）。当然它仍有可能因前几代运气不好而灭绝，所以并不是必然存活。
+\end{itemize}
+
+\textbf{一句话概括}：微生物群体能否长期存续，\textbf{分水岭恰好是"平均每代每个个体繁殖 $1$ 个后代"}——只有平均繁殖数超过 $1$，种群才有希望延续下去。
+
+\gkanswer{答案：(1) $E(X)=1$；(2) 见上述证明；(3) 见上述说明}
+
+\begin{gktip}
+\textbf{方法总结}：
+① 本题的数学内核是\textbf{分支过程（Galton–Watson 过程）的灭绝概率定理}，但解答完全落在高中范围内——把方程改写成 $f(x)=0$，再研究 $f$ 的单调性即可。
+② \textbf{突破口是发现 $f'(1)=E(X)-1$}：题目要按 $E(X)$ 与 $1$ 的大小分类，而 $E(X)-1$ 恰好是 $f$ 在已知零点 $x=1$ 处的导数——这就把"期望的大小"翻译成了"函数在 $1$ 处是升是降"，两种情形的图象立刻分明。
+③ 由 $f''>0$ 得 $f'$ 严格递增（$f$ 是凸函数），这保证 $f$ 在 $[0,1]$ 上至多"先减后增"一次，零点个数才能数清楚。
+④ 第 (3) 问是\textbf{开放性作答}，评分看是否说清"$E(X)$ 是平均繁殖数"与"$p$ 是灭绝概率"的实际意义，以及 $1$ 这条分界线的含义，不要求文字与标准答案一致。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{22}{12 分}
+
+\textbf{题目}　已知函数 $f(x)=(x-1)\mathrm e^{x}-ax^{2}+b$．
+
+  (1) 讨论 $f(x)$ 的单调性；
+
+  (2) 从下面两个条件中任选一个作为已知条件，证明：$f(x)$ 有一个零点．
+
+  ① $\dfrac12<a\le\dfrac{\mathrm e^{2}}2$，$b>2a$；
+
+  ② $0<a<\dfrac12$，$b\le2a$．
+
+\par\medskip
+
+\textbf{(1) 解}
+
+定义域为 $\mathbf R$。
+
+\textbf{求导}（对 $(x-1)\mathrm e^{x}$ 用乘积法则）：
+
+\[f'(x)=\left[1\cdot\mathrm e^{x}+(x-1)\mathrm e^{x}\right]-2ax=x\mathrm e^{x}-2ax\]
+
+\textbf{提取公因式 $x$}（这是本题的关键一步）：
+
+\[\boxed{\ f'(x)=x\left(\mathrm e^{x}-2a\right)\ }\]
+
+于是 $f'$ 的符号由两个因子 $x$ 与 $\mathrm e^{x}-2a$ 共同决定。注意常数 $b$ \textbf{不影响单调性}。
+
+\par\medskip
+
+\textbf{情形一：$a\le0$。}
+
+此时 $2a\le0<\mathrm e^{x}$，故 $\mathrm e^{x}-2a>0$ 恒成立，$f'$ 的符号完全由 $x$ 决定：
+
+\begin{itemize}
+\item $x<0$ 时 $f'(x)<0$，$f$ \textbf{单调递减}；
+\item $x>0$ 时 $f'(x)>0$，$f$ \textbf{单调递增}。
+\end{itemize}
+
+\textbf{结论}：$f$ 在 $(-\infty,0)$ 上递减，在 $(0,+\infty)$ 上递增。
+
+\par\medskip
+
+\textbf{情形二：$a>0$。}
+
+此时 $\mathrm e^{x}-2a=0$ 有唯一解 $x=\ln2a$，$f'$ 有两个零点 $0$ 与 $\ln2a$，需比较二者大小。
+
+\textbf{（i）$0<a<\dfrac12$}（即 $0<2a<1$，$\ln2a<0$）：
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+$x$ & $(-\infty,\ln2a)$ & $\ln2a$ & $(\ln2a,0)$ & $0$ & $(0,+\infty)$ \\
+\midrule
+$x$ & $-$ & $-$ & $-$ & $0$ & $+$ \\
+$\mathrm e^{x}-2a$ & $-$ & $0$ & $+$ & $+$ & $+$ \\
+$f'$ & $+$ & $0$ & $-$ & $0$ & $+$ \\
+$f$ & 增 & 极大 & 减 & 极小 & 增 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{结论}：$f$ 在 $(-\infty,\ln2a)$ 上递增，在 $(\ln2a,0)$ 上递减，在 $(0,+\infty)$ 上递增。
+
+\textbf{（ii）$a=\dfrac12$}（即 $\ln2a=0$，两个零点重合）：
+
+\[f'(x)=x\left(\mathrm e^{x}-1\right)\]
+
+$x$ 与 $\mathrm e^{x}-1$ \textbf{同号}（都以 $0$ 为分界且同向），故 $f'(x)\ge0$ 恒成立，仅在 $x=0$ 处取等。
+
+\textbf{结论}：$f$ 在 $\mathbf R$ 上\textbf{单调递增}。
+
+\textbf{（iii）$a>\dfrac12$}（即 $2a>1$，$\ln2a>0$）：
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+$x$ & $(-\infty,0)$ & $0$ & $(0,\ln2a)$ & $\ln2a$ & $(\ln2a,+\infty)$ \\
+\midrule
+$x$ & $-$ & $0$ & $+$ & $+$ & $+$ \\
+$\mathrm e^{x}-2a$ & $-$ & $-$ & $-$ & $0$ & $+$ \\
+$f'$ & $+$ & $0$ & $-$ & $0$ & $+$ \\
+$f$ & 增 & 极大 & 减 & 极小 & 增 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{结论}：$f$ 在 $(-\infty,0)$ 上递增，在 $(0,\ln2a)$ 上递减，在 $(\ln2a,+\infty)$ 上递增。
+
+\par\medskip
+
+\gkanswer{(1) 的答案汇总}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+$a$ 的范围 & 单调性 \\
+\midrule
+$a\le0$ & 减于 $(-\infty,0)$，增于 $(0,+\infty)$ \\
+$0<a<\dfrac12$ & 增于 $(-\infty,\ln2a)$，减于 $(\ln2a,0)$，增于 $(0,+\infty)$ \\
+$a=\dfrac12$ & 在 $\mathbf R$ 上单调递增 \\
+$a>\dfrac12$ & 增于 $(-\infty,0)$，减于 $(0,\ln2a)$，增于 $(\ln2a,+\infty)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\par\medskip
+
+\textbf{(2) 证明}
+
+\textbf{共用的预备计算：极值点处的函数值。}
+
+记 $t=\ln2a$（在 ①② 两条件下都有 $a>0$，故 $t$ 有定义），则
+
+\[2a=\mathrm e^{t},\qquad a=\frac{\mathrm e^{t}}2\]
+
+在 $x=t$ 处：
+
+\[f(t)=(t-1)\mathrm e^{t}-at^{2}+b=(t-1)\mathrm e^{t}-\frac{\mathrm e^{t}}2t^{2}+b\tag{$\dagger$}\]
+
+\textbf{把 $b$ 与 $2a=\mathrm e^{t}$ 比较}，就能定出 $f(t)$ 的符号——两个条件里的 "$b>2a$" 与 "$b\le2a$" 正是为此准备的。
+
+先把 $(\dagger)$ 中与 $b$ 无关的部分整理出来：
+
+\[(t-1)\mathrm e^{t}-\frac{\mathrm e^{t}}2t^{2}+\mathrm e^{t}=\mathrm e^{t}\left(t-1-\frac{t^{2}}2+1\right)=\mathrm e^{t}\left(t-\frac{t^{2}}2\right)=\frac{\mathrm e^{t}\,t(2-t)}2\tag{$\ddagger$}\]
+
+\par\medskip
+
+\gksubpart{选择条件 ①：$\dfrac12<a\le\dfrac{\mathrm e^{2}}2$，$b>2a$}
+
+\textbf{第一步，定位极值点。} 由 $a>\dfrac12$ 知属于 (1) 的情形 (iii)：$f$ 在 $(-\infty,0)$ 增、$(0,t)$ 减、$(t,+\infty)$ 增，其中
+
+\[t=\ln2a,\qquad \frac12<a\le\frac{\mathrm e^{2}}2\ \Longrightarrow\ 1<2a\le\mathrm e^{2}\ \Longrightarrow\ 0<t\le2\]
+
+\textbf{第二步，证明 $f$ 在 $[0,+\infty)$ 上没有零点。}
+
+$f$ 在 $[0,+\infty)$ 上先减后增，故最小值在 $x=t$ 处取得。由 $b>2a=\mathrm e^{t}$ 及 $(\dagger)(\ddagger)$：
+
+\[f(t)=\left[(t-1)\mathrm e^{t}-\frac{\mathrm e^{t}}2t^{2}+\mathrm e^{t}\right]+\left(b-\mathrm e^{t}\right)=\frac{\mathrm e^{t}\,t(2-t)}2+\underbrace{\left(b-2a\right)}_{>0}>\frac{\mathrm e^{t}\,t(2-t)}2\]
+
+因 $0<t\le2$，有 $t>0$ 且 $2-t\ge0$，故 $\dfrac{\mathrm e^{t}\,t(2-t)}2\ge0$，从而
+
+\[f(t)>0\]
+
+于是 $f(x)\ge f(t)>0$ 对一切 $x\ge0$ 成立——\textbf{$f$ 在 $[0,+\infty)$ 上无零点}。
+
+\textbf{第三步，证明 $f$ 在 $(-\infty,0)$ 上恰有一个零点。}
+
+$f$ 在 $(-\infty,0]$ 上单调递增，且
+
+\begin{itemize}
+\item \textbf{右端}：$f(0)=(0-1)\mathrm e^{0}-0+b=b-1$。由 $b>2a>2\times\dfrac12=1$，得 $f(0)=b-1>0$。
+\item \textbf{左端}：当 $x\to-\infty$ 时，$(x-1)\mathrm e^{x}\to0$（指数衰减压倒一次增长），而 $-ax^{2}\to-\infty$（$a>0$），$b$ 为常数，故
+\end{itemize}
+
+\[f(x)\to-\infty\]
+
+（若要给出具体的负值点：取 $x_0=-\sqrt{\dfrac{b+1}a}<0$，则 $(x_0-1)\mathrm e^{x_0}\in(-1,0)$，故 $f\left(x_0\right)<0-a\cdot\dfrac{b+1}a+b=-1<0$。）
+
+$f$ 在 $(-\infty,0]$ 上连续、\textbf{严格单调递增}，从负值增到 $f(0)>0$，由零点存在定理与单调性，\textbf{恰有一个零点}。
+
+\textbf{综上，在条件 ① 下 $f(x)$ 有且仅有一个零点（位于 $(-\infty,0)$ 内）。} $\blacksquare$
+
+\par\medskip
+
+\gksubpart{选择条件 ②：$0<a<\dfrac12$，$b\le2a$}
+
+\textbf{第一步，定位极值点。} 由 $0<a<\dfrac12$ 知属于 (1) 的情形 (i)：$f$ 在 $(-\infty,t)$ 增、$(t,0)$ 减、$(0,+\infty)$ 增，其中
+
+\[t=\ln2a,\qquad 0<2a<1\ \Longrightarrow\ t<0\]
+
+\textbf{第二步，证明 $f$ 在 $(-\infty,0]$ 上没有零点。}
+
+$f$ 在 $(-\infty,0]$ 上先增后减，故最大值在 $x=t$ 处取得。由 $b\le2a=\mathrm e^{t}$ 及 $(\dagger)(\ddagger)$：
+
+\[f(t)=\frac{\mathrm e^{t}\,t(2-t)}2+\underbrace{\left(b-2a\right)}_{\le0}\le\frac{\mathrm e^{t}\,t(2-t)}2\]
+
+因 $t<0$，有 $t<0$ 且 $2-t>2>0$，故 $t(2-t)<0$，从而
+
+\[f(t)<0\]
+
+于是 $f(x)\le f(t)<0$ 对一切 $x\le0$ 成立——\textbf{$f$ 在 $(-\infty,0]$ 上无零点}。
+
+\textbf{第三步，证明 $f$ 在 $(0,+\infty)$ 上恰有一个零点。}
+
+$f$ 在 $[0,+\infty)$ 上单调递增，且
+
+\begin{itemize}
+\item \textbf{左端}：$f(0)=b-1$。由 $b\le2a<2\times\dfrac12=1$，得 $f(0)=b-1<0$。
+\item \textbf{右端}：当 $x\to+\infty$ 时，$(x-1)\mathrm e^{x}$ 是\textbf{指数级}增长，而 $ax^{2}$ 只是二次增长，故
+\end{itemize}
+
+\[f(x)=(x-1)\mathrm e^{x}-ax^{2}+b\to+\infty\]
+
+（若要给出具体的正值点：由 $\mathrm e^{x}>x$ 对一切 $x>0$ 成立，取充分大的 $x$ 即可，例如 $x\ge2$ 时 $(x-1)\mathrm e^{x}\ge\mathrm e^{x}>x^{3}/6$……更简洁地，$f$ 在 $[0,\infty)$ 上连续递增且趋于 $+\infty$，必超过 $0$。）
+
+$f$ 在 $[0,+\infty)$ 上连续、\textbf{严格单调递增}，从 $f(0)<0$ 增到 $+\infty$，\textbf{恰有一个零点}。
+
+\textbf{综上，在条件 ② 下 $f(x)$ 有且仅有一个零点（位于 $(0,+\infty)$ 内）。} $\blacksquare$
+
+\gkanswer{答案：(1) 见上表；(2) 两条件下 $f(x)$ 均恰有一个零点}
+
+\begin{gktip}
+\textbf{方法总结}：这道压轴题的三个关键点——
+1. \textbf{求导后必须提出公因式 $x$}：$f'(x)=x\left(\mathrm e^{x}-2a\right)$。若展开成 $x\mathrm e^{x}-2ax$ 而不提取，就看不出两个零点 $0$ 与 $\ln2a$，分类讨论无从下手。分类的依据是\textbf{这两个零点的大小关系}，分界恰在 $\ln2a=0$ 即 $a=\dfrac12$。
+2. \textbf{换元 $t=\ln2a$（即 $2a=\mathrm e^{t}$）把双参数化为单参数}。极值 $f(t)$ 中同时出现 $\mathrm e^{t}$ 与 $a$，用 $a=\dfrac{\mathrm e^{t}}2$ 统一后，$(\ddagger)$ 式塌缩成漂亮的 $\dfrac{\mathrm e^{t}t(2-t)}2$，符号一眼可判——这正是题设把 $a$ 的上界定为 $\dfrac{\mathrm e^{2}}2$（对应 $t\le2$）的原因。
+3. \textbf{条件 ①② 的对称性}：① 是"$a$ 大 + $b$ 大"，把极小值抬到 $0$ 以上，零点被挤到左边的单调支上；② 是"$a$ 小 + $b$ 小"，把极大值压到 $0$ 以下，零点被挤到右边的单调支上。\textbf{两问结构完全对称，做出一个另一个照抄即可。}
+
+\textbf{考试策略}：第 (1) 问的四类讨论必须写全（漏 $a\le0$ 或漏 $a=\dfrac12$ 都要扣分）；第 (2) 问选 ① 或 ② 得分相同，建议选 ②——因为 $f(0)=b-1<0$ 与"右端趋于 $+\infty$"都比 ① 的左端极限论证更容易写清楚。
+\end{gktip}
