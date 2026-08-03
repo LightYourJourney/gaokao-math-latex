@@ -82,13 +82,23 @@ warnings: list[str] = []
 # ---------- 行内处理 ----------
 # 文本段中裸写的数学 Unicode 符号（源 MD 少量存在）→ 等价数学命令
 BARE_SYM = {
-    "⟹": r"~$\Longrightarrow$~", "∩": r"$\cap$", "∪": r"$\cup$",
+    "⟹": r"~$\Longrightarrow$~", "⟺": r"~$\Longleftrightarrow$~",
+    "∩": r"$\cap$", "∪": r"$\cup$",
     "⊥": r"$\perp$", "≠": r"$\neq$", "∥": r"$\parallel$",
     "◇": r"$\Diamond$", "▭": r"$\square$", "−": r"$-$",
     "∈": r"$\in$", "⊂": r"$\subset$",
 }
 
-CJK_IN_MATH = re.compile(r"([\u4e00-\u9fff、，；：]+)")
+CJK_IN_MATH = re.compile(r"([\u4e00-\u9fff、，；：「」]+)")
+
+
+def conv_math_display(s: str) -> str:
+    """行间公式体的清洗（$$ 块不经 conv_inline，需单独处理）：
+    剥 emoji、裸中文包 \\text（西文数学字体缺 CJK 字形）。
+    不剥内嵌 $ —— \\tag{$\\ast$} 等文本模式内的数学是合法嵌套（曾误剥致回归）。"""
+    for ch in EMOJI:
+        s = s.replace(ch, "")
+    return CJK_IN_MATH.sub(r"\\text{\1}", s)
 
 
 def conv_inline(s: str) -> str:
@@ -158,13 +168,19 @@ def emit_table(lines: list[str]) -> list[str]:
     body_rows = [rows[0]] + rows[2:]
     ncol = max(len(r) for r in body_rows)
     aligns += ["c"] * (ncol - len(aligns))
-    out = ["\\begin{center}", f"\\begin{{tabular}}{{{''.join(aligns[:ncol])}}}", "\\toprule"]
+    out = ["\\begin{center}"]
+    if ncol >= 8:      # 宽表（如 9 列频率分布表）收紧列距，防 Overfull
+        out.append("\\begingroup\\setlength{\\tabcolsep}{4pt}")
+    out += [f"\\begin{{tabular}}{{{''.join(aligns[:ncol])}}}", "\\toprule"]
     for i, r in enumerate(body_rows):
         r = r + [""] * (ncol - len(r))
         out.append(" & ".join(conv_inline(c) for c in r) + r" \\")
         if i == 0:
             out.append("\\midrule")
-    out += ["\\bottomrule", "\\end{tabular}", "\\end{center}"]
+    out += ["\\bottomrule", "\\end{tabular}"]
+    if ncol >= 8:
+        out.append("\\endgroup")
+    out.append("\\end{center}")
     return out
 
 
@@ -238,7 +254,7 @@ def convert_block(lines: list[str]) -> list[str]:
             s = ln.strip()
             m = re.match(r"^\$\$(.+?)\$\$(.*)$", s)
             if m:                       # 单行 $$...$$，允许带尾随文字（如括号段收尾）
-                out += ["\\[" + m.group(1) + "\\]"]
+                out += ["\\[" + conv_math_display(m.group(1)) + "\\]"]
                 if m.group(2).strip():
                     out += [conv_inline(m.group(2).strip())]
                 i += 1
@@ -249,7 +265,7 @@ def convert_block(lines: list[str]) -> list[str]:
                 j += 1
                 body += "\n" + lines[j].strip()
             if body.endswith("$$") and len(body) > 2:
-                out += ["\\[" + body[2:-2] + "\\]"]
+                out += ["\\[" + conv_math_display(body[2:-2]) + "\\]"]
             else:                       # 越界护栏：未闭合不崩溃，按行内文本退化并告警
                 warnings.append(f"未闭合的 $$ 块：{s[:50]}")
                 out += [conv_inline(s)]

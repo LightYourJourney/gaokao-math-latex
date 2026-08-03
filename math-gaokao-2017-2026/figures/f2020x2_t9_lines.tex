@@ -1,0 +1,32 @@
+% 2020 新高考Ⅱ卷 9：某地区复工复产指数折线图（连续 11 天）
+% 绘制依据：源 PDF 原图逐点核对。横轴「天数」等距标 1–11；纵轴「指数」不从 0 起，
+% 只画 78%/80%/82% 三条水平虚线并在左侧标注；右上角图例：空心圆＝复产指数，实心圆＝复工指数。
+% 必须保住的形态：第 2 天复工为全图最低且恰在 78% 线上；第 6 天复工恰在 82% 线上；
+% 第 3 天起两线均在 80% 线上方；第 8→9 天两线交叉，其后复工在上（第 11 天复产重新略高）；
+% 第 1 天两线间距明显大于第 11 天。
+% 说明：第 2 天复工取 78.0、第 6 天复工取 82.0（转录读数 77.9 / 82.1），
+% 以保住原图「恰落在虚线上」的定性特征——0.1 的差在本图尺度上会明显浮出虚线。
+\begin{tikzpicture}
+\begin{axis}[width=10.6cm, height=6.4cm, font=\small,
+  axis lines=left,
+  xlabel={天数}, ylabel={指数},
+  xlabel style={at={(1,0)}, anchor=north west},
+  ylabel style={at={(0,1)}, anchor=south, rotate=-90},
+  xmin=0.35, xmax=11.75, ymin=76.9, ymax=87.4,
+  xtick={1,2,...,11},
+  ytick={78,80,82},
+  yticklabels={$78\%$,$80\%$,$82\%$},
+  ymajorgrids=true, grid style={dashed, gray!65},
+  legend cell align=left,
+  legend style={at={(0.995,0.99)}, anchor=north east, draw=none, fill=white,
+                font=\small, row sep=-2pt, inner sep=2pt}]
+  \addplot[thick, mark=o, mark size=1.7pt, mark options={fill=white}]
+    coordinates {(1,80.6) (2,80.8) (3,81.6) (4,82.4) (5,82.6) (6,83.0)
+                 (7,84.0) (8,83.4) (9,81.6) (10,82.8) (11,84.4)};
+  \addlegendentry{复产指数}
+  \addplot[thick, mark=*, mark size=1.7pt]
+    coordinates {(1,79.7) (2,78.0) (3,80.5) (4,81.1) (5,81.3) (6,82.0)
+                 (7,82.3) (8,81.7) (9,83.2) (10,84.5) (11,83.9)};
+  \addlegendentry{复工指数}
+\end{axis}
+\end{tikzpicture}

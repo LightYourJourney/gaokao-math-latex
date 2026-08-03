@@ -1,0 +1,36 @@
+% 2022 新高考Ⅱ卷 19：年龄频率分布直方图
+% 九组，组距均为 10（[0,10),…,[80,90)），频率/组距依次为
+% 0.001、0.002、0.012、0.017、0.023、0.020、0.017、0.006、0.002（合计 ×10 = 1）。
+% 纵轴刻度自下而上 0.001、0.002、0.006、0.012、0.017、0.020、0.023，各引水平虚线至对应矩形顶。
+\begin{tikzpicture}[font=\small, x=0.088cm, y=260cm]
+  % ---- 引至矩形顶的水平虚线 ----
+  \draw[dashed] (0,0.001) -- (10,0.001);
+  \draw[dashed] (0,0.002) -- (20,0.002);
+  \draw[dashed] (0,0.006) -- (80,0.006);
+  \draw[dashed] (0,0.012) -- (30,0.012);
+  \draw[dashed] (0,0.017) -- (40,0.017);
+  \draw[dashed] (0,0.020) -- (60,0.020);
+  \draw[dashed] (0,0.023) -- (50,0.023);
+  % ---- 直方图矩形 ----
+  \draw ( 0,0) rectangle (10,0.001);
+  \draw (10,0) rectangle (20,0.002);
+  \draw (20,0) rectangle (30,0.012);
+  \draw (30,0) rectangle (40,0.017);
+  \draw (40,0) rectangle (50,0.023);
+  \draw (50,0) rectangle (60,0.020);
+  \draw (60,0) rectangle (70,0.017);
+  \draw (70,0) rectangle (80,0.006);
+  \draw (80,0) rectangle (90,0.002);
+  % ---- 坐标轴 ----
+  \draw[-stealth] (0,0) -- (97,0);
+  \draw[-stealth] (0,0) -- (0,0.0258);
+  % ---- 刻度 ----
+  \foreach \x in {10,20,30,40,50,60,70,80,90}
+    { \draw (\x,0) -- (\x,-0.00035); \node[below, inner sep=2pt] at (\x,-0.0002) {\footnotesize $\x$}; }
+  \foreach \y/\lab in {0.001/0.001,0.002/0.002,0.006/0.006,0.012/0.012,0.017/0.017,0.020/0.020,0.023/0.023}
+    { \draw (0,\y) -- (-1.6,\y); \node[left, inner sep=2pt] at (-1.6,\y) {\footnotesize $\lab$}; }
+  \node[below left, inner sep=1.5pt] at (0,0) {$0$};
+  % ---- 轴名 ----
+  \node[right, inner sep=3pt] at (97,0) {年龄/岁};
+  \node[above, inner sep=2.5pt] at (0,0.0258) {$\displaystyle\frac{\mbox{频率}}{\mbox{组距}}$};
+\end{tikzpicture}

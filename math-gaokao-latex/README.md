@@ -1,7 +1,13 @@
-# 高考数学真题 · 拆分版 LaTeX 项目（2017–2026 全国Ⅰ卷系）
+# 高考数学真题 · 拆分版 LaTeX 项目（2017–2026 全国Ⅰ卷系 + 新高考Ⅱ卷系）
 
-把合并书 [`math-gaokao-2017-2026/`](../math-gaokao-2017-2026/) 拆成 **14 个独立试卷项目**，
-每套试卷一个目录、四个可独立编译的版本。全部图形 TikZ/pgfplots 矢量绘制，XeLaTeX 编译。
+**21 个独立试卷项目**，每套一个目录、四个可独立编译的版本。全部图形 TikZ/pgfplots
+矢量绘制，XeLaTeX 编译。两个来源：
+
+- **全国Ⅰ卷系 14 套**（2017–2020 文理、2021–2024 新高考Ⅰ、2025–2026 全国 1）：
+  由合并书 [`math-gaokao-2017-2026/`](../math-gaokao-2017-2026/) 拆分而来；
+- **新高考Ⅱ卷系 7 套**（2020–2024 新高考Ⅱ、2025–2026 全国 2）：批次扩展卷，
+  自 deekur/gaokaomath 源 PDF 逐题转录 + 编者自写解析（三件套 MD 入 `<年>/`），
+  素材经合并书 papers/answers 目录中转但**不进合并书 main.pdf**。
 
 ## 四个版本
 
@@ -15,7 +21,7 @@
 ## 编译
 
 ```bash
-./compile.sh                              # 全部 14 套 × 4 版本
+./compile.sh                              # 全部 21 套 × 4 版本
 ./compile.sh 2017_全国Ⅰ卷_理科            # 单套 4 版本
 ./compile.sh 2017_全国Ⅰ卷_理科 解析版     # 单个目标
 ```
@@ -36,7 +42,8 @@ common/               共享导言三件套（所有版本壳 \input 之）
   answers_short.tex     简短答案速查（选择题字母经三源交叉核对）
   figures/              该卷用到的 TikZ 图（自合并书复制副本，项目自含）
   试题版.tex 解析版.tex 简答版.tex 印刷版.tex   四个可编译壳
-index.json            14 套试卷元数据（卷别、题量、题型分段、合并书页码范围、图形清单）
+index.json            21 套试卷元数据（卷别、题量、题型分段、图形清单；批次扩展卷
+                      pdf_pages 为 null 并带 variant 字段，不在合并书页码体系内）
 tools/                生成脚本（见下）
 compile.sh            一键编译
 ```
@@ -46,7 +53,7 @@ compile.sh            一键编译
 ```
 *.md（源）──md2tex──▶ 合并书 papers/ answers/ ──split_project.py──▶ 各卷 questions.tex answers.tex
 *_答案要点.md ────────────────────────────────make_short_answers.py──▶ 各卷 answers_short.tex
-                                                          make_editions.py ──▶ 四版本壳 ×14
+                                                          make_editions.py ──▶ 四版本壳 ×21
 ```
 
 - **内容有误**：改 年份目录 的源 MD → 重跑合并书 `tools/md2tex.py` → 重跑本项目 `tools/split_project.py`。不要手改 questions.tex / answers*.tex（文件头有生成标注）。
@@ -55,8 +62,11 @@ compile.sh            一键编译
 
 ## 内容来源与可靠性
 
-- 试题与解析承自合并书项目，源头为本仓库 年份目录（[deekur/gaokaomath](https://github.com/deekur/gaokaomath)，CC BY 4.0，经人工转写校对）。
-- **解析非官方标准答案**（编者独立推导）；2026 卷为**回忆版**。
-- **未收录卷种**（全国Ⅱ/Ⅲ卷、甲/乙卷、新高考Ⅱ卷等，因无原始材料不凭记忆默写）：
+- 试题源头均为 [deekur/gaokaomath](https://github.com/deekur/gaokaomath)（CC BY 4.0）：
+  Ⅰ卷系经本仓库 年份目录 人工转写校对；新Ⅱ卷系由并行转录 agent 自源 PDF 渲染图
+  逐题转录、主流程独立复核，客观题答案尽可能与公开官方答案交叉核对（核对状态逐卷
+  记录于 `report.md`）。
+- **解析非官方标准答案**（编者独立推导，逐题脚本验算）；Ⅰ卷系 2026 卷为**回忆版**。
+- **未收录卷种**（全国Ⅱ/Ⅲ卷、甲/乙卷等，因无转写材料不凭记忆默写）：
   清单与补充方法见合并书 [`missing_list.md`](../math-gaokao-2017-2026/missing_list.md)。
 - 简答版中证明题的问标注"见解析版"——证明题不存在可压缩的"简短结论"，不硬造。

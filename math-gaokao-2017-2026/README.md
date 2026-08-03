@@ -30,8 +30,9 @@ missing_list.md   未收录卷种与保留意见清单（必读）
 ## 内容来源与可靠性
 
 - 试题原文：本仓库 年份目录（源自 [deekur/gaokaomath](https://github.com/deekur/gaokaomath)，CC BY 4.0），
-  经人工转写与校对；**未收录无原始材料的其他卷种**（全国Ⅱ/Ⅲ卷、甲/乙卷、新高考Ⅱ卷），
-  详见 `missing_list.md`。
+  经人工转写与校对；**未收录无转写材料的其他卷种**（全国Ⅱ/Ⅲ卷、甲/乙卷），
+  详见 `missing_list.md`。新高考Ⅱ卷系 7 套已批次补录为**素材**（papers/answers 内
+  `*_xgk2*`、`*_g2*`，不进本书 main.pdf），四版本见 `../math-gaokao-latex/`。
 - 解析：编者独立推导，**非官方标准答案**。
 - 2026 年卷为**回忆版**。
 
