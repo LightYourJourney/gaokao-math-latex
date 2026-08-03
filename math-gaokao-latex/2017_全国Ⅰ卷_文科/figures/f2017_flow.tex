@@ -1,0 +1,24 @@
+% 2017 全国Ⅰ卷 理8/文10：求满足 3^n-2^n>1000 的最小偶数 n 的程序框图
+% 两个空白框（菱形与左侧矩形）是题目要求填入的位置，故留白
+\begin{tikzpicture}[font=\small, >=Stealth, node distance=8mm,
+  box/.style={draw, minimum height=1.9em, inner xsep=7pt},
+  term/.style={draw, rounded corners=7pt, minimum height=1.9em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.9em, inner xsep=2pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1.5pt}]
+  \node[term] (start) {开始};
+  \node[io, below=of start] (in) {输入 $n=0$};
+  \coordinate[below=5mm of in] (merge);
+  \node[box, below=2mm of merge] (calc) {$A=3^{n}-2^{n}$};
+  \node[dec, below=of calc] (cond) {\phantom{$A\le1000$}};
+  \node[box, left=12mm of calc, minimum width=5.2em] (blank) {\phantom{$n=n+2$}};
+  \node[io, below=of cond] (out) {输出 $n$};
+  \node[term, below=of out] (end) {结束};
+  \draw[->] (start) -- (in);
+  \draw[->] (in) -- (calc);
+  \draw[->] (calc) -- (cond);
+  \draw[->] (cond) -- node[right]{否} (out);
+  \draw[->] (out) -- (end);
+  \draw[->] (cond) -| node[below, pos=0.18]{是} (blank);
+  \draw[->] (blank) |- (merge);
+\end{tikzpicture}

@@ -1,0 +1,18 @@
+% 2024 新高考Ⅰ卷 11："丝带"曲线 C：((x-2)^2+y^2)·(x+2)^2=16（过原点，a=-2）
+% 由 y=±sqrt(16/(x+2)^2-(x-2)^2) 精确绘制；x→-2 时 y→∞，绘图窗口截断
+\begin{tikzpicture}
+\begin{axis}[width=7.6cm, height=6.6cm, font=\small,
+  axis lines=middle, xlabel={$x$}, ylabel={$y$},
+  xmin=-3.1, xmax=4.1, ymin=-3.1, ymax=3.1,
+  xtick=\empty, ytick=\empty,
+  every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+  every axis y label/.style={at={(current axis.above origin)}, anchor=south}]
+  \addplot[domain=-1.75:2.8284, samples=300, thick]
+    { sqrt(max(0, 16/((x+2)^2) - (x-2)^2)) };
+  \addplot[domain=-1.75:2.8284, samples=300, thick]
+    {-sqrt(max(0, 16/((x+2)^2) - (x-2)^2)) };
+  \node[below left] at (axis cs:0,0) {$O$};
+  \fill (axis cs:2,0) circle (1.2pt) node[below] {$F$};
+  \node at (axis cs:-1.3,2.5) {$C$};
+\end{axis}
+\end{tikzpicture}

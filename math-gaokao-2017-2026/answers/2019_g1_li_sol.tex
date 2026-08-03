@@ -1,0 +1,1201 @@
+% 由 tools/md2tex.py 自 2019_数学真题_理_含解析.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{解析归属}：本文档全部解析由本库编写者根据试题独立推导，\textbf{非官方标准答案}。若与官方发布版本不一致，以官方为准。
+
+\textbf{ 卷种提示}：本卷含\textbf{已取消的选做题}（第 22/23 题）与\textbf{已删除的程序框图}考点（第 8 题）。
+\end{gknotice}
+
+\par\medskip
+
+\gkpart{一、选择题（每小题 5 分，共 60 分）}
+
+\gksolhead{1}{}
+
+\textbf{题目}　已知集合 $M=\{x\mid-4<x<2\}$，$N=\left\{x\mid x^{2}-x-6<0\right\}$，则 $M\cap N=$（　　）
+
+\textbf{解析}
+
+先解 $N$：
+\[x^{2}-x-6=(x-3)(x+2)<0\ \Longrightarrow\ -2<x<3\]
+
+与 $M=(-4,2)$ 取交集——\textbf{取两个区间的重叠部分}（左端点取较大者 $-2$，右端点取较小者 $2$）：
+\[M\cap N=(-2,\ 2)\]
+
+\gkanswer{答案：C}
+
+\par\medskip
+
+\gksolhead{2}{}
+
+\textbf{题目}　设复数 $z$ 满足 $|z-\mathrm i|=1$，$z$ 在复平面内对应的点为 $(x,y)$，则（　　）
+
+\textbf{解析}
+
+设 $z=x+y\mathrm i$，则
+\[z-\mathrm i=x+(y-1)\mathrm i\]
+
+由模的定义：
+\[|z-\mathrm i|=\sqrt{x^{2}+(y-1)^{2}}=1\]
+
+两边平方：
+\[x^{2}+(y-1)^{2}=1\]
+
+\gkanswer{答案：C}
+
+\begin{gktip}
+\textbf{几何意义}：$|z-z_0|=r$ 在复平面上表示\textbf{以 $z_0$ 对应的点为圆心、$r$ 为半径的圆}。本题 $z_0=\mathrm i$ 对应点 $(0,1)$，故圆心为 $(0,1)$、半径 $1$——记住这个几何解释可以直接选出答案。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{3}{}
+
+\textbf{题目}　已知 $a=\log_2 0.2$，$b=2^{0.2}$，$c=0.2^{0.3}$，则（　　）
+
+\textbf{解析}
+
+\textbf{方法：用 $0$ 和 $1$ 作为"分界标尺"}，把三个数分别定位。
+
+\textbf{定位 $a$}：
+\[a=\log_2 0.2<\log_2 1=0\]
+（真数小于 $1$、底数大于 $1$，对数为\textbf{负}。）
+
+\textbf{定位 $b$}：
+\[b=2^{0.2}>2^{0}=1\]
+（底数大于 $1$、指数为正，结果\textbf{大于 $1$}。）
+
+\textbf{定位 $c$}：
+\[c=0.2^{0.3}\]
+底数 $0.2\in(0,1)$、指数 $0.3>0$，故
+\[0=0.2^{+\infty}<c<0.2^{0}=1\]
+即 $c\in(0,1)$。
+
+\textbf{综合}：
+\[a<0<c<1<b\ \Longrightarrow\ a<c<b\]
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{方法总结}：比较指数式、对数式的大小，\textbf{第一步永远是用 $0$ 和 $1$ 分组}——负数、$(0,1)$ 之间、大于 $1$ 三类。只有当两个数落在同一组时，才需要进一步用单调性或中介值细分。本题三个数恰好各占一组，无需任何计算。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{4}{}
+
+\textbf{题目}　最美人体的头顶至肚脐与肚脐至足底之比是 $\dfrac{\sqrt5-1}2\approx0.618$，头顶至咽喉与咽喉至肚脐之比也是 $\dfrac{\sqrt5-1}2$。若某人满足这两个比例，且腿长 $105\ \mathrm{cm}$、头顶至脖子下端 $26\ \mathrm{cm}$，则其身高可能是（　　）
+
+\textbf{解析}
+
+记黄金比 $\lambda=\dfrac{\sqrt5-1}2\approx0.618$。
+
+\textbf{第一步，由"头顶至咽喉"求"咽喉至肚脐"。}
+
+设咽喉至肚脐的长度为 $d$。由第二个比例：
+\[\frac{26}{d}=\lambda\ \Longrightarrow\ d=\frac{26}\lambda\approx\frac{26}{0.618}\approx42.1\ (\mathrm{cm})\]
+
+\textbf{第二步，求"头顶至肚脐"。}
+\[a=26+d\approx26+42.1=68.1\ (\mathrm{cm})\]
+
+\textbf{第三步，由第一个比例求"肚脐至足底"。}
+\[\frac ab=\lambda\ \Longrightarrow\ b=\frac a\lambda\approx\frac{68.1}{0.618}\approx110.2\ (\mathrm{cm})\]
+
+\textbf{第四步，检验合理性（题目给腿长的用意）。}
+
+腿长 $105\ \mathrm{cm}$ 是"肚脐至足底"的一部分（肚脐在腿根之上），故必须有
+\[b>105\]
+
+而 $110.2>105$  \textbf{数据自洽}。
+
+\textbf{第五步，求身高。}
+\[\text{身高}=a+b\approx68.1+110.2=178.3\ (\mathrm{cm})\]
+
+四个选项 $165$、$175$、$185$、$190$ 中，与 $178.3$ 最接近的是 $175$。
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{方法总结}：这类"情境比例题"的关键是\textbf{理清各段长度的从属关系}（本题是"头顶—咽喉—肚脐—足底"四点三段），然后从已知的那一段出发逐步推算。题目给的"腿长 $105$"看似多余，实则是\textbf{验证数据合理性的锚点}——若算出 $b<105$ 就说明理解有误。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{5}{}
+
+\textbf{题目}　函数 $f(x)=\dfrac{\sin x+x}{\cos x+x^{2}}$ 在 $[-\pi,\pi]$ 的图象大致为（　　）
+
+\begin{center}\input{figures/f2019_t5_panels}\end{center}
+
+\textbf{解析}
+
+\textbf{识图题的通法：用"性质筛选"逐步排除，不必精确作图。}
+
+\textbf{性质一：奇偶性。}
+\[f(-x)=\frac{\sin(-x)+(-x)}{\cos(-x)+(-x)^{2}}=\frac{-(\sin x+x)}{\cos x+x^{2}}=-f(x)\]
+
+$f$ 是\textbf{奇函数}，图象关于\textbf{原点对称}。
+
+\textbf{性质二：原点附近的斜率。}
+
+当 $x\to0$ 时，用近似 $\sin x\approx x$、$\cos x\approx1$：
+\[f(x)\approx\frac{x+x}{1+x^{2}}\approx2x\]
+
+即图象在原点处的切线斜率约为 $2$（\textbf{比较陡}）。
+
+\textbf{性质三：特殊点的函数值。}
+\[f(\pi)=\frac{\sin\pi+\pi}{\cos\pi+\pi^{2}}=\frac{\pi}{\pi^{2}-1}\approx\frac{3.14}{8.87}\approx0.354\]
+
+即右端点的值约为 $0.35$，\textbf{明显小于 $1$}。
+
+\textbf{性质四：峰值。}
+\[f(1)=\frac{\sin1+1}{\cos1+1}\approx\frac{0.841+1}{0.540+1}=\frac{1.841}{1.540}\approx1.20\]
+
+即在 $x\approx1$ 处函数值\textbf{超过 $1$}，随后下降到 $f(\pi)\approx0.35$。
+
+\textbf{综合判断}：图象应当是——过原点、关于原点对称、在原点附近以约为 $2$ 的斜率上升、在 $x\approx1$ 处达到略高于 $1$ 的峰值、然后下降到 $x=\pi$ 处约 $0.35$。
+
+四个选项中只有 \textbf{D} 同时符合这些特征。
+
+\gkanswer{答案：D}
+
+\begin{gktip}
+\textbf{方法总结}：函数识图题的标准流程——
+① \textbf{奇偶性}（最快，直接排除一半选项）；
+② \textbf{特殊点的值或符号}（如 $f(\pi)$、$f(1)$）；
+③ \textbf{原点或端点附近的变化趋势}（用近似式估计斜率）；
+④ \textbf{极值的大致位置与高度}。
+
+通常前两步就能定出答案，不必对函数求导做完整的单调性分析。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{6}{}
+
+\textbf{题目}　《周易》中"重卦"由 $6$ 个爻组成，爻分阳爻和阴爻。随机取一重卦，恰有 $3$ 个阳爻的概率是（　　）
+
+\textbf{解析}
+
+\textbf{第一步，样本空间。}
+
+每个爻有阳、阴两种可能，$6$ 个爻相互独立，故重卦的总数为
+\[2^{6}=64\]
+
+\textbf{第二步，有利事件数。}
+
+恰有 $3$ 个阳爻，相当于从 $6$ 个位置中\textbf{选 $3$ 个}放阳爻（其余放阴爻）：
+\[C_6^{3}=\frac{6\times5\times4}{3\times2\times1}=20\]
+
+\textbf{第三步，概率。}
+\[P=\frac{20}{64}=\frac5{16}\]
+
+\gkanswer{答案：A}
+
+\begin{gktip}
+\textbf{模型识别}：本题本质上是"抛 $6$ 次硬币恰好 $3$ 次正面"，即二项分布 $B\left(6,\dfrac12\right)$：
+\[P(X=3)=C_6^{3}\left(\frac12\right)^{3}\left(\frac12\right)^{3}=\frac{20}{64}=\frac5{16}\]
+凡"$n$ 个位置，每个位置两种等可能状态，问恰有 $k$ 个某状态"的题，一律用 $\dfrac{C_n^{k}}{2^{n}}$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{7}{}
+
+\textbf{题目}　已知非零向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a|=2|\boldsymbol b|$，且 $(\boldsymbol a-\boldsymbol b)\perp\boldsymbol b$，则 $\boldsymbol a$ 与 $\boldsymbol b$ 的夹角为（　　）
+
+\textbf{解析}
+
+\textbf{第一步，把垂直条件化成数量积。}
+\[(\boldsymbol a-\boldsymbol b)\cdot\boldsymbol b=0\]
+
+展开：
+\[\boldsymbol a\cdot\boldsymbol b-|\boldsymbol b|^{2}=0\ \Longrightarrow\ \boldsymbol a\cdot\boldsymbol b=|\boldsymbol b|^{2}\]
+
+\textbf{第二步，代入夹角公式。}
+\[\cos\theta=\frac{\boldsymbol a\cdot\boldsymbol b}{|\boldsymbol a|\,|\boldsymbol b|}=\frac{|\boldsymbol b|^{2}}{2|\boldsymbol b|\cdot|\boldsymbol b|}=\frac12\]
+
+（用了 $|\boldsymbol a|=2|\boldsymbol b|$。）
+
+\textbf{第三步，求角。}
+
+因向量夹角的范围是 $[0,\pi]$：
+\[\theta=\frac\pi3\]
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{几何直观}：$(\boldsymbol a-\boldsymbol b)\perp\boldsymbol b$ 意味着以 $\boldsymbol a$、$\boldsymbol b$ 为邻边的三角形中，$\boldsymbol b$ 与 $\boldsymbol a-\boldsymbol b$ 构成直角，斜边为 $\boldsymbol a$。由 $|\boldsymbol a|=2|\boldsymbol b|$，这是一个 $30^\circ$-$60^\circ$-$90^\circ$ 的直角三角形，$\boldsymbol a$ 与 $\boldsymbol b$ 的夹角为 $60^\circ=\dfrac\pi3$ 
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{8}{}
+
+\textbf{题目}　求 $\dfrac1{2+\dfrac1{2+\dfrac12}}$ 的程序框图中，空白框应填入（　　）
+
+\begin{center}\input{figures/f2019_flow}\end{center}
+
+\textbf{解析}
+
+\textbf{第一步，理解连分数的计算顺序——从内向外。}
+
+目标式子的结构（\textbf{从最内层开始}）：
+\[\frac12\ \longrightarrow\ \frac1{2+\frac12}\ \longrightarrow\ \frac1{2+\frac1{2+\frac12}}\]
+
+即：\textbf{每一步都是"把当前值代入 $\dfrac1{2+\cdot}$"}。
+
+\textbf{第二步，对照框图。}
+
+框图给出：初值 $A=\dfrac12$（正是最内层），$k=1$，循环条件 $k\le2$（执行\textbf{两次}），每次执行空白框后 $k$ 加 $1$。
+
+由第一步的分析，空白框中的操作应为
+\[A=\frac1{2+A}\]
+
+\textbf{第三步，验证。}
+
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+循环次数 & $k$ & 执行前 $A$ & 执行后 $A$ \\
+\midrule
+第 1 次 & $1$ & $\dfrac12$ & $\dfrac1{2+\frac12}=\dfrac1{5/2}=\dfrac25$ \\
+第 2 次 & $2$ & $\dfrac25$ & $\dfrac1{2+\frac25}=\dfrac1{12/5}=\dfrac5{12}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$k$ 变为 $3$，不满足 $k\le2$，输出 $A=\dfrac5{12}$。
+
+\textbf{核对目标值}：
+\[\frac1{2+\frac1{2+\frac12}}=\frac1{2+\frac25}=\frac1{\frac{12}5}=\frac5{12}\quad\checkmark\]
+
+\gkanswer{答案：A}
+
+\begin{gktip}
+\textbf{方法总结}：连分数的程序化计算永远是"\textbf{由内向外迭代}"，赋值语句形如 $A=\dfrac1{a+A}$。判断这类题只需想清楚：初值对应哪一层、每次迭代包裹一层。选项 B（$A=2+\dfrac1A$）是"由外向内"的错误方向，C、D 则是结构错乱。
+
+\textbf{注}：程序框图（算法初步）在现行新课标中已删除。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{9}{}
+
+\textbf{题目}　记 $S_n$ 为等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和。已知 $S_4=0$，$a_5=5$，则（　　）
+
+\textbf{解析}
+
+\textbf{第一步，用基本量（$a_1$ 与 $d$）列方程组。}
+\[S_4=4a_1+\frac{4\times3}2d=4a_1+6d=0\ \Longrightarrow\ 2a_1+3d=0\]
+\[a_5=a_1+4d=5\]
+
+\textbf{第二步，解方程组。}
+
+由第一式得 $a_1=-\dfrac{3d}2$，代入第二式：
+\[-\frac{3d}2+4d=5\ \Longrightarrow\ \frac{5d}2=5\ \Longrightarrow\ d=2\]
+
+\[a_1=-\frac{3\times2}2=-3\]
+
+\textbf{第三步，写出通项与前 $n$ 项和。}
+\[a_n=a_1+(n-1)d=-3+2(n-1)=2n-5\]
+
+\[S_n=\frac{n\left(a_1+a_n\right)}2=\frac{n(-3+2n-5)}2=\frac{n(2n-8)}2=n^{2}-4n\]
+
+\textbf{第四步，比对选项。}
+
+\begin{center}
+\begin{tabular}{cll}
+\toprule
+选项 & 内容 & 判断 \\
+\midrule
+A & $a_n=2n-5$ &  \textbf{正确} \\
+B & $a_n=3n-10$ & （$a_1$ 会是 $-7$） \\
+C & $S_n=2n^{2}-8n$ & （是正确值的 $2$ 倍） \\
+D & $S_n=\dfrac12n^{2}-2n$ & （是正确值的一半） \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\gkanswer{答案：A}
+
+\begin{gktip}
+\textbf{快速验证}：用 $S_4=0$ 检验选项 C：$2\times16-8\times4=32-32=0$  也满足！但再用 $a_5=5$ 检验：若 $S_n=2n^{2}-8n$，则 $a_5=S_5-S_4=(50-40)-0=10\ne5$  排除。
+\textbf{这说明只用一个条件验证不够}，必须两个条件都代入。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{10}{}
+
+\textbf{题目}　椭圆 $C$ 的焦点为 $F_1(-1,0)$，$F_2(1,0)$，过 $F_2$ 的直线与 $C$ 交于 $A$，$B$。若 $\left|AF_2\right|=2\left|F_2B\right|$，$|AB|=\left|BF_1\right|$，则 $C$ 的方程为（　　）
+
+\textbf{解析}
+
+由焦点坐标知 $c=1$。
+
+\textbf{第一步，设未知量并用定义串联。}
+
+设 $\left|F_2B\right|=m$，则由第一个条件
+\[\left|AF_2\right|=2m,\qquad |AB|=\left|AF_2\right|+\left|F_2B\right|=3m\]
+
+由第二个条件
+\[\left|BF_1\right|=|AB|=3m\]
+
+\textbf{第二步，用椭圆定义求 $a$。}
+
+对点 $B$：
+\[\left|BF_1\right|+\left|BF_2\right|=2a\ \Longrightarrow\ 3m+m=4m=2a\ \Longrightarrow\ a=2m\]
+
+对点 $A$：
+\[\left|AF_1\right|=2a-\left|AF_2\right|=4m-2m=2m\]
+
+\textbf{第三步（关键发现）：$A$ 在 $y$ 轴上。}
+
+由上一步，
+\[\left|AF_1\right|=\left|AF_2\right|=2m\]
+
+即 $A$ 到两个焦点\textbf{等距}，故 $A$ 在线段 $F_1F_2$ 的\textbf{垂直平分线}（即 $y$ 轴）上：
+\[A(0,\ b)\quad(\text{取上顶点，另一支由对称性同理})\]
+
+（顺带：$\left|AF_2\right|=\sqrt{b^{2}+c^{2}}=a$，与 $a=2m$、$\left|AF_2\right|=2m$ 一致  自洽。）
+
+\textbf{第四步，用向量关系求 $B$ 的坐标。}
+
+由 $\left|AF_2\right|=2\left|F_2B\right|$ 且 $A$、$F_2$、$B$ 共线（$F_2$ 在 $A$、$B$ 之间）：
+\[\overrightarrow{AF_2}=2\overrightarrow{F_2B}\]
+
+\[\overrightarrow{AF_2}=(1-0,\ 0-b)=(1,\ -b)\ \Longrightarrow\ \overrightarrow{F_2B}=\left(\frac12,\ -\frac b2\right)\]
+
+\[B=F_2+\overrightarrow{F_2B}=\left(1+\frac12,\ -\frac b2\right)=\left(\frac32,\ -\frac b2\right)\]
+
+\textbf{第五步，代入椭圆方程解出 $a^{2}$。}
+
+$B$ 在椭圆 $\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1$ 上：
+\[\frac{\left(\frac32\right)^{2}}{a^{2}}+\frac{\left(\frac b2\right)^{2}}{b^{2}}=1\ \Longrightarrow\ \frac{9/4}{a^{2}}+\frac14=1\]
+
+\[\frac9{4a^{2}}=\frac34\ \Longrightarrow\ a^{2}=3\]
+
+\[b^{2}=a^{2}-c^{2}=3-1=2\]
+
+\textbf{所以 $C$ 的方程为}
+\[\frac{x^{2}}3+\frac{y^{2}}2=1\]
+
+\gkanswer{答案：B}
+
+\begin{gktip}
+\textbf{方法总结}：焦点弦的比例问题，标准路线是"\textbf{设最短的那段为 $m$ → 用定义把所有焦半径都用 $m$ 和 $a$ 表示 → 找出几何特征（本题是 $A$ 在 $y$ 轴上）→ 用向量定出另一点坐标 → 代入方程}"。第三步的发现是本题的转折点，它把一个"未知点"变成了"顶点"，后续计算大幅简化。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{11}{}
+
+\textbf{题目}　关于 $f(x)=\sin|x|+|\sin x|$ 的四个结论：① 偶函数；② 在 $\left(\dfrac\pi2,\pi\right)$ 单调递增；③ 在 $[-\pi,\pi]$ 有 $4$ 个零点；④ 最大值为 $2$。正确的编号是（　　）
+
+\textbf{解析}
+
+\textbf{关键：先把函数在各区间上"脱去绝对值"。}
+
+\textbf{在 $[0,\pi]$ 上}：$|x|=x$，且 $\sin x\ge0$ 故 $|\sin x|=\sin x$：
+\[f(x)=\sin x+\sin x=2\sin x\]
+
+\textbf{在 $[-\pi,0]$ 上}：$|x|=-x$ 故 $\sin|x|=\sin(-x)=-\sin x$；又 $\sin x\le0$ 故 $|\sin x|=-\sin x$：
+\[f(x)=-\sin x-\sin x=-2\sin x\]
+
+\par\medskip
+
+\textbf{① 偶函数 }
+\[f(-x)=\sin|-x|+|\sin(-x)|=\sin|x|+|\sin x|=f(x)\]
+
+（两项各自都是偶函数。）\textbf{正确}。
+
+\par\medskip
+
+\textbf{② 在 $\left(\dfrac\pi2,\pi\right)$ 单调递增 }
+
+该区间落在 $[0,\pi]$ 内，故 $f(x)=2\sin x$。
+
+而 $\sin x$ 在 $\left(\dfrac\pi2,\pi\right)$ 上\textbf{单调递减}（从 $1$ 降到 $0$），故 $f$ 也\textbf{递减}。
+
+\textbf{错误}。
+
+\par\medskip
+
+\textbf{③ 在 $[-\pi,\pi]$ 有 $4$ 个零点 }
+
+\begin{itemize}
+\item 在 $[0,\pi]$ 上：$2\sin x=0\Rightarrow x=0$ 或 $x=\pi$
+\item 在 $[-\pi,0]$ 上：$-2\sin x=0\Rightarrow x=0$ 或 $x=-\pi$
+\end{itemize}
+
+\textbf{去重后}零点为
+\[x=-\pi,\quad 0,\quad \pi\]
+
+共 \textbf{$3$ 个}，不是 $4$ 个。\textbf{错误}。
+
+\begin{gktip}
+这里的陷阱是 $x=0$ 在两段中都出现，容易被数成两次。
+\end{gktip}
+
+\par\medskip
+
+\textbf{④ 最大值为 $2$ }
+
+\textbf{上界}：由绝对值的性质，
+\[f(x)=\sin|x|+|\sin x|\le1+1=2\]
+
+\textbf{取到}：$x=\dfrac\pi2$ 时
+\[f\left(\frac\pi2\right)=\sin\frac\pi2+\left|\sin\frac\pi2\right|=1+1=2\]
+
+\textbf{正确}。
+
+\textbf{综上，正确结论是 ①④。}
+
+\gkanswer{答案：C}
+
+\begin{gktip}
+\textbf{方法总结}：含绝对值的三角函数，\textbf{第一步永远是分区间脱绝对值}，把它化成分段的普通三角函数。本题化简后 $f(x)=2\sin x$（$x\ge0$）异常简洁，四个结论都可以一眼判断。
+
+\textbf{数零点时务必去重}——这是③项的唯一陷阱。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{12}{}
+
+\textbf{题目}　三棱锥 $P\text{-}ABC$ 的四个顶点在球 $O$ 上，$PA=PB=PC$，$\triangle ABC$ 是边长为 $2$ 的正三角形，$E$、$F$ 分别是 $PA$、$AB$ 的中点，$\angle CEF=90^\circ$，则球 $O$ 的体积为（　　）
+
+\textbf{解析}
+
+\textbf{第一步，理解条件 $\angle CEF=90^\circ$ 的实质。}
+
+$E$、$F$ 分别是 $PA$、$AB$ 的中点，故 $EF$ 是 $\triangle PAB$ 的\textbf{中位线}：
+\[EF\parallel PB\]
+
+因此
+\[\angle CEF=90^\circ\iff CE\perp EF\iff CE\perp PB\]
+
+\textbf{第二步，建系。}
+
+由 $PA=PB=PC$ 且 $\triangle ABC$ 是正三角形，$P$ 在过 $\triangle ABC$ \textbf{中心的垂线}上（正三棱锥）。
+
+设 $\triangle ABC$ 的中心为原点。边长 $2$ 的正三角形，中心到顶点的距离为
+\[\frac{2}{\sqrt3}\]
+
+\[A\left(0,\ \frac2{\sqrt3},\ 0\right),\quad B\left(-1,\ -\frac1{\sqrt3},\ 0\right),\quad C\left(1,\ -\frac1{\sqrt3},\ 0\right),\quad P(0,0,h)\]
+
+（验证 $|AB|=\sqrt{1+\left(\dfrac2{\sqrt3}+\dfrac1{\sqrt3}\right)^{2}}=\sqrt{1+3}=2$ ）
+
+\textbf{第三步，用条件求 $h$。}
+\[E=\frac{P+A}2=\left(0,\ \frac1{\sqrt3},\ \frac h2\right),\qquad F=\frac{A+B}2=\left(-\frac12,\ \frac1{2\sqrt3},\ 0\right)\]
+
+\[\overrightarrow{EC}=C-E=\left(1,\ -\frac2{\sqrt3},\ -\frac h2\right),\qquad \overrightarrow{EF}=F-E=\left(-\frac12,\ -\frac1{2\sqrt3},\ -\frac h2\right)\]
+
+由 $\overrightarrow{EC}\cdot\overrightarrow{EF}=0$：
+\[-\frac12+\frac2{\sqrt3}\times\frac1{2\sqrt3}+\frac{h^{2}}4=0\]
+
+\[-\frac12+\frac13+\frac{h^{2}}4=0\ \Longrightarrow\ \frac{h^{2}}4=\frac16\ \Longrightarrow\ h^{2}=\frac23\]
+
+\[h=\frac{\sqrt6}3\]
+
+\textbf{第四步，求外接球半径。}
+
+球心在轴上，设 $O(0,0,z)$。由 $|OA|=|OP|$：
+\[\underbrace{\frac43+z^{2}}_{|OA|^{2}}=\underbrace{(h-z)^{2}}_{|OP|^{2}}=h^{2}-2hz+z^{2}\]
+
+\[\frac43=\frac23-2hz\ \Longrightarrow\ 2hz=-\frac23\ \Longrightarrow\ z=-\frac1{3h}=-\frac1{\sqrt6}\]
+
+\[R^{2}=\frac43+z^{2}=\frac43+\frac16=\frac{8+1}6=\frac32\ \Longrightarrow\ R=\frac{\sqrt6}2\]
+
+\textbf{第五步，求体积。}
+\[V=\frac43\pi R^{3}=\frac43\pi\times\left(\frac{\sqrt6}2\right)^{3}=\frac43\pi\times\frac{6\sqrt6}8=\sqrt6\,\pi\]
+
+\gkanswer{答案：D}
+
+\begin{gktip}
+\textbf{方法总结}：正三棱锥的外接球问题，标准路线是"\textbf{以底面中心为原点建系 → 球心必在轴上 → 由 $|OA|=|OP|$ 解出球心高度 $z$ → 代入求 $R$}"。本题的额外一步是先用 $\angle CEF=90^\circ$ 确定锥高 $h$，其中"中位线 $EF\parallel PB$"是理解条件的钥匙。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{二、填空题（每小题 5 分，共 20 分）}
+
+\gksolhead{13}{}
+
+\textbf{题目}　曲线 $y=3\left(x^{2}+x\right)\mathrm e^{x}$ 在点 $(0,0)$ 处的切线方程为 \gkblank{}。
+
+\textbf{解析}
+
+\textbf{求导（乘积法则）}：
+\[y'=3\left[(2x+1)\mathrm e^{x}+\left(x^{2}+x\right)\mathrm e^{x}\right]=3\mathrm e^{x}\left(x^{2}+3x+1\right)\]
+
+\textbf{代入 $x=0$}：
+\[y'(0)=3\times1\times1=3\]
+
+\textbf{点斜式}（切点为原点）：
+\[y-0=3(x-0)\ \Longrightarrow\ y=3x\]
+
+\gkanswer{答案：$y=3x$}
+
+\begin{gktip}
+\textbf{验证切点在曲线上}：$3\left(0^{2}+0\right)\mathrm e^{0}=0$  确实过 $(0,0)$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{14}{}
+
+\textbf{题目}　记 $S_n$ 为等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和。若 $a_1=\dfrac13$，$a_4^{2}=a_6$，则 $S_5=$ \gkblank{}。
+
+\textbf{解析}
+
+\textbf{第一步，用基本量表示条件。}
+\[a_4=a_1q^{3}=\frac13q^{3},\qquad a_6=a_1q^{5}=\frac13q^{5}\]
+
+代入 $a_4^{2}=a_6$：
+\[\left(\frac13q^{3}\right)^{2}=\frac13q^{5}\ \Longrightarrow\ \frac19q^{6}=\frac13q^{5}\]
+
+\textbf{第二步，解出 $q$。}
+
+因等比数列 $q\ne0$，两边除以 $q^{5}$：
+\[\frac19q=\frac13\ \Longrightarrow\ q=3\]
+
+\textbf{第三步，求 $S_5$。}
+\[S_5=\frac{a_1\left(1-q^{5}\right)}{1-q}=\frac{\frac13\left(1-243\right)}{1-3}=\frac{\frac13\times(-242)}{-2}=\frac{242}6=\frac{121}3\]
+
+\gkanswer{答案：$\dfrac{121}3$}
+
+\par\medskip
+
+\gksolhead{15}{}
+
+\textbf{题目}　七场四胜制，甲队主客场顺序为"主主客客主客主"，主场胜率 $0.6$、客场胜率 $0.5$，各场独立。求甲队以 $4:1$ 获胜的概率。
+
+\textbf{解析}
+
+\textbf{第一步，理解"$4:1$ 获胜"的含义。}
+
+比分 $4:1$ 意味着：\textbf{比赛共进行 $5$ 场}，甲队胜 $4$ 场、负 $1$ 场。
+
+\textbf{关键约束}：由于"赢得四场即结束"，\textbf{第 $5$ 场必须是甲队获胜}（否则比赛在更早或更晚结束）。因此：
+\[\text{前 }4\text{ 场甲胜 }3\text{ 负 }1,\qquad \text{第 }5\text{ 场甲胜}\]
+
+\textbf{第二步，列出各场的主客与胜率。}
+
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+场次 & 1 & 2 & 3 & 4 & 5 \\
+\midrule
+主/客 & 主 & 主 & 客 & 客 & 主 \\
+甲胜率 & $0.6$ & $0.6$ & $0.5$ & $0.5$ & $0.6$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{第三步，枚举前 $4$ 场中"负的是哪一场"。}
+
+\begin{center}
+\begin{tabular}{clc}
+\toprule
+负的场次 & 概率计算 & 结果 \\
+\midrule
+第 1 场 & $0.4\times0.6\times0.5\times0.5$ & $0.06$ \\
+第 2 场 & $0.6\times0.4\times0.5\times0.5$ & $0.06$ \\
+第 3 场 & $0.6\times0.6\times0.5\times0.5$ & $0.09$ \\
+第 4 场 & $0.6\times0.6\times0.5\times0.5$ & $0.09$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+前 $4$ 场"胜 $3$ 负 $1$"的总概率：
+\[0.06+0.06+0.09+0.09=0.30\]
+
+\textbf{第四步，乘上第 $5$ 场。}
+\[P=0.30\times0.6=0.18\]
+
+\gkanswer{答案：$0.18$}
+
+\begin{gktip}
+\textbf{易错点}：忘记"第 $5$ 场必须甲胜"这个约束，直接算"$5$ 场中甲胜 $4$ 场"，会多算出"前 $4$ 场全胜、第 $5$ 场负"的情形——但那种情形下比赛在第 $4$ 场就已结束（$4:0$），根本不会打第 $5$ 场。
+
+\textbf{凡"以 $4:k$ 获胜"的赛制题，最后一场必定由获胜方赢下}，这是这类题的通用要点。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{16}{}
+
+\textbf{题目}　双曲线 $C$ 的左、右焦点为 $F_1$、$F_2$，过 $F_1$ 的直线与两条渐近线交于 $A$、$B$。若 $\overrightarrow{F_1A}=\overrightarrow{AB}$，$\overrightarrow{F_1B}\cdot\overrightarrow{F_2B}=0$，则离心率为 \gkblank{}。
+
+\textbf{解析}
+
+\textbf{第一步，翻译两个向量条件。}
+
+\begin{itemize}
+\item $\overrightarrow{F_1A}=\overrightarrow{AB}$ 意味着 \textbf{$A$ 是线段 $F_1B$ 的中点}
+\item $\overrightarrow{F_1B}\cdot\overrightarrow{F_2B}=0$ 意味着 \textbf{$F_1B\perp F_2B$}
+\end{itemize}
+
+\textbf{第二步，设点并利用中点关系。}
+
+两条渐近线为 $y=\pm\dfrac ba x$。设 $B$ 在 $y=\dfrac ba x$ 上、$A$ 在 $y=-\dfrac ba x$ 上（$A$、$B$ 分居两条渐近线）：
+\[B\left(x_B,\ \frac ba x_B\right)\]
+
+由 $A$ 是 $F_1B$ 的中点（$F_1(-c,0)$）：
+\[A=\left(\frac{-c+x_B}2,\ \frac{\frac ba x_B}2\right)\]
+
+$A$ 在 $y=-\dfrac ba x$ 上：
+\[\frac{b x_B}{2a}=-\frac ba\times\frac{x_B-c}2\]
+
+两边乘 $\dfrac{2a}b$：
+\[x_B=-(x_B-c)=c-x_B\ \Longrightarrow\ 2x_B=c\ \Longrightarrow\ x_B=\frac c2\]
+
+\[B\left(\frac c2,\ \frac{bc}{2a}\right)\]
+
+\textbf{第三步，用垂直条件。}
+\[\overrightarrow{F_1B}=\left(\frac c2+c,\ \frac{bc}{2a}\right)=\left(\frac{3c}2,\ \frac{bc}{2a}\right)\]
+\[\overrightarrow{F_2B}=\left(\frac c2-c,\ \frac{bc}{2a}\right)=\left(-\frac c2,\ \frac{bc}{2a}\right)\]
+
+数量积为零：
+\[\frac{3c}2\times\left(-\frac c2\right)+\left(\frac{bc}{2a}\right)^{2}=0\]
+
+\[-\frac{3c^{2}}4+\frac{b^{2}c^{2}}{4a^{2}}=0\ \Longrightarrow\ \frac{b^{2}}{a^{2}}=3\]
+
+\textbf{第四步，求离心率。}
+\[c^{2}=a^{2}+b^{2}=a^{2}+3a^{2}=4a^{2}\ \Longrightarrow\ e=\frac ca=2\]
+
+\gkanswer{答案：$2$}
+
+\begin{gktip}
+\textbf{方法总结}：涉及渐近线的题，\textbf{设点时直接把点写在渐近线上}（形如 $\left(t,\pm\dfrac ba t\right)$），可以少一个未知数。本题的两个向量条件一个用于定位（中点），一个用于建立 $a$、$b$ 的关系（垂直），分工明确。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{三、解答题}
+
+\gksolhead{17}{12 分}
+
+\textbf{题目}　$(\sin B-\sin C)^{2}=\sin^{2}A-\sin B\sin C$。(1) 求 $A$；(2) 若 $\sqrt2a+b=2c$，求 $\sin C$。
+
+\par\medskip
+
+\textbf{(1) 解}
+
+\textbf{第一步，用正弦定理把角化边。}
+
+由 $\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$，可把每个 $\sin$ 换成对应的边（\textbf{同乘 $(2R)^{2}$}）：
+\[(b-c)^{2}=a^{2}-bc\]
+
+\textbf{第二步，展开整理。}
+\[b^{2}-2bc+c^{2}=a^{2}-bc\ \Longrightarrow\ b^{2}+c^{2}-a^{2}=bc\]
+
+\textbf{第三步，代入余弦定理。}
+\[\cos A=\frac{b^{2}+c^{2}-a^{2}}{2bc}=\frac{bc}{2bc}=\frac12\]
+
+因 $A\in(0,\pi)$：
+\[A=\frac\pi3\]
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{第一步，把条件化角。}
+
+由正弦定理，$\sqrt2a+b=2c$ 等价于
+\[\sqrt2\sin A+\sin B=2\sin C\]
+
+代入 $\sin A=\sin\dfrac\pi3=\dfrac{\sqrt3}2$：
+\[\frac{\sqrt6}2+\sin B=2\sin C\]
+
+\textbf{第二步，用内角和消去 $B$。}
+
+\[B=\pi-A-C=\frac{2\pi}3-C\]
+
+\[\sin B=\sin\left(\frac{2\pi}3-C\right)=\sin\frac{2\pi}3\cos C-\cos\frac{2\pi}3\sin C=\frac{\sqrt3}2\cos C+\frac12\sin C\]
+
+代入：
+\[\frac{\sqrt6}2+\frac{\sqrt3}2\cos C+\frac12\sin C=2\sin C\]
+
+\textbf{第三步，整理成辅助角形式。}
+\[\frac{\sqrt6}2=2\sin C-\frac12\sin C-\frac{\sqrt3}2\cos C=\frac32\sin C-\frac{\sqrt3}2\cos C\]
+
+两边乘 $2$：
+\[\sqrt6=3\sin C-\sqrt3\cos C\]
+
+右边合并（振幅 $\sqrt{9+3}=2\sqrt3$）：
+\[3\sin C-\sqrt3\cos C=2\sqrt3\left(\frac{\sqrt3}2\sin C-\frac12\cos C\right)=2\sqrt3\sin\left(C-\frac\pi6\right)\]
+
+\textbf{第四步，解方程。}
+\[2\sqrt3\sin\left(C-\frac\pi6\right)=\sqrt6\ \Longrightarrow\ \sin\left(C-\frac\pi6\right)=\frac{\sqrt6}{2\sqrt3}=\frac{\sqrt2}2\]
+
+由 $A=\dfrac\pi3$ 知 $C\in\left(0,\dfrac{2\pi}3\right)$，故
+\[C-\frac\pi6\in\left(-\frac\pi6,\ \frac\pi2\right)\]
+
+在此范围内 $\sin\theta=\dfrac{\sqrt2}2$ 只有一个解：
+\[C-\frac\pi6=\frac\pi4\ \Longrightarrow\ C=\frac\pi4+\frac\pi6=\frac{5\pi}{12}\]
+
+\textbf{第五步，求 $\sin C$。}
+\[\sin\frac{5\pi}{12}=\sin75^\circ=\sin\left(45^\circ+30^\circ\right)=\frac{\sqrt2}2\times\frac{\sqrt3}2+\frac{\sqrt2}2\times\frac12=\frac{\sqrt6+\sqrt2}4\]
+
+\gkanswer{答案：$\sin C=\dfrac{\sqrt6+\sqrt2}4$}
+
+\par\medskip
+
+\gksolhead{18}{12 分}
+
+\textbf{题目}　直四棱柱 $ABCD\text{-}A_1B_1C_1D_1$ 底面为菱形，$AA_1=4$、$AB=2$、$\angle BAD=60^\circ$，$E$、$M$、$N$ 分别是 $BC$、$BB_1$、$A_1D$ 的中点。
+
+\begin{center}\input{figures/f2019_t18_prism}\end{center}
+
+  (1) 证明：$MN\parallel$ 平面 $C_1DE$；(2) 求二面角 $A\text{-}MA_1\text{-}N$ 的正弦值。
+
+\par\medskip
+
+\textbf{建系}
+
+以 $A$ 为原点、$AB$ 为 $x$ 轴、竖直方向为 $z$ 轴。由 $\angle BAD=60^\circ$、$AD=AB=2$：
+\[A(0,0,0),\quad B(2,0,0),\quad D\left(2\cos60^\circ,\ 2\sin60^\circ,\ 0\right)=\left(1,\ \sqrt3,\ 0\right)\]
+
+由菱形（$\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{AD}$）：
+\[C=\left(3,\ \sqrt3,\ 0\right)\]
+
+上层各点 $z$ 坐标加 $4$：
+\[A_1(0,0,4),\quad B_1(2,0,4),\quad C_1\left(3,\sqrt3,4\right),\quad D_1\left(1,\sqrt3,4\right)\]
+
+三个中点：
+\[E=\frac{B+C}2=\left(\frac52,\ \frac{\sqrt3}2,\ 0\right),\quad M=\frac{B+B_1}2=(2,0,2),\quad N=\frac{A_1+D}2=\left(\frac12,\ \frac{\sqrt3}2,\ 2\right)\]
+
+\par\medskip
+
+\textbf{(1) 证明}
+
+\[\overrightarrow{MN}=N-M=\left(\frac12-2,\ \frac{\sqrt3}2-0,\ 2-2\right)=\left(-\frac32,\ \frac{\sqrt3}2,\ 0\right)\]
+
+\[\overrightarrow{DE}=E-D=\left(\frac52-1,\ \frac{\sqrt3}2-\sqrt3,\ 0\right)=\left(\frac32,\ -\frac{\sqrt3}2,\ 0\right)\]
+
+\textbf{观察到}：
+\[\overrightarrow{MN}=-\overrightarrow{DE}\]
+
+即 \textbf{$MN\parallel DE$}（两向量共线）。
+
+又 $DE\subset$ 平面 $C_1DE$，且 $MN\not\subset$ 平面 $C_1DE$（因为 $M(2,0,2)$ 不在该平面上——可用法向量验证），
+
+由\textbf{线面平行的判定定理}：
+\[MN\parallel\text{平面 }C_1DE\qquad\blacksquare\]
+
+\begin{gktip}
+\textbf{这个解法比"算法向量再验证垂直"简洁得多}——先算 $\overrightarrow{MN}$ 与平面内几条线的方向向量比对，若能直接找到平行关系，一步到位。
+\end{gktip}
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{第一步，明确棱与两个半平面。}
+
+棱为 $MA_1$，两个半平面分别过 $A$ 与 $N$。
+\[\overrightarrow{A_1M}=M-A_1=(2,\ 0,\ -2)\]
+
+\textbf{第二步，求平面 $AMA_1$ 的法向量（有捷径）。}
+
+三点 $A(0,0,0)$、$M(2,0,2)$、$A_1(0,0,4)$ 的 \textbf{$y$ 坐标全为 $0$}，说明这个平面就是坐标平面 $y=0$（即 $xOz$ 平面）。
+
+\[\boldsymbol n_1=(0,\ 1,\ 0)\]
+
+\textbf{第三步，求平面 $NMA_1$ 的法向量。}
+\[\overrightarrow{A_1N}=N-A_1=\left(\frac12,\ \frac{\sqrt3}2,\ -2\right)\]
+
+\[\boldsymbol n_2=\overrightarrow{A_1M}\times\overrightarrow{A_1N}=\begin{vmatrix}\boldsymbol i&\boldsymbol j&\boldsymbol k\\ 2&0&-2\\ \frac12&\frac{\sqrt3}2&-2\end{vmatrix}\]
+
+逐分量：
+\begin{itemize}
+\item $\boldsymbol i$：$0\times(-2)-(-2)\times\dfrac{\sqrt3}2=\sqrt3$
+\item $\boldsymbol j$：$-\left[2\times(-2)-(-2)\times\dfrac12\right]=-(-4+1)=3$
+\item $\boldsymbol k$：$2\times\dfrac{\sqrt3}2-0\times\dfrac12=\sqrt3$
+\end{itemize}
+
+\[\boldsymbol n_2=\left(\sqrt3,\ 3,\ \sqrt3\right),\qquad \left|\boldsymbol n_2\right|=\sqrt{3+9+3}=\sqrt{15}\]
+
+\textbf{第四步，求夹角。}
+\[\left|\cos\theta\right|=\frac{\left|\boldsymbol n_1\cdot\boldsymbol n_2\right|}{\left|\boldsymbol n_1\right|\left|\boldsymbol n_2\right|}=\frac{|3|}{1\times\sqrt{15}}=\frac3{\sqrt{15}}\]
+
+\textbf{第五步，转成正弦（题目要求的是正弦值）。}
+\[\sin\theta=\sqrt{1-\cos^{2}\theta}=\sqrt{1-\frac9{15}}=\sqrt{\frac6{15}}=\sqrt{\frac25}=\frac{\sqrt{10}}5\]
+
+\textbf{所以二面角 $A\text{-}MA_1\text{-}N$ 的正弦值为 $\dfrac{\sqrt{10}}5$。}
+
+\begin{gktip}
+\textbf{建系小技巧}：若某个平面恰好是坐标平面（本题的 $y=0$），法向量可以直接写出，省去一次叉乘。做题前先看看三个点的坐标有无"某一分量全相同"的情况。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{19}{12 分}
+
+\textbf{题目}　抛物线 $C:y^{2}=3x$ 的焦点为 $F$，斜率为 $\dfrac32$ 的直线 $l$ 与 $C$ 交于 $A$、$B$，与 $x$ 轴交于 $P$。(1) 若 $|AF|+|BF|=4$，求 $l$ 的方程；(2) 若 $\overrightarrow{AP}=3\overrightarrow{PB}$，求 $|AB|$。
+
+\par\medskip
+
+\textbf{预备}：由 $y^{2}=3x=2px$ 得 $p=\dfrac32$，故
+\[F\left(\frac34,\ 0\right),\qquad \text{准线}:\ x=-\frac34\]
+
+\par\medskip
+
+\textbf{(1) 解}
+
+\textbf{第一步，用焦半径公式转化条件。}
+
+抛物线上点到焦点的距离等于到准线的距离：
+\[|AF|=x_A+\frac34,\qquad |BF|=x_B+\frac34\]
+
+\[|AF|+|BF|=x_A+x_B+\frac32=4\ \Longrightarrow\ x_A+x_B=\frac52\]
+
+\textbf{第二步，设直线并联立。}
+
+$l$ 的斜率为 $\dfrac32$ 且过 $x$ 轴上的点 $P(m,0)$：
+\[l:\ y=\frac32(x-m)\]
+
+代入 $y^{2}=3x$：
+\[\frac94(x-m)^{2}=3x\ \Longrightarrow\ 3(x-m)^{2}=4x\]
+
+\[3x^{2}-6mx+3m^{2}-4x=0\ \Longrightarrow\ 3x^{2}-(6m+4)x+3m^{2}=0\]
+
+\textbf{第三步，用韦达定理。}
+\[x_A+x_B=\frac{6m+4}3=\frac52\]
+
+\[6m+4=\frac{15}2\ \Longrightarrow\ 6m=\frac72\ \Longrightarrow\ m=\frac7{12}\]
+
+\textbf{第四步，写出方程。}
+\[l:\ y=\frac32\left(x-\frac7{12}\right)=\frac32x-\frac78\]
+
+\gkanswer{答案：$y=\dfrac32x-\dfrac78$}
+
+\par\medskip
+
+\textbf{(2) 解}
+
+\textbf{第一步，把向量条件转成坐标关系。}
+
+设 $P(m,0)$：
+\[\overrightarrow{AP}=\left(m-x_A,\ -y_A\right),\qquad \overrightarrow{PB}=\left(x_B-m,\ y_B\right)\]
+
+由 $\overrightarrow{AP}=3\overrightarrow{PB}$，比较\textbf{纵坐标}（这一分量最简洁）：
+\[-y_A=3y_B\ \Longrightarrow\ y_A=-3y_B\]
+
+\textbf{第二步，用抛物线方程把横坐标也用 $y$ 表示。}
+
+由 $x=\dfrac{y^{2}}3$：
+\[x_A=\frac{y_A^{2}}3=\frac{9y_B^{2}}3=3y_B^{2},\qquad x_B=\frac{y_B^{2}}3\]
+
+\textbf{第三步，用斜率条件求 $y_B$。}
+\[k=\frac{y_A-y_B}{x_A-x_B}=\frac{-3y_B-y_B}{3y_B^{2}-\frac{y_B^{2}}3}=\frac{-4y_B}{\frac{8y_B^{2}}3}=\frac{-4y_B\times3}{8y_B^{2}}=\frac{-3}{2y_B}\]
+
+令其等于 $\dfrac32$：
+\[\frac{-3}{2y_B}=\frac32\ \Longrightarrow\ 2y_B=-2\ \Longrightarrow\ y_B=-1\]
+
+\[y_A=-3\times(-1)=3\]
+
+\textbf{第四步，求出两点坐标并计算距离。}
+\[x_A=\frac{3^{2}}3=3,\qquad x_B=\frac{(-1)^{2}}3=\frac13\]
+
+\[A(3,\ 3),\qquad B\left(\frac13,\ -1\right)\]
+
+\[|AB|=\sqrt{\left(3-\frac13\right)^{2}+\left(3-(-1)\right)^{2}}=\sqrt{\left(\frac83\right)^{2}+16}=\sqrt{\frac{64}9+\frac{144}9}=\sqrt{\frac{208}9}=\frac{4\sqrt{13}}3\]
+
+\gkanswer{答案：$|AB|=\dfrac{4\sqrt{13}}3$}
+
+\begin{gktip}
+\textbf{方法总结}：抛物线问题中，\textbf{用 $y$ 作参数往往比用 $x$ 更方便}（因为 $x=\dfrac{y^{2}}{2p}$ 是单值的，而 $y=\pm\sqrt{2px}$ 要分正负）。本题第 (2) 问全程以 $y_B$ 为唯一未知数，避免了联立方程。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{20}{12 分}
+
+\textbf{题目}　$f(x)=\sin x-\ln(1+x)$，$f'(x)$ 为其导数。证明：(1) $f'(x)$ 在 $\left(-1,\dfrac\pi2\right)$ 存在唯一极大值点；(2) $f(x)$ 有且仅有 $2$ 个零点。
+
+\par\medskip
+
+\textbf{(1) 证明}
+
+\textbf{定义域}：$1+x>0$ 即 $x>-1$。
+
+\[f'(x)=\cos x-\frac1{1+x}\]
+
+\textbf{要证 $f'$ 有唯一极大值点，就要研究 $f''$ 的符号变化。}
+\[f''(x)=-\sin x+\frac1{(1+x)^{2}}\]
+
+\textbf{关键一步：再求一次导，判断 $f''$ 的单调性。}
+\[f'''(x)=-\cos x-\frac2{(1+x)^{3}}\]
+
+在区间 $\left(-1,\dfrac\pi2\right)$ 上：
+\begin{itemize}
+\item $|x|<\dfrac\pi2$，故 $\cos x>0$，从而 $-\cos x<0$
+\item $1+x>0$，故 $\dfrac2{(1+x)^{3}}>0$，从而 $-\dfrac2{(1+x)^{3}}<0$
+\end{itemize}
+
+两项都为负：
+\[f'''(x)<0\quad\text{在}\ \left(-1,\frac\pi2\right)\ \text{上恒成立}\]
+
+故 \textbf{$f''$ 在该区间上严格递减}。
+
+\textbf{考察 $f''$ 在两端的取值}：
+
+\begin{itemize}
+\item $x\to(-1)^{+}$：$\dfrac1{(1+x)^{2}}\to+\infty$，而 $-\sin x$ 有界，故
+\end{itemize}
+\[f''(x)\to+\infty\]
+
+\begin{itemize}
+\item $x=\dfrac\pi2$：
+\end{itemize}
+\[f''\left(\frac\pi2\right)=-1+\frac1{\left(1+\frac\pi2\right)^{2}}\approx-1+\frac1{6.61}\approx-0.849<0\]
+
+\textbf{由 $f''$ 连续、严格递减、两端异号}，它在 $\left(-1,\dfrac\pi2\right)$ 内有\textbf{唯一零点}，记为 $\alpha$：
+\begin{itemize}
+\item $x\in(-1,\alpha)$：$f''>0$，$f'$ \textbf{递增}
+\item $x\in\left(\alpha,\dfrac\pi2\right)$：$f''<0$，$f'$ \textbf{递减}
+\end{itemize}
+
+因此 $f'$ 在 $x=\alpha$ 处取得\textbf{唯一极大值}。$\blacksquare$
+
+\par\medskip
+
+\textbf{(2) 证明}
+
+\textbf{第一步，找出一个显然的零点。}
+\[f(0)=\sin0-\ln1=0-0=0\]
+
+故 $x=0$ 是零点。
+
+\textbf{第二步，分析 $f'$ 的符号（用第 (1) 问的结论）。}
+
+先注意
+\[f'(0)=\cos0-\frac1{1+0}=1-1=0\]
+
+再看 $f''(0)=-0+1=1>0$，说明 $0<\alpha$（$0$ 在 $f''>0$ 的一侧）。
+
+由 (1)，$f'$ 在 $(-1,\alpha)$ 上\textbf{递增}，且 $f'(0)=0$，故
+\[f'<0\ \text{于}\ (-1,0);\qquad f'>0\ \text{于}\ (0,\alpha)\]
+
+$f'$ 在 $\left(\alpha,\dfrac\pi2\right)$ 上递减，而
+\[f'\left(\frac\pi2\right)=0-\frac1{1+\frac\pi2}\approx-0.389<0\]
+
+故 $f'$ 在 $\left(\alpha,\dfrac\pi2\right)$ 内有唯一零点 $\beta$，且
+\[f'>0\ \text{于}\ (0,\beta);\qquad f'<0\ \text{于}\ \left(\beta,\frac\pi2\right)\]
+
+\textbf{第三步，分区间数零点。}
+
+\textbf{区间 $(-1,0)$}：$f$ \textbf{单调递减}。
+\begin{itemize}
+\item $x\to(-1)^{+}$：$\ln(1+x)\to-\infty$，故 $f(x)=\sin x-\ln(1+x)\to+\infty$
+\item $f(0)=0$
+\end{itemize}
+
+$f$ 从 $+\infty$ 严格递减到 $0$，故在\textbf{开区间 $(-1,0)$ 内没有零点}（$0$ 是端点）。
+
+\textbf{区间 $\left(0,\dfrac\pi2\right]$}：$f$ 先增后减（在 $\beta$ 处取极大）。
+\[f\left(\frac\pi2\right)=1-\ln\left(1+\frac\pi2\right)\approx1-\ln2.571\approx1-0.944=0.056>0\]
+
+$f$ 从 $0$ 上升，到 $\dfrac\pi2$ 处仍为正，\textbf{无零点}。
+
+\textbf{区间 $\left(\dfrac\pi2,\pi\right]$}：
+\[f(\pi)=\sin\pi-\ln(1+\pi)=0-\ln4.14\approx-1.42<0\]
+
+$f\left(\dfrac\pi2\right)>0>f(\pi)$，由\textbf{零点存在定理}，此区间内至少有一个零点。
+
+又在此区间上 $f'(x)=\cos x-\dfrac1{1+x}<0$（因 $\cos x\le0$ 而 $-\dfrac1{1+x}<0$），$f$ \textbf{严格递减}，故\textbf{恰好一个}零点。
+
+\textbf{区间 $(\pi,+\infty)$}：
+\[\ln(1+x)>\ln(1+\pi)\approx1.42>1\ge\sin x\]
+
+故 $f(x)=\sin x-\ln(1+x)<0$ 恒成立，\textbf{无零点}。
+
+\textbf{综上}：零点只有 $x=0$ 与 $\left(\dfrac\pi2,\pi\right)$ 内的一个，\textbf{恰好 $2$ 个}。$\blacksquare$
+
+\begin{gktip}
+\textbf{方法总结}：这类"零点个数"证明题的骨架是——
+1. \textbf{分区间}（按 $f'$ 的符号划分单调区间）；
+2. \textbf{每个单调区间内至多一个零点}；
+3. 用\textbf{端点值的符号}（零点存在定理）确定每段内是否真有零点；
+4. 对无穷远端用\textbf{放缩}（本题 $x>\pi$ 时用 $\ln(1+x)>1\ge\sin x$）说明无零点。
+
+第 (1) 问求 $f'$ 的极大值点，正是为第 (2) 问划分单调区间做准备——\textbf{两问是一体的}。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{21}{12 分}
+
+\textbf{题目}　新药对比试验（题干见试题卷）。
+
+\par\medskip
+
+\textbf{(1) 解}
+
+一轮试验中，两只白鼠分别施甲药、乙药，各自治愈与否相互独立。
+
+按题目约定，甲药的得分 $X$ 有三种取值：
+
+\begin{center}
+\begin{tabular}{lcccl}
+\toprule
+情形 & 甲药 & 乙药 & $X$ & 概率 \\
+\midrule
+甲治愈、乙未治愈 & 治愈 & 未愈 & $1$ & $\alpha(1-\beta)$ \\
+甲未愈、乙治愈 & 未愈 & 治愈 & $-1$ & $(1-\alpha)\beta$ \\
+两者都治愈 & 治愈 & 治愈 & $0$ & $\alpha\beta$ \\
+两者都未愈 & 未愈 & 未愈 & $0$ & $(1-\alpha)(1-\beta)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+合并 $X=0$ 的两种情形，得\textbf{分布列}：
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$X$ & $-1$ & $0$ & $1$ \\
+\midrule
+$P$ & $(1-\alpha)\beta$ & $\alpha\beta+(1-\alpha)(1-\beta)$ & $\alpha(1-\beta)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{校验}：三项相加
+\[(1-\alpha)\beta+\alpha\beta+(1-\alpha)(1-\beta)+\alpha(1-\beta)=\beta+(1-\beta)=1\quad\checkmark\]
+
+\par\medskip
+
+\textbf{(2) 解}
+
+代入 $\alpha=0.5$、$\beta=0.8$：
+\[a=P(X=-1)=(1-0.5)\times0.8=0.4\]
+\[b=P(X=0)=0.5\times0.8+0.5\times0.2=0.4+0.1=0.5\]
+\[c=P(X=1)=0.5\times(1-0.8)=0.1\]
+
+\par\medskip
+
+\textbf{① 证明 $\left\{p_{i+1}-p_i\right\}$ 为等比数列}
+
+由题给的递推关系：
+\[p_i=0.4p_{i-1}+0.5p_i+0.1p_{i+1}\]
+
+移项（把 $0.5p_i$ 移到左边）：
+\[0.5p_i=0.4p_{i-1}+0.1p_{i+1}\]
+
+两边乘 $10$：
+\[5p_i=4p_{i-1}+p_{i+1}\]
+
+\textbf{整理成"相邻差"的形式}（把 $5p_i$ 拆成 $4p_i+p_i$）：
+\[4p_i+p_i=4p_{i-1}+p_{i+1}\]
+
+\[p_{i+1}-p_i=4p_i-4p_{i-1}=4\left(p_i-p_{i-1}\right)\]
+
+即
+\[\frac{p_{i+1}-p_i}{p_i-p_{i-1}}=4\qquad(\text{常数})\]
+
+故 $\left\{p_{i+1}-p_i\right\}$ 是\textbf{公比为 $4$ 的等比数列}。$\blacksquare$
+
+\par\medskip
+
+\textbf{② 求 $p_4$ 并解释合理性}
+
+\textbf{第一步，用等比数列求和串联首尾。}
+
+由 ①，$p_{i+1}-p_i=\left(p_1-p_0\right)\times4^{i}=p_1\times4^{i}$（因 $p_0=0$）。
+
+把 $i=0$ 到 $7$ 的所有差相加（\textbf{裂项求和}）：
+\[p_8-p_0=\sum_{i=0}^{7}\left(p_{i+1}-p_i\right)=p_1\sum_{i=0}^{7}4^{i}=p_1\times\frac{4^{8}-1}{4-1}=p_1\times\frac{4^{8}-1}3\]
+
+代入 $p_8=1$、$p_0=0$：
+\[1=p_1\times\frac{4^{8}-1}3\ \Longrightarrow\ p_1=\frac3{4^{8}-1}\]
+
+\textbf{第二步，同法求 $p_4$。}
+\[p_4=p_4-p_0=\sum_{i=0}^{3}\left(p_{i+1}-p_i\right)=p_1\times\frac{4^{4}-1}3=\frac3{4^{8}-1}\times\frac{4^{4}-1}3=\frac{4^{4}-1}{4^{8}-1}\]
+
+\textbf{用平方差公式化简}（注意 $4^{8}-1=\left(4^{4}-1\right)\left(4^{4}+1\right)$）：
+\[p_4=\frac{4^{4}-1}{\left(4^{4}-1\right)\left(4^{4}+1\right)}=\frac1{4^{4}+1}=\frac1{257}\approx0.0039\]
+
+\textbf{第三步，解释试验方案的合理性。}
+
+$p_4$ 表示"从初始状态（双方各 $4$ 分）出发，最终\textbf{认为甲药更有效}"的概率。
+
+在本例的参数下，\textbf{乙药实际上更有效}（治愈率 $\beta=0.8>\alpha=0.5$）。而该方案得出"甲药更有效"这一\textbf{错误结论}的概率仅为
+\[p_4=\frac1{257}\approx0.0039<0.4\%\]
+
+\textbf{误判概率极小}，说明这种"累计得分相差 $4$ 分即停止"的试验方案是\textbf{合理的}。
+
+\begin{gktip}
+\textbf{方法总结}：本题是"随机游走 + 吸收壁"模型的中学版。技术要点有二：
+① 把三项递推 $p_i=ap_{i-1}+bp_i+cp_{i+1}$ \textbf{整理成相邻差的比例关系}（关键代数变形是把 $p_i$ 的系数拆开）；
+② 用\textbf{裂项求和}从边界条件 $p_0=0$、$p_8=1$ 反解出 $p_1$，再求任意 $p_i$。
+
+最后一问要求"解释合理性"——必须点明"真实情况是乙药更有效，而误判概率极低"，只写数值不作解释会失分。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{四、选考题（现行考纲已取消，仅存档）}
+
+\gksolhead{22}{坐标系与参数方程}
+
+\textbf{(1)}　消参求 $C$ 的普通方程。观察到
+\[x^{2}+\frac{y^{2}}4=\frac{\left(1-t^{2}\right)^{2}}{\left(1+t^{2}\right)^{2}}+\frac{16t^{2}}{4\left(1+t^{2}\right)^{2}}=\frac{\left(1-t^{2}\right)^{2}+4t^{2}}{\left(1+t^{2}\right)^{2}}=\frac{\left(1+t^{2}\right)^{2}}{\left(1+t^{2}\right)^{2}}=1\]
+
+故
+\[C:\ x^{2}+\frac{y^{2}}4=1\qquad(x\ne-1)\]
+
+（$x=\dfrac{1-t^{2}}{1+t^{2}}=-1$ 需要 $t\to\infty$，取不到。）
+
+$l$ 的极坐标方程用 $\rho\cos\theta=x$、$\rho\sin\theta=y$ 化为
+\[l:\ 2x+\sqrt3y+11=0\]
+
+\textbf{(2)}　设 $C$ 上的点为 $(\cos\theta,\ 2\sin\theta)$：
+\[d=\frac{\left|2\cos\theta+2\sqrt3\sin\theta+11\right|}{\sqrt{2^{2}+\left(\sqrt3\right)^{2}}}=\frac{\left|2\cos\theta+2\sqrt3\sin\theta+11\right|}{\sqrt7}\]
+
+用辅助角合并（振幅 $\sqrt{4+12}=4$）：
+\[2\cos\theta+2\sqrt3\sin\theta=4\sin\left(\theta+\frac\pi6\right)\in[-4,\ 4]\]
+
+故分子的最小值为 $11-4=7$：
+\[d_{\min}=\frac7{\sqrt7}=\sqrt7\]
+
+\par\medskip
+
+\gksolhead{23}{不等式选讲}
+
+\textbf{(1) 证明}
+
+由 $abc=1$，有
+\[\frac1a=bc,\qquad \frac1b=ca,\qquad \frac1c=ab\]
+
+故待证不等式等价于
+\[ab+bc+ca\le a^{2}+b^{2}+c^{2}\]
+
+由基本不等式：
+\[a^{2}+b^{2}\ge2ab,\qquad b^{2}+c^{2}\ge2bc,\qquad c^{2}+a^{2}\ge2ca\]
+
+三式相加：
+\[2\left(a^{2}+b^{2}+c^{2}\right)\ge2(ab+bc+ca)\]
+
+两边除以 $2$ 即得。$\blacksquare$
+
+\textbf{(2) 证明}
+
+由三元均值不等式：
+\[(a+b)^{3}+(b+c)^{3}+(c+a)^{3}\ge3\sqrt[3]{(a+b)^{3}(b+c)^{3}(c+a)^{3}}=3(a+b)(b+c)(c+a)\]
+
+再对每个因式用二元均值不等式：
+\[a+b\ge2\sqrt{ab},\qquad b+c\ge2\sqrt{bc},\qquad c+a\ge2\sqrt{ca}\]
+
+三式相乘：
+\[(a+b)(b+c)(c+a)\ge8\sqrt{a^{2}b^{2}c^{2}}=8abc=8\]
+
+故
+\[(a+b)^{3}+(b+c)^{3}+(c+a)^{3}\ge3\times8=24\qquad\blacksquare\]
+
+（等号当且仅当 $a=b=c=1$ 时成立。）

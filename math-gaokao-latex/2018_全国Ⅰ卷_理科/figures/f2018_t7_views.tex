@@ -1,0 +1,13 @@
+% 2018 全国Ⅰ卷 理7/文9：圆柱的三视图（正视图/左视图为矩形，俯视图为圆）
+% M 在正视图上的对应点 A（左上角），N 在左视图上的对应点 B（右下角）
+\begin{tikzpicture}[scale=0.62, font=\small]
+  \draw (0,0) rectangle (4,1.6);
+  \node[above left, inner sep=1pt] at (0,1.6) {$A$};
+  \begin{scope}[xshift=5.2cm]
+    \draw (0,0) rectangle (4,1.6);
+    \node[below right, inner sep=1pt] at (4,0) {$B$};
+  \end{scope}
+  \begin{scope}[yshift=-3.1cm, xshift=2cm]
+    \draw (0,0) circle (1.45);
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,858 @@
+% 由 tools/md2tex.py 自 2019_数学真题_文_含解析.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{ 解析归属声明}：本文解析由本库编写者根据试题\textbf{独立推导}，\textbf{非官方标准答案}。若与官方发布版本不一致，以官方为准。
+
+\textbf{ 卷种提示}：本卷为文理分科时代的旧结构，含\textbf{现已取消}的选做题（第 22/23 题）与\textbf{已删除}的程序框图考点（第 9 题）。
+
+\textbf{重合题说明}：第 3、4、5、8、9、12、13 题及第 19(1)、22、23 题与同年理科卷完全相同，本文给出结论与要点，完整推导请见理科卷对应题目。
+\end{gknotice}
+
+\par\medskip
+
+\gkpart{一、选择题}
+
+\gksolhead{1}{复数的模}
+
+\textbf{题目}：设 $z=\dfrac{3-\mathrm i}{1+2\mathrm i}$，则 $|z|=$（　　）A．$2$　B．$\sqrt3$　C．$\sqrt2$　D．$1$
+
+\textbf{解析}
+
+复数商的模等于模的商，\textbf{不需要先把 $z$ 化成 $a+b\mathrm i$}：
+
+\[|z|=\left|\frac{3-\mathrm i}{1+2\mathrm i}\right|=\frac{|3-\mathrm i|}{|1+2\mathrm i|}=\frac{\sqrt{3^{2}+(-1)^{2}}}{\sqrt{1^{2}+2^{2}}}=\frac{\sqrt{10}}{\sqrt5}=\sqrt2\]
+
+\gkanswer{答案：C}
+
+\begin{gktip}
+\textbf{方法提示}：凡是"求商（或积）的模"，一律先用 $\left|\dfrac{z_1}{z_2}\right|=\dfrac{|z_1|}{|z_2|}$。分母实数化是初学者的惯性动作，这里做了就是多走两步。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{2}{集合的补与交}
+
+\textbf{题目}：$U=\{1,2,3,4,5,6,7\}$，$A=\{2,3,4,5\}$，$B=\{2,3,6,7\}$，则 $B\cap\complement_U A=$（　　）
+
+\textbf{解析}
+
+先求补集：$\complement_U A=U\setminus A=\{1,6,7\}$。
+
+再取交：$B\cap\{1,6,7\}=\{2,3,6,7\}\cap\{1,6,7\}=\{6,7\}$。
+
+\gkanswer{答案：C}
+
+\par\medskip
+
+\gksolhead{3}{对数、指数比大小}
+
+\textbf{题目}：$a=\log_2 0.2$，$b=2^{0.2}$，$c=0.2^{0.3}$，则（　　）
+
+\textbf{解析}（同理科卷第 3 题）
+
+用 $0$ 和 $1$ 两条"分界线"分层：
+
+\begin{itemize}
+\item $a=\log_2 0.2<\log_2 1=0$；
+\item $b=2^{0.2}>2^{0}=1$；
+\item $c=0.2^{0.3}$：底数 $0.2\in(0,1)$，指数 $0.3>0$，故 $0<c<0.2^{0}=1$。
+\end{itemize}
+
+于是 $a<0<c<1<b$。
+
+\gkanswer{答案：B（$a<c<b$）}
+
+\par\medskip
+
+\gksolhead{4}{黄金分割 · 断臂维纳斯}
+
+\textbf{题目}：见试题。腿长 $105\ \mathrm{cm}$，头顶至脖子下端 $26\ \mathrm{cm}$，求身高可能值。
+
+\textbf{解析}（同理科卷第 4 题）
+
+记黄金比 $t=\dfrac{\sqrt5-1}2\approx0.618$，注意 $\dfrac1t=\dfrac{\sqrt5+1}2\approx1.618$。设头顶至肚脐长为 $x$，则肚脐至足底为 $\dfrac xt$，身高 $h=x+\dfrac xt=x\left(1+\dfrac1t\right)\approx2.618x$。
+
+题目给的两个数据都只提供\textbf{不等式}，不是等式，这是本题的关键：
+
+1. 肚脐至足底 $\ge$ 腿长 $105$（肚脐位置高于腿根），即 $\dfrac xt\ge105$，得 $x\ge105t\approx64.9$；
+2. 头顶至脖子下端 $26\ \ge$ 头顶至咽喉（脖子下端比咽喉低）。设头顶至咽喉为 $p$，咽喉至肚脐为 $\dfrac pt$，则 $x=p\left(1+\dfrac1t\right)\approx2.618p\le2.618\times26\approx68.1$。
+
+于是 $64.9\le x\le68.1$，$h\approx2.618x\in[169.9,\ 178.3]$。四个选项中只有 $175$ 落在这个区间。
+
+\gkanswer{答案：B（$175\ \mathrm{cm}$）}
+
+\begin{gktip}
+\textbf{方法提示}：本题的陷阱是把两个数据当等式用，那样会算出唯一值 $178.2$，四个选项都不对，然后开始怀疑自己算错。\textbf{读清"腿长"不等于"肚脐至足底"、"脖子下端"不等于"咽喉"，是本题唯一的难点。}
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{5}{函数图象辨识}
+
+\textbf{题目}：$f(x)=\dfrac{\sin x+x}{\cos x+x^{2}}$ 在 $[-\pi,\pi]$ 的图象大致为（　　）
+
+\begin{center}\input{figures/f2019_t5_panels}\end{center}
+
+\textbf{解析}（同理科卷第 5 题）
+
+\textbf{第一步：判奇偶。} 分子 $\sin x+x$ 是奇函数，分母 $\cos x+x^{2}$ 是偶函数，故 $f(-x)=-f(x)$，$f$ 为\textbf{奇函数}，图象关于原点对称。B、C 两图不具备原点对称性，排除。
+
+\textbf{第二步：算一个特殊值定位。} 取 $x=\dfrac\pi2$：
+
+\[f\!\left(\frac\pi2\right)=\frac{1+\frac\pi2}{0+\frac{\pi^{2}}4}=\frac{4\left(1+\frac\pi2\right)}{\pi^{2}}=\frac{4+2\pi}{\pi^{2}}\approx\frac{10.28}{9.87}\approx1.04>1\]
+
+A 图在 $\left(0,\pi\right)$ 上最大值明显未超过 $1$，排除。
+
+\gkanswer{答案：D}
+
+\begin{gktip}
+\textbf{方法提示}：选择题里的图象题，"奇偶性排除 + 一个特殊点定量"几乎总能两步锁定，不必求导画完整图象。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{6}{系统抽样}
+
+\textbf{题目}：$1000$ 名新生编号 $1\sim1000$，系统抽样等距抽 $100$ 名。$46$ 号被抽到，则下列哪名学生也被抽到？
+
+\textbf{解析}
+
+系统抽样的组距 $k=\dfrac{1000}{100}=10$，即被抽到的号码构成\textbf{公差为 $10$ 的等差数列}。
+
+已知 $46$ 号在其中，故被抽号码集合为
+
+\[\{46+10m\mid m\in\mathbf Z\}\cap[1,1000]=\{6,16,26,\cdots,996\}\]
+
+特征是\textbf{个位数字为 $6$}。逐个检查选项：$8$（个位 $8$）、$200$（个位 $0$）、$616$（个位 $6$ ）、$815$（个位 $5$）。
+
+\gkanswer{答案：C（$616$ 号学生）}
+
+\par\medskip
+
+\gksolhead{7}{诱导公式 + 两角和的正切}
+
+\textbf{题目}：$\tan255^\circ=$（　　）
+
+\textbf{解析}
+
+\textbf{第一步：用周期把角压到锐角。} 正切的最小正周期是 $180^\circ$：
+
+\[\tan255^\circ=\tan(255^\circ-180^\circ)=\tan75^\circ\]
+
+\textbf{第二步：拆成特殊角之和。}
+
+\[\tan75^\circ=\tan(45^\circ+30^\circ)=\frac{\tan45^\circ+\tan30^\circ}{1-\tan45^\circ\tan30^\circ}=\frac{1+\frac{\sqrt3}3}{1-\frac{\sqrt3}3}=\frac{3+\sqrt3}{3-\sqrt3}\]
+
+分母有理化：
+
+\[\frac{3+\sqrt3}{3-\sqrt3}=\frac{(3+\sqrt3)^{2}}{(3-\sqrt3)(3+\sqrt3)}=\frac{9+6\sqrt3+3}{9-3}=\frac{12+6\sqrt3}6=2+\sqrt3\]
+
+\gkanswer{答案：D（$2+\sqrt3$）}
+
+\begin{gktip}
+\textbf{方法提示}：$\tan75^\circ=2+\sqrt3$ 与 $\tan15^\circ=2-\sqrt3$ 建议直接记住，它们互为倒数（$\tan15^\circ\tan75^\circ=1$），检验时可用这条关系互查。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{8}{向量夹角}
+
+\textbf{题目}：非零向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a|=2|\boldsymbol b|$，且 $(\boldsymbol a-\boldsymbol b)\perp\boldsymbol b$，求 $\boldsymbol a$ 与 $\boldsymbol b$ 的夹角。
+
+\textbf{解析}（同理科卷第 7 题）
+
+垂直条件立刻转成数量积等于零：
+
+\[(\boldsymbol a-\boldsymbol b)\cdot\boldsymbol b=0\ \Longrightarrow\ \boldsymbol a\cdot\boldsymbol b=|\boldsymbol b|^{2}\]
+
+代入夹角公式，记 $|\boldsymbol b|=m>0$，则 $|\boldsymbol a|=2m$：
+
+\[\cos\theta=\frac{\boldsymbol a\cdot\boldsymbol b}{|\boldsymbol a||\boldsymbol b|}=\frac{m^{2}}{2m\cdot m}=\frac12\]
+
+$\theta\in[0,\pi]$，故 $\theta=\dfrac\pi3$。
+
+\gkanswer{答案：B（$\dfrac\pi3$）}
+
+\par\medskip
+
+\gksolhead{9}{程序框图 · 连分数}
+
+\textbf{题目}：如图是求 $\dfrac1{2+\dfrac1{2+\dfrac12}}$ 的程序框图，空白框应填入（　　）
+
+\begin{center}\input{figures/f2019_flow}\end{center}
+
+\textbf{解析}（同理科卷第 8 题）
+
+目标连分数是\textbf{从最内层 $\dfrac12$ 开始，每次"取倒数再被 $2$ 加"}：
+
+\[\frac12\ \longrightarrow\ \frac1{2+\frac12}\ \longrightarrow\ \frac1{2+\frac1{2+\frac12}}\]
+
+框图中初值 $A=\dfrac12$，循环体执行 $2$ 次（$k=1,2$ 时进入），每次应把当前的 $A$ 变成 $\dfrac1{2+A}$：
+
+\begin{itemize}
+\item $k=1$：$A=\dfrac1{2+\frac12}=\dfrac25$；
+\item $k=2$：$A=\dfrac1{2+\frac25}=\dfrac5{12}$，正是所求。
+\end{itemize}
+
+\gkanswer{答案：A（$A=\dfrac1{2+A}$）}
+
+\begin{gktip}
+\textbf{注}：程序框图（算法初步）在现行新课标中已删除，本题仅作历史资料。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{10}{双曲线离心率与渐近线倾斜角}
+
+\textbf{题目}：双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$ 的一条渐近线倾斜角为 $130^\circ$，求 $C$ 的离心率。
+
+\textbf{解析}
+
+\textbf{第一步：认清是哪条渐近线。} 该双曲线两条渐近线为 $y=\pm\dfrac ba x$，斜率一正一负。倾斜角 $130^\circ\in(90^\circ,180^\circ)$，对应\textbf{斜率为负}的那条，故
+
+\[-\frac ba=\tan130^\circ\ \Longrightarrow\ \frac ba=-\tan130^\circ=\tan50^\circ\]
+
+（用 $\tan(180^\circ-\alpha)=-\tan\alpha$，即 $\tan130^\circ=-\tan50^\circ$。）
+
+\textbf{第二步：套离心率公式。}
+
+\[e=\frac ca=\sqrt{1+\frac{b^{2}}{a^{2}}}=\sqrt{1+\tan^{2}50^\circ}=\sqrt{\frac1{\cos^{2}50^\circ}}=\frac1{\cos50^\circ}\]
+
+最后一步用了 $1+\tan^{2}\alpha=\dfrac1{\cos^{2}\alpha}$，且 $50^\circ$ 为锐角故 $\cos50^\circ>0$，开方不带绝对值。
+
+\gkanswer{答案：D（$\dfrac1{\cos50^\circ}$）}
+
+\begin{gktip}
+\textbf{方法提示}：选项 A、B 是 $2\sin40^\circ$、$2\cos40^\circ$ 这类"看着像"的干扰项。注意 $\dfrac1{\cos50^\circ}=\dfrac1{\sin40^\circ}$，而选项 C 是 $\dfrac1{\sin50^\circ}$ —— 互余角的换算要写清楚再比对，不要凭印象选。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{11}{正弦定理 + 余弦定理}
+
+\textbf{题目}：$\triangle ABC$ 中 $a\sin A-b\sin B=4c\sin C$，$\cos A=-\dfrac14$，求 $\dfrac bc$。
+
+\textbf{解析}
+
+\textbf{第一步：正弦定理"边化"。} 由 $\dfrac a{\sin A}=\dfrac b{\sin B}=\dfrac c{\sin C}=2R$，把 $\sin A=\dfrac a{2R}$ 等代入条件式，两边同乘 $2R$：
+
+\[a^{2}-b^{2}=4c^{2}\qquad(1)\]
+
+\textbf{第二步：余弦定理提供第二个关系。}
+
+\[a^{2}=b^{2}+c^{2}-2bc\cos A=b^{2}+c^{2}-2bc\left(-\frac14\right)=b^{2}+c^{2}+\frac{bc}2\]
+
+即
+
+\[a^{2}-b^{2}=c^{2}+\frac{bc}2\qquad(2)\]
+
+\textbf{第三步：联立。} 由 (1)(2)：
+
+\[4c^{2}=c^{2}+\frac{bc}2\ \Longrightarrow\ 3c^{2}=\frac{bc}2\ \Longrightarrow\ \frac bc=6\]
+
+（$c>0$，可以约去。）
+
+\gkanswer{答案：A（$6$）}
+
+\begin{gktip}
+\textbf{方法提示}：解三角形题里出现 $\sin$ 与边混合的等式，第一动作永远是\textbf{统一到边}（正弦定理）或\textbf{统一到角}（把边换成 $2R\sin$）。本题选"边化"，因为已知 $\cos A$，后面必然要接余弦定理。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{12}{椭圆定义的两次使用}
+
+\textbf{题目}：椭圆 $C$ 焦点 $F_1(-1,0)$，$F_2(1,0)$，过 $F_2$ 的直线交 $C$ 于 $A$，$B$。若 $\left|AF_2\right|=2\left|F_2B\right|$，$|AB|=\left|BF_1\right|$，求 $C$ 的方程。
+
+\textbf{解析}（同理科卷第 10 题）
+
+已知 $c=1$，故 $\left|F_1F_2\right|=2$。
+
+\textbf{第一步：设一个量，把四条焦半径全用 $a$ 表示。}
+
+设 $\left|F_2B\right|=m$，则由 $\left|AF_2\right|=2\left|F_2B\right|$ 得 $\left|AF_2\right|=2m$，$|AB|=3m$，再由 $|AB|=\left|BF_1\right|$ 得 $\left|BF_1\right|=3m$。
+
+对 $B$ 用椭圆定义：
+
+\[\left|BF_1\right|+\left|BF_2\right|=2a\ \Longrightarrow\ 3m+m=2a\ \Longrightarrow\ m=\frac a2\]
+
+于是
+
+\[\left|AF_2\right|=a,\qquad \left|BF_2\right|=\frac a2,\qquad \left|BF_1\right|=\frac{3a}2\]
+
+对 $A$ 再用一次椭圆定义：
+
+\[\left|AF_1\right|=2a-\left|AF_2\right|=2a-a=a\]
+
+\textbf{第二步：利用两角互补列方程。} 因 $A$、$F_2$、$B$ 共线，$\angle AF_2F_1$ 与 $\angle BF_2F_1$ 互补，两者余弦互为相反数。分别在 $\triangle AF_1F_2$、$\triangle BF_1F_2$ 中用余弦定理：
+
+\[\cos\angle AF_2F_1=\frac{\left|AF_2\right|^{2}+\left|F_1F_2\right|^{2}-\left|AF_1\right|^{2}}{2\left|AF_2\right|\left|F_1F_2\right|}=\frac{a^{2}+4-a^{2}}{2\cdot a\cdot2}=\frac1a\]
+
+\[\cos\angle BF_2F_1=\frac{\left|BF_2\right|^{2}+\left|F_1F_2\right|^{2}-\left|BF_1\right|^{2}}{2\left|BF_2\right|\left|F_1F_2\right|}=\frac{\frac{a^{2}}4+4-\frac{9a^{2}}4}{2\cdot\frac a2\cdot2}=\frac{4-2a^{2}}{2a}\]
+
+令两者相加为零：
+
+\[\frac1a+\frac{4-2a^{2}}{2a}=0\ \Longrightarrow\ 2+4-2a^{2}=0\ \Longrightarrow\ a^{2}=3\]
+
+于是 $b^{2}=a^{2}-c^{2}=3-1=2$。
+
+\gkanswer{答案：B（$\dfrac{x^{2}}3+\dfrac{y^{2}}2=1$）}
+
+\begin{gktip}
+\textbf{方法提示}：焦点弦被分成已知比例时，"\textbf{两次椭圆定义把焦半径统一成 $a$ → 用两角互补列一个方程}"是标准两步。若改走"等腰三角形作中垂线"的路子，需要额外判断垂足与 $F_2$ 的左右位置，反而更容易出错。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{二、填空题}
+
+\gksolhead{13}{导数与切线}
+
+\textbf{题目}：曲线 $y=3\left(x^{2}+x\right)\mathrm e^{x}$ 在点 $(0,0)$ 处的切线方程为 \gkblank{}．
+
+\textbf{解析}（同理科卷第 13 题）
+
+乘积求导：
+
+\[y'=3(2x+1)\mathrm e^{x}+3\left(x^{2}+x\right)\mathrm e^{x}=3\mathrm e^{x}\left(x^{2}+3x+1\right)\]
+
+代入 $x=0$：$y'(0)=3\mathrm e^{0}\cdot1=3$。
+
+切线过 $(0,0)$，斜率 $3$：
+
+\[y=3x\]
+
+\gkanswer{答案：$y=3x$}
+
+\par\medskip
+
+\gksolhead{14}{等比数列 · 公比出现重根}
+
+\textbf{题目}：$S_n$ 为等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和，$a_1=1$，$S_3=\dfrac34$，则 $S_4=$ \gkblank{}．
+
+\textbf{解析}
+
+设公比为 $q$。由 $a_1=1$：
+
+\[S_3=1+q+q^{2}=\frac34\ \Longrightarrow\ q^{2}+q+\frac14=0\ \Longrightarrow\ \left(q+\frac12\right)^{2}=0\]
+
+\textbf{判别式为零，公比唯一}：$q=-\dfrac12$（注意 $q\ne0$ 已满足，无需舍根）。
+
+于是
+
+\[S_4=S_3+a_4=S_3+a_1q^{3}=\frac34+\left(-\frac12\right)^{3}=\frac34-\frac18=\frac58\]
+
+\gkanswer{答案：$\dfrac58$}
+
+\begin{gktip}
+\textbf{方法提示}：用 $S_4=S_3+a_4$ 比套公式 $S_4=\dfrac{a_1\left(1-q^{4}\right)}{1-q}$ 快得多，且不会因 $q=1$ 的讨论出错。另外，看到方程配成完全平方就该意识到"答案唯一"，不必再回头找第二组解。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{15}{三角函数化二次函数求最值}
+
+\textbf{题目}：函数 $f(x)=\sin\left(2x+\dfrac{3\pi}2\right)-3\cos x$ 的最小值为 \gkblank{}．
+
+\textbf{解析}
+
+\textbf{第一步：诱导公式化简首项。}
+
+\[\sin\left(2x+\frac{3\pi}2\right)=\sin2x\cos\frac{3\pi}2+\cos2x\sin\frac{3\pi}2=\sin2x\cdot0+\cos2x\cdot(-1)=-\cos2x\]
+
+\textbf{第二步：统一到 $\cos x$。} 用二倍角 $\cos2x=2\cos^{2}x-1$：
+
+\[f(x)=-\cos2x-3\cos x=-\left(2\cos^{2}x-1\right)-3\cos x=-2\cos^{2}x-3\cos x+1\]
+
+\textbf{第三步：换元成闭区间上的二次函数。} 令 $t=\cos x\in[-1,1]$：
+
+\[g(t)=-2t^{2}-3t+1,\qquad t\in[-1,1]\]
+
+抛物线开口\textbf{向下}，对称轴 $t=-\dfrac34\in[-1,1]$ 是\textbf{最大值}点，故最小值必在区间端点取到：
+
+\[g(-1)=-2+3+1=2,\qquad g(1)=-2-3+1=-4\]
+
+最小值为 $-4$，此时 $\cos x=1$，即 $x=2k\pi\ (k\in\mathbf Z)$。
+
+\gkanswer{答案：$-4$}
+
+\begin{gktip}
+\textbf{方法提示}：开口向下的抛物线在闭区间上，\textbf{最大值看对称轴、最小值看端点}；开口向上则反过来。本题若误以为"顶点处取最小"，会得到 $g\left(-\dfrac34\right)=\dfrac{17}8$，那是最大值。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{16}{点到平面的距离 · 三垂线定理}
+
+\textbf{题目}：$\angle ACB=90^\circ$，$P$ 为平面 $ABC$ 外一点，$PC=2$，点 $P$ 到 $\angle ACB$ 两边 $AC$、$BC$ 的距离均为 $\sqrt3$，求 $P$ 到平面 $ABC$ 的距离。
+
+\textbf{解析}
+
+\textbf{第一步：作出两条垂线段。} 设 $PE\perp AC$ 于 $E$，$PF\perp BC$ 于 $F$，则 $PE=PF=\sqrt3$。在 $\mathrm{Rt}\triangle PEC$ 中：
+
+\[CE=\sqrt{PC^{2}-PE^{2}}=\sqrt{4-3}=1\]
+
+同理 $CF=1$。
+
+\textbf{第二步：定位射影。} 设 $P$ 在平面 $ABC$ 内的射影为 $O$，$PO=h$。由\textbf{三垂线定理的逆定理}：$PE\perp AC$ 且 $PO\perp$ 平面 $ABC$，故射影 $OE\perp AC$；同理 $OF\perp BC$。
+
+\textbf{第三步：在底面平面内建系。} 因 $\angle ACB=90^\circ$，以 $C$ 为原点、$CA$ 与 $CB$ 为两轴。由 $OE\perp CA$ 且 $E$ 在 $CA$ 上、$CE=1$，知 $O$ 的横坐标为 $1$；同理 $O$ 的纵坐标为 $1$。故 $O(1,1)$，
+
+\[CO=\sqrt{1^{2}+1^{2}}=\sqrt2\]
+
+\textbf{第四步：勾股定理。} $PO\perp$ 平面 $ABC$，故 $PO\perp OC$：
+
+\[h=PO=\sqrt{PC^{2}-CO^{2}}=\sqrt{4-2}=\sqrt2\]
+
+\gkanswer{答案：$\sqrt2$}
+
+\begin{gktip}
+\textbf{方法提示}：\textbf{"点 $P$ 到角的两边距离相等 $\Rightarrow$ 射影 $O$ 到两边距离相等 $\Rightarrow$ $O$ 在角平分线上"} 是这类题的通用结论。本题因为角是直角，射影恰好落在 $(1,1)$，$CO=\sqrt2$ 一步可得。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{三、解答题}
+
+\gksolhead{17}{12 分，列联表与独立性检验}
+
+\textbf{题目}：见试题。
+
+\gksubpart{(1) 估计满意概率}
+
+用频率估计概率：
+
+\begin{itemize}
+\item 男顾客满意率：$\dfrac{40}{50}=0.8$
+\item 女顾客满意率：$\dfrac{30}{50}=0.6$
+\end{itemize}
+
+\gksubpart{(2) 独立性检验}
+
+代入公式，其中 $a=40$，$b=10$，$c=30$，$d=20$，$n=100$：
+
+\[ad-bc=40\times20-10\times30=800-300=500\]
+
+\[K^{2}=\frac{100\times500^{2}}{(40+10)(30+20)(40+30)(10+20)}=\frac{100\times250000}{50\times50\times70\times30}\]
+
+分母：$50\times50=2500$，$70\times30=2100$，$2500\times2100=5\,250\,000$。
+
+\[K^{2}=\frac{25\,000\,000}{5\,250\,000}=\frac{100}{21}\approx4.762\]
+
+对照临界值表：$4.762>3.841=k_{0.050}$，而 $4.762<6.635$。
+
+\textbf{结论}：有 $95\%$ 的把握认为男、女顾客对该商场服务的评价有差异（但没有 $99\%$ 的把握）。
+
+\begin{gktip}
+\textbf{方法提示}：$K^{2}$ 的分母是\textbf{四个边缘和相乘}（两行和 × 两列和），分子是 $n(ad-bc)^{2}$。计算时先把 $ad-bc$ 单独算出来再平方，比展开更不容易错。结论一定要写成"有 $95\%$ 的把握认为……有差异"，不能写成"男女评价差异的概率是 $95\%$"。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{18}{12 分，等差数列}
+
+\textbf{题目}：$S_9=-a_5$。(1) 若 $a_3=4$，求通项；(2) 若 $a_1>0$，求使 $S_n\ge a_n$ 的 $n$ 的范围。
+
+\gksubpart{先挖出隐含条件}
+
+等差数列前 $9$ 项和有对称性：
+
+\[S_9=\frac{9\left(a_1+a_9\right)}2=\frac{9\cdot2a_5}2=9a_5\]
+
+代入 $S_9=-a_5$：
+
+\[9a_5=-a_5\ \Longrightarrow\ 10a_5=0\ \Longrightarrow\ \boxed{a_5=0}\]
+
+这是全题的钥匙，两问都要用。
+
+\gksubpart{(1) 求通项}
+
+由 $a_3=4$，$a_5=0$：
+
+\[d=\frac{a_5-a_3}{5-3}=\frac{0-4}2=-2\]
+
+\[a_n=a_5+(n-5)d=0-2(n-5)=10-2n\]
+
+\gkanswer{答案：$a_n=10-2n$}
+
+\gksubpart{(2) 求 $n$ 的取值范围}
+
+由 $a_5=a_1+4d=0$ 得 $d=-\dfrac{a_1}4$。于是
+
+\[a_n=a_1+(n-1)d=a_1-\frac{(n-1)a_1}4=\frac{a_1(5-n)}4\]
+
+\[S_n=na_1+\frac{n(n-1)}2d=na_1-\frac{n(n-1)a_1}8=\frac{a_1n\left[8-(n-1)\right]}8=\frac{a_1n(9-n)}8\]
+
+代入 $S_n\ge a_n$：
+
+\[\frac{a_1n(9-n)}8\ge\frac{a_1(5-n)}4\]
+
+因 $a_1>0$，两边同除 $a_1$（\textbf{不等号方向不变}），再同乘 $8$：
+
+\[n(9-n)\ge2(5-n)\]
+
+\[9n-n^{2}\ge10-2n\ \Longrightarrow\ n^{2}-11n+10\le0\ \Longrightarrow\ (n-1)(n-10)\le0\]
+
+解得 $1\le n\le10$。又 $n\in\mathbf N^{*}$，故
+
+\gkanswer{答案：$n\in\{1,2,3,\cdots,10\}$}
+
+\begin{gktip}
+\textbf{方法提示}：第 (2) 问里 $a_1$ 是"自由参数"，条件 $a_1>0$ 的作用\textbf{只是保证除法不变号}，最终答案与 $a_1$ 的具体取值无关 —— 这一点想清楚了，就不会去纠结"$a_1$ 到底等于多少"。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{19}{12 分，立体几何}
+
+\textbf{题目}：直四棱柱 $ABCD\text{-}A_1B_1C_1D_1$ 底面是菱形，$AA_1=4$，$AB=2$，$\angle BAD=60^\circ$，$E$、$M$、$N$ 分别是 $BC$、$BB_1$、$A_1D$ 的中点。
+
+\begin{center}\input{figures/f2019_t18_prism}\end{center}
+
+\gksubpart{先把底面的量算清楚}
+
+菱形 $ABCD$ 边长 $2$，$\angle BAD=60^\circ$，故 $\triangle ABD$ 是\textbf{等边三角形}，$BD=2$；另一条对角线 $AC=2\times2\cos30^\circ=2\sqrt3$。又 $\angle BCD=\angle BAD=60^\circ$。
+
+\gksubpart{(1) 证明 $MN\parallel$ 平面 $C_1DE$}
+
+\textbf{关键}：证 $MN$ 平行于平面内的一条直线 —— 目标就是 $DE$。
+
+取 $AD$ 的中点 $F$，连接 $NF$、$BF$。
+
+\textbf{第一步：$MN\parallel BF$。}
+$N$ 是 $A_1D$ 中点，$F$ 是 $AD$ 中点，故 $NF$ 是 $\triangle A_1AD$ 的中位线：
+
+\[NF\parallel AA_1,\qquad NF=\frac12AA_1=2\]
+
+$M$ 是 $BB_1$ 中点，故 $BM\parallel BB_1\parallel AA_1$，$BM=\dfrac12BB_1=2$。
+
+于是 $NF\parallel BM$ 且 $NF=BM$，四边形 $FNMB$ 是平行四边形（\textbf{注意方向}：$\overrightarrow{FN}$ 与 $\overrightarrow{BM}$ 都等于 $\dfrac12\overrightarrow{AA_1}$，同向等长），所以
+
+\[MN\parallel BF\]
+
+\textbf{第二步：$BF\parallel DE$。}
+$F$ 是 $AD$ 中点，$E$ 是 $BC$ 中点。因 $AD\parallel BC$ 且 $AD=BC$，有
+
+\[\overrightarrow{FD}=\frac12\overrightarrow{AD}=\frac12\overrightarrow{BC}=\overrightarrow{BE}\]
+
+故四边形 $BEDF$ 是平行四边形，所以 $BF\parallel ED$。
+
+\textbf{第三步：收尾。}
+由前两步 $MN\parallel DE$。又 $DE\subset$ 平面 $C_1DE$，而 $MN\not\subset$ 平面 $C_1DE$（$M$ 在侧棱 $BB_1$ 上，不在该平面内），由\textbf{线面平行判定定理}：
+
+\[MN\parallel\text{平面 }C_1DE\]
+
+\gksubpart{(2) 求点 $C$ 到平面 $C_1DE$ 的距离}
+
+文科不用空间向量，标准工具是\textbf{等体积法}：把同一个四面体 $C\text{-}C_1DE$ 的体积用两种方式算。
+
+\textbf{第一种算法：以 $\triangle CDE$ 为底、$CC_1$ 为高。}
+
+$\triangle CDE$ 中，$CD=2$，$CE=\dfrac12BC=1$，夹角 $\angle DCE=\angle DCB=60^\circ$：
+
+\[S_{\triangle CDE}=\frac12\cdot CD\cdot CE\cdot\sin60^\circ=\frac12\cdot2\cdot1\cdot\frac{\sqrt3}2=\frac{\sqrt3}2\]
+
+直棱柱侧棱 $CC_1\perp$ 底面，$CC_1=AA_1=4$，故
+
+\[V_{C_1\text{-}CDE}=\frac13\cdot\frac{\sqrt3}2\cdot4=\frac{2\sqrt3}3\]
+
+\textbf{第二种算法：以 $\triangle C_1DE$ 为底、所求距离 $h$ 为高。}
+
+先算 $\triangle C_1DE$ 的三边：
+
+\begin{itemize}
+\item $DE$：在 $\triangle CDE$ 中用余弦定理，
+\end{itemize}
+\[DE^{2}=CD^{2}+CE^{2}-2\cdot CD\cdot CE\cos60^\circ=4+1-2\cdot2\cdot1\cdot\frac12=3,\quad DE=\sqrt3\]
+\begin{itemize}
+\item $C_1E$：$CC_1\perp$ 底面故 $CC_1\perp CE$，
+\end{itemize}
+\[C_1E=\sqrt{CC_1^{2}+CE^{2}}=\sqrt{16+1}=\sqrt{17}\]
+\begin{itemize}
+\item $C_1D$：同理 $CC_1\perp CD$，
+\end{itemize}
+\[C_1D=\sqrt{CC_1^{2}+CD^{2}}=\sqrt{16+4}=2\sqrt5\]
+
+\textbf{发现直角}：$DE^{2}+C_1E^{2}=3+17=20=\left(2\sqrt5\right)^{2}=C_1D^{2}$，故 $\angle DEC_1=90^\circ$，
+
+\[S_{\triangle C_1DE}=\frac12\cdot DE\cdot C_1E=\frac12\cdot\sqrt3\cdot\sqrt{17}=\frac{\sqrt{51}}2\]
+
+\textbf{联立求 $h$：}
+
+\[\frac13\cdot\frac{\sqrt{51}}2\cdot h=\frac{2\sqrt3}3\ \Longrightarrow\ h=\frac{2\sqrt3}3\cdot\frac6{\sqrt{51}}=\frac{4\sqrt3}{\sqrt{51}}=4\sqrt{\frac3{51}}=\frac4{\sqrt{17}}=\frac{4\sqrt{17}}{17}\]
+
+\gkanswer{答案：$\dfrac{4\sqrt{17}}{17}$}
+
+\begin{gktip}
+\textbf{方法提示}：等体积法的成败取决于\textbf{能否找到一个"高显然"的摆法}。这里选 $C_1$ 为顶点，高就是侧棱 $CC_1=4$，一步到位。另外，算出三边后\textbf{先验一次勾股}是好习惯 —— 本题恰好是直角三角形，省掉了余弦定理求面积的两步。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{20}{12 分，导数}
+
+\textbf{题目}：$f(x)=2\sin x-x\cos x-x$，$f'(x)$ 为 $f(x)$ 的导数。
+
+\gksubpart{(1) 证明 $f'(x)$ 在 $(0,\pi)$ 存在唯一零点}
+
+先求导。注意 $(x\cos x)'=\cos x-x\sin x$：
+
+\[f'(x)=2\cos x-(\cos x-x\sin x)-1=\cos x+x\sin x-1\]
+
+记 $g(x)=f'(x)=\cos x+x\sin x-1$，再求一次导：
+
+\[g'(x)=-\sin x+(\sin x+x\cos x)=x\cos x\]
+
+\textbf{单调性}：在 $(0,\pi)$ 上 $x>0$，故 $g'(x)$ 的符号完全由 $\cos x$ 决定：
+
+\begin{itemize}
+\item $x\in\left(0,\dfrac\pi2\right)$：$\cos x>0$，$g'>0$，$g$ \textbf{单调递增}；
+\item $x\in\left(\dfrac\pi2,\pi\right)$：$\cos x<0$，$g'<0$，$g$ \textbf{单调递减}。
+\end{itemize}
+
+\textbf{端点与极值点的值}：
+
+\[g(0)=\cos0+0-1=0,\qquad g\!\left(\frac\pi2\right)=0+\frac\pi2-1=\frac\pi2-1>0,\qquad g(\pi)=-1+0-1=-2<0\]
+
+\textbf{分区间讨论}：
+
+\begin{itemize}
+\item 在 $\left(0,\dfrac\pi2\right]$ 上：$g$ 从 $g(0)=0$ 严格递增，故 $g(x)>0$ 恒成立，\textbf{无零点}；
+\item 在 $\left(\dfrac\pi2,\pi\right)$ 上：$g$ 连续且严格递减，$g\!\left(\dfrac\pi2\right)=\dfrac\pi2-1>0$，$g(\pi)=-2<0$。由\textbf{零点存在定理}，存在 $x_0\in\left(\dfrac\pi2,\pi\right)$ 使 $g\left(x_0\right)=0$；由严格单调性，该零点\textbf{唯一}。
+\end{itemize}
+
+综上，$f'(x)$ 在 $(0,\pi)$ 上存在唯一零点 $x_0$，且 $x_0\in\left(\dfrac\pi2,\pi\right)$。$\blacksquare$
+
+\gksubpart{(2) 求 $a$ 的取值范围}
+
+设
+
+\[h(x)=f(x)-ax=2\sin x-x\cos x-(1+a)x,\qquad x\in[0,\pi]\]
+
+要求 $h(x)\ge0$ 在 $[0,\pi]$ 上恒成立。注意 $h(0)=0$。
+
+\textbf{第一步：必要条件（取特殊点）。} 令 $x=\pi$：
+
+\[h(\pi)=2\sin\pi-\pi\cos\pi-(1+a)\pi=0+\pi-\pi-a\pi=-a\pi\]
+
+由 $h(\pi)\ge0$ 得 $-a\pi\ge0$，即
+
+\[a\le0\]
+
+\textbf{第二步：充分性（证明 $a\le0$ 时确实成立）。}
+
+先看 $a=0$ 的情形，记
+
+\[\varphi(x)=2\sin x-x\cos x-x\]
+
+则 $\varphi'(x)=g(x)$，正是第 (1) 问研究过的函数。由 (1)：
+
+\begin{itemize}
+\item $x\in\left(0,x_0\right)$ 时 $g(x)>0$，$\varphi$ 单调递增；
+\item $x\in\left(x_0,\pi\right)$ 时 $g(x)<0$，$\varphi$ 单调递减。
+\end{itemize}
+
+即 $\varphi$ 在 $[0,\pi]$ 上\textbf{先增后减}，其最小值只可能在两个端点取到：
+
+\[\varphi(0)=0,\qquad \varphi(\pi)=2\cdot0-\pi\cdot(-1)-\pi=\pi-\pi=0\]
+
+两端点都是 $0$，故
+
+\[\varphi(x)\ge0,\qquad x\in[0,\pi]\]
+
+再回到一般的 $a\le0$：此时 $x\ge0$ 保证 $-ax\ge0$，于是
+
+\[h(x)=\varphi(x)-ax\ge\varphi(x)\ge0\]
+
+充分性得证。
+
+\gkanswer{答案：$a\le0$，即 $a\in(-\infty,0]$}
+
+\begin{gktip}
+\textbf{方法提示}：恒成立问题的标准打法是"\textbf{特殊值定必要范围 → 回头证充分}"。本题的巧妙之处在于 $\varphi$ 先增后减且两端点函数值都恰为 $0$ —— 这类"两头齐平"的结构下，\textbf{不必求出 $x_0$ 的具体值}（它是超越方程的根，本来也求不出），只靠单调性就能断定 $\varphi\ge0$。
+\end{gktip}
+
+\par\medskip
+
+\gksolhead{21}{12 分，圆与抛物线}
+
+\textbf{题目}：点 $A$、$B$ 关于原点 $O$ 对称，$|AB|=4$，$\odot M$ 过 $A$、$B$ 且与直线 $x+2=0$ 相切。
+
+\gksubpart{先提炼两条通用性质}
+
+1. $A$、$B$ 关于 $O$ 对称且 $|AB|=4$，故 $|OA|=|OB|=2$，且 \textbf{$O$ 是弦 $AB$ 的中点}；
+2. 圆心 $M$ 到弦中点的连线垂直于弦，故 $MO\perp AB$，由勾股定理
+
+\[|MA|^{2}=|MO|^{2}+|OA|^{2}=|MO|^{2}+4\]
+
+\gksubpart{(1) $A$ 在直线 $x+y=0$ 上，求半径}
+
+由 $|OA|=2$ 且 $A$ 在 $y=-x$ 上，设 $A(t,-t)$：
+
+\[\sqrt{t^{2}+t^{2}}=2\ \Longrightarrow\ |t|=\sqrt2\]
+
+取 $A\left(\sqrt2,-\sqrt2\right)$，则 $B\left(-\sqrt2,\sqrt2\right)$（另一组取法对称，结果相同）。
+
+圆心 $M$ 在弦 $AB$ 的\textbf{中垂线}上。$AB$ 所在直线斜率为 $-1$ 且过原点，故中垂线为 $y=x$。设 $M(m,m)$。
+
+半径有两个表达：
+
+\begin{itemize}
+\item 过 $A$：$r^{2}=|MA|^{2}=\left(m-\sqrt2\right)^{2}+\left(m+\sqrt2\right)^{2}=2m^{2}+4$
+\item 与 $x=-2$ 相切：$r=|m-(-2)|=|m+2|$
+\end{itemize}
+
+联立：
+
+\[(m+2)^{2}=2m^{2}+4\ \Longrightarrow\ m^{2}+4m+4=2m^{2}+4\ \Longrightarrow\ m^{2}-4m=0\]
+
+得 $m=0$ 或 $m=4$。
+
+\begin{itemize}
+\item $m=0$：$M(0,0)$，$r=2$。（此时圆心恰在原点，$AB$ 是直径）
+\item $m=4$：$M(4,4)$，$r=6$。（验证：$|MA|^{2}=2\times16+4=36$ ）
+\end{itemize}
+
+\gkanswer{答案：半径为 $2$ 或 $6$}
+
+\gksubpart{(2) 是否存在定点 $P$ 使 $|MA|-|MP|$ 为定值}
+
+\textbf{第一步：求圆心 $M$ 的轨迹。} 设 $M(x,y)$。
+
+由相切条件（圆与直线 $x=-2$ 相切，半径等于圆心到该直线的距离）：
+
+\[|MA|=r=|x+2|\]
+
+由本题开头的性质 2：
+
+\[|MA|^{2}=|MO|^{2}+4=x^{2}+y^{2}+4\]
+
+两式平方后相等：
+
+\[(x+2)^{2}=x^{2}+y^{2}+4\]
+
+\[x^{2}+4x+4=x^{2}+y^{2}+4\ \Longrightarrow\ \boxed{y^{2}=4x}\]
+
+即\textbf{圆心 $M$ 的轨迹是抛物线 $y^{2}=4x$}。（由此 $x\ge0$，故 $|x+2|=x+2$。）
+
+\textbf{第二步：用抛物线定义找定点。}
+
+抛物线 $y^{2}=4x$ 中 $2p=4$，$\dfrac p2=1$，故焦点为 $P(1,0)$，准线为 $x=-1$。
+
+由抛物线定义，$M$ 到焦点的距离等于到准线的距离：
+
+\[|MP|=x+1\]
+
+而
+
+\[|MA|=r=x+2\]
+
+于是
+
+\[|MA|-|MP|=(x+2)-(x+1)=1\]
+
+\gkanswer{答案：存在定点 $P(1,0)$（即抛物线 $y^{2}=4x$ 的焦点），使 $|MA|-|MP|=1$ 恒为定值。}
+
+\begin{gktip}
+\textbf{方法提示}：本题的设计意图是"\textbf{先求轨迹，再认出圆锥曲线，最后用定义}"。第 (2) 问看似在问一个存在性问题，实际上一旦算出轨迹 $y^{2}=4x$，答案就自动浮现 —— $|MA|=x+2$ 是"到准线 $x=-1$ 的距离再加 $1$"，减去 $|MP|$ 自然剩 $1$。
+
+注意 $|MA|$ 就是圆的半径这一转换：题目里 $A$ 在圆上，所以 $|MA|=r$，而 $r$ 又等于圆心到切线的距离，两步把"动点 $A$"消掉了。
+\end{gktip}
+
+\par\medskip
+
+\gkpart{选考题（现行考纲已取消，仅存档）}
+
+\gksolhead{22}{10 分，坐标系与参数方程}
+
+\textbf{题目}：见试题。
+
+\gksubpart{(1) 化直角坐标方程}
+
+\textbf{曲线 $C$}：注意到
+
+\[x^{2}+\frac{y^{2}}4=\frac{\left(1-t^{2}\right)^{2}}{\left(1+t^{2}\right)^{2}}+\frac{4t^{2}}{\left(1+t^{2}\right)^{2}}=\frac{1-2t^{2}+t^{4}+4t^{2}}{\left(1+t^{2}\right)^{2}}=\frac{\left(1+t^{2}\right)^{2}}{\left(1+t^{2}\right)^{2}}=1\]
+
+故 $C$ 满足 $x^{2}+\dfrac{y^{2}}4=1$。\textbf{但要注意取值范围}：
+
+\[x=\frac{1-t^{2}}{1+t^{2}}=\frac2{1+t^{2}}-1\in(-1,1]\]
+
+$t\to\infty$ 时 $x\to-1$ 但取不到，故
+
+\[C:\ x^{2}+\frac{y^{2}}4=1\quad(x\ne-1)\]
+
+\textbf{直线 $l$}：把 $\rho\cos\theta=x$、$\rho\sin\theta=y$ 代入：
+
+\[2x+\sqrt3y+11=0\]
+
+\gksubpart{(2) 求 $C$ 上的点到 $l$ 的最小距离}
+
+设 $C$ 上的点为 $(\cos\alpha,\ 2\sin\alpha)$：
+
+\[d=\frac{\left|2\cos\alpha+2\sqrt3\sin\alpha+11\right|}{\sqrt{2^{2}+\left(\sqrt3\right)^{2}}}=\frac{\left|2\cos\alpha+2\sqrt3\sin\alpha+11\right|}{\sqrt7}\]
+
+辅助角合并：
+
+\[2\cos\alpha+2\sqrt3\sin\alpha=4\left(\frac12\cos\alpha+\frac{\sqrt3}2\sin\alpha\right)=4\sin\left(\alpha+\frac\pi6\right)\]
+
+于是
+
+\[d=\frac{\left|4\sin\left(\alpha+\frac\pi6\right)+11\right|}{\sqrt7}\]
+
+因 $4\sin(\cdot)\in[-4,4]$，故括号内 $\in[7,15]$ 恒为正，绝对值可去。当 $\sin\left(\alpha+\dfrac\pi6\right)=-1$ 时取最小：
+
+\[d_{\min}=\frac{-4+11}{\sqrt7}=\frac7{\sqrt7}=\sqrt7\]
+
+此时 $\alpha+\dfrac\pi6=-\dfrac\pi2$，$\alpha=-\dfrac{2\pi}3$，对应点 $\left(-\dfrac12,-\sqrt3\right)$，满足 $x\ne-1$，取值合法。
+
+\gkanswer{答案：$\sqrt7$}
+
+\par\medskip
+
+\gksolhead{23}{10 分，不等式选讲}
+
+\textbf{题目}：$a$、$b$、$c$ 为正数，$abc=1$。证明两个不等式。
+
+\gksubpart{(1) 证明 $\dfrac1a+\dfrac1b+\dfrac1c\le a^{2}+b^{2}+c^{2}$}
+
+\textbf{关键一步}：$abc=1$ 使倒数可以换成乘积：
+
+\[\frac1a=\frac{abc}a=bc,\qquad \frac1b=ca,\qquad \frac1c=ab\]
+
+于是原式左边 $=ab+bc+ca$。再用三个基本不等式相加：
+
+\[a^{2}+b^{2}\ge2ab,\qquad b^{2}+c^{2}\ge2bc,\qquad c^{2}+a^{2}\ge2ca\]
+
+三式相加除以 $2$：
+
+\[a^{2}+b^{2}+c^{2}\ge ab+bc+ca=\frac1a+\frac1b+\frac1c\]
+
+等号当且仅当 $a=b=c$（结合 $abc=1$ 即 $a=b=c=1$）时成立。$\blacksquare$
+
+\gksubpart{(2) 证明 $(a+b)^{3}+(b+c)^{3}+(c+a)^{3}\ge24$}
+
+\textbf{第一步：三元均值不等式。} 对三个正数用 $x+y+z\ge3\sqrt[3]{xyz}$：
+
+\[(a+b)^{3}+(b+c)^{3}+(c+a)^{3}\ge3\sqrt[3]{(a+b)^{3}(b+c)^{3}(c+a)^{3}}=3(a+b)(b+c)(c+a)\]
+
+\textbf{第二步：对每个因子用二元均值。}
+
+\[a+b\ge2\sqrt{ab},\qquad b+c\ge2\sqrt{bc},\qquad c+a\ge2\sqrt{ca}\]
+
+三式相乘（各项为正，可以相乘）：
+
+\[(a+b)(b+c)(c+a)\ge8\sqrt{a^{2}b^{2}c^{2}}=8abc=8\]
+
+\textbf{第三步：合并。}
+
+\[(a+b)^{3}+(b+c)^{3}+(c+a)^{3}\ge3\times8=24\]
+
+等号当且仅当 $a=b=c=1$ 时成立。$\blacksquare$
+
+\begin{gktip}
+\textbf{方法提示}：条件 $abc=1$ 在两问里的作用完全不同 —— 第 (1) 问用它做\textbf{倒数与乘积的互换}，第 (2) 问用它做\textbf{最后一步的数值代入}。看到 $abc=1$ 就想"能不能把某个分式换成乘积"，是这类题的通用切入点。
+\end{gktip}
+
+\par\medskip
+

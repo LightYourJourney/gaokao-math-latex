@@ -1,0 +1,27 @@
+% 2018 全国Ⅰ卷 理3/文3：新农村建设前后经济收入构成比例（双饼图）
+% 从 90° 起顺时针切分；标签放各扇区中线角上，小扇区标签外置并加引线
+\begin{tikzpicture}[font=\footnotesize, scale=1.0]
+  % ---------- 左：建设前（种植60 养殖30 三产6 其他4）----------
+  \begin{scope}
+    \draw (0,0) circle (1.7);
+    \foreach \a in {90, -126, -234, -255.6} {\draw (0,0) -- (\a:1.7);}
+    \node at (-18:0.95)  {\shortstack{种植收入\\ $60\%$}};
+    \node at (-180:0.95) {\shortstack{养殖收入\\ $30\%$}};
+    \draw (-244.8:1.6) -- (-244.8:2.0);
+    \node at (-244.8:2.05) [above left, inner sep=1pt] {第三产业收入 $6\%$};
+    \draw (-262.8:1.6) -- (-262.8:2.0);
+    \node at (-262.8:2.05) [above right, inner sep=1pt] {其他收入 $4\%$};
+    \node at (0,-2.15) {\small 建设前经济收入构成比例};
+  \end{scope}
+  % ---------- 右：建设后（种植37 养殖30 三产28 其他5）----------
+  \begin{scope}[xshift=6.2cm]
+    \draw (0,0) circle (1.7);
+    \foreach \a in {90, -43.2, -151.2, -252} {\draw (0,0) -- (\a:1.7);}
+    \node at (23.4:0.95)   {\shortstack{种植收入\\ $37\%$}};
+    \node at (-97.2:0.95)  {\shortstack{养殖收入\\ $30\%$}};
+    \node at (-201.6:0.92) {\shortstack{第三产业\\ 收入 $28\%$}};
+    \draw (-261:1.6) -- (-261:2.0);
+    \node at (-261:2.05) [above, inner sep=1.5pt] {其他收入 $5\%$};
+    \node at (0,-2.15) {\small 建设后经济收入构成比例};
+  \end{scope}
+\end{tikzpicture}

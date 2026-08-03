@@ -1,0 +1,30 @@
+% 2020 全国Ⅰ卷 理18：圆锥（顶点 D，底面圆心 O，AE 为直径，△ABC 内接正三角形，P 在 DO 上）
+\begin{tikzpicture}[scale=1.0, font=\small]
+  \coordinate (D) at (0,3.3);
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-1.92,-0.22);
+  \coordinate (E) at (1.92,0.22);
+  \coordinate (B) at (1.35,-0.42);
+  \coordinate (C) at (0.55,0.52);
+  \coordinate (P) at (0,1.1);
+  % 底面椭圆：前半实、后半虚
+  \draw (-2,0) arc (180:360:2 and 0.6);
+  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
+  % 锥面轮廓
+  \draw (D) -- (-2,0);
+  \draw (D) -- (2,0);
+  % 中轴与内部连线
+  \draw[dashed] (D) -- (O);
+  \draw[dashed] (A) -- (E);
+  \draw[dashed] (A) -- (B) -- (C) -- cycle;
+  \draw[dashed] (P) -- (A)  (P) -- (B)  (P) -- (C);
+  \draw (D) -- (A);
+  \fill (O) circle (0.9pt);  \fill (P) circle (0.9pt);
+  \node[above] at (D) {$D$};
+  \node[below left] at (A) {$A$};
+  \node[below right, inner sep=1pt] at (B) {$B$};
+  \node[right, inner sep=2pt] at (E) {$E$};
+  \node[above, inner sep=2pt] at (C) {$C$};
+  \node[below right, inner sep=1pt] at (O) {$O$};
+  \node[left, inner sep=2.5pt] at (P) {$P$};
+\end{tikzpicture}

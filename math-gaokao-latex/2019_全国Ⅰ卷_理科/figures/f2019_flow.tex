@@ -1,0 +1,26 @@
+% 2019 全国Ⅰ卷 理8/文9：求连分数 1/(2+1/(2+1/2)) 的程序框图
+% 空白矩形为题目要求填入的位置（正确答案 A=1/(2+A)）
+\begin{tikzpicture}[font=\small, >=Stealth, node distance=7mm,
+  box/.style={draw, minimum height=1.9em, inner xsep=7pt},
+  term/.style={draw, rounded corners=7pt, minimum height=1.9em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.9em, inner xsep=2pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1.5pt}]
+  \node[term] (start) {开始};
+  \node[box, below=of start] (init) {$A=\dfrac12$};
+  \node[box, below=of init] (k1) {$k=1$};
+  \coordinate[below=4mm of k1] (merge);
+  \node[dec, below=2mm of merge] (cond) {$k\le2$};
+  \node[box, below=of cond, minimum width=5.6em] (blank) {\phantom{$A=\dfrac1{2+A}$}};
+  \node[box, below=of blank] (inc) {$k=k+1$};
+  \node[io, right=14mm of cond] (out) {输出 $A$};
+  \node[term, below=of out] (end) {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (k1);
+  \draw[->] (k1) -- (cond);
+  \draw[->] (cond) -- node[left]{是} (blank);
+  \draw[->] (blank) -- (inc);
+  \draw[->] (inc.west) -- ++(-8mm,0) |- (merge);
+  \draw[->] (cond) -- node[above]{否} (out);
+  \draw[->] (out) -- (end);
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+% 2017 全国Ⅰ卷 文8：y=sin2x/(1-cos x) 图象四选一（正确项 C）
+% 全部四个面板均由解析式精确绘制：C=g(x)、A=-g(x)、B=g(|x|)、D=-g(|x|)
+% （干扰项表达式为重绘构造，原卷为定性示意图）
+\begin{tikzpicture}[font=\footnotesize]
+\pgfplotsset{
+  panel/.style={width=4.6cm, height=3.8cm, axis lines=middle,
+    xmin=-3.6, xmax=3.6, ymin=-3.4, ymax=3.4,
+    xtick={-3.14159,1,3.14159}, xticklabels={$-\pi$,$1$,$\pi$},
+    ytick={1}, yticklabels={$1$},
+    xlabel={$x$}, ylabel={$y$},
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=south}}}
+  \begin{axis}[panel, at={(0,0)}, name=axA]
+    \addplot[domain=0.36:3.14159, samples=150, thick] {-sin(deg(2*x))/(1-cos(deg(x)))};
+    \addplot[domain=-3.14159:-0.36, samples=150, thick] {-sin(deg(2*x))/(1-cos(deg(x)))};
+    \node[below left] at (axis cs:0,0) {$O$};
+  \end{axis}
+  \node[below=0.5mm] at (axA.south) {(A)};
+  \begin{axis}[panel, at={(5.5cm,0)}, name=axB]
+    \addplot[domain=0.36:3.14159, samples=150, thick] {sin(deg(2*abs(x)))/(1-cos(deg(x)))};
+    \addplot[domain=-3.14159:-0.36, samples=150, thick] {sin(deg(2*abs(x)))/(1-cos(deg(x)))};
+    \node[below left] at (axis cs:0,0) {$O$};
+  \end{axis}
+  \node[below=0.5mm] at (axB.south) {(B)};
+  \begin{axis}[panel, at={(0,-4.9cm)}, name=axC]
+    \addplot[domain=0.36:3.14159, samples=150, thick] {sin(deg(2*x))/(1-cos(deg(x)))};
+    \addplot[domain=-3.14159:-0.36, samples=150, thick] {sin(deg(2*x))/(1-cos(deg(x)))};
+    \node[below left] at (axis cs:0,0) {$O$};
+  \end{axis}
+  \node[below=0.5mm] at (axC.south) {(C)};
+  \begin{axis}[panel, at={(5.5cm,-4.9cm)}, name=axD]
+    \addplot[domain=0.36:3.14159, samples=150, thick] {-sin(deg(2*abs(x)))/(1-cos(deg(x)))};
+    \addplot[domain=-3.14159:-0.36, samples=150, thick] {-sin(deg(2*abs(x)))/(1-cos(deg(x)))};
+    \node[below left] at (axis cs:0,0) {$O$};
+  \end{axis}
+  \node[below=0.5mm] at (axD.south) {(D)};
+\end{tikzpicture}

@@ -1,0 +1,88 @@
+% ============================================================
+% main.tex —— 高考数学真题集 2017–2026（全国 I 卷系）
+% 编译：xelatex（两遍），或直接运行 ./compile.sh
+% ============================================================
+\documentclass[oneside, openany, zihao=-4, fontset=mac]{ctexbook}
+% fontset=mac：macOS 下用 Songti SC / PingFang SC；
+% 在 Linux/Windows 编译请改为 fontset=fandol 或 fontset=windows
+
+\input{preamble}
+
+\begin{document}
+
+% ---------------- 扉页与前言 ----------------
+\frontmatter
+\begin{titlepage}
+  \centering
+  \vspace*{4cm}
+  {\zihao{1}\bfseries 高考数学真题集\par}
+  \vspace{1em}
+  {\zihao{3} 2017—2026 · 全国Ⅰ卷系\par}
+  \vspace{2em}
+  {\zihao{-4} 含试题、参考答案与逐题详细解析\par}
+  \vspace{6cm}
+  {\small 试题来源：deekur/gaokaomath（CC BY 4.0）\par
+   排版：XeLaTeX · 全部图形为 TikZ/PGF 矢量绘制\par}
+\end{titlepage}
+
+\chapter{前言与使用说明}
+
+\begin{gknotice}
+\textbf{解析归属声明}：本书全部解析由编者根据试题独立推导，\textbf{非官方标准答案}。
+若与官方发布版本不一致，以官方为准。
+\end{gknotice}
+
+\begin{gknotice}
+\textbf{2026 年卷为回忆版}：2026 年试题依据考生回忆整理，可能与正式卷存在出入。
+\end{gknotice}
+
+\subsection*{收录范围与卷种沿革}
+
+本书收录 2017—2026 十年间\textbf{湖南考区适用卷}（全国Ⅰ卷系）共 14 个卷种版本。
+十年间卷种经历两次断代：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+年份 & 卷种 & 结构 \\
+\midrule
+2017—2020 & 全国Ⅰ卷（文理分科） & 12 单选 + 4 填空 + 6 解答（含选做 2 选 1） \\
+2021—2023 & 新高考Ⅰ卷（文理合卷） & 8 单选 + 4 多选 + 4 填空 + 6 解答 \\
+2024—2026 & 新高考Ⅰ卷 → 全国 1 卷 & 8 单选 + 3 多选 + 3 填空 + 5 解答 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+2017—2020 年的旧结构含\textbf{现已取消}的选做题（第 22/23 题）与\textbf{已删除}的
+三视图、程序框图考点，这些题目仅作历史资料保留并逐题标注，适合按知识点抽题，
+不适合整套限时模拟；2024 年之后的试卷才是对标现行高考的真题。
+
+\subsection*{体例}
+
+每套试卷为一章，先完整呈现全部试题（不含答案），再给出参考答案与详细解析。
+解析部分每题标注回链页码，便于对照。方法提示以浅蓝框呈现，答案以浅绿底色标出。
+未收录的其他卷种（全国Ⅱ/Ⅲ卷、甲/乙卷、新高考Ⅱ卷）详见项目根目录
+\texttt{missing\_list.md}。
+
+\tableofcontents
+
+% ---------------- 正文：十四套试卷 ----------------
+\mainmatter
+
+% \gkpaper{标识}{章标题}{文件基名}
+\gkpaper{2017li}{2017 年·全国Ⅰ卷·理科}{2017_g1_li}
+\gkpaper{2017wen}{2017 年·全国Ⅰ卷·文科}{2017_g1_wen}
+\gkpaper{2018li}{2018 年·全国Ⅰ卷·理科}{2018_g1_li}
+\gkpaper{2018wen}{2018 年·全国Ⅰ卷·文科}{2018_g1_wen}
+\gkpaper{2019li}{2019 年·全国Ⅰ卷·理科}{2019_g1_li}
+\gkpaper{2019wen}{2019 年·全国Ⅰ卷·文科}{2019_g1_wen}
+\gkpaper{2020li}{2020 年·全国Ⅰ卷·理科}{2020_g1_li}
+\gkpaper{2020wen}{2020 年·全国Ⅰ卷·文科}{2020_g1_wen}
+\gkpaper{2021}{2021 年·新高考Ⅰ卷}{2021_xgk1}
+\gkpaper{2022}{2022 年·新高考Ⅰ卷}{2022_xgk1}
+\gkpaper{2023}{2023 年·新高考Ⅰ卷}{2023_xgk1}
+\gkpaper{2024}{2024 年·新高考Ⅰ卷}{2024_xgk1}
+\gkpaper{2025}{2025 年·全国 1 卷}{2025_g1}
+\gkpaper{2026}{2026 年·全国 1 卷（回忆版）}{2026_g1}
+
+\end{document}

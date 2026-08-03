@@ -1,0 +1,37 @@
+% 2019 全国Ⅰ卷 理18/文19：直四棱柱 ABCD-A1B1C1D1（底面菱形），
+% E、M、N 分别为 BC、BB1、A1D 的中点
+\begin{tikzpicture}[scale=0.92, font=\small]
+  % 底面菱形（斜二测示意）：A 前左、B 前右、C 右后、D 左后
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.1,-0.25);
+  \coordinate (C) at (3.15,0.6);
+  \coordinate (D) at (1.05,0.85);
+  \coordinate (A1) at (0,3.0);
+  \coordinate (B1) at (2.1,2.75);
+  \coordinate (C1) at (3.15,3.6);
+  \coordinate (D1) at (1.05,3.85);
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \coordinate (M) at ($(B)!0.5!(B1)$);
+  \coordinate (N) at ($(A1)!0.5!(D)$);
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (C) -- (D) -- (A);
+  \draw (A) -- (A1)  (B) -- (B1)  (C) -- (C1);
+  \draw[dashed] (D) -- (D1);
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+  \draw[dashed] (A1) -- (D) ;
+  \draw[dashed] (N) -- (M);
+  \draw[dashed] (D) -- (E);
+  \draw (C1) -- (E);
+  \draw[dashed] (C1) -- (D);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right, inner sep=0.5pt] at (D) {$D$};
+  \node[above left, inner sep=1pt] at (A1) {$A_1$};
+  \node[below right, inner sep=1pt] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+  \node[below right, inner sep=1pt] at (E) {$E$};
+  \node[right, inner sep=2pt] at (M) {$M$};
+  \node[left, inner sep=2.5pt] at (N) {$N$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+% 2026 全国 1 卷 15（回忆版）：直三棱柱 ABC-A1B1C1（∠ACB=90°，AC=BC），
+% D、E 分别为 AB、AC1 的中点
+\begin{tikzpicture}[scale=1.0, font=\small]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (2.6,0);
+  \coordinate (C)  at (1.3,0.78);
+  \coordinate (A1) at (0,1.9);
+  \coordinate (B1) at (2.6,1.9);
+  \coordinate (C1) at (1.3,2.68);
+  \coordinate (D)  at (1.3,0);
+  \coordinate (E)  at ($(A)!0.5!(C1)$);
+  \draw (A) -- (B) -- (B1) -- (A1) -- cycle;
+  \draw (A1) -- (C1) -- (B1);
+  \draw[dashed] (A) -- (C) -- (B);
+  \draw[dashed] (C) -- (C1);
+  \draw[dashed] (A) -- (C1);
+  \draw[dashed] (C1) -- (D);
+  \draw[dashed] (E) -- (D)  (C) -- (D);
+  \fill (D) circle (0.9pt); \fill (E) circle (0.9pt);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right, inner sep=2.5pt] at (C) {$C$};
+  \node[left, inner sep=2pt] at (A1) {$A_1$};
+  \node[right, inner sep=2pt] at (B1) {$B_1$};
+  \node[above] at (C1) {$C_1$};
+  \node[below] at (D) {$D$};
+  \node[above left, inner sep=1pt] at (E) {$E$};
+\end{tikzpicture}

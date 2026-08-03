@@ -1,0 +1,23 @@
+% 2020 全国Ⅰ卷 文9：累加程序框图（输出 n=17）
+\begin{tikzpicture}[font=\small, >=Stealth, node distance=7mm,
+  box/.style={draw, minimum height=1.9em, inner xsep=7pt},
+  term/.style={draw, rounded corners=7pt, minimum height=1.9em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.9em, inner xsep=2pt},
+  dec/.style={draw, diamond, aspect=2.4, inner sep=1.5pt}]
+  \node[term] (start) {开始};
+  \node[box, below=of start] (init) {$n=1$，$S=0$};
+  \coordinate[below=4mm of init] (merge);
+  \node[box, below=2mm of merge] (acc) {$S=S+n$};
+  \node[dec, below=of acc] (cond) {$S\le100$};
+  \node[box, left=12mm of acc, minimum width=5.2em] (inc) {$n=n+2$};
+  \node[io, below=of cond] (out) {输出 $n$};
+  \node[term, below=of out] (end) {结束};
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (acc);
+  \draw[->] (acc) -- (cond);
+  \draw[->] (cond) -- node[right]{否} (out);
+  \draw[->] (out) -- (end);
+  \draw[->] (cond) -| node[below, pos=0.18]{是} (inc);
+  \draw[->] (inc) |- (merge);
+\end{tikzpicture}

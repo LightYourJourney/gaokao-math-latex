@@ -1,0 +1,19 @@
+% 2020 全国Ⅰ卷 理5：发芽率-温度散点图（对数饱和形态，数据点按原图形态示意布点）
+\begin{tikzpicture}
+\begin{axis}[width=8.8cm, height=5cm, font=\small,
+  xlabel={温度$/^{\circ}\mathrm{C}$}, ylabel={发芽率},
+  xlabel style={at={(1,0)}, anchor=north west},
+  ylabel style={at={(0,1)}, anchor=south, rotate=-90},
+  xmin=0, xmax=44, ymin=0, ymax=1.08,
+  xtick={0,10,20,30,40},
+  ytick={0.2,0.4,0.6,0.8,1.0},
+  yticklabels={$20\%$,$40\%$,$60\%$,$80\%$,$100\%$},
+  axis lines=left, axis line style={-Stealth}]
+  \addplot[only marks, mark=square*, mark size=1.3pt] coordinates {
+    (10,0.36) (11.5,0.42) (13,0.50) (14.5,0.55) (16,0.58)
+    (17.5,0.62) (19,0.64) (20.5,0.68) (22,0.69) (23.5,0.72)
+    (25,0.73) (26.5,0.76) (28,0.76) (29.5,0.79) (31,0.80)
+    (33,0.82) (35,0.83) (37,0.86) (39,0.86) (40.5,0.88)};
+  \addplot[domain=9:41, samples=80, smooth] {0.35*ln(x)-0.45};
+\end{axis}
+\end{tikzpicture}

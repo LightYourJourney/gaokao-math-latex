@@ -1,0 +1,15 @@
+% 2018 全国Ⅰ卷 文19：供作图用的空白频率分布直方图坐标网格
+\begin{tikzpicture}
+\begin{axis}[width=9.5cm, height=8cm, font=\small,
+  xlabel={日用水量/$\mathrm{m}^{3}$}, ylabel={频率/组距},
+  xlabel style={at={(1,0)}, anchor=west, font=\small},
+  ylabel style={at={(0,1)}, anchor=south, rotate=-90, font=\small},
+  xmin=0, xmax=0.65, ymin=0, ymax=3.5,
+  xtick={0,0.1,...,0.6},
+  ytick={0.2,0.4,...,3.4},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=1},
+  grid=both, grid style={dashed, gray!45},
+  axis lines=left, axis line style={-Stealth}]
+\end{axis}
+\end{tikzpicture}

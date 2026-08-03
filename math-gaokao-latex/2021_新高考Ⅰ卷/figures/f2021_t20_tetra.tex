@@ -1,0 +1,21 @@
+% 2021 新高考Ⅰ卷 20：三棱锥 A-BCD（平面 ABD⊥平面 BCD，O 为 BD 中点，E 在 AD 上）
+\begin{tikzpicture}[scale=1.0, font=\small]
+  \coordinate (A) at (2.1,2.4);
+  \coordinate (B) at (0,0.75);
+  \coordinate (C) at (2.35,0);
+  \coordinate (D) at (4.35,0.8);
+  \coordinate (O) at ($(B)!0.5!(D)$);
+  \coordinate (E) at ($(A)!0.3333!(D)$);
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D)  (C) -- (D);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (A) -- (O)  (C) -- (O);
+  \draw (C) -- (E);
+  \fill (O) circle (0.9pt);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above left, inner sep=0.5pt] at (O) {$O$};
+  \node[above right, inner sep=1pt] at (E) {$E$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% 2018 全国Ⅰ卷 理10：希波克拉底月牙
+% 直角三角形 ABC（直角在 A），三个半圆直径分别为 BC、AB、AC
+% 填充次序：先黑填两个小半圆，再白填大半圆（盖掉重叠弓形），最后斜纹填三角形
+\begin{tikzpicture}[scale=0.9, font=\small]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (4,0);
+  \coordinate (A) at (0.8,1.6);   % 在以 BC 为直径的圆上，∠BAC=90°
+  % AB 为直径的半圆（外侧）：圆心 (0.4,0.8)，半径 √3.2/2
+  \fill[black] (B) arc[start angle=243.435, delta angle=180, radius=0.894427];
+  % AC 为直径的半圆（外侧）：圆心 (2.4,0.8)，半径 √12.8/2
+  \fill[black] (A) arc[start angle=153.435, delta angle=180, radius=1.788854];
+  % BC 为直径的大半圆（上侧）刷白
+  \fill[white] (C) arc[start angle=0, delta angle=180, radius=2];
+  % 三角形区域 I：斜线纹理
+  \fill[pattern=north east lines] (A) -- (B) -- (C) -- cycle;
+  % 描边
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (B) arc[start angle=243.435, delta angle=180, radius=0.894427];
+  \draw (A) arc[start angle=153.435, delta angle=180, radius=1.788854];
+  \draw (C) arc[start angle=0, delta angle=180, radius=2];
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+\end{tikzpicture}
