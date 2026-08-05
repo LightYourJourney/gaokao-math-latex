@@ -347,6 +347,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     existing = _load_json(destination)
     expected = merge_inventory(existing, fresh)
     _validate_expectations(expected, arguments.expect_total, arguments.expect_root)
+    validate_manifest_semantics(expected)
     raw = destination.read_bytes()
     expected_bytes = canonical_json(expected).encode("utf-8")
     if raw != expected_bytes:

@@ -248,6 +248,73 @@ class SourceManifestTests(unittest.TestCase):
             )
             self.assertEqual(usage_error.returncode, 2)
 
+    def test_inventory_check_rejects_canonical_manifest_with_invalid_relationship(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "upstream"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            subprocess.run(
+                ["git", "-C", str(repo), "config", "user.email", "t@example.invalid"],
+                check=True,
+            )
+            subprocess.run(
+                ["git", "-C", str(repo), "config", "user.name", "Test"],
+                check=True,
+            )
+            (repo / "普通高考" / "2021").mkdir(parents=True)
+            (repo / "普通高考" / "2021" / "a.pdf").write_bytes(b"pdf-a")
+            subprocess.run(["git", "-C", str(repo), "add", "."], check=True)
+            subprocess.run(["git", "-C", str(repo), "commit", "-qm", "seed"], check=True)
+            commit = subprocess.check_output(
+                ["git", "-C", str(repo), "rev-parse", "HEAD"], text=True
+            ).strip()
+            subprocess.run(
+                [
+                    "git", "-C", str(repo), "remote", "add", "origin",
+                    "https://example.invalid/upstream",
+                ],
+                check=True,
+            )
+
+            output = Path(tmp) / "source-manifest.json"
+            script = ROOT / "tools" / "source_manifest.py"
+            common = [
+                "inventory", "--repo", str(repo), "--commit", commit,
+                "--expect-total", "1", "--expect-root", "regular=1",
+                "--expect-root", "spring=0",
+            ]
+            created = subprocess.run(
+                [sys.executable, str(script), *common, "--output", str(output)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            self.assertEqual(created.returncode, 0, created.stderr)
+
+            manifest = json.loads(output.read_text(encoding="utf-8"))
+            source = manifest["sources"][0]
+            source.update({
+                "source_state": "non_paper",
+                "paper_relation": "canonical",
+                "paper_id": "paper-1",
+            })
+            manifest["papers"] = [{
+                "paper_id": "paper-1",
+                "source_ids": [source["source_id"]],
+            }]
+            output.write_text(canonical_json(manifest), encoding="utf-8")
+
+            checked = subprocess.run(
+                [sys.executable, str(script), *common, "--check", str(output)],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+            self.assertNotEqual(
+                checked.returncode, 0, "invalid canonical manifest was accepted"
+            )
+            self.assertIn("non_paper", checked.stderr)
+
     def test_cli_requires_exactly_one_destination_and_unique_root_expectations(self):
         stderr = io.StringIO()
         cases = [
