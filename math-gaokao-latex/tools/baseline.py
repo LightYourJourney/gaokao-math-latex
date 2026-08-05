@@ -1,0 +1,513 @@
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import subprocess
+from pathlib import Path
+from typing import Any, Dict, List, Mapping, Optional, Sequence
+
+from manifest import atomic_write_json, file_sha256
+
+EDITIONS = ("试题版", "解析版", "简答版", "印刷版")
+CONTENT_FILES = ("questions.tex", "answers.tex", "answers_short.tex")
+PLAN_PATH = "docs/superpowers/plans/2026-08-04-高考数学LaTeX阶段0实施计划.md"
+_BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
+_PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
+_QUESTION_ID_RE = re.compile(r"\\gkti\{([0-9]+)\}")
+_OVERFULL_RE = re.compile(r"Overfull \\hbox \(([0-9.]+)pt too wide\)(.*)")
+_UNDERFULL_RE = re.compile(r"Underfull \\hbox \(badness ([0-9]+)\)(.*)")
+_OUTPUT_PAGES_RE = re.compile(r"Output written on .*?\(([0-9]+) pages?[,)]")
+_SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+
+
+def _run_text(arguments: Sequence[str], **kwargs: Any) -> str:
+    return subprocess.check_output(list(arguments), text=True, **kwargs).strip()
+
+
+def _repository_root(project_root: Path) -> Path:
+    raw = _run_text([
+        "git", "-C", str(project_root), "rev-parse", "--show-toplevel"
+    ])
+    return Path(raw).resolve()
+
+
+def _relative(path: Path, root: Path) -> str:
+    try:
+        return path.resolve().relative_to(root.resolve()).as_posix()
+    except ValueError as error:
+        raise ValueError(f"路径不在基线项目内：{path}") from error
+
+
+def _record_tree_sha256(files: Sequence[Mapping[str, str]]) -> str:
+    tree_payload = json.dumps(
+        files,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+        allow_nan=False,
+    ).encode("utf-8")
+    return hashlib.sha256(tree_payload).hexdigest()
+
+
+def _tracked_build_inputs(repo: Path, project_root: Path) -> Dict[str, Any]:
+    project_relative = _relative(project_root, repo)
+    raw = subprocess.check_output([
+        "git", "-C", str(repo), "ls-tree", "-r", "-z", "--name-only",
+        "HEAD", "--", project_relative,
+    ])
+    records = raw.split(b"\0")
+    files = []
+    for encoded in records:
+        if not encoded:
+            continue
+        try:
+            relative = encoded.decode("utf-8")
+        except UnicodeDecodeError as error:
+            raise ValueError("tracked build input 路径不是 UTF-8") from error
+        path = repo / relative
+        if path.suffix not in _BUILD_INPUT_SUFFIXES:
+            continue
+        if not path.is_file():
+            raise ValueError(f"tracked build input 缺失或不是普通文件：{relative}")
+        files.append({"path": relative, "sha256": file_sha256(path)})
+    files.sort(key=lambda item: item["path"])
+    if files:
+        completed = subprocess.run(
+            [
+                "git", "-C", str(repo), "diff", "--quiet", "HEAD", "--",
+                *[item["path"] for item in files],
+            ],
+            check=False,
+        )
+        if completed.returncode == 1:
+            raise ValueError("legacy build input 工作树/索引与 HEAD 不一致")
+        if completed.returncode != 0:
+            raise subprocess.CalledProcessError(completed.returncode, completed.args)
+    return {
+        "files": files,
+        "tree_sha256": _record_tree_sha256(files),
+    }
+
+
+def _pdf_pages(path: Path) -> int:
+    try:
+        output = _run_text(["pdfinfo", str(path)])
+    except (OSError, subprocess.CalledProcessError) as error:
+        raise ValueError(f"无法读取 PDF 页数：{path}: {error}") from error
+    for line in output.splitlines():
+        if line.startswith("Pages:"):
+            raw = line.split(":", 1)[1].strip()
+            try:
+                pages = int(raw)
+            except ValueError as error:
+                raise ValueError(f"PDF Pages 非整数：{path}: {raw}") from error
+            if pages <= 0:
+                raise ValueError(f"PDF 页数必须为正数：{path}")
+            return pages
+    raise ValueError(f"pdfinfo 缺少 Pages：{path}")
+
+
+def _log_warnings(path: Path, expected_pages: int) -> Dict[str, Any]:
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+    except OSError as error:
+        raise ValueError(f"无法读取 XeLaTeX 日志：{path}: {error}") from error
+    output_pages = [int(value) for value in _OUTPUT_PAGES_RE.findall(raw)]
+    if not output_pages or output_pages[-1] != expected_pages:
+        raise ValueError(
+            f"PDF/log 页数不一致：{path}: PDF={expected_pages}, log={output_pages[-1:] or 'missing'}"
+        )
+
+    overfull = []
+    underfull = []
+    latex_warnings = []
+    for number, line in enumerate(raw.splitlines(), start=1):
+        overfull_match = _OVERFULL_RE.search(line)
+        if overfull_match is not None:
+            overfull.append({
+                "log_line": number,
+                "width_pt": overfull_match.group(1),
+                "context": overfull_match.group(2).strip(),
+                "message": line,
+            })
+        underfull_match = _UNDERFULL_RE.search(line)
+        if underfull_match is not None:
+            underfull.append({
+                "log_line": number,
+                "badness": int(underfull_match.group(1)),
+                "context": underfull_match.group(2).strip(),
+                "message": line,
+            })
+        if "Warning:" in line and (
+            line.startswith("LaTeX Warning:")
+            or line.startswith("Package ")
+            or line.startswith("Class ")
+        ):
+            latex_warnings.append({"log_line": number, "message": line})
+
+    hard_errors = sum(1 for line in raw.splitlines() if line.startswith("!"))
+    missing_characters = raw.count("Missing character:")
+    undefined_references = sum(
+        1
+        for line in raw.splitlines()
+        if (
+            re.search(r"Reference .* undefined", line) is not None
+            or "There were undefined references" in line
+        )
+    )
+    return {
+        "hard_errors": hard_errors,
+        "missing_characters": missing_characters,
+        "undefined_references": undefined_references,
+        "overfull": overfull,
+        "underfull": underfull,
+        "latex_warnings": latex_warnings,
+    }
+
+
+def _shell_record(project_root: Path, paper_dir: Path, edition: str) -> Dict[str, Any]:
+    path = paper_dir / f"{edition}.tex"
+    if not path.is_file():
+        raise ValueError(f"缺少 legacy 壳：{path}")
+    raw = path.read_text(encoding="utf-8")
+    matches = _PAPER_ID_RE.findall(raw)
+    if len(matches) != 1:
+        raise ValueError(f"legacy 壳必须恰有一个 \\gkpaperid：{path}")
+    return {
+        "path": _relative(path, project_root),
+        "edition": edition,
+        "paper_id": matches[0],
+        "sha256": file_sha256(path),
+    }
+
+
+def _target_record(project_root: Path, paper_dir: Path, edition: str) -> Dict[str, Any]:
+    pdf = paper_dir / f"{edition}.pdf"
+    log = paper_dir / f"{edition}.log"
+    if not pdf.is_file() or not log.is_file():
+        raise ValueError(f"缺少当前 worktree 重建的 PDF/log：{paper_dir.name}/{edition}")
+    pages = _pdf_pages(pdf)
+    return {
+        "path": _relative(pdf, project_root),
+        "edition": edition,
+        "pages": pages,
+        "pdf_sha256": file_sha256(pdf),
+        "log_path": _relative(log, project_root),
+        "log_sha256": file_sha256(log),
+        "warnings": _log_warnings(log, pages),
+    }
+
+
+def _paper_record(project_root: Path, metadata: Mapping[str, Any]) -> Dict[str, Any]:
+    project_dir = metadata.get("dir")
+    legacy_id = metadata.get("id")
+    if not isinstance(project_dir, str) or not isinstance(legacy_id, str):
+        raise ValueError("index paper 缺少 dir/id")
+    paper_dir = project_root / project_dir
+    if not paper_dir.is_dir():
+        raise ValueError(f"index paper 目录不存在：{project_dir}")
+
+    content_sha256 = {}
+    for name in CONTENT_FILES:
+        path = paper_dir / name
+        if not path.is_file():
+            raise ValueError(f"缺少共享内容文件：{path}")
+        content_sha256[name] = file_sha256(path)
+    questions = (paper_dir / "questions.tex").read_text(encoding="utf-8")
+    question_ids = [int(value) for value in _QUESTION_ID_RE.findall(questions)]
+    expected_count = metadata.get("questions")
+    if question_ids != list(range(1, expected_count + 1)):
+        raise ValueError(f"题号序列与 index 不一致：{project_dir}")
+
+    figure_dir = paper_dir / "figures"
+    figures = []
+    if figure_dir.is_dir():
+        for path in sorted(figure_dir.iterdir(), key=lambda item: item.name):
+            if path.is_file():
+                figures.append({
+                    "path": _relative(path, project_root),
+                    "sha256": file_sha256(path),
+                })
+    shells = [_shell_record(project_root, paper_dir, edition) for edition in EDITIONS]
+    if any(shell["paper_id"] != legacy_id for shell in shells):
+        raise ValueError(f"legacy 壳 paper_id 与 index.id 不一致：{project_dir}")
+    targets = [_target_record(project_root, paper_dir, edition) for edition in EDITIONS]
+    return {
+        "project_dir": project_dir,
+        "legacy_id": legacy_id,
+        "question_ids": question_ids,
+        "content_sha256": content_sha256,
+        "figures": figures,
+        "shells": shells,
+        "targets": targets,
+    }
+
+
+def collect_legacy_baseline(project_root: Path) -> Dict[str, Any]:
+    project_root = Path(project_root).resolve()
+    index_path = project_root / "index.json"
+    if not index_path.is_file():
+        raise ValueError(f"legacy 项目缺少 index.json：{project_root}")
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    except (UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError(f"legacy index.json 无效：{error}") from error
+    papers_metadata = index.get("papers")
+    if not isinstance(papers_metadata, list) or any(
+        not isinstance(paper, Mapping) for paper in papers_metadata
+    ):
+        raise ValueError("legacy index papers 必须是对象数组")
+    legacy_ids = [paper.get("id") for paper in papers_metadata]
+    if len(legacy_ids) != 21 or len(legacy_ids) != len(set(legacy_ids)):
+        raise ValueError("legacy index 必须包含 21 个唯一旧 ID")
+
+    repo = _repository_root(project_root)
+    plan = repo / PLAN_PATH
+    compile_script = project_root / "compile.sh"
+    if not plan.is_file() or not compile_script.is_file():
+        raise ValueError("缺少 phase 0 计划或 legacy compile.sh")
+    papers = [_paper_record(project_root, metadata) for metadata in papers_metadata]
+    targets = [target for paper in papers for target in paper["targets"]]
+    overfull_count = sum(
+        len(target["warnings"]["overfull"]) for target in targets
+    )
+    baseline = {
+        "baseline_version": 1,
+        "kind": "legacy",
+        "repository": {
+            "head": _run_text(["git", "-C", str(repo), "rev-parse", "HEAD"]),
+            "plan_path": PLAN_PATH,
+            "plan_sha256": file_sha256(plan),
+            "compile_path": _relative(compile_script, repo),
+            "compile_sha256": file_sha256(compile_script),
+        },
+        "build_inputs": _tracked_build_inputs(repo, project_root),
+        "index": {
+            "path": "index.json",
+            "sha256": file_sha256(index_path),
+            "paper_count": len(papers_metadata),
+            "legacy_ids": legacy_ids,
+        },
+        "papers": papers,
+        "summary": {
+            "paper_count": len(papers),
+            "target_count": len(targets),
+            "total_pages": sum(target["pages"] for target in targets),
+            "hard_errors": sum(
+                target["warnings"]["hard_errors"] for target in targets
+            ),
+            "missing_characters": sum(
+                target["warnings"]["missing_characters"] for target in targets
+            ),
+            "undefined_references": sum(
+                target["warnings"]["undefined_references"] for target in targets
+            ),
+            "overfull_count": overfull_count,
+        },
+    }
+    validate_legacy_baseline(baseline)
+    return baseline
+
+
+def validate_legacy_baseline(baseline: Mapping[str, Any]) -> None:
+    if not isinstance(baseline, Mapping):
+        raise ValueError("legacy baseline 顶层必须是对象")
+    summary = baseline.get("summary")
+    papers = baseline.get("papers")
+    if not isinstance(summary, Mapping) or not isinstance(papers, list):
+        raise ValueError("legacy baseline 缺少 summary/papers")
+    exact = {
+        "paper_count": 21,
+        "target_count": 84,
+        "total_pages": 1336,
+        "hard_errors": 0,
+        "missing_characters": 0,
+        "undefined_references": 0,
+        "overfull_count": 1,
+    }
+    for field, expected in exact.items():
+        if summary.get(field) != expected:
+            raise ValueError(
+                f"legacy baseline {field} 必须为 {expected}，实际 {summary.get(field)}"
+            )
+    if len(papers) != 21:
+        raise ValueError("legacy baseline 必须记录 21 套试卷")
+    legacy_ids = []
+    shells = []
+    targets = []
+    for paper in papers:
+        if not isinstance(paper, Mapping):
+            raise ValueError("legacy baseline paper 必须是对象")
+        legacy_id = paper.get("legacy_id")
+        if not isinstance(legacy_id, str) or not legacy_id:
+            raise ValueError("legacy baseline paper 缺少 legacy_id")
+        legacy_ids.append(legacy_id)
+        project_dir = paper.get("project_dir")
+        if not isinstance(project_dir, str) or not project_dir:
+            raise ValueError(f"{legacy_id}: project_dir 无效")
+        question_ids = paper.get("question_ids")
+        if (
+            not isinstance(question_ids, list)
+            or not question_ids
+            or question_ids != list(range(1, len(question_ids) + 1))
+        ):
+            raise ValueError(f"{legacy_id}: 题号序列无效")
+        content_sha256 = paper.get("content_sha256")
+        if (
+            not isinstance(content_sha256, Mapping)
+            or set(content_sha256) != set(CONTENT_FILES)
+            or any(
+                _SHA256_RE.fullmatch(str(content_sha256.get(name))) is None
+                for name in CONTENT_FILES
+            )
+        ):
+            raise ValueError(f"{legacy_id}: 共享内容 SHA-256 无效")
+        figures = paper.get("figures")
+        if not isinstance(figures, list) or any(
+            not isinstance(figure, Mapping)
+            or not isinstance(figure.get("path"), str)
+            or not figure["path"].startswith(project_dir + "/figures/")
+            or _SHA256_RE.fullmatch(str(figure.get("sha256"))) is None
+            for figure in figures
+        ):
+            raise ValueError(f"{legacy_id}: figure tree 无效")
+        figure_paths = [figure["path"] for figure in figures]
+        if figure_paths != sorted(figure_paths) or len(figure_paths) != len(set(figure_paths)):
+            raise ValueError(f"{legacy_id}: figure tree 路径必须唯一排序")
+
+        paper_shells = paper.get("shells")
+        paper_targets = paper.get("targets")
+        if not isinstance(paper_shells, list) or len(paper_shells) != 4:
+            raise ValueError(f"{legacy_id}: legacy 壳必须恰有四份")
+        if not isinstance(paper_targets, list) or len(paper_targets) != 4:
+            raise ValueError(f"{legacy_id}: PDF/log 目标必须恰有四份")
+        if any(not isinstance(item, Mapping) for item in paper_shells + paper_targets):
+            raise ValueError(f"{legacy_id}: 壳或目标记录必须是对象")
+        shell_editions = {shell.get("edition") for shell in paper_shells}
+        target_editions = {target.get("edition") for target in paper_targets}
+        if shell_editions != set(EDITIONS) or target_editions != set(EDITIONS):
+            raise ValueError(f"{legacy_id}: 壳或目标版本集合不完整")
+        if any(shell.get("paper_id") != legacy_id for shell in paper_shells):
+            raise ValueError(f"{legacy_id}: 壳 paper_id 漂移")
+        if any(
+            shell.get("path") != f"{project_dir}/{shell.get('edition')}.tex"
+            or _SHA256_RE.fullmatch(str(shell.get("sha256"))) is None
+            for shell in paper_shells
+        ):
+            raise ValueError(f"{legacy_id}: 壳路径或 SHA-256 无效")
+        if any(
+            target.get("path") != f"{project_dir}/{target.get('edition')}.pdf"
+            or target.get("log_path") != f"{project_dir}/{target.get('edition')}.log"
+            for target in paper_targets
+        ):
+            raise ValueError(f"{legacy_id}: PDF/log 目标路径无效")
+        shells.extend(paper_shells)
+        targets.extend(paper_targets)
+    if len(legacy_ids) != len(set(legacy_ids)):
+        raise ValueError("legacy baseline 旧 ID 不唯一")
+    index = baseline.get("index")
+    if not isinstance(index, Mapping) or index.get("legacy_ids") != legacy_ids:
+        raise ValueError("legacy baseline index 旧 ID 与 paper 顺序不一致")
+    if len(shells) != 84 or len(targets) != 84:
+        raise ValueError("legacy baseline 必须记录 84 个壳和 84 个 PDF/log 目标")
+    if any(
+        isinstance(target.get("pages"), bool)
+        or not isinstance(target.get("pages"), int)
+        or target["pages"] <= 0
+        or _SHA256_RE.fullmatch(str(target.get("pdf_sha256"))) is None
+        or _SHA256_RE.fullmatch(str(target.get("log_sha256"))) is None
+        or not isinstance(target.get("warnings"), Mapping)
+        for target in targets
+    ):
+        raise ValueError("legacy baseline PDF/log 目标记录无效")
+    if sum(target["pages"] for target in targets) != 1336:
+        raise ValueError("legacy baseline 目标页数之和必须为 1336")
+    derived_warning_summary = {
+        "hard_errors": sum(
+            target["warnings"].get("hard_errors", -1) for target in targets
+        ),
+        "missing_characters": sum(
+            target["warnings"].get("missing_characters", -1) for target in targets
+        ),
+        "undefined_references": sum(
+            target["warnings"].get("undefined_references", -1) for target in targets
+        ),
+        "overfull_count": sum(
+            len(target["warnings"].get("overfull", [])) for target in targets
+        ),
+    }
+    if any(summary.get(key) != value for key, value in derived_warning_summary.items()):
+        raise ValueError("legacy baseline warning summary 与目标记录不一致")
+
+    build_inputs = baseline.get("build_inputs")
+    if not isinstance(build_inputs, Mapping):
+        raise ValueError("legacy baseline 缺少 build_inputs")
+    files = build_inputs.get("files")
+    if not isinstance(files, list) or not files:
+        raise ValueError("legacy baseline build input files 必须是非空数组")
+    paths = [item.get("path") for item in files if isinstance(item, Mapping)]
+    if len(paths) != len(files) or paths != sorted(paths) or len(paths) != len(set(paths)):
+        raise ValueError("legacy baseline build input 路径必须唯一排序")
+    if any(
+        not isinstance(item.get("path"), str)
+        or Path(item["path"]).suffix not in _BUILD_INPUT_SUFFIXES
+        or _SHA256_RE.fullmatch(str(item.get("sha256"))) is None
+        for item in files
+    ):
+        raise ValueError("legacy baseline build input 记录无效")
+    if build_inputs.get("tree_sha256") != _record_tree_sha256(files):
+        raise ValueError("legacy baseline build input tree SHA-256 不匹配")
+    overfull = [
+        (target.get("path"), warning)
+        for target in targets
+        for warning in target.get("warnings", {}).get("overfull", [])
+    ]
+    if len(overfull) != 1:
+        raise ValueError("legacy baseline 必须只有一条 Overfull")
+    path, warning = overfull[0]
+    if path != "2025_全国2卷/印刷版.pdf" or warning.get("width_pt") != "0.4588":
+        raise ValueError("legacy baseline 唯一 Overfull 必须是 2025 全国2 印刷版 0.4588pt")
+
+
+def _load_baseline(path: Path) -> Mapping[str, Any]:
+    try:
+        value = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError(f"无法读取 legacy baseline：{path}: {error}") from error
+    if not isinstance(value, Mapping):
+        raise ValueError("legacy baseline 顶层必须是对象")
+    return value
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="冻结 legacy LaTeX 构建基线")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    write = subparsers.add_parser("write-legacy")
+    write.add_argument("--project-root", required=True, type=Path)
+    write.add_argument("--output", required=True, type=Path)
+    check = subparsers.add_parser("check-legacy")
+    check.add_argument("--baseline", required=True, type=Path)
+    return parser
+
+
+def main(argv: Optional[Sequence[str]] = None) -> int:
+    arguments = _parser().parse_args(argv)
+    if arguments.command == "write-legacy":
+        atomic_write_json(
+            arguments.output,
+            collect_legacy_baseline(arguments.project_root),
+        )
+        return 0
+    validate_legacy_baseline(_load_baseline(arguments.baseline))
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (OSError, ValueError, subprocess.CalledProcessError) as error:
+        print(f"error: {error}", file=os.sys.stderr)
+        raise SystemExit(1)
