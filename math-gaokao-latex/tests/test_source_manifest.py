@@ -132,6 +132,41 @@ class SourceManifestTests(unittest.TestCase):
         self.assertIsNot(merged, old)
         self.assertIsNot(merged["sources"][0], old["sources"][0])
 
+    def test_merge_preserves_unknown_nested_upstream_metadata(self):
+        old = build_inventory(ENTRIES, "u", "c")
+        old["upstream"]["future_metadata"] = {
+            "mirrors": [{"url": "https://mirror.invalid/upstream"}],
+        }
+        merged = merge_inventory(old, build_inventory(ENTRIES, "u", "c"))
+        self.assertEqual(
+            merged["upstream"]["future_metadata"],
+            old["upstream"]["future_metadata"],
+        )
+        self.assertIsNot(
+            merged["upstream"]["future_metadata"],
+            old["upstream"]["future_metadata"],
+        )
+
+    def test_merge_preserves_unknown_nested_inventory_metadata(self):
+        old = build_inventory(ENTRIES, "u", "c")
+        old["inventory"]["future_metadata"] = {
+            "last_scan": {"worker": "inventory-v2"},
+        }
+        fresh = build_inventory(ENTRIES, "u", "c")
+        merged = merge_inventory(old, fresh)
+        self.assertEqual(
+            merged["inventory"]["future_metadata"],
+            old["inventory"]["future_metadata"],
+        )
+        self.assertIsNot(
+            merged["inventory"]["future_metadata"],
+            old["inventory"]["future_metadata"],
+        )
+        self.assertEqual(merged["inventory"]["total_sources"], 1)
+        self.assertEqual(
+            merged["inventory"]["root_counts"], fresh["inventory"]["root_counts"]
+        )
+
     def test_merge_refreshes_only_owned_fields_and_counts(self):
         old = build_inventory(ENTRIES, "u", "c")
         old["inventory"] = {"total_sources": 9, "root_counts": {"regular": 9}}

@@ -209,9 +209,21 @@ def merge_inventory(
         if old.get("git_blob_oid") != new.get("git_blob_oid"):
             raise ValueError(f"来源 blob OID 变化：{identifier}")
 
+    new_inventory = fresh.get("inventory")
+    if not isinstance(new_inventory, Mapping):
+        raise ValueError("fresh manifest 缺少 inventory")
+
     merged = copy.deepcopy(dict(existing))
-    merged["upstream"] = copy.deepcopy(dict(new_upstream))
-    merged["inventory"] = copy.deepcopy(fresh.get("inventory"))
+    merged_upstream = merged.get("upstream")
+    merged_inventory = merged.get("inventory")
+    if not isinstance(merged_upstream, MutableMapping):
+        raise ValueError("existing manifest 的 upstream 必须是对象")
+    if not isinstance(merged_inventory, MutableMapping):
+        raise ValueError("existing manifest 的 inventory 必须是对象")
+    for field in ("url", "commit", "scoped_roots"):
+        merged_upstream[field] = copy.deepcopy(new_upstream[field])
+    for field in ("total_sources", "root_counts"):
+        merged_inventory[field] = copy.deepcopy(new_inventory[field])
     merged_sources = merged.get("sources")
     if not isinstance(merged_sources, list):
         raise ValueError("existing manifest 的 sources 必须是数组")
