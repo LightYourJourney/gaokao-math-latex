@@ -11,13 +11,65 @@
         }
       ]
     },
+    "artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "git_oid_verified": {
+          "const": true,
+          "type": "boolean"
+        },
+        "header_is_pdf": {
+          "const": true,
+          "type": "boolean"
+        },
+        "media_type": {
+          "const": "application/pdf",
+          "type": "string"
+        },
+        "page_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "pdf_check": {
+          "const": "passed",
+          "type": "string"
+        },
+        "pdfinfo_version": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "size_bytes": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "size_bytes",
+        "sha256",
+        "page_count",
+        "media_type",
+        "header_is_pdf",
+        "git_oid_verified",
+        "pdf_check",
+        "pdfinfo_version"
+      ],
+      "type": "object"
+    },
     "source": {
       "additionalProperties": false,
       "properties": {
         "artifact": {
-          "type": [
-            "object",
-            "null"
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/artifact"
+            }
           ]
         },
         "exam_type": {

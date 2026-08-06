@@ -2,24 +2,41 @@ import copy
 import io
 import json
 import os
+import hashlib
+import stat
 import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from contextlib import redirect_stderr
 from pathlib import Path
 from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from manifest import canonical_json
+from issues import load_issues
+from manifest import canonical_json, load_manifest
+from schema_validate import SchemaError, validate
 from source_manifest import (
+    FetchContext,
     build_inventory,
+    cache_directory,
+    fetch_blob,
     git_tree,
+    inspect_existing,
+    inspect_pdf,
     main,
+    materialize_source,
+    materialization_status,
     merge_inventory,
     parse_ls_tree,
+    probe_transports,
+    safe_zip_member_bytes,
     source_id,
+    state_source_result,
+    validate_source_manifest,
+    verify_fetched_bytes,
 )
 
 ENTRIES = [{
@@ -364,6 +381,459 @@ class SourceManifestTests(unittest.TestCase):
         ]
         for args in cases:
             with self.subTest(args=args), redirect_stderr(stderr):
+                with self.assertRaises(SystemExit) as raised:
+                    main(args)
+                self.assertEqual(raised.exception.code, 2)
+
+
+def git_blob_oid(value):
+    header = ("blob %d\0" % len(value)).encode("ascii")
+    return hashlib.sha1(header + value).hexdigest()
+
+
+def source_fixture(value=b"%PDF-task-3\n", **updates):
+    source = {
+        "source_id": "src-" + "1" * 64,
+        "upstream_path": "普通高考/2021/a b.pdf",
+        "git_blob_oid": git_blob_oid(value),
+        "year": 2021,
+        "exam_type": "regular",
+        "track": None,
+        "regions": [],
+        "raw_paper_name": "a b.pdf",
+        "source_state": "not_started",
+        "paper_relation": None,
+        "paper_id": None,
+        "artifact": None,
+        "issue_ids": [],
+    }
+    source.update(updates)
+    return source
+
+
+def write_pdfinfo(directory, *, pages=2, version="24.01", exit_code=0):
+    path = Path(directory) / "pdfinfo-fake"
+    path.write_text(
+        "#!/bin/sh\n"
+        "if [ \"$1\" = \"-v\" ]; then\n"
+        "  echo \"pdfinfo version %s\" >&2\n"
+        "  exit 0\n"
+        "fi\n"
+        "echo \"Pages: %s\"\n"
+        "exit %s\n" % (version, pages, exit_code),
+        encoding="utf-8",
+    )
+    path.chmod(path.stat().st_mode | stat.S_IXUSR)
+    return path.resolve()
+
+
+class MaterializationTests(unittest.TestCase):
+    def test_artifact_schema_requires_all_verification_fields(self):
+        schema = json.loads(
+            (ROOT / "schemas" / "source-manifest.schema.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        manifest = build_inventory(
+            ENTRIES, "https://example.invalid/upstream", "c" * 40
+        )
+        artifact = {
+            "size_bytes": 12,
+            "sha256": "b" * 64,
+            "page_count": 2,
+            "media_type": "application/pdf",
+            "header_is_pdf": True,
+            "git_oid_verified": True,
+            "pdf_check": "passed",
+            "pdfinfo_version": "24.01",
+        }
+        manifest["sources"][0]["artifact"] = artifact
+        validate(manifest, schema)
+        for field in tuple(artifact):
+            with self.subTest(field=field):
+                invalid = copy.deepcopy(manifest)
+                del invalid["sources"][0]["artifact"][field]
+                with self.assertRaises(SchemaError):
+                    validate(invalid, schema)
+
+    def test_existing_mismatch_is_not_overwritten(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "x.pdf"
+            target.write_bytes(b"local")
+            source = source_fixture()
+            with self.assertRaisesRegex(RuntimeError, "已有文件与固定 blob 不一致"):
+                materialize_source(
+                    source, target=target,
+                    fetcher=lambda _: b"%PDF-never-used",
+                    pdfinfo=write_pdfinfo(tmp),
+                )
+            self.assertEqual(target.read_bytes(), b"local")
+
+    def test_fallback_bytes_must_match_git_oid_and_pdf_header(self):
+        with self.assertRaisesRegex(RuntimeError, "blob OID"):
+            verify_fetched_bytes(
+                source_fixture(oid="a" * 40), b"%PDF-wrong"
+            )
+        plain = b"not-a-pdf"
+        with self.assertRaisesRegex(RuntimeError, "%PDF-"):
+            verify_fetched_bytes(source_fixture(plain), plain)
+
+    def test_pdfinfo_is_required_to_succeed_with_positive_page_count(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pdf = Path(tmp) / "x.pdf"
+            pdf.write_bytes(b"%PDF-test")
+            inspected = inspect_pdf(pdf, write_pdfinfo(tmp))
+            self.assertEqual(inspected, {
+                "page_count": 2,
+                "pdf_check": "passed",
+                "pdfinfo_version": "24.01",
+            })
+            with self.assertRaisesRegex(RuntimeError, "pdfinfo"):
+                inspect_pdf(pdf, write_pdfinfo(tmp, exit_code=7))
+            with self.assertRaisesRegex(RuntimeError, "Pages"):
+                inspect_pdf(pdf, write_pdfinfo(tmp, pages=0))
+            with self.assertRaisesRegex(ValueError, "绝对路径"):
+                inspect_pdf(pdf, Path("pdfinfo"))
+
+    def test_materialize_atomically_creates_target_and_returns_full_artifact(self):
+        value = b"%PDF-created\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "nested" / "source.pdf"
+            artifact = materialize_source(
+                source_fixture(value), target=target,
+                fetcher=lambda _: value, pdfinfo=write_pdfinfo(tmp),
+            )
+            self.assertEqual(target.read_bytes(), value)
+            self.assertEqual(artifact["sha256"], hashlib.sha256(value).hexdigest())
+            self.assertEqual(artifact["size_bytes"], len(value))
+            self.assertEqual(artifact["page_count"], 2)
+            self.assertTrue(artifact["header_is_pdf"])
+            self.assertTrue(artifact["git_oid_verified"])
+
+    def test_cache_uses_resolved_git_dir_rejects_corruption_and_reuses_verified_blob(self):
+        value = b"%PDF-cache\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "upstream"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            oid = subprocess.check_output(
+                ["git", "-C", str(repo), "hash-object", "-w", "--stdin"],
+                input=value,
+            ).decode("ascii").strip()
+            source = source_fixture(value, git_blob_oid=oid)
+            cache = cache_directory(repo)
+            self.assertEqual(cache, (repo / ".git" / "gaokao-pdf-cache").resolve())
+            cache.mkdir(parents=True)
+            cached = cache / (oid + ".pdf")
+            cached.write_bytes(b"%PDF-corrupt")
+            context = FetchContext(
+                commit="c" * 40, pdfinfo=write_pdfinfo(tmp),
+                sleep=lambda _: None,
+            )
+            self.assertEqual(fetch_blob(repo, source, cache, context).read_bytes(), value)
+            with mock.patch("source_manifest._git_cat_file", side_effect=AssertionError):
+                self.assertEqual(
+                    fetch_blob(repo, source, cache, context).read_bytes(), value
+                )
+
+    def test_linked_worktree_cache_resolves_gitfile_directory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "main"
+            linked = Path(tmp) / "linked"
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            subprocess.run(["git", "-C", str(repo), "config", "user.email", "t@x"], check=True)
+            subprocess.run(["git", "-C", str(repo), "config", "user.name", "T"], check=True)
+            (repo / "x").write_text("x", encoding="utf-8")
+            subprocess.run(["git", "-C", str(repo), "add", "x"], check=True)
+            subprocess.run(["git", "-C", str(repo), "commit", "-qm", "seed"], check=True)
+            subprocess.run([
+                "git", "-C", str(repo), "worktree", "add", "-q", "-b", "linked",
+                str(linked),
+            ], check=True)
+            expected = subprocess.check_output(
+                ["git", "-C", str(linked), "rev-parse", "--git-dir"], text=True
+            ).strip()
+            expected_path = Path(expected)
+            if not expected_path.is_absolute():
+                expected_path = linked / expected_path
+            self.assertEqual(
+                cache_directory(linked),
+                expected_path.resolve() / "gaokao-pdf-cache",
+            )
+
+    def test_fetch_retries_git_with_fixed_backoff_then_raw_encoded_path(self):
+        value = b"%PDF-fallback\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            source = source_fixture(value)
+            sleeps = []
+            context = FetchContext(
+                commit="d" * 40, pdfinfo=write_pdfinfo(tmp), sleeps=sleeps,
+                sleep=sleeps.append,
+            )
+
+            def raw_download(url, destination, limit, _context):
+                self.assertIn("a%20b.pdf", url)
+                self.assertEqual(limit, 100 * 1024 * 1024)
+                destination.write_bytes(value)
+
+            with mock.patch("source_manifest._git_cat_file", side_effect=RuntimeError("git")) as cat, \
+                    mock.patch("source_manifest._download_http_to", side_effect=raw_download) as download, \
+                    mock.patch("source_manifest._zip_member_to_cache") as zip_fallback:
+                result = fetch_blob(repo, source, cache_directory(repo), context)
+            self.assertEqual(result.read_bytes(), value)
+            self.assertEqual(cat.call_count, 3)
+            self.assertEqual(sleeps, [2, 5, 10])
+            self.assertEqual(download.call_count, 1)
+            zip_fallback.assert_not_called()
+
+    def test_wrong_raw_oid_falls_back_to_zip_and_zip_downloads_once_per_context(self):
+        first = b"%PDF-first\n"
+        second = b"%PDF-second\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            context = FetchContext(
+                commit="e" * 40, pdfinfo=write_pdfinfo(tmp), sleep=lambda _: None,
+            )
+
+            sources = [
+                source_fixture(first, raw_paper_name="first.pdf", upstream_path="普通高考/2021/first.pdf"),
+                source_fixture(second, raw_paper_name="second.pdf", upstream_path="普通高考/2021/second.pdf"),
+            ]
+            def download(url, destination, limit, _context):
+                if "raw.githubusercontent" in url:
+                    destination.write_bytes(b"%PDF-wrong")
+                    return
+                self.assertIn("codeload.github.com", url)
+                self.assertEqual(limit, 1024 * 1024 * 1024)
+                with zipfile.ZipFile(str(destination), "w") as archive:
+                    for source, value in zip(sources, (first, second)):
+                        archive.writestr(
+                            "gaokaomath-%s/%s" % (
+                                context.commit, source["upstream_path"]
+                            ),
+                            value,
+                        )
+
+            with mock.patch("source_manifest._git_cat_file", side_effect=RuntimeError("git")), \
+                    mock.patch("source_manifest._download_http_to", side_effect=download) as downloaded:
+                for source in sources:
+                    self.assertEqual(
+                        fetch_blob(repo, source, cache_directory(repo), context).read_bytes(),
+                        first if source is sources[0] else second,
+                    )
+            self.assertEqual(downloaded.call_count, 3)
+            self.assertEqual(context.zip_download_count, 1)
+
+    def test_total_deadline_stops_before_new_transport(self):
+        value = b"%PDF-deadline\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            context = FetchContext(
+                commit="f" * 40, pdfinfo=write_pdfinfo(tmp),
+                deadline=1.0, monotonic=lambda: 2.0, sleep=lambda _: None,
+            )
+            with mock.patch("source_manifest._git_cat_file") as cat:
+                with self.assertRaisesRegex(RuntimeError, "deadline"):
+                    fetch_blob(repo, source_fixture(value), cache_directory(repo), context)
+            cat.assert_not_called()
+
+    def test_safe_zip_rejects_traversal_absolute_symlink_and_requires_exact_member(self):
+        wanted = "gaokaomath-%s/普通高考/2021/a.pdf" % ("a" * 40)
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            valid = tmp_path / "valid.zip"
+            with zipfile.ZipFile(str(valid), "w") as archive:
+                archive.writestr(wanted, b"%PDF-safe")
+            self.assertEqual(safe_zip_member_bytes(valid, wanted), b"%PDF-safe")
+
+            cases = {
+                "traversal.zip": ("../escape", None),
+                "absolute.zip": ("/absolute", None),
+                "symlink.zip": ("link", (stat.S_IFLNK | 0o777) << 16),
+            }
+            for name, (member, attributes) in cases.items():
+                archive_path = tmp_path / name
+                with zipfile.ZipFile(str(archive_path), "w") as archive:
+                    info = zipfile.ZipInfo(member)
+                    if attributes is not None:
+                        info.create_system = 3
+                        info.external_attr = attributes
+                    archive.writestr(info, b"x")
+                    archive.writestr(wanted, b"%PDF-safe")
+                with self.subTest(name=name), self.assertRaisesRegex(RuntimeError, "ZIP"):
+                    safe_zip_member_bytes(archive_path, wanted)
+            with self.assertRaisesRegex(RuntimeError, "精确成员"):
+                safe_zip_member_bytes(valid, wanted + ".other")
+
+    def test_materialization_status_is_read_only_and_counts_match_mismatch_missing(self):
+        values = [b"%PDF-match", b"%PDF-other", b"%PDF-missing"]
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            sources = []
+            for index, value in enumerate(values):
+                source = source_fixture(
+                    value, source_id="src-%064d" % index,
+                    upstream_path="普通高考/2021/%d.pdf" % index,
+                    raw_paper_name="%d.pdf" % index,
+                )
+                sources.append(source)
+            (repo / "普通高考" / "2021").mkdir(parents=True)
+            (repo / sources[0]["upstream_path"]).write_bytes(values[0])
+            (repo / sources[1]["upstream_path"]).write_bytes(b"different")
+            manifest = build_inventory(
+                [], "https://example.invalid/upstream", "c" * 40
+            )
+            manifest["sources"] = sources
+            manifest["inventory"] = {"total_sources": 3, "root_counts": {"regular": 3, "spring": 0}}
+            manifest_path = Path(tmp) / "manifest.json"
+            manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+            before = manifest_path.read_bytes()
+            status_result = materialization_status(repo, manifest_path)
+            self.assertEqual(status_result, {
+                "total": 3, "matching": 1, "mismatched": 1,
+                "missing": 1, "artifacts": 0,
+            })
+            self.assertEqual(manifest_path.read_bytes(), before)
+
+    def test_probe_all_local_is_zero_network_and_failed_preflight_writes_no_state(self):
+        value = b"%PDF-probe"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "upstream"
+            repo.mkdir()
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            oid = subprocess.check_output(
+                ["git", "-C", str(repo), "hash-object", "-w", "--stdin"],
+                input=value,
+            ).decode().strip()
+            entry = ENTRIES[0].copy()
+            entry["oid"] = oid
+            entry["path"] = "普通高考/2021/a.pdf"
+            with mock.patch("source_manifest.git_tree", return_value=[entry]), \
+                    mock.patch("source_manifest._download_http_to") as network:
+                result = probe_transports(repo, "c" * 40)
+            self.assertEqual(result["channel"], "local")
+            network.assert_not_called()
+
+            project = Path(tmp) / "project"
+            project.mkdir()
+            manifest = project / "source-manifest.json"
+            issues = project / "missing-issues.md"
+            state = build_inventory(
+                [], "https://example.invalid/upstream", "c" * 40
+            )
+            manifest.write_text(canonical_json(state), encoding="utf-8")
+            issues.write_bytes(b"issues-before")
+            manifest_before = manifest.read_bytes()
+            with mock.patch("source_manifest.probe_transports", side_effect=RuntimeError("all failed")):
+                with self.assertRaisesRegex(RuntimeError, "all failed"):
+                    main([
+                        "materialize", "--repo", str(repo),
+                        "--manifest", str(manifest), "--issues", str(issues),
+                        "--all", "--jobs", "1", "--deadline-seconds", "10",
+                        "--pdfinfo", str(write_pdfinfo(tmp)),
+                    ])
+            self.assertEqual(manifest.read_bytes(), manifest_before)
+            self.assertEqual(issues.read_bytes(), b"issues-before")
+
+    def test_each_source_result_is_one_state_transaction_and_success_resolves_issue(self):
+        value = b"%PDF-state"
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp) / "repo"
+            subprocess.run(["git", "init", "-q", str(repo)], check=True)
+            project = repo / "docs" / "exams" / "math-gaokao-latex"
+            (project / "schemas").mkdir(parents=True)
+            schema_path = ROOT / "schemas" / "source-manifest.schema.json"
+            (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())
+            source = source_fixture(value)
+            manifest = build_inventory(
+                [], "https://example.invalid/upstream", "c" * 40
+            )
+            manifest["sources"] = [source]
+            manifest["inventory"] = {"total_sources": 1, "root_counts": {"regular": 1, "spring": 0}}
+            manifest_path = project / "source-manifest.json"
+            manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+            issues_path = project / "missing-issues.md"
+            issues_path.write_text("# issues\n", encoding="utf-8")
+
+            with mock.patch("source_manifest.Transaction") as transaction_type:
+                transaction = transaction_type.return_value
+                transaction.transaction_id = "11111111-1111-4111-8111-111111111111"
+                state_source_result(
+                    repo, manifest_path, issues_path, source["source_id"],
+                    artifact=None, issue_type="source-unavailable", evidence="offline",
+                )
+                transaction.prepare.assert_called_once()
+                self.assertEqual(transaction.prepare.call_args.args[0], "state")
+                transaction.commit.assert_called_once_with()
+
+            # Run real state transactions to verify stable issue resolution and blocker removal.
+            state_source_result(
+                repo, manifest_path, issues_path, source["source_id"],
+                artifact=None, issue_type="source-unavailable", evidence="offline",
+            )
+            failed_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            issue_id = failed_manifest["sources"][0]["issue_ids"][0]
+            self.assertEqual(failed_manifest["revision"], 1)
+            self.assertEqual(load_issues(issues_path)[0]["status"], "open")
+            artifact = {
+                "size_bytes": len(value), "sha256": hashlib.sha256(value).hexdigest(),
+                "page_count": 2, "media_type": "application/pdf",
+                "header_is_pdf": True, "git_oid_verified": True,
+                "pdf_check": "passed", "pdfinfo_version": "24.01",
+            }
+            state_source_result(
+                repo, manifest_path, issues_path, source["source_id"], artifact=artifact,
+            )
+            completed = load_manifest(manifest_path)
+            completed_source = completed["sources"][0]
+            self.assertEqual(completed["revision"], 2)
+            self.assertEqual(completed_source["source_state"], "ready")
+            self.assertEqual(completed_source["artifact"], artifact)
+            self.assertNotIn(issue_id, completed_source["issue_ids"])
+            resolved = load_issues(issues_path)[0]
+            self.assertEqual(resolved["issue_id"], issue_id)
+            self.assertEqual(resolved["status"], "resolved")
+            self.assertIn("resolved_evidence", resolved)
+
+    def test_validate_requires_exact_artifact_count(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            project = Path(tmp)
+            (project / "schemas").mkdir()
+            schema_path = ROOT / "schemas" / "source-manifest.schema.json"
+            (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())
+            manifest = build_inventory(
+                ENTRIES, "https://example.invalid/upstream", "c" * 40
+            )
+            manifest_path = project / "source-manifest.json"
+            manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+            self.assertEqual(validate_source_manifest(manifest_path), 0)
+            with self.assertRaisesRegex(ValueError, "artifact.*1"):
+                validate_source_manifest(manifest_path, require_artifacts=1)
+
+    def test_materialize_cli_parser_boundaries_and_exit_codes(self):
+        common = [
+            "materialize", "--repo", "/repo", "--manifest", "/manifest",
+            "--issues", "/issues", "--jobs", "1", "--deadline-seconds", "1",
+            "--pdfinfo", "/pdfinfo",
+        ]
+        invalid = [
+            common,
+            common + ["--all", "--source", "src-x"],
+            common[:-7] + ["--jobs", "0", "--deadline-seconds", "1", "--pdfinfo", "/p", "--all"],
+            common[:-5] + ["--deadline-seconds", "0", "--pdfinfo", "/p", "--all"],
+            common[:-3] + ["--pdfinfo", "relative", "--all"],
+        ]
+        for args in invalid:
+            with self.subTest(args=args), redirect_stderr(io.StringIO()):
                 with self.assertRaises(SystemExit) as raised:
                     main(args)
                 self.assertEqual(raised.exception.code, 2)
