@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import argparse
 import copy
+import fcntl
 import hashlib
 import json
 import os
 import posixpath
 import re
 import shutil
+import socket
 import stat
 import subprocess
 import tempfile
@@ -17,9 +19,10 @@ import urllib.parse
 import urllib.request
 import uuid
 import zipfile
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 from pathlib import Path, PurePosixPath
-from typing import Any, Callable, Dict, List, Mapping, MutableMapping, Optional, Sequence
+from typing import Any, Callable, Dict, Iterator, List, Mapping, MutableMapping, Optional, Sequence
 
 from issues import load_issues, upsert_issue
 from manifest import (
@@ -46,7 +49,9 @@ _OID_RE = re.compile(r"^[0-9a-f]{40,64}$")
 _COMMIT_RE = re.compile(r"^[0-9a-f]{40}$")
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 _PAGES_RE = re.compile(r"(?m)^Pages:\s*([0-9]+)\s*$")
-_PDFINFO_VERSION_RE = re.compile(r"(?i)pdfinfo\s+version\s+([^\r\n]+)")
+_PDFINFO_VERSION_RE = re.compile(
+    r"(?i)pdfinfo\s+version\s+([0-9]+(?:\.[0-9]+)+(?:[-+._A-Za-z0-9]*)?)"
+)
 _GIT_BACKOFFS = (2, 5, 10)
 _HTTP_CONNECT_TIMEOUT = 15
 _HTTP_READ_DEADLINE = 120
@@ -61,6 +66,7 @@ _SOURCE_ISSUE_TYPES = {
 class FetchContext:
     commit: str
     pdfinfo: Optional[Path] = None
+    pdfinfo_version: Optional[str] = None
     deadline: Optional[float] = None
     monotonic: Callable[[], float] = time.monotonic
     sleep: Callable[[float], None] = time.sleep
@@ -70,6 +76,8 @@ class FetchContext:
     zip_limit: int = _ZIP_LIMIT
     zip_downloaded: bool = False
     zip_download_count: int = 0
+    zip_path: Optional[Path] = None
+    zip_infos: Optional[Dict[str, zipfile.ZipInfo]] = None
     sleeps: List[float] = field(default_factory=list)
 
     def __post_init__(self) -> None:
@@ -79,9 +87,16 @@ class FetchContext:
         if self.deadline is not None and self.deadline <= 0:
             raise ValueError("deadline 必须是正数")
 
-    def check_deadline(self) -> None:
-        if self.deadline is not None and self.monotonic() >= self.deadline:
+    def remaining(self, cap: Optional[float] = None) -> Optional[float]:
+        if self.deadline is None:
+            return cap
+        remaining = self.deadline - self.monotonic()
+        if remaining <= 0:
             raise RuntimeError("materialize 总 deadline 已到")
+        return remaining if cap is None else min(remaining, cap)
+
+    def check_deadline(self) -> None:
+        self.remaining()
 
     def backoff(self, seconds: int) -> None:
         self.check_deadline()
@@ -131,7 +146,9 @@ def parse_ls_tree(raw: bytes) -> List[Dict[str, str]]:
     return entries
 
 
-def git_tree(repo: Path, commit: str) -> List[Dict[str, str]]:
+def git_tree(
+    repo: Path, commit: str, context: Optional[FetchContext] = None
+) -> List[Dict[str, str]]:
     repo = Path(repo)
     environment = os.environ.copy()
     environment["GIT_NO_LAZY_FETCH"] = "1"
@@ -144,6 +161,7 @@ def git_tree(repo: Path, commit: str) -> List[Dict[str, str]]:
         stderr=subprocess.PIPE,
         check=True,
         env=environment,
+        timeout=(context.remaining() if context is not None else None),
     )
     return parse_ls_tree(completed.stdout)
 
@@ -404,6 +422,35 @@ def _resolve_pdfinfo(value: Optional[Path]) -> Path:
     return path
 
 
+def validate_pdfinfo_tool(
+    value: Optional[Path], context: Optional[FetchContext] = None
+) -> str:
+    path = _resolve_pdfinfo(value)
+    if not path.exists() or not path.is_file() or not os.access(str(path), os.X_OK):
+        raise ValueError(f"pdfinfo 不存在、不是普通文件或不可执行：{path}")
+    timeout = _HTTP_READ_DEADLINE
+    if context is not None:
+        timeout = context.remaining(_HTTP_READ_DEADLINE)
+    try:
+        completed = subprocess.run(
+            [str(path), "-v"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            timeout=timeout,
+        )
+    except (OSError, subprocess.TimeoutExpired) as error:
+        raise RuntimeError(f"pdfinfo -v 无法成功执行：{error}") from error
+    if completed.returncode != 0:
+        raise RuntimeError(f"pdfinfo -v 失败：{completed.returncode}")
+    version_match = _PDFINFO_VERSION_RE.search(
+        completed.stdout + "\n" + completed.stderr
+    )
+    if version_match is None or not version_match.group(1).strip():
+        raise RuntimeError("pdfinfo -v 缺少版本号")
+    return version_match.group(1).strip()
+
+
 def _git_blob_oid(value: bytes, length: int) -> str:
     payload = (f"blob {len(value)}\0").encode("ascii") + value
     if length == 40:
@@ -463,30 +510,25 @@ def inspect_existing(path: Path, expected_oid: str) -> str:
     return "matching" if actual == expected_oid else "mismatched"
 
 
-def inspect_pdf(path: Path, pdfinfo: Path) -> Dict[str, Any]:
+def inspect_pdf(
+    path: Path,
+    pdfinfo: Path,
+    *,
+    pdfinfo_version: Optional[str] = None,
+    context: Optional[FetchContext] = None,
+) -> Dict[str, Any]:
     path = Path(path)
     tool = _resolve_pdfinfo(pdfinfo)
-    if not tool.is_file() or not os.access(str(tool), os.X_OK):
-        raise ValueError(f"pdfinfo 不存在或不可执行：{tool}")
-    version_result = subprocess.run(
-        [str(tool), "-v"],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        timeout=_HTTP_READ_DEADLINE,
-    )
-    if version_result.returncode != 0:
-        raise RuntimeError(f"pdfinfo -v 失败：{version_result.returncode}")
-    version_text = version_result.stdout + "\n" + version_result.stderr
-    version_match = _PDFINFO_VERSION_RE.search(version_text)
-    if version_match is None or not version_match.group(1).strip():
-        raise RuntimeError("pdfinfo -v 缺少版本号")
+    version = pdfinfo_version or validate_pdfinfo_tool(tool, context)
+    timeout = _HTTP_READ_DEADLINE
+    if context is not None:
+        timeout = context.remaining(_HTTP_READ_DEADLINE)
     completed = subprocess.run(
         [str(tool), str(path)],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
-        timeout=_HTTP_READ_DEADLINE,
+        timeout=timeout,
     )
     if completed.returncode != 0:
         raise RuntimeError(
@@ -498,19 +540,26 @@ def inspect_pdf(path: Path, pdfinfo: Path) -> Dict[str, Any]:
     return {
         "page_count": int(pages_match.group(1)),
         "pdf_check": "passed",
-        "pdfinfo_version": version_match.group(1).strip(),
+        "pdfinfo_version": version,
     }
 
 
 def _artifact_from_path(
-    path: Path, source: Mapping[str, Any], pdfinfo: Path
+    path: Path,
+    source: Mapping[str, Any],
+    pdfinfo: Path,
+    *,
+    pdfinfo_version: Optional[str] = None,
+    context: Optional[FetchContext] = None,
 ) -> Dict[str, Any]:
     try:
         value = Path(path).read_bytes()
     except OSError as error:
         raise RuntimeError(f"无法读取 PDF：{path}: {error}") from error
     artifact = verify_fetched_bytes(source, value)
-    artifact.update(inspect_pdf(path, pdfinfo))
+    artifact.update(inspect_pdf(
+        path, pdfinfo, pdfinfo_version=pdfinfo_version, context=context
+    ))
     return artifact
 
 
@@ -522,11 +571,55 @@ def _fsync_directory(path: Path) -> None:
         os.close(descriptor)
 
 
+class MaterializedArtifact(dict):
+    def __init__(
+        self, value: Mapping[str, Any], installed_identity: Optional[tuple] = None
+    ) -> None:
+        super().__init__(value)
+        self.installed_identity = installed_identity
+
+
+@contextmanager
+def _directory_lock(path: Path) -> Iterator[None]:
+    descriptor = os.open(
+        str(path), os.O_RDONLY | getattr(os, "O_DIRECTORY", 0)
+    )
+    try:
+        fcntl.flock(descriptor, fcntl.LOCK_EX)
+        yield
+    finally:
+        fcntl.flock(descriptor, fcntl.LOCK_UN)
+        os.close(descriptor)
+
+
+def _target_temp_pattern(target: Path) -> re.Pattern:
+    return re.compile(
+        r"^\." + re.escape(target.name)
+        + r"\.gaokao-materialize-[0-9a-f]{32}\.tmp$"
+    )
+
+
+def _clean_target_orphans(target: Path) -> None:
+    pattern = _target_temp_pattern(target)
+    for entry in target.parent.iterdir():
+        if pattern.fullmatch(entry.name) is None:
+            continue
+        try:
+            status = entry.lstat()
+        except FileNotFoundError:
+            continue
+        if stat.S_ISREG(status.st_mode):
+            entry.unlink()
+    _fsync_directory(target.parent)
+
+
 def _write_verified_cache(
     cache_path: Path,
     source: Mapping[str, Any],
     value: bytes,
     pdfinfo: Path,
+    *,
+    context: Optional[FetchContext] = None,
 ) -> Path:
     verify_fetched_bytes(source, value)
     cache_path.parent.mkdir(parents=True, exist_ok=True)
@@ -543,7 +636,11 @@ def _write_verified_cache(
             durable_fsync(descriptor)
         finally:
             os.close(descriptor)
-        _artifact_from_path(temporary, source, pdfinfo)
+        _artifact_from_path(
+            temporary, source, pdfinfo,
+            pdfinfo_version=context.pdfinfo_version if context else None,
+            context=context,
+        )
         os.replace(str(temporary), str(cache_path))
         _fsync_directory(cache_path.parent)
         return cache_path
@@ -552,21 +649,30 @@ def _write_verified_cache(
 
 
 def _verified_cache(
-    cache_path: Path, source: Mapping[str, Any], pdfinfo: Path
+    cache_path: Path,
+    source: Mapping[str, Any],
+    pdfinfo: Path,
+    context: Optional[FetchContext] = None,
 ) -> bool:
     if not cache_path.exists() and not cache_path.is_symlink():
         return False
     try:
         if not stat.S_ISREG(cache_path.lstat().st_mode):
             raise RuntimeError("cache 不是普通文件")
-        _artifact_from_path(cache_path, source, pdfinfo)
+        _artifact_from_path(
+            cache_path, source, pdfinfo,
+            pdfinfo_version=context.pdfinfo_version if context else None,
+            context=context,
+        )
         return True
     except (OSError, RuntimeError, ValueError, subprocess.SubprocessError):
         cache_path.unlink(missing_ok=True)
         return False
 
 
-def cache_directory(repo: Path) -> Path:
+def cache_directory(
+    repo: Path, context: Optional[FetchContext] = None
+) -> Path:
     repo = Path(repo)
     completed = subprocess.run(
         ["git", "-C", str(repo), "rev-parse", "--git-dir"],
@@ -575,6 +681,7 @@ def cache_directory(repo: Path) -> Path:
         check=True,
         text=True,
         env={**os.environ, "GIT_NO_LAZY_FETCH": "1"},
+        timeout=(context.remaining() if context is not None else None),
     )
     git_dir = Path(completed.stdout.strip())
     if not git_dir.is_absolute():
@@ -582,12 +689,20 @@ def cache_directory(repo: Path) -> Path:
     return git_dir.resolve() / "gaokao-pdf-cache"
 
 
-def _git_cat_file(repo: Path, oid: str) -> bytes:
+def _git_cat_file(
+    repo: Path, oid: str, context: Optional[FetchContext] = None
+) -> bytes:
+    environment = os.environ.copy()
+    environment.pop("GIT_NO_LAZY_FETCH", None)
+    timeout = _HTTP_READ_DEADLINE
+    if context is not None:
+        timeout = context.remaining(_HTTP_READ_DEADLINE)
     completed = subprocess.run(
         ["git", "-C", str(repo), "cat-file", "blob", oid],
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        timeout=_HTTP_READ_DEADLINE,
+        timeout=timeout,
+        env=environment,
     )
     if completed.returncode != 0:
         message = completed.stderr.decode("utf-8", "replace").strip()
@@ -595,7 +710,9 @@ def _git_cat_file(repo: Path, oid: str) -> bytes:
     return completed.stdout
 
 
-def _git_has_blob(repo: Path, oid: str) -> bool:
+def _git_has_blob(
+    repo: Path, oid: str, context: Optional[FetchContext] = None
+) -> bool:
     environment = os.environ.copy()
     environment["GIT_NO_LAZY_FETCH"] = "1"
     completed = subprocess.run(
@@ -603,8 +720,26 @@ def _git_has_blob(repo: Path, oid: str) -> bool:
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         env=environment,
+        timeout=(context.remaining() if context is not None else None),
     )
     return completed.returncode == 0
+
+
+def _set_http_read_timeout(response: Any, seconds: float) -> None:
+    candidates = [response]
+    for attributes in (("fp", "raw", "_sock"), ("fp", "_sock"), ("_sock",)):
+        node = response
+        try:
+            for attribute in attributes:
+                node = getattr(node, attribute)
+        except AttributeError:
+            continue
+        candidates.append(node)
+    for candidate in candidates:
+        setter = getattr(candidate, "settimeout", None)
+        if callable(setter):
+            setter(max(0.001, seconds))
+            return
 
 
 def _download_http_to(
@@ -614,13 +749,16 @@ def _download_http_to(
     context.check_deadline()
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.unlink(missing_ok=True)
-    started = context.monotonic()
     request = urllib.request.Request(
         url, headers={"User-Agent": "gaokao-latex-source-materializer/1"}
     )
     total = 0
+    declared: Optional[int] = None
     try:
-        with urllib.request.urlopen(request, timeout=context.http_timeout) as response:
+        connect_timeout = context.remaining(context.http_timeout)
+        with urllib.request.urlopen(request, timeout=connect_timeout) as response:
+            context.check_deadline()
+            read_started = context.monotonic()
             raw_length = response.headers.get("Content-Length")
             if raw_length is not None:
                 try:
@@ -631,10 +769,23 @@ def _download_http_to(
                     raise RuntimeError(f"HTTP 响应超过限制 {limit} bytes")
             with destination.open("xb") as handle:
                 while True:
-                    context.check_deadline()
-                    if context.monotonic() - started >= context.read_deadline_seconds:
+                    remaining_read = (
+                        context.read_deadline_seconds
+                        - (context.monotonic() - read_started)
+                    )
+                    if remaining_read <= 0:
                         raise RuntimeError("HTTP 单次读取 deadline 已到")
-                    chunk = response.read(1024 * 1024)
+                    context.check_deadline()
+                    socket_timeout = context.remaining(remaining_read)
+                    assert socket_timeout is not None
+                    _set_http_read_timeout(response, socket_timeout)
+                    try:
+                        chunk = response.read(1024 * 1024)
+                    except (TimeoutError, socket.timeout) as error:
+                        raise RuntimeError("HTTP 单次读取 deadline 已到") from error
+                    context.check_deadline()
+                    if context.monotonic() - read_started >= context.read_deadline_seconds:
+                        raise RuntimeError("HTTP 单次读取 deadline 已到")
                     if not chunk:
                         break
                     total += len(chunk)
@@ -643,7 +794,7 @@ def _download_http_to(
                     handle.write(chunk)
                 handle.flush()
                 durable_fsync(handle.fileno())
-            if raw_length is not None and total != declared:
+            if declared is not None and total != declared:
                 raise RuntimeError(
                     f"HTTP 响应长度不符：声明 {declared}，实际 {total}"
                 )
@@ -684,12 +835,27 @@ def _validated_zip_infos(archive: zipfile.ZipFile) -> Dict[str, zipfile.ZipInfo]
 
 
 def safe_zip_member_bytes(
-    zip_path: Path, member_name: str, limit: int = _RAW_LIMIT
+    zip_path: Path,
+    member_name: str,
+    limit: int = _RAW_LIMIT,
+    *,
+    context: Optional[FetchContext] = None,
 ) -> bytes:
+    zip_path = Path(zip_path).resolve()
     expected = _normalized_zip_name(member_name)
     try:
         with zipfile.ZipFile(str(zip_path)) as archive:
-            infos = _validated_zip_infos(archive)
+            if (
+                context is not None
+                and context.zip_path == zip_path
+                and context.zip_infos is not None
+            ):
+                infos = context.zip_infos
+            else:
+                infos = _validated_zip_infos(archive)
+                if context is not None:
+                    context.zip_path = zip_path
+                    context.zip_infos = infos
             info = infos.get(expected)
             if info is None or info.is_dir():
                 raise RuntimeError(f"ZIP 缺少精确成员：{expected}")
@@ -711,6 +877,22 @@ def safe_zip_member_bytes(
         raise RuntimeError(f"ZIP 结构损坏：{zip_path}") from error
 
 
+def _validate_zip_for_context(
+    zip_path: Path, context: FetchContext
+) -> Dict[str, zipfile.ZipInfo]:
+    resolved = Path(zip_path).resolve()
+    if context.zip_path == resolved and context.zip_infos is not None:
+        return context.zip_infos
+    try:
+        with zipfile.ZipFile(str(resolved)) as archive:
+            infos = _validated_zip_infos(archive)
+    except zipfile.BadZipFile as error:
+        raise RuntimeError(f"ZIP 结构损坏：{resolved}") from error
+    context.zip_path = resolved
+    context.zip_infos = infos
+    return infos
+
+
 def _ensure_codeload_zip(
     cache_dir: Path, context: FetchContext
 ) -> Path:
@@ -718,10 +900,11 @@ def _ensure_codeload_zip(
     cache_dir.mkdir(parents=True, exist_ok=True)
     if zip_path.exists():
         try:
-            with zipfile.ZipFile(str(zip_path)) as archive:
-                _validated_zip_infos(archive)
+            _validate_zip_for_context(zip_path, context)
             return zip_path
-        except (OSError, RuntimeError, zipfile.BadZipFile):
+        except (OSError, RuntimeError):
+            context.zip_path = None
+            context.zip_infos = None
             zip_path.unlink(missing_ok=True)
     if context.zip_download_count >= 1:
         raise RuntimeError("本次运行的 codeload ZIP 下载额度已用尽")
@@ -732,13 +915,13 @@ def _ensure_codeload_zip(
     url = "https://codeload.github.com/deekur/gaokaomath/zip/" + context.commit
     try:
         _download_http_to(url, temporary, context.zip_limit, context)
-        with zipfile.ZipFile(str(temporary)) as archive:
-            _validated_zip_infos(archive)
+        context.zip_path = None
+        context.zip_infos = None
+        _validate_zip_for_context(temporary, context)
         os.replace(str(temporary), str(zip_path))
         _fsync_directory(cache_dir)
+        context.zip_path = zip_path.resolve()
         return zip_path
-    except zipfile.BadZipFile as error:
-        raise RuntimeError("codeload ZIP 结构损坏") from error
     finally:
         temporary.unlink(missing_ok=True)
 
@@ -752,7 +935,9 @@ def _zip_member_to_cache(
     del repo
     zip_path = _ensure_codeload_zip(cache_dir, context)
     member = "gaokaomath-%s/%s" % (context.commit, source["upstream_path"])
-    value = safe_zip_member_bytes(zip_path, member, context.raw_limit)
+    value = safe_zip_member_bytes(
+        zip_path, member, context.raw_limit, context=context
+    )
     temporary = cache_dir / (str(source["git_blob_oid"]) + ".pdf.zip.tmp")
     temporary.unlink(missing_ok=True)
     temporary.write_bytes(value)
@@ -767,7 +952,9 @@ def _accept_candidate(
 ) -> Path:
     try:
         value = Path(candidate).read_bytes()
-        return _write_verified_cache(cache_path, source, value, context.pdfinfo)
+        return _write_verified_cache(
+            cache_path, source, value, context.pdfinfo, context=context
+        )
     finally:
         if Path(candidate) != cache_path:
             Path(candidate).unlink(missing_ok=True)
@@ -800,16 +987,16 @@ def fetch_blob(
         raise ValueError("source 缺少 upstream_path")
     cache_dir.mkdir(parents=True, exist_ok=True)
     cache_path = cache_dir / (oid + ".pdf")
-    if _verified_cache(cache_path, source, context.pdfinfo):
+    if _verified_cache(cache_path, source, context.pdfinfo, context):
         return cache_path
 
     errors = []
     for delay in _GIT_BACKOFFS:
         context.check_deadline()
         try:
-            value = _git_cat_file(repo, oid)
+            value = _git_cat_file(repo, oid, context)
             return _write_verified_cache(
-                cache_path, source, value, context.pdfinfo
+                cache_path, source, value, context.pdfinfo, context=context
             )
         except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
             errors.append("git: " + str(error))
@@ -849,34 +1036,65 @@ def _copy_verified_target(
     source: Mapping[str, Any],
     target: Path,
     pdfinfo: Path,
+    *,
+    pdfinfo_version: Optional[str] = None,
+    context: Optional[FetchContext] = None,
 ) -> Dict[str, Any]:
     candidate = Path(candidate)
     target = Path(target)
-    _artifact_from_path(candidate, source, pdfinfo)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    descriptor, raw_temporary = tempfile.mkstemp(
-        prefix="." + target.name + ".", suffix=".tmp", dir=str(target.parent)
+    _artifact_from_path(
+        candidate, source, pdfinfo,
+        pdfinfo_version=pdfinfo_version, context=context,
     )
-    temporary = Path(raw_temporary)
-    try:
-        with candidate.open("rb") as source_handle, os.fdopen(descriptor, "wb") as target_handle:
-            shutil.copyfileobj(source_handle, target_handle, length=1024 * 1024)
-            target_handle.flush()
-            durable_fsync(target_handle.fileno())
-        artifact = _artifact_from_path(temporary, source, pdfinfo)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with _directory_lock(target.parent):
+        _clean_target_orphans(target)
+        current = inspect_existing(target, str(source["git_blob_oid"]))
+        if current == "mismatched":
+            raise RuntimeError(
+                f"已有文件与固定 blob 不一致，拒绝覆盖：{target}"
+            )
+        if current == "matching":
+            return _artifact_from_path(
+                target, source, pdfinfo,
+                pdfinfo_version=pdfinfo_version, context=context,
+            )
+        temporary = target.with_name(
+            ".%s.gaokao-materialize-%s.tmp" % (target.name, uuid.uuid4().hex)
+        )
+        descriptor = os.open(
+            str(temporary), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600
+        )
         try:
-            os.link(str(temporary), str(target))
-        except FileExistsError:
-            state = inspect_existing(target, str(source["git_blob_oid"]))
-            if state != "matching":
-                raise RuntimeError(
-                    f"已有文件与固定 blob 不一致，拒绝覆盖：{target}"
+            with candidate.open("rb") as source_handle, os.fdopen(
+                descriptor, "wb"
+            ) as target_handle:
+                shutil.copyfileobj(source_handle, target_handle, length=1024 * 1024)
+                target_handle.flush()
+                durable_fsync(target_handle.fileno())
+            artifact = _artifact_from_path(
+                temporary, source, pdfinfo,
+                pdfinfo_version=pdfinfo_version, context=context,
+            )
+            try:
+                os.link(str(temporary), str(target))
+            except FileExistsError:
+                state = inspect_existing(target, str(source["git_blob_oid"]))
+                if state != "matching":
+                    raise RuntimeError(
+                        f"已有文件与固定 blob 不一致，拒绝覆盖：{target}"
+                    )
+                return _artifact_from_path(
+                    target, source, pdfinfo,
+                    pdfinfo_version=pdfinfo_version, context=context,
                 )
-            return _artifact_from_path(target, source, pdfinfo)
-        _fsync_directory(target.parent)
-        return artifact
-    finally:
-        temporary.unlink(missing_ok=True)
+            _fsync_directory(target.parent)
+            installed = target.stat()
+            return MaterializedArtifact(
+                artifact, (installed.st_dev, installed.st_ino)
+            )
+        finally:
+            temporary.unlink(missing_ok=True)
 
 
 def materialize_source(
@@ -885,14 +1103,24 @@ def materialize_source(
     target: Path,
     fetcher: Callable[[Mapping[str, Any]], Any],
     pdfinfo: Optional[Path] = None,
+    context: Optional[FetchContext] = None,
 ) -> Dict[str, Any]:
     target = Path(target)
     tool = _resolve_pdfinfo(pdfinfo)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with _directory_lock(target.parent):
+        _clean_target_orphans(target)
     state = inspect_existing(target, str(source.get("git_blob_oid", "")))
     if state == "mismatched":
         raise RuntimeError(f"已有文件与固定 blob 不一致，拒绝覆盖：{target}")
     if state == "matching":
-        return _artifact_from_path(target, source, tool)
+        with _directory_lock(target.parent):
+            _clean_target_orphans(target)
+            return _artifact_from_path(
+                target, source, tool,
+                pdfinfo_version=context.pdfinfo_version if context else None,
+                context=context,
+            )
 
     fetched = fetcher(source)
     if isinstance(fetched, bytes):
@@ -900,9 +1128,17 @@ def materialize_source(
         with tempfile.TemporaryDirectory() as temporary_dir:
             candidate = Path(temporary_dir) / "candidate.pdf"
             candidate.write_bytes(fetched)
-            return _copy_verified_target(candidate, source, target, tool)
+            return _copy_verified_target(
+                candidate, source, target, tool,
+                pdfinfo_version=context.pdfinfo_version if context else None,
+                context=context,
+            )
     candidate = Path(fetched)
-    return _copy_verified_target(candidate, source, target, tool)
+    return _copy_verified_target(
+        candidate, source, target, tool,
+        pdfinfo_version=context.pdfinfo_version if context else None,
+        context=context,
+    )
 
 
 def materialization_status(repo: Path, manifest_path: Path) -> Dict[str, int]:
@@ -922,31 +1158,40 @@ def materialization_status(repo: Path, manifest_path: Path) -> Dict[str, int]:
             str(source["git_blob_oid"]),
         )
         result[state] += 1
-        if source.get("artifact") is not None:
+        if (
+            source.get("source_state") == "ready"
+            and source.get("artifact") is not None
+        ):
             result["artifacts"] += 1
     return result
 
 
 def probe_transports(
-    repo: Path, commit: str, pdfinfo: Optional[Path] = None
+    repo: Path,
+    commit: str,
+    pdfinfo: Optional[Path] = None,
+    context: Optional[FetchContext] = None,
 ) -> Dict[str, Any]:
     repo = Path(repo)
     tool = _resolve_pdfinfo(pdfinfo)
-    entries = git_tree(repo, commit)
+    if context is None:
+        context = FetchContext(commit=commit, pdfinfo=tool)
+    context.check_deadline()
+    entries = git_tree(repo, commit, context=context)
     sources = []
     for entry in entries:
         source = _source_from_entry(entry, "https://github.com/deekur/gaokaomath", commit)
         if source is not None:
             sources.append(source)
-    cache_dir = cache_directory(repo)
+    cache_dir = cache_directory(repo, context=context)
     first_missing = None
     used_cache = False
     for source in sources:
         oid = str(source["git_blob_oid"])
-        if _git_has_blob(repo, oid):
+        if _git_has_blob(repo, oid, context):
             continue
         cache_path = cache_dir / (oid + ".pdf")
-        if _verified_cache(cache_path, source, tool):
+        if _verified_cache(cache_path, source, tool, context):
             used_cache = True
             continue
         first_missing = source
@@ -959,13 +1204,14 @@ def probe_transports(
             "total_sources": len(sources),
         }
 
-    context = FetchContext(commit=commit, pdfinfo=tool)
     oid = str(first_missing["git_blob_oid"])
     cache_path = cache_dir / (oid + ".pdf")
     errors = []
     try:
-        value = _git_cat_file(repo, oid)
-        _write_verified_cache(cache_path, first_missing, value, tool)
+        value = _git_cat_file(repo, oid, context)
+        _write_verified_cache(
+            cache_path, first_missing, value, tool, context=context
+        )
         return {
             "ok": True, "channel": "git",
             "probe_source_id": first_missing["source_id"],
@@ -1027,6 +1273,23 @@ def _relative_to_repo(root: Path, path: Path) -> str:
     return relative.as_posix()
 
 
+def _validate_source_artifact_semantics(value: Mapping[str, Any]) -> None:
+    sources = value.get("sources")
+    if not isinstance(sources, list):
+        raise ValueError("manifest sources 必须是数组")
+    for source in sources:
+        if not isinstance(source, Mapping):
+            raise ValueError("manifest source 必须是对象")
+        identifier = source.get("source_id", "<unknown>")
+        state = source.get("source_state")
+        artifact = source.get("artifact")
+        if (state == "ready") != (artifact is not None):
+            raise ValueError(
+                f"{identifier}: ready 当且仅当包含完整 artifact；"
+                f"{state} 状态 artifact 必须为 null"
+            )
+
+
 def _validated_manifest_value(manifest_path: Path, value: Mapping[str, Any]) -> None:
     schema_reference = value.get("$schema")
     if not isinstance(schema_reference, str) or not schema_reference:
@@ -1037,6 +1300,7 @@ def _validated_manifest_value(manifest_path: Path, value: Mapping[str, Any]) -> 
     schema = _load_json(Path(manifest_path).parent / schema_relative)
     validate_schema(value, schema)
     validate_manifest_semantics(value)
+    _validate_source_artifact_semantics(value)
 
 
 def _issue_candidate(
@@ -1093,6 +1357,13 @@ def _updated_issue_ledger(
         return scratch.read_bytes(), added_id, resolved_ids
 
 
+class StateTransactionError(RuntimeError):
+    def __init__(self, transaction_id: str, cause: BaseException) -> None:
+        super().__init__(str(cause))
+        self.transaction_id = transaction_id
+        self.cause = cause
+
+
 def state_source_result(
     repo: Path,
     manifest_path: Path,
@@ -1102,7 +1373,7 @@ def state_source_result(
     artifact: Optional[Mapping[str, Any]],
     issue_type: Optional[str] = None,
     evidence: str = "固定 blob、SHA-256、PDF 文件头和 pdfinfo 已验证",
-) -> None:
+) -> str:
     root = _repository_root(Path(repo))
     manifest_path = Path(manifest_path)
     issues_path = Path(issues_path)
@@ -1140,6 +1411,7 @@ def state_source_result(
         else:
             if artifact is not None:
                 raise ValueError("失败来源更新不得提供 artifact")
+            source["artifact"] = None
             source["source_state"] = "blocked"
             issue_ids = list(source.get("issue_ids", []))
             if added_id not in issue_ids:
@@ -1154,10 +1426,92 @@ def state_source_result(
             issues_relative: ledger_bytes,
             MANIFEST_TARGET: canonical_json(manifest).encode("utf-8"),
         }
-        transaction.prepare(
-            "state", targets, inputs={}, expected_revision=revision
+        try:
+            transaction.prepare(
+                "state", targets, inputs={}, expected_revision=revision
+            )
+            transaction.commit()
+        except BaseException as error:
+            try:
+                setattr(error, "transaction_id", transaction.transaction_id)
+                setattr(error, "expected_manifest", copy.deepcopy(manifest))
+                setattr(error, "expected_issues", ledger_bytes)
+            except BaseException:
+                raise StateTransactionError(transaction.transaction_id, error) from error
+            raise
+        return transaction.transaction_id
+
+
+def _state_postconditions_match(
+    manifest_path: Path,
+    issues_path: Path,
+    transaction_id: str,
+    expected_manifest: Any,
+    expected_issues: Any,
+) -> bool:
+    if not isinstance(expected_manifest, Mapping) or not isinstance(
+        expected_issues, bytes
+    ):
+        return False
+    current = _load_json(manifest_path)
+    return (
+        current.get("last_transaction_id") == transaction_id
+        and current == expected_manifest
+        and issues_path.read_bytes() == expected_issues
+    )
+
+
+def _state_result_with_recovery(
+    repo: Path,
+    manifest_path: Path,
+    issues_path: Path,
+    source_id_value: str,
+    *,
+    artifact: Optional[Mapping[str, Any]],
+    issue_type: Optional[str] = None,
+    evidence: str = "固定 blob、SHA-256、PDF 文件头和 pdfinfo 已验证",
+) -> str:
+    try:
+        return state_source_result(
+            repo, manifest_path, issues_path, source_id_value,
+            artifact=artifact, issue_type=issue_type, evidence=evidence,
         )
-        transaction.commit()
+    except BaseException as original:
+        transaction_id = getattr(original, "transaction_id", None)
+        expected_manifest = getattr(original, "expected_manifest", None)
+        expected_issues = getattr(original, "expected_issues", None)
+        if not isinstance(transaction_id, str):
+            raise
+        try:
+            with RepoLock(repo):
+                pass
+        except BaseException:
+            raise
+        if _state_postconditions_match(
+            manifest_path, issues_path, transaction_id,
+            expected_manifest, expected_issues,
+        ):
+            return transaction_id
+        raise
+
+
+def _restore_new_target(
+    target: Path, expected_oid: str, installed_identity: Optional[tuple]
+) -> None:
+    if installed_identity is None:
+        return
+    target = Path(target)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with _directory_lock(target.parent):
+        try:
+            status = target.lstat()
+        except FileNotFoundError:
+            return
+        if (status.st_dev, status.st_ino) != installed_identity:
+            return
+        if inspect_existing(target, expected_oid) == "matching":
+            target.unlink()
+            _fsync_directory(target.parent)
 
 
 def validate_source_manifest(
@@ -1171,7 +1525,9 @@ def validate_source_manifest(
         raise ValueError("manifest sources 必须是数组")
     count = sum(
         1 for source in sources
-        if isinstance(source, Mapping) and source.get("artifact") is not None
+        if isinstance(source, Mapping)
+        and source.get("source_state") == "ready"
+        and source.get("artifact") is not None
     )
     if require_artifacts is not None and count != require_artifacts:
         raise ValueError(
@@ -1181,11 +1537,14 @@ def validate_source_manifest(
 
 
 def _materialize_command(arguments: argparse.Namespace) -> int:
+    started = time.monotonic()
+    deadline = started + arguments.deadline_seconds
     if arguments.jobs != 1:
         raise ValueError("阶段 0 materialize 要求 --jobs 1")
     manifest_path = Path(arguments.manifest)
     issues_path = Path(arguments.issues)
     manifest = _load_json(manifest_path)
+    _validate_source_artifact_semantics(manifest)
     upstream = manifest.get("upstream")
     if not isinstance(upstream, Mapping):
         raise ValueError("manifest 缺少 upstream")
@@ -1193,8 +1552,19 @@ def _materialize_command(arguments: argparse.Namespace) -> int:
     if not isinstance(commit, str) or _COMMIT_RE.fullmatch(commit) is None:
         raise ValueError("manifest upstream.commit 无效")
 
-    # This is intentionally before RepoLock and before every tracked write.
-    probe_transports(arguments.repo, commit, arguments.pdfinfo)
+    context = FetchContext(
+        commit=commit,
+        pdfinfo=arguments.pdfinfo,
+        deadline=deadline,
+        monotonic=time.monotonic,
+    )
+    # Tool/environment validation is global and precedes transport/cache/tracked writes.
+    context.pdfinfo_version = validate_pdfinfo_tool(arguments.pdfinfo, context)
+    # Preflight shares the command-entry deadline and remains before tracked writes.
+    probe_transports(
+        arguments.repo, commit, arguments.pdfinfo, context=context
+    )
+    context.check_deadline()
 
     all_sources = manifest.get("sources")
     if not isinstance(all_sources, list):
@@ -1210,21 +1580,20 @@ def _materialize_command(arguments: argparse.Namespace) -> int:
     else:
         selected = [
             source for source in all_sources
-            if isinstance(source, Mapping) and source.get("artifact") is None
+            if isinstance(source, Mapping)
+            and source.get("source_state") != "ready"
+            and source.get("artifact") is None
         ]
 
-    deadline = time.monotonic() + arguments.deadline_seconds
-    context = FetchContext(
-        commit=commit, pdfinfo=arguments.pdfinfo, deadline=deadline
-    )
-    upstream_cache = cache_directory(arguments.repo)
+    upstream_cache = cache_directory(arguments.repo, context=context)
+    project_repo = _repository_root(manifest_path.parent)
     failed = False
     for index, source in enumerate(selected):
         if time.monotonic() >= deadline:
             for unfinished in selected[index:]:
-                state_source_result(
-                    _repository_root(manifest_path.parent), manifest_path,
-                    issues_path, str(unfinished["source_id"]), artifact=None,
+                _state_result_with_recovery(
+                    project_repo, manifest_path, issues_path,
+                    str(unfinished["source_id"]), artifact=None,
                     issue_type="source-unavailable",
                     evidence="materialize 总 deadline 已到，未开始新的下载",
                 )
@@ -1240,6 +1609,7 @@ def _materialize_command(arguments: argparse.Namespace) -> int:
                     arguments.repo, item, upstream_cache, context
                 ),
                 pdfinfo=arguments.pdfinfo,
+                context=context,
             )
         except (OSError, RuntimeError, ValueError, subprocess.SubprocessError) as error:
             failed = True
@@ -1249,39 +1619,25 @@ def _materialize_command(arguments: argparse.Namespace) -> int:
                 issue_type = "source-mismatch"
             elif "pdfinfo" in message or "%PDF-" in message:
                 issue_type = "source-unreadable"
-            state_source_result(
-                _repository_root(manifest_path.parent), manifest_path,
-                issues_path, str(source["source_id"]), artifact=None,
+            _state_result_with_recovery(
+                project_repo, manifest_path, issues_path,
+                str(source["source_id"]), artifact=None,
                 issue_type=issue_type, evidence=message,
             )
             continue
 
         try:
-            project_repo = _repository_root(manifest_path.parent)
-            state_source_result(
+            _state_result_with_recovery(
                 project_repo, manifest_path, issues_path,
                 str(source["source_id"]), artifact=artifact,
             )
         except BaseException:
-            recovery_error = None
-            try:
-                with RepoLock(project_repo):
-                    pass
-            except BaseException as error:
-                recovery_error = error
-            current = _load_json(manifest_path)
-            current_source = next(
-                item for item in current.get("sources", [])
-                if item.get("source_id") == source["source_id"]
-            )
-            if current_source.get("artifact") == artifact:
-                continue
             if not existed:
-                if inspect_existing(target, str(source["git_blob_oid"])) == "matching":
-                    target.unlink(missing_ok=True)
-                    _fsync_directory(target.parent)
-            if recovery_error is not None:
-                raise recovery_error
+                _restore_new_target(
+                    target,
+                    str(source["git_blob_oid"]),
+                    getattr(artifact, "installed_identity", None),
+                )
             raise
     return 1 if failed else 0
 
