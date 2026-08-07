@@ -664,6 +664,211 @@ class ParseAnswerPointsTests(unittest.TestCase):
             self.assertIsNone(point.answer_for(2), written)
 
 
+# ------------------------------------------------- 题面重复夹具（真实卷式：legacy 无 `**解析**` 标记）
+#
+# 真题的 legacy `_含解析.md` 里，题面区常常是**多个段落**：`**题目**　…` 之后还跟着
+# 原始数据表、小问清单。`_derivation_paragraphs` 的二级判据只丢首段（以 `**题目**` 打头），
+# 其余段落被当成推导留进 `_解析正文.md`，`render_combined` 再把 `_试题.md` 的题面拼在
+# 前面 —— 同一段内容在 `_含解析.md` 里出现两遍。b03 三卷实测 5/3/6 处。
+
+DUP_QUESTIONS = """---
+title: 2098 年数学真题（试题）
+---
+
+# 2098 年测试卷
+
+## 一、解答题
+
+**1．（12 分）** 随机抽查了 $100$ 天的浓度，得下表：
+
+| 浓度 | $[0,50]$ | $(50,150]$ | $(150,475]$ |
+|:---:|:---:|:---:|:---:|
+| 低 | $32$ | $18$ | $4$ |
+| 中 | $6$ | $8$ | $12$ |
+| 高 | $3$ | $7$ | $10$ |
+
+  (1) 估计事件"该天浓度不超过 $150$"的概率；
+
+  (2) 根据所给数据，完成下面的列联表：
+
+**2．（12 分）** 已知函数 $f(x)=(x-1)\\mathrm e^{x}$。
+
+  (1) 讨论 $f(x)$ 的单调性；
+
+  (2) 证明：$f(x)$ 有一个零点．
+"""
+
+DUP_ANSWERS = """---
+title: 2098 年数学真题（答案要点）
+---
+
+# 2098 年测试卷 · 答案要点
+
+## 一、解答题
+
+**1．** 频率估计
+
+> **(1) 答案：$0.64$**
+>
+> **(2) 证明要点**：按前两列合并即可。
+
+**2．** 导数
+
+> **(1) 答案：增于 $(0,+\\infty)$**
+>
+> **(2) 证明要点**：由单调性与端点符号可得。
+"""
+
+# 注意：本夹具**故意不写** `**解析**` 标记 —— 这正是 b03 三卷 legacy 文件的形态，
+# 也是一级判据（标记即权威边界）失效、二级判据必须兜住的场景。
+DUP_COMBINED = """---
+title: 2098 年数学真题（逐题解析）
+---
+
+# 2098 年测试卷 · 逐题解析
+
+## 一、解答题
+
+### 第 1 题（12 分）
+
+**题目**　随机抽查了 $100$ 天的浓度，得下表：
+
+| 浓度 | $[0,50]$ | $(50,150]$ | $(150,475]$ |
+|:---:|:---:|:---:|:---:|
+| 低 | $32$ | $18$ | $4$ |
+| 中 | $6$ | $8$ | $12$ |
+| 高 | $3$ | $7$ | $10$ |
+
+  (1) 估计"该天浓度不超过 $150$"的概率；(2) 完成列联表。
+
+---
+
+**(1) 解**
+
+前两列相加得 $32+18+6+8=64$，故概率为 $0.64$。
+
+**(2) 解**
+
+把 $(50,150]$ 并进 $[0,150]$ 即可，过程从略。
+
+---
+
+### 第 2 题（12 分）
+
+**题目**　已知函数 $f(x)=(x-1)\\mathrm e^{x}$。
+
+  (1) 讨论 $f(x)$ 的单调性；
+
+  (2) 证明：$f(x)$ 有一个零点．
+
+  (2) 证明：$f(x)$ 有一个零点。
+
+**(1) 解**
+
+求导得 $f'(x)=x\\mathrm e^{x}$，故减于 $(-\\infty,0)$、增于 $(0,+\\infty)$。
+
+**(2) 解**
+
+由 $f(0)=-1<0$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$ 得唯一零点。
+"""
+
+
+def _long_line_duplicates(rendered, threshold=40):
+    """逐题块统计「同一长行出现多于一次」的行。
+
+    阈值挡掉 `|:---:|:---:|` 这类天然重复的表格分隔行；跨题块不比较，因为不同题里
+    出现同一句话是正常的，我们要抓的是**同一题内题面被复述两遍**。
+    """
+    duplicates = []
+    for block in solution_sources.parse_question_blocks(rendered, style="heading"):
+        seen = {}
+        for line in block.body.split("\n"):
+            stripped = line.strip()
+            if len(stripped) < threshold:
+                continue
+            seen[stripped] = seen.get(stripped, 0) + 1
+        duplicates.extend(
+            f"第 {block.number} 题 ×{count}：{text[:60]}"
+            for text, count in seen.items() if count > 1
+        )
+    return duplicates
+
+
+class QuestionStemDuplicationTests(unittest.TestCase):
+    """题面段落不得随提取混进 `_解析正文.md`，判据只许**逐字相等**。"""
+
+    def setUp(self):
+        self.body = extract_solution_blocks(DUP_COMBINED, DUP_QUESTIONS)
+
+    def test_drops_the_original_data_table_copied_from_the_question(self):
+        self.assertNotIn("| 低 | $32$ | $18$ | $4$ |", self.body)
+        self.assertNotIn("| 浓度 | $[0,50]$ | $(50,150]$ | $(150,475]$ |", self.body)
+
+    def test_drops_subpart_lines_copied_verbatim_from_the_question(self):
+        self.assertNotIn("  (1) 讨论 $f(x)$ 的单调性；", self.body)
+        self.assertNotIn("  (2) 证明：$f(x)$ 有一个零点．", self.body)
+
+    def test_keeps_paragraphs_that_merely_resemble_the_question(self):
+        """反向哨兵：相似但**不逐字相等**的段落必须原样保留。"""
+        # 浓缩版小问行（把两问并成一行，措辞也改了）
+        self.assertIn('  (1) 估计"该天浓度不超过 $150$"的概率；(2) 完成列联表。', self.body)
+        # 只差一个句号形态（`。` vs `．`）的近似行
+        self.assertIn("  (2) 证明：$f(x)$ 有一个零点。", self.body)
+
+    def test_keeps_every_derivation_paragraph(self):
+        for kept in (
+            "前两列相加得 $32+18+6+8=64$，故概率为 $0.64$。",
+            "把 $(50,150]$ 并进 $[0,150]$ 即可，过程从略。",
+            "求导得 $f'(x)=x\\mathrm e^{x}$，故减于 $(-\\infty,0)$、增于 $(0,+\\infty)$。",
+            "由 $f(0)=-1<0$ 与 $x\\to+\\infty$ 时 $f\\to+\\infty$ 得唯一零点。",
+        ):
+            self.assertIn(kept, self.body)
+
+    def test_rendered_combined_has_no_duplicated_long_lines(self):
+        rendered = render_combined(DUP_QUESTIONS, self.body, DUP_ANSWERS)
+        self.assertEqual(_long_line_duplicates(rendered), [])
+
+    def test_extraction_stays_idempotent(self):
+        self.assertEqual(extract_solution_blocks(self.body, DUP_QUESTIONS), self.body)
+        rendered = render_combined(DUP_QUESTIONS, self.body, DUP_ANSWERS)
+        self.assertEqual(extract_solution_blocks(rendered, DUP_QUESTIONS), self.body)
+
+    def test_never_drops_thematic_breaks_even_inside_the_stem_region(self):
+        """`---` 是结构不是内容，与题面逐字相等也不许剥除。
+
+        真实语料里 11 卷共 73 处 `---` 与所在题的题面段落逐字相等（章末分隔线），
+        它们同时是解析的分节结构。把「逐字相等」无差别地套到分隔线上，会让每卷的
+        分节静默塌掉——而漏留一条分隔线最多是多一条 `<hr>`。方向只留一个。
+        """
+        questions = (
+            "# 卷\n\n## 一、解答题\n\n**1．（12 分）** 已知 $f(x)$。\n\n"
+            "  (1) 求 $f(1)$；\n\n  (2) 求 $f(2)$。\n\n---\n"
+        )
+        combined = (
+            "# 卷\n\n### 第 1 题（12 分）\n\n**题目**　已知 $f(x)$。\n\n"
+            "  (1) 求 $f(1)$；\n\n---\n\n**(1) 解**\n\n第一问。\n\n---\n\n"
+            "**(2) 解**\n\n第二问。\n"
+        )
+        body = extract_solution_blocks(combined, questions)
+        self.assertNotIn("  (1) 求 $f(1)$；", body)   # 题面续段照剥
+        self.assertEqual(body.count("---"), 2)         # 两条分节线一条不少
+        self.assertIn("第一问。", body)
+        self.assertIn("第二问。", body)
+
+    def test_without_question_text_behaviour_is_unchanged(self):
+        """不传 `_试题.md` 时退化为旧行为 —— 保证既有调用点与测试不受影响。
+
+        顺带证明上面那条「零重复」断言**有牙齿**：同一夹具走旧路径必然重复，
+        否则「零重复」可能只是因为检测器根本抓不到东西。
+        """
+        legacy = extract_solution_blocks(DUP_COMBINED)
+        self.assertIn("| 低 | $32$ | $18$ | $4$ |", legacy)
+        self.assertNotEqual(
+            _long_line_duplicates(render_combined(DUP_QUESTIONS, legacy, DUP_ANSWERS)),
+            [],
+        )
+
+
 class ValidateSolutionBodyTests(unittest.TestCase):
     def test_rejects_a_copied_question_statement(self):
         body = extract_solution_blocks(COMBINED)

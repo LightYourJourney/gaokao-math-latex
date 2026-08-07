@@ -54,7 +54,9 @@ import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Mapping, Optional, Sequence, Set, Tuple
+from typing import (
+    AbstractSet, Any, Dict, FrozenSet, List, Mapping, Optional, Sequence, Set, Tuple,
+)
 
 from manifest import atomic_write_json, canonical_json, file_sha256, load_manifest
 from transaction import RepoLock, Transaction
@@ -482,7 +484,9 @@ def _is_solution_marker(paragraph: str) -> bool:
     return paragraph.split("\n", 1)[0].strip().startswith(SOLUTION_MARKER)
 
 
-def _derivation_paragraphs(body: str) -> List[str]:
+def _derivation_paragraphs(
+    body: str, stem_paragraphs: AbstractSet[str] = frozenset()
+) -> List[str]:
     """取出一题的详细推导段落，丢掉题面复述与显式最终答案块。
 
     两级边界：
@@ -492,8 +496,19 @@ def _derivation_paragraphs(body: str) -> List[str]:
        只靠逐段识别是分不干净的，所以规范标记必须是权威边界。
     2. 没有规范标记时（真题里 `**解析要点**`、`**(1) 解**` 和直接的 `#### (1)`
        都出现过，把任何一种当成必需标记都会让绝大多数解答题无法提取），退化为逐段
-       识别：丢掉题面复述段及其紧随的纯图片段。题面配图总是紧跟题面复述、由
-       `_试题.md` 拥有；推导中间引用的图片不在这个位置，不会被误删。
+       识别：丢掉题面复述段及其紧随的**题面区续段**——纯图片段，以及与 `_试题.md`
+       同题段落**逐字相等**的段（原始数据表、小问清单）。
+
+    `stem_paragraphs` 是该题在 `_试题.md` 里的段落集合（已 `strip()`）。判定只用
+    **逐字相等**，不用相似度/前缀：题面区之后就是推导，把一段"看着像题面"的推导删掉
+    就是内容丢失，而漏删一段只是冗余。留一条错的方向，不留两条。
+
+    分隔线是唯一的例外，**永不剥除**：真实语料里 73 处 `---` 既是章末分隔线（故与题面
+    逐字相等）、又是解析的分节结构，按内容规则删掉会让每卷的分节静默塌掉。
+
+    只在题面复述之后的连续区间内判定（与图片同一个开关），一碰到既非图片、又不与题面
+    逐字相等的段落就退出该区间。推导中途若恰好复述了一句题面，属于作者的行文选择，
+    不在此处删——那已经越过"题面区"的边界了。
     """
     paragraphs = _paragraphs(body)
     for index, paragraph in enumerate(paragraphs):
@@ -502,19 +517,35 @@ def _derivation_paragraphs(body: str) -> List[str]:
             break
 
     kept: List[str] = []
-    skipping_figures = False
+    in_stem_region = False
     for paragraph in paragraphs:
         stripped = paragraph.strip()
         if _is_answer_paragraph(stripped):
             continue
         if _is_question_restatement(stripped):
-            skipping_figures = True
+            in_stem_region = True
             continue
-        if skipping_figures and _IMAGE_PARAGRAPH.match(stripped) is not None:
+        is_stem_copy = (
+            stripped in stem_paragraphs
+            and _THEMATIC_BREAK.match(stripped) is None
+        )
+        if in_stem_region and (
+            _IMAGE_PARAGRAPH.match(stripped) is not None or is_stem_copy
+        ):
             continue
-        skipping_figures = False
+        in_stem_region = False
         kept.append(paragraph)
     return kept
+
+
+def _question_stem_paragraphs(questions_text: str) -> Dict[int, FrozenSet[str]]:
+    """题号 → 该题在 `_试题.md` 里的段落集合（已 `strip()`），供逐字相等判定。"""
+    return {
+        block.number: frozenset(
+            paragraph.strip() for paragraph in _paragraphs(block.body)
+        )
+        for block in parse_question_blocks(questions_text)
+    }
 
 
 def _join_segments(segments: Sequence[str]) -> str:
@@ -527,9 +558,11 @@ def _heading(number: int, title: str) -> str:
     return f"### 第 {number} 题{title}"
 
 
-def _canonical_derivation(body: str) -> str:
+def _canonical_derivation(
+    body: str, stem_paragraphs: AbstractSet[str] = frozenset()
+) -> str:
     """把一题的正文规范成「`**解析**` 打头的详细推导」。"""
-    paragraphs, separator = _canonical_derivation_parts(body)
+    paragraphs, separator = _canonical_derivation_parts(body, stem_paragraphs)
     if separator is not None:
         paragraphs = paragraphs + [separator]
     return "\n\n".join(paragraphs)
@@ -550,13 +583,15 @@ def _peel_trailing_separator(text: str) -> Tuple[str, Optional[str]]:
     return text, None
 
 
-def _canonical_derivation_parts(body: str) -> Tuple[List[str], Optional[str]]:
+def _canonical_derivation_parts(
+    body: str, stem_paragraphs: AbstractSet[str] = frozenset()
+) -> Tuple[List[str], Optional[str]]:
     """返回（`**解析**` 打头的推导段落，题末分隔线或 None）。
 
     分隔线被单独摘出来，好让 `render_combined` 把它放回生成答案块**之后**——它隔开的
     是两道题，不是解析与答案。
     """
-    paragraphs = _derivation_paragraphs(body)
+    paragraphs = _derivation_paragraphs(body, stem_paragraphs)
     separator: Optional[str] = None
     if paragraphs and _THEMATIC_BREAK.match(paragraphs[-1].strip()) is not None:
         separator = paragraphs[-1].strip()
@@ -566,19 +601,27 @@ def _canonical_derivation_parts(body: str) -> Tuple[List[str], Optional[str]]:
     return paragraphs, separator
 
 
-def extract_solution_blocks(combined: str) -> str:
+def extract_solution_blocks(combined: str, questions_text: Optional[str] = None) -> str:
     """从 `_含解析.md` 提取规范的 `_解析正文.md` 文本。
 
     每题固定输出 `### 第 N 题（原解析标题）` + `**解析**` + 原详细推导；
-    独立的题面复述（含紧随其后的题面配图）与显式最终答案块一律丢弃。
-    对已经规范的 `_解析正文.md` 再跑一次是恒等变换。
+    独立的题面复述（含紧随其后的题面配图与**与试题逐字相等的题面续段**）
+    与显式最终答案块一律丢弃。对已经规范的 `_解析正文.md` 再跑一次是恒等变换。
+
+    `questions_text` 给出 `_试题.md` 全文时才能识别题面续段（原始数据表、小问清单）。
+    省略它就退化成旧行为：只丢 `**题目**` 那一段，续段会漏进解析正文，`render_combined`
+    再把试题题面拼在前面，同一段内容在 `_含解析.md` 里出现两遍。生产路径
+    （`build_paper_targets`）一律传；留出可省是为了不惊动只关心单文档规范化的调用方。
     """
+    stems = _question_stem_paragraphs(questions_text) if questions_text else {}
     segments: List[str] = []
     for block in parse_question_blocks(combined, style="heading"):
         if block.lead:
             segments.append(block.lead)
         segments.append(_heading(block.number, block.title))
-        segments.append(_canonical_derivation(block.body))
+        segments.append(
+            _canonical_derivation(block.body, stems.get(block.number, frozenset()))
+        )
     return _join_segments(segments)
 
 
@@ -745,7 +788,7 @@ def build_paper_targets(repo_root: Path, sources: PaperSources) -> Dict[str, byt
                     f"解析正文与含解析都不存在，无法提取：{sources.solution_body}"
                 )
             raw = _read_text(combined_path)
-        solution_text = extract_solution_blocks(raw)
+        solution_text = extract_solution_blocks(raw, questions_text)
         combined_text = render_combined(questions_text, solution_text, answer_text)
         count = len(parse_question_blocks(solution_text, style="heading"))
         if count != sources.question_count:
