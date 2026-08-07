@@ -34,7 +34,13 @@ if [ -n "$YEAR" ]; then dirs="$ROOT/$YEAR"; else dirs=$(find "$ROOT" -maxdepth 1
 
 for d in $dirs; do
   [ -d "$d" ] || continue
-  found=$(find "$d" -maxdepth 1 -name "*_数学真题_*.md" | sort)
+  # 只转换对外三件套。`_解析正文.md` 是内部唯一规范源（详细推导），由
+  # tools/solution_sources.py 生成与消费，不面向读者，显式排除以免多出一份 PDF/Word。
+  found=$(find "$d" -maxdepth 1 \
+    \( -name "*_数学真题*_试题.md" \
+    -o -name "*_数学真题*_答案要点.md" \
+    -o -name "*_数学真题*_含解析.md" \) \
+    ! -name "*_解析正文.md" | sort)
   [ -z "$found" ] && continue
   echo "== $(basename "$d") =="
   echo "$found" | while read -r f; do convert_one "$f"; done
