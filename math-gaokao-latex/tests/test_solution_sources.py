@@ -92,9 +92,7 @@ title: 2099 年数学真题（答案要点）
 >
 > 代入即可。
 >
-> **(2) 答案：$f$ 在 $\\mathbf R$ 上单调递增**
->
-> 求导后判号。
+> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。
 """
 
 COMBINED = """---
@@ -413,6 +411,24 @@ class ParseQuestionBlocksTests(unittest.TestCase):
         with self.assertRaises(SolutionSourceError):
             parse_question_blocks(COMBINED, style="setext")
 
+    def test_heading_style_accepts_a_bold_subpart_anchor(self):
+        # 真题里解答题常写成 `**(1) 解**` 而不是 `#### (1) …`，两者都是小问锚点。
+        text = (
+            "### 第 17 题（解三角形）\n\n**解析**\n\n**(1) 解**\n\n由正弦定理。\n\n"
+            "**(2) 解**\n\n由余弦定理。\n"
+        )
+        self.assertEqual(parse_question_blocks(text)[0].subparts, (1, 2))
+
+    def test_an_unnumbered_subheading_is_content_not_structure(self):
+        # `#### 先算清折叠前后的所有长度` 属当前作用域的内容，不改变小问集合。
+        text = (
+            "### 第 18 题（立体几何）\n\n**解析**\n\n#### (1) 证明垂直\n\n甲。\n\n"
+            "#### 先算清折叠前后的所有长度\n\n乙。\n\n#### (2) 求二面角\n\n丙。\n"
+        )
+        block = parse_question_blocks(text)[0]
+        self.assertEqual(block.subparts, (1, 2))
+        self.assertIn("#### 先算清折叠前后的所有长度", block.body)
+
     def test_reads_a_title_that_is_not_wrapped_in_parentheses(self):
         text = "### 第 22 题　〔坐标系与参数方程〕\n\n**解析**\n\n消参。\n"
         block = parse_question_blocks(text)[0]
@@ -441,6 +457,24 @@ class ParseAnswerPointsTests(unittest.TestCase):
         self.assertEqual(points[3].subparts, (1, 2))
         self.assertEqual(points[3].answers[0], (1, "$f(1)=2$"))
 
+    def test_a_bold_anchor_without_an_answer_still_counts_as_a_subpart(self):
+        # 证明类小问写作 `**(2) 证明要点**：…`，没有最终答案块，但小问确实存在。
+        point = {item.number: item for item in parse_answer_points(ANSWERS)}[3]
+        self.assertEqual(point.subparts, (1, 2))
+        self.assertEqual([key for key, _ in point.answers], [1])
+
+    def test_recognises_the_whole_anchor_family(self):
+        original = "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。"
+        for anchor in (
+            "**(2) 答案：$x>0$**", "**(2) 证明**：略。", "**(2) 证明要点**：略。",
+            "**(2) 解**", "**(2)** 直接计算。", "**（2）思路**：略。",
+        ):
+            point = {
+                item.number: item
+                for item in parse_answer_points(ANSWERS.replace(original, "> " + anchor))
+            }[3]
+            self.assertEqual(point.subparts, (1, 2), anchor)
+
     def test_ignores_the_lookup_table_in_the_preamble(self):
         self.assertEqual(len(parse_answer_points(ANSWERS)), 3)
 
@@ -458,11 +492,20 @@ class ParseAnswerPointsTests(unittest.TestCase):
             parse_answer_points(text)
         self.assertIn("无法唯一识别答案块", str(caught.exception))
 
-    def test_rejects_subpart_answers_that_skip_the_first_subpart(self):
+    def test_rejects_subparts_that_skip_the_first_subpart(self):
         text = ANSWERS.replace("> **(1) 答案：$f(1)=2$**\n>\n> 代入即可。\n>\n", "")
         with self.assertRaises(SolutionSourceError) as caught:
             parse_answer_points(text)
-        self.assertIn("连续升序", str(caught.exception))
+        self.assertIn("从 1 开始", str(caught.exception))
+
+    def test_rejects_two_answer_blocks_for_one_subpart(self):
+        text = ANSWERS.replace(
+            "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。",
+            "> **(1) 答案：$f(1)=3$**\n>\n> **(2) 答案：单调递增**",
+        )
+        with self.assertRaises(SolutionSourceError) as caught:
+            parse_answer_points(text)
+        self.assertIn("无法唯一识别答案块", str(caught.exception))
 
     def test_rejects_two_subpart_numbers_on_one_answer_block(self):
         text = ANSWERS.replace("> **(1) 答案：$f(1)=2$**", "> **(1) 答案（2）：$f(1)=2$**")
@@ -495,6 +538,13 @@ class RenderCombinedTests(unittest.TestCase):
         block = rendered.split("### 第 1 题（集合运算）")[1].split("### 第 2 题")[0]
         self.assertLess(block.index("**题目**"), block.index("**解析**"))
         self.assertLess(block.index("**解析**"), block.index("**答案：A**"))
+
+    def test_a_proof_subpart_gets_the_repo_placeholder_not_a_fabricated_answer(self):
+        rendered = render_combined(QUESTIONS, self.solution, ANSWERS)
+        self.assertIn("**答案（1）：$f(1)=2$**", rendered)
+        self.assertIn("**答案（2）：见解析版**", rendered)
+        # 证明要点的原文属于答案要点，不得被搬进展示文档冒充最终答案。
+        self.assertNotIn("求导后判号，$f'(x)>0$ 恒成立。", rendered)
 
     def test_final_answers_come_only_from_the_answer_key(self):
         answers = ANSWERS.replace("> **答案：A**", "> **答案：D**")
@@ -538,7 +588,7 @@ class RenderCombinedTests(unittest.TestCase):
     def test_rejects_an_answer_key_whose_subparts_differ_from_the_questions(self):
         answers = ANSWERS.replace(
             "> **(1) 答案：$f(1)=2$**\n>\n> 代入即可。\n>\n"
-            "> **(2) 答案：$f$ 在 $\\mathbf R$ 上单调递增**",
+            "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。",
             "> **答案：见推导**",
         )
         with self.assertRaises(SolutionSourceError) as caught:

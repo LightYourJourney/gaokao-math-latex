@@ -14,14 +14,26 @@
 
 Markdown 约定（两种题号写法，解析器自动识别，`### 第 N 题` 优先）：
 
-- heading 式：`### 第 N 题（标题）`，小问用 `#### (k) 小标题`；`_解析正文.md`
-  与 `_含解析.md` 使用这一式。
-- inline 式：`**N．（12 分）** 题面……`，小问用行首 `(k) ……`；`_试题.md`
-  与 `_答案要点.md` 使用这一式。
+- heading 式：`### 第 N 题（标题）`；`_解析正文.md` 与 `_含解析.md` 使用这一式。
+- inline 式：`**N．（12 分）** 题面……`；`_试题.md` 与 `_答案要点.md` 使用这一式。
 
-段落约定：以空行分段，段内原样保留。只有**单行且以加粗答案块开头**的段落
-（`**答案：X**`、`**答案（k）：X**`，允许 `**答案：$4$**（约 $11.85$）这类尾注）
-才是提取边界——证明正文里出现「答案」二字不会被误删。
+小问集合走**锚点制**，成员资格与「有没有最终答案」解耦：
+
+- 试题：行首 `(k) ……`；
+- 解析正文 / 含解析：`#### (k) 小标题`，或独立加粗锚点 `**(k) 解**`（真题里解答题
+  常这样写而根本没有 `####` 小标题）。无编号的 `#### 先算清…` 属当前作用域的内容，
+  不改变小问集合；
+- 答案要点：任意独立加粗 `(k)` 块——`**(k) 答案：…**`、`**(k) 证明**：、
+  `**(k) 证明要点**：、`**(k) 解**`、`**(k)** …` 同族（语义同
+  make_short_answers.py 的 SUB_ANY）。
+
+**最终答案的边界与小问锚点无关**：只有**单行且以加粗答案块开头**的段落
+（`**答案：X**`、`**(k) 答案：X**`、`**答案（k）：X**`，允许
+`**答案：$4$**（约 $11.85$）` 这类尾注）才携带最终答案，才是提取边界——证明正文里
+出现「答案」二字不会被误删。证明类小问「有锚点、无最终答案」是合法状态，生成展示
+文档时用 `见解析版` 占位，**绝不编造答案**。
+
+段落约定：以空行分段，段内原样保留。
 """
 from __future__ import annotations
 
@@ -45,6 +57,9 @@ REPORT_VERSION = 1
 
 QUESTION_MARKER = "**题目**"
 SOLUTION_MARKER = "**解析**"
+# 证明类小问没有最终答案时的诚实占位，沿用 make_short_answers.py 的 SEE_SOL 惯例。
+# 绝不为这类小问编造答案，也不把答案要点里「证明要点：…」的推导原文搬来冒充结论。
+SEE_SOLUTION = "见解析版"
 
 # 标题后缀连分隔符一起原样保留：真题里既有 `第 1 题（集合运算）`，也有
 # `第 22 题　〔坐标系与参数方程〕`。只认圆括号会让后者整块不被识别，而未被识别的
@@ -54,6 +69,10 @@ _INLINE_QUESTION = re.compile(r"^\*\*(\d+)．(.*?)\*\*(.*)$")
 _ATX_HEADING = re.compile(r"^(#{1,6}) ")
 _HEADING_SUBPART = re.compile(r"^####[ \t]*[（(](\d+)[）)]")
 _INLINE_SUBPART = re.compile(r"^[ \t　]*[（(](\d+)[）)][ \t　]")
+# 小问锚点：任意独立加粗 `(k)` 块。真题里 `**(1) 答案：…**`、`**(1) 证明**：`、
+# `**(1) 证明要点**：`、`**(1) 解**`、`**(1)** 直接计算` 都在标记「第 k 问存在」，
+# 而只有其中的答案块才携带最终答案。语义同 make_short_answers.py 的 SUB_ANY。
+_SUBPART_ANCHOR = re.compile(r"^\*\*[（(](\d+)[）)]")
 _BLOCKQUOTE_PREFIX = re.compile(r"^(?:[ \t]*>)+[ \t]?")
 _PARAGRAPH_SPLIT = re.compile(r"\n(?:[ \t　]*\n)+")
 _IMAGE_PARAGRAPH = re.compile(r"^!\[[^\]]*\]\([^)\s]*\)$")
@@ -87,12 +106,17 @@ class QuestionBlock:
 @dataclass(frozen=True)
 class AnswerPoint:
     number: int
-    # (小问号或 None, 答案文本)；None 表示整题只有一个最终答案。
+    # 锚点制小问集合：任意独立加粗 (k) 块都算，不要求它携带最终答案。
+    subparts: Tuple[int, ...]
+    # (小问号或 None, 最终答案文本)；None 表示整题只有一个最终答案。
+    # 证明类小问不会出现在这里——它有锚点但没有最终答案，这是合法状态。
     answers: Tuple[Tuple[Optional[int], str], ...]
 
-    @property
-    def subparts(self) -> Tuple[int, ...]:
-        return tuple(key for key, _ in self.answers if key is not None)
+    def answer_for(self, subpart: Optional[int]) -> Optional[str]:
+        for key, value in self.answers:
+            if key == subpart:
+                return value
+        return None
 
 
 @dataclass(frozen=True)
@@ -148,24 +172,34 @@ def _terminates_block(style: str, line: str) -> bool:
     return len(match.group(1)) <= 3 if style == "heading" else True
 
 
-def _subparts(style: str, lines: Sequence[str]) -> Tuple[int, ...]:
-    """取本题的小问集合。
+def _contiguous_subparts(found: Sequence[int]) -> Tuple[int, ...]:
+    """去重排序并要求是 1..k。
 
-    同一小问可以拆成多段标题（真题里 `#### (2) ①` 与 `#### (2) ②` 常见），
-    因此只要求编号非递减、去重后是从 1 开始的连续升序。
+    同一小问可以由多个锚点标记（`#### (2) ①` 与 `#### (2) ②`，或 `#### (2)` 之后
+    再出现 `**(2)**` 回指），故只看去重后的集合，不约束锚点出现顺序。
     """
-    pattern = _HEADING_SUBPART if style == "heading" else _INLINE_SUBPART
-    found: List[int] = []
-    for line in lines:
-        match = pattern.match(line)
-        if match is not None:
-            found.append(int(match.group(1)))
-    if found != sorted(found):
-        raise SolutionSourceError(f"小问编号必须非递减，实际 {found}")
     distinct = tuple(sorted(set(found)))
     if distinct and distinct != tuple(range(1, len(distinct) + 1)):
         raise SolutionSourceError(f"小问编号必须是从 1 开始的连续整数，实际 {distinct}")
     return distinct
+
+
+def _subparts(style: str, lines: Sequence[str]) -> Tuple[int, ...]:
+    """取本题的小问集合（锚点制）。
+
+    heading 式除 `#### (k) …` 小标题外，还认独立加粗锚点 `**(k) …**`——真题里
+    解答题常写成 `**(1) 解**` 而根本没有 `####` 小标题。无编号的 `#### 先算清…`
+    属当前作用域的内容，不改变小问集合。
+    """
+    found: List[int] = []
+    for line in lines:
+        if style == "heading":
+            match = _HEADING_SUBPART.match(line) or _SUBPART_ANCHOR.match(line.strip())
+        else:
+            match = _INLINE_SUBPART.match(line)
+        if match is not None:
+            found.append(int(match.group(1)))
+    return _contiguous_subparts(found)
 
 
 def parse_question_blocks(
@@ -229,36 +263,54 @@ def parse_question_blocks(
 
 
 def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
-    """从 `_答案要点.md` 取出逐题最终答案。"""
+    """从 `_答案要点.md` 取出小问集合与逐题最终答案。
+
+    小问集合走**锚点制**：任意独立加粗 `(k)` 块都算小问存在的证据。最终答案的边界
+    不变——仍然只有独立加粗答案块才是最终答案。证明类小问「有锚点、无答案」是合法
+    状态，不得因此报错，更不得为它编造一个答案。
+    """
     points: List[AnswerPoint] = []
     for block in parse_question_blocks(text, style="inline"):
+        anchors: List[int] = []
         answers: List[Tuple[Optional[int], str]] = []
         for line in block.body.split("\n"):
-            match = _ANSWER_LINE.match(_strip_quote(line).strip())
+            stripped = _strip_quote(line).strip()
+            anchor = _SUBPART_ANCHOR.match(stripped)
+            if anchor is not None:
+                anchors.append(int(anchor.group(1)))
+            match = _ANSWER_LINE.match(stripped)
             if match is None:
                 continue
             pre, post = match.group("pre"), match.group("post")
             if pre is not None and post is not None:
                 raise SolutionSourceError(
-                    f"第 {block.number} 题的答案块同时写了两处小问号：{line.strip()}"
+                    f"第 {block.number} 题的答案块同时写了两处小问号：{stripped}"
                 )
             key = pre if pre is not None else post
             answers.append((
                 int(key) if key is not None else None,
                 match.group("value").strip(),
             ))
-        if not answers:
-            raise SolutionSourceError(f"第 {block.number} 题没有可识别的加粗答案块")
+
         keys = [key for key, _ in answers]
-        if None in keys and len(keys) > 1:
+        # 自带小问号的答案块本身也是锚点（含本工具生成的 `**答案（k）：X**` 写法）。
+        subparts = _contiguous_subparts(
+            anchors + [key for key in keys if key is not None]
+        )
+        if not subparts and not answers:
+            raise SolutionSourceError(f"第 {block.number} 题没有可识别的加粗答案块")
+        if None in keys and (len(keys) > 1 or subparts):
             raise SolutionSourceError(
                 f"第 {block.number} 题混用了整题答案与小问答案，无法唯一识别答案块"
             )
-        if None not in keys and keys != list(range(1, len(keys) + 1)):
+        duplicates = sorted({key for key in keys if keys.count(key) > 1})
+        if duplicates:
             raise SolutionSourceError(
-                f"第 {block.number} 题的小问答案编号必须是从 1 开始的连续升序，实际 {keys}"
+                f"第 {block.number} 题的小问 {duplicates} 有多个答案块，无法唯一识别答案块"
             )
-        points.append(AnswerPoint(number=block.number, answers=tuple(answers)))
+        points.append(AnswerPoint(
+            number=block.number, subparts=subparts, answers=tuple(answers)
+        ))
     return tuple(points)
 
 
@@ -374,10 +426,14 @@ def _aligned(label: str, expected: Set[int], actual: Set[int]) -> None:
 
 
 def _render_answer_paragraphs(point: AnswerPoint) -> List[str]:
+    """按小问集合逐个生成答案块；没有最终答案的小问用诚实占位，不编造。"""
+    if not point.subparts:
+        return [f"**答案：{point.answers[0][1]}**"]
     rendered: List[str] = []
-    for key, value in point.answers:
+    for subpart in point.subparts:
+        value = point.answer_for(subpart)
         rendered.append(
-            f"**答案：{value}**" if key is None else f"**答案（{key}）：{value}**"
+            "**答案（{0}）：{1}**".format(subpart, SEE_SOLUTION if value is None else value)
         )
     return rendered
 
