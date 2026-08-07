@@ -68,6 +68,9 @@ _MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
 # 规范工程根目录由 manifest 目标路径固定，迁移时不另行猜测。
 PROJECT_RELATIVE = PurePosixPath(MANIFEST_TARGET).parent.as_posix()
+# 兼容 index 与问题总账各自只有一份规范路径；与 MANIFEST_TARGET 一起钉死事务目标。
+INDEX_TARGET = PROJECT_RELATIVE + "/index.json"
+ISSUES_TARGET = PROJECT_RELATIVE + "/missing-issues.md"
 SOURCE_STATES = ("not_started", "ready", "blocked", "non_paper")
 PAPER_RELATIONS = ("canonical", "exact_duplicate", "semantic_duplicate")
 PRODUCTION_STATES = (
@@ -2074,12 +2077,22 @@ def _migrate_legacy_index_command(arguments: argparse.Namespace) -> int:
     output_index_path = Path(arguments.output_index)
     root = _repository_root(manifest_path.parent)
     manifest_relative = _relative_to_repo(root, output_manifest_path)
-    if manifest_relative != MANIFEST_TARGET:
-        raise ValueError(
-            f"--output-manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
-        )
     index_relative = _relative_to_repo(root, output_index_path)
     issues_relative = _relative_to_repo(root, issues_path)
+    # 三个 tracked 目标全部钉死在规范路径：既不许把投影写到任意仓库文件，
+    # 也不许用非规范的问题总账副本去推导 paper 的 issue_ids。
+    for relative, expected, option in (
+        (manifest_relative, MANIFEST_TARGET, "--output-manifest"),
+        (index_relative, INDEX_TARGET, "--output-index"),
+        (issues_relative, ISSUES_TARGET, "--issues"),
+    ):
+        if relative != expected:
+            raise ValueError(f"{option} 必须是 {expected}，实际 {relative}")
+    # targets 是以路径为键的字典：任意两个目标同名都会静默吞掉一次写入，
+    # 而 transaction.py 的 manifest 唯一性检查看不到被字典去重掉的那一个。
+    relatives = [index_relative, issues_relative, manifest_relative]
+    if len(set(relatives)) != len(relatives):
+        raise ValueError(f"事务目标路径必须两两不同：{relatives}")
 
     with RepoLock(root):
         manifest = _load_json(manifest_path)

@@ -18,6 +18,7 @@ from issues import load_issues
 from manifest import canonical_json, file_sha256, load_manifest, project_index
 from schema_validate import SchemaError, validate
 from transaction import MANIFEST_TARGET
+import source_manifest as source_manifest_module
 from source_manifest import (
     BATCH_STATUSES,
     LEGACY_PAPERS,
@@ -806,15 +807,70 @@ class MigrateCommandTests(unittest.TestCase):
             self.assertEqual((project / "index.json").read_bytes(), index_before)
             self.assertEqual(issues_path.read_bytes(), issues_before)
 
-    def test_command_requires_the_canonical_manifest_output_path(self):
+    def test_transaction_target_paths_are_pinned_and_pairwise_distinct(self):
+        pinned = [
+            MANIFEST_TARGET,
+            source_manifest_module.INDEX_TARGET,
+            source_manifest_module.ISSUES_TARGET,
+        ]
+        self.assertEqual(pinned[1], "math-gaokao-latex/index.json")
+        self.assertEqual(
+            pinned[2], "math-gaokao-latex/missing-issues.md"
+        )
+        self.assertEqual(len(set(pinned)), 3)
+
+    def test_command_requires_the_three_canonical_target_paths(self):
+        cases = {
+            "--output-manifest": (MANIFEST_TARGET, "copy-manifest.json"),
+            "--output-index": (
+                "math-gaokao-latex/index.json", "copy-index.json"
+            ),
+            "--issues": (
+                "math-gaokao-latex/missing-issues.md", "copy-issues.md",
+            ),
+        }
         with tempfile.TemporaryDirectory() as tmp:
             repo, project = fixture_repository(tmp)
+            before = {
+                name: (project / name).read_bytes()
+                for name in ("source-manifest.json", "index.json", "missing-issues.md")
+            }
+            for option, (expected, replacement) in cases.items():
+                arguments = migrate_arguments(project)
+                decoy = project / replacement
+                decoy.write_bytes((project / "missing-issues.md").read_bytes())
+                arguments[arguments.index(option) + 1] = str(decoy)
+                with self.subTest(option=option):
+                    with self.assertRaisesRegex(ValueError, re.escape(expected)):
+                        main(arguments)
+                    for name, value in before.items():
+                        self.assertEqual((project / name).read_bytes(), value, name)
+                    self.assertEqual(
+                        decoy.read_bytes(),
+                        (project / "missing-issues.md").read_bytes(),
+                    )
+
+    def test_command_rejects_colliding_transaction_targets(self):
+        # 三个目标钉死后 CLI 已无法制造碰撞，这里压常量验证最后一道拦截：
+        # 没有它时 targets 字典会因键重复静默丢掉一次写入，而 transaction.py
+        # 的 manifest 唯一性检查永远看不到被字典去重掉的那一个。
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, project = fixture_repository(tmp)
+            before = {
+                name: (project / name).read_bytes()
+                for name in ("source-manifest.json", "index.json", "missing-issues.md")
+            }
             arguments = migrate_arguments(project)
-            arguments[arguments.index("--output-manifest") + 1] = str(
-                project / "copy-manifest.json"
+            arguments[arguments.index("--output-index") + 1] = str(
+                project / "source-manifest.json"
             )
-            with self.assertRaisesRegex(ValueError, MANIFEST_TARGET):
-                main(arguments)
+            with mock.patch.object(
+                source_manifest_module, "INDEX_TARGET", MANIFEST_TARGET
+            ):
+                with self.assertRaisesRegex(ValueError, "两两不同"):
+                    main(arguments)
+            for name, value in before.items():
+                self.assertEqual((project / name).read_bytes(), value, name)
 
     def test_parser_requires_all_five_paths(self):
         stderr = io.StringIO()
