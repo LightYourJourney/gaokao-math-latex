@@ -51,6 +51,8 @@ title: 2099 年数学真题（试题）
 
 ![太极图](images/t2.png)
 
+---
+
 ## 二、解答题
 
 **3．（12 分）** 已知函数 $f(x)$。
@@ -544,6 +546,39 @@ class ParseAnswerPointsTests(unittest.TestCase):
                 parse_answer_points(text)
             self.assertIn("解析不出最终答案", str(caught.exception), written)
 
+    def test_rejects_an_out_form_answer_whose_value_carries_bold_markup(self):
+        # 真题式样（2021 新高考Ⅱ:302）：值里嵌着 `**…**`，直接包进 `**答案（k）：…**`
+        # 会产出交错的加粗跨度，Pandoc 会把它印成畸形粗体。
+        written = (
+            "**(1) 答案**：$f'(x)=x\\left(\\mathrm e^{x}-2a\\right)$"
+            "（**必须提出公因式 $x$**），两个零点为 $0$ 与 $\\ln2a$"
+        )
+        text = ANSWERS.replace("> **(1) 答案：$f(1)=2$**", "> " + written)
+        with self.assertRaises(SolutionSourceError) as caught:
+            parse_answer_points(text)
+        self.assertIn("畸形加粗", str(caught.exception))
+
+    def test_rejects_an_out_form_answer_that_continues_into_a_table(self):
+        # 真答案是下面那张表，单行截断只会留下一个吊着的冒号。
+        for written, following in (
+            ("**(1) 答案**：按二者大小分四类：", "| $a$ | 单调性 |"),
+            ("**(1) 答案（$N=4$）**：分布列如下", "| $X$ | 1 | 2 |"),
+            ("**(1) 答案**：分段函数", "$$f(x)=\\begin{cases}x&x>0\\end{cases}$$"),
+        ):
+            text = ANSWERS.replace(
+                "> **(1) 答案：$f(1)=2$**", "> " + written + "\n>\n> " + following
+            )
+            with self.assertRaises(SolutionSourceError) as caught:
+                parse_answer_points(text)
+            self.assertIn("须人工规整", str(caught.exception), written)
+
+    def test_still_accepts_a_complete_single_line_out_form_answer(self):
+        text = ANSWERS.replace(
+            "> **(1) 答案：$f(1)=2$**", "> **(1) 答案**：$f'(x)=-\\dfrac{x^{2}-ax+1}{x^{2}}$。"
+        )
+        point = {item.number: item for item in parse_answer_points(text)}[3]
+        self.assertEqual(point.answer_for(1), "$f'(x)=-\\dfrac{x^{2}-ax+1}{x^{2}}$。")
+
     def test_still_placeholders_only_anchors_that_never_mention_an_answer(self):
         for written in ("**(2) 证明**：略。", "**(2) 思路**：略。", "**(2) 解**"):
             text = ANSWERS.replace(
@@ -592,6 +627,18 @@ class RenderCombinedTests(unittest.TestCase):
         self.assertTrue(block.rstrip().endswith("---"), block)
         rendered = render_combined(QUESTIONS, self.solution, ANSWERS)
         self.assertEqual(extract_solution_blocks(rendered), self.solution)
+
+    def test_keeps_the_question_side_separator_out_of_the_middle_of_the_question(self):
+        # `_试题.md` 里章节末尾那条 `---` 会跟在题面之后；照抄题面就把它渲染到
+        # 题面与 `**解析**` 之间，症状与题末分隔线错位同族。
+        rendered = render_combined(QUESTIONS, self.solution, ANSWERS)
+        self.assertNotIn("---\n\n**解析**", rendered)
+        block = rendered.split("### 第 2 题（几何概型）")[1].split("### 第 3 题")[0]
+        # 题面侧与解析侧各带一条，重建后只许剩一条，且落在答案块之后。
+        self.assertEqual(block.count("---"), 1, block)
+        self.assertIn(
+            "**答案：B（$\\dfrac\\pi8$）**\n\n---\n\n## 二、解答题", rendered
+        )
 
     def test_a_proof_subpart_gets_the_repo_placeholder_not_a_fabricated_answer(self):
         rendered = render_combined(QUESTIONS, self.solution, ANSWERS)

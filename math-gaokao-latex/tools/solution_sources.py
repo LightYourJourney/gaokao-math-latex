@@ -303,9 +303,12 @@ def _mentions_final_answer(stripped: str) -> bool:
 
 def _parse_answer_line(
     number: int, stripped: str
-) -> Optional[Tuple[Optional[int], str]]:
-    """两种冒号位形都试；取不到非空值就当作「这行不是最终答案」。"""
-    for pattern in (_ANSWER_LINE, _ANSWER_LINE_OUT):
+) -> Optional[Tuple[Optional[int], str, str]]:
+    """两种冒号位形都试；取不到非空值就当作「这行不是最终答案」。
+
+    返回 (小问号或 None, 答案值, 位形)，位形取 "in"（冒号在加粗内）或 "out"。
+    """
+    for form, pattern in (("in", _ANSWER_LINE), ("out", _ANSWER_LINE_OUT)):
         match = pattern.match(stripped)
         if match is None:
             continue
@@ -318,8 +321,37 @@ def _parse_answer_line(
         if not value:
             continue
         key = pre if pre is not None else post
-        return (int(key) if key is not None else None, value)
+        return (int(key) if key is not None else None, value, form)
     return None
+
+
+def _require_complete_out_answer(
+    number: int, stripped: str, value: str, following: str
+) -> None:
+    """冒号在加粗外的值没有右侧 `**` 兜底，必须自证是一行完整答案。
+
+    值会被 `_render_answer_paragraphs` 包进 `**答案（k）：…**`，所以：
+
+    - 值里再出现 `**` 会产生交错的加粗跨度，Pandoc 印出来是畸形粗体；
+    - 值后面还接着表格或行间公式时，取到的只是引子，真答案在下面——单行截断会
+      留下一个吊着的冒号。
+
+    两种都硬错误进残余清单交人工规整，不留任何静默截断的路径。
+    """
+    if "**" in value:
+        raise SolutionSourceError(
+            f"第 {number} 题的答案块（冒号在加粗外）值内含 `**`，"
+            f"嵌进生成答案块会产生畸形加粗，须人工规整：{stripped}"
+        )
+    if (
+        value.rstrip().endswith(("：", ":"))
+        or following.startswith("|")
+        or following.startswith("$$")
+    ):
+        raise SolutionSourceError(
+            f"第 {number} 题的答案块（冒号在加粗外）后面还接着表格或行间公式，"
+            f"单行截断会丢掉真正的答案，须人工规整：{stripped}"
+        )
 
 
 def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
@@ -333,8 +365,8 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
     for block in parse_question_blocks(text, style="inline"):
         anchors: List[int] = []
         answers: List[Tuple[Optional[int], str]] = []
-        for line in block.body.split("\n"):
-            stripped = _strip_quote(line).strip()
+        stripped_lines = [_strip_quote(line).strip() for line in block.body.split("\n")]
+        for index, stripped in enumerate(stripped_lines):
             anchor = _SUBPART_ANCHOR.match(stripped)
             if anchor is not None:
                 anchors.append(int(anchor.group(1)))
@@ -346,7 +378,15 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
                         f"不得用「{SEE_SOLUTION}」顶替：{stripped}"
                     )
                 continue
-            answers.append(parsed)
+            key, value, form = parsed
+            if form == "out":
+                following = next(
+                    (item for item in stripped_lines[index + 1:] if item), ""
+                )
+                _require_complete_out_answer(
+                    block.number, stripped, value, following
+                )
+            answers.append((key, value))
 
         keys = [key for key, _ in answers]
         # 自带小问号的答案块本身也是锚点（含本工具生成的 `**答案（k）：X**` 写法）。
@@ -443,6 +483,21 @@ def _canonical_derivation(body: str) -> str:
     if separator is not None:
         paragraphs = paragraphs + [separator]
     return "\n\n".join(paragraphs)
+
+
+def _peel_trailing_separator(text: str) -> Tuple[str, Optional[str]]:
+    """摘掉一段文本末尾自成一段的分隔线，其余逐字保留。
+
+    `_试题.md` 里章节末尾那条 `---` 会落在该题题面之后；照抄题面就把它渲染到
+    题面与 `**解析**` 之间。分隔线只该由渲染器在题末统一落位。
+    """
+    lines = text.rstrip().split("\n")
+    if len(lines) >= 2 and _THEMATIC_BREAK.match(lines[-1].strip()) is not None:
+        if not lines[-2].strip():
+            return "\n".join(lines[:-1]).rstrip(), lines[-1].strip()
+    if len(lines) == 1 and _THEMATIC_BREAK.match(lines[0].strip()) is not None:
+        return "", lines[0].strip()
+    return text, None
 
 
 def _canonical_derivation_parts(body: str) -> Tuple[List[str], Optional[str]]:
@@ -551,12 +606,15 @@ def render_combined(questions_text: str, solution_text: str, answer_text: str) -
             f"{QUESTION_MARKER}{question.title}："
             if question.title else f"{QUESTION_MARKER}："
         )
-        if question.body:
-            segments.append(question.body)
+        question_body, question_separator = _peel_trailing_separator(question.body)
+        if question_body:
+            segments.append(question_body)
         derivation, separator = _canonical_derivation_parts(block.body)
         segments.extend(derivation)
         segments.extend(_render_answer_paragraphs(answers[block.number]))
-        # 分隔线隔开的是两道题，必须落在本题最后一个答案块之后。
+        # 分隔线隔开的是两道题，必须落在本题最后一个答案块之后；题面侧与解析侧
+        # 各出一条时只留一条，否则重建后会冒出连续两条 <hr>。
+        separator = separator if separator is not None else question_separator
         if separator is not None:
             segments.append(separator)
     return _join_segments(segments)
