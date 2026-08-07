@@ -1809,8 +1809,10 @@ def _figure_files(
 ) -> List[Dict[str, Any]]:
     """把 legacy figure tree 迁成带引用次数的登记表。
 
-    次数取自当前规范 Markdown；哪一张图对应哪一次引用由 legacy TeX 的引用顺序
-    定位。两者的图数或逐图次数不一致时立即失败，不猜测配对。
+    次数取自当前规范 Markdown——内容迁移后它才是图引用的唯一事实源；哪一张图对应
+    哪一次引用由 legacy TeX 的引用**顺序**定位。两者的**图数**不一致时立即失败，
+    不猜测配对；**逐图次数不再与 legacy TeX 比对**（理由见函数体内注释），live 树的
+    防丢图职责改由 `validate_figure_occurrences()` 对 manifest 登记值承担。
     """
     if any(not str(name).endswith(".tex") for name in figure_names):
         raise ValueError(f"{project_dir}: figure 登记必须全部是 .tex")

@@ -356,7 +356,7 @@ def _parse_answer_line(
 def _require_complete_out_answer(
     number: int, stripped: str, value: str, next_line: str, following: str
 ) -> None:
-    """冒号在加粗外的值没有右侧 `**` 兜底，必须自证是一行完整答案。
+    r"""冒号在加粗外的值没有右侧 `**` 兜底，必须自证是一行完整答案。
 
     值会被 `_render_answer_paragraphs` 包进 `**答案（k）：…**`，所以：
 
@@ -472,7 +472,14 @@ def _is_question_restatement(paragraph: str) -> bool:
 
 
 def _is_solution_marker(paragraph: str) -> bool:
-    return paragraph.split("\n", 1)[0].strip() == SOLUTION_MARKER
+    """段首行是解析标记，含 `**解析**（同[理科卷第 1 题](…)）` 这类带互见注的变体。
+
+    判据是「以 `**解析**` 打头」而非精确相等：真题里 19 处标记带着互见注，精确相等
+    认不出它们，`_canonical_derivation_parts` 便会再插一个裸标记，渲染成连续两行
+    `**解析**`（b01 曾有 12 题如此）。`**解析要点**`、`**解析式：**` 不以 `**解析**`
+    打头（第 5 个字符不是 `*`），仍按正文处理、照常补规范标记。
+    """
+    return paragraph.split("\n", 1)[0].strip().startswith(SOLUTION_MARKER)
 
 
 def _derivation_paragraphs(body: str) -> List[str]:

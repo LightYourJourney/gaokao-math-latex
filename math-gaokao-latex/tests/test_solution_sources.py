@@ -349,6 +349,30 @@ class ExtractSolutionBlocksTests(unittest.TestCase):
             "#### (2) 第二问\n\n再推导。\n",
         )
 
+    def test_keeps_a_marker_variant_instead_of_stacking_a_bare_one(self):
+        # 真题形态（b01 12 题、全库 19 处）：`**解析**（同[理科卷第 1 题](…)）` 本身
+        # 就是解析标记，只是带了条互见注。精确相等的判据认不出它，于是又插一个裸
+        # `**解析**`，渲染出连续两行标记。标记必须唯一。
+        note = "**解析**（同[理科卷第 1 题](2018_数学真题_理_含解析.md)）"
+        combined = (
+            "### 第 2 题（复数运算）\n\n**题目**：求模。\n\n" + note + "\n\n故 $|z|=1$。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertEqual(
+            body, "### 第 2 题（复数运算）\n\n" + note + "\n\n故 $|z|=1$。\n"
+        )
+        self.assertEqual(body.count("**解析**"), 1)
+
+    def test_a_word_that_merely_starts_like_the_marker_is_still_content(self):
+        # `**解析要点**`、`**解析式：**` 不是标记（后者是「解析式」这个数学名词），
+        # 必须照旧补上规范标记，否则会把正文首段误当成标记而漏掉它。
+        for written in ("**解析要点**：求导判号。", "**解析式：** $f(x)=2x+1$。"):
+            combined = "### 第 1 题（解答）\n\n**题目**：求解。\n\n" + written + "\n"
+            body = extract_solution_blocks(combined)
+            self.assertEqual(
+                body, "### 第 1 题（解答）\n\n**解析**\n\n" + written + "\n", written
+            )
+
     def test_extraction_is_idempotent(self):
         once = extract_solution_blocks(COMBINED)
         self.assertEqual(extract_solution_blocks(once), once)
