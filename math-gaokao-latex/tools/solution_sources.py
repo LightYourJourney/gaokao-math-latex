@@ -37,7 +37,9 @@ Markdown 约定（两种题号写法，解析器自动识别，`### 第 N 题` �
 
 证明/表格类小问「有锚点、无最终答案」是合法状态，生成展示文档时用 `见解析版` 占位，
 **绝不编造答案**。但锚点写了「答案」二字却两式都取不到值时**必须报错**——拿占位符
-顶掉一个已经写出来的答案是静默降级，比报错糟得多。
+顶掉一个已经写出来的答案是静默降级，比报错糟得多。次级序号打头的答案块
+（`**② 答案：X**`、`**(i) 答案：X**`）同样报错：它们既非 `(k)` 锚点又不以 `**答案`
+开头，不专门拦就会被静默忽略，答案照样消失。
 
 题末分隔线（`---`）由渲染器放回**生成答案块之后**：它隔开的是两道题，不是解析与答案。
 
@@ -115,6 +117,15 @@ _ANSWER_LINE_OUT = re.compile(
 # `**(2) 答案（分布列）**：` 等）。这类必须报错：占位符只许给真正没有最终答案的小问，
 # 拿它顶掉一个写出来的答案就是静默降级。
 _ANSWER_MENTION = re.compile(r"^\*\*(?:[（(]\d+[）)][ \t　]*)?[^*]*答案[^*]*\*\*")
+# 行首加粗跨度本身，用来单独审视跨度内的文字。
+_BOLD_LEAD = re.compile(r"^\*\*([^*]*)\*\*")
+# 次级序号：①②③…⑳ 与 (i)(ii)…(x)。真题把同一小问的两问写成 `**② 答案：X**`、
+# `**(i) 答案：X**`、`**选 ① 答案：X**`——这些既取不到值（「答案」前隔着序号），
+# 又因为不是 `(k)` 锚点、也不以 `**答案` 开头而逃过 `_mentions_final_answer`，
+# 于是被**静默忽略**：写出来的答案凭空消失，该小问拿到 `见解析版`。
+_SECONDARY_ORDINAL = re.compile(
+    r"[①-⑳]|[（(](?:i|ii|iii|iv|v|vi|vii|viii|ix|x)[）)]"
+)
 
 
 class SolutionSourceError(ValueError):
@@ -301,6 +312,23 @@ def _mentions_final_answer(stripped: str) -> bool:
     return _SUBPART_ANCHOR.match(stripped) is not None or stripped.startswith("**答案")
 
 
+def _mentions_answer_after_secondary_ordinal(stripped: str) -> bool:
+    """行首加粗跨度里「答案」二字前后夹着次级序号（①②…/(i)(ii)…）。
+
+    `_mentions_final_answer` 只认 `(k)` 小问锚点或 `**答案` 打头两种入口，够不着
+    `**② 答案：X**`、`**(i) 答案：X**`、`**选 ① 答案：X**` 这几族——它们既取不到
+    最终答案，又不触发报错，等于把一个写出来的答案静默丢掉。这里补上第三个入口。
+
+    只有次级序号、不含「答案」二字的加粗块是正文小标题（`**(2) ① 合理性**：` 在真题里
+    很常见），必须放行，否则会把大量说明性小标题误判成答案块。
+    """
+    match = _BOLD_LEAD.match(stripped)
+    if match is None:
+        return False
+    span = match.group(1)
+    return "答案" in span and _SECONDARY_ORDINAL.search(span) is not None
+
+
 def _parse_answer_line(
     number: int, stripped: str
 ) -> Optional[Tuple[Optional[int], str, str]]:
@@ -384,6 +412,13 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
                     raise SolutionSourceError(
                         f"第 {block.number} 题的答案块写了「答案」却解析不出最终答案，"
                         f"不得用「{SEE_SOLUTION}」顶替：{stripped}"
+                    )
+                if _mentions_answer_after_secondary_ordinal(stripped):
+                    raise SolutionSourceError(
+                        f"第 {block.number} 题的答案块夹着次级序号（①②…/(i)(ii)…），"
+                        f"既取不到最终答案，也不会被 `(k)` 锚点判据兜住，"
+                        f"留着就是静默丢答案；须人工并入所属小问的答案块："
+                        f"{stripped}"
                     )
                 continue
             key, value, form = parsed

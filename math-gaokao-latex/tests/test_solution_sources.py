@@ -589,6 +589,40 @@ class ParseAnswerPointsTests(unittest.TestCase):
         self.assertIn("须人工规整", str(caught.exception))
         self.assertNotIn(SEE_SOLUTION, str(caught.exception))
 
+    def test_rejects_a_secondary_ordinal_answer_block_rather_than_ignoring_it(self):
+        # 全库真实形态（2017 理/文 Q19、2018 理 Q20、2019 理 Q21、2020 新高考Ⅱ Q17、
+        # 2026 回忆版 Q18）：次级序号打头的答案块既取不到值，又因为不是 `(k)` 锚点、
+        # 也不以 `**答案` 开头而**逃过 mention 报错路径**——于是被静默忽略，该小问
+        # 拿到的是 `见解析版`，写出来的答案凭空消失。静默丢失必须转响亮错误。
+        for written in (
+            "**② 答案：需要检查；剔除后 $\\hat\\mu=10.02$**",  # 2017 理 Q19
+            "**② 答案：应该检验**",                              # 2018 理 Q20
+            "**选 ① 答案：$c=1$**",                              # 2020 新高考Ⅱ Q17
+            "**(i) 答案：$l:\\ y=\\dfrac{\\sqrt5}2(x+1)$**",      # 2026 回忆版 Q18
+            "**(ii) 答案：$\\tan\\angle PQR$ 的最小值为 $4\\sqrt3$**",
+        ):
+            text = ANSWERS.replace(
+                "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。", "> " + written
+            )
+            with self.assertRaises(SolutionSourceError) as caught:
+                parse_answer_points(text)
+            message = str(caught.exception)
+            self.assertIn("次级序号", message, written)
+            self.assertIn(written, message, written)   # 错误消息必须给出该行原文
+            self.assertIn("第 3 题", message, written)  # 以及题号定位
+            # 绝不能把这条路径改回占位符——那正是本守卫要消灭的静默降级。
+            self.assertNotIn(SEE_SOLUTION, message, written)
+
+    def test_a_secondary_ordinal_without_an_answer_word_stays_content(self):
+        # 只有次级序号、不含「答案」二字的加粗块是正文小标题（真题里 `**(2) ① 合理性**：`
+        # 这类很常见），不得被守卫误伤。
+        for written in ("**(2) ① 合理性**：小概率事件。", "**② 说明**：见上。"):
+            text = ANSWERS.replace(
+                "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。", "> " + written
+            )
+            point = {item.number: item for item in parse_answer_points(text)}[3]
+            self.assertIsNone(point.answer_for(2), written)
+
     def test_still_accepts_a_complete_single_line_out_form_answer(self):
         text = ANSWERS.replace(
             "> **(1) 答案：$f(1)=2$**", "> **(1) 答案**：$f'(x)=-\\dfrac{x^{2}-ax+1}{x^{2}}$。"
