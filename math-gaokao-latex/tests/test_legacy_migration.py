@@ -29,6 +29,8 @@ from source_manifest import (
     main,
     migrate_legacy_index,
     project_legacy_index,
+    state_figure_occurrences,
+    validate_figure_occurrences,
     validate_source_state,
 )
 
@@ -84,6 +86,36 @@ def counted(texts, pattern):
             key = match.group(1)
             counts[key] = counts.get(key, 0) + 1
     return counts
+
+
+def ordered_counted(texts, pattern):
+    """按首次出现顺序统计，返回 (顺序列表, 计数字典)——与工具侧配对口径一致。"""
+    order, counts = [], {}
+    for text in texts:
+        for match in pattern.finditer(text):
+            key = match.group(1)
+            if key not in counts:
+                order.append(key)
+                counts[key] = 0
+            counts[key] += 1
+    return order, counts
+
+
+def migration_anchor():
+    """legacy 基线钉死的迁移前 HEAD，同 baseline.recover_legacy_index 的锚点手法。"""
+    baseline = json.loads(read_text(ROOT / "reports" / "legacy-baseline.json"))
+    head = baseline["repository"]["head"]
+    if not isinstance(head, str) or not head:
+        raise ValueError("legacy 基线缺少 repository.head 锚点")
+    return head
+
+
+def read_text_at(head, relative):
+    """从 git 锚点取回文件文本；取不到一律报错，不得静默跳过。"""
+    return subprocess.check_output(
+        ["git", "-C", str(REPO), "show", "%s:%s" % (head, relative)],
+        stderr=subprocess.DEVNULL,
+    ).decode("utf-8")
 
 
 def legacy_index_view(index):
@@ -412,12 +444,72 @@ class MigrationTests(unittest.TestCase):
                     sorted(occurrences), sorted(markdown_counts.values())
                 )
                 self.assertEqual(sum(occurrences), sum(markdown_counts.values()))
+                # 逐图对位：figure 由 legacy TeX 的引用顺序定位，次数取自**规范 Markdown**。
+                # 内容迁移后规范 Markdown 才是图引用的唯一事实源，legacy TeX 是滞后
+                # 派生物（T13 重生成 editions 时追平），故此处**不再**与 tex_counts 比数；
+                # 「Markdown == legacy TeX」只对冻结迁移态成立，已移到下面的锚点测试。
+                self.assertEqual(len(tex_counts), len(markdown_counts))
+                tex_order, _ = ordered_counted(
+                    [
+                        read_text(ROOT / legacy["dir"] / name)
+                        for name in ("questions.tex", "answers.tex")
+                    ],
+                    _FIGURE_INPUT_RE,
+                )
+                image_order, image_counts = ordered_counted(
+                    [
+                        read_text(REPO / paper["source_files"][key])
+                        for key in ("questions", "combined_rendered")
+                    ],
+                    _MARKDOWN_IMAGE_RE,
+                )
+                by_stem = {
+                    stem: image_counts[image]
+                    for stem, image in zip(tex_order, image_order)
+                }
                 for figure in figures:
                     stem = Path(figure["path"]).stem
                     self.assertEqual(
-                        figure["expected_occurrences"], tex_counts[stem], stem
+                        figure["expected_occurrences"], by_stem[stem], stem
                     )
                 total += len(figures)
+        self.assertEqual(total, 59)
+
+    def test_frozen_migration_state_markdown_matched_legacy_tex(self):
+        """「Markdown 计数 == legacy TeX 计数」这条等式只对**冻结迁移态**成立。
+
+        它此前被当成 live 树不变式，而它在 f2018wen_t19_grid 上恰好成立于
+        「旧 _含解析.md 用占位符丢了那张图」这个 bug 之上——内容迁移修掉 bug 后
+        等式即破。这里把它钉到 legacy 基线的 git 锚点（迁移前的树），
+        断言本身一字不改，只是绑到它真正成立的那棵树上。
+        """
+        head = migration_anchor()
+        total = 0
+        for entry in LEGACY_PAPERS:
+            paper = self.papers[entry.paper_id]
+            legacy = self.by_legacy[entry.legacy_id]
+            with self.subTest(legacy_id=entry.legacy_id):
+                tex_order, tex_counts = ordered_counted(
+                    [
+                        read_text_at(
+                            head,
+                            "math-gaokao-latex/%s/%s" % (legacy["dir"], name),
+                        )
+                        for name in ("questions.tex", "answers.tex")
+                    ],
+                    _FIGURE_INPUT_RE,
+                )
+                image_order, image_counts = ordered_counted(
+                    [
+                        read_text_at(head, paper["source_files"][key])
+                        for key in ("questions", "combined_rendered")
+                    ],
+                    _MARKDOWN_IMAGE_RE,
+                )
+                self.assertEqual(len(image_order), len(tex_order))
+                for stem, image in zip(tex_order, image_order):
+                    self.assertEqual(image_counts[image], tex_counts[stem], stem)
+                total += len(tex_order)
         self.assertEqual(total, 59)
 
     def test_seed_issue_ids_are_reverse_linked_to_their_papers(self):
@@ -719,6 +811,104 @@ class SchemaFreezeTests(unittest.TestCase):
                 "closed", "closed_with_blockers",
             ],
         )
+
+
+class FigureOccurrenceGuardTests(unittest.TestCase):
+    """live 树主守卫：规范 Markdown 引用数 == manifest expected_occurrences。
+
+    内容迁移后规范 Markdown 是唯一事实源，所以「防丢图」不能再靠 legacy TeX 对账，
+    必须靠 manifest 登记值对账。任何未经 manifest 登记的漂移（丢图或多图）都得硬错。
+    """
+
+    def test_real_repository_matches_the_registered_occurrences(self):
+        manifest = json.loads(read_text(ROOT / "source-manifest.json"))
+        # 不抛异常即通过；真实仓库必须始终与登记值一致。
+        self.assertEqual(validate_figure_occurrences(manifest, REPO), 59)
+
+    def test_a_dropped_figure_reference_is_a_hard_error(self):
+        # 反事实：假如生成器再丢一张图，套件必须红。这是本守卫存在的唯一理由。
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, project = fixture_repository(tmp)
+            migrated = migrate_legacy_index(
+                json.loads(read_text(project / "source-manifest.json")),
+                json.loads(read_text(project / "index.json")),
+                repo_root=repo,
+                issues=load_issues(project / "missing-issues.md"),
+            )
+            self.assertEqual(validate_figure_occurrences(migrated, repo), 59)
+
+            paper = {item["paper_id"]: item for item in migrated["papers"]}[
+                "gk-2018-regular-national-1-arts"
+            ]
+            combined = repo / paper["source_files"]["combined_rendered"]
+            text = combined.read_text(encoding="utf-8")
+            dropped = _MARKDOWN_IMAGE_RE.sub("", text, count=1)
+            self.assertNotEqual(dropped, text)
+            combined.write_text(dropped, encoding="utf-8")
+            with self.assertRaises(ValueError) as caught:
+                validate_figure_occurrences(migrated, repo)
+            self.assertIn("引用次数与 manifest 登记不一致", str(caught.exception))
+
+    def test_an_extra_figure_reference_is_also_a_hard_error(self):
+        # 漂移的**两个方向**都必须硬错，否则守卫只挡一半。
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, project = fixture_repository(tmp)
+            migrated = migrate_legacy_index(
+                json.loads(read_text(project / "source-manifest.json")),
+                json.loads(read_text(project / "index.json")),
+                repo_root=repo,
+                issues=load_issues(project / "missing-issues.md"),
+            )
+            paper = {item["paper_id"]: item for item in migrated["papers"]}[
+                "gk-2018-regular-national-1-arts"
+            ]
+            combined = repo / paper["source_files"]["combined_rendered"]
+            text = combined.read_text(encoding="utf-8")
+            first = _MARKDOWN_IMAGE_RE.search(text)
+            combined.write_text(text + "\n\n" + first.group(0) + "\n", encoding="utf-8")
+            with self.assertRaises(ValueError) as caught:
+                validate_figure_occurrences(migrated, repo)
+            self.assertIn("引用次数与 manifest 登记不一致", str(caught.exception))
+
+
+class SyncFigureOccurrencesTests(unittest.TestCase):
+    """窄入口：唯一允许改写 expected_occurrences 的正规路径。"""
+
+    def _migrated_fixture(self, tmp):
+        repo, project = fixture_repository(tmp)
+        self.assertEqual(main(migrate_arguments(project)), 0)
+        return repo, project / "source-manifest.json"
+
+    def test_advances_the_registered_count_in_a_state_transaction(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path = self._migrated_fixture(tmp)
+            manifest = json.loads(read_text(manifest_path))
+            before = manifest["revision"]
+            # 人为把一个登记值改错，模拟「内容迁移合法改变了图引用数」
+            manifest["papers"][3]["figure_files"][0]["expected_occurrences"] += 3
+            manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+
+            transaction_id = state_figure_occurrences(repo, manifest_path)
+            self.assertIsNotNone(transaction_id)
+            after = json.loads(read_text(manifest_path))
+            self.assertEqual(after["revision"], before + 1)
+            self.assertEqual(after["last_transaction_id"], transaction_id)
+            # 登记值被拉回规范 Markdown 的实际值，守卫随之转绿
+            self.assertEqual(validate_figure_occurrences(after, repo), 59)
+            # 除 expected_occurrences / revision / last_transaction_id 外一字未改
+            for key in ("revision", "last_transaction_id"):
+                manifest[key] = after[key]
+            manifest["papers"][3]["figure_files"][0]["expected_occurrences"] = (
+                after["papers"][3]["figure_files"][0]["expected_occurrences"]
+            )
+            self.assertEqual(manifest, after)
+
+    def test_is_a_no_op_when_already_aligned(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path = self._migrated_fixture(tmp)
+            before = manifest_path.read_bytes()
+            self.assertIsNone(state_figure_occurrences(repo, manifest_path))
+            self.assertEqual(manifest_path.read_bytes(), before)
 
 
 class MigrateCommandTests(unittest.TestCase):

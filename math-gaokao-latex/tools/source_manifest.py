@@ -1847,20 +1847,140 @@ def _figure_files(
             "%s: 规范 Markdown 图片数 %d 与登记 figure 数 %d 不一致"
             % (project_dir, len(image_order), len(tex_order))
         )
-    records = []
-    for stem, image in zip(tex_order, image_order):
-        occurrences = image_counts[image]
-        if occurrences != tex_counts[stem]:
-            raise ValueError(
-                "%s: %s 引用次数不一致：Markdown %d，legacy TeX %d"
-                % (project_dir, stem, occurrences, tex_counts[stem])
-            )
-        records.append({
+    # 次数**只**取自规范 Markdown：内容迁移（T6/T7）之后规范 Markdown 才是图引用的
+    # 唯一事实源，legacy TeX 成了滞后派生物（T13 重生成 editions 时追平）。
+    # 曾经的「Markdown 计数 == legacy TeX 计数」硬断言只对**冻结迁移态**成立——
+    # 它在 f2018wen_t19_grid 上恰好成立于「旧 _含解析.md 用占位符丢了那张图」这个
+    # bug 之上，迁移修掉 bug 后等式即破。该等式已移到 test_legacy_migration.py 的
+    # git 锚点测试里（钉在迁移前的树上），live 树的防丢图职责改由
+    # validate_figure_occurrences() 对 manifest 登记值承担。
+    records = [
+        {
             "path": "%s/figures/%s.tex" % (project_dir, stem),
-            "expected_occurrences": occurrences,
-        })
+            "expected_occurrences": image_counts[image],
+        }
+        for stem, image in zip(tex_order, image_order)
+    ]
     records.sort(key=lambda item: item["path"])
     return records
+
+
+def _registered_figure_occurrences(
+    repo_root: Path, paper: Mapping[str, Any]
+) -> Dict[str, int]:
+    """按 manifest 里这一卷的登记，重新数一遍规范 Markdown 的图引用次数。"""
+    project_dir = str(paper.get("project_dir"))
+    figure_names = [
+        PurePosixPath(str(figure.get("path"))).name
+        for figure in paper.get("figure_files", [])
+    ]
+    records = _figure_files(
+        repo_root, project_dir, figure_names, paper.get("source_files", {})
+    )
+    return {record["path"]: record["expected_occurrences"] for record in records}
+
+
+def validate_figure_occurrences(
+    manifest: Mapping[str, Any], repo_root: Path
+) -> int:
+    """live 树主守卫：规范 Markdown 的图引用数必须等于 manifest 登记的次数。
+
+    内容迁移后 legacy TeX 不再有资格给 live 树对账（见 `_figure_files` 注释），
+    改由 manifest 承担登记职责。**任何未经登记的漂移都硬错，两个方向都拦**：
+    少一次是静默丢图（本项目反复出现的那类失败：占位符顶掉真内容），
+    多一次是重复插图。要改次数只能走 `state_figure_occurrences()` 的正规事务，
+    不许改代码或手编 JSON 绕过。返回核对过的 figure 总数。
+    """
+    papers = manifest.get("papers")
+    if not isinstance(papers, list):
+        raise ValueError("manifest papers 必须是数组")
+    total = 0
+    for paper in papers:
+        if not isinstance(paper, Mapping):
+            raise ValueError("manifest paper 必须是对象")
+        paper_id = paper.get("paper_id")
+        actual = _registered_figure_occurrences(repo_root, paper)
+        for figure in paper.get("figure_files", []):
+            path = str(figure.get("path"))
+            registered = figure.get("expected_occurrences")
+            if path not in actual:
+                raise ValueError(f"{paper_id}: figure 登记与实际不匹配：{path}")
+            if actual[path] != registered:
+                raise ValueError(
+                    "%s: %s 引用次数与 manifest 登记不一致：规范 Markdown %d，登记 %d"
+                    % (paper_id, path, actual[path], registered)
+                )
+            total += 1
+        if len(actual) != len(paper.get("figure_files", [])):
+            raise ValueError(f"{paper_id}: figure 登记数与实际数不一致")
+    return total
+
+
+def _without_figure_occurrences(manifest: Mapping[str, Any]) -> Dict[str, Any]:
+    """抹掉全部 expected_occurrences，用来自证「窄入口只改了这一个字段」。"""
+    scrubbed = copy.deepcopy(dict(manifest))
+    for paper in scrubbed.get("papers", []):
+        for figure in paper.get("figure_files", []):
+            figure.pop("expected_occurrences", None)
+    return scrubbed
+
+
+def state_figure_occurrences(repo: Path, manifest_path: Path) -> Optional[str]:
+    """把 manifest 的 expected_occurrences 对齐到规范 Markdown 的实际引用数。
+
+    这是**唯一**允许改写 expected_occurrences 的正规路径：RepoLock + Task 1
+    `state` 事务 + revision 递增，绝不手编 JSON。内容迁移会合法地改变图引用数
+    （例如题面从 `**题目**：见试题。` 占位还原成真实题面，把图一并带回），此时登记值
+    必须随之推进，否则 `validate_figure_occurrences()` 会一直红。
+
+    **窄入口**：只允许 expected_occurrences 变化，出现任何其他字段差异一律拒绝提交，
+    以免它被当成通用 manifest 改写器绕过 migrate-legacy-index 的覆盖保护。
+    已对齐时返回 None（不开事务）。
+    """
+    root = _repository_root(Path(repo))
+    manifest_path = Path(manifest_path)
+    manifest_relative = _relative_to_repo(root, manifest_path)
+    if manifest_relative != MANIFEST_TARGET:
+        raise ValueError(
+            f"state manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
+        )
+    with RepoLock(root):
+        manifest = _load_json(manifest_path)
+        revision = manifest.get("revision")
+        if type(revision) is not int or revision < 0:
+            raise ValueError("manifest revision 必须是非负整数")
+        updated = copy.deepcopy(manifest)
+        papers = updated.get("papers")
+        if not isinstance(papers, list):
+            raise ValueError("manifest papers 必须是数组")
+        for paper in papers:
+            actual = _registered_figure_occurrences(root, paper)
+            for figure in paper.get("figure_files", []):
+                path = str(figure.get("path"))
+                if path not in actual:
+                    raise ValueError(
+                        "%s: figure 登记与实际不匹配：%s"
+                        % (paper.get("paper_id"), path)
+                    )
+                figure["expected_occurrences"] = actual[path]
+        if updated == manifest:
+            return None
+        if _without_figure_occurrences(updated) != _without_figure_occurrences(
+            manifest
+        ):
+            raise ValueError(
+                "本入口只允许改写 expected_occurrences，检测到其他字段变化"
+            )
+        transaction = Transaction(root)
+        updated["revision"] = revision + 1
+        updated["last_transaction_id"] = transaction.transaction_id
+        _validated_manifest_value(manifest_path, updated)
+        targets = {MANIFEST_TARGET: canonical_json(updated).encode("utf-8")}
+        transaction.prepare(
+            "state", targets, inputs={}, expected_revision=revision
+        )
+        transaction.commit()
+        return transaction.transaction_id
 
 
 def _legacy_paper_metadata(legacy_index: Any) -> Dict[str, Mapping[str, Any]]:
@@ -2286,6 +2406,10 @@ def _parser() -> argparse.ArgumentParser:
     validate_parser = subparsers.add_parser("validate")
     validate_parser.add_argument("--manifest", required=True, type=Path)
     validate_parser.add_argument("--require-artifacts", type=_nonnegative)
+
+    # 窄入口：内容迁移合法改变图引用数后，把登记值推进到规范 Markdown 的实际值。
+    sync_figures = subparsers.add_parser("sync-figure-occurrences")
+    sync_figures.add_argument("--manifest", required=True, type=Path)
     return parser
 
 
@@ -2336,6 +2460,18 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if arguments.command == "validate":
         validate_source_manifest(
             arguments.manifest, arguments.require_artifacts
+        )
+        # live 树防丢图主守卫：规范 Markdown 图引用数 == manifest 登记值。
+        root = _repository_root(Path(arguments.manifest).parent)
+        validate_figure_occurrences(_load_json(Path(arguments.manifest)), root)
+        return 0
+    if arguments.command == "sync-figure-occurrences":
+        transaction_id = state_figure_occurrences(
+            _repository_root(Path(arguments.manifest).parent), arguments.manifest
+        )
+        os.sys.stdout.write(
+            "already-aligned\n" if transaction_id is None
+            else "%s\n" % transaction_id
         )
         return 0
     if arguments.command == "migrate-legacy-index":
