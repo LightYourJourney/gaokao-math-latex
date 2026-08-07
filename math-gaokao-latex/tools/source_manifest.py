@@ -19,6 +19,7 @@ import urllib.parse
 import urllib.request
 import uuid
 import zipfile
+from collections import namedtuple
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from pathlib import Path, PurePosixPath
@@ -28,6 +29,8 @@ from issues import load_issues, upsert_issue
 from manifest import (
     canonical_json,
     durable_fsync,
+    file_sha256,
+    project_index,
     validate_manifest_semantics,
 )
 from schema_validate import validate as validate_schema
@@ -60,6 +63,132 @@ _ZIP_LIMIT = 1024 * 1024 * 1024
 _SOURCE_ISSUE_TYPES = {
     "source-unavailable", "source-unreadable", "source-mismatch",
 }
+_FIGURE_INPUT_RE = re.compile(r"\\input\{figures/([^{}/]+)\}")
+_MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+
+# 规范工程根目录由 manifest 目标路径固定，迁移时不另行猜测。
+PROJECT_RELATIVE = PurePosixPath(MANIFEST_TARGET).parent.as_posix()
+SOURCE_STATES = ("not_started", "ready", "blocked", "non_paper")
+PAPER_RELATIONS = ("canonical", "exact_duplicate", "semantic_duplicate")
+PRODUCTION_STATES = (
+    "legacy_unverified", "planned", "source_ready", "transcription_draft",
+    "questions_verified", "answers_draft", "answers_verified", "shared_frozen",
+    "editions_generated", "compiled", "complete", "blocked",
+)
+BATCH_STATUSES = (
+    "planned", "provenance_verified", "compiled_pending_review",
+    "closed", "closed_with_blockers",
+)
+SOURCE_FILE_KEYS = ("questions", "answer_key", "solution_body", "combined_rendered")
+MARKDOWN_SUFFIXES = {
+    "questions": "_试题.md",
+    "answer_key": "_答案要点.md",
+    "solution_body": "_解析正文.md",
+    "combined_rendered": "_含解析.md",
+}
+# 解析正文由 Task 6–12 建立，迁移时只登记路径、不要求存在。
+REQUIRED_SOURCE_FILE_KEYS = ("questions", "answer_key", "combined_rendered")
+# figure 引用次数只数当前已存在的两份规范 Markdown。
+FIGURE_COUNT_SOURCE_KEYS = ("questions", "combined_rendered")
+TRACK_BY_LEGACY = {"理科": "science", "文科": "arts", None: "none"}
+# 规范 Markdown 路径固定分四类，后续生成器读登记值、不按规则拼路径。
+MARKDOWN_GROUPS = ("文理", "默认卷", "新高考Ⅱ", "全国 2")
+RECALL_PAPER_ID = "gk-2026-regular-national-1-recall"
+# 回忆版唯一允许的本地 legacy 规范源；显式登记，禁止目录 glob。
+RECALL_LEGACY_SOURCE = "2026/2026_数学真题_试题.md"
+
+LegacyPaper = namedtuple(
+    "LegacyPaper", "legacy_id paper_id track markdown_group markdown_prefix"
+)
+# 旧 ID → 稳定 paper_id 与规范 Markdown 前缀，逐字固定，禁止动态构造。
+LEGACY_PAPERS = (
+    LegacyPaper("2017li", "gk-2017-regular-national-1-science", "science",
+                "文理", "2017/2017_数学真题_理"),
+    LegacyPaper("2017wen", "gk-2017-regular-national-1-arts", "arts",
+                "文理", "2017/2017_数学真题_文"),
+    LegacyPaper("2018li", "gk-2018-regular-national-1-science", "science",
+                "文理", "2018/2018_数学真题_理"),
+    LegacyPaper("2018wen", "gk-2018-regular-national-1-arts", "arts",
+                "文理", "2018/2018_数学真题_文"),
+    LegacyPaper("2019li", "gk-2019-regular-national-1-science", "science",
+                "文理", "2019/2019_数学真题_理"),
+    LegacyPaper("2019wen", "gk-2019-regular-national-1-arts", "arts",
+                "文理", "2019/2019_数学真题_文"),
+    LegacyPaper("2020li", "gk-2020-regular-national-1-science", "science",
+                "文理", "2020/2020_数学真题_理"),
+    LegacyPaper("2020wen", "gk-2020-regular-national-1-arts", "arts",
+                "文理", "2020/2020_数学真题_文"),
+    LegacyPaper("2020x2", "gk-2020-regular-new-gaokao-2", "none",
+                "新高考Ⅱ", "2020/2020_数学真题_新高考Ⅱ"),
+    LegacyPaper("2021", "gk-2021-regular-new-gaokao-1", "none",
+                "默认卷", "2021/2021_数学真题"),
+    LegacyPaper("2021x2", "gk-2021-regular-new-gaokao-2", "none",
+                "新高考Ⅱ", "2021/2021_数学真题_新高考Ⅱ"),
+    LegacyPaper("2022", "gk-2022-regular-new-gaokao-1", "none",
+                "默认卷", "2022/2022_数学真题"),
+    LegacyPaper("2022x2", "gk-2022-regular-new-gaokao-2", "none",
+                "新高考Ⅱ", "2022/2022_数学真题_新高考Ⅱ"),
+    LegacyPaper("2023", "gk-2023-regular-new-gaokao-1", "none",
+                "默认卷", "2023/2023_数学真题"),
+    LegacyPaper("2023x2", "gk-2023-regular-new-gaokao-2", "none",
+                "新高考Ⅱ", "2023/2023_数学真题_新高考Ⅱ"),
+    LegacyPaper("2024", "gk-2024-regular-new-gaokao-1", "none",
+                "默认卷", "2024/2024_数学真题"),
+    LegacyPaper("2024x2", "gk-2024-regular-new-gaokao-2", "none",
+                "新高考Ⅱ", "2024/2024_数学真题_新高考Ⅱ"),
+    LegacyPaper("2025", "gk-2025-regular-national-1", "none",
+                "默认卷", "2025/2025_数学真题"),
+    LegacyPaper("2025g2", "gk-2025-regular-national-2", "none",
+                "全国 2", "2025/2025_数学真题_全国2"),
+    LegacyPaper("2026", RECALL_PAPER_ID, "none",
+                "默认卷", "2026/2026_数学真题"),
+    LegacyPaper("2026g2", "gk-2026-regular-national-2", "none",
+                "全国 2", "2026/2026_数学真题_全国2"),
+)
+# 六个不可变阶段 0 子批次；成员顺序即常量表顺序。
+PHASE0_BATCHES = (
+    ("phase0-b01", (
+        "gk-2017-regular-national-1-science", "gk-2017-regular-national-1-arts",
+        "gk-2018-regular-national-1-science", "gk-2018-regular-national-1-arts",
+    )),
+    ("phase0-b02", (
+        "gk-2019-regular-national-1-science", "gk-2019-regular-national-1-arts",
+        "gk-2020-regular-national-1-science", "gk-2020-regular-national-1-arts",
+    )),
+    ("phase0-b03", (
+        "gk-2020-regular-new-gaokao-2", "gk-2021-regular-new-gaokao-1",
+        "gk-2021-regular-new-gaokao-2",
+    )),
+    ("phase0-b04", (
+        "gk-2022-regular-new-gaokao-1", "gk-2022-regular-new-gaokao-2",
+        "gk-2023-regular-new-gaokao-1", "gk-2023-regular-new-gaokao-2",
+    )),
+    ("phase0-b05", (
+        "gk-2024-regular-new-gaokao-1", "gk-2024-regular-new-gaokao-2",
+        "gk-2025-regular-national-1", "gk-2025-regular-national-2",
+    )),
+    ("phase0-b06", (RECALL_PAPER_ID, "gk-2026-regular-national-2")),
+)
+# Task 2 已建立的两条身份问题；迁移只验证不重建，漂移即零写入。
+PHASE0_ISSUE_SEEDS = (
+    {
+        "issue_id": "ISSUE-0001",
+        "type": "identity-ambiguous",
+        "paper_id": RECALL_PAPER_ID,
+        "affected_paper_ids": [],
+        "conflict_code": "recall-vs-official",
+    },
+    {
+        "issue_id": "ISSUE-0002",
+        "type": "identity-ambiguous",
+        "paper_id": None,
+        "affected_paper_ids": [
+            "gk-2017-regular-national-1-arts",
+            "gk-2017-regular-national-1-science",
+        ],
+        "conflict_code": "regions-vs-upstream-path",
+    },
+)
 
 
 @dataclass
@@ -1273,21 +1402,129 @@ def _relative_to_repo(root: Path, path: Path) -> str:
     return relative.as_posix()
 
 
+def validate_source_state(
+    source: Mapping[str, Any], known_papers: Any
+) -> None:
+    """校验单条来源的状态、artifact 与试卷关系耦合是否自洽。"""
+    if not isinstance(source, Mapping):
+        raise ValueError("manifest source 必须是对象")
+    identifier = source.get("source_id", "<unknown>")
+    state = source.get("source_state")
+    if state not in SOURCE_STATES:
+        raise ValueError(f"{identifier}: 未知 source_state：{state}")
+    artifact = source.get("artifact")
+    if (state == "ready") != (artifact is not None):
+        raise ValueError(
+            f"{identifier}: ready 当且仅当包含完整 artifact；"
+            f"{state} 状态 artifact 必须为 null"
+        )
+    relation = source.get("paper_relation")
+    paper_id = source.get("paper_id")
+    if relation is not None:
+        # 只有已验证 artifact 的来源才能承载确认关系。
+        if state != "ready":
+            raise ValueError(f"{identifier}: {state} 不得携带确认关系")
+        if relation not in PAPER_RELATIONS:
+            raise ValueError(f"{identifier}: 未知 paper_relation：{relation}")
+        if paper_id is None:
+            raise ValueError(f"{identifier}: paper_relation 存在但 paper_id 为空")
+    if state == "non_paper" and paper_id is not None:
+        raise ValueError(f"{identifier}: non_paper 不得绑定试卷")
+    if paper_id is not None and paper_id not in known_papers:
+        raise ValueError(f"{identifier}: paper_id 不存在：{paper_id}")
+
+
+def _known_paper_ids(value: Mapping[str, Any]) -> set:
+    papers = value.get("papers")
+    if not isinstance(papers, list):
+        raise ValueError("manifest papers 必须是数组")
+    return set(
+        paper.get("paper_id") for paper in papers if isinstance(paper, Mapping)
+    )
+
+
 def _validate_source_artifact_semantics(value: Mapping[str, Any]) -> None:
     sources = value.get("sources")
     if not isinstance(sources, list):
         raise ValueError("manifest sources 必须是数组")
+    known_papers = _known_paper_ids(value)
     for source in sources:
-        if not isinstance(source, Mapping):
-            raise ValueError("manifest source 必须是对象")
-        identifier = source.get("source_id", "<unknown>")
-        state = source.get("source_state")
-        artifact = source.get("artifact")
-        if (state == "ready") != (artifact is not None):
-            raise ValueError(
-                f"{identifier}: ready 当且仅当包含完整 artifact；"
-                f"{state} 状态 artifact 必须为 null"
-            )
+        validate_source_state(source, known_papers)
+
+
+def _validate_sorted_unique_paths(label: str, paths: Sequence[Any]) -> None:
+    if list(paths) != sorted(paths) or len(set(paths)) != len(paths):
+        raise ValueError(f"{label} 必须按 path 唯一排序")
+
+
+def _validate_paper_semantics(value: Mapping[str, Any]) -> None:
+    """校验 papers/batches 的跨字段不变量（Schema 之外的部分）。"""
+    papers = value.get("papers")
+    batches = value.get("batches")
+    if not isinstance(papers, list) or not isinstance(batches, list):
+        raise ValueError("manifest 的 papers/batches 必须是数组")
+
+    known_papers = set()
+    for paper in papers:
+        if not isinstance(paper, Mapping):
+            raise ValueError("manifest paper 必须是对象")
+        paper_id = paper.get("paper_id")
+        known_papers.add(paper_id)
+        source_files = paper.get("source_files")
+        if not isinstance(source_files, Mapping) or set(source_files) != set(
+            SOURCE_FILE_KEYS
+        ):
+            raise ValueError(f"{paper_id}: source_files 必须恰好包含四个键")
+        values = list(source_files.values())
+        if len(set(values)) != len(values):
+            raise ValueError(f"{paper_id}: source_files 路径必须唯一")
+        figures = paper.get("figure_files")
+        if not isinstance(figures, list) or any(
+            not isinstance(figure, Mapping) for figure in figures
+        ):
+            raise ValueError(f"{paper_id}: figure_files 必须是对象数组")
+        _validate_sorted_unique_paths(
+            f"{paper_id}: figure_files", [figure.get("path") for figure in figures]
+        )
+        prefix = "%s/figures/" % paper.get("project_dir")
+        for figure in figures:
+            if not str(figure.get("path")).startswith(prefix):
+                raise ValueError(f"{paper_id}: figure_files 必须位于本卷 figures 目录")
+            occurrences = figure.get("expected_occurrences")
+            if (
+                isinstance(occurrences, bool)
+                or not isinstance(occurrences, int)
+                or occurrences < 1
+            ):
+                raise ValueError(f"{paper_id}: expected_occurrences 必须是正整数")
+        legacy_files = paper.get("legacy_source_files")
+        if not isinstance(legacy_files, list) or any(
+            not isinstance(item, Mapping) for item in legacy_files
+        ):
+            raise ValueError(f"{paper_id}: legacy_source_files 必须是对象数组")
+        _validate_sorted_unique_paths(
+            f"{paper_id}: legacy_source_files",
+            [item.get("path") for item in legacy_files],
+        )
+
+    batch_ids = set()
+    batched_papers = set()
+    for batch in batches:
+        if not isinstance(batch, Mapping):
+            raise ValueError("manifest batch 必须是对象")
+        batch_id = batch.get("batch_id")
+        if batch_id in batch_ids:
+            raise ValueError(f"batch_id 不唯一：{batch_id}")
+        batch_ids.add(batch_id)
+        paper_ids = batch.get("paper_ids")
+        if not isinstance(paper_ids, list):
+            raise ValueError(f"{batch_id}: paper_ids 必须是数组")
+        for paper_id in paper_ids:
+            if paper_id not in known_papers:
+                raise ValueError(f"{batch_id}: paper_id 不存在：{paper_id}")
+            if paper_id in batched_papers:
+                raise ValueError(f"{batch_id}: paper_id 属于多个批次：{paper_id}")
+            batched_papers.add(paper_id)
 
 
 def _validated_manifest_value(manifest_path: Path, value: Mapping[str, Any]) -> None:
@@ -1301,6 +1538,7 @@ def _validated_manifest_value(manifest_path: Path, value: Mapping[str, Any]) -> 
     validate_schema(value, schema)
     validate_manifest_semantics(value)
     _validate_source_artifact_semantics(value)
+    _validate_paper_semantics(value)
 
 
 def _issue_candidate(
@@ -1536,6 +1774,354 @@ def validate_source_manifest(
     return count
 
 
+def _read_repo_text(repo_root: Path, relative: str) -> str:
+    path = Path(repo_root) / relative
+    try:
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        raise ValueError(f"无法读取迁移输入：{relative}: {error}") from error
+
+
+def _ordered_reference_counts(
+    texts: Sequence[str], pattern: Any
+) -> tuple:
+    """按首次出现顺序统计引用，返回 (顺序列表, 计数字典)。"""
+    order: List[str] = []
+    counts: Dict[str, int] = {}
+    for text in texts:
+        for match in pattern.finditer(text):
+            key = match.group(1)
+            if key not in counts:
+                order.append(key)
+                counts[key] = 0
+            counts[key] += 1
+    return order, counts
+
+
+def _figure_files(
+    repo_root: Path,
+    project_dir: str,
+    figure_names: Sequence[str],
+    source_files: Mapping[str, str],
+) -> List[Dict[str, Any]]:
+    """把 legacy figure tree 迁成带引用次数的登记表。
+
+    次数取自当前规范 Markdown；哪一张图对应哪一次引用由 legacy TeX 的引用顺序
+    定位。两者的图数或逐图次数不一致时立即失败，不猜测配对。
+    """
+    if any(not str(name).endswith(".tex") for name in figure_names):
+        raise ValueError(f"{project_dir}: figure 登记必须全部是 .tex")
+    figure_dir = Path(repo_root) / PROJECT_RELATIVE / project_dir / "figures"
+    try:
+        actual = sorted(item.name for item in figure_dir.iterdir() if item.is_file())
+    except OSError as error:
+        raise ValueError(f"{project_dir}: 无法列出 figures 目录：{error}") from error
+    if actual != list(figure_names):
+        raise ValueError(f"{project_dir}: figures 目录与 legacy index 登记不一致")
+
+    tex_order, tex_counts = _ordered_reference_counts(
+        [
+            _read_repo_text(
+                repo_root, "%s/%s/%s" % (PROJECT_RELATIVE, project_dir, name)
+            )
+            for name in ("questions.tex", "answers.tex")
+        ],
+        _FIGURE_INPUT_RE,
+    )
+    stems = [str(name)[: -len(".tex")] for name in figure_names]
+    if sorted(tex_order) != sorted(stems):
+        raise ValueError(f"{project_dir}: 存在未引用或未登记的 figure")
+
+    image_order, image_counts = _ordered_reference_counts(
+        [
+            _read_repo_text(repo_root, source_files[key])
+            for key in FIGURE_COUNT_SOURCE_KEYS
+        ],
+        _MARKDOWN_IMAGE_RE,
+    )
+    if len(image_order) != len(tex_order):
+        raise ValueError(
+            "%s: 规范 Markdown 图片数 %d 与登记 figure 数 %d 不一致"
+            % (project_dir, len(image_order), len(tex_order))
+        )
+    records = []
+    for stem, image in zip(tex_order, image_order):
+        occurrences = image_counts[image]
+        if occurrences != tex_counts[stem]:
+            raise ValueError(
+                "%s: %s 引用次数不一致：Markdown %d，legacy TeX %d"
+                % (project_dir, stem, occurrences, tex_counts[stem])
+            )
+        records.append({
+            "path": "%s/figures/%s.tex" % (project_dir, stem),
+            "expected_occurrences": occurrences,
+        })
+    records.sort(key=lambda item: item["path"])
+    return records
+
+
+def _legacy_paper_metadata(legacy_index: Any) -> Dict[str, Mapping[str, Any]]:
+    papers = legacy_index.get("papers") if isinstance(legacy_index, Mapping) else None
+    if not isinstance(papers, list) or any(
+        not isinstance(paper, Mapping) for paper in papers
+    ):
+        raise ValueError("legacy index papers 必须是对象数组")
+    metadata: Dict[str, Mapping[str, Any]] = {}
+    for paper in papers:
+        legacy_id = paper.get("id")
+        if not isinstance(legacy_id, str) or legacy_id in metadata:
+            raise ValueError(f"legacy index 旧 ID 缺失或重复：{legacy_id!r}")
+        metadata[legacy_id] = paper
+    expected = set(entry.legacy_id for entry in LEGACY_PAPERS)
+    if set(metadata) != expected:
+        raise ValueError(
+            "legacy index 旧 ID 必须与常量表逐字一致：缺 %s，多 %s"
+            % (sorted(expected - set(metadata)), sorted(set(metadata) - expected))
+        )
+    return metadata
+
+
+def verify_phase0_issue_seeds(issues: Sequence[Mapping[str, Any]]) -> None:
+    """确认 Task 2 建立的两条身份问题编号、目标与状态都没有漂移。"""
+    by_id: Dict[Any, Mapping[str, Any]] = {}
+    for issue in issues:
+        issue_id = issue.get("issue_id")
+        if issue_id in by_id:
+            raise ValueError(f"重复问题编号：{issue_id}")
+        by_id[issue_id] = issue
+    for seed in PHASE0_ISSUE_SEEDS:
+        issue = by_id.get(seed["issue_id"])
+        if issue is None:
+            raise ValueError(f"缺少种子问题：{seed['issue_id']}")
+        for field_name in ("type", "paper_id", "affected_paper_ids", "conflict_code"):
+            if issue.get(field_name) != seed[field_name]:
+                raise ValueError(
+                    "%s: %s 已漂移：期望 %r，实际 %r"
+                    % (seed["issue_id"], field_name, seed[field_name],
+                       issue.get(field_name))
+                )
+        if issue.get("status") != "open" or issue.get("impact") != "blocks_completion":
+            raise ValueError(f"{seed['issue_id']}: 必须保持 open/blocks_completion")
+
+
+def _issue_ids_by_paper(
+    issues: Sequence[Mapping[str, Any]], known_papers: Any
+) -> Dict[str, List[str]]:
+    result: Dict[str, set] = {}
+    for issue in issues:
+        if issue.get("status") == "resolved":
+            continue
+        targets = list(issue.get("affected_paper_ids") or [])
+        if issue.get("paper_id") is not None:
+            targets.append(issue["paper_id"])
+        for target in targets:
+            if target not in known_papers:
+                raise ValueError(
+                    f"{issue.get('issue_id')}: 引用未知 paper_id：{target}"
+                )
+            result.setdefault(target, set()).add(issue["issue_id"])
+    return {key: sorted(value) for key, value in result.items()}
+
+
+def _paper_record(
+    entry: LegacyPaper,
+    legacy: Mapping[str, Any],
+    repo_root: Path,
+    issue_ids: Sequence[str],
+) -> Dict[str, Any]:
+    project_dir = legacy.get("dir")
+    title = legacy.get("title")
+    year = legacy.get("year")
+    question_count = legacy.get("questions")
+    figure_names = legacy.get("figures")
+    if not isinstance(project_dir, str) or not project_dir:
+        raise ValueError(f"{entry.legacy_id}: legacy index 缺少 dir")
+    if not isinstance(title, str) or not title:
+        raise ValueError(f"{entry.legacy_id}: legacy index 缺少 title")
+    if isinstance(year, bool) or not isinstance(year, int):
+        raise ValueError(f"{entry.legacy_id}: legacy index 缺少 year")
+    if (
+        isinstance(question_count, bool)
+        or not isinstance(question_count, int)
+        or question_count < 1
+    ):
+        raise ValueError(f"{entry.legacy_id}: legacy index questions 必须是正整数")
+    if not isinstance(figure_names, list):
+        raise ValueError(f"{entry.legacy_id}: legacy index figures 必须是数组")
+    legacy_track = legacy.get("track")
+    if legacy_track not in TRACK_BY_LEGACY:
+        raise ValueError(f"{entry.legacy_id}: 未知 legacy track：{legacy_track!r}")
+    if TRACK_BY_LEGACY[legacy_track] != entry.track:
+        raise ValueError(f"{entry.legacy_id}: legacy track 与常量表不一致")
+
+    source_files = {
+        key: entry.markdown_prefix + MARKDOWN_SUFFIXES[key]
+        for key in SOURCE_FILE_KEYS
+    }
+    for key in REQUIRED_SOURCE_FILE_KEYS:
+        if not (Path(repo_root) / source_files[key]).is_file():
+            raise ValueError(
+                f"{entry.paper_id}: 规范 Markdown 缺失：{source_files[key]}"
+            )
+    legacy_source_files: List[Dict[str, Any]] = []
+    if entry.paper_id == RECALL_PAPER_ID:
+        if source_files["questions"] != RECALL_LEGACY_SOURCE:
+            raise ValueError("回忆版 legacy 规范源路径与常量不一致")
+        legacy_source_files = [{
+            "path": RECALL_LEGACY_SOURCE,
+            "sha256": file_sha256(Path(repo_root) / RECALL_LEGACY_SOURCE),
+        }]
+    return {
+        "paper_id": entry.paper_id,
+        "legacy_ids": [entry.legacy_id],
+        "project_dir": project_dir,
+        "title": title,
+        "year": year,
+        "track": entry.track,
+        "question_count": question_count,
+        "source_files": source_files,
+        "figure_files": _figure_files(
+            repo_root, project_dir, figure_names, source_files
+        ),
+        "legacy_source_files": legacy_source_files,
+        # 阶段 0 不建立上游绑定；回忆版更必须保持空集直到身份问题裁决。
+        "source_ids": [],
+        "production_state": "legacy_unverified",
+        "issue_ids": list(issue_ids),
+        # blocked 摘要三字段由 Task 15 derive_status() 填写，迁移时一律为 null。
+        "blocked_from": None,
+        "last_verified_hash": None,
+        "resume_action": None,
+    }
+
+
+def migrate_legacy_index(
+    manifest: Mapping[str, Any],
+    legacy_index: Mapping[str, Any],
+    *,
+    repo_root: Path,
+    issues: Sequence[Mapping[str, Any]],
+) -> Dict[str, Any]:
+    """把 21 套 legacy 试卷迁入 manifest；返回新 manifest，不写盘。"""
+    if not isinstance(manifest, Mapping):
+        raise ValueError("manifest 必须是对象")
+    metadata = _legacy_paper_metadata(legacy_index)
+    verify_phase0_issue_seeds(issues)
+    known_papers = set(entry.paper_id for entry in LEGACY_PAPERS)
+    issue_ids = _issue_ids_by_paper(issues, known_papers)
+    papers = [
+        _paper_record(
+            entry, metadata[entry.legacy_id], repo_root,
+            issue_ids.get(entry.paper_id, []),
+        )
+        for entry in LEGACY_PAPERS
+    ]
+    batches = [
+        {
+            "batch_id": batch_id,
+            "paper_ids": list(paper_ids),
+            "status": "planned",
+            "issues": [],
+        }
+        for batch_id, paper_ids in PHASE0_BATCHES
+    ]
+
+    migrated = copy.deepcopy(dict(manifest))
+    # 已迁移的 manifest 只允许逐字重放；状态已推进时拒绝回退成 legacy_unverified。
+    if migrated.get("papers") and migrated["papers"] != papers:
+        raise ValueError("现有 manifest papers 与迁移结果不一致，拒绝覆盖")
+    if migrated.get("batches") and migrated["batches"] != batches:
+        raise ValueError("现有 manifest batches 与迁移结果不一致，拒绝覆盖")
+    migrated["papers"] = papers
+    migrated["batches"] = batches
+    validate_manifest_semantics(migrated)
+    _validate_paper_semantics(migrated)
+    return migrated
+
+
+def project_legacy_index(
+    manifest: Mapping[str, Any], legacy_index: Mapping[str, Any]
+) -> Dict[str, Any]:
+    """把 manifest 身份投影回兼容 index.json：只增 paper_id/legacy_ids/batches。"""
+    by_legacy: Dict[str, Mapping[str, Any]] = {}
+    for paper in project_index(manifest).values():
+        for legacy_id in paper.get("legacy_ids", []):
+            if legacy_id in by_legacy:
+                raise ValueError(f"manifest legacy_ids 重复：{legacy_id}")
+            by_legacy[legacy_id] = paper
+    projected = copy.deepcopy(dict(legacy_index))
+    entries = projected.get("papers")
+    if not isinstance(entries, list):
+        raise ValueError("legacy index papers 必须是数组")
+    for entry in entries:
+        if not isinstance(entry, MutableMapping):
+            raise ValueError("legacy index paper 必须是对象")
+        legacy_id = entry.get("id")
+        paper = by_legacy.get(legacy_id)
+        if paper is None:
+            raise ValueError(f"manifest 未覆盖 legacy 旧 ID：{legacy_id!r}")
+        entry["paper_id"] = paper["paper_id"]
+        entry["legacy_ids"] = list(paper["legacy_ids"])
+    projected["batches"] = copy.deepcopy(list(manifest.get("batches", [])))
+    return projected
+
+
+def _migrate_legacy_index_command(arguments: argparse.Namespace) -> int:
+    manifest_path = Path(arguments.manifest)
+    legacy_index_path = Path(arguments.legacy_index)
+    issues_path = Path(arguments.issues)
+    output_manifest_path = Path(arguments.output_manifest)
+    output_index_path = Path(arguments.output_index)
+    root = _repository_root(manifest_path.parent)
+    manifest_relative = _relative_to_repo(root, output_manifest_path)
+    if manifest_relative != MANIFEST_TARGET:
+        raise ValueError(
+            f"--output-manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
+        )
+    index_relative = _relative_to_repo(root, output_index_path)
+    issues_relative = _relative_to_repo(root, issues_path)
+
+    with RepoLock(root):
+        manifest = _load_json(manifest_path)
+        revision = manifest.get("revision")
+        if type(revision) is not int or revision < 0:
+            raise ValueError("manifest revision 必须是非负整数")
+        legacy_index = _load_json(legacy_index_path)
+        issues = load_issues(issues_path)
+        migrated = migrate_legacy_index(
+            manifest, legacy_index, repo_root=root, issues=issues
+        )
+        index_bytes = canonical_json(
+            project_legacy_index(migrated, legacy_index)
+        ).encode("utf-8")
+        # 两条种子问题只被验证，不被改写；随事务一起提交以固定它们的字节。
+        issues_bytes = issues_path.read_bytes()
+        if (
+            migrated == manifest
+            and output_manifest_path.read_bytes() == canonical_json(
+                migrated
+            ).encode("utf-8")
+            and output_index_path.is_file()
+            and output_index_path.read_bytes() == index_bytes
+        ):
+            return 0
+
+        transaction = Transaction(root)
+        migrated["revision"] = revision + 1
+        migrated["last_transaction_id"] = transaction.transaction_id
+        _validated_manifest_value(manifest_path, migrated)
+        targets = {
+            index_relative: index_bytes,
+            issues_relative: issues_bytes,
+            MANIFEST_TARGET: canonical_json(migrated).encode("utf-8"),
+        }
+        transaction.prepare(
+            "state", targets, inputs={}, expected_revision=revision
+        )
+        transaction.commit()
+        return 0
+
+
 def _materialize_command(arguments: argparse.Namespace) -> int:
     started = time.monotonic()
     deadline = started + arguments.deadline_seconds
@@ -1677,6 +2263,13 @@ def _parser() -> argparse.ArgumentParser:
     materialize.add_argument("--deadline-seconds", required=True, type=_positive)
     materialize.add_argument("--pdfinfo", required=True, type=_absolute_path)
 
+    migrate = subparsers.add_parser("migrate-legacy-index")
+    migrate.add_argument("--manifest", required=True, type=Path)
+    migrate.add_argument("--legacy-index", required=True, type=Path)
+    migrate.add_argument("--issues", required=True, type=Path)
+    migrate.add_argument("--output-manifest", required=True, type=Path)
+    migrate.add_argument("--output-index", required=True, type=Path)
+
     validate_parser = subparsers.add_parser("validate")
     validate_parser.add_argument("--manifest", required=True, type=Path)
     validate_parser.add_argument("--require-artifacts", type=_nonnegative)
@@ -1732,6 +2325,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             arguments.manifest, arguments.require_artifacts
         )
         return 0
+    if arguments.command == "migrate-legacy-index":
+        return _migrate_legacy_index_command(arguments)
     if arguments.command == "materialize":
         return _materialize_command(arguments)
     raise ValueError(f"未知命令：{arguments.command}")

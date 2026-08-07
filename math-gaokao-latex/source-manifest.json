@@ -1,6 +1,70 @@
 {
   "$schema": "schemas/source-manifest.schema.json",
-  "batches": [],
+  "batches": [
+    {
+      "batch_id": "phase0-b01",
+      "issues": [],
+      "paper_ids": [
+        "gk-2017-regular-national-1-science",
+        "gk-2017-regular-national-1-arts",
+        "gk-2018-regular-national-1-science",
+        "gk-2018-regular-national-1-arts"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase0-b02",
+      "issues": [],
+      "paper_ids": [
+        "gk-2019-regular-national-1-science",
+        "gk-2019-regular-national-1-arts",
+        "gk-2020-regular-national-1-science",
+        "gk-2020-regular-national-1-arts"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase0-b03",
+      "issues": [],
+      "paper_ids": [
+        "gk-2020-regular-new-gaokao-2",
+        "gk-2021-regular-new-gaokao-1",
+        "gk-2021-regular-new-gaokao-2"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase0-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-2022-regular-new-gaokao-1",
+        "gk-2022-regular-new-gaokao-2",
+        "gk-2023-regular-new-gaokao-1",
+        "gk-2023-regular-new-gaokao-2"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase0-b05",
+      "issues": [],
+      "paper_ids": [
+        "gk-2024-regular-new-gaokao-1",
+        "gk-2024-regular-new-gaokao-2",
+        "gk-2025-regular-national-1",
+        "gk-2025-regular-national-2"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase0-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2026-regular-national-1-recall",
+        "gk-2026-regular-national-2"
+      ],
+      "status": "planned"
+    }
+  ],
   "inventory": {
     "root_counts": {
       "regular": 734,
@@ -8,9 +72,803 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "53135013-0eab-4ef5-ba0a-19250cc714ee",
-  "papers": [],
-  "revision": 775,
+  "last_transaction_id": "60826dd6-88cf-4c1a-a735-e229c85c0201",
+  "papers": [
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_理科/figures/f2017_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_理科/figures/f2017_t18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_理科/figures/f2017_taiji.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_理科/figures/f2017li_t16_paper.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_理科/figures/f2017li_t7_views.tex"
+        }
+      ],
+      "issue_ids": [
+        "ISSUE-0002"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2017li"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-1-science",
+      "production_state": "legacy_unverified",
+      "project_dir": "2017_全国Ⅰ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_理_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_理_含解析.md",
+        "questions": "2017/2017_数学真题_理_试题.md",
+        "solution_body": "2017/2017_数学真题_理_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2017 年·全国Ⅰ卷·理科",
+      "track": "science",
+      "year": 2017
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017_t18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017_taiji.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesAB.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesCD.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅰ卷_文科/figures/f2017wen_t8_panels.tex"
+        }
+      ],
+      "issue_ids": [
+        "ISSUE-0002"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2017wen"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-1-arts",
+      "production_state": "legacy_unverified",
+      "project_dir": "2017_全国Ⅰ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_文_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_文_含解析.md",
+        "questions": "2017/2017_数学真题_文_试题.md",
+        "solution_body": "2017/2017_数学真题_文_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2017 年·全国Ⅰ卷·文科",
+      "track": "arts",
+      "year": 2017
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_理科/figures/f2018_t3_pies.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_理科/figures/f2018_t7_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_理科/figures/f2018li_t10_lune.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_理科/figures/f2018li_t18_fold.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2018li"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-national-1-science",
+      "production_state": "legacy_unverified",
+      "project_dir": "2018_全国Ⅰ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_理_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_理_含解析.md",
+        "questions": "2018/2018_数学真题_理_试题.md",
+        "solution_body": "2018/2018_数学真题_理_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2018 年·全国Ⅰ卷·理科",
+      "track": "science",
+      "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_文科/figures/f2018_t3_pies.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_文科/figures/f2018_t7_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2018_全国Ⅰ卷_文科/figures/f2018wen_t18_fold.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "2018_全国Ⅰ卷_文科/figures/f2018wen_t19_grid.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2018wen"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-national-1-arts",
+      "production_state": "legacy_unverified",
+      "project_dir": "2018_全国Ⅰ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_文_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_文_含解析.md",
+        "questions": "2018/2018_数学真题_文_试题.md",
+        "solution_body": "2018/2018_数学真题_文_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2018 年·全国Ⅰ卷·文科",
+      "track": "arts",
+      "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_理科/figures/f2019_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_理科/figures/f2019_t18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_理科/figures/f2019_t5_panels.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2019li"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2019-regular-national-1-science",
+      "production_state": "legacy_unverified",
+      "project_dir": "2019_全国Ⅰ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2019/2019_数学真题_理_答案要点.md",
+        "combined_rendered": "2019/2019_数学真题_理_含解析.md",
+        "questions": "2019/2019_数学真题_理_试题.md",
+        "solution_body": "2019/2019_数学真题_理_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2019 年·全国Ⅰ卷·理科",
+      "track": "science",
+      "year": 2019
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_文科/figures/f2019_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_文科/figures/f2019_t18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_文科/figures/f2019_t5_panels.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2019wen"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2019-regular-national-1-arts",
+      "production_state": "legacy_unverified",
+      "project_dir": "2019_全国Ⅰ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2019/2019_数学真题_文_答案要点.md",
+        "combined_rendered": "2019/2019_数学真题_文_含解析.md",
+        "questions": "2019/2019_数学真题_文_试题.md",
+        "solution_body": "2019/2019_数学真题_文_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2019 年·全国Ⅰ卷·文科",
+      "track": "arts",
+      "year": 2019
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_理科/figures/f2020li_t16_unfold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_理科/figures/f2020li_t18_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_理科/figures/f2020li_t5_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_理科/figures/f2020li_t7_graph.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2020li"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-regular-national-1-science",
+      "production_state": "legacy_unverified",
+      "project_dir": "2020_全国Ⅰ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_理_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_理_含解析.md",
+        "questions": "2020/2020_数学真题_理_试题.md",
+        "solution_body": "2020/2020_数学真题_理_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2020 年·全国Ⅰ卷·理科",
+      "track": "science",
+      "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_文科/figures/f2020li_t5_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_文科/figures/f2020li_t7_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_文科/figures/f2020wen_t19_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_全国Ⅰ卷_文科/figures/f2020wen_t9_flow.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2020wen"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-regular-national-1-arts",
+      "production_state": "legacy_unverified",
+      "project_dir": "2020_全国Ⅰ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_文_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_文_含解析.md",
+        "questions": "2020/2020_数学真题_文_试题.md",
+        "solution_body": "2020/2020_数学真题_文_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2020 年·全国Ⅰ卷·文科",
+      "track": "arts",
+      "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_新高考Ⅱ卷/figures/f2020x2_t11_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_新高考Ⅱ卷/figures/f2020x2_t16_part.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_新高考Ⅱ卷/figures/f2020x2_t20_pyr.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2020_新高考Ⅱ卷/figures/f2020x2_t9_lines.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2020x2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-regular-new-gaokao-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2020_新高考Ⅱ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_新高考Ⅱ_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_新高考Ⅱ_含解析.md",
+        "questions": "2020/2020_数学真题_新高考Ⅱ_试题.md",
+        "solution_body": "2020/2020_数学真题_新高考Ⅱ_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2020 年·新高考Ⅱ卷",
+      "track": "none",
+      "year": 2020
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_新高考Ⅰ卷/figures/f2021_t20_tetra.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2021"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-new-gaokao-1",
+      "production_state": "legacy_unverified",
+      "project_dir": "2021_新高考Ⅰ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_含解析.md",
+        "questions": "2021/2021_数学真题_试题.md",
+        "solution_body": "2021/2021_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2021 年·新高考Ⅰ卷",
+      "track": "none",
+      "year": 2021
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_新高考Ⅱ卷/figures/f2021x2_t10_cubes.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_新高考Ⅱ卷/figures/f2021x2_t19_pyr.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2021x2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-new-gaokao-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2021_新高考Ⅱ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_新高考Ⅱ_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_新高考Ⅱ_含解析.md",
+        "questions": "2021/2021_数学真题_新高考Ⅱ_试题.md",
+        "solution_body": "2021/2021_数学真题_新高考Ⅱ_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2021 年·新高考Ⅱ卷",
+      "track": "none",
+      "year": 2021
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅰ卷/figures/f2022_t19_prism.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2022"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-new-gaokao-1",
+      "production_state": "legacy_unverified",
+      "project_dir": "2022_新高考Ⅰ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_含解析.md",
+        "questions": "2022/2022_数学真题_试题.md",
+        "solution_body": "2022/2022_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2022 年·新高考Ⅰ卷",
+      "track": "none",
+      "year": 2022
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅱ卷/figures/f2022x2_t11_sq.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅱ卷/figures/f2022x2_t19_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅱ卷/figures/f2022x2_t20_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅱ卷/figures/f2022x2_t3_jiajia.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_新高考Ⅱ卷/figures/f2022x2_t3_roof.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2022x2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-new-gaokao-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2022_新高考Ⅱ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_新高考Ⅱ_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_新高考Ⅱ_含解析.md",
+        "questions": "2022/2022_数学真题_新高考Ⅱ_试题.md",
+        "solution_body": "2022/2022_数学真题_新高考Ⅱ_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2022 年·新高考Ⅱ卷",
+      "track": "none",
+      "year": 2022
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2023_新高考Ⅰ卷/figures/f2023_t18_prism.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2023"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2023-regular-new-gaokao-1",
+      "production_state": "legacy_unverified",
+      "project_dir": "2023_新高考Ⅰ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2023/2023_数学真题_答案要点.md",
+        "combined_rendered": "2023/2023_数学真题_含解析.md",
+        "questions": "2023/2023_数学真题_试题.md",
+        "solution_body": "2023/2023_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2023 年·新高考Ⅰ卷",
+      "track": "none",
+      "year": 2023
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2023_新高考Ⅱ卷/figures/f2023x2_t16_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2023_新高考Ⅱ卷/figures/f2023x2_t19_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2023_新高考Ⅱ卷/figures/f2023x2_t20_tetra.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2023x2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2023-regular-new-gaokao-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2023_新高考Ⅱ卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2023/2023_数学真题_新高考Ⅱ_答案要点.md",
+        "combined_rendered": "2023/2023_数学真题_新高考Ⅱ_含解析.md",
+        "questions": "2023/2023_数学真题_新高考Ⅱ_试题.md",
+        "solution_body": "2023/2023_数学真题_新高考Ⅱ_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2023 年·新高考Ⅱ卷",
+      "track": "none",
+      "year": 2023
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2024_新高考Ⅰ卷/figures/f2024_t11_curve.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2024"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2024-regular-new-gaokao-1",
+      "production_state": "legacy_unverified",
+      "project_dir": "2024_新高考Ⅰ卷",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2024/2024_数学真题_答案要点.md",
+        "combined_rendered": "2024/2024_数学真题_含解析.md",
+        "questions": "2024/2024_数学真题_试题.md",
+        "solution_body": "2024/2024_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2024 年·新高考Ⅰ卷",
+      "track": "none",
+      "year": 2024
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2024_新高考Ⅱ卷/figures/f2024x2_t17_fold.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2024x2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2024-regular-new-gaokao-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2024_新高考Ⅱ卷",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2024/2024_数学真题_新高考Ⅱ_答案要点.md",
+        "combined_rendered": "2024/2024_数学真题_新高考Ⅱ_含解析.md",
+        "questions": "2024/2024_数学真题_新高考Ⅱ_试题.md",
+        "solution_body": "2024/2024_数学真题_新高考Ⅱ_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2024 年·新高考Ⅱ卷",
+      "track": "none",
+      "year": 2024
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2025_全国1卷/figures/f2025_t17_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2025_全国1卷/figures/f2025_t6_wind.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2025"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2025-regular-national-1",
+      "production_state": "legacy_unverified",
+      "project_dir": "2025_全国1卷",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2025/2025_数学真题_答案要点.md",
+        "combined_rendered": "2025/2025_数学真题_含解析.md",
+        "questions": "2025/2025_数学真题_试题.md",
+        "solution_body": "2025/2025_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2025 年·全国 1 卷",
+      "track": "none",
+      "year": 2025
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2025_全国2卷/figures/f2025g2_t17_fold.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2025g2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2025-regular-national-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2025_全国2卷",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2025/2025_数学真题_全国2_答案要点.md",
+        "combined_rendered": "2025/2025_数学真题_全国2_含解析.md",
+        "questions": "2025/2025_数学真题_全国2_试题.md",
+        "solution_body": "2025/2025_数学真题_全国2_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2025 年·全国 2 卷",
+      "track": "none",
+      "year": 2025
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2026_全国1卷_回忆版/figures/f2026_t15_prism.tex"
+        }
+      ],
+      "issue_ids": [
+        "ISSUE-0001"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2026"
+      ],
+      "legacy_source_files": [
+        {
+          "path": "2026/2026_数学真题_试题.md",
+          "sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1"
+        }
+      ],
+      "paper_id": "gk-2026-regular-national-1-recall",
+      "production_state": "legacy_unverified",
+      "project_dir": "2026_全国1卷_回忆版",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2026/2026_数学真题_答案要点.md",
+        "combined_rendered": "2026/2026_数学真题_含解析.md",
+        "questions": "2026/2026_数学真题_试题.md",
+        "solution_body": "2026/2026_数学真题_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2026 年·全国 1 卷（回忆版）",
+      "track": "none",
+      "year": 2026
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2026_全国2卷/figures/f2026g2_t15_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2026_全国2卷/figures/f2026g2_t16_tetra.tex"
+        }
+      ],
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [
+        "2026g2"
+      ],
+      "legacy_source_files": [],
+      "paper_id": "gk-2026-regular-national-2",
+      "production_state": "legacy_unverified",
+      "project_dir": "2026_全国2卷",
+      "question_count": 19,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2026/2026_数学真题_全国2_答案要点.md",
+        "combined_rendered": "2026/2026_数学真题_全国2_含解析.md",
+        "questions": "2026/2026_数学真题_全国2_试题.md",
+        "solution_body": "2026/2026_数学真题_全国2_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2026 年·全国 2 卷",
+      "track": "none",
+      "year": 2026
+    }
+  ],
+  "revision": 776,
   "schema_version": 1,
   "sources": [
     {

@@ -1,16 +1,5 @@
 {
   "$defs": {
-    "nullable_id": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "pattern": "^[A-Za-z0-9._:-]+$",
-          "type": "string"
-        }
-      ]
-    },
     "artifact": {
       "additionalProperties": false,
       "properties": {
@@ -56,6 +45,249 @@
         "git_oid_verified",
         "pdf_check",
         "pdfinfo_version"
+      ],
+      "type": "object"
+    },
+    "batch": {
+      "additionalProperties": false,
+      "properties": {
+        "batch_id": {
+          "pattern": "^phase[0-9]+-b[0-9]{2}$",
+          "type": "string"
+        },
+        "issues": {
+          "items": {
+            "pattern": "^ISSUE-[0-9]+$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "paper_ids": {
+          "items": {
+            "pattern": "^gk-[0-9]{4}-[a-z0-9-]+$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "provenance_verified",
+            "compiled_pending_review",
+            "closed",
+            "closed_with_blockers"
+          ]
+        }
+      },
+      "required": [
+        "batch_id",
+        "paper_ids",
+        "status",
+        "issues"
+      ],
+      "type": "object"
+    },
+    "figure_file": {
+      "additionalProperties": false,
+      "properties": {
+        "expected_occurrences": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "path": {
+          "pattern": "^[^/]+/figures/[^/]+\\.tex$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "expected_occurrences"
+      ],
+      "type": "object"
+    },
+    "legacy_source_file": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "pattern": "^.+\\.md$",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "nullable_id": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "pattern": "^[A-Za-z0-9._:-]+$",
+          "type": "string"
+        }
+      ]
+    },
+    "paper": {
+      "additionalProperties": false,
+      "properties": {
+        "blocked_from": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "enum": [
+                "legacy_unverified",
+                "planned",
+                "source_ready",
+                "transcription_draft",
+                "questions_verified",
+                "answers_draft",
+                "answers_verified",
+                "shared_frozen",
+                "editions_generated",
+                "compiled",
+                "complete",
+                "blocked"
+              ]
+            }
+          ]
+        },
+        "figure_files": {
+          "items": {
+            "$ref": "#/$defs/figure_file"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "issue_ids": {
+          "items": {
+            "pattern": "^ISSUE-[0-9]+$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "last_verified_hash": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            }
+          ]
+        },
+        "legacy_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "legacy_source_files": {
+          "items": {
+            "$ref": "#/$defs/legacy_source_file"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "paper_id": {
+          "pattern": "^gk-[0-9]{4}-[a-z0-9-]+$",
+          "type": "string"
+        },
+        "production_state": {
+          "enum": [
+            "legacy_unverified",
+            "planned",
+            "source_ready",
+            "transcription_draft",
+            "questions_verified",
+            "answers_draft",
+            "answers_verified",
+            "shared_frozen",
+            "editions_generated",
+            "compiled",
+            "complete",
+            "blocked"
+          ]
+        },
+        "project_dir": {
+          "pattern": "^[^/]+$",
+          "type": "string"
+        },
+        "question_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "resume_action": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^.+$",
+              "type": "string"
+            }
+          ]
+        },
+        "source_files": {
+          "$ref": "#/$defs/source_files"
+        },
+        "source_ids": {
+          "items": {
+            "pattern": "^[A-Za-z0-9._:-]+$",
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "title": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "track": {
+          "enum": [
+            "arts",
+            "science",
+            "none"
+          ]
+        },
+        "year": {
+          "minimum": 1900,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "paper_id",
+        "legacy_ids",
+        "project_dir",
+        "title",
+        "year",
+        "track",
+        "question_count",
+        "source_files",
+        "figure_files",
+        "legacy_source_files",
+        "source_ids",
+        "production_state",
+        "issue_ids",
+        "blocked_from",
+        "last_verified_hash",
+        "resume_action"
       ],
       "type": "object"
     },
@@ -156,6 +388,34 @@
         "issue_ids"
       ],
       "type": "object"
+    },
+    "source_files": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_key": {
+          "pattern": "^[^/]+/[^/]+\\.md$",
+          "type": "string"
+        },
+        "combined_rendered": {
+          "pattern": "^[^/]+/[^/]+\\.md$",
+          "type": "string"
+        },
+        "questions": {
+          "pattern": "^[^/]+/[^/]+\\.md$",
+          "type": "string"
+        },
+        "solution_body": {
+          "pattern": "^[^/]+/[^/]+\\.md$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "questions",
+        "answer_key",
+        "solution_body",
+        "combined_rendered"
+      ],
+      "type": "object"
     }
   },
   "$id": "source-manifest.schema.json",
@@ -167,7 +427,7 @@
     },
     "batches": {
       "items": {
-        "type": "object"
+        "$ref": "#/$defs/batch"
       },
       "type": "array"
     },
@@ -197,7 +457,7 @@
     },
     "papers": {
       "items": {
-        "type": "object"
+        "$ref": "#/$defs/paper"
       },
       "type": "array"
     },
@@ -253,6 +513,6 @@
     "papers",
     "batches"
   ],
-  "title": "Gaokao source manifest skeleton",
+  "title": "Gaokao source manifest",
   "type": "object"
 }
