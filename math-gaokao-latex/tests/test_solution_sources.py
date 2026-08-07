@@ -513,6 +513,46 @@ class ParseAnswerPointsTests(unittest.TestCase):
             parse_answer_points(text)
         self.assertIn("两处小问号", str(caught.exception))
 
+    def test_reads_a_final_answer_whose_colon_sits_outside_the_bold_span(self):
+        # 仓库既有惯例本就成对处理两种冒号位形（make_short_answers.py 的 ANS_IN/ANS_OUT、
+        # SUB_IN/SUB_OUT）。冒号在加粗外的写法承载着真实答案，不得被占位符顶掉。
+        for written, expected in (
+            ("**(1) 答案**：$f'(x)=2x$。", "$f'(x)=2x$。"),
+            ("**(1) 答案（$a=1$）**：$f'(x)=\\mathrm e^{x}-1$", "$f'(x)=\\mathrm e^{x}-1$"),
+        ):
+            text = ANSWERS.replace("> **(1) 答案：$f(1)=2$**", "> " + written)
+            point = {item.number: item for item in parse_answer_points(text)}[3]
+            self.assertEqual(point.answer_for(1), expected, written)
+
+    def test_reads_a_whole_question_answer_whose_colon_sits_outside_the_bold_span(self):
+        text = ANSWERS.replace("> **答案：A**", "> **答案**：A")
+        point = {item.number: item for item in parse_answer_points(text)}[1]
+        self.assertEqual(point.answers, ((None, "A"),))
+
+    def test_rejects_an_anchor_that_says_answer_but_yields_no_value(self):
+        # 占位符只许用于真正没有最终答案块的证明/表格类小问；写了「答案」却解析不出值
+        # 必须报错，否则真实答案会被 `见解析版` 静默顶掉。
+        for written in (
+            "**(2) ① 答案：需要检查**",          # (k) 与「答案」之间夹了 ① 等次级序号
+            "**(2)(i) 答案：$\\hat p=0.15$**",   # 同上，(i) 形态
+            "**(2) 答案（分布列）**：",            # 冒号在外但值为空（答案其实是下面的表格）
+        ):
+            text = ANSWERS.replace(
+                "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。", "> " + written
+            )
+            with self.assertRaises(SolutionSourceError) as caught:
+                parse_answer_points(text)
+            self.assertIn("解析不出最终答案", str(caught.exception), written)
+
+    def test_still_placeholders_only_anchors_that_never_mention_an_answer(self):
+        for written in ("**(2) 证明**：略。", "**(2) 思路**：略。", "**(2) 解**"):
+            text = ANSWERS.replace(
+                "> **(2) 证明要点**：求导后判号，$f'(x)>0$ 恒成立。", "> " + written
+            )
+            point = {item.number: item for item in parse_answer_points(text)}[3]
+            self.assertEqual(point.subparts, (1, 2), written)
+            self.assertIsNone(point.answer_for(2), written)
+
 
 class ValidateSolutionBodyTests(unittest.TestCase):
     def test_rejects_a_copied_question_statement(self):
@@ -538,6 +578,20 @@ class RenderCombinedTests(unittest.TestCase):
         block = rendered.split("### 第 1 题（集合运算）")[1].split("### 第 2 题")[0]
         self.assertLess(block.index("**题目**"), block.index("**解析**"))
         self.assertLess(block.index("**解析**"), block.index("**答案：A**"))
+
+    def test_keeps_the_inter_question_separator_between_questions(self):
+        # 真题式样（2017 理 第 1 题）：`**答案：A**` 在题末，`---` 在它之后隔开下一题。
+        # 分隔线曾被算进上一题正文并渲染到答案之前——题间分隔线消失、题中多出一条 <hr>，
+        # 而且 `_convert_math.sh` 会把它印进 PDF/DOCX。
+        rendered = render_combined(QUESTIONS, self.solution, ANSWERS)
+        self.assertIn("**答案：A**\n\n---\n\n### 第 2 题（几何概型）", rendered)
+        self.assertNotIn("---\n\n**答案：A**", rendered)
+
+    def test_the_separator_survives_the_extraction_round_trip(self):
+        block = self.solution.split("### 第 1 题（集合运算）")[1].split("### 第 2 题")[0]
+        self.assertTrue(block.rstrip().endswith("---"), block)
+        rendered = render_combined(QUESTIONS, self.solution, ANSWERS)
+        self.assertEqual(extract_solution_blocks(rendered), self.solution)
 
     def test_a_proof_subpart_gets_the_repo_placeholder_not_a_fabricated_answer(self):
         rendered = render_combined(QUESTIONS, self.solution, ANSWERS)

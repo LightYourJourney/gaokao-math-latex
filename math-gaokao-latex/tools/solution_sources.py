@@ -27,11 +27,19 @@ Markdown 约定（两种题号写法，解析器自动识别，`### 第 N 题` �
   `**(k) 证明要点**：、`**(k) 解**`、`**(k)** …` 同族（语义同
   make_short_answers.py 的 SUB_ANY）。
 
-**最终答案的边界与小问锚点无关**：只有**单行且以加粗答案块开头**的段落
-（`**答案：X**`、`**(k) 答案：X**`、`**答案（k）：X**`，允许
-`**答案：$4$**（约 $11.85$）` 这类尾注）才携带最终答案，才是提取边界——证明正文里
-出现「答案」二字不会被误删。证明类小问「有锚点、无最终答案」是合法状态，生成展示
-文档时用 `见解析版` 占位，**绝不编造答案**。
+**最终答案的边界与小问锚点无关**：只有**单行且以加粗答案块开头**的段落才携带最终
+答案，才是提取边界——证明正文里出现「答案」二字不会被误删。冒号的两种位形都认
+（同 make_short_answers.py 的 ANS_IN/ANS_OUT、SUB_IN/SUB_OUT）：
+
+- 冒号在加粗内：`**答案：X**`、`**(k) 答案：X**`、`**答案（k）：X**`，
+  允许 `**答案：$4$**（约 $11.85$）` 这类尾注；
+- 冒号在加粗后：`**答案**：X`、`**(k) 答案**：X`、`**(k) 答案（$a=1$）**：X`。
+
+证明/表格类小问「有锚点、无最终答案」是合法状态，生成展示文档时用 `见解析版` 占位，
+**绝不编造答案**。但锚点写了「答案」二字却两式都取不到值时**必须报错**——拿占位符
+顶掉一个已经写出来的答案是静默降级，比报错糟得多。
+
+题末分隔线（`---`）由渲染器放回**生成答案块之后**：它隔开的是两道题，不是解析与答案。
 
 段落约定：以空行分段，段内原样保留。
 """
@@ -76,7 +84,13 @@ _SUBPART_ANCHOR = re.compile(r"^\*\*[（(](\d+)[）)]")
 _BLOCKQUOTE_PREFIX = re.compile(r"^(?:[ \t]*>)+[ \t]?")
 _PARAGRAPH_SPLIT = re.compile(r"\n(?:[ \t　]*\n)+")
 _IMAGE_PARAGRAPH = re.compile(r"^!\[[^\]]*\]\([^)\s]*\)$")
-# 加粗答案块：`**答案：X**`、`**(1) 答案：X**`、`**答案（1）：X**` 三种写法。
+# 题末分隔线属于题与题**之间**。它跟在答案块之后，若算进上一题正文，重建时就会被
+# 渲染到生成答案块之前——题间分隔线消失、题中凭空多出一条 <hr>，而 `_convert_math.sh`
+# 会把这个错位一路印进 PDF/DOCX。
+_THEMATIC_BREAK = re.compile(r"^(?:-{3,}|\*{3,}|_{3,})$")
+# 加粗答案块的两种冒号位形，与 make_short_answers.py 的 ANS_IN/ANS_OUT、SUB_IN/SUB_OUT
+# 一一对应；两式都试，缺一就会把真实答案误判成「本小问没有答案」。
+#   冒号在加粗内：`**答案：X**`、`**(1) 答案：X**`、`**答案（1）：X**`
 # 只要求以加粗答案块**开头**：真题里常见 `**答案：$4$**（约 $11.85$）` 这种尾注，
 # 要求整行恰好收在 `**` 会让这些行漏网，最终答案就会留在解析正文里。
 _ANSWER_LINE = re.compile(
@@ -87,6 +101,20 @@ _ANSWER_LINE = re.compile(
     r"[ \t　]*[:：][ \t　]*"
     r"(?P<value>.*?)\*\*(?P<trailer>.*)$"
 )
+#   冒号在加粗后：`**答案**：X`、`**(1) 答案**：X`、`**(1) 答案（$a=1$）**：X`
+_ANSWER_LINE_OUT = re.compile(
+    r"^\*\*"
+    r"(?:[（(](?P<pre>\d+)[）)][ \t　]*)?"
+    r"答案"
+    r"(?:[（(](?P<post>\d+)[）)])?"
+    r"[^*]*"
+    r"\*\*[ \t　]*[:：][ \t　]*"
+    r"(?P<value>.*)$"
+)
+# 行首加粗跨度里写了「答案」——用来兜住两式都解析不出值的写法（`**(2) ① 答案：X**`、
+# `**(2) 答案（分布列）**：` 等）。这类必须报错：占位符只许给真正没有最终答案的小问，
+# 拿它顶掉一个写出来的答案就是静默降级。
+_ANSWER_MENTION = re.compile(r"^\*\*(?:[（(]\d+[）)][ \t　]*)?[^*]*答案[^*]*\*\*")
 
 
 class SolutionSourceError(ValueError):
@@ -262,6 +290,38 @@ def parse_question_blocks(
     return tuple(blocks)
 
 
+def _mentions_final_answer(stripped: str) -> bool:
+    """行首加粗跨度里写了「答案」二字（小问锚点式或整题式）。
+
+    正文里那种 `**2. 认出「截角平面」就锁定了答案。**` 的加粗句子不算——它既不是
+    小问锚点，也不以 `**答案` 开头。
+    """
+    if _ANSWER_MENTION.match(stripped) is None:
+        return False
+    return _SUBPART_ANCHOR.match(stripped) is not None or stripped.startswith("**答案")
+
+
+def _parse_answer_line(
+    number: int, stripped: str
+) -> Optional[Tuple[Optional[int], str]]:
+    """两种冒号位形都试；取不到非空值就当作「这行不是最终答案」。"""
+    for pattern in (_ANSWER_LINE, _ANSWER_LINE_OUT):
+        match = pattern.match(stripped)
+        if match is None:
+            continue
+        pre, post = match.group("pre"), match.group("post")
+        if pre is not None and post is not None:
+            raise SolutionSourceError(
+                f"第 {number} 题的答案块同时写了两处小问号：{stripped}"
+            )
+        value = match.group("value").strip()
+        if not value:
+            continue
+        key = pre if pre is not None else post
+        return (int(key) if key is not None else None, value)
+    return None
+
+
 def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
     """从 `_答案要点.md` 取出小问集合与逐题最终答案。
 
@@ -278,19 +338,15 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
             anchor = _SUBPART_ANCHOR.match(stripped)
             if anchor is not None:
                 anchors.append(int(anchor.group(1)))
-            match = _ANSWER_LINE.match(stripped)
-            if match is None:
+            parsed = _parse_answer_line(block.number, stripped)
+            if parsed is None:
+                if _mentions_final_answer(stripped):
+                    raise SolutionSourceError(
+                        f"第 {block.number} 题的答案块写了「答案」却解析不出最终答案，"
+                        f"不得用「{SEE_SOLUTION}」顶替：{stripped}"
+                    )
                 continue
-            pre, post = match.group("pre"), match.group("post")
-            if pre is not None and post is not None:
-                raise SolutionSourceError(
-                    f"第 {block.number} 题的答案块同时写了两处小问号：{stripped}"
-                )
-            key = pre if pre is not None else post
-            answers.append((
-                int(key) if key is not None else None,
-                match.group("value").strip(),
-            ))
+            answers.append(parsed)
 
         keys = [key for key, _ in answers]
         # 自带小问号的答案块本身也是锚点（含本工具生成的 `**答案（k）：X**` 写法）。
@@ -320,7 +376,12 @@ def _is_answer_paragraph(paragraph: str) -> bool:
     多行段落即使首行像答案块也不丢——那会连带吞掉后续说明文字。
     """
     stripped = paragraph.strip()
-    return "\n" not in stripped and _ANSWER_LINE.match(stripped) is not None
+    if "\n" in stripped:
+        return False
+    return (
+        _ANSWER_LINE.match(stripped) is not None
+        or _ANSWER_LINE_OUT.match(stripped) is not None
+    )
 
 
 def _is_question_restatement(paragraph: str) -> bool:
@@ -378,10 +439,26 @@ def _heading(number: int, title: str) -> str:
 
 def _canonical_derivation(body: str) -> str:
     """把一题的正文规范成「`**解析**` 打头的详细推导」。"""
+    paragraphs, separator = _canonical_derivation_parts(body)
+    if separator is not None:
+        paragraphs = paragraphs + [separator]
+    return "\n\n".join(paragraphs)
+
+
+def _canonical_derivation_parts(body: str) -> Tuple[List[str], Optional[str]]:
+    """返回（`**解析**` 打头的推导段落，题末分隔线或 None）。
+
+    分隔线被单独摘出来，好让 `render_combined` 把它放回生成答案块**之后**——它隔开的
+    是两道题，不是解析与答案。
+    """
     paragraphs = _derivation_paragraphs(body)
-    if paragraphs and _is_solution_marker(paragraphs[0]):
-        return "\n\n".join(paragraphs)
-    return "\n\n".join([SOLUTION_MARKER] + paragraphs)
+    separator: Optional[str] = None
+    if paragraphs and _THEMATIC_BREAK.match(paragraphs[-1].strip()) is not None:
+        separator = paragraphs[-1].strip()
+        paragraphs = paragraphs[:-1]
+    if not (paragraphs and _is_solution_marker(paragraphs[0])):
+        paragraphs = [SOLUTION_MARKER] + paragraphs
+    return paragraphs, separator
 
 
 def extract_solution_blocks(combined: str) -> str:
@@ -476,8 +553,12 @@ def render_combined(questions_text: str, solution_text: str, answer_text: str) -
         )
         if question.body:
             segments.append(question.body)
-        segments.append(_canonical_derivation(block.body))
+        derivation, separator = _canonical_derivation_parts(block.body)
+        segments.extend(derivation)
         segments.extend(_render_answer_paragraphs(answers[block.number]))
+        # 分隔线隔开的是两道题，必须落在本题最后一个答案块之后。
+        if separator is not None:
+            segments.append(separator)
     return _join_segments(segments)
 
 
