@@ -12,12 +12,18 @@ from pathlib import Path, PurePosixPath
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from baseline import (
+    _ABSENT,
+    _LEVEL_PATHS,
+    _REVIEWED_FIELDS,
+    _comparable,
     _tracked_build_inputs,
     collect_current_baseline,
     collect_legacy_baseline,
     compare_baselines,
     legacy_index_projection,
     main,
+    recover_legacy_index,
+    with_legacy_compat,
 )
 from manifest import file_sha256, load_manifest
 
@@ -370,30 +376,37 @@ class BaselineComparisonTests(unittest.TestCase):
         cls.legacy = read_json(FROZEN_LEGACY)
         cls.manifest = load_manifest(MANIFEST)
         cls.current = collect_current_baseline(ROOT, cls.manifest)
+        cls.legacy_index = recover_legacy_index(cls.legacy, ROOT)
 
     def drift(self, mutate=None, **options):
         current = copy.deepcopy(self.current)
         if mutate is not None:
             mutate(current)
+        options.setdefault("legacy_index", self.legacy_index)
         return compare_baselines(self.legacy, current, **options)["drift"]
 
+    def report(self):
+        return compare_baselines(
+            self.legacy, self.current, legacy_index=self.legacy_index
+        )
+
     def test_identity_migration_produces_no_unreviewed_drift(self):
-        report = compare_baselines(self.legacy, self.current)
+        report = self.report()
         self.assertEqual(report["drift"], [])
         self.assertEqual(report["summary"]["target_count"], 84)
         self.assertEqual(report["summary"]["total_pages"], 1336)
         self.assertEqual(report["summary"]["overfull_count"], 1)
 
     def test_non_reproducible_fields_are_reviewed_instead_of_drift(self):
-        reviewed = {item["field"] for item in compare_baselines(
-            self.legacy, self.current
-        )["reviewed"]}
+        reviewed = {item["field"] for item in self.report()["reviewed"]}
         self.assertEqual(
             reviewed,
             {
-                "repository.head",
+                "kind",
                 "build_inputs",
+                "repository.head",
                 "index.sha256",
+                "papers[].paper_id",
                 "papers[].targets[].pdf_sha256",
                 "papers[].targets[].log_sha256",
                 "papers[].targets[].warnings[].log_line",
@@ -406,7 +419,58 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertNotEqual(
             self.current["index"]["sha256"], self.legacy["index"]["sha256"]
         )
+        self.assertNotEqual(self.current["kind"], self.legacy["kind"])
         self.assertEqual(self.drift(), [])
+
+    def test_compare_fails_closed_without_the_pre_migration_index(self):
+        # 冻结的 legacy 基线没有记录兼容投影；拿不到 git 锚点就必须报错，不得静默跳过。
+        self.assertNotIn("legacy_compat", self.legacy["index"])
+        with self.assertRaisesRegex(ValueError, "兼容投影"):
+            compare_baselines(self.legacy, self.current)
+        with self.assertRaisesRegex(ValueError, "兼容投影"):
+            compare_baselines(self.legacy, self.current, True)
+
+    def test_current_baseline_without_the_compat_projection_is_drift(self):
+        self.assertTrue(self.drift(
+            lambda current: current["index"].pop("legacy_compat")
+        ))
+
+    def test_index_deep_field_drift_is_caught_in_both_modes(self):
+        for mutate in (
+            lambda current: current["index"]["legacy_compat"]["papers"][0][
+                "structure"
+            ].update(选择题=[1, 99]),
+            lambda current: current["index"]["legacy_compat"]["papers"][0].update(
+                pdf_pages=None
+            ),
+            lambda current: current["index"]["legacy_compat"]["papers"][3].update(
+                title="改过的标题"
+            ),
+            lambda current: current["index"]["legacy_compat"]["papers"][5].update(
+                year=1999, track="改过", variant="改过", base="改过"
+            ),
+            lambda current: current["index"]["legacy_compat"]["papers"][2].pop("note"),
+            lambda current: current["index"]["legacy_compat"].update(
+                source_pdf="../别处/main.pdf"
+            ),
+            lambda current: current["index"]["legacy_compat"]["papers"][0][
+                "figures"
+            ].append("夹带.tex"),
+        ):
+            for sources_only in (False, True):
+                with self.subTest(mutate=mutate, sources_only=sources_only):
+                    self.assertTrue(self.drift(mutate, sources_only=sources_only))
+
+    def test_a_migrated_index_smuggled_back_into_the_projection_is_drift(self):
+        # 兼容投影里混进迁移新增的三个键，同样必须报漂移。
+        self.assertTrue(self.drift(
+            lambda current: current["index"]["legacy_compat"].update(batches=[])
+        ))
+        self.assertTrue(self.drift(
+            lambda current: current["index"]["legacy_compat"]["papers"][0].update(
+                paper_id="gk-2017-regular-national-1-science"
+            )
+        ))
 
     def test_changed_legacy_id_is_drift(self):
         self.assertTrue(self.drift(
@@ -507,11 +571,221 @@ class BaselineComparisonTests(unittest.TestCase):
             with self.subTest(mutate=mutate):
                 self.assertTrue(self.drift(mutate, sources_only=True))
 
+    def test_every_remaining_compared_field_has_a_mutation_that_drifts(self):
+        """审查指出的无变异覆盖的字段：每个都必须能被检出。"""
+        for mutate in (
+            lambda current: current["repository"].update(plan_sha256="0" * 64),
+            lambda current: current["repository"].update(compile_sha256="0" * 64),
+            lambda current: current["repository"].update(plan_path="别的/计划.md"),
+            lambda current: current["repository"].update(compile_path="别的/compile.sh"),
+            lambda current: current["index"].update(path="别的index.json"),
+            lambda current: current.update(baseline_version=2),
+            lambda current: current["summary"].update(paper_count=20),
+            lambda current: current["papers"][0]["targets"][0].update(edition="改过"),
+            lambda current: current["papers"][0]["targets"][0].update(
+                log_path="别的.log"
+            ),
+            lambda current: current["papers"][0]["targets"][0].update(path="别的.pdf"),
+            lambda current: current["papers"][0]["targets"][0]["warnings"].update(
+                hard_errors=1
+            ),
+            lambda current: current["papers"][0]["targets"][0]["warnings"].update(
+                missing_characters=1
+            ),
+            lambda current: current["papers"][0]["targets"][0]["warnings"].update(
+                undefined_references=1
+            ),
+            lambda current: current["papers"][0]["targets"][0]["warnings"][
+                "latex_warnings"
+            ].append({"log_line": 1, "message": "LaTeX Warning: 夹带"}),
+            lambda current: current["papers"][1]["targets"][1]["warnings"][
+                "underfull"
+            ].clear(),
+            lambda current: current["summary"].update(total_pages=1335),
+            lambda current: current["summary"].update(overfull_count=0),
+        ):
+            with self.subTest(mutate=mutate):
+                self.assertTrue(self.drift(mutate))
+
+    def test_underfull_details_are_compared_but_log_line_is_not(self):
+        underfull = None
+        for paper, record in enumerate(self.current["papers"]):
+            for target, item in enumerate(record["targets"]):
+                if item["warnings"]["underfull"]:
+                    underfull = (paper, target)
+                    break
+            if underfull:
+                break
+        self.assertIsNotNone(underfull, "迁移后基线里没有 Underfull，无法验证该维度")
+        paper, target = underfull
+        self.assertTrue(self.drift(
+            lambda current: current["papers"][paper]["targets"][target]["warnings"][
+                "underfull"
+            ][0].update(badness=1)
+        ))
+        self.assertTrue(self.drift(
+            lambda current: current["papers"][paper]["targets"][target]["warnings"][
+                "underfull"
+            ][0].update(context="in paragraph at lines 1--2")
+        ))
+        # log_line 是日志内位置，属 reviewed，不计漂移。
+        self.assertEqual(self.drift(
+            lambda current: current["papers"][paper]["targets"][target]["warnings"][
+                "underfull"
+            ][0].update(log_line=999999)
+        ), [])
+
     def test_a_baseline_without_targets_cannot_be_compared_in_full_mode(self):
         sources = collect_current_baseline(ROOT, self.manifest, include_targets=False)
-        self.assertEqual(compare_baselines(self.legacy, sources, sources_only=True)["drift"], [])
+        self.assertEqual(
+            compare_baselines(
+                self.legacy, sources, True, legacy_index=self.legacy_index
+            )["drift"],
+            [],
+        )
         with self.assertRaisesRegex(ValueError, "sources-only"):
-            compare_baselines(self.legacy, sources)
+            compare_baselines(self.legacy, sources, legacy_index=self.legacy_index)
+
+
+class LegacyIndexRecoveryTests(unittest.TestCase):
+    """git 锚点恢复必须 fail-closed：拿不到 blob 或哈希不符一律报错。"""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.legacy = read_json(FROZEN_LEGACY)
+
+    def test_recovers_the_blob_pinned_by_head_and_sha256(self):
+        recovered = recover_legacy_index(self.legacy, ROOT)
+        prefix = PurePosixPath(self.legacy["repository"]["compile_path"]).parent
+        blob = subprocess.check_output([
+            "git", "-C", str(ROOT), "show",
+            "{0}:{1}".format(
+                self.legacy["repository"]["head"],
+                prefix / self.legacy["index"]["path"],
+            ),
+        ])
+        self.assertEqual(
+            hashlib.sha256(blob).hexdigest(), self.legacy["index"]["sha256"]
+        )
+        self.assertEqual(recovered, json.loads(blob.decode("utf-8")))
+        self.assertNotIn("batches", recovered)
+
+    def test_a_hash_that_does_not_match_the_blob_fails_closed(self):
+        tampered = copy.deepcopy(self.legacy)
+        tampered["index"]["sha256"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "SHA-256"):
+            recover_legacy_index(tampered, ROOT)
+
+    def test_an_unreachable_commit_or_path_fails_closed(self):
+        for mutate in (
+            lambda legacy: legacy["repository"].update(head="0" * 40),
+            lambda legacy: legacy["index"].update(path="不存在.json"),
+        ):
+            with self.subTest(mutate=mutate):
+                tampered = copy.deepcopy(self.legacy)
+                mutate(tampered)
+                with self.assertRaisesRegex(ValueError, "取回"):
+                    recover_legacy_index(tampered, ROOT)
+
+    def test_malformed_anchor_fields_fail_closed(self):
+        for mutate in (
+            lambda legacy: legacy["repository"].pop("head"),
+            lambda legacy: legacy["index"].update(sha256="不是哈希"),
+            lambda legacy: legacy["repository"].pop("compile_path"),
+        ):
+            with self.subTest(mutate=mutate):
+                tampered = copy.deepcopy(self.legacy)
+                mutate(tampered)
+                with self.assertRaisesRegex(ValueError, "锚点"):
+                    recover_legacy_index(tampered, ROOT)
+
+
+class ComparedFieldCoverageTests(unittest.TestCase):
+    """比较闸门自检：采集器吐出的每个键，要么被比较，要么在 reviewed 名单里。
+
+    `_picked` 对两侧都缺失的字段名会静默相等，所以拼错或写旧的字段名会让一个维度悄悄
+    停止比较而测试全绿。这个类把"字段名清单与采集器输出同步"变成断言。
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        raw = collect_legacy_baseline(ROOT)
+        # 比较的是 compare_baselines 实际 diff 的那两个视图，故 legacy 侧同样补上
+        # 由 git 锚点取回的兼容投影。
+        cls.legacy = with_legacy_compat(raw, recover_legacy_index(raw, ROOT))
+        cls.current = collect_current_baseline(ROOT, load_manifest(MANIFEST))
+
+    def collector_keys(self):
+        levels = {level: set() for level in _LEVEL_PATHS}
+        for baseline in (self.legacy, self.current):
+            levels["baseline"] |= set(baseline)
+            levels["repository"] |= set(baseline["repository"])
+            levels["index"] |= set(baseline["index"])
+            for paper in baseline["papers"]:
+                levels["paper"] |= set(paper)
+                for target in paper["targets"]:
+                    levels["target"] |= set(target)
+                    levels["warnings"] |= set(target["warnings"])
+                    for name in ("overfull", "underfull", "latex_warnings"):
+                        for entry in target["warnings"][name]:
+                            levels["warning"] |= set(entry)
+        return levels
+
+    def compared_keys(self):
+        legacy = _comparable(self.legacy, False)
+        current = _comparable(self.current, False)
+        levels = {level: set() for level in _LEVEL_PATHS}
+        for view in (legacy, current):
+            levels["baseline"] |= set(view)
+            levels["repository"] |= set(view["repository"])
+            levels["index"] |= set(view["index"])
+            for paper in view["papers"]:
+                levels["paper"] |= set(paper)
+                for target in paper["targets"]:
+                    levels["target"] |= set(target)
+                    levels["warnings"] |= set(target["warnings"])
+                    for name in ("overfull", "underfull", "latex_warnings"):
+                        for entry in target["warnings"][name]:
+                            levels["warning"] |= set(entry)
+        return levels
+
+    def test_every_collected_key_is_either_compared_or_reviewed(self):
+        collected = self.collector_keys()
+        compared = self.compared_keys()
+        reviewed = {level: set() for level in _LEVEL_PATHS}
+        for level, field, _ in _REVIEWED_FIELDS:
+            reviewed[level].add(field)
+        for level in _LEVEL_PATHS:
+            with self.subTest(level=level):
+                self.assertTrue(collected[level], f"{level} 层没有采集到任何键")
+                self.assertEqual(compared[level] | reviewed[level], collected[level])
+
+    def test_no_compared_field_is_stale_or_mistyped(self):
+        """比较视图里不得残留 _ABSENT——那正是字段名写错时的表现。"""
+        def walk(field, value):
+            if isinstance(value, dict):
+                for key in sorted(value):
+                    walk(f"{field}.{key}" if field else str(key), value[key])
+                return
+            if isinstance(value, list):
+                for position, item in enumerate(value):
+                    walk(f"{field}[{position}]", item)
+                return
+            self.assertIsNot(value, _ABSENT, f"{field} 在两侧都缺失，该维度已静默失效")
+
+        for sources_only in (False, True):
+            for name, baseline in (
+                ("legacy", self.legacy), ("current", self.current),
+            ):
+                with self.subTest(baseline=name, sources_only=sources_only):
+                    walk("", _comparable(baseline, sources_only))
+
+    def test_summary_target_fields_are_only_compared_in_full_mode(self):
+        full = _comparable(self.current, False)["summary"]
+        sources = _comparable(self.current, True)["summary"]
+        self.assertEqual(set(sources), {"paper_count"})
+        self.assertIn("total_pages", full)
+        self.assertNotIn("targets", _comparable(self.current, True)["papers"][0])
 
 
 class CurrentBaselineCliTests(unittest.TestCase):
@@ -596,6 +870,33 @@ class CurrentBaselineCliTests(unittest.TestCase):
                     with self.assertRaises(SystemExit) as raised:
                         main(argv)
                 self.assertEqual(raised.exception.code, 2)
+
+    def test_compare_fails_closed_when_the_git_anchor_does_not_verify(self):
+        script = ROOT / "tools" / "baseline.py"
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "current.json"
+            self.assertEqual(
+                quiet_main([
+                    "write-current",
+                    "--manifest", str(MANIFEST),
+                    "--output", str(output),
+                ]),
+                0,
+            )
+            tampered = Path(tmp) / "legacy.json"
+            data = read_json(FROZEN_LEGACY)
+            data["index"]["sha256"] = "0" * 64
+            tampered.write_text(json.dumps(data), encoding="utf-8")
+            result = subprocess.run(
+                [
+                    sys.executable, str(script), "compare",
+                    "--legacy", str(tampered), "--current", str(output),
+                ],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            )
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("SHA-256", result.stderr)
+            self.assertNotIn("零未审查漂移", result.stdout)
 
     def test_compare_process_exit_codes_are_zero_one_and_two(self):
         script = ROOT / "tools" / "baseline.py"

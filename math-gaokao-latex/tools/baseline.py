@@ -7,7 +7,7 @@ import json
 import os
 import re
 import subprocess
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any, Dict, List, Mapping, Optional, Sequence
 
 from manifest import atomic_write_json, file_sha256, load_manifest
@@ -29,20 +29,40 @@ _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 _INDEX_ADDED_KEYS = ("batches",)
 _INDEX_PAPER_ADDED_KEYS = ("paper_id", "legacy_ids")
 
-# 这些字段在阶段 0 必然变化或本就不可字节复现，比较时列入 reviewed 而非漂移。
+# 比较视图的七个层级，及其在报告里的显示前缀。
+_LEVEL_PATHS = {
+    "baseline": "",
+    "repository": "repository.",
+    "index": "index.",
+    "paper": "papers[].",
+    "target": "papers[].targets[].",
+    "warnings": "papers[].targets[].warnings.",
+    "warning": "papers[].targets[].warnings[].",
+}
+
+# 已审查、不计入漂移的字段：或不可字节复现，或是身份迁移的正当新增。
+# 每条写成 (层级, 字段名, 理由)——层级让 tests 能机械核对"采集器吐出的键要么被比较、
+# 要么在这张表里"，避免比较维度因字段名写旧而静默失效。
 _REVIEWED_FIELDS = (
-    ("repository.head", "阶段 0 的提交推进了仓库 HEAD"),
-    ("build_inputs", "阶段 0 新增了 tools/ 与 tests/ 源文件，且工作树可能正在重新生成"),
-    ("index.sha256", "身份迁移重写了 index.json；兼容字段改由投影逐字段比较"),
-    ("papers[].targets[].pdf_sha256", "XeLaTeX 输出内嵌时间戳，PDF 非字节可复现"),
-    ("papers[].targets[].log_sha256", "同上，日志同样内嵌时间戳"),
-    ("papers[].targets[].warnings[].log_line", "行号只是警告在日志内的位置，随环境位移"),
+    ("baseline", "kind", "legacy 与迁移后基线的种类标记本就不同"),
+    ("baseline", "build_inputs", "阶段 0 新增了 tools/ 与 tests/ 源文件，且工作树可能正在重新生成"),
+    ("repository", "head", "阶段 0 的提交推进了仓库 HEAD"),
+    ("index", "sha256", "身份迁移重写了 index.json；兼容字段改由 legacy_compat 逐字段比较"),
+    ("paper", "paper_id", "身份迁移新增的稳定 ID，legacy 侧不存在"),
+    ("target", "pdf_sha256", "XeLaTeX 输出内嵌时间戳，PDF 非字节可复现"),
+    ("target", "log_sha256", "同上，日志同样内嵌时间戳"),
+    ("warning", "log_line", "行号只是警告在日志内的位置，随环境位移"),
 )
 
+_COMPARED_BASELINE_FIELDS = (
+    "baseline_version", "repository", "index", "papers", "summary",
+)
 _COMPARED_REPOSITORY_FIELDS = (
     "plan_path", "plan_sha256", "compile_path", "compile_sha256",
 )
-_COMPARED_INDEX_FIELDS = ("path", "paper_count", "legacy_ids")
+# legacy_compat 是迁移前 index 的兼容投影：legacy 侧由 git 锚点取回后填入，
+# 迁移后侧由采集器记录，两侧逐字段比较——这是 index 深层字段唯一的持续护栏。
+_COMPARED_INDEX_FIELDS = ("path", "paper_count", "legacy_ids", "legacy_compat")
 _COMPARED_PAPER_FIELDS = (
     "legacy_id", "project_dir", "question_ids", "content_sha256", "figures", "shells",
 )
@@ -395,6 +415,58 @@ def legacy_index_projection(index: Mapping[str, Any]) -> Dict[str, Any]:
     return projected
 
 
+def recover_legacy_index(
+    legacy: Mapping[str, Any], repo_root: Path
+) -> Dict[str, Any]:
+    """按 legacy 基线钉死的 HEAD 与 SHA-256，从 git 取回迁移前的 index.json。
+
+    这是"旧 index 字段未变"唯一有效的锚点：迁移整体重写了 index.json（键序与缩进都
+    变了），字节比较已不可能，而冻结基线里只留了那份 blob 的哈希。故必须 fail-closed
+    ——取不到 blob 或哈希对不上一律报错，静默跳过等于让兼容投影比较失效。
+    """
+    repository = legacy.get("repository")
+    index = legacy.get("index")
+    if not isinstance(repository, Mapping) or not isinstance(index, Mapping):
+        raise ValueError("legacy 基线缺少 repository/index，无法定位 git 锚点")
+    head = repository.get("head")
+    compile_path = repository.get("compile_path")
+    relative = index.get("path")
+    expected = index.get("sha256")
+    if (
+        not isinstance(head, str)
+        or not head
+        or not isinstance(compile_path, str)
+        or not compile_path
+        or not isinstance(relative, str)
+        or not relative
+        or _SHA256_RE.fullmatch(str(expected)) is None
+    ):
+        raise ValueError("legacy 基线的 git 锚点字段无效（head/compile_path/index）")
+    target = (PurePosixPath(compile_path).parent / relative).as_posix()
+    repo = _repository_root(Path(repo_root))
+    try:
+        blob = subprocess.check_output(
+            ["git", "-C", str(repo), "show", f"{head}:{target}"],
+            stderr=subprocess.DEVNULL,
+        )
+    except subprocess.CalledProcessError as error:
+        raise ValueError(
+            f"无法从 git 取回迁移前 index.json：{head}:{target}"
+        ) from error
+    actual = hashlib.sha256(blob).hexdigest()
+    if actual != expected:
+        raise ValueError(
+            f"取回的迁移前 index.json 与 legacy 基线钉死的 SHA-256 不符：{actual} != {expected}"
+        )
+    try:
+        recovered = json.loads(blob.decode("utf-8"))
+    except (UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError(f"迁移前 index.json 无效：{error}") from error
+    if not isinstance(recovered, Mapping):
+        raise ValueError("迁移前 index.json 顶层必须是对象")
+    return recovered
+
+
 def collect_current_baseline(
     project_root: Path,
     manifest: Mapping[str, Any],
@@ -436,6 +508,8 @@ def collect_current_baseline(
             "sha256": file_sha256(project_root / "index.json"),
             "paper_count": len(papers_metadata),
             "legacy_ids": [paper["id"] for paper in papers_metadata],
+            # 兼容投影随基线落盘，file-to-file 的 compare 才能比 index 深层字段。
+            "legacy_compat": legacy_index_projection(index),
         },
         "papers": papers,
         "summary": _summary(papers, include_targets),
@@ -499,12 +573,14 @@ def _comparable(baseline: Mapping[str, Any], sources_only: bool) -> Dict[str, An
     summary_fields = ("paper_count",)
     if not sources_only:
         summary_fields = summary_fields + _TARGET_SUMMARY_FIELDS
-    return {
+    view = _picked(baseline, _COMPARED_BASELINE_FIELDS)
+    view.update({
         "repository": _picked(repository, _COMPARED_REPOSITORY_FIELDS),
         "index": _picked(index, _COMPARED_INDEX_FIELDS),
         "papers": [_comparable_paper(paper, sources_only) for paper in papers],
         "summary": _picked(summary, summary_fields),
-    }
+    })
+    return view
 
 
 def _plain(value: Any) -> Any:
@@ -536,22 +612,47 @@ def _diff(field: str, left: Any, right: Any, drift: List[Dict[str, Any]]) -> Non
         })
 
 
+def with_legacy_compat(
+    legacy: Mapping[str, Any], legacy_index: Optional[Mapping[str, Any]] = None
+) -> Dict[str, Any]:
+    """把迁移前 index 的兼容投影补进 legacy 基线，使两侧可对称比较。
+
+    冻结的 legacy 基线（baseline_version 1）没有记录该投影，必须由
+    `recover_legacy_index()` 从 git 锚点取回后传入；两处都没有就报错，不得静默跳过。
+    """
+    index = dict(legacy.get("index") or {})
+    compat = legacy_index if legacy_index is not None else index.get("legacy_compat")
+    if not isinstance(compat, Mapping):
+        raise ValueError(
+            "缺少迁移前 index 的兼容投影：须先用 recover_legacy_index() 由 git 锚点取回"
+        )
+    index["legacy_compat"] = compat
+    normalized = dict(legacy)
+    normalized["index"] = index
+    return normalized
+
+
 def compare_baselines(
     legacy: Mapping[str, Any],
     current: Mapping[str, Any],
     sources_only: bool = False,
+    legacy_index: Optional[Mapping[str, Any]] = None,
 ) -> Dict[str, Any]:
     """比较 legacy 与迁移后基线；`drift` 为空即"零未审查漂移"。
 
-    只增的 `paper_id`/`legacy_ids`/`batches` 不进比较视图；`_REVIEWED_FIELDS` 列出的
-    字段本就不可复现，它们的差异归入 `reviewed`。其余任何差异都是漂移。
+    `legacy_index` 是 `recover_legacy_index()` 从 git 锚点取回的迁移前 index.json；
+    冻结的 legacy 基线里没有记录兼容投影，所以拿不到它就**报错而非跳过**——否则
+    `structure`/`pdf_pages`/`title` 等深层字段会在"零漂移"的假象下失去保护。
+
+    `_REVIEWED_FIELDS` 列出的字段不计漂移（不可复现，或身份迁移的正当新增）；
+    其余任何差异都是漂移。
     """
     if not isinstance(legacy, Mapping) or not isinstance(current, Mapping):
         raise ValueError("基线必须是对象")
     drift: List[Dict[str, Any]] = []
     _diff(
         "",
-        _comparable(legacy, sources_only),
+        _comparable(with_legacy_compat(legacy, legacy_index), sources_only),
         _comparable(current, sources_only),
         drift,
     )
@@ -559,7 +660,8 @@ def compare_baselines(
         "sources_only": sources_only,
         "drift": drift,
         "reviewed": [
-            {"field": field, "reason": reason} for field, reason in _REVIEWED_FIELDS
+            {"field": _LEVEL_PATHS[level] + field, "reason": reason}
+            for level, field, reason in _REVIEWED_FIELDS
         ],
         "summary": dict(current.get("summary") or {}),
     }
@@ -812,14 +914,22 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     validate_legacy_baseline(legacy)
     if arguments.command == "compare":
         current = _load_baseline(arguments.current)
+        # 基线文件可以放在仓库外，但迁移前的 blob 一定在本工具所属的仓库里。
+        repo_root = Path(__file__).resolve().parent
     else:
         current = collect_current_baseline(
             arguments.project_root,
             load_manifest(arguments.manifest),
             include_targets=not arguments.sources_only,
         )
+        repo_root = arguments.project_root
     return _print_report(
-        compare_baselines(legacy, current, arguments.sources_only)
+        compare_baselines(
+            legacy,
+            current,
+            arguments.sources_only,
+            recover_legacy_index(legacy, repo_root),
+        )
     )
 
 
