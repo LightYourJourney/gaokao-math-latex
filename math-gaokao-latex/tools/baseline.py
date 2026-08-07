@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -9,7 +10,9 @@ import subprocess
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence
 
-from manifest import atomic_write_json, file_sha256
+from manifest import atomic_write_json, file_sha256, load_manifest
+from source_manifest import project_legacy_index
+from transaction import RepoLock
 
 EDITIONS = ("试题版", "解析版", "简答版", "印刷版")
 CONTENT_FILES = ("questions.tex", "answers.tex", "answers_short.tex")
@@ -21,6 +24,49 @@ _OVERFULL_RE = re.compile(r"Overfull \\hbox \(([0-9.]+)pt too wide\)(.*)")
 _UNDERFULL_RE = re.compile(r"Underfull \\hbox \(badness ([0-9]+)\)(.*)")
 _OUTPUT_PAGES_RE = re.compile(r"Output written on .*?\(([0-9]+) pages?[,)]")
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+
+# 身份迁移只允许给兼容 index 加这三个键：顶层 batches，每条 paper 的 paper_id/legacy_ids。
+_INDEX_ADDED_KEYS = ("batches",)
+_INDEX_PAPER_ADDED_KEYS = ("paper_id", "legacy_ids")
+
+# 这些字段在阶段 0 必然变化或本就不可字节复现，比较时列入 reviewed 而非漂移。
+_REVIEWED_FIELDS = (
+    ("repository.head", "阶段 0 的提交推进了仓库 HEAD"),
+    ("build_inputs", "阶段 0 新增了 tools/ 与 tests/ 源文件，且工作树可能正在重新生成"),
+    ("index.sha256", "身份迁移重写了 index.json；兼容字段改由投影逐字段比较"),
+    ("papers[].targets[].pdf_sha256", "XeLaTeX 输出内嵌时间戳，PDF 非字节可复现"),
+    ("papers[].targets[].log_sha256", "同上，日志同样内嵌时间戳"),
+    ("papers[].targets[].warnings[].log_line", "行号只是警告在日志内的位置，随环境位移"),
+)
+
+_COMPARED_REPOSITORY_FIELDS = (
+    "plan_path", "plan_sha256", "compile_path", "compile_sha256",
+)
+_COMPARED_INDEX_FIELDS = ("path", "paper_count", "legacy_ids")
+_COMPARED_PAPER_FIELDS = (
+    "legacy_id", "project_dir", "question_ids", "content_sha256", "figures", "shells",
+)
+_COMPARED_TARGET_FIELDS = ("path", "edition", "log_path", "pages")
+_COMPARED_WARNING_COUNTERS = (
+    "hard_errors", "missing_characters", "undefined_references",
+)
+_COMPARED_WARNING_LISTS = ("overfull", "underfull", "latex_warnings")
+_TARGET_SUMMARY_FIELDS = (
+    "target_count", "total_pages", "hard_errors", "missing_characters",
+    "undefined_references", "overfull_count",
+)
+
+
+class _Absent:
+    """比较视图里"这一侧没有该字段"的哨兵，与任何真实取值都不相等。"""
+
+    __slots__ = ()
+
+    def __repr__(self) -> str:
+        return "<缺失>"
+
+
+_ABSENT = _Absent()
 
 
 def _run_text(arguments: Sequence[str], **kwargs: Any) -> str:
@@ -201,7 +247,11 @@ def _target_record(project_root: Path, paper_dir: Path, edition: str) -> Dict[st
     }
 
 
-def _paper_record(project_root: Path, metadata: Mapping[str, Any]) -> Dict[str, Any]:
+def _paper_record(
+    project_root: Path,
+    metadata: Mapping[str, Any],
+    include_targets: bool = True,
+) -> Dict[str, Any]:
     project_dir = metadata.get("dir")
     legacy_id = metadata.get("id")
     if not isinstance(project_dir, str) or not isinstance(legacy_id, str):
@@ -222,6 +272,8 @@ def _paper_record(project_root: Path, metadata: Mapping[str, Any]) -> Dict[str, 
     if question_ids != list(range(1, expected_count + 1)):
         raise ValueError(f"题号序列与 index 不一致：{project_dir}")
 
+    # 项目 <试卷>/figures/ 是图形的唯一永久源：基线冻结它的哈希树，任何改动都算漂移。
+    # 合并书里的副本只是下游，只允许"项目 → 合并书"单向同步，同名不同哈希必须失败。
     figure_dir = paper_dir / "figures"
     figures = []
     if figure_dir.is_dir():
@@ -234,82 +286,283 @@ def _paper_record(project_root: Path, metadata: Mapping[str, Any]) -> Dict[str, 
     shells = [_shell_record(project_root, paper_dir, edition) for edition in EDITIONS]
     if any(shell["paper_id"] != legacy_id for shell in shells):
         raise ValueError(f"legacy 壳 paper_id 与 index.id 不一致：{project_dir}")
-    targets = [_target_record(project_root, paper_dir, edition) for edition in EDITIONS]
-    return {
+    record = {
         "project_dir": project_dir,
         "legacy_id": legacy_id,
         "question_ids": question_ids,
         "content_sha256": content_sha256,
         "figures": figures,
         "shells": shells,
-        "targets": targets,
     }
+    if include_targets:
+        record["targets"] = [
+            _target_record(project_root, paper_dir, edition) for edition in EDITIONS
+        ]
+    return record
 
 
-def collect_legacy_baseline(project_root: Path) -> Dict[str, Any]:
-    project_root = Path(project_root).resolve()
+def _load_index(project_root: Path) -> Dict[str, Any]:
     index_path = project_root / "index.json"
     if not index_path.is_file():
-        raise ValueError(f"legacy 项目缺少 index.json：{project_root}")
+        raise ValueError(f"项目缺少 index.json：{project_root}")
     try:
         index = json.loads(index_path.read_text(encoding="utf-8"))
     except (UnicodeError, json.JSONDecodeError) as error:
-        raise ValueError(f"legacy index.json 无效：{error}") from error
+        raise ValueError(f"index.json 无效：{error}") from error
     papers_metadata = index.get("papers")
     if not isinstance(papers_metadata, list) or any(
         not isinstance(paper, Mapping) for paper in papers_metadata
     ):
-        raise ValueError("legacy index papers 必须是对象数组")
+        raise ValueError("index papers 必须是对象数组")
     legacy_ids = [paper.get("id") for paper in papers_metadata]
     if len(legacy_ids) != 21 or len(legacy_ids) != len(set(legacy_ids)):
-        raise ValueError("legacy index 必须包含 21 个唯一旧 ID")
+        raise ValueError("index 必须包含 21 个唯一旧 ID")
+    return index
 
-    repo = _repository_root(project_root)
+
+def _repository_record(repo: Path, project_root: Path) -> Dict[str, Any]:
     plan = repo / PLAN_PATH
     compile_script = project_root / "compile.sh"
     if not plan.is_file() or not compile_script.is_file():
         raise ValueError("缺少 phase 0 计划或 legacy compile.sh")
-    papers = [_paper_record(project_root, metadata) for metadata in papers_metadata]
+    return {
+        "head": _run_text(["git", "-C", str(repo), "rev-parse", "HEAD"]),
+        "plan_path": PLAN_PATH,
+        "plan_sha256": file_sha256(plan),
+        "compile_path": _relative(compile_script, repo),
+        "compile_sha256": file_sha256(compile_script),
+    }
+
+
+def _summary(papers: Sequence[Mapping[str, Any]], include_targets: bool) -> Dict[str, Any]:
+    summary: Dict[str, Any] = {"paper_count": len(papers)}
+    if not include_targets:
+        summary.update({field: None for field in _TARGET_SUMMARY_FIELDS})
+        return summary
     targets = [target for paper in papers for target in paper["targets"]]
-    overfull_count = sum(
-        len(target["warnings"]["overfull"]) for target in targets
-    )
+    summary.update({
+        "target_count": len(targets),
+        "total_pages": sum(target["pages"] for target in targets),
+        "hard_errors": sum(target["warnings"]["hard_errors"] for target in targets),
+        "missing_characters": sum(
+            target["warnings"]["missing_characters"] for target in targets
+        ),
+        "undefined_references": sum(
+            target["warnings"]["undefined_references"] for target in targets
+        ),
+        "overfull_count": sum(len(target["warnings"]["overfull"]) for target in targets),
+    })
+    return summary
+
+
+def collect_legacy_baseline(project_root: Path) -> Dict[str, Any]:
+    project_root = Path(project_root).resolve()
+    index = _load_index(project_root)
+    papers_metadata = index["papers"]
+    repo = _repository_root(project_root)
+    papers = [_paper_record(project_root, metadata) for metadata in papers_metadata]
     baseline = {
         "baseline_version": 1,
         "kind": "legacy",
-        "repository": {
-            "head": _run_text(["git", "-C", str(repo), "rev-parse", "HEAD"]),
-            "plan_path": PLAN_PATH,
-            "plan_sha256": file_sha256(plan),
-            "compile_path": _relative(compile_script, repo),
-            "compile_sha256": file_sha256(compile_script),
-        },
+        "repository": _repository_record(repo, project_root),
         "build_inputs": _tracked_build_inputs(repo, project_root),
         "index": {
             "path": "index.json",
-            "sha256": file_sha256(index_path),
+            "sha256": file_sha256(project_root / "index.json"),
             "paper_count": len(papers_metadata),
-            "legacy_ids": legacy_ids,
+            "legacy_ids": [paper["id"] for paper in papers_metadata],
         },
         "papers": papers,
-        "summary": {
-            "paper_count": len(papers),
-            "target_count": len(targets),
-            "total_pages": sum(target["pages"] for target in targets),
-            "hard_errors": sum(
-                target["warnings"]["hard_errors"] for target in targets
-            ),
-            "missing_characters": sum(
-                target["warnings"]["missing_characters"] for target in targets
-            ),
-            "undefined_references": sum(
-                target["warnings"]["undefined_references"] for target in targets
-            ),
-            "overfull_count": overfull_count,
-        },
+        "summary": _summary(papers, True),
     }
     validate_legacy_baseline(baseline)
     return baseline
+
+
+def legacy_index_projection(index: Mapping[str, Any]) -> Dict[str, Any]:
+    """去掉身份迁移新增的三个键，还原迁移前的兼容 index 形状。"""
+    projected = copy.deepcopy(dict(index))
+    for key in _INDEX_ADDED_KEYS:
+        projected.pop(key, None)
+    papers = projected.get("papers")
+    if not isinstance(papers, list):
+        raise ValueError("index papers 必须是数组")
+    for paper in papers:
+        if not isinstance(paper, dict):
+            raise ValueError("index paper 必须是对象")
+        for key in _INDEX_PAPER_ADDED_KEYS:
+            paper.pop(key, None)
+    return projected
+
+
+def collect_current_baseline(
+    project_root: Path,
+    manifest: Mapping[str, Any],
+    include_targets: bool = True,
+) -> Dict[str, Any]:
+    """采集身份迁移后的基线。
+
+    `include_targets=False` 供 PDF 尚未重编译的检查点使用（配 `--sources-only`）。
+    与 legacy 基线不同，这里不记录 `build_inputs`：迁移后工作树里的 tracked 源本来就
+    可能正在被后续任务重新生成，记录它只会让只读比较无谓失败。
+    """
+    project_root = Path(project_root).resolve()
+    index = _load_index(project_root)
+    papers_metadata = index["papers"]
+    # 迁移只准新增 paper_id/legacy_ids/batches：把 manifest 身份重新投影回兼容 index，
+    # 必须逐字复原当前 index.json，否则说明迁移动了别的东西。
+    if project_legacy_index(manifest, legacy_index_projection(index)) != index:
+        raise ValueError("当前 index.json 不是 manifest 身份在兼容 index 上的投影")
+    paper_ids: Dict[str, str] = {}
+    for paper in manifest["papers"]:
+        for legacy_id in paper["legacy_ids"]:
+            paper_ids[legacy_id] = paper["paper_id"]
+
+    repo = _repository_root(project_root)
+    papers = []
+    for metadata in papers_metadata:
+        record = _paper_record(project_root, metadata, include_targets)
+        legacy_id = record["legacy_id"]
+        if legacy_id not in paper_ids:
+            raise ValueError(f"manifest 未覆盖旧 ID：{legacy_id}")
+        record["paper_id"] = paper_ids[legacy_id]
+        papers.append(record)
+    return {
+        "baseline_version": 1,
+        "kind": "current",
+        "repository": _repository_record(repo, project_root),
+        "index": {
+            "path": "index.json",
+            "sha256": file_sha256(project_root / "index.json"),
+            "paper_count": len(papers_metadata),
+            "legacy_ids": [paper["id"] for paper in papers_metadata],
+        },
+        "papers": papers,
+        "summary": _summary(papers, include_targets),
+    }
+
+
+def _picked(value: Mapping[str, Any], fields: Sequence[str]) -> Dict[str, Any]:
+    return {field: value.get(field, _ABSENT) for field in fields}
+
+
+def _comparable_warnings(warnings: Mapping[str, Any]) -> Dict[str, Any]:
+    view = _picked(warnings, _COMPARED_WARNING_COUNTERS)
+    for name in _COMPARED_WARNING_LISTS:
+        entries = warnings.get(name)
+        if not isinstance(entries, list) or any(
+            not isinstance(entry, Mapping) for entry in entries
+        ):
+            raise ValueError(f"warnings.{name} 必须是对象数组")
+        view[name] = [
+            {key: entry[key] for key in sorted(entry) if key != "log_line"}
+            for entry in entries
+        ]
+    return view
+
+
+def _comparable_target(target: Mapping[str, Any]) -> Dict[str, Any]:
+    view = _picked(target, _COMPARED_TARGET_FIELDS)
+    warnings = target.get("warnings")
+    if not isinstance(warnings, Mapping):
+        raise ValueError("target 缺少 warnings")
+    view["warnings"] = _comparable_warnings(warnings)
+    return view
+
+
+def _comparable_paper(paper: Mapping[str, Any], sources_only: bool) -> Dict[str, Any]:
+    view = _picked(paper, _COMPARED_PAPER_FIELDS)
+    if not sources_only:
+        targets = paper.get("targets")
+        if not isinstance(targets, list):
+            raise ValueError(
+                "基线未采集 PDF/log 目标，只能以 --sources-only 比较"
+            )
+        view["targets"] = [_comparable_target(target) for target in targets]
+    return view
+
+
+def _comparable(baseline: Mapping[str, Any], sources_only: bool) -> Dict[str, Any]:
+    repository = baseline.get("repository")
+    index = baseline.get("index")
+    papers = baseline.get("papers")
+    summary = baseline.get("summary")
+    if (
+        not isinstance(repository, Mapping)
+        or not isinstance(index, Mapping)
+        or not isinstance(papers, list)
+        or not isinstance(summary, Mapping)
+    ):
+        raise ValueError("基线缺少 repository/index/papers/summary")
+    if any(not isinstance(paper, Mapping) for paper in papers):
+        raise ValueError("基线 paper 必须是对象")
+    summary_fields = ("paper_count",)
+    if not sources_only:
+        summary_fields = summary_fields + _TARGET_SUMMARY_FIELDS
+    return {
+        "repository": _picked(repository, _COMPARED_REPOSITORY_FIELDS),
+        "index": _picked(index, _COMPARED_INDEX_FIELDS),
+        "papers": [_comparable_paper(paper, sources_only) for paper in papers],
+        "summary": _picked(summary, summary_fields),
+    }
+
+
+def _plain(value: Any) -> Any:
+    return repr(value) if value is _ABSENT else value
+
+
+def _diff(field: str, left: Any, right: Any, drift: List[Dict[str, Any]]) -> None:
+    if isinstance(left, Mapping) and isinstance(right, Mapping):
+        for key in sorted(set(left) | set(right)):
+            _diff(
+                f"{field}.{key}" if field else str(key),
+                left.get(key, _ABSENT),
+                right.get(key, _ABSENT),
+                drift,
+            )
+        return
+    if isinstance(left, list) and isinstance(right, list):
+        for position in range(max(len(left), len(right))):
+            _diff(
+                f"{field}[{position}]",
+                left[position] if position < len(left) else _ABSENT,
+                right[position] if position < len(right) else _ABSENT,
+                drift,
+            )
+        return
+    if left != right:
+        drift.append({
+            "field": field, "legacy": _plain(left), "current": _plain(right),
+        })
+
+
+def compare_baselines(
+    legacy: Mapping[str, Any],
+    current: Mapping[str, Any],
+    sources_only: bool = False,
+) -> Dict[str, Any]:
+    """比较 legacy 与迁移后基线；`drift` 为空即"零未审查漂移"。
+
+    只增的 `paper_id`/`legacy_ids`/`batches` 不进比较视图；`_REVIEWED_FIELDS` 列出的
+    字段本就不可复现，它们的差异归入 `reviewed`。其余任何差异都是漂移。
+    """
+    if not isinstance(legacy, Mapping) or not isinstance(current, Mapping):
+        raise ValueError("基线必须是对象")
+    drift: List[Dict[str, Any]] = []
+    _diff(
+        "",
+        _comparable(legacy, sources_only),
+        _comparable(current, sources_only),
+        drift,
+    )
+    return {
+        "sources_only": sources_only,
+        "drift": drift,
+        "reviewed": [
+            {"field": field, "reason": reason} for field, reason in _REVIEWED_FIELDS
+        ],
+        "summary": dict(current.get("summary") or {}),
+    }
 
 
 def validate_legacy_baseline(baseline: Mapping[str, Any]) -> None:
@@ -483,14 +736,56 @@ def _load_baseline(path: Path) -> Mapping[str, Any]:
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="冻结 legacy LaTeX 构建基线")
+    parser = argparse.ArgumentParser(description="冻结并比较 LaTeX 构建基线")
     subparsers = parser.add_subparsers(dest="command", required=True)
     write = subparsers.add_parser("write-legacy")
     write.add_argument("--project-root", required=True, type=Path)
     write.add_argument("--output", required=True, type=Path)
+    current = subparsers.add_parser("write-current")
+    current.add_argument("--manifest", required=True, type=Path)
+    current.add_argument("--output", required=True, type=Path)
+    # 省略时取 manifest 所在目录，即规范工程根目录。
+    current.add_argument("--project-root", type=Path, default=None)
+    compare = subparsers.add_parser("compare")
+    compare.add_argument("--legacy", required=True, type=Path)
+    compare.add_argument("--current", required=True, type=Path)
+    compare.add_argument("--sources-only", action="store_true")
+    working = subparsers.add_parser("compare-working")
+    working.add_argument("--legacy", required=True, type=Path)
+    working.add_argument("--project-root", required=True, type=Path)
+    working.add_argument("--manifest", required=True, type=Path)
+    working.add_argument("--sources-only", action="store_true")
     check = subparsers.add_parser("check-legacy")
     check.add_argument("--baseline", required=True, type=Path)
     return parser
+
+
+def _print_report(report: Mapping[str, Any]) -> int:
+    summary = report["summary"]
+    if report["sources_only"]:
+        print("仅比较来源维度：index 兼容投影、旧 ID、84 壳、共享 TeX、题号、figure tree")
+    else:
+        print(
+            "目标 {0} 个、总页数 {1}、Overfull {2} 条".format(
+                summary.get("target_count"),
+                summary.get("total_pages"),
+                summary.get("overfull_count"),
+            )
+        )
+    for item in report["reviewed"]:
+        print("已审查（不计漂移）：{0} —— {1}".format(item["field"], item["reason"]))
+    if not report["drift"]:
+        print("零未审查漂移")
+        return 0
+    for item in report["drift"]:
+        print(
+            "漂移：{0}：legacy={1!r} current={2!r}".format(
+                item["field"], item["legacy"], item["current"]
+            ),
+            file=os.sys.stderr,
+        )
+    print(f"共 {len(report['drift'])} 处未审查漂移", file=os.sys.stderr)
+    return 1
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
@@ -501,8 +796,31 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             collect_legacy_baseline(arguments.project_root),
         )
         return 0
-    validate_legacy_baseline(_load_baseline(arguments.baseline))
-    return 0
+    if arguments.command == "write-current":
+        project_root = arguments.project_root or arguments.manifest.parent
+        # 写 tracked 文件：先取仓库锁并恢复未完成事务，再单文件原子替换。
+        with RepoLock(project_root):
+            baseline = collect_current_baseline(
+                project_root, load_manifest(arguments.manifest)
+            )
+            atomic_write_json(arguments.output, baseline)
+        return 0
+    if arguments.command == "check-legacy":
+        validate_legacy_baseline(_load_baseline(arguments.baseline))
+        return 0
+    legacy = _load_baseline(arguments.legacy)
+    validate_legacy_baseline(legacy)
+    if arguments.command == "compare":
+        current = _load_baseline(arguments.current)
+    else:
+        current = collect_current_baseline(
+            arguments.project_root,
+            load_manifest(arguments.manifest),
+            include_targets=not arguments.sources_only,
+        )
+    return _print_report(
+        compare_baselines(legacy, current, arguments.sources_only)
+    )
 
 
 if __name__ == "__main__":
