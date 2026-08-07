@@ -326,22 +326,30 @@ def _parse_answer_line(
 
 
 def _require_complete_out_answer(
-    number: int, stripped: str, value: str, following: str
+    number: int, stripped: str, value: str, next_line: str, following: str
 ) -> None:
     """冒号在加粗外的值没有右侧 `**` 兜底，必须自证是一行完整答案。
 
     值会被 `_render_answer_paragraphs` 包进 `**答案（k）：…**`，所以：
 
     - 值里再出现 `**` 会产生交错的加粗跨度，Pandoc 印出来是畸形粗体；
-    - 值后面还接着表格或行间公式时，取到的只是引子，真答案在下面——单行截断会
-      留下一个吊着的冒号。
+    - 答案行**不是所在段落的最后一行**时，紧邻的续行属于同一个答案（本库主导形态是
+      `- $a\le0$：…` 这样的分类结论列表），单行截断会把结论整片丢掉；
+    - 退一步，值以冒号收尾、或隔一个空行后接表格/行间公式，同样只取到了引子。
 
-    两种都硬错误进残余清单交人工规整，不留任何静默截断的路径。
+    三种都硬错误进残余清单交人工规整，不留任何静默截断的路径。第三条与前两条有重叠，
+    保留为冗余：它兜的是「续行另起一段」的情形，那时紧邻行是空的，第二条判据不发火。
     """
     if "**" in value:
         raise SolutionSourceError(
             f"第 {number} 题的答案块（冒号在加粗外）值内含 `**`，"
             f"嵌进生成答案块会产生畸形加粗，须人工规整：{stripped}"
+        )
+    if next_line:
+        raise SolutionSourceError(
+            f"第 {number} 题的答案块（冒号在加粗外）不是所在段落的最后一行，"
+            f"紧邻续行「{next_line[:32]}」属于同一个答案，"
+            f"单行截断会丢掉它，须人工规整：{stripped}"
         )
     if (
         value.rstrip().endswith(("：", ":"))
@@ -380,11 +388,11 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
                 continue
             key, value, form = parsed
             if form == "out":
-                following = next(
-                    (item for item in stripped_lines[index + 1:] if item), ""
-                )
+                rest = stripped_lines[index + 1:]
+                next_line = rest[0] if rest else ""
+                following = next((item for item in rest if item), "")
                 _require_complete_out_answer(
-                    block.number, stripped, value, following
+                    block.number, stripped, value, next_line, following
                 )
             answers.append((key, value))
 

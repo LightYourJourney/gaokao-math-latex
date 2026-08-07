@@ -14,6 +14,7 @@ from transaction import TRANSACTIONS_RELATIVE, recover_transactions
 import solution_sources
 from solution_sources import (
     REPORT_TARGET,
+    SEE_SOLUTION,
     TOOL_SOURCE_TARGET,
     SolutionSourceError,
     check_paper,
@@ -571,6 +572,22 @@ class ParseAnswerPointsTests(unittest.TestCase):
             with self.assertRaises(SolutionSourceError) as caught:
                 parse_answer_points(text)
             self.assertIn("须人工规整", str(caught.exception), written)
+
+    def test_rejects_an_out_form_answer_with_an_adjacent_list_continuation(self):
+        # 全库主导形态（2017 理/文 Q21、2018 理 Q21、2023 Q19）：答案行**同段紧邻**下一行
+        # 就是 `- …` 分类结论列表。这些续行属于同一个答案，单行截断会把结论全丢掉。
+        # 注意夹具必须是同段紧邻行（行间不隔空行），隔空行的另起一段测不到这条。
+        written = (
+            "> **(1) 答案**：$f'(x)=\\left(a\\mathrm e^{x}-1\\right)"
+            "\\left(2\\mathrm e^{x}+1\\right)$\n"
+            "> - $a\\le0$：$f$ 在 $\\mathbf R$ 上单调递减；\n"
+            "> - $a>0$：在 $(-\\infty,-\\ln a)$ 递减，在 $(-\\ln a,+\\infty)$ 递增。"
+        )
+        text = ANSWERS.replace("> **(1) 答案：$f(1)=2$**", written)
+        with self.assertRaises(SolutionSourceError) as caught:
+            parse_answer_points(text)
+        self.assertIn("须人工规整", str(caught.exception))
+        self.assertNotIn(SEE_SOLUTION, str(caught.exception))
 
     def test_still_accepts_a_complete_single_line_out_form_answer(self):
         text = ANSWERS.replace(
