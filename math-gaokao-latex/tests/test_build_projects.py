@@ -1599,12 +1599,60 @@ class ShellWrapperTests(unittest.TestCase):
             )
             self.assertEqual(result.returncode, 0, result.stderr)
 
+    @staticmethod
+    def code_lines(script):
+        """只看可执行行——注释里出现 `xelatex` 三个字母不构成「在 Bash 里编译」。"""
+        return [
+            line for line in script.read_text(encoding="utf-8").split("\n")
+            if line.strip() and not line.strip().startswith("#")
+        ]
+
     def test_compile_sh_only_delegates(self):
         text = self.compile_sh.read_text(encoding="utf-8")
         self.assertIn("tools/build_projects.py", text)
         self.assertIn("exec", text)
-        for forbidden in ("xelatex", "grep -q", "EDITIONS="):
-            self.assertNotIn(forbidden, text)
+        code = "\n".join(self.code_lines(self.compile_sh))
+        for forbidden in ("xelatex", "grep", "EDITIONS="):
+            self.assertNotIn(forbidden, code)
+
+    def test_neither_wrapper_changes_directory(self):
+        """两个包装都不得 cd。
+
+        计划里的命令一律从仓库根传相对路径（`--manifest .../source-manifest.json`）；
+        包装若先 `cd "$(dirname "$0")"`，同一个字符串就会被解析成
+        `math-gaokao-latex/math-gaokao-latex/…`。这条在真实 smoke
+        里真的踩到过——纯文本断言（「只 exec、不含 xelatex」）看不出来。
+        """
+        for script in (self.compile_sh, self.compile_all):
+            for line in script.read_text(encoding="utf-8").split("\n"):
+                stripped = line.strip()
+                if stripped.startswith("#"):
+                    continue
+                self.assertFalse(
+                    stripped.startswith("cd ") or stripped == "cd", "%s: %s" % (
+                        script.name, line
+                    )
+                )
+
+    def test_a_relative_manifest_resolves_against_the_caller(self):
+        """从仓库根用相对 --manifest 调用包装，必须命中真实 manifest 的 21 卷。
+
+        这是 Task 23 全部命令的调用形状；退出码此刻是 4（回执尚未产生），
+        T23 之后会变成 3/0，所以只断言「路径解析成功且卷数正确」这一不变量。
+        """
+        repository = ROOT.parent.parent.parent
+        result = subprocess.run(
+            [
+                str(self.compile_sh), "validate-receipts",
+                "--manifest", "math-gaokao-latex/source-manifest.json",
+                "--all", "--json",
+            ],
+            cwd=str(repository), stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        )
+        self.assertIn(result.returncode, (EXIT_OK, EXIT_PENDING_REVIEW, EXIT_INVALID),
+                      result.stderr.decode("utf-8", errors="replace"))
+        payload = json.loads(result.stdout.decode("utf-8"))
+        self.assertEqual(payload["papers"], 21)
 
     def test_compile_all_delegates_to_the_formal_all_mode(self):
         text = self.compile_all.read_text(encoding="utf-8")

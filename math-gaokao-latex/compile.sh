@@ -13,6 +13,8 @@
 #   ./compile.sh check-tools                 工具链指纹
 # 退出码：0 通过 / 2 usage / 3 仅待视觉审查 / 4 invalid 或门禁未过 / 5 构建失败。
 # ============================================================
+# **绝不 cd**：调用方一律从仓库根传相对路径（`--manifest .../source-manifest.json`），
+# 先 cd 到脚本目录会把它解析成 `.../...`。旧版 compile.sh 需要 cd
+# 是因为它自己调 xelatex；现在编译发生在 Python 侧、cwd 由它按项目目录显式指定。
 set -eu
-cd "$(dirname "$0")"
-exec python3 tools/build_projects.py "$@"
+exec python3 "$(dirname "$0")/tools/build_projects.py" "$@"

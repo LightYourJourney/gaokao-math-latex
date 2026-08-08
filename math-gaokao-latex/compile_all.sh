@@ -7,6 +7,6 @@
 # 无参数即正确的入口，比让每个调用方各自拼 `--formal --all` 更难拼错。
 # 退出码沿用 compile.sh（0 通过 / 5 构建失败，诊断状态已保存）。
 # ============================================================
+# 同 compile.sh：不 cd，好让调用方传的相对 --manifest/--issues 按调用方 cwd 解析。
 set -eu
-cd "$(dirname "$0")"
-exec ./compile.sh build --formal --all "$@"
+exec "$(dirname "$0")/compile.sh" build --formal --all "$@"
