@@ -1854,5 +1854,162 @@ class ShellWrapperTests(unittest.TestCase):
         self.assertNotIn("receipts/", text)
 
 
+# ================================================================ 真实 adapter
+
+QUESTIONS_MD = """**1．** 求 $1+1$ 的值。
+
+**2．** 求 $2+2$ 的值。
+
+**3．** 求 $3+3$ 的值。
+"""
+
+ANSWER_KEY_MD = """**1．** 直接计算
+
+> **答案：$2$**
+
+**2．** 直接计算
+
+> **答案：$4$**
+
+**3．** 直接计算
+
+> **答案：$6$**
+"""
+
+
+class RealProvenanceAdapterTests(unittest.TestCase):
+    """Task 16：`run_formal()` 的 facts 由真实 provenance adapter 供给。
+
+    Task 15 之前这条缝里插的一直是夹具 loader；这里换成 `provenance.py`，验证
+    「provenance 不 current 就不许开工」这条门禁在真实 adapter 下同样生效，而不是
+    只在夹具里生效。生成物/review 仍走注入探针——本套件的四壳是替身，不是生成器产物。
+    """
+
+    def setUp(self):
+        self.fixture = RepositoryFixture()
+        self.addCleanup(self.fixture.cleanup)
+        import provenance as provenance_module
+        self.provenance = provenance_module
+        self.register_legacy_sources()
+
+    def register_legacy_sources(self):
+        """把两份规范源写成可解析的 Markdown，并登记进 `legacy_source_files`。"""
+        document = json.loads(
+            self.fixture.manifest_path.read_text(encoding="utf-8")
+        )
+        for paper in document["papers"]:
+            files = paper["source_files"]
+            self.fixture.write(files["questions"], QUESTIONS_MD)
+            self.fixture.write(files["answer_key"], ANSWER_KEY_MD)
+            paper["legacy_source_files"] = [{
+                "path": files["questions"],
+                "sha256": file_sha256(self.fixture.path(files["questions"])),
+            }]
+        atomic_write_json(self.fixture.manifest_path, document)
+        self.fixture.commit_all("规范源与 legacy 登记")
+
+    def write_provenance(self, paper_id=PAPER_ID, overrides=None):
+        manifest = self.fixture.manifest()
+        paper = next(
+            item for item in manifest["papers"] if item["paper_id"] == paper_id
+        )
+        relative = paper["legacy_source_files"][0]["path"]
+        digest = file_sha256(self.fixture.path(relative))
+        texts = self.provenance.question_text_digests(
+            self.fixture.read(paper["source_files"]["questions"])
+        )
+        answers = self.provenance.answer_digests(
+            paper_id, self.fixture.read(paper["source_files"]["answer_key"])
+        )
+        records = []
+        for number in sorted(texts):
+            record = {
+                "question_id": self.provenance.question_id(paper_id, number),
+                "printed_number": number,
+                "source_ref": {"path": relative},
+                "source_sha256": digest,
+                "source_pages": [],
+                "question_text_sha256": texts[number],
+                "answer_sha256": answers[number],
+                "transcription_review": {
+                    "role": "甲", "result": "passed", "evidence": "逐字对读",
+                },
+                "answer_evidence": {"grade": "A", "evidence": "独立求解一致"},
+                "solver_role": "乙",
+                "reviewer_role": "丙",
+                "conflict_status": "none",
+                "issue_ids": [],
+            }
+            record.update((overrides or {}).get(number, {}))
+            records.append(record)
+        document = self.provenance.new_provenance(paper_id, BATCH_ID, records)
+        self.provenance.validate_provenance(document, manifest, self.fixture.root)
+        target = self.fixture.path(status.provenance_path(paper))
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(canonical_json(document).encode("utf-8"))
+        return document
+
+    def loader(self, **overrides):
+        return self.provenance.facts_loader(
+            artifacts_state=lambda *_: overrides.get("artifacts", "current"),
+            review_state=lambda *_: (
+                overrides.get("review", "missing"),
+                overrides.get("review_currency", "stale"),
+            ),
+        )
+
+    def test_formal_runs_on_a_real_current_provenance(self):
+        self.write_provenance()
+        self.fixture.commit_all("provenance")
+        report = self.fixture.formal(selector="paper", value=PAPER_ID,
+                                     loader=self.loader())
+        self.assertEqual(report["code"], "COMPILED_PENDING_REVIEW")
+        self.assertEqual(report["papers"], [PAPER_ID])
+        self.assertEqual(self.fixture.receipt()["status"],
+                         "compiled_pending_review")
+
+    def test_formal_refuses_when_the_real_adapter_reports_no_provenance(self):
+        with self.assertRaises(BuildError) as caught:
+            self.fixture.formal(selector="paper", value=PAPER_ID,
+                                loader=self.loader())
+        self.assertIn("provenance", str(caught.exception))
+
+    def test_formal_refuses_once_the_canonical_source_drifts(self):
+        self.write_provenance()
+        self.fixture.write(
+            self.fixture.manifest()["papers"][0]["source_files"]["answer_key"],
+            ANSWER_KEY_MD.replace("**答案：$4$**", "**答案：$5$**"),
+        )
+        with self.assertRaises(BuildError):
+            self.fixture.formal(selector="paper", value=PAPER_ID,
+                                loader=self.loader())
+
+    def test_the_loader_may_not_smuggle_build_facts(self):
+        """adapter 的返回字段集恰好是 loader 该管的那八维，build 两维不在其中。"""
+        self.write_provenance()
+        loaded = self.loader()(
+            self.fixture.root, self.fixture.manifest(), [PAPER_ID]
+        )
+        self.assertNotIn("build", loaded[PAPER_ID])
+        self.assertNotIn("build_currency", loaded[PAPER_ID])
+        merged = build_projects.merge_facts(
+            PAPER_ID, loaded[PAPER_ID], "succeeded", "current"
+        )
+        self.assertEqual(merged["provenance"], "current")
+
+    def test_an_unknown_answer_grade_blocks_the_formal_state(self):
+        self.write_provenance(overrides={2: {
+            "answer_evidence": {"grade": "U", "evidence": "无法定级"},
+        }})
+        loaded = self.loader()(
+            self.fixture.root, self.fixture.manifest(), [PAPER_ID]
+        )
+        merged = build_projects.merge_facts(
+            PAPER_ID, loaded[PAPER_ID], "succeeded", "current"
+        )
+        self.assertTrue(merged["provenance_unknown"])
+        self.assertEqual(status.derive_status(merged), "blocked")
+
+
 if __name__ == "__main__":
     unittest.main()

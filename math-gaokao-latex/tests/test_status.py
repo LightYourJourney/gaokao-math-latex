@@ -10,7 +10,11 @@
 3. **git 派生**——`derive_git_state()` 只认「相对 HEAD 有变化 = validated」与
    「已入 HEAD 且零 diff 且能定位提交 = committed」，其余一律失败而非猜测。
 
-本文件不 import provenance/build/review：status 核心的全部输入都是闭合 facts。
+前三条主线一律不 import provenance/build/review：status 核心的全部输入都是闭合 facts。
+末尾的 `RealAdapterIntegrationTests` 是**唯一的例外**，Task 16 补入：纯口径测得再全，也
+证明不了真实 adapter 递进来的那份 facts 与本核心的字段契约对得上——两侧各自自洽而彼此
+错位，正是纯单元测试看不见的那一格。它只做「adapter → 核心」的贯通验证，不引入任何新
+的状态规则。
 """
 import itertools
 import json
@@ -22,6 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import status
 from status import (
@@ -592,6 +597,79 @@ class GitStateTests(unittest.TestCase):
         for bad in ("/etc/passwd", "../outside.json", "a/../../x.json"):
             with self.assertRaises(StatusError):
                 derive_git_state(self.fixture.root, [bad])
+
+
+# ------------------------------------------------------------------ 真实 adapter
+
+
+class RealAdapterIntegrationTests(unittest.TestCase):
+    """Task 16：真实 provenance adapter 递进来的 facts 必须直接喂得进本核心。
+
+    夹具借用 `test_provenance.ProvenanceFixture`（三卷：两卷上游源、一卷回忆版带
+    identity blocker），本类只断言「adapter 出来的东西正好是核心要的东西」。
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        import test_provenance
+        cls.support = test_provenance
+
+    def setUp(self):
+        self.fixture = self.support.ProvenanceFixture()
+        self.addCleanup(self.fixture.cleanup)
+        for paper in self.fixture.papers:
+            self.fixture.install(paper["paper_id"])
+
+    def loaded(self, **overrides):
+        return self.fixture.loader(**overrides)(
+            self.fixture.root, self.fixture.manifest(),
+            [paper["paper_id"] for paper in self.fixture.papers],
+        )
+
+    def full(self, **overrides):
+        return {
+            paper_id: paper_facts(
+                paper_id, build="succeeded", build_currency="current", **values
+            )
+            for paper_id, values in self.loaded(**overrides).items()
+        }
+
+    def test_the_adapter_output_is_accepted_by_paper_facts_verbatim(self):
+        for paper_id, values in self.loaded().items():
+            with self.subTest(paper_id=paper_id):
+                # 多一个键、少一个键都会被 validate_facts 当场拒绝。
+                facts = paper_facts(
+                    paper_id, build="missing", build_currency="stale", **values
+                )
+                self.assertIn(derive_status(facts), PRODUCTION_STATES)
+
+    def test_a_verified_batch_without_builds_stays_at_provenance_verified(self):
+        facts = {
+            paper_id: paper_facts(
+                paper_id, build="missing", build_currency="stale", **values
+            )
+            for paper_id, values in self.loaded().items()
+        }
+        self.assertEqual(reconcile_batch_status(facts), "provenance_verified")
+
+    def test_a_full_evidence_chain_closes_the_batch_with_the_recall_blocker(self):
+        facts = self.full(
+            review="passed", review_currency="current", batch_report_valid=True
+        )
+        derived = {key: derive_status(value) for key, value in facts.items()}
+        self.assertEqual(derived[self.support.PAPER_ONE], "complete")
+        self.assertEqual(derived[self.support.PAPER_TWO], "complete")
+        self.assertEqual(derived[self.support.PAPER_RECALL], "blocked")
+        self.assertEqual(reconcile_batch_status(facts), "closed_with_blockers")
+
+    def test_a_missing_provenance_pulls_the_whole_batch_back_to_planned(self):
+        (self.fixture.root / self.fixture.provenance_relative(
+            self.support.PAPER_TWO
+        )).unlink()
+        facts = self.full(
+            review="passed", review_currency="current", batch_report_valid=True
+        )
+        self.assertEqual(reconcile_batch_status(facts), "planned")
 
 
 if __name__ == "__main__":

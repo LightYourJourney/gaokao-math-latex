@@ -733,8 +733,10 @@ def receipt_currency(
 ) -> Tuple[bool, List[str]]:
     """重算四条证据；返回 (是否当前, 失效原因清单)。
 
-    `toolchain` 为 None 时不比工具链——`validate-receipts` 默认如此，好让没装 TeX 的
-    机器也能核对结构与输入；`--require-current-inputs` 才把工具链一并要求当前。
+    ⚠️ `toolchain=None` 会**跳过**第四条证据（工具链指纹），那正是 fail-open：换了
+    TeX Live 的机器上旧回执照样绿。调用方一律显式传 toolchain；解析不出工具链时传一个
+    与任何真实指纹都不相等的哨兵（见 `provenance.UNRESOLVED_TOOLCHAIN`），让回执当场
+    降级为 stale——绝不要靠传 None 蒙混过去。默认值保留只为兼容既有调用点。
     """
     reasons: List[str] = []
     if receipt["status"] == "running":
@@ -1497,6 +1499,16 @@ VALIDATE_EXIT = {"OK": EXIT_OK, "PENDING_REVIEW": EXIT_PENDING_REVIEW,
 # 是同一条理由：两份逐字副本意味着修了一处、另一处照旧，而**没有任何测试会发现只改了
 # 一处**。这里只把本工具的异常类绑上去。
 check_staged = cli_common.check_staged
+
+# ---------------------------------------------------------------- 对外别名
+
+# Task 16 的 `provenance.py` 是这三件的第二个调用方。**不复制、只借用**：
+# `_reconciled_manifest()` 里住着「blocked 必须带 issue 与 resume_action」这类不变量，
+# 抄一份出去就是第二套 reconciler——status.py 顶部那条警告点名的正是这种分裂。
+assemble_facts = _assemble_facts
+reconciled_manifest = _reconciled_manifest
+commit_state = _commit_state
+affected_papers = _affected
 
 
 def read_pathspec(path: Path) -> List[str]:

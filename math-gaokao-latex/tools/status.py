@@ -285,6 +285,36 @@ def build_receipt_path(paper: Mapping[str, Any]) -> str:
     return "%s/%s/%s" % (PROJECT_RELATIVE, paper["project_dir"], BUILD_RECEIPT_NAME)
 
 
+def review_receipt_path(paper: Mapping[str, Any]) -> str:
+    return "%s/%s/%s" % (PROJECT_RELATIVE, paper["project_dir"], REVIEW_RECEIPT_NAME)
+
+
+def provenance_path(paper: Mapping[str, Any]) -> str:
+    """该卷 provenance 的规范路径。
+
+    三条路径（build / review / provenance）的拼法住在同一处，理由与
+    `paper_ownership_paths()` 相同：路径是 `git add --pathspec-from-file` 与事务目标
+    的唯一来源，两份拼法漂移一次就会写到别处去。这里只做拼接，**不引入任何状态规则**。
+    """
+    return "%s/%s/%s" % (PROJECT_RELATIVE, paper["project_dir"], PROVENANCE_NAME)
+
+
+def paper_provenance_paths(
+    manifest: Mapping[str, Any], paper_ids: Iterable[str]
+) -> Tuple[str, ...]:
+    """给定若干卷的 provenance 路径，排序去重（构成同上的窄所有权范围）。"""
+    known = _papers_by_id(manifest)
+    paths = []
+    for paper_id in paper_ids:
+        if paper_id not in known:
+            raise StatusError(f"未知 paper_id：{paper_id}")
+        paths.append(provenance_path(known[paper_id]))
+    unique = sorted(set(paths))
+    if len(unique) != len(paths):
+        raise StatusError("所有权范围内路径重复")
+    return tuple(unique)
+
+
 def paper_ownership_paths(
     manifest: Mapping[str, Any], paper_ids: Iterable[str]
 ) -> Tuple[str, ...]:

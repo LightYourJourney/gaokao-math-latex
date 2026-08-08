@@ -235,6 +235,73 @@ def blocks_completion(issue: Mapping[str, Any], paper_id: str) -> bool:
     )
 
 
+# 逐题缺陷 → 问题类型。Task 16 的 provenance 导入按这张表建问题、也按它算期望
+# fingerprint：类型选错时 fingerprint 就对不上，于是「随便挂一条 issue 顶数」这条路
+# 是走不通的。表在这里而不在 provenance.py，理由与 `issue_fingerprint()` 同——问题的
+# 身份口径只此一份，复制出去就等于给格式漂移开口子。
+QUESTION_ISSUE_TYPES = {
+    "transcription": "transcription-ambiguous",
+    "answer": "answer-missing",
+    "conflict": "answer-conflict",
+}
+
+
+def question_issue(
+    paper_id: str,
+    question_id: str,
+    source_id: str,
+    kind: str,
+    resume_action: str,
+    status: str = "open",
+    impact: str = "blocks_completion",
+) -> Dict[str, Any]:
+    """构造一条逐题问题（含 fingerprint）。
+
+    `source_id` 对上游卷是 manifest 的 source_id，对只有本地 legacy 源的回忆版是
+    `legacy:<仓库相对路径>`——问题身份必须能区分「同一题、不同来源」，而
+    `_fingerprint_identity()` 对 question 类问题要求 source_id 非空。
+    """
+    issue_type = QUESTION_ISSUE_TYPES.get(kind)
+    if issue_type is None:
+        raise ValueError(f"未知逐题问题类别：{kind!r}")
+    candidate: Dict[str, Any] = {
+        "paper_id": _nonempty_string(paper_id, "paper_id"),
+        "affected_paper_ids": [],
+        "type": issue_type,
+        "status": status,
+        "impact": impact,
+        "question_id": _nonempty_string(question_id, "question_id"),
+        "source_id": _nonempty_string(source_id, "source_id"),
+        "resume_action": _nonempty_string(resume_action, "resume_action"),
+    }
+    _validate_issue(candidate, require_fingerprint=False)
+    candidate["fingerprint"] = issue_fingerprint(candidate)
+    return candidate
+
+
+def question_issue_fingerprint(
+    paper_id: str, question_id: str, source_id: str, kind: str
+) -> str:
+    """逐题问题的期望 fingerprint；`resume_action`/`status`/`impact` 不进身份。"""
+    return question_issue(
+        paper_id, question_id, source_id, kind, resume_action="占位"
+    )["fingerprint"]
+
+
+def issue_ids_by_paper(
+    records: Sequence[Mapping[str, Any]]
+) -> Dict[str, List[str]]:
+    """把问题总账折成 `{paper_id: [issue_id]}`；共享问题登记进每一卷。"""
+    by_paper: Dict[str, List[str]] = {}
+    for item in records:
+        targets = set(item.get("affected_paper_ids") or [])
+        if item.get("paper_id") is not None:
+            targets.add(item["paper_id"])
+        for paper_id in targets:
+            by_paper.setdefault(paper_id, []).append(item["issue_id"])
+    return {key: sorted(value) for key, value in by_paper.items()}
+
+
 def _strict_json_object(pairs: List[Tuple[str, Any]]) -> Dict[str, Any]:
     value: Dict[str, Any] = {}
     for key, item in pairs:
