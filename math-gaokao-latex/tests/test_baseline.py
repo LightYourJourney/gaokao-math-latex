@@ -492,6 +492,7 @@ class BaselineComparisonTests(unittest.TestCase):
                 "kind",
                 "build_inputs",
                 "repository.head",
+                "repository.compile_sha256",
                 "index.sha256",
                 "papers[].paper_id",
                 "papers[].targets[].pdf_sha256",
@@ -662,7 +663,8 @@ class BaselineComparisonTests(unittest.TestCase):
         """审查指出的无变异覆盖的字段：每个都必须能被检出。"""
         for mutate in (
             lambda current: current["repository"].update(plan_sha256="0" * 64),
-            lambda current: current["repository"].update(compile_sha256="0" * 64),
+            # compile_sha256 自 Task 15 起是 reviewed 字段（compile.sh 由本任务改写），
+            # 故不再列在这里；compile_path 仍守着「不得改名搬家」。
             lambda current: current["repository"].update(plan_path="别的/计划.md"),
             lambda current: current["repository"].update(compile_path="别的/compile.sh"),
             lambda current: current["index"].update(path="别的index.json"),

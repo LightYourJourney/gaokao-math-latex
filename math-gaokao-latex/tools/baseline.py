@@ -55,6 +55,9 @@ _REVIEWED_FIELDS = (
     ("baseline", "kind", "legacy 与迁移后基线的种类标记本就不同"),
     ("baseline", "build_inputs", "阶段 0 新增了 tools/ 与 tests/ 源文件，且工作树可能正在重新生成"),
     ("repository", "head", "阶段 0 的提交推进了仓库 HEAD"),
+    ("repository", "compile_sha256",
+     "Task 15 把 compile.sh 换成 tools/build_projects.py 的薄包装；legacy 侧冻结的本就是"
+     "旧脚本（计划原文：记录「旧 compile.sh SHA-256」）"),
     ("index", "sha256", "身份迁移重写了 index.json；兼容字段改由 legacy_compat 逐字段比较"),
     ("paper", "paper_id", "身份迁移新增的稳定 ID，legacy 侧不存在"),
     ("target", "pdf_sha256", "XeLaTeX 输出内嵌时间戳，PDF 非字节可复现"),
@@ -65,9 +68,9 @@ _REVIEWED_FIELDS = (
 _COMPARED_BASELINE_FIELDS = (
     "baseline_version", "repository", "index", "papers", "summary",
 )
-_COMPARED_REPOSITORY_FIELDS = (
-    "plan_path", "plan_sha256", "compile_path", "compile_sha256",
-)
+# compile_sha256 不在此列（见 _REVIEWED_FIELDS）；compile_path 仍然比较——入口脚本可以
+# 被改写，但不得改名或搬家，否则调用方的命令会静默指向别处。
+_COMPARED_REPOSITORY_FIELDS = ("plan_path", "plan_sha256", "compile_path")
 # legacy_compat 是迁移前 index 的兼容投影：legacy 侧由 git 锚点取回后填入，
 # 迁移后侧由采集器记录，两侧逐字段比较——这是 index 深层字段唯一的持续护栏。
 _COMPARED_INDEX_FIELDS = ("path", "paper_count", "legacy_ids", "legacy_compat")
