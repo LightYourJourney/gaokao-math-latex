@@ -58,6 +58,7 @@ from typing import (
     AbstractSet, Any, Dict, FrozenSet, List, Mapping, Optional, Sequence, Set, Tuple,
 )
 
+import cli_common
 from manifest import atomic_write_json, canonical_json, file_sha256, load_manifest
 from transaction import RepoLock, Transaction
 
@@ -951,64 +952,12 @@ def extract_batch(
 
 # ---------------------------------------------------------------- git 范围核对
 
-
-def _git_lines(root: Path, arguments: Sequence[str]) -> List[str]:
-    raw = subprocess.run(
-        ["git", "-C", str(root)] + list(arguments),
-        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-    ).stdout
-    return [item.decode("utf-8") for item in raw.split(b"\0") if item]
+# 门禁逻辑只此一份，住在 cli_common.py：这里只把本工具的异常类绑上去。
+check_staged = cli_common.check_staged
 
 
 def _read_pathspec(path: Path) -> List[str]:
-    try:
-        raw = Path(path).read_bytes()
-    except OSError as error:
-        raise SolutionSourceError(f"无法读取 pathspec 文件：{path}：{error}") from error
-    entries: List[str] = []
-    for item in raw.split(b"\0"):
-        if not item:
-            continue
-        try:
-            entry = item.decode("utf-8")
-        except UnicodeDecodeError as error:
-            raise SolutionSourceError("pathspec 文件中存在非 UTF-8 路径") from error
-        candidate = Path(entry)
-        if candidate.is_absolute() or any(
-            part in {"", ".", ".."} for part in candidate.parts
-        ):
-            raise SolutionSourceError(f"pathspec 必须是安全的仓库相对路径：{entry}")
-        entries.append(candidate.as_posix())
-    if not entries:
-        raise SolutionSourceError(f"pathspec 文件为空：{path}")
-    return entries
-
-
-def check_staged(root: Path, scope: Sequence[str]) -> List[str]:
-    """核对暂存区恰好覆盖所有权范围内相对 HEAD 的实际变更。
-
-    返回问题清单；空清单表示通过。字节未变的目标不要求出现在 staged diff 里。
-    """
-    scoped = set(scope)
-    staged = set(_git_lines(root, ["diff", "--cached", "--name-only", "-z", "HEAD", "--"]))
-    unstaged = set(_git_lines(root, ["diff", "--name-only", "-z", "--"]))
-    untracked = set(_git_lines(root, ["ls-files", "--others", "--exclude-standard", "-z"]))
-    # 相对 HEAD 的实际变更/新增/删除：tracked 侧由 diff HEAD 给出，新增文件补上 untracked。
-    actual = set(
-        _git_lines(root, ["diff", "--name-only", "-z", "HEAD", "--"])
-    ) | untracked
-
-    problems: List[str] = []
-    outside = sorted(staged - scoped)
-    if outside:
-        problems.append(f"范围外存在 staged 变更：{outside}")
-    missing = sorted((actual & scoped) - staged)
-    if missing:
-        problems.append(f"范围内的实际变更未全部 staged：{missing}")
-    residue = sorted((unstaged | untracked) & scoped)
-    if residue:
-        problems.append(f"范围内存在 unstaged 残留：{residue}")
-    return problems
+    return cli_common.read_pathspec(path, SolutionSourceError)
 
 
 # ---------------------------------------------------------------- CLI

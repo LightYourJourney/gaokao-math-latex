@@ -68,6 +68,74 @@ def required_sha256(root: Path, relative: str, error_type: ErrorType) -> str:
     return file_sha256(path)
 
 
+# ---------------------------------------------------------------- 暂存区门禁
+
+
+def git_lines(root: Path, arguments: Sequence[str]) -> List[str]:
+    raw = subprocess.run(
+        ["git", "-C", str(root)] + list(arguments),
+        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+    ).stdout
+    return [item.decode("utf-8") for item in raw.split(b"\0") if item]
+
+
+def read_pathspec(path: Path, error_type: ErrorType) -> List[str]:
+    """读 NUL 分隔的 pathspec 文件；每条都必须是安全的仓库相对路径。
+
+    `error_type` 参数化的理由同 `relative_to_repo()`：各工具抛自己的异常类，调用方据此
+    区分失败来源，而门禁逻辑只此一份。
+    """
+    try:
+        raw = Path(path).read_bytes()
+    except OSError as error:
+        raise error_type(f"无法读取 pathspec 文件：{path}：{error}") from error
+    entries: List[str] = []
+    for item in raw.split(b"\0"):
+        if not item:
+            continue
+        try:
+            entry = item.decode("utf-8")
+        except UnicodeDecodeError as error:
+            raise error_type("pathspec 文件中存在非 UTF-8 路径") from error
+        candidate = Path(entry)
+        if candidate.is_absolute() or any(
+            part in {"", ".", ".."} for part in candidate.parts
+        ):
+            raise error_type(f"pathspec 必须是安全的仓库相对路径：{entry}")
+        entries.append(candidate.as_posix())
+    if not entries:
+        raise error_type(f"pathspec 文件为空：{path}")
+    return entries
+
+
+def check_staged(root: Path, scope: Sequence[str]) -> List[str]:
+    """核对暂存区恰好覆盖所有权范围内相对 HEAD 的实际变更。
+
+    返回问题清单；空清单表示通过。字节未变的目标不要求出现在 staged diff 里。
+
+    **只此一份**：`solution_sources.py` 与 `build_projects.py` 曾各存一份逐字副本，
+    那意味着修了一处、另一处照旧，而没有任何测试会发现只改了一处。
+    """
+    scoped = set(scope)
+    staged = set(git_lines(root, ["diff", "--cached", "--name-only", "-z", "HEAD", "--"]))
+    unstaged = set(git_lines(root, ["diff", "--name-only", "-z", "--"]))
+    untracked = set(git_lines(root, ["ls-files", "--others", "--exclude-standard", "-z"]))
+    # 相对 HEAD 的实际变更/新增/删除：tracked 侧由 diff HEAD 给出，新增文件补上 untracked。
+    actual = set(git_lines(root, ["diff", "--name-only", "-z", "HEAD", "--"])) | untracked
+
+    problems: List[str] = []
+    outside = sorted(staged - scoped)
+    if outside:
+        problems.append(f"范围外存在 staged 变更：{outside}")
+    missing = sorted((actual & scoped) - staged)
+    if missing:
+        problems.append(f"范围内的实际变更未全部 staged：{missing}")
+    residue = sorted((unstaged | untracked) & scoped)
+    if residue:
+        problems.append(f"范围内存在 unstaged 残留：{residue}")
+    return problems
+
+
 # ---------------------------------------------------------------- 选择器
 
 
