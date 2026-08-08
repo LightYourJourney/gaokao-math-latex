@@ -28,6 +28,11 @@ formal 模式是**两个 state 事务**：先写 `running` 回执（进程被杀
 被当作 final），串行构建后再写结果回执 / issues / reconciled manifest。中间没有第三种
 状态可以「顺便」被人当成成功。
 
+四条证据**并列、没有开关**：`validate-receipts` 与 `cleanup_legacy()` 都无条件重算全部四条，
+工具链解析不出来即 INVALID / 零删除。`--require-current-inputs` 保留为显式声明（Interfaces
+冻结了它的存在），语义已并入默认校验、传不传结果一致——把工具链做成可选项就是 fail-open：
+换了 TeX Live 的机器上旧回执照样绿。
+
 退出码（`--json` 时调用方必须同时校验 `code`）：0 通过、2 usage、3 仅 `PENDING_REVIEW`、
 4 invalid/failed/stale receipt 或门禁未过、5 `BUILD_FAILED`（诊断状态已保存）。
 """
@@ -681,6 +686,14 @@ def validate_receipt(receipt: Mapping[str, Any]) -> None:
         raise BuildError("failed 回执里没有任何失败版本")
     if receipt["status"] != "failed" and failed:
         raise BuildError("非 failed 回执里出现失败版本")
+    # succeeded 版本没有 PDF 记录 = 零证据绿灯。本工具的写入路径产不出这种回执，但回执
+    # 是 tracked 证据、后续任务（T24 finalize）还会重写它，尺子必须自己认得出这种形状。
+    without_pdf = [
+        item["edition"] for item in receipt["editions"]
+        if item["result"] == "succeeded" and item["pdf"] is None
+    ]
+    if without_pdf:
+        raise BuildError(f"succeeded 版本必须带 PDF 记录：{without_pdf}")
 
 
 def load_receipt(path: Path) -> Dict[str, Any]:
@@ -752,6 +765,10 @@ def receipt_currency(
     for edition in receipt["editions"]:
         record = edition["pdf"]
         if record is None:
+            # 失败版本没有 PDF 是正常的（那正是它失败的记录）；succeeded 版本没有则是
+            # 「零 PDF 证据」，重算尺子必须当场报失效，而不是跳过。
+            if edition["result"] == "succeeded":
+                reasons.append("succeeded 版本没有 PDF 记录：%s" % edition["edition"])
             continue
         path = Path(root) / record["path"]
         if not path.is_file():
@@ -909,7 +926,18 @@ def clean_build(
     return {"targets": sorted(targets), "removed": sorted(removed)}
 
 
-def _legacy_evidence(root: Path, manifest: Mapping[str, Any], paper_id: str) -> None:
+def _legacy_evidence(
+    root: Path,
+    manifest: Mapping[str, Any],
+    paper_id: str,
+    toolchain: Mapping[str, Any],
+) -> None:
+    """删除前的证据链：provenance + review(passed) + build(succeeded 且**四条证据**当前)。
+
+    工具链是必传的，不是可选的：这是全流程唯一不可逆的删除，换过 TeX Live 之后那份
+    succeeded 回执描述的已经不是这台机器能复现的产物，此时删掉旧编译产物就是销毁唯一
+    的对照物。
+    """
     paper = _paper(manifest, paper_id)
     project = "%s/%s" % (PROJECT_RELATIVE, paper["project_dir"])
     provenance = Path(root) / project / PROVENANCE_RELATIVE
@@ -933,23 +961,29 @@ def _legacy_evidence(root: Path, manifest: Mapping[str, Any], paper_id: str) -> 
         raise BuildError(
             "%s: build 回执状态是 %s，零删除" % (paper_id, receipt["status"])
         )
-    current, reasons = receipt_currency(root, manifest, receipt)
+    current, reasons = receipt_currency(root, manifest, receipt, toolchain=toolchain)
     if not current:
         raise BuildError(f"{paper_id}: build 回执已失效（{reasons}），零删除")
 
 
 def cleanup_legacy(
-    root: Path, manifest: Mapping[str, Any], execute: bool = False
+    root: Path,
+    manifest: Mapping[str, Any],
+    execute: bool = False,
+    toolchain: Optional[Mapping[str, Any]] = None,
+    search_path: Optional[str] = None,
 ) -> Dict[str, List[str]]:
     """只删项目根目录四版本的八类旧编译产物，且要求整条证据链齐全。
 
     阶段 0 固定全量：这是**一次性的历史清扫**，按卷零敲碎打只会留下半清理的目录。
+    工具链解析不出来就直接抛错——解析不出就核对不了第四条证据，零删除。
     """
     root = Path(root)
+    chain = toolchain or resolve_toolchain(search_path=search_path)
     targets: List[str] = []
     for paper in manifest.get("papers", []):
         paper_id = paper["paper_id"]
-        _legacy_evidence(root, manifest, paper_id)
+        _legacy_evidence(root, manifest, paper_id, chain)
         for edition in EDITIONS:
             for suffix in LEGACY_SUFFIXES:
                 relative = _assert_safe_relative(
@@ -1105,10 +1139,11 @@ def _build_facts(
     manifest: Mapping[str, Any],
     paper_id: str,
     receipt: Optional[Mapping[str, Any]],
+    toolchain: Optional[Mapping[str, Any]] = None,
 ) -> Tuple[str, str]:
     if receipt is None:
         return "missing", "stale"
-    current, _ = receipt_currency(root, manifest, receipt)
+    current, _ = receipt_currency(root, manifest, receipt, toolchain=toolchain)
     return receipt["status"], "current" if current else "stale"
 
 
@@ -1270,7 +1305,9 @@ def run_formal(
             root, manifest, receipts, {},
             lambda transaction_id: _reconciled_manifest(
                 manifest, transaction_id,
-                _assemble_facts(root, manifest, affected, loaded, running),
+                _assemble_facts(
+                    root, manifest, affected, loaded, running, toolchain=chain
+                ),
                 batches, {},
             ),
         )
@@ -1300,7 +1337,8 @@ def run_formal(
         if payload != (issues_path.read_bytes() if issues_path.is_file() else b""):
             extra[ISSUES_TARGET] = payload
         facts = _assemble_facts(
-            root, manifest, affected, loaded, results, issue_records=records
+            root, manifest, affected, loaded, results, issue_records=records,
+            toolchain=chain,
         )
         manifest = _commit_state(
             root, manifest, receipts, extra,
@@ -1340,13 +1378,16 @@ def _assemble_facts(
     loaded: Mapping[str, Mapping[str, Any]],
     receipts: Mapping[str, Mapping[str, Any]],
     issue_records: Sequence[Mapping[str, Any]] = (),
+    toolchain: Optional[Mapping[str, Any]] = None,
 ) -> Dict[str, Dict[str, Any]]:
     facts: Dict[str, Dict[str, Any]] = {}
     for paper_id in affected:
         receipt = receipts.get(paper_id)
         if receipt is None:
             receipt = _existing_receipt(root, manifest, paper_id)
-        build, currency = _build_facts(root, manifest, paper_id, receipt)
+        build, currency = _build_facts(
+            root, manifest, paper_id, receipt, toolchain=toolchain
+        )
         selected_issues = [
             item for item in issue_records
             if paper_id in set(item.get("affected_paper_ids") or [])
@@ -1376,19 +1417,32 @@ def validate_receipts(
     require_current_inputs: bool = False,
     search_path: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """只读：逐卷重算投影、生成输入树、依赖闭包与 PDF；一个字节都不写。"""
+    """只读：逐卷重算**四条证据**（投影、生成输入树、依赖闭包、工具链）与 PDF；不写盘。
+
+    四条并列、没有开关：换了 TeX Live 的机器上旧回执必须当场 stale。
+    `require_current_inputs` 只是显式声明（Interfaces 冻结了这个参数的存在），
+    语义已并入默认行为，传不传结果一致。
+    """
     manifest_path = Path(manifest_path).resolve()
     root = cli_common.repository_root(manifest_path.parent)
     manifest = load_manifest(manifest_path)
     selected = select_paper_ids(manifest, selector, value)
-    chain = (
-        resolve_toolchain(search_path=search_path) if require_current_inputs else None
-    )
 
     counters = {
         "missing": 0, "invalid": 0, "running": 0, "failed": 0, "stale": 0,
         "pending": 0, "succeeded": 0,
     }
+    try:
+        chain = resolve_toolchain(search_path=search_path)
+    except BuildError as error:
+        # 解析不出工具链就核对不了第四条证据；与 check-tools 一致地 fail closed，
+        # 而不是退化成「只核三条」——那正是 fail-open。
+        report = {
+            "code": "INVALID", "papers": len(selected),
+            "problems": [f"工具链不可用：{error}"],
+        }
+        report.update(counters)
+        return report
     problems: List[str] = []
     for paper_id in selected:
         path = Path(root) / build_receipt_path(_paper(manifest, paper_id))
@@ -1439,56 +1493,14 @@ VALIDATE_EXIT = {"OK": EXIT_OK, "PENDING_REVIEW": EXIT_PENDING_REVIEW,
 
 # ---------------------------------------------------------------- 暂存区核对
 
-
-def _git_lines(root: Path, arguments: Sequence[str]) -> List[str]:
-    return [
-        item.decode("utf-8") for item in _git_output(root, arguments).split(b"\0")
-        if item
-    ]
+# 门禁逻辑只此一份，住在 cli_common.py——与 Task 14 把三个生成器的 CLI 骨架收敛到那里
+# 是同一条理由：两份逐字副本意味着修了一处、另一处照旧，而**没有任何测试会发现只改了
+# 一处**。这里只把本工具的异常类绑上去。
+check_staged = cli_common.check_staged
 
 
 def read_pathspec(path: Path) -> List[str]:
-    try:
-        raw = Path(path).read_bytes()
-    except OSError as error:
-        raise BuildError(f"无法读取 pathspec 文件：{path}：{error}") from error
-    entries: List[str] = []
-    for item in raw.split(b"\0"):
-        if not item:
-            continue
-        try:
-            entries.append(_assert_safe_relative(item.decode("utf-8")))
-        except UnicodeDecodeError as error:
-            raise BuildError("pathspec 文件中存在非 UTF-8 路径") from error
-    if not entries:
-        raise BuildError(f"pathspec 文件为空：{path}")
-    return entries
-
-
-def check_staged(root: Path, scope: Sequence[str]) -> List[str]:
-    """核对暂存区恰好覆盖所有权范围内相对 HEAD 的实际变更。
-
-    与 `solution_sources.check_staged()` 同构。**刻意不复用**：那份的宿主模块会顺带
-    拉起解析器与转换器，而本工具必须在没有 md2tex 的环境里也能跑；共同的家应当是
-    `cli_common.py`，但那超出本任务的文件清单，故留一份带出处的副本。
-    """
-    scoped = set(scope)
-    staged = set(_git_lines(root, ["diff", "--cached", "--name-only", "-z", "HEAD", "--"]))
-    unstaged = set(_git_lines(root, ["diff", "--name-only", "-z", "--"]))
-    untracked = set(_git_lines(root, ["ls-files", "--others", "--exclude-standard", "-z"]))
-    actual = set(_git_lines(root, ["diff", "--name-only", "-z", "HEAD", "--"])) | untracked
-
-    problems: List[str] = []
-    outside = sorted(staged - scoped)
-    if outside:
-        problems.append(f"范围外存在 staged 变更：{outside}")
-    missing = sorted((actual & scoped) - staged)
-    if missing:
-        problems.append(f"范围内的实际变更未全部 staged：{missing}")
-    residue = sorted((unstaged | untracked) & scoped)
-    if residue:
-        problems.append(f"范围内存在 unstaged 残留：{residue}")
-    return problems
+    return cli_common.read_pathspec(path, BuildError)
 
 
 # ---------------------------------------------------------------- 位置参数
@@ -1563,7 +1575,7 @@ def _parser() -> argparse.ArgumentParser:
     build.add_argument("target", nargs="?", help="项目目录名（smoke 模式）")
     build.add_argument("edition", nargs="?", help="版本名（缺省编四版）")
     build.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
-    build.add_argument("--issues", default=None)
+    build.add_argument("--issues", default=str(DEFAULT_ISSUES))
     build.add_argument("--formal", action="store_true", help="写正式回执与状态")
     build.add_argument("--all", action="store_true")
     build.add_argument("--batch", metavar="BATCH_ID")
@@ -1574,7 +1586,10 @@ def _parser() -> argparse.ArgumentParser:
     validate.add_argument("--manifest", required=True)
     _add_selector(validate)
     validate.add_argument("--require-final", action="store_true")
-    validate.add_argument("--require-current-inputs", action="store_true")
+    validate.add_argument(
+        "--require-current-inputs", action="store_true",
+        help="显式声明「要求输入当前」；语义已并入默认校验，传不传结果一致",
+    )
     validate.add_argument("--json", action="store_true")
 
     clean = subparsers.add_parser("clean-build")
@@ -1628,8 +1643,6 @@ def _build_command(
             parser.error("--formal 与位置参数互斥")
         if len(selected) != 1:
             parser.error("--formal 必须且只能给一个 --all/--batch/--paper")
-        if arguments.issues is None:
-            parser.error("--formal 需要 --issues")
         selector, value = _selection(arguments)
         report = run_formal(
             Path(arguments.manifest), Path(arguments.issues), selector, value,
@@ -1715,7 +1728,10 @@ def main(
                     execute=arguments.execute,
                 )
             else:
-                report = cleanup_legacy(root, manifest, execute=arguments.execute)
+                report = cleanup_legacy(
+                    root, manifest, execute=arguments.execute,
+                    search_path=search_path,
+                )
         for relative in report["targets"]:
             print("%s %s" % ("removed" if arguments.execute else "plan", relative))
         print("共 %d 个目标，%d 个已删除" % (

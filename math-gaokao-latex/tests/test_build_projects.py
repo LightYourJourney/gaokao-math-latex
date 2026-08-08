@@ -771,6 +771,27 @@ class ReceiptCurrencyTests(unittest.TestCase):
             self.currency(toolchain=resolve_toolchain(search_path=str(moved)))[0]
         )
 
+    def test_a_succeeded_edition_without_a_pdf_is_never_current(self):
+        """零 PDF 证据不得绿灯。
+
+        回执是 tracked 证据、后续任务（T24 finalize）还会重写它；重算尺子对
+        `pdf: null` 直接跳过，等于承认「没有 PDF 也算数」。失败版本没有 PDF 是正常的，
+        succeeded 版本没有则必须当场失效。
+        """
+        forged = json.loads(json.dumps(self.receipt))
+        forged["editions"][0]["pdf"] = None
+        current, reasons = self.currency(receipt=forged)
+        self.assertFalse(current)
+        self.assertTrue(any("PDF" in item for item in reasons), reasons)
+
+    def test_a_failed_edition_without_a_pdf_does_not_make_it_stale(self):
+        self.fixture.spec({"xelatex": {"write_pdf": False}})
+        failed = self.fixture.build()
+        self.assertEqual(failed["status"], "failed")
+        self.assertIsNone(failed["editions"][0]["pdf"])
+        current, reasons = self.currency(receipt=failed)
+        self.assertTrue(current, reasons)
+
     def test_a_running_receipt_can_never_be_current(self):
         running = build_projects.running_receipt(
             self.fixture.root, self.fixture.manifest(), PAPER_ID,
@@ -805,6 +826,22 @@ class StateMachineTests(unittest.TestCase):
                 ("compiled_pending_review", "succeeded"),
             ),
         )
+
+    def test_a_succeeded_edition_must_carry_a_pdf(self):
+        receipt = self.fixture.build()
+        self.assertEqual(receipt["status"], "compiled_pending_review")
+        forged = json.loads(json.dumps(receipt))
+        forged["editions"][1]["pdf"] = None
+        with self.assertRaises(BuildError) as caught:
+            validate_receipt(forged)
+        self.assertIn("PDF", str(caught.exception))
+
+    def test_a_failed_edition_may_legitimately_lack_a_pdf(self):
+        self.fixture.spec({"xelatex": {"write_pdf": False}})
+        receipt = self.fixture.build()
+        validate_receipt(receipt)
+        self.assertEqual(receipt["status"], "failed")
+        self.assertIsNone(receipt["editions"][0]["pdf"])
 
     def test_a_new_attempt_may_always_restart_at_running(self):
         old = build_projects.running_receipt(
@@ -973,7 +1010,8 @@ class FormalBuildTests(unittest.TestCase):
         self.assertEqual(receipt["status"], "running")
         self.assertEqual(self.fixture.manifest()["revision"], 2)
         report = build_projects.validate_receipts(
-            self.fixture.manifest_path, "all", None, require_final=True
+            self.fixture.manifest_path, "all", None, require_final=True,
+            search_path=str(self.fixture.bin_dir),
         )
         self.assertEqual(report["code"], "INVALID")
         self.assertEqual(report["running"], 2)
@@ -1284,10 +1322,17 @@ class CleanupLegacyTests(unittest.TestCase):
             for edition in EDITIONS for suffix in self.LEGACY_SUFFIXES
         ]
 
+    def cleanup(self, execute=False, toolchain=None):
+        """cleanup_legacy 是唯一不可逆的删除，工具链维度必须一并当前。"""
+        return cleanup_legacy(
+            self.fixture.root, self.fixture.manifest(), execute=execute,
+            toolchain=toolchain if toolchain is not None else self.fixture.toolchain(),
+        )
+
     def test_a_complete_evidence_chain_removes_exactly_the_legacy_artifacts(self):
         self.prepare()
         before = self.fixture.snapshot()
-        report = cleanup_legacy(self.fixture.root, self.fixture.manifest(), execute=True)
+        report = self.cleanup(execute=True)
         self.assertEqual(sorted(report["removed"]), sorted(self.legacy_paths()))
         after = self.fixture.snapshot()
         self.assertEqual(sorted(set(before) - set(after)), sorted(self.legacy_paths()))
@@ -1295,7 +1340,7 @@ class CleanupLegacyTests(unittest.TestCase):
     def test_a_missing_receipt_removes_nothing(self):
         before = self.fixture.snapshot()
         with self.assertRaises(BuildError):
-            cleanup_legacy(self.fixture.root, self.fixture.manifest(), execute=True)
+            self.cleanup(execute=True)
         self.assertEqual(self.fixture.snapshot(), before)
 
     def test_a_failed_running_or_pending_receipt_removes_nothing(self):
@@ -1304,9 +1349,7 @@ class CleanupLegacyTests(unittest.TestCase):
                 self.prepare(build_status=build_status)
                 before = self.fixture.snapshot()
                 with self.assertRaises(BuildError):
-                    cleanup_legacy(
-                        self.fixture.root, self.fixture.manifest(), execute=True
-                    )
+                    self.cleanup(execute=True)
                 self.assertEqual(self.fixture.snapshot(), before)
 
     def test_a_stale_receipt_removes_nothing(self):
@@ -1316,7 +1359,7 @@ class CleanupLegacyTests(unittest.TestCase):
         )
         before = self.fixture.snapshot()
         with self.assertRaises(BuildError):
-            cleanup_legacy(self.fixture.root, self.fixture.manifest(), execute=True)
+            self.cleanup(execute=True)
         self.assertEqual(self.fixture.snapshot(), before)
 
     def test_a_missing_review_or_provenance_removes_nothing(self):
@@ -1325,15 +1368,42 @@ class CleanupLegacyTests(unittest.TestCase):
                 self.prepare(**keywords)
                 before = self.fixture.snapshot()
                 with self.assertRaises(BuildError):
-                    cleanup_legacy(
-                        self.fixture.root, self.fixture.manifest(), execute=True
-                    )
+                    self.cleanup(execute=True)
                 self.assertEqual(self.fixture.snapshot(), before)
+
+    def test_a_drifted_toolchain_removes_nothing(self):
+        """删除是不可逆的，「回执当前」必须四条证据齐全——包括工具链。
+
+        换过 TeX Live 之后，那份 succeeded 回执描述的已经不是这台机器能复现的产物；
+        此时删掉旧编译产物就是销毁唯一的对照物。
+        """
+        self.prepare()
+        drifted = fake_xelatex.write_shims(
+            self.fixture.root / ".fake-bin-legacy", self.fixture.spec_path
+        )
+        before = self.fixture.snapshot()
+        with self.assertRaises(BuildError) as caught:
+            self.cleanup(
+                execute=True, toolchain=resolve_toolchain(search_path=str(drifted))
+            )
+        self.assertIn("失效", str(caught.exception))
+        self.assertEqual(self.fixture.snapshot(), before)
+
+    def test_an_unavailable_toolchain_removes_nothing(self):
+        self.prepare()
+        (self.fixture.bin_dir / "pdftotext").unlink()
+        before = self.fixture.snapshot()
+        with self.assertRaises(BuildError):
+            cleanup_legacy(
+                self.fixture.root, self.fixture.manifest(), execute=True,
+                search_path=str(self.fixture.bin_dir),
+            )
+        self.assertEqual(self.fixture.snapshot(), before)
 
     def test_dry_run_never_touches_the_disk(self):
         self.prepare()
         before = self.fixture.snapshot()
-        report = cleanup_legacy(self.fixture.root, self.fixture.manifest())
+        report = self.cleanup()
         self.assertEqual(sorted(report["targets"]), sorted(self.legacy_paths()))
         self.assertEqual(report["removed"], [])
         self.assertEqual(self.fixture.snapshot(), before)
@@ -1347,7 +1417,7 @@ class CleanupLegacyTests(unittest.TestCase):
         target.symlink_to(self.fixture.path("%s/index.json" % PROJECT_RELATIVE))
         before = self.fixture.snapshot()
         with self.assertRaises(BuildError):
-            cleanup_legacy(self.fixture.root, self.fixture.manifest(), execute=True)
+            self.cleanup(execute=True)
         self.assertEqual(self.fixture.snapshot(), before)
 
     def test_a_tracked_legacy_artifact_removes_nothing(self):
@@ -1358,7 +1428,7 @@ class CleanupLegacyTests(unittest.TestCase):
         self.fixture.git("commit", "-q", "-m", "误入库的旧 PDF")
         before = self.fixture.snapshot()
         with self.assertRaises(BuildError):
-            cleanup_legacy(self.fixture.root, self.fixture.manifest(), execute=True)
+            self.cleanup(execute=True)
         self.assertEqual(self.fixture.snapshot(), before)
 
 
@@ -1417,6 +1487,49 @@ class CommandLineTests(unittest.TestCase):
             )
         self.assertEqual(caught.exception.code, EXIT_USAGE)
 
+    def test_formal_success_through_main(self):
+        """formal 的**成功路径**必须经 `main()` 走一遍。
+
+        直调 `run_formal()` 测不到参数解析、默认值与退出码映射这一层——而 Task 23
+        的主流程恰好只经过这一层。
+        """
+        code, output = self.capture(
+            "build", "--formal", "--paper", PAPER_ID,
+            "--manifest", str(self.fixture.manifest_path),
+            "--issues", str(self.fixture.issues_path), "--json",
+            facts_loader=make_loader(),
+        )
+        self.assertEqual(code, EXIT_OK)
+        payload = json.loads(output)
+        self.assertEqual(payload["code"], "COMPILED_PENDING_REVIEW")
+        self.assertEqual(payload["pending"], 1)
+        self.assertEqual(payload["failed"], 0)
+        self.assertEqual(
+            self.fixture.receipt()["status"], "compiled_pending_review"
+        )
+
+    def test_formal_failure_through_main_returns_five(self):
+        self.fixture.spec({"xelatex": {"passes": [{"exit_code": 1}, {"exit_code": 0}]}})
+        code, output = self.capture(
+            "build", "--formal", "--all",
+            "--manifest", str(self.fixture.manifest_path),
+            "--issues", str(self.fixture.issues_path), "--json",
+            facts_loader=make_loader(),
+        )
+        self.assertEqual(code, EXIT_BUILD_FAILED)
+        payload = json.loads(output)
+        self.assertEqual(payload["code"], "BUILD_FAILED")
+        self.assertEqual(payload["failed"], 1)
+        self.assertEqual(self.fixture.receipt()["status"], "failed")
+
+    def test_the_issues_path_defaults_like_the_manifest_path(self):
+        """`./compile_all.sh` 无参数即正确——那要求 --issues 与 --manifest 一样有默认值。"""
+        arguments = build_projects._parser().parse_args(
+            ["build", "--formal", "--all"]
+        )
+        self.assertEqual(arguments.issues, str(build_projects.DEFAULT_ISSUES))
+        self.assertEqual(arguments.manifest, str(build_projects.DEFAULT_MANIFEST))
+
     def test_validate_receipts_pending_review_uses_its_own_exit_code(self):
         build_projects.run_formal(
             self.fixture.manifest_path, self.fixture.issues_path, "all", None,
@@ -1468,25 +1581,54 @@ class CommandLineTests(unittest.TestCase):
         self.assertEqual(code, EXIT_INVALID)
         self.assertEqual(json.loads(output)["missing"], 1)
 
-    def test_stale_inputs_require_the_opt_in_toolchain_check(self):
+    def test_toolchain_drift_is_stale_with_or_without_the_flag(self):
+        """工具链是第四条证据，不是可选项。
+
+        `--require-current-inputs` 只保留为**显式声明**，语义已并入默认行为：换了
+        TeX Live 的机器上旧回执必须当场 stale，而不是等调用方想起来加个开关。
+        """
         build_projects.run_formal(
             self.fixture.manifest_path, self.fixture.issues_path, "all", None,
             facts_loader=make_loader(), toolchain=self.fixture.toolchain(),
         )
+        for extra in ([], ["--require-current-inputs"]):
+            with self.subTest(extra=extra, drifted=False):
+                code, output = self.capture(
+                    "validate-receipts", "--manifest", str(self.fixture.manifest_path),
+                    "--all", "--json", *extra
+                )
+                self.assertEqual(code, EXIT_OK)
+                self.assertEqual(json.loads(output)["stale"], 0)
+
         fake_xelatex.write_shims(
             self.fixture.bin_dir, self.fixture.spec_path, marker="新二进制"
         )
-        code, _ = self.capture(
+        for extra in ([], ["--require-current-inputs"]):
+            with self.subTest(extra=extra, drifted=True):
+                code, output = self.capture(
+                    "validate-receipts", "--manifest", str(self.fixture.manifest_path),
+                    "--all", "--json", *extra
+                )
+                self.assertEqual(code, EXIT_INVALID)
+                payload = json.loads(output)
+                self.assertEqual(payload["stale"], 1)
+                self.assertTrue(any("工具链" in item for item in payload["problems"]))
+
+    def test_validate_receipts_fails_closed_when_the_toolchain_is_unavailable(self):
+        # 解析不出工具链就核对不了第四条证据；与 check-tools 一致地 fail closed。
+        build_projects.run_formal(
+            self.fixture.manifest_path, self.fixture.issues_path, "all", None,
+            facts_loader=make_loader(), toolchain=self.fixture.toolchain(),
+        )
+        (self.fixture.bin_dir / "pdftoppm").unlink()
+        code, output = self.capture(
             "validate-receipts", "--manifest", str(self.fixture.manifest_path),
             "--all", "--json",
         )
-        self.assertEqual(code, EXIT_OK)
-        code, output = self.capture(
-            "validate-receipts", "--manifest", str(self.fixture.manifest_path),
-            "--all", "--require-current-inputs", "--json",
-        )
         self.assertEqual(code, EXIT_INVALID)
-        self.assertEqual(json.loads(output)["stale"], 1)
+        payload = json.loads(output)
+        self.assertEqual(payload["code"], "INVALID")
+        self.assertTrue(any("工具链" in item for item in payload["problems"]))
 
     def test_output_paths_emits_nul_separated_ownership(self):
         import io
@@ -1573,6 +1715,50 @@ class CommandLineTests(unittest.TestCase):
             self.cli("check-staged", "--pathspec-file", str(pathspec), "--nul"),
             EXIT_INVALID,
         )
+
+
+# ================================================================ 共享小件
+
+
+class SharedHelperTests(unittest.TestCase):
+    """暂存区门禁只能有一份实现。
+
+    两份逐字副本意味着修了一处、另一处照旧，而**没有任何测试会发现只改了一处**——
+    这正是 Task 14 把三个生成器的 CLI 骨架收敛进 cli_common.py 的同一条理由。
+    """
+
+    @staticmethod
+    def pathspec(directory, *entries):
+        target = Path(directory) / "paths.nul"
+        target.write_bytes(b"".join(item.encode("utf-8") + b"\0" for item in entries))
+        return target
+
+    def test_the_staging_gate_has_exactly_one_implementation(self):
+        import cli_common
+        import solution_sources
+
+        self.assertIs(build_projects.check_staged, cli_common.check_staged)
+        self.assertIs(solution_sources.check_staged, cli_common.check_staged)
+
+    def test_the_pathspec_reader_raises_each_callers_own_error(self):
+        import cli_common
+        import solution_sources
+
+        with tempfile.TemporaryDirectory() as temporary:
+            empty = self.pathspec(temporary)
+            empty.write_bytes(b"")
+            with self.assertRaises(BuildError):
+                build_projects.read_pathspec(empty)
+            with self.assertRaises(solution_sources.SolutionSourceError):
+                solution_sources._read_pathspec(empty)
+            with self.assertRaises(BuildError):
+                build_projects.read_pathspec(self.pathspec(temporary, "../外面.json"))
+            self.assertEqual(
+                cli_common.read_pathspec(
+                    self.pathspec(temporary, "a/b.json"), BuildError
+                ),
+                ["a/b.json"],
+            )
 
 
 # ================================================================ Bash 包装
