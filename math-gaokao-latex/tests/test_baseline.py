@@ -15,12 +15,16 @@ from baseline import (
     _ABSENT,
     _LEVEL_PATHS,
     _REVIEWED_FIELDS,
+    ADJUDICATED_DRIFTS_PATH,
+    DRIFT_CLASSES,
+    LEDGER_VERSION,
     _comparable,
     _tracked_build_inputs,
     collect_current_baseline,
     collect_legacy_baseline,
     compare_baselines,
     legacy_index_projection,
+    load_adjudicated_drifts,
     main,
     recover_legacy_index,
     with_legacy_compat,
@@ -377,25 +381,92 @@ class BaselineComparisonTests(unittest.TestCase):
         cls.manifest = load_manifest(MANIFEST)
         cls.current = collect_current_baseline(ROOT, cls.manifest)
         cls.legacy_index = recover_legacy_index(cls.legacy, ROOT)
+        cls.adjudicated = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
 
     def drift(self, mutate=None, **options):
         current = copy.deepcopy(self.current)
         if mutate is not None:
             mutate(current)
         options.setdefault("legacy_index", self.legacy_index)
+        options.setdefault("adjudicated", self.adjudicated)
         return compare_baselines(self.legacy, current, **options)["drift"]
 
-    def report(self):
-        return compare_baselines(
-            self.legacy, self.current, legacy_index=self.legacy_index
-        )
+    def report(self, **options):
+        options.setdefault("legacy_index", self.legacy_index)
+        options.setdefault("adjudicated", self.adjudicated)
+        return compare_baselines(self.legacy, self.current, **options)
 
-    def test_identity_migration_produces_no_unreviewed_drift(self):
+    def test_identity_migration_leaves_no_unadjudicated_drift(self):
+        """口径是「零**未裁定**漂移」：共享 TeX 的 42 条已由登记表逐条放行。
+
+        T13 把共享 TeX 改成来源总账驱动，字节必然变，计划也从未承诺它不变；这里守的
+        是「除已裁定的那 42 条之外，一个字节都没动」。
+        """
         report = self.report()
         self.assertEqual(report["drift"], [])
+        self.assertEqual(len(report["adjudicated"]), 42)
         self.assertEqual(report["summary"]["target_count"], 84)
         self.assertEqual(report["summary"]["total_pages"], 1336)
         self.assertEqual(report["summary"]["overfull_count"], 1)
+
+    def test_every_adjudicated_entry_is_a_shared_tex_content_hash(self):
+        adjudicated = self.report()["adjudicated"]
+        self.assertEqual(
+            {item["artifact"] for item in adjudicated}, {"questions.tex", "answers.tex"}
+        )
+        counts = {}
+        for item in adjudicated:
+            counts[item["class"]] = counts.get(item["class"], 0) + 1
+        self.assertEqual(counts, {"migration": 21, "header": 14, "stale-artifact": 7})
+        for item in adjudicated:
+            self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
+            self.assertEqual(item["adjudicated_by"], "task-13-review")
+
+    def test_without_the_ledger_every_content_drift_is_reported(self):
+        """缺登记表 = 现状：42 条全部未裁定。登记表绝不能是「默认放行」。"""
+        report = compare_baselines(
+            self.legacy, self.current, legacy_index=self.legacy_index
+        )
+        self.assertEqual(len(report["drift"]), 42)
+        self.assertEqual(report["adjudicated"], [])
+
+    def test_a_further_change_to_current_is_reported_again(self):
+        """裁定钉的是**那一个**字节结果；再动一次必须重新报警。"""
+        drift = self.drift(
+            lambda current: current["papers"][0]["content_sha256"].update(
+                {"answers.tex": "0" * 64}
+            )
+        )
+        self.assertEqual(len(drift), 1)
+        self.assertEqual(drift[0]["field"], "papers[0].content_sha256.answers.tex")
+        self.assertEqual(drift[0]["current"], "0" * 64)
+
+    def test_a_legacy_side_mismatch_is_reported(self):
+        legacy = copy.deepcopy(self.legacy)
+        legacy["papers"][0]["content_sha256"]["answers.tex"] = "1" * 64
+        drift = compare_baselines(
+            legacy, self.current,
+            legacy_index=self.legacy_index, adjudicated=self.adjudicated,
+        )["drift"]
+        self.assertEqual(len(drift), 1)
+        self.assertEqual(drift[0]["legacy"], "1" * 64)
+
+    def test_an_unregistered_artifact_is_never_adjudicated(self):
+        partial = {
+            key: value for key, value in self.adjudicated.items()
+            if key[1] != "questions.tex"
+        }
+        drift = self.drift(adjudicated=partial)
+        self.assertEqual(len(drift), 21)
+        for item in drift:
+            self.assertTrue(item["field"].endswith(".questions.tex"), item["field"])
+
+    def test_only_content_hashes_can_be_adjudicated(self):
+        """登记表是窄入口：非 content_sha256 的漂移永远进不来。"""
+        drift = self.drift(
+            lambda current: current["papers"][0]["figures"].append("凭空多出.tex")
+        )
+        self.assertEqual([item["field"] for item in drift], ["papers[0].figures[5]"])
 
     def test_non_reproducible_fields_are_reviewed_instead_of_drift(self):
         reviewed = {item["field"] for item in self.report()["reviewed"]}
@@ -639,12 +710,91 @@ class BaselineComparisonTests(unittest.TestCase):
         sources = collect_current_baseline(ROOT, self.manifest, include_targets=False)
         self.assertEqual(
             compare_baselines(
-                self.legacy, sources, True, legacy_index=self.legacy_index
+                self.legacy, sources, True,
+                legacy_index=self.legacy_index, adjudicated=self.adjudicated,
             )["drift"],
             [],
         )
         with self.assertRaisesRegex(ValueError, "sources-only"):
             compare_baselines(self.legacy, sources, legacy_index=self.legacy_index)
+
+
+class AdjudicatedDriftLedgerTests(unittest.TestCase):
+    """登记表的读入契约：缺文件退化成现状，读不懂一律报错。"""
+
+    def write(self, document):
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        path = Path(directory.name) / "adjudicated-drifts.json"
+        path.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+        return path
+
+    def valid_record(self, **overrides):
+        record = {
+            "adjudicated_by": "task-13-review",
+            "artifact": "answers.tex",
+            "class": "migration",
+            "current_sha256": "b" * 64,
+            "legacy_sha256": "a" * 64,
+            "paper_id": "gk-2099-regular-national-1",
+        }
+        record.update(overrides)
+        return record
+
+    def test_a_missing_ledger_means_nothing_is_adjudicated(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(load_adjudicated_drifts(Path(tmp) / "缺席.json"), {})
+
+    def test_a_valid_ledger_is_keyed_by_paper_and_artifact(self):
+        path = self.write({
+            "ledger_version": LEDGER_VERSION, "drifts": [self.valid_record()]
+        })
+        ledger = load_adjudicated_drifts(path)
+        self.assertEqual(
+            list(ledger), [("gk-2099-regular-national-1", "answers.tex")]
+        )
+
+    def test_a_malformed_ledger_fails_closed(self):
+        cases = {
+            "版本": {"ledger_version": 99, "drifts": []},
+            "drifts": {"ledger_version": LEDGER_VERSION, "drifts": {}},
+            "条目类型": {"ledger_version": LEDGER_VERSION, "drifts": ["x"]},
+            "缺字段": {
+                "ledger_version": LEDGER_VERSION,
+                "drifts": [{"paper_id": "p", "artifact": "answers.tex"}],
+            },
+            "类别": {
+                "ledger_version": LEDGER_VERSION,
+                "drifts": [self.valid_record(**{"class": "随便放行"})],
+            },
+            "产物": {
+                "ledger_version": LEDGER_VERSION,
+                "drifts": [self.valid_record(artifact="main.pdf")],
+            },
+            "哈希": {
+                "ledger_version": LEDGER_VERSION,
+                "drifts": [self.valid_record(current_sha256="不是哈希")],
+            },
+            "重复": {
+                "ledger_version": LEDGER_VERSION,
+                "drifts": [self.valid_record(), self.valid_record()],
+            },
+        }
+        for name, document in cases.items():
+            with self.subTest(case=name):
+                with self.assertRaises(ValueError):
+                    load_adjudicated_drifts(self.write(document))
+
+    def test_the_repository_ledger_registers_the_42_shared_tex_drifts(self):
+        ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
+        self.assertEqual(len(ledger), 42)
+        self.assertEqual({key[1] for key in ledger}, {"questions.tex", "answers.tex"})
+        self.assertTrue(
+            all(record["class"] in DRIFT_CLASSES for record in ledger.values())
+        )
+        # 依据链必须留在文件里：没有它，后人只看得到一张「豁免名单」。
+        document = read_json(ADJUDICATED_DRIFTS_PATH)
+        self.assertTrue(any("依据链" in line for line in document["$comment"]))
 
 
 class LegacyIndexRecoveryTests(unittest.TestCase):
@@ -853,6 +1003,40 @@ class CurrentBaselineCliTests(unittest.TestCase):
                     0,
                 )
 
+    def compare_working(self, *extra):
+        stream = io.StringIO()
+        with redirect_stdout(stream), redirect_stderr(io.StringIO()):
+            code = main([
+                "compare-working",
+                "--legacy", str(FROZEN_LEGACY),
+                "--project-root", str(ROOT),
+                "--manifest", str(MANIFEST),
+                "--sources-only",
+            ] + list(extra))
+        return code, stream.getvalue()
+
+    def test_compare_working_reports_the_adjudicated_count_instead_of_zero_drift(self):
+        code, output = self.compare_working()
+        self.assertEqual(code, 0)
+        self.assertIn("已裁定漂移 42 条", output)
+        self.assertIn("零未裁定漂移", output)
+
+    def test_pointing_the_ledger_elsewhere_restores_the_alarm(self):
+        """登记表不是「默认放行」：拿不到它就必须重新报出全部 42 条。"""
+        with tempfile.TemporaryDirectory() as tmp:
+            code, output = self.compare_working(
+                "--adjudicated", str(Path(tmp) / "不存在.json")
+            )
+        self.assertEqual(code, 1)
+        self.assertNotIn("零未裁定漂移", output)
+
+    def test_a_malformed_ledger_is_not_silently_ignored(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            broken = Path(tmp) / "adjudicated-drifts.json"
+            broken.write_text('{"ledger_version": 99, "drifts": []}', encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "版本"):
+                self.compare_working("--adjudicated", str(broken))
+
     def test_parsers_require_every_path_and_scope_sources_only(self):
         for argv in (
             ["write-current", "--manifest", "m"],
@@ -896,7 +1080,7 @@ class CurrentBaselineCliTests(unittest.TestCase):
             )
             self.assertEqual(result.returncode, 1)
             self.assertIn("SHA-256", result.stderr)
-            self.assertNotIn("零未审查漂移", result.stdout)
+            self.assertNotIn("零未裁定漂移", result.stdout)
 
     def test_compare_process_exit_codes_are_zero_one_and_two(self):
         script = ROOT / "tools" / "baseline.py"

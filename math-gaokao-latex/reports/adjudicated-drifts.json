@@ -1,0 +1,356 @@
+{
+  "$comment": [
+    "已裁定漂移登记表——记录「legacy 基线 → 迁移后」中经审查确认为正当的共享 TeX 字节变化。",
+    "依据链：",
+    "  1. T5 冻结基线时的措辞就是「零未审查漂移」，比较器内建「已审查」这一层；本表是它在",
+    "     content_sha256 维度上的逐条延伸，不是新发明的豁免机制。",
+    "  2. 阶段 0 计划的 T13/T14 从未承诺共享 TeX 字节不变——T13 的任务正是把它改为来源总账驱动。",
+    "  3. 42 条分类经 opus 审查穷举确认（见 .superpowers/sdd/…/task-13 review）：migration 类 21 卷",
+    "     逐卷核对无数学内容变化；header 类证明为冻结源的纯投影；stale-artifact 类经 git 提交",
+    "     顺序确认是转换器修复对滞后产物的传导。",
+    "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
+    "current 再变一次、legacy 对不上、或出现未登记的新漂移，一律恢复报警（exit 1）。",
+    "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（提交 ee6e79e），不手编。",
+    "class：migration=内容迁移（答案/题面改由规范源供给）；header=仅生成头注变化；",
+    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导。"
+  ],
+  "drifts": [
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "2d016dd428ebaec859e4420afd972db3db66b6af648ee080fba04c9e04e0b42b",
+      "legacy_sha256": "f7b5371182d8ae9c87a79dfc7d8051b119781e8aee29c6ae6dfa7e8af4aca556",
+      "paper_id": "gk-2017-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "377d33d661a45757273ad4af975131a3664f76ca055631738e7d497a30bebb82",
+      "legacy_sha256": "20e386e451d2ec648b0e2c4d12d83cf276209e6c3901b75e9501eda0816a9371",
+      "paper_id": "gk-2017-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "37728b54e38439eff9360fdf12acf2e72babfbdf2f6a85415b5e6dc741dc4bc6",
+      "legacy_sha256": "26cfdcb0b49f2117f47c5cf785ebc4671167a20d7893109d8ef0d40ecf6d80bb",
+      "paper_id": "gk-2017-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "e360a8559c12fcf40d4b998035b76e9a57bbe3c90c99e7064034b813df5ecafb",
+      "legacy_sha256": "d98f82479c190e2a58a496223f687e802c9c6b070083e47264cd4f57e666e089",
+      "paper_id": "gk-2017-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "8fb89d5c21c27df355fbe618d80d6c050fb42ac6cfb3b7a90269030a959230d4",
+      "legacy_sha256": "c9b5377da5b7352b42e9967765c8a08a01047324de1e402c0ba4e6e0ec6c1f7c",
+      "paper_id": "gk-2018-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "ea83cb5367593a7800784ecdaef5abb8ab9687e3770cf1274bd56e87e56cae86",
+      "legacy_sha256": "d174ce432c441bc56966cc5d22ea96717d4decaa1860b6620cc1d65ec7697b2d",
+      "paper_id": "gk-2018-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "abc9c92e641b47893142369047c50a00f59bcee2a28d88558b614456528b1e12",
+      "legacy_sha256": "c44b4dccfb88fbfdfc3bd98cb4d79d9bdebcd84eb118f9e040568a857ed4afc1",
+      "paper_id": "gk-2018-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "93fe2713f0d055ea25281a36a8f3694453fb6e3c7876beb72b7c6cd9906e44c3",
+      "legacy_sha256": "0cf91c6fc95c009556bfc795dac1534faf2a83a501def3c2a63e463527ca9d1d",
+      "paper_id": "gk-2018-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "2a8c8c27b21448dca22819601b59eeeddf9e374e14367a0b9234bba04de73c3c",
+      "legacy_sha256": "38f1535cfaf855c18387bf48e2da29da84c90b972d09d9d06cad050061dda69a",
+      "paper_id": "gk-2019-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "b0c9035ba2156a2a84338f58a3adba1d373496cc41ed35ada374e178a1ab1cde",
+      "legacy_sha256": "67839cef1df994d12a1e7089423fdb9ccda07e380c81198911f1f461a55311a7",
+      "paper_id": "gk-2019-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "7412a4e4ca2324a009bfd2de9a411d73907710fa79aad13351f5aebe4909af2b",
+      "legacy_sha256": "e51f1f098182e145ec747d0b88f8c0dff1f78a053baef12931b06b9daf1a876a",
+      "paper_id": "gk-2019-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "dbb30763196bdae5b02cf7eb63d068650a487053d036da545fbcc6a0e551c45c",
+      "legacy_sha256": "3394ce44d8ac37efe761c27d571517ee2dbad805a04e804399753359416fe711",
+      "paper_id": "gk-2019-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "be5de140bbfef45ffabd6667921919bdec43097ba5464275eb97b1be52cef497",
+      "legacy_sha256": "14053832dd48e819b60b6fbc5374038e9500c9ec27743ac10af2f0b80e9188aa",
+      "paper_id": "gk-2020-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "fb12e64cebb3b3d3b0687f953fc519e7eca3007c3810687e8bb584ee96aba58c",
+      "legacy_sha256": "3be4bf677703f4c6b4fa7f71a99a1e5d0c1d26d05786da809193f912ac8c1a2d",
+      "paper_id": "gk-2020-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "6aaeaf864c152d010062e6ae44ed4b1b7fdf932fc24df168080bd60afbf54577",
+      "legacy_sha256": "2106273be7f3c488db005a3237670d696d40ab56eb600dbbf289c9a16cc7d827",
+      "paper_id": "gk-2020-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "4f25edfb73ec3c32e98b98812f89648558898e99a8cf74338dccd6df991871b2",
+      "legacy_sha256": "e3d34f7a41405de822088b1a3c3d62cd38f4e8d92f3f16baadd225898d70cc86",
+      "paper_id": "gk-2020-regular-national-1-science"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "4351ac575295ee16c209d8fa7b595366ffc624af2c0e40cd298c6d04e3a498f2",
+      "legacy_sha256": "5d82fec28122d358ebfcec53b7dac07e9d5e1b4a45ba5230d66446ceb6349168",
+      "paper_id": "gk-2020-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "b19cb045d65748ec937275c6c9994dbabb837595b812d80011e270b2a445027e",
+      "legacy_sha256": "6c451bd286a1dfc6e1a1fcdc0a13c55fae597464acec324c7b3268e4a237852d",
+      "paper_id": "gk-2020-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "3b0e2f1ae335181e70bde20f7ab7504f08f6b13450eee94451f5087938766c4c",
+      "legacy_sha256": "ae5ab97ea1c5ca83cec4a36835ade1d04b3b57b724eca96db2bbe36905804fdd",
+      "paper_id": "gk-2021-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "a0c248ec3585823ab49cf8b13c0a0b8fa7367bd72575979e812676ac887cf3d6",
+      "legacy_sha256": "ed6b231df8c6cc12f0c1c0cafe9d6ecac0b0f15b6e57058eaa98d2e82e40ae47",
+      "paper_id": "gk-2021-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "a31c3bcce5538ea7180558c66373c7a781be70565cb1e5627011ca4407e8cbf7",
+      "legacy_sha256": "79aed59a98c83faecffb36b7d94305892766a436b83bb877300f2665fb0a02c5",
+      "paper_id": "gk-2021-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "da68de8ca8b880e3fefd88f6fbe7540734795340dac7992d4b24f7a52609123d",
+      "legacy_sha256": "c034bad63220a9e80e7be8eba734ff05baac73deb760b25943039b4ce7fcc888",
+      "paper_id": "gk-2021-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "4b90a5fda70b0a9b1c7380a8ea34b748109e6abb604e4b797e82c74daffb67c7",
+      "legacy_sha256": "8ff1c49dcad45a0ea291a1ad6c8f67dba243c25b267371fb8507771de7f2d3dd",
+      "paper_id": "gk-2022-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "9f93f5dc68265671173b601a7647e56371c0824f45afeb2439d1122e8a4ae945",
+      "legacy_sha256": "4275b5ee3e2779e9d9b2c521c3740e91e371a8862623100599c255e542e3f9d2",
+      "paper_id": "gk-2022-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "217db156418a0eef9796829f60a73757745ca2921dd27bd6dd10bdbcf5487b80",
+      "legacy_sha256": "29a9de244eb344a064d64463e8bece117d9d985249f45cb1b4daa982c2445f31",
+      "paper_id": "gk-2022-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "8f06625780b10944c38eff2d8bd8bae5cab4088af9db3b5a7cf3f9acf3698b68",
+      "legacy_sha256": "becafa839c0f9c39b7b299b6243f44105c2585ce07a79053858af35cc5077b26",
+      "paper_id": "gk-2022-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "eaa6a00008bd78ec9c7263adc5872767ad7780b76c71d1d5ec1f2201e6556bf7",
+      "legacy_sha256": "a74f4dd93c02456a338d835177a109275915458de7011d858152eb07e45d0597",
+      "paper_id": "gk-2023-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "1226c41105215504e2014f72e1d355d6842a69a3490edc1ac47a264bfa24841c",
+      "legacy_sha256": "29886072c6d3dd2d2ae2a41526f3ee58c4aa86e151e8654846a445e2c9f5894a",
+      "paper_id": "gk-2023-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "9221b7763ac2422c8216e916bd24bd56fc07ae5d2fbd040ca71ef8980298e1d6",
+      "legacy_sha256": "d47ad57099202d13942353bedf9d2a10204e4b4da01ed1db7aa99ec0b5f47cfd",
+      "paper_id": "gk-2023-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "58f6454852c0e8b88d25c11eab1a9e571433594527aa5fbc9550f365279cc0bb",
+      "legacy_sha256": "94fc804c5618c93e0dc26206fa52e434fab506202f6c55156a5064e3a3b5e0c7",
+      "paper_id": "gk-2023-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "5da655f23d698af83428fce9d55b2e443db216759c815c43ab72c5de727daa71",
+      "legacy_sha256": "b0c0c0b71a39ecd76462956f6feda2c496982781b97f85cec998276770ca70b9",
+      "paper_id": "gk-2024-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "3fcd164c4f46739ea88dc9177a5cc551fcfd128158da105c65029c22d68ac43f",
+      "legacy_sha256": "0d0723a1cc19782bc3927ae1eca6b04c47796a02ca6118d5cddf0723cddcf15d",
+      "paper_id": "gk-2024-regular-new-gaokao-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "441d255cbf8a20f61c9fc06761a431737cdfc9fa3cc78198e24f57d292c507a7",
+      "legacy_sha256": "e2d1f4d3d1a8e616a9816f72d245ef8d03e8fcba52238f262511f57001b9a8bd",
+      "paper_id": "gk-2024-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "e6bf39ea0af9cd502f1f826982af30e796a5fde096ccf3960f0705b2a6396b66",
+      "legacy_sha256": "46fce4db127d5b8bc762ffd12b4367ed9f828d66c7dfa63366e1d1f3885ef60e",
+      "paper_id": "gk-2024-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "f4cd3319e6d55be731362c3a7f0e8cb7575c1d51db6c38ab7b0f7dff963ee762",
+      "legacy_sha256": "53c9ad2169bd4b40724507514fd69efc5c1b364eeb7292e65b0b6fdf0ed1084f",
+      "paper_id": "gk-2025-regular-national-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "22e71e6c11b1fdde0c6658e55fc48adf956105e4ec6b69d99f06a8488d117e25",
+      "legacy_sha256": "6fcdf066b552c46af72c40249aa29299e624485a14cc1f037aace2fe9e5f5cce",
+      "paper_id": "gk-2025-regular-national-1"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "52509821205af114d693909b2aebabd680c809106d097eb46e972d6bad36b04d",
+      "legacy_sha256": "c98b9b8ec264eb1bf88368e12fb0bf7652815222302481a1991be3395cf2c0b3",
+      "paper_id": "gk-2025-regular-national-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "39ecd71fdf05b1d0ba75a23e116dbed9c3d6a3e05733a8565ea3757cbbdafd53",
+      "legacy_sha256": "1a7d3d92dfc6fc1dd9fea51b79f8f718b1ac6d9ec57e1a56ec52781301350ba7",
+      "paper_id": "gk-2025-regular-national-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "2a9eddff8dd4c3856c00f720286b7106bc2b968b2c189bb730f8dfb9e650e6f8",
+      "legacy_sha256": "1ebbb06416f38709dd90285236ba7d4b7a910dbfc61643a33229692e2fca8c00",
+      "paper_id": "gk-2026-regular-national-1-recall"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "stale-artifact",
+      "current_sha256": "d0159a73339b5d613fe04e582a8627482a44c644b6b6910aa39d4ecb2418fa03",
+      "legacy_sha256": "7ca2d18ab35c3c3f52276f5c23ccc8d2d4fcd533b76f38f6ef361b0084a22338",
+      "paper_id": "gk-2026-regular-national-1-recall"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "answers.tex",
+      "class": "migration",
+      "current_sha256": "87ff8091e8e0a55702de3c696d4fb0aa07adc1713a382525c1bd6311e942271c",
+      "legacy_sha256": "9def0a18c8ab1d957c4f6425040870e7bdc5f8532c91d1a48f24e71b8a31ab38",
+      "paper_id": "gk-2026-regular-national-2"
+    },
+    {
+      "adjudicated_by": "task-13-review",
+      "artifact": "questions.tex",
+      "class": "header",
+      "current_sha256": "d486a2f6236c9b15e8c123297c9d03079c4bc811011a82f2f6e1dc0328a8ef4b",
+      "legacy_sha256": "7244f0b0be86fb756b79b74ae8d7c471b4715c3f6c5ac44f26c8c25c7b1cf91b",
+      "paper_id": "gk-2026-regular-national-2"
+    }
+  ],
+  "ledger_version": 1
+}

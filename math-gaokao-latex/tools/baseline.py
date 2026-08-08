@@ -8,7 +8,7 @@ import os
 import re
 import subprocess
 from pathlib import Path, PurePosixPath
-from typing import Any, Dict, List, Mapping, Optional, Sequence
+from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
 from manifest import atomic_write_json, file_sha256, load_manifest
 from source_manifest import project_legacy_index
@@ -17,6 +17,12 @@ from transaction import RepoLock
 EDITIONS = ("试题版", "解析版", "简答版", "印刷版")
 CONTENT_FILES = ("questions.tex", "answers.tex", "answers_short.tex")
 PLAN_PATH = "docs/superpowers/plans/2026-08-04-高考数学LaTeX阶段0实施计划.md"
+# 已裁定漂移登记表：规范工程根目录固定，故这里由工具自身位置推出，两个子命令共用。
+ADJUDICATED_DRIFTS_PATH = (
+    Path(__file__).resolve().parent.parent / "reports" / "adjudicated-drifts.json"
+)
+LEDGER_VERSION = 1
+DRIFT_CLASSES = ("header", "migration", "stale-artifact")
 _BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
 _PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
 _QUESTION_ID_RE = re.compile(r"\\gkti\{([0-9]+)\}")
@@ -67,6 +73,9 @@ _COMPARED_PAPER_FIELDS = (
     "legacy_id", "project_dir", "question_ids", "content_sha256", "figures", "shells",
 )
 _COMPARED_TARGET_FIELDS = ("path", "edition", "log_path", "pages")
+# 只有共享 TeX 的内容哈希能被裁定放行——登记表是窄入口，题号、图树、index 投影等
+# 维度的漂移永远进不来。字段形状由 _diff() 的递归路径决定：papers[N].content_sha256.X
+_CONTENT_DRIFT_FIELD = re.compile(r"^papers\[([0-9]+)\]\.content_sha256\.(.+)$")
 _COMPARED_WARNING_COUNTERS = (
     "hard_errors", "missing_characters", "undefined_references",
 )
@@ -632,20 +641,119 @@ def with_legacy_compat(
     return normalized
 
 
+def load_adjudicated_drifts(
+    path: Path = ADJUDICATED_DRIFTS_PATH,
+) -> Dict[Tuple[str, str], Dict[str, Any]]:
+    """读已裁定漂移登记表，键为 (paper_id, artifact)。
+
+    **缺文件 = 现状**：返回空表，于是所有漂移照旧未裁定。这条不能改成「缺文件即放行」
+    ——那会让删掉一个文件就变成全面豁免。
+
+    文件存在但内容不合格（版本号不对、字段缺失、哈希不是 sha256、class 不在名单、
+    同一 (paper_id, artifact) 重复登记）一律**报错**：一张读不懂的登记表比没有更危险，
+    静默降级成空表会把「登记表写坏了」伪装成「什么都没裁定过」。
+    """
+    path = Path(path)
+    if not path.exists():
+        return {}
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError(f"无法读取已裁定漂移登记表：{path}: {error}") from error
+    if not isinstance(document, Mapping):
+        raise ValueError("已裁定漂移登记表顶层必须是对象")
+    if document.get("ledger_version") != LEDGER_VERSION:
+        raise ValueError(
+            f"已裁定漂移登记表版本必须为 {LEDGER_VERSION}，实际 {document.get('ledger_version')!r}"
+        )
+    records = document.get("drifts")
+    if not isinstance(records, list):
+        raise ValueError("已裁定漂移登记表的 drifts 必须是数组")
+    ledger: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for record in records:
+        if not isinstance(record, Mapping):
+            raise ValueError("已裁定漂移条目必须是对象")
+        paper_id = record.get("paper_id")
+        artifact = record.get("artifact")
+        adjudicated_by = record.get("adjudicated_by")
+        drift_class = record.get("class")
+        if not all(
+            isinstance(value, str) and value
+            for value in (paper_id, artifact, adjudicated_by, drift_class)
+        ):
+            raise ValueError(f"已裁定漂移条目字段缺失或非字符串：{dict(record)}")
+        if drift_class not in DRIFT_CLASSES:
+            raise ValueError(f"未知的漂移类别：{drift_class!r}")
+        if artifact not in CONTENT_FILES:
+            raise ValueError(f"已裁定漂移只针对共享 TeX，未知 artifact：{artifact!r}")
+        for field in ("legacy_sha256", "current_sha256"):
+            if _SHA256_RE.fullmatch(str(record.get(field))) is None:
+                raise ValueError(f"{paper_id}/{artifact} 的 {field} 不是 sha256")
+        key = (paper_id, artifact)
+        if key in ledger:
+            raise ValueError(f"已裁定漂移重复登记：{key}")
+        ledger[key] = dict(record)
+    return ledger
+
+
+def _split_adjudicated(
+    drift: Sequence[Mapping[str, Any]],
+    current: Mapping[str, Any],
+    ledger: Mapping[Tuple[str, str], Mapping[str, Any]],
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """把已裁定的漂移从清单里摘出来；**双哈希都精确匹配**才算数。
+
+    legacy 侧对不上说明冻结基线被换过，current 侧对不上说明产物又变了一次——两种都
+    必须重新报警，否则一次裁定就成了对该文件的永久免检。
+    """
+    papers = current.get("papers")
+    remaining: List[Dict[str, Any]] = []
+    adjudicated: List[Dict[str, Any]] = []
+    for item in drift:
+        matched = _CONTENT_DRIFT_FIELD.match(str(item.get("field")))
+        record = None
+        if matched is not None and isinstance(papers, list):
+            position = int(matched.group(1))
+            if position < len(papers) and isinstance(papers[position], Mapping):
+                paper_id = papers[position].get("paper_id")
+                candidate = ledger.get((paper_id, matched.group(2)))
+                if (
+                    candidate is not None
+                    and candidate["legacy_sha256"] == item.get("legacy")
+                    and candidate["current_sha256"] == item.get("current")
+                ):
+                    record = candidate
+        if record is None:
+            remaining.append(dict(item))
+            continue
+        entry = dict(item)
+        entry.update({
+            "paper_id": record["paper_id"],
+            "artifact": record["artifact"],
+            "class": record["class"],
+            "adjudicated_by": record["adjudicated_by"],
+        })
+        adjudicated.append(entry)
+    return remaining, adjudicated
+
+
 def compare_baselines(
     legacy: Mapping[str, Any],
     current: Mapping[str, Any],
     sources_only: bool = False,
     legacy_index: Optional[Mapping[str, Any]] = None,
+    adjudicated: Optional[Mapping[Tuple[str, str], Mapping[str, Any]]] = None,
 ) -> Dict[str, Any]:
-    """比较 legacy 与迁移后基线；`drift` 为空即"零未审查漂移"。
+    """比较 legacy 与迁移后基线；`drift` 为空即"零未裁定漂移"。
 
     `legacy_index` 是 `recover_legacy_index()` 从 git 锚点取回的迁移前 index.json；
     冻结的 legacy 基线里没有记录兼容投影，所以拿不到它就**报错而非跳过**——否则
     `structure`/`pdf_pages`/`title` 等深层字段会在"零漂移"的假象下失去保护。
 
     `_REVIEWED_FIELDS` 列出的字段不计漂移（不可复现，或身份迁移的正当新增）；
-    其余任何差异都是漂移。
+    `adjudicated` 是 `load_adjudicated_drifts()` 读来的已裁定登记表，命中的漂移移入
+    报告的 `adjudicated` 而不计入 `drift`；其余任何差异都是漂移。省略 `adjudicated`
+    等于没有登记表，一切照旧报警。
     """
     if not isinstance(legacy, Mapping) or not isinstance(current, Mapping):
         raise ValueError("基线必须是对象")
@@ -656,9 +764,11 @@ def compare_baselines(
         _comparable(current, sources_only),
         drift,
     )
+    drift, resolved = _split_adjudicated(drift, current, adjudicated or {})
     return {
         "sources_only": sources_only,
         "drift": drift,
+        "adjudicated": resolved,
         "reviewed": [
             {"field": _LEVEL_PATHS[level] + field, "reason": reason}
             for level, field, reason in _REVIEWED_FIELDS
@@ -852,11 +962,13 @@ def _parser() -> argparse.ArgumentParser:
     compare.add_argument("--legacy", required=True, type=Path)
     compare.add_argument("--current", required=True, type=Path)
     compare.add_argument("--sources-only", action="store_true")
+    compare.add_argument("--adjudicated", type=Path, default=ADJUDICATED_DRIFTS_PATH)
     working = subparsers.add_parser("compare-working")
     working.add_argument("--legacy", required=True, type=Path)
     working.add_argument("--project-root", required=True, type=Path)
     working.add_argument("--manifest", required=True, type=Path)
     working.add_argument("--sources-only", action="store_true")
+    working.add_argument("--adjudicated", type=Path, default=ADJUDICATED_DRIFTS_PATH)
     check = subparsers.add_parser("check-legacy")
     check.add_argument("--baseline", required=True, type=Path)
     return parser
@@ -876,8 +988,19 @@ def _print_report(report: Mapping[str, Any]) -> int:
         )
     for item in report["reviewed"]:
         print("已审查（不计漂移）：{0} —— {1}".format(item["field"], item["reason"]))
+    adjudicated = report.get("adjudicated") or []
+    if adjudicated:
+        counts: Dict[str, int] = {}
+        for item in adjudicated:
+            counts[item["class"]] = counts.get(item["class"], 0) + 1
+        print(
+            "已裁定漂移 {0} 条（{1}）".format(
+                len(adjudicated),
+                "、".join(f"{name} {counts[name]}" for name in sorted(counts)),
+            )
+        )
     if not report["drift"]:
-        print("零未审查漂移")
+        print("零未裁定漂移")
         return 0
     for item in report["drift"]:
         print(
@@ -886,7 +1009,7 @@ def _print_report(report: Mapping[str, Any]) -> int:
             ),
             file=os.sys.stderr,
         )
-    print(f"共 {len(report['drift'])} 处未审查漂移", file=os.sys.stderr)
+    print(f"共 {len(report['drift'])} 处未裁定漂移", file=os.sys.stderr)
     return 1
 
 
@@ -929,6 +1052,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             current,
             arguments.sources_only,
             recover_legacy_index(legacy, repo_root),
+            load_adjudicated_drifts(arguments.adjudicated),
         )
     )
 
