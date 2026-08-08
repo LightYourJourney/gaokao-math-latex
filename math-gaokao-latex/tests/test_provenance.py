@@ -33,6 +33,7 @@ sys.path.insert(0, str(ROOT.parent / "math-gaokao-2017-2026" / "tools"))
 
 import issues as issues_module
 import provenance
+import source_manifest
 import status as status_core
 from manifest import atomic_write_json, canonical_json, file_sha256, load_manifest
 from make_short_answers import expected_answer_records
@@ -57,7 +58,7 @@ from provenance import (
 )
 from solution_sources import parse_question_blocks
 from status import derive_status, reconcile_batch_status
-from transaction import TRANSACTIONS_RELATIVE
+from transaction import TRANSACTIONS_RELATIVE, recover_transactions
 
 PROJECT_RELATIVE = "math-gaokao-latex"
 MANIFEST_TARGET = PROJECT_RELATIVE + "/source-manifest.json"
@@ -301,6 +302,31 @@ class ProvenanceFixture:
                 continue
             recorded[path.relative_to(self.root).as_posix()] = file_sha256(path)
         return recorded
+
+    def rewrite_manifest(self, mutate):
+        """就地改写 manifest（绕过事务，供只读判定与前置条件构造使用）。"""
+        document = json.loads(self.manifest_path.read_text(encoding="utf-8"))
+        mutate(document)
+        atomic_write_json(self.manifest_path, document)
+        return document
+
+    def unbind(self, *source_ids):
+        """把若干 source 还原成「ready 但未绑定」——T17 面对的真实起点。"""
+        def mutate(document):
+            targets = set(source_ids)
+            released = set()
+            for source in document["sources"]:
+                if source["source_id"] not in targets:
+                    continue
+                released.add(source["paper_id"])
+                source["paper_id"] = None
+                source["paper_relation"] = None
+            for paper in document["papers"]:
+                if paper["paper_id"] in released:
+                    paper["source_ids"] = [
+                        item for item in paper["source_ids"] if item not in targets
+                    ]
+        return self.rewrite_manifest(mutate)
 
     # ------------------------------------------------------------ 真值构造
 
@@ -1124,6 +1150,293 @@ class ImportBatchTests(unittest.TestCase):
             self.fixture.read_bytes(self.fixture.provenance_relative(PAPER_ONE)),
             first,
         )
+
+
+# ================================================================ confirm-source
+
+
+class SimulatedCrash(RuntimeError):
+    pass
+
+
+class ConfirmSourceTests(unittest.TestCase):
+    """建立 source↔paper 绑定。**每条 fail-closed 守卫一个测试。**
+
+    起点就是 T17 遇到的真实形状：卷的 `source_ids` 空、source 未绑定，两条 source_ref
+    通道都还不通。绑定属批次导入期产出，故守卫必须全部前置——绑错一次没有 unbind
+    可退（错误绑定是升级事项，不造无人要求的能力）。
+    """
+
+    def setUp(self):
+        self.fixture = ProvenanceFixture()
+        self.addCleanup(self.fixture.cleanup)
+        self.fixture.unbind(SOURCE_ONE)
+
+    def confirm(self, paper_id=PAPER_ONE, source_id=SOURCE_ONE, write=False, **kw):
+        return provenance.confirm_source(
+            self.fixture.manifest_path, self.fixture.issues_path,
+            paper_id, source_id, write=write, **kw
+        )
+
+    def source(self, source_id=SOURCE_ONE, manifest=None):
+        manifest = manifest or self.fixture.manifest()
+        return next(
+            item for item in manifest["sources"] if item["source_id"] == source_id
+        )
+
+    def paper(self, paper_id=PAPER_ONE, manifest=None):
+        manifest = manifest or self.fixture.manifest()
+        return next(
+            item for item in manifest["papers"] if item["paper_id"] == paper_id
+        )
+
+    def refuse(self, **kw):
+        before = self.fixture.snapshot()
+        with self.assertRaises(ProvenanceError) as caught:
+            self.confirm(write=True, **kw)
+        self.assertEqual(self.fixture.snapshot(), before)
+        return caught.exception
+
+    # ---- 正路
+
+    def test_a_dry_run_reports_the_binding_and_writes_nothing(self):
+        before = self.fixture.snapshot()
+        report = self.confirm()
+        self.assertEqual(report["code"], "OK")
+        self.assertFalse(report["written"])
+        self.assertEqual(report["paper_id"], PAPER_ONE)
+        self.assertEqual(report["source_id"], SOURCE_ONE)
+        self.assertEqual(report["paper_relation"], "canonical")
+        self.assertEqual(report["source_ids"], [SOURCE_ONE])
+        self.assertEqual(self.fixture.snapshot(), before)
+
+    def test_write_binds_both_directions_in_one_state_transaction(self):
+        revision = self.fixture.manifest()["revision"]
+        report = self.confirm(write=True)
+        self.assertTrue(report["written"])
+        manifest = self.fixture.manifest()
+        self.assertEqual(manifest["revision"], revision + 1)
+        self.assertEqual(report["revision"], revision + 1)
+        self.assertEqual(self.source(manifest=manifest)["paper_id"], PAPER_ONE)
+        self.assertEqual(
+            self.source(manifest=manifest)["paper_relation"], "canonical"
+        )
+        self.assertEqual(self.paper(manifest=manifest)["source_ids"], [SOURCE_ONE])
+        self.assertEqual(
+            list((self.fixture.root / TRANSACTIONS_RELATIVE).glob("*/journal.json")),
+            [],
+        )
+
+    def test_the_bound_manifest_passes_full_validation(self):
+        self.confirm(write=True)
+        # load_manifest 只跑 Schema + manifest 语义；来源/试卷两层语义要另外过一遍。
+        source_manifest.validate_manifest_document(
+            self.fixture.manifest_path, self.fixture.manifest()
+        )
+
+    def test_source_ids_stay_sorted(self):
+        self.fixture.unbind(SOURCE_TWO)
+        self.confirm(source_id=SOURCE_TWO, write=True)
+        self.confirm(source_id=SOURCE_ONE, write=True)
+        self.assertEqual(
+            self.paper()["source_ids"], sorted([SOURCE_ONE, SOURCE_TWO])
+        )
+
+    def test_binding_does_not_move_any_cached_state(self):
+        self.confirm(write=True)
+        report = check_batch(
+            self.fixture.manifest_path, self.fixture.issues_path, None,
+            artifacts_state=lambda *_: "current",
+        )
+        self.assertEqual(report["problems"], [])
+        self.assertEqual(self.paper()["production_state"], "legacy_unverified")
+
+    # ---- 守卫 ①：source 必须存在且 ready
+
+    def test_an_unknown_source_is_refused(self):
+        self.refuse(source_id="src-" + "9" * 64)
+
+    def test_a_source_that_is_not_ready_is_refused(self):
+        self.fixture.rewrite_manifest(lambda document: [
+            source.update(source_state="blocked")
+            for source in document["sources"]
+            if source["source_id"] == SOURCE_ONE
+        ])
+        self.refuse()
+
+    # ---- 守卫 ②：source 必须未绑定（含绑到本卷）
+
+    def test_an_already_bound_source_is_refused(self):
+        self.refuse(source_id=SOURCE_TWO)
+
+    def test_rebinding_a_source_to_its_own_paper_is_refused_not_idempotent(self):
+        """已绑定就是已绑定：静默幂等会把「绑错了」伪装成「本来就这样」。"""
+        self.refuse(paper_id=PAPER_TWO, source_id=SOURCE_TWO)
+
+    def test_a_half_bound_source_is_refused(self):
+        """只有 paper_id、没有 paper_relation：manifest 载得进来，必须由守卫②拦下。"""
+        self.fixture.rewrite_manifest(lambda document: [
+            source.update(paper_id=PAPER_ONE)
+            for source in document["sources"]
+            if source["source_id"] == SOURCE_ONE
+        ])
+        self.refuse()
+
+    def test_the_other_half_bound_shape_never_loads_at_all(self):
+        """只有 paper_relation、没有 paper_id：manifest 语义层更早一步就拒收。
+
+        守卫②在这一格是第二道防线而不是唯一防线——记下来是为了让后人知道，改动
+        `validate_manifest_semantics` 并不会把这一格放出去。
+        """
+        before = self.fixture.snapshot()
+        self.fixture.rewrite_manifest(lambda document: [
+            source.update(paper_relation="canonical")
+            for source in document["sources"]
+            if source["source_id"] == SOURCE_ONE
+        ])
+        with self.assertRaisesRegex(ValueError, "paper_relation 存在但 paper_id 为空"):
+            self.confirm(write=True)
+        self.assertEqual(
+            {key: value for key, value in self.fixture.snapshot().items()
+             if key != MANIFEST_TARGET},
+            {key: value for key, value in before.items() if key != MANIFEST_TARGET},
+        )
+
+    # ---- 守卫 ③：paper 必须存在
+
+    def test_an_unknown_paper_is_refused(self):
+        self.refuse(paper_id="gk-2099-regular-national-9")
+
+    # ---- 守卫 ④：identity-ambiguous blocker 一律拒绝绑定
+
+    def test_an_open_identity_issue_refuses_the_binding(self):
+        """ISSUE-0001 那条纪律在此变成机器强制：回忆版不得自动绑定正式卷。"""
+        self.fixture.unbind(SOURCE_ONE)
+        self.refuse(paper_id=PAPER_RECALL)
+
+    def test_every_unfinished_identity_issue_state_refuses_the_binding(self):
+        for state in ("open", "investigating", "deferred"):
+            with self.subTest(state=state):
+                issues_module.upsert_issue(self.fixture.issues_path, {
+                    "paper_id": PAPER_ONE,
+                    "affected_paper_ids": [],
+                    "type": "identity-ambiguous",
+                    "status": state,
+                    "impact": "blocks_completion",
+                    "resume_action": "逐卷核验规范源地区与固定上游路径",
+                    "conflict_code": "regions-vs-upstream-path",
+                })
+                self.refuse()
+
+    def test_a_shared_identity_issue_blocks_through_affected_paper_ids(self):
+        issues_module.upsert_issue(self.fixture.issues_path, {
+            "paper_id": None,
+            "affected_paper_ids": sorted([PAPER_ONE, PAPER_TWO]),
+            "type": "identity-ambiguous",
+            "status": "open",
+            "impact": "blocks_completion",
+            "resume_action": "两卷同源，须先分清哪一卷对应哪条上游路径",
+            "conflict_code": "regions-vs-upstream-path",
+        })
+        self.refuse()
+
+    def test_a_resolved_identity_issue_no_longer_refuses(self):
+        issue = {
+            "paper_id": PAPER_ONE,
+            "affected_paper_ids": [],
+            "type": "identity-ambiguous",
+            "status": "resolved",
+            "impact": "blocks_completion",
+            "resume_action": "已人工核验身份",
+            "conflict_code": "regions-vs-upstream-path",
+        }
+        issues_module.upsert_issue(self.fixture.issues_path, issue)
+        self.assertTrue(self.confirm(write=True)["written"])
+
+    def test_a_non_identity_issue_does_not_refuse(self):
+        issues_module.upsert_issue(self.fixture.issues_path, {
+            "paper_id": PAPER_ONE,
+            "affected_paper_ids": [],
+            "type": "transcription-ambiguous",
+            "status": "open",
+            "impact": "blocks_completion",
+            "question_id": question_id(PAPER_ONE, 1),
+            "source_id": SOURCE_ONE,
+            "resume_action": "回到原卷复核第 1 题",
+        })
+        self.assertTrue(self.confirm(write=True)["written"])
+
+    # ---- 守卫 ⑤：绑定后的来源语义必须自洽
+
+    def test_a_binding_that_would_break_source_semantics_is_refused(self):
+        """ready 但 artifact 为空：Schema 与 manifest 语义都放行，只有 ⑤ 拦得住。"""
+        self.fixture.rewrite_manifest(lambda document: [
+            source.update(artifact=None)
+            for source in document["sources"]
+            if source["source_id"] == SOURCE_ONE
+        ])
+        self.refuse()
+
+    # ---- 崩溃恢复
+
+    def test_a_crash_after_the_journal_is_prepared_leaves_no_half_commit(self):
+        def hook(event, path):
+            if event == "journal_prepared":
+                raise SimulatedCrash("模拟崩溃")
+
+        before = self.fixture.read_bytes(MANIFEST_TARGET)
+        with self.assertRaises(SimulatedCrash):
+            self.confirm(write=True, event_hook=hook)
+        self.assertEqual(self.fixture.read_bytes(MANIFEST_TARGET), before)
+        pending = sorted(
+            (self.fixture.root / TRANSACTIONS_RELATIVE).glob("*/journal.json")
+        )
+        self.assertEqual(len(pending), 1)
+
+        self.assertEqual(len(recover_transactions(self.fixture.root)), 1)
+        self.assertEqual(self.source()["paper_id"], PAPER_ONE)
+        self.assertEqual(self.paper()["source_ids"], [SOURCE_ONE])
+
+    # ---- CLI
+
+    def test_the_cli_round_trips(self):
+        arguments = [
+            "confirm-source", "--manifest", str(self.fixture.manifest_path),
+            "--issues", str(self.fixture.issues_path),
+            "--paper", PAPER_ONE, "--source", SOURCE_ONE,
+        ]
+        self.assertEqual(self.fixture.cli(*arguments), EXIT_OK)
+        self.assertIsNone(self.source()["paper_id"])
+        self.assertEqual(self.fixture.cli(*(arguments + ["--write"])), EXIT_OK)
+        self.assertEqual(self.source()["paper_id"], PAPER_ONE)
+        # 再来一次：已绑定，退出码 4 而不是静默成功。
+        self.assertEqual(self.fixture.cli(*(arguments + ["--write"])), EXIT_INVALID)
+
+    def test_all_four_options_are_required(self):
+        full = {
+            "--manifest": str(self.fixture.manifest_path),
+            "--issues": str(self.fixture.issues_path),
+            "--paper": PAPER_ONE,
+            "--source": SOURCE_ONE,
+        }
+        for dropped in ("--issues", "--paper", "--source"):
+            with self.subTest(dropped=dropped):
+                argv = ["confirm-source"]
+                for key, value in full.items():
+                    if key != dropped:
+                        argv += [key, value]
+                with self.assertRaises(SystemExit) as caught:
+                    self.fixture.cli(*argv)
+                self.assertEqual(caught.exception.code, EXIT_USAGE)
+
+    def test_there_is_no_unbind_subcommand(self):
+        """错误绑定属升级事项；不造无人要求的能力。"""
+        with self.assertRaises(SystemExit) as caught:
+            self.fixture.cli(
+                "unbind-source", "--manifest", str(self.fixture.manifest_path),
+                "--paper", PAPER_ONE, "--source", SOURCE_ONE,
+            )
+        self.assertEqual(caught.exception.code, EXIT_USAGE)
 
 
 # ================================================================ 只读核对

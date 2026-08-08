@@ -49,6 +49,7 @@ import generate_projects
 import issues as issues_module
 import make_editions
 import make_short_answers
+import source_manifest
 import status as status_core
 from manifest import canonical_json, file_sha256, load_manifest
 from schema_validate import SchemaError
@@ -68,7 +69,7 @@ from status import (
     reconcile_batch_status,
     review_receipt_path,
 )
-from transaction import RepoLock
+from transaction import RepoLock, Transaction
 
 INDEX_TARGET = PROJECT_RELATIVE + "/index.json"
 SCHEMA_TARGET = PROJECT_RELATIVE + "/schemas/provenance.schema.json"
@@ -83,6 +84,12 @@ STAGES: Tuple[str, ...] = ("question-review", "answer-solve", "answer-review")
 TRANSCRIPTION_RESULTS: Tuple[str, ...] = ("passed", "failed", "uncertain")
 ANSWER_GRADES: Tuple[str, ...] = ("A", "B", "C", "D", "U")
 CONFLICT_STATES: Tuple[str, ...] = ("none", "resolved", "unresolved")
+
+# `confirm-source` 固定写这个关系：阶段 0 不产生 duplicate 类关系，做成参数只会给
+# 「随手标成 duplicate」留口子。
+PAPER_RELATION = "canonical"
+# 「尚未了结」= 未 resolved。deferred 也算未了结——推迟不是解决。
+UNFINISHED_ISSUE_STATES: Tuple[str, ...] = ("open", "investigating", "deferred")
 
 QUESTION_FIELDS: Tuple[str, ...] = (
     "question_id", "printed_number", "source_ref", "source_sha256", "source_pages",
@@ -1022,6 +1029,151 @@ def import_batch(
         return report
 
 
+# ---------------------------------------------------------------- 来源绑定
+
+
+def _identity_blockers(
+    ledger: Sequence[Mapping[str, Any]], paper_id: str
+) -> List[str]:
+    """覆盖本卷、尚未了结的 `identity-ambiguous` 问题编号。
+
+    这条守卫把「2026 全国 1 回忆版不得自动绑定上游正式卷」从纪律变成机器强制，也顺带
+    强制 2017 两卷必须先解决身份问题再绑定。判据只看 **status 未 resolved**、不看
+    `impact`——身份不明本身就让「这条 source 属于这一卷」这个断言无从谈起，哪怕问题被
+    标成 non_blocking 也一样。
+    """
+    return sorted(
+        item["issue_id"] for item in ledger
+        if item.get("type") == "identity-ambiguous"
+        and item.get("status") in UNFINISHED_ISSUE_STATES
+        and (
+            item.get("paper_id") == paper_id
+            or paper_id in set(item.get("affected_paper_ids") or [])
+        )
+    )
+
+
+def _bound_manifest(
+    manifest: Mapping[str, Any], paper_id: str, source_id: str
+) -> Dict[str, Any]:
+    """返回写入了双向绑定的新 manifest（不动 revision，也不动任何状态字段）。
+
+    绑定不是状态推进：`production_state` 与 batch `status` 一律不碰——它们由
+    `status.py` 从 facts 现场派生，这里顺手改一格就等于绕过整条证据链。
+    """
+    document = copy.deepcopy(dict(manifest))
+    for source in document["sources"]:
+        if source["source_id"] == source_id:
+            source["paper_id"] = paper_id
+            source["paper_relation"] = PAPER_RELATION
+    for paper in document["papers"]:
+        if paper["paper_id"] == paper_id:
+            paper["source_ids"] = sorted(set(paper["source_ids"]) | {source_id})
+    return document
+
+
+def confirm_source(
+    manifest_path: Path,
+    issues_path: Path,
+    paper_id: str,
+    source_id: str,
+    write: bool = False,
+    event_hook: Any = None,
+) -> Dict[str, Any]:
+    """确认一条上游 source 属于某一卷，双向写入 manifest。
+
+    这是 `import-batch` 的前置：T4 的迁移**刻意不建立任何绑定**，于是各卷的
+    `source_ids` 与 `legacy_source_files` 都是空的，`source_ref` 的两条通道都还不通。
+    绑定属批次导入期的产出，故五道守卫全部前置——**没有 unbind 子命令**，绑错一次只能
+    走升级流程。
+
+    `paper_relation` 固定 `canonical`：阶段 0 不产生其它关系，做成参数只会给「随手标成
+    duplicate」留口子。
+    """
+    manifest_path = Path(manifest_path).resolve()
+    root = cli_common.repository_root(manifest_path.parent)
+    _require_canonical(root, manifest_path, MANIFEST_TARGET, "--manifest")
+    issues_path = _require_canonical(
+        root, Path(issues_path), ISSUES_TARGET, "--issues"
+    )
+
+    with RepoLock(root):
+        manifest = load_manifest(manifest_path)
+        _paper(manifest, paper_id)                               # ③ paper 必须存在
+        sources = {item["source_id"]: item for item in manifest.get("sources", [])}
+        source = sources.get(source_id)
+        if source is None:                                       # ① 必须存在
+            raise ProvenanceError(f"未知 source_id：{source_id}")
+        if source.get("source_state") != "ready":                # ① 必须 ready
+            raise ProvenanceError(
+                "%s 的 source_state 是 %r，只有 ready 的来源可以确认绑定"
+                % (source_id, source.get("source_state"))
+            )
+        # ② 必须未绑定。已绑到本卷同样报错：静默幂等会把「绑错了」伪装成「本来就这样」，
+        # 而这条命令没有反向操作可以救。半绑定（只有一侧非空）更要拦——那是上一次崩在
+        # 半路的痕迹，须人工判明后再动。
+        if (
+            source.get("paper_id") is not None
+            or source.get("paper_relation") is not None
+        ):
+            raise ProvenanceError(
+                "%s 已绑定（paper_id=%r，paper_relation=%r），拒绝重复绑定；"
+                "确需改绑请走升级流程"
+                % (source_id, source.get("paper_id"), source.get("paper_relation"))
+            )
+        blockers = _identity_blockers(                           # ④ 身份问题一票否决
+            issues_module.load_issues(issues_path), paper_id
+        )
+        if blockers:
+            raise ProvenanceError(
+                "%s 仍被未了结的身份问题覆盖（%s），拒绝绑定上游 source"
+                % (paper_id, "、".join(blockers))
+            )
+
+        document = _bound_manifest(manifest, paper_id, source_id)
+        try:                                                     # ⑤ 绑定后必须自洽
+            source_manifest.validate_source_state(
+                next(
+                    item for item in document["sources"]
+                    if item["source_id"] == source_id
+                ),
+                {item["paper_id"] for item in document["papers"]},
+            )
+            source_manifest.validate_manifest_document(manifest_path, document)
+        except (ValueError, SchemaError) as error:
+            raise ProvenanceError(f"绑定后的 manifest 校验不通过：{error}") from error
+
+        bound_paper = next(
+            item for item in document["papers"] if item["paper_id"] == paper_id
+        )
+        report: Dict[str, Any] = {
+            "code": "OK",
+            "paper_id": paper_id,
+            "source_id": source_id,
+            "paper_relation": PAPER_RELATION,
+            "source_ids": list(bound_paper["source_ids"]),
+            "upstream_path": source.get("upstream_path"),
+            "written": False,
+            "revision": int(manifest["revision"]),
+        }
+        if not write:
+            return report
+
+        # 单文件也走 `state` 事务：这是业务状态变更，不是确定性派生物重建。CAS 钉住
+        # expected_revision，manifest 作为唯一目标最后提交并递增 revision。
+        transaction = Transaction(root, event_hook=event_hook)
+        document["revision"] = int(manifest["revision"]) + 1
+        document["last_transaction_id"] = transaction.transaction_id
+        transaction.prepare(
+            "state", {MANIFEST_TARGET: canonical_json(document).encode("utf-8")},
+            {}, expected_revision=int(manifest["revision"]),
+        )
+        transaction.commit()
+        report["written"] = True
+        report["revision"] = document["revision"]
+        return report
+
+
 # ---------------------------------------------------------------- 只读核对
 
 
@@ -1166,6 +1318,13 @@ def _parser() -> argparse.ArgumentParser:
     initialize.add_argument("--batch", required=True)
     initialize.add_argument("--work-dir", required=True)
 
+    confirm = subparsers.add_parser("confirm-source")
+    confirm.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
+    confirm.add_argument("--issues", required=True)
+    confirm.add_argument("--paper", required=True)
+    confirm.add_argument("--source", required=True)
+    confirm.add_argument("--write", action="store_true")
+
     imports = subparsers.add_parser("import-batch")
     imports.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
     imports.add_argument("--issues", default=str(DEFAULT_ISSUES))
@@ -1201,6 +1360,18 @@ def main(argv: Optional[Sequence[str]] = None, **probes: Any) -> int:
             )
             print("✓ %s：已创建 %d 条角色路径" % (
                 report["batch_id"], len(report["created"])
+            ))
+            return EXIT_OK
+
+        if arguments.command == "confirm-source":
+            report = confirm_source(
+                Path(arguments.manifest), Path(arguments.issues),
+                arguments.paper, arguments.source, write=arguments.write,
+            )
+            print("✓ %s ← %s（%s）%s" % (
+                report["paper_id"], report["source_id"], report["paper_relation"],
+                "已提交 revision %s" % report["revision"] if report["written"]
+                else "仅校验，未落盘",
             ))
             return EXIT_OK
 

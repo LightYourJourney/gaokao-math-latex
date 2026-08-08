@@ -1544,6 +1544,12 @@ def _validated_manifest_value(manifest_path: Path, value: Mapping[str, Any]) -> 
     _validate_paper_semantics(value)
 
 
+# 对外别名：`provenance.confirm-source` 在提交绑定前必须跑同一套四层校验
+# （Schema + manifest 语义 + 来源语义 + 试卷语义）。**不复制、只借用**——校验少跑一层，
+# 「绑定成功」就可能是一份自己都过不了 `load-*` 的 manifest。
+validate_manifest_document = _validated_manifest_value
+
+
 def _issue_candidate(
     source_id_value: str, issue_type: str, evidence: str
 ) -> Dict[str, Any]:
