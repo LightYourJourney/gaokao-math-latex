@@ -558,6 +558,63 @@ class FailureLeavesEveryFileUntouchedTests(unittest.TestCase):
         self.assertTrue(report["problems"])
 
 
+class FailureLeavesPreExistingTargetsUntouchedTests(unittest.TestCase):
+    """**目标已经存在**时的失败零覆盖——这才是 brief 说的「现有文件逐字节不变」。
+
+    上一个测试类每例都从空仓起步，快照时三个目标根本不存在，它证明的只是「干净仓
+    保持干净」：哪怕实现改成「先截断目标再生成」，那些用例照样全绿。这里先真实写一轮
+    让三个目标落盘，再破坏来源重跑，断言旧内容逐字节复原。
+    """
+
+    def assert_previous_targets_survive(self, damage):
+        fixture = RepositoryFixture()
+        self.addCleanup(fixture.cleanup)
+        self.assertTrue(fixture.run("all", write=True)["written"])
+        targets = (QUESTIONS_TEX, ANSWERS_TEX, INDEX_TARGET)
+        for relative in targets:
+            self.assertTrue(fixture.path(relative).is_file(), relative)
+        written = {relative: fixture.path(relative).read_bytes() for relative in targets}
+
+        damage(fixture)                 # 先破坏来源，再取基准快照
+        before = fixture.snapshot()
+        with self.assertRaises(GenerationError):
+            fixture.run("all", write=True)
+
+        self.assertEqual(fixture.snapshot(), before)
+        for relative, value in written.items():
+            self.assertEqual(fixture.path(relative).read_bytes(), value, relative)
+        # 连事务都不该开始：门禁全过之前不碰 journal。
+        self.assertEqual(fixture.pending_transactions(), [])
+
+    def test_an_unmapped_figure_leaves_the_previous_targets_intact(self):
+        self.assert_previous_targets_survive(
+            lambda fixture: fixture.write(
+                QUESTIONS_PATH, QUESTIONS.replace("images/t2.png", "images/t9-未登记.png")
+            )
+        )
+
+    def test_a_deleted_figure_file_leaves_the_previous_targets_intact(self):
+        self.assert_previous_targets_survive(
+            lambda fixture: fixture.path(PROJECT_RELATIVE + "/" + FIGURE_AUX).unlink()
+        )
+
+    def test_a_missing_question_leaves_the_previous_targets_intact(self):
+        self.assert_previous_targets_survive(
+            lambda fixture: fixture.write(
+                QUESTIONS_PATH,
+                QUESTIONS.replace("**3．（12 分）** 已知函数 $f(x)$。", ""),
+            )
+        )
+
+    def test_an_unpaired_formula_leaves_the_previous_targets_intact(self):
+        self.assert_previous_targets_survive(
+            lambda fixture: fixture.write(
+                SOLUTION_PATH,
+                SOLUTION_BODY.replace("由定义可得 $x<0$。", "由定义可得 $x<0。"),
+            )
+        )
+
+
 # ------------------------------------------------------------------ 原子提交与恢复
 
 
