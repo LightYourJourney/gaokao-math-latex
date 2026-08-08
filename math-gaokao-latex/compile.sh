@@ -1,47 +1,18 @@
 #!/bin/bash
 # ============================================================
-# compile.sh —— 编译拆分版试卷项目
-# 用法：
-#   ./compile.sh                    全部 14 套 × 4 版本
-#   ./compile.sh <试卷目录名>       该套的 4 个版本
-#   ./compile.sh <试卷目录名> <版本名>   单个（如 ./compile.sh 2017_全国Ⅰ卷_理科 解析版）
-# 每个目标 xelatex 跑两遍（解析头的"题目见第 X 页"回链需要第二遍）。
-# 退出码：任一目标编译失败则非零。
+# compile.sh —— tools/build_projects.py 的薄包装（Bash 3.2 兼容）
+#
+# 这里**只做转交**：编译策略、退出码契约、回执与事务全在 Python 侧。
+# 上一版在 Bash 里判编译成败（日志里找 "^!" + PDF 存在性），那套判据既漏掉 pdfinfo
+# 失败与缺页，也没有任何可提交的证据——「编过了」只能靠人复述。
+#
+# 用法（原样透传给 Python）：
+#   ./compile.sh build <项目目录> [版本]     smoke：只写 ignored build/ 与诊断
+#   ./compile.sh build --formal --all …      正式构建：两阶段事务写回执与状态
+#   ./compile.sh validate-receipts …         只读核对
+#   ./compile.sh check-tools                 工具链指纹
+# 退出码：0 通过 / 2 usage / 3 仅待视觉审查 / 4 invalid 或门禁未过 / 5 构建失败。
 # ============================================================
-set -u
+set -eu
 cd "$(dirname "$0")"
-
-EDITIONS=(试题版 解析版 简答版 印刷版)
-FAIL=0
-
-build_one() {
-    local dir="$1" ed="$2"
-    ( cd "$dir" || exit 1
-      for pass in 1 2; do
-          xelatex -interaction=nonstopmode "${ed}.tex" > /dev/null 2>&1
-      done
-      # 以 log 中的 Error 与 PDF 存在性双判
-      if [[ ! -f "${ed}.pdf" ]] || grep -q "^!" "${ed}.log"; then
-          exit 1
-      fi )
-    if [[ $? -ne 0 ]]; then
-        echo "✗ ${dir}/${ed}"
-        FAIL=1
-    else
-        local pages
-        pages=$(grep -oE "Output written.*\(([0-9]+) page" "${dir}/${ed}.log" | grep -oE "[0-9]+" | tail -1)
-        echo "✓ ${dir}/${ed}  ${pages} 页"
-    fi
-}
-
-if [[ $# -ge 2 ]]; then
-    build_one "$1" "$2"
-elif [[ $# -eq 1 ]]; then
-    for ed in "${EDITIONS[@]}"; do build_one "$1" "$ed"; done
-else
-    for dir in [0-9]*/; do
-        dir="${dir%/}"
-        for ed in "${EDITIONS[@]}"; do build_one "$dir" "$ed"; done
-    done
-fi
-exit $FAIL
+exec python3 tools/build_projects.py "$@"

@@ -1,0 +1,470 @@
+{
+  "$id": "https://gaokao-latex.invalid/schemas/build-receipt.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "高考数学 LaTeX 正式构建回执",
+  "description": "一卷四版本的正式 XeLaTeX 构建回执。状态机的合法转移冻结在 $defs.status_transitions.const；跨 attempt 的重跑不是转移，而是新的 attempt_id。",
+  "$defs": {
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "optional_sha256": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/sha256"
+        }
+      ]
+    },
+    "timestamp": {
+      "description": "ISO-8601 本地时间，必须带时区偏移。",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?([+-][0-9]{2}:[0-9]{2}|Z)$",
+      "type": "string"
+    },
+    "optional_timestamp": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/timestamp"
+        }
+      ]
+    },
+    "attempt_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+      "type": "string"
+    },
+    "optional_attempt_id": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/attempt_id"
+        }
+      ]
+    },
+    "repo_path": {
+      "description": "仓库相对路径：不以 / 开头，不含 .. 段（后者由 Python 层核对）。",
+      "pattern": "^[^/].*$",
+      "type": "string"
+    },
+    "build_status": {
+      "enum": [
+        "running",
+        "failed",
+        "compiled_pending_review",
+        "succeeded"
+      ]
+    },
+    "status_transitions": {
+      "description": "同一 attempt_id 内的全部合法转移；此外只允许开启新的 attempt（状态回到 running）。",
+      "const": [
+        [
+          "running",
+          "failed"
+        ],
+        [
+          "running",
+          "compiled_pending_review"
+        ],
+        [
+          "compiled_pending_review",
+          "succeeded"
+        ]
+      ]
+    },
+    "file_record": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/repo_path"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "type": "object"
+    },
+    "file_tree": {
+      "description": "一组仓库内输入的逐字节哈希；tree_sha256 是 files 规范 JSON 的 SHA-256。",
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "items": {
+            "$ref": "#/$defs/file_record"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "tree_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "required": [
+        "tree_sha256",
+        "files"
+      ],
+      "type": "object"
+    },
+    "optional_file_tree": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/file_tree"
+        }
+      ]
+    },
+    "tool_fingerprint": {
+      "description": "一个实际 executable 的指纹。包装器时 real_path 是解析后的真实二进制，sha256 取该二进制。",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "xelatex",
+            "pdfinfo",
+            "pdftotext",
+            "pdftoppm"
+          ]
+        },
+        "path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "real_path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "version": {
+          "description": "规范化后的版本串；无法识别版本时不得写入回执（fail closed）。",
+          "pattern": "^.+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "path",
+        "real_path",
+        "sha256",
+        "version"
+      ],
+      "type": "object"
+    },
+    "toolchain_fingerprint": {
+      "additionalProperties": false,
+      "properties": {
+        "texlive_revision": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "tools": {
+          "items": {
+            "$ref": "#/$defs/tool_fingerprint"
+          },
+          "minItems": 4,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "texlive_revision",
+        "tools"
+      ],
+      "type": "object"
+    },
+    "pass_record": {
+      "additionalProperties": false,
+      "properties": {
+        "exit_code": {
+          "type": "integer"
+        },
+        "pass": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pass",
+        "exit_code"
+      ],
+      "type": "object"
+    },
+    "pdf_record": {
+      "additionalProperties": false,
+      "properties": {
+        "page_count": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "path": {
+          "$ref": "#/$defs/repo_path"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "size_bytes": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes",
+        "page_count"
+      ],
+      "type": "object"
+    },
+    "optional_pdf_record": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/pdf_record"
+        }
+      ]
+    },
+    "log_note": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "pattern": "^.+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "type": "object"
+    },
+    "overfull_note": {
+      "description": "Overfull/Underfull 警告。即使只有 0.4588pt 也只允许候选 compiled_pending_review，绝不自动放行。",
+      "additionalProperties": false,
+      "properties": {
+        "box": {
+          "enum": [
+            "hbox",
+            "vbox"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "Overfull",
+            "Underfull"
+          ]
+        },
+        "lines": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^.+$",
+              "type": "string"
+            }
+          ]
+        },
+        "text": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "width_pt": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[0-9]+([.][0-9]+)?$",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "box",
+        "width_pt",
+        "lines",
+        "text"
+      ],
+      "type": "object"
+    },
+    "log_findings": {
+      "additionalProperties": false,
+      "properties": {
+        "errors": {
+          "items": {
+            "$ref": "#/$defs/log_note"
+          },
+          "type": "array"
+        },
+        "missing_characters": {
+          "items": {
+            "$ref": "#/$defs/log_note"
+          },
+          "type": "array"
+        },
+        "overfull": {
+          "items": {
+            "$ref": "#/$defs/overfull_note"
+          },
+          "type": "array"
+        },
+        "undefined_references": {
+          "items": {
+            "$ref": "#/$defs/log_note"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "missing_characters",
+        "undefined_references",
+        "overfull",
+        "errors"
+      ],
+      "type": "object"
+    },
+    "edition_record": {
+      "additionalProperties": false,
+      "properties": {
+        "edition": {
+          "enum": [
+            "试题版",
+            "解析版",
+            "简答版",
+            "印刷版"
+          ]
+        },
+        "log": {
+          "$ref": "#/$defs/log_findings"
+        },
+        "passes": {
+          "items": {
+            "$ref": "#/$defs/pass_record"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "pdf": {
+          "$ref": "#/$defs/optional_pdf_record"
+        },
+        "problems": {
+          "items": {
+            "pattern": "^.+$",
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "result": {
+          "enum": [
+            "succeeded",
+            "failed"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/repo_path"
+        }
+      },
+      "required": [
+        "edition",
+        "source",
+        "result",
+        "passes",
+        "pdf",
+        "log",
+        "problems"
+      ],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "$ref": "#/$defs/attempt_id"
+    },
+    "dependency_tree": {
+      "description": "两遍 .fls 的仓库内 INPUT 并集（排除 .git/build/.work）；running 时为 null。",
+      "$ref": "#/$defs/optional_file_tree"
+    },
+    "editions": {
+      "description": "running 时为空数组；结束时恰好四版本。",
+      "items": {
+        "$ref": "#/$defs/edition_record"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "finished_at": {
+      "$ref": "#/$defs/optional_timestamp"
+    },
+    "generation_input_tree": {
+      "description": "规范 Markdown、figure、index、模板、四壳与全部生成器源码的逐字节哈希——防止「规范源已改但 TeX 尚未重跑」仍假绿。",
+      "$ref": "#/$defs/file_tree"
+    },
+    "input_projection": {
+      "description": "build_manifest_projection() 的规范 JSON SHA-256；manifest 的运行态字段不参与。",
+      "$ref": "#/$defs/sha256"
+    },
+    "manifest_revision": {
+      "description": "审计字段：仅供追溯，**不参与** stale 判断。",
+      "minimum": 0,
+      "type": "integer"
+    },
+    "paper_id": {
+      "pattern": "^gk-[0-9]{4}-[a-z0-9-]+$",
+      "type": "string"
+    },
+    "previous_attempt_id": {
+      "description": "被本次重跑替换掉的 attempt；复用同一 attempt 时为 null。",
+      "$ref": "#/$defs/optional_attempt_id"
+    },
+    "project_dir": {
+      "pattern": "^[^/]+$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "started_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "status": {
+      "$ref": "#/$defs/build_status"
+    },
+    "toolchain_fingerprint": {
+      "$ref": "#/$defs/toolchain_fingerprint"
+    }
+  },
+  "required": [
+    "schema_version",
+    "paper_id",
+    "project_dir",
+    "attempt_id",
+    "previous_attempt_id",
+    "started_at",
+    "finished_at",
+    "status",
+    "input_projection",
+    "manifest_revision",
+    "toolchain_fingerprint",
+    "generation_input_tree",
+    "dependency_tree",
+    "editions"
+  ],
+  "type": "object"
+}
