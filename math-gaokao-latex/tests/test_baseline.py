@@ -15,6 +15,7 @@ from baseline import (
     _ABSENT,
     _LEVEL_PATHS,
     _REVIEWED_FIELDS,
+    _REWRITTEN_FIELDS,
     ADJUDICATED_DRIFTS_PATH,
     DRIFT_CLASSES,
     LEDGER_VERSION,
@@ -494,6 +495,66 @@ class BaselineComparisonTests(unittest.TestCase):
             lambda current: current["papers"][0]["figures"].append("凭空多出.tex")
         )
         self.assertEqual([item["field"] for item in drift], ["papers[0].figures[5]"])
+
+    # ---- 正当改写表：豁免的是「路径 + 取值对」，不是路径
+
+    def test_the_rewritten_table_registers_both_sides_of_every_pair(self):
+        """表项必须是四元组：只登记路径就等于给那条路径开永久免检。"""
+        self.assertTrue(_REWRITTEN_FIELDS)
+        for entry in _REWRITTEN_FIELDS:
+            self.assertEqual(len(entry), 4)
+            field, legacy_value, current_value, reason = entry
+            self.assertTrue(field and reason)
+            self.assertNotEqual(legacy_value, current_value)
+
+    def test_the_registered_pair_matches_the_live_baselines(self):
+        """登记的两个取值必须就是实测的那一对，否则这条豁免根本不该命中。"""
+        registered = {
+            field: (legacy_value, current_value)
+            for field, legacy_value, current_value, _ in _REWRITTEN_FIELDS
+        }
+        self.assertEqual(
+            registered["index.legacy_compat.generated_by"],
+            ("tools/split_project.py", "tools/generate_projects.py"),
+        )
+        self.assertEqual(self.report()["drift"], [])
+
+    def test_a_third_value_on_the_current_side_is_drift_again(self):
+        drift = self.drift(
+            lambda current: current["index"]["legacy_compat"].update(
+                generated_by="tools/别的东西.py"
+            )
+        )
+        self.assertEqual(
+            [item["field"] for item in drift],
+            ["index.legacy_compat.generated_by"],
+        )
+        self.assertEqual(drift[0]["current"], "tools/别的东西.py")
+
+    def test_deleting_a_rewritten_key_is_drift_not_a_free_pass(self):
+        """整键删除经 `left.get(key, _ABSENT)` 汇入同一条标量比较——必须照样报警。"""
+        drift = self.drift(
+            lambda current: current["index"]["legacy_compat"].pop("generated_by")
+        )
+        self.assertEqual(
+            [item["field"] for item in drift],
+            ["index.legacy_compat.generated_by"],
+        )
+        self.assertEqual(drift[0]["current"], repr(_ABSENT))
+
+    def test_a_legacy_side_change_to_a_rewritten_field_is_drift(self):
+        """legacy 侧对不上说明冻结锚点被换过；与双哈希口径一致地重新报警。"""
+        tampered = copy.deepcopy(self.legacy_index)
+        tampered["generated_by"] = "tools/换过的旧值.py"
+        drift = compare_baselines(
+            self.legacy, self.current,
+            legacy_index=tampered, adjudicated=self.adjudicated,
+        )["drift"]
+        self.assertEqual(
+            [item["field"] for item in drift],
+            ["index.legacy_compat.generated_by"],
+        )
+        self.assertEqual(drift[0]["legacy"], "tools/换过的旧值.py")
 
     def test_non_reproducible_fields_are_reviewed_instead_of_drift(self):
         reviewed = {item["field"] for item in self.report()["reviewed"]}

@@ -65,23 +65,40 @@ _REVIEWED_FIELDS = (
     ("warning", "log_line", "行号只是警告在日志内的位置，随环境位移"),
 )
 
-# 迁移边界两侧取值不同、且这种不同已被裁定为正当的**具体路径**。与 `_REVIEWED_FIELDS`
-# 分开的理由：那张表是「整个字段不参与比较」，粒度是层级里的键名，而这里要豁免的是
-# `legacy_compat` 深处的**一个叶子**——把整个 legacy_compat 划进 reviewed 会让
-# structure/pdf_pages/title 全部失去保护。
+# 迁移边界两侧取值不同、且这种不同已被裁定为正当的**「路径 + 取值对」**。与
+# `_REVIEWED_FIELDS` 分开的理由：那张表是「整个字段不参与比较」，粒度是层级里的键名，
+# 而这里要豁免的是 `legacy_compat` 深处的**一个叶子**——把整个 legacy_compat 划进
+# reviewed 会让 structure/pdf_pages/title 全部失去保护。
 #
-# 路径必须逐字精确、不做前缀匹配：写成前缀就等于把它下面的整棵子树一起赦免了。豁免掉
-# 的那一维仍有守护者，只是换了岗位——`generated_by` 的现值由 test_generate_projects 的
-# `LiveIndexIsUnchangedTests`（index.json 必须能由 manifest 逐字节重建）钉住。
+# 每条登记 (路径, legacy 取值, current 取值, 理由) **四元组**，放行判据与
+# `_split_adjudicated()` 的双哈希口径一字不差：两侧取值都要与登记的那一对逐字相等。
+# 只登记路径是不够的——`_diff()` 的 Mapping 分支用 `left.get(key, _ABSENT)` 把「键被整个
+# 删掉」也汇进同一条标量比较，于是「只看路径」会把删键、改成任意第三个值一并静默吞掉，
+# 那正是 `_split_adjudicated()` docstring 点名要避免的「一次裁定 = 永久免检」。
+# 路径同样逐字精确、不做前缀匹配：写成前缀就等于把它下面的整棵子树一起赦免了。
+#
+# 被豁免那一维的守护者由此有三层，且都盯**取值**而不是路径：本表登记的 current 取值
+# 本身（改字面量并重生成 index.json 会让 current 侧对不上登记值，当场重新报漂移）、
+# `test_baseline.test_every_pre_migration_index_field_value_is_unchanged`、以及
+# `test_generate_projects.IndexProjectionExcludesRuntimeStateTests` 对
+# `index["generated_by"]` 的逐字断言。
+# ⚠️ `LiveIndexIsUnchangedTests` **不在其中**：它比对的是在库 index 与
+# `build_legacy_index()` 的现场重建，而字面量就住在 `build_legacy_index()` 里——改字面量
+# 再重生成，它照样绿。
 _REWRITTEN_FIELDS = (
     (
         "index.legacy_compat.generated_by",
+        "tools/split_project.py",
+        "tools/generate_projects.py",
         "T16 控制器授权：index 投影剔除运行态时一并落实 T13 递延裁定，"
         "generated_by 由 tools/split_project.py 改为 tools/generate_projects.py；"
         "legacy 侧冻结的仍是迁移前的旧值",
     ),
 )
-_REWRITTEN_PATHS = frozenset(field for field, _ in _REWRITTEN_FIELDS)
+_REWRITTEN_PAIRS = {
+    field: (legacy_value, current_value)
+    for field, legacy_value, current_value, _ in _REWRITTEN_FIELDS
+}
 
 _COMPARED_BASELINE_FIELDS = (
     "baseline_version", "repository", "index", "papers", "summary",
@@ -638,7 +655,9 @@ def _diff(field: str, left: Any, right: Any, drift: List[Dict[str, Any]]) -> Non
                 drift,
             )
         return
-    if left != right and field not in _REWRITTEN_PATHS:
+    # 命中路径**且**两侧取值就是登记的那一对才豁免；对不上一律照旧计漂移——与
+    # `_split_adjudicated()` 的双哈希放行判据同一口径。
+    if left != right and _REWRITTEN_PAIRS.get(field) != (left, right):
         drift.append({
             "field": field, "legacy": _plain(left), "current": _plain(right),
         })
@@ -774,8 +793,9 @@ def compare_baselines(
     `structure`/`pdf_pages`/`title` 等深层字段会在"零漂移"的假象下失去保护。
 
     `_REVIEWED_FIELDS` 列出的字段不计漂移（不可复现，或身份迁移的正当新增），
-    `_REWRITTEN_FIELDS` 列出的**具体路径**同样不计（两侧取值不同已被逐条裁定）；两张表
-    都会原样出现在报告的 `reviewed` 里——豁免必须是看得见的，不能只活在代码里；
+    `_REWRITTEN_FIELDS` 登记的**「路径 + 取值对」**同样不计（两侧取值都与登记值逐字
+    相等才放行，与已裁定漂移的双哈希口径一致；改成第三个值或整键删除都会重新报警）；
+    两张表都会原样出现在报告的 `reviewed` 里——豁免必须是看得见的，不能只活在代码里；
     `adjudicated` 是 `load_adjudicated_drifts()` 读来的已裁定登记表，命中的漂移移入
     报告的 `adjudicated` 而不计入 `drift`；其余任何差异都是漂移。省略 `adjudicated`
     等于没有登记表，一切照旧报警。
@@ -798,7 +818,11 @@ def compare_baselines(
             {"field": _LEVEL_PATHS[level] + field, "reason": reason}
             for level, field, reason in _REVIEWED_FIELDS
         ] + [
-            {"field": field, "reason": reason} for field, reason in _REWRITTEN_FIELDS
+            {
+                "field": field, "reason": reason,
+                "legacy": legacy_value, "current": current_value,
+            }
+            for field, legacy_value, current_value, reason in _REWRITTEN_FIELDS
         ],
         "summary": dict(current.get("summary") or {}),
     }
