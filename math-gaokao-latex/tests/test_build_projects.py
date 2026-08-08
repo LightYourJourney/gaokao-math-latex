@@ -1997,6 +1997,40 @@ class RealProvenanceAdapterTests(unittest.TestCase):
         )
         self.assertEqual(merged["provenance"], "current")
 
+    def test_a_state_advance_does_not_disturb_an_existing_receipt(self):
+        """T16 拆雷的下半程：真实 state 事务推进批次后，既有回执仍当前。
+
+        上半程（index 投影在状态推进下逐字节不变）在 test_generate_projects.py 的
+        `IndexProjectionExcludesRuntimeStateTests` 里——本套件的 index.json 是替身，
+        看不出投影是否夹带了运行态。
+        """
+        self.write_provenance()
+        self.fixture.commit_all("provenance")
+        self.fixture.formal(selector="paper", value=PAPER_ID, loader=self.loader())
+        manifest = self.fixture.manifest()
+        chain = self.fixture.toolchain()
+        receipt = self.fixture.receipt()
+        current, reasons = receipt_currency(
+            self.fixture.root, manifest, receipt, toolchain=chain
+        )
+        self.assertTrue(current, reasons)
+
+        def advanced(transaction_id):
+            document = json.loads(json.dumps(dict(manifest)))
+            document["batches"][0]["status"] = "provenance_verified"
+            document["papers"][0]["production_state"] = "answers_verified"
+            document["revision"] = int(manifest["revision"]) + 1
+            document["last_transaction_id"] = transaction_id
+            return document
+
+        build_projects.commit_state(self.fixture.root, manifest, {}, {}, advanced)
+        after = self.fixture.manifest()
+        self.assertEqual(after["batches"][0]["status"], "provenance_verified")
+        current, reasons = receipt_currency(
+            self.fixture.root, after, receipt, toolchain=chain
+        )
+        self.assertTrue(current, reasons)
+
     def test_an_unknown_answer_grade_blocks_the_formal_state(self):
         self.write_provenance(overrides={2: {
             "answer_evidence": {"grade": "U", "evidence": "无法定级"},

@@ -65,6 +65,24 @@ _REVIEWED_FIELDS = (
     ("warning", "log_line", "行号只是警告在日志内的位置，随环境位移"),
 )
 
+# 迁移边界两侧取值不同、且这种不同已被裁定为正当的**具体路径**。与 `_REVIEWED_FIELDS`
+# 分开的理由：那张表是「整个字段不参与比较」，粒度是层级里的键名，而这里要豁免的是
+# `legacy_compat` 深处的**一个叶子**——把整个 legacy_compat 划进 reviewed 会让
+# structure/pdf_pages/title 全部失去保护。
+#
+# 路径必须逐字精确、不做前缀匹配：写成前缀就等于把它下面的整棵子树一起赦免了。豁免掉
+# 的那一维仍有守护者，只是换了岗位——`generated_by` 的现值由 test_generate_projects 的
+# `LiveIndexIsUnchangedTests`（index.json 必须能由 manifest 逐字节重建）钉住。
+_REWRITTEN_FIELDS = (
+    (
+        "index.legacy_compat.generated_by",
+        "T16 控制器授权：index 投影剔除运行态时一并落实 T13 递延裁定，"
+        "generated_by 由 tools/split_project.py 改为 tools/generate_projects.py；"
+        "legacy 侧冻结的仍是迁移前的旧值",
+    ),
+)
+_REWRITTEN_PATHS = frozenset(field for field, _ in _REWRITTEN_FIELDS)
+
 _COMPARED_BASELINE_FIELDS = (
     "baseline_version", "repository", "index", "papers", "summary",
 )
@@ -620,7 +638,7 @@ def _diff(field: str, left: Any, right: Any, drift: List[Dict[str, Any]]) -> Non
                 drift,
             )
         return
-    if left != right:
+    if left != right and field not in _REWRITTEN_PATHS:
         drift.append({
             "field": field, "legacy": _plain(left), "current": _plain(right),
         })
@@ -755,7 +773,9 @@ def compare_baselines(
     冻结的 legacy 基线里没有记录兼容投影，所以拿不到它就**报错而非跳过**——否则
     `structure`/`pdf_pages`/`title` 等深层字段会在"零漂移"的假象下失去保护。
 
-    `_REVIEWED_FIELDS` 列出的字段不计漂移（不可复现，或身份迁移的正当新增）；
+    `_REVIEWED_FIELDS` 列出的字段不计漂移（不可复现，或身份迁移的正当新增），
+    `_REWRITTEN_FIELDS` 列出的**具体路径**同样不计（两侧取值不同已被逐条裁定）；两张表
+    都会原样出现在报告的 `reviewed` 里——豁免必须是看得见的，不能只活在代码里；
     `adjudicated` 是 `load_adjudicated_drifts()` 读来的已裁定登记表，命中的漂移移入
     报告的 `adjudicated` 而不计入 `drift`；其余任何差异都是漂移。省略 `adjudicated`
     等于没有登记表，一切照旧报警。
@@ -777,6 +797,8 @@ def compare_baselines(
         "reviewed": [
             {"field": _LEVEL_PATHS[level] + field, "reason": reason}
             for level, field, reason in _REVIEWED_FIELDS
+        ] + [
+            {"field": field, "reason": reason} for field, reason in _REWRITTEN_FIELDS
         ],
         "summary": dict(current.get("summary") or {}),
     }

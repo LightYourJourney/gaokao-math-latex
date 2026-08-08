@@ -739,6 +739,53 @@ class IndexProjectionTests(unittest.TestCase):
             build_legacy_index(self.manifest, broken)
 
 
+class IndexProjectionExcludesRuntimeStateTests(unittest.TestCase):
+    """T16 控制器授权的拆雷：index 投影里不得有任何运行态。
+
+    index.json 落在 build 回执的 `generation_input_tree` 内。运行态一旦被投影进来，
+    推进一次批次状态就会改动它的字节——于是要么 `--check` 当场失配，要么 21 份回执
+    连锁 stale。「推进状态」与「保持已编译产物当前」不能是互斥的两件事。
+    """
+
+    def setUp(self):
+        self.fixture = RepositoryFixture()
+        self.addCleanup(self.fixture.cleanup)
+        self.assertTrue(self.fixture.run("all", write=True)["written"])
+
+    def advance(self):
+        """把批次与试卷状态推进一格（真实 state 事务写进 manifest 的正是这些字段）。"""
+        document = json.loads(
+            self.fixture.manifest_path.read_text(encoding="utf-8")
+        )
+        document["batches"][0]["status"] = "provenance_verified"
+        document["batches"][0]["issues"] = ["ISSUE-0007"]
+        document["papers"][0]["production_state"] = "answers_verified"
+        document["papers"][0]["issue_ids"] = ["ISSUE-0007"]
+        document["revision"] = int(document["revision"]) + 1
+        document["last_transaction_id"] = "11111111-2222-4333-8444-555555555555"
+        atomic_json = self.fixture.path(MANIFEST_TARGET)
+        atomic_json.write_text(canonical_json(document), encoding="utf-8")
+        return document
+
+    def test_the_index_has_no_batches_section(self):
+        index = json.loads(self.fixture.read(INDEX_TARGET))
+        self.assertNotIn("batches", index)
+        self.assertEqual(index["generated_by"], "tools/generate_projects.py")
+
+    def test_advancing_batch_state_leaves_the_index_bytes_untouched(self):
+        before = self.fixture.path(INDEX_TARGET).read_bytes()
+        document = self.advance()
+        self.assertEqual(
+            generate_projects.project_index_bytes(document, INDEX_METADATA), before
+        )
+
+    def test_check_still_passes_after_the_state_advanced(self):
+        self.advance()
+        report = self.fixture.run("all")
+        self.assertEqual(report["problems"], [])
+        self.assertIn(INDEX_TARGET, report["targets"])
+
+
 class LiveIndexIsUnchangedTests(unittest.TestCase):
     """真库自检：manifest 驱动重建出的 index.json 必须与在库的那份逐字节相同。"""
 

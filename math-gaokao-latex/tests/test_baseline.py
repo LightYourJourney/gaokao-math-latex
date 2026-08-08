@@ -301,8 +301,10 @@ class PreMigrationIndexTests(unittest.TestCase):
             hashlib.sha256(self.blob).hexdigest(), self.frozen["index"]["sha256"]
         )
 
-    def test_migration_added_only_paper_id_legacy_ids_and_batches(self):
-        self.assertEqual(set(self.current) - set(self.pre), {"batches"})
+    def test_migration_added_only_paper_id_and_legacy_ids(self):
+        # T16 起 index 投影不再携带 `batches`（运行态只住在 manifest 里），于是顶层键集
+        # 与迁移前完全一致；逐条新增只剩 paper 级的静态身份两键。
+        self.assertEqual(set(self.current) - set(self.pre), set())
         self.assertEqual(set(self.pre) - set(self.current), set())
         self.assertEqual(len(self.current["papers"]), len(self.pre["papers"]))
         for current, pre in zip(self.current["papers"], self.pre["papers"]):
@@ -311,7 +313,16 @@ class PreMigrationIndexTests(unittest.TestCase):
                 self.assertEqual(set(pre) - set(current), set())
 
     def test_every_pre_migration_index_field_value_is_unchanged(self):
-        self.assertEqual(legacy_index_projection(self.current), self.pre)
+        projected = legacy_index_projection(self.current)
+        # `generated_by` 是登记在案的正当改写（baseline._REWRITTEN_FIELDS）：写实现自
+        # T13 起就在 generate_projects.py，T16 剔除运行态投影时一并落实。除它之外，
+        # 迁移前的每一个字段值仍必须逐字未变。
+        self.assertEqual(projected.pop("generated_by"), "tools/generate_projects.py")
+        self.assertEqual(self.pre["generated_by"], "tools/split_project.py")
+        self.assertEqual(
+            projected,
+            {key: value for key, value in self.pre.items() if key != "generated_by"},
+        )
 
     def test_any_change_to_a_compatible_field_is_detected(self):
         for mutate in (
@@ -494,6 +505,9 @@ class BaselineComparisonTests(unittest.TestCase):
                 "repository.head",
                 "repository.compile_sha256",
                 "index.sha256",
+                # 路径精确的正当改写：粒度是 legacy_compat 深处的一个叶子，
+                # 整个 legacy_compat 仍逐字段受保护。
+                "index.legacy_compat.generated_by",
                 "papers[].paper_id",
                 "papers[].targets[].pdf_sha256",
                 "papers[].targets[].log_sha256",

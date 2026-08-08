@@ -584,9 +584,11 @@ def build_legacy_index(
             "note": static["note"],
         })
     return {
-        # 保持迁移前的字面值：改动它会让 baseline 的 index 兼容投影逐字段比较报漂移，
-        # 而这里没有任何内容变化值得付这个代价。split_project.py 仍是只读兼容入口。
-        "generated_by": "tools/split_project.py",
+        # T13 把写实现搬到本工具时曾把这里的字面值留在 `tools/split_project.py`，裁定
+        # 「留待 index 下次合法变更时一并改」；T16 剔除运行态投影正是那次合法变更，于是
+        # 一并落实。该键与 legacy 侧取值不同是登记在案的正当改写（见 baseline.py 的
+        # `_REWRITTEN_FIELDS`）；它的现值由 LiveIndexIsUnchangedTests 逐字节守住。
+        "generated_by": "tools/generate_projects.py",
         "source_project": "../math-gaokao-2017-2026",
         "source_pdf": "../math-gaokao-2017-2026/main.pdf",
         "page_numbering_note": "pdf_pages 为合并书正文逻辑页码（书内页脚所印）；"

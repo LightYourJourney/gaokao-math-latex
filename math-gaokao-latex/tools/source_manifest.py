@@ -2167,7 +2167,14 @@ def migrate_legacy_index(
 def project_legacy_index(
     manifest: Mapping[str, Any], legacy_index: Mapping[str, Any]
 ) -> Dict[str, Any]:
-    """把 manifest 身份投影回兼容 index.json：只增 paper_id/legacy_ids/batches。"""
+    """把 manifest 身份投影回兼容 index.json：**只增静态身份** paper_id/legacy_ids。
+
+    ⚠️ 这里刻意**不投影任何运行态**（`batches` 段、`production_state`、`issue_ids`）。
+    原因是 index.json 落在 build 回执的 `generation_input_tree` 里：把批次状态投影进来，
+    每推进一次批次状态就会改动 index.json 的字节，于是要么 `generate_projects --check`
+    当场失配、要么 21 份回执连锁 stale——推进状态与「保持已编译产物当前」变成互斥的
+    两件事。运行态的唯一住处是 manifest 本身。
+    """
     by_legacy: Dict[str, Mapping[str, Any]] = {}
     for paper in project_index(manifest).values():
         for legacy_id in paper.get("legacy_ids", []):
@@ -2187,7 +2194,7 @@ def project_legacy_index(
             raise ValueError(f"manifest 未覆盖 legacy 旧 ID：{legacy_id!r}")
         entry["paper_id"] = paper["paper_id"]
         entry["legacy_ids"] = list(paper["legacy_ids"])
-    projected["batches"] = copy.deepcopy(list(manifest.get("batches", [])))
+    projected.pop("batches", None)
     return projected
 
 

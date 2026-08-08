@@ -607,10 +607,8 @@ class IndexProjectionTests(unittest.TestCase):
             project_legacy_index(self.migrated, self.current), self.projected
         )
 
-    def test_projection_only_adds_paper_id_legacy_ids_and_batches(self):
-        self.assertEqual(
-            set(self.projected) - set(self.legacy), {"batches"}
-        )
+    def test_projection_only_adds_paper_id_and_legacy_ids(self):
+        self.assertEqual(set(self.projected) - set(self.legacy), set())
         self.assertEqual(set(self.legacy) - set(self.projected), set())
         for key in set(self.legacy) - {"papers"}:
             with self.subTest(key=key):
@@ -625,8 +623,25 @@ class IndexProjectionTests(unittest.TestCase):
                 self.assertEqual(projected["paper_id"], EXPECTED_PAPER_IDS[legacy["id"]])
                 self.assertEqual(projected["legacy_ids"], [legacy["id"]])
 
-    def test_projection_carries_the_six_batches(self):
-        self.assertEqual(self.projected["batches"], self.migrated["batches"])
+    def test_projection_carries_no_runtime_state(self):
+        """投影只带静态身份：批次段与任何运行态字段都不得出现在 index 里。
+
+        index.json 落在 build 回执的 `generation_input_tree` 内——一旦批次状态被投影
+        进来，推进一次批次状态就会让 21 份回执连锁 stale，「推进状态」与「保持产物当前」
+        就变成互斥的两件事。运行态的唯一住处是 manifest。
+        """
+        self.assertNotIn("batches", self.projected)
+        for paper in self.projected["papers"]:
+            for runtime in (
+                "production_state", "issue_ids", "blocked_from", "resume_action",
+                "last_verified_hash", "source_ids", "legacy_source_files",
+            ):
+                self.assertNotIn(runtime, paper)
+
+    def test_projection_drops_a_smuggled_batches_section(self):
+        smuggled = copy.deepcopy(self.legacy)
+        smuggled["batches"] = [{"batch_id": "phase0-b01"}]
+        self.assertNotIn("batches", project_legacy_index(self.migrated, smuggled))
 
     def test_projection_rejects_a_legacy_index_the_manifest_does_not_cover(self):
         foreign = copy.deepcopy(self.legacy)
@@ -962,7 +977,9 @@ class MigrateCommandTests(unittest.TestCase):
             self.assertEqual(manifest["revision"], revision + 1)
             self.assertIsNotNone(manifest["last_transaction_id"])
             index = json.loads(read_text(index_path))
-            self.assertEqual(len(index["batches"]), 6)
+            # 六个批次只住在 manifest 里：index 投影自 T16 起不带任何运行态。
+            self.assertNotIn("batches", index)
+            self.assertEqual(len(index["papers"]), 21)
             self.assertEqual(issues_path.read_bytes(), issues_before)
             self.assertEqual(
                 [issue["issue_id"] for issue in load_issues(issues_path)],
