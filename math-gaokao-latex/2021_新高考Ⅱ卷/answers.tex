@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2021 年·新高考Ⅱ卷 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2021_xgk2_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2021_数学真题_新高考Ⅱ_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2021 年·新高考Ⅱ卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2021/2021_数学真题_新高考Ⅱ_试题.md + 2021/2021_数学真题_新高考Ⅱ_解析正文.md + 2021/2021_数学真题_新高考Ⅱ_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -16,7 +15,16 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　复数 $\dfrac{2-\mathrm i}{1-3\mathrm i}$ 在复平面内对应的点所在的象限为（　　）
+\textbf{题目}：
+
+复数 $\dfrac{2-\mathrm i}{1-3\mathrm i}$ 在复平面内对应的点所在的象限为（　　）
+
+\begin{gkopts}(4)
+\task A．第一象限
+\task B．第二象限
+\task C．第三象限
+\task D．第四象限
+\end{gkopts}
 
 \textbf{解析}
 
@@ -35,11 +43,11 @@
 
 对应点为 $\left(\dfrac12,\dfrac12\right)$，横纵坐标均为正，位于\textbf{第一象限}。
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{易错点}：复数 $a+b\mathrm i$ 对应的点是 $(a,b)$，即实部作横坐标、虚部（\textbf{不含 $\mathrm i$}）作纵坐标。把 $\dfrac12\mathrm i$ 整体当纵坐标是常见笔误。
 \end{gktip}
+
+\gkanswer{答案：A（第一象限）}
 
 \par\medskip
 
@@ -47,7 +55,16 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　若全集 $U=\{1,2,3,4,5,6\}$，集合 $A=\{1,3,6\}$，$B=\{2,3,4\}$，则 $A\cap\left(\complement_U B\right)=$（　　）
+\textbf{题目}：
+
+若全集 $U=\{1,2,3,4,5,6\}$，集合 $A=\{1,3,6\}$，$B=\{2,3,4\}$，则 $A\cap\left(\complement_U B\right)=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\{3\}$
+\task B．$\{1,6\}$
+\task C．$\{5,6\}$
+\task D．$\{1,3\}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -69,11 +86,11 @@
 
 \[A\cap\left(\complement_U B\right)=\{1,6\}\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：「先补后交」比「先交后补」更稳。也可用等价式 $A\cap\complement_U B=A\setminus B$，直接从 $A=\{1,3,6\}$ 里划掉属于 $B$ 的 $3$，一步得到 $\{1,6\}$。
 \end{gktip}
+
+\gkanswer{答案：B（$\{1,6\}$）}
 
 \par\medskip
 
@@ -81,7 +98,16 @@
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　若抛物线 $y^{2}=2px\ (p>0)$ 的焦点到直线 $y=x+1$ 的距离为 $\sqrt2$，则 $p=$（　　）
+\textbf{题目}：
+
+若抛物线 $y^{2}=2px\ (p>0)$ 的焦点到直线 $y=x+1$ 的距离为 $\sqrt2$，则 $p=$（　　）
+
+\begin{gkopts}(4)
+\task A．$1$
+\task B．$2$
+\task C．$2\sqrt2$
+\task D．$4$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -102,11 +128,11 @@
 
 \[p=2\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{易错点}：绝对值方程一定有两支，$p=-6$ 是命题人埋的增根。凡题干带 $(p>0)$ 这类括注，最后一步必须回头检验。
 \end{gktip}
+
+\gkanswer{答案：B（$p=2$）}
 
 \par\medskip
 
@@ -114,7 +140,16 @@
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　北斗三号全球卫星导航系统是我国航天事业的重要成果。在卫星导航系统中，地球静止同步轨道卫星的轨道位于地球赤道所在平面，轨道高度为 $36000\ \mathrm{km}$（轨道高度是指卫星到地球表面的最短距离），把地球看成一个球心为 $O$，半径 $r$ 为 $6400\ \mathrm{km}$ 的球，其上点 $A$ 的纬度是指 $OA$ 与赤道所在平面所成角的度数，地球表面能直接观测到的一颗地球静止同步轨道卫星的点的纬度的最大值记为 $\alpha$，该卫星信号覆盖的地球表面面积 $S=2\pi r^{2}(1-\cos\alpha)$（单位：$\mathrm{km}^{2}$），则 $S$ 占地球表面积的百分比约为（　　）
+\textbf{题目}：
+
+北斗三号全球卫星导航系统是我国航天事业的重要成果。在卫星导航系统中，地球静止同步轨道卫星的轨道位于地球赤道所在平面，轨道高度为 $36000\ \mathrm{km}$（轨道高度是指卫星到地球表面的最短距离），把地球看成一个球心为 $O$，半径 $r$ 为 $6400\ \mathrm{km}$ 的球，其上点 $A$ 的纬度是指 $OA$ 与赤道所在平面所成角的度数，地球表面能直接观测到的一颗地球静止同步轨道卫星的点的纬度的最大值记为 $\alpha$，该卫星信号覆盖的地球表面面积 $S=2\pi r^{2}(1-\cos\alpha)$（单位：$\mathrm{km}^{2}$），则 $S$ 占地球表面积的百分比约为（　　）
+
+\begin{gkopts}(4)
+\task A．$26\%$
+\task B．$34\%$
+\task C．$42\%$
+\task D．$50\%$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -141,13 +176,13 @@
 
 最接近 $42\%$。
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{方法总结}：这类"航天情境题"的信息量大，但真正要用的只有三条——① 轨道高度要加上地球半径才是到地心的距离；② 观测的极限位置一定是\textbf{切线}，切点处 $OA\perp AQ$；③ 求"占比"时先把公式相除，$r^{2}$ 往往自动消去，根本不用代 $6400$。
 
 顺带记住：$\dfrac{8}{53}$ 约为 $0.15$，所以答案约为 $\dfrac{1-0.15}2=0.425$，口算即可锁定 C。
 \end{gktip}
+
+\gkanswer{答案：C（约 $42\%$）}
 
 \par\medskip
 
@@ -155,7 +190,16 @@
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　正四棱台的上、下底面的边长为 $2$，$4$，侧棱长为 $2$，则其体积为（　　）
+\textbf{题目}：
+
+正四棱台的上、下底面的边长为 $2$，$4$，侧棱长为 $2$，则其体积为（　　）
+
+\begin{gkopts}(2)
+\task A．$56$
+\task B．$28\sqrt2$
+\task C．$\dfrac{56}3$
+\task D．$\dfrac{28\sqrt2}3$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -177,11 +221,11 @@
 
 \[V=\frac{\sqrt2}3\left(4+16+8\right)=\frac{28\sqrt2}3\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{易错点}：① \textbf{侧棱不是高}。本题若误把 $2$ 当高，会得到 $\dfrac{56}3$，正是选项 C。② 水平投影长要用\textbf{半对角线之差}（$\sqrt2$），不是边长之差的一半（$1$）——后者对应的是"斜高"而非侧棱。
 \end{gktip}
+
+\gkanswer{答案：D（$\dfrac{28\sqrt2}3$）}
 
 \par\medskip
 
@@ -189,7 +233,16 @@
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　某物理量的测量结果服从正态分布 $N\left(10,\sigma^{2}\right)$，则下列结论中不正确的是（　　）
+\textbf{题目}：
+
+某物理量的测量结果服从正态分布 $N\left(10,\sigma^{2}\right)$，则下列结论中不正确的是（　　）
+
+\begin{gkopts}(1)
+\task A．$\sigma$ 越小，该物理量一次测量结果落在 $(9.9,10.1)$ 内的概率越大
+\task B．该物理量一次测量结果大于 $10$ 的概率为 $0.5$
+\task C．该物理量一次测量结果小于 $9.99$ 的概率与大于 $10.01$ 的概率相等
+\task D．该物理量一次测量结果落在 $(9.9,10.2)$ 内的概率与落在 $(10,10.3)$ 内的概率相等
+\end{gkopts}
 
 \textbf{解析}
 
@@ -240,13 +293,13 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 
 差为正，两概率\textbf{不相等}，D 错误。
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法总结}：正态分布选择题只需两个事实——\textbf{关于均值对称}、\textbf{密度在均值两侧单调}。判断两个等长区间的概率大小，看谁\textbf{离对称轴更近}即可，完全不必查表。
 
 本题四个选项中 A、B、C 都是"对称/集中"的标准结论，D 则偷换成"等长但不等距"，是唯一的破绽。
 \end{gktip}
+
+\gkanswer{答案：D}
 
 \par\medskip
 
@@ -254,7 +307,16 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　若 $a=\log_52$，$b=\log_83$，$c=\dfrac12$，则（　　）
+\textbf{题目}：
+
+若 $a=\log_52$，$b=\log_83$，$c=\dfrac12$，则（　　）
+
+\begin{gkopts}(4)
+\task A．$c<b<a$
+\task B．$b<a<c$
+\task C．$a<c<b$
+\task D．$a<b<c$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -283,13 +345,13 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \textbf{综合}：
 \[a<c<b\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{方法总结}：不同底的对数比较大小，首选\textbf{插入中间值}（常用 $0$、$\dfrac12$、$1$）。$\log_ab$ 与 $\dfrac12$ 比较等价于 $b$ 与 $\sqrt a$ 比较，把对数问题降级成开方比较，是最省力的一步。
 
 校验：$a=\log_52\approx0.431$，$b=\log_83\approx0.528$，$c=0.5$，确实 $a<c<b$。
 \end{gktip}
+
+\gkanswer{答案：C（$a<c<b$）}
 
 \par\medskip
 
@@ -297,7 +359,16 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　设函数 $f(x)$ 的定义域为 $\mathbf R$，且 $f(x+2)$ 为偶函数，$f(2x+1)$ 为奇函数，则（　　）
+\textbf{题目}：
+
+设函数 $f(x)$ 的定义域为 $\mathbf R$，且 $f(x+2)$ 为偶函数，$f(2x+1)$ 为奇函数，则（　　）
+
+\begin{gkopts}(2)
+\task A．$f\left(-\dfrac12\right)=0$
+\task B．$f(-1)=0$
+\task C．$f(2)=0$
+\task D．$f(4)=0$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -348,8 +419,6 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 
 而 $f\left(-\dfrac12\right)=\cos\left(-\dfrac\pi4\right)=\dfrac{\sqrt2}2\ne0$，$f(2)=\cos\pi=-1\ne0$，$f(4)=\cos2\pi=1\ne0$，但 $f(-1)=\cos\left(-\dfrac\pi2\right)=0$ 。
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：抽象函数题的通法是\textbf{把复合函数的奇偶性翻译成 $f$ 自身的对称性}——
 \begin{itemize}
@@ -362,6 +431,8 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 又：\textbf{一线一点两种对称并存必产生周期}，周期为对称轴与对称中心横坐标之差的 $4$ 倍（本题 $4\times|2-1|=4$）。
 \end{gktip}
 
+\gkanswer{答案：B（$f(-1)=0$）}
+
 \par\medskip
 
 \end{answer}
@@ -370,7 +441,16 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　下列统计量中可用于度量样本 $x_1,x_2,\cdots,x_n$ 离散程度的有（　　）
+\textbf{题目}：
+
+下列统计量中可用于度量样本 $x_1,x_2,\cdots,x_n$ 离散程度的有（　　）
+
+\begin{gkopts}(2)
+\task A．$x_1,x_2,\cdots,x_n$ 的标准差
+\task B．$x_1,x_2,\cdots,x_n$ 的中位数
+\task C．$x_1,x_2,\cdots,x_n$ 的极差
+\task D．$x_1,x_2,\cdots,x_n$ 的平均数
+\end{gkopts}
 
 \textbf{解析}
 
@@ -396,11 +476,11 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \item \textbf{D  平均数}：$\bar x=\dfrac1n\sum x_i$，刻画的是\textbf{集中趋势}。
 \end{itemize}
 
-\gkanswer{答案：AC}
-
 \begin{gktip}
 \textbf{一句话判据}：把全体数据\textbf{整体平移}（每个数加同一常数 $c$），值会变的是位置类统计量，值不变的是离散类统计量。中位数、平均数都随之平移 $c$，标准差、极差纹丝不动。
 \end{gktip}
+
+\gkanswer{答案：AC（标准差、极差）}
 
 \par\medskip
 
@@ -408,7 +488,9 @@ $9.99$ 与 $10.01$ 关于 $10$ 对称（都距 $10$ 为 $0.01$），由对称性
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　如图，下列各正方体中，$O$ 为下底面的中心，$M$，$N$ 为顶点，$P$ 为所在棱的中点，则满足 $MN\perp OP$ 的是（　　）
+\textbf{题目}：
+
+如图，下列各正方体中，$O$ 为下底面的中心，$M$，$N$ 为顶点，$P$ 为所在棱的中点，则满足 $MN\perp OP$ 的是（　　）
 
 \begin{center}\input{figures/f2021x2_t10_cubes}\end{center}
 
@@ -457,8 +539,6 @@ D & $(2,2,2)$ & $(0,2,0)$ & $(1,0,2)$ & $(-2,0,-2)$ & $(0,-1,2)$ & $0+0-4=-4$ & 
 
 \textbf{D }：$\overrightarrow{MN}\cdot\overrightarrow{OP}=(-2)\times0+0\times(-1)+(-2)\times2=-4\ne0$ 
 
-\gkanswer{答案：BC}
-
 \begin{gktip}
 \textbf{方法总结}：正方体中的"某某垂直吗"类选择题，\textbf{建系算数量积永远是最短路径}——四个选项共用一套坐标系，每项只需读三个点的坐标再做一次三项乘加，比逐个找垂直平面、作辅助线快得多。
 
@@ -467,13 +547,24 @@ D & $(2,2,2)$ & $(0,2,0)$ & $(1,0,2)$ & $(-2,0,-2)$ & $(0,-1,2)$ & $0+0-4=-4$ & 
 \textbf{快速排除}：若 $\overrightarrow{MN}$ 是水平向量而 $\overrightarrow{OP}$ 的水平投影与之不垂直，立刻可判否（A 项即此类），根本不用算完。
 \end{gktip}
 
+\gkanswer{答案：BC}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　已知直线 $l:ax+by-r^{2}=0$ 与圆 $C:x^{2}+y^{2}=r^{2}$，点 $A(a,b)$，则下列说法正确的是（　　）
+\textbf{题目}：
+
+已知直线 $l:ax+by-r^{2}=0$ 与圆 $C:x^{2}+y^{2}=r^{2}$，点 $A(a,b)$，则下列说法正确的是（　　）
+
+\begin{gkopts}(1)
+\task A．若点 $A$ 在圆 $C$ 上，则直线与圆 $C$ 相切
+\task B．若点 $A$ 在圆 $C$ 内，则直线 $l$ 与圆 $C$ 相离
+\task C．若点 $A$ 在圆 $C$ 外，则直线 $l$ 与圆 $C$ 相离
+\task D．若点 $A$ 在直线 $l$ 上，则直线 $l$ 与圆 $C$ 相切
+\end{gkopts}
 
 \textbf{解析}
 
@@ -518,13 +609,13 @@ $A$ 的位置 & $\lvert OA\rvert$ & $d=\dfrac{r^{2}}{\lvert OA\rvert}$ & $l$ 与
 
 这恰好说明 $A$ 在圆 $C$ 上，回到 A 项的情形，故\textbf{相切} 
 
-\gkanswer{答案：ABD}
-
 \begin{gktip}
 \textbf{方法总结}：直线 $ax+by=r^{2}$ 与圆 $x^{2}+y^{2}=r^{2}$ 是一对经典搭档——当 $A(a,b)$ 在圆上时，$l$ 就是圆在 $A$ 处的\textbf{切线}（切线方程 $x_0x+y_0y=r^{2}$）。记住这个模型，A、D 两项可以秒判。
 
 \textbf{恒等式 $d\cdot|OA|=r^{2}$ 是本题的钥匙}：它把"点的位置"与"直线的位置"完全对应起来，四个选项一次性解决。C 项把"相交"写成"相离"，是唯一的错项。
 \end{gktip}
+
+\gkanswer{答案：ABD}
 
 \par\medskip
 
@@ -532,7 +623,16 @@ $A$ 的位置 & $\lvert OA\rvert$ & $d=\dfrac{r^{2}}{\lvert OA\rvert}$ & $l$ 与
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　设正整数 $n=a_0\cdot2^{0}+a_1\cdot2^{1}+\cdots+a_{k-1}\cdot2^{k-1}+a_k\cdot2^{k}$，其中 $a_i\in\{0,1\}$，记 $\omega(n)=a_0+a_1+\cdots+a_k$。则（　　）
+\textbf{题目}：
+
+设正整数 $n=a_0\cdot2^{0}+a_1\cdot2^{1}+\cdots+a_{k-1}\cdot2^{k-1}+a_k\cdot2^{k}$，其中 $a_i\in\{0,1\}$，记 $\omega(n)=a_0+a_1+\cdots+a_k$。则（　　）
+
+\begin{gkopts}(2)
+\task A．$\omega(2n)=\omega(n)$
+\task B．$\omega(2n+3)=\omega(n)+1$
+\task C．$\omega(8n+5)=\omega(4n+3)$
+\task D．$\omega\left(2^{n}-1\right)=n$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -592,8 +692,6 @@ $3\ne2$，B 错误
 
 \textbf{验证}：$n=4$ 时 $2^{4}-1=15=\overline{1111}_2$，$\omega=4$ 
 
-\gkanswer{答案：ACD}
-
 \begin{gktip}
 \textbf{方法总结}：本题看似"新定义"，实为\textbf{二进制常识题}。抓住两条规律即可全部解决——
 ① \textbf{乘 $2^{k}$ = 左移 $k$ 位}，$\omega$ 不变；
@@ -604,6 +702,8 @@ C 项正是 ② 的两次应用（$\omega(5)=\omega(\overline{101}_2)=2$，$\ome
 \textbf{B 项的教训}：加法一旦跨过 $2^{k}$ 的界就会\textbf{进位}，规律立刻失效。判断这类命题时\textbf{必须多取几个 $n$ 试}——本题 $n=1$ 恰好成立、$n=2$ 就崩，只试一个数会栽跟头。
 \end{gktip}
 
+\gkanswer{答案：ACD}
+
 \par\medskip
 
 \end{answer}
@@ -612,7 +712,9 @@ C 项正是 ② 的两次应用（$\omega(5)=\omega(\overline{101}_2)=2$，$\ome
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　已知双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\ (a>0,b>0)$ 的离心率 $e=2$，则双曲线 $C$ 的渐近线方程为 \gkblank{}．
+\textbf{题目}：
+
+已知双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\ (a>0,b>0)$ 的离心率 $e=2$，则双曲线 $C$ 的渐近线方程为 \gkblank{}．
 
 \textbf{解析}
 
@@ -630,8 +732,6 @@ $\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$ 的渐近线为 $\dfrac{x^{2}}{a^{
 
 \[y=\pm\frac ba x=\pm\sqrt3\,x\]
 
-\gkanswer{答案：$y=\pm\sqrt3\,x$}
-
 \begin{gktip}
 \textbf{方法总结}：离心率与渐近线斜率是"一对"，关系式
 \[e^{2}=1+\frac{b^{2}}{a^{2}}\]
@@ -640,16 +740,21 @@ $\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$ 的渐近线为 $\dfrac{x^{2}}{a^{
 \textbf{注意}：题目只给出焦点在 $x$ 轴上的标准形式，故渐近线斜率是 $\pm\dfrac ba$ 而非 $\pm\dfrac ab$；答案必须\textbf{写成方程}（含 $y=$），只写 $\pm\sqrt3$ 不得分。
 \end{gktip}
 
+\gkanswer{答案：$y=\pm\sqrt3\,x$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　写出一个同时具有下列性质①②③的函数 $f(x)=$ \gkblank{}．
-① $f\left(x_1x_2\right)=f\left(x_1\right)f\left(x_2\right)$；
-② 当 $x\in(0,+\infty)$ 时，$f'(x)>0$；
-③ $f'(x)$ 是奇函数．
+\textbf{题目}：
+
+写出一个同时具有下列性质①②③的函数 $f(x)=$ \gkblank{}．
+
+  ① $f\left(x_1x_2\right)=f\left(x_1\right)f\left(x_2\right)$；
+  ② 当 $x\in(0,+\infty)$ 时，$f'(x)>0$；
+  ③ $f'(x)$ 是奇函数．
 
 \textbf{解析}
 
@@ -693,13 +798,13 @@ $\alpha$ 为\textbf{正偶数}，最小的是 $\alpha=2$：
 \end{tabular}
 \end{center}
 
-\textbf{答案：$f(x)=x^{2}$（答案不唯一，$x^{4}$、$x^{6}$ 等一切 $f(x)=x^{2k}\ (k\in\mathbf N^{*})$ 均可）}
-
 \begin{gktip}
 \textbf{方法总结}：开放型填空题的通法是"\textbf{先按最强的那条性质锁定函数族，再用其余性质定参数}"。本题性质①最强（直接指向幂函数），②③只是筛选指数。
 
 \textbf{易错点}：若只看①②会写出 $f(x)=x$ 或 $f(x)=x^{3}$，但它们的导数 $1$、$3x^{2}$ 都是\textbf{偶函数}，违反③。\textbf{"$f$ 是偶函数 $\Rightarrow$ $f'$ 是奇函数"}——本题③其实是在暗示 $f$ 必须是偶函数，从这个角度也能一步锁定 $x^{2}$。
 \end{gktip}
+
+\textbf{答案：$f(x)=x^{2}$（答案不唯一，一切 $x^{2k},k\in\mathbf N^{*}$ 均可）}
 
 \par\medskip
 
@@ -707,7 +812,9 @@ $\alpha$ 为\textbf{正偶数}，最小的是 $\alpha=2$：
 \begin{answer}
 \gksolhead{15}{}
 
-\textbf{题目}　已知向量 $\boldsymbol a+\boldsymbol b+\boldsymbol c=\boldsymbol 0$，$|\boldsymbol a|=1$，$|\boldsymbol b|=|\boldsymbol c|=2$，则 $\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a=$ \gkblank{}．
+\textbf{题目}：
+
+已知向量 $\boldsymbol a+\boldsymbol b+\boldsymbol c=\boldsymbol 0$，$|\boldsymbol a|=1$，$|\boldsymbol b|=|\boldsymbol c|=2$，则 $\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -731,8 +838,6 @@ $\alpha$ 为\textbf{正偶数}，最小的是 $\alpha=2$：
 
 \[S=-\frac92\]
 
-\gkanswer{答案：$-\dfrac92$}
-
 \begin{gktip}
 \textbf{合理性检验}：三个向量首尾相接构成一个三角形，边长为 $1$、$2$、$2$（满足三角不等式，构型确实存在），故答案有效。
 
@@ -742,13 +847,17 @@ $\alpha$ 为\textbf{正偶数}，最小的是 $\alpha=2$：
 \[\boldsymbol a\cdot\boldsymbol b+\boldsymbol b\cdot\boldsymbol c+\boldsymbol c\cdot\boldsymbol a=-\frac{|\boldsymbol a|^{2}+|\boldsymbol b|^{2}+|\boldsymbol c|^{2}}2\]
 \end{gktip}
 
+\gkanswer{答案：$-\dfrac92$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{16}{}
 
-\textbf{题目}　已知函数 $f(x)=\left|\mathrm e^{x}-1\right|$，$x_1<0$，$x_2>0$，函数 $f(x)$ 的图象在点 $A\left(x_1,f\left(x_1\right)\right)$ 和点 $B\left(x_2,f\left(x_2\right)\right)$ 处的两条切线互相垂直，且分别交 $y$ 轴于 $M$，$N$ 两点，则 $\dfrac{|AM|}{|BN|}$ 的取值范围是 \gkblank{}．
+\textbf{题目}：
+
+已知函数 $f(x)=\left|\mathrm e^{x}-1\right|$，$x_1<0$，$x_2>0$，函数 $f(x)$ 的图象在点 $A\left(x_1,f\left(x_1\right)\right)$ 和点 $B\left(x_2,f\left(x_2\right)\right)$ 处的两条切线互相垂直，且分别交 $y$ 轴于 $M$，$N$ 两点，则 $\dfrac{|AM|}{|BN|}$ 的取值范围是 \gkblank{}．
 
 \textbf{解析}
 
@@ -818,8 +927,6 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 
 \[\frac{|AM|}{|BN|}\in(0,1)\]
 
-\gkanswer{答案：$(0,1)$}
-
 \begin{gktip}
 \textbf{方法总结}：本题三步走，每一步都有明确的目的——
 1. \textbf{垂直条件}把两个自变量捆成一个（$s=-t$），这是所有"两切线垂直"题的第一动作；
@@ -831,6 +938,8 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 \textbf{易错点}：区间\textbf{两端都是开的}。写成 $(0,1]$（误以为 $t=0$ 可取）或 $[0,1)$ 都不对——$t=0$ 处 $f$ 不可导，$t\to-\infty$ 时比值只是无限接近 $0$。
 \end{gktip}
 
+\gkanswer{答案：$(0,1)$}
+
 \par\medskip
 
 \end{answer}
@@ -839,11 +948,15 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 \begin{answer}
 \gksolhead{17}{10 分}
 
-\textbf{题目}　记 $S_n$ 是公差不为 $0$ 的等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $a_3=S_5$，$a_2a_4=S_4$．
+\textbf{题目}（10 分）：
+
+记 $S_n$ 是公差不为 $0$ 的等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $a_3=S_5$，$a_2a_4=S_4$．
 
   (1) 求数列 $\left\{a_n\right\}$ 的通项公式；
 
   (2) 求使 $S_n>a_n$ 成立的 $n$ 的最小值．
+
+\textbf{解析}
 
 \par\medskip
 
@@ -910,13 +1023,15 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 \item $n=7$：$S_7=49-35=14$，$a_7=14-6=8$，$14>8$ 
 \end{itemize}
 
-\gkanswer{答案：(1) $a_n=2n-6$；(2) $7$}
-
 \begin{gktip}
 \textbf{方法总结}：等差数列"知二求全"，本题两个条件恰好定出 $a_1$ 与 $d$。\textbf{先用较简单的那个条件（$a_3=S_5$）解出 $a_1$ 与 $d$ 的比例关系并回代}，可以把第二个方程从二元降为一元，比联立硬解省力得多。
 
 \textbf{易错点}：解出 $(n-1)(n-6)>0$ 后，$n=1$ 与 $n=6$ 都是\textbf{取等}的临界点，必须排除；很多同学写成 $n\ge6$ 而答 $6$。做完务必回代边界验算。
 \end{gktip}
+
+\gkanswer{答案（1）：$a_n=2n-6$}
+
+\gkanswer{答案（2）：$n_{\min}=7$}
 
 \par\medskip
 
@@ -924,11 +1039,15 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 \begin{answer}
 \gksolhead{18}{12 分}
 
-\textbf{题目}　在 $\triangle ABC$ 中，角 $A$，$B$，$C$ 所对的边分别为 $a$，$b$，$c$，$b=a+1$，$c=a+2$．
+\textbf{题目}（12 分）：
+
+在 $\triangle ABC$ 中，角 $A$，$B$，$C$ 所对的边分别为 $a$，$b$，$c$，$b=a+1$，$c=a+2$．
 
   (1) 若 $2\sin C=3\sin A$，求 $\triangle ABC$ 的面积；
 
   (2) 是否存在正整数 $a$，使得 $\triangle ABC$ 为钝角三角形？若存在，求 $a$；若不存在，说明理由．
+
+\textbf{解析}
 
 \par\medskip
 
@@ -965,8 +1084,6 @@ $x_1=t$ 取遍 $(-\infty,0)$，$\mathrm e^{t}$ 取遍 $(0,1)$（两端都取不�
 \textbf{第四步，求面积。}
 
 \[S=\frac12ab\sin C=\frac12\times4\times5\times\frac{3\sqrt7}8=10\times\frac{3\sqrt7}8=\frac{15\sqrt7}4\]
-
-\gkanswer{答案：$S_{\triangle ABC}=\dfrac{15\sqrt7}4$}
 
 \textbf{验证（海伦公式）}：$p=\dfrac{4+5+6}2=\dfrac{15}2$，
 \[S=\sqrt{p(p-a)(p-b)(p-c)}=\sqrt{\frac{15}2\cdot\frac72\cdot\frac52\cdot\frac32}=\sqrt{\frac{1575}{16}}=\frac{\sqrt{1575}}4=\frac{15\sqrt7}4\ \checkmark\]
@@ -1017,8 +1134,6 @@ $a$ 为正整数，故 $a\ge2$。
 
 \textbf{所以存在正整数 $a$，且 $a=2$。}
 
-\gkanswer{答案：(1) $\dfrac{15\sqrt7}4$；(2) 存在，$a=2$}
-
 \begin{gktip}
 \textbf{方法总结}：判断三角形形状的标准流程是"\textbf{只查最大角}"——因为一个三角形最多一个非锐角，它必定在最大边所对处。用余弦定理算出 $\cos C$ 后，\textbf{分母恒正}，符号完全由分子决定。
 
@@ -1027,19 +1142,27 @@ $a$ 为正整数，故 $a\ge2$。
 \textbf{易错点}：\textbf{千万别忘了三角形不等式}。若只解 $\cos C<0$ 会得到 $a<3$，从而误答"$a=1$ 或 $a=2$"；而 $a=1$ 时三边为 $1,2,3$，$1+2=3$ 退化成一条线段，根本不是三角形。
 \end{gktip}
 
+\gkanswer{答案（1）：$S=\dfrac{15\sqrt7}4$}
+
+\gkanswer{答案（2）：存在，$a=2$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{12 分}
 
-\textbf{题目}　如图，在四棱锥 $Q\text{-}ABCD$ 中，底面 $ABCD$ 是正方形，$AD=2$，$QD=QA=\sqrt5$，$QC=3$．
+\textbf{题目}（12 分）：
+
+如图，在四棱锥 $Q\text{-}ABCD$ 中，底面 $ABCD$ 是正方形，$AD=2$，$QD=QA=\sqrt5$，$QC=3$．
 
 \begin{center}\input{figures/f2021x2_t19_pyr}\end{center}
 
   (1) 证明：平面 $QAD\perp$ 平面 $ABCD$；
 
   (2) 求二面角 $B\text{-}QD\text{-}A$ 的余弦值．
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1140,8 +1263,6 @@ $\boldsymbol u$、$\boldsymbol v$ 都与棱 $QD$ 垂直，且分别指向含 $A$
 
 \textbf{所以二面角 $B\text{-}QD\text{-}A$ 的余弦值为 $\dfrac23$。}
 
-\gkanswer{答案：$\dfrac23$}
-
 \begin{gktip}
 \textbf{方法总结}：
 ① 第 (1) 问的套路是"\textbf{等腰三角形取底边中点 → 得垂线 → 再用勾股逆定理补上第二条垂直 → 线面垂直 → 面面垂直}"。题目给出的 $QC=3$ 看似多余，实则正是为勾股逆定理准备的——\textbf{解答题里没有一个数据是白给的}，若某个条件一直没用上，说明思路还不完整。
@@ -1150,17 +1271,25 @@ $\boldsymbol u$、$\boldsymbol v$ 都与棱 $QD$ 垂直，且分别指向含 $A$
 ④ \textbf{法向量夹角与二面角可能相等也可能互补}，稳妥做法是像上面那样在棱上取垂线向量直接算，或者用几何直观判断二面角是锐是钝再定符号。本题二面角为锐角，故取 $+\dfrac23$。
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\cos\theta=\dfrac23$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{20}{12 分}
 
-\textbf{题目}　已知椭圆 $C:\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\ (a>b>0)$，右焦点为 $F\left(\sqrt2,0\right)$，其离心率为 $\dfrac{\sqrt6}3$．
+\textbf{题目}（12 分）：
+
+已知椭圆 $C:\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\ (a>b>0)$，右焦点为 $F\left(\sqrt2,0\right)$，其离心率为 $\dfrac{\sqrt6}3$．
 
   (1) 求椭圆 $C$ 的方程；
 
   (2) 设 $M$，$N$ 是椭圆 $C$ 上的两点，直线 $MN$ 与曲线 $x^{2}+y^{2}=b^{2}\ (x>0)$ 相切．证明：$M$，$N$，$F$ 三点共线的充要条件是 $|MN|=\sqrt3$．
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1281,8 +1410,6 @@ $\boldsymbol u$、$\boldsymbol v$ 都与棱 $QD$ 垂直，且分别指向含 $A$
 
 \textbf{综上，$M$、$N$、$F$ 三点共线的充要条件是 $|MN|=\sqrt3$。} $\blacksquare$
 
-\gkanswer{答案：(1) $\dfrac{x^{2}}3+y^{2}=1$；(2) 见上述证明}
-
 \begin{gktip}
 \textbf{方法总结}：
 ① \textbf{充要条件必须两个方向都证}。本题的巧妙之处在于，两个方向共用同一个弦长公式 $(\ast\ast)$——正向把 $k^{2}=1$ 代进去算长度，反向把长度 $=\sqrt3$ 代进去解 $k$。\textbf{先把 $|MN|^{2}$ 表示成 $k$ 的函数，是一次投入、两次收益的写法。}
@@ -1291,19 +1418,27 @@ $\boldsymbol u$、$\boldsymbol v$ 都与棱 $QD$ 垂直，且分别指向含 $A$
 ④ \textbf{不要漏掉竖直直线}：设 $y=kx+m$ 时已经默认斜率存在，必须先单独验算 $x=1$（本题给出 $\dfrac{2\sqrt6}3\ne\sqrt3$，顺利排除）。这是圆锥曲线解答题最常见的扣分点。
 \end{gktip}
 
+\gkanswer{答案（1）：$\dfrac{x^{2}}3+y^{2}=1$}
+
+\gkanswer{答案（2）：充要条件成立（两向都要证）}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{21}{12 分}
 
-\textbf{题目}　一种微生物群体可以经过自身繁殖不断生存下来，设一个这种微生物为第 $0$ 代，经过一次繁殖后为第 $1$ 代，再经过一次繁殖后为第 $2$ 代……该微生物每代繁殖的个数是相互独立的且有相同的分布列，设 $X$ 表示 $1$ 个微生物个体繁殖下一代的个数，$P(X=i)=p_i>0\ (i=0,1,2,3)$．
+\textbf{题目}（12 分）：
+
+一种微生物群体可以经过自身繁殖不断生存下来，设一个这种微生物为第 $0$ 代，经过一次繁殖后为第 $1$ 代，再经过一次繁殖后为第 $2$ 代……该微生物每代繁殖的个数是相互独立的且有相同的分布列，设 $X$ 表示 $1$ 个微生物个体繁殖下一代的个数，$P(X=i)=p_i>0\ (i=0,1,2,3)$．
 
   (1) 已知 $p_0=0.4$，$p_1=0.3$，$p_2=0.2$，$p_3=0.1$，求 $E(X)$；
 
   (2) 设 $p$ 表示该种微生物经过多代繁殖后临近灭绝的概率，$p$ 是关于 $x$ 的方程：$p_0+p_1x+p_2x^{2}+p_3x^{3}=x$ 的一个最小正实根，求证：当 $E(X)\le1$ 时，$p=1$，当 $E(X)>1$ 时，$p<1$；
 
   (3) 根据你的理解说明 (2) 问结论的实际含义．
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1324,8 +1459,6 @@ $P$ & $0.4$ & $0.3$ & $0.2$ & $0.1$ \\
 \textbf{校验}：$0.4+0.3+0.2+0.1=1$ 
 
 \[E(X)=0\times0.4+1\times0.3+2\times0.2+3\times0.1=0+0.3+0.4+0.3=1\]
-
-\gkanswer{答案：$E(X)=1$}
 
 \par\medskip
 
@@ -1431,8 +1564,6 @@ $E(X)$ 是\textbf{每个微生物个体平均繁殖出的下一代个数}，$p$ 
 
 \textbf{一句话概括}：微生物群体能否长期存续，\textbf{分水岭恰好是"平均每代每个个体繁殖 $1$ 个后代"}——只有平均繁殖数超过 $1$，种群才有希望延续下去。
 
-\gkanswer{答案：(1) $E(X)=1$；(2) 见上述证明；(3) 见上述说明}
-
 \begin{gktip}
 \textbf{方法总结}：
 ① 本题的数学内核是\textbf{分支过程（Galton–Watson 过程）的灭绝概率定理}，但解答完全落在高中范围内——把方程改写成 $f(x)=0$，再研究 $f$ 的单调性即可。
@@ -1441,13 +1572,21 @@ $E(X)$ 是\textbf{每个微生物个体平均繁殖出的下一代个数}，$p$ 
 ④ 第 (3) 问是\textbf{开放性作答}，评分看是否说清"$E(X)$ 是平均繁殖数"与"$p$ 是灭绝概率"的实际意义，以及 $1$ 这条分界线的含义，不要求文字与标准答案一致。
 \end{gktip}
 
+\gkanswer{答案（1）：$E(X)=1$}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：见解析版}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{22}{12 分}
 
-\textbf{题目}　已知函数 $f(x)=(x-1)\mathrm e^{x}-ax^{2}+b$．
+\textbf{题目}（12 分）：
+
+已知函数 $f(x)=(x-1)\mathrm e^{x}-ax^{2}+b$．
 
   (1) 讨论 $f(x)$ 的单调性；
 
@@ -1456,6 +1595,14 @@ $E(X)$ 是\textbf{每个微生物个体平均繁殖出的下一代个数}，$p$ 
   ① $\dfrac12<a\le\dfrac{\mathrm e^{2}}2$，$b>2a$；
 
   ② $0<a<\dfrac12$，$b\le2a$．
+
+\par\medskip
+
+\begin{gktip}
+\textbf{试题来源}：deekur/gaokaomath（commit \texttt{34c13a6}，CC BY 4.0）之「2021新高考2」PDF。
+\end{gktip}
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1645,8 +1792,6 @@ $f$ 在 $[0,+\infty)$ 上连续、\textbf{严格单调递增}，从 $f(0)<0$ 增
 
 \textbf{综上，在条件 ② 下 $f(x)$ 有且仅有一个零点（位于 $(0,+\infty)$ 内）。} $\blacksquare$
 
-\gkanswer{答案：(1) 见上表；(2) 两条件下 $f(x)$ 均恰有一个零点}
-
 \begin{gktip}
 \textbf{方法总结}：这道压轴题的三个关键点——
 1. \textbf{求导后必须提出公因式 $x$}：$f'(x)=x\left(\mathrm e^{x}-2a\right)$。若展开成 $x\mathrm e^{x}-2ax$ 而不提取，就看不出两个零点 $0$ 与 $\ln2a$，分类讨论无从下手。分类的依据是\textbf{这两个零点的大小关系}，分界恰在 $\ln2a=0$ 即 $a=\dfrac12$。
@@ -1655,5 +1800,9 @@ $f$ 在 $[0,+\infty)$ 上连续、\textbf{严格单调递增}，从 $f(0)<0$ 增
 
 \textbf{考试策略}：第 (1) 问的四类讨论必须写全（漏 $a\le0$ 或漏 $a=\dfrac12$ 都要扣分）；第 (2) 问选 ① 或 ② 得分相同，建议选 ②——因为 $f(0)=b-1<0$ 与"右端趋于 $+\infty$"都比 ① 的左端极限论证更容易写清楚。
 \end{gktip}
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：两个条件下 $f(x)$ 均恰有一个零点}
 
 \end{answer}

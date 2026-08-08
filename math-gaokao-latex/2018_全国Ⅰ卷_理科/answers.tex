@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2018 年·全国Ⅰ卷·理科 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2018_g1_li_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2018_数学真题_理_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2018 年·全国Ⅰ卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2018/2018_数学真题_理_试题.md + 2018/2018_数学真题_理_解析正文.md + 2018/2018_数学真题_理_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -16,7 +15,16 @@
 \begin{answer}
 \gksolhead{1}{复数运算}
 
-\textbf{题目}：设 $z=\dfrac{1-\mathrm i}{1+\mathrm i}+2\mathrm i$，则 $|z|=$（　　）A．$0$　B．$\dfrac12$　C．$1$　D．$\sqrt2$
+\textbf{题目}：
+
+设 $z=\dfrac{1-\mathrm i}{1+\mathrm i}+2\mathrm i$，则 $|z|=$（　　）
+
+\begin{gkopts}(4)
+\task A．$0$
+\task B．$\dfrac12$
+\task C．$1$
+\task D．$\sqrt2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -28,11 +36,11 @@
 
 \[z=-\mathrm i+2\mathrm i=\mathrm i,\qquad |z|=1\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{方法提示}：$\dfrac{1-\mathrm i}{1+\mathrm i}=-\mathrm i$ 与 $\dfrac{1+\mathrm i}{1-\mathrm i}=\mathrm i$ 值得记住，考场上省下一步计算。
 \end{gktip}
+
+\gkanswer{答案：C（$1$）}
 
 \par\medskip
 
@@ -40,7 +48,16 @@
 \begin{answer}
 \gksolhead{2}{一元二次不等式与补集}
 
-\textbf{题目}：$A=\left\{x\mid x^{2}-x-2>0\right\}$，求 $\complement_{\mathbf R}A$。
+\textbf{题目}：
+
+已知集合 $A=\left\{x\mid x^{2}-x-2>0\right\}$，则 $\complement_{\mathbf R}A=$（　　）
+
+\begin{gkopts}(2)
+\task A．$\{x\mid-1<x<2\}$
+\task B．$\{x\mid-1\le x\le2\}$
+\task C．$\{x\mid x<-1\}\cup\{x\mid x>2\}$
+\task D．$\{x\mid x\le-1\}\cup\{x\mid x\ge2\}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -48,17 +65,17 @@
 
 "大于零取两边"：
 
-\[A=\{x\mid x<-1\ \text{或}\ x>2\}\]
+\[A=\{x\mid x<-1\ \text{\text{或}}\ x>2\}\]
 
 补集是它在实数轴上剩下的部分，\textbf{注意端点要取到}（因为原不等式是严格大于，$x=-1$ 与 $x=2$ 处等于 $0$，不属于 $A$）：
 
 \[\complement_{\mathbf R}A=\{x\mid-1\le x\le2\}\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法提示}：选项 A 与 B 只差端点开闭，这是本题唯一的考点。取补集时，原集合的"开"变"闭"。
 \end{gktip}
+
+\gkanswer{答案：B（$\{x\mid-1\le x\le2\}$）}
 
 \par\medskip
 
@@ -66,9 +83,20 @@
 \begin{answer}
 \gksolhead{3}{饼图与总量变化}
 
-\textbf{题目}：见试题。经济收入增加了一倍，问下列结论中\textbf{不正确}的是哪一条。
+\textbf{题目}：
+
+某地区经过一年的新农村建设，农村的经济收入增加了一倍，实现翻番。为更好地了解该地区农村的经济收入变化情况，统计了该地区新农村建设前后农村的经济收入构成比例，得到如下饼图：
 
 \begin{center}\input{figures/f2018_t3_pies}\end{center}
+
+则下面结论中\textbf{不正确}的是（　　）
+
+\begin{gkopts}(1)
+\task A．新农村建设后，种植收入减少
+\task B．新农村建设后，其他收入增加了一倍以上
+\task C．新农村建设后，养殖收入增加了一倍
+\task D．新农村建设后，养殖收入与第三产业收入的总和超过了经济收入的一半
+\end{gkopts}
 
 \textbf{解析}
 
@@ -98,11 +126,11 @@
 \item \textbf{D}：建设后养殖 $+$ 第三产业占比 $30\%+28\%=58\%>50\%$  正确。
 \end{itemize}
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法提示}：凡是"比例图 + 总量变化"的组合题，\textbf{一律设总量的字母再算绝对值}，不要直接比较百分比。本题四个选项里有三个都在考这一点。
 \end{gktip}
+
+\gkanswer{答案：A（种植收入减少 —— 这条不正确）}
 
 \par\medskip
 
@@ -110,7 +138,16 @@
 \begin{answer}
 \gksolhead{4}{等差数列基本量}
 
-\textbf{题目}：$3S_3=S_2+S_4$，$a_1=2$，求 $a_5$。
+\textbf{题目}：
+
+设 $S_n$ 为等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $3S_3=S_2+S_4$，$a_1=2$，则 $a_5=$（　　）
+
+\begin{gkopts}(4)
+\task A．$-12$
+\task B．$-10$
+\task C．$10$
+\task D．$12$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -128,11 +165,11 @@
 
 \[a_5=a_1+4d=2+4\times(-3)=-10\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法提示}：等差数列题只有两个基本量 $a_1$ 与 $d$，\textbf{看到条件就全部翻译成这两个量}，几乎不会出错。$S_n=na_1+\dfrac{n(n-1)}2d$ 要记牢。
 \end{gktip}
+
+\gkanswer{答案：B（$-10$）}
 
 \par\medskip
 
@@ -140,7 +177,16 @@
 \begin{answer}
 \gksolhead{5}{奇函数与切线}
 
-\textbf{题目}：$f(x)=x^{3}+(a-1)x^{2}+ax$ 为奇函数，求曲线在 $(0,0)$ 处的切线方程。
+\textbf{题目}：
+
+设函数 $f(x)=x^{3}+(a-1)x^{2}+ax$。若 $f(x)$ 为奇函数，则曲线 $y=f(x)$ 在点 $(0,0)$ 处的切线方程为（　　）
+
+\begin{gkopts}(4)
+\task A．$y=-2x$
+\task B．$y=-x$
+\task C．$y=2x$
+\task D．$y=x$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -158,7 +204,7 @@
 
 \[y=x\]
 
-\gkanswer{答案：D}
+\gkanswer{答案：D（$y=x$）}
 
 \par\medskip
 
@@ -166,7 +212,16 @@
 \begin{answer}
 \gksolhead{6}{平面向量基本定理}
 
-\textbf{题目}：$\triangle ABC$ 中 $AD$ 为 $BC$ 边上的中线，$E$ 为 $AD$ 的中点，求 $\overrightarrow{EB}$。
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$AD$ 为 $BC$ 边上的中线，$E$ 为 $AD$ 的中点，则 $\overrightarrow{EB}=$（　　）
+
+\begin{gkopts}(1)
+\task A．$\dfrac34\overrightarrow{AB}-\dfrac14\overrightarrow{AC}$
+\task B．$\dfrac14\overrightarrow{AB}-\dfrac34\overrightarrow{AC}$
+\task C．$\dfrac34\overrightarrow{AB}+\dfrac14\overrightarrow{AC}$
+\task D．$\dfrac14\overrightarrow{AB}+\dfrac34\overrightarrow{AC}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -184,11 +239,11 @@ $E$ 是 $AD$ 中点：
 
 \[\overrightarrow{EB}=\overrightarrow{AB}-\overrightarrow{AE}=\overrightarrow{AB}-\frac14\overrightarrow{AB}-\frac14\overrightarrow{AC}=\frac34\overrightarrow{AB}-\frac14\overrightarrow{AC}\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法提示}：向量选择题的通用做法是\textbf{选定一个起点，把所有点的位置向量都用两个基底表示}。本题选 $A$ 为起点，因为选项都是用 $\overrightarrow{AB}$、$\overrightarrow{AC}$ 写的。
 \end{gktip}
+
+\gkanswer{答案：A（$\dfrac34\overrightarrow{AB}-\dfrac14\overrightarrow{AC}$）}
 
 \par\medskip
 
@@ -196,9 +251,22 @@ $E$ 是 $AD$ 中点：
 \begin{answer}
 \gksolhead{7}{三视图 + 侧面展开}
 
-\textbf{题目}：圆柱高 $2$，底面周长 $16$。$M$ 在正视图上对应点 $A$，$N$ 在左视图上对应点 $B$，求侧面上 $M$ 到 $N$ 的最短路径。
+\textbf{题目}：
+
+某圆柱的高为 $2$，底面周长为 $16$，其三视图如图。圆柱表面上的点 $M$ 在正视图上的对应点为 $A$，圆柱表面上的点 $N$ 在左视图上的对应点为 $B$，则在此圆柱侧面上，从 $M$ 到 $N$ 的路径中，最短路径的长度为（　　）
 
 \begin{center}\input{figures/f2018_t7_views}\end{center}
+
+\begin{gkopts}(4)
+\task A．$2\sqrt{17}$
+\task B．$2\sqrt5$
+\task C．$3$
+\task D．$2$
+\end{gkopts}
+
+\begin{gktip}
+\textbf{注}：三视图在现行新课标中已删除。
+\end{gktip}
 
 \textbf{解析}
 
@@ -228,13 +296,13 @@ $E$ 是 $AD$ 中点：
 
 \[d=\sqrt{4^{2}+2^{2}}=\sqrt{20}=2\sqrt5\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法提示}：圆柱（或圆锥）表面上的最短路径问题，\textbf{唯一的方法就是展开成平面}。本题的难点全在"从三视图读出方位"这一步 —— 记住正视图的左右对应物体的左右，左视图的\textbf{右侧对应物体的前方}。
 
 \textbf{注}：三视图在现行新课标中已删除，本题仅作历史资料。
 \end{gktip}
+
+\gkanswer{答案：B（$2\sqrt5$）}
 
 \par\medskip
 
@@ -242,7 +310,16 @@ $E$ 是 $AD$ 中点：
 \begin{answer}
 \gksolhead{8}{抛物线与向量数量积}
 
-\textbf{题目}：抛物线 $C:y^{2}=4x$ 焦点 $F$，过 $(-2,0)$ 斜率 $\dfrac23$ 的直线与 $C$ 交于 $M$、$N$，求 $\overrightarrow{FM}\cdot\overrightarrow{FN}$。
+\textbf{题目}：
+
+设抛物线 $C:y^{2}=4x$ 的焦点为 $F$，过点 $(-2,0)$ 且斜率为 $\dfrac23$ 的直线与 $C$ 交于 $M$，$N$ 两点，则 $\overrightarrow{FM}\cdot\overrightarrow{FN}=$（　　）
+
+\begin{gkopts}(4)
+\task A．$5$
+\task B．$6$
+\task C．$7$
+\task D．$8$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -262,11 +339,11 @@ $E$ 是 $AD$ 中点：
 
 \[\overrightarrow{FM}\cdot\overrightarrow{FN}=0\times3+2\times4=8\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法提示}：本题的交点坐标恰好是整数，\textbf{直接解出坐标再算}比用韦达定理设而不求更快。判断标准：代入后得到的二次方程若能因式分解，就直接解。
 \end{gktip}
+
+\gkanswer{答案：D（$8$）}
 
 \par\medskip
 
@@ -274,7 +351,16 @@ $E$ 是 $AD$ 中点：
 \begin{answer}
 \gksolhead{9}{分段函数零点个数}
 
-\textbf{题目}：$f(x)=\begin{cases}\mathrm e^{x},&x\le0\\ \ln x,&x>0\end{cases}$，$g(x)=f(x)+x+a$。若 $g$ 有 $2$ 个零点，求 $a$ 的范围。
+\textbf{题目}：
+
+已知函数 $f(x)=\begin{cases}\mathrm e^{x},&x\le0\\ \ln x,&x>0\end{cases}$，$g(x)=f(x)+x+a$。若 $g(x)$ 存在 $2$ 个零点，则 $a$ 的取值范围是（　　）
+
+\begin{gkopts}(4)
+\task A．$[-1,0)$
+\task B．$[0,+\infty)$
+\task C．$[-1,+\infty)$
+\task D．$[1,+\infty)$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -309,11 +395,11 @@ $E$ 是 $AD$ 中点：
 
 \[-a\le1\ \Longrightarrow\ a\ge-1\]
 
-\gkanswer{答案：C（$[-1,+\infty)$）}
-
 \begin{gktip}
 \textbf{方法提示}：零点个数问题的标准动作是"\textbf{分离参数 → 化为水平线与曲线的交点}"。本题两段都单调，所以交点数只取决于值域，连图都不用画细。注意 $-a\le1$ 的等号：$-a=1$ 时交点是 $x=0$，属于左支定义域，要算进去。
 \end{gktip}
+
+\gkanswer{答案：C（$[-1,+\infty)$）}
 
 \par\medskip
 
@@ -321,9 +407,18 @@ $E$ 是 $AD$ 中点：
 \begin{answer}
 \gksolhead{10}{希波克拉底月牙}
 
-\textbf{题目}：见试题。求 $p_1$、$p_2$、$p_3$ 的关系。
+\textbf{题目}：
+
+如图来自古希腊数学家希波克拉底所研究的几何图形。此图由三个半圆构成，三个半圆的直径分别为直角三角形 $ABC$ 的斜边 $BC$、直角边 $AB$、$AC$。$\triangle ABC$ 的三边所围成的区域记为 I，黑色部分记为 II，其余部分记为 III。在整个图形中随机取一点，此点取自 I，II，III 的概率分别记为 $p_1$，$p_2$，$p_3$，则（　　）
 
 \begin{center}\input{figures/f2018li_t10_lune}\end{center}
+
+\begin{gkopts}(4)
+\task A．$p_1=p_2$
+\task B．$p_1=p_3$
+\task C．$p_2=p_3$
+\task D．$p_1=p_2+p_3$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -333,11 +428,11 @@ $E$ 是 $AD$ 中点：
 
 \textbf{三个半圆的面积}：
 
-\[S_{\text{大}}=\frac12\pi\left(\frac a2\right)^{2}=\frac{\pi a^{2}}8,\qquad S_{AB}=\frac{\pi c^{2}}8,\qquad S_{AC}=\frac{\pi b^{2}}8\]
+\[S_{\text{\text{大}}}=\frac12\pi\left(\frac a2\right)^{2}=\frac{\pi a^{2}}8,\qquad S_{AB}=\frac{\pi c^{2}}8,\qquad S_{AC}=\frac{\pi b^{2}}8\]
 
 \textbf{关键恒等式}：
 
-\[S_{AB}+S_{AC}=\frac{\pi\left(b^{2}+c^{2}\right)}8=\frac{\pi a^{2}}8=S_{\text{大}}\]
+\[S_{AB}+S_{AC}=\frac{\pi\left(b^{2}+c^{2}\right)}8=\frac{\pi a^{2}}8=S_{\text{\text{大}}}\]
 
 即\textbf{两个小半圆的面积之和恰好等于大半圆的面积}。
 
@@ -346,7 +441,7 @@ $E$ 是 $AD$ 中点：
 \begin{itemize}
 \item 大半圆 $=$ 三角形（区域 I）$+$ 两个弓形（区域 III）：
 \end{itemize}
-\[S_{\text{大}}=S_{\text{I}}+S_{\text{III}}\]
+\[S_{\text{\text{大}}}=S_{\text{I}}+S_{\text{III}}\]
 \begin{itemize}
 \item 两个小半圆 $=$ 两个月牙（区域 II）$+$ 两个弓形（区域 III）：
 \end{itemize}
@@ -360,13 +455,13 @@ $E$ 是 $AD$ 中点：
 
 \[p_1=p_2\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法提示}：这就是数学史上著名的\textbf{"希波克拉底月牙"}——公元前 5 世纪第一个被精确求出面积的曲边图形。它之所以能"化曲为直"，全靠勾股定理让两个小半圆之和等于大半圆；如果三角形不是直角三角形，结论立刻失效。
 
 解题上的通用技巧：\textbf{面积比较题不要硬算每块的值，找一个恒等式两边同减同一块}。
 \end{gktip}
+
+\gkanswer{答案：A（$p_1=p_2$）}
 
 \par\medskip
 
@@ -374,7 +469,16 @@ $E$ 是 $AD$ 中点：
 \begin{answer}
 \gksolhead{11}{双曲线渐近线与直角三角形}
 
-\textbf{题目}：双曲线 $C:\dfrac{x^{2}}3-y^{2}=1$，$F$ 为右焦点，过 $F$ 的直线与两条渐近线交于 $M$、$N$。若 $\triangle OMN$ 为直角三角形，求 $|MN|$。
+\textbf{题目}：
+
+已知双曲线 $C:\dfrac{x^{2}}3-y^{2}=1$，$O$ 为坐标原点，$F$ 为 $C$ 的右焦点，过 $F$ 的直线与 $C$ 的两条渐近线的交点分别为 $M$，$N$。若 $\triangle OMN$ 为直角三角形，则 $|MN|=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac32$
+\task B．$3$
+\task C．$2\sqrt3$
+\task D．$4$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -400,13 +504,13 @@ $60^\circ\ne90^\circ$，所以直角只能在 $M$ 或 $N$（由对称性，两�
 
 \[|MN|=OM\cdot\tan60^\circ=\sqrt3\times\sqrt3=3\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法提示}：\textbf{"焦点到渐近线的距离 $=b$"} 是双曲线最有用的二级结论，本题、以及大量涉及"焦点—渐近线"的题都靠它一步定量。
 
 另外要检查"直角在 $O$"是否可能：那需要 $\angle MON=90^\circ$，但两渐近线夹角是固定的 $60^\circ$（或 $120^\circ$），不可能是 $90^\circ$，故排除。
 \end{gktip}
+
+\gkanswer{答案：B（$3$）}
 
 \par\medskip
 
@@ -414,7 +518,16 @@ $60^\circ\ne90^\circ$，所以直角只能在 $M$ 或 $N$（由对称性，两�
 \begin{answer}
 \gksolhead{12}{正方体的等角截面}
 
-\textbf{题目}：正方体棱长 $1$，每条棱所在直线与平面 $\alpha$ 所成角相等，求 $\alpha$ 截正方体所得截面面积的最大值。
+\textbf{题目}：
+
+已知正方体的棱长为 $1$，每条棱所在直线与平面 $\alpha$ 所成的角相等，则 $\alpha$ 截此正方体所得截面面积的最大值为（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac{3\sqrt3}4$
+\task B．$\dfrac{2\sqrt3}3$
+\task C．$\dfrac{3\sqrt2}4$
+\task D．$\dfrac{\sqrt3}2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -442,13 +555,13 @@ $60^\circ\ne90^\circ$，所以直角只能在 $M$ 或 $N$（由对称性，两�
 
 \[S=\frac{3\sqrt3}2\times\frac12=\frac{3\sqrt3}4\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法提示}：本题的两个关口是"\textbf{等角 $\Rightarrow$ 法向量为 $(1,1,1)$ 方向}"和"\textbf{过中心时六边形最大}"。第二点可以这样理解：截面周长受正方体限制，六边形比三角形更"充分利用"了正方体的横截宽度。
 
 常见错误是直接选 $\dfrac{\sqrt3}2$（对角面截出的矩形 $1\times\sqrt2$ 面积 $\sqrt2$，或某个三角形面积），但那些截面不满足"与所有棱等角"。
 \end{gktip}
+
+\gkanswer{答案：A（$\dfrac{3\sqrt3}4$）}
 
 \par\medskip
 
@@ -458,7 +571,9 @@ $60^\circ\ne90^\circ$，所以直角只能在 $M$ 或 $N$（由对称性，两�
 \begin{answer}
 \gksolhead{13}{线性规划}
 
-\textbf{题目}：$\begin{cases}x-2y-2\le0\\ x-y+1\ge0\\ y\le0\end{cases}$，求 $z=3x+2y$ 的最大值。
+\textbf{题目}：
+
+若 $x$，$y$ 满足约束条件 $\begin{cases}x-2y-2\le0\\ x-y+1\ge0\\ y\le0\end{cases}$，则 $z=3x+2y$ 的最大值为 \gkblank{}．
 
 \textbf{解析}
 
@@ -490,11 +605,11 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \end{tabular}
 \end{center}
 
-\gkanswer{答案：$6$}
-
 \begin{gktip}
 \textbf{方法提示}：可行域是\textbf{凸多边形}时，线性目标函数的最值必在\textbf{顶点}取得，因此只要把顶点全部算出来代入比较即可，连平移直线都不必画。
 \end{gktip}
+
+\gkanswer{答案：$6$}
 
 \par\medskip
 
@@ -502,7 +617,9 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \begin{answer}
 \gksolhead{14}{由 $S_n$ 与 $a_n$ 的关系求和}
 
-\textbf{题目}：$S_n=2a_n+1$，求 $S_6$。
+\textbf{题目}：
+
+记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $S_n=2a_n+1$，则 $S_6=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -526,11 +643,11 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 \[S_6=2a_6+1=2\times\left(-2^{5}\right)+1=-64+1=-63\]
 
-\gkanswer{答案：$-63$}
-
 \begin{gktip}
 \textbf{方法提示}：已知 $S_n$ 与 $a_n$ 的关系式时，标准三步是"\textbf{令 $n=1$ 求首项 → 作差得递推 → 判断数列类型}"。最后求 $S_6$ 时不必用求和公式，把 $a_6$ 代回原关系式即可。
 \end{gktip}
+
+\gkanswer{答案：$-63$}
 
 \par\medskip
 
@@ -538,7 +655,9 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \begin{answer}
 \gksolhead{15}{组合计数 · 正难则反}
 
-\textbf{题目}：从 $2$ 位女生、$4$ 位男生中选 $3$ 人，至少有 $1$ 位女生，求选法数。
+\textbf{题目}：
+
+从 $2$ 位女生、$4$ 位男生中选 $3$ 人参加科技比赛，且至少有 $1$ 位女生入选，则不同的选法共有 \gkblank{} 种。（用数字填写答案）
 
 \textbf{解析}
 
@@ -551,11 +670,11 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 \[20-4=16\]
 
-\gkanswer{答案：$16$}
-
 \begin{gktip}
 \textbf{方法提示}：出现"\textbf{至少}"字样，第一反应就是补集法。若正面分类（$1$ 女 $2$ 男 $+$ $2$ 女 $1$ 男 $=C_2^{1}C_4^{2}+C_2^{2}C_4^{1}=12+4=16$）也能做，但类别一多就容易漏。
 \end{gktip}
+
+\gkanswer{答案：$16$}
 
 \par\medskip
 
@@ -563,7 +682,9 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \begin{answer}
 \gksolhead{16}{三角函数最值 · 导数法}
 
-\textbf{题目}：$f(x)=2\sin x+\sin2x$，求最小值。
+\textbf{题目}：
+
+已知函数 $f(x)=2\sin x+\sin2x$，则 $f(x)$ 的最小值是 \gkblank{}．
 
 \textbf{解析}
 
@@ -579,7 +700,7 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 令 $f'(x)=0$：
 
-\[\cos x=\frac12\quad\text{或}\quad\cos x=-1\]
+\[\cos x=\frac12\quad\text{\text{或}}\quad\cos x=-1\]
 
 \textbf{计算各驻点处的函数值}（取一个周期 $[-\pi,\pi]$）：
 
@@ -595,13 +716,13 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 比较得最小值 $-\dfrac{3\sqrt3}2$（在 $x=-\dfrac\pi3+2k\pi$ 处取到）。
 
-\gkanswer{答案：$-\dfrac{3\sqrt3}2$}
-
 \begin{gktip}
 \textbf{方法提示}：$f$ 是\textbf{奇函数}（$\sin x$ 与 $\sin2x$ 都是奇函数），所以最小值 $=-$ 最大值，只需算出最大值 $\dfrac{3\sqrt3}2$ 就能立刻写出答案 —— 这是本题最快的路。
 
 若不用导数，也可写 $f(x)=2\sin x(1+\cos x)$，再用均值不等式处理，但计算量更大。
 \end{gktip}
+
+\gkanswer{答案：$-\dfrac{3\sqrt3}2$}
 
 \par\medskip
 
@@ -611,7 +732,15 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \begin{answer}
 \gksolhead{17}{12 分，解三角形}
 
-\textbf{题目}：平面四边形 $ABCD$ 中，$\angle ADC=90^\circ$，$\angle A=45^\circ$，$AB=2$，$BD=5$。
+\textbf{题目}（12 分）：
+
+在平面四边形 $ABCD$ 中，$\angle ADC=90^\circ$，$\angle A=45^\circ$，$AB=2$，$BD=5$。
+
+  (1) 求 $\cos\angle ADB$；
+
+  (2) 若 $DC=2\sqrt2$，求 $BC$。
+
+\textbf{解析}
 
 \gksubpart{(1) 求 $\cos\angle ADB$}
 
@@ -643,11 +772,13 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 \[BC=5\]
 
-\gkanswer{答案：(1) $\dfrac{\sqrt{23}}5$；(2) $BC=5$}
-
 \begin{gktip}
 \textbf{方法提示}：四边形问题的通法是"\textbf{用对角线拆成两个三角形，在公共边或公共角上搭桥}"。本题的桥就是 $\angle ADB$ —— 第 (1) 问求出它的正弦，第 (2) 问经互余转换后\textbf{恰好直接可用}，连 $\cos\angle ADB$ 都不需要代入。这个设计说明第 (1) 问的 $\sin$ 才是真正的中间量。
 \end{gktip}
+
+\gkanswer{答案（1）：$\cos\angle ADB=\dfrac{\sqrt{23}}5$}
+
+\gkanswer{答案（2）：$BC=5$}
 
 \par\medskip
 
@@ -655,9 +786,17 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 \begin{answer}
 \gksolhead{18}{12 分，翻折与线面角}
 
-\textbf{题目}：正方形 $ABCD$，$E$、$F$ 分别为 $AD$、$BC$ 的中点，以 $DF$ 为折痕把 $\triangle DFC$ 折起，使 $C$ 到达 $P$，且 $PF\perp BF$。
+\textbf{题目}（12 分）：
+
+如图，四边形 $ABCD$ 为正方形，$E$，$F$ 分别为 $AD$，$BC$ 的中点，以 $DF$ 为折痕把 $\triangle DFC$ 折起，使点 $C$ 到达点 $P$ 的位置，且 $PF\perp BF$。
 
 \begin{center}\input{figures/f2018li_t18_fold}\end{center}
+
+  (1) 证明：平面 $PEF\perp$ 平面 $ABFD$；
+
+  (2) 求 $DP$ 与平面 $ABFD$ 所成角的正弦值。
+
+\textbf{解析}
 
 \gksubpart{折叠问题的第一原则：分清"变"与"不变"}
 
@@ -677,7 +816,7 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 在原正方形中，$E$、$F$ 分别是 $AD$、$BC$ 的中点，故 $EF\parallel AB$。又 $AB\perp BC$，所以
 
-\[EF\perp BC,\ \text{即}\ EF\perp BF\]
+\[EF\perp BC,\ \text{\text{即}}\ EF\perp BF\]
 
 这条关系在折叠中\textbf{完全不受影响}（$E$、$F$、$B$ 都在没有被折动的部分里）。
 
@@ -685,17 +824,17 @@ $(2,0)$ & $6+0=\boxed{6}$ \\
 
 已知 $PF\perp BF$。又 $EF\perp BF$，且
 
-\[EF\cap PF=F,\qquad EF,\ PF\subset\text{平面 }PEF\]
+\[EF\cap PF=F,\qquad EF,\ PF\subset\text{\text{平面} }PEF\]
 
 由\textbf{线面垂直的判定定理}：
 
-\[BF\perp\text{平面 }PEF\]
+\[BF\perp\text{\text{平面} }PEF\]
 
 \textbf{第三步：升级为面面垂直。}
 
 $BF\subset$ 平面 $ABFD$，一条直线垂直于一个平面，则过这条直线的任何平面都垂直于该平面，故
 
-\[\text{平面 }PEF\perp\text{平面 }ABFD\qquad\blacksquare\]
+\[\text{\text{平面} }PEF\perp\text{\text{平面} }ABFD\qquad\blacksquare\]
 
 \gksubpart{(2) 求 $DP$ 与平面 $ABFD$ 所成角的正弦值}
 
@@ -729,13 +868,11 @@ $BF\subset$ 平面 $ABFD$，一条直线垂直于一个平面，则过这条直�
 
 \[\overrightarrow{DP}=\left(\frac32,\ 1-2,\ \frac{\sqrt3}2\right)=\left(\frac32,\ -1,\ \frac{\sqrt3}2\right)\]
 
-\[|DP|=\sqrt{\frac94+1+\frac34}=\sqrt4=2\quad(\text{与 }PD=2\text{ 一致，验算通过})\]
+\[|DP|=\sqrt{\frac94+1+\frac34}=\sqrt4=2\quad(\text{\text{与} }PD=2\text{ \text{一致，验算通过}})\]
 
 线面角 $\theta$ 满足
 
 \[\sin\theta=\frac{\left|\overrightarrow{DP}\cdot\boldsymbol n\right|}{|DP|\cdot|\boldsymbol n|}=\frac{\frac{\sqrt3}2}2=\frac{\sqrt3}4\]
-
-\gkanswer{答案：$\dfrac{\sqrt3}4$}
 
 \begin{gktip}
 \textbf{方法提示}：翻折题最容易出错的地方是\textbf{把折叠前的关系当成折叠后还成立}。判断标准很简单：\textbf{这条关系涉及的点是否全在同一侧}（要么全在被折的部分，要么全在不动的部分）。$EF\perp BF$ 的三个点都在不动部分，所以能用；而"$PE$ 的长度"因为 $E$ 与 $P$ 分属两侧，折叠前的值就\textbf{不能}直接用了 —— 这正是本题必须靠 $PF\perp BF$ 建系求解的原因。
@@ -743,13 +880,25 @@ $BF\subset$ 平面 $ABFD$，一条直线垂直于一个平面，则过这条直�
 建系后用 $z$ 坐标除以 $|DP|$ 直接得线面角正弦，比找垂足、算射影快得多。
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt3}4$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{12 分，椭圆与角相等}
 
-\textbf{题目}：椭圆 $C:\dfrac{x^{2}}2+y^{2}=1$ 右焦点 $F$，过 $F$ 的直线 $l$ 交 $C$ 于 $A$、$B$，$M(2,0)$。
+\textbf{题目}（12 分）：
+
+设椭圆 $C:\dfrac{x^{2}}2+y^{2}=1$ 的右焦点为 $F$，过 $F$ 的直线 $l$ 与 $C$ 交于 $A$，$B$ 两点，点 $M$ 的坐标为 $(2,0)$。
+
+  (1) 当 $l$ 与 $x$ 轴垂直时，求直线 $AM$ 的方程；
+
+  (2) 设 $O$ 为坐标原点，证明：$\angle OMA=\angle OMB$。
+
+\textbf{解析}
 
 \textbf{基本量}：$a^{2}=2$，$b^{2}=1$，$c^{2}=a^{2}-b^{2}=1$，故 $F(1,0)$。
 
@@ -768,8 +917,6 @@ $l:x=1$ 代入椭圆：
 \[y=-\frac{\sqrt2}2(x-2)\]
 
 若取 $A\left(1,-\dfrac{\sqrt2}2\right)$，则得 $y=\dfrac{\sqrt2}2(x-2)$。
-
-\gkanswer{答案：$y=-\dfrac{\sqrt2}2(x-2)$ 或 $y=\dfrac{\sqrt2}2(x-2)$}
 
 \gksubpart{(2) 证明 $\angle OMA=\angle OMB$}
 
@@ -821,13 +968,29 @@ $l:x=1$ 代入椭圆：
 值得注意的是点 $M(2,0)$ 的来历：$x=2$ 正是椭圆的\textbf{右准线} $x=\dfrac{a^{2}}c=\dfrac21=2$。"从准线上一点看焦点弦两端张角相等"是椭圆的一条一般性质，本题是它的特例。
 \end{gktip}
 
+\gkanswer{答案（1）：$y=\pm\dfrac{\sqrt2}2(x-2)$}
+
+\gkanswer{答案（2）：见解析版}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{20}{12 分，二项分布与决策}
 
-\textbf{题目}：见试题。
+\textbf{题目}（12 分）：
+
+某工厂的某种产品成箱包装，每箱 $200$ 件，每一箱产品在交付用户之前要对产品作检验，如检验出不合格品，则更换为合格品。检验时，先从这箱产品中任取 $20$ 件作检验，再根据检验结果决定是否对余下的所有产品作检验。设每件产品为不合格品的概率都为 $p\ (0<p<1)$，且各件产品是否为不合格品相互独立。
+
+  (1) 记 $20$ 件产品中恰有 $2$ 件不合格品的概率为 $f(p)$，求 $f(p)$ 的最大值点 $p_0$；
+
+  (2) 现对一箱产品检验了 $20$ 件，结果恰有 $2$ 件不合格品，以 (1) 中确定的 $p_0$ 作为 $p$ 的值。已知每件产品的检验费用为 $2$ 元，若有不合格品进入用户手中，则工厂要对每件不合格品支付 $25$ 元的赔偿费用。
+
+  　① 若不对该箱余下的产品作检验，这一箱产品的检验费用与赔偿费用的和记为 $X$，求 $EX$；
+
+  　② 以检验费用与赔偿费用和的期望值为决策依据，是否该对这箱余下的所有产品作检验？
+
+\textbf{解析}
 
 \gksubpart{(1) 求 $f(p)$ 的最大值点 $p_0$}
 
@@ -849,8 +1012,6 @@ $20$ 件中恰有 $2$ 件不合格，服从二项分布：
 \item $p<0.1$ 时 $f'>0$，$f$ 递增；
 \item $p>0.1$ 时 $f'<0$，$f$ 递减。
 \end{itemize}
-
-\gkanswer{答案：$p_0=0.1$}
 
 \begin{gktip}
 这其实就是\textbf{极大似然估计}：观测到 $20$ 件里有 $2$ 件不合格，最"像"的不合格率就是 $\dfrac2{20}=0.1$。
@@ -877,13 +1038,13 @@ $20$ 件中恰有 $2$ 件不合格，服从二项分布：
 
 由期望的线性性：
 
-\[EX=40+25\,EY=40+25\times18=40+450=490\ (\text{元})\]
+\[EX=40+25\,EY=40+25\times18=40+450=490\ (\text{\text{元}})\]
 
 \gksubpart{② 是否该检验余下产品}
 
 若\textbf{检验}余下的 $180$ 件：全部 $200$ 件都要检验，且不合格品会被换成合格品，不产生赔偿：
 
-\[\text{总费用}=200\times2=400\ (\text{元})\]
+\[\text{\text{总费用}}=200\times2=400\ (\text{\text{元}})\]
 
 这是一个\textbf{确定值}（不是随机变量），其期望就是 $400$。
 
@@ -897,13 +1058,25 @@ $20$ 件中恰有 $2$ 件不合格，服从二项分布：
 \textbf{方法提示}：本题第 (2) 问的关键是\textbf{别忘了已经花掉的 $40$ 元检验费}。另外要理解"检验后更换为合格品"意味着检验能\textbf{完全消除}赔偿风险，所以方案二的费用是确定的 $400$ 元，不需要再算期望。
 \end{gktip}
 
+\gkanswer{答案（1）：$p_0=0.1$}
+
+\gkanswer{答案（2）：① $EX=490$ 元；② 应该检验}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{21}{12 分，导数压轴}
 
-\textbf{题目}：$f(x)=\dfrac1x-x+a\ln x$（定义域 $x>0$）。
+\textbf{题目}（12 分）：
+
+已知函数 $f(x)=\dfrac1x-x+a\ln x$。
+
+  (1) 讨论 $f(x)$ 的单调性；
+
+  (2) 若 $f(x)$ 存在两个极值点 $x_1$，$x_2$，证明：$\dfrac{f\left(x_1\right)-f\left(x_2\right)}{x_1-x_2}<a-2$。
+
+\textbf{解析}
 
 \gksubpart{(1) 讨论 $f(x)$ 的单调性}
 
@@ -1010,6 +1183,10 @@ $g$ 开口向上：在 $\left(x_1,x_2\right)$ 内 $g<0$，其余 $g>0$。因 $f'
 若在第三步忘了"除以负数要变号"，后面的推导会全部反向，这是本题最常见的失分点。
 \end{gktip}
 
+\gkanswer{答案（1）：$f'(x)=-\dfrac{x^{2}-ax+1}{x^{2}}$。$a\le2$：$x^{2}-ax+1\ge0$ 恒成立，$f$ 在 $(0,+\infty)$ 单调递减；$a>2$：设两根 $x_{1,2}=\dfrac{a\mp\sqrt{a^{2}-4}}2$，则 $f$ 在 $\left(0,x_1\right)$ 递减、$\left(x_1,x_2\right)$ 递增、$\left(x_2,+\infty\right)$ 递减。}
+
+\gkanswer{答案（2）：见解析版}
+
 \par\medskip
 
 \end{answer}
@@ -1018,7 +1195,17 @@ $g$ 开口向上：在 $\left(x_1,x_2\right)$ 内 $g<0$，其余 $g>0$。因 $f'
 \begin{answer}
 \gksolhead{22}{10 分，坐标系与参数方程}
 
-\textbf{题目}：$C_1:y=k|x|+2$；$C_2:\rho^{2}+2\rho\cos\theta-3=0$。
+\textbf{题目}（10 分）〔选修 4-4：坐标系与参数方程〕：
+
+（\textbf{已取消}）
+
+在直角坐标系 $xOy$ 中，曲线 $C_1$ 的方程为 $y=k|x|+2$。以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，曲线 $C_2$ 的极坐标方程为 $\rho^{2}+2\rho\cos\theta-3=0$。
+
+  (1) 求 $C_2$ 的直角坐标方程；
+
+  (2) 若 $C_1$ 与 $C_2$ 有且仅有三个公共点，求 $C_1$ 的方程。
+
+\textbf{解析}
 
 \gksubpart{(1) 求 $C_2$ 的直角坐标方程}
 
@@ -1036,7 +1223,7 @@ $g$ 开口向上：在 $\left(x_1,x_2\right)$ 内 $g<0$，其余 $g>0$。因 $f'
 
 \textbf{认清 $C_1$ 的形状}：$y=k|x|+2$ 由两条射线拼成，顶点为 $(0,2)$：
 
-\[\text{右支：}y=kx+2\ (x\ge0);\qquad \text{左支：}y=-kx+2\ (x\le0)\]
+\[\text{\text{右支：}}y=kx+2\ (x\ge0);\qquad \text{\text{左支：}}y=-kx+2\ (x\le0)\]
 
 顶点 $(0,2)$ 到圆心 $(-1,0)$ 的距离为 $\sqrt{1+4}=\sqrt5>2$，故\textbf{顶点在圆外}。
 
@@ -1048,7 +1235,7 @@ $g$ 开口向上：在 $\left(x_1,x_2\right)$ 内 $g<0$，其余 $g>0$。因 $f'
 
 \[\frac{|-k-0+2|}{\sqrt{k^{2}+1}}=2\ \Longrightarrow\ (2-k)^{2}=4\left(k^{2}+1\right)\]
 
-\[4-4k+k^{2}=4k^{2}+4\ \Longrightarrow\ 3k^{2}+4k=0\ \Longrightarrow\ k=0\ \text{或}\ k=-\frac43\]
+\[4-4k+k^{2}=4k^{2}+4\ \Longrightarrow\ 3k^{2}+4k=0\ \Longrightarrow\ k=0\ \text{\text{或}}\ k=-\frac43\]
 
 $k=0$ 时 $C_1$ 退化为直线 $y=2$，与圆只有 $1$ 个公共点，舍去。取 $k=-\dfrac43$。
 
@@ -1067,11 +1254,13 @@ $k=0$ 时 $C_1$ 退化为直线 $y=2$，与圆只有 $1$ 个公共点，舍去�
 
 \textbf{尝试左支相切}：直线 $kx+y-2=0$，距离为 $2$ 给出 $3k^{2}-4k=0$，即 $k=0$ 或 $k=\dfrac43$，与 $k<0$ 矛盾，无解。
 
-\gkanswer{答案：$C_1:y=-\dfrac43|x|+2$}
-
 \begin{gktip}
 \textbf{方法提示}：这类题\textbf{必须验证切点/交点是否落在射线的定义域内}。相切只保证直线与圆相切，但射线只是直线的一半，如果切点在被截掉的那一半上，公共点数就对不上了。本题两次验证都通过，属于"运气好"，但考场上不验证就是赌博。
 \end{gktip}
+
+\gkanswer{答案（1）：$(x+1)^{2}+y^{2}=4$}
+
+\gkanswer{答案（2）：$y=-\dfrac43|x|+2$}
 
 \par\medskip
 
@@ -1079,7 +1268,19 @@ $k=0$ 时 $C_1$ 退化为直线 $y=2$，与圆只有 $1$ 个公共点，舍去�
 \begin{answer}
 \gksolhead{23}{10 分，绝对值不等式}
 
-\textbf{题目}：$f(x)=|x+1|-|ax-1|$。
+\textbf{题目}（10 分）〔选修 4-5：不等式选讲〕：
+
+（\textbf{已取消}）
+
+已知 $f(x)=|x+1|-|ax-1|$。
+
+  (1) 当 $a=1$ 时，求不等式 $f(x)>1$ 的解集；
+
+  (2) 若 $x\in(0,1)$ 时不等式 $f(x)>x$ 成立，求 $a$ 的取值范围。
+
+\par\medskip
+
+\textbf{解析}
 
 \gksubpart{(1) 当 $a=1$ 时，求 $f(x)>1$ 的解集}
 
@@ -1109,8 +1310,6 @@ $2>1$ 恒成立，此段全部满足：$x\ge1$。
 
 \[\left(\frac12,1\right)\cup[1,+\infty)=\left(\frac12,+\infty\right)\]
 
-\gkanswer{答案：$\left\{x\ \middle|\ x>\dfrac12\right\}$}
-
 \begin{gktip}
 \textbf{几何解释}：$|x+1|-|x-1|$ 表示"$x$ 到 $-1$ 的距离减去到 $1$ 的距离"，它在 $[-1,1]$ 上线性地从 $-2$ 增到 $2$，两侧则为常数。
 \end{gktip}
@@ -1135,8 +1334,6 @@ $2>1$ 恒成立，此段全部满足：$x\ge1$。
 
 （$a=2$ 时 $ax<2$ 对开区间内所有 $x$ 严格成立，可以取到。）
 
-\gkanswer{答案：$a\in(0,2]$}
-
 \begin{gktip}
 \textbf{方法提示}：本题的漂亮之处在于 $|x+1|$ 与右边的 $x$ \textbf{恰好抵消}，把一个含参绝对值不等式化成极简的 $|ax-1|<1$。看到区间限制 $x\in(0,1)$ 就应该先判断各绝对值内部的符号 —— 这一步做对了，题就做完一半。
 
@@ -1145,5 +1342,8 @@ $2>1$ 恒成立，此段全部满足：$x\ge1$。
 
 \par\medskip
 
+\gkanswer{答案（1）：$\left(\dfrac12,+\infty\right)$}
+
+\gkanswer{答案（2）：$(0,2]$}
 
 \end{answer}

@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2023 年·新高考Ⅱ卷 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2023_xgk2_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2023_数学真题_新高考Ⅱ_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2023 年·新高考Ⅱ卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2023/2023_数学真题_新高考Ⅱ_试题.md + 2023/2023_数学真题_新高考Ⅱ_解析正文.md + 2023/2023_数学真题_新高考Ⅱ_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -18,7 +17,16 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　在复平面内，$(1+3\mathrm i)(3-\mathrm i)$ 对应的点位于（　　）
+\textbf{题目}：
+
+在复平面内，$(1+3\mathrm i)(3-\mathrm i)$ 对应的点位于（　　）
+
+\begin{gkopts}(4)
+\task A．第一象限
+\task B．第二象限
+\task C．第三象限
+\task D．第四象限
+\end{gkopts}
 
 \textbf{解析}
 
@@ -29,11 +37,11 @@
 
 对应的点为 $(6,8)$，横、纵坐标均为正，位于\textbf{第一象限}。
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{提速技巧}：只判象限时不必算完整乘积，只要\textbf{实部与虚部的符号}。也可用辐角相加：$1+3\mathrm i$ 的辐角在第一象限（约 $71.6^\circ$），$3-\mathrm i$ 的辐角在第四象限（约 $-18.4^\circ$），和约 $53.2^\circ$，仍在第一象限。
 \end{gktip}
+
+\gkanswer{答案：A（第一象限）}
 
 \par\medskip
 
@@ -41,7 +49,16 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　设集合 $A=\{0,-a\}$，$B=\{1,a-2,2a-2\}$，若 $A\subseteq B$，则 $a=$（　　）
+\textbf{题目}：
+
+设集合 $A=\{0,-a\}$，$B=\{1,a-2,2a-2\}$，若 $A\subseteq B$，则 $a=$（　　）
+
+\begin{gkopts}(4)
+\task A．$2$
+\task B．$1$
+\task C．$\dfrac23$
+\task D．$-1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -67,11 +84,11 @@ $a=1$ & $\{0,-1\}$ & $\{1,-1,0\}$ & 两元素均在 $B$ 中， \\
 
 $a=1$ 时还需检验集合的\textbf{互异性}：$A=\{0,-1\}$ 两元素不同 ；$B=\{1,-1,0\}$ 三元素互不相同 。故 $a=1$ 合法。
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{易错点}：只做第一步就选 A（$a=2$）是本题最常见的失分方式。$0\in B$ 是 $A\subseteq B$ 的\textbf{必要条件而非充分条件}，必须把 $-a$ 也验一遍。另外，含参数的集合题\textbf{永远要回代检验互异性}。
 \end{gktip}
+
+\gkanswer{答案：B（$a=1$）}
 
 \par\medskip
 
@@ -79,7 +96,16 @@ $a=1$ 时还需检验集合的\textbf{互异性}：$A=\{0,-1\}$ 两元素不同 
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　某学校为了解学生参加体育运动的情况，用比例分配的分层随机抽样法作抽样调查，拟从初中部和高中部两层共抽取 $60$ 名学生，已知该校初中部和高中部分别有 $400$ 名和 $200$ 名学生，则不同的抽样结果共有（　　）
+\textbf{题目}：
+
+某学校为了解学生参加体育运动的情况，用比例分配的分层随机抽样法作抽样调查，拟从初中部和高中部两层共抽取 $60$ 名学生，已知该校初中部和高中部分别有 $400$ 名和 $200$ 名学生，则不同的抽样结果共有（　　）
+
+\begin{gkopts}(2)
+\task A．$C_{400}^{45}C_{200}^{15}$ 种
+\task B．$C_{400}^{20}C_{200}^{40}$ 种
+\task C．$C_{400}^{30}C_{200}^{30}$ 种
+\task D．$C_{400}^{40}C_{200}^{20}$ 种
+\end{gkopts}
 
 \textbf{解析}
 
@@ -96,11 +122,11 @@ $a=1$ 时还需检验集合的\textbf{互异性}：$A=\{0,-1\}$ 两元素不同 
 初中部的 $40$ 人从 $400$ 人中选：$C_{400}^{40}$ 种；高中部的 $20$ 人从 $200$ 人中选：$C_{200}^{20}$ 种。两层的选择互相独立，由\textbf{分步乘法计数原理}：
 \[N=C_{400}^{40}C_{200}^{20}\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{辨析}：选项 C（$C_{400}^{30}C_{200}^{30}$）对应的是「每层各抽 $30$ 人」的\textbf{等额分配}，不是比例分配；选项 B 把两层的人数\textbf{抽反了}（从 $400$ 人里抽 $20$、从 $200$ 人里抽 $40$）。看到「比例分配」四字，第一动作就是算抽样比。
 \end{gktip}
+
+\gkanswer{答案：D（$C_{400}^{40}C_{200}^{20}$）}
 
 \par\medskip
 
@@ -108,7 +134,16 @@ $a=1$ 时还需检验集合的\textbf{互异性}：$A=\{0,-1\}$ 两元素不同 
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　若 $f(x)=(x+a)\ln\dfrac{2x-1}{2x+1}$ 为偶函数，则 $a=$（　　）
+\textbf{题目}：
+
+若 $f(x)=(x+a)\ln\dfrac{2x-1}{2x+1}$ 为偶函数，则 $a=$（　　）
+
+\begin{gkopts}(4)
+\task A．$-1$
+\task B．$0$
+\task C．$\dfrac12$
+\task D．$1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -137,11 +172,11 @@ $f$ 为偶函数即 $f(-x)=f(x)$ 对一切 $x\in D$ 成立：
 
 \textbf{验证}：$a=0$ 时 $f(x)=x\ln\dfrac{2x-1}{2x+1}$ 是「奇 $\times$ 奇」，确为偶函数 （数值验算：$f(0.8)=f(-0.8)$、$f(1.3)=f(-1.3)$、$f(2.7)=f(-2.7)$ 均成立。）
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{通用结论}（值得背下来）：$\ln\dfrac{mx-n}{mx+n}$、$\ln\left(x+\sqrt{x^{2}+1}\right)$、$\dfrac{\mathrm e^{x}-1}{\mathrm e^{x}+1}$ 都是\textbf{奇函数}。奇 $\times$ 奇 $=$ 偶、奇 $\times$ 偶 $=$ 奇，看清结构可以秒杀这类题。
 \end{gktip}
+
+\gkanswer{答案：B（$a=0$）}
 
 \par\medskip
 
@@ -149,7 +184,16 @@ $f$ 为偶函数即 $f(-x)=f(x)$ 对一切 $x\in D$ 成立：
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　已知椭圆 $C:\dfrac{x^{2}}3+y^{2}=1$ 的左、右焦点分别为 $F_1$，$F_2$，直线 $y=x+m$ 与 $C$ 交于 $A$，$B$ 两点，若 $\triangle F_1AB$ 的面积是 $\triangle F_2AB$ 面积的两倍，则 $m=$（　　）
+\textbf{题目}：
+
+已知椭圆 $C:\dfrac{x^{2}}3+y^{2}=1$ 的左、右焦点分别为 $F_1$，$F_2$，直线 $y=x+m$ 与 $C$ 交于 $A$，$B$ 两点，若 $\triangle F_1AB$ 的面积是 $\triangle F_2AB$ 面积的两倍，则 $m=$（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac23$
+\task B．$\dfrac{\sqrt2}3$
+\task C．$-\dfrac{\sqrt2}3$
+\task D．$-\dfrac23$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -188,13 +232,13 @@ $a^{2}=3$，$b^{2}=1$，$c^{2}=a^{2}-b^{2}=2$，故
 \item $m=-\dfrac{\sqrt2}3$：$\dfrac{\sqrt2}3\approx0.47<2$ 
 \end{itemize}
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错点}：忘记验 $\Delta>0$ 会得到两个答案而无从取舍。\textbf{只要题目里出现「直线与圆锥曲线交于两点」，判别式条件就是解的隐含约束}，去绝对值后必须回头筛一遍。
 
 \textbf{符号直觉}：$d_1=2d_2$ 说明 $F_1$ 离直线更远，直线应当\textbf{偏向 $F_2$（右侧）}；$y=x+m$ 中 $m<0$ 正是把直线向右下平移，与结论相符。
 \end{gktip}
+
+\gkanswer{答案：C（$-\dfrac{\sqrt2}3$）}
 
 \par\medskip
 
@@ -202,7 +246,16 @@ $a^{2}=3$，$b^{2}=1$，$c^{2}=a^{2}-b^{2}=2$，故
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　已知函数 $f(x)=a\mathrm e^{x}-\ln x$ 在区间 $(1,2)$ 单调递增，则 $a$ 的最小值为（　　）
+\textbf{题目}：
+
+已知函数 $f(x)=a\mathrm e^{x}-\ln x$ 在区间 $(1,2)$ 单调递增，则 $a$ 的最小值为（　　）
+
+\begin{gkopts}(4)
+\task A．$\mathrm e^{2}$
+\task B．$\mathrm e$
+\task C．$\mathrm e^{-1}$
+\task D．$\mathrm e^{-2}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -233,11 +286,11 @@ $f$ 在 $(1,2)$ 递增 $\iff f'(x)\ge0$ 在 $(1,2)$ 上恒成立，即
 
 故 $a$ 的最小值为 $\mathrm e^{-1}$。
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{开区间的好处}：若题目改成闭区间 $[1,2]$，答案仍是 $\mathrm e^{-1}$（此时 $f'(1)=0$，单个零点不破坏单调性）。\textbf{开区间求「恒成立」时取的是上确界，不必纠结端点能否取到}——这是分离参数法的常见卡点。
 \end{gktip}
+
+\gkanswer{答案：C（$\mathrm e^{-1}$）}
 
 \par\medskip
 
@@ -245,7 +298,16 @@ $f$ 在 $(1,2)$ 递增 $\iff f'(x)\ge0$ 在 $(1,2)$ 上恒成立，即
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　已知 $\alpha$ 为锐角，$\cos\alpha=\dfrac{1+\sqrt5}4$，则 $\sin\dfrac\alpha2=$（　　）
+\textbf{题目}：
+
+已知 $\alpha$ 为锐角，$\cos\alpha=\dfrac{1+\sqrt5}4$，则 $\sin\dfrac\alpha2=$（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac{3-\sqrt5}8$
+\task B．$\dfrac{-1+\sqrt5}8$
+\task C．$\dfrac{3-\sqrt5}4$
+\task D．$\dfrac{-1+\sqrt5}4$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -265,13 +327,13 @@ $\alpha$ 为锐角，即 $0<\alpha<\dfrac\pi2$，故 $0<\dfrac\alpha2<\dfrac\pi4
 
 \textbf{数值核验}：$\cos\alpha=\dfrac{1+\sqrt5}4\approx0.809$，$\alpha\approx36^\circ$，$\sin18^\circ\approx0.309$；而 $\dfrac{\sqrt5-1}4\approx0.309$ 
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{陷阱设计}：选项 A 是 $\dfrac{3-\sqrt5}8$，正是 $\sin^{2}\dfrac\alpha2$ ——\textbf{算到平方就停手}是本题最主要的失分点。四个选项刚好覆盖「平方值 / 开方值」与「分母 $8$ / 分母 $4$」的四种组合，务必算到底。
 
 \textbf{背景}：$\cos36^\circ=\dfrac{1+\sqrt5}4$、$\sin18^\circ=\dfrac{\sqrt5-1}4$ 是正五边形里的黄金分割角，值得记住。
 \end{gktip}
+
+\gkanswer{答案：D（$\dfrac{-1+\sqrt5}4$）}
 
 \par\medskip
 
@@ -279,7 +341,16 @@ $\alpha$ 为锐角，即 $0<\alpha<\dfrac\pi2$，故 $0<\dfrac\alpha2<\dfrac\pi4
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　记 $S_n$ 为等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $S_4=-5$，$S_6=21S_2$，则 $S_8=$（　　）
+\textbf{题目}：
+
+记 $S_n$ 为等比数列 $\left\{a_n\right\}$ 的前 $n$ 项和，若 $S_4=-5$，$S_6=21S_2$，则 $S_8=$（　　）
+
+\begin{gkopts}(4)
+\task A．$120$
+\task B．$85$
+\task C．$-85$
+\task D．$-120$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -312,13 +383,13 @@ $\alpha$ 为锐角，即 $0<\alpha<\dfrac\pi2$，故 $0<\dfrac\alpha2<\dfrac\pi4
 
 两法结果一致（且 $q=2$ 与 $q=-2$ 给出同一个 $S_8$，因为答案只依赖 $q^{2}$）。
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{方法总结}：凡是\textbf{只给 $S_{2k}$ 之间的关系}的等比数列题，一律优先用分段和性质——它把「求 $a_1$ 和 $q$」两个未知量压缩成「求 $r=q^{2}$ 和 $t=S_2$」，且回避了 $q=\pm2$ 的分类。使用前只需确认 $S_2\ne0$。
 
 \textbf{符号检查}：$S_8=-85$ 与 $S_4=-5$ 同号且 $\left|S_8\right|$ 大得多，符合 $r=4>1$（越加越"负得多"）的直觉；选项 B（$85$）正是漏掉负号的陷阱。
 \end{gktip}
+
+\gkanswer{答案：C（$-85$）}
 
 \par\medskip
 
@@ -328,7 +399,16 @@ $\alpha$ 为锐角，即 $0<\alpha<\dfrac\pi2$，故 $0<\dfrac\alpha2<\dfrac\pi4
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　已知圆锥的顶点为 $P$，底面圆心为 $O$，$AB$ 为底面直径，$\angle APB=120^\circ$，$PA=2$，点 $C$ 在底面圆周上，且二面角 $P\text{-}AC\text{-}O$ 为 $45^\circ$，则（　　）
+\textbf{题目}：
+
+已知圆锥的顶点为 $P$，底面圆心为 $O$，$AB$ 为底面直径，$\angle APB=120^\circ$，$PA=2$，点 $C$ 在底面圆周上，且二面角 $P\text{-}AC\text{-}O$ 为 $45^\circ$，则（　　）
+
+\begin{gkopts}(2)
+\task A．该圆锥的体积为 $\pi$
+\task B．该圆锥的侧面积为 $4\sqrt3\pi$
+\task C．$AC=2\sqrt2$
+\task D．$\triangle PAC$ 的面积为 $\sqrt3$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -390,13 +470,13 @@ $PM\perp AC$，故 $PM$ 就是 $\triangle PAC$ 中 $AC$ 边上的高。在 $\mat
 
 \par\medskip
 
-\gkanswer{答案：AC}
-
 \begin{gktip}
 \textbf{解题主线}：本题四个选项是\textbf{串联}的——只要 $r$、$h$ 算错，四个全错。$\angle APB=120^\circ$ 给的是\textbf{轴截面的顶角}，$AB$ 是底面直径而非母线，这是第一个坑。
 
 \textbf{二面角的找法}：$P\text{-}AC\text{-}O$ 的棱是弦 $AC$，取中点 $M$ 后「两个等腰三角形的中线同时垂直于底」是标准套路，比建系更快。
 \end{gktip}
+
+\gkanswer{答案：AC}
 
 \par\medskip
 
@@ -404,7 +484,16 @@ $PM\perp AC$，故 $PM$ 就是 $\triangle PAC$ 中 $AC$ 边上的高。在 $\mat
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　设 $O$ 为坐标原点，直线 $y=-\sqrt3(x-1)$ 过抛物线 $C:y^{2}=2px\ (p>0)$ 的焦点，且与 $C$ 交于 $M$，$N$ 两点，$l$ 为 $C$ 的准线，则（　　）
+\textbf{题目}：
+
+设 $O$ 为坐标原点，直线 $y=-\sqrt3(x-1)$ 过抛物线 $C:y^{2}=2px\ (p>0)$ 的焦点，且与 $C$ 交于 $M$，$N$ 两点，$l$ 为 $C$ 的准线，则（　　）
+
+\begin{gkopts}(2)
+\task A．$p=2$
+\task B．$|MN|=\dfrac83$
+\task C．以 $MN$ 为直径的圆与 $l$ 相切
+\task D．$\triangle OMN$ 为等腰三角形
+\end{gkopts}
 
 \textbf{解析}
 
@@ -469,13 +558,13 @@ $\lvert MN\rvert$ & $\frac{16}3$ & $\approx5.333$ \\
 
 \par\medskip
 
-\gkanswer{答案：AC}
-
 \begin{gktip}
 \textbf{通性结论}（值得背下来）：抛物线的\textbf{焦点弦为直径的圆必与准线相切}；对应地，\textbf{准线上任一点看焦点弦的张角}……这类性质的证明都只用一句「焦半径等于到准线的距离」。
 
 \textbf{B 项的陷阱}：$\dfrac83$ 恰好是 $\dfrac{16}3$ 的一半，命题人算准了会有人漏掉一条焦半径或把 $\dfrac{|MN|}2$ 当成 $|MN|$。
 \end{gktip}
+
+\gkanswer{答案：AC}
 
 \par\medskip
 
@@ -483,7 +572,16 @@ $\lvert MN\rvert$ & $\frac{16}3$ & $\approx5.333$ \\
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　若函数 $f(x)=a\ln x+\dfrac bx+\dfrac c{x^{2}}\ (a\ne0)$ 既有极大值也有极小值，则（　　）
+\textbf{题目}：
+
+若函数 $f(x)=a\ln x+\dfrac bx+\dfrac c{x^{2}}\ (a\ne0)$ 既有极大值也有极小值，则（　　）
+
+\begin{gkopts}(4)
+\task A．$bc>0$
+\task B．$ab>0$
+\task C．$b^{2}+8ac>0$
+\task D．$ac<0$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -540,13 +638,13 @@ $\lvert MN\rvert$ & $\frac{16}3$ & $\approx5.333$ \\
 
 \par\medskip
 
-\gkanswer{答案：BCD}
-
 \begin{gktip}
 \textbf{方法总结}：含 $\ln x$、$\dfrac1x$、$\dfrac1{x^{2}}$ 的函数求导后\textbf{必然能通分成「二次式 / $x^{3}$」}，题目就退化为「二次方程有两个不同正根」的经典三条件（$\Delta>0$、两根和 $>0$、两根积 $>0$）。
 
 \textbf{A 项的设计}：命题人把 B、D 相乘的\textbf{必然推论}取反做成选项。凡是多选题里出现「三个系数两两乘积」的组合，先把已确定的两条相乘看看能否推出第三条。
 \end{gktip}
+
+\gkanswer{答案：BCD}
 
 \par\medskip
 
@@ -554,7 +652,16 @@ $\lvert MN\rvert$ & $\frac{16}3$ & $\approx5.333$ \\
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　在信道内传输 $0$，$1$ 信号，信号的传输相互独立。发送 $0$ 时，收到 $1$ 的概率为 $\alpha\ (0<\alpha<1)$，收到 $0$ 的概率为 $1-\alpha$；发送 $1$ 时，收到 $0$ 的概率为 $\beta\ (0<\beta<1)$，收到 $1$ 的概率为 $1-\beta$。考虑两种传输方案：单次传输和三次传输。单次传输是指每个信号只发送 $1$ 次，三次传输是指每个信号重复发送 $3$ 次。收到的信号需要译码，译码规则如下：单次传输时，收到的信号即为译码；三次传输时，收到的信号中出现次数多的即为译码（例如，若依次收到 $1,0,1$，则译码为 $1$）（　　）
+\textbf{题目}：
+
+在信道内传输 $0$，$1$ 信号，信号的传输相互独立。发送 $0$ 时，收到 $1$ 的概率为 $\alpha\ (0<\alpha<1)$，收到 $0$ 的概率为 $1-\alpha$；发送 $1$ 时，收到 $0$ 的概率为 $\beta\ (0<\beta<1)$，收到 $1$ 的概率为 $1-\beta$。考虑两种传输方案：单次传输和三次传输。单次传输是指每个信号只发送 $1$ 次，三次传输是指每个信号重复发送 $3$ 次。收到的信号需要译码，译码规则如下：单次传输时，收到的信号即为译码；三次传输时，收到的信号中出现次数多的即为译码（例如，若依次收到 $1,0,1$，则译码为 $1$）（　　）
+
+\begin{gkopts}(1)
+\task A．采用单次传输方案，若依次发送 $1,0,1$，则依次收到 $1,0,1$ 的概率为 $(1-\alpha)(1-\beta)^{2}$
+\task B．采用三次传输方案，若发送 $1$，则依次收到 $1,0,1$ 的概率为 $\beta(1-\beta)^{2}$
+\task C．采用三次传输方案，若发送 $1$，则译码为 $1$ 的概率为 $\beta(1-\beta)^{2}+(1-\beta)^{3}$
+\task D．当 $0<\alpha<0.5$ 时，若发送 $0$，则采用三次传输方案译码为 $0$ 的概率大于采用单次传输方案译码为 $0$ 的概率
+\end{gkopts}
 
 \textbf{解析}
 
@@ -628,8 +735,6 @@ $1$ & $\beta$ & $1-\beta$ \\
 
 \par\medskip
 
-\gkanswer{答案：ABD}
-
 \begin{gktip}
 \textbf{核心辨析——「依次收到」与「译码为」的区别}：
 \begin{itemize}
@@ -640,6 +745,8 @@ $1$ & $\beta$ & $1-\beta$ \\
 \textbf{D 项的意义}：$\alpha(1-\alpha)(1-2\alpha)$ 的符号说明——只有当\textbf{单次出错率低于 $50\%$} 时重复传输才更可靠；$\alpha>0.5$ 时信道「错得比对得多」，重复三次反而放大错误。这是重复码的经典结论。
 \end{gktip}
 
+\gkanswer{答案：ABD}
+
 \par\medskip
 
 \end{answer}
@@ -648,7 +755,9 @@ $1$ & $\beta$ & $1-\beta$ \\
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　已知向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a-\boldsymbol b|=\sqrt3$，$|\boldsymbol a+\boldsymbol b|=|2\boldsymbol a-\boldsymbol b|$，则 $|\boldsymbol b|=$ \gkblank{}．
+\textbf{题目}：
+
+已知向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a-\boldsymbol b|=\sqrt3$，$|\boldsymbol a+\boldsymbol b|=|2\boldsymbol a-\boldsymbol b|$，则 $|\boldsymbol b|=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -675,13 +784,13 @@ $A$ \textbf{恰好抵消}，直接得
 \textbf{具体验证}：取 $\boldsymbol a=(2,0)$（$A=4$），则 $t=2$，可取 $\boldsymbol b=\left(1,\sqrt2\right)$（$\boldsymbol a\cdot\boldsymbol b=2$ ，$B=1+2=3$ ）。此时
 \[|\boldsymbol a-\boldsymbol b|=\left|\left(1,-\sqrt2\right)\right|=\sqrt3\ ,\qquad |\boldsymbol a+\boldsymbol b|=\sqrt{9+2}=\sqrt{11},\quad |2\boldsymbol a-\boldsymbol b|=\left|\left(3,-\sqrt2\right)\right|=\sqrt{11}\ \]
 
-\gkanswer{答案：$\sqrt3$}
-
 \begin{gktip}
 \textbf{结构洞察}：本题两个条件、三个未知量（$A$、$B$、$t$），看似不够解——但问的只是 $B$，而两个条件恰好把 $A$ 与 $t$ 消成一体。\textbf{遇到「未知量比方程多」的向量题，先看所求量能否被单独解出}，不要急着补设角度或坐标。
 
 \textbf{通用恒等式}：$|\boldsymbol u|^{2}-|\boldsymbol v|^{2}=(\boldsymbol u+\boldsymbol v)\cdot(\boldsymbol u-\boldsymbol v)$。用它处理第二个条件更快：$|\boldsymbol a+\boldsymbol b|^{2}-|2\boldsymbol a-\boldsymbol b|^{2}=(3\boldsymbol a)\cdot(2\boldsymbol b-\boldsymbol a)=0$，即 $2t=A$。
 \end{gktip}
+
+\gkanswer{答案：$\sqrt3$}
 
 \par\medskip
 
@@ -689,7 +798,9 @@ $A$ \textbf{恰好抵消}，直接得
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　底面边长为 $4$ 的正四棱锥被平行于其底面的平面所截，截去一个底面边长为 $2$，高为 $3$ 的正四棱锥，所得棱台的体积为 \gkblank{}．
+\textbf{题目}：
+
+底面边长为 $4$ 的正四棱锥被平行于其底面的平面所截，截去一个底面边长为 $2$，高为 $3$ 的正四棱锥，所得棱台的体积为 \gkblank{}．
 
 \textbf{解析}
 
@@ -713,13 +824,13 @@ $A$ \textbf{恰好抵消}，直接得
 
 两法一致。
 
-\gkanswer{答案：$28$}
-
 \begin{gktip}
 \textbf{易错点}：把「小棱锥的高 $3$」误当成「棱台的高」而直接套棱台公式，会算出 $\dfrac33(4+16+8)=28$ ——\textbf{数值碰巧相同}（因为本题恰好 $H-3=3$），但推理是错的，换一组数据就会翻车。\textbf{先用相似比把大棱锥的高求出来}才是可靠路径。
 
 \textbf{相似比口诀}：长度比 $k$、面积比 $k^{2}$、体积比 $k^{3}$。本题 $k=\dfrac12$，故 $V_{\text{\text{小}}}=\dfrac18V_{\text{\text{大}}}=\dfrac{32}8=4$ ，可以用来秒验。
 \end{gktip}
+
+\gkanswer{答案：$28$}
 
 \par\medskip
 
@@ -727,7 +838,9 @@ $A$ \textbf{恰好抵消}，直接得
 \begin{answer}
 \gksolhead{15}{}
 
-\textbf{题目}　已知直线 $x-my+1=0$ 与 $\odot C:(x-1)^{2}+y^{2}=4$ 交于 $A$，$B$ 两点，写出满足“$\triangle ABC$ 面积为 $\dfrac85$”的 $m$ 的一个值 \gkblank{}．
+\textbf{题目}：
+
+已知直线 $x-my+1=0$ 与 $\odot C:(x-1)^{2}+y^{2}=4$ 交于 $A$，$B$ 两点，写出满足“$\triangle ABC$ 面积为 $\dfrac85$”的 $m$ 的一个值 \gkblank{}．
 
 \textbf{解析}
 
@@ -762,13 +875,13 @@ $A$ \textbf{恰好抵消}，直接得
 \textbf{数值核验}（取 $m=2$）：$d=\dfrac2{\sqrt5}$，$S=\dfrac2{\sqrt5}\sqrt{4-\dfrac45}=\dfrac2{\sqrt5}\cdot\dfrac4{\sqrt5}=\dfrac85$ 
 （取 $m=\dfrac12$：$d=\dfrac2{\sqrt{5/4}}=\dfrac4{\sqrt5}$，$S=\dfrac4{\sqrt5}\sqrt{4-\dfrac{16}5}=\dfrac4{\sqrt5}\cdot\dfrac2{\sqrt5}=\dfrac85$ ）
 
-\gkanswer{答案：$2$（答案不唯一，$-2$、$\dfrac12$、$-\dfrac12$ 均可）}
-
 \begin{gktip}
 \textbf{开放题的作答策略}：这类「写出一个值」的题\textbf{只需给一个}，但推导时务必把二次方程的两根都解出来再挑最好写的那个——若只凑一个而漏掉 $u$ 的另一根，遇到「写出所有值」的变式就会失分。
 
 \textbf{几何直观}：$S=d\sqrt{4-d^{2}}$ 在 $d=\sqrt2$ 处取最大值 $2$（此时 $\angle ACB=90^\circ$）。因为 $\dfrac85<2$，方程必有\textbf{两组}解，一组 $d>\sqrt2$、一组 $d<\sqrt2$——这解释了为什么会出现四个 $m$。
 \end{gktip}
+
+\gkanswer{答案：$2$（$-2$、$\dfrac12$、$-\dfrac12$ 均可）}
 
 \par\medskip
 
@@ -776,7 +889,9 @@ $A$ \textbf{恰好抵消}，直接得
 \begin{answer}
 \gksolhead{16}{}
 
-\textbf{题目}　已知函数 $f(x)=\sin(\omega x+\varphi)$，如图，$A$，$B$ 是直线 $y=\dfrac12$ 与曲线 $y=f(x)$ 的两个交点，若 $|AB|=\dfrac\pi6$，则 $f(\pi)=$ \gkblank{}．
+\textbf{题目}：
+
+已知函数 $f(x)=\sin(\omega x+\varphi)$，如图，$A$，$B$ 是直线 $y=\dfrac12$ 与曲线 $y=f(x)$ 的两个交点，若 $|AB|=\dfrac\pi6$，则 $f(\pi)=$ \gkblank{}．
 
 \begin{center}\input{figures/f2023x2_t16_sine}\end{center}
 
@@ -824,13 +939,13 @@ $A$、$B$ 的横坐标 & $\approx0.654$、$\approx1.178$ & 差 $\approx0.5236=\f
 \end{tabular}
 \end{center}
 
-\gkanswer{答案：$-\dfrac{\sqrt3}2$}
-
 \begin{gktip}
 \textbf{读图要点}：$|AB|$ 是\textbf{两交点间的水平距离}而非弧长；$A$、$B$ 是否在同一波峰两侧决定了 $\theta$ 之差取 $\dfrac{2\pi}3$ 还是 $2\pi-\dfrac{2\pi}3=\dfrac{4\pi}3$（后者对应"跨一个波谷"的相邻交点），\textbf{看错会把 $\omega$ 算成 $8$}。
 
 \textbf{另一个常用关系}：若 $A$、$B$ 在同一波峰两侧，则波峰的横坐标恰是 $\dfrac{x_A+x_B}2$——本题也可先由此定出最大值点再求 $\varphi$。
 \end{gktip}
+
+\gkanswer{答案：$-\dfrac{\sqrt3}2$}
 
 \par\medskip
 
@@ -840,7 +955,15 @@ $A$、$B$ 的横坐标 & $\approx0.654$、$\approx1.178$ & 差 $\approx0.5236=\f
 \begin{answer}
 \gksolhead{17}{10 分}
 
-\textbf{题目}　记 $\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$，已知 $\triangle ABC$ 面积为 $\sqrt3$，$D$ 为 $BC$ 的中点，且 $AD=1$。(1) 若 $\angle ADC=\dfrac\pi3$，求 $\tan B$；(2) 若 $b^{2}+c^{2}=8$，求 $b$，$c$。
+\textbf{题目}（10 分）：
+
+记 $\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$，已知 $\triangle ABC$ 面积为 $\sqrt3$，$D$ 为 $BC$ 的中点，且 $AD=1$。
+
+  (1) 若 $\angle ADC=\dfrac\pi3$，求 $\tan B$；
+
+  (2) 若 $b^{2}+c^{2}=8$，求 $b$，$c$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -942,13 +1065,25 @@ $(\ast)^{2}+(\ast\ast)^{2}$（利用 $\sin^{2}A+\cos^{2}A=1$）：
 而 $(\ast)$ 与 $(\ast\ast)$ 这对「$bc\cos A$ 与 $bc\sin A$ 同时已知」的结构是\textbf{万能配置}：相除得 $\tan A$、平方和得 $bc$，两个未知量一次性解决。第 (1) 问的建系法则展示了另一条思路——\textbf{中点在原点、中线为已知向量}时，坐标法几乎不用算。
 \end{gktip}
 
+\gkanswer{答案（1）：$\tan B=\dfrac{\sqrt3}5$}
+
+\gkanswer{答案（2）：$b=c=2$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{18}{12 分}
 
-\textbf{题目}　已知 $\left\{a_n\right\}$ 为等差数列，$b_n=\begin{cases}a_n-6,&n\ \text{\text{为奇数}}\\ 2a_n,&n\ \text{\text{为偶数}}\end{cases}$，记 $S_n$，$T_n$ 分别为数列 $\left\{a_n\right\}$，$\left\{b_n\right\}$ 的前 $n$ 项和，$S_4=32$，$T_3=16$。(1) 求 $\left\{a_n\right\}$ 的通项公式；(2) 证明：当 $n>5$ 时，$T_n>S_n$。
+\textbf{题目}（12 分）：
+
+已知 $\left\{a_n\right\}$ 为等差数列，$b_n=\begin{cases}a_n-6,&n\ \text{\text{为奇数}}\\ 2a_n,&n\ \text{\text{为偶数}}\end{cases}$，记 $S_n$，$T_n$ 分别为数列 $\left\{a_n\right\}$，$\left\{b_n\right\}$ 的前 $n$ 项和，$S_4=32$，$T_3=16$。
+
+  (1) 求 $\left\{a_n\right\}$ 的通项公式；
+
+  (2) 证明：当 $n>5$ 时，$T_n>S_n$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1040,15 +1175,29 @@ $n=5$ 处\textbf{恰好相等}——这正是题目要求 $n>5$ 而非 $n\ge5$ �
 \textbf{踩坑提示}：$T_n-S_n$ 在偶数列与奇数列上分别递增，但\textbf{交错排列时整体不单调}。答题时若写"当 $n=6$ 时已大于 $0$，且差值递增，故 $n>5$ 时成立"，会因为 $n=7$ 处差值反而变小而\textbf{逻辑不成立}，必须两条分支各自估界。
 \end{gktip}
 
+\gkanswer{答案（1）：$a_n=2n+3$}
+
+\gkanswer{答案（2）：见解析版}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{12 分}
 
-\textbf{题目}　某研究小组经过研究发现某种疾病的患病者与未患病者的某项医学指标有明显差异，经过大量调查，得到如下的患病者和未患病者该指标的频率分布直方图：利用该指标制定一个检测标准，需要确定临界值 $c$，将该指标大于 $c$ 的人判定为阳性，小于或等于 $c$ 的人判定为阴性。此检测标准的漏诊率是将患病者判定为阴性的概率，记为 $p(c)$；误诊率是将未患病者判定为阳性的概率，记为 $q(c)$。假设数据在组内均匀分布。以事件发生的频率作为相应事件发生的概率。(1) 当漏诊率 $p(c)=0.5\%$ 时，求临界值 $c$ 和误诊率 $q(c)$；(2) 设函数 $f(c)=p(c)+q(c)$。当 $c\in[95,105]$，求 $f(c)$ 的解析式，并求 $f(c)$ 在区间 $[95,105]$ 的最小值。
+\textbf{题目}（12 分）：
+
+某研究小组经过研究发现某种疾病的患病者与未患病者的某项医学指标有明显差异，经过大量调查，得到如下的患病者和未患病者该指标的频率分布直方图：
 
 \begin{center}\input{figures/f2023x2_t19_hist}\end{center}
+
+利用该指标制定一个检测标准，需要确定临界值 $c$，将该指标大于 $c$ 的人判定为阳性，小于或等于 $c$ 的人判定为阴性。此检测标准的漏诊率是将患病者判定为阴性的概率，记为 $p(c)$；误诊率是将未患病者判定为阳性的概率，记为 $q(c)$。假设数据在组内均匀分布。以事件发生的频率作为相应事件发生的概率。
+
+  (1) 当漏诊率 $p(c)=0.5\%$ 时，求临界值 $c$ 和误诊率 $q(c)$；
+
+  (2) 设函数 $f(c)=p(c)+q(c)$。当 $c\in[95,105]$，求 $f(c)$ 的解析式，并求 $f(c)$ 在区间 $[95,105]$ 的最小值。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1150,15 +1299,27 @@ $q(c)=P(\text{\text{未患病者指标}}>c)$。$c=97.5$ 落在未患病者的 $[
 \textbf{计算要诀}：「组内均匀分布」意味着\textbf{频率按长度成比例切分}，落在某组内部的 $c$ 只需按比例取该组面积的一部分，其余整组直接乘 $5$。列表后逐段累加，比硬记公式稳妥。
 \end{gktip}
 
+\gkanswer{答案（1）：$c=97.5$，$q(c)=0.035$}
+
+\gkanswer{答案（2）：$f(c)=\begin{cases}-0.008c+0.82,&95\le c<100\\ 0.01c-0.98,&100\le c\le105\end{cases}$，最小值 $f(100)=0.02$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{20}{12 分}
 
-\textbf{题目}　如图，三棱锥 $A\text{-}BCD$ 中，$DA=DB=DC$，$BD\perp CD$，$\angle ADB=\angle ADC=60^\circ$，$E$ 为 $BC$ 的中点。(1) 证明：$BC\perp DA$；(2) 点 $F$ 满足 $\overrightarrow{EF}=\overrightarrow{DA}$，求二面角 $D\text{-}AB\text{-}F$ 的正弦值。
+\textbf{题目}（12 分）：
+
+如图，三棱锥 $A\text{-}BCD$ 中，$DA=DB=DC$，$BD\perp CD$，$\angle ADB=\angle ADC=60^\circ$，$E$ 为 $BC$ 的中点。
 
 \begin{center}\input{figures/f2023x2_t20_tetra}\end{center}
+
+  (1) 证明：$BC\perp DA$；
+
+  (2) 点 $F$ 满足 $\overrightarrow{EF}=\overrightarrow{DA}$，求二面角 $D\text{-}AB\text{-}F$ 的正弦值。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1254,13 +1415,25 @@ $\overrightarrow{BC}\cdot\overrightarrow{DA}=(-2,2,0)\cdot\left(1,1,\sqrt2\right
 \textbf{建系的选点逻辑}：$BD\perp CD$ 是题设\textbf{唯一现成的直角}，因此把 $D$ 设为原点、$DB$ 与 $DC$ 设为两条坐标轴是最省力的；两个 $60^\circ$ 角随即把 $A$ 的前两个坐标一次性定死，第三个坐标由模长补齐——这是「已知一点到三条轴的夹角」型建系的通法。
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\sin\theta=\dfrac{\sqrt3}3$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{21}{12 分}
 
-\textbf{题目}　已知双曲线 $C$ 的中心为坐标原点，左焦点为 $\left(-2\sqrt5,0\right)$，离心率为 $\sqrt5$。(1) 求 $C$ 的方程；(2) 记 $C$ 的左、右顶点分别为 $A_1$，$A_2$，过点 $(-4,0)$ 的直线与 $C$ 的左支交于 $M$，$N$ 两点，$M$ 在第二象限，直线 $MA_1$ 与直线 $NA_2$ 交于 $P$，证明：点 $P$ 在定直线上。
+\textbf{题目}（12 分）：
+
+已知双曲线 $C$ 的中心为坐标原点，左焦点为 $\left(-2\sqrt5,0\right)$，离心率为 $\sqrt5$。
+
+  (1) 求 $C$ 的方程；
+
+  (2) 记 $C$ 的左、右顶点分别为 $A_1$，$A_2$，过点 $(-4,0)$ 的直线与 $C$ 的左支交于 $M$，$N$ 两点，$M$ 在第二象限，直线 $MA_1$ 与直线 $NA_2$ 交于 $P$，证明：点 $P$ 在定直线上。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1380,13 +1553,29 @@ $0.45$ & $\left(-2.561,\ 3.198\right)$ & $\left(-39.54,\ -78.99\right)$ & $\left
 \textbf{为什么答案是 $x=-1$}：$(-4,0)$ 与定直线 $x=-1$ 关于……并非简单对称，而是满足 $x_{\text{\text{定}}}=\dfrac{a^{2}}{x_{\text{\text{过}}}}=\dfrac4{-4}=-1$——这正是双曲线中\textbf{极点与极线}的关系：过点 $(-4,0)$ 的弦的两端点与两顶点连线的交点，恒落在该点关于 $C$ 的极线上。记住这个二级结论可在选择填空题里秒答。
 \end{gktip}
 
+\gkanswer{答案（1）：$\dfrac{x^{2}}4-\dfrac{y^{2}}{16}=1$}
+
+\gkanswer{答案（2）：见解析版}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{22}{12 分}
 
-\textbf{题目}　(1) 证明：当 $0<x<1$ 时，$x-x^{2}<\sin x<x$；(2) 已知函数 $f(x)=\cos ax-\ln\left(1-x^{2}\right)$，若 $x=0$ 是 $f(x)$ 的极大值点，求 $a$ 的取值范围。
+\textbf{题目}（12 分）：
+
+(1) 证明：当 $0<x<1$ 时，$x-x^{2}<\sin x<x$；
+
+  (2) 已知函数 $f(x)=\cos ax-\ln\left(1-x^{2}\right)$，若 $x=0$ 是 $f(x)$ 的极大值点，求 $a$ 的取值范围。
+
+\par\medskip
+
+\begin{gktip}
+\textbf{试题来源}：deekur/gaokaomath（commit \texttt{34c13a6}，CC BY 4.0）之「2023新高考2」PDF。
+\end{gktip}
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1512,5 +1701,9 @@ $a=\sqrt2$ 处差值虽然极小（$10^{-13}$ 量级）但\textbf{确为正号}�
 \[f(x)=1+\left(1-\frac{a^{2}}2\right)x^{2}+\left(\frac12+\frac{a^{4}}{24}\right)x^{4}+\cdots\]
 $x^{2}$ 的系数在 $a^{2}=2$ 时为零，此时由 $x^{4}$ 的系数 $\dfrac12+\dfrac{4}{24}=\dfrac23>0$ 决定，故取极小——与第三种情形的严格证明完全吻合。
 \end{gktip}
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$a\in\left(-\infty,-\sqrt2\right)\cup\left(\sqrt2,+\infty\right)$}
 
 \end{answer}

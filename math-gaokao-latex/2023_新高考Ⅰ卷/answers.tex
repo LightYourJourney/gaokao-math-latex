@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2023 年·新高考Ⅰ卷 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2023_xgk1_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2023_数学真题_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2023 年·新高考Ⅰ卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2023/2023_数学真题_试题.md + 2023/2023_数学真题_解析正文.md + 2023/2023_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -16,7 +15,16 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　已知集合 $M=\{-2,-1,0,1,2\}$，$N=\left\{x\mid x^{2}-x-6\ge0\right\}$，则 $M\cap N=$（　　）
+\textbf{题目}：
+
+已知集合 $M=\{-2,-1,0,1,2\}$，$N=\left\{x\mid x^{2}-x-6\ge0\right\}$，则 $M\cap N=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\{-2,-1,0,1\}$
+\task B．$\{0,1,2\}$
+\task C．$\{-2\}$
+\task D．$\{2\}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -40,11 +48,11 @@
 
 \[M\cap N=\{-2\}\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错点}：不等式带等号，$x=-2$ 使 $x^2-x-6=4+2-6=0$ 满足 $\ge0$，\textbf{必须保留}。若漏掉等号会得到空集而无从选择。
 \end{gktip}
+
+\gkanswer{答案：C}
 
 \par\medskip
 
@@ -52,7 +60,16 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　已知 $z=\dfrac{1-\mathrm i}{2+2\mathrm i}$，则 $z-\bar z=$（　　）
+\textbf{题目}：
+
+已知 $z=\dfrac{1-\mathrm i}{2+2\mathrm i}$，则 $z-\bar z=$（　　）
+
+\begin{gkopts}(4)
+\task A．$-\mathrm i$
+\task B．$\mathrm i$
+\task C．$0$
+\task D．$1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -70,11 +87,11 @@
 此处 $z=0-\dfrac12\mathrm i$，$\operatorname{Im}(z)=-\dfrac12$：
 \[z-\bar z=2\mathrm i\times\left(-\frac12\right)=-\mathrm i\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{常用结论}（值得背下来）：$z+\bar z=2\operatorname{Re}(z)$（实数），$z-\bar z=2\mathrm i\operatorname{Im}(z)$（纯虚数或零）。有了它，本题只需求出虚部即可，不必写出完整的 $\bar z$。
 \end{gktip}
+
+\gkanswer{答案：A}
 
 \par\medskip
 
@@ -82,7 +99,16 @@
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　已知向量 $\boldsymbol a=(1,1)$，$\boldsymbol b=(1,-1)$。若 $(\boldsymbol a+\lambda\boldsymbol b)\perp(\boldsymbol a+\mu\boldsymbol b)$，则（　　）
+\textbf{题目}：
+
+已知向量 $\boldsymbol a=(1,1)$，$\boldsymbol b=(1,-1)$。若 $(\boldsymbol a+\lambda\boldsymbol b)\perp(\boldsymbol a+\mu\boldsymbol b)$，则（　　）
+
+\begin{gkopts}(4)
+\task A．$\lambda+\mu=1$
+\task B．$\lambda+\mu=-1$
+\task C．$\lambda\mu=1$
+\task D．$\lambda\mu=-1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -107,11 +133,11 @@
 
 同样得 $\lambda\mu=-1$。
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法总结}：当基向量互相垂直且模相等时，用整体展开比代坐标更快，且不易算错。做题前先花 3 秒观察 $\boldsymbol a\cdot\boldsymbol b$ 是否为零，往往能省一半计算。
 \end{gktip}
+
+\gkanswer{答案：D（$\lambda\mu=-1$）}
 
 \par\medskip
 
@@ -119,7 +145,16 @@
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　设函数 $f(x)=2^{x(x-a)}$ 在区间 $(0,1)$ 单调递减，则 $a$ 的取值范围是（　　）
+\textbf{题目}：
+
+设函数 $f(x)=2^{x(x-a)}$ 在区间 $(0,1)$ 单调递减，则 $a$ 的取值范围是（　　）
+
+\begin{gkopts}(4)
+\task A．$(-\infty,-2]$
+\task B．$[-2,0)$
+\task C．$(0,2]$
+\task D．$[2,+\infty)$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -128,7 +163,7 @@
 $f(x)=2^{g(x)}$，其中 $g(x)=x(x-a)=x^{2}-ax$。
 
 外层 $y=2^{u}$ 是\textbf{增函数}，由「同增异减」：
-\[f\ \text{在}\ (0,1)\ \text{递减}\iff g\ \text{在}\ (0,1)\ \text{递减}\]
+\[f\ \text{\text{在}}\ (0,1)\ \text{\text{递减}}\iff g\ \text{\text{在}}\ (0,1)\ \text{\text{递减}}\]
 
 \textbf{第二步，分析二次函数 $g$。}
 
@@ -142,11 +177,11 @@ $g(x)=x^{2}-ax$ 开口向上，对称轴
 要求 $(0,1)$ 落在递减区间内：
 \[(0,1)\subseteq\left(-\infty,\frac a2\right]\ \Longrightarrow\ \frac a2\ge1\ \Longrightarrow\ a\ge2\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法总结}：复合函数单调性题的三步——① 拆成内外层；② 判断外层增减，用「同增异减」把结论转移到内层；③ 对内层用其自身的单调性理论（本题是二次函数的对称轴）。注意区间端点：因为 $(0,1)$ 是开区间，$\dfrac a2\ge1$ 中的等号可以取到。
 \end{gktip}
+
+\gkanswer{答案：D（$a\ge2$）}
 
 \par\medskip
 
@@ -154,7 +189,16 @@ $g(x)=x^{2}-ax$ 开口向上，对称轴
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　设椭圆 $C_1:\dfrac{x^{2}}{a^{2}}+y^{2}=1\ (a>1)$，$C_2:\dfrac{x^{2}}4+y^{2}=1$ 的离心率分别为 $e_1$，$e_2$。若 $e_2=\sqrt3\,e_1$，则 $a=$（　　）
+\textbf{题目}：
+
+设椭圆 $C_1:\dfrac{x^{2}}{a^{2}}+y^{2}=1\ (a>1)$，$C_2:\dfrac{x^{2}}4+y^{2}=1$ 的离心率分别为 $e_1$，$e_2$。若 $e_2=\sqrt3\,e_1$，则 $a=$（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac{2\sqrt3}3$
+\task B．$\sqrt2$
+\task C．$\sqrt3$
+\task D．$\sqrt6$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -179,11 +223,11 @@ $C_1$ 中 $b^{2}=1$，由条件 $a>1$ 知 $a^{2}>1=b^{2}$，故\textbf{焦点也
 
 \textbf{检验}：$\dfrac{2\sqrt3}3\approx1.155>1$  符合 $a>1$。
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{注意}：条件 $a>1$ 不只是限定取值范围，更重要的是\textbf{确定了 $C_1$ 的焦点在 $x$ 轴上}。若 $0<a<1$，则长轴在 $y$ 轴上，$e_1=\dfrac{\sqrt{1-a^{2}}}1$，公式完全不同。凡见到形如 $\dfrac{x^2}{a^2}+y^2=1$ 而 $a$ 待定的椭圆，第一件事就是判断焦点位置。
 \end{gktip}
+
+\gkanswer{答案：A（$\dfrac{2\sqrt3}3$）}
 
 \par\medskip
 
@@ -191,7 +235,16 @@ $C_1$ 中 $b^{2}=1$，由条件 $a>1$ 知 $a^{2}>1=b^{2}$，故\textbf{焦点也
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　过点 $(0,-2)$ 与圆 $x^{2}+y^{2}-4x-1=0$ 相切的两条直线的夹角为 $\alpha$，则 $\sin\alpha=$（　　）
+\textbf{题目}：
+
+过点 $(0,-2)$ 与圆 $x^{2}+y^{2}-4x-1=0$ 相切的两条直线的夹角为 $\alpha$，则 $\sin\alpha=$（　　）
+
+\begin{gkopts}(2)
+\task A．$1$
+\task B．$\dfrac{\sqrt{15}}4$
+\task C．$\dfrac{\sqrt{10}}4$
+\task D．$\dfrac{\sqrt6}4$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -217,11 +270,11 @@ $C_1$ 中 $b^{2}=1$，由条件 $a>1$ 知 $a^{2}>1=b^{2}$，故\textbf{焦点也
 \textbf{第四步，二倍角。}
 \[\sin\alpha=\sin2\theta=2\sin\theta\cos\theta=2\times\frac{\sqrt5}{2\sqrt2}\times\frac{\sqrt3}{2\sqrt2}=\frac{2\sqrt{15}}{4\times2}=\frac{\sqrt{15}}4\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{常见错误}：直接把 $\dfrac rd=\dfrac{\sqrt5}{2\sqrt2}=\dfrac{\sqrt{10}}4$ 当成 $\sin\alpha$，从而错选 C——那求的是\textbf{半角}的正弦。凡涉及「两条切线夹角」，务必记住 $PC$ 平分该角，必须再做一次二倍角。
 \end{gktip}
+
+\gkanswer{答案：B（$\dfrac{\sqrt{15}}4$）}
 
 \par\medskip
 
@@ -229,7 +282,16 @@ $C_1$ 中 $b^{2}=1$，由条件 $a>1$ 知 $a^{2}>1=b^{2}$，故\textbf{焦点也
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和。甲：$\left\{a_n\right\}$ 为等差数列；乙：$\left\{\dfrac{S_n}n\right\}$ 为等差数列。则甲是乙的（　　）条件
+\textbf{题目}：
+
+记 $S_n$ 为数列 $\left\{a_n\right\}$ 的前 $n$ 项和，设甲：$\left\{a_n\right\}$ 为等差数列；乙：$\left\{\dfrac{S_n}n\right\}$ 为等差数列，则（　　）
+
+\begin{gkopts}(2)
+\task A．甲是乙的充分条件但不是必要条件
+\task B．甲是乙的必要条件但不是充分条件
+\task C．甲是乙的充要条件
+\task D．甲既不是乙的充分条件也不是乙的必要条件
+\end{gkopts}
 
 \textbf{解析}
 
@@ -263,13 +325,13 @@ $a_n$ 是 $n$ 的\textbf{一次函数}，故 $\left\{a_n\right\}$ 为等差数�
 
 \textbf{综上，甲是乙的充要条件。}
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{值得记住的等价链}：
-\[\left\{a_n\right\}\text{等差}\iff S_n=An^{2}+Bn\ (\text{无常数项的二次式})\iff\left\{\frac{S_n}n\right\}\text{等差}\]
+\[\left\{a_n\right\}\text{\text{等差}}\iff S_n=An^{2}+Bn\ (\text{\text{无常数项的二次式}})\iff\left\{\frac{S_n}n\right\}\text{\text{等差}}\]
 这三者完全等价，在选填题中可以互相秒杀。特别注意 $S_n$ 若含常数项（如 $S_n=n^2+1$），则 $\{a_n\}$ \textbf{不是}等差数列（$a_1$ 会与通项公式脱节）。
 \end{gktip}
+
+\gkanswer{答案：C（充要条件）}
 
 \par\medskip
 
@@ -277,7 +339,16 @@ $a_n$ 是 $n$ 的\textbf{一次函数}，故 $\left\{a_n\right\}$ 为等差数�
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　已知 $\sin(\alpha-\beta)=\dfrac13$，$\cos\alpha\sin\beta=\dfrac16$，则 $\cos(2\alpha+2\beta)=$（　　）
+\textbf{题目}：
+
+已知 $\sin(\alpha-\beta)=\dfrac13$，$\cos\alpha\sin\beta=\dfrac16$，则 $\cos(2\alpha+2\beta)=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac79$
+\task B．$\dfrac19$
+\task C．$-\dfrac19$
+\task D．$-\dfrac79$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -300,11 +371,11 @@ $a_n$ 是 $n$ 的\textbf{一次函数}，故 $\left\{a_n\right\}$ 为等差数�
 由于我们只知道 $\sin(\alpha+\beta)$，选用\textbf{第三个版本}（只含 $\sin$），可以避开求 $\cos(\alpha+\beta)$ 时的正负号讨论：
 \[\cos(2\alpha+2\beta)=1-2\sin^{2}(\alpha+\beta)=1-2\times\left(\frac23\right)^{2}=1-\frac89=\frac19\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：三角求值题的核心是「\textbf{用已知的零件拼出目标}」。本题的零件是 $\sin\alpha\cos\beta$ 与 $\cos\alpha\sin\beta$——它们既能组成 $\sin(\alpha-\beta)$，也能组成 $\sin(\alpha+\beta)$。选择二倍角公式时，\textbf{优先选只涉及已知量的那个版本}，可以省掉符号讨论，这是本题最实用的技巧。
 \end{gktip}
+
+\gkanswer{答案：B（$\dfrac19$）}
 
 \par\medskip
 
@@ -314,7 +385,16 @@ $a_n$ 是 $n$ 的\textbf{一次函数}，故 $\left\{a_n\right\}$ 为等差数�
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　有一组样本数据 $x_1,\cdots,x_6$，其中 $x_1$ 是最小值，$x_6$ 是最大值，则（　　）
+\textbf{题目}：
+
+有一组样本数据 $x_1,x_2,\cdots,x_6$，其中 $x_1$ 是最小值，$x_6$ 是最大值，则（　　）
+
+\begin{gkopts}(1)
+\task A．$x_2,x_3,x_4,x_5$ 的平均数等于 $x_1,x_2,\cdots,x_6$ 的平均数
+\task B．$x_2,x_3,x_4,x_5$ 的中位数等于 $x_1,x_2,\cdots,x_6$ 的中位数
+\task C．$x_2,x_3,x_4,x_5$ 的标准差不小于 $x_1,x_2,\cdots,x_6$ 的标准差
+\task D．$x_2,x_3,x_4,x_5$ 的极差不大于 $x_1,x_2,\cdots,x_6$ 的极差
+\end{gkopts}
 
 \textbf{解析}
 
@@ -372,11 +452,11 @@ $0<2.31$，C 的断言不成立
 
 故极差\textbf{不大于}原极差  \textbf{正确}。
 
-\gkanswer{答案：BD}
-
 \begin{gktip}
 \textbf{方法总结}：统计量的"稳健性"是本题的考点——\textbf{中位数和极差}对去掉两端极值的反应是可预测的（中位数不变、极差不增），而\textbf{平均数和标准差}会被极端值显著影响。记住这个结论，本题可以秒选。
 \end{gktip}
+
+\gkanswer{答案：BD}
 
 \par\medskip
 
@@ -384,7 +464,30 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　声压级 $L_P=20\lg\dfrac p{p_0}$，燃油车 $60\sim90\ \mathrm{dB}$、混动车 $50\sim60\ \mathrm{dB}$、电动车 $40\ \mathrm{dB}$，对应实际声压 $p_1,p_2,p_3$，则（　　）
+\textbf{题目}：
+
+噪声污染问题越来越受到重视。用声压级来度量声音的强弱，定义声压级 $L_P=20\times\lg\dfrac p{p_0}$，其中常数 $p_0\ (p_0>0)$ 是听觉下限阈值，$p$ 是实际声压。下表为不同声源的声压级：
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+声源 & 与声源的距离 $/\mathrm m$ & 声压级 $/\mathrm{dB}$ \\
+\midrule
+燃油汽车 & $10$ & $60\sim90$ \\
+混合动力汽车 & $10$ & $50\sim60$ \\
+电动汽车 & $10$ & $40$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+已知在距离燃油汽车、混合动力汽车、电动汽车 $10\ \mathrm m$ 处测得实际声压分别为 $p_1$，$p_2$，$p_3$，则（　　）
+
+\begin{gkopts}(4)
+\task A．$p_1\ge p_2$
+\task B．$p_2>10p_3$
+\task C．$p_3=100p_0$
+\task D．$p_1\le100p_2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -413,7 +516,7 @@ $0<2.31$，C 的断言不成立
 
 \textbf{A 项：$p_1\ge p_2$ }
 
-\[p_1\ge10^{3}p_0\quad\text{且}\quad p_2\le10^{3}p_0\]
+\[p_1\ge10^{3}p_0\quad\text{\text{且}}\quad p_2\le10^{3}p_0\]
 
 故必有 $p_1\ge p_2$  \textbf{正确}（两个区间恰好在 $10^3$ 处相接）。
 
@@ -439,19 +542,19 @@ $0<2.31$，C 的断言不成立
 
 \textbf{D 项：$p_1\le100p_2$ }
 
-\[p_1\le10^{4.5}p_0\quad\text{（上界）}\]
-\[100p_2\ge100\times10^{2.5}p_0=10^{2}\times10^{2.5}p_0=10^{4.5}p_0\quad\text{（下界）}\]
+\[p_1\le10^{4.5}p_0\quad\text{（\text{上界}）}\]
+\[100p_2\ge100\times10^{2.5}p_0=10^{2}\times10^{2.5}p_0=10^{4.5}p_0\quad\text{（\text{下界}）}\]
 
 故恒有
 \[p_1\le10^{4.5}p_0\le100p_2\]
 
  \textbf{正确}（两个界恰好相等，这是命题人精心设计的"卡边"）。
 
-\gkanswer{答案：ACD}
-
 \begin{gktip}
 \textbf{方法总结}：对数型应用题一律先\textbf{反解成指数形式}，把所有量化成 $p_0$ 的倍数后再比较。本题四个选项都是在比较区间的\textbf{端点}，所以只需算出每个量的上下界，逐项对照即可，不必考虑中间取值。
 \end{gktip}
+
+\gkanswer{答案：ACD}
 
 \par\medskip
 
@@ -459,7 +562,16 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　已知函数 $f(x)$ 的定义域为 $\mathbf R$，$f(xy)=y^{2}f(x)+x^{2}f(y)$，则（　　）
+\textbf{题目}：
+
+已知函数 $f(x)$ 的定义域为 $\mathbf R$，$f(xy)=y^{2}f(x)+x^{2}f(y)$，则（　　）
+
+\begin{gkopts}(2)
+\task A．$f(0)=0$
+\task B．$f(1)=0$
+\task C．$f(x)$ 是偶函数
+\task D．$x=0$ 为 $f(x)$ 的极小值点
+\end{gkopts}
 
 \textbf{解析}
 
@@ -511,13 +623,13 @@ $0<2.31$，C 的断言不成立
 
 即在 $x=0$ 的去心邻域内 $f(x)<f(0)$，说明 $x=0$ 是\textbf{极大值点}而非极小值点  \textbf{错误}。
 
-\gkanswer{答案：ABC}
-
 \begin{gktip}
 \textbf{方法总结}：抽象函数方程题分两类——
 ① \textbf{可以推出的性质}（A、B、C）：靠\textbf{代特殊值}（$0,1,-1$，或令 $y=-1$、$y=\dfrac1x$ 等）逐步挖掘；
 ② \textbf{不一定成立的性质}（D）：必须\textbf{构造反例}。构造思路是找一个满足方程的具体函数，本题的 $x^2\ln|x|$ 来自方程的"乘法变加法"结构——$f(xy)$ 中出现 $\ln|xy|=\ln|x|+\ln|y|$ 正好对应。
 \end{gktip}
+
+\gkanswer{答案：ABC}
 
 \par\medskip
 
@@ -525,7 +637,16 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　下列物体中，能被整体放入棱长为 $1\ \mathrm m$ 的正方体容器内的有（　　）
+\textbf{题目}：
+
+下列物体中，能被整体放入棱长为 $1$（单位：$\mathrm m$）的正方体容器（容器壁厚度忽略不计）内的有（　　）
+
+\begin{gkopts}(1)
+\task A．直径为 $0.99\ \mathrm m$ 的球体
+\task B．所有棱长均为 $1.4\ \mathrm m$ 的四面体
+\task C．底面直径为 $0.01\ \mathrm m$，高为 $1.8\ \mathrm m$ 的圆柱体
+\task D．底面直径为 $1.2\ \mathrm m$，高为 $0.01\ \mathrm m$ 的圆柱体
+\end{gkopts}
 
 \textbf{解析}
 
@@ -580,8 +701,6 @@ $0<2.31$，C 的断言不成立
 
 所以直径 $1.2$ 的圆盘可以沿这个"斜截面"方向放入；圆盘厚度仅 $0.01$，而余量约 $0.0247$，足够容纳  \textbf{正确}
 
-\gkanswer{答案：ABD}
-
 \begin{gktip}
 \textbf{方法总结}：这是一道考"正方体的三个极限尺寸"的题，值得把这三个数记熟：
 \begin{itemize}
@@ -593,6 +712,8 @@ $0<2.31$，C 的断言不成立
 三个数由大到小依次是 $1.732>1.414>1.225>1$，对应三类不同形状的物体。
 \end{gktip}
 
+\gkanswer{答案：ABD}
+
 \par\medskip
 
 \end{answer}
@@ -601,7 +722,9 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　$4$ 门体育类 + $4$ 门艺术类选修课，学生需选 $2$ 门或 $3$ 门，且每类至少 $1$ 门，则不同选课方案共有 \gkblank{} 种。
+\textbf{题目}：
+
+某学校开设了 $4$ 门体育类选修课和 $4$ 门艺术类选修课，学生需从这 $8$ 门课中选修 $2$ 门或 $3$ 门，并且每类选修课至少选修 $1$ 门，则不同的选课方案共有 \gkblank{} 种（用数字作答）。
 
 \textbf{解析}
 
@@ -626,11 +749,11 @@ $0<2.31$，C 的断言不成立
 \textbf{合计}（分类加法原理）：
 \[16+48=64\]
 
-\gkanswer{答案：$64$}
-
 \begin{gktip}
 \textbf{易错点}：① 漏掉"选 3 门"中的某一种搭配；② 用"总数减去不合要求"的补集法时容易算错（$C_8^2+C_8^3-\text{\text{全同类}}=28+56-(C_4^2\times2)-(C_4^3\times2)=84-12-8=64$，结果一致，但步骤更多）。\textbf{直接分类更稳。}
 \end{gktip}
+
+\gkanswer{答案：$64$}
 
 \par\medskip
 
@@ -638,7 +761,9 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　正四棱台 $ABCD\text{-}A_1B_1C_1D_1$ 中，$AB=2$，$A_1B_1=1$，$AA_1=\sqrt2$，则该棱台的体积为 \gkblank{}。
+\textbf{题目}：
+
+在正四棱台 $ABCD\text{-}A_1B_1C_1D_1$ 中，$AB=2$，$A_1B_1=1$，$AA_1=\sqrt2$，则该棱台的体积为 \gkblank{}．
 
 \textbf{解析}
 
@@ -658,16 +783,16 @@ $0<2.31$，C 的断言不成立
 \[h=\sqrt{AA_1^{2}-\left(\frac{\sqrt2}2\right)^{2}}=\sqrt{2-\frac12}=\sqrt{\frac32}=\frac{\sqrt6}2\]
 
 \textbf{第二步，代入棱台体积公式。}
-\[V=\frac h3\left(S_{\text{上}}+S_{\text{下}}+\sqrt{S_{\text{上}}S_{\text{下}}}\right)\]
+\[V=\frac h3\left(S_{\text{\text{上}}}+S_{\text{\text{下}}}+\sqrt{S_{\text{\text{上}}}S_{\text{\text{下}}}}\right)\]
 
 其中 $S_{\text{\text{上}}}=1^{2}=1$，$S_{\text{\text{下}}}=2^{2}=4$，$\sqrt{S_{\text{\text{上}}}S_{\text{\text{下}}}}=\sqrt4=2$：
 \[V=\frac{\sqrt6/2}3\times(1+4+2)=\frac{\sqrt6}6\times7=\frac{7\sqrt6}6\]
 
-\gkanswer{答案：$\dfrac{7\sqrt6}6$}
-
 \begin{gktip}
 \textbf{易错点}：求高时用"边长之差"而非"半对角线之差"。正确的做法是把侧棱投影到底面，投影的起点是下底顶点、终点是上底顶点在下底的投影，这段长度等于\textbf{两个半对角线的差}（因为上下底中心在同一竖直线上）。
 \end{gktip}
+
+\gkanswer{答案：$\dfrac{7\sqrt6}6$}
 
 \par\medskip
 
@@ -675,7 +800,9 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{15}{}
 
-\textbf{题目}　已知函数 $f(x)=\cos\omega x-1\ (\omega>0)$ 在区间 $[0,2\pi]$ 有且仅有 $3$ 个零点，则 $\omega$ 的取值范围是 \gkblank{}。
+\textbf{题目}：
+
+已知函数 $f(x)=\cos\omega x-1\ (\omega>0)$ 在区间 $[0,2\pi]$ 有且仅有 $3$ 个零点，则 $\omega$ 的取值范围是 \gkblank{}．
 
 \textbf{解析}
 
@@ -701,8 +828,6 @@ $0<2.31$，C 的断言不成立
 \textbf{取交集}：
 \[2\le\omega<3\]
 
-\gkanswer{答案：$[2,3)$}
-
 \begin{gktip}
 \textbf{端点检验}（务必做）：
 \begin{itemize}
@@ -713,13 +838,17 @@ $0<2.31$，C 的断言不成立
 这类题的分数几乎全在端点的开闭上，代入验算是最可靠的确认方式。
 \end{gktip}
 
+\gkanswer{答案：$[2,3)$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{16}{}
 
-\textbf{题目}　双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1$ 的左、右焦点为 $F_1$、$F_2$。点 $A$ 在 $C$ 上，点 $B$ 在 $y$ 轴上，$\overrightarrow{F_1A}\perp\overrightarrow{F_1B}$，$\overrightarrow{F_2A}=-\dfrac23\overrightarrow{F_2B}$，则 $C$ 的离心率为 \gkblank{}。
+\textbf{题目}：
+
+已知双曲线 $C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\ (a>0,\ b>0)$ 的左、右焦点分别为 $F_1$，$F_2$。点 $A$ 在 $C$ 上，点 $B$ 在 $y$ 轴上，$\overrightarrow{F_1A}\perp\overrightarrow{F_1B}$，$\overrightarrow{F_2A}=-\dfrac23\overrightarrow{F_2B}$，则 $C$ 的离心率为 \gkblank{}．
 
 \textbf{解析}
 
@@ -759,18 +888,18 @@ $0<2.31$，C 的断言不成立
 \textbf{第四步，解关于 $e^{2}$ 的二次方程。}
 \[e^{2}=\frac{50\pm\sqrt{2500-900}}{50}=\frac{50\pm40}{50}\]
 
-\[e^{2}=\frac95\quad\text{或}\quad e^{2}=\frac15\]
+\[e^{2}=\frac95\quad\text{\text{或}}\quad e^{2}=\frac15\]
 
 双曲线要求 $e>1$，故舍去 $e^{2}=\dfrac15$：
 \[e=\sqrt{\frac95}=\frac3{\sqrt5}=\frac{3\sqrt5}5\]
-
-\gkanswer{答案：$\dfrac{3\sqrt5}5$}
 
 \begin{gktip}
 \textbf{检验}：$\dfrac{3\sqrt5}5=\dfrac35\sqrt5\approx1.342>1$  符合双曲线离心率的要求。
 
 \textbf{方法总结}：解析几何中"多个向量条件求离心率"的通法是——用向量关系把动点坐标\textbf{全部化成 $c$ 的倍数}，代入曲线方程后除以 $a^2$，自然出现关于 $e$ 的方程。本题中 $b_0$ 是一个"过渡量"，它在第二步被消掉，这是设参数时值得预判的。
 \end{gktip}
+
+\gkanswer{答案：$\dfrac{3\sqrt5}5$}
 
 \par\medskip
 
@@ -780,7 +909,15 @@ $0<2.31$，C 的断言不成立
 \begin{answer}
 \gksolhead{17}{10 分}
 
-\textbf{题目}　$\triangle ABC$ 中，$A+B=3C$，$2\sin(A-C)=\sin B$。(1) 求 $\sin A$；(2) 设 $AB=5$，求 $AB$ 边上的高。
+\textbf{题目}（10 分）：
+
+已知在 $\triangle ABC$ 中，$A+B=3C$，$2\sin(A-C)=\sin B$。
+
+  (1) 求 $\sin A$；
+
+  (2) 设 $AB=5$，求 $AB$ 边上的高。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -846,15 +983,27 @@ $0<2.31$，C 的断言不成立
 \textbf{方法总结}：求「某边上的高」的标准套路是\textbf{面积法}——先用两边夹角公式算出面积，再用"底 × 高 ÷ 2"反解高。这比直接作垂线找几何关系可靠得多。
 \end{gktip}
 
+\gkanswer{答案（1）：$\sin A=\dfrac{3\sqrt{10}}{10}$}
+
+\gkanswer{答案（2）：高 $=6$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{18}{12 分}
 
-\textbf{题目}　正四棱柱 $ABCD\text{-}A_1B_1C_1D_1$ 中 $AB=2$，$AA_1=4$；$A_2,B_2,C_2,D_2$ 在四条侧棱上，$AA_2=1$，$BB_2=DD_2=2$，$CC_2=3$。
+\textbf{题目}（12 分）：
+
+如图，在正四棱柱 $ABCD\text{-}A_1B_1C_1D_1$ 中，$AB=2$，$AA_1=4$。点 $A_2$，$B_2$，$C_2$，$D_2$ 分别在棱 $AA_1$，$BB_1$，$CC_1$，$DD_1$ 上，$AA_2=1$，$BB_2=DD_2=2$，$CC_2=3$。
 
 \begin{center}\input{figures/f2023_t18_prism}\end{center}
+
+  (1) 证明：$B_2C_2\parallel A_2D_2$；
+
+  (2) 点 $P$ 在棱 $BB_1$ 上，当二面角 $P\text{-}A_2C_2\text{-}D_2$ 为 $150^\circ$ 时，求 $B_2P$。
+
+\textbf{解析}
 
   (1) 证明：$B_2C_2\parallel A_2D_2$；(2) 点 $P$ 在棱 $BB_1$ 上，二面角 $P\text{-}A_2C_2\text{-}D_2$ 为 $150^\circ$，求 $B_2P$。
 
@@ -930,7 +1079,7 @@ $0<2.31$，C 的断言不成立
 \[\left(4t^{2}-8t+4\right)+\left(4t^{2}-24t+36\right)+16=32\]
 \[8t^{2}-32t+56=32\ \Longrightarrow\ 8t^{2}-32t+24=0\ \Longrightarrow\ t^{2}-4t+3=0\]
 
-\[(t-1)(t-3)=0\ \Longrightarrow\ t=1\ \text{或}\ t=3\]
+\[(t-1)(t-3)=0\ \Longrightarrow\ t=1\ \text{\text{或}}\ t=3\]
 
 （两个值都在 $[0,4]$ 内，均合法。）
 
@@ -952,13 +1101,25 @@ $B_2(2,0,2)$ 与 $P(2,0,t)$ 只有竖坐标不同：
 \textbf{方法总结}：二面角问题的通法是"两个半平面各求一个法向量，再用夹角公式"。本题的加速点有二：① $\boldsymbol n_1\cdot\boldsymbol n_2$ 中 $t$ 自动抵消，使方程只剩 $\left|\boldsymbol n_1\right|$ 一个未知量；② 二次方程的两个根给出对称的两点，答案唯一。\textbf{注意二面角是钝角（$150^\circ$）时，法向量夹角的余弦要取绝对值再判断。}
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$B_2P=1$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{12 分}
 
-\textbf{题目}　已知函数 $f(x)=a\left(\mathrm e^{x}+a\right)-x$。(1) 讨论 $f(x)$ 的单调性；(2) 证明：当 $a>0$ 时，$f(x)>2\ln a+\dfrac32$。
+\textbf{题目}（12 分）：
+
+已知函数 $f(x)=a\left(\mathrm e^{x}+a\right)-x$。
+
+  (1) 讨论 $f(x)$ 的单调性；
+
+  (2) 证明：当 $a>0$ 时，$f(x)>2\ln a+\dfrac32$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1037,7 +1198,7 @@ $f(x)$ 在 $\mathbf R$ 上\textbf{单调递减}。
 \textbf{第四步，下结论。}
 
 因 $\ln2\approx0.693>0$：
-\[g(a)\ge\frac12\ln2>0\qquad\text{对一切 }a>0\]
+\[g(a)\ge\frac12\ln2>0\qquad\text{\text{对一切} }a>0\]
 
 因此
 \[f(x)\ge f(-\ln a)=a^{2}+\ln a+1>2\ln a+\frac32\qquad\blacksquare\]
@@ -1050,13 +1211,25 @@ $f(x)$ 在 $\mathbf R$ 上\textbf{单调递减}。
 关键是第一步要意识到"证 $f(x)>$ 某式"等价于"证 $f_{\min}>$ 某式"。另外注意最后是\textbf{严格大于}：$g$ 的最小值 $\dfrac12\ln2$ 严格为正，所以结论中的严格不等号成立。
 \end{gktip}
 
+\gkanswer{答案（1）：$f'(x)=a\mathrm e^x-1$。$a\le0$：$a\mathrm e^x\le0$，故 $f'(x)<0$，$f$ 在 $\mathbf R$ 上单调递减；$a>0$：由 $f'(x)=0$ 得 $x=-\ln a$，$f$ 在 $(-\infty,-\ln a)$ 递减、在 $(-\ln a,+\infty)$ 递增。}
+
+\gkanswer{答案（2）：见解析版}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{20}{12 分}
 
-\textbf{题目}　等差数列 $\left\{a_n\right\}$ 公差为 $d>1$，$b_n=\dfrac{n^{2}+n}{a_n}$，$S_n$、$T_n$ 分别为 $\left\{a_n\right\}$、$\left\{b_n\right\}$ 的前 $n$ 项和。(1) 若 $3a_2=3a_1+a_3$，$S_3+T_3=21$，求通项；(2) 若 $\left\{b_n\right\}$ 为等差数列且 $S_{99}-T_{99}=99$，求 $d$。
+\textbf{题目}（12 分）：
+
+设等差数列 $\left\{a_n\right\}$ 的公差为 $d$，且 $d>1$。令 $b_n=\dfrac{n^{2}+n}{a_n}$，记 $S_n$，$T_n$ 分别为数列 $\left\{a_n\right\}$，$\left\{b_n\right\}$ 的前 $n$ 项和。
+
+  (1) 若 $3a_2=3a_1+a_3$，$S_3+T_3=21$，求 $\left\{a_n\right\}$ 的通项公式；
+
+  (2) 若 $\left\{b_n\right\}$ 为等差数列，且 $S_{99}-T_{99}=99$，求 $d$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1103,7 +1276,7 @@ $f(x)$ 在 $\mathbf R$ 上\textbf{单调递减}。
 \[n=\frac{d-a_1}d\]
 
 要整除 $n(n+1)$，这个零点必须是分子的零点，即
-\[\frac{d-a_1}d=0\qquad\text{或}\qquad\frac{d-a_1}d=-1\]
+\[\frac{d-a_1}d=0\qquad\text{\text{或}}\qquad\frac{d-a_1}d=-1\]
 
 \textbf{情形一：$a_1=d$}
 
@@ -1161,13 +1334,27 @@ $f(x)$ 在 $\mathbf R$ 上\textbf{单调递减}。
 另外注意题目给的 $d>1$ 不是摆设——它恰好淘汰掉情形二的 $d=1$，保证答案唯一。
 \end{gktip}
 
+\gkanswer{答案（1）：$a_n=3n$}
+
+\gkanswer{答案（2）：$d=\dfrac{51}{50}$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{21}{12 分}
 
-\textbf{题目}　甲、乙投篮，命中者继续投、未中则换人。甲命中率 $0.6$、乙 $0.8$，首投由抽签决定（各 $0.5$）。(1) 求第 2 次投篮的人是乙的概率；(2) 求第 $i$ 次投篮的人是甲的概率；(3) 记前 $n$ 次中甲投篮次数为 $Y$，求 $E(Y)$。
+\textbf{题目}（12 分）：
+
+甲、乙两人投篮，每次由其中一人投篮，规则如下：若命中则此人继续投篮，若未命中则换为对方投篮。无论之前投篮情况如何，甲每次投篮的命中率均为 $0.6$，乙每次投篮的命中率均为 $0.8$。由抽签决定第 $1$ 次投篮的人选，第 $1$ 次投篮的人是甲、乙的概率各为 $0.5$。
+
+  (1) 求第 $2$ 次投篮的人是乙的概率；
+
+  (2) 求第 $i$ 次投篮的人是甲的概率；
+
+  (3) 已知：若随机变量 $X_i$ 服从两点分布，且 $P\left(X_i=1\right)=1-P\left(X_i=0\right)=q_i$，$i=1,2,\cdots,n$，则 $E\left(\displaystyle\sum_{i=1}^{n}X_i\right)=\displaystyle\sum_{i=1}^{n}q_i$。记前 $n$ 次（即从第 $1$ 次到第 $n$ 次投篮）中甲投篮的次数为 $Y$，求 $E(Y)$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1247,13 +1434,29 @@ $f(x)$ 在 $\mathbf R$ 上\textbf{单调递减}。
 值得注意的是 $p_i\to\dfrac13$（$i\to\infty$），意味着长期来看甲投篮的比例趋于 $\dfrac13$——这符合直觉：乙的命中率更高，一旦拿到球会持续更久。
 \end{gktip}
 
+\gkanswer{答案（1）：$0.6$}
+
+\gkanswer{答案（2）：$p_i=\dfrac13+\dfrac16\left(\dfrac25\right)^{i-1}$}
+
+\gkanswer{答案（3）：$E(Y)=\dfrac5{18}\left[1-\left(\dfrac25\right)^n\right]+\dfrac n3$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{22}{12 分}
 
-\textbf{题目}　点 $P$ 到 $x$ 轴的距离等于点 $P$ 到点 $\left(0,\dfrac12\right)$ 的距离，轨迹为 $W$。(1) 求 $W$ 的方程；(2) 已知矩形 $ABCD$ 有三个顶点在 $W$ 上，证明周长大于 $3\sqrt3$。
+\textbf{题目}（12 分）：
+
+在直角坐标系 $xOy$ 中，点 $P$ 到 $x$ 轴的距离等于点 $P$ 到点 $\left(0,\dfrac12\right)$ 的距离，记动点 $P$ 的轨迹为 $W$。
+
+  (1) 求 $W$ 的方程；
+
+  (2) 已知矩形 $ABCD$ 有三个顶点在 $W$ 上，证明：矩形 $ABCD$ 的周长大于 $3\sqrt3$。
+
+\par\medskip
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1343,7 +1546,7 @@ $L$ 是 $u$ 的\textbf{分段线性函数}，其折点在 $u=n$ 与 $u=m$。由 
 
 \textbf{第五步，得出结论。}
 
-\[L>\frac{3\sqrt3}2\ \Longrightarrow\ \text{周长}=2L>3\sqrt3\qquad\blacksquare\]
+\[L>\frac{3\sqrt3}2\ \Longrightarrow\ \text{\text{周长}}=2L>3\sqrt3\qquad\blacksquare\]
 
 \begin{gktip}
 \textbf{方法总结}：本题是全卷最难的一题，破题链条为：
@@ -1354,5 +1557,8 @@ $L$ 是 $u$ 的\textbf{分段线性函数}，其折点在 $u=n$ 与 $u=m$。由 
 \textbf{考试策略}：这类题的第 (1) 问（求轨迹方程）是纯送分的，一定要拿下；第 (2) 问属于压轴中的压轴，及格线至 120 分段的学生应果断跳过。
 \end{gktip}
 
+\gkanswer{答案（1）：$y=x^2+\dfrac14$}
+
+\gkanswer{答案（2）：见解析版}
 
 \end{answer}

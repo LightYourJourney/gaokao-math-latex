@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2024 年·新高考Ⅱ卷 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2024_xgk2_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2024_数学真题_新高考Ⅱ_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2024 年·新高考Ⅱ卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2024/2024_数学真题_新高考Ⅱ_试题.md + 2024/2024_数学真题_新高考Ⅱ_解析正文.md + 2024/2024_数学真题_新高考Ⅱ_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -18,7 +17,16 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　已知 $z=-1-\mathrm i$，则 $|z|=$（　　）
+\textbf{题目}：
+
+已知 $z=-1-\mathrm i$，则 $|z|=$（　　）
+
+\begin{gkopts}(4)
+\task A．$0$
+\task B．$1$
+\task C．$\sqrt2$
+\task D．$2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -28,11 +36,11 @@
 本题 $a=-1$，$b=-1$：
 \[|z|=\sqrt{(-1)^{2}+(-1)^{2}}=\sqrt{1+1}=\sqrt2\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错点}：模是\textbf{平方和}开根，与两个负号无关。若把 $-1-\mathrm i$ 的模误算成 $|-1|+|-1|=2$（选 D）或只看实部得 $1$（选 B），都是没有回到定义。
 \end{gktip}
+
+\gkanswer{答案：C（$\sqrt2$）}
 
 \par\medskip
 
@@ -40,7 +48,9 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　已知命题 $p$：$\forall x\in\mathbf R$，$|x+1|>1$；命题 $q$：$\exists x>0$，$x^{3}=x$。则（　　）
+\textbf{题目}：
+
+已知命题 $p$：$\forall x\in\mathbf R$，$|x+1|>1$；命题 $q$：$\exists x>0$，$x^{3}=x$。则（　　）
 
 \begin{gkopts}(2)
 \task A．$p$ 和 $q$ 都是真命题
@@ -66,11 +76,11 @@
 
 综上，$\neg p$ 和 $q$ 都是真命题。
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：全称命题「$\forall$」与存在性命题「$\exists$」的判断成本完全不对称——\textbf{否定全称、肯定存在都只需举一个例子}；反过来（肯定全称、否定存在）才需要一般性证明。做这类题第一反应应该是「先试特殊值」，本题两个命题都在一步之内定性。
 \end{gktip}
+
+\gkanswer{答案：B（$\neg p$ 和 $q$ 都是真命题）}
 
 \par\medskip
 
@@ -78,7 +88,16 @@
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　已知向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a|=1$，$|\boldsymbol a+2\boldsymbol b|=2$，且 $(\boldsymbol b-2\boldsymbol a)\perp\boldsymbol b$，则 $|\boldsymbol b|=$（　　）
+\textbf{题目}：
+
+已知向量 $\boldsymbol a$，$\boldsymbol b$ 满足 $|\boldsymbol a|=1$，$|\boldsymbol a+2\boldsymbol b|=2$，且 $(\boldsymbol b-2\boldsymbol a)\perp\boldsymbol b$，则 $|\boldsymbol b|=$（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac12$
+\task B．$\dfrac{\sqrt2}2$
+\task C．$\dfrac{\sqrt3}2$
+\task D．$1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -96,13 +115,13 @@
 
 \[|\boldsymbol b|=\frac{\sqrt2}2\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{一致性自检}（取具体向量验证）：令 $\boldsymbol a=(1,0)$，由 $\boldsymbol a\cdot\boldsymbol b=\dfrac{|\boldsymbol b|^{2}}2=\dfrac14$ 知 $\boldsymbol b=\left(\dfrac14,\ t\right)$，再由 $|\boldsymbol b|^{2}=\dfrac12$ 得 $t^{2}=\dfrac12-\dfrac1{16}=\dfrac7{16}$。此时
 \[|\boldsymbol a+2\boldsymbol b|=\left|\left(\frac32,\ 2t\right)\right|=\sqrt{\frac94+\frac74}=\sqrt4=2\quad\checkmark\]
 三个条件全部吻合。
 \end{gktip}
+
+\gkanswer{答案：B（$\dfrac{\sqrt2}2$）}
 
 \par\medskip
 
@@ -110,7 +129,9 @@
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　某农业研究部门在面积相等的 $100$ 块稻田上种植一种新型水稻，得到各块稻田的亩产量（单位：kg）并整理得下表：
+\textbf{题目}：
+
+某农业研究部门在面积相等的 $100$ 块稻田上种植一种新型水稻，得到各块稻田的亩产量（单位：kg）并整理得下表：
 
 \begin{center}
 \begin{tabular}{cccc}
@@ -183,11 +204,11 @@
 
 （若按组中值估计，$\bar x\approx1067$，同样落在 $[1050,1100)$ 附近。）
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{方法总结}：分组数据题的四个常考量各有各的「只看一处」技巧——\textbf{中位数看累计频数跨过 $50\%$ 的那一组}、\textbf{比例直接读累计}、\textbf{极差用两端组的端点作上下夹逼}、\textbf{平均值用组下限/组上限先做粗估}。四项里只有 D 需要真动手算，而且用下限一次就否掉了，无需精确求平均。
 \end{gktip}
+
+\gkanswer{答案：C（极差介于 $200$ 至 $300$ kg 之间）}
 
 \par\medskip
 
@@ -195,7 +216,16 @@
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　已知曲线 $C:x^{2}+y^{2}=16\ (y>0)$，从 $C$ 上任意一点 $P$ 向 $x$ 轴作垂线段 $PP'$，$P'$ 为垂足，则线段 $PP'$ 的中点 $M$ 的轨迹方程为（　　）
+\textbf{题目}：
+
+已知曲线 $C:x^{2}+y^{2}=16\ (y>0)$，从 $C$ 上任意一点 $P$ 向 $x$ 轴作垂线段 $PP'$，$P'$ 为垂足，则线段 $PP'$ 的中点 $M$ 的轨迹方程为（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac{x^{2}}{16}+\dfrac{y^{2}}4=1\ (y>0)$
+\task B．$\dfrac{x^{2}}{16}+\dfrac{y^{2}}8=1\ (y>0)$
+\task C．$\dfrac{y^{2}}{16}+\dfrac{x^{2}}4=1\ (y>0)$
+\task D．$\dfrac{y^{2}}{16}+\dfrac{x^{2}}8=1\ (y>0)$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -218,11 +248,11 @@ $PP'\perp x$ 轴，故垂足 $P'\left(x_0,0\right)$，中点
 
 又 $y_0>0\iff y>0$。
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{易错点}：两处。其一，别把 $y=\dfrac{y_0}2$ 反解错方向（写成 $y_0=\dfrac y2$ 会得到 $\dfrac{x^2}{16}+4y^2=1$，四个选项里都没有，反而容易发现；但若粗心写成除以 $4$ 就会误选 B）。其二，\textbf{范围条件必须跟着走}：原曲线是上半圆，轨迹也只能是上半椭圆，$y>0$ 不能丢。
 \end{gktip}
+
+\gkanswer{答案：A（$\dfrac{x^{2}}{16}+\dfrac{y^{2}}4=1,\ y>0$）}
 
 \par\medskip
 
@@ -230,7 +260,16 @@ $PP'\perp x$ 轴，故垂足 $P'\left(x_0,0\right)$，中点
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　设函数 $f(x)=a(x+1)^{2}-1$，$g(x)=\cos x+2ax$。当 $x\in(-1,1)$ 时，曲线 $y=f(x)$ 与 $y=g(x)$ 恰有一个交点。则 $a=$（　　）
+\textbf{题目}：
+
+设函数 $f(x)=a(x+1)^{2}-1$，$g(x)=\cos x+2ax$。当 $x\in(-1,1)$ 时，曲线 $y=f(x)$ 与 $y=g(x)$ 恰有一个交点。则 $a=$（　　）
+
+\begin{gkopts}(4)
+\task A．$-1$
+\task B．$\dfrac12$
+\task C．$1$
+\task D．$2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -260,11 +299,11 @@ $x^{2}$ 与 $\cos x$ 都是偶函数，故 $h(-x)=h(x)$，即 \textbf{$h$ 是偶
 
 因此 $h$ 在 $(-1,1)$ 上\textbf{只有 $x=0$ 一个零点} 
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法总结}：「偶函数 + 对称区间 + 恰有一个零点」是一个成套的命题模板，结论永远是「零点必在 $x=0$」，一步就把参数解出来。识别它的关键在于\textbf{先作差再展开}——本题不展开就看不出 $2ax$ 会消掉，也就看不出 $h$ 是偶函数。另外三个选项 $a=-1,\dfrac12,1$ 代入后 $h(0)=a-2\ne0$，此时零点要么成对出现（如 $a=1$ 时有 $x\approx\pm0.824$ 两个）、要么一个也没有。
 \end{gktip}
+
+\gkanswer{答案：D（$a=2$）}
 
 \par\medskip
 
@@ -272,7 +311,16 @@ $x^{2}$ 与 $\cos x$ 都是偶函数，故 $h(-x)=h(x)$，即 \textbf{$h$ 是偶
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　已知正三棱台 $ABC\text{-}A_1B_1C_1$ 的体积为 $\dfrac{52}3$，$AB=6$，$A_1B_1=2$，则 $A_1A$ 与平面 $ABC$ 所成角的正切值为（　　）
+\textbf{题目}：
+
+已知正三棱台 $ABC\text{-}A_1B_1C_1$ 的体积为 $\dfrac{52}3$，$AB=6$，$A_1B_1=2$，则 $A_1A$ 与平面 $ABC$ 所成角的正切值为（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac12$
+\task B．$1$
+\task C．$2$
+\task D．$3$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -302,11 +350,11 @@ $x^{2}$ 与 $\cos x$ 都是偶函数，故 $h(-x)=h(x)$，即 \textbf{$h$ 是偶
 \textbf{第三步，求正切。} 线面角 $\theta=\angle A_1AA_1'$，在直角三角形 $A_1A_1'A$ 中
 \[\tan\theta=\frac{A_1A_1'}{AA_1'}=\frac{h}{AA_1'}=\frac{\dfrac{4\sqrt3}3}{\dfrac{4\sqrt3}3}=1\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{易错点}：投影距离用的是\textbf{外接圆半径之差}（顶点到中心的距离），不是内切圆半径之差（$\dfrac{\text{\text{边长}}}{2\sqrt3}$），也不是边长之差的一半。判断依据：$A_1A$ 连的是两个\textbf{顶点}，所以要用顶点到中心的距离。用内切圆半径会得到 $AA_1'=\sqrt3-\dfrac{\sqrt3}3=\dfrac{2\sqrt3}3$，$\tan\theta=2$（恰好是干扰项 C）。
 \end{gktip}
+
+\gkanswer{答案：B（$1$）}
 
 \par\medskip
 
@@ -314,7 +362,16 @@ $x^{2}$ 与 $\cos x$ 都是偶函数，故 $h(-x)=h(x)$，即 \textbf{$h$ 是偶
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　设函数 $f(x)=(x+a)\ln(x+b)$。若 $f(x)\ge0$，则 $a^{2}+b^{2}$ 的最小值为（　　）
+\textbf{题目}：
+
+设函数 $f(x)=(x+a)\ln(x+b)$。若 $f(x)\ge0$，则 $a^{2}+b^{2}$ 的最小值为（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac18$
+\task B．$\dfrac14$
+\task C．$\dfrac12$
+\task D．$1$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -360,13 +417,13 @@ $a=-\dfrac12$，$b=\dfrac12$ 时
 \item $x>\dfrac12$：两因子皆正，乘积 $>0$ 
 \end{itemize}
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{几何解释}：约束 $b=a+1$ 是 $ab$ 平面上的一条直线，而 $a^{2}+b^{2}$ 是原点到点 $(a,b)$ 距离的平方。所求即\textbf{原点到直线 $b=a+1$（即 $a-b+1=0$）距离的平方}：
 \[d=\frac{|0-0+1|}{\sqrt{1^{2}+(-1)^{2}}}=\frac1{\sqrt2}\ \Longrightarrow\ d^{2}=\frac12\]
 一步到位，比配方更快。\textbf{看到「线性约束下求平方和最小」，第一反应就该是点到直线距离。}
 \end{gktip}
+
+\gkanswer{答案：C（$\dfrac12$）}
 
 \par\medskip
 
@@ -376,7 +433,9 @@ $a=-\dfrac12$，$b=\dfrac12$ 时
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　对于函数 $f(x)=\sin2x$ 和 $g(x)=\sin\left(2x-\dfrac\pi4\right)$，下列说法中正确的有（　　）
+\textbf{题目}：
+
+对于函数 $f(x)=\sin2x$ 和 $g(x)=\sin\left(2x-\dfrac\pi4\right)$，下列说法中正确的有（　　）
 
 \begin{gkopts}(2)
 \task A．$f(x)$ 与 $g(x)$ 有相同的零点
@@ -432,11 +491,11 @@ $g$：$2x-\dfrac\pi4=\dfrac\pi2+k\pi\Rightarrow x=\dfrac{3\pi}8+\dfrac{k\pi}2$�
 
 不是 $g$ 的对称轴  \textbf{错误}。
 
-\gkanswer{答案：BC}
-
 \begin{gktip}
 \textbf{方法总结}：判断两个三角函数「哪些性质相同」，只需分清性质对\textbf{平移}是否敏感：\textbf{振幅、最值、周期、单调区间长度}平移后不变；\textbf{零点、对称轴、对称中心、单调区间的具体位置}平移后整体移动。本题 $g$ 相对 $f$ 右移 $\dfrac\pi8$，于是「不敏感」的 B、C 对，「敏感」的 A、D 错——不必逐个解方程也能秒选。
 \end{gktip}
+
+\gkanswer{答案：BC}
 
 \par\medskip
 
@@ -444,7 +503,9 @@ $g$：$2x-\dfrac\pi4=\dfrac\pi2+k\pi\Rightarrow x=\dfrac{3\pi}8+\dfrac{k\pi}2$�
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　抛物线 $C:y^{2}=4x$ 的准线为 $l$，$P$ 为 $C$ 上动点。过 $P$ 作 $\odot A:x^{2}+(y-4)^{2}=1$ 的一条切线，$Q$ 为切点。过 $P$ 作 $l$ 的垂线，垂足为 $B$。则（　　）
+\textbf{题目}：
+
+抛物线 $C:y^{2}=4x$ 的准线为 $l$，$P$ 为 $C$ 上动点。过 $P$ 作 $\odot A:x^{2}+(y-4)^{2}=1$ 的一条切线，$Q$ 为切点。过 $P$ 作 $l$ 的垂线，垂足为 $B$。则（　　）
 
 \begin{gkopts}(1)
 \task A．$l$ 与 $\odot A$ 相切
@@ -523,11 +584,11 @@ $|PB|=x_0+1=2\Rightarrow x_0=1$，$y_0^{2}=4\Rightarrow y_0=\pm2$。两种情形
 
 （数值上 $P_1\approx(47.82,\ 13.83)$，$P_2\approx(1.18,\ 2.17)$。）
 
-\gkanswer{答案：ABD}
-
 \begin{gktip}
 \textbf{方法总结}：抛物线小题的「万能第一步」是\textbf{把到准线的距离换成到焦点的距离}（或反之）。D 项如果不做这个转化，就要直接联立 $|PA|=x_0+1$ 与 $y_0^2=4x_0$ 解四次式，计算量陡增；转化之后立刻变成「中垂线与抛物线交点个数」，算一个判别式就完。C 项的陷阱则在于 $y_0=\pm2$ \textbf{两个点都得验}——只算一个就下结论是这类题最常见的失分点。
 \end{gktip}
+
+\gkanswer{答案：ABD}
 
 \par\medskip
 
@@ -535,7 +596,9 @@ $|PB|=x_0+1=2\Rightarrow x_0=1$，$y_0^{2}=4\Rightarrow y_0=\pm2$。两种情形
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　设函数 $f(x)=2x^{3}-3ax^{2}+1$，则（　　）
+\textbf{题目}：
+
+设函数 $f(x)=2x^{3}-3ax^{2}+1$，则（　　）
 
 \begin{gkopts}(1)
 \task A．当 $a>1$ 时，$f(x)$ 有三个零点
@@ -623,8 +686,6 @@ $f(x)$ & 增 & 极大 & 减 & 极小 & 增 \\
 
 确为对称中心  \textbf{正确}。
 
-\gkanswer{答案：AD}
-
 \begin{gktip}
 \textbf{方法总结}：三次函数 $f(x)=Ax^{3}+Bx^{2}+Cx+D\ (A\ne0)$ 有三条「出厂设定」，记住可以秒杀一大类多选题：
 1. \textbf{必有对称中心}，横坐标 $x=-\dfrac B{3A}$（即两驻点的中点、也是拐点）；
@@ -634,6 +695,8 @@ $f(x)$ & 增 & 极大 & 减 & 极小 & 增 \\
 本题 B 项的陷阱在于 $a<0$ 时两驻点顺序翻转，\textbf{不能沿用 $a>0$ 时画的表}。
 \end{gktip}
 
+\gkanswer{答案：AD}
+
 \par\medskip
 
 \end{answer}
@@ -642,7 +705,9 @@ $f(x)$ & 增 & 极大 & 减 & 极小 & 增 \\
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　记 $S_n$ 为等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和。若 $a_3+a_4=7$，$3a_2+a_5=5$，则 $S_{10}=$ \gkblank{}．
+\textbf{题目}：
+
+记 $S_n$ 为等差数列 $\left\{a_n\right\}$ 的前 $n$ 项和。若 $a_3+a_4=7$，$3a_2+a_5=5$，则 $S_{10}=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -660,13 +725,13 @@ $(1)\times2-(2)$：
 \textbf{求和}：
 \[S_{10}=10a_1+\frac{10\times9}2d=10\times(-4)+45\times3=-40+135=95\]
 
-\gkanswer{答案：$95$}
-
 \begin{gktip}
 \textbf{一致性自检}：$d=3$、$a_1=-4$ 时数列为 $-4,-1,2,5,8,11,\cdots$
 \[a_3+a_4=2+5=7\ \checkmark,\qquad 3a_2+a_5=3\times(-1)+8=5\ \checkmark\]
 \textbf{更快的路线}：$S_{10}=5\left(a_1+a_{10}\right)=5\left(2a_1+9d\right)$。而 $2a_1+9d$ 可由 $(1)$、$(2)$ 直接线性组合出来：$2\times(1)-(2)$ 给出 $3d=9$，再由 $(1)$ 得 $2a_1=-8$，故 $2a_1+9d=-8+27=19$，$S_{10}=5\times19=95$。
 \end{gktip}
+
+\gkanswer{答案：$95$}
 
 \par\medskip
 
@@ -674,7 +739,9 @@ $(1)\times2-(2)$：
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　已知 $\alpha$ 为第一象限角，$\beta$ 为第三象限角，$\tan\alpha+\tan\beta=4$，$\tan\alpha\tan\beta=\sqrt2+1$，则 $\sin(\alpha+\beta)=$ \gkblank{}．
+\textbf{题目}：
+
+已知 $\alpha$ 为第一象限角，$\beta$ 为第三象限角，$\tan\alpha+\tan\beta=4$，$\tan\alpha\tan\beta=\sqrt2+1$，则 $\sin(\alpha+\beta)=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -703,13 +770,13 @@ $(1)\times2-(2)$：
 
 \[\sin(\alpha+\beta)=-\frac{2\sqrt2}3\]
 
-\gkanswer{答案：$-\dfrac{2\sqrt2}3$}
-
 \begin{gktip}
 \textbf{数值自检}：$\tan\alpha$、$\tan\beta$ 是方程 $t^{2}-4t+\left(\sqrt2+1\right)=0$ 的两根，约为 $3.2593$ 与 $0.7407$（判别式 $12-4\sqrt2>0$，且两根同为正，与「第一象限角、第三象限角的正切都为正」相符）。取 $\alpha\approx1.2731$、$\beta\approx\pi+0.6376\approx3.7791$，则 $\alpha+\beta\approx5.0522$，$\sin(\alpha+\beta)\approx-0.9428$，而 $-\dfrac{2\sqrt2}3\approx-0.9428$ 
 
 \textbf{易错点}：算出 $\tan(\alpha+\beta)=-2\sqrt2$ 后直接取 $\sin=\dfrac{2\sqrt2}3$（默认落在第二象限）是本题最大的坑。\textbf{只要题目给了象限条件，就一定是用来定符号的}——把 $\alpha$、$\beta$ 的范围相加再看和角落在哪里，是唯一可靠的做法。
 \end{gktip}
+
+\gkanswer{答案：$-\dfrac{2\sqrt2}3$}
 
 \par\medskip
 
@@ -717,7 +784,9 @@ $(1)\times2-(2)$：
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　在如图的 $4\times4$ 的方格表中选 $4$ 个方格，要求每行和每列均恰有一个方格被选中，则共有 \gkblank{} 种选法。在所有符合上述要求的选法中，选中方格中的 $4$ 个数之和的最大值是 \gkblank{}．
+\textbf{题目}：
+
+在如图的 $4\times4$ 的方格表中选 $4$ 个方格，要求每行和每列均恰有一个方格被选中，则共有 \gkblank{} 种选法。在所有符合上述要求的选法中，选中方格中的 $4$ 个数之和的最大值是 \gkblank{}．
 
 \begin{center}
 \begin{tabular}{cccc}
@@ -785,8 +854,6 @@ $15$ & $24$ & $34$ & $44$ \\
 
 \[15+21+33+43=112\]
 
-\gkanswer{答案：$24$；$112$}
-
 \begin{gktip}
 \textbf{方法总结}：这类「每行每列各取一个、求和最大」的题（本质是\textbf{指派问题}）不要盲目枚举 $24$ 种。标准套路两步：
 1. \textbf{拆出与选法无关的固定部分}（本题是十位的 $100$），把问题降到更小的数上；
@@ -794,6 +861,8 @@ $15$ & $24$ & $34$ & $44$ \\
 
 若上界够不到（列冲突），则退而求其次逐步调整——本题运气好，一次就命中。
 \end{gktip}
+
+\gkanswer{答案：$24$；$112$}
 
 \par\medskip
 
@@ -803,11 +872,15 @@ $15$ & $24$ & $34$ & $44$ \\
 \begin{answer}
 \gksolhead{15}{13 分}
 
-\textbf{题目}　记 $\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$，已知 $\sin A+\sqrt3\cos A=2$。
+\textbf{题目}（13 分）：
+
+记 $\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$，已知 $\sin A+\sqrt3\cos A=2$。
 
   (1) 求 $A$；
 
   (2) 若 $a=2$，$\sqrt2\,b\sin C=c\sin2B$，求 $\triangle ABC$ 的周长。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -867,17 +940,25 @@ $15$ & $24$ & $34$ & $44$ \\
 \textbf{方法总结}：形如「$\lambda b\sin C=c\sin2B$」的条件，标准动作是\textbf{先把 $\sin2B$ 拆开、再用正弦定理把边全换成角}，两侧的 $\sin B\sin C$ 必然对消，剩下一个只含 $\cos B$ 的方程。\textbf{不要先用余弦定理}——那会引入 $a$，把简单问题复杂化。
 \end{gktip}
 
+\gkanswer{答案（1）：$A=\dfrac\pi6$}
+
+\gkanswer{答案（2）：周长 $=2+3\sqrt2+\sqrt6$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{16}{15 分}
 
-\textbf{题目}　已知函数 $f(x)=\mathrm e^{x}-ax-a^{3}$。
+\textbf{题目}（15 分）：
+
+已知函数 $f(x)=\mathrm e^{x}-ax-a^{3}$。
 
   (1) 当 $a=1$ 时，求曲线 $y=f(x)$ 在点 $\left(1,f(1)\right)$ 处的切线方程；
 
   (2) 若 $f(x)$ 有极小值，且极小值小于 $0$，求 $a$ 的取值范围。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -947,19 +1028,27 @@ $a=1$ 时
 \textbf{方法总结}：含参极值题的三步骨架——\textbf{① 先讨论极值是否存在（定参数的初步范围）；② 把极值点回代写出极值的解析式；③ 把「极值 $<0$」化成一个单变量不等式，用单调函数 + 特殊点（这里是 $\varphi(1)=1$）一击定界。} 第 ③ 步能否顺利，取决于第 ② 步化简得干不干净——本题除以 $a$ 之后 $a^{2}+\ln a$ 的单调性一目了然，是命题人预留的通道。
 \end{gktip}
 
+\gkanswer{答案（1）：$y=(\mathrm e-1)x-1$}
+
+\gkanswer{答案（2）：$a\in(1,+\infty)$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{17}{15 分}
 
-\textbf{题目}　如图，平面四边形 $ABCD$ 中，$AB=8$，$CD=3$，$AD=5\sqrt3$，$\angle ADC=90^{\circ}$，$\angle BAD=30^{\circ}$，点 $E$，$F$ 满足 $\overrightarrow{AE}=\dfrac25\overrightarrow{AD}$，$\overrightarrow{AF}=\dfrac12\overrightarrow{AB}$，将 $\triangle AEF$ 沿 $EF$ 翻折至 $\triangle PEF$，使得 $PC=4\sqrt3$。
+\textbf{题目}（15 分）：
+
+如图，平面四边形 $ABCD$ 中，$AB=8$，$CD=3$，$AD=5\sqrt3$，$\angle ADC=90^{\circ}$，$\angle BAD=30^{\circ}$，点 $E$，$F$ 满足 $\overrightarrow{AE}=\dfrac25\overrightarrow{AD}$，$\overrightarrow{AF}=\dfrac12\overrightarrow{AB}$，将 $\triangle AEF$ 沿 $EF$ 翻折至 $\triangle PEF$，使得 $PC=4\sqrt3$。
 
 \begin{center}\input{figures/f2024x2_t17_fold}\end{center}
 
   (1) 证明：$EF\perp PD$；
 
   (2) 求面 $PCD$ 与面 $PBF$ 所成的二面角的正弦值。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1075,13 +1164,19 @@ $EP$ 与 $ED$ 是平面 $PED$ 内两条相交直线（交于 $E$），由\textbf
 \textbf{易错点}：第 (2) 问设 $P$ 时若忘记「$P$ 必在 $xOz$ 平面内」（这正是第 (1) 问的结论），就会多引入一个未知数、无法求解。\textbf{第 (1) 问的结论要当作第 (2) 问的已知用。}
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{8\sqrt{65}}{65}$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{18}{17 分}
 
-\textbf{题目}　某投篮比赛分为两个阶段，每个参赛队由两名队员组成。比赛具体规则如下：第一阶段由参赛队中一名队员投篮 $3$ 次，若 $3$ 次都未投中，则该队被淘汰，比赛成绩为 $0$ 分；若至少投中 $1$ 次，则该队进入第二阶段。第二阶段由该队的另一名队员投篮 $3$ 次，每次投篮投中得 $5$ 分，未投中得 $0$ 分。该队的比赛成绩为第二阶段的得分总和。某参赛队由甲、乙两名队员组成，设甲每次投中的概率为 $p$，乙每次投中的概率为 $q$，各次投中与否相互独立。
+\textbf{题目}（17 分）：
+
+某投篮比赛分为两个阶段，每个参赛队由两名队员组成。比赛具体规则如下：第一阶段由参赛队中一名队员投篮 $3$ 次，若 $3$ 次都未投中，则该队被淘汰，比赛成绩为 $0$ 分；若至少投中 $1$ 次，则该队进入第二阶段。第二阶段由该队的另一名队员投篮 $3$ 次，每次投篮投中得 $5$ 分，未投中得 $0$ 分。该队的比赛成绩为第二阶段的得分总和。某参赛队由甲、乙两名队员组成，设甲每次投中的概率为 $p$，乙每次投中的概率为 $q$，各次投中与否相互独立。
 
   (1) 若 $p=0.4$，$q=0.5$，甲参加第一阶段比赛，求甲、乙所在队的比赛成绩不少于 $5$ 分的概率；
 
@@ -1090,6 +1185,8 @@ $EP$ 与 $ED$ 是平面 $PED$ 内两条相交直线（交于 $E$），由\textbf
   　① 为使得甲、乙所在队的比赛成绩为 $15$ 分的概率最大，应该由谁参加第一阶段比赛？
 
   　② 为使得甲、乙所在队的比赛成绩的数学期望最大，应该由谁参加第一阶段比赛？
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1180,19 +1277,33 @@ $EP$ 与 $ED$ 是平面 $PED$ 内两条相交直线（交于 $E$），由\textbf
 技术上，两问的骨架相同：\textbf{写出两种安排的表达式 → 约掉公共因子 → 剩下一个单变量函数 → 求导定单调 → 由 $p<q$ 得出大小。} ① 因为 $q^{3}$ 与 $p^{3}$ 不对称，公共因子要用「作商」才能提干净；② 因为一次项对称，直接「作差」就能约掉 $15pq$。\textbf{先判断该作差还是作商，能省掉大量代数。}
 \end{gktip}
 
+\gkanswer{答案（1）：$0.686$}
+
+\gkanswer{答案（2）：① 由甲参加第一阶段；② 仍由甲参加第一阶段}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{17 分}
 
-\textbf{题目}　已知双曲线 $C:x^{2}-y^{2}=m\ (m>0)$，点 $P_1(5,4)$ 在 $C$ 上，$k$ 为常数，$0<k<1$。按照如下方式依次构造点 $P_n\ (n=2,3,\cdots)$：过点 $P_{n-1}$ 作斜率为 $k$ 的直线与 $C$ 的左支交于点 $Q_{n-1}$，令 $P_n$ 为 $Q_{n-1}$ 关于 $y$ 轴的对称点。记 $P_n$ 的坐标为 $\left(x_n,y_n\right)$。
+\textbf{题目}（17 分）：
+
+已知双曲线 $C:x^{2}-y^{2}=m\ (m>0)$，点 $P_1(5,4)$ 在 $C$ 上，$k$ 为常数，$0<k<1$。按照如下方式依次构造点 $P_n\ (n=2,3,\cdots)$：过点 $P_{n-1}$ 作斜率为 $k$ 的直线与 $C$ 的左支交于点 $Q_{n-1}$，令 $P_n$ 为 $Q_{n-1}$ 关于 $y$ 轴的对称点。记 $P_n$ 的坐标为 $\left(x_n,y_n\right)$。
 
   (1) 若 $k=\dfrac12$，求 $x_2$，$y_2$；
 
   (2) 证明：数列 $\left\{x_n-y_n\right\}$ 是公比为 $\dfrac{1+k}{1-k}$ 的等比数列；
 
   (3) 设 $S_n$ 为 $\triangle P_nP_{n+1}P_{n+2}$ 的面积。证明：对于任意正整数 $n$，$S_n=S_{n+1}$。
+
+\par\medskip
+
+\begin{gktip}
+\textbf{试题来源}：deekur/gaokaomath（commit \texttt{34c13a6}，CC BY 4.0）之「2024新高考2」PDF。
+\end{gktip}
+
+\textbf{解析}
 
 \par\medskip
 
@@ -1349,5 +1460,11 @@ $P_{n+1}$ 是 $Q_n$ 关于 $y$ 轴的对称点，即 $x_{n+1}=-x'$、$y_{n+1}=y'
 
 从考试策略看：(1) 是送分的（联立求另一交点），(2) 用「设 $u$、$v$ 并消元」的常规手法可以完整拿下，(3) 才是真正的区分点。若时间紧，(3) 也可以只写「直接计算面积、发现与 $n$ 无关」这条路——虽然代数量大，但思路直白、不需要线性变换的语言。
 \end{gktip}
+
+\gkanswer{答案（1）：$x_2=3$，$y_2=0$}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：见解析版}
 
 \end{answer}

@@ -30,6 +30,10 @@ EXAMS = DST.parent          # 本项目位于  之下，父目录即真题 MD �
 sys.path.insert(0, str(SRC / "tools"))
 import md2tex  # noqa: E402  复用行内 MD→LaTeX 转换（纯函数，有 __main__ 保护）
 
+# 行内转换不碰配图，故映射为空；strict=False 是为了把整卷的警告一次列全，
+# 而不是第一条就抛异常——警告在下面仍按硬错误处理。
+INLINE_CONTEXT = md2tex.ConversionContext(figure_map={}, strict=False)
+
 CHOICE_GROUPS = ("选择题", "单选题", "多选题")
 QNUM = re.compile(r"^\*\*(\d+)．")                      # 全角句点；容忍〔选修〕后缀
 # 整体答案行两种冒号位形：**答案：xxx**（冒号在内，非贪婪剥掉行尾"（同理科…）"类尾注）
@@ -142,13 +146,15 @@ def main():
             errors.append(f"{p['dir']}: MD 中提不到答案行的题号 {missing}")
             continue
 
-        # MD → LaTeX 行内转换；conv_inline 的警告（未配对 $ 等）视为硬错误
-        md2tex.warnings.clear()
-        answers = {i: md2tex.conv_inline(raw[i]) for i in range(1, n + 1)}
-        if md2tex.warnings:
-            errors.append(f"{p['dir']}: 行内转换警告 {md2tex.warnings[:3]}")
-            md2tex.warnings.clear()
+        # MD → LaTeX 行内转换；转换警告（未配对 $ 等）视为硬错误
+        converted = {
+            i: md2tex.convert_inline(raw[i], INLINE_CONTEXT) for i in range(1, n + 1)
+        }
+        found = [w for result in converted.values() for w in result.warnings]
+        if found:
+            errors.append(f"{p['dir']}: 行内转换警告 {found[:3]}")
             continue
+        answers = {i: result.text for i, result in converted.items()}
 
         # 组装 + 收集选择题字母
         parts, choice_letters, choice_nums = [], [], []

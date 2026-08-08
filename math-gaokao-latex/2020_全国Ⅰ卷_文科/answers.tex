@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2020 年·全国Ⅰ卷·文科 · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2020_g1_wen_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2020_数学真题_文_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2020 年·全国Ⅰ卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2020/2020_数学真题_文_试题.md + 2020/2020_数学真题_文_解析正文.md + 2020/2020_数学真题_文_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -16,7 +15,16 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　已知集合 $A=\left\{x\mid x^{2}-3x-4<0\right\}$，$B=\{-4,1,3,5\}$，则 $A\cap B=$（　　）
+\textbf{题目}：
+
+已知集合 $A=\left\{x\mid x^{2}-3x-4<0\right\}$，$B=\{-4,1,3,5\}$，则 $A\cap B=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\{-4,1\}$
+\task B．$\{1,5\}$
+\task C．$\{3,5\}$
+\task D．$\{1,3\}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -37,7 +45,7 @@
 
 \[A\cap B=\{1,\ 3\}\]
 
-\gkanswer{答案：D}
+\gkanswer{答案：D（$\{1,3\}$）}
 
 \par\medskip
 
@@ -45,7 +53,16 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　若 $z=1+2\mathrm i+\mathrm i^{3}$，则 $|z|=$（　　）
+\textbf{题目}：
+
+若 $z=1+2\mathrm i+\mathrm i^{3}$，则 $|z|=$（　　）
+
+\begin{gkopts}(4)
+\task A．$0$
+\task B．$1$
+\task C．$\sqrt2$
+\task D．$2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -59,11 +76,11 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 
 \[|z|=\sqrt{1^{2}+1^{2}}=\sqrt2\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错}：把 $\mathrm i^{3}$ 当成 $\mathrm i$（漏了负号），会得到 $z=1+3\mathrm i$，$|z|=\sqrt{10}$，不在选项中——\textbf{若算出的答案不在选项里，往往就是 $\mathrm i$ 的幂算错了}。
 \end{gktip}
+
+\gkanswer{答案：C（$\sqrt2$）}
 
 \par\medskip
 
@@ -71,13 +88,24 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　金字塔正四棱锥问题（同理科卷第 3 题）。
+\textbf{题目}：
+
+埃及胡夫金字塔是古代世界建筑奇迹之一，它的形状可视为一个正四棱锥，以该四棱锥的高为边长的正方形面积等于该四棱锥一个侧面三角形的面积，则其侧面三角形底边上的高与底面正方形的边长的比值为（　　）
+
+\begin{gkopts}(2)
+\task A．$\dfrac{\sqrt5-1}4$
+\task B．$\dfrac{\sqrt5-1}2$
+\task C．$\dfrac{\sqrt5+1}4$
+\task D．$\dfrac{\sqrt5+1}2$
+\end{gkopts}
+
+\textbf{解析}
 
 \textbf{解析要点}
 
 设底面边长 $2a$、高 $h$、侧面三角形底边上的高（斜高）$m$：
-\[m^{2}=h^{2}+a^{2}\qquad\text{（直角三角形关系）}\]
-\[h^{2}=\frac12\times2a\times m=am\qquad\text{（题目条件）}\]
+\[m^{2}=h^{2}+a^{2}\qquad\text{（\text{直角三角形关系}）}\]
+\[h^{2}=\frac12\times2a\times m=am\qquad\text{（\text{题目条件}）}\]
 
 联立消 $h$：
 \[m^{2}=am+a^{2}\ \Longrightarrow\ \left(\frac ma\right)^{2}-\frac ma-1=0\ \Longrightarrow\ \frac ma=\frac{1+\sqrt5}2\]
@@ -85,7 +113,7 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 所求为斜高与\textbf{底面边长}（$=2a$）之比：
 \[\frac m{2a}=\frac{\sqrt5+1}4\]
 
-\gkanswer{答案：C}
+\gkanswer{答案：C（$\dfrac{\sqrt5+1}4$）}
 
 \par\medskip
 
@@ -93,7 +121,16 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　设 $O$ 为正方形 $ABCD$ 的中心，在 $O$，$A$，$B$，$C$，$D$ 中任取 $3$ 点，则取到的 $3$ 点共线的概率为（　　）
+\textbf{题目}：
+
+设 $O$ 为正方形 $ABCD$ 的中心，在 $O$，$A$，$B$，$C$，$D$ 中任取 $3$ 点，则取到的 $3$ 点共线的概率为（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac15$
+\task B．$\dfrac25$
+\task C．$\dfrac12$
+\task D．$\dfrac45$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -121,11 +158,11 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \textbf{第三步，求概率。}
 \[P=\frac2{10}=\frac15\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法总结}：这类"几何构型 + 古典概型"的题，关键是\textbf{穷举时按结构分类}（本题按"是否含中心 $O$"、"两个顶点是相邻还是相对"分类），避免漏数或重数。
 \end{gktip}
+
+\gkanswer{答案：A（$\dfrac15$）}
 
 \par\medskip
 
@@ -133,15 +170,28 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　发芽率与温度的散点图，选回归模型（同理科卷第 5 题）。
+\textbf{题目}：
+
+某校一个课外学习小组为研究某作物种子的发芽率 $y$ 和温度 $x$（单位：$^\circ\mathrm C$）的关系，在 $20$ 个不同的温度条件下进行种子发芽实验，得到下面的散点图：
 
 \begin{center}\input{figures/f2020li_t5_scatter}\end{center}
+
+由此散点图，在 $10\ ^\circ\mathrm C$ 至 $40\ ^\circ\mathrm C$ 之间，下面四个回归方程类型中最适宜作为发芽率 $y$ 和温度 $x$ 的回归方程类型的是（　　）
+
+\begin{gkopts}(2)
+\task A．$y=a+bx$
+\task B．$y=a+bx^{2}$
+\task C．$y=a+b\mathrm e^{x}$
+\task D．$y=a+b\ln x$
+\end{gkopts}
+
+\textbf{解析}
 
 \textbf{解析要点}
 
 散点呈现"低温段快速上升、高温段趋于平缓"的\textbf{饱和型增长}。四个模型中只有对数型 $y=a+b\ln x$ 具有"增长逐渐放缓"的特征。
 
-\gkanswer{答案：D}
+\gkanswer{答案：D（对数型）}
 
 \par\medskip
 
@@ -149,7 +199,16 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　已知圆 $x^{2}+y^{2}-6x=0$，过点 $(1,2)$ 的直线被该圆所截得的弦的长度的最小值为（　　）
+\textbf{题目}：
+
+已知圆 $x^{2}+y^{2}-6x=0$，过点 $(1,2)$ 的直线被该圆所截得的弦的长度的最小值为（　　）
+
+\begin{gkopts}(4)
+\task A．$1$
+\task B．$2$
+\task C．$3$
+\task D．$4$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -168,16 +227,14 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \textbf{第三步，用"弦长模型"求最小值。}
 
 设圆心到弦所在直线的距离为 $d$，则
-\[\text{弦长}=2\sqrt{r^{2}-d^{2}}\]
+\[\text{\text{弦长}}=2\sqrt{r^{2}-d^{2}}\]
 
 弦长随 $d$ 增大而\textbf{减小}，故弦最短 $\iff$ $d$ 最大。
 
 由于直线必过 $M$，圆心到它的距离 $d\le|CM|=2\sqrt2$，且\textbf{等号成立当且仅当 $CM\perp$ 该直线}。
 
 \textbf{第四步，代入计算。}
-\[\text{弦长}_{\min}=2\sqrt{r^{2}-|CM|^{2}}=2\sqrt{9-8}=2\times1=2\]
-
-\gkanswer{答案：B}
+\[\text{\text{弦长}}_{\min}=2\sqrt{r^{2}-|CM|^{2}}=2\sqrt{9-8}=2\times1=2\]
 
 \begin{gktip}
 \textbf{必背模型}：过\textbf{圆内定点} $M$ 的弦——
@@ -189,15 +246,28 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 这两个结论在选填题中可以直接用。
 \end{gktip}
 
+\gkanswer{答案：B（$2$）}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　$f(x)=\cos\left(\omega x+\dfrac\pi6\right)$ 的图象（同理科卷第 7 题），求最小正周期。
+\textbf{题目}：
+
+设函数 $f(x)=\cos\left(\omega x+\dfrac\pi6\right)$ 在 $[-\pi,\pi]$ 的图象大致如下图，则 $f(x)$ 的最小正周期为（　　）
 
 \begin{center}\input{figures/f2020li_t7_graph}\end{center}
+
+\begin{gkopts}(4)
+\task A．$\dfrac{10\pi}9$
+\task B．$\dfrac{7\pi}6$
+\task C．$\dfrac{4\pi}3$
+\task D．$\dfrac{3\pi}2$
+\end{gkopts}
+
+\textbf{解析}
 
 \textbf{解析要点}
 
@@ -206,7 +276,7 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 
 由图象形状（$\omega>0$ 且周期较大）取 $k=-1$，得 $\omega=\dfrac32$，故 $T=\dfrac{2\pi}{3/2}=\dfrac{4\pi}3$。
 
-\gkanswer{答案：C}
+\gkanswer{答案：C（$\dfrac{4\pi}3$）}
 
 \par\medskip
 
@@ -214,7 +284,16 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　设 $a\log_3 4=2$，则 $4^{-a}=$（　　）
+\textbf{题目}：
+
+设 $a\log_3 4=2$，则 $4^{-a}=$（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac1{16}$
+\task B．$\dfrac19$
+\task C．$\dfrac18$
+\task D．$\dfrac16$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -232,12 +311,12 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 故
 \[4^{-a}=\frac1{4^{a}}=\frac19\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：见到"$\log$ 与指数混合"的题，\textbf{不要试图算出 $a$ 的小数值}，而应把 $a$ 化成"以所求底数为底的对数"（本题化成 $\log_4 9$），然后直接用定义 $4^{\log_4 9}=9$。核心工具是换底公式的两种形式：
 \[\log_a b=\frac{\log_c b}{\log_c a},\qquad \log_a b=\frac1{\log_b a}\]
 \end{gktip}
+
+\gkanswer{答案：B（$\dfrac19$）}
 
 \par\medskip
 
@@ -245,9 +324,22 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　执行下面的程序框图，则输出的 $n=$（　　）
+\textbf{题目}：
+
+执行下面的程序框图，则输出的 $n=$（　　）
 
 \begin{center}\input{figures/f2020wen_t9_flow}\end{center}
+
+\begin{gkopts}(4)
+\task A．$17$
+\task B．$19$
+\task C．$21$
+\task D．$23$
+\end{gkopts}
+
+\begin{gktip}
+\textbf{注}：程序框图（算法初步）在现行新课标中已删除，本题仅作历史资料保留。
+\end{gktip}
 
 \textbf{解析}
 
@@ -292,13 +384,13 @@ $\mathrm i$ 的幂\textbf{四个一循环}：
 
 $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此时 $n$ 变为 $21$；再累加得 $121>100$，输出 $n=21$。
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错点}：临界判断 $S=100$ 时，条件是 $S\le100$ 而非 $S<100$，故\textbf{仍要继续一轮}。若误判为跳出，会得到 $n=19$（选项 B）——这正是命题人设置的陷阱。
 
 \textbf{注}：程序框图（算法初步）在现行新课标中已删除，本题仅作历史资料。
 \end{gktip}
+
+\gkanswer{答案：C（$21$）}
 
 \par\medskip
 
@@ -306,7 +398,16 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　设 $\left\{a_n\right\}$ 是等比数列，且 $a_1+a_2+a_3=1$，$a_2+a_3+a_4=2$，则 $a_6+a_7+a_8=$（　　）
+\textbf{题目}：
+
+设 $\left\{a_n\right\}$ 是等比数列，且 $a_1+a_2+a_3=1$，$a_2+a_3+a_4=2$，则 $a_6+a_7+a_8=$（　　）
+
+\begin{gkopts}(4)
+\task A．$12$
+\task B．$24$
+\task C．$30$
+\task D．$32$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -321,11 +422,11 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 同理，$a_6+a_7+a_8$ 相对于 $a_1+a_2+a_3$，每个下标\textbf{后移 $5$ 位}，故是它的 $q^{5}$ 倍：
 \[a_6+a_7+a_8=q^{5}\left(a_1+a_2+a_3\right)=2^{5}\times1=32\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{方法总结}：等比数列题中，\textbf{只要出现"若干连续项之和"，就把它当作一个整体}——整体之间的比值就是 $q$ 的相应次幂。这比先求 $a_1$、$q$ 再逐项计算快得多，而且本题根本不需要知道 $a_1$。
 \end{gktip}
+
+\gkanswer{答案：D（$32$）}
 
 \par\medskip
 
@@ -333,7 +434,16 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　设 $F_1$，$F_2$ 是双曲线 $C:x^{2}-\dfrac{y^{2}}3=1$ 的两个焦点，$O$ 为坐标原点，点 $P$ 在 $C$ 上且 $|OP|=2$，则 $\triangle PF_1F_2$ 的面积为（　　）
+\textbf{题目}：
+
+设 $F_1$，$F_2$ 是双曲线 $C:x^{2}-\dfrac{y^{2}}3=1$ 的两个焦点，$O$ 为坐标原点，点 $P$ 在 $C$ 上且 $|OP|=2$，则 $\triangle PF_1F_2$ 的面积为（　　）
+
+\begin{gkopts}(4)
+\task A．$\dfrac72$
+\task B．$3$
+\task C．$\dfrac52$
+\task D．$2$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -368,13 +478,13 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 直角三角形的面积等于两直角边乘积的一半：
 \[S=\frac12mn=\frac12\times6=3\]
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：焦点三角形问题的通用套路是"\textbf{定义式（和或差） + 余弦定理（或勾股）}"联立，通过\textbf{平方}建立起 $mn$ 与已知量的关系，从而求出面积（面积公式 $S=\dfrac12mn\sin\theta$ 只需 $mn$ 的乘积，不需要分别求出 $m$、$n$）。
 
 本题中"$|OP|=c$ ~$\Longrightarrow$~ 直角"这个识别是关键——\textbf{中线等于斜边一半的三角形是直角三角形}。
 \end{gktip}
+
+\gkanswer{答案：B（$3$）}
 
 \par\medskip
 
@@ -382,7 +492,18 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　球的截面问题（同理科卷第 10 题）。
+\textbf{题目}：
+
+已知 $A$，$B$，$C$ 为球 $O$ 的球面上的三个点，$\odot O_1$ 为 $\triangle ABC$ 的外接圆。若 $\odot O_1$ 的面积为 $4\pi$，$AB=BC=AC=OO_1$，则球 $O$ 的表面积为（　　）
+
+\begin{gkopts}(4)
+\task A．$64\pi$
+\task B．$48\pi$
+\task C．$36\pi$
+\task D．$32\pi$
+\end{gkopts}
+
+\textbf{解析}
 
 \textbf{解析要点}
 
@@ -391,7 +512,7 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 由核心公式 $R^{2}=OO_1^{2}+r^{2}=12+4=16$ 得 $R=4$，表面积
 \[S=4\pi R^{2}=64\pi\]
 
-\gkanswer{答案：A}
+\gkanswer{答案：A（$64\pi$）}
 
 \par\medskip
 
@@ -401,7 +522,11 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　线性规划求 $z=x+7y$ 的最大值（同理科卷第 13 题）。
+\textbf{题目}：
+
+若 $x$，$y$ 满足约束条件 $\begin{cases}2x+y-2\le0\\ x-y-1\ge0\\ y+1\ge0\end{cases}$，则 $z=x+7y$ 的最大值为 \gkblank{}．
+
+\textbf{解析}
 
 \textbf{解析要点}
 
@@ -415,7 +540,9 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　设向量 $\boldsymbol a=(1,-1)$，$\boldsymbol b=(m+1,\ 2m-4)$，若 $\boldsymbol a\perp\boldsymbol b$，则 $m=$ \gkblank{}。
+\textbf{题目}：
+
+设向量 $\boldsymbol a=(1,-1)$，$\boldsymbol b=(m+1,\ 2m-4)$，若 $\boldsymbol a\perp\boldsymbol b$，则 $m=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -424,11 +551,11 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 
 \[m+1-2m+4=0\ \Longrightarrow\ -m+5=0\ \Longrightarrow\ m=5\]
 
-\gkanswer{答案：$5$}
-
 \begin{gktip}
 \textbf{提醒}：向量\textbf{垂直}用数量积为零（$x_1x_2+y_1y_2=0$），向量\textbf{平行}用交叉相乘相减为零（$x_1y_2-x_2y_1=0$）。两个判据不能混用。
 \end{gktip}
+
+\gkanswer{答案：$5$}
 
 \par\medskip
 
@@ -436,7 +563,9 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{15}{}
 
-\textbf{题目}　曲线 $y=\ln x+x+1$ 的一条切线的斜率为 $2$，则该切线的方程为 \gkblank{}。
+\textbf{题目}：
+
+曲线 $y=\ln x+x+1$ 的一条切线的斜率为 $2$，则该切线的方程为 \gkblank{}．
 
 \textbf{解析}
 
@@ -454,11 +583,11 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \textbf{第三步，写切线方程。}
 \[y-2=2(x-1)\ \Longrightarrow\ y=2x\]
 
-\gkanswer{答案：$y=2x$}
-
 \begin{gktip}
 \textbf{注}：这条切线恰好过原点，是一个"巧合"，也是命题人让答案简洁的设计。检验：$2\times1=2$  切点确实在切线上。
 \end{gktip}
+
+\gkanswer{答案：$y=2x$}
 
 \par\medskip
 
@@ -466,16 +595,18 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{16}{}
 
-\textbf{题目}　数列 $\left\{a_n\right\}$ 满足 $a_{n+2}+(-1)^{n}a_n=3n-1$，前 $16$ 项和为 $540$，则 $a_1=$ \gkblank{}。
+\textbf{题目}：
+
+数列 $\left\{a_n\right\}$ 满足 $a_{n+2}+(-1)^{n}a_n=3n-1$，前 $16$ 项和为 $540$，则 $a_1=$ \gkblank{}．
 
 \textbf{解析}
 
 \textbf{第一步（关键）：按 $n$ 的奇偶把递推式拆成两个。}
 
-\[(-1)^{n}=\begin{cases}+1,&n\ \text{为偶数}\\ -1,&n\ \text{为奇数}\end{cases}\]
+\[(-1)^{n}=\begin{cases}+1,&n\ \text{\text{为偶数}}\\ -1,&n\ \text{\text{为奇数}}\end{cases}\]
 
 故
-\[\begin{cases}a_{n+2}+a_n=3n-1,&n\ \text{为偶数}\quad(\text{相加型})\\[1mm] a_{n+2}-a_n=3n-1,&n\ \text{为奇数}\quad(\text{相减型})\end{cases}\]
+\[\begin{cases}a_{n+2}+a_n=3n-1,&n\ \text{\text{为偶数}}\quad(\text{\text{相加型}})\\[1mm] a_{n+2}-a_n=3n-1,&n\ \text{\text{为奇数}}\quad(\text{\text{相减型}})\end{cases}\]
 
 \textbf{这两种类型的处理方式完全不同}：相加型可以直接得到"两项之和"，相减型需要逐项累加。
 
@@ -509,11 +640,9 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \[8a_1+(0+2+10+24+44+70+102+140)=8a_1+392\]
 
 \textbf{第四步，联立求 $a_1$。}
-\[\underbrace{8a_1+392}_{\text{奇数项}}+\underbrace{92}_{\text{偶数项}}=540\]
+\[\underbrace{8a_1+392}_{\text{\text{奇数项}}}+\underbrace{92}_{\text{\text{偶数项}}}=540\]
 
 \[8a_1=540-484=56\ \Longrightarrow\ a_1=7\]
-
-\gkanswer{答案：$7$}
 
 \begin{gktip}
 \textbf{方法总结}：含 $(-1)^{n}$ 的递推数列，\textbf{第一步永远是按奇偶拆开}。拆开后要认清两种类型：
@@ -525,6 +654,8 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 本题的巧妙之处在于：偶数项用相加型可以直接算出总和（不需要知道任何一项的具体值），而奇数项用相减型只能全部用 $a_1$ 表示——两部分性质不同，恰好让 $a_1$ 成为唯一未知数。
 \end{gktip}
 
+\gkanswer{答案：$7$}
+
 \par\medskip
 
 \end{answer}
@@ -533,7 +664,39 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \begin{answer}
 \gksolhead{17}{12 分}
 
-\textbf{题目}　加工业务选厂问题（数据见试题卷）。
+\textbf{题目}（12 分）：
+
+某厂接受了一项加工业务，加工出来的产品（单位：件）按标准分为 $A$，$B$，$C$，$D$ 四个等级。加工业务约定：对于 $A$ 级品、$B$ 级品、$C$ 级品，厂家每件分别收取加工费 $90$ 元、$50$ 元、$20$ 元；对于 $D$ 级品，厂家每件要赔偿原料损失费 $50$ 元。该厂有甲、乙两个分厂可承接加工业务。甲分厂加工成本费为 $25$ 元/件，乙分厂加工成本费为 $20$ 元/件。厂家为决定由哪个分厂承接加工业务，在两个分厂各试加工了 $100$ 件这种产品，并统计了这些产品的等级，整理如下：
+
+\textbf{甲分厂产品等级的频数分布表}
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+等级 & $A$ & $B$ & $C$ & $D$ \\
+\midrule
+频数 & $40$ & $20$ & $20$ & $20$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{乙分厂产品等级的频数分布表}
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+等级 & $A$ & $B$ & $C$ & $D$ \\
+\midrule
+频数 & $28$ & $17$ & $34$ & $21$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+  (1) 分别估计甲、乙两分厂加工出来的一件产品为 $A$ 级品的概率；
+
+  (2) 分别求甲、乙两分厂加工出来的 $100$ 件产品的平均利润，以平均利润为依据，厂家应选哪个分厂承接加工业务？
+
+\textbf{解析}
 
 \par\medskip
 
@@ -542,10 +705,10 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 用\textbf{频率估计概率}：
 
 \textbf{甲分厂}：$100$ 件中 $A$ 级品有 $40$ 件，
-\[P_{\text{甲}}(A)\approx\frac{40}{100}=0.4\]
+\[P_{\text{\text{甲}}}(A)\approx\frac{40}{100}=0.4\]
 
 \textbf{乙分厂}：$100$ 件中 $A$ 级品有 $28$ 件，
-\[P_{\text{乙}}(A)\approx\frac{28}{100}=0.28\]
+\[P_{\text{\text{乙}}}(A)\approx\frac{28}{100}=0.28\]
 
 \par\medskip
 
@@ -585,17 +748,17 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 
 \textbf{甲分厂}：
 \[40\times65+20\times25+20\times(-5)+20\times(-75)\]
-\[=2600+500-100-1500=1500\ (\text{元})\]
+\[=2600+500-100-1500=1500\ (\text{\text{元}})\]
 
 平均利润：
-\[\frac{1500}{100}=15\ (\text{元/件})\]
+\[\frac{1500}{100}=15\ (\text{\text{元}/\text{件}})\]
 
 \textbf{乙分厂}：
 \[28\times70+17\times30+34\times0+21\times(-70)\]
-\[=1960+510+0-1470=1000\ (\text{元})\]
+\[=1960+510+0-1470=1000\ (\text{\text{元}})\]
 
 平均利润：
-\[\frac{1000}{100}=10\ (\text{元/件})\]
+\[\frac{1000}{100}=10\ (\text{\text{元}/\text{件}})\]
 
 \textbf{第三步，作出决策。}
 
@@ -610,13 +773,25 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \textbf{另一个观察}：乙分厂虽然成本更低（每件省 $5$ 元），但它的 $A$ 级品率低（$28\%$ vs $40\%$）、$C$ 级品率高（$34\%$ vs $20\%$），产品质量的差距远超成本优势。这也是本题的现实意义——\textbf{决策要看综合收益，不能只看成本}。
 \end{gktip}
 
+\gkanswer{答案（1）：甲 $0.4$，乙 $0.28$}
+
+\gkanswer{答案（2）：甲平均利润 $15$ 元、乙 $10$ 元，应选甲分厂}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{18}{12 分}
 
-\textbf{题目}　$\triangle ABC$ 中 $B=150^\circ$。(1) 若 $a=\sqrt3c$、$b=2\sqrt7$，求面积；(2) 若 $\sin A+\sqrt3\sin C=\dfrac{\sqrt2}2$，求 $C$。
+\textbf{题目}（12 分）：
+
+$\triangle ABC$ 的内角 $A$，$B$，$C$ 的对边分别为 $a$，$b$，$c$。已知 $B=150^\circ$。
+
+  (1) 若 $a=\sqrt3c$，$b=2\sqrt7$，求 $\triangle ABC$ 的面积；
+
+  (2) 若 $\sin A+\sqrt3\sin C=\dfrac{\sqrt2}2$，求 $C$。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -678,15 +853,27 @@ $S=100=10^{2}$ 对应累加了前 $10$ 个奇数（最后加的是 $19$），此
 \textbf{务必先确定角的范围}（本题 $C+30^\circ\in(30^\circ,60^\circ)$），否则 $\sin\theta=\dfrac{\sqrt2}2$ 会有 $45^\circ$ 与 $135^\circ$ 两个解。
 \end{gktip}
 
+\gkanswer{答案（1）：面积 $=\sqrt3$}
+
+\gkanswer{答案（2）：$C=15^\circ$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{12 分}
 
-\textbf{题目}　$D$ 为圆锥顶点，$O$ 为底面圆心，$\triangle ABC$ 是底面内接正三角形，$P$ 为 $DO$ 上一点，$\angle APC=90^\circ$。
+\textbf{题目}（12 分）：
+
+如图，$D$ 为圆锥的顶点，$O$ 是圆锥底面的圆心，$\triangle ABC$ 是底面的内接正三角形，$P$ 为 $DO$ 上一点，$\angle APC=90^\circ$。
 
 \begin{center}\input{figures/f2020wen_t19_cone}\end{center}
+
+  (1) 证明：平面 $PAB\perp$ 平面 $PAC$；
+
+  (2) 设 $DO=\sqrt2$，圆锥的侧面积为 $\sqrt3\pi$，求三棱锥 $P\text{-}ABC$ 的体积。
+
+\textbf{解析}
 
   (1) 证明：平面 $PAB\perp$ 平面 $PAC$；(2) 设 $DO=\sqrt2$，圆锥侧面积为 $\sqrt3\pi$，求三棱锥 $P\text{-}ABC$ 的体积。
 
@@ -713,12 +900,12 @@ $P$ 在圆锥的轴 $DO$ 上，而 $A$、$B$、$C$ 是底面圆上的三个点�
 由 $\angle APB=90^\circ$ 得 $PB\perp PA$；由 $\angle BPC=90^\circ$ 得 $PB\perp PC$。
 
 而 $PA$ 与 $PC$ 是平面 $PAC$ 内的\textbf{两条相交直线}（交于 $P$），由线面垂直的判定定理：
-\[PB\perp\text{平面 }PAC\]
+\[PB\perp\text{\text{平面} }PAC\]
 
 \textbf{第四步，用面面垂直的判定。}
 
 $PB\subset$ 平面 $PAB$，而 $PB\perp$ 平面 $PAC$，故
-\[\text{平面 }PAB\perp\text{平面 }PAC\qquad\blacksquare\]
+\[\text{\text{平面} }PAB\perp\text{\text{平面} }PAC\qquad\blacksquare\]
 
 \par\medskip
 
@@ -764,13 +951,25 @@ $\triangle APC$ 中 $PA=PC$ 且 $\angle APC=90^\circ$，是\textbf{等腰直角�
 \textbf{注意}：题目给的 $DO=\sqrt2$ 只用于\textbf{通过侧面积求出 $r$}，而三棱锥的高是 $PO$（不是 $DO$）——$P$ 的位置由 $\angle APC=90^\circ$ 单独确定。\textbf{读题时务必分清 $D$（圆锥顶点）与 $P$（轴上的点）。}
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$V=\dfrac{\sqrt6}8$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{20}{12 分}
 
-\textbf{题目}　已知函数 $f(x)=\mathrm e^{x}-a(x+2)$。(1) 当 $a=1$ 时讨论单调性；(2) 若 $f(x)$ 有两个零点，求 $a$ 的取值范围。
+\textbf{题目}（12 分）：
+
+已知函数 $f(x)=\mathrm e^{x}-a(x+2)$。
+
+  (1) 当 $a=1$ 时，讨论 $f(x)$ 的单调性；
+
+  (2) 若 $f(x)$ 有两个零点，求 $a$ 的取值范围。
+
+\textbf{解析}
 
 \par\medskip
 
@@ -836,13 +1035,25 @@ $a=1$ 时：
 第 3 步在考试中常被省略，但严格来说不可少——若函数有上界，即使极小值为负也未必有两个零点。
 \end{gktip}
 
+\gkanswer{答案（1）：$f'(x)=\mathrm e^{x}-1$，故 $f$ 在 $(-\infty,0)$ 递减、在 $(0,+\infty)$ 递增。}
+
+\gkanswer{答案（2）：$a>\dfrac1{\mathrm e}$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{21}{12 分}
 
-\textbf{题目}　椭圆定点问题（与理科卷第 20 题完全相同）。
+\textbf{题目}（12 分）：
+
+已知 $A$，$B$ 分别为椭圆 $E:\dfrac{x^{2}}{a^{2}}+y^{2}=1\ (a>1)$ 的左、右顶点，$G$ 为 $E$ 的上顶点，$\overrightarrow{AG}\cdot\overrightarrow{GB}=8$，$P$ 为直线 $x=6$ 上的动点，$PA$ 与 $E$ 的另一交点为 $C$，$PB$ 与 $E$ 的另一交点为 $D$。
+
+  (1) 求 $E$ 的方程；
+
+  (2) 证明：直线 $CD$ 过定点。
+
+\textbf{解析}
 
 \textbf{解析要点}
 
@@ -867,6 +1078,10 @@ $a=1$ 时：
 
 （完整推导见理科卷含解析第 20 题。）
 
+\gkanswer{答案（1）：$\dfrac{x^{2}}9+y^{2}=1$}
+
+\gkanswer{答案（2）：直线 $CD$ 过定点 $\left(\dfrac32,0\right)$}
+
 \par\medskip
 
 \end{answer}
@@ -879,20 +1094,50 @@ $a=1$ 时：
 \begin{answer}
 \gksolhead{22}{坐标系与参数方程}
 
+\textbf{题目}（10 分）〔选修 4-4：坐标系与参数方程〕：
+
+（\textbf{已取消}）
+
+在直角坐标系 $xOy$ 中，曲线 $C_1$ 的参数方程为 $\begin{cases}x=\cos^{k}t\\ y=\sin^{k}t\end{cases}$（$t$ 为参数）。以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，曲线 $C_2$ 的极坐标方程为 $4\rho\cos\theta-16\rho\sin\theta+3=0$。
+
+  (1) 当 $k=1$ 时，$C_1$ 是什么曲线？
+
+  (2) 当 $k=4$ 时，求 $C_1$ 与 $C_2$ 的公共点的直角坐标。
+
+\textbf{解析}
+
 \textbf{(1)}　$k=1$ 时消参得 $x^{2}+y^{2}=1$，是\textbf{以原点为圆心、半径为 $1$ 的圆}。
 
 \textbf{(2)}　$k=4$ 时 $\sqrt x=\cos^{2}t$、$\sqrt y=\sin^{2}t$，故 $C_1:\sqrt x+\sqrt y=1$；$C_2$ 化为 $4x-16y+3=0$。
 
 联立并令 $u=\sqrt x$：
-\[12u^{2}-32u+13=0\ \Longrightarrow\ u=\frac12\ \text{（另一根 }\tfrac{13}6>1\text{ 舍）}\]
+\[12u^{2}-32u+13=0\ \Longrightarrow\ u=\frac12\ \text{（\text{另一根} }\tfrac{13}6>1\text{ \text{舍}）}\]
 
 \textbf{公共点为 $\left(\dfrac14,\ \dfrac14\right)$。}
+
+\gkanswer{答案（1）：$C_1$ 是以原点为圆心、半径 $1$ 的圆}
+
+\gkanswer{答案（2）：公共点为 $\left(\dfrac14,\dfrac14\right)$}
 
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{23}{不等式选讲}
+
+\textbf{题目}（10 分）〔选修 4-5：不等式选讲〕：
+
+（\textbf{已取消}）
+
+已知函数 $f(x)=|3x+1|-2|x-1|$。
+
+  (1) 画出 $y=f(x)$ 的图象；
+
+  (2) 求不等式 $f(x)>f(x+1)$ 的解集。
+
+\par\medskip
+
+\textbf{解析}
 
 \textbf{(1)}
 \[f(x)=\begin{cases}-x-3,&x<-\dfrac13\\[2mm] 5x-1,&-\dfrac13\le x<1\\[2mm] x+3,&x\ge1\end{cases}\]
@@ -902,5 +1147,8 @@ $a=1$ 时：
 \textbf{(2)}　$y=f(x+1)$ 是原图象\textbf{左移 $1$ 个单位}。分区间比较后得解集
 \[\left(-\infty,\ -\frac76\right)\]
 
+\gkanswer{答案（1）：$f(x)=\begin{cases}-x-3,&x<-\dfrac13\\ 5x-1,&-\dfrac13\le x<1\\ x+3,&x\ge1\end{cases}$}
+
+\gkanswer{答案（2）：解集为 $\left(-\infty,-\dfrac76\right)$}
 
 \end{answer}

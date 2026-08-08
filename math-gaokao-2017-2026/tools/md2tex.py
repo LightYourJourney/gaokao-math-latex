@@ -17,10 +17,18 @@
   $$...$$                            -> \\[...\\]
   \\_ 连续下划线（填空）              -> \\gkblank
 数学段（$...$ 内部）原样透传，只对文本段做加粗/链接/转义处理。
+
+**纯接口**：`convert_markdown(source, ConversionContext(...))` 返回 `ConversionResult`，
+警告与被引用的 figure 全部由返回值携带，模块内不再有可跨调用累积的全局状态——多卷
+批量生成时，上一卷的警告混进下一卷会让「哪一卷出了问题」彻底不可判定。配图映射也
+由 `ConversionContext.figure_map` 显式传入，`FIGMAP` 只是默认值。
+`strict=True`（默认）时任何警告都抛 `ConversionError`，供生成器做失败零覆盖。
 """
 import re
 import sys
+from dataclasses import dataclass
 from pathlib import Path
+from typing import List, Mapping, Sequence, Tuple
 
 # ---------- 配图映射：MD 图片基名 -> figures/ 下的 TikZ 文件名 ----------
 FIGMAP = {
@@ -76,7 +84,45 @@ FIGMAP = {
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"
 
-warnings: list[str] = []
+
+@dataclass(frozen=True)
+class ConversionContext:
+    """一次转换的只读环境：配图映射 + 是否严格。"""
+
+    figure_map: Mapping[str, str]
+    strict: bool = True
+
+
+@dataclass(frozen=True)
+class ConversionResult:
+    """一次转换的全部产出。
+
+    `referenced_figures` 按出现顺序**逐次**记录成功映射到的 figure 名，重复引用会
+    出现多次——调用方据此核对复用计数，所以这里绝不能去重。
+    """
+
+    text: str
+    warnings: Tuple[str, ...]
+    referenced_figures: Tuple[str, ...]
+
+
+class ConversionError(ValueError):
+    """strict 模式下出现了警告。"""
+
+    def __init__(self, warnings: Sequence[str]) -> None:
+        self.warnings = tuple(warnings)
+        super().__init__("转换出现 %d 条警告：%s" % (len(self.warnings), "；".join(self.warnings)))
+
+
+class _Sink:
+    """一次转换的可变累积器，替代原来的模块级 warnings 全局。"""
+
+    __slots__ = ("figure_map", "warnings", "figures")
+
+    def __init__(self, figure_map: Mapping[str, str]) -> None:
+        self.figure_map = figure_map
+        self.warnings: List[str] = []
+        self.figures: List[str] = []
 
 
 # ---------- 行内处理 ----------
@@ -101,7 +147,7 @@ def conv_math_display(s: str) -> str:
     return CJK_IN_MATH.sub(r"\\text{\1}", s)
 
 
-def conv_inline(s: str) -> str:
+def conv_inline(s: str, sink: _Sink) -> str:
     # 顺序要点：加粗/链接先做（它们可以跨数学段，如 **……$x$……**），
     # 再按 $ 切分，只对文本段做转义与符号替换
     for ch in EMOJI:
@@ -112,7 +158,7 @@ def conv_inline(s: str) -> str:
 
     parts = s.split("$")
     if len(parts) % 2 == 0:  # $ 不配对——原样返回并记警告
-        warnings.append(f"未配对的 $：{s[:60]}")
+        sink.warnings.append(f"未配对的 $：{s[:60]}")
         return s
     out = []
     for i, seg in enumerate(parts):
@@ -135,7 +181,7 @@ def conv_text(s: str) -> str:
 # ---------- 选项组 ----------
 OPT_SPLIT = re.compile(r"(?:　+|\s{2,})(?=[A-D]．)")
 
-def emit_options(lines: list[str]) -> list[str]:
+def emit_options(lines: List[str], sink: _Sink) -> List[str]:
     merged = "　　".join(x.strip() for x in lines)
     opts = [o.strip() for o in OPT_SPLIT.split(merged) if o.strip()]
     # 列数按最长选项的可见长度粗估：数学段按 0.55 倍字符数折算
@@ -146,16 +192,16 @@ def emit_options(lines: list[str]) -> list[str]:
     ncol = 4 if longest <= 10 else (2 if longest <= 26 else 1)
     out = [f"\\begin{{gkopts}}({ncol})"]
     for o in opts:
-        out.append(f"\\task {conv_inline(o)}")
+        out.append(f"\\task {conv_inline(o, sink)}")
     out.append("\\end{gkopts}")
     return out
 
 
 # ---------- 表格 ----------
-def emit_table(lines: list[str]) -> list[str]:
+def emit_table(lines: List[str], sink: _Sink) -> List[str]:
     rows = [[c.strip() for c in ln.strip().strip("|").split("|")] for ln in lines]
     if len(rows) < 2:
-        return [conv_inline(lines[0])]
+        return [conv_inline(lines[0], sink)]
     sep = rows[1]
     aligns = []
     for c in sep:
@@ -174,7 +220,7 @@ def emit_table(lines: list[str]) -> list[str]:
     out += [f"\\begin{{tabular}}{{{''.join(aligns[:ncol])}}}", "\\toprule"]
     for i, r in enumerate(body_rows):
         r = r + [""] * (ncol - len(r))
-        out.append(" & ".join(conv_inline(c) for c in r) + r" \\")
+        out.append(" & ".join(conv_inline(c, sink) for c in r) + r" \\")
         if i == 0:
             out.append("\\midrule")
     out += ["\\bottomrule", "\\end{tabular}"]
@@ -185,7 +231,7 @@ def emit_table(lines: list[str]) -> list[str]:
 
 
 # ---------- 引用块 ----------
-def emit_quote(lines: list[str]) -> list[str]:
+def emit_quote(lines: List[str], sink: _Sink) -> List[str]:
     inner = [re.sub(r"^>\s?", "", ln) for ln in lines]
     text = "\n".join(inner)
     if "原卷影印件" in text or "配套文档" in text:
@@ -193,16 +239,17 @@ def emit_quote(lines: list[str]) -> list[str]:
     env = "gktip"
     if any(k in text for k in ("卷种提示", "解析归属", "归属声明", "重合题", "适用省份")):
         env = "gknotice"
-    body = convert_block(inner)          # 递归处理引用内部（可含表格/显示公式）
+    body = convert_block(inner, sink)    # 递归处理引用内部（可含表格/显示公式）
     return [f"\\begin{{{env}}}"] + body + [f"\\end{{{env}}}"]
 
 
 # ---------- 图片 ----------
-def emit_image(name: str) -> list[str]:
-    slug = FIGMAP.get(name)
+def emit_image(name: str, sink: _Sink) -> List[str]:
+    slug = sink.figure_map.get(name)
     if slug is None:
-        warnings.append(f"图片无映射：{name}")
+        sink.warnings.append(f"图片无映射：{name}")
         return [r"\begin{center}\fbox{图形缺失：" + conv_text(name) + r"}\end{center}"]
+    sink.figures.append(slug)
     return [f"\\begin{{center}}\\input{{figures/{slug}}}\\end{{center}}"]
 
 
@@ -213,8 +260,8 @@ OPTLINE = re.compile(r"^\s{0,4}[A-D]．")
 ANSLINE = re.compile(r"^\*\*([^*]*答案[^*]*)\*\*\s*$")
 
 
-def convert_block(lines: list[str]) -> list[str]:
-    out: list[str] = []
+def convert_block(lines: List[str], sink: _Sink) -> List[str]:
+    out: List[str] = []
     i = 0
     n = len(lines)
     while i < n:
@@ -234,7 +281,7 @@ def convert_block(lines: list[str]) -> list[str]:
                 if lines[j].strip():
                     grp.append(lines[j].lstrip())
                 j += 1
-            out += emit_quote(grp)
+            out += emit_quote(grp, sink)
             i = j
             continue
 
@@ -245,7 +292,7 @@ def convert_block(lines: list[str]) -> list[str]:
             while j < n and lines[j].strip().startswith("|"):
                 grp.append(lines[j])
                 j += 1
-            out += emit_table(grp)
+            out += emit_table(grp, sink)
             i = j
             continue
 
@@ -256,7 +303,7 @@ def convert_block(lines: list[str]) -> list[str]:
             if m:                       # 单行 $$...$$，允许带尾随文字（如括号段收尾）
                 out += ["\\[" + conv_math_display(m.group(1)) + "\\]"]
                 if m.group(2).strip():
-                    out += [conv_inline(m.group(2).strip())]
+                    out += [conv_inline(m.group(2).strip(), sink)]
                 i += 1
                 continue
             body = s
@@ -267,8 +314,8 @@ def convert_block(lines: list[str]) -> list[str]:
             if body.endswith("$$") and len(body) > 2:
                 out += ["\\[" + conv_math_display(body[2:-2]) + "\\]"]
             else:                       # 越界护栏：未闭合不崩溃，按行内文本退化并告警
-                warnings.append(f"未闭合的 $$ 块：{s[:50]}")
-                out += [conv_inline(s)]
+                sink.warnings.append(f"未闭合的 $$ 块：{s[:50]}")
+                out += [conv_inline(s, sink)]
                 j = i
             i = j + 1
             continue
@@ -277,18 +324,21 @@ def convert_block(lines: list[str]) -> list[str]:
         if ln.startswith("#"):
             m = HEAD_SOL.match(ln)
             if m:
-                out.append(f"\\gksolhead{{{m.group(1)}}}{{{conv_inline(m.group(2) or m.group(3) or '')}}}")
+                out.append(
+                    f"\\gksolhead{{{m.group(1)}}}"
+                    f"{{{conv_inline(m.group(2) or m.group(3) or '', sink)}}}"
+                )
             elif ln.startswith("####"):
-                out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip())}}}")
+                out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip(), sink)}}}")
             elif ln.startswith("###"):
-                out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip())}}}")
+                out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip(), sink)}}}")
             elif ln.startswith("##"):
                 t = ln.lstrip("#").strip()
                 # 卷名副标题（如"数学（全国 I 卷 · 理科）"）丢弃
                 if t.startswith("数学（"):
                     pass
                 else:
-                    out.append(f"\\gkpart{{{conv_inline(t)}}}")
+                    out.append(f"\\gkpart{{{conv_inline(t, sink)}}}")
             # 一级标题（考试名）丢弃
             i += 1
             continue
@@ -302,7 +352,7 @@ def convert_block(lines: list[str]) -> list[str]:
         # --- 图片 ---
         m = IMG.match(ln.strip())
         if m:
-            out += emit_image(m.group(1))
+            out += emit_image(m.group(1), sink)
             i += 1
             continue
 
@@ -315,7 +365,7 @@ def convert_block(lines: list[str]) -> list[str]:
                 j += 1
             out.append("\\begin{itemize}")
             for item in grp:
-                out.append("\\item " + conv_inline(item))
+                out.append("\\item " + conv_inline(item, sink))
             out.append("\\end{itemize}")
             i = j
             continue
@@ -332,33 +382,33 @@ def convert_block(lines: list[str]) -> list[str]:
                     j += 1        # 选项行之间的空行
                 else:
                     break
-            out += emit_options(grp)
+            out += emit_options(grp, sink)
             i = j
             continue
 
         # --- 题号 ---
         m = HEAD_QNUM.match(ln)
         if m:
-            score = f"\\textbf{{{conv_inline(m.group(2))}}} " if m.group(2) else ""
-            out.append(f"\\gkti{{{m.group(1)}}}{score}{conv_inline(m.group(3))}")
+            score = f"\\textbf{{{conv_inline(m.group(2), sink)}}} " if m.group(2) else ""
+            out.append(f"\\gkti{{{m.group(1)}}}{score}{conv_inline(m.group(3), sink)}")
             i += 1
             continue
 
         # --- 独立答案段 ---
         m = ANSLINE.match(ln.strip())
         if m:
-            out.append(f"\\gkanswer{{{conv_inline(m.group(1))}}}")
+            out.append(f"\\gkanswer{{{conv_inline(m.group(1), sink)}}}")
             i += 1
             continue
 
         # --- 普通段落 ---
-        out.append(conv_inline(ln))
+        out.append(conv_inline(ln, sink))
         i += 1
 
     return out
 
 
-def strip_frontmatter(lines: list[str]) -> list[str]:
+def strip_frontmatter(lines: List[str]) -> List[str]:
     if lines and lines[0].strip() == "---":
         for j in range(1, len(lines)):
             if lines[j].strip() == "---":
@@ -366,15 +416,42 @@ def strip_frontmatter(lines: list[str]) -> list[str]:
     return lines
 
 
-def main() -> None:
-    src, dst = Path(sys.argv[1]), Path(sys.argv[2])
-    lines = strip_frontmatter(src.read_text(encoding="utf-8").splitlines())
-    body = convert_block(lines)
+def _finish(text: str, sink: _Sink, context: ConversionContext) -> ConversionResult:
+    warnings = tuple(sink.warnings)
+    if context.strict and warnings:
+        raise ConversionError(warnings)
+    return ConversionResult(
+        text=text, warnings=warnings, referenced_figures=tuple(sink.figures)
+    )
+
+
+def convert_markdown(source: str, context: ConversionContext) -> ConversionResult:
+    """把一份 Markdown 全文转成 LaTeX 正文片段（不含生成头注）。"""
+    sink = _Sink(context.figure_map)
+    body = convert_block(strip_frontmatter(source.splitlines()), sink)
     # 压掉三连以上空行
     text = re.sub(r"\n{3,}", "\n\n", "\n".join(body)) + "\n"
-    dst.write_text(f"% 由 tools/md2tex.py 自 {src.name} 生成，勿手改（改源 MD 后重跑）\n" + text,
-                   encoding="utf-8")
-    for w in warnings:
+    return _finish(text, sink, context)
+
+
+def convert_inline(text: str, context: ConversionContext) -> ConversionResult:
+    """只做行内转换（加粗/链接/数学段/转义），供简答版等按题取值的调用方使用。"""
+    sink = _Sink(context.figure_map)
+    return _finish(conv_inline(text, sink), sink, context)
+
+
+def main() -> None:
+    src, dst = Path(sys.argv[1]), Path(sys.argv[2])
+    # 命令行沿用宽松模式：它是排错入口，要把警告全部打出来而不是第一条就中断。
+    result = convert_markdown(
+        src.read_text(encoding="utf-8"),
+        ConversionContext(figure_map=FIGMAP, strict=False),
+    )
+    dst.write_text(
+        f"% 由 tools/md2tex.py 自 {src.name} 生成，勿手改（改源 MD 后重跑）\n" + result.text,
+        encoding="utf-8",
+    )
+    for w in result.warnings:
         print(f"  [warn] {src.name}: {w}")
 
 

@@ -1,6 +1,5 @@
-% 【拆分生成】 answers.tex —— 2026 年·全国 1 卷（回忆版） · 参考答案与详细解析片段
-% 【拆分生成】 由 tools/split_project.py 自合并书 answers/2026_g1_sol.tex 包裹 answer 环境生成，勿手改
-% 由 tools/md2tex.py 自 2026_数学真题_含解析.md 生成，勿手改（改源 MD 后重跑）
+% answers.tex —— 2026 年·全国 1 卷（回忆版） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2026/2026_数学真题_试题.md + 2026/2026_数学真题_解析正文.md + 2026/2026_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
 
 
 \begin{gknotice}
@@ -16,7 +15,9 @@
 \begin{answer}
 \gksolhead{1}{}
 
-\textbf{题目}　样本数据 $6,8,4,5,12$ 的中位数为（　　）
+\textbf{题目}：
+
+样本数据 $6,8,4,5,12$ 的中位数为（　　）
 
 \begin{gkopts}(4)
 \task A．$5$
@@ -34,11 +35,11 @@
 
 共 $5$ 个数据，个数为奇数，中位数取正中间的第 $\dfrac{5+1}{2}=3$ 个数，即 $6$。
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：中位数三步——① 排序；② 数个数判奇偶；③ 奇数取正中间一个，偶数取中间两个的平均数。
 \end{gktip}
+
+\gkanswer{答案：B}
 
 \par\medskip
 
@@ -46,7 +47,9 @@
 \begin{answer}
 \gksolhead{2}{}
 
-\textbf{题目}　已知平面向量 $\vec a$，$\vec b$ 不共线，且 $2\vec a+y\vec b=x\vec a-3\vec b$，则（　　）
+\textbf{题目}：
+
+已知平面向量 $\vec{a}$，$\vec{b}$ 不共线，且 $2\vec{a}+y\vec{b}=x\vec{a}-3\vec{b}$，则（　　）
 
 \begin{gkopts}(4)
 \task A．$x=2$，$y=-3$
@@ -65,11 +68,11 @@
 由表示的唯一性（$\vec 0$ 在基底下只能表示为 $0\cdot\vec a+0\cdot\vec b$），得
 \[\begin{cases}2-x=0\\ y+3=0\end{cases}\Longrightarrow\ x=2,\quad y=-3\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法总结}：见到「不共线 + 两边都是同一组向量的线性组合」，直接对应系数相等。若题目改为「$\vec a$，$\vec b$ 共线」，则表示不唯一，本方法失效。
 \end{gktip}
+
+\gkanswer{答案：A}
 
 \par\medskip
 
@@ -77,19 +80,28 @@
 \begin{answer}
 \gksolhead{3}{}
 
-\textbf{题目}　已知集合 $A=\left\{\sin\dfrac{7\pi}{6},\ \cos\dfrac{5\pi}{3},\ \tan\dfrac{5\pi}{4}\right\}$，$B=\left\{-\dfrac{\sqrt3}{2},\ -\dfrac12,\ 1\right\}$，则 $A\cap B=$（　　）
+\textbf{题目}：
+
+已知集合 $A=\left\{\sin\dfrac{7\pi}{6},\ \cos\dfrac{5\pi}{3},\ \tan\dfrac{5\pi}{4}\right\}$，$B=\left\{-\dfrac{\sqrt{3}}{2},\ -\dfrac{1}{2},\ 1\right\}$，则 $A\cap B=$（　　）
+
+\begin{gkopts}(1)
+\task A．$\left\{-\dfrac{\sqrt{3}}{2},-\dfrac{1}{2}\right\}$
+\task B．$\left\{-\dfrac{\sqrt{3}}{2},1\right\}$
+\task C．$\left\{-\dfrac{1}{2},1\right\}$
+\task D．$\left\{-\dfrac{\sqrt{3}}{2},-\dfrac{1}{2},1\right\}$
+\end{gkopts}
 
 \textbf{解析}
 
 先把 $A$ 中三个三角函数值逐一化简。用诱导公式，口诀「\textbf{奇变偶不变，符号看象限}」。
 
-\textbf{（1）$\sin\dfrac{7\pi}{6}$}：$\dfrac{7\pi}{6}=\pi+\dfrac{\pi}{6}$，终边在\textbf{第三象限}，正弦为负：
+（1）\textbf{$\sin\dfrac{7\pi}{6}$}：$\dfrac{7\pi}{6}=\pi+\dfrac{\pi}{6}$，终边在\textbf{第三象限}，正弦为负：
 \[\sin\dfrac{7\pi}{6}=-\sin\dfrac{\pi}{6}=-\frac12\]
 
-\textbf{（2）$\cos\dfrac{5\pi}{3}$}：$\dfrac{5\pi}{3}=2\pi-\dfrac{\pi}{3}$，终边在\textbf{第四象限}，余弦为\textbf{正}：
+（2）\textbf{$\cos\dfrac{5\pi}{3}$}：$\dfrac{5\pi}{3}=2\pi-\dfrac{\pi}{3}$，终边在\textbf{第四象限}，余弦为\textbf{正}：
 \[\cos\dfrac{5\pi}{3}=\cos\dfrac{\pi}{3}=\frac12\]
 
-\textbf{（3）$\tan\dfrac{5\pi}{4}$}：$\dfrac{5\pi}{4}=\pi+\dfrac{\pi}{4}$，正切周期为 $\pi$：
+（3）\textbf{$\tan\dfrac{5\pi}{4}$}：$\dfrac{5\pi}{4}=\pi+\dfrac{\pi}{4}$，正切周期为 $\pi$：
 \[\tan\dfrac{5\pi}{4}=\tan\dfrac{\pi}{4}=1\]
 
 于是
@@ -98,11 +110,11 @@
 与 $B=\left\{-\dfrac{\sqrt3}{2},-\dfrac12,1\right\}$ 取交集，公共元素为 $-\dfrac12$ 和 $1$：
 \[A\cap B=\left\{-\frac12,\ 1\right\}\]
 
-\gkanswer{答案：C}
-
 \begin{gktip}
 \textbf{易错点}：$\cos\dfrac{5\pi}{3}$ 位于第四象限，余弦值为\textbf{正}。若误判为负得 $-\dfrac12$，则 $A\cap B$ 会多出元素，错选 D。注意 $A$ 中根本没有 $-\dfrac{\sqrt3}{2}$，凡含该元素的选项（A、B、D）均可先排除——\textbf{这是本题的秒杀路径}。
 \end{gktip}
+
+\gkanswer{答案：C}
 
 \par\medskip
 
@@ -110,7 +122,16 @@
 \begin{answer}
 \gksolhead{4}{}
 
-\textbf{题目}　曲线 $y=5x+8\ln x$ 在点 $(1,5)$ 处的切线方程为（　　）
+\textbf{题目}：
+
+曲线 $y=5x+8\ln x$ 在点 $(1,5)$ 处的切线方程为（　　）
+
+\begin{gkopts}(4)
+\task A．$y=3x+2$
+\task B．$y=5x$
+\task C．$y=8x-3$
+\task D．$y=13x-8$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -125,11 +146,11 @@
 \textbf{第三步}，点斜式（切点 $(1,5)$）：
 \[y-5=13(x-1)\ \Longrightarrow\ y=13x-8\]
 
-\gkanswer{答案：D}
-
 \begin{gktip}
 \textbf{验证习惯}：把切点代回所得直线，$13\times1-8=5$  与切点纵坐标吻合。这一步只需 3 秒，能挡住绝大多数计算失误。
 \end{gktip}
+
+\gkanswer{答案：D}
 
 \par\medskip
 
@@ -137,13 +158,22 @@
 \begin{answer}
 \gksolhead{5}{}
 
-\textbf{题目}　已知抛物线 $C_1:y^2=2p_1x\ (p_1>0)$ 和 $C_2:x^2=2p_2y\ (p_2>0)$ 均经过点 $(4,8)$，则 $C_1$ 的焦点与 $C_2$ 的焦点之间的距离为（　　）
+\textbf{题目}：
+
+已知抛物线 $C_1:y^2=2p_1x\ (p_1>0)$ 和 $C_2:x^2=2p_2y\ (p_2>0)$ 均经过点 $(4,8)$，则 $C_1$ 的焦点与 $C_2$ 的焦点之间的距离为（　　）
+
+\begin{gkopts}(2)
+\task A．$12$
+\task B．$4\sqrt{5}$
+\task C．$6$
+\task D．$\dfrac{\sqrt{65}}{2}$
+\end{gkopts}
 
 \textbf{解析}
 
 \textbf{关键}：两条抛物线\textbf{开口方向不同}，焦点位置的公式也不同，必须分别处理。
 
-\textbf{（1）求 $C_1$ 的焦点}
+（1）\textbf{求 $C_1$ 的焦点}
 
 $C_1:y^2=2p_1x$ 开口向右，焦点在 $x$ 轴正半轴上，为 $\left(\dfrac{p_1}{2},0\right)$。
 
@@ -152,7 +182,7 @@ $C_1:y^2=2p_1x$ 开口向右，焦点在 $x$ 轴正半轴上，为 $\left(\dfrac
 
 故 $C_1$ 的焦点为 $\left(\dfrac82,0\right)=(4,0)$。
 
-\textbf{（2）求 $C_2$ 的焦点}
+（2）\textbf{求 $C_2$ 的焦点}
 
 $C_2:x^2=2p_2y$ 开口向上，焦点在 $y$ 轴正半轴上，为 $\left(0,\dfrac{p_2}{2}\right)$。
 
@@ -161,15 +191,15 @@ $C_2:x^2=2p_2y$ 开口向上，焦点在 $y$ 轴正半轴上，为 $\left(0,\dfr
 
 故 $C_2$ 的焦点为 $\left(0,\dfrac12\right)$。
 
-\textbf{（3）求距离}
+（3）\textbf{求距离}
 
 \[d=\sqrt{(4-0)^2+\left(0-\frac12\right)^2}=\sqrt{16+\frac14}=\sqrt{\frac{65}{4}}=\frac{\sqrt{65}}{2}\]
-
-\gkanswer{答案：D}
 
 \begin{gktip}
 \textbf{方法总结}：抛物线四个标准式的焦点位置——看\textbf{一次项}是哪个字母，焦点就在那个轴上；一次项系数为正则在正半轴。$y^2=2px\Rightarrow F\left(\dfrac p2,0\right)$；$x^2=2py\Rightarrow F\left(0,\dfrac p2\right)$。
 \end{gktip}
+
+\gkanswer{答案：D}
 
 \par\medskip
 
@@ -177,12 +207,14 @@ $C_2:x^2=2p_2y$ 开口向上，焦点在 $y$ 轴正半轴上，为 $\left(0,\dfr
 \begin{answer}
 \gksolhead{6}{}
 
-\textbf{题目}　已知函数 $f(x)=\dfrac{x+2}{\mathrm{e}^{x}+a}$ 的最大值为 $1$，则 $a=$（　　）
+\textbf{题目}：
+
+已知函数 $f(x)=\dfrac{x+2}{\mathrm{e}^{x}+a}$ 的最大值为 $1$，则 $a=$（　　）
 
 \begin{gkopts}(4)
-\task A．$\dfrac12$
+\task A．$\dfrac{1}{2}$
 \task B．$1$
-\task C．$\dfrac32$
+\task C．$\dfrac{3}{2}$
 \task D．$2$
 \end{gkopts}
 
@@ -223,11 +255,11 @@ $C_2:x^2=2p_2y$ 开口向上，焦点在 $y$ 轴正半轴上，为 $\left(0,\dfr
 
 于是当 $x<0$（且 $x>-2$）时 $g(x)<1$，$f'(x)>0$；当 $x>0$ 时 $g(x)>1$，$f'(x)<0$。故 $x=0$ 是极大值点，也是最大值点，$f(0)=\dfrac{2}{2}=1$  符合题意。
 
-\gkanswer{答案：B}
-
 \begin{gktip}
 \textbf{方法总结}：「已知最值反求参数」必须走完「设点 → 列两式 → 消元 → \textbf{检验}」四步。本题若跳过检验，会误留 $x_0=-2$ 这个使分母为零的增根。
 \end{gktip}
+
+\gkanswer{答案：B}
 
 \par\medskip
 
@@ -235,7 +267,16 @@ $C_2:x^2=2p_2y$ 开口向上，焦点在 $y$ 轴正半轴上，为 $\left(0,\dfr
 \begin{answer}
 \gksolhead{7}{}
 
-\textbf{题目}　一百零八塔共 $108$ 座，排成 $12$ 行，$a_1=1$，$a_2=a_3=3$，$a_4=a_5=5$，$a_6\sim a_{12}$ 是首项为 $7$、公差为 $2$ 的等差数列。将 $a_1\sim a_{12}$ 分为 $6$ 组、每组 $2$ 个数，使每组的和构成项数为 $6$、公差为 $d>0$ 的等差数列，则 $d=$（　　）
+\textbf{题目}：
+
+一百零八塔位于宁夏回族自治区青铜峡市，以其独特的建筑格局和深远的历史文化闻名遐迩．该塔群共有 $108$ 座塔，依山势自上而下排成 $12$ 行，将第 $i$ 行中塔的座数记为 $a_i\ (i=1,2,\cdots,12)$，其中 $a_1=1$，$a_2=a_3=3$，$a_4=a_5=5$，且 $a_6,a_7,\cdots,a_{12}$ 是一个首项为 $7$、公差为 $2$ 的等差数列．将 $a_1,a_2,\cdots,a_{12}$ 分为 $6$ 组，每组 $2$ 个数，使得每组的 $2$ 个数之和可构成一个项数为 $6$ 且公差为 $d\ (d>0)$ 的等差数列，则 $d=$（　　）
+
+\begin{gkopts}(4)
+\task A．$2$
+\task B．$4$
+\task C．$6$
+\task D．$8$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -276,11 +317,11 @@ $a_6\sim a_{12}$ 共 $7$ 项，首项 $7$、公差 $2$：$7,9,11,13,15,17,19$。
 \item $k$ 为奇数（$d=2$ 或 $6$）：$A_1=13$ 或 $3$，均为奇数，与「组和必为偶数」矛盾，舍去。
 \end{itemize}
 
-\gkanswer{答案：B（$d=4$）}
-
 \begin{gktip}
 \textbf{方法总结}：本题的突破口不是硬凑分组，而是「\textbf{全是奇数 ~$\Longrightarrow$~ 组和全是偶数 ~$\Longrightarrow$~ $A_1$、$d$ 均为偶数}」这一步奇偶性分析，它把四个选项直接砍到只剩 $d=4$ 与 $d=8$，再用范围排除一个。数列与数论结合是新课标卷近年的常见风格。
 \end{gktip}
+
+\gkanswer{答案：B}
 
 \par\medskip
 
@@ -288,7 +329,16 @@ $a_6\sim a_{12}$ 共 $7$ 项，首项 $7$、公差 $2$：$7,9,11,13,15,17,19$。
 \begin{answer}
 \gksolhead{8}{}
 
-\textbf{题目}　$U=\{(x_1,x_2,x_3)\mid x_i\in\{-2,-1,1,2\},\ i=1,2,3\}$ 为 $64$ 个点构成的集合，$P(1,1,1)$，$\Omega=\complement_U P$。从 $\Omega$ 中随机取一点，$X(A)=x_1+x_2+x_3$，则 $E(X)=$（　　）
+\textbf{题目}：
+
+设 $U=\{(x_1,x_2,x_3)\mid x_i\in\{-2,-1,1,2\},\ i=1,2,3\}$ 为空间中 $64$ 个点构成的集合，点 $P(1,1,1)$，记样本空间 $\Omega=\complement_U P$，从 $\Omega$ 中随机取一个点，定义随机变量 $X$ 如下：对 $\Omega$ 中的每个点 $A(x_1,x_2,x_3)$，令 $X(A)=x_1+x_2+x_3$，则 $X$ 的数学期望值为（　　）
+
+\begin{gkopts}(4)
+\task A．$-\dfrac{1}{21}$
+\task B．$-\dfrac{1}{63}$
+\task C．$0$
+\task D．$\dfrac{1}{7}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -311,11 +361,11 @@ $X(P)=1+1+1=3$，故
 $\Omega$ 中共有 $64-1=63$ 个点，每点等可能，概率均为 $\dfrac1{63}$：
 \[E(X)=\frac{1}{63}\sum_{A\in\Omega}X(A)=\frac{-3}{63}=-\frac{1}{21}\]
 
-\gkanswer{答案：A}
-
 \begin{gktip}
 \textbf{方法总结}：对称性是概率题最高效的工具之一。凡遇到「关于原点/中心对称的取值集」，先问一句「整体的和是不是 $0$」，往往能把一道看似繁琐的期望题变成两行计算。
 \end{gktip}
+
+\gkanswer{答案：A}
 
 \par\medskip
 
@@ -325,10 +375,12 @@ $\Omega$ 中共有 $64-1=63$ 个点，每点等可能，概率均为 $\dfrac1{63
 \begin{answer}
 \gksolhead{9}{}
 
-\textbf{题目}　设 $z=3+2\mathrm{i}$，则（　　）
+\textbf{题目}：
+
+设 $z=3+2\mathrm{i}$，则（　　）
 
 \begin{gkopts}(2)
-\task A．$\bar z=3-2\mathrm{i}$
+\task A．$\bar{z}=3-2\mathrm{i}$
 \task B．$|z|=5$
 \task C．$z^2=5+12\mathrm{i}$
 \task D．$\dfrac{z+3}{z-\mathrm{i}}\in\mathbb{R}$
@@ -363,11 +415,13 @@ $\Omega$ 中共有 $64-1=63$ 个点，每点等可能，概率均为 $\dfrac1{63
 \begin{answer}
 \gksolhead{10}{}
 
-\textbf{题目}　空间中 $A$、$B$ 为两个定点，动点 $C$ 到直线 $AB$ 的距离为 $2$，动点 $D$ 到直线 $AB$ 的距离为 $1$。若二面角 $C\text{-}AB\text{-}D$ 为 $60^\circ$，则（　　）
+\textbf{题目}：
+
+在空间中，$A$、$B$ 为两个定点，动点 $C$ 到直线 $AB$ 的距离为 $2$，动点 $D$ 到直线 $AB$ 的距离为 $1$．若二面角 $C-AB-D$ 为 $60^\circ$，则（　　）
 
 \begin{gkopts}(2)
 \task A．$\angle CAD\ge 60^\circ$
-\task B．$CD\ge\sqrt3$
+\task B．$CD\ge\sqrt{3}$
 \task C．当 $AB\perp CD$ 时，$CD\perp$ 平面 $ABD$
 \task D．当 $AB\perp$ 平面 $ACD$ 时，$AC\perp AD$
 \end{gkopts}
@@ -438,11 +492,11 @@ $\Omega$ 中共有 $64-1=63$ 个点，每点等可能，概率均为 $\dfrac1{63
 
 ——此时 $\angle CAD$ 恰好等于二面角的大小（因为两条射线都垂直于棱），这是二面角平面角的定义，自然是 $60^\circ$ 而非 $90^\circ$。 \textbf{D 错误}。
 
-\gkanswer{答案：BC}
-
 \begin{gktip}
 \textbf{方法总结}：立体几何多选题若含「动点」，\textbf{建系并保留自由参数}（本题的 $c$、$e$）是最稳的做法：判断恒成立命题时直接代数化，寻找反例时给参数赋极端值即可。
 \end{gktip}
+
+\gkanswer{答案：BC}
 
 \par\medskip
 
@@ -450,7 +504,16 @@ $\Omega$ 中共有 $64-1=63$ 个点，每点等可能，概率均为 $\dfrac1{63
 \begin{answer}
 \gksolhead{11}{}
 
-\textbf{题目}　圆 $C_1:(x+1)^2+y^2=1$，$C_2:(x-1)^2+y^2=1$，$C_3:x^2+(y-\sqrt3)^2=1$，直线 $l:y=kx+b$ 与三圆均有两个交点，弦长依次为 $s_1,s_2,s_3$，则（　　）
+\textbf{题目}：
+
+已知圆 $C_1:(x+1)^2+y^2=1$，圆 $C_2:(x-1)^2+y^2=1$，圆 $C_3:x^2+(y-\sqrt{3})^2=1$，直线 $l:y=kx+b$ 与 $C_1$，$C_2$，$C_3$ 均有两个交点．记 $l$ 被 $C_1$，$C_2$，$C_3$ 截得的弦长分别为 $s_1$，$s_2$，$s_3$，则（　　）
+
+\begin{gkopts}(1)
+\task A．$k$ 可以取任意实数
+\task B．满足 $s_1=s_2=s_3$ 的直线 $l$ 共有 $3$ 条
+\task C．满足 $s_1+s_2+s_3=3$ 的直线 $l$ 多于 $3$ 条
+\task D．当 $b=0$ 时，$s_1+s_2+s_3$ 的最大值为 $\dfrac{2\sqrt{21}}{3}$
+\end{gkopts}
 
 \textbf{解析}
 
@@ -571,7 +634,9 @@ $b=0$ 时直线为 $y=kx$（过原点）：
 \begin{answer}
 \gksolhead{12}{}
 
-\textbf{题目}　双曲线 $5x^2-6y^2=1$ 的离心率为 \gkblank{}。
+\textbf{题目}：
+
+双曲线 $5x^2-6y^2=1$ 的离心率为 \gkblank{}．
 
 \textbf{解析}
 
@@ -588,11 +653,11 @@ $b=0$ 时直线为 $y=kx$（过原点）：
 \[e^2=\frac{c^2}{a^2}=\frac{11/30}{1/5}=\frac{11}{30}\times 5=\frac{11}{6}\]
 \[e=\sqrt{\frac{11}{6}}=\frac{\sqrt{11}}{\sqrt6}=\frac{\sqrt{11}\cdot\sqrt6}{6}=\frac{\sqrt{66}}{6}\]
 
-\gkanswer{答案：$\dfrac{\sqrt{66}}{6}$}
-
 \begin{gktip}
 \textbf{易错点}：① 不化标准形，直接把 $5$、$6$ 当作 $a^2$、$b^2$；② 双曲线误用 $c^2=a^2-b^2$。可用近似值自检：$e=\sqrt{11/6}\approx1.354>1$  双曲线离心率必大于 $1$。
 \end{gktip}
+
+\gkanswer{答案：$\dfrac{\sqrt{66}}{6}$}
 
 \par\medskip
 
@@ -600,7 +665,9 @@ $b=0$ 时直线为 $y=kx$（过原点）：
 \begin{answer}
 \gksolhead{13}{}
 
-\textbf{题目}　已知 $f(x)=2\sin(ax+\theta)$（$a\in\mathbb{Z}$，$0\le\theta<2\pi$）是偶函数，$f(x)$ 在区间 $\left(0,\dfrac\pi2\right)$ 单调递增，则 $\theta=$ \gkblank{}，$f\left(\dfrac{2\pi}{3}\right)=$ \gkblank{}。
+\textbf{题目}：
+
+已知 $f(x)=2\sin(ax+\theta)$（$a\in\mathbb{Z}$，$0\le\theta<2\pi$）是偶函数，$f(x)$ 在区间 $\left(0,\dfrac{\pi}{2}\right)$ 单调递增，则 $\theta=$ \gkblank{}，$f\left(\dfrac{2\pi}{3}\right)=$ \gkblank{}．
 
 \textbf{解析}
 
@@ -610,7 +677,7 @@ $y=\sin(ax+\theta)$ 为偶函数，要求 $\theta$ 使正弦变为余弦型（�
 \[\theta=\frac\pi2+k\pi\quad(k\in\mathbb{Z})\]
 
 在 $0\le\theta<2\pi$ 内，只有两个候选：
-\[\theta=\frac\pi2\qquad\text{或}\qquad\theta=\frac{3\pi}{2}\]
+\[\theta=\frac\pi2\qquad\text{\text{或}}\qquad\theta=\frac{3\pi}{2}\]
 
 \textbf{第二步，由「在 $\left(0,\dfrac\pi2\right)$ 单调递增」筛选。}
 
@@ -643,11 +710,11 @@ $y=\sin(ax+\theta)$ 为偶函数，要求 $\theta$ 使正弦变为余弦型（�
 
 \textbf{两种情况结果相同}（因为 $\dfrac{2\pi}{3}$ 与 $\dfrac{4\pi}{3}$ 的余弦值都是 $-\dfrac12$），故答案唯一。
 
-\gkanswer{答案：$\theta=\dfrac{3\pi}{2}$；$f\left(\dfrac{2\pi}{3}\right)=1$}
-
 \begin{gktip}
 \textbf{命题妙处}：$a$ 并未被唯一确定，但所求的函数值却唯一——这是命题人有意的设计。遇到「参数没定死」时不要慌，先把所有可能值都算一遍，往往结果一致。
 \end{gktip}
+
+\gkanswer{答案：$\theta=\dfrac{3\pi}{2}$；$f\left(\dfrac{2\pi}{3}\right)=1$}
 
 \par\medskip
 
@@ -655,7 +722,9 @@ $y=\sin(ax+\theta)$ 为偶函数，要求 $\theta$ 使正弦变为余弦型（�
 \begin{answer}
 \gksolhead{14}{}
 
-\textbf{题目}　设实数 $q$ 满足：存在数列 $\{a_n\}$，使得对任意 $n\in\mathbb{N}^*$ 均有 $a_1+a_2+\cdots+a_{3n}=n^2+n$，且 $\{a_n\}$ 中有某连续 $9$ 项 $a_k,a_{k+1},\cdots,a_{k+8}$ 是公比为 $q$ 的等比数列，则 $q$ 的最大值为 \gkblank{}。
+\textbf{题目}：
+
+设实数 $q$ 满足：存在数列 $\{a_n\}$，使得对于任意 $n\in\mathbb{N}^*$，均有 $a_1+a_2+\cdots+a_{3n}=n^2+n$，且 $\{a_n\}$ 中有某连续 $9$ 项 $a_k,a_{k+1},\cdots,a_{k+8}$ 是公比为 $q$ 的等比数列，则 $q$ 的最大值为 \gkblank{}．
 
 \textbf{解析}
 
@@ -703,8 +772,8 @@ $y=\sin(ax+\theta)$ 为偶函数，要求 $\theta$ 使正弦变为余弦型（�
 
 只有两个\textbf{完整组}给出约束。以 $A=a_{3m+2}$ 计：
 \[\begin{aligned}
-\text{第 }m+2\text{ 组}:&\quad Aq^2+Aq^3+Aq^4=Aq^2\left(1+q+q^2\right)=2(m+2)\\
-\text{第 }m+3\text{ 组}:&\quad Aq^5+Aq^6+Aq^7=Aq^5\left(1+q+q^2\right)=2(m+3)
+\text{\text{第} }m+2\text{ \text{组}}:&\quad Aq^2+Aq^3+Aq^4=Aq^2\left(1+q+q^2\right)=2(m+2)\\
+\text{\text{第} }m+3\text{ \text{组}}:&\quad Aq^5+Aq^6+Aq^7=Aq^5\left(1+q+q^2\right)=2(m+3)
 \end{aligned}\]
 
 两式相除：
@@ -744,11 +813,11 @@ $m\ge1$，故最大值在 $m=1$：$q^3=\dfrac32$，与情形二相同。
 
 \[q=\sqrt[3]{\frac32}=\frac{\sqrt[3]{3}}{\sqrt[3]{2}}=\frac{\sqrt[3]{3}\cdot\sqrt[3]{4}}{\sqrt[3]{8}}=\frac{\sqrt[3]{12}}{2}\]
 
-\textbf{答案：$\dfrac{\sqrt[3]{12}}{2}$}（约 $1.145$）
-
 \begin{gktip}
 \textbf{方法总结}：本题把「前缀和条件」与「连续等比」拼在一起，突破口有两个——① 作差把 $S_{3n}$ 转化为\textbf{每组和为 $2n$}；② 讨论 9 项与组边界的\textbf{对齐方式}，发现「完全对齐必矛盾，错位才有解」，而错位时首尾残缺组的自由项消化掉了多余约束。
 \end{gktip}
+
+\gkanswer{答案：$\dfrac{\sqrt[3]{12}}{2}$}
 
 \par\medskip
 
@@ -758,9 +827,17 @@ $m\ge1$，故最大值在 $m=1$：$q^3=\dfrac32$，与情形二相同。
 \begin{answer}
 \gksolhead{15}{13 分}
 
-\textbf{题目}　如图，在直三棱柱 $ABC\text{-}A_1B_1C_1$ 中，$\angle ACB=90^\circ$，$AC=BC$，$D$、$E$ 分别为 $AB$、$AC_1$ 的中点。
+\textbf{题目}（13 分）：
+
+如图，在直三棱柱 $ABC-A_1B_1C_1$ 中，$\angle ACB=90^\circ$，$AC=BC$，$D$、$E$ 分别为 $AB$、$AC_1$ 的中点．
 
 \begin{center}\input{figures/f2026_t15_prism}\end{center}
+
+  (1) 证明：$DE\parallel$ 平面 $BCC_1B_1$；
+
+  (2) 设 $CC_1=2$，直线 $DE$ 与平面 $ACC_1A_1$ 所成的角为 $45^\circ$，求直线 $DE$ 到平面 $BCC_1B_1$ 的距离．
+
+\textbf{解析}
 
   (1) 证明：$DE\parallel$ 平面 $BCC_1B_1$；
   (2) 设 $CC_1=2$，直线 $DE$ 与平面 $ACC_1A_1$ 所成的角为 $45^\circ$，求直线 $DE$ 到平面 $BCC_1B_1$ 的距离。
@@ -777,7 +854,7 @@ $m\ge1$，故最大值在 $m=1$：$q^3=\dfrac32$，与情形二相同。
 又 $BC_1\subset$ 平面 $BCC_1B_1$，且 $DE\not\subset$ 平面 $BCC_1B_1$，
 
 由\textbf{线面平行的判定定理}得
-\[DE\parallel\text{平面 }BCC_1B_1\qquad\blacksquare\]
+\[DE\parallel\text{\text{平面} }BCC_1B_1\qquad\blacksquare\]
 
 \begin{gktip}
 \textbf{书写红线（高考阅卷按点给分）}：结论前必须同时写出 ① $BC_1\subset$ 平面，② $DE\not\subset$ 平面。缺任何一条都要扣分。「中位线」三个字也要明确写出理由（两个中点）。
@@ -823,13 +900,25 @@ $m\ge1$，故最大值在 $m=1$：$q^3=\dfrac32$，与情形二相同。
 \textbf{方法总结}：「求直线到平面的距离」的前提是\textbf{线面平行}（否则距离无定义），因此第 (1) 问是第 (2) 问的必要铺垫——转化为「线上任取一点到平面的距离」。本题因坐标系选得好，最后一步直接读横坐标即可，无需套点到平面的距离公式。
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：距离 $=1$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{16}{15 分}
 
-\textbf{题目}　已知在 $\triangle ABC$ 中，$AB=3$，$BC=2\sqrt3$，$\cos B=\dfrac{\sqrt3}{3}$。
+\textbf{题目}（15 分）：
+
+已知在 $\triangle ABC$ 中，$AB=3$，$BC=2\sqrt{3}$，$\cos B=\dfrac{\sqrt{3}}{3}$．
+
+  (1) 求 $\cos A$；
+
+  (2) 设 $D$、$E$ 两点满足：$D$ 在 $BA$ 的延长线上，$DE\parallel BC$，$AE\perp AC$．若 $DE=\sqrt{6}$，求 $CE$．
+
+\textbf{解析}
 
   (1) 求 $\cos A$；
   (2) 设 $D$、$E$ 两点满足：$D$ 在 $BA$ 的延长线上，$DE\parallel BC$，$AE\perp AC$。若 $DE=\sqrt6$，求 $CE$。
@@ -881,7 +970,7 @@ $m\ge1$，故最大值在 $m=1$：$q^3=\dfrac32$，与情形二相同。
 \[D=t\left(\sqrt3,\ \sqrt6\right)=\left(t\sqrt3,\ t\sqrt6\right)\]
 
 $DE\parallel BC$，而 $BC$ 沿 $x$ 轴方向，故 $E$ 与 $D$ 纵坐标相同：
-\[E=\left(t\sqrt3+s,\ t\sqrt6\right)\qquad(s\ \text{为待定实数})\]
+\[E=\left(t\sqrt3+s,\ t\sqrt6\right)\qquad(s\ \text{\text{为待定实数}})\]
 
 \textbf{用条件 $AE\perp AC$}：
 \[\overrightarrow{AE}=E-A=\left((t-1)\sqrt3+s,\ (t-1)\sqrt6\right),\qquad \overrightarrow{AC}=C-A=\left(\sqrt3,\ -\sqrt6\right)\]
@@ -917,13 +1006,29 @@ $DE\parallel BC$，而 $BC$ 沿 $x$ 轴方向，故 $E$ 与 $D$ 纵坐标相同�
 \textbf{方法总结}：几何条件一旦超过两个（本题有「延长线上」「平行」「垂直」三个），坐标法通常比综合法更省心。建系时把已知角所在的顶点放在原点、一条边放在坐标轴上，可使坐标最简洁。最后 $\sqrt2$ 项抵消是一个良性信号，说明前面的计算大概率没错。
 \end{gktip}
 
+\gkanswer{答案（1）：$\cos A=\dfrac13$}
+
+\gkanswer{答案（2）：$CE=3\sqrt5$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{17}{15 分}
 
-\textbf{题目}　设整数 $N\ge2$。某同学至多投篮 $N$ 次，当且仅当投中 $1$ 次或 $N$ 次均未投中时停止练习。每次投中概率为 $p\ (0<p<1)$，各次独立。记 $X$ 为停止练习时的投篮次数。
+\textbf{题目}（15 分）：
+
+设整数 $N\ge 2$．某同学用一个球进行投篮练习，至多投篮 $N$ 次，当且仅当投中 $1$ 次或 $N$ 次均未投中时，停止练习．设该同学每次投中的概率为 $p\ (0<p<1)$，各次投中与否相互独立．记 $X$ 为停止练习时该同学的投篮次数．
+
+  (1) 当 $N=4$，$p=\dfrac{1}{3}$ 时，求 $X$ 的分布列；
+
+  (2) 设 $k$，$m$ 均为自然数．
+
+  　（i）当 $k\le N-1$ 时，求 $P(X>k)$；
+
+  　（ii）当 $k+m\le N-1$ 时，证明：$P(X>k+m\mid X>k)=P(X>m)$．
+
+\textbf{解析}
 
   (1) 当 $N=4$，$p=\dfrac13$ 时，求 $X$ 的分布列；
   (2) 设 $k$，$m$ 均为自然数。（i）当 $k\le N-1$ 时，求 $P(X>k)$；（ii）当 $k+m\le N-1$ 时，证明 $P(X>k+m\mid X>k)=P(X>m)$。
@@ -935,7 +1040,7 @@ $DE\parallel BC$，而 $BC$ 沿 $x$ 轴方向，故 $E$ 与 $D$ 纵坐标相同�
 投篮在「首次投中」时立即停止，若一直不中则投满 $N$ 次强制停止。因此 $X$ 是\textbf{截断的几何分布}（首次成功的等待时间，上限 $N$）。
 
 最关键的一句话是：
-\[\boxed{X>k\ \Longleftrightarrow\ \text{前 }k\text{ 次全部未投中}}\]
+\[\boxed{X>k\ \Longleftrightarrow\ \text{\text{前} }k\text{ \text{次全部未投中}}}\]
 
 理由：若前 $k$ 次中有一次投中，则练习在第 $k$ 次或更早就停止了，$X\le k$。
 
@@ -984,7 +1089,7 @@ $P$ & $\dfrac13$ & $\dfrac29$ & $\dfrac{4}{27}$ & $\dfrac{8}{27}$ \\
 \textbf{(2)(i) 解}
 
 当 $k\le N-1$ 时，
-\[P(X>k)=P(\text{前 }k\text{ 次均未投中})=(1-p)^k\]
+\[P(X>k)=P(\text{\text{前} }k\text{ \text{次均未投中}})=(1-p)^k\]
 
 （因各次独立，概率相乘。条件 $k\le N-1$ 保证第 $k$ 次之后练习尚未被强制终止，事件有意义。）
 
@@ -1008,13 +1113,29 @@ $P$ & $\dfrac13$ & $\dfrac29$ & $\dfrac{4}{27}$ & $\dfrac{8}{27}$ \\
 \textbf{概率意义}：这就是几何分布的\textbf{无记忆性}——已经连续投丢了 $k$ 次，对「还要再投多少次才中」的分布毫无影响，就像重新开始一样。这是几何分布（及连续情形的指数分布）独有的性质。
 \end{gktip}
 
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：(i) $P(X>k)=(1-p)^k$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{18}{17 分}
 
-\textbf{题目}　已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$ 的左焦点为 $F(-1,0)$，离心率为 $\dfrac12$。
+\textbf{题目}（17 分）：
+
+已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$ 的左焦点为 $F(-1,0)$，离心率为 $\dfrac{1}{2}$．
+
+  (1) 求 $C$ 的方程；
+
+  (2) 设 $O$ 为坐标原点，过 $F$ 且斜率大于 $0$ 的动直线 $l$ 与 $C$ 交于 $P$，$Q$ 两点，其中 $Q$ 在第三象限，直线 $PO$ 与 $C$ 的另一个交点为 $R$．
+
+  　（i）若 $\triangle PQR$ 的面积是 $\triangle PFO$ 的面积的 $3$ 倍，求 $l$ 的方程；
+
+  　（ii）求 $\tan\angle PQR$ 的最小值．
+
+\textbf{解析}
 
   (1) 求 $C$ 的方程；
   (2) 设 $O$ 为坐标原点，过 $F$ 且斜率大于 $0$ 的动直线 $l$ 与 $C$ 交于 $P$、$Q$ 两点（$Q$ 在第三象限），直线 $PO$ 与 $C$ 的另一交点为 $R$。（i）若 $S_{\triangle PQR}=3S_{\triangle PFO}$，求 $l$ 的方程；（ii）求 $\tan\angle PQR$ 的最小值。
@@ -1039,7 +1160,7 @@ $P$ & $\dfrac13$ & $\dfrac29$ & $\dfrac{4}{27}$ & $\dfrac{8}{27}$ \\
 \textbf{性质一：$R$ 与 $P$ 关于原点对称。}
 
 直线 $PO$ 过原点，而椭圆是关于原点的\textbf{中心对称图形}，故 $PO$ 与椭圆的另一交点必为 $P$ 的对称点：
-\[R=-P,\qquad O\ \text{是}\ PR\ \text{的中点}\]
+\[R=-P,\qquad O\ \text{\text{是}}\ PR\ \text{\text{的中点}}\]
 
 \textbf{性质二（椭圆的「第三定义」）：$k_{QP}\cdot k_{QR}=-\dfrac{b^2}{a^2}$。}
 
@@ -1132,7 +1253,7 @@ $\triangle PQO$ 以线段 $OF$ 为「公共底」拆分（$F$ 在 $PQ$ 上，位
 \[k_1+\frac{3}{4k_1}\ \ge\ 2\sqrt{k_1\cdot\frac{3}{4k_1}}=2\sqrt{\frac34}=2\times\frac{\sqrt3}{2}=\sqrt3\]
 
 等号成立当且仅当
-\[k_1=\frac{3}{4k_1}\ \Longrightarrow\ k_1^2=\frac34\ \Longrightarrow\ k_1=\frac{\sqrt3}{2}\ (\text{取正})\]
+\[k_1=\frac{3}{4k_1}\ \Longrightarrow\ k_1^2=\frac34\ \Longrightarrow\ k_1=\frac{\sqrt3}{2}\ (\text{\text{取正}})\]
 
 所以
 \[\tan\angle PQR=4\left|k_1-k_2\right|\ \ge\ 4\sqrt3\]
@@ -1158,14 +1279,33 @@ $\triangle PQO$ 以线段 $OF$ 为「公共底」拆分（$F$ 在 $PQ$ 上，位
 \textbf{方法总结}：本题的「题眼」是\textbf{性质二（第三定义）}——一旦发现 $R$ 与 $P$ 关于原点对称，$k_{QP}k_{QR}$ 就是定值，$\angle PQR$ 的问题立刻从「两个动点」降维为「一个变量 $k_1$」的最值问题。这个性质务必记住：\textbf{椭圆上关于原点对称的两点与椭圆上任一点连线的斜率之积恒为 $-\dfrac{b^2}{a^2}$}（双曲线则为 $+\dfrac{b^2}{a^2}$）。
 \end{gktip}
 
+\gkanswer{答案（1）：$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$}
+
+\gkanswer{答案（2）：(i) $l:\ y=\dfrac{\sqrt5}{2}(x+1)$；(ii) $\tan\angle PQR$ 的最小值为 $4\sqrt3$}
+
 \par\medskip
 
 \end{answer}
 \begin{answer}
 \gksolhead{19}{17 分}
 
-\textbf{题目}　已知函数 $f(x)$ 的定义域为 $\mathbb{R}$，且当 $x<0$ 时 $f(x)=2^{x}$。对任意 $x_0\in\mathbb{R}$，定义集合
-\[D(x_0)=\left\{d\in\mathbb{R}\mid f(x_0+d)>f(x_0)\right\}\]
+\textbf{题目}（17 分）：
+
+已知函数 $f(x)$ 的定义域为 $\mathbb{R}$，且当 $x<0$ 时，$f(x)=2^{x}$．对任意 $x_0\in\mathbb{R}$，定义集合 $D(x_0)=\{d\in\mathbb{R}\mid f(x_0+d)>f(x_0)\}$．
+
+  (1) 若当 $x\ge 0$ 时，$f(x)=1-x$，求 $D(-1)$；
+
+  (2) 若 $f(x)$ 是奇函数，$f(x_1)\le f(x_2)$，且 $x_1x_2\ne 0$，证明：$D(x_2)\subseteq D(x_1)$；
+
+  (3) 设 $f(x)$ 满足：① 若 $f(x_1)\le f(x_2)$，则 $D(x_2)\subseteq D(x_1)$；② 当 $0<x<1$ 时，$f(x)<f(0)$．
+
+  　（i）证明：$f(0)\ge 1$；
+
+  　（ii）证明：$f(x)$ 在区间 $(0,+\infty)$ 单调递增．
+
+\par\medskip
+
+\textbf{解析}
 
   (1) 若当 $x\ge0$ 时 $f(x)=1-x$，求 $D(-1)$；
   (2) 若 $f(x)$ 是奇函数，$f(x_1)\le f(x_2)$，且 $x_1x_2\ne0$，证明 $D(x_2)\subseteq D(x_1)$；
@@ -1295,7 +1435,7 @@ $f$ 为奇函数，故 $f(0)=0$；当 $x>0$ 时 $-x<0$，
 \textbf{第四步，导出矛盾。}
 
 由 $D(u)\subseteq D(0)$ 得 $d\in D(0)$，即
-\[f(0+d)>f(0),\qquad\text{亦即}\qquad f(d)>f(0)\]
+\[f(0+d)>f(0),\qquad\text{\text{亦即}}\qquad f(d)>f(0)\]
 
 但 $0<d<1$，由条件 ② 有
 \[f(d)<f(0)\]
@@ -1327,7 +1467,7 @@ $f$ 为奇函数，故 $f(0)=0$；当 $x>0$ 时 $-x<0$，
 \[D(x)\subseteq D(u)\subseteq(0,+\infty)\]
 
 于是 $-x\notin D(x)$（因 $-x<0$），按定义即
-\[f\left(x+(-x)\right)\le f(x),\qquad\text{亦即}\qquad f(0)\le f(x)\]
+\[f\left(x+(-x)\right)\le f(x),\qquad\text{\text{亦即}}\qquad f(0)\le f(x)\]
 
 但 $0<x<1$，由条件 ② 有 $f(x)<f(0)$，\textbf{矛盾}。
 
@@ -1382,7 +1522,7 @@ $f$ 为奇函数，故 $f(0)=0$；当 $x>0$ 时 $-x<0$，
 \[f(t)\le f(u)\]
 
 在 ① 中取 $x_1=t$，$x_2=u$，得
-\[D(u)\subseteq D(t),\qquad\text{即}\qquad\left(0,\ -u\right]\subseteq D(t)\]
+\[D(u)\subseteq D(t),\qquad\text{\text{即}}\qquad\left(0,\ -u\right]\subseteq D(t)\]
 
 上式对\textbf{一切} $u<0$ 成立。令 $u\to-\infty$，则 $-u\to+\infty$，取并集得
 \[\bigcup_{u<0}\left(0,-u\right]=(0,+\infty)\subseteq D(t)\]
@@ -1398,5 +1538,11 @@ $f$ 为奇函数，故 $f(0)=0$；当 $x>0$ 时 $-x<0$，
 \textbf{已知的负半轴（$2^x$）→ 算出 $D(u)$ 的精确形状 → 用 ① 把信息「传递」到未知的正半轴}。
 第 3 步中「令 $u\to-\infty$ 取并集」是全题最精彩的一笔：单个 $u$ 只能得到有限区间 $(0,-u]$，但让 $u$ 跑遍所有负数，就把整个 $(0,+\infty)$ 都装进了 $D(t)$，单调性随即水落石出。
 \end{gktip}
+
+\gkanswer{答案（1）：$D(-1)=\left(0,\dfrac32\right)$}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：见解析版}
 
 \end{answer}
