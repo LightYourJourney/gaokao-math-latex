@@ -27,14 +27,14 @@ from __future__ import annotations
 
 import argparse
 import re
-import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
-from manifest import file_sha256, load_manifest
-from transaction import RepoLock, Transaction
+import cli_common
+from manifest import load_manifest
+from transaction import RepoLock
 
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent                       # math-gaokao-latex
@@ -204,29 +204,7 @@ def render_edition(template: str, values: Mapping[str, str]) -> str:
     return _PLACEHOLDER_RE.sub(lambda match: values[match.group(0)], template)
 
 
-# ---------------------------------------------------------------- 仓库与选择
-
-
-def _repository_root(path: Path) -> Path:
-    result = subprocess.run(
-        ["git", "-C", str(Path(path).resolve()), "rev-parse", "--show-toplevel"],
-        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-    )
-    return Path(result.stdout.strip()).resolve()
-
-
-def _relative_to_repo(root: Path, path: Path) -> str:
-    try:
-        return Path(path).resolve().relative_to(root).as_posix()
-    except ValueError as error:
-        raise EditionError(f"路径不在仓库内：{path}") from error
-
-
-def _required_sha256(root: Path, relative: str) -> str:
-    path = root / relative
-    if not path.is_file():
-        raise EditionError(f"只读输入缺失：{relative}")
-    return file_sha256(path)
+# ---------------------------------------------------------------- 身份与选择
 
 
 def paper_shell(paper: Mapping[str, Any]) -> PaperShell:
@@ -248,24 +226,9 @@ def paper_shell(paper: Mapping[str, Any]) -> PaperShell:
 def _select(
     manifest: Mapping[str, Any], selector: str, value: Optional[str]
 ) -> Tuple[PaperShell, ...]:
-    papers = {paper["paper_id"]: paper for paper in manifest["papers"]}
-    if selector == "all":
-        return tuple(paper_shell(paper) for paper in manifest["papers"])
-    if selector == "paper":
-        if value not in papers:
-            raise EditionError(f"未知 paper_id：{value}")
-        return (paper_shell(papers[value]),)
-    if selector == "batch":
-        batches = [item for item in manifest["batches"] if item["batch_id"] == value]
-        if len(batches) != 1:
-            raise EditionError(f"未知批次：{value}")
-        selected = []
-        for paper_id in batches[0]["paper_ids"]:
-            if paper_id not in papers:
-                raise EditionError(f"批次 {value} 引用了不存在的 paper_id：{paper_id}")
-            selected.append(paper_shell(papers[paper_id]))
-        return tuple(selected)
-    raise EditionError(f"未知选择器：{selector}")
+    return cli_common.select_papers(
+        manifest, selector, value, paper_shell, EditionError
+    )
 
 
 # ---------------------------------------------------------------- 单卷生成
@@ -328,44 +291,16 @@ def commit_shell_results(
     results: Sequence[ShellResult],
     event_hook: Any = None,
 ) -> Dict[str, Any]:
-    """把全批壳放进**一个** `content` 事务提交；全等则跳过，不做空事务。"""
-    root = Path(repo_root)
-    manifest_relative = _relative_to_repo(root, Path(manifest_path))
-    if manifest_relative != MANIFEST_TARGET:
-        raise EditionError(f"manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}")
+    """把全批壳放进**一个** `content` 事务提交；全等则跳过，不做空事务。
 
-    inputs: Dict[str, Optional[str]] = {
-        manifest_relative: _required_sha256(root, manifest_relative),
-        TOOL_SOURCE_TARGET: _required_sha256(root, TOOL_SOURCE_TARGET),
-    }
-    for edition in EDITIONS:
-        relative = template_target(edition)
-        inputs[relative] = _required_sha256(root, relative)
-
-    targets: Dict[str, bytes] = {}
-    for result in results:
-        for relative in result.inputs:
-            inputs[relative] = _required_sha256(root, relative)
-        for relative, value in result.targets.items():
-            if relative in targets:
-                raise EditionError(f"批内目标路径重复：{relative}")
-            targets[relative] = value
-
-    overlap = sorted(set(inputs) & set(targets))
-    if overlap:
-        raise EditionError(f"只读输入与写目标重叠：{overlap}")
-
-    unchanged = all(
-        (root / relative).is_file() and (root / relative).read_bytes() == value
-        for relative, value in targets.items()
+    与卷无关的只读输入 = 本工具源码 + 四份模板；与卷有关的（矩阵引用的共享 TeX）
+    由 `ShellResult.inputs` 携带，`cli_common.commit_content()` 逐条取哈希。
+    """
+    return cli_common.commit_content(
+        Path(repo_root), Path(manifest_path), MANIFEST_TARGET,
+        [TOOL_SOURCE_TARGET] + [template_target(edition) for edition in EDITIONS],
+        results, EditionError, event_hook=event_hook,
     )
-    if unchanged:
-        return {"written": False, "targets": sorted(targets)}
-
-    transaction = Transaction(root, event_hook=event_hook)
-    transaction.prepare("content", targets, inputs)
-    transaction.commit()
-    return {"written": True, "targets": sorted(targets)}
 
 
 # ---------------------------------------------------------------- 驱动
@@ -380,7 +315,7 @@ def run(
 ) -> Dict[str, Any]:
     """生成一批壳；`write=False` 只比对不落盘，`write=True` 先全过再一次性提交。"""
     manifest_path = Path(manifest_path).resolve()
-    root = _repository_root(manifest_path.parent)
+    root = cli_common.repository_root(manifest_path.parent)
     with RepoLock(root):
         manifest = load_manifest(manifest_path)
         templates = load_templates(root)
@@ -410,66 +345,29 @@ def run(
             )
             return report
 
-        for result in results:
-            for relative, expected in sorted(result.targets.items()):
-                path = root / relative
-                if not path.is_file() or path.read_bytes() != expected:
-                    problems.append(f"{relative} 与生成结果不一致")
-        report["targets"] = sorted(
-            key for result in results for key in result.targets
-        )
+        found, listed = cli_common.compare_targets(root, results)
+        problems.extend(found)
+        report["targets"] = listed
         return report
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        description="由来源总账与四份模板生成各卷试题版/解析版/简答版/印刷版壳文件"
+    return cli_common.build_parser(
+        "由来源总账与四份模板生成各卷试题版/解析版/简答版/印刷版壳文件", DEFAULT_MANIFEST
     )
-    parser.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
-    selector = parser.add_mutually_exclusive_group(required=True)
-    selector.add_argument("--all", action="store_true", help="全部试卷")
-    selector.add_argument("--batch", metavar="BATCH_ID", help="按批次")
-    selector.add_argument("--paper", metavar="PAPER_ID", help="按 manifest paper_id")
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--write", action="store_true", help="校验全过后原子写入")
-    mode.add_argument("--check", action="store_true", help="只读比对，绝不落盘")
-    return parser
 
 
-def selection(arguments: argparse.Namespace) -> Tuple[str, Optional[str]]:
-    if arguments.all:
-        return "all", None
-    if arguments.batch is not None:
-        return "batch", arguments.batch
-    return "paper", arguments.paper
+selection = cli_common.selection
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     """退出码契约：0 全过、1 校验失败或输入无效、2 命令行用法错（argparse）。"""
     arguments = _parser().parse_args(argv)
     selector, value = selection(arguments)
-    try:
-        report = run(Path(arguments.manifest), selector, value, write=arguments.write)
-    except ValueError as error:
-        print("✗", error)
-        return 1
-    for problem in report["problems"]:
-        print("  ✗", problem)
-    if report["problems"]:
-        print("\n== 校验失败：%d 项 ==" % len(report["problems"]))
-        return 1
-    if arguments.write:
-        print(
-            "✓ %d 套试卷，%s%d 个壳"
-            % (
-                len(report["papers"]),
-                "已写入 " if report["written"] else "无需改动 ",
-                len(report["targets"]),
-            )
-        )
-    else:
-        print("✓ %d 套试卷的壳与模板渲染结果一致" % len(report["papers"]))
-    return 0
+    return cli_common.execute(
+        lambda: run(Path(arguments.manifest), selector, value, write=arguments.write),
+        arguments.write, "个壳", "套试卷的壳与模板渲染结果一致",
+    )
 
 
 if __name__ == "__main__":

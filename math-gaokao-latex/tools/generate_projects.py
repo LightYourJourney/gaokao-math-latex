@@ -29,13 +29,13 @@ from __future__ import annotations
 
 import argparse
 import re
-import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
-from manifest import canonical_json, file_sha256, load_manifest
+import cli_common
+from manifest import canonical_json, load_manifest
 from solution_sources import (
     SolutionSourceError,
     extract_solution_blocks,
@@ -43,7 +43,7 @@ from solution_sources import (
     render_combined,
 )
 from source_manifest import project_legacy_index
-from transaction import RepoLock, Transaction
+from transaction import RepoLock
 
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent                       # math-gaokao-latex
@@ -376,36 +376,7 @@ def wrap(text: str, mode: str) -> Tuple[str, List[int]]:
     return "\n".join(out), nums
 
 
-# ---------------------------------------------------------------- 仓库与读取
-
-
-def _repository_root(path: Path) -> Path:
-    result = subprocess.run(
-        ["git", "-C", str(Path(path).resolve()), "rev-parse", "--show-toplevel"],
-        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-    )
-    return Path(result.stdout.strip()).resolve()
-
-
-def _relative_to_repo(root: Path, path: Path) -> str:
-    try:
-        return Path(path).resolve().relative_to(root).as_posix()
-    except ValueError as error:
-        raise GenerationError(f"路径不在仓库内：{path}") from error
-
-
-def _read_text(path: Path) -> str:
-    try:
-        return Path(path).read_text(encoding="utf-8")
-    except (OSError, UnicodeError) as error:
-        raise GenerationError(f"无法读取 {path}：{error}") from error
-
-
-def _required_sha256(root: Path, relative: str) -> str:
-    path = root / relative
-    if not path.is_file():
-        raise GenerationError(f"只读输入缺失：{relative}")
-    return file_sha256(path)
+# ---------------------------------------------------------------- 身份与读取
 
 
 def paper_sources(paper: Mapping[str, Any]) -> ProjectSources:
@@ -429,24 +400,9 @@ def paper_sources(paper: Mapping[str, Any]) -> ProjectSources:
 def _select(
     manifest: Mapping[str, Any], selector: str, value: Optional[str]
 ) -> Tuple[ProjectSources, ...]:
-    papers = {paper["paper_id"]: paper for paper in manifest["papers"]}
-    if selector == "all":
-        return tuple(paper_sources(paper) for paper in manifest["papers"])
-    if selector == "paper":
-        if value not in papers:
-            raise GenerationError(f"未知 paper_id：{value}")
-        return (paper_sources(papers[value]),)
-    if selector == "batch":
-        batches = [item for item in manifest["batches"] if item["batch_id"] == value]
-        if len(batches) != 1:
-            raise GenerationError(f"未知批次：{value}")
-        selected = []
-        for paper_id in batches[0]["paper_ids"]:
-            if paper_id not in papers:
-                raise GenerationError(f"批次 {value} 引用了不存在的 paper_id：{paper_id}")
-            selected.append(paper_sources(papers[paper_id]))
-        return tuple(selected)
-    raise GenerationError(f"未知选择器：{selector}")
+    return cli_common.select_papers(
+        manifest, selector, value, paper_sources, GenerationError
+    )
 
 
 # ---------------------------------------------------------------- 单卷生成
@@ -474,9 +430,9 @@ def generate_project(
     """在内存里生成本卷的 questions.tex / answers.tex，并数出三道门禁的实测值。"""
     figure_map = md2tex.FIGMAP if figure_map is None else figure_map
     root = Path(repo_root)
-    questions_text = _read_text(root / sources.questions)
-    answer_text = _read_text(root / sources.answer_key)
-    solution_raw = _read_text(root / sources.solution_body)
+    questions_text = cli_common.read_text(root / sources.questions, GenerationError)
+    answer_text = cli_common.read_text(root / sources.answer_key, GenerationError)
+    solution_raw = cli_common.read_text(root / sources.solution_body, GenerationError)
 
     figure_inputs = []
     for relative, _ in sources.figures:
@@ -659,44 +615,17 @@ def commit_project_result(
     index_bytes: bytes,
     event_hook: Any = None,
 ) -> Dict[str, Any]:
-    """把全批目标放进**一个** `content` 事务提交；全等则跳过，不做空事务。"""
-    root = Path(repo_root)
-    manifest_relative = _relative_to_repo(root, Path(manifest_path))
-    if manifest_relative != MANIFEST_TARGET:
-        raise GenerationError(f"manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}")
+    """把全批目标放进**一个** `content` 事务提交；全等则跳过，不做空事务。
 
-    inputs: Dict[str, Optional[str]] = {
-        manifest_relative: _required_sha256(root, manifest_relative)
-    }
-    for relative in (
-        GENERATOR_SOURCE_TARGET, RENDERER_SOURCE_TARGET, CONVERTER_SOURCE_TARGET
-    ):
-        inputs[relative] = _required_sha256(root, relative)
-
-    targets: Dict[str, bytes] = {INDEX_TARGET: index_bytes}
-    for result in results:
-        for relative in result.inputs:
-            inputs[relative] = _required_sha256(root, relative)
-        for relative, value in result.targets.items():
-            if relative in targets:
-                raise GenerationError(f"批内目标路径重复：{relative}")
-            targets[relative] = value
-
-    overlap = sorted(set(inputs) & set(targets))
-    if overlap:
-        raise GenerationError(f"只读输入与写目标重叠：{overlap}")
-
-    unchanged = all(
-        (root / relative).is_file() and (root / relative).read_bytes() == value
-        for relative, value in targets.items()
+    与卷无关的只读输入 = 生成器 / 渲染器 / 转换器三份源码；`index.json` 是与卷无关的
+    额外目标（manifest 投影），随同一事务落盘。
+    """
+    return cli_common.commit_content(
+        Path(repo_root), Path(manifest_path), MANIFEST_TARGET,
+        (GENERATOR_SOURCE_TARGET, RENDERER_SOURCE_TARGET, CONVERTER_SOURCE_TARGET),
+        results, GenerationError,
+        extra_targets={INDEX_TARGET: index_bytes}, event_hook=event_hook,
     )
-    if unchanged:
-        return {"written": False, "targets": sorted(targets)}
-
-    transaction = Transaction(root, event_hook=event_hook)
-    transaction.prepare("content", targets, inputs)
-    transaction.commit()
-    return {"written": True, "targets": sorted(targets)}
 
 
 # ---------------------------------------------------------------- 驱动
@@ -713,7 +642,7 @@ def run(
 ) -> Dict[str, Any]:
     """生成一批试卷；`write=False` 只比对不落盘，`write=True` 先全过再一次性提交。"""
     manifest_path = Path(manifest_path).resolve()
-    root = _repository_root(manifest_path.parent)
+    root = cli_common.repository_root(manifest_path.parent)
     with RepoLock(root):
         manifest = load_manifest(manifest_path)
         selected = _select(manifest, selector, value)
@@ -751,41 +680,21 @@ def run(
             )
             return report
 
-        for result in results:
-            for relative, expected in sorted(result.targets.items()):
-                path = root / relative
-                if not path.is_file() or path.read_bytes() != expected:
-                    problems.append(f"{relative} 与生成结果不一致")
-        index_path = root / INDEX_TARGET
-        if not index_path.is_file() or index_path.read_bytes() != index_bytes:
-            problems.append(f"{INDEX_TARGET} 与生成结果不一致")
-        report["targets"] = sorted(
-            [INDEX_TARGET] + [key for result in results for key in result.targets]
+        found, listed = cli_common.compare_targets(
+            root, results, {INDEX_TARGET: index_bytes}
         )
+        problems.extend(found)
+        report["targets"] = listed
         return report
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        description="由来源总账生成各卷 questions.tex / answers.tex 与 index.json"
+    return cli_common.build_parser(
+        "由来源总账生成各卷 questions.tex / answers.tex 与 index.json", DEFAULT_MANIFEST
     )
-    parser.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
-    selector = parser.add_mutually_exclusive_group(required=True)
-    selector.add_argument("--all", action="store_true", help="全部试卷")
-    selector.add_argument("--batch", metavar="BATCH_ID", help="按批次")
-    selector.add_argument("--paper", metavar="PAPER_ID", help="按 manifest paper_id")
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--write", action="store_true", help="校验全过后原子写入")
-    mode.add_argument("--check", action="store_true", help="只读比对，绝不落盘")
-    return parser
 
 
-def selection(arguments: argparse.Namespace) -> Tuple[str, Optional[str]]:
-    if arguments.all:
-        return "all", None
-    if arguments.batch is not None:
-        return "batch", arguments.batch
-    return "paper", arguments.paper
+selection = cli_common.selection
 
 
 def main(
@@ -800,31 +709,13 @@ def main(
     """
     arguments = _parser().parse_args(argv)
     selector, value = selection(arguments)
-    try:
-        report = run(
+    return cli_common.execute(
+        lambda: run(
             Path(arguments.manifest), selector, value, write=arguments.write,
             figure_map=figure_map, index_metadata=index_metadata,
-        )
-    except ValueError as error:
-        print("✗", error)
-        return 1
-    for problem in report["problems"]:
-        print("  ✗", problem)
-    if report["problems"]:
-        print("\n== 校验失败：%d 项 ==" % len(report["problems"]))
-        return 1
-    if arguments.write:
-        print(
-            "✓ %d 套试卷，%s%d 个目标"
-            % (
-                len(report["papers"]),
-                "已写入 " if report["written"] else "无需改动 ",
-                len(report["targets"]),
-            )
-        )
-    else:
-        print("✓ %d 套试卷与生成结果一致" % len(report["papers"]))
-    return 0
+        ),
+        arguments.write, "个目标", "套试卷与生成结果一致",
+    )
 
 
 if __name__ == "__main__":

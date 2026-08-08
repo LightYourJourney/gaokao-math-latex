@@ -27,16 +27,16 @@ from __future__ import annotations
 
 import argparse
 import re
-import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
+import cli_common
 from generate_projects import INDEX_METADATA
-from manifest import file_sha256, load_manifest
+from manifest import load_manifest
 from solution_sources import SolutionSourceError, parse_answer_points
-from transaction import RepoLock, Transaction
+from transaction import RepoLock
 
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent                       # math-gaokao-latex
@@ -337,36 +337,7 @@ def render_short_answers(
     ) + "\n\n".join(parts) + "\n"
 
 
-# ---------------------------------------------------------------- 仓库与选择
-
-
-def _repository_root(path: Path) -> Path:
-    result = subprocess.run(
-        ["git", "-C", str(Path(path).resolve()), "rev-parse", "--show-toplevel"],
-        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-    )
-    return Path(result.stdout.strip()).resolve()
-
-
-def _relative_to_repo(root: Path, path: Path) -> str:
-    try:
-        return Path(path).resolve().relative_to(root).as_posix()
-    except ValueError as error:
-        raise ShortAnswerError(f"路径不在仓库内：{path}") from error
-
-
-def _read_text(path: Path) -> str:
-    try:
-        return Path(path).read_text(encoding="utf-8")
-    except (OSError, UnicodeError) as error:
-        raise ShortAnswerError(f"无法读取 {path}：{error}") from error
-
-
-def _required_sha256(root: Path, relative: str) -> str:
-    path = root / relative
-    if not path.is_file():
-        raise ShortAnswerError(f"只读输入缺失：{relative}")
-    return file_sha256(path)
+# ---------------------------------------------------------------- 身份与选择
 
 
 def paper_sources(
@@ -393,24 +364,10 @@ def _select(
     value: Optional[str],
     metadata: Mapping[str, Mapping[str, Any]],
 ) -> Tuple[ShortAnswerSources, ...]:
-    papers = {paper["paper_id"]: paper for paper in manifest["papers"]}
-    if selector == "all":
-        return tuple(paper_sources(paper, metadata) for paper in manifest["papers"])
-    if selector == "paper":
-        if value not in papers:
-            raise ShortAnswerError(f"未知 paper_id：{value}")
-        return (paper_sources(papers[value], metadata),)
-    if selector == "batch":
-        batches = [item for item in manifest["batches"] if item["batch_id"] == value]
-        if len(batches) != 1:
-            raise ShortAnswerError(f"未知批次：{value}")
-        selected = []
-        for paper_id in batches[0]["paper_ids"]:
-            if paper_id not in papers:
-                raise ShortAnswerError(f"批次 {value} 引用了不存在的 paper_id：{paper_id}")
-            selected.append(paper_sources(papers[paper_id], metadata))
-        return tuple(selected)
-    raise ShortAnswerError(f"未知选择器：{selector}")
+    return cli_common.select_papers(
+        manifest, selector, value,
+        lambda paper: paper_sources(paper, metadata), ShortAnswerError,
+    )
 
 
 # ---------------------------------------------------------------- 单卷生成
@@ -421,8 +378,8 @@ def generate_short_answers(
 ) -> Tuple[ShortAnswerResult, Tuple[str, ...]]:
     """在内存里生成本卷 answers_short.tex；返回 (结果, 三路核对发现的问题)。"""
     root = Path(repo_root)
-    answers_tex = _read_text(root / sources.answers_tex)
-    answer_key = _read_text(root / sources.answer_key)
+    answers_tex = cli_common.read_text(root / sources.answers_tex, ShortAnswerError)
+    answer_key = cli_common.read_text(root / sources.answer_key, ShortAnswerError)
     empty = ShortAnswerResult(
         paper_id=sources.paper_id, project_dir=sources.project_dir,
         targets={}, inputs=(),
@@ -476,47 +433,17 @@ def commit_short_answer_results(
     results: Sequence[ShortAnswerResult],
     event_hook: Any = None,
 ) -> Dict[str, Any]:
-    """把全批目标放进**一个** `content` 事务提交；全等则跳过，不做空事务。"""
-    root = Path(repo_root)
-    manifest_relative = _relative_to_repo(root, Path(manifest_path))
-    if manifest_relative != MANIFEST_TARGET:
-        raise ShortAnswerError(
-            f"manifest 必须是 {MANIFEST_TARGET}，实际 {manifest_relative}"
-        )
+    """把全批目标放进**一个** `content` 事务提交；全等则跳过，不做空事务。
 
-    inputs: Dict[str, Optional[str]] = {
-        manifest_relative: _required_sha256(root, manifest_relative)
-    }
-    for relative in (
-        TOOL_SOURCE_TARGET, RENDERER_SOURCE_TARGET,
-        STRUCTURE_SOURCE_TARGET, CONVERTER_SOURCE_TARGET,
-    ):
-        inputs[relative] = _required_sha256(root, relative)
-
-    targets: Dict[str, bytes] = {}
-    for result in results:
-        for relative in result.inputs:
-            inputs[relative] = _required_sha256(root, relative)
-        for relative, value in result.targets.items():
-            if relative in targets:
-                raise ShortAnswerError(f"批内目标路径重复：{relative}")
-            targets[relative] = value
-
-    overlap = sorted(set(inputs) & set(targets))
-    if overlap:
-        raise ShortAnswerError(f"只读输入与写目标重叠：{overlap}")
-
-    unchanged = all(
-        (root / relative).is_file() and (root / relative).read_bytes() == value
-        for relative, value in targets.items()
+    与卷无关的只读输入 = 提取器 / 转换器 / 结构表 / 本工具四份源码；与卷有关的
+    （`_答案要点.md` 与 `answers.tex`）由 `ShortAnswerResult.inputs` 携带。
+    """
+    return cli_common.commit_content(
+        Path(repo_root), Path(manifest_path), MANIFEST_TARGET,
+        (TOOL_SOURCE_TARGET, RENDERER_SOURCE_TARGET,
+         STRUCTURE_SOURCE_TARGET, CONVERTER_SOURCE_TARGET),
+        results, ShortAnswerError, event_hook=event_hook,
     )
-    if unchanged:
-        return {"written": False, "targets": sorted(targets)}
-
-    transaction = Transaction(root, event_hook=event_hook)
-    transaction.prepare("content", targets, inputs)
-    transaction.commit()
-    return {"written": True, "targets": sorted(targets)}
 
 
 # ---------------------------------------------------------------- 驱动
@@ -533,7 +460,7 @@ def run(
     """生成一批简答；`write=False` 只比对不落盘，`write=True` 先全过再一次性提交。"""
     manifest_path = Path(manifest_path).resolve()
     metadata = INDEX_METADATA if index_metadata is None else index_metadata
-    root = _repository_root(manifest_path.parent)
+    root = cli_common.repository_root(manifest_path.parent)
     with RepoLock(root):
         manifest = load_manifest(manifest_path)
         selected = _select(manifest, selector, value, metadata)
@@ -567,38 +494,19 @@ def run(
             )
             return report
 
-        for result in results:
-            for relative, expected in sorted(result.targets.items()):
-                path = root / relative
-                if not path.is_file() or path.read_bytes() != expected:
-                    problems.append(f"{relative} 与生成结果不一致")
-        report["targets"] = sorted(
-            key for result in results for key in result.targets
-        )
+        found, listed = cli_common.compare_targets(root, results)
+        problems.extend(found)
+        report["targets"] = listed
         return report
 
 
 def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        description="由来源总账与生成的 answers.tex 生成各卷简短答案速查"
+    return cli_common.build_parser(
+        "由来源总账与生成的 answers.tex 生成各卷简短答案速查", DEFAULT_MANIFEST
     )
-    parser.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
-    selector = parser.add_mutually_exclusive_group(required=True)
-    selector.add_argument("--all", action="store_true", help="全部试卷")
-    selector.add_argument("--batch", metavar="BATCH_ID", help="按批次")
-    selector.add_argument("--paper", metavar="PAPER_ID", help="按 manifest paper_id")
-    mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--write", action="store_true", help="校验全过后原子写入")
-    mode.add_argument("--check", action="store_true", help="只读比对，绝不落盘")
-    return parser
 
 
-def selection(arguments: argparse.Namespace) -> Tuple[str, Optional[str]]:
-    if arguments.all:
-        return "all", None
-    if arguments.batch is not None:
-        return "batch", arguments.batch
-    return "paper", arguments.paper
+selection = cli_common.selection
 
 
 def main(
@@ -612,31 +520,13 @@ def main(
     """
     arguments = _parser().parse_args(argv)
     selector, value = selection(arguments)
-    try:
-        report = run(
+    return cli_common.execute(
+        lambda: run(
             Path(arguments.manifest), selector, value,
             write=arguments.write, index_metadata=index_metadata,
-        )
-    except ValueError as error:
-        print("✗", error)
-        return 1
-    for problem in report["problems"]:
-        print("  ✗", problem)
-    if report["problems"]:
-        print("\n== 校验失败：%d 项 ==" % len(report["problems"]))
-        return 1
-    if arguments.write:
-        print(
-            "✓ %d 套试卷，%s%d 份简答"
-            % (
-                len(report["papers"]),
-                "已写入 " if report["written"] else "无需改动 ",
-                len(report["targets"]),
-            )
-        )
-    else:
-        print("✓ %d 套试卷的简答与生成结果一致" % len(report["papers"]))
-    return 0
+        ),
+        arguments.write, "份简答", "套试卷的简答与生成结果一致",
+    )
 
 
 if __name__ == "__main__":

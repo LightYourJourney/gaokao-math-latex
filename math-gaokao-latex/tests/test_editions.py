@@ -459,6 +459,14 @@ class EditionCliTests(unittest.TestCase):
     def test_an_unknown_paper_exits_nonzero(self):
         self.assertEqual(self.invoke("--paper", "gk-不存在", "--check"), 1)
 
+    def test_selector_failures_raise_this_tool_s_error_type(self):
+        # 骨架收敛进 cli_common 后异常类型是**参数化**出来的：退化成基类 ValueError
+        # 会让直接调 run() 的调用方分不清失败来自哪个工具。
+        for selector, value in (("batch", "不存在的批次"), ("paper", "gk-不存在")):
+            with self.subTest(selector=selector):
+                with self.assertRaises(EditionError):
+                    self.fixture.run(selector, value)
+
     def test_a_selector_is_required(self):
         with self.assertRaises(SystemExit) as caught:
             self.invoke("--check")
