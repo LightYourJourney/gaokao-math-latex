@@ -10,9 +10,11 @@
     "     顺序确认是转换器修复对滞后产物的传导。",
     "  4. T14 预授权：make_short_answers.py 重写为「自 answers.tex 提取 + 与 _答案要点.md 结构化",
     "     比较」，并把版块顺序从 index.json 的 dict 键序改为题号语义顺序（sort_keys 之后键序即",
-    "     字典序，照抄会让单选/多选/填空/解答错位）。21 卷全部重生成：其中 15 卷的答案值随之改由",
-    "     规范源供给（旧实现的正则会把分问结论截断成「见解析版」），21 卷都换了生成头注。",
-    "     同一任务的 84 个版本壳模板化后逐字节未变，故本表不含任何壳条目。",
+    "     字典序，照抄会让单选/多选/填空/解答错位）。21 卷 answers_short.tex 全部重生成，按本表",
+    "     自己的 class 定义**逐卷分判**（修复轮 1 · Important 1）：15 卷答案值随之改由规范源供给",
+    "     （旧实现的正则会把分问结论截断成「见解析版」或留下残句）记 short-answers-regeneration；",
+    "     另 6 卷逐 hunk 核对确认只有生成头注一处变化，记 header——散文注释不是逐条记录，按 class",
+    "     字段筛选必须能拿到 15/6 的区分。同一任务的 84 个版本壳模板化后逐字节未变，无壳条目。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
     "current 再变一次、legacy 对不上、或出现未登记的新漂移，一律恢复报警（exit 1）。",
     "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
@@ -79,7 +81,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "95c850a17452d9b85b7514f9843a00ef181d98c211c11bc922e2704ea69ec5cf",
       "legacy_sha256": "721e2a820a01b2de534d234780e0f20cf38506bbcc4d237524b24d223d61c86a",
       "paper_id": "gk-2018-regular-national-1-arts"
@@ -127,7 +129,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "7725e9827e1a4b36e0027a7efb50436f6a3b24c54083c887f6c4f0c44dcc945f",
       "legacy_sha256": "3a033726e7e009d74fdc14b57cef3df78acbb44bbcd0bcf544e51de854296e3d",
       "paper_id": "gk-2019-regular-national-1-arts"
@@ -223,7 +225,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "afbe72d48aab790f803fead060eb51f57329614159479fbfc1cae7e66c5c8331",
       "legacy_sha256": "35872fd6ad3cdc716085df7d33fb0df5a9a130911c5abc4c79ba39681cf080d4",
       "paper_id": "gk-2020-regular-new-gaokao-2"
@@ -319,7 +321,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "6aa0bd211a63c46968311b0635eeb52ee36a8f927b2fb16e312d79db94fe7275",
       "legacy_sha256": "164bb85f1415a322c1e10b2467619347e457cec413e5040248f331874fa951d8",
       "paper_id": "gk-2022-regular-new-gaokao-2"
@@ -367,7 +369,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "4ca56bf94e88cf0d7112fede0a38606ee8e1b8afecb483f5113150da63ea70ee",
       "legacy_sha256": "5afc5918db7b2fb7b5ebf2264f86d519f300a4bb3b4a48aad3bbcbe562661883",
       "paper_id": "gk-2023-regular-new-gaokao-2"
@@ -391,7 +393,7 @@
     {
       "adjudicated_by": "task-14-review",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
+      "class": "header",
       "current_sha256": "eb4fee35092d291a4efab78bc8b0bce4953c6704be31e19ad145f0b53da48211",
       "legacy_sha256": "363a1c3888c76c8460862f04ad4947aace40c74c38342df2ccd6722ce9ebd420",
       "paper_id": "gk-2024-regular-new-gaokao-1"

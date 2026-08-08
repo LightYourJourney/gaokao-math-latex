@@ -420,9 +420,12 @@ class BaselineComparisonTests(unittest.TestCase):
         counts = {}
         for item in adjudicated:
             counts[item["class"]] = counts.get(item["class"], 0) + 1
+        # class 是逐条可审计的字段，不是散文注释的复述：T14 的 21 卷里只有 15 卷动了
+        # 答案值，另 6 卷逐 hunk 核对只有生成头注一处变化，按本表自己的 class 定义
+        # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
-            "migration": 21, "header": 14, "stale-artifact": 7,
-            "short-answers-regeneration": 21,
+            "migration": 21, "header": 20, "stale-artifact": 7,
+            "short-answers-regeneration": 15,
         })
         by_task = {"task-13-review", "task-14-review"}
         for item in adjudicated:
