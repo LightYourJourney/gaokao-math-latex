@@ -22,7 +22,9 @@ ADJUDICATED_DRIFTS_PATH = (
     Path(__file__).resolve().parent.parent / "reports" / "adjudicated-drifts.json"
 )
 LEDGER_VERSION = 1
-DRIFT_CLASSES = ("header", "migration", "stale-artifact")
+DRIFT_CLASSES = (
+    "header", "migration", "stale-artifact", "short-answers-regeneration",
+)
 _BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
 _PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
 _QUESTION_ID_RE = re.compile(r"\\gkti\{([0-9]+)\}")

@@ -397,14 +397,16 @@ class BaselineComparisonTests(unittest.TestCase):
         return compare_baselines(self.legacy, self.current, **options)
 
     def test_identity_migration_leaves_no_unadjudicated_drift(self):
-        """口径是「零**未裁定**漂移」：共享 TeX 的 42 条已由登记表逐条放行。
+        """口径是「零**未裁定**漂移」：共享 TeX 的 63 条已由登记表逐条放行。
 
-        T13 把共享 TeX 改成来源总账驱动，字节必然变，计划也从未承诺它不变；这里守的
-        是「除已裁定的那 42 条之外，一个字节都没动」。
+        T13 把 questions/answers 改成来源总账驱动（42 条），T14 又把 answers_short
+        改成自 answers.tex 提取（21 条）；计划从未承诺共享 TeX 字节不变。这里守的是
+        「除已裁定的那 63 条之外，一个字节都没动」——84 个版本壳就在这条守卫之内，
+        T14 的模板化必须逐字节复现它们，任何壳漂移都会在这里现形。
         """
         report = self.report()
         self.assertEqual(report["drift"], [])
-        self.assertEqual(len(report["adjudicated"]), 42)
+        self.assertEqual(len(report["adjudicated"]), 63)
         self.assertEqual(report["summary"]["target_count"], 84)
         self.assertEqual(report["summary"]["total_pages"], 1336)
         self.assertEqual(report["summary"]["overfull_count"], 1)
@@ -412,22 +414,33 @@ class BaselineComparisonTests(unittest.TestCase):
     def test_every_adjudicated_entry_is_a_shared_tex_content_hash(self):
         adjudicated = self.report()["adjudicated"]
         self.assertEqual(
-            {item["artifact"] for item in adjudicated}, {"questions.tex", "answers.tex"}
+            {item["artifact"] for item in adjudicated},
+            {"questions.tex", "answers.tex", "answers_short.tex"},
         )
         counts = {}
         for item in adjudicated:
             counts[item["class"]] = counts.get(item["class"], 0) + 1
-        self.assertEqual(counts, {"migration": 21, "header": 14, "stale-artifact": 7})
+        self.assertEqual(counts, {
+            "migration": 21, "header": 14, "stale-artifact": 7,
+            "short-answers-regeneration": 21,
+        })
+        by_task = {"task-13-review", "task-14-review"}
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
-            self.assertEqual(item["adjudicated_by"], "task-13-review")
+            self.assertIn(item["adjudicated_by"], by_task)
+        # 每一条都必须指名裁定它的那一轮：T14 的 21 条只许挂在 answers_short.tex 上。
+        self.assertEqual(
+            {item["artifact"] for item in adjudicated
+             if item["adjudicated_by"] == "task-14-review"},
+            {"answers_short.tex"},
+        )
 
     def test_without_the_ledger_every_content_drift_is_reported(self):
-        """缺登记表 = 现状：42 条全部未裁定。登记表绝不能是「默认放行」。"""
+        """缺登记表 = 现状：63 条全部未裁定。登记表绝不能是「默认放行」。"""
         report = compare_baselines(
             self.legacy, self.current, legacy_index=self.legacy_index
         )
-        self.assertEqual(len(report["drift"]), 42)
+        self.assertEqual(len(report["drift"]), 63)
         self.assertEqual(report["adjudicated"], [])
 
     def test_a_further_change_to_current_is_reported_again(self):
@@ -785,10 +798,13 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     load_adjudicated_drifts(self.write(document))
 
-    def test_the_repository_ledger_registers_the_42_shared_tex_drifts(self):
+    def test_the_repository_ledger_registers_the_63_shared_tex_drifts(self):
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
-        self.assertEqual(len(ledger), 42)
-        self.assertEqual({key[1] for key in ledger}, {"questions.tex", "answers.tex"})
+        self.assertEqual(len(ledger), 63)
+        self.assertEqual(
+            {key[1] for key in ledger},
+            {"questions.tex", "answers.tex", "answers_short.tex"},
+        )
         self.assertTrue(
             all(record["class"] in DRIFT_CLASSES for record in ledger.values())
         )
@@ -1018,11 +1034,11 @@ class CurrentBaselineCliTests(unittest.TestCase):
     def test_compare_working_reports_the_adjudicated_count_instead_of_zero_drift(self):
         code, output = self.compare_working()
         self.assertEqual(code, 0)
-        self.assertIn("已裁定漂移 42 条", output)
+        self.assertIn("已裁定漂移 63 条", output)
         self.assertIn("零未裁定漂移", output)
 
     def test_pointing_the_ledger_elsewhere_restores_the_alarm(self):
-        """登记表不是「默认放行」：拿不到它就必须重新报出全部 42 条。"""
+        """登记表不是「默认放行」：拿不到它就必须重新报出全部 63 条。"""
         with tempfile.TemporaryDirectory() as tmp:
             code, output = self.compare_working(
                 "--adjudicated", str(Path(tmp) / "不存在.json")

@@ -5,14 +5,19 @@
     "  1. T5 冻结基线时的措辞就是「零未审查漂移」，比较器内建「已审查」这一层；本表是它在",
     "     content_sha256 维度上的逐条延伸，不是新发明的豁免机制。",
     "  2. 阶段 0 计划的 T13/T14 从未承诺共享 TeX 字节不变——T13 的任务正是把它改为来源总账驱动。",
-    "  3. 42 条分类经 opus 审查穷举确认（见 .superpowers/sdd/…/task-13 review）：migration 类 21 卷",
+    "  3. T13 的 42 条分类经 opus 审查穷举确认（见 .superpowers/sdd/…/task-13 review）：migration 类 21 卷",
     "     逐卷核对无数学内容变化；header 类证明为冻结源的纯投影；stale-artifact 类经 git 提交",
     "     顺序确认是转换器修复对滞后产物的传导。",
+    "  4. T14 预授权：make_short_answers.py 重写为「自 answers.tex 提取 + 与 _答案要点.md 结构化",
+    "     比较」，并把版块顺序从 index.json 的 dict 键序改为题号语义顺序（sort_keys 之后键序即",
+    "     字典序，照抄会让单选/多选/填空/解答错位）。21 卷全部重生成：其中 15 卷的答案值随之改由",
+    "     规范源供给（旧实现的正则会把分问结论截断成「见解析版」），21 卷都换了生成头注。",
+    "     同一任务的 84 个版本壳模板化后逐字节未变，故本表不含任何壳条目。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
     "current 再变一次、legacy 对不上、或出现未登记的新漂移，一律恢复报警（exit 1）。",
-    "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（提交 ee6e79e），不手编。",
+    "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
     "class：migration=内容迁移（答案/题面改由规范源供给）；header=仅生成头注变化；",
-    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导。"
+    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导；short-answers-regeneration=简答版改由 answers.tex 提取并与答案要点结构化比较后重生成。"
   ],
   "drifts": [
     {
@@ -21,6 +26,14 @@
       "class": "migration",
       "current_sha256": "2d016dd428ebaec859e4420afd972db3db66b6af648ee080fba04c9e04e0b42b",
       "legacy_sha256": "f7b5371182d8ae9c87a79dfc7d8051b119781e8aee29c6ae6dfa7e8af4aca556",
+      "paper_id": "gk-2017-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "88b555ed9bf9c41ada62894e2d4fea70bca865c525db1475b025c553078aeb1b",
+      "legacy_sha256": "6d9718857226366ee5cab95f3221bd2013c006212f5d277d848aeaa2d429285e",
       "paper_id": "gk-2017-regular-national-1-arts"
     },
     {
@@ -40,6 +53,14 @@
       "paper_id": "gk-2017-regular-national-1-science"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "eb4d9ff2f592a98a7501925032ee3df6bd8cca7e1236a6dc50210632796314c3",
+      "legacy_sha256": "9d0883cc7250a5b0a2914cbdb6cb1d9369c8c9687c0c1f428799b0582f72ba8c",
+      "paper_id": "gk-2017-regular-national-1-science"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "stale-artifact",
@@ -53,6 +74,14 @@
       "class": "migration",
       "current_sha256": "8fb89d5c21c27df355fbe618d80d6c050fb42ac6cfb3b7a90269030a959230d4",
       "legacy_sha256": "c9b5377da5b7352b42e9967765c8a08a01047324de1e402c0ba4e6e0ec6c1f7c",
+      "paper_id": "gk-2018-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "95c850a17452d9b85b7514f9843a00ef181d98c211c11bc922e2704ea69ec5cf",
+      "legacy_sha256": "721e2a820a01b2de534d234780e0f20cf38506bbcc4d237524b24d223d61c86a",
       "paper_id": "gk-2018-regular-national-1-arts"
     },
     {
@@ -72,6 +101,14 @@
       "paper_id": "gk-2018-regular-national-1-science"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "82ce63ef771f61be28d0985f5b6d0c113744ab39a683c7c41c0f075c874232a8",
+      "legacy_sha256": "4812fa6a63961c74c87c706f09759048a9866334b20b1ee13f70c2ad8a088375",
+      "paper_id": "gk-2018-regular-national-1-science"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "header",
@@ -85,6 +122,14 @@
       "class": "migration",
       "current_sha256": "2a8c8c27b21448dca22819601b59eeeddf9e374e14367a0b9234bba04de73c3c",
       "legacy_sha256": "38f1535cfaf855c18387bf48e2da29da84c90b972d09d9d06cad050061dda69a",
+      "paper_id": "gk-2019-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "7725e9827e1a4b36e0027a7efb50436f6a3b24c54083c887f6c4f0c44dcc945f",
+      "legacy_sha256": "3a033726e7e009d74fdc14b57cef3df78acbb44bbcd0bcf544e51de854296e3d",
       "paper_id": "gk-2019-regular-national-1-arts"
     },
     {
@@ -104,6 +149,14 @@
       "paper_id": "gk-2019-regular-national-1-science"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "d5e52bdfc834c1e6fc068575dc4db27c122df1a820f659d27a13d94ff2833d44",
+      "legacy_sha256": "909ebbc9bea385eb2cccf3072160b1f7426f06facfb60cfb0cf79c1a2d9f8bf9",
+      "paper_id": "gk-2019-regular-national-1-science"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "header",
@@ -117,6 +170,14 @@
       "class": "migration",
       "current_sha256": "be5de140bbfef45ffabd6667921919bdec43097ba5464275eb97b1be52cef497",
       "legacy_sha256": "14053832dd48e819b60b6fbc5374038e9500c9ec27743ac10af2f0b80e9188aa",
+      "paper_id": "gk-2020-regular-national-1-arts"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "94ce317ebb3d118e5df18e50ebb77c37c7f47ef5becf181ee796e456fc6bdaa3",
+      "legacy_sha256": "4870dbcdbea4f87832b2d33e7ec32e7ee576bf0842a6a9d37f1e0c1d61a5f242",
       "paper_id": "gk-2020-regular-national-1-arts"
     },
     {
@@ -136,6 +197,14 @@
       "paper_id": "gk-2020-regular-national-1-science"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "e8c2d5ccbdb9869007e3544bdb28c5e2861c793a945078808e5ad9c5936e4740",
+      "legacy_sha256": "9a0b62c165da02ad7677f3898435f09a866c769d726461744689b68e299af981",
+      "paper_id": "gk-2020-regular-national-1-science"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "header",
@@ -149,6 +218,14 @@
       "class": "migration",
       "current_sha256": "4351ac575295ee16c209d8fa7b595366ffc624af2c0e40cd298c6d04e3a498f2",
       "legacy_sha256": "5d82fec28122d358ebfcec53b7dac07e9d5e1b4a45ba5230d66446ceb6349168",
+      "paper_id": "gk-2020-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "afbe72d48aab790f803fead060eb51f57329614159479fbfc1cae7e66c5c8331",
+      "legacy_sha256": "35872fd6ad3cdc716085df7d33fb0df5a9a130911c5abc4c79ba39681cf080d4",
       "paper_id": "gk-2020-regular-new-gaokao-2"
     },
     {
@@ -168,6 +245,14 @@
       "paper_id": "gk-2021-regular-new-gaokao-1"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "d3c6d7684fa466ad8e24cb24c2791b98dac8ada83d961262609d87c5c915e950",
+      "legacy_sha256": "dec2e7ac4b7ba194065a9884dd99ca7b16ba6af41ba2e4c5a6270edf1357dc91",
+      "paper_id": "gk-2021-regular-new-gaokao-1"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "stale-artifact",
@@ -181,6 +266,14 @@
       "class": "migration",
       "current_sha256": "a31c3bcce5538ea7180558c66373c7a781be70565cb1e5627011ca4407e8cbf7",
       "legacy_sha256": "79aed59a98c83faecffb36b7d94305892766a436b83bb877300f2665fb0a02c5",
+      "paper_id": "gk-2021-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "1aa6325dbbd60b98f2b775d39eb6f5de4409860d39c7c58bb7c3e5c486238aa1",
+      "legacy_sha256": "3a879c87926a0ed750d759339b611488326734dd459731b39083f6cd29037bad",
       "paper_id": "gk-2021-regular-new-gaokao-2"
     },
     {
@@ -200,6 +293,14 @@
       "paper_id": "gk-2022-regular-new-gaokao-1"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "eb98eb3013ccaa410164741f38d85c3202ce496b758a6a7700f73023fbea1ca3",
+      "legacy_sha256": "591592104cf758c7d1d83da5da670d1a68a610c936f246195a6b4367aba057f4",
+      "paper_id": "gk-2022-regular-new-gaokao-1"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "stale-artifact",
@@ -213,6 +314,14 @@
       "class": "migration",
       "current_sha256": "217db156418a0eef9796829f60a73757745ca2921dd27bd6dd10bdbcf5487b80",
       "legacy_sha256": "29a9de244eb344a064d64463e8bece117d9d985249f45cb1b4daa982c2445f31",
+      "paper_id": "gk-2022-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "6aa0bd211a63c46968311b0635eeb52ee36a8f927b2fb16e312d79db94fe7275",
+      "legacy_sha256": "164bb85f1415a322c1e10b2467619347e457cec413e5040248f331874fa951d8",
       "paper_id": "gk-2022-regular-new-gaokao-2"
     },
     {
@@ -232,6 +341,14 @@
       "paper_id": "gk-2023-regular-new-gaokao-1"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "f35533264d8a3f547cf41a3720fe085683b11d976f15bbb3af1230762b6f7205",
+      "legacy_sha256": "b250d729f0d72814ba1bf340572c34465dba4815d58a58fc84ed8709ead33fcd",
+      "paper_id": "gk-2023-regular-new-gaokao-1"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "header",
@@ -245,6 +362,14 @@
       "class": "migration",
       "current_sha256": "9221b7763ac2422c8216e916bd24bd56fc07ae5d2fbd040ca71ef8980298e1d6",
       "legacy_sha256": "d47ad57099202d13942353bedf9d2a10204e4b4da01ed1db7aa99ec0b5f47cfd",
+      "paper_id": "gk-2023-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "4ca56bf94e88cf0d7112fede0a38606ee8e1b8afecb483f5113150da63ea70ee",
+      "legacy_sha256": "5afc5918db7b2fb7b5ebf2264f86d519f300a4bb3b4a48aad3bbcbe562661883",
       "paper_id": "gk-2023-regular-new-gaokao-2"
     },
     {
@@ -264,6 +389,14 @@
       "paper_id": "gk-2024-regular-new-gaokao-1"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "eb4fee35092d291a4efab78bc8b0bce4953c6704be31e19ad145f0b53da48211",
+      "legacy_sha256": "363a1c3888c76c8460862f04ad4947aace40c74c38342df2ccd6722ce9ebd420",
+      "paper_id": "gk-2024-regular-new-gaokao-1"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "stale-artifact",
@@ -277,6 +410,14 @@
       "class": "migration",
       "current_sha256": "441d255cbf8a20f61c9fc06761a431737cdfc9fa3cc78198e24f57d292c507a7",
       "legacy_sha256": "e2d1f4d3d1a8e616a9816f72d245ef8d03e8fcba52238f262511f57001b9a8bd",
+      "paper_id": "gk-2024-regular-new-gaokao-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "655cf997dc00252574fdee842916548579ae85f454c08f200d44a4e45d89e7b7",
+      "legacy_sha256": "0265ba18b9fe08f4e74de119f0b89a8c0c9d1d12682bff546c3055ce5bcdb81d",
       "paper_id": "gk-2024-regular-new-gaokao-2"
     },
     {
@@ -296,6 +437,14 @@
       "paper_id": "gk-2025-regular-national-1"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "5ee5d93192df2962a3b7190e7b3770b53b20ba0044631a8dfeed35a9ae0fb148",
+      "legacy_sha256": "6ad3ba99fe57a0179a6a1d56ee8ba8c91b97d66949b9c9ff921de8004707c0f6",
+      "paper_id": "gk-2025-regular-national-1"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "header",
@@ -309,6 +458,14 @@
       "class": "migration",
       "current_sha256": "52509821205af114d693909b2aebabd680c809106d097eb46e972d6bad36b04d",
       "legacy_sha256": "c98b9b8ec264eb1bf88368e12fb0bf7652815222302481a1991be3395cf2c0b3",
+      "paper_id": "gk-2025-regular-national-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "647e8f5073ecfefc3a607496aec9361a70aaa58c66000a548530c32d77541638",
+      "legacy_sha256": "77e48c3d0c848b0514ed627f8ce48223a21fc0a841b6ddcb79056c9d1a3ebc20",
       "paper_id": "gk-2025-regular-national-2"
     },
     {
@@ -328,6 +485,14 @@
       "paper_id": "gk-2026-regular-national-1-recall"
     },
     {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "fb4a2afda5418fcb2b003d5c0a69804a3cb9c74aebc58569db3cd81606c6f4a2",
+      "legacy_sha256": "5f08e6199d8ea46e729e465f5421ef8e321534217281aaa2b5dd0c6f1fa80b14",
+      "paper_id": "gk-2026-regular-national-1-recall"
+    },
+    {
       "adjudicated_by": "task-13-review",
       "artifact": "questions.tex",
       "class": "stale-artifact",
@@ -341,6 +506,14 @@
       "class": "migration",
       "current_sha256": "87ff8091e8e0a55702de3c696d4fb0aa07adc1713a382525c1bd6311e942271c",
       "legacy_sha256": "9def0a18c8ab1d957c4f6425040870e7bdc5f8532c91d1a48f24e71b8a31ab38",
+      "paper_id": "gk-2026-regular-national-2"
+    },
+    {
+      "adjudicated_by": "task-14-review",
+      "artifact": "answers_short.tex",
+      "class": "short-answers-regeneration",
+      "current_sha256": "2497cd9df37267af7df7ba7c83c29c6bfa58fa69fc10b17b79fb2ff8b765a558",
+      "legacy_sha256": "ac21e567515fd77004c8efce1b73b6ccda4edff034d9a94fbfa942414a86aceb",
       "paper_id": "gk-2026-regular-national-2"
     },
     {
