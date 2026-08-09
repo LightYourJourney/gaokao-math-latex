@@ -34,6 +34,7 @@ import argparse
 import copy
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable, Dict, List, Mapping, Optional, Sequence, Tuple
@@ -88,8 +89,13 @@ CONFLICT_STATES: Tuple[str, ...] = ("none", "resolved", "unresolved")
 # `confirm-source` 固定写这个关系：阶段 0 不产生 duplicate 类关系，做成参数只会给
 # 「随手标成 duplicate」留口子。
 PAPER_RELATION = "canonical"
-# 「尚未了结」= 未 resolved。deferred 也算未了结——推迟不是解决。
-UNFINISHED_ISSUE_STATES: Tuple[str, ...] = ("open", "investigating", "deferred")
+# 「尚未了结」= 未 resolved（deferred 也算未了结——推迟不是解决）。**由 issues 的状态
+# 全集取反派生，而不是手写白名单**：白名单在 `issues.STATUSES` 新增状态时会让这条一票
+# 否决的守卫默认放行，而它的默认必须是拒绝。判据本身也用取反（见 `_identity_blockers`），
+# 这个常量只为让「哪些算未了结」在报错与文档里可读。
+UNFINISHED_ISSUE_STATES: Tuple[str, ...] = tuple(
+    sorted(issues_module.STATUSES - {"resolved"})
+)
 
 QUESTION_FIELDS: Tuple[str, ...] = (
     "question_id", "printed_number", "source_ref", "source_sha256", "source_pages",
@@ -192,13 +198,57 @@ def _normalized(text: str) -> str:
     return "\n".join(lines)
 
 
-def question_block_text(block: Any) -> str:
+_THEMATIC_BREAK = re.compile(r"^(?:-{3,}|\*{3,}|_{3,})$")
+_BLOCKQUOTE = re.compile(r"^[ \t]*>")
+
+
+def _strip_file_footer(lines: Sequence[str]) -> List[str]:
+    """剥掉文末页脚段：末条 thematic break 之后只剩引用块时，连同那条 break 一起剥。
+
+    判据依据真库 21 份 `_试题.md` 的实测形状——每一份都以
+
+    ```text
+    ---
+
+    > **原卷影印件**：[`../_raw/….pdf`](…)      # 或 `> **试题来源**：deekur/gaokaomath…`
+    ```
+
+    收尾，break 之后**恰好一行非空且是引用块**。因此判据取「break 之后的非空行全部是
+    引用块、且至少有一行」，而不是「剥掉最后一段」——后者会连真正的题面一起吃掉。
+
+    这条规则**只对最后一题块生效**（见 `question_text_digests`）：题间的 `---` 落在
+    上一题正文里，跨卷逐字相同、本来就不构成差异；只有末题后面没有下一题来接管，才会
+    把页脚吸进正文。判不准时**宁可不剥**：多算进页脚只会让摘要更严，少算才会让核验
+    静默失效。
+    """
+    lines = list(lines)
+    positions = [
+        index for index, line in enumerate(lines)
+        if _THEMATIC_BREAK.fullmatch(line.strip())
+    ]
+    if not positions:
+        return lines
+    cut = positions[-1]
+    trailing = [item for item in lines[cut + 1:] if item.strip()]
+    if not trailing or any(_BLOCKQUOTE.match(item) is None for item in trailing):
+        return lines
+    return lines[:cut]
+
+
+def question_block_text(block: Any, strip_footer: bool = False) -> str:
     """题面块的规范文本：标题行余部 + 正文，规范化后拼接。
 
     题号本身不进哈希——它由 `printed_number` 单独记录；块间的 `lead`（章节标题、
     分隔线）也不进，那是题与题之间的东西，改动它不该让整卷核验失效。
+
+    `strip_footer` 只由最后一题传 True：文末页脚没有下一题来接管，会被解析器算进末题
+    正文，于是末题摘要不再是题面的纯函数——2017 理/文两卷 q23 题面逐字相同却算出两个
+    摘要，差异全在页脚里的那条 PDF 路径。
     """
-    return _normalized("%s\n%s" % (block.title, block.body))
+    lines = _normalized("%s\n%s" % (block.title, block.body)).split("\n")
+    if strip_footer:
+        lines = _strip_file_footer(lines)
+    return _normalized("\n".join(lines))
 
 
 def question_text_digests(questions_text: str) -> Dict[int, str]:
@@ -207,8 +257,12 @@ def question_text_digests(questions_text: str) -> Dict[int, str]:
         blocks = parse_question_blocks(questions_text)
     except SolutionSourceError as error:
         raise _StaleProvenance(f"试题规范源无法解析：{error}") from error
+    last = blocks[-1].number if blocks else None
     return {
-        block.number: _sha256_text(question_block_text(block)) for block in blocks
+        block.number: _sha256_text(
+            question_block_text(block, strip_footer=block.number == last)
+        )
+        for block in blocks
     }
 
 
@@ -1041,11 +1095,15 @@ def _identity_blockers(
     强制 2017 两卷必须先解决身份问题再绑定。判据只看 **status 未 resolved**、不看
     `impact`——身份不明本身就让「这条 source 属于这一卷」这个断言无从谈起，哪怕问题被
     标成 non_blocking 也一样。
+
+    ⚠️ 判据写成**取反**（`!= "resolved"`）而非枚举白名单：白名单与 docstring 今天等价，
+    但方向相反——`issues.STATUSES` 将来加任何新状态（wontfix / superseded…），白名单
+    会让这条一票否决的守卫默认放行。默认必须是拒绝。
     """
     return sorted(
         item["issue_id"] for item in ledger
         if item.get("type") == "identity-ambiguous"
-        and item.get("status") in UNFINISHED_ISSUE_STATES
+        and item.get("status") != "resolved"
         and (
             item.get("paper_id") == paper_id
             or paper_id in set(item.get("affected_paper_ids") or [])

@@ -98,6 +98,11 @@ title: 2099 年数学真题（试题）
   (2) 求 $f(2)$。
 """
 
+# 真库 21 份 `_试题.md` 一律以这个形状收尾（实测：thematic break 之后恰好一行引用块，
+# 三种文案 `原卷影印件`/`试题来源` 皆然）。它落在**最后一题**的正文里，因为后面没有
+# 下一题来接管——这正是 2017 理/文两卷 q23 题面逐字相同却算出两个摘要的原因。
+FOOTER_TEMPLATE = "\n---\n\n> **原卷影印件**：[`../_raw/2099_数学_%s.pdf`](../_raw/)\n"
+
 ANSWER_KEY_MD = """---
 title: 2099 年数学真题（答案要点）
 ---
@@ -562,6 +567,55 @@ class HashContractTests(unittest.TestCase):
     def test_question_ids_are_derived_from_the_paper_and_printed_number(self):
         self.assertEqual(question_id(PAPER_ONE, 7), PAPER_ONE + "-q07")
         self.assertEqual(question_id(PAPER_ONE, 23), PAPER_ONE + "-q23")
+
+    # ---- 文末页脚：末题摘要必须是题面的纯函数
+
+    def test_the_last_question_digest_excludes_the_file_footer(self):
+        """两份文件末题逐字相同、只有文末页脚不同 → 摘要必须相同。
+
+        页脚（`---` + `> **原卷影印件**：…`）落在最后一题块的正文里，因为它后面没有
+        下一题来接管。不剥掉它，末题的声明哈希就不是题面的纯函数——改一次页脚里的
+        PDF 路径，整卷核验静默失效。
+        """
+        science = QUESTIONS_MD + FOOTER_TEMPLATE % "理"
+        arts = QUESTIONS_MD + FOOTER_TEMPLATE % "文"
+        self.assertNotEqual(science, arts)
+        self.assertEqual(
+            question_text_digests(science), question_text_digests(arts)
+        )
+
+    def test_stripping_the_footer_does_not_change_the_footerless_digest(self):
+        """有页脚与无页脚必须同值——剥掉的是页脚，不是把末题换了个口径。"""
+        self.assertEqual(
+            question_text_digests(QUESTIONS_MD + FOOTER_TEMPLATE % "理"),
+            question_text_digests(QUESTIONS_MD),
+        )
+
+    def test_an_edit_to_the_last_question_still_changes_its_digest(self):
+        with_footer = QUESTIONS_MD + FOOTER_TEMPLATE % "理"
+        edited = with_footer.replace("求 $f(2)$", "求 $f(3)$")
+        self.assertNotEqual(
+            question_text_digests(with_footer)[3], question_text_digests(edited)[3]
+        )
+
+    def test_a_thematic_break_followed_by_prose_is_not_a_footer(self):
+        """页脚判据是「break 之后只剩引用块」；后面接正文的 `---` 一律不剥。"""
+        base = QUESTIONS_MD + "\n---\n\n附注：本卷选做题二选一。\n"
+        edited = base.replace("二选一", "三选一")
+        self.assertNotEqual(
+            question_text_digests(base)[3], question_text_digests(edited)[3]
+        )
+
+    def test_a_mid_document_thematic_break_is_never_stripped(self):
+        """只有**最后一题**才可能带文末页脚；题间的 break + 引用块属于题面正文。"""
+        base = QUESTIONS_MD.replace(
+            "**2．** 求 $1+1$ 的值。",
+            "---\n\n> 注：以下为第二部分。\n\n**2．** 求 $1+1$ 的值。",
+        )
+        edited = base.replace("第二部分", "第贰部分")
+        self.assertNotEqual(
+            question_text_digests(base)[1], question_text_digests(edited)[1]
+        )
 
 
 # ================================================================ 枚举与 Schema
@@ -1314,8 +1368,33 @@ class ConfirmSourceTests(unittest.TestCase):
         self.fixture.unbind(SOURCE_ONE)
         self.refuse(paper_id=PAPER_RECALL)
 
+    def test_the_unfinished_states_are_the_complement_of_resolved(self):
+        """判据是**取反**而不是白名单：issues 的状态全集将来加一个新值，这条一票否决
+        的守卫必须默认拒绝，而不是默认放行。"""
+        self.assertEqual(
+            set(provenance.UNFINISHED_ISSUE_STATES),
+            issues_module.STATUSES - {"resolved"},
+        )
+
+    def test_a_status_outside_todays_enum_still_blocks(self):
+        """直接喂一个当前枚举里没有的状态：白名单实现会放行，取反实现会拒绝。"""
+        record = {
+            "issue_id": "ISSUE-9001",
+            "paper_id": PAPER_ONE,
+            "affected_paper_ids": [],
+            "type": "identity-ambiguous",
+            "status": "wontfix",
+            "impact": "non_blocking",
+            "resume_action": "占位",
+        }
+        self.assertEqual(
+            provenance._identity_blockers([record], PAPER_ONE), ["ISSUE-9001"]
+        )
+        record["status"] = "resolved"
+        self.assertEqual(provenance._identity_blockers([record], PAPER_ONE), [])
+
     def test_every_unfinished_identity_issue_state_refuses_the_binding(self):
-        for state in ("open", "investigating", "deferred"):
+        for state in sorted(issues_module.STATUSES - {"resolved"}):
             with self.subTest(state=state):
                 issues_module.upsert_issue(self.fixture.issues_path, {
                     "paper_id": PAPER_ONE,
@@ -1645,6 +1724,42 @@ class LiveRepositoryTests(unittest.TestCase):
                         self.root, self.manifest, paper["paper_id"]
                     ),
                     "current",
+                )
+
+    def test_the_2017_pair_agrees_on_every_shared_question_text(self):
+        """真库实证：2017 理/文的 q23 题面逐字相同，摘要必须相同。
+
+        q22 在修复前就已同值（题间的 `---` 两卷一样），它是对照组——证明「其余题号本来
+        就正常」，问题只出在末题吸收了文末页脚。
+        """
+        digests = {}
+        for suffix in ("science", "arts"):
+            paper = next(
+                item for item in self.manifest["papers"]
+                if item["paper_id"] == "gk-2017-regular-national-1-" + suffix
+            )
+            digests[suffix] = question_text_digests(
+                (self.root / paper["source_files"]["questions"]).read_text(
+                    encoding="utf-8"
+                )
+            )
+        self.assertEqual(digests["science"][22], digests["arts"][22])
+        self.assertEqual(digests["science"][23], digests["arts"][23])
+        # 两卷的其余题面确实不同——修复不得把所有题号都抹平成同值。
+        self.assertNotEqual(digests["science"][1], digests["arts"][1])
+
+    def test_every_paper_last_question_digest_drops_its_footer(self):
+        """21 卷逐卷核对：末题摘要不含文末引用块的字节。"""
+        for paper in self.manifest["papers"]:
+            with self.subTest(paper_id=paper["paper_id"]):
+                text = (self.root / paper["source_files"]["questions"]).read_text(
+                    encoding="utf-8"
+                )
+                last = max(question_text_digests(text))
+                stripped = text.rsplit("\n---\n", 1)[0] + "\n"
+                self.assertEqual(
+                    question_text_digests(text)[last],
+                    question_text_digests(stripped)[last],
                 )
 
     def test_the_cached_states_match_the_recomputed_ones(self):
