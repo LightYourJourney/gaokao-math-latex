@@ -10,7 +10,7 @@
         "gk-2018-regular-national-1-science",
         "gk-2018-regular-national-1-arts"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     },
     {
       "batch_id": "phase0-b02",
@@ -72,10 +72,10 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "763dda4f-07df-40b5-a781-55ba87d89e08",
+  "last_transaction_id": "7cc7681c-fc85-4b0b-8b0f-7961559dee96",
   "papers": [
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -99,7 +99,12 @@
         }
       ],
       "issue_ids": [
-        "ISSUE-0002"
+        "ISSUE-0002",
+        "ISSUE-0003",
+        "ISSUE-0005",
+        "ISSUE-0006",
+        "ISSUE-0007",
+        "ISSUE-0008"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -107,23 +112,25 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-national-1-science",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2017_全国Ⅰ卷_理科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "从上游 PDF 第 1 页重新导出 images/2017理-t7-三视图.png（当前俯视图的等腰直角三角形被画布下边缘截断），补全后重跑题面核对",
       "source_files": {
         "answer_key": "2017/2017_数学真题_理_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_理_含解析.md",
         "questions": "2017/2017_数学真题_理_试题.md",
         "solution_body": "2017/2017_数学真题_理_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-51eb5c18a0e4ad056c80a78acd915bc5d94193d7bb4506dd2fd2d078157b8d40"
+      ],
       "title": "2017 年·全国Ⅰ卷·理科",
       "track": "science",
       "year": 2017
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -151,7 +158,11 @@
         }
       ],
       "issue_ids": [
-        "ISSUE-0002"
+        "ISSUE-0002",
+        "ISSUE-0004",
+        "ISSUE-0005",
+        "ISSUE-0006",
+        "ISSUE-0007"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -159,17 +170,19 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-national-1-arts",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2017_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "从上游 PDF 第 1 页重新导出 images/2017文-t8-四图.png（当前底边被截断、选项标签 (C)(D) 整体缺失），补全四个标签后重跑题面核对",
       "source_files": {
         "answer_key": "2017/2017_数学真题_文_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_文_含解析.md",
         "questions": "2017/2017_数学真题_文_试题.md",
         "solution_body": "2017/2017_数学真题_文_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-f4cc1ec8f7a5385f215c3ccec22f7942eadf5c1caa6a30fa88862df589f91c55"
+      ],
       "title": "2017 年·全国Ⅰ卷·文科",
       "track": "arts",
       "year": 2017
@@ -194,14 +207,18 @@
           "path": "2018_全国Ⅰ卷_理科/figures/f2018li_t18_fold.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0005",
+        "ISSUE-0007",
+        "ISSUE-0008"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2018li"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2018-regular-national-1-science",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2018_全国Ⅰ卷_理科",
       "question_count": 23,
       "resume_action": null,
@@ -211,7 +228,9 @@
         "questions": "2018/2018_数学真题_理_试题.md",
         "solution_body": "2018/2018_数学真题_理_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      ],
       "title": "2018 年·全国Ⅰ卷·理科",
       "track": "science",
       "year": 2018
@@ -236,14 +255,17 @@
           "path": "2018_全国Ⅰ卷_文科/figures/f2018wen_t19_grid.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0005",
+        "ISSUE-0007"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2018wen"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2018-regular-national-1-arts",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2018_全国Ⅰ卷_文科",
       "question_count": 23,
       "resume_action": null,
@@ -253,7 +275,9 @@
         "questions": "2018/2018_数学真题_文_试题.md",
         "solution_body": "2018/2018_数学真题_文_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-1780385e5894ade4a28e511ef3e334f0c964d4812efe4e4db77c6f5bec0294eb"
+      ],
       "title": "2018 年·全国Ⅰ卷·文科",
       "track": "arts",
       "year": 2018
@@ -868,7 +892,7 @@
       "year": 2026
     }
   ],
-  "revision": 777,
+  "revision": 782,
   "schema_version": 1,
   "sources": [
     {
@@ -17109,8 +17133,8 @@
       "exam_type": "regular",
       "git_blob_oid": "07830b21ae9e62025c16937615f5a5c01376f4ca",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf",
       "regions": [],
       "source_id": "src-f4cc1ec8f7a5385f215c3ccec22f7942eadf5c1caa6a30fa88862df589f91c55",
@@ -17133,8 +17157,8 @@
       "exam_type": "regular",
       "git_blob_oid": "417ef1b5025b35a9aef4fb024573913696ff7cd6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf",
       "regions": [],
       "source_id": "src-51eb5c18a0e4ad056c80a78acd915bc5d94193d7bb4506dd2fd2d078157b8d40",
@@ -17469,8 +17493,8 @@
       "exam_type": "regular",
       "git_blob_oid": "99373b44e014a8edf42ea0355faac64093a9ab38",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建,山东).pdf",
       "regions": [],
       "source_id": "src-1780385e5894ade4a28e511ef3e334f0c964d4812efe4e4db77c6f5bec0294eb",
@@ -17493,8 +17517,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b3eaf87e43681c5c2a9db11a7af7597aa185f4af",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建,山东).pdf",
       "regions": [],
       "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45",

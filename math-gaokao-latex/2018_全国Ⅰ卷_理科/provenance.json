@@ -1,0 +1,606 @@
+{
+  "batch_id": "phase0-b01",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2018-regular-national-1-science",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（1）。(1-i)/(1+i)=-i，z=-i+2i=i，|z|=1。 ｜比对：官方 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "047fac5e87262a87cd7b3aecbd972253093f73b76087250bb4b0acc59ce10782",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2018-regular-national-1-science-q01",
+      "question_text_sha256": "438f833220b4577d52fea702fd03a7fed19919a91300ce1a75fcb23ae3a635e2",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "z=(1−i)/(1+i)+2i 求 |z|，选项 0、1/2、1、√2 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B。A={x<-1 或 x>2}，∁A={-1≤x≤2}（含端点，因原不等式为严格大于）。 ｜比对：官方 B，一致（补集取闭区间）。",
+        "grade": "A"
+      },
+      "answer_sha256": "77b516dd779fa03cbab4e142ae8bc958217e138ae43f1b6cfafb1a0d3b1c180a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2018-regular-national-1-science-q02",
+      "question_text_sha256": "d8177afef89bfd4b8ad0ba13314eaf9b888a7853732c504ff07ca2754b691405",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "A={x|x²−x−2>0}，∁_R A 四选项一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（不正确的是A）。设建设前总收入100、后200：种植 60→74（增加，故 A 不正确）；其他 4→10>8（增加一倍以上，B 正确）；养殖 30→60（恰增一倍，C 正确）；养殖+第三产业 30%+28%=58%>50%（D 正确）。 ｜比对：官方 A，一致；官方与我同样用「总收入翻番」把比例折算成绝对值（种植 0.6a→0.74a 增加），四个选项逐条核对结果相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "450c1b43dec5353d5ab3d00178d11506439b2f960265a288586b5fbb8086f236",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2018-regular-national-1-science-q03",
+      "question_text_sha256": "aaab4d823cb124a98240a73353c8c19821ac8e04d6477ffefa76f28380351c81",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "题干与四选项一致（PDF 作「增加了一倍. 实现翻番.」用句号，MD 作逗号，属上游标点小疵）；配图 2018理-t3-饼图.png 已视读核对：建设前 种植 60%／第三产业 6%／其他 4%／养殖 30%，建设后 种植 37%／第三产业 28%／其他 5%／养殖 30%，与 PDF 逐一相符，两组各合计 100%。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（-10）。3S₃=S₂+S₄ ⇒ 3(6+3d)=(4+d)+(8+6d) ⇒ 2d=-6，d=-3，a₅=2+4(-3)=-10。 ｜比对：官方 B（-10），一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "eb39db90034a1ae3d3c172c0de243848a55921e8340e7a2d13232f2237f67629",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2018-regular-national-1-science-q04",
+      "question_text_sha256": "0150c1532f81fe60cd6af22f805809f6ac78089243990ce43099bf7426262541",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "3S3=S2+S4、a1=2 求 a5，选项 −12/−10/10/12 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（y=x）。奇函数 ⇒ a=1，f(x)=x³+x，f'(0)=1。 ｜比对：官方 D，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "b7219f5cc4c8fa990c65079a54035ddb6faf29be6362a075297ddbc2fc67ecdd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2018-regular-national-1-science-q05",
+      "question_text_sha256": "92ec4b8d1d89057628c4a3a88acc57adec6c0950d7bf038bc20896964eeab560",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "f(x)=x³+(a−1)x²+ax 为奇函数，(0,0) 处切线方程，四选项 y=−2x/−x/2x/x 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A。AD=(AB+AC)/2，AE=(AB+AC)/4，EB=AB-AE=(3/4)AB-(1/4)AC。 ｜比对：官方 A，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "7f18442f21b6fa8965e02370b55af00d7e0272a8bf56cda588014fe895e6d907",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2018-regular-national-1-science-q06",
+      "question_text_sha256": "8bcdf1053dfabb000d719c420cbd84af99eb472150ca3131baf2b0158270b6b3",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "AD 为 BC 边中线、E 为 AD 中点，向量 EB 的四个选项（3/4、1/4 系数的四种组合）一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（2√5）。r=8/π，M 在上底面正视图最左点、N 在下底面左视图最右点，两点圆周角差 90° ⇒ 展开后水平距离为周长的 1/4 即 4，竖直 2，最短路径 √(16+4)=2√5。 ｜比对：官方 B（2√5），一致；官方对图上 A、B 位置的解读（A→最左母线顶端、B→最前母线底端、圆周相隔 90°）与我读图建系所得 M(-r,0,2)、N(0,-r,0) 完全一致，展开后 √(4²+2²)。",
+        "grade": "A"
+      },
+      "answer_sha256": "037c9961e3a7e5d4f974f32610a01ee54107bed44a2b5fd59c6febfeb1537063",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2018-regular-national-1-science-q07",
+      "question_text_sha256": "de92888cd4c16f98a6e152c1e62fa2f8befdaf25fe345d6e73608904287a52d2",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "圆柱高 2、底面周长 16、三视图、M 对应 A、N 对应 B、侧面最短路径，选项 2√17/2√5/3/2 一致；配图 2018理-t7-三视图.png 完整（A、两矩形、B、俯视圆）。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（8）。直线 y=(2/3)(x+2) 与 y²=4x 联立得 y²-6y+8=0 ⇒ M(1,2)、N(4,4)；F(1,0)，FM=(0,2)、FN=(3,4)，点积=8。 ｜比对：官方 D（8），一致；官方消 y 得 x²-5x+4=0，我消 x 得 y²-6y+8=0，交点同为 M(1,2)、N(4,4)。",
+        "grade": "A"
+      },
+      "answer_sha256": "dc7b961a3e3c901de39034b5769107ce51df78cef42c6588fb55970815a1b1ff",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2018-regular-national-1-science-q08",
+      "question_text_sha256": "02f68fd7e464fe519cd179a52be8d2f3b9f10d6ea163c08e9a8916ea13a7b8dc",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "y²=4x 焦点 F、过 (−2,0) 斜率 2/3 的直线交 C 于 M,N，求 FM·FN，选项 5/6/7/8 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（[-1,+∞)）。x>0 支 a=-lnx-x 严格减且值域 R，恒有 1 个零点；x≤0 支 a=-e^x-x 严格减，值域 [-1,+∞)，当 a≥-1 时有 1 个零点。共 2 个 ⇔ a≥-1。 ｜比对：官方 C（[-1,+∞)），一致；官方用 h(x)=f(x)+x 与水平线 y=-a 求交，我用两支分别分离参数 a=-e^x-x 与 a=-lnx-x，两法等价、界点同为 a=-1（含端点）。",
+        "grade": "A"
+      },
+      "answer_sha256": "5ca123624089c43293b9b4ac718699c4ffe7222977c424433f72905290465801",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2018-regular-national-1-science-q09",
+      "question_text_sha256": "7cd7f3b509724cfc5d075304bf3c18ec61da8a3909b3b688a30224cc072e5b5c",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "分段函数 e^x(x≤0)／ln x(x>0)、g(x)=f(x)+x+a 存在 2 个零点，四个 a 范围选项一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（p₁=p₂）。两小半圆面积和 π(b²+c²)/8=πa²/8 等于大半圆面积；月牙面积=两小半圆-（大半圆-三角形）=三角形面积，故 p₁=p₂；p₃ 对应 πa²/8-bc/2，一般不等。 ｜比对：官方 A（p₁=p₂），一致；两小半圆面积和=大半圆面积、同减两弓形得月牙=三角形，与我的推导逐步相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "37f688081890e4394d7e934eb0e9df6af1525b089c64d76ed2c3935110149b52",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2018-regular-national-1-science-q10",
+      "question_text_sha256": "f893feb20389b9657d3af23d805c22dd3e33e92b349828d317abcecc9063010d",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "希波克拉底图形：三个半圆直径分别为斜边 BC 与直角边 AB、AC，区域 I/II/III 对应概率 p1,p2,p3，四选项一致；配图 2018理-t10-月牙.png 结构与 PDF 相符（两黑色月牙顶端弧被画布轻微削平，属裁切毛边，不改变区域关系与 A/B/C 标注）。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（3）。a=√3,b=1,c=2，渐近线倾角 ±30°，∠MON=60°；直角只能在 M 或 N。取 OM⊥MN：MN 斜率 -√3 过 F(2,0)，得 M(3/2,√3/2)、N(3,-√3)，|MN|=3（另一对称情形同样为 3；左支情形与斜率范围矛盾，排除）。 ｜比对：官方 B（3），一致；官方走 F 到渐近线距离=b=1、OM=√3、|MN|=OM·tan60° 的捷径，我用两种直角位置分别显式建系求交点，两条独立路径同得 3（我另核验了左支情形与斜率范围矛盾、可排除）。",
+        "grade": "A"
+      },
+      "answer_sha256": "fbb82a80da743288244193dfbc9dcb46a1adebd803da9f638fd3fa228286157c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2018-regular-national-1-science-q11",
+      "question_text_sha256": "0c2c89b735959d20560c0265f455430097e860918395cc07c1e60222b25de9f7",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "双曲线 x²/3−y²=1、过右焦点 F 的直线交两渐近线于 M,N、△OMN 为直角三角形求 |MN|，选项 3/2、3、2√3、4 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（3√3/4）。各棱与 α 成等角 ⇒ 法向量 ∝(1,1,1)，即垂直于体对角线；此方向最大截面为过六条棱中点的正六边形，边长 √2/2，面积 (3√3/2)(1/2)=3√3/4。 ｜比对：官方 A（3√3/4），一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "0fd7d4c8335e30d7801955b8f15f0c88bea82ee68a68cecf04e200a51c45d41c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2018-regular-national-1-science-q12",
+      "question_text_sha256": "6240a19cd995579ca9dd7d0bdbb07ab15f793a38c7f3a4aa03b8d45449462aa5",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "正方体棱长 1、每条棱所在直线与平面 α 成角相等，截面面积最大值，四选项 3√3/4、2√3/3、3√2/4、√3/2 一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：6。可行域顶点 (2,0)、(-1,0)、(-4,-3)，z=3x+2y 分别为 6、-3、-18，最大 6。 ｜比对：官方 6，一致，三顶点取值同。",
+        "grade": "A"
+      },
+      "answer_sha256": "075aadbc7a72c1f3f240d28f2c064c11699b32100be90f0021d2ac1717ea3fb8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2018-regular-national-1-science-q13",
+      "question_text_sha256": "7ec6db05ac8fa3fd24ffddb3ab85807bc647249b20732d2edf5de0688ef36ebd",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "约束 x−2y−2≤0、x−y+1≥0、y≤0，z=3x+2y 最大值，一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：-63。n=1 得 a₁=-1；Sₙ-Sₙ₋₁ 得 aₙ=2aₙ₋₁，aₙ=-2^(n-1)，S₆=-(2⁶-1)=-63。 ｜比对：官方 -63，一致；官方另给捷径 S₆=2a₆+1=-63。",
+        "grade": "A"
+      },
+      "answer_sha256": "0ee3985d11683c698c84c3441706bad66c2f98bd7c359f06d1d729e75929587b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2018-regular-national-1-science-q14",
+      "question_text_sha256": "b7b4203e4bb928672452f0f9e724a4dd981b4fcd9cefdcaef3767c5032d310c0",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "Sn=2an+1 求 S6，一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：16。C(6,3)-C(4,3)=20-4=16。 ｜比对：官方 16，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "d062ed057de027f7d9680895fba3be675a08d38df73eea8be13f07431c856a17",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2018-regular-national-1-science-q15",
+      "question_text_sha256": "796e1a11e3bd0c63d73aac07d3e252c79735f24a4859147712b90731efb6d656",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "2 位女生、4 位男生中选 3 人且至少 1 位女生，附「用数字填写答案」，一致（PDF 用顿号处 MD 亦为顿号/逗号差异）。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：-3√3/2。f'(x)=2cosx+2cos2x=2(2cosx-1)(cosx+1)，驻点 cosx=1/2 或 cosx=-1；一个周期内 f(π/3)=3√3/2、f(π)=0、f(5π/3)=-3√3/2，最小值 -3√3/2。 ｜比对：官方 -3√3/2，一致；官方取 x=-π/3、我取 x=5π/3（同一点模 2π），f 值相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "dc894f31b289209135e3d177d23dc4abf295f0fa2b6b941005c976067014acbb",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2018-regular-national-1-science-q16",
+      "question_text_sha256": "4d4bb59b65eaf9dbe58181c7a5f643433f0b7ae853872f685e54db1a2536f115",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "f(x)=2sin x+sin 2x 的最小值，一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) cos∠ADB=√23/5。△ABD 中正弦定理 5/sin45°=2/sin∠ADB ⇒ sin∠ADB=√2/5；因 BD>AB 故 ∠ADB<45° 为锐角，cos=√(1-2/25)=√23/5。(2) BC=5。∠BDC=90°-∠ADB ⇒ cos∠BDC=sin∠ADB=√2/5；余弦定理 BC²=25+8-2·5·2√2·(√2/5)=25。 ｜比对：官方 (1) √23/5、(2) BC=5，一致（含「BD>AB ⇒ 该角为锐角取正根」这一步同）。",
+        "grade": "A"
+      },
+      "answer_sha256": "8e404be28cf310ef9a62d9bf2337f27ce95d41c1eafa01518d9eb8eef4b62c7a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2018-regular-national-1-science-q17",
+      "question_text_sha256": "3c85ce8ea9362355d26977e42d0325f94d2189cbbce98520ada7b2ee0411df26",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "平面四边形 ABCD、∠ADC=90°、∠A=45°、AB=2、BD=5；(2) DC=2√2 求 BC，一致。解答题分值标注「（12 分）/（10 分）」为规范源编辑性补注，上游 PDF 未印分值。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 证明：EF∥AB⊥BC ⇒ EF⊥BF，又 PF⊥BF（已知），EF∩PF=F ⇒ BF⊥平面PEF，BF⊂平面ABFD ⇒ 平面PEF⊥平面ABFD。(2) √3/4。设正方形边长 2，A(0,0,0)、B(2,0,0)、F(2,1,0)、D(0,2,0)；由 PF=1、PD=2、PF⊥BF 解得 P(3/2,1,√3/2)；DP=(3/2,-1,√3/2)，|DP|=2，sinθ=(√3/2)/2=√3/4。 ｜比对：官方 (1) 同证法（EF⊥BF 与 PF⊥BF ⇒ BF⊥平面PEF）、(2) √3/4，一致；官方解得 P(3/2,1,√3/2) 与我建系解得的坐标逐分量相同（我另用 numpy 复核 PF=1、PD=2、PF·BF=0）。",
+        "grade": "A"
+      },
+      "answer_sha256": "cce16b0a3cdda4b933dba761057e3660e6f272347620113891953a118b06d887",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2018-regular-national-1-science-q18",
+      "question_text_sha256": "32605462b173596cb354b9a92dfab7779a8e20c0092116eea50184b44317cabd",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "正方形 ABCD、E/F 为 AD/BC 中点、以 DF 为折痕折起 △DFC 使 C 到达 P、PF⊥BF；两小问（面 PEF⊥面 ABFD、DP 与面 ABFD 所成角正弦值）一致；配图 2018理-t18-折叠.png 完整。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) x+√2y-2=0 或 x-√2y-2=0（即 y=∓(√2/2)(x-2)）。F(1,0)，x=1 时 A(1,±√2/2)，与 M(2,0) 连线斜率 ∓√2/2。(2) 证明：设 l:x=my+1，代入得 (m²+2)y²+2my-1=0；k_MA+k_MB=[2my₁y₂-(y₁+y₂)]/[(my₁-1)(my₂-1)]，分子 =2m(-1/(m²+2))+2m/(m²+2)=0，故两斜率互为相反数，MA、MB 关于 x 轴对称，∠OMA=∠OMB（l 与 x 轴重合时两角均为 0）。 ｜比对：官方 (1) y=±(√2/2)(x-2)（与我写的 x±√2y-2=0 为同一对直线）、(2) 同为证 k_MA+k_MB=0，一致；官方设 l:y=k(x-1) 分子恒等于 0，我设 l:x=my+1 分子 2my₁y₂-(y₁+y₂)=0，两种参数化互补（各自漏掉的垂直/水平特例均需另述），结论相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "ba2887cda6cc5345a1749e4b61e64d38d7f331d3d02a1de5ee2109037e2ed191",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2018-regular-national-1-science-q19",
+      "question_text_sha256": "257c7e92922f727e58cbde7cb6b1ac46d027feabcca300a24f7b851db69b85f1",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "椭圆 x²/2+y²=1 右焦点 F、过 F 直线 l 交 C 于 A,B、M(2,0)；两小问一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) p₀=0.1。f(p)=C(20,2)p²(1-p)^18，f'(p)=C(20,2)p(1-p)^17(2-20p)，唯一极大值点 p=0.1。(2)① EX=490。余下 180 件中不合格品数 Y~B(180,0.1)，EY=18；X=20×2+25Y，EX=40+450=490。② 应该检验：全检费用 200×2=400<490。 ｜比对：官方 (1) p₀=0.1、(2)① EX=490 ② 应该检验（400<490），全部一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "32acbf422fe5fb01ed28aa568fc5a18533988798d3ffa0c42a49ffcb9398ba61",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-2018-regular-national-1-science-q20",
+      "question_text_sha256": "2d8ebfe1a48901a2f5cd1255db5f84d2737c6141291870d8ef6e1d8f46543518",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "每箱 200 件、先抽 20 件、p∈(0,1)、恰 2 件不合格求 f(p) 最大值点 p0、检验费 2 元/件、赔偿 25 元/件、求 EX 与决策，数字逐一核对一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) f'(x)=-(x²-ax+1)/x²。a≤2 时 f 在 (0,+∞) 递减；a>2 时设 x₁=(a-√(a²-4))/2、x₂=(a+√(a²-4))/2，f 在 (0,x₁) 减、(x₁,x₂) 增、(x₂,+∞) 减。(2) 证明：x₁x₂=1、x₁+x₂=a，[f(x₁)-f(x₂)]/(x₁-x₂)=-2+a(lnx₁-lnx₂)/(x₁-x₂)，故原不等式 ⇔ (lnx₁-lnx₂)/(x₁-x₂)<1；设 x₂=t>1、x₁=1/t，即证 2lnt<t-1/t，令 h(t)=t-1/t-2lnt，h(1)=0、h'(t)=(t-1)²/t²>0，得证。 ｜比对：官方 (1) 同样的 f' 与三段分类、(2) 同样归结为证 (lnx₁-lnx₂)/(x₁-x₂)<1，一致；官方令 s=√(x₁/x₂)∈(0,1) 证 h(s)=2lns-s+1/s>0，我令 t=x₂>1 证 2lnt<t-1/t，代换 s=1/t 后两式逐项相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "a913e4f195372f35273646c1d442198ac18aaebd737904ad7ca08dd1aeba96dd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-2018-regular-national-1-science-q21",
+      "question_text_sha256": "1b6ea5766d543c79fafc45310f2602e19ac0bc86e103fb04881267f8c7c3c74c",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "f(x)=1/x−x+a ln x；(2) 存在两个极值点 x1,x2 证 (f(x1)−f(x2))/(x1−x2)<a−2，一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) (x+1)²+y²=4。ρ²+2ρcosθ-3=0 ⇒ x²+y²+2x-3=0。(2) y=-(4/3)|x|+2。过 (0,2) 斜率 m 的直线与圆相切 ⇔ |2-m|/√(m²+1)=2 ⇒ m=0 或 m=-4/3；k=-4/3 时右支（x≥0）相切于 (3/5,6/5) 得 1 点、左支交圆两点（x≈-0.144、-2.496）合计 3 点；k=0 仅 1 点，k>0 无交点，k<-4/3 为 4 点，-4/3<k<0 为 2 点。故只有 k=-4/3。 ｜比对：官方 (1) (x+1)²+y²=4、(2) y=-(4/3)|x|+2，一致；官方仅由相切距离方程解出 k=-4/3（舍 k=0），我另做了完整分类（k>0 无交点、-4/3<k<0 得 2 点、k<-4/3 得 4 点、并验证 k=-4/3 时切点 x=3/5≥0 落在右支、左支两交点 x≈-0.144 与 -2.496 均落在左支），独立确认 k=-4/3 是唯一解。",
+        "grade": "A"
+      },
+      "answer_sha256": "bc4d595dcc7822ef7936e3d00822ba13182700c7eeb15c0ad01ad6536419d4a8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-2018-regular-national-1-science-q22",
+      "question_text_sha256": "20196850555a4ef422427244f104f0bb82de999dd066bf75cf1b724342845ea6",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "C1:y=k|x|+2；C2 极坐标方程 ρ²+2ρcosθ−3=0；两小问一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) {x|x>1/2}。分段：x<-1 时 -2>1 无解；-1≤x<1 时 2x>1 ⇒ x>1/2；x≥1 时 2>1 恒成立。(2) 0<a≤2。x∈(0,1) 时 x+1-|ax-1|>x ⇔ |ax-1|<1 ⇔ 0<ax<2，需 a>0 且 a<2/x 对一切 x∈(0,1) 成立 ⇒ a≤2。 ｜比对：官方 (1) (1/2,+∞)、(2) (0,2]，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "d2b4694e74290aa2f9bfff89c38796b7ccfffa43ed0f39fa7e8ee1b7fa199d03",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 23,
+      "question_id": "gk-2018-regular-national-1-science-q23",
+      "question_text_sha256": "8fc27185baaca5f7533404e09e33dc705a855ee6712f02420f97578065ea5fd6",
+      "reviewer_role": "b01-blind-answer-reviewer-opus",
+      "solver_role": "b01-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a196c7a1fb9508a02417bf170a80d1ab5245fcba1da847be4562fe18feb6ce45"
+      },
+      "source_sha256": "de1d4f3f94b5abdc7bd299b39658f1fe8b9c9ca8e8b703fa9d65db46df6a14f6",
+      "transcription_review": {
+        "evidence": "f(x)=|x+1|−|ax−1|；(1) a=1 解 f(x)>1；(2) x∈(0,1) 时 f(x)>x 求 a 范围，一致。",
+        "result": "passed",
+        "role": "b01-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}
