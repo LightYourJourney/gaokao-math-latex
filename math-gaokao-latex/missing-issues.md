@@ -585,3 +585,257 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0033
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "双盲同见（本工程第二例）：答案独立求解角色与答案盲核角色在互不知情下对同一处给出同一诊断——要点把 |t|=√2/2 一支写成「（或 1/√2，对称）」，而该值恰为双曲线 x²/2−y²=1 的渐近线斜率，代入后二次项系数为零、方程退化，AP 与曲线只有一个公共点，必须舍去，并非对称解。求解角色另做 numpy 复核（两点均在双曲线上、k_PQ=−1、tan∠PAQ=2.828427、面积 2.5141574=16√2/9），确认结论不受影响。本条同时承接盲核角色对本题给出的 conflict_status=resolved：分歧已判明为要点叙述缺陷而非答案错误，按 T18 口径为 resolved 状态留一条可追溯的指针。",
+  "fingerprint": "2b321d8816d5ba7dd877d87f5940867d427bf067797ca7f560cc2d3bbeab3c21",
+  "impact": "non_blocking",
+  "paper_id": "gk-2022-regular-new-gaokao-1",
+  "question_id": "gk-2022-regular-new-gaokao-1-q21",
+  "resume_action": "改写 2022 新高考Ⅰ卷 `_答案要点.md` 第 21(2) 题的舍值理由：|t|=√2/2（即 1/√2）不是「对称支」，而是与渐近线平行的无效支——该斜率下二次项系数为零、方程退化、AP 与 C 只有一个公共点，应以此为由排除；答案 16√2/9 无需改动",
+  "source_id": "src-abb272e6926b56eec2f33b23b5a36bf48cf890620787bec47c5dfd69d3fcaf73",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0034
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "控制器裁定维持 passed（判例同 b03 的 ISSUE-0024 QD 虚实线）：F 由题干向量式 EF⃗=DA⃗ 完全代数确定，图仅起辅助作用，缺该虚线不影响解题。500 dpi 比对确认两处辅助虚线差异：转录件多一条 A—E 竖直虚线、缺 PDF 原图的 E—F 虚线。六个标注（D/B/A/C/E/F）齐全、实线 DA/DB/AB/AF/FB 一致、无裁切。题面核对角色评为「四卷中最值得登记的图片问题」。",
+  "fingerprint": "6321c77996290c1179e8de1fbbc93cb22dd17448d67f156112efd11a1b1426b2",
+  "impact": "non_blocking",
+  "paper_id": "gk-2023-regular-new-gaokao-2",
+  "question_id": "gk-2023-regular-new-gaokao-2-q20",
+  "resume_action": "重绘 images/2023-Ⅱ-t20-三棱锥.png：补上 PDF 原图中的 E—F 虚线（原图以虚线 D—E—F 折线表示 F 的位置），并去掉转录件多画的 A—E 竖直虚线",
+  "source_id": "src-6d630ab56ae1e00ba708253221026ea6afd0bb2e506f8e949ca761a54de6d641",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0035
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "控制器裁定维持 passed：图 1 不承载解题信息，解题信息全在题干与图 2，而图 2（images/2022-Ⅱ-t3-屋顶截面.png）与 PDF 原图逐点相符——y 轴、O、D₁、D、C₁、C、B₁、B、A₁、A、x 轴共 11 个标注齐全、折线与虚线辅助线一致、无裁切。图 1 的问题是与源图不同源：PDF 为古建屋架透视版画（九个标注），转录件改画为山面桁架剖面示意（八个标注，缺 O）。",
+  "fingerprint": "6189c733a07b7ac2d48e82c1cc95e34f5b6dca1d4973bb27c1bd29287cff8dda",
+  "impact": "non_blocking",
+  "paper_id": "gk-2022-regular-new-gaokao-2",
+  "question_id": "gk-2022-regular-new-gaokao-2-q03",
+  "resume_action": "由内容任务定夺 images/2022-Ⅱ-t3-举架结构.png（图 1）的处置：或忠实重绘源图（古建屋架透视版画，含 A′/B′/C′/D′、A/B/C/D 与 O 共九个标注），或保留现有示意图但明确标注为编者示意并补回缺失的 O 标注",
+  "source_id": "src-8a9765e7b1dd41ff5435b28d8edee31aa19573a01960a903650ad6ae3cd25fd6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0036
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed（200 dpi 渲染复核）：4 门体育类 + 4 门艺术类共 8 门、选修 2 门或 3 门、每类至少 1 门、「(用数字作答)」均一致，唯末尾漏一「课」字，不改题意与答案。本题无配图。",
+  "fingerprint": "91a1212be76d82c368ff795020cee10c2a1a48e38d2c170342806d8457fc4f66",
+  "impact": "non_blocking",
+  "paper_id": "gk-2023-regular-new-gaokao-1",
+  "question_id": "gk-2023-regular-new-gaokao-1-q13",
+  "resume_action": "补回漏字：PDF 作「学生需从这 8 门课中选修 2 门或 3 门课」，规范源作「选修 2 门或 3 门」，末尾漏一「课」字；纯转录漏字，可直接补",
+  "source_id": "src-7fdec764fe31e143cd6daf81734e2df4d142dc09b0a3ad696d522aacbefa7f63",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0037
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed（300 dpi 渲染复核）：题干与四选项 1/6／1/3／1/2／2/3 一致，唯一差异是单字近义替换，取数范围与答案不变。本题无配图。与「源 PDF 有缺陷、按正确版转录」那一类不同——此处源无缺陷，是转录方无理由改字。",
+  "fingerprint": "1d44e128c9ba24f6333c727cb04a30e5a2d4c856a7aee6d1e4b4ed8448222adf",
+  "impact": "non_blocking",
+  "paper_id": "gk-2022-regular-new-gaokao-1",
+  "question_id": "gk-2022-regular-new-gaokao-1-q05",
+  "resume_action": "回改近义替换：PDF 作「从 2 至 8 的 7 个整数」，规范源作「从 2 到 8 的 7 个整数」，「至」被无理由换成「到」；按忠实转录纪律回改为「至」",
+  "source_id": "src-abb272e6926b56eec2f33b23b5a36bf48cf890620787bec47c5dfd69d3fcaf73",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0038
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "由答案盲核角色在回报中提出（其记录 schema 只有 answer_sha256／conflict_status／issue_ids，无 evidence 字段，故未落入 .work）。可与求解角色的落盘证据相互印证：求解角色用代换 u=√3x−y、v=√3x+y 把三命题归结为 λ=2 即 M 为 AB 中点，在 ②③⇒① 一支里显式处理了「u₂=v₁ 会导致 x₁=x₂ 与 x₁>x₂ 矛盾」，并有数值复核（M=(3.84615,4.61538) 恰为 AB 中点、|MA|=|MB|=7.174906964）；要点缺的是与之对称的u₂=−v₁ 一句。",
+  "fingerprint": "a12895e4ad73287ed2ffd610abb51e3434fd9ae9b0d573d75b7fdbb07584241f",
+  "impact": "non_blocking",
+  "paper_id": "gk-2022-regular-new-gaokao-2",
+  "question_id": "gk-2022-regular-new-gaokao-2-q21",
+  "resume_action": "在 2022 新高考Ⅱ卷 `_答案要点.md` 第 21(2) 题补一句 u₂=−v₁ 情形的排除说明（现有分类只处理了 u₂=v₁）；结论与主线论证不受影响",
+  "source_id": "src-8a9765e7b1dd41ff5435b28d8edee31aa19573a01960a903650ad6ae3cd25fd6",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0039
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "由答案独立求解角色在 A 级比对中发现（答案 C={−2} 双方一致，仅注解有瑕）：x²−x−6≥0 ⇔ x≤−2 或 x≥3，M 中仅 −2 满足且恰取等号；若漏掉等号则解集为空，不会得到选项 D。该注解自相矛盾，不影响答案。",
+  "fingerprint": "1144e7e729ddc91a4c0886e9bf0d298fd5284ef61f6c9728cd3ecbebe2edfac0",
+  "impact": "non_blocking",
+  "paper_id": "gk-2023-regular-new-gaokao-1",
+  "question_id": "gk-2023-regular-new-gaokao-1-q01",
+  "resume_action": "更正 2023 新高考Ⅰ卷 `_答案要点.md` 第 1 题的「易错」注解：现写「漏掉等号导致误选 D」不成立——漏掉等号得到的是空集，四个选项中没有对应项；应改写为真实的易错成因或删去该注解",
+  "source_id": "src-7fdec764fe31e143cd6daf81734e2df4d142dc09b0a3ad696d522aacbefa7f63",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0040
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed：C/P/A/B/E/O 六个标注齐全，实线 CP/CA/AB/AP/PE/EB/AE 与 PO 虚线一致、无裁切，600 dpi 比对仅见辅助虚线的条数与起点差异，不丢标注、不改变棱面连接关系。注：本题第 (2) 问 PDF 源缺「的」字（「求二面角 C−AE−B 正弦值」），规范源照录未改，属 report.md「批次 1 勘误」第 2 条既有裁决，不在本条范围内。",
+  "fingerprint": "6a08acc049e530c267af2623082bd33fca3d000c039dc2420066e168c0dd11ad",
+  "impact": "non_blocking",
+  "paper_id": "gk-2022-regular-new-gaokao-2",
+  "question_id": "gk-2022-regular-new-gaokao-2-q20",
+  "resume_action": "重绘 images/2022-Ⅱ-t20-三棱锥.png 的辅助虚线：现自 C 引出三条虚线（含一条 C—O），PDF 原图自 C 只引出两条（至 E、至 B），另有一条自 O 出发的虚线",
+  "source_id": "src-8a9765e7b1dd41ff5435b28d8edee31aa19573a01960a903650ad6ae3cd25fd6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0041
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-1"
+  ],
+  "conflict_code": "source-pdf-errata-corrected",
+  "current_evidence": "三处均由题面核对角色在 150–300 dpi 渲染复核中逐字核对，判非实质、维持 passed，处理方式与 report.md「批次 1 勘误」第 1 条（2024 Q19 源 PDF 衍文按语法正确版转录）同类。其中 2022Ⅰ 第 20 题的两处讹字是本批新发现、此前未登记；2022Ⅰ 第 8 题与 2023Ⅰ 第 19 题两处亦未登记。登记为卷级批量单而非逐题条目，是因为一条 issue 的身份只能带一个 question_id，跨三题两卷无法逐题锚定；代价是这三处在 provenance 的逐题 issue_ids 里不可见。",
+  "fingerprint": "d3a821aab11b07556759ac59724e31a2f7de88f1fe5baf081cba8509a6dc057c",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "把三处「源 PDF 缺陷、规范源按正确版转录」补登进 report.md 的勘误清单（现清单只有 2024 Q19 衍文与 2022Ⅱ T20(2) 缺「的」两条）：一、2022Ⅰ 第 20(1) 问，PDF 作「认为该疾病群体与末患该疾病群体」，「认为」后缺「患」字、「未患」误作「末患」，规范源按语义正确版写作「认为患该疾病群体与未患该疾病群体」（另 PDF「調査」用「査」异体字形，规范源作「查」，属字形归一）；二、2022Ⅰ 第 8 题，PDF 设问作「则该四棱锥体积的取值范围是」，规范源补一「正」字作「该正四棱锥」（题干首句已声明正四棱锥）；三、2023Ⅰ 第 19(2) 问，PDF 作「(2) 证明: 当 a>0 时, 求证: f(x)>2lna+3/2.」，「证明:」与「求证:」重复，规范源删去重复的「求证:」",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0042
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-1"
+  ],
+  "conflict_code": "punctuation-normalized",
+  "current_evidence": "三处均由题面核对角色记录、判非实质并维持 passed：只涉标点形态，题意、数据与答案均不变。三题均无配图。",
+  "fingerprint": "ba5373ad38e576aa7ea944adf76c905940ed315550e8126f5a639f6529338e16",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "三处标点与 PDF 不一致，按忠实转录纪律决定是否回改：2022Ⅰ 第 6 题「最小正周期为 T, 若」的逗号在规范源作句号；2023Ⅰ 第 10 题「距离燃油汽车, 混合动力汽车, 电动汽车」的逗号在规范源作顿号；2023Ⅰ 第 15 题「在区间 [0,2π], 有且仅有」的逗号在规范源被省略",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0043
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-1"
+  ],
+  "conflict_code": "footer-raw-pdf-dangling",
+  "current_evidence": "沿 ISSUE-0007（b01）、ISSUE-0023（b02）、ISSUE-0028（b03 的 2021Ⅰ）同 type 同 conflict_code 另立新条（affected_paper_ids 进 fingerprint 身份，无法原地扩展）。已核对：2022Ⅰ 末行写 `../_raw/2022_数学.pdf`、2023Ⅰ 末行写 `../_raw/2023_数学.pdf`，而 `_raw/` 目录在库内不存在。同批两个Ⅱ卷末行是「试题来源」说明、不含 _raw 链接。这已是该缺陷第四次出现，且四次全部落在Ⅰ卷/全国卷一侧，疑为同一批转录作业的固定习惯。",
+  "fingerprint": "6fb01e0aff8b2cc49924d9a41eb3f11368599ee0ed96079e787c57c072cbe36f",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "改写 2022、2023 两个新高考Ⅰ卷 `_试题.md` 文末页脚的原卷影印件链接（PDF 二进制不入库，宜改为指向 source-manifest 的 source_id / upstream_path，或沿用同批两个Ⅱ卷的「试题来源：deekur/gaokaomath（commit `34c13a6`…）」写法）",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0044
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-1"
+  ],
+  "conflict_code": "metadata-conventions-drift",
+  "current_evidence": "沿 ISSUE-0029（b03 的 2021Ⅰ）同 type 同 conflict_code 另立新条。已由导入方直接核对四份规范源：2022Ⅰ 与 2023Ⅰ 的来源行均无 commit 号与 PDF 名，而 2022Ⅱ、2023Ⅱ 均有；2022Ⅰ、2023Ⅰ 的 title 与「卷种」写「新高考 I 卷」（ASCII I）。ASCII I 现已在 2021Ⅰ、2022Ⅰ、2023Ⅰ 三卷连续出现，不是一次性笔误而是Ⅰ卷侧的系统性写法漂移，建议连同 ISSUE-0029 一次性归一。另观察到Ⅱ卷内部亦不齐（2022Ⅱ 作「新高考Ⅱ卷」无空格、2023Ⅱ 作「新高考 Ⅱ 卷」有空格），一并归一为宜。",
+  "fingerprint": "23cda00ead69153f0ed9f3ce142f1bea00cd3943435fd4626393b7a668462e58",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "统一 2022、2023 两个新高考Ⅰ卷的元数据：一是来源行补上 commit 号与源 PDF 名（现仅「deekur/gaokaomath（CC BY 4.0）」，同批两个Ⅱ卷均为「deekur/gaokaomath（commit 34c13a6，CC BY 4.0）之 <PDF 名>」）；二是把 title 与「卷种」里的 ASCII 字母 I 改为罗马数字 Ⅰ",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0045
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2022-regular-new-gaokao-2",
+    "gk-2023-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-2"
+  ],
+  "conflict_code": "frontmatter-regions-unverified",
+  "current_evidence": "事实核查协议记录。四卷省份串已由导入方与 manifest 的上游文件名逐项比对，结论是内部自洽：2022Ⅰ「山东、广东、湖南、湖北、河北、江苏、福建」、2022Ⅱ「海南、辽宁、重庆」、2023Ⅰ「山东、广东、湖南、湖北、河北、江苏、福建、浙江」、2023Ⅱ「辽宁、重庆、海南、安徽、吉林、黑龙江、山西、云南」，与各自upstream_path 文件名括号内的省份串一致。但「与上游文件名一致」只证明转录忠实，不证明该串符合现实——上游文件名本身未经核查。结论为「未能核实」：未能核实不等于有错，既不据此判其为误，也不为其背书；属涉现实、随年份变化的时变事实，按协议不采信参数记忆。b01 的 ISSUE-0006（2017 两卷多列山东）证明这类串确实可能出错。",
+  "fingerprint": "4d8b6687b656ebdb092116ef7642c8a4b6dc1ab33eee4512949050ccf0e27ac3",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对四卷 frontmatter 的「适用省份」串做外部定向核查（各年各卷种的实际使用省份以考试院/教育部公告为准）；核查前不得据参数记忆增删省份，核查后补出处或更正",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0046
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2022-regular-new-gaokao-1",
+    "gk-2022-regular-new-gaokao-2",
+    "gk-2023-regular-new-gaokao-1",
+    "gk-2023-regular-new-gaokao-2"
+  ],
+  "conflict_code": "official-answer-key-unavailable",
+  "current_evidence": "沿 ISSUE-0005（b01）、ISSUE-0022（b02）、ISSUE-0030（b03）约定另立新条。b04 求解角色 88 题全 A、盲核 87 none + 1 resolved，但比对基准是库内 `_答案要点.md`（其本身系库内独立推导），官方发布版未获取。本批证据文本统一使用「库内答案要点」措辞，未出现「官方」误称。",
+  "fingerprint": "66837db19c6a595107f9fef67786ecffb3efcf790840a16a4e3fcb2f1c87f5fc",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "取得官方发布的标准答案后，逐题比对 b04 四卷 `_答案要点.md`；在此之前答案要点只能声明为库内独立推导的结论，不得表述为官方答案",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
