@@ -1,0 +1,615 @@
+{
+  "batch_id": "phase0-b02",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2020-regular-national-1-science",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（2）。z²=(1+i)²=2i、2z=2+2i，z²-2z=-2，模为 2（数值核验 |z²-2z|=2.0）。 ｜比对：库内答案要点 D，一致；其补充的配方法 (z-1)²-1=i²-1=-2 我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "cf298b478f03989d696c7f791dc911557ec1ac617075b093940dd0273e4d883d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2020-regular-national-1-science-q01",
+      "question_text_sha256": "9f701eda8e572cbf665b5b3ae6ac4bca241040e55b2a680fd1e56ef5ac75bb67",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：z=1+i，求 |z²−2z|，选项 0、1、√2、2，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（-2）。A=[-2,2]，B=(-∞,-a/2]，A∩B=[-2, min{2,-a/2}]；由右端为 1 得 -a/2=1 ⇒ a=-2。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "e5760bf3b75582a9115da35bfccb989a3c71c8e638eea3654daa7aec7947adcf",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2020-regular-national-1-science-q02",
+      "question_text_sha256": "137cb0fd71e51cb756be2838573cc386d77e6412b5406f6f780afde2248d9130",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：A={x|x²−4≤0}、B={x|2x+a≤0}、A∩B={x|−2≤x≤1}，选项 −4/−2/2/4，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（(√5+1)/4）。设底边长 a、高 h、侧面三角形底边上的高（斜高）l，则 h²=l²-(a/2)²；题设 h²=½·a·l。联立得 l²-(a/2)l-a²/4=0，令 r=l/a 得 4r²-2r-1=0 ⇒ r=(1+√5)/4≈0.80902（数值核验 h²=0.40451 与 al/2=0.40451 相等）。 ｜比对：库内答案要点 C，一致；库内以底边 2a 参数化得 m/a=(1+√5)/2 再除以 2 得 m/(2a)=(1+√5)/4，与我的 l/a 口径换算后同值，并点明「把底边设成 a 会错选 D」的陷阱。",
+        "grade": "A"
+      },
+      "answer_sha256": "0744f4c7b05d9819ee5ef17c131e96717124dda4a391fda6f07622fda240c161",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2020-regular-national-1-science-q03",
+      "question_text_sha256": "7d95dc8e5295dd5bac02e6ba5e6ee101418b6482c893417ec0514275e4f20e29",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：胡夫金字塔正四棱锥题，条件与四个比值选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（6）。到 y 轴距离即横坐标 x_A=9；焦半径 |AF|=x_A+p/2=12 ⇒ p=6。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "b482ea4fb5e8a88b63401dfd06ffc9c9eb0cb64ac9fa77de4ebe2dd7afd12c69",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2020-regular-national-1-science-q04",
+      "question_text_sha256": "8982ae13ee27034e1a8f53c60cc89b1330bf3016b661c1c778d6ce4227fc86f8",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：y²=2px (p>0)，到焦点距离 12、到 y 轴距离 9，选项 2/3/6/9，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（y=a+b ln x）。散点图（已读图）显示发芽率在低温段随温度陡升、高温段迅速趋平饱和，呈上凸的对数型；A 线性匀速、B 二次加速上升、C 指数爆炸，均与「先快后慢、趋于饱和」不符。 ｜比对：库内答案要点 D，一致，四型形状的排除依据相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "a20c7bc2bf4728313a5e5e0cdeb6d04b10ec2ddd868483b59ca81b720f27eccb",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0011"
+      ],
+      "printed_number": 5,
+      "question_id": "gk-2020-regular-national-1-science-q05",
+      "question_text_sha256": "aecfb9a8d2809b7ad3275e07749534ebbc23a5c3ecfa5011af45cdd78068e5bb",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "题干文字与 PDF p1 逐字一致（含「由实验数据 (xᵢ,yᵢ) (i=1,2,…,20)」一句）；配图存在实质裁切。PDF 原散点图纵轴为发芽率 20%–100%、横轴为温度 0/10/20/30/40 并标「温度 / °C」。转录件 images/2020理-t5-散点图.png（520×190）仅保留纵轴 100%/80%/60%/40% 与「率 20%」的上半截，横轴刻度 0/10/20/30/40 与「温度 / °C」标签、以及散点云的下部整块被切除；本题设问正是「在 10 °C 至 40 °C 之间」选择回归模型，横轴信息缺失直接损害读图。图内另混入题干末两行文字（毛边）。",
+        "result": "failed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（y=-2x+1）。f(1)=-1；f'(x)=4x³-6x²，f'(1)=-2；点斜式 y+1=-2(x-1) 即 y=-2x+1。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "e61387bb98b764ac2ad696beeada8ab0576a87a57f34f5572fe5f616b40c0f7d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2020-regular-national-1-science-q06",
+      "question_text_sha256": "598e5c15309e20dac5da1080b88e12666370f76df2e016f813c3ea747cf7c29d",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=x⁴−2x³ 在 (1,f(1)) 处的切线方程，四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（4π/3）。放大读图：x=-4π/9 是自下而上穿过的零点，峰值在 O 稍左，且在 π 稍前另有一个上升零点。由上升零点条件 ω(-4π/9)+π/6=-π/2+2kπ 得 ω=3/2-9k/2，取 k=0 得 ω=3/2，T=2π/ω=4π/3。反查一致：ω=3/2 时零点为 x=2π/9+2kπ/3（含 -4π/9、2π/9、8π/9），最大值点 x=-π/9（在 O 左侧），f(π)=cos(5π/3)=0.5>0，与图完全吻合；另三选项对应 ω=9/5、12/7、4/3，代入 -4π/9 处的相位分别为 -0.633π、-0.595π、-0.426π，均非 -π/2+2kπ，故排除。 ｜比对：库内答案要点 C，一致；库内用一般零点条件 ω(-4π/9)+π/6=π/2+kπ 得 ω=(-3-9k)/4 再由图形取 k=-1，与我按「上升零点」直接定相位是等价的两条路。",
+        "grade": "A"
+      },
+      "answer_sha256": "5a3aa1733ffb083c9242224f8d25c5e479b5a673b1bcb8f50e987da514769095",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0012"
+      ],
+      "printed_number": 7,
+      "question_id": "gk-2020-regular-national-1-science-q07",
+      "question_text_sha256": "16bd376c50a484efea2f63680a25b10f16ab8082e5e009a0455b2fa03ad3e048",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "题干与四个选项与 PDF p1 一致；配图存在实质裁切。PDF 原图为 f(x)=cos(ωx+π/6) 在 [−π,π] 上的完整波形：左侧有一个明显波谷、中部一个波峰、右侧再一个波谷后于 π 附近上行，横轴标注 −π、−4π/9、O、π。转录件 images/2020理-t7-图象.png（600×150）在 x 轴稍下方即被切断，左右两个波谷的下半部分被整块切除，仅剩波峰与轴线附近；曲线主体不完整。",
+        "result": "failed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（15）。x·(x+y)⁵ 需 (x+y)⁵ 出 x²y³，系数 C(5,3)=10；(y²/x)·(x+y)⁵ 需出 x⁴y，系数 C(5,1)=5。合计 15。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "4b70026a9c6f52b02e87c58ca9348ce2159aa320a43a234423fe9c13bbcf7fb1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2020-regular-national-1-science-q08",
+      "question_text_sha256": "68198ff34cf28d6f562fa4862833e66ae9b68afb748c7178193676e8e0bb390d",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：(x+y²/x)(x+y)⁵ 展开式中 x³y³ 的系数，选项 5/10/15/20，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（√5/3）。cos2α=2cos²α-1 代入得 6cos²α-8cosα-8=0 即 3cos²α-4cosα-4=0 ⇒ (3cosα+2)(cosα-2)=0，舍 cosα=2 得 cosα=-2/3；α∈(0,π) 故 sinα>0，sinα=√(1-4/9)=√5/3。 ｜比对：库内答案要点 A，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "2776afd752063d8a2fbebfe9d19c399f0722231c40dc1ea71430bfd190f0e899",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2020-regular-national-1-science-q09",
+      "question_text_sha256": "89e92cd71c08db43670da65d9d6c8b76b1d6c8c1338c399df9b9f9a20eb18283",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：α∈(0,π)、3cos2α−8cosα=5，四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（64π）。小圆面积 4π ⇒ r=2；等边三角形内接于半径 2 的圆，边长 =√3·r=2√3；由题设 OO₁=AB=2√3。球心-小圆心-圆上点构成直角三角形：R²=OO₁²+r²=12+4=16 ⇒ R=4，S=4πR²=64π。 ｜比对：库内答案要点 A，一致，四步推导相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "c6938d80c09b7026bbe5556929baf136ab9dc813f581a7d9534a4daca1a765b9",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2020-regular-national-1-science-q10",
+      "question_text_sha256": "f5dd8161158f70beb173a111a26bb0687bc43cd10bfcd88beab9aab2dd905419",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：⊙O₁ 面积 4π、AB=BC=AC=OO₁，球 O 表面积选项 64π/48π/36π/32π，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（2x+y+1=0）。⊙M 化为 (x-1)²+(y-1)²=4，M(1,1)、r=2。设 d=|PM|，切线长 √(d²-4)，切点弦 |AB|=2r√(d²-4)/d=4√(d²-4)/d，故 |PM|·|AB|=4√(d²-4)，只随 d 递增，d 最小即 P 为 M 在 l 上的投影：d_min=|2+1+2|/√5=√5，联立 x-2y+1=0 与 2x+y+2=0 得 P(-1,0)。切点弦（极线）方程 (x_P-1)(x-1)+(y_P-1)(y-1)=4 给 -2(x-1)-(y-1)=4 即 2x+y+1=0。 ｜比对：库内答案要点 D，一致，化简与极线法路径相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "7bad79c304b130b9b005e5dd4e96e47c94246586063157ae9fc3f643b1fe5272",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2020-regular-national-1-science-q11",
+      "question_text_sha256": "809e164d0580db73b1258e269fdc72423a7dc416b0254e1e1bc9decd56eccb3c",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：⊙M:x²+y²−2x−2y−2=0、l:2x+y+2=0、|PM|·|AB| 最小，四个直线方程选项一致（PDF 用逗号处规范源用句号，纯标点）。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（a<2b）。统一底数：4^b=2^{2b}、2log₄b=log₂b，条件即 2^a+log₂a=2^{2b}+log₂b。取严格增函数 f(x)=2^x+log₂x，右端 =f(2b)-log₂(2b)+log₂b=f(2b)-1<f(2b)，故 f(a)<f(2b) ⇒ a<2b。C、D 不可判定（数值反例：b=0.3 时 a≈0.3538>b²=0.09；b=2 时 a≈3.9100<b²=4，a 与 b² 的大小随 b 变号）。 ｜比对：库内答案要点 B，一致，并同样指出 C、D 无法由该式确定；我另补了使 C、D 各自失效的两组数值反例。",
+        "grade": "A"
+      },
+      "answer_sha256": "937fd55a6d47f1b22bb9431904834d2020664a9fe8b25440ea8f29f621406da3",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2020-regular-national-1-science-q12",
+      "question_text_sha256": "4b8b3756de35a5dabeab3a513b65c0c6566b01238c0d08750227679eaac65cee",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：2^a+log₂a=4^b+2log₄b，四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：1。可行域顶点为三条边界两两交点：(1,0)、(3/2,-1)、(0,-1)，代入 z=x+7y 得 1、-11/2、-7，最大值 1。 ｜比对：库内答案要点 1，一致，顶点与取值逐项相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "84994df2d7cb5bad86ee7156cacd5324bc0fbe7ce0dc89c8fbe4b4fd066303f7",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2020-regular-national-1-science-q13",
+      "question_text_sha256": "f429927442a3f07259e0f8a861b403bae1257c7c61ce4b2c51da1679219fef91",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：约束条件 2x+y−2≤0、x−y−1≥0、y+1≥0，z=x+7y 的最大值，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：√3。|a+b|²=2+2a·b=1 ⇒ a·b=-1/2；|a-b|²=2-2a·b=3 ⇒ |a-b|=√3。 ｜比对：库内答案要点 √3，一致；其恒等式速算 |a+b|²+|a-b|²=4 我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "8c908b148398c79ca289b853467cc4e389f99bce3771f7f43697f62d50451535",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2020-regular-national-1-science-q14",
+      "question_text_sha256": "bf03446c7917b8301d0dcaa7b89ef5978ebc283c60e22b717c5d18d15a5642f1",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：a、b 为单位向量且 |a+b|=1，求 |a−b|，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：2。B 为通径端点 B(c, b²/a)，A(a,0)，k_AB=b²/(a(c-a))=3；由 b²=(c-a)(c+a) 约去 (c-a) 得 (c+a)/a=3 ⇒ c=2a ⇒ e=2（另解 e=1 由 e>1 舍）。 ｜比对：库内答案要点 2，一致，约分技巧相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "e2626777350d5c975e37227efbaeb282129fc112617de8e0ce36332603d19bf9",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2020-regular-national-1-science-q15",
+      "question_text_sha256": "5704eff87f95d67e0a2377fe0a7be1b1c4388a407ed58818df97a6440b8460cb",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：双曲线右焦点 F、右顶点 A、BF⊥x 轴、AB 斜率为 3，求离心率，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：-1/4。折叠后展开图上的 D、E、F 三点重合为顶点 P，故 BD→PB、CE→PC、CF→PC。① △ABD 中 AB=AD=√3 且 AB⊥AD ⇒ PB=BD=√6；② △ACE 中 AC=1、AE=AP=√3、∠CAE=30° ⇒ PC²=1+3-2·√3·1·cos30°=1，PC=1；③ △ABC 中 AB⊥AC ⇒ BC=√(3+1)=2；④ △PCB 余弦定理：cos∠PCB=(1+4-6)/(2·1·2)=-1/4。坐标复核：A(0,0,0)、B(√3,0,0)、C(0,1,0)、P(0,3/2,√3/2) 满足全部给定量，且 cos∠PCB=-0.25。 ｜比对：库内答案要点 -1/4，一致，四步推导逐条相同。⚠️ 附带发现（题面资产问题，非答案分歧）：本题引用的图 2020/images/2020理-t16-展开图.png 实际不含展开图——250×350 的图内只有从原卷误裁出的零散文字（「AB ⊥ AC, AB ⊥」以及「匀」「x」「最」「)」等碎片），墨迹占比仅 0.63%。我是仅凭题干文字完成求解的。建议登记 issue 补正该图。",
+        "grade": "A"
+      },
+      "answer_sha256": "87f0e7beaa60c8069ada2df3d87164c416803303a17f043831f095a4124970d4",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0013"
+      ],
+      "printed_number": 16,
+      "question_id": "gk-2020-regular-national-1-science-q16",
+      "question_text_sha256": "8746b1a67f8e8889cb70dc598c6ef779d0039c81ca226cd04b693fd18eb8f7c1",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "题干文字与 PDF p1 一致（AC=1、AB=AD=√3、AB⊥AC、AB⊥AD、∠CAE=30°，求 cos∠FCB）；但配图 images/2020理-t16-展开图.png（250×350）内容完全错位：其中没有任何三棱锥平面展开图，只有从相邻栏截到的零散文字碎片（「AB ⊥ AC, AB ⊥」「勺」「x」「最」及数个右括号）。PDF 原图为标注 D(P)、A、B、C、E(P)、F(P) 的展开图，是本题唯一的几何信息来源，缺图后本题不可解。",
+        "result": "failed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) q=-2；(2) Sₙ=[1-(3n+1)(-2)ⁿ]/9。(1) 2a₁=a₂+a₃=a₁q+a₁q² ⇒ q²+q-2=0 ⇒ (q+2)(q-1)=0，公比不为 1 故 q=-2。(2) aₙ=(-2)^{n-1}，naₙ=n(-2)^{n-1}，错位相减：3Sₙ=Σ(-2)^{k-1}-n(-2)ⁿ=[1-(-2)ⁿ]/3-n(-2)ⁿ ⇒ Sₙ=[1-(3n+1)(-2)ⁿ]/9（n=1..6 逐项与直接求和核验：1、-3、9、-23、57、-135 全部吻合）。 ｜比对：库内答案要点 (1) -2、(2) 同一闭式，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "0a322e71d1601246c63564f6a987b6cee0039e660e891870d2ef0214a07f7f1e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2020-regular-national-1-science-q17",
+      "question_text_sha256": "7f3c933262e62d1295731c62efc569665129b50ca060d5d968c106b72a35a760",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：{aₙ} 公比不为 1、a₁ 为 a₂,a₃ 的等差中项，两小问一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) PA⊥平面 PBC（与库内一致）；(2) 二面角 B-PC-E 的余弦值 = **+2√5/5**，与库内答案要点的 **-2√5/5** 符号相反，构成分歧。建系（沿用库内答案要点自己的坐标以排除坐标约定差异）：底面半径 1，AD=AE=2，DO=√3，PO=(√6/6)√3=√2/2；O(0,0,0)、A(-1,0,0)、E(1,0,0)、B(1/2,-√3/2,0)、C(1/2,√3/2,0)、P(0,0,√2/2)。(1) PA·PB=PA·PC=0（数值精确为 0），且 PB∩PC=P，故 PA⊥平面 PBC；顺带 PB·PC=0，即 PA、PB、PC 两两垂直、长度均为 √(3/2)。(2) 用四种互相独立的方法算同一个二面角，结果全部为 +2√5/5≈0.894427（约 26.565°）：①在棱上取点作垂直于棱的分量——因 PB⊥PC，PB 本身即 B 侧半平面内垂直于棱的向量，E 侧取 PE 减去其在棱上的投影，两者夹角余弦 0.894427；②棱上任取另一点（P+0.37·PC）重做同样构造，0.894427；③三面角球面余弦定理：∠BPC=90°、∠EPC=∠BPE=arccos(2/3)，cos D=(cos∠BPE-cos∠BPC·cos∠EPC)/(sin∠BPC·sin∠EPC)=0.894427；④对棱方向取一致定向的两个法向量 PC×v_B 与 PC×v_E，0.894427。库内答案要点的数值部分（|cos|=2/√5）与我相同，分歧只在取号：其理由写「B 与 E 在棱 PC 两侧，二面角为钝角，取负号」，但这一几何判断不成立——用过 P、C、O 的轴截面作符号检验，B 与 E 的符号同为 -1、A 为 +1，即 **B 与 E 在棱 PC 的同侧，A 才在另一侧**。结构上也必然如此：AE 是底面直径且 △ABC 为内接正三角形，故 E 恒为不含 A 的那段弧 BC 的中点，E 一定夹在 B、C 之间，二面角 B-PC-E 必为锐角。旁证：同一构形下二面角 A-PC-B=90°、A-PC-E≈116.565°，两者之差恰为 26.565°，与 B-PC-E 自洽。库内答案要点取 n₁=PA、n₂=PE×PC 直接以法向量夹角定号，而法向量指向是任意的（PA 指向 A，A 恰在另一侧），这正是符号翻转的来源。**结论：库内答案要点第 18(2) 题答案应为 2√5/5，现值 -2√5/5 系定号错误，建议登记 issue 更正。**",
+        "grade": "U"
+      },
+      "answer_sha256": "55b080a6be63e9ad7535d17e721cb7610c9642ca753c9b64001329db65afa1fc",
+      "conflict_status": "unresolved",
+      "issue_ids": [
+        "ISSUE-0016",
+        "ISSUE-0017"
+      ],
+      "printed_number": 18,
+      "question_id": "gk-2020-regular-national-1-science-q18",
+      "question_text_sha256": "988bffe41ec33f04ca59817bb1270b373fb952bc40fc21ed65f841a56f8e1554",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p1：AE 为底面直径、AE=AD、△ABC 为底面内接正三角形、PO=(√6/6)DO，(1) PA⊥平面 PBC、(2) 二面角 B−PC−E 的余弦值，一致。配图 images/2020理-t18-圆锥.png 完整，D/P/C/O/E/A/B 七个标注齐全（含二面角所需的 E 点），仅左上角一点毛边。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 1/16；(2) 3/4；(3) 7/16。(1) 甲要连胜四场需依次胜乙、丙、乙、丙，(1/2)⁴=1/16。(2) 四场结束当且仅当有人零负夺冠，共四条路径（甲连胜四场、乙连胜四场、场 1 甲胜后丙连胜三场、场 1 乙胜后丙连胜三场），各 1/16，故 P(四场结束)=1/4，需要第五场为 3/4。(3) 丙最终获胜 7/16。三问均以「按规则展开全部对局树、用分数精确累加」的程序穷举复核：总概率和为 1，四场结束 1/4、五场 3/4，甲=乙=9/32、丙=7/16（9/32+9/32+7/16=1）。 ｜比对：库内答案要点 (1) 1/16、(2) 3/4、(3) 7/16，一致；库内 (2) 列的四条路径与我穷举出的四条完全对应，(3) 的分支值 1/2×1/4+1/2×5/8=7/16 与我的穷举总值吻合。",
+        "grade": "A"
+      },
+      "answer_sha256": "ce2b22f386209abd9e3030337d3f2fc8c209f0e2bb2e5605f7b7928693fdc527",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2020-regular-national-1-science-q19",
+      "question_text_sha256": "9b71e82f3678352ae5b65f60fe7b6db54a8883bd28401b93018afc9da250bfeb",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p2：羽毛球赛制描述（累计负两场淘汰、抽签、轮空规则）、每场获胜概率 1/2、三小问，逐句一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) x²/9+y²=1；(2) 直线 CD 过定点 (3/2,0)。(1) A(-a,0)、B(a,0)、G(0,1)，AG=(a,1)、GB=(a,-1)，AG·GB=a²-1=8 ⇒ a²=9。(2) 设 P(6,t)。PA 与椭圆联立可因式分解为 (x+3)[9(x-3)+t²(x+3)]=0，得 C((27-3t²)/(9+t²), 6t/(9+t²))；PB 联立得 (x-3)[(x+3)+t²(x-3)]=0，得 D(3(t²-1)/(t²+1), -2t/(t²+1))。k_CD=4t/(3(3-t²))，令 y=0 得横截距 x=3(t²+1)/(2(t²+1))=3/2，与 t 无关。数值复核 t=0.5、1、2、3、-4 五组：C、D 均在椭圆上且 CD 的 x 截距恒为 1.5。 ｜比对：库内答案要点 (1) x²/9+y²=1、(2) 定点 (3/2,0)，一致，因式分解技巧与 k_CD 表达式也相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "c25ac094a9c3a9da699ccdc8b1db539f4774ca8105d439e4375bac1bd496340c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-2020-regular-national-1-science-q20",
+      "question_text_sha256": "0ce51539e40e70888652f2df7b30c1a660816bf3cd7cab944801fe0cdd5ea1ba",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p2：椭圆 E:x²/a²+y²=1 (a>1)、AG→·GB→=8、P 在 x=6 上，两小问一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) f 在 (-∞,0) 递减、在 (0,+∞) 递增；(2) a≥(7-e²)/4。(1) a=1 时 f'(x)=eˣ+2x-1，f''(x)=eˣ+2>0 故 f' 严格增，又 f'(0)=0，符号由负转正。(2) x=0 时不等式取等，对 x>0 分离参数 a≥φ(x)=(½x³+x+1-eˣ)/x²；求导得 φ'(x)=ψ(x)/x³，其中 ψ(x)=½x³+eˣ(2-x)-x-2，可因式分解为 ψ(x)=(x-2)[(x²+2x+2)/2-eˣ]，而方括号在 x>0 恒负（其导数 x+1-eˣ≤0 且在 0 处取值为 0），故 ψ>0 于 (0,2)、ψ<0 于 (2,+∞)，φ 在 x=2 取最大值 φ(2)=(7-e²)/4≈-0.09726。数值扫描 (0,20] 上 sup φ=-0.0972640 于 x=2.000001 处取到，与 (7-e²)/4=-0.0972640 相符。 ｜比对：库内答案要点 (1) 同、(2) a≥(7-e²)/4 且 ψ 的定义与我逐字相同，一致；库内以「ψ(0)=ψ(2)=0 及二阶分析」交代符号，我补出了 ψ=(x-2)[(x²+2x+2)/2-eˣ] 的显式因式分解，是同一结论的更硬证法。",
+        "grade": "A"
+      },
+      "answer_sha256": "7b808557442c7040dea208980328e805ada97778f79a012863333dfd09fd343f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-2020-regular-national-1-science-q21",
+      "question_text_sha256": "9b77739c2eea9c2adcfeecb8959187af3fd85b71dafc4ab149d57d675ca94a85",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p2：f(x)=eˣ+ax²−x，(1) a=1 讨论单调性、(2) x≥0 时 f(x)≥x³/2+1 求 a 范围，一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) C₁ 是以原点为圆心、半径 1 的圆；(2) 公共点 (1/4,1/4)。(1) k=1 时 x²+y²=cos²t+sin²t=1。(2) k=4 时 √x=cos²t、√y=sin²t ⇒ C₁: √x+√y=1（x,y∈[0,1]）；C₂ 化直角坐标为 4x-16y+3=0。令 u=√x∈[0,1]，则 y=(1-u)²，代入得 12u²-32u+13=0 ⇒ u=1/2 或 13/6，后者超出 [0,1] 舍去，故 x=y=1/4（沿参数 t 数值扫描 C₁ 与 C₂ 的交点集合，唯一解 (0.25,0.25)）。 ｜比对：库内答案要点 (1) 单位圆、(2) (1/4,1/4)，一致，二次方程 12u²-32u+13=0 与舍根理由也相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "72f5a8a95db0bee1b7e8fb825b7daab6c06bb1958d661fb01ed48050dafef55f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-2020-regular-national-1-science-q22",
+      "question_text_sha256": "9eba706ef15863d8045d35647dcbfe23eb7ec4eac63336438d772d2bcfb09665",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p2：C₁ 参数方程 x=cosᵏt、y=sinᵏt，C₂ 极坐标方程 4ρcosθ−16ρsinθ+3=0，两小问一致。PDF 无分值与选修标签，规范源补注属编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 三段折线（见下）；(2) 解集 (-∞,-7/6)。(1) f(x)=-x-3（x<-1/3）、5x-1（-1/3≤x<1）、x+3（x≥1），折点 (-1/3,-8/3) 与 (1,4)，图象为先缓降、再陡升、后缓升的折线。(2) f(x+1) 分段为 -x-4（x<-4/3）、5x+4（-4/3≤x<0）、x+4（x≥0）。逐段比较：x<-4/3 时 -x-3>-x-4 恒成立；-4/3≤x<-1/3 时 -x-3>5x+4 ⇒ x<-7/6；-1/3≤x<0 时 5x-1>5x+4 无解；0≤x<1 时 5x-1>x+4 ⇒ x>5/4 与区间矛盾；x≥1 时 x+3>x+4 无解。合并得 x<-7/6（数值扫描 [-6,6] 上解集为一个连通区间，上确界 -1.16667=-7/6）。 ｜比对：库内答案要点 (1) 分段式与折点相同、(2) (-∞,-7/6)，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "201bcffbc60bae0279188f2c170c06ec5c297ae8ff890c07e7f7e81a923a77dc",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 23,
+      "question_id": "gk-2020-regular-national-1-science-q23",
+      "question_text_sha256": "200c046205545a919dbe3e75ca65d9476aff237cb962cb8f57a42dc3e4ffcba6",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      },
+      "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
+      "transcription_review": {
+        "evidence": "PDF p2：f(x)=|3x+1|−2|x−1|，两小问一致。非实质差异：PDF 在本题下方印有供作答画图用的空白坐标系（y 轴、O、两处刻度 1、x 轴），规范源未转录；该坐标系是答题作图辅助而非题面信息。分值与选修标签属编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}

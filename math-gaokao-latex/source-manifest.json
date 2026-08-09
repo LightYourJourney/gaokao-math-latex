@@ -21,7 +21,7 @@
         "gk-2020-regular-national-1-science",
         "gk-2020-regular-national-1-arts"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     },
     {
       "batch_id": "phase0-b03",
@@ -72,7 +72,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "8c44ff8a-d54f-4a3f-95fd-0fbcef4a236d",
+  "last_transaction_id": "77d82e00-6976-4040-86ac-b9864608b9cd",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -283,7 +283,7 @@
       "year": 2018
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -298,30 +298,39 @@
           "path": "2019_全国Ⅰ卷_理科/figures/f2019_t5_panels.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0009",
+        "ISSUE-0010",
+        "ISSUE-0020",
+        "ISSUE-0021",
+        "ISSUE-0022",
+        "ISSUE-0023"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2019li"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-science",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2019_全国Ⅰ卷_理科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "补回被删去的两句（阴爻/阳爻符号说明与「如图就是一重卦」），并转录 PDF p1 选项上方的六爻重卦示意图到 2019/images/ 后重跑题面核对",
       "source_files": {
         "answer_key": "2019/2019_数学真题_理_答案要点.md",
         "combined_rendered": "2019/2019_数学真题_理_含解析.md",
         "questions": "2019/2019_数学真题_理_试题.md",
         "solution_body": "2019/2019_数学真题_理_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      ],
       "title": "2019 年·全国Ⅰ卷·理科",
       "track": "science",
       "year": 2019
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -336,30 +345,38 @@
           "path": "2019_全国Ⅰ卷_文科/figures/f2019_t5_panels.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0018",
+        "ISSUE-0020",
+        "ISSUE-0021",
+        "ISSUE-0022",
+        "ISSUE-0023"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2019wen"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-arts",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2019_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "更正 2019 文科卷 `_答案要点.md` 第 5 题的排除依据（答案 D 本身正确）：应为「奇偶性排除 A、f(π/2)>1（峰高）排除 B、(0,π) 上符号为正排除 C」，更正后重跑盲核",
       "source_files": {
         "answer_key": "2019/2019_数学真题_文_答案要点.md",
         "combined_rendered": "2019/2019_数学真题_文_含解析.md",
         "questions": "2019/2019_数学真题_文_试题.md",
         "solution_body": "2019/2019_数学真题_文_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-67200538ccc7c8c92b28b4ee9180beac26c60144b9fc409ccf93ce5db5ebc37c"
+      ],
       "title": "2019 年·全国Ⅰ卷·文科",
       "track": "arts",
       "year": 2019
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -378,30 +395,42 @@
           "path": "2020_全国Ⅰ卷_理科/figures/f2020li_t7_graph.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0011",
+        "ISSUE-0012",
+        "ISSUE-0013",
+        "ISSUE-0016",
+        "ISSUE-0017",
+        "ISSUE-0019",
+        "ISSUE-0020",
+        "ISSUE-0022",
+        "ISSUE-0023"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2020li"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-science",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2020_全国Ⅰ卷_理科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "重新导出 images/2020理-t5-散点图.png，必须完整保留横轴刻度 0/10/20/30/40 与「温度 / °C」标签及散点云下部（本题设问依赖 10 °C–40 °C 区间读图）",
       "source_files": {
         "answer_key": "2020/2020_数学真题_理_答案要点.md",
         "combined_rendered": "2020/2020_数学真题_理_含解析.md",
         "questions": "2020/2020_数学真题_理_试题.md",
         "solution_body": "2020/2020_数学真题_理_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668"
+      ],
       "title": "2020 年·全国Ⅰ卷·理科",
       "track": "science",
       "year": 2020
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -420,24 +449,34 @@
           "path": "2020_全国Ⅰ卷_文科/figures/f2020wen_t9_flow.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0014",
+        "ISSUE-0015",
+        "ISSUE-0019",
+        "ISSUE-0020",
+        "ISSUE-0021",
+        "ISSUE-0022",
+        "ISSUE-0023"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2020wen"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-arts",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2020_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "补回被删去的「由实验数据 (xᵢ,yᵢ) (i=1,2,…,20)」一句，并随理科卷第 5 题一并修复散点图横轴（本卷复用 images/2020理-t5-散点图.png）",
       "source_files": {
         "answer_key": "2020/2020_数学真题_文_答案要点.md",
         "combined_rendered": "2020/2020_数学真题_文_含解析.md",
         "questions": "2020/2020_数学真题_文_试题.md",
         "solution_body": "2020/2020_数学真题_文_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-922b361942c8607abdfaba4bb5d504e18b644f5cfb744d7ae848a477192919bf"
+      ],
       "title": "2020 年·全国Ⅰ卷·文科",
       "track": "arts",
       "year": 2020
@@ -892,7 +931,7 @@
       "year": 2026
     }
   ],
-  "revision": 783,
+  "revision": 788,
   "schema_version": 1,
   "sources": [
     {
@@ -17805,8 +17844,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e834e8f7483613abc424fb57bcf009bdbd971623",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2019-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2019全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建,山东).pdf",
       "regions": [],
       "source_id": "src-67200538ccc7c8c92b28b4ee9180beac26c60144b9fc409ccf93ce5db5ebc37c",
@@ -17829,8 +17868,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1c6629b4f4a08c25801f652e6a8d766c57e1d714",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2019-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2019全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建,山东).pdf",
       "regions": [],
       "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002",
@@ -18117,8 +18156,8 @@
       "exam_type": "regular",
       "git_blob_oid": "66a017af3cfcc9171219822497863fc7f348ee90",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf",
       "regions": [],
       "source_id": "src-922b361942c8607abdfaba4bb5d504e18b644f5cfb744d7ae848a477192919bf",
@@ -18141,8 +18180,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8182ea88f302e7697c35efc45776bfdde4ee0376",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf",
       "regions": [],
       "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",

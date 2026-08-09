@@ -1,0 +1,610 @@
+{
+  "batch_id": "phase0-b02",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2019-regular-national-1-science",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C。N={x|(x-3)(x+2)<0}=(-2,3)，与 M=(-4,2) 取交得 (-2,2)。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "30716c3633e31bd3f8c8dd4c1e78e2245d792e438f082ac9582a4ed767de8fb3",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2019-regular-national-1-science-q01",
+      "question_text_sha256": "a7eee41500fcdc613838236dd2e51532b2d349782c8e5f4f74843e8da5ec005e",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：集合 M={x|−4<x<2}、N={x|x²−x−6<0} 与四个选项逐字一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C。z-i=x+(y-1)i，|z-i|=1 即 x²+(y-1)²=1（以 (0,1) 为心、半径 1 的圆）。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "7b5c1c36679cfcb88357e1711a5336dc4008fd77cd485364d206f6f4d8afcea8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2019-regular-national-1-science-q02",
+      "question_text_sha256": "8b1910870098b5d17f7d2ff6ebde91f77d82b597e17eed0310617cd104e0d199",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：|z−i|=1、复平面对应点 (x,y) 及四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（a<c<b）。以 0、1 分界：a=log₂0.2<0；b=2^0.2>1；c=0.2^0.3 底在 (0,1)、指数正故 0<c<1。 ｜比对：库内答案要点 B，一致，分界法相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "3dff0d679a427bc8ef767a66fb17ed9319a6785b104cc3e5163e717b326844ae",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2019-regular-national-1-science-q03",
+      "question_text_sha256": "bd3d7f733281f19a892ae30ef5e7653503021941e0a1db85b6c0d66f72c3ded2",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：a=log₂0.2、b=2^0.2、c=0.2^0.3 及四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（175）。记 λ=(√5-1)/2。设头顶至咽喉 c≤26（脖子下端在咽喉之下），咽喉至肚脐 d=c/λ，头顶至肚脐 a=c(1+1/λ)=2.618c≤68.07；肚脐至足底 b=a/λ，身高 h=a(1+1/λ)=2.618a≤178.21。又腿长 105≤b 给出 a≥64.89、h≥169.89。故 h∈[169.89,178.21]，四选项中仅 175 落入。 ｜比对：库内答案要点 B，一致。论证路径有差异：库内要点直接把「头顶至脖子下端 26」当作「头顶至咽喉=26」取等，算出 h≈178.3 后以「四个选项中最接近 175」收尾，没有建立区间上下界；我用不等式双侧夹逼把 175 唯一化。结论相同，库内要点该处属论证缺口而非错误。",
+        "grade": "A"
+      },
+      "answer_sha256": "15822cde86096f9dc61bc7a560def6465ad634e71dbaa079dd3640e741932727",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2019-regular-national-1-science-q04",
+      "question_text_sha256": "cf2d6d8e94167260be9d23df90767c5df300c7f54494cdb27ae5373f30bdf72c",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：黄金分割比 (√5−1)/2≈0.618、腿长 105 cm、头顶至脖子下端 26 cm、选项 165/175/185/190 cm 一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D。f 为奇函数（分子奇、分母偶）；数值扫描得 [0,π] 上峰值 f≈1.1984（x≈1.058）>1，端点 f(π)=π/(π²-1)≈0.3542>0，故右半支先升过 1 再回落但不越轴。四图中仅 D 同时满足「奇对称 + 右侧峰值超 1 + π 处仍为正」。 ｜比对：库内答案要点 D，一致（其列举奇偶性/原点斜率 2/端点值/峰值四条判据，与我的数值结论吻合）。",
+        "grade": "A"
+      },
+      "answer_sha256": "edbedc7b485598057637260c9c55681bb3ea4ac787dc9abfd42aca339edd70a6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2019-regular-national-1-science-q05",
+      "question_text_sha256": "73ebbe12f492ada53a9044bfed26be4c20a3926699d034501f7e3c7aff1cf00a",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：题干 f(x)=(sin x+x)/(cos x+x²) 在 [−π,π] 的图象大致为，与规范源一致。配图 images/2019理-t5-四图.png 含 A/B/C/D 四个候选图象，坐标轴、±π、1、O 标注与选项字母均完整，无实质裁切。毛边两处：图内重复了第 5 题题干文字；图下部约 y=490–545 有一条贯穿整幅的黑色条带伪影（位于四图之下，未遮挡任何图象内容）。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（5/16）。样本空间 2⁶=64，恰 3 阳爻 C(6,3)=20，P=20/64=5/16。 ｜比对：库内答案要点 A，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "cab6e64ff928aa0bc9e849da12b2ed7ded774d760d3a713564558101861f0c43",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0009"
+      ],
+      "printed_number": 6,
+      "question_id": "gk-2019-regular-national-1-science-q06",
+      "question_text_sha256": "ed571c702297551a51029b6a57a44980279fd86a240b173af5ae0da300c36567",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "实质差异（题面缺句 + 配图整幅缺失）。PDF p1 原文：「每一\"重卦\"由从下到上排列的 6 个爻组成，爻分为阳爻\"——\"和阴爻\"— —\"，如图就是一重卦。在所有重卦中随机取一重卦……」，并在选项上方印有一幅六爻重卦示意图。规范源写作「爻分为阳爻和阴爻。在所有重卦中随机取一重卦」，删去了阴爻/阳爻的符号说明与「如图就是一重卦」整句；该配图未被转录，2019/images/ 下不存在任何 2019理-t6-* 文件，正文亦无图片引用。选项 5/16、11/32、21/32、11/16 与答案不受影响。",
+        "result": "failed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（π/3）。(a-b)·b=0 ⇒ a·b=|b|²；cosθ=|b|²/(2|b|·|b|)=1/2 ⇒ θ=π/3。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "15b34509f73c6252eac12bd53a0d89e040bddd1df16efeee57b7130029a56e4b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2019-regular-national-1-science-q07",
+      "question_text_sha256": "e654665199ec1c31efe717287fedd5b852096824d24a9a0e9b8809417f36a302",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：|a|=2|b|、(a−b)⊥b 与四个选项 π/6、π/3、2π/3、5π/6 一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（A=1/(2+A)）。框图为 A=1/2、k=1，循环条件 k≤2，循环体后 k=k+1，出口输出 A。连分数由内向外递推：A=1/2 → 1/2.5=2/5 → 1/2.4=5/12，恰为目标值 1/(2+1/(2+1/2))=5/12，两次迭代与 k=1,2 相符。 ｜比对：库内答案要点 A，一致，追踪值 1/2→2/5→5/12 逐项相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "25d9f556eb3d4360de92ecdb6c44cbace07937f1541597006767b0afa9e54abe",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0010"
+      ],
+      "printed_number": 8,
+      "question_id": "gk-2019-regular-national-1-science-q08",
+      "question_text_sha256": "304a6dee65b5807c6f8d03a7766333ba130f88ab1dfa1a9a0dec0d38477620d0",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "题干文字与选项与 PDF p1 一致，但配图 images/2019理-t8-程序框图.png 存在实质裁切。PDF 原框图为：开始→A=1/2→k=1→判断 k≤2（否→输出 A→结束；是→[空白框]→k=k+1→回流至判断）。转录图左缘被切（内容包围盒 x 起自 0）：本题要求填入的「空白框」左边框被切除、「k=k+1」框左半被切成「= k + 1」、循环回边不完整；同时下缘越界，混入第 9、10 题正文以及被切成残片的选项行（(A) 项已不可读）。",
+        "result": "failed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（aₙ=2n-5）。S₄=4a₁+6d=0 ⇒ 2a₁+3d=0；a₅=a₁+4d=5 ⇒ d=2、a₁=-3，aₙ=2n-5；顺带 Sₙ=n²-4n，与 C（2n²-8n）、D（½n²-2n）均不符。 ｜比对：库内答案要点 A，一致，且同样以 Sₙ=n²-4n 排除 C、D。",
+        "grade": "A"
+      },
+      "answer_sha256": "812de944c06f59c5fa2942f6fa257ba13a3c851c16a6c0995ee42dd01dfbe0e7",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2019-regular-national-1-science-q09",
+      "question_text_sha256": "072eb2619354f3158fd74cd5a4397b6a3a4a3cd255e19dfe2fd5ac307d279860",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：S₄=0、a₅=5 与四个选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（x²/3+y²/2=1）。设|F₂B|=m，则|AF₂|=2m、|AB|=|BF₁|=3m；由|BF₁|+|BF₂|=2a 得 a=2m，|AF₁|=2a-2m=2m=|AF₂|。在△ABF₁ 中 cos∠A=(a²+9a²/4-9a²/4)/(2·a·3a/2)=1/3；在△AF₁F₂ 中同角 cos∠A=(a²+a²-4)/(2a²)=1/3 ⇒ a²=3，b²=a²-c²=2。 ｜比对：库内答案要点 B，一致。路径不同：库内要点由|AF₁|=|AF₂| 推出 A 在 y 轴上取 A(0,b)、B(3/2,-b/2) 代入椭圆求解；我用两处余弦定理夹同一角。两法均自洽，结论相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "7cd9276db6544f66e3e96f99b64e91c296fdd64d171851df8d68341dda8d1d65",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2019-regular-national-1-science-q10",
+      "question_text_sha256": "791620fee31154253a366ff8a05e04f9c0818b9eb2763aa55e82024bf3c0fb0e",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：F₁(−1,0)、F₂(1,0)、|AF₂|=2|F₂B|、|AB|=|BF₁| 与四个方程选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（①④）。①f(-x)=sin|x|+|sin x|=f(x)，偶，✓；②(π/2,π) 上 f=2sin x 递减，✗；③[0,π] 上 f=2sin x 零点为 0、π，由偶性 [-π,π] 上零点为 -π、0、π 共 3 个（非 4 个），✗；④f≤2 且 x=π/2 取到 2，✓。 ｜比对：库内答案要点 C，一致，四条判定逐条相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "65966259001e32ce83869af1b6c3df58150ac3bf569f7f69ee9dea2bd953409b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2019-regular-national-1-science-q11",
+      "question_text_sha256": "d8bf62afe4938841ab45c1f5da71b75c0da1de1dd4cf0442d839d49144e66784",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=sin|x|+|sin x| 四条结论①②③④与选项 A–D 一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（√6π）。EF 为△PAB 中位线故 EF∥PB，∠CEF=90° ⇔ CE⊥PB。以△ABC 中心为原点建系（外接圆半径 2/√3），P(0,0,h)，由 EC·EF=0 解得 h²=2/3；球心 (0,0,z) 由 |OA|=|OP| 得 z=-1/√6，R²=4/3+1/6=3/2，R=√6/2，V=(4/3)πR³=√6π（数值核验 V/π=2.44949=√6）。 ｜比对：库内答案要点 D，一致，建系与 h²=2/3、z=-1/√6、R=√6/2 逐步吻合。",
+        "grade": "A"
+      },
+      "answer_sha256": "6789f0a994c193431ae38560578f3523b03cece414b724fcfec145e1d861c8a6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2019-regular-national-1-science-q12",
+      "question_text_sha256": "ef122c894d4732cf53b172e8d751677c3284b1458025212b67f25085058cb918",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：PA=PB=PC、边长 2 正三角形、E/F 中点、∠CEF=90° 与四个体积选项一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：y=3x。y'=3eˣ(x²+3x+1)，y'(0)=3，过 (0,0) 的切线为 y=3x。 ｜比对：库内答案要点 y=3x，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "421459fd741760d2e4c979fbab3aa24fe89a7cf7bde232b471acf0f80ef9c03b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2019-regular-national-1-science-q13",
+      "question_text_sha256": "b8f19ab940734dd047fe1c6a79043673457cbb48e6d5768a9258c6fb6b3dedc7",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：y=3(x²+x)eˣ 在 (0,0) 处切线方程，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：121/3。(⅓q³)²=⅓q⁵ ⇒ (1/9)q⁶=(1/3)q⁵ ⇒ q=3；S₅=⅓(3⁵-1)/(3-1)=242/6=121/3（分数运算核验）。 ｜比对：库内答案要点 121/3，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c9aa09d8f7bd3bdbe50875923784ae8fd401a48b4064be17a7c6339ce4fd5e4c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2019-regular-national-1-science-q14",
+      "question_text_sha256": "6bc929890601be2ef02851fba5dd4e09f4316c87bc2a3310537de413830c25b1",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：a₁=1/3、a₄²=a₆、求 S₅，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：0.18。4:1 获胜 ⇔ 第 5 场（主，0.6）甲胜且前 4 场（主主客客）甲 3 胜 1 负：0.4×0.6×0.25+0.6×0.4×0.25+0.6×0.6×0.25×2=0.06+0.06+0.09+0.09=0.30，再乘 0.6 得 0.18。 ｜比对：库内答案要点 0.18，一致，四项拆分逐项相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "a24c2251be30e006f85eb2d763f0f541c49b7bc035144eb956756bc735aae201",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2019-regular-national-1-science-q15",
+      "question_text_sha256": "e55cc936c20e73014d670f4ede5abc73d959fb89c81b39fa26e15f5b78d1d6cb",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：七场四胜制、主客场「主主客客主客主」、主场 0.6/客场 0.5、4:1 获胜，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：2。F₁A=AB 即 A 为 F₁B 中点。设 B(t,bt/a) 在 y=(b/a)x 上，则 A=((t-c)/2, bt/(2a)) 在 y=-(b/a)x 上给出 t=c/2，即 B(c/2, bc/(2a))；由 F₁B·F₂B=0：(3c/2)(-c/2)+(bc/(2a))²=0 ⇒ b²/a²=3 ⇒ c²=4a²，e=2。 ｜比对：库内答案要点 2，一致，B 点坐标与推导链逐步相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "9b949c5ac4516e0ecdfb17c244d1b72dbe71a85dcb6c0686cbab5e69d8ad7a07",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2019-regular-national-1-science-q16",
+      "question_text_sha256": "7b9d44f534f7bbd27d61294b6229b80750fdb1650f22d159a30afc9e5b4b47e2",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：双曲线渐近线交点、F₁A→=AB→、F₁B→·F₂B→=0，一致。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) A=π/3；(2) sin C=(√6+√2)/4。(1) 正弦定理化边得 (b-c)²=a²-bc ⇒ b²+c²-a²=bc ⇒ cos A=1/2。(2) √2sin A+sin(2π/3-C)=2sin C 展开整理得 3sin C-√3cos C=√6 ⇒ 2√3 sin(C-π/6)=√6 ⇒ sin(C-π/6)=√2/2；C∈(0,2π/3) 取 C-π/6=π/4（另一根 C=11π/12 使 A+C>π 被排除），C=5π/12=75°，sin C=(√6+√2)/4（数值求根核验 C=75.000°）。 ｜比对：库内答案要点 (1) π/3、(2) (√6+√2)/4，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "3928df6e251db12d0ed7154a20d6caf8dc27d0fd8a403437e8757112cb34984a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2019-regular-national-1-science-q17",
+      "question_text_sha256": "f5ff7c3aee81a48a64275823fa52141ffa9e149a1595993e98c614b6365e2a96",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：(sin B−sin C)²=sin²A−sin B sin C，(1) 求 A，(2) √2a+b=2c 求 sin C，一致。规范源补注「（12 分）」，PDF 无分值标注，按工程口径属编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) MN∥DE 故线面平行；(2) √10/5。建系 A(0,0,0)、B(2,0,0)、D(1,√3,0)、C(3,√3,0)，上层 z+4；E(5/2,√3/2,0)、M(2,0,2)、N(1/2,√3/2,2)。(1) MN=(-3/2,√3/2,0)=-DE，叉积为零向量（数值核验），DE⊂平面 C₁DE 且 MN⊄该平面，故 MN∥平面 C₁DE。(2) 平面 AMA₁ 三点 y 全为 0 即平面 y=0，法向量 (0,1,0)；平面 NMA₁ 法向量 MA₁×MN=(-√3,-3,-√3)；|cos|=3/√15，sin=√(1-9/15)=√10/5≈0.63246（数值核验）。 ｜比对：库内答案要点 (1) 同样走 MN=-DE 的最简路径、(2) √10/5，一致；库内要点法向量记作 (√3,3,√3)，与我的 (-√3,-3,-√3) 差一个符号，属法向量方向自由度，不影响夹角。",
+        "grade": "A"
+      },
+      "answer_sha256": "460759d75156b1b2e6fa7ac522a95d346202dd929f1c4cad10cf5d0d3276b474",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2019-regular-national-1-science-q18",
+      "question_text_sha256": "360aaae5834638c4aba722df027e647d2c68c0753d56119a33f3b2cb62a4fe82",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p1：AA₁=4、AB=2、∠BAD=60°、E/M/N 分别为 BC/BB₁/A₁D 中点，(1) MN∥平面 C₁DE、(2) 二面角 A−MA₁−N 的正弦值，一致。配图 images/2019理-t18-棱柱.png 完整，A/B/C/D/A₁/B₁/C₁/D₁/E/M/N 标注齐全、虚实线区分保留；仅左上角有一小块相邻文字毛边。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) y=(3/2)x-7/8；(2) |AB|=4√13/3。预备 2p=3、F(3/4,0)、准线 x=-3/4。(1) |AF|+|BF|=x_A+x_B+3/2=4 ⇒ x_A+x_B=5/2；设 l:y=(3/2)(x-m) 代入得 3x²-(6m+4)x+3m²=0，韦达 (6m+4)/3=5/2 ⇒ m=7/12，l:y=(3/2)x-7/8（判别式 44>0，两交点存在）。(2) AP=3PB 的纵坐标关系给 y_A=-3y_B；以 x=(2/3)y+m 代入 y²=3x 得 y²-2y-3m=0，y_A+y_B=2 与 y_A=-3y_B 联立得 y_B=-1、y_A=3，A(3,3)、B(1/3,-1)，|AB|=√((8/3)²+16)=4√13/3≈4.8074。 ｜比对：库内答案要点 (1) y=(3/2)x-7/8、(2) 4√13/3，一致；(2) 库内要点改用斜率式 -3/(2y_B)=3/2 定出 y_B，与我的韦达路径殊途同归。",
+        "grade": "A"
+      },
+      "answer_sha256": "05f25560c428db85fdd484c7db54b605d290b5f3508e67094d71f71f3e56d42b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2019-regular-national-1-science-q19",
+      "question_text_sha256": "12e64dd117aa8412317628ed6b2f47fae5f496c71c990ee09f4980f75bc90961",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p2：y²=3x、斜率 3/2、(1) |AF|+|BF|=4、(2) AP→=3PB→，一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1)(2) 均成立（证明题）。(1) f'(x)=cos x-1/(1+x)，f''(x)=1/(1+x)²-sin x 在 (-1,π/2) 上严格递减（两项各自递减）；x→-1⁺ 时 f''→+∞>0，f''(π/2)=1/(1+π/2)²-1≈-0.848<0，故 f'' 有唯一零点 α 且在 α 两侧变号（+→-），即 f' 在 (-1,π/2) 存在唯一极大值点。(2) f(0)=0 是一个零点；(-1,0) 上 1/(1+x)>1≥cos x 故 f'<0，f 由 +∞ 递减到 0，无零点；(0,β)（β 为 f' 在 (α,π/2) 内的零点，α>0 因 f''(0)=1>0）上 f'>0、(β,π/2) 上 f'<0，[π/2,π] 上 cos x≤0<1/(1+x) 故仍 f'<0，f(π/2)=1-ln(1+π/2)≈0.056>0、f(π)=-ln(1+π)<0，得第二个零点；x≥π 时 ln(1+x)≥ln(1+π)≈1.421>1≥sin x 故 f<0 无零点。合计恰 2 个。 ｜比对：库内答案要点结论一致。(1) 库内要点用 f'''=-cos x-2/(1+x)³<0（区间内 cos x>0）推 f'' 严格递减，我用「两项各自递减」直接得同一结论，两法均成立。(2) 库内要点列出 f'<0 于 (-1,0)、f'>0 于 (0,β)、f'<0 于 (β,π/2) 三段后直接称 (0,π) 上「先升后降」，未显式补出 [π/2,π] 段的 f'<0（该段 cos x≤0 故显然），属论证缺口而非错误。",
+        "grade": "A"
+      },
+      "answer_sha256": "ef5cd7fa601db8d9d253b51dded3d7168cb9205c0579823e6b75fa24816a9eaf",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-2019-regular-national-1-science-q20",
+      "question_text_sha256": "b792a6ff39c351685e736fc259c4db40ea2c76fdc78552baa744f4b915f2b01f",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p2：f(x)=sin x−ln(1+x)，(1) 区间 (−1,π/2) 存在唯一极大值点、(2) 有且仅有 2 个零点，一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) P(X=-1)=(1-α)β、P(X=0)=αβ+(1-α)(1-β)、P(X=1)=α(1-β)；(2)① 公比 4 的等比数列，② p₄=1/257。(2) α=0.5、β=0.8 给 a=0.4、b=0.5、c=0.1；由 p_i=0.4p_{i-1}+0.5p_i+0.1p_{i+1} 乘 10 得 5p_i=4p_{i-1}+p_{i+1}，即 p_{i+1}-p_i=4(p_i-p_{i-1})，公比 4。由 p₀=0、p₈=1：1=p₁(4⁸-1)/3 ⇒ p₁=3/(4⁸-1)=1/21845；p₄=p₁(4⁴-1)/3=(4⁴-1)/(4⁸-1)=1/(4⁴+1)=1/257≈0.00389。合理性：本例中乙药实际更有效（β=0.8>α=0.5），而方案把甲药误判为更有效的概率仅约 0.0039，误判率极低，故方案合理。 ｜比对：库内答案要点分布列三项、公比 4、p₄=1/257 及合理性解释均一致；(1) 库内标注「见解析版」但同时给出了分布列表格，与我的三项逐项相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "fe5842ff289695ab23ee51cfd6f6a4f3dd425a1559c4a96246266cbcc4a9815c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-2019-regular-national-1-science-q21",
+      "question_text_sha256": "96d854b3111d210fda1d33aa96f5033d5be2eb92126282a5de6abec663c78cbf",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p2：多 4 只停止、得分 ±1/0 规则、初始各赋 4 分、p₀=0、p₈=1、pᵢ=apᵢ₋₁+bpᵢ+cpᵢ₊₁、α=0.5、β=0.8、两小问①②，数值与结构全部一致。非实质差异：PDF 作「若施以甲药的白鼠治愈且施以乙药的白鼠未治愈……若施以乙药的白鼠治愈且施以甲药的白鼠未治愈」，规范源作「施甲药／施乙药」，共 4 处删去虚词「以」，题意不变。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) C: x²+y²/4=1（x≠-1），l: 2x+√3y+11=0；(2) 最小距离 √7。(1) x²+y²/4=[(1-t²)²+4t²]/(1+t²)²=1；x=(1-t²)/(1+t²) 取不到 -1（否则 1=-1），故挖去点 (-1,0)。极坐标 ρcosθ=x、ρsinθ=y 直接得 l。(2) 设 (cosθ,2sinθ)，d=|2cosθ+2√3sinθ+11|/√7=|4sin(θ+π/6)+11|/√7≥(11-4)/√7=√7，取等于 θ=-2π/3 即点 (-1/2,-√3)，不是被挖去的点，故最小值可达（数值扫描 d_min=2.64575=√7，取值点 θ=-120°）。 ｜比对：库内答案要点 (1) 含 x≠-1 的排除、(2) √7，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "376ecac5e0526cfc060e1e7ec6bf2a903005e6b94b40bba51b0deda709f3a497",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-2019-regular-national-1-science-q22",
+      "question_text_sha256": "df1ed65058d82d97af1ad40df1a2ead3eb4c44b097cbc36980382d8197fc1824",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p2：参数方程 x=(1−t²)/(1+t²)、y=4t/(1+t²)，极坐标方程 2ρcosθ+√3ρsinθ+11=0，两小问一致。PDF 无「（10 分）」与「〔选修 4-4：坐标系与参数方程〕」标签，规范源的分值补注、选修标签与「（已取消）」提示均属编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1)(2) 均成立（证明题）。(1) 由 abc=1 得 1/a=bc、1/b=ca、1/c=ab，待证式化为 ab+bc+ca≤a²+b²+c²，由 a²+b²≥2ab 等三式相加除以 2 即得，等号 a=b=c=1。(2) 三元均值：(a+b)³+(b+c)³+(c+a)³≥3∛[(a+b)³(b+c)³(c+a)³]=3(a+b)(b+c)(c+a)；又 a+b≥2√(ab) 等三式相乘得 (a+b)(b+c)(c+a)≥8abc=8，故原式≥24，等号 a=b=c=1。 ｜比对：库内答案要点两小问思路与我完全相同，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "11b499b65a5646b92b530251db47857f6649920afa361fb788b9473e299ea5ac",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 23,
+      "question_id": "gk-2019-regular-national-1-science-q23",
+      "question_text_sha256": "39689108ff75188be2dd4cb7bd7fbc7d96b84c9a4a82ee7b3f29becef15bac89",
+      "reviewer_role": "b02-blind-answer-reviewer-opus",
+      "solver_role": "b02-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002"
+      },
+      "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
+      "transcription_review": {
+        "evidence": "PDF p2：a,b,c 为正数且 abc=1，(1) 1/a+1/b+1/c ≤ a²+b²+c²、(2) (a+b)³+(b+c)³+(c+a)³ ≥ 24，一致。同第 22 题，分值与选修标签属编辑性增补。",
+        "result": "passed",
+        "role": "b02-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}
