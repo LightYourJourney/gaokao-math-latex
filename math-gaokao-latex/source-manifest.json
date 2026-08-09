@@ -62,7 +62,7 @@
         "gk-2026-regular-national-1-recall",
         "gk-2026-regular-national-2"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -72,7 +72,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3017ee8e-7c07-42f4-b54a-32d7988badb7",
+  "last_transaction_id": "772f736f-b17a-4c10-97b9-a6bbb4b2bd24",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -953,7 +953,7 @@
       "year": 2025
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -961,7 +961,16 @@
         }
       ],
       "issue_ids": [
-        "ISSUE-0001"
+        "ISSUE-0001",
+        "ISSUE-0060",
+        "ISSUE-0061",
+        "ISSUE-0062",
+        "ISSUE-0064",
+        "ISSUE-0065",
+        "ISSUE-0066",
+        "ISSUE-0067",
+        "ISSUE-0068",
+        "ISSUE-0069"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -974,10 +983,10 @@
         }
       ],
       "paper_id": "gk-2026-regular-national-1-recall",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2026_全国1卷_回忆版",
       "question_count": 19,
-      "resume_action": null,
+      "resume_action": "需从上游之外获得教育部考试院发布的 2026 全国 1 卷官方正式卷，方可解除本身份问题；上游件页眉自陈回忆版（对照件 sha256 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1），绑定通道关闭——在取得官方正式卷之前，不得将本卷与任何上游 source 绑定，也不得据「与回忆版逐题一致」推断与正式卷一致",
       "source_files": {
         "answer_key": "2026/2026_数学真题_答案要点.md",
         "combined_rendered": "2026/2026_数学真题_含解析.md",
@@ -1001,14 +1010,22 @@
           "path": "2026_全国2卷/figures/f2026g2_t16_tetra.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0063",
+        "ISSUE-0064",
+        "ISSUE-0065",
+        "ISSUE-0066",
+        "ISSUE-0067",
+        "ISSUE-0068",
+        "ISSUE-0069"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2026g2"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2026-regular-national-2",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2026_全国2卷",
       "question_count": 19,
       "resume_action": null,
@@ -1026,7 +1043,7 @@
       "year": 2026
     }
   ],
-  "revision": 805,
+  "revision": 806,
   "schema_version": 1,
   "sources": [
     {

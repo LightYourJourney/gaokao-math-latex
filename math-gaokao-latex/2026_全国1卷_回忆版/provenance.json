@@ -1,0 +1,470 @@
+{
+  "batch_id": "phase0-b06",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2026-regular-national-1-recall",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "【两阶段盲解书面承诺】本卷全部 19 题按两阶段纪律完成：阶段一仅读题面源 2026/2026_数学真题_试题.md 与题图 2026/images/2026-t15-棱柱.png，独立完整求解并写下答案与关键推导，全程未读 2026_数学真题_答案要点.md、2026_数学真题_解析正文.md、2026_数学真题_含解析.md，也未读 .work 下 question-review／answer-review 任何文件；阶段二才读库内答案要点逐题比对定级。本文件所有 grade 均基于该顺序产生。 盲解：中位数须先排序。升序为 4,5,6,8,12，共 5 个（奇数个），取第 3 个 = 6，选 B。 比对：库内答案要点给 B。完全一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "9f70f12ba8fc64f6fdf23aed0932ccdac291cdc2c02080a6ef139c2fe1ee197f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2026-regular-national-1-recall-q01",
+      "question_text_sha256": "25995268a272c16d88e980099891afac32b105c71e87815a8ffc1395a46c3acf",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 对照件：上游 普通高考/2026/2026全国1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf，manifest source_id src-a6848f53cf4932dc654a47dc89f3ce68bcd68c88c1e90e1bfeb7fb504fb59536，现场 shasum -a 256 得 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1，与 manifest artifact.sha256 相同（15 页登记为 5 页，实测 pdfinfo 亦 5 页，一致）。该件第 1 页页眉逐字印「2026 年全国 1 卷高考数学真题(回忆版)」——对照件自身即标注为回忆版，不是正式卷；19 题分布于 p1-p4，p5 空白。比对口径：剥离 LaTeX 数学包裹与空白后逐字符对照，CJK 标点计入差异；PDF 文本层存在字体 ToUnicode 缺陷（连续拉丁字母整段塌缩为首字母，如 ABC 提取成 AAA），故所有多字母记号一律以 170 dpi / 600 dpi 页面渲染视读为准，不单信 pdftotext。 本题：PDF p1 印「1．样本数据6,8,4,5,12的中位数为（ ）A．5 B．6 C．8 D．9」，与规范源第 24-26 行逐字相同。分类：逐字一致。文档级差异（规范源相对 PDF 的编辑性增补，不摊入各题四分类，集中记于此）：md 第 14 行增设「版本说明」引用块自陈回忆版、第 16 行增设适用省份行，PDF 正文无此二者；md 第 22 行增设单选段段首说明「本题共 8 小题，每小题 5 分，共 40 分。…」，PDF 单选段只有「一、单选题」一行、全卷无任何分值标记；md 第 148 行页脚指向 ../原卷PDF/2026全国1(...).pdf，而 原卷PDF/ 目录在库内不存在，属死链（与既有 ISSUE-0007/0023/0028 同类）。适用省份串只见于上游文件名与 md 自述，PDF 正文不含省份信息，故不作现实断言；官方原卷的适用范围【未能核实】。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：a、b 不共线，故 {a,b} 是平面的一组基，线性表示唯一。由 2a+yb = xa−3b 对应系数相等得 x=2，y=−3，选 A。 比对：库内答案要点给 A（同样引平面向量基本定理）。完全一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "18342fabe51d7004017bec35980abda89761bf2231fd50323c173596fe6f5013",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2026-regular-national-1-recall-q02",
+      "question_text_sha256": "24638b74933262efd00554860ba4d8ab63d1b826e07d733ae7175a4467e5c92d",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「2．已知平面向量𝑎⃗，𝑏⃗不共线，且2𝑎⃗+𝑦𝑏⃗=𝑥𝑎⃗−3𝑏⃗，则（ ）」，四选项 x=2,y=−3 / x=−2,y=3 / x=2,y=3 / x=−2,y=−3，与规范源第 28-30 行逐字相同（PDF 选项内「𝑦= − 3」的空格系排版 kerning，非字符差异）。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：sin(7π/6)=sin(π+π/6)=−1/2；cos(5π/3)=cos(2π−π/3)=cos(π/3)=+1/2（第四象限余弦为正）；tan(5π/4)=tan(π+π/4)=1。故 A={−1/2, 1/2, 1}，B={−√3/2, −1/2, 1}，A∩B={−1/2, 1}，选 C。 比对：库内答案要点给 C，三个三角函数值逐个相同。完全一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "bcd9bc392470b6cbe307fb94549a2775581afa409a0561eee04c1d0aed32c5a9",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2026-regular-national-1-recall-q03",
+      "question_text_sha256": "c544c661fa11a540b4c5bcc7d9a32e5681e1dcd57603e6a5ca33baa670c2494c",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「3．已知集合𝐴={sin 7π/6, cos 5π/3, tan 5π/4}，𝐵={−√3/2, −1/2, 1}，则𝐴∩𝐵=（ ）」，四选项 {−√3/2,−1/2} / {−√3/2,1} / {−1/2,1} / {−√3/2,−1/2,1}，与规范源第 32-34 行逐字相同。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：y′=5+8/x，x=1 处 k=5+8=13；切点 (1,5) 代入点斜式 y−5=13(x−1)，即 y=13x−8，选 D。 比对：库内答案要点给 D，导数与点斜式完全相同。一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "5d0d9c6e7c2f6bf1f820a4866be36a7a7f196d481653bed0757b1e8f2289457d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2026-regular-national-1-recall-q04",
+      "question_text_sha256": "38da9aa96d5f80787f66992c829b745f1e0bc8a251e48ecbb95e4c6e0f64b1fd",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「4．曲线𝑦=5𝑥+8ln𝑥在点(1,5)处的切线方程为（ ）A．𝑦=3𝑥+2 B．𝑦=5𝑥 C．𝑦=8𝑥−3 D．𝑦=13𝑥−8」，与规范源第 36-38 行逐字相同。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：C1 过 (4,8)：8²=2p1·4 → p1=8，y²=16x，焦点 (p1/2,0)=(4,0)。C2 过 (4,8)：4²=2p2·8 → p2=1，x²=2y，焦点 (0,p2/2)=(0,1/2)。两焦点距离 = √(4²+(1/2)²) = √(65/4) = √65/2，选 D。 比对：库内答案要点给 D，p1=8、p2=1、两焦点坐标均相同。一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "e72c796ffce338a7d55c0fec98ee5561b14f06695ba54e6b382e338e021f382a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2026-regular-national-1-recall-q05",
+      "question_text_sha256": "7dbfe608a73a1cf7cdb9e231108aae741f9795aa27b05fb87b3de8d40c1cc314",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「5．已知抛物线𝐶₁:𝑦²=2𝑝₁𝑥（𝑝₁>0）和𝐶₂:𝑥²=2𝑝₂𝑦（𝑝₂>0）均经过点(4,8)，则𝐶₁的焦点与𝐶₂的焦点之间的距离为（ ）」，四选项 12 / 4√5 / 6 / √65/2，与规范源第 40-42 行内容相同。唯一差异：PDF 两处条件括注用全角括号「（𝑝₁>0）」「（𝑝₂>0）」，md 写作数学模式内的 \\ (p_1>0)、\\ (p_2>0)，渲染为半角括号。属排版载体层的括号宽度改动，不改题意。分类：实质一致但表述有出入（全角括号→半角括号，2 处）。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：f′(x) 的分子为 (e^x+a)−(x+2)e^x，令其为 0 得 a=(x0+1)e^{x0}。回代最大值：f(x0)=(x0+2)/(e^{x0}+a)=(x0+2)/((x0+2)e^{x0})=e^{−x0}。令 e^{−x0}=1 得 x0=0，故 a=(0+1)e^0=1。检验：a=1 时 f(x)=(x+2)/(e^x+1)，f(0)=1，x→+∞ 时 f→0，x→−∞ 时 f→−∞，故 1 确为最大值。选 B。 比对：库内答案要点给 B，联立「导数为零 + 函数值等于最值」，消 a 得 (x0+2)(1−e^{x0})=0，舍 x0=−2（分母为零），x0=0，a=1。两条路径不同（我直接把 a 代回化简为 e^{−x0}，要点用因式分解并讨论增根）但结论与检验一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "2e415cf7bc0f764e5b67d9bda7e9a3f6b7be3a698d48c1081e8651bdb1b43c5f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2026-regular-national-1-recall-q06",
+      "question_text_sha256": "207724e05145eaadf3ddcfa4f80f5df8197b2b76d0f83107bd277966998f0fa9",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「6．已知函数𝑓(𝑥)=(𝑥+2)/(e^𝑥+𝑎)的最大值为 1，则𝑎=（ ）A．1/2 B．1 C．3/2 D．2」，与规范源第 44-46 行逐字相同。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：12 个数为 1,3,3,5,5,7,9,11,13,15,17,19（校验总和 1+3+3+5+5=17，7+9+11+13+15+17+19=91，合计 108 ✓）。6 个组和成等差，总和不变 → 6A+15d=108，即 2A+5d=36。12 数全为奇数 → 每组和为偶数 → 5d 为偶 → d 为偶。d=2：组和 13,15,17,19,21,23；最大数 19 需配 x 使 19+x∈该集合 → x≤4 即 x∈{1,3}，得 20 或 22 都不在集合，排除。d=6：首项 A=3，小于最小可能和 1+3=4，排除。d=8：A=−2<0，排除。d=4：A=8，组和 8,12,16,20,24,28；构造 1+7=8, 3+9=12, 3+13=16, 5+15=20, 5+19=24, 11+17=28，恰用尽 12 个数 ✓。故 d=4，选 B。 比对：库内答案要点给 B。要点走的是奇偶性路线（设 d=2k 得 A=18−5k，A 为偶 → k 为偶；k=4 起 A<4 排除）并给出另一组构造 3+5, 1+11, 3+13, 5+15, 7+17, 9+19。构造不同但均合法（本题构造本就不唯一），答案值相同 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "b615bffdc90d14f223fddcd535b1cfa07e76f4daff0c92f6677483442254ddc0",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2026-regular-national-1-recall-q07",
+      "question_text_sha256": "e6ed5907c3894a761657f2e23b800549aead6fc2c23f5c1dcd693a3f4d8a9b11",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「7．一百零八塔位于宁夏回族自治区青铜峡市…该塔群共有 108 座塔，依山势自上而下排成 12 行，将第𝑖行中塔的座数记为𝑎ᵢ(𝑖=1,2,⋯,12)，其中𝑎₁=1，𝑎₂=𝑎₃=3，𝑎₄=𝑎₅=5，且𝑎₆，𝑎₇，…，𝑎₁₂是一个首项为 7，公差为 2 的等差数列．将𝑎₁，𝑎₂，…，𝑎₁₂分为 6 组，每组 2 个数，使得每组的 2 个数之和可构成一个项数为 6 且公差为𝑑(𝑑>0)的等差数列，则𝑑=（ ）」，四选项 2/4/6/8。逐字符比对差异一处：PDF 作「首项为 7，公差为 2」（U+FF0C 全角逗号，已用字符码位核验），md 第 48 行作「首项为 $7$、公差为 $2$」（U+3001 顿号）。属标点规范化，不改题意。分类：实质一致但表述有出入（，→、）。本题无配图。数据自洽核验：a₁..a₅=1,3,3,5,5 与 a₆..a₁₂ 首项 7 公差 2 共 12 项，合计 1+3+3+5+5+7+9+11+13+15+17+19=108，与题述「共有 108 座塔」相符，转录无数字脱漏。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：整体对称性——每个坐标的取值集 {−2,−1,1,2} 关于原点对称，故 64 个点的 X 值总和为 0。去掉 P(1,1,1)（X(P)=3）后，Ω 上 X 的总和 = 0−3 = −3；Ω 有 63 个等可能点，E(X) = −3/63 = −1/21，选 A。 比对：库内答案要点给 A，三步（对称性总和为 0 → 减去 3 → 除以 63）与我完全相同 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "ed4fd208ba3d1d5f014a786e2f5dfd044dee3f65a4f6cb19c2f343332cff056f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2026-regular-national-1-recall-q08",
+      "question_text_sha256": "1b2d60310020885a955133a3c94eacad149df7763fdd57a72dd10c15bf445900",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「8．设𝑈={(𝑥₁,𝑥₂,𝑥₃)|𝑥ᵢ∈{−2,−1,1,2}, 𝑖=1,2,3}为空间中 64 个点构成的集合，点𝑃(1,1,1)，记样本空间Ω=∁_𝑈 𝑃，从Ω中随机取一个点，定义随机变量𝑋如下：对Ω中的每个点𝐴(𝑥₁,𝑥₂,𝑥₃)，令𝑋(𝐴)=𝑥₁+𝑥₂+𝑥₃，则𝑋的数学期望值为（ ）」，四选项 −1/21 / −1/63 / 0 / 1/7，与规范源第 52-54 行逐字相同（md 用 \\mid、\\complement 表 | 与 ∁，为同义记号）。数据自洽核验：|{−2,−1,1,2}|³=64，与题述「64 个点」相符。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解逐项（多选，按字母集合判定）： A：conj(z)=3−2i ✓ 入选。 B：|z|=√(3²+2²)=√13≠5 ✗ 不入选。 C：z²=(3+2i)²=9+12i+4i²=5+12i ✓ 入选。 D：(z+3)/(z−i)=(6+2i)/(3+i)=2(3+i)/(3+i)=2∈ℝ ✓ 入选。 我的字母集合 = {A, C, D}。 比对：库内答案要点为 ACD，即集合 {A, C, D}。逐选项判定亦逐条相同（B 的排除理由同为 |z|=√13）。字母集合完全相同（顺序无关） → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "961f14be64a1a1f26ca3ff130a18ab003f0871a927115564955bdc115fc0d4c8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2026-regular-national-1-recall-q09",
+      "question_text_sha256": "47397c0ccb4dbe7b918fe27d26a22f253ff7cae632a1f294cddc30939d051713",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「9．设𝑧=3+2i，则（ ）A．𝑧̄=3−2i B．|𝑧|=5 C．𝑧²=5+12i D．(𝑧+3)/(𝑧−i)∈R」，与规范源第 62-64 行逐字相同。分类：逐字一致。本题无配图。段级差异（文档级，不计入本题分类）：md 第 60 行增设多选段段首说明「本题共 3 小题，每小题 6 分，共 18 分。…全部选对的得 6 分，部分选对的得部分分，有选错的得 0 分。」，PDF 多选段只有「二、多选题」一行、无任何分值说明；该说明行在本卷来源中无对应，其分值规则【未能核实】（与既有 ISSUE-0026 同类）。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解建系：AB 置于 x 轴，含 C 的半平面取 xOy 面，则 C=(c, 2, 0)、D=(e, 1/2, √3/2)（二面角 60° 决定 D 的后两坐标），c、e 为任意实数（C、D 沿轴向位置自由，这是四个选项的判定关键）。逐项： A（∠CAD≥60°）✗：取 A 为原点、c=e=100，AC=(100,2,0)、AD=(100,1/2,√3/2)，cos∠CAD=10001/(√10004·√10001)≈0.99985，∠CAD≈1°<60°。反例成立，不入选。 B（CD≥√3）✓：CD²=(e−c)²+(1/2−2)²+(√3/2)²=(e−c)²+9/4+3/4=(e−c)²+3≥3，等号在 e=c 取到，故 CD≥√3。入选。 C ✓：AB⊥CD ⟺ e=c，此时 CD=(0,−3/2,√3/2)；平面 ABD 的法向量取 (1,0,0)×(c,1/2,√3/2)=(0,−√3/2,1/2)，而 (0,−3/2,√3/2)=√3·(0,−√3/2,1/2)，二者平行；等价校验 CD·AD=(−3/2)(1/2)+(√3/2)(√3/2)=−3/4+3/4=0 且 CD⊥AB，故 CD⊥平面 ABD。入选。 D ✗：AB⊥平面 ACD 时该平面过 A 且垂直于 x 轴，即 C、D 在轴上的投影都落在 A，取 A 为原点得 C=(0,2,0)、D=(0,1/2,√3/2)，AC·AD=2×(1/2)=1≠0；实际 cos∠CAD=1/(2×1)=1/2，∠CAD=60° 而非 90°。不入选。 我的字母集合 = {B, C}。 比对：库内答案要点为 BC，且建系式 C=(c,2,0)、D=(e,1/2,√3/2) 与我逐字同型，四个选项的判定理由（含 D 项 AC·AD=1、∠CAD=60° 的观察）也相同；仅 A 项反例取值不同（要点取 c=e=10 得 ≈10°，我取 100 得 ≈1°），属同一反例族。字母集合完全相同 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "8dbc0132367ea92ed78f154572ad69dc5f27a4da91c50889fab6f7bc867509b0",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2026-regular-national-1-recall-q10",
+      "question_text_sha256": "752485ae45e033aa4af4c390f738da1cc4a6b677e9d8ae310269b59343abc442",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1 末至 p2 首「10．在空间中，𝐴、𝐵为两个定点，动点𝐶到直线𝐴𝐵的距离为 2，动点𝐷到直线𝐴𝐵的距离为 1．若二面角𝐶−𝐴𝐵−𝐷为60°，则（ ）A．∠𝐶𝐴𝐷≥60° B．𝐶𝐷≥√3 C．当𝐴𝐵⊥𝐶𝐷时，𝐶𝐷⊥平面𝐴𝐵𝐷 D．当𝐴𝐵⊥平面𝐴𝐶𝐷时，𝐴𝐶⊥𝐴𝐷」，多字母记号 CAD/AB/CD/ABD/ACD 均经 170 dpi 渲染视读确认（文本层因 ToUnicode 缺陷不可据），与规范源第 66-70 行逐字相同，含「𝐴、𝐵为两个定点」的顿号亦一致。分类：逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：三圆半径均为 1，圆心 C1(−1,0)、C2(1,0)、C3(0,√3) 构成边长 2 的等边三角形；弦长 s_i=2√(1−d_i²)（d_i 为圆心到 l 的距离），s 关于 d 严格递减，故「弦长相等 ⟺ 距离相等」，且「有两交点 ⟺ d_i<1」。逐项： A（k 可取任意实数）✗：设法向 n=(−k,1)/√(k²+1)，三圆心在 n 上的投影为 ks、−ks、√3 s（s=1/√(k²+1)）；存在合法 b ⟺ 投影跨度 < 2。k∈[0,√3) 时跨度 =(√3+k)/√(k²+1)，<2 ⟺ (√3k−1)²>0 ⟺ k≠√3/3；由 x↦−x 的对称性 k=−√3/3 同样被排除。直接代入校验：k=√3/3 时令 w=√3b，三条件为 |w−1|<2、|w+1|<2、|w−3|<2，即 w<1 且 w>1，空集。故 k 不能取 ±√3/3，不入选。 B（s1=s2=s3 的 l 恰 3 条）✓：距三个不共线点等距的直线，必有两点同侧一点异侧（否则三点共线），于是 l 平行于某一边且位于该边与对顶点正中间，三边各一条共 3 条；等边三角形高 √3，故 d=√3/2<1，确有两交点；三条斜率分别为 0、√3、−√3，均非竖直线，都属 y=kx+b 族。恰 3 条，入选。 C（s1+s2+s3=3 的 l 多于 3 条）✓：(k,b) 为二维参数、方程只有一个，解集一般为曲线。取水平族 y=b（b∈(√3−1,1)）实算：和 = 4√(1−b²)+2√(1−(√3−b)²)，b→(√3−1)+ 时 →2.7250，b=0.80 时 ≈3.1247（超过 3），b=√3/2 时 =3，b→1− 时 →1.3625；故仅水平族内和就两次穿过 3（一次在 b≈0.7475，一次在 b=√3/2）。再由该构型绕中心 120° 旋转的三重对称性，另两个「中位线方向」各再给 2 条，已 ≥6 条（实为无穷多）。入选。 D ✓：b=0 时 d1=d2=|k|/√(k²+1)、d3=√3/√(k²+1)，两交点要求 k²>2。令 u=1/(k²+1)∈(0,1/3)，则 s1=s2=2√u、s3=2√(1−3u)，和 g(u)=4√u+2√(1−3u)；g′(u)=2/√u−3/√(1−3u)=0 → 4(1−3u)=9u → u=4/21∈(0,1/3)，g(4/21)=8/√21+6/√21=14/√21=2√21/3。最大值 2√21/3，入选。 我的字母集合 = {B, C, D}。 比对：库内答案要点为 BCD。字母集合完全相同 → A。 【要点瑕疵，不影响答案】C 项的论证有两处数值/单调性错误：要点称「b 从 √3−1 变到 1 时和从 ≈4.72 连续降到 ≈1.36，必过 3」。实测 b→(√3−1)+ 时 s3→0（此时 d3=1，圆 C3 相切）而非取直径，和的极限是 4√(2√3−3)=2.7250，不是 4.72（4.725 恰等于 2·1.3625+2，即误把 s3 当成了直径 2）；并且该族的和不是单调下降，而是先升到 b≈0.80 处的 ≈3.1247 再降，故「从 4.72 单调降到 1.36 必过 3」的介值论证在修正数值后不成立（两端 2.725 与 1.3625 都小于 3）。结论 C 仍为真，但需改用「和在族内先升过 3 再降回」的双穿越论证。另：A 项要点只排除了 k=√3/3，未提对称的 k=−√3/3（对判定 A 为假已够，但叙述不完整）。",
+        "grade": "A"
+      },
+      "answer_sha256": "f83bae95265446784a55b49614f516f23068e3e24c331d50c4174c3d84489abd",
+      "conflict_status": "resolved",
+      "issue_ids": [
+        "ISSUE-0060"
+      ],
+      "printed_number": 11,
+      "question_id": "gk-2026-regular-national-1-recall-q11",
+      "question_text_sha256": "85f86f569a17e6f9ac57f5243f49ab3ca816f479e2e442c31837489d6508df45",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「11．已知圆𝐶₁:(𝑥+1)²+𝑦²=1，圆𝐶₂:(𝑥−1)²+𝑦²=1，圆𝐶₃:𝑥²+(𝑦−√3)²=1，直线𝑙:𝑦=𝑘𝑥+𝑏与𝐶₁，𝐶₂，𝐶₃均有两个交点．记𝑙被𝐶₁，𝐶₂，𝐶₃截得的弦长分别为𝑠₁、𝑠₂、𝑠₃，则（ ）」，四选项与规范源第 74-80 行一致（含 D 的 2√21/3）。逐字符比对差异一处：PDF 弦长三元用顿号「𝑠₁、𝑠₂、𝑠₃」（U+3001，已用字符码位核验），md 第 72 行作「$s_1$，$s_2$，$s_3$」（U+FF0C 全角逗号）——与第 7 题恰好方向相反，说明规范源的标点改写不是单向规则。属标点规范化，不改题意。分类：实质一致但表述有出入（、→，）。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：化标准形 x²/(1/5) − y²/(1/6) = 1，a²=1/5，b²=1/6，双曲线 c²=a²+b²=1/5+1/6=11/30；e²=c²/a²=(11/30)·5=11/6，e=√(11/6)=√66/6。 比对：库内答案要点给 √66/6，中间量 a²、b²、c²、e² 逐项相同 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "f1ea1552fe10c7a45bb16438a8b189bcb4051c29b079fa6569264a7b9615a6f0",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2026-regular-national-1-recall-q12",
+      "question_text_sha256": "2219fc3d5ffeed82b52fe3e1131604aff47c801177557ef2fec7094132424799",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「12．双曲线5𝑥²−6𝑦²=1的离心率为__________．」，句末为全角句号 U+FF0E（字符码位核验），md 第 88 行同为「．」，逐字相同。分类：逐字一致。本题无配图。段级差异（文档级）：md 第 86 行增设填空段段首说明「本题共 3 小题，每小题 5 分，共 15 分。」，PDF 只有「三、填空题」一行。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：f 为偶函数 ⟺ 对一切 x 有 cosθ·sin(ax)=0，若 a≠0 则 cosθ=0，在 [0,2π) 内 θ=π/2 或 3π/2。θ=π/2 时 f=2cos(ax)=2cos(|a|x)，在 0 右侧递减（a=0 时为常数），不合；θ=3π/2 时 f=−2cos(ax)=−2cos(|a|x)，在 (0, π/|a|) 递增。要求 (0,π/2)⊆(0,π/|a|) → |a|≤2，又 a∈ℤ 且 a≠0，故 |a|∈{1,2}。两种情形 f(2π/3) 相同：|a|=1 时 −2cos(2π/3)=1；|a|=2 时 −2cos(4π/3)=1。故 θ=3π/2，f(2π/3)=1。 比对：库内答案要点给 θ=3π/2、f(2π/3)=1，四步推理（偶函数定 θ 两候选 → 排除 π/2 → |a|≤2 → 两情形同值）与我一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "b3aa95d59e0b5a0bf51bcc57c8a2ea518846a9f9447c2e74eea757bd8ff6c99b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2026-regular-national-1-recall-q13",
+      "question_text_sha256": "53caca6803e6c620e25283fb97cc1f1090d872d1b056403dba10087f3a3169be",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「13．已知𝑓(𝑥)=2sin(𝑎𝑥+𝜃)（𝑎∈𝑍，0≤𝜃<2π）是偶函数，𝑓(𝑥)在区间(0, π/2)单调递增．则𝜃=__________，𝑓(2π/3)=__________．」。差异两处：一、PDF 作「单调递增．则」（U+FF0E 句号，字符码位核验），md 第 90 行作「单调递增，则」（U+FF0C 逗号）；二、PDF 用斜体 𝑍 表整数集，md 用 \\mathbb{Z}。均为标点/记号规范化，不改题意。分类：实质一致但表述有出入。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：由 S_{3n}=n²+n 作差得每 3 项一组的和 a_{3n−2}+a_{3n−1}+a_{3n}=2n（这是全部约束，组内三项自由）。9 个连续项必含 2 或 3 个完整组： · k≡1 (mod 3)：恰含 3 个完整组，组和 2(m+1),2(m+2),2(m+3) 须成等比 → ((m+2)/(m+1))²=(m+3)/(m+1) → 4=3，矛盾，排除。 · k≡2 (mod 3)（k=3m+2）：完整覆盖第 m+2、m+3 组，首尾两组各留自由项无约束；两完整组的和相差 3 个下标，故 q³=2(m+3)/(2(m+2))=(m+3)/(m+2)，m≥0，m=0（k=2）最大，q³=6/4=3/2。 · k≡0 (mod 3)（k=3m+3，m≥0）：完整覆盖同样是第 m+2、m+3 组，q³=(m+3)/(m+2)，最大同为 3/2。 可实现性校验（m=0）：a=a_2 由 a q²(1+q+q²)=4 定出（q>0 故 1+q+q²≠0），a_1=2−a_2−a_3 自由，a_11、a_12 自由，其余组不受 9 项约束，故存在合法数列。注意含完整第 1、2 组（比值 2）的 9 项窗口只能是 k=1，而那落入已排除的 k≡1 情形，故 2 取不到。故 q_max=∛(3/2)=∛12/2≈1.1447。 比对：库内答案要点给 ∛12/2。要点第 ④ 步把 k≡0 情形写成 k=3m（m≥1）从而记作 q³=(m+2)/(m+1)，与我记作 k=3m+3（m≥0）的 q³=(m+3)/(m+2) 只是指标平移，最大值同为 3/2，非矛盾。数值完全一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "452841a1f4896ec79fb68256834dd285244cdefbe9da17137a9fa4ff5502e11f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2026-regular-national-1-recall-q14",
+      "question_text_sha256": "28fbe079b41aa2c66eab30678b8bb4e5762272574bd9c378290f5c2927a115e1",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「14．设实数𝑞满足：存在数列{𝑎ₙ}，使得对于任意𝑛∈N*，均有𝑎₁+𝑎₂+⋯+𝑎_{3𝑛}=𝑛²+𝑛，且{𝑎ₙ}中有某连续 9 项𝑎_𝑘，𝑎_{𝑘+1}，⋯，𝑎_{𝑘+8}是公比为𝑞的等比数列．则𝑞的最大值为__________．」。差异一处：PDF 作「等比数列．则」（U+FF0E 句号，字符码位核验），md 第 92 行作「等比数列，则」（U+FF0C 逗号）。属标点规范化。分类：实质一致但表述有出入。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：(1) D、E 分别为 AB、AC1 的中点 → DE 是 △ABC1 的中位线 → DE∥BC1；又 BC1⊂平面 BCC1B1、DE⊄平面 BCC1B1，由线面平行判定得 DE∥平面 BCC1B1。 (2) 以 C 为原点，CA、CB、CC1 为 x、y、z 轴（∠ACB=90° 且为直棱柱，三线两两垂直）。设 AC=BC=a，CC1=2：A(a,0,0)、B(0,a,0)、C1(0,0,2)，D(a/2,a/2,0)、E(a/2,0,1)，DE=(0,−a/2,1)。平面 ACC1A1 即 y=0，法向量 n=(0,1,0)，sin45°=(a/2)/√(a²/4+1)=√2/2 → a²/4=1 → a=2。平面 BCC1B1 即 x=0，DE 与之平行，故所求距离 = d(D, x=0) = a/2 = 1（用 E(1,0,1) 校验同为 1）。 比对：库内答案要点 (1) 同为中位线 + 线面平行判定（并强调 ⊂ / ⊄ 两条件）；(2) 建系、DE 向量、sin45° 方程、a=2、距离 =1 与我逐项相同。答案 1 一致 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "4cee178c8e70ea101fa14866365de8b20b450aa6c29169f20e29dd269ec1b296",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0061"
+      ],
+      "printed_number": 15,
+      "question_id": "gk-2026-regular-national-1-recall-q15",
+      "question_text_sha256": "d8c1cd3afce3b44d66dfa7b4564a05807bf52b7466672f076477a956048fe9ba",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2 下部「15．如图，在直三棱柱𝐴𝐵𝐶−𝐴₁𝐵₁𝐶₁中，∠𝐴𝐶𝐵=90°，𝐴𝐶=𝐵𝐶，𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点．(1)证明：𝐷𝐸//平面𝐵𝐶𝐶₁𝐵₁；(2)设𝐶𝐶₁=2，直线𝐷𝐸与平面𝐴𝐶𝐶₁𝐴₁所成的角为45°，求直线𝐷𝐸到平面𝐵𝐶𝐶₁𝐵₁的距离．」（多字母记号经 170/600 dpi 渲染视读确认）。文字差异三处：一、md 第 100 行增补「（13 分）」，PDF 全卷无任何分值标记；二、PDF「𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点」用两处全角逗号，md 作「$D$、$E$ 分别为 $AB$、$AC_1$ 的中点」用两处顿号；三、PDF 平行号写 //，md 用 \\parallel。均不改题意。配图核查：md 第 102 行引 images/2026-t15-棱柱.png（320x350，RGB）。该件不是重绘件而是 PDF p2 的页面截图裁剪——图内上方混入题干残行「5．如图，在直三棱柱 ABC−A₁B」，下方混入其后正文行「(1)证明：」的顶部像素；墨迹包围盒 rows 18-349 / cols 0-319，末行 31 px、左列 16 px、右列 9 px 触及画布边缘，A₁ 标注中 A 字的左侧笔画被左缘切去一小截（放大后仍可辨认为 A₁）。几何信息本身无损：八个标注 C₁/A₁/B₁/E/C/A/D/B 齐全，实线（A₁B₁、A₁C₁、B₁C₁ 上沿与 A₁A、B₁B 侧棱、AB 底边）与虚线（C₁—C、C₁—A、A—C、C—B、E 所在的 A—C₁ 段）走向与 PDF 原图一致。属越界毛边+边缘微裁，与既有 ISSUE-0020/0032 同类。分类：实质一致但表述有出入。段级差异（文档级）：md 第 98 行增设解答段段首说明「本题共 5 小题，共 77 分。解答应写出文字说明、证明过程或演算步骤。」，PDF 只有「四、解答题」一行；md 五道解答题补注分值 13+15+15+17+17=77，与该说明行自洽，与单选 8×5=40、多选 3×6=18、填空 3×5=15 合计 150，内部无加法矛盾，但全部分值信息在本卷来源中无对应，【未能核实】。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：(1) 余弦定理 AC²=AB²+BC²−2·AB·BC·cosB=9+12−2·3·2√3·(√3/3)=21−12=9 → AC=3，故 AB=AC=3（等腰）。再用余弦定理 cosA=(AC²+AB²−BC²)/(2·AC·AB)=(9+9−12)/18=1/3。 (2) 坐标法：B(0,0)、C(2√3,0)、A(√3,√6)（由 cosB=√3/3、sinB=√6/3、AB=3）。校验 AC=|(√3,−√6)|=3 ✓。设 D=t(√3,√6)（t>1 即在 BA 延长线上，A 对应 t=1），DE∥BC 故 E=D+(u,0)。由 AE·AC=0：√3[(t−1)√3+u]−√6·(t−1)√6=−3(t−1)+√3u=0 → u=√3(t−1)>0。由 DE=|u|=√6 得 t−1=√2，u=√6，t=1+√2。于是 AE=(2√6, 2√3)，|AE|=√(24+12)=6；因 AE⊥AC，CE²=AC²+AE²=9+36=45，CE=3√5。（坐标直算校验：E(√3+2√6, √6+2√3)，CE=(2√6−√3, √6+2√3)，|CE|²=(27−12√2)+(18+12√2)=45 ✓。） 比对：库内答案要点 (1) cosA=1/3、(2) CE=3√5，建系与 E 坐标、|CE|²=45 的两段抵消项都与我相同 → A。",
+        "grade": "A"
+      },
+      "answer_sha256": "29a3a393851f50accddd6ffdc08e06f8b434889d947a49a6e28da07f780fe083",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2026-regular-national-1-recall-q16",
+      "question_text_sha256": "6593d805c53a05908c9fb0b2359c2baa82046407b5d5fedc27dcbee7aa9f1b70",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「16．已知在△𝐴𝐵𝐶中，𝐴𝐵=3，𝐵𝐶=2√3，cos𝐵=√3/3．(1)求cos𝐴；(2)设𝐷，𝐸两点满足：𝐷在𝐵𝐴的延长线上，𝐷𝐸//𝐵𝐶，𝐴𝐸⊥𝐴𝐶．若𝐷𝐸=√6，求𝐶𝐸．」（多字母记号经 170 dpi 渲染视读确认）。差异两处：一、md 第 108 行增补「（15 分）」；二、PDF「设𝐷，𝐸两点满足」用全角逗号，md 作「设 $D$、$E$ 两点满足」用顿号（PDF 内 // 亦被 md 改写为 \\parallel）。均不改题意。分类：实质一致但表述有出入。本题无配图（PDF 该题下方为空白，无插图）。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：X>k ⟺ 前 k 次全部未中（k≤N−1 时尚未触发「N 次全不中」的停止条件）。 (1) N=4、p=1/3：P(X=1)=1/3；P(X=2)=(2/3)(1/3)=2/9；P(X=3)=(2/3)²(1/3)=4/27；P(X=4)=(2/3)³=8/27（前 3 次全未中则无论第 4 次结果如何都停止）。校验和 =9/27+6/27+4/27+8/27=1 ✓。 (2)(i) k≤N−1 时 P(X>k)=(1−p)^k（k=0 时为 1，公式同样成立）。 (2)(ii) k+m≤N−1 时 m≤N−1、k≤N−1，且 {X>k+m}⊆{X>k}，故 P(X>k+m | X>k)=P(X>k+m)/P(X>k)=(1−p)^{k+m}/(1−p)^k=(1−p)^m=P(X>m)，即几何分布的无记忆性。 比对：库内答案要点 (1) 分布列表 1/3、2/9、4/27、8/27 与我逐格相同；(2)(i) (1−p)^k；(2)(ii) 同一条件概率链。完全一致 → A。（体例注记：要点把 (1) 标为「答案：见解析版」，但紧接着就在同一处给出了完整分布列表，标注与内容略有出入，不影响正确性。）",
+        "grade": "A"
+      },
+      "answer_sha256": "797010be9da8cbd5eab54a7d3d30f64c354d95c01028940feb552c0e8c08b986",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0062"
+      ],
+      "printed_number": 17,
+      "question_id": "gk-2026-regular-national-1-recall-q17",
+      "question_text_sha256": "0654857ad71103924f908a2432d5ca44dba8dab6e222b25ebf71689155c73e58",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「17．设整数𝑁≥2．某同学用一个球进行投篮练习，至多投篮𝑁次，当且仅当投中 1 次时或𝑁次均未投中时，停止练习．设该同学每次投中的概率为𝑝(0<𝑝<1)，各次投中与否相互独立．记𝑋为停止练习时该同学的投篮次数．(1)当𝑁=4，𝑝=1/3时，求𝑋的分布列；(2)设𝑘，𝑚均为自然数．（i）当𝑘≤𝑁−1时，求𝑃(𝑋>𝑘)；（ii）当𝑘+𝑚≤𝑁−1时，证明：𝑃(𝑋>𝑘+𝑚|𝑋>𝑘)=𝑃(𝑋>𝑚)．」。差异两处：一、md 第 114 行增补「（15 分）」；二、实词删改一处——PDF 作「当且仅当投中 1 次时或𝑁次均未投中时」，md 作「当且仅当投中 $1$ 次或 $N$ 次均未投中时」，删去「1 次」后的「时」字。已用 600 dpi 渲染视读确认 PDF 该「时」字确实存在，非文本层伪影；两处「…时或…时」为并列结构，删去前一「时」后语义不变、不改作答方式。分类：实质一致但表述有出入（本卷唯一一处非标点性的字词改动）。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解：(1) c=1、e=c/a=1/2 → a=2、b²=a²−c²=3，C: x²/4+y²/3=1。 (2) R 为 PO 与 C 的另一交点 → R 与 P 关于 O 对称，O 为 PR 中点。设 l: x=my−1（m=1/k>0），代入 3x²+4y²=12 得 (3m²+4)y²−6my−9=0，y_P+y_Q=6m/(3m²+4)，y_P·y_Q=−9/(3m²+4)，且 y_P>0>y_Q。Q 恒在第三象限（y_Q<0 → x_Q=my_Q−1<−1）。 (i) 由 O 为 PR 中点得 S(△PQR)=2S(△PQO)=y_P−y_Q；S(△PFO)=(1/2)|OF||y_P|=y_P/2。面积 3 倍条件 → y_P−y_Q=(3/2)y_P → y_P=−2y_Q。代入韦达：y_Q=−6m/(3m²+4) 且 2y_Q²=9/(3m²+4)，得 72m²=9(3m²+4) → 45m²=36 → m²=4/5，m=2√5/5，k=1/m=√5/2。l: y=(√5/2)(x+1)。（校验：m=2/√5 时 y_P=3√5/4、y_Q=−3√5/8、Q(−7/4, −3√5/8) 在椭圆上且在第三象限 ✓。） (ii) 独立向量算法：QP=(x_P−x_Q, y_P−y_Q)，QR=(−x_P−x_Q, −y_P−y_Q)。叉积 z 分量 = 2(x_Q y_P − x_P y_Q) = 2(y_Q−y_P)（代 x=my−1 后 m 项相消），模 = 2(y_P−y_Q)；点积 = |OQ|²−|OP|² = (y_Q−y_P)[(m²+1)(y_P+y_Q)−2m] = (y_P−y_Q)·2m/(3m²+4) > 0（故 ∠PQR 恒为锐角）。于是 tan∠PQR = (3m²+4)/m = 3m+4/m ≥ 2√12 = 4√3，等号在 3m=4/m 即 m=2√3/3（k=√3/2）取到。数值校验：m=1 时公式给 7，直接算 QP·QR 与叉积得 7.0018（数值误差内一致）✓。（与 (i) 交叉校验：m=2/√5 时 tan=16√5/5≈7.155 > 4√3≈6.928，方向自洽。）故 tan∠PQR 的最小值为 4√3。 比对：库内答案要点 (1) x²/4+y²/3=1；(2)(i) y=(√5/2)(x+1)；(2)(ii) 4√3。(ii) 要点走椭圆「第三定义」k_QP·k_QR=−b²/a²=−3/4，再用 tan=|k1−k2|/(1+k1k2)=4|k1+3/(4k1)|≥4√3，与我的向量叉积/点积路径完全不同却同值，且等号处直线 y=(√3/2)(x+1) 与我的 m=2√3/3 一致。三问全部一致 → A。（要点微瑕：由 1+k1k2=1/4>0 只能断定两条直线的夹角为锐角，∠PQR 是射线 QP 与 QR 的夹角，严格说还需说明二者同为锐角；我的点积 |OQ|²−|OP|²>0 的计算给出了这一步的正面证据，结论无误。）",
+        "grade": "A"
+      },
+      "answer_sha256": "7104f88091ad0ebe3ca7d63966c2e471dd10fca511ea7c617d59b93d8078e636",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2026-regular-national-1-recall-q18",
+      "question_text_sha256": "34bc2b25fc03071657896edf7730cee25f723d784bb4c8f9168f5186d03c4f8c",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「18．已知椭圆𝐶:𝑥²/𝑎²+𝑦²/𝑏²=1(𝑎>𝑏>0)的左焦点为𝐹(−1,0)，离心率为 1/2．(1)求𝐶的方程；(2)设𝑂为坐标原点，过𝐹且斜率大于0的动直线𝑙与𝐶交于𝑃，𝑄两点，其中𝑄在第三象限，直线𝑃𝑂与𝐶的另一个交点为𝑅．（i）若△𝑃𝑄𝑅的面积是△𝑃𝐹𝑂的面积的3倍，求𝑙的方程；（ii）求tan∠𝑃𝑄𝑅的最小值．」。三角形记号 PQR / PFO / ∠PQR 与直线 PO 均经 170 dpi 渲染视读逐一确认（文本层受 ToUnicode 缺陷影响塌缩为 𝑃𝑃𝑃𝑃𝑃𝑃，不可据），与规范源第 124-132 行相符。差异一处：md 第 124 行增补「（17 分）」。其余逐字一致。分类：实质一致但表述有出入（仅分值补注）。本题无配图。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "盲解： (1) f(−1)=2^{−1}=1/2。令 t=−1+d，需 f(t)>1/2：t<0 时 2^t>2^{−1} → t>−1，得 t∈(−1,0)；t≥0 时 1−t>1/2 → t∈[0,1/2)。合并 t∈(−1,1/2)，故 D(−1)=(0,3/2)。 (2) f 为奇函数 + x<0 时 f=2^x → f 被完全确定：x<0 时 f=2^x∈(0,1) 递增；f(0)=0；x>0 时 f(x)=−2^{−x}∈(−1,0) 递增。直接算出 D：x<0 时 D(x)=(0,−x)；x>0 时 D(x)=(−∞,−x]∪(0,+∞)。由 x1x2≠0 与 f(x1)≤f(x2) 只可能出现三种情形（x1<0<x2 会给出 f(x1)>0>f(x2)，与假设矛盾，故不出现）：① x1≤x2<0：(0,−x2)⊆(0,−x1) ✓；② 0<x1≤x2：(−∞,−x2]⊆(−∞,−x1] 且 (0,+∞) 公共 ✓；③ x1>0>x2：D(x2)=(0,−x2)⊆(0,+∞)⊆D(x1) ✓。故 D(x2)⊆D(x1)。 (3)(i) 反证：设 f(0)<1。因 2^u→1 (u→0⁻)，存在 u<0 使 2^u>f(0)，即 f(0)≤f(u)，由 ① 得 D(u)⊆D(0)。取 d∈(0, min{−u,1})，则 u+d<0 且 2^{u+d}>2^u，故 d∈D(u)⊆D(0)，即 f(d)>f(0)；但 0<d<1，② 给 f(d)<f(0)，矛盾。故 f(0)≥1。 (3)(ii) 三步： 第 1 步（引理）：若 f(a)>0，取 u<0 使 2^u<f(a)，由 ① 得 D(a)⊆D(u)；而 u<0 时 d≤0 恒有 f(u+d)=2^{u+d}≤2^u，故 D(u)⊆(0,+∞)，于是 D(a) 不含非正数，即对一切 y<a 有 f(y)≤f(a)。用于 a=x∈(0,1)：得 f(0)≤f(x)，与 ② 矛盾，故 0<x<1 时 f(x)≤0。 第 2 步：对 u1<u2<0 用 ①（D(u2)⊆D(u1)）得平移比较：记 δ=u2−u1>0，则 f(t)>2^{u2} ⟹ f(t−δ)>2^{u1}=2^{u2−δ}。若某 x≥1 有 f(x)>0，取 u2<0 使 2^{u2}<f(x)，再取 δ=x−1/2>0，得 f(1/2)>2^{u2−δ}>0，与第 1 步矛盾。故 x≥1 时也有 f(x)≤0。 第 3 步（收网）：由前两步 y>0 时恒有 f(y)≤0；对 u<0 精确得 D(u)=(0,−u]（u+d<0 段用 2^{u+d}>2^u；d=−u 处用 (i) 的 f(0)≥1>2^u；u+d>0 段 f≤0<2^u 被排除）。又对任意 t>0 有 f(t)≤0<2^u=f(u)，由 ① 得 D(u)⊆D(t)，即 (0,−u]⊆D(t)；令 u→−∞ 得 (0,+∞)⊆D(t)，即对一切 d>0 有 f(t+d)>f(t)，故 f 在 (0,+∞) 严格单调递增。∎ 比对：库内答案要点 (1) 给 D(−1)=(0,3/2)，换元路径与我相同；(2) 给出的两个 D 表达式（x<0 时 (0,−x)；x>0 时 (−∞,−x]∪(0,+∞)）与我逐字相同，分三情形亦相同；(3)(i) 的反证构造（取 u<0 使 f(0)<2^u，再取 d∈(0,min{−u,1})）与我的写法一致；(3)(ii) 三步与我的三步逐条对应（引理 → 平移比较 → 收网）。我在阶段一独立完成了全部证明（含 (3)(ii) 的平移比较引理），三问结论与关键构造均一致 → A。（体例注记：要点 (2) 未点明「x1<0<x2 与 f(x1)≤f(x2) 相斥」这一步，直接说「分三种情形」；严格书写应先排除第四种组合，属叙述省略而非错误。）",
+        "grade": "A"
+      },
+      "answer_sha256": "2623409d8269041a1b7bd25c32c8fe3a86d9ff2541c599a154d32c794f5cbd9d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2026-regular-national-1-recall-q19",
+      "question_text_sha256": "6287d09b942f7f70a94aa7c6db52458887d9062a8254f4c547c23e374b5fc1b3",
+      "reviewer_role": "b06-answer-blind-reviewer-opus",
+      "solver_role": "b06-answer-solver-opus",
+      "source_pages": [],
+      "source_ref": {
+        "path": "2026/2026_数学真题_试题.md"
+      },
+      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "transcription_review": {
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「19．已知函数𝑓(𝑥)的定义域为𝑅，且当𝑥<0时，𝑓(𝑥)=2^𝑥．对任意𝑥₀∈𝑅，定义集合𝐷(𝑥₀)={𝑑∈R|𝑓(𝑥₀+𝑑)>𝑓(𝑥₀)}．(1)若当𝑥≥0时，𝑓(𝑥)=1−𝑥，求𝐷(−1)；(2)若𝑓(𝑥)是奇函数，𝑓(𝑥₁)≤𝑓(𝑥₂)，且𝑥₁𝑥₂≠0，证明：𝐷(𝑥₂)⊆𝐷(𝑥₁)；(3)设𝑓(𝑥)满足：①若𝑓(𝑥₁)≤𝑓(𝑥₂)，则𝐷(𝑥₂)⊆𝐷(𝑥₁)；②当0<𝑥<1时，𝑓(𝑥)<𝑓(0)．（i）证明：𝑓(0)≥1；（ii）证明：𝑓(𝑥)在区间(0,+∞)单调递增．」。差异两处：一、md 第 134 行增补「（17 分）」；二、记号统一——PDF 同题内两种写法（定义域处用斜体 𝑅，集合条件处用正体 R），md 一律作 \\mathbb{R}，并把集合竖线写成 \\mid。均不改题意。分类：实质一致但表述有出入。本题无配图。卷末：PDF p5 为整页空白（pdftotext 与 170 dpi 渲染均无内容），不存在正式卷独有而回忆版缺失的第 20 题以后内容；19 题一一对应，无「正式卷无对应题」情形。",
+        "result": "passed",
+        "role": "b06-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}
