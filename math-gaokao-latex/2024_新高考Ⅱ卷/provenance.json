@@ -1,0 +1,504 @@
+{
+  "batch_id": "phase0-b05",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2024-regular-new-gaokao-2",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（√2）。|z|=√((-1)²+(-1)²)=√2（模不是 |-1|+|-1|=2）。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c85b95d32b883da545a81b0ae58ca1e73dc264fb60bf2a6c47be3460173f701b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2024-regular-new-gaokao-2-q01",
+      "question_text_sha256": "fcb55340104b8a58eeebbf52197bdebf5e2325311c8945603f91639e7127c344",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1（页眉「2024 普通高等学校招生考试 (新高考 II)」，页脚 1209）：z=−1−i 求 |z|，四选项 0／1／√2／2 一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（¬p 和 q 都是真命题）。p：取 x=-1 得 |x+1|=0 不大于 1 ⇒ p 假、¬p 真；q：x³=x ⇒ x(x-1)(x+1)=0，x=1>0 满足 ⇒ q 真。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "2798c1267ee34999034ad76b0dfa93fb7c793f7484d8b3b08528e5c1e92e1617",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2024-regular-new-gaokao-2-q02",
+      "question_text_sha256": "8877968bc37d74ccd93142c7efd3d77f7d86dc742cc6c19a25789a08e76fa225",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：命题 p:∀x∈R,|x+1|>1；q:∃x>0,x³=x，四选项「p 和 q 都是真命题」／「¬p 和 q」／「p 和 ¬q」／「¬p 和 ¬q」一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（√2/2）。由 (b-2a)⊥b 得 |b|²-2a·b=0 ⇒ a·b=|b|²/2；由 |a+2b|²=1+4a·b+4|b|²=1+6|b|²=4 ⇒ |b|²=1/2 ⇒ |b|=√2/2。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "399205a8c6ce544524e58ccece5e54ccf90941724cbcd30d9e28b784797ac67c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2024-regular-new-gaokao-2-q03",
+      "question_text_sha256": "b8f4933e66433e0156c3ce71adef64c56dcc8de5a151c17c1a69b68bc9a660de",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：|a|=1、|a+2b|=2、(b−2a)⊥b 求 |b|，四选项 1/2／√2/2／√3/2／1 一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（极差介于 200 至 300 kg 之间）。累计频数 6、18、36、66、90、100。 A ✗：累计到 1050 仅 36<50，中位数落在 [1050,1100) 内，不小于 1050。 B ✗：低于 1100 者共 66 块，占 66%，未超 80%。 C ✓：最小值∈[900,950)、最大值∈[1150,1200) ⇒ 极差∈(1150-950, 1200-900)=(200,300)。 D ✗：组中值估计均值 106700/100=1067>1000（按组下限估计亦达 1042）。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c7c544e6a353fb37c0843878831489945219deba2523ab1fe8224d1ffe754a91",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2024-regular-new-gaokao-2-q04",
+      "question_text_sha256": "736a339814b85aafc4d341589c4679cad5acd3bffa2e8a711fd580674346bd4b",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：100 块稻田亩产量频数表，500 dpi 视读逐格核对——[900,950)=6、[950,1000)=12、[1000,1050)=18、[1050,1100)=30、[1100,1150)=24、[1150,1200)=10，与规范题面两张 Markdown 表逐值一致；四选项（中位数小于 1050 kg／低于 1100 kg 比例超 80%／极差介于 200~300 kg／平均值介于 900~1000 kg）一致。源为单张两段式表格、规范题面拆为两张三列表并补空表头，属 Markdown 排版性改写。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（x²/16+y²/4=1，y>0）。相关点法：P(x₀,y₀)、P'(x₀,0)、M(x₀,y₀/2)；令 M(x,y) 得 x₀=x、y₀=2y，回代 x₀²+y₀²=16 得 x²+4y²=16 即 x²/16+y²/4=1；原曲线为上半圆，故 y>0。 ｜比对：库内答案要点 A，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "0c108adf57c3ce572699ad692d581c5890f191020b8c74c130002782fddd99ff",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2024-regular-new-gaokao-2-q05",
+      "question_text_sha256": "9bbfc9ad0e09471f1d706b1e7a572892905e760af1068c45e7687b5eb6badaed",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：C:x²+y²=16 (y>0)，P 向 x 轴作垂线段 PP′、P′ 为垂足，求中点 M 轨迹，四选项 x²/16+y²/4=1／x²/16+y²/8=1／y²/16+x²/4=1／y²/16+x²/8=1（均带 y>0）一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（a=2）。作差 h(x)=f(x)-g(x)=ax²-cosx+a-1（2ax 恰好抵消），h 为偶函数且定义域 (-1,1) 对称 ⇒ 非零零点必成对出现 ⇒ 唯一交点只能是 x=0；h(0)=a-2=0 ⇒ a=2；回代 h(x)=2x²+(1-cosx)>0 (x≠0)，充分性成立。 ｜比对：库内答案要点 D，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "f79cc76d52843d0ef658c6ad228ee1cbd33c9eb3c1bcced57c9f7fb3217960ed",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2024-regular-new-gaokao-2-q06",
+      "question_text_sha256": "cb1de11ef5e85794d4e3b510fbd3f0c7a334847d9d829fd2a666bf1e53ceb73a",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=a(x+1)²−1、g(x)=cos x+2ax，x∈(−1,1) 时恰有一个交点求 a，四选项 −1／1/2／1／2 一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（1）。S下=(√3/4)·36=9√3、S上=(√3/4)·4=√3、√(S上S下)=3√3，由 V=(h/3)(S上+S下+√(S上S下))=13√3h/3=52/3 得 h=4√3/3；侧棱在底面的投影长取外接圆半径之差 2√3-2√3/3=4√3/3；tanθ=h/(R下-R上)=1。 ｜比对：库内答案要点 B，一致（其亦点明误用内切圆半径之差会落入干扰项 C=2）。",
+        "grade": "A"
+      },
+      "answer_sha256": "3e39fe0082b650e7a94aa5aa4ce85e3923641ccffaf8eb1a127ace3693963f1d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2024-regular-new-gaokao-2-q07",
+      "question_text_sha256": "7d1222300f5c5d9d72063e281f57af8984c5695704e0922e873135ba176962af",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：正三棱台 ABC-A₁B₁C₁ 体积 52/3、AB=6、A₁B₁=2，求 A₁A 与平面 ABC 所成角正切值，四选项 1/2／1／2／3 一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（1/2）。f(x)=(x+a)ln(x+b)≥0 于定义域 x>-b 恒成立，要求两因子在同一点变号：ln(x+b) 在 x=1-b 变号、x+a 在 x=-a 变号 ⇒ -a=1-b ⇒ b=a+1。于是 a²+b²=2a²+2a+1 在 a=-1/2 取最小值 1/2（即原点到直线 a-b+1=0 距离的平方），此时 a=-1/2、b=1/2，f(x)=(x-1/2)ln(x+1/2)≥0 ✓。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "cae43fdeaf9874800e0474ba1aa10c0abe885802578171004e12623737f26954",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2024-regular-new-gaokao-2-q08",
+      "question_text_sha256": "883e083a579a800517c1937ead3cbdceeaaf278c072c9fb59a86979c586099d0",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=(x+a)ln(x+b)，f(x)⩾0 求 a²+b² 最小值，四选项 1/8／1/4／1/2／1 一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：BC（多选，逐项判定）。g(x)=sin2(x-π/8) 是 f 右移 π/8。 A ✗：f 的零点 x=kπ/2、g 的零点 x=π/8+kπ/2，不同（f(0)=0 而 g(0)=-√2/2）。 B ✓：最大值都是 1。 C ✓：最小正周期都是 π。 D ✗：f 的对称轴 x=π/4+kπ/2、g 的为 x=3π/8+kπ/2，整体差 π/8。 正确集合 BC。 ｜比对：库内答案要点 BC，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "d7d002799a20073e8a89446ad698039de2a7b284bf1294342d76250bc65dbf7c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2024-regular-new-gaokao-2-q09",
+      "question_text_sha256": "15b93c91c1ae24d1e334d1ec7687f2ea8ad72ad4a68a5b4f27f3765715349ebe",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=sin2x 与 g(x)=sin(2x−π/4)，四选项「相同的零点」／「相同的最大值」／「相同的最小正周期」／「图象有相同的对称轴」一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：ABD（多选，逐项判定）。F(1,0)，准线 l:x=-1，A(0,4)、r=1。 A ✓：A 到 l 的距离 1=r，相切。 B ✓：PB 水平 ⇒ P、A、B 共线需 y_P=4 ⇒ P(4,4)，|PA|=4，切线长 |PQ|=√(16-1)=√15。 C ✗：|PB|=x_P+1=2 ⇒ P(1,±2)；P(1,2) 时 AP·AB=(1,-2)·(-1,-2)=3≠0，P(1,-2) 时为 35≠0，两点都不垂直。 D ✓：由定义 |PB|=|PF|，条件化为 P 在 AF 中垂线 x=4y-15/2 上，代入 y²=4x 得 y²-16y+30=0，Δ=136>0，两根 y=8±√34，恰 2 个点。 正确集合 ABD。 ｜比对：库内答案要点 ABD，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "d96b3bcb4ee8ceaf4a240a29e8dedb22f821fb44d83730fac5f6f735f7b2c10c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2024-regular-new-gaokao-2-q10",
+      "question_text_sha256": "22b20605ef716e57e50afe7bd3aa2f1c5eaccc1bab5892616f6d0acd25da2480",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：抛物线 y²=4x 准线 l、⊙A:x²+(y−4)²=1，四选项「l 与 ⊙A 相切」／「P,A,B 共线时 |PQ|=√15」／「|PB|=2 时 PA⊥AB」／「满足 |PA|=|PB| 的 P 有且仅有 2 个」一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：AD（多选，逐项判定）。f'(x)=6x²-6ax=6x(x-a)，驻点 x=0、x=a；f(0)=1、f(a)=1-a³。 A ✓：a>0 时 x=0 极大、x=a 极小，三个零点 ⇔ f(0)f(a)<0 ⇔ 1-a³<0 ⇔ a>1。 B ✗：a<0 时驻点顺序翻转，(a,0) 上 f'<0，故 x=a 才是极大、x=0 是极小值点。 C ✗：三次函数两端趋向相反，永远没有（竖直）对称轴。 D ✓：对称中心即拐点，f''(x)=12x-6a=0 ⇒ x=a/2，取 a=2 即得中心 (1,f(1))=(1,-3)。 正确集合 AD。 ｜比对：库内答案要点 AD，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "2400b0cc067f16cb49e13d968dc6ff79895204bea354357194b3ccb4167d9634",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2024-regular-new-gaokao-2-q11",
+      "question_text_sha256": "0371c4e255c392c146f46518216b3ba61b786d05d56b25cf47c78cacfd6b495a",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=2x³−3ax²+1，四选项「a>1 时有三个零点」／「a<0 时 x=0 是极大值点」／「存在 a,b 使 x=b 为对称轴」／「存在 a 使 (1,f(1)) 为对称中心」一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：95。由 a₃+a₄=2a₁+5d=7、3a₂+a₅=4a₁+7d=5 解得 d=3、a₁=-4；S₁₀=10a₁+45d=-40+135=95。自检：数列 -4,-1,2,5,8,… 满足 a₃+a₄=7、3a₂+a₅=-3+8=5 ✓。 ｜比对：库内答案要点 95，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "eb64293a41745cbd96eb565124430376f2e7548c30e33423db50cef09af38bf6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2024-regular-new-gaokao-2-q12",
+      "question_text_sha256": "7f132482cf59513798dce3ab2ae931fbc2d9abe5fe81e2d5978a8e57ded014cc",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：等差数列前 n 项和 Sₙ，a₃+a₄=7、3a₂+a₅=5 求 S₁₀，一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：-2√2/3。整体代入：tan(α+β)=4/(1-(√2+1))=4/(-√2)=-2√2 ⇒ cos²=1/9、|sin(α+β)|=2√2/3；定符号：α∈(2kπ,2kπ+π/2)、β∈(2nπ+π,2nπ+3π/2) ⇒ α+β∈(2mπ+π,2mπ+2π) ⇒ sin(α+β)<0，故取 -2√2/3。 ｜比对：库内答案要点 -2√2/3，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "2bd563b759a7f698a9cdfb861d231bbe40556db400723e248306dfe0752df239",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2024-regular-new-gaokao-2-q13",
+      "question_text_sha256": "12791104f8d5b183a69214675e817201f6bddc24fef5514cb9be91acd10638cc",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：α 第一象限角、β 第三象限角，tanα+tanβ=4、tanα·tanβ=√2+1 求 sin(α+β)，一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：24 种；最大值 112。第一空：行到列的一一对应即 {1,2,3,4} 的排列，4!=24。第二空：Python 枚举 24 个排列取最大得 112，达成方式为 15+21+33+43（第 4/1/2/3 行分别配第 1/2/3/4 列，列号互不相同）。 ｜比对：库内答案要点 24；112，一致（其「十位贡献恒为 100 + 按行取个位最大得上界 1+3+3+5=12」的上界法给出同一构造）。",
+        "grade": "A"
+      },
+      "answer_sha256": "a301593c566571f1885bc3973c49cab56a3b6ee216cb1ae9ad5fd6e6a137b820",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2024-regular-new-gaokao-2-q14",
+      "question_text_sha256": "c208ed469ee2176448872b9dc92cd114e76cfe085677eb4b773a39f4600fd3fd",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：4×4 方格表选 4 格（每行每列各一）求选法数与选中 4 数之和的最大值。500 dpi 视读逐格核对表值——第 1 行 11/21/31/40，第 2 行 12/22/33/42，第 3 行 13/22/33/43，第 4 行 15/24/34/44，与规范题面逐值一致（第 3 行第 2、3 格与第 2 行相同为源本身如此，转录忠实）。规范题面补空表头以满足 Markdown 表格语法。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) A=π/6；(2) 周长 2+3√2+√6。(1) 辅助角公式 sinA+√3cosA=2sin(A+π/3)=2 ⇒ sin(A+π/3)=1；由 A+π/3∈(π/3,4π/3) 得 A+π/3=π/2 ⇒ A=π/6。(2) √2·b·sinC=c·2sinBcosB，用正弦定理得 b sinC=c sinB，两侧约去 c sinB 得 √2=2cosB ⇒ B=π/4，C=π-π/6-π/4=7π/12；2R=a/sinA=4，b=4sin(π/4)=2√2，c=4sin105°=√6+√2；周长 L=2+2√2+√6+√2=2+3√2+√6≈8.69。 ｜比对：库内答案要点 (1) π/6、(2) 2+3√2+√6，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "8daedb9d957ee130c7247104890a9e55b9df0dc04affb008df98579f7af0e73e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2024-regular-new-gaokao-2-q15",
+      "question_text_sha256": "6ea893bf700e4f23225ec7bf18f2dca1fce1e738ffcb906e1048be07d5c7880c",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：sin A+√3 cos A=2；(1) 求 A；(2) a=2、√2 b sin C=c sin 2B 求周长——一致。源用顿号「A、B、C」「a、b、c」，规范题面统一为「，」，属标点规范化；规范题面补注「（13 分）」。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) y=(e-1)x-1；(2) a∈(1,+∞)。(1) a=1 时 f(x)=eˣ-x-1，f(1)=e-2，f'(x)=eˣ-1，k=e-1，点斜式得 y=(e-1)x-1。(2) f'(x)=eˣ-a；a≤0 时 f'>0 恒成立、无极值，故必须 a>0，此时 x=lna 是唯一极小值点；f(lna)=a-alna-a³<0，除以 a>0 得 a²+lna>1；φ(a)=a²+lna 在 (0,+∞) 严格递增且 φ(1)=1 ⇒ a>1。自检：a=1 时极小值 f(0)=0 不小于 0，恰被排除。 ｜比对：库内答案要点 (1)(2) 均一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "3180ff816fc8323f3e873e420aa232acad62debb0172aae96cedd255b72f01d3",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2024-regular-new-gaokao-2-q16",
+      "question_text_sha256": "1fd6c85ab7461db8cafa2c9ee5d3af5812ecd5c3e8ba46ff093532f85f3a2f17",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=eˣ−ax−a³；(1) a=1 时求 (1,f(1)) 处切线方程；(2) f(x) 有极小值且极小值小于 0 求 a 范围——一致。规范题面补注「（15 分）」。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 证明如下；(2) 8√65/65。折前：AE=(2/5)·5√3=2√3、AF=4、∠EAF=∠BAD=30°，EF²=12+16-2·2√3·4·(√3/2)=4 ⇒ EF=2；又 AE²+EF²=16=AF² ⇒ ∠AEF=90°，即 EF⊥AD；ED=5√3-2√3=3√3。(1) 翻折不改变 △AEF 内部关系 ⇒ EF⊥EP；底面不动 ⇒ EF⊥ED；EP∩ED=E ⇒ EF⊥平面 PED，而 PD⊂平面 PED ⇒ EF⊥PD（此问不需 PC=4√3）。(2) 以 E 为原点、ED 为 x 轴、EF 为 y 轴建系：D(3√3,0,0)、F(0,2,0)、B(2√3,4,0)、C(3√3,3,0)；P 在 xOz 面内，设 P=(p,0,q)、p²+q²=12，由 PC²=48 得 p=0 ⇒ P(0,0,2√3)（恰折到 PE⊥底面）。平面 PCD 法向量 ∝(2,0,3)，平面 PBF 法向量 ∝(√3,-3,-√3)；|cos|=√3/(√13·√15)=1/√65 ⇒ sin=8/√65=8√65/65。 ｜比对：库内答案要点 (1) 同、(2) 8√65/65，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "487f6ca82ecf55e76522fbc9583834c8d7e9709a98b7d68a21e0b65c6579a68d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2024-regular-new-gaokao-2-q17",
+      "question_text_sha256": "4c606249d4205c164c7df5c7ffa228ad9bcf84bb5569a0be85636d3c6800a88a",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p2（页脚 1210）：平面四边形 ABCD，AB=8、CD=3、AD=5√3、∠ADC=90°、∠BAD=30°，AE⃗=(2/5)AD⃗、AF⃗=(1/2)AB⃗，△AEF 沿 EF 翻折至 △PEF 使 PC=4√3；(1) 证 EF⊥PD；(2) 求面 PCD 与面 PBF 所成二面角的正弦值——逐字一致。配图已视读比对：P 在上方，A、E、F、B、C、D 六点位置与虚实线（PE、ED 虚线）约定与源一致，仓库图 images/2024-Ⅱ-t17-翻折.png 四边无墨迹触边、无裁切。规范题面补注「（15 分）」。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 0.686；(2)① 由甲参加第一阶段 ② 仍由甲参加第一阶段。记 A(x)=1-(1-x)³=x(3-3x+x²) 为「投 3 次至少中 1 次」的概率。(1) P=(1-0.6³)(1-0.5³)=0.784×0.875=0.686。(2)① P(15 分)=通过第一阶段且第二阶段 3 投全中；作商 A(p)q³/(A(q)p³)=ψ(p)/ψ(q)，其中 ψ(x)=(3-3x+x²)/x²，ψ'(x)=3(x-2)/x³<0 于 (0,1] ⇒ ψ 递减 ⇒ p<q 时 ψ(p)>ψ(q) ⇒ 甲先概率更大。② 第二阶段期望得分 =15×(该人命中率)，E甲先=15q·A(p)、E乙先=15p·A(q)；约去 15pq>0 后只需比较 u(x)=3-3x+x²，u'(x)=2x-3<0 ⇒ u 递减 ⇒ u(p)>u(q) ⇒ E甲先>E乙先。两问同答甲，直觉是把高命中率的人留在按次计分的第二阶段。 ｜比对：库内答案要点 (1) 0.686、(2)① 甲 ② 甲，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "51607c8ee39a48e30cc21ae47ad2d5e1fc7d6918d4f19100f660c98fca346cf1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2024-regular-new-gaokao-2-q18",
+      "question_text_sha256": "46f8689d2ff80098adc0bfefda60799c4acb04f3f67cdf41729f6290a9ee2468",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p2：投篮两阶段比赛题，规则（第一阶段投 3 次全不中则淘汰计 0 分、至少中 1 次进第二阶段；第二阶段投 3 次每中得 5 分）、p=0.4/q=0.5 求成绩不少于 5 分的概率、0<p<q 下 ①15 分概率最大 ②数学期望最大——逐字一致。规范题面补注「（17 分）」。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) x₂=3、y₂=0；(2)(3) 证明如下。由 P₁(5,4) 得 m=25-16=9，C:(x-y)(x+y)=9；记 uₙ=xₙ-yₙ、vₙ=xₙ+yₙ，恒有 uₙvₙ=9。(1) k=1/2 时直线 y=x/2+3/2 代入 x²-y²=9 得 x²-2x-15=0 ⇒ (x-5)(x+3)=0，另一根 x=-3 ⇒ Q₁(-3,0) 在左支，关于 y 轴对称得 P₂(3,0)，即 x₂=3、y₂=0。(2) 设 P_{n-1}=(x,y)，直线 y=k(x'-x)+y 与 x²-y²=9 联立得 (1-k²)x'²-2kcx'-c²-9=0（c=y-kx），由韦达定理解出 Q_{n-1} 的坐标，再取关于 y 轴的对称点得 xₙ=[x(1+k²)-2ky]/(1-k²)、yₙ=[y(1+k²)-2kx]/(1-k²)，故 xₙ-yₙ=(x-y)(1+k)²/((1-k)(1+k))=((1+k)/(1-k))(x-y)；首项 u₁=5-4=1≠0，故 {xₙ-yₙ} 是公比 (1+k)/(1-k) 的等比数列。(3) 记 r=(1+k)/(1-k)，则 uₙ₊₁=ruₙ 且 vₙ=9/uₙ ⇒ vₙ₊₁=vₙ/r，即「取下一点」在 (u,v) 坐标下是 (u,v)↦(ru,v/r)，行列式为 1；而 (x,y)↦(u,v)=(x-y,x+y) 是固定的可逆线性变换，故该变换在 xy 平面上同样保面积，且把 △PₙPₙ₊₁Pₙ₊₂ 整体映为 △Pₙ₊₁Pₙ₊₂Pₙ₊₃，故 Sₙ=Sₙ₊₁（硬算路线亦可：三点 (u,v)=(a,9/a)、(ar,9/(ar))、(ar²,9/(ar²))，行列式中 a 完全约掉）。题面备注：源 PDF 此题「与 C 的左支点交于点 Q_{n-1}」多一「点」字（已登记于 report.md 批次 1 勘误第 1 条），本库规范源已作「与 C 的左支交于点 Q_{n-1}」，现文无残留衍文，不影响求解。 ｜比对：库内答案要点 (1) x₂=3、y₂=0，(2)(3) 同一结论且同为保面积路线，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "e59de2c131d1ba6765f56aa0653a03b6a1d4ad10d492c7881e136ac48e8d9103",
+      "conflict_status": "none",
+      "issue_ids": [
+        "ISSUE-0052"
+      ],
+      "printed_number": 19,
+      "question_id": "gk-2024-regular-new-gaokao-2-q19",
+      "question_text_sha256": "0378381be5af04a44b244a043f4dbbf801c31c347296d7bf1a95c422cb6fc998",
+      "reviewer_role": "b05-blind-answer-reviewer-opus",
+      "solver_role": "b05-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      },
+      "source_sha256": "0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c",
+      "transcription_review": {
+        "evidence": "PDF p2（页脚 1210，第三栏）。【删除源衍文·勘误裁决四要素】① 来源页码：第 2 页；来源 src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c，源文件 SHA-256 0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c。② 衍文原文：源印作「过点 P_{n−1} 作斜率为 k 的直线与 C 的**左支点交于点** Q_{n−1}」，衍字为「左支」之后的「点」；600 dpi 渲染视读与 PDF 文本层双证一致，排除 pdftotext 伪影。③ 删除理由：C 为双曲线 x²−y²=m，「左支」是曲线分支而非点，「左支点」在本题中不是已定义对象；「与…左支点交于点 Q_{n−1}」既不成搭配，也与 (2)(3) 对 Q_{n−1}、P_n 的用法冲突；删去该「点」后「与 C 的左支交于点 Q_{n−1}」为唯一可解读版本，故按语法正确版转录（沿用工程早期批次 1 的既有裁决）。④ 旧/新 SHA-256（hashlib.sha256 对下述两段纯文本各自取 UTF-8 哈希，与本条 question_text_sha256 字段无关）：含衍文源题面 = c9f06572c1dea84c2adc8551c2102bdbf20bd4420aa996444cf9f6545f7aca28（194 字符）；规范源题面 = d8deef4984c3a7fade9a23e2cfd8b783e5b20493f088e4ec2a40211800a211d0（193 字符）；两串仅差一个「点」字。被哈希的旧串逐字为：「已知双曲线 C: x^2 - y^2 = m (m > 0), 点 P_1(5, 4) 在 C 上, k 为常数, 0 < k < 1. 按照如下方式依次构造点 P_n (n = 2, 3, ...): 过点 P_{n-1} 作斜率为 k 的直线与 C 的左支点交于点 Q_{n-1}, 令 P_n 为 Q_{n-1} 关于 y 轴的对称点. 记 P_n 的坐标为 (x_n, y_n).」；新串为同串将「左支点交于点」改为「左支交于点」。除该处外，P₁(5,4)、0<k<1 及三小问（k=1/2 求 x₂,y₂；{xₙ−yₙ} 公比 (1+k)/(1−k)；Sₙ=Sₙ₊₁）逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b05-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}

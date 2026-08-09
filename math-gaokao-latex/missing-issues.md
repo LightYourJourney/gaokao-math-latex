@@ -855,3 +855,220 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0048
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 failed（本批唯一）。上游源 PDF p1 600 dpi 视读为「cos 2A + cos 2B + 2 sin C = 2」，sin C 无平方上标，PDF 文本层同样抽出「2 sin C = 2」；同题选项 (A) 的「sin²A + sin²B」两处上标在同一渲染与同一文本层中均清晰可见，据此排除字体或文本抽取丢失上标的可能。规范题面第 74 行作 $2\\sin^2 C$，是增加了一个数学上标、改变了条件方程本身，不属标点或排印差异，故判 failed 而非编辑性勘误——从源印文本无法机械推出该上标，需要数学论证，不满足「唯一可复原」判据。旁证（不构成对官方原卷的认定）：按 2sin²C 读，条件化为 sin²C=sin²A+sin²B ⇒ C=π/2，配合面积 1/4 与 cosAcosBsinC=1/4 可解出 ab=1/2、外接圆 R=1/√2，四选项非退化；按源印的 2sinC 读，(A) 恰为条件的同义改写而 (B)(C) 无法定出，题目退化。但官方原卷该处究竟为 sin C 抑或 sin²C 未能核实——本次只比对了上游 PDF 与规范题面，未取得官方文本作正面核查，按不对称证据标准不下断言。四个选项与源逐字一致。",
+  "fingerprint": "a359896e775cdf0387b2bfddabecb46983157ced3430b9acafb65f33a1c42831",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2025-regular-national-1",
+  "question_id": "gk-2025-regular-national-1-q11",
+  "resume_action": "对官方原卷该处做正面定向核查后二选一：若官方为 sin²C，则补一条与 2024 新高考Ⅱ Q19 同规格的勘误裁决（来源页 + 旧/新题面 SHA-256 + 删改理由），本题转 passed；若官方与上游源印同为 sin C，则规范源 2025/2025_数学真题_试题.md 第 74 行须改回源印字面。在官方层面核实之前，两个方向都不得径自执行",
+  "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0049
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "盲核角色判 conflict_status=resolved，本条为该状态的承接指针（沿 b04 ISSUE-0033 口径：resolved 也要留一条可追溯条目，否则「这里曾有分歧、结论是什么」在 provenance 里只剩一个状态词）。盲核指出库内要点佐证两处硬伤：一是见证值 k=10 与其自述阈值自相矛盾（实测 z>y>x 而非 y>z>x），正确见证为 k=8；二是阈值 ≈9.32 应为 ≈9.3013。答案 B 经解析阈值与逐点扫描双重确认正确。求解角色的落盘证据可为阈值一项作旁证：其独立算得三条临界 x=y 于 k≈4.709、x=z 于 k≈7.270、y=z 于 k≈9.302——9.302 与盲核的 9.3013 相符，而与要点的 9.32 不符。",
+  "fingerprint": "3ba8cd72d53c8b630da71b4aa1eed378f729e2b9ee02641b4ad3344dcbd65a5c",
+  "impact": "non_blocking",
+  "paper_id": "gk-2025-regular-national-1",
+  "question_id": "gk-2025-regular-national-1-q08",
+  "resume_action": "更正 2025 全国 1 卷 `_答案要点.md` 第 8 题的佐证：其见证值 k=10 与自述阈值自相矛盾（k=10 实测为 z>y>x，而非要点所称的 y>z>x），正确见证应取 k=8；所给阈值 ≈9.32 应为 ≈9.3013。答案 B 本身正确，只需改佐证",
+  "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0050
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "同一道题的两处非实质差异，因逐题问题的身份是 (type, paper_id, question_id, source_id)、同题同类无法分立两条，故合并登记。图片：500 dpi 视读确认图 1 表值（2 轻风 1.6~3.3、3 微风 3.4~5.4、4 和风 5.5~7.9、5 劲风 8.0~10.7）与图 2 的「视风风速」箭头指向 (0,2)、「船速」箭头指向 (3,3)、虚线网格与 O/1/2/3/x 标注均与源一致；缺陷是仓库图顶边被裁、纵轴「y」轴名与箭头缺失，纵轴刻度与向量坐标仍可读，故记为图注完整性缺陷而非题意改变。用字：源印「之和」，规范题面作「的和」，同义虚词替换，未改题意。两处均判 passed。",
+  "fingerprint": "4da7d4771447e2f6607a5d9875ea0a7dbc23e98abce4f779ddb34d1ee352cba0",
+  "impact": "non_blocking",
+  "paper_id": "gk-2025-regular-national-1",
+  "question_id": "gk-2025-regular-national-1-q06",
+  "resume_action": "两处一并处理：一、重导 images/2025-t6-风速.png——现顶边被裁（顶行 7 个墨点触边）且源图 2 纵轴顶端的「y」轴名与箭头整体缺失，重导时须含完整纵轴标注（处置规格参照 2017 两卷图片重导先例）；二、把题干「真风风速对应的向量与船行风风速对应的向量的和」回改为源印的「之和」",
+  "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0051
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed。源 PDF p1（页眉「2024 普通高等学校招生考试 (新高考 I)」、页脚 1207）印作「已知集合 ＝ {x | −5 < x³ < 5}, B = {−3, −1, 0, 2, 3}, 则 A ∩ B =」，集合名「A」在源中整体缺失——900 dpi 视读确认为真缺字而非缺字框，文本层同样无「A」。规范题面补入「A=」；后文「则 A∩B」已经指名该集合，故补入是唯一可复原的，属编辑性勘误。四选项 {−1,0}／{2,3}／{−3,−1,0}／{−1,0,2} 逐字一致。本题无配图。",
+  "fingerprint": "f93726a6d65e8b040832501f82acf7cf9b46c260887c5e660e2865d1d7d90d94",
+  "impact": "non_blocking",
+  "paper_id": "gk-2024-regular-new-gaokao-1",
+  "question_id": "gk-2024-regular-new-gaokao-1-q01",
+  "resume_action": "本条是编辑性勘误的裁决备案，规范题面不需回改：源印整体缺失集合名「A」，而后文「则 A∩B」使补入唯一可复原。补登进 report.md 的勘误清单，与 2024 新高考Ⅱ Q19 衍文裁决同规格记载",
+  "source_id": "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0052
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed。删除源衍文·勘误裁决四要素：① 来源页码：源 PDF 第 2 页（页脚 1210，第三栏）；来源 src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c，源文件 SHA-256 0c36577fb1b30822ae1108ae56fa6ff37edc368d62441bf36d857e458b9a9e1c。② 衍文原文：源印「过点 P_{n−1} 作斜率为 k 的直线与 C 的左支点交于点 Q_{n−1}」，衍字为「左支」之后的「点」；600 dpi 渲染视读与 PDF 文本层双证一致，排除 pdftotext 伪影。③ 删除理由三点：C 为双曲线 x²−y²=m，「左支」是曲线分支而非点，「左支点」在本题中不是已定义对象；「与…左支点交于点 Q_{n−1}」既不成搭配，也与 (2)(3) 对 Q_{n−1}、P_n 的用法冲突；删去该「点」后「与 C 的左支交于点 Q_{n−1}」为唯一可解读版本，故按语法正确版转录，沿用工程早期批次 1 的既有裁决。④ 旧/新题面 SHA-256（对两段纯文本各自取 UTF-8 哈希，与本题 question_text_sha256 字段无关）：含衍文源题面 = c9f06572c1dea84c2adc8551c2102bdbf20bd4420aa996444cf9f6545f7aca28（194 字符）；规范源题面 = d8deef4984c3a7fade9a23e2cfd8b783e5b20493f088e4ec2a40211800a211d0（193 字符）；两串仅差一个「点」字。旁证：求解角色核对规范源现文为「与 C 的左支交于点」，无残留冗余。",
+  "fingerprint": "cf57e662aa8f9d7562561b4f7066374e02ae67799eabf42260db3860ef813280",
+  "impact": "non_blocking",
+  "paper_id": "gk-2024-regular-new-gaokao-2",
+  "question_id": "gk-2024-regular-new-gaokao-2-q19",
+  "resume_action": "本条是删除源衍文的勘误裁决书面载体，规范题面不需回改。把 evidence 中的四要素誊入 report.md 的勘误清单（现清单尚无本条）",
+  "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0053
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed。源 PDF p1 第 (1) 问印作「求 C 的率心率」，900 dpi 视读确认、文本层同为「率心率」；「率心率」在数学上不是任何已定义量，而椭圆 C 的语境下「离心率」是唯一可解读版本，故改正唯一可复原。A(0,3)、P(3,3/2) 与第 (2) 问（过 P 的直线 l 交 C 于另一点 B、△ABP 面积为 9 求 l 的方程）逐字一致。本题无配图。",
+  "fingerprint": "3a06b69a48128524b179519f8f482cfcafc5ff842cdca25c1cf2d1c66dabc352",
+  "impact": "non_blocking",
+  "paper_id": "gk-2024-regular-new-gaokao-1",
+  "question_id": "gk-2024-regular-new-gaokao-1-q16",
+  "resume_action": "本条是编辑性勘误的裁决备案，规范题面不需回改：源方块字笔误「率心率」，规范题面作「离心率」，改正唯一可复原。补登进 report.md 勘误清单",
+  "source_id": "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0054
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed。题干与四选项（a=−2／(2√2,0) 在 C 上／第一象限纵坐标最大值为 1／y₀⩽4/(x₀+2)）逐字一致；配图 images/2024-t11-曲线.png 结构与标注齐备（F 标签在环内位置与源略有高低差，非内容性）。差异仅一处：源在「其造型」与「可以看作」之间排有一个非文字的丝带形矢量小图标（文本层此处为空白，pdffonts 无对应字符），规范题面未复现，属装饰性省略。",
+  "fingerprint": "df1f68c8a162d93a854f33a2fa3efe76dfe3dd752fc14a6bf10b4de64759f69a",
+  "impact": "non_blocking",
+  "paper_id": "gk-2024-regular-new-gaokao-1",
+  "question_id": "gk-2024-regular-new-gaokao-1-q11",
+  "resume_action": "如需与源完全对齐，可在题干「其造型」与「可以看作」之间补回丝带形矢量小图标；该图标为装饰性、不承载解题信息，补与不补均不影响作答，优先级低",
+  "source_id": "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0055
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2024-regular-new-gaokao-1"
+  ],
+  "conflict_code": "figure-trim-artifacts",
+  "current_evidence": "沿 b02 的 ISSUE-0020、b03 的 ISSUE-0032 同 type 同 conflict_code 另立新条（图片毛边批量单家族）。题面核对判 passed：该 PNG 顶点与虚实线约定与源一致，毛边不涉内容缺失。本批仅此一张有毛边——其余含图题（2024Ⅱ q17、2025全国1 q17、2025全国2 q17）均经视读确认四边无墨迹触边、无裁切。",
+  "fingerprint": "c4442baf0205b8f078983d2a687e41ef02671d2a0a5df10cfa43670e1c85dfbe",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "重导 images/2024-t17-四棱锥.png，去掉顶边残留的 2 像素上一行文字笔画碎片",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0056
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2024-regular-new-gaokao-1",
+    "gk-2025-regular-national-1"
+  ],
+  "conflict_code": "footer-raw-pdf-dangling",
+  "current_evidence": "沿 ISSUE-0007（b01）、0023（b02）、0028（b03）、0043（b04）同 type 同 conflict_code 另立新条。已由导入方直接核对：`_raw/` 与 `原卷PDF/` 两个目录在库内均不存在，故两条链接都是悬空的。两者形态有别，值得区分：`_raw/` 写在 .gitignore 第 45 行，属「按策略排除、链接注定悬空」；`原卷PDF/` 不在 .gitignore 中，即它既不存在、也不受排除策略覆盖，是纯粹的指向失效。这已是该缺陷第五次出现，且五次全部落在Ⅰ卷/全国 1 卷一侧。",
+  "fingerprint": "d886cf68acb3913545789c24a6af48fc1803429f3b0586d5a48e7f55eeda82e1",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "改写两卷 `_试题.md` 文末页脚的原卷指向（PDF 二进制不入库，宜改为指向 source-manifest 的 source_id / upstream_path，或沿用同批两个Ⅱ卷的「试题来源：deekur/gaokaomath（commit `34c13a6`…）」写法）：2024 新高考Ⅰ卷指向 `../_raw/2024_数学.pdf`；2025 全国 1 卷指向 `../原卷PDF/` 目录下的 `2025全国1(...).pdf`",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0057
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2024-regular-new-gaokao-1",
+    "gk-2025-regular-national-1"
+  ],
+  "conflict_code": "metadata-conventions-drift",
+  "current_evidence": "沿 ISSUE-0029（b03 的 2021Ⅰ）、0044（b04 的 2022Ⅰ/2023Ⅰ）同 type 同 conflict_code 另立新条。已由导入方直接核对四份规范源：2024Ⅰ 与 2025 全国 1 的来源行均无 commit 号与 PDF 名，而 2024Ⅱ、2025 全国 2 均有；2024Ⅰ「卷种」写「新高考 I 卷」、2025 全国 1 写「全国 1 卷 / 新高考 I 卷」，均为 ASCII 大写 I。至此 ASCII I 已在 2021Ⅰ、2022Ⅰ、2023Ⅰ、2024Ⅰ、2025 全国 1 连续五卷出现（2025 全国 2 另写「新高考 II 卷」，同为 ASCII），系Ⅰ卷侧的系统性写法漂移而非个别笔误，建议连同 0029、0044 一次性归一。",
+  "fingerprint": "a3adf46c291b14fd54d9d711ef22aa0ede1d156aecedec450a82c7ccaec83ecc",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "统一 2024 新高考Ⅰ卷与 2025 全国 1 卷的元数据：一是来源行补上 commit 号与源 PDF 名（现仅「deekur/gaokaomath（CC BY 4.0）」，同批两个Ⅱ卷均为「deekur/gaokaomath（commit 34c13a6，CC BY 4.0）之 <PDF 名>」）；二是把「卷种」里的 ASCII 字母 I 改为罗马数字 Ⅰ",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0058
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2024-regular-new-gaokao-1",
+    "gk-2024-regular-new-gaokao-2",
+    "gk-2025-regular-national-1",
+    "gk-2025-regular-national-2"
+  ],
+  "conflict_code": "official-answer-key-unavailable",
+  "current_evidence": "沿 ISSUE-0005（b01）、0022（b02）、0030（b03）、0046（b04）约定另立新条。b05 求解角色 76 题全 A、盲核 75 none + 1 resolved，但比对基准是库内 `_答案要点.md`（其本身系库内独立推导），官方发布版未获取。本批证据文本统一使用「库内答案要点」措辞，未出现「官方」误称。注意本批的 2025 全国 1 q08 （ISSUE 见题锚定条）正是库内要点佐证出错的实例，说明这条披露不是形式主义。",
+  "fingerprint": "fd4a47439f94c383f632a1ad0fbe2115df09973def9f5f6ff824124cb1cf08fd",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "取得官方发布的标准答案后，逐题比对 b05 四卷 `_答案要点.md`；在此之前答案要点只能声明为库内独立推导的结论，不得表述为官方答案",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0059
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2024-regular-new-gaokao-1",
+    "gk-2024-regular-new-gaokao-2",
+    "gk-2025-regular-national-1",
+    "gk-2025-regular-national-2"
+  ],
+  "conflict_code": "frontmatter-regions-unverified",
+  "current_evidence": "事实核查协议记录，沿 b04 的 ISSUE-0045 同 type 同 conflict_code 另立新条。本条不在角色提交的清单内，是导入方按 §13.7 交叉核对时按批次一致性补登的——若不登记，读者会误以为 b05 四卷的省份串已核。已由导入方比对四份规范源与 manifest 的 upstream_path：四串与各自上游文件名括号内的省份逐项一致（2024Ⅰ 与 2025 全国 1 均为 11 省、2024Ⅱ 11 省、2025 全国 2 17 省）。但「与上游文件名一致」只证明转录忠实，不证明该串符合现实——上游文件名本身未经核查。结论为未能核实：既不判其为误，也不为其背书；属涉现实、随年份变化的时变事实，不采信参数记忆。b01 的 ISSUE-0006（2017 两卷多列山东）是此类串确会出错的实证。",
+  "fingerprint": "e0c192b387ca7181fad48849cac260ba48fd845644b6e6603e6845aa7ada2d6f",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对四卷 frontmatter 的「适用省份」串做外部定向核查（各年各卷种实际使用省份以考试院/教育部公告为准）；核查前不得据参数记忆增删省份，核查后补出处或更正",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```

@@ -53,7 +53,7 @@
         "gk-2025-regular-national-1",
         "gk-2025-regular-national-2"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     },
     {
       "batch_id": "phase0-b06",
@@ -72,7 +72,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9d6de6e5-21c5-4aab-b54c-88e195744e13",
+  "last_transaction_id": "bf42652c-7251-4bfe-a067-628bf9c90de3",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -804,14 +804,23 @@
           "path": "2024_新高考Ⅰ卷/figures/f2024_t17_pyramid.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0051",
+        "ISSUE-0053",
+        "ISSUE-0054",
+        "ISSUE-0055",
+        "ISSUE-0056",
+        "ISSUE-0057",
+        "ISSUE-0058",
+        "ISSUE-0059"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2024"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2024-regular-new-gaokao-1",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2024_新高考Ⅰ卷",
       "question_count": 19,
       "resume_action": null,
@@ -821,7 +830,9 @@
         "questions": "2024/2024_数学真题_试题.md",
         "solution_body": "2024/2024_数学真题_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e"
+      ],
       "title": "2024 年·新高考Ⅰ卷",
       "track": "none",
       "year": 2024
@@ -834,14 +845,18 @@
           "path": "2024_新高考Ⅱ卷/figures/f2024x2_t17_fold.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0052",
+        "ISSUE-0058",
+        "ISSUE-0059"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2024x2"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2024-regular-new-gaokao-2",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2024_新高考Ⅱ卷",
       "question_count": 19,
       "resume_action": null,
@@ -851,13 +866,15 @@
         "questions": "2024/2024_数学真题_新高考Ⅱ_试题.md",
         "solution_body": "2024/2024_数学真题_新高考Ⅱ_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c"
+      ],
       "title": "2024 年·新高考Ⅱ卷",
       "track": "none",
       "year": 2024
     },
     {
-      "blocked_from": null,
+      "blocked_from": "legacy_unverified",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -868,24 +885,34 @@
           "path": "2025_全国1卷/figures/f2025_t6_wind.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0048",
+        "ISSUE-0049",
+        "ISSUE-0050",
+        "ISSUE-0056",
+        "ISSUE-0057",
+        "ISSUE-0058",
+        "ISSUE-0059"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2025"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2025-regular-national-1",
-      "production_state": "legacy_unverified",
+      "production_state": "blocked",
       "project_dir": "2025_全国1卷",
       "question_count": 19,
-      "resume_action": null,
+      "resume_action": "对官方原卷该处做正面定向核查后二选一：若官方为 sin²C，则补一条与 2024 新高考Ⅱ Q19 同规格的勘误裁决（来源页 + 旧/新题面 SHA-256 + 删改理由），本题转 passed；若官方与上游源印同为 sin C，则规范源 2025/2025_数学真题_试题.md 第 74 行须改回源印字面。在官方层面核实之前，两个方向都不得径自执行",
       "source_files": {
         "answer_key": "2025/2025_数学真题_答案要点.md",
         "combined_rendered": "2025/2025_数学真题_含解析.md",
         "questions": "2025/2025_数学真题_试题.md",
         "solution_body": "2025/2025_数学真题_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3"
+      ],
       "title": "2025 年·全国 1 卷",
       "track": "none",
       "year": 2025
@@ -898,14 +925,17 @@
           "path": "2025_全国2卷/figures/f2025g2_t17_fold.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0058",
+        "ISSUE-0059"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2025g2"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2025-regular-national-2",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2025_全国2卷",
       "question_count": 19,
       "resume_action": null,
@@ -915,7 +945,9 @@
         "questions": "2025/2025_数学真题_全国2_试题.md",
         "solution_body": "2025/2025_数学真题_全国2_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-63d8cf8aeded86d1dc644b80483c817de4f9ba7d312f117942a408b916bcc94d"
+      ],
       "title": "2025 年·全国 2 卷",
       "track": "none",
       "year": 2025
@@ -992,7 +1024,7 @@
       "year": 2026
     }
   ],
-  "revision": 799,
+  "revision": 804,
   "schema_version": 1,
   "sources": [
     {
@@ -19321,8 +19353,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a408f5467da376f7335cdb397855fe07ddc87149",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2024-regular-new-gaokao-1",
+      "paper_relation": "canonical",
       "raw_paper_name": "2024新高考1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf",
       "regions": [],
       "source_id": "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e",
@@ -19345,8 +19377,8 @@
       "exam_type": "regular",
       "git_blob_oid": "76940fabd984c1ecb221f49580226852043d2962",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2024-regular-new-gaokao-2",
+      "paper_relation": "canonical",
       "raw_paper_name": "2024新高考2(辽宁,重庆,海南,吉林,黑龙江,山西,云南,广西,甘肃,贵州,新疆).pdf",
       "regions": [],
       "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c",
@@ -19393,8 +19425,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4a5702dda207a470840a62c982ab2392362a404e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2025-regular-national-1",
+      "paper_relation": "canonical",
       "raw_paper_name": "2025全国1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf",
       "regions": [],
       "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
@@ -19417,8 +19449,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bf84d54405bb73b09f2222e184141762fb2b07ab",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2025-regular-national-2",
+      "paper_relation": "canonical",
       "raw_paper_name": "2025全国2(辽宁,重庆,海南,吉林,黑龙江,山西,云南,广西,甘肃,贵州,新疆,四川,内蒙古,陕西,青海,宁夏,西藏).pdf",
       "regions": [],
       "source_id": "src-63d8cf8aeded86d1dc644b80483c817de4f9ba7d312f117942a408b916bcc94d",
