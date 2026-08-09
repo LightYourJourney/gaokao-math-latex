@@ -8,10 +8,11 @@
 {
   "affected_paper_ids": [],
   "conflict_code": "recall-vs-official",
+  "current_evidence": "b06 题面核对角色的核心发现：上游对照件「普通高考/2026/2026全国1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf」（manifest source_id src-a6848f53cf4932dc654a47dc89f3ce68bcd68c88c1e90e1bfeb7fb504fb59536，现场 shasum -a 256 得 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1，与 manifest artifact.sha256 相同，实测 5 页与登记一致）第 1 页页眉逐字印「2026 年全国 1 卷高考数学真题(回忆版)」——即上游件自身即标注为回忆版，上游根本不存在 2026 全国 1 的正式卷，可比对、可绑定的正式源不存在。19 题逐题四分类比对结果：逐字一致 9 题、实质一致但表述有出入 10 题、实质不一致 0 题、正式卷有而回忆版无对应 0 题（对照件 19 题分布于 p1-p4，p5 整页空白，不存在第 20 题及以后内容）。这一比对只证明规范源 2026/2026_数学真题_试题.md 忠实转录了该回忆版 PDF，不证明、也无法证明它与官方正式卷一致——比对的两端都是回忆版。10 处「表述有出入」中 9 处为标点/记号/分值补注类，唯一一处非标点实词改动是第 17 题（md 删去「投中 1 次时」的「时」字，见另条题锚定登记）。本卷 source_ids 保持为空、只用 legacy_source_files 的本地路径引用（2026/2026_数学真题_试题.md，sha256 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1），provenance 亦按本地路径导入，未绑定任何上游 source。",
   "fingerprint": "838b91797a3403c21eee95a996aa19fccfa8bf0d9e78955f16c9ba97811b9f20",
   "impact": "blocks_completion",
   "paper_id": "gk-2026-regular-national-1-recall",
-  "resume_action": "正式卷公开后人工核验身份；回忆版不得自动绑定正式卷",
+  "resume_action": "需从上游之外获得教育部考试院发布的 2026 全国 1 卷官方正式卷，方可解除本身份问题；上游件页眉自陈回忆版（对照件 sha256 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1），绑定通道关闭——在取得官方正式卷之前，不得将本卷与任何上游 source 绑定，也不得据「与回忆版逐题一致」推断与正式卷一致",
   "status": "open",
   "type": "identity-ambiguous"
 }
@@ -1069,5 +1070,187 @@
   "resume_action": "对四卷 frontmatter 的「适用省份」串做外部定向核查（各年各卷种实际使用省份以考试院/教育部公告为准）；核查前不得据参数记忆增删省份，核查后补出处或更正",
   "status": "open",
   "type": "source-mismatch"
+}
+```
+
+## ISSUE-0060
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "双盲同见（本工程第三例）。答案独立求解角色 b06-answer-solver-opus 与答案盲核角色 b06-answer-blind-reviewer-opus 在互不知情下对同一处给出同一诊断——两路均指出库内答案要点 C 项的介值论证实质错误：其称「b 从 √3−1 变到 1 时和从 ≈4.72 连续降到 ≈1.36，必过 3」，而 b→(√3−1)⁺ 时 d₃→1（圆 C₃ 相切）故 s₃→0，和的极限是 4√(2√3−3)=2.7250 而非 4.72；且和非单调，先升至 b≈0.797 处的极大 ≈3.1249 再降至 b→1⁻ 的 1.3627，两端均小于 3，介值论证整体失效。两路各自给出的修正论证一致：和在族内两次穿过 3（盲核二分求得两根 b₁=0.746458、b₂=0.866025=√3/2，两处和均为 3.000000000；求解角色独立算得 b≈0.7475 与 b=√3/2），后者恰为 B 项的等弦线，再由 120° 旋转对称性推出无穷多条。答案 BCD 经两路独立验证正确，故盲核记 conflict_status=resolved；本条即该 resolved 状态的承接指针（沿 b04 ISSUE-0033、b05 ISSUE-0049 口径）。",
+  "fingerprint": "7be2ba980fba3826b065870e660dc8be1d467fb289f1fe33adad05fa45141c32",
+  "impact": "non_blocking",
+  "paper_id": "gk-2026-regular-national-1-recall",
+  "question_id": "gk-2026-regular-national-1-recall-q11",
+  "resume_action": "改写 2026 全国 1 卷（回忆版）`_答案要点.md` 第 11 题 C 项的论证：现用的介值论证（「和从 ≈4.72 单调降到 ≈1.36，必过 3」）两处失效——端点值应为 2.7250 而非 4.72（4.72≈2.725+2，系把 s₃ 相切时的 0 误当成过心弦的直径 2），且该族的和非单调（内部极大 ≈3.125 于 b≈0.797-0.80）、两端 2.725 与 1.3625 均小于 3；应改用「和在族内先升过 3 再降回」的双穿越论证（两根 b≈0.7465 与 b=√3/2，后者恰为 B 项的等弦线），再由构型绕中心 120° 的三重对称性得无穷多条。另 A 项叙述只点名 k=√3/3、未提对称的 −√3/3（对判 A 为假已够，属叙述不全）。答案 BCD 本身正确，只需改佐证",
+  "source_id": "legacy:docs/exams/2026/2026_数学真题_试题.md",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0061
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed：几何信息本身无损——八个标注 C₁/A₁/B₁/E/C/A/D/B 齐全，实线（A₁B₁、A₁C₁、B₁C₁ 上沿与 A₁A、B₁B 侧棱、AB 底边）与虚线（C₁—C、C₁—A、A—C、C—B、E 所在的 A—C₁ 段）走向与 PDF 原图一致，A₁ 被切的笔画放大后仍可辨认。缺陷是越界毛边加边缘微裁：墨迹包围盒 rows 18-349 / cols 0-319（画布 320x350）。判据与既有 ISSUE-0020/0032/0055 的图片毛边家族同类，但本批每卷只有一张问题图、无需批量单，故按 T19「题锚定一律回填」口径登记为逐题条目而非卷级批量单。",
+  "fingerprint": "e980dd4d68d234f5b864e6aa5262d63a2769cb3bd186e74b8a6f040cefcbd7f6",
+  "impact": "non_blocking",
+  "paper_id": "gk-2026-regular-national-1-recall",
+  "question_id": "gk-2026-regular-national-1-recall-q15",
+  "resume_action": "重做 images/2026-t15-棱柱.png：现件不是重绘件而是 PDF p2 的页面截图裁剪，图内上方混入题干残行「5．如图，在直三棱柱 ABC−A₁B」、下方混入其后正文行「(1)证明：」的顶部像素，且末行 31 px、左列 16 px、右列 9 px 触及画布边缘，A₁ 标注中 A 字左侧笔画被左缘切去一小截。宜按其余各卷的做法改为 TikZ 重绘",
+  "source_id": "legacy:docs/exams/2026/2026_数学真题_试题.md",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0062
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed，本卷 19 题中唯一一处非标点性的实词改动（其余 9 处表述出入均为标点/记号/分值补注类）。600 dpi 渲染视读确认 PDF 中该「时」字确实存在，非文本层伪影；「…时或…时」为并列结构，删去前一「时」后语义不变、不改作答方式，故判非实质。",
+  "fingerprint": "644acf8a87a89bf2b33e7ab3eeb71ef77d7211227034975995d598419ebfb3b4",
+  "impact": "non_blocking",
+  "paper_id": "gk-2026-regular-national-1-recall",
+  "question_id": "gk-2026-regular-national-1-recall-q17",
+  "resume_action": "本条是编辑性裁决备案，需内容任务定夺：规范源第 17 题删去了 PDF 有的一个「时」字（PDF「当且仅当投中 1 次时或 N 次均未投中时」→ md「当且仅当投中 1 次或 N 次均未投中时」）。按忠实转录纪律宜补回；若维持删字，须补登进 report.md 的勘误清单并说明理由。注意本处与 ISSUE-0047 方向相反：0047 是「源缺字、md 照录不改」，本处是「源有字、md 删字」",
+  "source_id": "legacy:docs/exams/2026/2026_数学真题_试题.md",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0063
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed。重绘件整体质量良好：四边无触墨（墨迹包围盒 rows 23-541 / cols 23-873，首末三行三列均零墨，无裁切、无邻栏文字混入）；与 PDF 原图 600 dpi 逐格比对，纵轴刻度 0.005/0.01/0.015/0.02/0.025、横轴刻度 345…425、轴标「频率/组距」与「时间/天」、原点 O 与折断号均齐备且数值相同，各组高度 0.005/0.01/0.02/0.025/0.015/0.015/0.005/0.005 与原图逐格相同，八组频率合计 1.000 自洽。缺失的两条分隔线是等高相邻柱的内部边界，不改变任何一段的 频率/组距 值与横轴分点；三处设问所依赖的区间（365-375、375-385、345-365）全部不在受影响区段，题目可按原样作答。像素级核验：重绘件在 x≈523、x≈665 两列无竖直墨线，而 x≈169/240/310/381/452/594/736 各列有。",
+  "fingerprint": "4b0d47b3c720f558bf3870f7a3a1901d738cf85fada7a82022cdb8e0f761de93",
+  "impact": "non_blocking",
+  "paper_id": "gk-2026-regular-national-2",
+  "question_id": "gk-2026-regular-national-2-q15",
+  "resume_action": "重绘 images/2026-2-t15-直方图.png 时补回两条竖直分隔线：PDF 原图把 385-395 与 395-405 画成两个独立矩形（395 处有分隔线）、405-415 与 415-425 亦然（415 处有分隔线），重绘件省略了这两条等高相邻柱之间的分隔线，画成 385-405、405-425 两段连续水平线",
+  "source_id": "src-f7b5dfbecde104bf273ee89c47131e86300dd9f8f25846d23992ce12fc89a609",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0064
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "footer-raw-pdf-dangling",
+  "current_evidence": "沿 ISSUE-0007（b01）、0023（b02）、0028（b03）、0043（b04）、0056（b05）同 type 同 conflict_code 另立新条。已由导入方直接核对两份规范源末行与目录存在性。与 b05 的 2025 全国 1 卷同为 `../原卷PDF/` 形态（该目录不在 .gitignore 中，即既不存在、也不受 PDF 排除策略覆盖，属纯粹指向失效），区别于 `_raw/` 那一支的「按策略排除、注定悬空」。该缺陷至此已第六次出现。",
+  "fingerprint": "87032cd6e63d1e4428336b4d1492a505313f9512a12b07728f41820e71e0f566",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "改写两卷 `_试题.md` 文末页脚的原卷影印件链接（PDF 二进制不入库，宜改为指向 source-manifest 的 source_id / upstream_path）：卷 1 指向 `../原卷PDF/2026全国1(...).pdf`、卷 2 指向 `../原卷PDF/2026全国2(...).pdf`，而 `原卷PDF/` 目录在库内不存在",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0065
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "scoring-notes-not-in-source",
+  "current_evidence": "沿 b03 的 ISSUE-0026 同 type 同 conflict_code 另立新条。事实核查协议记录：两卷上游 PDF 全卷无任何分值标记（题面核对角色对两卷逐页视读确认），而两份规范源均补有段首说明行与逐题分值补注。内部自洽性已核：解答题 13+15+15+17+17=77 与段首「共 77 分」相符，加单选 8×5=40、多选 3×6=18、填空 3×5=15 合计 150，无加法矛盾。但全部分值信息在本批来源中无对应，官方赋分规则【未能核实】——未能核实不等于错误，不得据此断言，也不得据参数记忆补全。",
+  "fingerprint": "61d2e5abceeb95f6600d84205fd59f85cb97a89b24689b85f21dc10464b30f33",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对两卷的分值信息做定向核查后决定去留：或找到权威来源（官方试卷扉页说明/考试院文件）为其背书并注明出处，或改写为不声称分值的中性提示，或整体删除。涉及各段段首说明行（如「本题共 5 小题，共 77 分」）与五道解答题的「（13/15/15/17/17 分）」补注。禁止据参数记忆补全",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0066
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "official-answer-key-unavailable",
+  "current_evidence": "沿 ISSUE-0005（b01）、0022（b02）、0030（b03）、0046（b04）、0058（b05）约定另立新条。两卷 `_答案要点.md` 均自述「非官方标准答案」，盲核角色据此把一切官方口径的断言标为【未能核实】。b06 求解角色 38 题全 A、盲核 37 none + 1 resolved，比对基准均为库内要点。卷 2 采纳件是否为官方发布版同样【未能核实】。两路证据文本统一使用「库内答案要点」措辞，未出现「官方」误称。",
+  "fingerprint": "5184cb997cbf7cd3b8bcddce653f72c1c8311dcc55bc332d0bd549469e613068",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "取得官方发布的标准答案后，逐题比对两卷 `_答案要点.md`；在此之前答案要点只能声明为库内独立推导的结论，不得表述为官方答案。卷 1 为回忆版，官方答案的可得性还受 ISSUE-0001 制约",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0067
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "frontmatter-regions-unverified",
+  "current_evidence": "沿 b04 的 ISSUE-0045、b05 的 0059 同 type 同 conflict_code 另立新条。事实核查协议记录：题面核对角色确认两卷 PDF 正文均不含任何省份信息，省份串只见于上游文件名与规范源自述（frontmatter 与正文引用块两处）。「与上游文件名一致」只证明转录忠实，不证明符合现实；官方原卷的适用范围【未能核实】。b01 的 ISSUE-0006（2017 两卷多列山东）是此类串确会出错的实证。",
+  "fingerprint": "38fe7464c834741feb642cdb2ba6413287dd9c5891868e6f436d384de846284c",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对两卷 frontmatter 与正文的「适用省份」串做外部定向核查；核查前不得据参数记忆增删省份，核查后补出处或更正",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0068
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "metadata-conventions-drift",
+  "current_evidence": "沿 ISSUE-0029（b03）、0044（b04）、0057（b05）同 type 同 conflict_code 另立新条。⚠️ 本条不在角色提交的清单内，是导入方按 §13.7 与上一批卷级 issue 家族逐个对表时补登的——b05 家族五条（0055 毛边/0056 悬空链接/0057 frontmatter/0058 非官方/0059 省份串）中，唯独 frontmatter 一条在本批清单里整类缺席。已由导入方直接核对两份规范源确认缺陷存在。至此 ASCII 罗马数字写法漂移已在 2021Ⅰ、2022Ⅰ、2023Ⅰ、2024Ⅰ、2025 全国 1、2026 全国 1/2 连续出现，建议连同 0029/0044/0057 一次性归一，勿逐卷修。",
+  "fingerprint": "c6ed8122bf27e705b38a247792011e6576daaae32990966b474c439760263a9e",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "统一两卷元数据：一、卷 1 的来源行补上 commit 号与源 PDF 名（现仅「deekur/gaokaomath（CC BY 4.0）」，卷 2 已有 commit 34c13a6 但同样缺 PDF 名）；二、把「卷种」里的 ASCII 字母 I / II 改为罗马数字 Ⅰ / Ⅱ（现作「全国 1 卷（新课标 I 卷）」「全国 2 卷（新课标 II 卷）」）",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0069
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2026-regular-national-1-recall",
+    "gk-2026-regular-national-2"
+  ],
+  "conflict_code": "answer-key-argument-gaps",
+  "current_evidence": "沿 b03 的 ISSUE-0031 同 type 同 conflict_code 另立新条。五处均出自答案独立求解角色 b06-answer-solver-opus 的 A 级比对说明，可在本批 .work 的 answer-solve 记录里逐字核对；答案盲核角色对同批各题的记录为正面验证（【结论】【来源】【置信度】三件套），除第 11 题外未另提要点缺陷。卷 1 第 11 题的要点硬伤不并入本条，已单独登记为题锚定条目（双盲同见）。",
+  "fingerprint": "c323cd2a8d11909b0513c66d71eeeac4824ccfaff9bbab8bbd2444f42d6d19a8",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "逐处复核并改写（五处均不影响答案正确性）：一、卷 1 第 17(1) 题要点标「答案：见解析版」，但紧接着就在同一处给出了完整分布列，标注与内容不符；二、卷 1 第 18 题由 1+k₁k₂=1/4>0 只能断定两直线夹角为锐角，而 ∠PQR 是射线 QP 与 QR 的夹角，严格说还需说明二者同为锐角；三、卷 1 第 19 题未点明「x₁<0<x₂ 与 f(x₁)≤f(x₂) 相斥」即直接分三种情形，属叙述省略；四、卷 2 第 18 题「A²/B²=2t₀²/(t₀²−2)>2>1」只在 |t₀|>√2 分支成立，却写在分支讨论之前（0<|t₀|<√2 时该比值为负），属排版顺序问题；五、卷 2 第 18 题称被去掉的两点是「A 取椭圆左右顶点时的像」略不准确——y₀=0 时 B 与 O 重合、直线 GB 与 AO 重合，P 根本不存在，那两点是 y₀→0 的极限位置而非像",
+  "status": "open",
+  "type": "answer-missing"
 }
 ```
