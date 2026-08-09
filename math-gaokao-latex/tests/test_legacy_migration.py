@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 from issues import load_issues
+from issues import main as issues_main
 from manifest import canonical_json, file_sha256, load_manifest, project_index
 from schema_validate import SchemaError, validate
 from transaction import MANIFEST_TARGET
@@ -24,6 +25,7 @@ from source_manifest import (
     LEGACY_PAPERS,
     MARKDOWN_GROUPS,
     PHASE0_BATCHES,
+    PHASE0_ISSUE_SEEDS,
     PRODUCTION_STATES,
     SOURCE_FILE_KEYS,
     main,
@@ -32,6 +34,7 @@ from source_manifest import (
     state_figure_occurrences,
     validate_figure_occurrences,
     validate_source_state,
+    verify_phase0_issue_seeds,
 )
 
 # 计划 Task 4 Step 2 的 21 条映射逐字重抄，测试与实现各持一份，任一侧漂移都会红。
@@ -182,6 +185,38 @@ def minimal_manifest():
     }
 
 
+def seed_issue_ledger(path):
+    """写一份 phase0 种子问题总账（两条身份问题，皆 open）并返回解析结果。
+
+    **迁移测试一律用它，不用 live 的 `missing-issues.md`**：迁移是一次性历史动作，它
+    当时看到的世界就是这两条种子。live 总账会随业务推进（T17 逐卷核验后 ISSUE-0002
+    收口成 resolved、逐题问题陆续登记），拿它当迁移输入等于把「仓库停在迁移完成那一
+    瞬间」当作不变量——那不是不变量，那是当时的快照。
+    """
+    issues_main(["init", "--phase0-seed", "--output", str(path)])
+    return load_issues(path)
+
+
+def premigration_manifest():
+    """迁移前的 manifest：papers / batches 尚未写入。
+
+    live manifest 的 papers 已随批次推进（`production_state` / `issue_ids` 都动过），
+    拿它喂 `migrate_legacy_index()` 会撞上「拒绝覆盖已推进状态」的护栏——**那条护栏是
+    对的**，错的是把 live 状态当成迁移输入。
+
+    source 的绑定也要一并解除：T4 的迁移**刻意不建立任何 source↔paper 绑定**，绑定是
+    T17 用 `confirm-source` 建的。只清 papers 不清绑定，会留下「source 指着一个
+    `source_ids` 为空的 paper」的半截世界，双向关系当场校验不过。
+    """
+    manifest = json.loads(read_text(ROOT / "source-manifest.json"))
+    manifest["papers"] = []
+    manifest["batches"] = []
+    for source in manifest["sources"]:
+        source["paper_id"] = None
+        source["paper_relation"] = None
+    return manifest
+
+
 def fixture_repository(directory):
     """建一个只含迁移所需 tracked 文件的临时仓库；manifest 回到迁移前状态。"""
     repo = Path(directory) / "repo"
@@ -193,12 +228,10 @@ def fixture_repository(directory):
         project / "schemas" / "source-manifest.schema.json",
     )
     shutil.copy2(ROOT / "index.json", project / "index.json")
-    shutil.copy2(ROOT / "missing-issues.md", project / "missing-issues.md")
-    manifest = json.loads(read_text(ROOT / "source-manifest.json"))
-    manifest["papers"] = []
-    manifest["batches"] = []
+    # 问题总账同样回到迁移前：manifest 回退了、总账不回退，那就不是「迁移前状态」。
+    seed_issue_ledger(project / "missing-issues.md")
     (project / "source-manifest.json").write_text(
-        canonical_json(manifest), encoding="utf-8"
+        canonical_json(premigration_manifest()), encoding="utf-8"
     )
 
     legacy = json.loads(read_text(ROOT / "index.json"))
@@ -275,11 +308,16 @@ class IdentityTableTests(unittest.TestCase):
 
 
 class MigrationTests(unittest.TestCase):
+    """迁移语义：在**迁移前的世界**上跑，与 live 仓库当前推进到哪一批解耦。"""
+
     @classmethod
     def setUpClass(cls):
         cls.legacy = json.loads(read_text(ROOT / "index.json"))
-        cls.manifest = json.loads(read_text(ROOT / "source-manifest.json"))
-        cls.issues = load_issues(ROOT / "missing-issues.md")
+        cls.manifest = premigration_manifest()
+        cls.temporary = tempfile.TemporaryDirectory()
+        cls.issues = seed_issue_ledger(
+            Path(cls.temporary.name) / "missing-issues.md"
+        )
         cls.migrated = migrate_legacy_index(
             cls.manifest, cls.legacy, repo_root=REPO, issues=cls.issues
         )
@@ -531,7 +569,11 @@ class MigrationTests(unittest.TestCase):
             with self.subTest(paper_id=paper_id):
                 self.assertEqual(paper["issue_ids"], [])
 
-    def test_seed_issues_stay_open_blocking_and_shaped_as_designed(self):
+    def test_the_seed_ledger_is_shaped_as_designed(self):
+        """这一条描述的是**种子总账**（迁移当时的世界），不是 live 总账的现状。
+
+        live 侧的不变量在 `LiveSeedIssueInvariantTests`：身份不变、状态可推进。
+        """
         by_id = {issue["issue_id"]: issue for issue in self.issues}
         self.assertIn("ISSUE-0001", by_id)
         self.assertIn("ISSUE-0002", by_id)
@@ -555,19 +597,49 @@ class MigrationTests(unittest.TestCase):
         )
 
     def test_missing_or_drifted_seed_issue_blocks_the_whole_migration(self):
-        for mutation in ("missing", "resolved", "retargeted"):
+        """**身份**漂移一律拦下；生命周期推进不算漂移（见下一条）。"""
+        for mutation in ("missing", "retargeted", "retyped", "recoded", "downgraded"):
             issues = copy.deepcopy(self.issues)
             if mutation == "missing":
                 issues = [item for item in issues if item["issue_id"] != "ISSUE-0001"]
-            elif mutation == "resolved":
-                issues[0]["status"] = "resolved"
-            else:
+            elif mutation == "retargeted":
                 issues[1]["affected_paper_ids"] = ["gk-2018-regular-national-1-arts"]
+            elif mutation == "retyped":
+                issues[0]["type"] = "source-mismatch"
+            elif mutation == "recoded":
+                issues[0]["conflict_code"] = "换了一个码"
+            else:
+                # 未了结却降级成 non_blocking：在不解决它的前提下解除封锁，是绕过不是推进。
+                issues[0]["impact"] = "non_blocking"
             with self.subTest(mutation=mutation):
                 with self.assertRaises(ValueError):
                     migrate_legacy_index(
                         self.manifest, self.legacy, repo_root=REPO, issues=issues
                     )
+
+    def test_a_resolved_seed_issue_is_lifecycle_not_drift(self):
+        """T17 逐卷核验后把 ISSUE-0002 收口成 resolved——守卫必须放行。
+
+        把状态钉死在 open 会让「这条种子问题被解决了」与「这条种子问题被人换掉了」在
+        报错上不可区分，而守卫要拦的只有后者。resolved 之后它不再反链进迁移产出的
+        `issue_ids`（`_issue_ids_by_paper` 跳过 resolved），这正是 live 仓库现在的形状。
+        """
+        issues = copy.deepcopy(self.issues)
+        for item in issues:
+            if item["issue_id"] == "ISSUE-0002":
+                item["status"] = "resolved"
+        migrated = migrate_legacy_index(
+            self.manifest, self.legacy, repo_root=REPO, issues=issues
+        )
+        papers = {paper["paper_id"]: paper for paper in migrated["papers"]}
+        for paper_id in (
+            "gk-2017-regular-national-1-arts", "gk-2017-regular-national-1-science"
+        ):
+            with self.subTest(paper_id=paper_id):
+                self.assertEqual(papers[paper_id]["issue_ids"], [])
+        self.assertEqual(
+            papers["gk-2026-regular-national-1-recall"]["issue_ids"], ["ISSUE-0001"]
+        )
 
     def test_migration_rejects_legacy_index_with_unknown_or_missing_ids(self):
         dropped = copy.deepcopy(self.legacy)
@@ -588,17 +660,67 @@ class MigrationTests(unittest.TestCase):
         validate(self.migrated, schema)
 
 
+class LiveSeedIssueInvariantTests(unittest.TestCase):
+    """live 问题总账：种子问题的**身份**必须不变，状态允许推进。
+
+    与 `MigrationTests` 分工明确——那边测「迁移这个动作」（跑在迁移前的世界上），这边
+    测「live 仓库此刻仍满足的不变量」。把两者混在一起，就会写出「21 卷仍停在迁移完成
+    瞬间」这种会随每一批导入而失效的假不变量。
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.issues = load_issues(ROOT / "missing-issues.md")
+        cls.by_id = {issue["issue_id"]: issue for issue in cls.issues}
+        cls.papers = project_index(load_manifest(ROOT / "source-manifest.json"))
+
+    def test_the_live_ledger_still_passes_the_seed_identity_guard(self):
+        verify_phase0_issue_seeds(self.issues)
+
+    def test_the_live_seed_identities_match_the_frozen_seeds(self):
+        for seed in PHASE0_ISSUE_SEEDS:
+            issue = self.by_id.get(seed["issue_id"])
+            with self.subTest(issue_id=seed["issue_id"]):
+                self.assertIsNotNone(issue)
+                for field in (
+                    "type", "paper_id", "affected_paper_ids", "conflict_code"
+                ):
+                    self.assertEqual(issue.get(field), seed[field], field)
+
+    def test_an_unresolved_seed_issue_still_blocks(self):
+        for issue in self.by_id.values():
+            if issue["issue_id"] in {"ISSUE-0001", "ISSUE-0002"}:
+                with self.subTest(issue_id=issue["issue_id"]):
+                    if issue["status"] != "resolved":
+                        self.assertEqual(issue["impact"], "blocks_completion")
+
+    def test_the_2017_pair_keeps_referencing_issue_0002(self):
+        """收口不等于抹掉档案：两卷的 `issue_ids` 仍**包含** ISSUE-0002。
+
+        断言用「包含」而不是「等于」——逐题问题会随批次导入不断追加，写死等号就等于
+        要求每导一批就来改一次测试。
+        """
+        for paper_id in (
+            "gk-2017-regular-national-1-arts", "gk-2017-regular-national-1-science"
+        ):
+            with self.subTest(paper_id=paper_id):
+                self.assertIn("ISSUE-0002", self.papers[paper_id]["issue_ids"])
+
+
 class IndexProjectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.current = json.loads(read_text(ROOT / "index.json"))
         cls.legacy = legacy_index_view(cls.current)
-        cls.manifest = json.loads(read_text(ROOT / "source-manifest.json"))
+        cls.manifest = premigration_manifest()
+        cls.temporary = tempfile.TemporaryDirectory()
         cls.migrated = migrate_legacy_index(
             cls.manifest,
             cls.legacy,
             repo_root=REPO,
-            issues=load_issues(ROOT / "missing-issues.md"),
+            issues=seed_issue_ledger(
+                Path(cls.temporary.name) / "missing-issues.md"
+            ),
         )
         cls.projected = project_legacy_index(cls.migrated, cls.legacy)
 
@@ -994,11 +1116,20 @@ class MigrateCommandTests(unittest.TestCase):
             self.assertEqual(issues_path.read_bytes(), issues_before)
 
     def test_command_writes_nothing_when_a_seed_issue_drifted(self):
+        """漂移用「未了结却降级成 non_blocking」构造。
+
+        原先用 `open → deferred` 构造漂移，但那是**合法的生命周期推进**（守卫收窄后
+        deferred 仍算未了结、仍要求 blocks_completion，所以照样通过）。`impact` 不进
+        fingerprint 身份，改它不会先被 `load_issues` 的 fingerprint 校验拦掉，正好落在
+        本守卫的判据上。
+        """
         with tempfile.TemporaryDirectory() as tmp:
             repo, project = fixture_repository(tmp)
             issues_path = project / "missing-issues.md"
             issues_path.write_text(
-                read_text(issues_path).replace('"status": "open"', '"status": "deferred"'),
+                read_text(issues_path).replace(
+                    '"impact": "blocks_completion"', '"impact": "non_blocking"'
+                ),
                 encoding="utf-8",
             )
             manifest_before = (project / "source-manifest.json").read_bytes()

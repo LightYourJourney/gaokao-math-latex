@@ -25,7 +25,8 @@ from dataclasses import dataclass, field
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable, Dict, Iterator, List, Mapping, MutableMapping, Optional, Sequence
 
-from issues import load_issues, upsert_issue
+from issues import IMPACTS as ISSUE_IMPACTS
+from issues import issue_fingerprint, load_issues, upsert_issue
 from manifest import (
     canonical_json,
     durable_fsync,
@@ -2013,7 +2014,18 @@ def _legacy_paper_metadata(legacy_index: Any) -> Dict[str, Mapping[str, Any]]:
 
 
 def verify_phase0_issue_seeds(issues: Sequence[Mapping[str, Any]]) -> None:
-    """确认 Task 2 建立的两条身份问题编号、目标与状态都没有漂移。"""
+    """确认 Task 2 建立的两条身份问题**身份**没有漂移；status 允许合法推进。
+
+    校验的是身份四元组 `type/paper_id/affected_paper_ids/conflict_code`——对这两条问题
+    来说它恰好就是 `issue_fingerprint()` 取的那组字段——外加 fingerprint 必须与身份重算
+    一致。**不校验 status 停在 open**：`open → resolved` 是业务生命周期（T17 逐卷核验
+    后收口 ISSUE-0002），不是漂移。把状态钉死会让「这条种子问题被解决了」与「这条种子
+    问题被人换掉了」在报错上不可区分，而本函数要拦的是后者。
+
+    仍然 fail-closed 的两条：编号必须在、身份必须逐字相同；**且尚未了结时必须仍是
+    `blocks_completion`**——把一条没解决的身份问题降级成 non_blocking，等于在不解决它
+    的前提下解除封锁，那是绕过而不是推进。
+    """
     by_id: Dict[Any, Mapping[str, Any]] = {}
     for issue in issues:
         issue_id = issue.get("issue_id")
@@ -2031,8 +2043,19 @@ def verify_phase0_issue_seeds(issues: Sequence[Mapping[str, Any]]) -> None:
                     % (seed["issue_id"], field_name, seed[field_name],
                        issue.get(field_name))
                 )
-        if issue.get("status") != "open" or issue.get("impact") != "blocks_completion":
-            raise ValueError(f"{seed['issue_id']}: 必须保持 open/blocks_completion")
+        if issue.get("fingerprint") != issue_fingerprint(issue):
+            raise ValueError(f"{seed['issue_id']}: fingerprint 与身份字段不一致")
+        if issue.get("impact") not in ISSUE_IMPACTS:
+            raise ValueError(
+                "%s: 未知 impact：%r" % (seed["issue_id"], issue.get("impact"))
+            )
+        if (
+            issue.get("status") != "resolved"
+            and issue.get("impact") != "blocks_completion"
+        ):
+            raise ValueError(
+                f"{seed['issue_id']}: 尚未了结的身份问题必须保持 blocks_completion"
+            )
 
 
 def _issue_ids_by_paper(

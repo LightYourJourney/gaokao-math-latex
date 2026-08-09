@@ -1704,17 +1704,47 @@ class CliTests(unittest.TestCase):
 
 
 class LiveRepositoryTests(unittest.TestCase):
-    """真库：21 套仍是 `legacy_unverified`，六个批次仍是 `planned`。"""
+    """真库自检：只断言**随批次推进自动成立**的不变量，不记账。
+
+    这里曾写着「21 套仍是 legacy_unverified、六个批次仍是 planned」——那不是不变量，
+    是批次导入开始前的一张快照，b01 一落地就红。凡「每导一批就得来改一次」的断言都是
+    账目而非不变量；下面两条都由 manifest 自身派生，b02–b06 落地时无需任何改动。
+    """
 
     @classmethod
     def setUpClass(cls):
         cls.root = ROOT.parent.parent.parent
         cls.manifest = load_manifest(ROOT / "source-manifest.json")
 
-    def test_no_paper_has_provenance_yet(self):
-        for paper in self.manifest["papers"]:
-            relative = status_core.provenance_path(paper)
-            self.assertFalse((self.root / relative).is_file(), relative)
+    def provenance_papers(self):
+        return {
+            paper["paper_id"] for paper in self.manifest["papers"]
+            if (self.root / status_core.provenance_path(paper)).is_file()
+        }
+
+    def test_provenance_files_exactly_cover_the_non_planned_batches(self):
+        """有 provenance 的卷 == 已离开 `planned` 的批次里的卷。
+
+        `import_batch()` 整批写 provenance 并把批次推出 `planned`，两侧因此恒等；
+        任一侧单独漂移都说明有人绕过了导入事务。
+        """
+        expected = {
+            paper_id for batch in self.manifest["batches"]
+            if batch["status"] != "planned" for paper_id in batch["paper_ids"]
+        }
+        self.assertEqual(self.provenance_papers(), expected)
+
+    def test_no_paper_advances_beyond_legacy_unverified_without_provenance(self):
+        """状态不得先于证据：非 `legacy_unverified` 的卷必有 provenance 文件。
+
+        反向刻意不断言——provenance 落盘后若规范源被改，该卷会退回 `legacy_unverified`
+        而文件仍在，那是合法状态，不该被测成失败。
+        """
+        advanced = {
+            paper["paper_id"] for paper in self.manifest["papers"]
+            if paper["production_state"] != "legacy_unverified"
+        }
+        self.assertLessEqual(advanced, self.provenance_papers())
 
     def test_the_generated_artifacts_are_current(self):
         for paper in self.manifest["papers"][:2]:
