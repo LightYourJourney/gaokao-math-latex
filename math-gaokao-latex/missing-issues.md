@@ -419,3 +419,169 @@
   "type": "source-unavailable"
 }
 ```
+
+## ISSUE-0024
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed（标注 Q/A/B/C/D 五点齐全、无裁切、几何构型与 PDF 相同、棱与面的连接关系未变），但虚实线约定有一处偏差：PDF 中可见棱 QD 为实线，转录件画成虚线。该图中 QA 本就是虚线，两条虚线并存会暗示存在两个被遮挡的顶点，与实际构型不符，属会误导读图的呈现错误，故按中等严重度单独登记。",
+  "fingerprint": "83922b837c67137cfbb0c09a919b6057de221378cfb5dc1ef17f2963df4f176d",
+  "impact": "non_blocking",
+  "paper_id": "gk-2021-regular-new-gaokao-2",
+  "question_id": "gk-2021-regular-new-gaokao-2-q19",
+  "resume_action": "重绘 images/2021-Ⅱ-t19-四棱锥.png：可见棱 QD 应为实线（PDF 原图如此），现画成虚线；其余 QA、AB、AD、BD 的虚线与 PDF 一致，勿一并改动",
+  "source_id": "src-20c5bf5c6684f32611f1bb38d0907bd8800fb03780f0b52c603fb222695aa505",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0025
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed：题干（球心 O、纬度定义、水平面定义、晷面与赤道平面平行、北纬 40°）与选项 20°／40°／50°／90° 均与 PDF p1 一致。非实质差异仅一处：PDF 在选项上方印有一张日晷实物照片，规范源未转录。该照片无任何标注、题干未出现「如图」、不承载解题信息，属装饰性插图缺省。",
+  "fingerprint": "a00911746019d123d217a56355e0d43731013fff2a207e7c3f36f6a9a00f172e",
+  "impact": "non_blocking",
+  "paper_id": "gk-2020-regular-new-gaokao-2",
+  "question_id": "gk-2020-regular-new-gaokao-2-q04",
+  "resume_action": "如需与 PDF 完全对齐可补转录第 4 题选项上方的日晷实物照片；该照片无标注、题干未出现「如图」、不承载解题信息，补与不补均不影响作答，优先级低",
+  "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0026
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2020-regular-new-gaokao-2",
+    "gk-2021-regular-new-gaokao-1",
+    "gk-2021-regular-new-gaokao-2"
+  ],
+  "conflict_code": "scoring-notes-not-in-source",
+  "current_evidence": "三卷 `_试题.md` 各有四条段首说明行（单选「本题共 8 小题，每小题 5 分，共 40 分…」、多选「本题共 4 小题，每小题 5 分，共 20 分。全部选对得 5 分，部分选对得 2 分，有选错得 0 分。」、填空、解答），三卷逐字相同，已由导入方直接核对三份规范源确认存在。题面核对角色报告：这四条说明行在本批三份上游 PDF 中完全无对应，即无本批来源可为其背书。事实核查协议记录：2020 与 2021 两年份的多选题部分分值是否相同，本批证据不足以判定，结论为「未能核实」——未能核实不等于不存在，不得据此断言该行错误，也不得据参数记忆补全。",
+  "fingerprint": "0d5d8e8c79be600ec8b50837f3fd9846372951e0438922dea1246a7f67345237",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对三卷四条段首分值说明行做定向核查后决定去留：或找到权威来源（官方试卷扉页说明/考试院文件）为其背书并注明出处，或改写为不声称分值的中性提示，或整体删除。特别注意：2020 与 2021 两个年份的多选题部分分值规则是否相同尚未核实，禁止用参数记忆补全，须联网定向核查后再动",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0027
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2021-regular-new-gaokao-1"
+  ],
+  "conflict_code": "frontmatter-reform-claim-unverified",
+  "current_evidence": "2021 新高考Ⅰ卷 `_试题.md` 第 16 行写「历史意义：这是湖南首次使用新高考 I 卷的年份（2021 年湖南实施「3+1+2」新高考改革）」，已由导入方直接核对规范源确认原文。该句是现实世界事实陈述，本批来源（上游数学试卷 PDF）不含任何可核验它的内容。事实核查协议记录：结论为「未能核实」，既不能据此判其为错，也不能据参数记忆为其背书。",
+  "fingerprint": "fb7d9f24269f2e1baf29548a0ad9b388aeac84ce7fd68f7bc926041105301c28",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "对该括注做外部定向核查（湖南 2021 年是否首次使用新高考 I 卷、是否实施「3+1+2」模式）；核实前不得据参数记忆改写，核实后或补出处或删去括注",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0028
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2021-regular-new-gaokao-1"
+  ],
+  "conflict_code": "footer-raw-pdf-dangling",
+  "current_evidence": "沿 b01 的 ISSUE-0007、b02 的 ISSUE-0023 约定，同 type 同 conflict_code 另立新条（affected_paper_ids 进 fingerprint 身份，无法原地扩展）。已核对：2021 新高考Ⅰ卷 `_试题.md` 末行写 `../_raw/2021_数学.pdf`，而 `_raw/` 目录在库内不存在。本批仅此一卷有该缺陷——2020 新高考Ⅱ与2021 新高考Ⅱ的末行是「试题来源：deekur/gaokaomath（commit 34c13a6…）」说明，不含 _raw 链接。",
+  "fingerprint": "88856f28486cd888f0472a16bf3cdc5e9c0368d6415b7825e478d97297c31b37",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "改写 2021 新高考Ⅰ卷 `_试题.md` 文末页脚的原卷影印件链接（PDF 二进制不入库，宜改为指向 source-manifest 的 source_id / upstream_path，或沿用本批另两卷的「试题来源：deekur/gaokaomath（commit …）之「…」PDF」写法）",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0029
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2021-regular-new-gaokao-1"
+  ],
+  "conflict_code": "metadata-conventions-drift",
+  "current_evidence": "已由导入方直接核对三份规范源：2021 新高考Ⅰ卷 frontmatter 的来源行写「deekur/gaokaomath（CC BY 4.0）」不带 commit 号，且全文零处 commit 号（其文末是 _raw 链接而非来源说明）；同批 2021 新高考Ⅱ卷 frontmatter 与 2020 新高考Ⅱ卷文末均记有 commit 34c13a6。另，2021 新高考Ⅰ卷的 title 与「卷种」字段写「新高考 I 卷」，用的是 ASCII 大写 I，而同批另两卷及库内其余各卷用罗马数字 Ⅰ／Ⅱ。两者都不影响题面与答案，属元数据一致性问题。",
+  "fingerprint": "4d2e27a465142d4dbcd47973b333906c244c5d80704e101718b4cfc3f07f118b",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "统一 2021 新高考Ⅰ卷的元数据写法：一是补上上游 commit 号（另两卷均为 34c13a6，2021Ⅱ 记在 frontmatter 的来源行、2020Ⅱ 记在文末来源行），二是把 title 与「卷种」里的 ASCII 字母 I 改为罗马数字 Ⅰ，与全库其余各卷一致",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0030
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2020-regular-new-gaokao-2",
+    "gk-2021-regular-new-gaokao-1",
+    "gk-2021-regular-new-gaokao-2"
+  ],
+  "conflict_code": "official-answer-key-unavailable",
+  "current_evidence": "沿 b01 的 ISSUE-0005、b02 的 ISSUE-0022 约定，同 type 同 conflict_code 另立新条。b03 求解角色 66 题全 A、盲核 66 题全 none，但比对基准是库内 `_答案要点.md`（其本身系库内独立推导），官方发布版未获取，与官方的一致性未核。b03 的证据文本自始使用「库内答案要点」措辞，未出现「官方」误称。",
+  "fingerprint": "6a86f1159a96e56831d54722797ec092f8764259f2b9a1f5a3b2b238bb57eaa7",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "取得官方发布的标准答案后，逐题比对 b03 三卷 `_答案要点.md`；在此之前答案要点只能声明为库内独立推导的结论，不得表述为官方答案",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0031
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2020-regular-new-gaokao-2",
+    "gk-2021-regular-new-gaokao-1",
+    "gk-2021-regular-new-gaokao-2"
+  ],
+  "conflict_code": "answer-key-argument-gaps",
+  "current_evidence": "证据来源分两组，逐条标明以免混淆。甲组（可在本批 .work 落盘证据里逐字核对，共四处）：2021Ⅰ 第 21 题的「内部」措辞、以及三处「见解析版」，均见于答案独立求解角色的 A 级比对说明。乙组（由角色在回报中提出，未落入 .work，共三处）：2021Ⅱ 第 21(2) 题 c∈[0,1) 区间偏松、一处选择题排除理由不完备、2020Ⅱ 第 1 题干扰项点评含糊。乙组之所以不在 .work 里，是因为盲核角色的记录 schema 只有 answer_sha256／conflict_status／issue_ids 三个字段、没有 evidence 字段，其观察无处落盘；第六处的具体题号亦因此缺失，改写前需回盲核角色回报确认题号。",
+  "fingerprint": "0e329a573cbafa61e935f84ed6e703d6fe3be8fe44ffa327e194db7860b6254e",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "逐处复核并改写（七处均不影响答案正确性）：一、2021Ⅰ 第 21 题要点称「T 在双曲线内部」，而 T(1/2,t) 实际位于两支之间的中心区域而非某一支的凹侧，真正起作用的判据是 x₁x₂>0 ⇒ k²>16、与 T 的具体位置无关，建议改写措辞；二至四、三处小问标「见解析版」但要点正文其实已自包含完整内容——2020Ⅱ 第 19(2) 题（已给出完整列联表）、2021Ⅰ 第 18(1) 题（已给出完整分布列）、2021Ⅱ 第 22(1) 题（已给出完整分类表），建议去掉误导性的「见解析版」；五、2021Ⅱ 第 21(2) 题要点给的 c∈[0,1) 区间偏松（双盲同见）；六、一处选择题的排除理由不完备；七、2020Ⅱ 第 1 题对干扰项的点评含糊。",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0032
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2020-regular-new-gaokao-2"
+  ],
+  "conflict_code": "figure-trim-artifacts",
+  "current_evidence": "沿 b02 的 ISSUE-0020 约定，同 type 同 conflict_code 另立新条。本批 7 张图全为重绘件、零裁切缺陷，题面核对全判 passed；两处差异均已与 PDF 原图逐点比对确认不改变读图信息：t9 图的两组 11 天数据走势、第 2 天复工降至 78%、第 9 天两线交叉、第 11 天复产略高于复工、82%／80%／78% 三条虚线与轴标均相符，仅图例文字为编辑性扩写；t11 图的 y 轴、刻度 1、O、π/6、2π/3 标注齐全，相位与零点位置一致，仅两端截止位置略有出入。",
+  "fingerprint": "1d85f36605c679782104602cbc5d9ee6c443068b2468530fa741f2c6db6bce08",
+  "impact": "non_blocking",
+  "paper_id": null,
+  "resume_action": "重绘时对齐两处细节：images/2020-Ⅱ-t9-复工复产折线图.png 的图例文字由 PDF 的「复产／复工」被扩写为「复产指数／复工指数」；images/2020-Ⅱ-t11-正弦图象.png 曲线左右两端的截止位置与 PDF 不同（重绘件收于 x 轴、PDF 收于半坡）",
+  "status": "open",
+  "type": "layout-warning"
+}
+```

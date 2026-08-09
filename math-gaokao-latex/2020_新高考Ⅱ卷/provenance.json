@@ -1,0 +1,580 @@
+{
+  "batch_id": "phase0-b03",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2020-regular-new-gaokao-2",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（{2,3,5}）。逐元素判定：2∈B、3∈B、5∈B、7∉B。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "d1df4dd4d6193fcf85ed4a6a72c44569971364e93b99d3bc02b2f13f234a7e47",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2020-regular-new-gaokao-2-q01",
+      "question_text_sha256": "e4e19b2c721f0fdb1d6484edb9b0a0b9cab9b10ff0de188cbb9a7431a2bc9a9a",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：A={2,3,5,7}、B={1,2,3,5,8} 求 A∩B，四选项 {1,8}／{2,5}／{2,3,5}／{1,2,3,5,8} 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（5i）。(1+2i)(2+i)=2+i+4i+2i²=2+5i-2=5i（数值核验 complex(1,2)*complex(2,1)=5j）。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "e1362faddf1d93123857c5123c00d51f4cd7342a5aa4386b258338568983717e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2020-regular-new-gaokao-2-q02",
+      "question_text_sha256": "8c2b31a509bd0b4e73ba2ac67c99a3b6a7603fe6af63295071b8b51d35d58ddb",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：(1+2i)(2+i)=，四选项 −5i／5i／−5／5 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（2·CD−CA）。D 为 AB 中点 ⇒ CD=(CA+CB)/2 ⇒ CB=2CD−CA；取 C(0,0)、A(1,0)、B(0,1) 验算 2CD−CA=(1,1)−(1,0)=(0,1)=CB。 ｜比对：库内答案要点 A，一致，坐标验证同法。",
+        "grade": "A"
+      },
+      "answer_sha256": "2b783dd8949bd825a5bfad7ac4cc2733c8f28216bc6a751150ad35f6988b73f8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2020-regular-new-gaokao-2-q03",
+      "question_text_sha256": "fb34a8330ced4b52bc3be33916c5302944067f1ab8953adbccd5db18ed435ced",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：D 为 △ABC 的边 AB 的中点求 CB→，四选项 2CD−CA／2CA−CD／2CD+CA／2CA+CD 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（40°）。晷针⊥晷面、晷面∥赤道面 ⇒ 晷针∥地轴；OA 与赤道面成 40° ⇒ OA 与地轴成 50°；水平面以 OA 为法向 ⇒ 晷针与水平面成 90°−50°=40°。 ｜比对：库内答案要点 B，一致；其「晷针与当地水平面所成角＝当地纬度」的通用结论我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "02324bf42675a24348a19aac7f8f8a3b4409e0b93a6888e8f5aa76fe5ff49713",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2020-regular-new-gaokao-2-q04",
+      "question_text_sha256": "f9ce4fec18f1961306f7f4e840df271153e32436f447e42d71013d6eef6769b4",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：日晷题干（球心 O、纬度定义、水平面定义、晷面与赤道平面平行、北纬 40°）与选项 20°／40°／50°／90° 一致。非实质差异：PDF 在选项上方印有一张日晷实物照片，无任何标注、题干未出现「如图」、不承载解题信息，规范源未转录，属装饰性插图缺省；建议另作图片登记。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（46%）。容斥：|P∩Q|=60%+82%−96%=46%；余下 4% 两项都不喜欢，自洽。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "3f506e1235d8ca7cdb6c9c0f2f596907405692adef61d1b2dc5fb0974f833e1a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2020-regular-new-gaokao-2-q05",
+      "question_text_sha256": "9d7f5cec87dd21d78ff0239e7602890d2b0f05707a9a42d30dff4007986e4452",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：96% 喜欢足球或游泳、60% 足球、82% 游泳，选项 62%／56%／46%／42% 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（6 种）。无限制 2³=8，扣掉「三人同村」2 种得 6；另按 2+1 分组 C(3,1)=3 再乘村庄有序 A(2,2)=2 亦得 6。 ｜比对：库内答案要点 C，一致，两条算路相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "9096e53df7865bd1c21ca84c175e855079763b813e38200d850f1c8ba3794e95",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2020-regular-new-gaokao-2-q06",
+      "question_text_sha256": "0f5fcfda59a023a8578fabac90dce0ef97b6037bb482470a73be0c25ed310c05",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：3 名大学生到 2 个山村、每人只去 1 个村、每村至少 1 人，选项 4／5／6／8 种一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（[5,+∞)）。定义域 x²−4x−5>0 ⇒ x<−1 或 x>5；内层对称轴 x=2，与定义域取交后唯一递增区间为 (5,+∞)；(a,+∞)⊆(5,+∞) ⇒ a≥5。 ｜比对：库内答案要点 D，一致；其点出的「只看内层 x>2 会误选 C」陷阱成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "696f3d5365a9edaa3558dd7d70dd86c97b28a42a57e3a868fc6e5829bfcaa36b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2020-regular-new-gaokao-2-q07",
+      "question_text_sha256": "6240859eeeb004519878107ee5049966483de06737593e8e765ede47a64995b2",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=lg(x²−4x−5) 在 (a,+∞) 单调递增，选项 (−∞,−1]／(−∞,2]／[2,+∞)／[5,+∞) 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（[−1,0]∪[1,3]）。奇函数两侧单调性相同 ⇒ f 在 (0,+∞) 亦递减；f(±2)=f(0)=0 ⇒ f(t)≥0 ⟺ t≤−2 或 0≤t≤2。x>0 需 f(x−1)≥0 得 1≤x≤3；x=0 乘积为 0 成立；x<0 需 f(x−1)≤0 得 −1≤x<0。数值核验（按符号表在 [−6,6] 以 0.0005 步长扫描）解集恰为 [−1,0]∪[1,3]。 ｜比对：库内答案要点 D，一致，含「x=0 最易漏」的提醒。",
+        "grade": "A"
+      },
+      "answer_sha256": "42fea3dc9753b6a154e4da7ba666022e2f16fc60b1199aa89515ad86d8c37f16",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2020-regular-new-gaokao-2-q08",
+      "question_text_sha256": "b1187c791f2e668f43930bb9d5dd1daec67ea182cef837f0a3e2ff92633912af",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：定义在 R 的奇函数、(−∞,0) 单调递减、f(2)=0、xf(x−1)⩾0，四选项一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：CD（多选，逐项判定）。读图（像素定标：80% 与 82% 网格线间距约 37 px/百分点）得复工（实心）第1天≈79.7、第2天≈78.1、第3天≈80.4、第9天≈83.2、第11天≈83.9；复产（空心）第1天≈80.5、第9天≈81.6、第11天≈84.3。 A ✗：复工第1→2天明显下降（跌至 78% 虚线），「均逐日增加」被反例否定。 B ✗：全程增量复工≈+4.2、复产≈+3.8，是复工大于复产，方向与选项相反。 C ✓：第3天起两条折线所有点均在 80% 虚线上方（最低为第3天复工约 80.4%）。 D ✓：第9→11天复产由≈81.6 升至≈84.3（增量≈2.7），复工由≈83.2 升至≈83.9（增量≈0.7），复产增量更大。 正确集合：CD。 ｜比对：库内答案要点 CD，逐项一致；其读数（复工 +4.2/复产 +3.8、第9天交叉）与我的像素定标读数吻合。",
+        "grade": "A"
+      },
+      "answer_sha256": "58bf0c6b9a63a233135acf05c8d527e464913a07074aec1dd728b4bb1d18affc",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2020-regular-new-gaokao-2-q09",
+      "question_text_sha256": "8e01488b84689f593b8ced45860f3a62564b9b45441a70d25fef9215a1159f8f",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：多选题（第 9–12 题）。题干「某地连续 11 天复工复产指数折线图，下列说法正确的是」与 A–D 四个陈述逐字一致。配图 images/2020-Ⅱ-t9-复工复产折线图.png 为重绘件，已与 PDF 原图逐点比对：两组 11 天数据走势、第 2 天复工降至 78%、第 9 天两线交叉、第 11 天复产略高于复工均相符，82%／80%／78% 三条虚线与「指数」「天数」轴标齐全。仅图例文字由 PDF 的「复产／复工」扩写为「复产指数／复工指数」，属编辑性扩写。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：ACD（多选，逐项判定）。化标准形 x²/(1/m)+y²/(1/n)=1。 A ✓：m>n>0 ⇒ 1/n>1/m>0，y² 分母更大，长轴与焦点在 y 轴。 B ✗：m=n>0 时 x²+y²=1/n，半径为 √(1/n) 而非 √n（n=4 时真实半径 1/2，选项给 2）。 C ✓：令右端为 0 得 y²=−(m/n)x²，mn<0 ⇒ −m/n>0，渐近线 y=±√(−m/n)·x。 D ✓：m=0、n>0 ⇒ ny²=1 ⇒ y=±1/√n，是两条平行直线。 正确集合：ACD。 ｜比对：库内答案要点 ACD，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "9a63bab7ebdee5646119c1b31c92f53c90018453524f70ff90535ece6d121ae1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2020-regular-new-gaokao-2-q10",
+      "question_text_sha256": "a03fbf41da5e29b7effe40429a57b77c51cc8c20710f9ff9fc16042c0cf8eea2",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：曲线 C: mx²+ny²=1，A–D 四个判断（含渐近线 y=±√(−m/n)x）一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：BC（多选，逐项判定）。读图：x=π/6 为下降零点、x=2π/3 为上升零点，最大值略在 y 轴左侧。相邻零点差半周期 ⇒ T/2=2π/3−π/6=π/2 ⇒ T=π ⇒ ω=2；由下降零点 2·(π/6)+φ=π 得 φ=2π/3，图象为 sin(2x+2π/3)（x=0 时值 √3/2，与图上「略低于 1」相符）。 A ✗：ω=1 周期不符，且 f(π/6)=sin(π/2)=1≠0。 B ✓：sin(π/3−2x)=sin[π−(π/3−2x)]=sin(2x+2π/3)。 C ✓：cos(2x+π/6)=sin(2x+π/6+π/2)=sin(2x+2π/3)，与 B 是同一函数，必须同选。 D ✗：cos(5π/6−2x)=sin(2x−π/3)=−sin(2x+2π/3)，在 x=π/6 是上升零点，与图象相反。 正确集合：BC。 ｜比对：库内答案要点 BC，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c98e9534f1d7b5451836169db3b88d207bd83f63de89df065ea36ec75032ccf2",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2020-regular-new-gaokao-2-q11",
+      "question_text_sha256": "99689b03c8bd86302b031e1ea11a1fb25817a9ccca3960cd640042a56b4f3c40",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：题干「下图是函数 y=sin(ωx+φ) 的部分图象，则 sin(ωx+φ)=」与四选项 sin(x+π/3)／sin(π/3−2x)／cos(2x+π/6)／cos(5π/6−2x) 一致。配图 images/2020-Ⅱ-t11-正弦图象.png 与 PDF 原图同形：y 轴、刻度 1、O、π/6、2π/3、x 轴标注齐全，相位与零点位置一致；仅曲线左右两端截止位置略有出入（重绘件收于 x 轴、PDF 收于半坡），属重绘毛边，不改变读图信息。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：ABD（多选，逐项判定）。公共基础 0<ab≤((a+b)/2)²=1/4。 A ✓：a²+b²=1−2ab≥1−1/2=1/2。 B ✓：a−b=2a−1∈(−1,1) ⇒ 2^(a−b)>2^(−1)=1/2。 C ✗：log₂a+log₂b=log₂(ab)≤log₂(1/4)=−2，不等号方向与选项相反（a=1/4、b=3/4 时约 −2.415<−2）。 D ✓：(√a+√b)²=1+2√(ab)≤1+2·(1/2)=2 ⇒ √a+√b≤√2。 正确集合：ABD。 ｜比对：库内答案要点 ABD，逐项一致；其「−2 是最大值而非最小值」的定性与我的判定同。",
+        "grade": "A"
+      },
+      "answer_sha256": "76eab4faa1d7a981d475185dbb9e21788e932cda0e584ca02a71c84663f30175",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2020-regular-new-gaokao-2-q12",
+      "question_text_sha256": "b9d205e2aa8b52c478c6e095617a9ea8a247945c890f71f5224786f3ba37afc5",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：a>0、b>0、a+b=1，四个判断 a²+b²⩾1/2／2^(a−b)>1/2／log₂a+log₂b⩾−2／√a+√b⩽√2 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：1/3。建系 A(0,0,0)、N(1,0,0)、M(2,0,1)、D₁(0,2,2)，V=|det[N−A,M−A,D₁−A]|/6=2/6=1/3（数值核验 0.3333333）。换底法同值：A、N、M 共面于侧面 ABB₁A₁，S△ANM=½·1·1=½，D₁ 到该面距离 =2，V=⅓·½·2=1/3。 ｜比对：库内答案要点 1/3，一致，两条算路相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "52cb8524174b8d23ca437892248be80a93adb1d03417f9c9de2d1faf73f68ecf",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2020-regular-new-gaokao-2-q13",
+      "question_text_sha256": "84c5954c94d956f797aeb985196d1fe572f1c2d4be75e39c2a3e0a1cd417b6ff",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：棱长为 2 的正方体 ABCD−A₁B₁C₁D₁、M/N 为棱 BB₁/AB 中点、求三棱锥 A−NMD₁ 的体积，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：16/3。y²=4x ⇒ 2p=4、p=2、F(1,0)，倾斜角 60°，焦点弦 2p/sin²θ=4/(3/4)=16/3（数值核验 5.3333）。联立验算 3(x−1)²=4x ⇒ 3x²−10x+3=0，x₁+x₂=10/3，|AB|=x₁+x₂+p=16/3。 ｜比对：库内答案要点 16/3，一致，且其补充的 x₁x₂=1=p²/4 焦点弦性质我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "fb51a5b78c087b262cc234bbeb7962726f92297d1f324f2f34f3ae1770f7ef58",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2020-regular-new-gaokao-2-q14",
+      "question_text_sha256": "5536fedd10d8a8d1bb11433c224c90dab2e1347742ef8fc3faf102030f28c542",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：斜率 √3 的直线过抛物线 C: y²=4x 的焦点、交 C 于 A,B 两点求 |AB|，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：3n²−2n。{2n−1} 是模 2 余 1、{3n−2} 是模 3 余 1，公共项即模 6 余 1：1,7,13,…，aₙ=6n−5，Sₙ=n(1+6n−5)/2=n(3n−2)=3n²−2n（验算 S₂=8=1+7、S₃=21=1+7+13）。 ｜比对：库内答案要点 3n²−2n，一致；其「两等差数列公共项公差为两公差的最小公倍数」的推广我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "7f755d5cbdd594135acdb3828a97d8a16cd2000cac6ca33ec25aa2465460c6d4",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2020-regular-new-gaokao-2-q15",
+      "question_text_sha256": "96478531ff7670e4392f923e9b3ce0def5c015202779bfb55065986b1fc93e97",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：数列 {2n−1} 与 {3n−2} 的公共项从小到大排列得 {aₙ}，求前 n 项和，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：4+5π/2（≈11.854）。建系 E(0,0)、F(12,0)、G(12,2)、D(0,2)；两个「7」定 A(7,7)。AG 方向 (1,−1)，切点条件 OA⊥AG ⇒ y₀=x₀；tan∠ODC=(y₀−2)/x₀=3/5 ⇒ x₀=5，故 O(5,5)、R=|OA|=2√2。OB⊥BC 且 BC 竖直 ⇒ OB 水平 ⇒ B(5−2√2,5)；直线 AG（y=14−x）与 y=5 交于 H(9,5)，B、O、H 共线即阴影下边界。分割：扇形 OBA 圆心角 180°−45°=135°，面积 (135/360)π(2√2)²=3π；△OAH=½·|OH|·2=½·4·2=4；O 在下边界上，圆孔只挖上半个 =π/2。S=3π+4−π/2=4+5π/2。数值核验：对上边界（x∈[5−2√2,7] 取圆弧、x∈[7,9] 取直线）积分得区域面积 13.42478（=3π+4），减 π/2 得 11.85398，与 4+5π/2=11.853982 相符。 ｜比对：库内答案要点 4+5π/2，一致；其三角形按 ½·2√2·2√2=4 计（OA⊥AH、|AH|=2√2），与我的 ½·4·2 口径不同但同值，且同样点明「圆孔只减一半」。",
+        "grade": "A"
+      },
+      "answer_sha256": "390f6a3abc1a07725e1146129eb0f38202d45d011ea45ad61c512cf9f17ef38d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2020-regular-new-gaokao-2-q16",
+      "question_text_sha256": "76c7f8441e4efedfd9ddc830e5192355487b0de07e6e973957d915d9cc580bc4",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：题干各条件（O 为圆孔及圆弧 AB 所在圆的圆心、A/B 为切点、四边形 DEFG 为矩形、BC⊥DG 垂足 C、tan∠ODC=3/5、BH∥DG、EF=12 cm、DE=2 cm、A 到 DE 与 EF 的距离均为 7 cm、圆孔半径 1 cm、面积单位 cm²）一致（PDF 文本层丢失 ∥ 符号，按渲染判读为 BH∥DG）。配图 images/2020-Ⅱ-t16-零件截面.png 与 PDF 原图逐一相符：A/B/H/O/C/D/E/F/G 九个标注齐全、阴影区域与圆孔位置一致、虚实线区分保留，无裁切。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：选①c=1；选②c=2√3；选③三角形不存在。公共条件：正弦定理 sinA=√3sinB ⇒ a=√3b；余弦定理 c²=3b²+b²−2·√3b·b·(√3/2)=b² ⇒ c=b，形状锁死为 A=2π/3、B=C=π/6、a:b:c=√3:1:1。 ① ac=√3c²=√3 ⇒ c=1（a=√3、b=1）。 ② sinA=sin(2π/3)=√3/2，c·(√3/2)=3 ⇒ c=2√3。 ③ 已证 c=b，若再要 c=√3b 则 (√3−1)b=0 ⇒ b=0，与 b>0 矛盾，三角形不存在。 ｜比对：库内答案要点 ①1 ②2√3 ③不存在，三分支全一致，且同样强调「必须写清矛盾在哪」。",
+        "grade": "A"
+      },
+      "answer_sha256": "9975b7193c4825b341a7df79b9e6bc4b70164e2067ec92a04f8617e7e110aeb5",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2020-regular-new-gaokao-2-q17",
+      "question_text_sha256": "2cb3ff0a2f32b994f27f60e371849b0e87b6b46ffd7096f9a9388eaa7a5e0290",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：三个可选条件 ① ac=√3、② c sinA=3、③ c=√3b 与问题主干（sinA=√3 sinB、C=π/6、求 c 或说明三角形不存在）一致。补注「（10 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) aₙ=2ⁿ；(2) Sₙ=(8/5)[1−(−4)ⁿ]。(1) 以 a₃ 为中心：8/q+8q=20 ⇒ 2q²−5q+2=0 ⇒ q=2 或 1/2，由 q>1 取 q=2，a₁=8/q²=2，aₙ=2ⁿ。(2) aₙaₙ₊₁=2ⁿ·2ⁿ⁺¹=2·4ⁿ，带符号后 bₖ=(−1)^(k−1)·2·4ᵏ 首项 8、公比 −4，本身成等比，Sₙ=8[1−(−4)ⁿ]/(1+4)=(8/5)[1−(−4)ⁿ]。数值核验 n=1..6 逐项求和与闭式完全相等（8、−24、104、−408、1640、−6552）。 ｜比对：库内答案要点 aₙ=2ⁿ、Sₙ=(8/5)[1−(−4)ⁿ]，一致；其等价写法 [8+(−1)^(n−1)·2^(2n+3)]/5 我代数复核成立（8·4ⁿ=2^(2n+3)）。",
+        "grade": "A"
+      },
+      "answer_sha256": "551d5fb48fa59c65d511972c6c375777f5f5a35a7775005df42d085dd78d2315",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2020-regular-new-gaokao-2-q18",
+      "question_text_sha256": "f419bc3dff67eb94a37c686fc17e59fcdcc0005737e49f3ec7f0f23b7135d85c",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p1：公比大于 1 的等比数列、a₂+a₄=20、a₃=8，两小问（通项公式；a₁a₂−a₂a₃+⋯+(−1)^(n−1)aₙaₙ₊₁）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 0.64；(2) 列联表 64/16（合计 80）、10/10（合计 20），列合计 74/26，总计 100；(3) K²≈7.484>6.635，有 99% 把握认为二者有关。(1) 前两行×前两列 32+18+6+8=64 ⇒ 64/100=0.64。(3) ad−bc=64×10−16×10=480，K²=100×480²/(80×20×74×26)=23040000/3078400≈7.4844（数值核验 7.484407）。 ｜比对：库内答案要点 (1)0.64、(2) 列联表逐格相同（其 (2) 标「见解析版」并在解析中给出完整表格）、(3) 同结论同 K² 值，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "8e83dde74f461a70d93644e4547cbb9a18e21f33fb685a8283dfe6bef0ea03bf",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2020-regular-new-gaokao-2-q19",
+      "question_text_sha256": "45eb391fb46a16909f8641d8777750aa98629c5e4abd323d70cfa55b89aff150",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p2：100 天 PM2.5 与 SO₂ 浓度调查，三行三列频数 32/18/4、6/8/12、3/7/10 逐格一致；三小问、K² 公式、附表 0.050/0.010/0.001 → 3.841/6.635/10.828 一致；(2) 的空白 2×2 列联表行列标签一致。PDF 用斜线表头（SO₂ ╲ PM2.5），MD 改写为普通表头列，属 Markdown 表格适配。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 证明见下；(2) √6/3。(1) BC∥AD、AD⊂平面PAD ⇒ BC∥平面PAD；BC⊂平面PBC 且两平面交于 l ⇒ BC∥l。PD⊥底面 ⇒ PD⊥BC，正方形 ⇒ BC⊥CD，PD 与 CD 相交于 D ⇒ BC⊥平面PDC，平移得 l⊥平面PDC。(2) 建系 D(0,0,0)、A(1,0,0)、B(1,1,0)、C(0,1,0)、P(0,0,1)，l 过 P 且平行 AD ⇒ l:(t,0,1)；|QB|²=(t−1)²+1+1=2 ⇒ t=1、Q(1,0,1)。平面 QCD 法向量 n=DC×DQ=(0,1,0)×(1,0,1)=(1,0,−1)，PB=(1,1,−1)，sinθ=|n·PB|/(|n||PB|)=2/(√2·√3)=√6/3（数值核验 0.816497）。 ｜比对：库内答案要点 (1) 同一证明链、(2) √6/3，一致；其补注「|QB| 的最小值恰为 √2 故出现重根正常」我复核成立（Q 在 l 上时 |QB|²=(t−1)²+2≥2）。",
+        "grade": "A"
+      },
+      "answer_sha256": "729e54eadea37fcde1836d566ccbb31078f8b2de0e97c4cd7ad809b1162d59bd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-2020-regular-new-gaokao-2-q20",
+      "question_text_sha256": "001ccfbc50762e55c2e43ebd9b2a24899f20c64ecbe7af0e4c30c540153827a0",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p2：四棱锥 P−ABCD 底面为正方形、PD⊥底面 ABCD、平面 PAD 与平面 PBC 的交线为 l，两小问（l⊥平面 PDC；PD=AD=1、Q 在 l 上、QB=√2，求 PB 与平面 QCD 所成角的正弦值）一致。配图 images/2020-Ⅱ-t20-四棱锥.png 与 PDF 同形，P/A/B/C/D 标注齐全、虚实线区分保留，无裁切。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) x²/16+y²/12=1；(2) 18。(1) k_AM=3/(2+a)=1/2 ⇒ a=4；代入 M(2,3)：4/16+9/b²=1 ⇒ b²=12。(2) A(−4,0)、M(2,3) 为定点，|AM|=√(36+9)=3√5，直线 AM:x−2y+4=0；N(4cosθ,2√3sinθ) 到该线距离 d=|4cosθ−4√3sinθ+4|/√5=|8cos(θ+π/3)+4|/√5≤12/√5，S_max=½·3√5·12/√5=18，取到于 N(2,−3)。数值核验：θ 以 20 万等分扫描，最大面积 17.99999999，对应点 (2.0000,−3.0000)。 ｜比对：库内答案要点 (1) 同方程、(2) 18，一致；其平移切线法验算（x−2y+m=0 相切得 m=±8，取 m=−8 距离 12/√5、切点 (2,−3)）我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "216f983c747e790f9cb685d203c77f71d58829a87f76aad4f781251ea158ac77",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-2020-regular-new-gaokao-2-q21",
+      "question_text_sha256": "bcd209267a84ed0a0623b2586337f2ade900a5df9f94332e3e45b1ec27a9bdb1",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p2：椭圆 C: x²/a²+y²/b²=1 (a>b>0) 过点 M(2,3)、A 为左顶点、AM 斜率 1/2，两小问（求 C 方程；N 为椭圆上任意一点求 △AMN 面积最大值）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 2/(e−1)；(2) a∈[1,+∞)。(1) a=e 时 f(x)=eˣ−lnx+1，f(1)=e+1，f'(x)=eˣ−1/x，f'(1)=e−1，切线 y=(e−1)x+2，截距 2 与 −2/(e−1)，S=½·(2/(e−1))·2=2/(e−1)（≈1.16395）。(2) 同构：aeˣ⁻¹=e^(x−1+lna)，x=e^(lnx)，令 g(t)=eᵗ+t（g'=eᵗ+1>0 严增），则 f(x)−1=g(x−1+lna)−g(lnx)，故 f(x)≥1 ⟺ x−1+lna≥lnx ⟺ lna≥lnx−x+1 对一切 x>0 成立；h(x)=lnx−x+1 在 x=1 取最大值 0 ⇒ lna≥0 ⇒ a≥1。数值核验：在 (0,5] 上扫描 min f，a=0.9 得 0.792<1、a=0.99 得 0.980<1、a=1 得 1.000、a=1.01 得 1.020、a=2 得 2.531，临界点确在 a=1。 ｜比对：库内答案要点 (1) 2/(e−1)、(2) [1,+∞)，一致；其同构解法与我相同（我另用 eᵘ≥u+1 与 f(1)=a+lna<1 的必要性反证交叉确认了同一区间）。",
+        "grade": "A"
+      },
+      "answer_sha256": "d846fea2f71e950081b1a54add596e53be30462c3dac3d419631e0df6d3867b4",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-2020-regular-new-gaokao-2-q22",
+      "question_text_sha256": "b442976c4444c317b857f7ede476f919d45bd44301594679ffac61a2e30f324a",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      },
+      "source_sha256": "7f8ed4cbb48b414b72ad3b1750b0cb7b21949462264f7b93829e7dd315f27329",
+      "transcription_review": {
+        "evidence": "PDF p2：f(x)=ae^(x−1)−ln x+ln a，两小问（a=e 时切线与两坐标轴围成三角形的面积；f(x)⩾1 求 a 的取值范围）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}

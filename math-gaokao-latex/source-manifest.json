@@ -31,7 +31,7 @@
         "gk-2021-regular-new-gaokao-1",
         "gk-2021-regular-new-gaokao-2"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     },
     {
       "batch_id": "phase0-b04",
@@ -72,7 +72,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "77d82e00-6976-4040-86ac-b9864608b9cd",
+  "last_transaction_id": "77b86264-a767-4d94-9365-18bf1c01a5ba",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -501,14 +501,20 @@
           "path": "2020_新高考Ⅱ卷/figures/f2020x2_t9_lines.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0025",
+        "ISSUE-0026",
+        "ISSUE-0030",
+        "ISSUE-0031",
+        "ISSUE-0032"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2020x2"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-new-gaokao-2",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2020_新高考Ⅱ卷",
       "question_count": 22,
       "resume_action": null,
@@ -518,7 +524,9 @@
         "questions": "2020/2020_数学真题_新高考Ⅱ_试题.md",
         "solution_body": "2020/2020_数学真题_新高考Ⅱ_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e"
+      ],
       "title": "2020 年·新高考Ⅱ卷",
       "track": "none",
       "year": 2020
@@ -531,14 +539,21 @@
           "path": "2021_新高考Ⅰ卷/figures/f2021_t20_tetra.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0026",
+        "ISSUE-0027",
+        "ISSUE-0028",
+        "ISSUE-0029",
+        "ISSUE-0030",
+        "ISSUE-0031"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2021"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2021-regular-new-gaokao-1",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2021_新高考Ⅰ卷",
       "question_count": 22,
       "resume_action": null,
@@ -548,7 +563,9 @@
         "questions": "2021/2021_数学真题_试题.md",
         "solution_body": "2021/2021_数学真题_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      ],
       "title": "2021 年·新高考Ⅰ卷",
       "track": "none",
       "year": 2021
@@ -565,14 +582,19 @@
           "path": "2021_新高考Ⅱ卷/figures/f2021x2_t19_pyr.tex"
         }
       ],
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0024",
+        "ISSUE-0026",
+        "ISSUE-0030",
+        "ISSUE-0031"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [
         "2021x2"
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2021-regular-new-gaokao-2",
-      "production_state": "legacy_unverified",
+      "production_state": "editions_generated",
       "project_dir": "2021_新高考Ⅱ卷",
       "question_count": 22,
       "resume_action": null,
@@ -582,7 +604,9 @@
         "questions": "2021/2021_数学真题_新高考Ⅱ_试题.md",
         "solution_body": "2021/2021_数学真题_新高考Ⅱ_解析正文.md"
       },
-      "source_ids": [],
+      "source_ids": [
+        "src-20c5bf5c6684f32611f1bb38d0907bd8800fb03780f0b52c603fb222695aa505"
+      ],
       "title": "2021 年·新高考Ⅱ卷",
       "track": "none",
       "year": 2021
@@ -931,7 +955,7 @@
       "year": 2026
     }
   ],
-  "revision": 788,
+  "revision": 792,
   "schema_version": 1,
   "sources": [
     {
@@ -18372,8 +18396,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f84500b1ff03003c6dd00eac88cad9ea94a70b37",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-regular-new-gaokao-2",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020新高考2(海南).pdf",
       "regions": [],
       "source_id": "src-48131c790a20ff5ba4bce9416b0422dd2f2a9b23fd269fa657eb7581877a5b4e",
@@ -18612,8 +18636,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9b0483882cea58bc8e857f9f44747408eb8f8cfd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-new-gaokao-1",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021新高考1(山东,广东,湖南,湖北,河北,江苏,福建).pdf",
       "regions": [],
       "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390",
@@ -18636,8 +18660,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ca3d46265f6042a7c6a828251877f8825081cef7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-new-gaokao-2",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021新高考2(海南,辽宁,重庆).pdf",
       "regions": [],
       "source_id": "src-20c5bf5c6684f32611f1bb38d0907bd8800fb03780f0b52c603fb222695aa505",

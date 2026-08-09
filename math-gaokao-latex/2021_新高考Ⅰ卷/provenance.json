@@ -1,0 +1,580 @@
+{
+  "batch_id": "phase0-b03",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2021-regular-new-gaokao-1",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（{2,3}）。A=(−2,4) 为开区间，B 中 2、3 落入，4 因端点不含被排除，5 超界。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "166580cdcdf247dc78927009e79f0176557b5ee5d51f6f92ba38637a05b18e74",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-2021-regular-new-gaokao-1-q01",
+      "question_text_sha256": "c7a8470c97d19786a50621c95767b8edb3dcd75665563141b1afcb8a72563ca5",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：A={x|−2<x<4}、B={2,3,4,5} 求 A∩B，四选项 {2}／{2,3}／{3,4}／{2,3,4} 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（6+2i）。z̄=2+i，z̄+i=2+2i，(2−i)(2+2i)=4+4i−2i−2i²=6+2i（数值核验 complex(2,-1)*complex(2,2)=(6+2j)）。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "815d650210dbd8ad43bb3e440ca0520c131db9e7cf384cc12581f8782a12e78f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-2021-regular-new-gaokao-1-q02",
+      "question_text_sha256": "aa2c0198bda5d6fd84384e80a465019b9278dcd0992f78cc9fbc473a35493587",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：z=2−i，求 z(z̄+i)，四选项 6−2i／4−2i／6+2i／4+2i 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（2√2）。底面周长＝展开半圆弧长：2π·√2=πl ⇒ l=2√2。 ｜比对：库内答案要点 B，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "6df7383682e48a2440d1c270e27e8824682ceb957dcd6ee18c7c1c9920825f3b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-2021-regular-new-gaokao-1-q03",
+      "question_text_sha256": "a830f008f043b5a9d29a9800ccfc3143847b14b070871a345022e39ed2bfe1d1",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：圆锥底面半径 √2、侧面展开图为一个半圆，求母线长，四选项 2／2√2／4／4√2 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：A（(0,π/2)）。x−π/6∈[−π/2+2kπ,π/2+2kπ] ⇒ x∈[−π/3+2kπ,2π/3+2kπ]；k=0 段为 [−π/3,2π/3]（右端≈2.09），只有 (0,π/2)（右端≈1.57）整体含于其中，B、C、D 均越界。 ｜比对：库内答案要点 A，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "7194001613337119e128953af1be9625f4a671a9d73f6b030df8709d8361885d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-2021-regular-new-gaokao-1-q04",
+      "question_text_sha256": "dde397b7b655c6999c604b1fda48668d15ea0d7326d194d94ca8c71487ecf402",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=7sin(x−π/6) 单调递增区间，四选项 (0,π/2)／(π/2,π)／(π,3π/2)／(3π/2,2π) 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（9）。椭圆定义 |MF₁|+|MF₂|=2a=6 为定值，基本不等式给 |MF₁||MF₂|≤(6/2)²=9，等号在两者均为 3（M 取短轴端点 (0,±2)）时成立，该点确在椭圆上。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "5071a0585005ddae93d718b7fa27548f9b1d9c3983692b64e47ec8c7a561cf39",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-2021-regular-new-gaokao-1-q05",
+      "question_text_sha256": "73b064bc892aa9f8d0b3eb74908f8578e9aaf7b72fc8b6497a81e8b032caa97e",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：椭圆 C: x²/9+y²/4=1 的两焦点 F₁,F₂、M 在 C 上，求 |MF₁|·|MF₂| 最大值，选项 13／12／9／6 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：C（2/5）。1+sin2θ=(sinθ+cosθ)²，约去分母得 sinθ(sinθ+cosθ)=sin²θ+sinθcosθ；齐次化为 (tan²θ+tanθ)/(tan²θ+1)=(4−2)/5=2/5（tanθ=−2≠−1 保证分母非零）。数值核验：θ=arctan(−2) 时原式 =0.4000000。 ｜比对：库内答案要点 C，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "e3e22d35693e79f4ee2419b672c85b9ef0675fdbb707a77d0bf2e8e9a8bcc184",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-2021-regular-new-gaokao-1-q06",
+      "question_text_sha256": "1b5cc4c8fa34ce1c457004caf9f6b0a719b49ebc37267b9826045f7b4f31d4db",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：tanθ=−2，求 sinθ(1+sin2θ)/(sinθ+cosθ)，四选项 −6/5／−2/5／2/5／6/5 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：D（0<b<eᵃ）。切点横坐标 t，切线过 (a,b) ⇒ b=eᵗ(a+1−t)=:h(t)；h'(t)=eᵗ(a−t)，t=a 处取最大 h(a)=eᵃ；t→−∞ 时 h→0⁺，t→+∞ 时 h→−∞。两解需 b 同时落在左分支值域 (0,eᵃ) 与右分支值域 (−∞,eᵃ) 内，即 0<b<eᵃ。 ｜比对：库内答案要点 D，一致，分支值域取交的论证相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "9a9199c4fe78f283b17ce0a9d2ff183610640d0bbb2fd00ad3c8b41622131802",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-2021-regular-new-gaokao-1-q07",
+      "question_text_sha256": "5f4f808bda9d54b7c13c29818cad5dab889b2bd6fe6b2c74659fe61c3e5c6009",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：过点 (a,b) 可作 y=eˣ 的两条切线，四选项 e^b<a／e^a<b／0<a<e^b／0<b<e^a 一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：B（甲与丁独立）。36 等可能样本点，P(甲)=P(乙)=1/6，P(丙)=5/36（和为 8 有 5 种），P(丁)=1/6。逐项数值核验 P(XY) 与 P(X)P(Y)：甲丙 0 vs 5/216 ✗；甲丁 1/36 vs 1/36 ✓；乙丙 1/36 vs 5/216 ✗；丙丁 0 vs 5/216 ✗。 ｜比对：库内答案要点 B，一致；其洞察「每个首次结果都恰有一个第二次取值使和为 7」我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "0af615db4ea7c96a55b13b6ddf5e06b376b043cef197b3601481296a642d09e8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-2021-regular-new-gaokao-1-q08",
+      "question_text_sha256": "cad0dd0014a0637da3a705f88890d4dbd759fd903fac44746091d820ae7dcf3b",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：6 个标 1–6 的相同球、有放回取两次；甲（首次为 1）、乙（第二次为 2）、丙（和为 8）、丁（和为 7）四事件定义与四个独立性选项一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：CD（多选，逐项判定）。yᵢ=xᵢ+c 是整体平移，c≠0。 A ✗：平均数随之平移 c，不相同。 B ✗：中位数同样平移 c。 C ✓：标准差是对中心的离差，平移不改变。 D ✓：极差 max−min，平移抵消不变。 正确集合：CD。 ｜比对：库内答案要点 CD，逐项一致（其归纳为「位置类统计量全平移、离散程度类全不变」）。",
+        "grade": "A"
+      },
+      "answer_sha256": "0907e371cc870b60021d504f8b57053e8a06622b24ae52d2eff256d533d9b784",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-2021-regular-new-gaokao-1-q09",
+      "question_text_sha256": "bd09542b9b01ccbbb4a56e6838f81329d34291a8c14ae376ee5834577960c397",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：多选题（第 9–12 题）。样本 x₁…xₙ、yᵢ=xᵢ+c（c 为非零常数），四选项（平均数／中位数／标准差／极差相同）逐字一致。本题无配图。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：AC（多选，逐项判定）。 A ✓：P₁、P₂ 均在单位圆上，|OP₁|=|OP₂|=1。 B ✗：|AP₁|²=2−2cosα、|AP₂|²=2−2cosβ，需 cosα=cosβ 才相等，非恒成立。 C ✓：OA·OP₃=cos(α+β)，OP₁·OP₂=cosαcosβ−sinαsinβ=cos(α+β)，正是两角和余弦公式。 D ✗：OA·OP₁=cosα，OP₂·OP₃=cosβcos(α+β)−sinβsin(α+β)=cos(α+2β)，不恒等。 数值核验：随机取三组 (α,β) 逐项判真伪，结果恒为 A✓ B✗ C✓ D✗。 正确集合：AC。 ｜比对：库内答案要点 AC，逐项一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "ff2745faa4ff8f27ec33d07431523415cee0b22bb0b769cb8ec33c5fe82b3ef1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-2021-regular-new-gaokao-1-q10",
+      "question_text_sha256": "b469cf6fe882414a621d50705f58bb7d33cfa3125c5ac7eb571547ba9ea7e680",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：P₁(cosα,sinα)、P₂(cosβ,−sinβ)、P₃(cos(α+β),sin(α+β))、A(1,0)，四个向量等式选项一致（含 |OP₁→|=|OP₂→| 与 OA→·OP₃→=OP₁→·OP₂→）。本题无配图。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：ACD（多选，逐项判定）。圆心 C(5,5)、r=4；直线 AB:x+2y−4=0，圆心到它距离 d=11/√5≈4.9193，故 P 到 AB 的距离范围 [d−4,d+4]≈[0.9193,8.9193]。 A ✓：最大 8.92<10。 B ✗：最小 0.92<2。 C、D：|BC|=√34≈5.831>4 故 B 在圆外，切线长 √(34−16)=3√2；∠ABC≈57.53° 大于从 B 看圆的半张角 arcsin(4/√34)≈43.32°，射线 BA 落在视角锥之外，于是 ∠PBA 的最小值与最大值都在两个切点处取到，两处 |PB| 都等于 3√2 ⇒ C ✓、D ✓ 同时成立。 数值核验：圆周 200 万等分扫描，∠PBA 最小时 |PB|=4.242637、最大时 |PB|=4.242646，均≈3√2=4.2426407。 正确集合：ACD。 ｜比对：库内答案要点 ACD，逐项一致，且同样给出 57.5°>43.3° 的判据。",
+        "grade": "A"
+      },
+      "answer_sha256": "c654266f9c4b476abb2ae4a3cbc1b6367d267df2b13ac850fb139ab1937b3a07",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-2021-regular-new-gaokao-1-q11",
+      "question_text_sha256": "94875c60dba5b83ec855f42d62ae06dbf813133fb749047d4d84815fdd41d0e3",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：P 在圆 (x−5)²+(y−5)²=16 上、A(4,0)、B(0,2)，四选项（距离小于 10／大于 2；∠PBA 最小／最大时 |PB|=3√2）一致。本题无配图。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：BD（多选，逐项判定）。建系 B(0,0,0)、C(1,0,0)、A(1/2,√3/2,0)，上层 z 加 1，则 P(λ,0,μ) 遍历侧面 BCC₁B₁。 A ✗：λ=1 时 P 在 CC₁ 上，|AB₁|=√2 定，但 |AP|+|B₁P|=√(1+μ²)+√(1+(1−μ)²) 随 μ 变（数值核验周长 μ=0/0.25/0.5/0.75/1 依次为 3.8284/3.6950/3.6503/3.6950/3.8284），非定值。 B ✓：μ=1 时 P 在 B₁C₁ 上，B₁C₁∥BC⊂平面A₁BC 且 B₁∉该平面，故 P 到平面距离恒定，底面 △A₁BC 固定 ⇒ 体积定值（数值核验 λ 取 0~1 体积恒为 0.144338）。 C ✗：λ=1/2 时 A₁P·BP=−μ(1−μ)，μ=0 与 μ=1 两个解，不止一个点。 D ✓：μ=1/2 时 A₁B·AB₁≡0 自动成立，A₁B·AP=(1−λ)/2=0 仅得 λ=1（P 为 CC₁ 中点），唯一。 正确集合：BD。 ｜比对：库内答案要点 BD，逐项一致；其 C 项写成 A₁P·BP=μ²−μ，与我的 −μ(1−μ)=μ²−μ 同式。",
+        "grade": "A"
+      },
+      "answer_sha256": "b8a20d1668f4909f775cf027abefc47bb0b2900850a5546242b02b96cf86187f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-2021-regular-new-gaokao-1-q12",
+      "question_text_sha256": "25896bb66deb82ee63eb6a5a49b350579ff535136a1401c67f551bb916ef824e",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：正三棱柱 ABC−A₁B₁C₁、AB=AA₁=1、BP→=λBC→+μBB₁→、λ,μ∈[0,1]，四选项（λ=1 周长定值／μ=1 体积定值／λ=1/2 有且仅有一点 A₁P⊥BP／μ=1/2 有且仅有一点 A₁B⊥平面 AB₁P）一致。本题无配图。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：1。x³ 为奇函数，欲使乘积为偶函数须 g(x)=a·2ˣ−2⁻ˣ 为奇函数；由 g(0)=a−1=0 得 a=1（或由 g(−x)=−g(x) 得 (a−1)(2ˣ+2⁻ˣ)=0）。检验 a=1 时 g(x)=2ˣ−2⁻ˣ 确为奇函数。 ｜比对：库内答案要点 1，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "eccb9646c5669240ced0a2344f736b79ee9010e526a3e23abf7cc8991d161145",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-2021-regular-new-gaokao-1-q13",
+      "question_text_sha256": "02f6bad765301d7bca9ed2869fcc37e56d5f8764d628e18c0d893f824a683849",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=x³(a·2ˣ−2⁻ˣ) 为偶函数求 a，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：x=−3/2。F(p/2,0)，PF⊥x 轴 ⇒ P(p/2,p)（取正）；Q(q,0)，OP·PQ=0 ⇒ (p/2)(q−p/2)−p²=0 ⇒ q=5p/2；|FQ|=|5p/2−p/2|=2p=6 ⇒ p=3，准线 x=−p/2=−3/2。 ｜比对：库内答案要点 x=−3/2，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "3db86e8f97f2aab39d5d8981cbb826ef39ce52a994ba2e56dcddd1bea0dd57a4",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-2021-regular-new-gaokao-1-q14",
+      "question_text_sha256": "f49d115052ce66ac70eea4a2b28efb70a38e6a92a7e238dd7edd27b81456c1ac",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：抛物线 C: y²=2px (p>0) 焦点 F、P 在 C 上、PF⊥x 轴、Q 在 x 轴上且 PQ⊥OP、|FQ|=6，求准线方程，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：1。x>0 分段：x≥1/2 时 f=2x−1−2lnx，f'=2(x−1)/x，x=1 处极小 f(1)=1；0<x<1/2 时 f=1−2x−2lnx，f'=−2−2/x<0 恒减，右端 f(1/2)=2ln2≈1.386>1。故全局最小值 1，在 x=1 取到（数值核验 (0,5] 上 200 万点扫描最小值 1.0000000，位置 x≈1.0000）。 ｜比对：库内答案要点 1，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "a4df1bac7d0953199052a51613ba9308fb4b67ee86904255097ba0ac819297bf",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-2021-regular-new-gaokao-1-q15",
+      "question_text_sha256": "3916352f0f2d4c8c28c0420706d012e3bafedd36633fbe78f444a0aec0a974e0",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：f(x)=|2x−1|−2ln x 的最小值，一致。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：5 种；Σ_{k=1}^{n}S_k=720−240(n+3)/2ⁿ。对折 n 次时长边折 i 次、宽边折 n−i 次（i=0..n），共 n+1 种规格，n=4 得 5 种；每种规格面积均为 240/2ⁿ，故 Sₙ=(n+1)·240/2ⁿ（检验 S₁=240、S₂=180）。用 Σk/2ᵏ=2−(n+2)/2ⁿ 与 Σ1/2ᵏ=1−1/2ⁿ 得 ΣS_k=240[3−(n+3)/2ⁿ]=720−240(n+3)/2ⁿ（数值核验 n=1,2,3,5 逐项累加分别为 240/420/540/660，与闭式完全相等）。 ｜比对：库内答案要点 5 种、720−240(n+3)/2ⁿ，一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "9f6c50460ea755ffc9295b77be334f5476c7e3c87d5d8386b9748223803081e2",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-2021-regular-new-gaokao-1-q16",
+      "question_text_sha256": "1fb678e2d6f5336f65a651e86fec10ad4e492fc834194f49d9cbd65e7ea04d70",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：剪纸对折题，20 dm×12 dm、对折 1 次得 10×12 与 20×6 两种、S₁=240 dm²、对折 2 次得 5×12／10×6／20×3 三种、S₂=180 dm²，两空（对折 4 次的种数；∑ₖ₌₁ⁿSₖ）一致。PDF 在 S₁=240 dm² 后用逗号，MD 作分号，属标点。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) b₁=2、b₂=5、bₙ=3n−1；(2) 300。(1) 逐项 a₁=1→a₂=2→a₃=4→a₄=5，故 b₁=2、b₂=5；两步合并 b_{n+1}=a_{2n+2}=a_{2n+1}+1=a_{2n}+3=bₙ+3，等差首项 2 公差 3 ⇒ bₙ=3n−1。(2) 偶数项和 Σ_{n=1}^{10}(3n−1)=165−10=155；奇数项 a_{2n−1}=bₙ−1=3n−2，Σ_{n=1}^{10}(3n−2)=165−20=145；总和 300。数值核验：按递推生成前 20 项直接求和得 300，且 a_{2n}=3n−1 对 n=1..10 全部成立。 ｜比对：库内答案要点 bₙ=3n−1、S₂₀=300，一致；其奇数项按 a₁=1 与 a_{2n+1}=3n+1（n=1..9）拆成 1+144，与我的 145 同值。",
+        "grade": "A"
+      },
+      "answer_sha256": "f2db74659fd4d26a0dc4cae1545633c4676f9964758905c0fede9aa133ca0d1b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-2021-regular-new-gaokao-1-q17",
+      "question_text_sha256": "e6f8f7ecbfa0f24d9db5ff3dc1c028004e96cde5c1fa80a8e096e9690f92b7ee",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：a₁=1、aₙ₊₁=aₙ+1（n 为奇数）／aₙ+2（n 为偶数），两小问（bₙ=a₂ₙ 写出 b₁,b₂ 并求通项；求 {aₙ} 前 20 项和）一致。补注「（10 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) X∈{0,20,100}，P 依次 0.2、0.32、0.48（E(X)=54.4）；(2) 应先答 B 类。(1) A 答错得 0（0.2）；A 对 B 错得 20（0.8×0.4=0.32）；两题全对得 100（0.8×0.6=0.48），概率和为 1。(2) 先答 B：P(Y=0)=0.4、P(Y=80)=0.6×0.2=0.12、P(Y=100)=0.6×0.8=0.48，E(Y)=9.6+48=57.6>54.4，故先答 B。数值核验 E(X)=54.4、E(Y)=57.6。 ｜比对：库内答案要点分布列逐格相同（其 (1) 标「见解析版」并在解析中给出完整表格）、结论同为先答 B，一致；其直观解释「全对概率同为 0.48，差别在第二题答错时保住 80 还是 20 分」我复核成立。",
+        "grade": "A"
+      },
+      "answer_sha256": "0538b467490ef33be33183667c10543af0af6f8d7cde0e965f699fdbff45cb67",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-2021-regular-new-gaokao-1-q18",
+      "question_text_sha256": "98398391c7d8bdfd9c156b455932de8ed302406c0876c4e9fb4aed989c243683",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：一带一路知识竞赛，A 类每题 20 分、B 类每题 80 分、答错则结束、答对再抽另一类，P(A 类答对)=0.8、P(B 类答对)=0.6、与次序无关；两小问（先答 A 类求 X 分布列；期望最大应先答哪类）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 证 BD=b；(2) cos∠ABC=7/12。(1) 正弦定理 sinB=b/(2R)、sinC=c/(2R)，条件 BD·sinB=a·sinC 化为 BD·b=ac；又 b²=ac ⇒ BD·b=b² ⇒ BD=b。(2) AD=2b/3、DC=b/3、BD=b；在 △ABD 与 △CBD 中对互补角 ∠BDA、∠BDC 用余弦定理，按 1:2 加权相加消去 cos∠BDA，得 2a²+c²=11b²/3=11ac/3；除以 ac 并令 t=c/a 得 t+2/t=11/3 ⇒ t=3 或 2/3。cosB=(a²+c²−ac)/(2ac)=(1+t²−t)/(2t)：t=3 给 7/6>1 舍，t=2/3 给 7/12。数值核验：取 a=3、c=2、b=√6 实际作图，D 为 AC 上 AD=2DC 之点，算得 |BD|=2.4494949=b、cos∠ABC=0.5833333=7/12。 ｜比对：库内答案要点 (1) 同链、(2) 7/12，一致，且同样标出 t=3 支应舍。",
+        "grade": "A"
+      },
+      "answer_sha256": "6fe61e6a8c0335081134c59c38f9f2407cfed6ffc9793046540586c5c3897375",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-2021-regular-new-gaokao-1-q19",
+      "question_text_sha256": "98702e1721a9197063081e048781251b75ef6c0221f2c08fbbe99418ec013ee9",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p1：b²=ac、D 在边 AC 上、BD·sin∠ABC=a·sinC，两小问（证 BD=b；AD=2DC 求 cos∠ABC）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) 证 OA⊥CD；(2) V=√3/6。(1) AB=AD 且 O 为 BD 中点 ⇒ AO⊥BD（三线合一）；平面 ABD⊥平面 BCD 且交线为 BD，AO⊂平面ABD 并垂直交线 ⇒ AO⊥平面BCD ⇒ AO⊥CD。(2) 建系 O 原点、OA 为 z 轴：△OCD 边长 1 等边 ⇒ OD=OB=1，D(1,0,0)、B(−1,0,0)、C(1/2,√3/2,0)、A(0,0,h)；DE=2EA ⇒ E(1/3,0,2h/3)。平面 EBC 法向量 n=BC×BE=(√3h/3,−h,−2√3/3)，与 (0,0,1) 夹角余弦 =1/√(h²+1)=cos45°=√2/2 ⇒ h=1。另用投影法交叉验证：E 到底面距离 2h/3，其投影 (1/3,0,0) 到直线 BC（x−√3y+1=0）距离 2/3，tan45°=(2h/3)/(2/3)=h ⇒ h=1。S△BCD=½·BD·h_C=½·2·(√3/2)=√3/2，V=⅓·(√3/2)·1=√3/6。数值核验：h=1 时二面角恰 45.000°，二分求根得 h=1.0000000，V=0.2886751=√3/6。 ｜比对：库内答案要点 (1) 同证明链、(2) √3/6，一致，法向量与我逐分量相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "2faa1065d904046e1898c9dbe8749aacf4d90f76e437391283a3e7e7ce1ec4c5",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-2021-regular-new-gaokao-1-q20",
+      "question_text_sha256": "66cfa7a46b62e7d329dcbe206fe7158e40c31fb886f64aea4605dc5bf556cd38",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p2：三棱锥 A−BCD、平面 ABD⊥平面 BCD、AB=AD、O 为 BD 中点，两小问（证 OA⊥CD；△OCD 为边长 1 的等边三角形、E 在棱 AD 上、DE=2EA、二面角 E−BC−D 为 45°，求体积）一致。配图 images/2021-t20-三棱锥.png 与 PDF 同形：A/B/C/D/E/O 六个标注齐全（放大后确认中点标注为字母 O 而非 Q，与题干一致），虚实线区分保留，无裁切。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) x²−y²/16=1（x≥1，右支）；(2) 斜率之和为 0。(1) 差为正定值 ⇒ 双曲线右支；2a=2 ⇒ a=1，c=√17 ⇒ b²=16。(2) 设 T(1/2,t)，用参数式 x=1/2+s·cosθ、y=t+s·sinθ 代入 16x²−y²=16 得 s²(16cos²θ−sin²θ)+s(16cosθ−2t·sinθ)−(12+t²)=0，韦达定理给 |TA|·|TB|=|s₁s₂|=(12+t²)(1+k²)/|16−k²|。又直线与同一支交于两点要求 x₁x₂=−(m²+16)/(16−k²)>0 即 k²>16（斜率陡于渐近线 ±4），故两式的 16−k² 同号，去绝对值化简得 17k₁²=17k₂² ⇒ k₁²=k₂²，两直线相异 ⇒ k₁=−k₂ ⇒ k₁+k₂=0。数值核验：闭式 (12+t²)(1+k²)/|16−k²| 与直接求交点算得的乘积在 t=0/1.3/−2.5 上误差 <1e−10；在 k²>16 上 φ(u)=(1+u)/(u−16) 严格递减故单射，佐证 k₁²=k₂² 是唯一出路；|k|<4 的直线确实无法与右支交于两点（数值枚举返回空）。 ｜比对：库内答案要点 (1) 同方程（含 x≥1）、(2) 0，一致，参数式与 17k₁²=17k₂² 的收束步骤逐字相同。措辞小瑕（不影响结论、未登记 issue）：库内称「T 在双曲线内部」，而 T(1/2,t) 实际位于两支之间的中心区域而非某一支的凹侧；真正起作用的判据是 x₁x₂>0 ⇒ k²>16，与 T 的具体位置无关。",
+        "grade": "A"
+      },
+      "answer_sha256": "db94810979c56480faa82f28dc1cd5aba15274b6e4b46e07d4576a6b382018cd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-2021-regular-new-gaokao-1-q21",
+      "question_text_sha256": "4939ce655171f534437924d6e9943fc6ae946ab51fbd091b2d347f56fb98412e",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p2：F₁(−√17,0)、F₂(√17,0)、|MF₁|−|MF₂|=2，两小问（求 C 的方程；T 在直线 x=1/2 上、|TA|·|TB|=|TP|·|TQ|，求 AB 与 PQ 斜率之和）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "我的答案：(1) f'(x)=−lnx，f 在 (0,1) 递增、在 (1,+∞) 递减，最大值 f(1)=1；(2) 2<1/a+1/b<e 得证。(2) 条件两边除以 ab 整理得 (1+lna)/a=(1+lnb)/b；令 u=1/a、v=1/b，则 u(1−lnu)=f(u)、v(1−lnv)=f(v)，问题化为「f(u)=f(v)、u≠v，证 2<u+v<e」。由 (1) 不妨设 0<u<1<v，且公共值 m=f(u)∈(0,1)>0 故 v<e。 左半：g(x)=f(x)−f(2−x) 在 (0,1) 上 g'(x)=−ln[x(2−x)]>0 递增且 g(1)=0 ⇒ g(u)<0 ⇒ f(u)<f(2−u)，由 f 在 (1,∞) 递减得 v>2−u。 右半：f 凹（f''=−1/x<0），在 x=e 处切线 y=e−x ⇒ f(x)<e−x（x≠e），故 v<e−f(v)=e−f(u)=e−u(1−lnu)，得 u+v<e+u·lnu<e（0<u<1 时 lnu<0）。数值核验：取 u=0.05/0.2/0.5/0.8/0.95/0.999 二分求出对应 v，u+v 依次为 2.5603/2.3268/2.1030/2.0143/2.0008/2.0000，全部落在 (2,e)=(2,2.71828) 内，且回代 b·lna−a·lnb−(a−b) 残差为 0。 ｜比对：库内答案要点 (1) 同结论、(2) 同换元与同一对上下界证明（左半 g(x)=f(x)−f(2−x)、右半用 x=e 处切线），一致。我另用 h(x)=f(x)−f(e−x)（h(0⁺)=0、h'=ln((e−x)/x)>0）独立复核了右半，结论相同。",
+        "grade": "A"
+      },
+      "answer_sha256": "7dbc8ad5d3cce376296decab45373b76f312baa7e06c68e9195bf0917e043d2e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-2021-regular-new-gaokao-1-q22",
+      "question_text_sha256": "2d25b6f0361cca5792fb26a908d7d6727056991decd17c45551a3b1574561573",
+      "reviewer_role": "b03-blind-answer-reviewer-opus",
+      "solver_role": "b03-answer-solver-opus",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-a24711b99e9d68a845514ff1faa5bf62f47959216a7352f64c9b097cd841e390"
+      },
+      "source_sha256": "8c3b3c8c318649c16b4c2b7dc5ea668e2507c8afcb54759c4da5b47a69e0d3f4",
+      "transcription_review": {
+        "evidence": "PDF p2：f(x)=x(1−ln x)，两小问（讨论单调性；b·lna−a·lnb=a−b 时证 2<1/a+1/b<e）一致。补注「（12 分）」为编辑性增补。",
+        "result": "passed",
+        "role": "b03-question-reviewer-opus"
+      }
+    }
+  ],
+  "schema_version": 1
+}
