@@ -934,13 +934,12 @@
   "impact": "non_blocking",
   "paper_id": "gk-2024-regular-new-gaokao-2",
   "question_id": "gk-2024-regular-new-gaokao-2-q19",
-  "resume_action": "本条是删除源衍文的勘误裁决书面载体，规范题面不需回改。把 evidence 中的四要素誊入 report.md 的勘误清单（现清单尚无本条）",
+  "resume_action": "本条是删除源衍文的勘误裁决书面载体，规范题面不需回改。本条的裁决结论已在 report.md 第 50 行「批次 1 勘误与保留意见」第 1 条（「2024 Q19 源 PDF 衍文：原文『与 C 的左支点交于点 Q_{n-1}』多一「点」字…按语法正确版转录」）——勿重复新增条目；如需补强，只应把本 issue evidence 里的四要素（来源页/源文件 SHA-256/衍字双证/旧新题面 SHA-256）补进该既有条目",
   "source_id": "src-47e5b559bef050d8a1bc792cfc8708d11c2477b98a2a926d00bdc165dd18f11c",
   "status": "open",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0053
 
 ```json
@@ -983,7 +982,7 @@
     "gk-2024-regular-new-gaokao-1"
   ],
   "conflict_code": "figure-trim-artifacts",
-  "current_evidence": "沿 b02 的 ISSUE-0020、b03 的 ISSUE-0032 同 type 同 conflict_code 另立新条（图片毛边批量单家族）。题面核对判 passed：该 PNG 顶点与虚实线约定与源一致，毛边不涉内容缺失。本批仅此一张有毛边——其余含图题（2024Ⅱ q17、2025全国1 q17、2025全国2 q17）均经视读确认四边无墨迹触边、无裁切。",
+  "current_evidence": "沿 b02 的 ISSUE-0020、b03 的 ISSUE-0032 同 type 同 conflict_code 另立新条（图片毛边批量单家族）。题面核对判 passed：该 PNG 顶点与虚实线约定与源一致，毛边不涉内容缺失。毛边实测（导入方复核）：碎片位于 images/2024-t17-四棱锥.png（400×310）顶部，横跨列 120–122（宽 2–3 px）、纵向 5 行（第 0–4 行；其中第 4 行为抗锯齿灰阶，按严格阈值 <128 计则为 4 行），碎片来源是上一行文字「√42/7」中「7」的竖尾。b05 四卷共有 6 道含图题：2024 新高考Ⅰ q11（2024-t11-曲线.png）、q17（本条）、2024 新高考Ⅱ q17（2024-Ⅱ-t17-翻折.png）、2025 全国 1 q06（2025-t6-风速.png）、q17（2025-t17-四棱锥.png）、2025 全国 2 q17（2025-2-t17-翻折四边形.png）。除本条外，其中 5 道经视读确认四边无墨迹触边、无裁切；唯一例外是 2025 全国 1 q06——该图顶边被裁且源图 2 纵轴「y」轴名与箭头整体缺失，属内容完整性缺陷、不属本毛边批量单，已单独登记为 ISSUE-0050。（登记订正记录：本条初版写「顶边残留 2 像素」，把宽度当成了高度，且称「其余含图题（3 道）均无墨迹触边、无裁切」——含图题实为 6 道且 2025 全国 1 q06 恰是反例，两处均已改正。）",
   "fingerprint": "c4442baf0205b8f078983d2a687e41ef02671d2a0a5df10cfa43670e1c85dfbe",
   "impact": "non_blocking",
   "paper_id": null,
@@ -992,7 +991,6 @@
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0056
 
 ```json
@@ -1252,5 +1250,22 @@
   "resume_action": "逐处复核并改写（五处均不影响答案正确性）：一、卷 1 第 17(1) 题要点标「答案：见解析版」，但紧接着就在同一处给出了完整分布列，标注与内容不符；二、卷 1 第 18 题由 1+k₁k₂=1/4>0 只能断定两直线夹角为锐角，而 ∠PQR 是射线 QP 与 QR 的夹角，严格说还需说明二者同为锐角；三、卷 1 第 19 题未点明「x₁<0<x₂ 与 f(x₁)≤f(x₂) 相斥」即直接分三种情形，属叙述省略；四、卷 2 第 18 题「A²/B²=2t₀²/(t₀²−2)>2>1」只在 |t₀|>√2 分支成立，却写在分支讨论之前（0<|t₀|<√2 时该比值为负），属排版顺序问题；五、卷 2 第 18 题称被去掉的两点是「A 取椭圆左右顶点时的像」略不准确——y₀=0 时 B 与 O 重合、直线 GB 与 AO 重合，P 根本不存在，那两点是 y₀→0 的极限位置而非像；六、卷 2 第 18 题在同一小问中用符号 λ 先后指代两个不同对象——要点第 278 行的 λ=t₀/(x₀+t₀) 是 AO 上的比例参数，第 282 行的 λ=(t₀²−2)/2 是 x² 项系数，属命名复用，宜为其一改名（如 x² 项系数改记为 A）",
   "status": "open",
   "type": "answer-missing"
+}
+```
+
+## ISSUE-0070
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面核对判 passed（与 b04 ISSUE-0040 的辅助虚实线差异同级，不阻断），但其 evidence 原写「虚实线归属一致」系正面假断言，经三路互证证伪：一、上游源 PDF 第 2 页 1200 dpi 渲染视读——C 与 B 之间有一条清晰的虚线段（与实线 A′B 近乎平行、在其下方，于 B 点交汇），即源图 C—B 为虚线；二、仓库件 images/2025-2-t17-翻折四边形.png（718×363）裁剪区 (430,150)-(700,320) 做 7 倍最近邻放大——C 到 B 是一条连续实线、全程无断口，而同图的 E—F—C 与 F—D′ 仍显示为虚线，可排除「虚线在缩放中被糊成实线」的解释；三、TikZ 源 f2025g2_t17_fold.tex 第 19 行为 \\draw (C) -- (B);，是实线指令，与第 21/22/24 行的 \\draw[dashed] 形成对照——虚实翻转在图形源头即已存在。影响：C—B 是被遮挡棱，画成实线会误导遮挡关系的读取；但八个标注 A/B/C/D/E/F/A′/D′ 全在、其余虚实归属正确、四边无墨迹触边、无裁切，两小问的作答不依赖该棱的虚实，故维持 passed。孤例核验：本批其余三张含图 PNG（2024-t11、2024-t17、2024-Ⅱ-t17、2025-t17）未见同类翻转。",
+  "fingerprint": "4b1782752dd28caa4cc8c219a32b2f94a82f051b3811a6b7667961fce19fe84b",
+  "impact": "non_blocking",
+  "paper_id": "gk-2025-regular-national-2",
+  "question_id": "gk-2025-regular-national-2-q17",
+  "resume_action": "重绘 images/2025-2-t17-翻折四边形.png：把 C—B 段由实线改回虚线。TikZ 源 math-gaokao-latex/2025_全国2卷/figures/f2025g2_t17_fold.tex 第 19 行现为 \\draw (C) -- (B);（实线指令），应改为 \\draw[dashed] (C) -- (B);——同文件第 21、22、24 行已用 \\draw[dashed]，改法与之一致；共享副本 math-gaokao-2017-2026/figures/f2025g2_t17_fold.tex 与本文件逐字节相同，须同步改",
+  "source_id": "src-63d8cf8aeded86d1dc644b80483c817de4f9ba7d312f117942a408b916bcc94d",
+  "status": "open",
+  "type": "transcription-ambiguous"
 }
 ```

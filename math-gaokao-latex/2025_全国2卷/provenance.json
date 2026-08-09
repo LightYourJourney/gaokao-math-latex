@@ -426,7 +426,9 @@
       },
       "answer_sha256": "3450e8be24914548db0a71637894f267da7391253f54c35f2b6b7d86dca290aa",
       "conflict_status": "none",
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0070"
+      ],
       "printed_number": 17,
       "question_id": "gk-2025-regular-national-2-q17",
       "question_text_sha256": "2107fe97a47f483e22dacb71ca8b027cc08bb2cf2799edeb2177bfca5f791c21",
@@ -440,7 +442,7 @@
       },
       "source_sha256": "1fc58c22ef5643a0f81a2d5fbe41ffefb24c1fa197e7ebf5b9ec46b4b19ed65b",
       "transcription_review": {
-        "evidence": "PDF p2（页脚 1220）：四边形 ABCD 中 AB∥CD、∠DAB=90°、F 为 CD 中点、E 在 AB 上、EF∥AD、AB=3AD、CD=2AD，将四边形 EFDA 沿 EF 翻折至 EFD′A′ 使面 EFD′A′ 与面 EFCB 成 60° 二面角；(1) 证 A′B∥平面 CD′F；(2) 求面 BCD′ 与面 EFD′A′ 所成二面角的正弦值——逐字一致（源中三处「∥」文本层丢失，视读确认为平行号；D′、A′ 撇号齐备）。**本卷唯一含图题，已按条款在 PDF 第 2 页逐页视读核对**（200 dpi 整页 + 2 倍局部放大）：源图为 D′ 在顶、A′ 在 D′ 左下、底面 A—E—B 与虚线 A—D—F…C，虚线表示翻折前位置与被遮挡棱；仓库图 images/2025-2-t17-翻折四边形.png 八个标注 A/B/C/D/E/F/A′/D′ 全在、虚实线归属一致、四边无墨迹触边（无裁切），仅 C 标签相对虚线的上下位置与源略有差异，属排版性、非内容性。规范题面补注「（15 分）」。",
+        "evidence": "PDF p2（页脚 1220）：四边形 ABCD 中 AB∥CD、∠DAB=90°、F 为 CD 中点、E 在 AB 上、EF∥AD、AB=3AD、CD=2AD，将四边形 EFDA 沿 EF 翻折至 EFD′A′ 使面 EFD′A′ 与面 EFCB 成 60° 二面角；(1) 证 A′B∥平面 CD′F；(2) 求面 BCD′ 与面 EFD′A′ 所成二面角的正弦值——逐字一致（源中三处「∥」文本层丢失，视读确认为平行号；D′、A′ 撇号齐备）。**本卷唯一含图题，已按条款在 PDF 第 2 页逐页视读核对**（200 dpi 整页 + 2 倍局部放大）：源图为 D′ 在顶、A′ 在 D′ 左下、底面 A—E—B 与虚线 A—D—F…C，虚线表示翻折前位置与被遮挡棱；仓库图 images/2025-2-t17-翻折四边形.png 八个标注 A/B/C/D/E/F/A′/D′ 全在、四边无墨迹触边（无裁切）；虚实线归属有一处翻转——源图 C—B 为虚线而仓库件为实线（三路互证：源 PDF 1200 dpi 视读、PNG 7 倍放大、TikZ 源 f2025g2_t17_fold.tex:19 的 \\draw (C) -- (B); 实线指令），已登记 ISSUE-0070；其余各段虚实归属与源一致，仅 C 标签相对虚线的上下位置与源略有差异，属排版性、非内容性。规范题面补注「（15 分）」。",
         "result": "passed",
         "role": "b05-question-reviewer-opus"
       }
