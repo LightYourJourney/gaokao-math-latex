@@ -557,6 +557,40 @@ class BatchIntegrationTests(unittest.TestCase):
         transactions = self.fixture.root / subject.WORK_RELATIVE / "transactions"
         self.assertEqual([], list(transactions.iterdir()) if transactions.exists() else [])
 
+    def test_finalize_rejects_stale_artifacts_before_report_or_transaction(self) -> None:
+        document = self.fixture.manifest()
+        for paper_id in (build_tests.PAPER_ID, build_tests.OTHER_ID):
+            blocker = subject.issues_module.question_issue(
+                paper_id, "1", "source-a", "transcription", "人工核实来源"
+            )
+            issue_id = subject.issues_module.upsert_issue(self.fixture.issues_path, blocker)
+            paper = next(item for item in document["papers"] if item["paper_id"] == paper_id)
+            paper.update(
+                production_state="blocked", blocked_from="answers_verified",
+                resume_action="人工核实来源", issue_ids=[issue_id],
+            )
+        atomic_write_json(self.fixture.manifest_path, document)
+        self.prepare()
+        self.complete_work()
+        before = self.tracked_state()
+        transactions = self.fixture.root / subject.WORK_RELATIVE / "transactions"
+        renderer = mock.Mock(side_effect=AssertionError("不应生成报告"))
+        self.loader = build_tests.make_loader(per_paper={
+            build_tests.PAPER_ID: {"artifacts": "stale"},
+        })
+
+        with mock.patch.object(subject.build_projects, "commit_state") as commit:
+            with self.assertRaisesRegex(
+                subject.ReviewError,
+                rf"{build_tests.PAPER_ID}.*artifact.*stale.*重生成.*重编.*重审",
+            ):
+                self.finalize(renderer=renderer)
+
+        renderer.assert_not_called()
+        commit.assert_not_called()
+        self.assertEqual(before, self.tracked_state())
+        self.assertEqual([], list(transactions.iterdir()) if transactions.exists() else [])
+
     def test_blocked_provenance_is_not_overwritten_by_build_review(self) -> None:
         blocker = subject.issues_module.question_issue(
             build_tests.PAPER_ID, "1", "source-a", "transcription", "人工核实来源"

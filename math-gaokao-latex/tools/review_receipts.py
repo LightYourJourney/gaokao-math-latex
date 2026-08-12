@@ -1492,6 +1492,15 @@ def finalize_batch(
             root, manifest, affected, loaded, final_builds,
             issue_records=records, toolchain=chain,
         )
+        stale_artifacts = sorted(
+            paper_id for paper_id in paper_ids
+            if candidate_facts[paper_id].get("artifacts") != "current"
+        )
+        if stale_artifacts:
+            raise ReviewError(
+                "%s 的 artifact 状态为 stale，必须重生成 → 重编 → 重审"
+                % "、".join(stale_artifacts)
+            )
         outcomes = {}
         for paper_id in paper_ids:
             outcome = derive_content_outcome(
