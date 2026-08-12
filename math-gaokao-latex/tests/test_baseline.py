@@ -438,13 +438,14 @@ class BaselineComparisonTests(unittest.TestCase):
         # 答案值，另 6 卷逐 hunk 核对只有生成头注一处变化，按本表自己的 class 定义
         # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
-            "migration": 10, "header": 13, "stale-artifact": 3,
+            "migration": 6, "header": 10, "stale-artifact": 2,
             "short-answers-regeneration": 15, "visual-layout-repair": 8,
-            "layout-regeneration": 14,
+            "layout-regeneration": 22,
         })
         by_task = {
             "task-13-review", "task-14-review", "task-25-visual-review",
             "task-26-regeneration", "task-27-regeneration",
+            "task-28-regeneration",
         }
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
@@ -470,6 +471,11 @@ class BaselineComparisonTests(unittest.TestCase):
             len([item for item in adjudicated
                  if item["adjudicated_by"] == "task-27-regeneration"]),
             6,
+        )
+        self.assertEqual(
+            len([item for item in adjudicated
+                 if item["adjudicated_by"] == "task-28-regeneration"]),
+            8,
         )
 
     def test_without_the_ledger_every_content_drift_is_reported(self):
@@ -888,7 +894,9 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             }))
 
     def test_layout_regeneration_has_batch_scoped_adjudication_sources(self):
-        for source in ("task-26-regeneration", "task-27-regeneration"):
+        for source in (
+            "task-26-regeneration", "task-27-regeneration", "task-28-regeneration"
+        ):
             with self.subTest(source=source):
                 record = self.valid_record(**{
                     "adjudicated_by": source,
@@ -902,7 +910,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 )
 
         record = self.valid_record(**{
-            "adjudicated_by": "task-27-regeneration",
+            "adjudicated_by": "task-28-regeneration",
             "class": "layout-regeneration",
         })
         for field, value in (
@@ -946,6 +954,69 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             with self.subTest(case=name):
                 with self.assertRaises(ValueError):
                     load_adjudicated_drifts(self.write(document))
+
+    def test_task28_updates_exactly_eight_existing_b04_keys_with_layout_only_diffs(self):
+        projects = {
+            "gk-2022-regular-new-gaokao-1": "2022_新高考Ⅰ卷",
+            "gk-2022-regular-new-gaokao-2": "2022_新高考Ⅱ卷",
+            "gk-2023-regular-new-gaokao-1": "2023_新高考Ⅰ卷",
+            "gk-2023-regular-new-gaokao-2": "2023_新高考Ⅱ卷",
+        }
+        ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
+        ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
+            ROOT.parent.parent.parent
+        ).as_posix()
+        previous_document = json.loads(subprocess.check_output([
+            "git", "-C", str(ROOT.parent.parent.parent), "show",
+            "1c7b418:" + ledger_relative,
+        ]).decode("utf-8"))
+        previous = {
+            (record["paper_id"], record["artifact"]): record
+            for record in previous_document["drifts"]
+        }
+        self.assertEqual(len(ledger), len(previous))
+        selected = {
+            key: record for key, record in ledger.items()
+            if record["adjudicated_by"] == "task-28-regeneration"
+        }
+        expected_keys = {
+            (paper_id, artifact)
+            for paper_id in projects
+            for artifact in ("questions.tex", "answers.tex")
+        }
+        self.assertEqual(set(selected), expected_keys)
+
+        for (paper_id, artifact), record in selected.items():
+            relative = "math-gaokao-latex/{}/{}".format(
+                projects[paper_id], artifact
+            )
+            current = ROOT.parent.parent.parent / relative
+            head = subprocess.check_output([
+                "git", "-C", str(ROOT.parent.parent.parent), "show",
+                "1c7b418:" + relative,
+            ]).decode("utf-8")
+            now = current.read_text(encoding="utf-8")
+            self.assertEqual(record["class"], "layout-regeneration")
+            self.assertEqual(
+                record["legacy_sha256"],
+                previous[(paper_id, artifact)]["legacy_sha256"],
+            )
+            self.assertEqual(record["current_sha256"], file_sha256(current))
+
+            removed = []
+            added = []
+            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+                if line.startswith("- "):
+                    removed.append(line[2:])
+                elif line.startswith("+ "):
+                    added.append(line[2:])
+            self.assertTrue(added)
+            self.assertTrue(all(line in {
+                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
+            } for line in added))
+            self.assertTrue(all(line == "" for line in removed))
+            for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
+                self.assertEqual(head.count(token), now.count(token), (relative, token))
 
     def test_task27_updates_exactly_six_existing_b03_keys_with_layout_only_diffs(self):
         projects = {
