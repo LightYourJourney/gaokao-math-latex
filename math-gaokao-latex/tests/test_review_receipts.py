@@ -245,6 +245,27 @@ class PublicInterfaceAndCandidateTests(unittest.TestCase):
         self.assertGreaterEqual(metrics[1]["math_glyph_proxy"], 2)
         self.assertTrue(all(0.0 < item["ink_ratio"] < 1.0 for item in metrics))
 
+    def test_candidate_override_cannot_hide_original_candidate_tampering(self) -> None:
+        build = build_receipt()
+        item = subject.new_review_work_item(
+            manifest(), "batch-1", "gk-2026-test", subject.EDITIONS[0],
+            build, visual(), [2],
+        )
+        item["candidate_pages"] = [1]
+        with self.assertRaisesRegex(subject.ReviewError, "原候选"):
+            subject._validate_work_binding(item, build, subject.EDITIONS[0], visual())
+
+        item = subject.new_review_work_item(
+            manifest(), "batch-1", "gk-2026-test", subject.EDITIONS[0],
+            build, visual(), [2],
+        )
+        item["candidate_override"] = {
+            "original_pages": [1], "chosen_pages": [1], "reason": "人工改选"
+        }
+        item["candidate_pages"] = [1]
+        with self.assertRaisesRegex(subject.ReviewError, "original_pages"):
+            subject._validate_work_binding(item, build, subject.EDITIONS[0], visual())
+
     def test_new_work_item_contains_every_page_and_all_checks(self) -> None:
         item = subject.new_review_work_item(
             manifest(), "batch-1", "gk-2026-test", subject.EDITIONS[0],
@@ -253,6 +274,7 @@ class PublicInterfaceAndCandidateTests(unittest.TestCase):
         self.assertEqual([1, 2], [record["page"] for record in item["pages"]])
         self.assertEqual(set(subject.CHECK_CODES), {record["check"] for record in item["pages"][0]["checks"]})
         self.assertEqual([2], item["candidate_pages"])
+        self.assertEqual([2], item["original_candidate_pages"])
 
     def test_aggregate_batch_in_memory_builds_a_passed_review(self) -> None:
         build = build_receipt()
@@ -610,6 +632,29 @@ class BatchIntegrationTests(unittest.TestCase):
             shutil.rmtree(directory)
         self.prepare()
 
+    def test_check_batch_rejects_report_after_blocker_changes_without_reconcile(self) -> None:
+        blocker = subject.issues_module.question_issue(
+            build_tests.PAPER_ID, "1", "source-a", "transcription", "人工核实来源"
+        )
+        subject.issues_module.upsert_issue(self.fixture.issues_path, blocker)
+        self.prepare()
+        self.complete_work()
+        self.assertEqual("closed_with_blockers", self.finalize()["batch_status"])
+        current = next(
+            item for item in subject.issues_module.load_issues(self.fixture.issues_path)
+            if item.get("origin") != subject.ISSUE_ORIGIN
+        )
+        current.update(status="resolved", impact="non_blocking")
+        subject.issues_module.upsert_issue(self.fixture.issues_path, current)
+        before = self.tracked_state()
+        result = subject.check_batch(
+            self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+            toolchain=self.chain, facts_loader=self.loader,
+        )
+        self.assertEqual("INVALID_OR_STALE", result["code"])
+        self.assertTrue(any("报告" in item or "状态" in item for item in result["problems"]))
+        self.assertEqual(before, self.tracked_state())
+
     def test_report_only_reconciliation_closes_after_blocker_resolves(self) -> None:
         blocker = subject.issues_module.question_issue(
             build_tests.PAPER_ID, "1", "source-a", "transcription", "人工核实来源"
@@ -723,6 +768,20 @@ class OwnershipAndCliIntegrationTests(unittest.TestCase):
         self.assertIn(subject.report_target("batch-1"), paths)
         self.assertEqual(7, len(paths))
 
+    def test_argparse_usage_is_json_for_real_invalid_argv(self) -> None:
+        cases = (
+            ["finalize-batch", "--json"],
+            ["unknown-command", "--json"],
+            ["check-batch", "--json", "--illegal"],
+        )
+        for argv in cases:
+            with self.subTest(argv=argv):
+                output = StringIO()
+                with redirect_stdout(output), redirect_stderr(StringIO()):
+                    code = subject.main(argv)
+                self.assertEqual(2, code)
+                self.assertEqual("USAGE", json.loads(output.getvalue())["code"])
+
     def test_json_code_exit_matrix_and_usage(self) -> None:
         common = ["--manifest", "m", "--issues", "i", "--batch", "b"]
         commands = (
@@ -807,6 +866,58 @@ class VisualIssueReconciliationTests(unittest.TestCase):
 
 
 class CheckedWrapperTests(BatchIntegrationTests):
+    def test_checked_stage_failures_reset_exact_scope_and_allow_retry(self) -> None:
+        for failure in ("check-staged", "diff-check", "commit"):
+            with self.subTest(failure=failure):
+                self.tearDown()
+                self.setUp()
+                self.prepare()
+                self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])
+                original_git = subject._git
+                original_check = subject.check_staged
+                state = {"failed": False}
+
+                def failing_git(root, arguments):
+                    if not state["failed"] and (
+                        (failure == "diff-check" and arguments[:3] == ["diff", "--cached", "--check"])
+                        or (failure == "commit" and arguments[0] == "commit")
+                    ):
+                        state["failed"] = True
+                        raise subprocess.CalledProcessError(1, arguments)
+                    return original_git(root, arguments)
+
+                def failing_check(root, scope):
+                    if failure == "check-staged" and not state["failed"]:
+                        state["failed"] = True
+                        return ["injected"]
+                    return original_check(root, scope)
+
+                with mock.patch.object(subject, "_git", side_effect=failing_git), \
+                        mock.patch.object(subject, "check_staged", side_effect=failing_check):
+                    with self.assertRaises((subject.ReviewError, subprocess.CalledProcessError)):
+                        subject.finalize_batch_checked(
+                            self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+                            self.report_path, facts_loader=self.loader, toolchain=self.chain,
+                        )
+                staged = subprocess.check_output(
+                    ["git", "-C", str(self.fixture.root), "diff", "--cached", "--name-only"],
+                    text=True,
+                )
+                self.assertEqual("", staged)
+                self.fixture.commit_all("保存诊断状态供重试")
+                shutil.rmtree(self.fixture.root / subject.WORK_RELATIVE / self.batch_id)
+                self.chain = self.fixture.toolchain()
+                self.loader = build_tests.make_loader()
+                self.fixture.formal(loader=self.loader)
+                self.fixture.commit_all("重编基线")
+                self.prepare()
+                self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])
+                retried = subject.finalize_batch_checked(
+                    self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+                    self.report_path, facts_loader=self.loader, toolchain=self.chain,
+                )
+                self.assertTrue(retried["committed"])
+
     def test_checked_visual_fail_commits_exact_diagnostic_scope_without_report(self) -> None:
         self.prepare()
         self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])

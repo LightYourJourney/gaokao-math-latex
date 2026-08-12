@@ -552,6 +552,9 @@ def new_review_work_item(
             "page_count": count,
         },
         "candidate_pages": sorted(set(int(item) for item in anchors)),
+        # prepare 现场算出的原候选只在这里落一次。代理可通过 override 改选，但不得改写
+        # 「原来算出了什么」，否则人工改选记录失去审计意义。
+        "original_candidate_pages": sorted(set(int(item) for item in anchors)),
         "candidate_override": None,
         # 该版本的全部 Overfull/Underfull 原样带下来（含 width_pt=null 的 Underfull），
         # 代理据此逐条写豁免；漏一条，finalize 时逐项匹配就会当场失败。
@@ -816,6 +819,24 @@ def _validate_work_binding(
         raise ReviewError(
             "%s 工作项与当前 build 不匹配：%s" % (edition, mismatched)
         )
+
+    original = sorted(set(item.get("original_candidate_pages") or []))
+    candidates = sorted(set(item.get("candidate_pages") or []))
+    override = item.get("candidate_override")
+    if override is None:
+        if candidates != original:
+            raise ReviewError("%s 的 candidate_pages 与不可编辑原候选不一致" % edition)
+    else:
+        if sorted(set(override.get("original_pages") or [])) != original:
+            raise ReviewError(
+                "%s 的 candidate_override.original_pages 与不可编辑原候选不一致"
+                % edition
+            )
+        if sorted(set(override.get("chosen_pages") or [])) != candidates:
+            raise ReviewError(
+                "%s 的 candidate_override.chosen_pages 与 candidate_pages 不一致"
+                % edition
+            )
 
 
 def _review_from_work_items(
@@ -1512,8 +1533,9 @@ def check_batch(
     toolchain: Optional[Mapping[str, Any]] = None,
     search_path: Optional[str] = None,
     require_current_build: bool = True,
+    facts_loader: Optional[Callable[..., Mapping[str, Mapping[str, Any]]]] = None,
 ) -> Dict[str, Any]:
-    """只读：逐卷重算 build/review 当前性与批次报告存在性；一个字节都不写。"""
+    """只读：重走 report-only 的内存核验，连报告和 manifest 缓存一起对账。"""
     manifest_path = Path(manifest_path).resolve()
     root = cli_common.repository_root(manifest_path.parent)
     _require_canonical(root, manifest_path, MANIFEST_TARGET, "--manifest")
@@ -1523,6 +1545,8 @@ def check_batch(
 
     problems: List[str] = []
     visual_failed = False
+    builds: Dict[str, Dict[str, Any]] = {}
+    reviews: Dict[str, Dict[str, Any]] = {}
     try:
         chain = toolchain or build_projects.resolve_toolchain(search_path=search_path)
     except build_projects.BuildError as error:
@@ -1575,10 +1599,52 @@ def check_batch(
                 "%s: build=%s review=%s，批次尚未关闭"
                 % (paper_id, build["status"], review["status"])
             )
+            continue
+        builds[paper_id] = build
+        reviews[paper_id] = review
 
     report_path = Path(root) / report_target(batch_id)
     if not problems and not report_path.is_file():
         problems.append(f"缺批次报告：{report_target(batch_id)}")
+
+    if not problems:
+        try:
+            paper_ids = list(batch["paper_ids"])
+            records = issues_module.load_issues(Path(issues_path))
+            loaded = _loaded_facts(
+                root, manifest, paper_ids, Path(issues_path), facts_loader
+            )
+            facts = build_projects.assemble_facts(
+                root, manifest, paper_ids, loaded, builds,
+                issue_records=records, toolchain=chain,
+            )
+            outcomes = {
+                paper_id: derive_content_outcome(facts_without_report(facts[paper_id]))
+                for paper_id in paper_ids
+            }
+            if any(value not in {"eligible_complete", "eligible_blocked"}
+                   for value in outcomes.values()):
+                raise ReviewError("当前事实不足以关闭批次")
+            payload = _report_payload(
+                manifest, batch_id, paper_ids, builds, reviews, outcomes, records
+            )
+            existing = report_path.read_text(encoding="utf-8")
+            verify_batch_report(existing, payload)
+            expected_batch = status_core.reconcile_batch_status({
+                paper_id: dict(facts[paper_id], batch_report_valid=True)
+                for paper_id in paper_ids
+            })
+            if _batch(manifest, batch_id)["status"] != expected_batch:
+                raise ReviewError("manifest 批次状态与当前事实不一致")
+            for paper_id in paper_ids:
+                expected_paper = status_core.derive_status(
+                    dict(facts[paper_id], batch_report_valid=True)
+                )
+                if _paper(manifest, paper_id)["production_state"] != expected_paper:
+                    raise ReviewError("%s 的 manifest 状态与当前事实不一致" % paper_id)
+        except (ReviewError, StatusError, build_projects.BuildError, ValueError,
+                OSError, UnicodeError) as error:
+            problems.append("批次报告/状态已失效：%s" % error)
 
     if not problems:
         code = "FINALIZED"
@@ -1720,11 +1786,19 @@ def finalize_batch_checked(
         manifest, batch_id, include_state=True, report=False
     ))
     _git(root, ["add", "--"] + scope)
-    problems = check_staged(root, scope)
-    if problems:
-        raise ReviewError("诊断状态的暂存区与所有权范围不一致：%s" % problems)
-    _git(root, ["diff", "--cached", "--check"])
-    _git(root, ["commit", "-m", DIAGNOSTIC_MESSAGE_TEMPLATE % batch_id])
+    committed = False
+    try:
+        problems = check_staged(root, scope)
+        if problems:
+            raise ReviewError("诊断状态的暂存区与所有权范围不一致：%s" % problems)
+        _git(root, ["diff", "--cached", "--check"])
+        _git(root, ["commit", "-m", DIAGNOSTIC_MESSAGE_TEMPLATE % batch_id])
+        committed = True
+    finally:
+        if not committed:
+            # 只恢复这次精确 scope 的 index 到 HEAD；领域事务写下的诊断文件留在工作树，
+            # 下一次包装器重试前可由执行者明确保存或重新进入恢复流程。
+            _git(root, ["reset", "--"] + scope)
     report["committed"] = True
     report["committed_paths"] = scope
     return report
@@ -1814,7 +1888,17 @@ def main(
     renderer: Optional[Callable[..., Any]] = None,
 ) -> int:
     parser = _parser()
-    arguments = parser.parse_args(argv)
+    raw_argv = list(sys.argv[1:] if argv is None else argv)
+    requested_json = "--json" in raw_argv
+    try:
+        arguments = parser.parse_args(raw_argv)
+    except SystemExit as error:
+        if requested_json and error.code == EXIT_USAGE:
+            print(json.dumps({
+                "code": "USAGE", "problem": "命令参数不合法",
+            }, ensure_ascii=False, sort_keys=True))
+            return EXIT_USAGE
+        raise
     as_json = bool(getattr(arguments, "json", False))
 
     try:
