@@ -794,6 +794,7 @@ def _warning_sort_key(key: Sequence[Any]) -> Tuple[Any, ...]:
 def _validate_work_binding(
     item: Mapping[str, Any], build: Mapping[str, Any], edition: str,
     visual: Mapping[str, Any],
+    trusted_candidates: Optional[Sequence[int]] = None,
 ) -> None:
     record = next(
         (part for part in build["editions"] if part["edition"] == edition), None
@@ -820,7 +821,13 @@ def _validate_work_binding(
             "%s 工作项与当前 build 不匹配：%s" % (edition, mismatched)
         )
 
-    original = sorted(set(item.get("original_candidate_pages") or []))
+    original = sorted(set(
+        trusted_candidates if trusted_candidates is not None
+        else (item.get("original_candidate_pages") or [])
+    ))
+    reported_original = sorted(set(item.get("original_candidate_pages") or []))
+    if trusted_candidates is not None and reported_original != original:
+        raise ReviewError("%s 的 original_candidate_pages 与重算原候选不一致" % edition)
     candidates = sorted(set(item.get("candidate_pages") or []))
     override = item.get("candidate_override")
     if override is None:
@@ -847,13 +854,17 @@ def _review_from_work_items(
     items: Mapping[str, Mapping[str, Any]],
     visual: Mapping[str, Any],
     reviewed_at: str,
+    trusted_candidates: Optional[Mapping[str, Sequence[int]]] = None,
 ) -> Dict[str, Any]:
     paper = _paper(manifest, paper_id)
     editions: List[Dict[str, Any]] = []
     exemptions: List[Dict[str, Any]] = []
     for edition in EDITIONS:
         item = items[edition]
-        _validate_work_binding(item, build, edition, visual)
+        _validate_work_binding(
+            item, build, edition, visual,
+            None if trusted_candidates is None else trusted_candidates[edition],
+        )
         record = next(
             (part for part in build["editions"] if part["edition"] == edition), None
         )
@@ -923,6 +934,9 @@ def aggregate_batch_in_memory(
     work_dir: Path,
     visual: Mapping[str, Any],
     reviewed_at: Optional[str] = None,
+    trusted_candidates: Optional[
+        Mapping[str, Mapping[str, Sequence[int]]]
+    ] = None,
 ) -> Dict[str, Any]:
     """把四版本工作项折成每卷一份 review 候选；**全在内存，一个字节都不写**。
 
@@ -953,7 +967,8 @@ def aggregate_batch_in_memory(
             path = work_item_path(Path(work_dir), batch_id, edition, paper_id)
             items[edition] = _read_work_item(path, batch_id, paper_id, edition)
         review = _review_from_work_items(
-            manifest, batch_id, paper_id, build, items, visual, stamp
+            manifest, batch_id, paper_id, build, items, visual, stamp,
+            None if trusted_candidates is None else trusted_candidates[paper_id],
         )
         stale, reasons = is_stale(build, review, visual)
         if stale:
@@ -1301,6 +1316,7 @@ def finalize_batch(
     work_dir: Optional[Path] = None,
     renderer: Optional[Callable[[Mapping[str, Any]], str]] = None,
     reviewed_at: Optional[str] = None,
+    metrics_probe: Optional[Callable[..., Sequence[Mapping[str, Any]]]] = None,
 ) -> Dict[str, Any]:
     """唯一的领域写入口。全部闭环在内存完成后只提交一次 `state` 事务。
 
@@ -1356,9 +1372,24 @@ def finalize_batch(
 
         # ---- 1. review 候选
         if review_mode:
+            probe = metrics_probe or default_page_metrics
+            trusted_candidates = {}
+            for paper_id in paper_ids:
+                trusted_candidates[paper_id] = {}
+                for record in builds[paper_id]["editions"]:
+                    pdf = record["pdf"]
+                    if pdf is None:
+                        raise ReviewError(
+                            "%s/%s 没有当前 PDF，无法重算原候选"
+                            % (paper_id, record["edition"])
+                        )
+                    metrics = probe(root, pdf["path"], pdf["page_count"], chain)
+                    trusted_candidates[paper_id][record["edition"]] = candidate_pages(
+                        metrics
+                    )["pages"]
             aggregate = aggregate_batch_in_memory(
                 root, manifest, batch_id, builds, resolved_work, visual,
-                reviewed_at=reviewed_at,
+                reviewed_at=reviewed_at, trusted_candidates=trusted_candidates,
             )
             reviews = aggregate["reviews"]
             fails = aggregate["fails"]

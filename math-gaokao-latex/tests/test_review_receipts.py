@@ -458,11 +458,62 @@ class BatchIntegrationTests(unittest.TestCase):
                 path.write_text(json.dumps(item), encoding="utf-8")
 
     def finalize(self, **kwargs) -> dict:
+        kwargs.setdefault("metrics_probe", self.probe)
         return subject.finalize_batch(
             self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
             self.report_path, facts_loader=self.loader, toolchain=self.chain,
             **kwargs,
         )
+
+    def mutate_first_work(self, mutate) -> None:
+        path = subject.work_item_path(
+            self.fixture.root / subject.WORK_RELATIVE, self.batch_id,
+            subject.EDITIONS[0], build_tests.PAPER_ID,
+        )
+        item = json.loads(path.read_text(encoding="utf-8"))
+        mutate(item)
+        path.write_text(json.dumps(item), encoding="utf-8")
+
+    def test_finalize_recomputes_candidate_when_original_and_candidate_both_tampered(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.mutate_first_work(lambda item: item.update(
+            original_candidate_pages=[], candidate_pages=[]
+        ))
+        with self.assertRaisesRegex(subject.ReviewError, "重算原候选"):
+            self.finalize(metrics_probe=self.probe)
+
+    def test_finalize_recomputes_candidate_when_both_candidate_fields_deleted(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.mutate_first_work(lambda item: (
+            item.pop("original_candidate_pages"), item.pop("candidate_pages")
+        ))
+        with self.assertRaisesRegex(subject.ReviewError, "重算原候选"):
+            self.finalize(metrics_probe=self.probe)
+
+    def test_finalize_recomputes_candidate_for_forged_override_original(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.mutate_first_work(lambda item: item.update(
+            original_candidate_pages=[], candidate_pages=[],
+            candidate_override={
+                "original_pages": [], "chosen_pages": [], "reason": "伪造原候选"
+            },
+        ))
+        with self.assertRaisesRegex(subject.ReviewError, "重算原候选"):
+            self.finalize(metrics_probe=self.probe)
+
+    def test_finalize_accepts_recomputed_normal_and_legal_override(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.mutate_first_work(lambda item: item.update(candidate_override={
+            "original_pages": list(item["original_candidate_pages"]),
+            "chosen_pages": list(item["candidate_pages"]),
+            "reason": "人工复核后维持原候选",
+        }))
+        result = self.finalize(metrics_probe=self.probe)
+        self.assertEqual("FINALIZED", result["code"])
 
     def tracked_state(self) -> dict:
         result = {}
@@ -897,7 +948,7 @@ class CheckedWrapperTests(BatchIntegrationTests):
                     with self.assertRaises((subject.ReviewError, subprocess.CalledProcessError)):
                         subject.finalize_batch_checked(
                             self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
-                            self.report_path, facts_loader=self.loader, toolchain=self.chain,
+                            self.report_path, facts_loader=self.loader, toolchain=self.chain, metrics_probe=self.probe,
                         )
                 staged = subprocess.check_output(
                     ["git", "-C", str(self.fixture.root), "diff", "--cached", "--name-only"],
@@ -914,7 +965,7 @@ class CheckedWrapperTests(BatchIntegrationTests):
                 self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])
                 retried = subject.finalize_batch_checked(
                     self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
-                    self.report_path, facts_loader=self.loader, toolchain=self.chain,
+                    self.report_path, facts_loader=self.loader, toolchain=self.chain, metrics_probe=self.probe,
                 )
                 self.assertTrue(retried["committed"])
 
@@ -923,7 +974,7 @@ class CheckedWrapperTests(BatchIntegrationTests):
         self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])
         result = subject.finalize_batch_checked(
             self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
-            self.report_path, facts_loader=self.loader, toolchain=self.chain,
+            self.report_path, facts_loader=self.loader, toolchain=self.chain, metrics_probe=self.probe,
         )
         self.assertEqual("VISUAL_FAILED", result["code"])
         self.assertTrue(result["committed"])
@@ -942,7 +993,7 @@ class CheckedWrapperTests(BatchIntegrationTests):
         ).strip()
         result = subject.finalize_batch_checked(
             self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
-            self.report_path, facts_loader=self.loader, toolchain=self.chain,
+            self.report_path, facts_loader=self.loader, toolchain=self.chain, metrics_probe=self.probe,
         )
         self.assertEqual("FINALIZED", result["code"])
         self.assertFalse(result["committed"])
