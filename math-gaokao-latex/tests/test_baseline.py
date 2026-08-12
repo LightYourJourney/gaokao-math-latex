@@ -439,9 +439,13 @@ class BaselineComparisonTests(unittest.TestCase):
         # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
             "migration": 13, "header": 15, "stale-artifact": 4,
-            "short-answers-regeneration": 15, "visual-layout-repair": 16,
+            "short-answers-regeneration": 15, "visual-layout-repair": 8,
+            "layout-regeneration": 8,
         })
-        by_task = {"task-13-review", "task-14-review", "task-25-visual-review"}
+        by_task = {
+            "task-13-review", "task-14-review", "task-25-visual-review",
+            "task-26-regeneration",
+        }
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
             self.assertIn(item["adjudicated_by"], by_task)
@@ -455,7 +459,12 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertEqual(
             len([item for item in adjudicated
                  if item["adjudicated_by"] == "task-25-visual-review"]),
-            16,
+            8,
+        )
+        self.assertEqual(
+            len([item for item in adjudicated
+                 if item["adjudicated_by"] == "task-26-regeneration"]),
+            8,
         )
 
     def test_without_the_ledger_every_content_drift_is_reported(self):
@@ -873,6 +882,29 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "ledger_version": LEDGER_VERSION, "drifts": [record]
             }))
 
+    def test_layout_regeneration_has_one_narrow_adjudication_source(self):
+        record = self.valid_record(**{
+            "adjudicated_by": "task-26-regeneration",
+            "class": "layout-regeneration",
+        })
+        ledger = load_adjudicated_drifts(self.write({
+            "ledger_version": LEDGER_VERSION, "drifts": [record]
+        }))
+        self.assertEqual(
+            ledger[("gk-2099-regular-national-1", "answers.tex")], record
+        )
+
+        for field, value in (
+            ("adjudicated_by", "随便一个来源"),
+            ("class", "随便一个类别"),
+        ):
+            invalid = dict(record)
+            invalid[field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                load_adjudicated_drifts(self.write({
+                    "ledger_version": LEDGER_VERSION, "drifts": [invalid]
+                }))
+
     def test_a_malformed_ledger_fails_closed(self):
         cases = {
             "版本": {"ledger_version": 99, "drifts": []},
@@ -914,8 +946,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         selected = {
             key: record for key, record in ledger.items()
-            if record["adjudicated_by"] == "task-25-visual-review"
-            and key[0] in projects
+            if record["adjudicated_by"] == "task-26-regeneration"
         }
         expected_keys = {
             (paper_id, artifact)
@@ -934,7 +965,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "eccf7f0:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
-            self.assertEqual(record["class"], "visual-layout-repair")
+            self.assertEqual(record["class"], "layout-regeneration")
             self.assertEqual(record["current_sha256"], file_sha256(current))
 
             removed = []
