@@ -164,6 +164,18 @@ def _batch(manifest: Mapping[str, Any], batch_id: str) -> Mapping[str, Any]:
     return found[0]
 
 
+def _validate_batch_size(
+    manifest: Mapping[str, Any], batch_id: str
+) -> Mapping[str, Any]:
+    batch = _batch(manifest, batch_id)
+    count = len(batch["paper_ids"])
+    if count < 2 or count > 4:
+        raise ReviewError(
+            "%s 必须包含 2–4 套试卷，实际 %d 套" % (batch_id, count)
+        )
+    return batch
+
+
 def _assert_safe_relative(relative: str) -> str:
     candidate = PurePosixPath(str(relative))
     if candidate.is_absolute() or any(
@@ -598,7 +610,7 @@ def prepare_batch(
     root = cli_common.repository_root(manifest_path.parent)
     _require_canonical(root, manifest_path, MANIFEST_TARGET, "--manifest")
     manifest = load_manifest(manifest_path)
-    batch = _batch(manifest, batch_id)
+    batch = _validate_batch_size(manifest, batch_id)
     resolved = _validated_work_dir(root, work_dir)
     probe = metrics_probe or default_page_metrics
     chain = toolchain or build_projects.resolve_toolchain(search_path=search_path)
@@ -753,19 +765,57 @@ def _warning_key(edition: str, warning: Mapping[str, Any]) -> Tuple[Any, ...]:
 def _warning_sort_key(key: Sequence[Any]) -> Tuple[Any, ...]:
     """只用于把差异**打印**成稳定顺序的全序键。
 
-    直接 `sorted()` 这些元组有两个真实的坑：`None`（Underfull 的 width、以及没匹配到
-    `at lines` 的 lines）与 `str` 相比会 TypeError；而全是字符串时又会按字典序把
-    `"86.97256"` 排到 `"506.01268"` 后面。这里先把 None 分流，再对宽度取 `float()`。
+    必须先按 kind 分流：只有 Overfull 才允许 `float(width_pt)`；Underfull 的宽度必须是
+    null。这样错误形状不会在诊断排序里被误解释成另一个数值域。
     """
     edition, kind, box, width_pt, lines = key
+    if kind == "Overfull":
+        if width_pt is None:
+            raise ReviewError("Overfull 的 width_pt 不能是 null")
+        width_order = float(width_pt)
+    elif kind == "Underfull":
+        if width_pt is not None:
+            raise ReviewError("Underfull 的 width_pt 必须是 null")
+        width_order = 0.0
+    else:
+        raise ReviewError("未知警告 kind：%r" % kind)
     return (
-        edition, kind, box,
-        width_pt is None, 0.0 if width_pt is None else float(width_pt),
+        edition, kind, box, width_pt is None, width_order,
         lines is None, lines or "",
     )
 
 
 # ---------------------------------------------------------------- 批次聚合
+
+
+def _validate_work_binding(
+    item: Mapping[str, Any], build: Mapping[str, Any], edition: str,
+    visual: Mapping[str, Any],
+) -> None:
+    record = next(
+        (part for part in build["editions"] if part["edition"] == edition), None
+    )
+    if record is None or record["pdf"] is None:
+        raise ReviewError("%s 没有当前 PDF" % edition)
+    expected = {
+        "build_attempt_id": build["attempt_id"],
+        "input_projection": build["input_projection"],
+        "generation_input_tree_sha256": build["generation_input_tree"]["tree_sha256"],
+        "dependency_tree_sha256": build["dependency_tree"]["tree_sha256"],
+        "toolchain_fingerprint": build["toolchain_fingerprint"],
+        "visual_tool_fingerprint": visual,
+        "pdf": {
+            "path": record["pdf"]["path"],
+            "sha256": record["pdf"]["sha256"],
+            "page_count": record["pdf"]["page_count"],
+        },
+        "warnings": record["log"]["overfull"],
+    }
+    mismatched = [field for field, value in expected.items() if item.get(field) != value]
+    if mismatched:
+        raise ReviewError(
+            "%s 工作项与当前 build 不匹配：%s" % (edition, mismatched)
+        )
 
 
 def _review_from_work_items(
@@ -782,6 +832,7 @@ def _review_from_work_items(
     exemptions: List[Dict[str, Any]] = []
     for edition in EDITIONS:
         item = items[edition]
+        _validate_work_binding(item, build, edition, visual)
         record = next(
             (part for part in build["editions"] if part["edition"] == edition), None
         )
