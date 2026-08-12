@@ -1,42 +1,10 @@
 {
-  "attempt_id": "6ecf3e49-2bfa-4899-baaa-fbfd743dc418",
+  "attempt_id": "f891ba99-1b5a-4960-b951-8fb465e7abe8",
   "dependency_tree": {
     "files": [
       {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/answers.tex",
-        "sha256": "a6e3b1c454c1552b0468bfa0a1beb3e7cde4f3bf3d0b7eb2f861bf3355c79594"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/answers_short.tex",
-        "sha256": "88b555ed9bf9c41ada62894e2d4fea70bca865c525db1475b025c553078aeb1b"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_flow.tex",
-        "sha256": "7da32fd2853384eadae0bfbc10d64d76ad9ac0407da04e31ffdedef00d1a8e5e"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_t18_pyramid.tex",
-        "sha256": "7e52eac7aa5e75de23957394078c851e6d0caf737c7fb997a7afdedb7495ecda"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_taiji.tex",
-        "sha256": "76851cbd5e901ac49278caec6cae40979c2ff7b5ac24ceaa20aca848eea87455"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesAB.tex",
-        "sha256": "f9106f33150f53bede91e5c51c62d083915cc61fb5e5374c9a87b5cf9cfa8d2f"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesCD.tex",
-        "sha256": "a41e8e5c9747e53921a7015298cefc9326d2d743c1faaa0b5c7569b495c73648"
-      },
-      {
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t8_panels.tex",
-        "sha256": "aebe18e3c5655580e900197759f898fdb8ce9f9b7b38ab1559fcf50e79bd00fd"
-      },
-      {
         "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/questions.tex",
-        "sha256": "524b464bc38b1507c3114ad1bb035c21d18894b101d66162cffebd5986bb4af9"
+        "sha256": "fe6005074366f54758fdbe67df245c8ef5276f9850cb87b945b6e26aa30fed84"
       },
       {
         "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/印刷版.tex",
@@ -67,7 +35,7 @@
         "sha256": "e197b70814c31514aa5f7682972504ec3669fc1887b9767ec9ac0fbcdc1c057f"
       }
     ],
-    "tree_sha256": "d5d0a2f22a7f972a73e580dd6dc66536eb9302e978be9b12cf326d64a74f9332"
+    "tree_sha256": "13e265b3177076eccffdf22bed972a9344ae3120c13fa1577b5efc9f71821c31"
   },
   "editions": [
     {
@@ -80,22 +48,15 @@
       },
       "passes": [
         {
-          "exit_code": 0,
+          "exit_code": 1,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
-      "pdf": {
-        "page_count": 6,
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/试题版.pdf",
-        "sha256": "650c9fde59daf1d6149eef28bc9ac791d74d21239b154063e6bcd88ff53629dd",
-        "size_bytes": 156428
-      },
-      "problems": [],
-      "result": "succeeded",
+      "pdf": null,
+      "problems": [
+        "第 1 遍 XeLaTeX 退出码 1"
+      ],
+      "result": "failed",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/试题版.tex"
     },
     {
@@ -103,35 +64,20 @@
       "log": {
         "errors": [],
         "missing_characters": [],
-        "overfull": [
-          {
-            "box": "hbox",
-            "kind": "Underfull",
-            "lines": "1159--1160",
-            "text": "Underfull \\hbox (badness 1383) in paragraph at lines 1159--1160",
-            "width_pt": null
-          }
-        ],
+        "overfull": [],
         "undefined_references": []
       },
       "passes": [
         {
-          "exit_code": 0,
+          "exit_code": 1,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
-      "pdf": {
-        "page_count": 34,
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/解析版.pdf",
-        "sha256": "e2a54e5872d47a547f85e156bd2cd1ed27460ab96445def80e6de92a3b01a9f8",
-        "size_bytes": 391730
-      },
-      "problems": [],
-      "result": "succeeded",
+      "pdf": null,
+      "problems": [
+        "第 1 遍 XeLaTeX 退出码 1"
+      ],
+      "result": "failed",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/解析版.tex"
     },
     {
@@ -144,22 +90,15 @@
       },
       "passes": [
         {
-          "exit_code": 0,
+          "exit_code": 1,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
-      "pdf": {
-        "page_count": 7,
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/简答版.pdf",
-        "sha256": "efe86965926cf2d4b02378a1d08cd378f066fd2ff925dcc521b59868e52865e2",
-        "size_bytes": 167450
-      },
-      "problems": [],
-      "result": "succeeded",
+      "pdf": null,
+      "problems": [
+        "第 1 遍 XeLaTeX 退出码 1"
+      ],
+      "result": "failed",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/简答版.tex"
     },
     {
@@ -172,26 +111,19 @@
       },
       "passes": [
         {
-          "exit_code": 0,
+          "exit_code": 1,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
-      "pdf": {
-        "page_count": 26,
-        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/印刷版.pdf",
-        "sha256": "195bd4ba2046700a173cd09ba50398834082296e182fcde0cf4c176e318beb1f",
-        "size_bytes": 387497
-      },
-      "problems": [],
-      "result": "succeeded",
+      "pdf": null,
+      "problems": [
+        "第 1 遍 XeLaTeX 退出码 1"
+      ],
+      "result": "failed",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-08-12T14:33:13+08:00",
+  "finished_at": "2026-08-12T14:54:54+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -208,7 +140,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "f5a272dc9b511e417f8e92989f0384582f8928ea246b3bfd9b6a4155da96d683"
+        "sha256": "2d917f8acade7f8847f8e5e676ec868c11f08eb618207fbd4c6a33069f8634fb"
       },
       {
         "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_flow.tex",
@@ -291,16 +223,16 @@
         "sha256": "bae0b9b30289f30f5040641504d34bddd26bc7846272d9b8d31b303fbebd79d1"
       }
     ],
-    "tree_sha256": "ee6de3077ff5cb83c8017796903df1a25bd0d73c7192dc18b07b7c5ba325bf58"
+    "tree_sha256": "ccf636dc16662b592355e71e87dfb208867088fa9a7050179f7f444efacbc4b5"
   },
   "input_projection": "d81e2bb5d28c2a430b2ad2a4e6cbcf972be1cc5df4079e0bc539dc4fbd5e37f8",
-  "manifest_revision": 811,
+  "manifest_revision": 813,
   "paper_id": "gk-2017-regular-national-1-arts",
-  "previous_attempt_id": "2d915330-13bc-4410-9986-ad8a7c9686b2",
+  "previous_attempt_id": "6ecf3e49-2bfa-4899-baaa-fbfd743dc418",
   "project_dir": "2017_全国Ⅰ卷_文科",
   "schema_version": 1,
-  "started_at": "2026-08-12T14:32:38+08:00",
-  "status": "compiled_pending_review",
+  "started_at": "2026-08-12T14:54:46+08:00",
+  "status": "failed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [

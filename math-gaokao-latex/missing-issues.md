@@ -1647,3 +1647,307 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0089
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "8fcb38d3e90c08ae9c7146cd696060dadb7666e0f80763b0e60792fae4688ea2",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-arts",
+  "resume_action": "修正 gk-2017-regular-national-1-arts 的 试题版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0090
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "b66b6932e5ab1c3a1562dd7c52abb77e11c2d29206a4c40f182da1f7aebd7160",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-arts",
+  "resume_action": "修正 gk-2017-regular-national-1-arts 的 解析版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0091
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "004094877aa58825daf54a949828d0b2b0b043c4ad54f292437f34d0e2d5761e",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-arts",
+  "resume_action": "修正 gk-2017-regular-national-1-arts 的 简答版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0092
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "b33bf6c48975bb5a38d2109932ba74214ff7136dfcccbe85bfb129ad51116995",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-arts",
+  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0093
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "9b4049cba29a3f78d0d1dc12ea4e94824bb335752bbd637166597028c372bd11",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-science",
+  "resume_action": "修正 gk-2017-regular-national-1-science 的 试题版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0094
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "0f1fae6c4cb8dd217b8740f5e825ab8c2b4d39a2f85b6db2fc983ae03663e09c",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-science",
+  "resume_action": "修正 gk-2017-regular-national-1-science 的 解析版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0095
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "8b6a7e88d8b56479ffd3461d79772eb79d40ab9f8060977424f329443bcbd23c",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-science",
+  "resume_action": "修正 gk-2017-regular-national-1-science 的 简答版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0096
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "faf852d6ce4682eb58d83ec6eade1c40fe6cbe27cb358a0484b363ed47354ec7",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-1-science",
+  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0097
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "5d33da07b8a5891b37bda1e6a3219fca34f55ae6005429280ca4982a34dcf3ce",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 试题版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0098
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "1e6699aa8aeba16d7556e94431155d9f051686e59971471ad84492e79c998612",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 解析版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0099
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "58565dcdd3e63e9b3d871f8547389ba642fdcd61350fbd055d11c20ecb00cd54",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 简答版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0100
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "4401ebc430b7971244637bb82995cb737736bbcf6a237e1cc52243f4fc863173",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 印刷版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0101
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "ac40bfd5bd3bc1bb68da707b242686f7361a7566a2254fb73801f359eb27a721",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-science",
+  "resume_action": "修正 gk-2018-regular-national-1-science 的 试题版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0102
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "f87859c9bf812694375447dd080042878434cbe963dd713ce42e0a248fc9472d",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-science",
+  "resume_action": "修正 gk-2018-regular-national-1-science 的 解析版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0103
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "1ad7a52c6be8f9d87fe32fbcf6b9bb8c16624a169a5852430aa5e295fe410b70",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-science",
+  "resume_action": "修正 gk-2018-regular-national-1-science 的 简答版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0104
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "b07bf7bd152f5504e5214c1fa2a11a938f65c31ab620c2cb2ca1d174a855171d",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2018-regular-national-1-science",
+  "resume_action": "修正 gk-2018-regular-national-1-science 的 印刷版 后重跑 build --formal（第 1 遍 XeLaTeX 退出码 1）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
