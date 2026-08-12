@@ -1,0 +1,455 @@
+{
+  "$id": "https://gaokao-latex.invalid/schemas/review-receipt.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "高考数学 LaTeX 视觉审查回执",
+  "description": "一卷四版本的全页视觉审查回执。它必须能被后来的任何人用手上的字节重新验算：绑定当次 build 的 attempt、manifest 投影、两棵输入树、工具链指纹、视觉工具（pdftotext/pdftoppm）指纹与每一版 PDF 的 SHA-256 与页数；任一项对不上即 stale。页集合必须精确覆盖 1..page_count，缺页/重页/越界都不是「少查了几页」而是「这份裁决不成立」——形状约束（受限验证器没有 if/then）落在 review_receipts.validate_review()。",
+  "$defs": {
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "ISO-8601 本地时间，必须带时区偏移。",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]+)?([+-][0-9]{2}:[0-9]{2}|Z)$",
+      "type": "string"
+    },
+    "attempt_id": {
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+      "type": "string"
+    },
+    "edition_name": {
+      "enum": [
+        "试题版",
+        "解析版",
+        "简答版",
+        "印刷版"
+      ]
+    },
+    "review_status": {
+      "description": "任一页 fail、四版本不全或页集合不精确时只能是 failed；pending 是「尚无裁决」，绝不是「暂且通过」。",
+      "enum": [
+        "pending",
+        "passed",
+        "failed"
+      ]
+    },
+    "page_result": {
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "check_result": {
+      "description": "not_applicable 必须给理由——「这项不适用」是一个需要被反驳的断言，不是跳过。",
+      "enum": [
+        "pass",
+        "fail",
+        "not_applicable"
+      ]
+    },
+    "check_code": {
+      "description": "统一检查项，八项逐页全覆盖，一项都不能省。",
+      "enum": [
+        "answer_leak",
+        "figure_label",
+        "font_size",
+        "glyph",
+        "header_footer",
+        "heading_number",
+        "option_formula_alignment",
+        "pagination_whitespace"
+      ]
+    },
+    "page_number": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "page_list": {
+      "items": {
+        "$ref": "#/$defs/page_number"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "tool_fingerprint": {
+      "description": "一个实际 executable 的指纹；形状与 build 回执逐字一致，两者可直接相等比较。",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "xelatex",
+            "pdfinfo",
+            "pdftotext",
+            "pdftoppm"
+          ]
+        },
+        "path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "real_path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "version": {
+          "pattern": "^.+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "path",
+        "real_path",
+        "sha256",
+        "version"
+      ],
+      "type": "object"
+    },
+    "visual_tool_fingerprint": {
+      "description": "只有渲染/取文用得到的两件：pdftotext 与 pdftoppm。",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "enum": [
+            "pdftotext",
+            "pdftoppm"
+          ]
+        },
+        "path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "real_path": {
+          "pattern": "^/.+$",
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "version": {
+          "pattern": "^.+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "path",
+        "real_path",
+        "sha256",
+        "version"
+      ],
+      "type": "object"
+    },
+    "toolchain_fingerprint": {
+      "additionalProperties": false,
+      "properties": {
+        "texlive_revision": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "tools": {
+          "items": {
+            "$ref": "#/$defs/tool_fingerprint"
+          },
+          "minItems": 4,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "texlive_revision",
+        "tools"
+      ],
+      "type": "object"
+    },
+    "visual_toolchain_fingerprint": {
+      "description": "视觉工具指纹。与 build 的 toolchain_fingerprint 并列而非替代：换了 poppler 的机器上旧 review 必须当场 stale。",
+      "additionalProperties": false,
+      "properties": {
+        "tools": {
+          "items": {
+            "$ref": "#/$defs/visual_tool_fingerprint"
+          },
+          "minItems": 2,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "tools"
+      ],
+      "type": "object"
+    },
+    "check_record": {
+      "additionalProperties": false,
+      "properties": {
+        "check": {
+          "$ref": "#/$defs/check_code"
+        },
+        "note": {
+          "description": "not_applicable 与 fail 必须写明理由；pass 可留空串。",
+          "type": "string"
+        },
+        "result": {
+          "$ref": "#/$defs/check_result"
+        }
+      },
+      "required": [
+        "check",
+        "result",
+        "note"
+      ],
+      "type": "object"
+    },
+    "page_record": {
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/check_record"
+          },
+          "minItems": 8,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "page": {
+          "$ref": "#/$defs/page_number"
+        },
+        "result": {
+          "$ref": "#/$defs/page_result"
+        }
+      },
+      "required": [
+        "page",
+        "result",
+        "checks"
+      ],
+      "type": "object"
+    },
+    "candidate_override": {
+      "description": "人工改选：原候选、改选页与理由三者齐全，才留得下可反驳的记录。",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "chosen_pages": {
+              "$ref": "#/$defs/page_list"
+            },
+            "original_pages": {
+              "$ref": "#/$defs/page_list"
+            },
+            "reason": {
+              "pattern": "^.+$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "original_pages",
+            "chosen_pages",
+            "reason"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "edition_review": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_override": {
+          "$ref": "#/$defs/candidate_override"
+        },
+        "candidate_pages": {
+          "description": "重点二次复核锚点。它只做加法——绝不缩小 pages 必须覆盖的全页集合。",
+          "$ref": "#/$defs/page_list"
+        },
+        "edition": {
+          "$ref": "#/$defs/edition_name"
+        },
+        "page_count": {
+          "$ref": "#/$defs/page_number"
+        },
+        "pages": {
+          "description": "精确覆盖 1..page_count，无缺页、重页或越界。",
+          "items": {
+            "$ref": "#/$defs/page_record"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "pdf_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "result": {
+          "$ref": "#/$defs/page_result"
+        }
+      },
+      "required": [
+        "edition",
+        "pdf_sha256",
+        "page_count",
+        "result",
+        "candidate_pages",
+        "candidate_override",
+        "pages"
+      ],
+      "type": "object"
+    },
+    "warning_exemption": {
+      "description": "一条 Overfull/Underfull 警告的逐项豁免。edition/kind/box/width_pt/lines 五项是与 build 回执逐项匹配的键，必须与回执逐字相同；source_file/pdf_page/visual_result/reason 是这条豁免自己的证据。",
+      "additionalProperties": false,
+      "properties": {
+        "box": {
+          "enum": [
+            "hbox",
+            "vbox"
+          ]
+        },
+        "edition": {
+          "$ref": "#/$defs/edition_name"
+        },
+        "kind": {
+          "enum": [
+            "Overfull",
+            "Underfull"
+          ]
+        },
+        "lines": {
+          "description": "与 build 回执逐字相同的行号串。TeX 日志的 `at lines` 不带文件名，故必须与 source_file 配套才有意义。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^.+$",
+              "type": "string"
+            }
+          ]
+        },
+        "pdf_page": {
+          "$ref": "#/$defs/page_number"
+        },
+        "reason": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
+        "source_file": {
+          "description": "lines 所指的文件，仓库相对路径。TeX 日志只给行号不给文件名，而实测行号指向被 \\input 的内容文件（如 answers.tex），**不是** 二三十行的版本壳——不写明文件，「源行」就是一个无法复核的数字。",
+          "pattern": "^[^/].*$",
+          "type": "string"
+        },
+        "visual_result": {
+          "$ref": "#/$defs/page_result"
+        },
+        "width_pt": {
+          "description": "字符串而非数字，且 Underfull 恒为 null（该字段必填、值为 null，不是缺字段）。字符串宽度按字典序排序会静默错排（\"86.9\" > \"506.0\"），故一切排序先按 kind 分流再 float()，而与 build 回执的匹配一律用逐字相等，不做数值化。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "pattern": "^[0-9]+([.][0-9]+)?$",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "edition",
+        "kind",
+        "box",
+        "width_pt",
+        "lines",
+        "source_file",
+        "pdf_page",
+        "visual_result",
+        "reason"
+      ],
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "batch_id": {
+      "pattern": "^[a-z0-9-]+$",
+      "type": "string"
+    },
+    "build_attempt_id": {
+      "description": "被审查的那一次构建。attempt 变了就是另一批 PDF，旧裁决当场作废。",
+      "$ref": "#/$defs/attempt_id"
+    },
+    "dependency_tree_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "editions": {
+      "description": "恰好四版本且顺序固定；不全即 failed。",
+      "items": {
+        "$ref": "#/$defs/edition_review"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "generation_input_tree_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "input_projection": {
+      "$ref": "#/$defs/sha256"
+    },
+    "paper_id": {
+      "pattern": "^gk-[0-9]{4}-[a-z0-9-]+$",
+      "type": "string"
+    },
+    "project_dir": {
+      "pattern": "^[^/]+$",
+      "type": "string"
+    },
+    "reviewed_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "status": {
+      "$ref": "#/$defs/review_status"
+    },
+    "toolchain_fingerprint": {
+      "$ref": "#/$defs/toolchain_fingerprint"
+    },
+    "visual_tool_fingerprint": {
+      "$ref": "#/$defs/visual_toolchain_fingerprint"
+    },
+    "warning_exemptions": {
+      "description": "必须与 build 回执 log.overfull 的警告集合逐项匹配——多一条少一条都不成立；警告集合一变，旧豁免全部失效。",
+      "items": {
+        "$ref": "#/$defs/warning_exemption"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "paper_id",
+    "project_dir",
+    "batch_id",
+    "status",
+    "reviewed_at",
+    "build_attempt_id",
+    "input_projection",
+    "generation_input_tree_sha256",
+    "dependency_tree_sha256",
+    "toolchain_fingerprint",
+    "visual_tool_fingerprint",
+    "editions",
+    "warning_exemptions"
+  ],
+  "type": "object"
+}
