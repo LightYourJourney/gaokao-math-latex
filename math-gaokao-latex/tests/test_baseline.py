@@ -441,10 +441,7 @@ class BaselineComparisonTests(unittest.TestCase):
             "migration": 13, "header": 15, "stale-artifact": 4,
             "short-answers-regeneration": 15, "visual-layout-repair": 16,
         })
-        by_task = {
-            "task-13-review", "task-14-review", "task-25-visual-review",
-            "task-26-regeneration",
-        }
+        by_task = {"task-13-review", "task-14-review", "task-25-visual-review"}
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
             self.assertIn(item["adjudicated_by"], by_task)
@@ -458,11 +455,6 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertEqual(
             len([item for item in adjudicated
                  if item["adjudicated_by"] == "task-25-visual-review"]),
-            8,
-        )
-        self.assertEqual(
-            len([item for item in adjudicated
-                 if item["adjudicated_by"] == "task-26-regeneration"]),
             8,
         )
 
@@ -922,7 +914,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
         selected = {
             key: record for key, record in ledger.items()
-            if record["adjudicated_by"] == "task-26-regeneration"
+            if record["adjudicated_by"] == "task-25-visual-review"
+            and key[0] in projects
         }
         expected_keys = {
             (paper_id, artifact)
