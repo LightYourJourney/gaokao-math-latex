@@ -436,6 +436,38 @@ class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
         self.assertTrue(any("OPTIONMARK" in page for page in used))
 
 
+class ProductionPreambleNeedspaceTests(unittest.TestCase):
+    def test_production_preamble_compiles_generated_needspace(self):
+        xelatex = shutil.which("xelatex")
+        if not xelatex:
+            self.skipTest("xelatex 不存在，无法运行生产 preamble 集成回归")
+        preamble = (ROOT / "common" / "preamble.tex").as_posix()
+        generated = md2tex.convert_markdown(
+            "**7．** 见图（　　）\n\n![图](images/a.png)\n\n  A．1　　B．2\n",
+            md2tex.ConversionContext(figure_map={"a": "fa"}),
+        ).text
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "figures").mkdir()
+            (root / "figures" / "fa.tex").write_text(
+                "\\rule{2cm}{1cm}\n", encoding="utf-8"
+            )
+            (root / "preamble-integration.tex").write_text(
+                "\\documentclass[zihao=-4,a4paper]{ctexart}\n"
+                f"\\input{{{preamble}}}\n"
+                "\\newcommand{\\gkti}[1]{\\par\\noindent\\textbf{#1．}}\n"
+                "\\begin{document}\n" + generated + "\\end{document}\n",
+                encoding="utf-8",
+            )
+            completed = subprocess.run(
+                [xelatex, "-interaction=nonstopmode", "-halt-on-error",
+                 "preamble-integration.tex"],
+                cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            )
+        self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+        self.assertNotIn("Undefined control sequence", completed.stdout)
+
+
 class ConversionInterfaceTests(unittest.TestCase):
     def test_the_module_keeps_no_global_warning_state(self):
         # 全局 warning 会让批量生成里「哪一卷出的问题」不可判定，必须彻底消失。
