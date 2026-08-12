@@ -455,7 +455,7 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertEqual(
             len([item for item in adjudicated
                  if item["adjudicated_by"] == "task-25-visual-review"]),
-            8,
+            16,
         )
 
     def test_without_the_ledger_every_content_drift_is_reported(self):
@@ -963,6 +963,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         selected = {
             key: record for key, record in ledger.items()
             if record["adjudicated_by"] == "task-25-visual-review"
+            and key[0] in projects
         }
         expected_keys = {
             (paper_id, artifact)
