@@ -1414,6 +1414,17 @@ def finalize_batch(
                     )
                 reviews[paper_id] = review
 
+        loaded = _loaded_facts(root, manifest, affected, issues_path, facts_loader)
+        stale_artifacts = sorted(
+            paper_id for paper_id in paper_ids
+            if loaded[paper_id].get("artifacts") != "current"
+        )
+        if stale_artifacts:
+            raise ReviewError(
+                "%s 的 artifact 状态为 stale，必须重生成 → 重编 → 重审"
+                % "、".join(stale_artifacts)
+            )
+
         # ---- 2. 视觉 issues 对账
         payload, issue_ids, records = reconcile_visual_issues(
             issues_path, paper_ids, fails
@@ -1422,7 +1433,6 @@ def finalize_batch(
         if payload != (issues_path.read_bytes() if issues_path.is_file() else b""):
             extra[ISSUES_TARGET] = payload
 
-        loaded = _loaded_facts(root, manifest, affected, issues_path, facts_loader)
         review_targets = {
             review_receipt_path(_paper(manifest, paper_id)):
                 canonical_json(reviews[paper_id]).encode("utf-8")
@@ -1492,15 +1502,6 @@ def finalize_batch(
             root, manifest, affected, loaded, final_builds,
             issue_records=records, toolchain=chain,
         )
-        stale_artifacts = sorted(
-            paper_id for paper_id in paper_ids
-            if candidate_facts[paper_id].get("artifacts") != "current"
-        )
-        if stale_artifacts:
-            raise ReviewError(
-                "%s 的 artifact 状态为 stale，必须重生成 → 重编 → 重审"
-                % "、".join(stale_artifacts)
-            )
         outcomes = {}
         for paper_id in paper_ids:
             outcome = derive_content_outcome(

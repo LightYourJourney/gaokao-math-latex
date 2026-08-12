@@ -557,6 +557,30 @@ class BatchIntegrationTests(unittest.TestCase):
         transactions = self.fixture.root / subject.WORK_RELATIVE / "transactions"
         self.assertEqual([], list(transactions.iterdir()) if transactions.exists() else [])
 
+    def test_finalize_rejects_failed_review_with_stale_artifacts_before_writes(self) -> None:
+        self.prepare()
+        failure = (build_tests.PAPER_ID, subject.EDITIONS[0], 1)
+        self.complete_work([failure])
+        before = self.tracked_state()
+        transactions = self.fixture.root / subject.WORK_RELATIVE / "transactions"
+        self.loader = build_tests.make_loader(per_paper={
+            build_tests.PAPER_ID: {"artifacts": "stale"},
+        })
+
+        with mock.patch.object(
+            subject.build_projects, "commit_state",
+            side_effect=AssertionError("stale artifact 前不应提交事务"),
+        ) as commit:
+            with self.assertRaisesRegex(
+                subject.ReviewError,
+                rf"{build_tests.PAPER_ID}.*artifact.*stale.*重生成.*重编.*重审",
+            ):
+                self.finalize()
+
+        commit.assert_not_called()
+        self.assertEqual(before, self.tracked_state())
+        self.assertEqual([], list(transactions.iterdir()) if transactions.exists() else [])
+
     def test_finalize_rejects_stale_artifacts_before_report_or_transaction(self) -> None:
         document = self.fixture.manifest()
         for paper_id in (build_tests.PAPER_ID, build_tests.OTHER_ID):
