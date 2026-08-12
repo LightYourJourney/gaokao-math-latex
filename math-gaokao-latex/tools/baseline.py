@@ -24,6 +24,10 @@ ADJUDICATED_DRIFTS_PATH = (
 LEDGER_VERSION = 1
 DRIFT_CLASSES = (
     "header", "migration", "stale-artifact", "short-answers-regeneration",
+    "visual-layout-repair",
+)
+ADJUDICATION_SOURCES = (
+    "task-13-review", "task-14-review", "task-25-visual-review",
 )
 _BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
 _PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
@@ -724,6 +728,8 @@ def load_adjudicated_drifts(
             for value in (paper_id, artifact, adjudicated_by, drift_class)
         ):
             raise ValueError(f"已裁定漂移条目字段缺失或非字符串：{dict(record)}")
+        if adjudicated_by not in ADJUDICATION_SOURCES:
+            raise ValueError(f"未知的漂移裁定来源：{adjudicated_by!r}")
         if drift_class not in DRIFT_CLASSES:
             raise ValueError(f"未知的漂移类别：{drift_class!r}")
         if artifact not in CONTENT_FILES:

@@ -15,18 +15,19 @@
     "     （旧实现的正则会把分问结论截断成「见解析版」或留下残句）记 short-answers-regeneration；",
     "     另 6 卷逐 hunk 核对确认只有生成头注一处变化，记 header——散文注释不是逐条记录，按 class",
     "     字段筛选必须能拿到 15/6 的区分。同一任务的 84 个版本壳模板化后逐字节未变，无壳条目。",
+    "  5. T25 修复 md2tex 图片块的相邻分页保护，phase0-b01 四卷 questions.tex/answers.tex 共 8 个派生物哈希变化；逐 hunk 审查确认只新增图片前后 \\nopagebreak[4] 并收敛邻接空行，数学、题号、选项与 figure occurrence 均不变。common/macros.tex 的答案框修复不改变生成物哈希。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
     "current 再变一次、legacy 对不上、或出现未登记的新漂移，一律恢复报警（exit 1）。",
     "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
     "class：migration=内容迁移（答案/题面改由规范源供给）；header=仅生成头注变化；",
-    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导；short-answers-regeneration=简答版改由 answers.tex 提取并与答案要点结构化比较后重生成。"
+    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导；short-answers-regeneration=简答版改由 answers.tex 提取并与答案要点结构化比较后重生成；visual-layout-repair=经全页视觉审查确认的版式缺陷修复所致共享 TeX 哈希变化。"
   ],
   "drifts": [
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "answers.tex",
-      "class": "migration",
-      "current_sha256": "2d016dd428ebaec859e4420afd972db3db66b6af648ee080fba04c9e04e0b42b",
+      "class": "visual-layout-repair",
+      "current_sha256": "a6e3b1c454c1552b0468bfa0a1beb3e7cde4f3bf3d0b7eb2f861bf3355c79594",
       "legacy_sha256": "f7b5371182d8ae9c87a79dfc7d8051b119781e8aee29c6ae6dfa7e8af4aca556",
       "paper_id": "gk-2017-regular-national-1-arts"
     },
@@ -39,18 +40,18 @@
       "paper_id": "gk-2017-regular-national-1-arts"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
-      "class": "stale-artifact",
-      "current_sha256": "377d33d661a45757273ad4af975131a3664f76ca055631738e7d497a30bebb82",
+      "class": "visual-layout-repair",
+      "current_sha256": "524b464bc38b1507c3114ad1bb035c21d18894b101d66162cffebd5986bb4af9",
       "legacy_sha256": "20e386e451d2ec648b0e2c4d12d83cf276209e6c3901b75e9501eda0816a9371",
       "paper_id": "gk-2017-regular-national-1-arts"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "answers.tex",
-      "class": "migration",
-      "current_sha256": "37728b54e38439eff9360fdf12acf2e72babfbdf2f6a85415b5e6dc741dc4bc6",
+      "class": "visual-layout-repair",
+      "current_sha256": "0de53d055d017ff434138e1a95ba4f29ccac8ffc3022324c32d4c84b10f17fe5",
       "legacy_sha256": "26cfdcb0b49f2117f47c5cf785ebc4671167a20d7893109d8ef0d40ecf6d80bb",
       "paper_id": "gk-2017-regular-national-1-science"
     },
@@ -63,18 +64,18 @@
       "paper_id": "gk-2017-regular-national-1-science"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
-      "class": "stale-artifact",
-      "current_sha256": "e360a8559c12fcf40d4b998035b76e9a57bbe3c90c99e7064034b813df5ecafb",
+      "class": "visual-layout-repair",
+      "current_sha256": "f29057d7d371c3221aa0cfecad35a66e15bc935913377f2ff0fe8d5f7cd505c8",
       "legacy_sha256": "d98f82479c190e2a58a496223f687e802c9c6b070083e47264cd4f57e666e089",
       "paper_id": "gk-2017-regular-national-1-science"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "answers.tex",
-      "class": "migration",
-      "current_sha256": "8fb89d5c21c27df355fbe618d80d6c050fb42ac6cfb3b7a90269030a959230d4",
+      "class": "visual-layout-repair",
+      "current_sha256": "a2fd552327d67b2354fd243fc1ac7741a865ffb679eb8d7f21f196182523104b",
       "legacy_sha256": "c9b5377da5b7352b42e9967765c8a08a01047324de1e402c0ba4e6e0ec6c1f7c",
       "paper_id": "gk-2018-regular-national-1-arts"
     },
@@ -87,18 +88,18 @@
       "paper_id": "gk-2018-regular-national-1-arts"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
-      "class": "stale-artifact",
-      "current_sha256": "ea83cb5367593a7800784ecdaef5abb8ab9687e3770cf1274bd56e87e56cae86",
+      "class": "visual-layout-repair",
+      "current_sha256": "0e2bb65da0de43181d10bc854c893fd58d0ceb6f119a08a074c7540bf3930e05",
       "legacy_sha256": "d174ce432c441bc56966cc5d22ea96717d4decaa1860b6620cc1d65ec7697b2d",
       "paper_id": "gk-2018-regular-national-1-arts"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "answers.tex",
-      "class": "migration",
-      "current_sha256": "abc9c92e641b47893142369047c50a00f59bcee2a28d88558b614456528b1e12",
+      "class": "visual-layout-repair",
+      "current_sha256": "70644d17f37f6a306cec3dad2d0c172ba6f1c88dbcacca14f3a921d917e8e306",
       "legacy_sha256": "c44b4dccfb88fbfdfc3bd98cb4d79d9bdebcd84eb118f9e040568a857ed4afc1",
       "paper_id": "gk-2018-regular-national-1-science"
     },
@@ -111,10 +112,10 @@
       "paper_id": "gk-2018-regular-national-1-science"
     },
     {
-      "adjudicated_by": "task-13-review",
+      "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
-      "class": "header",
-      "current_sha256": "93fe2713f0d055ea25281a36a8f3694453fb6e3c7876beb72b7c6cd9906e44c3",
+      "class": "visual-layout-repair",
+      "current_sha256": "6e80a9374b269871ca8c44a8d80c6c1d379cf07bc9c14d8f9d7c47c08c5aa31e",
       "legacy_sha256": "0cf91c6fc95c009556bfc795dac1534faf2a83a501def3c2a63e463527ca9d1d",
       "paper_id": "gk-2018-regular-national-1-science"
     },

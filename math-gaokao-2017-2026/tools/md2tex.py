@@ -250,7 +250,11 @@ def emit_image(name: str, sink: _Sink) -> List[str]:
         sink.warnings.append(f"图片无映射：{name}")
         return [r"\begin{center}\fbox{图形缺失：" + conv_text(name) + r"}\end{center}"]
     sink.figures.append(slug)
-    return [f"\\begin{{center}}\\input{{figures/{slug}}}\\end{{center}}"]
+    return [
+        r"\nopagebreak[4]",
+        f"\\begin{{center}}\\input{{figures/{slug}}}\\end{{center}}",
+        r"\nopagebreak[4]",
+    ]
 
 
 HEAD_SOL = re.compile(r"^### 第\s*(\d+)\s*题[　\s]*(?:（(.*)）|〔(.*)〕)?\s*$")
@@ -352,8 +356,12 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
         # --- 图片 ---
         m = IMG.match(ln.strip())
         if m:
+            while out and out[-1] == "":
+                out.pop()
             out += emit_image(m.group(1), sink)
             i += 1
+            while i < n and not lines[i].strip():
+                i += 1
             continue
 
         # --- 无序列表（- 开头的连续行）---

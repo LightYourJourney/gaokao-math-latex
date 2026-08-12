@@ -1,4 +1,5 @@
 import copy
+import difflib
 import hashlib
 import io
 import json
@@ -414,7 +415,8 @@ class BaselineComparisonTests(unittest.TestCase):
         T13 把 questions/answers 改成来源总账驱动（42 条），T14 又把 answers_short
         改成自 answers.tex 提取（21 条）；计划从未承诺共享 TeX 字节不变。这里守的是
         「除已裁定的那 63 条之外，一个字节都没动」——84 个版本壳就在这条守卫之内，
-        T14 的模板化必须逐字节复现它们，任何壳漂移都会在这里现形。
+        T13/T14 的 63 个唯一键仍保持不增不减；T25 只更新其中 b01 的 8 个既有键，
+        把裁定来源和类别改为窄定义的视觉排版修复，并钉住新的 current hash。
         """
         report = self.report()
         self.assertEqual(report["drift"], [])
@@ -436,18 +438,24 @@ class BaselineComparisonTests(unittest.TestCase):
         # 答案值，另 6 卷逐 hunk 核对只有生成头注一处变化，按本表自己的 class 定义
         # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
-            "migration": 21, "header": 20, "stale-artifact": 7,
-            "short-answers-regeneration": 15,
+            "migration": 17, "header": 19, "stale-artifact": 4,
+            "short-answers-regeneration": 15, "visual-layout-repair": 8,
         })
-        by_task = {"task-13-review", "task-14-review"}
+        by_task = {"task-13-review", "task-14-review", "task-25-visual-review"}
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
             self.assertIn(item["adjudicated_by"], by_task)
-        # 每一条都必须指名裁定它的那一轮：T14 的 21 条只许挂在 answers_short.tex 上。
+        # 每一条都必须指名裁定它的那一轮：T14 只挂 answers_short，T25 恰为
+        # phase0-b01 四卷的 questions/answers 八个既有唯一键。
         self.assertEqual(
             {item["artifact"] for item in adjudicated
              if item["adjudicated_by"] == "task-14-review"},
             {"answers_short.tex"},
+        )
+        self.assertEqual(
+            len([item for item in adjudicated
+                 if item["adjudicated_by"] == "task-25-visual-review"]),
+            8,
         )
 
     def test_without_the_ledger_every_content_drift_is_reported(self):
@@ -847,6 +855,24 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             list(ledger), [("gk-2099-regular-national-1", "answers.tex")]
         )
 
+    def test_visual_layout_repair_has_one_narrow_adjudication_source(self):
+        record = self.valid_record(**{
+            "adjudicated_by": "task-25-visual-review",
+            "class": "visual-layout-repair",
+        })
+        ledger = load_adjudicated_drifts(self.write({
+            "ledger_version": LEDGER_VERSION, "drifts": [record]
+        }))
+        self.assertEqual(
+            ledger[("gk-2099-regular-national-1", "answers.tex")], record
+        )
+
+        record["adjudicated_by"] = "随便一个来源"
+        with self.assertRaises(ValueError):
+            load_adjudicated_drifts(self.write({
+                "ledger_version": LEDGER_VERSION, "drifts": [record]
+            }))
+
     def test_a_malformed_ledger_fails_closed(self):
         cases = {
             "版本": {"ledger_version": 99, "drifts": []},
@@ -877,6 +903,53 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             with self.subTest(case=name):
                 with self.assertRaises(ValueError):
                     load_adjudicated_drifts(self.write(document))
+
+    def test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs(self):
+        projects = {
+            "gk-2017-regular-national-1-arts": "2017_全国Ⅰ卷_文科",
+            "gk-2017-regular-national-1-science": "2017_全国Ⅰ卷_理科",
+            "gk-2018-regular-national-1-arts": "2018_全国Ⅰ卷_文科",
+            "gk-2018-regular-national-1-science": "2018_全国Ⅰ卷_理科",
+        }
+        ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
+        selected = {
+            key: record for key, record in ledger.items()
+            if record["adjudicated_by"] == "task-25-visual-review"
+        }
+        expected_keys = {
+            (paper_id, artifact)
+            for paper_id in projects
+            for artifact in ("questions.tex", "answers.tex")
+        }
+        self.assertEqual(set(selected), expected_keys)
+        self.assertEqual(len(selected), 8)
+
+        for (paper_id, artifact), record in selected.items():
+            relative = "math-gaokao-latex/{}/{}".format(
+                projects[paper_id], artifact
+            )
+            current = ROOT.parent.parent.parent / relative
+            head = subprocess.check_output([
+                "git", "-C", str(ROOT.parent.parent.parent), "show",
+                "e8f2ff5:" + relative,
+            ]).decode("utf-8")
+            now = current.read_text(encoding="utf-8")
+            self.assertEqual(record["class"], "visual-layout-repair")
+            self.assertEqual(record["current_sha256"], file_sha256(current))
+            self.assertNotEqual(hashlib.sha256(head.encode()).hexdigest(), record["current_sha256"])
+
+            removed = []
+            added = []
+            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+                if line.startswith("- "):
+                    removed.append(line[2:])
+                elif line.startswith("+ "):
+                    added.append(line[2:])
+            self.assertTrue(added)
+            self.assertTrue(all(line == r"\nopagebreak[4]" for line in added))
+            self.assertTrue(all(line == "" for line in removed))
+            for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
+                self.assertEqual(head.count(token), now.count(token), (relative, token))
 
     def test_the_repository_ledger_registers_the_63_shared_tex_drifts(self):
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)

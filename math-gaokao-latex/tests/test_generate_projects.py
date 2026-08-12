@@ -323,6 +323,52 @@ class RepositoryFixture:
 # ------------------------------------------------------------------ md2tex 纯接口
 
 
+class AnswerBoxXeLaTeXRegressionTests(unittest.TestCase):
+    def test_a_long_mixed_answer_wraps_without_overfull_and_remains_readable(self):
+        xelatex = shutil.which("xelatex")
+        pdftotext = shutil.which("pdftotext")
+        if not (xelatex and pdftotext):
+            self.skipTest("xelatex/pdftotext 不齐，无法运行真实答案框回归")
+
+        macros = (ROOT / "common" / "macros.tex").as_posix()
+        long_answer = (
+            "起始标记：答案（1）中英文 mixed English and 中文数字 2017 交错，"
+            "$f'(x)=\\dfrac{x^2-ax+1}{x^2}$；当 $a\\le2$ 时函数在区间 "
+            "$(0,+\\infty)$ 上单调递减；when parameter $a>2$, the function "
+            "decreases, increases, and then decreases across three intervals；"
+            "继续补充中英文 mixed English and 中文数字 2018 以确保答案超过一行，结束标记。"
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "answer-box.tex"
+            source.write_text(
+                "\\documentclass[zihao=-4,a4paper]{ctexart}\n"
+                "\\usepackage[margin=2.2cm]{geometry}\n"
+                "\\usepackage{amsmath,amssymb,mathtools}\n"
+                "\\usepackage[most]{tcolorbox}\n"
+                "\\usepackage{hyperref}\n"
+                f"\\input{{{macros}}}\n"
+                "\\begin{document}\n"
+                f"\\gkanswer{{{long_answer}}}\n"
+                "\\end{document}\n",
+                encoding="utf-8",
+            )
+            completed = subprocess.run(
+                [xelatex, "-interaction=nonstopmode", "-halt-on-error", source.name],
+                cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                text=True,
+            )
+            log = (root / "answer-box.log").read_text(encoding="utf-8", errors="replace")
+            extracted = subprocess.run(
+                [pdftotext, "-layout", "answer-box.pdf", "-"], cwd=root, check=True,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            ).stdout
+
+        self.assertNotIn("Overfull \\hbox", log, completed.stdout)
+        self.assertIn("起始标记", extracted)
+        self.assertIn("结束标记", extracted)
+
+
 class ConversionInterfaceTests(unittest.TestCase):
     def test_the_module_keeps_no_global_warning_state(self):
         # 全局 warning 会让批量生成里「哪一卷出的问题」不可判定，必须彻底消失。
@@ -344,6 +390,26 @@ class ConversionInterfaceTests(unittest.TestCase):
         )
         # 复用计数靠它，去重就等于把「同一张图被引两次」抹平成一次。
         self.assertEqual(result.referenced_figures, ("fa", "fa", "fb"))
+
+    def test_an_image_keeps_both_adjacent_page_break_guards_without_changing_content(self):
+        source = (
+            "**7．** 题干末句。\n\n"
+            "![三视图](images/a.png)\n\n"
+            "  A．$1$　　B．$2$　　C．$3$　　D．$4$\n"
+        )
+        result = md2tex.convert_markdown(
+            source, md2tex.ConversionContext(figure_map={"a": "fa"})
+        )
+        figure = r"\begin{center}\input{figures/fa}\end{center}"
+        protected = "题干末句。\n\\nopagebreak[4]\n%s\n\\nopagebreak[4]\n\\begin{gkopts}" % figure
+
+        self.assertIn(protected, result.text)
+        self.assertEqual(result.text.count(r"\nopagebreak[4]"), 2)
+        self.assertEqual(result.text.count(figure), 1)
+        self.assertEqual(result.text.count(r"\gkti{7}"), 1)
+        self.assertEqual(result.text.count(r"\task "), 4)
+        self.assertEqual(result.referenced_figures, ("fa",))
+        # 变异牙齿：删掉图片前或图片后的任一保护，`protected` 与数量断言都会变红。
 
     def test_strict_mode_fails_on_any_warning(self):
         with self.assertRaises(md2tex.ConversionError) as caught:

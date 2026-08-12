@@ -36,7 +36,8 @@
 % ---------- 答案行 ----------
 % 解析中独立成段的"答案：X"用带底色的行呈现
 \newcommand{\gkanswer}[1]{\par\smallskip\noindent
-  \tcbox[colback=green!6, colframe=green!35!black, boxrule=0.4pt,
+  \tcbox[width=\linewidth, tcbox width=auto limited,
+         colback=green!6, colframe=green!35!black, boxrule=0.4pt,
          arc=1.5pt, left=4pt, right=4pt, top=2pt, bottom=2pt,
          nobeforeafter]{\textbf{#1}}\par\smallskip}
 
