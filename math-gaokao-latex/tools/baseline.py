@@ -28,6 +28,7 @@ DRIFT_CLASSES = (
 )
 ADJUDICATION_SOURCES = (
     "task-13-review", "task-14-review", "task-25-visual-review",
+    "task-26-regeneration",
 )
 _BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
 _PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
