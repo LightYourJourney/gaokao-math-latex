@@ -369,6 +369,73 @@ class AnswerBoxXeLaTeXRegressionTests(unittest.TestCase):
         self.assertIn("结束标记", extracted)
 
 
+class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
+    def compile_question(self, question, fill="9.2cm"):
+        xelatex = shutil.which("xelatex")
+        pdftotext = shutil.which("pdftotext")
+        if not (xelatex and pdftotext):
+            self.skipTest("xelatex/pdftotext 不齐，无法运行真实题图分页回归")
+        converted = md2tex.convert_markdown(
+            question, md2tex.ConversionContext(figure_map={"a": "fa"})
+        ).text
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "figures").mkdir()
+            (root / "figures" / "fa.tex").write_text(
+                "\\rule{4cm}{2.2cm}\\par FIGUREMARK\n", encoding="utf-8"
+            )
+            (root / "pagination.tex").write_text(
+                "\\documentclass[zihao=-4]{ctexart}\n"
+                "\\usepackage[paperwidth=18cm,paperheight=16cm,margin=1cm]{geometry}\n"
+                "\\usepackage{tasks,needspace}\n"
+                "\\NewTasksEnvironment[style=itemize]{gkopts}[\\task](4)\n"
+                "\\newcommand{\\gkti}[1]{\\par\\medskip\\noindent\\textbf{#1．}}\n"
+                "\\pagestyle{empty}\n"
+                "\\begin{document}\n"
+                f"FILLER\\par\\vspace*{{{fill}}}\n"
+                + converted
+                + "\\end{document}\n",
+                encoding="utf-8",
+            )
+            completed = subprocess.run(
+                [xelatex, "-interaction=nonstopmode", "-halt-on-error", "pagination.tex"],
+                cwd=root, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+            log = (root / "pagination.log").read_text(encoding="utf-8", errors="replace")
+            text = subprocess.run(
+                [pdftotext, "-layout", "pagination.pdf", "-"], cwd=root, check=True,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            ).stdout
+        self.assertNotIn("Overfull \\hbox", log)
+        return text.split("\f")
+
+    def test_image_question_stem_figure_and_options_stay_on_one_page_near_page_end(self):
+        pages = self.compile_question(
+            "**7．** STEMMARK 某多面体的三视图如图所示，求梯形面积之和（　　）\n\n"
+            "![三视图](images/a.png)\n\n"
+            "  A．OPTIONMARK 10　　B．12　　C．14　　D．16\n"
+        )
+        joined = [page for page in pages if "STEMMARK" in page]
+        self.assertEqual(len(joined), 1)
+        self.assertIn("FIGUREMARK", joined[0])
+        self.assertIn("OPTIONMARK", joined[0])
+
+    def test_soft_reservation_does_not_box_a_long_image_question(self):
+        long_body = "很长的题干内容。" * 180
+        pages = self.compile_question(
+            "**10．** STEMMARK " + long_body + "\n\n"
+            "![程序框图](images/a.png)\n\n"
+            "  A．OPTIONMARK 甲　　B．乙　　C．丙　　D．丁\n",
+            fill="0cm",
+        )
+        used = [page for page in pages if any(
+            marker in page for marker in ("STEMMARK", "FIGUREMARK", "OPTIONMARK")
+        )]
+        self.assertGreater(len(used), 1)
+        self.assertTrue(any("OPTIONMARK" in page for page in used))
+
+
 class ConversionInterfaceTests(unittest.TestCase):
     def test_the_module_keeps_no_global_warning_state(self):
         # 全局 warning 会让批量生成里「哪一卷出的问题」不可判定，必须彻底消失。

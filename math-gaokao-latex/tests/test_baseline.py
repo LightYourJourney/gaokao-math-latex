@@ -946,7 +946,9 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line == r"\nopagebreak[4]" for line in added))
+            self.assertTrue(all(line in {
+                r"\nopagebreak[4]", r"\Needspace{0.5\textheight}"
+            } for line in added))
             self.assertTrue(all(line == "" for line in removed))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
