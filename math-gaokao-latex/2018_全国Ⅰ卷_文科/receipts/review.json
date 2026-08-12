@@ -1,12 +1,12 @@
 {
   "batch_id": "phase0-b01",
-  "build_attempt_id": "571bf210-f867-44af-a4ac-f4a2442ed6ee",
-  "dependency_tree_sha256": "72b4c2faa83cccc952a3cf8a8918c08260f2e3f7e428a217527d5e008721c987",
+  "build_attempt_id": "51521fda-0b14-4ccd-8043-5fd43ca6b5aa",
+  "dependency_tree_sha256": "2cc7e9c61d5dfeb3b0a89403bb036fbdfdd80dbeb8f09b902d96bdf9c57efd2a",
   "editions": [
     {
       "candidate_override": null,
       "candidate_pages": [
-        3
+        2
       ],
       "edition": "试题版",
       "page_count": 5,
@@ -76,8 +76,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -122,7 +122,7 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
+              "note": "本页无图形或图形标注。",
               "result": "not_applicable"
             },
             {
@@ -214,7 +214,7 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
+              "note": "本页无图形或图形标注。",
               "result": "not_applicable"
             },
             {
@@ -224,7 +224,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页完成第 20–23 题后保留大块空白，属于试卷自然收尾；无缺页、重页或异常分页。",
+              "note": "",
               "result": "pass"
             },
             {
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "b9253e726636686235651ecb06860ed564aa18c2d9c89ad3cc970b89ab665d4c",
+      "pdf_sha256": "008b9f7c7f5e5bdcca6613988baae5d93c99e3edef2afa3295b1b608cab90151",
       "result": "pass"
     },
     {
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、公式及正文基线和缩进协调，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1039,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图形线条与标注清晰，标注位置未见遮挡或错配。",
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1177,42 +1177,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1223,42 +1223,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1269,42 +1269,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1315,42 +1315,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1361,42 +1361,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1407,42 +1407,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1453,42 +1453,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染复核，中文、数字及数学字形清晰完整，无缺字、乱码或替代方框。",
+              "note": "逐页视觉渲染核对：中文、数字与数学字形完整清晰，无缺字、乱码或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题、分区与题号层级清楚，编号连续且未见错位。",
+              "note": "标题、分区、题号与解析题号层级连续且位置正常，无错号或跨区错置。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页解析公式与正文对齐正常，未见重叠或裁切。",
+              "note": "选项、公式、答案框及正文对齐正常，无重叠、横向溢出或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无需要审查的图形或图形标注。",
-              "result": "not_applicable"
+              "note": "逐页核对图形、图表及其标注；本页未见图形标注缺失、遮挡或错配。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名/版本与页脚页码清晰、位置一致。",
+              "note": "页眉卷名、科类、版本与页脚页码清晰一致，未见缺失或错置。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "分页连续，页面留白与内容密度可接受，无空白页或重复页。",
+              "note": "分页连续，留白与内容密度符合内容自然分布，无异常空白页、重复页或内容截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式、注释与标题字号层级一致且可辨读。",
+              "note": "标题、正文、注释、公式与答案框字号层级一致且可辨读，无异常缩放。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版预期展示答案/解析。",
+              "note": "版别预期展示答案；已核对答案与解析均位于解析区，未见跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -1496,7 +1496,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "ee99a70d1d5211fd8c977d1df68f53a2915e804abebc5f4bd9fdd0bfd99c94a0",
+      "pdf_sha256": "c012498729a68fd4ab3bafdaec25bb11b943b66c8bc967b10b532542b963b1e6",
       "result": "pass"
     },
     {
@@ -1511,7 +1511,7 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "",
+              "note": "首页标题、提示框、正文及数学字形显示正常。",
               "result": "pass"
             },
             {
@@ -1546,8 +1546,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
-              "result": "not_applicable"
+              "note": "正文页未见意外答案、完整解析或证明。",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -1592,8 +1592,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
-              "result": "not_applicable"
+              "note": "正文页未见意外答案、完整解析或证明。",
+              "result": "pass"
             }
           ],
           "page": 2,
@@ -1618,8 +1618,8 @@
             },
             {
               "check": "figure_label",
-              "note": "",
-              "result": "pass"
+              "note": "本页无图形或图注。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -1628,7 +1628,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "候选页及解答题起始页复核：选择题、填空题、章节标题和第17题连续完整。",
               "result": "pass"
             },
             {
@@ -1638,8 +1638,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
-              "result": "not_applicable"
+              "note": "正文页未见意外答案、完整解析或证明。",
+              "result": "pass"
             }
           ],
           "page": 3,
@@ -1659,8 +1659,8 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "",
-              "result": "pass"
+              "note": "本页无选择题选项排版。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
@@ -1674,7 +1674,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "含图高密度页复核：第18题立体图、两张频数表及直方图坐标均清晰完整。",
               "result": "pass"
             },
             {
@@ -1684,8 +1684,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
-              "result": "not_applicable"
+              "note": "正文页未见意外答案、完整解析或证明。",
+              "result": "pass"
             }
           ],
           "page": 4,
@@ -1705,13 +1705,13 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "",
-              "result": "pass"
+              "note": "本页无选择题选项排版。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "",
-              "result": "pass"
+              "note": "本页无图形或图注。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -1720,7 +1720,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "正文末页复核：第19题续文及第20—23题连续完整；下方为自然余白，无异常分页、空白页或重复页。",
               "result": "pass"
             },
             {
@@ -1730,8 +1730,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
-              "result": "not_applicable"
+              "note": "正文页未见意外答案、完整解析或证明。",
+              "result": "pass"
             }
           ],
           "page": 5,
@@ -1751,13 +1751,13 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "",
-              "result": "pass"
+              "note": "本页无选择题选项排版。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "",
-              "result": "pass"
+              "note": "本页无图形或图注。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -1766,17 +1766,17 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "末页答案速查二次复核：答案表及各题答案横向完整、字号可读，无完整解析或证明泄漏。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "",
+              "note": "答案速查字号清晰可读，横向无裁切。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "简答版按设计含答案速查；该项不适用。已另行检查，未见意外完整解析或推导。",
+              "note": "本页为简答版预期“答案速查”，按版别语义不作答案泄漏判定；另查未见完整解析或证明。",
               "result": "not_applicable"
             }
           ],
@@ -1784,7 +1784,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "8ec5fdbdb7bcbe16f5327348ff4716a2f1169fa0838e9559ac5c0ff3fe47e3d6",
+      "pdf_sha256": "fb4a2308a02e4ac9aef9ed520854fab69e45de1312ebf99df2c7166f68c3790a",
       "result": "pass"
     },
     {
@@ -1834,8 +1834,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
-              "result": "not_applicable"
+              "note": "题目区未见答案或解析跨入。",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -1880,8 +1880,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
-              "result": "not_applicable"
+              "note": "题目区未见答案或解析跨入。",
+              "result": "pass"
             }
           ],
           "page": 2,
@@ -1926,8 +1926,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
-              "result": "not_applicable"
+              "note": "题目区未见答案或解析跨入。",
+              "result": "pass"
             }
           ],
           "page": 3,
@@ -1972,8 +1972,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
-              "result": "not_applicable"
+              "note": "本页为题目/解析分界；答案从明确的解析区标题后开始，未跨入前置题目区。",
+              "result": "pass"
             }
           ],
           "page": 4,
@@ -2018,7 +2018,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2044,8 +2044,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2064,7 +2064,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2090,8 +2090,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2110,7 +2110,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2156,7 +2156,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2182,8 +2182,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2202,7 +2202,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2228,8 +2228,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2248,7 +2248,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2274,8 +2274,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2294,7 +2294,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2320,8 +2320,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2340,7 +2340,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2366,8 +2366,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2386,7 +2386,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2412,8 +2412,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2432,7 +2432,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2478,7 +2478,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2504,8 +2504,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2524,7 +2524,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2550,8 +2550,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2570,7 +2570,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2596,8 +2596,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2616,7 +2616,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2642,8 +2642,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2662,7 +2662,7 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
@@ -2688,8 +2688,8 @@
             },
             {
               "check": "figure_label",
-              "note": "本页无图形、图表或需核对的图形标注。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             },
             {
               "check": "header_footer",
@@ -2698,8 +2698,8 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页仅页首保留第23题解析及两条答案，占页不足三分之一，其余为异常大片空白。",
-              "result": "fail"
+              "note": "末页仅Q23答案后自然收尾；内容连续，无空白页或重复页。",
+              "result": "pass"
             },
             {
               "check": "font_size",
@@ -2708,25 +2708,25 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版按既定版式组合题目与参考答案/详细解析；答案位于明确分隔的解析区，未见跨区错置。",
+              "note": "印刷版解析区预期含答案；已检查答案未跨入前置题目区、未跨题或跨区错置。",
               "result": "not_applicable"
             }
           ],
           "page": 20,
-          "result": "fail"
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "36cc3d6c8995706e128a88a831a1cad00a66038ca8b89c2f33aa4f7e562ad8c8",
-      "result": "fail"
+      "pdf_sha256": "bd0812ed1560780f71291f84e193b7bcbb8a21cf245c7fc066ec3b8514355867",
+      "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "fb6554ea3fc04e0704ce2d406a90e869ce28faa89b1449affda819c9cd91434e",
+  "generation_input_tree_sha256": "1a6927d2945b94bf58543675c848b285b78b0ca60d3564cf9f07cd7dcd3a884f",
   "input_projection": "80417a9108489c44d7b0dbccb87612f728fdbde93d2ef27b7747624590da6704",
   "paper_id": "gk-2018-regular-national-1-arts",
   "project_dir": "2018_全国Ⅰ卷_文科",
-  "reviewed_at": "2026-08-12T13:37:38+08:00",
+  "reviewed_at": "2026-08-12T19:06:36+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [

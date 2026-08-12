@@ -1280,17 +1280,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "5ed9e3048bca6625ae9c480e9e7493718b1084faa2dba677ee1156701d0723c0",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 2 页 figure_label（第10题程序框图未与题干同页，图文被分页拆开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0072
 
 ```json
@@ -1301,17 +1300,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "86dc97900ab666d76a9da726182bfc8ccf4464ba596b7ede12fe376a1dcb1a57",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 2 页 pagination_whitespace（第10题题干留在本页底部，程序框图及选项移至第3页，题目被跨页断开且本页下半部形成大片空白。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0073
 
 ```json
@@ -1322,17 +1320,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "54d0c786e13a5af3c46ae9e7dee3e2d2f80ba007bb23945c97da444ee6b87aee",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 3 页 figure_label（第10题程序框图与上一页题干分离。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0074
 
 ```json
@@ -1343,17 +1340,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "4898b1105f8176c8e91c81144eb88c0e8d4c05fab8212528fef448eb40a97f3b",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 3 页 pagination_whitespace（本页以第10题程序框图和选项开头，题干在第2页，题目跨页断开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0075
 
 ```json
@@ -1364,17 +1360,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "3d29d4458f4240738b94050d0d8afbfe97dde2402e44608b40783bc7f2186d63",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 24,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 24 页 option_formula_alignment（第21题答案长框向右越出版心，右端内容在页面边界处被截断。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0076
 
 ```json
@@ -1385,17 +1380,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "b7fa73c528ec19513b817fff9902272be4a9fa83e6c3be85018f20c13f715f26",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 26,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "ab3129a0a3724df5c112fc2282dc6d1cbf1ed8147a19bcd018262d6cb0e3bec7",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 印刷版 第 26 页 pagination_whitespace（末页仅页首两条答案，占页不足四分之一，其余为异常大片空白。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0077
 
 ```json
@@ -1406,17 +1400,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "c63c6c5146c01c26010f3d5156d6e8baa56b9c35847203a4114e88d377d29120",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 32,
   "paper_id": "gk-2017-regular-national-1-arts",
   "pdf_sha256": "4bc445c6d6245ad4a7eae4675e661ad87faa878df37ae653b42cf0f7ad36d4e8",
-  "resume_action": "修正 gk-2017-regular-national-1-arts 的 解析版 第 32 页 option_formula_alignment（第 21 题答案（1）绿色答案框横向溢出，右端内容被页面裁切；与 Overfull hbox 警告的真实视觉缺陷一致。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0078
 
 ```json
@@ -1427,17 +1420,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "32fdc8f5c572610e2c7b770df063c4489b6eaf7768ee7620f2df21b2bbe90831",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 1 页 figure_label（第7题三视图未与题干同页，图文被分页拆开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0079
 
 ```json
@@ -1448,17 +1440,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "a87ef0fb58c8976910c6c6a06393f0897c887bffc1d68f588ee136081d08a42e",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 1 页 pagination_whitespace（第7题题干留在本页底部，三视图及选项移至第2页，题目被跨页断开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0080
 
 ```json
@@ -1469,17 +1460,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "2b3d28a9f05d406976fce53ae3dc4257d504f421b1cd68fadf3d5601a9e114bb",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 2 页 figure_label（第7题三视图与上一页题干分离。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0081
 
 ```json
@@ -1490,17 +1480,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "0167ae2992b31dec7a1e2e992d243fc68c5291975507f6b1c32b130350e5a7a0",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 2 页 pagination_whitespace（本页以第7题三视图和选项开头，题干在第1页，题目跨页断开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0082
 
 ```json
@@ -1511,17 +1500,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "18234334141ce660d77aa36d30b60ad5b327737e14f85918815626d4be3c240f",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 24,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 24 页 option_formula_alignment（第21题答案长框向右越出版心，右端内容在页面边界处被截断。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0083
 
 ```json
@@ -1532,17 +1520,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "6c667039cbc2402d59ec45a49de279d9a903a1ef25be45b57b0fb3b3887a8100",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 27,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "ff50ccf7aedf04f55322a9854b6be616e650f624742fc0d07e7af81cd0ecbfca",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 印刷版 第 27 页 pagination_whitespace（末页仅页首为第23题解析收尾及答案，占页不足三分之一，其余为异常大片空白。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0084
 
 ```json
@@ -1553,17 +1540,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "ab945cd9b317f7d3cca08815ad1583377bf2033741c00becc99008d8fa7e76b0",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 33,
   "paper_id": "gk-2017-regular-national-1-science",
   "pdf_sha256": "c6034dc4abd26b022a7d853fa30d46e5546f0fb3feaf152f1ebc507fc169cb42",
-  "resume_action": "修正 gk-2017-regular-national-1-science 的 解析版 第 33 页 option_formula_alignment（第 21 题答案（1）绿色答案框横向溢出，右端内容被页面裁切；与 Overfull hbox 警告的真实视觉缺陷一致。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0085
 
 ```json
@@ -1574,17 +1560,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "4c3a6bae1cfda56bd131bd0c5e214b96d83469f2f4fb293552c84851153ec277",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 20,
   "paper_id": "gk-2018-regular-national-1-arts",
   "pdf_sha256": "36cc3d6c8995706e128a88a831a1cad00a66038ca8b89c2f33aa4f7e562ad8c8",
-  "resume_action": "修正 gk-2018-regular-national-1-arts 的 印刷版 第 20 页 pagination_whitespace（末页仅页首保留第23题解析及两条答案，占页不足三分之一，其余为异常大片空白。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0086
 
 ```json
@@ -1595,17 +1580,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "e02456fd7eca082fd39145f5ac7873700d1a82d74677c1667bb5c69c40beb2ec",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 21,
   "paper_id": "gk-2018-regular-national-1-science",
   "pdf_sha256": "3306ca55d47701bb3d9ed0fe4bdc06cffbb7a5f057d27596bc70c0cf9f7426b9",
-  "resume_action": "修正 gk-2018-regular-national-1-science 的 印刷版 第 21 页 option_formula_alignment（第21题第(1)问答案长框向右越出版心，右端公式/文字在页面边界处被截断。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0087
 
 ```json
@@ -1616,17 +1600,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "e33c25f5cd7c7a263209c5910fec84e82d2c7751b15faf2147a1d69252e27385",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 23,
   "paper_id": "gk-2018-regular-national-1-science",
   "pdf_sha256": "3306ca55d47701bb3d9ed0fe4bdc06cffbb7a5f057d27596bc70c0cf9f7426b9",
-  "resume_action": "修正 gk-2018-regular-national-1-science 的 印刷版 第 23 页 pagination_whitespace（末页仅页首为第23题解析收尾及答案，占页不足三分之二，下部形成异常大片空白。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0088
 
 ```json
@@ -1637,17 +1620,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "4affbf2de1c5337b49f074b2040ca803a2212efaae320e8af8e026ca5708516c",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 28,
   "paper_id": "gk-2018-regular-national-1-science",
   "pdf_sha256": "f2a5ebf8d3facfe40201207b322f2dc816ba9c46c52e5954a818256f5ec1bce4",
-  "resume_action": "修正 gk-2018-regular-national-1-science 的 解析版 第 28 页 option_formula_alignment（第 21 题答案（1）绿色答案框横向溢出，右端内容被页面裁切；与 Overfull hbox 警告的真实视觉缺陷一致。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0089
 
 ```json
