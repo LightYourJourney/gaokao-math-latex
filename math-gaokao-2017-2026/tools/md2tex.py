@@ -397,12 +397,12 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
         # --- 题号 ---
         m = HEAD_QNUM.match(ln)
         if m:
-            # 含图选择题在页尾至少预留半页：Needspace 只决定起始页，不把整题硬盒，
+            # 含图选择题在页尾预留四成页高：Needspace 只决定起始页，不把整题硬盒，
             # 超长题仍可自然跨页。扫描止于下一题号或节标题，避免影响无图题。
             j = i + 1
             while j < n and not HEAD_QNUM.match(lines[j]) and not lines[j].startswith("#"):
                 if IMG.match(lines[j].strip()):
-                    out.append(r"\Needspace{0.5\textheight}")
+                    out.append(r"\Needspace{0.4\textheight}")
                     break
                 j += 1
             score = f"\\textbf{{{conv_inline(m.group(2), sink)}}} " if m.group(2) else ""

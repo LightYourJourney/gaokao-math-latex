@@ -15,7 +15,7 @@
     "     （旧实现的正则会把分问结论截断成「见解析版」或留下残句）记 short-answers-regeneration；",
     "     另 6 卷逐 hunk 核对确认只有生成头注一处变化，记 header——散文注释不是逐条记录，按 class",
     "     字段筛选必须能拿到 15/6 的区分。同一任务的 84 个版本壳模板化后逐字节未变，无壳条目。",
-    "  5. T25 修复 md2tex 图片块的相邻分页保护，phase0-b01 四卷 questions.tex/answers.tex 共 8 个派生物哈希变化；逐 hunk 审查确认只新增图片前后 \\nopagebreak[4]、含图题前的局部 \\Needspace{0.5\\textheight} 并收敛邻接空行，数学、题号、选项与 figure occurrence 均不变。common/macros.tex 的答案框修复不改变生成物哈希。",
+    "  5. T25 修复 md2tex 图片块的相邻分页保护，phase0-b01 四卷 questions.tex/answers.tex 共 8 个派生物哈希变化；逐 hunk 审查确认只新增图片前后 \\nopagebreak[4]、含图题前的局部 \\Needspace{0.4\\textheight} 并收敛邻接空行，数学、题号、选项与 figure occurrence 均不变。common/macros.tex 的答案框修复不改变生成物哈希。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
     "current 再变一次、legacy 对不上、或出现未登记的新漂移，一律恢复报警（exit 1）。",
     "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
@@ -43,7 +43,7 @@
       "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
       "class": "visual-layout-repair",
-      "current_sha256": "fe6005074366f54758fdbe67df245c8ef5276f9850cb87b945b6e26aa30fed84",
+      "current_sha256": "0ce5da891410a1cd8968ee1053a4898167b7061c4f80c7e734417d4404993ff3",
       "legacy_sha256": "20e386e451d2ec648b0e2c4d12d83cf276209e6c3901b75e9501eda0816a9371",
       "paper_id": "gk-2017-regular-national-1-arts"
     },
@@ -67,7 +67,7 @@
       "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
       "class": "visual-layout-repair",
-      "current_sha256": "4b57a1381d58ed8e31a8759392e441ed69da1bb1165e4fd693514f4c1b769706",
+      "current_sha256": "174597f7ef3aab5ed865fbe7bcebb3ceaa1c54f00e4100da3905a8c182b5327d",
       "legacy_sha256": "d98f82479c190e2a58a496223f687e802c9c6b070083e47264cd4f57e666e089",
       "paper_id": "gk-2017-regular-national-1-science"
     },
@@ -91,7 +91,7 @@
       "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
       "class": "visual-layout-repair",
-      "current_sha256": "4fd7314c8e3acbc5cc5a2982062156e4f4d4d03f971b514b93ac2e212f506f97",
+      "current_sha256": "d831a3f4a3cfd297c33051ce5608c8a37fa24758a1e2d75951fd0ff61e07210b",
       "legacy_sha256": "d174ce432c441bc56966cc5d22ea96717d4decaa1860b6620cc1d65ec7697b2d",
       "paper_id": "gk-2018-regular-national-1-arts"
     },
@@ -115,7 +115,7 @@
       "adjudicated_by": "task-25-visual-review",
       "artifact": "questions.tex",
       "class": "visual-layout-repair",
-      "current_sha256": "d8f95ff80b9d5dc272fb4068ccff99297423b2d659e1af3152616135fa293681",
+      "current_sha256": "6dafc0f4ca241ec61ad835c32e597a924cbbced6104ba5988bc414c00352335a",
       "legacy_sha256": "0cf91c6fc95c009556bfc795dac1534faf2a83a501def3c2a63e463527ca9d1d",
       "paper_id": "gk-2018-regular-national-1-science"
     },

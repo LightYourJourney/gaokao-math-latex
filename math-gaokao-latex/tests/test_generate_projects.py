@@ -421,6 +421,18 @@ class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
         self.assertIn("FIGUREMARK", joined[0])
         self.assertIn("OPTIONMARK", joined[0])
 
+    def test_sufficient_remaining_space_does_not_force_an_extra_page(self):
+        pages = self.compile_question(
+            "**9．** STEMMARK 如图所示，求阴影部分面积（　　）\n\n"
+            "![示意图](images/a.png)\n\n"
+            "  A．OPTIONMARK 1　　B．2　　C．3　　D．4\n",
+            fill="7.8cm",
+        )
+        filler_page = next(page for page in pages if "FILLER" in page)
+        self.assertIn("STEMMARK", filler_page)
+        self.assertIn("FIGUREMARK", filler_page)
+        self.assertIn("OPTIONMARK", filler_page)
+
     def test_soft_reservation_does_not_box_a_long_image_question(self):
         long_body = "很长的题干内容。" * 180
         pages = self.compile_question(

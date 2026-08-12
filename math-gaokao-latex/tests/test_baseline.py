@@ -947,7 +947,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                     added.append(line[2:])
             self.assertTrue(added)
             self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.5\textheight}"
+                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
             } for line in added))
             self.assertTrue(all(line == "" for line in removed))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
