@@ -1,7 +1,39 @@
 {
-  "attempt_id": "f891ba99-1b5a-4960-b951-8fb465e7abe8",
+  "attempt_id": "2d1eb259-f812-4933-85d7-dff06bda466a",
   "dependency_tree": {
     "files": [
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/answers.tex",
+        "sha256": "a6e3b1c454c1552b0468bfa0a1beb3e7cde4f3bf3d0b7eb2f861bf3355c79594"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/answers_short.tex",
+        "sha256": "88b555ed9bf9c41ada62894e2d4fea70bca865c525db1475b025c553078aeb1b"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_flow.tex",
+        "sha256": "7da32fd2853384eadae0bfbc10d64d76ad9ac0407da04e31ffdedef00d1a8e5e"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_t18_pyramid.tex",
+        "sha256": "7e52eac7aa5e75de23957394078c851e6d0caf737c7fb997a7afdedb7495ecda"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017_taiji.tex",
+        "sha256": "76851cbd5e901ac49278caec6cae40979c2ff7b5ac24ceaa20aca848eea87455"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesAB.tex",
+        "sha256": "f9106f33150f53bede91e5c51c62d083915cc61fb5e5374c9a87b5cf9cfa8d2f"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t6_cubesCD.tex",
+        "sha256": "a41e8e5c9747e53921a7015298cefc9326d2d743c1faaa0b5c7569b495c73648"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/figures/f2017wen_t8_panels.tex",
+        "sha256": "aebe18e3c5655580e900197759f898fdb8ce9f9b7b38ab1559fcf50e79bd00fd"
+      },
       {
         "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/questions.tex",
         "sha256": "fe6005074366f54758fdbe67df245c8ef5276f9850cb87b945b6e26aa30fed84"
@@ -28,14 +60,14 @@
       },
       {
         "path": "math-gaokao-latex/common/preamble.tex",
-        "sha256": "ba7ceb33670a6188ce0b1795df7f15a51ee05ef71a01db9000b892f6a0bce5f7"
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
       },
       {
         "path": "math-gaokao-latex/common/questions_env.tex",
         "sha256": "e197b70814c31514aa5f7682972504ec3669fc1887b9767ec9ac0fbcdc1c057f"
       }
     ],
-    "tree_sha256": "13e265b3177076eccffdf22bed972a9344ae3120c13fa1577b5efc9f71821c31"
+    "tree_sha256": "ce0e3d2bb24db5f8710a00925660ea2a1c0096515c20994a0a37d7f04f7dae0e"
   },
   "editions": [
     {
@@ -48,15 +80,22 @@
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/试题版.pdf",
+        "sha256": "d3fd6cf90f27bf7a3974c3987a2e94b67d42dde01b9d6f36335aee59ddb3aba4",
+        "size_bytes": 156293
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/试题版.tex"
     },
     {
@@ -64,20 +103,108 @@
       "log": {
         "errors": [],
         "missing_characters": [],
-        "overfull": [],
-        "undefined_references": []
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "1159--1160",
+            "text": "Underfull \\hbox (badness 1383) in paragraph at lines 1159--1160",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:1' on page 7 undefined on input line 18."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:2' on page 7 undefined on input line 47."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:3' on page 8 undefined on input line 85."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:4' on page 9 undefined on input line 123."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:5' on page 9 undefined on input line 150."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:6' on page 10 undefined on input line 197."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:7' on page 13 undefined on input line 324."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:8' on page 14 undefined on input line 367."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:9' on page 15 undefined on input line 423."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:10' on page 16 undefined on input line 472."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:11' on page 17 undefined on input line 503."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:12' on page 18 undefined on input line 558."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:13' on page 19 undefined on input line 621."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:14' on page 19 undefined on input line 643."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:15' on page 20 undefined on input line 669."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:16' on page 20 undefined on input line 697."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:17' on page 22 undefined on input line 759."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:18' on page 23 undefined on input line 837."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:19' on page 25 undefined on input line 938."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:20' on page 28 undefined on input line 1076"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:21' on page 30 undefined on input line 1170"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:22' on page 32 undefined on input line 1282"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:23' on page 33 undefined on input line 1334"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 34,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/解析版.pdf",
+        "sha256": "d4d40ef229436eefcb960f84404eda614b1d331e9746e8eeb970213e9571192c",
+        "size_bytes": 391606
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/解析版.tex"
     },
     {
@@ -90,15 +217,22 @@
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/简答版.pdf",
+        "sha256": "537630b1dbbc2cbbd53ba83278d4eddf27f2f8b121776af739cd7a3eeb588a3c",
+        "size_bytes": 167329
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/简答版.tex"
     },
     {
@@ -107,23 +241,103 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:1' on page 6 undefined on input line 18."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:2' on page 6 undefined on input line 47."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:3' on page 6 undefined on input line 85."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:4' on page 7 undefined on input line 123."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:5' on page 7 undefined on input line 150."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:6' on page 8 undefined on input line 197."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:7' on page 10 undefined on input line 324."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:8' on page 10 undefined on input line 367."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:9' on page 12 undefined on input line 423."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:10' on page 12 undefined on input line 472."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:11' on page 13 undefined on input line 503."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:12' on page 14 undefined on input line 558."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:13' on page 15 undefined on input line 621."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:14' on page 15 undefined on input line 643."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:15' on page 15 undefined on input line 669."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:16' on page 16 undefined on input line 697."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:17' on page 17 undefined on input line 759."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:18' on page 18 undefined on input line 837."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:19' on page 20 undefined on input line 938."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:20' on page 22 undefined on input line 1076"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:21' on page 23 undefined on input line 1170"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:22' on page 25 undefined on input line 1282"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017wen:23' on page 26 undefined on input line 1334"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 26,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_文科/build/印刷版.pdf",
+        "sha256": "610778e29e60e6328ffd6e98a712010049634e7abb55fdf80d3523d8bae0cac5",
+        "size_bytes": 387332
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-08-12T14:54:54+08:00",
+  "finished_at": "2026-08-12T15:08:47+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -226,13 +440,13 @@
     "tree_sha256": "ccf636dc16662b592355e71e87dfb208867088fa9a7050179f7f444efacbc4b5"
   },
   "input_projection": "d81e2bb5d28c2a430b2ad2a4e6cbcf972be1cc5df4079e0bc539dc4fbd5e37f8",
-  "manifest_revision": 813,
+  "manifest_revision": 815,
   "paper_id": "gk-2017-regular-national-1-arts",
-  "previous_attempt_id": "6ecf3e49-2bfa-4899-baaa-fbfd743dc418",
+  "previous_attempt_id": "f891ba99-1b5a-4960-b951-8fb465e7abe8",
   "project_dir": "2017_全国Ⅰ卷_文科",
   "schema_version": 1,
-  "started_at": "2026-08-12T14:54:46+08:00",
-  "status": "failed",
+  "started_at": "2026-08-12T15:08:10+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [

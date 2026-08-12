@@ -1,7 +1,35 @@
 {
-  "attempt_id": "bc7a1932-0883-47ff-9c72-ed21e4a4b034",
+  "attempt_id": "719309c7-2357-4b27-b8a1-df4a7ad43b54",
   "dependency_tree": {
     "files": [
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/answers.tex",
+        "sha256": "0de53d055d017ff434138e1a95ba4f29ccac8ffc3022324c32d4c84b10f17fe5"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/answers_short.tex",
+        "sha256": "eb4d9ff2f592a98a7501925032ee3df6bd8cca7e1236a6dc50210632796314c3"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/figures/f2017_flow.tex",
+        "sha256": "7da32fd2853384eadae0bfbc10d64d76ad9ac0407da04e31ffdedef00d1a8e5e"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/figures/f2017_t18_pyramid.tex",
+        "sha256": "7e52eac7aa5e75de23957394078c851e6d0caf737c7fb997a7afdedb7495ecda"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/figures/f2017_taiji.tex",
+        "sha256": "76851cbd5e901ac49278caec6cae40979c2ff7b5ac24ceaa20aca848eea87455"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/figures/f2017li_t16_paper.tex",
+        "sha256": "d873595dc8c2fede28ead8758fe10f5f744485214473015c038f6ff229773b6e"
+      },
+      {
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/figures/f2017li_t7_views.tex",
+        "sha256": "4f3ab871c27353c881b8cfc95a6c7df4d0f1c89e13174bd115050423e3baedef"
+      },
       {
         "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex",
         "sha256": "4b57a1381d58ed8e31a8759392e441ed69da1bb1165e4fd693514f4c1b769706"
@@ -28,14 +56,14 @@
       },
       {
         "path": "math-gaokao-latex/common/preamble.tex",
-        "sha256": "ba7ceb33670a6188ce0b1795df7f15a51ee05ef71a01db9000b892f6a0bce5f7"
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
       },
       {
         "path": "math-gaokao-latex/common/questions_env.tex",
         "sha256": "e197b70814c31514aa5f7682972504ec3669fc1887b9767ec9ac0fbcdc1c057f"
       }
     ],
-    "tree_sha256": "2b94f335b4f9c24194ed974ba6964287ddc46558751c7f4f400f4dc658982cd9"
+    "tree_sha256": "5df95597fd9246754c5c2bb040d44e0bdf31641e91d033a4dd08b0d8a5c6ae2f"
   },
   "editions": [
     {
@@ -48,15 +76,22 @@
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/build/试题版.pdf",
+        "sha256": "bb99482d05e164483c893d2301fb98b2096d266967cebc45ce7dc186cbf5c095",
+        "size_bytes": 156565
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_理科/试题版.tex"
     },
     {
@@ -65,19 +100,99 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:1' on page 7 undefined on input line 16."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:2' on page 7 undefined on input line 49."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:3' on page 8 undefined on input line 84."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:4' on page 9 undefined on input line 139."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:5' on page 9 undefined on input line 174."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:6' on page 10 undefined on input line 215."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:7' on page 11 undefined on input line 254."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:8' on page 12 undefined on input line 340."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:9' on page 14 undefined on input line 389."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:10' on page 15 undefined on input line 437."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:11' on page 16 undefined on input line 488."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:12' on page 17 undefined on input line 547."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:13' on page 19 undefined on input line 634."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:14' on page 19 undefined on input line 662."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:15' on page 20 undefined on input line 700."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:16' on page 21 undefined on input line 738."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:17' on page 22 undefined on input line 804."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:18' on page 24 undefined on input line 878."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:19' on page 26 undefined on input line 986."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:20' on page 29 undefined on input line 1108."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:21' on page 31 undefined on input line 1204."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:22' on page 33 undefined on input line 1302."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:23' on page 35 undefined on input line 1388."
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 36,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/build/解析版.pdf",
+        "sha256": "d455e14645508a05d0961b94ce15ce0cb9ecd46dd32b0dfedfcaa23737a1bae9",
+        "size_bytes": 416366
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_理科/解析版.tex"
     },
     {
@@ -90,15 +205,22 @@
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/build/简答版.pdf",
+        "sha256": "89ae090db8757c967ea96fbb3433dee4e1e169c3be8f47aa9512ca198b3353b5",
+        "size_bytes": 167641
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_理科/简答版.tex"
     },
     {
@@ -107,23 +229,103 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:1' on page 5 undefined on input line 16."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:2' on page 5 undefined on input line 49."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:3' on page 6 undefined on input line 84."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:4' on page 6 undefined on input line 139."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:5' on page 7 undefined on input line 174."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:6' on page 7 undefined on input line 215."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:7' on page 8 undefined on input line 254."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:8' on page 9 undefined on input line 340."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:9' on page 10 undefined on input line 389."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:10' on page 11 undefined on input line 437."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:11' on page 12 undefined on input line 488."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:12' on page 12 undefined on input line 547."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:13' on page 14 undefined on input line 634."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:14' on page 14 undefined on input line 662."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:15' on page 14 undefined on input line 700."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:16' on page 15 undefined on input line 738."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:17' on page 16 undefined on input line 804."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:18' on page 17 undefined on input line 878."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:19' on page 19 undefined on input line 986."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:20' on page 21 undefined on input line 1108."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:21' on page 23 undefined on input line 1204."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:22' on page 24 undefined on input line 1302."
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:2017li:23' on page 26 undefined on input line 1388."
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
-          "exit_code": 1,
+          "exit_code": 0,
           "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
         }
       ],
-      "pdf": null,
-      "problems": [
-        "第 1 遍 XeLaTeX 退出码 1"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 27,
+        "path": "math-gaokao-latex/2017_全国Ⅰ卷_理科/build/印刷版.pdf",
+        "sha256": "4b4dd603fe0cd013213dbec0e5b5645f04b15f7a82166904d6d9e2a30ce0db71",
+        "size_bytes": 413958
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2017_全国Ⅰ卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-08-12T14:54:50+08:00",
+  "finished_at": "2026-08-12T15:08:24+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -222,13 +424,13 @@
     "tree_sha256": "cd1304f14bcf1f707b1e86ac149cc80d6999ac5b6509d14e30146b8f4e7ac091"
   },
   "input_projection": "3294ea6b4a047caae94f1363ebc8b2f0ca41f89b60a617474f61afa1c27a01f7",
-  "manifest_revision": 813,
+  "manifest_revision": 815,
   "paper_id": "gk-2017-regular-national-1-science",
-  "previous_attempt_id": "25eb024c-1a92-4abd-9a8e-2ce4d4612a0d",
+  "previous_attempt_id": "bc7a1932-0883-47ff-9c72-ed21e4a4b034",
   "project_dir": "2017_全国Ⅰ卷_理科",
   "schema_version": 1,
-  "started_at": "2026-08-12T14:54:46+08:00",
-  "status": "failed",
+  "started_at": "2026-08-12T15:08:10+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
