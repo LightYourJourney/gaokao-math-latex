@@ -9,6 +9,7 @@
 3. 全批 21 份一次 `content` 事务提交，失败零覆盖、崩溃两端可恢复。
 """
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -34,7 +35,9 @@ from make_short_answers import (
     ShortAnswerError,
     compare_generated_answers,
     expected_answer_records,
+    generate_short_answers,
     merge_answer_records,
+    paper_sources,
     parse_answer_points,
     parse_generated_answers_tex,
     render_short_answers,
@@ -299,6 +302,23 @@ class RenderTests(unittest.TestCase):
     def setUp(self):
         self.answers = merge_answer_records(EXPECTED_RECORDS)
 
+    def test_a_targeted_override_replaces_only_one_subpart(self):
+        records = (
+            AnswerRecord(number=19, subpart=1, value="完整解析"),
+            AnswerRecord(number=19, subpart=2, value="第二问原值"),
+            AnswerRecord(number=20, subpart=None, value="未命中原值"),
+        )
+        self.assertEqual(
+            merge_answer_records(records, {(19, 1): "见解析版"}),
+            {19: "(1) 见解析版；(2) 第二问原值", 20: "未命中原值"},
+        )
+
+    def test_no_overrides_preserves_existing_merge_behavior(self):
+        self.assertEqual(
+            merge_answer_records(EXPECTED_RECORDS, None),
+            merge_answer_records(EXPECTED_RECORDS),
+        )
+
     def render(self, structure=None):
         return render_short_answers(
             TITLE,
@@ -461,6 +481,26 @@ class CommitTests(unittest.TestCase):
 
 
 class LiveRepositoryTests(unittest.TestCase):
+    def test_2023_new_gaokao_1_short_answer_19_1_is_not_a_solution_leak(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            paper for paper in manifest["papers"]
+            if paper["paper_id"] == "gk-2023-regular-new-gaokao-1"
+        )
+        sources = paper_sources(paper, make_short_answers.INDEX_METADATA)
+        result, problems = generate_short_answers(ROOT.parent.parent.parent, sources)
+        self.assertEqual(problems, ())
+        short_answers = result.targets[
+            f"{PROJECT_RELATIVE}/{paper['project_dir']}/answers_short.tex"
+        ].decode("utf-8")
+        match = re.search(
+            r"\\item\[\\textbf\{19\.\}\] (.*)", short_answers
+        )
+        self.assertIsNotNone(match)
+        item = match.group(1)
+        self.assertRegex(item, r"\(1\) (?:最终结论|见解析版)")
+        self.assertNotRegex(item, r"导数|零点|分类讨论|分类讨论.*单调|递减|递增")
+
     def test_every_paper_agrees_between_answers_tex_and_the_answer_key(self):
         repo = ROOT.parent.parent.parent
         manifest = load_manifest(ROOT / "source-manifest.json")

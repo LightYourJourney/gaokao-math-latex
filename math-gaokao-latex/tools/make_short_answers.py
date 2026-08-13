@@ -53,6 +53,9 @@ DEFAULT_MANIFEST = PROJECT_ROOT / "source-manifest.json"
 
 CHOICE_GROUPS = ("选择题", "单选题", "多选题")
 SEE_SOLUTION = "见解析版"
+SHORT_ANSWER_OVERRIDES = {
+    ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
+}
 
 _SOLUTION_HEAD = re.compile(r"^\\gksolhead\{(\d+)\}\{")
 # 生成答案块转成 LaTeX 后的两种形态：`**答案：X**` 独立段落走 \gkanswer；答案值里含
@@ -191,11 +194,18 @@ def compare_generated_answers(
     return tuple(problems)
 
 
-def merge_answer_records(records: Sequence[AnswerRecord]) -> Dict[int, str]:
+def merge_answer_records(
+    records: Sequence[AnswerRecord],
+    overrides: Optional[Mapping[Tuple[int, Optional[int]], str]] = None,
+) -> Dict[int, str]:
     """把答案序列折成逐题一行的速查文本；分问用「(k) …」以中文分号连接。"""
+    overrides = overrides or {}
     grouped: Dict[int, List[AnswerRecord]] = {}
     for record in records:
-        grouped.setdefault(record.number, []).append(record)
+        value = overrides.get((record.number, record.subpart), record.value)
+        grouped.setdefault(record.number, []).append(AnswerRecord(
+            number=record.number, subpart=record.subpart, value=value,
+        ))
     merged: Dict[int, str] = {}
     for number, items in grouped.items():
         if len(items) == 1 and items[0].subpart is None:
@@ -401,7 +411,12 @@ def generate_short_answers(
     if problems:
         return empty, labelled(problems)
 
-    answers = merge_answer_records(parse_generated_answers_tex(answers_tex))
+    overrides = {
+        (number, subpart): value
+        for (paper_id, number, subpart), value in SHORT_ANSWER_OVERRIDES.items()
+        if paper_id == sources.paper_id
+    }
+    answers = merge_answer_records(parse_generated_answers_tex(answers_tex), overrides)
     problems.extend(cross_check_quick_table(answer_key, sources.structure, answers))
     if problems:
         return empty, labelled(problems)
