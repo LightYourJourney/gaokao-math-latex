@@ -440,12 +440,12 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertEqual(counts, {
             "migration": 6, "header": 10, "stale-artifact": 2,
             "short-answers-regeneration": 15, "visual-layout-repair": 8,
-            "layout-regeneration": 22,
+            "layout-regeneration": 30,
         })
         by_task = {
             "task-13-review", "task-14-review", "task-25-visual-review",
             "task-26-regeneration", "task-27-regeneration",
-            "task-28-regeneration",
+            "task-28-regeneration", "task-29-regeneration",
         }
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
@@ -475,6 +475,11 @@ class BaselineComparisonTests(unittest.TestCase):
         self.assertEqual(
             len([item for item in adjudicated
                  if item["adjudicated_by"] == "task-28-regeneration"]),
+            8,
+        )
+        self.assertEqual(
+            len([item for item in adjudicated
+                 if item["adjudicated_by"] == "task-29-regeneration"]),
             8,
         )
 
@@ -895,7 +900,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
 
     def test_layout_regeneration_has_batch_scoped_adjudication_sources(self):
         for source in (
-            "task-26-regeneration", "task-27-regeneration", "task-28-regeneration"
+            "task-26-regeneration", "task-27-regeneration", "task-28-regeneration",
+            "task-29-regeneration",
         ):
             with self.subTest(source=source):
                 record = self.valid_record(**{
@@ -954,6 +960,69 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             with self.subTest(case=name):
                 with self.assertRaises(ValueError):
                     load_adjudicated_drifts(self.write(document))
+
+    def test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs(self):
+        projects = {
+            "gk-2024-regular-new-gaokao-1": "2024_新高考Ⅰ卷",
+            "gk-2024-regular-new-gaokao-2": "2024_新高考Ⅱ卷",
+            "gk-2025-regular-national-1": "2025_全国1卷",
+            "gk-2025-regular-national-2": "2025_全国2卷",
+        }
+        ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
+        ledger_relative = ADJUDICATED_DRIFTS_PATH.relative_to(
+            ROOT.parent.parent.parent
+        ).as_posix()
+        previous_document = json.loads(subprocess.check_output([
+            "git", "-C", str(ROOT.parent.parent.parent), "show",
+            "36ca6b2:" + ledger_relative,
+        ]).decode("utf-8"))
+        previous = {
+            (record["paper_id"], record["artifact"]): record
+            for record in previous_document["drifts"]
+        }
+        self.assertEqual(len(ledger), len(previous))
+        selected = {
+            key: record for key, record in ledger.items()
+            if record["adjudicated_by"] == "task-29-regeneration"
+        }
+        expected_keys = {
+            (paper_id, artifact)
+            for paper_id in projects
+            for artifact in ("questions.tex", "answers.tex")
+        }
+        self.assertEqual(set(selected), expected_keys)
+
+        for (paper_id, artifact), record in selected.items():
+            relative = "math-gaokao-latex/{}/{}".format(
+                projects[paper_id], artifact
+            )
+            current = ROOT.parent.parent.parent / relative
+            head = subprocess.check_output([
+                "git", "-C", str(ROOT.parent.parent.parent), "show",
+                "36ca6b2:" + relative,
+            ]).decode("utf-8")
+            now = current.read_text(encoding="utf-8")
+            self.assertEqual(record["class"], "layout-regeneration")
+            self.assertEqual(
+                record["legacy_sha256"],
+                previous[(paper_id, artifact)]["legacy_sha256"],
+            )
+            self.assertEqual(record["current_sha256"], file_sha256(current))
+
+            removed = []
+            added = []
+            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+                if line.startswith("- "):
+                    removed.append(line[2:])
+                elif line.startswith("+ "):
+                    added.append(line[2:])
+            self.assertTrue(added)
+            self.assertTrue(all(line in {
+                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
+            } for line in added))
+            self.assertTrue(all(line == "" for line in removed))
+            for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
+                self.assertEqual(head.count(token), now.count(token), (relative, token))
 
     def test_task28_updates_exactly_eight_existing_b04_keys_with_layout_only_diffs(self):
         projects = {
