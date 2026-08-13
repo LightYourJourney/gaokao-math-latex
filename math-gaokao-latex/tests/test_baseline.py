@@ -438,6 +438,7 @@ class BaselineComparisonTests(unittest.TestCase):
         # 答案值，另 6 卷逐 hunk 核对只有生成头注一处变化，按本表自己的 class 定义
         # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
+            "header": 6,
             "short-answers-regeneration": 14, "short-answer-safety-repair": 1,
             "visual-layout-repair": 8, "layout-regeneration": 34,
         })
@@ -1071,10 +1072,10 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                     added.append(line[2:])
             self.assertTrue(added)
             self.assertTrue(all(line in {
-                r"\\nopagebreak[4]", r"\\Needspace{0.4\\textheight}"
+                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
             } for line in added))
             self.assertTrue(all(line == "" for line in removed))
-            for token in (r"\\gkti{", r"\\task ", r"\\input{figures/", "$", r"\\["):
+            for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
     def test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs(self):
