@@ -16,11 +16,12 @@
     "     另 6 卷逐 hunk 核对确认只有生成头注一处变化，记 header——散文注释不是逐条记录，按 class",
     "     字段筛选必须能拿到 15/6 的区分。同一任务的 84 个版本壳模板化后逐字节未变，无壳条目。",
     "  5. T25 修复 md2tex 图片块并经全页视觉审查确认 phase0-b01 四卷的 8 个 questions.tex/answers.tex 漂移，记 visual-layout-repair；T26 用当前生成器恢复尚待新全页审查的 phase0-b02 四卷 8 个派生物，机械证明只传导 \\nopagebreak[4]、\\Needspace{0.4\\textheight} 与空行收敛且内容不变量成立，记 layout-regeneration，不声称视觉确认。common/macros.tex 的答案框修复不改变生成物哈希。",
+    "  6. T28 提交 a8bdf08 修复 2023 新高考Ⅰ卷简答版答案泄露：answers_short.tex 第 19 题 (1) 的完整推导改为“见解析版”，独立核对该提交前后仅此一处替换，记 short-answer-safety-repair；该裁定独立于同批次的 layout-regeneration。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
     "  5. T25 修复 md2tex 图片块并经全页视觉审查确认 phase0-b01 四卷的 8 个 questions.tex/answers.tex 漂移，记 visual-layout-repair；T26 用当前生成器恢复尚待新全页审查的 phase0-b02 四卷 8 个派生物，机械证明只传导 \\nopagebreak[4]、\\Needspace{0.4\\textheight} 与空行收敛且内容不变量成立，记 layout-regeneration，不声称视觉确认。common/macros.tex 的答案框修复不改变生成物哈希。",
     "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
     "class：migration=内容迁移（答案/题面改由规范源供给）；header=仅生成头注变化；",
-    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导；short-answers-regeneration=简答版改由 answers.tex 提取并与答案要点结构化比较后重生成；visual-layout-repair=经全页视觉审查确认的版式缺陷修复；layout-regeneration=公共生成器布局 token 传导已完成内容不变量核验与 formal 重编、但尚待新全页视觉审查。"
+    "stale-artifact=转换器病灶修复向滞后 legacy 产物的传导；short-answers-regeneration=简答版改由 answers.tex 提取并与答案要点结构化比较后重生成；short-answer-safety-repair=独立核对确认的简答版答案泄露安全修复；visual-layout-repair=经全页视觉审查确认的版式缺陷修复；layout-regeneration=公共生成器布局 token 传导已完成内容不变量核验与 formal 重编、但尚待新全页视觉审查。"
   ],
   "drifts": [
     {
@@ -344,10 +345,10 @@
       "paper_id": "gk-2023-regular-new-gaokao-1"
     },
     {
-      "adjudicated_by": "task-14-review",
+      "adjudicated_by": "task-28-answer-leak-repair",
       "artifact": "answers_short.tex",
-      "class": "short-answers-regeneration",
-      "current_sha256": "f35533264d8a3f547cf41a3720fe085683b11d976f15bbb3af1230762b6f7205",
+      "class": "short-answer-safety-repair",
+      "current_sha256": "52b81db73114203937ecbdef0047cf9a452bba5812c3b76ddd2e709029acced6",
       "legacy_sha256": "b250d729f0d72814ba1bf340572c34465dba4815d58a58fc84ed8709ead33fcd",
       "paper_id": "gk-2023-regular-new-gaokao-1"
     },

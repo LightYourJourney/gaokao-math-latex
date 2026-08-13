@@ -438,14 +438,15 @@ class BaselineComparisonTests(unittest.TestCase):
         # 答案值，另 6 卷逐 hunk 核对只有生成头注一处变化，按本表自己的 class 定义
         # 就该记 header——否则后人按 class 筛选拿不到 15/6 的区分。
         self.assertEqual(counts, {
-            "migration": 6, "header": 10, "stale-artifact": 2,
-            "short-answers-regeneration": 15, "visual-layout-repair": 8,
-            "layout-regeneration": 30,
+            "migration": 2, "header": 7, "stale-artifact": 1,
+            "short-answers-regeneration": 14, "short-answer-safety-repair": 1,
+            "visual-layout-repair": 8, "layout-regeneration": 30,
         })
         by_task = {
             "task-13-review", "task-14-review", "task-25-visual-review",
             "task-26-regeneration", "task-27-regeneration",
-            "task-28-regeneration", "task-29-regeneration",
+            "task-28-regeneration", "task-28-answer-leak-repair",
+            "task-29-regeneration",
         }
         for item in adjudicated:
             self.assertRegex(item["field"], r"^papers\[\d+\]\.content_sha256\.")
@@ -960,6 +961,61 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             with self.subTest(case=name):
                 with self.assertRaises(ValueError):
                     load_adjudicated_drifts(self.write(document))
+
+    def test_task28_answer_leak_repair_updates_exactly_one_existing_key(self):
+        key = ("gk-2023-regular-new-gaokao-1", "answers_short.tex")
+        relative = (
+            "math-gaokao-latex/2023_新高考Ⅰ卷/answers_short.tex"
+        )
+        repo = ROOT.parent.parent.parent
+        ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
+        record = ledger[key]
+        before = subprocess.check_output([
+            "git", "-C", str(repo), "show", "a8bdf08^:" + relative,
+        ]).decode("utf-8")
+        after = (repo / relative).read_text(encoding="utf-8")
+
+        self.assertEqual(record["adjudicated_by"], "task-28-answer-leak-repair")
+        self.assertEqual(record["class"], "short-answer-safety-repair")
+        self.assertEqual(
+            record["legacy_sha256"],
+            "b250d729f0d72814ba1bf340572c34465dba4815d58a58fc84ed8709ead33fcd",
+        )
+        self.assertEqual(record["current_sha256"], file_sha256(repo / relative))
+        leaked = r"  \item[\textbf{19.}] (1) $f'(x)=a\mathrm e^x-1$。$a\le0$：$a\mathrm e^x\le0$，故 $f'(x)<0$，$f$ 在 $\mathbf R$ 上单调递减；$a>0$：由 $f'(x)=0$ 得 $x=-\ln a$，$f$ 在 $(-\infty,-\ln a)$ 递减、在 $(-\ln a,+\infty)$ 递增；(2) 见解析版"
+        safe = r"  \item[\textbf{19.}] (1) 见解析版；(2) 见解析版"
+        self.assertEqual(before.count(leaked), 1)
+        self.assertNotIn(safe, before)
+        self.assertEqual(after, before.replace(leaked, safe))
+        selected = {
+            ledger_key for ledger_key, item in ledger.items()
+            if item["adjudicated_by"] == "task-28-answer-leak-repair"
+        }
+        self.assertEqual(selected, {key})
+
+        for field, value in (
+            ("adjudicated_by", "未知来源"),
+            ("class", "未知类别"),
+        ):
+            invalid = dict(record)
+            invalid[field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                load_adjudicated_drifts(self.write({
+                    "ledger_version": LEDGER_VERSION, "drifts": [invalid]
+                }))
+
+        for field, value in (
+            ("paper_id", "gk-2023-regular-new-gaokao-2"),
+            ("artifact", "answers.tex"),
+            ("adjudicated_by", "task-28-regeneration"),
+            ("class", "layout-regeneration"),
+        ):
+            invalid = dict(record)
+            invalid[field] = value
+            with self.subTest(scope=field), self.assertRaises(ValueError):
+                load_adjudicated_drifts(self.write({
+                    "ledger_version": LEDGER_VERSION, "drifts": [invalid]
+                }))
 
     def test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs(self):
         projects = {

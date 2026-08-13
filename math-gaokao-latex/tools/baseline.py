@@ -24,12 +24,12 @@ ADJUDICATED_DRIFTS_PATH = (
 LEDGER_VERSION = 1
 DRIFT_CLASSES = (
     "header", "migration", "stale-artifact", "short-answers-regeneration",
-    "visual-layout-repair", "layout-regeneration",
+    "short-answer-safety-repair", "visual-layout-repair", "layout-regeneration",
 )
 ADJUDICATION_SOURCES = (
     "task-13-review", "task-14-review", "task-25-visual-review",
     "task-26-regeneration", "task-27-regeneration", "task-28-regeneration",
-    "task-29-regeneration",
+    "task-28-answer-leak-repair", "task-29-regeneration",
 )
 _BUILD_INPUT_SUFFIXES = {".tex", ".md", ".py", ".sh"}
 _PAPER_ID_RE = re.compile(r"\\renewcommand\{\\gkpaperid\}\{([^{}]+)\}")
@@ -734,6 +734,18 @@ def load_adjudicated_drifts(
             raise ValueError(f"未知的漂移裁定来源：{adjudicated_by!r}")
         if drift_class not in DRIFT_CLASSES:
             raise ValueError(f"未知的漂移类别：{drift_class!r}")
+        if (
+            adjudicated_by == "task-28-answer-leak-repair"
+            or drift_class == "short-answer-safety-repair"
+        ) and (
+            paper_id != "gk-2023-regular-new-gaokao-1"
+            or artifact != "answers_short.tex"
+            or adjudicated_by != "task-28-answer-leak-repair"
+            or drift_class != "short-answer-safety-repair"
+        ):
+            raise ValueError(
+                "T28 简答安全修复只允许登记 gk-2023-regular-new-gaokao-1/answers_short.tex"
+            )
         if artifact not in CONTENT_FILES:
             raise ValueError(f"已裁定漂移只针对共享 TeX，未知 artifact：{artifact!r}")
         for field in ("legacy_sha256", "current_sha256"):
