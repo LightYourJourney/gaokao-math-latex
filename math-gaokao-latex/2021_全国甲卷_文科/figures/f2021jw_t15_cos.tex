@@ -1,0 +1,30 @@
+% 2021 全国甲卷文科 15：f(x)=2cos(ωx+φ) 的部分图象
+% 绘制依据：源 PDF 第 1 页原图。由图上两处标注反解出解析式：
+%   π/3 处为【下降零点】，13π/12 处为【最大值】（虚线引至 y=2）。
+%   下降零点到次个最大值恰为 3T/4，故 3T/4 = 13π/12 − π/3 = 3π/4，得 T = π、ω = 2；
+%   再由 13π/12 为最大值定 φ = −π/6，即 f(x) = 2cos(2x − π/6)。
+%   回验：首个最大值在 x = π/12（恰在 O 右侧，与图一致）；
+%         x = π/3 处相位为 π/2（值为零且下降，与图一致）。
+% 关键点位：最大值 π/12≈0.262 与 13π/12≈3.403；下降零点 π/3≈1.047；
+%           最小值 7π/12≈1.833；上升零点 5π/6≈2.618。
+% 标注：y 轴「2」；x 轴 O、π/3、13π/12；y=2 处水平虚线引至右侧峰；
+%       13π/12 处竖直虚线自 x 轴引至峰顶。无刻度线、无网格。
+\begin{tikzpicture}
+\begin{axis}[width=10.4cm, height=5.6cm, font=\small,
+  axis lines=middle, xlabel={$x$}, ylabel={$y$},
+  xmin=-0.75, xmax=4.75, ymin=-2.85, ymax=2.95,
+  xtick=\empty, ytick=\empty, clip=false,
+  every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+  every axis y label/.style={at={(current axis.above origin)}, anchor=south}]
+  % y=2 水平虚线（自 y 轴引至右侧峰）与 13π/12 竖直虚线
+  \addplot[dashed, domain=0:3.40339, samples=2] {2};
+  \draw[dashed] (axis cs:3.40339,0) -- (axis cs:3.40339,2);
+  % 曲线本体
+  \addplot[domain=-0.42:4.42, samples=300, thick] {2*cos(deg(2*x-pi/6))};
+  % 标注
+  \node[anchor=east, inner sep=2pt] at (axis cs:-0.05,2) {$2$};
+  \node[anchor=north east, inner sep=2pt] at (axis cs:-0.03,-0.04) {$O$};
+  \node[anchor=north, inner sep=3pt] at (axis cs:1.04720,-0.05) {$\frac{\pi}{3}$};
+  \node[anchor=north, inner sep=3pt] at (axis cs:3.40339,-0.05) {$\frac{13\pi}{12}$};
+\end{axis}
+\end{tikzpicture}
