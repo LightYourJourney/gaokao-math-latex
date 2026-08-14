@@ -590,12 +590,44 @@ def default_review_state(
 def default_batch_report_valid(
     root: Path, manifest: Mapping[str, Any], paper_id: str
 ) -> bool:
-    """最终批次报告的验证属于 Task 24 的 `finalize-batch`，在此之前恒为 False。
+    """报告有没有效，唯一属主是 `review_receipts.check_batch()` 的 finalize 门禁。
 
-    这不是占位，而是 fail-closed 的默认：报告没被逐字段验证过就自称有效，等于用未验证
-    的报告给自己背书（status.py 顶部那条 report 门禁正是为此存在）。
+    对已落盘的批次报告做只读转发，逐字段核对当前事实。报告缺失、对不上、或门禁非
+    FINALIZED 都返回 False——绝不自作主张「报告存在即有效」，那会拿没验证过的报告给
+    状态背书（status.py 顶部那条 report 门禁正是为此存在）。
     """
-    return False
+    import review_receipts  # 运行时才加载：与 review_receipts 侧的 import 环保持一致
+
+    batch_id = _batch_of(manifest, paper_id)
+    if batch_id is None:
+        return False
+    if not (Path(root) / review_receipts.report_target(batch_id)).is_file():
+        return False
+
+    def _facts_without_report(
+        root_: Path, manifest_: Mapping[str, Any], paper_ids_: Sequence[str]
+    ) -> Mapping[str, Mapping[str, Any]]:
+        # 恒 False 的探针切断递归：check_batch 内部会再走 load_provenance_facts，
+        # 沿用默认探针就会回到本函数。「报告有效」由 check_batch 自己在终裁阶段以
+        # batch_report_valid=True 对账，这里只转发它的结论，不需要再算一遍。
+        return load_provenance_facts(
+            root_, manifest_, paper_ids_,
+            issues_path=Path(root_) / ISSUES_TARGET,
+            batch_report_valid=lambda *_args: False,
+        )
+
+    try:
+        result = review_receipts.check_batch(
+            Path(root) / MANIFEST_TARGET,
+            Path(root) / ISSUES_TARGET,
+            batch_id,
+            facts_loader=_facts_without_report,
+        )
+    except (ValueError, OSError):
+        # 门禁本身算不出来（清单损坏、路径不规范）就是「没验证过」，与非 FINALIZED 同解。
+        # 不向上抛：状态随即降级，漂移会被 check_batch 当场报成 INVALID，既闭且响。
+        return False
+    return result["code"] == "FINALIZED"
 
 
 # ---------------------------------------------------------------- facts adapter
