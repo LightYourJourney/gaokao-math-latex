@@ -1,41 +1,42 @@
 % 2021 全国甲卷文科 7：正视图与四个候选侧视图
-% 绘制依据：源 PDF 第 1 页原图。五个同样大小的正方形。
-% 正视图：一条【虚线】自左上区域降至右下角（斜率约 −1/2）。
-% 四个选项的判别特征为「线型 × 走向」：
-%   (A) 实线上升（自底边中部升至右边）  (B) 虚线下降（自左边降至底边右部）
-%   (C) 虚线上升（自底边中部升至右边）  (D) 实线下降（自左边降至底边右部）
+% 绘制依据：源 PDF 第 1 页原图，400 dpi 放大逐个量取。五个同样大小的正方形。
+% 关键几何：所有截线都是【边中点到边中点】——与题设 E、F、G 为过顶点 A 的三条棱
+% 的中点相吻合，故截面在各投影面上的像必落在相邻两边的中点连线上。
+%   正视图：【虚线】自左边中点降至底边中点，切掉【左下角】。
+%   (A) 实线，自底边中点升至右边中点，切【右下角】
+%   (B) 虚线，自左边中点降至底边中点，切【左下角】——与正视图同形，是「照抄正视图」的陷阱项
+%   (C) 虚线，自底边中点升至右边中点，切【右下角】
+%   (D) 实线，自左边中点降至底边中点，切【左下角】
+% ⚠️ 初版曾把正视图与 (B)(D) 的下端画到约 0.88 宽处而非底边中点，属实质失真
+%    （会改变「切哪个角」的判读）；已按 400 dpi 原图量取修正为严格中点。
 % 选项标签 (A)~(D) 置于各正方形左下角外侧。
 \begin{tikzpicture}[font=\small, line width=0.4pt]
   \def\s{1.75}% 正方形边长
+  % 两种截线：切左下角（左边中点→底边中点）、切右下角（底边中点→右边中点）
+  % #1 线型选项
+  \newcommand{\cutLL}[1][]{\draw[#1] (0,{0.5*\s}) -- ({0.5*\s},0);}
+  \newcommand{\cutLR}[1][]{\draw[#1] ({0.5*\s},0) -- (\s,{0.5*\s});}
   % ---------- 正视图 ----------
   \begin{scope}[shift={({1.6*\s},{1.75*\s})}]
     \draw (0,0) rectangle (\s,\s);
-    \draw[dashed] ({0.20*\s},{0.40*\s}) -- ({0.98*\s},{0.02*\s});
+    \cutLL[dashed]
     \node[anchor=north] at ({0.5*\s},-0.10) {正视图};
   \end{scope}
   % ---------- 四个选项 ----------
-  % (A) 实线上升
   \begin{scope}[shift={(0,0)}]
-    \draw (0,0) rectangle (\s,\s);
-    \draw ({0.42*\s},0) -- (\s,{0.60*\s});
+    \draw (0,0) rectangle (\s,\s);  \cutLR
     \node[anchor=east] at (-0.06,{0.06*\s}) {(A)};
   \end{scope}
-  % (B) 虚线下降
   \begin{scope}[shift={({1.55*\s},0)}]
-    \draw (0,0) rectangle (\s,\s);
-    \draw[dashed] (0,{0.62*\s}) -- ({0.88*\s},0);
+    \draw (0,0) rectangle (\s,\s);  \cutLL[dashed]
     \node[anchor=east] at (-0.06,{0.06*\s}) {(B)};
   \end{scope}
-  % (C) 虚线上升
   \begin{scope}[shift={({3.10*\s},0)}]
-    \draw (0,0) rectangle (\s,\s);
-    \draw[dashed] ({0.42*\s},0) -- (\s,{0.60*\s});
+    \draw (0,0) rectangle (\s,\s);  \cutLR[dashed]
     \node[anchor=east] at (-0.06,{0.06*\s}) {(C)};
   \end{scope}
-  % (D) 实线下降
   \begin{scope}[shift={({4.65*\s},0)}]
-    \draw (0,0) rectangle (\s,\s);
-    \draw (0,{0.62*\s}) -- ({0.88*\s},0);
+    \draw (0,0) rectangle (\s,\s);  \cutLL
     \node[anchor=east] at (-0.06,{0.06*\s}) {(D)};
   \end{scope}
 \end{tikzpicture}
