@@ -1571,5 +1571,179 @@ class MaterializationTests(unittest.TestCase):
                 self.assertEqual(raised.exception.code, 2)
 
 
+class RegisterPapersTests(unittest.TestCase):
+    """阶段 1 新增：把「未绑定来源 → paper 记录 + batch 记录」纳入 state 事务。
+
+    阶段 0 的 21 套由 `migrate_legacy_index()` 从冻结常量一次性种入，且显式拒绝覆盖；
+    在此之前没有任何入口能新增试卷，一套新卷都做不出来。
+    """
+
+    PREFIX = "2021/2021_数学真题_全国甲文"
+
+    def _repo(self, tmp):
+        repo = Path(tmp) / "repo"
+        subprocess.run(["git", "init", "-q", str(repo)], check=True)
+        project = repo / "docs" / "exams" / "math-gaokao-latex"
+        (project / "schemas").mkdir(parents=True)
+        schema_path = ROOT / "schemas" / "source-manifest.schema.json"
+        (project / "schemas" / schema_path.name).write_bytes(schema_path.read_bytes())
+
+        source = source_fixture(paper_relation=None, source_state="ready", artifact={
+            "size_bytes": 11, "sha256": "d" * 64, "page_count": 2,
+            "media_type": "application/pdf", "header_is_pdf": True,
+            "git_oid_verified": True, "pdf_check": "passed",
+            "pdfinfo_version": "26.08.0",
+        })
+        manifest = build_inventory([], "https://example.invalid/upstream", "c" * 40)
+        manifest["sources"] = [source]
+        manifest["papers"] = []
+        manifest["batches"] = []
+        manifest["inventory"] = {
+            "total_sources": 1, "root_counts": {"regular": 1, "spring": 0},
+        }
+        manifest_path = project / "source-manifest.json"
+        manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+
+        # 注册是对已存在产物的事实登记：三个必需规范 Markdown 必须先在盘上。
+        for suffix in ("_试题.md", "_答案要点.md", "_含解析.md"):
+            target = repo / (self.PREFIX + suffix)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text("# 占位\n", encoding="utf-8")
+        return repo, manifest_path, source["source_id"]
+
+    def _spec(self, source_id_value, **updates):
+        paper = {
+            "paper_id": "gk-2021-regular-national-a-arts",
+            "project_dir": "2021_全国甲卷_文科",
+            "title": "2021 年·全国甲卷·文科",
+            "year": 2021,
+            "track": "arts",
+            "question_count": 23,
+            "markdown_prefix": self.PREFIX,
+            "source_ids": [source_id_value],
+            "figure_files": [],
+        }
+        paper.update(updates)
+        return {"batch_id": "phase1-b07", "papers": [paper]}
+
+    def test_dry_run_reports_plan_without_touching_manifest(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            before = manifest_path.read_bytes()
+            report = source_manifest_module.register_papers(
+                repo, manifest_path, self._spec(source_id_value)
+            )
+            self.assertEqual(report["code"], "OK")
+            self.assertFalse(report["written"])
+            self.assertEqual(report["paper_ids"], ["gk-2021-regular-national-a-arts"])
+            self.assertEqual(manifest_path.read_bytes(), before)
+
+    def test_write_binds_source_and_batch_in_one_state_transaction(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            before = load_manifest(manifest_path)
+            source_manifest_module.register_papers(
+                repo, manifest_path, self._spec(source_id_value), write=True
+            )
+            after = load_manifest(manifest_path)
+            self.assertEqual(after["revision"], before["revision"] + 1)
+
+            paper = after["papers"][0]
+            self.assertEqual(paper["paper_id"], "gk-2021-regular-national-a-arts")
+            self.assertEqual(paper["production_state"], "planned")
+            self.assertEqual(paper["legacy_ids"], [])
+            self.assertEqual(paper["source_ids"], [source_id_value])
+            self.assertEqual(paper["source_files"], {
+                "questions": self.PREFIX + "_试题.md",
+                "answer_key": self.PREFIX + "_答案要点.md",
+                "solution_body": self.PREFIX + "_解析正文.md",
+                "combined_rendered": self.PREFIX + "_含解析.md",
+            })
+            # 双向关系必须在同一事务内闭合，否则 validate_manifest_semantics 当场拒绝。
+            bound = after["sources"][0]
+            self.assertEqual(bound["paper_id"], "gk-2021-regular-national-a-arts")
+            self.assertEqual(bound["paper_relation"], "canonical")
+            self.assertEqual(after["batches"], [{
+                "batch_id": "phase1-b07",
+                "paper_ids": ["gk-2021-regular-national-a-arts"],
+                "status": "planned",
+                "issues": [],
+            }])
+
+    def test_rejects_rebinding_a_source_already_owned_by_another_paper(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            source_manifest_module.register_papers(
+                repo, manifest_path, self._spec(source_id_value), write=True
+            )
+            second = self._spec(
+                source_id_value,
+                paper_id="gk-2021-regular-national-a-science",
+                project_dir="2021_全国甲卷_理科",
+            )
+            second["batch_id"] = "phase1-b08"
+            with self.assertRaisesRegex(ValueError, "已绑定"):
+                source_manifest_module.register_papers(
+                    repo, manifest_path, second, write=True
+                )
+
+    def test_rejects_unknown_source_duplicate_identity_and_bad_counts(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            cases = {
+                "来源不存在": self._spec("src-" + "9" * 64),
+                "question_count": self._spec(source_id_value, question_count=0),
+                "paper_id": self._spec(source_id_value, paper_id="not-a-paper-id"),
+            }
+            for label, spec in cases.items():
+                with self.subTest(label=label):
+                    with self.assertRaises(ValueError):
+                        source_manifest_module.register_papers(
+                            repo, manifest_path, spec, write=True
+                        )
+            # 全部拒绝后 manifest 必须仍是初始状态：失败不得留半份注册。
+            self.assertEqual(load_manifest(manifest_path)["papers"], [])
+
+    def test_rejects_reusing_an_existing_batch_id(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            source_manifest_module.register_papers(
+                repo, manifest_path, self._spec(source_id_value), write=True
+            )
+            manifest = load_manifest(manifest_path)
+            manifest["sources"][0]["paper_id"] = None
+            manifest["sources"][0]["paper_relation"] = None
+            manifest["papers"] = []
+            manifest["batches"] = [{
+                "batch_id": "phase1-b07", "paper_ids": [], "status": "planned",
+                "issues": [],
+            }]
+            manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "batch_id"):
+                source_manifest_module.register_papers(
+                    repo, manifest_path, self._spec(source_id_value), write=True
+                )
+
+    def test_requires_canonical_markdown_to_exist_before_registration(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            (repo / (self.PREFIX + "_答案要点.md")).unlink()
+            with self.assertRaisesRegex(ValueError, "答案要点"):
+                source_manifest_module.register_papers(
+                    repo, manifest_path, self._spec(source_id_value), write=True
+                )
+
+    def test_migrated_papers_keep_frozen_legacy_ids(self):
+        """schema 放开 minItems 后，迁移卷的身份改由定向机检守住。"""
+        manifest = copy.deepcopy(dict(load_manifest(ROOT / "source-manifest.json")))
+        target = next(
+            paper for paper in manifest["papers"]
+            if paper["paper_id"] == "gk-2018-regular-national-1-science"
+        )
+        target["legacy_ids"] = []
+        with self.assertRaisesRegex(ValueError, "legacy_ids"):
+            source_manifest_module._validate_paper_semantics(manifest)
+
+
 if __name__ == "__main__":
     unittest.main()

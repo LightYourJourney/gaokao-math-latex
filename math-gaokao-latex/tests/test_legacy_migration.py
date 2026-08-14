@@ -908,7 +908,6 @@ class SchemaFreezeTests(unittest.TestCase):
             "extra_source_file_key": lambda m: m["papers"][0]["source_files"].update(
                 {"printable": "2017/x.md"}
             ),
-            "empty_legacy_ids": lambda m: m["papers"][0].update({"legacy_ids": []}),
             "bad_legacy_source_sha": lambda m: m["papers"][0].update(
                 {"legacy_source_files": [{"path": "2026/a.md",
                                           "sha256": "z" * 64}]}
@@ -930,6 +929,17 @@ class SchemaFreezeTests(unittest.TestCase):
             mutate(manifest)
             with self.subTest(case=name), self.assertRaises(SchemaError):
                 validate(manifest, self.schema)
+
+    def test_empty_legacy_ids_pass_schema_for_newly_transcribed_papers(self):
+        """阶段 1 起新转录的卷没有旧 ID，编一个即伪造历史身份。
+
+        约束没有取消，只是从 schema 的 `minItems` 移到了更准的位置：
+        `source_manifest._validate_paper_semantics()` 定向核对**迁移卷**的 legacy_ids
+        必须与冻结常量表逐字相等（见 test_source_manifest.RegisterPapersTests）。
+        """
+        manifest = minimal_manifest()
+        manifest["papers"][0]["legacy_ids"] = []
+        validate(manifest, self.schema)
 
     def test_state_enums_match_the_approved_design(self):
         self.assertEqual(

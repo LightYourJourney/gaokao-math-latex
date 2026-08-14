@@ -149,6 +149,10 @@ LEGACY_PAPERS = (
     LegacyPaper("2026g2", "gk-2026-regular-national-2", "none",
                 "全国 2", "2026/2026_数学真题_全国2"),
 )
+# paper_id → 冻结的 legacy_ids；`_validate_paper_semantics()` 用它定向核对迁移卷身份。
+_LEGACY_IDS_BY_PAPER = {
+    entry.paper_id: [entry.legacy_id] for entry in LEGACY_PAPERS
+}
 # 六个不可变阶段 0 子批次；成员顺序即常量表顺序。
 PHASE0_BATCHES = (
     ("phase0-b01", (
@@ -1474,6 +1478,11 @@ def _validate_paper_semantics(value: Mapping[str, Any]) -> None:
             raise ValueError("manifest paper 必须是对象")
         paper_id = paper.get("paper_id")
         known_papers.add(paper_id)
+        # Schema 允许 legacy_ids 为空（阶段 1 起新转录的卷本就没有旧 ID，编一个即伪造
+        # 历史身份）；迁移卷的身份约束改由这里定向机检，比 minItems 更严也更准。
+        if paper_id in _LEGACY_IDS_BY_PAPER:
+            if list(paper.get("legacy_ids") or []) != _LEGACY_IDS_BY_PAPER[paper_id]:
+                raise ValueError(f"{paper_id}: legacy_ids 与冻结常量表不一致")
         source_files = paper.get("source_files")
         if not isinstance(source_files, Mapping) or set(source_files) != set(
             SOURCE_FILE_KEYS
@@ -2193,6 +2202,167 @@ def migrate_legacy_index(
     return migrated
 
 
+def _registered_paper_record(
+    repo_root: Path, entry: Mapping[str, Any], known: Mapping[str, Mapping[str, Any]]
+) -> Dict[str, Any]:
+    """把一条注册规格折成 paper 记录；一切字段都必须是对已有产物的事实登记。"""
+    paper_id = entry.get("paper_id")
+    if not isinstance(paper_id, str) or not re.match(r"^gk-[0-9]{4}-[a-z0-9-]+$", paper_id):
+        raise ValueError(f"paper_id 不合式样：{paper_id!r}")
+    prefix = entry.get("markdown_prefix")
+    if not isinstance(prefix, str) or not prefix.startswith(""):
+        raise ValueError(f"{paper_id}: markdown_prefix 必须是  下的路径前缀")
+    question_count = entry.get("question_count")
+    if (
+        isinstance(question_count, bool)
+        or not isinstance(question_count, int)
+        or question_count < 1
+    ):
+        raise ValueError(f"{paper_id}: question_count 必须是正整数")
+    project_dir = entry.get("project_dir")
+    if not isinstance(project_dir, str) or "/" in project_dir or not project_dir:
+        raise ValueError(f"{paper_id}: project_dir 必须是单层目录名")
+    track = entry.get("track")
+    if track not in ("science", "arts", "none"):
+        raise ValueError(f"{paper_id}: 未知 track：{track!r}")
+
+    source_files = {
+        key: prefix + MARKDOWN_SUFFIXES[key] for key in SOURCE_FILE_KEYS
+    }
+    # solution_body 按既有约定只登记路径；其余三份是转录成果，必须已在盘上。
+    for key in REQUIRED_SOURCE_FILE_KEYS:
+        if not (Path(repo_root) / source_files[key]).is_file():
+            raise ValueError(f"{paper_id}: 规范 Markdown 缺失：{source_files[key]}")
+
+    source_ids = list(entry.get("source_ids") or [])
+    for value in source_ids:
+        source = known.get(value)
+        if source is None:
+            raise ValueError(f"{paper_id}: 来源不存在：{value}")
+        if source.get("paper_id") is not None:
+            raise ValueError(
+                "%s: 来源 %s 已绑定 %s" % (paper_id, value, source["paper_id"])
+            )
+    return {
+        "paper_id": paper_id,
+        # 新转录的卷没有旧 ID；编一个即伪造历史身份，一律留空。
+        "legacy_ids": [],
+        "project_dir": project_dir,
+        "title": entry.get("title"),
+        "year": entry.get("year"),
+        "track": track,
+        "question_count": question_count,
+        "source_files": source_files,
+        "figure_files": list(entry.get("figure_files") or []),
+        "legacy_source_files": [],
+        "source_ids": source_ids,
+        "production_state": "planned",
+        "issue_ids": [],
+        "blocked_from": None,
+        "last_verified_hash": None,
+        "resume_action": None,
+    }
+
+
+def register_papers(
+    repo: Path,
+    manifest_path: Path,
+    spec: Mapping[str, Any],
+    *,
+    write: bool = False,
+) -> Dict[str, Any]:
+    """把「未绑定来源 → paper 记录 + batch 记录」登记进 manifest。
+
+    这是阶段 1 起新增试卷的**唯一**写入口：阶段 0 的 21 套由 `migrate_legacy_index()`
+    从冻结常量一次性种入且拒绝覆盖，此前没有任何通路能新建一套卷。
+
+    `write=False` 时全程零写盘，只把计划算出来给人看；`write=True` 时 paper 记录、
+    批次记录与来源反向绑定在**同一个** state 事务里落盘，不留半份注册。
+    """
+    root = _repository_root(Path(repo))
+    manifest_path = Path(manifest_path)
+    if _relative_to_repo(root, manifest_path) != MANIFEST_TARGET:
+        raise ValueError(f"manifest 必须是 {MANIFEST_TARGET}")
+    if not isinstance(spec, Mapping):
+        raise ValueError("注册规格必须是对象")
+    batch_id = spec.get("batch_id")
+    if not isinstance(batch_id, str) or not re.match(r"^phase[0-9]+-b[0-9]{2}$", batch_id):
+        raise ValueError(f"batch_id 不合式样：{batch_id!r}")
+    entries = spec.get("papers")
+    if not isinstance(entries, list) or not entries:
+        raise ValueError("注册规格的 papers 必须是非空数组")
+
+    with RepoLock(root):
+        manifest = _load_json(manifest_path)
+        revision = manifest.get("revision")
+        if type(revision) is not int or revision < 0:
+            raise ValueError("manifest revision 必须是非负整数")
+        if any(
+            batch.get("batch_id") == batch_id for batch in manifest.get("batches", [])
+        ):
+            raise ValueError(f"batch_id 已存在：{batch_id}")
+        known_sources = {
+            source["source_id"]: source
+            for source in manifest.get("sources", [])
+            if isinstance(source, MutableMapping)
+        }
+        existing_papers = {
+            paper.get("paper_id"): paper for paper in manifest.get("papers", [])
+        }
+        existing_dirs = {
+            paper.get("project_dir") for paper in manifest.get("papers", [])
+        }
+
+        records = []
+        for entry in entries:
+            if not isinstance(entry, Mapping):
+                raise ValueError("注册规格的 paper 必须是对象")
+            record = _registered_paper_record(root, entry, known_sources)
+            if record["paper_id"] in existing_papers:
+                raise ValueError(f"paper_id 已存在：{record['paper_id']}")
+            if record["project_dir"] in existing_dirs:
+                raise ValueError(f"project_dir 已存在：{record['project_dir']}")
+            existing_papers[record["paper_id"]] = record
+            existing_dirs.add(record["project_dir"])
+            records.append(record)
+
+        paper_ids = [record["paper_id"] for record in records]
+        report = {
+            "code": "OK", "batch_id": batch_id, "paper_ids": paper_ids,
+            "written": False, "revision": revision,
+        }
+        if not write:
+            return report
+
+        manifest["papers"] = list(manifest.get("papers", [])) + records
+        manifest["batches"] = list(manifest.get("batches", [])) + [{
+            "batch_id": batch_id, "paper_ids": list(paper_ids),
+            "status": "planned", "issues": [],
+        }]
+        for record in records:
+            for value in record["source_ids"]:
+                bound = known_sources[value]
+                bound["paper_id"] = record["paper_id"]
+                bound["paper_relation"] = "canonical"
+
+        transaction = Transaction(root)
+        manifest["revision"] = revision + 1
+        manifest["last_transaction_id"] = transaction.transaction_id
+        _validated_manifest_value(manifest_path, manifest)
+        validate_manifest_semantics(manifest)
+        _validate_paper_semantics(manifest)
+        transaction.prepare(
+            "state",
+            {MANIFEST_TARGET: canonical_json(manifest).encode("utf-8")},
+            inputs={},
+            expected_revision=revision,
+        )
+        transaction.commit()
+        report["written"] = True
+        report["revision"] = revision + 1
+        return report
+
+
 def project_legacy_index(
     manifest: Mapping[str, Any], legacy_index: Mapping[str, Any]
 ) -> Dict[str, Any]:
@@ -2441,6 +2611,12 @@ def _parser() -> argparse.ArgumentParser:
     migrate.add_argument("--output-manifest", required=True, type=Path)
     migrate.add_argument("--output-index", required=True, type=Path)
 
+    register = subparsers.add_parser("register-papers")
+    register.add_argument("--repo", required=True, type=Path)
+    register.add_argument("--manifest", required=True, type=Path)
+    register.add_argument("--spec", required=True, type=Path)
+    register.add_argument("--write", action="store_true")
+
     validate_parser = subparsers.add_parser("validate")
     validate_parser.add_argument("--manifest", required=True, type=Path)
     validate_parser.add_argument("--require-artifacts", type=_nonnegative)
@@ -2494,6 +2670,17 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if arguments.command == "materialization-status":
         result = materialization_status(arguments.repo, arguments.manifest)
         os.sys.stdout.write(canonical_json(result))
+        return 0
+    if arguments.command == "register-papers":
+        report = register_papers(
+            arguments.repo, arguments.manifest, _load_json(arguments.spec),
+            write=arguments.write,
+        )
+        print("%s：%d 卷，%s" % (
+            report["batch_id"], len(report["paper_ids"]),
+            "已提交 revision %s" % report["revision"] if report["written"]
+            else "仅校验，未落盘",
+        ))
         return 0
     if arguments.command == "validate":
         validate_source_manifest(
