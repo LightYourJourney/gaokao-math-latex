@@ -29,6 +29,7 @@ from baseline import (
     load_adjudicated_drifts,
     main,
     recover_legacy_index,
+    validate_legacy_baseline,
     with_legacy_compat,
 )
 from manifest import file_sha256, load_manifest
@@ -47,9 +48,70 @@ def quiet_main(argv):
         return main(argv)
 
 
+# 阶段 0 Step 3 的 `cleanup-legacy --execute` 会删掉各卷根目录下的 336 个旧构建产物
+# （84 套 × .aux/.log/.out/.pdf），而 baseline.py 的 `_target_record()` 正是从那里读
+# `{版本}.pdf` 与 `{版本}.log`。清理是阶段 0 的既定终态，因此清理之后**无法**再实时
+# 重采基线——这不是故障，是终态的必然结果。
+#
+# 于是实时采集类在产物缺席时显式 skip 并说明原因（绝不静默通过：静默通过会让「采集
+# 器坏了」和「产物已被清理」看起来一样）。真实防护由 `FrozenLegacyBaselineTests`
+# 承担——它不依赖任何构建产物，永远运行。
+def _live_targets_present() -> bool:
+    index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+    for paper in index["papers"]:
+        directory = ROOT / paper["dir"]
+        for edition in ("试题版", "解析版", "简答版", "印刷版"):
+            if not (directory / f"{edition}.pdf").is_file():
+                return False
+            if not (directory / f"{edition}.log").is_file():
+                return False
+    return True
+
+
+_SKIP_REASON = (
+    "各卷根目录的构建产物已由 cleanup-legacy --execute 清理（阶段 0 既定终态），"
+    "无法实时重采基线；冻结基线的防护见 FrozenLegacyBaselineTests"
+)
+
+
+def skip_without_live_targets():
+    """产物缺席时抛 SkipTest；供各实时采集类在 setUpClass 首行调用。"""
+    if not _live_targets_present():
+        raise unittest.SkipTest(_SKIP_REASON)
+
+
+class FrozenLegacyBaselineTests(unittest.TestCase):
+    """清理之后，legacy 基线的唯一权威是已跟踪的冻结 JSON——它必须始终自洽。
+
+    本类不读任何构建产物，故不受 cleanup-legacy 影响，是清理后仍然生效的真实防护。
+    """
+
+    def test_frozen_legacy_baseline_is_tracked_and_still_validates(self):
+        self.assertTrue(
+            FROZEN_LEGACY.is_file(), "冻结的 legacy 基线必须在盘上：%s" % FROZEN_LEGACY
+        )
+        tracked = subprocess.run(
+            ["git", "ls-files", "--error-unmatch", "--", str(FROZEN_LEGACY)],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(tracked.returncode, 0, "冻结的 legacy 基线必须被 git 跟踪")
+        # 清理删掉的是可由旧构建链从 tracked 源再生的产物；基线本身不可再生，
+        # 故它必须逐字段通过与阶段 0 冻结时同一套门禁。
+        validate_legacy_baseline(read_json(FROZEN_LEGACY))
+
+    def test_frozen_legacy_baseline_still_covers_21_papers_and_84_targets(self):
+        baseline = read_json(FROZEN_LEGACY)
+        self.assertEqual(len(baseline["papers"]), 21)
+        targets = [t for p in baseline["papers"] for t in p["targets"]]
+        self.assertEqual(len(targets), 84)
+        self.assertEqual(baseline["summary"]["total_pages"], 1336)
+        self.assertEqual(baseline["summary"]["overfull_count"], 1)
+
+
 class LegacyBaselineTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        skip_without_live_targets()
         cls.baseline = collect_legacy_baseline(ROOT)
         cls.index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
 
@@ -343,6 +405,7 @@ class PreMigrationIndexTests(unittest.TestCase):
 class CurrentBaselineTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        skip_without_live_targets()
         cls.manifest = load_manifest(MANIFEST)
         cls.current = collect_current_baseline(ROOT, cls.manifest)
 
@@ -390,6 +453,7 @@ class CurrentBaselineTests(unittest.TestCase):
 class BaselineComparisonTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        skip_without_live_targets()
         cls.legacy = read_json(FROZEN_LEGACY)
         cls.manifest = load_manifest(MANIFEST)
         cls.current = collect_current_baseline(ROOT, cls.manifest)
@@ -1440,6 +1504,7 @@ class ComparedFieldCoverageTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+        skip_without_live_targets()
         raw = collect_legacy_baseline(ROOT)
         # 比较的是 compare_baselines 实际 diff 的那两个视图，故 legacy 侧同样补上
         # 由 git 锚点取回的兼容投影。
@@ -1520,6 +1585,10 @@ class ComparedFieldCoverageTests(unittest.TestCase):
 
 
 class CurrentBaselineCliTests(unittest.TestCase):
+    def setUp(self):
+        # CLI 的 compare/write-current 最终都要走 _target_record 读各卷根目录的产物。
+        skip_without_live_targets()
+
     def test_write_current_writes_one_file_and_compare_touches_nothing(self):
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp) / "current.json"
