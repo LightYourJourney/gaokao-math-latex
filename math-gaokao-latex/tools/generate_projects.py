@@ -553,7 +553,7 @@ def build_legacy_index(
     papers: List[Dict[str, Any]] = []
     for paper in manifest["papers"]:
         directory = paper["project_dir"]
-        static = metadata.get(directory)
+        static = metadata.get(directory) or paper.get("index_metadata")
         if static is None:
             raise GenerationError(f"index 静态元数据缺少试卷目录：{directory}")
         count = paper["question_count"]

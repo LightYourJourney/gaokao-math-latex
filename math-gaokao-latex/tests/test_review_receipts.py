@@ -381,14 +381,27 @@ class CliContractTests(unittest.TestCase):
             subject.EXIT_VISUAL_FAILED, subject.EXIT_INVALID,
         ))
 
-    def test_prepare_batch_requires_two_to_four_papers(self) -> None:
-        for count in (1, 5):
+    def test_prepare_batch_requires_one_to_four_papers(self) -> None:
+        for count in (1, 4):
             with self.subTest(count=count):
                 document = manifest()
                 document["batches"][0]["paper_ids"] = [
                     "gk-2026-test-%d" % index for index in range(count)
                 ]
-                with self.assertRaisesRegex(subject.ReviewError, "2–4"):
+                self.assertEqual(
+                    document["batches"][0],
+                    subject._validate_batch_size(document, "batch-1"),
+                )
+        for count in (0, 5):
+            with self.subTest(count=count):
+                document = manifest()
+                document["batches"][0]["paper_ids"] = [
+                    "gk-2026-test-%d" % index for index in range(count)
+                ]
+                with self.assertRaisesRegex(
+                    subject.ReviewError,
+                    "batch-1 必须包含 1–4 套试卷，实际 %d 套" % count,
+                ):
                     subject._validate_batch_size(document, "batch-1")
 
     def test_work_and_report_containment_reject_escaping_paths(self) -> None:
@@ -816,6 +829,75 @@ class BatchIntegrationTests(unittest.TestCase):
         with self.assertRaisesRegex(subject.ReviewError, "失效"):
             self.prepare()
         self.assertFalse((self.fixture.root / subject.WORK_RELATIVE / self.batch_id).exists())
+
+
+class SinglePaperBatchIntegrationTests(unittest.TestCase):
+    def test_single_paper_prepare_complete_and_finalize(self) -> None:
+        fixture = build_tests.RepositoryFixture(papers=[build_tests.paper_entry()])
+        self.addCleanup(fixture.cleanup)
+        chain = fixture.toolchain()
+        loader = build_tests.make_loader()
+        result = fixture.formal(loader=loader)
+        self.assertEqual("COMPILED_PENDING_REVIEW", result["code"])
+        fixture.commit_all("单卷待视觉审查基线")
+
+        work = fixture.root / subject.WORK_RELATIVE
+        prepared = subject.prepare_batch(
+            fixture.manifest_path, build_tests.BATCH_ID, toolchain=chain,
+            metrics_probe=BatchIntegrationTests.probe,
+        )
+        expected = {
+            subject.work_item_path(
+                work, build_tests.BATCH_ID, edition, build_tests.PAPER_ID
+            ).relative_to(fixture.root).as_posix()
+            for edition in subject.EDITIONS
+        }
+        self.assertEqual(4, len(prepared["created"]))
+        self.assertEqual(expected, set(prepared["created"]))
+
+        for relative in prepared["created"]:
+            path = fixture.root / relative
+            item = json.loads(path.read_text(encoding="utf-8"))
+            item["result"] = "pass"
+            for record in item["pages"]:
+                record["result"] = "pass"
+                for check in record["checks"]:
+                    check["result"] = "pass"
+            path.write_text(json.dumps(item), encoding="utf-8")
+
+        report_payloads = []
+
+        def renderer(payload):
+            report_payloads.append(copy.deepcopy(dict(payload)))
+            return subject.render_batch_report(payload)
+
+        report_path = fixture.root / subject.report_target(build_tests.BATCH_ID)
+        finalized = subject.finalize_batch(
+            fixture.manifest_path, fixture.issues_path, build_tests.BATCH_ID,
+            report_path, facts_loader=loader, toolchain=chain,
+            metrics_probe=BatchIntegrationTests.probe, renderer=renderer,
+            reviewed_at="2026-08-14T12:00:00+08:00",
+        )
+        self.assertEqual("FINALIZED", finalized["code"])
+        self.assertEqual("closed", finalized["batch_status"])
+        self.assertEqual(1, len(report_payloads))
+        self.assertEqual(1, report_payloads[0]["paper_count"])
+        self.assertEqual(4, report_payloads[0]["edition_count"])
+
+        report = subject._parse_batch_report(report_path.read_text(encoding="utf-8"))
+        self.assertEqual("1", report["fields"]["试卷数"])
+        self.assertEqual("4", report["fields"]["版本数"])
+        document = fixture.manifest()
+        self.assertEqual(1, len(document["papers"]))
+        self.assertEqual("complete", document["papers"][0]["production_state"])
+        review = json.loads((
+            fixture.root / subject.review_receipt_path(document["papers"][0])
+        ).read_text(encoding="utf-8"))
+        self.assertEqual("passed", review["status"])
+        self.assertEqual(
+            [(edition, "pass") for edition in subject.EDITIONS],
+            [(item["edition"], item["result"]) for item in review["editions"]],
+        )
 
 
 class OwnershipAndCliIntegrationTests(unittest.TestCase):

@@ -117,12 +117,12 @@ _BODY_SECTIONS: Mapping[str, Tuple[BodySection, ...]] = {
 
 @dataclass(frozen=True)
 class PaperShell:
-    """一卷的壳身份：manifest 的 paper_id/project_dir/title + 兼容 index 的旧 ID。"""
+    """一卷的壳身份：manifest 的 paper_id/project_dir/title + 稳定文档 ID。"""
 
     paper_id: str
     project_dir: str
     title: str
-    legacy_id: str
+    document_id: str
 
 
 @dataclass(frozen=True)
@@ -208,18 +208,18 @@ def render_edition(template: str, values: Mapping[str, str]) -> str:
 
 
 def paper_shell(paper: Mapping[str, Any]) -> PaperShell:
-    """壳的 `\\gkpaperid` 用兼容 index 的旧 ID；旧 ID 不唯一就没法确定填哪一个。"""
+    """迁移卷沿用旧 ID；新卷没有旧身份时使用稳定 paper_id。"""
     legacy_ids = list(paper["legacy_ids"])
-    if len(legacy_ids) != 1:
+    if len(legacy_ids) > 1:
         raise EditionError(
-            "%s 的 legacy_ids 必须恰有一个（壳的 \\gkpaperid 无处可选），实际 %s"
+            "%s 的 legacy_ids 至多一个，实际 %s"
             % (paper["paper_id"], legacy_ids)
         )
     return PaperShell(
         paper_id=paper["paper_id"],
         project_dir=paper["project_dir"],
         title=paper["title"],
-        legacy_id=legacy_ids[0],
+        document_id=legacy_ids[0] if legacy_ids else paper["paper_id"],
     )
 
 
@@ -244,7 +244,7 @@ def build_shells(
             raise EditionError(f"缺少模板：{template_target(edition)}")
         rendered = render_edition(templates[edition], {
             "@@CLASS_OPTIONS@@": CLASS_OPTIONS[edition],
-            "@@PAPER_ID@@": shell.legacy_id,
+            "@@PAPER_ID@@": shell.document_id,
             "@@TITLE@@": shell.title,
             "@@EDITION@@": edition,
             "@@BODY@@": render_body(edition),

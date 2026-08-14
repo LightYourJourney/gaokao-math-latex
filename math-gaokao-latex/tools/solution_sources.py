@@ -80,6 +80,7 @@ SEE_SOLUTION = "见解析版"
 _HEADING_QUESTION = re.compile(r"^### 第 (\d+) 题(|[ \t　（(〔【].*)$")
 _INLINE_QUESTION = re.compile(r"^\*\*(\d+)．(.*?)\*\*(.*)$")
 _ATX_HEADING = re.compile(r"^(#{1,6}) ")
+_FENCE_LINE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})(.*)$")
 _HEADING_SUBPART = re.compile(r"^####[ \t]*[（(](\d+)[）)]")
 _INLINE_SUBPART = re.compile(r"^[ \t　]*[（(](\d+)[）)][ \t　]")
 # 小问锚点：任意独立加粗 `(k)` 块。真题里 `**(1) 答案：…**`、`**(1) 证明**：`、
@@ -112,7 +113,7 @@ _ANSWER_LINE_OUT = re.compile(
     r"(?:[（(](?P<pre>\d+)[）)][ \t　]*)?"
     r"答案"
     r"(?:[（(](?P<post>\d+)[）)])?"
-    r"[^*]*"
+    r"(?:[ \t　]*[（(][^*()\n]*[）)])?"
     r"\*\*[ \t　]*[:：][ \t　]*"
     r"(?P<value>.*)$"
 )
@@ -128,6 +129,11 @@ _BOLD_LEAD = re.compile(r"^\*\*([^*]*)\*\*")
 # 于是被**静默忽略**：写出来的答案凭空消失，该小问拿到 `见解析版`。
 _SECONDARY_ORDINAL = re.compile(
     r"[①-⑳]|[（(](?:i|ii|iii|iv|v|vi|vii|viii|ix|x)[）)]"
+)
+# 整题证明的显式标记。只认完整加粗的「证明」/「证明要点」，不把 `**证明分析**`
+# 等普通小标题误当成“允许没有最终答案”的证明题。
+_PROOF_BLOCK = re.compile(
+    r"^\*\*证明(?:要点)?\*\*(?:[ \t　]*[:：].*)?$"
 )
 
 
@@ -236,7 +242,9 @@ def _subparts(style: str, lines: Sequence[str]) -> Tuple[int, ...]:
     found: List[int] = []
     for line in lines:
         if style == "heading":
-            match = _HEADING_SUBPART.match(line) or _SUBPART_ANCHOR.match(line.strip())
+            match = _HEADING_SUBPART.match(line) or _SUBPART_ANCHOR.match(
+                _strip_quote(line).strip()
+            )
         else:
             match = _INLINE_SUBPART.match(line)
         if match is not None:
@@ -440,6 +448,12 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
             anchors + [key for key in keys if key is not None]
         )
         if not subparts and not answers:
+            # 证明题可以没有独立最终答案块；其证明正文由解析版承载。
+            if any(_PROOF_BLOCK.match(line) is not None for line in stripped_lines):
+                points.append(AnswerPoint(
+                    number=block.number, subparts=(), answers=((None, SEE_SOLUTION),)
+                ))
+                continue
             raise SolutionSourceError(f"第 {block.number} 题没有可识别的加粗答案块")
         if None in keys and (len(keys) > 1 or subparts):
             raise SolutionSourceError(
@@ -461,7 +475,7 @@ def _is_answer_paragraph(paragraph: str) -> bool:
 
     多行段落即使首行像答案块也不丢——那会连带吞掉后续说明文字。
     """
-    stripped = paragraph.strip()
+    stripped = "\n".join(_strip_quote(line) for line in paragraph.split("\n")).strip()
     if "\n" in stripped:
         return False
     return (
@@ -483,6 +497,14 @@ def _is_solution_marker(paragraph: str) -> bool:
     打头（第 5 个字符不是 `*`），仍按正文处理、照常补规范标记。
     """
     return paragraph.split("\n", 1)[0].strip().startswith(SOLUTION_MARKER)
+
+
+def _quoted_continuation(lines: Sequence[str]) -> bool:
+    """答案首行后的内容仍处于同一 blockquote 时，视为明确的解析续段。"""
+    return bool(lines) and all(
+        not line.strip() or _BLOCKQUOTE_PREFIX.match(line) is not None
+        for line in lines
+    )
 
 
 def _derivation_paragraphs(
@@ -521,6 +543,21 @@ def _derivation_paragraphs(
     in_stem_region = False
     for paragraph in paragraphs:
         stripped = paragraph.strip()
+        lines = paragraph.split("\n")
+        first = _strip_quote(lines[0]).strip()
+        parsed_first = _parse_answer_line(0, first)
+        if parsed_first is not None:
+            remainder = "\n".join(lines[1:]).strip()
+            if not remainder:
+                continue
+            if _BLOCKQUOTE_PREFIX.match(lines[0]) is not None and _quoted_continuation(lines[1:]):
+                paragraph = "\n".join(_strip_quote(line) for line in lines[1:]).strip()
+                stripped = paragraph.strip()
+            else:
+                raise SolutionSourceError(
+                    "答案块与后续正文处于同一 Markdown 段落，无法安全区分最终答案与"
+                    f"推导，须人工用空行分隔：{paragraph.strip()}"
+                )
         if _is_answer_paragraph(stripped):
             continue
         if _is_question_restatement(stripped):
@@ -602,6 +639,28 @@ def _canonical_derivation_parts(
     return paragraphs, separator
 
 
+def _second_part_boundaries(lines: Sequence[str]) -> List[int]:
+    """返回 fenced code 外的精确第二部分标题行号。"""
+    boundaries: List[int] = []
+    fence_char: Optional[str] = None
+    fence_length = 0
+    for index, line in enumerate(lines):
+        fence = _FENCE_LINE.match(line)
+        if fence is not None:
+            marker = fence.group(1)
+            if fence_char is None:
+                fence_char = marker[0]
+                fence_length = len(marker)
+            elif marker[0] == fence_char and len(marker) >= fence_length \
+                    and not fence.group(2).strip():
+                fence_char = None
+                fence_length = 0
+            continue
+        if fence_char is None and line.rstrip() == "## 第二部分 · 答案与关键步骤":
+            boundaries.append(index)
+    return boundaries
+
+
 def extract_solution_blocks(combined: str, questions_text: Optional[str] = None) -> str:
     """从 `_含解析.md` 提取规范的 `_解析正文.md` 文本。
 
@@ -615,8 +674,14 @@ def extract_solution_blocks(combined: str, questions_text: Optional[str] = None)
     （`build_paper_targets`）一律传；留出可省是为了不惊动只关心单文档规范化的调用方。
     """
     stems = _question_stem_paragraphs(questions_text) if questions_text else {}
+    lines = combined.split("\n")
+    boundaries = _second_part_boundaries(lines)
+    if len(boundaries) > 1:
+        raise SolutionSourceError("含解析文档出现多个第二部分边界")
+    if boundaries:
+        combined = "\n".join(lines[boundaries[0] + 1:])
     segments: List[str] = []
-    for block in parse_question_blocks(combined, style="heading"):
+    for block in parse_question_blocks(combined):
         if block.lead:
             segments.append(block.lead)
         segments.append(_heading(block.number, block.title))

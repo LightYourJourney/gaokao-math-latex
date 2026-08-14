@@ -1734,15 +1734,15 @@ class LiveRepositoryTests(unittest.TestCase):
         }
         self.assertEqual(self.provenance_papers(), expected)
 
-    def test_no_paper_advances_beyond_legacy_unverified_without_provenance(self):
-        """状态不得先于证据：非 `legacy_unverified` 的卷必有 provenance 文件。
+    def test_no_paper_advances_beyond_planning_without_provenance(self):
+        """状态不得先于证据：离开初始/计划态的卷必有 provenance 文件。
 
-        反向刻意不断言——provenance 落盘后若规范源被改，该卷会退回 `legacy_unverified`
-        而文件仍在，那是合法状态，不该被测成失败。
+        新转录卷注册时先进入 `planned`，随后才由三角色工作流建立 provenance；把
+        `planned` 也视为已推进会让合法注册事务在证据尚未导入时立即自相矛盾。
         """
         advanced = {
             paper["paper_id"] for paper in self.manifest["papers"]
-            if paper["production_state"] != "legacy_unverified"
+            if paper["production_state"] not in ("legacy_unverified", "planned")
         }
         self.assertLessEqual(advanced, self.provenance_papers())
 
@@ -1779,25 +1779,26 @@ class LiveRepositoryTests(unittest.TestCase):
         self.assertNotEqual(digests["science"][1], digests["arts"][1])
 
     def test_every_paper_last_question_digest_drops_its_footer(self):
-        """21 卷逐卷核对：末题摘要不含文末引用块的字节。"""
+        """逐卷核对：末题摘要等于显式剥除合法文末引用块后的题面摘要。"""
         for paper in self.manifest["papers"]:
             with self.subTest(paper_id=paper["paper_id"]):
                 text = (self.root / paper["source_files"]["questions"]).read_text(
                     encoding="utf-8"
                 )
-                last = max(question_text_digests(text))
-                stripped = text.rsplit("\n---\n", 1)[0] + "\n"
-                self.assertEqual(
-                    question_text_digests(text)[last],
-                    question_text_digests(stripped)[last],
-                )
+                blocks = parse_question_blocks(text)
+                last = blocks[-1]
+                expected = hashlib.sha256(
+                    provenance.question_block_text(last, strip_footer=True).encode("utf-8")
+                ).hexdigest()
+                self.assertEqual(question_text_digests(text)[last.number], expected)
 
     def test_the_cached_states_match_the_recomputed_ones(self):
         report = check_batch(
             ROOT / "source-manifest.json", ROOT / "missing-issues.md", None,
         )
+        manifest = load_manifest(ROOT / "source-manifest.json")
         self.assertEqual(report["problems"], [])
-        self.assertEqual(report["papers"], 21)
+        self.assertEqual(report["papers"], len(manifest["papers"]))
 
 
 if __name__ == "__main__":

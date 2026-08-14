@@ -32,6 +32,7 @@ from manifest import (
     durable_fsync,
     file_sha256,
     project_index,
+    validate_index_metadata,
     validate_manifest_semantics,
 )
 from schema_validate import validate as validate_schema
@@ -1483,6 +1484,15 @@ def _validate_paper_semantics(value: Mapping[str, Any]) -> None:
         if paper_id in _LEGACY_IDS_BY_PAPER:
             if list(paper.get("legacy_ids") or []) != _LEGACY_IDS_BY_PAPER[paper_id]:
                 raise ValueError(f"{paper_id}: legacy_ids 与冻结常量表不一致")
+        validate_index_metadata(
+            paper_id,
+            paper.get("question_count"),
+            paper.get("index_metadata"),
+            required=(
+                not paper.get("legacy_ids")
+                and paper.get("production_state") != "legacy_unverified"
+            ),
+        )
         source_files = paper.get("source_files")
         if not isinstance(source_files, Mapping) or set(source_files) != set(
             SOURCE_FILE_KEYS
@@ -2226,6 +2236,9 @@ def _registered_paper_record(
     if track not in ("science", "arts", "none"):
         raise ValueError(f"{paper_id}: 未知 track：{track!r}")
 
+    index_metadata = entry.get("index_metadata")
+    validate_index_metadata(paper_id, question_count, index_metadata, required=True)
+
     source_files = {
         key: prefix + MARKDOWN_SUFFIXES[key] for key in SOURCE_FILE_KEYS
     }
@@ -2252,6 +2265,7 @@ def _registered_paper_record(
         "year": entry.get("year"),
         "track": track,
         "question_count": question_count,
+        "index_metadata": copy.deepcopy(dict(index_metadata)),
         "source_files": source_files,
         "figure_files": list(entry.get("figure_files") or []),
         "legacy_source_files": [],
@@ -2375,7 +2389,8 @@ def project_legacy_index(
     两件事。运行态的唯一住处是 manifest 本身。
     """
     by_legacy: Dict[str, Mapping[str, Any]] = {}
-    for paper in project_index(manifest).values():
+    by_paper_id = project_index(manifest)
+    for paper in by_paper_id.values():
         for legacy_id in paper.get("legacy_ids", []):
             if legacy_id in by_legacy:
                 raise ValueError(f"manifest legacy_ids 重复：{legacy_id}")
@@ -2389,8 +2404,10 @@ def project_legacy_index(
             raise ValueError("legacy index paper 必须是对象")
         legacy_id = entry.get("id")
         paper = by_legacy.get(legacy_id)
+        if paper is None and isinstance(legacy_id, str):
+            paper = by_paper_id.get(legacy_id)
         if paper is None:
-            raise ValueError(f"manifest 未覆盖 legacy 旧 ID：{legacy_id!r}")
+            raise ValueError(f"manifest 未覆盖 index ID：{legacy_id!r}")
         entry["paper_id"] = paper["paper_id"]
         entry["legacy_ids"] = list(paper["legacy_ids"])
     projected.pop("batches", None)

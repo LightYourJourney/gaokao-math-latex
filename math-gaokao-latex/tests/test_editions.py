@@ -289,10 +289,13 @@ class ShellGenerationTests(unittest.TestCase):
             self.assertIn("\\renewcommand{\\gkheadR}{%s}" % edition, text)
             self.assertIn("{\\Large\\bfseries %s}" % TITLE, text)
 
-    def test_a_paper_without_exactly_one_legacy_id_is_rejected(self):
-        for legacy_ids in ([], ["a", "b"]):
-            with self.assertRaises(EditionError):
-                paper_shell(paper_entry(legacy_ids=legacy_ids))
+    def test_a_new_paper_without_a_legacy_id_uses_its_canonical_id(self):
+        shell = paper_shell(paper_entry(legacy_ids=[]))
+        self.assertEqual(shell.document_id, PAPER_ID)
+
+    def test_multiple_legacy_ids_are_rejected(self):
+        with self.assertRaises(EditionError):
+            paper_shell(paper_entry(legacy_ids=["a", "b"]))
 
     def test_a_missing_matrix_input_fails_before_writing(self):
         fixture = RepositoryFixture(contents=("questions", "answers"))

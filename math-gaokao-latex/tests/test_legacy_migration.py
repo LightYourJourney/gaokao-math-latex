@@ -197,6 +197,16 @@ def seed_issue_ledger(path):
     return load_issues(path)
 
 
+def legacy_index():
+    """live index 中只取冻结的 21 个 legacy 条目，重建一次性迁移输入。"""
+    document = json.loads(read_text(ROOT / "index.json"))
+    legacy_ids = {entry.legacy_id for entry in LEGACY_PAPERS}
+    document["papers"] = [
+        paper for paper in document["papers"] if paper.get("id") in legacy_ids
+    ]
+    return document
+
+
 def premigration_manifest():
     """迁移前的 manifest：papers / batches 尚未写入。
 
@@ -228,13 +238,17 @@ def fixture_repository(directory):
         project / "schemas" / "source-manifest.schema.json",
     )
     shutil.copy2(ROOT / "index.json", project / "index.json")
+    (project / "index.json").write_text(
+        json.dumps(legacy_index(), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     # 问题总账同样回到迁移前：manifest 回退了、总账不回退，那就不是「迁移前状态」。
     seed_issue_ledger(project / "missing-issues.md")
     (project / "source-manifest.json").write_text(
         canonical_json(premigration_manifest()), encoding="utf-8"
     )
 
-    legacy = json.loads(read_text(ROOT / "index.json"))
+    legacy = legacy_index()
     for paper in legacy["papers"]:
         target = project / paper["dir"]
         (target / "figures").mkdir(parents=True)
@@ -312,7 +326,7 @@ class MigrationTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.legacy = json.loads(read_text(ROOT / "index.json"))
+        cls.legacy = legacy_index()
         cls.manifest = premigration_manifest()
         cls.temporary = tempfile.TemporaryDirectory()
         cls.issues = seed_issue_ledger(
@@ -710,7 +724,7 @@ class LiveSeedIssueInvariantTests(unittest.TestCase):
 class IndexProjectionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.current = json.loads(read_text(ROOT / "index.json"))
+        cls.current = legacy_index()
         cls.legacy = legacy_index_view(cls.current)
         cls.manifest = premigration_manifest()
         cls.temporary = tempfile.TemporaryDirectory()
@@ -970,7 +984,10 @@ class FigureOccurrenceGuardTests(unittest.TestCase):
     def test_real_repository_matches_the_registered_occurrences(self):
         manifest = json.loads(read_text(ROOT / "source-manifest.json"))
         # 不抛异常即通过；真实仓库必须始终与登记值一致。
-        self.assertEqual(validate_figure_occurrences(manifest, REPO), 59)
+        self.assertEqual(
+            validate_figure_occurrences(manifest, REPO),
+            sum(len(paper["figure_files"]) for paper in manifest["papers"]),
+        )
 
     def test_a_dropped_figure_reference_is_a_hard_error(self):
         # 反事实：假如生成器再丢一张图，套件必须红。这是本守卫存在的唯一理由。

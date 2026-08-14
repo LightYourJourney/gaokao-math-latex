@@ -169,9 +169,9 @@ def _validate_batch_size(
 ) -> Mapping[str, Any]:
     batch = _batch(manifest, batch_id)
     count = len(batch["paper_ids"])
-    if count < 2 or count > 4:
+    if count < 1 or count > 4:
         raise ReviewError(
-            "%s 必须包含 2–4 套试卷，实际 %d 套" % (batch_id, count)
+            "%s 必须包含 1–4 套试卷，实际 %d 套" % (batch_id, count)
         )
     return batch
 

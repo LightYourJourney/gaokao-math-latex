@@ -654,7 +654,6 @@ class BuildTargetTests(unittest.TestCase):
         receipt = self.fixture.build()
         recorded = {item["path"] for item in receipt["generation_input_tree"]["files"]}
         expected = set(GENERATOR_SOURCES)
-        expected.add("%s/index.json" % PROJECT_RELATIVE)
         expected.update(
             "%s/templates/%s.tex.tpl" % (PROJECT_RELATIVE, edition)
             for edition in EDITIONS
@@ -735,7 +734,27 @@ class ReceiptCurrencyTests(unittest.TestCase):
                 self.fixture.write(relative, original)
                 self.assertTrue(self.currency()[0])
 
-    def test_a_changed_projection_makes_it_stale(self):
+    def test_an_unrelated_index_entry_does_not_invalidate_the_receipt(self):
+        target = self.fixture.path("%s/index.json" % PROJECT_RELATIVE)
+        target.write_text('{"papers": [{"id": "unrelated"}]}\n', encoding="utf-8")
+        current, reasons = self.currency()
+        self.assertTrue(current, reasons)
+
+    def test_per_paper_index_metadata_is_part_of_the_projection(self):
+        document = json.loads(json.dumps(manifest_document([paper_entry()])))
+        document["papers"][0]["index_metadata"] = {
+            "id": PAPER_ID,
+            "base": "fixture",
+            "paper": "测试卷",
+            "track": None,
+            "variant": None,
+            "structure": {"全部": [1, 3]},
+            "pages_q": None,
+            "pages_s": None,
+            "note": None,
+        }
+        self.assertFalse(self.currency(manifest=document)[0])
+
         document = json.loads(json.dumps(manifest_document([paper_entry()])))
         document["papers"][0]["question_count"] = 4
         self.assertFalse(self.currency(manifest=document)[0])
@@ -1838,7 +1857,7 @@ class ShellWrapperTests(unittest.TestCase):
         self.assertIn(result.returncode, (EXIT_OK, EXIT_PENDING_REVIEW, EXIT_INVALID),
                       result.stderr.decode("utf-8", errors="replace"))
         payload = json.loads(result.stdout.decode("utf-8"))
-        self.assertEqual(payload["papers"], 21)
+        self.assertEqual(payload["papers"], len(load_manifest(ROOT / "source-manifest.json")["papers"]))
 
     def test_compile_all_delegates_to_the_formal_all_mode(self):
         text = self.compile_all.read_text(encoding="utf-8")

@@ -318,13 +318,63 @@ class ExtractSolutionBlocksTests(unittest.TestCase):
         self.assertNotIn("61", body)
         self.assertNotIn("2.44", body)
 
-    def test_keeps_multiline_paragraph_whose_first_line_looks_like_an_answer(self):
+    def test_rejects_multiline_answer_paragraph_instead_of_dropping_its_first_line(self):
         combined = (
             "### 第 1 题（讨论）\n\n**题目**：讨论。\n\n**解析**\n\n"
             "**答案：A**\n还要说明为什么排除 B。\n"
         )
+        with self.assertRaisesRegex(SolutionSourceError, "同一 Markdown 段落"):
+            extract_solution_blocks(combined)
+
+    def test_keeps_an_explicit_blockquote_continuation_after_an_answer(self):
+        combined = (
+            "### 第 1 题（讨论）\n\n**题目**：讨论。\n\n**解析**\n\n"
+            "> **答案：A**\n>\n> 因为 B 不满足题设。\n"
+        )
         body = extract_solution_blocks(combined)
-        self.assertIn("还要说明为什么排除 B", body)
+        self.assertNotIn("**答案：A**", body)
+        self.assertIn("因为 B 不满足题设。", body)
+
+        combined = (
+            "### 第 1 题（讨论）\n\n**题目**：讨论。\n\n**解析**\n\n"
+            "**答案分析**：A 不满足题设。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertIn("**答案分析**：A 不满足题设。", body)
+
+    def test_only_the_exact_second_part_heading_is_an_extraction_boundary(self):
+        combined = (
+            "## 说明\n\n正文提到 ## 第二部分 · 答案与关键步骤，但不是标题行。\n\n"
+            "### 第 1 题（集合）\n\n**解析**\n\n由定义可得。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertIn("### 第 1 题（集合）", body)
+
+    def test_ignores_second_part_heading_inside_fenced_code(self):
+        combined = (
+            "前言必须保留。\n\n```text\n## 第二部分 · 答案与关键步骤\n```\n\n"
+            "### 第 1 题（集合）\n\n**解析**\n\n由定义可得。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertIn("前言必须保留。", body)
+        self.assertIn("```text\n## 第二部分 · 答案与关键步骤\n```", body)
+
+    def test_ignores_second_part_heading_inside_tilde_fence(self):
+        combined = (
+            "~~~markdown\n## 第二部分 · 答案与关键步骤\n~~~\n\n"
+            "### 第 1 题（集合）\n\n**解析**\n\n由定义可得。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertTrue(body.startswith("~~~markdown"))
+
+    def test_rejects_multiple_second_part_boundaries(self):
+        combined = (
+            "## 第二部分 · 答案与关键步骤\n\n"
+            "## 第二部分 · 答案与关键步骤\n\n"
+            "### 第 1 题（集合）\n\n**解析**\n\n由定义可得。\n"
+        )
+        with self.assertRaisesRegex(SolutionSourceError, "多个第二部分边界"):
+            extract_solution_blocks(combined)
 
     def test_drops_the_question_figure_but_keeps_the_solution_figure(self):
         body = extract_solution_blocks(COMBINED)
@@ -662,6 +712,14 @@ class ParseAnswerPointsTests(unittest.TestCase):
             point = {item.number: item for item in parse_answer_points(text)}[3]
             self.assertEqual(point.subparts, (1, 2), written)
             self.assertIsNone(point.answer_for(2), written)
+
+    def test_only_an_exact_whole_question_proof_marker_allows_no_answer(self):
+        for marker in ("**证明**", "**证明**：略。", "**证明要点**：见正文。"):
+            points = parse_answer_points("**1．** 证明题\n\n" + marker + "\n")
+            self.assertEqual(points[0].answers, ((None, SEE_SOLUTION),), marker)
+        for heading in ("**证明分析**：如下。", "**证明思路补充**：如下。"):
+            with self.assertRaisesRegex(SolutionSourceError, "没有可识别"):
+                parse_answer_points("**1．** 证明题\n\n" + heading + "\n")
 
 
 # ------------------------------------------------- 题面重复夹具（真实卷式：legacy 无 `**解析**` 标记）

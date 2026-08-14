@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[4]
 TOOLS = ROOT / "math-gaokao-latex/tools"
@@ -65,6 +66,44 @@ class ReportFactsTest(unittest.TestCase):
             drifted = report.OUTPUT_TARGETS[0]
             (temp_root / drifted).write_text(outputs[drifted] + "漂移\n", encoding="utf-8")
             self.assertEqual(report.check_outputs(outputs, temp_root), (drifted,))
+
+
+class ReportTransactionInputsTest(unittest.TestCase):
+    def test_ignores_incomplete_nonhistorical_artifacts(self):
+        manifest = {
+            "batches": [
+                {"batch_id": "phase0-b01", "paper_ids": ["historical"]},
+                {"batch_id": "phase1-b07", "paper_ids": ["new-paper"]},
+            ],
+            "papers": [
+                {"paper_id": "historical", "legacy_ids": ["legacy"], "project_dir": "historical"},
+                {"paper_id": "new-paper", "legacy_ids": [], "project_dir": "new-paper"},
+            ],
+        }
+        seen = []
+
+        def digest(path):
+            seen.append(path.relative_to(ROOT).as_posix())
+            return "digest"
+
+        with mock.patch.object(report, "_sha256", side_effect=digest):
+            report._transaction_inputs(ROOT, manifest)
+        self.assertIn("math-gaokao-latex/reports/phase0-b01.md", seen)
+        self.assertNotIn("math-gaokao-latex/reports/phase1-b07.md", seen)
+        self.assertFalse(any("new-paper" in path for path in seen))
+
+    def test_rejects_mixed_historical_and_nonhistorical_batch(self):
+        manifest = {
+            "batches": [
+                {"batch_id": "mixed", "paper_ids": ["historical", "new-paper"]},
+            ],
+            "papers": [
+                {"paper_id": "historical", "legacy_ids": ["legacy"], "project_dir": "historical"},
+                {"paper_id": "new-paper", "legacy_ids": [], "project_dir": "new-paper"},
+            ],
+        }
+        with self.assertRaisesRegex(report.ReportError, "不允许混合历史卷与非历史卷"):
+            report._transaction_inputs(ROOT, manifest)
 
 
 class ReportCliTest(unittest.TestCase):

@@ -63,6 +63,14 @@
         "gk-2026-regular-national-2"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2021-regular-national-a-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -72,7 +80,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d6f16948-25ba-421f-991e-18f00dd3d298",
+  "last_transaction_id": "7c10a14c-c0a9-43c4-8fd9-c085b46250ab",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1076,9 +1084,86 @@
       "title": "2026 年·全国 2 卷",
       "track": "none",
       "year": 2026
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_文科/figures/f2021jw_t15_cos.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_文科/figures/f2021jw_t19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_文科/figures/f2021jw_t23_grid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_文科/figures/f2021jw_t2_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_文科/figures/f2021jw_t7_views.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2021_gaokao_a_arts",
+        "id": "gk-2021-regular-national-a-arts",
+        "note": "2021 年全国甲卷文科；上游 PDF 内页卷别标签存在已登记冲突",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国甲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国甲文"
+      },
+      "issue_ids": [
+        "ISSUE-0105",
+        "ISSUE-0106"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-national-a-arts",
+      "production_state": "complete",
+      "project_dir": "2021_全国甲卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_全国甲文_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_全国甲文_含解析.md",
+        "questions": "2021/2021_数学真题_全国甲文_试题.md",
+        "solution_body": "2021/2021_数学真题_全国甲文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0e4e7506220e2969389efd998364e538cea0fb7e552b9f06b1479647e9634629"
+      ],
+      "title": "2021 年·全国甲卷·文科",
+      "track": "arts",
+      "year": 2021
     }
   ],
-  "revision": 855,
+  "revision": 886,
   "schema_version": 1,
   "sources": [
     {
@@ -18663,8 +18748,8 @@
       "exam_type": "regular",
       "git_blob_oid": "061f6c315566007f695af80e4ef4f86bfa71ac2d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-national-a-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021全国甲文(云南,广西,贵州,西藏,四川).pdf",
       "regions": [],
       "source_id": "src-0e4e7506220e2969389efd998364e538cea0fb7e552b9f06b1479647e9634629",

@@ -5,7 +5,7 @@ from typing import Any, Mapping
 
 SUPPORTED = {
     "$schema", "$id", "$defs", "$ref", "type", "required", "properties",
-    "items", "enum", "const", "pattern", "minimum", "minItems",
+    "items", "enum", "const", "pattern", "minimum", "minItems", "maxItems",
     "uniqueItems", "additionalProperties", "oneOf", "allOf",
     "description", "title", "default",
 }
@@ -103,12 +103,18 @@ def _check_schema(
         or not isinstance(schema["minimum"], (int, float))
     ):
         raise SchemaError(f"{path}.minimum: 必须是数值")
-    if "minItems" in schema and (
-        isinstance(schema["minItems"], bool)
-        or not isinstance(schema["minItems"], int)
-        or schema["minItems"] < 0
+    for keyword in ("minItems", "maxItems"):
+        if keyword in schema and (
+            isinstance(schema[keyword], bool)
+            or not isinstance(schema[keyword], int)
+            or schema[keyword] < 0
+        ):
+            raise SchemaError(f"{path}.{keyword}: 必须是非负整数")
+    if (
+        "minItems" in schema and "maxItems" in schema
+        and schema["minItems"] > schema["maxItems"]
     ):
-        raise SchemaError(f"{path}.minItems: 必须是非负整数")
+        raise SchemaError(f"{path}: minItems 不得大于 maxItems")
     if "uniqueItems" in schema and not isinstance(schema["uniqueItems"], bool):
         raise SchemaError(f"{path}.uniqueItems: 必须是布尔值")
     if "pattern" in schema:
@@ -202,6 +208,8 @@ def _validate(value: Any, schema: Mapping[str, Any], root: Mapping[str, Any], pa
     if isinstance(value, list):
         if len(value) < schema.get("minItems", 0):
             raise SchemaError(f"{path}: 数组长度不足")
+        if "maxItems" in schema and len(value) > schema["maxItems"]:
+            raise SchemaError(f"{path}: 数组长度超限")
         if schema.get("uniqueItems"):
             for index, item in enumerate(value):
                 if any(_json_equal(item, prior) for prior in value[:index]):

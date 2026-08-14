@@ -1,11 +1,11 @@
 % 2021 全国甲卷文科 23：供考生作图用的空白方格坐标系
 % 绘制依据：源 PDF 第 2 页原图。整幅为方格网，坐标轴过原点，
-% 原点偏右下（左侧格数多于右侧，上方格数少于下方），仅标注 O 与两轴上的 1。
+% 网格以原点为中心，左右、上下各 8 格，仅标注 O 与两轴上的 1。
 % 本图无曲线内容——它是题目要求「画出 y=f(x) 和 y=g(x) 的图象」的作图区。
 \begin{tikzpicture}[font=\small, line width=0.4pt]
   \def\u{0.42}% 单位格边长
-  \pgfmathsetmacro{\xa}{-9}\pgfmathsetmacro{\xb}{4}
-  \pgfmathsetmacro{\ya}{-8}\pgfmathsetmacro{\yb}{5}
+  \pgfmathsetmacro{\xa}{-8}\pgfmathsetmacro{\xb}{8}
+  \pgfmathsetmacro{\ya}{-8}\pgfmathsetmacro{\yb}{8}
   % 方格网
   \draw[gray!55, line width=0.25pt] ({\xa*\u},{\ya*\u}) grid[step=\u] ({\xb*\u},{\yb*\u});
   % 坐标轴

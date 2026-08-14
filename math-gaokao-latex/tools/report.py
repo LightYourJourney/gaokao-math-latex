@@ -76,20 +76,37 @@ def collect_report_facts(manifest_path: Path, issues_path: Path) -> Dict[str, An
     regular, spring = roots.get("regular"), roots.get("spring")
     if (total, regular, spring) != (775, 734, 41) or total != regular + spring:
         raise ReportError("来源守恒失败：要求 775 = 734 + 41")
-    if len(manifest.get("papers", [])) != 21:
+    historical_papers = [
+        paper for paper in manifest.get("papers", []) if paper.get("legacy_ids")
+    ]
+    if len(historical_papers) != 21:
         raise ReportError("历史产出应恰好覆盖 21 套试卷")
 
-    validation = review_receipts.check_all(
-        manifest_path, issues_path, require_current_build=True
-    )
-    if validation["code"] != "FINALIZED":
-        raise ReportError("批次重算失败：" + "；".join(validation["problems"]))
+    historical_ids = {paper["paper_id"] for paper in historical_papers}
+    historical_batches = []
+    for batch in manifest.get("batches", []):
+        paper_ids = set(batch.get("paper_ids", []))
+        if paper_ids & historical_ids and not paper_ids <= historical_ids:
+            raise ReportError(f"{batch['batch_id']}: 不允许混合历史卷与非历史卷")
+        if paper_ids and paper_ids <= historical_ids:
+            historical_batches.append(batch)
+    validations = {}
+    validation_problems = []
+    for batch in historical_batches:
+        result = review_receipts.check_batch(
+            manifest_path, issues_path, batch["batch_id"], require_current_build=True
+        )
+        validations[batch["batch_id"]] = result["code"]
+        validation_problems.extend(result["problems"])
+    if any(code != "FINALIZED" for code in validations.values()):
+        raise ReportError("批次重算失败：" + "；".join(validation_problems))
+    validation = {"batches": validations}
 
-    papers = {paper["paper_id"]: paper for paper in manifest["papers"]}
+    papers = {paper["paper_id"]: paper for paper in historical_papers}
     statuses = Counter()
     builds, reviews = [], []
     batches = []
-    for batch in manifest.get("batches", []):
+    for batch in historical_batches:
         batch_id = batch["batch_id"]
         paper_statuses = [papers[paper_id]["production_state"] for paper_id in batch["paper_ids"]]
         expected = "closed" if all(value == "complete" for value in paper_statuses) else "closed_with_blockers" if any(value == "blocked" for value in paper_statuses) else None
@@ -101,7 +118,7 @@ def collect_report_facts(manifest_path: Path, issues_path: Path) -> Dict[str, An
             raise ReportError(f"{batch_id}: ownership paths 尚未提交（{git_state}）")
         batches.append({"batch_id": batch_id, "status": expected, "validation": validation["batches"][batch_id], "git_state": git_state})
 
-    for paper in manifest["papers"]:
+    for paper in historical_papers:
         status = paper["production_state"]
         statuses[status if status in {"complete", "blocked"} else "in_progress"] += 1
         receipt_dir = root / BASE / paper["project_dir"] / "receipts"
@@ -187,9 +204,15 @@ def _sha256(path: Path) -> str:
 
 def _transaction_inputs(root: Path, manifest: Mapping[str, Any]) -> Dict[str, str]:
     paths = {REPORT_SOURCE, MANIFEST_TARGET.as_posix(), ISSUES_TARGET.as_posix(), (BASE / "reports/legacy-baseline.json").as_posix()}
+    historical_papers = [paper for paper in manifest["papers"] if paper.get("legacy_ids")]
+    historical_ids = {paper["paper_id"] for paper in historical_papers}
     for batch in manifest["batches"]:
-        paths.add((BASE / "reports" / f"{batch['batch_id']}.md").as_posix())
-    for paper in manifest["papers"]:
+        paper_ids = set(batch.get("paper_ids", []))
+        if paper_ids & historical_ids and not paper_ids <= historical_ids:
+            raise ReportError(f"{batch['batch_id']}: 不允许混合历史卷与非历史卷")
+        if paper_ids and paper_ids <= historical_ids:
+            paths.add((BASE / "reports" / f"{batch['batch_id']}.md").as_posix())
+    for paper in historical_papers:
         base = BASE / paper["project_dir"]
         paths.update({(base / "provenance.json").as_posix(), (base / "receipts/build.json").as_posix(), (base / "receipts/review.json").as_posix()})
     return {path: _sha256(root / path) for path in sorted(paths)}

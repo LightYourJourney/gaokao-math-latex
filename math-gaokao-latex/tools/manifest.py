@@ -108,6 +108,46 @@ def optional_file_sha256(path: Path) -> Optional[str]:
     return file_sha256(path)
 
 
+def validate_index_metadata(
+    paper_id: str, question_count: Any, index_metadata: Any, *, required: bool
+) -> None:
+    """校验兼容 index 的静态元数据。"""
+    if index_metadata is None and not required:
+        return
+    if not isinstance(index_metadata, Mapping):
+        raise ValueError(f"{paper_id}: 新卷必须登记 index_metadata")
+    if index_metadata.get("id") != paper_id:
+        raise ValueError(f"{paper_id}: index_metadata.id 必须与 paper_id 一致")
+    for key in ("pages_q", "pages_s"):
+        bounds = index_metadata.get(key)
+        if bounds is not None and (
+            not isinstance(bounds, list) or len(bounds) != 2
+            or any(type(value) is not int for value in bounds)
+            or bounds[0] < 1 or bounds[0] > bounds[1]
+        ):
+            raise ValueError(
+                f"{paper_id}: index_metadata.{key} 必须是 null 或两个递增的正整数"
+            )
+    structure = index_metadata.get("structure")
+    if not isinstance(structure, Mapping) or not structure:
+        raise ValueError(f"{paper_id}: index_metadata.structure 必须是非空对象")
+    covered = set()
+    for label, bounds in structure.items():
+        if (
+            not isinstance(label, str) or not label
+            or not isinstance(bounds, list) or len(bounds) != 2
+            or any(type(value) is not int for value in bounds)
+            or bounds[0] < 1 or bounds[0] > bounds[1]
+        ):
+            raise ValueError(f"{paper_id}: 非法版块范围：{label!r}={bounds!r}")
+        values = set(range(bounds[0], bounds[1] + 1))
+        if covered & values:
+            raise ValueError(f"{paper_id}: index_metadata.structure 版块范围重叠")
+        covered.update(values)
+    if covered != set(range(1, question_count + 1)):
+        raise ValueError(f"{paper_id}: index_metadata.structure 未覆盖全部题号")
+
+
 def validate_manifest_semantics(manifest: Mapping[str, Any]) -> None:
     sources = manifest.get("sources")
     papers = manifest.get("papers")
@@ -136,6 +176,17 @@ def validate_manifest_semantics(manifest: Mapping[str, Any]) -> None:
             raise ValueError(f"{source_id}: non_paper 不得绑定试卷")
 
     for paper in papers:
+        paper_id = paper["paper_id"]
+        if "production_state" in paper:
+            validate_index_metadata(
+                paper_id,
+                paper.get("question_count"),
+                paper.get("index_metadata"),
+                required=(
+                    not paper.get("legacy_ids")
+                    and paper.get("production_state") != "legacy_unverified"
+                ),
+            )
         source_list = paper.get("source_ids", [])
         if len(source_list) != len(set(source_list)):
             raise ValueError(f"{paper['paper_id']}: source_ids 不唯一")

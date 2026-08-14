@@ -221,7 +221,10 @@ def build_manifest_projection(
     missing = [field for field in PROJECTION_FIELDS if field not in paper]
     if missing:
         raise BuildError(f"{paper_id}: manifest 缺少静态装配字段 {missing}")
-    return copy.deepcopy({field: paper[field] for field in PROJECTION_FIELDS})
+    projection = copy.deepcopy({field: paper[field] for field in PROJECTION_FIELDS})
+    if paper.get("index_metadata") is not None:
+        projection["index_metadata"] = copy.deepcopy(paper["index_metadata"])
+    return projection
 
 
 def projection_digest(manifest: Mapping[str, Any], paper_id: str) -> str:
@@ -252,7 +255,6 @@ def generation_input_paths(
     paper = _paper(manifest, paper_id)
     directory = paper["project_dir"]
     paths = list(GENERATOR_SOURCES)
-    paths.append(INDEX_TARGET)
     for edition in EDITIONS:
         paths.append("%s/templates/%s.tex.tpl" % (PROJECT_RELATIVE, edition))
         paths.append("%s/%s/%s.tex" % (PROJECT_RELATIVE, directory, edition))

@@ -1918,3 +1918,37 @@
   "type": "compile-error"
 }
 ```
+## ISSUE-0105
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "pdf-header-national-ii-vs-national-a",
+  "current_evidence": "上游 PDF 页眉逐字为“2021 普通高等学校招生考试（全国卷 II 文）”，而 source-manifest 与规范源按上游文件名及既有目录身份登记为“2021 全国甲卷文科”；当前尚无独立权威证据解释该卷别标签冲突。",
+  "fingerprint": "d75a42e62638e243e074663febd437611be4aa6d600583446ed5f961244003e6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "resolved_evidence": "固定上游 PDF 第2题“农户家庭年收入”和第6题“青少年视力”与人民网转载的教育部考试中心 2021 高考数学命题评析逐题对应，后者明确分别为全国甲卷文、理第2题及甲卷文科第6题；该 PDF 同时具有 A3 横排、汇编页码 1147/1148 和非官方简化题签，故页眉“全国卷 II 文”记为非官方重排汇编标签。未能核实其为模板编号或防伪编号，不作该断言。来源：http://edu.people.com.cn/n1/2021/0608/c1006-32125641.html",
+  "resume_action": "无需动作；卷种按题目内容与教育部考试中心逐题评析认定，汇编页眉不作为卷种字段",
+  "source_id": "src-0e4e7506220e2969389efd998364e538cea0fb7e552b9f06b1479647e9634629",
+  "status": "resolved",
+  "type": "identity-ambiguous"
+}
+```
+## ISSUE-0106
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "上游 PDF 第 2 页第 23 题作图网格在 y 轴两侧大致对称；规范题面引用的 images/2021甲文-t23-网格.png 右侧仅约 4 格、左侧约 9 格，右半网格明显被裁掉，属于实质图形转录缺陷。",
+  "fingerprint": "214be4bb191cc78e44d8353962842664c8cc37281697613b96008a1f75077dc4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "question_id": "gk-2021-regular-national-a-arts-q23",
+  "resolved_evidence": "已逐页对照固定上游 PDF 第 2 页，并将正式 TikZ 网格修正为左右、上下各 8 格；规范题面继续使用稳定图名，由生成器映射到 f2021jw_t23_grid.tex。",
+  "resume_action": "无需动作；图形已按固定上游 PDF 重新核验并矢量重绘",
+  "source_id": "src-0e4e7506220e2969389efd998364e538cea0fb7e552b9f06b1479647e9634629",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```

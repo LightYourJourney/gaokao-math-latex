@@ -367,17 +367,26 @@ class PreMigrationIndexTests(unittest.TestCase):
 
     def test_migration_added_only_paper_id_and_legacy_ids(self):
         # T16 起 index 投影不再携带 `batches`（运行态只住在 manifest 里），于是顶层键集
-        # 与迁移前完全一致；逐条新增只剩 paper 级的静态身份两键。
+        # 与迁移前完全一致；旧 21 卷逐条新增只剩 paper 级的静态身份两键。阶段 1 新卷
+        # 可以追加，但不得进入这份一次性迁移基线。
         self.assertEqual(set(self.current) - set(self.pre), set())
         self.assertEqual(set(self.pre) - set(self.current), set())
-        self.assertEqual(len(self.current["papers"]), len(self.pre["papers"]))
-        for current, pre in zip(self.current["papers"], self.pre["papers"]):
+        current = {paper["id"]: paper for paper in self.current["papers"]}
+        self.assertEqual(set(current) & {paper["id"] for paper in self.pre["papers"]},
+                         {paper["id"] for paper in self.pre["papers"]})
+        for pre in self.pre["papers"]:
             with self.subTest(legacy_id=pre["id"]):
-                self.assertEqual(set(current) - set(pre), {"paper_id", "legacy_ids"})
-                self.assertEqual(set(pre) - set(current), set())
+                paper = current[pre["id"]]
+                self.assertEqual(set(paper) - set(pre), {"paper_id", "legacy_ids"})
+                self.assertEqual(set(pre) - set(paper), set())
 
     def test_every_pre_migration_index_field_value_is_unchanged(self):
-        projected = legacy_index_projection(self.current)
+        legacy_ids = {paper["id"] for paper in self.pre["papers"]}
+        current = copy.deepcopy(self.current)
+        current["papers"] = [
+            paper for paper in current["papers"] if paper["id"] in legacy_ids
+        ]
+        projected = legacy_index_projection(current)
         # `generated_by` 是登记在案的正当改写（baseline._REWRITTEN_FIELDS）：写实现自
         # T13 起就在 generate_projects.py，T16 剔除运行态投影时一并落实。除它之外，
         # 迁移前的每一个字段值仍必须逐字未变。

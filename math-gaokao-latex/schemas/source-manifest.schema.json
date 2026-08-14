@@ -178,6 +178,40 @@
           "type": "array",
           "uniqueItems": true
         },
+        "index_metadata": {
+          "additionalProperties": false,
+          "properties": {
+            "base": {"pattern": "^.+$", "type": "string"},
+            "id": {"pattern": "^.+$", "type": "string"},
+            "note": {"type": ["string", "null"]},
+            "pages_q": {
+              "items": {"minimum": 1, "type": "integer"},
+              "maxItems": 2,
+              "minItems": 2,
+              "type": ["array", "null"]
+            },
+            "pages_s": {
+              "items": {"minimum": 1, "type": "integer"},
+              "maxItems": 2,
+              "minItems": 2,
+              "type": ["array", "null"]
+            },
+            "paper": {"pattern": "^.+$", "type": "string"},
+            "structure": {
+              "additionalProperties": {
+                "items": {"minimum": 1, "type": "integer"},
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "object"
+            },
+            "track": {"type": ["string", "null"]},
+            "variant": {"type": ["string", "null"]}
+          },
+          "required": ["id", "base", "paper", "track", "variant", "structure", "pages_q", "pages_s", "note"],
+          "type": "object"
+        },
         "last_verified_hash": {
           "oneOf": [
             {

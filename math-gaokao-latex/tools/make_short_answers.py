@@ -354,7 +354,7 @@ def paper_sources(
     paper: Mapping[str, Any], metadata: Mapping[str, Mapping[str, Any]]
 ) -> ShortAnswerSources:
     directory = paper["project_dir"]
-    static = metadata.get(directory)
+    static = metadata.get(directory) or paper.get("index_metadata")
     if static is None:
         raise ShortAnswerError(f"结构表缺少试卷目录：{directory}")
     return ShortAnswerSources(

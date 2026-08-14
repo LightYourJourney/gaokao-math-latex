@@ -1622,6 +1622,17 @@ class RegisterPapersTests(unittest.TestCase):
             "markdown_prefix": self.PREFIX,
             "source_ids": [source_id_value],
             "figure_files": [],
+            "index_metadata": {
+                "id": "gk-2021-regular-national-a-arts",
+                "base": "2021_gaokao_a_arts",
+                "paper": "全国甲卷",
+                "track": "文科",
+                "variant": "全国甲文",
+                "structure": {"选择题": [1, 12], "填空题": [13, 16], "解答题": [17, 21], "选做题": [22, 23]},
+                "pages_q": None,
+                "pages_s": None,
+                "note": None,
+            },
         }
         paper.update(updates)
         return {"batch_id": "phase1-b07", "papers": [paper]}
@@ -1681,6 +1692,9 @@ class RegisterPapersTests(unittest.TestCase):
                 paper_id="gk-2021-regular-national-a-science",
                 project_dir="2021_全国甲卷_理科",
             )
+            second["papers"][0]["index_metadata"]["id"] = (
+                "gk-2021-regular-national-a-science"
+            )
             second["batch_id"] = "phase1-b08"
             with self.assertRaisesRegex(ValueError, "已绑定"):
                 source_manifest_module.register_papers(
@@ -1724,6 +1738,25 @@ class RegisterPapersTests(unittest.TestCase):
                     repo, manifest_path, self._spec(source_id_value), write=True
                 )
 
+    def test_persisted_manifest_rejects_malformed_index_metadata_on_load(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            source_manifest_module.register_papers(
+                repo, manifest_path, self._spec(source_id_value), write=True
+            )
+            valid = json.loads(manifest_path.read_text(encoding="utf-8"))
+            cases = {
+                "pages_q": [1],
+                "structure": {"全部": [1]},
+            }
+            for field, malformed in cases.items():
+                with self.subTest(field=field):
+                    manifest = copy.deepcopy(valid)
+                    manifest["papers"][0]["index_metadata"][field] = malformed
+                    manifest_path.write_text(canonical_json(manifest), encoding="utf-8")
+                    with self.assertRaises((SchemaError, ValueError)):
+                        load_manifest(manifest_path)
+
     def test_requires_canonical_markdown_to_exist_before_registration(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo, manifest_path, source_id_value = self._repo(tmp)
@@ -1732,6 +1765,42 @@ class RegisterPapersTests(unittest.TestCase):
                 source_manifest_module.register_papers(
                     repo, manifest_path, self._spec(source_id_value), write=True
                 )
+
+    def test_rejects_index_metadata_that_cannot_identify_or_partition_the_paper(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            cases = {}
+            wrong_id = self._spec(source_id_value)
+            wrong_id["papers"][0]["index_metadata"]["id"] = "gk-2021-wrong"
+            cases["必须与 paper_id 一致"] = wrong_id
+            overlap = self._spec(source_id_value)
+            overlap["papers"][0]["index_metadata"]["structure"] = {
+                "前段": [1, 12], "后段": [12, 23],
+            }
+            cases["范围重叠"] = overlap
+            bad_pages = self._spec(source_id_value)
+            bad_pages["papers"][0]["index_metadata"]["pages_q"] = [3, 1]
+            cases["pages_q"] = bad_pages
+            for message, spec in cases.items():
+                with self.subTest(message=message):
+                    with self.assertRaisesRegex(ValueError, message):
+                        source_manifest_module.register_papers(
+                            repo, manifest_path, spec, write=True
+                        )
+            self.assertEqual(load_manifest(manifest_path)["papers"], [])
+
+    def test_project_legacy_index_supports_canonical_new_ids_but_rejects_unknown_ids(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper_id = "gk-2021-regular-national-a-arts"
+        projected = source_manifest_module.project_legacy_index(
+            manifest, {"papers": [{"id": paper_id}]}
+        )
+        self.assertEqual(projected["papers"][0]["paper_id"], paper_id)
+        self.assertEqual(projected["papers"][0]["legacy_ids"], [])
+        with self.assertRaisesRegex(ValueError, "未覆盖 index ID"):
+            source_manifest_module.project_legacy_index(
+                manifest, {"papers": [{"id": "gk-2099-unknown"}]}
+            )
 
     def test_migrated_papers_keep_frozen_legacy_ids(self):
         """schema 放开 minItems 后，迁移卷的身份改由定向机检守住。"""
