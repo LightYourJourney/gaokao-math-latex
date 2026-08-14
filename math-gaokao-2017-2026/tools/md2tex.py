@@ -450,8 +450,10 @@ def convert_markdown(source: str, context: ConversionContext) -> ConversionResul
     """把一份 Markdown 全文转成 LaTeX 正文片段（不含生成头注）。"""
     sink = _Sink(context.figure_map)
     body = convert_block(strip_frontmatter(source.splitlines()), sink)
-    # 压掉三连以上空行
-    text = re.sub(r"\n{3,}", "\n\n", "\n".join(body)) + "\n"
+    # 压掉三连以上空行，并清除 Markdown 硬换行遗留的行尾空格。
+    text = re.sub(
+        r"\n{3,}", "\n\n", "\n".join(line.rstrip() for line in body)
+    ) + "\n"
     return _finish(text, sink, context)
 
 
