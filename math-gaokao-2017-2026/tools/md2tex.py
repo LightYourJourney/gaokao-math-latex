@@ -179,6 +179,7 @@ def conv_inline(s: str, sink: _Sink) -> str:
 
 def conv_text(s: str) -> str:
     s = re.sub(r"(?:\\_){3,}", r"\\gkblank{}", s)          # 填空下划线
+    s = s.replace("（　　）", r"\mbox{（　　）}")           # 选择题作答空括号不可拆行
     s = s.replace("%", r"\%").replace("&", r"\&").replace("#", r"\#")
     for k, v in BARE_SYM.items():
         s = s.replace(k, v)
@@ -312,7 +313,7 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             s = ln.strip()
             m = re.match(r"^\$\$(.+?)\$\$(.*)$", s)
             if m:                       # 单行 $$...$$，允许带尾随文字（如括号段收尾）
-                out += ["\\[" + conv_math_display(m.group(1)) + "\\]"]
+                out += [r"\nopagebreak[4]", "\\[" + conv_math_display(m.group(1)) + "\\]"]
                 if m.group(2).strip():
                     out += [conv_inline(m.group(2).strip(), sink)]
                 i += 1
@@ -323,7 +324,7 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
                 j += 1
                 body += "\n" + lines[j].strip()
             if body.endswith("$$") and len(body) > 2:
-                out += ["\\[" + conv_math_display(body[2:-2]) + "\\]"]
+                out += [r"\nopagebreak[4]", "\\[" + conv_math_display(body[2:-2]) + "\\]"]
             else:                       # 越界护栏：未闭合不崩溃，按行内文本退化并告警
                 sink.warnings.append(f"未闭合的 $$ 块：{s[:50]}")
                 out += [conv_inline(s, sink)]
@@ -417,6 +418,13 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             i += 1
             continue
 
+        # --- 独立“解析”标题：与后续首段保持同页 ---
+        if ln.strip() == "**解析**":
+            out.append(r"\Needspace{4\baselineskip}")
+            out.append(conv_inline(ln, sink))
+            i += 1
+            continue
+
         # --- 独立答案段 ---
         m = ANSLINE.match(ln.strip())
         if m:
@@ -425,6 +433,13 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             continue
 
         # --- 普通段落 ---
+        # 统计题的“附：公式”应与紧随的临界值表一起起排，避免公式与表格分居两页。
+        if ln.strip().startswith("附："):
+            j = i + 1
+            while j < n and not lines[j].strip():
+                j += 1
+            if j < n and lines[j].strip().startswith("|"):
+                out.append(r"\Needspace{10\baselineskip}")
         out.append(conv_inline(ln, sink))
         i += 1
 

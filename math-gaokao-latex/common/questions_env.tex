@@ -11,5 +11,7 @@
 %   2. 为将来的条件编译留钩子——某版本可重定义环境实现按题取舍。
 % ============================================================
 
-\newenvironment{question}{}{}
-\newenvironment{answer}{}{}
+% 环境不把整题装盒：题目仍可自然跨页，只在题头处要求保留足够空间，
+% 避免题号/题干与选项或解析标题/首段被拆到相邻页。
+\newenvironment{question}{\Needspace{8\baselineskip}}{}
+\newenvironment{answer}{\Needspace{8\baselineskip}}{}

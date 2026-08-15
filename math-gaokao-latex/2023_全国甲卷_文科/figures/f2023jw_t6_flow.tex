@@ -1,20 +1,20 @@
 % 2023 全国甲卷文科 6：程序框图
 % 源图流程：输入 n=3,A=1,B=2,k=1；当 k<=n 时依次更新 A、B、k 并折返判断；
 % 条件不成立时输出 B。源图所有边均为实线。
-\begin{tikzpicture}[font=\small, >=Stealth, node distance=5.5mm, line width=0.4pt,
-  box/.style={draw, minimum height=1.9em, minimum width=5.8em, inner xsep=7pt},
-  term/.style={draw, rounded corners=7pt, minimum height=1.9em, inner xsep=9pt},
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, node distance=2.2mm, line width=0.4pt,
+  box/.style={draw, minimum height=1.5em, minimum width=5.8em, inner xsep=6pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.5em, inner xsep=8pt},
   io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
-             minimum height=1.9em, inner xsep=4pt},
+             minimum height=1.5em, inner xsep=3pt},
   dec/.style={draw, diamond, aspect=2.6, inner sep=1.5pt}]
   \node[term] (start) {开始};
   \node[io, below=of start] (input) {输入 $n=3,A=1,B=2,k=1$};
-  \coordinate[below=3mm of input] (merge);
-  \node[dec, below=3mm of merge] (cond) {$k\leqslant n$};
+  \coordinate[below=1mm of input] (merge);
+  \node[dec, below=1mm of merge] (cond) {$k\leqslant n$};
   \node[box, below=of cond] (stepa) {$A=A+B$};
   \node[box, below=of stepa] (stepb) {$B=A+B$};
   \node[box, below=of stepb] (stepk) {$k=k+1$};
-  \node[io, below=9mm of stepk] (output) {输出 $B$};
+  \node[io, below=2.5mm of stepk] (output) {输出 $B$};
   \node[term, below=of output] (end) {结束};
 
   % 主流程与“是”分支

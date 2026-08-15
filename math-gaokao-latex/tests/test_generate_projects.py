@@ -516,11 +516,61 @@ class ConversionInterfaceTests(unittest.TestCase):
 
         self.assertIn(protected, result.text)
         self.assertEqual(result.text.count(r"\nopagebreak[4]"), 2)
+        self.assertIn(r"\Needspace{0.4\textheight}", result.text)
         self.assertEqual(result.text.count(figure), 1)
         self.assertEqual(result.text.count(r"\gkti{7}"), 1)
         self.assertEqual(result.text.count(r"\task "), 4)
         self.assertEqual(result.referenced_figures, ("fa",))
         # 变异牙齿：删掉图片前或图片后的任一保护，`protected` 与数量断言都会变红。
+
+    def test_display_math_keeps_the_introducing_line_with_the_formula(self):
+        result = md2tex.convert_markdown(
+            "所以\n\n$$\nx=1.\n$$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn("所以\n\n\\nopagebreak[4]\n\\[", result.text)
+        self.assertEqual(result.text.count(r"\nopagebreak[4]"), 1)
+
+    def test_choice_answer_parentheses_do_not_split_across_lines(self):
+        result = md2tex.convert_markdown(
+            "**1．** 结果为（　　）\n\n  A．1　　B．2\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"结果为\mbox{（　　）}", result.text)
+
+    def test_solution_heading_stays_with_its_first_paragraph(self):
+        result = md2tex.convert_markdown(
+            "**解析**\n\n第一步。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(
+            "\\Needspace{4\\baselineskip}\n\\textbf{解析}\n\n第一步。",
+            result.text,
+        )
+        ordinary = md2tex.convert_markdown(
+            "**解析方法**\n", md2tex.ConversionContext(figure_map={})
+        )
+        self.assertNotIn(r"\Needspace", ordinary.text)
+
+    def test_statistical_appendix_stays_with_its_following_table(self):
+        source = (
+            "附：$K^2=1$，\n\n"
+            "| $P$ | $0.05$ |\n"
+            "|:---:|:---:|\n"
+            "| $k$ | $3.841$ |\n"
+        )
+        result = md2tex.convert_markdown(
+            source, md2tex.ConversionContext(figure_map={})
+        )
+
+        self.assertIn(r"\Needspace{10\baselineskip}", result.text)
+        ordinary = md2tex.convert_markdown(
+            "附：普通说明。\n", md2tex.ConversionContext(figure_map={})
+        )
+        self.assertNotIn(r"\Needspace", ordinary.text)
 
     def test_strict_mode_fails_on_any_warning(self):
         with self.assertRaises(md2tex.ConversionError) as caught:
