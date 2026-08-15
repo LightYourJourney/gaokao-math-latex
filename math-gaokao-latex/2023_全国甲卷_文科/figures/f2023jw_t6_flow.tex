@@ -1,0 +1,36 @@
+% 2023 全国甲卷文科 6：程序框图
+% 源图流程：输入 n=3,A=1,B=2,k=1；当 k<=n 时依次更新 A、B、k 并折返判断；
+% 条件不成立时输出 B。源图所有边均为实线。
+\begin{tikzpicture}[font=\small, >=Stealth, node distance=5.5mm, line width=0.4pt,
+  box/.style={draw, minimum height=1.9em, minimum width=5.8em, inner xsep=7pt},
+  term/.style={draw, rounded corners=7pt, minimum height=1.9em, inner xsep=9pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.9em, inner xsep=4pt},
+  dec/.style={draw, diamond, aspect=2.6, inner sep=1.5pt}]
+  \node[term] (start) {开始};
+  \node[io, below=of start] (input) {输入 $n=3,A=1,B=2,k=1$};
+  \coordinate[below=3mm of input] (merge);
+  \node[dec, below=3mm of merge] (cond) {$k\leqslant n$};
+  \node[box, below=of cond] (stepa) {$A=A+B$};
+  \node[box, below=of stepa] (stepb) {$B=A+B$};
+  \node[box, below=of stepb] (stepk) {$k=k+1$};
+  \node[io, below=9mm of stepk] (output) {输出 $B$};
+  \node[term, below=of output] (end) {结束};
+
+  % 主流程与“是”分支
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (cond);
+  \draw[->] (cond) -- node[right, pos=0.38] {是} (stepa);
+  \draw[->] (stepa) -- (stepb);
+  \draw[->] (stepb) -- (stepk);
+
+  % k=k+1 后从左侧折返，在输入框与判断框之间重新汇入
+  \draw[->] (stepk.west) -- ++(-14mm,0) |- (merge);
+
+  % “否”从菱形右侧绕至输出框上方，再向下进入输出框
+  \coordinate[right=16mm of cond] (no-right);
+  \coordinate[above=4mm of output] (out-merge);
+  \draw (cond.east) -- node[above, pos=0.38] {否} (no-right) |- (out-merge);
+  \draw[->] (out-merge) -- (output.north);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}
