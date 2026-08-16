@@ -540,6 +540,25 @@ class ConversionInterfaceTests(unittest.TestCase):
 
         self.assertIn(r"结果为\mbox{（　　）}", result.text)
 
+    def test_plain_cjk_option_of_seven_chars_uses_two_columns(self):
+        # 纯文本选项每个 CJK 字满字宽，「A．甲与丙相互独立」在 4 栏里会把「立」
+        # 折到下一行悬挂（2021 新高考Ⅰ 第 8 题实测）。7 字纯文本选项必须落到 2 栏。
+        result = md2tex.convert_markdown(
+            "**8．** 则（　　）\n\n"
+            "  A．甲与丙相互独立　　B．甲与丁相互独立　　C．乙与丙相互独立　　D．丙与丁相互独立\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+        self.assertIn(r"\begin{gkopts}(2)", result.text)
+
+    def test_math_option_of_similar_source_length_stays_four_columns(self):
+        # 数学段 0.55 折算后仍可能到 9–10 单元，但分数实际渲染很窄，不该被降为 2 栏。
+        result = md2tex.convert_markdown(
+            "**1．** 则（　　）\n\n"
+            "  A．$\\dfrac{10\\pi}9$　　B．$\\dfrac{8\\pi}9$　　C．$\\dfrac{7\\pi}9$　　D．$\\dfrac{5\\pi}9$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+        self.assertIn(r"\begin{gkopts}(4)", result.text)
+
     def test_solution_heading_stays_with_its_first_paragraph(self):
         result = md2tex.convert_markdown(
             "**解析**\n\n第一步。\n",

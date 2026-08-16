@@ -197,7 +197,11 @@ def emit_options(lines: List[str], sink: _Sink) -> List[str]:
     longest = max(len(re.sub(r"\$[^$]*\$",
                              lambda m: "x" * max(3, int(len(m.group(0)) * 0.55)), o))
                   for o in opts)
-    ncol = 4 if longest <= 10 else (2 if longest <= 26 else 1)
+    # 纯文本（无数学）选项每个 CJK 字都占满字宽，4 栏只容得下「标签 + 6 个 CJK」
+    # （约 7.5em）。「甲与丙相互独立」这类 7 字选项在 4 栏里会把末字「立」折到
+    # 下一行悬挂；含数学的选项维持 10（分数等渲染窄，0.55 折算已偏保守）。
+    four_col_limit = 8 if all("$" not in o for o in opts) else 10
+    ncol = 4 if longest <= four_col_limit else (2 if longest <= 26 else 1)
     out = [f"\\begin{{gkopts}}({ncol})"]
     for o in opts:
         out.append(f"\\task {conv_inline(o, sink)}")

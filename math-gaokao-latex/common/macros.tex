@@ -15,7 +15,7 @@
 % 解析部分的题头：小标题 + 回链到试题页
 % （仅在题目与解析同文档的版本中回链有效；试题版不含解析头，无悬空引用）
 \newcommand{\gksolhead}[2]{%
-  \subsubsection*{第 #1 题\if\relax\detokenize{#2}\relax\else（#2）\fi}%
+  \Needspace{3\baselineskip}\subsubsection*{第 #1 题\if\relax\detokenize{#2}\relax\else（#2）\fi}%
   \phantomsection\label{s:\gkpaperid:#1}%
   {\small\color{gray}（题目见第~\pageref{q:\gkpaperid:#1}~页）}\par\nopagebreak}
 
@@ -44,7 +44,7 @@
 % ---------- 结构标题 ----------
 \newcommand{\gkpart}[1]{\Needspace{12\baselineskip}\subsection*{#1}\nopagebreak}     % 标题 + 首题
 % （一）必考题 / 解析小问标题：块式加粗段，可自动换行（\paragraph 的 run-in 版式会溢出）
-\newcommand{\gksubpart}[1]{\par\medskip\noindent\textbf{#1}\par\nopagebreak\smallskip}
+\newcommand{\gksubpart}[1]{\Needspace{3\baselineskip}\par\medskip\noindent\textbf{#1}\par\nopagebreak\smallskip}
 
 % 罗马数字Ⅰ-Ⅻ（U+2160）与圈号①②③（U+2460）划入 CJK 字符类，
 % 用中文字体渲染——西文字体 Latin Modern 缺这些字形，否则整段静默丢字

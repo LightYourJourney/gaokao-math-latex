@@ -171,6 +171,10 @@ def render_body(edition: str) -> str:
         parts.append(section.lead)
         parts.append("\\pdfbookmark[1]{%s}{%s}\n" % (section.bookmark, section.anchor))
         if section.heading:
+            # 章标题后必须紧跟正文：预留 8 基线，避免「参考答案与详细解析」这类
+            # 光杆标题孤悬页尾。8 基线要覆盖标题块（约 3 行）+ 首答案的环境
+            # Needspace（2）+ 解析题头 Needspace（3），否则首答案仍被推到下一页。
+            parts.append("\\Needspace{8\\baselineskip}\n")
             parts.append(
                 "\\begin{center}{\\%s\\bfseries %s}\\end{center}\n"
                 % (section.heading_size, section.heading)
