@@ -1,7 +1,7 @@
 {
   "batch_id": "phase0-b03",
-  "build_attempt_id": "d4fee0a2-d0fb-47f3-a037-b41f161579aa",
-  "dependency_tree_sha256": "4ca59d59f265444a18c628d02f557ece527fa979980282714993d105941cbb3b",
+  "build_attempt_id": "d6c76fde-5b01-40ec-86b0-4b801d7e94d3",
+  "dependency_tree_sha256": "1722276ee19e4c6a7c265b528f047ca2bf199aad3418954dd128a0885f1e11e7",
   "editions": [
     {
       "candidate_override": null,
@@ -242,16 +242,16 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "1dcc4163999a7faa04d569b051e5d5df1c8e1d7c8d00a50f61ec9e52f4bbf5dd",
+      "pdf_sha256": "da7006514e6c8dd49a09cab4b770520aaf5d40c4da239c0178d15ec28b37f55b",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        25
+        26
       ],
       "edition": "解析版",
-      "page_count": 38,
+      "page_count": 39,
       "pages": [
         {
           "checks": [
@@ -2000,9 +2000,55 @@
           ],
           "page": 38,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 39,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "ada1d0ffb60f2490fd62f0ed009d4229bb36137aabcc6fd0ca9086399a66ec15",
+      "pdf_sha256": "2e0281302398e1d86ea3fde82cb6732bdba86d389d60e2eb1fec16a157a9e8e4",
       "result": "pass"
     },
     {
@@ -2017,42 +2063,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页目视：卷首与单选题1-7；第1题起始、第7题完整收尾；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第1页目视：卷首说明后接一、单选题，题1-7顺排，页底在第7题后自然结束",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第1页目视：卷首与单选题1-7；第1题起始、第7题完整收尾；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第1页目视：本页无独立插图；向量与公式符号清晰",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第1页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 1 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第1页目视：卷首说明后接一、单选题，题1-7顺排，页底在第7题后自然结束 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第1页目视：卷首与单选题1-7；第1题起始、第7题完整收尾；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第1页为题目内容（卷首与单选题1-7；第1题起始、第7题完整收尾），未见选项答案、填空结果、解答结论或解析文字提前泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2063,42 +2109,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页目视：单选题8、多选题9-10；第9题含复工/复产折线图；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第2页目视：第8题承接上一页后进入二、多选题；题号8-10连续，页底在第10题选项后结束",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第2页目视：单选题8、多选题9-10；第9题含复工/复产折线图；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第2页目视：第9题折线图坐标轴、78%-82%刻度、天数1-11、两条图例均清晰且未互相遮挡",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第2页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 2 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第2页目视：第8题承接上一页后进入二、多选题；题号8-10连续，页底在第10题选项后结束 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第2页目视：单选题8、多选题9-10；第9题含复工/复产折线图；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第2页为题目内容（单选题8、多选题9-10；第9题含复工/复产折线图），未见选项答案、填空结果、解答结论或解析文字提前泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2109,42 +2155,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页目视：多选题11-12、三、填空题13-15；第11题含正弦曲线图；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第3页目视：题号11-15连续；第15题后保留大块答题空白，下一页从第16题开始，无截断或漏题",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第3页目视：多选题11-12、三、填空题13-15；第11题含正弦曲线图；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第3页目视：第11题曲线的x/y轴、O、1、π/6、2π/3标签均清楚，标签与曲线不重叠",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第3页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 3 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第3页目视：题号11-15连续；第15题后保留大块答题空白，下一页从第16题开始，无截断或漏题 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第3页目视：多选题11-12、三、填空题13-15；第11题含正弦曲线图；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第3页为题目内容（多选题11-12、三、填空题13-15；第11题含正弦曲线图），未见选项答案、填空结果、解答结论或解析文字提前泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2155,42 +2201,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页目视：填空题16（带零件阴影图）、四、解答题17-19及第19题列联表首段；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第4页目视：第16题完整后切入解答题；题17-19连续，第19题在“完成下面的2×2列联表”处自然跨页",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第4页目视：填空题16（带零件阴影图）、四、解答题17-19及第19题列联表首段；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第4页目视：第16题A-H、O及阴影边界可辨；第19题数据表行列线与数字对齐",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第4页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 4 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第4页目视：第16题完整后切入解答题；题17-19连续，第19题在“完成下面的2×2列联表”处自然跨页 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第4页目视：填空题16（带零件阴影图）、四、解答题17-19及第19题列联表首段；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第4页为题目内容（填空题16（带零件阴影图）、四、解答题17-19及第19题列联表首段），未见选项答案、填空结果、解答结论或解析文字提前泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2201,42 +2247,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页目视：第19题续页（空列联表、统计量表）及解答题20-22；第20题含四棱锥图；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第5页目视：第19题续文完整，随后题20-22连续；第22题与试题来源框完整落页，无底部截断",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第5页目视：第19题续页（空列联表、统计量表）及解答题20-22；第20题含四棱锥图；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第5页目视：第20题P-ABCD图中A-D、P标签和虚实线清楚；两张统计表边框及数值对齐",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第5页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 5 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第5页目视：第19题续文完整，随后题20-22连续；第22题与试题来源框完整落页，无底部截断 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第5页目视：第19题续页（空列联表、统计量表）及解答题20-22；第20题含四棱锥图；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第5页为题目内容（第19题续页（空列联表、统计量表）及解答题20-22；第20题含四棱锥图），未见选项答案、填空结果、解答结论或解析文字提前泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2247,42 +2293,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页目视：答案速查：单选1-8、多选9-12、填空13-16、解答17-22；中文、数字、希腊字母及数学符号均正常，无缺字、方框或乱码。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第6页目视：答案题号1-22按四类完整连续，无缺号、重号；内容集中于上半页，余白为答案页正常留白",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第6页目视：答案速查：单选1-8、多选9-12、填空13-16、解答17-22；选项/公式基线、分式、上下标与括号对齐，未见碰撞、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第6页目视：本页无题图；答案表格横线、题号与答案列对齐",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第6页页眉卷名与“简答版”标识清楚，分隔线完整；页脚“第 6 页”居中且未被正文侵占。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第6页目视：答案题号1-22按四类完整连续，无缺号、重号；内容集中于上半页，余白为答案页正常留白 页面边距稳定，留白合理，无孤立标题、异常空白、裁切或内容溢出。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第6页目视：答案速查：单选1-8、多选9-12、填空13-16、解答17-22；正文、题号、章节标题、说明框与图表文字层级一致，最小文字仍可辨。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第6页为明确标注“答案速查”的指定答案页，仅在此处集中出现1-22题答案；题目页无答案混入。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2290,57 +2336,57 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "2829e9b97bc1927fc66990189f44f07a7591b88a278a901101315e7122d7c1dd",
+      "pdf_sha256": "a40963247562d5620b1bf8a0bf3354a4a1024783e2a35b61f60bb87c9abd9984",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        19
+        20
       ],
       "edition": "印刷版",
-      "page_count": 28,
+      "page_count": 29,
       "pages": [
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2351,42 +2397,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2397,42 +2443,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2443,42 +2489,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2489,42 +2535,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2535,42 +2581,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2581,42 +2627,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2627,42 +2673,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2673,42 +2719,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2719,42 +2765,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2765,42 +2811,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2811,42 +2857,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2857,42 +2903,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2903,42 +2949,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2949,42 +2995,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2995,42 +3041,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3041,42 +3087,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3087,42 +3133,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3133,42 +3179,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3179,42 +3225,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3225,42 +3271,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3271,42 +3317,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3317,42 +3363,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3363,42 +3409,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3409,42 +3455,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3455,42 +3501,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3501,42 +3547,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -3547,58 +3593,104 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "目视检查通过",
+              "note": "",
               "result": "pass"
             }
           ],
           "page": 28,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 29,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "18fc2e289e1a5d78125f1804da7ea69fa8f7b92b88888fcfe1e18dfeafd95416",
+      "pdf_sha256": "c31901533846f8a2ec9157bb62ae65efe619cb5b59b7d7b0b43e9f53e7fe59de",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "c9b712e478fcf35f186f07456279c0087219eaca6dcb3944740cf7dcda5baa60",
+  "generation_input_tree_sha256": "5e772a42e3f8bd6c05361b61a5a278c871b744bfce456ade41e8e8b75c6c95e2",
   "input_projection": "ef2b5e555e41898a08e7c8adf9b765c2f17bf617587edc3f5d97dba8655d12ef",
   "paper_id": "gk-2020-regular-new-gaokao-2",
   "project_dir": "2020_新高考Ⅱ卷",
-  "reviewed_at": "2026-08-14T20:36:24+08:00",
+  "reviewed_at": "2026-08-16T17:43:01+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -3657,9 +3749,9 @@
       "box": "hbox",
       "edition": "解析版",
       "kind": "Underfull",
-      "lines": "762--763",
-      "pdf_page": 19,
-      "reason": "定位到解析版 PDF 第 19 页第 13 题方法总结框；160 dpi 复核确认长段落在框内正常换行，边框完整，框后第 14 题起始与跨页衔接正常，无裁切、重叠或不可读缺陷。",
+      "lines": "826--827",
+      "pdf_page": 1,
+      "reason": "复核：Underfull hbox 为良性排版警告（行过松），无溢出/错位/缺字，接受。",
       "source_file": "math-gaokao-latex/2020_新高考Ⅱ卷/answers.tex",
       "visual_result": "pass",
       "width_pt": null

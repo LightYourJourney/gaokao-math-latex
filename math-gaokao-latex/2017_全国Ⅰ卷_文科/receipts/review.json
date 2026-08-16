@@ -1,7 +1,7 @@
 {
   "batch_id": "phase0-b01",
-  "build_attempt_id": "8c29e5b9-e130-4b98-a1d5-20973d85955d",
-  "dependency_tree_sha256": "41775d0fa4e8b9b66cfd187c8c19ddda318ec8ea2b3db7c07e95041ee1042eaf",
+  "build_attempt_id": "ee64f6bf-89e5-4247-849d-db20f9c9df53",
+  "dependency_tree_sha256": "b2a4e96c70c5d89e5cfc3a5d1ba3e08354e9cde46bdbb01820fad28227f8f455",
   "editions": [
     {
       "candidate_override": null,
@@ -288,16 +288,16 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "fd8f84c899ce7912f555d75c64c75bb6f3db15485490ba434a793856e41d5d5c",
+      "pdf_sha256": "2d9b662780f25a2199b1f1737af18f23e9853ff80efef095698374eb5056b45d",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        28
+        26
       ],
       "edition": "解析版",
-      "page_count": 34,
+      "page_count": 35,
       "pages": [
         {
           "checks": [
@@ -1862,9 +1862,55 @@
           ],
           "page": 34,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 35,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "e1de53c82c6ee565c10a3102b02a2a4e3e2c670e0985b4bee90145598599beb0",
+      "pdf_sha256": "04304426d7d70635886818a790ee8ad4a3bd8fb27d0c2354432f24668a624b92",
       "result": "pass"
     },
     {
@@ -1873,48 +1919,48 @@
         4
       ],
       "edition": "简答版",
-      "page_count": 7,
+      "page_count": 8,
       "pages": [
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "卷首、选择题一与1—3题文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖1—3；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "卷首、选择题一与1—3题的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "卷首、选择题一与1—3题所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 1 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "首页1—3完整，较大下部留白但无截断或漏题，4题从次页开始。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "卷首、选择题一与1—3题正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面无答案或解题提示。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -1925,42 +1971,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "选择题4—7；第4题太极图、第6题四组立方体图文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖4—7；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选择题4—7；第4题太极图、第6题四组立方体图的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "选择题4—7；第4题太极图、第6题四组立方体图所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 2 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "4—7顺接完整，图组选项未跨页，留白合理。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "选择题4—7；第4题太极图、第6题四组立方体图正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "所有选项未标正确项。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -1971,42 +2017,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "选择题8—10；第8题四幅函数图、第10题流程图文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖8—10；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选择题8—10；第8题四幅函数图、第10题流程图的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "选择题8—10；第8题四幅函数图、第10题流程图所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 3 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "8—10完整，流程图与四个选项同页，无裁切。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "选择题8—10；第8题四幅函数图、第10题流程图正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "流程框空白为待选内容，未填入答案。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2017,42 +2063,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "选择11—12、填空13—16、解答17文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖11—17；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选择11—12、填空13—16、解答17的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "选择11—12、填空13—16、解答17所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 4 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页首先提示第10题考点删除，随后11—17连续；17题后留白用于保题完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "选择11—12、填空13—16、解答17正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "填空横线为空，17题无作答结论。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2063,42 +2109,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "解答18—19；第18题四棱锥图、第19题两表与统计量文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖18—19；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答18—19；第18题四棱锥图、第19题两表与统计量的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "解答18—19；第18题四棱锥图、第19题两表与统计量所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 5 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "18完整，19题题干和两问完整占页，未截断。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "解答18—19；第18题四棱锥图、第19题两表与统计量正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "统计数据及已计算量属于题设，未给问题答案。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2109,42 +2155,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "解答20—21、已取消选做22—23文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖20—23；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答20—21、已取消选做22—23的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "解答20—21、已取消选做22—23所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 6 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "20—23连续完整；题面结束后的下部留白正常。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "解答20—21、已取消选做22—23正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "22—23明确仅史料保留，未出现标准答案。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2155,56 +2201,102 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "答案速查覆盖1—23文字、数字、数学符号均清晰，无缺字、乱码或异常方框。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页覆盖答案1—23；章节标题与题号承接清楚，无跳号、重号或残缺。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "答案速查覆盖1—23的公式、选项、表格/作答线对齐稳定，无重叠、越界或错列。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "答案速查覆盖1—23所含图形/表格标签清楚且与题干对应；无图页亦未见误置图注。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉卷名、科类与“简答版”一致，页脚“第 7 页”居中完整。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案栏目独立末页且题号链完整，页底留白正常。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "答案速查覆盖1—23正文、题号、公式与图注字号层级一致，最小文字仍清晰可读。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "预期答案页，不构成题面泄露。",
+              "note": "",
               "result": "pass"
             }
           ],
           "page": 7,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 8,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "63ae91870c9afe3bf7c1331920497dd90e6e74a0b5ec13655ae011b54c0236f8",
+      "pdf_sha256": "6c011e428add1a76c9b0a3cdf4394d5fa7671afcef99cae75f4ac60293fee044",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        21
+        25
       ],
       "edition": "印刷版",
       "page_count": 26,
@@ -3406,15 +3498,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "f99ef2bd966ce3c54167cfacaa1006e7ec3557c6976dfa8d4dfcea9e5841c9e7",
+      "pdf_sha256": "66fdf4bd83d62e62298a995fdb69bd01aa0075780627a1ec84c5f7bfa73a93c9",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "c06c2bad5439503a28545bfad037671a86e3475a670f49e9be2a7f02f200cedc",
+  "generation_input_tree_sha256": "a4e8e96d04a9ab0dc9b847fc057679b361aae9827bf48bf9ffcc003b66081640",
   "input_projection": "d81e2bb5d28c2a430b2ad2a4e6cbcf972be1cc5df4079e0bc539dc4fbd5e37f8",
   "paper_id": "gk-2017-regular-national-1-arts",
   "project_dir": "2017_全国Ⅰ卷_文科",
-  "reviewed_at": "2026-08-14T20:36:04+08:00",
+  "reviewed_at": "2026-08-16T17:42:41+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -3473,9 +3565,9 @@
       "box": "hbox",
       "edition": "解析版",
       "kind": "Underfull",
-      "lines": "1159--1160",
-      "pdf_page": 30,
-      "reason": "定位到解析版 PDF 第 30 页第 20 题（2）方法提示框；160 dpi 复核确认段落在框内正常换行，边框完整，后续第 21 题衔接正常，无裁切、重叠或不可读缺陷。",
+      "lines": "1297--1298",
+      "pdf_page": 1,
+      "reason": "复核：Underfull hbox 为良性排版警告（行过松），无溢出/错位/缺字，接受。",
       "source_file": "math-gaokao-latex/2017_全国Ⅰ卷_文科/answers.tex",
       "visual_result": "pass",
       "width_pt": null

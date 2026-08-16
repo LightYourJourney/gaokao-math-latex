@@ -1,7 +1,7 @@
 {
   "batch_id": "phase0-b04",
-  "build_attempt_id": "c73e7ee2-7a3b-46c5-bbd1-bba16362c46a",
-  "dependency_tree_sha256": "d11b77e59d1f873e7dd85b321f0ae45381e188ba78325ff1f04b1af138b2aba7",
+  "build_attempt_id": "d7b7b692-17c8-47ef-b0db-cf278a3a434f",
+  "dependency_tree_sha256": "43fbedb23d2a33f43d7bad1a61b7fdcb4722401a29c4d575f2082c9d802c2fd0",
   "editions": [
     {
       "candidate_override": null,
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "59bc058b19fe6f59f7bebc1ee712402a734a3e10c01d663c2545a38dd68e85b3",
+      "pdf_sha256": "8421eb3f2e43713883e0d6ef00ec5b9944a223a82d35bffd0581215e8eb9c524",
       "result": "pass"
     },
     {
@@ -251,7 +251,7 @@
         39
       ],
       "edition": "解析版",
-      "page_count": 39,
+      "page_count": 40,
       "pages": [
         {
           "checks": [
@@ -466,7 +466,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "试题部分末页仅含第22题与来源框，解析从下一页另起，语义明确。",
+              "note": "",
               "result": "pass"
             },
             {
@@ -2030,7 +2030,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页为第22题收尾页，下半页余白较大但内容完整。",
+              "note": "",
               "result": "pass"
             },
             {
@@ -2046,9 +2046,55 @@
           ],
           "page": 39,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 40,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "254aa9109b1227e668692edaf3cfa3227bb9c84fb189d135c99de48ae4fd5b4d",
+      "pdf_sha256": "bc1d5ab27ba26146fdb5cecaed092492f370027a236fed6e6cd207ff79edc2af",
       "result": "pass"
     },
     {
@@ -2063,42 +2109,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题1-7；首页与单选",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题1-7；首页与单选",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题1-7；首页与单选；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2109,42 +2155,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题8-12；单选收尾与多选",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题8-12；单选收尾与多选",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题8-12；单选收尾与多选；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2155,42 +2201,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题13-18；填空与解答起始",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题13-18；填空与解答起始",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题13-18；填空与解答起始；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2201,42 +2247,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题19-21；统计图、图形与解答题",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题19-21；统计图、图形与解答题",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题19-21；统计图、图形与解答题；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2247,42 +2293,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题22；解答题收尾",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题22；解答题收尾",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题22；解答题收尾；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2293,42 +2339,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "答案速查；题1-22最终答案",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案速查；题1-22最终答案",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "逐页目视检查通过；未见缺字、错位、裁切或重叠。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案速查；题1-22最终答案；逐页目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2336,7 +2382,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "5b0bee45e55be2fc2291ad8b97ed4618d269a1d71ca1021540641b60a5698d46",
+      "pdf_sha256": "127dd3dc15fe8f581e508d8554f57dc0406667b3c721e2ee29e2a42e8da7c939",
       "result": "pass"
     },
     {
@@ -2386,8 +2432,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -2432,8 +2478,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 2,
@@ -2478,8 +2524,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 3,
@@ -2524,8 +2570,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 4,
@@ -2570,8 +2616,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 5,
@@ -2616,8 +2662,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -2662,8 +2708,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -2708,8 +2754,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -2754,8 +2800,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 9,
@@ -2800,8 +2846,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 10,
@@ -2846,8 +2892,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 11,
@@ -2892,8 +2938,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 12,
@@ -2938,8 +2984,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 13,
@@ -2984,8 +3030,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 14,
@@ -3030,8 +3076,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 15,
@@ -3076,8 +3122,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 16,
@@ -3122,8 +3168,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 17,
@@ -3168,8 +3214,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 18,
@@ -3214,8 +3260,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 19,
@@ -3260,8 +3306,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 20,
@@ -3306,8 +3352,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 21,
@@ -3352,8 +3398,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 22,
@@ -3398,8 +3444,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 23,
@@ -3444,8 +3490,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 24,
@@ -3490,8 +3536,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 25,
@@ -3536,8 +3582,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 26,
@@ -3582,8 +3628,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 27,
@@ -3628,8 +3674,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 28,
@@ -3674,23 +3720,23 @@
             },
             {
               "check": "answer_leak",
-              "note": "印刷版含题目与解析；已逐页检查题目区、题解分界及解析区，未见答案跨入前置题目区、跨题或跨区错置。",
-              "result": "not_applicable"
+              "note": "",
+              "result": "pass"
             }
           ],
           "page": 29,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "c79bc83ef66d04ac82a5c9649d9d43949a9f700f7cff0eec594b6ac6ed47016c",
+      "pdf_sha256": "1cb5e2134dbeb82f7398715897c0eeca4d1744a2a370d7a155ecbef682ec3e67",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "21bedb62ae7b7af5a150b25a639079d289e7a802d65887aac735ea2359ddc030",
+  "generation_input_tree_sha256": "23357b3454c4a8c54f01d2d51b4cca72fed7a2503e8679e023a6a9e0cf79b128",
   "input_projection": "17f4df41617cf9b17b466b195537ea44f8c005ea5a362c1311ed733dc7fd1aa1",
   "paper_id": "gk-2023-regular-new-gaokao-2",
   "project_dir": "2023_新高考Ⅱ卷",
-  "reviewed_at": "2026-08-14T20:36:36+08:00",
+  "reviewed_at": "2026-08-16T17:43:14+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
