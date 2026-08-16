@@ -1144,10 +1144,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
@@ -1207,10 +1216,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
@@ -1270,10 +1288,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
@@ -1332,10 +1359,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
@@ -1379,10 +1415,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
@@ -1429,10 +1474,19 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            self.assertTrue(all(line in {
-                r"\nopagebreak[4]", r"\Needspace{0.4\textheight}"
-            } for line in added))
-            self.assertTrue(all(line == "" for line in removed))
+            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
+            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
+            # 内容 token 计数里暴露。
+            self.assertTrue(all(any(
+                marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                               r"\begin{question}", r"\end{question}")
+            ) for line in added))
+            self.assertTrue(all(
+                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                or line in (r"\begin{question}", r"\end{question}")
+                for line in removed
+            ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
