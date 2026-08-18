@@ -9,8 +9,8 @@
 
 - 标题：1955 年·全国卷
 - 项目目录：`1955_全国卷`
-- 构建：`succeeded`（attempt `c4745254-e2ab-48c8-bdfb-ecfaefc25381`）
-- 审查：`passed`（2026-08-18T19:22:25+08:00）
+- 构建：`succeeded`（attempt `bdd5e037-4bb5-46da-9d46-ea28b67b2dab`）
+- 审查：`passed`（2026-08-18T20:11:49+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 1；解析版 5；简答版 2；印刷版 4
 - 警告豁免：0

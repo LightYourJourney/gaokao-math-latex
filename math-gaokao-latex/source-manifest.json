@@ -127,6 +127,14 @@
         "gk-1957-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-1959-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -136,7 +144,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5da761b5-bfa1-4a42-a24c-eaef12dd1082",
+  "last_transaction_id": "eb637f78-fda4-4f16-bcc7-17eae0d0b485",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1584,9 +1592,67 @@
       "title": "1957 年·全国卷",
       "track": "none",
       "year": 1957
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1959_全国卷/figures/f1959_t10_circle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1959_全国卷/figures/f1959_t6_volume.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1959_全国卷/figures/f1959_t8_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1959_gaokao_national",
+        "id": "gk-1959-regular-national",
+        "note": "1959 年全国统一招生考试数学卷；题三面积按原卷图像核定为 √3。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            7,
+            10
+          ],
+          "小题": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1959-regular-national",
+      "production_state": "complete",
+      "project_dir": "1959_全国卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1959/1959_数学真题_答案要点.md",
+        "combined_rendered": "1959/1959_数学真题_含解析.md",
+        "questions": "1959/1959_数学真题_试题.md",
+        "solution_body": "1959/1959_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-052020e9fb79cae0ad3e32705457a333a172021b6a1883d2fdf3799f50f565c9"
+      ],
+      "title": "1959 年·全国卷",
+      "track": "none",
+      "year": 1959
     }
   ],
-  "revision": 1025,
+  "revision": 1051,
   "schema_version": 1,
   "sources": [
     {
@@ -3019,8 +3085,8 @@
       "exam_type": "regular",
       "git_blob_oid": "397c5f84b18e4d748d5f012354877723f04dc1f3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1959-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1959.pdf",
       "regions": [],
       "source_id": "src-052020e9fb79cae0ad3e32705457a333a172021b6a1883d2fdf3799f50f565c9",

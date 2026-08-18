@@ -658,6 +658,17 @@ class ConversionInterfaceTests(unittest.TestCase):
             expected,
         )
 
+    def test_1959_source_figures_have_explicit_production_mappings(self):
+        expected = {
+            "1959-t6-体积": "f1959_t6_volume",
+            "1959-t8-三角形": "f1959_t8_triangle",
+            "1959-t10-圆": "f1959_t10_circle",
+        }
+        self.assertEqual(
+            {name: md2tex.FIGMAP[name] for name in expected},
+            expected,
+        )
+
 
 # ------------------------------------------------------------------ 环境边界：包裹规则
 
