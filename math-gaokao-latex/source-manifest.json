@@ -111,6 +111,14 @@
         "gk-1955-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b13",
+      "issues": [],
+      "paper_ids": [
+        "gk-1956-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -120,7 +128,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "59cf0623-e806-4dcc-80ca-44f76d46a381",
+  "last_transaction_id": "5837d3ea-cb48-4ede-956b-cda3e2d6e47a",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1443,9 +1451,72 @@
       "title": "1955 年·全国卷",
       "track": "none",
       "year": 1955
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 1,
+          "path": "1956_全国卷/figures/f1956_t3_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1956_全国卷/figures/f1956_t4_prism.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1956_全国卷/figures/f1956_t4_proof_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1956_gaokao_national",
+        "id": "gk-1956-regular-national",
+        "note": "1956 年全国统一招生考试数学卷；原卷按一甲至戊、二至五编号，题库统一映射为 1—10 题。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            6,
+            10
+          ],
+          "小题": [
+            1,
+            5
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [
+        "ISSUE-0107",
+        "ISSUE-0108",
+        "ISSUE-0109",
+        "ISSUE-0110"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1956-regular-national",
+      "production_state": "complete",
+      "project_dir": "1956_全国卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1956/1956_数学真题_答案要点.md",
+        "combined_rendered": "1956/1956_数学真题_含解析.md",
+        "questions": "1956/1956_数学真题_试题.md",
+        "solution_body": "1956/1956_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-319ccf56349ab812c21d6e9a8d4bf94e270af3b93bfd1e94e671dccfa8ada0d6"
+      ],
+      "title": "1956 年·全国卷",
+      "track": "none",
+      "year": 1956
     }
   ],
-  "revision": 970,
+  "revision": 1002,
   "schema_version": 1,
   "sources": [
     {
@@ -2542,8 +2613,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6d9cc417a44ecacff2e093e16383333d7b115300",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1956-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1956.pdf",
       "regions": [],
       "source_id": "src-319ccf56349ab812c21d6e9a8d4bf94e270af3b93bfd1e94e671dccfa8ada0d6",

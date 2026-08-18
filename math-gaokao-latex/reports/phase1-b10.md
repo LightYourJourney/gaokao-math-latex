@@ -9,8 +9,8 @@
 
 - 标题：1953 年·全国卷
 - 项目目录：`1953_全国卷`
-- 构建：`succeeded`（attempt `c0685752-a40a-4cf1-afff-9597b5fd125b`）
-- 审查：`passed`（2026-08-18T15:27:51+08:00）
+- 构建：`succeeded`（attempt `cfec4a9f-11d7-4a11-a9ed-366b61b3c6af`）
+- 审查：`passed`（2026-08-18T18:18:29+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 1；解析版 8；简答版 2；印刷版 6
 - 警告豁免：0

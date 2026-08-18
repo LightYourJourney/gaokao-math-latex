@@ -635,6 +635,17 @@ class ConversionInterfaceTests(unittest.TestCase):
         )
         self.assertIn("figures/覆盖名", result.text)
 
+    def test_1956_source_figures_have_explicit_production_mappings(self):
+        expected = {
+            "1956-t3-圆": "f1956_t3_circle",
+            "1956-t4-棱柱": "f1956_t4_prism",
+            "1956-t4-证明": "f1956_t4_proof_prism",
+        }
+        self.assertEqual(
+            {name: md2tex.FIGMAP[name] for name in expected},
+            expected,
+        )
+
 
 # ------------------------------------------------------------------ 环境边界：包裹规则
 
