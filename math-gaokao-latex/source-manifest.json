@@ -119,6 +119,14 @@
         "gk-1956-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b14",
+      "issues": [],
+      "paper_ids": [
+        "gk-1957-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -128,7 +136,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5837d3ea-cb48-4ede-956b-cda3e2d6e47a",
+  "last_transaction_id": "5da761b5-bfa1-4a42-a24c-eaef12dd1082",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1514,9 +1522,71 @@
       "title": "1956 年·全国卷",
       "track": "none",
       "year": 1956
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 1,
+          "path": "1957_全国卷/figures/f1957_t4_tetra.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1957_全国卷/figures/f1957_t5_parallel.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1957_全国卷/figures/f1957_t7_incircle.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1957_全国卷/figures/f1957_t8_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1957_gaokao_national",
+        "id": "gk-1957-regular-national",
+        "note": "1957 年全国统一招生考试数学卷；第 2 题答案页的 y 分母按独立回代改正为 6。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            6,
+            9
+          ],
+          "小题": [
+            1,
+            5
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1957-regular-national",
+      "production_state": "complete",
+      "project_dir": "1957_全国卷",
+      "question_count": 9,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1957/1957_数学真题_答案要点.md",
+        "combined_rendered": "1957/1957_数学真题_含解析.md",
+        "questions": "1957/1957_数学真题_试题.md",
+        "solution_body": "1957/1957_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-f4ff02e38b90eef860ccddb245cab00620651ae139c656e6f0a970824630e6bc"
+      ],
+      "title": "1957 年·全国卷",
+      "track": "none",
+      "year": 1957
     }
   ],
-  "revision": 1002,
+  "revision": 1025,
   "schema_version": 1,
   "sources": [
     {
@@ -2637,8 +2707,8 @@
       "exam_type": "regular",
       "git_blob_oid": "de731894aff4e74a6cd2048dcbefa00c8b9f2c3b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1957-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1957.pdf",
       "regions": [],
       "source_id": "src-f4ff02e38b90eef860ccddb245cab00620651ae139c656e6f0a970824630e6bc",

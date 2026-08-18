@@ -646,6 +646,18 @@ class ConversionInterfaceTests(unittest.TestCase):
             expected,
         )
 
+    def test_1957_source_figures_have_explicit_production_mappings(self):
+        expected = {
+            "1957-t4-四面体": "f1957_t4_tetra",
+            "1957-t5-平行平面": "f1957_t5_parallel",
+            "1957-t7-内切圆": "f1957_t7_incircle",
+            "1957-t8-圆": "f1957_t8_circle",
+        }
+        self.assertEqual(
+            {name: md2tex.FIGMAP[name] for name in expected},
+            expected,
+        )
+
 
 # ------------------------------------------------------------------ 环境边界：包裹规则
 
