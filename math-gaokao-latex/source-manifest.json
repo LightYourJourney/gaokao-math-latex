@@ -103,6 +103,14 @@
         "gk-1954-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-1955-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -112,7 +120,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d06a92d9-7b8b-409a-8201-8865d44e8e98",
+  "last_transaction_id": "59cf0623-e806-4dcc-80ca-44f76d46a381",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1390,9 +1398,54 @@
       "title": "1954 年·全国卷",
       "track": "none",
       "year": 1954
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1955_gaokao_national",
+        "id": "gk-1955-regular-national",
+        "note": "1955 年全国统一高考数学卷；上游文件名 1955.pdf，不分省市/文理",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            5,
+            8
+          ],
+          "小题": [
+            1,
+            4
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1955-regular-national",
+      "production_state": "complete",
+      "project_dir": "1955_全国卷",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1955/1955_数学真题_答案要点.md",
+        "combined_rendered": "1955/1955_数学真题_含解析.md",
+        "questions": "1955/1955_数学真题_试题.md",
+        "solution_body": "1955/1955_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-21fc21aa505b405e88ec8e16c17b73da566710b9c0020dfe2a3ad7ced5b7ed16"
+      ],
+      "title": "1955 年·全国卷",
+      "track": "none",
+      "year": 1955
     }
   ],
-  "revision": 963,
+  "revision": 970,
   "schema_version": 1,
   "sources": [
     {
@@ -2465,8 +2518,8 @@
       "exam_type": "regular",
       "git_blob_oid": "68f2ac37c1705ca07d9e4afc3fd74d8476f7d52d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1955-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1955.pdf",
       "regions": [],
       "source_id": "src-21fc21aa505b405e88ec8e16c17b73da566710b9c0020dfe2a3ad7ced5b7ed16",
