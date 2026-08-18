@@ -1,0 +1,380 @@
+% answers.tex —— 1960 年·全国卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1960/1960_数学真题_试题.md + 1960/1960_数学真题_解析正文.md + 1960/1960_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{一、小题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+（1）解方程
+\[
+\sqrt{2x^2-5}-\sqrt{5x-7}=0
+\]
+（限定在实数范围内）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+原方程要求两个根式都有意义。两边平方得
+\[
+2x^2-5=5x-7,
+\]
+即
+\[
+2x^2-5x+2=0,
+\qquad (2x-1)(x-2)=0.
+\]
+候选值为 $x=\dfrac12$ 或 $x=2$。代回原方程时，$x=\dfrac12$ 使 $2x^2-5<0$，不满足根式有意义的条件；$x=2$ 满足原方程。
+
+因此 $x=2$。
+
+\gkanswer{答案：$x=2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+（2）有 5 组篮球队，每组 6 队。首先每组中各队进行单循环比赛（即每两队比赛一次），然后各组的冠军再进行单循环比赛。问先后共比赛多少次？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+每组 6 队进行单循环比赛，比赛场数为
+\[
+\binom62=15.
+\]
+5 组共进行 $5\times15=75$ 场。5 个小组冠军再进行单循环比赛，场数为
+\[
+\binom52=10.
+\]
+所以总场数为
+\[
+75+10=85.
+\]
+
+\gkanswer{答案：共比赛 $85$ 次。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+（3）求证：等比数列的各项的对数组成等差数列。（这里所说的等比数列的各项都是正数。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设等比数列为
+\[
+a,\ aq,\ aq^2,\ \ldots,\ aq^{n-1},
+\]
+由于各项都是正数，$a>0$ 且 $q>0$。取同一底数的对数，得到
+\[
+\log a,\quad \log a+\log q,\quad \log a+2\log q,\quad\ldots,\quad
+\log a+(n-1)\log q.
+\]
+这正是首项为 $\log a$、公差为 $\log q$ 的等差数列，故命题得证。
+
+\gkanswer{答案：若等比数列各项为 $a,aq,aq^2,\ldots,aq^{n-1}$，则其对数为以 $\log a$ 为首项、$\log q$ 为公差的等差数列。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+（4）求使等式
+\[
+\sqrt{1-\sin^2\frac{x}{2}}=\cos\frac{x}{2}
+\]
+成立的 $x$ 值的范围。（$x$ 是 $0^\circ$ 到 $720^\circ$ 的角。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由算术平方根的定义，
+\[
+\sqrt{1-\sin^2\frac{x}{2}}=
+\sqrt{\cos^2\frac{x}{2}}=\left|\cos\frac{x}{2}\right|.
+\]
+原等式成立的充要条件是
+\[
+\cos\frac{x}{2}\ge0.
+\]
+当 $0^\circ\le x\le720^\circ$ 时，$0^\circ\le\dfrac{x}{2}\le360^\circ$，所以
+\[
+0^\circ\le\frac{x}{2}\le90^\circ
+\quad\text{或}\quad
+270^\circ\le\frac{x}{2}\le360^\circ.
+\]
+因此
+\[
+0^\circ\le x\le180^\circ
+\quad\text{或}\quad
+540^\circ\le x\le720^\circ.
+\]
+
+\gkanswer{答案：$0^\circ\le x\le180^\circ$ 或 $540^\circ\le x\le720^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+（5）如图，用钢珠测量机件上一个小孔的直径。所用钢珠的中心是 $O$，直径是 $12$ 毫米。将钢珠放在这个小孔上，测得钢珠上端 $D$ 到机件平面的距离 $CD$ 是 $9$ 毫米。求这个小孔的直径 $AB$ 的长。
+\nopagebreak[4]
+\begin{center}\input{figures/f1960_t5_ball}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设小孔直径 $AB=x$ 毫米，则 $AC=\dfrac{x}{2}$ 毫米。设钢珠直径的下端为 $E$，则 $DE=12$ 毫米，且
+\[
+CE=DE-CD=12-9=3\text{ 毫米}.
+\]
+由相交弦（或圆的幂）关系，
+\[
+AC^2=DC\cdot CE=9\times3.
+\]
+所以
+\[
+\left(\frac{x}{2}\right)^2=27,
+\qquad x^2=108,
+\qquad x=6\sqrt3,
+\]
+取正值。故小孔直径为 $6\sqrt3$ 毫米。
+
+\gkanswer{答案：小孔直径 $AB=6\sqrt3$ 毫米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+（6）四棱锥 $P$—$ABCD$ 的底面是一个正方形。$PA$ 与底面垂直。已知 $PA$ 是 $3$ 厘米，$P$ 点到 $BC$ 的距离是 $5$ 厘米。求 $PC$ 的长。
+\nopagebreak[4]
+\begin{center}\input{figures/f1960_t6_pyramid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+因为 $PA\perp$ 底面 $ABCD$，且底面为正方形，所以 $AB\perp BC$。于是 $PB\perp BC$，从而点 $P$ 到直线 $BC$ 的距离就是 $PB$，即
+\[
+PB=5\text{ 厘米}.
+\]
+在直角三角形 $PAB$ 中，$PA=3$、$PB=5$，故
+\[
+AB=\sqrt{PB^2-PA^2}=\sqrt{25-9}=4\text{ 厘米}.
+\]
+正方形的边长为 $BC=4$ 厘米。又 $PB\perp BC$，在直角三角形 $PBC$ 中
+\[
+PC=\sqrt{PB^2+BC^2}=\sqrt{5^2+4^2}=\sqrt{41}\text{ 厘米}.
+\]
+
+\gkanswer{答案：$PC=\sqrt{41}$ 厘米。}
+
+\end{answer}
+\gkpart{二、大题}
+
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+有一直圆柱，高是 $20$ 厘米，底面半径是 $5$ 厘米。它的一个内接长方体的体积是 $800$ 立方厘米。求这长方体的底面的长和宽。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设长方体底面的长和宽分别为 $x$ 厘米和 $y$ 厘米。底面矩形内接于半径为 $5$ 厘米的圆，其对角线为圆的直径 $10$ 厘米，所以
+\[
+x^2+y^2=10^2=100.
+\]
+由体积条件
+\[
+20xy=800,
+\qquad 2xy=80.
+\]
+于是
+\[
+(x+y)^2=x^2+y^2+2xy=180,
+\qquad x+y=6\sqrt5,
+\]
+其中取正值；并且
+\[
+(x-y)^2=x^2+y^2-2xy=20,
+\qquad x-y=\pm2\sqrt5.
+\]
+分别解两个一次方程组，得到
+\[
+(x,y)=(4\sqrt5,2\sqrt5)\quad\text{或}\quad(2\sqrt5,4\sqrt5).
+\]
+因此底面的长和宽分别为 $4\sqrt5$ 厘米和 $2\sqrt5$ 厘米（次序可互换）。
+
+\gkanswer{答案：长方体底面的长和宽分别为 $4\sqrt5$ 厘米和 $2\sqrt5$ 厘米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+从一船上看到在它的南 $30^\circ$ 东的海面上有一灯塔。船以 $30$ 里/小时的速度向正东南方向航行半小时后，看到这个灯塔在船的正西方。问这时船与灯塔的距离是多少？（精确到 $0.1$ 里。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\begin{center}\input{figures/f1960_t3_navigation}\end{center}
+\nopagebreak[4]
+设船原来的位置为 $A$，灯塔为 $B$，航行半小时后船的位置为 $C$。船速为 $30$ 里/小时，故
+\[
+AC=30\times\frac12=15\text{ 里}.
+\]
+由题意，$AB$ 的方向为南 $30^\circ$ 东，$AC$ 的方向为正东南，即南 $45^\circ$ 东；又灯塔在 $C$ 的正西方，所以 $BC$ 为东西方向。
+
+在直角坐标系中取东为横轴、北为纵轴。因 $B$、$C$ 的南向坐标相同，若 $AB=d$，则
+\[
+d\cos30^\circ=15\cos45^\circ,
+\]
+从而
+\[
+d=\frac{15\cos45^\circ}{\cos30^\circ}=5\sqrt6.
+\]
+由东西向坐标差，
+\[
+BC=15\sin45^\circ-5\sqrt6\sin30^\circ
+ =\frac{5(3\sqrt2-\sqrt6)}{2}\text{ 里}
+ \approx4.5\text{ 里}.
+\]
+所以这时船与灯塔的距离约为 $4.5$ 里。
+
+\gkanswer{答案：船与灯塔的距离约为 $4.5$ 里。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+要在墙上开一矩形的大玻璃窗，周长限定为 $6$ 米。
+
+（1）求以矩形的一条边长（$x$）表示窗户的面积（$y$）的函数式；
+
+（2）求这函数图象的顶点的坐标、对称轴的方程；
+
+（3）画出这函数的图象，并求出 $x$ 的允许值的范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+矩形周长为 $6$ 米。若一条边长为 $x$ 米，则另一条边长为 $3-x$ 米，因此面积为
+\[
+y=x(3-x)=-x^2+3x.
+\]
+配方得
+\[
+y=-\left(x-\frac32\right)^2+\frac94.
+\]
+所以函数图象的顶点为
+\[
+\left(\frac32,\frac94\right),
+\]
+对称轴为
+\[
+x=\frac32.
+\]
+矩形的两条边都必须为正，故
+\[
+0<x<3.
+\]
+图象是一条开口向下的抛物线，与 $x$ 轴交于 $(0,0)$ 和 $(3,0)$。
+\nopagebreak[4]
+\begin{center}\input{figures/f1960_t4_parabola}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：$y=-x^2+3x$；顶点为 $\left(\dfrac32,\dfrac94\right)$；对称轴为 $x=\dfrac32$；允许值范围为 $0<x<3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+下列（1）、（2）两题选作一题。
+
+（1）已知方程
+\[
+2x^2-4x\sin\theta+3\cos\theta=0
+\]
+的两个根相等，且 $\theta$ 为锐角，求 $\theta$ 和这个方程的两个根。
+
+（2）$a$ 是什么实数的时候，下列方程组的解是正数：
+\[
+\begin{cases}
+2x+ay=4,\\
+x+4y=8.
+\end{cases}
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+（1）两个根相等，故判别式为零：
+
+\[
+\Delta=(-4\sin\theta)^2-4\cdot2\cdot3\cos\theta=0.
+\]
+即
+\[
+2\sin^2\theta-3\cos\theta=0.
+\]
+令 $c=\cos\theta$，并用 $\sin^2\theta=1-c^2$，得到
+\[
+2c^2+3c-2=0,
+\qquad (2c-1)(c+2)=0.
+\]
+因 $\theta$ 为锐角，$c>0$，所以 $\cos\theta=\dfrac12$，从而
+\[
+\theta=60^\circ.
+\]
+重根为
+\[
+x=\frac{4\sin\theta}{2\cdot2}=\sin60^\circ=\frac{\sqrt3}{2}.
+\]
+
+（2）方程组为
+
+\[
+\begin{cases}
+2x+ay=4,\\
+x+4y=8.
+\end{cases}
+\]
+第二式乘以 $2$ 减去第一式，得
+\[
+(8-a)y=12.
+\]
+当 $a\ne8$ 时，
+\[
+y=\frac{12}{8-a}.
+\]
+代入第二式，得到
+\[
+x=\frac{8(2-a)}{8-a}.
+\]
+要使 $x,y$ 都为正，必须同时满足
+\[
+8-a>0,\qquad 2-a>0,
+\]
+故且仅故 $a<2$。
+
+\gkanswer{答案：选作（1）时，$\theta=60^\circ$，两个根都是 $\dfrac{\sqrt3}{2}$；选作（2）时，$a<2$。}
+
+\end{answer}

@@ -135,6 +135,14 @@
         "gk-1959-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b16",
+      "issues": [],
+      "paper_ids": [
+        "gk-1960-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -144,7 +152,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "eb637f78-fda4-4f16-bcc7-17eae0d0b485",
+  "last_transaction_id": "62072624-19e1-466f-8e56-69c549f490e0",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1650,9 +1658,71 @@
       "title": "1959 年·全国卷",
       "track": "none",
       "year": 1959
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 1,
+          "path": "1960_全国卷/figures/f1960_t3_navigation.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1960_全国卷/figures/f1960_t4_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1960_全国卷/figures/f1960_t5_ball.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1960_全国卷/figures/f1960_t6_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1960_gaokao_national",
+        "id": "gk-1960-regular-national",
+        "note": "1960 年全国统一招生考试数学卷；第五题为二选一，题库统一登记为第 10 题的两个选项。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            7,
+            10
+          ],
+          "小题": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1960-regular-national",
+      "production_state": "complete",
+      "project_dir": "1960_全国卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1960/1960_数学真题_答案要点.md",
+        "combined_rendered": "1960/1960_数学真题_含解析.md",
+        "questions": "1960/1960_数学真题_试题.md",
+        "solution_body": "1960/1960_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-2685dca6d94b2cd2fa2e9273f999c347e9017ad1dc06fc765abd596063a8c995"
+      ],
+      "title": "1960 年·全国卷",
+      "track": "none",
+      "year": 1960
     }
   ],
-  "revision": 1051,
+  "revision": 1071,
   "schema_version": 1,
   "sources": [
     {
@@ -3109,8 +3179,8 @@
       "exam_type": "regular",
       "git_blob_oid": "012daea28512a8a78b2f6913c5bafd0e1f658979",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1960-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1960.pdf",
       "regions": [],
       "source_id": "src-2685dca6d94b2cd2fa2e9273f999c347e9017ad1dc06fc765abd596063a8c995",
