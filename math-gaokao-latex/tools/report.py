@@ -176,7 +176,7 @@ def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
         OUTPUT_TARGETS[0]: "# 高考数学来源清单\n\n" + summary + "\n## 阶段 0 批次\n\n" + batches,
         OUTPUT_TARGETS[1]: "# 高考数学资料报告\n\n阶段 0 的机器事实如下。blocked 与 complete 分开统计。\n\n" + summary + "\n" + batches,
         OUTPUT_TARGETS[2]: "# 高考数学资料说明\n\n## 阶段 0 状态\n\n" + summary + "\n" + batches,
-        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 阶段 0 机器报告\n\n" + summary + "\n" + batches + "\n运行 `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 校验。\n",
+        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 阶段 0 机器报告\n\n" + summary + "\n" + batches + "\n来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。重建命令：\n\n```bash\npython3 tools/manifest_csv.py \\\n  --manifest source-manifest.json \\\n  --output manifest.csv \\\n  --write\n```\n\n运行 `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 校验。\n",
         OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 与阶段 0 的关系\n\n" + summary + "\n本目录是历史来源工程；当前 21 套 LaTeX 产出位于相邻的 `math-gaokao-latex/`。\n",
         OUTPUT_TARGETS[5]: "# 高考数学 LaTeX 阶段 0 基线\n\n" + summary + "\n## 六批终态\n\n" + batches,
     }

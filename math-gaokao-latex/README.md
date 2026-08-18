@@ -18,4 +18,13 @@
 | phase0-b05 | closed_with_blockers | FINALIZED | committed |
 | phase0-b06 | closed_with_blockers | FINALIZED | committed |
 
+来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。重建命令：
+
+```bash
+python3 tools/manifest_csv.py \
+  --manifest source-manifest.json \
+  --output manifest.csv \
+  --write
+```
+
 运行 `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 校验。

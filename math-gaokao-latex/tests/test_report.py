@@ -54,6 +54,12 @@ class ReportFactsTest(unittest.TestCase):
         self.assertTrue(all(value.endswith("\n") for value in outputs.values()))
         self.assertIn("775 = 734 + 41", outputs["math-gaokao-latex/reports/baseline.md"])
 
+    def test_readme_points_to_the_source_manifest_csv_projection(self):
+        outputs = report.render_outputs(self.facts)
+        readme = outputs["math-gaokao-latex/README.md"]
+        self.assertIn("manifest.csv", readme)
+        self.assertIn("manifest_csv.py", readme)
+
     def test_check_outputs_reports_drifted_targets(self):
         outputs = report.render_outputs(self.facts)
         with tempfile.TemporaryDirectory() as temporary:
