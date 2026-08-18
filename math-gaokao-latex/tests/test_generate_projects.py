@@ -8,6 +8,7 @@
 """
 import dataclasses
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -680,6 +681,32 @@ class ConversionInterfaceTests(unittest.TestCase):
             {name: md2tex.FIGMAP[name] for name in expected},
             expected,
         )
+
+    def test_1961_source_figures_have_explicit_production_mappings(self):
+        expected = {
+            "1961-t3-圆环": "f1961_t3_annulus",
+            "1961-t4-测高": "f1961_t4_mountain",
+            "1961-t5-排水管": "f1961_t5_segment",
+            "1961-t6-二面角": "f1961_t6_dihedral",
+        }
+        self.assertEqual(
+            {name: md2tex.FIGMAP[name] for name in expected},
+            expected,
+        )
+
+    def test_1961_live_answers_keep_cjk_punctuation_outside_math(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1961-regular-national"
+        )
+        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        answers = result.targets[
+            PROJECT_RELATIVE + "/1961_全国卷/answers.tex"
+        ].decode("utf-8")
+        math_blocks = re.findall(r"\\\[(.*?)\\\]", answers, flags=re.DOTALL)
+        self.assertTrue(math_blocks)
+        self.assertFalse(any(re.search(r"[。且]", block) for block in math_blocks))
 
 
 # ------------------------------------------------------------------ 环境边界：包裹规则

@@ -9,8 +9,8 @@
 
 - 标题：1960 年·全国卷
 - 项目目录：`1960_全国卷`
-- 构建：`succeeded`（attempt `44f54aeb-9104-440f-be67-b0e2ea17bd3c`）
-- 审查：`passed`（2026-08-18T21:37:05+08:00）
+- 构建：`succeeded`（attempt `140cbd88-0d8f-4cd4-8b49-3ceda24df8df`）
+- 审查：`passed`（2026-08-18T22:57:43+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 9；简答版 3；印刷版 7
 - 警告豁免：0

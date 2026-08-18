@@ -2025,3 +2025,40 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0111
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "db7d5217054f9d6763aa7ae2677ecd222f8a518b7a3c05e464cb909e04304773",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1961-regular-national",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0112
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "893d32e9fa5ff725700f7a85e4cb466f05a2993d62b01058f1c521451d5995e6",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1961-regular-national",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

@@ -1,0 +1,327 @@
+% answers.tex —— 1961 年·全国卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1961/1961_数学真题_试题.md + 1961/1961_数学真题_解析正文.md + 1961/1961_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{一、小题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+（1）求 $(2-x)^{10}$ 展开式里 $x^7$ 的系数。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+展开式一般项为
+\[
+\binom{10}{r}2^{10-r}(-x)^r.
+\]
+含 $x^7$ 的项取 $r=7$，所以其系数为
+\[
+\binom{10}{7}2^3(-1)^7
+=-\binom{10}{3}\cdot8
+=-960.
+\]
+
+\gkanswer{答案：$-960$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+（2）解方程：
+\[
+2\lg x=\lg(x+12)
+\]
+（注：$\lg$ 是以 10 为底的对数的符号。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由对数的定义，必须有 $x>0$，且
+\[
+2\lg x=\lg x^2=\lg(x+12).
+\]
+因此
+\[
+x^2=x+12,
+\qquad x^2-x-12=0,
+\qquad (x-4)(x+3)=0.
+\]
+候选值为 $x=4$ 或 $x=-3$。由于 $\lg x$ 要求 $x>0$，舍去 $-3$，故 $x=4$。
+
+\gkanswer{答案：$x=4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+（3）求函数
+\[
+y=\frac{\sqrt{x-1}}{x-5}
+\]
+的自变量 $x$ 的允许值的范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+根式有意义要求
+\[
+x-1\ge0,
+\qquad x\ge1.
+\]
+同时分母不能为零，故 $x-5\ne0$，即 $x\ne5$。所以允许值范围为 $x\ge1$ 且 $x\ne5$。
+
+\gkanswer{答案：$x\ge1$ 且 $x\ne5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+（4）求
+\[
+\sin\frac{\pi}{12}\sin\frac{5\pi}{12}
+\]
+的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+利用积化和差公式，
+\[
+\sin\frac\pi{12}\sin\frac{5\pi}{12}
+=\frac12\left(\cos\frac\pi3-\cos\frac\pi2\right)
+=\frac12\left(\frac12-0\right)=\frac14.
+\]
+
+\gkanswer{答案：$\dfrac14$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+（5）一个水平放着的圆柱形排水管，内半径是 $12$ 厘米。排水管的圆截面上被水淹没部分的弧含有 $150^\circ$（如图）。求这个截面上有水部分的面积。（取 $\pi=3.14$。）
+\nopagebreak[4]
+\begin{center}\input{figures/f1961_t5_segment}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设圆截面圆心为 $O$，半径 $r=12$ 厘米，水面弦为 $AB$，水面以下的圆弧 $ACB$ 所对圆心角为 $150^\circ$。扇形 $O$—$ACB$ 的圆心角为 $150^\circ$，弧长为
+\[
+12\times\frac{5\pi}{6}=10\pi.
+\]
+所以扇形面积为
+\[
+\frac12\times12\times10\pi=60\pi.
+\]
+三角形 $OAB$ 的面积为
+\[
+\frac12\times12^2\sin150^\circ=36.
+\]
+水淹没的弓形面积为
+\[
+60\pi-36=60\times3.14-36=152.4\text{ 平方厘米}.
+\]
+
+\gkanswer{答案：$152.4$ 平方厘米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+（6）已知 $\triangle ABC$ 的一边 $BC$ 在平面 $N$ 内，$\triangle ABC$ 所在的平面与平面 $N$ 组成二面角 $\alpha$（$\alpha<90^\circ$）。从 $A$ 点作平面 $N$ 的垂线 $AA'$，$A'$ 是垂足。设 $\triangle ABC$ 的面积是 $S$，求证 $\triangle A'BC$ 的面积是 $S\cos\alpha$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\begin{center}\input{figures/f1961_t6_dihedral}\end{center}
+\nopagebreak[4]
+作 $AD\perp BC$ 于 $D$，连接 $A'D$。由于 $A'$、$D$ 都在平面 $N$ 内且 $AD\perp BC$，$A'D$ 是 $AD$ 在平面 $N$ 上的射影，且 $A'D\perp BC$。二面角的平面角满足
+\[
+\angle ADA'=\alpha.
+\]
+在直角三角形 $AA'D$ 中，
+\[
+A'D=AD\cos\alpha.
+\]
+于是
+\[
+[\triangle A'BC]=\frac12BC\cdot A'D
+=\frac12BC\cdot AD\cos\alpha
+=[\triangle ABC]\cos\alpha
+=S\cos\alpha.
+\]
+
+\gkanswer{答案：$\triangle A'BC$ 的面积为 $S\cos\alpha$。}
+
+\end{answer}
+\gkpart{二、大题}
+
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+一个机器制造厂的三年生产计划，每年比上一年增产机器的台数相同。如果第三年比原计划多生产 1 千台，那么每年比上一年增长的百分数就相同，而且第三年生产的台数恰等于原计划三年生产总台数的一半。原计划每年各生产机器多少台？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+以千台为单位，设原计划第一、二、三年分别生产 $x$、$x+y$、$x+2y$ 千台。第三年实际生产 $x+2y+1$ 千台，增长百分数相同给出
+\[
+\frac{(x+y)-x}{x}
+=\frac{(x+2y+1)-(x+y)}{x+y}.
+\]
+又由第三年实际产量是原计划总产量的一半，
+\[
+x+2y+1=\frac12\bigl[x+(x+y)+(x+2y)\bigr].
+\]
+化简得
+\[
+y^2-x=0,
+\qquad x-y-2=0.
+\]
+解得 $(x,y)=(4,2)$ 或 $(1,-1)$。产量增长量取正值，舍去后一组，故三年产量为 $4$、$6$、$8$ 千台。
+
+\gkanswer{答案：原计划第一、二、三年各生产 $4$ 千台、$6$ 千台、$8$ 千台。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+有一块圆环形的铁皮，它的内半径是 $45$ 厘米，外半径是 $75$ 厘米。用它的五分之一（如图中的阴影部分），作圆台形水桶的侧面。这个水桶的容积是多少立方厘米？
+\nopagebreak[4]
+\begin{center}\input{figures/f1961_t3_annulus}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+圆环铁皮的五分之一卷成圆台侧面，因此圆台上、下底半径分别为
+\[
+R=\frac{75}{5}=15\text{ 厘米},
+\qquad r=\frac{45}{5}=9\text{ 厘米}.
+\]
+圆台的母线长为
+\[
+l=75-45=30\text{ 厘米}.
+\]
+圆台高为
+\[
+h=\sqrt{l^2-(R-r)^2}
+=\sqrt{30^2-6^2}=12\sqrt6\text{ 厘米}.
+\]
+所以容积为
+\[
+V=\frac13\pi h(R^2+Rr+r^2)
+=\frac13\pi\cdot12\sqrt6(15^2+15\cdot9+9^2)
+=1764\sqrt6\pi\text{ 立方厘米}.
+\]
+
+\gkanswer{答案：水桶的容积是 $1764\sqrt6\pi$ 立方厘米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+在平地上有 $A$、$B$ 两点。$A$ 在山的正东。$B$ 在山的东南，且在 $A$ 的西 $65^\circ$ 南 $300$ 米的地方。在 $A$ 测得山顶的仰角是 $30^\circ$，求山高。（$\sin70^\circ=0.940$，精确到 10 米。）
+\nopagebreak[4]
+\begin{center}\input{figures/f1961_t4_mountain}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设山脚为 $C$、山顶为 $D$。由方位条件，在三角形 $ABC$ 中
+\[
+\angle ACB=45^\circ,
+\qquad \angle CAB=65^\circ,
+\qquad \angle ABC=70^\circ,
+\qquad AB=300\text{ 米}.
+\]
+由正弦定理，
+\[
+AC=\frac{AB\sin70^\circ}{\sin45^\circ}
+=300\sqrt2\sin70^\circ\text{ 米}.
+\]
+在直角三角形 $ACD$ 中，仰角 $\angle CAD=30^\circ$，所以
+\[
+CD=AC\tan30^\circ
+=100\sqrt6\sin70^\circ
+\approx100\times2.45\times0.940
+\approx230\text{ 米}.
+\]
+因此山高约为 $230$ 米。
+
+\gkanswer{答案：山高约为 $230$ 米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+下面甲、乙两题，选作一题。
+
+甲、$k$ 是什么实数的时候，方程
+\[
+x^2-2(k+3)x+3k^2+1=0
+\]
+有实数根？
+
+乙、设方程
+\[
+8x^2-(8\sin\alpha)x+2+\cos2\alpha=0
+\]
+的两个根相等，求 $\alpha$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+甲：方程有实数根的充要条件是判别式不小于零：
+\[
+[-2(k+3)]^2-4(3k^2+1)\ge0.
+\]
+化简得
+\[
+-k^2+3k+4\ge0,
+\qquad (k+1)(k-4)\le0.
+\]
+因此
+\[
+-1\le k\le4.
+\]
+
+乙：两个根相等，故
+\[
+(8\sin\alpha)^2-4\cdot8(2+\cos2\alpha)=0.
+\]
+利用 $\cos2\alpha=1-2\sin^2\alpha$，得
+\[
+4\sin^2\alpha-3=0,
+\qquad \sin\alpha=\pm\frac{\sqrt3}{2}.
+\]
+所以通解为
+\[
+\alpha=n\pi\pm\frac\pi3,
+\qquad n\in\mathbb Z.
+\]
+
+\gkanswer{答案：甲项为 $-1\le k\le4$；乙项为 $\alpha=n\pi\pm\dfrac\pi3$（$n\in\mathbb Z$）。}
+
+\end{answer}

@@ -143,6 +143,14 @@
         "gk-1960-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b17",
+      "issues": [],
+      "paper_ids": [
+        "gk-1961-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -152,7 +160,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "62072624-19e1-466f-8e56-69c549f490e0",
+  "last_transaction_id": "eabc2f57-4618-42a3-a3da-120d404669b2",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1720,9 +1728,74 @@
       "title": "1960 年·全国卷",
       "track": "none",
       "year": 1960
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1961_全国卷/figures/f1961_t3_annulus.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1961_全国卷/figures/f1961_t4_mountain.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1961_全国卷/figures/f1961_t5_segment.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1961_全国卷/figures/f1961_t6_dihedral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1961_gaokao_national",
+        "id": "gk-1961-regular-national",
+        "note": "1961 年全国统一招生考试数学卷；第五部分为甲、乙二选一，题库统一登记为第 10 题的两个选项。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            7,
+            10
+          ],
+          "小题": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [
+        "ISSUE-0111",
+        "ISSUE-0112"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1961-regular-national",
+      "production_state": "complete",
+      "project_dir": "1961_全国卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1961/1961_数学真题_答案要点.md",
+        "combined_rendered": "1961/1961_数学真题_含解析.md",
+        "questions": "1961/1961_数学真题_试题.md",
+        "solution_body": "1961/1961_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-aa1feb837f71dc6a1379440bea31b1461a993ec13164b078ca416e4b02d0534b"
+      ],
+      "title": "1961 年·全国卷",
+      "track": "none",
+      "year": 1961
     }
   ],
-  "revision": 1071,
+  "revision": 1095,
   "schema_version": 1,
   "sources": [
     {
@@ -3203,8 +3276,8 @@
       "exam_type": "regular",
       "git_blob_oid": "59b161c7557de43c028b7aacf0d8a5745c201afa",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1961-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1961.pdf",
       "regions": [],
       "source_id": "src-aa1feb837f71dc6a1379440bea31b1461a993ec13164b078ca416e4b02d0534b",
