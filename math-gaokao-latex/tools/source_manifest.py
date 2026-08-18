@@ -1842,6 +1842,10 @@ def _figure_files(
     """
     if any(not str(name).endswith(".tex") for name in figure_names):
         raise ValueError(f"{project_dir}: figure 登记必须全部是 .tex")
+    # 无图卷（figure_files 为空）不要求 figures 目录存在：早期卷（如 1952）纯文字题，
+    # 没有任何配图，figures/ 目录根本不该被创建。
+    if not figure_names:
+        return []
     figure_dir = Path(repo_root) / PROJECT_RELATIVE / project_dir / "figures"
     try:
         actual = sorted(item.name for item in figure_dir.iterdir() if item.is_file())
