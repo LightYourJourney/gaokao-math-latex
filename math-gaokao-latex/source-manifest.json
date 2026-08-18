@@ -79,6 +79,14 @@
         "gk-2023-regular-national-a-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-1952-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -88,7 +96,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3c992fcb-0e48-48ba-980c-6315f33773cf",
+  "last_transaction_id": "0ada2de4-938e-4f0f-966b-e57f81cb3d50",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1231,9 +1239,54 @@
       "title": "2023 年·全国甲卷·文科",
       "track": "arts",
       "year": 2023
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1952_gaokao_national",
+        "id": "gk-1952-regular-national",
+        "note": "1952 年全国统一高考数学卷；上游文件名 1952.pdf，不分省市/文理",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            1,
+            20
+          ],
+          "解答题": [
+            21,
+            24
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1952-regular-national",
+      "production_state": "complete",
+      "project_dir": "1952_全国卷",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1952/1952_数学真题_答案要点.md",
+        "combined_rendered": "1952/1952_数学真题_含解析.md",
+        "questions": "1952/1952_数学真题_试题.md",
+        "solution_body": "1952/1952_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      ],
+      "title": "1952 年·全国卷",
+      "track": "none",
+      "year": 1952
     }
   ],
-  "revision": 935,
+  "revision": 949,
   "schema_version": 1,
   "sources": [
     {
@@ -2234,8 +2287,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1efdc96f3a958b3018b69635e85cf25ac4ae2d41",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1952-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1952.pdf",
       "regions": [],
       "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c",

@@ -1,0 +1,632 @@
+{
+  "batch_id": "phase1-b09",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-1952-regular-national",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "平方差公式两次：x⁴−y⁴=(x−y)(x+y)(x²+y²)，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "46b71bf2bb97d4b008ae37585b8e46ddc7c02843ef8cdf0af6f0a2906048193e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-1952-regular-national-q01",
+      "question_text_sha256": "54ccff2f08c3cb057a4fec41f29e38ab0b8f6e220cb3cb5f8be1ac73a9d078f8",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面 x⁴−y⁴ 与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "2log₁₀x=log₁₀x²，2x=x²（x>0）得 x=2，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "70dc170ba747e3c30bdd2ae9b706ea1c6238709133555bacfb4dcd99a9008816",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 2,
+      "question_id": "gk-1952-regular-national-q02",
+      "question_text_sha256": "2b42c7e29a4f3b724849c6855acf31c8e083b0f03c0275ce10b92aff4285c930",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面对数方程与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "韦达定理 c=1·(−1)+1·(1/2)+(−1)·(1/2)=−1，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c46dcaca3f2e6e3479ec0f7c9f5c246b1d0637c58a8bc47ba59966fc5f430aa5",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-1952-regular-national-q03",
+      "question_text_sha256": "079a05eb755d001cfc2aff0556214f205931eb504a124cee5565db300d287ed6",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面三次方程三根 1,−1,1/2 与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "√(x²+7)=4 ⇒ x²=9 ⇒ x=±3，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "47b97f1509b644aecbe4c27d21da38c14a9967cf5c0c7b9f8b65d34d75993f91",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-1952-regular-national-q04",
+      "question_text_sha256": "86ba5cd0498aa8a4c32611799b15cea8c0e64346e90c7f5a73af19c558ec0deb",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面 √(x²+7)−4=0 经原卷图像逐字核验；文本层曾误作 x²+7−4=0，按图像纠正。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "对角线展开 5+0+24−45−8−0=−24，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "77a79f88047d34549ff61d9a0f9d00e7718337675edff41176a3a4aeacfe8794",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-1952-regular-national-q05",
+      "question_text_sha256": "71b57fdf0302a3d901322bf9ce44d1221451eb81a7881c55956b77a90d7b243f",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "三阶行列式各元素 1,2,3/4,5,0/3,2,1 经原卷图像逐字核验。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "公共弦 2√(4²−2²)=4√3，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "0efd7b064c15e65c0faf608fe938c158ac79ed7de4bedaf748cf6e8c02358d02",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-1952-regular-national-q06",
+      "question_text_sha256": "b275ccda8f34678f6fe68258123e360c983ad9acfd01baeeb654111b00fb08a1",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面两圆公共弦与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "中位线相似比 1:2，面积比 1:4，60/4=15，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "ac29d8243a2b727d13e467977df565af88cee205880bb93877626f1e6e96ab55",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-1952-regular-national-q07",
+      "question_text_sha256": "9df57015d0cbc08de9c49a6fc7e7e935ee1d822e0efc84f8ea9862bfb2cae469",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面三角形中点面积与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "(10−2)·180°/10=144°，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "a12e0adfe4dc6011c0a225d34062396bd56d31c184f6617a7e440b85682e8615",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-1952-regular-national-q08",
+      "question_text_sha256": "73c796337a1b2e7561d7a47ca2d3c814b6cc71937df06312c5b5f52c15ecf1f3",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面正十边形内角与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "约率 22/7、密率 355/113、3.14159265，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "7992621127728455b0bf58c02404af1e31fec18143fbac5b837baa1b98b1f698",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-1952-regular-national-q09",
+      "question_text_sha256": "e6ca86fa3123672098934e922bacc02e8fd48afb6aae28570dd43d35476933f3",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面祖冲之圆周率与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "球面积 4πr² = 4×大圆面积，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "c094ffff11caac90dd8ddffaf0c93afd6a00ceed12a56130379b725f1289830d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-1952-regular-national-q10",
+      "question_text_sha256": "ecdf372e97caa3857b70ca2c7bbe61c046efecd89410cb8afc261a9626451bec",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面球面积与大圆面积与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "h=√(5²−3²)=4，V=π·9·4/3=12π，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "98a09e6344d48c0242b1432a584a17d914c0bc657a83f3206f89058ad7b67320",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 11,
+      "question_id": "gk-1952-regular-national-q11",
+      "question_text_sha256": "af9d912508674da5ff4729a138d0321a57e925055f34c266faab92f86c70e65c",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面圆锥体积（r=3，斜高5）与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "正多面体共五种，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "10114d932c18bc30a252721eda456d1a3edd5c955a4922d6df9fa5edeff88b21",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 12,
+      "question_id": "gk-1952-regular-national-q12",
+      "question_text_sha256": "62b842dc8dcbf765136053833903287a51e65d1ea8db6842a983ffdb23f8350e",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面正多面体种类与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "cos2θ=1−2/9=7/9，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "36391a17c2fdf0cd62cc266529ae6cdea7009dc4a285d1e6bbe087e2c1f710d3",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 13,
+      "question_id": "gk-1952-regular-national-q13",
+      "question_text_sha256": "005f4ab5f5e0b980a5905920acf0d9e1dd4fe6befd4de2a23253af43491c6a51",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面 sinθ=1/3 经原卷图像逐字核验。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "2x=nπ+π/4 ⇒ x=(nπ+π/4)/2，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "ebe6fcecb1cb3c12941fa13773ef21805113550abc202d61176c5df54272b8a7",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 14,
+      "question_id": "gk-1952-regular-national-q14",
+      "question_text_sha256": "437020fa1f669070d30447931a32c4e00c222843ab0ec9d85732665a4b07c115",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面 tan2x=1 通解与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "h=5tan30°=5√3/3，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "785c240d80ad72db5b8d7dd66a011ee4543351d1acd4989776e26139c3d144d6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 15,
+      "question_id": "gk-1952-regular-national-q15",
+      "question_text_sha256": "82af23ddfe1f1eb171d7442b4d5c0ec2c3782ab9d48d768af8a819a78a02f021",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面塔高（仰角30°，影长5丈）与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "S=(1/2)·3·4·sin30°=3，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "aa3b25e444a35aeb13d33d96ba367ea4a6da2098c79263719d5bf1f8ee78008a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 16,
+      "question_id": "gk-1952-regular-national-q16",
+      "question_text_sha256": "45cc7167a007bb664065d5ddec4cfb22d91dcbe2a56a191fc6ddfc30a924f3dc",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面三角形面积（b=3,c=4,A=30°）与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "y+3=−(x−2) ⇒ x+y+1=0，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "a931c9665a4fc11187425090175beed654882785cb7b080e08dc8a51c197be1a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 17,
+      "question_id": "gk-1952-regular-national-q17",
+      "question_text_sha256": "bb0969177f393f100ec13cf34708cb638531409a7af0797a7ebbcd8768a1f43b",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面直线方程（点(2,−3)，斜率−1）与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "r²=3²+4²=25 ⇒ x²+y²−6x−8y=0，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "83fd3b4088f851c4469979a2a8679d52d6275fd99320008287c04e1bb9cbc928",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 18,
+      "question_id": "gk-1952-regular-national-q18",
+      "question_text_sha256": "2f06c96e08b282540a230afef4f048241e853925dadaa047db70431ea632fbfd",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面圆方程（圆心(3,4)，过原点）与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "|0+0+1|/√(9+16)=1/5，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "7696a27871946e0c9711c769f3683180eb049a158cee24ce5757738353351776",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 19,
+      "question_id": "gk-1952-regular-national-q19",
+      "question_text_sha256": "fdba283a6be9dff0f442abeb9fabe0c97c4c2b9da1ac872ac9c6c379abd31b56",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面点到直线距离与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "(y+3)²=8(x−1) ⇒ 顶点(1,−3)，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "f181bbf00c8a4146d9f4baf36e42106ace6742adb6caaeb6e18bb27dba0937d6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 20,
+      "question_id": "gk-1952-regular-national-q20",
+      "question_text_sha256": "f24cfa0636fc53c11af2b18f6b1fd7fdebaafebb939b3ff557cda1556403b5e1",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面抛物线 y²−8x+6y+17=0 顶点与 PDF 第1页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "(x−2)(x+6)(x²+x+1)=0 ⇒ 2,−6,ω,ω²，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "ed998882223b8931b20a46fc0b91ba7d17dff81e93bf402f57ec884d90618f3a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 21,
+      "question_id": "gk-1952-regular-national-q21",
+      "question_text_sha256": "2ac73265e1800ea168ea1be214ac5ff084fe97e392c5c2ddff1980bfc7f87576",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面四次方程 x⁴+5x³−7x²−8x−12=0 与 PDF 第2页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "内外角平分线垂直 ⇒ D、E 对径 ⇒ D 平分含 A 的 BC 弧 ⇒ BD=CD。",
+        "grade": "A"
+      },
+      "answer_sha256": "423074fe3bae3458b45fe39d3669260699faca0d5e2b9a02752b0d5f22174617",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 22,
+      "question_id": "gk-1952-regular-national-q22",
+      "question_text_sha256": "52ed61937f0c705cc20e1ed43c1016708da2e1f30fe858a8443a069e265f4787",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面「∠A 的外分角线」按原卷逐字保留；外分角线即外角平分线。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "cosC=5/40=1/8；sinC=3√7/8，sinB=5√7/16，sinA=√7/4；cosC>0 故皆锐角，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "a19664695f419a3a8f07655342c979b25234b7d8d26fe837b197f12973f7a054",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 23,
+      "question_id": "gk-1952-regular-national-q23",
+      "question_text_sha256": "9bfbb7b149b60a5b4fa5aa4cd25fdd95627ff91747b7fefd2164bdc8cf3faa12",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面 a=4,b=5,c=6 及三小问与 PDF 第2页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "u=1/a²,v=1/b² ⇒ a²=55/7,b²=55/3；长轴 2√165/3，短轴 2√385/7，c=2√1155/21，与答案页一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "525d89d56b7270539e3087b13b8d84973edc0b76b0a506a4c4c4a44d4744ba92",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 24,
+      "question_id": "gk-1952-regular-national-q24",
+      "question_text_sha256": "4f763bcc5ac6efe6fbf57a43a00d113d384337f48c9442ec3d769a460f97d247",
+      "reviewer_role": "phase1-b09-answer-blind-reviewer-gpt-5-6-sol",
+      "solver_role": "phase1-b09-answer-solver-gpt-5.6-sol",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c"
+      },
+      "source_sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "transcription_review": {
+        "evidence": "题面椭圆过(2,3)、(−1,4)与 PDF 第2页一致。",
+        "result": "passed",
+        "role": "phase1-b09-question-review-codex-gpt-5-6-sol"
+      }
+    }
+  ],
+  "schema_version": 1
+}
