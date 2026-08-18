@@ -87,6 +87,14 @@
         "gk-1952-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b10",
+      "issues": [],
+      "paper_ids": [
+        "gk-1953-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -96,7 +104,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0ada2de4-938e-4f0f-966b-e57f81cb3d50",
+  "last_transaction_id": "3288a3f1-e6f6-4e3c-acbe-ac4140016fec",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1284,9 +1292,54 @@
       "title": "1952 年·全国卷",
       "track": "none",
       "year": 1952
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1953_gaokao_national",
+        "id": "gk-1953-regular-national",
+        "note": "1953 年全国统一高考数学卷；上游文件名 1953.pdf，不分省市/文理",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            11,
+            14
+          ],
+          "小题": [
+            1,
+            10
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1953-regular-national",
+      "production_state": "complete",
+      "project_dir": "1953_全国卷",
+      "question_count": 14,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1953/1953_数学真题_答案要点.md",
+        "combined_rendered": "1953/1953_数学真题_含解析.md",
+        "questions": "1953/1953_数学真题_试题.md",
+        "solution_body": "1953/1953_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-9c032feec373e6ccafeaa7782b360db00721fcae0d62b6f7540e2f3dbc04b205"
+      ],
+      "title": "1953 年·全国卷",
+      "track": "none",
+      "year": 1953
     }
   ],
-  "revision": 949,
+  "revision": 956,
   "schema_version": 1,
   "sources": [
     {
@@ -2311,8 +2364,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1b6860c34f49a58a0d1433b35f1b26c2bba2af7b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1953-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1953.pdf",
       "regions": [],
       "source_id": "src-9c032feec373e6ccafeaa7782b360db00721fcae0d62b6f7540e2f3dbc04b205",
