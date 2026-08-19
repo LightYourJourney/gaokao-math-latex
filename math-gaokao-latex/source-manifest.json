@@ -159,6 +159,14 @@
         "gk-1962-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b19",
+      "issues": [],
+      "paper_ids": [
+        "gk-1958-regular-hebei"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -168,7 +176,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e6961c42-e0c2-4ac5-b050-bbba8b0424e1",
+  "last_transaction_id": "8d5a5c0b-a312-46ff-9c53-82a8994b829d",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1867,9 +1875,54 @@
       "title": "1962 年·全国卷",
       "track": "none",
       "year": 1962
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1958_gaokao_hebei",
+        "id": "gk-1958-regular-hebei",
+        "note": "1958 年河北省高等学校招生考试数学卷；上游文件名 1958河北.pdf，不分文理",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "河北卷",
+        "structure": {
+          "大题": [
+            5,
+            8
+          ],
+          "小题": [
+            1,
+            4
+          ]
+        },
+        "track": "不分文理",
+        "variant": "河北"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1958-regular-hebei",
+      "production_state": "compiled",
+      "project_dir": "1958_河北",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1958/1958_河北_数学真题_答案要点.md",
+        "combined_rendered": "1958/1958_河北_数学真题_含解析.md",
+        "questions": "1958/1958_河北_数学真题_试题.md",
+        "solution_body": "1958/1958_河北_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-c2cfd9e5c627563a913cd70dcc1304b8cece090175ecffe69f4b3331d9da6b65"
+      ],
+      "title": "1958 年·河北卷",
+      "track": "none",
+      "year": 1958
     }
   ],
-  "revision": 1132,
+  "revision": 1138,
   "schema_version": 1,
   "sources": [
     {
@@ -3206,8 +3259,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f35492ba330da79d06f1eaec286e83d175226566",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1958-regular-hebei",
+      "paper_relation": "canonical",
       "raw_paper_name": "1958河北.pdf",
       "regions": [],
       "source_id": "src-c2cfd9e5c627563a913cd70dcc1304b8cece090175ecffe69f4b3331d9da6b65",
