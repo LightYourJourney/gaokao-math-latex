@@ -105,6 +105,11 @@ FIGMAP = {
     "1961-t4-测高": "f1961_t4_mountain",
     "1961-t5-排水管": "f1961_t5_segment",
     "1961-t6-二面角": "f1961_t6_dihedral",
+    "1962-t5-内接矩形": "f1962_t5_rectangle",
+    "1962-t5-外切菱形": "f1962_t5_tangent_rhombus",
+    "1962-t7-正方形": "f1962_t7_square",
+    "1962-t8-三角形": "f1962_t8_triangle",
+    "1962-t9-正方体": "f1962_t9_cube",
 }
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"
