@@ -1,0 +1,13 @@
+% 1964 全国卷第 8 题：正方形内两圆（矢量重绘）
+\begin{tikzpicture}[scale=0.8]
+  \draw (0,0) rectangle (4,4);
+  \node[below left] at (0,0) {$A$};
+  \node[below right] at (4,0) {$B$};
+  \node[above right] at (4,4) {$C$};
+  \node[above left] at (0,4) {$D$};
+  \draw (1,1) circle (1);
+  \draw (2.657,2.657) circle (1.343);
+  \fill (1,1) circle (1.2pt) node[below left] {$O$};
+  \fill (2.657,2.657) circle (1.2pt) node[above right] {$O'$};
+  \draw[dashed] (1,1) -- (2.657,2.657);
+\end{tikzpicture}

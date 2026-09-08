@@ -175,6 +175,14 @@
         "gk-1963-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b21",
+      "issues": [],
+      "paper_ids": [
+        "gk-1964-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -184,7 +192,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3c27b62c-2edc-463b-8ec8-a0fb29249e9c",
+  "last_transaction_id": "b3a01ce6-e6b6-458a-ac96-ce9619fb1446",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2004,9 +2012,97 @@
       "title": "1963 年·全国卷",
       "track": "none",
       "year": 1963
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_extra_cube.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_extra_rectangle.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_t2_river.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_t3_roots.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1964_全国卷/figures/f1964_t6_sector.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_t7_projection.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_t8_max.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1964_全国卷/figures/f1964_t8_min.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1964_全国卷/figures/f1964_t8_square.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1964_gaokao_national",
+        "id": "gk-1964-regular-national",
+        "note": "固定 PDF 第 1 页为 8 道正式题并列附加题；答案与解析在第 2—9 页。源 PDF 未载总分、时长及逐题分值，附加题不计入正式题量。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": [
+          2,
+          9
+        ],
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            5,
+            8
+          ],
+          "小题": [
+            1,
+            4
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1964-regular-national",
+      "production_state": "complete",
+      "project_dir": "1964_全国卷",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1964/1964_数学真题_答案要点.md",
+        "combined_rendered": "1964/1964_数学真题_含解析.md",
+        "questions": "1964/1964_数学真题_试题.md",
+        "solution_body": "1964/1964_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-611e7d11c37aac8e9e432c624795f4c3b9a9b728c28840f8192f3d4325f78a2a"
+      ],
+      "title": "1964 年·全国卷",
+      "track": "none",
+      "year": 1964
     }
   ],
-  "revision": 1241,
+  "revision": 1271,
   "schema_version": 1,
   "sources": [
     {
@@ -3559,8 +3655,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e58111875b85656461397401b3abc9231dbde4c8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1964-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1964.pdf",
       "regions": [],
       "source_id": "src-611e7d11c37aac8e9e432c624795f4c3b9a9b728c28840f8192f3d4325f78a2a",

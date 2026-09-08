@@ -115,6 +115,15 @@ FIGMAP = {
     "1963-t4-dihedral": "f1963_t4_dihedral",
     "1963-t9-circle": "f1963_t9_circle",
     "1963-t10-cone": "f1963_t10_cone",
+    "1964-t2-river": "f1964_t2_river",
+    "1964-t3-roots": "f1964_t3_roots",
+    "1964-t6-sector": "f1964_t6_sector",
+    "1964-t7-projection": "f1964_t7_projection",
+    "1964-t8-square": "f1964_t8_square",
+    "1964-t8-min": "f1964_t8_min",
+    "1964-t8-max": "f1964_t8_max",
+    "1964-extra-rectangle": "f1964_extra_rectangle",
+    "1964-extra-cube": "f1964_extra_cube",
 }
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"

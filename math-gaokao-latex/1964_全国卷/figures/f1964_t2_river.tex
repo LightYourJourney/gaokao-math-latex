@@ -1,0 +1,20 @@
+% 1964 全国卷第 2 题：河岸测距示意图（矢量重绘）
+\begin{tikzpicture}[>=stealth,scale=0.82]
+  \draw[->] (-3.2,0) -- (3.2,0) node[below right]{河岸};
+  \draw[->] (0,-0.15) -- (0,3.25) node[above]{正北};
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (0,2.65);
+  \coordinate (A) at (2.05,0);
+  \coordinate (B) at (-1.25,0);
+  \draw[dashed] (B) -- (P) (A) -- (P);
+  \draw (B) -- (P) (A) -- (P);
+  \fill (O) circle (1.5pt) node[below left] {$O$};
+  \fill (P) circle (1.5pt) node[above right] {$P$};
+  \fill (A) circle (1.5pt) node[below] {$A$};
+  \fill (B) circle (1.5pt) node[below] {$B$};
+  \draw[<->] (0,-0.38) -- (1.98,-0.38) node[midway,below] {$x+10a$};
+  \draw[<->] (-1.18,-0.67) -- (0,-0.67) node[midway,below] {$x$};
+  \draw[<->] (0.22,0.05) -- (0.22,2.58) node[midway,right] {$h$};
+  \node at (1.38,1.70) {$\alpha$};
+  \node at (-0.73,1.28) {$\beta$};
+\end{tikzpicture}
