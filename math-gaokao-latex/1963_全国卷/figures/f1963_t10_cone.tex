@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=0.82,>=Stealth]
+  \coordinate (V) at (0,4.5);
+  \coordinate (B) at (-1.35,0);
+  \coordinate (A) at (0,0);
+  \coordinate (O) at (0,1);
+  \coordinate (C) at (-0.49,1.64);
+  \draw[thick] (V) -- (B) -- (A) -- cycle;
+  \draw[dashed] (V) -- (A);
+  \draw (O) circle (1);
+  \draw[dashed] (-1.35,0) arc (180:360:1.35 and 0.28);
+  \draw (B) arc (180:360:1.35 and 0.28);
+  \draw[thick] (O) -- (A);
+  \draw[thick] (O) -- (C);
+  \draw pic[draw,angle radius=0.35cm,"$2\theta$" {shift={(0.08,0.12)}}]
+    {angle=A--B--V};
+  \fill (V) circle (1.3pt) node[above] {$V$};
+  \fill (B) circle (1.3pt) node[below left] {$B$};
+  \fill (A) circle (1.3pt) node[below right] {$A$};
+  \fill (O) circle (1.3pt) node[right] {$O$};
+  \fill (C) circle (1.3pt) node[left] {$C$};
+\end{tikzpicture}

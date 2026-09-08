@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=1.45,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (C) at (-1.7,0);
+  \coordinate (A) at (-0.72,0);
+  \coordinate (B) at (0.72,0);
+  \coordinate (D) at (1.7,0);
+  \coordinate (E) at (-0.588,0.809);
+  \coordinate (F) at (0.588,-0.809);
+  \draw (O) circle (1);
+  \draw[thick] (C) -- (D);
+  \draw[thick] (C) -- (E);
+  \draw[thick] (D) -- (F);
+  \draw[dashed] (O) -- (E) (O) -- (F);
+  \fill (O) circle (1.2pt) node[below] {$O$};
+  \fill (A) circle (1.2pt) node[above] {$A$};
+  \fill (B) circle (1.2pt) node[above] {$B$};
+  \fill (C) circle (1.2pt) node[below left] {$C$};
+  \fill (D) circle (1.2pt) node[below right] {$D$};
+  \fill (E) circle (1.2pt) node[above left] {$E$};
+  \fill (F) circle (1.2pt) node[below right] {$F$};
+\end{tikzpicture}

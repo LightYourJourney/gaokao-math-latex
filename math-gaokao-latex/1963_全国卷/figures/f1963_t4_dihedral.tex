@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth]
+  % 两个面的示意投影与公共棱 AB
+  \fill[gray!10] (0,0) -- (4,0) -- (5,1.1) -- (1,1.1) -- cycle;
+  \fill[gray!18] (0,0) -- (1,1.1) -- (2.2,3.2) -- (1.2,2.1) -- cycle;
+  \draw (0,0) -- (4,0) -- (5,1.1) -- (1,1.1) -- cycle;
+  \draw (0,0) -- (1,1.1) -- (2.2,3.2) -- (1.2,2.1) -- cycle;
+  \draw[very thick] (0,0) -- (1,1.1) node[midway,below left] {$AB$};
+  \coordinate (P) at (2.1,1.7);
+  \coordinate (C) at (1.25,1.1);
+  \coordinate (D) at (2.1,2.55);
+  \draw[thick] (P) -- (C) node[midway,below] {$PC$};
+  \draw[thick] (P) -- (D) node[midway,right] {$PD$};
+  \fill (P) circle (1.4pt) node[above right] {$P$};
+  \fill (C) circle (1.2pt) node[below right] {$C$};
+  \fill (D) circle (1.2pt) node[above right] {$D$};
+  \node at (3.5,0.45) {$M$};
+  \node at (1.55,2.85) {$N$};
+\end{tikzpicture}

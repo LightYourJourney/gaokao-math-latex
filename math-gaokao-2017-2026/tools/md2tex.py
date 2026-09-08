@@ -110,6 +110,11 @@ FIGMAP = {
     "1962-t7-正方形": "f1962_t7_square",
     "1962-t8-三角形": "f1962_t8_triangle",
     "1962-t9-正方体": "f1962_t9_cube",
+    "1963-t2-complex": "f1963_t2_complex",
+    "1963-t3-semicircle": "f1963_t3_semicircle",
+    "1963-t4-dihedral": "f1963_t4_dihedral",
+    "1963-t9-circle": "f1963_t9_circle",
+    "1963-t10-cone": "f1963_t10_cone",
 }
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"

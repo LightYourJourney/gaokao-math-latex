@@ -167,6 +167,14 @@
         "gk-1958-regular-hebei"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b20",
+      "issues": [],
+      "paper_ids": [
+        "gk-1963-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -176,7 +184,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cd5deb69-6298-4d22-931f-82cc2af55e62",
+  "last_transaction_id": "0e576457-03d2-4371-ab04-f8a5ab645e74",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1920,9 +1928,81 @@
       "title": "1958 年·河北卷",
       "track": "none",
       "year": 1958
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1963_全国卷/figures/f1963_t10_cone.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1963_全国卷/figures/f1963_t2_complex.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1963_全国卷/figures/f1963_t3_semicircle.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1963_全国卷/figures/f1963_t4_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1963_全国卷/figures/f1963_t9_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1963_gaokao_national",
+        "id": "gk-1963-regular-national",
+        "note": "固定 PDF 内页只标作“1963 年试题”；试题第 1—2 页，答案与解析第 2—8 页，未载总分、时长及逐题分值。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          2,
+          8
+        ],
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            6,
+            10
+          ],
+          "小题": [
+            1,
+            5
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1963-regular-national",
+      "production_state": "complete",
+      "project_dir": "1963_全国卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1963/1963_数学真题_答案要点.md",
+        "combined_rendered": "1963/1963_数学真题_含解析.md",
+        "questions": "1963/1963_数学真题_试题.md",
+        "solution_body": "1963/1963_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-02c0ce5d36bfb4b1009d55650fa4907396f6b28190edc9bd988ff8f041283b99"
+      ],
+      "title": "1963 年·全国卷",
+      "track": "none",
+      "year": 1963
     }
   ],
-  "revision": 1194,
+  "revision": 1204,
   "schema_version": 1,
   "sources": [
     {
@@ -3451,8 +3531,8 @@
       "exam_type": "regular",
       "git_blob_oid": "412ab7d0b52fe2c671d7cbd29d221b9467c5c502",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1963-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1963.pdf",
       "regions": [],
       "source_id": "src-02c0ce5d36bfb4b1009d55650fa4907396f6b28190edc9bd988ff8f041283b99",
