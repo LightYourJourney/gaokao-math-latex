@@ -343,7 +343,7 @@ class AnswerBoxXeLaTeXRegressionTests(unittest.TestCase):
             root = Path(temporary)
             source = root / "answer-box.tex"
             source.write_text(
-                "\\documentclass[zihao=-4,a4paper]{ctexart}\n"
+                "\\documentclass[zihao=-4,a4paper,fontset=fandol]{ctexart}\n"
                 "\\usepackage[margin=2.2cm]{geometry}\n"
                 "\\usepackage{amsmath,amssymb,mathtools}\n"
                 "\\usepackage[most]{tcolorbox}\n"
@@ -386,7 +386,7 @@ class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
                 "\\rule{4cm}{2.2cm}\\par FIGUREMARK\n", encoding="utf-8"
             )
             (root / "pagination.tex").write_text(
-                "\\documentclass[zihao=-4]{ctexart}\n"
+                "\\documentclass[zihao=-4,fontset=fandol]{ctexart}\n"
                 "\\usepackage[paperwidth=18cm,paperheight=16cm,margin=1cm]{geometry}\n"
                 "\\usepackage{tasks,needspace}\n"
                 "\\NewTasksEnvironment[style=itemize]{gkopts}[\\task](4)\n"
@@ -448,6 +448,16 @@ class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
         self.assertGreater(len(used), 1)
         self.assertTrue(any("OPTIONMARK" in page for page in used))
 
+    def test_short_question_near_page_bottom_stays_with_previous_content(self):
+        pages = self.compile_question(
+            "**8．** STEMMARK 一道只有两行的短题（　　）\n\n"
+            "  A．OPTIONMARK 1　　B．2　　C．3　　D．4\n",
+            fill="11.8cm",
+        )
+        filler_page = next(page for page in pages if "FILLER" in page)
+        self.assertIn("STEMMARK", filler_page)
+        self.assertIn("OPTIONMARK", filler_page)
+
 
 class ProductionPreambleNeedspaceTests(unittest.TestCase):
     def test_production_preamble_compiles_generated_needspace(self):
@@ -466,7 +476,7 @@ class ProductionPreambleNeedspaceTests(unittest.TestCase):
                 "\\rule{2cm}{1cm}\n", encoding="utf-8"
             )
             (root / "preamble-integration.tex").write_text(
-                "\\documentclass[zihao=-4,a4paper]{ctexart}\n"
+                "\\documentclass[zihao=-4,a4paper,fontset=fandol]{ctexart}\n"
                 f"\\input{{{preamble}}}\n"
                 "\\newcommand{\\gkti}[1]{\\par\\noindent\\textbf{#1．}}\n"
                 "\\begin{document}\n" + generated + "\\end{document}\n",

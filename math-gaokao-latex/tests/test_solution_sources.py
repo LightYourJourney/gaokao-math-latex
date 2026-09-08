@@ -399,6 +399,19 @@ class ExtractSolutionBlocksTests(unittest.TestCase):
             "#### (2) 第二问\n\n再推导。\n",
         )
 
+    def test_preserves_a_leading_layout_directive_before_solution_marker(self):
+        combined = (
+            "### 第 1 题（程序框图）\n\n"
+            r"\Needspace{0.25\textheight}"
+            "\n\n**解析**\n\n由图可知。\n"
+        )
+        body = extract_solution_blocks(combined)
+        self.assertIn(r"\Needspace{0.25\textheight}", body)
+        self.assertLess(
+            body.index(r"\Needspace{0.25\textheight}"),
+            body.index("**解析**"),
+        )
+
     def test_keeps_a_marker_variant_instead_of_stacking_a_bare_one(self):
         # 真题形态（b01 12 题、全库 19 处）：`**解析**（同[理科卷第 1 题](…)）` 本身
         # 就是解析标记，只是带了条互见注。精确相等的判据认不出它，于是又插一个裸

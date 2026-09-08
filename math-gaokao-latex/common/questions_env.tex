@@ -11,11 +11,11 @@
 %   2. 为将来的条件编译留钩子——某版本可重定义环境实现按题取舍。
 % ============================================================
 
-% 环境不把整题装盒：题目仍可自然跨页，只在题头处要求保留极少空间，
-% 仅避免题号/解析标题恰好成为页尾孤行（第一行与后续内容完全分离）。
-% 保留量必须小：\Needspace{8\baselineskip} 会把最后一题整题推到新页，
-% 在上一页底留下大面积空白，反而制造孤页（见历史卷 review 的
-% pagination_whitespace fail）。2 个 baseline 足以让题头 + 首行同行，
-% 又不会在「只剩几行」时强制换页。
-\newenvironment{question}{\Needspace{2\baselineskip}}{}
-\newenvironment{answer}{\Needspace{2\baselineskip}}{}
+% 环境不把整题装盒：题目与解析仍可自然跨页，但开始题块前必须为题面、
+% 图形/表格或解析首段留出足够空间。仅保留 2 个 baseline 会让题干、
+% 选项和图形在页边界处被拆开，形成不可打印的孤立内容；题目保留
+% 0.15\textheight，在避免短题制造大段空白与避免题块拆分之间取平衡。
+% 解析题块保留 0.5\textheight，以容纳“题面 + 图形/选项 + 首段解析”；
+% 结构标题仍用更大的保留量；末页自然收尾由视觉复审判定。
+\newenvironment{question}{\Needspace{0.15\textheight}}{}
+\newenvironment{answer}{\Needspace{0.5\textheight}}{}

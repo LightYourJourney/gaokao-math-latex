@@ -1474,16 +1474,26 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
+            # Markdown 源级分页修复会带来空行、段落间距和纯缩进调整；这些属于
+            # 版式差异，不应被误判成题面内容变化。成对出现的 strip() 相等行只
+            # 允许空白归一化，真正的内容增删仍由下面的 token 计数和布局白名单拦住。
+            paired = {
+                line.strip() for line in added if line.strip()
+            } & {
+                line.strip() for line in removed if line.strip()
+            }
+            added = [line for line in added if line.strip() not in paired]
+            removed = [line for line in removed if line.strip() not in paired]
             # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
             # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
                 marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                for marker in (r"\nopagebreak", r"\Needspace", r"\par\medskip", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
-            ) for line in added))
+            ) or line == "" for line in added))
             self.assertTrue(all(
-                line == "" or r"（　　）" in line or r"\begin{gkopts}" in line
+                line == "" or r"\par\medskip" in line or r"（　　）" in line or r"\begin{gkopts}" in line
                 or line in (r"\begin{question}", r"\end{question}")
                 for line in removed
             ))

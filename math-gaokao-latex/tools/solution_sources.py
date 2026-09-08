@@ -70,6 +70,10 @@ REPORT_VERSION = 1
 
 QUESTION_MARKER = "**题目**"
 SOLUTION_MARKER = "**解析**"
+# Standalone layout directives are source-level controls, not copied question text.
+# Keep them when they precede the first solution marker so generated answers can reserve
+# space before the question's first figure/derivation block.
+_LAYOUT_DIRECTIVE = re.compile(r"^\\(?:Needspace|enlargethispage)\{.*\}$")
 # 证明类小问没有最终答案时的诚实占位，沿用 make_short_answers.py 的 SEE_SOL 惯例。
 # 绝不为这类小问编造答案，也不把答案要点里「证明要点：…」的推导原文搬来冒充结论。
 SEE_SOLUTION = "见解析版"
@@ -536,7 +540,11 @@ def _derivation_paragraphs(
     paragraphs = _paragraphs(body)
     for index, paragraph in enumerate(paragraphs):
         if _is_solution_marker(paragraph):
-            paragraphs = paragraphs[index:]
+            leading_layout = [
+                item.strip() for item in paragraphs[:index]
+                if _LAYOUT_DIRECTIVE.fullmatch(item.strip())
+            ]
+            paragraphs = leading_layout + paragraphs[index:]
             break
 
     kept: List[str] = []
@@ -630,13 +638,16 @@ def _canonical_derivation_parts(
     是两道题，不是解析与答案。
     """
     paragraphs = _derivation_paragraphs(body, stem_paragraphs)
+    leading_layout: List[str] = []
+    while paragraphs and _LAYOUT_DIRECTIVE.fullmatch(paragraphs[0].strip()):
+        leading_layout.append(paragraphs.pop(0).strip())
     separator: Optional[str] = None
     if paragraphs and _THEMATIC_BREAK.match(paragraphs[-1].strip()) is not None:
         separator = paragraphs[-1].strip()
         paragraphs = paragraphs[:-1]
     if not (paragraphs and _is_solution_marker(paragraphs[0])):
         paragraphs = [SOLUTION_MARKER] + paragraphs
-    return paragraphs, separator
+    return leading_layout + paragraphs, separator
 
 
 def _second_part_boundaries(lines: Sequence[str]) -> List[int]:
