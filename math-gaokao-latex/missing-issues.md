@@ -2061,3 +2061,80 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0113
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "0122c92a-ed18-4a1f-99e4-f16c7b454509",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "76e2921aca58988db5a05302efd647ced0cf155b9a99eb2958371602c423baec",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 14,
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "pdf_sha256": "438ea03525b9e3d3dbd9a45d77f5ac37183f8da197c54e920dba0e61f660b159",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0114
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "0122c92a-ed18-4a1f-99e4-f16c7b454509",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "fbcabf1b441f777bd9a003b4d5d9a952c5d6d14e060619f15f7ae0344b15097f",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 16,
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "pdf_sha256": "438ea03525b9e3d3dbd9a45d77f5ac37183f8da197c54e920dba0e61f660b159",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0115
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "990228735e9940b9151128d4cad0e39ad8988c08cae9f5d8b35e161d27837ed2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0116
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "dbb9526d0cf9cc90db9ddab705437d9efde2cc38fe2533e75937329a94788982",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
