@@ -3684,13 +3684,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0216
 
 ```json
@@ -3700,13 +3699,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0217
 
 ```json
@@ -3716,13 +3714,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0218
 
 ```json
@@ -3732,13 +3729,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0219
 
 ```json
@@ -3748,13 +3744,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0220
 
 ```json
@@ -3764,13 +3759,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0221
 
 ```json
@@ -3780,13 +3774,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0222
 
 ```json
@@ -3796,13 +3789,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-science",
   "question_id": "gk-1977-regular-anhui-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0223
 
 ```json
@@ -3812,13 +3804,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0224
 
 ```json
@@ -3828,13 +3819,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0225
 
 ```json
@@ -3844,13 +3834,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0226
 
 ```json
@@ -3860,13 +3849,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0227
 
 ```json
@@ -3876,13 +3864,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0228
 
 ```json
@@ -3892,13 +3879,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0229
 
 ```json
@@ -3908,13 +3894,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0230
 
 ```json
@@ -3924,13 +3909,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0231
 
 ```json
@@ -3940,13 +3924,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0232
 
 ```json
@@ -3956,13 +3939,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-anhui-arts",
   "question_id": "gk-1977-regular-anhui-arts-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0233
 
 ```json
@@ -3972,13 +3954,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0234
 
 ```json
@@ -3988,13 +3969,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0235
 
 ```json
@@ -4004,13 +3984,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0236
 
 ```json
@@ -4020,13 +3999,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0237
 
 ```json
@@ -4036,13 +4014,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0238
 
 ```json
@@ -4052,13 +4029,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0239
 
 ```json
@@ -4068,13 +4044,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangdong",
   "question_id": "gk-1977-regular-guangdong-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0240
 
 ```json
@@ -4084,13 +4059,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0241
 
 ```json
@@ -4100,13 +4074,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0242
 
 ```json
@@ -4116,13 +4089,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0243
 
 ```json
@@ -4132,13 +4104,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0244
 
 ```json
@@ -4148,13 +4119,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0245
 
 ```json
@@ -4164,13 +4134,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-sichuan",
   "question_id": "gk-1977-regular-sichuan-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0246
 
 ```json
@@ -4180,13 +4149,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0247
 
 ```json
@@ -4196,13 +4164,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0248
 
 ```json
@@ -4212,13 +4179,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0249
 
 ```json
@@ -4228,13 +4194,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0250
 
 ```json
@@ -4244,13 +4209,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0251
 
 ```json
@@ -4260,13 +4224,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0252
 
 ```json
@@ -4276,13 +4239,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-yunnan",
   "question_id": "gk-1977-regular-yunnan-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0253
 
 ```json
@@ -4292,13 +4254,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0254
 
 ```json
@@ -4308,13 +4269,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0255
 
 ```json
@@ -4324,13 +4284,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0256
 
 ```json
@@ -4340,13 +4299,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0257
 
 ```json
@@ -4356,13 +4314,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0258
 
 ```json
@@ -4372,13 +4329,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0259
 
 ```json
@@ -4388,13 +4344,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0260
 
 ```json
@@ -4404,13 +4359,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guizhou",
   "question_id": "gk-1977-regular-guizhou-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0261
 
 ```json
@@ -4420,13 +4374,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-arts",
   "question_id": "gk-1977-regular-guangxi-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0262
 
 ```json
@@ -4436,13 +4389,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-arts",
   "question_id": "gk-1977-regular-guangxi-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0263
 
 ```json
@@ -4452,13 +4404,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-arts",
   "question_id": "gk-1977-regular-guangxi-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0264
 
 ```json
@@ -4468,13 +4419,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-arts",
   "question_id": "gk-1977-regular-guangxi-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0265
 
 ```json
@@ -4484,13 +4434,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-arts",
   "question_id": "gk-1977-regular-guangxi-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0266
 
 ```json
@@ -4500,13 +4449,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-science",
   "question_id": "gk-1977-regular-guangxi-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0267
 
 ```json
@@ -4516,13 +4464,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-science",
   "question_id": "gk-1977-regular-guangxi-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0268
 
 ```json
@@ -4532,13 +4479,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-science",
   "question_id": "gk-1977-regular-guangxi-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0269
 
 ```json
@@ -4548,13 +4494,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-science",
   "question_id": "gk-1977-regular-guangxi-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0270
 
 ```json
@@ -4564,13 +4509,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-guangxi-science",
   "question_id": "gk-1977-regular-guangxi-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查复核题面通过（b35/b36 finalized），问题闭环留档。",
   "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0271
 
 ```json
