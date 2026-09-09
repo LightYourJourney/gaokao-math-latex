@@ -1,0 +1,437 @@
+% answers.tex —— 1977 年·上海卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_上海文_试题.md + 1977/1977_数学真题_上海文_解析正文.md + 1977/1977_数学真题_上海文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+下列推导依据固定源 A3 单页题面独立完成，未使用官方答案页；因此解析与答案要点均不声称为官方标准答案。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+（1） 计算：
+
+\nopagebreak[4]
+\[
+\left[\left(\frac12-\frac13\right)\left(-\frac32\right)-\left(-1+\frac13\right)\times\left(-\frac34\right)\right]\div\frac32.
+\]
+
+（2） 某生产队去年养猪 $96$ 头，今年养猪 $120$ 头，问今年比去年增加百分之几？计划明年比今年多养 $40\%$，明年养猪几头？
+
+\Needspace{5\baselineskip}
+（3） 解方程：
+
+\nopagebreak[4]
+\[
+\frac{4}{x+3}-\frac{1}{x-3}=1-\frac{2x}{x^2-9}.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+先算括号内两项：
+
+\nopagebreak[4]
+\[
+\left(\frac12-\frac13\right)\left(-\frac32\right)=-\frac14,
+\qquad
+\left(-1+\frac13\right)\left(-\frac34\right)=\frac12.
+\]
+
+\Needspace{5\baselineskip}
+所以原式为
+
+\nopagebreak[4]
+\[
+\left(-\frac14-\frac12\right)\div\frac32
+=-\frac34\cdot\frac23=-\frac12.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+今年比去年增加 $120-96=24$ 头，增加率为
+
+\nopagebreak[4]
+\[
+\frac{24}{96}=25\%.
+\]
+
+\Needspace{5\baselineskip}
+明年比今年多养 $40\%$，所以明年养猪
+
+\nopagebreak[4]
+\[
+120(1+40\%)=168\text{（\text{头}）}.
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+定义域要求 $x\ne3,-3$。在此条件下，原方程两边同乘 $x^2-9$，得
+
+\nopagebreak[4]
+\[
+4(x-3)-(x+3)=x^2-9-2x.
+\]
+
+\Needspace{5\baselineskip}
+整理为
+
+\nopagebreak[4]
+\[
+x^2-5x+6=0,
+\]
+
+即 $(x-2)(x-3)=0$。舍去不在定义域内的 $x=3$，故保留 $x=2$。
+
+\gkanswer{答案（1）：$-\dfrac12$}
+
+\gkanswer{答案（2）：今年比去年增加 $25\%$；明年养猪 $168$ 头。}
+
+\gkanswer{答案（3）：$x=2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$\angle C$ 的平分线交 $AB$ 于 $D$，过 $D$ 作 $BC$ 的平分线交 $AC$ 于 $E$，已知 $BC=a$，$AC=b$，求 $DE$ 的长。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_t2_bisector}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+原卷文字写作“过 $D$ 作 $BC$ 的平分线”，但图中相应线段为 $DE\parallel BC$；以下明确按图示的平行关系解答，并保留这一题面冲突供 provenance 记录。由 $CD$ 是 $\angle C$ 的平分线，角平分线定理给出
+
+\nopagebreak[4]
+\[
+\frac{AD}{DB}=\frac{AC}{CB}=\frac ba.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\frac{AD}{AB}=\frac{b}{a+b}.
+\]
+
+\Needspace{5\baselineskip}
+又因为 $DE\parallel BC$，所以 $\triangle ADE\sim\triangle ABC$，从而
+
+\nopagebreak[4]
+\[
+\frac{DE}{BC}=\frac{AD}{AB}=\frac{b}{a+b}.
+\]
+
+\Needspace{5\baselineskip}
+代入 $BC=a$，得到
+
+\nopagebreak[4]
+\[
+DE=\frac{ab}{a+b}.
+\]
+
+\gkanswer{答案：$DE=\dfrac{ab}{a+b}$。按图示 $DE\parallel BC$ 解释；原卷文字“$BC$ 的平分线”与图示平行关系冲突，严格按字面无法确定唯一构造。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+（1） 化简：
+
+\nopagebreak[4]
+\[
+\left(\frac{a}{a+b}-\frac{a^2}{a^2+2ab+b^2}\right)\div\left(\frac{a}{a+b}-\frac{a^2}{a^2-b^2}\right).
+\]
+
+\Needspace{5\baselineskip}
+（2） 解不等式：
+
+\nopagebreak[4]
+\[
+\frac{2x-1}{3}>\frac{3x-1}{2}-4.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+因为 $a^2+2ab+b^2=(a+b)^2$，所以第一个括号为
+
+\nopagebreak[4]
+\[
+\frac{a}{a+b}-\frac{a^2}{(a+b)^2}
+=\frac{ab}{(a+b)^2}.
+\]
+
+\Needspace{5\baselineskip}
+第二个括号为
+
+\nopagebreak[4]
+\[
+\frac{a}{a+b}-\frac{a^2}{(a-b)(a+b)}
+=-\frac{ab}{a^2-b^2}.
+\]
+
+\Needspace{5\baselineskip}
+因此原式
+
+\nopagebreak[4]
+\[
+\frac{ab}{(a+b)^2}\div\left(-\frac{ab}{a^2-b^2}\right)
+=-\frac{a^2-b^2}{(a+b)^2}
+=\frac{b-a}{a+b}.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+不等式等价于
+
+\nopagebreak[4]
+\[
+2(2x-1)>3(3x-1)-24,
+\]
+
+\Needspace{5\baselineskip}
+即 $4x-2>9x-27$，所以 $25>5x$，解得
+
+\nopagebreak[4]
+\[
+x<5.
+\]
+
+\gkanswer{答案（1）：$\dfrac{b-a}{a+b}$。}
+
+\gkanswer{答案（2）：$x<5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+（1） 计算：
+
+\nopagebreak[4]
+\[
+\frac{\sin225^\circ+\tan330^\circ}{\cos(-120^\circ)}.
+\]
+
+\Needspace{5\baselineskip}
+（2） 求证：
+
+\nopagebreak[4]
+\[
+\tan x+\cot x=\frac{2}{\sin2x}.
+\]
+
+（3） $\triangle ABC$ 中，$\angle A=45^\circ$，$\angle B=75^\circ$，$AB=12$，求 $BC$ 的长。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\nopagebreak[4]
+\[
+\sin225^\circ=-\frac{\sqrt2}{2},
+\qquad
+\tan330^\circ=-\frac{\sqrt3}{3},
+\qquad
+\cos(-120^\circ)=-\frac12.
+\]
+
+\Needspace{5\baselineskip}
+因此
+
+\nopagebreak[4]
+\[
+\frac{\sin225^\circ+\tan330^\circ}{\cos(-120^\circ)}
+=\sqrt2+\frac{2\sqrt3}{3}.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+在正切、余切有定义且 $\sin2x\ne0$ 时，
+
+\nopagebreak[4]
+\[
+\tan x+\cot x
+=\frac{\sin x}{\cos x}+\frac{\cos x}{\sin x}
+=\frac{\sin^2x+\cos^2x}{\sin x\cos x}
+=\frac1{\sin x\cos x}
+=\frac2{\sin2x}.
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+三角形的第三个角为 $C=180^\circ-45^\circ-75^\circ=60^\circ$。由正弦定理，
+
+\nopagebreak[4]
+\[
+\frac{BC}{\sin45^\circ}=\frac{AB}{\sin60^\circ},
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+BC=12\cdot\frac{\sin45^\circ}{\sin60^\circ}=4\sqrt6.
+\]
+
+\gkanswer{答案（1）：$\sqrt2+\dfrac{2\sqrt3}{3}$。}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：$BC=4\sqrt6$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+六角螺帽尺寸如图，求它的体积（精确的 $1\ \mathrm{mm^3}$）。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_t5_nut}\end{center}
+\nopagebreak[4]
+\begin{gktip}
+原图在外六边形的一条边、圆孔和高度方向分别标出 $20$、$20$、$10$；下文若按通常六角螺帽构形解答，将其解释为外正六边形边长 $20\ \mathrm{mm}$、圆孔直径 $20\ \mathrm{mm}$、高度 $10\ \mathrm{mm}$。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按原图的通常六角螺帽构形解释，外六边形为边长 $20\ \mathrm{mm}$ 的正六边形，圆孔直径为 $20\ \mathrm{mm}$，高度为 $10\ \mathrm{mm}$。正六边形底面积为
+
+\nopagebreak[4]
+\[
+6\cdot\frac{\sqrt3}{4}\cdot20^2=600\sqrt3\ \mathrm{mm^2},
+\]
+
+\Needspace{5\baselineskip}
+圆孔面积为 $100\pi\ \mathrm{mm^2}$。所以螺帽体积为
+
+\nopagebreak[4]
+\[
+V=(600\sqrt3-100\pi)\cdot10
+=(6000\sqrt3-1000\pi)\ \mathrm{mm^3}.
+\]
+
+数值约为 $7250.712\ \mathrm{mm^3}$，精确到 $1\ \mathrm{mm^3}$ 得 $7251\ \mathrm{mm^3}$。
+
+\gkanswer{答案：$7251\ \mathrm{mm^3}$（未四舍五入的表达式为 $6000\sqrt3-1000\pi\ \mathrm{mm^3}$）。按通常六角螺帽构形解释。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+求直线 $x+\sqrt3y+3\sqrt3=0$ 的斜率和倾角，并画出它的图形。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+将直线化为斜截式：
+
+\nopagebreak[4]
+\[
+y=-\frac{\sqrt3}{3}x-3.
+\]
+
+\Needspace{5\baselineskip}
+所以斜率为 $k=-\sqrt3/3$。倾角 $\alpha$ 取 $0^\circ\leqslant\alpha<180^\circ$，满足 $\tan\alpha=-\sqrt3/3$，故
+
+\nopagebreak[4]
+\[
+\alpha=150^\circ.
+\]
+
+作图时直线经过截距 $(0,-3)$ 与 $(-3\sqrt3,0)$。
+
+\gkanswer{答案：斜率 $k=-\dfrac{\sqrt3}{3}$，倾角为 $150^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+当 $x$ 为何值时，函数 $y=x^2-8x+5$ 的值最小，并求出这个最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+配方得
+
+\nopagebreak[4]
+\[
+y=x^2-8x+5=(x-4)^2-11.
+\]
+
+因为 $(x-4)^2\geqslant0$，所以 $x=4$ 时函数值最小，最小值为 $-11$。
+
+\gkanswer{答案：$x=4$ 时函数值最小，最小值为 $-11$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+将浓度为 $96\%$ 和 $36\%$ 的甲、乙两种流酸配制成浓度为 $70\%$ 的流酸 $600$ 升，问应从甲、乙两种流酸中各取多少升？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+原卷把“硫酸”印作“流酸”；按浓度配制的语境，将甲、乙两种“流酸”理解为两种硫酸溶液。设取 $x$ 升 $96\%$ 的甲液、$y$ 升 $36\%$ 的乙液，则
+
+\nopagebreak[4]
+\[
+x+y=600,
+\]
+
+\nopagebreak[4]
+\[
+0.96x+0.36y=0.70\times600=420.
+\]
+
+\Needspace{5\baselineskip}
+由 $y=600-x$ 代入第二式，得
+
+\nopagebreak[4]
+\[
+0.96x+0.36(600-x)=420,
+\]
+
+即 $0.60x=204$，所以 $x=340$，$y=260$。
+
+\gkanswer{答案：取 $340$ 升 $96\%$ 的甲液、$260$ 升 $36\%$ 的乙液。按化学语境将原卷“流酸”理解为硫酸。}
+
+\end{answer}

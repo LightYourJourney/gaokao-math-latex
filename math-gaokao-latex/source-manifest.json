@@ -191,6 +191,15 @@
         "gk-1965-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-shanghai-arts",
+        "gk-1977-regular-shanghai-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -200,7 +209,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c57fef53-20f2-4f79-9868-c279348a69eb",
+  "last_transaction_id": "11c6400d-8da0-4d4d-91d3-78a30446c56a",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2192,9 +2201,126 @@
       "title": "1965 年·全国卷",
       "track": "none",
       "year": 1965
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_上海卷_文科/figures/f1977_t2_bisector.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_上海卷_文科/figures/f1977_t5_nut.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_shanghai_arts",
+        "id": "gk-1977-regular-shanghai-arts",
+        "note": "固定源为 A3 单页题面；第 2 题原文“BC 的平分线”与图示 DE∥BC 存在冲突，第 5 题尺寸解释见题面与解析注记。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文"
+      },
+      "issue_ids": [
+        "ISSUE-0125",
+        "ISSUE-0126"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-shanghai-arts",
+      "production_state": "blocked",
+      "project_dir": "1977_上海卷_文科",
+      "question_count": 8,
+      "resume_action": "取得同一固定源的清晰排印件或独立权威答案，确认题干“BC 的平分线”是否为原卷笔误；在确认前保留题面原文并按图示关系单独标注，不能将其当作无条件平行线题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_上海文_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_上海文_含解析.md",
+        "questions": "1977/1977_数学真题_上海文_试题.md",
+        "solution_body": "1977/1977_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c"
+      ],
+      "title": "1977 年·上海卷·文科",
+      "track": "arts",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_上海卷_理科/figures/f1977_t2_bisector.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_上海卷_理科/figures/f1977_t4_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_上海卷_理科/figures/f1977_t7_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_上海卷_理科/figures/f1977_t9_equilateral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_shanghai_science",
+        "id": "gk-1977-regular-shanghai-science",
+        "note": "固定源为 A3 单页题面，正式题量为 1—8；第 9、10 题按原卷附加题保留，不计入 question_count。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "1977_上海卷_理科",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_上海理_含解析.md",
+        "questions": "1977/1977_数学真题_上海理_试题.md",
+        "solution_body": "1977/1977_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-addb7f32b711ba733d06cf3d9eec0d14fe3dcca05f5edfc52d58cf79c2fee8f3"
+      ],
+      "title": "1977 年·上海卷·理科",
+      "track": "science",
+      "year": 1977
     }
   ],
-  "revision": 1324,
+  "revision": 1329,
   "schema_version": 1,
   "sources": [
     {
@@ -3795,8 +3921,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c34faa7b914298451ea1b7c1587c5fdd6273bd7f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977上海文.pdf",
       "regions": [],
       "source_id": "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c",
@@ -3819,8 +3945,8 @@
       "exam_type": "regular",
       "git_blob_oid": "30513820009a0f5bd7fc445c6b5a8ad11b543f24",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977上海理.pdf",
       "regions": [],
       "source_id": "src-addb7f32b711ba733d06cf3d9eec0d14fe3dcca05f5edfc52d58cf79c2fee8f3",

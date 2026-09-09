@@ -1,0 +1,16 @@
+% 1977 年上海卷理科第 2 题：角平分线与平行线
+\begin{tikzpicture}[scale=0.9]
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (5,0);
+  \coordinate (B) at (2.25,3.15);
+  \coordinate (D) at ($(A)!0.43!(B)$);
+  \coordinate (E) at ($(A)!0.43!(C)$);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (D)--(C);
+  \draw[thick] (D)--(E);
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[above] {$B$};
+  \fill (C) circle (1.2pt) node[below right] {$C$};
+  \fill (D) circle (1.2pt) node[left] {$D$};
+  \fill (E) circle (1.2pt) node[below] {$E$};
+\end{tikzpicture}

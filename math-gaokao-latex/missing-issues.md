@@ -2281,3 +2281,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0125
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：题干印作“过 D 作 BC 的平分线交 AC 于 E”，而图中 D-E 线段与 BC 同向平行；按字面构造与图示构造不一致。",
+  "fingerprint": "38050afbb46610362059f5e3637d8955596a041b9d53d371b29ec2725dcb2f3d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanghai-arts",
+  "question_id": "gk-1977-regular-shanghai-arts-q02",
+  "resume_action": "取得同一固定源的清晰排印件或独立权威答案，确认题干“BC 的平分线”是否为原卷笔误；在确认前保留题面原文并按图示关系单独标注，不能将其当作无条件平行线题。",
+  "source_id": "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0126
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：题干印作“过 D 作 BC 的平分线交 AC 于 E”，而图中 D-E 线段与 BC 同向平行；按字面构造与图示构造不一致。",
+  "fingerprint": "002076828588d3eec0048a3aa120fdb89846810732603f2fedfe41163b2729e4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanghai-arts",
+  "question_id": "gk-1977-regular-shanghai-arts-q02",
+  "resume_action": "先解决第 2 题题干“BC 的平分线”与图示 DE∥BC 的冲突；确认构造后重跑独立答案、盲核与 provenance，方可解除 U 级答案证据。",
+  "source_id": "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
