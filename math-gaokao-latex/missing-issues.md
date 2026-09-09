@@ -2281,7 +2281,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0125
 
 ```json
@@ -2685,5 +2684,993 @@
   "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
   "status": "resolved",
   "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0150
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "d8087ce1bc536fce5dbd282d3cb4ccd42a75ae58ee9024d6e0d11d0c04c16e4d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0151
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "333015fa28536fba9fe454ec83693281cccaf6c753a2041984e358d8f89ff765",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0152
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c56fd9e415afc69eed8ff50292ac00732d91950c702b8d069ce1f0da7e2bd313",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0153
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "29747ea18974ff7b1ef2d832c94eaf0d3fb24f22f5771091d3b4381b04f665c2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0154
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3159c14da27c485f9c09d35a897591a9a160d3f26c77a278476ae036b665f4bb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0155
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cfb342b4d491cb584daadcd302886061c50d11fb62e381ad6035c3aff3b4f55c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0156
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "42ac2521363c48aabc8d3180a148dca652d007562fde3dba2f1aa53da7936aaa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0157
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cbabb9e660b057fd6b86939dbca12f215bc4fa48dcbbf06161616fe3fbdd4b37",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-heilongjiang",
+  "question_id": "gk-1977-regular-heilongjiang-q08",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-469f2117370979519f106c34083c61490a9c7ebdaba7a06dbe87633b8a5f4c7e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0158
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9f1027a2ee310b2e7a98f1f8a3fc3befe0b12e29cba5dd78be44c6adf0749168",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0159
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f87f610ee278a2849df68b33d26abd0b561772a83f5688b86c6a18886e59a1ee",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0160
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "025b3b4d26049d92638c93ad2f641f02bf63b112a3b2fc7a49f176d34ed6fae2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0161
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bb17c0ea3af086d068a8e1a4b6e59013c174da442af5853da6e3c38dad4f2c69",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0162
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "309a3fd1ea53ba8ca8ffaa2523ee219b932a0eea059481186dd2c97265584ea4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0163
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "8340609dc87a3bed4646a5650311797c0c9f73277e06990aa2c84a82415d7e92",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0164
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "5e7349f6fc569700ef943037e4d7299754cfcd1712947a3f656b5267add84a66",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0165
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7182709767f42fb9ebedb739480c89765f47b8a91d2a49c3ce2bcceadaf78c8a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tibet",
+  "question_id": "gk-1977-regular-tibet-q08",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-ed97867a87ffc89b1d90329dd0f45e564ac2fa00d2d0b3d53f70555edfa714a6",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0166
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7ed9b59ba08ae02e5c191454750b22a930bdd0bdcdbc772d00c54b88926499cf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0167
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "434fb577979c08a6ac0e9703f161f451ae16ce89ea8e126a0c9c03a73b80ce17",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0168
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "66c5702cbf46fa967427f3758d380dc45df0255f4b4c238889217257f3b253b4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0169
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "618bf7365486fe1891378a2c88fe1233976076dfc9c4298a6d8951695543b4d4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0170
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f47c3e19dd7a086cd1730b790592944580370c26c5ec2bdffa4a175e342e46d2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0171
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "310585575fe3c68ce1b7bb7e87e4c6bccc72b0e317de8a867ed4ecce4c405da3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0172
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c07b48e96022f61b875ad8bbda9a13ec6b3a19fee7b879e65668ed4ff48d456c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0173
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "efb0f53b83549b898c5185fbf1703a62030a4387b3de920aec5de33388c3fa69",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q08",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0174
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "eb588fd52a705e215c1fec648ccf952b9aa2ad7be44888fb773b4a43c3bd6583",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q09",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0175
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b3571a7e18c71316ad050204cf80efa8f40a0996a5e5d4301a8f91a47f8a6f2d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-qinghai",
+  "question_id": "gk-1977-regular-qinghai-q10",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-e332957caaf461ca62ecd4111dcb7a1bf7004dc8df74125b2191ab68ac05b3ec",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0176
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "108dc6d6bde2df335df55f7f28436b2ca463c53f19e3d2dd76965c748f2f5b65",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0177
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a043071e39ff702e28b8d788472ead89992bf7e7da65d93a253922ce019f96bc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0178
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fd1baf395d312f70a3fd3ff5b61c60059e417f95c71eca7c8779ffc49472533a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0179
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "32e932d7e269999ac74754cecc0cf9330ece9ffce36d801c1b40f6090ea62ced",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0180
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9032996be4b4269fb364618ba6ea8bd67cdbf1f66a22cc9ad7ac8c82e1078c49",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0181
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2185e7ace043be47ed55eaddafe3a836e801cabfa54883eeba3060df17263395",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-guangxi-baise-arts",
+  "question_id": "gk-1977-regular-guangxi-baise-arts-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-04ec742258d5003ce6db366a3e5195248321da77d66cbb0cb74a25872007035e",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0182
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "81e223a0e5d48b61c2ec01dcc801dfca0400adfee1047a162800dfbe4f596f6b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0183
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1da67baa04776c5512a541ef7aeeb98005159b2b39325c87026443ae0c749f1b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0184
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f896e6d8a4e7ed508e01c17dc337658f1aa8237e64a417444beb2332a7db9fc3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0185
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "12f9428f5a9d6d1aaca2bbc00d6591df125e59e03ada294aeb8748307682e1e5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0186
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "79beadfd3a4650e345f0e5342ab992b27fe5f51b035bdb0c79687c8eaa4cae23",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0187
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ac8d531b5591d7ef6b1def4b2907daaeb7500e1cb6e85c8035d32c20a5b9ec6e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0188
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4918188b276c80e32138e8378d42dc4149a253b7ccd6f98a5abf0c84b2c0896f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0189
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1fbd109e9c75535bc3a94bb47b52aa09f7c7552dbdbd5b60442361f6a9b20473",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-shanxi",
+  "question_id": "gk-1977-regular-shanxi-q08",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-194a0e44a866d4b52517fc813e2b48ea6553017687214e496a89fb295f73b173",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0190
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "5c5c0bcdd7b3e054d74eb33bdecdf3d752fad020a9d40354165c0c746d918585",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0191
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "06b7ab68bfd4418065107d03b1e7ebe0621f7019e707566a92ec69fe6511321c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0192
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c35a1c2196173263ac812ce2e7d339f826e91d57d8a54046c55c5974a9605824",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0193
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "5c40971404ebbe93e23a6c5c1d6c30cd189639cb0c9a620cd88d81cd35c90d54",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0194
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ebb0a7cddddf9066a59d089571296555f2d967383ad5cdab37630b129ca1aca5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0195
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "d73866bb5cf50b5a2bbc3459c993f187bd6458329344a07ab8b4f3592a18793c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-xinjiang-science",
+  "question_id": "gk-1977-regular-xinjiang-science-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0196
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b2135e776e640dee80d6bfd95f1daa54c3e00f0218c328af4b4042450cdd0e74",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0197
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4dbff1f82bfc886c2129853ea7b1de023c38b7396cce8c5a40d67b22be734090",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0198
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7edc2202a8652e53b28531339a61ae615b19f47f65e2a80c33fdbe191fb451cf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0199
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7a6ad13d34349944a65e2b1ee6ead719d4b48625e8f918aaefb848af3647af6a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0200
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3c70772150ea87e041380737ed6cb5d1a02523d6d53d4d144ba05cfbae20f617",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0201
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "da9608083f19f5875d26914ca4a96accaef05366fc67dede1c3f4cf5f87c52c2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0202
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2793de098c4a972b90fb28b67251b266361161433a2e0e9b93ed283f04219d88",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-zhejiang",
+  "question_id": "gk-1977-regular-zhejiang-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-26f527d9d16bec362778b445057c4658198692a71ea78f2d43cf068bf401ea0a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0203
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0919e1904b99168d06597e9394446a51fe8e1c9470d65e1e897a89b813b58de5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q01",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0204
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "df1b76f504ef3435fc5b8df84dfc72af3337983329ba981661c0ad93ada61f65",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q02",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0205
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "95785b8e13871f4f99ab75c89a439ae60e578111fa814b2ff3c42e455fd82deb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q03",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0206
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f8167a20043d05d756c222d3b45d9c2ab0ab5facda87b76c7e7eaf0fc8f193dc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q04",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0207
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4450468159a14f4753200bb3b5cf4bc942b0a36b05fc46ac495e127f15049b32",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q05",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0208
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b4599449ba46234ad49259ffa092c53e43e6a6e218752ea037a3432208e11ea9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q06",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0209
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "54dcc3f95ac93ce5cce906da506ed0d01c4b31cf90732cd1116a079ba9c46749",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q07",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0210
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ba450659396f723fdaaaad218ac0e62387a7fbd067eed0e56620466a2b859f28",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-gansu",
+  "question_id": "gk-1977-regular-gansu-q08",
+  "resume_action": "已完成：批级视觉审查逐页对照原卷复核题面通过（b33/b34 finalized），问题闭环留档。",
+  "source_id": "src-00b522e7172a65b52de24f640b6aa653ebee4f358e86ac4631422e242f57362f",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0211
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "2a65acf3e18882b6a280331f5f7bf1586c3a59dcabaa62a070bfb4abdf23b027",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1977-regular-shanxi",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0212
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "27734fedb8c1e8f859ef445ba06fd8c43a95b0719d67292309f41ce039761639",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1977-regular-shanxi",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0213
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "beea83f0c142ea50ed7b384b048ae21263da6b1725a4d08ff3c8b9039e82bd7a",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1977-regular-shanxi",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0214
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "6d854dbf02319b99b6c5261bcf0de64c97403cc438d808cab71f072d46e1c7d2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1977-regular-shanxi",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
 }
 ```

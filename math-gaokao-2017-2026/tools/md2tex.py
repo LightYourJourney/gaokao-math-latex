@@ -78,6 +78,10 @@ FIGMAP = {
     "2023甲文-t6-程序框图": "f2023jw_t6_flow",
     "2023甲文-t18-三棱柱": "f2023jw_t18_prism",
     "2023-Ⅱ-t16-三角函数图象": "f2023x2_t16_sine",
+    # 1977 批次连字符图名（manifest 登记名与确定性回退的下划线结果不同，须显式映射）
+    "1977-guangxi-baise-arts-t3-circle": "f1977_guangxi-baise-arts_t3_circle",
+    "1977-xinjiang-science-t2-rectangle": "f1977_xinjiang-science_t2_rectangle",
+    "1977-xinjiang-science-t6-arch": "f1977_xinjiang-science_t6_arch",
     "2023-Ⅱ-t19-频率分布直方图": "f2023x2_t19_hist",
     "2023-Ⅱ-t20-三棱锥": "f2023x2_t20_tetra",
     "2024-t11-曲线": "f2024_t11_curve",

@@ -1,0 +1,414 @@
+% answers.tex —— 1977 年·西藏卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_西藏_试题.md + 1977/1977_数学真题_西藏_解析正文.md + 1977/1977_数学真题_西藏_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源是题面与解答连续出现的排印材料（源书页码 146—147，第 3 页为参考题解答续页）。下文逐题对照源解答并重新计算关键结论。第三题源卷第二个已知条件印作“$\operatorname{Loe}_{10}5$”，系“$\operatorname{Log}_{10}5$”的排印之误，计算按后者；第六、七、八题源卷注明任选做二题，本库仍逐题给出解析。参考题两题不计入正式题量，解析附于最后。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+计算：
+
+\nopagebreak[4]
+\[
+(4.8-3.7)^2-\sqrt[3]{-27}\times\left(5-1\div5\right)\times\left(-\frac58\right)
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按运算顺序逐项处理：$4.8-3.7=1.1$，故 $(4.8-3.7)^2=1.1^2=1.21$；$\sqrt[3]{-27}=-3$；$5-1\div5=5-\dfrac15=\dfrac{24}{5}$。于是
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\text{\text{原式}}
+&=1.1^2-(-3)\times\frac{24}{5}\times\left(-\frac58\right)\\
+&=1.21-3\times\frac{24}{5}\times\frac58\\
+&=1.21-9=-7.79.
+\end{aligned}
+\]
+
+\gkanswer{答案：$-7.79$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+求分式方程
+
+\nopagebreak[4]
+\[
+\frac{1-x}{x}=x
+\]
+
+在 $0$ 到 $1$ 范围内精确到小数三位的根。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+原方程要求 $x\ne0$。去分母、移项得
+
+\nopagebreak[4]
+\[
+1-x=x^2,
+\qquad
+x^2+x-1=0,
+\]
+
+\nopagebreak[4]
+\[
+x=\frac{-1\pm\sqrt5}{2}.
+\]
+
+\Needspace{5\baselineskip}
+两根均不为零，代入原方程分母有意义，故都是原方程的根。其中落在 $0$ 到 $1$ 范围内的是
+
+\nopagebreak[4]
+\[
+x=\frac{-1+\sqrt5}{2}\approx\frac{-1+2.236}{2}=0.618.
+\]
+
+\gkanswer{答案：$x=\dfrac{\sqrt5-1}{2}\approx0.618$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知 $\operatorname{Log}_{10}2=0.3010$，$\operatorname{Loe}_{10}5=0.6990$，试计算
+
+\nopagebreak[4]
+\[
+(2\operatorname{Log}_{10}4)(\operatorname{Log}_25)+\operatorname{Log}_{10}\frac52
+\]
+
+的值（精确到小数三位）。
+
+\begin{gktip}
+\textbf{源注}：原卷第二个已知条件印作“$\operatorname{Loe}_{10}5$”，系“$\operatorname{Log}_{10}5$”的排印之误（其数值 $0.6990$ 与源解答所用均为 $\operatorname{Log}_{10}5$）。题面照录，计算按 $\operatorname{Log}_{10}5$。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+已知 $\operatorname{Log}_{10}2=0.3010$、$\operatorname{Log}_{10}5=0.6990$（源卷第二个条件印作“$\operatorname{Loe}_{10}5$”，按 $\operatorname{Log}_{10}5$ 计算）。由 $4=2^2$ 与换底公式，
+
+\nopagebreak[4]
+\[
+2\operatorname{Log}_{10}4=4\operatorname{Log}_{10}2,
+\qquad
+\operatorname{Log}_25=\frac{\operatorname{Log}_{10}5}{\operatorname{Log}_{10}2}.
+\]
+
+\Needspace{5\baselineskip}
+因此
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+(2\operatorname{Log}_{10}4)(\operatorname{Log}_25)+\operatorname{Log}_{10}\frac52
+&=(4\operatorname{Log}_{10}2)\left(\frac{\operatorname{Log}_{10}5}{\operatorname{Log}_{10}2}\right)
++\operatorname{Log}_{10}5-\operatorname{Log}_{10}2\\
+&=4\operatorname{Log}_{10}5+\operatorname{Log}_{10}5-\operatorname{Log}_{10}2\\
+&=5\operatorname{Log}_{10}5-\operatorname{Log}_{10}2\\
+&=5\times0.6990-0.3010\\
+&=3.495-0.301=3.194.
+\end{aligned}
+\]
+
+即所求值精确到小数三位为 $3.194$。
+
+\gkanswer{答案：$3.194$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+利用特殊角三角比，求 $\sin75^\circ$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+把 $75^\circ$ 拆为特殊角 $45^\circ$ 与 $30^\circ$ 之和，用正弦和角公式：
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\sin75^\circ
+&=\sin(45^\circ+30^\circ)\\
+&=\sin45^\circ\cos30^\circ+\cos45^\circ\sin30^\circ\\
+&=\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\cdot\frac12\\
+&=\frac{\sqrt6+\sqrt2}{4}.
+\end{aligned}
+\]
+
+\gkanswer{答案：$\sin75^\circ=\dfrac{\sqrt6+\sqrt2}{4}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+证明恒等式：
+
+\nopagebreak[4]
+\[
+(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2=2-2\cos(\alpha-\beta).
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+展开左端：
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+&(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2\\
+&=\cos^2\alpha-2\cos\alpha\cos\beta+\cos^2\beta
++\sin^2\alpha-2\sin\alpha\sin\beta+\sin^2\beta\\
+&=(\cos^2\alpha+\sin^2\alpha)+(\cos^2\beta+\sin^2\beta)
+-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta)\\
+&=2-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta).
+\end{aligned}
+\]
+
+\Needspace{5\baselineskip}
+由余弦差角公式 $\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$，所以
+
+\nopagebreak[4]
+\[
+(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2=2-2\cos(\alpha-\beta).
+\]
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+红旗工厂要围成一个周长为 $120$ 米的矩形场地可以存放原料。问矩形的长和宽应各取多少米，才能使存放场地的面积最大？并说明这最大面积的场地是什么形状？
+
+\begin{gktip}
+\textbf{选题说明}：源卷在第五题之后、第六题之前注明“以下三题任选做二题”，指第六、七、八三题任选做二题；本卷按原顺序全部转录。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设围成的矩形场地长为 $x$ 米，则宽为 $\dfrac{120-2x}{2}$ 米。依题意，矩形场地的面积
+
+\nopagebreak[4]
+\[
+S=x\cdot\frac{120-2x}{2}=x(60-x)=-(x-30)^2+900.
+\]
+
+\Needspace{5\baselineskip}
+当 $x=30$（米）时，$S$ 取最大值 $900$（平方米）；这时宽为
+
+\nopagebreak[4]
+\[
+\frac{120-2x}{2}=\frac{120-2\times30}{2}=30\text{（\text{米}）}.
+\]
+
+即长、宽相等，都为 $30$ 米时围成的面积最大，最大面积为 $900$ 平方米；此时场地是正方形。
+
+\gkanswer{答案：长、宽均为 $30$ 米（场地为正方形）时面积最大，最大面积为 $900$ 平方米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+有一正四棱台，上底边长是 $40$ 厘米，下底边长是 $52$ 厘米，高是 $8$ 厘米。求：
+
+（1） 它的下底面的面积是多少？
+
+（2） 它的侧面积是多少？
+
+（3） 它的容积是多少？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+正四棱台的下底面是边长为 $52$ 厘米的正方形，故下底面面积
+
+\nopagebreak[4]
+\[
+S_{\text{\text{下底}}}=52^2=2704\text{（\text{平方厘米}）}.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+正四棱台的侧面是四个全等的等腰梯形，梯形的上底为 $40$ 厘米、下底为 $52$ 厘米；正四棱台的高为 $8$ 厘米，故每个等腰梯形的高为
+
+\nopagebreak[4]
+\[
+\sqrt{\left(\frac{52-40}{2}\right)^2+8^2}
+=\sqrt{6^2+8^2}=10\text{（\text{厘米}）}.
+\]
+
+\Needspace{5\baselineskip}
+因此侧面积
+
+\nopagebreak[4]
+\[
+S_{\text{\text{侧}}}=4\times\frac{52+40}{2}\times10=1840\text{（\text{平方厘米}）}.
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+上底面积 $S_{\text{\text{上}}}=40^2=1600$ 平方厘米，下底面积 $S_{\text{\text{下}}}=52^2=2704$ 平方厘米，高 $h=8$ 厘米。由棱台体积公式，
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+V&=\frac13h\left(S_{\text{\text{上}}}+S_{\text{\text{下}}}+\sqrt{S_{\text{\text{上}}}S_{\text{\text{下}}}}\right)\\
+&=\frac13\times8\left(52^2+40^2+\sqrt{52^2\times40^2}\right)\\
+&=\frac83\,(2704+1600+2080)\\
+&=\frac83\times6384=17024\text{（\text{立方厘米}）}.
+\end{aligned}
+\]
+
+\gkanswer{答案（1）：$2704$ 平方厘米。}
+
+\gkanswer{答案（2）：$1840$ 平方厘米。}
+
+\gkanswer{答案（3）：$17024$ 立方厘米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+已知直线 $L_2$ 经过点 $(7,1)$ 并且与直线 $L_1$：$y=\dfrac13x+2$ 垂直，求直线 $L_2$ 的方程。
+
+\Needspace{5\baselineskip}
+\textbf{参考题 1．} 求证：
+
+\nopagebreak[4]
+\[
+1^3+2^3+3^3+\cdots+n^3=\left[\frac{n(n+1)}{2}\right]^2.
+\]
+
+\Needspace{5\baselineskip}
+\textbf{参考题 2．} 计算定积分的值：
+
+\nopagebreak[4]
+\[
+\int_0^{\frac{\pi}{4}}\cos2x\,dx.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+直线 $L_1$：$y=\dfrac13x+2$ 的斜率为 $\dfrac13$。因 $L_2\perp L_1$，故 $L_2$ 的斜率为 $-3$，其方程可写成
+
+\nopagebreak[4]
+\[
+y=-3x+b
+\]
+
+\Needspace{5\baselineskip}
+（$b$ 为 $L_2$ 的截距）。又 $L_2$ 过点 $(7,1)$，代入得
+
+\nopagebreak[4]
+\[
+1=-3\times7+b,
+\qquad
+b=22.
+\]
+
+\Needspace{5\baselineskip}
+所以 $L_2$ 的方程是
+
+\nopagebreak[4]
+\[
+y=-3x+22.
+\]
+
+\textbf{参考题 1}
+
+用数学归纳法证明。
+
+当 $n=1$ 时，左边 $=1^3=1$，右边 $=\left[\dfrac{1\cdot(1+1)}{2}\right]^2=1$，等式成立。
+
+\Needspace{5\baselineskip}
+假定 $n=k$ 时等式成立，即
+
+\nopagebreak[4]
+\[
+1^3+2^3+3^3+\cdots+k^3=\left[\frac{k(k+1)}{2}\right]^2.
+\]
+
+\Needspace{5\baselineskip}
+那么
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+1^3+2^3+3^3+\cdots+k^3+(k+1)^3
+&=\left[\frac{k(k+1)}{2}\right]^2+(k+1)^3\\
+&=\frac{(k+1)^2\left[k^2+4k+4\right]}{4}\\
+&=\frac{(k+1)^2(k+2)^2}{4}
+=\left[\frac{(k+1)(k+2)}{2}\right]^2.
+\end{aligned}
+\]
+
+\Needspace{5\baselineskip}
+即证得 $n=k+1$ 时等式也成立。故对任意自然数 $n$，都有
+
+\nopagebreak[4]
+\[
+1^3+2^3+3^3+\cdots+n^3=\left[\frac{n(n+1)}{2}\right]^2.
+\]
+
+\textbf{参考题 2}
+
+\Needspace{5\baselineskip}
+令 $u=2x$，则 $du=2\,dx$；当 $x=0$ 时 $u=0$，当 $x=\dfrac\pi4$ 时 $u=\dfrac\pi2$。于是
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\int_0^{\frac{\pi}{4}}\cos2x\,dx
+&=\frac12\int_0^{\frac{\pi}{2}}\cos u\,du\\
+&=\frac12\sin u\,\Bigg|_0^{\frac{\pi}{2}}\\
+&=\frac12\left(\sin\frac{\pi}{2}-\sin0\right)=\frac12.
+\end{aligned}
+\]
+
+\gkanswer{答案：$y=-3x+22$。}
+
+\end{answer}

@@ -1,0 +1,19 @@
+% 1977 年新疆卷（理科）第六题：圆弧拱桥，弦 AB 为跨径，C 为拱顶，
+% CD⊥AB 为主拱高，CD 延长线过圆心 O，OB=R（按源卷第 3 页布局）
+\begin{tikzpicture}[scale=0.72]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (8,0);
+  \coordinate (C) at (4,1.25);
+  \coordinate (D) at (4,0);
+  \coordinate (O) at (4,-5.775);
+  \draw[thick] (A) arc[start angle=124.68, end angle=55.32, radius=7.025];
+  \draw[thick] (A)--(B);
+  \draw[dashed,->] (C)--(O);
+  \draw[dashed,->] (B)--(O);
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+  \fill (C) circle (1.2pt) node[above left] {$C$};
+  \fill (D) circle (1.2pt) node[below left] {$D$};
+  \fill (O) circle (1.2pt) node[below] {$O$};
+  \node[right] at (6,-2.89) {$R$};
+\end{tikzpicture}

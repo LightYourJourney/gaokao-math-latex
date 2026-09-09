@@ -1,0 +1,24 @@
+% 1977 年甘肃卷第三题：△ABC 的外接圆，AD 为直径（A 右上、D 下偏左），
+% 弦 AB、BC、CA 实线，辅助线 DC 虚线（源卷解答“连接CD”所加），
+% ∠ABC（B 处）与 ∠DAC（A 处）画角弧（按源卷第 2 页布局）
+\begin{tikzpicture}[scale=0.9]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (60:2);
+  \coordinate (B) at (185:2);
+  \coordinate (C) at (300:2);
+  \coordinate (D) at (240:2);
+  \draw[thick] (O) circle (2);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (A)--(D);
+  \draw[dashed] (D)--(C);
+  \fill (A) circle (1.2pt) node[above right] {$A$};
+  \fill (B) circle (1.2pt) node[left] {$B$};
+  \fill (C) circle (1.2pt) node[right] {$C$};
+  \fill (D) circle (1.2pt) node[below] {$D$};
+  % ∠ABC 角弧：BA 方向约 32.5°，BC 方向约 -27.5°
+  \draw ($(B)+({0.5*cos(-27.5)},{0.5*sin(-27.5)})$)
+        arc[start angle=-27.5, end angle=32.5, radius=0.5];
+  % ∠DAC 角弧：AD 方向 -120°，AC 方向 -90°
+  \draw ($(A)+({0.55*cos(-120)},{0.55*sin(-120)})$)
+        arc[start angle=-120, end angle=-90, radius=0.55];
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+% 1977 年山西卷参考题 2：水库水闸（等腰梯形，上底 8 米、下底 4 米、高 10 米），
+% 水面与上底相齐（顶部水平线为水面线）；水深 x 米处取水平面积元（阴影条，高 dx），
+% 左侧标 x 米（水面到面积元的深度）、右侧标总高 10 米、底部标下底 4 米（按源卷第 4 页布局）
+\begin{tikzpicture}[scale=0.86,>=stealth]
+  % 水闸（倒梯形：上底宽、下底窄）
+  \coordinate (TL) at (0,3);
+  \coordinate (TR) at (5,3);
+  \coordinate (BL) at (1,0);
+  \coordinate (BR) at (4,0);
+  \draw[thick] (TL)--(BL)--(BR)--(TR)--cycle;
+  % 水面线（与上底相齐，两端延伸）
+  \draw[thick] (-0.5,3)--(5.7,3);
+  % 深度 x 处的水平面积元（阴影条，高 dx）
+  \draw (0.72,2.15) rectangle (4.28,2.35);
+  \foreach \x in {0.85,1.15,...,4.05}{
+    \draw (\x,2.15)--(\x+0.2,2.35);
+  }
+  \node[right] at (4.55,2.25) {$dx$};
+  % 左侧：x 米（水面到面积元）
+  \draw[<->] (-0.25,3)--(-0.25,2.15);
+  \node[left,rotate=90,anchor=center] at (-0.42,2.6) {$x\,\text{米}$};
+  % 右侧：总高 10 米
+  \draw[<->] (5.45,3)--(5.45,0);
+  \node[right,rotate=90,anchor=center] at (5.62,1.5) {$10\,\text{米}$};
+  % 底部：下底 4 米
+  \draw[<->] (1,-0.4)--(4,-0.4);
+  \node[below] at (2.5,-0.45) {$4\,\text{米}$};
+  % 顶部：上底 8 米
+  \draw (0,3.12)--(0,3.3);
+  \draw (5,3.12)--(5,3.3);
+  \draw[<->] (0,3.25)--(5,3.25);
+  \node[above] at (2.5,3.28) {$8\,\text{米}$};
+\end{tikzpicture}
