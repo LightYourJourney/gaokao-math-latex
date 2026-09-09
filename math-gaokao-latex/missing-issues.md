@@ -2383,3 +2383,37 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-0131
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1977 江苏卷》单页高清复核确认第 1(1) 末项印作 (-27/8)^(-1/2)。负数的负半次幂在实数范围内无定义，而该题设问为计算题；在没有答案页或权威勘误前，无法确认这是原题意还是排印误写。",
+  "fingerprint": "a29d7a800f89618e7ce06a40568f58d0612eaf758c2cd184617879b2a6850724",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-jiangsu",
+  "question_id": "gk-1977-regular-jiangsu-q01",
+  "resume_action": "取得更清晰源卷或权威勘误，确认第 1(1) 负数半次幂是否为排印误写；确认前保留题面原式，并不得擅自改成可计算表达式。",
+  "source_id": "src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0132
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1977 江苏卷》单页高清复核确认附加题 7 写作 lim(n→∞) sqrt(x)(sqrt(x+1)-sqrt(x))，表达式只含 x 且未定义 x 与 n 的关系。按常见误写将 x 改为 n 可得 1/2，但这不是当前源页的字面内容。",
+  "fingerprint": "e82c2c27808e45bf974fb65827b9062576a86a87cdef9cf822c4bd3a4617b2e8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-jiangsu",
+  "question_id": "gk-1977-regular-jiangsu-q06",
+  "resume_action": "取得更清晰源卷或权威勘误，确认附加题 7 的被开方变量是否应为 n；确认前保留源式，并将 1/2 仅标为假设下候选值。",
+  "source_id": "src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

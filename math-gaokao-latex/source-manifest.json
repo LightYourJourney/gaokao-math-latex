@@ -233,6 +233,14 @@
         "gk-1977-regular-inner-mongolia-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b28",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-jiangsu"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -242,7 +250,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7c9e63c2-728f-4fca-87ad-6b7691ab8327",
+  "last_transaction_id": "03be4644-f906-412e-9085-56ea4c3cebd7",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2625,9 +2633,61 @@
       "title": "1977 年·内蒙古卷·文科",
       "track": "arts",
       "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_江苏卷/figures/f1977_jiangsu_t3_right_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_jiangsu",
+        "id": "gk-1977-regular-jiangsu",
+        "note": "固定源为 A3 单页题面，正式题为第 1—6 题，附加题 7、8 不计入 question_count；第 1(1) 和附加题 7 的源面疑点已登记为待核问题。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "大题": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏"
+      },
+      "issue_ids": [
+        "ISSUE-0131",
+        "ISSUE-0132"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-jiangsu",
+      "production_state": "blocked",
+      "project_dir": "1977_江苏卷",
+      "question_count": 6,
+      "resume_action": "取得更清晰源卷或权威勘误，确认第 1(1) 负数半次幂是否为排印误写；确认前保留题面原式，并不得擅自改成可计算表达式。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_江苏_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_江苏_含解析.md",
+        "questions": "1977/1977_数学真题_江苏_试题.md",
+        "solution_body": "1977/1977_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608"
+      ],
+      "title": "1977 年·江苏卷",
+      "track": "none",
+      "year": 1977
     }
   ],
-  "revision": 1356,
+  "revision": 1361,
   "schema_version": 1,
   "sources": [
     {
@@ -4780,8 +4840,8 @@
       "exam_type": "regular",
       "git_blob_oid": "32614d369a262d61438f5b6f7e2bd876aff52980",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977江苏.pdf",
       "regions": [],
       "source_id": "src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608",
