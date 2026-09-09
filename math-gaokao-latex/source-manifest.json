@@ -257,6 +257,14 @@
         "gk-1977-regular-fujian-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b31",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-inner-mongolia-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -266,7 +274,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d54edd94-58bc-4bf2-b23b-71e02df2bd41",
+  "last_transaction_id": "4f28e3ed-3e5a-4055-a105-7928c55b0e42",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2820,9 +2828,65 @@
       "title": "1977 年·福建卷·理科",
       "track": "science",
       "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_内蒙古卷_理科/figures/f1977_inner_mongolia_science_t2_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_内蒙古卷_理科/figures/f1977_inner_mongolia_science_t5_boats.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_inner_mongolia_science",
+        "id": "gk-1977-regular-inner-mongolia-science",
+        "note": "固定源 PDF 是《内蒙古 1977 年高考数学试题解（理科）》式题面与解答合卷；第 1—4 页给出正式题面，第 1—6 页给出对应解答，末尾附加题不计入 question_count。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "内蒙古卷（理科）",
+        "structure": {
+          "大题": [
+            1,
+            6
+          ]
+        },
+        "track": "理科",
+        "variant": "内蒙古理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-inner-mongolia-science",
+      "production_state": "complete",
+      "project_dir": "1977_内蒙古卷_理科",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_内蒙古理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_内蒙古理_含解析.md",
+        "questions": "1977/1977_数学真题_内蒙古理_试题.md",
+        "solution_body": "1977/1977_数学真题_内蒙古理_解析正文.md"
+      },
+      "source_ids": [
+        "src-8ec8cb10c8fec895cb5c5f2a77157d09b137ad3ec7540ef6b88e4c5c0b379789"
+      ],
+      "title": "1977 年·内蒙古卷·理科",
+      "track": "science",
+      "year": 1977
     }
   ],
-  "revision": 1374,
+  "revision": 1381,
   "schema_version": 1,
   "sources": [
     {
@@ -4519,8 +4583,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f323a0aeec7823471b180745c52e123764533c25",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-inner-mongolia-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977内蒙古理.pdf",
       "regions": [],
       "source_id": "src-8ec8cb10c8fec895cb5c5f2a77157d09b137ad3ec7540ef6b88e4c5c0b379789",

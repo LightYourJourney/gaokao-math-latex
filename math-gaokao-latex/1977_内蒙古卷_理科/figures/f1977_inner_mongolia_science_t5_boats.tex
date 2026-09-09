@@ -1,0 +1,21 @@
+% 1977 年内蒙古卷理科第 5 题：两船航行示意图
+\begin{tikzpicture}[scale=0.68]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,5.0);
+  \coordinate (C) at (0,2.25);
+  \coordinate (D) at (2.8,5.0);
+  \draw[thick] (A)--(B);
+  \draw[thick] (B)--(D);
+  \draw[thick] (C)--(D);
+  \draw[dashed] (C)--(B);
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[left] {$B$};
+  \fill (C) circle (1.2pt) node[left] {$C$};
+  \fill (D) circle (1.2pt) node[right] {$D$};
+  \node[right] at (0,3.65) {甲船};
+  \node[above] at (1.35,5.0) {乙船};
+  \node[right] at (0,2.25) {$4x$};
+  \node[left] at (0,3.6) {$10-4x$};
+  \node[above] at (1.4,5.0) {$6x$};
+  \node at (1.0,4.1) {$60^\circ$};
+\end{tikzpicture}
