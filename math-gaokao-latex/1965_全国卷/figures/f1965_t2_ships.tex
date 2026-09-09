@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-1.25,1.25);
+  \coordinate (C) at (-0.72,2.75);
+  \draw[->] (0,-0.55) -- (0,3.45) node[above] {北};
+  \draw[->] (-2.2,0) -- (2.25,0) node[right] {东};
+  \node[left] at (-2.2,0) {西};
+  \node[below] at (0,-0.55) {南};
+  \draw[thick] (A) -- (B) -- (C);
+  \draw[thick,dashed] (A) -- (C);
+  \fill (A) circle (1.4pt) node[below right] {$A$};
+  \fill (B) circle (1.4pt) node[left] {$B$};
+  \fill (C) circle (1.4pt) node[above left] {$C$};
+  \node at (-0.95,0.82) {$49^\circ48'$};
+  \node at (-0.36,1.58) {$a$};
+  \node[below right] at (0.15,1.6) {甲船航向};
+  \node[right] at (-0.55,2.25) {乙船向北};
+\end{tikzpicture}

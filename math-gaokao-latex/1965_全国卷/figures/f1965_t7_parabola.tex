@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth]
+  \draw[->] (-0.35,0) -- (4.5,0) node[right] {$x$};
+  \draw[->] (0,-2.35) -- (0,2.35) node[above] {$y$};
+  \draw[domain=-2.1:2.1,smooth,variable=\t,thick]
+    plot ({0.5*\t*\t},{\t});
+  \coordinate (P1) at (3.2,1.7);
+  \coordinate (P2) at (2.6,-1.55);
+  \coordinate (P3) at (0.22,0.08);
+  \coordinate (Q1) at (0.92,0.89);
+  \coordinate (Q2) at (0.72,-0.74);
+  \draw[thick] (P1) -- (P2) -- (P3) -- cycle;
+  \draw[thick] (P1) -- (Q1) -- (P3);
+  \draw[thick] (P2) -- (Q2) -- (P3);
+  \draw[dashed] (P3) -- (Q1) (P3) -- (Q2);
+  \fill (P1) circle (1.3pt) node[above right] {$P_1$};
+  \fill (P2) circle (1.3pt) node[below right] {$P_2$};
+  \fill (P3) circle (1.3pt) node[left] {$P_3$};
+  \fill (Q1) circle (1.3pt) node[above right] {$Q_1$};
+  \fill (Q2) circle (1.3pt) node[below right] {$Q_2$};
+\end{tikzpicture}

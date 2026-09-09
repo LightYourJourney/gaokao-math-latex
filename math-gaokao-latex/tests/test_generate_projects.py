@@ -540,8 +540,33 @@ class ConversionInterfaceTests(unittest.TestCase):
             md2tex.ConversionContext(figure_map={}),
         )
 
-        self.assertIn("所以\n\n\\nopagebreak[4]\n\\[", result.text)
+        self.assertIn(
+            "\\Needspace{5\\baselineskip}\n所以\n\n\\nopagebreak[4]\n\\[",
+            result.text,
+        )
         self.assertEqual(result.text.count(r"\nopagebreak[4]"), 1)
+
+    def test_raw_display_math_keeps_the_introducing_line_with_the_formula(self):
+        result = md2tex.convert_markdown(
+            "因此\n\n\\[\nx=1.\n\\]\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(
+            "\\Needspace{5\\baselineskip}\n因此\n\n\\nopagebreak[4]\n\\[",
+            result.text,
+        )
+
+    def test_standalone_appendix_heading_reserves_following_question_space(self):
+        result = md2tex.convert_markdown(
+            "**附加题**\n\n（1）证明。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(
+            "\\Needspace{0.25\\textheight}\n\\textbf{附加题}",
+            result.text,
+        )
 
     def test_choice_answer_parentheses_do_not_split_across_lines(self):
         result = md2tex.convert_markdown(
@@ -585,6 +610,15 @@ class ConversionInterfaceTests(unittest.TestCase):
         )
         self.assertNotIn(r"\Needspace", ordinary.text)
 
+    def test_semantic_section_heading_uses_the_stronger_section_guard(self):
+        result = md2tex.convert_markdown(
+            "### 一、小题\n\n### 第 1 题\n\n题面。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\gkpart{一、小题}", result.text)
+        self.assertNotIn(r"\gksubpart{一、小题}", result.text)
+
     def test_statistical_appendix_stays_with_its_following_table(self):
         source = (
             "附：$K^2=1$，\n\n"
@@ -609,6 +643,15 @@ class ConversionInterfaceTests(unittest.TestCase):
             )
         self.assertEqual(len(caught.exception.warnings), 1)
         self.assertIn("图片无映射", caught.exception.warnings[0])
+
+    def test_conventional_ascii_figure_name_has_deterministic_fallback(self):
+        result = md2tex.convert_markdown(
+            "![新图](images/1965-t9-example.png)\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+        self.assertEqual(result.warnings, ())
+        self.assertEqual(result.referenced_figures, ("f1965_t9_example",))
+        self.assertIn(r"\input{figures/f1965_t9_example}", result.text)
 
     def test_lenient_mode_carries_the_warning_in_the_result(self):
         result = md2tex.convert_markdown(

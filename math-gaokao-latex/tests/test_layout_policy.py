@@ -20,13 +20,14 @@ class LayoutPolicyTests(unittest.TestCase):
         patterns = {
             "question": r"\\newenvironment\{question\}\{\\Needspace\{0\.15\\textheight\}\}\{\}",
             "answer": r"\\newenvironment\{answer\}\{\\Needspace\{0\.5\\textheight\}\}\{\}",
-            "gkpart": r"\\newcommand\{\\gkpart\}\[1\]\{\\Needspace\{0\.4\\textheight\}",
+            "gkpart": r"\\newcommand\{\\gkpart\}\[1\]\{\\Needspace\{0\.6\\textheight\}",
+            "gksubpart": r"\\newcommand\{\\gksubpart\}\[1\]\{\\Needspace\{6\\baselineskip\}",
         }
         for environment, pattern in patterns.items():
             self.assertRegex(
                 source,
                 re.compile(pattern),
-                msg=f"{environment} 环境必须在题块开始前保留 0.4\\textheight",
+                msg=f"{environment} 必须在结构块开始前保留足够版面空间",
             )
 
     def test_reviewed_pagination_boundaries_reserve_space_in_source(self):

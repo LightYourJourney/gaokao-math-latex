@@ -1,18 +1,18 @@
 {
-  "attempt_id": "b0078c33-ceba-461f-bf28-e7cc3b1cb9b4",
+  "attempt_id": "008fdf6d-dbf5-4317-bc82-c8d413fdae16",
   "dependency_tree": {
     "files": [
       {
         "path": "math-gaokao-latex/1952_全国卷/answers.tex",
-        "sha256": "878306418c99663d8f0f57bbaa30e918c87df5be8a42d883ca91923334c5fd75"
+        "sha256": "88062e6a27b914483076d73bf2eab9455c52e54fb763881a5607eb44a6f9f04a"
       },
       {
         "path": "math-gaokao-latex/1952_全国卷/answers_short.tex",
-        "sha256": "4f703626e0c214736040e0d752e0e355fdc047d7b22cff95d91a03dfb56ca1eb"
+        "sha256": "bf654c62d0c0ead25065d52c257249dd95a0a7f4da1cbd9583e23dd0abde5e5a"
       },
       {
         "path": "math-gaokao-latex/1952_全国卷/questions.tex",
-        "sha256": "e9f698803869bd999278f69cc5bb54e27d8d90d1d7b16cdb7199be0ca8d17af7"
+        "sha256": "0cb0e8071bfc88c86257a4303708414631e830f3b201db9338e31246f4941342"
       },
       {
         "path": "math-gaokao-latex/1952_全国卷/印刷版.tex",
@@ -32,7 +32,7 @@
       },
       {
         "path": "math-gaokao-latex/common/macros.tex",
-        "sha256": "5f4bbe7ea8a28328f9accbf046c62e6dd00808d01a00aaccbb2a84776682b322"
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
       },
       {
         "path": "math-gaokao-latex/common/preamble.tex",
@@ -43,7 +43,7 @@
         "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
       }
     ],
-    "tree_sha256": "cc76f446c7e076e595a3ecac02f5367aa9f5a6b70eb0472afc3f66f1a2f1e664"
+    "tree_sha256": "42f46d5a562efd568f72a77b129dee33671cc1486d41a37a7f4e06c7b7b92e42"
   },
   "editions": [
     {
@@ -67,7 +67,7 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1952_全国卷/build/试题版.pdf",
-        "sha256": "b2ae851790d96396f84df5377010d5c1f4109314c79e28eb6f0ffa21b05509cb",
+        "sha256": "b0590421b29363a42b7de73e5ba1c035670253874ac70b18a349e7049b9fa3a1",
         "size_bytes": 62908
       },
       "problems": [],
@@ -95,8 +95,8 @@
       "pdf": {
         "page_count": 15,
         "path": "math-gaokao-latex/1952_全国卷/build/解析版.pdf",
-        "sha256": "78b660b850192f5b88b679df2dca751ed663cb47b9aca85f21e943754353c561",
-        "size_bytes": 124889
+        "sha256": "71e472bc5ba8e57d330492270ac96745d4f383b9d9d8b8692ed93fa87c1fedff",
+        "size_bytes": 125017
       },
       "problems": [],
       "result": "succeeded",
@@ -123,8 +123,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1952_全国卷/build/简答版.pdf",
-        "sha256": "9615ac4319de232050df13b742dc76c34c64045376d46df4a9df0602113512a5",
-        "size_bytes": 76036
+        "sha256": "7033e1707566acb61899e8dd744b97f19c7933fd53b6b81d5c571779d8e5d578",
+        "size_bytes": 76038
       },
       "problems": [],
       "result": "succeeded",
@@ -135,7 +135,15 @@
       "log": {
         "errors": [],
         "missing_characters": [],
-        "overfull": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "482--483",
+            "text": "Underfull \\hbox (badness 1675) in paragraph at lines 482--483",
+            "width_pt": null
+          }
+        ],
         "undefined_references": []
       },
       "passes": [
@@ -151,32 +159,32 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1952_全国卷/build/印刷版.pdf",
-        "sha256": "cf813fee108f40d0ace612301105ab0504b9d90c929b1b260c32b797a1707342",
-        "size_bytes": 123975
+        "sha256": "2ffbae7aa3a8c271455697ed8d5bd3366b5c0aa4a7856892db04e7d5a327f882",
+        "size_bytes": 124087
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1952_全国卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-09T00:44:54+08:00",
+  "finished_at": "2026-09-09T11:41:52+08:00",
   "generation_input_tree": {
     "files": [
       {
         "path": "1952/1952_数学真题_答案要点.md",
-        "sha256": "022073f1ee1cc60729e101be9041c042894d1a583daac3ace9bf491296d8868f"
+        "sha256": "c43d292745451c05bb55dabaf66c450cbb16c70262b8e3a18606c92d80b5f346"
       },
       {
         "path": "1952/1952_数学真题_解析正文.md",
-        "sha256": "3046bdbe7cea9babbf8f806a9a4fc6df5b1506555081283150c58512a949a5ec"
+        "sha256": "95d81fe31fe9489758b28dcd1b8a3ec7bf7f74a24de543e822ae7170e8fe5465"
       },
       {
         "path": "1952/1952_数学真题_试题.md",
-        "sha256": "215b18b6258712818b972a8827cc37d53d4e3d53c7495adfefe1bbd35de447cc"
+        "sha256": "aa931902fa68323ea1588a490310b94b6d5ac238c4623f2f103bca68b410e967"
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "6670219379b21b59cd3d79800d38b39db41ca2dc672040e94cca8228c149aede"
+        "sha256": "6b92cea456e483e7a177a44c7b818ffbac271e90905911bbb86e571dc942315b"
       },
       {
         "path": "math-gaokao-latex/1952_全国卷/印刷版.tex",
@@ -231,15 +239,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "b0f41ed2b978b0f1ad621227898ffafdb14199f51befde63a951ec0f71af8e47"
+    "tree_sha256": "9da2a1af18c96543fc6668dc9cb1c215e20e27e6f466a5580320a5636c3eb564"
   },
   "input_projection": "55290eb2537332ca254267efd8f876aa584a43ac83db57efac24afbb66bc1e8d",
-  "manifest_revision": 1249,
+  "manifest_revision": 1302,
   "paper_id": "gk-1952-regular-national",
-  "previous_attempt_id": "179d0ddd-f72c-4fed-adfc-77d1ff1c1440",
+  "previous_attempt_id": "8d17dada-3918-486a-9603-c37a6472cb4c",
   "project_dir": "1952_全国卷",
   "schema_version": 1,
-  "started_at": "2026-09-09T00:37:59+08:00",
+  "started_at": "2026-09-09T11:41:43+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

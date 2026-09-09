@@ -42,9 +42,11 @@
          nobeforeafter]{\textbf{#1}}\par\smallskip}
 
 % ---------- 结构标题 ----------
-\newcommand{\gkpart}[1]{\Needspace{0.4\textheight}\subsection*{#1}\nopagebreak}     % 标题 + 首题
+% 结构标题后通常紧跟一个带 0.5\textheight 起始预留的解析题块；0.4 只够放标题，
+% 会把下一题整体推到下一页，留下孤立的「二、填空题」等页尾标题。
+\newcommand{\gkpart}[1]{\Needspace{0.6\textheight}\subsection*{#1}\nopagebreak}     % 标题 + 首题
 % （一）必考题 / 解析小问标题：块式加粗段，可自动换行（\paragraph 的 run-in 版式会溢出）
-\newcommand{\gksubpart}[1]{\Needspace{3\baselineskip}\par\medskip\noindent\textbf{#1}\par\nopagebreak\smallskip}
+\newcommand{\gksubpart}[1]{\Needspace{6\baselineskip}\par\medskip\noindent\textbf{#1}\par\nopagebreak\smallskip}
 
 % 罗马数字Ⅰ-Ⅻ（U+2160）与圈号①②③（U+2460）划入 CJK 字符类，
 % 用中文字体渲染——西文字体 Latin Modern 缺这些字形，否则整段静默丢字

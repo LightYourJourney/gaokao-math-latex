@@ -183,6 +183,14 @@
         "gk-1964-regular-national"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b22",
+      "issues": [],
+      "paper_ids": [
+        "gk-1965-regular-national"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -192,7 +200,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b3a01ce6-e6b6-458a-ac96-ce9619fb1446",
+  "last_transaction_id": "c57fef53-20f2-4f79-9868-c279348a69eb",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -1623,7 +1631,10 @@
         "track": "不分文理",
         "variant": "全国"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0119",
+        "ISSUE-0120"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
@@ -1681,7 +1692,10 @@
         "track": "不分文理",
         "variant": "全国"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0121",
+        "ISSUE-0122"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
@@ -1874,7 +1888,10 @@
         "track": "不分文理",
         "variant": "全国"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0123",
+        "ISSUE-0124"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
@@ -2100,9 +2117,84 @@
       "title": "1964 年·全国卷",
       "track": "none",
       "year": 1964
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1965_全国卷/figures/f1965_t1_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1965_全国卷/figures/f1965_t2_ships.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1965_全国卷/figures/f1965_t3_sphere.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1965_全国卷/figures/f1965_t5_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1965_全国卷/figures/f1965_t7_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1965_gaokao_national",
+        "id": "gk-1965-regular-national",
+        "note": "固定 PDF 第 1—3 页为 7 道正式题并列附加题，答案与解析从第 3 页开始至第 11 页；正弦/余弦对数表属于原卷辅助材料，附加题不计入正式题量。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          3,
+          11
+        ],
+        "paper": "全国卷",
+        "structure": {
+          "大题": [
+            5,
+            7
+          ],
+          "小题": [
+            1,
+            4
+          ]
+        },
+        "track": "不分文理",
+        "variant": "全国"
+      },
+      "issue_ids": [
+        "ISSUE-0117",
+        "ISSUE-0118"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1965-regular-national",
+      "production_state": "complete",
+      "project_dir": "1965_全国卷",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1965/1965_数学真题_答案要点.md",
+        "combined_rendered": "1965/1965_数学真题_含解析.md",
+        "questions": "1965/1965_数学真题_试题.md",
+        "solution_body": "1965/1965_数学真题_解析正文.md"
+      },
+      "source_ids": [
+        "src-99aa9774b233334342b4347d24a07b01e923220fff9e94ad7f2659f8dedca8a1"
+      ],
+      "title": "1965 年·全国卷",
+      "track": "none",
+      "year": 1965
     }
   ],
-  "revision": 1271,
+  "revision": 1324,
   "schema_version": 1,
   "sources": [
     {
@@ -3679,8 +3771,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c80a2614ef939f13b461c47fcf1a4fc94f44c56c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1965-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1965.pdf",
       "regions": [],
       "source_id": "src-99aa9774b233334342b4347d24a07b01e923220fff9e94ad7f2659f8dedca8a1",

@@ -7,7 +7,7 @@
   frontmatter / 一级二级卷名标题     -> 丢弃（章标题由 main.tex 提供）
   ## 一、选择题                      -> \\gkpart{...}
   ### 第 N 题（考点）                -> \\gksolhead{N}{考点}
-  ### / #### 其他标题                -> \\gksubpart{...}
+  ### / #### 其他标题                -> \\gksubpart{...}（章节语义标题统一走 \\gkpart）
   **N．** / **N．（12 分）**         -> \\gkti{N}（分值保留加粗）
   连续的选项行（A．… B．…）          -> gkopts 环境（列数按最长选项自适应）
   > 引用块                           -> gknotice / gktip（按内容分类；含"原卷影印件/配套文档"者丢弃）
@@ -31,6 +31,8 @@ from pathlib import Path
 from typing import List, Mapping, Sequence, Tuple
 
 # ---------- 配图映射：MD 图片基名 -> figures/ 下的 TikZ 文件名 ----------
+# FIGMAP 保留历史/中文图名的显式映射；ASCII 约定名 YYYY-tN-name 走下方确定性回退，
+# 这样新增年份只需登记 manifest figure，不必每次改共享转换器。显式映射优先。
 FIGMAP = {
     "2017理-t2-太极图": "f2017_taiji",     "2017文-t4-太极图": "f2017_taiji",
     "2017理-t7-三视图": "f2017li_t7_views",
@@ -124,6 +126,11 @@ FIGMAP = {
     "1964-t8-max": "f1964_t8_max",
     "1964-extra-rectangle": "f1964_extra_rectangle",
     "1964-extra-cube": "f1964_extra_cube",
+    "1965-t1-views": "f1965_t1_views",
+    "1965-t2-ships": "f1965_t2_ships",
+    "1965-t3-sphere": "f1965_t3_sphere",
+    "1965-t5-ellipse": "f1965_t5_ellipse",
+    "1965-t7-parabola": "f1965_t7_parabola",
 }
 
 EMOJI = "⚠️⚠✓✗📘⏳✅❌🔺"
@@ -293,9 +300,19 @@ def emit_quote(lines: List[str], sink: _Sink) -> List[str]:
 
 
 # ---------- 图片 ----------
+_CONVENTIONAL_FIGURE_NAME = re.compile(r"^\d{4}-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$")
+
+
+def conventional_figure_slug(name: str) -> str:
+    """把约定式 ASCII 图片名确定性转成 project figures slug。"""
+    if _CONVENTIONAL_FIGURE_NAME.fullmatch(name) is None:
+        return ""
+    return "f" + name.replace("-", "_")
+
+
 def emit_image(name: str, sink: _Sink) -> List[str]:
-    slug = sink.figure_map.get(name)
-    if slug is None:
+    slug = sink.figure_map.get(name) or conventional_figure_slug(name)
+    if not slug:
         sink.warnings.append(f"图片无映射：{name}")
         return [r"\begin{center}\fbox{图形缺失：" + conv_text(name) + r"}\end{center}"]
     sink.figures.append(slug)
@@ -311,6 +328,8 @@ HEAD_QNUM = re.compile(r"^\*\*(\d+)．([^*]*?)\*\*\s*(.*)$")
 IMG = re.compile(r"^!\[[^\]]*\]\(images/(.+?)\.png\)\s*$")
 OPTLINE = re.compile(r"^\s{0,4}[A-D]．")
 ANSLINE = re.compile(r"^\*\*([^*]*答案[^*]*)\*\*\s*$")
+SECTION_HEADING = re.compile(r"^(?:[一二三四五六七八九十]+、|附加题|选考题)")
+DISPLAY_OPENERS = ("$$", r"\[")
 
 
 def convert_block(lines: List[str], sink: _Sink) -> List[str]:
@@ -373,6 +392,29 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             i = j + 1
             continue
 
+        # 早期卷的来源稿还大量使用原生 `\[ ... \]`。成组保留其 LaTeX 内容，
+        # 不能让普通段落保护逻辑把结束行 `\]` 当成下一段的引导句；同时与 `$$`
+        # 块一样，在显示公式前保留软换页提示。
+        if ln.strip().startswith(r"\["):
+            s = ln.strip()
+            if s.startswith(r"\[") and r"\]" in s[2:]:
+                out.append(r"\nopagebreak[4]")
+                out.append(ln)
+                i += 1
+                continue
+            j = i + 1
+            while j < n and lines[j].strip() != r"\]":
+                j += 1
+            if j < n:
+                out.append(r"\nopagebreak[4]")
+                out.extend(lines[i:j + 1])
+            else:
+                sink.warnings.append(f"未闭合的 \\[ 块：{s[:50]}")
+                out.append(conv_inline(ln, sink))
+                j = i
+            i = j + 1
+            continue
+
         # --- 标题 ---
         if ln.startswith("#"):
             m = HEAD_SOL.match(ln)
@@ -384,7 +426,12 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             elif ln.startswith("####"):
                 out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip(), sink)}}}")
             elif ln.startswith("###"):
-                out.append(f"\\gksubpart{{{conv_inline(ln.lstrip('#').strip(), sink)}}}")
+                t = ln.lstrip("#").strip()
+                # 部分早期/地区卷的解析正文把“一、选择题”写成 ###，但它仍是章节
+                # 标题；若按普通题内小标题处理，后面的 answer 起始预留会把章节名
+                # 孤立在页尾。按标题语义统一走 gkpart，版式与规范 ## 写法一致。
+                command = "gkpart" if SECTION_HEADING.match(t) else "gksubpart"
+                out.append(f"\\{command}{{{conv_inline(t, sink)}}}")
             elif ln.startswith("##"):
                 t = ln.lstrip("#").strip()
                 # 卷名副标题（如"数学（全国 I 卷 · 理科）"）丢弃
@@ -475,6 +522,17 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
 
         # --- 普通段落 ---
         # 统计题的“附：公式”应与紧随的临界值表一起起排，避免公式与表格分居两页。
+        # 过渡句（如“因此”“第三步”）后紧跟显示公式时，只有公式前的软换页保护
+        # 不足以阻止过渡句孤悬页底；在引导句前预留几行，使引导句与公式同页。
+        j = i + 1
+        while j < n and not lines[j].strip():
+            j += 1
+        if ln.strip() and j < n and lines[j].strip().startswith(DISPLAY_OPENERS):
+            out.append(r"\Needspace{5\baselineskip}")
+        if ln.strip() == "**附加题**":
+            # 附加题是题面中的独立结构标题，不是普通加粗说明；保留标题与其
+            # 后续小问的连续空间，避免紧凑印刷版只在页尾留下一个“附加题”。
+            out.append(r"\Needspace{0.25\textheight}")
         if ln.strip().startswith("附："):
             j = i + 1
             while j < n and not lines[j].strip():
