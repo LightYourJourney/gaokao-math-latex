@@ -1,0 +1,347 @@
+{
+  "attempt_id": "e0331894-11e1-4309-9886-c534e8947cb6",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/answers.tex",
+        "sha256": "965936347dfc3348a50cc993f005ccf04c3aaff3965c2675f8248edb4bc6dc2a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/answers_short.tex",
+        "sha256": "fcd8a72c670d1d6d9ca7a4e74a3797f1fba9cff47a02dfc7c9e0110a0c6ae68a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/figures/f1977_t10_parabola.tex",
+        "sha256": "5cb24c3858e5b0a12aa3da43a2921ee8a84fa2645e20e37af2d9ddc20f2aaa6a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/questions.tex",
+        "sha256": "319c28ae8951187678d557e481b6cc2b3b5477bf5094afd6aa5ba9ff6cc602fc"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/印刷版.tex",
+        "sha256": "bfe75e4d19a97e6da26c9e2527b324638d9310e3229be8f43149d4d05a8135f7"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/简答版.tex",
+        "sha256": "2c8cc38ad26a84a8a7d8e13e886b3d6fba43eb17f6a9430cc9ea4e9c8d049498"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/解析版.tex",
+        "sha256": "6fa7ca3637c8419eb95ad242fac0cdd15656659485149e224165e90289063100"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/试题版.tex",
+        "sha256": "d66d5083519195603cb042080bbce142dbc8731782b6873680bad0ff02ea28fe"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "827aae642b9ecdff1079c438c33507ea588173ddd6d2ef107435438f1040bfbb"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 1,
+        "path": "math-gaokao-latex/1977_北京卷_文科/build/试题版.pdf",
+        "sha256": "a7b3084e3e2a17a68ce3afc64a3fd36ab72f01cbb9421550ca89a052118cc9b9",
+        "size_bytes": 63773
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_北京卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:1' on page 2 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:2' on page 2 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:3' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:4' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:5' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:6' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:7' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:8' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:9' on page 6 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/1977_北京卷_文科/build/解析版.pdf",
+        "sha256": "59b417731e3d0bf177a3300a69c09e15d1ebc521305acd42ae0650ead8fe3057",
+        "size_bytes": 97215
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_北京卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1977_北京卷_文科/build/简答版.pdf",
+        "sha256": "1708199749495e6d0c054175f00ff05f50a611460906034b626f41e342c03a4f",
+        "size_bytes": 71573
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_北京卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:1' on page 2 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:2' on page 2 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:3' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:4' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:5' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:6' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:7' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:8' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-beijing-arts:9' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1977_北京卷_文科/build/印刷版.pdf",
+        "sha256": "5bc9db52b0491d078723459b887758a9fb3482c9cf488ba9c325bcf9a3c65c34",
+        "size_bytes": 98099
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_北京卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-09T16:59:18+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_北京文_答案要点.md",
+        "sha256": "2fe5655a7f5ee8be9b4d437e400b8590b9dbd124a75c86811ded8f69d61dcf2c"
+      },
+      {
+        "path": "1977/1977_数学真题_北京文_解析正文.md",
+        "sha256": "bb6e026706528cec331d72f8f7cff25565b0589eefd5b65420dbecd57e43b36f"
+      },
+      {
+        "path": "1977/1977_数学真题_北京文_试题.md",
+        "sha256": "9993001cb31ee576308bb1f2017bdd170876d0cb6ba5a4d97a35108abdb5dcbc"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "6b92cea456e483e7a177a44c7b818ffbac271e90905911bbb86e571dc942315b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/figures/f1977_t10_parabola.tex",
+        "sha256": "5cb24c3858e5b0a12aa3da43a2921ee8a84fa2645e20e37af2d9ddc20f2aaa6a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/印刷版.tex",
+        "sha256": "bfe75e4d19a97e6da26c9e2527b324638d9310e3229be8f43149d4d05a8135f7"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/简答版.tex",
+        "sha256": "2c8cc38ad26a84a8a7d8e13e886b3d6fba43eb17f6a9430cc9ea4e9c8d049498"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/解析版.tex",
+        "sha256": "6fa7ca3637c8419eb95ad242fac0cdd15656659485149e224165e90289063100"
+      },
+      {
+        "path": "math-gaokao-latex/1977_北京卷_文科/试题版.tex",
+        "sha256": "d66d5083519195603cb042080bbce142dbc8731782b6873680bad0ff02ea28fe"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "056c9ba89707f1b0fe4098600beaedf0c589e4c262fae7264844a9f6054fb274"
+  },
+  "input_projection": "e18c89124026f3805a40a19f339ff84866b3161a65634aaac3300ae491c1bed5",
+  "manifest_revision": 1332,
+  "paper_id": "gk-1977-regular-beijing-arts",
+  "previous_attempt_id": null,
+  "project_dir": "1977_北京卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-09-09T16:59:08+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

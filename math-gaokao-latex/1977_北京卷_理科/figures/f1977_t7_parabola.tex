@@ -1,0 +1,12 @@
+% 1977 年北京卷理科第 7 题：二次函数图象
+\begin{tikzpicture}[scale=0.62,>=stealth]
+  \draw[->] (-1.1,0)--(7.1,0) node[right] {$x$};
+  \draw[->] (0,-5.2)--(0,5.0) node[above] {$y$};
+  \draw[thick,domain=0.2:5.8,smooth,variable=\x]
+    plot ({\x},{(\x-3)^2-4});
+  \fill (3,-4) circle (1.3pt) node[below right] {$\left(3,-4\right)$};
+  \fill (1,0) circle (1.2pt) node[above left] {$1$};
+  \fill (5,0) circle (1.2pt) node[above right] {$5$};
+  \fill (0,5) circle (1.2pt) node[left] {$5$};
+  \draw[dashed] (3,-4.6)--(3,4.5) node[above] {$x=3$};
+\end{tikzpicture}
