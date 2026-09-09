@@ -1,0 +1,14 @@
+% 1977 年四川卷第六题(2)：(x+2)^2+(y-1)^2=0 的图象——孤立点 (-2,1)（按源卷第 5 页图二布局）
+\begin{tikzpicture}[scale=0.62,>=stealth]
+  \draw[->] (-4.4,0)--(3.9,0) node[below] {$x$};
+  \draw[->] (0,-3.6)--(0,3.6) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \foreach \x in {-3,-2,-1,1,2,3}{
+    \draw[thin] (\x,0.08)--(\x,-0.08) node[below] {$\x$};
+  }
+  \foreach \y in {-3,-2,-1,1,2,3}{
+    \draw[thin] (0.08,\y)--(-0.08,\y) node[left] {$\y$};
+  }
+  \fill (-2,1) circle (2.2pt);
+  \node[above] at (-2,1.15) {$(-2,1)$};
+\end{tikzpicture}

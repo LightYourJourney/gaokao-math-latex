@@ -1,0 +1,331 @@
+{
+  "attempt_id": "1338802a-a991-4f36-af6b-cce74d8016cc",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/answers.tex",
+        "sha256": "a7015b23d7813628ddd614bd5f53cec76e344b5b638a000ba9e3a649dc5c2c11"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/answers_short.tex",
+        "sha256": "d2afbbad665181239c172c1a3be2c3423a68c8968d0f6c67de4f994c8e1990c0"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/figures/f1977_guangxi_arts_t2_circle.tex",
+        "sha256": "f33c15df7ee55f37c1b6262567254f5af958a3fd6851c00203b8a7e5dfad31cc"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/figures/f1977_guangxi_arts_t5_parabola.tex",
+        "sha256": "35da59dbf893dca959427ade01867e54fbb1fe9e2faa4d613fc51cfca8c04977"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/questions.tex",
+        "sha256": "64ec35148829d784b5f77053c60dcbcb9d37ac0d39d8536a56b1ccb383dfc65c"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/印刷版.tex",
+        "sha256": "5bcc2777d6c4b1470d7389febd0b0ba2bad87fe75146f7eae55b177689ee8db2"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/简答版.tex",
+        "sha256": "626b640087d8630b19d64d1d3c1d59fac7316c5c4a4971cadd35880341979137"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/解析版.tex",
+        "sha256": "17ae8dcdf9559e9f84a47b7b80b764c97fdb9be1d505dc70b602d0eab9742cef"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/试题版.tex",
+        "sha256": "fc4f4393f3ca56ff6ae52c490ab0098403620bfb745e144929d38c4f357fc295"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "a202b9e3d57608456ece7233016984f1e702b981dc471f2e4e7d27d96cd86994"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1977_广西卷_文科/build/试题版.pdf",
+        "sha256": "98a77ac1669c35cdbf34dbb85300429293c185955b49ec0ed1002d4eb3290719",
+        "size_bytes": 82024
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_广西卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:1' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:2' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:3' on page 6 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:4' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:5' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 8,
+        "path": "math-gaokao-latex/1977_广西卷_文科/build/解析版.pdf",
+        "sha256": "4a460f527664d07fdfea284ec87058e1466318963579562e332773e1e3f12de3",
+        "size_bytes": 130575
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_广西卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1977_广西卷_文科/build/简答版.pdf",
+        "sha256": "9dc8b1a641acc0bf23ef174490a5149b8cddda7a27320f3e4dd81d7485476096",
+        "size_bytes": 88487
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_广西卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:1' on page 2 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:2' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:3' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:4' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-guangxi-arts:5' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1977_广西卷_文科/build/印刷版.pdf",
+        "sha256": "d1f5b9675db3ab5e0288d4f9368c9293d24bebc232941372afbdeeb74bf03004",
+        "size_bytes": 131695
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_广西卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T05:58:52+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_广西文_答案要点.md",
+        "sha256": "5c1e8314cee2fd2b0150a7e736284550c1ca8fcdc2ae3025cbd4ab13ca9382d1"
+      },
+      {
+        "path": "1977/1977_数学真题_广西文_解析正文.md",
+        "sha256": "4c2b3bc4cd2f153e97661868b30059bebaa190eef7bfbcc68959a8aeb7e8ca6d"
+      },
+      {
+        "path": "1977/1977_数学真题_广西文_试题.md",
+        "sha256": "a7c2ee1e3f9796218e1cac5aa1865eee03bc8bad09944c389b63c700bc1f9623"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "c6cc9550409f038968693285179a511fad0d104a1ac6e02981014cae3442553d"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/figures/f1977_guangxi_arts_t2_circle.tex",
+        "sha256": "f33c15df7ee55f37c1b6262567254f5af958a3fd6851c00203b8a7e5dfad31cc"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/figures/f1977_guangxi_arts_t5_parabola.tex",
+        "sha256": "35da59dbf893dca959427ade01867e54fbb1fe9e2faa4d613fc51cfca8c04977"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/印刷版.tex",
+        "sha256": "5bcc2777d6c4b1470d7389febd0b0ba2bad87fe75146f7eae55b177689ee8db2"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/简答版.tex",
+        "sha256": "626b640087d8630b19d64d1d3c1d59fac7316c5c4a4971cadd35880341979137"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/解析版.tex",
+        "sha256": "17ae8dcdf9559e9f84a47b7b80b764c97fdb9be1d505dc70b602d0eab9742cef"
+      },
+      {
+        "path": "math-gaokao-latex/1977_广西卷_文科/试题版.tex",
+        "sha256": "fc4f4393f3ca56ff6ae52c490ab0098403620bfb745e144929d38c4f357fc295"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "17a83e89649c20097270070f8d0e0a2f650bee835488aa149de5895bfa90961c"
+  },
+  "input_projection": "4a76c1be70167d24c8d148ba6168ede670ae2f74812184756f8f8852dea30b2f",
+  "manifest_revision": 1422,
+  "paper_id": "gk-1977-regular-guangxi-arts",
+  "previous_attempt_id": null,
+  "project_dir": "1977_广西卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-09-10T05:58:22+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

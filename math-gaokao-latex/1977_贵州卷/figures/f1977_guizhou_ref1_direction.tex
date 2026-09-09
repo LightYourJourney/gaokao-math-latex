@@ -1,0 +1,22 @@
+% 1977 年贵州卷参考题一：直角坐标系、刻度、单位向量 i 与 j、
+% 点 (3,4) 与 (0,10)、虚线向两轴投影、方向向量 l 从 (3,4) 指向 (0,10)
+% （按源卷第 5 页布局）
+\begin{tikzpicture}[>=stealth,scale=0.85]
+  \draw[->] (-0.7,0)--(7,0) node[below] {$x$};
+  \draw[->] (0,-0.7)--(0,11) node[left] {$y$};
+  \foreach \t in {2,4,6} \draw (\t,0.12)--(\t,-0.12) node[below] {$\t$};
+  \foreach \t in {2,4,6,8,10} \draw (0.12,\t)--(-0.12,\t) node[left] {$\t$};
+  % 单位向量
+  \draw[->,thick] (0,0)--(0.9,0);
+  \node at (0.5,-0.55) {$\vec{i}$};
+  \draw[->,thick] (0,0)--(0,0.9);
+  \node at (-0.55,0.5) {$\vec{j}$};
+  % 虚线投影
+  \draw[dashed] (3,0)--(3,4)--(0,4);
+  % 方向向量
+  \draw[->,very thick] (3,4)--(0,10);
+  \node at (1.95,6.9) {$\vec{l}$};
+  \fill (3,4) circle (2pt) node[right] {$(3,4)$};
+  \fill (0,10) circle (2pt) node[above right] {$(0,10)$};
+  \node at (0,0) [below left] {$0$};
+\end{tikzpicture}

@@ -295,6 +295,28 @@
         "gk-1977-regular-zhejiang"
       ],
       "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b35",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-anhui-science",
+        "gk-1977-regular-anhui-arts",
+        "gk-1977-regular-guangdong",
+        "gk-1977-regular-sichuan"
+      ],
+      "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b36",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-yunnan",
+        "gk-1977-regular-guizhou",
+        "gk-1977-regular-guangxi-arts",
+        "gk-1977-regular-guangxi-science"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -304,7 +326,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "39c1ad98-6b2f-4734-a6ca-df65a6f7e897",
+  "last_transaction_id": "c330eed6-7e3d-468b-8c31-47080d8e8afa",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -3497,9 +3519,563 @@
       "title": "1977 年·浙江卷",
       "track": "none",
       "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_安徽卷_理科/figures/f1977_anhui_science_t2_trough.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_安徽卷_理科/figures/f1977_anhui_science_t9_rectangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_anhui_science",
+        "id": "gk-1977-regular-anhui-science",
+        "note": "1977 年安徽卷（理科），固定源 1977安徽理.pdf。",
+        "pages_q": [
+          1,
+          13
+        ],
+        "pages_s": [
+          1,
+          13
+        ],
+        "paper": "安徽卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "安徽"
+      },
+      "issue_ids": [
+        "ISSUE-0215",
+        "ISSUE-0216",
+        "ISSUE-0217",
+        "ISSUE-0218",
+        "ISSUE-0219",
+        "ISSUE-0220",
+        "ISSUE-0221",
+        "ISSUE-0222"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-anhui-science",
+      "production_state": "blocked",
+      "project_dir": "1977_安徽卷_理科",
+      "question_count": 8,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_安徽理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_安徽理_含解析.md",
+        "questions": "1977/1977_数学真题_安徽理_试题.md",
+        "solution_body": "1977/1977_数学真题_安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f"
+      ],
+      "title": "1977 年·安徽卷（理科）",
+      "track": "science",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_安徽卷_文科/figures/f1977_anhui_arts_t8_mountain.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_anhui_arts",
+        "id": "gk-1977-regular-anhui-arts",
+        "note": "1977 年安徽卷（文科），固定源 1977安徽文.pdf。",
+        "pages_q": [
+          1,
+          10
+        ],
+        "pages_s": [
+          1,
+          10
+        ],
+        "paper": "安徽卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽"
+      },
+      "issue_ids": [
+        "ISSUE-0223",
+        "ISSUE-0224",
+        "ISSUE-0225",
+        "ISSUE-0226",
+        "ISSUE-0227",
+        "ISSUE-0228",
+        "ISSUE-0229",
+        "ISSUE-0230",
+        "ISSUE-0231",
+        "ISSUE-0232"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-anhui-arts",
+      "production_state": "blocked",
+      "project_dir": "1977_安徽卷_文科",
+      "question_count": 10,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_安徽文_含解析.md",
+        "questions": "1977/1977_数学真题_安徽文_试题.md",
+        "solution_body": "1977/1977_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718"
+      ],
+      "title": "1977 年·安徽卷（文科）",
+      "track": "arts",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广东卷/figures/f1977_guangdong_ref2_rectangle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广东卷/figures/f1977_guangdong_t5_mountain.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广东卷/figures/f1977_guangdong_t6_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_guangdong",
+        "id": "gk-1977-regular-guangdong",
+        "note": "1977 年广东卷，固定源 1977广东(含今海南省).pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "广东卷",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "不分文理",
+        "variant": "广东"
+      },
+      "issue_ids": [
+        "ISSUE-0233",
+        "ISSUE-0234",
+        "ISSUE-0235",
+        "ISSUE-0236",
+        "ISSUE-0237",
+        "ISSUE-0238",
+        "ISSUE-0239",
+        "ISSUE-0271",
+        "ISSUE-0272"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-guangdong",
+      "production_state": "blocked",
+      "project_dir": "1977_广东卷",
+      "question_count": 7,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_广东_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_广东_含解析.md",
+        "questions": "1977/1977_数学真题_广东_试题.md",
+        "solution_body": "1977/1977_数学真题_广东_解析正文.md"
+      },
+      "source_ids": [
+        "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f"
+      ],
+      "title": "1977 年·广东卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 1,
+          "path": "1977_四川卷/figures/f1977_sichuan_ref1_region.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_四川卷/figures/f1977_sichuan_t2_cone.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_四川卷/figures/f1977_sichuan_t3_circle.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_四川卷/figures/f1977_sichuan_t5_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_四川卷/figures/f1977_sichuan_t6_graph1.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_四川卷/figures/f1977_sichuan_t6_graph2.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_四川卷/figures/f1977_sichuan_t6_graph3.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_sichuan",
+        "id": "gk-1977-regular-sichuan",
+        "note": "1977 年四川卷，固定源 1977四川(含今重庆市).pdf。",
+        "pages_q": [
+          1,
+          8
+        ],
+        "pages_s": [
+          1,
+          8
+        ],
+        "paper": "四川卷",
+        "structure": {
+          "题目": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "四川"
+      },
+      "issue_ids": [
+        "ISSUE-0240",
+        "ISSUE-0241",
+        "ISSUE-0242",
+        "ISSUE-0243",
+        "ISSUE-0244",
+        "ISSUE-0245",
+        "ISSUE-0273",
+        "ISSUE-0274",
+        "ISSUE-0275",
+        "ISSUE-0276"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-sichuan",
+      "production_state": "blocked",
+      "project_dir": "1977_四川卷",
+      "question_count": 6,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_四川_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_四川_含解析.md",
+        "questions": "1977/1977_数学真题_四川_试题.md",
+        "solution_body": "1977/1977_数学真题_四川_解析正文.md"
+      },
+      "source_ids": [
+        "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979"
+      ],
+      "title": "1977 年·四川卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_云南卷/figures/f1977_yunnan_ref1_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_云南卷/figures/f1977_yunnan_t3_circles.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_云南卷/figures/f1977_yunnan_t5_ship.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_云南卷/figures/f1977_yunnan_t6_circumcircle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_yunnan",
+        "id": "gk-1977-regular-yunnan",
+        "note": "1977 年云南卷，固定源 1977云南.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "云南卷",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "不分文理",
+        "variant": "云南"
+      },
+      "issue_ids": [
+        "ISSUE-0246",
+        "ISSUE-0247",
+        "ISSUE-0248",
+        "ISSUE-0249",
+        "ISSUE-0250",
+        "ISSUE-0251",
+        "ISSUE-0252"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-yunnan",
+      "production_state": "blocked",
+      "project_dir": "1977_云南卷",
+      "question_count": 7,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_云南_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_云南_含解析.md",
+        "questions": "1977/1977_数学真题_云南_试题.md",
+        "solution_body": "1977/1977_数学真题_云南_解析正文.md"
+      },
+      "source_ids": [
+        "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687"
+      ],
+      "title": "1977 年·云南卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_贵州卷/figures/f1977_guizhou_ref1_direction.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_贵州卷/figures/f1977_guizhou_t3_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_guizhou",
+        "id": "gk-1977-regular-guizhou",
+        "note": "1977 年贵州卷，固定源 1977贵州.pdf。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "贵州卷",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "文理合卷（文科做前 5 题）",
+        "variant": "贵州"
+      },
+      "issue_ids": [
+        "ISSUE-0253",
+        "ISSUE-0254",
+        "ISSUE-0255",
+        "ISSUE-0256",
+        "ISSUE-0257",
+        "ISSUE-0258",
+        "ISSUE-0259",
+        "ISSUE-0260"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-guizhou",
+      "production_state": "blocked",
+      "project_dir": "1977_贵州卷",
+      "question_count": 8,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_贵州_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_贵州_含解析.md",
+        "questions": "1977/1977_数学真题_贵州_试题.md",
+        "solution_body": "1977/1977_数学真题_贵州_解析正文.md"
+      },
+      "source_ids": [
+        "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39"
+      ],
+      "title": "1977 年·贵州卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_广西卷_文科/figures/f1977_guangxi_arts_t2_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_广西卷_文科/figures/f1977_guangxi_arts_t5_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_guangxi_arts",
+        "id": "gk-1977-regular-guangxi-arts",
+        "note": "1977 年广西卷（文科），固定源 1977广西文.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "广西卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            5
+          ]
+        },
+        "track": "文科",
+        "variant": "广西"
+      },
+      "issue_ids": [
+        "ISSUE-0261",
+        "ISSUE-0262",
+        "ISSUE-0263",
+        "ISSUE-0264",
+        "ISSUE-0265"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-guangxi-arts",
+      "production_state": "blocked",
+      "project_dir": "1977_广西卷_文科",
+      "question_count": 5,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_广西文_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_广西文_含解析.md",
+        "questions": "1977/1977_数学真题_广西文_试题.md",
+        "solution_body": "1977/1977_数学真题_广西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644"
+      ],
+      "title": "1977 年·广西卷（文科）",
+      "track": "arts",
+      "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西卷_理科/figures/f1977_guangxi_science_t3_quadrilateral.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西卷_理科/figures/f1977_guangxi_science_t4_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西卷_理科/figures/f1977_guangxi_science_t5_part.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西卷_理科/figures/f1977_guangxi_science_tr2_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_guangxi_science",
+        "id": "gk-1977-regular-guangxi-science",
+        "note": "1977 年广西卷（理科），固定源 1977广西理.pdf。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "广西卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            5
+          ]
+        },
+        "track": "理科",
+        "variant": "广西"
+      },
+      "issue_ids": [
+        "ISSUE-0266",
+        "ISSUE-0267",
+        "ISSUE-0268",
+        "ISSUE-0269",
+        "ISSUE-0270"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-guangxi-science",
+      "production_state": "blocked",
+      "project_dir": "1977_广西卷_理科",
+      "question_count": 5,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_广西理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_广西理_含解析.md",
+        "questions": "1977/1977_数学真题_广西理_试题.md",
+        "solution_body": "1977/1977_数学真题_广西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4"
+      ],
+      "title": "1977 年·广西卷（理科）",
+      "track": "science",
+      "year": 1977
     }
   ],
-  "revision": 1415,
+  "revision": 1431,
   "schema_version": 1,
   "sources": [
     {
@@ -5148,8 +5724,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9ebef55aa82bd27be2a4c7c330d1226c49b7d5e7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-yunnan",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977云南.pdf",
       "regions": [],
       "source_id": "src-9942a25450991741b525f62ca05393e08c7ba6534955f56776532adf87aa3687",
@@ -5292,8 +5868,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0b70d0ae68cac513a5ee75c037e12424a258af9b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-sichuan",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977四川(含今重庆市).pdf",
       "regions": [],
       "source_id": "src-2ba72d23bef8bd52e9577b33ef8e8041dc5e4480414c42048c5e4ca4d2d4c979",
@@ -5364,8 +5940,8 @@
       "exam_type": "regular",
       "git_blob_oid": "363ca1043ce5c7a880cfc3e8ebd1ba1132970ffe",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977安徽文.pdf",
       "regions": [],
       "source_id": "src-7e099eb7b1f60b597d4fb6531a8f7e95702a5bdb36ed891ce68ecaa09794a718",
@@ -5388,8 +5964,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bc020a630763b9f5df6da0d2bb2a39285bc129cb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977安徽理.pdf",
       "regions": [],
       "source_id": "src-d6811b4ee90fcb4c689f1ce1098e95218c259c8936d940e787689bf447f5775f",
@@ -5484,8 +6060,8 @@
       "exam_type": "regular",
       "git_blob_oid": "82f6e5cff329ac03e3b300b29354c472e41c549f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-guangdong",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977广东(含今海南省).pdf",
       "regions": [],
       "source_id": "src-4b137443f3517a495249741d7865a35219b34a43df024edffed5e5d2a599a93f",
@@ -5508,8 +6084,8 @@
       "exam_type": "regular",
       "git_blob_oid": "91b0a40b02aa443333a50c0dfd3f1ffc7dfb9607",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-guangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977广西文.pdf",
       "regions": [],
       "source_id": "src-5454c05cffc2574b95187a0c039a157459a59c77dc5a20534f9e9a03cd7be644",
@@ -5532,8 +6108,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6fc7f947aa7984e02789a98339147f603e427f4d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-guangxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977广西理.pdf",
       "regions": [],
       "source_id": "src-6227c6ae2acbc473c193ea0d0b1322cfe349c985e795b71f851f5c870db030e4",
@@ -5964,8 +6540,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5ef8bcaeb2f7f430f5f427910617dde9655bd468",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-guizhou",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977贵州.pdf",
       "regions": [],
       "source_id": "src-565ee99d2452268215c074d90a9c421a328d5a3b72399fb539edefd863c6bc39",
