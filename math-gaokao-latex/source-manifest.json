@@ -217,6 +217,14 @@
         "gk-1977-regular-tianjin"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b26",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-hebei"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -226,7 +234,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c476e0d8-3254-4366-9218-27934eb5730f",
+  "last_transaction_id": "6f5a935f-bfe3-4883-8a37-73571cd22000",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2497,9 +2505,66 @@
       "title": "1977 年·天津卷",
       "track": "none",
       "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_河北卷/figures/f1977_hebei_t2_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_河北卷/figures/f1977_hebei_t5_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_河北卷/figures/f1977_hebei_t7_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_hebei",
+        "id": "gk-1977-regular-hebei",
+        "note": "固定源为 A3 单页题面，正式题量为 1—8；第 9 题按原卷附加题保留，不计入 question_count。第 6 题单位严格按源卷转录为容积 208 立方米、高 4 分米。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "河北卷",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "不分文理",
+        "variant": "河北"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-hebei",
+      "production_state": "complete",
+      "project_dir": "1977_河北卷",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_河北_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_河北_含解析.md",
+        "questions": "1977/1977_数学真题_河北_试题.md",
+        "solution_body": "1977/1977_数学真题_河北_解析正文.md"
+      },
+      "source_ids": [
+        "src-949352e12ac86ab8def1257e5b88c8835f1cda38bacfe1fb3628275ba125ed28"
+      ],
+      "title": "1977 年·河北卷",
+      "track": "none",
+      "year": 1977
     }
   ],
-  "revision": 1339,
+  "revision": 1346,
   "schema_version": 1,
   "sources": [
     {
@@ -4724,8 +4789,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a6ed6d2aa361b8c53e8bab7becf0a263128bcd71",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-hebei",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977河北.pdf",
       "regions": [],
       "source_id": "src-949352e12ac86ab8def1257e5b88c8835f1cda38bacfe1fb3628275ba125ed28",
