@@ -2536,3 +2536,154 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0140
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "8219fc4025d627166c7b07c21dce8fda6f2e42a0c52f1dae03a5f16192464b93",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q01",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0141
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3478019ad4ca74436bc782f647689e173e4c5ef0e50a35be87b0f59f3564635a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q02",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0142
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0e4adbabde37fcb0c301a4f0b7667c89e4a13cb6dc350a49a0441aa7bed1ddbb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q03",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0143
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2bb75832f9eae493eb6bc3665887a58f23915dcec79775faa9b301f6df258362",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q04",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0144
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "93f400b4d5924dfea3a35726a49992134fd7ff8a57113606972f41586a73a979",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q05",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0145
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "47aed3e61278d44e9c362b1cd337202114da974bc3872cc7db87617187caf012",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q06",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0146
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "02e1f24fe071e5fc4050c4bd7c5efabd9f06c1b9fb06b4be2b4f039993d92183",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q07",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0147
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bd6b72a30cb71b61c5191815f43c9b6390bca474aef936bef2a863b47feddfd5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q08",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0148
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "758b5c137a0bc9dccbc6d488f40ac04b21d71e097498327fc687f8c471a1ec99",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q09",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0149
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0635736d447c8e2f13a3f78060f4739479eaf6c20546a39bd50f95801dd75cc1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-henan",
+  "question_id": "gk-1977-regular-henan-q10",
+  "resume_action": "已完成：主会话逐页视觉核对（p1—p6 书页83—87）确认题面转录一致；两处源卷特征（第九题小问跳号、第十题解答方程漏零）已在题面/解析留注。",
+  "source_id": "src-be5fe5b27d4e762a3216a92b1836d799b7f78e554f4e322d34d61b3f123fe96a",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
