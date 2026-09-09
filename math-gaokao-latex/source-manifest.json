@@ -209,6 +209,14 @@
         "gk-1977-regular-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-tianjin"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -218,7 +226,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c884917a-abd7-4fc4-8ade-51f6da3b29ad",
+  "last_transaction_id": "c476e0d8-3254-4366-9218-27934eb5730f",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2429,9 +2437,69 @@
       "title": "1977 年·北京卷·理科",
       "track": "science",
       "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_天津卷/figures/f1977_tianjin_t2_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_天津卷/figures/f1977_tianjin_t2_storage.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_天津卷/figures/f1977_tianjin_t4_height.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_tianjin",
+        "id": "gk-1977-regular-tianjin",
+        "note": "固定源为 A3 单页题面，正式题量为 1—5；第 6、7 题按原卷附加题保留，不计入 question_count。第 1(1) 题在源页上设问不完整，已登记阻断问题。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "题目": [
+            1,
+            5
+          ]
+        },
+        "track": "不分文理",
+        "variant": "天津"
+      },
+      "issue_ids": [
+        "ISSUE-0127",
+        "ISSUE-0128"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-tianjin",
+      "production_state": "blocked",
+      "project_dir": "1977_天津卷",
+      "question_count": 5,
+      "resume_action": "取得更清晰排印件或独立权威版本，确认第 1(1) 缺失的条件/设问；在确认前保留源页可见文字，不能补写。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_天津_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_天津_含解析.md",
+        "questions": "1977/1977_数学真题_天津_试题.md",
+        "solution_body": "1977/1977_数学真题_天津_解析正文.md"
+      },
+      "source_ids": [
+        "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24"
+      ],
+      "title": "1977 年·天津卷",
+      "track": "none",
+      "year": 1977
     }
   ],
-  "revision": 1334,
+  "revision": 1339,
   "schema_version": 1,
   "sources": [
     {
@@ -4248,8 +4316,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6a4f1ebdd44f4d115385be63a81f8746499f85a1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-tianjin",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977天津.pdf",
       "regions": [],
       "source_id": "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24",

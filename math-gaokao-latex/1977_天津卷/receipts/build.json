@@ -1,0 +1,339 @@
+{
+  "attempt_id": "7b268c03-cb7d-4367-a8d2-225e003b5095",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_天津卷/answers.tex",
+        "sha256": "6a65656b0896befb6ccae46ed3ff80290d4fa94e6296d5e73184f8ee392e0429"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/answers_short.tex",
+        "sha256": "a8701759f867506110a5d5387626112cc54878a276da79ff718201ce7be0aba9"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t2_circle.tex",
+        "sha256": "7ab413d49baf3193c6667f98e02f6ba2a71cf2a1572eb06751b605ade4eb5521"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t2_storage.tex",
+        "sha256": "4ddcb7b32be6bfed745cccd4f1888a694897aa6178650f7ff65a96ca1f8d1249"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t4_height.tex",
+        "sha256": "6aeab164d7af0648c430c41bc9ab89efd04938c3dd64911545e9449002ca1ef3"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/questions.tex",
+        "sha256": "1eb3e0b286b77190a1314b44e439df711e7fe7c08dec61d50801e9d4b45b7754"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/印刷版.tex",
+        "sha256": "1e4aaaa8517c21beb62b3f666bd2f420a87cc64e3d382ca648cfdc1b0786b060"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/简答版.tex",
+        "sha256": "3253632df63e1288a168489032414ed76d60dede589fc629af0bc205127ede1b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/解析版.tex",
+        "sha256": "033aca0f77f8040564b57520a49533e7e61ba84c9b12b53b9641cdf573d672d5"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/试题版.tex",
+        "sha256": "e37527105120de99dde769c91ae9ec5e2e05a7db36d53632a6957968c3f38ae8"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "b51e034265dc2f06bd411f65d2eca03cc12748c97865ac7e8dd1cd5afefa3bcd"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1977_天津卷/build/试题版.pdf",
+        "sha256": "1904e64e6605f8b80961fc0e87442f638c6ba44666fb41b559f2bd539eccaa46",
+        "size_bytes": 80073
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_天津卷/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:1' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:2' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:3' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:4' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:5' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 9,
+        "path": "math-gaokao-latex/1977_天津卷/build/解析版.pdf",
+        "sha256": "ef7944c97f01f93f8dce1a829191e67b2234984573ccfd3a035a5b32b47a3c01",
+        "size_bytes": 125896
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_天津卷/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 4,
+        "path": "math-gaokao-latex/1977_天津卷/build/简答版.pdf",
+        "sha256": "54f11e2d402d3f9566fd939e41190bcd7bc4d6f4cd95c98fe799fd0d9ee0f9b8",
+        "size_bytes": 87566
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_天津卷/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:2' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:3' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:4' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-tianjin:5' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 8,
+        "path": "math-gaokao-latex/1977_天津卷/build/印刷版.pdf",
+        "sha256": "4cf12563a9f672be5e36961f278f0a4ad453dfc48759fabdef5786ceaf30e834",
+        "size_bytes": 126694
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_天津卷/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-09T17:25:26+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_天津_答案要点.md",
+        "sha256": "5681c5d9f993c6a07e195b3b6716b3051ff657c98e037fc78513cf3f6166c689"
+      },
+      {
+        "path": "1977/1977_数学真题_天津_解析正文.md",
+        "sha256": "909ceebf4c686c2a83a610a2cabc1f2a3b8aab870ff55a806e95081c5b41ab91"
+      },
+      {
+        "path": "1977/1977_数学真题_天津_试题.md",
+        "sha256": "5b969c7cd1ece3cf05c7cde3acb28a4ed4edb58d02ab95495eb2b1026dff16f1"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "6b92cea456e483e7a177a44c7b818ffbac271e90905911bbb86e571dc942315b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t2_circle.tex",
+        "sha256": "7ab413d49baf3193c6667f98e02f6ba2a71cf2a1572eb06751b605ade4eb5521"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t2_storage.tex",
+        "sha256": "4ddcb7b32be6bfed745cccd4f1888a694897aa6178650f7ff65a96ca1f8d1249"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/figures/f1977_tianjin_t4_height.tex",
+        "sha256": "6aeab164d7af0648c430c41bc9ab89efd04938c3dd64911545e9449002ca1ef3"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/印刷版.tex",
+        "sha256": "1e4aaaa8517c21beb62b3f666bd2f420a87cc64e3d382ca648cfdc1b0786b060"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/简答版.tex",
+        "sha256": "3253632df63e1288a168489032414ed76d60dede589fc629af0bc205127ede1b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/解析版.tex",
+        "sha256": "033aca0f77f8040564b57520a49533e7e61ba84c9b12b53b9641cdf573d672d5"
+      },
+      {
+        "path": "math-gaokao-latex/1977_天津卷/试题版.tex",
+        "sha256": "e37527105120de99dde769c91ae9ec5e2e05a7db36d53632a6957968c3f38ae8"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "5cac3578897ef15ac9cb4086d2aa66876b85e507a887d3d64882464eca4e60f9"
+  },
+  "input_projection": "ea85811d67e02e71dace5d7153daa7bbdac19d0ee28a3c8d6378a3f3aae7c0b1",
+  "manifest_revision": 1337,
+  "paper_id": "gk-1977-regular-tianjin",
+  "previous_attempt_id": null,
+  "project_dir": "1977_天津卷",
+  "schema_version": 1,
+  "started_at": "2026-09-09T17:25:16+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

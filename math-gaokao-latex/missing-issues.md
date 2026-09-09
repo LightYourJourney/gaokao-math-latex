@@ -2315,3 +2315,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-0127
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：第 1(1) 行印作“在什么条件下，y/(2x)”后立即列出“是正数、是负数、等于零、没有意义”四项，未见可判定的条件或完整设问。",
+  "fingerprint": "bf1c895f6d8c21e4bbba57cd71d93051b4418f34ebabe521bef76dc5afa88ffb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tianjin",
+  "question_id": "gk-1977-regular-tianjin-q01",
+  "resume_action": "取得更清晰排印件或独立权威版本，确认第 1(1) 缺失的条件/设问；在确认前保留源页可见文字，不能补写。",
+  "source_id": "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0128
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：第 1(1) 行印作“在什么条件下，y/(2x)”后立即列出“是正数、是负数、等于零、没有意义”四项，未见可判定的条件或完整设问。",
+  "fingerprint": "e009d5c9f80a8158077909d5e32eb705b8fc4e8c54f5edbc9c9dbe5ad1de9393",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-tianjin",
+  "question_id": "gk-1977-regular-tianjin-q01",
+  "resume_action": "先确认第 1(1) 的完整设问，再重做该小问答案、盲核与 provenance；其余小问不受该缺口影响。",
+  "source_id": "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
