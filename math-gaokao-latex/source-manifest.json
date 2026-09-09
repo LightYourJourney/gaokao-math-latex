@@ -249,6 +249,14 @@
         "gk-1977-regular-fujian-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b30",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-fujian-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -258,7 +266,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6c5bf44e-b3be-44ec-96ba-3e6f1fa577bf",
+  "last_transaction_id": "d54edd94-58bc-4bf2-b23b-71e02df2bd41",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -2751,9 +2759,70 @@
       "title": "1977 年·福建卷·文科",
       "track": "none",
       "year": 1977
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1977_福建卷_理科/figures/f1977_fujian_science_t1_trapezoid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_福建卷_理科/figures/f1977_fujian_science_t1_v_block.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_福建卷_理科/figures/f1977_fujian_science_t5_obstacle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_fujian_science",
+        "id": "gk-1977-regular-fujian-science",
+        "note": "固定源为 A3 单页题面，正式题为第 1—7 题；第 1 题含十个小问，附加题 8、9 不计入 question_count。第 5、第 6、第 7 的源面参数或条件异常已登记为阻断问题。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "福建卷（理科）",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [
+        "ISSUE-0137",
+        "ISSUE-0138",
+        "ISSUE-0139"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-fujian-science",
+      "production_state": "blocked",
+      "project_dir": "1977_福建卷_理科",
+      "question_count": 7,
+      "resume_action": "取得更清晰源卷或权威答案，确认第 5 题一个角度、点位或图示是否存在排印错误；确认前不得补造 AP 距离。",
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_福建理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_福建理_含解析.md",
+        "questions": "1977/1977_数学真题_福建理_试题.md",
+        "solution_body": "1977/1977_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359"
+      ],
+      "title": "1977 年·福建卷·理科",
+      "track": "science",
+      "year": 1977
     }
   ],
-  "revision": 1369,
+  "revision": 1374,
   "schema_version": 1,
   "sources": [
     {
@@ -5170,8 +5239,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bd5c4f5de1b02d1bb3df4a322bcadc8efefea6c0",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977福建理.pdf",
       "regions": [],
       "source_id": "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359",

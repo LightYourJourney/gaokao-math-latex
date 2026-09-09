@@ -2485,3 +2485,54 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0137
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1977 福建卷理科》第 5 题高清复核确认 AB=AC=50、∠BAC=60°、∠ABP=120°、∠ACP=135°。前三项使 ABC 为等边三角形；按普通平面角定义，从 B、C 按后两角作出的射线没有共同交点 P，与源图示不相容。",
+  "fingerprint": "1e5373a75b924bd0ef0301b88f6ab271bc2d4c226d87f47aa8f033c2a08facb9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-science",
+  "question_id": "gk-1977-regular-fujian-science-q05",
+  "resume_action": "取得更清晰源卷或权威答案，确认第 5 题一个角度、点位或图示是否存在排印错误；确认前不得补造 AP 距离。",
+  "source_id": "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0138
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 6 题高清局部确认双曲线分母印作 24α、16cotα，且仅说明 α 为锐角。将 A=(4√3,4) 代入得到 2/α-tanα=1；公式参数形式与角度单位异常，缺少答案页无法确认是否为排印误写。",
+  "fingerprint": "e93d49a202502825928a852edbf60be769aa115e4f57ef105938b725d3e353a6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-science",
+  "question_id": "gk-1977-regular-fujian-science-q06",
+  "resume_action": "取得更清晰源卷或权威答案，确认 24α 的参数形式及 α 的单位；确认前保留按字面推导的隐式方程和候选数值。",
+  "source_id": "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0139
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 7 题单页高清复核确认数列写作 1、2、4、…，同时断言其前 n 项和为三次多项式 a+bn+cn^2+dn^3。实际几何级数前 n 项和为 2^n-1，不可能对所有 n 等于三次多项式；按前四项拟合还会在 S_4 处矛盾。",
+  "fingerprint": "1cb946c6451b18f90fc71003ab0520fb0f060bade9d70a1af67e0adec0ac7e52",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-science",
+  "question_id": "gk-1977-regular-fujian-science-q07",
+  "resume_action": "取得更清晰源卷或权威答案，确认第 7 题的数列或 S_n 表达式是否存在排印错误；确认前保留矛盾证明，不补造 a、b、c、d。",
+  "source_id": "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
