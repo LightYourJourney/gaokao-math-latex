@@ -1,0 +1,15 @@
+% 1977 年福建卷文科第 1(4) 题：三角形中的平行截线
+\begin{tikzpicture}[scale=0.85]
+  \coordinate (A) at (2.4,3.5);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (5.1,0);
+  \coordinate (M) at ($(A)!0.42!(B)$);
+  \coordinate (N) at ($(A)!0.42!(C)$);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (M)--(N);
+  \fill (A) circle (1.2pt) node[above] {$A$};
+  \fill (B) circle (1.2pt) node[below left] {$B$};
+  \fill (C) circle (1.2pt) node[below right] {$C$};
+  \fill (M) circle (1.2pt) node[left] {$M$};
+  \fill (N) circle (1.2pt) node[right] {$N$};
+\end{tikzpicture}

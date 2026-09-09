@@ -2417,3 +2417,71 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0133
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1977 福建文科数学》单页第 3 题只给出十月份产量 1000 台、一月至十月完成原任务及年底前再生产 2310 台，未给出一月至十月各月产量或变化规律。第 3(1) 可在补充‘十一、十二月从十月按同一增长率递增’的假设下得 10%，但第 3(2) 的原计划年产量仍无法由当前源面唯一确定。",
+  "fingerprint": "6d37f3dded3be808f9db7104478aacd6cb2bd6337e69544421a5c3cf0a86b20f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-arts",
+  "question_id": "gk-1977-regular-fujian-arts-q03",
+  "resume_action": "取得更清晰源卷或独立权威版本，确认第 3 题是否遗漏一月至十月产量规律；确认前保留第 3(1) 的条件式 10% 与第 3(2) 的不可唯一确定结论。",
+  "source_id": "src-695012a4c4b226accca28c241571eab14a51c31f47f7ddec60950425b6c6e926",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0134
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 4 题单页文字要求求抛物线 y^2=9x 和圆 x^2+y^2=36 在第一象限交点处的‘切线方程’。两曲线在交点 (3,3√3) 的切线分别为 y-3√3=(√3/2)(x-3) 与 x+√3y-12=0，彼此不同；源面未说明求哪一条。",
+  "fingerprint": "a5fece9152dd5d91558d903171d110f8b7e18bba4adfea9652d1bbd68d9a0a36",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-arts",
+  "question_id": "gk-1977-regular-fujian-arts-q04",
+  "resume_action": "取得权威题面或答案，确认第 4 题是要求抛物线切线、圆切线，还是两条切线；确认前并列保留两条按字面可得的切线。",
+  "source_id": "src-695012a4c4b226accca28c241571eab14a51c31f47f7ddec60950425b6c6e926",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0135
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 5 题高清局部确认双曲线分母印作 24α、16cotα，且仅说明 α 为锐角。将 A=(4√3,4) 代入得到 2/α-tanα=1；这要求明确 α 的数值单位，并产生约 51.1361° 的非典型数值根，缺少答案页无法确认公式是否存在排印误写。",
+  "fingerprint": "5fc9d7705fb943df764f5b48ef52efffd12cfa58ff5bf18b6927e6caca5734d4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-arts",
+  "question_id": "gk-1977-regular-fujian-arts-q05",
+  "resume_action": "取得更清晰源卷或权威答案，确认 24α 的参数形式及 α 的单位；确认前保留按字面推导的隐式方程和候选数值，不视作标准答案。",
+  "source_id": "src-695012a4c4b226accca28c241571eab14a51c31f47f7ddec60950425b6c6e926",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0136
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 6 题高清整页与图示复核确认 AB=AC=50、∠BAC=60°、∠ABP=120°、∠ACP=135°。前三项使 ABC 为等边三角形；在普通平面角定义下，从 B、C 按两角作出的射线没有共同交点 P，与源图示不相容。",
+  "fingerprint": "cd6f30bbe284e4b7f50ed10c7c636172166e9cbf2c5ba1fe084aaf27d65fb383",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-fujian-arts",
+  "question_id": "gk-1977-regular-fujian-arts-q06",
+  "resume_action": "取得更清晰源卷或权威答案，确认第 6 题一个角度、点位或图示是否存在排印错误；确认前不得补造 AP 距离。",
+  "source_id": "src-695012a4c4b226accca28c241571eab14a51c31f47f7ddec60950425b6c6e926",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
