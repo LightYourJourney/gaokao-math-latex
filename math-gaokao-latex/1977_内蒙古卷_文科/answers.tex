@@ -1,0 +1,418 @@
+% answers.tex —— 1977 年·内蒙古卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_内蒙古文_试题.md + 1977/1977_数学真题_内蒙古文_解析正文.md + 1977/1977_数学真题_内蒙古文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 第 1 页给出题面，第 1—4 页给出源解答。下文同时保留源解答的可追溯结果与独立复核结论。第 1(3) 的负号、第 2(2) 全面积末位均存在源卷冲突，不能静默修正。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}（42 分）：
+
+计算或求解下列各题：
+
+（1） 计算 $\sin(-990^\circ)$。
+
+（2） 化简 $\sqrt{4-12a+9a^2}$。
+
+\Needspace{5\baselineskip}
+（3） 计算
+
+\nopagebreak[4]
+\[
+\frac{(-27)^3\sqrt{\left(-\frac{1}{16}\right)^{-\frac12}}}
+{(-9)^0\left(\frac32\right)^7\left(\frac12\right)^{-5}}
+\]
+
+（4） 已知 $\lg2=0.3010$，$f(x)=\log_{\sqrt{10}}x$，求 $f(5)$。
+
+\Needspace{5\baselineskip}
+（5） 求函数
+
+\nopagebreak[4]
+\[
+y=\frac{\sqrt{1-\frac23x}}{\sqrt[3]{3x-1}}
+\]
+
+的定义域。
+
+\Needspace{5\baselineskip}
+（6） 已知 $\sin\theta=0.6$，求
+
+\nopagebreak[4]
+\[
+\left(\sin\frac\theta2-\cos\frac\theta2\right)^2
+\]
+
+的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\nopagebreak[4]
+\[
+\sin(-990^\circ)=-\sin990^\circ=-\sin(720^\circ+270^\circ)=1
+\]
+
+\gksubpart{（2）}
+
+\nopagebreak[4]
+\[
+\sqrt{4-12a+9a^2}=\sqrt{(2-3a)^2}=\lvert2-3a\rvert
+\]
+
+\Needspace{5\baselineskip}
+等价地，按 $a$ 的范围分段为
+
+\nopagebreak[4]
+\[
+\sqrt{4-12a+9a^2}=\begin{cases}
+2-3a,&a<\dfrac23,\\
+0,&a=\dfrac23,\\
+3a-2,&a>\dfrac23
+\end{cases}
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+题面明确印作
+
+\nopagebreak[4]
+\[
+\frac{(-27)^3\sqrt{\left(-\frac{1}{16}\right)^{-\frac12}}}
+{(-9)^0\left(\frac32\right)^7\left(\frac12\right)^{-5}}
+\]
+
+若严格按实数范围解释，负数 $-1/16$ 的 $-1/2$ 次幂没有实数意义，所以题面原式在实数范围内无定义。
+
+\Needspace{5\baselineskip}
+但固定源第 2 页的源解答把根式中的 $-1/16$ 按 $1/16$ 计算，得到
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\frac{(-27)^3\sqrt{(1/16)^{-1/2}}}
+{(-9)^0(3/2)^7(1/2)^{-5}}
+&=\frac{(-3)^9\sqrt4}{3^7(1/2)^{7-5}}\\
+&=-3^2\cdot2^3=-72
+\end{aligned}
+\]
+
+因此 “源解答结果为 $-72$” 与 “严格按当前印刷题面无实数值” 必须并列记录，待取得更清晰源卷或权威勘误后再决定正式答案。
+
+\gksubpart{（4）}
+
+\Needspace{5\baselineskip}
+由换底公式和 $\lg10=1$，
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+f(5)=\log_{\sqrt{10}}5
+&=\frac{\lg5}{\lg\sqrt{10}}
+=\frac{\lg10-\lg2}{\frac12\lg10}\\
+&=2(1-0.3010)=1.398
+\end{aligned}
+\]
+
+\gksubpart{（5）}
+
+\Needspace{5\baselineskip}
+根式要求
+
+\nopagebreak[4]
+\[
+1-\frac23x\ge0\quad\Longleftrightarrow\quad x\le\frac32
+\]
+
+\Needspace{5\baselineskip}
+分母不能为零，故还要排除 $3x-1=0$，即 $x=1/3$。定义域为
+
+\nopagebreak[4]
+\[
+(-\infty,\tfrac13)\cup(\tfrac13,\tfrac32]
+\]
+
+\gksubpart{（6）}
+
+\Needspace{5\baselineskip}
+利用半角展开式，
+
+\nopagebreak[4]
+\[
+\left(\sin\frac\theta2-\cos\frac\theta2\right)^2
+=\sin^2\frac\theta2+\cos^2\frac\theta2-2\sin\frac\theta2\cos\frac\theta2
+=1-\sin\theta=1-0.6=0.4
+\]
+
+\gkanswer{答案（1）：$1$。}
+
+\gkanswer{答案（2）：$\lvert2-3a\rvert$。}
+
+\gkanswer{答案（3）：源解答按 $\sqrt{(1/16)^{-1/2}}$ 处理，结果为 $-72$；严格按题面 $\sqrt{(-1/16)^{-1/2}}$ 在实数范围内无定义，待源卷勘误确认。}
+
+\gkanswer{答案（4）：$1.398$。}
+
+\gkanswer{答案（5）：$(-\infty,\frac13)\cup(\frac13,\frac32]$。}
+
+\gkanswer{答案（6）：$0.4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}（20 分）：
+
+（1） 已知：梯形 $ABCD$，$AD\parallel BC$，对角线 $AC$ 和 $BD$ 相交于 $E$，过 $E$ 作平行于底的直线，交 $AB$ 于 $M$，交 $CD$ 于 $N$。求证：$ME=EN$。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_inner_mongolia_arts_t2_trapezoid}\end{center}
+\nopagebreak[4]
+（2） 圆台上底直径为 $12\ \mathrm{cm}$，下底直径为 $24\ \mathrm{cm}$，高为 $8\ \mathrm{cm}$，求圆台的体积和全面积。（$\pi=3.14$，结果精确到 $0.1\ \mathrm{cm^3}$ 或 $0.1\ \mathrm{cm^2}$。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+给出一个不依赖图形比例的坐标证明。设两底所在直线分别为 $y=h$ 和 $y=0$，记
+
+\nopagebreak[4]
+\[
+A=(a,h),\quad D=(d,h),\quad B=(b,0),\quad C=(c,0)
+\]
+
+\Needspace{5\baselineskip}
+设对角线交点 $E$ 的纵坐标为 $\lambda h$，其中 $0<\lambda<1$。由 $E$ 同时在 $AC$、$BD$ 上，
+
+\nopagebreak[4]
+\[
+x_E=(1-\lambda)c+\lambda a=(1-\lambda)b+\lambda d
+\]
+
+\Needspace{5\baselineskip}
+水平线 $MN$ 与 $AB$、$CD$ 的交点横坐标分别为
+
+\nopagebreak[4]
+\[
+x_M=(1-\lambda)b+\lambda a,
+\qquad
+x_N=(1-\lambda)c+\lambda d
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+x_M+x_N=(1-\lambda)(b+c)+\lambda(a+d)=2x_E
+\]
+
+\Needspace{5\baselineskip}
+由于 $M,E,N$ 共线且 $MN$ 水平，$x_E$ 是 $x_M$、$x_N$ 的平均数，所以 $E$ 是 $MN$ 的中点，从而
+
+\nopagebreak[4]
+\[
+ME=EN
+\]
+
+这与固定源第 2 页以相似三角形和截比定理给出的结论一致。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+上下底半径为
+
+\nopagebreak[4]
+\[
+R_1=\frac{12}{2}=6\ \mathrm{cm},
+\qquad
+R_2=\frac{24}{2}=12\ \mathrm{cm},
+\qquad H=8\ \mathrm{cm}
+\]
+
+\Needspace{5\baselineskip}
+圆台母线长为
+
+\nopagebreak[4]
+\[
+L=\sqrt{H^2+(R_2-R_1)^2}=\sqrt{8^2+6^2}=10\ \mathrm{cm}
+\]
+
+\Needspace{5\baselineskip}
+体积为
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+V&=\frac13\pi H(R_1^2+R_1R_2+R_2^2)\\
+&=\frac83\pi(36+72+144)=672\pi\\
+&\mathrel{\mathop\approx}_{\pi=3.14}2110.1\ \mathrm{cm^3}
+\end{aligned}
+\]
+
+\Needspace{5\baselineskip}
+全面积为
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+S&=\pi\bigl(R_1^2+R_2^2+L(R_1+R_2)\bigr)\\
+&=\pi(36+144+10\times18)=360\pi\\
+&=1130.4\ \mathrm{cm^2}\quad(\pi=3.14)
+\end{aligned}
+\]
+
+固定源第 3 页的源解答在同一公式后印作“约 $113\ \mathrm{cm^2}$”。这与公式代入的 $1130.4\ \mathrm{cm^2}$ 相差一个数量级，故答案要点保留源印刷值并将独立复核值标为待勘误确认。
+
+\gkanswer{答案（1）：$ME=EN$，证明见解析正文。}
+
+\gkanswer{答案（2）：体积约为 $2110.1\ \mathrm{cm^3}$；源解答印作全面积约 $113\ \mathrm{cm^2}$，按同页公式、半径与母线独立复算为 $1130.4\ \mathrm{cm^2}$，待源卷勘误确认。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}（18 分）：
+
+已知：直线 $3x+y=5$ 及 $2x-3y+4=0$ 交于 $A$ 点。求：
+
+（1） 过 $A$ 点且与 $y$ 轴垂直的直线方程；
+
+（2） 过 $A$ 点且与直线 $2x+y+1=0$ 平行的直线方程；
+
+（3） 过 $A$ 点且与直线 $2x+y+1=0$ 垂直的直线方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+联立已知直线方程：
+
+\nopagebreak[4]
+\[
+\begin{cases}
+3x+y=5,\\
+2x-3y+4=0
+\end{cases}
+\]
+
+由第一式 $y=5-3x$，代入第二式得 $2x-3(5-3x)+4=0$，即 $11x=11$，所以 $A=(1,2)$。
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+与 $y$ 轴垂直的直线为水平线，因此
+
+\nopagebreak[4]
+\[
+y=2
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+直线 $2x+y+1=0$ 的斜率为 $-2$。过 $(1,2)$ 的平行线为
+
+\nopagebreak[4]
+\[
+y-2=-2(x-1),
+\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[
+2x+y-4=0
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+垂线斜率为 $1/2$，故
+
+\nopagebreak[4]
+\[
+y-2=\frac12(x-1),
+\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[
+x-2y+3=0
+\]
+
+\gkanswer{答案（1）：$y=2$。}
+
+\gkanswer{答案（2）：$2x+y-4=0$。}
+
+\gkanswer{答案（3）：$x-2y+3=0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}（20 分）：
+
+红旗拖拉机厂今年元月份生产出一批甲、乙两种型号的拖拉机，其中生产乙型 16 台。从二月份起，甲型每月增产 10 台，而乙型按每月相同增长率逐月递增，又知二月份甲、乙两型拖拉机产量之比是 $3:2$，三月份甲、乙两型产量之和是 65 台，求乙型拖拉机每月的增长率及甲型拖拉机元月份的产量。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设甲型拖拉机元月份产量为 $x$ 台，乙型拖拉机每月增长率为 $y$。二月份两型产量分别为 $x+10$ 与 $16(1+y)$，由题意
+
+\nopagebreak[4]
+\[
+\frac{x+10}{16(1+y)}=\frac32
+\]
+
+\Needspace{5\baselineskip}
+三月份两型产量之和为 65，所以
+
+\nopagebreak[4]
+\[
+16(1+y)^2+(x+20)=65
+\]
+
+\Needspace{5\baselineskip}
+由第一式得
+
+\nopagebreak[4]
+\[
+x=24(1+y)-10
+\]
+
+\Needspace{5\baselineskip}
+代入第二式并令 $t=1+y$，得
+
+\nopagebreak[4]
+\[
+16t^2+24t-55=0
+\quad\Longleftrightarrow\quad
+(4t+11)(4t-5)=0
+\]
+
+\Needspace{5\baselineskip}
+增长因子须为正，且生产量为正，舍去 $t=-11/4$，取 $t=5/4$。于是
+
+\nopagebreak[4]
+\[
+y=\frac14=25\%,
+\qquad
+x=24\times\frac54-10=20
+\]
+
+故乙型拖拉机每月增长率为 $25\%$，甲型拖拉机元月份产量为 $20$ 台。
+
+\gkanswer{答案：乙型拖拉机每月增长率为 $25\%$，甲型拖拉机元月份产量为 $20$ 台。}
+
+\end{answer}

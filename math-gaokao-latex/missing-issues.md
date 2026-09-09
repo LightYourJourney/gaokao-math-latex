@@ -2349,3 +2349,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-0129
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页高清局部复核确认第 1(3) 根式印作 sqrt((-1/16)^(-1/2))；第 2 页源解答却将同一处按 sqrt((1/16)^(-1/2)) 计算并给出 -72。严格按实数题面原式没有实数意义，源解答与题面不一致。",
+  "fingerprint": "838fbcd5e4987ef501a156e0fe14815380193099406e3a46d0b0334a800f567c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-inner-mongolia-arts",
+  "question_id": "gk-1977-regular-inner-mongolia-arts-q01",
+  "resume_action": "取得更清晰源卷或权威勘误，确认第 1(3) 根式的底数是否应为 1/16；确认后重做答案、盲核与 provenance，在确认前保留题面原式和源解答 -72 两种证据。",
+  "source_id": "src-1b8b3b5dc1b32466b26aa70873f050666dfa6eaf27c32d708f030c58535f823b",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0130
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 3 页高清复核确认圆台全面积的源解答在公式 pi(36+144+180) 后印作约 113 cm^2；按源卷给出的半径 6、12、母线 10 与 pi=3.14 独立复算为 360pi=1130.4 cm^2，源解答末值漏写一个数量级。",
+  "fingerprint": "9a62a0716585318205d8bfdf630aeaacd355e29b0a361489151787e3504405a2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1977-regular-inner-mongolia-arts",
+  "question_id": "gk-1977-regular-inner-mongolia-arts-q02",
+  "resume_action": "取得更清晰源卷或权威勘误，确认第 2(2) 全面积末值是否应为 1130.4 cm^2；确认后重做答案、盲核与 provenance，在确认前并列保留源印刷值 113 与独立复核值 1130.4。",
+  "source_id": "src-1b8b3b5dc1b32466b26aa70873f050666dfa6eaf27c32d708f030c58535f823b",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
