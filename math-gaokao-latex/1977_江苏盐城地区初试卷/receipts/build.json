@@ -1,0 +1,379 @@
+{
+  "attempt_id": "83bb522e-9d92-4109-a420-8b5a09467662",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/answers.tex",
+        "sha256": "3f2c2968eb99f72edda7ea7ec1e9a46086aadbc2e1fce50551ccb86b6a286801"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/answers_short.tex",
+        "sha256": "ad2da24d23c1cd55c17ce9241064c3b801ea5026c52bf6492d338d91a9508440"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/figures/f1977_js_yancheng_t4_circle.tex",
+        "sha256": "460ab862897a4dacb8c488f1a231bd6f812a101456910d457bc93569e0f1e6b5"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/figures/f1977_js_yancheng_t7_squares.tex",
+        "sha256": "799d2ea516efed7b8545facc8e85e10d2d653de9f2b26fc0ec1ce62753f01d45"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/questions.tex",
+        "sha256": "baf107756a56e1c62d8f5fb767d94ff261cd5fcaa89bfea3580ab67da3a4dc5a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/印刷版.tex",
+        "sha256": "f1caf3b3a3c15c00bb9997f5db61096ad114cb7278309b17e526e26cafd5918e"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/简答版.tex",
+        "sha256": "309dc2f8102052f07ff198fb46b7ee865db21a5ba8608d45c1a88f13924f0a5e"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/解析版.tex",
+        "sha256": "9534c018731603e2155839d84d5810c72d24cc890b520b80863ee1d87889f845"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/试题版.tex",
+        "sha256": "688ffdc9b9534a4b6c3862451bebfa29291360602efabbb67a3cbc27d64b8f39"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "0bdcaf8911a163c4c9b0390d70a1b69f51c435f8159e9088b935760070ee0ee5"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/build/试题版.pdf",
+        "sha256": "b586cbb6306f095c8509c049121d54798a7267c83b46b20bc6de47825bcffbb7",
+        "size_bytes": 88330
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏盐城地区初试卷/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "34",
+            "text": "Overfull \\hbox (4.48792pt too wide) detected at line 34",
+            "width_pt": "4.48792"
+          },
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "240",
+            "text": "Overfull \\hbox (78.03305pt too wide) detected at line 240",
+            "width_pt": "78.03305"
+          },
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "251",
+            "text": "Overfull \\hbox (102.44743pt too wide) detected at line 251",
+            "width_pt": "102.44743"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:1' on page 3 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:2' on page 4 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:3' on page 4 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:4' on page 5 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:5' on page 6 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:6' on page 7 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:7' on page 8 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:8' on page 9 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 10,
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/build/解析版.pdf",
+        "sha256": "5c0e3d556c8eb76060d730da3d3ab5aa66df1b5863b05030c14f96cca2e8082b",
+        "size_bytes": 143492
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏盐城地区初试卷/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/build/简答版.pdf",
+        "sha256": "6a29c4a883c90f47851fc15f30e1a0da53c66cb0b3454fc270266a9ee4b64f43",
+        "size_bytes": 96755
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏盐城地区初试卷/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "251",
+            "text": "Overfull \\hbox (8.57062pt too wide) detected at line 251",
+            "width_pt": "8.57062"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:1' on page 3 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:2' on page 4 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:3' on page 4 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:4' on page 5 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:5' on page 6 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:6' on page 6 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:7' on page 7 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-yancheng:8' on page 8 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 8,
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/build/印刷版.pdf",
+        "sha256": "cf2531e27e8a28c4aa71d98af8b177fd605c91f8abb1915a0f24b78a1fee7729",
+        "size_bytes": 143450
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏盐城地区初试卷/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T18:15:41+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_江苏盐城地区初试_答案要点.md",
+        "sha256": "2e63e5662ccb5c5836e8eb60f6e534138828684fe561fb49b4eb8b359529507e"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏盐城地区初试_解析正文.md",
+        "sha256": "30d98669aa62adcdeeb56a6057d46444f3d2e5434733ba4364237dc6d51f2b6b"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏盐城地区初试_试题.md",
+        "sha256": "1bbcf827493e534a58fb2fe14d7cd253a5b3c3e2572e3f941c8102ce471ff1cd"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/figures/f1977_js_yancheng_t4_circle.tex",
+        "sha256": "460ab862897a4dacb8c488f1a231bd6f812a101456910d457bc93569e0f1e6b5"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/figures/f1977_js_yancheng_t7_squares.tex",
+        "sha256": "799d2ea516efed7b8545facc8e85e10d2d653de9f2b26fc0ec1ce62753f01d45"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/印刷版.tex",
+        "sha256": "f1caf3b3a3c15c00bb9997f5db61096ad114cb7278309b17e526e26cafd5918e"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/简答版.tex",
+        "sha256": "309dc2f8102052f07ff198fb46b7ee865db21a5ba8608d45c1a88f13924f0a5e"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/解析版.tex",
+        "sha256": "9534c018731603e2155839d84d5810c72d24cc890b520b80863ee1d87889f845"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏盐城地区初试卷/试题版.tex",
+        "sha256": "688ffdc9b9534a4b6c3862451bebfa29291360602efabbb67a3cbc27d64b8f39"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "3c4995c787fb59dbfcba49683f9a90c4d211e62608514830d9206bdd583ef65f"
+  },
+  "input_projection": "a6aee1fda6e65b6b49e52d6202e6c2df81bf9d42547079207b1e19ff2d28ffec",
+  "manifest_revision": 1579,
+  "paper_id": "gk-1977-chushi-js-yancheng",
+  "previous_attempt_id": null,
+  "project_dir": "1977_江苏盐城地区初试卷",
+  "schema_version": 1,
+  "started_at": "2026-09-10T18:15:21+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

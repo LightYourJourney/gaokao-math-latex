@@ -1,0 +1,333 @@
+{
+  "attempt_id": "30a53129-b81e-4a29-aede-4610aa81371b",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/answers.tex",
+        "sha256": "3b4cdcc082e01da9340926e132ad89cee4cbf4aa9097adb9c24ae4843c93dbcb"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/answers_short.tex",
+        "sha256": "7474527f5ee2baf681b991944e0a484186ffb2dfce39c49fa15a0287d84649a9"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/questions.tex",
+        "sha256": "594ee149d15cf1694901bc544e274ab4784a63330a88d5290b0383cb31393628"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/印刷版.tex",
+        "sha256": "46fa073dc5d446b3172636f1a7519402cce1def41e3deee51640859b4ca5b735"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/简答版.tex",
+        "sha256": "6e4012d57a1df591dec0256918bd632ccc71eab6d1078dd3d9f885f684535063"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/解析版.tex",
+        "sha256": "7edc754c343cd85278b6bb9f712ceeaa0f26ea986700f7a13d97e17bfe98f4b9"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/试题版.tex",
+        "sha256": "96f3c8d7659d967721273decd4e6466b3bd7e9978b57c6be496167abc823acce"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "11b43659d6bdf78ed763bed916c46f7af4c2d581570bab8c8c5936e9e3d40817"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 1,
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/build/试题版.pdf",
+        "sha256": "52064c070a2ff6dc6a6490d567438e4e2ca8289f83d931cb95d9aec08844a642",
+        "size_bytes": 75044
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏农垦系统初试卷/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:1' on page 2 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:2' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:3' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:4' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:5' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:6' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:7' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:8' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/build/解析版.pdf",
+        "sha256": "7849cc394bab271fe3510f99234b3056ab8e85017101937b618b5ec35141f065",
+        "size_bytes": 116580
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏农垦系统初试卷/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/build/简答版.pdf",
+        "sha256": "a04ef65ae2f689ac62502845bbfcec391307afd6955831963c085f2e8bafe14c",
+        "size_bytes": 83309
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏农垦系统初试卷/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:1' on page 2 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:2' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:3' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:4' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:5' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:6' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:7' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-nongken:8' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/build/印刷版.pdf",
+        "sha256": "f8763818d85bc927a09bb3a85c117059b1cc6a841efeb02946d33ace06ea53c5",
+        "size_bytes": 117088
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏农垦系统初试卷/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T18:14:08+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_江苏农垦系统初试_答案要点.md",
+        "sha256": "0c0843a9997b0a390889f58810584793038eb55d3ba5de5f6d4d3921ee0db800"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏农垦系统初试_解析正文.md",
+        "sha256": "47a486a5b79f30d54f28cd7ce89b38923ac57fc31cbd800eee4398ae1d0188ea"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏农垦系统初试_试题.md",
+        "sha256": "55791f0765bd7581b9a610ed727eb88a563caf3b08b1c452e95372dea808715e"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/印刷版.tex",
+        "sha256": "46fa073dc5d446b3172636f1a7519402cce1def41e3deee51640859b4ca5b735"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/简答版.tex",
+        "sha256": "6e4012d57a1df591dec0256918bd632ccc71eab6d1078dd3d9f885f684535063"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/解析版.tex",
+        "sha256": "7edc754c343cd85278b6bb9f712ceeaa0f26ea986700f7a13d97e17bfe98f4b9"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏农垦系统初试卷/试题版.tex",
+        "sha256": "96f3c8d7659d967721273decd4e6466b3bd7e9978b57c6be496167abc823acce"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "6deec7dafc04c8dfa9ccc675d2fa5cd7d3c4fe739f5b597cbd2c74343bc06315"
+  },
+  "input_projection": "41fb0282deaf9c70af0f31f6ca3ff6e88da6fb26422c35c8ab59a98c1050e339",
+  "manifest_revision": 1575,
+  "paper_id": "gk-1977-chushi-js-nongken",
+  "previous_attempt_id": null,
+  "project_dir": "1977_江苏农垦系统初试卷",
+  "schema_version": 1,
+  "started_at": "2026-09-10T18:13:57+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+% 1977 年江苏徐州市,徐州地区初试卷第 6 题：船位与灯塔方位示意图（按源卷第 2 页布局）。
+% 北向箭头与其下虚线为南北方向线，A、B 在线上（船由 A 向南航至 B），C 在东北方向。
+\begin{tikzpicture}[scale=0.9]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,-4.6);
+  \coordinate (C) at (1.9,1.9);
+  \draw[-stealth] (0,1.5) -- (0,2.3);
+  \node[above right] at (0,2.15) {北};
+  \draw[dashed] (0,1.5) -- (0,0);
+  \draw[thick] (A) -- (B);
+  \draw[thick] (A) -- (C);
+  \draw[thick] (B) -- (C);
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[below right] {$B$};
+  \fill (C) circle (1.2pt) node[above right] {$C$};
+\end{tikzpicture}

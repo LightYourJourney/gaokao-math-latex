@@ -1,0 +1,16 @@
+% 1958 年广东卷第 9 题：直角三角形，斜边 2，斜边上的高 √3/2，两腰记 a、b，右侧锐角记 α（按源卷布局）
+\begin{tikzpicture}[scale=1.6, line width=0.45pt,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (L) at (0,0);
+  \coordinate (R) at (2,0);
+  \coordinate (F) at (0.5,0);
+  \coordinate (P) at (0.5,0.866);
+  \draw (L) -- (R) -- (P) -- cycle;
+  \draw (P) -- (F);
+  \draw (F) ++(0,0.08) -- ++(0.08,0) -- ++(0,-0.08);
+  \node[anchor=south east] at (0.14,0.50) {$a$};
+  \node[anchor=west] at ($(P)!0.5!(R)$) {$b$};
+  \node[anchor=north] at ($(L)!0.5!(R)$) {$2$};
+  \node[anchor=east] at (0.47,0.433) {$\dfrac{\sqrt3}{2}$};
+  \node[anchor=north west] at (1.68,0.05) {$\alpha$};
+\end{tikzpicture}

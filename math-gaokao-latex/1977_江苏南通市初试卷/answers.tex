@@ -1,0 +1,694 @@
+% answers.tex —— 1977 年·江苏南通市初试卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_江苏南通市初试_试题.md + 1977/1977_数学真题_江苏南通市初试_解析正文.md + 1977/1977_数学真题_江苏南通市初试_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 仅含 3 页题面，无解答可对照。以下各题均由编者独立推导，最终结论与答案要点逐题一致；原卷大题的中文数字编号已转写为阿拉伯数字，各大题下的小题编号「1．2．3．」已转写为（1）（2）（3）。第 3 题的（1）（3）两小问按原卷题面推导均无实数解（（1）整理后判别式小于零，（3）候选根不满足对数底数条件），系按原卷如实推得，非转录疑误。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+化简、计算：
+
+（1） $\dfrac{-2mn}{m-3n}\sqrt{\dfrac{(m+3n)^2}{2mn}-6}$；$(0<m<3n)$
+
+（2） $\left(\dfrac14\right)^{-1.5}\left[\left(\dfrac{7}{11}\right)^0\right]^{-3}-\left(\dfrac35\right)^{-2}\div\left(2\dfrac79\right)^{\frac12}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由 $0<m<3n$ 知 $m-3n<0$、$2mn>0$。先化简根号内：
+
+\nopagebreak[4]
+\[
+\frac{(m+3n)^2}{2mn}-6
+=\frac{m^2+6mn+9n^2-12mn}{2mn}
+=\frac{(m-3n)^2}{2mn}.
+\]
+
+\Needspace{5\baselineskip}
+因 $m-3n<0$，故
+
+\nopagebreak[4]
+\[
+\sqrt{\frac{(m-3n)^2}{2mn}}=\frac{3n-m}{\sqrt{2mn}}.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\frac{-2mn}{m-3n}\cdot\frac{3n-m}{\sqrt{2mn}}
+=\frac{-2mn}{-(3n-m)}\cdot\frac{3n-m}{\sqrt{2mn}}
+=\frac{2mn}{\sqrt{2mn}}
+=\sqrt{2mn}.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+逐项计算：
+
+\nopagebreak[4]
+\[
+\left(\frac14\right)^{-1.5}=4^{1.5}=8,\qquad
+\left[\left(\frac{7}{11}\right)^0\right]^{-3}=1^{-3}=1,
+\]
+
+\nopagebreak[4]
+\[
+\left(\frac35\right)^{-2}=\frac{25}{9},\qquad
+\left(2\frac79\right)^{\frac12}=\left(\frac{25}{9}\right)^{\frac12}=\frac53.
+\]
+
+\Needspace{5\baselineskip}
+所以原式
+
+\nopagebreak[4]
+\[
+=8\times1-\frac{25}{9}\div\frac53
+=8-\frac{25}{9}\times\frac35
+=8-\frac53
+=\frac{19}{3}.
+\]
+
+\gkanswer{答案（1）：$\sqrt{2mn}$。}
+
+\gkanswer{答案（2）：$\dfrac{19}{3}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在实数范围内分解因式：
+
+（1） $a^4-10a^2+16$；
+
+（2） $x^2-4xy+4y^2-3x+6y+2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+把 $a^4-10a^2+16$ 看作关于 $a^2$ 的二次三项式：
+
+\nopagebreak[4]
+\[
+a^4-10a^2+16=(a^2-2)(a^2-8).
+\]
+
+\Needspace{5\baselineskip}
+在实数范围内继续分解：
+
+\nopagebreak[4]
+\[
+(a^2-2)(a^2-8)=(a+\sqrt2)(a-\sqrt2)(a+2\sqrt2)(a-2\sqrt2).
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+前三项配成完全平方：
+
+\nopagebreak[4]
+\[
+x^2-4xy+4y^2-3x+6y+2=(x-2y)^2-3(x-2y)+2.
+\]
+
+\Needspace{5\baselineskip}
+再把 $x-2y$ 视为整体分解：
+
+\nopagebreak[4]
+\[
+(x-2y)^2-3(x-2y)+2=(x-2y-1)(x-2y-2).
+\]
+
+\gkanswer{答案（1）：$(a+\sqrt2)(a-\sqrt2)(a+2\sqrt2)(a-2\sqrt2)$。}
+
+\gkanswer{答案（2）：$(x-2y-1)(x-2y-2)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+求 $x$：
+
+（1） $\dfrac{2x+1}{x-3}-\dfrac{5x-11}{x^2-4x+3}=\dfrac{3}{x-1}$；
+
+（2） $\sqrt{2x-4}-\sqrt{x+5}=1$；
+
+（3） $\log_{(x-1)}(2x^2-3x-1)=2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+定义域要求 $x\ne1$、$x\ne3$。由 $x^2-4x+3=(x-1)(x-3)$，两边同乘 $(x-1)(x-3)$：
+
+\nopagebreak[4]
+\[
+(2x+1)(x-1)-(5x-11)=3(x-3).
+\]
+
+\Needspace{5\baselineskip}
+展开整理：
+
+\nopagebreak[4]
+\[
+2x^2-x-1-5x+11=3x-9,
+\qquad
+2x^2-9x+19=0.
+\]
+
+\Needspace{5\baselineskip}
+判别式
+
+\nopagebreak[4]
+\[
+\Delta=(-9)^2-4\times2\times19=81-152=-71<0,
+\]
+
+故原方程无实数根。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+根号要求 $x\ge2$。设 $u=\sqrt{2x-4}$、$v=\sqrt{x+5}$（$u$、$v\ge0$），则 $u-v=1$，且
+
+\nopagebreak[4]
+\[
+2v^2-u^2=2(x+5)-(2x-4)=14.
+\]
+
+\Needspace{5\baselineskip}
+把 $u=v+1$ 代入：
+
+\nopagebreak[4]
+\[
+2v^2-(v+1)^2=14
+\quad\Longrightarrow\quad
+v^2-2v-15=0
+\quad\Longrightarrow\quad
+v=5\ (v\ge0).
+\]
+
+由 $v=\sqrt{x+5}=5$ 得 $x=20$。检验：$\sqrt{2\times20-4}-\sqrt{20+5}=6-5=1$，成立。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+对数成立要求底数 $x-1>0$ 且 $x-1\ne1$，即 $x>1$ 且 $x\ne2$。由对数定义，
+
+\nopagebreak[4]
+\[
+2x^2-3x-1=(x-1)^2
+\quad\Longrightarrow\quad
+x^2-x-2=0
+\quad\Longrightarrow\quad
+x=2\ \text{\text{或}}\ x=-1.
+\]
+
+$x=2$ 使底数为 $1$，$x=-1$ 使底数为 $-2$，均不满足底数条件，故原方程无解。
+
+\gkanswer{答案（1）：无实数根（去分母整理得 $2x^2-9x+19=0$，$\Delta=-71<0$；$x\ne1$、$x\ne3$）。}
+
+\gkanswer{答案（2）：$x=20$。}
+
+\gkanswer{答案（3）：无解（候选根 $x=2$、$x=-1$ 均不满足对数底数条件）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+求下列函数的定义域：
+
+（1） $y=\dfrac{1}{1-\sqrt{x-1}}$；
+
+（2） $y=\operatorname{lg}\operatorname{tg}x$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+需要 $x-1\ge0$，且分母 $1-\sqrt{x-1}\ne0$（即 $\sqrt{x-1}\ne1$，$x\ne2$）。故定义域为
+
+\nopagebreak[4]
+\[
+x\ge1\ \text{\text{且}}\ x\ne2.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+需要 $\operatorname{tg}x>0$，即 $x$ 位于第一或第三象限：
+
+\nopagebreak[4]
+\[
+k\pi<x<k\pi+\frac{\pi}{2}\quad(k\ \text{\text{为整数}}).
+\]
+
+\gkanswer{答案（1）：$x\ge1$ 且 $x\ne2$。}
+
+\gkanswer{答案（2）：$k\pi<x<k\pi+\dfrac{\pi}{2}$（$k$ 为整数）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+不查表：
+
+（1） 求 $4^{1-\log_2\frac{2}{5}+\log_2\sqrt{2}}$，
+
+（2） 解三角形：已知 $\triangle ABC$ 中，$\angle B=120^\circ$，$\angle C=15^\circ$，$b=100$，求 $c$（可用根式表示结果）。
+
+（3） 将直角坐标方程 $x^2-y^2=a^2$ 化成极坐标方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\nopagebreak[4]
+\[
+4^{1-\log_2\frac25+\log_2\sqrt2}
+=4\times4^{-\log_2\frac25}\times4^{\log_2\sqrt2}.
+\]
+
+\Needspace{5\baselineskip}
+由 $4=2^2$，
+
+\nopagebreak[4]
+\[
+4^{-\log_2\frac25}=2^{-2\log_2\frac25}=\left(\frac25\right)^{-2}=\frac{25}{4},
+\qquad
+4^{\log_2\sqrt2}=2^{2\log_2\sqrt2}=(\sqrt2)^2=2.
+\]
+
+故原式 $=4\times\dfrac{25}{4}\times2=50$。
+
+\gksubpart{（2）}
+
+\nopagebreak[4]
+\[
+\angle A=180^\circ-120^\circ-15^\circ=45^\circ.
+\]
+
+\Needspace{5\baselineskip}
+由正弦定理，
+
+\nopagebreak[4]
+\[
+c=\frac{b\sin C}{\sin B}
+=\frac{100\sin15^\circ}{\sin120^\circ}.
+\]
+
+\Needspace{5\baselineskip}
+代入 $\sin15^\circ=\dfrac{\sqrt6-\sqrt2}{4}$、$\sin120^\circ=\dfrac{\sqrt3}{2}$：
+
+\nopagebreak[4]
+\[
+c=\frac{100\times\dfrac{\sqrt6-\sqrt2}{4}}{\dfrac{\sqrt3}{2}}
+=50\times\frac{\sqrt6-\sqrt2}{\sqrt3}
+=\frac{50}{3}\left(3\sqrt2-\sqrt6\right).
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+以极点为原点、极轴为 $x$ 轴正向，代入 $x=r\cos\theta$、$y=r\sin\theta$：
+
+\nopagebreak[4]
+\[
+r^2\cos^2\theta-r^2\sin^2\theta=a^2,
+\qquad\text{\text{即}}\qquad
+r^2\cos2\theta=a^2.
+\]
+
+\gkanswer{答案（1）：$50$。}
+
+\gkanswer{答案（2）：$c=\dfrac{50}{3}\left(3\sqrt2-\sqrt6\right)$。}
+
+\gkanswer{答案（3）：$r^2\cos2\theta=a^2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+$\triangle ABC$ 的 $\angle A$ 的平分线交 $BC$ 于 $D$，延长 $AD$ 交三角形的外接圆于 $E$，求证：$AB\cdot AC=AD\cdot AE$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在 $\triangle ABD$ 与 $\triangle ACE$ 中，先证两对角对应相等。
+
+\Needspace{5\baselineskip}
+其一，$AD$ 平分 $\angle A$ 且 $A$、$D$、$E$ 共线，故
+
+\nopagebreak[4]
+\[
+\angle BAD=\angle CAE.
+\]
+
+\Needspace{5\baselineskip}
+其二，$\angle ADB$ 是 $\triangle ADC$ 在 $D$ 处的外角：
+
+\nopagebreak[4]
+\[
+\angle ADB=\angle DAC+\angle DCA=\angle DAC+\angle BCA.
+\]
+
+\Needspace{5\baselineskip}
+又 $A$、$B$、$C$、$E$ 四点共圆，$\angle BCE$ 与 $\angle BAE$ 是同弧 $BE$ 上的圆周角，故 $\angle BCE=\angle BAE=\angle BAD=\angle DAC$，从而
+
+\nopagebreak[4]
+\[
+\angle ACE=\angle BCA+\angle BCE=\angle BCA+\angle DAC=\angle ADB.
+\]
+
+\Needspace{5\baselineskip}
+两角对应相等，得
+
+\nopagebreak[4]
+\[
+\triangle ABD\sim\triangle AEC
+\]
+
+\Needspace{5\baselineskip}
+（对应关系 $A\leftrightarrow A$、$B\leftrightarrow E$、$D\leftrightarrow C$），于是
+
+\nopagebreak[4]
+\[
+\frac{AB}{AE}=\frac{AD}{AC},
+\qquad\text{\text{即}}\qquad
+AB\cdot AC=AD\cdot AE.
+\]
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知正三棱锥 $P\text{—}ABC$ 的底面边长是 $6\ \mathrm{cm}$，侧面与底面所成的角是 $60^\circ$，求它的体积。（结果可用根式表示）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设顶点 $P$ 在底面内的射影为底面正三角形的中心 $O$，$M$ 为 $AB$ 的中点。底面边长为 $6\ \mathrm{cm}$，则底面积与边心距分别为
+
+\nopagebreak[4]
+\[
+S=\frac{\sqrt3}{4}\times6^2=9\sqrt3\ \mathrm{cm^2},
+\qquad
+OM=\frac{\sqrt3}{6}\times6=\sqrt3\ \mathrm{cm}.
+\]
+
+\Needspace{5\baselineskip}
+侧面与底面所成的二面角的平面角即 $\angle PMO=60^\circ$，故棱锥的高
+
+\nopagebreak[4]
+\[
+h=PO=OM\cdot\operatorname{tg}60^\circ=\sqrt3\times\sqrt3=3\ \mathrm{cm}.
+\]
+
+\Needspace{5\baselineskip}
+体积
+
+\nopagebreak[4]
+\[
+V=\frac13Sh=\frac13\times9\sqrt3\times3=9\sqrt3\ \mathrm{cm^3}.
+\]
+
+\gkanswer{答案：$V=9\sqrt3\ \mathrm{cm^3}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知 $a$、$b$、$c$ 为三角形的三条边，求证：
+
+\nopagebreak[4]
+\[
+b^2x^2+(b^2+c^2-a^2)x+c^2=0
+\]
+
+无实数根。
+
+\begin{gktip}
+\textbf{源注}：原卷二次项印作“$b^2x^2$”，其指数 2 处带一墨点（易误读为下标）；按二次方程题意并结合 600 dpi 局部重渲确认为 $x^2$，墨点系印刷污渍。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+方程是关于 $x$ 的二次方程（首项系数 $b^2>0$），其判别式为
+
+\nopagebreak[4]
+\[
+\Delta=(b^2+c^2-a^2)^2-4b^2c^2.
+\]
+
+\Needspace{5\baselineskip}
+由余弦定理，$b^2+c^2-a^2=2bc\cos A$，代入：
+
+\nopagebreak[4]
+\[
+\Delta=4b^2c^2\cos^2A-4b^2c^2
+=-4b^2c^2\sin^2A.
+\]
+
+\Needspace{5\baselineskip}
+因 $a$、$b$、$c$ 为三角形的三条边，$b>0$、$c>0$，且 $0<A<\pi$、$\sin A>0$，故
+
+\nopagebreak[4]
+\[
+\Delta=-4b^2c^2\sin^2A<0,
+\]
+
+方程无实数根。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+方程 $x^2-(\operatorname{tg}\theta+\operatorname{ctg}\theta)x+1=0$ 有一根为 $2+\sqrt3$，求 $\sin2\theta$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设方程的两根为 $x_1=2+\sqrt3$ 与 $x_2$。由韦达定理，$x_1x_2=1$，故
+
+\nopagebreak[4]
+\[
+x_2=\frac{1}{2+\sqrt3}=2-\sqrt3.
+\]
+
+\Needspace{5\baselineskip}
+两根之和为
+
+\nopagebreak[4]
+\[
+x_1+x_2=(2+\sqrt3)+(2-\sqrt3)=4.
+\]
+
+\Needspace{5\baselineskip}
+另一方面，
+
+\nopagebreak[4]
+\[
+\operatorname{tg}\theta+\operatorname{ctg}\theta
+=\frac{\sin\theta}{\cos\theta}+\frac{\cos\theta}{\sin\theta}
+=\frac{1}{\sin\theta\cos\theta}
+=\frac{2}{\sin2\theta}.
+\]
+
+\Needspace{5\baselineskip}
+由韦达定理，$\operatorname{tg}\theta+\operatorname{ctg}\theta=x_1+x_2=4$，故
+
+\nopagebreak[4]
+\[
+\frac{2}{\sin2\theta}=4
+\quad\Longrightarrow\quad
+\sin2\theta=\frac12.
+\]
+
+\gkanswer{答案：$\sin2\theta=\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+汽车与自行车分别从相距 75 公里的 $A$、$B$ 两地同时出发，（$A$ 地在 $B$ 地的正东方向）汽车从 $A$ 地向正西方向行驶，自行车从 $B$ 地向正南方向行驶，已知汽车和自行车的速度分别为 30 公里/小时和 15 公里/小时，问出发后多少小时两车相距最短？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+以 $B$ 为原点、正东方向为 $x$ 轴正向建立直角坐标系，则 $A(75,0)$。设出发 $t$ 小时后，汽车位于 $(75-30t,\ 0)$，自行车位于 $(0,\ -15t)$。两车距离的平方
+
+\nopagebreak[4]
+\[
+d^2=(75-30t)^2+(15t)^2
+=5625-4500t+900t^2+225t^2
+=1125t^2-4500t+5625.
+\]
+
+\Needspace{5\baselineskip}
+配方：
+
+\nopagebreak[4]
+\[
+d^2=1125(t-2)^2+1125.
+\]
+
+\Needspace{5\baselineskip}
+故 $t=2$ 时 $d^2$ 取最小值 $1125$，最短距离
+
+\nopagebreak[4]
+\[
+d=\sqrt{1125}=15\sqrt5\approx33.5\ \text{\text{公里}}.
+\]
+
+即出发后 2 小时两车相距最短。
+
+\gkanswer{答案：出发后 $2$ 小时两车相距最短，最短距离为 $15\sqrt5$ 公里（约 $33.5$ 公里）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知等差数列有 10 项，偶数项之和为 55，奇数项之和为 45，求此数列的第五项。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+十项中奇数项 $a_1$、$a_3$、$a_5$、$a_7$、$a_9$ 关于 $a_5$ 对称，偶数项 $a_2$、$a_4$、$a_6$、$a_8$、$a_{10}$ 关于 $a_6$ 对称，由等差数列的性质：
+
+\nopagebreak[4]
+\[
+a_1+a_3+a_5+a_7+a_9=5a_5=45
+\quad\Longrightarrow\quad
+a_5=9,
+\]
+
+\nopagebreak[4]
+\[
+a_2+a_4+a_6+a_8+a_{10}=5a_6=55
+\quad\Longrightarrow\quad
+a_6=11.
+\]
+
+（顺带可得公差 $d=a_6-a_5=2$。）所求第五项 $a_5=9$。
+
+\gkanswer{答案：第五项 $a_5=9$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+一动点到直线 $x=8$ 的距离是它到点 $A(2,0)$ 的距离的 2 倍，
+
+（1） 求这动点的轨迹方程；
+
+（2） 判断这轨迹是何曲线；
+
+（3） 求经过这曲线上一点 $B(2,3)$ 的切线方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设动点坐标为 $(x,y)$。它到直线 $x=8$ 的距离为 $|x-8|$，到点 $A(2,0)$ 的距离为 $\sqrt{(x-2)^2+y^2}$。依题意
+
+\nopagebreak[4]
+\[
+|x-8|=2\sqrt{(x-2)^2+y^2}.
+\]
+
+\Needspace{5\baselineskip}
+两边平方：
+
+\nopagebreak[4]
+\[
+x^2-16x+64=4\left(x^2-4x+4+y^2\right),
+\]
+
+\Needspace{5\baselineskip}
+整理得
+
+\nopagebreak[4]
+\[
+3x^2+4y^2-48=0,
+\qquad
+\frac{x^2}{16}+\frac{y^2}{12}=1.
+\]
+
+\gksubpart{（2）}
+
+轨迹方程是中心在原点、焦点在 $x$ 轴上的椭圆：$a^2=16$、$b^2=12$，$c^2=a^2-b^2=4$，焦点为 $(\pm2,0)$。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+先验证 $B(2,3)$ 在曲线上：$\dfrac{4}{16}+\dfrac{9}{12}=1$，成立。过椭圆 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ 上一点 $(x_0,y_0)$ 的切线方程为 $\dfrac{x_0x}{a^2}+\dfrac{y_0y}{b^2}=1$，代入 $B(2,3)$：
+
+\nopagebreak[4]
+\[
+\frac{2x}{16}+\frac{3y}{12}=1
+\quad\Longrightarrow\quad
+x+2y-8=0.
+\]
+
+（亦可设过 $B$ 的直线为 $y-3=k(x-2)$，与椭圆方程联立后令判别式为零，解得 $k=-\dfrac12$，化简得同一切线。）
+
+\gkanswer{答案（1）：$\dfrac{x^2}{16}+\dfrac{y^2}{12}=1$。}
+
+\gkanswer{答案（2）：椭圆（$a=4$、$b=2\sqrt3$，焦点 $(\pm2,0)$ 在 $x$ 轴上）。}
+
+\gkanswer{答案（3）：$x+2y-8=0$。}
+
+\end{answer}

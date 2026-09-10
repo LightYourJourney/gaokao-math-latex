@@ -1,0 +1,485 @@
+% answers.tex —— 1958 年·湖北卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1958/1958_湖北_数学真题_试题.md + 1958/1958_湖北_数学真题_解析正文.md + 1958/1958_湖北_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+本卷题面出自固定原卷（仅题面，无答案页）；以下解析由本库逐题独立推导，不声称代表官方发布版本。原卷第 6–8 题位于居中标题「补充题（非统考题）」之下、接续正式题编号，按本库约定以「附加题」著录于卷尾，不另写入答案要点。全卷原卷无插图。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设有数列 $1+2x+3x^2+4x^3+\cdots\cdots$
+
+（1） 写出这个数列的第 $n$ 项；
+
+（2） 写出这个数列的前 $n$ 项和的公式；
+
+（3） 问这个和的公式当 $x=1$ 时能否成立？如能成立，说明理由，如不能成立，怎样求和？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+数列即 $1,\ 2x,\ 3x^2,\ 4x^3,\ \cdots\cdots$，第 $k$ 项的系数等于项数 $k$、$x$ 的幂指数比项数少一，故第 $n$ 项为
+
+\nopagebreak[4]
+\[
+a_n=nx^{n-1}
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+设前 $n$ 项和
+
+\nopagebreak[4]
+\[
+S_n=1+2x+3x^2+\cdots+nx^{n-1}
+\]
+
+\Needspace{5\baselineskip}
+两边乘 $x$：
+
+\nopagebreak[4]
+\[
+xS_n=x+2x^2+\cdots+(n-1)x^{n-1}+nx^n
+\]
+
+\Needspace{5\baselineskip}
+两式相减：
+
+\nopagebreak[4]
+\[
+(1-x)S_n=1+x+x^2+\cdots+x^{n-1}-nx^n
+\]
+
+\Needspace{5\baselineskip}
+当 $x\neq1$ 时，等比数列部分求和得 $\dfrac{1-x^n}{1-x}$，于是
+
+\nopagebreak[4]
+\[
+(1-x)S_n=\frac{1-x^n}{1-x}-nx^n
+\]
+
+\nopagebreak[4]
+\[
+S_n=\frac{1-x^n-nx^n(1-x)}{(1-x)^2}
+=\frac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}
+\]
+
+\gksubpart{（3）}
+
+不能成立。（2）中公式在推导时以 $x\neq1$ 为前提（两端除以 $1-x$），且结果分母含 $(1-x)^2$，$x=1$ 时无意义。
+
+\Needspace{5\baselineskip}
+当 $x=1$ 时数列成为 $1,\,2,\,3,\,\cdots,\,n$，直接求等差和：
+
+\nopagebreak[4]
+\[
+S_n=1+2+\cdots+n=\frac{n(n+1)}{2}
+\]
+
+\gkanswer{答案（1）：$a_n=nx^{n-1}$}
+
+\gkanswer{答案（2）：$S_n=\dfrac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}$（$x\neq1$）}
+
+\gkanswer{答案（3）：不成立；$x=1$ 时 $S_n=\dfrac{n(n+1)}2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 $A$、$B$、$C$ 是 $\triangle ABC$ 的三个内角，求证：
+
+\nopagebreak[4]
+\[
+\tan A+\tan B+\tan C=\tan A\cdot\tan B\cdot\tan C
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $A$、$B$、$C$ 均不为 $90^\circ$（否则正切无定义，等式两边无意义）。由 $A+B+C=\pi$ 得 $A+B=\pi-C$，故
+
+\nopagebreak[4]
+\[
+\tan(A+B)=\tan(\pi-C)=-\tan C
+\]
+
+\Needspace{5\baselineskip}
+又由两角和的正切公式：
+
+\nopagebreak[4]
+\[
+\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+\tan A+\tan B=-\tan C\,(1-\tan A\tan B)=-\tan C+\tan A\tan B\tan C
+\]
+
+\Needspace{5\baselineskip}
+移项即得
+
+\nopagebreak[4]
+\[
+\tan A+\tan B+\tan C=\tan A\cdot\tan B\cdot\tan C
+\]
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+解方程：
+
+\nopagebreak[4]
+\[
+\left(\log_x\sqrt5\right)^2+\log_x 5\sqrt5+\frac54=0
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+定义域要求 $x>0$ 且 $x\neq1$。先把方程第二项化归同一对数：
+
+\nopagebreak[4]
+\[
+\log_x 5\sqrt5=\log_x 5+\log_x\sqrt5=2\log_x\sqrt5+\log_x\sqrt5=3\log_x\sqrt5
+\]
+
+\Needspace{5\baselineskip}
+设 $t=\log_x\sqrt5$，原方程化为
+
+\nopagebreak[4]
+\[
+t^2+3t+\frac54=0
+\]
+
+\Needspace{5\baselineskip}
+乘 $4$：$4t^2+12t+5=0$，即 $(2t+1)(2t+5)=0$，故
+
+\nopagebreak[4]
+\[
+t=-\frac12\quad\text{或}\quad t=-\frac52
+\]
+
+\begin{itemize}
+\item 由 $\log_x\sqrt5=-\dfrac12$：$x^{-1/2}=5^{1/2}$，故 $x=5^{-1}=\dfrac15$；
+\item 由 $\log_x\sqrt5=-\dfrac52$：$x^{-5/2}=5^{1/2}$，故 $x=5^{-1/5}=\dfrac1{\sqrt[5]5}$。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+两个值均为正且不等于 $1$，都在定义域内。方程的解为
+
+\nopagebreak[4]
+\[
+x_1=\frac15,\qquad x_2=\frac1{\sqrt[5]5}
+\]
+
+\gkanswer{答案：$x=\dfrac15$ 或 $x=\dfrac1{\sqrt[5]5}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$AD$ 是 $BC$ 的中线，而且 $\angle B$ 和 $\angle CAD$ 互为余角，问 $\triangle ABC$ 是怎样的三角形？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $\angle BAD=\alpha_1$、$\angle CAD=\alpha_2$、$\angle B=\beta$、$\angle C=\gamma$。题设
+
+\nopagebreak[4]
+\[
+\alpha_2+\beta=90^\circ
+\]
+
+\Needspace{5\baselineskip}
+由三角形内角和 $\alpha_1+\alpha_2+\beta+\gamma=180^\circ$，代入上式得
+
+\nopagebreak[4]
+\[
+\alpha_1+\gamma=90^\circ
+\]
+
+即 $\alpha_2=90^\circ-\beta$、$\alpha_1=90^\circ-\gamma$。
+
+\Needspace{5\baselineskip}
+因 $AD$ 是 $BC$ 边中线，$BD=DC$；又 $\angle ADB$ 与 $\angle ADC$ 互补，其正弦相等。在 $\triangle ABD$ 与 $\triangle ACD$ 中分别用正弦定理：
+
+\nopagebreak[4]
+\[
+BD=\frac{AB\sin\alpha_1}{\sin\angle ADB},\qquad
+DC=\frac{AC\sin\alpha_2}{\sin\angle ADC}
+\]
+
+\Needspace{5\baselineskip}
+由 $BD=DC$、$\sin\angle ADB=\sin\angle ADC$ 得
+
+\nopagebreak[4]
+\[
+AB\sin\alpha_1=AC\sin\alpha_2
+\]
+
+\Needspace{5\baselineskip}
+再用正弦定理 $AB=2R\sin\gamma$、$AC=2R\sin\beta$（$R$ 为外接圆半径）：
+
+\nopagebreak[4]
+\[
+\sin\gamma\sin\alpha_1=\sin\beta\sin\alpha_2
+\]
+
+\Needspace{5\baselineskip}
+以 $\sin\alpha_1=\cos\gamma$、$\sin\alpha_2=\cos\beta$ 代入：
+
+\nopagebreak[4]
+\[
+\sin\gamma\cos\gamma=\sin\beta\cos\beta
+\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[
+\sin 2\gamma=\sin 2\beta
+\]
+
+于是 $2\gamma=2\beta$ 或 $2\gamma=180^\circ-2\beta$，即
+
+\begin{itemize}
+\item $\gamma=\beta$：此时 $AB=AC$，$\triangle ABC$ 是等腰三角形；
+\item $\beta+\gamma=90^\circ$：此时 $\angle A=180^\circ-(\beta+\gamma)=90^\circ$，$\triangle ABC$ 是直角三角形。
+\end{itemize}
+
+两种情形都能实现（如 $\beta=\gamma=50^\circ$ 的等腰三角形；或任意直角三角形——此时 $AD$ 为斜边中线，$AD=BD=DC$，恒有 $\angle CAD=\angle C$，条件自动满足）。故 $\triangle ABC$ 是等腰三角形，或者是 $\angle A$ 为直角的直角三角形。
+
+\gkanswer{答案：等腰三角形（$AB=AC$）或直角三角形（$\angle A=90^\circ$）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+在直角三角形所在平面外取一点 $P$，而且 $P$ 点和三角形三个顶点的距离都是相等的，证明：连接 $P$ 点和三角形斜边中点的直线垂直于这个三角形所在的平面。
+
+\begin{gktip}
+\textbf{源注}：原卷第 5 题之后有居中标题「补充题（非统考题）」，其下三题接续正式题编号为 $6$–$8$；按本库约定以「附加题」挂于正式题之后，编号照原卷不变，不设小节标题。
+\end{gktip}
+
+\textbf{附加题 6．}比较 $\left(\dfrac{21}{20}\right)^{100}$ 与 $100$ 的大小。
+
+\Needspace{5\baselineskip}
+\textbf{附加题 7．}已知 $a^2+b^2=7ab$，求证：
+
+\nopagebreak[4]
+\[
+\lg\left(\frac{a+b}{3}\right)=\frac12(\lg a+\lg b)
+\]
+
+\textbf{附加题 8．}已知方程式 $x^3+px^2+qx+r=0$ 的三根 $a$、$b$、$c$ 成调和级数，求 $a$、$b$、$c$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设直角三角形为 $ABC$，$\angle A=90^\circ$，斜边 $BC$ 的中点为 $M$，连接 $AM$。由直角三角形斜边上的中线等于斜边的一半：
+
+\nopagebreak[4]
+\[
+MA=MB=MC=\frac12BC
+\]
+
+\Needspace{5\baselineskip}
+点 $P$ 在平面外，且 $PA=PB=PC$。考察 $\triangle PMA$、$\triangle PMB$、$\triangle PMC$：三者有公共边 $PM$，且 $MA=MB=MC$、$PA=PB=PC$，由三边对应相等得
+
+\nopagebreak[4]
+\[
+\triangle PMA\cong\triangle PMB\cong\triangle PMC
+\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[
+\angle PMA=\angle PMB=\angle PMC
+\]
+
+因 $B$、$M$、$C$ 共线且 $M$ 在 $B$、$C$ 之间，$\angle PMB+\angle PMC=180^\circ$，故 $\angle PMB=\angle PMC=90^\circ$，从而 $\angle PMA=90^\circ$。
+
+\Needspace{5\baselineskip}
+于是 $PM\perp BC$（垂足 $M$），且 $PM\perp MA$。$BC$ 与 $MA$ 是平面 $ABC$ 内相交于点 $M$ 的两条直线，由线面垂直判定定理，
+
+\nopagebreak[4]
+\[
+PM\perp \text{平面}\ ABC
+\]
+
+即连接 $P$ 点与斜边中点的直线垂直于这个三角形所在的平面。
+
+\textbf{附加题 6}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+方法一（用对数表）：
+
+\nopagebreak[4]
+\[
+\lg\left(\frac{21}{20}\right)^{100}=100(\lg 21-\lg 20)
+\]
+
+\Needspace{5\baselineskip}
+查四位对数表：$\lg 21=1.3222$，$\lg 20=1.3010$，故
+
+\nopagebreak[4]
+\[
+\lg\left(\frac{21}{20}\right)^{100}=100\times0.0212=2.12>2
+\]
+
+所以 $\left(\dfrac{21}{20}\right)^{100}=10^{2.12}>10^2=100$。
+
+\Needspace{5\baselineskip}
+方法二（不用对数表）：由二项式定理，
+
+\nopagebreak[4]
+\[
+\left(1+\frac1{20}\right)^{20}
+=1+1+\frac{C_{20}^2}{20^2}+\frac{C_{20}^3}{20^3}+\cdots
+>1+1+\frac{190}{400}+\frac{1140}{8000}=2.6175>\frac{13}{5}
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\left(\frac{21}{20}\right)^{100}
+=\left[\left(1+\frac1{20}\right)^{20}\right]^5
+>\left(\frac{13}{5}\right)^5=\frac{371293}{3125}\approx118.8>100
+\]
+
+故 $\left(\dfrac{21}{20}\right)^{100}>100$。
+
+\textbf{附加题 7}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$a$、$b$ 须为正数（对数才有定义）。把条件平方展开：
+
+\nopagebreak[4]
+\[
+(a+b)^2=a^2+2ab+b^2=7ab+2ab=9ab
+\]
+
+\Needspace{5\baselineskip}
+$a$、$b>0$，两边开方取正根：
+
+\nopagebreak[4]
+\[
+a+b=3\sqrt{ab}\quad\Longrightarrow\quad\frac{a+b}{3}=\sqrt{ab}=(ab)^{1/2}
+\]
+
+\Needspace{5\baselineskip}
+取常用对数：
+
+\nopagebreak[4]
+\[
+\lg\left(\frac{a+b}{3}\right)=\lg(ab)^{1/2}=\frac12\lg(ab)=\frac12(\lg a+\lg b)
+\]
+
+\textbf{附加题 8}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+三根 $a$、$b$、$c$ 依序成调和级数，即它们的倒数成等差数列（各根均非零，否则倒数无定义）：
+
+\nopagebreak[4]
+\[
+\frac2b=\frac1a+\frac1c\quad\Longrightarrow\quad b(a+c)=2ac
+\]
+
+\Needspace{5\baselineskip}
+由韦达定理：
+
+\nopagebreak[4]
+\[
+a+b+c=-p,\qquad ab+bc+ca=q,\qquad abc=-r
+\]
+
+\Needspace{5\baselineskip}
+第二步代入 $b(a+c)=2ac$：
+
+\nopagebreak[4]
+\[
+q=b(a+c)+ac=2ac+ac=3ac\quad\Longrightarrow\quad ac=\frac q3
+\]
+
+\Needspace{5\baselineskip}
+（$q\neq0$，否则 $ac=0$ 与各根非零矛盾。）由第三式：
+
+\nopagebreak[4]
+\[
+b=\frac{-r}{ac}=-\frac{3r}{q}
+\]
+
+\Needspace{5\baselineskip}
+再由调和级数条件：
+
+\nopagebreak[4]
+\[
+a+c=\frac{2ac}{b}=\frac{2q/3}{-3r/q}=-\frac{2q^2}{9r}
+\]
+
+\Needspace{5\baselineskip}
+（$r\neq0$。）于是 $a$、$c$ 是二次方程 $t^2-(a+c)t+ac=0$ 即
+
+\nopagebreak[4]
+\[
+t^2-\left(-p+\frac{3r}{q}\right)t+\frac q3=0
+\]
+
+\Needspace{5\baselineskip}
+的两个根：
+
+\nopagebreak[4]
+\[
+a,\ c=\frac{-p+\dfrac{3r}{q}\pm\sqrt{\left(-p+\dfrac{3r}{q}\right)^2-\dfrac{4q}{3}}}{2}
+\]
+
+\begin{gktip}
+\textbf{编注}：韦达定理第一式另给 $a+c=-p-b=-p+\dfrac{3r}{q}$，与前得的 $a+c=-\dfrac{2q^2}{9r}$ 比较，系数须满足 $2q^3-9pqr+27r^2=0$——这正是「三根成调和级数」对三次方程系数的约束条件；本题即在该约束下求出三根的上述表达式。
+\end{gktip}
+
+\gkanswer{答案：见解析版}
+
+\end{answer}

@@ -1,0 +1,495 @@
+% answers.tex —— 1958 年·安徽卷（存疑） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1958/1958_安徽_数学真题_试题.md + 1958/1958_安徽_数学真题_解析正文.md + 1958/1958_安徽_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+\textbf{说明}：本文解析为本库依据题面独立推导，不代表官方解答；原卷各题记分之和为 $35+20+14+15+16=100$，与常见满分 $100$ 分一致。本卷来源网络，无法确认真实性，特此注明。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+（每小题7分，计35分）
+
+（1） 已知方程 $x^2-2x+q=0$ 两根的差的平方等于16，求 $q$ 的值。
+
+（2） 计算 $\log_{\frac32}\dfrac94+(0.25)^{-\frac32}+\log_2\sin135°$。
+
+（3） 证明 $\sin(\alpha+\beta)<\sin\alpha+\sin\beta$（$\alpha,\beta$ 都是锐角）。
+
+（4） 说明函数 $y=x^2-4$ 的图象和函数 $y=x^2$ 的图象对于坐标轴的位置有什么区别。
+
+（5） 夹在两个平行平面间的两条线段，它们的长的和是28寸，它们在同一个平面上的射影是9寸和5寸，求这两条线段的长。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设方程 $x^2-2x+q=0$ 的两根为 $x_1,x_2$。由韦达定理，$x_1+x_2=2$，$x_1x_2=q$。两根之差的平方为
+
+\nopagebreak[4]
+\[
+(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2=4-4q
+\]
+
+依题意 $4-4q=16$，解得 $q=-3$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+逐项化简：$\dfrac32$ 的平方为 $\dfrac94$，故
+
+\nopagebreak[4]
+\[
+\log_{\frac32}\frac94=2
+\]
+
+\Needspace{5\baselineskip}
+又 $0.25=2^{-2}$，故
+
+\nopagebreak[4]
+\[
+(0.25)^{-\frac32}=(2^{-2})^{-\frac32}=2^{3}=8
+\]
+
+\Needspace{5\baselineskip}
+再由 $\sin135°=\sin45°=\dfrac{\sqrt2}2=2^{-\frac12}$，得
+
+\nopagebreak[4]
+\[
+\log_2\sin135°=\log_22^{-\frac12}=-\frac12
+\]
+
+\Needspace{5\baselineskip}
+三项相加：
+
+\nopagebreak[4]
+\[
+2+8-\frac12=\frac{19}2
+\]
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+由和角公式，
+
+\nopagebreak[4]
+\[
+\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta
+\]
+
+\Needspace{5\baselineskip}
+因 $\alpha,\beta$ 均为锐角，故 $0<\cos\alpha<1$，$0<\cos\beta<1$，且 $\sin\alpha>0,\sin\beta>0$。于是
+
+\nopagebreak[4]
+\[
+\sin\alpha\cos\beta<\sin\alpha,\qquad \cos\alpha\sin\beta<\sin\beta
+\]
+
+\Needspace{5\baselineskip}
+两式相加，得
+
+\nopagebreak[4]
+\[
+\sin(\alpha+\beta)<\sin\alpha+\sin\beta
+\]
+
+\gksubpart{（4）}
+
+两函数的图象都是开口向上、以 $y$ 轴为对称轴的抛物线，仅顶点位置不同：$y=x^2$ 顶点在原点 $(0,0)$，图象恒有 $y\ge0$，仅在原点与 $x$ 轴相切（相交于一点）；$y=x^2-4$ 顶点在 $(0,-4)$，令 $x^2-4=0$ 得 $x=\pm2$，图象与 $x$ 轴交于两点 $(-2,0)$、$(2,0)$，且当 $-2<x<2$ 时 $y<0$，图象位于 $x$ 轴下方。可见 $y=x^2-4$ 的图象即 $y=x^2$ 的图象沿 $y$ 轴向下平移 $4$ 个单位所得，二者关于 $y$ 轴的对称性不变，区别仅在于与 $x$ 轴的交点个数（$1$ 个切点 vs. $2$ 个交点）和图象是否越过 $x$ 轴下方。
+
+\gksubpart{（5）}
+
+\Needspace{5\baselineskip}
+设夹在两平行平面间的两条线段长分别为 $l_1,l_2$，在同一平面上的射影分别为 $9$ 寸、$5$ 寸。因两平行平面间的垂直距离 $h$ 对两条线段而言相同，由勾股定理：
+
+\nopagebreak[4]
+\[
+l_1^2=h^2+9^2,\qquad l_2^2=h^2+5^2
+\]
+
+\Needspace{5\baselineskip}
+两式相减：
+
+\nopagebreak[4]
+\[
+l_1^2-l_2^2=81-25=56
+\]
+
+\Needspace{5\baselineskip}
+又由题意 $l_1+l_2=28$，而 $l_1^2-l_2^2=(l_1-l_2)(l_1+l_2)$，故
+
+\nopagebreak[4]
+\[
+l_1-l_2=\frac{56}{28}=2
+\]
+
+\Needspace{5\baselineskip}
+联立 $l_1+l_2=28$ 与 $l_1-l_2=2$，解得
+
+\nopagebreak[4]
+\[
+l_1=15,\qquad l_2=13
+\]
+
+（单位：寸）。验证：$h=\sqrt{15^2-9^2}=\sqrt{144}=12$，$h=\sqrt{13^2-5^2}=\sqrt{144}=12$，两次算得的 $h$ 一致，解自洽。
+
+\gkanswer{答案（1）：$q=-3$}
+
+\gkanswer{答案（2）：$\dfrac{19}2$}
+
+\gkanswer{答案（3）：见解析版}
+
+\gkanswer{答案（4）：$y=x^2$ 顶点在原点、与 $x$ 轴相切（图象恒在 $x$ 轴上方）；$y=x^2-4$ 顶点在 $(0,-4)$、与 $x$ 轴交于 $(\pm2,0)$ 两点，在 $-2<x<2$ 段图象位于 $x$ 轴下方；两者对称轴（$y$ 轴）相同，仅沿 $y$ 轴方向相差一次平移}
+
+\gkanswer{答案（5）：两条线段长分别为 $15$ 寸和 $13$ 寸}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+（每小题10分，计20分）
+
+\Needspace{5\baselineskip}
+（1） 解方程组
+
+\nopagebreak[4]
+\[
+\begin{cases}
+\log_3(2x+8)-\log_3 y=1,\\
+\sqrt{2x+14}-\sqrt{2y+7}=0.
+\end{cases}
+\]
+
+（2） 解方程 $\left(\sqrt{2+\sqrt3}\right)^x+\left(\sqrt{2-\sqrt3}\right)^x=4$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由第一个方程，
+
+\nopagebreak[4]
+\[
+\log_3(2x+8)-\log_3y=1\ \Longrightarrow\ \log_3\frac{2x+8}y=1\ \Longrightarrow\ 2x+8=3y
+\]
+
+\Needspace{5\baselineskip}
+由第二个方程，
+
+\nopagebreak[4]
+\[
+\sqrt{2x+14}=\sqrt{2y+7}\ \Longrightarrow\ 2x+14=2y+7\ \Longrightarrow\ y=x+\frac72
+\]
+
+\Needspace{5\baselineskip}
+代入 $2x+8=3y$：
+
+\nopagebreak[4]
+\[
+2x+8=3\left(x+\frac72\right)=3x+\frac{21}2
+\]
+
+\nopagebreak[4]
+\[
+2x-3x=\frac{21}2-8=\frac52
+\]
+
+\nopagebreak[4]
+\[
+-x=\frac52\ \Longrightarrow\ x=-\frac52
+\]
+
+于是 $y=x+\dfrac72=-\dfrac52+\dfrac72=1$。
+
+检验定义域：$2x+8=3>0$，$y=1>0$（对数真数为正）；$2x+14=9\ge0$，$2y+7=9\ge0$（被开方数非负）；代回原方程组，两式均成立。故 $x=-\dfrac52,\ y=1$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+注意到
+
+\nopagebreak[4]
+\[
+(2+\sqrt3)(2-\sqrt3)=4-3=1
+\]
+
+故 $\sqrt{2+\sqrt3}\cdot\sqrt{2-\sqrt3}=1$，即 $\sqrt{2-\sqrt3}=\left(\sqrt{2+\sqrt3}\right)^{-1}$。
+
+\Needspace{5\baselineskip}
+令 $t=\left(\sqrt{2+\sqrt3}\right)^x$，则
+
+\nopagebreak[4]
+\[
+\left(\sqrt{2-\sqrt3}\right)^x=\left(\sqrt{2+\sqrt3}\right)^{-x}=\frac1t
+\]
+
+\Needspace{5\baselineskip}
+原方程化为
+
+\nopagebreak[4]
+\[
+t+\frac1t=4\ \Longrightarrow\ t^2-4t+1=0
+\]
+
+\Needspace{5\baselineskip}
+解得
+
+\nopagebreak[4]
+\[
+t=\frac{4\pm\sqrt{16-4}}2=2\pm\sqrt3
+\]
+
+由于 $\left(\sqrt{2+\sqrt3}\right)^2=2+\sqrt3$，故 $t=2+\sqrt3$ 时 $x=2$；又 $2-\sqrt3=(2+\sqrt3)^{-1}=\left(\sqrt{2+\sqrt3}\right)^{-2}$，故 $t=2-\sqrt3$ 时 $x=-2$。
+
+综上，$x=2$ 或 $x=-2$。
+
+\gkanswer{答案（1）：$x=-\dfrac52,\ y=1$}
+
+\gkanswer{答案（2）：$x=2$ 或 $x=-2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+（14分）设 $\sin\alpha$ 为 $\sin\theta$ 与 $\cos\theta$ 的等差中项，$\sin\beta$ 为 $\sin\theta$ 与 $\cos\theta$ 的等比中项，求证：
+
+\nopagebreak[4]
+\[
+2\cos2\alpha=\cos2\beta
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+依题意，$\sin\alpha$ 为 $\sin\theta$ 与 $\cos\theta$ 的等差中项，即
+
+\nopagebreak[4]
+\[
+\sin\alpha=\frac{\sin\theta+\cos\theta}2
+\]
+
+\Needspace{5\baselineskip}
+$\sin\beta$ 为 $\sin\theta$ 与 $\cos\theta$ 的等比中项，即
+
+\nopagebreak[4]
+\[
+\sin^2\beta=\sin\theta\cos\theta
+\]
+
+\Needspace{5\baselineskip}
+先化简 $2\cos2\alpha$：
+
+\nopagebreak[4]
+\[
+2\cos2\alpha=2(1-2\sin^2\alpha)=2-4\sin^2\alpha=2-4\left(\frac{\sin\theta+\cos\theta}2\right)^2=2-(\sin\theta+\cos\theta)^2
+\]
+
+\Needspace{5\baselineskip}
+展开 $(\sin\theta+\cos\theta)^2=\sin^2\theta+2\sin\theta\cos\theta+\cos^2\theta=1+2\sin\theta\cos\theta$，代入得
+
+\nopagebreak[4]
+\[
+2\cos2\alpha=2-(1+2\sin\theta\cos\theta)=1-2\sin\theta\cos\theta
+\]
+
+\Needspace{5\baselineskip}
+再化简 $\cos2\beta$：
+
+\nopagebreak[4]
+\[
+\cos2\beta=1-2\sin^2\beta=1-2\sin\theta\cos\theta
+\]
+
+\Needspace{5\baselineskip}
+两者相等，故
+
+\nopagebreak[4]
+\[
+2\cos2\alpha=\cos2\beta
+\]
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+（15分）已知三棱锥的底面积为 $S$，高为 $H$，过这个三棱锥的三个侧棱的中点作一截面，求过这个三棱锥的底面上任一点为顶点，以所作截面为底的新的三棱锥的体积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设三棱锥为 $P\text{-}ABC$，底面 $ABC$ 面积为 $S$，高（$P$ 到底面的垂直距离）为 $H$。设侧棱 $PA,PB,PC$ 的中点分别为 $A',B',C'$，截面即 $\triangle A'B'C'$。
+
+\Needspace{5\baselineskip}
+由于 $A',B',C'$ 分别是 $PA,PB,PC$ 的中点，$\triangle A'B'C'$ 是以 $P$ 为中心、相似比 $\dfrac12$ 将 $\triangle ABC$ 位似所得的图形，故 $\triangle A'B'C'\parallel\triangle ABC$，且
+
+\nopagebreak[4]
+\[
+\triangle A'B'C'\text{ 的面积}=\left(\frac12\right)^2S=\frac S4
+\]
+
+\Needspace{5\baselineskip}
+又因 $A'$ 是 $PA$ 的中点，$A'$ 到底面的距离为 $P$ 到底面距离的一半，即截面 $A'B'C'$ 所在平面与底面平行，且二者间的垂直距离为
+
+\nopagebreak[4]
+\[
+\frac H2
+\]
+
+现设 $Q$ 为底面 $ABC$ 上任一点。因为截面所在平面与底面平行，$Q$（在底面内）到截面所在平面的垂直距离恒等于两平行平面间的距离 $\dfrac H2$，与 $Q$ 在底面中的具体位置无关。
+
+\Needspace{5\baselineskip}
+于是以 $\triangle A'B'C'$ 为底、$Q$ 为顶点的新三棱锥，其体积为
+
+\nopagebreak[4]
+\[
+V=\frac13\cdot\frac S4\cdot\frac H2=\frac{SH}{24}
+\]
+
+\gkanswer{答案：$V=\dfrac{SH}{24}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+（16分）在内接于圆的四边形 $ABCD$ 中，对应边 $AB$、$DC$ 的延长线交于 $P$，$AD$、$BC$ 的延长线交于 $Q$，求证：
+
+（1） $PB\cdot CA=PC\cdot BD$；
+
+（2） 角 $P$ 及角 $Q$ 的平分线互相垂直。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+因为 $P,B,A$ 三点共线，$P,C,D$ 三点共线，由圆幂定理（过圆外一点的两条割线，各自与圆的两交点到该点的距离之积相等），
+
+\nopagebreak[4]
+\[
+PA\cdot PB=PC\cdot PD
+\]
+
+\Needspace{5\baselineskip}
+改写为比例式：
+
+\nopagebreak[4]
+\[
+\frac{PA}{PD}=\frac{PC}{PB}
+\]
+
+\Needspace{5\baselineskip}
+又因为 $A,B$ 同在过 $P$ 的一条直线上，$C,D$ 同在过 $P$ 的另一条直线上，故
+
+\nopagebreak[4]
+\[
+\angle APC=\angle DPB
+\]
+
+\Needspace{5\baselineskip}
+（两者是同一个夹角，即两条割线所成的角）。于是在 $\triangle PAC$ 与 $\triangle PDB$ 中，夹角相等且夹边成比例 $\dfrac{PA}{PD}=\dfrac{PC}{PB}$，由 SAS 相似判定：
+
+\nopagebreak[4]
+\[
+\triangle PAC\sim\triangle PDB
+\]
+
+\Needspace{5\baselineskip}
+对应边成比例：
+
+\nopagebreak[4]
+\[
+\frac{AC}{DB}=\frac{PA}{PD}=\frac{PC}{PB}
+\]
+
+\Needspace{5\baselineskip}
+由 $\dfrac{AC}{DB}=\dfrac{PC}{PB}$，交叉相乘即得
+
+\nopagebreak[4]
+\[
+PB\cdot AC=PC\cdot BD
+\]
+
+即 $PB\cdot CA=PC\cdot BD$（$AC=CA$）。
+
+\gksubpart{（2）}
+
+以圆心为原点、半径为 $1$ 建立参考方向，设 $A,B,C,D$ 在圆上的位置角分别为 $a,b,c,d$（即 $A=(\cos a,\sin a)$，其余同理）。
+
+\textbf{引理}：圆上两点 $X=(\cos x,\sin x)$，$Y=(\cos y,\sin y)$ 所连弦所在直线的方向角为 $\dfrac{x+y}2+90°$（对直线而言，方向角取模 $180°$）。
+
+\Needspace{5\baselineskip}
+证明：
+
+\nopagebreak[4]
+\[
+Y-X=\left(\cos y-\cos x,\ \sin y-\sin x\right)=2\sin\frac{y-x}2\left(-\sin\frac{x+y}2,\ \cos\frac{x+y}2\right)
+\]
+
+而 $\left(-\sin\theta,\cos\theta\right)$ 正是方向角为 $\theta+90°$ 的单位向量（$\theta=\dfrac{x+y}2$），故弦 $XY$ 所在直线的方向角为 $\dfrac{x+y}2+90°$（若 $\sin\dfrac{y-x}2<0$，方向反向，相当于方向角再加 $180°$，对"直线方向角取模 $180°$"而言不影响结论）。引理得证。
+
+由引理：
+
+\begin{itemize}
+\item 直线 $AB$ 的方向角为 $\dfrac{a+b}2+90°$
+\item 直线 $CD$ 的方向角为 $\dfrac{c+d}2+90°$
+\item 直线 $AD$ 的方向角为 $\dfrac{a+d}2+90°$
+\item 直线 $BC$ 的方向角为 $\dfrac{b+c}2+90°$
+\end{itemize}
+
+两条相交直线所夹角的两条互相垂直的平分线，其方向角分别等于这两条直线方向角的算术平均，以及该平均值再加 $90°$。
+
+\Needspace{5\baselineskip}
+对 $P=AB\cap DC$：两条平分线方向角为
+
+\nopagebreak[4]
+\[
+\frac12\left[\left(\frac{a+b}2+90°\right)+\left(\frac{c+d}2+90°\right)\right]=\frac{a+b+c+d}4+90°
+\]
+
+\Needspace{5\baselineskip}
+及与之垂直的
+
+\nopagebreak[4]
+\[
+\frac{a+b+c+d}4
+\]
+
+\Needspace{5\baselineskip}
+对 $Q=AD\cap BC$：完全同样地代入 $a,d$ 与 $b,c$，两条平分线方向角同样为
+
+\nopagebreak[4]
+\[
+\frac{a+b+c+d}4+90°\qquad\text{及}\qquad\frac{a+b+c+d}4
+\]
+
+——与 $P$ 处得到的是\textbf{同一对}互相垂直的方向。
+
+由于角 $P$ 是由 $B,A$ 一侧与 $C,D$ 一侧的两条射线所夹、开口朝向弧 $BC$ 一侧的角，角 $Q$ 是开口朝向弧 $AB$（或 $CD$）一侧的角，两角的张开方向不同，故二者各自的内角平分线，必分别取上述这对互相垂直方向中不同的一支。
+
+因此，角 $P$ 的平分线与角 $Q$ 的平分线互相垂直，命题得证。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}

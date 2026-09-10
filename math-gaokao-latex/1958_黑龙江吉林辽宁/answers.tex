@@ -1,0 +1,379 @@
+% answers.tex —— 1958 年·黑龙江、吉林、辽宁卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1958/1958_黑龙江吉林辽宁_数学真题_试题.md + 1958/1958_黑龙江吉林辽宁_数学真题_解析正文.md + 1958/1958_黑龙江吉林辽宁_数学真题_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+以下解析由本库逐题独立推导（源卷仅题面，无答案页）。本卷为黑龙江、吉林、辽宁三省同用的招生考试数学卷，单页平列 8 题，未印逐题分值，无小节与小问；题面转录见同目录试题文件。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知：圆 $O$ 内直交的二弦 $AB$、$CD$ 相交于 $P$，求证：$PA^{2}+PB^{2}+PC^{2}+PD^{2}$ 为一定值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设圆 $O$ 的半径为 $R$，两弦 $AB\perp CD$，交点为 $P$。取 $AB$、$CD$ 的中点 $M$、$N$，由弦心距性质，$OM\perp AB$，$ON\perp CD$。
+
+\Needspace{5\baselineskip}
+由 $CD\perp AB$ 且 $OM\perp AB$ 得 $OM\parallel CD$；由 $AB\perp CD$ 且 $ON\perp CD$ 得 $ON\parallel AB$。而 $M$、$P$ 同在弦 $AB$ 上，$N$、$P$ 同在弦 $CD$ 上，故 $OM\parallel NP$、$ON\parallel MP$，四边形 $OMPN$ 为平行四边形；又 $OM\perp MP$，所以它是矩形。于是对角线
+
+\nopagebreak[4]
+\[
+OP^{2}=OM^{2}+MP^{2}=OM^{2}+ON^{2}.
+\]
+
+\Needspace{5\baselineskip}
+由相交弦定理，
+
+\nopagebreak[4]
+\[
+PA\cdot PB=PC\cdot PD=R^{2}-OP^{2}.
+\]
+
+\Needspace{5\baselineskip}
+又由勾股定理（半弦长的平方等于半径平方减弦心距平方），
+
+\nopagebreak[4]
+\[
+AB^{2}=4\left(R^{2}-OM^{2}\right),\qquad CD^{2}=4\left(R^{2}-ON^{2}\right).
+\]
+
+\Needspace{5\baselineskip}
+因 $P$ 在圆内、两弦之间，$PA+PB=AB$，$PC+PD=CD$，于是
+
+\nopagebreak[4]
+\[
+PA^{2}+PB^{2}=(PA+PB)^{2}-2PA\cdot PB=4(R^{2}-OM^{2})-2(R^{2}-OP^{2}),
+\]
+
+\nopagebreak[4]
+\[
+PC^{2}+PD^{2}=(PC+PD)^{2}-2PC\cdot PD=4(R^{2}-ON^{2})-2(R^{2}-OP^{2}).
+\]
+
+\Needspace{5\baselineskip}
+两式相加：
+
+\nopagebreak[4]
+\[
+PA^{2}+PB^{2}+PC^{2}+PD^{2}
+=8R^{2}-4(OM^{2}+ON^{2})-4(R^{2}-OP^{2})
+=8R^{2}-4OP^{2}-4R^{2}+4OP^{2}=4R^{2}.
+\]
+
+故该和为定值 $4R^{2}$，即直径的平方，与点 $P$ 及两弦的位置无关。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+工地上有沙堆，其下底面为矩形，长宽各为 $a$ 米、$b$ 米，其各侧面都与地平面夹成 $45^\circ$ 角，上、下底距离为 $h$ 米，求沙堆体积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+沙堆由四个与地面成 $45^\circ$ 角的侧平面截出：高度每上升 $t$，四周水平方向各内收 $t$（$45^\circ$ 时水平位移与竖直位移相等）。故高 $t$ 处的水平截面是边长为 $a-2t$、$b-2t$ 的矩形（这一构形隐含 $a>2h$、$b>2h$，此时顶面为完整矩形）。
+
+\Needspace{5\baselineskip}
+体积为截面积沿高度的积分：
+
+\nopagebreak[4]
+\[
+V=\int_{0}^{h}(a-2t)(b-2t)\,\mathrm{d}t
+=\int_{0}^{h}\left[ab-2(a+b)t+4t^{2}\right]\mathrm{d}t
+=abh-(a+b)h^{2}+\frac{4}{3}h^{3}.
+\]
+
+用拟柱体公式验算：$V=\dfrac{h}{6}\left[S_{\text{\text{下}}}+S_{\text{\text{上}}}+4S_{\text{\text{中}}}\right]$，其中 $S_{\text{\text{下}}}=ab$，$S_{\text{\text{上}}}=(a-2h)(b-2h)$，$S_{\text{\text{中}}}=(a-h)(b-h)$，展开得同一结果。
+
+\gkanswer{答案：$abh-(a+b)h^{2}+\dfrac{4}{3}h^{3}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+求根式：$\sqrt[3]{a}$ 与 $\sqrt{5-a}$ 的乘积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+写成幂的形式：
+
+\nopagebreak[4]
+\[
+\sqrt[3]{a}\cdot\sqrt{5-a}=a^{1/3}\,(5-a)^{1/2}.
+\]
+
+\Needspace{5\baselineskip}
+统一为六次根式：$a^{1/3}=a^{2/6}$（此步要求 $a\ge0$），$(5-a)^{1/2}=(5-a)^{3/6}$，故
+
+\nopagebreak[4]
+\[
+a^{2/6}(5-a)^{3/6}=\sqrt[6]{a^{2}(5-a)^{3}}.
+\]
+
+$\sqrt{5-a}$ 有意义要求 $a\le5$；化六次根式要求 $a\ge0$。故在 $0\le a\le5$ 时，乘积为 $\sqrt[6]{a^{2}(5-a)^{3}}$。
+
+\gkanswer{答案：$\sqrt[6]{a^{2}(5-a)^{3}}$（$0\le a\le5$）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+解方程：$x^{1+\lg x}=20^{\log_{20}100}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+右端按对数恒等式 $a^{\log_{a}N}=N$ 化简：
+
+\nopagebreak[4]
+\[
+20^{\log_{20}100}=100.
+\]
+
+\Needspace{5\baselineskip}
+方程即 $x^{1+\lg x}=100$，显然 $x>0$。令 $u=\lg x$（即 $x=10^{u}$），两边取常用对数：
+
+\nopagebreak[4]
+\[
+(1+\lg x)\lg x=\lg 100=2
+\qquad\Longleftrightarrow\qquad
+u^{2}+u-2=0.
+\]
+
+\Needspace{5\baselineskip}
+因式分解 $(u+2)(u-1)=0$，得 $u=1$ 或 $u=-2$，即
+
+\nopagebreak[4]
+\[
+x_{1}=10,\qquad x_{2}=10^{-2}=0.01.
+\]
+
+检验：$x=10$ 时 $10^{1+1}=10^{2}=100$；$x=0.01$ 时 $(10^{-2})^{1-2}=10^{2}=100$，两根均满足原方程。
+
+\gkanswer{答案：$x_{1}=10$，$x_{2}=0.01$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+解方程组：
+
+\nopagebreak[4]
+\[
+\begin{cases}
+2x-5z=10-6a\\
+x-2y+3z=2a+1\\
+5x-6y+9z=23-10a
+\end{cases}
+\]
+
+若 $x$ 为某直角三角形的斜边，$y$ 及 $z$ 为直角边，试确定 $a$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先解方程组。记三式为：
+
+(i) $2x-5z=10-6a$；(ii) $x-2y+3z=2a+1$；(iii) $5x-6y+9z=23-10a$。
+
+\Needspace{5\baselineskip}
+(iii) $-3\times$(ii)：左边 $5x-6y+9z-(3x-6y+9z)=2x$，右边 $(23-10a)-3(2a+1)=20-16a$，故
+
+\nopagebreak[4]
+\[
+x=10-8a.
+\]
+
+\Needspace{5\baselineskip}
+代入 (i)：$2(10-8a)-5z=10-6a$，即 $-5z=-10+10a$，得 $z=2-2a$。代入 (ii)：$(10-8a)-2y+3(2-2a)=2a+1$，整理 $16-14a-2y=2a+1$，得
+
+\nopagebreak[4]
+\[
+y=\frac{15-16a}{2}.
+\]
+
+回代 (iii) 验算：$5(10-8a)-6\cdot\dfrac{15-16a}{2}+9(2-2a)=50-40a-45+48a+18-18a=23-10a$，成立。
+
+\Needspace{5\baselineskip}
+直角三角形条件：$x$ 为斜边、$y$ 与 $z$ 为直角边，须 $x^{2}=y^{2}+z^{2}$ 且三边为正：
+
+\nopagebreak[4]
+\[
+(10-8a)^{2}=\left(\frac{15-16a}{2}\right)^{2}+(2-2a)^{2}.
+\]
+
+\Needspace{5\baselineskip}
+两边乘 $4$ 展开：
+
+\nopagebreak[4]
+\[
+400-640a+256a^{2}=(225-480a+256a^{2})+(16-32a+16a^{2}),
+\]
+
+\Needspace{5\baselineskip}
+整理得
+
+\nopagebreak[4]
+\[
+16a^{2}+128a-159=0.
+\]
+
+\Needspace{5\baselineskip}
+解之：
+
+\nopagebreak[4]
+\[
+a=\frac{-128\pm\sqrt{128^{2}+4\cdot16\cdot159}}{2\cdot16}
+=\frac{-128\pm\sqrt{26560}}{32}
+=\frac{-16\pm\sqrt{415}}{4}.
+\]
+
+\Needspace{5\baselineskip}
+检验边长为正的条件：取正根 $a_{+}=\dfrac{-16+\sqrt{415}}{4}\approx1.09$ 时，$y=\dfrac{15-16a}{2}\approx-1.24<0$，直角边长为负，舍去；取负根 $a_{-}=\dfrac{-16-\sqrt{415}}{4}\approx-9.09$ 时，$x=10-8a\approx82.74$，$y\approx80.24$，$z\approx20.19$ 皆为正，且 $x^{2}=y^{2}+z^{2}$ 成立。故
+
+\nopagebreak[4]
+\[
+a=-\frac{16+\sqrt{415}}{4}\approx-9.09.
+\]
+
+\gkanswer{答案：$a=-\dfrac{16+\sqrt{415}}{4}\approx-9.09$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知：$\alpha$、$\beta$ 皆为锐角，求证：$\sin(\alpha+\beta)\le\sin\alpha+\sin\beta$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由和角公式展开：
+
+\nopagebreak[4]
+\[
+\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta.
+\]
+
+\Needspace{5\baselineskip}
+$\alpha$、$\beta$ 皆为锐角时，$0<\cos\alpha<1$，$0<\cos\beta<1$，且 $\sin\alpha>0$，$\sin\beta>0$，于是
+
+\nopagebreak[4]
+\[
+\sin\alpha\cos\beta<\sin\alpha,\qquad
+\cos\alpha\sin\beta<\sin\beta.
+\]
+
+\Needspace{5\baselineskip}
+相加即得
+
+\nopagebreak[4]
+\[
+\sin(\alpha+\beta)<\sin\alpha+\sin\beta.
+\]
+
+故题设的不等式 $\sin(\alpha+\beta)\le\sin\alpha+\sin\beta$ 成立（在两角皆为锐角的范围内实际上严格成立）。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知：正方形 $ABCD$ 边长为 $a$，连接相邻各边中点，得一正方形 $A_{1}B_{1}C_{1}D_{1}$，再连接 $A_{1}B_{1}C_{1}D_{1}$ 相邻各边中点又得一个正方形 $A_{2}B_{2}C_{2}D_{2}$，如此相继下去，可得无数多个正方形。求这些正方形面积的总和。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+连接正方形四边中点所得的新正方形，面积是原正方形的一半：原正方形被剖分为新正方形与四个全等的等腰直角三角形，每个三角形两直角边为 $\dfrac{a}{2}$，面积各为 $\dfrac{a^{2}}{8}$，四个合计 $\dfrac{a^{2}}{2}$，故 $S_{1}=\dfrac{a^{2}}{2}$。
+
+\Needspace{5\baselineskip}
+同理，每一次取中点都使面积减半，各正方形面积为
+
+\nopagebreak[4]
+\[
+S_{n}=a^{2}\left(\frac{1}{2}\right)^{n-1},\qquad n=1,2,3,\dots
+\]
+
+\Needspace{5\baselineskip}
+这是首项 $a^{2}$、公比 $q=\dfrac12$ 的无穷等比数列（$|q|<1$），求和：
+
+\nopagebreak[4]
+\[
+S=a^{2}+\frac{a^{2}}{2}+\frac{a^{2}}{4}+\cdots=\frac{a^{2}}{1-\frac12}=2a^{2}.
+\]
+
+\gkanswer{答案：$2a^{2}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+解不等式：$2\cos^{2}x-(2+\sqrt3)\cos x+\sqrt3<0$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $t=\cos x$（$-1\le t\le1$），左端为二次三项式，用求根公式因式分解：
+
+\nopagebreak[4]
+\[
+t=\frac{(2+\sqrt3)\pm\sqrt{(2+\sqrt3)^{2}-8\sqrt3}}{4}
+=\frac{(2+\sqrt3)\pm\sqrt{7-4\sqrt3}}{4}
+=\frac{(2+\sqrt3)\pm(2-\sqrt3)}{4},
+\]
+
+\Needspace{5\baselineskip}
+两根为 $t_{1}=1$，$t_{2}=\dfrac{\sqrt3}{2}$，故
+
+\nopagebreak[4]
+\[
+2\cos^{2}x-(2+\sqrt3)\cos x+\sqrt3
+=(2\cos x-\sqrt3)(\cos x-1).
+\]
+
+\Needspace{5\baselineskip}
+不等式即 $(2\cos x-\sqrt3)(\cos x-1)<0$，其解在两根之间：
+
+\nopagebreak[4]
+\[
+\frac{\sqrt3}{2}<\cos x<1.
+\]
+
+\Needspace{5\baselineskip}
+其中 $\cos x<1$ 排除 $x=2k\pi$；$\cos x>\dfrac{\sqrt3}{2}$ 给出 $-\dfrac{\pi}{6}+2k\pi<x<\dfrac{\pi}{6}+2k\pi$。故解集为
+
+\nopagebreak[4]
+\[
+\left\{x\,\middle|\,2k\pi-\frac{\pi}{6}<x<2k\pi\ \text{或}\ 2k\pi<x<2k\pi+\frac{\pi}{6},\ k\in\mathbb{Z}\right\}.
+\]
+
+\gkanswer{答案：$2k\pi-\dfrac{\pi}{6}<x<2k\pi$ 或 $2k\pi<x<2k\pi+\dfrac{\pi}{6}$（$k$ 为整数）}
+
+\end{answer}

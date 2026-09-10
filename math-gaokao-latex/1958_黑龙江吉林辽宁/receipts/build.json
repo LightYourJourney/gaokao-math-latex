@@ -1,0 +1,341 @@
+{
+  "attempt_id": "268e3db7-1658-4dd0-964f-7802f70c73d0",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/answers.tex",
+        "sha256": "bcb4e89cdd2906d1e219fea2868618efb0361c45fa6ad9cf205057377045f77f"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/answers_short.tex",
+        "sha256": "acd457e84bc5c482dccd3f62f42ffb9e4704b16c4c6f7cafab2de96d08f5462d"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/questions.tex",
+        "sha256": "745c044e43f0b72fd7b4078608eac6b23b6d0c6f9693d2284103bf218eb82b22"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/印刷版.tex",
+        "sha256": "08bbfa4cc6f620ec6f781e412002b4ff09072be6c1eef1830e52881007bde27d"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/简答版.tex",
+        "sha256": "48d85d83762b63d29709648a3175f8d84eb8e8da7e3792d3fcfdce114cabf1d3"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/解析版.tex",
+        "sha256": "51d9e94afcc0bdba88aac539325f53d1d0559f95bc010d8dc59f056cace1d535"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/试题版.tex",
+        "sha256": "1178b33f2db950246b4540b6a7cd0cb7dd5096da3de54aa9dc32d46ecba61b36"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "5295490deaf201a4abc74fd3f8ba8e1cab3ecb919f43d7a368818681cebc2183"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 1,
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/build/试题版.pdf",
+        "sha256": "fc4a07040b43c73e177579e2de510ce57df435353afa1bd03616204551e10c4e",
+        "size_bytes": 68826
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_黑龙江吉林辽宁/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "66",
+            "text": "Overfull \\hbox (21.25148pt too wide) detected at line 66",
+            "width_pt": "21.25148"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:2' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:3' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:4' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:5' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:6' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:7' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:8' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/build/解析版.pdf",
+        "sha256": "d28c70b2cc60d83a5af81d2544e77f92f61fe4a15b849b2b5b56018d52282208",
+        "size_bytes": 126997
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_黑龙江吉林辽宁/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/build/简答版.pdf",
+        "sha256": "bd0f0199060116b4b2edb8795bd4aafc83cf39c9388a47f32a7d9eeb735e3809",
+        "size_bytes": 80275
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_黑龙江吉林辽宁/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:2' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:3' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:4' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:5' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:6' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:7' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-dongbei:8' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/build/印刷版.pdf",
+        "sha256": "333932553b9cd49be8b1bb73ccb138ed754d4f19f8720330995e52560b9e264a",
+        "size_bytes": 127686
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_黑龙江吉林辽宁/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T18:17:43+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1958/1958_黑龙江吉林辽宁_数学真题_答案要点.md",
+        "sha256": "b16413b39debe143caf77521efe6d5adec0616b74578b6f12c88cc643a392171"
+      },
+      {
+        "path": "1958/1958_黑龙江吉林辽宁_数学真题_解析正文.md",
+        "sha256": "69d16e0d542aa86fce5b89cae3e8ac486a5a386506cd767c2c1076b76a3a9460"
+      },
+      {
+        "path": "1958/1958_黑龙江吉林辽宁_数学真题_试题.md",
+        "sha256": "b8c347057dc9194a505fbd55f71115cb1b2f0447b21ced374b6cd34b21021d5a"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/印刷版.tex",
+        "sha256": "08bbfa4cc6f620ec6f781e412002b4ff09072be6c1eef1830e52881007bde27d"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/简答版.tex",
+        "sha256": "48d85d83762b63d29709648a3175f8d84eb8e8da7e3792d3fcfdce114cabf1d3"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/解析版.tex",
+        "sha256": "51d9e94afcc0bdba88aac539325f53d1d0559f95bc010d8dc59f056cace1d535"
+      },
+      {
+        "path": "math-gaokao-latex/1958_黑龙江吉林辽宁/试题版.tex",
+        "sha256": "1178b33f2db950246b4540b6a7cd0cb7dd5096da3de54aa9dc32d46ecba61b36"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "0d73a325b85c545f9d6b355898883404e638f917e82ad0cf9a5a72edabc5d7ff"
+  },
+  "input_projection": "8b9dcd6706e1951596b0251c677fcec7223cfc312e437acbdfdd18aafeaa281f",
+  "manifest_revision": 1585,
+  "paper_id": "gk-1958-regular-dongbei",
+  "previous_attempt_id": null,
+  "project_dir": "1958_黑龙江吉林辽宁",
+  "schema_version": 1,
+  "started_at": "2026-09-10T18:17:13+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

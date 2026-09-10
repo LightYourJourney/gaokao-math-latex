@@ -1,0 +1,359 @@
+{
+  "attempt_id": "f30d9132-2785-4601-aac7-2b5d336763ba",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1958_北京/answers.tex",
+        "sha256": "8cb34ad79ad1681edff382448a85020ab2d0e13079db38da9fabe7524547b55e"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/answers_short.tex",
+        "sha256": "4291d270498f7316ba9d1103da6a728500af6ac14e50065abfc86136f90830fa"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/figures/f1958_beijing_t11_tangent_circle.tex",
+        "sha256": "aee45333fa691a33e3cdee493746cff52d7d86c60914c8afef42e0bc846a0f5c"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/questions.tex",
+        "sha256": "86e189cf0c1250c585a9098f876c323e23d0bd83b304a63dd1e25091ad1c7482"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/印刷版.tex",
+        "sha256": "951b4551b24caaa25e4268ff0692a787404f62bf592df883d2274ab41d9d1be4"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/简答版.tex",
+        "sha256": "c077075a590b66247747312216857543fc90ffbb1f94f0f0f786df26ead8663d"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/解析版.tex",
+        "sha256": "cb3e686c46cd376545a52ced2650f6b2b7c975885eb557d135ef7ab1e7e22d76"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/试题版.tex",
+        "sha256": "e64e7e53d57420d3467329ce03c7c16b9872b3fe0730b15de7a65577083ef125"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "6c6d897b7019a2a39cdf3ce78e285d543fefadccf7c7bcdbda17f5698f451cce"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1958_北京/build/试题版.pdf",
+        "sha256": "54aad74f47a4090243ea47ff09f081422619722ff06266bac84a87c808f39fa7",
+        "size_bytes": 71942
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_北京/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:2' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:3' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:4' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:5' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:6' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:7' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:8' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:9' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:10' on page 10 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:11' on page 11 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 12,
+        "path": "math-gaokao-latex/1958_北京/build/解析版.pdf",
+        "sha256": "889ac5ad354a7e93714d4fbe21b4b05e1314a9d067d3976f9038eb8482ab9f6e",
+        "size_bytes": 141683
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_北京/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1958_北京/build/简答版.pdf",
+        "sha256": "7f5e1c46621db58afd769261f2a21bdbf2d6ae92a7dca07242bd3bce35ddc733",
+        "size_bytes": 85609
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_北京/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:2' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:3' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:4' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:5' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:6' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:7' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:8' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:9' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:10' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-beijing:11' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 10,
+        "path": "math-gaokao-latex/1958_北京/build/印刷版.pdf",
+        "sha256": "9b0ec0af8e7e761dd0e81ffec13e31882e9fc504b89dea836db1ca2001ef6071",
+        "size_bytes": 141490
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1958_北京/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T18:16:44+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1958/1958_北京_数学真题_答案要点.md",
+        "sha256": "060949bcf58952d5e82ef6791257142c4298d81677153eaf8bb74bb057165f84"
+      },
+      {
+        "path": "1958/1958_北京_数学真题_解析正文.md",
+        "sha256": "9dcd576b48a17f7bb2bb1f62ca3fdb7c2ccb111612d32bf6364496408c0a4040"
+      },
+      {
+        "path": "1958/1958_北京_数学真题_试题.md",
+        "sha256": "81872f3b7da83387a88b3fcac7634eeadbe82a7dbe589bbe4e805e2c39f7f74f"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/figures/f1958_beijing_t11_tangent_circle.tex",
+        "sha256": "aee45333fa691a33e3cdee493746cff52d7d86c60914c8afef42e0bc846a0f5c"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/印刷版.tex",
+        "sha256": "951b4551b24caaa25e4268ff0692a787404f62bf592df883d2274ab41d9d1be4"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/简答版.tex",
+        "sha256": "c077075a590b66247747312216857543fc90ffbb1f94f0f0f786df26ead8663d"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/解析版.tex",
+        "sha256": "cb3e686c46cd376545a52ced2650f6b2b7c975885eb557d135ef7ab1e7e22d76"
+      },
+      {
+        "path": "math-gaokao-latex/1958_北京/试题版.tex",
+        "sha256": "e64e7e53d57420d3467329ce03c7c16b9872b3fe0730b15de7a65577083ef125"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "41768e0842a7629c7f2cb389344b642332c8a11061847593fbddc8056311cb0c"
+  },
+  "input_projection": "a32a523001404198d90a5580d94bf97296b451cc9a6a33d5f6d4978d1b5baa26",
+  "manifest_revision": 1583,
+  "paper_id": "gk-1958-regular-beijing",
+  "previous_attempt_id": null,
+  "project_dir": "1958_北京",
+  "schema_version": 1,
+  "started_at": "2026-09-10T18:16:33+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

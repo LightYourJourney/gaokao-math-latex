@@ -1,0 +1,339 @@
+{
+  "attempt_id": "e1901f4e-28d2-47f9-89eb-81888cca7361",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/answers.tex",
+        "sha256": "af12d956ee6e4fce6fb9d5308505b7f6bd4321afa0e0ae8bca8d9a16b790f03e"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/answers_short.tex",
+        "sha256": "c7c51f66d90b426274776bbd2aeb9e7390ec8a19d89d1dc420d88190cddd645a"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/questions.tex",
+        "sha256": "90dc79daa26733a9037eb3415a8292af03d3c6f95b0da16471a4b257c2fc2624"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/印刷版.tex",
+        "sha256": "d0e2c01506f43006cf88b27fd288be661d04dda8b6938ab68880c5d3c147f676"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/简答版.tex",
+        "sha256": "bb49f991da25cc6e7046f4e8cd776a56139163384aa9f0cceabea091e3234a3b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/解析版.tex",
+        "sha256": "30b03787a299f59643894be45bf20d01b0e3f7a190ba25e294a9c4320e958cd6"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/试题版.tex",
+        "sha256": "9b7fe933d2e21a6101b333f8c36808017c76edadaf3541c0d422596352649c24"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "3db4f7fe22089683a0f7f50ac41ad239373910ba54d7efb673b4d0a892a698ba"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/build/试题版.pdf",
+        "sha256": "db1c02589fa2484bf1c8ed91c512f560f44efa053651149010982f42ef068826",
+        "size_bytes": 85145
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏淮阴地区初试卷/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:1' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:2' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:3' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:4' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:5' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:6' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:7' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:8' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:9' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 9,
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/build/解析版.pdf",
+        "sha256": "62c2c2dd2242bcc75769b50c627041a130e69415ebf16bc026b0a5123ccd25dc",
+        "size_bytes": 146631
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏淮阴地区初试卷/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/build/简答版.pdf",
+        "sha256": "fea10409067033af6905933b3f59ddfac6f1d41e7edc77a49da84a22e169bf5d",
+        "size_bytes": 93497
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏淮阴地区初试卷/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:1' on page 2 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:2' on page 2 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:3' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:4' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:5' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:6' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:7' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:8' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-huaiyin:9' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/build/印刷版.pdf",
+        "sha256": "efbddda2b1fe9c2eaa641ec666e0195bf9ad5f91c9b4fc5cc349ba757951dcf0",
+        "size_bytes": 143914
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1977_江苏淮阴地区初试卷/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T18:15:31+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1977/1977_数学真题_江苏淮阴地区初试_答案要点.md",
+        "sha256": "c01cf2942e602490c520e3fbc520959ff1483929ba0eeb1e988f70b988eef167"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏淮阴地区初试_解析正文.md",
+        "sha256": "ecf0edb5b26a099787de80fd24c1eea5291cb745813b8da135c2b1abec9ead65"
+      },
+      {
+        "path": "1977/1977_数学真题_江苏淮阴地区初试_试题.md",
+        "sha256": "fe36ad9a218b845b048931a069816f39dcaca834cea8647ef3ad06aa14d75488"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/印刷版.tex",
+        "sha256": "d0e2c01506f43006cf88b27fd288be661d04dda8b6938ab68880c5d3c147f676"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/简答版.tex",
+        "sha256": "bb49f991da25cc6e7046f4e8cd776a56139163384aa9f0cceabea091e3234a3b"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/解析版.tex",
+        "sha256": "30b03787a299f59643894be45bf20d01b0e3f7a190ba25e294a9c4320e958cd6"
+      },
+      {
+        "path": "math-gaokao-latex/1977_江苏淮阴地区初试卷/试题版.tex",
+        "sha256": "9b7fe933d2e21a6101b333f8c36808017c76edadaf3541c0d422596352649c24"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "de1c541647d717a80a5dca38c92bda5359311aedc0c40927a099859c2f0bd64c"
+  },
+  "input_projection": "6a7eb2926c599c43fa9a77d1d886470ef82b83b0426b808df91a28da98944313",
+  "manifest_revision": 1579,
+  "paper_id": "gk-1977-chushi-js-huaiyin",
+  "previous_attempt_id": null,
+  "project_dir": "1977_江苏淮阴地区初试卷",
+  "schema_version": 1,
+  "started_at": "2026-09-10T18:15:21+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

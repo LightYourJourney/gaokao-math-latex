@@ -1,0 +1,13 @@
+% 1977 年江苏苏州市初试卷第 1 题第 (12) 小题：旋转抛物面反射镜面轴向剖面示意图，
+% 顶点 O 在原点，对称轴沿 X 轴、开口向右；虚线分别标示镜口半径方向（40）与轴向深度（5）（按源卷第 2 页布局重绘，非原图比例）
+\begin{tikzpicture}[scale=1,>=stealth]
+  \draw[->] (-0.6,0) -- (3.0,0) node[right] {$X$};
+  \draw[->] (0,-2.0) -- (0,2.2) node[above] {$Y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[thick] (0,0) .. controls (0.6,0.9) and (1.4,1.4) .. (2.0,1.5);
+  \draw[thick] (0,0) .. controls (0.6,-0.9) and (1.4,-1.4) .. (2.0,-1.5);
+  \draw[dashed] (2.0,1.5) -- (2.0,-1.5);
+  \node[right] at (2.05,0) {$40$};
+  \draw[dashed] (0,-1.8) -- (2.0,-1.8);
+  \node[below] at (1.0,-1.85) {$5$};
+\end{tikzpicture}

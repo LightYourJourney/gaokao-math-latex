@@ -1,0 +1,21 @@
+% 1977 年江苏连云港市初试卷第 7 题：小矩形 ABCD 扩充为大矩形 AEFG，
+% 阴影（斜线填充）部分为扩充增加的面积（按源卷第 2—3 页「第七题图」布局）
+\begin{tikzpicture}[scale=1]
+  \coordinate (A) at (0,2.8);
+  \coordinate (D) at (1.6,2.8);
+  \coordinate (G) at (2.8,2.8);
+  \coordinate (B) at (0,2.0);
+  \coordinate (C) at (1.6,2.0);
+  \coordinate (E) at (0,0);
+  \coordinate (F) at (2.8,0);
+  \path[pattern=north east lines, even odd rule] (E) rectangle (G) (B) rectangle (D);
+  \draw[thick] (A) -- (G) -- (F) -- (E) -- cycle;
+  \draw[thick] (A) -- (D) -- (C) -- (B) -- cycle;
+  \fill (A) circle (1.2pt) node[above left] {$A$};
+  \fill (D) circle (1.2pt) node[above] {$D$};
+  \fill (G) circle (1.2pt) node[above right] {$G$};
+  \fill (B) circle (1.2pt) node[left] {$B$};
+  \fill (C) circle (1.2pt) node[above right] {$C$};
+  \fill (E) circle (1.2pt) node[below left] {$E$};
+  \fill (F) circle (1.2pt) node[below right] {$F$};
+\end{tikzpicture}

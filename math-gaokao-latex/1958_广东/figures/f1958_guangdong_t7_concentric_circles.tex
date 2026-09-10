@@ -1,0 +1,39 @@
+% 1958 年广东卷第 7 题：同心圆 O（半径 R、r），半径 OA 交大圆于 A、交小圆于 A'，AD⊥BC 于 D，A'D'⊥BC 于 D'，A'E⊥AD 于 E（按源卷布局）
+\begin{tikzpicture}[scale=1.0, line width=0.45pt,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0,2);
+  \coordinate (C) at (0,-2);
+  \coordinate (D) at (0,-1.148);
+  \coordinate (Dp) at (0,-0.631);
+  \coordinate (A) at (-1.638,-1.148);
+  \coordinate (Ap) at (-0.901,-0.631);
+  \coordinate (E) at (-0.901,-1.148);
+  \draw (O) circle (2);
+  \draw (O) circle (1.1);
+  \draw (B) -- (C);
+  \draw (A) -- (D);
+  \draw (O) -- (A);
+  \draw[dashed] (Ap) -- (Dp);
+  \draw (Ap) -- (E);
+  \draw (A) ++(0:0.32) arc (0:35:0.32);
+  \draw (Ap) ++(0:0.18) arc (0:35:0.18);
+  \node[anchor=west] at ($(A)+(17:0.48)$) {$\alpha$};
+  \node[anchor=south west] at ($(Ap)+(17:0.3)$) {\tiny$\alpha$};
+  \fill (O) circle (1pt);
+  \fill (A) circle (1.3pt);
+  \fill (Ap) circle (1.3pt);
+  \fill (D) circle (1.3pt);
+  \fill (Dp) circle (1.3pt);
+  \fill (E) circle (1.3pt);
+  \fill (B) circle (1.3pt);
+  \fill (C) circle (1.3pt);
+  \node[anchor=south] at (B) {$B$};
+  \node[anchor=north] at (C) {$C$};
+  \node[anchor=east] at (O) {$O$};
+  \node[anchor=north west] at (D) {$D$};
+  \node[anchor=south west] at (Dp) {$D'$};
+  \node[anchor=east] at (A) {$A$};
+  \node[anchor=south east] at (Ap) {$A'$};
+  \node[anchor=north] at (E) {$E$};
+\end{tikzpicture}

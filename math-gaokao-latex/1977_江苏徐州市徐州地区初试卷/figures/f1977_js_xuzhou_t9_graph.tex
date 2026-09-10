@@ -1,0 +1,9 @@
+% 1977 年江苏徐州市,徐州地区初试卷第 9 题（2）小问：抛物线 x^2=-18y 的大致图形（编者按题意补绘，非源卷插图）。
+\begin{tikzpicture}[scale=0.5]
+  \draw[-stealth] (-8,0) -- (8,0) node[below] {$x$};
+  \draw[-stealth] (0,-6.5) -- (0,1.8) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[thick,domain=-7.4:7.4,samples=41] plot (\x,{-\x*\x/18});
+  \fill (6,-2) circle (1.5pt) node[right] {$P(6,\,-2)$};
+  \fill (-6,-2) circle (1.5pt) node[left] {$(-6,\,-2)$};
+\end{tikzpicture}

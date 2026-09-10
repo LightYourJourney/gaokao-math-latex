@@ -1,0 +1,423 @@
+% answers.tex —— 1977 年·江苏淮阴地区初试卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_江苏淮阴地区初试_试题.md + 1977/1977_数学真题_江苏淮阴地区初试_解析正文.md + 1977/1977_数学真题_江苏淮阴地区初试_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 仅含 2 页题面（第 1 页原书页码 243，第 2 页无页码），无解答可对照。以下各题均由编者独立推导，最终结论与答案要点逐题一致；原卷大题的中文数字编号「一、」至「九、」已转写为阿拉伯数字，第 1、4、7 题的小题编号照录为（1）（2）。原卷无附图，第 5 题原卷标注「需画图」，解析以文字叙述作图与证明。第 1(2) 题首个指数的分子印刷偏粗，本库以 1200—2400dpi 局部重渲比对同字体字形判定为 1（即 $3^{\frac{1}{2}}$），详见问题总账。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+计算：
+
+（1） $4(-1)^{5}\times0.25+8(-0.5^{3})-0.4\div(-0.2^{2})\text{\text{；}}$
+
+（2） $\left[3^{\frac{1}{2}}+\left(\dfrac{1}{2^{-\frac{2}{8}}}\right)^{\frac{2}{3}}\right]\cdot\left[3^{0.5}-(2\sqrt{2})^{\frac{2}{8}}\right]\text{。}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+乘方先于乘除，且幂号先于负号结合：$(-1)^{5}=-1$，$-0.5^{3}=-0.125$，$-0.2^{2}=-0.04$。于是
+
+\nopagebreak[4]
+\[
+4(-1)^{5}\times0.25+8(-0.5^{3})-0.4\div(-0.2^{2})
+=(-1)+(-1)-(-10)=8.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+各项统一化成 2 的幂：$2^{-\frac{2}{8}}=2^{-\frac{1}{4}}$，故 $\dfrac{1}{2^{-\frac{2}{8}}}=2^{\frac{1}{4}}$，$\left(2^{\frac{1}{4}}\right)^{\frac{2}{3}}=2^{\frac{1}{6}}$；又 $2\sqrt{2}=2^{\frac{3}{2}}$，$\left(2^{\frac{3}{2}}\right)^{\frac{2}{8}}=2^{\frac{3}{8}}$。所以
+
+\nopagebreak[4]
+\[
+\text{\text{原式}}=\left(3^{\frac{1}{2}}+2^{\frac{1}{6}}\right)\left(3^{\frac{1}{2}}-2^{\frac{3}{8}}\right)
+=3+\sqrt{3}\left(2^{\frac{1}{6}}-2^{\frac{3}{8}}\right)-2^{\frac{13}{24}}
+\approx1.242.
+\]
+
+（末步展开：$2^{\frac{1}{6}}\cdot2^{\frac{3}{8}}=2^{\frac{13}{24}}$。）
+
+\gkanswer{答案（1）：$8$。}
+
+\gkanswer{答案（2）：$3-2^{\frac{13}{24}}+\sqrt{3}\left(2^{\frac{1}{6}}-2^{\frac{3}{8}}\right)\approx1.242$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+化简：
+
+\nopagebreak[4]
+\[
+\frac{(a^{2}+1)^{2}-4a^{2}}{-2a^{4}+4a^{2}-2}.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+分子、分母分别因式分解：
+
+\nopagebreak[4]
+\[
+(a^{2}+1)^{2}-4a^{2}=(a^{2}+1-2a)(a^{2}+1+2a)=(a-1)^{2}(a+1)^{2},
+\]
+
+\nopagebreak[4]
+\[
+-2a^{4}+4a^{2}-2=-2\left(a^{4}-2a^{2}+1\right)=-2(a^{2}-1)^{2}.
+\]
+
+\Needspace{5\baselineskip}
+在分母非零（$a\ne\pm1$）的条件下，
+
+\nopagebreak[4]
+\[
+\text{\text{原式}}=\frac{(a^{2}-1)^{2}}{-2(a^{2}-1)^{2}}=-\frac{1}{2}.
+\]
+
+\gkanswer{答案：$-\dfrac{1}{2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+求 $\cos\left(-\dfrac{16\pi}{3}\right)\cdot\sin\dfrac{16\pi}{3}$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+利用周期性与奇偶性：$\cos(-x)=\cos x$，正弦、余弦以 $2\pi$ 为周期，而 $\dfrac{16\pi}{3}=4\pi+\dfrac{4\pi}{3}$，故
+
+\nopagebreak[4]
+\[
+\cos\left(-\frac{16\pi}{3}\right)=\cos\frac{16\pi}{3}=\cos\frac{4\pi}{3}=-\cos\frac{\pi}{3}=-\frac{1}{2},
+\]
+
+\nopagebreak[4]
+\[
+\sin\frac{16\pi}{3}=\sin\frac{4\pi}{3}=-\sin\frac{\pi}{3}=-\frac{\sqrt{3}}{2}.
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+\cos\left(-\frac{16\pi}{3}\right)\cdot\sin\frac{16\pi}{3}
+=\left(-\frac{1}{2}\right)\left(-\frac{\sqrt{3}}{2}\right)=\frac{\sqrt{3}}{4}.
+\]
+
+\gkanswer{答案：$\dfrac{\sqrt{3}}{4}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+（1） 把 $P$ 点的直角坐标 $\left(\sqrt{3},\ -1\right)$ 化成极坐标；
+
+（2） 把极坐标方程 $\rho=2\sin\theta+3\cos\theta$ 化成直角坐标方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+模长
+
+\nopagebreak[4]
+\[
+r=\sqrt{\left(\sqrt{3}\right)^{2}+(-1)^{2}}=2.
+\]
+
+由 $\cos\theta=\dfrac{\sqrt{3}}{2}$、$\sin\theta=-\dfrac{1}{2}$，$\theta$ 为第四象限角，取 $\theta=-\dfrac{\pi}{6}$。故 $P$ 的极坐标为 $\left(2,\ -\dfrac{\pi}{6}\right)$；极角不唯一，$\left(2,\ \dfrac{11\pi}{6}\right)$ 等与之同价。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+方程两边同乘 $\rho$（$\rho=0$ 的点已在曲线检验范围内）：
+
+\nopagebreak[4]
+\[
+\rho^{2}=2\rho\sin\theta+3\rho\cos\theta.
+\]
+
+\Needspace{5\baselineskip}
+以 $x^{2}+y^{2}=\rho^{2}$、$x=\rho\cos\theta$、$y=\rho\sin\theta$ 代入，得直角坐标方程
+
+\nopagebreak[4]
+\[
+x^{2}+y^{2}-3x-2y=0.
+\]
+
+\gkanswer{答案（1）：$\left(2,\ -\dfrac{\pi}{6}\right)$（极角不唯一，$\left(2,\ \dfrac{11\pi}{6}\right)$ 等同价）。}
+
+\gkanswer{答案（2）：$x^{2}+y^{2}-3x-2y=0$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+以直角三角形 $ABC$ 的直角边 $BC$ 为直径作圆交斜边 $AB$ 于 $D$，$E$ 是直角边 $AC$ 的中点，连结 $DE$．则 $DE$ 是此圆的切线。（需画图）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+作图叙述：作直角三角形 $ABC$（$\angle C=90^{\circ}$），以直角边 $BC$ 为直径作圆，交斜边 $AB$ 于 $D$；取直角边 $AC$ 的中点 $E$，连结 $DE$ 与 $OD$（$O$ 为圆心，即 $BC$ 中点）。
+
+\Needspace{5\baselineskip}
+因为 $BC$ 是直径且 $D$ 在圆上，直径上的圆周角是直角，所以
+
+\nopagebreak[4]
+\[
+\angle BDC=90^{\circ},
+\qquad
+CD\perp AB.
+\]
+
+\Needspace{5\baselineskip}
+在直角三角形 $ACD$（$\angle ADC=90^{\circ}$）中，$E$ 是斜边 $AC$ 的中点，斜边上的中线等于斜边的一半，故
+
+\nopagebreak[4]
+\[
+ED=EA=\frac{1}{2}AC,
+\qquad
+\angle EDA=\angle EAD=\angle A.
+\]
+
+\Needspace{5\baselineskip}
+又 $OD=OB$（均为半径），故
+
+\nopagebreak[4]
+\[
+\angle ODB=\angle OBD=\angle B.
+\]
+
+\Needspace{5\baselineskip}
+由 $\angle A+\angle B=90^{\circ}$，且 $A\text{、}D\text{、}B$ 共线，$O\text{、}E$ 在 $AB$ 的同一侧，
+
+\nopagebreak[4]
+\[
+\angle ODE=180^{\circ}-\angle ODB-\angle EDA=180^{\circ}-(\angle B+\angle A)=90^{\circ},
+\]
+
+即 $OD\perp DE$。$OD$ 是半径，经过半径外端且垂直于这条半径的直线是圆的切线，故 $DE$ 是此圆的切线。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+用长为 8 米的木料做一个“目”字形窗框，问窗框的宽和高各多少才能使通过的光线最多？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+「目」字形窗框由 4 根横料与 2 根竖料组成。设窗框宽 $x$ 米、高 $h$ 米，木料总长给出一约束条件：
+
+\nopagebreak[4]
+\[
+4x+2h=8,
+\qquad
+h=4-2x
+\qquad
+(0<x<2).
+\]
+
+\Needspace{5\baselineskip}
+通过的光线最多即矩形的面积 $S=xh$ 最大：
+
+\nopagebreak[4]
+\[
+S=x(4-2x)=4x-2x^{2}=-2(x-1)^{2}+2\le2.
+\]
+
+当 $x=1$ 时 $S$ 取最大值 $2$，此时 $h=4-2\times1=2$。故窗框宽 $1$ 米、高 $2$ 米时通过的光线最多，最大采光面积为 $2$ 平方米。
+
+\gkanswer{答案：宽 $1$ 米、高 $2$ 米时通过的光线最多，最大采光面积 $2$ 平方米。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+计算
+
+（1） $\sqrt[3]{10^{3-\frac{1}{2}\lg 64}}$；
+
+（2） $\log_{2-\sqrt{3}}\left(2+\sqrt{3}\right)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+$\lg64=\lg2^{6}=6\lg2$，故 $\dfrac{1}{2}\lg64=3\lg2=\lg8$。于是
+
+\nopagebreak[4]
+\[
+\sqrt[3]{10^{3-\frac{1}{2}\lg64}}
+=\sqrt[3]{\frac{10^{3}}{10^{\lg8}}}
+=\sqrt[3]{\frac{1000}{8}}
+=\sqrt[3]{125}=5.
+\]
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+分母有理化：
+
+\nopagebreak[4]
+\[
+2+\sqrt{3}=\frac{(2+\sqrt{3})(2-\sqrt{3})}{2-\sqrt{3}}=\frac{1}{2-\sqrt{3}}=\left(2-\sqrt{3}\right)^{-1}.
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+\log_{2-\sqrt{3}}\left(2+\sqrt{3}\right)=\log_{2-\sqrt{3}}\left(2-\sqrt{3}\right)^{-1}=-1.
+\]
+
+\gkanswer{答案（1）：$5$。}
+
+\gkanswer{答案（2）：$-1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+有两点 $A(-2,\ 2)$ 和 $B(2,\ -1)$，试在 $y$ 轴上找出点 $P$，使 $\angle APB=90^{\circ}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$\angle APB=90^{\circ}$ 等价于 $P$ 在以 $AB$ 为直径的圆上（直径上的圆周角是直角）。$AB$ 的中点为
+
+\nopagebreak[4]
+\[
+M\left(0,\ \frac{1}{2}\right),
+\qquad
+|AB|=\sqrt{(2-(-2))^{2}+(-1-2)^{2}}=\sqrt{16+9}=5,
+\]
+
+\Needspace{5\baselineskip}
+故该圆以 $M$ 为圆心、半径 $\dfrac{5}{2}$，方程为
+
+\nopagebreak[4]
+\[
+x^{2}+\left(y-\frac{1}{2}\right)^{2}=\frac{25}{4}.
+\]
+
+\Needspace{5\baselineskip}
+$P$ 在 $y$ 轴上，令 $x=0$：
+
+\nopagebreak[4]
+\[
+\left(y-\frac{1}{2}\right)^{2}=\frac{25}{4}
+\quad\Longrightarrow\quad
+y-\frac{1}{2}=\pm\frac{5}{2},
+\]
+
+得 $y=3$ 或 $y=-2$。故所求点为 $P(0,\ 3)$ 或 $P(0,\ -2)$。
+
+向量验证：$P(0,3)$ 时 $\vec{PA}=(-2,-1)$、$\vec{PB}=(2,-4)$，数量积 $-4+4=0$；$P(0,-2)$ 时 $\vec{PA}=(-2,4)$、$\vec{PB}=(2,1)$，数量积 $-4+4=0$。均满足垂直条件。
+
+\gkanswer{答案：$P(0,\ 3)$ 或 $P(0,\ -2)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设在椭圆 $\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1$ 上任意一点 $P_{1}\left(x_{1},\ y_{1}\right)$ 的切线与椭圆长轴的两端点 $A'$ 和 $A$ 的切线相交于 $Q'$ 和 $Q$，求证：$A'Q'\cdot AQ=b^{2}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $P_{1}$ 异于长轴端点（端点处的切线与 $x=\pm a$ 本身重合，交点不存在）。椭圆 $\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1$ 在其上一点 $P_{1}(x_{1},y_{1})$ 处的切线方程为
+
+\nopagebreak[4]
+\[
+\frac{x_{1}x}{a^{2}}+\frac{y_{1}y}{b^{2}}=1.
+\]
+
+\Needspace{5\baselineskip}
+长轴两端点 $A(a,0)$、$A'(-a,0)$ 处的切线分别为 $x=a$、$x=-a$。将 $x=a$ 代入切线方程得 $Q$ 的纵坐标
+
+\nopagebreak[4]
+\[
+y_{Q}=\frac{b^{2}}{y_{1}}\left(1-\frac{x_{1}}{a}\right)=\frac{b^{2}(a-x_{1})}{ay_{1}},
+\]
+
+\Needspace{5\baselineskip}
+将 $x=-a$ 代入得 $Q'$ 的纵坐标
+
+\nopagebreak[4]
+\[
+y_{Q'}=\frac{b^{2}}{y_{1}}\left(1+\frac{x_{1}}{a}\right)=\frac{b^{2}(a+x_{1})}{ay_{1}}.
+\]
+
+\Needspace{5\baselineskip}
+于是（$A$、$A'$ 在 $x$ 轴上，$AQ$、$A'Q'$ 即相应纵坐标的绝对值）
+
+\nopagebreak[4]
+\[
+A'Q'\cdot AQ
+=\left|\frac{b^{2}(a+x_{1})}{ay_{1}}\right|\cdot\left|\frac{b^{2}(a-x_{1})}{ay_{1}}\right|
+=\frac{b^{4}\left|a^{2}-x_{1}^{2}\right|}{a^{2}y_{1}^{2}}.
+\]
+
+\Needspace{5\baselineskip}
+由 $P_{1}$ 在椭圆上，$\dfrac{x_{1}^{2}}{a^{2}}+\dfrac{y_{1}^{2}}{b^{2}}=1$，即
+
+\nopagebreak[4]
+\[
+a^{2}y_{1}^{2}=b^{2}\left(a^{2}-x_{1}^{2}\right),
+\]
+
+\Needspace{5\baselineskip}
+且 $P_{1}$ 异于端点时 $a^{2}-x_{1}^{2}>0$，代入得
+
+\nopagebreak[4]
+\[
+A'Q'\cdot AQ
+=\frac{b^{4}\left(a^{2}-x_{1}^{2}\right)}{b^{2}\left(a^{2}-x_{1}^{2}\right)}=b^{2}.
+\]
+
+证毕。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
