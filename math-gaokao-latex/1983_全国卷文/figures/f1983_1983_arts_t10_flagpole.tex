@@ -1,0 +1,29 @@
+% 1983 年全国卷（文科）第 10 题：地平面上旗杆 OP（高 h），基线 AB=20 米，A 处仰角 ∠OAP=30°、B 处仰角 ∠OBP=45°、∠AOB=60°；AO 为水平辅助线（虚线），PO 竖直（按源卷布局）
+\begin{tikzpicture}[scale=0.8, line width=0.5pt,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (-6.35,0);
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (0,3.90);
+  \coordinate (B) at (-2.40,-3.10);
+  \draw (A) -- (P);
+  \draw (A) -- (B);
+  \draw (B) -- (O);
+  \draw (B) -- (P);
+  \draw (O) -- (P);
+  \draw[dashed] (A) -- (O);
+  % 三个角的弧线与度数标注
+  \draw (A) ++(0:0.85) arc (0:31.6:0.85);
+  \node at (-5.05,0.62) {$30^\circ$};
+  \draw (O) ++(180:0.75) arc (180:232:0.75);
+  \node at (-1.05,-0.58) {$60^\circ$};
+  \draw (B) ++(52:0.95) arc (52:71:0.95);
+  \node at (-1.60,-1.66) {$45^\circ$};
+  % 高度与基线标注
+  \node[anchor=west] at (0.16,1.95) {$h$};
+  \node at (-5.30,-1.90) {20 米};
+  % 顶点标注
+  \node[anchor=east] at (-6.45,0) {$A$};
+  \node[anchor=south] at (0,4.02) {$P$};
+  \node[anchor=west] at (0.16,-0.28) {$O$};
+  \node[anchor=north] at (-2.40,-3.34) {$B$};
+\end{tikzpicture}

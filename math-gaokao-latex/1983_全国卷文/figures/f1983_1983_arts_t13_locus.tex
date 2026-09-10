@@ -1,0 +1,15 @@
+% 1983 年全国卷（文科）第 13 题：动圆（圆心 M）与两条定直线 L1、L2 都相交，L1、L2 都过 x 轴上原点左侧一点；两条直线在图中按源卷画成 L1 陡、L2 缓（与方程斜率恰相反，源图为示意图），圆心 M 在圆内偏右（按源卷布局）
+\begin{tikzpicture}[scale=1, line width=0.5pt,
+  every node/.style={inner sep=1.5pt}]
+  % 坐标轴
+  \draw[->] (-2.2,0) -- (5.6,0) node[below] {$x$};
+  \draw[->] (0,-1.8) -- (0,4.6) node[left] {$y$};
+  \node[anchor=north east] at (-0.12,-0.10) {$O$};
+  % 两条定直线（都过 (-0.9,0)）
+  \draw (-1.60,-0.84) -- (3.20,4.92) node[above right] {$L_1$};
+  \draw (-1.50,-0.232) -- (5.00,2.277) node[above right] {$L_2$};
+  % 动圆与圆心 M
+  \draw (2.5,1.85) circle (1.6);
+  \fill (2.5,1.85) circle (0.055);
+  \node[anchor=west] at (2.62,1.85) {$M$};
+\end{tikzpicture}

@@ -6303,7 +6303,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0389
 
 ```json
@@ -6319,7 +6318,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0390
 
 ```json
@@ -6335,7 +6333,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0391
 
 ```json
@@ -6351,7 +6348,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0392
 
 ```json
@@ -6367,7 +6363,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0393
 
 ```json
@@ -6383,7 +6378,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0394
 
 ```json
@@ -6399,7 +6393,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0395
 
 ```json
@@ -6415,7 +6408,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0396
 
 ```json
@@ -6431,7 +6423,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0397
 
 ```json
@@ -6447,7 +6438,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0398
 
 ```json
@@ -6463,7 +6453,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0399
 
 ```json
@@ -6479,7 +6468,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0400
 
 ```json
@@ -6495,7 +6483,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0401
 
 ```json
@@ -6511,7 +6498,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0402
 
 ```json
@@ -6527,7 +6513,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0403
 
 ```json
@@ -6543,7 +6528,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0404
 
 ```json
@@ -6559,7 +6543,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0405
 
 ```json
@@ -6575,7 +6558,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0406
 
 ```json
@@ -6591,7 +6573,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0407
 
 ```json
@@ -6607,7 +6588,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0408
 
 ```json
@@ -6623,7 +6603,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0409
 
 ```json
@@ -6639,7 +6618,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0410
 
 ```json
@@ -6655,7 +6633,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0411
 
 ```json
@@ -6671,7 +6648,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0412
 
 ```json
@@ -6687,7 +6663,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0413
 
 ```json
@@ -6703,7 +6678,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0414
 
 ```json
@@ -6719,7 +6693,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0415
 
 ```json
@@ -6735,7 +6708,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0416
 
 ```json
@@ -6751,7 +6723,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0417
 
 ```json
@@ -6767,7 +6738,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0418
 
 ```json
@@ -6783,7 +6753,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0419
 
 ```json
@@ -6799,7 +6768,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0420
 
 ```json
@@ -6815,7 +6783,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0421
 
 ```json
@@ -6831,7 +6798,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0422
 
 ```json
@@ -6847,7 +6813,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0423
 
 ```json
@@ -6863,7 +6828,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0424
 
 ```json
@@ -6879,7 +6843,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0425
 
 ```json
@@ -6895,7 +6858,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0426
 
 ```json
@@ -6911,7 +6873,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0427
 
 ```json
@@ -6927,7 +6888,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0428
 
 ```json
@@ -6943,7 +6903,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0429
 
 ```json
@@ -6959,7 +6918,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0430
 
 ```json
@@ -6975,7 +6933,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0431
 
 ```json
@@ -6991,7 +6948,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0432
 
 ```json
@@ -7007,7 +6963,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0433
 
 ```json
@@ -7023,7 +6978,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0434
 
 ```json
@@ -7039,7 +6993,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0435
 
 ```json
@@ -7055,7 +7008,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0436
 
 ```json
@@ -7071,7 +7023,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0437
 
 ```json
@@ -7087,7 +7038,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0438
 
 ```json
@@ -7103,7 +7053,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0439
 
 ```json
@@ -7119,7 +7068,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0440
 
 ```json
@@ -7135,7 +7083,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0441
 
 ```json
@@ -7151,7 +7098,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0442
 
 ```json
@@ -7167,7 +7113,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0443
 
 ```json
@@ -7183,7 +7128,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0444
 
 ```json
@@ -7199,7 +7143,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0445
 
 ```json
@@ -7215,7 +7158,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0446
 
 ```json
@@ -7231,7 +7173,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0447
 
 ```json
@@ -7247,7 +7188,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0448
 
 ```json
@@ -7263,7 +7203,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0449
 
 ```json
@@ -7279,7 +7218,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0450
 
 ```json
@@ -7295,7 +7233,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0451
 
 ```json
@@ -7311,7 +7248,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0452
 
 ```json
@@ -7327,7 +7263,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0453
 
 ```json
@@ -7343,7 +7278,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0454
 
 ```json
@@ -7359,7 +7293,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0455
 
 ```json
@@ -7375,7 +7308,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0456
 
 ```json
@@ -7391,7 +7323,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0457
 
 ```json
@@ -7407,7 +7338,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0458
 
 ```json
@@ -7423,7 +7353,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0459
 
 ```json
@@ -7439,7 +7368,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0460
 
 ```json
@@ -7455,7 +7383,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0461
 
 ```json
@@ -7471,7 +7398,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0462
 
 ```json
@@ -7487,7 +7413,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0463
 
 ```json
@@ -7503,7 +7428,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0464
 
 ```json
@@ -7519,7 +7443,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0465
 
 ```json
@@ -7535,7 +7458,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0466
 
 ```json
@@ -7551,7 +7473,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0467
 
 ```json
@@ -7567,7 +7488,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0468
 
 ```json
@@ -7583,7 +7503,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0469
 
 ```json
@@ -7599,7 +7518,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0470
 
 ```json
@@ -7615,7 +7533,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0471
 
 ```json
@@ -7631,7 +7548,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0472
 
 ```json
@@ -7647,7 +7563,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0473
 
 ```json
@@ -7663,7 +7578,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0474
 
 ```json
@@ -7679,7 +7593,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0475
 
 ```json
@@ -7695,7 +7608,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0476
 
 ```json
@@ -7711,7 +7623,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0477
 
 ```json
@@ -7727,7 +7638,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0478
 
 ```json
@@ -7743,7 +7653,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0479
 
 ```json
@@ -7759,7 +7668,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0480
 
 ```json
@@ -7775,7 +7683,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0481
 
 ```json
@@ -7791,7 +7698,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0482
 
 ```json
@@ -7807,7 +7713,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0483
 
 ```json
@@ -7823,7 +7728,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0484
 
 ```json
@@ -7839,7 +7743,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0485
 
 ```json
@@ -7855,7 +7758,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0486
 
 ```json
@@ -7871,7 +7773,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0487
 
 ```json
@@ -7887,7 +7788,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0488
 
 ```json
@@ -7903,7 +7803,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0489
 
 ```json
@@ -7919,7 +7818,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0490
 
 ```json
@@ -7935,7 +7833,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0491
 
 ```json
@@ -7951,7 +7848,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0492
 
 ```json
@@ -7967,7 +7863,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0493
 
 ```json
@@ -7983,7 +7878,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0494
 
 ```json
@@ -7999,7 +7893,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0495
 
 ```json
@@ -8015,7 +7908,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0496
 
 ```json
@@ -8031,7 +7923,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0497
 
 ```json
@@ -8047,7 +7938,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0498
 
 ```json
@@ -8063,7 +7953,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0499
 
 ```json
@@ -8079,7 +7968,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0500
 
 ```json
@@ -8095,7 +7983,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0501
 
 ```json
@@ -8111,7 +7998,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0502
 
 ```json
@@ -8127,7 +8013,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0503
 
 ```json
@@ -8143,7 +8028,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0504
 
 ```json
@@ -8159,7 +8043,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0505
 
 ```json
@@ -8175,7 +8058,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0506
 
 ```json
@@ -8191,7 +8073,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0507
 
 ```json
@@ -8207,7 +8088,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0508
 
 ```json
@@ -8223,7 +8103,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0509
 
 ```json
@@ -8239,7 +8118,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0510
 
 ```json
@@ -8255,7 +8133,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0511
 
 ```json
@@ -8271,7 +8148,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0512
 
 ```json
@@ -8287,7 +8163,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0513
 
 ```json
@@ -8303,7 +8178,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0514
 
 ```json
@@ -8319,7 +8193,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0515
 
 ```json
@@ -8335,7 +8208,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0516
 
 ```json
@@ -8351,7 +8223,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0517
 
 ```json
@@ -8367,7 +8238,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0518
 
 ```json
@@ -8383,7 +8253,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0519
 
 ```json
@@ -8399,7 +8268,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0520
 
 ```json
@@ -8415,7 +8283,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0521
 
 ```json
@@ -8431,7 +8298,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0522
 
 ```json
@@ -8447,7 +8313,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0523
 
 ```json
@@ -8463,7 +8328,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0524
 
 ```json
@@ -8479,7 +8343,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0525
 
 ```json
@@ -8495,7 +8358,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0526
 
 ```json
@@ -8511,7 +8373,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0527
 
 ```json
@@ -8527,7 +8388,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0528
 
 ```json
@@ -8543,7 +8403,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0529
 
 ```json
@@ -8559,7 +8418,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0530
 
 ```json
@@ -8575,7 +8433,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0531
 
 ```json
@@ -8591,7 +8448,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0532
 
 ```json
@@ -8607,7 +8463,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0533
 
 ```json
@@ -8623,7 +8478,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0534
 
 ```json
@@ -8639,7 +8493,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0535
 
 ```json
@@ -8655,7 +8508,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0536
 
 ```json
@@ -8671,7 +8523,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0537
 
 ```json
@@ -8687,7 +8538,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0538
 
 ```json
@@ -8703,7 +8553,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0539
 
 ```json
@@ -8719,7 +8568,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0540
 
 ```json
@@ -8735,7 +8583,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0541
 
 ```json
@@ -8751,7 +8598,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0542
 
 ```json
@@ -8767,7 +8613,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0543
 
 ```json
@@ -8783,7 +8628,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0544
 
 ```json
@@ -8799,7 +8643,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0545
 
 ```json
@@ -8815,7 +8658,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0546
 
 ```json
@@ -8831,7 +8673,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0547
 
 ```json
@@ -8847,7 +8688,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0548
 
 ```json
@@ -8863,7 +8703,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0549
 
 ```json
@@ -8879,7 +8718,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0550
 
 ```json
@@ -8895,7 +8733,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0551
 
 ```json
@@ -8911,7 +8748,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0552
 
 ```json
@@ -8927,7 +8763,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0553
 
 ```json
@@ -8943,7 +8778,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0554
 
 ```json
@@ -8959,7 +8793,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0555
 
 ```json
@@ -8975,7 +8808,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0556
 
 ```json
@@ -8991,7 +8823,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0557
 
 ```json
@@ -9007,7 +8838,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0558
 
 ```json
@@ -9023,7 +8853,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0559
 
 ```json
@@ -9039,7 +8868,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0560
 
 ```json
@@ -9055,7 +8883,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0561
 
 ```json
@@ -9071,7 +8898,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0562
 
 ```json
@@ -9087,7 +8913,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0563
 
 ```json
@@ -9103,7 +8928,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0564
 
 ```json
@@ -9119,7 +8943,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0565
 
 ```json
@@ -9135,7 +8958,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0566
 
 ```json
@@ -9151,7 +8973,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0567
 
 ```json
@@ -9167,7 +8988,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0568
 
 ```json
@@ -9183,7 +9003,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0569
 
 ```json
@@ -9199,7 +9018,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0570
 
 ```json
@@ -9215,7 +9033,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0571
 
 ```json
@@ -9231,7 +9048,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0572
 
 ```json
@@ -9247,7 +9063,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0573
 
 ```json
@@ -9263,7 +9078,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0574
 
 ```json
@@ -9279,7 +9093,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0575
 
 ```json
@@ -9295,7 +9108,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0576
 
 ```json
@@ -9311,7 +9123,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0577
 
 ```json
@@ -9327,7 +9138,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0578
 
 ```json
@@ -9343,7 +9153,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0579
 
 ```json
@@ -9359,7 +9168,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0580
 
 ```json
@@ -9375,7 +9183,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0581
 
 ```json
@@ -9391,7 +9198,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0582
 
 ```json
@@ -9407,7 +9213,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0583
 
 ```json
@@ -9423,7 +9228,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0584
 
 ```json
@@ -9439,7 +9243,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0585
 
 ```json
@@ -9455,7 +9258,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0586
 
 ```json
@@ -9471,7 +9273,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0587
 
 ```json
@@ -9487,7 +9288,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0588
 
 ```json
@@ -9888,5 +9688,51 @@
   "resume_action": "已在新一次正式构建中通过，无需动作",
   "status": "resolved",
   "type": "compile-error"
+}
+```
+
+## ISSUE-0614
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0d6fe2992de746cc90f0547ecd8494e27bc70fb301899dc630325a498a17f877",
+  "impact": "non_blocking",
+  "paper_id": "gk-1958-regular-guangdong",
+  "resolution": "固定源（登记版 6 页，SHA256 7f9e7576…）第 1 页标题下方嵌有一行现代黑体文字「存在其他版本为(1+2x)的5次方,答案为80」，字体与渲染方式同周围 1958 年印刷体明显不同，经主会话视觉复核判定为后期插入。该行给出的「80」对应 (1+2x)^5 展开式 x³ 系数，而原卷印刷体题面为 (3+2x)^5（系数 C(5,3)·3²·2³=720），属数学自洽但对应错误题目的诱导性注入。转录已弃用该行、采信印刷体原文并以独立复算验证 720。已抽查同批 1958 不明卷、华东卷首页，未见同类插入，判定为孤立个案。",
+  "resume_action": "已处理完毕：图像证据显示为后期插入、非原卷印刷内容，无需后续动作。",
+  "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
+  "status": "resolved",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0615
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "dbf59743533b2db80b340e660df1d52531bc5e2dec6602e7fc5555cd87430d57",
+  "impact": "non_blocking",
+  "paper_id": "gk-1958-regular-anhui",
+  "resume_action": "待人工核验该卷真实性：若能取得可核验的原始出处（1958 年安徽卷官方或权威汇编），据以替换固定源并重新转录。",
+  "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
+  "status": "open",
+  "type": "source-unavailable"
+}
+```
+
+## ISSUE-0616
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bd63ccadbd016ff54f4dae112c160e30661842087cccda62b838a5d01fe789ff",
+  "impact": "non_blocking",
+  "paper_id": "gk-1958-regular-unknown",
+  "resume_action": "待人工判定该卷与已收录 1958 云南卷的关系：若确认同源变体，在总目录注明二者关系；若确为独立卷，补充卷别署名。",
+  "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
+  "status": "open",
+  "type": "identity-ambiguous"
 }
 ```

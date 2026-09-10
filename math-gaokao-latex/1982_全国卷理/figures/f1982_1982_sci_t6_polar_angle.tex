@@ -1,0 +1,24 @@
+% 1982 年全国卷（理科）第 6 题：∠AOB 内动点 P 到两边作垂足 M、N（按源卷布局）。
+% O 为极点、OX 为角平分线（极轴）；M—P—N 为 P 到两边的垂线段，图中不连 M—N。
+\begin{tikzpicture}[scale=1.5, line width=0.45pt,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3.77,2.45);     % OA，与 OX 约成 33°
+  \coordinate (B) at (3.77,-2.45);    % OB，与 OX 约成 -33°
+  \coordinate (X) at (3.90,0);        % 角平分线 OX
+  \coordinate (P) at (2.83,0.65);     % 动点 P
+  \coordinate (M) at (2.285,1.484);   % P 在 OA 上的垂足
+  \coordinate (N) at (1.690,-1.097);  % P 在 OB 上的垂足
+  \draw (O) -- (A);
+  \draw (O) -- (B);
+  \draw (O) -- (X);
+  \draw (M) -- (P);
+  \draw (P) -- (N);
+  \node[left] at (O) {$O$};
+  \node[right] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[right] at (X) {$X$};
+  \node[above left] at (M) {$M$};
+  \node[right] at (P) {$P$};
+  \node[below left] at (N) {$N$};
+\end{tikzpicture}

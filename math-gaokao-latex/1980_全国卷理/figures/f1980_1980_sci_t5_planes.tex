@@ -1,0 +1,52 @@
+% 1980 年全国卷（理科）第 5 题：直升飞机上点 P、地面 M 与飞机窗玻璃平面 N 的立体示意图
+% 按源卷第 1 页第二栏源图布局重绘：地面 M 为透视平行四边形；斜置平面 N 与 M 相交，交线 l 画在 M 上；
+% P 在 M 上的正射影为 A（竖直虚线 PA）；B 为地面上另一点，连 AB；被不透明平面 N 遮住的部分画虚线
+\begin{tikzpicture}[scale=1.0,line join=round]
+  % 地面 M（透视平行四边形）
+  \coordinate (M1) at (2.0,2.9);
+  \coordinate (M2) at (13.5,2.9);
+  \coordinate (M3) at (16.1,6.8);
+  \coordinate (M4) at (4.6,6.8);
+  % 平面 N（斜置平行四边形：Q1 上、Q2 左、Q3 下、Q4 右）
+  \coordinate (Q1) at (8.4,10.3);
+  \coordinate (Q2) at (5.4,7.7);
+  \coordinate (Q3) at (10.9,3.9);
+  \coordinate (Q4) at (13.9,6.5);
+  % 关键点
+  \coordinate (P) at (9.1,11.6);
+  \coordinate (A) at (9.1,4.9);
+  \coordinate (B) at (4.4,4.9);
+  % 交线 l 与 M 的后棱、N 的边界相交处
+  \coordinate (L0) at (7.546,6.8);
+  \coordinate (L1) at (12.057,2.9);
+  \coordinate (K1) at (6.70,6.8);
+  \coordinate (K2) at (13.47,6.8);
+  \coordinate (V1) at (9.1,9.816);
+  \coordinate (V2) at (9.1,5.144);
+  \coordinate (H1) at (9.452,4.9);
+  % 地面 M
+  \draw[thick] (M1)--(M2)--(M3);
+  \draw[thick] (M4)--(M1);
+  % M 的后棱：被平面 N 遮住的一段画虚线
+  \draw[thick] (M4)--(K1);
+  \draw[dashed,thick] (K1)--(K2);
+  \draw[thick] (K2)--(M3);
+  % 平面 N
+  \draw[thick] (Q1)--(Q2)--(Q3)--(Q4)--cycle;
+  % 交线 l（M 与 N 的交线）
+  \draw[thick] (L0)--(L1);
+  % 直线 AB：被 N 遮住的一段画虚线
+  \draw[thick] (B)--(H1);
+  \draw[dashed,thick] (H1)--(10.8,4.9);
+  % P 到 M 的垂线 PA（中段为 N 所遮）
+  \draw[thick] (P)--(V1);
+  \draw[dashed,thick] (V1)--(V2);
+  \draw[thick] (V2)--(A);
+  % 点与标注
+  \fill (P) circle (1.3pt) node[right=2pt] {$P$};
+  \fill (A) circle (1.3pt) node[below=2pt] {$A$};
+  \fill (B) circle (1.3pt) node[below left=1pt] {$B$};
+  \node at (9.35,8.15) {$N$};
+  \node at (14.75,6.05) {$M$};
+  \node at (12.35,2.55) {$l$};
+\end{tikzpicture}
