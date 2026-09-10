@@ -27,4 +27,9 @@
   \node[anchor=south west] at (M) {$M$};
   \node[anchor=north west] at (N) {$N$};
   \node[anchor=west] at (O) {$O$};
+  % 角标 ∠1（M 处）、∠2（N 处），按源图 p-2 所标
+  \draw (M) ++(-0.34,0.06) arc (170:262:0.26);
+  \node[anchor=east] at ($(M)+(-0.30,0)$) {\tiny$1$};
+  \draw (N) ++(-0.34,-0.06) arc (190:98:0.26);
+  \node[anchor=east] at ($(N)+(-0.30,0)$) {\tiny$2$};
 \end{tikzpicture}

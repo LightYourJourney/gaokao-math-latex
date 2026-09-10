@@ -42,6 +42,12 @@
   \draw[thick] (P)--(V1);
   \draw[dashed,thick] (V1)--(V2);
   \draw[thick] (V2)--(A);
+  % 视线 PB（与平面 N 交于两点：穿入 (6.05,7.25)、穿出 (7.86,9.83)，中段为 N 所遮）
+  \coordinate (W1) at (6.05,7.25);
+  \coordinate (W2) at (7.86,9.83);
+  \draw[thick] (B)--(W1);
+  \draw[dashed,thick] (W1)--(W2);
+  \draw[thick] (W2)--(P);
   % 点与标注
   \fill (P) circle (1.3pt) node[right=2pt] {$P$};
   \fill (A) circle (1.3pt) node[below=2pt] {$A$};

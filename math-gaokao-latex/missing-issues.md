@@ -6297,9 +6297,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6312,9 +6312,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6327,9 +6327,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6342,9 +6342,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6357,9 +6357,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6372,9 +6372,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6387,9 +6387,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6402,9 +6402,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nongken",
   "question_id": "gk-1977-chushi-js-nongken-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f4a7d2f8fad786cd39014fc551f6c0cb79d4c7982ec66dc7641dd7350f664008",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6417,9 +6417,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6432,9 +6432,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6447,9 +6447,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6462,9 +6462,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6477,9 +6477,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6492,9 +6492,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6507,9 +6507,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6522,9 +6522,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6537,9 +6537,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6552,9 +6552,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nanjing",
   "question_id": "gk-1977-chushi-js-nanjing-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(2)题答案方向错误，已改正（cos40°>sin40°）并重编译。",
   "source_id": "src-9c79436644ee99fdecaaca9ed70178c17f782e9fb7fbf296322451737bc54284",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6567,9 +6567,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6582,9 +6582,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6597,9 +6597,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6612,9 +6612,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6627,9 +6627,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6642,9 +6642,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6657,9 +6657,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6672,9 +6672,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6687,9 +6687,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6702,9 +6702,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-diqu",
   "question_id": "gk-1977-chushi-js-nantong-diqu-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f7078988752596ebc9a30b5c09c072ccefc69cbc7f09a7b460247f482e7a2327",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6717,9 +6717,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6732,9 +6732,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6747,9 +6747,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6762,9 +6762,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6777,9 +6777,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6792,9 +6792,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6807,9 +6807,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6822,9 +6822,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6837,9 +6837,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6852,9 +6852,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6867,9 +6867,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6882,9 +6882,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-nantong-shi",
   "question_id": "gk-1977-chushi-js-nantong-shi-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-291fc57797d8a978bb9f42288912b9d711a7840dfc6879c65d8fb440ecdebc06",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6897,9 +6897,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6912,9 +6912,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6927,9 +6927,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6942,9 +6942,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6957,9 +6957,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6972,9 +6972,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -6987,9 +6987,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7002,9 +7002,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7017,9 +7017,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7032,9 +7032,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7047,9 +7047,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7062,9 +7062,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7077,9 +7077,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-changzhou",
   "question_id": "gk-1977-chushi-js-changzhou-q13",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6457e830fac3765fc09b5595e1d36d1403fa11874026027fe904e60aec1d5f49",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7092,9 +7092,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7107,9 +7107,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7122,9 +7122,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7137,9 +7137,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7152,9 +7152,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7167,9 +7167,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7182,9 +7182,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7197,9 +7197,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7212,9 +7212,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7227,9 +7227,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-xuzhou",
   "question_id": "gk-1977-chushi-js-xuzhou-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析中间步与来源说明分值分布错误，已改正。",
   "source_id": "src-00c3e553b11512701cd6d349c599a770513dda541a7acbb4d3ec0b2ed5ba8557",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7242,9 +7242,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7257,9 +7257,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7272,9 +7272,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7287,9 +7287,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7302,9 +7302,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7317,9 +7317,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7332,9 +7332,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7347,9 +7347,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7362,9 +7362,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7377,9 +7377,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yangzhou",
   "question_id": "gk-1977-chushi-js-yangzhou-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-ab38c726bbf259d4ee5f02f0b5bd03d88c502550e82a36a5595b705818faa930",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7392,9 +7392,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7407,9 +7407,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7422,9 +7422,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7437,9 +7437,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7452,9 +7452,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7467,9 +7467,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7482,9 +7482,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7497,9 +7497,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7512,9 +7512,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-wuxi",
   "question_id": "gk-1977-chushi-js-wuxi-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(1)题第三空 x 误作 1/3，按字形拓扑证据改正为 1/8。",
   "source_id": "src-1f6fe97938b8859a847ae91a239a3aab88461e76dc143ff6c9984af7b772e00a",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7527,9 +7527,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7542,9 +7542,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7557,9 +7557,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7572,9 +7572,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7587,9 +7587,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7602,9 +7602,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7617,9 +7617,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7632,9 +7632,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7647,9 +7647,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-huaiyin",
   "question_id": "gk-1977-chushi-js-huaiyin-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bdee7399437d102d22cc6c98a434f0e813796b714736294830d50aa18b5397f9",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7662,9 +7662,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7677,9 +7677,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7692,9 +7692,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7707,9 +7707,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7722,9 +7722,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7737,9 +7737,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7752,9 +7752,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7767,9 +7767,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-yancheng",
   "question_id": "gk-1977-chushi-js-yancheng-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题两行公式超版心，已 aligned 拆行。",
   "source_id": "src-27455a047401a5371889e71b79e909aea7d8ffd5adee64cd9601e052eca65b82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7782,9 +7782,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7797,9 +7797,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7812,9 +7812,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7827,9 +7827,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7842,9 +7842,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7857,9 +7857,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-diqu",
   "question_id": "gk-1977-chushi-js-suzhou-diqu-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-55844654209df25f211ea632854cf55d8e13c8a1951184b7141d4d051cc36297",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7872,9 +7872,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7887,9 +7887,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7902,9 +7902,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7917,9 +7917,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7932,9 +7932,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7947,9 +7947,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
   "question_id": "gk-1977-chushi-js-suzhou-shi-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-53fb3671367861e803496b755ea5411e7cf570b35f32223f2ee2b2cd8c454b6e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7962,9 +7962,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7977,9 +7977,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -7992,9 +7992,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8007,9 +8007,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8022,9 +8022,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8037,9 +8037,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8052,9 +8052,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8067,9 +8067,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-lianyungang",
   "question_id": "gk-1977-chushi-js-lianyungang-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第2(3)题分母根指数误读（五次根号→三次根号），推导与答案全链改正。",
   "source_id": "src-b041ff9e546e0469e647b183163556a695bc9e4b7f57ddb7447daed97c8f3dde",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8082,9 +8082,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8097,9 +8097,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8112,9 +8112,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8127,9 +8127,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8142,9 +8142,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8157,9 +8157,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8172,9 +8172,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8187,9 +8187,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8202,9 +8202,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-js-zhenjiang",
   "question_id": "gk-1977-chushi-js-zhenjiang-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第9题漏抄全角冒号，已补。",
   "source_id": "src-41e12e57af2ab22740d3d68b95daaa3d31b67c1de01b944ebf1e02d4067bb3ca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8217,9 +8217,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8232,9 +8232,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8247,9 +8247,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8262,9 +8262,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8277,9 +8277,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8292,9 +8292,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8307,9 +8307,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8322,9 +8322,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8337,9 +8337,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8352,9 +8352,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8367,9 +8367,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8382,9 +8382,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1977-chushi-hlj",
   "question_id": "gk-1977-chushi-hlj-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-81d53f406529461dd00450bb31358ae154275388b8fb3f8b0e6accb77b77e340",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8397,9 +8397,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8412,9 +8412,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8427,9 +8427,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8442,9 +8442,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8457,9 +8457,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8472,9 +8472,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8487,9 +8487,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8502,9 +8502,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8517,9 +8517,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8532,9 +8532,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8547,9 +8547,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-beijing",
   "question_id": "gk-1958-regular-beijing-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-0a220bc0c47e25e6425ec061b7fbdb404fdd9130d3997645aad139c89adfbae4",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8562,9 +8562,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8577,9 +8577,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8592,9 +8592,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8607,9 +8607,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8622,9 +8622,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8637,9 +8637,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8652,9 +8652,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8667,9 +8667,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-yunnan",
   "question_id": "gk-1958-regular-yunnan-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6e2b6e5284b79bd5a6a5cc1693e013554c9caa596ee63bd629533c5e71f43d62",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8682,9 +8682,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8697,9 +8697,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8712,9 +8712,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8727,9 +8727,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8742,9 +8742,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8757,9 +8757,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8772,9 +8772,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8787,9 +8787,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-sichuan",
   "question_id": "gk-1958-regular-sichuan-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第6题 x=1/3 自相矛盾，改正为 x=1。",
   "source_id": "src-ea1482a1ad738f07e6662725892efaa52dc53530d273cc305c78d169058ccc43",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8802,9 +8802,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-jiangsu",
   "question_id": "gk-1958-regular-jiangsu-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-608b96d22ae47061173180665494408e8314181d2b954c8ab2fd2bbb4accb80f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8817,9 +8817,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-jiangsu",
   "question_id": "gk-1958-regular-jiangsu-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-608b96d22ae47061173180665494408e8314181d2b954c8ab2fd2bbb4accb80f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8832,9 +8832,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-jiangsu",
   "question_id": "gk-1958-regular-jiangsu-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-608b96d22ae47061173180665494408e8314181d2b954c8ab2fd2bbb4accb80f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8847,9 +8847,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-jiangsu",
   "question_id": "gk-1958-regular-jiangsu-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-608b96d22ae47061173180665494408e8314181d2b954c8ab2fd2bbb4accb80f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8862,9 +8862,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-jiangsu",
   "question_id": "gk-1958-regular-jiangsu-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-608b96d22ae47061173180665494408e8314181d2b954c8ab2fd2bbb4accb80f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8877,9 +8877,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hubei",
   "question_id": "gk-1958-regular-hubei-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9040ed276c30bd1a6b34b15c925e788b47e94be0d7455e8aaba400a3da97d00c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8892,9 +8892,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hubei",
   "question_id": "gk-1958-regular-hubei-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9040ed276c30bd1a6b34b15c925e788b47e94be0d7455e8aaba400a3da97d00c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8907,9 +8907,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hubei",
   "question_id": "gk-1958-regular-hubei-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9040ed276c30bd1a6b34b15c925e788b47e94be0d7455e8aaba400a3da97d00c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8922,9 +8922,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hubei",
   "question_id": "gk-1958-regular-hubei-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9040ed276c30bd1a6b34b15c925e788b47e94be0d7455e8aaba400a3da97d00c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8937,9 +8937,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hubei",
   "question_id": "gk-1958-regular-hubei-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9040ed276c30bd1a6b34b15c925e788b47e94be0d7455e8aaba400a3da97d00c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8952,9 +8952,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8967,9 +8967,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8982,9 +8982,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -8997,9 +8997,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9012,9 +9012,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9027,9 +9027,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9042,9 +9042,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9057,9 +9057,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-hunan",
   "question_id": "gk-1958-regular-hunan-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-1a4d35af9cd4f4f9a8581f9694e54af955e3a8f8ab9435e10032e3f48d96cbf5",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9072,9 +9072,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9087,9 +9087,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9102,9 +9102,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9117,9 +9117,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9132,9 +9132,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9147,9 +9147,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9162,9 +9162,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9177,9 +9177,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-dongbei",
   "question_id": "gk-1958-regular-dongbei-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1题解析公式溢出 21.2pt，已 aligned 拆行。",
   "source_id": "src-f68456b6b95f99585c1c9d307b6d6427e16ad3ffd755c5536129168b478d106e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9192,9 +9192,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9207,9 +9207,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9222,9 +9222,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9237,9 +9237,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9252,9 +9252,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9267,9 +9267,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9282,9 +9282,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-huadong",
   "question_id": "gk-1958-regular-huadong-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-f69565036fe83184140e7d1ee23869c1fad1dda027201326db20e04699235610",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9297,9 +9297,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9312,9 +9312,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9327,9 +9327,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9342,9 +9342,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9357,9 +9357,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9372,9 +9372,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9387,9 +9387,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9402,9 +9402,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9417,9 +9417,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-guangdong",
   "question_id": "gk-1958-regular-guangdong-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题图缺 OE/A′D 线段、第9题图标签重叠、第3题图缺 ∠1/∠2 角标，均已修复。",
   "source_id": "src-01afd96d355e65819d9d78d9636cf1b6d3995ff70a150c69b0752caf86bc90df",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9432,9 +9432,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-anhui",
   "question_id": "gk-1958-regular-anhui-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9447,9 +9447,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-anhui",
   "question_id": "gk-1958-regular-anhui-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9462,9 +9462,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-anhui",
   "question_id": "gk-1958-regular-anhui-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9477,9 +9477,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-anhui",
   "question_id": "gk-1958-regular-anhui-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9492,9 +9492,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-anhui",
   "question_id": "gk-1958-regular-anhui-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-17b184d6dc2e3231605a9d571594435f2dafeac4a6501593b8131baf1658299f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9507,9 +9507,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9522,9 +9522,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9537,9 +9537,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9552,9 +9552,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9567,9 +9567,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9582,9 +9582,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9597,9 +9597,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9612,9 +9612,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1958-regular-unknown",
   "question_id": "gk-1958-regular-unknown-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-d74a85da81acae2d6c5208fda43394e5cb7f90a57c69db22a05d65283fbb909f",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -9690,7 +9690,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0614
 
 ```json
@@ -9746,13 +9745,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0618
 
 ```json
@@ -9762,13 +9760,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0619
 
 ```json
@@ -9778,13 +9775,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0620
 
 ```json
@@ -9794,13 +9790,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0621
 
 ```json
@@ -9810,13 +9805,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0622
 
 ```json
@@ -9826,13 +9820,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0623
 
 ```json
@@ -9842,13 +9835,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1978-regular-national",
   "question_id": "gk-1978-regular-national-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第1(5)题解析复核句分数笔误，已改正；两处标点按原卷修复。",
   "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0624
 
 ```json
@@ -9858,13 +9850,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0625
 
 ```json
@@ -9874,13 +9865,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0626
 
 ```json
@@ -9890,13 +9880,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0627
 
 ```json
@@ -9906,13 +9895,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0628
 
 ```json
@@ -9922,13 +9910,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0629
 
 ```json
@@ -9938,13 +9925,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0630
 
 ```json
@@ -9954,13 +9940,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0631
 
 ```json
@@ -9970,13 +9955,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0632
 
 ```json
@@ -9986,13 +9970,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0633
 
 ```json
@@ -10002,13 +9985,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-science",
   "question_id": "gk-1979-regular-science-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0634
 
 ```json
@@ -10018,13 +10000,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0635
 
 ```json
@@ -10034,13 +10015,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0636
 
 ```json
@@ -10050,13 +10030,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0637
 
 ```json
@@ -10066,13 +10045,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0638
 
 ```json
@@ -10082,13 +10060,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0639
 
 ```json
@@ -10098,13 +10075,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0640
 
 ```json
@@ -10114,13 +10090,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0641
 
 ```json
@@ -10130,13 +10105,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1979-regular-arts",
   "question_id": "gk-1979-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第3题答案行截断（生成器不抽展示公式块），公式已并入答案行。",
   "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0642
 
 ```json
@@ -10146,13 +10120,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0643
 
 ```json
@@ -10162,13 +10135,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0644
 
 ```json
@@ -10178,13 +10150,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0645
 
 ```json
@@ -10194,13 +10165,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0646
 
 ```json
@@ -10210,13 +10180,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0647
 
 ```json
@@ -10226,13 +10195,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0648
 
 ```json
@@ -10242,13 +10210,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0649
 
 ```json
@@ -10258,13 +10225,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0650
 
 ```json
@@ -10274,13 +10240,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-science",
   "question_id": "gk-1980-regular-science-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第5题图缺 PB 视线、第8题公式链溢出 174.99pt，均已修复。",
   "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0651
 
 ```json
@@ -10290,13 +10255,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0652
 
 ```json
@@ -10306,13 +10270,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0653
 
 ```json
@@ -10322,13 +10285,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0654
 
 ```json
@@ -10338,13 +10300,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0655
 
 ```json
@@ -10354,13 +10315,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0656
 
 ```json
@@ -10370,13 +10330,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0657
 
 ```json
@@ -10386,13 +10345,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0658
 
 ```json
@@ -10402,13 +10360,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1980-regular-arts",
   "question_id": "gk-1980-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第7题长方体图缺 Cp-Dp 可见棱，已补。",
   "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0659
 
 ```json
@@ -10418,13 +10375,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0660
 
 ```json
@@ -10434,13 +10390,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0661
 
 ```json
@@ -10450,13 +10405,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0662
 
 ```json
@@ -10466,13 +10420,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0663
 
 ```json
@@ -10482,13 +10435,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0664
 
 ```json
@@ -10498,13 +10450,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0665
 
 ```json
@@ -10514,13 +10465,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0666
 
 ```json
@@ -10530,13 +10480,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0667
 
 ```json
@@ -10546,13 +10495,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-science",
   "question_id": "gk-1981-regular-science-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0668
 
 ```json
@@ -10562,13 +10510,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0669
 
 ```json
@@ -10578,13 +10525,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0670
 
 ```json
@@ -10594,13 +10540,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0671
 
 ```json
@@ -10610,13 +10555,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0672
 
 ```json
@@ -10626,13 +10570,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0673
 
 ```json
@@ -10642,13 +10585,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0674
 
 ```json
@@ -10658,13 +10600,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0675
 
 ```json
@@ -10674,13 +10615,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0676
 
 ```json
@@ -10690,13 +10630,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1981-regular-arts",
   "question_id": "gk-1981-regular-arts-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0677
 
 ```json
@@ -10706,13 +10645,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0678
 
 ```json
@@ -10722,13 +10660,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0679
 
 ```json
@@ -10738,13 +10675,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0680
 
 ```json
@@ -10754,13 +10690,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0681
 
 ```json
@@ -10770,13 +10705,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0682
 
 ```json
@@ -10786,13 +10720,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0683
 
 ```json
@@ -10802,13 +10735,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0684
 
 ```json
@@ -10818,13 +10750,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-science",
   "question_id": "gk-1982-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0685
 
 ```json
@@ -10834,9 +10765,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10849,9 +10780,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10864,9 +10795,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10879,9 +10810,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10894,9 +10825,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10909,9 +10840,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10924,9 +10855,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10939,9 +10870,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10954,9 +10885,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1982-regular-arts",
   "question_id": "gk-1982-regular-arts-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10969,9 +10900,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10984,9 +10915,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -10999,9 +10930,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11014,9 +10945,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11029,9 +10960,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11044,9 +10975,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11059,9 +10990,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11074,9 +11005,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11089,9 +11020,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11104,9 +11035,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11119,9 +11050,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11134,9 +11065,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11149,9 +11080,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-science",
   "question_id": "gk-1983-regular-science-q13",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。 审查发现第13题解析两处数值错误，已按 Python 验算改正。",
   "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11164,9 +11095,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11179,9 +11110,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11194,9 +11125,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11209,9 +11140,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11224,9 +11155,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11239,9 +11170,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11254,9 +11185,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11269,9 +11200,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11284,9 +11215,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11299,9 +11230,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11314,9 +11245,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11329,9 +11260,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11344,9 +11275,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1983-regular-arts",
   "question_id": "gk-1983-regular-arts-q13",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11359,9 +11290,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11374,9 +11305,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11389,9 +11320,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11404,9 +11335,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11419,9 +11350,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11434,9 +11365,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11449,9 +11380,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11464,9 +11395,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11479,9 +11410,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11494,9 +11425,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11509,9 +11440,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11524,9 +11455,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11539,9 +11470,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q13",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11554,9 +11485,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q14",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11569,9 +11500,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q15",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11584,9 +11515,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q16",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11599,9 +11530,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q17",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11614,9 +11545,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q18",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11629,9 +11560,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q19",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11644,9 +11575,9 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-science",
   "question_id": "gk-1984-regular-science-q20",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11659,13 +11590,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q01",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0741
 
 ```json
@@ -11675,13 +11605,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q02",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0742
 
 ```json
@@ -11691,13 +11620,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q03",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0743
 
 ```json
@@ -11707,13 +11635,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q04",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0744
 
 ```json
@@ -11723,13 +11650,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q05",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0745
 
 ```json
@@ -11739,13 +11665,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q06",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0746
 
 ```json
@@ -11755,13 +11680,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q07",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0747
 
 ```json
@@ -11771,13 +11695,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q08",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0748
 
 ```json
@@ -11787,13 +11710,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q09",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0749
 
 ```json
@@ -11803,13 +11725,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q10",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0750
 
 ```json
@@ -11819,13 +11740,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q11",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0751
 
 ```json
@@ -11835,13 +11755,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q12",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0752
 
 ```json
@@ -11851,13 +11770,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q13",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0753
 
 ```json
@@ -11867,13 +11785,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q14",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0754
 
 ```json
@@ -11883,13 +11800,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q15",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0755
 
 ```json
@@ -11899,13 +11815,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q16",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0756
 
 ```json
@@ -11915,13 +11830,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1984-regular-arts",
   "question_id": "gk-1984-regular-arts-q17",
-  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "resume_action": "已完成：批级视觉审查通过（对照固定源逐页核对+答案独立复算）。",
   "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0757
 
 ```json
