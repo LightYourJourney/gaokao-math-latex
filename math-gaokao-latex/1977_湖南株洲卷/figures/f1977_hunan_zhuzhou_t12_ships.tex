@@ -1,0 +1,18 @@
+% 1977 年湖南株洲卷第 12 题：甲船在 A 发现乙船在北偏东 60° 的 B 处，乙船北行，
+% 甲船沿 AC 追及，相遇于 C；AN 指北，∠NAB=60°（按源卷第 6 页布局）
+\begin{tikzpicture}[scale=0.58]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.6,1.5);
+  \coordinate (C) at (2.6,4.5);
+  \draw[->] (0,0)--(0,2.8);
+  \node[above] at (0,2.8) {北};
+  \node[left] at (0,2.1) {$N$};
+  \draw[thick] (A)--(C);
+  \draw[thick] (A)--(B);
+  \draw[thick] (B)--(C);
+  \draw ([shift=(90:1.0)]A) arc (90:30:1.0);
+  \node at (0.78,0.85) {$60^\circ$};
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+  \fill (C) circle (1.2pt) node[above right] {$C$};
+\end{tikzpicture}

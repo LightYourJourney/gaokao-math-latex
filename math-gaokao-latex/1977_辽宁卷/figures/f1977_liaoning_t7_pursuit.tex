@@ -1,0 +1,18 @@
+% 1977 年辽宁卷第七题：A 处测得敌舰 C（方位角 45°、距离 10 海里），
+% 敌舰沿方位角 105° 方向逃跑，我舰沿海面直线 AB 追至 B 追上
+% （按源卷第 4 页「第七题附图」布局：A、C 处各画北向箭头，A 处标 45°，C 处标 105°）
+\begin{tikzpicture}[scale=0.62,>=stealth]
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (3.5,3.5);
+  \coordinate (B) at (9.3,1.95);
+  \draw[->] (A) -- (0,2.2) node[draw=none,above] {北};
+  \draw[->] (C) -- (3.5,5.2) node[draw=none,above] {北};
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thin] ([shift={(A)}]45:0.8) arc[start angle=45,end angle=90,radius=0.8];
+  \node at (0.40,0.97) {$45^\circ$};
+  \draw[thin] ([shift={(C)}]-15:0.7) arc[start angle=-15,end angle=90,radius=0.7];
+  \node at (4.25,4.08) {$105^\circ$};
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (C) circle (1.2pt) node[above left] {$C$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+\end{tikzpicture}

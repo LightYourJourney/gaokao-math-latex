@@ -9,8 +9,8 @@
 
 - 标题：1977 年·江苏卷
 - 项目目录：`1977_江苏卷`
-- 构建：`succeeded`（attempt `cc95e14c-25fd-4d57-b09c-b34d10dc8aaf`）
-- 审查：`passed`（2026-09-09T20:48:39+08:00）
+- 构建：`succeeded`（attempt `5007e4ff-ddd4-4d4d-9f22-f328e2ceee6a`）
+- 审查：`passed`（2026-09-10T10:23:13+08:00）
 - 内容候选：`eligible_blocked`
 - 页数：试题版 2；解析版 10；简答版 3；印刷版 8
 - 警告豁免：0

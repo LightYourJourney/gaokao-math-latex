@@ -1,0 +1,14 @@
+% 1977 年辽宁卷第一题(5)：A(-3,3)、B(0,-1)、C(1,0) 三点与三角形 ABC（按源卷第 1 页「第一，5题附图」布局）
+\begin{tikzpicture}[scale=0.72,>=stealth]
+  \draw[->] (-4.2,0)--(5.4,0) node[below] {$x$};
+  \draw[->] (0,-1.8)--(0,3.9) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw[thin] (-3,0.07)--(-3,-0.07);
+  \draw[thin] (1,0.07)--(1,-0.07);
+  \draw[thin] (0.07,-1)--(-0.07,-1);
+  \draw[thin] (0.07,3)--(-0.07,3);
+  \draw[thick] (-3,3)--(0,-1)--(1,0)--cycle;
+  \fill (-3,3) circle (1.2pt) node[left=2pt] {$A(-3,3)$};
+  \fill (0,-1) circle (1.2pt) node[below right] {$B(0,-1)$};
+  \fill (1,0) circle (1.2pt) node[above right] {$C(1,0)$};
+\end{tikzpicture}

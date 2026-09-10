@@ -9,8 +9,8 @@
 
 - 标题：1977 年·河南卷
 - 项目目录：`1977_河南卷`
-- 构建：`succeeded`（attempt `0ba0ab4f-a4fd-47a5-ae27-6091d3ed9af6`）
-- 审查：`passed`（2026-09-10T03:01:25+08:00）
+- 构建：`succeeded`（attempt `2beee2f1-56b5-43f8-8ef2-2fb49cab3501`）
+- 审查：`passed`（2026-09-10T10:23:30+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 3；解析版 14；简答版 4；印刷版 11
 - 警告豁免：0

@@ -1,0 +1,17 @@
+% 1977 年湖南株洲卷第 13 题图一：焦点在 x 轴上的双曲线 x^2/36 − y^2/13 = 1，
+% 顶点 A(6,0)、A'(-6,0)，焦点 F2(7,0)、F1(-7,0)，B、B' 在 y 轴上 ±√13 处（按源卷第 7 页布局）
+\begin{tikzpicture}[scale=0.44]
+  \draw[->] (-8.6,0)--(8.6,0) node[below] {$x$};
+  \draw[->] (0,-5.0)--(0,5.0) node[right] {$y$};
+  \draw[thick] plot[domain=6:8.4,samples=30] (\x,{0.601*sqrt(\x*\x-36)});
+  \draw[thick] plot[domain=6:8.4,samples=30] (\x,{-0.601*sqrt(\x*\x-36)});
+  \draw[thick] plot[domain=-8.4:-6,samples=30] (\x,{0.601*sqrt(\x*\x-36)});
+  \draw[thick] plot[domain=-8.4:-6,samples=30] (\x,{-0.601*sqrt(\x*\x-36)});
+  \fill (6,0) circle (1.4pt) node[below right] {$A(6,0)$};
+  \fill (-6,0) circle (1.4pt) node[below] {$A'$};
+  \fill (7,0) circle (1.4pt) node[above] {$F_2\,(7,0)$};
+  \fill (-7,0) circle (1.4pt) node[above] {$F_1$};
+  \fill (0,3.606) circle (1.4pt) node[right] {$B$};
+  \fill (0,-3.606) circle (1.4pt) node[right] {$B'$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
