@@ -1,0 +1,16 @@
+% 1977 年山东A卷第 6 题：m 间彼此相连的矩形猪圈——整排总长 x 标在上方，每间宽 (L-2x)/(m+1) 标在右侧，下方横线与「m 间」表示整排共 m 间（按源卷第 4 页布局）
+\begin{tikzpicture}[scale=0.85]
+  \draw[thick] (0,0) rectangle (8,2.4);
+  \draw[thick] (1.0,0) -- (1.0,2.4);
+  \draw[thick] (2.0,0) -- (2.0,2.4);
+  \draw[thick] (3.0,0) -- (3.0,2.4);
+  \draw[thick] (4.0,0) -- (4.0,2.4);
+  \draw[thick] (6.8,0) -- (6.8,2.4);
+  \node at (5.4,1.2) {$\cdots$};
+  \node[above] at (4.0,2.55) {$x$};
+  \node[right] at (8.2,1.2) {$\dfrac{L-2x}{m+1}$};
+  \draw[thick] (0,-0.55) -- (8,-0.55);
+  \draw[thick] (0,-0.38) -- (0,-0.72);
+  \draw[thick] (8,-0.38) -- (8,-0.72);
+  \node[below] at (4.0,-0.78) {$m$ 间};
+\end{tikzpicture}

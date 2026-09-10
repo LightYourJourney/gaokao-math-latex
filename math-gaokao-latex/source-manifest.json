@@ -317,6 +317,47 @@
         "gk-1977-regular-guangxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b37",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-hubei",
+        "gk-1977-regular-hunan",
+        "gk-1977-regular-hunan-zhuzhou",
+        "gk-1977-regular-jilin"
+      ],
+      "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b38",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-jiangsu-nantong",
+        "gk-1977-regular-jiangxi",
+        "gk-1977-regular-liaoning",
+        "gk-1977-regular-ningxia"
+      ],
+      "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b39",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-shandong-a",
+        "gk-1977-regular-shandong-b",
+        "gk-1977-regular-shaanxi",
+        "gk-1977-regular-xinjiang-arts"
+      ],
+      "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b40",
+      "issues": [],
+      "paper_ids": [
+        "gk-1977-regular-guangxi-baise-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -326,7 +367,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2c4ef91a-4cb4-4c24-8746-eb9580d2addb",
+  "last_transaction_id": "5f163e78-6885-4c3f-87d4-03932a36bd55",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -4073,9 +4114,951 @@
       "title": "1977 年·广西卷（理科）",
       "track": "science",
       "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖北卷/figures/f1977_hubei_t2_wall.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_湖北卷/figures/f1977_hubei_t5_graph.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_hubei",
+        "id": "gk-1977-regular-hubei",
+        "note": "1977 年湖北卷，固定源 1977湖北.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "湖北卷",
+        "structure": {
+          "题目": [
+            1,
+            5
+          ]
+        },
+        "track": "不分文理",
+        "variant": "湖北"
+      },
+      "issue_ids": [
+        "ISSUE-0277",
+        "ISSUE-0278",
+        "ISSUE-0279",
+        "ISSUE-0280",
+        "ISSUE-0281"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-hubei",
+      "production_state": "complete",
+      "project_dir": "1977_湖北卷",
+      "question_count": 5,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_湖北_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_湖北_含解析.md",
+        "questions": "1977/1977_数学真题_湖北_试题.md",
+        "solution_body": "1977/1977_数学真题_湖北_解析正文.md"
+      },
+      "source_ids": [
+        "src-dd9ccba4e381fd5340e9f078a68e4023bf62fb6c12c5d87952daa84f6ce00ef6"
+      ],
+      "title": "1977 年·湖北卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1977_hunan",
+        "id": "gk-1977-regular-hunan",
+        "note": "固定源为《湖南省高等学校招生数学试题答案和评分标准》（9 页，无题面）：试题题面系编者从源解答反推并逐题附源注，第 1 题（2）（3）（4）三个小题原始式子未能确认、按源解答右端照录；正式题 7 道，第 1 题 6 小题；理科合计 100 分、文科按源标注 115 分；参考题 2 道不计入题量。",
+        "pages_q": [
+          1,
+          9
+        ],
+        "pages_s": [
+          1,
+          9
+        ],
+        "paper": "湖南卷",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "文理合卷（理科/文科同题不同分）",
+        "variant": "湖南"
+      },
+      "issue_ids": [
+        "ISSUE-0282",
+        "ISSUE-0283",
+        "ISSUE-0284",
+        "ISSUE-0285",
+        "ISSUE-0286",
+        "ISSUE-0287",
+        "ISSUE-0288"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-hunan",
+      "production_state": "complete",
+      "project_dir": "1977_湖南卷",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_湖南_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_湖南_含解析.md",
+        "questions": "1977/1977_数学真题_湖南_试题.md",
+        "solution_body": "1977/1977_数学真题_湖南_解析正文.md"
+      },
+      "source_ids": [
+        "src-7dfa7c98af01b5dd89262583976b40226b41e5107a5d0e14bcccb0178124782d"
+      ],
+      "title": "1977 年·湖南卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_ref3_window.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t10_mountain.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t12_ships.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t13_hyperbola_x.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t13_hyperbola_y.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t14_circle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t15_triangle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t9_circles.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_t9_rhombus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_hunan_zhuzhou",
+        "id": "gk-1977-regular-hunan-zhuzhou",
+        "note": "1977 年湖南株洲卷，固定源 1977湖南株洲.pdf。",
+        "pages_q": [
+          1,
+          10
+        ],
+        "pages_s": [
+          1,
+          10
+        ],
+        "paper": "湖南株洲卷",
+        "structure": {
+          "题目": [
+            1,
+            15
+          ]
+        },
+        "track": "不分文理",
+        "variant": "湖南株洲"
+      },
+      "issue_ids": [
+        "ISSUE-0289",
+        "ISSUE-0290",
+        "ISSUE-0291",
+        "ISSUE-0292",
+        "ISSUE-0293",
+        "ISSUE-0294",
+        "ISSUE-0295",
+        "ISSUE-0296",
+        "ISSUE-0297",
+        "ISSUE-0298",
+        "ISSUE-0299",
+        "ISSUE-0300",
+        "ISSUE-0301",
+        "ISSUE-0302",
+        "ISSUE-0303"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-hunan-zhuzhou",
+      "production_state": "complete",
+      "project_dir": "1977_湖南株洲卷",
+      "question_count": 15,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_湖南株洲_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_湖南株洲_含解析.md",
+        "questions": "1977/1977_数学真题_湖南株洲_试题.md",
+        "solution_body": "1977/1977_数学真题_湖南株洲_解析正文.md"
+      },
+      "source_ids": [
+        "src-32ff9e25e49ce9f87720ae7e05f2ff9bdc8dc9475034f1d0e658a768db02f3ea"
+      ],
+      "title": "1977 年·湖南株洲卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_吉林卷/figures/f1977_jilin_t1_triangle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_吉林卷/figures/f1977_jilin_t3_harbor.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_吉林卷/figures/f1977_jilin_t5_quad.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_jilin",
+        "id": "gk-1977-regular-jilin",
+        "note": "1977 年吉林卷，固定源 1977吉林.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "吉林卷",
+        "structure": {
+          "题目": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "吉林"
+      },
+      "issue_ids": [
+        "ISSUE-0304",
+        "ISSUE-0305",
+        "ISSUE-0306",
+        "ISSUE-0307",
+        "ISSUE-0308",
+        "ISSUE-0309"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-jilin",
+      "production_state": "complete",
+      "project_dir": "1977_吉林卷",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_吉林_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_吉林_含解析.md",
+        "questions": "1977/1977_数学真题_吉林_试题.md",
+        "solution_body": "1977/1977_数学真题_吉林_解析正文.md"
+      },
+      "source_ids": [
+        "src-839c81f43061fcafd6499921a8792ffbf2c99a5ee54829de60ba7ae6d8734346"
+      ],
+      "title": "1977 年·吉林卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_江苏南通卷/figures/f1977_jiangsu_nantong_t10_forces.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_江苏南通卷/figures/f1977_jiangsu_nantong_t9_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_jiangsu_nantong",
+        "id": "gk-1977-regular-jiangsu-nantong",
+        "note": "1977 年江苏南通卷，固定源 1977江苏南通.pdf。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "江苏南通卷",
+        "structure": {
+          "题目": [
+            1,
+            10
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏南通"
+      },
+      "issue_ids": [
+        "ISSUE-0310",
+        "ISSUE-0311",
+        "ISSUE-0312",
+        "ISSUE-0313",
+        "ISSUE-0314",
+        "ISSUE-0315",
+        "ISSUE-0316",
+        "ISSUE-0317",
+        "ISSUE-0318",
+        "ISSUE-0319"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-jiangsu-nantong",
+      "production_state": "complete",
+      "project_dir": "1977_江苏南通卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_江苏南通_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_江苏南通_含解析.md",
+        "questions": "1977/1977_数学真题_江苏南通_试题.md",
+        "solution_body": "1977/1977_数学真题_江苏南通_解析正文.md"
+      },
+      "source_ids": [
+        "src-ef8797067b66d45c6d11cc72ae7d854f0265cffecce16eeb945f46bf553391ba"
+      ],
+      "title": "1977 年·江苏南通卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1977_jiangxi",
+        "id": "gk-1977-regular-jiangxi",
+        "note": "1977 年江西卷《试题解》题解合订本（书页 40—49）；第 1 题（3）小项源卷印刷褪色且无源解答交叉验证，判读为 log_a a^2（若为 log_a c^2 则答案为 2log_a c），已留源注；原卷无插图。",
+        "pages_q": [
+          1,
+          11
+        ],
+        "pages_s": [
+          1,
+          11
+        ],
+        "paper": "江西卷",
+        "structure": {
+          "题目": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江西"
+      },
+      "issue_ids": [
+        "ISSUE-0320",
+        "ISSUE-0321",
+        "ISSUE-0322",
+        "ISSUE-0323",
+        "ISSUE-0324",
+        "ISSUE-0325"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-jiangxi",
+      "production_state": "complete",
+      "project_dir": "1977_江西卷",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_江西_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_江西_含解析.md",
+        "questions": "1977/1977_数学真题_江西_试题.md",
+        "solution_body": "1977/1977_数学真题_江西_解析正文.md"
+      },
+      "source_ids": [
+        "src-8cba381093818508a66781ef8274406609a93629b8ffea3f92b1cbf71e2d53b6"
+      ],
+      "title": "1977 年·江西卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_ref1_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_ref2_area.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t1_coordsys.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t1_pole.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t2_parabola.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t5_trapezoid1.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t5_trapezoid2.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t5_trapezoid3.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_辽宁卷/figures/f1977_liaoning_t7_pursuit.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_liaoning",
+        "id": "gk-1977-regular-liaoning",
+        "note": "1977 年辽宁卷，固定源 1977辽宁.pdf。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          1,
+          7
+        ],
+        "paper": "辽宁卷",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "不分文理",
+        "variant": "辽宁"
+      },
+      "issue_ids": [
+        "ISSUE-0326",
+        "ISSUE-0327",
+        "ISSUE-0328",
+        "ISSUE-0329",
+        "ISSUE-0330",
+        "ISSUE-0331",
+        "ISSUE-0332"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-liaoning",
+      "production_state": "complete",
+      "project_dir": "1977_辽宁卷",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_辽宁_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_辽宁_含解析.md",
+        "questions": "1977/1977_数学真题_辽宁_试题.md",
+        "solution_body": "1977/1977_数学真题_辽宁_解析正文.md"
+      },
+      "source_ids": [
+        "src-7d7b10b2fef891c7ab5bbe3155f2df772bebfa95a7c1771d82722fa2169271aa"
+      ],
+      "title": "1977 年·辽宁卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_宁夏卷/figures/f1977_ningxia_t10_triangle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_宁夏卷/figures/f1977_ningxia_t11_triangle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_宁夏卷/figures/f1977_ningxia_t13_circle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_宁夏卷/figures/f1977_ningxia_t14_window.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_宁夏卷/figures/f1977_ningxia_t15_hexagon.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_ningxia",
+        "id": "gk-1977-regular-ningxia",
+        "note": "1977 年宁夏卷，固定源 1977宁夏.pdf。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "宁夏卷",
+        "structure": {
+          "题目": [
+            1,
+            15
+          ]
+        },
+        "track": "文理合卷（理科/文科同题不同分，第五题文科不作）",
+        "variant": "宁夏"
+      },
+      "issue_ids": [
+        "ISSUE-0333",
+        "ISSUE-0334",
+        "ISSUE-0335",
+        "ISSUE-0336",
+        "ISSUE-0337",
+        "ISSUE-0338",
+        "ISSUE-0339",
+        "ISSUE-0340",
+        "ISSUE-0341",
+        "ISSUE-0342",
+        "ISSUE-0343",
+        "ISSUE-0344",
+        "ISSUE-0345",
+        "ISSUE-0346",
+        "ISSUE-0347"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-ningxia",
+      "production_state": "complete",
+      "project_dir": "1977_宁夏卷",
+      "question_count": 15,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_宁夏_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_宁夏_含解析.md",
+        "questions": "1977/1977_数学真题_宁夏_试题.md",
+        "solution_body": "1977/1977_数学真题_宁夏_解析正文.md"
+      },
+      "source_ids": [
+        "src-a28e694ae4d23dcae2294ae347c8e2911ea6253dac4f07b20405f9ca104f03e1"
+      ],
+      "title": "1977 年·宁夏卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东A卷/figures/f1977_shandong_a_t1_threeview.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东A卷/figures/f1977_shandong_a_t2_circle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东A卷/figures/f1977_shandong_a_t5_artillery.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东A卷/figures/f1977_shandong_a_t6_pigpen.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_shandong_a",
+        "id": "gk-1977-regular-shandong-a",
+        "note": "1977 年山东A卷，固定源 1977山东A.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "山东A卷",
+        "structure": {
+          "题目": [
+            1,
+            6
+          ]
+        },
+        "track": "不分文理",
+        "variant": "山东A"
+      },
+      "issue_ids": [
+        "ISSUE-0348",
+        "ISSUE-0349",
+        "ISSUE-0350",
+        "ISSUE-0351",
+        "ISSUE-0352",
+        "ISSUE-0353"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-shandong-a",
+      "production_state": "complete",
+      "project_dir": "1977_山东A卷",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_山东A_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_山东A_含解析.md",
+        "questions": "1977/1977_数学真题_山东A_试题.md",
+        "solution_body": "1977/1977_数学真题_山东A_解析正文.md"
+      },
+      "source_ids": [
+        "src-efbab9ec63911f956ef3f988691d7ad7fd070ac714122987ba18cfd5d26496b6"
+      ],
+      "title": "1977 年·山东A卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东B卷/figures/f1977_shandong_b_ref2_parabola.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东B卷/figures/f1977_shandong_b_t10_lighthouse.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东B卷/figures/f1977_shandong_b_t11_tunnel.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东B卷/figures/f1977_shandong_b_t6_twoview.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_山东B卷/figures/f1977_shandong_b_t7_parallelogram.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_shandong_b",
+        "id": "gk-1977-regular-shandong-b",
+        "note": "1977 年山东B卷，固定源 1977山东B.pdf。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          1,
+          7
+        ],
+        "paper": "山东B卷",
+        "structure": {
+          "题目": [
+            1,
+            11
+          ]
+        },
+        "track": "不分文理",
+        "variant": "山东B"
+      },
+      "issue_ids": [
+        "ISSUE-0354",
+        "ISSUE-0355",
+        "ISSUE-0356",
+        "ISSUE-0357",
+        "ISSUE-0358",
+        "ISSUE-0359",
+        "ISSUE-0360",
+        "ISSUE-0361",
+        "ISSUE-0362",
+        "ISSUE-0363",
+        "ISSUE-0364"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-shandong-b",
+      "production_state": "complete",
+      "project_dir": "1977_山东B卷",
+      "question_count": 11,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_山东B_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_山东B_含解析.md",
+        "questions": "1977/1977_数学真题_山东B_试题.md",
+        "solution_body": "1977/1977_数学真题_山东B_解析正文.md"
+      },
+      "source_ids": [
+        "src-36d98ff635ea1b544cc43f0b78be419d472dba39e0befcb8ce9e75c1b9afb158"
+      ],
+      "title": "1977 年·山东B卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_陕西卷/figures/f1977_shaanxi_ref1_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_陕西卷/figures/f1977_shaanxi_t10_cut1.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_陕西卷/figures/f1977_shaanxi_t10_cut2.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_陕西卷/figures/f1977_shaanxi_t7_medial_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_shaanxi",
+        "id": "gk-1977-regular-shaanxi",
+        "note": "1977 年陕西卷，固定源 1977陕西.pdf。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          1,
+          7
+        ],
+        "paper": "陕西卷",
+        "structure": {
+          "题目": [
+            1,
+            10
+          ]
+        },
+        "track": "不分文理",
+        "variant": "陕西"
+      },
+      "issue_ids": [
+        "ISSUE-0365",
+        "ISSUE-0366",
+        "ISSUE-0367",
+        "ISSUE-0368",
+        "ISSUE-0369",
+        "ISSUE-0370",
+        "ISSUE-0371",
+        "ISSUE-0372",
+        "ISSUE-0373",
+        "ISSUE-0374"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-shaanxi",
+      "production_state": "complete",
+      "project_dir": "1977_陕西卷",
+      "question_count": 10,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_陕西_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_陕西_含解析.md",
+        "questions": "1977/1977_数学真题_陕西_试题.md",
+        "solution_body": "1977/1977_数学真题_陕西_解析正文.md"
+      },
+      "source_ids": [
+        "src-5e7e33aa2bc4a4f0ac630726cd948661c2c1d95f5f98b827f981b467a51e3db4"
+      ],
+      "title": "1977 年·陕西卷",
+      "track": "none",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_新疆卷_文科/figures/f1977_xinjiang_arts_t4_quadrilateral.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_新疆卷_文科/figures/f1977_xinjiang_arts_t6_dam.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_新疆卷_文科/figures/f1977_xinjiang_arts_t7_line.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_xinjiang_arts",
+        "id": "gk-1977-regular-xinjiang-arts",
+        "note": "1977 年新疆卷（文科），固定源 1977新疆文.pdf。",
+        "pages_q": [
+          1,
+          5
+        ],
+        "pages_s": [
+          1,
+          5
+        ],
+        "paper": "新疆卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "文科",
+        "variant": "新疆"
+      },
+      "issue_ids": [
+        "ISSUE-0375",
+        "ISSUE-0376",
+        "ISSUE-0377",
+        "ISSUE-0378",
+        "ISSUE-0379",
+        "ISSUE-0380",
+        "ISSUE-0381"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-xinjiang-arts",
+      "production_state": "complete",
+      "project_dir": "1977_新疆卷_文科",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_新疆文_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_新疆文_含解析.md",
+        "questions": "1977/1977_数学真题_新疆文_试题.md",
+        "solution_body": "1977/1977_数学真题_新疆文_解析正文.md"
+      },
+      "source_ids": [
+        "src-800c7953893d1b748f44ab64fd270c28074d8b3291ecc9f9fda200eb1d2db9db"
+      ],
+      "title": "1977 年·新疆卷（文科）",
+      "track": "arts",
+      "year": 1977
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西百色卷_理科/figures/f1977_guangxi_baise_science_ref2_segment.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西百色卷_理科/figures/f1977_guangxi_baise_science_t3_circle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1977_广西百色卷_理科/figures/f1977_guangxi_baise_science_t5_triangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1977_guangxi_baise_science",
+        "id": "gk-1977-regular-guangxi-baise-science",
+        "note": "1977 年广西百色卷（理科），固定源 1977广西百色理.pdf。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          1,
+          6
+        ],
+        "paper": "广西百色卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            6
+          ]
+        },
+        "track": "理科",
+        "variant": "广西百色"
+      },
+      "issue_ids": [
+        "ISSUE-0382",
+        "ISSUE-0383",
+        "ISSUE-0384",
+        "ISSUE-0385",
+        "ISSUE-0386",
+        "ISSUE-0387"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1977-regular-guangxi-baise-science",
+      "production_state": "complete",
+      "project_dir": "1977_广西百色卷_理科",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1977/1977_数学真题_广西百色理_答案要点.md",
+        "combined_rendered": "1977/1977_数学真题_广西百色理_含解析.md",
+        "questions": "1977/1977_数学真题_广西百色理_试题.md",
+        "solution_body": "1977/1977_数学真题_广西百色理_解析正文.md"
+      },
+      "source_ids": [
+        "src-137c42f4705802889d5bcbfa9cb558a8af4ac5940b95ad39f8e0c01c215c6081"
+      ],
+      "title": "1977 年·广西百色卷（理科）",
+      "track": "science",
+      "year": 1977
     }
   ],
-  "revision": 1482,
+  "revision": 1560,
   "schema_version": 1,
   "sources": [
     {
@@ -5844,8 +6827,8 @@
       "exam_type": "regular",
       "git_blob_oid": "59bfdc1ca6855e20ce41503ff809754be4b5e811",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-jilin",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977吉林.pdf",
       "regions": [],
       "source_id": "src-839c81f43061fcafd6499921a8792ffbf2c99a5ee54829de60ba7ae6d8734346",
@@ -5916,8 +6899,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8fab0d36517fb3b9c940ed2b9b39b01cca71199d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-ningxia",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977宁夏.pdf",
       "regions": [],
       "source_id": "src-a28e694ae4d23dcae2294ae347c8e2911ea6253dac4f07b20405f9ca104f03e1",
@@ -5988,8 +6971,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b4edd0e62059db88acb92f724a0c25d6f02791ee",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-shandong-a",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977山东A.pdf",
       "regions": [],
       "source_id": "src-efbab9ec63911f956ef3f988691d7ad7fd070ac714122987ba18cfd5d26496b6",
@@ -6012,8 +6995,8 @@
       "exam_type": "regular",
       "git_blob_oid": "30705817a0777223e371f9dc6aa5f24c21424ff3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-shandong-b",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977山东B.pdf",
       "regions": [],
       "source_id": "src-36d98ff635ea1b544cc43f0b78be419d472dba39e0befcb8ce9e75c1b9afb158",
@@ -6156,8 +7139,8 @@
       "exam_type": "regular",
       "git_blob_oid": "69eb5aee29eab6d3c99e84f9bdc073a30642a6ae",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-guangxi-baise-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977广西百色理.pdf",
       "regions": [],
       "source_id": "src-137c42f4705802889d5bcbfa9cb558a8af4ac5940b95ad39f8e0c01c215c6081",
@@ -6180,8 +7163,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ff63abed146d4a0ca026ab0d70740480d0070d05",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-xinjiang-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977新疆文.pdf",
       "regions": [],
       "source_id": "src-800c7953893d1b748f44ab64fd270c28074d8b3291ecc9f9fda200eb1d2db9db",
@@ -6252,8 +7235,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5d1f5be378c7679b4326111ec3f836d3faaf1f10",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-jiangsu-nantong",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977江苏南通.pdf",
       "regions": [],
       "source_id": "src-ef8797067b66d45c6d11cc72ae7d854f0265cffecce16eeb945f46bf553391ba",
@@ -6276,8 +7259,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d7a73993136ef2c893bacb6d15f0bfb1763de326",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-jiangxi",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977江西.pdf",
       "regions": [],
       "source_id": "src-8cba381093818508a66781ef8274406609a93629b8ffea3f92b1cbf71e2d53b6",
@@ -6372,8 +7355,8 @@
       "exam_type": "regular",
       "git_blob_oid": "aced58aa9b3bf4af0769a476e267f98e05f70a0f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-hubei",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977湖北.pdf",
       "regions": [],
       "source_id": "src-dd9ccba4e381fd5340e9f078a68e4023bf62fb6c12c5d87952daa84f6ce00ef6",
@@ -6396,8 +7379,8 @@
       "exam_type": "regular",
       "git_blob_oid": "488586f86ed7a3d10eb553feffb85b7045a69718",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-hunan",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977湖南.pdf",
       "regions": [],
       "source_id": "src-7dfa7c98af01b5dd89262583976b40226b41e5107a5d0e14bcccb0178124782d",
@@ -6420,8 +7403,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c707b8cb95a9438d85ef151d49652b752db18ccf",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-hunan-zhuzhou",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977湖南株洲.pdf",
       "regions": [],
       "source_id": "src-32ff9e25e49ce9f87720ae7e05f2ff9bdc8dc9475034f1d0e658a768db02f3ea",
@@ -6564,8 +7547,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e174cce2c954f58eb83e78c0bf0fdc51830ee668",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-liaoning",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977辽宁.pdf",
       "regions": [],
       "source_id": "src-7d7b10b2fef891c7ab5bbe3155f2df772bebfa95a7c1771d82722fa2169271aa",
@@ -6588,8 +7571,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f0bfa7c1f67657aa127399d3cd626ff08a51d4ca",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1977-regular-shaanxi",
+      "paper_relation": "canonical",
       "raw_paper_name": "1977陕西.pdf",
       "regions": [],
       "source_id": "src-5e7e33aa2bc4a4f0ac630726cd948661c2c1d95f5f98b827f981b467a51e3db4",

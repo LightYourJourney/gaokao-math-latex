@@ -9,8 +9,8 @@
 
 - 标题：1977 年·天津卷
 - 项目目录：`1977_天津卷`
-- 构建：`succeeded`（attempt `71f9ad9a-110b-40fb-be2b-47488913af98`）
-- 审查：`passed`（2026-09-10T10:23:03+08:00）
+- 构建：`succeeded`（attempt `cdf3ef15-2a1f-4c8d-bfea-5f911ab9b0df`）
+- 审查：`passed`（2026-09-10T12:01:31+08:00）
 - 内容候选：`eligible_blocked`
 - 页数：试题版 3；解析版 9；简答版 4；印刷版 8
 - 警告豁免：0

@@ -1,0 +1,779 @@
+% answers.tex —— 1977 年·湖南株洲卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1977/1977_数学真题_湖南株洲_试题.md + 1977/1977_数学真题_湖南株洲_解析正文.md + 1977/1977_数学真题_湖南株洲_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源是题面与解答连续排印的「试题解」型扫描件（书籍页码 123—131），每题附源印解答。下文逐题独立推导并对照源解答复算，最终结论均与源解答一致；对源卷排印问题的订正集中在：第 2 题源解「sin80」漏度号、第 5 题源解「log158」漏下标 15、第 6 题源解首式第一分式误印、第 7 题源解漏讨论 h=0、第 11 题源解首行方程右侧误印 7/18，各处订正说明见相应题位。题面沿用源卷记号 tg、ctg（试题中排作反斜杠 operatorname 形式），解析统一按现行记法写作 tan、cot。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}（4 分）：
+
+$y=2\sqrt{x^2}$ 和 $y=2x$ 是不是同一个函数？为什么？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由二次根式性质，$\sqrt{x^2}=|x|$，故
+
+\nopagebreak[4]
+\[
+y=2\sqrt{x^2}=\begin{cases}2x, & x\ge0,\\ -2x, & x<0.\end{cases}
+\]
+
+取 $x=-1$：$y=2\sqrt{x^2}=2$，而 $y=2x=-2$，两式并不恒等。两者定义域相同而对应法则不同，故不是同一个函数。
+
+\gkanswer{答案：不是同一个函数。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}（4 分）：
+
+确定下列各式的符号：
+
+（1） $1-\sin800^\circ$；
+
+（2） $\cos20^\circ-\sin20^\circ$；
+
+（3） $\operatorname{tg}288^\circ\cdot\operatorname{tg}510^\circ$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+$\sin800^\circ=\sin(2\times360^\circ+80^\circ)=\sin80^\circ$，且 $0<\sin80^\circ<1$，故
+
+\nopagebreak[4]
+\[
+1-\sin800^\circ=1-\sin80^\circ>0,
+\]
+
+符号为正。
+
+\begin{gktip}
+\textbf{源注}：源解此行印作「1 $-$ sin80 大于 0」，度符号脱落；按题面 $1-\sin800^\circ$ 及下文 $\sin(2\times360^\circ+80^\circ)$ 应为 $\sin80^\circ$。
+\end{gktip}
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+$\cos20^\circ=\sin70^\circ$（互余），正弦在 $[0^\circ,90^\circ]$ 上递增，且 $70^\circ>20^\circ$，故
+
+\nopagebreak[4]
+\[
+\cos20^\circ-\sin20^\circ=\sin70^\circ-\sin20^\circ>0,
+\]
+
+符号为正。
+
+\gksubpart{（3）}
+
+\Needspace{5\baselineskip}
+$\operatorname{tg}288^\circ=\operatorname{tg}(360^\circ-72^\circ)=-\operatorname{tg}72^\circ<0$，$\operatorname{tg}510^\circ=\operatorname{tg}(360^\circ+150^\circ)=\operatorname{tg}150^\circ=-\operatorname{tg}30^\circ<0$，负负得正，
+
+\nopagebreak[4]
+\[
+\operatorname{tg}288^\circ\cdot\operatorname{tg}510^\circ
+=(-\operatorname{tg}72^\circ)(-\operatorname{tg}30^\circ)>0,
+\]
+
+符号为正。
+
+\gkanswer{答案（1）：正号。}
+
+\gkanswer{答案（2）：正号。}
+
+\gkanswer{答案（3）：正号。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}（4 分）：
+
+已知 $x$、$y$ 都是实数，且 $(2x-1)^2+(y-8)^2=0$，求 $\log_2xy=\ \text{？}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$(2x-1)^2$ 与 $(y-8)^2$ 均非负，平方和为零当且仅当两者同时为零：
+
+\nopagebreak[4]
+\[
+(2x-1)^2=0,\qquad (y-8)^2=0,
+\qquad x=\frac12,\ y=8.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\log_2xy=\log_2\!\left(\frac12\times8\right)=\log_24=2\log_22=2.
+\]
+
+\gkanswer{答案：$\log_2xy=2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}（4 分）：
+
+$\sqrt{(\log_320)^2-6\log_320+9}=\ \text{？}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+根号内为完全平方式：
+
+\nopagebreak[4]
+\[
+(\log_320)^2-6\log_320+9=(\log_320-3)^2,
+\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[
+\sqrt{(\log_320-3)^2}=|\log_320-3|.
+\]
+
+而 $3=\log_33^3=\log_327>\log_320$，绝对值内为负，所以原式等于 $3-\log_320$。
+
+\gkanswer{答案：$3-\log_320$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}（6 分）：
+
+已知 $\log_{15}7=a$，$\log_{15}8=b$，求 $\log_{56}15=\ \text{？}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由对数换底公式，
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\log_{56}15&=\frac{1}{\log_{15}56}
+=\frac{1}{\log_{15}(7\times8)}\\
+&=\frac{1}{\log_{15}7+\log_{15}8}
+=\frac{1}{a+b}.
+\end{aligned}
+\]
+
+\begin{gktip}
+\textbf{源注}：源解第三步分母印作「log15 后接 158」，下标 15 脱落；应为 $\log_{15}8$，此处按订正后的式子计算。
+\end{gktip}
+
+\gkanswer{答案：$\log_{56}15=\dfrac{1}{a+b}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}（6 分）：
+
+\Needspace{5\baselineskip}
+化简：
+
+\nopagebreak[4]
+\[
+\left(\frac{x^{-1}-1}{x^{-1}+1}-\frac{x^{-1}+1}{x^{-1}-1}\right)\cdot\left(2^{-1}-4^{-1}x^{-1}-4^{-1}x\right).
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+2^{-1}-4^{-1}x^{-1}-4^{-1}x=\frac12-\frac{1}{4x}-\frac{x}{4}
+=\frac{2x-1-x^2}{4x}=-\frac{(x-1)^2}{4x},
+\]
+
+\nopagebreak[4]
+\[
+\frac{x^{-1}-1}{x^{-1}+1}=\frac{1-x}{1+x},
+\qquad
+\frac{x^{-1}+1}{x^{-1}-1}=\frac{1+x}{1-x}.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+&\left(\frac{1-x}{1+x}-\frac{1+x}{1-x}\right)\cdot\left(-\frac{(x-1)^2}{4x}\right)\\
+&=\frac{(1-x)^2-(1+x)^2}{(1+x)(1-x)}\cdot\left(-\frac{(x-1)^2}{4x}\right)\\
+&=\frac{-4x}{1-x^2}\cdot\left(-\frac{(x-1)^2}{4x}\right)
+=\frac{(x-1)^2}{1-x^2}
+=\frac{(x-1)^2}{(1-x)(1+x)}
+=\frac{1-x}{1+x}.
+\end{aligned}
+\]
+
+\begin{gktip}
+\textbf{源注}：源解首式第一个分式印作「分子 1+x、分母 1+x」，与第二个分式「分子 1+x、分母 1$-$x」对举；但后续等式链 $\dfrac{-4x}{1-x^2}$ 仅当第一个分式为 $\dfrac{1-x}{1+x}$ 时成立，且化简结果 $\dfrac{1-x}{1+x}$ 亦与按此计算的结论一致，故判定首式第一分式分子误印为 $1+x$，此处按 $\dfrac{1-x}{1+x}$ 计算。
+\end{gktip}
+
+\gkanswer{答案：$\dfrac{1-x}{1+x}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}（6 分）：
+
+$h$ 为什么数时，方程 $2hx^2+(8h+1)x=-8h$ 有两个不相等的实根？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+方程即 $2hx^2+(8h+1)x+8h=0$。要使它有两个不相等的实根，须二次项系数不为零且判别式为正：
+
+\nopagebreak[4]
+\[
+\Delta=(8h+1)^2-4\cdot2h\cdot8h=64h^2+16h+1-64h^2=16h+1.
+\]
+
+\Needspace{5\baselineskip}
+令 $\Delta>0$ 得 $16h+1>0$，即
+
+\nopagebreak[4]
+\[
+h>-\frac{1}{16}.
+\]
+
+又 $h=0$ 时方程退化为一次方程 $9x=0$，只有一个实根，不合「两个不相等的实根」，故严格结论为 $h>-\dfrac{1}{16}$ 且 $h\ne0$。
+
+\begin{gktip}
+\textbf{源注}：源解答只给出 $h>-\dfrac{1}{16}$，未讨论 $h=0$ 的退化情形；本题面按源卷转录，此处补充说明。
+\end{gktip}
+
+\gkanswer{答案：$h>-\dfrac{1}{16}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}（6 分）：
+
+\Needspace{5\baselineskip}
+证明恒等式：
+
+\nopagebreak[4]
+\[
+\frac{2\sin\theta\cdot\sin\left(\dfrac{\pi}{2}-\theta\right)+\sin\left(\dfrac{3\pi}{2}+\theta\right)}
+{1+\sin(\pi+\theta)+\sin^2(\pi-\theta)-\sin^2\left(\dfrac{\pi}{2}+\theta\right)}
+=\operatorname{tg}\left(\dfrac{\pi}{2}-\theta\right).
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+在分母与 $\sin\theta\cos\theta\ne0$ 的条件下，利用 $\sin\left(\dfrac{\pi}{2}-\theta\right)=\cos\theta$、$\sin\left(\dfrac{3\pi}{2}+\theta\right)=-\cos\theta$、$\sin(\pi+\theta)=-\sin\theta$、$\sin\left(\dfrac{\pi}{2}+\theta\right)=\cos\theta$，左式化为
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+\frac{2\sin\theta\cos\theta-\cos\theta}{1-\sin\theta+\sin^2\theta-\cos^2\theta}
+&=\frac{\cos\theta\,(2\sin\theta-1)}{1-\sin\theta+\sin^2\theta-(1-\sin^2\theta)}\\
+&=\frac{\cos\theta\,(2\sin\theta-1)}{2\sin^2\theta-\sin\theta}\\
+&=\frac{\cos\theta\,(2\sin\theta-1)}{\sin\theta\,(2\sin\theta-1)}
+=\frac{\cos\theta}{\sin\theta}=\cot\theta.
+\end{aligned}
+\]
+
+而 $\cot\theta=\operatorname{tg}\left(\dfrac{\pi}{2}-\theta\right)$，即左式等于右式，恒等式成立。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+（1） （6 分） 三个半径都是 $R$ 的圆两两外切，求过三个切点的三个圆弧所围成图形的面积。
+
+\begin{gktip}
+原源 PDF 第 4 页附有三圆两两外切、圆心三角形与中间曲边区域示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t9_circles}\end{center}
+\nopagebreak[4]
+（2） （4 分） 已知菱形面积为 $392\ \mathrm{cm^2}$，有一角为 $150^\circ$，求边长。
+
+\begin{gktip}
+原源 PDF 第 4 页附有菱形与对角线示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t9_rhombus}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+连结三个圆心 $A\text{、}B\text{、}C$，由两圆外切时切点在连心线上，切点 $D\text{、}F\text{、}E$ 分别在 $AB\text{、}AC\text{、}BC$ 上。圆心三角形为边长 $2R$ 的等边三角形，所求曲边三角形面积等于圆心三角形面积减去三个 $60^\circ$ 扇形：
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+s&=\frac12\,AB\cdot AC\cdot\sin60^\circ-3\cdot\frac{60}{360}\pi R^2\\
+&=\frac12\cdot2R\cdot2R\cdot\frac{\sqrt3}{2}-3\cdot\frac16\pi R^2\\
+&=\sqrt3 R^2-\frac{\pi}{2}R^2
+=\left(\sqrt3-\frac{\pi}{2}\right)R^2.
+\end{aligned}
+\]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t9_circles}\end{center}
+\nopagebreak[4]
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+菱形相邻两边相等，设边长为 $AB$。由 $\angle B=150^\circ$ 得 $\angle A=30^\circ$，面积
+
+\nopagebreak[4]
+\[
+S=AB\cdot AD\cdot\sin A=AB^2\sin30^\circ=\frac12\,AB^2.
+\]
+
+由 $S=392$ 得 $AB^2=784$，边长 $AB=\sqrt{784}=28\ \mathrm{cm}$。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t9_rhombus}\end{center}
+\nopagebreak[4]
+\gkanswer{答案（1）：$\left(\sqrt3-\dfrac{\pi}{2}\right)R^2$。}
+
+\gkanswer{答案（2）：边长为 $28\ \mathrm{cm}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}（6 分）：
+
+在高 $150\ \mathrm{m}$ 的山顶上测得正南两船的俯角分别为 $15^\circ$ 和 $75^\circ$，求两船的距离。
+
+\begin{gktip}
+原源 PDF 第 5 页附有山顶俯角与两船位置示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t10_mountain}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设山顶为 $P$、两船为 $A\text{、}B$、垂足为 $C$，俯角等于地面上的仰角（内错角相等），故 $\angle PAC=15^\circ$、$\angle PBC=75^\circ$。于是
+
+\nopagebreak[4]
+\[
+AC=\frac{150}{\tan15^\circ}=150\cot15^\circ,
+\qquad
+BC=\frac{150}{\tan75^\circ}=150\cot75^\circ=150\tan15^\circ.
+\]
+
+\Needspace{5\baselineskip}
+两船距离
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+AB&=AC-BC=150(\cot15^\circ-\tan15^\circ),\\
+\cot\theta-\tan\theta&=\frac{\cos^2\theta-\sin^2\theta}{\sin\theta\cos\theta}
+=\frac{\cos2\theta}{\frac12\sin2\theta}=2\cot2\theta,
+\end{aligned}
+\]
+
+\Needspace{5\baselineskip}
+取 $\theta=15^\circ$：$\cot15^\circ-\tan15^\circ=2\cot30^\circ=2\sqrt3$，故
+
+\nopagebreak[4]
+\[
+AB=150\times2\sqrt3=300\sqrt3\approx519.6\ \mathrm{m}.
+\]
+
+源解答将 $\cot15^\circ\text{、}\tan15^\circ$ 按和差角展开为 $\dfrac{\sqrt6\pm\sqrt2}{\sqrt6\mp\sqrt2}$ 后得 $150\sqrt{12}$，与本节结论一致。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t10_mountain}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：两船相距 $300\sqrt3\ \mathrm{m}\approx519.6\ \mathrm{m}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}（8 分）：
+
+有某种农药一桶，倒出 $8$ 升后，用水补满；然后又倒出 $4$ 升，再用水补满。于是测得桶中农药与水之比为 $18:7$，木桶的容积。
+
+\begin{gktip}
+\textbf{源注}：原卷题面末句印作「……之比为 $18:7$，木桶的容积。」，「木桶的容积」前无「求」字，系排印脱字；按语义应为求木桶的容积，转录保留原样。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设桶的容积为 $x$ 升。第一次倒出 $8$ 升并补水后，农药为 $x-8$、水为 $8$。第二次倒出的 $4$ 升中农药占 $\dfrac{4(x-8)}{x}$、水占 $\dfrac{32}{x}$，补水 $4$ 升后
+
+\nopagebreak[4]
+\[
+\text{\text{农药}}=(x-8)\left(1-\frac4x\right)=\frac{(x-8)(x-4)}{x},
+\qquad
+\text{\text{水}}=8-\frac{32}{x}+4=\frac{12x-32}{x}.
+\]
+
+\Needspace{5\baselineskip}
+农药与水之比为 $18:7$，即
+
+\nopagebreak[4]
+\[
+\frac{(x-8)(x-4)}{12x-32}=\frac{18}{7}.
+\]
+
+\Needspace{5\baselineskip}
+整理得
+
+\nopagebreak[4]
+\[
+7(x^2-12x+32)=18(12x-32),
+\qquad
+7x^2-300x+800=0,
+\]
+
+\nopagebreak[4]
+\[
+(7x-20)(x-40)=0,
+\qquad
+x_1=\frac{20}{7},\quad x_2=40.
+\]
+
+$x_1=\dfrac{20}{7}$ 小于倒出量 $8$ 升，不合题意，舍去；容积为 $40$ 升。
+
+\begin{gktip}
+\textbf{源注}：源解首行列方程时右侧印作 $\dfrac{7}{18}$，而下一行化简式印作 $\dfrac{18}{7}$，且源解据此整理得 $7x^2-300x+800=0$（与 $\dfrac{18}{7}$ 自洽），按题面「农药与水之比为 $18:7$」判定首行 $\dfrac{7}{18}$ 为误印，本文按 $\dfrac{18}{7}$ 计算。
+\end{gktip}
+
+\gkanswer{答案：$40$ 升。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}（9 分）：
+
+甲船在 $A$ 点发现乙船在北偏东 $60^\circ$ 的 $B$ 处，乙船以每小时 $a$ 浬的速度向北行驶，已知甲船速度是每小时 $\sqrt3\,a$ 浬，问甲船应依什么方向前进，才能最快地与乙船相会？
+
+\begin{gktip}
+原源 PDF 第 6 页附有航向角与追及示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t12_ships}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+乙船自 $B$ 向正北行驶，设 $t$ 小时后两船在 $C$ 相遇，则 $AC=\sqrt3\,at$、$BC=at$。在 $\triangle ABC$ 中，$A$ 在 $B$ 的南偏西 $60^\circ$ 方向上，故
+
+\nopagebreak[4]
+\[
+\angle ABC=180^\circ-60^\circ=120^\circ.
+\]
+
+\Needspace{5\baselineskip}
+由正弦定理，
+
+\nopagebreak[4]
+\[
+\sin A=\frac{BC\cdot\sin B}{AC}
+=\frac{at\sin120^\circ}{\sqrt3\,at}
+=\frac{\sqrt3/2}{\sqrt3}
+=\frac12.
+\]
+
+\Needspace{5\baselineskip}
+又 $A$ 是锐角（甲船速度大于乙船，必须在乙船前方合围），故 $A=30^\circ$。于是甲船航向与正北的夹角
+
+\nopagebreak[4]
+\[
+\angle NAC=60^\circ-30^\circ=30^\circ,
+\]
+
+即甲船沿北偏东 $30^\circ$ 方向前进。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t12_ships}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：北偏东 $30^\circ$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}（9 分）：
+
+双曲线中心在原点，焦点在坐标轴上，焦距为 $14$，顶点间距离为 $12$，求双曲线方程。
+
+\begin{gktip}
+原源 PDF 第 7 页附有焦点在 $x$ 轴上与焦点在 $y$ 轴上的双曲线示意图各一幅；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t13_hyperbola_x}\end{center}
+\nopagebreak[4]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t13_hyperbola_y}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由顶点间距离 $2a=12$ 得 $a=6$；由焦距 $2c=14$ 得 $c=7$，从而
+
+\nopagebreak[4]
+\[
+b^2=c^2-a^2=49-36=13.
+\]
+
+\Needspace{5\baselineskip}
+焦点在 $x$ 轴上时，
+
+\nopagebreak[4]
+\[
+\frac{x^2}{36}-\frac{y^2}{13}=1;
+\]
+
+\Needspace{5\baselineskip}
+焦点在 $y$ 轴上时，
+
+\nopagebreak[4]
+\[
+\frac{y^2}{36}-\frac{x^2}{13}=1.
+\]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t13_hyperbola_x}\end{center}
+\nopagebreak[4]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t13_hyperbola_y}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：$\dfrac{x^2}{36}-\dfrac{y^2}{13}=1$，或 $\dfrac{y^2}{36}-\dfrac{x^2}{13}=1$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}（9 分）：
+
+从等腰 $\triangle ABC$ 的顶点 $A$ 引直线交 $BC$ 于 $D$，交外接圆于 $E$，求证 $AB$ 是 $AD$ 和 $AE$ 的比例中项。
+
+\begin{gktip}
+原源 PDF 第 7 页附有等腰三角形外接圆与割线示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t14_circle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+连结 $BE$。等腰三角形中 $\angle ABC=\angle ACB$；同弧 $AB$ 上的圆周角相等，$\angle AEB=\angle ACB$，故 $\angle ABD=\angle AEB$。又 $\angle BAD$ 与 $\angle BAE$ 是公共角，因此
+
+\nopagebreak[4]
+\[
+\triangle ABD\sim\triangle AEB.
+\]
+
+\Needspace{5\baselineskip}
+由相似得
+
+\nopagebreak[4]
+\[
+\frac{AB}{AE}=\frac{AD}{AB},
+\]
+
+\Needspace{5\baselineskip}
+即
+
+\nopagebreak[4]
+\[
+AB^2=AD\cdot AE,
+\]
+
+$AB$ 是 $AD$ 和 $AE$ 的比例中项。
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t14_circle}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}（9 分）：
+
+如果一个直角三角形三边的长成等差数列，试证明三边的比是 $3:4:5$。
+
+\begin{gktip}
+原源 PDF 第 8 页附有直角三角形三边示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t15_triangle}\end{center}
+\nopagebreak[4]
+\begin{gktip}
+\textbf{参考题}（不记分、作完正题后，有时间者可作。）
+\end{gktip}
+
+\textbf{参考题 1．} 试求 $f(x)=x^4-42x^3+435x^2+113x-66$ 和 $g(x)=x^2-x-462$ 的公根。
+
+\textbf{参考题 2．} 求函数 $y=\left(2x+1\right)^{\frac12}\left(-\dfrac13x+1\right)^3$ 的导数。
+
+\textbf{参考题 3．} 有一窗户，顶部为一抛物线的拱形，窗宽 $120\ \mathrm{cm}$，边高 $150\ \mathrm{cm}$，顶点高 $180\ \mathrm{cm}$，求它的面积。
+
+\begin{gktip}
+原源 PDF 第 10 页附有直角坐标系与抛物线拱窗示意图；LaTeX 版按源图重绘。
+\end{gktip}
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_ref3_window}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设三边为 $a-d$、$a$、$a+d$（公差 $d>0$），斜边为最长边 $a+d$，由勾股定理
+
+\nopagebreak[4]
+\[
+(a+d)^2=a^2+(a-d)^2,
+\]
+
+\Needspace{5\baselineskip}
+展开得
+
+\nopagebreak[4]
+\[
+a^2+2ad+d^2=a^2+(a^2-2ad+d^2),
+\qquad
+a^2=4ad,
+\qquad
+d=\frac{a^2}{4a}=\frac{a}{4}.
+\]
+
+\Needspace{5\baselineskip}
+三边之比
+
+\nopagebreak[4]
+\[
+\left(a-\frac{a}{4}\right):a:\left(a+\frac{a}{4}\right)
+=\frac{3a}{4}:a:\frac{5a}{4}
+=3:4:5.
+\]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_t15_triangle}\end{center}
+\nopagebreak[4]
+\textbf{参考题 1}
+
+\Needspace{5\baselineskip}
+由 $g(x)=x^2-x-462=0$ 因式分解
+
+\nopagebreak[4]
+\[
+g(x)=(x-22)(x+21),
+\qquad
+x_1=22,\quad x_2=-21.
+\]
+
+\Needspace{5\baselineskip}
+公根必须是 $g(x)$ 的根，逐一代入 $f(x)$：
+
+\nopagebreak[4]
+\[
+f(22)=22^4-42\cdot22^3+435\cdot22^2+113\cdot22-66
+=234256-447216+210540+2486-66=0,
+\]
+
+\nopagebreak[4]
+\[
+f(-21)=21^4+42\cdot21^3+435\cdot21^2-113\cdot21-66=772839\ne0.
+\]
+
+故 $x=22$ 是 $f(x)$ 和 $g(x)$ 的公根。
+
+\Needspace{5\baselineskip}
+\textbf{参考题 2}
+
+\nopagebreak[4]
+\[
+y=\left(2x+1\right)^{\frac12}\left(1-\frac{x}{3}\right)^3.
+\]
+
+\Needspace{5\baselineskip}
+由乘积求导法则，
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+y'
+&=\frac12\cdot2\,(2x+1)^{-\frac12}\left(1-\frac{x}{3}\right)^3
++\left(2x+1\right)^{\frac12}\cdot3\left(1-\frac{x}{3}\right)^2\cdot\left(-\frac13\right)\\
+&=\left(1-\frac{x}{3}\right)^3(2x+1)^{-\frac12}
+-\left(2x+1\right)^{\frac12}\left(1-\frac{x}{3}\right)^2.
+\end{aligned}
+\]
+
+\textbf{参考题 3}
+
+\Needspace{5\baselineskip}
+取原点在抛物线顶点、$x$ 轴沿窗顶方向、$y$ 轴铅垂向下为负的坐标系，设抛物线 $x^2=-2py$。拱脚 $A(60,-30)$ 在抛物线上：
+
+\nopagebreak[4]
+\[
+60^2=-2p(-30),
+\qquad
+p=60,
+\]
+
+故抛物线方程为 $x^2=-120y$，即 $y=-\dfrac{x^2}{120}$。
+
+\Needspace{5\baselineskip}
+图中阴影部分（抛物线与 $x$ 轴之间、$x$ 从 $0$ 到 $60$）的面积为
+
+\nopagebreak[4]
+\[
+\int_0^{60}\frac{x^2}{120}\,dx
+=\frac{x^3}{360}\bigg|_0^{60}
+=\frac{60^3}{360}=600.
+\]
+
+\Needspace{5\baselineskip}
+整个窗户落在 $120\times180$ 的外接矩形内，矩形减去两侧阴影，即
+
+\nopagebreak[4]
+\[
+S=2\,(180\times60-600)=2\times10200=20400\ (\mathrm{cm^2})=2.04\ \mathrm{m^2}.
+\]
+\nopagebreak[4]
+\begin{center}\input{figures/f1977_hunan_zhuzhou_ref3_window}\end{center}
+\nopagebreak[4]
+\gkanswer{答案：见解析版}
+
+\end{answer}

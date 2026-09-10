@@ -1,0 +1,30 @@
+% 1977 年山东B卷第 10 题：船 A→B 向正北航行，灯塔 S 的方位角 α、β（按源卷第 5 页布局）
+% A、B 在同一南北线上，S 在东北方向；β 标在 B 处，α 标在 A 处；右侧画北南西东方向标
+\begin{tikzpicture}[scale=0.9,>=stealth]
+  % 航线（南北线，虚线）
+  \draw[dashed] (0,-0.5)--(0,4.9);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,3.2);
+  \coordinate (S) at (1.9,4.3);
+  \draw[thick] (A)--(S);
+  \draw[thick] (B)--(S);
+  \fill (S) circle (1.6pt);
+  \node[above right] at (S) {$S$};
+  \node[below left] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  % A 处角 α（正北线与 AS 之间）
+  \draw (0,0.75) arc[start angle=90,end angle=66,radius=0.75];
+  \node at (0.30,0.92) {$\alpha$};
+  % B 处角 β（正北线与 BS 之间）
+  \draw (0,4.15) arc[start angle=90,end angle=30,radius=0.95];
+  \node at (0.42,4.28) {$\beta$};
+  % 方向标：北南西东
+  \begin{scope}[shift={(2.9,1.5)}]
+    \draw[->] (0,-0.9)--(0,0.9) node[above] {$\text{北}$};
+    \node[below] at (0,-0.9) {$\text{南}$};
+    \draw (-0.9,0)--(0.9,0);
+    \draw[->] (0,0)--(0.9,0);
+    \node[left] at (-0.9,0) {$\text{西}$};
+    \node[right] at (0.9,0) {$\text{东}$};
+  \end{scope}
+\end{tikzpicture}
