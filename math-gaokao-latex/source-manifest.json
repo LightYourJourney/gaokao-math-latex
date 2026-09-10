@@ -433,6 +433,47 @@
         "gk-1958-regular-unknown"
       ],
       "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b48",
+      "issues": [],
+      "paper_ids": [
+        "gk-1978-regular-national",
+        "gk-1979-regular-science",
+        "gk-1979-regular-arts",
+        "gk-1980-regular-science"
+      ],
+      "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b49",
+      "issues": [],
+      "paper_ids": [
+        "gk-1980-regular-arts",
+        "gk-1981-regular-science",
+        "gk-1981-regular-arts",
+        "gk-1982-regular-science"
+      ],
+      "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b50",
+      "issues": [],
+      "paper_ids": [
+        "gk-1982-regular-arts",
+        "gk-1983-regular-science",
+        "gk-1983-regular-arts",
+        "gk-1984-regular-science"
+      ],
+      "status": "compiled_pending_review"
+    },
+    {
+      "batch_id": "phase2-b51",
+      "issues": [],
+      "paper_ids": [
+        "gk-1984-regular-arts"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -442,7 +483,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "29dd6e05-b749-4846-984a-7dc212d2f069",
+  "last_transaction_id": "f65c3f81-1767-4067-b8d5-978a4659411e",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -6686,9 +6727,787 @@
       "title": "1958 年·不明卷（与云南卷部分同源）",
       "track": "none",
       "year": 1958
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1978_全国卷/figures/f1978_1978_national_t3_semicircle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1978_gaokao_national",
+        "id": "gk-1978-regular-national",
+        "note": "1978 年全国卷（文理合卷）；原卷文件名标注 5、6 两题选做一题、文科不做第 7 题，选做/免做规定见卷内来源说明；固定源 1978(5,6选做一题,文科不做第7题).pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "题目": [
+            1,
+            7
+          ]
+        },
+        "track": "文理合卷（5、6 题选做一题，文科不做第 7 题）",
+        "variant": "全国"
+      },
+      "issue_ids": [
+        "ISSUE-0617",
+        "ISSUE-0618",
+        "ISSUE-0619",
+        "ISSUE-0620",
+        "ISSUE-0621",
+        "ISSUE-0622",
+        "ISSUE-0623"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1978-regular-national",
+      "production_state": "blocked",
+      "project_dir": "1978_全国卷",
+      "question_count": 7,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1978/1978_数学真题_全国_答案要点.md",
+        "combined_rendered": "1978/1978_数学真题_全国_含解析.md",
+        "questions": "1978/1978_数学真题_全国_试题.md",
+        "solution_body": "1978/1978_数学真题_全国_解析正文.md"
+      },
+      "source_ids": [
+        "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb"
+      ],
+      "title": "1978 年·全国卷",
+      "track": "none",
+      "year": 1978
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1979_全国卷理/figures/f1979_1979_sci_t8_cyclic_rect.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1979_gaokao_science",
+        "id": "gk-1979-regular-science",
+        "note": "1979 年全国卷理科；固定源 1979理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0624",
+        "ISSUE-0625",
+        "ISSUE-0626",
+        "ISSUE-0627",
+        "ISSUE-0628",
+        "ISSUE-0629",
+        "ISSUE-0630",
+        "ISSUE-0631",
+        "ISSUE-0632",
+        "ISSUE-0633"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1979-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1979_全国卷理",
+      "question_count": 10,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1979/1979_数学真题_理_答案要点.md",
+        "combined_rendered": "1979/1979_数学真题_理_含解析.md",
+        "questions": "1979/1979_数学真题_理_试题.md",
+        "solution_body": "1979/1979_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7"
+      ],
+      "title": "1979 年·全国卷（理科）",
+      "track": "science",
+      "year": 1979
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1979_全国卷文/figures/f1979_1979_arts_t7_rect_tangent.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1979_gaokao_arts",
+        "id": "gk-1979-regular-arts",
+        "note": "1979 年全国卷文科；固定源 1979文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0634",
+        "ISSUE-0635",
+        "ISSUE-0636",
+        "ISSUE-0637",
+        "ISSUE-0638",
+        "ISSUE-0639",
+        "ISSUE-0640",
+        "ISSUE-0641"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1979-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1979_全国卷文",
+      "question_count": 8,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1979/1979_数学真题_文_答案要点.md",
+        "combined_rendered": "1979/1979_数学真题_文_含解析.md",
+        "questions": "1979/1979_数学真题_文_试题.md",
+        "solution_body": "1979/1979_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba"
+      ],
+      "title": "1979 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1979
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1980_全国卷理/figures/f1980_1980_sci_t5_planes.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1980_gaokao_science",
+        "id": "gk-1980-regular-science",
+        "note": "1980 年全国卷理科，卷末附附加题 1 道；固定源 1980理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            9
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0642",
+        "ISSUE-0643",
+        "ISSUE-0644",
+        "ISSUE-0645",
+        "ISSUE-0646",
+        "ISSUE-0647",
+        "ISSUE-0648",
+        "ISSUE-0649",
+        "ISSUE-0650"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1980-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1980_全国卷理",
+      "question_count": 9,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1980/1980_数学真题_理_答案要点.md",
+        "combined_rendered": "1980/1980_数学真题_理_含解析.md",
+        "questions": "1980/1980_数学真题_理_试题.md",
+        "solution_body": "1980/1980_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902"
+      ],
+      "title": "1980 年·全国卷（理科）",
+      "track": "science",
+      "year": 1980
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1980_全国卷文/figures/f1980_1980_arts_t7_cuboid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1980_gaokao_arts",
+        "id": "gk-1980-regular-arts",
+        "note": "1980 年全国卷文科；固定源 1980文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0651",
+        "ISSUE-0652",
+        "ISSUE-0653",
+        "ISSUE-0654",
+        "ISSUE-0655",
+        "ISSUE-0656",
+        "ISSUE-0657",
+        "ISSUE-0658"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1980-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1980_全国卷文",
+      "question_count": 8,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1980/1980_数学真题_文_答案要点.md",
+        "combined_rendered": "1980/1980_数学真题_文_含解析.md",
+        "questions": "1980/1980_数学真题_文_试题.md",
+        "solution_body": "1980/1980_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b"
+      ],
+      "title": "1980 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1980
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1981_全国卷理/figures/f1981_1981_sci_t10_semicircle_square.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1981_gaokao_science",
+        "id": "gk-1981-regular-science",
+        "note": "1981 年全国卷理科；固定源 1981理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            9
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0659",
+        "ISSUE-0660",
+        "ISSUE-0661",
+        "ISSUE-0662",
+        "ISSUE-0663",
+        "ISSUE-0664",
+        "ISSUE-0665",
+        "ISSUE-0666",
+        "ISSUE-0667"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1981-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1981_全国卷理",
+      "question_count": 9,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1981/1981_数学真题_理_答案要点.md",
+        "combined_rendered": "1981/1981_数学真题_理_含解析.md",
+        "questions": "1981/1981_数学真题_理_试题.md",
+        "solution_body": "1981/1981_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392"
+      ],
+      "title": "1981 年·全国卷（理科）",
+      "track": "science",
+      "year": 1981
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1981_gaokao_arts",
+        "id": "gk-1981-regular-arts",
+        "note": "1981 年全国卷文科；固定源 1981文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            9
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0668",
+        "ISSUE-0669",
+        "ISSUE-0670",
+        "ISSUE-0671",
+        "ISSUE-0672",
+        "ISSUE-0673",
+        "ISSUE-0674",
+        "ISSUE-0675",
+        "ISSUE-0676"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1981-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1981_全国卷文",
+      "question_count": 9,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1981/1981_数学真题_文_答案要点.md",
+        "combined_rendered": "1981/1981_数学真题_文_含解析.md",
+        "questions": "1981/1981_数学真题_文_试题.md",
+        "solution_body": "1981/1981_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b"
+      ],
+      "title": "1981 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1981
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1982_全国卷理/figures/f1982_1982_sci_t4_cone_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1982_全国卷理/figures/f1982_1982_sci_t6_polar_angle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1982_全国卷理/figures/f1982_1982_sci_t7_quad_midpoints.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1982_gaokao_science",
+        "id": "gk-1982-regular-science",
+        "note": "1982 年全国卷理科，卷末附附加题 1 道（两小问）；固定源 1982理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0677",
+        "ISSUE-0678",
+        "ISSUE-0679",
+        "ISSUE-0680",
+        "ISSUE-0681",
+        "ISSUE-0682",
+        "ISSUE-0683",
+        "ISSUE-0684"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1982-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1982_全国卷理",
+      "question_count": 8,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1982/1982_数学真题_理_答案要点.md",
+        "combined_rendered": "1982/1982_数学真题_理_含解析.md",
+        "questions": "1982/1982_数学真题_理_试题.md",
+        "solution_body": "1982/1982_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca"
+      ],
+      "title": "1982 年·全国卷（理科）",
+      "track": "science",
+      "year": 1982
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1982_全国卷文/figures/f1982_1982_arts_t5_fence.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1982_全国卷文/figures/f1982_1982_arts_t9_spiral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1982_gaokao_arts",
+        "id": "gk-1982-regular-arts",
+        "note": "1982 年全国卷文科；固定源 1982文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            9
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0685",
+        "ISSUE-0686",
+        "ISSUE-0687",
+        "ISSUE-0688",
+        "ISSUE-0689",
+        "ISSUE-0690",
+        "ISSUE-0691",
+        "ISSUE-0692",
+        "ISSUE-0693"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1982-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1982_全国卷文",
+      "question_count": 9,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1982/1982_数学真题_文_答案要点.md",
+        "combined_rendered": "1982/1982_数学真题_文_含解析.md",
+        "questions": "1982/1982_数学真题_文_试题.md",
+        "solution_body": "1982/1982_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60"
+      ],
+      "title": "1982 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1982
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷理/figures/f1983_1983_sci_t10_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷理/figures/f1983_1983_sci_t11_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1983_gaokao_science",
+        "id": "gk-1983-regular-science",
+        "note": "1983 年全国卷理科；固定源 1983理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            13
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0694",
+        "ISSUE-0695",
+        "ISSUE-0696",
+        "ISSUE-0697",
+        "ISSUE-0698",
+        "ISSUE-0699",
+        "ISSUE-0700",
+        "ISSUE-0701",
+        "ISSUE-0702",
+        "ISSUE-0703",
+        "ISSUE-0704",
+        "ISSUE-0705",
+        "ISSUE-0706"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1983-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1983_全国卷理",
+      "question_count": 13,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1983/1983_数学真题_理_答案要点.md",
+        "combined_rendered": "1983/1983_数学真题_理_含解析.md",
+        "questions": "1983/1983_数学真题_理_试题.md",
+        "solution_body": "1983/1983_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900"
+      ],
+      "title": "1983 年·全国卷（理科）",
+      "track": "science",
+      "year": 1983
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷文/figures/f1983_1983_arts_t10_flagpole.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷文/figures/f1983_1983_arts_t11_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷文/figures/f1983_1983_arts_t13_locus.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1983_全国卷文/figures/f1983_1983_arts_t9_semicircle_rect.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1983_gaokao_arts",
+        "id": "gk-1983-regular-arts",
+        "note": "1983 年全国卷文科；固定源 1983文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            13
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0707",
+        "ISSUE-0708",
+        "ISSUE-0709",
+        "ISSUE-0710",
+        "ISSUE-0711",
+        "ISSUE-0712",
+        "ISSUE-0713",
+        "ISSUE-0714",
+        "ISSUE-0715",
+        "ISSUE-0716",
+        "ISSUE-0717",
+        "ISSUE-0718",
+        "ISSUE-0719"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1983-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1983_全国卷文",
+      "question_count": 13,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1983/1983_数学真题_文_答案要点.md",
+        "combined_rendered": "1983/1983_数学真题_文_含解析.md",
+        "questions": "1983/1983_数学真题_文_试题.md",
+        "solution_body": "1983/1983_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b"
+      ],
+      "title": "1983 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1983
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1984_全国卷理/figures/f1984_1984_sci_t20_circle_tangent.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1984_gaokao_science",
+        "id": "gk-1984-regular-science",
+        "note": "1984 年全国卷理科；固定源 1984理.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            20
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [
+        "ISSUE-0720",
+        "ISSUE-0721",
+        "ISSUE-0722",
+        "ISSUE-0723",
+        "ISSUE-0724",
+        "ISSUE-0725",
+        "ISSUE-0726",
+        "ISSUE-0727",
+        "ISSUE-0728",
+        "ISSUE-0729",
+        "ISSUE-0730",
+        "ISSUE-0731",
+        "ISSUE-0732",
+        "ISSUE-0733",
+        "ISSUE-0734",
+        "ISSUE-0735",
+        "ISSUE-0736",
+        "ISSUE-0737",
+        "ISSUE-0738",
+        "ISSUE-0739",
+        "ISSUE-0757",
+        "ISSUE-0758",
+        "ISSUE-0759",
+        "ISSUE-0760"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1984-regular-science",
+      "production_state": "blocked",
+      "project_dir": "1984_全国卷理",
+      "question_count": 20,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1984/1984_数学真题_理_答案要点.md",
+        "combined_rendered": "1984/1984_数学真题_理_含解析.md",
+        "questions": "1984/1984_数学真题_理_试题.md",
+        "solution_body": "1984/1984_数学真题_理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e"
+      ],
+      "title": "1984 年·全国卷（理科）",
+      "track": "science",
+      "year": 1984
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "1984_全国卷文/figures/f1984_1984_arts_t15_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1984_gaokao_arts",
+        "id": "gk-1984-regular-arts",
+        "note": "1984 年全国卷文科；固定源 1984文.pdf。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            17
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [
+        "ISSUE-0740",
+        "ISSUE-0741",
+        "ISSUE-0742",
+        "ISSUE-0743",
+        "ISSUE-0744",
+        "ISSUE-0745",
+        "ISSUE-0746",
+        "ISSUE-0747",
+        "ISSUE-0748",
+        "ISSUE-0749",
+        "ISSUE-0750",
+        "ISSUE-0751",
+        "ISSUE-0752",
+        "ISSUE-0753",
+        "ISSUE-0754",
+        "ISSUE-0755",
+        "ISSUE-0756"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1984-regular-arts",
+      "production_state": "blocked",
+      "project_dir": "1984_全国卷文",
+      "question_count": 17,
+      "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+      "source_files": {
+        "answer_key": "1984/1984_数学真题_文_答案要点.md",
+        "combined_rendered": "1984/1984_数学真题_文_含解析.md",
+        "questions": "1984/1984_数学真题_文_试题.md",
+        "solution_body": "1984/1984_数学真题_文_解析正文.md"
+      },
+      "source_ids": [
+        "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82"
+      ],
+      "title": "1984 年·全国卷（文科）",
+      "track": "arts",
+      "year": 1984
     }
   ],
-  "revision": 1619,
+  "revision": 1642,
   "schema_version": 1,
   "sources": [
     {
@@ -9633,8 +10452,8 @@
       "exam_type": "regular",
       "git_blob_oid": "16aed4fad14eaaa9b36b7a6ee778af1c6a63b5ff",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1978-regular-national",
+      "paper_relation": "canonical",
       "raw_paper_name": "1978(5,6选做一题,文科不做第7题).pdf",
       "regions": [],
       "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
@@ -9657,8 +10476,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a6d7f6a58db792cc96e4cf239918def00ae8fd32",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1979-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1979文.pdf",
       "regions": [],
       "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
@@ -9681,8 +10500,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8f55a408080945b8eb3aff4fb4042a12e2a34d78",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1979-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1979理.pdf",
       "regions": [],
       "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
@@ -9705,8 +10524,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5054f667e00db8a9b7b080299b2ceb5270122613",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1980-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1980文.pdf",
       "regions": [],
       "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
@@ -9729,8 +10548,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ddac501be62950ec7e5564ed4c46cb0e5103654d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1980-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1980理.pdf",
       "regions": [],
       "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
@@ -9753,8 +10572,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f7f6af84f27203a66046e814d4a44635c30c8ce0",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1981-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1981文.pdf",
       "regions": [],
       "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
@@ -9777,8 +10596,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ed06ab5d21f73dc0c27950a4524d74c5538b5d77",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1981-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1981理.pdf",
       "regions": [],
       "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
@@ -9801,8 +10620,8 @@
       "exam_type": "regular",
       "git_blob_oid": "730e432e6b7005431492a4aff206a69cd2bc4f22",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1982-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1982文.pdf",
       "regions": [],
       "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
@@ -9825,8 +10644,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6edd48866ed5c1e6790d13e6c33b0ce09e0a3015",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1982-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1982理.pdf",
       "regions": [],
       "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
@@ -9849,8 +10668,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7ec4ab37d0b639d14cefc80da7eefdf99421a106",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1983-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1983文.pdf",
       "regions": [],
       "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
@@ -9873,8 +10692,8 @@
       "exam_type": "regular",
       "git_blob_oid": "13f0a4bedfea8807a6ea366dd0c71da5888d6253",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1983-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1983理.pdf",
       "regions": [],
       "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
@@ -9897,8 +10716,8 @@
       "exam_type": "regular",
       "git_blob_oid": "41f71aa107b67639712bb21b330b3972779ff04d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1984-regular-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1984文.pdf",
       "regions": [],
       "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
@@ -9921,8 +10740,8 @@
       "exam_type": "regular",
       "git_blob_oid": "12ad45cf0e2a96881a1363ef81ee361f7605af3f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1984-regular-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1984理.pdf",
       "regions": [],
       "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",

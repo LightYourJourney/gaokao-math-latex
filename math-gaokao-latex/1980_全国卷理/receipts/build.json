@@ -1,0 +1,377 @@
+{
+  "attempt_id": "2839e578-fbea-4522-9a5b-17e7cbc10088",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/answers.tex",
+        "sha256": "944e40b4871a7b38b1d8765f7ebaa87b93ed0c9f096dae9419e5d1389bdd45d9"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/answers_short.tex",
+        "sha256": "c5d82f54c34bc6b4d1aec637bc27abed37afe5d0807f46d025d3705017699ebb"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/figures/f1980_1980_sci_t5_planes.tex",
+        "sha256": "0843507c2acbd490d295b5c9f139c4d740bc508a8adbbd670c9db83f88773036"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/questions.tex",
+        "sha256": "cbd54fc22ed15ea6fbd380cca23fbe7a29fcba4fd4ade07f29875041dcca26ad"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/印刷版.tex",
+        "sha256": "32bd6e333b432f53a05864ce5eeba3278387cb1f88593bd0cdaee0a53172f14c"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/简答版.tex",
+        "sha256": "34a907fc62922a23afbb8f3d4a04ec47fb296705d638a7b3662ddc3cac45dc6f"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/解析版.tex",
+        "sha256": "0527eb37721005ce022ed1c63c3eb5f1892e0550d1e68e87ec24c10eeafee8e3"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/试题版.tex",
+        "sha256": "884b7a25cac9092a51628e0bad047d39170ddf685da540c5ae3659633af14160"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "445ecc8981c4005614e3d1ce5bd79f003e30c712164f15db35422a6619602625"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1980_全国卷理/build/试题版.pdf",
+        "sha256": "3190f8621399ccc85acd85bd6ea7ccbb47340c632f4980baa7c34649367151e9",
+        "size_bytes": 102437
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1980_全国卷理/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "421",
+            "text": "Overfull \\hbox (174.98674pt too wide) detected at line 421",
+            "width_pt": "174.98674"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:2' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:3' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:4' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:5' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:6' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:7' on page 10 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:8' on page 12 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:9' on page 13 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 15,
+        "path": "math-gaokao-latex/1980_全国卷理/build/解析版.pdf",
+        "sha256": "6a91fb9561c337a68bf43442d1cb52d675aa62e5f17f393636cdf691f02375e3",
+        "size_bytes": 191609
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1980_全国卷理/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1980_全国卷理/build/简答版.pdf",
+        "sha256": "066e2e8f46d969284e710fd2938087100754da33a1bf441e88e798c6ad754cf1",
+        "size_bytes": 113684
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1980_全国卷理/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "69--70",
+            "text": "Overfull \\hbox (23.20967pt too wide) in paragraph at lines 69--70",
+            "width_pt": "23.20967"
+          },
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "421",
+            "text": "Overfull \\hbox (70.55678pt too wide) detected at line 421",
+            "width_pt": "70.55678"
+          },
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "465--466",
+            "text": "Overfull \\hbox (23.20967pt too wide) in paragraph at lines 465--466",
+            "width_pt": "23.20967"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:2' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:3' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:4' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:5' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:6' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:7' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:8' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1980-regular-science:9' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 10,
+        "path": "math-gaokao-latex/1980_全国卷理/build/印刷版.pdf",
+        "sha256": "587cd427b56a380c86650bfc9efeacb61774cd2ed64511c81d8d56d3fd12efaa",
+        "size_bytes": 191055
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1980_全国卷理/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T20:49:08+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1980/1980_数学真题_理_答案要点.md",
+        "sha256": "c38803139166d438a09745b8fa03297ed9d17aa0f443bdde7eeb66335c181264"
+      },
+      {
+        "path": "1980/1980_数学真题_理_解析正文.md",
+        "sha256": "02552a8ece351f7177583db5e759ba5d0ef15337785a374092a40d1e2566999c"
+      },
+      {
+        "path": "1980/1980_数学真题_理_试题.md",
+        "sha256": "3696f6144f9629e4f1ae907921fdb920a677a400e47f743b9377e0605480e8e0"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/figures/f1980_1980_sci_t5_planes.tex",
+        "sha256": "0843507c2acbd490d295b5c9f139c4d740bc508a8adbbd670c9db83f88773036"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/印刷版.tex",
+        "sha256": "32bd6e333b432f53a05864ce5eeba3278387cb1f88593bd0cdaee0a53172f14c"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/简答版.tex",
+        "sha256": "34a907fc62922a23afbb8f3d4a04ec47fb296705d638a7b3662ddc3cac45dc6f"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/解析版.tex",
+        "sha256": "0527eb37721005ce022ed1c63c3eb5f1892e0550d1e68e87ec24c10eeafee8e3"
+      },
+      {
+        "path": "math-gaokao-latex/1980_全国卷理/试题版.tex",
+        "sha256": "884b7a25cac9092a51628e0bad047d39170ddf685da540c5ae3659633af14160"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "3d64f36b5d07ce4cd9e35e314d6419f1cb261ae4e4f1b1a5876fdc5d50fc33ad"
+  },
+  "input_projection": "a1da29b7f61f92a72088733b928f4cec10ad5185034ba88f7566a6caeea6955a",
+  "manifest_revision": 1632,
+  "paper_id": "gk-1980-regular-science",
+  "previous_attempt_id": null,
+  "project_dir": "1980_全国卷理",
+  "schema_version": 1,
+  "started_at": "2026-09-10T20:48:29+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

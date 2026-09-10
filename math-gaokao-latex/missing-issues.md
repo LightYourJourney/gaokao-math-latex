@@ -9736,3 +9736,2261 @@
   "type": "identity-ambiguous"
 }
 ```
+
+## ISSUE-0617
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c64e0be3ea342c320a94126feaa973004d9a9b223a83afbf981a9bb40d35a3ce",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0618
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "65b4e1d25c44cec7f8c868f8ffff42654ad8fb5b17f4a404702c0c8ef44dedcd",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0619
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "43ff4c9722b3e2f4bd82746566abb408e054b7e5ee4ce7188ace1a95d7c64c97",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0620
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0f45beb0210f44b8de1831723da2106bb9bee66a9f4fe195a71030d7157a47ed",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0621
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fba2207f55cb29e3c26cd58e788f55529f25d32085061394af120d9f5642ce4e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0622
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "533e3245d8a6b36ed8de9f1b04e5b504f3b7e377ee61025aa37940e8dea0c55e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0623
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "92ef3567f04325fe2b6905eb6a32af4f9c33086f12270a54224dd6c560c75ba9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1978-regular-national",
+  "question_id": "gk-1978-regular-national-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-d57213ed7fe1f3230f088f4e49a791a732ceec813314d9fba5ed6e8aa63e4fcb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0624
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9eb57097c7bf617d1bc6b73737575b0fb32c3e97817d51f4417cdb32819c665a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0625
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bfc7220dbaad7b7d73ce7562a97e4472e0e68b58b3e626c5bf220c82a57ca93e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0626
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "6363fa13dde19e889d4e308de7996e96241e12f7dc46146cf9f8719b9cdfbc3e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0627
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "446d130a36d8d35a3b8a8f2f25d75aa98f024d534164d51f419455148ee9b635",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0628
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "512b7e0122eed7df6f6e29a90f37bdfc55f16afad7515a0484fac8ca87f5871c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0629
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "6cf7b4cb1b8f8fac9e7456688af9a91dafb2c53c28aa143393e2e0029cd451e6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0630
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "95ecaf019b3fc0d73db724136f71d5f37b0936b3644de53edc82205dd027ba6e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0631
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b5fa34017b3485875a1ff5171ff4eb3577666726fcd1988ca66764afaea1bb49",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0632
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0fa3aae530d98d59ab32ad012f97308781709af4a0cf6e12559d50b90003d5c3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0633
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b59066a737254338c90c8e56525f932a3cf691cfa92b2860445a738e62a680f8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-science",
+  "question_id": "gk-1979-regular-science-q10",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75c48ad9a18a9198ece10dee7050086a9a5896d5bd0cac030efa73f90921a7a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0634
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cec5c024dd1f62f882d67929be095ed8ca1a69a50e15649c22b33d9f49a0ad84",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0635
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "89ef78f4a4bfea50b711354f767628515381845d15f2a1e0db748a9d34eb4a6c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0636
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a3e4f5eb2dcf744233a312e501670bed590cbf908f2e836d1af6172745996b27",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0637
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bcedc8461cfea335e41a76eccf50df6cfd78a9808d3de45f99d532584fa9ff64",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0638
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a6bb03713dffc0aee7827e581faebe704d765bfe32f4ff6b34b9352f5a3bdab4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0639
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "740299813f0ddfd0e566af526ec16c7c1ca003dcb2bb59a7994040af599c8fd6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0640
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "53c870242901a94a9cdd9b64d1063f76722df2cd391e494087a21c6872078328",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0641
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a4a0d5188b2a6dea14b07c794f4e1704110eb1e8338b36fb4056a737f54322c9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1979-regular-arts",
+  "question_id": "gk-1979-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-957ba5d59c707802462cc45f4e292549e0df575a79070f259af9546d0f9d25ba",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0642
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "951dde720e98d48a34219f496dd63392e92f4b510d668ded15046c884e7fcaca",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0643
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a4f55ff8b8876750829868a9ce522ead9fe41a65d540c894aa9dbea8cff45deb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0644
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ae84aca6f287ded1e92fd15ec4fc9cafbeebce366cca9947d450917890e903c6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0645
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f923e6b9bad0b5ed856c1ca23f955d17217d126fc02e56e457559dd765e9c5e7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0646
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b5ae495c884ab83b7081264b6521cda17170840ad5f8be58dece8a3bf00a9978",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0647
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "91188ecdeb29f412fa2b6155aa8d050e5ab710c5c488c36122a7f049f71e2482",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0648
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a3d3aa68019326945b4e15bf270a55fd19011962d8514611422dda692d904c03",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0649
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "867e5fb2769b2bdaa884f291fe95cf8b52257d17c3e756e6e093c35786c4eedc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0650
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7f9a02c3752992b95c742f1b35906ef6804a30fc69a84980a3a7f1e4638f59de",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-science",
+  "question_id": "gk-1980-regular-science-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-17ee115a6c2cbd90785528de060ec9ff1955035fa68282c4c2f4103e79a3b902",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0651
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "8ad967b99d1e60a5610938ac3b1689ac5b140496ac283423fbcd1df2dd8c2439",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0652
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "523172f42931886f0952ed6212d320d80ce3710b179c416922ff032cfba7a636",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0653
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "19705d1f0cf711fa5ffdd5ef7797d7651d05cbbc1b78d9b0231606d62779c8f0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0654
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ae6a00a59b6a30f690ed14b41fd57a650e3e00b87667d86b5bb8b94c0be212f3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0655
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fb66e4b7f396e41e81cfa80a787e5aa3634c51bfc5514d2389e98eab2be1e88a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0656
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "52a78edaab9a9c1097171076d6f2f79f404f48ab6403b49cb580015e816a65c8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0657
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "98f978358e1e1571861d3ccf9b3e7e02d6d75d846c2d4872ba4cf2598dd6c7a3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0658
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1bfece6d8fc048077a86d0fb2bc70163a700d64b6d86e5d8b209193cf6636a2c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1980-regular-arts",
+  "question_id": "gk-1980-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-79ee79ac09788d04e2fd4fe86728d3da0119f15cd57b7dd347042b61f3a8165b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0659
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "911f10e26e8f6f73cf179509cd35142fddaf68f5121b6b6b68777224ef4b2c0c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0660
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "20750bbaf04dab4f738724327adb1a33a46e611d3edd8627abe97fdef9f33533",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0661
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3b0e959eb14743e312d3080ef5f789782102eb7dfcfbb016e82535c115204b50",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0662
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0f5dc330c3ef586dd2f1a8e101ddc5fd00c3accbbb4aeed52eb0da11ba55d4c7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0663
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7dbefcad06aeb637d79b9613cf41ded80a84b60eb6181d19e3a81b1e9daa7c13",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0664
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "279f5f8e34bdf93433fd743eec965157531c8e13f5f1a8b2eda3a4d52cb02d12",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0665
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fa13ccc82d117a2db3db6a170b1ea133d3292a4018632c097b38738c12cf195d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0666
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "23f95f159dff8ca698c8ab7fe53ed829c453ae813708d561b3fc0ecbb8265710",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0667
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1cddc02af6e40fbe0c8853b6f8ad386a7119dad00fd7477f7f2c1dd892bae584",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-science",
+  "question_id": "gk-1981-regular-science-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-3508b5246c3c9910d0786f42f4bb64b6c9165c144a642dd3e0e6726f375ec392",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0668
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0b7e5a287a3b3439575827f7d6db0f7641b73d7ad5e73d12ef09703a53f3a77a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0669
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4fc1b306d8ba7de6f63dfd3ac353058054933464c9c16ead452b7fc7c864a9c4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0670
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e7ed8148c5d9a854f0167a1159ace25bd58379ace4d025f35525564894eb12e1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0671
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "345dbc19c8e00fb077ce38899aaff9e7ca9a5c8c5fdbb5bb60d4a53b6534cb13",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0672
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1f0dd1a2e77a3a449bbad9aa79c750f6fe753480061672fef9f9de69c090a94b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0673
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "6b5dfb847dfbe8ed7374befea98d4818cefc10792fbc77e7801e5d4cebf0b2e3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0674
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0f8ffe0424088494aa1b9caed75895add659dac61ee3d79ad7d412ab22b2ebab",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0675
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0cfddfd338cd4a6cd9cbee9d0fa98472ab0c00ee252096fb6db1afa8380cc290",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0676
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "921669d93757110bc74eda778ffea99dec88688600863d80db4b05caedacde6e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1981-regular-arts",
+  "question_id": "gk-1981-regular-arts-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9d1618487cfaab255fb5f0103aced007158f2caf5ff2fde404916a814d781d3b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0677
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e3ab00a14997477d27d64d7856ec6780d1532f37a26e987aa831b12f2ba8d789",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0678
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4d688a979b35cb019681f7bdc26bc474377e4e38bd8bc8616e0b5601ba2c2b58",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0679
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "73c507b2cae78e8e4b6dad6323a3948f89dff5e08d2981ec0d3b67c777771f46",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0680
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f0a6b76576c1df7cfe233dae0ab7bfceec2ba49b7cc32eb96657fdbc402c1a62",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0681
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fef9cc611b4204d73ac0b64dc9fdfddfbc603d6b6c174261dc63f8899195c1c0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0682
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7f07420e9efae905a58ee04f3872124a1fbe8b1aae483b90380f66b0ea452328",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0683
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "ddc7a04ef0ee6aa4e9e68ce422e3919f81d9180b84491f9c0858cfd09c7c63b6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0684
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3b407469ffa12579b6ae2e0f4fb23869a9a9d45ad9ff075a659cbf3ca3824983",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-science",
+  "question_id": "gk-1982-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6072baf1788c1fec5fee024289d04a4e7690a42211edfef62cad0a1b3e012dca",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0685
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bec5c5db7b4ed3279d5e594aee05199bb2d97390d7f58fa5d8a3d5543f903712",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0686
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bebb002293f18ca0ac68ca16b162b0f0a6a5edd735b04ed9fc3bc3f2845d1c29",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0687
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "59a53237d6505b48496fabc37395f313ce8caac328dcda306d7a60b2ea801946",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0688
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "65dc959a6a2017fb91dc01d1043a91464e54c2adf8ca45f343a26ff7ff24eff4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0689
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2d8fbff70ae5d1baeea88f0de9f4bacce0d30a6b3775e86838f3c5d018a43efd",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0690
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b16592a15c322f2f5c8aa40a091eac51e032d431bf4fed0f5ad266ebf7bde608",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0691
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "261c2bcb8edb29d7130354376bc92104d380249ebfb42ce167ce193d19b1a6b3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0692
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "95862c93df6f8a6e19162fa303600c83911fc27c6b86bb7e3c9c63c34e797cf9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0693
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "56a975fec6aa450895145d77be938a1442ea23ce1f9713137485e09b7e856e27",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1982-regular-arts",
+  "question_id": "gk-1982-regular-arts-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-bd78960a20b182413246af6c4d3785f72f5d328c664c7170ad6f176225889f60",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0694
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c4cb6481836fc1c7935c8dd6e16205183aa48f29df10cd826def13056fe1388f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0695
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "db8017ede8016264b7cd79590adfdddac7aef58f42129b232bd53bfb5f2e6fbd",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0696
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "febfd7799f4e66766fb93b93efca92580206a30f46986869adbe1bff638562a0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0697
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0bbb2b46c9d452df62af9cc85d90c64c8559087cc234bc36bd572c500331ff53",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0698
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7be09d71063ea0e76ad23ac705a9842a79cd893bf1f5854361b1faf316b24aab",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0699
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1ae9eb77a7287315bcf9c6bbef482f2ec952b7bd42a12331e8dcdb01a5cfbc35",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0700
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "424acdc7269c8ab5d9d1f6e35e912529d82cb903f4545d445c513989a6a182d4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0701
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3944acb1d4fc851646eee483e6d648a22fdcb47bf6612c5a6713caf99acb40f4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0702
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fae01a6a96a1601dfd61931c4537bfce8d3cd329eec7548e213351d5376788fa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0703
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1903e44c32bf63479a2ef3182e3f1d3fa4c578b919151ec5ba3e98c92b5bac51",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q10",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0704
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0641a635246bd5d6bd2ee92f2799fe9a9d5d8a921d290626ddf94227f9fe1006",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q11",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0705
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9383e5612a42c92c446a7c62717d84d1094a1e400432efd3b536c32053527c5a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q12",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0706
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a33498d02ecb0c2b6cb9cfa9974d0cf01877f08552e50d6a263938c308256ea6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-science",
+  "question_id": "gk-1983-regular-science-q13",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-c15d4741d61c527497f974ce4f31a92d47b0c86a3095eca91b9bf40067d1c900",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0707
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cb66b4ff276fe6b52722360fd1df3ae4f52caa832fc17e718a64f44aa7b7fc72",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0708
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9a6f1e560ce3581cdc1d915568a9044bfdc8656591399b80a53b52349cbaddaa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0709
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "43d727948b033b3fbfce3077cdc5f17b181169e1c24452496c7fab9238fe98d9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0710
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9980d75f80b0c5b37fab292da030f76f82748e0f0a355feb489d4efc8e8302d6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0711
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "868dffc2428a85be4d21272c61c44869227ab6b45e6e91fe78e3af7a8de96df1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0712
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "70aa15a3a1e197cb27bfc81e05f77780b8404fe47689d623f68de45d6ff899ef",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0713
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fd06017e63958d5f4f4a0b29ca28b295f440fc678e68af38326816a8dc86c2cc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0714
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "66ab042f11d04c58e82dcfb8e9ece413b78f6cadf28efb4d78ad58b725e6f052",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0715
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "136e6560c9c599f8157fe6c6eade573eabafd304fc4e8ba44b30df90cc36e421",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0716
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "fdf944ef798b0f0890262c5192981cc6dd1ab38f8251ad181a5f35c1b7f710be",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q10",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0717
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cad1741156e07075d146b2d60d7acad45dc542d0aa904ba28abdab3840b6a979",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q11",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0718
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a8a488f9dc622d57160cee3b0f0d6cc01d0eeb58085e0926cc7074680c03342d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q12",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0719
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e3820a584ba21f430e0a2665b6450890ac62bdc9732975eb3fa55b4ec1ae99f3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1983-regular-arts",
+  "question_id": "gk-1983-regular-arts-q13",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-9ecc03064ba3a1dd27920ebd5cb9fa9822dd778caca1466ebc14f93482ee9d9b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0720
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "cb16ab317c95fe45b66fc2edb027efa5394abd7a9dcce2e2c8a764a6c23400d0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0721
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2f325b7a28c276004b5a58a345c42699db58b99ed6e5be552d7ef16e329c274c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0722
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "570239431d23d68adc2374a30071c679fc902437d44dbe11a454d59e9aa23f8d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0723
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "3b7746732a5725264389c9b6f94f840340427b3e438b51f7b21ad74ec14c51ef",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0724
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "19d47574c5d23b8b74b31228ba1034fe1f0420886d0c50bc868ca5e8bcd3e3a1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0725
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0706204dde3cd5281228e93b8bafffb44ca6129bc5a119f0efc6c9028d5a4f7f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0726
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "86643d354be602359792f7d55e4f52861b76e4fdf2bcab2094a3486bd033340f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0727
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a4b383b46ba9a34aaa9d4d35c608c9969118421b44531a292e8795f668d8cfa7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0728
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "99f546e28fe43d100754a1d9c4fb3d7e44e5bfac76b97c64ec18b3645e725727",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0729
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "67946d3c3e3cb3c5431e94dc43c6b1ea60458bd5a910d07968cdaf05b282eb87",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q10",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0730
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "5fca16a550f2e90dc9c4c17a8cf0dce7c2724e2b5b1671eb5ba72222c0c3de85",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q11",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0731
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e4cc7995d6955ea1a0f73cca6d1bcfe4b63892d716540f08f3b8196603f7ef36",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q12",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0732
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e619140aa6133ce00b93083f2c88068693068810d06d62295bee8ba3587e07ec",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q13",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0733
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1dde5d73d0d86690cfe1038e911c912556080c25282fefba97bd96cef0e2e37d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q14",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0734
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7ad4ce4a3f3e2e14ff6facbe0c11fc83e12f44dc6ecacb1bb19f646aaaa37611",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q15",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0735
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "849f42c7abbf43ef567172391708f91fa2a3d540033b3f27db1d99c78b9b6d9d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q16",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0736
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b703087c0a163b9493163a209c9ea38f4054c2119106e2dd1bf6167ffc718722",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q17",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0737
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "8e71e1f4f302efb87ba0d1c04559c67ad45c7875572af0076155f0a58cd33c4e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q18",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0738
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "abaea1f4b12e32aae86bf6f0c81ffdcb53913bc98bcafce96d6d5a372db6151d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q19",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0739
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "886bd70d6f1c9912d12d01263d458ea228a034307707eefd52691a7f599535b9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-science",
+  "question_id": "gk-1984-regular-science-q20",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-6b42e1aab74990c2bcb728592ac86d488768aaaec74058a2d08f07d782a2d09e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0740
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e5ceb942aa79b3dfef2c4f79eb5b167d4d3c6c86081567e47a88d42059409e09",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q01",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0741
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "5c4b80cbc126c96335a7cbacde49b5837b76b63f09743baeba7651e684aaa396",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q02",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0742
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "795e71efe7c22b9f109d864dfb601b3aaa1cdef1d01a08d87047aad7cdbbf62b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q03",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0743
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "db451406b93c639b0836975f68eef8c1c7cff50960f61df21c60225154155489",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q04",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0744
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "aa563c3f5c36c3e911feccf33e1762c26b7e400b1ddbaa3f7dab0495ddbeb767",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q05",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0745
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "32c42015e56b56779b8f0f862cf91ba1d57536430ca1c68ed1329e974859f2d4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q06",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0746
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "2c4e2afc762a30f148c1b5db2d870adc927b15c517c6ec0a469c6c9518b787d0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q07",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0747
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "bfe74485fea629771d019892eca745059102373c717fd84944cf2daf963b0bc0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q08",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0748
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9d68715f10df1a592890cfbc0027379fd730938a7ad21b8861bcc3ac2f651a3f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q09",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0749
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "9ef423ea6ee895a18742b7233f27846fece84d8e9a04ad7d448d1dac8766fbfe",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q10",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0750
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "68eb498fb871c354e43280fdbc3ae9c264d6f4c836ca473be8661c8aad189a14",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q11",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0751
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f8728f346bd5518ce1572f0f1d6d099bbbb8f614658f733be9e10f7ed5d74d51",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q12",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0752
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "b9d079a38f2568260e658b9c282320fc053de81f0d5cb23a974efbf44f40414b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q13",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0753
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0f25013c6901849e0f73f74769687efd171829fc73b267efa0b6b4970958d8de",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q14",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0754
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "a54878b82ff001f627531e97a3a9d4e3212a65e746528ed257024344cde59505",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q15",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0755
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "48ec45de2214d5e81b91142d03be8d2947df175320bc92354f9843ff31c74d37",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q16",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0756
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "315a243b5642944dfa2bf9ac76e116bffa2e5d269beff55aece4ee28a1dc5cfc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1984-regular-arts",
+  "question_id": "gk-1984-regular-arts-q17",
+  "resume_action": "批级视觉审查时逐页对照固定源扫描件复核题面文字、公式与小问，确认后升级 passed 并 resolve 本问题。",
+  "source_id": "src-75d1cff1c8e4861b3f53ce7df14df0b60b2e7650265948a8e792b0836548fa82",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0757
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "84f1637106265449fe87661e22a8aac16024f24de3947ba860189f4c815707ef",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1984-regular-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0758
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "21eb67d1d1e0dc1ee720fd4b0073c5d8a906fe06a16dd12194f157af20f3c507",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1984-regular-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0759
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "216f3158c3cdf805ddf8aac59ed06d61b5ee1231aef2007f77dcd64e31fe27c9",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1984-regular-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0760
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "9f97eb29b90fe4b03f42569ff39f11e786d71ecb59582f3d5c7f8513b7d27178",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1984-regular-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

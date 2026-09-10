@@ -1,0 +1,898 @@
+% answers.tex —— 1983 年·全国卷（理科） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1983/1983_数学真题_理_试题.md + 1983/1983_数学真题_理_解析正文.md + 1983/1983_数学真题_理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{解析归属}：本卷题面出自固定原卷（单页试题、未附答案页）；下列各题均由本库独立推导并逐题复算（代入检验、特值验证与范围检查），不声称代表官方标准答案。全卷 13 题连续编号，卷末无附加题。
+
+\textbf{转录说明}：本代 PDF 的文本层会丢根号与分数线，题面与图一律按页面图像核对（如第 6 题第 1 小题的两方程为 $y=-\sqrt{x}$、$x=\sqrt{-y}$，第 9 题模的上界为 $r\leqslant\sqrt[4]{2}$）。第 3 题选项 C 原卷脱字，已在试题中加源注说明。
+\end{gknotice}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+两条异面直线，指的是\mbox{（　　）}
+
+\begin{gkopts}(2)
+\task A．在空间内不相交的两条直线
+\task B．分别位于两个不同平面内的两条直线
+\task C．某一平面内的一条直线和这个平面外的一条直线
+\task D．不在同一平面内的两条直线
+\end{gkopts}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按异面直线的定义：不同在任何一个平面内的两条直线叫做异面直线。
+
+逐项核查——
+
+A 不成立：空间内不相交的两条直线可以平行，而两条平行线共面，不是异面直线。
+
+B 不成立：两条直线分别位于两个不同平面内，未必异面。例如取平面 $z=0$ 内的 $x$ 轴与平面 $x=0$ 内的 $y$ 轴，二者同在平面 $z=0$ 内且相交于原点，共面，不是异面直线。
+
+C 不成立：平面内的一条直线与平面外的一条直线可能平行，例如 $z=0$ 内的直线 $y=1$ 与 $z=1$ 内的直线 $y=1$，二者共面（同在平面 $y=1$），不是异面直线。
+
+D 成立，正是定义本身。
+
+复算：用反例法逐项排除 A、B、C（上列三例都满足该选项所述条件却不异面），只有 D 与定义等价，故选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+方程 $x^2-y^2=0$ 表示的图形是\mbox{（　　）}
+
+\begin{gkopts}(4)
+\task A．两条相交直线
+\task B．两条平行直线
+\task C．两条重合直线
+\task D．一个点
+\end{gkopts}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+x^2-y^2=0\iff(x-y)(x+y)=0\iff y=x\ \text{或}\ y=-x.
+\]
+
+所以图形是过原点、斜率分别为 $1$ 与 $-1$ 的两条相交直线。
+
+复算：取点 $(1,1)$：$1^2-1^2=0$，在图形上；取点 $(1,-1)$：$1-1=0$，也在图形上；而 $(1,2)$ 给出 $1-4=-3\neq0$，不在图形上。两直线交于原点且方向不同，既不平行也不重合，也不是一个点。故选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+三个数 $a$，$b$，$c$ 不全为零的充要条件是\mbox{（　　）}
+
+\begin{gkopts}(2)
+\task A．$a$，$b$，$c$ 都不是零
+\task B．$a$，$b$，$c$ 中最多有一个是零
+\task C．$a$，$b$，$c$ 中只有一个是
+\task D．$a$，$b$，$c$ 中至少有一个不是零
+\end{gkopts}
+
+\begin{gktip}
+\textbf{源注}：第 3 题选项 C 原卷印作「$a$，$b$，$c$ 中只有一个是」，止于「是」字，疑为原卷排版脱字（按文意当是「只有一个是零」）。此处照原卷逐字转录，不作补全。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+「$a$，$b$，$c$ 不全为零」即「$a$，$b$，$c$ 中至少有一个不是零」，两者字面等价。
+
+逐项核查——
+
+A「都不是零」是充分条件而非必要条件：取 $a=0$，$b=1$，$c=1$，三数不全为零，但 $a$ 为零，A 不成立。
+
+B「最多有一个是零」同样只是充分条件：取 $a=0$，$b=0$，$c=1$，三数不全为零，却有两个零，B 不成立。
+
+C 为原卷脱字项（作「中只有一个是」），文意不完整，不能作为充要条件。
+
+D「至少有一个不是零」与「不全为零」等价，是充要条件。故选 D。
+
+复算：把「$a=b=c=0$」作为反面，其否定正是「至少有一个不是零」，故 D 必要且充分；A、B 的反例已给出。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+设 $\alpha=\dfrac{4\pi}{3}$，则 $\arccos(\cos\alpha)$ 的值是\mbox{（　　）}
+
+\begin{gkopts}(2)
+\task A．$\dfrac{4\pi}{3}$
+\task B．$-\dfrac{2\pi}{3}$
+\task C．$\dfrac{2\pi}{3}$
+\task D．$\dfrac{\pi}{3}$
+\end{gkopts}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先算内层余弦：
+
+\nopagebreak[4]
+\[
+\cos\frac{4\pi}{3}=\cos\left(\pi+\frac{\pi}{3}\right)=-\cos\frac{\pi}{3}=-\frac12.
+\]
+
+\Needspace{5\baselineskip}
+再取反正弦的主值（$\arccos$ 的值域为 $[0,\pi]$）：
+
+\nopagebreak[4]
+\[
+\arccos(\cos\alpha)=\arccos\left(-\frac12\right)=\frac{2\pi}{3}.
+\]
+
+复算：$\cos\dfrac{2\pi}{3}=-\dfrac12$，与内层值一致，且 $\dfrac{2\pi}{3}\in[0,\pi]$，确为主值。又 $\dfrac{4\pi}{3}\notin[0,\pi]$、$-\dfrac{2\pi}{3}\notin[0,\pi]$，故 A、B 不可能；$\cos\dfrac{\pi}{3}=\dfrac12\neq-\dfrac12$，D 亦不可能。故选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+$0.3^2$，$\log_2 0.3$，$2^{0.3}$ 这三个数之间的大小顺序是\mbox{（　　）}
+
+\begin{gkopts}(2)
+\task A．$0.3^2<2^{0.3}<\log_2 0.3$
+\task B．$0.3^2<\log_2 0.3<2^{0.3}$
+\task C．$\log_2 0.3<0.3^2<2^{0.3}$
+\task D．$\log_2 0.3<2^{0.3}<0.3^2$
+\end{gkopts}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+分别估计三个数的范围。
+
+$0.3^2=0.09$，故 $0<0.3^2<1$。
+
+因 $0<0.3<1$，对数函数 $\log_2 x$ 在 $x=1$ 处为零且递增，故 $\log_2 0.3<0$。
+
+因底数 $2>1$，指数函数递增，故 $2^{0.3}>2^0=1$。
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\log_2 0.3<0<0.3^2<1<2^{0.3},
+\]
+
+即 $\log_2 0.3<0.3^2<2^{0.3}$。故选 C。
+
+复算：数值检验，$\log_2 0.3\approx-1.737$，$0.3^2=0.09$，$2^{0.3}\approx1.231$，确实依次递增，与 C 一致。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+（1） 在同一平面直角坐标系内，分别画出两个方程 $y=-\sqrt{x}$，$x=\sqrt{-y}$ 的图形，并写出它们交点的坐标。
+
+（2） 在极坐标系内，方程 $\rho=5\cos\theta$ 表示什么曲线？画出它的图形。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+先看两方程各自代表的图形。
+
+$y=-\sqrt{x}$ 要求 $x\geqslant0$，且 $y\leqslant0$；平方得 $y^2=x$，故它是抛物线 $y^2=x$ 在 $x$ 轴下方的半支（含原点）。
+
+$x=\sqrt{-y}$ 要求 $y\leqslant0$，且 $x\geqslant0$；平方得 $x^2=-y$，即 $y=-x^2$，故它是抛物线 $y=-x^2$ 在 $y$ 轴右侧的右半支（含原点）。
+
+两图形都落在第四象限（含坐标轴），在同一坐标系内画出这两条曲线。
+
+求交点：令 $-\sqrt{x}=-x^2$，即 $\sqrt{x}=x^2$。设 $s=\sqrt{x}\geqslant0$，则 $x=s^2$，方程化为 $s=s^4$，即 $s(1-s^3)=0$，得 $s=0$ 或 $s=1$，从而 $x=0$ 或 $x=1$。
+
+代回 $y=-\sqrt{x}$：$x=0$ 给 $y=0$，$x=1$ 给 $y=-1$。
+
+所以两图形交于 $(0,0)$ 与 $(1,-1)$。
+
+复算：$(0,0)$ 代入 $x=\sqrt{-y}$ 得 $0=\sqrt0$，成立；$(1,-1)$ 代入得 $1=\sqrt1$，成立。两方程都是各自抛物线的单侧半支，故除这两点外不再相交。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+把 $\rho=5\cos\theta$ 化为直角坐标方程。两边乘 $\rho$：
+
+\nopagebreak[4]
+\[
+\rho^2=5\rho\cos\theta.
+\]
+
+\Needspace{5\baselineskip}
+代入 $\rho^2=x^2+y^2$、$\rho\cos\theta=x$：
+
+\nopagebreak[4]
+\[
+x^2+y^2=5x,\qquad\text{即}\qquad\left(x-\frac52\right)^2+y^2=\left(\frac52\right)^2.
+\]
+
+所以它表示一个圆：圆心为 $\left(\dfrac52,0\right)$，半径为 $\dfrac52$，圆过极点 $O$，其直径落在极轴上。作图时应画出这个圆（圆心在极轴上，与极点相切于极点这一侧的端点为极点本身）。
+
+复算：取 $\theta=0$，$\rho=5$，对应点 $(5,0)$，代入圆方程得左边 $25$、右边 $25$，成立；取 $\theta=\dfrac{\pi}{2}$，$\rho=0$，即极点，代入得 $0=0$，成立；取 $\theta=\dfrac{\pi}{3}$，$\rho=\dfrac52$，对应点 $\left(\dfrac54,\dfrac{5\sqrt3}{4}\right)$，代入圆方程左边为 $\dfrac{25}{16}+\dfrac{75}{16}=\dfrac{100}{16}=\dfrac{25}{4}$，右边为 $5\cdot\dfrac54=\dfrac{25}{4}$，成立。又因 $\rho=5\cos\theta\geqslant0$ 要求 $\cos\theta\geqslant0$，$\theta$ 只需取 $\left[-\dfrac\pi2,\dfrac\pi2\right]$，恰好描出整个圆一次。
+
+\gkanswer{答案（1）：两图形交于 $(0,0)$ 与 $(1,-1)$}
+
+\gkanswer{答案（2）：表示以 $\left(\dfrac52,0\right)$ 为圆心、$\dfrac52$ 为半径的圆（过极点，直径落在极轴上）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+（1） 已知 $y=\mathrm e^{-x}\sin 2x$，求微分 $\mathrm dy$。
+
+（2） 一个小组共有 $10$ 名同学，其中 $4$ 名是女同学，$6$ 名是男同学。要从小组内选出 $3$ 名代表，其中至少有 $1$ 名女同学，求一共有多少种选法。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+$y=\mathrm e^{-x}\sin 2x$，按乘积求导法则：
+
+\nopagebreak[4]
+\[
+y'=(\mathrm e^{-x})'\sin 2x+\mathrm e^{-x}(\sin 2x)'
+=-\mathrm e^{-x}\sin 2x+2\mathrm e^{-x}\cos 2x
+=\mathrm e^{-x}(2\cos 2x-\sin 2x).
+\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[
+\mathrm dy=\mathrm e^{-x}(2\cos 2x-\sin 2x)\,\mathrm dx.
+\]
+
+复算：取 $x=0$，$y=0$，$y'=\mathrm e^0(2\cdot1-0)=2$；直接对 $y=\mathrm e^{-x}\sin 2x$ 在 $x=0$ 附近作差商，$y(\Delta)\approx\Delta\cdot2$，与 $y'(0)=2$ 相符。
+
+\gksubpart{（2）}
+
+「至少 1 名女同学」的对立面是「没有女同学」，即 3 名代表全为男同学。
+
+\Needspace{5\baselineskip}
+全部选法数：
+
+\nopagebreak[4]
+\[
+\mathrm C_{10}^{3}=\frac{10\cdot9\cdot8}{3\cdot2\cdot1}=120.
+\]
+
+\Needspace{5\baselineskip}
+全为男同学的选法数：
+
+\nopagebreak[4]
+\[
+\mathrm C_{6}^{3}=\frac{6\cdot5\cdot4}{3\cdot2\cdot1}=20.
+\]
+
+\Needspace{5\baselineskip}
+所以至少 1 名女同学的选法数为
+
+\nopagebreak[4]
+\[
+\mathrm C_{10}^{3}-\mathrm C_{6}^{3}=120-20=100.
+\]
+
+复算：按女同学人数分类相加——恰 1 名女同学 $\mathrm C_4^1\mathrm C_6^2=4\times15=60$；恰 2 名 $\mathrm C_4^2\mathrm C_6^1=6\times6=36$；恰 3 名 $\mathrm C_4^3=4$。合计 $60+36+4=100$，与补集算法一致。
+
+\gkanswer{答案（1）：$\mathrm dy=\mathrm e^{-x}(2\cos 2x-\sin 2x)\,\mathrm dx$}
+
+\gkanswer{答案（2）：$100$ 种}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+计算行列式（要求结果最简）：
+
+\nopagebreak[4]
+\[
+\begin{vmatrix}
+\sin\alpha & \cos(\alpha+\varphi) & \cos\alpha\\
+\cos\beta & \sin(\beta-\varphi) & \sin\beta\\
+\sin\varphi & \cos 2\varphi & \cos\varphi
+\end{vmatrix}.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记原行列式为 $D$，按第三行展开（代数余子式符号为 $+,-,+$）：
+
+\nopagebreak[4]
+\[
+D=\sin\varphi\cdot
+\begin{vmatrix}
+\cos(\alpha+\varphi) & \cos\alpha\\
+\sin(\beta-\varphi) & \sin\beta
+\end{vmatrix}
+-\cos 2\varphi\cdot
+\begin{vmatrix}
+\sin\alpha & \cos\alpha\\
+\cos\beta & \sin\beta
+\end{vmatrix}
++\cos\varphi\cdot
+\begin{vmatrix}
+\sin\alpha & \cos(\alpha+\varphi)\\
+\cos\beta & \sin(\beta-\varphi)
+\end{vmatrix}.
+\]
+
+\Needspace{5\baselineskip}
+逐个算出二阶行列式：
+
+\nopagebreak[4]
+\[
+\begin{vmatrix}
+\cos(\alpha+\varphi) & \cos\alpha\\
+\sin(\beta-\varphi) & \sin\beta
+\end{vmatrix}
+=\cos(\alpha+\varphi)\sin\beta-\cos\alpha\sin(\beta-\varphi),
+\]
+
+\nopagebreak[4]
+\[
+\begin{vmatrix}
+\sin\alpha & \cos\alpha\\
+\cos\beta & \sin\beta
+\end{vmatrix}
+=\sin\alpha\sin\beta-\cos\alpha\cos\beta=-\cos(\alpha+\beta),
+\]
+
+\nopagebreak[4]
+\[
+\begin{vmatrix}
+\sin\alpha & \cos(\alpha+\varphi)\\
+\cos\beta & \sin(\beta-\varphi)
+\end{vmatrix}
+=\sin\alpha\sin(\beta-\varphi)-\cos(\alpha+\varphi)\cos\beta.
+\]
+
+\Needspace{5\baselineskip}
+代入并按 $\sin(\beta-\varphi)$ 与 $\cos(\alpha+\varphi)$ 归并：
+
+\nopagebreak[4]
+\[
+\begin{aligned}
+D&=\cos(\alpha+\varphi)\bigl[\sin\varphi\sin\beta-\cos\varphi\cos\beta\bigr]\\
+&\quad+\sin(\beta-\varphi)\bigl[\cos\varphi\sin\alpha-\sin\varphi\cos\alpha\bigr]\\
+&\quad+\cos 2\varphi\cos(\alpha+\beta)\\
+&=-\cos(\alpha+\varphi)\cos(\beta+\varphi)+\sin(\alpha-\varphi)\sin(\beta-\varphi)+\cos 2\varphi\cos(\alpha+\beta).
+\end{aligned}
+\]
+
+\Needspace{5\baselineskip}
+用积化和差：
+
+\nopagebreak[4]
+\[
+\sin(\alpha-\varphi)\sin(\beta-\varphi)
+=\frac12\bigl[\cos(\alpha-\beta)-\cos(\alpha+\beta-2\varphi)\bigr],
+\]
+
+\nopagebreak[4]
+\[
+\cos(\alpha+\varphi)\cos(\beta+\varphi)
+=\frac12\bigl[\cos(\alpha-\beta)+\cos(\alpha+\beta+2\varphi)\bigr].
+\]
+
+\Needspace{5\baselineskip}
+两者相减得
+
+\nopagebreak[4]
+\[
+\sin(\alpha-\varphi)\sin(\beta-\varphi)-\cos(\alpha+\varphi)\cos(\beta+\varphi)
+=-\frac12\bigl[\cos(\alpha+\beta-2\varphi)+\cos(\alpha+\beta+2\varphi)\bigr]
+=-\cos(\alpha+\beta)\cos 2\varphi.
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+D=-\cos(\alpha+\beta)\cos 2\varphi+\cos 2\varphi\cos(\alpha+\beta)=0.
+\]
+
+复算：取 $\alpha=0$、$\beta=0$、$\varphi=0$，三行依次为 $(0,1,1)$、$(1,0,0)$、$(0,1,1)$，第一、三行相同，行列式为 $0$；取 $\alpha=\beta=\varphi$ 等特殊值手算亦得 $0$；再用二十组随机数 $(\alpha,\beta,\varphi)$ 数值求值，最大绝对值不超过 $2\times10^{-16}$（机器精度），与 $D\equiv0$ 相符。
+
+\gkanswer{答案：$0$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+（1） 证明：对于任意实数 $t$，复数 $z=\sqrt{\lvert\cos t\rvert}+\sqrt{\lvert\sin t\rvert}\,\mathrm i$ 的模 $r=\lvert z\rvert$ 适合 $r\leqslant\sqrt[4]{2}$。
+
+（2） 当实数 $t$ 取什么值时，复数 $z=\sqrt{\lvert\cos t\rvert}+\sqrt{\lvert\sin t\rvert}\,\mathrm i$ 的幅角主值 $\theta$ 适合 $0\leqslant\theta\leqslant\dfrac{\pi}{4}$？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+设 $z=u+v\mathrm i$，其中 $u=\sqrt{\lvert\cos t\rvert}$、$v=\sqrt{\lvert\sin t\rvert}$。则
+
+\nopagebreak[4]
+\[
+r^2=\lvert z\rvert^2=u^2+v^2=\lvert\cos t\rvert+\lvert\sin t\rvert.
+\]
+
+\Needspace{5\baselineskip}
+由 $\bigl(\lvert\cos t\rvert+\lvert\sin t\rvert\bigr)^2=\cos^2t+\sin^2t+2\lvert\sin t\cos t\rvert=1+\lvert\sin 2t\rvert\leqslant1+1=2$，
+
+\nopagebreak[4]
+\[
+r^2=\lvert\cos t\rvert+\lvert\sin t\rvert\leqslant\sqrt2,
+\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[
+r\leqslant\sqrt[4]{2}.
+\]
+
+复算：$\lvert\cos t\rvert+\lvert\sin t\rvert$ 在 $t=\dfrac\pi4+k\pi$ 处取最大值 $\dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}=\sqrt2$，此时 $r^2=\sqrt2$、$r=2^{1/4}=\sqrt[4]{2}$，等号确可取到，上界不能再小。
+
+\gksubpart{（2）}
+
+仍设 $z=\sqrt{\lvert\cos t\rvert}+\sqrt{\lvert\sin t\rvert}\,\mathrm i$。因实部、虚部都非负，$z$ 对应第一象限（含坐标轴）内的点或原点，故幅角主值 $\theta\in\left[0,\dfrac\pi2\right]$。
+
+\Needspace{5\baselineskip}
+当 $\cos t\neq0$ 时，
+
+\nopagebreak[4]
+\[
+\tan\theta=\frac{\sqrt{\lvert\sin t\rvert}}{\sqrt{\lvert\cos t\rvert}}=\sqrt{\lvert\tan t\rvert}.
+\]
+
+\Needspace{5\baselineskip}
+要求 $0\leqslant\theta\leqslant\dfrac\pi4$，即 $\tan\theta\leqslant1$，即
+
+\nopagebreak[4]
+\[
+\sqrt{\lvert\tan t\rvert}\leqslant1\iff\lvert\tan t\rvert\leqslant1.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+k\pi-\frac\pi4\leqslant t\leqslant k\pi+\frac\pi4\qquad(k\in\mathbf Z).
+\]
+
+（$\cos t=0$ 时 $\theta=\dfrac\pi2>\dfrac\pi4$，不含在内；这与 $\lvert\tan t\rvert$ 无定义、不满足不等式一致。）
+
+复算：取 $t=0$，$z=1$，$\theta=0$，符合；取 $t=\dfrac\pi4$，$z=2^{1/4}+2^{1/4}\mathrm i$，$\theta=\dfrac\pi4$，恰在边界；取 $t=\dfrac\pi2$，$z=1+\mathrm i$，$\theta=\dfrac\pi2>\dfrac\pi4$，不符合；取 $t=\dfrac{3\pi}{4}$，$\lvert\tan t\rvert=1$，$\theta=\dfrac\pi4$，符合而 $t\in\left[\dfrac{3\pi}{4},\dfrac{5\pi}{4}\right]=\left[\pi-\dfrac\pi4,\pi+\dfrac\pi4\right]$，与 $k=1$ 的区间吻合。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$k\pi-\dfrac{\pi}{4}\leqslant t\leqslant k\pi+\dfrac{\pi}{4}$（$k\in\mathbf{Z}$，即 $\lvert\tan t\rvert\leqslant1$）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+如图，在三棱锥 $S-ABC$ 中，$S$ 在底面上的射影 $N$ 位于底面的高 $CD$ 上；$M$ 是侧棱 $SC$ 上的一点，使截面 $MAB$ 与底面所成的角等于 $\angle NSC$，求证：$SC$ 垂直于截面 $MAB$。
+\nopagebreak[4]
+\begin{center}\input{figures/f1983_1983_sci_t10_tetrahedron}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\begin{center}\input{figures/f1983_1983_sci_t10_tetrahedron}\end{center}
+\nopagebreak[4]
+记底面为平面 $ABC$。
+
+\Needspace{5\baselineskip}
+第一步，证明 $AB\perp$ 平面 $SCD$。因为 $SN\perp$ 底面 $ABC$，而 $AB$ 在底面内，故 $SN\perp AB$；又 $CD$ 是底面的高，即 $CD\perp AB$，且 $D$ 在 $AB$ 上。直线 $SN$ 与 $CD$ 都在平面 $SCD$ 内且相交于 $N$，于是 $AB$ 垂直于平面 $SCD$ 内的两条相交直线，故
+
+\nopagebreak[4]
+\[
+AB\perp\text{平面 }SCD.
+\]
+
+由此立即得到 $AB\perp SC$（$SC$ 在平面 $SCD$ 内），并且 $AB\perp DM$（$D$、$M$ 都在平面 $SCD$ 内）。
+
+\Needspace{5\baselineskip}
+第二步，把二面角的平面角说出来。二面角 $M-AB-C$ 的棱为 $AB$。在面 $MAB$ 内过 $D$ 作 $AB$ 的垂线即直线 $DM$；在面 $ABC$ 内过 $D$ 作 $AB$ 的垂线即直线 $DC$。所以截面 $MAB$ 与底面所成二面角的平面角就是
+
+\nopagebreak[4]
+\[
+\angle MDC.
+\]
+
+题设给出 $\angle MDC=\angle NSC$。
+
+\Needspace{5\baselineskip}
+第三步，在平面 $SCD$ 内证明 $DM\perp SC$。在这个平面里，$D$、$N$、$C$ 三点共线，且 $SN\perp CD$，故 $\triangle SNC$ 是直角三角形（直角在 $N$），
+
+\nopagebreak[4]
+\[
+\angle SCN=90^\circ-\angle NSC=90^\circ-\angle MDC.
+\]
+
+\Needspace{5\baselineskip}
+又 $M$ 在 $SC$ 上，$D$、$C$、$N$ 共线，所以 $\angle DCM=\angle SCN=90^\circ-\angle MDC$。在 $\triangle DMC$ 中，
+
+\nopagebreak[4]
+\[
+\angle DMC=180^\circ-\angle MDC-\angle DCM
+=180^\circ-\angle MDC-\bigl(90^\circ-\angle MDC\bigr)=90^\circ.
+\]
+
+\Needspace{5\baselineskip}
+即 $DM\perp MC$，而 $MC$ 就是直线 $SC$，故
+
+\nopagebreak[4]
+\[
+DM\perp SC.
+\]
+
+\Needspace{5\baselineskip}
+第四步，收束。$AB$ 与 $DM$ 都含于平面 $MAB$，且相交于 $D$（$D$ 在 $AB$ 上，$D$、$M$ 确定直线 $DM$），$SC$ 同时垂直于这两条相交直线，因此
+
+\nopagebreak[4]
+\[
+SC\perp\text{平面 }MAB.
+\]
+
+复算：在平面 $SCD$ 内取坐标 $C=(0,0)$、$D=(d,0)$（$d>0$），$S=(u,v)$（$v>0$，$N=(u,0)$ 在 $CD$ 上），$M=C+t(S-C)=(tu,tv)$。此时 $\tan\angle NSC=\dfrac{u}{v}$（$u>0$ 时），$\tan\angle MDC=\dfrac{tv}{d-tu}$。题设两角相等给出 $t\bigl(u^2+v^2\bigr)=du$，而这正是 $(M-D)\cdot(S-C)=0$，即 $DM\perp SC$。反过来，若 $DM\perp SC$ 亦有 $t(u^2+v^2)=du$，两角相等。可见题设与所求垂直互为充要，上述推理链条没有多余假设。
+
+\gkanswer{答案：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+如图，已知椭圆长轴 $\lvert A_1A_2\rvert=6$，焦距 $\lvert F_1F_2\rvert=4\sqrt2$，过椭圆焦点 $F_1$ 作一直线，交椭圆于两点 $M$，$N$。设 $\angle F_2F_1M=\alpha$（$0\leqslant\alpha<\pi$），当 $\alpha$ 取什么值时，$\lvert MN\rvert$ 等于椭圆短轴的长？
+\nopagebreak[4]
+\begin{center}\input{figures/f1983_1983_sci_t11_ellipse}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+\nopagebreak[4]
+\begin{center}\input{figures/f1983_1983_sci_t11_ellipse}\end{center}
+\nopagebreak[4]
+\Needspace{5\baselineskip}
+由长轴 $\lvert A_1A_2\rvert=2a=6$ 得 $a=3$；由焦距 $\lvert F_1F_2\rvert=2c=4\sqrt2$ 得 $c=2\sqrt2$。于是
+
+\nopagebreak[4]
+\[
+b^2=a^2-c^2=9-8=1,\qquad b=1,
+\]
+
+椭圆短轴的长为 $2b=2$。
+
+\Needspace{5\baselineskip}
+建立坐标系：以椭圆中心为原点、长轴为 $x$ 轴，则 $F_1=(-c,0)$、$F_2=(c,0)$，椭圆方程为 $\dfrac{x^2}{9}+y^2=1$。过 $F_1$ 的直线与射线 $F_1F_2$（正 $x$ 方向）成角 $\alpha$，把它写成参数式
+
+\nopagebreak[4]
+\[
+(x,y)=(-c+s\cos\alpha,\ s\sin\alpha),
+\]
+
+\Needspace{5\baselineskip}
+其中 $s$ 是有向距离。代入椭圆方程：
+
+\nopagebreak[4]
+\[
+\frac{(-c+s\cos\alpha)^2}{9}+s^2\sin^2\alpha=1.
+\]
+
+\Needspace{5\baselineskip}
+把 $c=2\sqrt2$、$c^2=8$ 代入并两边乘 $9$：
+
+\nopagebreak[4]
+\[
+8-4\sqrt2\,s\cos\alpha+s^2\cos^2\alpha+9s^2\sin^2\alpha=9,
+\]
+
+\Needspace{5\baselineskip}
+整理成关于 $s$ 的二次方程：
+
+\nopagebreak[4]
+\[
+\bigl(\cos^2\alpha+9\sin^2\alpha\bigr)s^2-4\sqrt2\cos\alpha\,s-1=0.
+\]
+
+\Needspace{5\baselineskip}
+记 $A=\cos^2\alpha+9\sin^2\alpha=1+8\sin^2\alpha$。设两根为 $s_1$、$s_2$，由韦达定理
+
+\nopagebreak[4]
+\[
+s_1+s_2=\frac{4\sqrt2\cos\alpha}{A},\qquad s_1s_2=-\frac1A.
+\]
+
+\Needspace{5\baselineskip}
+两根对应 $M$、$N$ 两点，故
+
+\nopagebreak[4]
+\[
+\lvert MN\rvert=\lvert s_1-s_2\rvert=\sqrt{(s_1+s_2)^2-4s_1s_2}
+=\sqrt{\frac{32\cos^2\alpha}{A^2}+\frac4A}
+=\frac{\sqrt{32\cos^2\alpha+4A}}{A}.
+\]
+
+\Needspace{5\baselineskip}
+而 $32\cos^2\alpha+4A=32\cos^2\alpha+4(\cos^2\alpha+9\sin^2\alpha)=36(\cos^2\alpha+\sin^2\alpha)=36$，所以
+
+\nopagebreak[4]
+\[
+\lvert MN\rvert=\frac{6}{A}=\frac{6}{1+8\sin^2\alpha}.
+\]
+
+\Needspace{5\baselineskip}
+令它等于短轴长 $2$：
+
+\nopagebreak[4]
+\[
+\frac{6}{1+8\sin^2\alpha}=2\iff 1+8\sin^2\alpha=3\iff\sin^2\alpha=\frac14.
+\]
+
+\Needspace{5\baselineskip}
+由 $0\leqslant\alpha<\pi$ 得 $\sin\alpha=\dfrac12$，故
+
+\nopagebreak[4]
+\[
+\alpha=\frac\pi6\quad\text{或}\quad\alpha=\frac{5\pi}{6}.
+\]
+
+复算：$\alpha=\dfrac\pi6$ 时 $\sin^2\alpha=\dfrac14$，$A=1+2=3$，$\lvert MN\rvert=\dfrac63=2$，等于短轴长；$\alpha=\dfrac{5\pi}{6}$ 时 $\sin^2\alpha$ 相同，$\lvert MN\rvert$ 亦为 $2$，两解都对。再作独立数值检验：直接把 $a=3$、$b=1$、$c=2\sqrt2$ 代入参数式求两根之差的绝对值，$\alpha=\dfrac\pi6$ 得 $2.000000$，$\alpha=\dfrac{5\pi}{6}$ 得 $2.000000$，而 $\alpha=0.3$ 得 $3.532$、$\alpha=\dfrac\pi2$ 得 $0.667$，均与公式 $\dfrac{6}{1+8\sin^2\alpha}$ 相符。
+
+\gkanswer{答案：$\alpha=\dfrac{\pi}{6}$ 或 $\alpha=\dfrac{5\pi}{6}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知数列 $\{a_n\}$ 的首项 $a_1=b$（$b\neq0$），它的前 $n$ 项的和 $S_n=a_1+a_2+\cdots+a_n$（$n\geqslant1$），并且 $S_1$，$S_2$，$S_n$，$\cdots$ 是一个等比数列，其公比为 $p$（$p\neq0$ 且 $\lvert p\rvert<1$）。
+
+\begin{gktip}
+\textbf{源注}：题中数列原文第三个下标印作 $n$，即「$S_1$，$S_2$，$S_n$，$\cdots$」；按文意当为 $S_3$（$S_1$，$S_2$，$S_3$，$\cdots$ 成等比数列），疑为原卷排印之误。此处照原卷逐字转录，解析按 $S_1$，$S_2$，$S_3$，$\cdots$ 成等比数列理解。
+\end{gktip}
+
+（1） 证明：$a_2$，$a_3$，$\cdots$，$a_n$，$\cdots$（即 $\{a_n\}$ 从第二项起）是一个等比数列；
+
+（2） 设 $W_n=a_1S_1+a_2S_2+a_3S_3+\cdots+a_nS_n$（$n\geqslant1$），求 $\lim\limits_{n\to\infty}W_n$（用 $b$，$p$ 表示）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\begin{gktip}
+\textbf{源注}：原卷此处第三个下标印作 $n$（「$S_1$，$S_2$，$S_n$，$\cdots$」），按文意当为 $S_3$，本解析按 $S_1$，$S_2$，$S_3$，$\cdots$ 成等比数列理解；试题已如实转录并附源注。
+\end{gktip}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+由题设，$S_1$，$S_2$，$S_3$，$\cdots$ 是首项 $S_1=a_1=b$、公比 $p$ 的等比数列，故
+
+\nopagebreak[4]
+\[
+S_n=bp^{n-1}\qquad(n\geqslant1).
+\]
+
+\Needspace{5\baselineskip}
+当 $n\geqslant2$ 时，
+
+\nopagebreak[4]
+\[
+a_n=S_n-S_{n-1}=bp^{n-1}-bp^{n-2}=bp^{n-2}(p-1).
+\]
+
+\Needspace{5\baselineskip}
+因 $b\neq0$、$p\neq0$、$\lvert p\rvert<1$（特别 $p\neq1$），所以 $a_n\neq0$（$n\geqslant2$）。于是对一切 $n\geqslant2$，
+
+\nopagebreak[4]
+\[
+\frac{a_{n+1}}{a_n}=\frac{bp^{n-1}(p-1)}{bp^{n-2}(p-1)}=p,
+\]
+
+比值是与 $n$ 无关的非零常数。因此 $a_2$，$a_3$，$\cdots$，$a_n$，$\cdots$ 是以 $p$ 为公比的等比数列。
+
+复算：取 $b=1$、$p=\dfrac12$，则 $S_1=1$、$S_2=\dfrac12$、$S_3=\dfrac14$，$a_2=-\dfrac12$、$a_3=-\dfrac14$、$a_4=-\dfrac18$，$\dfrac{a_3}{a_2}=\dfrac{a_4}{a_3}=\dfrac12$，确为等比数列且公比为 $p$。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+先算通项。$a_1S_1=b\cdot b=b^2$。对 $k\geqslant2$，由 $a_k=b(p-1)p^{k-2}$、$S_k=bp^{k-1}$，
+
+\nopagebreak[4]
+\[
+a_kS_k=b(p-1)p^{k-2}\cdot bp^{k-1}=b^2(p-1)p^{2k-3}.
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+W_n=b^2+\sum_{k=2}^{n}b^2(p-1)p^{2k-3}
+=b^2+b^2(p-1)p\sum_{k=2}^{n}p^{2k-4}
+=b^2+b^2(p-1)p\sum_{j=0}^{n-2}\bigl(p^2\bigr)^{j}.
+\]
+
+\Needspace{5\baselineskip}
+后一和式是公比 $p^2$ 的等比数列求和。因 $\lvert p\rvert<1$ 故 $p^2\neq1$，
+
+\nopagebreak[4]
+\[
+W_n=b^2+b^2(p-1)p\cdot\frac{1-p^{2(n-1)}}{1-p^2}.
+\]
+
+\Needspace{5\baselineskip}
+由 $\lvert p\rvert<1$ 得 $p^{2(n-1)}\to0$，所以
+
+\nopagebreak[4]
+\[
+\lim_{n\to\infty}W_n
+=b^2+b^2\cdot\frac{(p-1)p}{1-p^2}
+=b^2\Bigl[1+\frac{p(p-1)}{(1-p)(1+p)}\Bigr].
+\]
+
+\Needspace{5\baselineskip}
+因 $\dfrac{p(p-1)}{(1-p)(1+p)}=\dfrac{p(p-1)}{-(p-1)(1+p)}=-\dfrac{p}{1+p}$，故
+
+\nopagebreak[4]
+\[
+\lim_{n\to\infty}W_n=b^2\left(1-\frac{p}{1+p}\right)=\frac{b^2}{1+p}.
+\]
+
+复算：取 $b=2$、$p=\dfrac12$，公式给出 $\dfrac{4}{1.5}=\dfrac83\approx2.6667$。逐项数值求和到 $n=200$，$W_{200}=2.6666666\cdots$，与之相符；再取 $b=1$、$p=-\dfrac12$，公式给出 $\dfrac{1}{0.5}=2$，数值求和亦趋于 $2$。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{b^2}{1+p}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+（1） 已知 $a$，$b$ 为实数，并且 $\mathrm e<a<b$，其中 $\mathrm e$ 是自然对数的底数，证明：$a^b>b^a$；
+
+（2） 如果正实数 $a$，$b$ 满足 $a^b=b^a$，且 $a<1$，证明：$a=b$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{（1）}
+
+\Needspace{5\baselineskip}
+因 $a$、$b$ 均为正数（$\mathrm e<a<b$），要证 $a^b>b^a$，两边取对数等价于证
+
+\nopagebreak[4]
+\[
+b\ln a>a\ln b,
+\]
+
+\Needspace{5\baselineskip}
+两边同除以正数 $ab$，即证
+
+\nopagebreak[4]
+\[
+\frac{\ln a}{a}>\frac{\ln b}{b}.
+\]
+
+\Needspace{5\baselineskip}
+设
+
+\nopagebreak[4]
+\[
+f(x)=\frac{\ln x}{x}\qquad(x>0).
+\]
+
+\Needspace{5\baselineskip}
+求导：
+
+\nopagebreak[4]
+\[
+f'(x)=\frac{\dfrac1x\cdot x-\ln x}{x^2}=\frac{1-\ln x}{x^2}.
+\]
+
+当 $x>\mathrm e$ 时 $\ln x>1$，故 $f'(x)<0$，$f$ 在 $(\mathrm e,+\infty)$ 上严格递减。由 $\mathrm e<a<b$ 得 $f(a)>f(b)$，即 $\dfrac{\ln a}{a}>\dfrac{\ln b}{b}$，从而 $a^b>b^a$。
+
+复算：取 $a=3$、$b=4$（均大于 $\mathrm e\approx2.718$），$3^4=81$、$4^3=64$，$81>64$，成立；再取 $a=2.8$、$b=2.9$，数值算得 $2.8^{2.9}\approx19.36$、$2.9^{2.8}\approx19.30$，仍是前者大，与单调性结论一致。
+
+\gksubpart{（2）}
+
+\Needspace{5\baselineskip}
+由 $a>0$、$b>0$ 及 $a^b=b^a$，两边取对数得
+
+\nopagebreak[4]
+\[
+b\ln a=a\ln b,
+\]
+
+\Needspace{5\baselineskip}
+两边同除以正数 $ab$，得
+
+\nopagebreak[4]
+\[
+\frac{\ln a}{a}=\frac{\ln b}{b},\qquad\text{即}\qquad f(a)=f(b),
+\]
+
+其中 $f(x)=\dfrac{\ln x}{x}$（如上）。
+
+\Needspace{5\baselineskip}
+先确定 $b$ 的范围。假设 $b>1$：则 $\ln b>0$，$f(b)=\dfrac{\ln b}{b}>0$；而 $0<a<1$ 给出 $\ln a<0$、$f(a)=\dfrac{\ln a}{a}<0$，与 $f(a)=f(b)$ 矛盾。故 $b\leqslant1$。又若 $b=1$，则 $a^b=a$、$b^a=1$，由 $a^b=b^a$ 得 $a=1$，与 $a<1$ 矛盾。因此
+
+\nopagebreak[4]
+\[
+0<b<1.
+\]
+
+\Needspace{5\baselineskip}
+此时 $a$、$b$ 都在 $(0,1)$ 内。由第 （1） 小题已算出的
+
+\nopagebreak[4]
+\[
+f'(x)=\frac{1-\ln x}{x^2},
+\]
+
+\Needspace{5\baselineskip}
+在 $0<x<1$ 时 $\ln x<0$，故 $1-\ln x>1>0$，$f'(x)>0$，$f$ 在 $(0,1)$ 上严格递增，从而 $f$ 在 $(0,1)$ 上是一一对应的。由 $f(a)=f(b)$ 得
+
+\nopagebreak[4]
+\[
+a=b.
+\]
+
+复算：取 $a=\dfrac12$，若 $a^b=b^a$ 且 $0<b<1$，由单调性只能 $b=\dfrac12$，此时 $\left(\dfrac12\right)^{1/2}=\left(\dfrac12\right)^{1/2}$ 平凡成立，符合结论。又检验 $b>1$ 确无解：$a=\dfrac12$、$b=2$ 时 $a^b=0.25$、$b^a=\sqrt2\approx1.414$，不相等；$a=\dfrac14$、$b=2$ 时 $a^b=\dfrac1{16}$、$b^a=\sqrt2$，亦不相等，与「$b>1$ 时应有 $a^b<1<b^a$」的论断一致。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}

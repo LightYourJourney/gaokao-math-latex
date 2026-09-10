@@ -1,0 +1,354 @@
+{
+  "attempt_id": "0bd1edcc-62db-4979-bbef-b7e466866350",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/answers.tex",
+        "sha256": "819a4126d7b98b7fd7eab3fbc64cca083ee3c54d913f31cae616a87b26b14e35"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/answers_short.tex",
+        "sha256": "fe8fcbc797a126433c717ce3cebc1f438826573850b78cdff6437d8034d224d7"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/questions.tex",
+        "sha256": "f29b79ecacc42321337350bd199474337ac0524ee169b4d7579142c7e1f24ecf"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/印刷版.tex",
+        "sha256": "b6c62c5e72215f1de1ab95ac272b6597fa4e444a156b88328b271f4869a586f0"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/简答版.tex",
+        "sha256": "3ff86a5e2ce0b70e4a69adc097a18f2e1a1784f1bd7ccc6151de8e7e7a273d69"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/解析版.tex",
+        "sha256": "25fa16858b4a3f997e294814d872ef040c7b87030f8f9cb953fc278429a6d663"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/试题版.tex",
+        "sha256": "c3789790075c40420955d38b9fe525c06eeb946b8c1685f1c607fb564d58e6aa"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "f747a6f8ed3dfaa5b0efd3e31054101652433a119ef88f71bd73bc10bc6c13c8"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 2,
+        "path": "math-gaokao-latex/1981_全国卷文/build/试题版.pdf",
+        "sha256": "88fe873dc0e286ea78ca3ee498d0ee556372027b9dd4866d35765d84b02be7a7",
+        "size_bytes": 79883
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1981_全国卷文/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "166",
+            "text": "Overfull \\hbox (16.37949pt too wide) detected at line 166",
+            "width_pt": "16.37949"
+          },
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "358--359",
+            "text": "Overfull \\hbox (39.80443pt too wide) in paragraph at lines 358--359",
+            "width_pt": "39.80443"
+          }
+        ],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:1' on page 3 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:2' on page 4 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:3' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:4' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:5' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:6' on page 7 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:7' on page 9 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:8' on page 10 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:9' on page 11 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 12,
+        "path": "math-gaokao-latex/1981_全国卷文/build/解析版.pdf",
+        "sha256": "5f752182aa3ea801854ac9f535e7a292532642defde7c205156d0cc72b4f99b0",
+        "size_bytes": 165237
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1981_全国卷文/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/1981_全国卷文/build/简答版.pdf",
+        "sha256": "e84c3cebf7db8879176cb4a1a9f838c09401e23279a74aaae337ab9dab2fc764",
+        "size_bytes": 92844
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1981_全国卷文/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:1' on page 2 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:2' on page 3 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:3' on page 4 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:4' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:5' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:6' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:7' on page 7 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:8' on page 8 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:9' on page 8 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 9,
+        "path": "math-gaokao-latex/1981_全国卷文/build/印刷版.pdf",
+        "sha256": "a98a61951fd2c6f9f700955de71f3d7a6f53aa9fa4bba1b65dfa8dec82ea8bd5",
+        "size_bytes": 165392
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1981_全国卷文/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-10T20:49:37+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1981/1981_数学真题_文_答案要点.md",
+        "sha256": "2091f5c4b31ed938c61d3ad05801e972f7a0f562dcac9e2cf39fc2d6df2b89f5"
+      },
+      {
+        "path": "1981/1981_数学真题_文_解析正文.md",
+        "sha256": "d8fa49f567c64257c5e33539e9320484419a47b2aa632025203d9d581237ce3f"
+      },
+      {
+        "path": "1981/1981_数学真题_文_试题.md",
+        "sha256": "e1dfa075385a922e793ea920fce76548920ca217a1f9273788fd727cf149231b"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "b4699e0de24b0b392427ab62baea8028f5bfb5b2b054df8f5ca2156800cf1c79"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/印刷版.tex",
+        "sha256": "b6c62c5e72215f1de1ab95ac272b6597fa4e444a156b88328b271f4869a586f0"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/简答版.tex",
+        "sha256": "3ff86a5e2ce0b70e4a69adc097a18f2e1a1784f1bd7ccc6151de8e7e7a273d69"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/解析版.tex",
+        "sha256": "25fa16858b4a3f997e294814d872ef040c7b87030f8f9cb953fc278429a6d663"
+      },
+      {
+        "path": "math-gaokao-latex/1981_全国卷文/试题版.tex",
+        "sha256": "c3789790075c40420955d38b9fe525c06eeb946b8c1685f1c607fb564d58e6aa"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "f7cd9bff325976b55acc6e05eefd110c17faf8aec1ca85f14f1d2912850ee8ec"
+  },
+  "input_projection": "4899aa5e525719adacc7d234cfbbaf0d7145fb0a6c19bd6f365baffc788ed208",
+  "manifest_revision": 1634,
+  "paper_id": "gk-1981-regular-arts",
+  "previous_attempt_id": null,
+  "project_dir": "1981_全国卷文",
+  "schema_version": 1,
+  "started_at": "2026-09-10T20:49:08+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}
