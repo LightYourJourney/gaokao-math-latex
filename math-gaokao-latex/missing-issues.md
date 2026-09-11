@@ -170,14 +170,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "配图左缘被切（内容包围盒 x 起自 0）：待填空白框左边框被切除、「k=k+1」被切成「= k + 1」、循环回边不完整；下缘越界混入第 9、10 题正文与被切成残片的选项行（(A) 项不可读）。同一框图在文卷的转录件 2019文-t9-程序框图.png 无此问题。",
+  "current_evidence": "原始理科源图左缘被切（内容包围盒 x 起自 0）：待填空白框左边框被切除、「k=k+1」被切成「= k + 1」、循环回边不完整；下缘越界混入第 9、10 题正文与被切成残片的选项行（(A) 项不可读）。同一框图在文科固定源 `2019文-t9-程序框图.png` 中完整；最终 LaTeX 不把裁切 PNG 当线稿，而由既有 `2019_全国Ⅰ卷_理科/figures/f2019_flow.tex` 矢量重绘，完整包含空白框左边框、`k=k+1` 和回流箭头。phase0-b02 四版本构建与视觉回执已通过。",
   "fingerprint": "ef53e85a85a78cede3c8d180b1ad96eb90af09ab1861111996a2c8341c271128",
   "impact": "blocks_completion",
   "paper_id": "gk-2019-regular-national-1-science",
   "question_id": "gk-2019-regular-national-1-science-q08",
-  "resume_action": "重新导出 images/2019理-t8-程序框图.png：左缘需完整含待填「空白框」左边框与 k=k+1 框，下缘不得越界混入第 9/10 题正文与残缺选项行",
+  "resolution": "保留裁切理科 PNG 作为来源缺陷记录；沿图形标准不新增或提交 PNG，采用同题完整文科源交叉核对，并使用 `f2019_flow.tex` 矢量重绘。四个版本的生成、XeLaTeX 构建和视觉复核均通过。",
+  "resume_action": "已完成矢量修复；不提交原卷截图或 PNG",
   "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
