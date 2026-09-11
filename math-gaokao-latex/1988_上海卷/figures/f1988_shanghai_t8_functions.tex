@@ -1,0 +1,43 @@
+% 1988 年上海卷第二大题第 8 小题：四个函数图象选项示意
+\begin{tikzpicture}[scale=0.72,>=stealth,font=\scriptsize]
+  \begin{scope}[shift={(-3.0,2.25)}]
+    \draw[->] (-1.4,0)--(1.65,0) node[right] {$x$};
+    \draw[->] (0,-1.1)--(0,1.75) node[above] {$y$};
+    \draw[thick] (-1.25,-0.9)--(1.25,1.35);
+    \draw[thick,domain=0.08:1.45,samples=60]
+      plot (\x,{0.8*ln(\x)/ln(2)});
+    \node[above] at (0.7,1.48) {$y=x+a$};
+    \node[right] at (1.32,0.35) {$y=\log_2x$};
+    \node[below] at (0,-1.45) {（A）};
+  \end{scope}
+  \begin{scope}[shift={(1.0,2.25)}]
+    \draw[->] (-1.4,0)--(1.65,0) node[right] {$x$};
+    \draw[->] (0,-1.1)--(0,1.75) node[above] {$y$};
+    \draw[thick] (-1.25,-0.9)--(1.25,1.35);
+    \draw[thick,domain=-1.25:1.4,samples=80]
+      plot (\x,{0.9*exp(-0.85*\x)});
+    \node[above right] at (0.35,1.47) {$y=a^x$};
+    \node[right] at (1.15,0.45) {$y=x+a$};
+    \node[below] at (0,-1.45) {（B）};
+  \end{scope}
+  \begin{scope}[shift={(-3.0,-1.35)}]
+    \draw[->] (-1.4,0)--(1.65,0) node[right] {$x$};
+    \draw[->] (0,-1.1)--(0,1.75) node[above] {$y$};
+    \draw[thick] (-1.25,-0.9)--(1.25,1.35);
+    \draw[thick,domain=0:1.45,samples=70]
+      plot (\x,{0.85*\x^0.55});
+    \node[above right] at (0.48,1.4) {$y=x^a$};
+    \node[below] at (0,-1.45) {（C）};
+  \end{scope}
+  \begin{scope}[shift={(1.0,-1.35)}]
+    \draw[->] (-1.4,0)--(1.65,0) node[right] {$x$};
+    \draw[->] (0,-1.1)--(0,1.75) node[above] {$y$};
+    \draw[thick] (-1.25,-0.9)--(1.25,1.35);
+    \draw[thick,domain=-1.25:-0.08,samples=60]
+      plot (\x,{-0.55*sqrt(-\x)});
+    \draw[thick,domain=0.08:1.45,samples=60]
+      plot (\x,{0.55*sqrt(\x)});
+    \node[right] at (0.48,0.73) {$y=x^a$};
+    \node[below] at (0,-1.45) {（D）};
+  \end{scope}
+\end{tikzpicture}

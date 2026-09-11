@@ -1,0 +1,28 @@
+% 1988 年上海卷第三题：圆锥、圆柱轴截面示意图
+\begin{tikzpicture}[scale=0.7,>=stealth,font=\small]
+  \begin{scope}[shift={(-3.0,0)}]
+    \coordinate (L) at (-1.55,1.25);
+    \coordinate (R) at (1.55,1.25);
+    \coordinate (V) at (0,-1.25);
+    \draw[thick] (L)--(V)--(R)--cycle;
+    \draw[dashed] (0,1.25)--(V);
+    \draw[thin] (-1.55,0.25)--(1.55,0.25);
+    \draw[<->] (-1.55,1.52)--(0,1.52)
+      node[midway,above] {$a$};
+    \draw[<->] (-1.85,1.25)--(-1.85,-1.25)
+      node[midway,left] {$a$};
+    \draw[<->] (1.85,0.25)--(1.85,-1.25)
+      node[midway,right] {$h$};
+    \node[below] at (0,-1.65) {圆锥};
+  \end{scope}
+  \begin{scope}[shift={(2.1,0)}]
+    \draw[thick] (-1.0,-1.25)--(-1.0,1.25)--(1.0,1.25)--(1.0,-1.25)--cycle;
+    \draw[dashed] (0,-1.45)--(0,1.45);
+    \draw[thin] (-1.0,0.25)--(1.0,0.25);
+    \draw[<->] (-1.0,1.52)--(0,1.52)
+      node[midway,above] {$\dfrac a2$};
+    \draw[<->] (1.3,0.25)--(1.3,-1.25)
+      node[midway,right] {$h$};
+    \node[below] at (0,-1.65) {圆柱};
+  \end{scope}
+\end{tikzpicture}

@@ -12381,3 +12381,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0790
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 页第 6 小题可见“若 sin α=5/13，α 为第二象限角，则 tg(α/2) 的值为”题干，但当前扫描在题干后未见 A、B、C、D 四个选项；第 3 页答案表仍记录该小题代号 B。",
+  "fingerprint": "8f9048419fee231e5f125695780b613826952b36341451ecc8e5e74d84fae8de",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1988-regular-shanghai",
+  "question_id": "gk-1988-regular-shanghai-q02",
+  "resume_action": "取得包含第 2 大题第 6 小题 A、B、C、D 选项的完整固定源或独立可核验扫描页，然后重跑题面核对、答案核对、生成、编译与视觉复核。",
+  "source_id": "src-4a65e135bdb52f81bc99a0783fd42dc77e118ca220546d84412fdcae8197c424",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

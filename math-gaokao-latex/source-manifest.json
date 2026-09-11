@@ -612,6 +612,14 @@
         "gk-1988-regular-guangdong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b69",
+      "issues": [],
+      "paper_ids": [
+        "gk-1988-regular-shanghai"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -621,7 +629,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "95555482-bc7c-4f95-bcba-f9ff5b9f87bc",
+  "last_transaction_id": "1e81400b-3938-4594-ba02-97a1054cebcc",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8708,9 +8716,71 @@
       "title": "1988 年·广东卷·文史类",
       "track": "arts",
       "year": 1988
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1988_上海卷/figures/f1988_shanghai_t3_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1988_上海卷/figures/f1988_shanghai_t5_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1988_上海卷/figures/f1988_shanghai_t8_functions.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1988_shanghai",
+        "id": "gk-1988-regular-shanghai",
+        "note": "固定源为 6 页横向扫描：第 1—3 页主要为题面，第 3—6 页含答案与解答；第 2 大题第 6 小题在扫描中缺少四个选项。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          3,
+          6
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "未分科",
+        "variant": "上海"
+      },
+      "issue_ids": [
+        "ISSUE-0790"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1988-regular-shanghai",
+      "production_state": "blocked",
+      "project_dir": "1988_上海卷",
+      "question_count": 7,
+      "resume_action": "取得包含第 2 大题第 6 小题 A、B、C、D 选项的完整固定源或独立可核验扫描页，然后重跑题面核对、答案核对、生成、编译与视觉复核。",
+      "source_files": {
+        "answer_key": "1988/1988_数学真题_上海_答案要点.md",
+        "combined_rendered": "1988/1988_数学真题_上海_含解析.md",
+        "questions": "1988/1988_数学真题_上海_试题.md",
+        "solution_body": "1988/1988_数学真题_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-4a65e135bdb52f81bc99a0783fd42dc77e118ca220546d84412fdcae8197c424"
+      ],
+      "title": "1988 年·上海卷",
+      "track": "none",
+      "year": 1988
     }
   ],
-  "revision": 1928,
+  "revision": 1944,
   "schema_version": 1,
   "sources": [
     {
@@ -12375,8 +12445,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a3939db5230d34bd1ca77456f7bd216b056dc18b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1988-regular-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "1988上海.pdf",
       "regions": [],
       "source_id": "src-4a65e135bdb52f81bc99a0783fd42dc77e118ca220546d84412fdcae8197c424",
