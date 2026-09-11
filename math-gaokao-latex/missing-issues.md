@@ -17,22 +17,6 @@
   "type": "identity-ambiguous"
 }
 ```
-## ISSUE-0779
-
-```json
-{
-  "affected_paper_ids": [],
-  "current_evidence": "固定源第 22 题的极限下标写为 n→∞，但括号内和指数使用变量 x；按题面字面 x 未随 n 变化，无法得到唯一极限。若将 x 修订为 n，条件性结果为 e^(−1/2)。",
-  "fingerprint": "3076fd80ee19a575e9903091e424a6c13720b649e3d08c08eb17e1c25892ecc4",
-  "impact": "blocks_completion",
-  "paper_id": "gk-1987-regular-national-science",
-  "question_id": "gk-1987-regular-national-science-q22",
-  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 22 题极限下标是否应为 x，或括号内变量和指数是否应为 n；确认前保留固定源字面并阻断该题答案。",
-  "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
-  "status": "open",
-  "type": "transcription-ambiguous"
-}
-```
 ## ISSUE-0002
 
 ```json
@@ -12209,5 +12193,37 @@
   "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
   "status": "open",
   "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0779
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 22 题的极限下标写为 n→∞，但括号内和指数使用变量 x；按题面字面 x 未随 n 变化，无法得到唯一极限。若将 x 修订为 n，条件性结果为 e^(−1/2)。",
+  "fingerprint": "3076fd80ee19a575e9903091e424a6c13720b649e3d08c08eb17e1c25892ecc4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-national-science",
+  "question_id": "gk-1987-regular-national-science-q22",
+  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 22 题极限下标是否应为 x，或括号内变量和指数是否应为 n；确认前保留固定源字面并阻断该题答案。",
+  "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0780
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第三大题的解答页只写有“解答见印刷页 286”，而当前 PDF 截止印刷页 280；本库已提供独立几何推导，但缺少固定源原解答页。",
+  "fingerprint": "8f2bb70097b7209cfe40b0e4c84461ff1fb5e4b161c3006cc05927be2e43a8a1",
+  "impact": "non_blocking",
+  "paper_id": "gk-1987-regular-guangdong-arts",
+  "question_id": "gk-1987-regular-guangdong-arts-q04",
+  "resume_action": "取得包含印刷页 286 的同版广东文科解答源，将固定源答案与本库独立推导逐项比对；在此之前保留独立结果并标注来源缺页。",
+  "source_id": "src-11b2f166621b2cea6a14d5390e97f3428d3511ca4dc67f7d3dab516a4abc7b0f",
+  "status": "open",
+  "type": "answer-missing"
 }
 ```

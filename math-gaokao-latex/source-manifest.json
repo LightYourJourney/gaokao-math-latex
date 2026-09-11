@@ -556,6 +556,14 @@
         "gk-1987-regular-national-science"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b62",
+      "issues": [],
+      "paper_ids": [
+        "gk-1987-regular-guangdong-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -565,7 +573,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e9af64c2-0ee9-4134-8fbf-28a4ee40b235",
+  "last_transaction_id": "03cdb251-2a3b-430c-bf56-af9a8dbb198d",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8260,9 +8268,61 @@
       "title": "1987 年·全国卷·理科",
       "track": "science",
       "year": 1987
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1987_广东卷_文史类/figures/f1987_guangdong_arts_t4_frustum.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1987_guangdong_arts",
+        "id": "gk-1987-regular-guangdong-arts",
+        "note": "固定源为扫描 PDF：PDF 第 1—7 页为题面，原卷印刷页 265—271；第 8—16 页为答案与解答，原卷印刷页 272—280。第三大题固定源只交叉引用印刷页 286，未包含该题解答；本库保留独立推导。第三大题图形依据固定源关系重绘为 TikZ。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          8,
+          16
+        ],
+        "paper": "广东卷（文史类）",
+        "structure": {
+          "大题": [
+            1,
+            6
+          ]
+        },
+        "track": "文史类",
+        "variant": "广东文史类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1987-regular-guangdong-arts",
+      "production_state": "planned",
+      "project_dir": "1987_广东卷_文史类",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1987/1987_数学真题_广东文_答案要点.md",
+        "combined_rendered": "1987/1987_数学真题_广东文_含解析.md",
+        "questions": "1987/1987_数学真题_广东文_试题.md",
+        "solution_body": "1987/1987_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-11b2f166621b2cea6a14d5390e97f3428d3511ca4dc67f7d3dab516a4abc7b0f"
+      ],
+      "title": "1987 年·广东卷·文史类",
+      "track": "arts",
+      "year": 1987
     }
   ],
-  "revision": 1883,
+  "revision": 1884,
   "schema_version": 1,
   "sources": [
     {
@@ -11879,8 +11939,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b0d65981e01916e78f0429a088dc7127f61437f4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1987-regular-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1987广东文.pdf",
       "regions": [],
       "source_id": "src-11b2f166621b2cea6a14d5390e97f3428d3511ca4dc67f7d3dab516a4abc7b0f",
