@@ -580,6 +580,14 @@
         "gk-1987-regular-shanghai-math"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b65",
+      "issues": [],
+      "paper_ids": [
+        "gk-1988-regular-national-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -589,7 +597,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cc64f860-c977-408b-8610-063eafa3b20b",
+  "last_transaction_id": "b6bb7412-83d0-4cda-b5fc-1021a7bddf98",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8444,9 +8452,66 @@
       "title": "1987 年·上海卷·数学",
       "track": "none",
       "year": 1987
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1988_全国卷_理科/figures/f1988_national_science_t19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1988_全国卷_理科/figures/f1988_national_science_t22_tri_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1988_全国卷_理科/figures/f1988_national_science_t9_frustum.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1988_national_science",
+        "id": "gk-1988-regular-national-science",
+        "note": "固定源为 A3 横向单页题面，原卷页码 32；PDF 含文字层和矢量图形，但不含答案或解析。第 9、19、22 题图形依据固定源关系重绘为 TikZ，答案和解析均为本库独立复算。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "题目": [
+            1,
+            25
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1988-regular-national-science",
+      "production_state": "planned",
+      "project_dir": "1988_全国卷_理科",
+      "question_count": 25,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1988/1988_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1988/1988_数学真题_全国理_含解析.md",
+        "questions": "1988/1988_数学真题_全国理_试题.md",
+        "solution_body": "1988/1988_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-413d0a5bee2b9e2b96c030fab27ea64b06e0cd81aefa1cd64d8eb4be4cf848af"
+      ],
+      "title": "1988 年·全国卷·理科",
+      "track": "science",
+      "year": 1988
     }
   ],
-  "revision": 1886,
+  "revision": 1887,
   "schema_version": 1,
   "sources": [
     {
@@ -12159,8 +12224,8 @@
       "exam_type": "regular",
       "git_blob_oid": "86c5dbcb2eece60ee2941ce7ee4b060f390e8a3d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1988-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1988全国理.pdf",
       "regions": [],
       "source_id": "src-413d0a5bee2b9e2b96c030fab27ea64b06e0cd81aefa1cd64d8eb4be4cf848af",
