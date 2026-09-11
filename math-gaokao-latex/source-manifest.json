@@ -596,6 +596,14 @@
         "gk-1988-regular-national-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b67",
+      "issues": [],
+      "paper_ids": [
+        "gk-1988-regular-guangdong-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -605,7 +613,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "f2ee3eb2-80e3-42f2-aece-778b1636e177",
+  "last_transaction_id": "2c14a12a-e88c-4be4-b617-7bd41c16d096",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8578,9 +8586,67 @@
       "title": "1988 年·全国卷·文科",
       "track": "arts",
       "year": 1988
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1988_广东卷_理工农医类/figures/f1988_guangdong_science_t2_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1988_guangdong_science",
+        "id": "gk-1988-regular-guangdong-science",
+        "note": "固定源为 A4 文字/矢量 PDF：PDF 第 1—4 页为题面，第 5—9 页为答案与解答。第 1 题第（23）小题题面所称右图在固定源中缺失，保留题面和固定源答案 A，并列入问题总账；第（24）小题的 sin 10、cos 5 按固定源原样记录，不补加度数符号。第二卷第二题图形依据固定源重绘为 TikZ。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          5,
+          9
+        ],
+        "paper": "广东卷（理工农医类）",
+        "structure": {
+          "大题": [
+            1,
+            6
+          ]
+        },
+        "track": "理工农医类",
+        "variant": "广东理工农医类"
+      },
+      "issue_ids": [
+        "ISSUE-0785",
+        "ISSUE-0786",
+        "ISSUE-0787",
+        "ISSUE-0788",
+        "ISSUE-0789"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1988-regular-guangdong-science",
+      "production_state": "blocked",
+      "project_dir": "1988_广东卷_理工农医类",
+      "question_count": 6,
+      "resume_action": "取得包含第 23 小题右图的更完整固定源或独立可核验扫描页；在补齐前保留题面文字和固定源答案 A，不凭空补图。",
+      "source_files": {
+        "answer_key": "1988/1988_数学真题_广东理_答案要点.md",
+        "combined_rendered": "1988/1988_数学真题_广东理_含解析.md",
+        "questions": "1988/1988_数学真题_广东理_试题.md",
+        "solution_body": "1988/1988_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9047cf57fbda6f984bbcfc55e4fe8db14b99ddbb1d756b65d3dcc9ea0d01926a"
+      ],
+      "title": "1988 年·广东卷·理工农医类",
+      "track": "science",
+      "year": 1988
     }
   ],
-  "revision": 1892,
+  "revision": 1910,
   "schema_version": 1,
   "sources": [
     {
@@ -12341,8 +12407,8 @@
       "exam_type": "regular",
       "git_blob_oid": "83f2a1c563ca9521733523bccd33d29843e8a709",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1988-regular-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1988广东理.pdf",
       "regions": [],
       "source_id": "src-9047cf57fbda6f984bbcfc55e4fe8db14b99ddbb1d756b65d3dcc9ea0d01926a",

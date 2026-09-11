@@ -12291,3 +12291,93 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0785
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1—4 页题面明确写“已知 y=f(x) 的图象如右图”，但逐页视觉检查和 PDF 资源列表均未发现该图；第 23 小题四个文字选项可辨，图形本身缺失。",
+  "fingerprint": "d49bf04f0350744567b6eda768689168e28a367fff204d44e87d897e408e27aa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1988-regular-guangdong-science",
+  "question_id": "gk-1988-regular-guangdong-science-q01",
+  "resume_action": "取得包含第 23 小题右图的更完整固定源或独立可核验扫描页；在补齐前保留题面文字和固定源答案 A，不凭空补图。",
+  "source_id": "src-9047cf57fbda6f984bbcfc55e4fe8db14b99ddbb1d756b65d3dcc9ea0d01926a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0786
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "1800a0e74166b7e0bb24fe80826b0361fcc1742c53dea3ad28f79ab679bdc21e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1988-regular-guangdong-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0787
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "428d3d0bb1107a6c2621be105f22f678b50a7037565f61ee498fa56dc6c540bf",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1988-regular-guangdong-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0788
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "5166830f39912a0d514346f716a373be244579480a154c342611eed0f3e6d5d5",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1988-regular-guangdong-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0789
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "649219f70165d849a9b7e87d0fe23874aef0ba93efdc830620c5b85247f1f7a0",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1988-regular-guangdong-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
