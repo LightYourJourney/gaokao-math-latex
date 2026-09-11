@@ -1,15 +1,13 @@
-% 1987 年全国卷文科第 8 题：y=sin 2x 图象
-\begin{tikzpicture}[scale=0.62,>=stealth]
-  \draw[->] (-3.0,0)--(3.5,0) node[right] {$x$};
-  \draw[->] (0,-1.5)--(0,1.6) node[above] {$y$};
-  \draw[thick,domain=-2.85:3.25,samples=160]
-    plot (\x,{sin(114.592*\x)});
-  \draw[dashed] (-1.57,-1.1)--(-1.57,1.1);
-  \draw[dashed] (1.57,-1.1)--(1.57,1.1);
-  \node[below] at (-1.57,0) {$-\frac\pi2$};
-  \node[below] at (1.57,0) {$\frac\pi2$};
-  \node[below right] at (3.14,0) {$\pi$};
+% 1987 年全国卷文科第八题：y=sin 2x 的示意图
+\begin{tikzpicture}[scale=0.72,>=stealth,font=\small]
+  \draw[->] (-1.9,0)--(3.55,0) node[below right] {$x$};
+  \draw[->] (0,-1.45)--(0,1.55) node[left] {$y$};
+  \draw[thick,domain=-1.75:3.25,samples=160,smooth]
+    plot (\x,{sin(deg(2*\x))});
+  \node[below] at (-1.57,0) {$-\dfrac\pi2$};
+  \node[below right] at (0.05,0) {$O$};
+  \node[below] at (1.57,0) {$\dfrac\pi2$};
+  \node[below] at (3.14,0) {$\pi$};
   \node[left] at (0,1) {$1$};
   \node[left] at (0,-1) {$-1$};
-  \node[below left] at (0,0) {$O$};
 \end{tikzpicture}

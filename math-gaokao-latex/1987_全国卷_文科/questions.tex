@@ -5,13 +5,13 @@
 \gkpart{文科数学}
 
 \begin{gktip}
-\textbf{来源说明}：本题面依据固定源 PDF《1987 普通高等学校招生考试（全国卷文）》单页逐题转录。固定源 PDF 第 1 页、原卷印刷页码 31；该 PDF 不含答案和解析页，下列答案和解析由本库独立推导，不声称代表官方发布版本。
+\textbf{来源说明}：本题面依据固定源 PDF《1987 普通高等学校招生考试（全国卷文）》逐题转录。固定源共 1 页 A3 横向扫描，原卷页码 31；第 1—8 题为选择题，第 9—16 题为填空题，第 17—22 题为解答题。固定源不含答案或解析页，答案和解析依据题面独立复算。
 
-\textbf{图形说明}：第 5 题的二次函数图、第 8 题的正弦曲线和第 18 题的三棱锥图依据固定源图形关系重绘为 TikZ 矢量图。
+\textbf{图形说明}：第 5、8、18、22 题的图形依据固定源关系重绘为 TikZ 矢量图。第 17、22 题按完整题面保留两个可能的结果。
 \end{gktip}
 
 \begin{question}
-\gkti{1}设 $S,T$ 是两个非空集合，且 $S\nsubseteq T,\ T\nsubseteq S$，令 $X=S\cap T$，那么 $S\cup X$ 等于\mbox{（　　）}
+\gkti{1}设 $S\text{、}T$ 是两个非空集合，且 $S\nsubseteq T$，$T\nsubseteq S$，令 $X=S\cap T$，那么 $S\cup X$ 等于\mbox{（　　）}
 
 （A）$X$　　（B）$T$　　（C）$\varnothing$　　（D）$S$
 
@@ -32,7 +32,14 @@
 
 \end{question}
 \begin{question}
-\gkti{3}设 $\log_3 4\cdot\log_4 8\cdot\log_8m=\log_4 16$，那么 $m$ 等于\mbox{（　　）}
+\gkti{3}设
+
+\nopagebreak[4]
+\[
+\log_3 4\cdot\log_4 8\cdot\log_8m=\log_4 16,
+\]
+
+那么 $m$ 等于\mbox{（　　）}
 
 （A）$\dfrac92$　　（B）$9$　　（C）$18$　　（D）$27$
 
@@ -87,7 +94,14 @@ y=\sin\left(2x-\frac\pi3\right)
 
 \end{question}
 \begin{question}
-\gkti{9}求函数 $y=\sin^2 2x$ 的周期。
+\gkti{9}求函数
+
+\nopagebreak[4]
+\[
+y=\sin^2 2x
+\]
+
+的周期。
 
 \end{question}
 \begin{question}
@@ -110,14 +124,12 @@ y=\sin\left(2x-\frac\pi3\right)
 
 \nopagebreak[4]
 \[
-\lim_{n\to\infty}\left(
-\frac1{n^2}+\frac2{n^2}+\frac3{n^2}
-+\cdots+\frac{2n}{n^2}\right).
+\lim_{n\to\infty}\left(\frac1{n^2}+\frac2{n^2}+\frac3{n^2}+\cdots+\frac{2n}{n^2}\right).
 \]
 
 \end{question}
 \begin{question}
-\gkti{13}由数字 $1,2,3,4,5$ 组成没有重复数字且数字 1 与 2 不相邻的五位数。求这种五位数的个数。
+\gkti{13}由数字 $1\text{、}2\text{、}3\text{、}4\text{、}5$ 组成没有重复数字且数字 1 与 2 不相邻的五位数，求这种五位数的个数。
 
 \end{question}
 \begin{question}
@@ -140,9 +152,9 @@ y=\log_2(1+2x-3x^2)
 
 \nopagebreak[4]
 \[
-I_A=I\sin\omega t,\quad
-I_B=I\sin(\omega t+120^\circ),\quad
-I_C=I\sin(\omega t+240^\circ),
+I_A=I\sin\omega t,\qquad
+I_B=I\sin(\omega t+120^\circ),\qquad
+I_C=I\sin(\omega t+240^\circ).
 \]
 
 求 $I_A+I_B+I_C$ 的值。
@@ -161,7 +173,7 @@ I_C=I\sin(\omega t+240^\circ),
 \Needspace{0.4\textheight}
 \end{question}
 \begin{question}
-\gkti{18}如图，三棱锥 $P-ABC$ 中，已知 $PA\perp BC,\ PA=BC=L$，$PA,BC$ 的公垂线 $ED=h$。求证：三棱锥 $P-ABC$ 的体积
+\gkti{18}如图，三棱锥 $P-ABC$ 中，已知 $PA\perp BC$，$PA=BC=L$，$PA\text{、}BC$ 的公垂线 $ED=h$。求证：三棱锥 $P-ABC$ 的体积
 
 \nopagebreak[4]
 \[
@@ -195,26 +207,21 @@ z_1\overline{z_2}+\overline A z_1+A\overline{z_2}=0,
 其中 $A$ 为不等于 0 的复数。证明：
 
 \Needspace{5\baselineskip}
-（1） 证明：
+（1）　
 
 \nopagebreak[4]
 \[
-|z_1+A||z_2+A|=|A|^2
+|z_1+A||z_2+A|=|A|^2\text{；}
 \]
-；
 
 \Needspace{5\baselineskip}
-（2） 证明：
+（2）　
 
 \nopagebreak[4]
 \[
 \frac{z_1+A}{z_2+A}
-=\left|
-\frac{\overline{z_1}+\overline A}
-{\overline{z_2}+\overline A}
-\right|
+=\frac{\overline{z_1+A}}{\overline{z_2+A}}.
 \]
-。
 
 \end{question}
 \begin{question}
@@ -222,12 +229,12 @@ z_1\overline{z_2}+\overline A z_1+A\overline{z_2}=0,
 
 \nopagebreak[4]
 \[
-S_n=ka_n+1,
+S_n=ka_n+1
 \]
 
-其中 $k$ 是与 $n$ 无关的常数，且 $k\ne1$。
+（其中 $k$ 是与 $n$ 无关的常数，且 $k\ne1$）。
 
-（1） 试写出用 $n,k$ 表示的 $a_n$ 的表达式；
+（1） 试写出用 $n\text{、}k$ 表示的 $a_n$ 的表达式；
 
 \Needspace{5\baselineskip}
 （2） 若
@@ -241,21 +248,6 @@ S_n=ka_n+1,
 
 \end{question}
 \begin{question}
-\gkti{22}正方形 $ABCD$ 在直角坐标平面内，已知其一条边 $AB$ 在直线
-
-\nopagebreak[4]
-\[
-y=x+4
-\]
-
-\Needspace{5\baselineskip}
-上，$C,D$ 在抛物线
-
-\nopagebreak[4]
-\[
-x=y^2
-\]
-
-上，求正方形 $ABCD$ 的面积。
+\gkti{22}正方形 $ABCD$ 在直角坐标平面内，已知其一条边 $AB$ 在直线 $y=x+4$ 上，$C\text{、}D$ 在抛物线 $x=y^2$ 上，求正方形 $ABCD$ 的面积。
 
 \end{question}
