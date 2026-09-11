@@ -12398,3 +12398,37 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0791
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 1 题第（17）小题可见条件与固定答案表 C 不相容，第（22）小题题干可读但 A—D 轨迹图形选项整段缺失；细项分别由既有 ISSUE-0782、ISSUE-0784 跟踪，本条作为题面级阻塞汇总。",
+  "fingerprint": "2fadfb7ccb2e84edd8b639b053728857f46cbe3b9b388cd65f9a2c8ae4f5a48a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01",
+  "resume_action": "取得第 1 题第（17）、（22）小题的完整题面/答案对应源，解决答案冲突并补齐缺失图形选项后，重跑逐题核查、生成、编译和复核。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0792
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 1 题第（17）小题的固定答案表记为 C，但按当前可见题面条件不能推出该结论；细项由 ISSUE-0782 跟踪，本条作为题面级答案冲突汇总。",
+  "fingerprint": "1c2d1bc91d6b7d2f4792e1cc2eb0b6fffe65afda63db157178b22c86968145d9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01",
+  "resume_action": "取得第 1 题第（17）小题的完整题面/权威勘误，解决可见条件与固定答案表的冲突后，重跑答案核查、生成、编译和复核。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
