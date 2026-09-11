@@ -12379,7 +12379,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 2 页第 6 小题可见“若 sin α=5/13，α 为第二象限角，则 tg(α/2) 的值为”题干，但当前扫描在题干后未见 A、B、C、D 四个选项；第 3 页答案表仍记录该小题代号 B。",
+  "current_evidence": "固定源第 2 页第 6 小题可见“若 sin α=5/13，α 为第二象限角，则 tg(α/2) 的值为”题干，但当前扫描在题干后未见 A、B、C、D 四个选项；第 3 页答案表仍记录该小题代号 B。已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1988/1988上海.pdf` 复核：文件 SHA-256 为 `eba069161024fb508a36ecb51e8707afb1114c8e873548a9aff5c187635aa51a`、162789 字节、6 页，与 manifest artifact 完全一致；第 2 页视觉上同样缺少 A—D 选项。因此缺失来自固定上游本身，不是本库漏页或导入损坏。",
   "fingerprint": "8f9048419fee231e5f125695780b613826952b36341451ecc8e5e74d84fae8de",
   "impact": "blocks_completion",
   "paper_id": "gk-1988-regular-shanghai",
