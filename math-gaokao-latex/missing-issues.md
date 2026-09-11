@@ -12432,3 +12432,83 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-0793
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "499eb3d8a813d12ff1d9285777fb442ee800e62dc5fb0b04baee39c9881eef55",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q01",
+  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0794
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "f37fc85f7b4489265ed34284aaecc711eb0c476bb50542077772c96f21639598",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02",
+  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 2(9) 题第二条件；确认前保留固定源题面。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0795
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "19c213f540ab41126f054a59c822558aa489334dcb1464cc4b06e62519ab933d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02",
+  "resume_action": "确认第 2(9) 题原始条件后，重新推导 S_20 并更新答案、解析和核验记录。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0796
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "4b9aae5b64c90c7fc998570cc483e6748069c1e828e75ff21e7d74ddf78f75ce",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02",
+  "resume_action": "取得独立权威题面确认第 2(9) 题后，按确认版本完成答案冲突裁决。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0797
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e58aaae6a5734e320bbb8414e686209805fe7be840e42b5511c41d40622b320e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01",
+  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

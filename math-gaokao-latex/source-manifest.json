@@ -531,7 +531,7 @@
       "paper_ids": [
         "gk-1986-regular-guangdong-arts"
       ],
-      "status": "planned"
+      "status": "closed_with_blockers"
     },
     {
       "batch_id": "phase2-b59",
@@ -539,7 +539,7 @@
       "paper_ids": [
         "gk-1986-regular-guangdong-science"
       ],
-      "status": "planned"
+      "status": "closed_with_blockers"
     },
     {
       "batch_id": "phase2-b60",
@@ -629,7 +629,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7bd6c439-0f23-4ca5-a2a1-cd6712d6abe5",
+  "last_transaction_id": "c4b08426-cbc9-4336-a9fe-710a7e05b7aa",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8119,7 +8119,7 @@
       "year": 1986
     },
     {
-      "blocked_from": null,
+      "blocked_from": "planned",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -8148,15 +8148,24 @@
         "track": "文史类",
         "variant": "广东文史类"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0774",
+        "ISSUE-0775",
+        "ISSUE-0776",
+        "ISSUE-0777",
+        "ISSUE-0793",
+        "ISSUE-0794",
+        "ISSUE-0795",
+        "ISSUE-0796"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1986-regular-guangdong-arts",
-      "production_state": "planned",
+      "production_state": "blocked",
       "project_dir": "1986_广东卷_文史类",
       "question_count": 7,
-      "resume_action": null,
+      "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 2(9) 题第二条件的下标或常数；确认前保留固定源题面并阻断该小题答案。",
       "source_files": {
         "answer_key": "1986/1986_数学真题_广东文_答案要点.md",
         "combined_rendered": "1986/1986_数学真题_广东文_含解析.md",
@@ -8171,7 +8180,7 @@
       "year": 1986
     },
     {
-      "blocked_from": null,
+      "blocked_from": "planned",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -8200,15 +8209,18 @@
         "track": "理工农医类",
         "variant": "广东理工农医类"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0778",
+        "ISSUE-0797"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1986-regular-guangdong-science",
-      "production_state": "planned",
+      "production_state": "blocked",
       "project_dir": "1986_广东卷_理工农医类",
       "question_count": 6,
-      "resume_action": null,
+      "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
       "source_files": {
         "answer_key": "1986/1986_数学真题_广东理_答案要点.md",
         "combined_rendered": "1986/1986_数学真题_广东理_含解析.md",
@@ -8802,7 +8814,7 @@
       "year": 1988
     }
   ],
-  "revision": 1986,
+  "revision": 1998,
   "schema_version": 1,
   "sources": [
     {
