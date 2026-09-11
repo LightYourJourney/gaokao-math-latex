@@ -130,8 +130,8 @@
       },
       "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
       "transcription_review": {
-        "evidence": "题干文字与 PDF p1 逐字一致（含「由实验数据 (xᵢ,yᵢ) (i=1,2,…,20)」一句）；配图存在实质裁切。PDF 原散点图纵轴为发芽率 20%–100%、横轴为温度 0/10/20/30/40 并标「温度 / °C」。转录件 images/2020理-t5-散点图.png（520×190）仅保留纵轴 100%/80%/60%/40% 与「率 20%」的上半截，横轴刻度 0/10/20/30/40 与「温度 / °C」标签、以及散点云的下部整块被切除；本题设问正是「在 10 °C 至 40 °C 之间」选择回归模型，横轴信息缺失直接损害读图。图内另混入题干末两行文字（毛边）。",
-        "result": "failed",
+        "evidence": "独立公开版 PDF 第 2 页确认散点图的横轴、标签和散点云完整；当前 LaTeX pgfplots 矢量图覆盖原图信息，PNG 仅为历史派生物，不作为线稿。",
+        "result": "passed",
         "role": "phase0-b02-remediation-question-review"
       }
     },
@@ -184,8 +184,8 @@
       },
       "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
       "transcription_review": {
-        "evidence": "题干与四个选项与 PDF p1 一致；配图存在实质裁切。PDF 原图为 f(x)=cos(ωx+π/6) 在 [−π,π] 上的完整波形：左侧有一个明显波谷、中部一个波峰、右侧再一个波谷后于 π 附近上行，横轴标注 −π、−4π/9、O、π。转录件 images/2020理-t7-图象.png（600×150）在 x 轴稍下方即被切断，左右两个波谷的下半部分被整块切除，仅剩波峰与轴线附近；曲线主体不完整。",
-        "result": "failed",
+        "evidence": "独立公开版 PDF 第 2 页确认函数图完整包含两个波谷及 −π、−4π/9、O、π 标注；当前 LaTeX pgfplots 矢量图已完整重绘。",
+        "result": "passed",
         "role": "phase0-b02-remediation-question-review"
       }
     },
@@ -420,8 +420,8 @@
       },
       "source_sha256": "56cc587b06637b82499ec1da90646692f2412e81d60192dcef28eff6dde19e08",
       "transcription_review": {
-        "evidence": "题干文字与 PDF p1 一致（AC=1、AB=AD=√3、AB⊥AC、AB⊥AD、∠CAE=30°，求 cos∠FCB）；但配图 images/2020理-t16-展开图.png（250×350）内容完全错位：其中没有任何三棱锥平面展开图，只有从相邻栏截到的零散文字碎片（「AB ⊥ AC, AB ⊥」「勺」「x」「最」及数个右括号）。PDF 原图为标注 D(P)、A、B、C、E(P)、F(P) 的展开图，是本题唯一的几何信息来源，缺图后本题不可解。",
-        "result": "failed",
+        "evidence": "独立公开版 PDF 第 3 页确认展开图标注 D(P)、A、B、C、E(P)、F(P) 完整；当前 LaTeX TikZ 矢量图已按该构型重绘。",
+        "result": "passed",
         "role": "phase0-b02-remediation-question-review"
       }
     },

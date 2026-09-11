@@ -187,65 +187,62 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "配图实质裁切：仅保留纵轴 100%/80%/60%/40% 与「率 20%」的上半截，横轴刻度与「温度 / °C」标签、散点云下部整块被切除；图内另混入题干末两行文字。",
+  "current_evidence": "独立公开版 PDF 第 2 页给出完整横轴 0/10/20/30/40、温度/°C 标签和散点云；当前 LaTeX pgfplots 矢量图已覆盖这些要素，未使用截图作为线稿。 核验资料：https://cdn.zizzs.com/zixunzhan/202310/c15dec3e-666b-4c24-a7fb-7d66a2f1d1f1.pdf",
   "fingerprint": "aac74a79333bf972f0dad1ff2038fbe915c52199d42398f3593db1d5ede09833",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-science",
   "question_id": "gk-2020-regular-national-1-science-q05",
-  "resume_action": "重新导出 images/2020理-t5-散点图.png，必须完整保留横轴刻度 0/10/20/30/40 与「温度 / °C」标签及散点云下部（本题设问依赖 10 °C–40 °C 区间读图）",
+  "resume_action": "已用独立公开版核验散点图完整性，重跑题面、生成、编译与视觉复核；不提交 PNG。",
   "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0012
 
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "配图在 x 轴稍下方即被切断，左右两个波谷的下半部分被整块切除，仅剩波峰与轴线附近，曲线主体不完整。",
+  "current_evidence": "独立公开版 PDF 第 2 页给出 [−π,π] 上两个完整波谷及 −π、−4π/9、O、π 标注；当前 LaTeX pgfplots 矢量图已完整重绘。 核验资料：https://cdn.zizzs.com/zixunzhan/202310/c15dec3e-666b-4c24-a7fb-7d66a2f1d1f1.pdf",
   "fingerprint": "1d16e3a6bed0798f589bc86973f74165eff09da0fa926445e3f9d4a1f47d990f",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-science",
   "question_id": "gk-2020-regular-national-1-science-q07",
-  "resume_action": "重新导出 images/2020理-t7-图象.png，需完整含 [−π,π] 上左右两个波谷的下半部分与横轴标注 −π、−4π/9、O、π",
+  "resume_action": "已用独立公开版核验函数图完整性，重跑题面、生成、编译与视觉复核；不提交 PNG。",
   "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0013
 
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "图片资产错位：250×350 的文件内没有任何平面展开图，只有从相邻栏误裁出的零散文字碎片（「AB ⊥ AC, AB ⊥」及「匀/x/最/)」等），墨迹占比 0.63%。该展开图是本题唯一的几何信息来源，缺图后本题不可解（求解角色系仅凭题干文字完成求解）。",
+  "current_evidence": "独立公开版 PDF 第 3 页给出标注 D(P)、A、B、C、E(P)、F(P) 的完整三棱锥平面展开图；当前 LaTeX TikZ 矢量图已按该构型重绘并编译通过。 核验资料：https://cdn.zizzs.com/zixunzhan/202310/c15dec3e-666b-4c24-a7fb-7d66a2f1d1f1.pdf",
   "fingerprint": "d13a5e11a755fd220001718a56bc6fc9132c5bdb253ccda80cd6dc38a6a79984",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-science",
   "question_id": "gk-2020-regular-national-1-science-q16",
-  "resume_action": "重做 images/2020理-t16-展开图.png：现文件内容完全错位，需替换为 PDF 原图（标注 D(P)、A、B、C、E(P)、F(P) 的三棱锥平面展开图）",
+  "resume_action": "已用独立公开版核验展开图标注，重跑题面、生成、编译与视觉复核；不提交 PNG。",
   "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0014
 
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "“由实验数据 (x_i,y_i) (i=1,2,\\cdots,20)”已补回并与同题理科卷一致；但当前散点图仍存在横轴/下部裁切，题面整体核对尚不能通过。",
+  "current_evidence": "实验数据句子已补回；独立公开版 PDF 第 2 页确认复用散点图完整，当前 LaTeX pgfplots 矢量图已完整重绘，未将 PNG 作为线稿。 核验资料：https://cdn.zizzs.com/zixunzhan/202310/c15dec3e-666b-4c24-a7fb-7d66a2f1d1f1.pdf",
   "fingerprint": "53d1a4270c45205732fc2720759b8238bf72ac67fa6831fa6665bdf7ac9644dc",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-arts",
   "question_id": "gk-2020-regular-national-1-arts-q05",
-  "resume_action": "保留已补回的实验数据句子；重新导出或用可核验矢量源替换散点图，必须完整保留横轴刻度 0/10/20/30/40、温度标签及散点云下部，完成后重跑题面核对。",
+  "resume_action": "已补回实验数据句子，并用独立公开版核验复用散点图；重跑题面、生成、编译与视觉复核，不提交 PNG。",
   "source_id": "src-922b361942c8607abdfaba4bb5d504e18b644f5cfb744d7ae848a477192919bf",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -254,18 +251,17 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "配图实质裁切：复用的 images/2020理-t7-图象.png 在 x 轴稍下方被切断，PDF 原波形左右两个波谷的下半部分被整块切除，曲线主体不完整。",
+  "current_evidence": "独立公开版 PDF 第 2 页确认复用函数图完整包含两个波谷和横轴标注，当前 LaTeX pgfplots 矢量图已完整重绘。 核验资料：https://cdn.zizzs.com/zixunzhan/202310/c15dec3e-666b-4c24-a7fb-7d66a2f1d1f1.pdf",
   "fingerprint": "eed5d5c350a48802bdb98c890787a6803fdb0b6590cc0b689d7ecbe108fc38bb",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-arts",
   "question_id": "gk-2020-regular-national-1-arts-q07",
-  "resume_action": "随理科卷第 7 题一并修复图象（本卷复用 images/2020理-t7-图象.png，需含两个波谷的完整下半部分）",
+  "resume_action": "已用独立公开版核验复用函数图，并重跑题面、生成、编译与视觉复核，不提交 PNG。",
   "source_id": "src-922b361942c8607abdfaba4bb5d504e18b644f5cfb744d7ae848a477192919bf",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0016
 
 ```json
