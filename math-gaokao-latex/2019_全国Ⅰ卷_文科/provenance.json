@@ -14,8 +14,8 @@
       "printed_number": 1,
       "question_id": "gk-2019-regular-national-1-arts-q01",
       "question_text_sha256": "016db3823ed9656ae6c1b82cdc2eae010447182d3486f5f451e718cf7d59e491",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -26,7 +26,7 @@
       "transcription_review": {
         "evidence": "PDF p1：z=(3−i)/(1+2i)，求 |z|，选项 2、√3、√2、1，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -40,8 +40,8 @@
       "printed_number": 2,
       "question_id": "gk-2019-regular-national-1-arts-q02",
       "question_text_sha256": "5ea336c247d459b83e6750be5baa6eff0ab8275521902bffd5874ef721ad051e",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -52,7 +52,7 @@
       "transcription_review": {
         "evidence": "PDF p1：U={1,…,7}、A={2,3,4,5}、B={2,3,6,7}、B∩∁_U A 与四个选项一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -66,8 +66,8 @@
       "printed_number": 3,
       "question_id": "gk-2019-regular-national-1-arts-q03",
       "question_text_sha256": "bd3d7f733281f19a892ae30ef5e7653503021941e0a1db85b6c0d66f72c3ded2",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -78,7 +78,7 @@
       "transcription_review": {
         "evidence": "PDF p1：a=log₂0.2、b=2^0.2、c=0.2^0.3 及选项一致（与理科卷第 3 题同题，题面哈希与理科卷一致）。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -92,8 +92,8 @@
       "printed_number": 4,
       "question_id": "gk-2019-regular-national-1-arts-q04",
       "question_text_sha256": "cf2d6d8e94167260be9d23df90767c5df300c7f54494cdb27ae5373f30bdf72c",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -104,24 +104,24 @@
       "transcription_review": {
         "evidence": "PDF p1：黄金分割比、105 cm、26 cm 与四选项一致（与理科卷第 4 题同题，哈希一致）。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "我的答案：D。f 为奇函数；数值扫描 [0,π] 上峰值≈1.1984（x≈1.058）>1，f(π/2)≈1.042>1，f(π)=π/(π²-1)≈0.354>0。放大四图核对：A 左支整体在轴上方（非奇）故排除 A；B 虽呈奇对称但峰值明显低于 1 且 π 处回到约 0，与 f(π/2)>1、f(π)≈0.354 不符故排除 B；C 奇对称但符号相反（左正右负），与 f 在 (0,π) 恒正不符故排除 C；仅 D 全部满足。（与理科卷第 5 题同题） ｜比对：库内答案要点 D，答案一致。但本卷要点的排除依据标注有误：其写「奇函数排除 B、C；f(π/2)>1 排除 A」——经放大原图核对，B、C 两图都是奇对称的，非奇的恰是 A；而 A 的峰值本就超过 1，用 f(π/2)>1 排不掉 A。正确归属应为「奇偶性排除 A、f(π/2)>1（峰高）排除 B、(0,π) 上符号为正排除 C」。理科卷同题要点列的四条判据（奇偶性/原点斜率/端点值/峰值）无此问题。建议登记 issue。",
+        "evidence": "答案 D 与独立复核一致。已按图形性质更正库内说明：由奇偶性排除 A；f(π/2)>1（峰值）排除 B；在 (0,π) 上函数值为正，排除 C。",
         "grade": "A"
       },
       "answer_sha256": "acff43222f7ff2a4ce09a62fff86579787b05b0200938800020974e4ce7f61cd",
-      "conflict_status": "unresolved",
+      "conflict_status": "none",
       "issue_ids": [
         "ISSUE-0018"
       ],
       "printed_number": 5,
       "question_id": "gk-2019-regular-national-1-arts-q05",
       "question_text_sha256": "800d5e372f63b16bf48866a653fb7006472918c2a8d3ab7edd695302ecd5b243",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -132,7 +132,7 @@
       "transcription_review": {
         "evidence": "PDF p1：题干与理科卷第 5 题同文，一致。配图 images/2019文-t5-四图.png 四个候选图象 A–D 完整，坐标标注齐全；右缘有一处「=」字符毛边，不涉内容缺失。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -146,8 +146,8 @@
       "printed_number": 6,
       "question_id": "gk-2019-regular-national-1-arts-q06",
       "question_text_sha256": "2a74758d30539f5725c20f69db26d3049a6e29ed2bc7f336e440de246ad1348d",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -158,7 +158,7 @@
       "transcription_review": {
         "evidence": "PDF p1：1000 名新生、编号 1…1000、系统抽样等距抽取 100 名、46 号被抽到，选项 8/200/616/815 号，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -172,8 +172,8 @@
       "printed_number": 7,
       "question_id": "gk-2019-regular-national-1-arts-q07",
       "question_text_sha256": "07b813b276aed7085c5054492e9a4de708c58656062a6722fa0ee758c33a413f",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -184,7 +184,7 @@
       "transcription_review": {
         "evidence": "PDF p1：tan255° 与四个选项一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -198,8 +198,8 @@
       "printed_number": 8,
       "question_id": "gk-2019-regular-national-1-arts-q08",
       "question_text_sha256": "e654665199ec1c31efe717287fedd5b852096824d24a9a0e9b8809417f36a302",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -210,7 +210,7 @@
       "transcription_review": {
         "evidence": "PDF p1：|a|=2|b|、(a−b)⊥b 与四选项一致（与理科卷第 7 题同题，哈希一致）。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -224,8 +224,8 @@
       "printed_number": 9,
       "question_id": "gk-2019-regular-national-1-arts-q09",
       "question_text_sha256": "499a822774d9c67aa9e31555f2f277f674c1f91352ed8bf1e3106ddc59695358",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -236,7 +236,7 @@
       "transcription_review": {
         "evidence": "PDF p1：题干与选项一致（与理科卷第 8 题同题）。配图 images/2019文-t9-程序框图.png 完整：开始→A=1/2→k=1→k≤2（否→输出 A→结束；是→[空白框]→k=k+1→回流）全部在框内，本题要填的「空白框」完整可见；下缘有选项行上半截毛边，不致内容缺失。注：同一框图在理科卷的转录件（2019理-t8-程序框图.png）被左缘裁切，本文件无此问题。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -250,8 +250,8 @@
       "printed_number": 10,
       "question_id": "gk-2019-regular-national-1-arts-q10",
       "question_text_sha256": "df71304c083ee9299998b5fd23a291b60f621bbc53d41d194ba9fa8a19c946f6",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -262,7 +262,7 @@
       "transcription_review": {
         "evidence": "PDF p1：渐近线倾斜角 130°，选项 2sin40°、2cos40°、1/sin50°、1/cos50°，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -276,8 +276,8 @@
       "printed_number": 11,
       "question_id": "gk-2019-regular-national-1-arts-q11",
       "question_text_sha256": "d297a35ea84b0bfb9c9a6b7be5ff0e68c2828ecfd71d4640add601c01163d6de",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -288,7 +288,7 @@
       "transcription_review": {
         "evidence": "PDF p1：a sinA−b sinB=4c sinC、cosA=−1/4、求 b/c，选项 6/5/4/3，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -302,8 +302,8 @@
       "printed_number": 12,
       "question_id": "gk-2019-regular-national-1-arts-q12",
       "question_text_sha256": "f80e53e486183ef5343bc1ce389698aeac49c85b5afab2a7f9c13d84a846e2e6",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -314,7 +314,7 @@
       "transcription_review": {
         "evidence": "PDF p1：椭圆焦点 F₁(−1,0)、F₂(1,0) 等条件与四个方程选项一致（与理科卷第 10 题同题）。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -328,8 +328,8 @@
       "printed_number": 13,
       "question_id": "gk-2019-regular-national-1-arts-q13",
       "question_text_sha256": "b8f19ab940734dd047fe1c6a79043673457cbb48e6d5768a9258c6fb6b3dedc7",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -340,7 +340,7 @@
       "transcription_review": {
         "evidence": "PDF p1：y=3(x²+x)eˣ 在 (0,0) 处切线方程，一致（与理科卷第 13 题哈希一致）。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -354,8 +354,8 @@
       "printed_number": 14,
       "question_id": "gk-2019-regular-national-1-arts-q14",
       "question_text_sha256": "f74a65be19c0e61d20d771d49c020825019d5d1ae5476e70376ee8f5fe7e2a9f",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -366,7 +366,7 @@
       "transcription_review": {
         "evidence": "PDF p1：a₁=1、S₃=3/4，求 S₄，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -380,8 +380,8 @@
       "printed_number": 15,
       "question_id": "gk-2019-regular-national-1-arts-q15",
       "question_text_sha256": "2ccaa076e36df45821c64b4f6368fb985def293bc3472ae0598d1dada1dbe33b",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -392,7 +392,7 @@
       "transcription_review": {
         "evidence": "PDF p1：f(x)=sin(2x+3π/2)−3cos x 的最小值，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -406,8 +406,8 @@
       "printed_number": 16,
       "question_id": "gk-2019-regular-national-1-arts-q16",
       "question_text_sha256": "19a9a410dcfbfce67049c1b5c0e80221cf9d3b34bc350c41ba294e8d0b28e528",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -418,7 +418,7 @@
       "transcription_review": {
         "evidence": "PDF p1：∠ACB=90°、PC=2、点 P 到 AC/BC 距离均为 √3，求 P 到平面 ABC 的距离，一致。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -432,8 +432,8 @@
       "printed_number": 17,
       "question_id": "gk-2019-regular-national-1-arts-q17",
       "question_text_sha256": "7bfb4d0f3f20e846a3b79c21675d5611436003499d3081dd5d54011ccb625f5a",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -444,7 +444,7 @@
       "transcription_review": {
         "evidence": "PDF p1：50 名男顾客/50 名女顾客，列联表 40/10、30/20，两小问，K² 公式与临界值表（0.050→3.841、0.010→6.635、0.001→10.828）逐项一致。非实质差异：PDF 用异体字「随机調査」，规范源作「随机调查」。补注「（12 分）」为编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -458,8 +458,8 @@
       "printed_number": 18,
       "question_id": "gk-2019-regular-national-1-arts-q18",
       "question_text_sha256": "c4d085253b6bbfcdb0453cb1410fdb6baeb4692873689f65df702c2d7b1d8755",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         1
       ],
@@ -470,7 +470,7 @@
       "transcription_review": {
         "evidence": "PDF p1：S₉=−a₅，(1) a₃=4 求通项、(2) a₁>0 求 Sₙ≥aₙ 的 n 范围，一致。补注「（12 分）」为编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -484,8 +484,8 @@
       "printed_number": 19,
       "question_id": "gk-2019-regular-national-1-arts-q19",
       "question_text_sha256": "8418befa95c22e13ead2934f55c0804ed90a5d201a5f689ce43ac638a85c4dc4",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         2
       ],
@@ -496,7 +496,7 @@
       "transcription_review": {
         "evidence": "PDF p2：AA₁=4、AB=2、∠BAD=60°、E/M/N 中点，(1) MN∥平面 C₁DE、(2) 点 C 到平面 C₁DE 的距离，一致。配图 images/2019文-t19-棱柱.png 完整无裁切、无毛边，标注齐全。补注「（12 分）」为编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -510,8 +510,8 @@
       "printed_number": 20,
       "question_id": "gk-2019-regular-national-1-arts-q20",
       "question_text_sha256": "01dff58c4363d4f91421f241d2dbff78e883e2821c17d603f067e2390cc96e23",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         2
       ],
@@ -522,7 +522,7 @@
       "transcription_review": {
         "evidence": "PDF p2：f(x)=2sin x−x cos x−x，(1) f′(x) 在 (0,π) 存在唯一零点、(2) x∈[0,π] 时 f(x)≥ax 求 a 范围，一致。补注「（12 分）」为编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -536,8 +536,8 @@
       "printed_number": 21,
       "question_id": "gk-2019-regular-national-1-arts-q21",
       "question_text_sha256": "3dc315bdf0a3601ec1fd63d141cb137984d57f7e8935907e7106680cfc2daf78",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         2
       ],
@@ -548,7 +548,7 @@
       "transcription_review": {
         "evidence": "PDF p2：A、B 关于原点对称、|AB|=4、⊙M 过 A,B 且与 x+2=0 相切，两小问一致。补注「（12 分）」为编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -562,8 +562,8 @@
       "printed_number": 22,
       "question_id": "gk-2019-regular-national-1-arts-q22",
       "question_text_sha256": "df1ed65058d82d97af1ad40df1a2ead3eb4c44b097cbc36980382d8197fc1824",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         2
       ],
@@ -574,7 +574,7 @@
       "transcription_review": {
         "evidence": "PDF p2：参数方程与极坐标方程 2ρcosθ+√3ρsinθ+11=0、两小问一致（与理科卷第 22 题同题，哈希一致）。PDF 无分值与选修标签，规范源补注属编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     },
     {
@@ -588,8 +588,8 @@
       "printed_number": 23,
       "question_id": "gk-2019-regular-national-1-arts-q23",
       "question_text_sha256": "39689108ff75188be2dd4cb7bd7fbc7d96b84c9a4a82ee7b3f29becef15bac89",
-      "reviewer_role": "b02-blind-answer-reviewer-opus",
-      "solver_role": "b02-answer-solver-opus",
+      "reviewer_role": "phase0-b02-remediation-answer-blind-review",
+      "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
         2
       ],
@@ -600,7 +600,7 @@
       "transcription_review": {
         "evidence": "PDF p2：abc=1 与两个待证不等式一致（与理科卷第 23 题同题，哈希一致）。分值与选修标签属编辑性增补。",
         "result": "passed",
-        "role": "b02-question-reviewer-opus"
+        "role": "phase0-b02-remediation-question-review"
       }
     }
   ],

@@ -306,18 +306,17 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "盲核冲突未解决：答案 D 正确，但库内答案要点的排除依据张冠李戴——其写「奇函数排除 B、C；f(π/2)>1 排除 A」，而放大原图核对显示 B、C 两图都是奇对称的、非奇的恰是 A，且 A 的峰值本就超过 1、用 f(π/2)>1 排不掉 A。同年理科卷同题要点列的四条判据无此问题。",
+  "current_evidence": "已将答案要点改为“由奇偶性排除 A；f(π/2)>1（峰值）排除 B；(0,π) 上函数值为正排除 C”。答案 D 与独立复核及解析一致，冲突已消除。",
   "fingerprint": "e72c14acf6c00916b001b22d329162d9dc7b01e2fdcf91b404ff3bff52648fe7",
   "impact": "blocks_completion",
   "paper_id": "gk-2019-regular-national-1-arts",
   "question_id": "gk-2019-regular-national-1-arts-q05",
-  "resume_action": "更正 2019 文科卷 `_答案要点.md` 第 5 题的排除依据（答案 D 本身正确）：应为「奇偶性排除 A、f(π/2)>1（峰高）排除 B、(0,π) 上符号为正排除 C」，更正后重跑盲核",
+  "resume_action": "已更正第 5 题答案要点的排除依据，并重跑题面、答案、生成、编译与盲核；答案 D 保持不变。",
   "source_id": "src-67200538ccc7c8c92b28b4ee9180beac26c60144b9fc409ccf93ce5db5ebc37c",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
-
 ## ISSUE-0019
 
 ```json
