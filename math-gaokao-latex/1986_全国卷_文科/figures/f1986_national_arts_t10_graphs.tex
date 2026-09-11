@@ -1,0 +1,20 @@
+% 1986 年全国卷文科第 10 题：四个函数图象选项
+\begin{tikzpicture}[scale=0.72,>=stealth]
+  \foreach \dx/\dy/\lab/\curve/\line in {
+    0/2.25/{（A）}/{1.55*(\x+0.45)^2-0.55}/{0.85*\x+0.55},
+    3.15/2.25/{（B）}/{1.55*\x*\x-1.55*\x}/{-0.85*\x+0.80},
+    0/0/{（C）}/{-1.45*\x*\x+1.45*\x}/{-0.72*\x+0.85},
+    3.15/0/{（D）}/{-1.45*\x*\x+1.45*\x}/{0.72*\x-0.55}
+  } {
+    \begin{scope}[shift={(\dx,\dy)}]
+      \draw[->] (-1.35,0)--(1.45,0) node[right] {$x$};
+      \draw[->] (0,-1.35)--(0,1.45) node[above] {$y$};
+      \draw[thick,domain=-1.15:1.15,samples=80]
+        plot (\x,{\curve});
+      \draw[thick,domain=-1.25:1.25]
+        plot (\x,{\line});
+      \node[below] at (0,-1.65) {\lab};
+      \node[below left] at (0,0) {$O$};
+    \end{scope}
+  }
+\end{tikzpicture}

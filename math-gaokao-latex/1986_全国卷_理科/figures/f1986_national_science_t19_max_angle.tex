@@ -1,0 +1,13 @@
+% 1986 年全国卷理科第 19 题：最大角示意图
+\begin{tikzpicture}[scale=0.95,>=stealth]
+  \draw[->] (-0.2,0)--(4.0,0) node[right] {$x$};
+  \draw[->] (0,-0.2)--(0,3.5) node[above] {$y$};
+  \coordinate (A) at (0,3.0);
+  \coordinate (B) at (0,1.45);
+  \coordinate (C) at (2.1,0);
+  \fill (A) circle (1.1pt) node[left] {$A$};
+  \fill (B) circle (1.1pt) node[left] {$B$};
+  \fill (C) circle (1.1pt) node[below] {$C$};
+  \fill (0,0) circle (1.1pt) node[below left] {$O$};
+  \draw (A)--(C)--(B);
+\end{tikzpicture}

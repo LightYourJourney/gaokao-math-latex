@@ -506,6 +506,40 @@
         "gk-1985-regular-shanghai-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b56",
+      "issues": [],
+      "paper_ids": [
+        "gk-1986-regular-national-arts",
+        "gk-1986-regular-national-science"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b57",
+      "issues": [],
+      "paper_ids": [
+        "gk-1986-regular-shanghai-arts",
+        "gk-1986-regular-shanghai-science"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b58",
+      "issues": [],
+      "paper_ids": [
+        "gk-1986-regular-guangdong-arts"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b59",
+      "issues": [],
+      "paper_ids": [
+        "gk-1986-regular-guangdong-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -515,7 +549,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "63c905d9-67d1-4da3-889c-fddb5ce9e6e4",
+  "last_transaction_id": "097183d1-7547-4d16-99cc-46e7f9b5b9bc",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -7746,9 +7780,359 @@
       "title": "1985 年·上海卷·理工农医类",
       "track": "science",
       "year": 1985
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_文科/figures/f1986_national_arts_t10_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_文科/figures/f1986_national_arts_t17_tetra.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_national_arts",
+        "id": "gk-1986-regular-national-arts",
+        "note": "固定源为原卷单页题面，原卷页码 28；题号到 22，未见 23、24 或题目分值。第 10、17 题图形依据固定源关系重绘为 TikZ。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "解答题": [
+            11,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-national-arts",
+      "production_state": "planned",
+      "project_dir": "1986_全国卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_全国文_含解析.md",
+        "questions": "1986/1986_数学真题_全国文_试题.md",
+        "solution_body": "1986/1986_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-c4c271ecbc5c2d7d5e317f2f84c2f9b7dab081556c9c055cfa5fdf03f5901edd"
+      ],
+      "title": "1986 年·全国卷·文科",
+      "track": "arts",
+      "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_理科/figures/f1986_national_science_t17_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_理科/figures/f1986_national_science_t19_max_angle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_理科/figures/f1986_national_science_t8_folding.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_全国卷_理科/figures/f1986_national_science_t9_graphs.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_national_science",
+        "id": "gk-1986-regular-national-science",
+        "note": "固定源为原卷单页题面，原卷页码 27；第 20 题固定源写作 |A|=|B|=12、|A∪B|=4，前提自相矛盾，已列为阻塞问题。第 8、9、17、19 题图形依据固定源关系重绘为 TikZ。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "解答题": [
+            11,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ],
+          "附加题": [
+            23,
+            24
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-national-science",
+      "production_state": "planned",
+      "project_dir": "1986_全国卷_理科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_全国理_含解析.md",
+        "questions": "1986/1986_数学真题_全国理_试题.md",
+        "solution_body": "1986/1986_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b"
+      ],
+      "title": "1986 年·全国卷·理科",
+      "track": "science",
+      "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_文史类/figures/f1986_shanghai_arts_t6_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_文史类/figures/f1986_shanghai_arts_t7_fold_after.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_文史类/figures/f1986_shanghai_arts_t7_fold_before.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_shanghai_arts",
+        "id": "gk-1986-regular-shanghai-arts",
+        "note": "固定源为 PDF 第 1—3 页题面和第 4 页解答，原卷页码 34—37（第 34 页由连续页码推断）；第 9 题主值沿用源卷 [0,2π) 约定，第 7 题按折叠后的空间距离解释。第 6、7 题图形依据固定源关系重绘为 TikZ。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          4
+        ],
+        "paper": "上海卷（文史类）",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "文史类",
+        "variant": "上海文史类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-shanghai-arts",
+      "production_state": "planned",
+      "project_dir": "1986_上海卷_文史类",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_上海文_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_上海文_含解析.md",
+        "questions": "1986/1986_数学真题_上海文_试题.md",
+        "solution_body": "1986/1986_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d2fb778ac710a05ac590cdbb3594ceac90133b3d15047ae12b1dbb725f991d10"
+      ],
+      "title": "1986 年·上海卷·文史类",
+      "track": "arts",
+      "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_理工农医类/figures/f1986_shanghai_science_t6_parabola_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_理工农医类/figures/f1986_shanghai_science_t7_fold_after.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1986_上海卷_理工农医类/figures/f1986_shanghai_science_t7_fold_before.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_shanghai_science",
+        "id": "gk-1986-regular-shanghai-science",
+        "note": "固定源为 PDF 第 1—3 页题面和第 4—5 页解答，原卷页码 30—34；第 9 题主值沿用源卷 [0,2π) 约定，第 5 题按源解答将纯虚数理解为非零纯虚数，第 7 题按折叠后的空间距离解释。第 6、7 题图形依据固定源关系重绘为 TikZ。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          5
+        ],
+        "paper": "上海卷（理工农医类）",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "理工农医类",
+        "variant": "上海理工农医类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-shanghai-science",
+      "production_state": "planned",
+      "project_dir": "1986_上海卷_理工农医类",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_上海理_含解析.md",
+        "questions": "1986/1986_数学真题_上海理_试题.md",
+        "solution_body": "1986/1986_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4"
+      ],
+      "title": "1986 年·上海卷·理工农医类",
+      "track": "science",
+      "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_广东卷_文史类/figures/f1986_guangdong_arts_t6_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_guangdong_arts",
+        "id": "gk-1986-regular-guangdong-arts",
+        "note": "固定源为扫描 PDF：PDF 第 1—9 页为题面、书中页码 260—268，第 10—17 页为解答和答案、书中页码 269—276。第 14 题无度数符号按弧度解释；第二大题第 9 小题题面条件无实等差数列，但解答页列 180，已列入问题总账。第 6 题三棱锥图依据固定源重绘为 TikZ。",
+        "pages_q": [
+          1,
+          9
+        ],
+        "pages_s": [
+          10,
+          17
+        ],
+        "paper": "广东卷（文史类）",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "文史类",
+        "variant": "广东文史类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-guangdong-arts",
+      "production_state": "planned",
+      "project_dir": "1986_广东卷_文史类",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_广东文_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_广东文_含解析.md",
+        "questions": "1986/1986_数学真题_广东文_试题.md",
+        "solution_body": "1986/1986_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350"
+      ],
+      "title": "1986 年·广东卷·文史类",
+      "track": "arts",
+      "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1986_广东卷_理工农医类/figures/f1986_guangdong_science_t4_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1986_guangdong_science",
+        "id": "gk-1986-regular-guangdong-science",
+        "note": "固定源为扫描 PDF：PDF 第 1—6 页为题面，原卷页码 30—32；第 7—11 页为答案和解答。第 9 题主值按源卷 [0,2π) 约定；第 12、15 题末项标签重复，第 25 题 A—E 图形选项整段缺失，均照录并列入问题总账。第 4 题三棱锥图依据固定源重绘为 TikZ。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          7,
+          11
+        ],
+        "paper": "广东卷（理工农医类）",
+        "structure": {
+          "大题": [
+            1,
+            6
+          ]
+        },
+        "track": "理工农医类",
+        "variant": "广东理工农医类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1986-regular-guangdong-science",
+      "production_state": "planned",
+      "project_dir": "1986_广东卷_理工农医类",
+      "question_count": 6,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1986/1986_数学真题_广东理_答案要点.md",
+        "combined_rendered": "1986/1986_数学真题_广东理_含解析.md",
+        "questions": "1986/1986_数学真题_广东理_试题.md",
+        "solution_body": "1986/1986_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e"
+      ],
+      "title": "1986 年·广东卷·理工农医类",
+      "track": "science",
+      "year": 1986
     }
   ],
-  "revision": 1877,
+  "revision": 1881,
   "schema_version": 1,
   "sources": [
     {
@@ -11149,8 +11533,8 @@
       "exam_type": "regular",
       "git_blob_oid": "107755698d007c4235e515b5515f8053828c4619",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986上海文.pdf",
       "regions": [],
       "source_id": "src-d2fb778ac710a05ac590cdbb3594ceac90133b3d15047ae12b1dbb725f991d10",
@@ -11173,8 +11557,8 @@
       "exam_type": "regular",
       "git_blob_oid": "21a5e3fcce478f4d2fcdabce2f7190dad05a7006",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986上海理.pdf",
       "regions": [],
       "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
@@ -11197,8 +11581,8 @@
       "exam_type": "regular",
       "git_blob_oid": "84b76190bd0e4cabd133bc4986dde481e392f023",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986全国文.pdf",
       "regions": [],
       "source_id": "src-c4c271ecbc5c2d7d5e317f2f84c2f9b7dab081556c9c055cfa5fdf03f5901edd",
@@ -11221,8 +11605,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a5c32008cd1a4426f6d0d69108edb4910f00a503",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986全国理.pdf",
       "regions": [],
       "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
@@ -11245,8 +11629,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7436d3c8efb32d3e7c95bf3aaee87806492200c5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986广东文.pdf",
       "regions": [],
       "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
@@ -11269,8 +11653,8 @@
       "exam_type": "regular",
       "git_blob_oid": "47b663b0edc12f40e05be033c1e1a73c27ac3ba8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1986-regular-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1986广东理.pdf",
       "regions": [],
       "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",

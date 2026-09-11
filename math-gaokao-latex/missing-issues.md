@@ -11987,3 +11987,211 @@
   "type": "answer-conflict"
 }
 ```
+## ISSUE-0766
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 20 题印为“集合 A 和集合 B 各含有 12 个元素，A∪B 含有 4 个元素”。前提按字面不可能成立；规范源保留该字面，不据常识改为交集。",
+  "fingerprint": "cd2505d9d0a18bf8ba361cba2433e61bcdc96e4d234f141ea5846b19bf5feae3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-national-science",
+  "question_id": "gk-1986-regular-national-science-q20",
+  "resume_action": "取得同版更清晰排印件或独立权威扫描，确认第 20 题的运算符究竟为 ∪ 还是 ∩；在确认前保留固定源字面。",
+  "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0767
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "由于固定源第 20 题的集合基数前提自相矛盾，当前不能从规范题面确定集合 C 的合法数量；不能把题面擅自改成 A∩B 后给出数值。",
+  "fingerprint": "4dc1f1c6408f05cd610714b39e1f7342cf52ef66ee97b2f5b03487eb37586051",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-national-science",
+  "question_id": "gk-1986-regular-national-science-q20",
+  "resume_action": "确认第 20 题的运算符后，重新确定集合 C 的数量并更新答案要点、解析和三角色核验记录。",
+  "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+## ISSUE-0768
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 20 题的 A∪B 基数为 4 与 |A|=|B|=12 不相容，因而盲核不能确认任何数值答案；按 A∩B 处理属于未经授权的题面修正。",
+  "fingerprint": "8dd531e4828dbec5587ca478e868dc5fbc16e371f3f665e5a03b16c3f260c1f1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-national-science",
+  "question_id": "gk-1986-regular-national-science-q20",
+  "resume_action": "取得独立权威题面后，按确认的运算符重新核定第 20 题答案并完成盲核。",
+  "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+## ISSUE-0769
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源把复数√3−i的幅角主值列为正角 11π/6，但没有明示主值区间；按现代 (-π,π] 约定应写成 −π/6，按固定源选项和答案表只能沿用 [0,2π) 约定。",
+  "fingerprint": "c13f2935683c17ca2e9cb4c89a4b0f7fcd3a607f4b1c9259aff3f0cd93f72a57",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-arts",
+  "question_id": "gk-1986-regular-shanghai-arts-q01-(9)",
+  "resume_action": "取得同版更清晰排印或教材定义，确认该卷幅角主值区间；确认前保留源选项、答案表和约定说明。",
+  "source_id": "src-d2fb778ac710a05ac590cdbb3594ceac90133b3d15047ae12b1dbb725f991d10",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0770
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源先说直角三角形 AC=2、BC=3，随后在折成直二面角后给 AB=√7；折叠前斜边应为 √13，源解答按折叠后的空间距离使用 √7。",
+  "fingerprint": "ed9ad51f816ff0bad0c56146d5e30333d14c1d790936fa9065da8c6cfc129a5a",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-arts",
+  "question_id": "gk-1986-regular-shanghai-arts-q07",
+  "resume_action": "取得同版更清晰题面，确认 AB=√7是否明确指折叠后的空间距离；确认前保留上下文解释。",
+  "source_id": "src-d2fb778ac710a05ac590cdbb3594ceac90133b3d15047ae12b1dbb725f991d10",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0771
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源把复数√3−i的幅角主值列为正角 11π/6，但没有明示主值区间；按现代 (-π,π] 约定应写成 −π/6，按固定源选项和答案表只能沿用 [0,2π) 约定。",
+  "fingerprint": "a3a18aa998e46a486fff48ee651962425ba069930197f8693b78c16db1b3c162",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-science",
+  "question_id": "gk-1986-regular-shanghai-science-q01-(9)",
+  "resume_action": "取得同版更清晰排印或教材定义，确认该卷幅角主值区间；确认前保留源选项、答案表和约定说明。",
+  "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0772
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源未单列 k∈R，且解答把纯虚数按非零纯虚数处理；若允许 0 或把 k 取复数，参数条件会改变。",
+  "fingerprint": "3c0146071627733ee84015616921ff7f0e8143f90988b1b4f53b6e9a2f54cf32",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-science",
+  "question_id": "gk-1986-regular-shanghai-science-q05",
+  "resume_action": "取得同版教材或清晰题面，确认 k 的取值域以及纯虚数是否排除 0；确认前保留固定源解答口径。",
+  "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0773
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源在折叠前给出 AC=2、BC=3，折叠后条件写 AB=√7；本库按源解答将其解释为折叠后的空间距离。",
+  "fingerprint": "5ca779cf476e084df61bd7d02a874639e1de5ff92656bd73ac3acbda35b800cf",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-science",
+  "question_id": "gk-1986-regular-shanghai-science-q07",
+  "resume_action": "取得同版更清晰题面，确认 AB=√7 的语义；确认前保留该解释依赖说明。",
+  "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0774
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2(9) 题高分辨率读作 a_3a_7=−12、a_6+a_9=−1、公差为正；该条件不存在实等差数列，但解答页列出 S_20=180。",
+  "fingerprint": "e72707f8c2ff9a9066fdea6dfc6178c36dc43724c4930231d51af848a1f4edb1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
+  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 2(9) 题第二条件的下标或常数；确认前保留固定源题面并阻断该小题答案。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0775
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "按固定源第 2(9) 题字面消元得到 x^2−4x+108=0，判别式 −416<0，不存在实等差数列，因而 S_20 没有可确认数值；解答页的 180 不能直接作为题面答案。",
+  "fingerprint": "00ba3aac44086883e6d7d849b0f114fc2fe393d8605c7b4bf997df435b00d988",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
+  "resume_action": "确认第 2(9) 题原始条件后，重新推导 S_20 并更新答案、解析和核验记录。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+## ISSUE-0776
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2(9) 题面条件与解答页 S_20=180 直接冲突；按题面不存在实解，按解答反推题面属于未经授权的排印修正。",
+  "fingerprint": "1028f700367d9148ae99bb21ecc275b18af0eaa6a30138034ee24f3e3a2c8b24",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
+  "resume_action": "取得独立权威题面确认第 2(9) 题后，按确认版本完成答案冲突裁决。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+## ISSUE-0777
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立反函数图形为 (x−1)^2+y^2=1 的上半圆弧。",
+  "fingerprint": "037ee492d77a54546001612bafa94aa7f7765fd3ede8c09cc772453c69986422",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "question_id": "gk-1986-regular-guangdong-arts-q01-(25)",
+  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0778
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立反函数图形为 (x−1)^2+y^2=1 的上半圆弧。",
+  "fingerprint": "afa2a86288e765aee2005d66d6436127ad3de5712ca174683e9ab3e4d054d0fc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01-(25)",
+  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
