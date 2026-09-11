@@ -97,12 +97,13 @@
     "gk-2017-regular-national-1-science"
   ],
   "conflict_code": "frontmatter-regions-vs-upstream",
-  "current_evidence": "ISSUE-0002 收口时逐卷核验：2017 年山东有独立卷（与全国 1 卷第 1 题内容互异实证），上游文件名 `2017全国1理/文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf` 正确、不含山东，而两卷 frontmatter 的适用省份多列了「山东」（2018 上游文件名才含山东）。",
+  "current_evidence": "ISSUE-0002 收口时逐卷核验：2017 年山东有独立卷（与全国 1 卷第 1 题内容互异实证），上游文件名 `2017全国1理/文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf` 正确、不含山东，而两卷 frontmatter 的适用省份多列了「山东」（2018 上游文件名才含山东）。现已按该证据修正两卷规范源，并核对生成结果未受题面内容影响。",
   "fingerprint": "f5d0925b92f2e0cf2b1741332467f6b80726c8b958a6326a9d728369a880d802",
   "impact": "non_blocking",
   "paper_id": null,
-  "resume_action": "修正 2017 理/文两卷 `_试题.md` frontmatter 的「适用省份」（以及理科卷正文卷种提示处的同一串）——应为 河南、河北、山西、江西、湖北、湖南、广东、安徽、福建，**不含山东**；改动涉规范源基线登记，须走基线更新流程",
-  "status": "open",
+  "resolution": "已修正 2017 理/文两卷 `_试题.md` frontmatter，以及理科卷正文卷种提示处的同一串，适用省份改为 河南、河北、山西、江西、湖北、湖南、广东、安徽、福建（不含山东）；两卷生成结果校验通过。",
+  "resume_action": "已完成修正；若上游卷种身份再次变更，重新按上游文件名与逐卷内容核验",
+  "status": "resolved",
   "type": "source-mismatch"
 }
 ```
