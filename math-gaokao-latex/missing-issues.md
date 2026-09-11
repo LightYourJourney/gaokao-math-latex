@@ -12200,12 +12200,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 22 题的极限下标写为 n→∞，但括号内和指数使用变量 x；按题面字面 x 未随 n 变化，无法得到唯一极限。若将 x 修订为 n，条件性结果为 e^(−1/2)。",
+  "current_evidence": "固定源 A3 单页第 22 题的极限下标印为 n→∞，但括号内写作 (1−1/(2x))^x；变量和极限指标不一致，按字面不能得到唯一数值。",
   "fingerprint": "3076fd80ee19a575e9903091e424a6c13720b649e3d08c08eb17e1c25892ecc4",
   "impact": "blocks_completion",
   "paper_id": "gk-1987-regular-national-science",
   "question_id": "gk-1987-regular-national-science-q22",
-  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 22 题极限下标是否应为 x，或括号内变量和指数是否应为 n；确认前保留固定源字面并阻断该题答案。",
+  "resume_action": "取得变量与极限下标一致的完整固定源或独立可核验扫描页，确认第 22 题应为 x 还是 n 后，更新题面/答案/解析并重跑生成、编译和复核。",
   "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
   "status": "open",
   "type": "transcription-ambiguous"
