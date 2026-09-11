@@ -145,7 +145,7 @@
       ],
       "printed_number": 6,
       "question_id": "gk-2019-regular-national-1-science-q06",
-      "question_text_sha256": "ed571c702297551a51029b6a57a44980279fd86a240b173af5ae0da300c36567",
+      "question_text_sha256": "ab5616776b6fafdb1eb8aa6325345895e4f1f6ff533c48c6441b7f0cd561e37b",
       "reviewer_role": "phase0-b02-remediation-answer-blind-review",
       "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
@@ -210,8 +210,8 @@
       },
       "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
       "transcription_review": {
-        "evidence": "题干文字与选项与 PDF p1 一致，但配图 images/2019理-t8-程序框图.png 存在实质裁切。PDF 原框图为：开始→A=1/2→k=1→判断 k≤2（否→输出 A→结束；是→[空白框]→k=k+1→回流至判断）。转录图左缘被切（内容包围盒 x 起自 0）：本题要求填入的「空白框」左边框被切除、「k=k+1」框左半被切成「= k + 1」、循环回边不完整；同时下缘越界，混入第 9、10 题正文以及被切成残片的选项行（(A) 项已不可读）。",
-        "result": "failed",
+        "evidence": "原始理科 PNG 的左缘和下缘存在裁切，但同题文科固定源完整；最终工程不使用裁切 PNG，而以 f2019_flow.tex 矢量重绘，空白框左边框、k=k+1 框和回流箭头均完整，phase0-b02 新构建四版本视觉复核通过。",
+        "result": "passed",
         "role": "phase0-b02-remediation-question-review"
       }
     },

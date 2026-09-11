@@ -153,12 +153,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面缺句 + 配图整幅缺失：规范源删去「爻分为阳爻“——”和阴爻“— —”，如图就是一重卦」的符号说明与整句；PDF 该处印有六爻重卦示意图，而 2019/images/ 下不存在任何 2019理-t6-* 文件、正文亦无图片引用。选项与答案不受影响。",
+  "current_evidence": "文字缺口已修正：公开固定源 PDF 第 2 页明确印有「爻分为阳爻“——”和阴爻“— —”，如图就是一重卦」（来源：https://19216675.s21i.faiusr.com/61/ABUIABA9GAAg55L86wUo1M7u6wc.pdf）；当前规范源已逐字补回。剩余阻塞仅为该处的六爻重卦示意图：仓库仍没有可核验的 2019 理科 q6 图形，正文也未引用图形源，不能凭通用卦象记忆补画。",
   "fingerprint": "e52460575976f006ce1b6600a8b8753f6a3aab17c097b90444a55a0315cd4710",
   "impact": "blocks_completion",
   "paper_id": "gk-2019-regular-national-1-science",
   "question_id": "gk-2019-regular-national-1-science-q06",
-  "resume_action": "补回被删去的两句（阴爻/阳爻符号说明与「如图就是一重卦」），并转录 PDF p1 选项上方的六爻重卦示意图到 2019/images/ 后重跑题面核对",
+  "resume_action": "取得固定源 PDF p1 选项上方六爻重卦图的清晰扫描或独立可核验图形后，以 TikZ 矢量重绘（不提交截图），再重跑题面核对、生成、编译与视觉复核",
   "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002",
   "status": "open",
   "type": "transcription-ambiguous"
