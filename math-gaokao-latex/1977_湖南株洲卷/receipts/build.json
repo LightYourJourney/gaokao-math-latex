@@ -1,5 +1,5 @@
 {
-  "attempt_id": "7ea95d17-fe3c-4f82-b0e9-5e6aef488d5f",
+  "attempt_id": "ee5c3e08-0423-408f-b750-256555db92a8",
   "dependency_tree": {
     "files": [
       {
@@ -103,7 +103,7 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/1977_湖南株洲卷/build/试题版.pdf",
-        "sha256": "b6bc29ca0f1d55cf3d886a6e91cd75d1bb24abf734429bfae390381cb3524394",
+        "sha256": "25651fc19ff552654f6548dc696ff8d31591906f330c3ff2b1aa5300b82a6e2a",
         "size_bytes": 109894
       },
       "problems": [],
@@ -116,7 +116,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -131,8 +135,8 @@
       "pdf": {
         "page_count": 21,
         "path": "math-gaokao-latex/1977_湖南株洲卷/build/解析版.pdf",
-        "sha256": "3aaf74c10d0d5bd930dc54b8387a1bb79bd99cd16d30d8d8e544cb7fe2bb7e9b",
-        "size_bytes": 201223
+        "sha256": "6316f8848c4e52bd0482ba787c1358cd4ac559f1c41feedd5ffe7f69a97d5aab",
+        "size_bytes": 201222
       },
       "problems": [],
       "result": "succeeded",
@@ -159,7 +163,7 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/1977_湖南株洲卷/build/简答版.pdf",
-        "sha256": "b78fec8fea059bece28a8ea825f504820819d496041e4a5923197d81e2d9888f",
+        "sha256": "cb7370654e44b9d787e2fed6dd5043554cf26dddad38eae2fd43dc33847c5d90",
         "size_bytes": 118470
       },
       "problems": [],
@@ -172,7 +176,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -187,7 +195,7 @@
       "pdf": {
         "page_count": 19,
         "path": "math-gaokao-latex/1977_湖南株洲卷/build/印刷版.pdf",
-        "sha256": "5fc2132d81ae1d02edd9dc5b95257f72a1fbb52722536b673d3523898e6e3483",
+        "sha256": "0787f3b351fdb47e6c205c3930cd1929c4cf21313340413505ecb94ae6ad3bd0",
         "size_bytes": 200571
       },
       "problems": [],
@@ -195,7 +203,7 @@
       "source": "math-gaokao-latex/1977_湖南株洲卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:21:56+08:00",
+  "finished_at": "2026-09-12T06:58:01+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -212,7 +220,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_湖南株洲卷/figures/f1977_hunan_zhuzhou_ref3_window.tex",
@@ -303,15 +311,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "42a6128101cd157072fa3264c51c42341d4006fb62a4bf011e207e63f9871269"
+    "tree_sha256": "3c1648d7de3f7c1d8d7031d9767d6ee327716419e33ca687dadc10ef2b1ba1ee"
   },
   "input_projection": "fab2e19873ac8ba39f5691c9671cf52677f71cf523777bf93dcef8d3e2af5b47",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-hunan-zhuzhou",
-  "previous_attempt_id": "03af8a79-ec0a-4058-90ac-7378636a314f",
+  "previous_attempt_id": "7ea95d17-fe3c-4f82-b0e9-5e6aef488d5f",
   "project_dir": "1977_湖南株洲卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

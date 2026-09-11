@@ -1,5 +1,5 @@
 {
-  "attempt_id": "618f28d5-872b-4ac3-a604-9351cf0e31f2",
+  "attempt_id": "f14ed066-551a-4a95-9d6b-e45733bc8daa",
   "dependency_tree": {
     "files": [
       {
@@ -79,8 +79,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_广西百色卷_理科/build/试题版.pdf",
-        "sha256": "bfed85923726db3b557d63ca6b4e3c3cae4f517d9c063678ed99254ae99263b5",
-        "size_bytes": 90307
+        "sha256": "26a60d42514ec1d3ae5bbba99ff6249d7d0584601fc52d991f461b44a3a153b6",
+        "size_bytes": 90304
       },
       "problems": [],
       "result": "succeeded",
@@ -92,7 +92,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -107,7 +111,7 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_广西百色卷_理科/build/解析版.pdf",
-        "sha256": "bb49e7134b3ab44eee9dfebe57934d89662e1f36d83d57ed5080aef1ba042146",
+        "sha256": "01a40cba8038247342ee97c6c13937809a40d3261cb744bb47453ee227d7cdd8",
         "size_bytes": 151213
       },
       "problems": [],
@@ -135,8 +139,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_广西百色卷_理科/build/简答版.pdf",
-        "sha256": "75d04aa52b111855bf3915fdcb3bc425d1879fdd205211d175e5a6878c9dc6c1",
-        "size_bytes": 96924
+        "sha256": "78590ddf0f3052311d3967f2d6e2232029b94014e6e44de546e7a6805dd7fab5",
+        "size_bytes": 96925
       },
       "problems": [],
       "result": "succeeded",
@@ -148,7 +152,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -163,15 +171,15 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_广西百色卷_理科/build/印刷版.pdf",
-        "sha256": "74c4aa6882c04b3d6ce5f8cd398ee3412ae20dba2330be6fea347004649466e9",
-        "size_bytes": 150848
+        "sha256": "97cac74ed18bb7057ac83fcdaa9e6463722442fd2929f215c2df7757b9ae9d40",
+        "size_bytes": 150849
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_广西百色卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:23:35+08:00",
+  "finished_at": "2026-09-12T06:59:41+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -188,7 +196,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_广西百色卷_理科/figures/f1977_guangxi_baise_science_ref2_segment.tex",
@@ -255,15 +263,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "a6cf55802ac7bb416da0cc7a379993cc1162e0fe0ea28bce7bf04baabc890a40"
+    "tree_sha256": "a3ce8abd2a274ea47e88d393f7714367d2fc56f6c87aa83ed11d1e6c7c1388c3"
   },
   "input_projection": "13f9884a6f2beb9001366b555f85c79a6ea50e01c70da81999f96d2737a5804a",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-guangxi-baise-science",
-  "previous_attempt_id": "bd1601ec-c97a-40c1-9369-5ea1a14e13e3",
+  "previous_attempt_id": "618f28d5-872b-4ac3-a604-9351cf0e31f2",
   "project_dir": "1977_广西百色卷_理科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

@@ -1,5 +1,5 @@
 {
-  "attempt_id": "3ae5a28c-3c22-4442-a92d-97b012d73ddd",
+  "attempt_id": "2a753cea-adf7-4d1a-865a-5fc5691e6ebb",
   "dependency_tree": {
     "files": [
       {
@@ -75,7 +75,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_福建卷_文科/build/试题版.pdf",
-        "sha256": "f309e17ef60fd9c0f4d210884e6dd505ed726659e28266b018fb040c12f1d230",
+        "sha256": "2f74b9fb3c2f3c38fcbeeb2a864b3f47f6758c3d3fb2f16c10427f4b2dcade4b",
         "size_bytes": 91863
       },
       "problems": [],
@@ -88,7 +88,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:1' on page 4 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:2' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:3' on page 9 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:4' on page 10 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:5' on page 11 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:6' on page 12 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -103,8 +125,8 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_福建卷_文科/build/解析版.pdf",
-        "sha256": "c370d67813dd53118dc513de2e04a82ab16e7ccfe860e8a8df5f9d9e128a30d7",
-        "size_bytes": 169231
+        "sha256": "d5ef31b01c2b03e4331fb6ce8d28c73126840fa06144d76830cc953de0bc0ce9",
+        "size_bytes": 169230
       },
       "problems": [],
       "result": "succeeded",
@@ -131,8 +153,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_福建卷_文科/build/简答版.pdf",
-        "sha256": "8581c10d69029c7437094901ce6ca7a1bd626d01c1b53ad49f5624601b76e1ab",
-        "size_bytes": 110027
+        "sha256": "3c1257c3b1cfe86efcc40fe0faf85d99c7df17a8fd6357dbe79419852cc2ebb0",
+        "size_bytes": 110026
       },
       "problems": [],
       "result": "succeeded",
@@ -144,7 +166,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:1' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:2' on page 5 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:3' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:4' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:5' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-fujian-arts:6' on page 9 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -159,15 +203,15 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_福建卷_文科/build/印刷版.pdf",
-        "sha256": "df09473f4d3211d8cc2dc34c7b3c2f93a5670db3f2832d0a4a1ef999a8f2da38",
-        "size_bytes": 169369
+        "sha256": "386a66b63a2e7bcd4386cefa9fe552ac9c7bf9a05f9d1daf5a29bb5fdd40b569",
+        "size_bytes": 169367
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_福建卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:18:20+08:00",
+  "finished_at": "2026-09-12T06:54:24+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -184,7 +228,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_福建卷_文科/figures/f1977_fujian_arts_t1_triangle.tex",
@@ -247,15 +291,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "970f549153bc31750d724d6bc4ffc787cc22a70b70f82da0c80035656f6d84ad"
+    "tree_sha256": "9ceac8665b26aa5b3530dc996b87153e178ab7dd9b291919f1dad4c83fdd6296"
   },
   "input_projection": "bfadbabf6e7f89579fe90e2c31a1d0b1aa6c4bbc6a154e34207cd1ab3e26beb1",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-fujian-arts",
-  "previous_attempt_id": "7953c263-277b-4073-add9-86a3486ec927",
+  "previous_attempt_id": "3ae5a28c-3c22-4442-a92d-97b012d73ddd",
   "project_dir": "1977_福建卷_文科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

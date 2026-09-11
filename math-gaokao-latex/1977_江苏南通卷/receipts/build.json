@@ -1,5 +1,5 @@
 {
-  "attempt_id": "9373981f-c315-4c0e-a668-1e759a18d70c",
+  "attempt_id": "746b3b3d-6aac-43c9-9850-8d6bacf6e102",
   "dependency_tree": {
     "files": [
       {
@@ -75,8 +75,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_江苏南通卷/build/试题版.pdf",
-        "sha256": "443bc49f8b90890b65e94fe08d76f5fa88d7782ba1bfc41dcca4747820ea85ca",
-        "size_bytes": 78040
+        "sha256": "6ef277ae7cb4fd62dd6f0653fdcaf5f19bc2b6a729d2ad1b3bda3a9063a21b52",
+        "size_bytes": 78038
       },
       "problems": [],
       "result": "succeeded",
@@ -92,7 +92,11 @@
           }
         ],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -107,8 +111,8 @@
       "pdf": {
         "page_count": 10,
         "path": "math-gaokao-latex/1977_江苏南通卷/build/解析版.pdf",
-        "sha256": "ae68784298db67c8d2d6f197f52f5a1135fb3c5ba2ca588d5f586bc1d6068dee",
-        "size_bytes": 143114
+        "sha256": "41513335a4cd1107ff3d380134700e485d5466439459bf486c35dd19ea234f9f",
+        "size_bytes": 143113
       },
       "problems": [],
       "result": "succeeded",
@@ -135,7 +139,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_江苏南通卷/build/简答版.pdf",
-        "sha256": "c01d83164254a0c6fd0a83c8b3abbe435588a20c07d7d6976b7b4b34720f3def",
+        "sha256": "5d5366acc99deb9907313043c8f61ab664d138dc8414798bfaed37e894cda4e0",
         "size_bytes": 88589
       },
       "problems": [],
@@ -152,7 +156,11 @@
           }
         ],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -167,7 +175,7 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_江苏南通卷/build/印刷版.pdf",
-        "sha256": "c9f4d34ec2dd425dd1c89a77dfe05fd2a3e9d53a10810846c7759d3e331623d1",
+        "sha256": "672610258f071cb76c01d03e8c4221a98a91aa26f30925f8424bbaba67666d82",
         "size_bytes": 145069
       },
       "problems": [],
@@ -175,7 +183,7 @@
       "source": "math-gaokao-latex/1977_江苏南通卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:22:15+08:00",
+  "finished_at": "2026-09-12T06:58:21+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -192,7 +200,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_江苏南通卷/figures/f1977_jiangsu_nantong_t10_forces.tex",
@@ -255,15 +263,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "4fc1b75759c52744c74f84ec37c8d897e2a6e90e1e00ca78fdeb5e944960d36f"
+    "tree_sha256": "05191d8138a7a011d79bb8ad0473464fb8c3751e2ea6bb3b900466e8fc6edcc9"
   },
   "input_projection": "956e93e101824e933bfd7aa331a007cc53d81f0ce783dca6678b507af3a4f03f",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-jiangsu-nantong",
-  "previous_attempt_id": "24da2436-bace-4305-88d3-7e2877bbdfef",
+  "previous_attempt_id": "9373981f-c315-4c0e-a668-1e759a18d70c",
   "project_dir": "1977_江苏南通卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

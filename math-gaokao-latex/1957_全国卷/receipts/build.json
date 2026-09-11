@@ -1,5 +1,5 @@
 {
-  "attempt_id": "56b82287-5077-4324-9944-2299b134a023",
+  "attempt_id": "2f5f6460-1c7e-46b6-8afe-58e78b6867d1",
   "dependency_tree": {
     "files": [
       {
@@ -83,8 +83,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1957_全国卷/build/试题版.pdf",
-        "sha256": "b13f16cadde157be38bb9c199126322ba55a6442f61fcfe7eac2971e555cded2",
-        "size_bytes": 67553
+        "sha256": "0732ebff8d97905768721e240ac33b861f0c64f8069c5f2e81662c55d1981aca",
+        "size_bytes": 67552
       },
       "problems": [],
       "result": "succeeded",
@@ -96,7 +96,38 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:1' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:2' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:3' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:4' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:5' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:6' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:7' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:8' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:9' on page 10 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -111,8 +142,8 @@
       "pdf": {
         "page_count": 10,
         "path": "math-gaokao-latex/1957_全国卷/build/解析版.pdf",
-        "sha256": "0259cec6029c75effbcf7a65e1db854538ea7c56c2307336f0289e9918376496",
-        "size_bytes": 111266
+        "sha256": "17a5604d8dd86eebbc90f496ad16be24cd44a4e692510c3302cb3e88a37cff5b",
+        "size_bytes": 111264
       },
       "problems": [],
       "result": "succeeded",
@@ -139,7 +170,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1957_全国卷/build/简答版.pdf",
-        "sha256": "f90104be59224202dba55fc06e3e285150ea7dbd051d289ff5546172d67f803b",
+        "sha256": "9c38df79e2e8b5e6ae7344bd0c38d2e19a6b3a795fc2888939e2fdda51b64117",
         "size_bytes": 78574
       },
       "problems": [],
@@ -152,7 +183,38 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:1' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:2' on page 3 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:3' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:4' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:5' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:6' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:7' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:8' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1957-regular-national:9' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -167,7 +229,7 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1957_全国卷/build/印刷版.pdf",
-        "sha256": "ddbe531bc652d6a2f21b9c2ffd84268f71c8b658e2611be4136fc838321a45dc",
+        "sha256": "c7163caeaa569d8afa2bcca96f2c080d9720e9c0dc639c418c33effc59d95e5d",
         "size_bytes": 112296
       },
       "problems": [],
@@ -175,7 +237,7 @@
       "source": "math-gaokao-latex/1957_全国卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:15:43+08:00",
+  "finished_at": "2026-09-12T06:51:46+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -192,7 +254,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1957_全国卷/figures/f1957_t4_tetra.tex",
@@ -263,15 +325,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "133ea24d906bcd13e87e085e73b6b1b31f5633266b29d4a92b5a0385de1a50d8"
+    "tree_sha256": "2b8054478f38a2704ad27dd684cb8cb89a7e5033944b9fc5964bfd17dcc6e17e"
   },
   "input_projection": "c32d16b8341ef5fe6269a7da941d5bd0f6ad0c1a5d94964775c4fbb22028a56a",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1957-regular-national",
-  "previous_attempt_id": "75165ba1-764e-4257-b270-fa4a2b73dcec",
+  "previous_attempt_id": "56b82287-5077-4324-9944-2299b134a023",
   "project_dir": "1957_全国卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

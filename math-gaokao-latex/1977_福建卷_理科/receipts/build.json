@@ -1,5 +1,5 @@
 {
-  "attempt_id": "73818128-19ee-4d61-936d-f9ffd962ae31",
+  "attempt_id": "c24c764f-9199-447d-afc9-8f2e2561054f",
   "dependency_tree": {
     "files": [
       {
@@ -79,7 +79,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_福建卷_理科/build/试题版.pdf",
-        "sha256": "daa7a49a43490e109940c03791f284754faa5baf2a68d87f57305dcb2885fdf1",
+        "sha256": "b79c3c81223c582ce06dcc9d0c327cb57d0d87238082f0a5fb78851e4b827b90",
         "size_bytes": 101746
       },
       "problems": [],
@@ -92,7 +92,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -107,8 +111,8 @@
       "pdf": {
         "page_count": 14,
         "path": "math-gaokao-latex/1977_福建卷_理科/build/解析版.pdf",
-        "sha256": "a89915f09770d6f8e203ba9d0f9fcb1c0d766119093dc7b36a82c97b5999ee4c",
-        "size_bytes": 182024
+        "sha256": "8025bb0dea2d798a7ccf1a12c5a1c85afca152bf35cce3d27e5418815720c15d",
+        "size_bytes": 182023
       },
       "problems": [],
       "result": "succeeded",
@@ -135,8 +139,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_福建卷_理科/build/简答版.pdf",
-        "sha256": "9a5e1650182e8e6340ec025bbed15811c301fb8194945c9dc28bc0decf9c3513",
-        "size_bytes": 117169
+        "sha256": "d1117b53533539584641703a9c74920b1eb3406c845dca47a01808cb6530a80e",
+        "size_bytes": 117168
       },
       "problems": [],
       "result": "succeeded",
@@ -148,7 +152,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -163,15 +171,15 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_福建卷_理科/build/印刷版.pdf",
-        "sha256": "5bc5498288ca6594f01cd8c6970fb13b70fd8c9a5f3a72d6212ab38d3e3c357f",
-        "size_bytes": 182223
+        "sha256": "f5bcbcf02b226cdab364ade8fdc8667a29587efbc12ed12d2e9b3543ddee8d79",
+        "size_bytes": 182222
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_福建卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:18:30+08:00",
+  "finished_at": "2026-09-12T06:54:34+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -188,7 +196,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_福建卷_理科/figures/f1977_fujian_science_t1_trapezoid.tex",
@@ -255,15 +263,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "c84b857cda0cfc032cf6672a78765051f39735ea58ad81afc389271376de2f5d"
+    "tree_sha256": "a51ee5bf646e14a0752ddceb96dcbdd519ad278cf5fbfb339b053e98849d1332"
   },
   "input_projection": "86b55d35dc6a58f053670af267c795cc9f192524877a39a8bf4460dff82580ca",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-fujian-science",
-  "previous_attempt_id": "359e5f3c-b48d-49f6-96f7-e780fe66a59d",
+  "previous_attempt_id": "73818128-19ee-4d61-936d-f9ffd962ae31",
   "project_dir": "1977_福建卷_理科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

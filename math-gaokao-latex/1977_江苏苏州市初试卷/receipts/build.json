@@ -1,5 +1,5 @@
 {
-  "attempt_id": "64494921-dddf-4f2a-b315-cffa66fa23fb",
+  "attempt_id": "b0ee2edd-ec11-4434-bc49-b686be17fb01",
   "dependency_tree": {
     "files": [
       {
@@ -75,8 +75,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/试题版.pdf",
-        "sha256": "ee77ba74bb854a65a060b355dddca3bd5aa33a25b643ef49fcb0fade2b07c8b0",
-        "size_bytes": 89594
+        "sha256": "49ba7b368121dba1525b318701abf490ef34b29bd57be9f801661b32ae578920",
+        "size_bytes": 89595
       },
       "problems": [],
       "result": "succeeded",
@@ -88,7 +88,26 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:1' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:2' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:3' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:4' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:5' on page 9 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -103,8 +122,8 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/解析版.pdf",
-        "sha256": "d62092eda94315582c09062386d4e8f48d08e9d32beccb97b63ac7f5efbde6e2",
-        "size_bytes": 148867
+        "sha256": "49274ddab6b6971af549b3303cab687b590d227a9502f2afeb61c0f2da5f8710",
+        "size_bytes": 148868
       },
       "problems": [],
       "result": "succeeded",
@@ -131,7 +150,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/简答版.pdf",
-        "sha256": "891a5239300bc5d0106b841ac5cd36fa049ecc4700ae4ce32d6ace8244b19055",
+        "sha256": "daf0b83a083321f10a4834af9c7b11a1ddd6b834f0aa50471fa0204ba6c2ab50",
         "size_bytes": 96746
       },
       "problems": [],
@@ -144,7 +163,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:1' on page 3 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:2' on page 6 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:3' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:4' on page 7 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:5' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-chushi-js-suzhou-shi:6' on page 8 undefined"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -159,15 +200,15 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/印刷版.pdf",
-        "sha256": "0f377ea36bfca8572d971a14583cc0e86b8b3905d32015dd39028b2f4623945b",
-        "size_bytes": 149507
+        "sha256": "9ac8a8b53a8bb4c02814803c9aff1894b1a68438c70703423a26f509deb4dc0a",
+        "size_bytes": 149509
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_江苏苏州市初试卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:25:28+08:00",
+  "finished_at": "2026-09-12T07:01:35+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -184,7 +225,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/figures/f1977_js_suzhou_shi_t1_parabola.tex",
@@ -247,15 +288,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "cc61005b58b289098f03c9fba447b9250dec9428da3916abd58e201b8296a1c3"
+    "tree_sha256": "9caa57441b73ce401e27167d9c5d702dd9ea1d16cbac94010b85cd3996597e81"
   },
   "input_projection": "9c345baeb1bb0b27a8cdc4ff1926f388f934cea41e3f240d4bac5076d3b3cf06",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
-  "previous_attempt_id": "21db3f1a-e9c6-4629-b5b6-535ed828370d",
+  "previous_attempt_id": "64494921-dddf-4f2a-b315-cffa66fa23fb",
   "project_dir": "1977_江苏苏州市初试卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

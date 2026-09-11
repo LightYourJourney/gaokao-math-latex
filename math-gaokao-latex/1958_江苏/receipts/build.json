@@ -1,5 +1,5 @@
 {
-  "attempt_id": "cbe51857-854d-4dc9-9b81-6ef9ac9be227",
+  "attempt_id": "9c0db05b-52bf-4798-959a-2d752f26fbcd",
   "dependency_tree": {
     "files": [
       {
@@ -71,7 +71,7 @@
       "pdf": {
         "page_count": 1,
         "path": "math-gaokao-latex/1958_江苏/build/试题版.pdf",
-        "sha256": "f282ee0c4a7903fb218d7c0d5790d177181d6e6d45ca86bc666e275cc27f8625",
+        "sha256": "23a5027c11089e6ef10f3054a268a6a7f7e30af13f01fb041d18f18bc93ae7cb",
         "size_bytes": 50549
       },
       "problems": [],
@@ -84,7 +84,26 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:2' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:3' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:4' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:5' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -99,7 +118,7 @@
       "pdf": {
         "page_count": 8,
         "path": "math-gaokao-latex/1958_江苏/build/解析版.pdf",
-        "sha256": "2e72be31c3efb59f72bd4b9bfb067372dbbd4c28e53ff5e177ee617c2283c973",
+        "sha256": "dd96553bfe669c1904e3fdac3640fcc3821c3311af37fc35a8d3c36ccf8b1381",
         "size_bytes": 106727
       },
       "problems": [],
@@ -127,7 +146,7 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1958_江苏/build/简答版.pdf",
-        "sha256": "04013b6a2707c00e7e59a5c567e4d9fac683dad89cb856b489c9e5bfdfb84c1f",
+        "sha256": "2dcd39abfdfad38caa310253ce20c75eb81bccb288cd3175bd0338ab4101caec",
         "size_bytes": 62092
       },
       "problems": [],
@@ -140,7 +159,26 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:2' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:3' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:4' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-jiangsu:5' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -155,7 +193,7 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/1958_江苏/build/印刷版.pdf",
-        "sha256": "1f522bbc373e09f2cf93959404424a7b3d1a368717fb039ee67fa783e6b9a58a",
+        "sha256": "888d27973a19235d90d7136515e03dfe55176f37240b6da6c3e2dc5695b4d744",
         "size_bytes": 106920
       },
       "problems": [],
@@ -163,7 +201,7 @@
       "source": "math-gaokao-latex/1958_江苏/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:26:33+08:00",
+  "finished_at": "2026-09-12T07:02:41+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -180,7 +218,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1958_江苏/figures/f1958_jiangsu_t5_cyclic_quad.tex",
@@ -239,15 +277,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "a42e5f421bf94b4cc0dfb28fd005efe4e312747d568b36ab5cc151e1f7610d7b"
+    "tree_sha256": "722f20df0dd2a9229cfff127eaecb5bbd60489b3dd2d6169f176c9083efd9ffb"
   },
   "input_projection": "c281e493dfbab3da8bc7a7d955cf0a6db6db45eb877182c07c80e6a2592b5bc5",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1958-regular-jiangsu",
-  "previous_attempt_id": "d712df82-f8da-4715-8844-855c6c29129e",
+  "previous_attempt_id": "cbe51857-854d-4dc9-9b81-6ef9ac9be227",
   "project_dir": "1958_江苏",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

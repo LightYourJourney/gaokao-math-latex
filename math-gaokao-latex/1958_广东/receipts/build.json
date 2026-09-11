@@ -1,5 +1,5 @@
 {
-  "attempt_id": "9eac876f-9b1f-4549-9c50-7ffface20508",
+  "attempt_id": "4dd8784b-b487-486a-8c9e-25fd65682ed0",
   "dependency_tree": {
     "files": [
       {
@@ -87,8 +87,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1958_广东/build/试题版.pdf",
-        "sha256": "1a1b3d1ea620ef0780feebe5d568aaed909e13fb3e42d3548d677e9b4f6eff76",
-        "size_bytes": 57007
+        "sha256": "33ad0a2bd17841e5efd26c5557217af45944fe0069a7dabb06be56534c1e648d",
+        "size_bytes": 57005
       },
       "problems": [],
       "result": "succeeded",
@@ -100,7 +100,38 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:1' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:2' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:3' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:4' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:5' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:6' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:7' on page 10 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:8' on page 11 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:9' on page 13 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -115,7 +146,7 @@
       "pdf": {
         "page_count": 14,
         "path": "math-gaokao-latex/1958_广东/build/解析版.pdf",
-        "sha256": "5f4e6ec27c92347d885ff05b9d380aeccc5de336ce932cdf611463a2ef12ece4",
+        "sha256": "69040153e8c0175a0b00bfbf8f2283eaeb355b9c3bf5729bcb8231373e125a91",
         "size_bytes": 134196
       },
       "problems": [],
@@ -143,8 +174,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1958_广东/build/简答版.pdf",
-        "sha256": "56539e003950dbe2dbf0e85322c982d4fb853b14bbed0edd6adacd14d4378a32",
-        "size_bytes": 68206
+        "sha256": "bc66a4b382525d81990f46f7f7f10cc795403bfce9aa8addc82bb7ecc429c860",
+        "size_bytes": 68207
       },
       "problems": [],
       "result": "succeeded",
@@ -156,7 +187,38 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:1' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:2' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:3' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:4' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:5' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:6' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:7' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:8' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-guangdong:9' on page 10 undefined o"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -171,7 +233,7 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1958_广东/build/印刷版.pdf",
-        "sha256": "0917fffc667f771520c2210a9a92f4fc91d33520f61ca54a9b6b1ee783027500",
+        "sha256": "7ddf36a1f7edf61e64630b6682776f4826631558a49b64e96d7a35f233807920",
         "size_bytes": 134712
       },
       "problems": [],
@@ -179,7 +241,7 @@
       "source": "math-gaokao-latex/1958_广东/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:27:20+08:00",
+  "finished_at": "2026-09-12T07:03:27+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -196,7 +258,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1958_广东/figures/f1958_guangdong_t3_midarc_chord.tex",
@@ -271,15 +333,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "04cd28fc1e93f03cfdc58bfbc3ba39efe5ab5df7d56cebf68515808a9ec2f16e"
+    "tree_sha256": "d0eda80de25084e638868c49c7d9dbd0e36600b9cba923ed3b11e536d7e9b4ac"
   },
   "input_projection": "883fd70cb78ffcd4564a46782ee5d72c10e588eb670d0037621ff6f0e715cac7",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1958-regular-guangdong",
-  "previous_attempt_id": "ac6dbb49-e9b8-458d-964c-cd7251d68719",
+  "previous_attempt_id": "9eac876f-9b1f-4549-9c50-7ffface20508",
   "project_dir": "1958_广东",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

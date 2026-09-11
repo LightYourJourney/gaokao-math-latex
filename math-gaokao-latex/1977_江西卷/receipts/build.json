@@ -1,5 +1,5 @@
 {
-  "attempt_id": "aa90efff-d09a-4ae1-bf36-7fc7ba201c66",
+  "attempt_id": "a577af06-3c52-49c8-83f1-7d223279c24a",
   "dependency_tree": {
     "files": [
       {
@@ -67,8 +67,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_江西卷/build/试题版.pdf",
-        "sha256": "f2867f759feb4b4842ec38bdf03e4405a7dfa1390a8c9f407b45bae65ddbb9fa",
-        "size_bytes": 94285
+        "sha256": "dd87d53328673a11a8c3d97c4ff98e59ae4915713495b420188b1761ce12bc0b",
+        "size_bytes": 94284
       },
       "problems": [],
       "result": "succeeded",
@@ -80,7 +80,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:2' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:3' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:4' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:5' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:6' on page 10 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -95,7 +117,7 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1977_江西卷/build/解析版.pdf",
-        "sha256": "74bb504ced8649f271c4446e7d90c69690145a70528572fbf7643c8a431ef71b",
+        "sha256": "190b8052e9d1a1faadef7a5017113e181bf30632bca8e16629078d9159f6162b",
         "size_bytes": 155227
       },
       "problems": [],
@@ -123,7 +145,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_江西卷/build/简答版.pdf",
-        "sha256": "45afe6d96449babbbd3b3a18989feffeb63e82ed295c16924a636a8f6394baa0",
+        "sha256": "8cde9d1bd553aab39fd5d4bfbfa884b1fd410f34b76ebbaaf82216918079b6cc",
         "size_bytes": 104176
       },
       "problems": [],
@@ -136,7 +158,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:1' on page 2 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:2' on page 5 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:3' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:4' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:5' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-jiangxi:6' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -151,15 +195,15 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_江西卷/build/印刷版.pdf",
-        "sha256": "a64dd44ba427b77d37c41dc59c63f62a07ed2f320b0d79db41e3e42bb943cba6",
-        "size_bytes": 155611
+        "sha256": "0d1dbd1a53d916aa6e6e9205bb5e09d97f0e7b7dd4dfbaf0f84a9713cfb799d0",
+        "size_bytes": 155610
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_江西卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:22:25+08:00",
+  "finished_at": "2026-09-12T06:58:30+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -176,7 +220,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_江西卷/印刷版.tex",
@@ -231,15 +275,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "9d4cc2dd38cd9b057b58447069ea0216b13543fc1623567a86b5868d2cc8fd45"
+    "tree_sha256": "47978993891b998650ac5eaf6ee914aaea3c33aca821069dadd5eed379948f9c"
   },
   "input_projection": "4adc742c5c16a792257939c2e04cb01fd55a43e6cf2918d74597cd8006a1fbdc",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-jiangxi",
-  "previous_attempt_id": "97514dfc-61f8-4776-bbe8-d48e37b657d9",
+  "previous_attempt_id": "aa90efff-d09a-4ae1-bf36-7fc7ba201c66",
   "project_dir": "1977_江西卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

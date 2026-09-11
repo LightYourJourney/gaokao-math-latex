@@ -1,5 +1,5 @@
 {
-  "attempt_id": "30731ca7-3094-42e2-a4e9-a1bb25760c62",
+  "attempt_id": "f02d43b6-566d-4b4c-b29c-d488363df45d",
   "dependency_tree": {
     "files": [
       {
@@ -67,7 +67,7 @@
       "pdf": {
         "page_count": 1,
         "path": "math-gaokao-latex/1958_湖北/build/试题版.pdf",
-        "sha256": "d249817caf5675397832163b5743625ff7bab2d9c506123ef2ad37fa852522c5",
+        "sha256": "d50bff2fcd776c50ed6d2899b0e8d448c106cfc708430d9fa5ddc968a769cbd3",
         "size_bytes": 59545
       },
       "problems": [],
@@ -80,7 +80,26 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:1' on page 2 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:2' on page 3 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:3' on page 4 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:4' on page 5 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:5' on page 6 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -95,8 +114,8 @@
       "pdf": {
         "page_count": 8,
         "path": "math-gaokao-latex/1958_湖北/build/解析版.pdf",
-        "sha256": "892f04e937cadaa75626e6df517068ebce62d04cf5e1ed2a9e0449f55a03e1aa",
-        "size_bytes": 119742
+        "sha256": "4b41eeea3b986f1114945d63f71006ce1bb6ffe1e772f8d579b44c7468ea2976",
+        "size_bytes": 119740
       },
       "problems": [],
       "result": "succeeded",
@@ -123,7 +142,7 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1958_湖北/build/简答版.pdf",
-        "sha256": "04a382659cb3eba4d444f78c9e3ba259386bd27b76b47762fc82d6187ad217b0",
+        "sha256": "147f87477bdd4489ccae03fa57e533875faae183d7cb1f27781ce72d41c726fe",
         "size_bytes": 72453
       },
       "problems": [],
@@ -136,7 +155,26 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:1' on page 2 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:2' on page 3 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:3' on page 3 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:4' on page 4 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1958-regular-hubei:5' on page 5 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -151,15 +189,15 @@
       "pdf": {
         "page_count": 7,
         "path": "math-gaokao-latex/1958_湖北/build/印刷版.pdf",
-        "sha256": "7346e27f3e5289c266f5d767af03b7e633214ff9c9b2472599153a349a44db53",
-        "size_bytes": 121195
+        "sha256": "f32c7f10a7e014d2caa793ec532f31a3c743e1de326d32603b60d26e05014423",
+        "size_bytes": 121196
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1958_湖北/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:26:43+08:00",
+  "finished_at": "2026-09-12T07:02:50+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -176,7 +214,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1958_湖北/印刷版.tex",
@@ -231,15 +269,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "2226a94993a1c189279da6190dc3575018e18e4d139fcccc902b42b233d44cb6"
+    "tree_sha256": "4484b355c1bc8984674bf0e7ad36cca5bcf6122103fc324202c713f380a333bf"
   },
   "input_projection": "a273200bc3be253002ae5d1325f7d42808396351738d9a11f2b380c726b0155e",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1958-regular-hubei",
-  "previous_attempt_id": "7e7309ff-3484-43e2-a13e-42876591b24c",
+  "previous_attempt_id": "30731ca7-3094-42e2-a4e9-a1bb25760c62",
   "project_dir": "1958_湖北",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

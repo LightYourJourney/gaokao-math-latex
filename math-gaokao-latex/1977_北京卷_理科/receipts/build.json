@@ -1,5 +1,5 @@
 {
-  "attempt_id": "b7de10d7-0d48-45f0-9142-cc88d82851f9",
+  "attempt_id": "457748c0-de7c-4fba-8b43-402c84816d7c",
   "dependency_tree": {
     "files": [
       {
@@ -75,8 +75,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_北京卷_理科/build/试题版.pdf",
-        "sha256": "466b0231e051dc061d2cc3e8bbb3bb130736456c460f46c17720aadf63fcbdbc",
-        "size_bytes": 77541
+        "sha256": "6ec750e8a8e86e029b31ce2fb211a57ff8885c9eedb0081ee83a9c7e18105c42",
+        "size_bytes": 77540
       },
       "problems": [],
       "result": "succeeded",
@@ -88,7 +88,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -103,7 +107,7 @@
       "pdf": {
         "page_count": 10,
         "path": "math-gaokao-latex/1977_北京卷_理科/build/解析版.pdf",
-        "sha256": "b508323349f99d405451220f7b5b8049ec9c001c407e017a6f2376cf50335805",
+        "sha256": "991f7a3afa3ff7300a9c93118936ab7c3128bd9a2892c75309958625670a1f80",
         "size_bytes": 125813
       },
       "problems": [],
@@ -131,8 +135,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_北京卷_理科/build/简答版.pdf",
-        "sha256": "b10736e69c47939c342c2ecbc4dfd25a4e94daf4e227a804f2446959f6b578e4",
-        "size_bytes": 83845
+        "sha256": "cefe4f637a1720d7a56175d401ebdbdd7d4e75ce812684fbc482e50292661665",
+        "size_bytes": 83844
       },
       "problems": [],
       "result": "succeeded",
@@ -144,7 +148,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -159,15 +167,15 @@
       "pdf": {
         "page_count": 8,
         "path": "math-gaokao-latex/1977_北京卷_理科/build/印刷版.pdf",
-        "sha256": "aa90a8d83ce1e47451a1bebef8c95c8bff824efef96e0d346023d492f429a2c5",
-        "size_bytes": 126087
+        "sha256": "7fc50ef8f4398b2da2708bd0bc754c400f2713a58f08de52570c8e2e4180022b",
+        "size_bytes": 126091
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_北京卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:17:34+08:00",
+  "finished_at": "2026-09-12T06:53:38+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -184,7 +192,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_北京卷_理科/figures/f1977_t10_ellipse.tex",
@@ -247,15 +255,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "1ab45ad56dda3f681a0121e3dbd94251c2ae133e5cd7cb1b5aa6621a545525b2"
+    "tree_sha256": "2d98670f38b92b500aeeba142a23db43445a60a1d79a563d64bf74d6eaac2084"
   },
   "input_projection": "8ec5a23e5819f9619a18ad68a80f6ee6692cbc06b67bf6346a5fb9e043cb117b",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-beijing-science",
-  "previous_attempt_id": "c5f5bb3a-0744-40bc-b936-9a06384d1eb8",
+  "previous_attempt_id": "b7de10d7-0d48-45f0-9142-cc88d82851f9",
   "project_dir": "1977_北京卷_理科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

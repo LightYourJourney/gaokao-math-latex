@@ -1,5 +1,5 @@
 {
-  "attempt_id": "c6efe731-e6c9-4fdf-989d-9518f210a5bc",
+  "attempt_id": "9f914d4b-40d4-45fe-a359-aba408a7e399",
   "dependency_tree": {
     "files": [
       {
@@ -75,7 +75,7 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_安徽卷_理科/build/试题版.pdf",
-        "sha256": "46ad4e2530dbca4381aa401b93715cd3ecc1ea92f6660d47948a0f26efd5f38a",
+        "sha256": "15c403cd2655fbb9479ddd08b0dadbe17e56481c74e8837ff7a1a0d45ab461b5",
         "size_bytes": 119859
       },
       "problems": [],
@@ -88,7 +88,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -103,7 +107,7 @@
       "pdf": {
         "page_count": 19,
         "path": "math-gaokao-latex/1977_安徽卷_理科/build/解析版.pdf",
-        "sha256": "a96053243542f99d04693ba9353130684c34eceef4cac956dc3be5072ec3b3aa",
+        "sha256": "f437b868d39eba75a7af93d3446fe947bc0e16ed9e1e18b193305b89140bd28e",
         "size_bytes": 216264
       },
       "problems": [],
@@ -131,8 +135,8 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/1977_安徽卷_理科/build/简答版.pdf",
-        "sha256": "c27495b1a879dc4c221a64039a77f0af75560aa7dab36e6e9e5dea036bbdb724",
-        "size_bytes": 129848
+        "sha256": "36ffd44488b4a6c61978ab4e71c412f90fb156aa06a381b65b54ecc28e88160d",
+        "size_bytes": 129846
       },
       "problems": [],
       "result": "succeeded",
@@ -144,7 +148,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -159,15 +167,15 @@
       "pdf": {
         "page_count": 15,
         "path": "math-gaokao-latex/1977_安徽卷_理科/build/印刷版.pdf",
-        "sha256": "66c69fbc668b8699890ce08c41cf96350d797607749c91413071f7868428186c",
-        "size_bytes": 215818
+        "sha256": "6ef69bd5089be57c2d46c74e7d1e53912564006f8373d12a9aa08e08a359600c",
+        "size_bytes": 215816
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_安徽卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:20:15+08:00",
+  "finished_at": "2026-09-12T06:56:20+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -184,7 +192,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_安徽卷_理科/figures/f1977_anhui_science_t2_trough.tex",
@@ -247,15 +255,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "803bb25b2919f3ab4738b6d0bc52301846c3d3ccd030fe5137593b2856ac2eb8"
+    "tree_sha256": "e4268c2c03bd46826f9736604fc7dade9ddcd9f59bc950e744e8d93322480afc"
   },
   "input_projection": "76318286c16e1bf50e6e1c09badf24922b2b69ef11485e815de939996fa9aba0",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-anhui-science",
-  "previous_attempt_id": "6f627d18-86b2-499e-8c69-2ccbb70f8e7f",
+  "previous_attempt_id": "c6efe731-e6c9-4fdf-989d-9518f210a5bc",
   "project_dir": "1977_安徽卷_理科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

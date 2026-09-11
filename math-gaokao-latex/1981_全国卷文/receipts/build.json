@@ -1,5 +1,5 @@
 {
-  "attempt_id": "5f8ad0a1-004b-4cd9-893f-a67825f694d1",
+  "attempt_id": "f7819c13-2efa-49e8-beeb-470fc758587e",
   "dependency_tree": {
     "files": [
       {
@@ -67,8 +67,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1981_全国卷文/build/试题版.pdf",
-        "sha256": "7045f7f1c92a0641bfcd2a686985c28539d7e4ef1ece82722a3df2b2d0e5cda8",
-        "size_bytes": 79883
+        "sha256": "24cd78d09b02688b56740f88af2a4becebcc4806d04987eb88ad51fbae5d24fe",
+        "size_bytes": 79884
       },
       "problems": [],
       "result": "succeeded",
@@ -95,7 +95,38 @@
             "width_pt": "39.80443"
           }
         ],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:1' on page 3 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:2' on page 4 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:3' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:4' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:5' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:6' on page 7 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:7' on page 9 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:8' on page 10 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:9' on page 11 undefined on inp"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -110,7 +141,7 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1981_全国卷文/build/解析版.pdf",
-        "sha256": "f270ff3b431470afeb208e4b0ca4baa9d4693adf37080161f224d9ebb64dd155",
+        "sha256": "f1c123cb39ff3259e526b7371d80c34feb6f1e9adc1609575cfd4b02bca749d2",
         "size_bytes": 165237
       },
       "problems": [],
@@ -138,8 +169,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1981_全国卷文/build/简答版.pdf",
-        "sha256": "82db6f7ad8462f7a04ee0c85c079b1be45eb325aa75acb04e217b034989a6bdc",
-        "size_bytes": 92844
+        "sha256": "763ce4ebdf32bdc8d2705923406246aca6423267076432089a5ee553802aace2",
+        "size_bytes": 92841
       },
       "problems": [],
       "result": "succeeded",
@@ -151,7 +182,38 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:1' on page 2 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:2' on page 3 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:3' on page 4 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:4' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:5' on page 5 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:6' on page 6 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:7' on page 7 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:8' on page 8 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1981-regular-arts:9' on page 8 undefined on inpu"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -166,7 +228,7 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1981_全国卷文/build/印刷版.pdf",
-        "sha256": "e092b66dfe5b258a81659d4b8ed74b1f903d5c18938f1c5a37704f504adb72a8",
+        "sha256": "c14cf39303082b9791caac1b8dd48f85e4d77e62aecbabbf4fea6e1f3ddfd568",
         "size_bytes": 165392
       },
       "problems": [],
@@ -174,7 +236,7 @@
       "source": "math-gaokao-latex/1981_全国卷文/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:28:44+08:00",
+  "finished_at": "2026-09-12T07:04:53+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -191,7 +253,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1981_全国卷文/印刷版.tex",
@@ -246,15 +308,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "b1c4cb328ce8fb3f1e11d39a6436af813a843d1b6c52967f69022577f2e60759"
+    "tree_sha256": "e2ac4915d8527ec07d806b9e3829fc8ecc93ff7f218de51069f6db9fcda139de"
   },
   "input_projection": "4899aa5e525719adacc7d234cfbbaf0d7145fb0a6c19bd6f365baffc788ed208",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1981-regular-arts",
-  "previous_attempt_id": "69992984-c174-4207-95dc-4bf7180937aa",
+  "previous_attempt_id": "5f8ad0a1-004b-4cd9-893f-a67825f694d1",
   "project_dir": "1981_全国卷文",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

@@ -12373,7 +12373,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0790
 
 ```json

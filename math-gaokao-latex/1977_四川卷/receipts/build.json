@@ -1,5 +1,5 @@
 {
-  "attempt_id": "6912eb79-ccab-4d51-8bdb-636091411f94",
+  "attempt_id": "41af0894-05c6-4471-a812-376fb5f97cd5",
   "dependency_tree": {
     "files": [
       {
@@ -95,8 +95,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_四川卷/build/试题版.pdf",
-        "sha256": "dc118e3bf4fa0ab2b98c9c3defb06babe5ea3162bfa874bd3701b8edf1ba5988",
-        "size_bytes": 95374
+        "sha256": "fb80a64da4db27d32977c32ef0fa7571e5579db4e3459eba8f2fb6fd684a9b47",
+        "size_bytes": 95371
       },
       "problems": [],
       "result": "succeeded",
@@ -108,7 +108,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:1' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:2' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:3' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:4' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:5' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:6' on page 11 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -123,7 +145,7 @@
       "pdf": {
         "page_count": 15,
         "path": "math-gaokao-latex/1977_四川卷/build/解析版.pdf",
-        "sha256": "d8106632a6a975a25e849b7f230b2641e3bd010c300bdba1fb089a8124beb0cc",
+        "sha256": "b07091ca732765ca124aee9349a3156d7c68600db53e0661ce15b6cc29d865ca",
         "size_bytes": 171970
       },
       "problems": [],
@@ -151,7 +173,7 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_四川卷/build/简答版.pdf",
-        "sha256": "35c3e6f0206e64830f551f65f87dd9352ae1cb840cf366aad2651bc3f3f6d98f",
+        "sha256": "b56a5e3d4475b3282f83f951b9a1076a9ab4760a0502c7d496608d4a60fdc56b",
         "size_bytes": 105230
       },
       "problems": [],
@@ -164,7 +186,29 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:1' on page 3 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:2' on page 4 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:3' on page 6 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:4' on page 7 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:5' on page 8 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1977-regular-sichuan:6' on page 9 undefined on i"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -179,7 +223,7 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_四川卷/build/印刷版.pdf",
-        "sha256": "b638c754320d29eceba9acc6c9876731acccf4e6cace8bcfccbbfca8fe9a7b65",
+        "sha256": "0431eb21df0263b30e02e40fe15fcd16a535432e896f382a21d996a1310e4040",
         "size_bytes": 173383
       },
       "problems": [],
@@ -187,7 +231,7 @@
       "source": "math-gaokao-latex/1977_四川卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:20:44+08:00",
+  "finished_at": "2026-09-12T06:56:49+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -204,7 +248,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_四川卷/figures/f1977_sichuan_ref1_region.tex",
@@ -287,15 +331,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "ce733b350e60ecc1732a7a8a1ad7d196c8d0280a3cb5a74b558b96e61d4ac4a0"
+    "tree_sha256": "2912dceeec935b731edf8c760cdb2567e619864ede77b8240972e7ea36ac36eb"
   },
   "input_projection": "17d6063e586bc3aa4f38b3d48e1a25af0bbb223fe2f142c1828c3884b78943ad",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-sichuan",
-  "previous_attempt_id": "d1159c6f-8526-43c1-843d-074df13c0c2b",
+  "previous_attempt_id": "6912eb79-ccab-4d51-8bdb-636091411f94",
   "project_dir": "1977_四川卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

@@ -1,5 +1,5 @@
 {
-  "attempt_id": "f2219735-6e6a-4b8c-90f9-175801b953e5",
+  "attempt_id": "0deac474-2990-4497-9c5a-cd5be2343672",
   "dependency_tree": {
     "files": [
       {
@@ -71,8 +71,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_内蒙古卷_文科/build/试题版.pdf",
-        "sha256": "3342d23e26d881b4206fbee7472bfe8d8f4aa74bc2d2d9d15da97dbb376ad21b",
-        "size_bytes": 75452
+        "sha256": "1241aef161599dcd83427cae7371e257a92e9277359be706a716bc4944492511",
+        "size_bytes": 75451
       },
       "problems": [],
       "result": "succeeded",
@@ -84,7 +84,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -99,8 +103,8 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_内蒙古卷_文科/build/解析版.pdf",
-        "sha256": "eceb05ec819cadf11e47dad2e983c9fd0e6960a0eb268d332e0a9df16bb513d8",
-        "size_bytes": 136896
+        "sha256": "16a0220aaea53ef407ee941306f3778c30327bcc286ff8820e66fbbfda047666",
+        "size_bytes": 136895
       },
       "problems": [],
       "result": "succeeded",
@@ -127,7 +131,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_内蒙古卷_文科/build/简答版.pdf",
-        "sha256": "5f639112102badad6f1fdc02618c1ed94225ab137c17e72706090d32f0eb85bd",
+        "sha256": "342177e785c7d5bc719128ab61a4d725a65f04622b1764e2c7171acf7b0cfb46",
         "size_bytes": 87433
       },
       "problems": [],
@@ -140,7 +144,11 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -155,15 +163,15 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/1977_内蒙古卷_文科/build/印刷版.pdf",
-        "sha256": "d19811d429ad5c06845893a14f467971a06966842ac69ed7c72ba82f61e473bc",
-        "size_bytes": 136053
+        "sha256": "8204006764dd9a791be8ec78c11283e5404f7d93db6a4dacbf1333372823a8fd",
+        "size_bytes": 136051
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_内蒙古卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:18:02+08:00",
+  "finished_at": "2026-09-12T06:54:06+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -180,7 +188,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1977_内蒙古卷_文科/figures/f1977_inner_mongolia_arts_t2_trapezoid.tex",
@@ -239,15 +247,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "577b57b83d9519075d4b922182a44c19f77d08c8282527b213fc4f790cb77908"
+    "tree_sha256": "51452a5073fec6f267b6b40bf6a3e878e48b7c168ca4db789b80f984faf12813"
   },
   "input_projection": "a45a795bdbdaa0fa32a0b9f2353f7d431cc1977a51dbc224d80f46405aec3493",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1977-regular-inner-mongolia-arts",
-  "previous_attempt_id": "f244ceb4-515a-4d30-bd10-876413d7db22",
+  "previous_attempt_id": "f2219735-6e6a-4b8c-90f9-175801b953e5",
   "project_dir": "1977_内蒙古卷_文科",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",

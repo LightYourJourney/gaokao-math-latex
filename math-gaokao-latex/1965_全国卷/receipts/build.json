@@ -1,5 +1,5 @@
 {
-  "attempt_id": "441bac4f-07ed-4412-adc5-5eadc115dc90",
+  "attempt_id": "94235459-38bf-4e76-82ef-a406e2b34a3a",
   "dependency_tree": {
     "files": [
       {
@@ -87,7 +87,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1965_全国卷/build/试题版.pdf",
-        "sha256": "b8aa681dcd6fd004e3c09079fc53e82fcba609217ba2c38c3b63f025a071a7ae",
+        "sha256": "24587a58271dd092c6346d5ec800845585076855aec8818b6eacba5334f9229a",
         "size_bytes": 90947
       },
       "problems": [],
@@ -100,7 +100,32 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:1' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:2' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:3' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:4' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:5' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:6' on page 10 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:7' on page 11 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -115,8 +140,8 @@
       "pdf": {
         "page_count": 14,
         "path": "math-gaokao-latex/1965_全国卷/build/解析版.pdf",
-        "sha256": "f4a4279e1ab64b738fff9000584d88066d84cf5de2b52306936454fc9dfc3333",
-        "size_bytes": 154364
+        "sha256": "abad7df6d967decad87c44e836e2757dd8fadace60d3d9b22adcb2cf86a1b260",
+        "size_bytes": 154384
       },
       "problems": [],
       "result": "succeeded",
@@ -143,8 +168,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1965_全国卷/build/简答版.pdf",
-        "sha256": "2a88a1969b974604f686c409e03f27e0fbbed55d715d486d741db28aafdfad9a",
-        "size_bytes": 101872
+        "sha256": "cc5a79381a20df363164c3d2ac76fb891e768d45bcab0851101833ed81fec77f",
+        "size_bytes": 101871
       },
       "problems": [],
       "result": "succeeded",
@@ -156,7 +181,32 @@
         "errors": [],
         "missing_characters": [],
         "overfull": [],
-        "undefined_references": []
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:1' on page 4 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:2' on page 5 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:3' on page 6 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:4' on page 7 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:5' on page 8 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:6' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: Reference `q:gk-1965-regular-national:7' on page 9 undefined on"
+          },
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
       },
       "passes": [
         {
@@ -171,7 +221,7 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1965_全国卷/build/印刷版.pdf",
-        "sha256": "d0fe519223c83fb9afc92c28ecbc342ad370c683b8bf38394f64a3d798769e6b",
+        "sha256": "d61534a0e8206bf6541a888ed0514787800f4eaa7a4d4dc41780c75fd8e670e0",
         "size_bytes": 154962
       },
       "problems": [],
@@ -179,7 +229,7 @@
       "source": "math-gaokao-latex/1965_全国卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-11T04:16:57+08:00",
+  "finished_at": "2026-09-12T06:53:01+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -196,7 +246,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "ca7bd0ffe83af55f3dbeb383dfe7b80098cea154fb31c94934c2c8582523db70"
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
       },
       {
         "path": "math-gaokao-latex/1965_全国卷/figures/f1965_t1_views.tex",
@@ -271,15 +321,15 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "4c018204624cdf9996e99e321d2ce345e99bcdd2fa8bbfcbff74b342c8bf445b"
+    "tree_sha256": "5b202393b51862a945de9e1e9a4950a63d7ee13ea0d8876b6213cecfcc1146f0"
   },
   "input_projection": "fc4e9aba7c6d1c2c85f0881927030b9fe3efa64a5aaa80804ab1dd6be88d64b3",
-  "manifest_revision": 1818,
+  "manifest_revision": 2038,
   "paper_id": "gk-1965-regular-national",
-  "previous_attempt_id": "31cba200-b0b2-4085-9af9-bcda4c07be8f",
+  "previous_attempt_id": "441bac4f-07ed-4412-adc5-5eadc115dc90",
   "project_dir": "1965_全国卷",
   "schema_version": 1,
-  "started_at": "2026-09-11T04:09:52+08:00",
+  "started_at": "2026-09-12T06:45:53+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
