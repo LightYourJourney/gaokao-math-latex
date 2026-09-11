@@ -12227,3 +12227,67 @@
   "type": "answer-missing"
 }
 ```
+## ISSUE-0781
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(2) 题的文本层使用私有字形显示乘号，视觉上读作 2×4^x−5×2^x+2=0；当前转录用标准 LaTeX 乘法点表示，需更清晰源确认字形。",
+  "fingerprint": "05f38f56f9a0bd484b16fa045167c77afc21a91520f5549fae15fbab3f63e8a6",
+  "impact": "non_blocking",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01-(2)",
+  "resume_action": "取得同版更清晰排印或矢量源，确认第 1(2) 题两个私有字形均为乘号；确认前保留视觉读取和标准 LaTeX 乘法点。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0782
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(17) 题可见 C 条件为 l⊥α、m∥β、l∥m，但固定源答案表记为 C；取水平面与相交的竖直平面即可构成反例，题面条件不能推出 α∥β。",
+  "fingerprint": "947de71e0535790f03227b976e520f50f3140abe87613c3af8fc2072921088f3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01-(17)",
+  "resume_action": "取得同版更清晰题面或权威勘误，确认第 1(17) 题 C 选项是否漏印“m⊥β”或其他条件；确认前保留固定源文字与答案表冲突，禁止擅改题面。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+## ISSUE-0783
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(21) 题选项 D 只写“有两个侧面都垂直于底面”，未显式限定相邻侧面；不同教材对该省略条件的解释可能不同，当前按固定答案 D 记录。",
+  "fingerprint": "ac2f1f1c9cc62b8c5473b23d711cef2f2d21164d06765a1db6453e07420d874f",
+  "impact": "non_blocking",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01-(21)",
+  "resume_action": "取得同版教材或更清晰排印，确认“两个侧面”是否有相邻限定；确认前保留源句并标注解答口径。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0784
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1(22) 题题干可读，但其后的 A—D 轨迹图形选项整段缺失；答案表记为 C，无法据当前源把独立推导的两条射线对应到字母。",
+  "fingerprint": "ef9b960b0dfb6926f8797d0426a4653c9fbee6dfcf37c953ac30cfef17f35908",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-guangdong-science",
+  "question_id": "gk-1987-regular-guangdong-science-q01-(22)",
+  "resume_action": "取得含有第 1(22) 题 A—D 图形选项的同版清晰源；确认前保留题干、独立轨迹和答案表，禁止补画为源选项。",
+  "source_id": "src-c52f9f57d337fda6a30bd1d35897dfb8c0b5a6d96726d513af1bf889cef355fa",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
