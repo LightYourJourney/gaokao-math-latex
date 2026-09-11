@@ -11985,7 +11985,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 20 题印为“集合 A 和集合 B 各含有 12 个元素，A∪B 含有 4 个元素”。前提按字面不可能成立；规范源保留该字面，不据常识改为交集。",
+  "current_evidence": "固定源第 20 题印为“集合 A 和集合 B 各含有 12 个元素，A∪B 含有 4 个元素”。前提按字面不可能成立；规范源保留该字面，不据常识改为交集。已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1986/1986全国理.pdf` 复核：文件 SHA-256 为 `f63a3e838fb7c3fb39228ba4fdf76451965d1518421bd693ba279fe34e48957f`、488796 字节、1 页，与 manifest artifact 完全一致；原页第 20 题的运算符清晰可见为 `A∪B`。",
   "fingerprint": "cd2505d9d0a18bf8ba361cba2433e61bcdc96e4d234f141ea5846b19bf5feae3",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-national-science",
