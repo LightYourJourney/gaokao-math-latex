@@ -540,6 +540,14 @@
         "gk-1986-regular-guangdong-science"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase2-b60",
+      "issues": [],
+      "paper_ids": [
+        "gk-1987-regular-national-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -549,7 +557,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "097183d1-7547-4d16-99cc-46e7f9b5b9bc",
+  "last_transaction_id": "93a03fc9-8cf3-4fca-8192-0edb63edcd4e",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -8130,9 +8138,66 @@
       "title": "1986 年·广东卷·理工农医类",
       "track": "science",
       "year": 1986
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1987_全国卷_文科/figures/f1987_national_arts_t18_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1987_全国卷_文科/figures/f1987_national_arts_t5_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1987_全国卷_文科/figures/f1987_national_arts_t8_sine.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1987_national_arts",
+        "id": "gk-1987-regular-national-arts",
+        "note": "固定源为 A3 横向单页题面，原卷页码 31；PDF 不含答案或解析页，下列答案和解析均为本库独立复算。第 5、8、18 题图形依据固定源关系重绘为 TikZ。第 17、22 题按完整题面分别保留两种第三顶点/两种正方形面积。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "题目": [
+            1,
+            22
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1987-regular-national-arts",
+      "production_state": "planned",
+      "project_dir": "1987_全国卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1987/1987_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1987/1987_数学真题_全国文_含解析.md",
+        "questions": "1987/1987_数学真题_全国文_试题.md",
+        "solution_body": "1987/1987_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e7085b2c66504dc12f6ea0e336c7b3f7d3e0d3f5c7a1ea8e252efb806e0aa05d"
+      ],
+      "title": "1987 年·全国卷·文科",
+      "track": "arts",
+      "year": 1987
     }
   ],
-  "revision": 1881,
+  "revision": 1882,
   "schema_version": 1,
   "sources": [
     {
@@ -11701,8 +11766,8 @@
       "exam_type": "regular",
       "git_blob_oid": "663ce55c21c7f8d9a314c50fd37a03b74dfe12ec",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1987-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1987全国文.pdf",
       "regions": [],
       "source_id": "src-e7085b2c66504dc12f6ea0e336c7b3f7d3e0d3f5c7a1ea8e252efb806e0aa05d",
