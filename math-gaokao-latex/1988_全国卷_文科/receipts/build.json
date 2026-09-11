@@ -1,0 +1,309 @@
+{
+  "attempt_id": "9c1f901b-6649-4bfc-98da-314cab023199",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/answers.tex",
+        "sha256": "090430a4f49a556c00ee110ecc18b8a32a6b8d87eb569b8c3a35a3dd2cf55d11"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/answers_short.tex",
+        "sha256": "56a9108cef62a311599336b936d55cedde54684bba00b4e243e73bb8a479c640"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t12_frustum.tex",
+        "sha256": "0d21870e4d06b318dee5233fcc7f383bcebceb1237c1839d87314bb0c263c1e0"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t22_pyramid.tex",
+        "sha256": "f1b67aa04061a6ccebbc01a69d6a86ec10c160067ed7a73f2dd4c0c577827940"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t4_exponential.tex",
+        "sha256": "529fddb51990b9bc35ff3876f8b9e7aacaa088ddae137b7b184e9e38942bb82e"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/questions.tex",
+        "sha256": "e55f1152172f3dcabf2c452c46a7cb79357709b8fd39afb28e52e05622d4558b"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/印刷版.tex",
+        "sha256": "2aadfaa1ea12b6abd9baf5caf461527791c29800817742fbd2c365be34f31980"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/简答版.tex",
+        "sha256": "69658ed91b4682750d42ff5295ab9fc14e800558ca1acd65f40d460e755751cb"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/解析版.tex",
+        "sha256": "8485683f2b5d5ca08a4d302e5727c196da1464981773946260e9f09c158351f9"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/试题版.tex",
+        "sha256": "b589aded2b126c52c5dbf97b3cfb4b12fad7edac1ebe971be306b9cb3e74cbd7"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "3cd4ba60a0a94d57f09d0ab2ec023f2239909592b98e9d96f48cb0edc9a99336"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1988_全国卷_文科/build/试题版.pdf",
+        "sha256": "ea0477a42f73ef25899ad185bb9d856bb2bd171ffb0af21fd923f244ebb9f691",
+        "size_bytes": 98863
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1988_全国卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 22,
+        "path": "math-gaokao-latex/1988_全国卷_文科/build/解析版.pdf",
+        "sha256": "2e247f02b5b33e56523097c536a640d9177d407e008e24690ee4e26c493a9a01",
+        "size_bytes": 161714
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1988_全国卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/1988_全国卷_文科/build/简答版.pdf",
+        "sha256": "adb5222c4e5e04b4fe3c6f0564b934ea7e27f83addbe78791da45ba04d1dd283",
+        "size_bytes": 109973
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1988_全国卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 18,
+        "path": "math-gaokao-latex/1988_全国卷_文科/build/印刷版.pdf",
+        "sha256": "95d6fce252aa93b6007431cf0fec646d410a2bad4f69b56ff0e5c45667172b06",
+        "size_bytes": 160514
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1988_全国卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-11T23:40:03+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1988/1988_数学真题_全国文_答案要点.md",
+        "sha256": "c8e892a2f9c316f0236b6ee0866bf82b01c15f3e5e7ffa0fc197c2c0e5adeb18"
+      },
+      {
+        "path": "1988/1988_数学真题_全国文_解析正文.md",
+        "sha256": "f93392c64837432a0cf2a8c0ff387ac6edd4269b8978f56537a2aa7e382a8f26"
+      },
+      {
+        "path": "1988/1988_数学真题_全国文_试题.md",
+        "sha256": "22b835b6798b4e1f596de7744953b8910c709f92e015f19c9bc6148e0ce26b48"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t12_frustum.tex",
+        "sha256": "0d21870e4d06b318dee5233fcc7f383bcebceb1237c1839d87314bb0c263c1e0"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t22_pyramid.tex",
+        "sha256": "f1b67aa04061a6ccebbc01a69d6a86ec10c160067ed7a73f2dd4c0c577827940"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/figures/f1988_national_arts_t4_exponential.tex",
+        "sha256": "529fddb51990b9bc35ff3876f8b9e7aacaa088ddae137b7b184e9e38942bb82e"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/印刷版.tex",
+        "sha256": "2aadfaa1ea12b6abd9baf5caf461527791c29800817742fbd2c365be34f31980"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/简答版.tex",
+        "sha256": "69658ed91b4682750d42ff5295ab9fc14e800558ca1acd65f40d460e755751cb"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/解析版.tex",
+        "sha256": "8485683f2b5d5ca08a4d302e5727c196da1464981773946260e9f09c158351f9"
+      },
+      {
+        "path": "math-gaokao-latex/1988_全国卷_文科/试题版.tex",
+        "sha256": "b589aded2b126c52c5dbf97b3cfb4b12fad7edac1ebe971be306b9cb3e74cbd7"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "0d889e8a19861065f64359be1c15cf4a8822274b348216291222823b41321df8"
+  },
+  "input_projection": "6106276631c80e81db0400a904b3e18290f735454f9c97d71fb5fe00603c8771",
+  "manifest_revision": 1890,
+  "paper_id": "gk-1988-regular-national-arts",
+  "previous_attempt_id": null,
+  "project_dir": "1988_全国卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-09-11T23:39:33+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}
