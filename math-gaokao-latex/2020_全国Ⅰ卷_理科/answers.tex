@@ -1170,16 +1170,19 @@ $B$、$C$ 与 $A$ 相差 $\pm120^\circ$：
 \[\left|\boldsymbol n_2\right|=\sqrt{\frac6{16}+\frac2{16}+\frac34}=\sqrt{\frac{6+2+12}{16}}=\sqrt{\frac{20}{16}}=\frac{\sqrt5}2\]
 
 \Needspace{5\baselineskip}
-\textbf{计算夹角}：
+\textbf{取垂直于棱 $PC$ 的截面}：平面 $PBC$ 中由 $P$ 指向 $B$ 的方向已经垂直于 $PC$，记
 \nopagebreak[4]
-\[\boldsymbol n_1\cdot\boldsymbol n_2=(-1)\times\frac{\sqrt6}4+0\times\frac{\sqrt2}4+\left(-\frac{\sqrt2}2\right)\times\frac{\sqrt3}2=-\frac{\sqrt6}4-\frac{\sqrt6}4=-\frac{\sqrt6}2\]
+\[\boldsymbol u=\overrightarrow{PB}=\left(\frac12,-\frac{\sqrt3}2,-\frac{\sqrt2}2\right).\]
 
+\Needspace{5\baselineskip}
+将 $\overrightarrow{PE}$ 投影到 $PC^\perp$，得到平面 $PCE$ 中指向 $E$ 的截面方向
 \nopagebreak[4]
-\[\cos\left\langle\boldsymbol n_1,\boldsymbol n_2\right\rangle=\frac{-\frac{\sqrt6}2}{\frac{\sqrt6}2\times\frac{\sqrt5}2}=\frac{-\frac{\sqrt6}2\times2}{\frac{\sqrt6}2\times\sqrt5}=-\frac2{\sqrt5}=-\frac{2\sqrt5}5\]
+\[\boldsymbol v=\overrightarrow{PE}-\frac{\overrightarrow{PE}\cdot\overrightarrow{PC}}{|\overrightarrow{PC}|^2}\overrightarrow{PC}=\left(\frac23,-\frac{\sqrt3}3,-\frac{\sqrt2}6\right).\]
 
-\textbf{判断二面角的正负}：$B$ 与 $E$ 分别位于棱 $PC$ 的两侧（$B$ 在 $y<0$ 一侧，$E$ 在 $x$ 轴正方向），二面角 $B\text{-}PC\text{-}E$ 是\textbf{钝角}，故余弦值取负。
-
-\textbf{所以二面角 $B\text{-}PC\text{-}E$ 的余弦值为 $-\dfrac{2\sqrt5}5$。}
+\Needspace{5\baselineskip}
+其中 $\boldsymbol u\cdot\boldsymbol v=1$，$|\boldsymbol u|=\frac{\sqrt6}2$，$|\boldsymbol v|=\sqrt{\frac56}$。这两条向量分别指向题设两半平面在截面中的方向，故二面角为锐角，
+\nopagebreak[4]
+\[\cos\theta=\frac{\boldsymbol u\cdot\boldsymbol v}{|\boldsymbol u||\boldsymbol v|}=\frac{2}{\sqrt5}=\frac{2\sqrt5}5.\]
 
 \begin{gktip}
 \textbf{方法总结}：本题体现了"\textbf{前一问的结论是后一问的工具}"这一常见设计——第 (1) 问证明的 $PA\perp$ 平面 $PBC$，直接提供了第 (2) 问所需的一个法向量，省去一次叉乘运算。做立体几何解答题时，先做完 (1) 再看 (2)，往往能发现这种"馈赠"。
@@ -1187,7 +1190,7 @@ $B$、$C$ 与 $A$ 相差 $\pm120^\circ$：
 
 \gkanswer{答案（1）：见解析版}
 
-\gkanswer{答案（2）：$-\dfrac{2\sqrt5}5$}
+\gkanswer{答案（2）：$\dfrac{2\sqrt5}5$}
 
 \par\medskip
 

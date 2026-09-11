@@ -238,18 +238,17 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "①题面缺句：规范源删去「由实验数据 (xᵢ,yᵢ) (i=1,2,…,20)」（同年理科卷第 5 题为同题且完整保留该句，卷首亦自称与理科卷第 5 题重合，可交叉印证）；②配图实质裁切：复用的 images/2020理-t5-散点图.png 横轴刻度与「温度 / °C」标签被整块切除。",
+  "current_evidence": "“由实验数据 (x_i,y_i) (i=1,2,\\cdots,20)”已补回并与同题理科卷一致；但当前散点图仍存在横轴/下部裁切，题面整体核对尚不能通过。",
   "fingerprint": "53d1a4270c45205732fc2720759b8238bf72ac67fa6831fa6665bdf7ac9644dc",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-arts",
   "question_id": "gk-2020-regular-national-1-arts-q05",
-  "resume_action": "补回被删去的「由实验数据 (xᵢ,yᵢ) (i=1,2,…,20)」一句，并随理科卷第 5 题一并修复散点图横轴（本卷复用 images/2020理-t5-散点图.png）",
+  "resume_action": "保留已补回的实验数据句子；重新导出或用可核验矢量源替换散点图，必须完整保留横轴刻度 0/10/20/30/40、温度标签及散点云下部，完成后重跑题面核对。",
   "source_id": "src-922b361942c8607abdfaba4bb5d504e18b644f5cfb744d7ae848a477192919bf",
   "status": "open",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0015
 
 ```json
@@ -272,35 +271,33 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "求解角色判 U 级：库内答案要点第 18(2) 题给 -2√5/5，四种独立方法（棱上垂直分量两取点、三面角球面余弦定理、同定向法向量叉积）一致给出 +2√5/5≈0.894427；要点的取负理由「B 与 E 在棱 PC 两侧」不成立——轴截面符号检验显示 B 与 E 同侧、A 才在另一侧，且 E 恒为不含 A 的弧 BC 中点，二面角必为锐角。在答案未更正前，本题答案证据不能定为 A。",
+  "current_evidence": "已将答案要点、解析和含解析中的余弦值统一更正为 +2√5/5；四法复核及当前生成物一致。",
   "fingerprint": "c953859e9024b1898ccd56fd010e5aa7df3a34a7c1c7cccca541a93328bd79bb",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-science",
   "question_id": "gk-2020-regular-national-1-science-q18",
-  "resume_action": "更正 2020 理科卷 `_答案要点.md` 第 18(2) 题：二面角 B-PC-E 的余弦值应为 +2√5/5（现值 -2√5/5 系定号错误）；更正后本题答案证据方可由 U 升级",
+  "resume_action": "已更正第 18(2) 题答案为 +2√5/5，并以垂直于 PC 的截面投影法重跑计算与答案核验。",
   "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
-
 ## ISSUE-0017
 
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "盲核冲突未解决：独立求解与库内答案要点在第 18(2) 题符号上分歧（+2√5/5 对 -2√5/5），数值部分 |cos|=2/√5 双方一致，分歧只在定号。旁证：同构形下二面角 A-PC-B=90°、A-PC-E≈116.565°，两者之差 26.565° 与 B-PC-E 自洽。**这是本库首个被双盲核实的答案错误，冲突须待内容更正后才能了结。**",
+  "current_evidence": "当前答案要点与独立复核均为 +2√5/5，二面角按指定两半平面的截面方向为锐角，冲突已消除。",
   "fingerprint": "87894b0360c60bb0b5ad40ea7e7c43b2dab282e881847d4ce6d3e9c8f5abcdfd",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-regular-national-1-science",
   "question_id": "gk-2020-regular-national-1-science-q18",
-  "resume_action": "以求解角色的四法互证为据更正库内答案要点第 18(2) 题符号（-2√5/5 → +2√5/5），更正后重跑盲核以了结冲突",
+  "resume_action": "已更正答案符号并重跑答案核查、生成、编译与盲核；原有答案冲突已消除。",
   "source_id": "src-fdd4c494b504524d50a2032f2ba74f41552b8c41e0dc1407eccb0344d8848668",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
-
 ## ISSUE-0018
 
 ```json
