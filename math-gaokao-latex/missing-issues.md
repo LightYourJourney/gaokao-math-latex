@@ -40,14 +40,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "b01 题面核对：题干文字忠实，但配图 images/2017理-t7-三视图.png（560x630）底部俯视图的等腰直角三角形只剩上半，直角顶点与底边切在画布外；题干明写「俯视图为等腰直角三角形」，属实质内容损失。",
+  "current_evidence": "公开版 PDF 第 2 页下方完整显示正视图、左视图和俯视图的等腰直角三角形；当前 LaTeX TikZ 图形已完整覆盖，原裁切 PNG 不作为最终图形来源。 核验资料：https://file.xdf.cn/uploads/171031/1017_171031111038bRXHLd0C5GaKSdRr.pdf",
   "fingerprint": "42aeaff5fe35ed88f5e4960e7c46d0f935b4c91442b8bfdf040f2fb02ed0c0cd",
   "impact": "blocks_completion",
   "paper_id": "gk-2017-regular-national-1-science",
   "question_id": "gk-2017-regular-national-1-science-q07",
-  "resume_action": "从上游 PDF 第 1 页重新导出 images/2017理-t7-三视图.png（当前俯视图的等腰直角三角形被画布下边缘截断），补全后重跑题面核对",
+  "resume_action": "已用独立公开版核验三视图完整性，保留 LaTeX TikZ 矢量重绘，不提交 PNG；重跑题面、生成、编译与视觉复核。",
   "source_id": "src-51eb5c18a0e4ad056c80a78acd915bc5d94193d7bb4506dd2fd2d078157b8d40",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -56,18 +56,17 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "b01 题面核对：配图 images/2017文-t8-四图.png 底边被截断，下方两幅图象的下降分支切在画布外，PDF 中标在其下方的选项标签 (C)、(D) 整体缺失，图中只剩 (A)、(B)，无法据图对应选项。",
+  "current_evidence": "公开版 PDF 第 3 页完整显示第 8 题 A、B、C、D 四幅图及下降分支；当前 LaTeX TikZ 图形已完整覆盖，原裁切 PNG 不作为最终图形来源。 核验资料：https://cdn.gaokzx.com/zixunzhan/202403/546f482e-f82b-42c6-9afc-a17bfc28c12f.pdf",
   "fingerprint": "78c8e8465c7357d3f9e820e8944ff1aea9509fd28092c4eb4bef7fc400f05f83",
   "impact": "blocks_completion",
   "paper_id": "gk-2017-regular-national-1-arts",
   "question_id": "gk-2017-regular-national-1-arts-q08",
-  "resume_action": "从上游 PDF 第 1 页重新导出 images/2017文-t8-四图.png（当前底边被截断、选项标签 (C)(D) 整体缺失），补全四个标签后重跑题面核对",
+  "resume_action": "已用独立公开版核验四个候选图及 A—D 标签完整性，保留 LaTeX TikZ 矢量重绘，不提交 PNG；重跑题面、生成、编译与视觉复核。",
   "source_id": "src-f4cc1ec8f7a5385f215c3ccec22f7942eadf5c1caa6a30fa88862df589f91c55",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0005
 
 ```json
