@@ -9,8 +9,8 @@
 
 - 标题：1977 年·内蒙古卷·理科
 - 项目目录：`1977_内蒙古卷_理科`
-- 构建：`succeeded`（attempt `a1d12366-6fb9-428b-b19c-bfef16c2bca9`）
-- 审查：`passed`（2026-09-11T02:08:42+08:00）
+- 构建：`succeeded`（attempt `8efc02d9-cdda-4edc-ae10-4ac41762ee91`）
+- 审查：`passed`（2026-09-11T10:49:54+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 3；解析版 12；简答版 4；印刷版 9
 - 警告豁免：0

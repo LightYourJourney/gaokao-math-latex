@@ -490,6 +490,22 @@
         "gk-1985-regular-national-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b54",
+      "issues": [],
+      "paper_ids": [
+        "gk-1985-regular-shanghai-arts"
+      ],
+      "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b55",
+      "issues": [],
+      "paper_ids": [
+        "gk-1985-regular-shanghai-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -499,7 +515,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7ac9c86d-c740-4a5f-8847-dd9b6e612fec",
+  "last_transaction_id": "63c905d9-67d1-4da3-889c-fddb5ce9e6e4",
   "papers": [
     {
       "blocked_from": "legacy_unverified",
@@ -7625,9 +7641,114 @@
       "title": "1985 年·全国卷·理科",
       "track": "science",
       "year": 1985
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1985_上海卷_文史类/figures/f1985_shanghai_arts_t3_curves.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1985_shanghai_arts",
+        "id": "gk-1985-regular-shanghai-arts",
+        "note": "固定源为两页原卷题面，原卷页码 4-37、4-38；第 3 题的两条曲线依据明确方程重绘为 TikZ。第 5、8 题题干写有“如图”，但固定源未见对应独立图形，规范源保留该说明且不补绘不可核验图形。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷（文史类）",
+        "structure": {
+          "大题": [
+            1,
+            8
+          ]
+        },
+        "track": "文史类",
+        "variant": "上海文史类"
+      },
+      "issue_ids": [
+        "ISSUE-0761",
+        "ISSUE-0762"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1985-regular-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "1985_上海卷_文史类",
+      "question_count": 8,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1985/1985_数学真题_上海文_答案要点.md",
+        "combined_rendered": "1985/1985_数学真题_上海文_含解析.md",
+        "questions": "1985/1985_数学真题_上海文_试题.md",
+        "solution_body": "1985/1985_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b568da2ee95d48c563e206a1f333102de6d206287202709d56be9678e91687e5"
+      ],
+      "title": "1985 年·上海卷·文史类",
+      "track": "arts",
+      "year": 1985
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1985_上海卷_理工农医类/figures/f1985_shanghai_science_t3_curves.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1985_shanghai_science",
+        "id": "gk-1985-regular-shanghai-science",
+        "note": "固定源为两页原卷题面，原卷页码 4-36、4-37；第 3 题的双曲线与圆依据明确方程重绘为 TikZ。第 2 题第（5）小题固定源字面为 x=x^3，但选项均对应 y=x^3 的平移形式，已列为阻塞问题。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷（理工农医类）",
+        "structure": {
+          "大题": [
+            1,
+            10
+          ]
+        },
+        "track": "理工农医类",
+        "variant": "上海理工农医类"
+      },
+      "issue_ids": [
+        "ISSUE-0763",
+        "ISSUE-0764",
+        "ISSUE-0765"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1985-regular-shanghai-science",
+      "production_state": "blocked",
+      "project_dir": "1985_上海卷_理工农医类",
+      "question_count": 10,
+      "resume_action": "取得同版更清晰排印件或独立权威扫描，确认第 2(5) 小题左端究竟为 x 还是 y；在确认前保留固定源字面，不据选项改写题面。",
+      "source_files": {
+        "answer_key": "1985/1985_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1985/1985_数学真题_上海理_含解析.md",
+        "questions": "1985/1985_数学真题_上海理_试题.md",
+        "solution_body": "1985/1985_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      ],
+      "title": "1985 年·上海卷·理工农医类",
+      "track": "science",
+      "year": 1985
     }
   ],
-  "revision": 1798,
+  "revision": 1877,
   "schema_version": 1,
   "sources": [
     {
@@ -10884,8 +11005,8 @@
       "exam_type": "regular",
       "git_blob_oid": "95362934bf071e16ae080cfd74e680bf29f29a7b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1985-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1985上海文.pdf",
       "regions": [],
       "source_id": "src-b568da2ee95d48c563e206a1f333102de6d206287202709d56be9678e91687e5",
@@ -10908,8 +11029,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e3d0f7ee01f1bde9c9e0c486bf6d9792a7f38c4c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1985-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1985上海理.pdf",
       "regions": [],
       "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",

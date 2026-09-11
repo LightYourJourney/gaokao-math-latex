@@ -51,7 +51,6 @@
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0004
 
 ```json
@@ -11906,5 +11905,85 @@
   "resume_action": "已在新一次正式构建中通过，无需动作",
   "status": "resolved",
   "type": "compile-error"
+}
+```
+## ISSUE-0761
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1985 年上海市普通高等学校招生统一考试题目·数学（文史类）》第 2 页第 5 题题干写有“如图”，但该两页扫描中未见可独立辨认的对应图形。题干中的平行线、垂线和交点关系均清晰可见，证明可仅依据文字完成；本文没有凭模型补画源图。",
+  "fingerprint": "c8c585fa6a2c7960b8e245512ef9ce078969ecb9a689da9f418f408771db6e89",
+  "impact": "non_blocking",
+  "paper_id": "gk-1985-regular-shanghai-arts",
+  "question_id": "gk-1985-regular-shanghai-arts-q05",
+  "resume_action": "取得同版更清晰排印件或独立权威扫描，补核第 5 题“如图”所指图形；在确认前保留题面可见文字，禁止凭空补画源图。",
+  "source_id": "src-b568da2ee95d48c563e206a1f333102de6d206287202709d56be9678e91687e5",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0762
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1985 年上海市普通高等学校招生统一考试题目·数学（文史类）》第 2 页第 8 题题干写有“如图”，但该两页扫描中未见可独立辨认的对应图形。抛物线、垂线、垂足和定比分点等文字及公式条件均清晰可见，本文仅据这些可见条件推导，不补写不可核验的图形信息。",
+  "fingerprint": "54d6b149230de708f231202be2abbfc086fb08ee093b65fac3b193c98ff85e17",
+  "impact": "non_blocking",
+  "paper_id": "gk-1985-regular-shanghai-arts",
+  "question_id": "gk-1985-regular-shanghai-arts-q08",
+  "resume_action": "取得同版更清晰排印件或独立权威扫描，补核第 8 题“如图”所指图形；在确认前保留题面可见文字，禁止凭空补画源图。",
+  "source_id": "src-b568da2ee95d48c563e206a1f333102de6d206287202709d56be9678e91687e5",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0763
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF《1985 年上海市普通高等学校招生统一考试题目·数学（理工农医类）》第 1 页第 2 题第（5）小题字面为“原坐标系中的曲线 x=x^3”，但 A—D 四个选项均为 y=x^3 平移到新坐标系后的形式。若按固定源字面换元，不能得到任何选项；若按选项反推为 y=x^3，则会改变题面。",
+  "fingerprint": "949a9ab74011e0744bcf96f88c07f326908dda53f4162f16352b7d4edb5501c5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-shanghai-science",
+  "question_id": "gk-1985-regular-shanghai-science-q02",
+  "resume_action": "取得同版更清晰排印件或独立权威扫描，确认第 2(5) 小题左端究竟为 x 还是 y；在确认前保留固定源字面，不据选项改写题面。",
+  "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0764
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "由于固定源第 2(5) 小题字面“x=x^3”与全部选项不一致，当前不能从规范题面确定该小问的可靠最终答案；若按选项猜测为 D，就会把未核实的题面修正当成答案。",
+  "fingerprint": "5781a035d53d1179ac6b5ce69afcf75d4f05d09bc44c9994c726cde1ce807ed4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-shanghai-science",
+  "question_id": "gk-1985-regular-shanghai-science-q02",
+  "resume_action": "在确认第 2(5) 小题左端究竟为 x 还是 y 后，重新确定选项并更新答案要点、解析和三角色核验记录。",
+  "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+## ISSUE-0765
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2(5) 小题的字面“x=x^3”与 A—D 选项不相容：按字面不能得到选项，按选项则需将曲线改为 y=x^3。由于该冲突尚未由独立源解决，盲核不能对四个选项中的任一项作无条件确认。",
+  "fingerprint": "217fd3c78bf6144906814dbcc1bc238cbdb137e4a80c1c116a0b708e9a219f8c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-shanghai-science",
+  "question_id": "gk-1985-regular-shanghai-science-q02",
+  "resume_action": "取得独立权威题面后，按确认的曲线重新核定第 2(5) 小题答案并完成盲核。",
+  "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
+  "status": "open",
+  "type": "answer-conflict"
 }
 ```

@@ -1,0 +1,23 @@
+% 1985 年上海卷文史类第 3 题：直线与竖轴双曲线
+\begin{tikzpicture}[scale=0.72,>=stealth]
+  \begin{scope}[shift={(-3.0,0)}]
+    \draw[->] (-2.1,0)--(2.25,0) node[right] {$x$};
+    \draw[->] (0,-1.0)--(0,2.8) node[above] {$y$};
+    \draw[thick] (-2.0,0.67)--(1.2,2.8);
+    \fill (0,2) circle (1.1pt);
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (0,-1.25) {（1）};
+  \end{scope}
+  \begin{scope}[shift={(2.0,0)}]
+    \draw[->] (-1.85,0)--(1.9,0) node[right] {$x$};
+    \draw[->] (0,-2.4)--(0,2.4) node[above] {$y$};
+    \draw[thick,domain=-1.65:1.65,samples=100]
+      plot (\x,{2*sqrt(1+\x*\x/9)});
+    \draw[thick,domain=-1.65:1.65,samples=100]
+      plot (\x,{-2*sqrt(1+\x*\x/9)});
+    \fill (0,2) circle (1.1pt);
+    \fill (0,-2) circle (1.1pt);
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (0,-2.75) {（2）};
+  \end{scope}
+\end{tikzpicture}

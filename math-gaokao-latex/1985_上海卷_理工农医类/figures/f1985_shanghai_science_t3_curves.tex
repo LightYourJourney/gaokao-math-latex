@@ -1,0 +1,23 @@
+% 1985 年上海卷理工农医类第 3 题：双曲线与圆
+\begin{tikzpicture}[scale=0.72,>=stealth]
+  \begin{scope}[shift={(-3.0,0)}]
+    \draw[->] (-2.5,0)--(2.55,0) node[right] {$x$};
+    \draw[->] (0,-2.7)--(0,2.7) node[above] {$y$};
+    \draw[thick,domain=-2.2:2.2,samples=100]
+      plot (\x,{2*sqrt(1+\x*\x/9)});
+    \draw[thick,domain=-2.2:2.2,samples=100]
+      plot (\x,{-2*sqrt(1+\x*\x/9)});
+    \fill (0,2) circle (1.1pt);
+    \fill (0,-2) circle (1.1pt);
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (0,-3.0) {（1）};
+  \end{scope}
+  \begin{scope}[shift={(2.35,0)}]
+    \draw[->] (-1.45,0)--(1.5,0) node[right] {$x$};
+    \draw[->] (0,-0.45)--(0,2.55) node[above] {$y$};
+    \draw[thick] (0,1) circle (1);
+    \fill (0,1) circle (1.1pt);
+    \node[below left] at (0,0) {$O$};
+    \node[below] at (0,-0.75) {（2）};
+  \end{scope}
+\end{tikzpicture}

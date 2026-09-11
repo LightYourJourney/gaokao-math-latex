@@ -1,0 +1,29 @@
+% !TeX program = xelatex
+% ============================================================
+% 1985 年·上海卷·理工农医类 · 解析版
+% 由 tools/make_editions.py 生成（重跑会覆盖本文件）；
+% 题目/解析内容在 questions.tex / answers*.tex，勿在本文件内写内容。
+% ============================================================
+\documentclass[zihao=-4, a4paper]{ctexart}
+\input{../common/preamble}
+\input{../common/macros}
+\input{../common/questions_env}
+\renewcommand{\gkpaperid}{gk-1985-regular-shanghai-science}
+\renewcommand{\gkheadL}{1985 年·上海卷·理工农医类 · 数学}
+\renewcommand{\gkheadR}{解析版}
+\hypersetup{pdftitle={1985 年·上海卷·理工农医类 数学 · 解析版}}
+\begin{document}
+\begin{center}
+  {\Large\bfseries 1985 年·上海卷·理工农医类}\\[4pt]
+  {\large 数学 · 解析版}
+\end{center}
+\medskip
+\pdfbookmark[1]{试题}{sec:q}
+\input{questions}
+\clearpage
+\pdfbookmark[1]{参考答案与详细解析}{sec:s}
+\Needspace{8\baselineskip}
+\begin{center}{\Large\bfseries 参考答案与详细解析}\end{center}
+\medskip
+\input{answers}
+\end{document}

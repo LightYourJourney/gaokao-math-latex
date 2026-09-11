@@ -112,6 +112,7 @@ FIGMAP = {
     "1985-national-science-t4-polar-options": "f1985_national_science_t4_polar_options",
     "1985-national-science-t13-planes": "f1985_national_science_t13_planes",
     "1985-national-science-t15-locus": "f1985_national_science_t15_locus",
+    "1985-shanghai-arts-t3-curves": "f1985_shanghai_arts_t3_curves",
     "2023-Ⅱ-t19-频率分布直方图": "f2023x2_t19_hist",
     "2023-Ⅱ-t20-三棱锥": "f2023x2_t20_tetra",
     "2024-t11-曲线": "f2024_t11_curve",

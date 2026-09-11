@@ -1,0 +1,273 @@
+{
+  "batch_id": "phase2-b55",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-1985-regular-shanghai-science",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "逐小题独立复核绝对值不等式、八次根反函数、点线距离、正弦周期、圆方程、线面位置、三角恒等式、指数换元、象限判断和旋转体体积。",
+        "grade": "A"
+      },
+      "answer_sha256": "ce65d9d5bc736f14607b135018a445e5ef4d61e52067faf0f3b207db6d689cc5",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 1,
+      "question_id": "gk-1985-regular-shanghai-science-q01",
+      "question_text_sha256": "dc87f4de5e1a745d997ffd1537e1d3127a5a61e54c4df3159a059506a5a20a4d",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-36 的高清整页与局部复核：第 1 题十个小问的题号、数字、公式与文字均清晰可辨，规范源逐项忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "独立复核前四个选择题；第 2(5) 只能确认固定源字面与选项冲突，未据疑似原题给出确定选择，挂 ISSUE-0763 与 ISSUE-0764。",
+        "grade": "U"
+      },
+      "answer_sha256": "7638735ce060ef3f528f402e25d5fb58d528f2ce6852247ec72ce1e4943c74e6",
+      "conflict_status": "unresolved",
+      "issue_ids": [
+        "ISSUE-0763",
+        "ISSUE-0764",
+        "ISSUE-0765"
+      ],
+      "printed_number": 2,
+      "question_id": "gk-1985-regular-shanghai-science-q02",
+      "question_text_sha256": "8b97ab4902640028d8f459a0c1c4030cb82f4f18146ac4ef3a63691496aafaa3",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-36 的高清局部复核：第 2(5) 小题字面清晰印为“曲线 x=x^3”，但 A—D 选项均对应 y=x^3 的平移形式；题面忠实转录，语义冲突挂 ISSUE-0763。",
+        "result": "uncertain",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "用余割与余切恒等式消去参数，独立复核竖轴双曲线；将极坐标方程化为圆方程并复核图形。",
+        "grade": "A"
+      },
+      "answer_sha256": "33ea9cf640fe8f0dc446e1094dd3cfa78d70986514f7b3d4faa1330f763035fd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 3,
+      "question_id": "gk-1985-regular-shanghai-science-q03",
+      "question_text_sha256": "bf8255bedf933662c8fc7742d33bb5d104b85859d832b56ab8b0d87d5f493b4a",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-36、4-37 的整页与局部复核：第 3 题参数方程、极坐标方程及“画出图形”的要求均清晰可辨；规范源图形依据明确方程重绘。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "按二项式通项、组合数、末位分类及等比级数独立复核常数项、四位偶数数量和球面面积总和。",
+        "grade": "A"
+      },
+      "answer_sha256": "47920d692b6f407b61fe4bb0334b9ab3c40abe993f81654b55264860541b1629",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 4,
+      "question_id": "gk-1985-regular-shanghai-science-q04",
+      "question_text_sha256": "edaa3ad3ddcbc507a54d82934c224fe6583e235dc96927eedb17a5eec69e2e99",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页与局部复核：第 4 题三项题干、数字、幂式与无重复四位偶数条件均清晰可辨，规范源逐项忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "用复数三角形式和正弦定理独立复核 z1+z2 的虚部为零。",
+        "grade": "A"
+      },
+      "answer_sha256": "5a05d279e466546a9e9d362dcbf001fb5ffe13705e5696cbd835673ff254753b",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 5,
+      "question_id": "gk-1985-regular-shanghai-science-q05",
+      "question_text_sha256": "e9e36f1e1e319e6197888992cb5e3b518f960d7b2a886d812ffb01c340768f36",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页复核：第 5 题三棱锥、两复数的模与幅角条件及证明结论均清晰可辨，规范源忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "将平方余弦和化为 cos2x+cos6x=0，再用和差化积独立复核两族通解。",
+        "grade": "A"
+      },
+      "answer_sha256": "e345e2850cfaa73d0f67a5c1d507e816bb129f951f2a827be7287ace1582db7c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 6,
+      "question_id": "gk-1985-regular-shanghai-science-q06",
+      "question_text_sha256": "f692de71a54136af4b198c267d98e4818f11bc7e8223c256b295efe8d3bcbbb4",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页复核：第 6 题三角方程及等号均清晰可辨，规范源忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "按题目要求使用反证法，假设存在两个不同实根并由严格单调性导出矛盾。",
+        "grade": "A"
+      },
+      "answer_sha256": "5be849e2a1febb83e9da5ae4a18ee612b1017ad7007e863344350ab30bdd2a0d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 7,
+      "question_id": "gk-1985-regular-shanghai-science-q07",
+      "question_text_sha256": "61063b306ee7aac806b4f22a4c27dac25d67c57fd9c2cd4cae031b9b7749b598",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页复核：第 7 题严格单调条件、反证法要求及“至多一个实数根”结论均清晰可辨，规范源忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "以 n=2 为基例，设 P_n 为题面乘积；比较递推因子 2n/(2n-1) 与根式比值，独立完成归纳。",
+        "grade": "A"
+      },
+      "answer_sha256": "b11d6eae86df4e5d5477afce6d108b9c5ec7919182ce704d22e039904cd4f266",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 8,
+      "question_id": "gk-1985-regular-shanghai-science-q08",
+      "question_text_sha256": "2a1b69176281764a496d988f972c3feafd2f6ee990e17d857db9ba5cdf166533",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页复核：第 8 题乘积各因子、自然数范围、不等号方向及根式分母均清晰可辨，规范源按源页转录为 $\\frac{\\sqrt{2n+1}}2$。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "设 P 到底面的距离为 H，利用 H=hi sin αi、等比数列关系和等差中项恒等式，独立复核三个角相等。",
+        "grade": "A"
+      },
+      "answer_sha256": "b8f8f2dd1aab37fd117df714304d437630e999cb18e097fbfcc8b228872fe0d1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 9,
+      "question_id": "gk-1985-regular-shanghai-science-q09",
+      "question_text_sha256": "b9c3a392eb2e65b86d16a40273117772152d12e17f8b4d6bdbf4e28236892017",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页与局部复核：第 9 题三棱锥、三条距离、三个二面角、锐角、等差与等比条件均清晰可辨，规范源忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "沿斜率为 1 的直线以纵坐标参数化四次交点方程，设 A、B 两根的和与积并与另外二根作因式分解；由距离乘积排除负号分支，得到 D=u^2+v^4-3 及 4[v(D+1)-u]^2=D(D+2v^2+1)^2，并保留两个实交点的判别式条件。",
+        "grade": "A"
+      },
+      "answer_sha256": "397a62f99a810ddd99f22ddbd1f48de2cc8e3c20503ebad3fd0a49a584b60ce8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_number": 10,
+      "question_id": "gk-1985-regular-shanghai-science-q10",
+      "question_text_sha256": "ec773efbbfaaf8e2bc706c45727cfb9bed0094b7ceeae9da3982b513bc413e93",
+      "reviewer_role": "phase2-b55-answer-blind-reviewer",
+      "solver_role": "phase2-b55-answer-solve-independent",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
+      },
+      "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
+      "transcription_review": {
+        "evidence": "固定源 PDF 原卷页码 4-37 的高清整页与局部复核：第 10 题直线、四次曲线、交点 A/B、点 P、距离乘积条件及轨迹设问均清晰可辨，规范源忠实转录。",
+        "result": "passed",
+        "role": "phase2-b55-question-review-pdf"
+      }
+    }
+  ],
+  "schema_version": 1
+}
