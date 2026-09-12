@@ -9,8 +9,8 @@
 
 - 标题：1952 年·全国卷
 - 项目目录：`1952_全国卷`
-- 构建：`succeeded`（attempt `5ec905c2-621d-44ec-9d7f-b71b1748ba98`）
-- 审查：`passed`（2026-09-12T07:15:08+08:00）
+- 构建：`succeeded`（attempt `aabbfd39-e8af-49ab-8ca5-3bb25e58d19a`）
+- 审查：`passed`（2026-09-12T09:56:10+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 15；简答版 4；印刷版 11
 - 警告豁免：1

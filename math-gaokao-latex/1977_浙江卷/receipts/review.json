@@ -1,6 +1,6 @@
 {
   "batch_id": "phase2-b34",
-  "build_attempt_id": "ff3a5ab8-b2e4-4f71-869b-c5705dd26621",
+  "build_attempt_id": "5c537572-84a6-4a5f-990b-7f7bc33e07d8",
   "dependency_tree_sha256": "9b15c31cfb1bff5b36064f633cde7c8b7f702ead8c1033e27b1e283bd959c2a6",
   "editions": [
     {
@@ -104,7 +104,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "aa7a4e06be3661fec8a078da9936c30786f899e1a28aadcd19f5b1a6161a74fe",
+      "pdf_sha256": "62c1e81d698005223ba969f523c2dc589d88418d3167cf277b8d4e61734ebe11",
       "result": "pass"
     },
     {
@@ -576,7 +576,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "3ebd9335804aa4a240c3b02c3f31a4d618d398672ab4f41f459b8f22fa655f5f",
+      "pdf_sha256": "4ac9f5b7a5beb9a9d97a6aea3629cf35f70030ffd966dc4968551a2f9336779c",
       "result": "pass"
     },
     {
@@ -726,7 +726,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "1caf762c3609433b14f6f2687d249ad9f98fbdbf122f9e385db027c41beb63e3",
+      "pdf_sha256": "a64f8b7a673f5e3993180db35f3b9c0d71ee0edb7a33408992188b83359cedca",
       "result": "pass"
     },
     {
@@ -1152,7 +1152,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "25095bb581f77f5c9c6c196be62f5254a8f45b7070867115e1aef7c0db3f5631",
+      "pdf_sha256": "5b2d64c2e79a7d3bfabf8358c449a618dc017a78fcff4d50abfbf5749a1acce1",
       "result": "pass"
     }
   ],
@@ -1160,7 +1160,7 @@
   "input_projection": "2b128ab5acea13b14a2515314925ac6aca1e3d463eadf69f8a1785a8f54d637d",
   "paper_id": "gk-1977-regular-zhejiang",
   "project_dir": "1977_浙江卷",
-  "reviewed_at": "2026-09-12T07:15:52+08:00",
+  "reviewed_at": "2026-09-12T09:59:06+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -1218,17 +1218,6 @@
     {
       "box": "hbox",
       "edition": "解析版",
-      "kind": "Overfull",
-      "lines": "431",
-      "pdf_page": 1,
-      "reason": "重编译后同类排版警告（内容源未变）；按上一轮视觉审查对同类警告的判定沿用通过判定，本条豁免与当前 build 回执逐项匹配。",
-      "source_file": "math-gaokao-latex/1977_浙江卷/answers.tex",
-      "visual_result": "pass",
-      "width_pt": "45.391"
-    },
-    {
-      "box": "hbox",
-      "edition": "解析版",
       "kind": "Underfull",
       "lines": "442--443",
       "pdf_page": 1,
@@ -1236,6 +1225,17 @@
       "source_file": "math-gaokao-latex/1977_浙江卷/answers.tex",
       "visual_result": "pass",
       "width_pt": null
+    },
+    {
+      "box": "hbox",
+      "edition": "解析版",
+      "kind": "Overfull",
+      "lines": "431",
+      "pdf_page": 3,
+      "reason": "全量正式重建产生的当前警告；既有逐页视觉回执通过，确认不造成裁切、重叠或阅读障碍。",
+      "source_file": "math-gaokao-latex/1977_浙江卷/解析版.tex",
+      "visual_result": "pass",
+      "width_pt": "45.391"
     }
   ]
 }
