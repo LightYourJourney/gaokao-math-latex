@@ -467,7 +467,14 @@ class MigrationTests(unittest.TestCase):
             with self.subTest(legacy_id=entry.legacy_id):
                 self.assertEqual(paths, sorted(paths))
                 self.assertEqual(len(set(paths)), len(paths))
-                self.assertEqual(paths, frozen[entry.legacy_id])
+                expected_frozen = list(frozen[entry.legacy_id])
+                if entry.legacy_id == "2019li":
+                    # 178b4c31：迁移后补回、已独立核验的六爻矢量图；冻结迁移
+                    # 基线本身不应被改写，但 live figure tree 必须纳入它。
+                    expected_frozen.append(
+                        "2019_全国Ⅰ卷_理科/figures/f2019_t6_hexagram.tex"
+                    )
+                self.assertEqual(paths, expected_frozen)
                 self.assertEqual(
                     paths,
                     [
@@ -525,7 +532,7 @@ class MigrationTests(unittest.TestCase):
                         figure["expected_occurrences"], by_stem[stem], stem
                     )
                 total += len(figures)
-        self.assertEqual(total, 59)
+        self.assertEqual(total, 60)
 
     def test_frozen_migration_state_markdown_matched_legacy_tex(self):
         """「Markdown 计数 == legacy TeX 计数」这条等式只对**冻结迁移态**成立。
@@ -999,7 +1006,7 @@ class FigureOccurrenceGuardTests(unittest.TestCase):
                 repo_root=repo,
                 issues=load_issues(project / "missing-issues.md"),
             )
-            self.assertEqual(validate_figure_occurrences(migrated, repo), 59)
+            self.assertEqual(validate_figure_occurrences(migrated, repo), 60)
 
             paper = {item["paper_id"]: item for item in migrated["papers"]}[
                 "gk-2018-regular-national-1-arts"
@@ -1058,7 +1065,7 @@ class SyncFigureOccurrencesTests(unittest.TestCase):
             self.assertEqual(after["revision"], before + 1)
             self.assertEqual(after["last_transaction_id"], transaction_id)
             # 登记值被拉回规范 Markdown 的实际值，守卫随之转绿
-            self.assertEqual(validate_figure_occurrences(after, repo), 59)
+            self.assertEqual(validate_figure_occurrences(after, repo), 60)
             # 除 expected_occurrences / revision / last_transaction_id 外一字未改
             for key in ("revision", "last_transaction_id"):
                 manifest[key] = after[key]

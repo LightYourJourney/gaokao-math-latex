@@ -61,8 +61,9 @@ def _normalize_post_baseline_repairs(relative, text):
     """
     # These exceptions are tied to reviewed commits, not to an open-ended
     # content allowlist: 1aa2f46b (2017 regions), 94db44de (2019 arts q5),
-    # 9172712f (2019 science q6 wording), and 6ce2e0ac (2020 source/solution
-    # corrections).  The actual files remain hash-pinned in the ledger.
+    # 9172712f (2019 science q6 wording), 178b4c31 (2019 science q6 vector
+    # figure), and 6ce2e0ac (2020 source/solution corrections).  The actual
+    # files remain hash-pinned in the ledger.
     if relative == (
         "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
     ):
@@ -115,6 +116,25 @@ def _normalize_post_baseline_repairs(relative, text):
         normalized_block = "\n".join(lines)
         normalized_block += "\n" if block.endswith("\n") else ""
         return text[:start] + normalized_block + text[end:]
+
+    if relative in {
+        "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex",
+        "math-gaokao-latex/2019_全国Ⅰ卷_理科/answers.tex",
+    }:
+        start_marker = (
+            r"\gkti{6}"
+            if relative.endswith("questions.tex")
+            else r"\gksolhead{6}{"
+        )
+        start = text.index(start_marker)
+        end = text.index(r"\begin{gkopts}(4)", start)
+        block = text[start:end]
+        figure = r"\begin{center}\input{figures/f2019_t6_hexagram}\end{center}"
+        block = block.replace(figure, "")
+        sentinel = "[post-baseline q6 vector-figure repair]"
+        if sentinel not in block:
+            block += sentinel + "\n"
+        return text[:start] + block + text[end:]
 
     if relative in {
         "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex",
@@ -543,6 +563,15 @@ class PreMigrationIndexTests(unittest.TestCase):
             paper for paper in current["papers"] if paper["id"] in legacy_ids
         ]
         projected = legacy_index_projection(current)
+        # 2019 理科第 6 题的六爻图是 178b4c31 在迁移后补入的已核实矢量修订；
+        # 这里专门比较迁移前字段，因此从该历史投影中剔除这一项，其他 figure
+        # 路径、顺序与字段仍必须逐字一致。
+        for paper in projected["papers"]:
+            if paper["id"] == "2019li":
+                paper["figures"] = [
+                    figure for figure in paper["figures"]
+                    if figure != "f2019_t6_hexagram.tex"
+                ]
         # `generated_by` 是登记在案的正当改写（baseline._REWRITTEN_FIELDS）：写实现自
         # T13 起就在 generate_projects.py，T16 剔除运行态投影时一并落实。除它之外，
         # 迁移前的每一个字段值仍必须逐字未变。
