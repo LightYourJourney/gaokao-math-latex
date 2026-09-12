@@ -1180,6 +1180,25 @@ class LiveIndexIsUnchangedTests(unittest.TestCase):
         expected = canonical_json(project_legacy_index(manifest, legacy))
         self.assertEqual((ROOT / "index.json").read_text(encoding="utf-8"), expected)
 
+    def test_2019_science_q6_uses_a_registered_vector_hexagram(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-2019-regular-national-1-science"
+        )
+        expected_figure = {
+            "path": "2019_全国Ⅰ卷_理科/figures/f2019_t6_hexagram.tex",
+            "expected_occurrences": 2,
+        }
+        self.assertIn(expected_figure, paper["figure_files"])
+        source = (ROOT.parent / "2019/2019_数学真题_理_试题.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("images/2019理-t6-六爻.png", source)
+        figure = ROOT / expected_figure["path"]
+        self.assertTrue(figure.is_file())
+        self.assertIn(r"\begin{tikzpicture}", figure.read_text(encoding="utf-8"))
+
 
 # ------------------------------------------------------------------ CLI 契约
 

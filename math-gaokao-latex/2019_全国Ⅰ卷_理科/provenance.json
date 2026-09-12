@@ -140,12 +140,10 @@
       },
       "answer_sha256": "cab6e64ff928aa0bc9e849da12b2ed7ded774d760d3a713564558101861f0c43",
       "conflict_status": "none",
-      "issue_ids": [
-        "ISSUE-0009"
-      ],
+      "issue_ids": [],
       "printed_number": 6,
       "question_id": "gk-2019-regular-national-1-science-q06",
-      "question_text_sha256": "ab5616776b6fafdb1eb8aa6325345895e4f1f6ff533c48c6441b7f0cd561e37b",
+      "question_text_sha256": "067eba1fe32e3bc6fa9837e95bd95153b686dff60318b799cc79769c57c968a9",
       "reviewer_role": "phase0-b02-remediation-answer-blind-review",
       "solver_role": "phase0-b02-remediation-answer-solve",
       "source_pages": [
@@ -156,8 +154,8 @@
       },
       "source_sha256": "ad17eb4cc08a6686cdfdacc9fafea969bffc93a031de6784cbc1346fd63f746f",
       "transcription_review": {
-        "evidence": "实质差异（题面缺句 + 配图整幅缺失）。PDF p1 原文：「每一\"重卦\"由从下到上排列的 6 个爻组成，爻分为阳爻\"——\"和阴爻\"— —\"，如图就是一重卦。在所有重卦中随机取一重卦……」，并在选项上方印有一幅六爻重卦示意图。规范源写作「爻分为阳爻和阴爻。在所有重卦中随机取一重卦」，删去了阴爻/阳爻的符号说明与「如图就是一重卦」整句；该配图未被转录，2019/images/ 下不存在任何 2019理-t6-* 文件，正文亦无图片引用。选项 5/16、11/32、21/32、11/16 与答案不受影响。",
-        "result": "failed",
+        "evidence": "独立公开扫描页（2019 全国 I 卷理科第 2 页）显示完整六爻图；当前题面以同一图形的 TikZ 矢量源重绘并引用，未提交扫描图。",
+        "result": "passed",
         "role": "phase0-b02-remediation-question-review"
       }
     },

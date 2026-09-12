@@ -153,14 +153,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "文字缺口已修正：公开固定源 PDF 第 2 页明确印有「爻分为阳爻“——”和阴爻“— —”，如图就是一重卦」（来源：https://19216675.s21i.faiusr.com/61/ABUIABA9GAAg55L86wUo1M7u6wc.pdf）；当前规范源已逐字补回。剩余阻塞仅为该处的六爻重卦示意图：仓库仍没有可核验的 2019 理科 q6 图形，正文也未引用图形源，不能凭通用卦象记忆补画。",
+  "current_evidence": "题面文字与图形均已核实：公开扫描页 https://www.gaokao.com/e/20190609/5cfc879c086fb_2.shtml 的第 2 页逐字显示「爻分为阳爻“——”和阴爻“— —”，如图就是一重卦」，并显示六爻图形（从上到下为阴、阴、阴、阳、阳、阴）；规范源文字已补回，图形已按该扫描用 TikZ 矢量重绘为 f2019_t6_hexagram.tex，题试版与解析版均引用同一源，未提交扫描图。",
   "fingerprint": "e52460575976f006ce1b6600a8b8753f6a3aab17c097b90444a55a0315cd4710",
   "impact": "blocks_completion",
   "paper_id": "gk-2019-regular-national-1-science",
   "question_id": "gk-2019-regular-national-1-science-q06",
-  "resume_action": "取得固定源 PDF p1 选项上方六爻重卦图的清晰扫描或独立可核验图形后，以 TikZ 矢量重绘（不提交截图），再重跑题面核对、生成、编译与视觉复核",
+  "resolution": "已取得独立可核验扫描页并完成 TikZ 矢量重绘；已接入规范题面、manifest 和生成器映射，待本批 provenance、XeLaTeX 构建与视觉回执完成后闭环。",
+  "resume_action": "已完成矢量图接入；重跑本批题面核对、生成、编译与视觉复核",
   "source_id": "src-7052c2bd0093946c481076d7dfc16a8eaaec17214ab251fa4f0d43660f94e002",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```

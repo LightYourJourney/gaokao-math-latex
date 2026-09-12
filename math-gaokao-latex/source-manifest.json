@@ -21,7 +21,7 @@
         "gk-2020-regular-national-1-science",
         "gk-2020-regular-national-1-arts"
       ],
-      "status": "closed_with_blockers"
+      "status": "compiled_pending_review"
     },
     {
       "batch_id": "phase0-b03",
@@ -629,7 +629,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "63dea854-3059-49d4-99c2-236b0ba6323a",
+  "last_transaction_id": "e64ba558-ba55-40bd-8b75-af7d0c772887",
   "papers": [
     {
       "blocked_from": null,
@@ -874,11 +874,15 @@
       "year": 2018
     },
     {
-      "blocked_from": "legacy_unverified",
+      "blocked_from": null,
       "figure_files": [
         {
           "expected_occurrences": 2,
           "path": "2019_全国Ⅰ卷_理科/figures/f2019_flow.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_全国Ⅰ卷_理科/figures/f2019_t6_hexagram.tex"
         },
         {
           "expected_occurrences": 2,
@@ -903,10 +907,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-science",
-      "production_state": "blocked",
+      "production_state": "compiled",
       "project_dir": "2019_全国Ⅰ卷_理科",
       "question_count": 23,
-      "resume_action": "取得固定源 PDF p1 选项上方六爻重卦图的清晰扫描或独立可核验图形后，以 TikZ 矢量重绘（不提交截图），再重跑题面核对、生成、编译与视觉复核",
+      "resume_action": null,
       "source_files": {
         "answer_key": "2019/2019_数学真题_理_答案要点.md",
         "combined_rendered": "2019/2019_数学真题_理_含解析.md",
@@ -949,7 +953,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-arts",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2019_全国Ⅰ卷_文科",
       "question_count": 23,
       "resume_action": null,
@@ -1003,7 +1007,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-science",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2020_全国Ⅰ卷_理科",
       "question_count": 23,
       "resume_action": null,
@@ -1055,7 +1059,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-arts",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2020_全国Ⅰ卷_文科",
       "question_count": 23,
       "resume_action": null,
@@ -8814,7 +8818,7 @@
       "year": 1988
     }
   ],
-  "revision": 2114,
+  "revision": 2117,
   "schema_version": 1,
   "sources": [
     {
