@@ -48,6 +48,162 @@ def quiet_main(argv):
         return main(argv)
 
 
+def _normalize_post_baseline_repairs(relative, text):
+    """Hide only documented semantic repairs from historical layout diffs.
+
+    The task-25 and task-26 frozen commits predate several source corrections
+    that were subsequently verified and committed.  Keep the historical
+    snapshots as the comparison anchor, but do not classify those known
+    corrections as fresh layout drift.  The normalization is deliberately
+    scoped to one exact artifact and to the affected lines.  The ledger hash
+    assertion still uses the actual file; only the historical layout
+    comparison uses this normalized representation.
+    """
+    # These exceptions are tied to reviewed commits, not to an open-ended
+    # content allowlist: 1aa2f46b (2017 regions), 94db44de (2019 arts q5),
+    # 9172712f (2019 science q6 wording), and 6ce2e0ac (2020 source/solution
+    # corrections).  The actual files remain hash-pinned in the ledger.
+    if relative == (
+        "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
+    ):
+        old = (
+            r"\textbf{适用省份}：河南、河北、山西、江西、湖北、湖南、广东、"
+            r"安徽、福建、山东"
+        )
+        new = old[: -len("、山东")]
+        lines = text.splitlines()
+        matches = [
+            index for index, line in enumerate(lines)
+            if line.startswith(r"\textbf{适用省份}：")
+        ]
+        if len(matches) != 1:
+            raise AssertionError(
+                "2017 science province repair must match exactly once: %s" % relative
+            )
+        index = matches[0]
+        if lines[index] == old:
+            lines[index] = new
+        elif lines[index] != new:
+            raise AssertionError(
+                "unexpected 2017 science province line: %s" % lines[index]
+            )
+        result = "\n".join(lines)
+        return result + ("\n" if text.endswith("\n") else "")
+
+    if relative == "math-gaokao-latex/2019_全国Ⅰ卷_文科/answers.tex":
+        start_marker = r"\gksolhead{5}{"
+        end_marker = r"\gksolhead{6}{"
+        start = text.index(start_marker)
+        end = text.index(end_marker, start)
+        block = text[start:end]
+        lines = block.splitlines()
+        prefix_groups = (
+            (r"\textbf{第一步：判奇偶。}",),
+            ("A 图在 ", "B 图在 "),
+            (r"\textbf{方法提示}：选择题里的图象题，",),
+        )
+        for prefixes in prefix_groups:
+            matches = [
+                index for index, line in enumerate(lines)
+                if line.startswith(prefixes)
+            ]
+            if len(matches) != 1:
+                raise AssertionError(
+                    "2019 arts q5 repair must match exactly once: %s" % prefixes
+                )
+            lines[matches[0]] = "[post-baseline q5 content repair]"
+        normalized_block = "\n".join(lines)
+        normalized_block += "\n" if block.endswith("\n") else ""
+        return text[:start] + normalized_block + text[end:]
+
+    if relative in {
+        "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex",
+        "math-gaokao-latex/2020_全国Ⅰ卷_文科/questions.tex",
+    }:
+        prefixes = {
+            "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex":
+                (r"\gkti{6}我国古代典籍《周易》", "2019 q6 wording"),
+            "math-gaokao-latex/2020_全国Ⅰ卷_文科/questions.tex":
+                (r"\gkti{5}某校一个课外学习小组", "2020 arts q5 source wording"),
+        }
+        prefix, description = prefixes[relative]
+        lines = text.splitlines()
+        matches = [
+            index for index, line in enumerate(lines)
+            if line.startswith(prefix)
+        ]
+        if len(matches) != 1:
+            raise AssertionError(
+                "%s repair must match exactly once: %s" % (description, relative)
+            )
+        lines[matches[0]] = "[post-baseline source wording repair]"
+        result = "\n".join(lines)
+        return result + ("\n" if text.endswith("\n") else "")
+
+    if relative in {
+        "math-gaokao-latex/2019_全国Ⅰ卷_理科/answers.tex",
+        "math-gaokao-latex/2020_全国Ⅰ卷_文科/answers.tex",
+    }:
+        prefixes = {
+            "math-gaokao-latex/2019_全国Ⅰ卷_理科/answers.tex":
+                ("我国古代典籍《周易》", "2019 q6 wording"),
+            "math-gaokao-latex/2020_全国Ⅰ卷_文科/answers.tex":
+                ("某校一个课外学习小组", "2020 arts q5 source wording"),
+        }
+        prefix, description = prefixes[relative]
+        lines = text.splitlines()
+        matches = [
+            index for index, line in enumerate(lines)
+            if line.startswith(prefix)
+        ]
+        if len(matches) != 1:
+            raise AssertionError(
+                "%s repair must match exactly once: %s" % (description, relative)
+            )
+        lines[matches[0]] = "[post-baseline source wording repair]"
+        result = "\n".join(lines)
+        return result + ("\n" if text.endswith("\n") else "")
+
+    if relative == "math-gaokao-latex/2020_全国Ⅰ卷_理科/answers.tex":
+        lines = text.splitlines()
+        headings = (
+            r"\textbf{计算夹角}：",
+            r"\textbf{取垂直于棱 $PC$ 的截面}：",
+        )
+        starts = [
+            index for index, line in enumerate(lines)
+            if line.startswith(headings)
+        ]
+        if len(starts) != 1:
+            raise AssertionError("2020 science q22 repair must match exactly once")
+        start = starts[0]
+        tip_matches = [
+            index for index in range(start, len(lines))
+            if lines[index] == r"\begin{gktip}"
+        ]
+        end_matches = [
+            index for index in range(start, len(lines))
+            if lines[index] == r"\end{answer}"
+        ]
+        if not tip_matches or not end_matches or tip_matches[0] >= end_matches[0]:
+            raise AssertionError("2020 science q22 repair boundaries are ambiguous")
+        tip = tip_matches[0]
+        end = end_matches[0]
+        answer_matches = [
+            index for index in range(tip, end)
+            if lines[index].startswith(r"\gkanswer{答案（2）：")
+        ]
+        if len(answer_matches) != 1:
+            raise AssertionError("2020 science q22 answer repair is ambiguous")
+        lines[start:tip] = ["[post-baseline solution repair]"]
+        answer_index = answer_matches[0] - (tip - start - 1)
+        lines[answer_index] = "[post-baseline solution repair]"
+        result = "\n".join(lines)
+        return result + ("\n" if text.endswith("\n") else "")
+
+    return text
+
+
 # 阶段 0 Step 3 的 `cleanup-legacy --execute` 会删掉各卷根目录下的 336 个旧构建产物
 # （84 套 × .aux/.log/.out/.pdf），而 baseline.py 的 `_target_record()` 正是从那里读
 # `{版本}.pdf` 与 `{版本}.log`。清理是阶段 0 的既定终态，因此清理之后**无法**再实时
@@ -1404,12 +1560,16 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "eccf7f0:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
+            head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
+            now_for_layout_diff = _normalize_post_baseline_repairs(relative, now)
             self.assertEqual(record["class"], "layout-regeneration")
             self.assertEqual(record["current_sha256"], file_sha256(current))
 
             removed = []
             added = []
-            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+            for line in difflib.ndiff(
+                head_for_layout_diff.splitlines(), now_for_layout_diff.splitlines()
+            ):
                 if line.startswith("- "):
                     removed.append(line[2:])
                 elif line.startswith("+ "):
@@ -1429,7 +1589,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 for line in removed
             ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
-                self.assertEqual(head.count(token), now.count(token), (relative, token))
+                self.assertEqual(
+                    head_for_layout_diff.count(token),
+                    now_for_layout_diff.count(token),
+                    (relative, token),
+                )
 
     def test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs(self):
         projects = {
@@ -1462,13 +1626,17 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "e8f2ff5:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
+            head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
+            now_for_layout_diff = _normalize_post_baseline_repairs(relative, now)
             self.assertEqual(record["class"], "visual-layout-repair")
             self.assertEqual(record["current_sha256"], file_sha256(current))
             self.assertNotEqual(hashlib.sha256(head.encode()).hexdigest(), record["current_sha256"])
 
             removed = []
             added = []
-            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+            for line in difflib.ndiff(
+                head_for_layout_diff.splitlines(), now_for_layout_diff.splitlines()
+            ):
                 if line.startswith("- "):
                     removed.append(line[2:])
                 elif line.startswith("+ "):
@@ -1498,7 +1666,11 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 for line in removed
             ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
-                self.assertEqual(head.count(token), now.count(token), (relative, token))
+                self.assertEqual(
+                    head_for_layout_diff.count(token),
+                    now_for_layout_diff.count(token),
+                    (relative, token),
+                )
 
     def test_the_repository_ledger_registers_the_63_shared_tex_drifts(self):
         ledger = load_adjudicated_drifts(ADJUDICATED_DRIFTS_PATH)
