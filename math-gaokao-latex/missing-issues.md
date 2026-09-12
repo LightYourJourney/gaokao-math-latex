@@ -12193,7 +12193,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 A3 单页第 22 题的极限下标印为 n→∞，但括号内写作 (1−1/(2x))^x；变量和极限指标不一致，按字面不能得到唯一数值。",
+  "current_evidence": "固定源 A3 单页第 22 题的极限下标印为 n→∞，但括号内写作 (1−1/(2x))^x；变量和极限指标不一致，按字面不能得到唯一数值。独立公开图文页《1987年理科数学高考题》所展示的原卷页图也逐字呈现同一形式（https://www.sohu.com/a/203375079_100047361），确认这不是本库转录或 OCR 错误；在没有同版勘误前不能擅改变量。",
   "fingerprint": "3076fd80ee19a575e9903091e424a6c13720b649e3d08c08eb17e1c25892ecc4",
   "impact": "blocks_completion",
   "paper_id": "gk-1987-regular-national-science",
