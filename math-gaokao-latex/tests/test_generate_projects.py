@@ -1194,7 +1194,7 @@ class LiveIndexIsUnchangedTests(unittest.TestCase):
         source = (ROOT.parent / "2019/2019_数学真题_理_试题.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("images/2019理-t6-六爻.png", source)
+        self.assertIn("images/2019-t6-hexagram.png", source)
         figure = ROOT / expected_figure["path"]
         self.assertTrue(figure.is_file())
         self.assertIn(r"\begin{tikzpicture}", figure.read_text(encoding="utf-8"))

@@ -1,7 +1,7 @@
 {
   "batch_id": "phase0-b02",
-  "build_attempt_id": "82f05e83-f110-4a46-b304-f2a7716191d7",
-  "dependency_tree_sha256": "aa3655d18e7b11a236e9390ded87eb6d58dd6476015e746cd8111b0dbd81e0f2",
+  "build_attempt_id": "1fb5f5d0-cf43-4dbe-b463-afec88c8b59a",
+  "dependency_tree_sha256": "dfbb2d79738b46b21a9d5c809f779e9a9868ed8afa01d6c4e683ddd3e6dc2c2f",
   "editions": [
     {
       "candidate_override": null,
@@ -76,7 +76,7 @@
             },
             {
               "check": "figure_label",
-              "note": "2019 理科图形均已用矢量源复核。",
+              "note": "新增六爻图已按公开扫描逐线核对，当前 PDF 使用 TikZ 矢量源，无扫描图。",
               "result": "pass"
             },
             {
@@ -288,13 +288,13 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "c92b56931746e59ef95173b551f4cabf27e2776a91d5aa2c57b5d6c20014f3ef",
+      "pdf_sha256": "be0d52a29e5b92e000907a66505a15dc1b210181ba7d9635470af99838ce32da",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        37
+        34
       ],
       "edition": "解析版",
       "page_count": 39,
@@ -364,7 +364,7 @@
             },
             {
               "check": "figure_label",
-              "note": "2019 理科图形均已用矢量源复核。",
+              "note": "新增六爻图已按公开扫描逐线核对，当前 PDF 使用 TikZ 矢量源，无扫描图。",
               "result": "pass"
             },
             {
@@ -2094,7 +2094,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "611fc6423abd0c7da732ea22f340ebbbfdac4025dfe0d8a6e62bc0cbe5f18be7",
+      "pdf_sha256": "a72eed95330f78d4711c863ebaa726a8c2f1452958981c75710f207518be1d17",
       "result": "pass"
     },
     {
@@ -2170,7 +2170,7 @@
             },
             {
               "check": "figure_label",
-              "note": "2019 理科图形均已用矢量源复核。",
+              "note": "新增六爻图已按公开扫描逐线核对，当前 PDF 使用 TikZ 矢量源，无扫描图。",
               "result": "pass"
             },
             {
@@ -2474,16 +2474,16 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "129e293d5b18db487e229a9a4fd61e8cb92414af89fdede5c1701295f9f94944",
+      "pdf_sha256": "075e06fda6f89a2cca12585bb2ee928edb52d0ed0de567c9b3fab3add3118d52",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        4
+        16
       ],
       "edition": "印刷版",
-      "page_count": 30,
+      "page_count": 31,
       "pages": [
         {
           "checks": [
@@ -2550,7 +2550,7 @@
             },
             {
               "check": "figure_label",
-              "note": "2019 理科图形均已用矢量源复核。",
+              "note": "新增六爻图已按公开扫描逐线核对，当前 PDF 使用 TikZ 矢量源，无扫描图。",
               "result": "pass"
             },
             {
@@ -3864,17 +3864,63 @@
           ],
           "page": 30,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "新增当前构建页已目视核验：题号、公式、页眉页脚、留白与答案版式正常。",
+              "result": "pass"
+            }
+          ],
+          "page": 31,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "48dca98bee4141ffe2e5779ba6efd2ae12668c37532101c5a4dc5ba4d04c2f5c",
+      "pdf_sha256": "b26066fe9b88aff7b28a68e2b807aa0d9e7c953adaa148af65dcdd2b8b80422c",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "c41e8ba3413c2a6b5ed6c66450060e983b938d20966f579d945611ea4526e9fa",
-  "input_projection": "1b2a4696eb60185b056d75dfe36af8e219059c0fa2f39c72560113d5190e37ae",
+  "generation_input_tree_sha256": "eda9c0a03f0d33a08d4722bb12111461631a6340e9f69727d12aec834061d60b",
+  "input_projection": "03ae316e573889bbd319f98f58c2fdfe4caa1a27339bb94f030240eed098670d",
   "paper_id": "gk-2019-regular-national-1-science",
   "project_dir": "2019_全国Ⅰ卷_理科",
-  "reviewed_at": "2026-09-12T07:42:00+08:00",
+  "reviewed_at": "2026-09-12T09:14:53+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
