@@ -9,8 +9,8 @@
 
 - 标题：1956 年·全国卷
 - 项目目录：`1956_全国卷`
-- 构建：`succeeded`（attempt `a05fcdea-6038-48e0-ae5b-46aed096186d`）
-- 审查：`passed`（2026-09-12T09:56:15+08:00）
+- 构建：`succeeded`（attempt `c9632fed-ae89-4fb9-8e71-ef407e3cbd95`）
+- 审查：`passed`（2026-09-12T11:12:51+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 9；简答版 3；印刷版 7
 - 警告豁免：0

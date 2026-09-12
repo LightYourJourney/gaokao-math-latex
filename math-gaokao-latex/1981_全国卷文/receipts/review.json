@@ -1,6 +1,6 @@
 {
   "batch_id": "phase2-b49",
-  "build_attempt_id": "1263a97b-3218-46ae-841c-f817ac72c450",
+  "build_attempt_id": "c7d3aa79-de44-4d92-ae19-ff904c08ec2d",
   "dependency_tree_sha256": "f747a6f8ed3dfaa5b0efd3e31054101652433a119ef88f71bd73bc10bc6c13c8",
   "editions": [
     {
@@ -104,7 +104,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "54208678c2f45770ee9fcdef336d2b3cacb16b8873c7432517cd6dce54568603",
+      "pdf_sha256": "2f9e2d10ce31bd703545790375efdd0f4f3231dfa4165d6ce3386c147af758ac",
       "result": "pass"
     },
     {
@@ -668,7 +668,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "89444ad487f08eaa011675dab79b928c80159f92baaa05ea823d99d2c3311412",
+      "pdf_sha256": "e10e21755e87fd28f13daeafe442711639ead7d91b3ff6b8302365594eefead7",
       "result": "pass"
     },
     {
@@ -818,7 +818,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "6199c16280ccbb7f2215c140ac8729dadc29f350479b1531324fdc618ce73639",
+      "pdf_sha256": "fb82def33d05b175cbabdae2beceffa0ada047bd1fe2c5aa6772ea3cfbef6b2a",
       "result": "pass"
     },
     {
@@ -1244,7 +1244,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "bca16beed748e6925feec08343007c21433f7e1acb93c5f1cc6ea12bbfb50630",
+      "pdf_sha256": "e8ec2b712c504159e523578d50fa32ec64216b0e3c1d4f3554b3a0e2e9b176f2",
       "result": "pass"
     }
   ],
@@ -1252,7 +1252,7 @@
   "input_projection": "4899aa5e525719adacc7d234cfbbaf0d7145fb0a6c19bd6f365baffc788ed208",
   "paper_id": "gk-1981-regular-arts",
   "project_dir": "1981_全国卷文",
-  "reviewed_at": "2026-09-12T10:00:13+08:00",
+  "reviewed_at": "2026-09-12T11:16:23+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -1311,23 +1311,23 @@
       "box": "hbox",
       "edition": "解析版",
       "kind": "Overfull",
-      "lines": "358--359",
-      "pdf_page": 1,
-      "reason": "重编译后同类排版警告（内容源已按审查结论修复）；按视觉审查对同类警告的判定沿用通过判定，本条豁免与当前 build 回执逐项匹配。",
-      "source_file": "math-gaokao-latex/1981_全国卷文/answers.tex",
-      "visual_result": "pass",
-      "width_pt": "39.80443"
-    },
-    {
-      "box": "hbox",
-      "edition": "解析版",
-      "kind": "Overfull",
       "lines": "166",
       "pdf_page": 1,
       "reason": "全量正式重建产生的当前警告；既有逐页视觉回执通过，确认不造成裁切、重叠或阅读障碍。",
       "source_file": "math-gaokao-latex/1981_全国卷文/解析版.tex",
       "visual_result": "pass",
       "width_pt": "16.37949"
+    },
+    {
+      "box": "hbox",
+      "edition": "解析版",
+      "kind": "Overfull",
+      "lines": "358--359",
+      "pdf_page": 1,
+      "reason": "全量 formal 重建当前警告；既有逐页视觉回执通过，确认不造成裁切、重叠或阅读障碍。",
+      "source_file": "math-gaokao-latex/1981_全国卷文/解析版.tex",
+      "visual_result": "pass",
+      "width_pt": "39.80443"
     }
   ]
 }
