@@ -856,6 +856,7 @@
   "affected_paper_ids": [],
   "current_evidence": "题面核对判 failed（本批唯一）。上游源 PDF p1 600 dpi 视读为「cos 2A + cos 2B + 2 sin C = 2」，sin C 无平方上标，PDF 文本层同样抽出「2 sin C = 2」；同题选项 (A) 的「sin²A + sin²B」两处上标在同一渲染与同一文本层中均清晰可见，据此排除字体或文本抽取丢失上标的可能。规范题面第 74 行作 $2\\sin^2 C$，是增加了一个数学上标、改变了条件方程本身，不属标点或排印差异，故判 failed 而非编辑性勘误——从源印文本无法机械推出该上标，需要数学论证，不满足「唯一可复原」判据。旁证（不构成对官方原卷的认定）：按 2sin²C 读，条件化为 sin²C=sin²A+sin²B ⇒ C=π/2，配合面积 1/4 与 cosAcosBsinC=1/4 可解出 ab=1/2、外接圆 R=1/√2，四选项非退化；按源印的 2sinC 读，(A) 恰为条件的同义改写而 (B)(C) 无法定出，题目退化。但官方原卷该处究竟为 sin C 抑或 sin²C 未能核实——本次只比对了上游 PDF 与规范题面，未取得官方文本作正面核查，按不对称证据标准不下断言。四个选项与源逐字一致。",
   "fingerprint": "a359896e775cdf0387b2bfddabecb46983157ced3430b9acafb65f33a1c42831",
+  "external_evidence": "中国教育在线 2025-06-07 试题页（https://gaokao.eol.cn/shiti/sx/202506/t20250607_2673303_1.shtml）所嵌第 2 页原题图（https://img.eol.cn/e_images/gk/2025/st/qg1/sx02.png）也清晰印作「2sinC」，未见平方上标；该页面不是教育考试院直发文件，因此只作为独立旁证，不改变当前阻断结论。",
   "impact": "blocks_completion",
   "paper_id": "gk-2025-regular-national-1",
   "question_id": "gk-2025-regular-national-1-q11",
