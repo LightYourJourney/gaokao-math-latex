@@ -5,10 +5,10 @@
   "questions": [
     {
       "answer_evidence": {
-        "evidence": "第 1(1) 题完整设问缺失，无法为四项选择确定条件；见 ISSUE-0128。",
-        "grade": "U"
+        "evidence": "由完整题面直接分类并复算：y/(2x)>0 当且仅当 xy>0；小于 0 当且仅当 xy<0；等于 0 当且仅当 y=0 且 x≠0；无意义当且仅当 x=0。公开独立 LaTeX 整理件逐项给出同一答案。",
+        "grade": "A"
       },
-      "answer_sha256": "e39211901140ee7071027552147e5e26dfa50efbcede2cc3b22412783bd4e461",
+      "answer_sha256": "974eac6b7a03f8ff7cb56f3e4242d0a3d40bf836be436a8a8e273bdfa1c145eb",
       "conflict_status": "none",
       "issue_ids": [
         "ISSUE-0127",
@@ -27,8 +27,8 @@
       },
       "source_sha256": "db7a8e6ccf1d9ab5a673062ad0f15b1e1db3136eeb26f2ef05c3a521e9736d3d",
       "transcription_review": {
-        "evidence": "固定源第 1 页第 1(1) 行在“y/(2x)”后直接列出四种结果，设问不完整，见 ISSUE-0127；原文不作猜补。",
-        "result": "uncertain",
+        "evidence": "固定源 PDF 第 1 页高清渲染确认“在什么条件下，y/(2x)”及正、负、零、无意义四项完整可读；21 世纪教育网汇编与公开独立 LaTeX 整理件复现同一设问。原先将分类设问误判为缺失，现确认题面无缺字。",
+        "result": "passed",
         "role": "phase2-b25-question-review-pdf"
       }
     },

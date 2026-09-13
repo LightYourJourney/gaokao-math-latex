@@ -2313,14 +2313,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：第 1(1) 行印作“在什么条件下，y/(2x)”后立即列出“是正数、是负数、等于零、没有意义”四项，未见可判定的条件或完整设问。",
+  "current_evidence": "固定源 PDF《1977天津.pdf》（manifest source_id src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24，SHA-256 db7a8e6ccf1d9ab5a673062ad0f15b1e1db3136eeb26f2ef05c3a521e9736d3d）第 1 页高清渲染显示完整设问“在什么条件下，y/(2x)”并列出四项“是正数、是负数、等于零、没有意义”，并非缺页或残缺。21 世纪教育网的 1977—2021 数学汇编也复现同一完整题面（https://zy.21cnjy.com/13497153）；公开独立 LaTeX 整理件的天津卷源文件亦逐字写作同一设问（https://raw.githubusercontent.com/daxmate/math/main/gaokao/tianjing1977.tex）。原问题将“条件”误判为缺失。",
   "fingerprint": "bf1c895f6d8c21e4bbba57cd71d93051b4418f34ebabe521bef76dc5afa88ffb",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-tianjin",
   "question_id": "gk-1977-regular-tianjin-q01",
-  "resume_action": "取得更清晰排印件或独立权威版本，确认第 1(1) 缺失的条件/设问；在确认前保留源页可见文字，不能补写。",
+  "resolution": "已确认题面四项分类设问完整，无需补写题干；已按分母 2x 的符号规则修正解析并完成独立答案推导。",
+  "resume_action": "已确认设问完整并修正题面判定记录，无需继续动作。",
   "source_id": "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -2330,14 +2331,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：第 1(1) 行印作“在什么条件下，y/(2x)”后立即列出“是正数、是负数、等于零、没有意义”四项，未见可判定的条件或完整设问。",
+  "current_evidence": "固定源 PDF《1977天津.pdf》（manifest source_id src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24，SHA-256 db7a8e6ccf1d9ab5a673062ad0f15b1e1db3136eeb26f2ef05c3a521e9736d3d）第 1 页高清渲染显示完整设问“在什么条件下，y/(2x)”及四类结果；21 世纪教育网汇编复现同一题面（https://zy.21cnjy.com/13497153）。公开独立 LaTeX 整理件 https://raw.githubusercontent.com/daxmate/math/main/gaokao/tianjing1977.tex 给出对应分类答案：xy>0、xy<0、y=0 且 x≠0、x=0。该答案也可直接由当前完整题面独立推导。",
   "fingerprint": "e009d5c9f80a8158077909d5e32eb705b8fc4e8c54f5edbc9c9dbe5ad1de9393",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-tianjin",
   "question_id": "gk-1977-regular-tianjin-q01",
-  "resume_action": "先确认第 1(1) 的完整设问，再重做该小问答案、盲核与 provenance；其余小问不受该缺口影响。",
+  "resolution": "已将第 1(1) 的答案要点改为四类条件，并补入分类解析；已重跑答案生成、provenance、正式构建与视觉复核。",
+  "resume_action": "已补入四类条件并完成盲核与 provenance 更新，无需继续动作。",
   "source_id": "src-fe8066472767be7a1d3a8466092df82bc08c125c6b5317f8d5334c617119ff24",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
