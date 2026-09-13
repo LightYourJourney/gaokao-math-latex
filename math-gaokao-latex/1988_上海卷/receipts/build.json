@@ -1,14 +1,14 @@
 {
-  "attempt_id": "f58e38fc-61e2-41e4-8230-dcc9d1a45460",
+  "attempt_id": "2792c4d2-9722-4113-beb0-d6746f5321f9",
   "dependency_tree": {
     "files": [
       {
         "path": "math-gaokao-latex/1988_上海卷/answers.tex",
-        "sha256": "f361a5925bcdfd663ba94fab89591c87b8ca9922311d9022da7de0423e4033b4"
+        "sha256": "f4c6d982db46ed4d06e1828a4e02bfd7d9573a62d7cb9184df9f037531b54062"
       },
       {
         "path": "math-gaokao-latex/1988_上海卷/answers_short.tex",
-        "sha256": "1cbc8296c26c02cc90a9ec002afe08cf949d03720cc8f737b38b6d82c54e305b"
+        "sha256": "36c4ab6b850a3e193877b02521117c95b2552b560a1892d9fc476432e635b4ba"
       },
       {
         "path": "math-gaokao-latex/1988_上海卷/figures/f1988_shanghai_t3_cone.tex",
@@ -24,7 +24,7 @@
       },
       {
         "path": "math-gaokao-latex/1988_上海卷/questions.tex",
-        "sha256": "9bff0caa3e16954828a31169872717d939015e7661e778d075d30ce55bc2513e"
+        "sha256": "5baba83676d3ac819c599eca617273a7ebbd9594c29b07143a9a03c84bf6cf01"
       },
       {
         "path": "math-gaokao-latex/1988_上海卷/印刷版.tex",
@@ -55,7 +55,7 @@
         "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
       }
     ],
-    "tree_sha256": "19794c872c903d177b8099c55b0fd8bd910f224e92a87ef9cb6645271223a2f4"
+    "tree_sha256": "44fc541c2b4fbbfa101ca1f85fef2d6185a33edbc195884ad107f13d3cbff604"
   },
   "editions": [
     {
@@ -79,8 +79,8 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/1988_上海卷/build/试题版.pdf",
-        "sha256": "f8f5e78a3bcc522431e697d8eddae5c5bde19d4dcf206a624cc65dd69e6f759b",
-        "size_bytes": 128898
+        "sha256": "3de164b558a2a16563383d00aebc0c38e13a5c85a76f9799b920bcb1f7ed0d56",
+        "size_bytes": 131402
       },
       "problems": [],
       "result": "succeeded",
@@ -100,7 +100,7 @@
             "text": "LaTeX Warning: Reference `q:gk-1988-regular-shanghai:2' on page 10 undefined on"
           },
           {
-            "text": "LaTeX Warning: Reference `q:gk-1988-regular-shanghai:3' on page 13 undefined on"
+            "text": "LaTeX Warning: Reference `q:gk-1988-regular-shanghai:3' on page 14 undefined on"
           },
           {
             "text": "LaTeX Warning: Reference `q:gk-1988-regular-shanghai:4' on page 16 undefined on"
@@ -132,8 +132,8 @@
       "pdf": {
         "page_count": 21,
         "path": "math-gaokao-latex/1988_上海卷/build/解析版.pdf",
-        "sha256": "73c2091bd57b3f84cb153d20aecd19aad9aeab563bf674f6486fcf53ed549ee1",
-        "size_bytes": 201493
+        "sha256": "c2d2d9cdadccd79484e610aa8746645a27627b29bbde3676482d0b7b1b754e2c",
+        "size_bytes": 201875
       },
       "problems": [],
       "result": "succeeded",
@@ -160,8 +160,8 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/1988_上海卷/build/简答版.pdf",
-        "sha256": "2af18477ea5d8f4a56b18cd038e043d01497290484fcc610bd51298ecec41913",
-        "size_bytes": 140033
+        "sha256": "5274057852ba9add6bdf6621cfb4e735f1d00b9bf52aa296871c2efb057991b4",
+        "size_bytes": 141445
       },
       "problems": [],
       "result": "succeeded",
@@ -172,7 +172,29 @@
       "log": {
         "errors": [],
         "missing_characters": [],
-        "overfull": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "10--11",
+            "text": "Underfull \\hbox (badness 3375) in paragraph at lines 10--11",
+            "width_pt": null
+          },
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "10--11",
+            "text": "Underfull \\hbox (badness 3291) in paragraph at lines 10--11",
+            "width_pt": null
+          },
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "6--7",
+            "text": "Underfull \\hbox (badness 10000) in paragraph at lines 6--7",
+            "width_pt": null
+          }
+        ],
         "undefined_references": [
           {
             "text": "LaTeX Warning: Reference `q:gk-1988-regular-shanghai:1' on page 5 undefined on"
@@ -213,28 +235,28 @@
       "pdf": {
         "page_count": 17,
         "path": "math-gaokao-latex/1988_上海卷/build/印刷版.pdf",
-        "sha256": "ffba9b0b045c6c6dd2844a3dd77ed392e432f4fbf9812554bfbf7fa983d85a48",
-        "size_bytes": 198047
+        "sha256": "320b333466e5590973c226ed475e15c427dc9878f9eab9cc6367f2f5348009ec",
+        "size_bytes": 199116
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1988_上海卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-12T11:08:04+08:00",
+  "finished_at": "2026-09-14T03:28:57+08:00",
   "generation_input_tree": {
     "files": [
       {
         "path": "1988/1988_数学真题_上海_答案要点.md",
-        "sha256": "528772be8a45c912fb379d57874c537aac1e0c23428e23c67ceafb61fc37d492"
+        "sha256": "7886cb1ccf462328b399f70ed1c76ab51379cc3bed8f7e86861b8b88ad36a061"
       },
       {
         "path": "1988/1988_数学真题_上海_解析正文.md",
-        "sha256": "ef7c91fedb7cd4923c96b6850d0d0acf9737b4a17f19dc10d00c5f12c35e29f7"
+        "sha256": "eb2052444ae2a2b6d27bf40ccf15fed576495c86bd510c602f780703b758309f"
       },
       {
         "path": "1988/1988_数学真题_上海_试题.md",
-        "sha256": "5d80edd9bddf93cd88c805814834babd88aafde8d40cd5b0e1feb31f7598bf7a"
+        "sha256": "013acda8fbea38a8ef79991236c68f7acda893e72039fbfe88a1269a6f81c446"
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
@@ -305,16 +327,16 @@
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "9e107342c19cf18e3becf373421dc0f25e852d20bfa7bb1f2b67d98764501fb4"
+    "tree_sha256": "04c19064cc5e8db724cba3fb6b4b5d14d15d7f5b83a073eb6925e487f282c65a"
   },
   "input_projection": "49e5bb0bfca9ae476019fb3844624d0311470002c34da6e2f7070db119b22b4c",
-  "manifest_revision": 2199,
+  "manifest_revision": 2291,
   "paper_id": "gk-1988-regular-shanghai",
-  "previous_attempt_id": "637c256a-a26c-424f-a3fa-9c3fb679af62",
+  "previous_attempt_id": "f58e38fc-61e2-41e4-8230-dcc9d1a45460",
   "project_dir": "1988_上海卷",
   "schema_version": 1,
-  "started_at": "2026-09-12T10:38:35+08:00",
-  "status": "succeeded",
+  "started_at": "2026-09-14T03:28:46+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
