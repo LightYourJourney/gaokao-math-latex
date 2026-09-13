@@ -2383,7 +2383,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF《1977 江苏卷》单页高清复核确认第 1(1) 末项印作 (-27/8)^(-1/2)。负数的负半次幂在实数范围内无定义，而该题设问为计算题；在没有答案页或权威勘误前，无法确认这是原题意还是排印误写。",
+  "current_evidence": "固定源 PDF《1977 江苏卷》（manifest source_id src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608，SHA-256 ce3d55b0f282697ce3407bcfac4c542956de3e619c2f1ce71332b1fab20e75e8）单页高清复核确认第 1(1) 末项印作 (-27/8)^(-1/2)，负数的负半次幂在实数范围内无实数定义。独立 Daxmate LaTeX 整理件（https://raw.githubusercontent.com/daxmate/math/main/gaokao/jiangsu1977.tex）改写为 (-27/8)^(1/3) 并算得 99；百度文库公开页面（https://wenku.baidu.com/view/920e92afe418964bcf84b9d528ea81c759f52e9e.html）可见题面仍显示 -1/2，但其解答区将该项改写为立方根并给出 99。公开资料支持“疑似排印误写”，但没有官方勘误或同版标准答案，尚不足以授权改题。",
   "fingerprint": "a29d7a800f89618e7ce06a40568f58d0612eaf758c2cd184617879b2a6850724",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-jiangsu",
@@ -2400,7 +2400,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF《1977 江苏卷》单页高清复核确认附加题 7 写作 lim(n→∞) sqrt(x)(sqrt(x+1)-sqrt(x))，表达式只含 x 且未定义 x 与 n 的关系。按常见误写将 x 改为 n 可得 1/2，但这不是当前源页的字面内容。",
+  "current_evidence": "固定源 PDF《1977 江苏卷》（manifest source_id src-d9a8910d628c7c1fa11a8b0f3184baa39d3a78411a2ebeea69a7461c52754608，SHA-256 ce3d55b0f282697ce3407bcfac4c542956de3e619c2f1ce71332b1fab20e75e8）单页高清复核确认附加题 7 写作 lim(n→∞) sqrt(x)(sqrt(x+1)-sqrt(x))，表达式只含 x 且未定义 x 与 n 的关系。独立 Daxmate LaTeX 整理件（https://raw.githubusercontent.com/daxmate/math/main/gaokao/jiangsu1977.tex）仍复现 n→∞/x 的不一致但按有理化算得 1/2；百度教育公开题解（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1739882210836506778&fr=search）则将同题写作 x→∞ 并给出 1/2。资料支持“极限指标疑似应为 x”，但未取得官方勘误，当前仍不能擅改源式。",
   "fingerprint": "e82c2c27808e45bf974fb65827b9062576a86a87cdef9cf822c4bd3a4617b2e8",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-jiangsu",
