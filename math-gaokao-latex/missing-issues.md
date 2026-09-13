@@ -12386,14 +12386,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 2 页第 6 小题可见“若 sin α=5/13，α 为第二象限角，则 tg(α/2) 的值为”题干，但当前扫描在题干后未见 A、B、C、D 四个选项；第 3 页答案表仍记录该小题代号 B。已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1988/1988上海.pdf` 复核：文件 SHA-256 为 `eba069161024fb508a36ecb51e8707afb1114c8e873548a9aff5c187635aa51a`、162789 字节、6 页，与 manifest artifact 完全一致；第 2 页视觉上同样缺少 A—D 选项。因此缺失来自固定上游本身，不是本库漏页或导入损坏。",
+  "current_evidence": "固定源第 2 页第 6 小题可见“若 sin α=5/13，α 为第二象限角，则 tg(α/2) 的值为”题干，但当前扫描在题干后未见 A、B、C、D 四个选项；第 3 页答案表仍记录该小题代号 B。已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1988/1988上海.pdf` 复核：文件 SHA-256 为 `eba069161024fb508a36ecb51e8707afb1114c8e873548a9aff5c187635aa51a`、162789 字节、6 页，与 manifest artifact 完全一致；第 2 页视觉上同样缺少 A—D 选项。中国知网目录确认同题发表于《中学数学教学》1988 年第 5 期（https://mall.cnki.net/magazine/Article/ZSJX198805016.htm）；百度文库公开的同题名 5 页扫描（https://wenku.baidu.com/view/aa1a1695daef5ef7ba0d3cea.html）第 2 页直接显示 A=1/5、B=5、C=-5、D=-1/5，且 B 与题干独立复算值 5 对应。因此已用独立同题扫描补足缺失选项，缺失不是本库漏页或导入损坏。",
   "fingerprint": "8f9048419fee231e5f125695780b613826952b36341451ecc8e5e74d84fae8de",
   "impact": "blocks_completion",
   "paper_id": "gk-1988-regular-shanghai",
   "question_id": "gk-1988-regular-shanghai-q02",
-  "resume_action": "取得包含第 2 大题第 6 小题 A、B、C、D 选项的完整固定源或独立可核验扫描页，然后重跑题面核对、答案核对、生成、编译与视觉复核。",
+  "resolution": "已取得独立同题公开扫描并视觉核对四个选项；已补入规范题面、答案和解析，并将 B 与独立计算值 5 对齐。",
+  "resume_action": "已补足选项并完成题面、答案、生成、编译与视觉复核，无需继续动作。",
   "source_id": "src-4a65e135bdb52f81bc99a0783fd42dc77e118ca220546d84412fdcae8197c424",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
