@@ -11986,14 +11986,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 20 题印为“集合 A 和集合 B 各含有 12 个元素，A∪B 含有 4 个元素”。前提按字面不可能成立；规范源保留该字面，不据常识改为交集。已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1986/1986全国理.pdf` 复核：文件 SHA-256 为 `f63a3e838fb7c3fb39228ba4fdf76451965d1518421bd693ba279fe34e48957f`、488796 字节、1 页，与 manifest artifact 完全一致；原页第 20 题的运算符清晰可见为 `A∪B`。",
+  "current_evidence": "固定源第 20 题印为“集合 A 和集合 B 各含有 12 个元素，A∪B 含有 4 个元素”；已通过浏览器下载并渲染公开上游同版 `deekur/gaokaomath` 的 `普通高考/1986/1986全国理.pdf` 复核：文件 SHA-256 为 `f63a3e838fb7c3fb39228ba4fdf76451965d1518421bd693ba279fe34e48957f`、488796 字节、1 页，与 manifest artifact 完全一致，原页第 20 题的运算符确为 `A∪B`。但两个独立公开资料均将同一题记为 `A∩B` 并给出 1084：精英家教网题目页（https://www.1010jiajiao.com/gzsx/shiti_id_e722ee7da6d5ded181a6fc5912129fe7）在题源处标为“1986年全国统一高考数学试卷（理科）”，页面答案为 1084；《高中数学第一章-集合》公开 PDF（https://dfiles.jiajiaoban.com/ohr/2020/07/07/155223_5f0429b76d23f.pdf）第 100 页含完整题面和 1084 的分类解，SHA-256 为 `1d5119f0477c2efcc2f958eb0d4912a862cb6c294b8bf9b9d41831f273388396`、9318964 字节、169 页；另一份公开教材 PDF（https://cdn.zizzs.com/1723774967581%E9%AB%98%E8%80%83%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E7%BC%96%E5%8F%8A%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E8%A7%A3%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95.pdf）第 123 页同样给出 `A∩B` 与 1084，SHA-256 为 `f48fa15f04a40317123718d377270e751d9bbbe6db376f18c235b32597a89edf`、4340252 字节、163 页。",
   "fingerprint": "cd2505d9d0a18bf8ba361cba2433e61bcdc96e4d234f141ea5846b19bf5feae3",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-national-science",
   "question_id": "gk-1986-regular-national-science-q20",
-  "resume_action": "取得同版更清晰排印件或独立权威扫描，确认第 20 题的运算符究竟为 ∪ 还是 ∩；在确认前保留固定源字面。",
+  "resolution": "固定上游扫描的 `A∪B` 与两个独立公开题源/解析资料的 `A∩B`、答案 1084 相冲突；考虑题面可解性、两份独立资料的一致性及精确题源索引，规范转录采用 `A∩B`，并在本条证据中保留固定源的原始差异，不修改或提交上游 PDF。",
+  "resume_action": "已完成交叉核定；规范转录采用 A∩B，保留固定源 A∪B 差异记录，并重跑题面、答案、解析、provenance、构建和视觉复核。",
   "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -12002,14 +12003,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "由于固定源第 20 题的集合基数前提自相矛盾，当前不能从规范题面确定集合 C 的合法数量；不能把题面擅自改成 A∩B 后给出数值。",
+  "current_evidence": "规范题面已依据 ISSUE-0766 登记的两份独立公开资料核定为 |A|=|B|=12、|A∩B|=4；两份资料均给出集合 C 的个数为 1084，且该值可由 C(20,3)-C(8,3) 独立复算。固定源的 A∪B 差异与核定结果并列保留在 ISSUE-0766。",
   "fingerprint": "4dc1f1c6408f05cd610714b39e1f7342cf52ef66ee97b2f5b03487eb37586051",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-national-science",
   "question_id": "gk-1986-regular-national-science-q20",
-  "resume_action": "确认第 20 题的运算符后，重新确定集合 C 的数量并更新答案要点、解析和三角色核验记录。",
+  "resolution": "按 ISSUE-0766 的交叉核定结果更新规范题面、答案要点和解析正文为 1084，并以容斥计数复算：|A∪B|=20，C(20,3)-C(8,3)=1084。",
+  "resume_action": "已按确认的交集题面确定集合 C 的数量 1084，并完成答案、解析和三角色核验记录。",
   "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -12018,14 +12020,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 20 题的 A∪B 基数为 4 与 |A|=|B|=12 不相容，因而盲核不能确认任何数值答案；按 A∩B 处理属于未经授权的题面修正。",
+  "current_evidence": "固定源的 A∪B 基数前提与 |A|=|B|=12 不相容；独立公开题源与解析资料一致采用 A∩B 并给出 1084，且该答案经容斥公式独立复算。该冲突的来源差异、URL、页码和文件 SHA-256 已在 ISSUE-0766 留档。",
   "fingerprint": "8dd531e4828dbec5587ca478e868dc5fbc16e371f3f665e5a03b16c3f260c1f1",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-national-science",
   "question_id": "gk-1986-regular-national-science-q20",
-  "resume_action": "取得独立权威题面后，按确认的运算符重新核定第 20 题答案并完成盲核。",
+  "resolution": "盲核按交叉核定后的规范题面复算并确认 1084；解析版与简答版结论一致，固定源的运算符差异不再阻断本卷完成。",
+  "resume_action": "已完成独立题源交叉核验、答案复算和盲核。",
   "source_id": "src-dcbe01c963fb151595722561942650d49d97c55287ec155c8566716b0e13327b",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
