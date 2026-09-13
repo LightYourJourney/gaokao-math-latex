@@ -1,6 +1,6 @@
 # 批次 phase2-b25 视觉审查报告
 
-- 批次结论：`closed_with_blockers`
+- 批次结论：`closed`
 - 试卷数：1
 - 版本数：4
 - 审查页数：24
@@ -9,10 +9,10 @@
 
 - 标题：1977 年·天津卷
 - 项目目录：`1977_天津卷`
-- 构建：`succeeded`（attempt `49aa78d7-313b-4e73-8bd5-f3cffcaa8c26`）
-- 审查：`passed`（2026-09-12T11:13:14+08:00）
-- 内容候选：`eligible_blocked`
+- 构建：`succeeded`（attempt `7dfcb576-53a5-4c8a-837c-24451c33de27`）
+- 审查：`passed`（2026-09-14T01:55:09+08:00）
+- 内容候选：`eligible_complete`
 - 页数：试题版 3；解析版 9；简答版 4；印刷版 8
 - 警告豁免：0
 - 视觉问题：无
-- 阻塞问题：ISSUE-0127、ISSUE-0128
+- 阻塞问题：无
