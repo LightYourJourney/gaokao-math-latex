@@ -12508,3 +12508,39 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0798
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定上游 PDF《1977福建文.pdf》（deekur/gaokaomath 固定版本，SHA-256 ee125e8b70f6a6d90818fc256aa1884fc19a0137313fc7716ceb8c20773d3cd0，A3 单页）第 2 大题第（1）题高清渲染明确印作 y=lg(2−x)/√(x−1)；PDF 文本层同样提取为 x−1。独立公开页面《1977年福建高考数学真题》（https://mdnice.com/writing/e2ab33f129de4a8ba4f9b96750417574）也将同题写作 √(x−1)，与固定源相互印证。原库转录误写为 √x−1。",
+  "fingerprint": "2d1f1782ab6936b2c3f9dec9e9cbc927ad40f77300fedd05a0923bd25aa550f7",
+  "impact": "non_blocking",
+  "paper_id": "gk-1977-regular-fujian-arts",
+  "question_id": "gk-1977-regular-fujian-arts-q02",
+  "resolution": "已将题面与解析统一修正为 √(x−1)，并将定义域由 [0,1)∪(1,2) 修正为 (1,2)；共享 questions.tex/answers.tex 与 answers_short.tex 已重生成。",
+  "resume_action": "已修正并重跑生成检查，无需继续动作。",
+  "source_id": "src-695012a4c4b226accca28c241571eab14a51c31f47f7ddec60950425b6c6e926",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0799
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定上游 PDF《1977福建理.pdf》（deekur/gaokaomath 固定版本，SHA-256 41cfadf1b11caf1028eca522072a83b4adce7c398491c247cd455b17ec1b3e47，A3 单页）第 1 题第（3）小题高清渲染明确印作 y=lg(2−x)/√(x−1)；PDF 文本层同样提取为 x−1。独立公开页面《1977年福建高考数学真题》（https://mdnice.com/writing/e2ab33f129de4a8ba4f9b96750417574）也将同题写作 √(x−1)，与固定源相互印证。原库转录误写为 √x−1。",
+  "fingerprint": "8bc637e2d03428956279f663d694e3bfb4ce8c80d911478b37ccbc02c6e33c1e",
+  "impact": "non_blocking",
+  "paper_id": "gk-1977-regular-fujian-science",
+  "question_id": "gk-1977-regular-fujian-science-q01",
+  "resolution": "已将题面与解析统一修正为 √(x−1)，并将定义域由 [0,1)∪(1,2) 修正为 (1,2)；共享 questions.tex/answers.tex 与 answers_short.tex 已重生成。",
+  "resume_action": "已修正并重跑生成检查，无需继续动作。",
+  "source_id": "src-169ec552629b39cd748da5afa1bce33d6aae2be96064ce7c9e5505c51312d359",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
