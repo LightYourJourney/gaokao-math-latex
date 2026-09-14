@@ -42,11 +42,11 @@
 - Consumes: one-page A3 fixed PDF and any secondary transcription used only as a locator.
 - Produces: 24 aligned question blocks, answer blocks for all 24 questions including subparts 22/23, and 24 independent solution blocks.
 
-- [ ] Step 1: Verify source facts with \`pdfinfo\`, \`pdftotext -layout\`, SHA-256 and a visual render; record the A3/page-59/24-question/no-answer-page facts.
-- [ ] Step 2: Transcribe the fixed题面. Preserve the set diagram in Q1, solid geometry diagrams in Q10/Q22, rolling-mill diagram and table in Q23, and coordinate diagram in Q24 through logical image markers only.
-- [ ] Step 3: Independently solve all questions, checking the shared Q4/Q6/Q7/Q8/Q10/Q12/Q13/Q15/Q17/Q18 items and the arts-only Q6 circle symmetry, Q8 cubic coefficient identity, Q19 logarithmic equation and Q20 sequence limit.
-- [ ] Step 4: Use the existing \`solution_sources.render_combined\` pure generator to create the required \`_含解析.md\` before registration, then rerun \`solution_sources.py extract-batch --write\` after the batch is registered; ensure no solution block copies an entire题面 or emits a fabricated final answer.
-- [ ] Step 5: Run parser and issue checks, inspect the complete diff, and commit the source checkpoint with \`docs(exams): add 1999 national arts source checkpoint\`.
+- [x] Step 1: Verify source facts with \`pdfinfo\`, \`pdftotext -layout\`, SHA-256 and a visual render; record the A3/page-59/24-question/no-answer-page facts.
+- [x] Step 2: Transcribe the fixed题面. Preserve the set diagram in Q1, solid geometry diagrams in Q10/Q22, rolling-mill diagram and table in Q23, and coordinate diagram in Q24 through logical image markers only.
+- [x] Step 3: Independently solve all questions, checking the shared Q4/Q6/Q7/Q8/Q10/Q12/Q13/Q15/Q17/Q18 items and the arts-only Q6 circle symmetry, Q8 cubic coefficient identity, Q19 logarithmic equation and Q20 sequence limit.
+- [x] Step 4: Use the existing \`solution_sources.render_combined\` pure generator to create the required \`_含解析.md\` before registration, then rerun \`solution_sources.py extract-batch --write\` after the batch is registered; ensure no solution block copies an entire题面 or emits a fabricated final answer.
+- [x] Step 5: Run parser and issue checks, inspect the complete diff, and commit the source checkpoint with \`docs(exams): add 1999 national arts source checkpoint\`.
 
 ### Task 2: 注册新来源并生成 LaTeX 工程
 
@@ -59,9 +59,9 @@
 - Consumes: Task 1 Markdown and source ID \`src-2a6d695a9010eb081aa23c3e34d36994d3c5ad1571206edfb5dc1c3e27c33a7a\`.
 - Produces: paper \`gk-1999-regular-national-arts\`, batch \`phase2-b73\`, five registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec: project directory \`1999_全国卷_文科\`, title \`1999 年·全国卷·文科\`, track \`arts\`, count 24, base \`1999_national_arts\`, pages \`[1,1]\`, structure \`题目: [1,24]\`, figures \`f1999_t10_polyhedron\`, \`f1999_t1_sets\`, \`f1999_t22_prism\`, \`f1999_t23_rolling_mill\`, \`f1999_t24_locus\` sorted by path.
-- [ ] Step 2: Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run each corresponding check mode.
-- [ ] Step 3: Validate figure occurrence counts, source manifest and generated answer markers, then commit with \`chore(exams): generate 1999 national arts LaTeX source\`.
+- [x] Step 1: Create and dry-run an exact registration spec: project directory \`1999_全国卷_文科\`, title \`1999 年·全国卷·文科\`, track \`arts\`, count 24, base \`1999_national_arts\`, pages \`[1,1]\`, structure \`题目: [1,24]\`, figures \`f1999_t10_polyhedron\`, \`f1999_t1_sets\`, \`f1999_t22_prism\`, \`f1999_t23_rolling_mill\`, \`f1999_t24_locus\` sorted by path.
+- [x] Step 2: Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run each corresponding check mode.
+- [x] Step 3: Validate figure occurrence counts, source manifest and generated answer markers, then commit with \`chore(exams): generate 1999 national arts LaTeX source\`.
 
 ### Task 3: provenance、正式构建与清理
 
@@ -72,10 +72,10 @@
 - Consumes: registered current source and generated \`.tex\` tree.
 - Produces: current three-role provenance, four successful build records, and a build directory containing PDFs only after cleanup.
 
-- [ ] Step 1: Initialize the three \`.work\` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
-- [ ] Step 2: Run the formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
-- [ ] Step 3: Render all PDFs to \`/private/tmp\`, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored \`.work\` directory.
-- [ ] Step 4: Commit source/build/provenance artifacts with \`docs(exams): record 1999 national arts build\`; leave PDFs local and ignored per repository policy.
+- [x] Step 1: Initialize the three \`.work\` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
+- [x] Step 2: Run the formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
+- [x] Step 3: Render all PDFs to \`/private/tmp\`, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored \`.work\` directory.
+- [x] Step 4: Commit source/build/provenance artifacts with \`docs(exams): record 1999 national arts build\`; leave PDFs local and ignored per repository policy.
 
 ### Task 4: 全页复核、关闭批次与全库验证
 
@@ -87,16 +87,16 @@
 - Consumes: four current PDFs, build receipt and fresh rendered-page evidence.
 - Produces: finalized review, complete paper, closed batch and synchronized CSV/report.
 
-- [ ] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
-- [ ] Step 2: Run \`review_receipts.py finalize-batch\`, require \`FINALIZED\`, inspect the report and issue transitions.
-- [ ] Step 3: Run all targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
-- [ ] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
+- [x] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
+- [x] Step 2: Run \`review_receipts.py finalize-batch\`, require \`FINALIZED\`, inspect the report and issue transitions.
+- [x] Step 3: Run all targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
+- [x] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint, A3/page-59/24-question facts and no-answer-page statement are present.
-- [ ] Q1/Q10/Q22/Q23/Q24 are the only logical image markers and all map to committed \`.tex\` figures.
-- [ ] Q6/Q8/Q19/Q20 arts-only calculations and all subpart answer anchors are independently checked.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
+- [x] Fixed source fingerprint, A3/page-59/24-question facts and no-answer-page statement are present.
+- [x] Q1/Q10/Q22/Q23/Q24 are the only logical image markers and all map to committed \`.tex\` figures.
+- [x] Q6/Q8/Q19/Q20 arts-only calculations and all subpart answer anchors are independently checked.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
