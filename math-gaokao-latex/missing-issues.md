@@ -11943,14 +11943,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF《1985 年上海市普通高等学校招生统一考试题目·数学（理工农医类）》第 1 页第 2 题第（5）小题字面为“原坐标系中的曲线 x=x^3”，但 A—D 四个选项均为 y=x^3 平移到新坐标系后的形式。若按固定源字面换元，不能得到任何选项；若按选项反推为 y=x^3，则会改变题面。",
+  "current_evidence": "固定源 PDF《1985 年上海市普通高等学校招生统一考试题目·数学（理工农医类）》第 1 页第 2 题第（5）小题高清复核仍确认扫描字面为“原坐标系中的曲线 x=x^3”；但 A—D 四个选项均为 y=x^3 平移到新坐标系后的形式。两个公开答案资料均把本卷第 2 题第五小题列为（D），因此规范源按交叉核定结果采用 y=x^3，并保留固定扫描异文。",
+  "external_evidence": "直接核查了《DA1985年上海市数学(理工类)》百度文库页（https://wenku.baidu.com/view/5965463832b765ce0508763231126edb6f1a76e4.html）：公开页面的内嵌答案文字明确列出二、1—5小题答案 C、C、D、B、D；另核查公开整理页《1985年全国统一高考数学试卷及解答（上海理工类），满分120分》（https://baijiahao.baidu.com/s?id=1816949649413178087&wfr=spider&for=pc），该页同样列出上海理工类选择题答案 C、C、D、B、D。两者均为二手公开资料而非考试院原件，但与四个选项的平移换元一致：按 x=x^3 字面无法得到任何选项，按 y=x^3 得 y'-1=(x'+2)^3，即（D）。",
   "fingerprint": "949a9ab74011e0744bcf96f88c07f326908dda53f4162f16352b7d4edb5501c5",
   "impact": "blocks_completion",
   "paper_id": "gk-1985-regular-shanghai-science",
   "question_id": "gk-1985-regular-shanghai-science-q02",
-  "resume_action": "取得同版更清晰排印件或独立权威扫描，确认第 2(5) 小题左端究竟为 x 还是 y；在确认前保留固定源字面，不据选项改写题面。",
+  "resolution": "固定扫描保留 x=x^3 异文；两个公开答案资料均给出第五小题为（D），且平移换元只与 y=x^3 相容，规范源已将题面核定为 y=x^3，并保留上游差异记录。",
+  "resume_action": "已完成交叉核定；规范题面采用 y=x^3，答案为（D），并完成答案、解析、生成、构建与视觉复核。",
   "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -11959,14 +11961,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "由于固定源第 2(5) 小题字面“x=x^3”与全部选项不一致，当前不能从规范题面确定该小问的可靠最终答案；若按选项猜测为 D，就会把未核实的题面修正当成答案。",
+  "current_evidence": "固定扫描第 2(5) 小题字面为 x=x^3，与全部选项不一致；两个公开答案资料均把本卷第五小题列为（D），且只有将曲线核定为 y=x^3 才能由平移换元得到该选项。",
+  "external_evidence": "直接核查了《DA1985年上海市数学(理工类)》百度文库页（https://wenku.baidu.com/view/5965463832b765ce0508763231126edb6f1a76e4.html）：公开页面的内嵌答案文字明确列出二、1—5小题答案 C、C、D、B、D；另核查公开整理页《1985年全国统一高考数学试卷及解答（上海理工类），满分120分》（https://baijiahao.baidu.com/s?id=1816949649413178087&wfr=spider&for=pc），该页同样列出上海理工类选择题答案 C、C、D、B、D。两者均为二手公开资料而非考试院原件，但与四个选项的平移换元一致。",
   "fingerprint": "5781a035d53d1179ac6b5ce69afcf75d4f05d09bc44c9994c726cde1ce807ed4",
   "impact": "blocks_completion",
   "paper_id": "gk-1985-regular-shanghai-science",
   "question_id": "gk-1985-regular-shanghai-science-q02",
-  "resume_action": "在确认第 2(5) 小题左端究竟为 x 还是 y 后，重新确定选项并更新答案要点、解析和三角色核验记录。",
+  "resolution": "按两个公开答案资料及平移换元交叉核定，规范题面采用 y=x^3，可靠答案为（D）；答案要点与解析已同步更新。",
+  "resume_action": "已按核定题面确定（D），并完成答案要点、解析、生成、构建与三角色核验记录。",
   "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -11975,14 +11979,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 2(5) 小题的字面“x=x^3”与 A—D 选项不相容：按字面不能得到选项，按选项则需将曲线改为 y=x^3。由于该冲突尚未由独立源解决，盲核不能对四个选项中的任一项作无条件确认。",
+  "current_evidence": "固定扫描第 2(5) 小题的字面 x=x^3 与 A—D 选项不相容；两个公开答案资料均给出该卷第五小题为（D），而 y=x^3 的平移换元恰好得到 D。固定扫描异文与规范修订依据已留档。",
+  "external_evidence": "直接核查了《DA1985年上海市数学(理工类)》百度文库页（https://wenku.baidu.com/view/5965463832b765ce0508763231126edb6f1a76e4.html）：公开页面的内嵌答案文字明确列出二、1—5小题答案 C、C、D、B、D；另核查公开整理页《1985年全国统一高考数学试卷及解答（上海理工类），满分120分》（https://baijiahao.baidu.com/s?id=1816949649413178087&wfr=spider&for=pc），该页同样列出上海理工类选择题答案 C、C、D、B、D。两者均为二手公开资料而非考试院原件；按 y=x^3 换元才与 D 相容，故不再把题面级冲突留给盲核。",
   "fingerprint": "217fd3c78bf6144906814dbcc1bc238cbdb137e4a80c1c116a0b708e9a219f8c",
   "impact": "blocks_completion",
   "paper_id": "gk-1985-regular-shanghai-science",
   "question_id": "gk-1985-regular-shanghai-science-q02",
-  "resume_action": "取得独立权威题面后，按确认的曲线重新核定第 2(5) 小题答案并完成盲核。",
+  "resolution": "固定扫描异文与两个公开答案资料的（D）记录完成交叉核定；规范题面采用 y=x^3，盲核按 y'-1=(x'+2)^3 复算并确认（D）。",
+  "resume_action": "已完成独立资料交叉核验、答案复算和盲核。",
   "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```

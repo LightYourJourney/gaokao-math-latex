@@ -31,19 +31,15 @@
     },
     {
       "answer_evidence": {
-        "evidence": "独立复核前四个选择题；第 2(5) 只能确认固定源字面与选项冲突，未据疑似原题给出确定选择，挂 ISSUE-0763 与 ISSUE-0764。",
-        "grade": "U"
+        "evidence": "按平移坐标换元 x=x' + 2、y=y' − 1；规范题面 y=x^3 给出 y'−1=(x'+2)^3，唯一对应选项（D）。固定扫描 x=x^3 的异文已由问题总账记录，不将上游 PDF 改写为 y=x^3。",
+        "grade": "A"
       },
-      "answer_sha256": "7638735ce060ef3f528f402e25d5fb58d528f2ce6852247ec72ce1e4943c74e6",
-      "conflict_status": "unresolved",
-      "issue_ids": [
-        "ISSUE-0763",
-        "ISSUE-0764",
-        "ISSUE-0765"
-      ],
+      "answer_sha256": "00370d7baada086021794b306f4841aab012071f3897a57b1a2e7f98c4fc648f",
+      "conflict_status": "none",
+      "issue_ids": [],
       "printed_number": 2,
       "question_id": "gk-1985-regular-shanghai-science-q02",
-      "question_text_sha256": "8b97ab4902640028d8f459a0c1c4030cb82f4f18146ac4ef3a63691496aafaa3",
+      "question_text_sha256": "a553180e7a9598e4523249d44918ca51f00b9e4d156c3a678ef937ae5779dfb3",
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
@@ -54,8 +50,8 @@
       },
       "source_sha256": "a54787068aa9e04814d9d65eab15a4c8f7e69b04a8c2b59fa7d21212a86ef856",
       "transcription_review": {
-        "evidence": "固定源 PDF 原卷页码 4-36 的高清局部复核：第 2(5) 小题字面清晰印为“曲线 x=x^3”，但 A—D 选项均对应 y=x^3 的平移形式；题面忠实转录，语义冲突挂 ISSUE-0763。",
-        "result": "uncertain",
+        "evidence": "固定源 PDF 原卷页码 4-36 的高清局部复核仍确认扫描字面为“原坐标系中的曲线 x=x^3”；规范源按两份公开答案资料与选项可解性完成交叉核定，采用 y=x^3。《DA1985年上海市数学(理工类)》百度文库页列出二、1—5小题答案 C、C、D、B、D；百度百家号同题整理页亦列出 C、C、D、B、D。",
+        "result": "passed",
         "role": "phase2-b55-question-review-pdf"
       }
     },
@@ -73,8 +69,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        1,
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -100,7 +95,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -126,7 +121,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -152,7 +147,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -178,7 +173,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -204,7 +199,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -230,7 +225,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
@@ -256,7 +251,7 @@
       "reviewer_role": "phase2-b55-answer-blind-reviewer",
       "solver_role": "phase2-b55-answer-solve-independent",
       "source_pages": [
-        2
+        1
       ],
       "source_ref": {
         "source_id": "src-49bdf04407d48da1a3265cea8e079a2bbf0b72f553b9d529fb30b326f95aff71"
