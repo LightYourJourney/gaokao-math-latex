@@ -12121,6 +12121,7 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "固定源第 2(9) 题高分辨率读作 a_3a_7=−12、a_6+a_9=−1、公差为正；该条件不存在实等差数列，但解答页列出 S_20=180。",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "fingerprint": "e72707f8c2ff9a9066fdea6dfc6178c36dc43724c4930231d51af848a1f4edb1",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
@@ -12137,6 +12138,7 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "按固定源第 2(9) 题字面消元得到 x^2−4x+108=0，判别式 −416<0，不存在实等差数列，因而 S_20 没有可确认数值；解答页的 180 不能直接作为题面答案。",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "fingerprint": "00ba3aac44086883e6d7d849b0f114fc2fe393d8605c7b4bf997df435b00d988",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
@@ -12153,6 +12155,7 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "固定源第 2(9) 题面条件与解答页 S_20=180 直接冲突；按题面不存在实解，按解答反推题面属于未经授权的排印修正。",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "fingerprint": "1028f700367d9148ae99bb21ecc275b18af0eaa6a30138034ee24f3e3a2c8b24",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
@@ -12168,7 +12171,8 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立反函数图形为 (x−1)^2+y^2=1 的上半圆弧。",
+  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立推导的反函数图形为 (x−1)^2+y^2=1 的左下四分之一弧。",
+  "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
   "fingerprint": "037ee492d77a54546001612bafa94aa7f7765fd3ede8c09cc772453c69986422",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
@@ -12184,7 +12188,8 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立反函数图形为 (x−1)^2+y^2=1 的上半圆弧。",
+  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立推导的反函数图形为 (x−1)^2+y^2=1 的左下四分之一弧。",
+  "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
   "fingerprint": "afa2a86288e765aee2005d66d6436127ad3de5712ca174683e9ab3e4d054d0fc",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-science",
@@ -12439,6 +12444,7 @@
 {
   "affected_paper_ids": [],
   "fingerprint": "499eb3d8a813d12ff1d9285777fb442ee800e62dc5fb0b04baee39c9881eef55",
+  "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q01",
@@ -12455,6 +12461,7 @@
 {
   "affected_paper_ids": [],
   "fingerprint": "f37fc85f7b4489265ed34284aaecc711eb0c476bb50542077772c96f21639598",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
@@ -12471,6 +12478,7 @@
 {
   "affected_paper_ids": [],
   "fingerprint": "19c213f540ab41126f054a59c822558aa489334dcb1464cc4b06e62519ab933d",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
@@ -12487,6 +12495,7 @@
 {
   "affected_paper_ids": [],
   "fingerprint": "4b9aae5b64c90c7fc998570cc483e6748069c1e828e75ff21e7d74ddf78f75ce",
+  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
@@ -12503,6 +12512,7 @@
 {
   "affected_paper_ids": [],
   "fingerprint": "e58aaae6a5734e320bbb8414e686209805fe7be840e42b5511c41d40622b320e",
+  "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-science",
   "question_id": "gk-1986-regular-guangdong-science-q01",
