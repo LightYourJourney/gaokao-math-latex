@@ -31,18 +31,15 @@
     },
     {
       "answer_evidence": {
-        "evidence": "按图示条件得到 DE=ab/(a+b)，但固定源题干“BC 的平分线”与图示 DE∥BC 冲突；见 ISSUE-0126。",
-        "grade": "U"
+        "evidence": "由 CD 为 ∠C 的角平分线，角平分线定理给出 AD/DB=AC/CB=b/a，从而 AD/AB=b/(a+b)。规范构造 DE∥BC，故 △ADE∼△ABC，DE/BC=AD/AB，代入 BC=a 得 DE=ab/(a+b)。",
+        "grade": "A"
       },
-      "answer_sha256": "62a6fb4e494a9ff89b8c42b8632e4c2125922ba7b3504dbc387c98d7330fdf59",
+      "answer_sha256": "77eb119eeddfe71e64419080725a9dbc6424d4c0faf148a7f5613bf75c54df32",
       "conflict_status": "none",
-      "issue_ids": [
-        "ISSUE-0125",
-        "ISSUE-0126"
-      ],
+      "issue_ids": [],
       "printed_number": 2,
       "question_id": "gk-1977-regular-shanghai-arts-q02",
-      "question_text_sha256": "96138b33bbf2bed60ffc4a12df7e1533793f9af195badf8a9a0f7f5e5dbb8fe0",
+      "question_text_sha256": "0651fc08357e2e62aa0088c28f70d76024c8ede5a329d2517edd8f188326814b",
       "reviewer_role": "phase2-b23-answer-review-blind",
       "solver_role": "phase2-b23-answer-solve-independent",
       "source_pages": [
@@ -53,8 +50,8 @@
       },
       "source_sha256": "d4d42183b3524e36a712b360c926c37d3afef1274f0bec51fea1f41c32fcd70f",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1 页高分辨率复核：题干字样与图示关系不一致，见 ISSUE-0125；题面原文保留，不能无条件判为平行线。",
-        "result": "uncertain",
+        "evidence": "固定源 A3 单页高清复核确认原扫描字面为“过 D 作 BC 的平分线”，但同年上海理科固定源同题作“过 D 作 BC 的平行线”；公开 Daxmate/math 的 1977 上海理科转录（https://github.com/daxmate/math/blob/main/1977shanghai/shanghai1977.tex）也作“平行线”，且文科固定图示明确为 DE∥BC。规范题面按交叉核定采用平行线，固定扫描异文保留在 ISSUE-0125—ISSUE-0126。",
+        "result": "passed",
         "role": "phase2-b23-question-review-pdf"
       }
     },

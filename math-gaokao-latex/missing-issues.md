@@ -2280,14 +2280,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：题干印作“过 D 作 BC 的平分线交 AC 于 E”，而图中 D-E 线段与 BC 同向平行；按字面构造与图示构造不一致。",
+  "current_evidence": "固定源 PDF 第 1 页高分辨率复核仍确认题干印作“过 D 作 BC 的平分线交 AC 于 E”，而图中 D-E 线段与 BC 同向平行；同年上海理科固定源的同题印作“过 D 作 BC 的平行线”，公开同题转录也作“平行线”。规范源据此采用“平行线”，固定扫描异文保留。",
+  "external_evidence": "直接核查同年上海理科固定源对应题面：该卷固定源规范转录第 2 题作“过 D 作 BC 的平行线”；另核查公开 Daxmate/math 仓库的 1977 上海理科转录（https://github.com/daxmate/math/blob/main/1977shanghai/shanghai1977.tex），其第 2 题同样明确作“平行线”。该公开转录不是官方原件，但与文科固定扫描图示 DE∥BC、以及独立几何可解性一致；文科公开题面页（https://www.doc88.com/p-4149997998535.html）只作为同卷种身份的辅助线索，未将其受限预览当作唯一证据。",
   "fingerprint": "38050afbb46610362059f5e3637d8955596a041b9d53d371b29ec2725dcb2f3d",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-shanghai-arts",
   "question_id": "gk-1977-regular-shanghai-arts-q02",
-  "resume_action": "取得同一固定源的清晰排印件或独立权威答案，确认题干“BC 的平分线”是否为原卷笔误；在确认前保留题面原文并按图示关系单独标注，不能将其当作无条件平行线题。",
+  "resolution": "固定扫描异文保留为“平分线”；同年上海理科固定源的同题与公开 Daxmate 转录均为“平行线”，且文科图示为 DE∥BC，规范题面已按交叉核定采用“平行线”。",
+  "resume_action": "已完成交叉核定；规范题面采用“平行线”，固定扫描异文已留档，并完成答案、解析、生成、构建与视觉复核。",
   "source_id": "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -2297,14 +2299,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF 第 1 页高分辨率复核：题干印作“过 D 作 BC 的平分线交 AC 于 E”，而图中 D-E 线段与 BC 同向平行；按字面构造与图示构造不一致。",
+  "current_evidence": "固定扫描第 2 题字面为“BC 的平分线”，与图示 DE∥BC 不一致；同年上海理科固定源与公开同题转录均作“BC 的平行线”。按该交叉核定读法，DE=ab/(a+b) 的独立推导与题面相容。",
+  "external_evidence": "直接核查同年上海理科固定源对应题面：第 2 题作“过 D 作 BC 的平行线”；公开 Daxmate/math 转录（https://github.com/daxmate/math/blob/main/1977shanghai/shanghai1977.tex）同样作“平行线”。另核查公开同构题的完整题解（https://www.1010jiajiao.com/czsx/shiti_id_1da1f97104c4e5b74a707b76c0a5b992），其按 CD 为角平分线、DE∥BC 推出 DE=ab/(a+b)；该页不是 1977 原卷，只用于独立核对答案公式，不作为历史题面身份依据。",
   "fingerprint": "002076828588d3eec0048a3aa120fdb89846810732603f2fedfe41163b2729e4",
   "impact": "blocks_completion",
   "paper_id": "gk-1977-regular-shanghai-arts",
   "question_id": "gk-1977-regular-shanghai-arts-q02",
-  "resume_action": "先解决第 2 题题干“BC 的平分线”与图示 DE∥BC 的冲突；确认构造后重跑独立答案、盲核与 provenance，方可解除 U 级答案证据。",
+  "resolution": "按同年上海理科固定源、公开同题转录与文科图示交叉核定，规范构造为 DE∥BC；独立由角平分线定理和相似三角形复算 DE=ab/(a+b)，答案要点与解析已同步更新。",
+  "resume_action": "已完成构造核定、独立答案复算，并完成答案、解析、生成、构建与三角色核验记录。",
   "source_id": "src-21ede2f4d2feea45ce0c013e43c589d4c6268b39e22ee860d9939b045f6a197c",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
