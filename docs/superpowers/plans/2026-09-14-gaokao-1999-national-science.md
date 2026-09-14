@@ -45,7 +45,7 @@
 - [ ] Step 1: Verify source facts with `pdfinfo`, `pdftotext -layout`, SHA-256 and a visual render; record the A3/page-58/25-question/no-answer-page facts.
 - [ ] Step 2: Transcribe the fixed题面. Preserve the set diagram in Q1, solid geometry diagrams in Q10/Q21, rolling-mill diagram and table in Q22, and coordinate diagram in Q24 through logical image markers only.
 - [ ] Step 3: Independently solve all questions, checking the nonstandard traps in Q4/Q6/Q7/Q8/Q10/Q12/Q13/Q15/Q17/Q18/Q19/Q20 and the multi-part geometry/sequences in Q21–Q24; do not infer an answer from an unverified secondary key.
-- [ ] Step 4: Generate and check the combined source with `solution_sources.py extract-batch --write` after registration; ensure no solution block copies an entire题面 or emits a fabricated final answer.
+- [ ] Step 4: Use the existing `solution_sources.render_combined` pure generator to create the required `_含解析.md` before registration, then rerun `solution_sources.py extract-batch --write` after the batch is registered; ensure no solution block copies an entire题面 or emits a fabricated final answer.
 - [ ] Step 5: Run parser and issue checks, inspect the complete diff, and commit the source checkpoint with `docs(exams): add 1999 national science source checkpoint`.
 
 ### Task 2: 注册新来源并生成 LaTeX 工程
