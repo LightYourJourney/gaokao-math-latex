@@ -1,0 +1,26 @@
+% 2001 年上海卷文科第 12 题：土地沙化面积与年平均变化量
+\begin{tikzpicture}[>=stealth, scale=0.78]
+  \begin{scope}
+    \draw[->] (0,0)--(5.8,0) node[right] {年份};
+    \draw[->] (0,0)--(0,3.2) node[above] {总面积};
+    \draw[step=1cm, gray!25] (0,0) grid (5,3);
+    \draw[thick] (0,0.25)--(2,1.05)--(4,2.05)--(5,2.7);
+    \foreach \x/\label in {0/1950,1/1960,2/1970,3/1980,4/1990,5/2000}
+      \node[below] at (\x,-0.08) {\scriptsize \label};
+    \foreach \y/\label in {0.25/250.1,1.05/253.3,2.05/257.5,2.7/260}
+      \node[left] at (-0.08,\y) {\scriptsize \label};
+    \node[above] at (2.6,3.15) {\scriptsize 土地沙化总面积};
+    \node[above] at (2.6,2.82) {\scriptsize （万平方公里）};
+  \end{scope}
+  \begin{scope}[xshift=7.1cm]
+    \draw[->] (0,0)--(5.8,0) node[right] {年份};
+    \draw[->] (0,0)--(0,3.2) node[above] {年平均};
+    \draw[step=1cm, gray!25] (0,0) grid (5,3);
+    \foreach \x/\label in {0/1950,1/1960,2/1970,3/1980,4/1990,5/2000}
+      \node[below] at (\x,-0.08) {\scriptsize \label};
+    \foreach \y/\label in {0.35/10,1.05/14,1.75/18,2.45/22,3/26}
+      \node[left] at (-0.08,\y) {\scriptsize \label};
+    \node[above] at (2.6,3.15) {\scriptsize 年平均土地沙化总面积};
+    \node[above] at (2.6,2.82) {\scriptsize （百平方公里）};
+  \end{scope}
+\end{tikzpicture}

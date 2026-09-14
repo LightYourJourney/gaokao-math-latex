@@ -1,0 +1,13 @@
+% 2001 年上海卷文科第 22 题：数列发生器流程图
+\begin{tikzpicture}[>=stealth, node distance=0.6cm]
+  \tikzset{box/.style={draw, minimum width=1.1cm, minimum height=0.55cm, align=center}}
+  \node[box] (f) {$f$};
+  \node[box, below=of f] (print) {打印};
+  \node[box, below=of print, minimum width=1.8cm] (test) {$x_1\in D$};
+  \node[below=of test] (end) {结束};
+  \draw[->] (f)--node[right] {输出}(print);
+  \draw[->] (print)--(test);
+  \draw[->] (test)--node[right] {NO}(end);
+  \draw[->] (test.east)--++(1.0,0)--++(0,2.0)--node[above] {YES} (f.east);
+  \draw[->] ($(f.north)+(0,0.7)$)--node[left] {输入}(f.north);
+\end{tikzpicture}

@@ -716,6 +716,14 @@
         "gk-2001-regular-national-new-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b82",
+      "issues": [],
+      "paper_ids": [
+        "gk-2001-regular-shanghai-arts"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -725,7 +733,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "95e2c01e-f42f-489a-b132-4c7341ce3486",
+  "last_transaction_id": "8610707b-ad30-46aa-a88e-4def62557182",
   "papers": [
     {
       "blocked_from": null,
@@ -9705,9 +9713,77 @@
       "title": "2001 年·全国新课程卷·文科",
       "track": "arts",
       "year": 2001
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_文科/figures/f2001_t12_desertification.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_文科/figures/f2001_t19_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_文科/figures/f2001_t22_generator.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2001_shanghai_arts",
+        "id": "gk-2001-regular-shanghai-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 92–93；PDF 不附答案与解析，答案和解析均为本库独立复算。第 12、19、22 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2001-regular-shanghai-arts",
+      "production_state": "editions_generated",
+      "project_dir": "2001_上海卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2001/2001_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2001/2001_数学真题_上海文_含解析.md",
+        "questions": "2001/2001_数学真题_上海文_试题.md",
+        "solution_body": "2001/2001_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e3874efedf21e835ec81144259ce64bfe239ca02be1100474179b0afb3015d9c"
+      ],
+      "title": "2001 年·上海卷·文科",
+      "track": "arts",
+      "year": 2001
     }
   ],
-  "revision": 2468,
+  "revision": 2470,
   "schema_version": 1,
   "sources": [
     {
@@ -14836,8 +14912,8 @@
       "exam_type": "regular",
       "git_blob_oid": "383dada25df15e5698443cb43cd6d14ca2f65f70",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2001-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2001上海文.pdf",
       "regions": [],
       "source_id": "src-e3874efedf21e835ec81144259ce64bfe239ca02be1100474179b0afb3015d9c",
