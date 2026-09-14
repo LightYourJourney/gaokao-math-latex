@@ -4,7 +4,7 @@
 
 **Goal:** 将固定源 PDF 对应的 2000 年全国新课程卷理科数学整理为 22 题的可追溯 Markdown 源、四种可编译 LaTeX 版本、六个矢量图源和通过全页复核的 PDF。
 
-**Architecture:** 题面唯一依据 source ID src-141d138f3d26910518b47759686b06eea4563ba9d9df53742fc363c6f69721b0 对应的固定源 PDF；公开转录只用于文字定位与交叉检查，不作为答案或解析事实源。题面、答案、独立解析分别落在 2000/，由现有工具生成单卷 LaTeX 工程；第 5、8、16、18 甲、18 乙、22 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
+**Architecture:** 题面唯一依据 source ID src-141d138f3d26910518b47759686b06eea4563ba9d9df53742fc363c6f69721b0 对应的固定源 PDF；公开转录只用于文字定位与交叉检查，不作为答案或解析事实源。题面、答案、独立解析分别落在 2000/，由现有工具生成单卷 LaTeX 工程；第 5、8、12、16、18 甲、18 乙、22 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
 
 **Tech Stack:** Python 3 标准库工具链、XeLaTeX、ctex、TikZ/PGFPlots、Git。
 
@@ -27,7 +27,7 @@
 - Create: 2000/2000_数学真题_全国新课程理_答案要点.md
 - Create: 2000/2000_数学真题_全国新课程理_解析正文.md
 - Create by tool: 2000/2000_数学真题_全国新课程理_含解析.md
-- Create: math-gaokao-latex/2000_全国新课程卷_理科/figures/{f2000_t5_graphs.tex,f2000_t8_area.tex,f2000_t16_projection.tex,f2000_t18a_tri_prism.tex,f2000_t18b_parallelepiped.tex,f2000_t22_hyperbola.tex}
+- Create: math-gaokao-latex/2000_全国新课程卷_理科/figures/{f2000_t5_graphs.tex,f2000_t8_area.tex,f2000_t12_cone.tex,f2000_t16_projection.tex,f2000_t18a_tri_prism.tex,f2000_t18b_parallelepiped.tex,f2000_t22_hyperbola.tex}
 - Create by tools: project .tex sources, provenance.json, receipts/{build,review}.json, four local PDFs, reports/phase2-b77.md
 - Modify by tools: source-manifest.json, index.json, manifest.csv, missing-issues.md
 
@@ -56,11 +56,11 @@
 
 **Interfaces:**
 - Consumes: Task 1 Markdown and source ID src-141d138f3d26910518b47759686b06eea4563ba9d9df53742fc363c6f69721b0.
-- Produces: paper gk-2000-regular-national-new-science, batch phase2-b77, six registered figures with two Markdown occurrences each.
+- Produces: paper gk-2000-regular-national-new-science, batch phase2-b77, seven registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec: project directory 2000_全国新课程卷_理科, title 2000 年·全国新课程卷·理科, track science, count 22, base 2000_national_new_science, pages [1,2], printed pages [74,75], structure 题目 [1,22], and figures f2000_t5_graphs, f2000_t8_area, f2000_t16_projection, f2000_t18a_tri_prism, f2000_t18b_parallelepiped, f2000_t22_hyperbola sorted by path.
+- [ ] Step 1: Create and dry-run an exact registration spec: project directory 2000_全国新课程卷_理科, title 2000 年·全国新课程卷·理科, track science, count 22, base 2000_national_new_science, pages [1,2], printed pages [74,75], structure 题目 [1,22], and figures f2000_t5_graphs, f2000_t8_area, f2000_t12_cone, f2000_t16_projection, f2000_t18a_tri_prism, f2000_t18b_parallelepiped, f2000_t22_hyperbola sorted by path.
 - [ ] Step 2: Write the registration and run generate_projects.py, make_short_answers.py, and make_editions.py in write mode; run every corresponding check mode.
-- [ ] Step 3: Validate figure occurrence counts, source manifest, generated answer markers, and both Q18 variant answer sets; commit with chore(exams): generate 2000 national new-science LaTeX source.
+- [ ] Step 3: Validate seven figure occurrence counts, source manifest, generated answer markers, and both Q18 variant answer sets; commit with chore(exams): generate 2000 national new-science LaTeX source.
 
 ### Task 3: provenance、正式构建与清理
 
