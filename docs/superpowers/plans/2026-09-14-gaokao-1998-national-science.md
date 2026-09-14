@@ -4,7 +4,7 @@
 
 **Goal:** 将固定源 PDF 对应的 1998 年全国卷理科数学整理为 25 题的可追溯 Markdown 源、四种可编译 LaTeX 版本、四个矢量图源和通过全页复核的 PDF。
 
-**Architecture:** 题面唯一依据 src-a982bc00fed2ce1dcc11d576d4bb521585ef9565a6c52a4d28f3352e0547f40a 对应的固定源 PDF；Daxmate/math 的公开 LaTeX 只作为文字定位与交叉检查，不直接作为答案或解析事实源。题面、答案、独立解析分别落在 1998/，由现有工具生成单卷 LaTeX 工程；第 2、10、21、23 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
+**Architecture:** 题面唯一依据 src-a982bc00fed2ce1dcc11d576d4bb521585ef9565a6c52a4d28f3352e0547f40a 对应的固定源 PDF；Daxmate/math 的公开 LaTeX 只作为文字定位与交叉检查，不直接作为答案或解析事实源。题面、答案、独立解析分别落在 1998/，由现有工具生成单卷 LaTeX 工程；第 2、10、21、22、23 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
 
 **Tech Stack:** Python 3 标准库工具链、XeLaTeX、ctex、TikZ/PGFPlots、Git。
 
@@ -25,7 +25,7 @@
 - Create: 1998/1998_数学真题_全国理_答案要点.md
 - Create: 1998/1998_数学真题_全国理_解析正文.md
 - Create by tool: 1998/1998_数学真题_全国理_含解析.md
-- Create: math-gaokao-latex/1998_全国卷_理科/figures/{f1998_t2_abs_graphs.tex,f1998_t10_bottles.tex,f1998_t21_parabola.tex,f1998_t23_prism.tex}
+- Create: math-gaokao-latex/1998_全国卷_理科/figures/{f1998_t2_abs_graphs.tex,f1998_t10_bottles.tex,f1998_t21_parabola.tex,f1998_t22_tank.tex,f1998_t23_prism.tex}
 - Create by tools: project .tex sources, provenance.json, receipts/{build,review}.json, four local PDFs, reports/phase2-b71.md
 - Modify by tools: source-manifest.json, index.json, manifest.csv, missing-issues.md
 
@@ -39,10 +39,10 @@
 
 **Interfaces:**
 - Consumes: one-page A3 fixed PDF and secondary gaokao/quanguo1998.tex.
-- Produces: 25 aligned question blocks, answer blocks for 25 questions including subparts 22/23/24, and 25 independent solution blocks.
+- Produces: 25 aligned question blocks, answer blocks for 25 questions including subparts 23/24/25, and 25 independent solution blocks.
 
 - [ ] Step 1: Verify source facts. Run pdfinfo, pdftotext -layout, SHA-256 and a visual render; record one-page A3, printed page 56, 25-question structure and no-answer-page caveat.
-- [ ] Step 2: Transcribe the fixed题面. Preserve all formulas, domains, options and diagrams. Use logical image markers only for Q2/Q10/Q21/Q23, with no raster files.
+- [ ] Step 2: Transcribe the fixed题面. Preserve all formulas, domains, options and diagrams. Use logical image markers only for Q2/Q10/Q21/Q22/Q23, with no raster files.
 - [ ] Step 3: Independently solve all questions. Correct known secondary-source errors: Q13 uses the small-circle chord geometry to obtain 2√3; Q21 uses the acute-triangle branch to select the midpoint-origin parabola y²=8x; Q24 intersection algebra gives s=t³/4-t; Q25 comparison reverses when 0<a<1.
 - [ ] Step 4: Generate and check combined source. Use solution_sources.py extract-batch --write after registration; ensure no solution block copies an entire题面 or emits a fabricated final answer.
 - [ ] Step 5: Run parser and issue checks, inspect the complete diff, and commit with docs(exams): add 1998 national science source checkpoint.
@@ -58,7 +58,7 @@
 - Consumes: Task 1 Markdown and source ID src-a982bc00fed2ce1dcc11d576d4bb521585ef9565a6c52a4d28f3352e0547f40a.
 - Produces: paper gk-1998-regular-national-science, batch phase2-b71, four registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec. Set project directory 1998_全国卷_理科, title 1998 年·全国卷·理科, track science, count 25, base 1998_national_science, pages [1,1], structure 题目: [1,25], and figures f1998_t10_bottles, f1998_t21_parabola, f1998_t23_prism, f1998_t2_abs_graphs sorted by path.
+- [ ] Step 1: Create and dry-run an exact registration spec. Set project directory 1998_全国卷_理科, title 1998 年·全国卷·理科, track science, count 25, base 1998_national_science, pages [1,1], structure 题目: [1,25], and figures f1998_t10_bottles, f1998_t21_parabola, f1998_t22_tank, f1998_t23_prism, f1998_t2_abs_graphs sorted by path.
 - [ ] Step 2: Write the registration and run generate_projects.py, make_short_answers.py, and make_editions.py in write mode; run each corresponding check mode.
 - [ ] Step 3: Validate figure occurrence counts and source manifest, inspect generated answer markers, and commit with chore(exams): generate 1998 national science LaTeX source.
 
@@ -94,7 +94,7 @@
 ## Self-Review Checklist
 
 - [ ] Fixed source fingerprint, A3/page/25-question facts and no-answer-page statement are present.
-- [ ] Q2/Q10/Q21/Q23 are the only logical image markers and all map to committed .tex figures.
+- [ ] Q2/Q10/Q21/Q22/Q23 are the only logical image markers and all map to committed .tex figures.
 - [ ] Q13/Q21/Q24/Q25 secondary-source or algebra traps are independently checked.
 - [ ] All subpart answer anchors align with questions and solutions.
 - [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
