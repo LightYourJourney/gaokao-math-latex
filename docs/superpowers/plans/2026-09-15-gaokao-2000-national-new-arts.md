@@ -4,7 +4,7 @@
 
 **Goal:** 将固定源 PDF 对应的 2000 年全国新课程卷文科数学整理为 22 题的可追溯 Markdown 源、四种可编译 LaTeX 版本、六个矢量图源和通过全页复核的 PDF。
 
-**Architecture:** 题面唯一依据 source ID src-1a42ff954278b41b3e82084da549aa2ee5114738a10b8cfa15459798345a5b95 对应的固定源 PDF；公开转录只用于文字定位与交叉检查，不作为答案或解析事实源。题面、答案、独立解析分别落在 2000/，由现有工具生成单卷 LaTeX 工程；第 5、8、16、18 甲、18 乙、22 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
+**Architecture:** 题面唯一依据 source ID src-07a526f589c3fb80b176597cbc18f30fd39a515bae8f8cd2b1c49b48d627c62e 对应的固定源 PDF；公开转录只用于文字定位与交叉检查，不作为答案或解析事实源。题面、答案、独立解析分别落在 2000/，由现有工具生成单卷 LaTeX 工程；第 5、8、16、18 甲、18 乙、22 题的图形仅以 TikZ/PGFPlots .tex 永久保存。
 
 **Tech Stack:** Python 3 标准库工具链、XeLaTeX、ctex、TikZ/PGFPlots、Git。
 
@@ -55,7 +55,7 @@
 - Create by tools: 2000_全国新课程卷_文科/{questions.tex,answers.tex,answers_short.tex,试题版.tex,解析版.tex,简答版.tex,印刷版.tex} and six figure sources
 
 **Interfaces:**
-- Consumes: Task 1 Markdown and source ID src-1a42ff954278b41b3e82084da549aa2ee5114738a10b8cfa15459798345a5b95.
+- Consumes: Task 1 Markdown and source ID src-07a526f589c3fb80b176597cbc18f30fd39a515bae8f8cd2b1c49b48d627c62e.
 - Produces: paper gk-2000-regular-national-new-arts, batch phase2-b76, six registered figures with two Markdown occurrences each.
 
 - [ ] Step 1: Create and dry-run an exact registration spec: project directory 2000_全国新课程卷_文科, title 2000 年·全国新课程卷·文科, track arts, count 22, base 2000_national_new_arts, pages [1,2], printed pages [76,77], structure 题目 [1,22], and figures f2000_t5_graphs, f2000_t8_area, f2000_t16_projection, f2000_t18a_tri_prism, f2000_t18b_parallelepiped, f2000_t22_hyperbola sorted by path.
