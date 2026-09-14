@@ -38,11 +38,11 @@
 - Consumes: the fixed eight-page scanned PDF; pages 1–3 are the question source, pages 4–8 are only a cross-check reference.
 - Produces: 22 aligned question blocks, Q20甲/乙 alternatives in one question block, all four choices for Q1–Q12, four fill-ins, six solution blocks, and six logical image markers.
 
-- [ ] Step 1: Verify source facts with \`pdfinfo\`, SHA-256 and visual renders; use OCR only as a locating aid, record question pages 1–3 / printed pages 335–337 and attached answer pages 4–8 / printed pages 338–342.
-- [ ] Step 2: Transcribe Q1–Q22 from the first three fixed-source pages. Preserve the Q11 roof diagrams, Q12 network graph, Q18 circuit systems, both Q20 variant diagrams, and the Q21 cooling-tower cross-section using logical image markers only.
-- [ ] Step 3: Independently solve every question and recheck the high-risk items: Q2 sequence type, Q5 vector coefficients, Q6 reflected line, Q7 trigonometric monotonicity, Q8 cubic extrema, Q9 match-count enumeration, Q10 parabola dot product, Q12 max-flow value, Q13 complex argument, Q15 converse logic, Q16 geometric ratio, Q17 parameterized inequality, Q18 system probabilities, Q19 even-function parameter and monotonicity, Q20甲/乙 geometry, Q21 hyperboloid equation and volume, and Q22 intersection angle/radius range.
-- [ ] Step 4: Use \`solution_sources.render_combined()\` to generate \`_含解析.md\` from the three canonical sources, then run \`solution_sources.py extract-batch --write\` after registration; ensure Q20甲/乙 remain in one aligned question block and no solution block copies an entire题面 or emits a fabricated final answer.
-- [ ] Step 5: Run parser, answer, and issue checks; inspect the complete diff; commit the source checkpoint with \`docs(exams): add 2001 national new-science source checkpoint\`.
+- [x] Step 1: Verify source facts with \`pdfinfo\`, SHA-256 and visual renders; use OCR only as a locating aid, record question pages 1–3 / printed pages 335–337 and attached answer pages 4–8 / printed pages 338–342.
+- [x] Step 2: Transcribe Q1–Q22 from the first three fixed-source pages. Preserve the Q11 roof diagrams, Q12 network graph, Q18 circuit systems, both Q20 variant diagrams, and the Q21 cooling-tower cross-section using logical image markers only.
+- [x] Step 3: Independently solve every question and recheck the high-risk items: Q2 sequence type, Q5 vector coefficients, Q6 reflected line, Q7 trigonometric monotonicity, Q8 cubic extrema, Q9 match-count enumeration, Q10 parabola dot product, Q12 max-flow value, Q13 complex argument, Q15 converse logic, Q16 geometric ratio, Q17 parameterized inequality, Q18 system probabilities, Q19 even-function parameter and monotonicity, Q20甲/乙 geometry, Q21 hyperboloid equation and volume, and Q22 intersection angle/radius range.
+- [x] Step 4: Use \`solution_sources.render_combined()\` to generate \`_含解析.md\` from the three canonical sources, then run \`solution_sources.py extract-batch --write\` after registration; ensure Q20甲/乙 remain in one aligned question block and no solution block copies an entire题面 or emits a fabricated final answer.
+- [x] Step 5: Run parser, answer, and issue checks; inspect the complete diff; commit the source checkpoint with \`docs(exams): add 2001 national new-science source checkpoint\`.
 
 ### Task 2: 注册来源并生成 LaTeX 工程
 
@@ -51,9 +51,9 @@
 - Consumes: Task 1 Markdown and source ID \`src-ac36477f8b029800c0acb23f00b3e47abb74cee689bde1bbb940a7cd4dc601ee\`.
 - Produces: paper \`gk-2001-regular-national-new-science\`, project \`2001_全国新课程卷_理科\`, batch \`phase2-b80\`, six registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec: project directory \`2001_全国新课程卷_理科\`, title \`2001 年·全国新课程卷·理科\`, track science, count 22, base \`2001_national_new_science\`, pages \`[1,3]\`, printed pages \`[335,337]\`, solution pages \`[4,8]\`, structure \`题目 [1,22]\`, and figures \`f2001_t11_roofs\`, \`f2001_t12_systems\`, \`f2001_t18_network\`, \`f2001_t20a_square_pyramid\`, \`f2001_t20b_trapezoid_pyramid\`, \`f2001_t21_cooling_tower\` sorted by path.
-- [ ] Step 2: Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run every corresponding check mode.
-- [ ] Step 3: Validate six figure occurrence counts, source manifest, generated answer markers, both Q20 variant answer sets, and source-page metadata; commit with \`chore(exams): generate 2001 national new-science LaTeX source\`.
+- [x] Step 1: Create and dry-run an exact registration spec: project directory \`2001_全国新课程卷_理科\`, title \`2001 年·全国新课程卷·理科\`, track science, count 22, base \`2001_national_new_science\`, pages \`[1,3]\`, printed pages \`[335,337]\`, solution pages \`[4,8]\`, structure \`题目 [1,22]\`, and figures \`f2001_t11_roofs\`, \`f2001_t12_systems\`, \`f2001_t18_network\`, \`f2001_t20a_square_pyramid\`, \`f2001_t20b_trapezoid_pyramid\`, \`f2001_t21_cooling_tower\` sorted by path.
+- [x] Step 2: Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run every corresponding check mode.
+- [x] Step 3: Validate six figure occurrence counts, source manifest, generated answer markers, both Q20 variant answer sets, and source-page metadata; commit with \`chore(exams): generate 2001 national new-science LaTeX source\`.
 
 ### Task 3: provenance、正式构建与清理
 
@@ -62,10 +62,10 @@
 - Consumes: the registered current source and generated \`.tex\` tree.
 - Produces: current three-role provenance, four successful build records, and a build directory containing PDFs only after cleanup.
 
-- [ ] Step 1: Initialize the three \`.work\` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
-- [ ] Step 2: Run the formal four-edition build; require no compiler errors, missing characters, overfull boxes, or unresolved references; inspect logs before cleanup.
-- [ ] Step 3: Render all PDFs to \`/private/tmp\`, inspect contact sheets and key pages, then remove only exact build intermediates and the ignored batch \`.work\` directory.
-- [ ] Step 4: Commit source/build/provenance artifacts with \`docs(exams): record 2001 national new-science build\`; leave PDFs local and ignored per repository policy.
+- [x] Step 1: Initialize the three \`.work\` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
+- [x] Step 2: Run the formal four-edition build; require no compiler errors, missing characters, overfull boxes, or unresolved references; inspect logs before cleanup.
+- [x] Step 3: Render all PDFs to \`/private/tmp\`, inspect contact sheets and key pages, then remove only exact build intermediates and the ignored batch \`.work\` directory.
+- [x] Step 4: Commit source/build/provenance artifacts with \`docs(exams): record 2001 national new-science build\`; leave PDFs local and ignored per repository policy.
 
 ### Task 4: 全页复核、关闭批次与全库验证
 
@@ -74,16 +74,16 @@
 - Consumes: four current PDFs, build receipt, and fresh rendered-page evidence.
 - Produces: finalized review, complete paper, closed batch, and synchronized CSV/report.
 
-- [ ] Step 1: Prepare four review work items and fill every page with the eight checks after visual inspection.
-- [ ] Step 2: Run \`review_receipts.py finalize-batch\`, require \`FINALIZED\`, inspect the report and issue transitions.
-- [ ] Step 3: Run targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
-- [ ] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
+- [x] Step 1: Prepare four review work items and fill every page with the eight checks after visual inspection.
+- [x] Step 2: Run \`review_receipts.py finalize-batch\`, require \`FINALIZED\`, inspect the report and issue transitions.
+- [x] Step 3: Run targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
+- [x] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint, question pages 1–3 / printed pages 335–337, attached answer pages 4–8 / printed pages 338–342, and Q20甲/乙 structure are present.
-- [ ] Q11/Q12/Q18/Q20甲/Q20乙/Q21 are the only logical image markers and all map to committed \`.tex\` figures.
-- [ ] Q2/Q5/Q6/Q7/Q8/Q9/Q10/Q12/Q13/Q15/Q16/Q17/Q18/Q19/Q20/Q21/Q22 calculations and all variant/subpart answer anchors are independently checked.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
+- [x] Fixed source fingerprint, question pages 1–3 / printed pages 335–337, attached answer pages 4–8 / printed pages 338–342, and Q20甲/乙 structure are present.
+- [x] Q11/Q12/Q18/Q20甲/Q20乙/Q21 are the only logical image markers and all map to committed \`.tex\` figures.
+- [x] Q2/Q5/Q6/Q7/Q8/Q9/Q10/Q12/Q13/Q15/Q16/Q17/Q18/Q19/Q20/Q21/Q22 calculations and all variant/subpart answer anchors are independently checked.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
