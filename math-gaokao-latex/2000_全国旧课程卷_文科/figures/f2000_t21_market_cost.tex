@@ -1,0 +1,31 @@
+% 2000 年全国旧课程卷文科第 21 题：市场售价与种植成本图象
+\begin{tikzpicture}[>=stealth, scale=0.78]
+  \begin{scope}
+    \draw[->] (0,0)--(3.55,0) node[right] {$t$};
+    \draw[->] (0,0)--(0,3.65) node[above] {$P$};
+    \draw[thick] (0,3.0)--(2.0,1.0)--(3.0,3.0);
+    \draw[dashed] (0,3.0)--(3.0,3.0) (0,1.0)--(2.0,1.0)
+      (2.0,0)--(2.0,1.0) (3.0,0)--(3.0,3.0);
+    \node[left, font=\scriptsize] at (0,3.0) {300};
+    \node[left, font=\scriptsize] at (0,1.0) {100};
+    \node[below, font=\scriptsize] at (2.0,0) {200};
+    \node[below, font=\scriptsize] at (3.0,0) {300};
+    \node[below] at (1.5,-0.42) {图一};
+  \end{scope}
+  \begin{scope}[xshift=4.35cm]
+    \draw[->] (0,0)--(3.55,0) node[right] {$t$};
+    \draw[->] (0,0)--(0,3.65) node[above] {$Q$};
+    \draw[thick, domain=0:3, samples=80]
+      plot (\x,{1+(\x-1.5)^2/2});
+    \draw[dashed] (0,1)--(3,1) (0,1.5)--(0.5,1.5) (0,1.5)--(2.5,1.5)
+      (0.5,0)--(0.5,1.5) (1.5,0)--(1.5,1) (2.5,0)--(2.5,1.5);
+    \node[left, font=\scriptsize] at (0,3.0) {300};
+    \node[left, font=\scriptsize] at (0,2.5) {250};
+    \node[left, font=\scriptsize] at (0,1.5) {150};
+    \node[left, font=\scriptsize] at (0,1.0) {100};
+    \node[below, font=\scriptsize] at (0.5,0) {50};
+    \node[below, font=\scriptsize] at (1.5,0) {150};
+    \node[below, font=\scriptsize] at (2.5,0) {250};
+    \node[below] at (1.5,-0.42) {图二};
+  \end{scope}
+\end{tikzpicture}
