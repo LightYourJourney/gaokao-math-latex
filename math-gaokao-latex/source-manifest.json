@@ -724,6 +724,14 @@
         "gk-2001-regular-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b83",
+      "issues": [],
+      "paper_ids": [
+        "gk-2001-regular-shanghai-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -733,7 +741,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a2be65f2-f93f-4667-9b96-ea6f031e677a",
+  "last_transaction_id": "4fbdbb5a-e67c-4d82-ac74-eda15934cd83",
   "papers": [
     {
       "blocked_from": null,
@@ -9781,9 +9789,77 @@
       "title": "2001 年·上海卷·文科",
       "track": "arts",
       "year": 2001
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_理科/figures/f2001_t12_desertification.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_理科/figures/f2001_t19_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_上海卷_理科/figures/f2001_t22_generator.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2001_shanghai_science",
+        "id": "gk-2001-regular-shanghai-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 90–91；PDF 不附答案与解析，答案和解析均为本库独立复算。第 12、19、22 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2001-regular-shanghai-science",
+      "production_state": "editions_generated",
+      "project_dir": "2001_上海卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2001/2001_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2001/2001_数学真题_上海理_含解析.md",
+        "questions": "2001/2001_数学真题_上海理_试题.md",
+        "solution_body": "2001/2001_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6a05955029c7ff9c5ebaab654617f86be28c2c11c7320cb171093408276bb9a3"
+      ],
+      "title": "2001 年·上海卷·理科",
+      "track": "science",
+      "year": 2001
     }
   ],
-  "revision": 2485,
+  "revision": 2487,
   "schema_version": 1,
   "sources": [
     {
@@ -14936,8 +15012,8 @@
       "exam_type": "regular",
       "git_blob_oid": "75f2bf66b8ed96c76ef0578282f0785c311d6bb6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2001-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2001上海理.pdf",
       "regions": [],
       "source_id": "src-6a05955029c7ff9c5ebaab654617f86be28c2c11c7320cb171093408276bb9a3",
