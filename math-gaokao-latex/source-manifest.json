@@ -700,6 +700,14 @@
         "gk-2001-regular-national-old-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b80",
+      "issues": [],
+      "paper_ids": [
+        "gk-2001-regular-national-new-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -709,7 +717,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b977b2aa-9a62-4fe3-9fb2-5d3d952910f5",
+  "last_transaction_id": "c2e3a764-2591-43f2-981b-459567c83e0b",
   "papers": [
     {
       "blocked_from": null,
@@ -9549,9 +9557,81 @@
       "title": "2001 年·全国旧课程卷·文科",
       "track": "arts",
       "year": 2001
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t11_roofs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t12_network.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t18_systems.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t20a_square_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t20b_trapezoid_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_全国新课程卷_理科/figures/f2001_t21_cooling_tower.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2001_national_new_science",
+        "id": "gk-2001-regular-national-new-science",
+        "note": "固定源为 8 页 A4 扫描件：第 1–3 页为题面、印刷页码 335–337，第 4–8 页为附带参考答案与评分标准、印刷页码 338–342；答案和解析由本库对题面独立复算。第 11、12、18、20（甲）、20（乙）、21 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          8
+        ],
+        "paper": "全国新课程卷（理工农医类）",
+        "structure": {
+          "题目": [
+            1,
+            22
+          ]
+        },
+        "track": "理工农医类",
+        "variant": "全国新课程理工农医类"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2001-regular-national-new-science",
+      "production_state": "editions_generated",
+      "project_dir": "2001_全国新课程卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2001/2001_数学真题_全国新课程理_答案要点.md",
+        "combined_rendered": "2001/2001_数学真题_全国新课程理_含解析.md",
+        "questions": "2001/2001_数学真题_全国新课程理_试题.md",
+        "solution_body": "2001/2001_数学真题_全国新课程理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ac36477f8b029800c0acb23f00b3e47abb74cee689bde1bbb940a7cd4dc601ee"
+      ],
+      "title": "2001 年·全国新课程卷·理科",
+      "track": "science",
+      "year": 2001
     }
   ],
-  "revision": 2440,
+  "revision": 2442,
   "schema_version": 1,
   "sources": [
     {
@@ -14752,8 +14832,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c7c0fcbdc037b1e42ec71b263a69375fd4898edd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2001-regular-national-new-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2001全国新课程理(天津,山西,江西).pdf",
       "regions": [],
       "source_id": "src-ac36477f8b029800c0acb23f00b3e47abb74cee689bde1bbb940a7cd4dc601ee",
