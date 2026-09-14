@@ -42,11 +42,11 @@
 - Consumes: one-page A3 fixed PDF and any secondary transcription used only as a locator.
 - Produces: 25 aligned question blocks, answer blocks for all 25 questions including subparts 21/22/23, and 25 independent solution blocks.
 
-- [ ] Step 1: Verify source facts with `pdfinfo`, `pdftotext -layout`, SHA-256 and a visual render; record the A3/page-58/25-question/no-answer-page facts.
-- [ ] Step 2: Transcribe the fixed题面. Preserve the set diagram in Q1, solid geometry diagrams in Q10/Q21, rolling-mill diagram and table in Q22, and coordinate diagram in Q24 through logical image markers only.
-- [ ] Step 3: Independently solve all questions, checking the nonstandard traps in Q4/Q6/Q7/Q8/Q10/Q12/Q13/Q15/Q17/Q18/Q19/Q20 and the multi-part geometry/sequences in Q21–Q24; do not infer an answer from an unverified secondary key.
-- [ ] Step 4: Use the existing `solution_sources.render_combined` pure generator to create the required `_含解析.md` before registration, then rerun `solution_sources.py extract-batch --write` after the batch is registered; ensure no solution block copies an entire题面 or emits a fabricated final answer.
-- [ ] Step 5: Run parser and issue checks, inspect the complete diff, and commit the source checkpoint with `docs(exams): add 1999 national science source checkpoint`.
+- [x] Step 1: Verify source facts with `pdfinfo`, `pdftotext -layout`, SHA-256 and a visual render; record the A3/page-58/25-question/no-answer-page facts.
+- [x] Step 2: Transcribe the fixed题面. Preserve the set diagram in Q1, solid geometry diagrams in Q10/Q21, rolling-mill diagram and table in Q22, and coordinate diagram in Q24 through logical image markers only.
+- [x] Step 3: Independently solve all questions, checking the nonstandard traps in Q4/Q6/Q7/Q8/Q10/Q12/Q13/Q15/Q17/Q18/Q19/Q20 and the multi-part geometry/sequences in Q21–Q24; do not infer an answer from an unverified secondary key.
+- [x] Step 4: Use the existing `solution_sources.render_combined` pure generator to create the required `_含解析.md` before registration, then rerun `solution_sources.py extract-batch --write` after the batch is registered; ensure no solution block copies an entire题面 or emits a fabricated final answer.
+- [x] Step 5: Run parser and issue checks, inspect the complete diff, and commit the source checkpoint with `docs(exams): add 1999 national science source checkpoint`.
 
 ### Task 2: 注册新来源并生成 LaTeX 工程
 
@@ -59,9 +59,9 @@
 - Consumes: Task 1 Markdown and source ID `src-5129c42c66c33e0330ffd67024b0ac5fc5167dd4fa9b76597dfb86e8e91542e7`.
 - Produces: paper `gk-1999-regular-national-science`, batch `phase2-b72`, five registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec: project directory `1999_全国卷_理科`, title `1999 年·全国卷·理科`, track `science`, count 25, base `1999_national_science`, pages `[1,1]`, structure `题目: [1,25]`, figures `f1999_t1_sets`, `f1999_t10_polyhedron`, `f1999_t21_prism`, `f1999_t22_rolling_mill`, `f1999_t24_locus` sorted by path.
-- [ ] Step 2: Write the registration and run `generate_projects.py`, `make_short_answers.py`, and `make_editions.py` in write mode; run each corresponding check mode.
-- [ ] Step 3: Validate figure occurrence counts, source manifest and generated answer markers, then commit with `chore(exams): generate 1999 national science LaTeX source`.
+- [x] Step 1: Create and dry-run an exact registration spec: project directory `1999_全国卷_理科`, title `1999 年·全国卷·理科`, track `science`, count 25, base `1999_national_science`, pages `[1,1]`, structure `题目: [1,25]`, figures `f1999_t1_sets`, `f1999_t10_polyhedron`, `f1999_t21_prism`, `f1999_t22_rolling_mill`, `f1999_t24_locus` sorted by path.
+- [x] Step 2: Write the registration and run `generate_projects.py`, `make_short_answers.py`, and `make_editions.py` in write mode; run each corresponding check mode.
+- [x] Step 3: Validate figure occurrence counts, source manifest and generated answer markers, then commit with `chore(exams): generate 1999 national science LaTeX source`.
 
 ### Task 3: provenance、正式构建与清理
 
@@ -72,10 +72,10 @@
 - Consumes: registered current source and generated `.tex` tree.
 - Produces: current three-role provenance, four successful build records, and a build directory containing PDFs only after cleanup.
 
-- [ ] Step 1: Initialize the three `.work` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
-- [ ] Step 2: Run the formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
-- [ ] Step 3: Render all PDFs to `/private/tmp`, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored `.work` directory.
-- [ ] Step 4: Commit source/build/provenance artifacts with `docs(exams): record 1999 national science build`; leave PDFs local and ignored per repository policy.
+- [x] Step 1: Initialize the three `.work` provenance roles, fill current question/answer hashes, import them, and verify provenance current.
+- [x] Step 2: Run the formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
+- [x] Step 3: Render all PDFs to `/private/tmp`, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored `.work` directory.
+- [x] Step 4: Commit source/build/provenance artifacts with `docs(exams): record 1999 national science build`; leave PDFs local and ignored per repository policy.
 
 ### Task 4: 全页复核、关闭批次与全库验证
 
@@ -87,16 +87,16 @@
 - Consumes: four current PDFs, build receipt and fresh rendered-page evidence.
 - Produces: finalized review, complete paper, closed batch and synchronized CSV/report.
 
-- [ ] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
-- [ ] Step 2: Run `review_receipts.py finalize-batch`, require `FINALIZED`, inspect the report and issue transitions.
-- [ ] Step 3: Run all targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
-- [ ] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
+- [x] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
+- [x] Step 2: Run `review_receipts.py finalize-batch`, require `FINALIZED`, inspect the report and issue transitions.
+- [x] Step 3: Run all targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
+- [x] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint, A3/page-58/25-question facts and no-answer-page statement are present.
-- [ ] Q1/Q10/Q21/Q22/Q24 are the only logical image markers and all map to committed `.tex` figures.
-- [ ] All subpart answer anchors align with questions and solutions; Q22's table and Q23's three subparts are preserved.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
+- [x] Fixed source fingerprint, A3/page-58/25-question facts and no-answer-page statement are present.
+- [x] Q1/Q10/Q21/Q22/Q24 are the only logical image markers and all map to committed `.tex` figures.
+- [x] All subpart answer anchors align with questions and solutions; Q22's table and Q23's three subparts are preserved.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
