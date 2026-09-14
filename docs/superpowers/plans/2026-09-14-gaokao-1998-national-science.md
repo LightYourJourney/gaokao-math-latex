@@ -41,11 +41,11 @@
 - Consumes: one-page A3 fixed PDF and secondary gaokao/quanguo1998.tex.
 - Produces: 25 aligned question blocks, answer blocks for 25 questions including subparts 23/24/25, and 25 independent solution blocks.
 
-- [ ] Step 1: Verify source facts. Run pdfinfo, pdftotext -layout, SHA-256 and a visual render; record one-page A3, printed page 56, 25-question structure and no-answer-page caveat.
-- [ ] Step 2: Transcribe the fixed题面. Preserve all formulas, domains, options and diagrams. Use logical image markers only for Q2/Q10/Q21/Q22/Q23, with no raster files.
-- [ ] Step 3: Independently solve all questions. Correct known secondary-source errors: Q13 uses the small-circle chord geometry to obtain 2√3; Q21 uses the acute-triangle branch to select the midpoint-origin parabola y²=8x; Q24 intersection algebra gives s=t³/4-t; Q25 comparison reverses when 0<a<1.
-- [ ] Step 4: Generate and check combined source. Use solution_sources.py extract-batch --write after registration; ensure no solution block copies an entire题面 or emits a fabricated final answer.
-- [ ] Step 5: Run parser and issue checks, inspect the complete diff, and commit with docs(exams): add 1998 national science source checkpoint.
+- [x] Step 1: Verify source facts. Run pdfinfo, pdftotext -layout, SHA-256 and a visual render; record one-page A3, printed page 56, 25-question structure and no-answer-page caveat.
+- [x] Step 2: Transcribe the fixed题面. Preserve all formulas, domains, options and diagrams. Use logical image markers only for Q2/Q10/Q21/Q22/Q23, with no raster files.
+- [x] Step 3: Independently solve all questions. Correct known secondary-source errors: Q13 uses the small-circle chord geometry to obtain 2√3; Q21 uses the acute-triangle branch to select the midpoint-origin parabola y²=8x; Q24 intersection algebra gives s=t³/4-t; Q25 comparison reverses when 0<a<1.
+- [x] Step 4: Generate and check combined source. Use solution_sources.py extract-batch --write after registration; ensure no solution block copies an entire题面 or emits a fabricated final answer.
+- [x] Step 5: Run parser and issue checks, inspect the complete diff, and commit with docs(exams): add 1998 national science source checkpoint.
 
 ### Task 2: 注册新来源并生成 LaTeX 工程
 
@@ -58,9 +58,9 @@
 - Consumes: Task 1 Markdown and source ID src-a982bc00fed2ce1dcc11d576d4bb521585ef9565a6c52a4d28f3352e0547f40a.
 - Produces: paper gk-1998-regular-national-science, batch phase2-b71, four registered figures with two Markdown occurrences each.
 
-- [ ] Step 1: Create and dry-run an exact registration spec. Set project directory 1998_全国卷_理科, title 1998 年·全国卷·理科, track science, count 25, base 1998_national_science, pages [1,1], structure 题目: [1,25], and figures f1998_t10_bottles, f1998_t21_parabola, f1998_t22_tank, f1998_t23_prism, f1998_t2_abs_graphs sorted by path.
-- [ ] Step 2: Write the registration and run generate_projects.py, make_short_answers.py, and make_editions.py in write mode; run each corresponding check mode.
-- [ ] Step 3: Validate figure occurrence counts and source manifest, inspect generated answer markers, and commit with chore(exams): generate 1998 national science LaTeX source.
+- [x] Step 1: Create and dry-run an exact registration spec. Set project directory 1998_全国卷_理科, title 1998 年·全国卷·理科, track science, count 25, base 1998_national_science, pages [1,1], structure 题目: [1,25], and figures f1998_t10_bottles, f1998_t21_parabola, f1998_t22_tank, f1998_t23_prism, f1998_t2_abs_graphs sorted by path.
+- [x] Step 2: Write the registration and run generate_projects.py, make_short_answers.py, and make_editions.py in write mode; run each corresponding check mode.
+- [x] Step 3: Validate figure occurrence counts and source manifest, inspect generated answer markers, and commit with chore(exams): generate 1998 national science LaTeX source.
 
 ### Task 3: provenance、正式构建与清理
 
@@ -71,10 +71,10 @@
 - Consumes: registered current source and generated .tex tree.
 - Produces: current three-role provenance, four successful build records, and a build directory containing PDFs only after cleanup.
 
-- [ ] Step 1: Initialize the three .work provenance roles, fill current question/answer hashes, import them, and verify provenance current.
-- [ ] Step 2: Run formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
-- [ ] Step 3: Render all PDFs to /private/tmp, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored .work directory.
-- [ ] Step 4: Commit source/build/provenance artifacts with docs(exams): record 1998 national science build; leave PDFs local and ignored per repository policy.
+- [x] Step 1: Initialize the three .work provenance roles, fill current question/answer hashes, import them, and verify provenance current.
+- [x] Step 2: Run formal four-edition build; require no compiler errors, missing characters or overfull boxes; inspect logs before cleanup.
+- [x] Step 3: Render all PDFs to /private/tmp, visually inspect contact sheets and key pages, then remove only exact build intermediates and the ignored .work directory.
+- [x] Step 4: Commit source/build/provenance artifacts with docs(exams): record 1998 national science build; leave PDFs local and ignored per repository policy.
 
 ### Task 4: 全页复核、关闭批次与全库验证
 
@@ -86,17 +86,17 @@
 - Consumes: four current PDFs, build receipt and fresh rendered-page evidence.
 - Produces: finalized review, complete paper, closed batch and synchronized CSV/report.
 
-- [ ] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
-- [ ] Step 2: Run review_receipts.py finalize-batch, require FINALIZED, inspect report and issue transitions.
-- [ ] Step 3: Run all targeted gates, full 816-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
-- [ ] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
+- [x] Step 1: Prepare four review work items and fill all pages with the eight checks after visual inspection.
+- [x] Step 2: Run review_receipts.py finalize-batch, require FINALIZED, inspect report and issue transitions.
+- [x] Step 3: Run all targeted gates, full 816-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
+- [x] Step 4: Mark this plan checked, commit the final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint, A3/page/25-question facts and no-answer-page statement are present.
-- [ ] Q2/Q10/Q21/Q22/Q23 are the only logical image markers and all map to committed .tex figures.
-- [ ] Q13/Q21/Q24/Q25 secondary-source or algebra traps are independently checked.
-- [ ] All subpart answer anchors align with questions and solutions.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass.
+- [x] Fixed source fingerprint, A3/page/25-question facts and no-answer-page statement are present.
+- [x] Q2/Q10/Q21/Q22/Q23 are the only logical image markers and all map to committed .tex figures.
+- [x] Q13/Q21/Q24/Q25 secondary-source or algebra traps are independently checked.
+- [x] All subpart answer anchors align with questions and solutions.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass.
