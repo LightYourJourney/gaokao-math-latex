@@ -33,37 +33,37 @@
 
 ## Task 1: 固定题面、答案与独立解析
 
-- [ ] Verify source facts with \`pdfinfo\`, SHA-256 and visual renders; use OCR only as a locating aid, record question pages 1–3 / printed pages 343–345 and attached answer pages 4–7 / printed pages 346–349.
-- [ ] Transcribe Q1–Q22 from the first three fixed-source pages. Preserve Q11 roof diagrams, Q12 network graph, Q19 circuit systems, both Q20 variant diagrams using logical image markers only.
-- [ ] Independently solve every question and recheck Q1 set intersection, Q5 vector coordinates, Q8 ellipse eccentricity, Q10 parabola dot product, Q14 stratified sampling, Q15 converse logic, Q16 ratio, Q17 sequence limit, Q18 optimization, Q19 system probabilities, Q20甲/乙 geometry, Q21 cubic extrema, and Q22 intersection angle/radius range.
-- [ ] Use \`solution_sources.render_combined()\` through \`extract-batch --write\` to generate \`_含解析.md\`; keep Q20甲/乙 in one aligned question block and ensure each solution block matches its own question.
-- [ ] Run parser, answer, and issue checks; inspect the complete diff; commit the source checkpoint.
+- [x] Verify source facts with \`pdfinfo\`, SHA-256 and visual renders; use OCR only as a locating aid, record question pages 1–3 / printed pages 343–345 and attached answer pages 4–7 / printed pages 346–349.
+- [x] Transcribe Q1–Q22 from the first three fixed-source pages. Preserve Q11 roof diagrams, Q12 network graph, Q19 circuit systems, both Q20 variant diagrams using logical image markers only.
+- [x] Independently solve every question and recheck Q1 set intersection, Q5 vector coordinates, Q8 ellipse eccentricity, Q10 parabola dot product, Q14 stratified sampling, Q15 converse logic, Q16 ratio, Q17 sequence limit, Q18 optimization, Q19 system probabilities, Q20甲/乙 geometry, Q21 cubic extrema, and Q22 intersection angle/radius range.
+- [x] Use \`solution_sources.render_combined()\` through \`extract-batch --write\` to generate \`_含解析.md\`; keep Q20甲/乙 in one aligned question block and ensure each solution block matches its own question.
+- [x] Run parser, answer, and issue checks; inspect the complete diff; commit the source checkpoint.
 
 ## Task 2: 注册来源并生成 LaTeX 工程
 
-- [ ] Create and dry-run an exact registration spec for paper \`gk-2001-regular-national-new-arts\`, project \`2001_全国新课程卷_文科\`, title \`2001 年·全国新课程卷·文科\`, track arts, count 22, base \`2001_national_new_arts\`, pages \`[1,3]\`, printed pages \`[343,345]\`, solution pages \`[4,7]\`, structure \`题目 [1,22]\`, and the five registered figures.
-- [ ] Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run every corresponding check mode.
-- [ ] Validate figure counts, generated answer markers, both Q20 variant answer sets, and source-page metadata; commit the generated LaTeX source.
+- [x] Create and dry-run an exact registration spec for paper \`gk-2001-regular-national-new-arts\`, project \`2001_全国新课程卷_文科\`, title \`2001 年·全国新课程卷·文科\`, track arts, count 22, base \`2001_national_new_arts\`, pages \`[1,3]\`, printed pages \`[343,345]\`, solution pages \`[4,7]\`, structure \`题目 [1,22]\`, and the five registered figures.
+- [x] Write the registration and run \`generate_projects.py\`, \`make_short_answers.py\`, and \`make_editions.py\` in write mode; run every corresponding check mode.
+- [x] Validate figure counts, generated answer markers, both Q20 variant answer sets, and source-page metadata; commit the generated LaTeX source.
 
 ## Task 3: provenance、正式构建与清理
 
-- [ ] Initialize the three provenance roles, fill current question/answer hashes, import them, and verify provenance current.
-- [ ] Run the formal four-edition build; require no compiler errors, missing characters, overfull boxes, or unresolved references; inspect logs before cleanup.
-- [ ] Render all PDFs to \`/private/tmp\`, inspect contact sheets and key pages, then remove exact build intermediates and the ignored batch \`.work\` directory.
-- [ ] Commit source/build/provenance artifacts and leave PDFs local and ignored.
+- [x] Initialize the three provenance roles, fill current question/answer hashes, import them, and verify provenance current.
+- [x] Run the formal four-edition build; require no compiler errors, missing characters, overfull boxes, or unresolved references; inspect logs before cleanup.
+- [x] Render all PDFs to \`/private/tmp\`, inspect contact sheets and key pages, then remove exact build intermediates and the ignored batch \`.work\` directory.
+- [x] Commit source/build/provenance artifacts and leave PDFs local and ignored.
 
 ## Task 4: 全页复核与全库验证
 
-- [ ] Prepare four review work items and fill every page with the eight checks after visual inspection.
-- [ ] Finalize the batch review, require \`FINALIZED\`, inspect the report and issue transitions.
-- [ ] Run targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
-- [ ] Mark this plan checked, commit final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
+- [x] Prepare four review work items and fill every page with the eight checks after visual inspection.
+- [x] Finalize the batch review, require \`FINALIZED\`, inspect the report and issue transitions.
+- [x] Run targeted gates, the full unit-test suite, and artifact assertions; confirm every build directory has exactly four PDFs and no intermediate/image/work files.
+- [x] Mark this plan checked, commit final metadata/report diff, and report remaining unregistered years and unresolved issues honestly.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint, question pages 1–3 / printed pages 343–345, attached answer pages 4–7 / printed pages 346–349, and Q20甲/乙 structure are present.
-- [ ] Q11/Q12/Q19/Q20甲/Q20乙 are the only logical image markers and all map to committed \`.tex\` figures.
-- [ ] All high-risk calculations and every Q20 variant/subpart answer anchor are independently checked.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
+- [x] Fixed source fingerprint, question pages 1–3 / printed pages 343–345, attached answer pages 4–7 / printed pages 346–349, and Q20甲/乙 structure are present.
+- [x] Q11/Q12/Q19/Q20甲/Q20乙 are the only logical image markers and all map to committed \`.tex\` figures.
+- [x] All high-risk calculations and every Q20 variant/subpart answer anchor are independently checked.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with any preexisting unrelated source drifts explicitly reported.
