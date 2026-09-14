@@ -1,0 +1,48 @@
+% 1998 年全国卷理科第 10 题：V-h 图象与四个水瓶形状选项
+\begin{tikzpicture}[>=stealth, scale=0.72]
+  \begin{scope}[xshift=4.9cm]
+    \draw[->] (0,0)--(0,2.5) node[above] {$V$};
+    \draw[->] (-0.2,0)--(2.6,0) node[right] {$h$};
+    \draw[thick] (0,0) .. controls (0.35,1.5) and (1.35,2.15) .. (2.0,2.2);
+    \draw[dashed] (2.0,0)--(2.0,2.2);
+    \node[below] at (2.0,0) {$H$};
+    \node[below left] at (0,0) {$O$};
+  \end{scope}
+
+  \begin{scope}[xshift=-6.0cm,yshift=-3.4cm]
+    \node at (0,2.55) {$(A)$};
+    \draw (0,0) ellipse (0.34 and 0.09);
+    \draw (0,2) ellipse (0.72 and 0.16);
+    \draw (-0.34,0) -- (-0.72,2) (0.34,0) -- (0.72,2);
+    \draw[dashed] (-0.34,0) arc (180:0:0.34 and 0.09);
+    \draw (-0.34,0) arc (180:360:0.34 and 0.09);
+  \end{scope}
+
+  \begin{scope}[xshift=-2.3cm,yshift=-3.4cm]
+    \node at (0,2.55) {$(B)$};
+    \draw (0,0) ellipse (0.72 and 0.16);
+    \draw (0,2) ellipse (0.34 and 0.09);
+    \draw (-0.72,0) -- (-0.34,2) (0.72,0) -- (0.34,2);
+    \draw[dashed] (-0.72,0) arc (180:0:0.72 and 0.16);
+    \draw (-0.72,0) arc (180:360:0.72 and 0.16);
+  \end{scope}
+
+  \begin{scope}[xshift=1.4cm,yshift=-3.4cm]
+    \node at (0,2.55) {$(C)$};
+    \draw (0,0) ellipse (0.72 and 0.16);
+    \draw (0,2) ellipse (0.72 and 0.16);
+    \draw (-0.72,0) .. controls (-0.30,0.7) and (-0.30,1.3) .. (-0.72,2);
+    \draw (0.72,0) .. controls (0.30,0.7) and (0.30,1.3) .. (0.72,2);
+    \draw[dashed] (-0.72,0) arc (180:0:0.72 and 0.16);
+    \draw (-0.72,0) arc (180:360:0.72 and 0.16);
+  \end{scope}
+
+  \begin{scope}[xshift=5.1cm,yshift=-3.4cm]
+    \node at (0,2.55) {$(D)$};
+    \draw (0,0) ellipse (0.52 and 0.13);
+    \draw (0,2) ellipse (0.52 and 0.13);
+    \draw (-0.52,0) -- (-0.52,2) (0.52,0) -- (0.52,2);
+    \draw[dashed] (-0.52,0) arc (180:0:0.52 and 0.13);
+    \draw (-0.52,0) arc (180:360:0.52 and 0.13);
+  \end{scope}
+\end{tikzpicture}
