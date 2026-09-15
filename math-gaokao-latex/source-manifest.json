@@ -740,6 +740,14 @@
         "gk-2001-regular-yueyue"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b85",
+      "issues": [],
+      "paper_ids": [
+        "gk-2001-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -749,7 +757,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1f75ff32-9e0e-44e6-bd69-1b48e3aff2e8",
+  "last_transaction_id": "88e930ca-7118-4c67-853f-acb7b17f7dba",
   "papers": [
     {
       "blocked_from": null,
@@ -9933,9 +9941,78 @@
       "title": "2001 年·豫粤卷",
       "track": "none",
       "year": 2001
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2001_春季上海卷/figures/f2001_spring_t19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2001_春季上海卷/figures/f2001_spring_t20_cuboid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2001_spring_shanghai",
+        "id": "gk-2001-spring-shanghai",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 83–84；PDF 不附答案与解析，答案和解析均为本库独立复算。第 19、20 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-0804",
+        "ISSUE-0805",
+        "ISSUE-0806",
+        "ISSUE-0807"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2001-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2001_春季上海卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2001/2001_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2001/2001_数学真题_春季上海_含解析.md",
+        "questions": "2001/2001_数学真题_春季上海_试题.md",
+        "solution_body": "2001/2001_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-bbef625a2ac718c402e674edcbad44be98f097701ef4a7660ea7c79995bd7b46"
+      ],
+      "title": "2001 年·春季上海卷",
+      "track": "none",
+      "year": 2001
     }
   ],
-  "revision": 2504,
+  "revision": 2514,
   "schema_version": 1,
   "sources": [
     {
@@ -10024,8 +10101,8 @@
       "exam_type": "spring",
       "git_blob_oid": "b6548f4dc0882be630c716ce7f76d33f7b4ef3c6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2001-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2001春季上海.pdf",
       "regions": [],
       "source_id": "src-bbef625a2ac718c402e674edcbad44be98f097701ef4a7660ea7c79995bd7b46",
