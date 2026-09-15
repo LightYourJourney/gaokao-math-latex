@@ -1,0 +1,14 @@
+% 2004 年全国卷Ⅰ文科第 21 题：四棱锥
+\begin{tikzpicture}[>=stealth,scale=0.78]
+  \coordinate (A) at (0,0); \coordinate (B) at (2.35,-0.55);
+  \coordinate (C) at (3.55,0.55); \coordinate (D) at (1.2,1.15);
+  \coordinate (P) at (0.75,3.15);
+  \draw[thick] (A)--(B)--(C)--(D)--cycle;
+  \draw[thick] (P)--(A) (P)--(B) (P)--(C);
+  \draw[dashed] (P)--(D);
+  \fill (P) circle (1pt) node[above] {$P$};
+  \fill (A) circle (1pt) node[below left] {$A$};
+  \fill (B) circle (1pt) node[below] {$B$};
+  \fill (C) circle (1pt) node[right] {$C$};
+  \fill (D) circle (1pt) node[left] {$D$};
+\end{tikzpicture}
