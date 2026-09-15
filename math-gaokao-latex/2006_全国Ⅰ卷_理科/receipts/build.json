@@ -1,0 +1,300 @@
+{
+  "attempt_id": "8190d2a6-ca13-4ea5-99d6-d12938ac8c69",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/answers.tex",
+        "sha256": "90129047d507d066605648f9fe2a465fe25f4e8ec1f3facfe761c98b03fe95e5"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/answers_short.tex",
+        "sha256": "8b3f100863c7e68f9899b20c666a71204c30b8adbe529507c7b31ba5b2e0455d"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/figures/f2006_national_1_science_t19_skew.tex",
+        "sha256": "464938d52d194106996ea15cc61000b10fd6587f9a731ac6d7a1ddac092432e8"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/questions.tex",
+        "sha256": "1a2c6193ac44e97b4974f8096620622afab820b11bc3d1521fb58855eda404e9"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/印刷版.tex",
+        "sha256": "f66d4af4381049dabd2e4b31b807e2b30cc8ad463b09d24b52103dde386480be"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/简答版.tex",
+        "sha256": "09d920000a4e08955aa92b309ef3124b3e69692ecb746ff15a76a4b70aef04c0"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/解析版.tex",
+        "sha256": "48654cfe990e9bd86945e323c09e3e174312d007d85c5a0053eac5657e967a4b"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/试题版.tex",
+        "sha256": "55fd359bc3f6108169833ebdcede46904378b3a7e314b95e25dd8374f5b04e1f"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "4970bf3fc8368078bd0eeca17eea4c05377267b498edd310981ffa77d266c365"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/build/试题版.pdf",
+        "sha256": "ecb674b73d5b913d0383dd3b8bdbf2ed7288bf6e24460f674e4ad104392904b8",
+        "size_bytes": 113775
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_理科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "152--153",
+            "text": "Underfull \\hbox (badness 1418) in paragraph at lines 152--153",
+            "width_pt": null
+          },
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "415--416",
+            "text": "Underfull \\hbox (badness 1748) in paragraph at lines 415--416",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 16,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/build/解析版.pdf",
+        "sha256": "81d168fd98cb9941709624ba0a09dd5dabb64e212568d33f708ba9dd248e5a3f",
+        "size_bytes": 175624
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_理科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 5,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/build/简答版.pdf",
+        "sha256": "919c30468a854a904790c1d474b6a207c0511224dae51ecc82b8513f2859bf6b",
+        "size_bytes": 128456
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_理科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 14,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/build/印刷版.pdf",
+        "sha256": "38a529eb92ecf3c6d5c3a59e8aeb00a4686cfa377b8f56e6d838852c1227c3fd",
+        "size_bytes": 175397
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_理科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-16T03:14:00+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2006/2006_数学真题_全国1理_答案要点.md",
+        "sha256": "0f3590dababecd1090ea2f70a897e4a9d45e96753d5e28203fd4290a8c58e4c8"
+      },
+      {
+        "path": "2006/2006_数学真题_全国1理_解析正文.md",
+        "sha256": "909818eb0fb392572c350c82d5dc8114aaedfd17709eec3a0abd127bfa9e836c"
+      },
+      {
+        "path": "2006/2006_数学真题_全国1理_试题.md",
+        "sha256": "6a9105631a44ff2ee64869094ab27941effa491e727943683362331df699e069"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/figures/f2006_national_1_science_t19_skew.tex",
+        "sha256": "464938d52d194106996ea15cc61000b10fd6587f9a731ac6d7a1ddac092432e8"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/印刷版.tex",
+        "sha256": "f66d4af4381049dabd2e4b31b807e2b30cc8ad463b09d24b52103dde386480be"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/简答版.tex",
+        "sha256": "09d920000a4e08955aa92b309ef3124b3e69692ecb746ff15a76a4b70aef04c0"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/解析版.tex",
+        "sha256": "48654cfe990e9bd86945e323c09e3e174312d007d85c5a0053eac5657e967a4b"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_理科/试题版.tex",
+        "sha256": "55fd359bc3f6108169833ebdcede46904378b3a7e314b95e25dd8374f5b04e1f"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "31382f635e0f5a34d1fccd60dbfa87b450d44c1060bfff27a81859957b4bef48"
+  },
+  "input_projection": "63cf73d00b0da89c6e4f7070ac12288cc006fb3552129b1c6d8be6d75bf0ee08",
+  "manifest_revision": 2649,
+  "paper_id": "gk-2006-regular-national-1-science",
+  "previous_attempt_id": "ccbe3b6b-2959-42f1-8159-7c7a6782b6ba",
+  "project_dir": "2006_全国Ⅰ卷_理科",
+  "schema_version": 1,
+  "started_at": "2026-09-16T03:13:41+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "attempt_id": "3be3b00b-be18-48ba-b5a7-7b3564c67e15",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/answers.tex",
+        "sha256": "b3a379d1646834430f91cbbe5f4aa3576c09ba8050603d906b199c035966aa30"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/answers_short.tex",
+        "sha256": "f967f0c1772ac2e404842973a5295e8546de6c0dfb0e720e28fc85f785010442"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/figures/f2006_national_1_arts_t20_skew.tex",
+        "sha256": "e3cb1d65ad1af111ede404374f341e4e141a44ec4a585dc6cd0ac22c56ec3043"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/questions.tex",
+        "sha256": "01e877d6ae4307aa7af1a0b4245fba5391d9cb799b6d407435294d16f9884a32"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/印刷版.tex",
+        "sha256": "36b0bf17b4e87335139952c4b1e64bbd5ed311019a4ce5c8e1c22b0e76cf6913"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/简答版.tex",
+        "sha256": "12eb983a905546756a4ec00bc842a762fea442b7c06f9bbd08038f4eec28c887"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/解析版.tex",
+        "sha256": "a0a10f9cae682f85ed3c0e0529949fecb02c854e77937cadb32dca240e67b778"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/试题版.tex",
+        "sha256": "69086ca5c19ad0f37b847fed20c110b326397fd8d10851d0d61c8a9f8d3188c3"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "aad950f1b626f0b22cdf98af1a42f00e15ac34f49643fcec7fac25da24d4583b"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/build/试题版.pdf",
+        "sha256": "0f76d178dcb409aa8df4f5cb940969998f4b72238a54e31539ee7fe3d5dcb981",
+        "size_bytes": 106050
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "219--220",
+            "text": "Underfull \\hbox (badness 1418) in paragraph at lines 219--220",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 16,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/build/解析版.pdf",
+        "sha256": "22cee4b854abafaff2917ad3190495c3367777233a50ebf0f2077ff54f2757ac",
+        "size_bytes": 163356
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 5,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/build/简答版.pdf",
+        "sha256": "00cbb859c535e911c512b5e36865f8fbef65c6bb7ba309a8cfdf1a4399aac861",
+        "size_bytes": 117058
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 14,
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/build/印刷版.pdf",
+        "sha256": "ba5560ec033d7a80d2a5daeff903adfb28949e5338171f08b75490178161e4ca",
+        "size_bytes": 163283
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2006_全国Ⅰ卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-16T03:13:51+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2006/2006_数学真题_全国1文_答案要点.md",
+        "sha256": "9db79b694b3c720a63ca59dbbd069a6c0492ea1122603c719057e55db4828d29"
+      },
+      {
+        "path": "2006/2006_数学真题_全国1文_解析正文.md",
+        "sha256": "e1646e2860be8cdffc821b00acbab9796e1095f59e1ae76ced32ab73648bff34"
+      },
+      {
+        "path": "2006/2006_数学真题_全国1文_试题.md",
+        "sha256": "e476135e84c55946aafdd84469e08e44f4349959980e2de114dca981e3afa9c5"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/figures/f2006_national_1_arts_t20_skew.tex",
+        "sha256": "e3cb1d65ad1af111ede404374f341e4e141a44ec4a585dc6cd0ac22c56ec3043"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/印刷版.tex",
+        "sha256": "36b0bf17b4e87335139952c4b1e64bbd5ed311019a4ce5c8e1c22b0e76cf6913"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/简答版.tex",
+        "sha256": "12eb983a905546756a4ec00bc842a762fea442b7c06f9bbd08038f4eec28c887"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/解析版.tex",
+        "sha256": "a0a10f9cae682f85ed3c0e0529949fecb02c854e77937cadb32dca240e67b778"
+      },
+      {
+        "path": "math-gaokao-latex/2006_全国Ⅰ卷_文科/试题版.tex",
+        "sha256": "69086ca5c19ad0f37b847fed20c110b326397fd8d10851d0d61c8a9f8d3188c3"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "e423c632b0d4ce7231788af670768b7f473d7cab1ec2e6910d0de85eea332d2d"
+  },
+  "input_projection": "8793e807203bfbd5c39276383e947f7fc0bb9fcf43a6831f2cb4aadc5a6a191a",
+  "manifest_revision": 2649,
+  "paper_id": "gk-2006-regular-national-1-arts",
+  "previous_attempt_id": "8ff6a8f2-064b-458f-a579-af7ab540e538",
+  "project_dir": "2006_全国Ⅰ卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-09-16T03:13:41+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}
