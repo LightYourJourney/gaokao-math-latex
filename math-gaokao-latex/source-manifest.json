@@ -783,6 +783,15 @@
         "gk-2002-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b90",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-regular-national-new-arts",
+        "gk-2002-regular-national-new-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -792,7 +801,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "24fcade6-c741-42c9-a2d7-f66238c4e8e2",
+  "last_transaction_id": "7e201254-0d90-410f-84a6-cacccee028ee",
   "papers": [
     {
       "blocked_from": null,
@@ -10518,9 +10527,147 @@
       "title": "2002 年·上海卷·理科",
       "track": "science",
       "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国新课程卷_文科/figures/f2002_national_new_arts_t13_housing.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国新课程卷_文科/figures/f2002_national_new_arts_t19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国新课程卷_文科/figures/f2002_national_new_arts_t19_square.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_national_new_arts",
+        "id": "gk-2002-regular-national-new-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 116–117；PDF 不附答案与解析，答案和解析均为本库独立复算。第 13、19 题图形依据固定源关系重绘为 TikZ/PGFPlots；第 21 题第②问按字面存在题面缺陷。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国新课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国新课程文"
+      },
+      "issue_ids": [
+        "ISSUE-0812",
+        "ISSUE-0813",
+        "ISSUE-0814",
+        "ISSUE-0815",
+        "ISSUE-0816"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-national-new-arts",
+      "production_state": "complete",
+      "project_dir": "2002_全国新课程卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_全国新课程文_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_全国新课程文_含解析.md",
+        "questions": "2002/2002_数学真题_全国新课程文_试题.md",
+        "solution_body": "2002/2002_数学真题_全国新课程文_解析正文.md"
+      },
+      "source_ids": [
+        "src-2cfc2db9c0f09cde88a57c79780a0b5946a263027611e86cc07ee0763b66d4c8"
+      ],
+      "title": "2002 年·全国新课程卷·文科",
+      "track": "arts",
+      "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国新课程卷_理科/figures/f2002_national_new_science_t18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国新课程卷_理科/figures/f2002_national_new_science_t18_square.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_national_new_science",
+        "id": "gk-2002-regular-national-new-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 114–115；PDF 不附答案与解析，答案和解析均为本库独立复算。第 18 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国新课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国新课程理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-national-new-science",
+      "production_state": "complete",
+      "project_dir": "2002_全国新课程卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_全国新课程理_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_全国新课程理_含解析.md",
+        "questions": "2002/2002_数学真题_全国新课程理_试题.md",
+        "solution_body": "2002/2002_数学真题_全国新课程理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9ede07b5a550992692db2b8bea1205667aa55bf8a58d494ea0f807259b686e78"
+      ],
+      "title": "2002 年·全国新课程卷·理科",
+      "track": "science",
+      "year": 2002
     }
   ],
-  "revision": 2551,
+  "revision": 2565,
   "schema_version": 1,
   "sources": [
     {
@@ -15865,8 +16012,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0346fabf0c5df24c46c4aef2d83caf3181e180f9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-national-new-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002全国新课程文(天津,山西,江西).pdf",
       "regions": [],
       "source_id": "src-2cfc2db9c0f09cde88a57c79780a0b5946a263027611e86cc07ee0763b66d4c8",
@@ -15889,8 +16036,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5fecfac3651ede8f4dc63ac523c90865b39ba0bd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-national-new-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002全国新课程理(天津,山西,江西).pdf",
       "regions": [],
       "source_id": "src-9ede07b5a550992692db2b8bea1205667aa55bf8a58d494ea0f807259b686e78",
