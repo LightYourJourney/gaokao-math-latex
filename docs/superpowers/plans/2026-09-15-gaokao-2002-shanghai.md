@@ -4,7 +4,7 @@
 
 **Goal:** 将固定源 PDF 对应的 2002 年普通高考上海文、理两卷整理为可追溯 Markdown 源、四种可编译 LaTeX 版本、矢量图源和通过全页复核的 PDF。
 
-**Architecture:** 文科固定源为 src-01548e77c3088a60e4f2c74979d0a81e6c70f4378c9b5c52e7933af3d1ae6542，对应 普通高考/2002/2002上海文.pdf，2 页 A3、印刷页码 110–111；理科固定源为 src-26712f5118c401de589db671244bf873c393342a19307f8892e8afb4c6ee8a54，对应 普通高考/2002/2002上海理.pdf，2 页 A3、印刷页码 108–109。两份固定源均不附答案；答案与解析独立复算。文科第 13、15、16 题以及理科第 13、15、16、17 题图形仅以 TikZ/PGFPlots .tex 永久保存。
+**Architecture:** 文科固定源为 src-01548e77c3088a60e4f2c74979d0a81e6c70f4378c9b5c52e7933af3d1ae6542，对应 普通高考/2002/2002上海文.pdf，2 页 A3、印刷页码 110–111；理科固定源为 src-26712f5118c401de589db671244bf873c393342a19307f8892e8afb4c6ee8a54，对应 普通高考/2002/2002上海理.pdf，2 页 A3、印刷页码 108–109。两份固定源均不附答案；答案与解析独立复算。两卷第 13、15、16、17 题图形仅以 TikZ/PGFPlots .tex 永久保存。
 
 ## Global Constraints
 
@@ -21,12 +21,12 @@
 - Create: 2002/2002_数学真题_上海理_{试题,答案要点,解析正文,含解析}.md
 - Create by tool: math-gaokao-latex/2002_上海卷_文科/*
 - Create by tool: math-gaokao-latex/2002_上海卷_理科/*
-- Create figures per project according to the fixed source markers.
+- Create figures per project: f2002_shanghai_t13_complex.tex, f2002_shanghai_t15_graph.tex, f2002_shanghai_t16_temperature.tex, f2002_shanghai_t17_prism.tex.
 
 ## Tasks
 
 - [ ] Verify both source fingerprints, A3 pages and printed page ranges with pdfinfo, SHA-256 and visual renders.
-- [ ] Transcribe both papers, including all graph/geometry figures and subparts.
+- [ ] Transcribe both papers, including the Q13/Q15/Q16/Q17 graph and geometry figures and all subparts.
 - [ ] Independently solve both papers, including complex geometry, calculus, probability, sequences, finance, spatial geometry and generalized combinations.
 - [ ] Generate both _含解析.md, register b89, generate/check LaTeX, provenance and receipts.
 - [ ] Compile all eight editions, visually review every page, finalize review, run full gates and tests, clean intermediates, and close this plan.
