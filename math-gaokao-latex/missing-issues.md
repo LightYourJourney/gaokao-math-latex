@@ -12881,3 +12881,21 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0817
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 1 题印刷为 sqrt(4x-x^2)<x，选项 C 印为 (2,4)；定义域和平方运算给出的严格解集为 (2,4]。",
+  "fingerprint": "388a26d1a08208db51d41944d05df2781134069a99b3240ad034c6d7d99f2850",
+  "impact": "non_blocking",
+  "paper_id": "gk-2003-regular-national-new-arts",
+  "question_id": "gk-2003-regular-national-new-arts-q01",
+  "resolution": "题面按固定源逐字保留；答案与解析明确给出 (2,4]，并仍将对应选项记为 C。该矛盾不影响后续题面、生成和编译，但保留为来源问题。",
+  "resume_action": "取得正式勘误或另一份清晰题面后复核第 1 题选项 C 的右端点；在此之前保留固定源字面与独立计算结果。",
+  "source_id": "src-3ddeacd5e7af3ae7ea5e8d57361f03cb101441d1d16e2e0fb8745b9abb1f0ee1",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```

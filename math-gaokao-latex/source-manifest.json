@@ -801,6 +801,17 @@
         "gk-2002-regular-national-old-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b92",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-regular-national-new-arts",
+        "gk-2003-regular-national-new-science",
+        "gk-2003-regular-national-old-arts",
+        "gk-2003-regular-national-old-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -810,7 +821,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "14ed9806-4d8e-46de-8cb7-17cedab8de53",
+  "last_transaction_id": "605a105d-1735-4362-a9ff-cdd4d45751b9",
   "papers": [
     {
       "blocked_from": null,
@@ -10810,9 +10821,303 @@
       "title": "2002 年·全国旧课程卷·理科",
       "track": "science",
       "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_文科/figures/f2003_national_new_arts_t17_map.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_文科/figures/f2003_national_new_arts_t18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_文科/figures/f2003_national_new_arts_t22_graph.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_national_new_arts",
+        "id": "gk-2003-regular-national-new-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 144–145；PDF 不附答案和解析，答案和解析均为本库独立复算。第 17、18、22 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国新课程卷",
+        "structure": {
+          "填空题": [
+            14,
+            17
+          ],
+          "解答题": [
+            18,
+            23
+          ],
+          "选择题": [
+            1,
+            13
+          ]
+        },
+        "track": "文科",
+        "variant": "全国新课程文"
+      },
+      "issue_ids": [
+        "ISSUE-0817"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-national-new-arts",
+      "production_state": "complete",
+      "project_dir": "2003_全国新课程卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_全国新课程文_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_全国新课程文_含解析.md",
+        "questions": "2003/2003_数学真题_全国新课程文_试题.md",
+        "solution_body": "2003/2003_数学真题_全国新课程文_解析正文.md"
+      },
+      "source_ids": [
+        "src-3ddeacd5e7af3ae7ea5e8d57361f03cb101441d1d16e2e0fb8745b9abb1f0ee1"
+      ],
+      "title": "2003 年·全国新课程卷·文科",
+      "track": "arts",
+      "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_理科/figures/f2003_national_new_science_t15_map.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_理科/figures/f2003_national_new_science_t16_cubes.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_理科/figures/f2003_national_new_science_t17_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国新课程卷_理科/figures/f2003_national_new_science_t18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_national_new_science",
+        "id": "gk-2003-regular-national-new-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 142–143；PDF 不附答案和解析，答案和解析均为本库独立复算。第 15、16、17、18 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国新课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国新课程理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-national-new-science",
+      "production_state": "complete",
+      "project_dir": "2003_全国新课程卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_全国新课程理_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_全国新课程理_含解析.md",
+        "questions": "2003/2003_数学真题_全国新课程理_试题.md",
+        "solution_body": "2003/2003_数学真题_全国新课程理_解析正文.md"
+      },
+      "source_ids": [
+        "src-cb1fea4cc700f8010560816b4eea32e118db965a0a186d64692cb293d2e90da2"
+      ],
+      "title": "2003 年·全国新课程卷·理科",
+      "track": "science",
+      "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_文科/figures/f2003_national_old_arts_t16_map.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_文科/figures/f2003_national_old_arts_t17_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_文科/figures/f2003_national_old_arts_t20_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_文科/figures/f2003_national_old_arts_t21_typhoon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_文科/figures/f2003_national_old_arts_t22_rectangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_national_old_arts",
+        "id": "gk-2003-regular-national-old-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 136–137；PDF 不附答案和解析，答案和解析均为本库独立复算。第 16、17、21、22 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国旧课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国旧课程文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-national-old-arts",
+      "production_state": "complete",
+      "project_dir": "2003_全国旧课程卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_全国旧课程文_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_全国旧课程文_含解析.md",
+        "questions": "2003/2003_数学真题_全国旧课程文_试题.md",
+        "solution_body": "2003/2003_数学真题_全国旧课程文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8029e29df29623f528ee2fa4af275a49872530b12c47faf25df544e38a5d0764"
+      ],
+      "title": "2003 年·全国旧课程卷·文科",
+      "track": "arts",
+      "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_理科/figures/f2003_national_old_science_t15_map.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_理科/figures/f2003_national_old_science_t16_cubes.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_理科/figures/f2003_national_old_science_t18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_理科/figures/f2003_national_old_science_t20_typhoon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_全国旧课程卷_理科/figures/f2003_national_old_science_t21_rectangle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_national_old_science",
+        "id": "gk-2003-regular-national-old-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 134–135；PDF 不附答案和解析，答案和解析均为本库独立复算。第 15、16、18、20、21 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国旧课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国旧课程理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-national-old-science",
+      "production_state": "complete",
+      "project_dir": "2003_全国旧课程卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_全国旧课程理_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_全国旧课程理_含解析.md",
+        "questions": "2003/2003_数学真题_全国旧课程理_试题.md",
+        "solution_body": "2003/2003_数学真题_全国旧课程理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9474496def11d3c2b490c481bfebf0f952588afa06395dc1129ca3c37d8bc4a7"
+      ],
+      "title": "2003 年·全国旧课程卷·理科",
+      "track": "science",
+      "year": 2003
     }
   ],
-  "revision": 2595,
+  "revision": 2605,
   "schema_version": 1,
   "sources": [
     {
@@ -16373,8 +16678,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9690e1f4e19543d9385e525c061861f3c564706d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-national-new-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003全国新课程文(天津,山西,江西,山东,安徽,黑龙江,青海).pdf",
       "regions": [],
       "source_id": "src-3ddeacd5e7af3ae7ea5e8d57361f03cb101441d1d16e2e0fb8745b9abb1f0ee1",
@@ -16397,8 +16702,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f3a43f5caa2a0f9d20a1410787b8527a09e136cd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-national-new-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003全国新课程理(天津,山西,江西,山东,安徽,黑龙江,青海).pdf",
       "regions": [],
       "source_id": "src-cb1fea4cc700f8010560816b4eea32e118db965a0a186d64692cb293d2e90da2",
@@ -16421,8 +16726,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8dc9d5eb7a1854a4b0f2d710577dbf6dbf7e609e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-national-old-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003全国旧课程文.pdf",
       "regions": [],
       "source_id": "src-8029e29df29623f528ee2fa4af275a49872530b12c47faf25df544e38a5d0764",
@@ -16445,8 +16750,8 @@
       "exam_type": "regular",
       "git_blob_oid": "68bd4c142f308beb979a41ecd59704dea7266f6c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-national-old-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003全国旧课程理.pdf",
       "regions": [],
       "source_id": "src-9474496def11d3c2b490c481bfebf0f952588afa06395dc1129ca3c37d8bc4a7",
