@@ -25,16 +25,16 @@
 
 ## Tasks
 
-- [ ] Verify both source fingerprints, A3 pages and printed page ranges with pdfinfo, SHA-256 and visual renders.
-- [ ] Transcribe both papers, including the Q13/Q15/Q16/Q17 graph and geometry figures and all subparts.
-- [ ] Independently solve both papers, including complex geometry, calculus, probability, sequences, finance, spatial geometry and generalized combinations.
-- [ ] Generate both _含解析.md, register b89, generate/check LaTeX, provenance and receipts.
-- [ ] Compile all eight editions, visually review every page, finalize review, run full gates and tests, clean intermediates, and close this plan.
+- [x] Verify both source fingerprints, A3 pages and printed page ranges with pdfinfo, SHA-256 and visual renders.
+- [x] Transcribe both papers, including the Q13/Q15/Q16/Q17 graph and geometry figures and all subparts.
+- [x] Independently solve both papers, including complex geometry, calculus, probability, sequences, finance, spatial geometry and generalized combinations.
+- [x] Generate both _含解析.md, register b89, generate/check LaTeX, provenance and receipts.
+- [x] Compile all eight editions, visually review every page, finalize review, run full gates and tests, clean intermediates, and close this plan.
 
 ## Self-Review Checklist
 
-- [ ] Both fixed-source fingerprints and printed page ranges are present.
-- [ ] Every image marker maps to a committed TikZ/PGFPlots figure and no raster image enters the branch.
-- [ ] All questions and subparts are independently checked.
-- [ ] Eight PDFs compile, are visually reviewed, and no compiler intermediates remain.
-- [ ] Full tests and global receipt/report gates pass, with unrelated historical solution-source drifts reported honestly.
+- [x] Both fixed-source fingerprints and printed page ranges are present.
+- [x] Every image marker maps to a committed TikZ/PGFPlots figure and no raster image enters the branch.
+- [x] All questions and subparts are independently checked.
+- [x] Eight PDFs compile, are visually reviewed, and no compiler intermediates remain.
+- [x] Full tests and global receipt/report gates pass, with unrelated historical solution-source drifts reported honestly.
