@@ -792,6 +792,15 @@
         "gk-2002-regular-national-new-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b91",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-regular-national-old-arts",
+        "gk-2002-regular-national-old-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -801,7 +810,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7e201254-0d90-410f-84a6-cacccee028ee",
+  "last_transaction_id": "14ed9806-4d8e-46de-8cb7-17cedab8de53",
   "papers": [
     {
       "blocked_from": null,
@@ -10665,9 +10674,145 @@
       "title": "2002 年·全国新课程卷·理科",
       "track": "science",
       "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_文科/figures/f2002_national_old_arts_t13_housing.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_文科/figures/f2002_national_old_arts_t17_temperature.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_文科/figures/f2002_national_old_arts_t19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_文科/figures/f2002_national_old_arts_t22_triangles.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_national_old_arts",
+        "id": "gk-2002-regular-national-old-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 106–107；PDF 不附答案和解析，答案和解析均为本库独立复算。第 13、17、19、22 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国旧课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国旧课程文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-national-old-arts",
+      "production_state": "complete",
+      "project_dir": "2002_全国旧课程卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_全国旧课程文_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_全国旧课程文_含解析.md",
+        "questions": "2002/2002_数学真题_全国旧课程文_试题.md",
+        "solution_body": "2002/2002_数学真题_全国旧课程文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e94a11b05b4ad42845d528bcbff857ece76994b862f8d048695238d53dc7598f"
+      ],
+      "title": "2002 年·全国旧课程卷·文科",
+      "track": "arts",
+      "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_理科/figures/f2002_national_old_science_t10_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_全国旧课程卷_理科/figures/f2002_national_old_science_t18_square.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_national_old_science",
+        "id": "gk-2002-regular-national-old-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 104–105；PDF 不附答案和解析，答案和解析均为本库独立复算。第 10、18 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国旧课程卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国旧课程理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-national-old-science",
+      "production_state": "complete",
+      "project_dir": "2002_全国旧课程卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_全国旧课程理_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_全国旧课程理_含解析.md",
+        "questions": "2002/2002_数学真题_全国旧课程理_试题.md",
+        "solution_body": "2002/2002_数学真题_全国旧课程理_解析正文.md"
+      },
+      "source_ids": [
+        "src-318d665806619e51ad75d72ca59d2819e49112e6f8ce48c6d1b3a0a360f58ec0"
+      ],
+      "title": "2002 年·全国旧课程卷·理科",
+      "track": "science",
+      "year": 2002
     }
   ],
-  "revision": 2565,
+  "revision": 2595,
   "schema_version": 1,
   "sources": [
     {
@@ -16060,8 +16205,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ae0996cd945e463c45dab419ff28a311a08cec05",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-national-old-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002全国旧课程文.pdf",
       "regions": [],
       "source_id": "src-e94a11b05b4ad42845d528bcbff857ece76994b862f8d048695238d53dc7598f",
@@ -16084,8 +16229,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6cb8c9e2247153ede5cecb97a0871ed9a5b717e8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-national-old-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002全国旧课程理.pdf",
       "regions": [],
       "source_id": "src-318d665806619e51ad75d72ca59d2819e49112e6f8ce48c6d1b3a0a360f58ec0",
