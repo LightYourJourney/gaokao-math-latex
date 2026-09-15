@@ -31,17 +31,17 @@
 ## Tasks
 
 - [x] **Task 1: Verify fixed sources.** 已用 \`pdfinfo\`、SHA-256、\`pdftotext\` 和 A3 渲染核对两份固定源及印刷页码；四张源页图保存在临时目录，不进入仓库。
-- [ ] **Task 2: Transcribe the two papers.** 建立两卷四份规范 Markdown，逐题保留题面、选项、表格、图形位置、开放式剪拼题与所有小问；文科第 13/17/19/22 题、理科第 10/18 题的图片标记使用确定性的 ASCII 图名。
-- [ ] **Task 3: Solve and blind-review.** 独立复算两卷答案；重点核对文科温度函数、运动相遇、四棱锥二面角、距离比轨迹和剪拼体积，理科二次曲线离心率、正方形垂直几何、汽车递推、绝对值函数和非负参数递推。若题面措辞有多解或条件缺失，保留源字面并登记问题。
-- [ ] **Task 4: Register and generate.** 注册 \`phase2-b91\` 与两个 paper，生成含解析稿、共享 TeX、简答版、四种入口壳文件，并校验题号、答案块、图形引用集合和复用次数。
-- [ ] **Task 5: Record provenance.** 为两卷建立三角色核查工作稿，导入固定 source id、页码、题面/答案哈希和角色证据，生成 provenance。
-- [ ] **Task 6: Build and review.** 正式编译 8 个版本；用 Poppler 渲染逐页视觉检查字形、题号、公式/选项、图形标签、页眉页脚、分页留白、字号和答案边界；修复真实排版问题后重新编译并 finalize review。
-- [ ] **Task 7: Global gates and cleanup.** 更新 CSV 与批次报告，运行 b91 及全局 manifest/solution/generation/build/provenance/review/report 门禁和完整 816 项测试，清除编译中间物、\`.work/\` 与其他本地缓存，提交并关闭本计划。
+- [x] **Task 2: Transcribe the two papers.** 建立两卷四份规范 Markdown，逐题保留题面、选项、表格、图形位置、开放式剪拼题与所有小问；文科第 13/17/19/22 题、理科第 10/18 题的图片标记使用确定性的 ASCII 图名。
+- [x] **Task 3: Solve and blind-review.** 独立复算两卷答案；重点核对文科温度函数、运动相遇、四棱锥二面角、距离比轨迹和剪拼体积，理科二次曲线离心率、正方形垂直几何、汽车递推、绝对值函数和非负参数递推。若题面措辞有多解或条件缺失，保留源字面并登记问题。
+- [x] **Task 4: Register and generate.** 注册 \`phase2-b91\` 与两个 paper，生成含解析稿、共享 TeX、简答版、四种入口壳文件，并校验题号、答案块、图形引用集合和复用次数。
+- [x] **Task 5: Record provenance.** 为两卷建立三角色核查工作稿，导入固定 source id、页码、题面/答案哈希和角色证据，生成 provenance。
+- [x] **Task 6: Build and review.** 正式编译 8 个版本；用 Poppler 渲染逐页视觉检查字形、题号、公式/选项、图形标签、页眉页脚、分页留白、字号和答案边界；修复真实排版问题后重新编译并 finalize review。
+- [x] **Task 7: Global gates and cleanup.** 更新 CSV 与批次报告，运行 b91 及全局 manifest/solution/generation/build/provenance/review/report 门禁和完整 816 项测试，清除编译中间物、\`.work/\` 与其他本地缓存，提交并关闭本计划。
 
 ## Self-Review Checklist
 
-- [ ] 两个 source id、SHA、A3 页数和印刷页码已出现在 manifest/provenance。
-- [ ] 每个 Markdown 图片标记都对应项目内已提交的矢量 \`.tex\`，分支没有新增栅格媒体。
-- [ ] 两卷 22 题、选项、开放式图形题和小问均已独立核对。
-- [ ] 8 个 PDF 编译成功并逐页视觉通过，\`build/\` 不留编译中间物。
-- [ ] b91 与全局报告、回执、测试通过；历史无关漂移单独报告，不伪装成 b91 结果。
+- [x] 两个 source id、SHA、A3 页数和印刷页码已出现在 manifest/provenance。
+- [x] 每个 Markdown 图片标记都对应项目内已提交的矢量 \`.tex\`，分支没有新增栅格媒体。
+- [x] 两卷 22 题、选项、开放式图形题和小问均已独立核对。
+- [x] 8 个 PDF 编译成功并逐页视觉通过，\`build/\` 不留编译中间物。
+- [x] b91 与全局报告、回执、测试通过；历史无关漂移单独报告，不伪装成 b91 结果。
