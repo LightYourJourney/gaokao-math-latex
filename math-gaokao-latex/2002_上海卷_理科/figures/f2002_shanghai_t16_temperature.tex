@@ -1,0 +1,13 @@
+% 2002 年上海理科第 16 题：月度气温与用电量统计图
+\begin{tikzpicture}[x=0.34cm,y=0.035cm]
+  \draw[->] (0,0)--(13,0) node[right] {月份};
+  \draw[->] (0,0)--(0,32) node[above] {气温};
+  \foreach \x/\h in {1/3,2/8,3/14,4/18,5/23,6/27,7/28,8/24,9/17,10/12,11/5,12/2}
+    \draw[fill=gray!15] (\x-0.42,0) rectangle (\x+0.42,\h);
+  \begin{scope}[xshift=6cm,yshift=0cm]
+    \draw[->] (0,0)--(13,0) node[right] {月份};
+    \draw[->] (0,0)--(0,130) node[above] {用电量};
+    \foreach \x/\h in {1/115,2/120,3/95,4/80,5/75,6/80,7/110,8/120,9/95,10/75,11/85,12/100}
+      \draw[fill=gray!15] (\x-0.42,0) rectangle (\x+0.42,\h);
+  \end{scope}
+\end{tikzpicture}

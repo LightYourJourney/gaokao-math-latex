@@ -774,6 +774,15 @@
         "gk-2002-spring-jingmengwan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b89",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-regular-shanghai-arts",
+        "gk-2002-regular-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -783,7 +792,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "26188f84-c875-45e1-abe8-99c0186c8f2d",
+  "last_transaction_id": "24fcade6-c741-42c9-a2d7-f66238c4e8e2",
   "papers": [
     {
       "blocked_from": null,
@@ -10365,9 +10374,153 @@
       "title": "2002 年·春季京蒙皖卷·理科",
       "track": "science",
       "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_文科/figures/f2002_shanghai_t13_complex.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_文科/figures/f2002_shanghai_t15_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_文科/figures/f2002_shanghai_t16_temperature.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_文科/figures/f2002_shanghai_t17_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_shanghai_arts",
+        "id": "gk-2002-regular-shanghai-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 110–111；PDF 不附答案与解析，答案和解析均为本库独立复算。第 13、15、16、17 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-shanghai-arts",
+      "production_state": "complete",
+      "project_dir": "2002_上海卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_上海文_含解析.md",
+        "questions": "2002/2002_数学真题_上海文_试题.md",
+        "solution_body": "2002/2002_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-01548e77c3088a60e4f2c74979d0a81e6c70f4378c9b5c52e7933af3d1ae6542"
+      ],
+      "title": "2002 年·上海卷·文科",
+      "track": "arts",
+      "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_理科/figures/f2002_shanghai_t13_complex.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_理科/figures/f2002_shanghai_t15_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_理科/figures/f2002_shanghai_t16_temperature.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_上海卷_理科/figures/f2002_shanghai_t17_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_shanghai_science",
+        "id": "gk-2002-regular-shanghai-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 108–109；PDF 不附答案与解析，答案和解析均为本库独立复算。第 13、15、16、17 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "2002_上海卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_上海理_含解析.md",
+        "questions": "2002/2002_数学真题_上海理_试题.md",
+        "solution_body": "2002/2002_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-26712f5118c401de589db671244bf873c393342a19307f8892e8afb4c6ee8a54"
+      ],
+      "title": "2002 年·上海卷·理科",
+      "track": "science",
+      "year": 2002
     }
   ],
-  "revision": 2544,
+  "revision": 2551,
   "schema_version": 1,
   "sources": [
     {
@@ -15664,8 +15817,8 @@
       "exam_type": "regular",
       "git_blob_oid": "55029969aed769e5355e981bcb3d5504268feb04",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002上海文.pdf",
       "regions": [],
       "source_id": "src-01548e77c3088a60e4f2c74979d0a81e6c70f4378c9b5c52e7933af3d1ae6542",
@@ -15688,8 +15841,8 @@
       "exam_type": "regular",
       "git_blob_oid": "93adc2fc011a5dd0d7fdf08b7142f8cbef1debbb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002上海理.pdf",
       "regions": [],
       "source_id": "src-26712f5118c401de589db671244bf873c393342a19307f8892e8afb4c6ee8a54",
