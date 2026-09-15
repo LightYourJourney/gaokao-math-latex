@@ -36,17 +36,17 @@
 ## Tasks
 
 - [x] **Task 1: Verify fixed sources.** 已用 \`pdfinfo\`、SHA-256、\`pdftotext\` 和 A3 渲染确认四份固定源及原卷印刷页码；源页图和文本只保存在临时目录，不进入仓库。
-- [ ] **Task 2: Transcribe the four papers.** 建立四卷各四份规范 Markdown，逐题保留题面、选项、表格、图形位置、所有小问和题面页脚事实；图片标记使用确定性的 ASCII 图名。
-- [ ] **Task 3: Solve and blind-review.** 独立复算四卷答案，分别核对选择/填空、解析几何、立体几何、数列、函数和应用题；对开放题、题面缺字或答案歧义保留源字面并登记问题。
-- [ ] **Task 4: Register and generate.** 注册 \`phase2-b92\` 与四个 paper，生成四卷含解析稿、共享 TeX、简答版和四种入口壳文件，并校验题号、答案块、图形引用集合及复用次数。
-- [ ] **Task 5: Record provenance.** 为四卷建立三角色核查工作稿，导入固定 source id、页码、题面/答案哈希和角色证据，生成 provenance。
-- [ ] **Task 6: Build and review.** 正式编译 16 个版本；用 Poppler 渲染逐页视觉检查字形、题号、公式/选项、图形标签、页眉页脚、分页留白、字号和答案边界；修复真实排版问题后重新编译并 finalize review。
-- [ ] **Task 7: Global gates and cleanup.** 更新 CSV 与批次报告，运行 b92 及全局 manifest/solution/generation/build/provenance/review/report 门禁和完整测试，清除编译中间物、\`.work/\` 与其他本地缓存，提交并关闭本计划。
+- [x] **Task 2: Transcribe the four papers.** 建立四卷各四份规范 Markdown，逐题保留题面、选项、表格、图形位置、所有小问和题面页脚事实；图片标记使用确定性的 ASCII 图名。
+- [x] **Task 3: Solve and blind-review.** 独立复算四卷答案，分别核对选择/填空、解析几何、立体几何、数列、函数和应用题；对开放题、题面缺字或答案歧义保留源字面并登记问题。
+- [x] **Task 4: Register and generate.** 注册 \`phase2-b92\` 与四个 paper，生成四卷含解析稿、共享 TeX、简答版和四种入口壳文件，并校验题号、答案块、图形引用集合及复用次数。
+- [x] **Task 5: Record provenance.** 为四卷建立三角色核查工作稿，导入固定 source id、页码、题面/答案哈希和角色证据，生成 provenance。
+- [x] **Task 6: Build and review.** 正式编译 16 个版本；用 Poppler 渲染逐页视觉检查字形、题号、公式/选项、图形标签、页眉页脚、分页留白、字号和答案边界；修复真实排版问题后重新编译并 finalize review。
+- [x] **Task 7: Global gates and cleanup.** 更新 CSV 与批次报告，运行 b92 及全局 manifest/solution/generation/build/provenance/review/report 门禁和完整测试，清除编译中间物、\`.work/\` 与其他本地缓存，提交并关闭本计划。
 
 ## Self-Review Checklist
 
-- [ ] 四个 source id、SHA、A3 页数和印刷页码已出现在 manifest/provenance。
-- [ ] 每个 Markdown 图片标记都对应项目内已提交的矢量 \`.tex\`，分支没有新增栅格媒体。
-- [ ] 四卷题面、选项、图形、开放式小问和答案均已独立核对。
-- [ ] 16 个 PDF 编译成功并逐页视觉通过，\`build/\` 不留编译中间物。
-- [ ] b92 与全局报告、回执、测试通过；历史无关漂移单独报告，不伪装成 b92 结果。
+- [x] 四个 source id、SHA、A3 页数和印刷页码已出现在 manifest/provenance。
+- [x] 每个 Markdown 图片标记都对应项目内已提交的矢量 \`.tex\`，分支没有新增栅格媒体。
+- [x] 四卷题面、选项、图形、开放式小问和答案均已独立核对。
+- [x] 16 个 PDF 编译成功并逐页视觉通过，\`build/\` 不留编译中间物。
+- [x] b92 与全局报告、回执、测试通过；历史无关漂移单独报告，不伪装成 b92 结果。
