@@ -765,6 +765,15 @@
         "gk-2002-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b88",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-spring-jingmengwan-arts",
+        "gk-2002-spring-jingmengwan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -774,7 +783,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "97c8cc25-3955-4d0a-a42e-6e4a3e5d9bd4",
+  "last_transaction_id": "26188f84-c875-45e1-abe8-99c0186c8f2d",
   "papers": [
     {
       "blocked_from": null,
@@ -10223,9 +10232,142 @@
       "title": "2002 年·春季上海卷",
       "track": "none",
       "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_春季京蒙皖文卷/figures/f2002_spring_t15_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_春季京蒙皖文卷/figures/f2002_spring_t19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_spring_jingmengwan_arts",
+        "id": "gk-2002-spring-jingmengwan-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 97–98；PDF 不附答案与解析，答案和解析均为本库独立复算。第 15、19 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "春季京蒙皖卷·文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "京蒙皖文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-spring-jingmengwan-arts",
+      "production_state": "complete",
+      "project_dir": "2002_春季京蒙皖文卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_春季京蒙皖文_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_春季京蒙皖文_含解析.md",
+        "questions": "2002/2002_数学真题_春季京蒙皖文_试题.md",
+        "solution_body": "2002/2002_数学真题_春季京蒙皖文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d4b6b4f37b6589b21946176125752f83f1799fd3debba8c90f9f34b8ec08135a"
+      ],
+      "title": "2002 年·春季京蒙皖卷·文科",
+      "track": "arts",
+      "year": 2002
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_春季京蒙皖理卷/figures/f2002_spring_t15_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_春季京蒙皖理卷/figures/f2002_spring_t19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2002_spring_jingmengwan_science",
+        "id": "gk-2002-spring-jingmengwan-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 95–96；PDF 不附答案与解析，答案和解析均为本库独立复算。第 15、19 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "春季京蒙皖卷·理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "京蒙皖理"
+      },
+      "issue_ids": [
+        "ISSUE-0808",
+        "ISSUE-0809",
+        "ISSUE-0810",
+        "ISSUE-0811"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-spring-jingmengwan-science",
+      "production_state": "complete",
+      "project_dir": "2002_春季京蒙皖理卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_春季京蒙皖理_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_春季京蒙皖理_含解析.md",
+        "questions": "2002/2002_数学真题_春季京蒙皖理_试题.md",
+        "solution_body": "2002/2002_数学真题_春季京蒙皖理_解析正文.md"
+      },
+      "source_ids": [
+        "src-d644e6de1cae82b9335a35b1e29e383d6b90f00d185d35c69752ce1bccb0bf89"
+      ],
+      "title": "2002 年·春季京蒙皖卷·理科",
+      "track": "science",
+      "year": 2002
     }
   ],
-  "revision": 2534,
+  "revision": 2544,
   "schema_version": 1,
   "sources": [
     {
@@ -10410,8 +10552,8 @@
       "exam_type": "spring",
       "git_blob_oid": "596dc30a11ead031938d33ed62a7fe9403bda1ea",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-spring-jingmengwan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002春季北京,安徽,内蒙古文.pdf",
       "regions": [],
       "source_id": "src-d4b6b4f37b6589b21946176125752f83f1799fd3debba8c90f9f34b8ec08135a",
@@ -10434,8 +10576,8 @@
       "exam_type": "spring",
       "git_blob_oid": "c763825f83463316250639d39ec851a6872067e6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-spring-jingmengwan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002春季北京,安徽,内蒙古理.pdf",
       "regions": [],
       "source_id": "src-d644e6de1cae82b9335a35b1e29e383d6b90f00d185d35c69752ce1bccb0bf89",
