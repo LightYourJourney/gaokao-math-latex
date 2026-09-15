@@ -26,17 +26,17 @@
 
 ## Tasks
 
-- [ ] Verify both source fingerprints with pdfinfo, SHA-256 and visual renders; record the printed page ranges.
-- [ ] Transcribe both Q1–Q22 sets, including the common Q11 net and the science Q19 spatial diagram.
-- [ ] Independently solve all answers, especially common Q3 binomial-ratio limit, Q4 inverse, Q5 ellipse, Q6 locus, Q7 exponential value, Q8 acute-triangle quadrant, Q9 cone angle, Q10 exponential minimum, Q11 cube-net statements, Q12 demand model, plus arts Q17–Q22 and science Q17–Q22.
-- [ ] Generate both _含解析.md files, register b86, generate/check LaTeX, provenance and receipts.
-- [ ] Compile, visually review all pages, finalize reviews, run full gates and tests, clean all intermediates, and close this plan.
+- [x] Verify both source fingerprints with pdfinfo, SHA-256 and visual renders; record the printed page ranges.
+- [x] Transcribe both Q1–Q22 sets, including the common Q11 net and the science Q19 spatial diagram.
+- [x] Independently solve all answers, especially common Q3 binomial-ratio limit, Q4 inverse, Q5 ellipse, Q6 locus, Q7 exponential value, Q8 acute-triangle quadrant, Q9 cone angle, Q10 exponential minimum, Q11 cube-net statements, Q12 demand model, plus arts Q17–Q22 and science Q17–Q22.
+- [x] Generate both _含解析.md files, register b86, generate/check LaTeX, provenance and receipts.
+- [x] Compile, visually review all pages, finalize reviews, run full gates and tests, clean all intermediates, and close this plan.
 
 ## Self-Review Checklist
 
-- [ ] Both fixed source fingerprints and printed page ranges are present.
-- [ ] Only the registered Q11/Q19 logical image markers exist, and all map to committed .tex figures.
-- [ ] All 44 answers and subparts are independently checked; the arts Q22 and science Q22 geometries are not conflated.
-- [ ] Eight PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with the preexisting five unrelated solution-source drifts reported.
+- [x] Both fixed source fingerprints and printed page ranges are present.
+- [x] Only the registered Q11/Q19 logical image markers exist, and all map to committed .tex figures.
+- [x] All 44 answers and subparts are independently checked; the arts Q22 and science Q22 geometries are not conflated.
+- [x] Eight PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with the preexisting five unrelated solution-source drifts reported.
