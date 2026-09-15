@@ -1,0 +1,12 @@
+% 2002 年全国旧课程文科第 17 题：温度变化曲线
+\begin{tikzpicture}[x=0.62cm,y=0.13cm,>=stealth]
+  \draw[->] (5.2,0)--(14.8,0) node[right] {$t/\mathrm h$};
+  \draw[->] (5.2,0)--(5.2,34) node[above] {$T/{}^\circ\mathrm C$};
+  \foreach \y in {10,20,30}
+    \draw[dashed,gray] (5.2,\y)--(14,\y) node[right] {\y};
+  \foreach \x in {6,8,10,12,14}
+    \draw (\x,0.4)--(\x,-0.4) node[below=3pt] {\x};
+  \draw[thick,domain=6:14,samples=80]
+    plot (\x,{20+10*sin(22.5*(\x-10))});
+  \node[below left] at (5.2,0) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+% 2002 年全国旧课程文科第 22 题：剪拼示意
+\begin{tikzpicture}[>=stealth,scale=0.76]
+  % 图 1：沿三条中位线折成正四面体
+  \begin{scope}[shift={(0,0)}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.7,0);
+    \coordinate (C) at (1.35,2.34);
+    \coordinate (D) at ($(A)!0.5!(B)$);
+    \coordinate (E) at ($(B)!0.5!(C)$);
+    \coordinate (F) at ($(C)!0.5!(A)$);
+    \draw[thick] (A)--(B)--(C)--cycle;
+    \draw[dashed] (D)--(E)--(F)--cycle;
+    \node at (1.35,-0.45) {图1};
+  \end{scope}
+  % 图 2：角部四边形剪下，余下部分折成缺上底的棱柱
+  \begin{scope}[shift={(3.45,0)}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.7,0);
+    \coordinate (C) at (1.35,2.34);
+    \coordinate (D) at ($(A)!0.5!(B)$);
+    \coordinate (E) at ($(B)!0.5!(C)$);
+    \coordinate (F) at ($(C)!0.5!(A)$);
+    \draw[thick] (A)--(B)--(C)--cycle;
+    \draw[dashed] (D)--(E)--(F)--cycle;
+    \draw[dashed] (A)--(D) (B)--(E) (C)--(F);
+    \node at (1.35,-0.45) {图2};
+  \end{scope}
+  % 图 3：任意三角形，内心和三条中点线
+  \begin{scope}[shift={(6.9,0)}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.95,0.15);
+    \coordinate (C) at (1.0,2.25);
+    \coordinate (I) at (1.25,0.82);
+    \coordinate (D) at ($(I)!0.5!(A)$);
+    \coordinate (E) at ($(I)!0.5!(B)$);
+    \coordinate (F) at ($(I)!0.5!(C)$);
+    \draw[thick] (A)--(B)--(C)--cycle;
+    \draw[dashed] (I)--(A) (I)--(B) (I)--(C);
+    \draw[dashed] (D)--(E)--(F)--cycle;
+    \draw[dashed] (D)--($(D |- A)$) (E)--($(E |- B)$);
+    \node at (1.35,-0.45) {图3};
+  \end{scope}
+\end{tikzpicture}
