@@ -25,17 +25,17 @@
 
 ## Tasks
 
-- [ ] Verify both source fingerprints, A3 pages and printed page ranges with pdfinfo, SHA-256 and visual renders.
-- [ ] Transcribe both Q1–Q22, including Q15/Q19 diagrams and all subparts.
-- [ ] Independently solve both papers, including geometry, sequences, tax/finance, conic sections and recurrence questions.
-- [ ] Generate both _含解析.md, register b88, generate/check LaTeX, provenance and receipts.
-- [ ] Compile all eight editions, visually review every page, finalize review, run full gates and tests, clean intermediates, and close this plan.
+- [x] Verify both source fingerprints, A3 pages and printed page ranges with pdfinfo, SHA-256 and visual renders.
+- [x] Transcribe both Q1–Q22, including Q15/Q19 diagrams and all subparts.
+- [x] Independently solve both papers, including geometry, sequences, tax/finance, conic sections and recurrence questions.
+- [x] Generate both _含解析.md, register b88, generate/check LaTeX, provenance and receipts.
+- [x] Compile all eight editions, visually review every page, finalize review, run full gates and tests, clean intermediates, and close this plan.
 
 ## Self-Review Checklist
 
-- [ ] Both fixed-source fingerprints and printed page ranges are present.
-- [ ] Each paper has exactly the Q15/Q19 image markers, all mapping to committed .tex figures.
-- [ ] All 44 questions and subparts are independently checked.
-- [ ] Eight PDFs compile, are visually reviewed, and no compiler intermediates remain.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with unrelated historical solution-source drifts reported honestly.
+- [x] Both fixed-source fingerprints and printed page ranges are present.
+- [x] Each paper has exactly the Q15/Q19 image markers, all mapping to committed .tex figures.
+- [x] All 44 questions and subparts are independently checked.
+- [x] Eight PDFs compile, are visually reviewed, and no compiler intermediates remain.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with unrelated historical solution-source drifts reported honestly.
