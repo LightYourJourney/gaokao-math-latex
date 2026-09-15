@@ -823,6 +823,17 @@
         "gk-2004-regular-national-2-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b94",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-national-1-arts",
+        "gk-2005-regular-national-1-science",
+        "gk-2005-regular-national-2-arts",
+        "gk-2005-regular-national-2-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -832,7 +843,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "02fc126c-446c-4956-9b06-2ccab4948689",
+  "last_transaction_id": "f43f1f89-6ef8-4609-954d-f03f9a3b628b",
   "papers": [
     {
       "blocked_from": null,
@@ -11386,9 +11397,266 @@
       "title": "2004 年·全国卷Ⅱ·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅰ卷_文科/figures/f2005_national_1_arts_t04_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅰ卷_文科/figures/f2005_national_1_arts_t18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_national_1_arts",
+        "id": "gk-2005-regular-national-1-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 248–249；PDF 不附答案和解析，答案和解析均为本库独立复算。第 4、18 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国卷Ⅰ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国1文"
+      },
+      "issue_ids": [
+        "ISSUE-0835",
+        "ISSUE-0836"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-national-1-arts",
+      "production_state": "complete",
+      "project_dir": "2005_全国Ⅰ卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_全国1文_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_全国1文_含解析.md",
+        "questions": "2005/2005_数学真题_全国1文_试题.md",
+        "solution_body": "2005/2005_数学真题_全国1文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b70fe27b8e8f92d92304a7b7d149b3233872e6a8f095728e363e77ae4cfeb5aa"
+      ],
+      "title": "2005 年·全国卷Ⅰ·文科",
+      "track": "arts",
+      "year": 2005
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅰ卷_理科/figures/f2005_national_1_science_t05_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅰ卷_理科/figures/f2005_national_1_science_t08_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅰ卷_理科/figures/f2005_national_1_science_t18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_national_1_science",
+        "id": "gk-2005-regular-national-1-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 246–247；PDF 不附答案和解析，答案和解析均为本库独立复算。第 5、8、18 题图形依据固定源关系重绘为 TikZ/PGFPlots；第 4 题选项 C 存在源面印刷矛盾，已登记待核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国卷Ⅰ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国1理"
+      },
+      "issue_ids": [
+        "ISSUE-0834"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-national-1-science",
+      "production_state": "blocked",
+      "project_dir": "2005_全国Ⅰ卷_理科",
+      "question_count": 22,
+      "resume_action": "取得清晰勘误或同版源确认第 4 题选项 C；在此之前保留固定源字面与独立计算结论。",
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_全国1理_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_全国1理_含解析.md",
+        "questions": "2005/2005_数学真题_全国1理_试题.md",
+        "solution_body": "2005/2005_数学真题_全国1理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c734f943945ff01fe268ce680901faefaf71cecd77971ead7cebdf4d982ee4b3"
+      ],
+      "title": "2005 年·全国卷Ⅰ·理科",
+      "track": "science",
+      "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅱ卷_文科/figures/f2005_national_2_arts_t20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_national_2_arts",
+        "id": "gk-2005-regular-national-2-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 250–251；PDF 不附答案和解析，答案和解析均为本库独立复算。第 20 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国卷Ⅱ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国2文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-national-2-arts",
+      "production_state": "complete",
+      "project_dir": "2005_全国Ⅱ卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_全国2文_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_全国2文_含解析.md",
+        "questions": "2005/2005_数学真题_全国2文_试题.md",
+        "solution_body": "2005/2005_数学真题_全国2文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d6d8329afa794712eb98601721c04f641cbe59a4b667b9339bc1ff30d783cb05"
+      ],
+      "title": "2005 年·全国卷Ⅱ·文科",
+      "track": "arts",
+      "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国Ⅱ卷_理科/figures/f2005_national_2_science_t20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_national_2_science",
+        "id": "gk-2005-regular-national-2-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 252–253；PDF 不附答案和解析，答案和解析均为本库独立复算。第 20 题图形依据固定源关系重绘为 TikZ/PGFPlots。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国卷Ⅱ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国2理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-national-2-science",
+      "production_state": "complete",
+      "project_dir": "2005_全国Ⅱ卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_全国2理_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_全国2理_含解析.md",
+        "questions": "2005/2005_数学真题_全国2理_试题.md",
+        "solution_body": "2005/2005_数学真题_全国2理_解析正文.md"
+      },
+      "source_ids": [
+        "src-70270bd63010463aae2cf417766a30ae19ed2359eb6e4fb329cc991a68663e9d"
+      ],
+      "title": "2005 年·全国卷Ⅱ·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 2624,
+  "revision": 2640,
   "schema_version": 1,
   "sources": [
     {
@@ -17885,8 +18153,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f87a2c5ff0f0517e577291f24811f7638c6540a4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005全国1文(河北.河南,安徽,山西,海南).pdf",
       "regions": [],
       "source_id": "src-b70fe27b8e8f92d92304a7b7d149b3233872e6a8f095728e363e77ae4cfeb5aa",
@@ -17909,8 +18177,8 @@
       "exam_type": "regular",
       "git_blob_oid": "84cb2d51f79157435ae984c93045ef64c03b6c23",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005全国1理(河北.河南,安徽,山西,海南).pdf",
       "regions": [],
       "source_id": "src-c734f943945ff01fe268ce680901faefaf71cecd77971ead7cebdf4d982ee4b3",
@@ -17933,8 +18201,8 @@
       "exam_type": "regular",
       "git_blob_oid": "930858c49d18a531ef9d0d314bea0f5aef7b7dd7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-national-2-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005全国2文(黑龙江,吉林,广西,内蒙古,宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-d6d8329afa794712eb98601721c04f641cbe59a4b667b9339bc1ff30d783cb05",
@@ -17957,8 +18225,8 @@
       "exam_type": "regular",
       "git_blob_oid": "3a4a5c2408566f5d9d23e04490f2e792b69f9d78",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-national-2-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005全国2理(黑龙江,吉林,广西,内蒙古,宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-70270bd63010463aae2cf417766a30ae19ed2359eb6e4fb329cc991a68663e9d",

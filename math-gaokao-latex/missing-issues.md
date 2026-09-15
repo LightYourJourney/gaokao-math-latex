@@ -17,6 +17,23 @@
   "type": "identity-ambiguous"
 }
 ```
+
+## ISSUE-0834
+
+```json
+{
+  "affected_paper_ids": [],
+  "evidence": "固定源 PDF 第 1 页第 4 题的题干为圆弧 y=1-√(1-x²) 与过 (-2,0) 的直线求两交点斜率；按题干字面实算为 0<k≤1/3，但固定源选项 C 印成 (√2/4,√2/4)，为空区间，现有选项无法独立核对。题面忠实保留该印刷字面，答案仅保留源位置 C 并标注待核。",
+  "fingerprint": "aa992be00e11e7e6d066279086b27b289c7fdf4e509358e45740c6c730314ee8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-national-1-science",
+  "question_id": "gk-2005-regular-national-1-science-q04",
+  "resume_action": "取得清晰勘误或同版源确认第 4 题选项 C；在此之前保留固定源字面与独立计算结论。",
+  "source_id": "src-c734f943945ff01fe268ce680901faefaf71cecd77971ead7cebdf4d982ee4b3",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
 ## ISSUE-0002
 
 ```json
@@ -13183,6 +13200,43 @@
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2004-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-0835
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "24bd35eeaffce064f28a4bbc4f05edd2f4a4500043733fbeb02913606012914e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2005-regular-national-1-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0836
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "447804d142fa1ec781e5d55322cd6bd4e8989500a8514b59061bd1aa1b69eef7",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2005-regular-national-1-arts",
   "resume_action": "已在新一次正式构建中通过，无需动作",
   "status": "resolved",
   "type": "compile-error"
