@@ -25,17 +25,17 @@
 
 ## Tasks
 
-- [ ] Verify source facts with `pdfinfo`, SHA-256 and visual renders; record pages 1–2 / printed pages 83–84.
-- [ ] Transcribe Q1–Q22, including the Q19/Q20 diagrams and all subparts.
-- [ ] Independently solve all answers, especially Q3 period, Q4 binomial coefficient, Q7 exponential limit, Q10 arithmetic operation, Q11 trigonometric propositions, Q12 compound interest, Q17 set intersection, Q18 trigonometric parameter, Q19 container optimization, Q20 spatial angle, Q21 ellipse intersection count, and Q22 sequence inequality.
-- [ ] Generate `_含解析.md`, register b85, generate/check LaTeX, provenance and receipts.
-- [ ] Compile, visually review all pages, finalize review, run full gates and tests, clean all intermediates, and close this plan.
+- [x] Verify source facts with `pdfinfo`, SHA-256 and visual renders; record pages 1–2 / printed pages 83–84.
+- [x] Transcribe Q1–Q22, including the Q19/Q20 diagrams and all subparts.
+- [x] Independently solve all answers, especially Q3 period, Q4 binomial coefficient, Q7 exponential limit, Q10 arithmetic operation, Q11 trigonometric propositions, Q12 compound interest, Q17 set intersection, Q18 trigonometric parameter, Q19 container optimization, Q20 spatial angle, Q21 ellipse intersection count, and Q22 sequence inequality.
+- [x] Generate `_含解析.md`, register b85, generate/check LaTeX, provenance and receipts.
+- [x] Compile, visually review all pages, finalize review, run full gates and tests, clean all intermediates, and close this plan.
 
 ## Self-Review Checklist
 
-- [ ] Fixed source fingerprint and two-page A3 range are present.
-- [ ] Q19/Q20 are the only logical image markers and all map to committed `.tex` figures.
-- [ ] All 22 answers and subparts are independently checked.
-- [ ] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
-- [ ] No raster image enters the branch; PDFs remain ignored local build artifacts.
-- [ ] Full tests and global receipt/report gates pass, with preexisting unrelated source drifts reported.
+- [x] Fixed source fingerprint and two-page A3 range are present.
+- [x] Q19/Q20 are the only logical image markers and all map to committed `.tex` figures.
+- [x] All 22 answers and subparts are independently checked.
+- [x] Four PDF versions compile, are visually reviewed, and have no compiler intermediates left.
+- [x] No raster image enters the branch; PDFs remain ignored local build artifacts.
+- [x] Full tests and global receipt/report gates pass, with preexisting unrelated source drifts reported.
