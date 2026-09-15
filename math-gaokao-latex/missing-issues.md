@@ -12790,3 +12790,94 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0812
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "由切线截距 x_2=2x_1/3+a/(3x_1^2) 及 x_2-x_1=(a-x_1^3)/(3x_1^2) 独立复算，确认题面缺少 x_1>√[3]{a} 条件。",
+  "fingerprint": "c49c5a19826ba132b821559889b47c19d83315332a16fdaa5ea46c12c5ba2261",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2002-regular-national-new-arts",
+  "question_id": "gk-2002-regular-national-new-arts-q21",
+  "resolution": "固定源第②问写为“若 x_2>√[3]{a}，则 √[3]{a}<x_2<x_1”，但 a=1、x_1=1/2 时 x_2=3/2，直接构成反例。规范解析保留原题，给出反例，并明确说明补充 x_1>√[3]{a} 后结论才成立；未擅自改写题面。",
+  "resume_action": "固定源已按字面保留；若取得正式勘误资料，核对第 21 题第②问是否应补充 x_1>√[3]{a}，再更新规范记录。",
+  "source_id": "src-2cfc2db9c0f09cde88a57c79780a0b5946a263027611e86cc07ee0763b66d4c8",
+  "status": "resolved",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0813
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "346e142b5a9c5317a7e647f4fba4d93f6dbfddc4ec71602d98c970c796949c44",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2002-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0814
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "e384c0ec7f878e40cc1aff8b11a3df7df75d3b91c09137201a626ea133eeb063",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2002-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0815
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "2ecf2904737cd8a83a6bcb6c13336a8b5f2979d0c28e63c660e5c80f8c431d1d",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2002-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0816
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "4bdc07e101da5f28d8fbe21aa63fc205c0fb91c4977abaefa1df6db00c16498b",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2002-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
