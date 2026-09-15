@@ -1,0 +1,19 @@
+% 2006 年全国卷Ⅱ理科第 16 题：月收入频率分布直方图
+\begin{tikzpicture}[>=stealth,scale=0.72]
+  \draw[->] (0,0)--(8.4,0) node[right] {月收入（元）};
+  \draw[->] (0,0)--(0,3.45) node[above] {频率\(/\)组距};
+  \foreach \y/\lab in {0.65/0.0001,1.30/0.0002,1.95/0.0003,2.60/0.0004,3.25/0.0005} {
+    \draw[dashed,gray] (0,\y)--(7.65,\y);
+    \node[left] at (0,\y) {\scriptsize\lab};
+  }
+  \draw (1,0) rectangle (2,1.30);
+  \draw (2,0) rectangle (3,2.60);
+  \draw (3,0) rectangle (4,3.25);
+  \draw (4,0) rectangle (5,3.25);
+  \draw (5,0) rectangle (6,1.95);
+  \draw (6,0) rectangle (7,0.65);
+  \foreach \x/\lab in {0/0,1/1000,2/1500,3/2000,4/2500,5/3000,6/3500,7/4000} {
+    \node[below] at (\x,0) {\scriptsize\lab};
+  }
+  \draw[thick] (0.95,0.08)--(1.05,-0.08)--(1.15,0.08);
+\end{tikzpicture}
