@@ -1,0 +1,22 @@
+% 2010 全国卷理科第 22 题：圆、切线与 BA 的延长线示意图。
+\begin{tikzpicture}[font=\footnotesize, line width=0.45pt]
+  \coordinate (O) at (2.25,1.85);
+  \def\r{1.65}
+  \coordinate (A) at (0.95,0.83);
+  \coordinate (B) at (0.62,2.75);
+  \coordinate (C) at (3.35,3.05);
+  \coordinate (D) at (3.78,1.02);
+  \coordinate (E) at (5.05,0.45);
+  \draw (O) circle (\r);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (B)--(A)--(E);
+  \draw (C)--(E);
+  \draw[dashed] (O)--(C);
+  \node[below left] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[below right] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[below] at (O) {$O$};
+  \draw ($(C)!0.12!(E)$) -- ++(-0.17,-0.29);
+\end{tikzpicture}

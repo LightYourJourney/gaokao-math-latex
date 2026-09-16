@@ -34,38 +34,39 @@
 
 ## Tasks
 
-- [ ] **Task 1 — Materialize the six source triples and register `phase2-b99`.**
+- [x] **Task 1 — Materialize the six source triples and register `phase2-b99`.**
   - Create six `_试题.md` files, six `_答案要点.md` files, six `_解析正文.md` files and six generated `_含解析.md` files under `2010/`.
   - Use these canonical prefixes: `2010_数学真题_全国1文`、`全国1理`、`全国2文`、`全国2理`、`全国新课标文`、`全国新课标理`.
   - Create one registration spec under `math-gaokao-latex/.work/phase2-b99/register.json`; include exact source IDs, project directories, question counts, structures and figure paths. Run `register-papers --write` once only after every canonical Markdown file exists.
 
-- [ ] **Task 2 — Transcribe and structurally validate all six question papers.**
+- [x] **Task 2 — Transcribe and structurally validate all six question papers.**
   - 大纲Ⅰ/Ⅱ文理 use structure `选择题 1–12 / 填空题 13–16 / 解答题 17–22`.
   - 新课标文理 use structure `选择题 1–12 / 填空题 13–16 / 解答题 17–24`.
   - Render both fixed source pages for every PDF, preserve every formula, option, unit, subquestion and figure marker, and run the question parser before registration.
 
-- [ ] **Task 3 — Independently solve and reconcile all answers.**
+- [x] **Task 3 — Independently solve and reconcile all answers.**
   - Recompute algebra, probability/statistics, sequences, geometry, calculus and coordinate problems from the transcribed question text.
   - Keep final conclusions in `_解析正文.md` byte-aligned with `_答案要点.md`; record source/answer disagreements in `missing-issues.md` with paper/question/source fingerprints.
   - Run `solution_sources.py extract-batch --write` and `check-batch` for `phase2-b99` before generating LaTeX.
 
-- [ ] **Task 4 — Create only vector figure sources.**
+- [x] **Task 4 — Create only vector figure sources.**
   - Expected figure families are: 大纲Ⅰ文 q20 pyramid; 大纲Ⅰ理 q19 pyramid; 大纲Ⅱ文/理 q19 prism and q20 circuit; 新课标文 q6 motion graph, q8 flowchart, q18 pyramid, q20 ellipse, q22 circle, q23 parametric circle and q24 absolute-value graph; 新课标理 q4 motion graph, q7 flowchart, q18 pyramid, q20 ellipse, q22 circle, q23 parametric circle and q24 absolute-value graph.
   - Name files as `f2010_<paper-key>_t<number>_<short-name>.tex`; validate every Markdown figure marker resolves locally and no PNG/JPEG is created in the project tree.
+  - 固定源中未提供第 20、23 题独立图形标记的两套新课标卷按题面保留纯文本，不人为追加示意图；实际出现的标记均已映射到本地 TikZ 源。
 
-- [ ] **Task 5 — Generate and check shared LaTeX plus all edition shells.**
+- [x] **Task 5 — Generate and check shared LaTeX plus all edition shells.**
   - Run `generate_projects.py`, `make_short_answers.py` and `make_editions.py` for `phase2-b99`, then run their `--check` commands.
   - Confirm each project has one shared question file, one shared answer file, one short-answer file and four shells with no duplicated hand-maintained content.
 
-- [ ] **Task 6 — Import provenance and perform the formal build.**
+- [x] **Task 6 — Import provenance and perform the formal build.**
   - Initialize three roles per paper under `.work/phase2-b99`, attach source IDs/SHA/page evidence and mark unresolved answer/transcription cases with current blocking issues.
   - Dry-run and write `provenance.py import-batch`; build six papers × four editions with `build_projects.py build --formal --json`.
 
-- [ ] **Task 7 — Review every generated page and finalize.**
+- [x] **Task 7 — Review every generated page and finalize.**
   - Prepare 24 review work items, render every current PDF page with Poppler, inspect contact sheets and high-risk figure/answer pages, fill all eight checks, and run `finalize-batch-checked`.
   - Preserve `closed_with_blockers` if the issue ledger still contains open blockers; write `reports/phase2-b99.md`.
 
-- [ ] **Task 8 — Clean, verify and commit without pushing.**
+- [x] **Task 8 — Clean, verify and commit without pushing.**
   - Delete non-PDF/non-`.tex` files from every 2010 build directory, remove `.work/phase2-b99` and temporary renders, and ensure no new raster files exist.
   - Run source, CSV, solution, generation, short-answer, editions, provenance, build, review and report gates plus the full unittest suite.
   - Commit source checkpoint, final receipts/report and this plan separately; do not push.

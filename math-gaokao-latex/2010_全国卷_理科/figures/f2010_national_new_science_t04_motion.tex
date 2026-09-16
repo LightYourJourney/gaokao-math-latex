@@ -1,0 +1,31 @@
+% 2010 全国卷理科第 4 题：质点圆周运动的四个函数图象选项。
+\begin{tikzpicture}[font=\scriptsize, line width=0.35pt]
+  \begin{scope}[shift={(0,0)}]
+    \draw[->] (0,0) -- (3.8,0) node[right] {$t$};
+    \draw[->] (0,0) -- (0,2.35) node[above] {$d$};
+    \draw[domain=0:3.35, samples=100, smooth, variable=\tau]
+      plot (\tau,{2*abs(sin(deg(\tau)))});
+    \node[below left] at (0,0) {O}; \node at (0.2,2.55) {A};
+  \end{scope}
+  \begin{scope}[shift={(4.9,0)}]
+    \draw[->] (0,0) -- (3.8,0) node[right] {$t$};
+    \draw[->] (0,0) -- (0,2.35) node[above] {$d$};
+    \draw[domain=0:3.35, samples=100, smooth, variable=\tau]
+      plot (\tau,{2*abs(sin(deg(\tau+45)))});
+    \node[below left] at (0,0) {O}; \node at (0.2,2.55) {B};
+  \end{scope}
+  \begin{scope}[shift={(0,-3.0)}]
+    \draw[->] (0,0) -- (3.8,0) node[right] {$t$};
+    \draw[->] (0,0) -- (0,2.35) node[above] {$d$};
+    \draw[domain=0:3.35, samples=100, smooth, variable=\tau]
+      plot (\tau,{2*abs(sin(deg(\tau-45)))});
+    \node[below left] at (0,0) {O}; \node at (0.2,2.55) {C};
+  \end{scope}
+  \begin{scope}[shift={(4.9,-3.0)}]
+    \draw[->] (0,0) -- (3.8,0) node[right] {$t$};
+    \draw[->] (0,0) -- (0,2.35) node[above] {$d$};
+    \draw[domain=0:3.35, samples=100, smooth, variable=\tau]
+      plot (\tau,{2*abs(cos(deg(\tau)))});
+    \node[below left] at (0,0) {O}; \node at (0.2,2.55) {D};
+  \end{scope}
+\end{tikzpicture}

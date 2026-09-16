@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=.78,>=stealth]
+\coordinate (A) at (0,0); \coordinate (B) at (2.0,.35);
+\coordinate (C) at (3.55,1.65); \coordinate (A1) at (0,2.1);
+\coordinate (B1) at (2.0,2.45); \coordinate (C1) at (3.55,3.75);
+\coordinate (D) at (2.0,1.4); \coordinate (E) at (1.5,1.85);
+\draw[thick] (A)--(B)--(C);
+\draw[thick] (A1)--(B1)--(C1);
+\draw[thick] (A)--(A1) (B)--(B1) (C)--(C1);
+\draw[dashed] (A)--(C) (A1)--(C1) (B)--(C1);
+\draw[thick] (A)--(D)--(C);
+\draw[dashed] (D)--(E);
+\fill (A) circle (1pt) node[below left] {$A$};
+\fill (B) circle (1pt) node[below] {$B$};
+\fill (C) circle (1pt) node[right] {$C$};
+\fill (A1) circle (1pt) node[left] {$A_1$};
+\fill (B1) circle (1pt) node[above] {$B_1$};
+\fill (C1) circle (1pt) node[right] {$C_1$};
+\fill (D) circle (1pt) node[left] {$D$};
+\fill (E) circle (1pt) node[above] {$E$};
+\end{tikzpicture}

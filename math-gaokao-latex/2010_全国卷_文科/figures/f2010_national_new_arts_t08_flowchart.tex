@@ -1,0 +1,24 @@
+% 2010 全国卷文科第 8 题：程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, node distance=2.2mm, line width=0.4pt,
+  box/.style={draw, minimum height=1.5em, minimum width=5.8em, inner xsep=6pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.5em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.5em, inner xsep=3pt},
+  dec/.style={draw, diamond, aspect=2.6, inner sep=1.5pt}]
+  \node[term] (start) {开始};
+  \node[io, below=of start] (input) {输入 $N$};
+  \node[box, below=of input] (init) {$k=1,\ S=0$};
+  \node[box, below=of init] (step) {$S=S+\dfrac{1}{k(k+1)}$};
+  \node[dec, below=of step] (cond) {$k<N$};
+  \node[box, right=16mm of cond] (inc) {$k=k+1$};
+  \node[io, below=9mm of cond] (output) {输出 $S$};
+  \node[term, below=of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (step);
+  \draw[->] (step) -- (cond);
+  \draw[->] (cond.east) -- node[above] {是} (inc.west);
+  \draw[->] (inc.north) |- (step.east);
+  \draw[->] (cond.south) -- node[right] {否} (output.north);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}

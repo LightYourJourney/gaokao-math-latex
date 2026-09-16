@@ -13332,3 +13332,148 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0842
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "9aa462ec00473bf2517d85dd6570ae7ce778fa4b55895707711bec4aeb261035",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0843
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "4c83d6be516a0fa6ff760c3441dc40372faa83cfb3e5663ca4afe9b36e53cfcd",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0844
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "865a2810af73b98a26098744d684c9574cf670fdef21882ea1cdbc44bb96ecdb",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0845
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "93fba392b0a78bd007f8220bbab8b9d82c6ee8b91f008c8d4b24647b723a80bb",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0846
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "97d1d404267ccca98f78300b2904bf54c12d51f8869cdad6c427e5cfa4492ca0",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0847
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "063c6735daa3d03c08f55ac856032c7303c23ebbb8bbbca498b4e885e1794827",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0848
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "8354fbb6f1e0d53540491309c65ea079b8930558f3fc8a8868c26bf3d2c32e13",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0849
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "3b88812dc4d7e54ca921ceff0fb1b89c40792cd94433fabd7a212f4f5a249982",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2010-regular-national-new-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
