@@ -64,7 +64,6 @@ _ANSWER_TEX = re.compile(
     r"^\\(?:gkanswer|textbf)\{答案(?:[（(](\d+)[）)])?[：:](.*)\}$"
 )
 _CHOICE_LETTERS = re.compile(r"^([A-D]+)")
-_PENDING_CHOICE_ANSWERS = frozenset(("待核", "题面无正确选项（待核）"))
 _QUICK_ROW = "| 答案"
 # 行内转换不碰配图，故映射为空；严格模式让未配对 $ 之类的告警直接失败。
 _INLINE_CONTEXT = md2tex.ConversionContext(figure_map={}, strict=True)
@@ -238,7 +237,7 @@ def parse_quick_table(answer_key_text: str, count: int) -> Optional[Tuple[str, .
 def choice_letters(
     structure: Sequence[Tuple[str, int, int]], answers: Mapping[int, str]
 ) -> Tuple[Tuple[int, str], ...]:
-    """按题号顺序取出各选择题的答案字母；明确待核值保留为「待核」。"""
+    """按题号顺序取出各选择题的答案字母；非字母形是硬错误。"""
     found: List[Tuple[int, str]] = []
     for name, low, high in _ordered(structure):
         if name not in CHOICE_GROUPS:
@@ -246,15 +245,11 @@ def choice_letters(
         for number in range(low, high + 1):
             if number not in answers:
                 raise ShortAnswerError(f"第 {number} 题没有答案，无法渲染{name}")
-            answer = answers[number]
-            if answer in _PENDING_CHOICE_ANSWERS:
-                found.append((number, "待核"))
-                continue
-            match = _CHOICE_LETTERS.match(answer)
+            match = _CHOICE_LETTERS.match(answers[number])
             if match is None:
                 raise ShortAnswerError(
                     "第 %d 题属于%s，答案却不是字母形：%s"
-                    % (number, name, answer[:40])
+                    % (number, name, answers[number][:40])
                 )
             found.append((number, match.group(1)))
     return tuple(found)

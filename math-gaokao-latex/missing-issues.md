@@ -42,14 +42,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "evidence": "固定源 PDF（source_id src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902，印刷页 513）第 7 题给出 a=lg e、b=(lg e)^2、c=lg√e，按字面为 a=b=1、c=1/2；但四个选项均为严格不等式，没有对应的正确选项。",
+  "evidence": "复核确认 `lg` 为常用对数而非自然对数。令 t=lg e，由 2<e<3<√10 得 0<t<1/2，故 a=t>c=t/2>b=t^2，正确选项为 B；原阻断来自误读，不是固定源题面缺陷。",
   "fingerprint": "59423def55ea3b936c954b0491ba5c72fffad7d113848609bfb2b6924228afaa",
   "impact": "blocks_completion",
   "paper_id": "gk-2009-regular-national-2-arts",
   "question_id": "gk-2009-regular-national-2-arts-q07",
-  "resume_action": "取得同版官方勘误或其他可靠版本，确认 b 或选项文字；在此之前保留固定源字面，答案标为待核。",
+  "resume_action": "已完成复核：按常用对数重新计算并将答案修正为 B；不再需要外部勘误。",
   "source_id": "src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
