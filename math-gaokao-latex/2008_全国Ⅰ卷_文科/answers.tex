@@ -1,0 +1,645 @@
+% answers.tex —— 2008 年·全国大纲卷Ⅰ·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2008/2008_数学真题_全国1文_试题.md + 2008/2008_数学真题_全国1文_解析正文.md + 2008/2008_数学真题_全国1文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 为印刷页码 435–436 的两页题面，不附答案。以下解析均依据固定源独立复算；第 2、18 题图形在 LaTeX 工程中以 TikZ/PGFPlots 矢量源重绘。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+函数 $y=\sqrt{1-x}+\sqrt{x}$ 的定义域为\mbox{（　　）}
+
+（A）$\{x\mid x\leqslant1\}$\\
+（B）$\{x\mid x\geqslant0\}$\\
+（C）$\{x\mid x\geqslant1\text{ \text{或} }x\leqslant0\}$\\
+（D）$\{x\mid0\leqslant x\leqslant1\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+根式有意义要求 $1-x\geqslant0$ 且 $x\geqslant0$，故定义域为 $[0,1]$。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+汽车经过启动、加速行驶、匀速行驶、减速行驶之后停车，若把这一过程中汽车的行驶路程 $s$ 看作时间 $t$ 的函数，其图象可能是\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2008_national_1_arts_t02_graphs}\end{center}
+\nopagebreak[4]
+（A）图 A\\
+（B）图 B\\
+（C）图 C\\
+（D）图 D
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+路程函数的导数是速度。汽车启动、加速时速度递增，匀速时速度为常数，减速时速度递减至零，因此图象应先上凸、再为直线、最后下凸，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+$\left(1+\dfrac{x}{2}\right)^5$ 的展开式中 $x^2$ 的系数为\mbox{（　　）}
+
+（A）$10$\quad（B）$5$\quad（C）$\dfrac52$\quad（D）$1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$x^2$ 项取两次 $x/2$，其系数为
+
+\nopagebreak[4]
+\[
+\binom52\left(\frac12\right)^2=\frac52
+\]
+
+故选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+曲线 $y=x^3-2x+4$ 在点 $(1,3)$ 处的切线的倾斜角为\mbox{（　　）}
+
+（A）$30^\circ$\quad（B）$45^\circ$\quad（C）$60^\circ$\quad（D）$120^\circ$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+曲线斜率为 $y'=3x^2-2$，在 $x=1$ 处斜率为 $1$，故倾斜角为 $45^\circ$，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$\overrightarrow{AB}=\boldsymbol c$，$\overrightarrow{AC}=\boldsymbol b$。若点 $D$ 满足 $\overrightarrow{BD}=2\overrightarrow{DC}$，则 $\overrightarrow{AD}=$\mbox{（　　）}
+
+（A）$\dfrac23\boldsymbol b+\dfrac13\boldsymbol c$\quad（B）$\dfrac53\boldsymbol c-\dfrac23\boldsymbol b$\quad（C）$\dfrac23\boldsymbol b-\dfrac13\boldsymbol c$\quad（D）$\dfrac13\boldsymbol b+\dfrac23\boldsymbol c$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $\overrightarrow{BD}=2\overrightarrow{DC}$ 得 $D$ 将 $BC$ 按 $2:1$ 内分。因此
+
+\nopagebreak[4]
+\[
+\overrightarrow{AD}=\overrightarrow{AB}+\overrightarrow{BD}
+=\boldsymbol c+\frac23(\boldsymbol b-\boldsymbol c)
+=\frac23\boldsymbol b+\frac13\boldsymbol c
+\]
+
+故选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+$y=(\sin x-\cos x)^2-1$ 是\mbox{（　　）}
+
+（A）最小正周期为 $2\pi$ 的偶函数\\
+（B）最小正周期为 $2\pi$ 的奇函数\\
+（C）最小正周期为 $\pi$ 的偶函数\\
+（D）最小正周期为 $\pi$ 的奇函数
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+y=(\sin x-\cos x)^2-1=-\sin2x
+\]
+
+它是奇函数，最小正周期为 $\pi$，故选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知等比数列 $\{a_n\}$ 满足 $a_1+a_2=3$，$a_2+a_3=6$，则 $a_7=$\mbox{（　　）}
+
+（A）$64$\quad（B）$81$\quad（C）$128$\quad（D）$243$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设公比为 $q$，则
+
+\nopagebreak[4]
+\[
+a_1(1+q)=3,\qquad a_1q(1+q)=6
+\]
+
+相除得 $q=2$，从而 $a_1=1$，故 $a_7=2^6=64$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+若函数 $y=f(x)$ 的图象与函数 $y=\ln\sqrt{x}+1$ 的图象关于直线 $y=x$ 对称，则 $f(x)=$\mbox{（　　）}
+
+（A）$e^{2x-2}$\quad（B）$e^{2x}$\quad（C）$e^{2x+1}$\quad（D）$e^{2x+2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+反函数满足 $y=\frac12\ln x+1$，解得
+
+\nopagebreak[4]
+\[
+x=e^{2(y-1)}
+\]
+
+交换变量得 $f(x)=e^{2x-2}$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+为得到函数 $y=\cos\left(x+\dfrac\pi3\right)$ 的图象，只需将函数 $y=\sin x$ 的图象\mbox{（　　）}
+
+（A）向左平移 $\dfrac\pi6$ 个长度单位\\
+（B）向右平移 $\dfrac\pi6$ 个长度单位\\
+（C）向左平移 $\dfrac{5\pi}6$ 个长度单位\\
+（D）向右平移 $\dfrac{5\pi}6$ 个长度单位
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+\cos\left(x+\frac\pi3\right)=\sin\left(x+\frac{5\pi}6\right)
+\]
+
+故将 $y=\sin x$ 的图象向左平移 $5\pi/6$，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+若直线 $\dfrac{x}{a}+\dfrac{y}{b}=1$ 与圆 $x^2+y^2=1$ 有公共点，则\mbox{（　　）}
+
+（A）$a^2+b^2\leqslant1$\quad（B）$a^2+b^2\geqslant1$\quad（C）$\dfrac1{a^2}+\dfrac1{b^2}\leqslant1$\quad（D）$\dfrac1{a^2}+\dfrac1{b^2}\geqslant1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+直线与单位圆有公共点，当且仅当原点到直线的距离不超过 $1$：
+
+\nopagebreak[4]
+\[
+\frac{|ab|}{\sqrt{a^2+b^2}}\leqslant1
+\Longleftrightarrow \frac1{a^2}+\frac1{b^2}\geqslant1
+\]
+
+故选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知三棱柱 $ABC-A_1B_1C_1$ 的侧棱与底面边长都相等，$A_1$ 在底面 $ABC$ 内的射影为 $\triangle ABC$ 的中心，则 $AB_1$ 与底面 $ABC$ 所成角的正弦值等于\mbox{（　　）}
+
+（A）$\dfrac13$\quad（B）$\dfrac{\sqrt2}{3}$\quad（C）$\dfrac{\sqrt3}{3}$\quad（D）$\dfrac23$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设底面边长和侧棱长均为 $1$。侧棱向量的水平投影为从顶点到正三角形中心的向量，长度为 $1/\sqrt3$，故侧棱的竖直分量为 $\sqrt{2/3}$。计算 $\overrightarrow{AB_1}$ 的水平分量平方为 $7/3$，总长度平方为 $3$，所以直线与底面所成角的正弦为
+
+\nopagebreak[4]
+\[
+\frac{\sqrt{2/3}}{\sqrt3}=\frac{\sqrt2}{3}
+\]
+
+故选 B。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+将 $1,2,3$ 填入 $3\times3$ 的方格中，要求每行、每列都没有重复数字，下面是一种填法，则不同的填写方法共有\mbox{（　　）}
+
+\nopagebreak[4]
+\[
+\begin{matrix}1&2&3\\3&1&2\\2&3&1\end{matrix}
+\]
+
+（A）$6$ 种\quad（B）$12$ 种\quad（C）$24$ 种\quad（D）$48$ 种
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+固定第一行后，第二行有两种循环排列，第三行随之确定；第一行有 $3!$ 种，因此总数为 $3!\cdot2=12$，选 B。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若 $x,y$ 满足约束条件
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x+y\geqslant0,\\
+x-y+3\geqslant0,\\
+0\leqslant x\leqslant3,
+\end{cases}
+\]
+
+则 $z=2x-y$ 的最大值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+可行域顶点为 $(0,0)$、$(0,3)$、$(3,-3)$、$(3,6)$。在这些点上计算 $z=2x-y$，其中
+
+\nopagebreak[4]
+\[
+z(3,-3)=2\cdot3-(-3)=9
+\]
+
+所以填 $9$。
+
+\gkanswer{答案：$9$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知抛物线 $y=ax^2-1$ 的焦点是坐标原点，则以抛物线与两坐标轴的三个交点为顶点的三角形面积为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+抛物线写为 $x^2=\frac1a(y+1)$，其顶点为 $(0,-1)$，焦点纵坐标为 $-1+1/(4a)$。焦点是原点，故 $a=1/4$。与坐标轴交于 $(\pm2,0)$ 和 $(0,-1)$，三角形面积为 $2$。
+
+\gkanswer{答案：$2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$\angle A=90^\circ$，$\tan B=\dfrac34$。若以 $A\text{、}B$ 为焦点的椭圆经过点 $C$，则该椭圆的离心率 $e=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令 $AB=4k$，$AC=3k$，则 $BC=5k$。以 $A,B$ 为焦点的椭圆经过 $C$，故 $2a=AC+BC=8k$，而 $2c=AB=4k$，从而 $e=c/a=1/2$。
+
+\gkanswer{答案：$\dfrac12$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知菱形 $ABCD$ 中，$AB=2$，$\angle A=120^\circ$，沿对角线 $BD$ 将 $\triangle ABD$ 折起，使二面角 $A-BD-C$ 为 $120^\circ$，则点 $A$ 到 $\triangle BCD$ 所在平面的距离等于\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+菱形对角线 $BD=2\sqrt3$，点 $A$ 到折痕 $BD$ 的距离为 $1$。折起后点到另一平面的距离为
+
+\nopagebreak[4]
+\[
+1\cdot\sin120^\circ=\frac{\sqrt3}{2}
+\]
+
+\gkanswer{答案：$\dfrac{\sqrt3}{2}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+设 $\triangle ABC$ 的内角 $A,B,C$ 所对的边长分别为 $a,b,c$，且 $a\cos B=3$，$b\sin A=4$。
+
+（1） 求边长 $a$；
+
+（2） 若 $\triangle ABC$ 的面积 $S=10$，求 $\triangle ABC$ 的周长 $l$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+由正弦定理，$a\sin B=b\sin A$，结合 $b\sin A=4$ 得 $a\sin B=4$。又 $a\cos B=3$，故 $a=5$。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+若三角形面积为 $10$，则
+
+\nopagebreak[4]
+\[
+10=\frac12bc\sin A=\frac12c(b\sin A)=2c
+\]
+
+\Needspace{5\baselineskip}
+所以 $c=5$。由余弦定理
+
+\nopagebreak[4]
+\[
+b^2=a^2+c^2-2ac\cos B=25+25-2\cdot5\cdot5\cdot\frac35=20
+\]
+
+故 $b=2\sqrt5$，周长为 $10+2\sqrt5$。
+
+\gkanswer{答案（1）：$a=5$。}
+
+\gkanswer{答案（2）：三角形周长 $l=10+2\sqrt5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+四棱锥 $A-BCDE$ 中，底面 $BCDE$ 为矩形，侧面 $ABC\perp$ 底面 $BCDE$，$BC=2$，$CD=\sqrt2$，$AB=AC$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2008_national_1_arts_t18_pyramid}\end{center}
+\nopagebreak[4]
+（1） 证明：$AD\perp CE$；
+
+（2） 设侧面 $ABC$ 为等边三角形，求二面角 $C-AD-E$ 的大小。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+建立坐标系：$B=(0,0,0)$，$C=(2,0,0)$，$D=(2,\sqrt2,0)$，$E=(0,\sqrt2,0)$。因 $ABC\perp BCDE$ 且 $AB=AC$，可设 $A=(1,0,h)$。
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+\overrightarrow{AD}=(1,\sqrt2,-h),\qquad
+\overrightarrow{CE}=(-2,\sqrt2,0)
+\]
+
+从而 $\overrightarrow{AD}\cdot\overrightarrow{CE}=0$，即 $AD\perp CE$。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+当 $ABC$ 为边长 $2$ 的等边三角形时 $h=\sqrt3$。取两平面的法向量
+
+\nopagebreak[4]
+\[
+\boldsymbol n_1=\overrightarrow{AD}\times\overrightarrow{AC},\qquad
+\boldsymbol n_2=\overrightarrow{AD}\times\overrightarrow{AE}
+\]
+
+\Needspace{5\baselineskip}
+计算得 $|\boldsymbol n_1|=2\sqrt2$，$|\boldsymbol n_2|=2\sqrt5$，且 $|\boldsymbol n_1\cdot\boldsymbol n_2|=4$，故
+
+\nopagebreak[4]
+\[
+\cos\theta=\frac4{(2\sqrt2)(2\sqrt5)}=\frac1{\sqrt{10}}
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\cos\theta=\dfrac1{\sqrt{10}}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+在数列 $\{a_n\}$ 中，$a_1=1$，$a_{n+1}=2a_n+2^n$。
+
+（1） 设 $b_n=\dfrac{a_n}{2^{n-1}}$，证明：数列 $\{b_n\}$ 是等差数列；
+
+（2） 求数列 $\{a_n\}$ 的前 $n$ 项和 $S_n$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+由递推式
+
+\nopagebreak[4]
+\[
+b_{n+1}=\frac{a_{n+1}}{2^n}=\frac{2a_n+2^n}{2^n}=b_n+1
+\]
+
+且 $b_1=1$，故 $b_n=n$。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+因此 $a_n=n2^{n-1}$，前 $n$ 项和为
+
+\nopagebreak[4]
+\[
+S_n=\sum_{k=1}^n k2^{k-1}=1+(n-1)2^n
+\]
+
+\gkanswer{答案（1）：$b_n=n$。}
+
+\gkanswer{答案（2）：$a_n=n2^{n-1}$，$S_n=1+(n-1)2^n$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知 $5$ 只动物中有 $1$ 只患有某种疾病，需要通过化验血液来确定患病的动物。血液化验结果呈阳性的即为患病动物，呈阴性即没患病。下面是两种化验方案：
+
+方案甲：逐个化验，直到能确定患病动物为止。
+
+方案乙：先任取 $3$ 只，将它们的血液混在一起化验。若结果呈阳性则表明患病动物为这 $3$ 只中的 $1$ 只，然后再逐个化验，直到能确定患病动物为止；若结果呈阴性则在另外 $2$ 只中任取 $1$ 只化验。
+
+求依方案甲所需化验次数不少于依方案乙所需化验次数的概率。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+方案甲的化验次数为 $1,2,3,4,4$，概率分别为 $1/5,1/5,1/5,1/5,1/5$。方案乙先混合三只：若阳性，之后在三只中逐个确定，次数为 $2$ 或 $3$；若阴性，再化验另外两只中的一只，总次数为 $2$。故方案乙次数为 $2,3$，概率分别为 $3/5,2/5$。
+
+\Needspace{5\baselineskip}
+两方案的随机选择独立，因此
+
+\nopagebreak[4]
+\[
+P(X\geqslant Y)=\frac35\cdot\frac45+\frac25\cdot\frac35=\frac{18}{25}
+\]
+
+\gkanswer{答案：$\dfrac{18}{25}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x^3+ax^2+x+1$，$a\in\mathbb R$。
+
+（1） 讨论函数 $f(x)$ 的单调区间；
+
+（2） 设函数 $f(x)$ 在区间 $\left(-\dfrac23,-\dfrac13\right)$ 内是减函数，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\nopagebreak[4]
+\[
+f'(x)=3x^2+2ax+1
+\]
+
+\Needspace{5\baselineskip}
+当 $|a|\leqslant\sqrt3$ 时判别式不大于零，故 $f'(x)\geqslant0$，函数在 $\mathbb R$ 上递增。若 $|a|>\sqrt3$，令
+
+\nopagebreak[4]
+\[
+x_{1,2}=\frac{-a\mp\sqrt{a^2-3}}{3}
+\]
+
+则 $f'(x)$ 在两根外为正、两根之间为负，函数依次递增、递减、递增。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+要使 $f$ 在 $(-2/3,-1/3)$ 上递减，需该区间内 $f'(x)\leqslant0$。由于 $f'$ 为开口向上的二次函数，只需检查两端点：
+
+\nopagebreak[4]
+\[
+f'\left(-\frac23\right)=\frac73-\frac{4a}{3}\leqslant0,\qquad
+f'\left(-\frac13\right)=\frac43-\frac{2a}{3}\leqslant0
+\]
+
+故 $a\geqslant2$。
+
+\gkanswer{答案（1）：当 $|a|\leqslant\sqrt3$ 时，$f(x)$ 在 $\mathbb R$ 上单调递增；当 $a>\sqrt3$ 或 $a<-\sqrt3$ 时，单调区间由 $f'(x)=0$ 的两个根分隔。}
+
+\gkanswer{答案（2）：$a\geqslant2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+双曲线的中心为原点 $O$，焦点在 $x$ 轴上，两条渐近线分别为 $l_1,l_2$，经过右焦点 $F$ 垂直于 $l_1$ 的直线分别交 $l_1,l_2$ 于 $A,B$ 两点。已知 $\overrightarrow{OA}$、$\overrightarrow{AB}$、$\overrightarrow{OB}$ 成等差数列，且 $\overrightarrow{BF}$ 与 $\overrightarrow{FA}$ 同向。
+
+（1） 求双曲线的离心率；
+
+（2） 设 $AB$ 被双曲线所截得的线段的长为 $4$，求双曲线的方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+设双曲线为 $x^2/a^2-y^2/b^2=1$，令 $t=b/a$。两条渐近线为 $y=\pm tx$，焦点为 $(c,0)$，其中 $c=a\sqrt{1+t^2}$。
+
+\Needspace{5\baselineskip}
+过焦点且垂直于 $y=tx$ 的直线与两条渐近线交于 $A,B$。由题设 $\overrightarrow{BF}$ 与 $\overrightarrow{FA}$ 同向，取 $0<t<1$。计算得
+
+\nopagebreak[4]
+\[
+OA=a,\qquad AB=\frac{2at}{1-t^2},\qquad OB=\frac{a(1+t^2)}{1-t^2}
+\]
+
+\Needspace{5\baselineskip}
+三段长度成等差数列，故 $2AB=OA+OB$，从而 $t=1/2$，因此
+
+\nopagebreak[4]
+\[
+e=\frac ca=\sqrt{1+t^2}=\frac{\sqrt5}{2}
+\]
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+此时 $b=a/2$。将过焦点的直线代入双曲线，所得弦长为 $2a/3$。由弦长为 $4$ 得 $a=6,b=3$，双曲线方程为
+
+\nopagebreak[4]
+\[
+\frac{x^2}{36}-\frac{y^2}{9}=1
+\]
+
+\gkanswer{答案（1）：$e=\dfrac{\sqrt5}{2}$。}
+
+\gkanswer{答案（2）：双曲线方程为 $\dfrac{x^2}{36}-\dfrac{y^2}{9}=1$。}
+
+\end{answer}

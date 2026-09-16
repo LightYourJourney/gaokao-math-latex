@@ -18,6 +18,23 @@
 }
 ```
 
+## ISSUE-0839
+
+```json
+{
+  "affected_paper_ids": [],
+  "evidence": "固定源 PDF 第 2 页第 18 题的题干仅给出等差数列 a_4=10 且 a_3、a_6、a_10 成等比数列。设公差为 d，可得 (10+2d)^2=(10-d)(10+6d)，即 d(d-1)=0；d=0 与 d=1 均满足题面，分别给出 S_20=200 与 S_20=330。题面未写出‘非零公差’或‘非等差常数列’限制。",
+  "fingerprint": "b808c216ae80a79fa37a237b01f97370313f693ad1f9a2057e748894e10a1952",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2008-regular-national-2-arts",
+  "question_id": "gk-2008-regular-national-2-arts-q18",
+  "resume_action": "取得同版官方答案或清晰勘误，确认是否隐含排除公差为零；在此之前保留两个合法值，并在解析中说明分支。",
+  "source_id": "src-f95822698595457bf8e1dd66e1257dafb395f0c106977e34f771837d14c654aa",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
 ## ISSUE-0834
 
 ```json
