@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=stealth,node distance=8mm and 13mm,scale=.78,
+  every node/.style={font=\small}]
+\node[draw,rounded corners,minimum width=18mm,minimum height=7mm] (start) {开始};
+\node[draw,minimum width=25mm,minimum height=7mm,below=of start] (input) {输入 $N$};
+\node[draw,minimum width=32mm,minimum height=7mm,below=of input] (init) {$k=1,\ p=1$};
+\node[draw,minimum width=34mm,minimum height=7mm,below=of init] (mul) {$p=p\cdot k$};
+\node[draw,diamond,aspect=2,below=of mul] (test) {$k<N$};
+\node[draw,minimum width=25mm,minimum height=7mm,right=of test] (inc) {$k=k+1$};
+\node[draw,minimum width=30mm,minimum height=7mm,below=of test] (out) {输出 $p$};
+\node[draw,rounded corners,minimum width=18mm,minimum height=7mm,below=of out] (end) {结束};
+\draw[->] (start)--(input)--(init)--(mul)--(test);
+\draw[->] (test)--node[above] {是}(inc);
+\draw[->] (inc) |- (mul);
+\draw[->] (test)--node[right] {否}(out)--(end);
+\end{tikzpicture}

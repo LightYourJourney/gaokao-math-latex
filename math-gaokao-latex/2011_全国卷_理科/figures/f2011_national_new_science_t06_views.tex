@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=stealth,scale=.62]
+\node[font=\scriptsize] at (-1.1,2.7) {正视图};
+\draw[thick] (-2.2,0)--(-.2,0)--(-.2,2.2)--(-2.2,2.2)--cycle;
+\draw[thick] (-1.2,0)--(-1.2,2.2);
+\node[font=\scriptsize] at (-1.2,-.35) {俯视图};
+\draw[thick] (-2.2,-1.1)--(-.2,-1.1)--(-.2,-.1)--(-2.2,-.1)--cycle;
+\draw[dashed] (-1.2,-1.1)--(-1.2,-.1);
+\foreach \x/\lab in {1.0/{(A)},4.0/{(B)},7.0/{(C)},10.0/{(D)}} {
+  \node[font=\scriptsize] at (\x,2.55) {\lab};
+  \draw[thick] (\x-.65,.25)--(\x,.25+1.65)--(\x+.65,.25)--cycle;
+}
+\draw[dashed] (3.35,.25)--(4.0,1.9)--(4.65,.25);
+\draw[thick] (6.35,.25)--(7.0,1.9)--(7.65,.25);
+\draw[dashed] (9.35,.25)--(10.0,1.9)--(10.65,.25);
+\end{tikzpicture}
