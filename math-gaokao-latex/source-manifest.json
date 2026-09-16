@@ -867,6 +867,17 @@
         "gk-2008-regular-national-2-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b98",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-regular-national-1-arts",
+        "gk-2009-regular-national-1-science",
+        "gk-2009-regular-national-2-arts",
+        "gk-2009-regular-national-2-science"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -876,7 +887,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "106fae77-0272-4a75-8156-091b3cf4873d",
+  "last_transaction_id": "7ae53993-9b2d-4120-9f25-48e33fecce3a",
   "papers": [
     {
       "blocked_from": null,
@@ -12456,9 +12467,273 @@
       "title": "2008 年·全国大纲卷Ⅱ·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅰ卷_文科/figures/f2009_national_1_arts_t20_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅰ卷_文科/figures/f2009_national_1_arts_t23_parabola_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2009_regular_national_1_arts",
+        "id": "gk-2009-regular-national-1-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 509–510；PDF 不附答案和解析，答案和解析均为本库独立复算。第 12、13 题固定源字面重复，见 ISSUE-0840。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国大纲卷Ⅰ",
+        "structure": {
+          "填空题": [
+            14,
+            17
+          ],
+          "解答题": [
+            18,
+            23
+          ],
+          "选择题": [
+            1,
+            13
+          ]
+        },
+        "track": "文科",
+        "variant": "全国1文"
+      },
+      "issue_ids": [
+        "ISSUE-0840"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-regular-national-1-arts",
+      "production_state": "blocked",
+      "project_dir": "2009_全国Ⅰ卷_文科",
+      "question_count": 23,
+      "resume_action": "取得同版官方勘误或其他可靠版本，确认第 12、13 题是否确为重复题；在此之前保留固定源字面与两个相同的独立计算结果。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_全国1文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_全国1文_含解析.md",
+        "questions": "2009/2009_数学真题_全国1文_试题.md",
+        "solution_body": "2009/2009_数学真题_全国1文_解析正文.md"
+      },
+      "source_ids": [
+        "src-867f441324b4d2d957468f27b46ef4193ad0fd6e8755a90e64ad242a8dc2b3cf"
+      ],
+      "title": "2009 年·全国大纲卷Ⅰ·文科",
+      "track": "arts",
+      "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅰ卷_理科/figures/f2009_national_1_science_t18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅰ卷_理科/figures/f2009_national_1_science_t21_parabola_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅰ卷_理科/figures/f2009_national_1_science_t22_coordinate_grid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2009_regular_national_1_science",
+        "id": "gk-2009-regular-national-1-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 507–508；PDF 不附答案和解析，答案和解析均为本库独立复算。第 18、21、22 题图形重绘为矢量源。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国大纲卷Ⅰ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国1理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-regular-national-1-science",
+      "production_state": "compiled",
+      "project_dir": "2009_全国Ⅰ卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_全国1理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_全国1理_含解析.md",
+        "questions": "2009/2009_数学真题_全国1理_试题.md",
+        "solution_body": "2009/2009_数学真题_全国1理_解析正文.md"
+      },
+      "source_ids": [
+        "src-57a608b2af1c750146b1b88fcc47fa1605a2c173d76fa925a99dcdbd3db29aae"
+      ],
+      "title": "2009 年·全国大纲卷Ⅰ·理科",
+      "track": "science",
+      "year": 2009
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t12_cube_net.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2009_regular_national_2_arts",
+        "id": "gk-2009-regular-national-2-arts",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 513–514；PDF 不附答案和解析，答案和解析均为本库独立复算。第 7 题固定源选项无正确严格不等式，见 ISSUE-0841。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国大纲卷Ⅱ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国2文"
+      },
+      "issue_ids": [
+        "ISSUE-0841"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-regular-national-2-arts",
+      "production_state": "blocked",
+      "project_dir": "2009_全国Ⅱ卷_文科",
+      "question_count": 22,
+      "resume_action": "取得同版官方勘误或其他可靠版本，确认 b 或选项文字；在此之前保留固定源字面，答案标为待核。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_全国2文_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_全国2文_含解析.md",
+        "questions": "2009/2009_数学真题_全国2文_试题.md",
+        "solution_body": "2009/2009_数学真题_全国2文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902"
+      ],
+      "title": "2009 年·全国大纲卷Ⅱ·文科",
+      "track": "arts",
+      "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅱ卷_理科/figures/f2009_national_2_science_t12_cube_net.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_全国Ⅱ卷_理科/figures/f2009_national_2_science_t18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2009_regular_national_2_science",
+        "id": "gk-2009-regular-national-2-science",
+        "note": "固定源为 2 页 A3 题面，原卷印刷页码 511–512；PDF 不附答案和解析，答案和解析均为本库独立复算。第 12、18 题图形重绘为矢量源。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "全国大纲卷Ⅱ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国2理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-regular-national-2-science",
+      "production_state": "compiled",
+      "project_dir": "2009_全国Ⅱ卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_全国2理_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_全国2理_含解析.md",
+        "questions": "2009/2009_数学真题_全国2理_试题.md",
+        "solution_body": "2009/2009_数学真题_全国2理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c67c9d5fa4334b77af6704bdd5481285a086273318d9f6e7dd228f39786ebf4f"
+      ],
+      "title": "2009 年·全国大纲卷Ⅱ·理科",
+      "track": "science",
+      "year": 2009
     }
   ],
-  "revision": 2674,
+  "revision": 2678,
   "schema_version": 1,
   "sources": [
     {
@@ -22387,8 +22662,8 @@
       "exam_type": "regular",
       "git_blob_oid": "90c5a6221713e6b80ca989f2101e711cb935844b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-regular-national-1-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009大纲1文(河北,河南,山西,广西).pdf",
       "regions": [],
       "source_id": "src-867f441324b4d2d957468f27b46ef4193ad0fd6e8755a90e64ad242a8dc2b3cf",
@@ -22411,8 +22686,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ae7fdeafd1a31883d8f03d08487542b64b073152",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-regular-national-1-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009大纲1理(河北,河南,山西,广西).pdf",
       "regions": [],
       "source_id": "src-57a608b2af1c750146b1b88fcc47fa1605a2c173d76fa925a99dcdbd3db29aae",
@@ -22435,8 +22710,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f28cafeb723893bbc7945a712985d7526e4a28be",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-regular-national-2-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009大纲2文(黑龙江,吉林,贵州,新疆,内蒙古,青海,云南,西藏,甘肃).pdf",
       "regions": [],
       "source_id": "src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902",
@@ -22459,8 +22734,8 @@
       "exam_type": "regular",
       "git_blob_oid": "78f550947c32bcb271f7743b6592893d7f1252f4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-regular-national-2-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009大纲2理(黑龙江,吉林,贵州,新疆,内蒙古,青海,云南,西藏,甘肃).pdf",
       "regions": [],
       "source_id": "src-c67c9d5fa4334b77af6704bdd5481285a086273318d9f6e7dd228f39786ebf4f",

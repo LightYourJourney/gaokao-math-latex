@@ -1,0 +1,301 @@
+{
+  "attempt_id": "89d0f1ef-610d-4878-81c3-36e6429b1f5f",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/answers.tex",
+        "sha256": "d3638deaf1a093fb415dd4af112d332ca1cbf31681593f58499a9d0112fea4d9"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/answers_short.tex",
+        "sha256": "f19256a1f04fa3d486149d1609202cb3adf5b7b591c39810dc34674251683615"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t12_cube_net.tex",
+        "sha256": "284c31b0969ed0ccdbb8537272f46843864babf1c884ef23671bad7875fb918f"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t19_prism.tex",
+        "sha256": "edff91bb43d9f2866b24445703d9266ac96f579ef1e77c3e9b28bc48bbfddac9"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/questions.tex",
+        "sha256": "d0f0b08e95d8df2222cda28e16541ad470d4e8b44f56a7a5d55b879470c39c6b"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/印刷版.tex",
+        "sha256": "9cd307f2f6ede7f3d7f7093b3b18847b94f20abea9bf47512b30a323220426d8"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/简答版.tex",
+        "sha256": "028f7a941b000e57b0fdfc7ce85de5548558dc85a0d78ff535101b587cad8d0f"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/解析版.tex",
+        "sha256": "f7f7093a66180bc9fc10d06c6b0ec7696b89e9f7df6cd6c2afd5b10d4d185e51"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/试题版.tex",
+        "sha256": "5eb683a442e31741f7814197858912675d8afd7167e3acfb2d10ec3e1fc15ad6"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "def55d92bcd74d07c35922e9664d77064cd8182df13667bfc1c56c48291859d9"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "102e75f107169fce97f38187853b6d4c26eceb90930b7711f18468ec716f5f34"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 4,
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/build/试题版.pdf",
+        "sha256": "b10b2068140488d4591d74b50a3ca653c895c6a8bad726ef515eff70a1e2e9d7",
+        "size_bytes": 109708
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2009_全国Ⅱ卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 16,
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/build/解析版.pdf",
+        "sha256": "edb41eb896ce684a7547fe8ce6d1801932a1a66a78e35f238ffc44639f49645c",
+        "size_bytes": 171487
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2009_全国Ⅱ卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/build/简答版.pdf",
+        "sha256": "07b0e9464cb1841dd3f2101434d90eaf10177c6e5484be0f29b322ccb6bfe927",
+        "size_bytes": 121347
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2009_全国Ⅱ卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": [
+          {
+            "text": "LaTeX Warning: There were undefined references."
+          }
+        ]
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        },
+        {
+          "exit_code": 0,
+          "pass": 2
+        }
+      ],
+      "pdf": {
+        "page_count": 12,
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/build/印刷版.pdf",
+        "sha256": "d1cc8b6f8a1de40efcadf9492542202e54d657314e5873fbd41431a1d001cb2b",
+        "size_bytes": 169589
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2009_全国Ⅱ卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-09-16T17:31:01+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2009/2009_数学真题_全国2文_答案要点.md",
+        "sha256": "7b5aea1d7f523a3474c30490269f9672bf574a45bf81a359f6d198706c581e8b"
+      },
+      {
+        "path": "2009/2009_数学真题_全国2文_解析正文.md",
+        "sha256": "f43e0ada8aa4e5f1641360d1efda2336b0a1467a4517af92e8e79135e82902d8"
+      },
+      {
+        "path": "2009/2009_数学真题_全国2文_试题.md",
+        "sha256": "fb861664b061cc010c077d24b6a650048f9bce6edc49a3ce5873beb9f1b100b0"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t12_cube_net.tex",
+        "sha256": "284c31b0969ed0ccdbb8537272f46843864babf1c884ef23671bad7875fb918f"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/figures/f2009_national_2_arts_t19_prism.tex",
+        "sha256": "edff91bb43d9f2866b24445703d9266ac96f579ef1e77c3e9b28bc48bbfddac9"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/印刷版.tex",
+        "sha256": "9cd307f2f6ede7f3d7f7093b3b18847b94f20abea9bf47512b30a323220426d8"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/简答版.tex",
+        "sha256": "028f7a941b000e57b0fdfc7ce85de5548558dc85a0d78ff535101b587cad8d0f"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/解析版.tex",
+        "sha256": "f7f7093a66180bc9fc10d06c6b0ec7696b89e9f7df6cd6c2afd5b10d4d185e51"
+      },
+      {
+        "path": "math-gaokao-latex/2009_全国Ⅱ卷_文科/试题版.tex",
+        "sha256": "5eb683a442e31741f7814197858912675d8afd7167e3acfb2d10ec3e1fc15ad6"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "6096fcad9c5c5a9ffa8d361b05dab53fbce376dd323459aac9f79053afc80740"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
+      }
+    ],
+    "tree_sha256": "e83f9b4c7a9598efebbd39dc94df38a48c97f5b25f8db36ad29883aba25ae92a"
+  },
+  "input_projection": "81ba0961856b0500bdc8dfa7be95b3754ed03a697032281e53479242aec2827d",
+  "manifest_revision": 2677,
+  "paper_id": "gk-2009-regular-national-2-arts",
+  "previous_attempt_id": null,
+  "project_dir": "2009_全国Ⅱ卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-09-16T17:30:30+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
+        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
+        "version": "pdfinfo version 26.09.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
+        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
+        "version": "pdftoppm version 26.09.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
+        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
+        "version": "pdftotext version 26.09.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      }
+    ]
+  }
+}

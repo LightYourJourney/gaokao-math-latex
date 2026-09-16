@@ -367,6 +367,14 @@ class RenderTests(unittest.TestCase):
                 TITLE, ANSWER_KEY_PATH, INDEX_METADATA[PROJECT_DIR]["structure"], answers
             )
 
+    def test_an_explicit_pending_choice_is_rendered_without_fabricating_a_letter(self):
+        answers = dict(self.answers)
+        answers[1] = "题面无正确选项（待核）"
+        text = render_short_answers(
+            TITLE, ANSWER_KEY_PATH, INDEX_METADATA[PROJECT_DIR]["structure"], answers
+        )
+        self.assertIn("答案 & 待核 & B \\\\", text)
+
     def test_a_question_missing_from_the_structure_is_a_hard_error(self):
         with self.assertRaises(ShortAnswerError):
             self.render(structure={"选择题": [1, 2]})

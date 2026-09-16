@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=.48,>=stealth]
+\draw[step=1,gray!65] (-3,-2) grid (4,4);
+\draw[->] (-3.3,0)--(4.4,0) node[right] {$b$};
+\draw[->] (0,-2.3)--(0,4.4) node[above] {$c$};
+\foreach \x in {-2,-1,1,2,3,4}
+  \node[below] at (\x,0) {$\x$};
+\foreach \y in {-1,1,2,3,4}
+  \node[left] at (0,\y) {$\y$};
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}

@@ -18,6 +18,42 @@
 }
 ```
 
+## ISSUE-0840
+
+```json
+{
+  "affected_paper_ids": [
+    "gk-2009-regular-national-1-arts"
+  ],
+  "conflict_code": "duplicate-choice-item-12-13",
+  "current_evidence": "固定源 PDF（source_id src-867f441324b4d2d957468f27b46ef4193ad0fd6e8755a90e64ad242a8dc2b3cf，印刷页 509）中的第 12、13 题题干、椭圆方程、向量条件和 A-D 选项逐字重复。题面按固定源原样保留，不能据此判断其中一题是否应为其他题。",
+  "fingerprint": "51bcb9560599f9ba5144455fd50788f274103ee6a273f31eef055c747d2272bd",
+  "impact": "blocks_completion",
+  "paper_id": null,
+  "resume_action": "取得同版官方勘误或其他可靠版本，确认第 12、13 题是否确为重复题；在此之前保留固定源字面与两个相同的独立计算结果。",
+  "source_id": "src-867f441324b4d2d957468f27b46ef4193ad0fd6e8755a90e64ad242a8dc2b3cf",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0841
+
+```json
+{
+  "affected_paper_ids": [],
+  "evidence": "固定源 PDF（source_id src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902，印刷页 513）第 7 题给出 a=lg e、b=(lg e)^2、c=lg√e，按字面为 a=b=1、c=1/2；但四个选项均为严格不等式，没有对应的正确选项。",
+  "fingerprint": "59423def55ea3b936c954b0491ba5c72fffad7d113848609bfb2b6924228afaa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-regular-national-2-arts",
+  "question_id": "gk-2009-regular-national-2-arts-q07",
+  "resume_action": "取得同版官方勘误或其他可靠版本，确认 b 或选项文字；在此之前保留固定源字面，答案标为待核。",
+  "source_id": "src-0edea5107f19ab7a372cdf45d0f6d80b04d55899bf82531626bf29483732d902",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
 ## ISSUE-0839
 
 ```json
