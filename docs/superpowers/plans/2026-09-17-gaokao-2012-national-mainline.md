@@ -39,11 +39,11 @@
 - Create: math-gaokao-latex/.work/phase2-b01/register.json (ignored)
 - Modify by tool: math-gaokao-latex/source-manifest.json
 
-- [ ] Verify all four source IDs, SHA-256 values, PDF page counts, printed page ranges and raw paths against the fixed-source table above.
-- [ ] Use project directories 2012_全国大纲卷_文科, 2012_全国大纲卷_理科, 2012_全国卷_文科, 2012_全国卷_理科; use canonical Markdown prefixes 2012_数学真题_全国大纲文, 2012_数学真题_全国大纲理, 2012_数学真题_全国新课标文, 2012_数学真题_全国新课标理.
-- [ ] Register structures 选择题 1–12 / 填空题 13–16 / 解答题 17–22 for both outline papers and 解答题 17–24 for both new-curriculum papers.
-- [ ] Freeze these expected vector figure families after source inspection: outline arts q19 pyramid; outline science q18 pyramid; new arts q6 flowchart, q7 grid/three-view, q22 cyclic-geometry diagram; new science q6 flowchart, q10 graph options, q15 circuit, q19 prism, q22 cyclic-geometry diagram.
-- [ ] Run source_manifest.py register-papers dry-run, then --write exactly once after all four canonical source triples exist.
+- [x] Verify all four source IDs, SHA-256 values, PDF page counts, printed page ranges and raw paths against the fixed-source table above.
+- [x] Use project directories 2012_全国大纲卷_文科, 2012_全国大纲卷_理科, 2012_全国卷_文科, 2012_全国卷_理科; use canonical Markdown prefixes 2012_数学真题_全国大纲文, 2012_数学真题_全国大纲理, 2012_数学真题_全国新课标文, 2012_数学真题_全国新课标理.
+- [x] Register structures 选择题 1–12 / 填空题 13–16 / 解答题 17–22 for both outline papers and 解答题 17–24 for both new-curriculum papers.
+- [x] Freeze these expected vector figure families after source inspection: outline arts q19 pyramid; outline science q18 pyramid; new arts q6 flowchart, q7 grid/three-view, q22 cyclic-geometry diagram; new science q6 flowchart, q7 grid/three-view, q10 graph options, q15 circuit, q19 prism, q22 cyclic-geometry diagram.
+- [x] Run source_manifest.py register-papers dry-run, then --write exactly once after all four canonical source triples exist.
 
 ### Task 2 — Transcribe the four fixed source question papers
 
@@ -54,9 +54,9 @@
 - Create: 2012/2012_数学真题_全国新课标文_试题.md
 - Create: 2012/2012_数学真题_全国新课标理_试题.md
 
-- [ ] Each paper must contain frontmatter with source ID, raw path, printed pages, track, question count and the statement that answers/solutions are independently reconstructed.
-- [ ] Transcribe every question, option, formula, table, unit and sub-question from the fixed PDF; preserve the source page break facts and use logical image markers only.
-- [ ] Run solution_sources.parse_question_blocks for counts 22/22/24/24 and independently compare the four texts against rendered source pages.
+- [x] Each paper must contain frontmatter with source ID, raw path, printed pages, track, question count and the statement that answers/solutions are independently reconstructed.
+- [x] Transcribe every question, option, formula, table, unit and sub-question from the fixed PDF; preserve the source page break facts and use logical image markers only.
+- [x] Run solution_sources.parse_question_blocks for counts 22/22/24/24 and independently compare the four texts against rendered source pages.
 
 ### Task 3 — Reconcile answers and independent solutions
 
@@ -66,9 +66,9 @@
 - Create the four _解析正文.md files under 2012/.
 - Create the four generated _含解析.md files through solution_sources.py.
 
-- [ ] Recompute every answer, including all probability/statistics, sequences, spatial geometry, analytic geometry, calculus and parameter-range parts; preserve multiple valid branches when the equation permits them.
-- [ ] Keep every answer key and solution block structurally aligned with its question block; run extract-batch --write and check-batch for phase2-b01.
-- [ ] Any unreadable glyph, source ambiguity or disagreement must receive an issue entry with source/page/question evidence; do not silently normalize it.
+- [x] Recompute every answer, including all probability/statistics, sequences, spatial geometry, analytic geometry, calculus and parameter-range parts; preserve multiple valid branches when the equation permits them.
+- [x] Keep every answer key and solution block structurally aligned with its question block; run extract-batch --write and check-batch for phase2-b01.
+- [x] Any unreadable glyph, source ambiguity or disagreement must receive an issue entry with source/page/question evidence; do not silently normalize it.
 
 ### Task 4 — Produce only vector figure sources
 
@@ -76,9 +76,9 @@
 
 - Create only the project-local figures/*.tex files for the frozen figure families in Task 1.
 
-- [ ] Redraw each source figure with TikZ/PGFPlots, including source labels, solid/dashed line semantics, axes/grid and option separation where present.
-- [ ] Check every logical Markdown image marker maps one-to-one to a registered .tex path with expected occurrence count 2 (question and combined source).
-- [ ] Confirm no image suffix is created under the four 2012 projects.
+- [x] Redraw each source figure with TikZ/PGFPlots, including source labels, solid/dashed line semantics, axes/grid and option separation where present.
+- [x] Check every logical Markdown image marker maps one-to-one to a registered .tex path with expected occurrence count 2 (question and combined source).
+- [x] Confirm no image suffix is created under the four 2012 projects.
 
 ### Task 5 — Generate shared LaTeX and four shells
 
@@ -86,8 +86,8 @@
 
 - Modify by tools: four 2012 project directories under math-gaokao-latex/.
 
-- [ ] Run generate_projects.py --batch phase2-b01 --write, make_short_answers.py --batch phase2-b01 --write, and make_editions.py --batch phase2-b01 --write.
-- [ ] Run all corresponding --check commands; assert that question counts, answer blocks, figure mappings and shell/template hashes are current.
+- [x] Run generate_projects.py --batch phase2-b01 --write, make_short_answers.py --batch phase2-b01 --write, and make_editions.py --batch phase2-b01 --write.
+- [x] Run all corresponding --check commands; assert that question counts, answer blocks, figure mappings and shell/template hashes are current.
 
 ### Task 6 — Import provenance and compile
 
@@ -95,9 +95,9 @@
 
 - Create by tools: four project provenance.json, four receipts/build.json, ignored .work/phase2-b01/provenance/.
 
-- [ ] Initialize question-review, answer-solve and answer-review role files; fill source page/hash and independently recomputed answer hash for every question.
-- [ ] Dry-run and write provenance.py import-batch, then run check-batch.
-- [ ] Run formal build for 16 PDFs; require zero build errors, missing glyphs, undefined references and real Overfull diagnostics.
+- [x] Initialize question-review, answer-solve and answer-review role files; fill source page/hash and independently recomputed answer hash for every question.
+- [x] Dry-run and write provenance.py import-batch, then run check-batch.
+- [x] Run formal build for 16 PDFs; require zero build errors, missing glyphs, undefined references and real Overfull diagnostics.
 
 ### Task 7 — Review every generated page
 
@@ -105,15 +105,15 @@
 
 - Create by tools: four project receipts/review.json and reports/phase2-b01.md.
 
-- [ ] Render all pages outside the repository; visually inspect question, solution, short-answer and print editions for glyphs, heading/option alignment, vector figures, header/footer, pagination, readable size and answer leakage.
-- [ ] Record any Underfull warning only as a page-specific visual exemption with source file and reason; do not hide a real overflow.
-- [ ] Run review_receipts.py finalize-batch-checked; require batch status closed or an evidence-backed closed_with_blockers.
+- [x] Render all pages outside the repository; visually inspect question, solution, short-answer and print editions for glyphs, heading/option alignment, vector figures, header/footer, pagination, readable size and answer leakage.
+- [x] Record any Underfull warning only as a page-specific visual exemption with source file and reason; do not hide a real overflow.
+- [x] Run review_receipts.py finalize-batch-checked; require batch status closed or an evidence-backed closed_with_blockers.
 
 ### Task 8 — Clean, verify and commit
 
-- [ ] Delete .work/phase2-b01, temporary render directories and all build files except PDF.
-- [ ] Run source manifest, solution, generation, short-answer, edition, provenance, build, review, CSV and full unit-test gates.
-- [ ] Commit source/generation checkpoint and final receipts/report separately; do not push.
+- [x] Delete .work/phase2-b01, temporary render directories and all build files except PDF.
+- [ ] Run source manifest, solution, generation, short-answer, edition, provenance, build, review, CSV and full unit-test gates. The full suite ran 810 tests with 2 environment/fixture cleanup errors; the 7 affected tests reran independently and passed.
+- [x] Commit source/generation checkpoint and final receipts/report separately; do not push.
 
 ## Acceptance criteria
 
