@@ -1,0 +1,25 @@
+% 2013 全国卷Ⅰ理科第 8 题：三视图与尺寸标注。
+\begin{tikzpicture}[font=\scriptsize, >=Stealth, line width=0.4pt]
+  % 左上：长方形与向下半圆
+  \begin{scope}
+    \draw (0,2)--(4,2)--(4,0)--(0,0)--cycle;
+    \draw (0,0) arc[start angle=180,end angle=360,radius=2];
+    \draw[thin] (0,0)--(0,-2.62) (4,0)--(4,-2.62);
+    \draw[<->] (0,-2.42)--(4,-2.42) node[midway,below] {$4$};
+    \draw[<->] (-0.35,0)--(-0.35,2) node[midway,left] {$2$};
+  \end{scope}
+  % 右上：阶梯侧视图
+  \begin{scope}[xshift=5.65cm]
+    \draw (0,0)--(4,0)--(4,2)--(2,2)--(2,4)--(0,4)--cycle;
+    \draw[<->] (-0.35,0)--(-0.35,4) node[midway,left] {$4$};
+    \draw[<->] (0,4.36)--(2,4.36) node[midway,above] {$2$};
+    \draw[<->] (4.36,0)--(4.36,2) node[midway,right] {$2$};
+  \end{scope}
+  % 左下：矩形俯视图及水平分界
+  \begin{scope}[yshift=-7.20cm]
+    \draw (0,0)--(4,0)--(4,4)--(0,4)--cycle;
+    \draw (0,2)--(4,2);
+    \draw[<->] (-0.35,0)--(-0.35,4) node[midway,left] {$4$};
+    \draw[<->] (4.36,0)--(4.36,2) node[midway,right] {$2$};
+  \end{scope}
+\end{tikzpicture}

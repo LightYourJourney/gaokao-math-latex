@@ -1,0 +1,12 @@
+% 2013 全国卷Ⅰ理科第 18 题：三棱柱 ABC-A_1B_1C_1，虚线为隐藏棱及辅助连线。
+\begin{tikzpicture}[font=\footnotesize, line width=0.45pt]
+  \coordinate (A) at (0,0); \coordinate (C) at (0.85,2.85); \coordinate (B) at (2.00,0.85);
+  % 平行投影中三条侧棱使用同一个平移向量。
+  \coordinate (A1) at (3.15,0); \coordinate (C1) at ($(C)+(3.15,0)$); \coordinate (B1) at ($(B)+(3.15,0)$);
+  \draw (A)--(C)--(C1)--(A1)--cycle;
+  \draw (C1)--(B1)--(A1);
+  \draw (C)--(A1);
+  \draw[dashed] (A)--(B)--(C) (B)--(B1);
+  \node[below left] at (A) {$A$}; \node[above left] at (C) {$C$}; \node[below] at (B) {$B$};
+  \node[below] at (A1) {$A_1$}; \node[above] at (C1) {$C_1$}; \node[right] at (B1) {$B_1$};
+\end{tikzpicture}
