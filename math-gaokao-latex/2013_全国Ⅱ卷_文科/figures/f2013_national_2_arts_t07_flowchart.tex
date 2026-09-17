@@ -1,0 +1,21 @@
+% 2013 全国卷Ⅱ文科第 7 题：阶乘倒数累加程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, node distance=4mm, line width=0.4pt,
+  box/.style={draw, minimum height=1.65em, minimum width=8.0em, inner xsep=4pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.65em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.65em, inner xsep=4pt},
+  dec/.style={draw, diamond, aspect=2.25, inner sep=1.6pt}]
+  \node[term] (start) {开始};
+  \node[io, below=of start] (input) {输入 $N$};
+  \node[box, below=of input] (init) {$k=1,\ S=0,\ T=1$};
+  \node[box, below=of init] (divide) {$T=\dfrac{T}{k}$};
+  \node[box, below=of divide] (sum) {$S=S+T$};
+  \node[box, below=of sum] (inc) {$k=k+1$};
+  \node[dec, below=7mm of inc] (cond) {$k>N$};
+  \node[io, below=8mm of cond] (output) {输出 $S$};
+  \node[term, below=of output] (end) {结束};
+  \draw[->] (start)--(input)--(init)--(divide)--(sum)--(inc)--(cond);
+  \draw[->] (cond.south)--node[right] {是}(output);
+  \draw[->] (output)--(end);
+  \draw[->] (cond.east)-| node[pos=0.18,above] {否} ($(divide.east)+(12mm,0)$) |- (divide.east);
+\end{tikzpicture}

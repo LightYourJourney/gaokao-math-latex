@@ -1,0 +1,25 @@
+% 2013 全国卷Ⅱ文科第 18 题：直三棱柱 ABC-A_1B_1C_1，D、E 为给定中点。
+\begin{tikzpicture}[font=\footnotesize, line width=0.45pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.05,-1.05);
+  \coordinate (C) at (4.10,0);
+  \coordinate (A1) at (0,3.60);
+  \coordinate (B1) at (2.05,1.85);
+  \coordinate (C1) at (4.10,3.60);
+  \coordinate (D) at ($(A)!0.5!(B)$);
+  \coordinate (E) at ($(B)!0.5!(B1)$);
+  \draw (A)--(A1)--(C1)--(C)--cycle;
+  \draw (A1)--(B1)--(C1);
+  \draw (B)--(B1);
+  \draw (A1)--(D)--(C);
+  \draw (A1)--(E)--(C);
+  \draw[dashed] (A)--(B)--(C) (D)--(E) (A1)--(C);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above left] at (A1) {$A_1$};
+  \node[above] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[below left] at (D) {$D$};
+  \node[left] at (E) {$E$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+% 2013 全国卷Ⅱ文科第 19 题：频率分布直方图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, line width=0.42pt, x=0.18cm, y=105cm]
+  \draw[->] (-12,0)--(58,0) node[right,align=center] {市场需求量};
+  \draw[->] (-10,0)--(-10,0.038) node[above,align=center] {频率\\组距};
+  % 坐标轴在 0 与 100 之间的截断符号。
+  \draw (-7.8,0.0007)--(-7.0,-0.0007)--(-6.2,0.0007)--(-5.4,-0.0007)--(-4.6,0.0007);
+  \draw[dashed] (-10,0.010)--(0,0.010); \node[left,xshift=-1mm] at (-10,0.010) {0.010};
+  \draw[dashed] (-10,0.015)--(40,0.015); \node[left,xshift=-1mm] at (-10,0.015) {0.015};
+  \draw[dashed] (-10,0.020)--(10,0.020); \node[left,xshift=-1mm] at (-10,0.020) {0.020};
+  \draw[dashed] (-10,0.025)--(30,0.025); \node[left,xshift=-1mm] at (-10,0.025) {0.025};
+  \draw[dashed] (-10,0.030)--(20,0.030); \node[left,xshift=-1mm] at (-10,0.030) {0.030};
+  \draw (0,0) rectangle (10,0.010);
+  \draw (10,0) rectangle (20,0.020);
+  \draw (20,0) rectangle (30,0.030);
+  \draw (30,0) rectangle (40,0.025);
+  \draw (40,0) rectangle (50,0.015);
+  \node[below] at (-10,0) {$0$};
+  \foreach \x/\lab in {0/100,10/110,20/120,30/130,40/140,50/150}
+    \node[below] at (\x,0) {\lab};
+\end{tikzpicture}
