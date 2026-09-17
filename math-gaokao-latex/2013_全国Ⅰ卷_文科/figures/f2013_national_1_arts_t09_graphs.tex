@@ -1,0 +1,34 @@
+% 2013 全国卷Ⅰ文科第 9 题：四个函数图象选项。
+\begin{tikzpicture}[>=Stealth, scale=0.73, line width=0.42pt]
+  \foreach \x/\y/\lab in {0/0/A,4.55/0/B,0/-3.35/C,4.55/-3.35/D} {
+    \begin{scope}[shift={(\x,\y)}]
+      \node[font=\scriptsize] at (-1.62,1.20) {$(\lab)$};
+      \draw[->] (-1.55,0)--(1.72,0) node[right,font=\scriptsize] {$x$};
+      \draw[->] (0,-1.16)--(0,1.30) node[above,font=\scriptsize] {$y$};
+      \draw (0.08,0.08)--(-0.08,-0.08) node[below left,font=\scriptsize] {$O$};
+      \draw (0,1.0)--(0.08,1.0) node[right,font=\scriptsize] {$1$};
+      \node[below,font=\scriptsize] at (-1.45,0) {$-\pi$};
+      \node[below,font=\scriptsize] at (1.45,0) {$\pi$};
+    \end{scope}
+  }
+  % A
+  \draw[thick] (-1.45,0) .. controls (-1.20,0.72) and (-0.78,0.98) .. (-0.42,0.50)
+    .. controls (-0.18,0.18) and (-0.12,0.02) .. (0,0)
+    .. controls (0.25,-0.10) and (0.58,-0.90) .. (1.05,-0.80)
+    .. controls (1.29,-0.73) and (1.40,-0.27) .. (1.45,0);
+  % B
+  \draw[thick] (3.10,0) .. controls (3.37,-0.28) and (3.65,-0.12) .. (3.92,-0.05)
+    .. controls (4.23,0.04) and (4.35,-0.18) .. (4.55,0)
+    .. controls (4.79,0.12) and (5.02,1.06) .. (5.42,1.05)
+    .. controls (5.88,1.03) and (6.04,0.13) .. (6.00,0);
+  % C
+  \draw[thick] (-1.45,-3.35) .. controls (-1.20,-4.13) and (-0.88,-4.45) .. (-0.52,-4.08)
+    .. controls (-0.22,-3.76) and (-0.15,-3.42) .. (0,-3.35)
+    .. controls (0.26,-3.21) and (0.58,-2.39) .. (1.02,-2.38)
+    .. controls (1.31,-2.38) and (1.40,-3.08) .. (1.45,-3.35);
+  % D
+  \draw[thick] (3.10,-3.35) .. controls (3.40,-3.40) and (3.70,-4.46) .. (4.05,-4.38)
+    .. controls (4.34,-4.31) and (4.37,-3.50) .. (4.55,-3.35)
+    .. controls (4.77,-3.16) and (5.02,-2.37) .. (5.42,-2.39)
+    .. controls (5.81,-2.41) and (5.95,-3.12) .. (6.00,-3.35);
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% 2013 全国卷Ⅰ文科第 7 题：分段计算程序框图。
+\begin{tikzpicture}[font=\footnotesize, >=Stealth, node distance=4mm, line width=0.4pt,
+  box/.style={draw, minimum height=1.65em, minimum width=6.3em, inner xsep=5pt},
+  term/.style={draw, rounded corners=6pt, minimum height=1.65em, inner xsep=8pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum height=1.65em, inner xsep=4pt},
+  dec/.style={draw, diamond, aspect=2.25, inner sep=1.6pt}]
+  \node[term] (start) {开始};
+  \node[io, below=of start] (input) {输入 $t$};
+  \node[dec, below=7mm of input] (cond) {$t<1$};
+  \node[box, below left=8mm and 12mm of cond] (left) {$s=3t$};
+  \node[box, below right=8mm and 12mm of cond] (right) {$s=4t-t^2$};
+  \coordinate (join) at ($(left.south)!0.5!(right.south)+(0,-5mm)$);
+  \node[io, below=8mm of join] (output) {输出 $s$};
+  \node[term, below=of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (cond);
+  \draw[->] (cond.west) -| node[pos=0.22,above] {是} (left.north);
+  \draw[->] (cond.east) -| node[pos=0.22,above] {否} (right.north);
+  \draw[->] (left.south) |- (join);
+  \draw[->] (right.south) |- (join);
+  \draw[->] (join) -- (output);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}
