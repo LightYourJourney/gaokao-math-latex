@@ -13477,3 +13477,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0850
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 印刷页 725 第 2 题题面为 A={1,3,√m}、B={1,m}、A∪B=A。按试题列举项互异的通常约定，采用 m=0 或 m=3（选 B）；但严格集合语义下 m=1 时 A={1,3}、B={1} 也满足 A∪B=A。解析正文已保留该歧义与处理方式，未静默改写固定源题面。",
+  "fingerprint": "8bd931c77dff955268f4dc7be78143a2769f882228d30347f40dab94b944a697",
+  "impact": "non_blocking",
+  "paper_id": "gk-2012-regular-national-outline-science",
+  "question_id": "gk-2012-regular-national-outline-science-q02",
+  "resume_action": "题面集合列举语义已在解析正文登记；若需官方勘误，按同版源复核。",
+  "source_id": "src-7f0b0f1da8f8f1cd330807f110972306ef01c21820e35933f4df5d306d608929",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
