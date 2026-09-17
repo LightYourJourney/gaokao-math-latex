@@ -1,12 +1,14 @@
 % 2014 全国卷Ⅰ文科第 22 题：圆内接四边形、延长线及辅助线。
+% 解析自检：A、B、C、D 均取在圆心 O=(0,0)、半径 R=2.4 的圆上；
+% A、B 同高，E 是 AB 与 DC 的交点，M 是 AD 中点且 MB=MC。
 \begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
   \coordinate (O) at (0,0);
-  \coordinate (A) at (-1.65,-1.73);
-  \coordinate (D) at (.55,2.23);
+  \coordinate (A) at (-1.673798076233,-1.720000000000);
+  \coordinate (D) at (.621165708246,2.318221983094);
   \coordinate (M) at ($ (A)!0.5!(D) $);
-  \coordinate (B) at (1.12,-1.72);
-  \coordinate (C) at (2.10,-.28);
-  \coordinate (E) at (3.05,-1.72);
+  \coordinate (B) at (1.673798076233,-1.720000000000);
+  \coordinate (C) at (2.334272376364,-.557828354374);
+  \coordinate (E) at (3.026514778968,-1.720000000000);
   \draw (O) circle (2.4);
   \draw (A)--(D)--(C)--(B)--cycle;
   \draw (A)--(E);
