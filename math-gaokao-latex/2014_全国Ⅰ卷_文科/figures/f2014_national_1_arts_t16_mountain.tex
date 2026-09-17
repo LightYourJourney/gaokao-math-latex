@@ -1,0 +1,19 @@
+% 2014 全国卷Ⅰ文科第 16 题：测量山高的观测示意图。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.5,0);
+  \coordinate (C) at (4.5,2.25);
+  \coordinate (N) at (-1.9,.82);
+  \coordinate (M) at (-1.9,5.05);
+  \draw (M)--(N);
+  \draw (B)--(C);
+  \draw (A)--(B);
+  \draw (A)--(M) (A)--(C) (C)--(M);
+  \draw[dashed] (N)--(B);
+  \draw[dashed] (N)--(A);
+  \node[above] at (M) {$M$};
+  \node[left] at (N) {$N$};
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}

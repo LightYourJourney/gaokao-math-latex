@@ -1,0 +1,23 @@
+% 2014 全国卷Ⅰ文科第 22 题：圆内接四边形、延长线及辅助线。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-1.65,-1.73);
+  \coordinate (D) at (.55,2.23);
+  \coordinate (M) at ($ (A)!0.5!(D) $);
+  \coordinate (B) at (1.12,-1.72);
+  \coordinate (C) at (2.10,-.28);
+  \coordinate (E) at (3.05,-1.72);
+  \draw (O) circle (2.4);
+  \draw (A)--(D)--(C)--(B)--cycle;
+  \draw (A)--(E);
+  \draw (D)--(E);
+  \draw (M)--(B) (M)--(C);
+  \fill (O) circle (1.15pt);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[left] at (M) {$M$};
+  \node[below left] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+% 2014 全国卷Ⅰ文科第 18 题：频率分布直方图的待作答空白框。
+% 有意不画任何柱条；原题要求考生据频数表自行作图。
+\begin{tikzpicture}[font=\scriptsize,>=Stealth,line cap=round]
+  \draw[gray!58,line width=.22pt] (.6,0) grid[xstep=1,ystep=.5] (5.6,10);
+  \draw[->,line width=.45pt] (-.62,0)--(6.32,0) node[right] {质量指标值};
+  \draw[->,line width=.45pt] (0,-.18)--(0,10.72) node[above left,align=center] {频率\\组距};
+  % 原点后的断轴锯齿。
+  \draw[line width=.4pt] (.14,.10)--(.22,-.10)--(.30,.10)--(.38,-.10)--(.46,.10);
+  \foreach \x/\lab in {.6/75,1.6/85,2.6/95,3.6/105,4.6/115,5.6/125}
+    \node[below=2pt] at (\x,0) {\lab};
+  \node[below=2pt] at (-.38,0) {0};
+  \foreach \k in {1,...,20}
+    \pgfmathsetmacro\v{\k/500}
+    \node[left=2pt] at (0,\k/2) {\pgfmathprintnumber[fixed,fixed zerofill,precision=3]{\v}};
+\end{tikzpicture}
