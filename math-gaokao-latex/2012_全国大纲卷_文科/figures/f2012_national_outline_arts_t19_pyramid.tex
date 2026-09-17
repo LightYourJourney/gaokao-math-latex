@@ -1,0 +1,26 @@
+% 2012 全国大纲卷文科第 19 题：四棱锥 P-ABCD。
+% 实线表示原图可见棱，虚线表示被遮挡的底面对角线或高线。
+\begin{tikzpicture}[scale=.92, line cap=round, line join=round]
+  \coordinate (P) at (2.35,4.05);
+  \coordinate (A) at (2.35,1.45);
+  \coordinate (B) at (0.35,0.80);
+  \coordinate (C) at (1.20,0.05);
+  \coordinate (D) at (4.40,0.75);
+  \coordinate (E) at ($(P)!0.6667!(C)$);
+
+  % 底面菱形与侧棱
+  \draw[thick] (B)--(C)--(D);
+  \draw[dashed] (D)--(A)--(B) (B)--(D);
+  \draw[thick] (P)--(B) (P)--(D) (P)--(C);
+  \draw[dashed] (P)--(A);
+
+  % 点 E 在 PC 上；E 与 B、D 的连线给出截面 BED。
+  \draw[thick] (E)--(B) (E)--(D);
+
+  \fill (P) circle (1.15pt) node[above] {$P$};
+  \fill (A) circle (1.05pt) node[right] {$A$};
+  \fill (B) circle (1.05pt) node[left] {$B$};
+  \fill (C) circle (1.05pt) node[below] {$C$};
+  \fill (D) circle (1.05pt) node[right] {$D$};
+  \fill (E) circle (1.05pt) node[left] {$E$};
+\end{tikzpicture}
