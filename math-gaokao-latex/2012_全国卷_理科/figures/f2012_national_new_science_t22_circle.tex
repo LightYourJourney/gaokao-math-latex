@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=.72, every node/.style={font=\small}]
+  \coordinate (G) at (-3,0);
+  \coordinate (F) at (3,0);
+  \coordinate (A) at (1.5,2.598);
+  \coordinate (B) at (-1.5,-2.598);
+  \coordinate (C) at (1.5,-2.598);
+  \coordinate (D) at (0,0);
+  \coordinate (E) at (1.5,0);
+  \draw (0,0) circle (3);
+  \draw (G)--(F);
+  \draw (A)--(B)--(C)--cycle;
+  \draw (D)--(C);
+  \draw (G)--(B);
+  \draw (C)--(F);
+  \draw (A)--(C);
+  \draw (A)--(B);
+  \node[above right] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[above] at (E) {$E$};
+  \node[left] at (G) {$G$};
+  \node[right] at (F) {$F$};
+\end{tikzpicture}

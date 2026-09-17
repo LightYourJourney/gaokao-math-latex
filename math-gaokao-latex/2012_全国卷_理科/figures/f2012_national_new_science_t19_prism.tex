@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=.9, font=\small]
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (3.3,.25);
+  \coordinate (C)  at (1.05,.72);
+  \coordinate (A1) at (0,3.15);
+  \coordinate (B1) at (3.3,3.40);
+  \coordinate (C1) at (1.05,3.87);
+  \coordinate (D)  at (0,1.58);
+
+  \draw (A)--(B) (A)--(A1) (A1)--(B1) (B)--(B1);
+  \draw (A1)--(C1)--(B1);
+  \draw (D)--(B);
+  \draw[dashed] (A)--(C)--(B) (C)--(C1) (A1)--(C) (C1)--(B);
+  \draw[dashed] (D)--(C1);
+  \fill (D) circle (1pt);
+  \node[below left,inner sep=1pt] at (A) {$A$};
+  \node[right,inner sep=1pt] at (B) {$B$};
+  \node[below right,inner sep=1pt] at (C) {$C$};
+  \node[left,inner sep=1pt] at (A1) {$A_1$};
+  \node[right,inner sep=1pt] at (B1) {$B_1$};
+  \node[above,inner sep=1pt] at (C1) {$C_1$};
+  \node[left,inner sep=1pt] at (D) {$D$};
+\end{tikzpicture}

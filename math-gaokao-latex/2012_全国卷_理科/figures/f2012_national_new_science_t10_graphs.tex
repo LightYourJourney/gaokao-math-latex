@@ -1,0 +1,40 @@
+\begin{tikzpicture}[font=\small, x=1.05cm, y=.62cm]
+  \begin{scope}
+    \draw[->] (-1.25,0)--(2.65,0) node[right] {$x$};
+    \draw[->] (0,-4)--(0,3.9) node[above] {$y$};
+    \draw (1,-.08)--(1,.08) node[below right,inner sep=1pt] {$1$};
+    \draw (-.08,1)--(.08,1) node[left,inner sep=1pt] {$1$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw[thick] (.12,3.7) .. controls (.18,2.0) and (.45,.65) .. (2.35,.15);
+    \node[below] at (.65,-4.55) {(A)};
+  \end{scope}
+  \begin{scope}[xshift=5.1cm]
+    \draw[->] (-1.25,0)--(2.65,0) node[right] {$x$};
+    \draw[->] (0,-4)--(0,3.9) node[above] {$y$};
+    \draw (1,-.08)--(1,.08) node[below right,inner sep=1pt] {$1$};
+    \draw (-.08,1)--(.08,1) node[left,inner sep=1pt] {$1$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw[thick] (-1.05,-.10) .. controls (-.55,-.18) and (-.13,-1.2) .. (-.06,-3.8);
+    \draw[thick] (.06,-3.8) .. controls (.13,-1.2) and (.55,-.18) .. (2.35,-.10);
+    \node[below] at (.65,-4.55) {(B)};
+  \end{scope}
+  \begin{scope}[yshift=-5.25cm]
+    \draw[->] (-1.25,0)--(2.65,0) node[right] {$x$};
+    \draw[->] (0,-4)--(0,3.9) node[above] {$y$};
+    \draw (1,-.08)--(1,.08) node[below right,inner sep=1pt] {$1$};
+    \draw (-.08,1)--(.08,1) node[left,inner sep=1pt] {$1$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw[thick] (-1.05,.10) .. controls (-.55,.18) and (-.13,1.2) .. (-.06,3.8);
+    \draw[thick] (.06,-3.8) .. controls (.13,-1.2) and (.55,-.18) .. (2.35,-.10);
+    \node[below] at (.65,-4.55) {(C)};
+  \end{scope}
+  \begin{scope}[xshift=5.1cm,yshift=-5.25cm]
+    \draw[->] (-1.25,0)--(2.65,0) node[right] {$x$};
+    \draw[->] (0,-4)--(0,3.9) node[above] {$y$};
+    \draw (1,-.08)--(1,.08) node[below right,inner sep=1pt] {$1$};
+    \draw (-.08,1)--(.08,1) node[left,inner sep=1pt] {$1$};
+    \node[below left,inner sep=1pt] at (0,0) {$O$};
+    \draw[thick] (.06,-3.8) .. controls (.13,-1.2) and (.55,-.18) .. (2.35,-.10);
+    \node[below] at (.65,-4.55) {(D)};
+  \end{scope}
+\end{tikzpicture}

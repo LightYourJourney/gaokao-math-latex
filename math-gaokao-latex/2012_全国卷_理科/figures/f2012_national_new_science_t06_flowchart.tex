@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  >=stealth,
+  node distance=7mm and 12mm,
+  every node/.style={font=\small},
+  scale=.78,
+  transform shape
+]
+\node[draw,rounded corners,minimum width=18mm,minimum height=7mm] (start) {开始};
+\node[draw,trapezium,trapezium left angle=75,trapezium right angle=105,
+      minimum width=43mm,minimum height=7mm,below=of start]
+      (input) {输入 $N,a_1,a_2,\ldots,a_N$};
+\node[draw,minimum width=38mm,minimum height=7mm,below=of input]
+      (init) {$k=1,\ A=a_1,\ B=a_1$};
+\node[draw,minimum width=20mm,minimum height=7mm,below=of init]
+      (read) {$x=a_k$};
+\node[draw,diamond,aspect=2.2,below=of read,minimum width=25mm,minimum height=8mm]
+      (max) {$x>A$};
+\node[draw,minimum width=18mm,minimum height=7mm,right=of max]
+      (setmax) {$A=x$};
+\node[draw,diamond,aspect=2.2,below=of max,minimum width=25mm,minimum height=8mm]
+      (min) {$x<B$};
+\node[draw,minimum width=18mm,minimum height=7mm,left=of min]
+      (setmin) {$B=x$};
+\node[draw,diamond,aspect=2.2,below=of min,minimum width=25mm,minimum height=8mm]
+      (done) {$k\geqslant N$};
+\node[draw,minimum width=25mm,minimum height=7mm,right=of done]
+      (inc) {$k=k+1$};
+\node[draw,trapezium,trapezium left angle=75,trapezium right angle=105,
+      minimum width=25mm,minimum height=7mm,below=of done]
+      (out) {输出 $A,B$};
+\node[draw,rounded corners,minimum width=18mm,minimum height=7mm,below=of out]
+      (end) {结束};
+
+\draw[->] (start)--(input)--(init)--(read)--(max);
+\draw[->] (max)--node[above]{是}(setmax)--++(0,-.65) |- (done);
+\draw[->] (max)--node[right]{否}(min);
+\draw[->] (min)--node[above]{是}(setmin)--++(0,-.65) |- (done);
+\draw[->] (min)--node[right]{否}(done);
+\draw[->] (done)--node[above]{否}(inc) |- (read);
+\draw[->] (done)--node[right]{是}(out)--(end);
+\end{tikzpicture}
