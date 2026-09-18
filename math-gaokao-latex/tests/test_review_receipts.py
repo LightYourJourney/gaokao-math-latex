@@ -381,8 +381,8 @@ class CliContractTests(unittest.TestCase):
             subject.EXIT_VISUAL_FAILED, subject.EXIT_INVALID,
         ))
 
-    def test_prepare_batch_requires_one_to_four_papers(self) -> None:
-        for count in (1, 4):
+    def test_prepare_batch_requires_one_to_eight_papers(self) -> None:
+        for count in (1, 4, 8):
             with self.subTest(count=count):
                 document = manifest()
                 document["batches"][0]["paper_ids"] = [
@@ -392,7 +392,7 @@ class CliContractTests(unittest.TestCase):
                     document["batches"][0],
                     subject._validate_batch_size(document, "batch-1"),
                 )
-        for count in (0, 5):
+        for count in (0, 9):
             with self.subTest(count=count):
                 document = manifest()
                 document["batches"][0]["paper_ids"] = [
@@ -400,7 +400,7 @@ class CliContractTests(unittest.TestCase):
                 ]
                 with self.assertRaisesRegex(
                     subject.ReviewError,
-                    "batch-1 必须包含 1–4 套试卷，实际 %d 套" % count,
+                    "batch-1 必须包含 1–8 套试卷，实际 %d 套" % count,
                 ):
                     subject._validate_batch_size(document, "batch-1")
 
