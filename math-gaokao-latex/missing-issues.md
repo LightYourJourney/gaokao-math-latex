@@ -13927,3 +13927,112 @@
   "type": "transcription-ambiguous"
 }
 ```
+## ISSUE-0875
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "7f5095f38ae98fa2ec6a312e80f8151613843c111259f7e6b024771441478f2d",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2014-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0876
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "5e87d224aa85bc33ea195bffc88b4d16fe8aa7c6e7b317e8094330c7b393be1a",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2014-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0877
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "10bcfc98040a8a1ac720d8324a8fcbb7768fb2322d8a0f35c07782e1b8a84fd0",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2014-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0878
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "ef17d97ac08b8da666103d934c7dcdeb2abdedb6dd905ff3df19553e21461d63",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2014-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0879
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "原题未限定公切线类型；文科单值答案与理科同型题既有多分支解析不一致，不猜答案。",
+  "evidence": "Task10直接视觉核验固定源PDF第2页：直线同时与两圆相切，未限定内公切线；文科答案只给2sqrt3，理科既有解析另列18/7。",
+  "fingerprint": "cc86600077917ae1100b6434d07654202be998cfce1a2d4493166fe3e8f04a9e",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-tangent-audit",
+  "paper_id": "gk-2013-regular-national-1-arts",
+  "question_id": "gk-2013-regular-national-1-arts-q21",
+  "resume_action": "核对原卷切线类型及完整答案；未解决前不得声称唯一弦长。",
+  "source_id": "src-47bd80f9a5d3b732a472e5fa228cf17ca1277abb11e832db0e9cded072589a92",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0880
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "原题未限定公切线类型；文科单值答案与理科同型题既有多分支解析不一致，不猜答案。",
+  "evidence": "Task10直接视觉核验固定源PDF第2页：直线同时与两圆相切，未限定内公切线；文科答案只给2sqrt3，理科既有解析另列18/7。",
+  "fingerprint": "a43b2f7c324cd1d244e608f6bc4b2f082327f4594291f9b4ad5c5d3cd7ef2134",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-tangent-audit",
+  "paper_id": "gk-2013-regular-national-1-science",
+  "question_id": "gk-2013-regular-national-1-science-q20",
+  "resume_action": "核对原卷切线类型及完整答案；未解决前不得声称唯一弦长。",
+  "source_id": "src-993d110a9edd0c0bd5b892d64d897778e547bcce2efff6aab9f98668ef5ef2cb",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
