@@ -1,10 +1,10 @@
-# Task 10 总装配执行报告（blocked，非 PASS）
+# Task 10 总装配执行报告（closed_with_blockers；视觉与形式 gates PASS，内容仍阻塞）
 
-工作树：`仓库根`；分支 `feat/gaokao-phase0`；起始 HEAD `e7b8290901eecda05b5696616dacad037cadb94b`。未改主工作区工作文件；未派生 subagent/reviewer；未 push；未改公共 tools。采用 executing-plans、隔离工作树、PDF 和 verification-before-completion 技能；以实际 gate 证据为准，不以编译退出 0 代替最终视觉验收。
+工作树：`仓库根`；分支 `feat/gaokao-phase0`；计划起始 HEAD `e7b8290901eecda05b5696616dacad037cadb94b`，本次恢复前工具修复后的 HEAD `1c8fb53933d3b68a72cf4da24c47b39a14b83a38`，视觉回执 checkpoint `a69e60fa`。未改主工作区工作文件；未派生 subagent/reviewer；未 push；未改公共 tools。采用 executing-plans、隔离工作树、PDF 和 verification-before-completion 技能；以实际 gate 证据为准，不以编译退出 0 代替最终视觉验收。
 
 ## 当前结论
 
-成功登记固定八卷，生成八组 combined/shared TeX/四版本壳与 provenance；正式构建输出 32 PDF。最终验收未完成：既有视觉工具 `review_receipts.py:166–176` 强制 batch 仅 1–4 卷，brief 明确固定八卷；`prepare-batch` 退出 6，`phase2-b02 必须包含 1–4 套试卷，实际 8 套`。没有拆批次绕过、修改工具或伪造 review 回执。manifest 保持 `compiled_pending_review`，不能标记 completed 或 closed_with_blockers。8 build receipts pending，0 review receipts。
+成功登记固定八卷，生成八组 combined/shared TeX/四版本壳与 provenance；正式 XeLaTeX 构建输出 32 个当前 PDF。工具上限修复提交 `1c8fb539` 后，`prepare-batch` 实际生成 32 个工作项；最终在仓库外重新渲染并逐页检查 441 页，32 个 work item 的 8 项检查全部签署，1 条 Underfull 做了页级豁免。`finalize-batch-checked` 与 `check-batch` 均退出 0，正式 review 全部 `passed`，build 8/8 `succeeded`；批次结论按真实内容问题为 `closed_with_blockers`，不是 PASS。
 
 用户 ruling：首次注册 `--write` 在 spec figure 路径 schema 校验时、事务写入前退出 1；manifest 未变，没有副作用。按用户裁定它是失败演练，不计成功注册。修正 spec dry-run PASS 后立即执行一次成功 `--write`，退出 0、revision 2731。此前暂停说明仅是历史记录，不再代表当前权限状态。
 
@@ -74,7 +74,9 @@
 
 ## 视觉审查与 Underfull
 
-实际直接查看：八固定源 PDF 的全部 16 页（150dpi）。正式 32 PDF 的全部 441 页已在仓库外渲染成功，但未完成逐页视觉检查，8 项视觉 checks 未签署，candidate 页没有缩小审查范围。恢复构建之后未再渲染，旧渲染不是最终 PDF 视觉通过证据。没有 Underfull 豁免。2014 II arts 解析版 answers.tex:516--517 的 Underfull badness1577 仍待定位具体 PDF 页并视觉确认；不能用无页码豁免通过最终 gate。
+最终视觉证据来自当前正式 build receipts 绑定的 32 个 PDF，而不是旧构建渲染：在仓库外目录 `/private/tmp/task10-final-nMP3Rk` 以 `pdftoppm -r 130 -png` 重新生成全部页面，再生成 120 张四页 contact sheet；实际逐张查看 120 张 contact sheet，覆盖 8 卷 × 4 版本 × 441 页。逐页填写 8 项 `glyph`、`heading_number`、`option_formula_alignment`、`figure_label`、`header_footer`、`pagination_whitespace`、`font_size`、`answer_leak`，32/32 work items、441/441 页均为 `pass`，未见裁切、缺字、图形/标签错位、页眉页脚冲突、分页碰撞或意外答案泄漏。
+
+唯一构建警告为 `2014_全国Ⅱ卷_文科/解析版` 的 `Underfull \\hbox (badness 1577)`，`answers.tex` lines `516--517`。已在正式 work item 中写入页级豁免：`source_file=answers.tex`、`pdf_page=18`、`visual_result=pass`、`width_pt=null`；新渲染第 18 页复核确认段落及后续 display 均在版心内，无裁切或碰撞。其余版本无 Underfull/Overfull 豁免。
 
 ## 未解决 issues
 
@@ -198,3 +200,54 @@ build receipts/report 提交：`4c8e22c6f0155a7a1e5cef6ace58bc83b35849ad`。恢�
 | `git diff --check` | 0 | 无输出 |
 
 完整 unit gate 已运行一次并失败；未在稳定提交后重新跑全套，不报告 unit PASS。正式 review finalize 因 prepare 接口限制未执行，不写成功 final receipts。外部准备脚本 /private/tmp/task10_run.py 在交付时删除，实际命令及映射方式已记录。后续需明确放宽视觉工具八卷接口的授权/更正计划，再重新外部渲染全部最终441页并签署逐页8检查、Underfull页级豁免、finalize及重跑全部最终gates和稳定提交后的unit。
+
+---
+
+## 最终续录（2026-09-18；以本节覆盖上方旧快照）
+
+上方附录和“未执行”段落保留为历史审计记录；它们描述工具上限修复前的状态，不代表最终状态。以下命令均在 `仓库根` 执行，除明确写出的 `/private/tmp` 渲染目录外没有把中间物写入主工作区。
+
+### 注册、视觉工作项与正式回执
+
+| 实际命令/动作 | 退出码 | 实际结果 |
+| --- | ---: | --- |
+| 首次 `python3 math-gaokao-latex/tools/source_manifest.py register-papers --repo . --manifest math-gaokao-latex/source-manifest.json --spec math-gaokao-latex/.work/phase2-b02/register.json --write` | 1 | spec figure 路径 schema 校验失败；事务写入前拒绝，manifest 未变、无副作用。按用户 ruling 计为失败演练，不计成功注册。 |
+| 修正 spec 后同一 `register-papers ... --spec .../register.json` dry-run | 0 | 8 卷通过校验，未落盘。 |
+| 修正 spec 后同一 `register-papers ... --spec .../register.json --write` | 0 | 唯一成功写入，phase2-b02 8 卷，revision 2731。 |
+| `python3 math-gaokao-latex/tools/review_receipts.py prepare-batch --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02`（工具修复提交 `1c8fb539` 后） | 0 | 8 卷/32 版本工作项全部生成；不再遇到 1–4 卷上限。 |
+| `PYTHONDONTWRITEBYTECODE=1 python3 /private/tmp/task10_fill_review.py 仓库根` | 0 | 32 work items、441 页、8 项检查全部写回；1 条 Underfull 豁免。该 helper 随后已清理。 |
+| `render_dir=$(mktemp -d /private/tmp/task10-final-XXXXXX); python3 /private/tmp/task10_render.py "$render_dir"; printf 'RENDER_DIR=%s\\n' "$render_dir"` | 0 | 当前最终 32 PDF 全部重新渲染，441 页、120 张四页 contact sheet，目录为 `/private/tmp/task10-final-nMP3Rk`。随后通过图像查看工具逐张查看 120 张，覆盖 441/441 页。 |
+| `python3 math-gaokao-latex/tools/review_receipts.py finalize-batch-checked --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase2-b02 --output-report math-gaokao-latex/reports/phase2-b02.md --json` | 0 | `code=FINALIZED`、`batch_status=closed_with_blockers`、8 卷、`problems=[]`、report 已写入，revision 2743。 |
+| `python3 math-gaokao-latex/tools/review_receipts.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase2-b02 --json` | 0 | `code=FINALIZED`、`problems=[]`。 |
+
+第一次 finalize 曾误传 `--issues math-gaokao-latex/issues.md`，工具在写入前明确返回固定参数错误；没有副作用，随后按报错改为 `missing-issues.md`，上表为实际成功命令。没有修改两个公共工具文件。
+
+### 最终 gate（checkpoint `a69e60fa` 上实测）
+
+| Gate | 实际命令（相对工作树） | 退出码 | 摘要 |
+| --- | --- | ---: | --- |
+| manifest | `python3 math-gaokao-latex/tools/source_manifest.py validate --manifest math-gaokao-latex/source-manifest.json` | 0 | 通过 |
+| solution | `python3 math-gaokao-latex/tools/solution_sources.py check-batch --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02` | 0 | 8 卷、每卷 24 题通过 |
+| generation | `python3 math-gaokao-latex/tools/generate_projects.py --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02 --check` | 0 | 8 卷与生成结果一致 |
+| short-answer | `python3 math-gaokao-latex/tools/make_short_answers.py --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02 --check` | 0 | 8 卷与生成结果一致 |
+| editions | `python3 math-gaokao-latex/tools/make_editions.py --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02 --check` | 0 | 8 卷壳与模板渲染一致 |
+| provenance | `python3 math-gaokao-latex/tools/provenance.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase2-b02` | 0 | 8 卷 OK |
+| build | `python3 math-gaokao-latex/tools/build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02 --require-final --require-current-inputs --json` | 0 | `succeeded=8`，`pending=0`，`failed=0`，`invalid=0`，`stale=0` |
+| review | `python3 math-gaokao-latex/tools/review_receipts.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase2-b02 --json` | 0 | `FINALIZED`，`problems=[]` |
+| CSV | `python3 math-gaokao-latex/tools/manifest_csv.py --manifest math-gaokao-latex/source-manifest.json --output math-gaokao-latex/manifest.csv --check` | 0 | manifest.csv 当前，775 行 |
+| issues | `python3 math-gaokao-latex/tools/issues.py validate --file math-gaokao-latex/missing-issues.md` | 0 | 通过 |
+| unit | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s math-gaokao-latex/tests` | 0 | `Ran 816 tests in 257.939s; OK (skipped=13)` |
+
+### 清理后实测
+
+清理前计数为 `.work/phase2-b02` 32 个 JSON、外部最终渲染目录 561 个文件（441 页图像 + 120 张 contact sheet）、本轮 helper 2 个。实际执行精确命令：
+
+`rm -rf -- math-gaokao-latex/.work/phase2-b02 /private/tmp/task10-final-nMP3Rk /private/tmp/task10_render.py /private/tmp/task10_fill_review.py`
+
+清理后实测：上述四个路径均不存在；仓库内 raster 文件 `0`；8 个目标 build 目录各保留且仅保留 4 个 PDF（共 32），其余 build 文件为 `0`。逐个 `pdfinfo` 与 SHA 复核结果为 32 PDF、441 页、`pdf_mismatches=[]`；8 个 build receipt 均 `succeeded`，8 个 review receipt 均 `passed`。目标八卷还保留 44 个项目内 TikZ figure、8 个 provenance、56 个项目 TeX、canonical Markdown/LaTeX、manifest/CSV、build/review receipts、`reports/phase2-b02.md` 和本报告。
+
+### 当前未解决 issue 与提交
+
+按 brief 和研究证据，24 条 2013/2014 q22–24 选考/作答规则缺失仍为 blocking `transcription-ambiguous`，没有猜测必答或选答；`ISSUE-0879`（2013 全国Ⅰ文 q21 公切线类型/答案冲突）和 `ISSUE-0880`（2013 全国Ⅰ理 q20 同类冲突）仍为 blocking `answer-conflict`，本轮没有可核验新证据。它们解释了 `closed_with_blockers`，不影响视觉/形式回执的真实 PASS。
+
+checkpoint commit：`a69e60fa`（正式 build/review receipts、manifest、phase2-b02 report）。final report/cleanup commit 待本报告本节完成后创建；不 push。主工作区 `主工作树` 未改动。
