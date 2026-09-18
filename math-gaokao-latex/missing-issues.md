@@ -13494,3 +13494,436 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0851
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "fingerprint": "e019ad164bd21d8c4dbe41f7fbb02ff3ae334e3f1cd8c6715c9204fe6aee1902",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-arts",
+  "question_id": "gk-2013-regular-national-1-arts-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-47bd80f9a5d3b732a472e5fa228cf17ca1277abb11e832db0e9cded072589a92",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0852
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "fingerprint": "9ebc77bec64e16bdc610f4f259d8f8a0cf16da885f7fcf576dbfe461bf798bf7",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-arts",
+  "question_id": "gk-2013-regular-national-1-arts-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-47bd80f9a5d3b732a472e5fa228cf17ca1277abb11e832db0e9cded072589a92",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0853
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "fingerprint": "4b057749012b897bffdf2c345aac0b56b322a79592b35d466bfee98bcf068f7b",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-arts",
+  "question_id": "gk-2013-regular-national-1-arts-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-47bd80f9a5d3b732a472e5fa228cf17ca1277abb11e832db0e9cded072589a92",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0854
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 3源核验记录；SHA a5a0e74db921b11074270f0e152023f81d73ec17d1a6b64377ecd9bcb106764c",
+  "fingerprint": "04287df2ed7b45cff96f12b47c42b7958b1c1cb0d38b42edfd41b9e7f7e5f9f7",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-science",
+  "question_id": "gk-2013-regular-national-1-science-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-993d110a9edd0c0bd5b892d64d897778e547bcce2efff6aab9f98668ef5ef2cb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0855
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 3源核验记录；SHA a5a0e74db921b11074270f0e152023f81d73ec17d1a6b64377ecd9bcb106764c",
+  "fingerprint": "e985f6ea08e1eb7905b26889a1e60699f597a9aad1f7c2bebf7bb9efabb9eee7",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-science",
+  "question_id": "gk-2013-regular-national-1-science-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-993d110a9edd0c0bd5b892d64d897778e547bcce2efff6aab9f98668ef5ef2cb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0856
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 3源核验记录；SHA a5a0e74db921b11074270f0e152023f81d73ec17d1a6b64377ecd9bcb106764c",
+  "fingerprint": "636c18228ed54534bff292aa3f358a0aa7d76f1b029e05f75ecfb0c44b5d8423",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-1-science",
+  "question_id": "gk-2013-regular-national-1-science-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-993d110a9edd0c0bd5b892d64d897778e547bcce2efff6aab9f98668ef5ef2cb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0857
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 4源核验记录；SHA 7bc58472b3f68d708305e5123228aa513e88d4b76c64c541b08591f02fc167a6",
+  "fingerprint": "cb656422e13ffd222170a73122867d6a80ccc16a1058c587f9575b3b6941aae7",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-arts",
+  "question_id": "gk-2013-regular-national-2-arts-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e970bf564d89917b7b671f6416394e3fddec287db66077465f40876add86de25",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0858
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 4源核验记录；SHA 7bc58472b3f68d708305e5123228aa513e88d4b76c64c541b08591f02fc167a6",
+  "fingerprint": "9cd5f148bd58f183a2bbea5c492ee31c70c9a5e5aaa507e2908a5acede791711",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-arts",
+  "question_id": "gk-2013-regular-national-2-arts-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e970bf564d89917b7b671f6416394e3fddec287db66077465f40876add86de25",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0859
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 4源核验记录；SHA 7bc58472b3f68d708305e5123228aa513e88d4b76c64c541b08591f02fc167a6",
+  "fingerprint": "abfb88504c46f186b865d3cd5973c0757dafc28d4321c2f433bb793540f57383",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-arts",
+  "question_id": "gk-2013-regular-national-2-arts-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e970bf564d89917b7b671f6416394e3fddec287db66077465f40876add86de25",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0860
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 5源核验记录；SHA 6e1b230072a3dfc55f6533d9afa35851ea5933ff6f4fd9bcfe12548105b064d4",
+  "fingerprint": "39a86637391e1daea928c17f317e03898cc0869992fb0347386f4e4f6ca0108f",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-science",
+  "question_id": "gk-2013-regular-national-2-science-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e4f8542cdcec798eb72e918f651a993e7988b90e9eaa3b50cafa7b829ddf3edb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0861
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 5源核验记录；SHA 6e1b230072a3dfc55f6533d9afa35851ea5933ff6f4fd9bcfe12548105b064d4",
+  "fingerprint": "49583574cac63260c591074df97efaccc3a01d32ad47b4192100f1f214f2d7ec",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-science",
+  "question_id": "gk-2013-regular-national-2-science-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e4f8542cdcec798eb72e918f651a993e7988b90e9eaa3b50cafa7b829ddf3edb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0862
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2013/2013新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 5源核验记录；SHA 6e1b230072a3dfc55f6533d9afa35851ea5933ff6f4fd9bcfe12548105b064d4",
+  "fingerprint": "7b396ef52f31680324c334d144965ac7a10042cf28af75a3de860e11a19a8311",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2013-regular-national-2-science",
+  "question_id": "gk-2013-regular-national-2-science-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-e4f8542cdcec798eb72e918f651a993e7988b90e9eaa3b50cafa7b829ddf3edb",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0863
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 6源核验记录；SHA ea7f8f3172cf92b279fcadc4853d3b1942653182ba698cde59f42f45719aee6d",
+  "fingerprint": "532b85fb564b247559c97cd217db7caf5154105503fe1e3a63780bda31a97e16",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-arts",
+  "question_id": "gk-2014-regular-national-1-arts-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-4eef6d8d1598c2d404b03953d5739417310fabcdf5f543ab46bacef36a35ed4f",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0864
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 6源核验记录；SHA ea7f8f3172cf92b279fcadc4853d3b1942653182ba698cde59f42f45719aee6d",
+  "fingerprint": "aa9cf1708ba63ac9da86da6f6185dd8d0ce210c242d9f23e67b55f86ca16d2f0",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-arts",
+  "question_id": "gk-2014-regular-national-1-arts-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-4eef6d8d1598c2d404b03953d5739417310fabcdf5f543ab46bacef36a35ed4f",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0865
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 6源核验记录；SHA ea7f8f3172cf92b279fcadc4853d3b1942653182ba698cde59f42f45719aee6d",
+  "fingerprint": "543896fcfbd24dfaad1a0f675fefc18081253d84c38254ed71415f7132b3f1f9",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-arts",
+  "question_id": "gk-2014-regular-national-1-arts-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-4eef6d8d1598c2d404b03953d5739417310fabcdf5f543ab46bacef36a35ed4f",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0866
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 7源核验记录；SHA 73a1b4f72e0d7cf3f90c4b82ff0802da49241fcbda76fdce4c2178b14a536c3b",
+  "fingerprint": "e0073e240b78ab3c23b0b0c6eeb9f51589e1e4904e9d7cb68f543ce215e8c33c",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-science",
+  "question_id": "gk-2014-regular-national-1-science-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-af40ea4e27633b30536919b9c6fa2ac65f153afdcfb06c749b36df5a9b4cd273",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0867
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 7源核验记录；SHA 73a1b4f72e0d7cf3f90c4b82ff0802da49241fcbda76fdce4c2178b14a536c3b",
+  "fingerprint": "2e362744fcc8df80d25b78feadfc3d90cf57ac6677cff069a38e144e7be94cd4",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-science",
+  "question_id": "gk-2014-regular-national-1-science-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-af40ea4e27633b30536919b9c6fa2ac65f153afdcfb06c749b36df5a9b4cd273",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0868
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标1理(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 7源核验记录；SHA 73a1b4f72e0d7cf3f90c4b82ff0802da49241fcbda76fdce4c2178b14a536c3b",
+  "fingerprint": "37b97ce7aac97e6a109dccdf8bcd82a3a57f810b82d3aaf1eb747cde70579218",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-1-science",
+  "question_id": "gk-2014-regular-national-1-science-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-af40ea4e27633b30536919b9c6fa2ac65f153afdcfb06c749b36df5a9b4cd273",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0869
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 8源核验记录；SHA b880ebb42bb2cf715ccb3ad1ebe5735d461c27ccc183edd157713a9bf0252755",
+  "fingerprint": "5a0200f591016b9c44beb3a58d1c17110682d4220493658c10d84d1db17bc9d0",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-arts",
+  "question_id": "gk-2014-regular-national-2-arts-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-6ba375c5a83f9e54600e3119a319860ec5959a6fe0116dd7e9adaf4bc4856e39",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0870
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 8源核验记录；SHA b880ebb42bb2cf715ccb3ad1ebe5735d461c27ccc183edd157713a9bf0252755",
+  "fingerprint": "c27c0bd020ba081b76b89da9f753d2a613c429f0500b89cfaec3ceb33b56aacb",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-arts",
+  "question_id": "gk-2014-regular-national-2-arts-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-6ba375c5a83f9e54600e3119a319860ec5959a6fe0116dd7e9adaf4bc4856e39",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0871
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 8源核验记录；SHA b880ebb42bb2cf715ccb3ad1ebe5735d461c27ccc183edd157713a9bf0252755",
+  "fingerprint": "89076b7a90f2710bb22fdcefcc510f5ede05803b41ab30df96d67953870550a5",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-arts",
+  "question_id": "gk-2014-regular-national-2-arts-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-6ba375c5a83f9e54600e3119a319860ec5959a6fe0116dd7e9adaf4bc4856e39",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0872
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 9源核验记录；SHA bf39cc10e8b3fe567565ba8f6a7d0330d13dac159683934e8c879897619aed57",
+  "fingerprint": "61c28cab92e35b13cba84204c4766fbda050b59eb863880061d735c4b9df6857",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-science",
+  "question_id": "gk-2014-regular-national-2-science-q22",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-0f812d4bb74d17dae79bf679938826223140fb59276e04a168ae98f256a60e2e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0873
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 9源核验记录；SHA bf39cc10e8b3fe567565ba8f6a7d0330d13dac159683934e8c879897619aed57",
+  "fingerprint": "f7d27195bee54d647e3e4ab7106a8e30e2da878769f629821a1af2fa5592296f",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-science",
+  "question_id": "gk-2014-regular-national-2-science-q23",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-0f812d4bb74d17dae79bf679938826223140fb59276e04a168ae98f256a60e2e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-0874
+
+```json
+{
+  "affected_paper_ids": [],
+  "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
+  "evidence": "固定源 普通高考/2014/2014新课标2理(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 9源核验记录；SHA bf39cc10e8b3fe567565ba8f6a7d0330d13dac159683934e8c879897619aed57",
+  "fingerprint": "c7caacb3b8bf227244c42487497073d83a75d3c4ffbf67dbd035d2475faf2162",
+  "impact": "blocks_completion",
+  "origin": "phase2-b02-source-rule",
+  "paper_id": "gk-2014-regular-national-2-science",
+  "question_id": "gk-2014-regular-national-2-science-q24",
+  "resume_action": "取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。",
+  "source_id": "src-0f812d4bb74d17dae79bf679938826223140fb59276e04a168ae98f256a60e2e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

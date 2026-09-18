@@ -1,0 +1,750 @@
+% answers.tex —— 2014 年全国Ⅱ卷（理科） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_全国2理_试题.md + 2014/2014_数学真题_全国2理_解析正文.md + 2014/2014_数学真题_全国2理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 是印刷页码 903–904 的两页题面，不附答案或解析。以下各题均依据题面独立复算，\textbf{非官方标准答案}；第 6、7、18、19、22 题图形在 LaTeX 工程中以 TikZ 矢量源重绘。第 19 题的数据表逐项以固定源的三行八列语义复核。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设集合 $M=\{0,1,2\}$，$N=\{x\mid x^2-3x+2\leqslant0\}$，则 $M\cap N=$\mbox{（　　）}
+
+（A）$\{1\}$　　（B）$\{2\}$　　（C）$\{0,1\}$　　（D）$\{1,2\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$N=[1,2]$，故 $M\cap N=\{1,2\}$。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设复数 $z_1,z_2$ 在复平面内的对应点关于虚轴对称，$z_1=2+i$，则 $z_1z_2=$\mbox{（　　）}
+
+（A）$-5$　　（B）$5$　　（C）$-4+i$　　（D）$-4-i$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+关于虚轴对称给出 $z_2=-2+i$，因此
+
+\nopagebreak[4]
+\[
+z_1z_2=(2+i)(-2+i)=-5.
+\]
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+设向量 $\boldsymbol a,\boldsymbol b$ 满足 $|\boldsymbol a+\boldsymbol b|=\sqrt{10}$，$|\boldsymbol a-\boldsymbol b|=\sqrt6$，则 $\boldsymbol a\cdot\boldsymbol b=$\mbox{（　　）}
+
+（A）$1$　　（B）$2$　　（C）$3$　　（D）$5$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+两式平方相减：
+
+\nopagebreak[4]
+\[
+|\boldsymbol a+\boldsymbol b|^2-|\boldsymbol a-\boldsymbol b|^2
+=4\boldsymbol a\cdot\boldsymbol b=10-6.
+\]
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+钝角三角形 $ABC$ 的面积是 $\dfrac12$，$AB=1$，$BC=\sqrt2$，则 $AC=$\mbox{（　　）}
+
+（A）$5$　　（B）$\sqrt5$　　（C）$2$　　（D）$1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $\angle ABC=B$。面积条件给出
+
+\nopagebreak[4]
+\[
+\frac12\cdot1\cdot\sqrt2\sin B=\frac12,
+\]
+
+\Needspace{5\baselineskip}
+即 $\sin B=\sqrt2/2$。因三角形为钝角，$B=135^\circ$。余弦定理于是给出
+
+\nopagebreak[4]
+\[
+AC^2=1+2-2\sqrt2\cos135^\circ=5.
+\]
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+某地区空气质量监测资料表明，一天的空气质量为优良的概率是 $0.75$，连续两天为优良的概率是 $0.6$，已知某天的空气质量为优良，则随后一天的空气质量为优良的概率是\mbox{（　　）}
+
+（A）$0.8$　　（B）$0.75$　　（C）$0.6$　　（D）$0.45$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记相邻两天空气优良为事件 $A,B$。由条件概率，
+
+\nopagebreak[4]
+\[
+P(B\mid A)=\frac{P(A\cap B)}{P(A)}=\frac{0.6}{0.75}.
+\]
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+如图，网格纸上正方形小格的边长为 $1$（表示 $1\ \mathrm{cm}$），图中粗线画出的是某零件的三视图，该零件由一个底面半径为 $3\ \mathrm{cm}$，高为 $6\ \mathrm{cm}$ 的圆柱体毛坯切削得到，则切削掉的部分的体积与原来毛坯体积的比值为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_science_t06_views}\end{center}
+\nopagebreak[4]
+（A）$\dfrac{17}{27}$　　（B）$\dfrac59$　　（C）$\dfrac{10}{27}$　　（D）$\dfrac13$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按三视图的方格尺寸分解切削体，切削部分体积为 $30\pi\ \mathrm{cm}^3$；原圆柱体积为
+
+\nopagebreak[4]
+\[
+\pi\cdot3^2\cdot6=54\pi\ \mathrm{cm}^3.
+\]
+
+两者相除即可确定选项。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，如果输入的 $x,t$ 均为 $2$，则输出的 $S=$\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_science_t07_flowchart}\end{center}
+\nopagebreak[4]
+（A）$4$　　（B）$5$　　（C）$6$　　（D）$7$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+依框图迭代。初值 $(M,S,k)=(1,3,1)$；第一次循环后为 $(2,5,2)$，第二次循环后为 $(2,7,3)$。此时 $k>t$，输出当前 $S$。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设曲线 $y=ax-\ln(x+1)$ 在点 $(0,0)$ 处的切线方程为 $y=2x$，则 $a=$\mbox{（　　）}
+
+（A）$0$　　（B）$1$　　（C）$2$　　（D）$3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+\frac{\mathrm d}{\mathrm dx}\bigl(ax-\ln(x+1)\bigr)=a-\frac1{x+1}.
+\]
+
+切线在 $x=0$ 的斜率为 $2$，代入即可。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 $x,y$ 满足约束条件
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x+y-7\leqslant0,\\
+x-3y+1\leqslant0,\\
+3x-y-5\geqslant0,
+\end{cases}
+\]
+
+则 $z=2x-y$ 的最大值为\mbox{（　　）}
+
+（A）$10$　　（B）$8$　　（C）$3$　　（D）$2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+可行域的顶点由三条边界两两相交得到。直线 $x+y=7$ 与 $x-3y+1=0$ 的交点为 $(5,2)$，并满足第三个约束；此点的目标函数值为 $8$。逐一比较其余可行顶点，故该点取得最大值。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+设 $F$ 为抛物线 $C:y^2=3x$ 的焦点，过 $F$ 且倾斜角为 $30^\circ$ 的直线交 $C$ 于 $A,B$ 两点，$O$ 为坐标原点，则 $\triangle OAB$ 的面积为\mbox{（　　）}
+
+（A）$\dfrac{3\sqrt3}{4}$　　（B）$\dfrac{9\sqrt3}{8}$　　（C）$\dfrac{63}{32}$　　（D）$\dfrac94$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+抛物线焦点为 $F(3/4,0)$。过 $F$、斜率 $1/\sqrt3$ 的直线与抛物线联立，两个交点横坐标之差为 $6\sqrt3$，故弦长为 $12$。原点到这条直线的距离为 $3/8$，所以三角形面积为
+
+\nopagebreak[4]
+\[
+\frac12\cdot12\cdot\frac38.
+\]
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+直三棱柱 $ABC-A_1B_1C_1$ 中，$\angle BCA=90^\circ$，$M,N$ 分别是 $A_1B_1,A_1C_1$ 的中点，$BC=CA=CC_1$，则 $BM$ 与 $AN$ 所成角的余弦值为\mbox{（　　）}
+
+（A）$\dfrac1{10}$　　（B）$\dfrac25$　　（C）$\dfrac{\sqrt{30}}{10}$　　（D）$\dfrac{\sqrt2}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设公共长度为 $1$，取
+
+\nopagebreak[4]
+\[
+C=(0,0,0),\quad B=(1,0,0),\quad A=(0,1,0),\quad A_1=(0,1,1).
+\]
+
+\Needspace{5\baselineskip}
+则 $M=(1/2,1/2,1)$、$N=(0,1/2,1)$。由
+
+\nopagebreak[4]
+\[
+\overrightarrow{BM}=\left(-\frac12,\frac12,1\right),\qquad
+\overrightarrow{AN}=\left(0,-\frac12,1\right)
+\]
+
+计算两向量夹角的余弦即可。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\sqrt3\sin\dfrac{\pi x}{m}$，若存在 $f(x)$ 的极值点 $x_0$ 满足 $x_0^2+[f(x_0)]^2<m^2$，则 $m$ 的取值范围是\mbox{（　　）}
+
+（A）$(-\infty,-6)\cup(6,+\infty)$　　（B）$(-\infty,-4)\cup(4,+\infty)$
+
+（C）$(-\infty,-2)\cup(2,+\infty)$　　（D）$(-\infty,-1)\cup(1,+\infty)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+极值点满足 $x_0=(2k+1)m/2$，并且 $[f(x_0)]^2=3$。选取绝对值最小的极值点，条件化为
+
+\nopagebreak[4]
+\[
+\frac{m^2}{4}+3<m^2,
+\]
+
+从而 $m^2>4$。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+$(x+a)^{10}$ 的展开式中，$x^7$ 的系数为 $15$，则 $a=$______。（用数字填写答案）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$x^7$ 项为 $\binom{10}{3}a^3x^7$，故 $120a^3=15$。
+
+\gkanswer{答案：$\dfrac12$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+函数 $f(x)=\sin(x+2\varphi)-2\sin\varphi\cos(x+\varphi)$ 的最大值为______。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+用和角公式整理：
+
+\nopagebreak[4]
+\[
+\sin(x+2\varphi)-2\sin\varphi\cos(x+\varphi)=\sin x.
+\]
+
+\gkanswer{答案：$1$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知偶函数 $f(x)$ 在 $[0,+\infty)$ 单调递减，$f(2)=0$，若 $f(x-1)>0$，则 $x$ 的取值范围是______。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+偶性与 $[0,+\infty)$ 上的单调递减性表明，$f(u)>0$ 当且仅当 $|u|<2$。令 $u=x-1$ 即得所求不等式。
+
+\gkanswer{答案：$(-1,3)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+设点 $M(x_0,1)$，若在圆 $O:x^2+y^2=1$ 上存在点 $N$，使得 $\angle OMN=45^\circ$，则 $x_0$ 的取值范围是______。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+三角形 $OMN$ 中 $ON=1$、$\angle OMN=45^\circ$。存在这样的 $N$ 当且仅当 $OM\leqslant\sqrt2$。又 $OM^2=x_0^2+1$，故可化为对 $x_0$ 的范围限制。
+
+\gkanswer{答案：$[-1,1]$}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+已知数列 $\{a_n\}$ 满足 $a_1=1$，$a_{n+1}=3a_n+1$。
+
+(1) 证明 $\left\{a_n+\dfrac12\right\}$ 是等比数列，并求 $\{a_n\}$ 的通项公式；
+
+(2) 证明：$\dfrac1{a_1}+\dfrac1{a_2}+\cdots+\dfrac1{a_n}<\dfrac32$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 平移为等比数列}
+
+\Needspace{5\baselineskip}
+在递推式两端加 $1/2$：
+
+\nopagebreak[4]
+\[
+a_{n+1}+\frac12=3\left(a_n+\frac12\right).
+\]
+
+故新数列首项为 $3/2$、公比为 $3$，再还原即可得到通项。
+
+\gksubpart{(2) 估计倒数和}
+
+\Needspace{5\baselineskip}
+由通项，$a_n=(3^n-1)/2$。对 $n\geqslant2$，有
+
+\nopagebreak[4]
+\[
+\frac1{a_n}=\frac2{3^n-1}<\frac1{3^{n-1}}.
+\]
+
+第一项为 $1$，其余项严格小于首项为 $1/3$ 的等比级数之和，因此部分和小于 $1+1/2$。
+
+\gkanswer{答案（1）：$a_n=\dfrac{3^n-1}{2}$。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA\perp$ 平面 $ABCD$，$E$ 为 $PD$ 的中点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_science_t18_pyramid}\end{center}
+\nopagebreak[4]
+(1) 证明：$PB\parallel$ 平面 $AEC$；
+
+(2) 设二面角 $D-AE-C$ 为 $60^\circ$，$AP=1$，$AD=\sqrt3$，求三棱锥 $E-ACD$ 的体积。
+
+\par\medskip
+
+*以下续自固定源 PDF 第 2 页（印刷页 904）。*
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明平行}
+
+\Needspace{5\baselineskip}
+取 $A$ 为原点，记 $\overrightarrow{AB}=\boldsymbol b$、$\overrightarrow{AD}=\boldsymbol d$、$\overrightarrow{AP}=\boldsymbol p$。因 $E$ 是 $PD$ 中点，有
+
+\nopagebreak[4]
+\[
+\overrightarrow{EA}=-\frac{\boldsymbol p+\boldsymbol d}{2},\qquad
+\overrightarrow{EC}=\boldsymbol b+\boldsymbol d-\frac{\boldsymbol p+\boldsymbol d}{2}.
+\]
+
+\Needspace{5\baselineskip}
+因此
+
+\nopagebreak[4]
+\[
+\overrightarrow{EA}+\overrightarrow{EC}=\boldsymbol b-\boldsymbol p=\overrightarrow{PB}.
+\]
+
+向量 $\overrightarrow{EA}$、$\overrightarrow{EC}$ 都在平面 $AEC$ 内，故 $\overrightarrow{PB}$ 是该平面内两个向量的和，直线 $PB$ 平行于平面 $AEC$。
+
+\gksubpart{(2) 求体积}
+
+\Needspace{5\baselineskip}
+取
+
+\nopagebreak[4]
+\[
+A=(0,0,0),\quad D=(0,\sqrt3,0),\quad P=(0,0,1),\quad C=(u,\sqrt3,0).
+\]
+
+$E=(0,\sqrt3/2,1/2)$。由二面角 $D-AE-C$ 的余弦为 $1/2$，比较平面 $DAE$ 与 $CAE$ 的法向量，得到 $u=3/2$。三角形 $ACD$ 面积为 $3\sqrt3/4$，点 $E$ 到底面距离为 $1/2$，据此用锥体体积公式计算。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt3}{8}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+某地区 $2007$ 年至 $2013$ 年农村居民家庭人均纯收入 $y$（单位：千元）的数据如下表：
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_science_t19_table}\end{center}
+\nopagebreak[4]
+为避免转换时丢失题面数据，表中三行全部 entries、单位和行列语义逐项转录如下：
+
+\begin{center}
+\begingroup\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llllllll}
+\toprule
+年份 & 2007 & 2008 & 2009 & 2010 & 2011 & 2012 & 2013 \\
+\midrule
+年份代号 $t$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+人均纯收入 $y$（千元） & 2.9 & 3.3 & 3.6 & 4.4 & 4.8 & 5.2 & 5.9 \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{center}
+
+(1) 求 $y$ 关于 $t$ 的线性回归方程；
+
+(2) 利用 (1) 中的回归方程，分析 $2007$ 年至 $2013$ 年该地区农村居民家庭人均纯收入的变化情况，并预测该地区 $2015$ 年农村居民家庭人均纯收入。
+
+\Needspace{5\baselineskip}
+附：回归直线的斜率和截距的最小二乘估计公式分别为：
+
+\nopagebreak[4]
+\[
+\hat b=\frac{\sum_{i=1}^n(t_i-\bar t)(y_i-\bar y)}{\sum_{i=1}^n(t_i-\bar t)^2},\qquad \hat a=\bar y-\hat b\bar t.
+\]
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求回归方程}
+
+\Needspace{5\baselineskip}
+按题面表格的七个配对数据，
+
+\nopagebreak[4]
+\[
+\bar t=4,\qquad \bar y=4.3,
+\]
+
+\nopagebreak[4]
+\[
+\sum_{i=1}^7(t_i-\bar t)(y_i-\bar y)=14,\qquad
+\sum_{i=1}^7(t_i-\bar t)^2=28.
+\]
+
+因此回归斜率为 $0.5$，截距为 $2.3$。
+
+\gksubpart{(2) 分析并预测}
+
+回归直线的斜率为正，表示该期间人均纯收入随年份代号平均每年约增加 $0.5$ 千元。$2015$ 年对应 $t=9$，代入该直线即可作出预测。
+
+\gkanswer{答案（1）：$\hat y=0.5t+2.3$。}
+
+\gkanswer{答案（2）：人均纯收入逐年约增加 $0.5$ 千元；$2015$ 年预测值为 $6.8$ 千元。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设 $F_1,F_2$ 分别是椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$ 的左、右焦点，$M$ 是 $C$ 上一点且 $MF_2$ 与 $x$ 轴垂直，直线 $MF_1$ 与 $C$ 的另一个交点为 $N$。
+
+(1) 若直线 $MN$ 的斜率为 $\dfrac34$，求 $C$ 的离心率；
+
+(2) 若直线 $MN$ 在 $y$ 轴上的截距为 $2$，且 $|MN|=5|F_1N|$，求 $a,b$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求离心率}
+
+\Needspace{5\baselineskip}
+设焦距半长为 $c$。过右焦点的竖直弦端点可写为
+
+\nopagebreak[4]
+\[
+M=\left(c,\frac{b^2}{a}\right).
+\]
+
+\Needspace{5\baselineskip}
+直线 $MF_1$ 的斜率为 $b^2/(2ac)=3/4$。令 $e=c/a$，并用 $b^2=a^2(1-e^2)$，得
+
+\nopagebreak[4]
+\[
+2e^2+3e-2=0.
+\]
+
+在 $0<e<1$ 内取根。
+
+\gksubpart{(2) 求半轴长}
+
+\Needspace{5\baselineskip}
+截距条件给出 $b^2/(2a)=2$。设 $F_1M$ 上另一交点的参数为 $\lambda$，由椭圆方程可得
+
+\nopagebreak[4]
+\[
+|\lambda|=\frac{1-e^2}{1+3e^2}.
+\]
+
+长度条件使该量为 $1/4$，故 $e^2=3/7$。再与 $b^2=4a$ 联立即可解出两半轴。
+
+\gkanswer{答案（1）：$e=\dfrac12$。}
+
+\gkanswer{答案（2）：$a=7$，$b=2\sqrt7$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=e^x-e^{-x}-2x$。
+
+(1) 讨论 $f(x)$ 的单调性；
+
+(2) 设 $g(x)=f(2x)-4bf(x)$，当 $x>0$ 时，$g(x)>0$，求 $b$ 的最大值；
+
+(3) 已知 $1.4142<\sqrt2<1.4143$，估计 $\ln2$ 的近似值（精确到 $0.001$）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 讨论单调性}
+
+\nopagebreak[4]
+\[
+f'(x)=e^x+e^{-x}-2\geqslant0,
+\]
+
+且等号只在 $x=0$ 取到；由此可判定函数在实数集上的单调性。
+
+\gksubpart{(2) 求参数上界}
+
+\Needspace{5\baselineskip}
+对 $x>0$，令 $h(x)=f(2x)-8f(x)$。直接整理并求导（或以双曲正弦函数展开）可得 $h(x)>0$。于是 $b=2$ 时条件成立；另一方面，当 $x\to0^+$ 时，
+
+\nopagebreak[4]
+\[
+\frac{f(2x)}{4f(x)}\longrightarrow2,
+\]
+
+故任何满足条件的 $b$ 不能大于此极限。
+
+\gksubpart{(3) 估计对数}
+
+\Needspace{5\baselineskip}
+用恒等式
+
+\nopagebreak[4]
+\[
+\ln2=2\left(\frac13+\frac1{3^3\cdot3}+\frac1{3^5\cdot5}+\cdots\right)
+\]
+
+截取前几项，并以其后的正项几何上界估计余项，可将值夹在 $0.6925$ 与 $0.6935$ 之间，故按千分位取近似值。
+
+\gkanswer{答案（1）：$f(x)$ 在 $\mathbb R$ 上单调递增。}
+
+\gkanswer{答案（2）：$b$ 的最大值为 $2$。}
+
+\gkanswer{答案（3）：$\ln2\approx0.693$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交于点 $B,C$，$PC=2PA$，$D$ 为 $PC$ 的中点，$AD$ 的延长线交 $\odot O$ 于点 $E$。证明：
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_science_t22_circle}\end{center}
+\nopagebreak[4]
+(1) $BE=EC$；
+
+(2) $AD\cdot DE=2PB^2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明两弦相关长度相等}
+
+由切割线定理，$PA^2=PB\cdot PC$。令 $PA=s$，则 $PB=s/2,PC=2s$，而 $D$ 为 $PC$ 中点。作相似不变的坐标化，令 $P=(0,0)$、$PC$ 为 $x$ 轴；圆与该轴交于横坐标 $1/2,2$ 的两点。直线 $AD$ 与圆的另一交点横坐标为 $5/4$，即 $B,C$ 横坐标的中点，故该点到 $B,C$ 的距离相等。
+
+\gksubpart{(2) 使用相交弦定理}
+
+\Needspace{5\baselineskip}
+两弦 $AE,BC$ 在 $D$ 相交，故
+
+\nopagebreak[4]
+\[
+AD\cdot DE=DB\cdot DC.
+\]
+
+由上一问前的长度关系，$DB=s/2,DC=s$，将右端改写为 $2(s/2)^2$ 即得。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+在直角坐标系 $xOy$ 中，以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，半圆 $C$ 的极坐标方程为 $\rho=2\cos\theta$，$\theta\in\left[0,\dfrac\pi2\right]$。
+
+(1) 求 $C$ 的参数方程；
+
+(2) 设点 $D$ 在 $C$ 上，$C$ 在 $D$ 处的切线与直线 $l:y=\sqrt3x+2$ 垂直，根据 (1) 中你得到的参数方程，确定点 $D$ 的坐标。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 化为参数方程}
+
+由 $x=\rho\cos\theta,y=\rho\sin\theta$ 及 $\rho=2\cos\theta$ 直接代入。
+
+\gksubpart{(2) 确定切点}
+
+普通方程为 $(x-1)^2+y^2=1$。所给直线斜率为 $\sqrt3$，故切线垂直意味着半径斜率为 $\sqrt3$；在给定上半圆上确定相应点。
+
+\gkanswer{答案（1）：$\begin{cases}x=2\cos^2\theta,\\y=2\sin\theta\cos\theta,\end{cases}\ \theta\in\left[0,\dfrac\pi2\right]$。}
+
+\gkanswer{答案（2）：$D\left(\dfrac32,\dfrac{\sqrt3}{2}\right)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\left|x+\dfrac1a\right|+|x-a|\ (a>0)$。
+
+(1) 证明：$f(x)\geqslant2$；
+
+(2) 若 $f(3)<5$，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明下界}
+
+\Needspace{5\baselineskip}
+三角不等式给出
+
+\nopagebreak[4]
+\[
+\left|x+\frac1a\right|+|x-a|\geqslant a+\frac1a\geqslant2.
+\]
+
+\gksubpart{(2) 解参数不等式}
+
+将 $x=3$ 代入，分 $0<a\leqslant3$ 与 $a>3$ 两段去绝对值。前段得到 $a^2-a-1>0$，后段得到 $a^2-5a+1<0$；结合正性和分段条件取交集。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$a\in\left(\dfrac{1+\sqrt5}{2},\dfrac{5+\sqrt{21}}2\right)$。}
+
+\end{answer}

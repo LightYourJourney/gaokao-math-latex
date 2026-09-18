@@ -1,0 +1,764 @@
+% answers.tex —— 2014 年全国Ⅱ卷（文科） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2014/2014_数学真题_全国2文_试题.md + 2014/2014_数学真题_全国2文_解析正文.md + 2014/2014_数学真题_全国2文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 是印刷页码 905–906 的两页题面，不附答案或解析。以下各题均依据题面独立复算，\textbf{非官方标准答案}；第 6、8、18、19、22 题图形在 LaTeX 工程中以 TikZ 矢量源重绘。第 19 题甲、乙两侧叶片均按题面原始顺序记录，中央双竖线表示共用的茎。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A=\{-2,0,2\}$，$B=\{x\mid x^2-x-2=0\}$，则 $A\cap B=$\mbox{（　　）}
+
+（A）$\varnothing$　　（B）$\{2\}$　　（C）$\{0\}$　　（D）$\{-2\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$x^2-x-2=0$ 的根为 $-1,2$，故 $B=\{-1,2\}$，从而 $A\cap B=\{2\}$，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+$\dfrac{1+3i}{1-i}=$\mbox{（　　）}
+
+（A）$1+2i$　　（B）$-1+2i$　　（C）$1-2i$　　（D）$-1-2i$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+\frac{1+3i}{1-i}=\frac{(1+3i)(1+i)}2=-1+2i,
+\]
+
+选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+函数 $f(x)$ 在 $x=x_0$ 处导数存在，若 $p:f'(x_0)=0$；$q:x=x_0$ 是 $f(x)$ 的极值点，则\mbox{（　　）}
+
+（A）$p$ 是 $q$ 的充分必要条件
+
+（B）$p$ 是 $q$ 的充分条件，但不是 $q$ 的必要条件
+
+（C）$p$ 是 $q$ 的必要条件，但不是 $q$ 的充分条件
+
+（D）$p$ 既不是 $q$ 的充分条件，也不是 $q$ 的必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+可导函数在极值点处导数必为零，故 $p$ 是 $q$ 的必要条件；但如 $f(x)=x^3$ 在 $0$ 处导数为零却非极值点，故不是充分条件，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+设向量 $\boldsymbol a,\boldsymbol b$ 满足 $|\boldsymbol a+\boldsymbol b|=\sqrt{10}$，$|\boldsymbol a-\boldsymbol b|=\sqrt6$，则 $\boldsymbol a\cdot\boldsymbol b=$\mbox{（　　）}
+
+（A）$1$　　（B）$2$　　（C）$3$　　（D）$5$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由
+
+\nopagebreak[4]
+\[
+|\boldsymbol a+\boldsymbol b|^2-|\boldsymbol a-\boldsymbol b|^2=4\boldsymbol a\cdot\boldsymbol b
+\]
+
+得 $10-6=4\boldsymbol a\cdot\boldsymbol b$，所以 $\boldsymbol a\cdot\boldsymbol b=1$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+等差数列 $\{a_n\}$ 的公差是 $2$，若 $a_2,a_4,a_8$ 成等比数列，则 $\{a_n\}$ 的前 $n$ 项和 $S_n=$\mbox{（　　）}
+
+（A）$n(n+1)$　　（B）$n(n-1)$　　（C）$\dfrac{n(n+1)}2$　　（D）$\dfrac{n(n-1)}2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $a_1=t$，则 $a_2=t+2,a_4=t+6,a_8=t+14$。等比条件给出
+
+\nopagebreak[4]
+\[
+(t+6)^2=(t+2)(t+14),
+\]
+
+故 $t=2$。于是 $a_n=2n$，所以 $S_n=n(n+1)$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+如图，网格纸上正方形小格的边长为 $1$（表示 $1\ \mathrm{cm}$），图中粗线画出的是某零件的三视图，该零件由一个底面半径为 $3\ \mathrm{cm}$，高为 $6\ \mathrm{cm}$ 的圆柱体毛坯切削得到，则切削掉的部分的体积与原来毛坯体积的比值为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_arts_t06_views}\end{center}
+\nopagebreak[4]
+（A）$\dfrac{17}{27}$　　（B）$\dfrac59$　　（C）$\dfrac{10}{27}$　　（D）$\dfrac13$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按三视图的方格尺寸把切削体分解，切削部分的体积为 $30\pi\ \mathrm{cm}^3$；原圆柱体积为
+
+\nopagebreak[4]
+\[
+\pi\cdot3^2\cdot6=54\pi\ \mathrm{cm}^3.
+\]
+
+故所求比值为 $30\pi/(54\pi)=5/9$，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+正三棱柱 $ABC-A_1B_1C_1$ 的底面边长为 $2$，侧棱长为 $\sqrt3$，$D$ 为 $BC$ 中点，则三棱锥 $A-B_1DC_1$ 的体积为\mbox{（　　）}
+
+（A）$3$　　（B）$\dfrac32$　　（C）$1$　　（D）$\dfrac{\sqrt3}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取正三角形底面在 $z=0$ 平面，侧棱沿 $z$ 轴。可取
+
+\nopagebreak[4]
+\[
+A=(0,\sqrt3,0),\quad B_1=(-1,0,\sqrt3),\quad D=(0,0,0),\quad C_1=(1,0,\sqrt3).
+\]
+
+三棱锥 $A-B_1DC_1$ 的三重积绝对值为 $6$，故体积为 $6/6=1$，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，如果输入的 $x,t$ 均为 $2$，则输出的 $S=$\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_arts_t08_flowchart}\end{center}
+\nopagebreak[4]
+（A）$4$　　（B）$5$　　（C）$6$　　（D）$7$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+当 $x=t=2$ 时，前两次循环分别给出
+
+\nopagebreak[4]
+\[
+(M,S,k)=(2,5,2),\qquad(2,7,3).
+\]
+
+此时 $k>t$，输出 $S=7$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 $x,y$ 满足约束条件
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x+y-1\geqslant0,\\
+x-y-1\leqslant0,\\
+x-3y+3\geqslant0,
+\end{cases}
+\]
+
+则 $z=x+2y$ 的最大值为\mbox{（　　）}
+
+（A）$8$　　（B）$7$　　（C）$2$　　（D）$1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+可行域顶点中，使目标函数取得最大值的是直线 $y=x-1$ 与 $y=(x+3)/3$ 的交点 $(3,2)$。因此
+
+\nopagebreak[4]
+\[
+z_{\max}=3+2\times2=7,
+\]
+
+选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+设 $F$ 为抛物线 $C:y^2=3x$ 的焦点，过 $F$ 且倾斜角为 $30^\circ$ 的直线交 $C$ 于 $A,B$ 两点，则 $|AB|=$\mbox{（　　）}
+
+（A）$\dfrac{\sqrt{30}}3$　　（B）$6$　　（C）$12$　　（D）$7\sqrt3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+抛物线焦点为 $F(3/4,0)$。过 $F$、斜率为 $1/\sqrt3$ 的直线与抛物线联立，所得两交点横坐标之差为 $6\sqrt3$。因为该直线与 $x$ 轴夹角为 $30^\circ$，所以
+
+\nopagebreak[4]
+\[
+|AB|=\frac{6\sqrt3}{\cos30^\circ}=12,
+\]
+
+选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+若函数 $f(x)=kx-\ln x$ 在区间 $(1,+\infty)$ 单调递增，则 $k$ 的取值范围是\mbox{（　　）}
+
+（A）$(-\infty,-2]$　　（B）$(-\infty,-1]$　　（C）$[2,+\infty)$　　（D）$[1,+\infty)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+f'(x)=k-\frac1x.
+\]
+
+在 $(1,+\infty)$ 上恒非负，当且仅当 $k\geqslant1$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设点 $M(x_0,1)$，若在圆 $O:x^2+y^2=1$ 上存在点 $N$，使得 $\angle OMN=45^\circ$，则 $x_0$ 的取值范围是\mbox{（　　）}
+
+（A）$[-1,1]$　　（B）$\left[-\dfrac12,\dfrac12\right]$　　（C）$[-\sqrt2,\sqrt2]$　　（D）$\left[-\dfrac{\sqrt2}{2},\dfrac{\sqrt2}{2}\right]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在三角形 $OMN$ 中，$ON=1$、$\angle OMN=45^\circ$。令 $OM=d$，由余弦定理把 $MN$ 视为未知量，存在实数解的条件为 $d\leqslant\sqrt2$。又 $d^2=x_0^2+1$，故 $|x_0|\leqslant1$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+甲、乙两名运动员各自等可能地从红、白、蓝 $3$ 种颜色的运动服中选择 $1$ 种，则他们选择相同颜色运动服的概率为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两人各有 $3$ 种等可能选择；相同颜色的有 $3$ 种，故概率为 $3/9=1/3$。
+
+\gkanswer{答案：$\dfrac13$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+函数 $f(x)=\sin(x+\varphi)-2\sin\varphi\cos x$ 的最大值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+f(x)=\cos\varphi\sin x-\sin\varphi\cos x=\sin(x-\varphi),
+\]
+
+故最大值为 $1$。
+
+\gkanswer{答案：$1$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+偶函数 $y=f(x)$ 的图象关于直线 $x=2$ 对称，$f(3)=3$，则 $f(-1)=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+关于 $x=2$ 对称使 $f(1)=f(3)=3$；又 $f$ 为偶函数，所以 $f(-1)=f(1)=3$。
+
+\gkanswer{答案：$3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+数列 $\{a_n\}$ 满足 $a_{n+1}=\dfrac1{1-a_n}$，$a_8=2$，则 $a_1=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+倒推递推式 $a_n=1-1/a_{n+1}$：
+
+\nopagebreak[4]
+\[
+a_8=2,\ a_7=\frac12,\ a_6=-1,\ a_5=2.
+\]
+
+周期为 $3$，故 $a_1=1/2$。
+
+\gkanswer{答案：$\dfrac12$}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+四边形 $ABCD$ 的内角 $A$ 与 $C$ 互补，$AB=1$，$BC=3$，$CD=DA=2$。
+
+(1) 求 $C$ 和 $BD$；
+
+(2) 求四边形 $ABCD$ 的面积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求 $\angle C$ 与 $BD$}
+
+\Needspace{5\baselineskip}
+令 $\angle A=\alpha$，则 $\angle C=\pi-\alpha$。在 $\triangle ABD$、$\triangle BCD$ 中分别使用余弦定理：
+
+\nopagebreak[4]
+\[
+BD^2=5-4\cos\alpha=13-12\cos(\pi-\alpha)=13+12\cos\alpha.
+\]
+
+故 $\cos\alpha=-1/2$，所以 $\angle C=120^\circ$，并且 $BD^2=7$，即 $BD=\sqrt7$。
+
+\gksubpart{(2) 求面积}
+
+\nopagebreak[4]
+\[
+S_{ABCD}=\frac12\cdot1\cdot2\sin60^\circ+\frac12\cdot3\cdot2\sin120^\circ=2\sqrt3.
+\]
+
+\gkanswer{答案（1）：$\angle C=120^\circ$，$BD=\sqrt7$。}
+
+\gkanswer{答案（2）：四边形 $ABCD$ 的面积为 $2\sqrt3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，四棱锥 $P-ABCD$ 中，底面 $ABCD$ 为矩形，$PA\perp$ 平面 $ABCD$，$E$ 为 $PD$ 的中点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_arts_t18_pyramid}\end{center}
+\nopagebreak[4]
+(1) 证明：$PB\parallel$ 平面 $AEC$；
+
+(2) 设 $AP=1$，$AD=\sqrt3$，三棱锥 $P-ABD$ 的体积 $V=\dfrac{\sqrt3}{4}$，求 $A$ 到平面 $PBC$ 的距离。
+
+\par\medskip
+
+*以下续自固定源 PDF 第 2 页（印刷页 906）。*
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明平行}
+
+\Needspace{5\baselineskip}
+因 $E$ 是 $PD$ 中点，取 $A$ 为原点，记 $\overrightarrow{AB}=\boldsymbol b$、$\overrightarrow{AD}=\boldsymbol d$、$\overrightarrow{AP}=\boldsymbol p$，则
+
+\nopagebreak[4]
+\[
+\overrightarrow{EC}-\overrightarrow{EA}=\boldsymbol b-\boldsymbol p=\overrightarrow{PB}.
+\]
+
+而 $EC,EA$ 均在平面 $AEC$ 内，故 $PB\parallel$ 平面 $AEC$。
+
+\gksubpart{(2) 求点到平面的距离}
+
+\Needspace{5\baselineskip}
+由
+
+\nopagebreak[4]
+\[
+\frac16\,AB\cdot\sqrt3\cdot1=\frac{\sqrt3}{4}
+\]
+
+\Needspace{5\baselineskip}
+得 $AB=3/2$。取 $A=(0,0,0)$，$B=(3/2,0,0)$，$C=(3/2,\sqrt3,0)$，$P=(0,0,1)$。平面 $PBC$ 的法向量可取 $(1,0,3/2)$，故
+
+\nopagebreak[4]
+\[
+d(A,PBC)=\frac{3/2}{\sqrt{1+9/4}}=\frac3{\sqrt{13}}.
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$A$ 到平面 $PBC$ 的距离为 $\dfrac3{\sqrt{13}}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+某市为了考核甲、乙两部门的工作情况，随机访问了 $50$ 位市民，根据这 $50$ 位市民对这两部门的评分（评分越高表明市民的评价越高），绘制茎叶图如下：
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_arts_t19_stemleaf}\end{center}
+\nopagebreak[4]
+\Needspace{5\baselineskip}
+为避免转换时丢失题面数据，图中两组叶片及中央双分隔线的语义逐行转录如下（左叶仍按题面从左至中茎的顺序，右叶仍按题面从中茎向右的顺序）：
+
+\nopagebreak[4]
+\[
+\begin{array}{r||c||l}
+\text{\text{甲部门}}&\text{\text{茎}}&\text{\text{乙部门}}\\ \hline
+&3&5\quad9\\
+4&4&0\quad4\quad4\quad8\\
+9\quad7&5&1\quad2\quad2\quad4\quad5\quad6\quad6\quad7\quad7\quad7\quad8\quad9\\
+9\quad7\quad6\quad6\quad5\quad3\quad3\quad2\quad1\quad1\quad0&6&0\quad1\quad1\quad2\quad3\quad4\quad6\quad8\quad8\\
+9\quad8\quad8\quad7\quad7\quad7\quad6\quad6\quad5\quad5\quad5\quad5\quad5\quad4\quad4\quad4\quad3\quad3\quad3\quad2\quad1\quad0\quad0&7&0\quad0\quad1\quad1\quad3\quad4\quad4\quad9\\
+6\quad6\quad5\quad5\quad2\quad0\quad0&8&1\quad2\quad3\quad3\quad4\quad5\\
+6\quad3\quad2\quad2\quad2\quad0&9&0\quad1\quad1\quad4\quad5\quad6\\
+&10&0\quad0\quad0
+\end{array}
+\]
+
+(1) 分别估计该市的市民对甲、乙两部门评分的中位数；
+
+(2) 分别估计该市的市民对甲、乙两部门的评分高于 $90$ 的概率；
+
+(3) 根据茎叶图分析该市的市民对甲、乙两部门的评价。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 估计中位数}
+
+每个部门均有 $50$ 个评分，中位数取第 $25$、第 $26$ 个评分的平均数。按题面茎叶还原并排序，甲部门第 $25$、第 $26$ 个均为 $75$，乙部门第 $25$、第 $26$ 个均为 $68$。故中位数分别为 $75,68$。
+
+\gksubpart{(2) 估计高于 $90$ 的概率}
+
+\Needspace{5\baselineskip}
+甲部门高于 $90$ 的评分为 $92,92,92,93,96$ 共 $5$ 个；乙部门高于 $90$ 的评分为 $91,91,94,95,96,100,100,100$ 共 $8$ 个，故概率估计为
+
+\nopagebreak[4]
+\[
+\frac5{50}=\frac1{10},\qquad\frac8{50}=\frac4{25}.
+\]
+
+\gksubpart{(3) 分析评价}
+
+甲部门的中位数较高，评分主要集中于 $70$ 分段，整体评价较高且较集中；乙部门低分较多、离散程度较大，但 $90$ 分以上的比例较甲部门高。这里的两侧数据均以题面背靠背茎叶图为准，未以频数表替代。
+
+\gkanswer{答案（1）：甲部门评分中位数为 $75$，乙部门评分中位数为 $68$。}
+
+\gkanswer{答案（2）：评分高于 $90$ 的概率估计分别为 $\dfrac1{10}$、$\dfrac4{25}$。}
+
+\gkanswer{答案（3）：甲部门总体评价较高且较集中；乙部门低分较多但高于 $90$ 的比例较大。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设 $F_1,F_2$ 分别是椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$ 的左、右焦点，$M$ 是 $C$ 上一点且 $MF_2$ 与 $x$ 轴垂直，直线 $MF_1$ 与 $C$ 的另一个交点为 $N$。
+
+(1) 若直线 $MN$ 的斜率为 $\dfrac34$，求 $C$ 的离心率；
+
+(2) 若直线 $MN$ 在 $y$ 轴上的截距为 $2$，且 $|MN|=5|F_1N|$，求 $a,b$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令焦距半长为 $c$。由于 $M$ 在过 $F_2$ 的竖直线上，
+
+\nopagebreak[4]
+\[
+M=\left(c,\frac{b^2}{a}\right).
+\]
+
+\gksubpart{(1) 求离心率}
+
+\Needspace{5\baselineskip}
+直线 $MF_1$ 的斜率为 $b^2/(2ac)=3/4$。令 $e=c/a$，利用 $b^2=a^2(1-e^2)$，得
+
+\nopagebreak[4]
+\[
+2e^2+3e-2=0.
+\]
+
+因 $0<e<1$，故 $e=1/2$。
+
+\gksubpart{(2) 求 $a,b$}
+
+\Needspace{5\baselineskip}
+直线 $MN$ 在 $y$ 轴上的截距为 $b^2/(2a)=2$，即 $b^2=4a$。设从 $F_1$ 到 $M$ 的参数为 $\lambda$，椭圆上另一交点 $N$ 对应的参数绝对值为
+
+\nopagebreak[4]
+\[
+\frac{1-e^2}{1+3e^2}.
+\]
+
+\Needspace{5\baselineskip}
+条件 $|MN|=5|F_1N|$ 给出该值为 $1/4$，从而 $e^2=3/7$，故 $b^2/a^2=4/7$。联立 $b^2=4a$，得
+
+\nopagebreak[4]
+\[
+a=7,\qquad b=2\sqrt7.
+\]
+
+\gkanswer{答案（1）：$e=\dfrac12$。}
+
+\gkanswer{答案（2）：$a=7$，$b=2\sqrt7$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x^3-3x^2+ax+2$，曲线 $y=f(x)$ 在点 $(0,2)$ 处的切线与 $x$ 轴交点的横坐标为 $-2$。
+
+(1) 求 $a$；
+
+(2) 证明：当 $k<1$ 时，曲线 $y=f(x)$ 与直线 $y=kx-2$ 只有一个交点。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求 $a$}
+
+在 $(0,2)$ 处的切线为 $y=ax+2$，它与 $x$ 轴交于 $x=-2/a$。由题设 $-2/a=-2$，故 $a=1$。
+
+\gksubpart{(2) 证明唯一交点}
+
+\Needspace{5\baselineskip}
+代入 $a=1$，两曲线交点的横坐标满足
+
+\nopagebreak[4]
+\[
+h(x)=x^3-3x^2+(1-k)x+4=0.
+\]
+
+当 $k<-2$ 时，$h'(x)=3(x-1)^2-2-k>0$，故 $h$ 严格递增，只有一个零点。$-2\leqslant k<1$ 时，考察两个驻点 $x=1\pm\sqrt{(k+2)/3}$，直接代入可知极大值为正、极小值亦为正；又 $h(x)\to-\infty\ (x\to-\infty)$，$h(x)\to+\infty\ (x\to+\infty)$，故仍只有一个零点。因此曲线与直线只有一个交点。
+
+\gkanswer{答案（1）：$a=1$。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，$P$ 是 $\odot O$ 外一点，$PA$ 是切线，$A$ 为切点，割线 $PBC$ 与 $\odot O$ 相交于点 $B,C$，$PC=2PA$，$D$ 为 $PC$ 的中点，$AD$ 的延长线交 $\odot O$ 于点 $E$。证明：
+\nopagebreak[4]
+\begin{center}\input{figures/f2014_national_2_arts_t22_circle}\end{center}
+\nopagebreak[4]
+(1) $BE=EC$；
+
+(2) $AD\cdot DE=2PB^2$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由切割线定理，
+
+\nopagebreak[4]
+\[
+PA^2=PB\cdot PC.
+\]
+
+又 $PC=2PA$，故 $PB=PA/2$。设 $PA=s$，则 $PB=s/2,PC=2s$；因为 $D$ 是 $PC$ 中点，故 $PD=DC=s$，$DB=s/2$。
+
+\gksubpart{(1) 证明 $BE=EC$}
+
+\Needspace{5\baselineskip}
+作相似不变的坐标化，令 $s=1$，取 $P=(0,0)$、$PC$ 为 $x$ 轴，则
+
+\nopagebreak[4]
+\[
+B=\left(\frac12,0\right),\quad D=(1,0),\quad C=(2,0).
+\]
+
+设 $A=(u,v)$。圆与 $x$ 轴交于 $B,C$，且 $P$ 对圆的幂为 $1$，其方程可写成 $x^2+y^2-\frac52x+my+1=0$。将直线 $AD$ 与该圆联立，除去根 $A$ 后，另一交点 $E$ 的横坐标为 $5/4$，即为 $B,C$ 横坐标的中点。因此 $E$ 在 $BC$ 的垂直平分线上，故 $BE=EC$。
+
+\gksubpart{(2) 证明乘积关系}
+
+\Needspace{5\baselineskip}
+弦 $AE$ 与弦 $BC$ 在 $D$ 相交，故
+
+\nopagebreak[4]
+\[
+AD\cdot DE=DB\cdot DC=\frac{s}{2}\cdot s=\frac{s^2}{2}=2\left(\frac{s}{2}\right)^2=2PB^2.
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+在直角坐标系 $xOy$ 中，以坐标原点为极点，$x$ 轴正半轴为极轴建立极坐标系，半圆 $C$ 的极坐标方程为 $\rho=2\cos\theta$，$\theta\in\left[0,\dfrac\pi2\right]$。
+
+(1) 求 $C$ 的参数方程；
+
+(2) 设点 $D$ 在 $C$ 上，$C$ 在 $D$ 处的切线与直线 $l:y=\sqrt3x+2$ 垂直，根据 (1) 中你得到的参数方程，确定点 $D$ 的坐标。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求参数方程}
+
+\Needspace{5\baselineskip}
+由 $x=\rho\cos\theta,y=\rho\sin\theta$，得到
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x=2\cos^2\theta,\\
+y=2\sin\theta\cos\theta,
+\end{cases}\qquad \theta\in\left[0,\frac\pi2\right].
+\]
+
+\gksubpart{(2) 求点 $D$}
+
+\Needspace{5\baselineskip}
+该圆的普通方程为 $(x-1)^2+y^2=1$。切线与斜率为 $\sqrt3$ 的直线垂直，故半径斜率为 $\sqrt3$；在上半圆上取得
+
+\nopagebreak[4]
+\[
+D=\left(1+\frac12,\frac{\sqrt3}{2}\right)=\left(\frac32,\frac{\sqrt3}{2}\right).
+\]
+
+\gkanswer{答案（1）：$\begin{cases}x=2\cos^2\theta,\\y=2\sin\theta\cos\theta,\end{cases}\ \theta\in\left[0,\dfrac\pi2\right]$。}
+
+\gkanswer{答案（2）：$D\left(\dfrac32,\dfrac{\sqrt3}{2}\right)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\left|x+\dfrac1a\right|+|x-a|\ (a>0)$。
+
+(1) 证明：$f(x)\geqslant2$；
+
+(2) 若 $f(3)<5$，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明不等式}
+
+\Needspace{5\baselineskip}
+由三角不等式，
+
+\nopagebreak[4]
+\[
+f(x)=\left|x+\frac1a\right|+|x-a|\geqslant\left(a+\frac1a\right)\geqslant2.
+\]
+
+\gksubpart{(2) 求 $a$ 的范围}
+
+\nopagebreak[4]
+\[
+f(3)=3+\frac1a+|3-a|<5.
+\]
+
+\Needspace{5\baselineskip}
+当 $0<a\leqslant3$ 时，化为 $a^2-a-1>0$；当 $a>3$ 时，化为 $a^2-5a+1<0$。合并得
+
+\nopagebreak[4]
+\[
+a\in\left(\frac{1+\sqrt5}{2},\frac{5+\sqrt{21}}2\right).
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$a\in\left(\dfrac{1+\sqrt5}{2},\dfrac{5+\sqrt{21}}2\right)$。}
+
+\end{answer}

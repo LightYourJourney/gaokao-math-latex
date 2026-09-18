@@ -1,0 +1,677 @@
+% answers.tex —— 2013 年全国Ⅰ卷（理科） · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2013/2013_数学真题_全国1理_试题.md + 2013/2013_数学真题_全国1理_解析正文.md + 2013/2013_数学真题_全国1理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 仅有两页题面，不附答案或解析。以下全部题目依据题面独立解答，\textbf{非官方标准答案}。第 22–24 题的选考或作答属性为“题面未给规则”，不补写任选或必答说明。第 20 题第二问按未限定种类的公切线分别讨论。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A=\{x\mid x^2-2x>0\}$，$B=\{x\mid-\sqrt5<x<\sqrt5\}$，则\mbox{（　　）}
+
+（A）$A\cap B=\varnothing$　　（B）$A\cup B=\mathbb R$　　（C）$B\subseteq A$　　（D）$A\subseteq B$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$A=(-\infty,0)\cup(2,+\infty)$，$B=(-\sqrt5,\sqrt5)$。由于 $\sqrt5>2$，两集合的并为 $\mathbb R$。交集非空，$1\in B\setminus A$，$3\in A\setminus B$，其余三个选项均不成立，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+若复数 $z$ 满足 $(3-4i)z=|4+3i|$，则 $z$ 的虚部为\mbox{（　　）}
+
+（A）$-4$　　（B）$-\dfrac45$　　（C）$4$　　（D）$\dfrac45$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$|4+3i|=5$，故 $z=5/(3-4i)=(3+4i)/5$，虚部为 $4/5$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+为了解某地区的中小学生视力情况，拟从该地区的中小学生中抽取部分学生进行调查，事先已了解到该地区小学、初中、高中三个学段学生的视力情况有较大差异，而男女生视力情况差异不大，在下面的抽样方法中，最合理的抽样方法是\mbox{（　　）}
+
+（A）简单随机抽样　　（B）按性别分层抽样　　（C）按学段分层抽样　　（D）系统抽样
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+学段之间差异较大而性别差异不大，应按小学、初中、高中分层，再在各层内随机抽取学生，使各学段得到相应代表，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+已知双曲线 $C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a>0,b>0)$ 的离心率为 $\dfrac{\sqrt5}{2}$，则 $C$ 的渐近线方程为\mbox{（　　）}
+
+（A）$y=\pm\dfrac14x$　　（B）$y=\pm\dfrac13x$　　（C）$y=\pm\dfrac12x$　　（D）$y=\pm x$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$e^2=1+b^2/a^2=5/4$，故 $b/a=1/2$，渐近线为 $y=\pm x/2$，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+执行下面的程序框图，若输入的 $t\in[-1,3]$，则输出的 $s$ 属于\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t05_flowchart}\end{center}
+\nopagebreak[4]
+（A）$[-3,4]$　　（B）$[-5,2]$　　（C）$[-4,3]$　　（D）$[-2,5]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+框图在 $t<1$ 时输出 $3t$，在 $t\geqslant1$ 时输出 $4t-t^2$。前一分支在 $[-1,1)$ 上的值域为 $[-3,3)$；后一分支在 $[1,3]$ 上的值域为 $[3,4]$。并集为 $[-3,4]$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+如图，有一个水平放置的透明无盖的正方体容器，容器高 $8\ \mathrm{cm}$，将一个球放在容器口，再向容器内注水，当球面恰好接触水面时测得水深为 $6\ \mathrm{cm}$，如果不计容器的厚度，则球的体积为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t06_sphere_cube}\end{center}
+\nopagebreak[4]
+（A）$\dfrac{500\pi}{3}\ \mathrm{cm}^3$　　（B）$\dfrac{866\pi}{3}\ \mathrm{cm}^3$　　（C）$\dfrac{1372\pi}{3}\ \mathrm{cm}^3$　　（D）$\dfrac{2048\pi}{3}\ \mathrm{cm}^3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+过球心作垂直于容器口、且平行于正方体一组侧面的截面。球与口沿接触所对应的弦长为 $8$；球的最低点距口沿为 $8-6=2$。设球半径为 $R$，球心在口沿上方 $R-2$ 处，则
+
+\nopagebreak[4]
+\[
+R^2=(R-2)^2+4^2.
+\]
+
+解得 $R=5$，体积为 $\tfrac43\pi R^3=500\pi/3\ \mathrm{cm}^3$，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+设等差数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，$S_{m-1}=-2$，$S_m=0$，$S_{m+1}=3$，则 $m=$\mbox{（　　）}
+
+（A）$3$　　（B）$4$　　（C）$5$　　（D）$6$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$a_m=S_m-S_{m-1}=2$，$a_{m+1}=S_{m+1}-S_m=3$，公差为 $1$，首项为 $3-m$。由 $S_m=m[(3-m)+2]/2=0$ 且 $m>0$，得 $m=5$，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+某几何体的三视图如图所示，则该几何体的体积为\mbox{（　　）}
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t08_views}\end{center}
+\nopagebreak[4]
+（A）$16+8\pi$　　（B）$8+8\pi$　　（C）$16+16\pi$　　（D）$8+16\pi$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+三视图对应一个 $4\times2\times2$ 的长方体和一个半径 $2$、长 $4$ 的半圆柱，体积为
+
+\nopagebreak[4]
+\[
+4\times2\times2+\frac12\pi\times2^2\times4=16+8\pi,
+\]
+
+选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设 $m$ 为正整数，$(x+y)^{2m}$ 展开式的二项式系数的最大值为 $a$，$(x+y)^{2m+1}$ 展开式的二项式系数的最大值为 $b$，若 $13a=7b$，则 $m=$\mbox{（　　）}
+
+（A）$5$　　（B）$6$　　（C）$7$　　（D）$8$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+两展开式的最大二项式系数分别为 $a=\binom{2m}{m}$、$b=\binom{2m+1}{m}$，故
+
+\nopagebreak[4]
+\[
+\frac ba=\frac{2m+1}{m+1}=\frac{13}7.
+\]
+
+解得 $m=6$，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知椭圆 $E:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$ 的右焦点为 $F(3,0)$，过点 $F$ 的直线交 $E$ 于 $A,B$ 两点。若 $AB$ 的中点坐标为 $(1,-1)$，则 $E$ 的方程为\mbox{（　　）}
+
+（A）$\dfrac{x^2}{45}+\dfrac{y^2}{36}=1$　　（B）$\dfrac{x^2}{36}+\dfrac{y^2}{27}=1$　　（C）$\dfrac{x^2}{27}+\dfrac{y^2}{18}=1$　　（D）$\dfrac{x^2}{18}+\dfrac{y^2}{9}=1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+弦所在直线经过 $(3,0)$ 与中点 $(1,-1)$，斜率为 $1/2$。设端点为 $(x_1,y_1),(x_2,y_2)$，两椭圆方程相减得
+
+\nopagebreak[4]
+\[
+\frac{(x_1-x_2)(x_1+x_2)}{a^2}
++\frac{(y_1-y_2)(y_1+y_2)}{b^2}=0.
+\]
+
+利用 $x_1+x_2=2$、$y_1+y_2=-2$，可得弦斜率 $b^2/a^2=1/2$。结合 $a^2-b^2=9$，得 $a^2=18,b^2=9$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知函数
+
+\nopagebreak[4]
+\[
+f(x)=\begin{cases}
+-x^2+2x,&x\leqslant0,\\
+\ln(x+1),&x>0,
+\end{cases}
+\]
+
+若 $|f(x)|\geqslant ax$，则 $a$ 的取值范围是\mbox{（　　）}
+
+（A）$(-\infty,0]$　　（B）$(-\infty,1]$　　（C）$[-2,1]$　　（D）$[-2,0]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+对 $x<0$，有 $|f(x)|=x^2-2x$，不等式等价于 $x[x-(a+2)]\geqslant0$；要对所有负数成立，须且只须 $a\geqslant-2$。在 $x=0$ 时恒成立。对 $x>0$，须有 $a\leqslant\ln(1+x)/x$；右端为正且当 $x\to+\infty$ 时趋于 $0$，故须且只须 $a\leqslant0$。合并得 $[-2,0]$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设 $\triangle A_nB_nC_n$ 的三边长分别为 $a_n,b_n,c_n$，$\triangle A_nB_nC_n$ 的面积为 $S_n$，$n=1,2,3,\ldots$。若 $b_1>c_1$，$b_1+c_1=2a_1$，$a_{n+1}=a_n$，$b_{n+1}=\dfrac{c_n+a_n}{2}$，$c_{n+1}=\dfrac{b_n+a_n}{2}$，则\mbox{（　　）}
+
+（A）$\{S_n\}$ 为递减数列　　（B）$\{S_n\}$ 为递增数列　　（C）$\{S_{2n-1}\}$ 为递增数列，$\{S_{2n}\}$ 为递减数列　　（D）$\{S_{2n-1}\}$ 为递减数列，$\{S_{2n}\}$ 为递增数列
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $a=a_1$。递推可得 $a_n=a$、$b_n+c_n=2a$，而
+
+\nopagebreak[4]
+\[
+b_{n+1}-c_{n+1}=-\frac12(b_n-c_n).
+\]
+
+\Needspace{5\baselineskip}
+令 $\delta_n=(b_n-c_n)/2$，则 $b_n=a+\delta_n,c_n=a-\delta_n$，$|\delta_n|$ 严格递减。半周长恒为 $3a/2$，由海伦公式
+
+\nopagebreak[4]
+\[
+S_n^2=\frac{3a^2}{4}\left(\frac{a^2}{4}-\delta_n^2\right).
+\]
+
+原三角形非退化保证 $|\delta_1|<a/2$，后续也均非退化；$S_n$ 严格递增，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知两个单位向量 $\boldsymbol a,\boldsymbol b$ 的夹角为 $60^\circ$，$\boldsymbol c=t\boldsymbol a+(1-t)\boldsymbol b$，若 $\boldsymbol b\cdot\boldsymbol c=0$，则 $t=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两单位向量的数量积为 $1/2$，故 $\boldsymbol b\cdot\boldsymbol c=t/2+1-t=1-t/2=0$，得到 $t=2$。
+
+\gkanswer{答案：$2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+若数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n=\dfrac23a_n+\dfrac13$，则数列 $\{a_n\}$ 的通项公式是 $a_n=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令 $n=1$，有 $a_1=2a_1/3+1/3$，故 $a_1=1$。对 $n\geqslant2$，两相邻和式相减得 $a_n=2(a_n-a_{n-1})/3$，即 $a_n=-2a_{n-1}$。从而 $a_n=(-2)^{n-1}$。
+
+\gkanswer{答案：$a_n=(-2)^{n-1}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+设当 $x=\theta$ 时，函数 $f(x)=\sin x-2\cos x$ 取得最大值，则 $\cos\theta=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+写成 $f(x)=\sqrt5\sin(x-\varphi)$，其中 $\cos\varphi=1/\sqrt5$、$\sin\varphi=2/\sqrt5$。取得最大值时 $\theta-\varphi=\pi/2+2j\pi$，$j\in\mathbb Z$，故 $\cos\theta=-2/\sqrt5=-2\sqrt5/5$。
+
+\gkanswer{答案：$-\dfrac{2\sqrt5}{5}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+若函数 $f(x)=(1-x^2)(x^2+ax+b)$ 的图象关于直线 $x=-2$ 对称，则 $f(x)$ 的最大值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令 $u=x+2$。由 $f(x)=-x^4-ax^3+(1-b)x^2+ax+b$，展开 $f(u-2)$ 后，其奇次项系数分别为 $8-a$、$28-11a+4b$。关于 $x=-2$ 对称要求这两个系数为零，因此 $a=8,b=15$。
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+f(x)=-(x-1)(x+1)(x+3)(x+5)
+=-\bigl((x+2)^2-5\bigr)^2+16.
+\]
+
+当 $x=-2\pm\sqrt5$ 时取到最大值 $16$。
+
+\gkanswer{答案：$16$}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+如图，在 $\triangle ABC$ 中，$\angle ABC=90^\circ$，$AB=\sqrt3$，$BC=1$，$P$ 为 $\triangle ABC$ 内一点，$\angle BPC=90^\circ$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t17_triangle}\end{center}
+\nopagebreak[4]
+(1) 若 $PB=\dfrac12$，求 $PA$；
+
+(2) 若 $\angle APB=150^\circ$，求 $\tan\angle PBA$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求线段长}
+
+\Needspace{5\baselineskip}
+令 $\theta=\angle PBA$，$r=PB$。在直角三角形 $BPC$ 中，$\angle PBC=90^\circ-\theta$，故 $r=BC\cos(90^\circ-\theta)=\sin\theta$。给定 $r=1/2$，且 $0<\theta<90^\circ$，得 $\theta=30^\circ$。在 $\triangle ABP$ 中用余弦定理，
+
+\nopagebreak[4]
+\[
+PA^2=3+\frac14-2\sqrt3\cdot\frac12\cos30^\circ=\frac74,
+\]
+
+故 $PA=\sqrt7/2$。
+
+\gksubpart{(2) 求角的正切}
+
+\Needspace{5\baselineskip}
+仍有 $PB=\sin\theta$。由三角形内角和，$\angle PAB=30^\circ-\theta$，特别地 $0<\theta<30^\circ$。正弦定理给出
+
+\nopagebreak[4]
+\[
+\frac{\sin\theta}{\sin(30^\circ-\theta)}
+=\frac{\sqrt3}{\sin150^\circ}=2\sqrt3.
+\]
+
+展开得 $4\sin\theta=\sqrt3\cos\theta$，故 $\tan\theta=\sqrt3/4$。
+
+\gkanswer{答案（1）：$PA=\dfrac{\sqrt7}{2}$}
+
+\gkanswer{答案（2）：$\tan\angle PBA=\dfrac{\sqrt3}{4}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，三棱柱 $ABC-A_1B_1C_1$ 中，$CA=CB$，$AB=AA_1$，$\angle BAA_1=60^\circ$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t18_prism}\end{center}
+\nopagebreak[4]
+(1) 证明：$AB\perp A_1C$；
+
+(2) 若平面 $ABC\perp$ 平面 $AA_1B_1B$，$AB=CB$，求直线 $A_1C$ 与平面 $BB_1C_1C$ 所成角的正弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明垂直}
+
+设 $\boldsymbol b=\overrightarrow{AB}$、$\boldsymbol c=\overrightarrow{AC}$、$\boldsymbol u=\overrightarrow{AA_1}$。由 $CA=CB$ 得 $\boldsymbol b\cdot\boldsymbol c=|\boldsymbol b|^2/2$；由 $AB=AA_1$、$\angle BAA_1=60^\circ$ 得 $\boldsymbol b\cdot\boldsymbol u=|\boldsymbol b|^2/2$。故 $\boldsymbol b\cdot\overrightarrow{A_1C}=\boldsymbol b\cdot(\boldsymbol c-\boldsymbol u)=0$，即 $AB\perp A_1C$。
+
+\gksubpart{(2) 求线面角}
+
+按 $AB$ 归一化长度为 $1$，令 $A=(0,0,0)$、$B=(1,0,0)$、$C=(1/2,\sqrt3/2,0)$。两平面垂直且交线为 $AB$，可取 $A_1=(1/2,0,\sqrt3/2)$；于是 $B_1=(3/2,0,\sqrt3/2)$。平面 $BB_1C_1C$ 的法向量可取 $\boldsymbol n=(-\sqrt3,-1,1)$，它与 $\overrightarrow{BB_1}=(1/2,0,\sqrt3/2)$、$\overrightarrow{BC}=(-1/2,\sqrt3/2,0)$ 均垂直。
+
+\Needspace{5\baselineskip}
+设所求线面角为 $\beta$，则
+
+\nopagebreak[4]
+\[
+\sin\beta=\frac{|\overrightarrow{A_1C}\cdot\boldsymbol n|}
+{|\overrightarrow{A_1C}|\,|\boldsymbol n|}
+=\frac{\sqrt3}{\sqrt{3/2}\sqrt5}=\frac{\sqrt{10}}5.
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt{10}}5$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+一批产品需要进行质量检验，检验方案是：先从这批产品中任取 $4$ 件作检验，这 $4$ 件产品中优质品的件数记为 $n$。如果 $n=3$，再从这批产品中任取 $4$ 件作检验，若都为优质品，则这批产品通过检验；如果 $n=4$，再从这批产品中任取 $1$ 件作检验，若为优质品，则这批产品通过检验；其他情况下，这批产品都不能通过检验。假设这批产品的优质品率为 $50\%$，即取出的产品是优质品的概率都为 $\dfrac12$，且各件产品是否为优质品相互独立。
+
+(1) 求这批产品通过检验的概率；
+
+(2) 已知每件产品检验费用为 $100$ 元，凡抽取的每件产品都需要检验，对这批产品作质量检验所需的费用记为 $X$（单位：元），求 $X$ 的分布列及数学期望。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求通过检验的概率}
+
+\Needspace{5\baselineskip}
+$n$ 服从二项分布 $B(4,1/2)$，故 $P(n=3)=1/4$、$P(n=4)=1/16$。两种通过路径互斥，且后续检验独立，因此通过概率为
+
+\nopagebreak[4]
+\[
+\frac14\left(\frac12\right)^4+\frac1{16}\cdot\frac12=\frac3{64}.
+\]
+
+\gksubpart{(2) 求费用分布与期望}
+
+首次优质品不超过 $2$ 件时只检验 $4$ 件；为 $4$ 件时总共检验 $5$ 件；为 $3$ 件时总共检验 $8$ 件。后续通过与否不改变已抽取产品都需检验的规定。因此
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+$X$ & $400$ & $500$ & $800$ \\
+\midrule
+$P$ & $11/16$ & $1/16$ & $1/4$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\nopagebreak[4]
+\[
+E(X)=400\cdot\frac{11}{16}+500\cdot\frac1{16}+800\cdot\frac14
+=\frac{2025}4=506.25\text{ \text{元}}.
+\]
+
+\gkanswer{答案（1）：$\dfrac3{64}$}
+
+\gkanswer{答案（2）：$P(X=400)=\dfrac{11}{16}$，$P(X=500)=\dfrac1{16}$，$P(X=800)=\dfrac14$；$E(X)=\dfrac{2025}4=506.25$ 元。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知圆 $M:(x+1)^2+y^2=1$，圆 $N:(x-1)^2+y^2=9$，动圆 $P$ 与圆 $M$ 外切并与圆 $N$ 内切，圆心 $P$ 的轨迹为曲线 $C$。
+
+(1) 求 $C$ 的方程；
+
+(2) $l$ 是与圆 $P$、圆 $M$ 都相切的一条直线，$l$ 与曲线 $C$ 交于 $A,B$ 两点，当圆 $P$ 的半径最长时，求 $|AB|$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求圆心轨迹}
+
+设动圆半径为 $r$，两种相切条件分别给出 $PM=r+1$、$PN=3-r$，相加得 $PM+PN=4$。定点 $M=(-1,0)$、$N=(1,0)$，故圆心轨迹为 $x^2/4+y^2/3=1$。反过来，椭圆上的 $PM\in[1,3]$，取 $r=PM-1$ 满足上述距离关系；在 $P=M+(-1,0)=(-2,0)$ 时 $r=0$，它是退化圆的极限点。若动圆要求正半径，严格轨迹应去掉 $(-2,0)$，通常的二次曲线方程描述其闭包。
+
+\gksubpart{(2) 按公切线种类求弦长}
+
+半径 $r=PM-1$ 最大为 $2$，仅在 $P=(2,0)$ 取到。此时两圆圆心距为 $3=2+1$，在 $(0,0)$ 外切。接触点处公切线 $x=0$ 与椭圆交于 $(0,\pm\sqrt3)$，给出 $|AB|=2\sqrt3$。
+
+\Needspace{5\baselineskip}
+但固定题面只写“一条直线”，没有限定它是接触点处公切线。另两条外公切线为
+
+\nopagebreak[4]
+\[
+x\pm2\sqrt2y=-4.
+\]
+
+\Needspace{5\baselineskip}
+其到 $M=(-1,0)$、$P=(2,0)$ 的距离分别为 $3/3=1$、$6/3=2$，确实同时与两圆相切。以 $x+2\sqrt2y=-4$ 为例，代入椭圆得 $7x^2+8x-8=0$，两交点横坐标为 $(-4\pm6\sqrt2)/7$。斜率绝对值为 $1/(2\sqrt2)$，故弦长为
+
+\nopagebreak[4]
+\[
+\frac{12\sqrt2}7\sqrt{1+\frac18}=\frac{18}7.
+\]
+
+另一外公切线由对称性给出同长弦。故按固定源原文弦长有 $2\sqrt3$、$18/7$ 两种可能，不能在未补充条件时声称唯一为前者；本库保留题面原文并记录此限制。
+
+\gkanswer{答案（1）：$\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$；动圆取正半径时须去掉 $(-2,0)$，该方程描述轨迹的闭包。}
+
+\gkanswer{答案（2）：接触点处公切线 $x=0$ 对应 $|AB|=2\sqrt3$；另两条外公切线 $x\pm2\sqrt2y=-4$ 对应 $|AB|=\dfrac{18}7$。固定题面未限定公切线种类，弦长不唯一。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=x^2+ax+b$，$g(x)=e^x(cx+d)$，若曲线 $y=f(x)$ 和曲线 $y=g(x)$ 都过点 $P(0,2)$，且在点 $P$ 处有相同的切线 $y=4x+2$。
+
+(1) 求 $a,b,c,d$ 的值；
+
+(2) 若 $x\geqslant-2$ 时，$f(x)\leqslant kg(x)$，求 $k$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求参数}
+
+由 $f(0)=g(0)=2$ 得 $b=d=2$；由共同切线斜率为 $4$ 得 $a=4$、$c+d=4$，故 $c=2$。
+
+\gksubpart{(2) 求参数范围}
+
+\Needspace{5\baselineskip}
+此时 $f(x)=x^2+4x+2$、$g(x)=2e^x(x+1)$。当 $x\ne-1$ 时，令
+
+\nopagebreak[4]
+\[
+h(x)=\frac{f(x)}{g(x)},\qquad
+h'(x)=\frac{-x(x+2)^2}{2e^x(x+1)^2}.
+\]
+
+在 $[-2,-1)$ 上 $g(x)<0$，原不等式要求 $k\leqslant h(x)$；$h$ 在该区间递增，最小值 $h(-2)=e^2$，故要求 $k\leqslant e^2$。在 $x=-1$ 时 $f(-1)=-1,g(-1)=0$，恒满足。
+
+在 $(-1,+\infty)$ 上 $g(x)>0$，原不等式要求 $k\geqslant h(x)$。由导数符号，$h$ 在 $(-1,0)$ 上递增，在 $(0,+\infty)$ 上递减，最大值为 $h(0)=1$。故此处要求 $k\geqslant1$，合并得 $1\leqslant k\leqslant e^2$，两个端点均可取。
+
+\gkanswer{答案（1）：$a=4,\ b=2,\ c=2,\ d=2$}
+
+\gkanswer{答案（2）：$k\in[1,e^2]$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，直线 $AB$ 为圆的切线，切点为 $B$，点 $C$ 在圆上，$\angle ABC$ 的角平分线 $BE$ 交圆于点 $E$，$DB\perp BE$ 交圆于 $D$。
+\nopagebreak[4]
+\begin{center}\input{figures/f2013_national_1_science_t22_circle}\end{center}
+\nopagebreak[4]
+(1) 证明：$DB=DC$；
+
+(2) 设圆的半径为 $1$，$BC=\sqrt3$，延长 $CE$ 交 $AB$ 于点 $F$，求 $\triangle BCF$ 外接圆的半径。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明等长}
+
+令 $\alpha=\angle EBC$。由角平分线有 $\angle ABC=2\alpha$，由 $DB\perp BE$ 得 $\angle DBC=90^\circ-\alpha$。由切线弦定理，$\angle BDC=\angle ABC=2\alpha$。因此 $\angle BCD=90^\circ-\alpha=\angle DBC$，故 $DB=DC$。
+
+\gksubpart{(2) 求外接圆半径}
+
+由扩展正弦定理，$BC=2\sin\angle BDC=\sqrt3$，故 $2\alpha=\angle BDC$ 为 $60^\circ$ 或 $120^\circ$。按题图所示的点序取 $60^\circ$，即 $\alpha=30^\circ$。另一种 $120^\circ$ 的构型会使 $CE\parallel AB$（切线弦定理给出 $\angle BCE=\angle ABE=60^\circ$），不产生题设中的有限交点 $F$，因而不适用于第二问。
+
+\Needspace{5\baselineskip}
+可取圆心为原点，$B=(\sqrt3/2,1/2)$、$D=(-\sqrt3/2,1/2)$、$C=(0,-1)$、$E=(\sqrt3/2,-1/2)$。切线 $AB$ 为 $\sqrt3x+y=2$，直线 $CE$ 为 $y=x/\sqrt3-1$，相交于 $F=(3\sqrt3/4,-1/4)$。由此
+
+\nopagebreak[4]
+\[
+BF=\frac{\sqrt3}2,\quad CF=\frac32,\quad
+BF^2+CF^2=3=BC^2.
+\]
+
+所以 $\angle BFC=90^\circ$，$\triangle BCF$ 的外接圆半径为斜边 $BC$ 的一半，即 $\sqrt3/2$。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt3}{2}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知曲线 $C_1$ 的参数方程为
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x=4+5\cos t,\\
+y=5+5\sin t,
+\end{cases}\qquad(t\text{ \text{为参数}}),
+\]
+
+以坐标原点为极点，$x$ 轴的正半轴为极轴建立极坐标系，曲线 $C_2$ 的极坐标方程为 $\rho=2\sin\theta$。
+
+(1) 把 $C_1$ 的参数方程化为极坐标方程；
+
+(2) 求 $C_1$ 与 $C_2$ 交点的极坐标（$\rho\geqslant0,\ 0\leqslant\theta<2\pi$）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 转换方程}
+
+消去参数得 $(x-4)^2+(y-5)^2=25$。代入 $x=\rho\cos\theta,y=\rho\sin\theta$，整理得 $\rho^2-8\rho\cos\theta-10\rho\sin\theta+16=0$。
+
+\gksubpart{(2) 求交点}
+
+代入 $\rho=2\sin\theta$ 后，得到 $16\cos\theta(\cos\theta-\sin\theta)=0$。因 $\rho\geqslant0$，仅可取 $\theta=\pi/2$ 或 $\pi/4$；对应 $\rho=2$ 或 $\sqrt2$。原点不在 $C_1$ 上，故无遗漏的极点解。两交点为 $(\sqrt2,\pi/4)$、$(2,\pi/2)$。
+
+\gkanswer{答案（1）：$\rho^2-8\rho\cos\theta-10\rho\sin\theta+16=0$}
+
+\gkanswer{答案（2）：$\left(\sqrt2,\dfrac\pi4\right)$、$\left(2,\dfrac\pi2\right)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=|2x-1|+|2x+a|$，$g(x)=x+3$。
+
+(1) 当 $a=-2$ 时，求不等式 $f(x)<g(x)$ 的解集；
+
+(2) 设 $a>-1$，且当 $x\in\left[-\dfrac a2,\dfrac12\right]$ 时，$f(x)\leqslant g(x)$，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 解不等式}
+
+当 $a=-2$ 时，在 $x<1/2$ 上 $f(x)=3-4x$，不等式给出 $x>0$；在 $1/2\leqslant x\leqslant1$ 上 $f(x)=1$，恒满足；在 $x>1$ 上 $f(x)=4x-3$，不等式给出 $x<2$。合并得 $(0,2)$。
+
+\gksubpart{(2) 求参数范围}
+
+因 $a>-1$，区间 $[-a/2,1/2]$ 非空；其内 $2x+a\geqslant0$、$2x-1\leqslant0$，故 $f(x)=1+a$。$g(x)=x+3$ 递增，所以全区间不等式成立当且仅当 $1+a\leqslant3-a/2$，即 $a\leqslant4/3$。结合前提得到 $-1<a\leqslant4/3$。
+
+\gkanswer{答案（1）：$(0,2)$}
+
+\gkanswer{答案（2）：$\left(-1,\dfrac43\right]$}
+
+\end{answer}
