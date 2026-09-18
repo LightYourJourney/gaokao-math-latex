@@ -186,3 +186,15 @@ manifest 最终校验、short-answer、edition、provenance init/import/check、
 阻塞来自 brief 明文要求 `register-papers` dry-run 后 **exactly one `--write`**：本轮唯一一次调用失败且零写入。再次调用将是第二次 `--write`，因此停止重试，等待用户明确允许针对修正 spec 再调用一次。该暂停不是自动审批拒绝；父目录权限问题已解决。收到授权后还需先对修正 spec 完整候选 manifest 做只读 schema/语义核验，才能重试并继续装配。
 
 登记前 checkpoint commit：`a088f59d`（八份 combined，8 files / 4813 insertions）。首次 `git add` 报告路径被 ignore，八份 combined 正常暂存并提交；报告另以显式 `git add -f` 仅添加本文件，形成阻塞报告提交。没有 final receipts/report commit，Task 10 未关闭。
+
+## 提交后当前性复核与交付提交
+
+build receipts/report 提交：`4c8e22c6f0155a7a1e5cef6ace58bc83b35849ad`。恢复构建后的复核实际执行：
+
+| 命令 | 退出码 | 摘要 |
+| --- | ---: | --- |
+| `python3 math-gaokao-latex/tools/build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase2-b02 --require-current-inputs --json` | 0 | {"code": "OK", "failed": 0, "invalid": 0, "missing": 0, "papers": 8, "pending": 8, "problems": [], "running": 0, "stale": 0, "succeeded": 0} |
+| `python3 math-gaokao-latex/tools/manifest_csv.py --manifest math-gaokao-latex/source-manifest.json --output math-gaokao-latex/manifest.csv --check` | 0 | manifest.csv 当前且 775 行 |
+| `git diff --check` | 0 | 无输出 |
+
+完整 unit gate 已运行一次并失败；未在稳定提交后重新跑全套，不报告 unit PASS。正式 review finalize 因 prepare 接口限制未执行，不写成功 final receipts。外部准备脚本 /private/tmp/task10_run.py 在交付时删除，实际命令及映射方式已记录。后续需明确放宽视觉工具八卷接口的授权/更正计划，再重新外部渲染全部最终441页并签署逐页8检查、Underfull页级豁免、finalize及重跑全部最终gates和稳定提交后的unit。
