@@ -1,0 +1,20 @@
+% 2014 全国卷Ⅱ理科第 18 题：四棱锥 P-ABCD，E 为 PD 中点。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-1.20,-1.70);
+  \coordinate (C) at (3.35,-1.70);
+  \coordinate (D) at (4.55,0);
+  \coordinate (P) at (0,4.25);
+  \coordinate (E) at ($(P)!0.5!(D)$);
+  % 题面可见棱及辅助线。
+  \draw (P)--(B)--(C)--(D)--(P);
+  \draw (P)--(C) (P)--(E) (E)--(C);
+  % 经过 A 的底面后边、PA 及其辅助连线为不可见线。
+  \draw[dashed] (P)--(A)--(B) (A)--(D) (A)--(C) (A)--(E);
+  \node[left] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[right] at (E) {$E$};
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% 2014 全国卷Ⅱ理科第 7 题：累加计算程序框图。
+\begin{tikzpicture}[font=\footnotesize,>=Stealth,node distance=4mm,line width=.4pt,
+  box/.style={draw,minimum height=1.65em,minimum width=7.0em,inner xsep=4pt},
+  term/.style={draw,rounded corners=6pt,minimum height=1.65em,inner xsep=8pt},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,
+             minimum height=1.65em,inner xsep=4pt},
+  dec/.style={draw,diamond,aspect=2.25,inner sep=1.6pt}]
+  \node[term] (start) {开始};
+  \node[io,below=of start] (input) {输入 $x,t$};
+  \node[box,below=of input] (init) {$M=1,\ S=3$};
+  \node[box,below=of init] (kinit) {$k=1$};
+  \node[dec,below=7mm of kinit] (cond) {$k\leqslant t$};
+  \node[box,below left=9mm and 16mm of cond] (calc) {$M=\dfrac{M}{k}x$};
+  \node[box,below=of calc] (sum) {$S=M+S$};
+  \node[box,below=of sum] (inc) {$k=k+1$};
+  \node[io,below right=9mm and 16mm of cond] (output) {输出 $S$};
+  \node[term,below=of output] (end) {结束};
+  \draw[->] (start)--(input)--(init)--(kinit)--(cond);
+  \draw[->] (cond.south west)--node[left] {是}(calc)--(sum)--(inc);
+  \draw[->] (inc.west)-| ([xshift=-19mm]cond.west) |- (cond.north);
+  \draw[->] (cond.south east)--node[right] {否}(output)--(end);
+\end{tikzpicture}

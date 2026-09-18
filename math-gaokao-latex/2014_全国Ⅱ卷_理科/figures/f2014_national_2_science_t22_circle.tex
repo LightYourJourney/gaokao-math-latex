@@ -1,0 +1,22 @@
+% 2014 全国卷Ⅱ理科第 22 题：切线、割线及 A-D-E 辅助线。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (-3.000,-1.225);
+  \coordinate (B) at (-1.935,-1.420);
+  \coordinate (C) at (1.307,-2.013);
+  \coordinate (D) at ($(P)!0.5!(C)$);
+  \coordinate (A) at (-2.255,.821);
+  \coordinate (E) at (-.417,-2.364);
+  \draw (O) circle[radius=2.40];
+  \draw (P)--(A);
+  \draw (P)--(C);
+  \draw (A)--(E);
+  \fill (O) circle (1.15pt);
+  \node[left] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[below] at (E) {$E$};
+  \node[right] at (O) {$O$};
+\end{tikzpicture}
