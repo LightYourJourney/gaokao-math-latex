@@ -1,0 +1,13 @@
+% 2014 全国卷Ⅰ理科第 18 题：频率/组距直方图，保留断轴、虚线引导及七个空心柱。
+\begin{tikzpicture}[font=\scriptsize,>=Stealth,line cap=round]
+  \draw[->,line width=.45pt] (0,0)--(9.35,0) node[right] {质量指标值};
+  \draw[->,line width=.45pt] (0,-.18)--(0,4.08) node[above left,align=center] {频率\\组距};
+  \draw[line width=.4pt] (.13,.10)--(.21,-.10)--(.29,.10)--(.37,-.10)--(.45,.10);
+  \node[below=2pt] at (0,0) {$0$};
+  \foreach \x/\lab in {1/165,2/175,3/185,4/195,5/205,6/215,7/225,8/235} \node[below=2pt] at (\x,0) {\lab};
+  % 数据高度按统一比例映射；横坐标每单位为一个组距 10。
+  \draw (1,0) rectangle (2,.24); \draw (2,0) rectangle (3,1.08); \draw (3,0) rectangle (4,2.64);
+  \draw (4,0) rectangle (5,3.96); \draw (5,0) rectangle (6,2.88); \draw (6,0) rectangle (7,.96); \draw (7,0) rectangle (8,.24);
+  \foreach \y/\lab/\to in {.24/.002/8,.96/.008/7,1.08/.009/3,2.64/.022/4,2.88/.024/6,3.96/.033/5}
+    {\draw[dashed,line width=.3pt] (0,\y)--(\to,\y); \node[left=2pt] at (0,\y) {\lab};}
+\end{tikzpicture}

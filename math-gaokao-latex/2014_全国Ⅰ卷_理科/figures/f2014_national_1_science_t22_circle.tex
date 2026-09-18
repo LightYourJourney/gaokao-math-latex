@@ -1,0 +1,10 @@
+% 2014 全国卷Ⅰ理科第 22 题：圆内接四边形、AB/DC 延长交点 E 与辅助线 MC。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  % These coordinates satisfy the source relations to rounding precision:
+  % A,B,C,D lie on the circle, D,C,E are collinear, CB=CE, and MB=MC.
+  \coordinate (O) at (0,0); \coordinate (A) at (-1.920000,-1.440000); \coordinate (D) at (.287077,2.382769);
+  \coordinate (M) at ($ (A)!0.5!(D) $); \coordinate (B) at (1.920000,-1.440000); \coordinate (C) at (2.207077,-.942769); \coordinate (E) at (2.494153,-1.440000);
+  \draw (O) circle (2.4); \draw (A)--(D)--(C)--(B)--cycle; \draw (A)--(E); \draw (D)--(E); \draw (M)--(C);
+  \fill (O) circle (1.15pt); \node[below left] at (A) {$A$}; \node[below] at (B) {$B$}; \node[right] at (C) {$C$};
+  \node[above] at (D) {$D$}; \node[right] at (E) {$E$}; \node[left] at (M) {$M$}; \node[below left] at (O) {$O$};
+\end{tikzpicture}

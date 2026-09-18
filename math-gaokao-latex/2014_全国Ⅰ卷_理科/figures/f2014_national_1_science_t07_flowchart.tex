@@ -1,0 +1,14 @@
+% 2014 全国卷Ⅰ理科第 7 题：迭代计算程序框图。
+\begin{tikzpicture}[font=\footnotesize,>=Stealth,node distance=4mm,line width=.4pt,
+  box/.style={draw,minimum height=1.65em,minimum width=6.4em,inner xsep=5pt},
+  term/.style={draw,rounded corners=6pt,minimum height=1.65em,inner xsep=8pt},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum height=1.65em,inner xsep=4pt},
+  dec/.style={draw,diamond,aspect=2.25,inner sep=1.6pt}]
+  \node[term] (start) {开始}; \node[io,below=of start] (input) {输入 $a,b,k$};
+  \node[box,below=of input] (init) {$n=1$}; \node[dec,below=7mm of init] (cond) {$n\leqslant k$};
+  \node[box,below=8mm of cond] (calc) {$M=a+\dfrac1b$}; \node[box,below=of calc] (seta) {$a=b$};
+  \node[box,below=of seta] (setb) {$b=M$}; \node[box,below=of setb] (inc) {$n=n+1$};
+  \node[io,left=23mm of calc] (output) {输出 $M$}; \node[term,below=of output] (end) {结束};
+  \draw[->] (start)--(input)--(init)--(cond); \draw[->] (cond)--node[right] {是}(calc)--(seta)--(setb)--(inc);
+  \draw[->] (inc.east)-| ([xshift=19mm]cond.east) |- (cond.north); \draw[->] (cond.west)-|node[pos=.17,above] {否}(output.north); \draw[->] (output)--(end);
+\end{tikzpicture}
