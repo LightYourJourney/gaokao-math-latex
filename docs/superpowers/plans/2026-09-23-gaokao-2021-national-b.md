@@ -36,28 +36,28 @@
 
 ### 一、乙文转录与解答
 
-- [ ] 处理 `gk-2021-regular-national-b-arts`，仅新增 `2021/2021_数学真题_全国乙文_{试题,答案要点,解析正文}.md` 和项目 `2021_全国乙卷_文科/figures/*.tex`。重绘第 16 题组合三视图、第 18 题四棱锥；逐题核对符号、选项、小问、图示与页码，并独立求解全卷。
-- [ ] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1143–1144、track `arts`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
+- [x] 处理 `gk-2021-regular-national-b-arts`，仅新增 `2021/2021_数学真题_全国乙文_{试题,答案要点,解析正文}.md` 和项目 `2021_全国乙卷_文科/figures/*.tex`。重绘第 16 题组合三视图、第 18 题四棱锥；逐题核对符号、选项、小问、图示与页码，并独立求解全卷。
+- [x] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1143–1144、track `arts`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
 
 ### 二、甲理转录与解答
 
-- [ ] 处理 `gk-2021-regular-national-a-science`，仅新增 `2021/2021_数学真题_全国甲理_{试题,答案要点,解析正文}.md` 和项目 `2021_全国甲卷_理科/figures/*.tex`。重绘第 2 题农村收入直方图、第 6 题组合三视图、第 8 题珠峰测高、第 16 题正弦曲线、第 19 题三棱柱、第 23 题坐标网格。**第 18 题不得画图**：源 PDF 此题无图。核对几何、坐标轴、虚线／遮挡边、选项和页码，独立求解全卷。
-- [ ] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1145–1146、track `science`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
+- [x] 处理 `gk-2021-regular-national-a-science`，仅新增 `2021/2021_数学真题_全国甲理_{试题,答案要点,解析正文}.md` 和项目 `2021_全国甲卷_理科/figures/*.tex`。重绘第 2 题农村收入直方图、第 6 题组合三视图、第 8 题珠峰测高、第 16 题正弦曲线、第 19 题三棱柱、第 23 题坐标网格。**第 18 题不得画图**：源 PDF 此题无图。核对几何、坐标轴、虚线／遮挡边、选项和页码，独立求解全卷。
+- [x] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1145–1146、track `science`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
 
 ### 三、乙理转录与解答
 
-- [ ] 处理 `gk-2021-regular-national-b-science`，仅新增 `2021/2021_数学真题_全国乙理_{试题,答案要点,解析正文}.md` 和项目 `2021_全国乙卷_理科/figures/*.tex`。重绘第 9 题海岛测量、第 16 题组合三视图、第 18 题四棱锥。**第 23 题不得加入试题原图**：源 PDF 只有题干；已有函数图是解析辅助，只可放详细解析，不得出现在试题版或简答版。逐项核对图示、选项、页码，独立求解全卷。
-- [ ] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1141–1142、track `science`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
+- [x] 处理 `gk-2021-regular-national-b-science`，仅新增 `2021/2021_数学真题_全国乙理_{试题,答案要点,解析正文}.md` 和项目 `2021_全国乙卷_理科/figures/*.tex`。重绘第 9 题海岛测量、第 16 题组合三视图、第 18 题四棱锥。**第 23 题不得加入试题原图**：源 PDF 只有题干；已有函数图是解析辅助，只可放详细解析，不得出现在试题版或简答版。逐项核对图示、选项、页码，独立求解全卷。
+- [x] 试题 frontmatter 写明确切 `source_id`、manifest `upstream_path`、印刷页 1141–1142、track `science`、题数 23；答案／解析注明独立重建且非官方答案。保留原 PDF 内页标题，不加入栅格素材。
 
 ### 四、控制者集成与确定性生成
 
-- [ ] 核验三份上游 PDF SHA-256 与 manifest 一致；以固定路径和题目指纹厘清身份冲突，并明确原因未知。NEEA 官方索引 `https://gaokao.neea.edu.cn/html1/category/21123/683-1.htm` 收录 2021 数学评价（正文图片托管，直接抓取超时）；考试中心评论转载于 `https://edu.people.com.cn/n1/2021/0608/c1006-32125641.html`。逐题比对评论提及的乙理第 9 题刘徽／《海岛算经》、乙卷文理第 16 题空间视图、乙卷文理第 17 题芯片蚀刻率统计、甲理第 8 题珠峰测高、甲理第 18 题立体几何。乙文身份仅可作为固定路径与题目指纹推断，不可说成评论原文结论。将三项冲突和证据写入 `missing-issues.md`。
-- [ ] 在事务内以 `solution_sources.render_combined()` 生成 `_含解析.md`；在 `.work/phase2-b03/` 创建登记规格，先 dry-run，再且仅一次执行 `source_manifest.py register-papers --write`，不得手改 manifest。运行 `extract-batch --write`、`check-batch` 并生成／核对共享 LaTeX、简答答案和四种版式壳。
-- [ ] 批次 ID 固定为 `phase2-b03`，登记映射固定为：乙文 → `2021_全国乙卷_文科` → `src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a`；甲理 → `2021_全国甲卷_理科` → `src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a`；乙理 → `2021_全国乙卷_理科` → `src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067`。各卷 year=2021、question_count=23；tracks 分别为 arts／science；index 的 track 为文科／理科，paper 为全国乙卷／全国甲卷／全国乙卷，variant 为全国乙文／全国甲理／全国乙理，base 为 `2021_gaokao_b_arts`／`2021_gaokao_a_science`／`2021_gaokao_b_science`；`pages_q=null`、`pages_s=null`；structure 为 `选择题:[1,12]`、`填空题:[13,16]`、`解答题:[17,21]`、`选做题:[22,23]`。三组规范源与图源齐备后方可登记；`figure_files` 按实际图示标记生成，每个题面／含解析来源的 `expected_occurrences=2`。
+- [x] 核验三份上游 PDF SHA-256 与 manifest 一致；以固定路径和题目指纹厘清身份冲突，并明确原因未知。NEEA 官方索引 `https://gaokao.neea.edu.cn/html1/category/21123/683-1.htm` 收录 2021 数学评价（正文图片托管，直接抓取超时）；考试中心评论转载于 `https://edu.people.com.cn/n1/2021/0608/c1006-32125641.html`。逐题比对评论提及的乙理第 9 题刘徽／《海岛算经》、乙卷文理第 16 题空间视图、乙卷文理第 17 题芯片蚀刻率统计、甲理第 8 题珠峰测高、甲理第 18 题立体几何。乙文身份仅可作为固定路径与题目指纹推断，不可说成评论原文结论。将三项冲突和证据写入 `missing-issues.md`。
+- [x] 在事务内以 `solution_sources.render_combined()` 生成 `_含解析.md`；在 `.work/phase2-b03/` 创建登记规格，先 dry-run，再且仅一次执行 `source_manifest.py register-papers --write`，不得手改 manifest。运行 `extract-batch --write`、`check-batch` 并生成／核对共享 LaTeX、简答答案和四种版式壳。
+- [x] 批次 ID 固定为 `phase2-b03`，登记映射固定为：乙文 → `2021_全国乙卷_文科` → `src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a`；甲理 → `2021_全国甲卷_理科` → `src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a`；乙理 → `2021_全国乙卷_理科` → `src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067`。各卷 year=2021、question_count=23；tracks 分别为 arts／science；index 的 track 为文科／理科，paper 为全国乙卷／全国甲卷／全国乙卷，variant 为全国乙文／全国甲理／全国乙理，base 为 `2021_gaokao_b_arts`／`2021_gaokao_a_science`／`2021_gaokao_b_science`；`pages_q=null`、`pages_s=null`；structure 为 `选择题:[1,12]`、`填空题:[13,16]`、`解答题:[17,21]`、`选做题:[22,23]`。三组规范源与图源齐备后方可登记；`figure_files` 按实际图示标记生成，每个题面／含解析来源的 `expected_occurrences=2`。
 
 ### 五、provenance、正式构建与视觉复核
 
-- [ ] 导入三卷逐题 provenance，保留源页证据、答案等级 D（除非确认官方答案）和身份问题关联。正式构建 12 份 PDF（3 卷 × 4 版），验证回执并逐页视觉复核；重点比对图示和简答答案。有实质差异时先修复再结项。
+- [x] 导入三卷逐题 provenance，保留源页证据、答案等级 D（除非确认官方答案）和身份问题关联。正式构建 12 份 PDF（3 卷 × 4 版），验证回执并逐页视觉复核；重点比对图示和简答答案。有实质差异时先修复再结项。
 
 ### 六、清理、门禁、报告与交接
 
