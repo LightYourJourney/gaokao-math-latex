@@ -14036,3 +14036,269 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-0881
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "pdf-header-national-i-vs-national-b-arts",
+  "current_evidence": "固定上游 PDF 的内页标题逐字为“2021 普通高等学校招生考试（全国卷 I 文）”，而 manifest 固定上游路径文件名为“2021全国乙文(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf”；两者卷别标签冲突。",
+  "fingerprint": "65ddec79486f0cb1ec812571693b6c80a72c562ecbe8363b9351f92279843fe3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-b-arts",
+  "resolved_evidence": "身份判定依据为固定上游路径及题目指纹，而非 PDF 内页标题。人民网转载的教育部考试中心 2021 命题评析将全国乙卷文、理第 16 题描述为开放性空间三视图，并称第 17 题考查芯片蚀刻速率统计；固定源乙文相应题目匹配。乙文第 9 题为奇函数变换，与同组乙理第 9 题《海岛算经》测量这一辨别指纹相异；因此乙文认定是固定路径与乙卷共享题目指纹结合后的判断，不声称评析单独识别了乙文第 9 题。评析来源：https://edu.people.com.cn/n1/2021/0608/c1006-32125641.html；官方评析索引：https://gaokao.neea.edu.cn/html1/category/21123/683-1.htm。内页标题冲突原因未知，不推测。",
+  "resume_action": "无需后续动作；固定上游路径与题目指纹支持认定为 2021 全国乙文。PDF 内页眉照录；其与路径冲突的原因未能核实，不作推测。",
+  "source_id": "src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a",
+  "status": "resolved",
+  "type": "identity-ambiguous"
+}
+```
+
+## ISSUE-0882
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "pdf-header-national-ii-vs-national-a-science",
+  "current_evidence": "固定上游 PDF 的内页标题逐字为“2021 普通高等学校招生考试（全国卷 II 理）”，而 manifest 固定上游路径文件名为“2021全国甲理(云南,广西,贵州,西藏,四川).pdf”；两者卷别标签冲突。",
+  "fingerprint": "b9bd5af46f498a7c025195e7044a4820f6078ccf76c8aee680efec1bd12dc613",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-a-science",
+  "resolved_evidence": "人民网转载的教育部考试中心 2021 命题评析指出，全国甲理第 8 题考查珠穆朗玛峰高度的三角测量，第 18 题为依据部分条件构造命题的立体几何问题；固定上游甲理 PDF 的对应题目指纹匹配。结合固定上游路径，认定其为 2021 全国甲理。来源：https://edu.people.com.cn/n1/2021/0608/c1006-32125641.html；官方评析索引：https://gaokao.neea.edu.cn/html1/category/21123/683-1.htm。内页标题冲突原因未知，不推测。",
+  "resume_action": "无需后续动作；固定上游路径与题目指纹支持认定为 2021 全国甲理。PDF 内页眉照录；其与路径冲突的原因未能核实，不作推测。",
+  "source_id": "src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a",
+  "status": "resolved",
+  "type": "identity-ambiguous"
+}
+```
+
+## ISSUE-0883
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "pdf-header-national-i-vs-national-b-science",
+  "current_evidence": "固定上游 PDF 的内页标题逐字为“2021 普通高等学校招生考试（全国卷 I 理）”，而 manifest 固定上游路径文件名为“2021全国乙理(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf”；两者卷别标签冲突。",
+  "fingerprint": "85c879810527f9740041e2e84abfa8baf16359b38beb8ec9462d02a1d61af83d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-b-science",
+  "resolved_evidence": "人民网转载的教育部考试中心 2021 命题评析将全国乙理第 9 题对应于刘徽《海岛算经》测量，并将全国乙卷文、理第 16 题对应于开放性空间三视图、第 17 题对应于芯片蚀刻速率统计；固定上游乙理 PDF 的相应题目指纹匹配。结合固定上游路径，认定其为 2021 全国乙理。来源：https://edu.people.com.cn/n1/2021/0608/c1006-32125641.html；官方评析索引：https://gaokao.neea.edu.cn/html1/category/21123/683-1.htm。内页标题冲突原因未知，不推测。",
+  "resume_action": "无需后续动作；固定上游路径与题目指纹支持认定为 2021 全国乙理。PDF 内页眉照录；其与路径冲突的原因未能核实，不作推测。",
+  "source_id": "src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067",
+  "status": "resolved",
+  "type": "identity-ambiguous"
+}
+```
+
+## ISSUE-0884
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定上游 PDF 的第 23(2) 题原文为“若 f(x)>−a，求 a 的取值范围”，没有明示对 x 的全称或存在量词。若解释为对任意实数 x 恒成立，最小值条件给出 a>−3/2；若解释为存在实数 x 满足不等式，则因 f(x) 随 |x| 增大而无界，对任意实数 a 均可成立。两种解释的答案范围不同。",
+  "fingerprint": "b8432b37a59ad71f497f4dd3128e3e1db9b88de7f57baa4ef389df5b73b8e0b7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-b-arts",
+  "question_id": "gk-2021-regular-national-b-arts-q23",
+  "resume_action": "取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题是否省略了“对任意 x 恒成立”等量词；在证据到位前保留题面原文，将 a>−3/2 明确标作全称解释下的条件答案，不宣称唯一结论。",
+  "source_id": "src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0885
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 1 页第 11 题选项 B 与 D 均印为 √3/12；页面视觉复核确认该重复来自源卷。规范题面逐字照录两项。按题设 AC⊥BC、AC=BC=1 且 A、B、C 在单位球面，独立计算的体积为 √2/12，对应 A；重复选项不改变本题答案。",
+  "fingerprint": "8b057fc85252de03d7903ac110e9b0727b102eb7304af6a6035b23fa8f020457",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-a-science",
+  "question_id": "gk-2021-regular-national-a-science-q11",
+  "resume_action": "取得同版官方勘误或其他权威同版文本，确认 B、D 重复是否为源卷印刷错误；在此之前保留选项原文与独立答案 A，不自行订正源卷。",
+  "source_id": "src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0886
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定上游 PDF 第 2 页第 23(2) 题原文为“若 f(x)>−a，求 a 的取值范围”，没有说明对 x 的全称或存在量词。全称解释下，f(x)=|x−a|+|x+3| 的最小值为 |a+3|，条件给出 a>−3/2；存在解释下，f(x) 随 |x| 增大而无界，对任何实数 a 都可找到 x 满足不等式。两种解释的取值范围不同。",
+  "fingerprint": "6f0bc608ed24e32ce4b169fe958d3a0552dafe423b75fedc25a39607675aadf2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-b-science",
+  "question_id": "gk-2021-regular-national-b-science-q23",
+  "resume_action": "取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题省略量词是否为源卷原貌；在证据到位前保留题面原文，并将 a>−3/2 仅标作全称解释下的条件答案，同时注明存在解释对应全体实数。",
+  "source_id": "src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0887
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "4312bd6ec61586b46d30822e692985499c84c184c5d599d3bf6b163cbf37ab4e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0888
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "7d4814b6183e3a1737a4b022ee4267457361a63a41c057d8734aaa5cd3eddbf1",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0889
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "8783ac194e5bccc124a0573c1c74f7f25c26aa390907ed03b35cf974a46061be",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0890
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "e27b56310221364f78418b571f8ce045bbad386b20e1fad086f1cd5d582598ce",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0891
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "8a2506dc80936f4bac38b98bdc9728937a171f0c26990b5bcd99402328ab4a44",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0892
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "f6f3b4279bf25c96add14ae41f7967c6b0c19e7e2b43cae9d796f569631b31ca",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0893
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "9136a3a1c511d8754daf3581587d556ed96c1391e537750e4904e3f613e7437c",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0894
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "63688e83fcba6f3b92a224e756541816e831304984c4a4c939434eabbd9e7b37",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2021-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0895
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页第 23(2) 题写作“若 f(x+a)≥g(x)，求 a 的取值范围”，未明示 x 的量词。对任意 x 恒成立时，必要且充分条件为 a≥11/2；若只要求存在 x，则任取 x≤−3/2 即有 g(x)=−4≤0≤f(x+a)，故所有实数 a 均可。两种解释结论不同。",
+  "fingerprint": "1dfe0c044f3445e8a25ca311797d28a4400986eb80b939401aff61101e3a5240",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-regular-national-a-science",
+  "question_id": "gk-2021-regular-national-a-science-q23",
+  "resume_action": "取得官方答案、勘误或其他权威同版文本，确认第 23(2) 题是否省略“对任意 x 恒成立”等量词；在证据到位前保留题面原文，将 a≥11/2 标为全称解释下的条件答案，并列出存在解释为全体实数。",
+  "source_id": "src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

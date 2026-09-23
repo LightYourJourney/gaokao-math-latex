@@ -626,15 +626,47 @@ class BuildTargetTests(unittest.TestCase):
     def test_warnings_are_recorded_but_do_not_fail_the_build(self):
         self.fixture.spec({"xelatex": {"log": (
             "Missing character: There is no 〇 (U+3007) in font [x]!\n"
-            "LaTeX Warning: Reference `q3' on page 1 undefined on input line 9.\n"
             "Overfull \\hbox (0.4588pt too wide) in paragraph at lines 12--13\n"
         )}})
         receipt = self.fixture.build()
         self.assertEqual(receipt["status"], "compiled_pending_review")
         found = receipt["editions"][0]["log"]
         self.assertEqual(len(found["missing_characters"]), 1)
-        self.assertEqual(len(found["undefined_references"]), 1)
+        self.assertEqual(len(found["undefined_references"]), 0)
         self.assertEqual(len(found["overfull"]), 1)
+
+    def test_undefined_reference_from_first_pass_clears_after_second_pass(self):
+        warning = (
+            "LaTeX Warning: Reference `q3' on page 1 undefined on input line 9.\n"
+            "LaTeX Warning: There were undefined references.\n"
+        )
+        self.fixture.spec({"xelatex": {"log_by_pass": [warning, ""]}})
+
+        receipt = self.fixture.build()
+
+        self.assertEqual(receipt["status"], "compiled_pending_review")
+        self.assertEqual(receipt["editions"][0]["result"], "succeeded")
+        self.assertEqual(
+            receipt["editions"][0]["log"]["undefined_references"], []
+        )
+
+    def test_undefined_reference_remaining_after_second_pass_fails_build(self):
+        warning = (
+            "LaTeX Warning: Reference `q3' on page 1 undefined on input line 9.\n"
+            "LaTeX Warning: There were undefined references.\n"
+        )
+        self.fixture.spec({"xelatex": {"log_by_pass": ["", warning]}})
+
+        receipt = self.fixture.build()
+
+        self.assertEqual(receipt["status"], "failed")
+        self.assertEqual(receipt["editions"][0]["result"], "failed")
+        self.assertEqual(
+            len(receipt["editions"][0]["log"]["undefined_references"]), 2
+        )
+        self.assertTrue(
+            any("未解析引用" in problem for problem in receipt["editions"][0]["problems"])
+        )
 
     def test_both_passes_contribute_to_the_dependency_union(self):
         self.fixture.spec({"xelatex": {"fls_by_pass": [

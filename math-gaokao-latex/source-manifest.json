@@ -928,6 +928,16 @@
         "gk-2014-regular-national-2-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b03",
+      "issues": [],
+      "paper_ids": [
+        "gk-2021-regular-national-b-arts",
+        "gk-2021-regular-national-a-science",
+        "gk-2021-regular-national-b-science"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -937,7 +947,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "91b30ab7-b117-46c1-8471-ee0583c93aa8",
+  "last_transaction_id": "197aeafe-84b6-4f68-815d-772316731983",
   "papers": [
     {
       "blocked_from": null,
@@ -14347,9 +14357,237 @@
       "title": "2014 年全国Ⅱ卷（理科）",
       "track": "science",
       "year": 2014
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国乙卷_文科/figures/f2021_national_b_arts_t16_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国乙卷_文科/figures/f2021_national_b_arts_t18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2021_gaokao_b_arts",
+        "id": "gk-2021-regular-national-b-arts",
+        "note": "答案与解析由项目独立重建并经盲核，未确认官方答案源；PDF 内页标题与固定上游路径卷别冲突，原因未知。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国乙卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国乙文"
+      },
+      "issue_ids": [
+        "ISSUE-0881",
+        "ISSUE-0884"
+      ],
+      "last_verified_hash": "d4ec5451a6713fc7f0999e1a9a29d3ad642d33688487338c22aece2264c506ac",
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-national-b-arts",
+      "production_state": "blocked",
+      "project_dir": "2021_全国乙卷_文科",
+      "question_count": 23,
+      "resume_action": "取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题是否省略了“对任意 x 恒成立”等量词；在证据到位前保留题面原文，将 a>−3/2 明确标作全称解释下的条件答案，不宣称唯一结论。",
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_全国乙文_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_全国乙文_含解析.md",
+        "questions": "2021/2021_数学真题_全国乙文_试题.md",
+        "solution_body": "2021/2021_数学真题_全国乙文_解析正文.md"
+      },
+      "source_ids": [
+        "src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a"
+      ],
+      "title": "2021 年·全国乙卷·文科",
+      "track": "arts",
+      "year": 2021
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t16_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t23_grid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t2_income_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t6_orthographic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国甲卷_理科/figures/f2021_t8_everest.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2021_gaokao_a_science",
+        "id": "gk-2021-regular-national-a-science",
+        "note": "答案与解析由项目独立重建并经盲核，未确认官方答案源；PDF 内页标题与固定上游路径卷别冲突，原因未知。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国甲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国甲理"
+      },
+      "issue_ids": [
+        "ISSUE-0882",
+        "ISSUE-0885",
+        "ISSUE-0887",
+        "ISSUE-0888",
+        "ISSUE-0889",
+        "ISSUE-0890",
+        "ISSUE-0895"
+      ],
+      "last_verified_hash": "8993f6ca26f33a9c2cef3977453599c76d6eddaac666c6dff4c363dba6e509f1",
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-national-a-science",
+      "production_state": "blocked",
+      "project_dir": "2021_全国甲卷_理科",
+      "question_count": 23,
+      "resume_action": "取得同版官方勘误或其他权威同版文本，确认 B、D 重复是否为源卷印刷错误；在此之前保留选项原文与独立答案 A，不自行订正源卷。",
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_全国甲理_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_全国甲理_含解析.md",
+        "questions": "2021/2021_数学真题_全国甲理_试题.md",
+        "solution_body": "2021/2021_数学真题_全国甲理_解析正文.md"
+      },
+      "source_ids": [
+        "src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a"
+      ],
+      "title": "2021 年·全国甲卷·理科",
+      "track": "science",
+      "year": 2021
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国乙卷_理科/figures/f2021_national_b_science_t09_island.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国乙卷_理科/figures/f2021_national_b_science_t16_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2021_全国乙卷_理科/figures/f2021_national_b_science_t18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "2021_全国乙卷_理科/figures/f2021_national_b_science_t23_grid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2021_gaokao_b_science",
+        "id": "gk-2021-regular-national-b-science",
+        "note": "答案与解析由项目独立重建并经盲核，未确认官方答案源；PDF 内页标题与固定上游路径卷别冲突，原因未知。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国乙卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国乙理"
+      },
+      "issue_ids": [
+        "ISSUE-0883",
+        "ISSUE-0886",
+        "ISSUE-0891",
+        "ISSUE-0892",
+        "ISSUE-0893",
+        "ISSUE-0894"
+      ],
+      "last_verified_hash": "c46a6861a8f656599b94e1ffc1940f6f6ce6b2c74119c6642b0b8772b59351a7",
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-regular-national-b-science",
+      "production_state": "blocked",
+      "project_dir": "2021_全国乙卷_理科",
+      "question_count": 23,
+      "resume_action": "取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题省略量词是否为源卷原貌；在证据到位前保留题面原文，并将 a>−3/2 仅标作全称解释下的条件答案，同时注明存在解释对应全体实数。",
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_全国乙理_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_全国乙理_含解析.md",
+        "questions": "2021/2021_数学真题_全国乙理_试题.md",
+        "solution_body": "2021/2021_数学真题_全国乙理_解析正文.md"
+      },
+      "source_ids": [
+        "src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067"
+      ],
+      "title": "2021 年·全国乙卷·理科",
+      "track": "science",
+      "year": 2021
     }
   ],
-  "revision": 2743,
+  "revision": 2783,
   "schema_version": 1,
   "sources": [
     {
@@ -31886,8 +32124,8 @@
       "exam_type": "regular",
       "git_blob_oid": "05f6df3d942825b281ffc74079c6e9e0b22bdd3c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-national-b-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021全国乙文(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-626df595a17ee20bfaa1b298aee86d211ce914a9ae11ccf337ac9a30024d5e7a",
@@ -31910,8 +32148,8 @@
       "exam_type": "regular",
       "git_blob_oid": "16b196b0ce162b3b9748acd495159d88cde5005b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-national-b-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021全国乙理(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-07fbd034606d9e5fb0eb1763810e19e4b80175b24e53639b4cfe860c6b6fe067",
@@ -31958,8 +32196,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a40121c16f911fe8ec2962e9e5547dd388679fe8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-regular-national-a-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021全国甲理(云南,广西,贵州,西藏,四川).pdf",
       "regions": [],
       "source_id": "src-97009310da2991644af50876d699aa0d2dc8399ed121340a0971157962419f1a",

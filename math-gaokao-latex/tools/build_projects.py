@@ -480,9 +480,17 @@ def build_target(
         )
         code = int(result.returncode)
         passes.append({"pass": index, "exit_code": code})
-        findings = _merge_findings(
-            findings, scan_log(_read_text_lenient(build_dir / (edition + ".log")))
+        pass_findings = scan_log(
+            _read_text_lenient(build_dir / (edition + ".log"))
         )
+        findings = _merge_findings(findings, pass_findings)
+        # Cross-references are expected to be unresolved on the first LaTeX pass.
+        # The receipt describes the final pass, and a warning that survives it is a
+        # hard build failure (per the corpus acceptance gate).
+        if index == 2:
+            findings["undefined_references"] = pass_findings["undefined_references"]
+            if findings["undefined_references"]:
+                problems.append("第二遍后仍有未解析引用")
         fls_text = _read_text_lenient(build_dir / (edition + ".fls"))
         if fls_text:
             try:

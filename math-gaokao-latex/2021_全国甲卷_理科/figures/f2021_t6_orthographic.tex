@@ -1,0 +1,33 @@
+% 2021 全国甲卷理科 6：正视图与四个备选侧视图
+% 依据固定上游 PDF 第 1 页。切口投影均落在方形边的中点；虚线/实线按遮挡关系区分。
+\begin{tikzpicture}[font=\small,line width=0.4pt]
+  \def\s{1.38}
+  \newcommand{\cutleft}[1][]{\draw[#1] (0,{0.5*\s}) -- ({0.5*\s},0);}
+  \newcommand{\cutright}[1][]{\draw[#1] ({0.5*\s},0) -- (\s,{0.5*\s});}
+  % 正视图
+  \begin{scope}[shift={({2.15*\s},{1.18*\s})}]
+    \draw (0,0) rectangle (\s,\s);
+    \cutleft[dashed]
+    \node[anchor=south] at ({0.5*\s},\s+0.04) {正视图};
+  \end{scope}
+  % A：右下角、实线
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) rectangle (\s,\s); \cutright
+    \node[anchor=east] at (-0.05,{0.06*\s}) {A};
+  \end{scope}
+  % B：左下角、虚线
+  \begin{scope}[shift={({1.55*\s},0)}]
+    \draw (0,0) rectangle (\s,\s); \cutleft[dashed]
+    \node[anchor=east] at (-0.05,{0.06*\s}) {B};
+  \end{scope}
+  % C：右下角、虚线
+  \begin{scope}[shift={({3.10*\s},0)}]
+    \draw (0,0) rectangle (\s,\s); \cutright[dashed]
+    \node[anchor=east] at (-0.05,{0.06*\s}) {C};
+  \end{scope}
+  % D：左下角、实线
+  \begin{scope}[shift={({4.65*\s},0)}]
+    \draw (0,0) rectangle (\s,\s); \cutleft
+    \node[anchor=east] at (-0.05,{0.06*\s}) {D};
+  \end{scope}
+\end{tikzpicture}

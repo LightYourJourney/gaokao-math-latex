@@ -1,0 +1,19 @@
+% 2021 全国甲卷理科 16：f(x)=2cos(2x-π/6) 的部分图象
+% 源图标出 x=π/3 与第二个波峰 x=13π/12；第一波峰横坐标 π/12 是由图形推得但未标注。
+\begin{tikzpicture}
+\begin{axis}[width=9.4cm,height=5.0cm,font=\small,
+  axis lines=middle,xlabel={$x$},ylabel={$y$},
+  xmin=-0.45,xmax=4.45,ymin=-2.65,ymax=2.65,
+  xtick=\empty,ytick=\empty,clip=false,
+  every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+  every axis y label/.style={at={(current axis.above origin)},anchor=south}]
+  \addplot[thick,domain=-0.35:4.2,samples=260] {2*cos(deg(2*x-pi/6))};
+  % 原图标出的波峰及辅助虚线
+  \draw[dashed] (axis cs:0,2)--(axis cs:3.40339,2);
+  \draw[dashed] (axis cs:3.40339,0)--(axis cs:3.40339,2);
+  \node[anchor=east,inner sep=2pt] at (axis cs:-0.03,2) {$2$};
+  \node[anchor=north east,inner sep=2pt] at (axis cs:-0.03,-0.03) {$O$};
+  \node[anchor=north,inner sep=2pt] at (axis cs:1.04720,-0.06) {$\frac{\pi}{3}$};
+  \node[anchor=north,inner sep=2pt] at (axis cs:3.40339,-0.06) {$\frac{13\pi}{12}$};
+\end{axis}
+\end{tikzpicture}

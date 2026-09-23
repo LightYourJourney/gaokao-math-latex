@@ -1,0 +1,84 @@
+% 2021 全国乙卷文科第 16 题：正视图及侧视图、俯视图候选。
+% 按指定 PDF 第 1 页（印刷页 1143）重绘；图①尺寸 2×1，图②—③为 2×1，
+% 图④—⑤为 2×2。②的中线为实线、③为虚线；④—⑤的水平中线均为实线。
+\begin{tikzpicture}[
+  x=0.8cm, y=0.8cm,
+  font=\small,
+  line width=0.45pt,
+  line cap=round,
+  line join=round
+]
+  % 图①：直角三角形正视图，底边 2、高 1。
+  \begin{scope}[shift={(0,4.2)}]
+    \draw (0,0) -- (2,0) -- (2,1) -- cycle;
+    \draw (0,-0.38) -- (2,-0.38)
+      node[midway, fill=white, inner sep=1pt] {$2$};
+    \draw (0,-0.08) -- (0,-0.48);
+    \draw (2,-0.08) -- (2,-0.48);
+    \draw (2.34,0) -- (2.34,1)
+      node[midway, right=2pt, fill=white, inner sep=1pt] {$1$};
+    \draw (2.02,0) -- (2.44,0);
+    \draw (2.02,1) -- (2.44,1);
+    \node[anchor=north] at (1,-0.66) {图①};
+  \end{scope}
+
+  % 图②：侧视图候选，中线为实线。
+  \begin{scope}[shift={(3.25,4.2)}]
+    \draw (0,0) -- (2,0) -- (1,1) -- cycle;
+    \draw (1,1) -- (1,0);
+    \draw (0,-0.38) -- (2,-0.38)
+      node[midway, fill=white, inner sep=1pt] {$2$};
+    \draw (0,-0.08) -- (0,-0.48);
+    \draw (2,-0.08) -- (2,-0.48);
+    \draw (2.34,0) -- (2.34,1)
+      node[midway, right=2pt, fill=white, inner sep=1pt] {$1$};
+    \draw (2.02,0) -- (2.44,0);
+    \draw (2.02,1) -- (2.44,1);
+    \node[anchor=north] at (1,-0.66) {图②};
+  \end{scope}
+
+  % 图③：侧视图候选，中线为虚线。
+  \begin{scope}[shift={(6.5,4.2)}]
+    \draw (0,0) -- (2,0) -- (1,1) -- cycle;
+    \draw[dashed] (1,1) -- (1,0);
+    \draw (0,-0.38) -- (2,-0.38)
+      node[midway, fill=white, inner sep=1pt] {$2$};
+    \draw (0,-0.08) -- (0,-0.48);
+    \draw (2,-0.08) -- (2,-0.48);
+    \draw (2.34,0) -- (2.34,1)
+      node[midway, right=2pt, fill=white, inner sep=1pt] {$1$};
+    \draw (2.02,0) -- (2.44,0);
+    \draw (2.02,1) -- (2.44,1);
+    \node[anchor=north] at (1,-0.66) {图③};
+  \end{scope}
+
+  % 图④：俯视图候选，竖边在左。
+  \begin{scope}[shift={(2.0,0)}]
+    \draw (0,0) -- (2,1) -- (0,2) -- cycle;
+    \draw (0,1) -- (2,1);
+    \draw (0,-0.38) -- (2,-0.38)
+      node[midway, fill=white, inner sep=1pt] {$2$};
+    \draw (0,-0.08) -- (0,-0.48);
+    \draw (2,-0.08) -- (2,-0.48);
+    \draw (-0.38,0) -- (-0.38,2)
+      node[midway, left=2pt, fill=white, inner sep=1pt] {$2$};
+    \draw (-0.48,0) -- (0.08,0);
+    \draw (-0.48,2) -- (0.08,2);
+    \node[anchor=north] at (1,-0.66) {图④};
+  \end{scope}
+
+  % 图⑤：俯视图候选，竖边在右。
+  \begin{scope}[shift={(5.25,0)}]
+    \draw (2,0) -- (0,1) -- (2,2) -- cycle;
+    \draw (0,1) -- (2,1);
+    \draw (0,-0.38) -- (2,-0.38)
+      node[midway, fill=white, inner sep=1pt] {$2$};
+    \draw (0,-0.08) -- (0,-0.48);
+    \draw (2,-0.08) -- (2,-0.48);
+    \draw (2.38,0) -- (2.38,2)
+      node[midway, right=2pt, fill=white, inner sep=1pt] {$2$};
+    \draw (1.92,0) -- (2.48,0);
+    \draw (1.92,2) -- (2.48,2);
+    \node[anchor=north] at (1,-0.66) {图⑤};
+  \end{scope}
+\end{tikzpicture}
