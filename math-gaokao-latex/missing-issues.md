@@ -15007,3 +15007,54 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-0934
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 与规范题面仅要求公共点均位于 C3，未明确两曲线有公共点；若交集为空，全称命题条件空真且 a 不唯一。当前惯常考试读法 a=1 尚无同版官方答案或命题说明确认，故答案等级 U。",
+  "fingerprint": "00af778cc17dcc3bf82d237e28797be425339b0b7c56e5b0fcb6907950e9a7a9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-1-arts",
+  "question_id": "gk-2016-regular-national-1-arts-q23",
+  "resume_action": "取得同版官方答案或命题说明，确认题目是否隐含两曲线有非空公共点；消歧前保留 U 并阻止完成。",
+  "source_id": "src-31bfc647b7ec677fe34d4e50a2fb23184952e0ecbc1c67cfcbc99ed302b81240",
+  "status": "investigating",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0935
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 与规范题面仅要求公共点均位于 C3，未明确两曲线有公共点；若交集为空，全称命题条件空真且 a 不唯一。当前惯常考试读法 a=1 尚无同版官方答案或命题说明确认，故答案等级 U。",
+  "fingerprint": "b1c33a183849622eb40770af3183118c5b34aae780c15708ee7e028b000085a4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-1-science",
+  "question_id": "gk-2016-regular-national-1-science-q23",
+  "resume_action": "取得同版官方答案或命题说明，确认题目是否隐含两曲线有非空公共点；消歧前保留 U 并阻止完成。",
+  "source_id": "src-22dfb5d209bc2df4fdd197e76b3e16e72bd49aa0d196debfeea5fa6c7e9d2e4b",
+  "status": "investigating",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0936
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源题面写“高出60%”但未明确恰好或至少；严格等式与阈值解释会得出不同答案。现有 3/11 仅由外部答案参考支持，原题本身不足以确认唯一解释，故答案等级 U。",
+  "fingerprint": "a91c8234dd981b5f573e132cb6ad13e0f54c3162e37ef93ae47718af63d2c69a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-2-science",
+  "question_id": "gk-2016-regular-national-2-science-q18",
+  "resume_action": "取得同版官方答案或命题说明，明确“高出60%”表示恰好还是至少；消歧前保留 U 并阻止完成。",
+  "source_id": "src-95b9fb9d77fbab0c74756443da599d2969dcd905991d5faf2c6cfbadae3328ae",
+  "status": "investigating",
+  "type": "answer-missing"
+}
+```
