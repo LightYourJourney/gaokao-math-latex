@@ -1,0 +1,29 @@
+% 2016 年全国卷Ⅱ文科第 9 题：秦九韶算法程序框图
+\begin{tikzpicture}[>=Stealth, font=\small, line width=0.45pt,
+  box/.style={draw, minimum width=2.45cm, minimum height=0.56cm, inner sep=2pt},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+             minimum width=2.45cm, minimum height=0.58cm, inner sep=2pt},
+  term/.style={draw, rounded corners=5pt, minimum width=1.35cm, minimum height=0.48cm, inner sep=2pt},
+  dec/.style={draw, diamond, aspect=3.1, minimum width=2.75cm, minimum height=0.72cm, inner sep=1pt}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-0.92) {输入 $x,n$};
+  \node[box] (init) at (0,-1.92) {$k=0,\ s=0$};
+  \node[io] (inputa) at (0,-2.95) {输入 $a$};
+  \node[box, minimum width=2.65cm, minimum height=1.04cm, align=center] (step) at (0,-3.96)
+    {$s=s\cdot x+a$\\$k=k+1$};
+  \node[dec] (condition) at (0,-5.08) {$k>n$};
+  \node[io] (output) at (0,-6.05) {输出 $s$};
+  \node[term] (finish) at (0,-6.95) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (inputa.north);
+  \draw[->] (inputa.south) -- (step.north);
+  \draw[->] (step.south) -- (condition.north);
+  \draw[->] (condition.south) -- node[right=2pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \draw (condition.east) -- (2.0,-5.08) -- (2.0,-2.53);
+  \draw[->] (2.0,-2.53) -- (0,-2.53);
+  \node[above=2pt] at (1.7,-5.08) {否};
+\end{tikzpicture}

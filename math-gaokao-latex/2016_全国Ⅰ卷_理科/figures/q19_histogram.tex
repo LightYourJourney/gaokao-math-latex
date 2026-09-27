@@ -1,0 +1,30 @@
+% 2016 全国卷Ⅰ理科第 19 题：易损零件更换数的频数柱状图。
+\begin{tikzpicture}[x=.46cm,y=.055cm,font=\footnotesize,line width=.4pt,
+  line cap=round,line join=round]
+  % 频数 20、40 的水平参考虚线。
+  \draw[dashed] (0,20)--(11.35,20);
+  \draw[dashed] (0,40)--(9.00,40);
+
+  % 四个柱：8、9、10、11 对应频数 20、40、20、20。
+  \draw (7.67,0) rectangle (8.33,20);
+  \draw (8.67,0) rectangle (9.33,40);
+  \draw (9.67,0) rectangle (10.33,20);
+  \draw (10.67,0) rectangle (11.33,20);
+
+  % 纵轴及原点附近的横轴断轴记号。
+  \draw (0,0)--(0,44);
+  \draw[->] (0,44)--(0,47);
+  \draw (0,0)--(.28,0);
+  \draw (.28,0)--(.38,2.2)--(.52,-2.2)--(.66,2.2)--(.80,0);
+  \draw[->] (.80,0)--(12.15,0);
+
+  \node[left=2pt] at (0,20) {20};
+  \node[left=2pt] at (0,40) {40};
+  \node[below left=1pt] at (0,0) {0};
+  \node[above right=1pt] at (0,47) {频数};
+  \node[below] at (8,0) {8};
+  \node[below] at (9,0) {9};
+  \node[below] at (10,0) {10};
+  \node[below] at (11,0) {11};
+  \node[anchor=west] at (12.35,0) {更换的易损零件数};
+\end{tikzpicture}

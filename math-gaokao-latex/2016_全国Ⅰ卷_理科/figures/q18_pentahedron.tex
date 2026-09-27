@@ -1,0 +1,21 @@
+% 2016 全国卷Ⅰ理科第 18 题：五面体的可见棱；交叉处不是顶点。
+\begin{tikzpicture}[font=\footnotesize,line width=.45pt,line cap=round,line join=round]
+  \coordinate (F) at (0,0);
+  \coordinate (D) at (1.55,2.25);
+  \coordinate (A) at (2.60,-1.25);
+  \coordinate (C) at (4.15,2.55);
+  \coordinate (E) at (4.90,.45);
+  \coordinate (B) at (7.50,-.35);
+
+  % 原图中的三条虚棱；F--E 与实棱 D--A 相交但不构成顶点。
+  \draw[dashed] (F)--(E) (E)--(C) (E)--(B);
+  % 原图中的可见实棱。
+  \draw (D)--(C) (C)--(B) (B)--(A) (A)--(F) (F)--(D) (D)--(A);
+
+  \node[left] at (F) {$F$};
+  \node[above left] at (D) {$D$};
+  \node[above] at (C) {$C$};
+  \node[right] at (E) {$E$};
+  \node[below] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+\end{tikzpicture}

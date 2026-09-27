@@ -1,0 +1,30 @@
+% 2016 全国卷Ⅰ理科第 9 题：循环程序框图。
+\begin{tikzpicture}[font=\footnotesize,>=Stealth,line width=.4pt,
+  line cap=round,line join=round,
+  term/.style={draw,rounded corners=5pt,minimum height=1.55em,minimum width=1.3em,inner xsep=6pt},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum height=1.65em,minimum width=2.2cm,inner xsep=5pt},
+  box/.style={draw,minimum height=1.65em,inner xsep=5pt},
+  dec/.style={draw,diamond,aspect=3.0,minimum width=3.6cm,inner sep=1.5pt}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-.85) {输入 $x,y,n$};
+  \node[box,minimum width=4.6cm] (calc) at (0,-1.95)
+    {$\displaystyle x=x+\frac{n-1}{2},\ y=ny$};
+  \node[dec] (cond) at (0,-3.5) {$x^2+y^2\geqslant36$};
+  \node[box,minimum width=1.55cm] (inc) at (-2.8,-2.9) {$n=n+1$};
+  \node[io] (output) at (0,-4.95) {输出 $x,y$};
+  \node[term] (end) at (0,-5.85) {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input.south) -- (calc.north);
+  \draw[->] (calc) -- (cond);
+  \draw[->] (cond.south) -- node[right,pos=.48] {是} (output.north);
+  \draw[->] (output) -- (end);
+
+  \coordinate (no) at ([xshift=-6mm]cond.west);
+  \node[below=1pt] at (no) {否};
+  \draw[->] (cond.west) -- (no) -| (inc.south);
+
+  \coordinate (returnEntry) at ([xshift=-14mm]calc.north);
+  \draw[->] (inc.north) -- ++(0,1.45) -| (returnEntry);
+\end{tikzpicture}

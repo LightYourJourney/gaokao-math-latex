@@ -1,0 +1,17 @@
+\begin{tikzpicture}[line cap=round,line join=round]
+\coordinate (O) at (0,0);
+\coordinate (A) at (-1.905,-1.1);
+\coordinate (B) at (1.905,-1.1);
+\coordinate (D) at (-0.733,0.82);
+\coordinate (C) at (0.733,0.82);
+
+\draw[thick] (O) circle (1.1);
+\draw[thick] (O)--(A) (O)--(B) (A)--(B);
+\draw[thick] (D)--(C);
+
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[below] at (O) {$O$};
+\node[above left] at (D) {$D$};
+\node[above right] at (C) {$C$};
+\end{tikzpicture}

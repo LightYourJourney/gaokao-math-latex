@@ -1,0 +1,18 @@
+% 2016 年全国卷Ⅱ文科第 3 题：正弦函数局部图象
+\begin{tikzpicture}[>=Stealth, line width=0.45pt]
+  \draw[->] (-0.92,0) -- (1.72,0) node[right] {$x$};
+  \draw[->] (0,-2.62) -- (0,2.42) node[above] {$y$};
+
+  \draw[dashed] (0,2) -- ({pi/3},2);
+  \draw[dashed] ({pi/3},0) -- ({pi/3},2);
+  \draw[dashed] ({-pi/6},0) -- ({-pi/6},-2);
+
+  \draw[line width=0.8pt, domain=-0.72:1.30, samples=100, smooth, variable=\x]
+    plot ({\x},{2*sin(deg(2*\x-pi/6))});
+
+  \node[left=1pt] at (0,2) {$2$};
+  \node[right=1pt] at (0,-2) {$-2$};
+  \node[anchor=north east] at ({-pi/6},-0.04) {$-\dfrac{\pi}{6}$};
+  \node[below=2pt] at ({pi/3},0) {$\dfrac{\pi}{3}$};
+  \node[below left=1pt] at (0,0) {$O$};
+\end{tikzpicture}
