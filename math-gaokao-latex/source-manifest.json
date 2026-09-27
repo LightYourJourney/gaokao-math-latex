@@ -21,7 +21,7 @@
         "gk-2020-regular-national-1-science",
         "gk-2020-regular-national-1-arts"
       ],
-      "status": "closed"
+      "status": "compiled_pending_review"
     },
     {
       "batch_id": "phase0-b03",
@@ -947,7 +947,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ede38355-013d-4284-a0c6-d6ecc704be1f",
+  "last_transaction_id": "343a7ebd-9bb1-4667-bfef-f5befd5e7ecd",
   "papers": [
     {
       "blocked_from": null,
@@ -1225,7 +1225,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-science",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2019_全国Ⅰ卷_理科",
       "question_count": 23,
       "resume_action": null,
@@ -1271,7 +1271,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2019-regular-national-1-arts",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2019_全国Ⅰ卷_文科",
       "question_count": 23,
       "resume_action": null,
@@ -1325,7 +1325,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-science",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "2020_全国Ⅰ卷_理科",
       "question_count": 23,
       "resume_action": null,
@@ -1343,7 +1343,7 @@
       "year": 2020
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -1369,7 +1369,18 @@
         "ISSUE-0020",
         "ISSUE-0021",
         "ISSUE-0022",
-        "ISSUE-0023"
+        "ISSUE-0023",
+        "ISSUE-0920",
+        "ISSUE-0921",
+        "ISSUE-0922",
+        "ISSUE-0923",
+        "ISSUE-0924",
+        "ISSUE-0925",
+        "ISSUE-0926",
+        "ISSUE-0927",
+        "ISSUE-0928",
+        "ISSUE-0929",
+        "ISSUE-0930"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -1377,10 +1388,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2020-regular-national-1-arts",
-      "production_state": "complete",
+      "production_state": "blocked",
       "project_dir": "2020_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 20 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2020/2020_数学真题_文_答案要点.md",
         "combined_rendered": "2020/2020_数学真题_文_含解析.md",
@@ -14587,7 +14598,7 @@
       "year": 2021
     }
   ],
-  "revision": 2784,
+  "revision": 3213,
   "schema_version": 1,
   "sources": [
     {

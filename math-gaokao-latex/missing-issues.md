@@ -14302,3 +14302,224 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-0920
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "78651015-39fd-4d54-8014-698429f7adc3",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "8d034f6458d5e8c127e7f57175a688a77bb55d18d6e5e694c761628dedd6ed0c",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 24,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "f93b7e838a1451b5acfd5973e88ab1de933c2dbb498ec9db09e3a3c9ad62f6ab",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0921
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "78651015-39fd-4d54-8014-698429f7adc3",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "928fbf410cd779396adad9a14639ddfaa17f2c6428360f4b6d59bbb30dc0df88",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "19c402a8e8a2bb6161ddc7d6b16a0a85ac83806932effc4756be1c584b75e4de",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0922
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "78651015-39fd-4d54-8014-698429f7adc3",
+  "check_code": "pagination_whitespace",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "744e6e2f215aef4582aa2f52334705b0748327f7c52a727745530325c111edc4",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "803d7cbb5280eb7286f816d1ebc4d0309d81995ddf173320ec6db1ee43431474",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0923
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "8f80a43ebf39cc63cfd8421bfd770b8bd8f1e206091ad90cf9298b62b015d202",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 20,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 20 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0924
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "26dbd18ad808250a02bbc6773d4fa726d1741bb4ad21375ef4fbfbfe88a48fb1",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 22,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 22 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0925
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "heading_number",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "5ee20475a6fdfe5720bee0d46c67f8cde3a43374efd71d26c17c1a0ed5fe4879",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 23,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0926
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "heading_number",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "e44ddf7927e3dbaaf2ad7fa27c1c9163b8bf6250184e1be7a7b4a7d3fb18b981",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "000632d50792385a25e9d9cf1eaf044e46e71b1a06f027d64072498d973e32cd",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 简答版 第 7 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0927
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "0b1bf905c639265833983b133ddd64a31cf6c433270ef9b9a8366fbd744454da",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 27,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 27 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0928
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "f463448e51a8b21e8944d747d880c0113bf84024390d41d2158f16b2dd680809",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 30,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 30 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0929
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "2c37b7be7ea5923930e327ca297fd4acfae73819279b37f431bca5245a718bb1",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 32,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 32 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0930
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "check_code": "heading_number",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "164e83fccf2cf8413e9885d10fe9a273f1c34c9caec5ef30b16ca5912c290fc9",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "b170ee5aa82a852232a3b43490b9a74b41bb2b4fd922b48e63957363373ff1c5",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 试题版 第 5 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
