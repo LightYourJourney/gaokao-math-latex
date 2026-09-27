@@ -14957,3 +14957,19 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0931
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "6f4cc6140c48fdfe6417b651983404fe0668a85d775389b2a97b867aa40bb7f9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-2-science",
+  "question_id": "gk-2016-regular-national-2-science-q18",
+  "resume_action": "核对原卷组题说明或考试机构勘误，明确“高出60%”表示恰好还是至少；未消歧前保留 U 并阻止该卷完成。",
+  "source_id": "src-95b9fb9d77fbab0c74756443da599d2969dcd905991d5faf2c6cfbadae3328ae",
+  "status": "investigating",
+  "type": "answer-conflict"
+}
+```
