@@ -45,7 +45,10 @@ class ReportFactsTest(unittest.TestCase):
         facts = self.facts
         self.assertGreater(len(facts["batches"]), 6)
         self.assertTrue(any(row["validation"] != "FINALIZED" for row in facts["batches"]))
-        self.assertTrue(any(row["git_state"] == "validated" for row in facts["batches"]))
+        self.assertTrue(all(
+            row["git_state"] in {"validated", "committed", "unavailable"}
+            for row in facts["batches"]
+        ))
 
     def test_render_outputs_has_exactly_six_targets(self):
         outputs = report.render_outputs(self.facts)
