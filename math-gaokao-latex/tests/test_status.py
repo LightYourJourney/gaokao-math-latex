@@ -96,7 +96,11 @@ def effective_review(facts):
 def oracle_content_outcome(facts):
     """计划 780 行散文的独立誊写（不含 report 一步）。"""
     if facts["provenance"] != "current":
-        return "legacy_unverified"
+        if facts["is_legacy"]:
+            return "legacy_unverified"
+        if facts["provenance"] == "missing":
+            return "planned"
+        return "eligible_blocked"
     if facts["provenance_unknown"] or facts["provenance_conflicts"]:
         return "eligible_blocked"
     if facts["build"] == "failed" or facts["review"] == "failed":
@@ -158,22 +162,23 @@ def all_axes(paper_id=PAPER_ID):
     """合法 facts 的完整笛卡尔积（issues 取空/未解决阻断/已解决三档）。"""
     issue_axis = ((), (blocking_issue(paper_id),), (resolved_issue(paper_id),))
     for combo in itertools.product(
-        PROVENANCE_STATES, (False, True), (False, True), ARTIFACT_STATES,
+        (False, True), PROVENANCE_STATES, (False, True), (False, True), ARTIFACT_STATES,
         BUILD_STATES, CURRENCY_STATES, REVIEW_STATES, CURRENCY_STATES,
         issue_axis, (False, True),
     ):
         yield paper_facts(
             paper_id,
-            provenance=combo[0],
-            provenance_unknown=combo[1],
-            provenance_conflicts=combo[2],
-            artifacts=combo[3],
-            build=combo[4],
-            build_currency=combo[5],
-            review=combo[6],
-            review_currency=combo[7],
-            issues=combo[8],
-            batch_report_valid=combo[9],
+            is_legacy=combo[0],
+            provenance=combo[1],
+            provenance_unknown=combo[2],
+            provenance_conflicts=combo[3],
+            artifacts=combo[4],
+            build=combo[5],
+            build_currency=combo[6],
+            review=combo[7],
+            review_currency=combo[8],
+            issues=combo[9],
+            batch_report_valid=combo[10],
         )
 
 
@@ -211,8 +216,9 @@ class FactsContractTests(unittest.TestCase):
         self.assertEqual(
             CONTENT_OUTCOMES,
             (
-                "legacy_unverified", "answers_verified", "editions_generated",
-                "compiled", "eligible_blocked", "eligible_complete",
+                "legacy_unverified", "planned", "answers_verified",
+                "editions_generated", "compiled", "eligible_blocked",
+                "eligible_complete",
             ),
         )
 
@@ -260,7 +266,7 @@ class ExhaustiveStatusTests(unittest.TestCase):
                     oracle_content_outcome(facts),
                 )
             checked += 1
-        self.assertEqual(checked, 4 * 2 * 2 * 3 * 5 * 2 * 4 * 2 * 3 * 2)
+        self.assertEqual(checked, 2 * 4 * 2 * 2 * 3 * 5 * 2 * 4 * 2 * 3 * 2)
 
     def test_every_derived_status_is_in_the_frozen_enum(self):
         for facts in all_axes():
@@ -290,25 +296,38 @@ class ExhaustiveStatusTests(unittest.TestCase):
                 if item["impact"] == "blocks_completion" and item["status"] != "resolved"
             ])
 
-    def test_invalid_provenance_always_stays_legacy_unverified(self):
-        for facts in all_axes():
-            if facts["provenance"] == "current":
-                continue
-            self.assertEqual(derive_status(facts), "legacy_unverified")
+    def test_noncurrent_provenance_respects_legacy_identity(self):
+        expected = {
+            (True, "missing"): "legacy_unverified",
+            (True, "invalid"): "legacy_unverified",
+            (True, "stale"): "legacy_unverified",
+            (False, "missing"): "planned",
+            (False, "invalid"): "blocked",
+            (False, "stale"): "blocked",
+        }
+        for (is_legacy, provenance), status in expected.items():
+            with self.subTest(is_legacy=is_legacy, provenance=provenance):
+                facts = paper_facts(
+                    PAPER_ID, is_legacy=is_legacy, provenance=provenance
+                )
+                self.assertEqual(derive_status(facts), status)
 
     def test_blocked_is_exactly_the_blocker_predicate(self):
         for facts in all_axes():
-            expected = facts["provenance"] == "current" and (
-                facts["provenance_unknown"]
-                or facts["provenance_conflicts"]
-                or facts["build"] == "failed"
-                or facts["review"] == "failed"
-                or any(
-                    item["impact"] == "blocks_completion"
-                    and item["status"] != "resolved"
-                    for item in facts["issues"]
+            expected = (
+                not facts["is_legacy"]
+                and facts["provenance"] in {"invalid", "stale"}
+            ) or facts["provenance"] == "current" and (
+                    facts["provenance_unknown"]
+                    or facts["provenance_conflicts"]
+                    or facts["build"] == "failed"
+                    or facts["review"] == "failed"
+                    or any(
+                        item["impact"] == "blocks_completion"
+                        and item["status"] != "resolved"
+                        for item in facts["issues"]
+                    )
                 )
-            )
             self.assertEqual(derive_status(facts) == "blocked", expected)
 
 

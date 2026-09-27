@@ -51,8 +51,8 @@ BATCH_STATES: Tuple[str, ...] = (
     "closed_with_blockers",
 )
 CONTENT_OUTCOMES: Tuple[str, ...] = (
-    "legacy_unverified", "answers_verified", "editions_generated", "compiled",
-    "eligible_blocked", "eligible_complete",
+    "legacy_unverified", "planned", "answers_verified", "editions_generated",
+    "compiled", "eligible_blocked", "eligible_complete",
 )
 
 GIT_STATES: Tuple[str, ...] = ("validated", "committed")
@@ -68,7 +68,7 @@ _ENUM_FIELDS = {
     "review_currency": CURRENCY_STATES,
 }
 _BOOLEAN_FIELDS = (
-    "provenance_unknown", "provenance_conflicts", "batch_report_valid",
+    "is_legacy", "provenance_unknown", "provenance_conflicts", "batch_report_valid",
 )
 _CONTENT_FIELDS = frozenset(
     ["paper_id", "issues"] + list(_ENUM_FIELDS) + list(_BOOLEAN_FIELDS)
@@ -85,6 +85,7 @@ class StatusError(ValueError):
 
 def paper_facts(
     paper_id: str,
+    is_legacy: bool = True,
     provenance: str = "missing",
     provenance_unknown: bool = False,
     provenance_conflicts: bool = False,
@@ -103,6 +104,7 @@ def paper_facts(
     """
     facts = {
         "paper_id": paper_id,
+        "is_legacy": is_legacy,
         "provenance": provenance,
         "provenance_unknown": provenance_unknown,
         "provenance_conflicts": provenance_conflicts,
@@ -190,7 +192,11 @@ def derive_content_outcome(facts_without_report_value: Mapping[str, Any]) -> str
     validate_facts(facts, with_report=False)
 
     if facts["provenance"] != "current":
-        return "legacy_unverified"
+        if facts["is_legacy"]:
+            return "legacy_unverified"
+        if facts["provenance"] == "missing":
+            return "planned"
+        return "eligible_blocked"
     if facts["provenance_unknown"] or facts["provenance_conflicts"]:
         return "eligible_blocked"
     if facts["build"] == "failed" or facts["review"] == "failed":

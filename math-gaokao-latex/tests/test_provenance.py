@@ -918,6 +918,21 @@ class CompletionGateTests(unittest.TestCase):
         self.assertEqual(facts["provenance"], "missing")
         self.assertEqual(derive_status(facts), "legacy_unverified")
 
+    def test_a_new_paper_without_provenance_stays_planned(self):
+        manifest = self.fixture.manifest()
+        paper = next(
+            item for item in manifest["papers"] if item["paper_id"] == PAPER_TWO
+        )
+        paper["legacy_ids"] = []
+
+        loaded = provenance.load_provenance_facts(
+            self.fixture.root, manifest, [PAPER_TWO]
+        )
+        facts = status_core.paper_facts(PAPER_TWO, **loaded[PAPER_TWO])
+
+        self.assertEqual(facts["provenance"], "missing")
+        self.assertEqual(derive_status(facts), "planned")
+
     def test_editing_the_canonical_source_makes_the_provenance_stale(self):
         paper = self.fixture.papers[0]
         self.fixture.write(
@@ -933,8 +948,8 @@ class CompletionGateTests(unittest.TestCase):
             self.fixture.root, self.fixture.manifest(), [PAPER_ONE]
         )
         self.assertEqual(sorted(loaded[PAPER_ONE]), sorted([
-            "provenance", "provenance_unknown", "provenance_conflicts", "artifacts",
-            "review", "review_currency", "issues", "batch_report_valid",
+            "is_legacy", "provenance", "provenance_unknown", "provenance_conflicts",
+            "artifacts", "review", "review_currency", "issues", "batch_report_valid",
         ]))
 
     def test_the_loader_never_reports_a_valid_batch_report_on_its_own(self):

@@ -1123,8 +1123,8 @@ def default_facts_loader(
 
 
 _LOADED_FIELDS = frozenset([
-    "provenance", "provenance_unknown", "provenance_conflicts", "artifacts",
-    "review", "review_currency", "issues", "batch_report_valid",
+    "is_legacy", "provenance", "provenance_unknown", "provenance_conflicts",
+    "artifacts", "review", "review_currency", "issues", "batch_report_valid",
 ])
 
 

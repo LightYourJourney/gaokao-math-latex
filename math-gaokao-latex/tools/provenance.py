@@ -715,6 +715,7 @@ def load_provenance_facts(
                 )
             report_valid = batch_report_cache[batch_id]
         facts[paper_id] = {
+            "is_legacy": bool(paper.get("legacy_ids")),
             "provenance": state,
             "provenance_unknown": unknown,
             "provenance_conflicts": conflicts,
