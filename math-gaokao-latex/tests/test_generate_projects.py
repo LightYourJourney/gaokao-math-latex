@@ -505,6 +505,77 @@ class ConversionInterfaceTests(unittest.TestCase):
         self.assertEqual(result.warnings, ())
         self.assertEqual(result.referenced_figures, ("fa",))
 
+    def test_pdf_page_metadata_html_comments_are_not_emitted_to_tex(self):
+        source = (
+            "<!-- pdf_page: 1; printed_page: 1163 -->\n\n"
+            "**1．** 题面内容。\n"
+        )
+        result = md2tex.convert_markdown(
+            source, md2tex.ConversionContext(figure_map={})
+        )
+
+        self.assertNotIn("pdf_page", result.text)
+        self.assertNotIn("printed_page", result.text)
+        self.assertIn(r"\gkti{1}", result.text)
+
+    def test_raw_fill_in_underscores_become_a_safe_blank_macro(self):
+        result = md2tex.convert_markdown(
+            "**13．** 求 $m=$________。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"$m=$\gkblank{}", result.text)
+        self.assertNotIn("________", result.text)
+
+    def test_solid_circle_text_uses_a_font_supported_bullet(self):
+        result = md2tex.convert_markdown(
+            "图中 ● 表示讲座后。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\textbullet{}", result.text)
+        self.assertNotIn("●", result.text)
+
+    def test_raw_open_circles_in_a_number_line_use_math_circle(self):
+        result = md2tex.convert_markdown(
+            "在数轴上：-4 —— ○ —— ○ —— 4。\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertEqual(result.text.count(r"$\bigcirc$"), 2)
+        self.assertNotIn("○", result.text)
+
+    def test_explicit_math_open_circle_is_safe_in_a_number_line(self):
+        result = md2tex.convert_markdown(
+            "-4 --- $\\bigcirc$ --- 4\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"$\bigcirc$", result.text)
+        self.assertNotIn("○", result.text)
+
+    def test_local_tex_figure_link_renders_vector_input_and_tracks_reference(self):
+        target = "../math-gaokao-latex/2099_全国1卷/figures/f2099_t2.tex"
+        result = md2tex.convert_markdown(
+            "[题图](%s)\n" % target,
+            md2tex.ConversionContext(figure_map={target: "f2099_t2"}),
+        )
+
+        self.assertIn(r"\input{figures/f2099_t2}", result.text)
+        self.assertEqual(result.warnings, ())
+        self.assertEqual(result.referenced_figures, ("f2099_t2",))
+
+    def test_external_tex_reference_remains_an_ordinary_text_link(self):
+        source = (
+            "参考资料 [shanghai1977.tex]("
+            "https://github.com/example/math/blob/main/shanghai1977.tex)。\n"
+        )
+        result = md2tex.convert_markdown(source, md2tex.ConversionContext(figure_map={}))
+
+        self.assertIn("shanghai1977.tex", result.text)
+        self.assertEqual(result.warnings, ())
+        self.assertEqual(result.referenced_figures, ())
+
     def test_records_every_occurrence_of_a_reused_figure(self):
         source = "![甲](images/a.png)\n\n![甲](images/a.png)\n\n![乙](images/b.png)\n"
         result = md2tex.convert_markdown(
@@ -859,6 +930,36 @@ class GenerateProjectTests(unittest.TestCase):
     def test_figure_occurrences_are_counted_from_the_generated_content(self):
         result = self.build()
         # 主图题面与解析各一次、辅助图只在解析里一次——与 manifest 登记逐条相等。
+        self.assertEqual(
+            result.figure_occurrences, {FIGURE_MAIN: 2, FIGURE_AUX: 1}
+        )
+        self.assertEqual(validate_project_result(self.sources, result), ())
+
+    def test_registered_tex_links_generate_and_count_vector_figures(self):
+        question_target = "../math-gaokao-latex/2099_全国1卷/figures/f2099_t2.tex"
+        auxiliary_target = "../math-gaokao-latex/2099_全国1卷/figures/f2099_aux.tex"
+        questions_path = self.fixture.root / QUESTIONS_PATH
+        questions_path.write_text(
+            questions_path.read_text(encoding="utf-8").replace(
+                "![示意图](images/t2.png)", "[示意图](%s)" % question_target
+            ),
+            encoding="utf-8",
+        )
+        solution_path = self.fixture.root / SOLUTION_PATH
+        solution_path.write_text(
+            solution_path.read_text(encoding="utf-8").replace(
+                "![辅助线](images/t2-aux.png)", "[辅助线](%s)" % auxiliary_target
+            ),
+            encoding="utf-8",
+        )
+
+        result = self.build()
+        questions_tex = result.targets[QUESTIONS_TEX].decode("utf-8")
+        answers_tex = result.targets[ANSWERS_TEX].decode("utf-8")
+        self.assertIn(r"\input{figures/f2099_t2}", questions_tex)
+        self.assertIn(r"\Needspace{0.4\textheight}", questions_tex)
+        self.assertIn(r"\input{figures/f2099_t2}", answers_tex)
+        self.assertIn(r"\input{figures/f2099_aux}", answers_tex)
         self.assertEqual(
             result.figure_occurrences, {FIGURE_MAIN: 2, FIGURE_AUX: 1}
         )

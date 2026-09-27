@@ -28,6 +28,7 @@
 from __future__ import annotations
 
 import argparse
+import posixpath
 import re
 import sys
 from dataclasses import dataclass
@@ -450,7 +451,23 @@ def generate_project(
     except SolutionSourceError as error:
         raise GenerationError(f"{sources.paper_id}: {error}") from error
 
-    context = md2tex.ConversionContext(figure_map=figure_map, strict=True)
+    effective_figure_map = dict(figure_map)
+    source_paths = (sources.questions, sources.answer_key, sources.solution_body)
+    for source_path in source_paths:
+        source_dir = posixpath.dirname(source_path)
+        for relative, _ in sources.figures:
+            figure_path = posixpath.join(PROJECT_RELATIVE, relative)
+            link_target = posixpath.relpath(figure_path, source_dir)
+            stem = PurePosixPath(relative).stem
+            existing = effective_figure_map.get(link_target)
+            if existing is not None and existing != stem:
+                raise GenerationError(
+                    "%s: 图稿链接映射冲突：%s -> %s / %s"
+                    % (sources.paper_id, link_target, existing, stem)
+                )
+            effective_figure_map[link_target] = stem
+
+    context = md2tex.ConversionContext(figure_map=effective_figure_map, strict=True)
     try:
         converted_questions = md2tex.convert_markdown(questions_text, context)
         converted_answers = md2tex.convert_markdown(combined_text, context)

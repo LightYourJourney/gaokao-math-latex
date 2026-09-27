@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,thick,font=\small]
+  % Schematic projection only; not to scale.
+  \coordinate (A) at (0,0);
+  \coordinate (D) at (0.65,3.0);
+  \coordinate (B) at (5.0,0.65);
+  \coordinate (C) at (2.15,1.15);
+  \coordinate (E) at (1.075,0.575);
+  \coordinate (F) at (2.651,1.919);
+
+  % Visible outline
+  \draw (A)--(D)--(B)--(A);
+  % Hidden/interior edges in the source schematic
+  \draw[dashed] (A)--(C);
+  \draw (A)--(F);
+  \draw[dashed] (D)--(C);
+  \draw[dashed] (C)--(B);
+  \draw[dashed] (D)--(E);
+  \draw[dashed] (E)--(B);
+  % Segment CF is shown for the queried line-plane angle
+  \draw[dashed] (C)--(F);
+
+  \fill (A) circle (1.2pt) node[below left] {$A$};
+  \fill (B) circle (1.2pt) node[right] {$B$};
+  \fill (C) circle (1.2pt) node[above right] {$C$};
+  \fill (D) circle (1.2pt) node[above] {$D$};
+  \fill (E) circle (1.2pt) node[below left] {$E$};
+  \fill (F) circle (1.2pt) node[above right] {$F$};
+\end{tikzpicture}

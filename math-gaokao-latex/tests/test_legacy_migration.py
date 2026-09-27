@@ -1,6 +1,7 @@
 import copy
 import io
 import json
+import posixpath
 import re
 import shutil
 import subprocess
@@ -988,6 +989,45 @@ class FigureOccurrenceGuardTests(unittest.TestCase):
     必须靠 manifest 登记值对账。任何未经 manifest 登记的漂移（丢图或多图）都得硬错。
     """
 
+    def _replace_images_with_registered_links(self, repo, project, paper):
+        tex_order, _ = ordered_counted(
+            [
+                read_text(project / paper["project_dir"] / "questions.tex"),
+                read_text(project / paper["project_dir"] / "answers.tex"),
+            ],
+            _FIGURE_INPUT_RE,
+        )
+        image_order, _ = ordered_counted(
+            [
+                read_text(repo / paper["source_files"][key])
+                for key in ("questions", "combined_rendered")
+            ],
+            _MARKDOWN_IMAGE_RE,
+        )
+        self.assertEqual(len(image_order), len(tex_order))
+        figure_by_image = dict(zip(image_order, tex_order))
+        rewritten_count = 0
+        for key in ("questions", "combined_rendered"):
+            source = repo / paper["source_files"][key]
+            text = source.read_text(encoding="utf-8")
+
+            def to_registered_link(match):
+                figure_path = "%s/%s/figures/%s.tex" % (
+                    "math-gaokao-latex",
+                    paper["project_dir"],
+                    figure_by_image[match.group(1)],
+                )
+                target = posixpath.relpath(
+                    figure_path,
+                    posixpath.dirname(paper["source_files"][key]),
+                )
+                return "[题图](%s)" % target
+
+            linked, count = _MARKDOWN_IMAGE_RE.subn(to_registered_link, text)
+            rewritten_count += count
+            source.write_text(linked, encoding="utf-8")
+        return rewritten_count
+
     def test_real_repository_matches_the_registered_occurrences(self):
         manifest = json.loads(read_text(ROOT / "source-manifest.json"))
         # 不抛异常即通过；真实仓库必须始终与登记值一致。
@@ -1040,6 +1080,63 @@ class FigureOccurrenceGuardTests(unittest.TestCase):
             with self.assertRaises(ValueError) as caught:
                 validate_figure_occurrences(migrated, repo)
             self.assertIn("引用次数与 manifest 登记不一致", str(caught.exception))
+
+    def test_registered_local_tex_links_are_counted_as_figure_references(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, project = fixture_repository(tmp)
+            migrated = migrate_legacy_index(
+                json.loads(read_text(project / "source-manifest.json")),
+                json.loads(read_text(project / "index.json")),
+                repo_root=repo,
+                issues=load_issues(project / "missing-issues.md"),
+            )
+            paper = next(
+                item for item in migrated["papers"]
+                if item["paper_id"] == "gk-2017-regular-national-1-science"
+            )
+            rewritten_count = self._replace_images_with_registered_links(
+                repo, project, paper
+            )
+
+            self.assertEqual(
+                rewritten_count,
+                sum(figure["expected_occurrences"] for figure in paper["figure_files"]),
+            )
+            (project / paper["project_dir"] / "questions.tex").unlink()
+            (project / paper["project_dir"] / "answers.tex").unlink()
+            self.assertEqual(validate_figure_occurrences(migrated, repo), 60)
+
+    def test_a_tex_link_to_an_unregistered_figure_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, project = fixture_repository(tmp)
+            migrated = migrate_legacy_index(
+                json.loads(read_text(project / "source-manifest.json")),
+                json.loads(read_text(project / "index.json")),
+                repo_root=repo,
+                issues=load_issues(project / "missing-issues.md"),
+            )
+            paper = next(
+                item for item in migrated["papers"]
+                if item["paper_id"] == "gk-2017-regular-national-1-science"
+            )
+            self._replace_images_with_registered_links(repo, project, paper)
+            combined = repo / paper["source_files"]["combined_rendered"]
+            text = combined.read_text(encoding="utf-8")
+            invalid = "../math-gaokao-latex/%s/figures/not-registered.tex" % paper[
+                "project_dir"
+            ]
+            linked, count = re.subn(
+                r"(?m)^\[题图\]\([^)]+\)$",
+                "[题图](%s)" % invalid,
+                text,
+                count=1,
+            )
+            self.assertEqual(count, 1)
+            combined.write_text(linked, encoding="utf-8")
+
+            with self.assertRaises(ValueError) as caught:
+                validate_figure_occurrences(migrated, repo)
+            self.assertIn("图稿链接", str(caught.exception))
 
 
 class SyncFigureOccurrencesTests(unittest.TestCase):

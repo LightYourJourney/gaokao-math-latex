@@ -1,10 +1,10 @@
 {
-  "attempt_id": "0ebd6b7f-97cc-47cb-abbc-4f2f4818e24c",
+  "attempt_id": "bf4e0838-8df0-492e-8171-d7c6f7953c37",
   "dependency_tree": {
     "files": [
       {
         "path": "math-gaokao-latex/1977_上海卷_理科/answers.tex",
-        "sha256": "4520b1edce66a928c75d6907567cd3a5235f023807d01519431fa3c3c2a5af3a"
+        "sha256": "73da0f24e262204f61266f4d3e99bba79154e178289ce77a39053169f2b8fbf1"
       },
       {
         "path": "math-gaokao-latex/1977_上海卷_理科/answers_short.tex",
@@ -59,7 +59,7 @@
         "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
       }
     ],
-    "tree_sha256": "e8c4612de89269672acf1808a924a30e46ba20d9aa4133d68054bb82405c5401"
+    "tree_sha256": "6c082176c2c8b3362d4a5ecb3e4dd404e933a6a8cc74e7d7edfc03606143e9a9"
   },
   "editions": [
     {
@@ -74,17 +74,13 @@
         {
           "exit_code": 0,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_上海卷_理科/build/试题版.pdf",
-        "sha256": "b9fcc143411ee9d5664102195eea52b703ca9ae37db86c88dbb9ec89484a0b11",
-        "size_bytes": 80114
+        "sha256": "a4be370c538cbadd157e8e066169736bd81b7b93d7c6866808e582323637463e",
+        "size_bytes": 80104
       },
       "problems": [],
       "result": "succeeded",
@@ -94,36 +90,21 @@
       "edition": "解析版",
       "log": {
         "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ● (U+25CF) in font [lmroman12-regular]:mapping=t"
-          },
-          {
-            "text": "Missing character: There is no ○ (U+25CB) in font [lmroman12-regular]:mapping=t"
-          }
-        ],
+        "missing_characters": [],
         "overfull": [],
-        "undefined_references": [
-          {
-            "text": "LaTeX Warning: There were undefined references."
-          }
-        ]
+        "undefined_references": []
       },
       "passes": [
         {
           "exit_code": 0,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
       "pdf": {
         "page_count": 14,
         "path": "math-gaokao-latex/1977_上海卷_理科/build/解析版.pdf",
-        "sha256": "40c67debf0267ddab32c6633a5457d015f02b7abce71b0ebc84ddb45d9dd99d6",
-        "size_bytes": 149571
+        "sha256": "df7690de23edbb3b6f744993e1179c73ba0cb01a35347473a049a8736e0ad0e9",
+        "size_bytes": 149694
       },
       "problems": [],
       "result": "succeeded",
@@ -141,17 +122,13 @@
         {
           "exit_code": 0,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_上海卷_理科/build/简答版.pdf",
-        "sha256": "f1d3d56a1e2c2bd59866e204cdd50c15751cd0d9a021791a6e5b42968ab444af",
-        "size_bytes": 90103
+        "sha256": "0783e7260d22094d5f7f3c1c38818b0a3d8116fb0afc7c43ff83f6120597c007",
+        "size_bytes": 90098
       },
       "problems": [],
       "result": "succeeded",
@@ -161,43 +138,28 @@
       "edition": "印刷版",
       "log": {
         "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ● (U+25CF) in font [lmroman10-regular]:mapping=t"
-          },
-          {
-            "text": "Missing character: There is no ○ (U+25CB) in font [lmroman10-regular]:mapping=t"
-          }
-        ],
+        "missing_characters": [],
         "overfull": [],
-        "undefined_references": [
-          {
-            "text": "LaTeX Warning: There were undefined references."
-          }
-        ]
+        "undefined_references": []
       },
       "passes": [
         {
           "exit_code": 0,
           "pass": 1
-        },
-        {
-          "exit_code": 0,
-          "pass": 2
         }
       ],
       "pdf": {
         "page_count": 10,
         "path": "math-gaokao-latex/1977_上海卷_理科/build/印刷版.pdf",
-        "sha256": "a2b740093174e10cd687feea75c850ba4df7120c23de6bd20266f1be774c850d",
-        "size_bytes": 148735
+        "sha256": "a017de691a4073714aeaafe9ec2698160ecf30cbbc9df4530cac96b45445c946",
+        "size_bytes": 148871
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_上海卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-14T17:04:24+08:00",
+  "finished_at": "2026-09-25T04:53:32+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -214,7 +176,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dc41f0bebcb5a2203ea1adcbc7ed08059f853cce16f8e6dd859d73892f3c1f68"
+        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
       },
       {
         "path": "math-gaokao-latex/1977_上海卷_理科/figures/f1977_t2_bisector.tex",
@@ -270,7 +232,7 @@
       },
       {
         "path": "math-gaokao-latex/tools/generate_projects.py",
-        "sha256": "82651d28829d228e3a4cc63de620fbc10611e5651f1c8fd55af44e341e80c8eb"
+        "sha256": "2fb77faf7eaf31fd68458c2479cc634fd54af9fcb188ff164b638cf19e06238c"
       },
       {
         "path": "math-gaokao-latex/tools/make_editions.py",
@@ -278,22 +240,22 @@
       },
       {
         "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "52624fb558c67a568a2637be1db491f9d77c8530142d93baff8a11b2cc03e4d6"
+        "sha256": "1c5b8869a7cf434d76a0ec29053a1c20190cfbb8c42fb5b1638a27a934efe6d5"
       },
       {
         "path": "math-gaokao-latex/tools/solution_sources.py",
         "sha256": "2dfc57547a6afc2e054e36571f42772548da349a8a3b47c5dceec95c10f695ab"
       }
     ],
-    "tree_sha256": "812baff4454c98cbe6f9a6f42a1250eff22391ac6b26c933c96ea4fe0f3cf94e"
+    "tree_sha256": "2b085946c627a4f0d02ec4bb78a5fd229c8e2b45ae04e797578193a0a5fbf675"
   },
   "input_projection": "d2fddd0d66820b2aeea714aeb97354798493977b02b4160ac1b053af026b6bbc",
-  "manifest_revision": 2317,
+  "manifest_revision": 3061,
   "paper_id": "gk-1977-regular-shanghai-science",
-  "previous_attempt_id": "a1abe11f-c95c-4fb6-880e-e350fa19f6fe",
+  "previous_attempt_id": "8b99c136-1289-4c4d-95ad-6b4443866412",
   "project_dir": "1977_上海卷_理科",
   "schema_version": 1,
-  "started_at": "2026-09-14T17:04:05+08:00",
+  "started_at": "2026-09-25T04:42:04+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
@@ -325,6 +287,13 @@
         "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
         "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
         "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
       }
     ]
   }

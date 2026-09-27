@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=0.58cm,y=0.13cm]
+\draw[->] (0,0) -- (11,0) node[right] {居民编号};
+\draw[->] (0,0) -- (0,6.4) node[above] {正确率};
+\foreach \x in {1,...,10} {
+  \draw (\x,0) -- (\x,0.10) node[below=3pt] {\x};
+}
+\foreach \v/\y in {60/2.2,65/2.7,70/3.2,75/3.7,80/4.2,85/4.7,90/5.2,95/5.7,100/6.2} {
+  \draw[gray!45] (0,\y) -- (10.4,\y);
+  \draw (-0.08,\y) -- (0,\y) node[left=3pt] {\v};
+}
+\node[left=3pt] at (0,0) {0};
+\node[rotate=90] at (-0.82,4.3) {（\%）};
+\draw[thick] (-0.09,0.62) -- (0.09,0.78);
+\draw[thick] (-0.09,0.78) -- (0.09,0.94);
+\foreach \x/\y in {1/2.7,2/2.2,3/3.2,4/2.2,5/2.7,6/3.7,7/5.2,8/4.7,9/4.2,10/5.7} {
+  \node at (\x,\y) {\scriptsize$*$};
+}
+\foreach \x/\y in {1/5.2,2/4.7,3/4.2,4/5.2,5/4.7,6/4.7,7/5.7,8/6.2,9/4.7,10/6.2} {
+  \fill (\x,\y) circle (2.1pt);
+}
+\node[anchor=west] at (10.7,5.5) {$*$ 讲座前};
+\fill (10.78,4.95) circle (2.1pt);
+\node[anchor=west] at (10.98,4.95) {讲座后};
+\end{tikzpicture}

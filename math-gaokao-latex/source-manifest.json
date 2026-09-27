@@ -174,7 +174,7 @@
       "paper_ids": [
         "gk-1963-regular-national"
       ],
-      "status": "closed"
+      "status": "compiled_pending_review"
     },
     {
       "batch_id": "phase1-b21",
@@ -182,7 +182,7 @@
       "paper_ids": [
         "gk-1964-regular-national"
       ],
-      "status": "closed"
+      "status": "compiled_pending_review"
     },
     {
       "batch_id": "phase1-b22",
@@ -938,6 +938,17 @@
         "gk-2021-regular-national-b-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase2-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-2022-regular-national-a-arts",
+        "gk-2022-regular-national-a-science",
+        "gk-2022-regular-national-b-arts",
+        "gk-2022-regular-national-b-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -2775,7 +2786,7 @@
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1963-regular-national",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "1963_全国卷",
       "question_count": 10,
       "resume_action": null,
@@ -2863,7 +2874,7 @@
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1964-regular-national",
-      "production_state": "complete",
+      "production_state": "compiled",
       "project_dir": "1964_全国卷",
       "question_count": 8,
       "resume_action": null,
@@ -3050,7 +3061,12 @@
         "track": "理科",
         "variant": "上海理"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0916",
+        "ISSUE-0917",
+        "ISSUE-0918",
+        "ISSUE-0919"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
@@ -14596,6 +14612,302 @@
       "title": "2021 年·全国乙卷·理科",
       "track": "science",
       "year": 2021
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_文科/figures/q02-scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_文科/figures/q04-views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_文科/figures/q07-options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_文科/figures/q19-box.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2022_national_a_arts",
+        "id": "gk-2022-regular-national-a-arts",
+        "note": "批次扩展卷：转录自固定上游源 PDF，不在合订书 main.pdf 中。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国甲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国甲文"
+      },
+      "issue_ids": [
+        "ISSUE-0900",
+        "ISSUE-0901",
+        "ISSUE-0902",
+        "ISSUE-0903"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-national-a-arts",
+      "production_state": "answers_verified",
+      "project_dir": "2022_全国甲卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_全国甲文_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_全国甲文_含解析.md",
+        "questions": "2022/2022_数学真题_全国甲文_试题.md",
+        "solution_body": "2022/2022_数学真题_全国甲文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ca8c4a999fa1064b958c9286de0675da0c375706492fa3c8060a2ff905240ef0"
+      ],
+      "title": "2022 年·全国甲卷·文科",
+      "track": "arts",
+      "year": 2022
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_理科/figures/q02-survey-scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_理科/figures/q04-orthographic-views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_理科/figures/q05-function-options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_理科/figures/q08-arc-construction.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国甲卷_理科/figures/q18-pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2022_national_a_science",
+        "id": "gk-2022-regular-national-a-science",
+        "note": "批次扩展卷：转录自固定上游源 PDF，不在合订书 main.pdf 中。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国甲卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国甲理"
+      },
+      "issue_ids": [
+        "ISSUE-0896",
+        "ISSUE-0904",
+        "ISSUE-0905",
+        "ISSUE-0906",
+        "ISSUE-0907"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-national-a-science",
+      "production_state": "compiled",
+      "project_dir": "2022_全国甲卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_全国甲理_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_全国甲理_含解析.md",
+        "questions": "2022/2022_数学真题_全国甲理_试题.md",
+        "solution_body": "2022/2022_数学真题_全国甲理_解析正文.md"
+      },
+      "source_ids": [
+        "src-df2119c91f5a43a34e1716f4465359f6b64ba82e253d551e941126bc7e041831"
+      ],
+      "title": "2022 年·全国甲卷·理科",
+      "track": "science",
+      "year": 2022
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国乙卷_文科/figures/q07-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国乙卷_文科/figures/q08-function.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国乙卷_文科/figures/q18-tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2022_national_b_arts",
+        "id": "gk-2022-regular-national-b-arts",
+        "note": "批次扩展卷：转录自固定上游源 PDF，不在合订书 main.pdf 中。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国乙卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国乙文"
+      },
+      "issue_ids": [
+        "ISSUE-0897",
+        "ISSUE-0908",
+        "ISSUE-0909",
+        "ISSUE-0910",
+        "ISSUE-0911"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-national-b-arts",
+      "production_state": "blocked",
+      "project_dir": "2022_全国乙卷_文科",
+      "question_count": 23,
+      "resume_action": "核实是否排除 y=-2 水平边界或需补充 H≠N 条件，再裁定唯一答案。",
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_全国乙文_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_全国乙文_含解析.md",
+        "questions": "2022/2022_数学真题_全国乙文_试题.md",
+        "solution_body": "2022/2022_数学真题_全国乙文_解析正文.md"
+      },
+      "source_ids": [
+        "src-e940ecc4f17429569b803de22ce16b6de7de5433e5e0c169584e3ed752288538"
+      ],
+      "title": "2022 年·全国乙卷·文科",
+      "track": "arts",
+      "year": 2022
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国乙卷_理科/figures/q06-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2022_全国乙卷_理科/figures/q18-tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2022_national_b_science",
+        "id": "gk-2022-regular-national-b-science",
+        "note": "批次扩展卷：转录自固定上游源 PDF，不在合订书 main.pdf 中。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国乙卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选做题": [
+            22,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国乙理"
+      },
+      "issue_ids": [
+        "ISSUE-0898",
+        "ISSUE-0899",
+        "ISSUE-0912",
+        "ISSUE-0913",
+        "ISSUE-0914",
+        "ISSUE-0915"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2022-regular-national-b-science",
+      "production_state": "blocked",
+      "project_dir": "2022_全国乙卷_理科",
+      "question_count": 23,
+      "resume_action": "核实源题对 N 分支及 M、N 顺序的定义；补足条件后再确定选项。",
+      "source_files": {
+        "answer_key": "2022/2022_数学真题_全国乙理_答案要点.md",
+        "combined_rendered": "2022/2022_数学真题_全国乙理_含解析.md",
+        "questions": "2022/2022_数学真题_全国乙理_试题.md",
+        "solution_body": "2022/2022_数学真题_全国乙理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b0b51a3f8309bc89c893fda343f481ab5a6011f2ca1b1dc21be11436bd938da2"
+      ],
+      "title": "2022 年·全国乙卷·理科",
+      "track": "science",
+      "year": 2022
     }
   ],
   "revision": 3213,
@@ -32375,8 +32687,8 @@
       "exam_type": "regular",
       "git_blob_oid": "324bbee5625d441cfd20e0ecc5dc5208f3d17f19",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2022-regular-national-b-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2022全国乙文(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-e940ecc4f17429569b803de22ce16b6de7de5433e5e0c169584e3ed752288538",
@@ -32399,8 +32711,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ae7468cc26071270c7ef9f40281eaf594f724b4e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2022-regular-national-b-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2022全国乙理(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf",
       "regions": [],
       "source_id": "src-b0b51a3f8309bc89c893fda343f481ab5a6011f2ca1b1dc21be11436bd938da2",
@@ -32423,8 +32735,8 @@
       "exam_type": "regular",
       "git_blob_oid": "680d10ba6dfb7707e93fb4c0702d04c8bbb6fd0f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2022-regular-national-a-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2022全国甲文(云南,广西,贵州,西藏,四川).pdf",
       "regions": [],
       "source_id": "src-ca8c4a999fa1064b958c9286de0675da0c375706492fa3c8060a2ff905240ef0",
@@ -32447,8 +32759,8 @@
       "exam_type": "regular",
       "git_blob_oid": "739782af97922d5e57c340ecf6bcc173f8cef8e9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2022-regular-national-a-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2022全国甲理(云南,广西,贵州,西藏,四川).pdf",
       "regions": [],
       "source_id": "src-df2119c91f5a43a34e1716f4465359f6b64ba82e253d551e941126bc7e041831",

@@ -63,6 +63,7 @@ from build_projects import (
     validate_receipt,
 )
 from manifest import atomic_write_json, canonical_json, file_sha256, load_manifest
+from schema_validate import SchemaError, validate as validate_schema
 
 PROJECT_RELATIVE = "math-gaokao-latex"
 PAPER_ID = "gk-2099-regular-national-1"
@@ -71,6 +72,35 @@ PROJECT_DIR = "2099_全国1卷"
 OTHER_DIR = "2099_全国2卷"
 BATCH_ID = "phase0-b01"
 PAPER_ROOT = "2099"
+
+
+class SchemaContainsTests(unittest.TestCase):
+    def test_all_contains_constraints_must_match_array_items(self):
+        schema = {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "allOf": [
+                {
+                    "contains": {
+                        "type": "object",
+                        "properties": {"name": {"const": "latexmk"}},
+                        "required": ["name"],
+                    }
+                },
+                {
+                    "contains": {
+                        "type": "object",
+                        "properties": {"name": {"const": "xelatex"}},
+                        "required": ["name"],
+                    }
+                },
+            ],
+        }
+
+        validate_schema([{"name": "latexmk"}, {"name": "xelatex"}], schema)
+        with self.assertRaisesRegex(SchemaError, "contains"):
+            validate_schema([{"name": "latexmk"}, {"name": "pdfinfo"}], schema)
 
 
 def paper_entry(paper_id=PAPER_ID, project_dir=PROJECT_DIR, legacy="legacy2099"):
@@ -166,6 +196,11 @@ class RepositoryFixture:
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name).resolve()
         subprocess.run(["git", "init", "-q", str(self.root)], check=True)
+        # Do not let detached automatic maintenance race TemporaryDirectory cleanup.
+        subprocess.run(
+            ["git", "-C", str(self.root), "config", "maintenance.auto", "false"],
+            check=True,
+        )
         for key, value in (
             ("user.email", "t15@example.invalid"), ("user.name", "Task 15")
         ):
@@ -293,6 +328,21 @@ class RepositoryFixture:
 
     def cli(self, argv, loader=None):
         return build_projects.main(argv, facts_loader=loader)
+
+
+class RepositoryFixtureTests(unittest.TestCase):
+    def test_fixture_disables_automatic_git_maintenance(self):
+        fixture = RepositoryFixture(commit=False)
+        self.addCleanup(fixture.cleanup)
+
+        result = subprocess.run(
+            ["git", "-C", str(fixture.root), "config", "--bool", "--get", "maintenance.auto"],
+            capture_output=True,
+            text=True,
+        )
+
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout.strip(), "false")
 
 
 # ================================================================ manifest 投影
@@ -502,11 +552,11 @@ class ToolchainTests(unittest.TestCase):
         self.fixture = RepositoryFixture()
         self.addCleanup(self.fixture.cleanup)
 
-    def test_all_four_tools_are_fingerprinted(self):
+    def test_all_five_tools_are_fingerprinted(self):
         fingerprint = self.fixture.toolchain()
         self.assertEqual(
             [item["name"] for item in fingerprint["tools"]],
-            ["pdfinfo", "pdftoppm", "pdftotext", "xelatex"],
+            ["pdfinfo", "pdftoppm", "pdftotext", "xelatex", "latexmk"],
         )
         self.assertEqual(fingerprint["texlive_revision"], "TeX Live 2026")
         for item in fingerprint["tools"]:
@@ -518,6 +568,12 @@ class ToolchainTests(unittest.TestCase):
         with self.assertRaises(BuildError) as caught:
             self.fixture.toolchain()
         self.assertIn("pdftoppm", str(caught.exception))
+
+    def test_a_missing_latexmk_fails_closed(self):
+        (self.fixture.bin_dir / "latexmk").unlink()
+        with self.assertRaises(BuildError) as caught:
+            self.fixture.toolchain()
+        self.assertIn("latexmk", str(caught.exception))
 
     def test_an_unrecognisable_version_fails_closed(self):
         self.fixture.spec({"pdftotext": {"version_output": "\n"}})
@@ -541,6 +597,12 @@ class ToolchainTests(unittest.TestCase):
         )
         self.assertNotEqual(self.fixture.toolchain(), base)
         self.fixture.spec({"pdfinfo": {"version_output": "pdfinfo version 26.08.0\n"}})
+        self.assertEqual(self.fixture.toolchain(), base)
+        self.fixture.spec(
+            {"latexmk": {"version_output": "Latexmk, John Collins, 9 March 2026. Version 4.89\n"}}
+        )
+        self.assertNotEqual(self.fixture.toolchain(), base)
+        self.fixture.spec({"latexmk": {"version_output": "Latexmk, John Collins, 9 March 2026. Version 4.88\n"}})
         self.assertEqual(self.fixture.toolchain(), base)
         self.assertNotEqual(self.fixture.toolchain(marker="二进制变了"), base)
 
@@ -568,9 +630,49 @@ class BuildTargetTests(unittest.TestCase):
         )
         for item in receipt["editions"]:
             self.assertEqual(item["result"], "succeeded")
-            self.assertEqual([pass_["pass"] for pass_ in item["passes"]], [1, 2])
+            self.assertEqual([pass_["pass"] for pass_ in item["passes"]], [1])
             self.assertEqual(item["pdf"]["page_count"], 2)
         validate_receipt(receipt)
+
+    def test_latexmk_forces_a_rebuild_when_cached_outputs_exist(self):
+        self.fixture.spec({
+            "latexmk": {"skip_when_cached": True},
+            "xelatex": {"pdf_content": "%PDF-1.4 freshly compiled\n"},
+        })
+        project = self.fixture.path(
+            "%s/%s" % (PROJECT_RELATIVE, PROJECT_DIR)
+        )
+        build_dir = project / "build"
+        build_dir.mkdir(parents=True)
+        (build_dir / "试题版.fdb_latexmk").write_text("stale state\n", encoding="utf-8")
+        (build_dir / "试题版.pdf").write_text("%PDF-1.4 cached output\n", encoding="utf-8")
+        (build_dir / "试题版.log").write_text(
+            "This is XeTeX\nOutput written on build/试题版.pdf (2 pages).\n",
+            encoding="utf-8",
+        )
+        (build_dir / "试题版.fls").write_text(
+            "PWD %s\nINPUT 试题版.tex\n" % project,
+            encoding="utf-8",
+        )
+
+        result = build_projects.build_target(
+            self.fixture.root, PROJECT_DIR, "试题版", self.fixture.toolchain()
+        )
+
+        self.assertEqual(result["record"]["result"], "succeeded")
+        self.assertEqual(
+            (build_dir / "试题版.pdf").read_text(encoding="utf-8"),
+            "%PDF-1.4 freshly compiled\n",
+        )
+
+    def test_receipt_toolchain_names_are_exact_and_unique(self):
+        receipt = self.fixture.build()
+        receipt["toolchain_fingerprint"]["tools"][-1]["name"] = "xelatex"
+
+        with self.assertRaisesRegex(SchemaError, "contains"):
+            validate_schema(receipt, build_projects.receipt_schema())
+        with self.assertRaisesRegex(BuildError, "Schema"):
+            validate_receipt(receipt)
 
     def test_the_frozen_argv_is_used_verbatim(self):
         recorded = []
@@ -581,14 +683,21 @@ class BuildTargetTests(unittest.TestCase):
 
         self.fixture.build(runner=spy)
         first = recorded[0]
-        self.assertTrue(first[0].endswith("xelatex"))
-        self.assertEqual(first[1:], [
+        self.assertTrue(first[0].endswith("latexmk"))
+        self.assertIn("-pdfxe", first)
+        self.assertIn("-gt", first)
+        self.assertIn("-outdir=build", first)
+        xelatex_command = next(item for item in first if item.startswith("-xelatex="))
+        self.assertIn(str(self.fixture.bin_dir / "xelatex"), xelatex_command)
+        for flag in (
             "-interaction=nonstopmode", "-halt-on-error", "-file-line-error",
-            "-no-shell-escape", "-recorder", "-output-directory=build",
-            "试题版.tex",
-        ])
-        # 每个目标两遍，四版本共八次调用；pdfinfo 不走 xelatex 这条记录。
-        self.assertEqual(len([item for item in recorded if item[-1].endswith(".tex")]), 8)
+            "-no-shell-escape", "-recorder",
+        ):
+            self.assertIn(flag, xelatex_command)
+        self.assertTrue(xelatex_command.endswith("%O %S"))
+        self.assertEqual(first[-1], "试题版.tex")
+        # 每个目标一次 latexmk 调用；latexmk 自行驱动 XeLaTeX 稳定重跑。
+        self.assertEqual(len(recorded), 4)
 
     def test_a_first_pass_failure_fails_the_paper(self):
         self.fixture.spec({"xelatex": {"passes": [{"exit_code": 1}, {"exit_code": 0}]}})
@@ -602,8 +711,14 @@ class BuildTargetTests(unittest.TestCase):
         receipt = self.fixture.build()
         self.assertEqual(receipt["status"], "failed")
         self.assertEqual(
-            [item["exit_code"] for item in receipt["editions"][0]["passes"]], [0, 1]
+            [item["exit_code"] for item in receipt["editions"][0]["passes"]], [1]
         )
+
+    def test_a_nonzero_latexmk_exit_fails_the_paper(self):
+        self.fixture.spec({"latexmk": {"exit_code": 3}})
+        receipt = self.fixture.build()
+        self.assertEqual(receipt["status"], "failed")
+        self.assertEqual(receipt["editions"][0]["passes"][0]["exit_code"], 3)
 
     def test_a_missing_pdf_fails_the_paper(self):
         self.fixture.spec({"xelatex": {"write_pdf": False}})
@@ -668,10 +783,10 @@ class BuildTargetTests(unittest.TestCase):
             any("未解析引用" in problem for problem in receipt["editions"][0]["problems"])
         )
 
-    def test_both_passes_contribute_to_the_dependency_union(self):
+    def test_the_final_latexmk_fls_provides_the_dependency_closure(self):
         self.fixture.spec({"xelatex": {"fls_by_pass": [
             ["INPUT questions.tex"],
-            ["INPUT answers.tex", "INPUT ../common/preamble.tex"],
+            ["INPUT questions.tex", "INPUT answers.tex", "INPUT ../common/preamble.tex"],
         ]}})
         receipt = self.fixture.build()
         recorded = [item["path"] for item in receipt["dependency_tree"]["files"]]
@@ -1035,6 +1150,27 @@ class FormalBuildTests(unittest.TestCase):
         )
         self.addCleanup(self.fixture.cleanup)
 
+    def test_formal_build_replaces_a_pre_latexmk_running_receipt(self):
+        chain = self.fixture.toolchain()
+        old = build_projects.running_receipt(
+            self.fixture.root, self.fixture.manifest(), PAPER_ID, chain,
+        )
+        old["toolchain_fingerprint"]["tools"] = [
+            item for item in old["toolchain_fingerprint"]["tools"]
+            if item["name"] != "latexmk"
+        ]
+        atomic_write_json(self.fixture.path(self.fixture.receipt_relative()), old)
+
+        report = self.fixture.formal()
+
+        self.assertEqual(report["code"], "COMPILED_PENDING_REVIEW")
+        receipt = self.fixture.receipt()
+        self.assertEqual(receipt["previous_attempt_id"], old["attempt_id"])
+        self.assertEqual(
+            [item["name"] for item in receipt["toolchain_fingerprint"]["tools"]],
+            ["pdfinfo", "pdftoppm", "pdftotext", "xelatex", "latexmk"],
+        )
+
     def test_the_running_transaction_lands_before_any_compilation(self):
         seen = {}
 
@@ -1327,7 +1463,8 @@ class CleanBuildTests(unittest.TestCase):
 
 class CleanupLegacyTests(unittest.TestCase):
     LEGACY_SUFFIXES = (
-        ".pdf", ".log", ".aux", ".out", ".toc", ".fls", ".xdv", ".synctex.gz"
+        ".pdf", ".log", ".aux", ".out", ".toc", ".fls", ".xdv",
+        ".synctex.gz", ".fdb_latexmk",
     )
 
     def setUp(self):
@@ -1504,12 +1641,12 @@ class CommandLineTests(unittest.TestCase):
             code = self.cli(*arguments, **keywords)
         return code, buffer.getvalue()
 
-    def test_check_tools_reports_all_four(self):
+    def test_check_tools_reports_all_five(self):
         code, output = self.capture("check-tools", "--json")
         self.assertEqual(code, EXIT_OK)
         payload = json.loads(output)
         self.assertEqual(payload["code"], "OK")
-        self.assertEqual(len(payload["toolchain"]["tools"]), 4)
+        self.assertEqual(len(payload["toolchain"]["tools"]), 5)
 
     def test_check_tools_fails_closed_when_a_tool_is_missing(self):
         (self.fixture.bin_dir / "pdfinfo").unlink()

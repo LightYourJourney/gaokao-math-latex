@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""四件工具链的可编程替身（xelatex / pdfinfo / pdftotext / pdftoppm）。
+"""五件工具链的可编程替身（含 latexmk 编排 XeLaTeX）。
 
 **夹具的形状决定你能发现什么**：真实 XeLaTeX 只会给出「这台机器此刻的那一种」行为，
 于是所有分支——第二遍才失败、PDF 没写出来、pdfinfo 挂掉、log 里带 Missing character、
 `.fls` 两遍内容不同、版本串认不出来——统统测不到。这个替身把这些形态全部变成可点选项。
 
-用法：测试写一份 JSON spec，再在临时 bin 目录里放四个 shim（见 `write_shims()`），
+用法：测试写一份 JSON spec，再在临时 bin 目录里放五个 shim（见 `write_shims()`），
 把该目录传给 `resolve_toolchain(search_path=...)`。spec 的形状：
 
 ```json
@@ -35,7 +35,7 @@ import os
 import sys
 from pathlib import Path
 
-TOOLS = ("xelatex", "pdfinfo", "pdftotext", "pdftoppm")
+TOOLS = ("xelatex", "latexmk", "pdfinfo", "pdftotext", "pdftoppm")
 SPEC_ENV = "FAKE_TOOLCHAIN_SPEC"
 
 
@@ -73,6 +73,12 @@ DEFAULT_SPEC = {
         "fls": ["INPUT questions.tex"],
         "write_pdf": True,
         "pdf_content": "%PDF-1.4 fake\n",
+    },
+    "latexmk": {
+        "version_output": "Latexmk, John Collins, 9 March 2026. Version 4.88\n",
+        "version_exit": 0,
+        "xelatex_runs": 2,
+        "exit_code": None,
     },
     "pdfinfo": {
         "version_output": "pdfinfo version 26.08.0\n",
@@ -178,6 +184,49 @@ def _run_xelatex(config, argv, spec_path):
     return int(record.get("exit_code", 0))
 
 
+def _run_latexmk(config, xelatex_config, argv, spec_path):
+    """用最终一遍 XeLaTeX 的 log/fls 模拟 latexmk 的稳定构建结果。"""
+    output_dir = Path("build")
+    source = None
+    for item in argv:
+        if item.startswith(("-outdir=", "-output-directory=")):
+            output_dir = Path(item.split("=", 1)[1])
+        elif item.endswith(".tex"):
+            source = Path(item)
+    if source is None:
+        sys.stderr.write("fake latexmk: 没有给出 .tex 目标\n")
+        return 2
+
+    # 可选地模拟 latexmk 的增量路径：有数据库和全部输出时，默认可能跳过 TeX。
+    # 回归测试通过 -gt 强制 XeLaTeX 运行，避免把缓存 PDF 误登记为当前工具链产物。
+    job = source.stem
+    cached_outputs = (
+        output_dir / (job + ".fdb_latexmk"),
+        output_dir / (job + ".pdf"),
+        output_dir / (job + ".log"),
+        output_dir / (job + ".fls"),
+    )
+    if (
+        config.get("skip_when_cached")
+        and "-gt" not in argv
+        and all(path.is_file() for path in cached_outputs)
+    ):
+        return int(config.get("cached_exit_code", 0))
+
+    xelatex_argv = [
+        "-interaction=nonstopmode", "-halt-on-error", "-file-line-error",
+        "-no-shell-escape", "-recorder",
+        "-output-directory=%s" % output_dir, source.name,
+    ]
+    exit_code = 0
+    for _ in range(int(config.get("xelatex_runs", 2))):
+        exit_code = _run_xelatex(xelatex_config, xelatex_argv, spec_path)
+        if exit_code != 0:
+            return exit_code
+    configured_exit = config.get("exit_code")
+    return exit_code if configured_exit is None else int(configured_exit)
+
+
 def _run_pdfinfo(config, argv):
     exit_code = int(config.get("exit_code", 0))
     if exit_code != 0:
@@ -209,6 +258,8 @@ def main(argv=None):
         return _emit_version(config, stream_is_stderr=tool != "xelatex")
     if tool == "xelatex":
         return _run_xelatex(config, argv, spec_path)
+    if tool == "latexmk":
+        return _run_latexmk(config, _load_spec().get("xelatex", {}), argv, spec_path)
     if tool == "pdfinfo":
         return _run_pdfinfo(config, argv)
     sys.stdout.write("")

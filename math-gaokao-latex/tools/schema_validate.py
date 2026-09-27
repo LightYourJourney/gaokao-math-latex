@@ -5,7 +5,7 @@ from typing import Any, Mapping
 
 SUPPORTED = {
     "$schema", "$id", "$defs", "$ref", "type", "required", "properties",
-    "items", "enum", "const", "pattern", "minimum", "minItems", "maxItems",
+    "items", "contains", "enum", "const", "pattern", "minimum", "minItems", "maxItems",
     "uniqueItems", "additionalProperties", "oneOf", "allOf",
     "description", "title", "default",
 }
@@ -69,6 +69,12 @@ def _check_schema(
         if not isinstance(child, Mapping):
             raise SchemaError(f"{path}.items: Schema 必须是对象")
         _check_schema(child, root, f"{path}.items", ancestors)
+
+    if "contains" in schema:
+        child = schema["contains"]
+        if not isinstance(child, Mapping):
+            raise SchemaError(f"{path}.contains: Schema 必须是对象")
+        _check_schema(child, root, f"{path}.contains", ancestors)
 
     for keyword in ("oneOf", "allOf"):
         branches = schema.get(keyword, [])
@@ -217,6 +223,17 @@ def _validate(value: Any, schema: Mapping[str, Any], root: Mapping[str, Any], pa
         if "items" in schema:
             for index, item in enumerate(value):
                 _validate(item, schema["items"], root, f"{path}[{index}]")
+        if "contains" in schema:
+            matched = False
+            for index, item in enumerate(value):
+                try:
+                    _validate(item, schema["contains"], root, f"{path}[{index}]")
+                except SchemaError:
+                    continue
+                matched = True
+                break
+            if not matched:
+                raise SchemaError(f"{path}: contains 未命中任何数组元素")
 
     if isinstance(value, dict):
         for name in schema.get("required", []):

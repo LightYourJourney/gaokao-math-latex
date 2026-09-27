@@ -306,7 +306,6 @@ def validate_review(receipt: Mapping[str, Any]) -> None:
         validate_schema(receipt, review_schema())
     except SchemaError as error:
         raise ReviewError(f"review 回执不符合 Schema：{error}") from error
-
     editions = [item["edition"] for item in receipt["editions"]]
     if receipt["status"] != "pending" and tuple(editions) != EDITIONS:
         raise ReviewError(f"正式 review 必须恰好四版本且顺序固定，实际 {editions}")

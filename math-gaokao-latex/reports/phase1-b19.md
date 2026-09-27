@@ -9,8 +9,8 @@
 
 - 标题：1958 年·河北卷
 - 项目目录：`1958_河北`
-- 构建：`succeeded`（attempt `c3555ef9-dc07-4554-9c6c-ad6fe29b438d`）
-- 审查：`passed`（2026-09-12T11:13:02+08:00）
+- 构建：`succeeded`（attempt `c7f01dda-b8a9-4c53-989e-ac4adc7c07e5`）
+- 审查：`passed`（2026-09-25T06:49:36+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 1；解析版 8；简答版 2；印刷版 7
 - 警告豁免：0

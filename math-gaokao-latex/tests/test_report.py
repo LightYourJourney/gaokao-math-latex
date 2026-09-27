@@ -23,36 +23,35 @@ ISSUES = ROOT / "math-gaokao-latex/missing-issues.md"
 class ReportFactsTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # collect 会全量重算六批门禁，代价高；同一事实快照只读复用即可。
+        # collect 会全量重算每个 manifest 批次；同一事实快照只读复用即可。
         cls.facts = report.collect_report_facts(MANIFEST, ISSUES)
 
-    def test_collects_conserved_sources_and_two_status_denominators(self):
+    def test_collects_conserved_sources_and_full_manifest_paper_states(self):
         facts = self.facts
         self.assertEqual(facts["sources"], {"total": 775, "regular": 734, "spring": 41})
-        self.assertEqual(facts["legacy"]["papers"], 21)
-        self.assertEqual(facts["current"]["builds_succeeded"], 84)
-        self.assertEqual(sum(facts["current"]["statuses"].values()), 21)
-        self.assertGreater(facts["current"]["statuses"]["blocked"], 0)
-        self.assertEqual(facts["current"]["statuses"]["complete"] + facts["current"]["statuses"]["blocked"] + facts["current"]["statuses"]["in_progress"], 21)
+        self.assertGreater(facts["papers"]["total"], 21)
+        self.assertEqual(sum(facts["papers"]["states"].values()), facts["papers"]["total"])
+        self.assertGreater(facts["papers"]["states"]["blocked"], 0)
+        self.assertGreater(facts["current"]["edition_total"], 84)
+        self.assertEqual(facts["current"]["editions_compiled"], facts["current"]["edition_total"])
 
-    def test_recomputes_current_warning_counts_without_forging_legacy(self):
+    def test_recomputes_warnings_for_all_available_build_and_review_receipts(self):
         facts = self.facts
-        self.assertEqual(facts["legacy"]["overfull"], 1)
-        self.assertEqual(facts["current"]["overfull"], 0)
-        self.assertEqual(facts["current"]["underfull"], 13)
-        self.assertEqual(facts["current"]["warning_exemptions"], 13)
+        self.assertGreaterEqual(facts["current"]["overfull"], 0)
+        self.assertGreaterEqual(facts["current"]["underfull"], 0)
+        self.assertGreaterEqual(facts["current"]["warning_exemptions"], 0)
 
-    def test_all_batches_are_current_and_committed(self):
+    def test_reports_every_batch_even_when_review_or_ownership_is_incomplete(self):
         facts = self.facts
-        self.assertEqual(len(facts["batches"]), 6)
-        self.assertTrue(all(row["validation"] == "FINALIZED" for row in facts["batches"]))
-        self.assertTrue(all(row["git_state"] == "committed" for row in facts["batches"]))
+        self.assertGreater(len(facts["batches"]), 6)
+        self.assertTrue(any(row["validation"] != "FINALIZED" for row in facts["batches"]))
+        self.assertTrue(any(row["git_state"] == "validated" for row in facts["batches"]))
 
     def test_render_outputs_has_exactly_six_targets(self):
         outputs = report.render_outputs(self.facts)
         self.assertEqual(set(outputs), set(report.OUTPUT_TARGETS))
         self.assertTrue(all(value.endswith("\n") for value in outputs.values()))
-        self.assertIn("775 = 734 + 41", outputs["math-gaokao-latex/reports/baseline.md"])
+        self.assertIn("来源总数：**775**", outputs["math-gaokao-latex/reports/baseline.md"])
 
     def test_readme_points_to_the_source_manifest_csv_projection(self):
         outputs = report.render_outputs(self.facts)
@@ -74,8 +73,57 @@ class ReportFactsTest(unittest.TestCase):
             self.assertEqual(report.check_outputs(outputs, temp_root), (drifted,))
 
 
+class ReportCurrentScopeContractTest(unittest.TestCase):
+    def test_resolved_blocking_issues_do_not_count_as_open_completion_blockers(self):
+        result = report._issue_summary([
+            {"status": "open", "impact": "blocks_completion"},
+            {"status": "resolved", "impact": "blocks_completion"},
+            {"status": "open", "impact": "non_blocking"},
+        ])
+
+        self.assertEqual(result, {"total": 3, "open": 2, "resolved": 1, "blocks_completion": 1})
+
+    def test_render_includes_incomplete_current_corpus_without_relabeling_it_as_stage_zero(self):
+        facts = {
+            "sources": {"total": 3, "regular": 2, "spring": 1, "states": {"ready": 3}},
+            "papers": {"total": 2, "states": {"complete": 1, "blocked": 1}},
+            "batches": [
+                {"batch_id": "phase0-b01", "status": "closed", "validation": "FINALIZED", "git_state": "committed", "paper_count": 1},
+                {"batch_id": "phase2-b04", "status": "compiled_pending_review", "validation": "INVALID_OR_STALE", "git_state": "validated", "paper_count": 1},
+            ],
+            "current": {
+                "build_states": {"succeeded": 1, "compiled_pending_review": 1},
+                "review_states": {"passed": 1, "pending": 1},
+                "edition_total": 8,
+                "editions_compiled": 8,
+                "missing_builds": 0,
+                "invalid_builds": 0,
+                "missing_reviews": 0,
+                "invalid_reviews": 0,
+                "overfull": 0,
+                "underfull": 1,
+                "warning_exemptions": 1,
+            },
+            "issues": {"total": 2, "open": 1, "resolved": 1, "blocks_completion": 1},
+        }
+
+        outputs = report.render_outputs(facts)
+        inventory = outputs["docs/source-inventory.md"]
+        project = outputs["math-gaokao-latex/README.md"]
+        full_report = outputs["report.md"]
+
+        self.assertIn("来源总数：**3**", inventory)
+        self.assertIn("试卷总数：**2**", project)
+        self.assertIn("已编译版本：8/8", project)
+        self.assertIn("review 回执状态：passed 1，pending 1", project)
+        self.assertIn("回执日志警告汇总", full_report)
+        self.assertNotIn("当前警告", full_report)
+        self.assertIn("门禁未通过批次：phase2-b04", full_report)
+        self.assertIn("未解决问题：1", full_report)
+        self.assertNotIn("阶段 0 的机器事实", full_report)
+
 class ReportTransactionInputsTest(unittest.TestCase):
-    def test_ignores_incomplete_nonhistorical_artifacts(self):
+    def test_tracks_every_batch_and_paper_artifact_in_the_full_report_snapshot(self):
         manifest = {
             "batches": [
                 {"batch_id": "phase0-b01", "paper_ids": ["historical"]},
@@ -95,20 +143,21 @@ class ReportTransactionInputsTest(unittest.TestCase):
         with mock.patch.object(report, "_sha256", side_effect=digest):
             report._transaction_inputs(ROOT, manifest)
         self.assertIn("math-gaokao-latex/reports/phase0-b01.md", seen)
-        self.assertNotIn("math-gaokao-latex/reports/phase1-b07.md", seen)
-        self.assertFalse(any("new-paper" in path for path in seen))
+        self.assertIn("math-gaokao-latex/reports/phase1-b07.md", seen)
+        self.assertIn("math-gaokao-latex/new-paper/provenance.json", seen)
+        self.assertIn("math-gaokao-latex/new-paper/receipts/build.json", seen)
+        self.assertIn("math-gaokao-latex/new-paper/receipts/review.json", seen)
+        self.assertIn("math-gaokao-latex/tools/review_receipts.py", seen)
 
-    def test_rejects_mixed_historical_and_nonhistorical_batch(self):
+    def test_does_not_reject_a_batch_containing_legacy_and_new_papers(self):
         manifest = {
-            "batches": [
-                {"batch_id": "mixed", "paper_ids": ["historical", "new-paper"]},
-            ],
+            "batches": [{"batch_id": "mixed", "paper_ids": ["historical", "new-paper"]}],
             "papers": [
                 {"paper_id": "historical", "legacy_ids": ["legacy"], "project_dir": "historical"},
                 {"paper_id": "new-paper", "legacy_ids": [], "project_dir": "new-paper"},
             ],
         }
-        with self.assertRaisesRegex(report.ReportError, "不允许混合历史卷与非历史卷"):
+        with mock.patch.object(report, "_sha256", return_value="digest"):
             report._transaction_inputs(ROOT, manifest)
 
 

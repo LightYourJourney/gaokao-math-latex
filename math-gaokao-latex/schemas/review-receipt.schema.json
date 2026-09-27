@@ -2,7 +2,7 @@
   "$id": "https://gaokao-latex.invalid/schemas/review-receipt.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "高考数学 LaTeX 视觉审查回执",
-  "description": "一卷四版本的全页视觉审查回执。它必须能被后来的任何人用手上的字节重新验算：绑定当次 build 的 attempt、manifest 投影、两棵输入树、工具链指纹、视觉工具（pdftotext/pdftoppm）指纹与每一版 PDF 的 SHA-256 与页数；任一项对不上即 stale。页集合必须精确覆盖 1..page_count，缺页/重页/越界都不是「少查了几页」而是「这份裁决不成立」——形状约束（受限验证器没有 if/then）落在 review_receipts.validate_review()。",
+  "description": "一卷四版本的全页视觉审查回执。它必须能被后来的任何人用手上的字节重新验算：绑定当次 build 的 attempt、manifest 投影、两棵输入树、含 latexmk 的工具链指纹、视觉工具（pdftotext/pdftoppm）指纹与每一版 PDF 的 SHA-256 与页数；任一项对不上即 stale。页集合必须精确覆盖 1..page_count，缺页/重页/越界都不是「少查了几页」而是「这份裁决不成立」——形状约束（受限验证器没有 if/then）落在 review_receipts.validate_review()。",
   "$defs": {
     "sha256": {
       "pattern": "^[0-9a-f]{64}$",
@@ -80,7 +80,8 @@
             "xelatex",
             "pdfinfo",
             "pdftotext",
-            "pdftoppm"
+            "pdftoppm",
+            "latexmk"
           ]
         },
         "path": {
@@ -151,10 +152,48 @@
           "type": "string"
         },
         "tools": {
+          "allOf": [
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdfinfo"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdftoppm"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdftotext"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "xelatex"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "latexmk"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            }
+          ],
           "items": {
             "$ref": "#/$defs/tool_fingerprint"
           },
-          "minItems": 4,
+          "maxItems": 5,
+          "minItems": 5,
           "type": "array",
           "uniqueItems": true
         }

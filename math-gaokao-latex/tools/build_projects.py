@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_projects.py —— 严格 XeLaTeX 构建、实际依赖闭包、两阶段回执与安全清理。
+"""build_projects.py —— latexmk/XeLaTeX 构建、实际依赖闭包、两阶段回执与安全清理。
 
 **一份 build 回执的唯一价值是「可反驳」**：它必须能被后来的任何人用手上的字节重新
 验算一遍，验算不过就降级为 stale。仓库里那 21 个项目根目录的旧 PDF 就是没有回执的
@@ -15,9 +15,9 @@
 2. `generation_input_tree`——三份规范 Markdown、figure、index、四模板、四壳与**全部**
    生成器源码（含 `cli_common.py` 与 `md2tex.py`）。它守的是「规范源已改但 TeX 尚未
    重跑」这一格：`.fls` 只认 TeX 实际读到的文件，看不见上游 Markdown；
-3. 两遍 `.fls` 的仓库内 INPUT 并集——第二遍才被 `\\input` 的文件只出现在第二遍的
-   `.fls` 里，取并集才是真闭包；
-4. `toolchain_fingerprint`——四个 executable 的解析后路径、规范化版本、真实二进制
+3. latexmk 稳定构建后最终 `.fls` 的仓库内 INPUT——latexmk 自己负责 XeLaTeX 重跑，
+   最后一份 `.fls` 即完整依赖闭包；
+4. `toolchain_fingerprint`——五个 executable 的解析后路径、规范化版本、真实二进制
    SHA-256 与 TeX Live 版本。版本认不出来时 fail closed，绝不写一份「未知版本」的回执。
 
 状态机：`running → failed` / `running → compiled_pending_review → succeeded`。
@@ -45,6 +45,7 @@ import hashlib
 import json
 import os
 import re
+import shlex
 import shutil
 import stat
 import subprocess
@@ -107,9 +108,11 @@ PROJECTION_FIELDS: Tuple[str, ...] = (
     "source_files", "title", "track", "year",
 )
 
-TOOL_NAMES: Tuple[str, ...] = ("pdfinfo", "pdftoppm", "pdftotext", "xelatex")
+TOOL_NAMES: Tuple[str, ...] = ("pdfinfo", "pdftoppm", "pdftotext", "xelatex", "latexmk")
+PRE_LATEXMK_TOOL_NAMES: Tuple[str, ...] = TOOL_NAMES[:-1]
 LEGACY_SUFFIXES: Tuple[str, ...] = (
     ".pdf", ".log", ".aux", ".out", ".toc", ".fls", ".xdv", ".synctex.gz",
+    ".fdb_latexmk",
 )
 _EXCLUDED_FLS_PARTS = frozenset([".git", ".work", BUILD_DIR_NAME])
 
@@ -371,12 +374,14 @@ def _merge_findings(
 
 _VERSION_FLAG = {
     "xelatex": "--version", "pdfinfo": "-v", "pdftotext": "-v", "pdftoppm": "-v",
+    "latexmk": "--version",
 }
 _VERSION_PATTERN = {
     "xelatex": re.compile(r"^XeTeX \S+"),
     "pdfinfo": re.compile(r"^pdfinfo version \S+"),
     "pdftotext": re.compile(r"^pdftotext version \S+"),
     "pdftoppm": re.compile(r"^pdftoppm version \S+"),
+    "latexmk": re.compile(r"^Latexmk, .+ Version \S+"),
 }
 _TEXLIVE_PATTERN = re.compile(r"\((TeX Live [^)]+)\)")
 
@@ -399,7 +404,7 @@ def _tool_version(name: str, path: str) -> str:
 
 
 def resolve_toolchain(search_path: Optional[str] = None) -> Dict[str, Any]:
-    """四个实际 executable 的指纹。任一环节说不清就 fail closed，不生成伪回执。"""
+    """五个实际 executable 的指纹。任一环节说不清就 fail closed，不生成伪回执。"""
     tools: List[Dict[str, str]] = []
     texlive_revision: Optional[str] = None
     for name in TOOL_NAMES:
@@ -445,11 +450,12 @@ def build_target(
     toolchain: Mapping[str, Any],
     runner: Optional[Callable[..., Any]] = None,
 ) -> Dict[str, Any]:
-    """两遍 XeLaTeX + pdfinfo，只写 `<project>/build/`。
+    """latexmk 驱动 XeLaTeX 至稳定，再用 pdfinfo 校验；只写 `<project>/build/`。
 
-    返回 `{"record": <回执 edition 段>, "dependencies": (...)}`。argv 是冻结的：
-    `-halt-on-error` 让第一遍就炸的目标不必空跑第二遍，`-no-shell-escape` 关掉外部命令，
-    `-recorder` 才有 `.fls`。全部走参数数组 + `cwd=`，没有 shell。
+    返回 `{"record": <回执 edition 段>, "dependencies": (...)}`。latexmk 作为唯一构建
+    driver，自行决定 XeLaTeX 重跑次数；自定义命令固定 `-halt-on-error`、
+    `-no-shell-escape` 与 `-recorder`，最终 `.log/.fls` 才是本次产物证据。外层始终走
+    参数数组 + `cwd=`，没有 shell。
     """
     if edition not in EDITIONS:
         raise BuildError(f"未知版本：{edition}")
@@ -461,10 +467,15 @@ def build_target(
     build_dir = project_path / BUILD_DIR_NAME
     build_dir.mkdir(parents=True, exist_ok=True)
 
+    xelatex_command = " ".join((
+        shlex.quote(_tool(toolchain, "xelatex")),
+        "-interaction=nonstopmode", "-halt-on-error", "-file-line-error",
+        "-no-shell-escape", "-recorder", "%O", "%S",
+    ))
     argv = [
-        _tool(toolchain, "xelatex"), "-interaction=nonstopmode", "-halt-on-error",
-        "-file-line-error", "-no-shell-escape", "-recorder",
-        "-output-directory=%s" % BUILD_DIR_NAME, "%s.tex" % edition,
+        _tool(toolchain, "latexmk"), "-pdfxe", "-gt",
+        "-outdir=%s" % BUILD_DIR_NAME,
+        "-xelatex=" + xelatex_command, "%s.tex" % edition,
     ]
     passes: List[Dict[str, int]] = []
     problems: List[str] = []
@@ -472,40 +483,38 @@ def build_target(
         "missing_characters": [], "undefined_references": [], "overfull": [],
         "errors": [],
     }
+    result = call(
+        argv, cwd=str(project_path), stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    code = int(result.returncode)
+    passes.append({"pass": 1, "exit_code": code})
+    if code != 0:
+        problems.append("latexmk 退出码 %d" % code)
+
+    log_path = build_dir / (edition + ".log")
+    if not log_path.is_file():
+        problems.append("latexmk 完成后没有稳定的最终 .log")
+    else:
+        findings = scan_log(_read_text_lenient(log_path))
+        if findings["undefined_references"]:
+            problems.append("latexmk 稳定构建后仍有未解析引用")
+
     dependencies: set = set()
-    for index in (1, 2):
-        result = call(
-            argv, cwd=str(project_path), stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-        )
-        code = int(result.returncode)
-        passes.append({"pass": index, "exit_code": code})
-        pass_findings = scan_log(
-            _read_text_lenient(build_dir / (edition + ".log"))
-        )
-        findings = _merge_findings(findings, pass_findings)
-        # Cross-references are expected to be unresolved on the first LaTeX pass.
-        # The receipt describes the final pass, and a warning that survives it is a
-        # hard build failure (per the corpus acceptance gate).
-        if index == 2:
-            findings["undefined_references"] = pass_findings["undefined_references"]
-            if findings["undefined_references"]:
-                problems.append("第二遍后仍有未解析引用")
-        fls_text = _read_text_lenient(build_dir / (edition + ".fls"))
-        if fls_text:
-            try:
-                dependencies.update(parse_fls(fls_text, root))
-            except BuildError as error:
-                problems.append("第 %d 遍的 .fls 无法解析：%s" % (index, error))
-        if code != 0:
-            problems.append("第 %d 遍 XeLaTeX 退出码 %d" % (index, code))
-            break
+    fls_path = build_dir / (edition + ".fls")
+    if not fls_path.is_file():
+        problems.append("latexmk 完成后没有稳定的最终 .fls")
+    else:
+        try:
+            dependencies.update(parse_fls(_read_text_lenient(fls_path), root))
+        except BuildError as error:
+            problems.append("最终 .fls 无法解析：%s" % error)
 
     pdf_record: Optional[Dict[str, Any]] = None
     if not problems:
         pdf_path = build_dir / (edition + ".pdf")
         if not pdf_path.is_file():
-            problems.append("两遍都通过但没有产出 PDF")
+            problems.append("latexmk 完成但没有产出 PDF")
         else:
             pages = _pdf_pages(toolchain, pdf_path, problems)
             if pages is not None:
@@ -516,7 +525,7 @@ def build_target(
                     "page_count": pages,
                 }
         if not dependencies:
-            problems.append("两遍都通过但没有可用的 .fls 依赖闭包")
+            problems.append("latexmk 完成但没有可用的 .fls 依赖闭包")
 
     record = {
         "edition": edition,
@@ -1165,7 +1174,41 @@ def _existing_receipt(
     path = Path(root) / build_receipt_path(_paper(manifest, paper_id))
     if not path.is_file():
         return None
-    return load_receipt(path)
+    try:
+        return load_receipt(path)
+    except BuildError as error:
+        # A schema/toolchain upgrade must be able to replace the receipt it just made
+        # stale. Inspect the exact pre-latexmk four-tool shape as historical input, then
+        # validate a copy with one synthetic latexmk record; every other schema error
+        # remains fatal, and currency checks still use the real five-tool fingerprint.
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            raise error
+        if not isinstance(existing, dict):
+            raise error
+        fingerprint = existing.get("toolchain_fingerprint")
+        tools = fingerprint.get("tools") if isinstance(fingerprint, dict) else None
+        names = [item.get("name") for item in tools] if isinstance(tools, list) else []
+        if tuple(names) != PRE_LATEXMK_TOOL_NAMES:
+            raise error
+
+        # Validate every field other than the now-obsolete tool count by adding a
+        # synthetic fifth record to a copy only. The stored receipt remains untouched
+        # and is returned solely so running_receipt() can preserve its attempt ID.
+        candidate = copy.deepcopy(existing)
+        candidate["toolchain_fingerprint"]["tools"].append({
+            "name": "latexmk",
+            "path": "/__legacy_latexmk_probe__",
+            "real_path": "/__legacy_latexmk_probe__",
+            "sha256": "0" * 64,
+            "version": "legacy compatibility probe",
+        })
+        try:
+            validate_receipt(candidate)
+        except BuildError:
+            raise error
+        return existing
 
 
 # ---------------------------------------------------------------- 状态事务

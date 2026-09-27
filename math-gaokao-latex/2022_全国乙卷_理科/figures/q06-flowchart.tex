@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=stealth,thick,font=\small]
+  % Start
+  \draw[rounded corners] (-0.65,0.25) rectangle (0.65,0.95);
+  \node at (0,0.6) {开始};
+  \draw[->] (0,0.25) -- (0,-0.15);
+
+  % Input parallelogram
+  \draw (-1.5,-0.15) -- (1.5,-0.15) -- (1.25,-0.85) -- (-1.25,-0.85) -- cycle;
+  \node at (0,-0.5) {输入 $a=1,b=1,n=1$};
+  \draw[->] (0,-0.85) -- (0,-1.25);
+
+  % Loop body
+  \draw (-1.1,-1.25) rectangle (1.1,-1.95);
+  \node at (0,-1.6) {$b=b+2a$};
+  \draw[->] (0,-1.95) -- (0,-2.25);
+  \draw (-1.45,-2.25) rectangle (1.45,-3.05);
+  \node[align=center] at (0,-2.65) {$a=b-a$\\$n=n+1$};
+  \draw[->] (0,-3.05) -- (0,-3.45);
+
+  % Decision diamond
+  \draw (0,-4.25) -- (2,-3.75) -- (0,-3.25) -- (-2,-3.75) -- cycle;
+  \node[align=center] at (0,-3.75) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
+
+  % Yes: output and end
+  \draw[->] (0,-4.25) -- (0,-4.65);
+  \node at (0.35,-4.48) {是};
+  \draw (-1.0,-4.65) -- (1.0,-4.65) -- (0.8,-5.25) -- (-0.8,-5.25) -- cycle;
+  \node at (0,-4.95) {输出 $n$};
+  \draw[->] (0,-5.25) -- (0,-5.6);
+  \draw[rounded corners] (-0.65,-5.6) rectangle (0.65,-6.3);
+  \node at (0,-5.95) {结束};
+
+  % No: return to loop body
+  \draw[->] (-2,-3.75) -- (-3.0,-3.75) -- (-3.0,-1.6) -- (-1.1,-1.6);
+  \node at (-2.45,-3.5) {否};
+\end{tikzpicture}

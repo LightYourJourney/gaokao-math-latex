@@ -1722,6 +1722,30 @@ class LiveRepositoryTests(unittest.TestCase):
             if (self.root / status_core.provenance_path(paper)).is_file()
         }
 
+    def test_batch_report_validity_is_checked_once_per_batch(self):
+        selected_batches = [
+            batch for batch in self.manifest["batches"]
+            if len(batch["paper_ids"]) > 1
+        ][:2]
+        paper_ids = [
+            paper_id for batch in selected_batches for paper_id in batch["paper_ids"]
+        ]
+        report_probe_calls = []
+
+        loaded = load_provenance_facts(
+            self.root,
+            self.manifest,
+            paper_ids,
+            artifacts_state=lambda *_: "current",
+            review_state=lambda *_: ("passed", "current"),
+            batch_report_valid=lambda _root, _manifest, paper_id: (
+                report_probe_calls.append(paper_id) or True
+            ),
+        )
+
+        self.assertEqual(set(loaded), set(paper_ids))
+        self.assertEqual(len(report_probe_calls), len(selected_batches))
+
     def test_provenance_files_exactly_cover_the_non_planned_batches(self):
         """有 provenance 的卷 == 已离开 `planned` 的批次里的卷。
 

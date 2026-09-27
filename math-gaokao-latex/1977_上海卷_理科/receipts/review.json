@@ -1,7 +1,7 @@
 {
   "batch_id": "phase2-b23",
-  "build_attempt_id": "0ebd6b7f-97cc-47cb-abbc-4f2f4818e24c",
-  "dependency_tree_sha256": "e8c4612de89269672acf1808a924a30e46ba20d9aa4133d68054bb82405c5401",
+  "build_attempt_id": "bf4e0838-8df0-492e-8171-d7c6f7953c37",
+  "dependency_tree_sha256": "6c082176c2c8b3362d4a5ecb3e4dd404e933a6a8cc74e7d7edfc03606143e9a9",
   "editions": [
     {
       "candidate_override": null,
@@ -150,7 +150,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "b9fcc143411ee9d5664102195eea52b703ca9ae37db86c88dbb9ec89484a0b11",
+      "pdf_sha256": "a4be370c538cbadd157e8e066169736bd81b7b93d7c6866808e582323637463e",
       "result": "pass"
     },
     {
@@ -533,7 +533,7 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "",
+              "note": "重编后目视复核：两个开区间端点均显示为空心圆，数轴与区间结论一致。",
               "result": "pass"
             },
             {
@@ -548,7 +548,7 @@
             },
             {
               "check": "figure_label",
-              "note": "",
+              "note": "重编后目视复核：两个开区间端点均显示为空心圆，数轴与区间结论一致。",
               "result": "pass"
             },
             {
@@ -806,7 +806,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "40c67debf0267ddab32c6633a5457d015f02b7abce71b0ebc84ddb45d9dd99d6",
+      "pdf_sha256": "df7690de23edbb3b6f744993e1179c73ba0cb01a35347473a049a8736e0ad0e9",
       "result": "pass"
     },
     {
@@ -1002,7 +1002,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "f1d3d56a1e2c2bd59866e204cdd50c15751cd0d9a021791a6e5b42968ab444af",
+      "pdf_sha256": "0783e7260d22094d5f7f3c1c38818b0a3d8116fb0afc7c43ff83f6120597c007",
       "result": "pass"
     },
     {
@@ -1247,7 +1247,7 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "",
+              "note": "重编后目视复核：两个开区间端点均显示为空心圆，数轴与区间结论一致。",
               "result": "pass"
             },
             {
@@ -1262,7 +1262,7 @@
             },
             {
               "check": "figure_label",
-              "note": "",
+              "note": "重编后目视复核：两个开区间端点均显示为空心圆，数轴与区间结论一致。",
               "result": "pass"
             },
             {
@@ -1474,15 +1474,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "a2b740093174e10cd687feea75c850ba4df7120c23de6bd20266f1be774c850d",
+      "pdf_sha256": "a017de691a4073714aeaafe9ec2698160ecf30cbbc9df4530cac96b45445c946",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "812baff4454c98cbe6f9a6f42a1250eff22391ac6b26c933c96ea4fe0f3cf94e",
+  "generation_input_tree_sha256": "2b085946c627a4f0d02ec4bb78a5fd229c8e2b45ae04e797578193a0a5fbf675",
   "input_projection": "d2fddd0d66820b2aeea714aeb97354798493977b02b4160ac1b053af026b6bbc",
   "paper_id": "gk-1977-regular-shanghai-science",
   "project_dir": "1977_上海卷_理科",
-  "reviewed_at": "2026-09-14T17:11:30+08:00",
+  "reviewed_at": "2026-09-25T06:49:46+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -1515,6 +1515,13 @@
         "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
         "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
         "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
       }
     ]
   },

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=1.05]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (1.5,0.866);
+\coordinate (D) at (0.5,0.866);
+\coordinate (P) at (0.5,2.598);
+\draw[thick] (A)--(B)--(C)--(D);
+\draw[thick,dashed] (D)--(A);
+\draw[thick] (P)--(A) (P)--(B) (P)--(C);
+\draw[thick,dashed] (P)--(D);
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[above] at (P) {$P$};
+\end{tikzpicture}

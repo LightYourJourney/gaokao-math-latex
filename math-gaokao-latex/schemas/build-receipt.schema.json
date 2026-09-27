@@ -2,7 +2,7 @@
   "$id": "https://gaokao-latex.invalid/schemas/build-receipt.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "高考数学 LaTeX 正式构建回执",
-  "description": "一卷四版本的正式 XeLaTeX 构建回执。状态机的合法转移冻结在 $defs.status_transitions.const；跨 attempt 的重跑不是转移，而是新的 attempt_id。",
+  "description": "一卷四版本的正式 latexmk/XeLaTeX 构建回执。状态机的合法转移冻结在 $defs.status_transitions.const；跨 attempt 的重跑不是转移，而是新的 attempt_id。",
   "$defs": {
     "sha256": {
       "pattern": "^[0-9a-f]{64}$",
@@ -133,7 +133,8 @@
             "xelatex",
             "pdfinfo",
             "pdftotext",
-            "pdftoppm"
+            "pdftoppm",
+            "latexmk"
           ]
         },
         "path": {
@@ -170,10 +171,48 @@
           "type": "string"
         },
         "tools": {
+          "allOf": [
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdfinfo"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdftoppm"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "pdftotext"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "xelatex"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            },
+            {
+              "contains": {
+                "properties": {"name": {"const": "latexmk"}},
+                "required": ["name"],
+                "type": "object"
+              }
+            }
+          ],
           "items": {
             "$ref": "#/$defs/tool_fingerprint"
           },
-          "minItems": 4,
+          "maxItems": 5,
+          "minItems": 5,
           "type": "array",
           "uniqueItems": true
         }
@@ -185,6 +224,7 @@
       "type": "object"
     },
     "pass_record": {
+      "description": "一次 latexmk driver 调用；其内部 XeLaTeX 重跑由 latexmk 管理，不逐次写入此数组。",
       "additionalProperties": false,
       "properties": {
         "exit_code": {
@@ -397,7 +437,7 @@
       "$ref": "#/$defs/attempt_id"
     },
     "dependency_tree": {
-      "description": "两遍 .fls 的仓库内 INPUT 并集（排除 .git/build/.work）；running 时为 null。",
+      "description": "latexmk 稳定构建后最终 .fls 的仓库内 INPUT（排除 .git/build/.work）；running 时为 null。",
       "$ref": "#/$defs/optional_file_tree"
     },
     "editions": {

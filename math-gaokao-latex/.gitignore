@@ -21,6 +21,18 @@
 *.ilg
 *.ind
 
+# 题图唯一可维护源为 TikZ/PGFPlots .tex；禁止把栅格或外部图像文件入库。
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.bmp
+*.gif
+*.tif
+*.tiff
+*.svg
+*.eps
+
 # 正式构建的输出目录：xelatex -output-directory=build 的全部产物。
 # 构建回执目录刻意不在忽略之列——回执是要提交的证据，不是产物。
 */build/

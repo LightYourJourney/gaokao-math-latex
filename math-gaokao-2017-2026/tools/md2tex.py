@@ -13,9 +13,11 @@
   > 引用块                           -> gknotice / gktip（按内容分类；含"原卷影印件/配套文档"者丢弃）
   **答案：…** 独立段                  -> \\gkanswer{...}
   管道表格                           -> booktabs 三线表
+  HTML 注释                          -> 丢弃（如 PDF 页码元数据）
   ![..](images/xxx.png)              -> \\input{figures/<slug>}（映射表见 FIGMAP）
   $$...$$                            -> \\[...\\]
-  \\_ 连续下划线（填空）              -> \\gkblank
+  连续（裸写或转义）下划线（填空）    -> \\gkblank
+  ●                                  -> \\textbullet{}
 数学段（$...$ 内部）原样透传，只对文本段做加粗/链接/转义处理。
 
 **纯接口**：`convert_markdown(source, ConversionContext(...))` 返回 `ConversionResult`，
@@ -29,6 +31,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Mapping, Sequence, Tuple
+from urllib.parse import unquote, urlsplit
 
 # ---------- 配图映射：MD 图片基名 -> figures/ 下的 TikZ 文件名 ----------
 # FIGMAP 保留历史/中文图名的显式映射；ASCII 约定名 YYYY-tN-name 走下方确定性回退，
@@ -222,6 +225,7 @@ class _Sink:
 BARE_SYM = {
     "⟹": r"~$\Longrightarrow$~", "⟺": r"~$\Longleftrightarrow$~",
     "∩": r"$\cap$", "∪": r"$\cup$",
+    "○": r"$\bigcirc$",
     "⊥": r"$\perp$", "≠": r"$\neq$", "∥": r"$\parallel$",
     "◇": r"$\Diamond$", "▭": r"$\square$", "−": r"$-$",
     "∈": r"$\in$", "⊂": r"$\subset$",
@@ -244,6 +248,11 @@ def conv_inline(s: str, sink: _Sink) -> str:
     # 再按 $ 切分，只对文本段做转义与符号替换
     for ch in EMOJI:
         s = s.replace(ch, "")
+    for match in TEX_FIGURE_LINK_ANY.finditer(s):
+        target = match.group(1)
+        parsed = urlsplit(unquote(target))
+        if not parsed.scheme and not parsed.netloc and parsed.path.lower().endswith(".tex"):
+            sink.warnings.append("图稿链接必须独立成段：%s" % target)
     s = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", s)         # 链接 -> 纯文本
     s = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", s)       # 加粗（非贪婪，可含 $…$）
     s = re.sub(r"`([^`]+)`", r"\\texttt{\1}", s)           # 行内代码
@@ -263,8 +272,9 @@ def conv_inline(s: str, sink: _Sink) -> str:
 
 
 def conv_text(s: str) -> str:
-    s = re.sub(r"(?:\\_){3,}", r"\\gkblank{}", s)          # 填空下划线
+    s = re.sub(r"(?:\\?_){3,}", r"\\gkblank{}", s)        # 裸写或转义的填空下划线
     s = s.replace("（　　）", r"\mbox{（　　）}")           # 选择题作答空括号不可拆行
+    s = s.replace("●", r"\textbullet{}")                  # Latin Modern 无 U+25CF 字形
     s = s.replace("%", r"\%").replace("&", r"\&").replace("#", r"\#")
     for k, v in BARE_SYM.items():
         s = s.replace(k, v)
@@ -364,9 +374,30 @@ def emit_image(name: str, sink: _Sink) -> List[str]:
     ]
 
 
+def emit_linked_figure(target: str, sink: _Sink) -> List[str]:
+    """把指向本卷已登记 figures/*.tex 的普通 Markdown 链接插入为矢量图。"""
+    slug = sink.figure_map.get(target)
+    if not slug:
+        sink.warnings.append(f"图稿链接无映射：{target}")
+        return [r"\begin{center}\fbox{图稿缺失：" + conv_text(target) + r"}\end{center}"]
+    sink.figures.append(slug)
+    return [
+        r"\nopagebreak[4]",
+        f"\\begin{{center}}\\input{{figures/{slug}}}\\end{{center}}",
+        r"\nopagebreak[4]",
+    ]
+
+
 HEAD_SOL = re.compile(r"^### 第\s*(\d+)\s*题[　\s]*(?:（(.*)）|〔(.*)〕)?\s*$")
 HEAD_QNUM = re.compile(r"^\*\*(\d+)．([^*]*?)\*\*\s*(.*)$")
 IMG = re.compile(r"^!\[[^\]]*\]\(images/(.+?)\.png\)\s*$")
+HTML_COMMENT = re.compile(r"<!--.*?-->", re.DOTALL)
+TEX_FIGURE_LINK = re.compile(
+    r"^\[([^\]]*)\]\(([^)\s]+\.tex)(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)\s*$"
+)
+TEX_FIGURE_LINK_ANY = re.compile(
+    r"(?<!!)\[[^\]]*\]\(([^)\s]+\.tex)(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)"
+)
 OPTLINE = re.compile(r"^\s{0,4}[A-D]．")
 ANSLINE = re.compile(r"^\*\*([^*]*答案[^*]*)\*\*\s*$")
 SECTION_HEADING = re.compile(r"^(?:[一二三四五六七八九十]+、|附加题|选考题)")
@@ -501,6 +532,16 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
                 i += 1
             continue
 
+        m = TEX_FIGURE_LINK.match(ln.strip())
+        if m:
+            while out and out[-1] == "":
+                out.pop()
+            out += emit_linked_figure(m.group(2), sink)
+            i += 1
+            while i < n and not lines[i].strip():
+                i += 1
+            continue
+
         # --- 无序列表（- 开头的连续行）---
         if re.match(r"^\s*-\s+", ln):
             j = i
@@ -538,7 +579,7 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             # 超长题仍可自然跨页。扫描止于下一题号或节标题，避免影响无图题。
             j = i + 1
             while j < n and not HEAD_QNUM.match(lines[j]) and not lines[j].startswith("#"):
-                if IMG.match(lines[j].strip()):
+                if IMG.match(lines[j].strip()) or TEX_FIGURE_LINK.match(lines[j].strip()):
                     out.append(r"\Needspace{0.4\textheight}")
                     break
                 j += 1
@@ -606,7 +647,8 @@ def _finish(text: str, sink: _Sink, context: ConversionContext) -> ConversionRes
 def convert_markdown(source: str, context: ConversionContext) -> ConversionResult:
     """把一份 Markdown 全文转成 LaTeX 正文片段（不含生成头注）。"""
     sink = _Sink(context.figure_map)
-    body = convert_block(strip_frontmatter(source.splitlines()), sink)
+    markdown = HTML_COMMENT.sub("", source)
+    body = convert_block(strip_frontmatter(markdown.splitlines()), sink)
     # 压掉三连以上空行
     text = re.sub(r"\n{3,}", "\n\n", "\n".join(body)) + "\n"
     return _finish(text, sink, context)

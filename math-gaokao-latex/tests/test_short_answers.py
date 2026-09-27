@@ -34,10 +34,12 @@ from make_short_answers import (
     AnswerRecord,
     ShortAnswerError,
     compare_generated_answers,
+    cross_check_quick_table,
     expected_answer_records,
     generate_short_answers,
     merge_answer_records,
     paper_sources,
+    parse_quick_table,
     parse_answer_points,
     parse_generated_answers_tex,
     render_short_answers,
@@ -294,6 +296,30 @@ class AnswerFormatTests(unittest.TestCase):
         )
         self.assertTrue(compare_generated_answers(damaged, ANSWER_KEY))
 
+    def test_question_oriented_quick_table_reports_pending_choice_status(self):
+        quick_table = """| 题号 | 答案 | 证据 |
+|:---:|:---|:---:|
+| 1 | A | D |
+| 2 | A、C 均可构造，无法唯一判定 | U |
+| 3 | D | D |
+"""
+        self.assertEqual(parse_quick_table(quick_table, 3), ("A", "U", "D"))
+
+    def test_pending_choice_answer_matches_independent_u_evidence(self):
+        quick_table = """| 题号 | 答案 | 证据 |
+|---|---|---|
+| 1 | A | D |
+| 2 | A、C 均可构造，无法唯一判定 | U |
+"""
+        self.assertEqual(
+            cross_check_quick_table(
+                quick_table,
+                (("选择题", 1, 2),),
+                {1: "A", 2: "U/PENDING；题面条件不能唯一确定"},
+            ),
+            (),
+        )
+
 
 # ------------------------------------------------------------------ 渲染
 
@@ -348,6 +374,16 @@ class RenderTests(unittest.TestCase):
         text = self.render()
         self.assertIn("题号 & 1 & 2 \\\\", text)
         self.assertIn("答案 & A & B \\\\", text)
+
+    def test_pending_choice_is_shown_as_u_with_an_explicit_legend(self):
+        text = render_short_answers(
+            TITLE,
+            ANSWER_KEY_PATH,
+            {"选择题": [1, 2], "解答题": [3, 3]},
+            {1: "U/PENDING；源题面条件不唯一", 2: "A", 3: "$1$"},
+        )
+        self.assertIn("答案 & U & A", text)
+        self.assertIn("U 表示待核", text)
 
     def test_other_groups_render_as_an_itemized_list(self):
         self.assertIn("\\item[\\textbf{3.}] (1) $x=1$；(2) 见解析版", self.render())
@@ -510,6 +546,38 @@ class LiveRepositoryTests(unittest.TestCase):
                 (repo / paper["source_files"]["answer_key"]).read_text(encoding="utf-8"),
             )
             self.assertEqual(problems, (), paper["paper_id"])
+
+
+    def test_2022_b_science_pending_choice_generates_an_explicit_short_answer(self):
+        repo = ROOT.parent.parent.parent
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            paper for paper in manifest["papers"]
+            if paper["paper_id"] == "gk-2022-regular-national-b-science"
+        )
+        sources = paper_sources(paper, make_short_answers.INDEX_METADATA)
+        result, problems = generate_short_answers(repo, sources)
+        self.assertEqual(problems, ())
+        short_answers = result.targets[
+            f"{PROJECT_RELATIVE}/{paper['project_dir']}/answers_short.tex"
+        ].decode("utf-8")
+        self.assertIn("U 表示待核", short_answers)
+        self.assertIn("答案 & A & A & C", short_answers)
+
+    def test_all_2022_national_papers_have_a_valid_short_answer_source(self):
+        repo = ROOT.parent.parent.parent
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper_ids = (
+            "gk-2022-regular-national-a-arts",
+            "gk-2022-regular-national-a-science",
+            "gk-2022-regular-national-b-arts",
+            "gk-2022-regular-national-b-science",
+        )
+        for paper_id in paper_ids:
+            paper = next(item for item in manifest["papers"] if item["paper_id"] == paper_id)
+            sources = paper_sources(paper, make_short_answers.INDEX_METADATA)
+            _, problems = generate_short_answers(repo, sources)
+            self.assertEqual(problems, (), paper_id)
 
 
 # ------------------------------------------------------------------ CLI 契约

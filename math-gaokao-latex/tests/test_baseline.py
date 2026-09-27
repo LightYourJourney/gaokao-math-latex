@@ -115,7 +115,9 @@ def _normalize_post_baseline_repairs(relative, text):
             lines[matches[0]] = "[post-baseline q5 content repair]"
         normalized_block = "\n".join(lines)
         normalized_block += "\n" if block.endswith("\n") else ""
-        return text[:start] + normalized_block + text[end:]
+        result = text[:start] + normalized_block + text[end:]
+        result_lines = [line for line in result.splitlines() if line != r"\textbf{解析}"]
+        return "\n".join(result_lines) + ("\n" if text.endswith("\n") else "")
 
     if relative in {
         "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex",
@@ -181,6 +183,9 @@ def _normalize_post_baseline_repairs(relative, text):
                 "%s repair must match exactly once: %s" % (description, relative)
             )
         lines[matches[0]] = "[post-baseline source wording repair]"
+        if relative == "math-gaokao-latex/2020_全国Ⅰ卷_文科/answers.tex":
+            # Standalone 解析 labels are source-structure headings, not answer content.
+            lines = [line for line in lines if line != r"\textbf{解析}"]
         result = "\n".join(lines)
         return result + ("\n" if text.endswith("\n") else "")
 
@@ -219,6 +224,12 @@ def _normalize_post_baseline_repairs(relative, text):
         answer_index = answer_matches[0] - (tip - start - 1)
         lines[answer_index] = "[post-baseline solution repair]"
         result = "\n".join(lines)
+        inline_q23 = r"合并前两行：$x<-\frac76$"
+        display_q23 = "合并前两行：\n" + r"\[x<-\frac76\]"
+        if result.count(inline_q23) == 1 and result.count(display_q23) == 0:
+            result = result.replace(inline_q23, display_q23)
+        elif result.count(display_q23) != 1 or result.count(inline_q23) != 0:
+            raise AssertionError("2020 science q23 layout normalization must match the unchanged -7/6 result exactly once")
         return result + ("\n" if text.endswith("\n") else "")
 
     return text
@@ -1107,6 +1118,21 @@ class BaselineComparisonTests(unittest.TestCase):
 class AdjudicatedDriftLedgerTests(unittest.TestCase):
     """登记表的读入契约：缺文件退化成现状，读不懂一律报错。"""
 
+    def test_2020_science_q23_inline_reflow_normalizes_only_the_same_formula(self):
+        relative = "math-gaokao-latex/2020_全国Ⅰ卷_理科/answers.tex"
+        prefix = r"\textbf{计算夹角}：" + "\n" + r"\begin{gktip}" + "\n"
+        suffix = "\n" + r"\gkanswer{答案（2）：$x$}" + "\n" + r"\end{gktip}" + "\n" + r"\end{answer}" + "\n"
+        display = prefix + "合并前两行：\n" + r"\[x<-\frac76\]" + suffix
+        inline = prefix + r"合并前两行：$x<-\frac76$" + suffix
+        changed_value = prefix + r"合并前两行：$x<-\frac75$" + suffix
+
+        self.assertEqual(
+            _normalize_post_baseline_repairs(relative, display),
+            _normalize_post_baseline_repairs(relative, inline),
+        )
+        with self.assertRaisesRegex(AssertionError, "unchanged -7/6 result"):
+            _normalize_post_baseline_repairs(relative, changed_value)
+
     def write(self, document):
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
@@ -1333,8 +1359,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
-                marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                line == "" or marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
             self.assertTrue(all(
@@ -1406,7 +1432,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
                 marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
             self.assertTrue(all(
@@ -1478,7 +1504,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
                 marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
             self.assertTrue(all(
@@ -1549,7 +1575,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
                 marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
             self.assertTrue(all(
@@ -1608,8 +1634,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
-                marker in line
-                for marker in (r"\nopagebreak", r"\Needspace", r"\mbox{（　　）}", r"\begin{gkopts}",
+                line == "" or marker in line
+                for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
             self.assertTrue(all(

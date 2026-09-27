@@ -9,8 +9,8 @@
 
 - 标题：1954 年·全国卷
 - 项目目录：`1954_全国卷`
-- 构建：`succeeded`（attempt `93ae93ed-4494-4ec0-84fa-bd0aadf5c968`）
-- 审查：`passed`（2026-09-12T11:12:48+08:00）
+- 构建：`succeeded`（attempt `0a8ff4c1-2dc3-4207-b1fe-f72c8b3385cf`）
+- 审查：`passed`（2026-09-25T06:49:21+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 9；简答版 3；印刷版 7
 - 警告豁免：2

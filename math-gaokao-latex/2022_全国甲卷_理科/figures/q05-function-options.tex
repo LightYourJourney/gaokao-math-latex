@@ -1,0 +1,46 @@
+\begin{tikzpicture}[x=0.48cm,y=0.3cm]
+\begin{scope}
+  \draw[->] (-1.7,0) -- (1.85,0) node[right] {$x$};
+  \draw[->] (0,-2.1) -- (0,2.1) node[above] {$y$};
+  \draw (-0.08,1) -- (0.08,1);
+  \node[below] at (-1.5708,0) {$-\frac\pi2$};
+  \node[below] at (1.5708,0) {$\frac\pi2$};
+  \node[below left] at (0,0) {$O$};
+  \node[left] at (0,1) {$1$};
+  \node at (-1.48,-1.9) {(A)};
+  \draw[thick,samples=100,domain=-1.5708:1.5708] plot (\x,{(3^(\x)-3^(-1*\x))*cos(deg(\x))});
+\end{scope}
+\begin{scope}[shift={(7,0)}]
+  \draw[->] (-1.7,0) -- (1.85,0) node[right] {$x$};
+  \draw[->] (0,-2.1) -- (0,2.1) node[above] {$y$};
+  \draw (-0.08,1) -- (0.08,1);
+  \node[below] at (-1.5708,0) {$-\frac\pi2$};
+  \node[below] at (1.5708,0) {$\frac\pi2$};
+  \node[below left] at (0,0) {$O$};
+  \node[left] at (0,1) {$1$};
+  \node at (-1.48,-1.9) {(B)};
+  \draw[thick,samples=100,domain=-1.5708:1.5708] plot (\x,{abs(sin(deg(2*\x)))});
+\end{scope}
+\begin{scope}[shift={(0,-4)}]
+  \draw[->] (-1.7,0) -- (1.85,0) node[right] {$x$};
+  \draw[->] (0,-2.1) -- (0,2.1) node[above] {$y$};
+  \draw (-0.08,1) -- (0.08,1);
+  \node[below] at (-1.5708,0) {$-\frac\pi2$};
+  \node[below] at (1.5708,0) {$\frac\pi2$};
+  \node[below left] at (0,0) {$O$};
+  \node[left] at (0,1) {$1$};
+  \node at (-1.48,-1.9) {(C)};
+  \draw[thick,samples=100,domain=-1.5708:1.5708] plot (\x,{-(3^(\x)-3^(-1*\x))*cos(deg(\x))});
+\end{scope}
+\begin{scope}[shift={(7,-4)}]
+  \draw[->] (-1.7,0) -- (1.85,0) node[right] {$x$};
+  \draw[->] (0,-2.1) -- (0,2.1) node[above] {$y$};
+  \draw (-0.08,1) -- (0.08,1);
+  \node[below] at (-1.5708,0) {$-\frac\pi2$};
+  \node[below] at (1.5708,0) {$\frac\pi2$};
+  \node[below left] at (0,0) {$O$};
+  \node[left] at (0,1) {$1$};
+  \node at (-1.48,-1.9) {(D)};
+  \draw[thick,samples=100,domain=-1.5708:1.5708] plot (\x,{-abs(sin(deg(2*\x)))});
+\end{scope}
+\end{tikzpicture}

@@ -64,6 +64,7 @@ _ANSWER_TEX = re.compile(
     r"^\\(?:gkanswer|textbf)\{答案(?:[（(](\d+)[）)])?[：:](.*)\}$"
 )
 _CHOICE_LETTERS = re.compile(r"^([A-D]+)")
+_PENDING_CHOICE = re.compile(r"^U/PENDING(?:$|[；;])")
 _QUICK_ROW = "| 答案"
 # 行内转换不碰配图，故映射为空；严格模式让未配对 $ 之类的告警直接失败。
 _INLINE_CONTEXT = md2tex.ConversionContext(figure_map={}, strict=True)
@@ -225,19 +226,54 @@ def merge_answer_records(
 
 
 def parse_quick_table(answer_key_text: str, count: int) -> Optional[Tuple[str, ...]]:
-    """取「答案速查表」里的前 count 个字母；行数不足或没有表返回 None。"""
+    """读取横向答案行或逐题表中的前 count 个选择题答案/待核标记。"""
     cells: List[str] = []
+    question_answers: Dict[int, str] = {}
+    in_question_table = False
+    saw_question_table = False
     for line in answer_key_text.split("\n"):
         stripped = line.strip()
+        row = [cell.strip() for cell in stripped.strip("|").split("|")]
+        if len(row) >= 3 and row[0] == "题号" and row[1] == "答案":
+            in_question_table = True
+            saw_question_table = True
+            continue
+        if in_question_table:
+            if not stripped.startswith("|"):
+                in_question_table = False
+            elif row and all(re.fullmatch(r":?-{2,}:?", cell) for cell in row):
+                continue
+            elif len(row) >= 3 and row[0].isdigit():
+                number = int(row[0])
+                answer = row[1]
+                evidence = row[2]
+                token = "U" if evidence == "U" else _choice_token(answer)
+                if token is not None:
+                    question_answers[number] = token
         if stripped.startswith(_QUICK_ROW):
             cells += [cell.strip() for cell in stripped.strip("|").split("|")][1:]
+    if saw_question_table:
+        if all(number in question_answers for number in range(1, count + 1)):
+            return tuple(question_answers[number] for number in range(1, count + 1))
+        return None
     return tuple(cells[:count]) if len(cells) >= count else None
+
+
+def _choice_token(value: str) -> Optional[str]:
+    """把最终选择题答案折为字母串或诚实的 U 标记。"""
+    normalized = value.strip()
+    match = _CHOICE_LETTERS.match(normalized)
+    if match is not None:
+        return match.group(1)
+    if normalized == "U" or _PENDING_CHOICE.match(normalized):
+        return "U"
+    return None
 
 
 def choice_letters(
     structure: Sequence[Tuple[str, int, int]], answers: Mapping[int, str]
 ) -> Tuple[Tuple[int, str], ...]:
-    """按题号顺序取出各选择题的答案字母；非字母形是硬错误。"""
+    """按题号顺序取出选择题答案字母；U/PENDING 可作为明确待核标记。"""
     found: List[Tuple[int, str]] = []
     for name, low, high in _ordered(structure):
         if name not in CHOICE_GROUPS:
@@ -245,13 +281,13 @@ def choice_letters(
         for number in range(low, high + 1):
             if number not in answers:
                 raise ShortAnswerError(f"第 {number} 题没有答案，无法渲染{name}")
-            match = _CHOICE_LETTERS.match(answers[number])
-            if match is None:
+            token = _choice_token(answers[number])
+            if token is None:
                 raise ShortAnswerError(
                     "第 %d 题属于%s，答案却不是字母形：%s"
                     % (number, name, answers[number][:40])
                 )
-            found.append((number, match.group(1)))
+            found.append((number, token))
     return tuple(found)
 
 
@@ -320,6 +356,11 @@ def render_short_answers(
             % (sorted(covered), sorted(answers))
         )
     letters = dict(choice_letters(groups, answers))
+    pending_legend = (
+        "\\begin{gknotice}\n选择题答案中的 U 表示待核，未给出猜测答案，详情见解析版。\n"
+        "\\end{gknotice}\n\n"
+        if "U" in letters.values() else ""
+    )
 
     parts: List[str] = []
     for name, low, high in groups:
@@ -344,7 +385,7 @@ def render_short_answers(
         "\\textbf{使用说明}：本节只给最终答案便于快速核对，完整推导见解析版。"
         "答案为编写者独立推导，\\textbf{非官方标准答案}。\n"
         "\\end{gknotice}\n\n" % (title, answer_key_relative)
-    ) + "\n\n".join(parts) + "\n"
+    ) + pending_legend + "\n\n".join(parts) + "\n"
 
 
 # ---------------------------------------------------------------- 身份与选择

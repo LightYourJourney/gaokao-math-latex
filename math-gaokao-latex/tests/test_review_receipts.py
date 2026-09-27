@@ -47,7 +47,7 @@ def tool(name: str) -> dict:
 def toolchain() -> dict:
     return {
         "texlive_revision": "2026",
-        "tools": [tool(name) for name in ("xelatex", "pdfinfo", "pdftotext", "pdftoppm")],
+        "tools": [tool(name) for name in ("xelatex", "pdfinfo", "pdftotext", "pdftoppm", "latexmk")],
     }
 
 
@@ -156,6 +156,15 @@ def manifest() -> dict:
 class ReviewSchemaContractTests(unittest.TestCase):
     def test_schema_accepts_complete_four_edition_review(self) -> None:
         subject.validate_review(review_receipt())
+
+    def test_review_toolchain_names_are_exact_and_unique(self) -> None:
+        receipt = review_receipt()
+        receipt["toolchain_fingerprint"]["tools"][-1]["name"] = "xelatex"
+
+        with self.assertRaisesRegex(build_tests.SchemaError, "contains"):
+            subject.validate_schema(receipt, subject.review_schema())
+        with self.assertRaisesRegex(subject.ReviewError, "Schema"):
+            subject.validate_review(receipt)
 
     def test_schema_rejects_missing_required_binding(self) -> None:
         receipt = review_receipt()

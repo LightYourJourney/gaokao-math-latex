@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从阶段 0 的结构化事实生成六份一致的 Markdown 报告。"""
+"""从全量 manifest、构建/复核回执及问题总账生成一致的项目报告。"""
 from __future__ import annotations
 
 import argparse
@@ -12,8 +12,9 @@ from typing import Any, Dict, Mapping, Optional, Sequence
 
 import build_projects
 import cli_common
+import issues as issues_module
 import review_receipts
-from status import batch_ownership_paths, derive_git_state
+from status import StatusError, derive_git_state
 from transaction import Transaction
 
 BASE = Path("math-gaokao-latex")
@@ -28,6 +29,17 @@ OUTPUT_TARGETS = (
     "math-gaokao-latex/reports/baseline.md",
 )
 REPORT_SOURCE = "math-gaokao-latex/tools/report.py"
+REPORT_DEPENDENCIES = (
+    "build_projects.py",
+    "cli_common.py",
+    "issues.py",
+    "manifest.py",
+    "provenance.py",
+    "review_receipts.py",
+    "schema_validate.py",
+    "status.py",
+    "transaction.py",
+)
 
 
 class ReportError(RuntimeError):
@@ -63,7 +75,7 @@ def _warning_counts(builds: Sequence[Mapping[str, Any]], reviews: Sequence[Mappi
 
 
 def collect_report_facts(manifest_path: Path, issues_path: Path) -> Dict[str, Any]:
-    """读取当前结构化账本并重跑 build/review、状态及提交门禁。"""
+    """读取全量结构化账本；未完成/失败状态作为事实返回，不阻止报告生成。"""
     manifest_path = Path(manifest_path).resolve()
     issues_path = Path(issues_path).resolve()
     root = cli_common.repository_root(manifest_path.parent)
@@ -74,111 +86,151 @@ def collect_report_facts(manifest_path: Path, issues_path: Path) -> Dict[str, An
     roots = inventory.get("root_counts", {})
     total = inventory.get("total_sources")
     regular, spring = roots.get("regular"), roots.get("spring")
-    if (total, regular, spring) != (775, 734, 41) or total != regular + spring:
-        raise ReportError("来源守恒失败：要求 775 = 734 + 41")
-    historical_papers = [
-        paper for paper in manifest.get("papers", []) if paper.get("legacy_ids")
-    ]
-    if len(historical_papers) != 21:
-        raise ReportError("历史产出应恰好覆盖 21 套试卷")
+    sources = manifest.get("sources", [])
+    papers = manifest.get("papers", [])
+    manifest_batches = manifest.get("batches", [])
+    if not isinstance(sources, list) or not isinstance(papers, list) or not isinstance(manifest_batches, list):
+        raise ReportError("manifest 的 sources/papers/batches 必须是数组")
+    if total != len(sources) or regular is None or spring is None or total != regular + spring:
+        raise ReportError("来源守恒失败：inventory 与 sources 数量不一致")
 
-    historical_ids = {paper["paper_id"] for paper in historical_papers}
-    historical_batches = []
-    for batch in manifest.get("batches", []):
-        paper_ids = set(batch.get("paper_ids", []))
-        if paper_ids & historical_ids and not paper_ids <= historical_ids:
-            raise ReportError(f"{batch['batch_id']}: 不允许混合历史卷与非历史卷")
-        if paper_ids and paper_ids <= historical_ids:
-            historical_batches.append(batch)
-    validations = {}
-    validation_problems = []
-    for batch in historical_batches:
-        result = review_receipts.check_batch(
-            manifest_path, issues_path, batch["batch_id"], require_current_build=True
+    try:
+        chain = build_projects.resolve_toolchain()
+        validation = review_receipts.check_all(
+            manifest_path, issues_path, require_current_build=True, toolchain=chain
         )
-        validations[batch["batch_id"]] = result["code"]
-        validation_problems.extend(result["problems"])
-    if any(code != "FINALIZED" for code in validations.values()):
-        raise ReportError("批次重算失败：" + "；".join(validation_problems))
-    validation = {"batches": validations}
+        validation_codes = validation["batches"]
+    except build_projects.BuildError as error:
+        validation_codes = {batch["batch_id"]: "TOOLCHAIN_UNAVAILABLE" for batch in manifest_batches}
+        validation = {"problems": [str(error)]}
 
-    papers = {paper["paper_id"]: paper for paper in historical_papers}
-    statuses = Counter()
-    builds, reviews = [], []
-    batches = []
-    for batch in historical_batches:
-        batch_id = batch["batch_id"]
-        paper_statuses = [papers[paper_id]["production_state"] for paper_id in batch["paper_ids"]]
-        expected = "closed" if all(value == "complete" for value in paper_statuses) else "closed_with_blockers" if any(value == "blocked" for value in paper_statuses) else None
-        if expected is None or batch.get("status") != expected:
-            raise ReportError(f"{batch_id}: manifest 已关闭但重算不一致")
-        paths = review_receipts.batch_review_paths(manifest, batch_id, include_state=True, report=True)
-        git_state = derive_git_state(root, paths)
-        if git_state != "committed":
-            raise ReportError(f"{batch_id}: ownership paths 尚未提交（{git_state}）")
-        batches.append({"batch_id": batch_id, "status": expected, "validation": validation["batches"][batch_id], "git_state": git_state})
-
-    for paper in historical_papers:
-        status = paper["production_state"]
-        statuses[status if status in {"complete", "blocked"} else "in_progress"] += 1
+    paper_states = Counter(str(paper.get("production_state") or "unknown") for paper in papers)
+    source_states = Counter(str(source.get("source_state") or "unknown") for source in sources)
+    builds: list[Dict[str, Any]] = []
+    reviews: list[Dict[str, Any]] = []
+    build_states: Counter = Counter()
+    review_states: Counter = Counter()
+    edition_results: Counter = Counter()
+    missing_builds = invalid_builds = missing_reviews = invalid_reviews = 0
+    for paper in papers:
         receipt_dir = root / BASE / paper["project_dir"] / "receipts"
-        builds.append(build_projects.load_receipt(receipt_dir / "build.json"))
-        reviews.append(review_receipts.load_review(receipt_dir / "review.json"))
-    succeeded = sum(
-        edition["result"] == "succeeded"
-        for build in builds for edition in build["editions"]
-    )
-    if succeeded != 84:
-        raise ReportError(f"当前构建成功数不是 84：{succeeded}")
-    warnings = _warning_counts(builds, reviews)
-    legacy = _load_json(root / BASE / "reports/legacy-baseline.json")
-    legacy_summary = legacy.get("summary", {})
-    if legacy_summary.get("overfull_count") != 1:
-        raise ReportError("legacy baseline 的 Overfull 事实必须为 1")
+        build_path, review_path = receipt_dir / "build.json", receipt_dir / "review.json"
+        if not build_path.is_file():
+            missing_builds += 1
+        else:
+            try:
+                build = build_projects.load_receipt(build_path)
+                builds.append(build)
+                build_states[str(build.get("status") or "unknown")] += 1
+                for edition in build.get("editions", []):
+                    edition_results[str(edition.get("result") or "unknown")] += 1
+            except build_projects.BuildError:
+                invalid_builds += 1
+        if not review_path.is_file():
+            missing_reviews += 1
+        else:
+            try:
+                review = review_receipts.load_review(review_path)
+                reviews.append(review)
+                review_states[str(review.get("status") or "unknown")] += 1
+            except review_receipts.ReviewError:
+                invalid_reviews += 1
 
+    issue_records = issues_module.load_issues(issues_path)
+    issue_summary = _issue_summary(issue_records)
+    batches = []
+    for batch in manifest_batches:
+        batch_id = batch["batch_id"]
+        try:
+            paths = review_receipts.batch_review_paths(manifest, batch_id, include_state=True, report=True)
+            git_state = derive_git_state(root, paths)
+        except StatusError:
+            git_state = "unavailable"
+        batches.append({
+            "batch_id": batch_id,
+            "status": str(batch.get("status") or "unknown"),
+            "validation": validation_codes.get(batch_id, "MISSING"),
+            "git_state": git_state,
+            "paper_count": len(batch.get("paper_ids", [])),
+        })
+    warnings = _warning_counts(builds, reviews)
     return {
         "root": root,
         "sources": {"total": total, "regular": regular, "spring": spring},
-        "legacy": {"papers": legacy_summary.get("paper_count"), "targets": legacy_summary.get("target_count"), "overfull": 1},
+        "source_states": dict(source_states),
+        "papers": {"total": len(papers), "states": dict(paper_states)},
+        "issues": issue_summary,
         "current": {
-            "statuses": {key: statuses[key] for key in ("complete", "blocked", "in_progress")},
-            "builds_succeeded": succeeded,
+            "build_states": dict(build_states),
+            "review_states": dict(review_states),
+            "edition_results": dict(edition_results),
+            "edition_total": sum(edition_results.values()),
+            "editions_compiled": edition_results["succeeded"],
+            "missing_builds": missing_builds,
+            "invalid_builds": invalid_builds,
+            "missing_reviews": missing_reviews,
+            "invalid_reviews": invalid_reviews,
             "overfull": warnings["overfull"],
             "underfull": warnings["underfull"],
             "warning_exemptions": warnings["warning_exemptions"],
         },
         "batches": batches,
+        "validation_problems": validation.get("problems", []),
+    }
+
+
+def _issue_summary(records: Sequence[Mapping[str, Any]]) -> Dict[str, int]:
+    states = Counter(str(issue.get("status") or "unknown") for issue in records)
+    return {
+        "total": len(records),
+        "open": states["open"],
+        "resolved": states["resolved"],
+        "blocks_completion": sum(
+            issue.get("status") == "open" and issue.get("impact") == "blocks_completion"
+            for issue in records
+        ),
     }
 
 
 def _summary(facts: Mapping[str, Any]) -> str:
-    current, statuses = facts["current"], facts["current"]["statuses"]
+    current, paper_states = facts["current"], facts["papers"]["states"]
+    validation_counts = Counter(batch["validation"] for batch in facts["batches"])
+    failed_batches = [batch["batch_id"] for batch in facts["batches"] if batch["validation"] != "FINALIZED"]
     return (
-        f"- 来源守恒：**775 = 734 + 41**（普通高考 734，春季高考 41；2004 `.txt` 不计入 PDF 来源）\n"
-        f"- 历史口径：21 套、84 个版本；legacy baseline 的 Overfull 为 **1**\n"
-        f"- 当前口径：complete {statuses['complete']}，blocked {statuses['blocked']}，in_progress {statuses['in_progress']}\n"
-        f"- 当前构建：{current['builds_succeeded']}/84 succeeded\n"
-        f"- 当前警告重算：Overfull {current['overfull']}，Underfull {current['underfull']}，警告豁免 {current['warning_exemptions']}\n"
-        "- 上游题面不含答案的说法仅有三份抽样证据，不外推为 775 份全部无答案。\n"
+        f"- 来源总数：**{facts['sources']['total']}**（普通高考 {facts['sources']['regular']}，春季高考 {facts['sources']['spring']}）。\n"
+        f"- 来源状态：{_counter_text(facts.get('source_states', {}))}\n"
+        f"- 试卷总数：**{facts['papers']['total']}**；生产状态：{_counter_text(paper_states)}\n"
+        f"- 批次总数：**{len(facts['batches'])}**；manifest 状态：{_counter_text(Counter(batch['status'] for batch in facts['batches']))}\n"
+        f"- 正式复核门禁：{_counter_text(validation_counts)}\n"
+        f"- 已编译版本：{current['editions_compiled']}/{current['edition_total']}；构建回执状态：{_counter_text(current['build_states'])}\n"
+        f"- review 回执状态：{_counter_text(current['review_states'])}\n"
+        f"- 问题总账：{facts['issues']['total']} 条，未解决问题：{facts['issues']['open']}，阻塞完成 {facts['issues']['blocks_completion']}。\n"
+        f"- 回执日志警告汇总（包含待复核回执）：Overfull {current['overfull']}，Underfull {current['underfull']}，豁免记录 {current['warning_exemptions']}。\n"
+        f"- 回执完整性：build 缺失 {current['missing_builds']} / 无效 {current['invalid_builds']}；review 缺失 {current['missing_reviews']} / 无效 {current['invalid_reviews']}。\n"
+        + ("- 门禁未通过批次：" + "、".join(failed_batches) + "。\n" if failed_batches else "- 所有批次复核门禁通过。\n")
     )
 
 
+def _counter_text(values: Mapping[str, int]) -> str:
+    return "，".join(f"{key} {values[key]}" for key in sorted(values)) or "无"
+
+
 def _batch_table(facts: Mapping[str, Any]) -> str:
-    lines = ["| 批次 | 重算终态 | 回执门禁 | ownership |", "|---|---|---|---|"]
-    lines += [f"| {b['batch_id']} | {b['status']} | {b['validation']} | {b['git_state']} |" for b in facts["batches"]]
+    lines = ["| 批次 | 试卷数 | manifest 状态 | 回执门禁 | ownership |", "|---|---:|---|---|---|"]
+    lines += [f"| {b['batch_id']} | {b['paper_count']} | {b['status']} | {b['validation']} | {b['git_state']} |" for b in facts["batches"]]
     return "\n".join(lines) + "\n"
 
 
 def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
-    """只在内存中从同一事实快照渲染固定六目标。"""
+    """只在内存中从同一全量事实快照渲染固定六目标。"""
     summary, batches = _summary(facts), _batch_table(facts)
     bodies = {
-        OUTPUT_TARGETS[0]: "# 高考数学来源清单\n\n" + summary + "\n## 阶段 0 批次\n\n" + batches,
-        OUTPUT_TARGETS[1]: "# 高考数学资料报告\n\n阶段 0 的机器事实如下。blocked 与 complete 分开统计。\n\n" + summary + "\n" + batches,
-        OUTPUT_TARGETS[2]: "# 高考数学资料说明\n\n## 阶段 0 状态\n\n" + summary + "\n" + batches,
-        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 阶段 0 机器报告\n\n" + summary + "\n" + batches + "\n来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。重建命令：\n\n```bash\npython3 tools/manifest_csv.py \\\n  --manifest source-manifest.json \\\n  --output manifest.csv \\\n  --write\n```\n\n运行 `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 校验。\n",
-        OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 与阶段 0 的关系\n\n" + summary + "\n本目录是历史来源工程；当前 21 套 LaTeX 产出位于相邻的 `math-gaokao-latex/`。\n",
-        OUTPUT_TARGETS[5]: "# 高考数学 LaTeX 阶段 0 基线\n\n" + summary + "\n## 六批终态\n\n" + batches,
+        OUTPUT_TARGETS[0]: "# 高考数学来源清单\n\n" + summary + "\n来源逐项信息见 `exams/math-gaokao-latex/manifest.csv`。\n",
+        OUTPUT_TARGETS[1]: "# 高考数学真题 LaTeX 项目报告\n\n" + summary + "\n## 批次明细\n\n" + batches,
+        OUTPUT_TARGETS[2]: "# 高考数学资料说明\n\n" + summary + "\n完整构建、复核和缺失事项见 `report.md` 与 `math-gaokao-latex/missing-issues.md`。\n",
+        OUTPUT_TARGETS[3]: "# 高考数学 LaTeX 项目\n\n## 全量状态\n\n" + summary + "\n## 交付物与校验\n\n来源清单：`manifest.csv` 是 `source-manifest.json` 的来源级清单投影，每个上游 PDF 一行。\n\n```bash\npython3 tools/manifest_csv.py --manifest source-manifest.json --output manifest.csv --write\npython3 tools/report.py render --all --manifest source-manifest.json --issues missing-issues.md\npython3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md\n```\n",
+        OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 题库工程状态\n\n" + summary + "本目录保存 2017—2026 年转录与来源材料；统一 LaTeX 项目目录及完整批次清单位于相邻的 `math-gaokao-latex/`。\n",
+        OUTPUT_TARGETS[5]: "# 高考数学 LaTeX 全量状态快照\n\n" + summary + "## 批次明细\n\n" + batches,
     }
     return {path: text if text.endswith("\n") else text + "\n" for path, text in bodies.items()}
 
@@ -203,16 +255,17 @@ def _sha256(path: Path) -> str:
 
 
 def _transaction_inputs(root: Path, manifest: Mapping[str, Any]) -> Dict[str, str]:
-    paths = {REPORT_SOURCE, MANIFEST_TARGET.as_posix(), ISSUES_TARGET.as_posix(), (BASE / "reports/legacy-baseline.json").as_posix()}
-    historical_papers = [paper for paper in manifest["papers"] if paper.get("legacy_ids")]
-    historical_ids = {paper["paper_id"] for paper in historical_papers}
+    paths = {REPORT_SOURCE, MANIFEST_TARGET.as_posix(), ISSUES_TARGET.as_posix()}
+    paths.update((BASE / "tools" / name).as_posix() for name in REPORT_DEPENDENCIES)
+    paths.update({
+        (BASE / "schemas/build-receipt.schema.json").as_posix(),
+        (BASE / "schemas/provenance.schema.json").as_posix(),
+        (BASE / "schemas/review-receipt.schema.json").as_posix(),
+        (BASE / "schemas/source-manifest.schema.json").as_posix(),
+    })
     for batch in manifest["batches"]:
-        paper_ids = set(batch.get("paper_ids", []))
-        if paper_ids & historical_ids and not paper_ids <= historical_ids:
-            raise ReportError(f"{batch['batch_id']}: 不允许混合历史卷与非历史卷")
-        if paper_ids and paper_ids <= historical_ids:
-            paths.add((BASE / "reports" / f"{batch['batch_id']}.md").as_posix())
-    for paper in historical_papers:
+        paths.add((BASE / "reports" / f"{batch['batch_id']}.md").as_posix())
+    for paper in manifest["papers"]:
         base = BASE / paper["project_dir"]
         paths.update({(base / "provenance.json").as_posix(), (base / "receipts/build.json").as_posix(), (base / "receipts/review.json").as_posix()})
     return {path: _sha256(root / path) for path in sorted(paths)}
@@ -239,13 +292,16 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             drift = check_outputs(outputs, root)
             if drift:
                 raise ReportError("输出不一致：" + "、".join(drift))
-            print("报告输出当前且六批门禁通过")
+            print("报告输出与全量 manifest 当前一致；未完成状态已在报告中保留")
             return 0
         manifest = _load_json(Path(args.manifest))
         targets = {path: value.encode("utf-8") for path, value in outputs.items()}
         transaction = Transaction(root)
         transaction.prepare("content", targets, _transaction_inputs(root, manifest)).commit()
-        print("已用一个 content 事务写入六个报告目标")
+        drift = check_outputs(outputs, root)
+        if drift:
+            raise ReportError("写入后报告输出仍不一致：" + "、".join(drift))
+        print("已用一个 content 事务写入并回读校验六个全量报告目标")
         return 0
     except (ReportError, OSError, ValueError, build_projects.BuildError, review_receipts.ReviewError) as error:
         print(str(error), file=sys.stderr)

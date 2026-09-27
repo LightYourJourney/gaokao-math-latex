@@ -12714,7 +12714,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0804
 
 ```json
@@ -12787,7 +12786,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0808
 
 ```json
@@ -12860,7 +12858,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0812
 
 ```json
@@ -12951,7 +12948,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0817
 
 ```json
@@ -13258,7 +13254,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0835
 
 ```json
@@ -13295,7 +13290,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0837
 
 ```json
@@ -13332,7 +13326,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0842
 
 ```json
@@ -13477,7 +13470,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0850
 
 ```json
@@ -14303,6 +14295,440 @@
 }
 ```
 
+## ISSUE-0896
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "0dca239d477bc4e3efca2f3011560af855f2d967f9c732ed7172a6bddfd8a306",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2022-regular-national-a-science",
+  "question_id": "gk-2022-regular-national-a-science-q08",
+  "resolved_evidence": "固定源 PDF（SHA-256 f3083062446f8eaddb58875e435de933325a6bc1c6fcbf684eca86e1e555d9c9）第 1 页（纸面页码 1161）题干写明 C 是 AB 的中点、D 在弧 AB 上且 CD 垂直 AB；原图标签与题干一致。规范题面、解析和答案要点已按源文校正，原 TikZ 图稿正确并保留。phase2-b04 正式重编及视觉回执 FINALIZED；核验试题版第 3 页、解析版第 3/11 页、简答版第 3/6 页、印刷版第 2/7 页，四版共 49 页，页数 5/22/7/15，图文及答案 B 一致。",
+  "resume_action": "无需后续动作；题面、解析和答案要点已同步，图稿与原文一致，四版本重编及视觉复核通过。",
+  "source_id": "src-df2119c91f5a43a34e1716f4465359f6b64ba82e253d551e941126bc7e041831",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0897
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "920c377a901ddafb396c348f4b98b91817080dda4f54d4bbf4708f6f358d63b5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2022-regular-national-b-arts",
+  "question_id": "gk-2022-regular-national-b-arts-q21",
+  "resume_action": "核实是否排除 y=-2 水平边界或需补充 H≠N 条件，再裁定唯一答案。",
+  "source_id": "src-e940ecc4f17429569b803de22ce16b6de7de5433e5e0c169584e3ed752288538",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0898
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "35ffad13f27bcdf0fa51bf4305100571abcad74a5cf75126142e25984c21187f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2022-regular-national-b-science",
+  "question_id": "gk-2022-regular-national-b-science-q11",
+  "resume_action": "核实源题对 N 分支及 M、N 顺序的定义；补足条件后再确定选项。",
+  "source_id": "src-b0b51a3f8309bc89c893fda343f481ab5a6011f2ca1b1dc21be11436bd938da2",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0899
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e98250f884eb097d4bd6cc1f2be7e407ecd85d338df6ecad9f6b1eb6d1344807",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2022-regular-national-b-science",
+  "question_id": "gk-2022-regular-national-b-science-q16",
+  "resume_action": "回查源 PDF 中指数项及“极大/极小”文字；确认原题或转录后重解。",
+  "source_id": "src-b0b51a3f8309bc89c893fda343f481ab5a6011f2ca1b1dc21be11436bd938da2",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0900
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "411c2503a0b158b870877dc7b737ec0dd55b1a7ec8ec7837dc38daea2eea441a",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0901
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "8109dd014f55468aec4ce171e685d0dab4a2db86b9097d96bbc4f5774fc9f140",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0902
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "1abe9673322bdcf63e5a2615dd06d1d834dfdd1104e7e42092172e3f49ffb650",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0903
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "182e7792ec5fc93c11de377c8b6808bb408cc46ba92f3657bac7b61fc2a3f2c8",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0904
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "99dde062cca1008ebbba422a779c904e3aae028711fb2917fa1662bf0c04cfc4",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0905
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "847297fd41cfa55d2d176455f3a6e006cff4677c6ee7d4f6e5555d533ee708a2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0906
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "7c07a33634206b6f2c6fe9db311d6432ddf0eb5c70023ed34f734425213b155b",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0907
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "5430e991eb81a1012dc44749d1f08c9c5908a68737e10c8c78d09927b7ec6ee9",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-a-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0908
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "bad8aa998e1be0a8a527327018ddf7aa7bb7e3c4ee755821bb3a586fe09b6e89",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0909
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "915439c346ee709b72ceed0f29627b7ddf6e0e9eed99cf293f54966f560df5be",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0910
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "ae07c179f3fae0d873dc5215772a1e898d3070595bdb7c6451607fcc089611c9",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0911
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "afe872005e1e3842e82318cab4b767fa2db9100483ce80c59b31b569316dfd96",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0912
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "b23aa90125a90d482f17547a771f581ee2966fede45f5046820a3b9ba6ce04ce",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0913
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "b0f6bd81d5fcbf149ab30ef922823a0096777ab31cac007455edcb61d6dd9b24",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0914
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "5d8c17529399aea69cfafd14c25bba3f1a2bf620ba9c73d1b481b801ff40ae2e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0915
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "2815e9f960be57b2186d43fef6ee4cf4615150036dc9117a8b176016d7e8ebc6",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2022-regular-national-b-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0916
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1ae872f1-f32d-4870-b097-4fe0521351e8",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "b175b8756b5081c48c4c32a27552a59623abaa0b670f3174687dd1166e1a96ec",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1977-regular-shanghai-science",
+  "pdf_sha256": "6defac065a96779e3a0e44f287f7f26085f14d6d92a3b1c45842b2a85143a076",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0917
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1ae872f1-f32d-4870-b097-4fe0521351e8",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "d849aa0d6d95ad74648698225b77dbdb282ad5cadd70d0f31b82a4df0f608ce2",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1977-regular-shanghai-science",
+  "pdf_sha256": "6defac065a96779e3a0e44f287f7f26085f14d6d92a3b1c45842b2a85143a076",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0918
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1ae872f1-f32d-4870-b097-4fe0521351e8",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "ff1e71fd6c2629f63f4a99188310792d5eff50d4ce1f43f12856ca988d395139",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 9,
+  "paper_id": "gk-1977-regular-shanghai-science",
+  "pdf_sha256": "59a254ef121544e0104482d184de8a4ec00e668b2d85a1461c85724b90be924d",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-0919
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1ae872f1-f32d-4870-b097-4fe0521351e8",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "14560cda23ba9587c85102653709e7bf17361b560ece563bba6a64b20069c8e2",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 9,
+  "paper_id": "gk-1977-regular-shanghai-science",
+  "pdf_sha256": "59a254ef121544e0104482d184de8a4ec00e668b2d85a1461c85724b90be924d",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+
 ## ISSUE-0920
 
 ```json
@@ -14363,6 +14789,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0923
 
 ```json
@@ -14383,6 +14810,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0924
 
 ```json
@@ -14403,6 +14831,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0925
 
 ```json
@@ -14423,6 +14852,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0926
 
 ```json
@@ -14443,6 +14873,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0927
 
 ```json
@@ -14463,6 +14894,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0928
 
 ```json
@@ -14483,6 +14915,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0929
 
 ```json
@@ -14503,6 +14936,7 @@
   "type": "layout-warning"
 }
 ```
+
 ## ISSUE-0930
 
 ```json

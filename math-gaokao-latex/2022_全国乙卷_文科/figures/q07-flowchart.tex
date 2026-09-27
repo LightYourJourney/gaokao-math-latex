@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=stealth,thick,every node/.style={font=\small}]
+\node[draw,rounded corners,minimum width=1.2cm,minimum height=.55cm] (start) at (0,0) {开始};
+\node[minimum width=3.7cm,minimum height=.65cm] (input) at (0,-1.05) {输入 $a=1,b=1,n=1$};
+\draw (-1.45,-.725)--(1.85,-.725)--(1.45,-1.375)--(-1.85,-1.375)--cycle;
+\node[draw,minimum width=2.6cm,minimum height=.65cm] (bupd) at (0,-2.1) {$b=b+2a$};
+\node[draw,minimum width=3.8cm,minimum height=.65cm] (anupd) at (0,-3.15) {$a=b-a,\quad n=n+1$};
+\coordinate (testtop) at (0,-3.9);
+\coordinate (testright) at (2.7,-4.55);
+\coordinate (testbottom) at (0,-5.2);
+\coordinate (testleft) at (-2.7,-4.55);
+\draw (testtop)--(testright)--(testbottom)--(testleft)--cycle;
+\node at (0,-4.55) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
+\node[minimum width=2cm,minimum height=.65cm] (out) at (0,-6.05) {输出 $n$};
+\draw (-.7,-5.725)--(1,-5.725)--(.7,-6.375)--(-1,-6.375)--cycle;
+\node[draw,rounded corners,minimum width=1.2cm,minimum height=.55cm] (end) at (0,-7.05) {结束};
+\draw[->] (start)--(input);
+\draw[->] (input)--(bupd);
+\draw[->] (bupd)--(anupd);
+\draw[->] (anupd.south)--(testtop);
+\draw[->] (testbottom)--node[right]{是}(out);
+\draw[->] (out)--(end);
+\draw[->] (testleft)--node[above]{否}(-3.2,-4.55)|-(bupd.west);
+\end{tikzpicture}

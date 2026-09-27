@@ -698,12 +698,22 @@ def load_provenance_facts(
     )
 
     facts: Dict[str, Dict[str, Any]] = {}
+    batch_report_cache: Dict[str, bool] = {}
     for paper_id in paper_ids:
         paper = _paper(manifest, paper_id)
         state, unknown, conflicts = _provenance_observation(
             root, manifest, paper, (provenance_documents or {}).get(paper_id)
         )
         review, review_currency = review_probe(root, manifest, paper_id)
+        batch_id = _batch_of(manifest, paper_id)
+        if batch_id is None:
+            report_valid = bool(report_probe(root, manifest, paper_id))
+        else:
+            if batch_id not in batch_report_cache:
+                batch_report_cache[batch_id] = bool(
+                    report_probe(root, manifest, paper_id)
+                )
+            report_valid = batch_report_cache[batch_id]
         facts[paper_id] = {
             "provenance": state,
             "provenance_unknown": unknown,
@@ -716,7 +726,7 @@ def load_provenance_facts(
                 if item.get("paper_id") == paper_id
                 or paper_id in set(item.get("affected_paper_ids") or [])
             ),
-            "batch_report_valid": bool(report_probe(root, manifest, paper_id)),
+            "batch_report_valid": report_valid,
         }
     return facts
 

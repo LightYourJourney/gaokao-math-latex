@@ -1,19 +1,121 @@
-# 高考数学 LaTeX 阶段 0 基线
+# 高考数学 LaTeX 全量状态快照
 
-- 来源守恒：**775 = 734 + 41**（普通高考 734，春季高考 41；2004 `.txt` 不计入 PDF 来源）
-- 历史口径：21 套、84 个版本；legacy baseline 的 Overfull 为 **1**
-- 当前口径：complete 19，blocked 2，in_progress 0
-- 当前构建：84/84 succeeded
-- 当前警告重算：Overfull 0，Underfull 13，警告豁免 13
-- 上游题面不含答案的说法仅有三份抽样证据，不外推为 775 份全部无答案。
+- 来源总数：**775**（普通高考 734，春季高考 41）。
+- 来源状态：ready 775
+- 试卷总数：**221**；生产状态：answers_verified 1，blocked 28，compiled 6，complete 186
+- 批次总数：**104**；manifest 状态：closed 84，closed_with_blockers 16，compiled_pending_review 3，provenance_verified 1
+- 正式复核门禁：FINALIZED 100，INVALID_OR_STALE 3，VISUAL_FAILED 1
+- 已编译版本：884/884；构建回执状态：compiled_pending_review 7，succeeded 214
+- review 回执状态：failed 1，passed 220
+- 问题总账：930 条，未解决问题：139，阻塞完成 73。
+- 回执日志警告汇总（包含待复核回执）：Overfull 19，Underfull 37，豁免记录 56。
+- 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
+- 门禁未通过批次：phase0-b02、phase1-b20、phase1-b21、phase2-b04。
+## 批次明细
 
-## 六批终态
-
-| 批次 | 重算终态 | 回执门禁 | ownership |
-|---|---|---|---|
-| phase0-b01 | closed | FINALIZED | committed |
-| phase0-b02 | closed | FINALIZED | committed |
-| phase0-b03 | closed | FINALIZED | committed |
-| phase0-b04 | closed | FINALIZED | committed |
-| phase0-b05 | closed_with_blockers | FINALIZED | committed |
-| phase0-b06 | closed_with_blockers | FINALIZED | committed |
+| 批次 | 试卷数 | manifest 状态 | 回执门禁 | ownership |
+|---|---:|---|---|---|
+| phase0-b01 | 4 | closed | FINALIZED | validated |
+| phase0-b02 | 4 | compiled_pending_review | VISUAL_FAILED | validated |
+| phase0-b03 | 3 | closed | FINALIZED | validated |
+| phase0-b04 | 4 | closed | FINALIZED | validated |
+| phase0-b05 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase0-b06 | 2 | closed_with_blockers | FINALIZED | validated |
+| phase1-b07 | 1 | closed | FINALIZED | validated |
+| phase1-b08 | 1 | closed | FINALIZED | validated |
+| phase1-b09 | 1 | closed | FINALIZED | validated |
+| phase1-b10 | 1 | closed | FINALIZED | validated |
+| phase1-b11 | 1 | closed | FINALIZED | validated |
+| phase1-b12 | 1 | closed | FINALIZED | validated |
+| phase1-b13 | 1 | closed | FINALIZED | validated |
+| phase1-b14 | 1 | closed | FINALIZED | validated |
+| phase1-b15 | 1 | closed | FINALIZED | validated |
+| phase1-b16 | 1 | closed | FINALIZED | validated |
+| phase1-b17 | 1 | closed | FINALIZED | validated |
+| phase1-b18 | 1 | closed | FINALIZED | validated |
+| phase1-b19 | 1 | closed | FINALIZED | validated |
+| phase1-b20 | 1 | compiled_pending_review | INVALID_OR_STALE | validated |
+| phase1-b21 | 1 | compiled_pending_review | INVALID_OR_STALE | validated |
+| phase1-b22 | 1 | closed | FINALIZED | validated |
+| phase2-b23 | 2 | closed | FINALIZED | validated |
+| phase2-b24 | 2 | closed | FINALIZED | validated |
+| phase2-b25 | 1 | closed | FINALIZED | validated |
+| phase2-b26 | 1 | closed | FINALIZED | validated |
+| phase2-b27 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b28 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b29 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b30 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b31 | 1 | closed | FINALIZED | validated |
+| phase2-b32 | 1 | closed | FINALIZED | validated |
+| phase2-b33 | 4 | closed | FINALIZED | validated |
+| phase2-b34 | 4 | closed | FINALIZED | validated |
+| phase2-b35 | 4 | closed | FINALIZED | validated |
+| phase2-b36 | 4 | closed | FINALIZED | validated |
+| phase2-b37 | 4 | closed | FINALIZED | validated |
+| phase2-b38 | 4 | closed | FINALIZED | validated |
+| phase2-b39 | 4 | closed | FINALIZED | validated |
+| phase2-b40 | 1 | closed | FINALIZED | validated |
+| phase2-b41 | 4 | closed | FINALIZED | validated |
+| phase2-b42 | 4 | closed | FINALIZED | validated |
+| phase2-b43 | 4 | closed | FINALIZED | validated |
+| phase2-b44 | 3 | closed | FINALIZED | validated |
+| phase2-b45 | 4 | closed | FINALIZED | validated |
+| phase2-b46 | 4 | closed | FINALIZED | validated |
+| phase2-b47 | 3 | closed | FINALIZED | validated |
+| phase2-b48 | 4 | closed | FINALIZED | validated |
+| phase2-b49 | 4 | closed | FINALIZED | validated |
+| phase2-b50 | 4 | closed | FINALIZED | validated |
+| phase2-b51 | 1 | closed | FINALIZED | validated |
+| phase2-b52 | 1 | closed | FINALIZED | validated |
+| phase2-b53 | 1 | closed | FINALIZED | validated |
+| phase2-b54 | 1 | closed | FINALIZED | validated |
+| phase2-b55 | 1 | closed | FINALIZED | validated |
+| phase2-b56 | 2 | closed | FINALIZED | validated |
+| phase2-b57 | 2 | closed | FINALIZED | validated |
+| phase2-b58 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b59 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b60 | 1 | closed | FINALIZED | validated |
+| phase2-b61 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b62 | 1 | closed | FINALIZED | validated |
+| phase2-b63 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b64 | 1 | closed | FINALIZED | validated |
+| phase2-b65 | 1 | closed | FINALIZED | validated |
+| phase2-b66 | 1 | closed | FINALIZED | validated |
+| phase2-b67 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b68 | 1 | closed | FINALIZED | validated |
+| phase2-b69 | 1 | closed | FINALIZED | validated |
+| phase2-b70 | 1 | closed | FINALIZED | validated |
+| phase2-b71 | 1 | closed | FINALIZED | validated |
+| phase2-b72 | 1 | closed | FINALIZED | validated |
+| phase2-b73 | 1 | closed | FINALIZED | validated |
+| phase2-b74 | 1 | closed | FINALIZED | validated |
+| phase2-b75 | 1 | closed | FINALIZED | validated |
+| phase2-b76 | 1 | closed | FINALIZED | validated |
+| phase2-b77 | 1 | closed | FINALIZED | validated |
+| phase2-b78 | 1 | closed | FINALIZED | validated |
+| phase2-b79 | 1 | closed | FINALIZED | validated |
+| phase2-b80 | 1 | closed | FINALIZED | validated |
+| phase2-b81 | 1 | closed | FINALIZED | validated |
+| phase2-b82 | 1 | closed | FINALIZED | validated |
+| phase2-b83 | 1 | closed | FINALIZED | validated |
+| phase2-b84 | 1 | closed | FINALIZED | validated |
+| phase2-b85 | 1 | closed | FINALIZED | validated |
+| phase2-b86 | 2 | closed | FINALIZED | validated |
+| phase2-b87 | 1 | closed | FINALIZED | validated |
+| phase2-b88 | 2 | closed | FINALIZED | validated |
+| phase2-b89 | 2 | closed | FINALIZED | validated |
+| phase2-b90 | 2 | closed | FINALIZED | validated |
+| phase2-b91 | 2 | closed | FINALIZED | validated |
+| phase2-b92 | 4 | closed | FINALIZED | validated |
+| phase2-b93 | 4 | closed | FINALIZED | validated |
+| phase2-b94 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b95 | 4 | closed | FINALIZED | validated |
+| phase2-b96 | 4 | closed | FINALIZED | validated |
+| phase2-b97 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b98 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b99 | 6 | closed | FINALIZED | validated |
+| phase2-b00 | 4 | closed | FINALIZED | validated |
+| phase2-b01 | 4 | closed | FINALIZED | validated |
+| phase2-b02 | 8 | closed_with_blockers | FINALIZED | validated |
+| phase2-b03 | 3 | closed_with_blockers | FINALIZED | validated |
+| phase2-b04 | 4 | provenance_verified | INVALID_OR_STALE | validated |

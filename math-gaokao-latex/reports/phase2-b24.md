@@ -9,8 +9,8 @@
 
 - 标题：1977 年·北京卷·文科
 - 项目目录：`1977_北京卷_文科`
-- 构建：`succeeded`（attempt `be04cbe8-4a97-4bf4-9a9d-00281e93fe7c`）
-- 审查：`passed`（2026-09-12T11:13:13+08:00）
+- 构建：`succeeded`（attempt `5cf6ab7a-cb71-4ff0-9d7c-5bbc1eb0ba8a`）
+- 审查：`passed`（2026-09-25T06:49:49+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 1；解析版 7；简答版 2；印刷版 6
 - 警告豁免：0
@@ -21,8 +21,8 @@
 
 - 标题：1977 年·北京卷·理科
 - 项目目录：`1977_北京卷_理科`
-- 构建：`succeeded`（attempt `c810a510-58dc-44cc-9d16-c0ff183f77da`）
-- 审查：`passed`（2026-09-12T11:13:13+08:00）
+- 构建：`succeeded`（attempt `ad2b3bbe-ecfb-4d6c-b596-0c0f2a8db7f5`）
+- 审查：`passed`（2026-09-25T06:49:49+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 10；简答版 3；印刷版 8
 - 警告豁免：0

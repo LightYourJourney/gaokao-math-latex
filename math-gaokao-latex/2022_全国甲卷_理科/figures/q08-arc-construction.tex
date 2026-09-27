@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=1.15]
+\coordinate (O) at (0,-1.732);
+\coordinate (A) at (-1,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (0,0);
+\coordinate (D) at (0,0.268);
+\draw (A) -- (O) -- (B);
+\draw (A) -- (B);
+\draw (O) ++(60:2) arc (60:120:2);
+\draw (D) -- (C);
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[above] at (D) {$D$};
+\node[below] at (C) {$C$};
+\node[below] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=0.8cm,y=0.8cm,font=\small]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.4,0);
+  \coordinate (C) at (4.6,1.1);
+  \coordinate (D) at (1.2,1.1);
+  \coordinate (E) at (1.7,2.1);
+  \coordinate (F) at (4.0,2.7);
+  \coordinate (G) at (2.9,3.6);
+  \coordinate (H) at (0.6,2.9);
+  \draw (A)--(B)--(C);
+  \draw[dashed] (C)--(D);
+  \draw (D)--(A);
+  \draw (A)--(E)--(B);
+  \draw (B)--(F)--(C);
+  \draw[dashed] (C)--(G)--(D);
+  \draw[dashed] (D)--(H);
+  \draw (H)--(A);
+  \draw (E)--(F)--(G);
+  \draw (G)--(H)--(E);
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[above] at (G) {$G$};
+  \node[left] at (H) {$H$};
+\end{tikzpicture}

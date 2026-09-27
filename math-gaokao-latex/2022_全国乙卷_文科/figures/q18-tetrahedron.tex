@@ -1,0 +1,21 @@
+\begin{tikzpicture}[thick,line cap=round,line join=round,every node/.style={font=\small}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,1.1);
+\coordinate (D) at (1.25,4.2);
+\coordinate (C) at (2.45,2.35);
+\coordinate (E) at (1.225,1.175);
+\coordinate (F) at (3.125,2.65);
+\draw (A)--(D)--(B)--(A);
+\draw (A)--(C);
+\draw[dashed] (D)--(C);
+\draw[dashed] (C)--(B);
+\draw[dashed] (D)--(E);
+\draw[dashed] (E)--(B);
+\draw (A)--(F);
+\node[below left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[above] at (D) {$D$};
+\node[above right] at (C) {$C$};
+\node[below] at (E) {$E$};
+\node[above right] at (F) {$F$};
+\end{tikzpicture}

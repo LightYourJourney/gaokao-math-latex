@@ -67,6 +67,14 @@ _SOURCE_ISSUE_TYPES = {
 }
 _FIGURE_INPUT_RE = re.compile(r"\\input\{figures/([^{}/]+)\}")
 _MARKDOWN_IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+_MARKDOWN_TEX_FIGURE_LINK_RE = re.compile(
+    r"(?m)^[ \t]*\[[^\]]*\]\(([^)\s]+)"
+    r"(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)[ \t]*$"
+)
+_MARKDOWN_LINK_ANY_RE = re.compile(
+    r"(?<!!)\[[^\]]*\]\(([^)\s]+)"
+    r"(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)"
+)
 
 # 规范工程根目录由 manifest 目标路径固定，迁移时不另行猜测。
 PROJECT_RELATIVE = PurePosixPath(MANIFEST_TARGET).parent.as_posix()
@@ -1854,7 +1862,73 @@ def _figure_files(
     if actual != list(figure_names):
         raise ValueError(f"{project_dir}: figures 目录与 legacy index 登记不一致")
 
-    tex_order, tex_counts = _ordered_reference_counts(
+    stems = [str(name)[: -len(".tex")] for name in figure_names]
+    source_texts = [
+        (key, source_files[key], _read_repo_text(repo_root, source_files[key]))
+        for key in FIGURE_COUNT_SOURCE_KEYS
+    ]
+    image_order, image_counts = _ordered_reference_counts(
+        [text for _, _, text in source_texts], _MARKDOWN_IMAGE_RE
+    )
+
+    # 新稿可直接链接到本卷已登记的 TikZ 源。此模式不依赖尚未生成的
+    # questions.tex/answers.tex；相对链接按各自 Markdown 文件所在目录解析。
+    direct_links = []
+    inline_tex_links = []
+    for key, source_path, text in source_texts:
+        standalone = list(_MARKDOWN_TEX_FIGURE_LINK_RE.finditer(text))
+        standalone_tex = []
+        for match in standalone:
+            target = match.group(1)
+            parsed = urllib.parse.urlsplit(urllib.parse.unquote(target))
+            if not parsed.scheme and not parsed.netloc and parsed.path.lower().endswith(".tex"):
+                standalone_tex.append((source_path, target))
+        for match in _MARKDOWN_LINK_ANY_RE.finditer(text):
+            target = match.group(1)
+            parsed = urllib.parse.urlsplit(urllib.parse.unquote(target))
+            if not parsed.scheme and not parsed.netloc and parsed.path.lower().endswith(".tex"):
+                inline_tex_links.append((source_path, target))
+        direct_links.extend(standalone_tex)
+
+    if len(inline_tex_links) != len(direct_links):
+        raise ValueError(f"{project_dir}: 图稿链接必须独立成段")
+
+    if direct_links:
+        if image_order:
+            raise ValueError(
+                f"{project_dir}: 图稿链接与旧式 Markdown 图片不能混用"
+            )
+        registered = {
+            "%s/%s/figures/%s" % (PROJECT_RELATIVE, project_dir, name):
+            "%s/figures/%s" % (project_dir, name)
+            for name in figure_names
+        }
+        link_counts: Dict[str, int] = {}
+        for source_path, target in direct_links:
+            parsed = urllib.parse.urlsplit(urllib.parse.unquote(target))
+            if (
+                parsed.scheme or parsed.netloc or parsed.query or parsed.fragment
+                or not parsed.path or parsed.path.startswith("/")
+            ):
+                raise ValueError(
+                    f"{project_dir}: 图稿链接必须是本卷 figures/*.tex 的相对路径：{target}"
+                )
+            resolved = posixpath.normpath(
+                posixpath.join(posixpath.dirname(source_path), parsed.path)
+            )
+            if resolved not in registered:
+                raise ValueError(
+                    f"{project_dir}: 图稿链接指向未登记的本卷图稿：{target}"
+                )
+            link_counts[resolved] = link_counts.get(resolved, 0) + 1
+        if set(link_counts) != set(registered):
+            raise ValueError(f"{project_dir}: 图稿链接与 figure 登记不一致")
+        return [
+            {"path": relative, "expected_occurrences": link_counts[repo_path]}
+            for repo_path, relative in sorted(registered.items())
+        ]
+
+    tex_order, _ = _ordered_reference_counts(
         [
             _read_repo_text(
                 repo_root, "%s/%s/%s" % (PROJECT_RELATIVE, project_dir, name)
@@ -1863,17 +1937,9 @@ def _figure_files(
         ],
         _FIGURE_INPUT_RE,
     )
-    stems = [str(name)[: -len(".tex")] for name in figure_names]
     if sorted(tex_order) != sorted(stems):
         raise ValueError(f"{project_dir}: 存在未引用或未登记的 figure")
 
-    image_order, image_counts = _ordered_reference_counts(
-        [
-            _read_repo_text(repo_root, source_files[key])
-            for key in FIGURE_COUNT_SOURCE_KEYS
-        ],
-        _MARKDOWN_IMAGE_RE,
-    )
     if len(image_order) != len(tex_order):
         raise ValueError(
             "%s: 规范 Markdown 图片数 %d 与登记 figure 数 %d 不一致"

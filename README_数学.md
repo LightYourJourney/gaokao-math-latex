@@ -1,19 +1,15 @@
 # 高考数学资料说明
 
-## 阶段 0 状态
+- 来源总数：**775**（普通高考 734，春季高考 41）。
+- 来源状态：ready 775
+- 试卷总数：**221**；生产状态：answers_verified 1，blocked 28，compiled 6，complete 186
+- 批次总数：**104**；manifest 状态：closed 84，closed_with_blockers 16，compiled_pending_review 3，provenance_verified 1
+- 正式复核门禁：FINALIZED 100，INVALID_OR_STALE 3，VISUAL_FAILED 1
+- 已编译版本：884/884；构建回执状态：compiled_pending_review 7，succeeded 214
+- review 回执状态：failed 1，passed 220
+- 问题总账：930 条，未解决问题：139，阻塞完成 73。
+- 回执日志警告汇总（包含待复核回执）：Overfull 19，Underfull 37，豁免记录 56。
+- 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
+- 门禁未通过批次：phase0-b02、phase1-b20、phase1-b21、phase2-b04。
 
-- 来源守恒：**775 = 734 + 41**（普通高考 734，春季高考 41；2004 `.txt` 不计入 PDF 来源）
-- 历史口径：21 套、84 个版本；legacy baseline 的 Overfull 为 **1**
-- 当前口径：complete 19，blocked 2，in_progress 0
-- 当前构建：84/84 succeeded
-- 当前警告重算：Overfull 0，Underfull 13，警告豁免 13
-- 上游题面不含答案的说法仅有三份抽样证据，不外推为 775 份全部无答案。
-
-| 批次 | 重算终态 | 回执门禁 | ownership |
-|---|---|---|---|
-| phase0-b01 | closed | FINALIZED | committed |
-| phase0-b02 | closed | FINALIZED | committed |
-| phase0-b03 | closed | FINALIZED | committed |
-| phase0-b04 | closed | FINALIZED | committed |
-| phase0-b05 | closed_with_blockers | FINALIZED | committed |
-| phase0-b06 | closed_with_blockers | FINALIZED | committed |
+完整构建、复核和缺失事项见 `report.md` 与 `math-gaokao-latex/missing-issues.md`。

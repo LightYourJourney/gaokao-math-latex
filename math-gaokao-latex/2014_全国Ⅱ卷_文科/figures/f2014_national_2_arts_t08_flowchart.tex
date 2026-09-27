@@ -17,6 +17,6 @@
   \node[term,below=of output] (end) {结束};
   \draw[->] (start)--(input)--(init)--(kinit)--(cond);
   \draw[->] (cond.south west)--node[left] {是}(calc)--(sum)--(inc);
-  \draw[->] (inc.west)-| ([xshift=-19mm]cond.west) |- (cond.north);
+  \draw[->] (inc.west)-| ([xshift=-48mm]cond.west) |- (cond.north);
   \draw[->] (cond.south east)--node[right] {否}(output)--(end);
 \end{tikzpicture}
