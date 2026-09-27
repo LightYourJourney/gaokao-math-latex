@@ -14973,3 +14973,37 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-0932
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页与规范题面均只写 a>0，未要求 C1、C2 有非空交集。两圆圆心距为 √5、半径为 a 与 2；空交集时还存在 0<a<√5−2 或 a>√5+2。按全称命题字面读法条件空真；按考试常规预设公共点则答案 a=1。全国Ⅰ文、理源卷此题同文。",
+  "fingerprint": "14403c9fdcf879138f22fc2d50a488b48fc6a030d313847c5965c118d3add8cb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-1-arts",
+  "question_id": "gk-2016-regular-national-1-arts-q23",
+  "resume_action": "查找该题官方答案或命题说明，确认“公共点都在”是否预设非空交集；消歧前保留惯常解读 a=1 但标 U，并阻止该卷完成。",
+  "source_id": "src-31bfc647b7ec677fe34d4e50a2fb23184952e0ecbc1c67cfcbc99ed302b81240",
+  "status": "investigating",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0933
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页与规范题面均只写 a>0，未要求 C1、C2 有非空交集。两圆圆心距为 √5、半径为 a 与 2；空交集时还存在 0<a<√5−2 或 a>√5+2。按全称命题字面读法条件空真；按考试常规预设公共点则答案 a=1。全国Ⅰ文、理源卷此题同文。",
+  "fingerprint": "f37261ece1a5c75dbe3c53514fe37b2323480eadd74a7d522da072bbb840b889",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-1-science",
+  "question_id": "gk-2016-regular-national-1-science-q23",
+  "resume_action": "查找该题官方答案或命题说明，确认“公共点都在”是否预设非空交集；消歧前保留惯常解读 a=1 但标 U，并阻止该卷完成。",
+  "source_id": "src-22dfb5d209bc2df4fdd197e76b3e16e72bd49aa0d196debfeea5fa6c7e9d2e4b",
+  "status": "investigating",
+  "type": "answer-conflict"
+}
+```
