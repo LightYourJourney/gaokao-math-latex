@@ -15344,3 +15344,178 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0952
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 印刷页 1043 第17题仅给 a1=-1、b1=1、a2+b2=2、T3=21。令等差公差 d、等比公比 q，则 d+q=3 且 1+q+q^2=21，得到两个非零合法公比 q=4、q=-5；相应 S3=6-3q，分别为 -6、21。全国Ⅱ文科 solver 与独立 blind reviewer 均从题面独立得到这两支，未发现能排除任一支的印刷条件。",
+  "fingerprint": "a406351b9a3dc21b74073f84f529008d9cb16a07581ff2114a46dde10da452bf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "question_id": "gk-2017-regular-national-2-arts-q17",
+  "resume_action": "取得可追溯的同版官方勘误或可靠说明，确认原卷是否遗漏用于选定公比的条件；若无勘误，继续保留所有满足原题的分支并标为 U。",
+  "source_id": "src-0a282ae5bb0daabc25cea61ee4d965a48b2fc56a5877a5388d6795a178b22efa",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0953
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 印刷页 1046 第20题设抛物线 y²=2x，直线过 (2,0)，以两交点为直径的圆过 P(4,-2)，要求直线和圆方程。solver 与独立 blind reviewer 在隔离完成后均从题设推得两组有效解：k=1，l:y=x-2，圆 x²+y²-6x-2y=0；k=-2，l:y=-2x+4，圆 x²+y²-(9/2)x+y=0。两条直线各与抛物线有两个不同交点，所成直径圆均过 O 与 P；原题未给条件选定其中一组，故答案不唯一，应标 U。",
+  "fingerprint": "8e7dc4c3d700bee120ef132252e50558c6b3217e080ed4b69f5f7f9aee344d7e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-national-3-science",
+  "question_id": "gk-2017-regular-national-3-science-q20",
+  "resume_action": "取得同版可靠勘误或来源说明以确认原题遗漏的选解条件；若无勘误，保留两组满足原题的解并标 U，不补造条件。",
+  "source_id": "src-63aac70d1ccb26b495575266a078b3eeebdfa0fbe6e7f05ff309c4a1a6d7775b",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0954
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "21b1d2e41f8792e8cf48fcc7e5cc40edb5807b67c5d4e0ef14e8dc70df166ec3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "question_id": "gk-2017-regular-national-2-arts-q17",
+  "resume_action": "取得同版可靠勘误，确认是否遗漏了用于唯一确定第17题答案的条件；在此之前保留全部合法分支并将单一答案证据标为 U。",
+  "source_id": "src-0a282ae5bb0daabc25cea61ee4d965a48b2fc56a5877a5388d6795a178b22efa",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0955
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "c0cc38fb055b6805bacf42ba2d14cdf7a5180e531b8e88f88b44083ed9950b80",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-national-3-science",
+  "question_id": "gk-2017-regular-national-3-science-q20",
+  "resume_action": "取得同版可靠勘误，确认是否遗漏了用于唯一确定第20题直线/圆的条件；在此之前保留两组合法解并将单一答案证据标为 U。",
+  "source_id": "src-63aac70d1ccb26b495575266a078b3eeebdfa0fbe6e7f05ff309c4a1a6d7775b",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0956
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "d8fc7eab08dacd59fac6e86c5d3b1f46ecb39d063db480fd6943422ad20fbf31",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0957
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "d15601a651897279191a43fa87f790ee9e5716ba99fd57a8a01833e835ef202e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0958
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "5713137b1752810749a57bb11e85fa45aa61824dce3c1eae29ab60f1e762dde2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0959
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "2606a09ebcec679c58a27e16d8af3674cd2b3ea0c211b51670e78a68f326b8c6",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0960
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "6e31202dfb4fe49e33f83fa335a2a02a1c8c2d97415f6aa807d60ce27240d7d2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-0961
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "66df70bde52ee9fdc1a5911d21b2d26dbd978d9cdceb6f955b3e79e0e80717b2",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2017-regular-national-2-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

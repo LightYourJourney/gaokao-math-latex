@@ -970,6 +970,17 @@
         "gk-2023-regular-national-b-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2017-regular-national-2-arts",
+        "gk-2017-regular-national-2-science",
+        "gk-2017-regular-national-3-arts",
+        "gk-2017-regular-national-3-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -979,7 +990,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "48632786-1b10-4fcc-b501-69853128e1cb",
+  "last_transaction_id": "b8eab1c3-0e8a-4aef-ad3c-caac445e5747",
   "papers": [
     {
       "blocked_from": null,
@@ -15452,9 +15463,282 @@
       "title": "2023 年·全国乙卷·理科",
       "track": "science",
       "year": 2023
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_文科/figures/q06-cylinder-cut-three-views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_文科/figures/q10-alternating-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_文科/figures/q18-tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_文科/figures/q19-fish-histograms.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2017_g2_wen",
+        "id": "gk-2017-regular-national-2-arts",
+        "note": "固定源仅含题面；答案解析独立推导；无印刷选答说明。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国Ⅱ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国Ⅱ文"
+      },
+      "issue_ids": [
+        "ISSUE-0952",
+        "ISSUE-0954",
+        "ISSUE-0956",
+        "ISSUE-0957",
+        "ISSUE-0958"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-2-arts",
+      "production_state": "blocked",
+      "project_dir": "2017_全国Ⅱ卷_文科",
+      "question_count": 23,
+      "resume_action": "取得可追溯的同版官方勘误或可靠说明，确认原卷是否遗漏用于选定公比的条件；若无勘误，继续保留所有满足原题的分支并标为 U。",
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_全国2文_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_全国2文_含解析.md",
+        "questions": "2017/2017_数学真题_全国2文_试题.md",
+        "solution_body": "2017/2017_数学真题_全国2文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0a282ae5bb0daabc25cea61ee4d965a48b2fc56a5877a5388d6795a178b22efa"
+      ],
+      "title": "2017 年·全国Ⅱ卷·文科",
+      "track": "arts",
+      "year": 2017
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_理科/figures/q04-cylinder-cut-three-views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_理科/figures/q08-alternating-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_理科/figures/q18-fish-histograms.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅱ卷_理科/figures/q19-tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2017_g2_li",
+        "id": "gk-2017-regular-national-2-science",
+        "note": "固定源仅含题面；答案解析独立推导；无印刷选答说明。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国Ⅱ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国Ⅱ理"
+      },
+      "issue_ids": [
+        "ISSUE-0959",
+        "ISSUE-0960",
+        "ISSUE-0961"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-2-science",
+      "production_state": "complete",
+      "project_dir": "2017_全国Ⅱ卷_理科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_全国2理_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_全国2理_含解析.md",
+        "questions": "2017/2017_数学真题_全国2理_试题.md",
+        "solution_body": "2017/2017_数学真题_全国2理_解析正文.md"
+      },
+      "source_ids": [
+        "src-66fc39c8a228d7f9d261ffecfbf73dcb48f52a25ea44ab64caee84b79660b751"
+      ],
+      "title": "2017 年·全国Ⅱ卷·理科",
+      "track": "science",
+      "year": 2017
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_文科/figures/q03-tourist-arrivals.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_文科/figures/q07-function-graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_文科/figures/q08-alternating-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_文科/figures/q19-tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2017_g3_wen",
+        "id": "gk-2017-regular-national-3-arts",
+        "note": "固定源仅含题面；答案解析独立推导；无印刷选答说明。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国Ⅲ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国Ⅲ文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-3-arts",
+      "production_state": "complete",
+      "project_dir": "2017_全国Ⅲ卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_全国3文_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_全国3文_含解析.md",
+        "questions": "2017/2017_数学真题_全国3文_试题.md",
+        "solution_body": "2017/2017_数学真题_全国3文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7d6ac0cf61f57763f4e0dd11dbe9c630967ffbedd57eb7b43232a129ef7cea95"
+      ],
+      "title": "2017 年·全国Ⅲ卷·文科",
+      "track": "arts",
+      "year": 2017
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_理科/figures/q03-tourist-arrivals.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_理科/figures/q07-alternating-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2017_全国Ⅲ卷_理科/figures/q19-tetrahedron.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2017_g3_li",
+        "id": "gk-2017-regular-national-3-science",
+        "note": "固定源仅含题面；答案解析独立推导；无印刷选答说明。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国Ⅲ卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国Ⅲ理"
+      },
+      "issue_ids": [
+        "ISSUE-0953",
+        "ISSUE-0955"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-national-3-science",
+      "production_state": "blocked",
+      "project_dir": "2017_全国Ⅲ卷_理科",
+      "question_count": 23,
+      "resume_action": "取得同版可靠勘误或来源说明以确认原题遗漏的选解条件；若无勘误，保留两组满足原题的解并标 U，不补造条件。",
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_全国3理_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_全国3理_含解析.md",
+        "questions": "2017/2017_数学真题_全国3理_试题.md",
+        "solution_body": "2017/2017_数学真题_全国3理_解析正文.md"
+      },
+      "source_ids": [
+        "src-63aac70d1ccb26b495575266a078b3eeebdfa0fbe6e7f05ff309c4a1a6d7775b"
+      ],
+      "title": "2017 年·全国Ⅲ卷·理科",
+      "track": "science",
+      "year": 2017
     }
   ],
-  "revision": 3255,
+  "revision": 3281,
   "schema_version": 1,
   "sources": [
     {
@@ -31743,8 +32027,8 @@
       "exam_type": "regular",
       "git_blob_oid": "15eb67d9ab63975ea32553a6c3273673a6c90ca5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-2-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国2文(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南,宁夏,新疆,陕西,重庆).pdf",
       "regions": [],
       "source_id": "src-0a282ae5bb0daabc25cea61ee4d965a48b2fc56a5877a5388d6795a178b22efa",
@@ -31767,8 +32051,8 @@
       "exam_type": "regular",
       "git_blob_oid": "adcf1a5cf92ad5c2bbd32cb9a13a14b712266685",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-2-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国2理(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南,宁夏,新疆,陕西,重庆).pdf",
       "regions": [],
       "source_id": "src-66fc39c8a228d7f9d261ffecfbf73dcb48f52a25ea44ab64caee84b79660b751",
@@ -31791,8 +32075,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1808f14ba3e8dce97463758d32268d997b576fd4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-3-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国3文(云南,广西,贵州,四川,西藏).pdf",
       "regions": [],
       "source_id": "src-7d6ac0cf61f57763f4e0dd11dbe9c630967ffbedd57eb7b43232a129ef7cea95",
@@ -31815,8 +32099,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bfa83da2f47c10de2bd8172fe25baf4eb0c21e3a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-national-3-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017全国3理(云南,广西,贵州,四川,西藏).pdf",
       "regions": [],
       "source_id": "src-63aac70d1ccb26b495575266a078b3eeebdfa0fbe6e7f05ff309c4a1a6d7775b",
