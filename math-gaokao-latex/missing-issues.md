@@ -14800,17 +14800,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "8f80a43ebf39cc63cfd8421bfd770b8bd8f1e206091ad90cf9298b62b015d202",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 20,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 20 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0924
 
 ```json
@@ -14821,23 +14820,22 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "26dbd18ad808250a02bbc6773d4fa726d1741bb4ad21375ef4fbfbfe88a48fb1",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 22,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 22 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0925
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
   "check_code": "heading_number",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -14846,19 +14844,18 @@
   "origin": "visual-review",
   "page": 23,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "9c8493861296eef7f557aa90894ccef664122878e0549edddceb092e12f931e6",
+  "pdf_sha256": "c69b05148f12e22a237b94450918be4f9bd84fa1a452640073b23405ecdadf32",
   "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0926
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
   "check_code": "heading_number",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -14867,13 +14864,12 @@
   "origin": "visual-review",
   "page": 7,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "000632d50792385a25e9d9cf1eaf044e46e71b1a06f027d64072498d973e32cd",
+  "pdf_sha256": "e279edebc810f2a77303d9d39a365ed240051e565818a88d321b85228999574e",
   "resume_action": "修正 gk-2020-regular-national-1-arts 的 简答版 第 7 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0927
 
 ```json
@@ -14884,17 +14880,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "0b1bf905c639265833983b133ddd64a31cf6c433270ef9b9a8366fbd744454da",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 27,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 27 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0928
 
 ```json
@@ -14905,23 +14900,22 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "f463448e51a8b21e8944d747d880c0113bf84024390d41d2158f16b2dd680809",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 30,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 30 页 glyph（解析结尾处可见孤立实心黑方块（QED 终止标记未按预期呈现），属于字形异常。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0929
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
   "check_code": "heading_number",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -14930,19 +14924,18 @@
   "origin": "visual-review",
   "page": 32,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "a16c24221e7554da1de5cf225788308dcf071f748d937566af7d2d9f0ed95059",
+  "pdf_sha256": "18ccecb85d8b108a0e83ed40a3911bebd69796d36da77610fe84770bea95cbef",
   "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 32 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0930
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "f6a1bc8b-f5f7-4d86-8ea0-b532277cad21",
+  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
   "check_code": "heading_number",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -14951,13 +14944,12 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "b170ee5aa82a852232a3b43490b9a74b41bb2b4fd922b48e63957363373ff1c5",
+  "pdf_sha256": "21e4aa76db6f9c936240b91221c5bef25c4bc815f24868f39f56552f825bd93b",
   "resume_action": "修正 gk-2020-regular-national-1-arts 的 试题版 第 5 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0931
 
 ```json

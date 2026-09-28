@@ -62,7 +62,8 @@ def _normalize_post_baseline_repairs(relative, text):
     # These exceptions are tied to reviewed commits, not to an open-ended
     # content allowlist: 1aa2f46b (2017 regions), 94db44de (2019 arts q5),
     # 9172712f (2019 science q6 wording), 178b4c31 (2019 science q6 vector
-    # figure), and 6ce2e0ac (2020 source/solution corrections).  The actual
+    # figure), and 6ce2e0ac (2020 source/solution corrections), plus the two
+    # visually reviewed 2020 arts QED glyph substitutions below.  The actual
     # files remain hash-pinned in the ledger.
     if relative == (
         "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
@@ -173,6 +174,19 @@ def _normalize_post_baseline_repairs(relative, text):
                 ("某校一个课外学习小组", "2020 arts q5 source wording"),
         }
         prefix, description = prefixes[relative]
+        if relative == "math-gaokao-latex/2020_全国Ⅰ卷_文科/answers.tex":
+            old_qed = r"\blacksquare"
+            new_qed = r"\square"
+            counts = (text.count(old_qed), text.count(new_qed))
+            if counts == (2, 0):
+                text = text.replace(old_qed, "[post-baseline QED glyph repair]")
+            elif counts == (0, 2):
+                text = text.replace(new_qed, "[post-baseline QED glyph repair]")
+            else:
+                raise AssertionError(
+                    "2020 arts QED repair must match exactly two old or new markers: %r"
+                    % (counts,)
+                )
         lines = text.splitlines()
         matches = [
             index for index, line in enumerate(lines)
