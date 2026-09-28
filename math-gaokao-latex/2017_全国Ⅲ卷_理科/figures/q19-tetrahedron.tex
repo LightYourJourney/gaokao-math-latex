@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=0.82cm,y=0.82cm,line cap=round,line join=round,line width=0.75pt,font=\small]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4.2,0.75);
+\coordinate (D) at (1.4,3.7);
+\coordinate (C) at (1.65,1.35);
+\coordinate (E) at (2.8,2.0);
+\draw (A)--(B)--(D)--cycle;
+\draw[dashed] (A)--(C)--(B);
+\draw[dashed] (C)--(D);
+\draw (A)--(E);
+\draw[dashed] (C)--(E);
+\fill (C) circle (1.1pt);
+\fill (E) circle (1.1pt);
+\node[below left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[above] at (D) {$D$};
+\node[left] at (C) {$C$};
+\node[right] at (E) {$E$};
+\end{tikzpicture}

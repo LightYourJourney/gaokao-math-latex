@@ -1,0 +1,564 @@
+% answers.tex —— 2017 年·全国Ⅲ卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2017/2017_数学真题_全国3理_试题.md + 2017/2017_数学真题_全国3理_解析正文.md + 2017/2017_数学真题_全国3理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{解析归属}：固定来源仅含题面。以下推导由本库独立完成并经不同角色盲核，非官方解析。第 6 题注明周期用语约定；第 20(2) 题有两组均满足条件的解，保留未决状态。
+\end{gknotice}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 \(A=\{(x,y)\mid x^2+y^2=1\}\)，\(B=\{(x,y)\mid y=x\}\)，则 \(A\cap B\) 中元素的个数为（　）
+
+   （A）3　　（B）2　　（C）1　　（D）0
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+联立 \(y=x\) 与 \(x^2+y^2=1\)，得到 \(2x^2=1\)，对应两个不同交点。
+
+\gkanswer{答案：B（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设复数 \(z\) 满足 \((1+i)z=2i\)，则 \(|z|=\)（　）
+
+   （A）\(\dfrac12\)　　（B）\(\dfrac{\sqrt2}{2}\)　　（C）\(\sqrt2\)　　（D）2
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(z=2\mathrm i/(1+\mathrm i)=1+\mathrm i\)，直接计算模长。
+
+\gkanswer{答案：C（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+某城市为了解游客人数的变化规律，提高旅游服务质量，收集并整理了 2014 年 1 月至 2016 年 12 月期间月接待游客量（单位：万人）的数据，绘制了下面的折线图。
+\nopagebreak[4]
+\begin{center}\input{figures/q03-tourist-arrivals}\end{center}
+\nopagebreak[4]
+   根据该折线图，下列结论错误的是（　）
+
+   （A）月接待游客量逐月增加
+
+   （B）年接待游客量逐年增加
+
+   （C）各年的月接待游客量高峰期大致在 7、8 月
+
+   （D）各年 1 月至 6 月的月接待游客量相对于 7 月至 12 月，波动性更小，变化比较平稳
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+月度折线存在下降段，所以“逐月增加”不成立；其余判断分别比较各年合计、高峰月份与半年间波动。
+
+\gkanswer{答案：A（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+\((x+y)(2x-y)^5\) 的展开式中的 \(x^3y^3\) 系数为（　）
+
+   （A）\(-80\)　　（B）\(-40\)　　（C）40　　（D）80
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在 \(x(2x-y)^5\) 中取 \(x^2y^3\) 项，系数为 \(-40\)；在 \(y(2x-y)^5\) 中取 \(x^3y^2\) 项，系数为 \(80\)，相加得到目标系数。
+
+\gkanswer{答案：C（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+已知双曲线 \(C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\ (a>0,b>0)\) 的一条渐近线方程为 \(y=\dfrac{\sqrt5}{2}x\)，且与椭圆 \(\dfrac{x^2}{12}+\dfrac{y^2}{3}=1\) 有公共焦点，则 \(C\) 的方程为（　）
+
+   （A）\(\dfrac{x^2}{8}-\dfrac{y^2}{10}=1\)　　（B）\(\dfrac{x^2}{4}-\dfrac{y^2}{5}=1\)　　（C）\(\dfrac{x^2}{5}-\dfrac{y^2}{4}=1\)　　（D）\(\dfrac{x^2}{4}-\dfrac{y^2}{3}=1\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+渐近线给出 \(b^2/a^2=5/4\)。椭圆焦距参数平方为 \(12-3=9\)，与双曲线共焦点使 \(a^2+b^2=9\)，联立确定两参数平方。
+
+\gkanswer{答案：B（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设函数 \(f(x)=\cos\left(x+\dfrac\pi3\right)\)，则下列结论错误的是（　）
+
+   （A）\(f(x)\) 的一个周期为 \(-2\pi\)
+
+   （B）\(y=f(x)\) 的图象关于直线 \(x=\dfrac{8\pi}{3}\) 对称
+
+   （C）\(f(x+\pi)\) 的一个零点为 \(x=\dfrac\pi6\)
+
+   （D）\(f(x)\) 在 \(\left(\dfrac\pi2,\pi\right)\) 单调递减
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按高中三角函数通常定义，满足 \(f(x+T)=f(x)\) 的任意非零 \(T\) 均为周期，故题面所列负数仍是周期。对其余选项代入对称轴/零点条件核对；对区间单调性，\(f'(x)=-\sin(x+\pi/3)\) 在区间内变号。此判断采用“周期可为负的非零数”这一通常定义；若另限定周期必须为正，选项措辞会产生术语歧义。
+
+\gkanswer{答案：D（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+执行如图的程序框图，为使输出 \(S\) 的值小于 91，则输入的正整数 \(N\) 的最小值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/q07-alternating-flowchart}\end{center}
+\nopagebreak[4]
+   （A）5　　（B）4　　（C）3　　（D）2。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+循环累加 \(100,-10,1,\ldots\)。一次循环的和仍不小于 91，两次循环的和已经小于 91。
+
+\gkanswer{答案：D（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+已知圆柱的高为 1，它的两个底面的圆周在直径为 2 的同一个球的球面上，则该圆柱的体积为（　）
+
+   （A）\(\pi\)　　（B）\(\dfrac{3\pi}{4}\)　　（C）\(\dfrac\pi2\)　　（D）\(\dfrac\pi4\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+球半径为 1，两个底面所在平面相距 1，球心到每个平面的距离为 \(1/2\)。故圆柱底面半径平方为 \(1-(1/2)^2\)，再乘高 1 求体积。
+
+\gkanswer{答案：B（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+等差数列 \(\{a_n\}\) 的首项为 1，公差不为 0，若 \(a_2,a_3,a_6\) 成等比数列，则 \(\{a_n\}\) 前 6 项的和为（　）
+
+   （A）\(-24\)　　（B）\(-3\)　　（C）3　　（D）8
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令等差公差为 \(d\ne0\)。等比条件写为 \((1+2d)^2=(1+d)(1+5d)\)，除去已由条件排除的零公差，解出公差后代入前六项和公式。
+
+\gkanswer{答案：A（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知椭圆 \(C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)\) 的左、右顶点分别为 \(A_1,A_2\)，且以线段 \(A_1A_2\) 为直径的圆与直线 \(bx-ay+2ab=0\) 相切，则 \(C\) 的离心率为（　）
+
+   （A）\(\dfrac{\sqrt6}{3}\)　　（B）\(\dfrac{\sqrt3}{3}\)　　（C）\(\dfrac{\sqrt2}{2}\)　　（D）\(\dfrac13\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+切线到原点距离等于以 \(A_1A_2\) 为直径圆的半径 \(a\)，即 \(2ab/\sqrt{a^2+b^2}=a\)。化简得 \(a^2=3b^2\)，再由椭圆离心率定义计算。
+
+\gkanswer{答案：A（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=x^2-2x+a\left(e^{x-1}+e^{-x+1}\right)\) 有唯一零点，则 \(a=\)（　）
+
+   （A）\(-\dfrac12\)　　（B）\(\dfrac13\)　　（C）\(\dfrac12\)　　（D）1
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令 \(u=x-1\)，函数化为 \(u^2-1+2a\cosh u\)。参数取 \(1/2\) 时可写为 \(u^2+\cosh u-1\)，仅在 \(u=0\) 取零；其余选项分别出现至少两个零点、无零点或处处为正。
+
+\gkanswer{答案：C（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+在矩形 \(ABCD\) 中，\(AB=1\)，\(AD=2\)，动点 \(P\) 在以点 \(C\) 为圆心且与 \(BD\) 相切的圆上。若 \(\overrightarrow{AP}=\lambda\overrightarrow{AB}+\mu\overrightarrow{AD}\)，则 \(\lambda+\mu\) 的最大值为（　）
+
+   （A）3　　（B）\(2\sqrt2\)　　（C）\(\sqrt5\)　　（D）2
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+取 \(A=(0,0),B=(1,0),D=(0,2),C=(1,2)\)。圆心为 \(C\)，半径是 \(C\) 到直线 \(BD\) 的距离 \(2/\sqrt5\)。目标线性式的梯度模为 \(\sqrt5/2\)，沿半径的最大增量为 1。
+
+\gkanswer{答案：A（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若 \(x,y\) 满足约束条件
+\nopagebreak[4]
+\[
+\begin{cases}
+x-y\ge 0,\\
+x+y-2\le 0,\\
+y\ge 0,
+\end{cases}
+\]
+则 \(z=3x-4y\) 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+可行域顶点为 \((0,0),(2,0),(1,1)\)，目标函数 \(3x-4y\) 在三点的值分别为 \(0,6,-1\)。
+
+\gkanswer{答案：\(-1\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+设等比数列 \(\{a_n\}\) 满足 \(a_1+a_2=-1\)，\(a_1-a_3=-3\)，则 \(a_4=\)\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设等比公比为 \(q\)。将两条首项关系相除得 \(1-q=3\)，故 \(q=-2\)，再代回得首项为 1。
+
+\gkanswer{答案：\(-8\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设函数
+\nopagebreak[4]
+\[
+f(x)=\begin{cases}
+x+1,&x\le 0,\\
+2^x,&x>0,
+\end{cases}
+\]
+则满足 \(f(x)+f\left(x-\dfrac12\right)>1\) 的 \(x\) 的取值范围是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按 \(x\le0\)、\(0<x\le1/2\)、\(x>1/2\) 分别确定绝对值的符号并代入不等式。第一段给出严格下界，其余两段均满足。
+
+\gkanswer{答案：\((-\tfrac14,+\infty)\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+\(a,b\) 为空间中两条互相垂直的直线，等腰直角三角形 \(ABC\) 的直角边 \(AC\) 所在直线与 \(a,b\) 都垂直，斜边 \(AB\) 以直线 \(AC\) 为旋转轴旋转，有下列结论：
+
+   ① 当直线 \(AB\) 与 \(a\) 成 \(60^\circ\) 角时，\(AB\) 与 \(b\) 成 \(30^\circ\) 角；
+
+   ② 当直线 \(AB\) 与 \(a\) 成 \(60^\circ\) 角时，\(AB\) 与 \(b\) 成 \(60^\circ\) 角；
+
+   ③ 直线 \(AB\) 与 \(a\) 所成角的最小值为 \(45^\circ\)；
+
+   ④ 直线 \(AB\) 与 \(a\) 所成角的最大值为 \(60^\circ\)。
+
+   其中正确的是\gkblank{}。（填写所有正确结论的编号）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+斜边与旋转轴恒成 \(45^\circ\)。在垂直于轴的平面内分解投影；若与 \(a\) 成 \(60^\circ\)，则与 \(b\) 的分量也为对应的 \(60^\circ\) 投影。最小角为 \(45^\circ\)，而垂直情形可实现 \(90^\circ\)，据此判别四条结论。
+
+\gkanswer{答案：②③（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+\(\triangle ABC\) 的内角 \(A,B,C\) 的对边分别为 \(a,b,c\)，已知 \(\sin A+\sqrt3\cos A=0\)，\(a=2\sqrt7\)，\(b=2\)。
+
+   （1） 求 \(c\)；
+
+   （2） 设 \(D\) 为 \(BC\) 边上一点，且 \(AD\perp AC\)，求 \(\triangle ABD\) 的面积。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 边长}
+
+由 \(\sin A+\sqrt3\cos A=0\) 且 \(A\in(0,\pi)\)，得 \(A=2\pi/3\)。代入余弦定理，得到关于 \(c\) 的二次方程，取正根。
+
+\gksubpart{(2) 三角形面积}
+
+取 \(A=(0,0),C=(2,0)\)，由边长和角度得 \(B=(-2,2\sqrt3)\)。条件 \(AD\perp AC\) 使 \(D\) 在 \(x=0\)，又 \(D\in BC\)，联立直线方程求出 \(D\)，再用行列式求 \([ABD]\)。
+
+\gkanswer{答案（1）：\(c=4\)（D）}
+
+\gkanswer{答案（2）：\(S_{\triangle ABD}=\sqrt3\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+某超市计划按月订购一种酸奶，每天进货量相同，进货成本每瓶 4 元，售价每瓶 6 元，未售出的酸奶降价处理，以每瓶 2 元的价格当天全部处理完。根据往年销售经验，每天需求量与当天最高气温（单位：\(^\circ\mathrm C\)）有关。如果最高气温不低于 25，需求量为 500 瓶；如果最高气温位于区间 \([20,25)\)，需求量为 300 瓶；如果最高气温低于 20，需求量为 200 瓶。为了确定六月份的订购计划，统计了前三年六月份各天的最高气温数据，得下面的频数分布表：
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+最高气温 & \([10,15)\) & \([15,20)\) & \([20,25)\) & \([25,30)\) & \([30,35)\) & \([35,40)\) \\
+\midrule
+天数 & 2 & 16 & 36 & 25 & 7 & 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+   以最高气温位于各区间的频率代替最高气温位于该区间的概率。
+
+   （1） 求六月份这种酸奶一天的需求量 \(X\)（单位：瓶）的分布列；
+
+   （2） 设六月份一天销售这种酸奶的利润为 \(Y\)（单位：元），当六月份这种酸奶一天的进货量 \(n\)（单位：瓶）为多少时，\(Y\) 的数学期望达到最大值？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 需求分布}
+
+三年六月共 90 天。最高气温低于 20、位于 \([20,25)\)、不低于 25 时，需求依次为 200、300、500 瓶；对应频数分别为 \(18,36,36\)，据此列出分布列。
+
+\gksubpart{(2) 期望利润}
+
+需求为 \(d\)、进货为 \(n\) 时，利润为销售收入加未售品处理收入再减进货成本。按 \(n\le200\)、\(200<n\le300\)、\(300<n\le500\)、\(n>500\) 分段计算期望：前两段递增至 300，第三段递减，最后一段也递减，因此最大点在分段交界处。
+
+\gkanswer{答案（1）：\(P(X=200)=\dfrac15,\ P(X=300)=\dfrac25,\ P(X=500)=\dfrac25\)（D）}
+
+\gkanswer{答案（2）：每天进货 \(300\) 瓶时数学期望最大，最大值为 \(520\) 元（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，四面体 \(ABCD\) 中，\(\triangle ABC\) 是正三角形，\(\triangle ACD\) 是直角三角形，\(\angle ABD=\angle CBD\)，\(AB=BD\)。
+\nopagebreak[4]
+\begin{center}\input{figures/q19-tetrahedron}\end{center}
+\nopagebreak[4]
+   （1） 证明：平面 \(ACD\perp\) 平面 \(ABC\)；
+
+   （2） 过 \(AC\) 的平面交 \(BD\) 于点 \(E\)，若平面 \(AEC\) 把四面体 \(ABCD\) 分成体积相等的两部分，求二面角 \(D-AE-C\) 的余弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 两平面垂直}
+
+由 \(\angle ABD=\angle CBD\) 与 \(AB=BD\)，在三角形 \(ABD\)、\(CBD\) 中用余弦定理可得 \(AD=CD\)。因此 \(\triangle ACD\) 为等腰直角三角形，直角只能在 \(D\)：若在 \(A\) 或 \(C\)，与题设边长关系的点积不相容。结合 \(AB=BC=BD\)，可知 \(AC\) 与 \(BD\) 的方向垂直，从而得到两平面垂直。
+
+\gksubpart{(2) 二面角}
+
+等体积条件使 \(E\) 为 \(BD\) 中点。取边长为 1 的坐标模型，令 \(A=(-1/2,0,0),C=(1/2,0,0),B=(0,\sqrt3/2,0),D=(0,0,1/2),E=(0,\sqrt3/4,1/4)\)。分别对平面 \(DAE\)、\(CAE\) 求法向量并取点积，归一化后得到二面角余弦。
+
+\gkanswer{答案（1）：平面 \(ACD\perp\) 平面 \(ABC\)（D）}
+
+\gkanswer{答案（2）：二面角余弦为 \(\dfrac1{\sqrt7}\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+在直角坐标系中 \(xOy\)，曲线 \(C:y^2=2x\)，过点 \((2,0)\) 的直线 \(l\) 交 \(C\) 于 \(A,B\) 两点，圆 \(M\) 是以线段 \(AB\) 为直径的圆。
+
+   （1） 证明：坐标原点 \(O\) 在圆 \(M\) 上；
+
+   （2） 设圆 \(M\) 过点 \(P(4,-2)\)，求直线 \(l\) 与圆 \(M\) 的方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 原点在直径圆上}
+
+\Needspace{5\baselineskip}
+对非竖直且非切线的直线写成 \(y=k(x-2)\)，其中 \(k\ne0\)。令交点纵坐标为 \(t_1,t_2\)，代入 \(x=t^2/2\) 得二次方程，根积为 \(-4\)。于是
+\nopagebreak[4]
+\[
+\overrightarrow{OA}\cdot\overrightarrow{OB}=\frac{(t_1t_2)^2}{4}+t_1t_2=0,
+\]
+故以 \(AB\) 为直径的圆经过原点。竖直弦 \(x=2\) 也满足该结论。
+
+\gksubpart{(2) 直线与圆}
+
+\Needspace{5\baselineskip}
+由根和 \(2/k\)、根积 \(-4\)，弦端点中点为 \(M=(2+1/k^2,1/k)\)。圆过原点，故其方程为
+\nopagebreak[4]
+\[
+x^2+y^2-(4+2/k^2)x-(2/k)y=0.
+\]
+代入 \(P(4,-2)\) 得 \(k^2+k-2=0\)，出现 \(k=1\) 与 \(k=-2\) 两组。分别代回得到两条直线和两条直径圆方程；两组都满足题面，原题未给条件排除其一。
+
+\gkanswer{答案（1）：原点 \(O\) 在圆 \(M\) 上（D）}
+
+\gkanswer{答案（2）：U。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=x-1-a\ln x\)。
+
+   （1） 若 \(f(x)\ge0\)，求 \(a\) 的值；
+
+\Needspace{5\baselineskip}
+   （2） 设 \(m\) 为整数，且对于任意正整数 \(n\)，
+\nopagebreak[4]
+   \[
+   \left(1+\frac12\right)\left(1+\frac1{2^2}\right)\cdots\left(1+\frac1{2^n}\right)<m,
+   \]
+   求 \(m\) 的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 参数}
+
+若 \(f(x)\ge0\) 对所有 \(x>0\)，则在 \(x=1\) 取零的函数须有驻点，故 \(f'(1)=0\) 确定参数；代回后由 \(\ln x\le x-1\) 验证充分性。
+
+\gksubpart{(2) 最小整数}
+
+\Needspace{5\baselineskip}
+对任意正整数 \(n\)，利用 \(\ln(1+u)<u\) 有
+\nopagebreak[4]
+\[
+\ln\prod_{j=1}^{n}(1+2^{-j})<\sum_{j=1}^{n}2^{-j}<1,
+\]
+所以该乘积小于 \(e<3\)。另一方面取 \(n=3\)，乘积为 \(135/64>2\)，由此确定最小整数上界。
+
+\gkanswer{答案（1）：\(a=1\)（D）}
+
+\gkanswer{答案（2）：\(m=3\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+在直角坐标系 \(xOy\) 中，直线 \(l_1\) 的参数方程为
+\nopagebreak[4]
+\[
+\begin{cases}
+x=2+t,\\
+y=kt,
+\end{cases}\qquad(t\text{ 为参数}),
+\]
+\Needspace{5\baselineskip}
+直线 \(l_2\) 的参数方程为
+\nopagebreak[4]
+\[
+\begin{cases}
+x=-2+m,\\
+y=\dfrac{m}{k},
+\end{cases}\qquad(m\text{ 为参数}).
+\]
+设 \(l_1\) 与 \(l_2\) 的交点为 \(P\)，当 \(k\) 变化时，\(P\) 的轨迹为曲线 \(C\)。
+
+   （1） 写出 \(C\) 的普通方程；
+
+   （2） 以坐标原点为极点，\(x\) 轴正半轴为极轴建立极坐标系，设 \(l_3:\rho(\cos\theta+\sin\theta)-\sqrt2=0\)，\(M\) 为 \(l_3\) 与 \(C\) 的交点，求 \(M\) 的极径。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 轨迹方程}
+
+联立参数式时需 \(k\ne0\)，且交点条件排除 \(k=\pm1\)。消参得到 \(x^2-y^2=4\)；有限允许的 \(k\) 不生成顶点 \((\pm2,0)\)，因此要区分通常隐式曲线方程与严格参数像。
+
+\gksubpart{(2) 极径}
+
+极坐标直线对应 \(x+y=\sqrt2\)。与 \((x-y)(x+y)=4\) 联立得 \(x-y=2\sqrt2\)，由此求交点后计算其到原点的距离。
+
+\gkanswer{答案（1）：普通方程 \(x^2-y^2=4\)；严格参数像不含顶点 \((\pm2,0)\)（D）}
+
+\gkanswer{答案（2）：\(\rho=\sqrt5\)（D）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=|x+1|-|x-2|\)。
+
+   （1） 求不等式 \(f(x)\ge1\) 的解集；
+
+   （2） 若不等式 \(f(x)\ge x^2-x+m\) 的解集非空，求 \(m\) 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 不等式解集}
+
+按断点 \(-1,2\) 将绝对值函数写成三段常数/一次式，逐段求解 \(f(x)\ge1\)，再合并区间。
+
+\gksubpart{(2) 参数范围}
+
+解集非空等价于存在 \(x\) 使 \(m\le f(x)-x^2+x\)。三段上分别为 \(-x^2+x-3\)、\(-x^2+3x-1\)、\(-x^2+x+3\)，各自最大值为 \(-5,5/4,1\)，取全局最大值作为 \(m\) 的上界。
+
+\gkanswer{答案（1）：\([1,+\infty)\)（D）}
+
+\gkanswer{答案（2）：\(m\le\dfrac54\)（D）}
+
+\end{answer}

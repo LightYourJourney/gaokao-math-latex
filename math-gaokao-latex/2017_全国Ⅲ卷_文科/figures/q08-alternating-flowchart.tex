@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=0.75pt,line cap=round,line join=round,font=\small]
+\node[draw,rounded corners,minimum width=1.35cm,minimum height=0.5cm] (start) at (0,0) {开始};
+\node[draw,minimum width=2.1cm,minimum height=0.55cm] (input) at (0,-0.95) {输入 $N$};
+\node[draw,minimum width=3.7cm,minimum height=0.55cm] (init) at (0,-1.9) {$t=1,\ M=100,\ S=0$};
+\coordinate (dt) at (0,-2.6);
+\coordinate (dr) at (1.7,-3.15);
+\coordinate (db) at (0,-3.7);
+\coordinate (dl) at (-1.7,-3.15);
+\draw (dt)--(dr)--(db)--(dl)--cycle;
+\node at (0,-3.15) {$t\le N$};
+\node[draw,minimum width=2.8cm,minimum height=0.55cm] (sum) at (0,-4.45) {$S=S+M$};
+\node[draw,minimum width=2.6cm,minimum height=0.55cm] (decay) at (0,-5.35) {$M=-M/10$};
+\node[draw,minimum width=2.6cm,minimum height=0.55cm] (next) at (0,-6.25) {$t=t+1$};
+\node[draw,minimum width=1.9cm,minimum height=0.55cm] (out) at (3.5,-3.15) {输出 $S$};
+\node[draw,rounded corners,minimum width=1.35cm,minimum height=0.5cm] (end) at (3.5,-4.15) {结束};
+\draw[->] (start)--(input);
+\draw[->] (input)--(init);
+\draw[->] (init)--(dt);
+\draw[->] (db)--node[right]{是}(sum);
+\draw[->] (sum)--(decay);
+\draw[->] (decay)--(next);
+\draw[->] (next.west)--(-2.4,-6.25)--(-2.4,-3.15)--(dl);
+\draw[->] (dr)--node[above]{否}(out.west);
+\draw[->] (out)--(end);
+\end{tikzpicture}
