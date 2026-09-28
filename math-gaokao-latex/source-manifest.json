@@ -969,7 +969,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cc016033-da5a-4d33-8818-4a6ec733f7b2",
+  "last_transaction_id": "ad1bb940-b5da-4d2a-966b-4e594e541ec1",
   "papers": [
     {
       "blocked_from": null,
@@ -2815,7 +2815,7 @@
       "year": 1963
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 1,
@@ -2880,15 +2880,27 @@
         "track": "不分文理",
         "variant": "全国"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0941",
+        "ISSUE-0942",
+        "ISSUE-0943",
+        "ISSUE-0944",
+        "ISSUE-0945",
+        "ISSUE-0946",
+        "ISSUE-0947",
+        "ISSUE-0948",
+        "ISSUE-0949",
+        "ISSUE-0950",
+        "ISSUE-0951"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1964-regular-national",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "1964_全国卷",
       "question_count": 8,
-      "resume_action": null,
+      "resume_action": "修正 gk-1964-regular-national 的 印刷版 第 1 页 figure_label（第6题展开扇环图下方“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认。圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "1964/1964_数学真题_答案要点.md",
         "combined_rendered": "1964/1964_数学真题_含解析.md",
@@ -15246,7 +15258,7 @@
       "year": 2016
     }
   ],
-  "revision": 3239,
+  "revision": 3240,
   "schema_version": 1,
   "sources": [
     {

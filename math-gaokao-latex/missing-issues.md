@@ -15123,3 +15123,234 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0941
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "cd3e5f09c8b51124c9282941b934c98b08090633a11a965a3d17792921f7f990",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 1,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "ae1e727de8658d1fb7d64d635373bcf754ff42543b7a02518244c2fdbd25fa37",
+  "resume_action": "修正 gk-1964-regular-national 的 印刷版 第 1 页 figure_label（第6题展开扇环图下方“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认。圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0942
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "4d7a6391e277ddecad49840651dda4d8c597f2410649f140420d0dbf5172728c",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "ae1e727de8658d1fb7d64d635373bcf754ff42543b7a02518244c2fdbd25fa37",
+  "resume_action": "修正 gk-1964-regular-national 的 印刷版 第 6 页 figure_label（第6题重复图中的“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认；圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0943
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "9647855a78a6f60b74ff6e1de857ca41625f9f0f160e94d83873fc5c9375f2d7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "ae1e727de8658d1fb7d64d635373bcf754ff42543b7a02518244c2fdbd25fa37",
+  "resume_action": "修正 gk-1964-regular-national 的 印刷版 第 7 页 figure_label（第7题投影示意图标签重叠：左图 D₁ 与 B₁ 挤叠，右图 C₂ 与 N 挤叠，相关点/平面标记难以区分。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0944
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "94a457782cf9b182fd8177d2e88f3080bc5d272ba73ebd9582731c1768a7b4db",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 8,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "ae1e727de8658d1fb7d64d635373bcf754ff42543b7a02518244c2fdbd25fa37",
+  "resume_action": "修正 gk-1964-regular-national 的 印刷版 第 8 页 figure_label（本页两幅圆图的图注均与方框下边框叠压：上图 r=r′=(2−√2)/2 的分数标注受边框穿过；下图 {r,r′}={1/2, 3/2−√2} 也被下边框压住，局部难以辨认。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0945
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "964be83718c19c450843bcc22c04b0a7c49b59335fda7c4edd7e6faabea568c7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 1,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "f35b7c6751d9304c9765ea8865960a237822996ba21ce9b7f7fde2d835cff8a6",
+  "resume_action": "修正 gk-1964-regular-national 的 简答版 第 1 页 figure_label（第6题展开扇环图下方“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认。圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0946
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "3e14f98727953368de980149d5ec51e5a5d148528821050b492e8d043c2849f8",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 1,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "1667c560a82b2c6906aa08e0fea14de749fd9f077761a74e1525dce2655d10b2",
+  "resume_action": "修正 gk-1964-regular-national 的 解析版 第 1 页 figure_label（第6题展开扇环图下方“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认。圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0947
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "7915fc7586433ef2e3282ec5d29b02c199daf6242ca535e76ab315be568b4acc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "1667c560a82b2c6906aa08e0fea14de749fd9f077761a74e1525dce2655d10b2",
+  "resume_action": "修正 gk-1964-regular-national 的 解析版 第 7 页 figure_label（第6题重复图中的“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认；圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0948
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "32409fd9aea86b1e1fb99493a17b1dcacc24e3bae463cb8ab5b0f8a651c52673",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 8,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "1667c560a82b2c6906aa08e0fea14de749fd9f077761a74e1525dce2655d10b2",
+  "resume_action": "修正 gk-1964-regular-national 的 解析版 第 8 页 figure_label（第7题投影示意图标签重叠：左图 D₁ 与 B₁ 挤叠，右图 C₂ 与 N 挤叠，相关点/平面标记难以区分。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0949
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "81f00297db5ecf90d30f4dde24399abe8924e9603bececa06d50101106a13b2a",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 9,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "1667c560a82b2c6906aa08e0fea14de749fd9f077761a74e1525dce2655d10b2",
+  "resume_action": "修正 gk-1964-regular-national 的 解析版 第 9 页 figure_label（圆图下方标注 r=r′=(2−√2)/2 与正方形下边框叠压，边框穿过标注上部，图注受遮挡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0950
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "46ec6f153c8ea46b132bb475bb575763015a9fa52ffa63a5666fd961986a0091",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 10,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "1667c560a82b2c6906aa08e0fea14de749fd9f077761a74e1525dce2655d10b2",
+  "resume_action": "修正 gk-1964-regular-national 的 解析版 第 10 页 figure_label（页顶圆图下方集合标注 {r,r′}={1/2, 3/2−√2} 与正方形下边框重叠，边框穿过标注的分数部分，图注受遮挡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0951
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "d7306ced-53f1-4f77-979b-d5564572705e",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "2ce640ad285061f18db74b46924168bd25371516ae648b59e41a15806e3a0b40",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 1,
+  "paper_id": "gk-1964-regular-national",
+  "pdf_sha256": "91cfdc165be31a51b3797dbf85ca2399bee0bf02183a1a1299824ddc814bea3c",
+  "resume_action": "修正 gk-1964-regular-national 的 试题版 第 1 页 figure_label（第6题展开扇环图下方“展开扇环”标签被两条径向虚线穿过，文字与线条叠印，无法清晰辨认。圆台尺寸 15、10 与中轴仍有间隔，历史记录的尺寸压轴问题本次未复现。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
