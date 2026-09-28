@@ -99,6 +99,17 @@ def oracle_content_outcome(facts):
         if facts["is_legacy"]:
             return "legacy_unverified"
         if facts["provenance"] == "missing":
+            if any(
+                item.get("impact") == "blocks_completion"
+                and item.get("status") != "resolved"
+                and (
+                    item.get("paper_id") == facts["paper_id"]
+                    or facts["paper_id"]
+                    in (item.get("affected_paper_ids") or [])
+                )
+                for item in facts["issues"]
+            ):
+                return "eligible_blocked"
             return "planned"
         return "eligible_blocked"
     if facts["provenance_unknown"] or facts["provenance_conflicts"]:
@@ -106,7 +117,12 @@ def oracle_content_outcome(facts):
     if facts["build"] == "failed" or facts["review"] == "failed":
         return "eligible_blocked"
     if any(
-        item.get("impact") == "blocks_completion" and item.get("status") != "resolved"
+        item.get("impact") == "blocks_completion"
+        and item.get("status") != "resolved"
+        and (
+            item.get("paper_id") == facts["paper_id"]
+            or facts["paper_id"] in (item.get("affected_paper_ids") or [])
+        )
         for item in facts["issues"]
     ):
         return "eligible_blocked"
@@ -314,7 +330,18 @@ class ExhaustiveStatusTests(unittest.TestCase):
 
     def test_blocked_is_exactly_the_blocker_predicate(self):
         for facts in all_axes():
-            expected = (
+            issue_blocker = any(
+                item["impact"] == "blocks_completion"
+                and item["status"] != "resolved"
+                and (
+                    item["paper_id"] == facts["paper_id"]
+                    or facts["paper_id"] in item["affected_paper_ids"]
+                )
+                for item in facts["issues"]
+            )
+            expected = (issue_blocker and (
+                not facts["is_legacy"] or facts["provenance"] == "current"
+            )) or (
                 not facts["is_legacy"]
                 and facts["provenance"] in {"invalid", "stale"}
             ) or facts["provenance"] == "current" and (
@@ -322,11 +349,6 @@ class ExhaustiveStatusTests(unittest.TestCase):
                     or facts["provenance_conflicts"]
                     or facts["build"] == "failed"
                     or facts["review"] == "failed"
-                    or any(
-                        item["impact"] == "blocks_completion"
-                        and item["status"] != "resolved"
-                        for item in facts["issues"]
-                    )
                 )
             self.assertEqual(derive_status(facts) == "blocked", expected)
 
@@ -399,6 +421,24 @@ class NamedScenarioTests(unittest.TestCase):
         self.assertEqual(
             derive_status(self.base(issues=(blocking_issue(),))), "blocked"
         )
+
+    def test_an_open_blocker_precedes_missing_provenance(self):
+        facts = paper_facts(
+            PAPER_ID,
+            is_legacy=False,
+            provenance="missing",
+            issues=(blocking_issue(),),
+        )
+        self.assertEqual(derive_status(facts), "blocked")
+
+    def test_legacy_unverified_precedes_a_blocker_until_migration(self):
+        facts = paper_facts(
+            PAPER_ID,
+            is_legacy=True,
+            provenance="missing",
+            issues=(blocking_issue(),),
+        )
+        self.assertEqual(derive_status(facts), "legacy_unverified")
 
     def test_an_issue_targeting_another_paper_does_not_block(self):
         facts = self.base(issues=(blocking_issue(OTHER_ID),))

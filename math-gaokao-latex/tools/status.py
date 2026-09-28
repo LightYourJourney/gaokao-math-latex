@@ -195,6 +195,10 @@ def derive_content_outcome(facts_without_report_value: Mapping[str, Any]) -> str
         if facts["is_legacy"]:
             return "legacy_unverified"
         if facts["provenance"] == "missing":
+            # New papers may have blockers before the first provenance import.
+            # Preserve the distinct legacy migration state above.
+            if _has_blocker(facts):
+                return "eligible_blocked"
             return "planned"
         return "eligible_blocked"
     if facts["provenance_unknown"] or facts["provenance_conflicts"]:
