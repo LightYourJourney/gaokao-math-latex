@@ -52,7 +52,7 @@
 - [x] 复核上游 HEAD、三份 PDF 的当前 SHA-256、blob OID、页数与内页标题；确认三个 source 仍未绑定且 paper ID、目录、`phase2-b06` 均未占用。
 - [x] 用只读检查冻结题号—PDF 页—印刷页映射、各题型和全部图形位置；保留源文件中任何不确定处作为待核，不预先改写 manifest。
 
-来源预检于 2026-09-28 完成：上游 HEAD 与固定 commit 一致；三个 PDF 均为 A3 两页，内页标题与科类相符；题型为单选 1–12、填空 13–16、解答 17–23；第 1 页为题 1–19、第 2 页为题 20–23。三份 SHA-256 与 manifest 的 `artifact.sha256` 一致，source 均 `ready` 且 `paper_id=null`；三个项目目录与批次 ID `phase2-b06` 均空闲；`source_manifest.py validate --require-artifacts 775` 退出码 0。
+来源预检于 2026-09-28 完成：上游 HEAD 与固定 commit 一致；三个 PDF 均为 A3 两页，内页标题与科类相符；第 1 页为题 1–19、第 2 页为题 20–23。版面大标题为“一、单选题”“二、填空题”“三、解答题”；本项目 2023 同年卷现行结构将 1–12 归为选择题、13–16 填空题、17–21 解答题、22–23 选做题。三个新卷的转录须忠实保留 PDF 上实际印出的分节文字，登记结构时按逐页复核后的题目作答规则确认，不得自行补入原卷未印出的分节说明。三份 SHA-256 与 manifest 的 `artifact.sha256` 一致，source 均 `ready` 且 `paper_id=null`；三个项目目录与批次 ID `phase2-b06` 均空闲；`source_manifest.py validate --require-artifacts 775` 退出码 0。
 
 ### 2. 并行转录与解题草稿
 
