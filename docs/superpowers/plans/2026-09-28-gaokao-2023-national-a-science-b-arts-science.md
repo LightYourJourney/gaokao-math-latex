@@ -16,7 +16,7 @@
 - 仅从原 PDF 转录题面；PDF 文本抽取、文件名或既有同年其他卷均不能替代逐页视觉复核。题号、选项、公式、限定词、图表、页码和卷别必须与原件一致。
 - 本地 2023 来源目录没有独立答案文件。无可靠外部答案材料时，仅在项目独立求解并经另一代理盲核后标答案证据等级 `D`；不得标为官方答案。冲突不能收敛或证据不足时标 `U`、登记问题并阻断该卷完成。
 - provenance 的 `question-review`、`answer-solve`、`answer-review` 必须由不同角色承担：原转录/解题代理登记为 `answer-solve`，主代理在未查看答案草稿前独立逐页核对题面并登记为 `question-review`，另一盲核代理登记为 `answer-review`。
-- 新图形必须是独立 `figures/*.tex` TikZ/PGFPlots 源；Markdown 用指向本卷登记 `.tex` 图稿的普通链接，禁止新增原卷截图、PNG/JPEG 或源 PDF 到 Git。
+- 新图形必须是独立 `figures/*.tex` TikZ/PGFPlots 源；规范 Markdown 位于 `2023/`，普通链接必须写成 `../math-gaokao-latex/<项目目录>/figures/<文件名>.tex`（如 `../math-gaokao-latex/2023_全国乙卷_理科/figures/q03-three-view.tex`），由生成器映射为矢量图并计入引用数。禁止新增原卷截图、PNG/JPEG 或源 PDF 到 Git。
 - 转录草稿和临时审查材料只写 `.work/phase2-b06/<paper_id>/`；主代理独占 `2023/`、`source-manifest.json`、`manifest.csv`、`index.json`、`provenance.json`、`missing-issues.md`、批次/全局报告、正式回执及生成器/模板。
 - 四份 Markdown 字段源齐备、题量和图稿引用通过校验后，才运行 `register-papers` dry-run；dry-run 无冲突后一次性 `--write`。生成的 LaTeX、四版本入口和回执不得手改。
 - 只清理本批 `build/` 中的 PDF 以外编译中间件与本批临时渲染；保留 12 个最终 PDF 在各自 `build/`（该目录按仓库规则忽略、不入 Git）。使用 `latexmk -c -outdir=build <edition>.tex` 清理辅助文件；不得使用会移除 PDF 的 `-C` 或 `build_projects.py clean-build --execute`。不碰上游仓库现有未跟踪文件；提交不 push。
