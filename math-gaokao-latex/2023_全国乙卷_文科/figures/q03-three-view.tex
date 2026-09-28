@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=0.42cm,y=0.42cm,line cap=round,line join=round]
+  % 左上视图：6×5 网格；原卷粗线轮廓及横线
+  \foreach \x in {0,...,6} {\draw[black!35,line width=0.25pt] (\x,0)--(\x,5);}
+  \foreach \y in {0,...,5} {\draw[black!35,line width=0.25pt] (0,\y)--(6,\y);}
+  \draw[line width=0.85pt] (2,1) rectangle (4,4);
+  \draw[line width=0.85pt] (2,3)--(4,3);
+
+  % 右上视图：6×5 网格；两级台阶轮廓
+  \begin{scope}[xshift=7cm]
+    \foreach \x in {0,...,6} {\draw[black!35,line width=0.25pt] (\x,0)--(\x,5);}
+    \foreach \y in {0,...,5} {\draw[black!35,line width=0.25pt] (0,\y)--(6,\y);}
+    \draw[line width=0.85pt] (2,1)--(3,1)--(3,2)--(4,2)--(4,4)--(2,4)--cycle;
+  \end{scope}
+
+  % 下方视图：6×5 网格；2×2 粗线矩形
+  \begin{scope}[yshift=-6cm]
+    \foreach \x in {0,...,6} {\draw[black!35,line width=0.25pt] (\x,0)--(\x,5);}
+    \foreach \y in {0,...,5} {\draw[black!35,line width=0.25pt] (0,\y)--(6,\y);}
+    \draw[line width=0.85pt] (2,1) rectangle (4,3);
+  \end{scope}
+\end{tikzpicture}

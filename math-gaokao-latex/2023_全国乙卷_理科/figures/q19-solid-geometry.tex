@@ -1,0 +1,23 @@
+\begin{tikzpicture}[line cap=round,line join=round,line width=0.8pt]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-2,1.2);
+  \coordinate (C) at (4,1.2);
+  \coordinate (P) at (1.2,4.7);
+  \coordinate (D) at (-0.4,2.95);
+  \coordinate (E) at (0.6,2.35);
+  \coordinate (O) at (1,1.2);
+  \coordinate (F) at (2,0.6);
+
+  \draw (P)--(A) (P)--(B) (P)--(C) (P)--(O) (A)--(B) (A)--(C);
+  \draw[dashed] (B)--(C) (A)--(O) (D)--(O) (B)--(F);
+  \draw (A)--(D) (B)--(E) (E)--(F);
+
+  \node[above] at (P) {$P$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (A) {$A$};
+  \node[left] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[below right] at (O) {$O$};
+  \node[below] at (F) {$F$};
+\end{tikzpicture}

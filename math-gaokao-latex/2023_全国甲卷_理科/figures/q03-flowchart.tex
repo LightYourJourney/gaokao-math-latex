@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth, every node/.style={font=\small}]
+  \node[draw, rounded corners, minimum width=1.15cm, minimum height=0.48cm] (start) at (0,7.2) {开始};
+
+  \draw[->] (start.south) -- (0,6.78);
+  \draw (-2.9,6.72) -- (2.9,6.72) -- (2.6,6.05) -- (-3.2,6.05) -- cycle;
+  \node at (-0.15,6.38) {输入 $n=3,\ A=1,\ B=2,\ k=1$};
+  \draw[->] (0,6.05) -- (0,5.52);
+
+  \draw (-1.05,5.05) -- (0,5.5) -- (1.05,5.05) -- (0,4.6) -- cycle;
+  \node at (0,5.05) {$k\leqslant n$};
+  \node at (-0.18,4.36) {是};
+  \node at (1.35,5.22) {否};
+
+  \draw[->] (0,4.6) -- (0,4.13);
+  \node[draw, minimum width=2.05cm, minimum height=0.5cm] (a) at (0,3.86) {$A=A+B$};
+  \draw[->] (a.south) -- (0,3.36);
+  \node[draw, minimum width=2.05cm, minimum height=0.5cm] (b) at (0,3.1) {$B=A+B$};
+  \draw[->] (b.south) -- (0,2.6);
+  \node[draw, minimum width=2.05cm, minimum height=0.5cm] (k) at (0,2.34) {$k=k+1$};
+  \draw[->] (k.west) -- (-2.35,2.34) -- (-2.35,5.05) -- (-1.05,5.05);
+
+  \draw[->] (1.05,5.05) -- (2.73,5.05) -- (2.73,1.16);
+  \draw (2.05,1.12) -- (3.7,1.12) -- (3.42,0.55) -- (1.77,0.55) -- cycle;
+  \node at (2.73,0.84) {输出 $B$};
+  \draw[->] (2.73,0.55) -- (2.73,0.12);
+  \node[draw, rounded corners, minimum width=1.15cm, minimum height=0.48cm] at (2.73,-0.18) {结束};
+\end{tikzpicture}
