@@ -1,0 +1,14 @@
+% 1985 广东理工农医类第一卷一（10）：题面提供给考生作图的空白坐标系。
+\begin{tikzpicture}[scale=0.8,>=stealth]
+  \draw[->,thick] (-0.4,0)--(5.4,0) node[right] {$x$};
+  \draw[->,thick] (0,-1.2)--(0,3.8) node[above] {$y$};
+  \fill (0,0) circle (1.1pt) node[below left] {$O$};
+  \foreach \x in {1,2,3,4,5} {
+    \draw (\x,0.07)--(\x,-0.07);
+  }
+  \foreach \y in {-1,1,2,3} {
+    \draw (0.07,\y)--(-0.07,\y);
+  }
+  \node[below] at (1,-0.12) {$1$};
+  \node[left] at (-0.12,1) {$1$};
+\end{tikzpicture}

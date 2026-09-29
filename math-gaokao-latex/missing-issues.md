@@ -15587,3 +15587,173 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-0966
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 8 题按棱的正交方向计数为 8；若“垂直”要求线段相交则为 4。固定题面未消歧。",
+  "fingerprint": "2decdc6c8cf82d4910d6d8ebdfdce262341459e9d5a0b5654ffd9be86bd7e243",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q08",
+  "resume_action": "取得同版权威说明或勘误明确“垂直”的计数口径；之前保留两种读法并标 U。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0967
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 15 题选项 B 的对数底数字形无法由固定扫描可靠辨认；答案不能反推字形。",
+  "fingerprint": "c8819d5cc4c98f4f3001e27be159978ef8c2a5813bccbc2c78fb4b2a0b98d73c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q15",
+  "resume_action": "取得清晰同版页面或官方勘误确认底数；之前按疑字保留原稿并标 U。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0968
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 18 题“纯虚数”是否包含 0 会影响选项 D；A 可成立，但单选唯一性取决于术语口径。",
+  "fingerprint": "d77250c598f741f2eda221bfcac1d1a81510c25503174ee9b5ebc04478ead628",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q18",
+  "resume_action": "取得同版术语约定或官方答案说明；之前保留术语歧义并标 U。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0969
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 21 题二项式指数上标在固定扫描中无法可靠辨认，唯一答案暂为 U/PENDING。",
+  "fingerprint": "68f46b0ffd639ab0cb8173b55e89a29dcbb90c5f0ea492121d0c3f01d5d4e82a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q21",
+  "resume_action": "取得清晰同版页面或官方勘误确认指数；之前不根据选项或答案推断。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0970
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 26 题恒等式题未明列正切及分式的共同定义域；解析仅在原式有定义处证明。",
+  "fingerprint": "2032558e9d273d076734fcc67225ccf7262e849a71e657badd67ee3911962dea",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q26",
+  "resume_action": "取得同版可靠勘误/说明确认定义域条件；之前明确限制共同定义域并标 U。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0971
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 2 题给定 f(1/x) 不能确定 f(0)；规范答案已明确不补造该值。",
+  "fingerprint": "a057b9db302ee574a2636c858c06c11507f8cbcf4c6d160851fd5992af5071d4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-science",
+  "question_id": "gk-1985-regular-guangdong-science-q02",
+  "resume_action": "取得同版可靠勘误或条件说明；之前保留 f(0) 未定并标 U。",
+  "source_id": "src-8dba39a5d57fc6a2b63128db5686a4c8145016f60fe7cde20ec7dc81363d4f08",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0972
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 15 题“纯虚数”是否包含 0 会影响选项 D 与单选唯一性。",
+  "fingerprint": "d54b10edb87a9ae3110f1a74c9ec2c8214017c23ce2c207fe0ce725d12f71129",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-science",
+  "question_id": "gk-1985-regular-guangdong-science-q15",
+  "resume_action": "取得同版术语约定或官方答案说明；之前保留术语歧义并标 U。",
+  "source_id": "src-8dba39a5d57fc6a2b63128db5686a4c8145016f60fe7cde20ec7dc81363d4f08",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0973
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第 30 题多个选项的字形疑似“棱柱/棱住”，固定扫描不能可靠确认；不以答案反推。",
+  "fingerprint": "804396473b7ac33d031fdb0aa29bf3796fc39943fabe2670497797a7c44f24f3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-science",
+  "question_id": "gk-1985-regular-guangdong-science-q30",
+  "resume_action": "取得清晰同版页面或官方勘误确认疑字；之前按原扫描逐字保留疑字并标 U。",
+  "source_id": "src-8dba39a5d57fc6a2b63128db5686a4c8145016f60fe7cde20ec7dc81363d4f08",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-0974
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "missing-answer-table-reference",
+  "current_evidence": "固定来源 1985广东理.pdf 的题面说明要求将选项代号填入“下表”，但该 PDF 的题面页未见所指答题表；不从其他版本推补。",
+  "fingerprint": "58ddd8e5f4dd3cf6c6bfca4b2335950a3997bdf69221622f15f637b0bf73fa50",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-science",
+  "resume_action": "取得可追溯的同版完整原卷或官方说明，核对答题表是否缺页；在此之前保留原题提示并维持该卷未完成。",
+  "source_id": "src-8dba39a5d57fc6a2b63128db5686a4c8145016f60fe7cde20ec7dc81363d4f08",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
+
+## ISSUE-0975
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源扫描中的指数上标无法可靠辨认；当前答案稿明确 U/PENDING，未根据选项或原书答案反推指数。",
+  "fingerprint": "86a0be2e206e9ff73f053359f02eff85a939cc579389ee799102586b2ed61685",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1985-regular-guangdong-arts",
+  "question_id": "gk-1985-regular-guangdong-arts-q21",
+  "resume_action": "取得清晰同版页面或官方勘误确认二项式指数；指数未定前无法确定常数项，保留 U/PENDING。",
+  "source_id": "src-282e302363febce2cf53ae86d8ad46dd6ce9786276c5722a3003b19afdcf8986",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

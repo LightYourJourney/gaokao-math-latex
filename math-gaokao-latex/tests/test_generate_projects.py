@@ -1344,6 +1344,33 @@ class LiveIndexIsUnchangedTests(unittest.TestCase):
         self.assertIn(r"\begin{tikzpicture}", figure.read_text(encoding="utf-8"))
 
 
+class LiveQuestionRenderingRegressionTests(unittest.TestCase):
+    def test_1985_guangdong_science_q11_break_ends_the_justified_paragraph(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1985-regular-guangdong-science"
+        )
+        result = generate_project(
+            ROOT.parent.parent.parent, paper_sources(paper)
+        )
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        q11 = re.search(
+            r"\\gktiwithlabel\{21\}\{11\}(.*?)\\end\{question\}",
+            questions,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(q11)
+
+        # TeX fully justifies an explicit \linebreak inside this long paragraph,
+        # stretching the B-choice continuation.  A paragraph end makes that
+        # line naturally ragged while preserving the source's break before C.
+        self.assertIn(r"\par\noindent C~", q11.group(1))
+        self.assertNotIn(r"\linebreak[4]", q11.group(1))
+
+
 # ------------------------------------------------------------------ CLI 契约
 
 
