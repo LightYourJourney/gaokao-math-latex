@@ -86,7 +86,7 @@
 ### Task 3 — Blind-check questions and answers with different roles
 
 **Files:**
-- Draft evidence: `.work/phase2-b08/<paper_id>/question-review.json`, `answer-review.json`, discrepancy matrix.
+- Draft evidence, isolated from producer drafts: `.work/phase2-b08/reviews/<paper_id>/{answers-blind.md,question-review.json,answer-review.json,discrepancy-matrix.md}`.
 
 - [ ] Assign a different reviewer per paper for source comparison and blind solving; do not expose the first solver's final answer before independent work is recorded.
 - [ ] Compare every question with rendered source, including choices, symbols, boundaries, diagrams and printed-page mapping.
