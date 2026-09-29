@@ -65,10 +65,17 @@
 % 试题部分的题号：加粗编号 + 自动 \label{q:<卷id>:<题号>}
 \newcommand{\gkti}[1]{\par\medskip\noindent
   \textbf{#1．}\phantomsection\label{q:\gkpaperid:#1}\ignorespaces}
+% 分卷/分部重启题号时，显示标签与唯一交叉引用顺序号分离。
+\newcommand{\gktiwithlabel}[2]{\par\medskip\noindent
+  \textbf{#2．}\phantomsection\label{q:\gkpaperid:#1}\ignorespaces}
 
 % 解析部分的题头：小节标题 + 回链到试题页
 \newcommand{\gksolhead}[2]{%
   \subsubsection*{第 #1 题（#2）}%
+  \phantomsection\label{s:\gkpaperid:#1}%
+  {\small\color{gray}（题目见第~\pageref{q:\gkpaperid:#1}~页）}\par\nopagebreak}
+\newcommand{\gksolheadwithlabel}[3]{%
+  \subsubsection*{第 #2 题（#3）}%
   \phantomsection\label{s:\gkpaperid:#1}%
   {\small\color{gray}（题目见第~\pageref{q:\gkpaperid:#1}~页）}\par\nopagebreak}
 

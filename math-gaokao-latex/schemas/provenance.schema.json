@@ -48,7 +48,23 @@
           "type": "array",
           "uniqueItems": true
         },
+        "printed_label": {
+          "pattern": "^.+$",
+          "type": "string"
+        },
         "printed_number": {
+          "oneOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "pattern": "^.+$",
+              "type": "string"
+            }
+          ]
+        },
+        "question_order": {
           "minimum": 1,
           "type": "integer"
         },

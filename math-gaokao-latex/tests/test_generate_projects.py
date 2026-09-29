@@ -850,6 +850,18 @@ class ConversionInterfaceTests(unittest.TestCase):
 
 
 class WrapBoundaryTests(unittest.TestCase):
+    def test_question_wrapper_uses_original_label_but_keeps_unique_order(self):
+        wrapped, numbers = wrap("\\gkti{11}题面", "questions", {11: "1"})
+        self.assertEqual(numbers, [11])
+        self.assertIn("\\gktiwithlabel{11}{1}", wrapped)
+
+    def test_answer_wrapper_uses_original_label_for_heading_but_keeps_order(self):
+        wrapped, numbers = wrap(
+            "\\gksolhead{11}{}\n答案", "answers", {11: "1"}
+        )
+        self.assertEqual(numbers, [11])
+        self.assertIn("\\gksolheadwithlabel{11}{1}{}", wrapped)
+
     def test_a_question_subpart_heading_closes_the_previous_question(self):
         text = "\\gkti{1}第一题\n正文\n\\gksubpart{（一）必考题}\n\\gkti{2}第二题\n"
         wrapped, numbers = wrap(text, "questions")
@@ -884,6 +896,37 @@ class GenerateProjectTests(unittest.TestCase):
 
     def build(self):
         return generate_project(self.fixture.root, self.sources, figure_map=FIGURE_MAP)
+
+    def test_generated_editions_keep_repeated_printed_label_and_internal_link_id(self):
+        questions_path = self.fixture.root / QUESTIONS_PATH
+        questions_path.write_text(
+            questions_path.read_text(encoding="utf-8").replace(
+                "**2．** 如图", "**2．**<!-- printed-label: 1 --> 如图"
+            ),
+            encoding="utf-8",
+        )
+        answers_path = self.fixture.root / ANSWER_KEY_PATH
+        answers_path.write_text(
+            answers_path.read_text(encoding="utf-8").replace(
+                "**2．** 几何概型",
+                "**2．**<!-- printed-label: 1 --> 几何概型",
+            ),
+            encoding="utf-8",
+        )
+        solution_path = self.fixture.root / SOLUTION_PATH
+        solution_path.write_text(
+            solution_path.read_text(encoding="utf-8").replace(
+                "### 第 2 题（几何概型）",
+                "### 第 2 题（几何概型）<!-- printed-label: 1 -->",
+            ),
+            encoding="utf-8",
+        )
+
+        result = self.build()
+        questions_tex = result.targets[QUESTIONS_TEX].decode("utf-8")
+        answers_tex = result.targets[ANSWERS_TEX].decode("utf-8")
+        self.assertIn("\\gktiwithlabel{2}{1}", questions_tex)
+        self.assertIn("\\gksolheadwithlabel{2}{1}{几何概型}", answers_tex)
 
     def test_generates_exactly_the_two_shared_latex_targets(self):
         result = self.build()

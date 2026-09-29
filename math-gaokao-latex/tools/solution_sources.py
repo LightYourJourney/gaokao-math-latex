@@ -81,8 +81,9 @@ SEE_SOLUTION = "见解析版"
 # 标题后缀连分隔符一起原样保留：真题里既有 `第 1 题（集合运算）`，也有
 # `第 22 题　〔坐标系与参数方程〕`。只认圆括号会让后者整块不被识别，而未被识别的
 # 块之后的一切都会被静默丢掉——曾使三套卷的整个选考题章节消失。
-_HEADING_QUESTION = re.compile(r"^### 第 (\d+) 题(|[ \t　（(〔【].*)$")
+_HEADING_QUESTION = re.compile(r"^### 第 (\d+) 题(.*)$")
 _INLINE_QUESTION = re.compile(r"^\*\*(\d+)．(.*?)\*\*(.*)$")
+_PRINTED_LABEL_DIRECTIVE = re.compile(r"<!--\s*printed-label:\s*([^<>]+?)\s*-->")
 _ATX_HEADING = re.compile(r"^(#{1,6}) ")
 _FENCE_LINE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})(.*)$")
 _HEADING_SUBPART = re.compile(r"^####[ \t]*[（(](\d+)[）)]")
@@ -148,6 +149,8 @@ class SolutionSourceError(ValueError):
 @dataclass(frozen=True)
 class QuestionBlock:
     number: int
+    # 唯一内部顺序号之外，保留原卷上可重复的显示标签。
+    printed_label: str
     title: str
     body: str
     subparts: Tuple[int, ...]
@@ -158,6 +161,7 @@ class QuestionBlock:
 @dataclass(frozen=True)
 class AnswerPoint:
     number: int
+    printed_label: str
     # 锚点制小问集合：任意独立加粗 (k) 块都算，不要求它携带最终答案。
     subparts: Tuple[int, ...]
     # (小问号或 None, 最终答案文本)；None 表示整题只有一个最终答案。
@@ -216,6 +220,23 @@ def _question_start(style: str, line: str) -> Optional[Tuple[int, str, str]]:
     return int(match.group(1)), match.group(2), match.group(3)
 
 
+def _split_printed_label(
+    number: int, title: str, remainder: str
+) -> Tuple[str, str, str]:
+    """移除题头中的显示标签注释；默认标签为内部顺序号。"""
+    found = _PRINTED_LABEL_DIRECTIVE.findall(title + "\n" + remainder)
+    if len(found) > 1:
+        raise SolutionSourceError(f"第 {number} 题只能声明一个 printed-label")
+    label = found[0].strip() if found else str(number)
+    if not label:
+        raise SolutionSourceError(f"第 {number} 题的 printed-label 不能为空")
+    return (
+        _PRINTED_LABEL_DIRECTIVE.sub("", title).rstrip(),
+        _PRINTED_LABEL_DIRECTIVE.sub("", remainder).lstrip(),
+        label,
+    )
+
+
 def _terminates_block(style: str, line: str) -> bool:
     match = _ATX_HEADING.match(line)
     if match is None:
@@ -270,12 +291,16 @@ def parse_question_blocks(
     elif style not in {"heading", "inline"}:
         raise SolutionSourceError(f"未知题号写法：{style!r}")
 
-    starts: List[Tuple[int, int, str, str]] = []
+    starts: List[Tuple[int, int, str, str, str]] = []
     stops: List[int] = []
     for index, line in enumerate(lines):
         start = _question_start(style, line)
         if start is not None:
-            starts.append((index, start[0], start[1], start[2]))
+            number, title, remainder = start
+            title, remainder, printed_label = _split_printed_label(
+                number, title, remainder
+            )
+            starts.append((index, number, title, remainder, printed_label))
         elif _terminates_block(style, line):
             stops.append(index)
     if not starts:
@@ -283,7 +308,7 @@ def parse_question_blocks(
 
     blocks: List[QuestionBlock] = []
     previous_end = 0
-    for position, (index, number, title, remainder) in enumerate(starts):
+    for position, (index, number, title, remainder, printed_label) in enumerate(starts):
         limit = starts[position + 1][0] if position + 1 < len(starts) else len(lines)
         for stop in stops:
             if index < stop < limit:
@@ -292,6 +317,7 @@ def parse_question_blocks(
         body_lines = ([remainder] if remainder.strip() else []) + lines[index + 1:limit]
         blocks.append(QuestionBlock(
             number=number,
+            printed_label=printed_label,
             title=title.rstrip(),
             body="\n".join(body_lines).strip(),
             subparts=_subparts(style, body_lines),
@@ -455,7 +481,8 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
             # 证明题可以没有独立最终答案块；其证明正文由解析版承载。
             if any(_PROOF_BLOCK.match(line) is not None for line in stripped_lines):
                 points.append(AnswerPoint(
-                    number=block.number, subparts=(), answers=((None, SEE_SOLUTION),)
+                    number=block.number, printed_label=block.printed_label,
+                    subparts=(), answers=((None, SEE_SOLUTION),)
                 ))
                 continue
             raise SolutionSourceError(f"第 {block.number} 题没有可识别的加粗答案块")
@@ -469,7 +496,8 @@ def parse_answer_points(text: str) -> Tuple[AnswerPoint, ...]:
                 f"第 {block.number} 题的小问 {duplicates} 有多个答案块，无法唯一识别答案块"
             )
         points.append(AnswerPoint(
-            number=block.number, subparts=subparts, answers=tuple(answers)
+            number=block.number, printed_label=block.printed_label,
+            subparts=subparts, answers=tuple(answers)
         ))
     return tuple(points)
 
@@ -599,9 +627,12 @@ def _join_segments(segments: Sequence[str]) -> str:
     return body + "\n" if body else ""
 
 
-def _heading(number: int, title: str) -> str:
-    """标题后缀原样重建，不重新加括号。"""
-    return f"### 第 {number} 题{title}"
+def _heading(number: int, title: str, printed_label: Optional[str] = None) -> str:
+    """标题后缀原样重建；可附不显示的源卷题号元数据。"""
+    heading = f"### 第 {number} 题{title}"
+    if printed_label is not None and printed_label != str(number):
+        heading += f"<!-- printed-label: {printed_label} -->"
+    return heading
 
 
 def _canonical_derivation(
@@ -695,7 +726,7 @@ def extract_solution_blocks(combined: str, questions_text: Optional[str] = None)
     for block in parse_question_blocks(combined):
         if block.lead:
             segments.append(block.lead)
-        segments.append(_heading(block.number, block.title))
+        segments.append(_heading(block.number, block.title, block.printed_label))
         segments.append(
             _canonical_derivation(block.body, stems.get(block.number, frozenset()))
         )
@@ -755,6 +786,16 @@ def render_combined(questions_text: str, solution_text: str, answer_text: str) -
     for block in solution_blocks:
         question = questions[block.number]
         for label, actual in (
+            ("解析正文", block.printed_label),
+            ("答案要点", answers[block.number].printed_label),
+        ):
+            if actual != question.printed_label:
+                raise SolutionSourceError(
+                    "第 {0} 题的{1}印刷题号与试题不一致：试题 {2!r}、{1} {3!r}".format(
+                        block.number, label, question.printed_label, actual,
+                    )
+                )
+        for label, actual in (
             ("解析正文", set(block.subparts)),
             ("答案要点", set(answers[block.number].subparts)),
         ):
@@ -771,7 +812,7 @@ def render_combined(questions_text: str, solution_text: str, answer_text: str) -
         if block.lead:
             segments.append(block.lead)
         question = questions[block.number]
-        segments.append(_heading(block.number, block.title))
+        segments.append(_heading(block.number, block.title, question.printed_label))
         segments.append(
             f"{QUESTION_MARKER}{question.title}："
             if question.title else f"{QUESTION_MARKER}："

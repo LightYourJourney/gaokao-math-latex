@@ -780,6 +780,23 @@ class FalseGreenTests(unittest.TestCase):
             "question_id": question_id(PAPER_ONE, 9),
         }}))
 
+    def test_repeated_printed_number_uses_distinct_internal_question_order(self):
+        paper = next(item for item in self.fixture.papers
+                     if item["paper_id"] == PAPER_ONE)
+        path = self.fixture.root / paper["source_files"]["questions"]
+        text = path.read_text(encoding="utf-8").replace(
+            "**2．**", "**2．**<!-- printed-label: 1 -->", 1
+        )
+        path.write_text(text, encoding="utf-8")
+        document = self.fixture.document_for(PAPER_ONE)
+        for record in document["questions"]:
+            order = record["printed_number"]
+            record["question_order"] = order
+            record["printed_label"] = "1" if order == 2 else str(order)
+            if order == 2:
+                record["printed_number"] = 1
+        validate_provenance(document, self.fixture.manifest(), self.fixture.root)
+
     def test_a_document_bound_to_the_wrong_batch_is_rejected(self):
         document = self.fixture.document_for(PAPER_ONE)
         document["batch_id"] = "phase0-b09"
@@ -987,6 +1004,26 @@ class InitBatchTests(unittest.TestCase):
         self.assertEqual(len(set(created)), 9)
         for relative in created:
             self.assertTrue((self.fixture.root / relative).is_file())
+
+    def test_it_seeds_the_original_label_separately_from_internal_order(self):
+        paper = next(item for item in self.fixture.papers
+                     if item["paper_id"] == PAPER_ONE)
+        questions_path = self.fixture.root / paper["source_files"]["questions"]
+        text = questions_path.read_text(encoding="utf-8").replace(
+            "**2．**", "**2．**<!-- printed-label: 一 -->", 1
+        )
+        questions_path.write_text(text, encoding="utf-8")
+
+        init_batch(self.fixture.manifest_path, BATCH_ID, self.fixture.work_dir)
+        for stage in STAGES:
+            role_path = provenance.work_paths(
+                self.fixture.work_dir, BATCH_ID, PAPER_ONE
+            )[stage]
+            document = json.loads(role_path.read_text(encoding="utf-8"))
+            second = document["questions"][1]
+            self.assertEqual(second["question_order"], 2)
+            self.assertEqual(second["printed_label"], "一")
+            self.assertEqual(second["printed_number"], "一")
 
     def test_it_writes_nothing_tracked(self):
         before = self.fixture.snapshot()

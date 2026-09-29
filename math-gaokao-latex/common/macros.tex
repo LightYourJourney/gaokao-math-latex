@@ -11,11 +11,19 @@
 % 试题部分的题号：加粗编号 + 自动 \label{q:<卷id>:<题号>}
 \newcommand{\gkti}[1]{\par\medskip\noindent
   \textbf{#1．}\phantomsection\label{q:\gkpaperid:#1}\ignorespaces}
+% 多卷/分部重启题号时，#1 是唯一内部顺序号（交叉引用身份），#2 才是原卷显示题号。
+\newcommand{\gktiwithlabel}[2]{\par\medskip\noindent
+  \textbf{#2．}\phantomsection\label{q:\gkpaperid:#1}\ignorespaces}
 
 % 解析部分的题头：小标题 + 回链到试题页
 % （仅在题目与解析同文档的版本中回链有效；试题版不含解析头，无悬空引用）
 \newcommand{\gksolhead}[2]{%
   \Needspace{3\baselineskip}\subsubsection*{第 #1 题\if\relax\detokenize{#2}\relax\else（#2）\fi}%
+  \phantomsection\label{s:\gkpaperid:#1}%
+  {\small\color{gray}（题目见第~\pageref{q:\gkpaperid:#1}~页）}\par\nopagebreak}
+% 与 \gktiwithlabel 成对：显示原题号，但回链仍用唯一内部顺序号。
+\newcommand{\gksolheadwithlabel}[3]{%
+  \Needspace{3\baselineskip}\subsubsection*{第 #2 题\if\relax\detokenize{#3}\relax\else（#3）\fi}%
   \phantomsection\label{s:\gkpaperid:#1}%
   {\small\color{gray}（题目见第~\pageref{q:\gkpaperid:#1}~页）}\par\nopagebreak}
 

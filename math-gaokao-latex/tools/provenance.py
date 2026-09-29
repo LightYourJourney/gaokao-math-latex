@@ -98,7 +98,8 @@ UNFINISHED_ISSUE_STATES: Tuple[str, ...] = tuple(
 )
 
 QUESTION_FIELDS: Tuple[str, ...] = (
-    "question_id", "printed_number", "source_ref", "source_sha256", "source_pages",
+    "question_id", "question_order", "printed_number", "printed_label",
+    "source_ref", "source_sha256", "source_pages",
     "question_text_sha256", "answer_sha256", "transcription_review",
     "answer_evidence", "solver_role", "reviewer_role", "conflict_status", "issue_ids",
 )
@@ -171,17 +172,17 @@ def _sha256_text(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
-def question_id(paper_id: str, printed_number: int) -> str:
-    """题号 ID 由 paper_id 与印刷题号确定性派生，不接受人工命名。
+def question_id(paper_id: str, question_order: int) -> str:
+    """题号 ID 由 paper_id 与唯一内部顺序确定性派生，不接受人工命名。
 
     自由命名的题号 ID 会让「同一道题在两份文档里叫两个名字」成为可能，而问题总账的
     fingerprint 身份正是 (type, paper_id, question_id, source_id)。
     """
-    if not isinstance(printed_number, int) or isinstance(printed_number, bool):
-        raise ProvenanceError("printed_number 必须是整数")
-    if printed_number <= 0:
-        raise ProvenanceError("printed_number 必须是正整数")
-    return "%s-q%02d" % (paper_id, printed_number)
+    if not isinstance(question_order, int) or isinstance(question_order, bool):
+        raise ProvenanceError("question_order 必须是整数")
+    if question_order <= 0:
+        raise ProvenanceError("question_order 必须是正整数")
+    return "%s-q%02d" % (paper_id, question_order)
 
 
 # ---------------------------------------------------------------- 三种哈希
@@ -238,7 +239,8 @@ def _strip_file_footer(lines: Sequence[str]) -> List[str]:
 def question_block_text(block: Any, strip_footer: bool = False) -> str:
     """题面块的规范文本：标题行余部 + 正文，规范化后拼接。
 
-    题号本身不进哈希——它由 `printed_number` 单独记录；块间的 `lead`（章节标题、
+    题号本身不进哈希——唯一内部题序由 `question_order` 记录，原卷标签由
+    `printed_label` / 兼容字段 `printed_number` 记录；块间的 `lead`（章节标题、
     分隔线）也不进，那是题与题之间的东西，改动它不该让整卷核验失效。
 
     `strip_footer` 只由最后一题传 True：文末页脚没有下一题来接管，会被解析器算进末题
@@ -252,7 +254,7 @@ def question_block_text(block: Any, strip_footer: bool = False) -> str:
 
 
 def question_text_digests(questions_text: str) -> Dict[int, str]:
-    """`_试题.md` 逐题题面哈希，键为印刷题号。"""
+    """`_试题.md` 逐题题面哈希，键为唯一内部题序。"""
     try:
         blocks = parse_question_blocks(questions_text)
     except SolutionSourceError as error:
@@ -324,7 +326,7 @@ def schema() -> Mapping[str, Any]:
 def new_provenance(
     paper_id: str, batch_id: str, questions: Sequence[Mapping[str, Any]]
 ) -> Dict[str, Any]:
-    """组装一份 provenance 文档（按印刷题号升序），不做落盘也不做语义校验。"""
+    """组装 provenance 文档（按唯一内部题序升序），不落盘、不做语义校验。"""
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_by": GENERATED_BY,
@@ -332,7 +334,10 @@ def new_provenance(
         "batch_id": batch_id,
         "questions": [
             copy.deepcopy(dict(item))
-            for item in sorted(questions, key=lambda item: item["printed_number"])
+            for item in sorted(
+                questions,
+                key=lambda item: item.get("question_order", item["printed_number"]),
+            )
         ],
     }
 
@@ -360,19 +365,32 @@ def _validate_structure(
             % (paper_id, expected_batch, document["batch_id"])
         )
 
-    numbers = [item["printed_number"] for item in document["questions"]]
-    if numbers != list(range(1, int(paper["question_count"]) + 1)):
+    orders = [item.get("question_order", item["printed_number"])
+              for item in document["questions"]]
+    if orders != list(range(1, int(paper["question_count"]) + 1)):
         raise ProvenanceError(
-            "%s 的题号必须是 1..%d 且升序无缺，实际 %s"
-            % (paper_id, paper["question_count"], numbers)
+            "%s 的内部题序必须是 1..%d 且升序无缺，实际 %s"
+            % (paper_id, paper["question_count"], orders)
         )
 
     registered = {item["path"] for item in paper.get("legacy_source_files", [])}
     for record in document["questions"]:
-        number = record["printed_number"]
+        number = record.get("question_order", record["printed_number"])
+        printed_label = record.get("printed_label", str(record["printed_number"]))
+        if not isinstance(printed_label, str) or not printed_label.strip():
+            raise ProvenanceError(f"第 {number} 个内部题序缺少 printed_label")
+        expected_printed_number: Any = (
+            int(printed_label)
+            if re.fullmatch(r"[1-9][0-9]*", printed_label)
+            else printed_label
+        )
+        if record["printed_number"] != expected_printed_number:
+            raise ProvenanceError(
+                f"第 {number} 个内部题序的 printed_number 与 printed_label 不一致"
+            )
         if record["question_id"] != question_id(paper_id, number):
             raise ProvenanceError(
-                "第 %d 题的 question_id 与印刷题号不符：%s"
+                "内部题序 %d 的 question_id 派生错误：%s"
                 % (number, record["question_id"])
             )
         roles = [
@@ -421,7 +439,12 @@ def _validate_current_values(
     paper_id = document["paper_id"]
     paper = _paper(manifest, paper_id)
     sources = {item["source_id"]: item for item in manifest.get("sources", [])}
-    texts = question_text_digests(_read_text(root, paper["source_files"]["questions"]))
+    questions_text = _read_text(root, paper["source_files"]["questions"])
+    texts = question_text_digests(questions_text)
+    printed_labels = {
+        block.number: block.printed_label
+        for block in parse_question_blocks(questions_text)
+    }
     answers = answer_digests(
         paper_id, _read_text(root, paper["source_files"]["answer_key"])
     )
@@ -431,7 +454,12 @@ def _validate_current_values(
     }
 
     for record in document["questions"]:
-        number = record["printed_number"]
+        number = record.get("question_order", record["printed_number"])
+        label = record.get("printed_label", str(record["printed_number"]))
+        if printed_labels.get(number) != label:
+            raise _StaleProvenance(
+                f"第 {number} 个内部题序的原卷显示题号已变化"
+            )
         reference = record["source_ref"]
         if "source_id" in reference:
             source = sources.get(reference["source_id"])
@@ -763,12 +791,22 @@ def work_paths(work_dir: Path, batch_id: str, paper_id: str) -> Dict[str, Path]:
     return {stage: base / stage / ("%s.json" % paper_id) for stage in STAGES}
 
 
-def _skeleton(stage: str, batch_id: str, paper_id: str, count: int) -> Dict[str, Any]:
+def _skeleton(
+    stage: str, batch_id: str, paper_id: str, count: int,
+    printed_labels: Optional[Mapping[int, str]] = None,
+) -> Dict[str, Any]:
     records: List[Dict[str, Any]] = []
+    printed_labels = printed_labels or {}
     for number in range(1, count + 1):
+        label = printed_labels.get(number, str(number))
+        printed_number: Any = (
+            int(label) if re.fullmatch(r"[1-9][0-9]*", label) else label
+        )
         record: Dict[str, Any] = {
             "question_id": question_id(paper_id, number),
-            "printed_number": number,
+            "question_order": number,
+            "printed_number": printed_number,
+            "printed_label": label,
             "issue_ids": [],
         }
         if stage == "question-review":
@@ -807,6 +845,15 @@ def init_batch(
     planned: List[Tuple[Path, Dict[str, Any]]] = []
     for paper_id in batch["paper_ids"]:
         paper = _paper(manifest, paper_id)
+        questions_text = _read_text(root, paper["source_files"]["questions"])
+        printed_labels = {
+            block.number: block.printed_label
+            for block in parse_question_blocks(questions_text)
+        }
+        if len(printed_labels) != int(paper["question_count"]):
+            raise ProvenanceError(
+                f"{paper_id} 规范题面题数与 manifest question_count 不一致"
+            )
         paths = work_paths(resolved, batch_id, paper_id)
         for stage in STAGES:
             if paths[stage].exists():
@@ -815,7 +862,10 @@ def init_batch(
                 )
             planned.append((
                 paths[stage],
-                _skeleton(stage, batch_id, paper_id, int(paper["question_count"])),
+                _skeleton(
+                    stage, batch_id, paper_id, int(paper["question_count"]),
+                    printed_labels,
+                ),
             ))
 
     created: List[str] = []
@@ -881,9 +931,9 @@ def _read_work(work_dir: Path, batch_id: str, paper_ids: Sequence[str]) -> Dict[
 def _by_number(document: Mapping[str, Any], stage: str, paper_id: str) -> Dict[int, Mapping[str, Any]]:
     records: Dict[int, Mapping[str, Any]] = {}
     for item in document["questions"]:
-        number = item.get("printed_number")
+        number = item.get("question_order", item.get("printed_number"))
         if not isinstance(number, int) or isinstance(number, bool):
-            raise ProvenanceError(f"{stage}/{paper_id} 的 printed_number 必须是整数")
+            raise ProvenanceError(f"{stage}/{paper_id} 的 question_order 必须是整数")
         if number in records:
             raise ProvenanceError(f"{stage}/{paper_id} 的第 {number} 题记录重复")
         records[number] = item
@@ -916,8 +966,9 @@ def _require_linked_blocker(
         ):
             return
     raise ProvenanceError(
-        "%s 第 %d 题%s，必须关联一条 fingerprint 当前、仍在阻断的 %s 问题"
-        % (paper_id, record["printed_number"], detail,
+        "%s 第 %s 个内部题序（原卷题号 %s）%s，必须关联一条 fingerprint 当前、仍在阻断的 %s 问题"
+        % (paper_id, record.get("question_order", record["printed_number"]),
+           record.get("printed_label", str(record["printed_number"])), detail,
            issues_module.QUESTION_ISSUE_TYPES[kind])
     )
 
@@ -947,7 +998,10 @@ def _build_document(
     assert numbers is not None
 
     # work 文件里的哈希只是**待比较声明**：真值一律从当前 tracked 规范源现场重算。
-    texts = question_text_digests(_read_text(root, paper["source_files"]["questions"]))
+    questions_text = _read_text(root, paper["source_files"]["questions"])
+    question_blocks = parse_question_blocks(questions_text)
+    printed_labels = {block.number: block.printed_label for block in question_blocks}
+    texts = question_text_digests(questions_text)
     answers = answer_digests(
         paper_id, _read_text(root, paper["source_files"]["answer_key"])
     )
@@ -957,12 +1011,32 @@ def _build_document(
         review = tables["question-review"][number]
         solve = tables["answer-solve"][number]
         blind = tables["answer-review"][number]
+        expected_label = printed_labels[number]
+        for stage, work_record in (
+            ("question-review", review),
+            ("answer-solve", solve),
+            ("answer-review", blind),
+        ):
+            declared_label = work_record.get(
+                "printed_label", str(work_record.get("printed_number", number))
+            )
+            if declared_label != expected_label:
+                raise ProvenanceError(
+                    "%s 第 %d 个内部题序的 %s printed_label %r 与规范题面 %r 不符"
+                    % (paper_id, number, stage, declared_label, expected_label)
+                )
         reference = review.get("source_ref")
         if not isinstance(reference, Mapping):
             raise ProvenanceError(f"{paper_id} 第 {number} 题缺少 source_ref")
         record = {
             "question_id": question_id(paper_id, number),
-            "printed_number": number,
+            "question_order": number,
+            "printed_number": (
+                int(expected_label)
+                if re.fullmatch(r"[1-9][0-9]*", expected_label)
+                else expected_label
+            ),
+            "printed_label": expected_label,
             "source_ref": copy.deepcopy(dict(reference)),
             "source_sha256": review.get("source_sha256"),
             "source_pages": list(review.get("source_pages") or []),

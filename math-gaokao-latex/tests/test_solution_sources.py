@@ -457,6 +457,57 @@ class ParseQuestionBlocksTests(unittest.TestCase):
         self.assertNotIn("## 二、解答题", blocks[1].body)
         self.assertEqual(blocks[2].lead, "## 二、解答题")
 
+    def test_preserves_repeated_source_labels_separately_from_unique_order(self):
+        text = (
+            "**1．** 甲题。\n\n"
+            "**2．**<!-- printed-label: 1 --> 乙题。\n"
+        )
+        blocks = parse_question_blocks(text)
+        self.assertEqual([block.number for block in blocks], [1, 2])
+        self.assertEqual([block.printed_label for block in blocks], ["1", "1"])
+        self.assertEqual(blocks[1].body, "乙题。")
+
+    def test_reads_printed_label_metadata_on_solution_headings(self):
+        text = (
+            "### 第 1 题（卷一）\n\n**解析**\n\n甲。\n\n"
+            "### 第 2 题（卷二）<!-- printed-label: 1 -->\n\n**解析**\n\n乙。\n"
+        )
+        blocks = parse_question_blocks(text, style="heading")
+        self.assertEqual([block.number for block in blocks], [1, 2])
+        self.assertEqual([block.printed_label for block in blocks], ["1", "1"])
+        self.assertEqual(blocks[1].title, "（卷二）")
+
+    def test_extract_solution_blocks_keeps_nondefault_printed_label(self):
+        combined = (
+            "### 第 2 题（卷二）<!-- printed-label: 1 -->\n\n"
+            "**题目**：求值。\n\n**解析**\n\n计算得 2。\n\n**答案：2**\n"
+        )
+        self.assertEqual(
+            extract_solution_blocks(combined),
+            "### 第 2 题（卷二）<!-- printed-label: 1 -->\n\n"
+            "**解析**\n\n计算得 2。\n",
+        )
+
+    def test_combined_rendering_requires_question_solution_answer_labels_to_match(self):
+        questions = (
+            "**1．** 甲题。\n\n**2．**<!-- printed-label: 1 --> 乙题。\n"
+        )
+        solutions = (
+            "### 第 1 题\n\n**解析**\n\n甲。\n\n"
+            "### 第 2 题<!-- printed-label: 1 -->\n\n**解析**\n\n乙。\n"
+        )
+        answers = (
+            "**1．**\n\n**答案：A**\n\n"
+            "**2．**<!-- printed-label: 1 -->\n\n**答案：B**\n"
+        )
+        rendered = render_combined(questions, solutions, answers)
+        self.assertIn("### 第 2 题<!-- printed-label: 1 -->", rendered)
+        self.assertIn("乙题。", rendered)
+
+        mismatched = solutions.replace("printed-label: 1", "printed-label: 2")
+        with self.assertRaises(SolutionSourceError):
+            render_combined(questions, mismatched, answers)
+
     def test_reads_heading_numbering_with_subpart_headings(self):
         blocks = parse_question_blocks(COMBINED)
         self.assertEqual([block.number for block in blocks], [1, 2, 3])

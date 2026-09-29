@@ -35,7 +35,9 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 import cli_common
 from generate_projects import INDEX_METADATA
 from manifest import load_manifest
-from solution_sources import SolutionSourceError, parse_answer_points
+from solution_sources import (
+    SolutionSourceError, parse_answer_points, parse_question_blocks,
+)
 from transaction import RepoLock
 
 HERE = Path(__file__).resolve().parent
@@ -57,7 +59,7 @@ SHORT_ANSWER_OVERRIDES = {
     ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
 }
 
-_SOLUTION_HEAD = re.compile(r"^\\gksolhead\{(\d+)\}\{")
+_SOLUTION_HEAD = re.compile(r"^\\gksolhead(?:withlabel)?\{(\d+)\}\{")
 # 生成答案块转成 LaTeX 后的两种形态：`**答案：X**` 独立段落走 \gkanswer；答案值里含
 # `*` 时转换器的 ANSLINE 认不出，退化成 \textbf。两种都是落地的最终答案。
 _ANSWER_TEX = re.compile(
@@ -91,6 +93,7 @@ class ShortAnswerSources:
     project_dir: str
     title: str
     question_count: int
+    questions: str          # 仓库相对；为简答版取得原卷显示题号
     answer_key: str          # 仓库相对
     answers_tex: str         # 仓库相对
     structure: Tuple[Tuple[str, int, int], ...]
@@ -330,10 +333,10 @@ def normalize_structure(
     return _ordered(groups)
 
 
-def _table(numbers: Sequence[int], letters: Sequence[str]) -> str:
-    head = " & ".join(str(number) for number in numbers)
+def _table(labels: Sequence[str], letters: Sequence[str]) -> str:
+    head = " & ".join(labels)
     body = " & ".join(letters)
-    return ("\\begin{center}\\begin{tabular}{c" + "c" * len(numbers) + "}\n"
+    return ("\\begin{center}\\begin{tabular}{c" + "c" * len(labels) + "}\n"
             "\\toprule\n题号 & " + head + " \\\\\n\\midrule\n"
             "答案 & " + body + " \\\\\n\\bottomrule\n"
             "\\end{tabular}\\end{center}")
@@ -344,9 +347,12 @@ def render_short_answers(
     answer_key_relative: str,
     structure: Mapping[str, Sequence[int]],
     answers: Mapping[int, str],
+    printed_labels: Optional[Mapping[int, str]] = None,
 ) -> str:
     """渲染一卷的 answers_short.tex 全文。"""
     groups = normalize_structure(structure)
+    printed_labels = printed_labels or {}
+    display = lambda number: printed_labels.get(number, str(number))
     covered: set = set()
     for _, low, high in groups:
         covered.update(range(low, high + 1))
@@ -368,12 +374,15 @@ def render_short_answers(
         if name in CHOICE_GROUPS:
             parts.append(
                 "\\gkpart{" + name + "}\n"
-                + _table(numbers, [letters[number] for number in numbers])
+                + _table([display(number) for number in numbers],
+                         [letters[number] for number in numbers])
             )
             continue
         lines = ["\\gkpart{" + name + "}", "\\begin{itemize}[leftmargin=2.6em]"]
         for number in numbers:
-            lines.append("  \\item[\\textbf{%d.}] %s" % (number, answers[number]))
+            lines.append(
+                "  \\item[\\textbf{%s.}] %s" % (display(number), answers[number])
+            )
         lines.append("\\end{itemize}")
         parts.append("\n".join(lines))
 
@@ -403,6 +412,7 @@ def paper_sources(
         project_dir=directory,
         title=paper["title"],
         question_count=paper["question_count"],
+        questions=paper["source_files"]["questions"],
         answer_key=paper["source_files"]["answer_key"],
         answers_tex="%s/%s/answers.tex" % (PROJECT_RELATIVE, directory),
         structure=normalize_structure(static["structure"]),
@@ -431,6 +441,7 @@ def generate_short_answers(
     root = Path(repo_root)
     answers_tex = cli_common.read_text(root / sources.answers_tex, ShortAnswerError)
     answer_key = cli_common.read_text(root / sources.answer_key, ShortAnswerError)
+    questions_text = cli_common.read_text(root / sources.questions, ShortAnswerError)
     empty = ShortAnswerResult(
         paper_id=sources.paper_id, project_dir=sources.project_dir,
         targets={}, inputs=(),
@@ -440,6 +451,13 @@ def generate_short_answers(
         return tuple("%s: %s" % (sources.paper_id, item) for item in items)
 
     problems: List[str] = list(compare_generated_answers(answers_tex, answer_key))
+    try:
+        printed_labels = {
+            block.number: block.printed_label
+            for block in parse_question_blocks(questions_text)
+        }
+    except SolutionSourceError as error:
+        raise ShortAnswerError(f"题面题号无法解析：{error}") from error
     covered: set = set()
     for _, low, high in sources.structure:
         covered.update(range(low, high + 1))
@@ -467,6 +485,7 @@ def generate_short_answers(
         sources.answer_key,
         {name: (low, high) for name, low, high in sources.structure},
         answers,
+        printed_labels=printed_labels,
     )
     target = "%s/%s/answers_short.tex" % (PROJECT_RELATIVE, sources.project_dir)
     return (
@@ -474,7 +493,7 @@ def generate_short_answers(
             paper_id=sources.paper_id,
             project_dir=sources.project_dir,
             targets={target: text.encode("utf-8")},
-            inputs=(sources.answer_key, sources.answers_tex),
+            inputs=(sources.questions, sources.answer_key, sources.answers_tex),
         ),
         (),
     )

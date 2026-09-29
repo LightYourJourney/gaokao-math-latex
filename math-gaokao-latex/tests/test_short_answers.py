@@ -58,6 +58,7 @@ PROJECT_DIR = "2099_全国1卷"
 TITLE = "2099 年·全国 1 卷"
 PAPER_ROOT = "2099"
 ANSWER_KEY_PATH = PAPER_ROOT + "/2099_数学真题_答案要点.md"
+QUESTIONS_PATH = PAPER_ROOT + "/2099_数学真题_试题.md"
 ANSWERS_TEX = "%s/%s/answers.tex" % (PROJECT_RELATIVE, PROJECT_DIR)
 SHORT_TEX = "%s/%s/answers_short.tex" % (PROJECT_RELATIVE, PROJECT_DIR)
 
@@ -100,6 +101,19 @@ title: 2099 年数学真题（答案要点）
 > 代入即可。
 >
 > **(2) 证明要点**：由导数符号可得。
+"""
+
+QUESTIONS = """---
+title: 2099 年数学真题（试题）
+---
+
+# 2099 年测试卷
+
+**1．** 集合运算
+
+**2．** 几何概型
+
+**3．（12 分）** 函数性质
 """
 
 ANSWERS_TEX_TEXT = """% answers.tex —— 2099 年·全国 1 卷 · 参考答案与详细解析片段
@@ -209,6 +223,7 @@ class RepositoryFixture:
         papers = papers if papers is not None else [paper_entry()]
         self.manifest_path = self.root / MANIFEST_TARGET
         atomic_write_json(self.manifest_path, manifest_document(papers))
+        self.write(QUESTIONS_PATH, QUESTIONS)
         self.write(ANSWER_KEY_PATH, answer_key)
         self.write(ANSWERS_TEX, answers_tex)
 
@@ -388,6 +403,24 @@ class RenderTests(unittest.TestCase):
     def test_other_groups_render_as_an_itemized_list(self):
         self.assertIn("\\item[\\textbf{3.}] (1) $x=1$；(2) 见解析版", self.render())
 
+    def test_repeated_source_labels_render_without_exposing_internal_order(self):
+        text = render_short_answers(
+            TITLE,
+            ANSWER_KEY_PATH,
+            {"选择题": [11, 12], "解答题": [31, 31]},
+            {11: "A", 12: "B", 31: "$1$"},
+            printed_labels={11: "1", 12: "2", 31: "1"},
+        )
+        self.assertIn("题号 & 1 & 2", text)
+        self.assertIn("\\item[\\textbf{1.}] $1$", text)
+        self.assertNotIn("\\textbf{31.}", text)
+
+    def test_generated_head_with_source_label_still_parses_internal_answer_identity(self):
+        records = parse_generated_answers_tex(
+            "\\gksolheadwithlabel{11}{1}{}\n\\gkanswer{答案：A}\n"
+        )
+        self.assertEqual(records, (AnswerRecord(11, None, "A"),))
+
     def test_the_header_names_the_two_compared_sources(self):
         head = self.render().split("\n")[:3]
         self.assertIn("answers_short.tex", head[0])
@@ -476,7 +509,7 @@ class CommitTests(unittest.TestCase):
     def test_inputs_pin_the_manifest_the_sources_and_the_tools(self):
         seen = self.journal()
         self.assertEqual(sorted(seen["inputs"]), sorted([
-            MANIFEST_TARGET, ANSWER_KEY_PATH, ANSWERS_TEX,
+            MANIFEST_TARGET, QUESTIONS_PATH, ANSWER_KEY_PATH, ANSWERS_TEX,
             TOOL_SOURCE_TARGET, RENDERER_SOURCE_TARGET,
             CONVERTER_SOURCE_TARGET, STRUCTURE_SOURCE_TARGET,
         ]))
@@ -517,6 +550,36 @@ class CommitTests(unittest.TestCase):
 
 
 class LiveRepositoryTests(unittest.TestCase):
+    def test_generation_uses_source_labels_and_keeps_internal_answer_identity(self):
+        fixture = RepositoryFixture()
+        self.addCleanup(fixture.cleanup)
+        questions = fixture.path(QUESTIONS_PATH)
+        questions.write_text(
+            questions.read_text(encoding="utf-8").replace(
+                "**2．**", "**2．**<!-- printed-label: 一 -->", 1
+            ),
+            encoding="utf-8",
+        )
+        answers = fixture.path(ANSWERS_TEX)
+        answers.write_text(
+            answers.read_text(encoding="utf-8").replace(
+                r"\gksolhead{2}{几何概型}",
+                r"\gksolheadwithlabel{2}{一}{几何概型}",
+                1,
+            ),
+            encoding="utf-8",
+        )
+        paper = paper_entry()
+        sources = paper_sources(paper, INDEX_METADATA)
+
+        result, problems = generate_short_answers(fixture.root, sources)
+
+        self.assertEqual(problems, ())
+        output = result.targets[SHORT_TEX].decode("utf-8")
+        self.assertIn("题号 & 1 & 一", output)
+        self.assertIn(r"\item[\textbf{3.}]", output)
+        self.assertNotIn(r"\item[\textbf{2.}]", output)
+
     def test_2023_new_gaokao_1_short_answer_19_1_is_not_a_solution_leak(self):
         manifest = load_manifest(ROOT / "source-manifest.json")
         paper = next(

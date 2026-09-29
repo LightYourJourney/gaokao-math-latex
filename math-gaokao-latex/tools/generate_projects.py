@@ -41,6 +41,7 @@ from solution_sources import (
     SolutionSourceError,
     extract_solution_blocks,
     parse_answer_points,
+    parse_question_blocks,
     render_combined,
 )
 from source_manifest import project_legacy_index
@@ -64,8 +65,8 @@ DEFAULT_MANIFEST = PROJECT_ROOT / "source-manifest.json"
 #              （题面里 \gksubpart 只用作"（一）必考题"类节级标题）；
 #   answers  ：题块起于行首 \gksolhead{N}{..}，止于下一个 \gksolhead / \gkpart / 文件尾
 #              （解析里 \gksubpart 是题内小问标题，作边界会把一道题劈成两半）。
-Q_HEAD = re.compile(r"^\\gkti\{(\d+)\}")
-S_HEAD = re.compile(r"^\\gksolhead\{(\d+)\}\{")
+Q_HEAD = re.compile(r"^\\gkti(?:withlabel)?\{(\d+)\}")
+S_HEAD = re.compile(r"^\\gksolhead(?:withlabel)?\{(\d+)\}\{")
 STRUCT_Q = re.compile(r"^\\(gkpart|gksubpart)\{")
 STRUCT_S = re.compile(r"^\\gkpart\{")
 _WRAP_MODES = {
@@ -347,13 +348,16 @@ class ProjectResult:
     figure_occurrences: Mapping[str, int]
 
 
-def wrap(text: str, mode: str) -> Tuple[str, List[int]]:
-    """按行首题头切分并包裹环境；返回 (包裹后文本, 题号列表)。"""
+def wrap(
+    text: str, mode: str, printed_labels: Optional[Mapping[int, str]] = None
+) -> Tuple[str, List[int]]:
+    """按行首题头切分并包裹环境；保留内部顺序号与原卷显示题号的映射。"""
     try:
         head_re, struct_re, env = _WRAP_MODES[mode]
     except KeyError:
         raise GenerationError(f"未知包裹模式：{mode}")
     out: List[str] = []
+    printed_labels = printed_labels or {}
     nums: List[int] = []
     in_block = False
     for line in text.split("\n"):
@@ -362,8 +366,18 @@ def wrap(text: str, mode: str) -> Tuple[str, List[int]]:
             if in_block:
                 out.append("\\end{%s}" % env)
             out.append("\\begin{%s}" % env)
+            number = int(match.group(1))
+            label = printed_labels.get(number, str(number))
+            if label != str(number):
+                if mode == "questions":
+                    source_head = "\\gkti{%d}" % number
+                    target_head = "\\gktiwithlabel{%d}{%s}" % (number, label)
+                else:
+                    source_head = "\\gksolhead{%d}{" % number
+                    target_head = "\\gksolheadwithlabel{%d}{%s}{" % (number, label)
+                line = line.replace(source_head, target_head, 1)
             out.append(line)
-            nums.append(int(match.group(1)))
+            nums.append(number)
             in_block = True
         elif struct_re.match(line):
             if in_block:
@@ -476,8 +490,20 @@ def generate_project(
             "%s: 转换告警 %s" % (sources.paper_id, "；".join(error.warnings))
         ) from error
 
-    wrapped_questions, question_numbers = wrap(converted_questions.text, "questions")
-    wrapped_answers, answer_numbers = wrap(converted_answers.text, "answers")
+    try:
+        question_blocks = parse_question_blocks(questions_text)
+        printed_labels = {
+            block.number: md2tex.convert_inline(block.printed_label, context).text
+            for block in question_blocks
+        }
+    except SolutionSourceError as error:
+        raise GenerationError(f"{sources.paper_id}: {error}") from error
+    wrapped_questions, question_numbers = wrap(
+        converted_questions.text, "questions", printed_labels
+    )
+    wrapped_answers, answer_numbers = wrap(
+        converted_answers.text, "answers", printed_labels
+    )
 
     questions_target = "%s/%s/questions.tex" % (PROJECT_RELATIVE, sources.project_dir)
     answers_target = "%s/%s/answers.tex" % (PROJECT_RELATIVE, sources.project_dir)

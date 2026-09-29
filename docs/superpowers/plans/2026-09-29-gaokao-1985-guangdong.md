@@ -38,6 +38,10 @@
 - 两卷卷别与题号相似处是否串卷；每个答案均须绑定本卷题面和页码证据。
 - 旧卷纸面页码与 PDF 页码是否一致；不确定时逐题记录映射，不按连续页数推算。
 
+## Architecture dependency: repeated printed numbering
+
+The official source restarts visible question numbers across named sections/volumes. The shared pipeline must therefore separate stable internal question order/identity from the printed label. Preserve source-local labels in questions, solutions, short answers, LaTeX cross-references, and per-question provenance. Existing linear papers must remain byte-compatible unless their input metadata changes. Add regression tests before implementation and determine which existing build receipts become stale; the user has previously authorized refreshing invalidated receipts and visual reviews.
+
 ## File Map
 
 - Create: `1985/1985_数学真题_广东文史类_{试题,答案要点,解析正文}.md` — 三份人工维护源文件。
@@ -58,6 +62,7 @@
 - [ ] 逐页转录所有题干、选项、小问、分值、图示和印刷说明；疑字、缺损、图形歧义明确标记，不用模型记忆恢复。
 - [ ] 独立求解每题并记录推导；盲核代理先保存自己的答案和依据，再对比首解。未能裁定的差异作为 U 和 issue。
 - [ ] 图形清单逐图记录源页、标签、几何关系、边线样式与题面引用次数；确认后才转为项目 TikZ/PGFPlots 源。
+- [x] 对重复原题号实现稳定内部顺序与独立印刷标签兼容；已补并运行回归测试，覆盖 Markdown 解析/合并、LaTeX 题头与回链、简答版、provenance 和旧式连续题号卷。各卷/大题的可见分域由题面源的分节标题保留，需在规范稿和最终版面再次核对。
 
 ### Task 2 — 整合规范 Markdown、登记并生成项目源
 
@@ -65,6 +70,7 @@
 - [ ] 通过 `solution_sources.render_combined()` 生成两份 `_含解析.md`；检查题号、答案数、解析数、题面/解析图引用及卷别元数据。
 - [ ] 确认 `phase2-b09`、paper ID、目录、source 未被其他会话占用；运行 registration dry-run，审查精确 diff 后仅执行一次 `register-papers --write`。
 - [ ] 通过生成器创建共享 LaTeX、简答答案、四个版式入口和 provenance；运行所有相应 `--check` 与 schema 校验，不手改确定性产物。
+- [ ] 若公共工具输入哈希使既有卷回执过期，按已授权范围刷新受影响回执，并执行必要的全卷复核；不能只刷新本批而留下陈旧成功状态。
 
 ### Task 3 — 正式构建、视觉复核并分阶段提交
 
