@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth,thick,
+  term/.style={draw,rounded corners=3pt,minimum width=21mm,minimum height=7mm},
+  proc/.style={draw,minimum width=28mm,minimum height=8mm,align=center},
+  test/.style={draw,diamond,aspect=2.35,inner sep=1pt,align=center},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=25mm,minimum height=8mm,align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (input) at (0,-1.15) {输入 $N$};
+  \node[test] (div) at (0,-2.65) {$N$ 能被 $3$ 整除？};
+  \node[proc] (divide) at (-2.9,-4.05) {$N=N/3$};
+  \node[proc] (minus) at (2.9,-4.05) {$N=N-1$};
+  \node[test] (small) at (0,-5.55) {$N\leq 3$？};
+  \node[io] (output) at (0,-7.05) {输出 $N$};
+  \node[term] (stop) at (0,-8.2) {结束};
+  \draw[->] (start)--(input);
+  \draw[->] (input)--(div);
+  \draw[->] (div.south)--node[left]{是} (divide.north);
+  \draw[->] (div.east)--node[above]{否} ++(1.0,0)|-(minus.north);
+  \draw[->] (divide.south)|-(small.west);
+  \draw[->] (minus.south)|-(small.east);
+  \draw[->] (small.south)--node[right]{是}(output.north);
+  \draw[->] (output)--(stop);
+  \draw[->] (small.west)--++(-2.25,0)|-node[pos=.25,left]{否}(div.west);
+\end{tikzpicture}

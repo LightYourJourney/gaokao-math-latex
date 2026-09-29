@@ -1,0 +1,20 @@
+\begin{tikzpicture}[thick,>=stealth,line cap=round,line join=round,
+  dim/.style={<->,thin}, every node/.style={font=\small}]
+  % Front view: right triangle with horizontal and vertical legs both 2.
+  \draw (0,0)--(2.4,0)--(2.4,2.4)--cycle;
+  \draw[dim] (0,-.42)--(2.4,-.42) node[midway,below]{2};
+  \draw[thin] (0,-.12)--(0,-.52) (2.4,-.12)--(2.4,-.52);
+  \draw[dim] (2.82,0)--(2.82,2.4) node[midway,right]{2};
+  \draw[thin] (2.52,0)--(2.92,0) (2.52,2.4)--(2.92,2.4);
+  \node at (1.2,2.85) {正视图};
+  % Side view: square face and its visible diagonal.
+  \draw (5,0) rectangle (7.4,2.4);
+  \draw (5,0)--(7.4,2.4);
+  \draw[dim] (5,-.42)--(7.4,-.42) node[midway,below]{2};
+  \draw[thin] (5,-.12)--(5,-.52) (7.4,-.12)--(7.4,-.52);
+  \node at (6.2,2.85) {侧视图};
+  % Plan view: right triangle and its internal diagonal.
+  \draw (0,-3.15)--(2.4,-3.15)--(2.4,-5.55)--cycle;
+  \draw (0,-3.15)--(2.4,-5.55);
+  \node at (1.2,-5.95) {俯视图};
+\end{tikzpicture}

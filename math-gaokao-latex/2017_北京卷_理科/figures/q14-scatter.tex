@@ -1,0 +1,14 @@
+\begin{tikzpicture}[x=5cm,y=3.4cm,>=stealth,thick,
+  every node/.style={font=\small}]
+  \draw[->] (0,0)--(1.08,0) node[right]{工作时间（小时）};
+  \draw[->] (0,0)--(0,1.08) node[above]{零件数（件）};
+  \node[below left] at (0,0) {$O$};
+  \foreach \x/\y/\lab/\pos in {
+    .34/.84/$A_1$/above left,
+    .14/.33/$A_2$/left,
+    .37/.09/$A_3$/below,
+    .75/.20/$B_1$/below,
+    .67/.55/$B_2$/above left,
+    .91/.63/$B_3$/above right}
+    {\fill (\x,\y) circle (1.2pt);\node[\pos] at (\x,\y) {\lab};}
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=.45cm,y=1.05cm,thick,>=stealth,
+  every node/.style={font=\small}]
+  % The first three heights are read from the drawn geometry relative to the
+  % labelled 0.01 grid (about 0.002, 0.003, 0.005); those values are not printed
+  % labels in the source and are represented only by unlabelled bar heights.
+  \draw[->] (0,0)--(10,0) node[right]{分数};
+  \draw[->] (0,0)--(0,4.8) node[above]{$\dfrac{\text{频率}}{\text{组距}}$};
+  \foreach \x/\lab in {0/0,2/20,3/30,4/40,5/50,6/60,7/70,8/80,9/90}
+    \node[below=2pt] at (\x,0) {\lab};
+  \draw[dashed,thin] (0,1)--(5,1);
+  \draw[dashed,thin] (0,2)--(6,2);
+  \draw[dashed,thin] (0,4)--(7,4);
+  \node[left=2pt] at (0,1) {$0.01$};
+  \node[left=2pt] at (0,2) {$0.02$};
+  \node[left=2pt] at (0,4) {$0.04$};
+  \draw (2,0) rectangle (3,.2);
+  \draw (3,0) rectangle (4,.3);
+  \draw (4,0) rectangle (5,.5);
+  \draw (5,0) rectangle (6,1);
+  \draw (6,0) rectangle (7,2);
+  \draw (7,0) rectangle (8,4);
+  \draw (8,0) rectangle (9,2);
+  \draw[dashed,thin] (6,2)--(6.7,2);
+\end{tikzpicture}

@@ -15519,3 +15519,71 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-0962
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页印刷页 1056 第 17(3) 仅给出直线 NH 与直线 BE 所成角余弦为 √7/21。独立求解、与答案隔离的另一角色盲核及后续仅据固定源的独立复核均得到 AH=1/2 与 AH=8/5 两个棱 PA 上的合法值；未发现附加条件，保留 U。",
+  "fingerprint": "fcad0135221dc49854b13263ed16b3ecf7188f31f5be9a8b6ce4eb45263a154a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-tianjin-science",
+  "question_id": "gk-2017-regular-tianjin-science-q17",
+  "resume_action": "取得同版官方勘误或可靠来源说明确认是否漏印条件；在此之前保留两值并标 U。",
+  "source_id": "src-59000d9a683992059d4ab4804d370738dd2efd09e37ecfa36d726310ff84cfec",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0963
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页印刷页 1056 第 17(3) 的标准非定向直线夹角条件对应两个合法长度 AH=1/2、8/5。不同角色的独立推导一致，来源未指定唯一答案。",
+  "fingerprint": "711db9e05d606b2d1b4cd458d91b16f402959ba64aa9372f8dcce774b0ecadeb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-tianjin-science",
+  "question_id": "gk-2017-regular-tianjin-science-q17",
+  "resume_action": "获取可追溯的同版答案或勘误；若无勘误，解析保留两解并明确说明原题条件不唯一。",
+  "source_id": "src-59000d9a683992059d4ab4804d370738dd2efd09e37ecfa36d726310ff84cfec",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-0964
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页印刷页 1056 第 19(2) 令 l 上 P、Q 关于 x 轴对称，但未指定 P、Q 谁在上方。独立盲核确认面积条件允许 AP 斜率 ±√6/2，两条镜像直线均满足题意；候选稿也同时列出，唯一符号无法确定。",
+  "fingerprint": "c497db5366860394a14fdcd2a0dbcf4e346f23ad6fdbe8e888beef8466bb9c9c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-tianjin-science",
+  "question_id": "gk-2017-regular-tianjin-science-q19",
+  "resume_action": "获取同版官方勘误或可靠来源说明确认是否漏印 P/Q 次序条件；在此之前保留两条镜像直线并标 U。",
+  "source_id": "src-59000d9a683992059d4ab4804d370738dd2efd09e37ecfa36d726310ff84cfec",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-0965
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页印刷页 1056 第 19(2) 的条件只规定 P、Q 关于 x 轴对称而未指定顺序；独立答案盲核得到 AP 两种镜像直线，无法支持唯一答案。",
+  "fingerprint": "2d789b42bdce92dedffae72e2fec6a934eed5031c032e021bbcb4531e7de64f1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-regular-tianjin-science",
+  "question_id": "gk-2017-regular-tianjin-science-q19",
+  "resume_action": "获取可追溯的同版答案或勘误；若无勘误，解析列明两条合法直线并说明唯一性无法从原题推出。",
+  "source_id": "src-59000d9a683992059d4ab4804d370738dd2efd09e37ecfa36d726310ff84cfec",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=stealth,thick,
+  term/.style={draw,rounded corners=3pt,minimum width=22mm,minimum height=7mm},
+  proc/.style={draw,minimum width=30mm,minimum height=8mm,align=center},
+  test/.style={draw,diamond,aspect=2.2,inner sep=1pt,align=center},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=27mm,minimum height=8mm,align=center}]
+  \node[term] (start) at (0,0) {开始};
+  \node[proc] (init) at (0,-1.15) {$k=0,\ s=1$};
+  \node[test] (test) at (0,-2.65) {$k<3$？};
+  \node[proc] (inc) at (3,-2.65) {$k=k+1$};
+  \node[proc] (update) at (3,-1.15) {$s=\dfrac{s+1}{s}$};
+  \node[io] (out) at (0,-4.15) {输出 $s$};
+  \node[term] (stop) at (0,-5.25) {结束};
+  \draw[->] (start)--(init);
+  \draw[->] (init)--(test);
+  \draw[->] (test.east)--node[above]{是}(inc.west);
+  \draw[->] (inc.north)--(update.south);
+  \draw[->] (update.west)--++(-1.05,0)|-(test.north);
+  \draw[->] (test.south)--node[right]{否}(out.north);
+  \draw[->] (out)--(stop);
+\end{tikzpicture}
