@@ -76,10 +76,10 @@
 - Draft only: `.work/phase2-b08/<paper_id>/questions.md`, `page-map.md`, `answer-solve.md`, figure inventory.
 - Canonical outputs after reconciliation: four `_试题.md` files in `2017/`.
 
-- [ ] Assign one paper to each transcription/solver role; work in waves so no more than three content agents are active.
-- [ ] Transcribe all questions and printed instructions, options, subparts, scoring notes and diagrams; preserve source order and wording.
-- [ ] Record each question's PDF page, printed page, type, figure reference and uncertain glyph/geometry; visually verify the 20-question preflight count rather than assuming it.
-- [ ] Derive answers from the transcribed conditions without presenting them as official; preserve derivations and uncertainty in isolated drafts.
+- [x] Assign one paper to each transcription/solver role; work in waves so no more than three content agents are active.
+- [x] Transcribe all questions and printed instructions, options, subparts, scoring notes and diagrams; preserve source order and wording.
+- [x] Record each question's PDF page, printed page, type, figure reference and uncertain glyph/geometry; visually verify the 20-question preflight count rather than assuming it.
+- [x] Derive answers from the transcribed conditions without presenting them as official; preserve derivations and uncertainty in isolated drafts.
 
 **Expected:** Four source-complete drafts with page maps and figure inventories; no question is inferred from another regional/track version.
 
@@ -88,10 +88,10 @@
 **Files:**
 - Draft evidence, isolated from producer drafts: `.work/phase2-b08/reviews/<paper_id>/{answers-blind.md,question-review.json,answer-review.json,discrepancy-matrix.md}`.
 
-- [ ] Assign separate question-source reviewers and answer-blind reviewers per paper; both must be distinct from the answer solver. The provenance schema requires three pairwise-distinct role identities (`question-review`, `answer-solve`, `answer-review`), so one reviewer cannot fill both review roles for the same paper. Do not expose the first solver's final answer before the answer-blind record is saved and hashed.
-- [ ] Compare every question with rendered source, including choices, symbols, boundaries, diagrams and printed-page mapping.
-- [ ] Re-solve disagreements from source conditions; retain unresolved outcomes as U and create issue entries.
-- [ ] Main agent maintains the cross-paper anchor matrix and accepts/rejects evidence; agent self-reports alone are not acceptance evidence.
+- [x] Assign separate question-source reviewers and answer-blind reviewers per paper; both must be distinct from the answer solver. The provenance schema requires three pairwise-distinct role identities (`question-review`, `answer-solve`, `answer-review`), so one reviewer cannot fill both review roles for the same paper. Do not expose the first solver's final answer before the answer-blind record is saved and hashed.
+- [x] Compare every question with rendered source, including choices, symbols, boundaries, diagrams and printed-page mapping.
+- [x] Re-solve disagreements from source conditions; retain unresolved outcomes as U and create issue entries.
+- [x] Main agent maintains the cross-paper anchor matrix and accepts/rejects evidence; agent self-reports alone are not acceptance evidence.
 
 **Expected:** Every question has separately assigned transcription/question-review and answer-solve/answer-review roles; discrepancies are evidence-backed or explicitly blocked.
 
@@ -103,11 +103,11 @@
 - Create confirmed vector figure sources under each project's `figures/*.tex`.
 - Ignored draft: `.work/phase2-b08/register.json` and provenance role records.
 
-- [ ] Reconcile blind-review findings into canonical question files; do not copy between papers on the basis of matching numbers/topics.
-- [ ] Write aligned answers and detailed solutions; mark independently derived answers D only when distinct blind review supports them, otherwise U.
-- [ ] Create project-local TikZ/PGFPlots sources only for source-confirmed diagrams; use no raster page images or absolute paths.
-- [ ] Generate `_含解析.md` with `solution_sources.render_combined()`; verify IDs, titles, tracks, aliases, counts, and source mappings.
-- [ ] Run registration dry-run and inspect the exact diff; only zero-conflict dry-run permits one `register-papers --write` transaction for `phase2-b08`.
+- [x] Reconcile blind-review findings into canonical question files; do not copy between papers on the basis of matching numbers/topics.
+- [x] Write aligned answers and detailed solutions; mark independently derived answers D only when distinct blind review supports them, otherwise U.
+- [x] Create project-local TikZ/PGFPlots sources only for source-confirmed diagrams; use no raster page images or absolute paths.
+- [x] Generate `_含解析.md` with `solution_sources.render_combined()`; verify IDs, titles, tracks, aliases, counts, and source mappings.
+- [x] Run registration dry-run and inspect the exact diff; only zero-conflict dry-run permits one `register-papers --write` transaction for `phase2-b08`.
 
 **Expected:** Four canonical question/answer/solution sets, four exact source-to-paper bindings, and consistent generated Markdown/manifest projections.
 
@@ -116,12 +116,12 @@
 **Files:**
 - Generate four project directories, receipts, and `reports/phase2-b08.md`.
 
-- [ ] Import question and answer provenance from isolated role evidence; reject stale hashes and incorrect role claims.
-- [ ] Run project, short-answer and edition generators with `--write --batch phase2-b08`, then rerun with `--check`.
-- [ ] Check question/answer counts, numbering, figure registration/reference counts, edition input matrix and generator no-drift.
-- [ ] Build all 16 editions with `python3 tools/build_projects.py build --formal --batch phase2-b08 --json`; require no TeX errors, missing glyphs, unresolved references or unreviewed Overfull warnings.
-- [ ] Render and visually inspect each required page class for all four papers/editions; prepare page-level receipts against current build hashes.
-- [ ] Compare short answers with detailed solution conclusions; finalize only states supported by provenance, issues, build and review gates.
+- [x] Import question and answer provenance from isolated role evidence; reject stale hashes and incorrect role claims.
+- [x] Run project, short-answer and edition generators with `--write --batch phase2-b08`, then rerun with `--check`.
+- [x] Check question/answer counts, numbering, figure registration/reference counts, edition input matrix and generator no-drift.
+- [x] Build all 16 editions with `python3 tools/build_projects.py build --formal --batch phase2-b08 --json`; require no TeX errors, missing glyphs, unresolved references or unreviewed Overfull warnings.
+- [x] Render and visually inspect each required page class for all four papers/editions; prepare page-level receipts against current build hashes.
+- [x] Compare short answers with detailed solution conclusions; finalize only states supported by provenance, issues, build and review gates.
 
 **Expected:** Sixteen current build targets and page-level visual decisions; unresolved U issues remain visible and prevent a `complete` state.
 
@@ -131,9 +131,9 @@
 - Modify through supported project tools: `manifest.csv`, reports and manifest/report projections.
 - Create/update: `reports/phase2-b08.md` and this plan's completion record.
 
-- [ ] Run source-manifest, CSV, source-generation, solution-consistency, project-generation, short-answer, edition, provenance, build, review and global report checks; finish with `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md`.
-- [ ] Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v` and `git diff --check`; inspect exact batch-only status and staged diff.
-- [ ] Clean only this batch's generated temporary renders and build intermediates, retaining four final PDFs per paper in ignored `build/`; leave unrelated main-checkout and pre-existing temp files untouched.
-- [ ] Commit the verified content stage and final receipts/reports as separate commits when each is complete; stage exact paths, do not use `git add .`, and do not push.
+- [x] Run source-manifest, CSV, source-generation, solution-consistency, project-generation, short-answer, edition, provenance, build, review and global report checks; finish with `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md`.
+- [x] Run `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v` and `git diff --check`; inspect exact batch-only status and staged diff.
+- [x] Clean only this batch's generated temporary renders and build intermediates, retaining four final PDFs per paper in ignored `build/`; leave unrelated main-checkout and pre-existing temp files untouched.
+- [x] Commit the verified content stage and final receipts/reports as separate commits when each is complete; stage exact paths, do not use `git add .`, and do not push.
 
 **Expected:** Batch report/global state match machine-derived evidence; no batch scratch outside ignored `.work/`, and commits contain only this batch's approved deliverables.

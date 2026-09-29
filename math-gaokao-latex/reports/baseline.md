@@ -2,12 +2,12 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**232**；生产状态：blocked 33，compiled 3，complete 196
-- 批次总数：**107**；manifest 状态：closed 87，closed_with_blockers 19，compiled_pending_review 1
-- 正式复核门禁：FINALIZED 106，VISUAL_FAILED 1
-- 已编译版本：928/928；构建回执状态：compiled_pending_review 4，succeeded 228
-- review 回执状态：failed 1，passed 231
-- 问题总账：961 条，未解决问题：139，阻塞完成 73。
+- 试卷总数：**236**；生产状态：blocked 34，compiled 3，complete 199
+- 批次总数：**108**；manifest 状态：closed 87，closed_with_blockers 20，compiled_pending_review 1
+- 正式复核门禁：FINALIZED 107，VISUAL_FAILED 1
+- 已编译版本：944/944；构建回执状态：compiled_pending_review 4，succeeded 232
+- review 回执状态：failed 1，passed 235
+- 问题总账：965 条，未解决问题：143，阻塞完成 77。
 - 回执日志警告汇总（包含待复核回执）：Overfull 23，Underfull 38，豁免记录 61。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 门禁未通过批次：phase0-b02。
@@ -15,110 +15,111 @@
 
 | 批次 | 试卷数 | manifest 状态 | 回执门禁 | ownership |
 |---|---:|---|---|---|
-| phase0-b01 | 4 | closed | FINALIZED | committed |
-| phase0-b02 | 4 | compiled_pending_review | VISUAL_FAILED | committed |
-| phase0-b03 | 3 | closed | FINALIZED | committed |
-| phase0-b04 | 4 | closed | FINALIZED | committed |
-| phase0-b05 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase0-b06 | 2 | closed_with_blockers | FINALIZED | committed |
-| phase1-b07 | 1 | closed | FINALIZED | committed |
-| phase1-b08 | 1 | closed | FINALIZED | committed |
-| phase1-b09 | 1 | closed | FINALIZED | committed |
-| phase1-b10 | 1 | closed | FINALIZED | committed |
-| phase1-b11 | 1 | closed | FINALIZED | committed |
-| phase1-b12 | 1 | closed | FINALIZED | committed |
-| phase1-b13 | 1 | closed | FINALIZED | committed |
-| phase1-b14 | 1 | closed | FINALIZED | committed |
-| phase1-b15 | 1 | closed | FINALIZED | committed |
-| phase1-b16 | 1 | closed | FINALIZED | committed |
-| phase1-b17 | 1 | closed | FINALIZED | committed |
-| phase1-b18 | 1 | closed | FINALIZED | committed |
-| phase1-b19 | 1 | closed | FINALIZED | committed |
-| phase1-b20 | 1 | closed | FINALIZED | committed |
-| phase1-b21 | 1 | closed | FINALIZED | committed |
-| phase1-b22 | 1 | closed | FINALIZED | committed |
-| phase2-b23 | 2 | closed | FINALIZED | committed |
-| phase2-b24 | 2 | closed | FINALIZED | committed |
-| phase2-b25 | 1 | closed | FINALIZED | committed |
-| phase2-b26 | 1 | closed | FINALIZED | committed |
-| phase2-b27 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b28 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b29 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b30 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b31 | 1 | closed | FINALIZED | committed |
-| phase2-b32 | 1 | closed | FINALIZED | committed |
-| phase2-b33 | 4 | closed | FINALIZED | committed |
-| phase2-b34 | 4 | closed | FINALIZED | committed |
-| phase2-b35 | 4 | closed | FINALIZED | committed |
-| phase2-b36 | 4 | closed | FINALIZED | committed |
-| phase2-b37 | 4 | closed | FINALIZED | committed |
-| phase2-b38 | 4 | closed | FINALIZED | committed |
-| phase2-b39 | 4 | closed | FINALIZED | committed |
-| phase2-b40 | 1 | closed | FINALIZED | committed |
-| phase2-b41 | 4 | closed | FINALIZED | committed |
-| phase2-b42 | 4 | closed | FINALIZED | committed |
-| phase2-b43 | 4 | closed | FINALIZED | committed |
-| phase2-b44 | 3 | closed | FINALIZED | committed |
-| phase2-b45 | 4 | closed | FINALIZED | committed |
-| phase2-b46 | 4 | closed | FINALIZED | committed |
-| phase2-b47 | 3 | closed | FINALIZED | committed |
-| phase2-b48 | 4 | closed | FINALIZED | committed |
-| phase2-b49 | 4 | closed | FINALIZED | committed |
-| phase2-b50 | 4 | closed | FINALIZED | committed |
-| phase2-b51 | 1 | closed | FINALIZED | committed |
-| phase2-b52 | 1 | closed | FINALIZED | committed |
-| phase2-b53 | 1 | closed | FINALIZED | committed |
-| phase2-b54 | 1 | closed | FINALIZED | committed |
-| phase2-b55 | 1 | closed | FINALIZED | committed |
-| phase2-b56 | 2 | closed | FINALIZED | committed |
-| phase2-b57 | 2 | closed | FINALIZED | committed |
-| phase2-b58 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b59 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b60 | 1 | closed | FINALIZED | committed |
-| phase2-b61 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b62 | 1 | closed | FINALIZED | committed |
-| phase2-b63 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b64 | 1 | closed | FINALIZED | committed |
-| phase2-b65 | 1 | closed | FINALIZED | committed |
-| phase2-b66 | 1 | closed | FINALIZED | committed |
-| phase2-b67 | 1 | closed_with_blockers | FINALIZED | committed |
-| phase2-b68 | 1 | closed | FINALIZED | committed |
-| phase2-b69 | 1 | closed | FINALIZED | committed |
-| phase2-b70 | 1 | closed | FINALIZED | committed |
-| phase2-b71 | 1 | closed | FINALIZED | committed |
-| phase2-b72 | 1 | closed | FINALIZED | committed |
-| phase2-b73 | 1 | closed | FINALIZED | committed |
-| phase2-b74 | 1 | closed | FINALIZED | committed |
-| phase2-b75 | 1 | closed | FINALIZED | committed |
-| phase2-b76 | 1 | closed | FINALIZED | committed |
-| phase2-b77 | 1 | closed | FINALIZED | committed |
-| phase2-b78 | 1 | closed | FINALIZED | committed |
-| phase2-b79 | 1 | closed | FINALIZED | committed |
-| phase2-b80 | 1 | closed | FINALIZED | committed |
-| phase2-b81 | 1 | closed | FINALIZED | committed |
-| phase2-b82 | 1 | closed | FINALIZED | committed |
-| phase2-b83 | 1 | closed | FINALIZED | committed |
-| phase2-b84 | 1 | closed | FINALIZED | committed |
-| phase2-b85 | 1 | closed | FINALIZED | committed |
-| phase2-b86 | 2 | closed | FINALIZED | committed |
-| phase2-b87 | 1 | closed | FINALIZED | committed |
-| phase2-b88 | 2 | closed | FINALIZED | committed |
-| phase2-b89 | 2 | closed | FINALIZED | committed |
-| phase2-b90 | 2 | closed | FINALIZED | committed |
-| phase2-b91 | 2 | closed | FINALIZED | committed |
-| phase2-b92 | 4 | closed | FINALIZED | committed |
-| phase2-b93 | 4 | closed | FINALIZED | committed |
-| phase2-b94 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase2-b95 | 4 | closed | FINALIZED | committed |
-| phase2-b96 | 4 | closed | FINALIZED | committed |
-| phase2-b97 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase2-b98 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase2-b99 | 6 | closed | FINALIZED | committed |
-| phase2-b00 | 4 | closed | FINALIZED | committed |
-| phase2-b01 | 4 | closed | FINALIZED | committed |
-| phase2-b02 | 8 | closed_with_blockers | FINALIZED | committed |
-| phase2-b03 | 3 | closed_with_blockers | FINALIZED | committed |
-| phase2-b04 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase2-b05 | 4 | closed_with_blockers | FINALIZED | committed |
-| phase2-b06 | 3 | closed | FINALIZED | committed |
-| phase2-b07 | 4 | closed_with_blockers | FINALIZED | committed |
+| phase0-b01 | 4 | closed | FINALIZED | validated |
+| phase0-b02 | 4 | compiled_pending_review | VISUAL_FAILED | validated |
+| phase0-b03 | 3 | closed | FINALIZED | validated |
+| phase0-b04 | 4 | closed | FINALIZED | validated |
+| phase0-b05 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase0-b06 | 2 | closed_with_blockers | FINALIZED | validated |
+| phase1-b07 | 1 | closed | FINALIZED | validated |
+| phase1-b08 | 1 | closed | FINALIZED | validated |
+| phase1-b09 | 1 | closed | FINALIZED | validated |
+| phase1-b10 | 1 | closed | FINALIZED | validated |
+| phase1-b11 | 1 | closed | FINALIZED | validated |
+| phase1-b12 | 1 | closed | FINALIZED | validated |
+| phase1-b13 | 1 | closed | FINALIZED | validated |
+| phase1-b14 | 1 | closed | FINALIZED | validated |
+| phase1-b15 | 1 | closed | FINALIZED | validated |
+| phase1-b16 | 1 | closed | FINALIZED | validated |
+| phase1-b17 | 1 | closed | FINALIZED | validated |
+| phase1-b18 | 1 | closed | FINALIZED | validated |
+| phase1-b19 | 1 | closed | FINALIZED | validated |
+| phase1-b20 | 1 | closed | FINALIZED | validated |
+| phase1-b21 | 1 | closed | FINALIZED | validated |
+| phase1-b22 | 1 | closed | FINALIZED | validated |
+| phase2-b23 | 2 | closed | FINALIZED | validated |
+| phase2-b24 | 2 | closed | FINALIZED | validated |
+| phase2-b25 | 1 | closed | FINALIZED | validated |
+| phase2-b26 | 1 | closed | FINALIZED | validated |
+| phase2-b27 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b28 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b29 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b30 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b31 | 1 | closed | FINALIZED | validated |
+| phase2-b32 | 1 | closed | FINALIZED | validated |
+| phase2-b33 | 4 | closed | FINALIZED | validated |
+| phase2-b34 | 4 | closed | FINALIZED | validated |
+| phase2-b35 | 4 | closed | FINALIZED | validated |
+| phase2-b36 | 4 | closed | FINALIZED | validated |
+| phase2-b37 | 4 | closed | FINALIZED | validated |
+| phase2-b38 | 4 | closed | FINALIZED | validated |
+| phase2-b39 | 4 | closed | FINALIZED | validated |
+| phase2-b40 | 1 | closed | FINALIZED | validated |
+| phase2-b41 | 4 | closed | FINALIZED | validated |
+| phase2-b42 | 4 | closed | FINALIZED | validated |
+| phase2-b43 | 4 | closed | FINALIZED | validated |
+| phase2-b44 | 3 | closed | FINALIZED | validated |
+| phase2-b45 | 4 | closed | FINALIZED | validated |
+| phase2-b46 | 4 | closed | FINALIZED | validated |
+| phase2-b47 | 3 | closed | FINALIZED | validated |
+| phase2-b48 | 4 | closed | FINALIZED | validated |
+| phase2-b49 | 4 | closed | FINALIZED | validated |
+| phase2-b50 | 4 | closed | FINALIZED | validated |
+| phase2-b51 | 1 | closed | FINALIZED | validated |
+| phase2-b52 | 1 | closed | FINALIZED | validated |
+| phase2-b53 | 1 | closed | FINALIZED | validated |
+| phase2-b54 | 1 | closed | FINALIZED | validated |
+| phase2-b55 | 1 | closed | FINALIZED | validated |
+| phase2-b56 | 2 | closed | FINALIZED | validated |
+| phase2-b57 | 2 | closed | FINALIZED | validated |
+| phase2-b58 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b59 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b60 | 1 | closed | FINALIZED | validated |
+| phase2-b61 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b62 | 1 | closed | FINALIZED | validated |
+| phase2-b63 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b64 | 1 | closed | FINALIZED | validated |
+| phase2-b65 | 1 | closed | FINALIZED | validated |
+| phase2-b66 | 1 | closed | FINALIZED | validated |
+| phase2-b67 | 1 | closed_with_blockers | FINALIZED | validated |
+| phase2-b68 | 1 | closed | FINALIZED | validated |
+| phase2-b69 | 1 | closed | FINALIZED | validated |
+| phase2-b70 | 1 | closed | FINALIZED | validated |
+| phase2-b71 | 1 | closed | FINALIZED | validated |
+| phase2-b72 | 1 | closed | FINALIZED | validated |
+| phase2-b73 | 1 | closed | FINALIZED | validated |
+| phase2-b74 | 1 | closed | FINALIZED | validated |
+| phase2-b75 | 1 | closed | FINALIZED | validated |
+| phase2-b76 | 1 | closed | FINALIZED | validated |
+| phase2-b77 | 1 | closed | FINALIZED | validated |
+| phase2-b78 | 1 | closed | FINALIZED | validated |
+| phase2-b79 | 1 | closed | FINALIZED | validated |
+| phase2-b80 | 1 | closed | FINALIZED | validated |
+| phase2-b81 | 1 | closed | FINALIZED | validated |
+| phase2-b82 | 1 | closed | FINALIZED | validated |
+| phase2-b83 | 1 | closed | FINALIZED | validated |
+| phase2-b84 | 1 | closed | FINALIZED | validated |
+| phase2-b85 | 1 | closed | FINALIZED | validated |
+| phase2-b86 | 2 | closed | FINALIZED | validated |
+| phase2-b87 | 1 | closed | FINALIZED | validated |
+| phase2-b88 | 2 | closed | FINALIZED | validated |
+| phase2-b89 | 2 | closed | FINALIZED | validated |
+| phase2-b90 | 2 | closed | FINALIZED | validated |
+| phase2-b91 | 2 | closed | FINALIZED | validated |
+| phase2-b92 | 4 | closed | FINALIZED | validated |
+| phase2-b93 | 4 | closed | FINALIZED | validated |
+| phase2-b94 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b95 | 4 | closed | FINALIZED | validated |
+| phase2-b96 | 4 | closed | FINALIZED | validated |
+| phase2-b97 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b98 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b99 | 6 | closed | FINALIZED | validated |
+| phase2-b00 | 4 | closed | FINALIZED | validated |
+| phase2-b01 | 4 | closed | FINALIZED | validated |
+| phase2-b02 | 8 | closed_with_blockers | FINALIZED | validated |
+| phase2-b03 | 3 | closed_with_blockers | FINALIZED | validated |
+| phase2-b04 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b05 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b06 | 3 | closed | FINALIZED | validated |
+| phase2-b07 | 4 | closed_with_blockers | FINALIZED | validated |
+| phase2-b08 | 4 | closed_with_blockers | FINALIZED | validated |
