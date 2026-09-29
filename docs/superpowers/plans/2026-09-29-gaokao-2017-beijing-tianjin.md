@@ -88,7 +88,7 @@
 **Files:**
 - Draft evidence, isolated from producer drafts: `.work/phase2-b08/reviews/<paper_id>/{answers-blind.md,question-review.json,answer-review.json,discrepancy-matrix.md}`.
 
-- [ ] Assign a different reviewer per paper for source comparison and blind solving; do not expose the first solver's final answer before independent work is recorded.
+- [ ] Assign separate question-source reviewers and answer-blind reviewers per paper; both must be distinct from the answer solver. The provenance schema requires three pairwise-distinct role identities (`question-review`, `answer-solve`, `answer-review`), so one reviewer cannot fill both review roles for the same paper. Do not expose the first solver's final answer before the answer-blind record is saved and hashed.
 - [ ] Compare every question with rendered source, including choices, symbols, boundaries, diagrams and printed-page mapping.
 - [ ] Re-solve disagreements from source conditions; retain unresolved outcomes as U and create issue entries.
 - [ ] Main agent maintains the cross-paper anchor matrix and accepts/rejects evidence; agent self-reports alone are not acceptance evidence.
