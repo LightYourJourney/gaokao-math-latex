@@ -16078,3 +16078,24 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0992
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "40885311-f768-42a7-b173-20967856b1f1",
+  "check_code": "answer_leak",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "09673aed3a2953b98b59d83a95ad1cc0dfc1646d51a3811d8fbf029c9c0ccee5",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-2017-regular-tianjin-science",
+  "pdf_sha256": "27d7529f003362dcc8c8582d81fd4f6399818bc0a9ea921dcec2f54a199886ae",
+  "resume_action": "修正 gk-2017-regular-tianjin-science 的 印刷版 第 4 页 answer_leak（目视第4页发现橙色内部校勘说明框，含 ISSUE-0962、ISSUE-0963、ISSUE-0964、ISSUE-0965；按要求如实记录，存在内部 ISSUE 文字，判 fail。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
