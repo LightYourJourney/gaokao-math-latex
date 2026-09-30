@@ -14835,7 +14835,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
+  "build_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
   "check_code": "heading_number",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -14844,8 +14844,8 @@
   "origin": "visual-review",
   "page": 23,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "c69b05148f12e22a237b94450918be4f9bd84fa1a452640073b23405ecdadf32",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "d3556d0464dadc73f36ffe5a32126a3766057d3b481feec783c33831e5a5a540",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
@@ -14860,13 +14860,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "e44ddf7927e3dbaaf2ad7fa27c1c9163b8bf6250184e1be7a7b4a7d3fb18b981",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 7,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "e279edebc810f2a77303d9d39a365ed240051e565818a88d321b85228999574e",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 简答版 第 7 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -14915,7 +14915,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
+  "build_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
   "check_code": "heading_number",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -14924,8 +14924,8 @@
   "origin": "visual-review",
   "page": 32,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "18ccecb85d8b108a0e83ed40a3911bebd69796d36da77610fe84770bea95cbef",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 32 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "1c1b8441513330886fd1e1c969d0fa88da849d8696747a50330c6ff818fb4b95",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 32 页 heading_number（第32页仍排入第23题题目及解析。原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
@@ -14935,7 +14935,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
+  "build_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
   "check_code": "heading_number",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -14944,8 +14944,8 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "pdf_sha256": "21e4aa76db6f9c936240b91221c5bef25c4bc815f24868f39f56552f825bd93b",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 试题版 第 5 页 heading_number（用户指定保留失败：本页仍排入已取消的第23题（题面明确标注“已取消”）；按指示保留原文并记失败，不改内容。题号与取消标签本身清晰。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "15b01d56cce365bc80a3b603ebd19c88c31f175be59e8f803e7a462e959ac827",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 试题版 第 5 页 heading_number（第5页第23题仍排入版面；原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
@@ -15123,7 +15123,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0941
 
 ```json
@@ -15519,7 +15518,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-0962
 
 ```json
@@ -15788,5 +15786,47 @@
   "source_id": "src-cd9ee6484dcd625fc4e7aef0f4253bb8eacaebd8910335eee60f09456695c366",
   "status": "open",
   "type": "answer-missing"
+}
+```
+
+## ISSUE-0978
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
+  "check_code": "heading_number",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "2212d1d86ff1ff0fa0549bb682d0b16fa03438d997d0d8dfc7161c8f9d60fa4c",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "2798d897d02b2a52775b55f40980be96adec3b673c39c3e1093b1592cfa17046",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 简答版 第 5 页 heading_number（第23题仍排入本页；原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0979
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "5354b1f095a360b6591013c98f0e6191d6f9388e930c05d2120bdf0874a49eea",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-2020-regular-national-1-arts",
+  "pdf_sha256": "1c1b8441513330886fd1e1c969d0fa88da849d8696747a50330c6ff818fb4b95",
+  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 5 页 heading_number（第5页仍排入第23题题干。原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
 }
 ```
