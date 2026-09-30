@@ -1021,7 +1021,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9c7f8199-49a9-4c45-b704-8c3c37abcea5",
+  "last_transaction_id": "d0ac332c-45a8-4be0-832c-77a63385540a",
   "papers": [
     {
       "blocked_from": null,
@@ -15553,7 +15553,9 @@
         "ISSUE-0954",
         "ISSUE-0956",
         "ISSUE-0957",
-        "ISSUE-0958"
+        "ISSUE-0958",
+        "ISSUE-0987",
+        "ISSUE-0988"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -15577,7 +15579,7 @@
       "year": 2017
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -15623,16 +15625,17 @@
       "issue_ids": [
         "ISSUE-0959",
         "ISSUE-0960",
-        "ISSUE-0961"
+        "ISSUE-0961",
+        "ISSUE-0989"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-national-2-science",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2017_全国Ⅱ卷_理科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "修正 gk-2017-regular-national-2-science 的 解析版 第 14 页 pagination_whitespace（第18题直方图、列联表及附表之后，“解析”标题单独落在本页末段，解答正文从第15页开始，形成悬挂标题。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2017/2017_数学真题_全国2理_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_全国2理_含解析.md",
@@ -15647,7 +15650,7 @@
       "year": 2017
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -15690,15 +15693,17 @@
         "track": "文科",
         "variant": "全国Ⅲ文"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-0990"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-national-3-arts",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2017_全国Ⅲ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "修正 gk-2017-regular-national-3-arts 的 印刷版 第 17 页 pagination_whitespace（末页仅排第23题短解析，内容约占页面上部三分之一，其余大面积空白；前页仍有可用版面，分页明显失衡。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2017/2017_数学真题_全国3文_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_全国3文_含解析.md",
@@ -15754,7 +15759,8 @@
       },
       "issue_ids": [
         "ISSUE-0953",
-        "ISSUE-0955"
+        "ISSUE-0955",
+        "ISSUE-0991"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -16547,7 +16553,7 @@
       "year": 2015
     }
   ],
-  "revision": 3325,
+  "revision": 3326,
   "schema_version": 1,
   "sources": [
     {

@@ -15977,3 +15977,108 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0987
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1cd7e19b-c4fd-47fa-b476-68dd995e953a",
+  "check_code": "heading_number",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "1f1a2ea8373cba68099ef2b700ad8095533d9cab6a1ae5e083abef7aa67e9fa3",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "pdf_sha256": "c1f0db9db13a894ab35a573832eff0e80b89ef4af819bd5d12894ae1cc597603",
+  "resume_action": "修正 gk-2017-regular-national-2-arts 的 简答版 第 7 页 heading_number（解答题答案次序倒置：19题后先出现未标题号的“（2）过P且垂直于OQ…”（属20题第2问），其后才列“20.（1）”；答案题号与小问顺序不连续。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0988
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "1cd7e19b-c4fd-47fa-b476-68dd995e953a",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "08ca70e357deae3d74790d3afe7d0f091f63fae6a33df92d94e1c9e396c355b1",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 15,
+  "paper_id": "gk-2017-regular-national-2-arts",
+  "pdf_sha256": "03887093df148457218a28493dcef10dbbf0a2d4587be1bc19ad1c89eda5e279",
+  "resume_action": "修正 gk-2017-regular-national-2-arts 的 解析版 第 15 页 pagination_whitespace（第19题图表、列联表及附表之后，“解析”标题单独落在本页末段，解答正文从第16页开始，形成悬挂标题。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0989
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4da13d0b-2276-48d2-92bc-dcc0cb7242ba",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "d8f8ca33236036d7393a95f25f1e973b13a22414aebfc293fc915169661f6f0d",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 14,
+  "paper_id": "gk-2017-regular-national-2-science",
+  "pdf_sha256": "fd1f6bfd4939ac36fb8debbd40667314c755fbcd0e9c21c38aaaa17f729a0ea7",
+  "resume_action": "修正 gk-2017-regular-national-2-science 的 解析版 第 14 页 pagination_whitespace（第18题直方图、列联表及附表之后，“解析”标题单独落在本页末段，解答正文从第15页开始，形成悬挂标题。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0990
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "2df0ba3e-7972-4900-aa16-ab40330c082e",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "9672355fe7f0e9667ac4291fa7b24eb94765b5b8e8c5e46354e724d7eaa35774",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 17,
+  "paper_id": "gk-2017-regular-national-3-arts",
+  "pdf_sha256": "91f1b0c1043bf6905f80f2f406be8ebfc6aef8dcdff50cdb63196a18a702873a",
+  "resume_action": "修正 gk-2017-regular-national-3-arts 的 印刷版 第 17 页 pagination_whitespace（末页仅排第23题短解析，内容约占页面上部三分之一，其余大面积空白；前页仍有可用版面，分页明显失衡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0991
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "17baf347-1c04-4a6d-95ac-0cd61fdb0d1d",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "cceeba585808c5c7b7d230c3adfadcce27b2b663a50c10a8bf17e428ea0f42ea",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 16,
+  "paper_id": "gk-2017-regular-national-3-science",
+  "pdf_sha256": "3d303249bfc7ceea9dce66e1424dcea812d0ca55c157cefc6340b65ed561e028",
+  "resume_action": "修正 gk-2017-regular-national-3-science 的 印刷版 第 16 页 pagination_whitespace（末页仅排第23题短解析，内容约占页面上部三分之一，其余大面积空白；前页仍有可用版面，分页明显失衡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
