@@ -1021,7 +1021,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a7cbc651-f9f2-4b14-b651-e87eb7d5f894",
+  "last_transaction_id": "d896c9dc-d59b-4b8b-be1a-c9cc12ac8f93",
   "papers": [
     {
       "blocked_from": null,
@@ -1707,7 +1707,7 @@
       "year": 2022
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -1722,7 +1722,8 @@
         "ISSUE-0043",
         "ISSUE-0044",
         "ISSUE-0045",
-        "ISSUE-0046"
+        "ISSUE-0046",
+        "ISSUE-0980"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -1730,10 +1731,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2023-regular-new-gaokao-1",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2023_新高考Ⅰ卷",
       "question_count": 22,
-      "resume_action": null,
+      "resume_action": "修正 gk-2023-regular-new-gaokao-1 的 解析版 第 39 页 pagination_whitespace（末页仅页首残留第22题两条答案框，其余页面大面积空白，末尾分页明显失衡；该项判 fail，不在本任务范围内修源。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2023/2023_数学真题_答案要点.md",
         "combined_rendered": "2023/2023_数学真题_含解析.md",
@@ -16540,7 +16541,7 @@
       "year": 2015
     }
   ],
-  "revision": 3322,
+  "revision": 3323,
   "schema_version": 1,
   "sources": [
     {
