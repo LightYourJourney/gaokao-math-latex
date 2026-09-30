@@ -15851,3 +15851,66 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0981
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "0ff60708-7da3-4fa9-84eb-099321b7f3ab",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "42cf49f967b03fbf81b970bbdada64c92daac04853069a1771db4f1abb453977",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 28,
+  "paper_id": "gk-2024-regular-new-gaokao-2",
+  "pdf_sha256": "d97c843065506fdc44be847e32ff46343157f60780e28221c50d2ed75fbcd035",
+  "resume_action": "修正 gk-2024-regular-new-gaokao-2 的 印刷版 第 28 页 pagination_whitespace（第28页“自检”段的收尾全角右括号单独换到左边界下一行，前后与公式正文脱节；这是可见的孤立标点分页缺陷。该页末尾只列答案（1），余下两项又被拆到第29页，和末页异常留白共同构成真实分页问题。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0982
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "0ff60708-7da3-4fa9-84eb-099321b7f3ab",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "bc4a740a2a4d189b1b9c5c4977ede13818a3b1eca053513c21d3eddccaab7c35",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 29,
+  "paper_id": "gk-2024-regular-new-gaokao-2",
+  "pdf_sha256": "d97c843065506fdc44be847e32ff46343157f60780e28221c50d2ed75fbcd035",
+  "resume_action": "修正 gk-2024-regular-new-gaokao-2 的 印刷版 第 29 页 pagination_whitespace（第29页仅在页首孤立显示“答案（2）：见解析版”和“答案（3）：见解析版”两个答案框，其余页面近乎全白；与第28页已完成的第19题长解析断开，形成明显的末页孤页/异常留白，属真实分页视觉问题。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0983
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "0ff60708-7da3-4fa9-84eb-099321b7f3ab",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "c3c6ae9eda669e129e4df2f42c2a679a16fd2aa6b9ae0bca98589ac893690ebb",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 40,
+  "paper_id": "gk-2024-regular-new-gaokao-2",
+  "pdf_sha256": "3869e2f91a4da0cd0cff72929718b5b519fbf63552ed7672c49fc3578647f1e9",
+  "resume_action": "修正 gk-2024-regular-new-gaokao-2 的 解析版 第 40 页 pagination_whitespace（第40页页首孤立出现右括号“）”，与前页内容断开，形成残字符式分页；记为视觉失败，未修改源文件。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```

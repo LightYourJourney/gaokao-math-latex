@@ -1021,7 +1021,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d896c9dc-d59b-4b8b-be1a-c9cc12ac8f93",
+  "last_transaction_id": "d6c1bea0-1d38-463a-9208-f68d590f8a96",
   "papers": [
     {
       "blocked_from": null,
@@ -1839,7 +1839,7 @@
       "year": 2024
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -1849,7 +1849,10 @@
       "issue_ids": [
         "ISSUE-0052",
         "ISSUE-0058",
-        "ISSUE-0059"
+        "ISSUE-0059",
+        "ISSUE-0981",
+        "ISSUE-0982",
+        "ISSUE-0983"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -1857,10 +1860,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2024-regular-new-gaokao-2",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2024_新高考Ⅱ卷",
       "question_count": 19,
-      "resume_action": null,
+      "resume_action": "修正 gk-2024-regular-new-gaokao-2 的 印刷版 第 28 页 pagination_whitespace（第28页“自检”段的收尾全角右括号单独换到左边界下一行，前后与公式正文脱节；这是可见的孤立标点分页缺陷。该页末尾只列答案（1），余下两项又被拆到第29页，和末页异常留白共同构成真实分页问题。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2024/2024_数学真题_新高考Ⅱ_答案要点.md",
         "combined_rendered": "2024/2024_数学真题_新高考Ⅱ_含解析.md",
@@ -16541,7 +16544,7 @@
       "year": 2015
     }
   ],
-  "revision": 3323,
+  "revision": 3324,
   "schema_version": 1,
   "sources": [
     {
