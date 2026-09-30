@@ -1,0 +1,14 @@
+% FIG:q11-option-b
+\begin{tikzpicture}[x=0.9cm,y=0.85cm,line width=0.45pt]
+  \draw[->] (0,0) -- (4.45,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,2.65) node[above] {$y$};
+  \foreach \x/\lab in {1/{\frac{\pi}{4}},2/{\frac{\pi}{2}},3/{\frac{3\pi}{4}},4/{\pi}} {
+    \draw (\x,0) -- +(0,-0.06) node[below=2pt] {$\lab$};
+  }
+  \draw (-0.07,2) -- (0.07,2) node[left=4pt] {$2$};
+  \node[below left] at (0,0) {$O$};
+  \draw (0,2) .. controls (0.35,2.35) and (0.78,2.60) .. (1,2.55)
+    .. controls (1.08,2.25) and (1.65,2.05) .. (2,2.1)
+    .. controls (2.35,2.05) and (2.88,2.20) .. (3,2.55)
+    .. controls (3.2,2.60) and (3.65,2.35) .. (4,2);
+\end{tikzpicture}

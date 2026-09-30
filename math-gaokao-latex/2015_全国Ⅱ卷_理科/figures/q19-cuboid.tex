@@ -1,0 +1,17 @@
+% Source p.2 (966). AF is already dashed in source; requested square is absent.
+\begin{tikzpicture}[line width=.45pt,font=\small]
+  \coordinate (A) at (0,0); \coordinate (B) at (4,0);
+  \coordinate (C) at (4.9,.9); \coordinate (D) at (.9,.9);
+  \coordinate (A1) at (0,2); \coordinate (B1) at (4,2);
+  \coordinate (C1) at (4.9,2.9); \coordinate (D1) at (.9,2.9);
+  \coordinate (E) at (1,2); \coordinate (F) at (1.9,2.9);
+  \draw (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+  \draw (A1)--(B1)--(C1) (B)--(B1);
+  \draw[dashed] (A)--(D)--(C) (D)--(D1) (A)--(F);
+  \fill (E) circle (1pt);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[right] at (C) {$C$}; \node[below right] at (D) {$D$};
+  \node[left] at (A1) {$A_1$}; \node[right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$}; \node[above left] at (D1) {$D_1$};
+  \node[above] at (E) {$E$}; \node[above] at (F) {$F$};
+\end{tikzpicture}

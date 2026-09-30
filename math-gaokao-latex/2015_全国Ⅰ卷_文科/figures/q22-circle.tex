@@ -1,0 +1,18 @@
+% [fig-q22-circle], fixed PDF p.2 / printed 964.
+% Layout-only circle/secant construction; DE is visible in the source.
+\begin{tikzpicture}[line width=.45pt,scale=1.05]
+  \coordinate (A) at (-1.35,0);
+  \coordinate (B) at (1.35,0);
+  \coordinate (C) at (-1.35,1.82);
+  \coordinate (D) at (-1.35,.91);
+  \coordinate (E) at (-.4935,1.2426);
+  \draw (0,0) circle (1.35);
+  \draw (C) -- (A) -- (B) -- (C) (D) -- (E);
+  \fill (0,0) circle (1pt);
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[above] at (E) {$E$};
+  \node[below] at (0,0) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% FIG:q18-b-blank-grid
+\begin{tikzpicture}[x=0.12cm,y=115cm,line width=0.35pt]
+  \draw[->] (45,0) -- (106,0) node[right] {满意度评分};
+  \draw[->] (50,0) -- (50,0.044) node[above] {频率/组距};
+  \foreach \x in {50,60,...,100} {
+    \draw (\x,0) -- (\x,0.040);
+    \draw (\x,0) -- +(0,-0.00035) node[below=2pt] {\scriptsize \x};
+  }
+  \foreach \y/\label in {0.005/0.005,0.010/0.010,0.015/0.015,0.020/0.020,0.025/0.025,0.030/0.030,0.035/0.035,0.040/0.040} {
+    \draw (50,\y) -- (100,\y);
+    \node[left=4pt] at (50,\y) {\scriptsize \label};
+  }
+\end{tikzpicture}

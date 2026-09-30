@@ -1,0 +1,10 @@
+% Source p.1 (965). Printed blank template: do not insert leaves.
+\begin{tikzpicture}[font=\small,line width=.45pt]
+  \draw (-4,0)--(4,0);
+  \draw (-.25,.48)--(-.25,-2.9);
+  \draw (.25,.48)--(.25,-2.9);
+  \node[above] at (-2.1,0) {$A$ 地区};
+  \node[above] at (2.1,0) {$B$ 地区};
+  \foreach \stem/\y in {4/-.25,5/-.75,6/-1.25,7/-1.75,8/-2.25,9/-2.75}
+    \node at (0,\y) {\stem};
+\end{tikzpicture}

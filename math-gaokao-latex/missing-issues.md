@@ -15757,3 +15757,36 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-0976
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原卷将 C_2 定义为圆，却要求三角形 C_2MN 的面积，未明确定义点 C_2。条件性地把 C_2 解释为圆心可算得面积 1/2，但不作为无条件答案。详见本批 gk-2015-regular-national-1-arts/answer-solve.md 与 issues.md。",
+  "fingerprint": "92e6ad533f2449336e97d9f0e266694f3e0e4c622e2f83d8eddc05b2c8b7da21",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-national-1-arts",
+  "question_id": "gk-2015-regular-national-1-arts-q23",
+  "resume_action": "取得明确勘误或官方说明；此前保留原题记号并将该小问标 U。",
+  "source_id": "src-fa40c5849cfb6f67c6864ed4c582abd83879630330c2dee93217e050e7c49d66",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+## ISSUE-0977
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原卷将 C_2 定义为圆，却要求三角形 C_2MN 的面积，未明确定义点 C_2。条件性地把 C_2 解释为圆心可算得面积 1/2，但不作为无条件答案。详见本批 gk-2015-regular-national-1-science/answer-solve.md 与 issues.md。",
+  "fingerprint": "adf2dcd09b29003fe7191ee7ee474d6a24f82cde14bdbae4ed1972f5e5752d81",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-national-1-science",
+  "question_id": "gk-2015-regular-national-1-science-q23",
+  "resume_action": "取得明确勘误或官方说明；此前保留原题记号并将该小问标 U。",
+  "source_id": "src-cd9ee6484dcd625fc4e7aef0f4253bb8eacaebd8910335eee60f09456695c366",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

@@ -1,0 +1,16 @@
+% source-figure:q08-cosine, fixed science PDF p.1 / printed 961.
+% Smooth visible contour reconstructed with layout-only Bezier controls.
+\begin{tikzpicture}[>=stealth,line width=.45pt,x=1.5cm,y=1.5cm]
+  \draw[->] (-1.15,0) -- (2.2,0) node[below] {$x$};
+  \draw[->] (0,-1.2) -- (0,1.5) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw (0,1) -- (.07,1) node[right] {$1$};
+  \draw (.25,0) -- (.25,-.06) node[below] {$\frac14$};
+  \draw (1.25,0) -- (1.25,-.06) node[below] {$\frac54$};
+  \draw (-1,-.8) .. controls (-.74,-.15) and (-.50,1) .. (-.25,1)
+    .. controls (-.06,1) and (.08,.55) .. (.25,0)
+    .. controls (.44,-.64) and (.57,-1) .. (.75,-1)
+    .. controls (.94,-1) and (1.07,-.59) .. (1.25,0)
+    .. controls (1.43,.62) and (1.56,1) .. (1.75,1)
+    .. controls (1.83,1) and (1.91,.92) .. (1.96,.82);
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+% FIG:q08-flowchart
+\begin{tikzpicture}[>=stealth,line width=0.45pt,
+  every node/.style={font=\small,align=center},
+  terminal/.style={draw,rounded corners,minimum width=1.05cm,minimum height=0.48cm},
+  io/.style={draw,minimum width=1.55cm,minimum height=0.5cm,shape=trapezium,trapezium left angle=70,trapezium right angle=110},
+  decision/.style={draw,diamond,aspect=2.1,inner sep=1pt,minimum width=1.45cm,minimum height=0.7cm},
+  process/.style={draw,minimum width=1.45cm,minimum height=0.48cm}]
+  \node[terminal] (start) at (0,4.5) {开始};
+  \node[io] (input) at (0,3.65) {输入 $a,b$};
+  \node[decision] (neq) at (0,2.65) {$a\ne b$};
+  \node[decision] (gt) at (0,1.25) {$a>b$};
+  \node[io] (out) at (2.25,2.65) {输出 $a$};
+  \node[terminal] (end) at (2.25,1.75) {结束};
+  \node[process] (suba) at (-1.55,0.05) {$a=a-b$};
+  \node[process] (subb) at (1.55,0.05) {$b=b-a$};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (neq);
+  \draw[->] (neq.east) -- node[above]{否} (out.west);
+  \draw[->] (out) -- (end);
+  \draw[->] (neq.south) -- node[right]{是} (gt.north);
+  \draw[->] (gt.south west) -- node[above left]{是} (suba.north);
+  \draw[->] (gt.south east) -- node[above right]{否} (subb.north);
+  \draw[->] (suba.south) -- (-1.55,-0.65);
+  \draw[->] (subb.south) -- (1.55,-0.65);
+  \draw (-1.55,-0.65) -- (1.55,-0.65);
+  \draw[->] (-1.55,-0.65) -- (-3.6,-0.65) -- (-3.6,2.65) -- (neq.west);
+\end{tikzpicture}

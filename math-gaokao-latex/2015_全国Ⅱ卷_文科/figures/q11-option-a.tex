@@ -1,0 +1,11 @@
+% FIG:q11-option-a
+\begin{tikzpicture}[x=0.9cm,y=0.85cm,line width=0.45pt]
+  \draw[->] (0,0) -- (4.45,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,2.65) node[above] {$y$};
+  \foreach \x/\lab in {1/{\frac{\pi}{4}},2/{\frac{\pi}{2}},3/{\frac{3\pi}{4}},4/{\pi}} {
+    \draw (\x,0) -- +(0,-0.06) node[below=2pt] {$\lab$};
+  }
+  \draw (-0.07,2) -- (0.07,2) node[left=4pt] {$2$};
+  \node[below left] at (0,0) {$O$};
+  \draw (0,2) -- (1,2.48) -- (2,2.2) -- (3,2.48) -- (4,2);
+\end{tikzpicture}

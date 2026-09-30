@@ -1,0 +1,20 @@
+% [fig-q19-scatter], fixed PDF p.2 / printed 964.
+% Eight unlabelled squares are approximate visual placements, not raw data.
+\begin{tikzpicture}[>=stealth,line width=.4pt,x=.23cm,y=.023cm,
+  every node/.style={font=\small}]
+  \draw[->] (34,480) -- (62,480);
+  \draw[->] (34,480) -- (34,640);
+  \foreach \x in {34,36,...,56} {
+    \draw (\x,480) -- (\x,484);
+    \node[below] at (\x,480) {\x};
+  }
+  \foreach \y in {480,500,...,620} {
+    \draw (34,\y) -- (34.4,\y);
+    \node[left] at (34,\y) {\y};
+  }
+  \node[above right] at (34,635) {年销售量/t};
+  \node[above] at (62,480) {年宣传费/千元};
+  \foreach \x/\y in {38/502,40/534,44/564,46/576,48/590,50/596,52/600,56/604} {
+    \fill (\x,\y) ++(-1pt,-1pt) rectangle ++(2pt,2pt);
+  }
+\end{tikzpicture}
