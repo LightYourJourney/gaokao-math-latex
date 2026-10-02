@@ -16099,3 +16099,129 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-0993
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "10f3d56c-2972-4f82-a90f-1b3421e98811",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "3100e0f3dce484407bfc5006fc1b48b1f5c62dd63c6f084b511f24e660a55ae9",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 12,
+  "paper_id": "gk-2023-regular-national-a-science",
+  "pdf_sha256": "d64c9bfa698472631f2c6c3150b3aefce94ed3de6ed0bc423a42f33cb4364cca",
+  "resume_action": "修正 gk-2023-regular-national-a-science 的 解析版 第 12 页 pagination_whitespace（FAIL：第10题解析已在第11页末以选C收尾，其绿色答案C框单独落到本页顶部，随后直接进入第11题，形成孤立跨页答案框。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0994
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "10f3d56c-2972-4f82-a90f-1b3421e98811",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "a2e6b2c93d1ae89f9ea73b4dd5616c7d5380f76e24776c946888d1dc4609cfea",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 21,
+  "paper_id": "gk-2023-regular-national-a-science",
+  "pdf_sha256": "d64c9bfa698472631f2c6c3150b3aefce94ed3de6ed0bc423a42f33cb4364cca",
+  "resume_action": "修正 gk-2023-regular-national-a-science 的 解析版 第 21 页 pagination_whitespace（FAIL：第20题推导及答案(1)在第20页收尾，答案(2)12−8√2框被单独推到本页顶部，随后直接进入第21题。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0995
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e495702f-7c73-4cae-9df9-98cc8b555ac6",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "fce9d21503dfbc450e1c44f4a510341c989f3ea78a17b3fe2cda420a78f3e958",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 15,
+  "paper_id": "gk-2023-regular-national-b-arts",
+  "pdf_sha256": "79f62f17eb7956c2d2150da645abab12d6eaaf233449c480d04ede45435b9869",
+  "resume_action": "修正 gk-2023-regular-national-b-arts 的 印刷版 第 15 页 pagination_whitespace（第19题体积推导与答案(1)框位于第15页末，答案(2)框单独被挤到第16页首；130dpi放大确认两答案框分页，判fail。证据：print-before-15.jpg、print-before-16.jpg。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0996
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e495702f-7c73-4cae-9df9-98cc8b555ac6",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "835b542a99c835781eb4f2a2a6bbcd23b5ba10f06be740db07c2f375fc104bc1",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 16,
+  "paper_id": "gk-2023-regular-national-b-arts",
+  "pdf_sha256": "79f62f17eb7956c2d2150da645abab12d6eaaf233449c480d04ede45435b9869",
+  "resume_action": "修正 gk-2023-regular-national-b-arts 的 印刷版 第 16 页 pagination_whitespace（页首只有第19题答案(2)框，后接第20题；该框与第15页第19题结论及答案(1)分离，判fail。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0997
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e495702f-7c73-4cae-9df9-98cc8b555ac6",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "0684ee72371048be0b5099d5755e4dfd6115f191b523c75611a851c2e87c4d82",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2023-regular-national-b-arts",
+  "pdf_sha256": "22987923bb0bc0807ab887e5577a5ff0c360c7ecdca008a1f74adda87bc013b9",
+  "resume_action": "修正 gk-2023-regular-national-b-arts 的 解析版 第 6 页 pagination_whitespace（220dpi页尾放大确认：第3题“解析”孤立在第6页末，首段“答案：D（30）。原卷三视图显示…”移至第7页首；标题与正文分离，判fail。证据：解析版6页页尾-06.png、解析版7页页首-07.png。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-0998
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e495702f-7c73-4cae-9df9-98cc8b555ac6",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "721d50b73d3a8218ee5cd2e267cfdd11623cfb0c54cf64620fd46ab8429066ce",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-2023-regular-national-b-arts",
+  "pdf_sha256": "22987923bb0bc0807ab887e5577a5ff0c360c7ecdca008a1f74adda87bc013b9",
+  "resume_action": "修正 gk-2023-regular-national-b-arts 的 解析版 第 7 页 pagination_whitespace（页首第3题解析正文与标题被拆到相邻页，220dpi确认其上方没有同页解析标题，关联第6页孤立标题，判fail；第4题整段完整。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
