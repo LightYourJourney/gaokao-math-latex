@@ -61,7 +61,17 @@
 ### Task 4 — Build, review, and close
 
 - [x] Generate project sources and four edition entries with supported tools; run corresponding checks.
-- [ ] Import provenance from separated roles, formally build all eight editions, and visually review every page against current build hashes.
-- [ ] Refresh reports, run full project tests and manifest/report checks, remove only this batch's intermediates while retaining PDFs, inspect exact diff, and commit scoped changes. Do not push.
+- [x] Import provenance from separated roles, formally build all eight editions, and visually review every page against current build hashes.
+- [x] Refresh reports, run full project tests and manifest/report checks, remove only this batch's intermediates while retaining PDFs, inspect exact diff, and commit scoped changes. Do not push.
 
 **Task 4 checkpoint (2026-10-07):** 八版本正式构建成功，共 106 页；当前待逐页视觉登记。文科试题/简答共 14 页已目视，发现第 19 题 M 标注碰线，待全部复核发现汇总后做局部标签修复。旧卷缓存状态检查因 Poppler 26.09.0 → 26.10.0 工具链变化失败，另有一份旧卷既存构建/复核绑定不一致；不扩大本批范围刷新旧卷。先提交规范源、provenance 与正式构建待复核状态，后续视觉回执及报告单独提交。
+
+**Task 4 第二轮（2026-10-07 21:06）：** Q19 图标签（M/N/A）与 Q21 分段公式、重复小问编号、解析标题孤悬四处修复并重编，见提交 `c5fa68ff`。
+
+**Task 4 第三轮——终局（2026-10-07 深夜）：** 六版本逐页审查（文科两版另行补审）报出候选缺陷，主会话以**白字差分法**独立复核（把标签渲成白色、差分分离字形墨迹、再量测与线的墨迹连通性），裁定：
+- **真缺陷三处**：Q4 雷达图「B」标签（字形 4334px → 与折线同块 20572px）、「5℃」刻度的 C（比值 17.9）、Q22 圆图「E」标签（3714px → 20836px）。
+- **代理误判两处**：雷达 B 曾被另一代理以阈值 ≥240 的连通域判"相碰"（该阈值把雷达浅灰填充 229 计为墨迹，属方法学假象）；Q19 的 N 标签间隙 0.106mm 但**无墨迹接触**（600 dpi 仍有纯白分隔列、300 dpi 间隙列灰度 227），判 fail 系提示词「完全避开」的字面口径，主会话改为「墨迹是否连通」并据此判 pass。
+- 修复：B 改 `below right`、5℃ 刻度下移 0.15、E 改 `below right`；文理两卷图源保持逐字节一致；三处均以独立编译探针（白字差分 + 连通性）验证修复后无连通分量。
+- 重编八版本共 106 页、**页数不变**；逐页 150 dpi 像素差分显示仅 24 个页实例变化（包围盒 ≤56px，限于标签位移区）→ 未变页沿用上轮判定并在 note 写入像素一致证据，变化页的 figure_label 换用量测证据。
+- `finalize-batch` 结果 **`closed_with_blockers`**：八版本 build `succeeded`、review `passed`、视觉问题 0、警告豁免 4 条；阻塞为既有的 ISSUE-0999（文科 Q12）/ ISSUE-1000（理科 Q11）两个 U 项。六个全量报告目标与 `manifest.csv` 已刷新。
+- 全量测试基线（修复前）861 项中 1 项既存失败：`test_the_cached_states_match_the_recomputed_ones`——旧卷回执绑定 poppler 26.09.0 而环境已升至 26.10.0，属本批范围外（见上一段），未扩大处理。

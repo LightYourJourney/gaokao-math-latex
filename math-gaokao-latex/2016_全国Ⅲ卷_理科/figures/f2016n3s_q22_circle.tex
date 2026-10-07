@@ -13,6 +13,8 @@
 \draw (A)--(B) (P)--(C) (P)--(D) (C)--(D);
 \draw (0.105,0.501)--(-0.280,-1.409);
 \draw (G)--(-1.293,0.349) (G)--(0.687,0.082);
-\foreach \pt/\pos in {A/above left,B/above right,C/below left,D/below right,P/above,E/above left,F/above right,O/left,G/below left}{\node[\pos] at (\pt) {$\pt$};}
+\foreach \pt/\pos in {A/above left,B/above right,C/below left,D/below right,P/above,F/above right,O/left,G/below left}{\node[\pos] at (\pt) {$\pt$};}
+% E 标签改到交点右下方，避开圆周弧线（原 above left 时字形左上与弧线墨迹连通，2026-10-07 量测修复）。
+\node[below right,xshift=2pt,yshift=-3pt,inner sep=1pt] at (E) {$E$};
 \fill (O) circle (1pt);
 \end{tikzpicture}
