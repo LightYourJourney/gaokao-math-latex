@@ -16,5 +16,7 @@
 \draw[->] (test.south)--node[right]{是}(out.north);
 \draw[->] (out)--(end);
 \draw[->] (test.east)--node[above]{否}(inc.west);
-\draw[->] (inc.north)--++(0,10mm) -| (assign.north);
+% 回边：自 k=k+1 上行 → 左行（走在赋值框上方）→ 下行入框顶。用 |-（先垂直后水平）并
+% 以 [yshift] 抬高目标点；若写成 -|（先水平后垂直），水平段会落在赋值框内部与分数线共线。
+\draw[->] (inc.north) |- ([yshift=2mm]assign.north) -- (assign.north);
 \end{tikzpicture}
