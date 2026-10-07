@@ -1,0 +1,20 @@
+% 第 3 题程序框图：按固定源 PDF 的框图结构逐一重绘（框形、分支标签与回边走向照原图）。
+\begin{tikzpicture}[node distance=4mm,>=stealth,every node/.style={font=\small},
+  term/.style={draw,rounded corners,minimum width=1.6cm,minimum height=6mm},
+  box/.style={draw,minimum width=2.9cm,minimum height=6mm},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=2.9cm,minimum height=6mm},
+  decision/.style={draw,diamond,aspect=2.2,inner sep=1pt}]
+\node[term] (start) {开始};
+\node[io,below=of start] (input) {输入 \(a\)};
+\node[box,below=of input] (init) {\(k=0,\ b=a\)};
+\node[box,below=of init] (assign) {\(a=\dfrac{-1}{1+a}\)};
+\node[decision,below=of assign] (test) {\(a=b\)};
+\node[io,below=of test] (out) {输出 \(k\)};
+\node[term,below=of out] (end) {结束};
+\node[box,right=10mm of test] (inc) {\(k=k+1\)};
+\draw[->] (start)--(input) (input)--(init) (init)--(assign) (assign)--(test);
+\draw[->] (test.south)--node[right]{是}(out.north);
+\draw[->] (out)--(end);
+\draw[->] (test.east)--node[above]{否}(inc.west);
+\draw[->] (inc.north)--++(0,10mm) -| (assign.north);
+\end{tikzpicture}
