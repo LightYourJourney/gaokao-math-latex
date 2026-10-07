@@ -1,0 +1,25 @@
+\begin{tikzpicture}[node distance=4mm and 13mm, every node/.style={font=\small},
+  term/.style={draw,rounded corners,minimum width=1.5cm,minimum height=6mm},
+  box/.style={draw,minimum width=2.8cm,minimum height=6mm},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=2.8cm,minimum height=6mm},decision/.style={draw,diamond,aspect=2.1,inner sep=1pt}]
+\node[term] (start) {开始};
+\node[io,below=of start] (input) {输入 $a,b$};
+\node[box,below=of input] (init) {$n=0,\ s=0$};
+\node[box,below=of init] (a1) {$a=b-a$};
+\node[box,below=of a1] (b1) {$b=b-a$};
+\node[box,below=of b1] (a2) {$a=b+a$};
+\node[box,below=of a2] (sum) {$s=s+a,\ n=n+1$};
+\node[decision,below=of sum] (test) {$s>16$};
+\node[io,below=of test] (out) {输出 $n$};
+\node[term,below=of out] (end) {结束};
+\draw[->] (start)--(input);
+\draw[->] (input)--(init);
+\draw[->] (init)--(a1);
+\draw[->] (a1)--(b1);
+\draw[->] (b1)--(a2);
+\draw[->] (a2)--(sum);
+\draw[->] (sum)--(test);
+\draw[->] (test.south)--node[right]{是}(out.north);
+\draw[->] (out)--(end);
+\draw[->] (test.west)--node[above]{否} ++(-1.3,0) |- (a1.west);
+\end{tikzpicture}

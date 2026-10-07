@@ -16200,6 +16200,36 @@
   "type": "layout-warning"
 }
 ```
+## ISSUE-0999
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "1801af7d7ff39133cc25ee791ebf658d44a0e3e45dd65fabc1ac5446678133f6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-3-arts",
+  "question_id": "gk-2016-regular-national-3-arts-q12",
+  "resume_action": "原题允许 M=F、E=O，离心率任意；补充 E≠O 时才得到 e=1/3（选 A）。保留原题和 U；须取得来源勘误或明确的非退化约定后才可消除唯一性问题。",
+  "source_id": "src-7b7f83ac42bfac1eb17a01ffcbd1dfe8b661bd4e91d6eaa50dbac5c98fe023d0",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+## ISSUE-1000
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "adb6ce9e76e65abcbf6c036cc5ac25e078423b07ba51769f212c5792fb58c08a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-national-3-science",
+  "question_id": "gk-2016-regular-national-3-science-q11",
+  "resume_action": "原题允许 M=F、E=O，离心率任意；补充 E≠O 时才得到 e=1/3（选 A）。保留原题和 U；须取得来源勘误或明确的非退化约定后才可消除唯一性问题。",
+  "source_id": "src-556d9ea992950bcd4952763e72a15a168bfe8a1928e42bf5d71bd2ddbacd3fe1",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
 ## ISSUE-0998
 
 ```json

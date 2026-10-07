@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.9,line cap=round,line join=round,font=\small]
+% 原卷投影等比例重绘；M、N 按题给分点关系定位。
+\coordinate (B) at (0,0);
+\coordinate (A) at (1.666,0.437);
+\coordinate (C) at (2.604,-0.243);
+\coordinate (D) at (3.672,0.243);
+\coordinate (P) at (1.666,3.154);
+\coordinate (M) at ($(A)!2/3!(D)$);
+\coordinate (N) at ($(P)!0.5!(C)$);
+\draw (P)--(B)--(C)--(D)--(P) (P)--(C);
+\draw[dashed] (P)--(A) (A)--(B) (A)--(C) (A)--(D) (A)--(N) (N)--(M) (M)--(C) (P)--(M);
+\foreach \pt/\pos in {P/above,A/left,B/left,C/below,D/right,M/right,N/right}{\node[\pos] at (\pt) {$\pt$};}
+\end{tikzpicture}
