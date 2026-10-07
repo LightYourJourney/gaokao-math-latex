@@ -9,5 +9,8 @@
 \coordinate (N) at ($(P)!0.5!(C)$);
 \draw (P)--(B)--(C)--(D)--(P) (P)--(C);
 \draw[dashed] (P)--(A) (A)--(B) (A)--(C) (A)--(D) (A)--(N) (N)--(M) (M)--(C) (P)--(M);
-\foreach \pt/\pos in {P/above,A/left,B/left,C/below,D/right,M/right,N/right}{\node[\pos] at (\pt) {$\pt$};}
+\foreach \pt/\pos in {P/above,B/left,C/below,D/right}{\node[\pos] at (\pt) {$\pt$};}
+\node[above left,inner sep=3pt] at (A) {$A$};
+\node[above right,xshift=10pt,yshift=8pt,inner sep=3pt] at (M) {$M$};
+\node[left,xshift=0.5pt,yshift=2pt,inner sep=2pt] at (N) {$N$};
 \end{tikzpicture}
