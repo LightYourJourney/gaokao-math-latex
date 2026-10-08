@@ -1078,6 +1078,14 @@
         "gk-2016-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b19",
+      "issues": [],
+      "paper_ids": [
+        "gk-2016-regular-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1087,7 +1095,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4c77f6de-5210-40ea-9ccf-232fc3c798a4",
+  "last_transaction_id": "adc587a8-47e3-46c1-a756-9289d1e457ba",
   "papers": [
     {
       "blocked_from": null,
@@ -17333,9 +17341,79 @@
       "title": "2016 年·天津卷·文科",
       "track": "arts",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_理科/figures/f2016sds_q03_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_理科/figures/f2016sds_q05_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_理科/figures/f2016sds_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_理科/figures/f2016sds_q17_frustum.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_理科/figures/f2016sds_q21_coordinate.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2016_sd_li",
+        "id": "gk-2016-regular-shandong-science",
+        "note": "批次 phase2-b19；固定原卷印刷页 1011–1012；山东自主命题卷（结构 10+5+6=21 题，源不印分值）；固定源仅含题面，答案解析独立推导（非官方答案，等级 D）。第 1 题源内「3-2i」与「其中」间无标点（照录）；第 5 题俯视图正方形内接于圆（半径 √2/2）；第 11 题框图为项目首个含「输入」框的框图；第 17 题图为圆台（示意，未按 AB=BC 作图）；第 21 题坐标图按比例。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2016-regular-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2016_山东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2016/2016_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2016/2016_数学真题_山东理_含解析.md",
+        "questions": "2016/2016_数学真题_山东理_试题.md",
+        "solution_body": "2016/2016_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c45643782e80a9e1c992d47704ba32bdac2a07fce3acc8f067d67b85d524aee8"
+      ],
+      "title": "2016 年·山东卷·理科",
+      "track": "science",
+      "year": 2016
     }
   ],
-  "revision": 3472,
+  "revision": 3484,
   "schema_version": 1,
   "sources": [
     {
@@ -33456,8 +33534,8 @@
       "exam_type": "regular",
       "git_blob_oid": "83d9a18fbca14aa5d1d03f2cbda49dfc881cbabe",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2016-regular-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2016山东理.pdf",
       "regions": [],
       "source_id": "src-c45643782e80a9e1c992d47704ba32bdac2a07fce3acc8f067d67b85d524aee8",
