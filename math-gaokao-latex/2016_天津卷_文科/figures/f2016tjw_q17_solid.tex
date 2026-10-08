@@ -12,16 +12,19 @@
 \coordinate (C) at (0,0);
 \coordinate (D) at (113.77,0);
 \coordinate (G) at (22.88,8.43);
-% 虚线先画
-\draw[dashed] (C)--(B) (B)--(A) (B)--(D) (G)--(F) (B)--(F) (B)--(E);
+% 虚线先画（标签用 inner sep=0 + 源字形左端/基线显式坐标：TikZ 节点默认 inner sep
+% 0.3333em 会把字形右移约 3pt，令 B/G 贴入顶点虚线簇；本图经 400 dpi 隔离探头
+% 8-连通域验证 7 字母均为独立分量）
+\draw[dashed] (C)--(B);
+\draw[dashed] (B)--(A) (B)--(D) (G)--(F) (B)--(F) (B)--(E);
 % 实线后画
 \draw (E)--(F) (F)--(C) (C)--(D) (D)--(A) (D)--(E) (A)--(E);
 % 标注（显式坐标：源字形左端与基线换算；不并入线段）
-\node[anchor=base west] at (140.86,163.87) {$F$};
-\node[anchor=base west] at (207.53,163.87) {$E$};
-\node[anchor=base west] at (162.56,13.27) {$A$};
-\node[anchor=base west] at (36.58,18.20) {$B$};
-\node[anchor=base west] at (13.82,9.77) {$G$};
-\node[anchor=base west] at (-9.06,-8.52) {$C$};
-\node[anchor=base west] at (114.21,-8.52) {$D$};
+\node[anchor=base west,inner sep=0] at (140.86,163.87) {$F$};
+\node[anchor=base west,inner sep=0] at (207.53,163.87) {$E$};
+\node[anchor=base west,inner sep=0] at (162.56,13.27) {$A$};
+\node[anchor=base west,inner sep=0] at (36.58,18.20) {$B$};
+\node[anchor=base west,inner sep=0] at (13.82,9.77) {$G$};
+\node[anchor=base west,inner sep=0] at (-9.06,-8.52) {$C$};
+\node[anchor=base west,inner sep=0] at (114.21,-8.52) {$D$};
 \end{tikzpicture}
