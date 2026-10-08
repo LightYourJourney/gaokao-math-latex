@@ -9,8 +9,8 @@
 
 - 标题：2016 年·山东卷·理科
 - 项目目录：`2016_山东卷_理科`
-- 构建：`succeeded`（attempt `d983f43b-d0cb-4fff-bebe-ecc7bda43485`）
-- 审查：`passed`（2026-10-09T05:46:22+08:00）
+- 构建：`succeeded`（attempt `34c0ad0d-d575-4bc8-a0d5-f1778c51f97c`）
+- 审查：`passed`（2026-10-09T06:48:18+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 5；解析版 22；简答版 7；印刷版 19
 - 警告豁免：0

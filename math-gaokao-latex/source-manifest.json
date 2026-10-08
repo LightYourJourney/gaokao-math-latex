@@ -1086,6 +1086,14 @@
         "gk-2016-regular-shandong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b20",
+      "issues": [],
+      "paper_ids": [
+        "gk-2016-regular-shandong-arts"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -1095,7 +1103,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "adc587a8-47e3-46c1-a756-9289d1e457ba",
+  "last_transaction_id": "6eea4dac-2fab-49c4-b3e5-0b403fdfefde",
   "papers": [
     {
       "blocked_from": null,
@@ -17411,9 +17419,83 @@
       "title": "2016 年·山东卷·理科",
       "track": "science",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q03_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q05_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q11_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q16_turntable.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q18_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_山东卷_文科/figures/f2016sdw_q21_coordinate.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2016_sd_wen",
+        "id": "gk-2016-regular-shandong-arts",
+        "note": "批次 phase2-b20；固定原卷印刷页 1013–1014；山东自主命题卷（结构 10+5+6=21 题，源不印分值）；固定源仅含题面，答案解析独立推导（非官方答案，等级 D）。第 18 题两处平行记号「∥」为矢量绘制、文本层缺失（已照源补出）；第 5 题选项跨栏、第 12 题等式组跨栏续排，均按逻辑顺序整录；第 16 题图为转盘（两垂直直径四等分，区域上 1/左 3/右 4/下 2）；第 5 题俯视图正方形内接于圆（半径 √2/2）；第 21 题坐标图按比例。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "山东文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2016-regular-shandong-arts",
+      "production_state": "compiled",
+      "project_dir": "2016_山东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2016/2016_数学真题_山东文_答案要点.md",
+        "combined_rendered": "2016/2016_数学真题_山东文_含解析.md",
+        "questions": "2016/2016_数学真题_山东文_试题.md",
+        "solution_body": "2016/2016_数学真题_山东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-92fa540a5c2a79fc65e8dae18121e740b7400dffda8fa1f6f4902c1907e533fd"
+      ],
+      "title": "2016 年·山东卷·文科",
+      "track": "arts",
+      "year": 2016
     }
   ],
-  "revision": 3484,
+  "revision": 3493,
   "schema_version": 1,
   "sources": [
     {
@@ -33510,8 +33592,8 @@
       "exam_type": "regular",
       "git_blob_oid": "3efcbea752aca8ba731138c0cfe9b3d04d536a99",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2016-regular-shandong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2016山东文.pdf",
       "regions": [],
       "source_id": "src-92fa540a5c2a79fc65e8dae18121e740b7400dffda8fa1f6f4902c1907e533fd",
