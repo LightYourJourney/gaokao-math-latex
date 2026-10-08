@@ -5,7 +5,7 @@
 - 试卷总数：**246**；生产状态：blocked 43，compiled 187，complete 16
 - 批次总数：**113**；manifest 状态：closed 4，closed_with_blockers 5，compiled_pending_review 104
 - 正式复核门禁：FINALIZED 2，INVALID_OR_STALE 111
-- 已编译版本：984/984；构建回执状态：compiled_pending_review 218，succeeded 28
+- 已编译版本：984/984；构建回执状态：compiled_pending_review 219，succeeded 27
 - review 回执状态：failed 5，passed 241
 - 问题总账：1005 条，未解决问题：167，阻塞完成 101。
 - 回执日志警告汇总（包含待复核回执）：Overfull 23，Underfull 42，豁免记录 65。
