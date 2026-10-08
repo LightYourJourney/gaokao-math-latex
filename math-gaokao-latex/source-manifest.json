@@ -1029,6 +1029,14 @@
         "gk-2016-regular-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase2-b13",
+      "issues": [],
+      "paper_ids": [
+        "gk-2016-regular-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1038,7 +1046,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "fa1856af-ada8-4b86-8156-f91fd3f4f164",
+  "last_transaction_id": "0443578a-9304-40dd-a910-1bbf59739647",
   "papers": [
     {
       "blocked_from": null,
@@ -16799,9 +16807,80 @@
       "title": "2016 年·北京卷·理科",
       "track": "science",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2016_北京卷_文科/figures/f2016bjw_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_北京卷_文科/figures/f2016bjw_q11_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_北京卷_文科/figures/f2016bjw_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_北京卷_文科/figures/f2016bjw_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2016_bj_wen",
+        "id": "gk-2016-regular-beijing-arts",
+        "note": "批次 phase2-b13；固定原卷印刷页 995–996；固定源仅含题面，答案解析独立推导（非官方答案，等级 D）。第 8 题按两项目决赛名额相同（均 8 人）理解；第 17 题直方图最左组 [0,0.5) 频率为 0 系原图如此。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文"
+      },
+      "issue_ids": [
+        "ISSUE-1001",
+        "ISSUE-1002",
+        "ISSUE-1003",
+        "ISSUE-1004"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2016-regular-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2016_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2016/2016_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2016/2016_数学真题_北京文_含解析.md",
+        "questions": "2016/2016_数学真题_北京文_试题.md",
+        "solution_body": "2016/2016_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf"
+      ],
+      "title": "2016 年·北京卷·文科",
+      "track": "arts",
+      "year": 2016
     }
   ],
-  "revision": 3390,
+  "revision": 3400,
   "schema_version": 1,
   "sources": [
     {
@@ -32754,8 +32833,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c2d7d57c53f8dc1608c189cc6c4e193a5928cc9b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2016-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2016北京文.pdf",
       "regions": [],
       "source_id": "src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf",
