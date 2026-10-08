@@ -1,0 +1,83 @@
+# 2016 山东卷理科 Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan task-by-task. 卷面转录与独立求解由不同角色分头完成，主会话独占规范整合、manifest、回执与提交。Steps use checkbox (`- [ ]`) syntax.
+
+**Goal:** 将固定上游中的 2016 山东卷理科整理为可追溯、可编译、可逐页复核的四版本 LaTeX 项目。
+
+**Architecture:** 同 b15–b18 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。
+
+**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2016_天津卷_理科`（b17）。
+
+## Global Constraints
+
+- 正式批次 `phase2-b19`；工作目录 `.work/phase2-b19/`。
+- **并行会话**：phase2-b14（上海文理）由另一会话推进；提交全程**显式路径** `git add`，绝不 `-A`。
+- 固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`；固定源三方已核定（下表）。
+- 源 PDF 2 页 A3（印刷页 1011–1012），仅含题面；答案解析独立推导（等级 D）+ 异人盲核。
+- **山东卷结构：选择 1–10、填空 11–15、解答 16–21，共 21 题**（与天津 8+6+6、四川 10+5+6 的题量分布不同：山东为 10+5+6）；源不印总分与分值，照录不补。
+- **规范源写裸 `%`（构建前强制 grep 自检）**；重编后先 `prepare-batch` 换绑 attempt 再写工作项。
+- **解答题小问「（N） 内容」（N 后空格）**；长定义式用 `\frac` 非 `\dfrac`（b15/b16 教训）。
+- **题面分页守卫可局部注入规范源**（b17 手法）：题前独立行 `\Needspace{N\textheight}`，渲染器保留并同入 answers 派生；N 按实测块高且须大于该处剩余。
+- **图标签必须 `inner sep=0`**（b18 教训）：`anchor=base west` 节点默认 inner sep≈3pt 会右移字形；标签用源字形左端/基线显式坐标。
+- **图标签探针必须连通域量测**（b17/b18 教训）：400 dpi 隔离探头 + 8-连通域，字母须为独立分量。
+- **审查代理一代理 ≤8 页**（b16 的 524 时长上限教训）。
+- **建后先主会话自查全部新图**，修完再派审查代理。
+
+## Fixed Sources
+
+| 试卷 | paper_id | 项目目录 | source_id | SHA-256 | Git blob OID | 上游路径 | 印刷页 |
+|---|---|---|---|---|---|---|---|
+| 山东卷理科 | `gk-2016-regular-shandong-science` | `2016_山东卷_理科` | `src-c45643782e80a9e1c992d47704ba32bdac2a07fce3acc8f067d67b85d524aee8` | `e89ce45d9502c6dc5883648fc9b19332e5a4d6066f72401c0d7c80dec8175ae9` | `83d9a18fbca14aa5d1d03f2cbda49dfc881cbabe` | `普通高考/2016/2016山东理.pdf` | 1011–1012 |
+
+## Review Focus
+
+- **山东卷结构独立核定**：10+5+6=21 题；解答题 16–21 共 6 题。
+- 图形 5 处：第 3 题频率分布直方图（坐标轴「频率/组距」，柱高与分组边界照源）、第 5 题三视图三子图（半球+四棱锥：正（主）视图/侧（左）视图为半圆+等腰三角形、俯视图为圆+内接正方形，**注意源内图注用「正（主）视图」「侧（左）视图」带括注写法**）、**第 11 题程序框图含「输入」框（本项目首例输入框，结构须逐框解析）**、第 17 题圆台图（E,F,G,H,O,O',C,B,A 多顶点）、第 21 题坐标图（椭圆+抛物线+切线 l，坐标轴与 l 的斜向标注）。
+- 山东文由后续批次（b20）做，一律以源页独立核定，文理不得互推。
+- Task 2 完成后主线核对：Q3 直方图数据与柱高、Q5 三视图朝向与选项、Q11 框图的数据流（输入 a,b 后循环体）、Q15 分段函数条件、Q21 图的点线关系。
+
+## Tasks
+
+### Task 1 — Freeze and visually identify the source
+
+- [x] Recompute source SHA-256/blob OID and page geometry against the manifest and fixed upstream.
+- [x] Render and inspect both pages; record visible title, structure and printed-page numbers in `.work/phase2-b19/`.
+- [x] Confirm batch/source/paper/project/path identities are collision-free before registration.
+
+**Task 1 results（2026-10-09）：** 固定 commit `34c13a6c…` 上 blob `83d9a18f…`、SHA-256 `e89ce45d…` 与 manifest 源记录（`src-c4564378…`，ready、未绑定）三方一致；提取副本逐字节复验。目视确认标题「2016 普通高等学校招生考试（山东卷理）」，印刷页 1011–1012（页脚居中），结构 10+5+6=21 题，源不含答案、不印分值。页映射：Q1–17 → p1（1011），Q18–21 → p2（1012）。图形 5 处（Q3 直方图、Q5 三视图三子图、Q11 框图含输入框、Q17 圆台、Q21 坐标图），全在 p1（Q21 图在 p2）。身份（paper_id/base `2016_sd_li`/目录 `2016_山东卷_理科`）空闲。
+
+### Task 2 — Transcribe and solve independently
+
+- [x] 转录代理只写 `.work/phase2-b19/gk-2016-regular-shandong-science/questions.md`、`page-map.md`、`figure-inventory.md`。
+- [x] 求解代理（不读转录稿）只写 `answer-solve.md`：逐题独立推导，标注不确定项。
+- [x] 主会话逐题对照源页复核转录稿。
+
+**Task 2 完结（2026-10-09）：** 转录代理交付三文件齐全（questions 132 / page-map 91 / figure-inventory 328 行；本卷源为 LaTeX 生成、文本层即排版真值，图形全以矢量路径核验）；盲解代理 21 题全交付（18 高 + 3 中高，速查：1B 2C 3D 4C 5C 6A 7B 8B 9D 10A / 11:3 12:−2 13:2 14:3/4 15:m>3 / 16 证 a+b=2c、cosC_min=1/2；17 证 GH∥面ABC、二面角余 √7/7；18 bₙ=3n+1、Tₙ=3n·2^{n+2}；19 2/3、EX=23/6；20 四情形单调、证 min=1−ln2；21 x²+4y²=1、定直线、max S₁/S₂=9/4 于 P(√2/2,1/4)）。
+**主会话独立复算抽验 14 题**（Q3 后三柱 0.70×200=140、Q4 顶点 (3,−1) 距²=10、Q8 t=−4、Q9 f(6)=f(1)=2、Q11 循环 a/b 互换推演输出 3、Q12 a³=−8、Q13 e² 方程 4e⁴−17e²+4=0 取 e=2、Q14 P(|k|<3/4)=3/4、Q15 存在性 m>3、Q16 (3/8)(a/b+b/a)−1/4≥1/2、Q18 Tₙ 求导式验算、Q19 两轮分布 2/3 与 23/6、Q20(2) 端点 min g(2)=1−ln2>0、Q21(1) b=1/2→a=1）全部吻合。
+**三处裁定**：① **Q5 选项**（转录代理报「(C)(D) 后项同值可疑」）——主会话 600 dpi 亲读：四选项互异（(A)⅓+2π/3、(B)⅓+√2π/3、(C)⅓+√2π/6、(D)1+√2π/6，仅 (C)(D) 首项不同），与盲解 (C)（r=√2/2 几何）自洽，疑虑解除；② Q1 源内缺标点（A1）照录空格不补；③ Q17 图未按题设 AB=BC 作图（A6，矢量实测 1.446 倍）——**重绘仍照源描摹**（与 b17/b18 天津卷「示意不按比例、不得据图反推题设」纪律一致），图注注明示意。
+其余源内异常 A2/A4/A5/A7–A10（z̄ 上划线为矢量、图注括注、∥ 为矢量、全卷半角标点已转全角、斜线双划不等号、纵轴标签竖排分数式、页标题右偏 27.9pt）均照录/记录。
+
+### Task 3 — Integrate and register
+
+- [ ] 规范三件套 + 含解析派生 + 5 幅 TikZ 图源。
+- [ ] 注册 `phase2-b19`；provenance 三角色导入。
+- [ ] 生成项目源与四版本外壳，三连 check。
+
+### Task 4 — Build, review, and close
+
+- [ ] 正式构建（构建前 grep `\%` 自检）→ **主会话先自查全部图**（含 400 dpi 连通域）→ 派审查代理（≤8 页/代理）。
+- [ ] 修复轮（如有）→ 重建 → 像素差分 → 变化页二轮复审 → 合并。
+- [ ] finalize → 报告刷新（带 --manifest/--issues，manifest_csv 在仓库根跑）→ 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+
+## 已知口径与坑（b11–b18 沉淀）
+
+- 四版本口径：试题版=纯题面；解析版=题目+完整解析；简答版=题目+答案速查；印刷版=题目+完整解析紧凑排版；「见解析版」为生成器既有口径。
+- 规范源写裸 `%`；解答题小问「（N） 内容」；长定义式 `\frac`；TikZ 图源全坐标统一缩放（照源 pt 换算）、框图显式坐标逐段独立 draw、回边 `|-` 目标点注意穿框。
+- **图标签 `inner sep=0`**（b18）：west 锚节点按源字形左端定位时必须加，否则右移约 3pt 并入线网。
+- **图标签独立性的探针量测**（b17/b18）：400 dpi 隔离探针 + 连通域；单字形隔离渲染对照；顶点虚线汇聚簇（约 23×19px）为正常结构。
+- **分页守卫注入规范源**（b17）：`\Needspace{N\textheight}` 独立行于题前；N 按题块实测高且须大于该处剩余。
+- **留白口径**（b17 澄清）：末页填充下限参考 ≈27%（更满不是缺陷）；宏级确定性留白（`\gkpart` 0.6、`\clearpage`、question 0.15、answer 0.5、图前 nopagebreak 链）单独判 pass。
+- 公共宏/转换器（`common/*`、`md2tex.py`）是全项目回执依赖闭包：齐左、留白、「解析」标签孤悬类均留档不修。
+- 印刷版模板共性（页眉横线短、页脚左偏）为全项目缺陷、留档待版式维护轮（b16 裁定）。
+- **数值抽验行须主会话复算**（b18 fix-1 教训：盲解代理的抽验数也会错）。
+- 在他批在途时刷新报告：`tools/report.py` 已修（缺失回执记 null），直接 `render/check --all` 即可。
