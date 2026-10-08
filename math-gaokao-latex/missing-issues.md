@@ -16323,3 +16323,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1005
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第8题题面未给跳绳决赛人数。反例 a=55,b=50，跳绳前7名为3、6、7、10、1、5、4号，与跳远前8名重合6人，而9号不入选。D仅在补充两项目决赛均8人的条件下成立，当前无可靠来源支持补充条件，答案待核。",
+  "fingerprint": "f4d63b3066e0ac6c09d9680121c3dc79afae777ca84ccb92058d15981337a0f3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-beijing-arts",
+  "question_id": "gk-2016-regular-beijing-arts-q08",
+  "resume_action": "核验官方原卷或勘误中跳绳决赛名额；在此之前第8题答案按needs-review处理。",
+  "source_id": "src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
