@@ -1,0 +1,29 @@
+% 第 6 题程序框图（秦九韶算法）：按固定源 PDF 逐框重绘（9 框；回边在主干右侧）。
+% 循环体次序（易错点，矢量路径逐段核对）：「是」分支自菱形右顶点折出，先入 \(v=vx+i\)，
+% 再上行入 \(i=i-1\)，最后由该框左边缘水平折回主干（箭头指向主干，T 形汇入）。
+% 主干 x=0；回边列 x=2.44；join 在 \(i=n-1\) 与菱形之间的主干上。
+\begin{tikzpicture}[>=stealth,every node/.style={font=\small},
+  term/.style={draw,rounded corners,minimum width=1.5cm,minimum height=5.5mm},
+  box/.style={draw,minimum height=5.5mm,inner xsep=4pt},
+  io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=1.8cm,minimum height=5.5mm},
+  decision/.style={draw,diamond,aspect=4,minimum width=2.7cm,inner sep=0pt}]
+\node[term] (start) at (0,0) {开始};
+\node[io] (input) at (0,-1.10) {输入 \(n,x\)};
+\node[box] (v1) at (0,-2.15) {\(v=1\)};
+\node[box] (in1) at (0,-3.16) {\(i=n-1\)};
+\node[decision] (test) at (0,-5.86) {\(i\geqslant 0?\)};
+\node[io] (out) at (0,-7.01) {输出 \(v\)};
+\node[term] (end) at (0,-8.11) {结束};
+\node[box] (iim1) at (2.44,-3.89) {\(i=i-1\)};
+\node[box] (vvx) at (2.44,-4.92) {\(v=vx+i\)};
+\coordinate (join) at (0,-3.89);
+\draw[->] (start)--(input);
+\draw[->] (input)--(v1);
+\draw[->] (v1)--(in1);
+\draw[->] (in1)--(test);
+\draw[->] (test.south)--node[right,xshift=2pt]{否}(out.north);
+\draw[->] (out)--(end);
+\draw[->] (test.east) -| node[below,pos=0.3]{是} (vvx.south);
+\draw[->] (vvx.north)--(iim1.south);
+\draw[->] (iim1.west)--(join);
+\end{tikzpicture}

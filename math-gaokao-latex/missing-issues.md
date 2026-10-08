@@ -16339,3 +16339,110 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1006
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面只写四种水果任选两种及两人各自所选，未明确独立等可能模型。该模型下为1/6，但不同选取分布概率不同。",
+  "fingerprint": "6ac0d27b550ba3fcec06155060a390817b20be4255c8bcc3c34f8d2ce02f207c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-shanghai-arts",
+  "question_id": "gk-2016-regular-shanghai-arts-q11",
+  "resume_action": "核验可靠解析或命题说明中的概率模型；未确认前保留U和条件性计算。",
+  "source_id": "src-ef0138abbecb25086fbdd068f074763b3b155e173f33462156d89059fbad582d",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1007
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面仅称任取不同两顶点，未明确等可能模型。不同顶点对等可能时为5/28；该模型不作为原题明示条件。",
+  "fingerprint": "6cf5bfc3f13ac8a7a080a73d9f461829fb5e438edc9471dbca26cbadef54182a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2016-regular-shanghai-science",
+  "question_id": "gk-2016-regular-shanghai-science-q14",
+  "resume_action": "核验可靠解析或命题说明中的概率模型；未确认前保留U和条件性计算。",
+  "source_id": "src-c7e426f42297f5bf556e490676dabce8a95bff5bcdf56a106f471c95cdb591ae",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1008
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "c4d65b1e0c35ab5b37660286aa4d352d865f80b8b03e57b6a91a9ddf40b3d988",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2016-regular-sichuan-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1009
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "1c568c4e7e2a674728eab5ea1785b3e30877b44b0507aff52a1e8bba96a22293",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2016-regular-sichuan-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1010
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "8dc9b997484911db43b4391bce28de3675d92eed7a175fb9566d6200da6af674",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2016-regular-sichuan-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1011
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "93bfe2752db945e8497f9c893de8a1e1323d29216372cf3d4b6760950c12db5f",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2016-regular-sichuan-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

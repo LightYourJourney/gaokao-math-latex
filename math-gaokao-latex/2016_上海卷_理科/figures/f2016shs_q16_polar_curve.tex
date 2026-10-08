@@ -1,0 +1,5 @@
+\begin{tikzpicture}[scale=.25,>=Stealth,every node/.style={font=\small,inner sep=2pt}]
+\draw[->] (0,0)--(7.5,0) node[right] {$x$};
+\draw[domain=0:360,samples=361,smooth,variable=\t] plot ({(6-5*sin(\t))*cos(\t)},{(6-5*sin(\t))*sin(\t)});
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}

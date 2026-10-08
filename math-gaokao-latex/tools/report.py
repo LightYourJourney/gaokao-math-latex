@@ -268,7 +268,16 @@ def _transaction_inputs(root: Path, manifest: Mapping[str, Any]) -> Dict[str, st
     for paper in manifest["papers"]:
         base = BASE / paper["project_dir"]
         paths.update({(base / "provenance.json").as_posix(), (base / "receipts/build.json").as_posix(), (base / "receipts/review.json").as_posix()})
-    return {path: _sha256(root / path) for path in sorted(paths)}
+    # 在途批次可能尚无 receipts/review.json 或 reports/<batch>.md（build 完成、review 未
+    # 完成的中间态）：每条路径仍逐一经 _sha256 记录（输入追踪完整性），缺失文件记 null
+    # （事务约定的「不存在」态），不得让全量报告渲染因他批中间态而整体失败。
+    snapshot = {}
+    for path in sorted(paths):
+        try:
+            snapshot[path] = _sha256(root / path)
+        except FileNotFoundError:
+            snapshot[path] = None
+    return snapshot
 
 
 def _parser() -> argparse.ArgumentParser:

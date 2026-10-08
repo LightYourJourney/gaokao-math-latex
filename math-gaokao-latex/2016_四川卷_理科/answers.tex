@@ -1,0 +1,766 @@
+% answers.tex —— 2016 年·四川卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2016/2016_数学真题_四川理_试题.md + 2016/2016_数学真题_四川理_解析正文.md + 2016/2016_数学真题_四川理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定原卷不附官方答案。以下为独立推导并经异人盲核对照的解析（非官方答案，等级 D）。第 16 题直方图最左组 \([0,0.5)\) 有柱（柱高 \(0.08\)，矢量路径与像素测量双重确认），系原图如此；第 18 题 (1) 满足条件的点 \(M\) 不唯一，本解析取使 \(ABMP\) 为平行四边形的一点。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设集合 \(A=\{x\mid -2\leqslant x\leqslant 2\}\)，\(\mathbf{Z}\) 为整数集，则 \(A\cap\mathbf{Z}\) 中元素的个数是（　）
+
+（A）\(3\)　（B）\(4\)　（C）\(5\)　（D）\(6\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(A=\{x\mid -2\leqslant x\leqslant 2\}\)，其中整数为 \(-2,-1,0,1,2\)，共 \(5\) 个。
+
+\gkanswer{答案：C，\(5\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设 \(\mathrm{i}\) 为虚数单位，则 \((x+\mathrm{i})^{6}\) 的展开式中含 \(x^{4}\) 的项为（　）
+
+（A）\(-15x^{4}\)　（B）\(15x^{4}\)　（C）\(-20\mathrm{i}x^{4}\)　（D）\(20\mathrm{i}x^{4}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+二项展开的通项为 \(\mathrm C_6^k x^{6-k}\mathrm i^{k}\)。取 \(x\) 的次数为 \(4\)，即 \(k=2\)：系数 \(\mathrm C_6^2\mathrm i^{2}=15\times(-1)=-15\)，故含 \(x^{4}\) 的项为 \(-15x^{4}\)。
+
+\gkanswer{答案：A，\(-15x^{4}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+为了得到函数 \(y=\sin\left(2x-\dfrac{\pi}{3}\right)\) 的图象，只需把函数 \(y=\sin 2x\) 的图象上所有的点（　）
+
+（A）向左平行移动 \(\dfrac{\pi}{3}\) 个单位长度　（B）向右平行移动 \(\dfrac{\pi}{3}\) 个单位长度
+
+（C）向左平行移动 \(\dfrac{\pi}{6}\) 个单位长度　（D）向右平行移动 \(\dfrac{\pi}{6}\) 个单位长度
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(y=\sin\left(2x-\dfrac{\pi}{3}\right)=\sin\left[2\left(x-\dfrac{\pi}{6}\right)\right]\)，即把 \(y=\sin 2x\) 的图象上所有点向右平行移动 \(\dfrac{\pi}{6}\) 个单位长度。（平移量是 \(\dfrac{\pi}{6}\) 而非 \(\dfrac{\pi}{3}\)：须先把 \(\sin(2x+\varphi)\) 中的系数 \(2\) 提出。）
+
+\gkanswer{答案：D，向右平行移动 \(\dfrac{\pi}{6}\) 个单位长度}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+用数字 \(1,2,3,4,5\) 组成没有重复数字的五位数，其中奇数的个数为（　）
+
+（A）\(24\)　（B）\(48\)　（C）\(60\)　（D）\(72\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+个位须为奇数，从 \(1,3,5\) 中选有 \(3\) 种；其余 \(4\) 个数字在剩下 \(4\) 个数位上排列有 \(4!=24\) 种。故共 \(3\times24=72\) 个。
+
+\gkanswer{答案：D，\(72\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+公司为激励创新，计划逐年加大研发资金投入。若该公司 \(2015\) 年全年投入研发资金 \(130\) 万元，在此基础上，每年投入的研发资金比上一年增长 12\%，则该公司全年投入的研发资金开始超过 \(200\) 万元的年份是（　）
+
+（参考数据：\(\lg 1.12\approx 0.05\)，\(\lg 1.3\approx 0.11\)，\(\lg 2\approx 0.30\)）
+
+（A）\(2018\) 年　（B）\(2019\) 年　（C）\(2020\) 年　（D）\(2021\) 年
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设第 \(n\) 年（\(n=0,1,2,\dots\)）投入 \(130\times1.12^{n}\) 万元，求使 \(130\times1.12^{n}>200\) 的最小整数 \(n\)：即 \(1.12^{n}>\dfrac{20}{13}\)，取对数
+
+\nopagebreak[4]
+\[
+n\lg 1.12>\lg 2+1-(\lg 1.3+1)=0.30-0.11=0.19,
+\]
+
+故 \(0.05n>0.19\)，\(n>3.8\)，最小 \(n=4\)，对应 \(2015+4=2019\) 年。（复核：\(130\times1.12^{3}\approx182.6<200\)，\(130\times1.12^{4}\approx204.6>200\)。）
+
+\gkanswer{答案：B，\(2019\) 年}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+秦九韶是我国南宋时期的数学家，普州（现四川省安岳县）人，他在所著的《数书九章》中提出的多项式求值的秦九韶算法，至今仍是比较先进的算法。如图所示的程序框图给出了利用秦九韶算法求某多项式值的一个实例，若输入 \(n,x\) 的值分别为 \(3,2\)，则输出 \(v\) 的值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2016scs_q06_flowchart}\end{center}
+\nopagebreak[4]
+（A）\(9\)　（B）\(18\)　（C）\(20\)　（D）\(35\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+框图走向：开始 → 输入 \(n,x\) → \(v=1\) → \(i=n-1\) → 判断 \(i\geqslant0?\)；「是」支自菱形右侧折出，\textbf{先执行 \(v=vx+i\)，再执行 \(i=i-1\)}，然后折回判断之前；「否」支输出 \(v\) 后结束。取 \(n=3\)，\(x=2\)，初值 \(v=1\)，\(i=2\)：
+
+\begin{itemize}
+\item \(i=2\)：\(v=1\times2+2=4\)，\(i=1\)；
+\item \(i=1\)：\(v=4\times2+1=9\)，\(i=0\)；
+\item \(i=0\)：\(v=9\times2+0=18\)，\(i=-1\)；
+\item \(i=-1\)：\(i\geqslant0\) 不成立，输出 \(v=18\)。
+\end{itemize}
+
+即答案为 \(18\)。（该框图即秦九韶算法的迭代式 \(v\leftarrow vx+i\)。）
+
+\gkanswer{答案：B，\(18\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 \(p\)：实数 \(x,y\) 满足 \((x-1)^{2}+(y-1)^{2}\leqslant 2\)，\(q\)：实数 \(x,y\) 满足
+
+\nopagebreak[4]
+\[
+\begin{cases}
+y\geqslant x-1,\\
+y\geqslant 1-x,\\
+y\leqslant 1.
+\end{cases}
+\]
+
+则 \(p\) 是 \(q\) 的（　）
+
+（A）必要不充分条件　（B）充分不必要条件
+
+（C）充要条件　（D）既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(p\) 是闭圆盘 \((x-1)^{2}+(y-1)^{2}\leqslant2\)（圆心 \((1,1)\)、半径 \(\sqrt{2}\)）；\(q\) 是三角形 \(\{|x-1|\leqslant y\leqslant1\}\)，顶点 \((1,1)\)、\((0,0)\)、\((2,0)\)。
+
+\(q\Rightarrow p\)：三个顶点到 \((1,1)\) 的距离分别为 \(0,\sqrt{2},\sqrt{2}\)，均不超过 \(\sqrt{2}\)；圆盘与三角形均为凸集，故三角形含于圆盘，即 \(q\) 是 \(p\) 的充分条件。
+
+\(p\nRightarrow q\)：取 \((1,1+\sqrt{2})\) 满足 \(p\)，但 \(y=1+\sqrt{2}>1\) 不满足 \(q\)。
+
+故 \(p\) 是 \(q\) 的必要不充分条件。
+
+\gkanswer{答案：A，必要不充分条件}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设 \(O\) 为坐标原点，\(P\) 是以 \(F\) 为焦点的抛物线 \(y^{2}=2px\)（\(p>0\)）上任意一点，\(M\) 是线段 \(PF\) 上的点，且 \(|PM|=2|MF|\)，则直线 \(OM\) 的斜率的最大值为（　）
+
+（A）\(\dfrac{\sqrt{3}}{3}\)　（B）\(\dfrac{2}{3}\)　（C）\(\dfrac{\sqrt{2}}{2}\)　（D）\(1\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+焦点 \(F\left(\dfrac{p}{2},0\right)\)。设 \(P\left(\dfrac{y_0^{2}}{2p},y_0\right)\)。由 \(|PM|=2|MF|\) 得 \(M\) 内分 \(PF\) 使 \(PM:MF=2:1\)，故
+
+\nopagebreak[4]
+\[
+M=\frac{P+2F}{3}=\left(\frac{1}{3}\left(\frac{y_0^{2}}{2p}+p\right),\ \frac{y_0}{3}\right).
+\]
+
+\Needspace{5\baselineskip}
+直线 \(OM\) 的斜率
+
+\nopagebreak[4]
+\[
+k=\frac{y_0/3}{\frac{1}{3}\left(\frac{y_0^{2}}{2p}+p\right)}=\frac{2py_0}{y_0^{2}+2p^{2}}.
+\]
+
+由 \(y_0^{2}+2p^{2}\geqslant2\sqrt{2}\,py_0\) 得 \(k\leqslant\dfrac{2py_0}{2\sqrt{2}\,py_0}=\dfrac{\sqrt{2}}{2}\)，等号当且仅当 \(y_0^{2}=2p^{2}\)（即 \(y_0=\sqrt{2}p\)）时成立。故最大值为 \(\dfrac{\sqrt{2}}{2}\)。
+
+\gkanswer{答案：C，\(\dfrac{\sqrt{2}}{2}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设直线 \(l_{1},l_{2}\) 分别是函数
+
+\nopagebreak[4]
+\[
+f(x)=\begin{cases}
+-\ln x, & 0<x<1,\\
+\ln x, & x>1,
+\end{cases}
+\]
+
+图象上点 \(P_{1},P_{2}\) 处的切线，\(l_{1}\) 与 \(l_{2}\) 垂直相交于点 \(P\)，且 \(l_{1},l_{2}\) 分别与 \(y\) 轴相交于点 \(A,B\)，则 \(\triangle PAB\) 的面积的取值范围是（　）
+
+（A）\((0,1)\)　（B）\((0,2)\)　（C）\((0,+\infty)\)　（D）\((1,+\infty)\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 \(P_1(x_1,f(x_1))\) 在左支（\(0<x_1<1\)）、\(P_2(x_2,f(x_2))\) 在右支（\(x_2>1\)）。左支切线斜率为 \(-\dfrac{1}{x_1}\)、右支为 \(\dfrac{1}{x_2}\)。两切线方程分别令 \(x=0\)，得
+
+\nopagebreak[4]
+\[
+A(0,\ 1-\ln x_1),\qquad B(0,\ \ln x_2-1).
+\]
+
+\Needspace{5\baselineskip}
+垂直条件：\(\left(-\dfrac{1}{x_1}\right)\cdot\dfrac{1}{x_2}=-1\)，即 \(x_1x_2=1\)。于是
+
+\nopagebreak[4]
+\[
+|AB|=(1-\ln x_1)-(\ln x_2-1)=2-\ln(x_1x_2)=2
+\]
+
+\Needspace{5\baselineskip}
+为定值。再求交点 \(P\) 的横坐标：由两切线方程相等并代入 \(x_1x_2=1\)，得 \(x_P=\dfrac{2}{x_1+x_2}\)。故
+
+\nopagebreak[4]
+\[
+S_{\triangle PAB}=\frac{1}{2}|AB|\cdot x_P=\frac{2}{x_1+x_2}.
+\]
+
+由 \(0<x_1<1\) 得 \(x_1+x_2=x_1+\dfrac{1}{x_1}>2\)（取不到 \(2\)），故 \(S\in(0,1)\)（端点 \(1\) 与 \(0\) 均取不到）。
+
+\gkanswer{答案：A，\((0,1)\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+在平面内，定点 \(A,B,C,D\) 满足 \(\left|\overrightarrow{DA}\right|=\left|\overrightarrow{DB}\right|=\left|\overrightarrow{DC}\right|\)，\(\overrightarrow{DA}\cdot\overrightarrow{DB}=\overrightarrow{DB}\cdot\overrightarrow{DC}=\overrightarrow{DC}\cdot\overrightarrow{DA}=-2\)，动点 \(P,M\) 满足 \(\left|\overrightarrow{AP}\right|=1\)，\(\overrightarrow{PM}=\overrightarrow{MC}\)，则 \(\left|\overrightarrow{BM}\right|^{2}\) 的最大值是（　）
+
+（A）\(\dfrac{43}{4}\)　（B）\(\dfrac{49}{4}\)　（C）\(\dfrac{37+6\sqrt{3}}{4}\)　（D）\(\dfrac{37+2\sqrt{33}}{4}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记 \(\boldsymbol a=\overrightarrow{DA}\)、\(\boldsymbol b=\overrightarrow{DB}\)、\(\boldsymbol c=\overrightarrow{DC}\)，由条件 \(|\boldsymbol a|=|\boldsymbol b|=|\boldsymbol c|=r\)，\(\boldsymbol a\cdot\boldsymbol b=\boldsymbol b\cdot\boldsymbol c=\boldsymbol c\cdot\boldsymbol a=-2\)。取坐标 \(\boldsymbol c=(r,0)\)，则 \(a_x=b_x=-\dfrac{2}{r}\)，\(a_y=-b_y=\sqrt{r^{2}-\dfrac{4}{r^{2}}}\)（由 \(\boldsymbol a\cdot\boldsymbol b=-2<0\) 知 A、B 在 \(x\) 轴两侧）。代入 \(\boldsymbol a\cdot\boldsymbol b=-2\)：
+
+\nopagebreak[4]
+\[
+\frac{8}{r^{2}}-r^{2}=-2\ \Longrightarrow\ r^{4}-2r^{2}-8=0\ \Longrightarrow\ r^{2}=4,
+\]
+
+即 \(r=2\)。于是可取 \(D(0,0)\)、\(A(-1,\sqrt{3})\)、\(B(-1,-\sqrt{3})\)、\(C(2,0)\)。
+
+\Needspace{5\baselineskip}
+\(\overrightarrow{PM}=\overrightarrow{MC}\) 说明 \(M\) 是 \(PC\) 的中点：\(M=\dfrac{P+C}{2}\)。写 \(P=A+\boldsymbol u\)（\(|\boldsymbol u|=1\)），则
+
+\nopagebreak[4]
+\[
+\overrightarrow{BM}=\frac{\boldsymbol u+(A+C-2B)}{2},\qquad
+\left|\overrightarrow{BM}\right|^{2}\leqslant\frac{(1+|A+C-2B|)^{2}}{4}.
+\]
+
+由坐标 \(A+C-2B=(3,3\sqrt{3})\)，\(|A+C-2B|=6\)，故最大值为 \(\dfrac{(1+6)^{2}}{4}=\dfrac{49}{4}\)（当 \(\boldsymbol u\) 与 \(A+C-2B\) 同向时取到）。
+
+\gkanswer{答案：B，\(\dfrac{49}{4}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+\(\cos^{2}\dfrac{\pi}{8}-\sin^{2}\dfrac{\pi}{8}=\underline{\qquad}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由二倍角公式，\(\cos^{2}\dfrac{\pi}{8}-\sin^{2}\dfrac{\pi}{8}=\cos\dfrac{\pi}{4}=\dfrac{\sqrt{2}}{2}\)。
+
+\gkanswer{答案：\(\dfrac{\sqrt{2}}{2}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+同时抛掷两枚质地均匀的硬币，当至少有一枚硬币正面向上时，就说这次试验成功，则在 \(2\) 次试验中成功次数 \(X\) 的均值是 \(\underline{\qquad}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+一次试验「至少一枚正面向上」的概率为 \(1-\dfrac{1}{4}=\dfrac{3}{4}\)。两次试验中成功次数 \(X\sim B\left(2,\dfrac{3}{4}\right)\)，故均值 \(E(X)=2\times\dfrac{3}{4}=\dfrac{3}{2}\)。
+
+\gkanswer{答案：\(\dfrac{3}{2}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知三棱锥的四个面都是腰长为 \(2\) 的等腰三角形，该三棱锥的正视图如图所示，则该三棱锥的体积是 \(\underline{\qquad}\)。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016scs_q13_three_view}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由正视图，底边总长 \(2\sqrt{3}\)、高 \(1\)，且有从尖顶直达底边的竖直实线段，这说明存在一个底面顶点投影到底边中点。设顶点 \(S\) 在底边中点正上方（高 \(1\)），底面三顶点投影于 \((-\sqrt{3},0)\)、\((0,0)\)、\((\sqrt{3},0)\)。
+
+\Needspace{5\baselineskip}
+以 \(S(0,0,1)\)、\(U(-\sqrt{3},0,0)\)、\(W(\sqrt{3},0,0)\)、\(V(0,t,0)\) 建系：面 \(SUW\) 中 \(UW=2\sqrt{3}>2\) 只能是底，\(SU=SW=2\) 为腰（此时该面高 \(\sqrt{4-3}=1\)，与视图吻合）；面 \(UVW\) 中 \(UW\neq2\)，故 \(UV=VW=2\)，由 \(\sqrt{3+t^{2}}=2\) 得 \(t=\pm1\)。此时四个面均为腰长 \(2\) 的等腰三角形。底面 \(UVW\) 的面积
+
+\nopagebreak[4]
+\[
+S_{\triangle UVW}=\frac{1}{2}\times2\sqrt{3}\times1=\sqrt{3},
+\]
+
+\Needspace{5\baselineskip}
+棱锥的高为 \(1\)，故
+
+\nopagebreak[4]
+\[
+V=\frac{1}{3}\times\sqrt{3}\times1=\frac{\sqrt{3}}{3}.
+\]
+
+（另一分支若取 \(SV=2\)，则底面三边为 \(\sqrt{6},\sqrt{6},2\sqrt{3}\)，腰长 \(\sqrt{6}\neq2\)，与题设不合，舍去。）
+
+\gkanswer{答案：\(\dfrac{\sqrt{3}}{3}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)\) 是定义在 \(\mathbf{R}\) 上的周期为 \(2\) 的奇函数，当 \(0<x<1\) 时，\(f(x)=4^{x}\)，则 \(f\left(-\dfrac{5}{2}\right)+f(1)=\underline{\qquad}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(f\left(-\dfrac{5}{2}\right)=f\left(-\dfrac{5}{2}+2\right)=f\left(-\dfrac{1}{2}\right)=-f\left(\dfrac{1}{2}\right)=-4^{1/2}=-2\)；又 \(f(1)=f(-1)=-f(1)\)（先用周期性再用奇性，注意 \(x=1\) 不在分段 \(0<x<1\) 内），得 \(f(1)=0\)。故原式 \(=-2+0=-2\)。
+
+\gkanswer{答案：\(-2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+在平面直角坐标系中，当 \(P(x,y)\) 不是原点时，定义 \(P\) 的“伴随点”为 \(P'\left(\frac{y}{x^{2}+y^{2}},\frac{-x}{x^{2}+y^{2}}\right)\)；当 \(P\) 是原点时，定义 \(P\) 的“伴随点”为它自身，平面曲线 \(C\) 上所有点的“伴随点”所构成的曲线 \(C'\) 定义为曲线 \(C\) 的“伴随曲线”，现有下列命题：
+
+① 若点 \(A\) 的“伴随点”是点 \(A'\)，则点 \(A'\) 的“伴随点”是点 \(A\)；
+
+② 单位圆的“伴随曲线”是它自身；
+
+③ 若曲线 \(C\) 关于 \(x\) 轴对称，则其“伴随曲线”\(C'\) 关于 \(y\) 轴对称；
+
+④ 一条直线的“伴随曲线”是一条直线。
+
+其中的真命题是 \(\underline{\qquad}\)。（写出所以真命题的序列）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 \(P(x,y)\)（\(r^{2}=x^{2}+y^{2}\neq0\)）的伴随点为 \(P'(X,Y)=\left(\dfrac{y}{r^{2}},\dfrac{-x}{r^{2}}\right)\)。两条基本事实：① \(|P'|^{2}=X^{2}+Y^{2}=\dfrac{1}{r^{2}}\)；② 再取一次伴随得 \(P''=\left(\dfrac{Y}{X^{2}+Y^{2}},\dfrac{-X}{X^{2}+Y^{2}}\right)=(-x,-y)=-P\)。
+
+\gksubpart{①}
+
+假。取 \(A(1,0)\)，则 \(A'=(0,-1)\)，\(A''=(-1,0)=-A\neq A\)。一般地 \(A''=-A\)，仅当 \(A\) 为原点时才不变。
+
+\gksubpart{②}
+
+真。单位圆上 \(r^{2}=1\)，\(P'=(y,-x)\)，仍满足 \(X^{2}+Y^{2}=1\)；又映射可逆（由 \(P''=-P\) 反解 \(P=-P''\)），故单位圆映满自身。单位圆的伴随曲线是它自身。
+
+\gksubpart{③}
+
+真。若 \((x,y)\in C\) 蕴含 \((x,-y)\in C\)（同一 \(r^{2}\)），两者的伴随点分别为 \(\left(\dfrac{y}{r^{2}},\dfrac{-x}{r^{2}}\right)\) 与 \(\left(\dfrac{-y}{r^{2}},\dfrac{-x}{r^{2}}\right)\)，横坐标互为相反数、纵坐标相同，关于 \(y\) 轴对称；由映射可逆，\(C'\) 关于 \(y\) 轴对称。
+
+\gksubpart{④}
+
+假。设直线 \(ax+by=c\)。由 \(P=-P''\) 反解代入得 \(c(X^{2}+Y^{2})-bX+aY=0\)：当 \(c=0\)（过原点）时为过原点直线；当 \(c\neq0\) 时配方为圆 \(\left(X-\dfrac{b}{2c}\right)^{2}+\left(Y+\dfrac{a}{2c}\right)^{2}=\dfrac{a^{2}+b^{2}}{4c^{2}}\)（如 \(y=1\) 的伴随曲线为 \((X-\tfrac{1}{2})^{2}+Y^{2}=\tfrac{1}{4}\)）。故过原点的直线才映成直线，命题不真。
+
+综上，真命题是 ②③。
+
+\gkanswer{答案：②③。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+我国是世界上严重缺水的国家，某市政府为了鼓励居民节约用水，计划调整居民生活用水收费方案，拟确定一个合理的月用水量标准 \(x\)（吨），一位居民的月用水量不超过 \(x\) 的部分按平价收费，超出 \(x\) 的部分按议价收费，为了了解居民用水情况，通过抽样，获得了某年 \(100\) 位居民每人的月均用水量（单位：吨），将数据按照 \([0,0.5),[0.5,1),\cdots,[4,4.5)\) 分成 \(9\) 组，制成了如图所示的频率分布直方图。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016scs_q16_histogram}\end{center}
+\nopagebreak[4]
+（1） 求直方图中 \(a\) 的值；
+
+（2） 设该市有 \(30\) 万居民，估计全市居民中月均用水量不低于 \(3\) 吨的人数，并说明理由；
+
+（3） 若该市政府希望使 85\% 的居民每月的用水量不超过标准 \(x\)（吨），估计 \(x\) 的值，并说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+各组「频率/组距」依次为 \(0.08,\ 0.16,\ a,\ 0.40,\ 0.52,\ a,\ 0.12,\ 0.08,\ 0.04\)。由各矩形面积之和为 \(1\)：
+
+\nopagebreak[4]
+\[
+0.5\times(1.40+2a)=1\ \Longrightarrow\ a=0.30.
+\]
+
+各组频率依次为 \(0.04,\ 0.08,\ 0.15,\ 0.20,\ 0.26,\ 0.15,\ 0.06,\ 0.04,\ 0.02\)，合计 \(1.00\)。
+
+\gksubpart{(2)}
+
+月均用水量不低于 \(3\) 吨对应后三组，其频率之和为 \(0.06+0.04+0.02=0.12\)。以样本频率估计总体比例，\(30\times0.12=3.6\)（万人），即约 \(36000\) 人。
+
+\gksubpart{(3)}
+
+\Needspace{5\baselineskip}
+设 \(P(X\leqslant x)=0.85\)。累计频率 \(P(X\leqslant2.5)=0.73<0.85\)，\(P(X\leqslant3)=0.88>0.85\)，故 \(x\in(2.5,3)\)。在该组内按均匀分布估计：
+
+\nopagebreak[4]
+\[
+0.73+0.30\times(x-2.5)=0.85\ \Longrightarrow\ x=2.5+\frac{0.12}{0.30}=2.9.
+\]
+
+即 \(x\approx2.9\) 吨。
+
+\gkanswer{答案（1）：\(a=0.30\)。}
+
+\gkanswer{答案（2）：\(3.6\) 万人。}
+
+\gkanswer{答案（3）：\(x\approx2.9\)（吨）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+在 \(\triangle ABC\) 中，角 \(A,B,C\) 所对的边分别是 \(a,b,c\)，且 \(\dfrac{\cos A}{a}+\dfrac{\cos B}{b}=\dfrac{\sin C}{c}\)。
+
+（1） 证明：\(\sin A\sin B=\sin C\)；
+
+（2） 若 \(b^{2}+c^{2}-a^{2}=\dfrac{6}{5}bc\)，求 \(\tan B\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+由正弦定理 \(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}=2R\)，原式两边同乘 \(2R\) 得
+
+\nopagebreak[4]
+\[
+\frac{\cos A}{\sin A}+\frac{\cos B}{\sin B}=1,
+\]
+
+通分得 \(\dfrac{\cos A\sin B+\cos B\sin A}{\sin A\sin B}=1\)，即 \(\dfrac{\sin(A+B)}{\sin A\sin B}=1\)。由 \(A+B=\pi-C\)，\(\sin(A+B)=\sin C\)，故 \(\sin A\sin B=\sin C\)。
+
+\gksubpart{(2)}
+
+由余弦定理 \(b^{2}+c^{2}-a^{2}=2bc\cos A\)，代入已知得 \(2bc\cos A=\dfrac{6}{5}bc\)，即 \(\cos A=\dfrac{3}{5}\)，从而 \(\sin A=\dfrac{4}{5}\)。
+
+\Needspace{5\baselineskip}
+由 (1) 的结论及 \(\sin C=\sin(A+B)=\sin A\cos B+\cos A\sin B\)：
+
+\nopagebreak[4]
+\[
+\frac{4}{5}\sin B=\frac{4}{5}\cos B+\frac{3}{5}\sin B
+\ \Longrightarrow\ \frac{1}{5}\sin B=\frac{4}{5}\cos B
+\ \Longrightarrow\ \tan B=4.
+\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：\(\tan B=4\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在四棱锥 \(P-ABCD\) 中，\(AD\parallel BC\)，\(\angle ADC=\angle PAB=90^{\circ}\)，\(BC=CD=\dfrac{1}{2}AD\)，\(E\) 为边 \(AD\) 的中点，异面直线 \(PA\) 与 \(CD\) 所成的角为 \(90^{\circ}\)。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016scs_q18_pyramid}\end{center}
+\nopagebreak[4]
+（1） 在平面 \(PAB\) 内找一点 \(M\)，使得直线 \(CM\parallel\) 平面 \(PBE\)，并说明理由；
+
+（2） 若二面角 \(P-CD-A\) 的大小为 \(45^{\circ}\)，求直线 \(PA\) 与平面 \(PCE\) 所成角的正弦值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+取 \(M\) 使四边形 \(ABMP\) 为平行四边形（即 \(\overrightarrow{BM}=\overrightarrow{PA}\)，\(M\) 是 \(B\) 沿 \(\overrightarrow{PA}\) 平移所得的点）。
+
+\Needspace{5\baselineskip}
+由 \(AD\parallel BC\) 且 \(BC=\dfrac{1}{2}AD\)、\(E\) 为 \(AD\) 中点，得 \(AE\parallel BC\) 且 \(AE=BC\)，即 \(\overrightarrow{AE}=\overrightarrow{BC}\)。于是
+
+\nopagebreak[4]
+\[
+\overrightarrow{CM}=\overrightarrow{CB}+\overrightarrow{BM}=\overrightarrow{EA}+\overrightarrow{PA}=\overrightarrow{PE},
+\]
+
+故 \(CM\parallel PE\)。又 \(PE\subset\) 平面 \(PBE\)，且 \(C\notin\) 平面 \(PBE\)（否则由 \(C\in\) 平面 \(PBE\) 与 \(B\in\) 平面 \(PBE\) 将导出 \(BC\subset\) 平面 \(PBE\)，与 \(P\) 不在底面内矛盾），由线面平行的判定定理，\(CM\parallel\) 平面 \(PBE\)。而 \(M\) 是 \(A\)、\(\overrightarrow{AB}\)、\(\overrightarrow{AP}\) 的线性组合，故 \(M\in\) 平面 \(PAB\)。
+
+（说明：满足条件的点 \(M\) 不唯一，它们构成平面 \(PAB\) 内的一条直线；取上述平行四边形对应的一点即合要求。）
+
+\gksubpart{(2)}
+
+建系：取 \(CD=1\)，\(A(0,0,0)\)、\(D(2,0,0)\)、\(C(2,1,0)\)、\(B(1,1,0)\)、\(E(1,0,0)\)。设 \(P(u,v,w)\)：由异面直线 \(PA\) 与 \(CD\) 成 \(90^{\circ}\) 得 \(\overrightarrow{PA}\perp\overrightarrow{CD}=(0,-1,0)\)，故 \(v=0\)；由 \(\angle PAB=90^{\circ}\) 得 \(\overrightarrow{PA}\perp\overrightarrow{AB}=(1,1,0)\)，故 \(u=0\)。即 \(P(0,0,h)\)（\(PA\perp\) 底面）。
+
+\Needspace{5\baselineskip}
+平面 \(PCD\) 的法向量：\(\overrightarrow{DC}=(0,1,0)\)、\(\overrightarrow{DP}=(-2,0,h)\)，取 \(\boldsymbol n_2=(h,0,2)\)；平面 \(ACD\) 即 \(z=0\)，法向量 \(\boldsymbol n_1=(0,0,1)\)。由二面角 \(P-CD-A\) 为 \(45^{\circ}\)：
+
+\nopagebreak[4]
+\[
+\cos45^{\circ}=\frac{|\boldsymbol n_1\cdot\boldsymbol n_2|}{|\boldsymbol n_1||\boldsymbol n_2|}=\frac{2}{\sqrt{h^{2}+4}}=\frac{\sqrt{2}}{2},
+\]
+
+得 \(h^{2}+4=8\)，\(h=2\)，即 \(P(0,0,2)\)。
+
+\Needspace{5\baselineskip}
+平面 \(PCE\) 中 \(\overrightarrow{PC}=(2,1,-2)\)、\(\overrightarrow{PE}=(1,0,-2)\)，法向量
+
+\nopagebreak[4]
+\[
+\boldsymbol n=\overrightarrow{PC}\times\overrightarrow{PE}=(-2,2,-1),\qquad|\boldsymbol n|=3.
+\]
+
+\Needspace{5\baselineskip}
+\(\overrightarrow{PA}=(0,0,-2)\)，设直线 \(PA\) 与平面 \(PCE\) 所成角为 \(\varphi\)，则
+
+\nopagebreak[4]
+\[
+\sin\varphi=\frac{|\overrightarrow{PA}\cdot\boldsymbol n|}{|\overrightarrow{PA}||\boldsymbol n|}=\frac{2}{2\times3}=\frac{1}{3}.
+\]
+
+即所求正弦值为 \(\dfrac{1}{3}\)。
+
+\gkanswer{答案（1）：取 \(M\) 使四边形 \(ABMP\) 为平行四边形（即 \(\overrightarrow{BM}=\overrightarrow{PA}\)）。}
+
+\gkanswer{答案（2）：\(\dfrac{1}{3}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知数列 \(\{a_{n}\}\) 的首项为 \(1\)，\(S_{n}\) 为数列 \(\{a_{n}\}\) 的前 \(n\) 项和，\(S_{n+1}=qS_{n}+1\)，其中 \(q>0\)，\(n\in\mathbf{N}^{*}\)。
+
+（1） 若 \(2a_{2},a_{3},a_{2}+2\) 成等差数列，求 \(a_{n}\) 的通项公式；
+
+（2） 设双曲线 \(x^{2}-\dfrac{y^{2}}{a_{n}^{2}}=1\) 的离心率为 \(e_{n}\)，且 \(e_{2}=\dfrac{5}{3}\)，证明：\(e_{1}+e_{2}+\cdots+e_{n}>\dfrac{4^{n}-3^{n}}{3^{n-1}}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\(S_1=a_1=1\)。由 \(S_{n+1}=qS_n+1\) 与 \(S_n=qS_{n-1}+1\) 相减得 \(a_{n+1}=qa_n\)（\(n\geqslant2\)）；又 \(a_2=S_2-S_1=q\)，故 \(a_n=q^{n-1}\)。
+
+\Needspace{5\baselineskip}
+由 \(2a_2,a_3,a_2+2\) 成等差数列：\(2q^{2}=2q+(q+2)\)，即 \(2q^{2}-3q-2=0\)，解得 \(q=2\)（\(q=-\dfrac{1}{2}\) 舍去）。故
+
+\nopagebreak[4]
+\[
+a_n=2^{n-1}.
+\]
+
+\gksubpart{(2)}
+
+双曲线 \(x^{2}-\dfrac{y^{2}}{a_n^{2}}=1\) 中 \(c^{2}=1+a_n^{2}\)，离心率 \(e_n=\sqrt{1+a_n^{2}}\)。由 \(e_2=\dfrac{5}{3}\) 得 \(1+a_2^{2}=\dfrac{25}{9}\)，\(a_2=\dfrac{4}{3}\)，故 \(q=\dfrac{4}{3}\)，\(a_n=\left(\dfrac{4}{3}\right)^{n-1}\)。
+
+\Needspace{5\baselineskip}
+由 \(e_n^{2}=1+a_n^{2}>a_n^{2}\) 得 \(e_n>a_n\) 对一切 \(n\) 严格成立，逐项求和：
+
+\nopagebreak[4]
+\[
+e_1+e_2+\cdots+e_n>a_1+a_2+\cdots+a_n=\sum_{k=1}^{n}\left(\frac{4}{3}\right)^{k-1}
+=\frac{\left(\frac{4}{3}\right)^{n}-1}{\frac{4}{3}-1}
+=3\cdot\frac{4^{n}-3^{n}}{3^{n}}=\frac{4^{n}-3^{n}}{3^{n-1}}.
+\]
+
+故原不等式成立。
+
+\gkanswer{答案（1）：\(a_{n}=2^{n-1}\)。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知椭圆 \(E:\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\)（\(a>b>0\)）的两个焦点与短轴的一个端点是直角三角形的 \(3\) 个顶点，直线 \(l:y=-x+3\) 与椭圆 \(E\) 有且只有一个公共点 \(T\)。
+
+（1） 求椭圆 \(E\) 的方程及点 \(T\) 的坐标；
+
+（2） 设 \(O\) 是坐标原点，直线 \(l'\) 平行于 \(OT\) 与椭圆 \(E\) 交于不同的两点 \(A,B\)，且与直线 \(l\) 交于点 \(P\)，证明：存在常数 \(\lambda\)，使得 \(|PT|^{2}=\lambda|PA|\cdot|PB|\)，并求 \(\lambda\) 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+设焦点 \(F_1(-c,0)\)、\(F_2(c,0)\)，短轴端点 \(B(0,b)\)。三角形 \(F_1F_2B\) 为等腰三角形（\(|F_1B|=|F_2B|=a\)），直角顶点只能在 \(B\)（若在 \(F_1\) 处将要求 \(2c^{2}=0\)，不可能），故 \(\overrightarrow{BF_1}\cdot\overrightarrow{BF_2}=-c^{2}+b^{2}=0\)，即 \(b=c\)，于是 \(a^{2}=2c^{2}\)，椭圆为 \(\dfrac{x^{2}}{2c^{2}}+\dfrac{y^{2}}{c^{2}}=1\)。
+
+\Needspace{5\baselineskip}
+把 \(y=3-x\) 代入并乘以 \(2c^{2}\)：\(3x^{2}-12x+(18-2c^{2})=0\)。相切即判别式为零：\(144-12(18-2c^{2})=0\)，得 \(c^{2}=3\)。故
+
+\nopagebreak[4]
+\[
+E:\ \frac{x^{2}}{6}+\frac{y^{2}}{3}=1,
+\]
+
+代回得 \(x^{2}-4x+4=0\)，\(x=2\)，\(y=1\)，即 \(T(2,1)\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+\(OT\) 的斜率为 \(\dfrac{1}{2}\)，设 \(l':y=\dfrac{1}{2}x+m\)（\(m\neq0\)）。与 \(l\) 联立得
+
+\nopagebreak[4]
+\[
+P\left(2-\frac{2m}{3},\ 1+\frac{2m}{3}\right),\qquad
+|PT|^{2}=\left(\frac{2m}{3}\right)^{2}+\left(\frac{2m}{3}\right)^{2}=\frac{8m^{2}}{9}.
+\]
+
+\Needspace{5\baselineskip}
+代入椭圆：\(3x^{2}+4mx+4m^{2}-12=0\)，设交点横坐标为 \(x_1,x_2\)，则
+
+\nopagebreak[4]
+\[
+x_1+x_2=-\frac{4m}{3},\qquad x_1x_2=\frac{4m^{2}-12}{3}.
+\]
+
+\Needspace{5\baselineskip}
+由 \(P,A,B\) 共线于 \(l'\)（方向向量 \((1,\tfrac12)\)，模 \(\tfrac{\sqrt5}{2}\)）：
+
+\nopagebreak[4]
+\[
+|PA||PB|=\frac{5}{4}\left|(x_1-x_P)(x_2-x_P)\right|
+=\frac{5}{4}\left|x_1x_2-x_P(x_1+x_2)+x_P^{2}\right|=\frac{5}{4}\cdot\frac{8m^{2}}{9}=\frac{10m^{2}}{9}.
+\]
+
+\Needspace{5\baselineskip}
+故 \(\dfrac{|PT|^{2}}{|PA||PB|}=\dfrac{8m^{2}/9}{10m^{2}/9}=\dfrac{4}{5}\)，与 \(m\) 无关。即存在常数
+
+\nopagebreak[4]
+\[
+\lambda=\frac{4}{5},
+\]
+
+使 \(|PT|^{2}=\lambda|PA|\cdot|PB|\) 对一切非退化的 \(l'\) 成立。
+
+\gkanswer{答案（1）：\(\dfrac{x^{2}}{6}+\dfrac{y^{2}}{3}=1\)，\(T(2,1)\)。}
+
+\gkanswer{答案（2）：\(\lambda=\dfrac{4}{5}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+设函数 \(f(x)=ax^{2}-a-\ln x\)，其中 \(a\in\mathbf{R}\)。
+
+（1） 讨论 \(f(x)\) 的单调性；
+
+（2） 确定 \(a\) 的所有可能取值，使得 \(f(x)>\dfrac{1}{x}-\mathrm{e}^{1-x}\) 在区间 \((1,+\infty)\) 内恒成立（\(\mathrm{e}=2.718\cdots\) 为自然对数的底数）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+定义域 \(x>0\)，\(f'(x)=2ax-\dfrac{1}{x}=\dfrac{2ax^{2}-1}{x}\)。
+
+\gksubpart{(1)}
+
+当 \(a\leqslant0\) 时，\(2ax^{2}-1<0\) 对一切 \(x>0\) 成立，\(f\) 在 \((0,+\infty)\) 上单调递减。
+
+当 \(a>0\) 时，令 \(f'(x)=0\) 得唯一驻点 \(x_0=\dfrac{1}{\sqrt{2a}}\)：\(f\) 在 \(\left(0,\dfrac{1}{\sqrt{2a}}\right)\) 上单调递减，在 \(\left(\dfrac{1}{\sqrt{2a}},+\infty\right)\) 上单调递增。
+
+\Needspace{26\baselineskip}
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+记 \(g(x)=f(x)-\left(\dfrac{1}{x}-\mathrm e^{1-x}\right)=ax^{2}-a-\ln x-\dfrac{1}{x}+\mathrm e^{1-x}\)（\(x>1\)），则 \(g(1)=0\)，且
+
+\nopagebreak[4]
+\[
+g'(x)=2ax-\frac{1}{x}+\frac{1}{x^{2}}-\mathrm e^{1-x},\qquad g'(1)=2a-1.
+\]
+
+\textbf{必要性}：若 \(a<\dfrac{1}{2}\)，则 \(g'(1)<0\)，由连续性存在 \(\delta>0\) 使 \(g'(x)<0\) 于 \((1,1+\delta)\)，于是 \(g(x)<g(1)=0\)，恒成立不满足。故必须 \(a\geqslant\dfrac{1}{2}\)。
+
+\Needspace{5\baselineskip}
+\textbf{充分性}：设 \(p(x)=\dfrac{x^{2}-1}{2}-\ln x-\dfrac{1}{x}+\mathrm e^{1-x}\)（\(x>1\)）。由 \(a\geqslant\dfrac{1}{2}\) 及 \(x^{2}-1>0\)，有
+
+\nopagebreak[4]
+\[
+g(x)=\left(a-\frac{1}{2}\right)(x^{2}-1)+p(x)\geqslant p(x).
+\]
+
+\Needspace{5\baselineskip}
+而 \(p(1)=p'(1)=0\) 且
+
+\nopagebreak[4]
+\[
+p''(x)=1+\frac{1}{x^{2}}-\frac{2}{x^{3}}+\mathrm e^{1-x}>0\quad(x>1)
+\]
+
+（因 \(x^{3}+x-2>0\) 于 \(x>1\)，故 \(1+\dfrac{1}{x^{2}}-\dfrac{2}{x^{3}}=\dfrac{x^{3}+x-2}{x^{3}}>0\)）。于是 \(p'\) 在 \((1,+\infty)\) 上递增且 \(p'(1)=0\)，得 \(p'(x)>0\)；进而 \(p\) 递增且 \(p(1)=0\)，得 \(p(x)>0\)。故 \(g(x)\geqslant p(x)>0\)，恒成立。
+
+\Needspace{5\baselineskip}
+由必要性、充分性及 \(a=\dfrac{1}{2}\) 时严格成立（\(1/2\) 取得到），得
+
+\nopagebreak[4]
+\[
+a\in\left[\dfrac{1}{2},+\infty\right).
+\]
+
+\gkanswer{答案（1）：\(a\leqslant0\) 时在 \((0,+\infty)\) 上单调递减；\(a>0\) 时在 \((0,\dfrac{1}{\sqrt{2a}})\) 上单调递减、在 \((\dfrac{1}{\sqrt{2a}},+\infty)\) 上单调递增。}
+
+\gkanswer{答案（2）：\(a\in\left[\dfrac{1}{2},+\infty\right)\)（左端闭）。}
+
+\end{answer}

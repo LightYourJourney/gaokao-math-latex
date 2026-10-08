@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1.1,>=Stealth,every node/.style={font=\small,inner sep=2pt}]
+\draw[->] (-1.6,0)--(1.6,0) node[right] {$x$};
+\draw[->] (0,-.55)--(0,2.6) node[above] {$y$};
+\draw (-1,0)--(-1,2)--(1,2)--(1,0);
+\draw[domain=0:2,samples=80,smooth,variable=\t] plot ({\t*\t/4},{\t});
+\fill (.25,1) circle (1pt) node[right] {$M$};
+\node[below left] at (0,0) {$O$}; \node[below] at (-1,0) {$E$};\node[below] at (1,0) {$F$};
+\node[above left] at (-1,2) {$H$};\node[above right] at (1,2) {$G$};
+\node at (-.55,1.25) {$S_1$};\node at (.65,.65) {$S_2$};
+\end{tikzpicture}

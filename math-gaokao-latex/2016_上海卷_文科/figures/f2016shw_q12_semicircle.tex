@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=1.25,>=Stealth,every node/.style={font=\small,inner sep=2pt}]
+\coordinate (O) at (0,0); \coordinate (A) at (1,0); \coordinate (B) at (0,-1); \coordinate (P) at (135:1);
+\draw[->] (-1.4,0)--(1.45,0) node[right] {$x$};
+\draw[->] (0,-1.45)--(0,1.45) node[above] {$y$};
+\draw (1,0) arc[start angle=0,end angle=180,radius=1];
+\draw[->] (O)--(P); \draw[->] (B)--(A);
+\node[below left] at (O) {$O$}; \node[below right] at (A) {$A$}; \node[below left] at (B) {$B$}; \node[above left] at (P) {$P$};
+\end{tikzpicture}

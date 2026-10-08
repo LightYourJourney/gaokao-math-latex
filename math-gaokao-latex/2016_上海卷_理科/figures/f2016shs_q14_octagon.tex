@@ -1,0 +1,7 @@
+\begin{tikzpicture}[scale=1.25,>=Stealth,every node/.style={font=\small,inner sep=2pt}]
+\draw[->] (-1.45,0)--(1.45,0) node[right] {$x$};
+\draw[->] (0,-1.35)--(0,1.5) node[above] {$y$};
+\draw (0:1)--(45:1)--(90:1)--(135:1)--(180:1)--(225:1)--(270:1)--(315:1)--cycle;
+\foreach \a/\n/\pos in {0/1/above right,45/2/above right,90/3/above right,135/4/above left,180/5/above left,225/6/below left,270/7/below left,315/8/below right}{\fill (\a:1) circle (1pt) node[\pos] {$A_{\n}$};}
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}
