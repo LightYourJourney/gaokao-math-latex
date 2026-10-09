@@ -1126,6 +1126,14 @@
         "gk-2016-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b02",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-jiangsu"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -1135,7 +1143,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7e75cbb0-b060-4972-80b5-75340deac5e4",
+  "last_transaction_id": "61a2d0b1-054a-4251-939a-916fad5f7650",
   "papers": [
     {
       "blocked_from": null,
@@ -17832,9 +17840,83 @@
       "title": "2016 年·春季上海卷",
       "track": "none",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q04_pseudocode.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q17_road.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q18_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q21a_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_江苏卷/figures/f2015js_q22_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_js",
+        "id": "gk-2015-regular-jiangsu",
+        "note": "批次 phase3-b02；固定原卷印刷页 959–960；江苏卷（数学 I 文理同卷、附加题理科加考；源内不印文理标记与分值）；固定源仅含题面，答案解析独立推导（非官方答案，等级 D）。结构 14+6+3=23 题，第 21 题为四选二（【A】–【D】四个选做题任选两题）；源内 21–23 段前无节标题，附加题段归属与 2016 江苏卷同例。**源为 LaTeX（XeLaTeX＋ctex）产物**：全矢量、零嵌入位图、文本层零 PUA、数学符号带正确 Unicode 映射；全卷唯一的源内缺失符号是第 16 题(1) 的「∥」（矢量绘制，已照源补出），第 13 题绝对值竖线为两片拼合，其余大定界符为 CMEX10 单体字形；向量为粗斜体（源内风格，写 \\boldsymbol）。第 4 题为全库首例「代码框」图元（带边框表格式伪代码，框 82.26×106.64 pt、7 行文本照录）；第 16 题直三棱柱为排版源值精确作图（D 为 AB₁ 中点、E 为对角线交点均数值复核）、第 17 题山区公路为精确数学作图（曲线 y=1000/x² 按 1 cm=10 km 绘制、切线过 (0,30km)/(15km,0) 斜率 −2 精确、M/N 为文本实心点）、第 21 题【A】外接圆与第 22 题四棱锥为精确作图（后者为斜二测：深度轴 135°、压缩 0.501）；第 18 题椭圆图源内三处示意性偏差（F 标签未画真焦点偏 11.16 pt、准线取圆整值 2.7 cm 偏 3.64 pt、垂直平分线与弦夹角 91.15°），均照源复刻不据题设修正（该题两问皆解析求解，不依赖图形比例）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-jiangsu",
+      "production_state": "compiled",
+      "project_dir": "2015_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_江苏_含解析.md",
+        "questions": "2015/2015_数学真题_江苏_试题.md",
+        "solution_body": "2015/2015_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-b940baa9dd8774cad81f6437822618e3d9dc33f0bdeef169f41886a07c1ea838"
+      ],
+      "title": "2015 年·江苏卷",
+      "track": "none",
+      "year": 2015
     }
   ],
-  "revision": 3544,
+  "revision": 3548,
   "schema_version": 1,
   "sources": [
     {
@@ -33283,8 +33365,8 @@
       "exam_type": "regular",
       "git_blob_oid": "64eaed197a09c19ea01c5fb917df702f7478bfc5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015江苏.pdf",
       "regions": [],
       "source_id": "src-b940baa9dd8774cad81f6437822618e3d9dc33f0bdeef169f41886a07c1ea838",

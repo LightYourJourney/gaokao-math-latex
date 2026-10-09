@@ -1,0 +1,34 @@
+% 第 17 题山区公路图：按固定源 PDF 内容流实测与排版源值复刻（1 bp → 0.03515 cm）。
+% 原点取两轴交点 O（源页 (1056.49, 472.58) pdf 坐标），y 向上。
+% 轴：横轴 l₂ 自 x=−14.18（负向过伸 0.5 cm）至箭头尖点 +85.04；纵轴 l₁ 自 y=−14.18 至 +127.56；箭头为填充三角（3.98×2.99），照源。
+% 曲线按题设函数 y=1000/x² 精确绘制：比例尺 1 cm = 10 km（源为排版精确作图，M=(5,40)km、N=(20,2.5)km 为曲线端点，与实测端点互差 ≤0.004 pt）。
+% 切线过 (0,30 km)、(15 km,0)（斜率 −2 精确），切点 P=(10,10)km；M、N 为文本实心点（U+2022 CMSY10，直径 2.52 pt）。
+% 「山区」为竖排两字（源内分置，照录）。
+\begin{tikzpicture}[line cap=round,line join=round,font=\small,x=0.03515cm,y=0.03515cm]
+% ===== 坐标轴（实线照源：横轴负向过伸、纵轴负向过伸各 14.18）=====
+\draw (-14.18,0)--(81.46,0);   % 横轴 l₂（线段止于 1137.95，箭头前收笔）
+\draw (0,-14.18)--(0,123.98);  % 纵轴 l₁（线段止于 596.56）
+% ===== 轴箭头（填充三角，照源：长 3.98、半宽 1.495）=====
+\fill (85.04,0)--(81.055,1.495)--(81.055,-1.495)--cycle;      % x 轴箭头（顶点 1141.53）
+\fill (0,127.56)--(-1.495,123.575)--(1.495,123.575)--cycle;   % y 轴箭头（顶点 600.14）
+% ===== 曲线 C：y=1000/x²（x∈[5,20] km），线宽 0.8（源为其余图元的 2 倍）=====
+\draw[line width=0.8pt,domain=5:20,samples=200] plot ({2.83465*\x},{2834.65/(\x*\x)});
+% ===== 切线 l：自 y 轴 (0,30 km) 至 x 轴 (15 km,0) =====
+\draw (0,85.0395)--(42.5198,0);
+% ===== M、N 实心点（照源字形 U+2022，直径 2.52）=====
+\fill (14.1732,113.386) circle (1.26pt);   % M
+\fill (56.693,7.0866) circle (1.26pt);  % N
+% ===== 标注（照源字框中心，显式坐标；「山区」竖排照录）=====
+\node[anchor=center,inner sep=0] at (-6.655,128.95) {\(y\)};
+\node[anchor=center,inner sep=0] at (-8.22,107.05) {\(l_{1}\)};
+\node[anchor=center,inner sep=0] at (13.6,120.405) {\(M\)};
+\node[anchor=center,inner sep=0] at (8.525,91.96) {\(C\)};
+\node[anchor=center,inner sep=0] at (28.35,85.58) {山};
+\node[anchor=center,inner sep=0] at (42.52,28.92) {区};
+\node[anchor=center,inner sep=0] at (17.645,33.735) {\(l\)};
+\node[anchor=center,inner sep=0] at (22.69,22.45) {\(P\)};
+\node[anchor=center,inner sep=0] at (64.095,6.12) {\(N\)};
+\node[anchor=center,inner sep=0] at (85.04,-5.6) {\(x\)};
+\node[anchor=center,inner sep=0] at (-5.085,-5.9) {\(O\)};
+\node[anchor=center,inner sep=0] at (19.59,-8.655) {\(l_{2}\)};
+\end{tikzpicture}
