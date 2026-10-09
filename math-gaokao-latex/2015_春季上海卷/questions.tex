@@ -1,0 +1,338 @@
+% questions.tex —— 2015 年·春季上海卷 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_春季上海_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 全 6 页逐题核对（p1–2：填空 1–12、选择 13–24；p3–4：解答 25–29；p5–6：第Ⅱ卷附加题）。原卷为 \textbf{A4 单栏}，\textbf{全卷无印刷页码}（6 页页脚均空白）。卷内文案为\textbf{两考合一}体制：第Ⅰ卷＝学业水平考段（29 题，满分 120 分；只按三个大题分节印分值，不印考试时间与整卷题数），第Ⅱ卷为附加题段（7 题，满分 30 分，40 分钟；卷首印「考生注意」四条）。\textbf{源印分值一律照录}——第Ⅰ卷三个节头逐字为「（每小题 3 分，满分 36 分）」「（每小题 3 分，满分 36 分）」「（共 5 大题，满分 48 分）」，解答题「（本题满分 N 分）」与 28/29 的两级小问分值均逐字保留；第Ⅱ卷三个节头「（本大题满分 9 分）」「（本大题满分 9 分）」「（本大题满分 12 分）」。\textbf{第Ⅱ卷源内独立编号 1–7}（选择 1–3、填空 4–6、解答题 1 道且\textbf{源内不印题号、不印「本题满分」行}），本文件按全卷连续编号 \textbf{30–36}（映射：源Ⅱ-N 对应第 29+N 题；源解答题按位次编为第 36 题），全部答案材料以连续编号为准。固定源\textbf{不附参考答案}（对照 2016 同城卷附「参考答案（简略版）」）——答案解析全由本库独立推导（等级 D）。
+
+\textbf{源版式与文本层编码（\texttt{pdffonts} 与逐 CID 解码实测）}：源为 \textbf{Word＋MathType 系产物}，嵌入 \textbf{9 个字体} \texttt{CIDFont+F2}–\texttt{CIDFont+F10}（CID TrueType、Identity-H、已嵌入未子集化、均带 ToUnicode；字体名已剥离，读不到原字体名；\textbf{页与页之间资源名会重映射，逐页解析}）。数学符号在文本层的覆盖\textbf{不完整}，三类并存：① 私用区（PUA）约 38 个 CID 映射到 U+F028–U+F0F8（如 \texttt{F03D}＝\texttt{=}、\texttt{F02D}＝\texttt{$-$}、\texttt{F055}＝\texttt{$\cup$}、\texttt{F0F0}＝补集号、\texttt{F072}／\texttt{F075}＝向量箭头尖与横杠）；② 有字形但无 ToUnicode（复制丢字）；③ 分式横线、根号、大定界符延展件为矢量路径绘制。\textbf{故本文件不依赖文本层还原数学式，一律照页面图像录入并对上述符号逐处补出。} 转写约定（按全库统一，逐条登记）：① \textbf{不等号}源为水平横杠形（U+2265/U+2264），写 \(\geqslant\)／\(\leqslant\)；② \textbf{实数集与正整数集}源为粗正体，写 \(\mathbf{R}\)／\(\mathbf{N}^{*}\)；③ \textbf{虚数单位}源为正体，写 \(\mathrm{i}\)；④ \textbf{向量箭头}为「横杠＋箭头尖」两件合成，照源以 \(\overrightarrow{AB}\)、\(\vec{a}\) 形式补出；⑤ \textbf{真子集号}为「\texttt{$\subset$}＋\texttt{$\neq$}叠印」的合成字形，写 \(\subsetneq\)；⑥ 行内分式一律排作显示风格（如 \(\dfrac{a}{b}\)，与源内堆叠分式同形）；⑦ 第 8 题的增广矩阵与方程组为\textbf{行内式}且含 \texttt{\&}，按本库纪律以 \texttt{$...$} 包裹。
+
+\textbf{标点约定（实测）}：第Ⅰ卷（p1–4）句末源内为\textbf{半角句点}（Times 系），第Ⅱ卷（p5–6）为全角「．」（p5 计 11 处、p6 计 5 处）、「考生注意」四条用中文句号——源内前后册不统一，本文件按全库约定把题号与句末一律写作全角「．」。正文逗号、分号、括号源内均为全角；\textbf{数学环境内部的半角逗号照源保留}（第 7、23 题）。\textbf{选择题选项标号第Ⅰ卷源内为半角「A.」}（非 2016 卷的全角「（A）」），照源；\textbf{第Ⅱ卷选项标号与答案空括号源内宽窄混用}（(A)/(C) 半角、（B）/（D）全角等），亦\textbf{逐处照源}不作归一。
+
+\textbf{存疑与补录登记}（源内异常一律照录；完整清单见工作档 \texttt{page-map.md} §7）：① \textbf{第 11 题源内缺数字集}——原印「用数字组成无重复数字的三位数」（1200 dpi 核验：源文确无数字，非提取丢失），本文件据\textbf{可核验公开资料}（2015 上海春季高考数学试卷公开文本，多来源一致）\textbf{补录为「用数字 \(1,2,3,4,5\) 组成无重复数字的三位数」}，并登记于此；② 第 1 题「若集合则 \(\complement_{U}A=\)\gkblank{}」中「若集合则」后直接接数学式系源内排印如此（1200 dpi 亲验），照录；③ 第Ⅱ卷「一、选择题」节头自称「本大题共有 4 题」而实际印 3 题，\textbf{逐字照录}；④ 同节「考生时间 40 分钟」「贴在制定位置上」照源（疑应为「考试时间」「指定」）；⑤ 第 28 题题干末「\(B_{2}(0,b)\)」源内无句末标点，照录；⑥ 第 22 题选项 D 源内折行于「有最」与「大值」之间，本文件合为一行。
+\end{gktip}
+
+\gkpart{第Ⅰ卷}
+
+\gkpart{一、填空题}
+
+（每小题 3 分，满分 36 分）
+
+\begin{question}
+\gkti{1}设全集为 \(U=\{1,2,3\}\)，\(A=\{1,2\}\)，若集合则 \(\complement_{U}A=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{2}计算：\(\dfrac{1+\mathrm{i}}{\mathrm{i}}=\)\gkblank{}（其中 \(\mathrm{i}\) 为虚数单位）．
+
+\end{question}
+\begin{question}
+\gkti{3}函数 \(y=\sin\left(2x+\dfrac{\pi}{4}\right)\) 的最小正周期为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{4}计算：\(\lim\limits_{n\to\infty}\dfrac{n^{2}-3}{2n^{2}+n}=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{5}以 \((2,6)\) 为圆心，1 为半径的圆的标准方程为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{6}已知向量 \(\vec{a}=(1,3)\)，\(\vec{b}=(m,-1)\)，若 \(\vec{a}\perp\vec{b}\)，则 \(m=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{7}函数 \(y=x^{2}-2x+4,x\in[0,2]\) 的值域为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{8}若线性方程组的增广矩阵为 $\begin{pmatrix} a & 0 & 2\\ 0 & 1 & b \end{pmatrix}$，解为 $\begin{cases} x=2\\ y=1 \end{cases}$，则 \(a+b=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{9}方程 \(\lg(2x+1)+\lg x=1\) 的解集为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{10}在 \(\left(x+\dfrac{1}{x^{2}}\right)^{9}\) 的二项展开式中，常数项的值为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{11}用数字 \(1,2,3,4,5\) 组成无重复数字的三位数，其中奇数的个数为\gkblank{}（结果用数值表示）．
+
+\end{question}
+\begin{question}
+\gkti{12}已知点 \(A(1,0)\)，直线 \(l:x=-1\)，两个动圆均过点 \(A\) 且与 \(l\) 相切，其圆心分别为 \(C_{1}\)、\(C_{2}\)，若动点 \(M\) 满足 \(2\overrightarrow{C_{2}M}=\overrightarrow{C_{2}C_{1}}+\overrightarrow{C_{2}A}\)，则 \(M\) 的轨迹方程为\gkblank{}．
+
+\end{question}
+\gkpart{二、选择题}
+
+（每小题 3 分，满分 36 分）
+
+\begin{question}
+\gkti{13}若 \(a<0<b\)，则下列不等式恒成立的是（　）
+
+A. \(\dfrac{1}{a}>\dfrac{1}{b}\)
+
+B. \(-a>b\)
+
+C. \(a^{2}>b^{2}\)
+
+D. \(a^{3}<b^{3}\)
+
+\end{question}
+\begin{question}
+\gkti{14}函数 \(y=x^{2}(x\geqslant 1)\) 的反函数为（　）
+
+A. \(y=\sqrt{x}(x\geqslant 1)\)
+
+B. \(y=\sqrt{-x}(x\leqslant -1)\)
+
+C. \(y=\sqrt{x}(x\geqslant 0)\)
+
+D. \(y=\sqrt{-x}(x\leqslant 0)\)
+
+\end{question}
+\begin{question}
+\gkti{15}不等式 \(\dfrac{2-3x}{x-1}>0\) 的解集为（　）
+
+A. \(\left(-\infty,\dfrac{3}{4}\right)\)
+
+B. \(\left(-\infty,\dfrac{2}{3}\right)\)
+
+C. \(\left(-\infty,\dfrac{2}{3}\right)\cup(1,+\infty)\)
+
+D. \(\left(\dfrac{2}{3},1\right)\)
+
+\end{question}
+\begin{question}
+\gkti{16}下列函数中，是奇函数且在 \((0,+\infty)\) 上单调递增的为（　）
+
+A. \(y=x^{2}\)
+
+B. \(y=x^{\frac{1}{3}}\)
+
+C. \(y=x^{-1}\)
+
+D. \(y=x^{-\frac{1}{2}}\)
+
+\end{question}
+\begin{question}
+\gkti{17}直线 \(3x-4y-5=0\) 的倾斜角为（　）
+
+A. \(\arctan\dfrac{3}{4}\)
+
+B. \(\pi-\arctan\dfrac{3}{4}\)
+
+C. \(\arctan\dfrac{4}{3}\)
+
+D. \(\pi-\arctan\dfrac{4}{3}\)
+
+\end{question}
+\begin{question}
+\gkti{18}底面半径为 1，母线长为 2 的圆锥的体积为（　）
+
+A. \(2\pi\)
+
+B. \(\sqrt{3}\pi\)
+
+C. \(\dfrac{2\pi}{3}\)
+
+D. \(\dfrac{\sqrt{3}\pi}{3}\)
+
+\end{question}
+\begin{question}
+\gkti{19}以 \((-3,0)\) 和 \((3,0)\) 为焦点，长轴长为 8 的椭圆方程为（　）
+
+A. \(\dfrac{x^{2}}{16}+\dfrac{y^{2}}{25}=1\)
+
+B. \(\dfrac{x^{2}}{16}+\dfrac{y^{2}}{7}=1\)
+
+C. \(\dfrac{x^{2}}{25}+\dfrac{y^{2}}{16}=1\)
+
+D. \(\dfrac{x^{2}}{7}+\dfrac{y^{2}}{16}=1\)
+
+\end{question}
+\begin{question}
+\gkti{20}在复平面上，满足 \(|z-1|=|z+\mathrm{i}|\)（\(\mathrm{i}\) 为虚数单位）的复数 \(z\) 对应的点的轨迹为（　）
+
+A. 椭圆
+
+B. 圆
+
+C. 线段
+
+D. 直线
+
+\end{question}
+\begin{question}
+\gkti{21}若无穷等差数列 \(\{a_{n}\}\) 的首项 \(a_{1}>0\)，公差 \(d<0\)，\(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，则（　）
+
+A. \(S_{n}\) 单调递减
+
+B. \(S_{n}\) 单调递增
+
+C. \(S_{n}\) 有最大值
+
+D. \(S_{n}\) 有最小值
+
+\end{question}
+\begin{question}
+\gkti{22}已知 \(a>0\)，\(b>0\)，若 \(a+b=4\)，则（　）
+
+A. \(a^{2}+b^{2}\) 有最小值
+
+B. \(\sqrt{ab}\) 有最小值
+
+C. \(\dfrac{1}{a}+\dfrac{1}{b}\) 有最大值
+
+D. \(\dfrac{1}{\sqrt{a}+\sqrt{b}}\) 有最大值
+
+\end{question}
+\begin{question}
+\gkti{23}组合数 \(C_{n}^{m}+2C_{n}^{m-1}+C_{n}^{m-2}\left(n\geqslant m\geqslant 2,m,n\in\mathbf{N}^{*}\right)\) 恒等于（　）
+
+A. \(C_{n+2}^{m}\)
+
+B. \(C_{n+2}^{m+1}\)
+
+C. \(C_{n+1}^{m}\)
+
+D. \(C_{n+1}^{m+1}\)
+
+\end{question}
+\begin{question}
+\gkti{24}设集合 \(P_{1}=\{x\mid x^{2}+ax+1>0\}\)，\(P_{2}=\{x\mid x^{2}+ax+2>0\}\)，\(Q_{1}=\{x\mid x^{2}+x+b>0\}\)，\(Q_{2}=\{x\mid x^{2}+2x+b>0\}\) 其中 \(a,b\in\mathbf{R}\)，下列说法正确的是（　）
+
+A. 对任意 \(a\)，\(P_{1}\) 是 \(P_{2}\) 的子集；对任意的 \(b\)，\(Q_{1}\) 不是 \(Q_{2}\) 的子集
+
+B. 对任意 \(a\)，\(P_{1}\) 是 \(P_{2}\) 的子集；存在 \(b\)，使得 \(Q_{1}\) 是 \(Q_{2}\) 的子集
+
+C. 存在 \(a\)，使得 \(P_{1}\) 不是 \(P_{2}\) 的子集；对任意的 \(b\)，\(Q_{1}\) 不是 \(Q_{2}\) 的子集
+
+D. 存在 \(a\)，使得 \(P_{1}\) 不是 \(P_{2}\) 的子集；存在 \(b\)，使得 \(Q_{1}\) 是 \(Q_{2}\) 的子集
+
+\end{question}
+\gkpart{三、解答题}
+
+（共 5 大题，满分 48 分）
+
+\Needspace{0.4\textheight}
+\begin{question}
+\gkti{25}（本题满分 8 分）
+
+如图，在正四棱柱中 \(ABCD-A_{1}B_{1}C_{1}D_{1}\)，\(AB=1\)，\(D_{1}B\) 和平面 \(ABCD\) 所成的角的大小为 \(\arctan\dfrac{3\sqrt{2}}{4}\)，求该四棱柱的表面积．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015shc_q25_prism}\end{center}
+\nopagebreak[4]
+\end{question}
+\begin{question}
+\gkti{26}（本题满分 8 分）
+
+已知 \(a\) 为实数，函数 \(f(x)=\dfrac{x^{2}+ax+4}{x}\) 是奇函数，求 \(f(x)\) 在 \((0,+\infty)\) 上的最小值及取到最小值时所对应的 \(x\) 的值．
+
+\end{question}
+\begin{question}
+\gkti{27}（本题满分 8 分）
+
+某船在海平面 \(A\) 处测得灯塔 \(B\) 在北偏东 \(30^{\circ}\) 方向，与 \(A\) 相距 \(6.0\) 海里．船由 \(A\) 向正北方向航行 \(8.1\) 海里到达 \(C\) 处，这时灯塔 \(B\) 与船相距多少海里（精确到 \(0.1\) 海里）？\(B\) 在船的什么方向（精确到 \(1^{\circ}\)）？
+
+\end{question}
+\begin{question}
+\gkti{28}（本题满分 12 分）本题共有 2 个小题，第 1 小题满分 6 分，第 2 小题满分 6 分．
+
+已知点 \(F_{1}\)、\(F_{2}\) 依次为双曲线 \(C:\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\)（\(a,b>0\)）的左右焦点，\(|F_{1}F_{2}|=6\)，\(B_{1}(0,-b)\)，\(B_{2}(0,b)\)
+
+（1） 若 \(a=\sqrt{5}\)，以 \(\vec{d}=(3,-4)\) 为方向向量的直线 \(l\) 经过 \(B_{1}\)，求 \(F_{2}\) 到 \(l\) 的距离；
+
+（2） 若双曲线 \(C\) 上存在点 \(P\)，使得 \(\overrightarrow{PB_{1}}\cdot\overrightarrow{PB_{2}}=-2\)，求实数 \(b\) 的取值范围．
+
+\end{question}
+\begin{question}
+\gkti{29}（本题满分 12 分）本题共有 2 个小题，第 1 小题满分 4 分，第 2 小题满分 8 分．
+
+已知函数 \(f(x)=\left|2^{x-2}-2\right|\)（\(x\in\mathbf{R}\)）
+
+（1） 解不等式 \(f(x)<2\)；
+
+（2） 数列 \(\{a_{n}\}\) 满足 \(a_{n}=f(n)\)（\(n\in\mathbf{N}^{*}\)），\(S_{n}\) 为 \(\{a_{n}\}\) 的前 \(n\) 项和，对任意的 \(n\geqslant 4\)，不等式 \(S_{n}+\dfrac{1}{2}\geqslant ka_{n}\) 恒成立，求实数 \(k\) 的取值范围．
+
+\end{question}
+\gkpart{第Ⅱ卷（附加题）}
+
+\textbf{2015 年上海市普通高中学业水平考试 数学卷（附加题）}
+
+考生注意：
+
+1．本试卷 2 页，7 道试题，满分 30 分。考生时间 40 分钟。
+
+2．本考试分设试卷和答题纸。试卷包括三大题，第一大题为选择题，第二大题为填空题，第三大题为解答题。
+
+3．答卷前，考生务必在答题纸上填写姓名、报名号、考场号和座位号，并将核对后的条形码贴在制定位置上。
+
+4．作答必须涂或写在答题纸上，在试卷上作答一律不得分。第一大题的作答必须涂在答题纸上相应的区域，第二、第三大题的作答必须写在答题纸上与试卷题号对应的位置。
+
+\gkpart{一、选择题}
+
+（本大题满分 9 分）本大题共有 4 题，每题有且只有一个正确答案，考生应在答题纸的相应编号上，将代表答案的小方格涂黑，选对得 3 分，否则一律得 0 分．
+
+\begin{question}
+\gkti{30}对于集合 \(A\)、\(B\)，“\(A\neq B\)”是“\(A\cap B\subsetneq A\cup B\)”的(　)
+
+(A)充分非必要条件　（B）必要非充分条件
+
+(C)充要条件　（D）既非充分又非必要条件
+
+\end{question}
+\begin{question}
+\gkti{31}对于任意实数 \(a\)、\(b\)，\((a-b)^{2}\geqslant kab\) 均成立，则实数 \(k\) 的取值范围是（　）
+
+(A) \(\{-4,0\}\)　（B）\([-4,0]\)
+
+(C) \((-\infty,0]\)　（D）\((-\infty,-4]\cup[0,+\infty)\)
+
+\end{question}
+\begin{question}
+\gkti{32}已知数列 \(\{a_{n}\}\) 满足 \(a_{n}+a_{n+4}=a_{n+1}+a_{n+3}\)（\(n\in\mathbf{N}^{*}\)），那么（　）
+
+(A) \(\{a_{n}\}\) 是等差数列　（B）\(\{a_{2n-1}\}\) 是等差数列
+
+(C) \(\{a_{2n}\}\) 是等差数列　（D）\(\{a_{3n}\}\) 是等差数列
+
+\end{question}
+\gkpart{二、填空题}
+
+（本大题满分 9 分）本大题共有 3 小题，考生应在答题纸相应编号的空格内直接填写结果，每个空格填对得 3 分，否则一律得 0 分．
+
+\begin{question}
+\gkti{33}关于 \(x\) 的实系数一元二次方程 \(x^{2}+px+2=0\) 的两个虚数根为 \(z_{1}\)、\(z_{2}\)，若 \(z_{1}\)、\(z_{2}\) 在复平面上对应的点是经过原点的椭圆的两个焦点，则该椭圆的长轴长为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{34}已知圆心为 \(O\)，半径为 1 的圆上有三点 \(A\)、\(B\)、\(C\)，若 \(7\overrightarrow{OA}+5\overrightarrow{OB}+8\overrightarrow{OC}=\vec{0}\)，则 \(\left|\overrightarrow{BC}\right|=\)\gkblank{}．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{35}函数 \(f(x)\) 与 \(g(x)\) 的图像拼成如图所示的“Z”字形折线段 \(ABOCD\)，不含 \(A(0,1)\)，\(B(1,1)\)，\(O(0,0)\)，\(C(-1,-1)\)，\(D(0,-1)\) 五个点，若 \(f(x)\) 的图像关于原点对称的图形即为 \(g(x)\) 的图像，则其中一个函数的解析式可以为\gkblank{}．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015shc_q35_zigzag}\end{center}
+\nopagebreak[4]
+\end{question}
+\gkpart{三、解答题}
+
+（本大题满分 12 分）解答本题必须在答题纸相应编号的规定区域内写出必要的步骤．
+
+\begin{question}
+\gkti{36}
+
+对于函数 \(f(x)\)、\(g(x)\)，若存在函数 \(h(x)\)，使得 \(f(x)=g(x)\cdot h(x)\)，则称 \(f(x)\) 是 \(g(x)\) 的“\(h(x)\) 关联函数”。
+
+（1） 已知 \(f(x)=\sin x\)，\(g(x)=\cos x\)，是否存在定义域为 \(\mathbf{R}\) 的函数 \(h(x)\)，使得 \(f(x)\) 是 \(g(x)\) 的“\(h(x)\) 关联函数”？若存在，写出 \(h(x)\) 的解析式；若不存在，说明理由；
+
+（2） 已知函数 \(f(x)\)、\(g(x)\) 的定义域为 \([1,+\infty)\)，当 \(x\in[n,n+1)\)，（\(n\in\mathbf{N}^{*}\)）时，\(f(x)=2^{n-1}\sin\dfrac{x}{n}-1\)，若存在函数 \(h_{1}(x)\) 及 \(h_{2}(x)\)，使得 \(f(x)\) 是 \(g(x)\) 的“\(h_{1}(x)\) 关联函数”，且 \(g(x)\) 是 \(f(x)\) 的“\(h_{2}(x)\) 关联函数”，求方程 \(g(x)=0\) 的解．
+
+\end{question}
