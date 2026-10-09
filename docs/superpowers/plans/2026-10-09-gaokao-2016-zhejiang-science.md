@@ -66,10 +66,13 @@
 ### Task 4 — Build, review, and close
 
 - [x] 正式构建（构建前 grep `\%` 自检）→ **主会话先自查全部图**（含 400 dpi 连通域与源↔成品保真对照）→ 派审查代理（≤8 页/代理）。
-- [ ] 修复轮（如有）→ 重建 → 像素差分 → 变化页二轮复审 → 合并。
-- [ ] finalize → 报告刷新（带 --manifest/--issues，manifest_csv 在仓库根跑）→ 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+- [x] 修复轮（如有）→ 重建 → 像素差分 → 变化页二轮复审 → 合并。
+- [x] finalize → 报告刷新（带 --manifest/--issues，manifest_csv 在仓库根跑）→ 全量测试 → 清理中间件 → 显式路径提交（不 push）。
 
 **Task 4 首建（2026-10-09）：** 四版 5/19/7/15=**46 页**、零失败；Overfull 修复后归零、四日志零 Missing character。审查 7 段已派（试题 5、简答 7、解析 19 三段、印刷 15 两段；attempt `1a93f4a6`，`prepare-batch` 已换绑；prompt 键名钉死 `"check"`、附 b16 留档口径与 Q16 双解提示防误报）。
+
+**Task 4 修复轮与 finalize（2026-10-09）：** 7 段审查回报后唯一实缺陷＝**Q4 答案行缺绿框（全项目首例）**：答案值 `\mathbf{N}^{*}` 的裸 `*` 使 `md2tex.ANSLINE`（`^\*\*([^*]*答案[^*]*)\*\*$`）失配、回落 `\textbf` 直排（全卷 20 处绿框仅此 1 处白底，两代理 400 dpi 独立发现）。修法：答案值改 `\mathbf{N}^{\ast}`（同字形、无裸 `*`）。全链路重走：solution check（拦截）→ extract-batch → generate --write/check → 构建被拒（provenance stale）→ fill_provenance + import-batch（rev 3503）→ 重建成功（**attempt `b7a52e51`**）→ `prepare-batch` 换绑 4 工作项 → renders_v2 差分 vs renders_v1：**仅 2 页变化**（解析版-07 bbox=(129,1203,646,1249) 6792px；印刷版-05 bbox=(94,924,550,967) 5242px，均 Q4 答案行、无分页位移）→ 修复轮复审 2 页 × 8 项＝**16/16（14 pass + 2 n/a、0 fail）**：两版 Q4 框填充色 (240,255,240)、边框核心色 (30,109,30) 与同页 Q3 框逐字节一致，全卷两版共 **48 绿框填充色全域统一**；上标 ∗ 与题面 `\mathbf{N}^{*}` 字形同形；`.log` Missing/Overfull/Underfull 全零。附带更正两处上游文档口径（Q6 标签实为 17 组非 16、Q11 侧视图缺格实为右上非右下；本方 TikZ 建造本身正确，仅注释对齐）。
+**finalize 收尾：** merge_final 46/46 全 pass → `finalize-batch` **FINALIZED**（第 10 个；审查门禁 FINALIZED 10 / INVALID_OR_STALE 111 为 poppler 26.10 系统性既存）→ 报告 render/check 全绿 → `manifest.csv` 775 行 → unittest 861 项唯一失败为基线（312 条失配均为旧批 poppler 回执，**b21 不在列表**，`report["papers"]=255` 计数断言通过）→ 清理 build 中间件 → 显式路径提交（不 push；b14 上海文理由另一会话在途）。
 
 ## 已知口径与坑（b11–b20 沉淀）
 
