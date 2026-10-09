@@ -1118,6 +1118,14 @@
         "gk-2016-regular-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b01",
+      "issues": [],
+      "paper_ids": [
+        "gk-2016-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1127,7 +1135,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bdb3ece4-f9c2-46cc-9d9d-7b79ad16b1b8",
+  "last_transaction_id": "7e75cbb0-b060-4972-80b5-75340deac5e4",
   "papers": [
     {
       "blocked_from": null,
@@ -17743,9 +17751,90 @@
       "title": "2016 年·江苏卷",
       "track": "none",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2016_春季上海卷/figures/f2016shc_q16_four_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_春季上海卷/figures/f2016shc_q25_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_春季上海卷/figures/f2016shc_q27_headlight.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_春季上海卷/figures/f2016shc_q32_polyline.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2016_spring_shanghai",
+        "id": "gk-2016-spring-shanghai",
+        "note": "批次 phase3-b01；两考合一体制（春季高考＝学业水平考＋附加题）：第Ⅰ卷 29 题 120 分、附加题 7 题 30 分、全卷 36 题 150 分（源首页「考生注意」自述）。**固定源附官方参考答案（简略版，p8–9）——答案证据等级 A（全库首例）**：最终答案逐字转录自源答案页并与盲解（仅题面页）全卷互证。**第Ⅱ卷源内独立编号 1–7，本库按全卷连续编号 30–36**（映射登记于试题/答案要点与 provenance 证据文本）。源为 Word＋MathType 产物：数学符号在文本层 PUA 区（30 个映射已解码，无「符号缺失」问题）；向量上箭头为独立矢量字符（唯一补出类）；源内「第 I/II 卷」为拉丁 I/II。源图 4 处均为嵌入位图（非矢量，152–600 ppi），图源按 400/600 dpi 实测重绘：第 16 题四联幂函数图为全库首例「选项内嵌图」（选项行无文字，(A)–(D) 标注并入图源）；第 25 题正三棱柱（侧棱/底边比 1.335≈4/3、C 退深 45°）、第 27 题前灯抛物面（按 y²=14.4x 精确作图 + 透视椭圆）与第 32 题折线 ABCDE（按题面坐标等比 + 原点/顶点实心点，源为红点、本项目黑白复刻）均逐项与源对照。",
+        "pages_q": [
+          1,
+          7
+        ],
+        "pages_s": [
+          8,
+          9
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            25,
+            29
+          ],
+          "选择题": [
+            13,
+            24
+          ],
+          "附加题": [
+            30,
+            36
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1012",
+        "ISSUE-1013",
+        "ISSUE-1014",
+        "ISSUE-1015"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2016-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2016_春季上海卷",
+      "question_count": 36,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2016/2016_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2016/2016_数学真题_春季上海_含解析.md",
+        "questions": "2016/2016_数学真题_春季上海_试题.md",
+        "solution_body": "2016/2016_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-2fc77df37e5e6bd06131250caaf121444b7d940e9a4869e4edf53a281f683d98"
+      ],
+      "title": "2016 年·春季上海卷",
+      "track": "none",
+      "year": 2016
     }
   ],
-  "revision": 3529,
+  "revision": 3544,
   "schema_version": 1,
   "sources": [
     {
@@ -18482,8 +18571,8 @@
       "exam_type": "spring",
       "git_blob_oid": "07bad4cf8aff07aec3d9e6c82ce143d14a62f5e9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2016-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2016春季上海.pdf",
       "regions": [],
       "source_id": "src-2fc77df37e5e6bd06131250caaf121444b7d940e9a4869e4edf53a281f683d98",
