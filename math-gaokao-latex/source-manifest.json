@@ -1110,6 +1110,14 @@
         "gk-2016-regular-zhejiang-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b00",
+      "issues": [],
+      "paper_ids": [
+        "gk-2016-regular-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1119,7 +1127,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c0101dcf-bf8e-43c5-88f3-3681d87d5551",
+  "last_transaction_id": "bdb3ece4-f9c2-46cc-9d9d-7b79ad16b1b8",
   "papers": [
     {
       "blocked_from": null,
@@ -17653,9 +17661,91 @@
       "title": "2016 年·浙江卷·文科",
       "track": "arts",
       "year": 2016
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q06_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q10_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q13_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q17_warehouse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q18_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q21a_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2016_江苏卷/figures/f2016js_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2016_js",
+        "id": "gk-2016-regular-jiangsu",
+        "note": "批次 phase3-b00；固定原卷印刷页 997–998；江苏卷（数学 I 文理同卷、附加题理科加考；源内不印文理标记与分值）；固定源仅含题面，答案解析独立推导（非官方答案，等级 D）。结构 14+6+3=23 题，第 21 题为四选二（【A】–【D】四个选做题任选两题）；源内 21–23 段前无节标题，附加题段归属依据见工作档登记。第 11 题两条大绝对值竖线与第 16 题(1) 平行号为矢量绘制、文本层缺失（已照源补出）；第 6 题流程图为项目首例程序框图（支路标签拉丁 N/Y）；第 13 题图中 A/E/F 三处箭头与线段留白、第 16 题图内 F 非 B₁B 中点、第 21 题【A】直角为示意作图，均照源复刻；第 10、18、22 题圆锥曲线为按题设精确作图。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2016-regular-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2016_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2016/2016_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2016/2016_数学真题_江苏_含解析.md",
+        "questions": "2016/2016_数学真题_江苏_试题.md",
+        "solution_body": "2016/2016_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-d2c103b570e8faab57b0bc290da2577c3a94551adad4492e54b6f816caf40495"
+      ],
+      "title": "2016 年·江苏卷",
+      "track": "none",
+      "year": 2016
     }
   ],
-  "revision": 3517,
+  "revision": 3529,
   "schema_version": 1,
   "sources": [
     {
@@ -33800,8 +33890,8 @@
       "exam_type": "regular",
       "git_blob_oid": "da56945c963b66b4ba364c47bc36bc19affcfdf7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2016-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2016江苏.pdf",
       "regions": [],
       "source_id": "src-d2c103b570e8faab57b0bc290da2577c3a94551adad4492e54b6f816caf40495",

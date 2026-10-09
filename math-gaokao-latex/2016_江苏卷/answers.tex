@@ -1,0 +1,660 @@
+% answers.tex —— 2016 年·江苏卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2016/2016_数学真题_江苏_试题.md + 2016/2016_数学真题_江苏_解析正文.md + 2016/2016_数学真题_江苏_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定原卷不附官方答案。以下为独立推导并经异人盲核对照的解析（非官方答案，等级 D）。第 10、18、22 题图为按题设精确作图（已按源图矢量数据逐点复核）；第 13、16、17、21 题图按源内示意照录。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 \(A=\{-1,2,3,6\}\)，\(B=\{x\mid-2<x<3\}\)，则 \(A\cap B=\)\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(B=\{x\mid-2<x<3\}\)，其中整数元素为 \(-1\)，\(0\)，\(1\)，\(2\)，与 \(A=\{-1,2,3,6\}\) 求交得 \(A\cap B=\{-1,2\}\)。
+
+\gkanswer{答案：\(\{-1,2\}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+复数 \(z=(1+2\mathrm{i})(3-\mathrm{i})\)，其中 \(\mathrm{i}\) 为虚数单位，则 \(z\) 的实部是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\(z=(1+2\mathrm{i})(3-\mathrm{i})=3-\mathrm{i}+6\mathrm{i}-2\mathrm{i}^{2}=5+5\mathrm{i}\)，故实部为 \(5\)。
+
+\gkanswer{答案：\(5\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+在平面直角坐标系 \(xOy\) 中，双曲线 \(\dfrac{x^{2}}{7}-\dfrac{y^{2}}{3}=1\) 的焦距是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线中 \(a^{2}=7\)，\(b^{2}=3\)，\(c^{2}=a^{2}+b^{2}=10\)，故焦距 \(2c=2\sqrt{10}\)。
+
+\gkanswer{答案：\(2\sqrt{10}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+已知一组数据 4.7，4.8，5.1，5.4，5.5，则该组数据的方差是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+数据的平均数为 \(\dfrac{4.7+4.8+5.1+5.4+5.5}{5}=5.1\)，方差为
+\nopagebreak[4]
+\[
+\frac{1}{5}\left[(0.4)^{2}+(0.3)^{2}+0^{2}+(0.3)^{2}+(0.4)^{2}\right]=\frac{0.5}{5}=0.1.
+\]
+
+\gkanswer{答案：\(0.1\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+函数 \(y=\sqrt{3-2x-x^{2}}\) 的定义域是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(3-2x-x^{2}\geqslant 0\) 得 \(x^{2}+2x-3\leqslant 0\)，即 \((x+3)(x-1)\leqslant 0\)，故定义域为 \([-3,1]\)。
+
+\gkanswer{答案：\([-3,1]\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+如图是一个算法的流程图，则输出 \(a\) 的值是\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q06_flowchart}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按框图执行：\(a=1\)，\(b=9\)。第一次判断 \(a>b\) 不成立，\(a=5\)，\(b=7\)；第二次判断 \(a>b\) 不成立，\(a=9\)，\(b=5\)；第三次判断 \(a>b\) 成立，输出 \(a=9\)。
+
+\gkanswer{答案：\(9\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+将一个质地均匀的骰子（一种各个面上分别标有 1，2，3，4，5，6 六个点的正方体玩具）先后抛掷 2 次，则出现向上的点数之和小于 10 的概率是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两次抛掷共有 \(36\) 个等可能结果；点数之和不少于 \(10\) 的结果为 \((4,6)\)，\((5,5)\)，\((5,6)\)，\((6,4)\)，\((6,5)\)，\((6,6)\) 共 \(6\) 个，故所求概率为 \(\dfrac{36-6}{36}=\dfrac{5}{6}\)。
+
+\gkanswer{答案：\(\dfrac{5}{6}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+已知 \(\{a_{n}\}\) 是等差数列，\(S_{n}\) 是其前 \(n\) 项和。若 \(a_{1}+a_{2}^{2}=-3\)，\(S_{5}=10\)，则 \(a_{9}\) 的值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设首项为 \(a_{1}\)，公差为 \(d\)。由 \(S_{5}=5a_{1}+10d=10\) 得 \(a_{1}=2-2d\)；代入 \(a_{1}+a_{2}^{2}=-3\)：
+\nopagebreak[4]
+\[
+(2-2d)+(2-d)^{2}=-3\ \Longrightarrow\ d^{2}-6d+9=0\ \Longrightarrow\ d=3,
+\]
+故 \(a_{1}=-4\)，\(a_{9}=a_{1}+8d=-4+24=20\)。
+
+\gkanswer{答案：\(20\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+定义在区间 \([0,3\pi]\) 上的函数 \(y=\sin 2x\) 的图象与 \(y=\cos x\) 的图象的交点个数是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(\sin 2x=\cos x\) 得 \(\cos x(2\sin x-1)=0\)。在 \([0,3\pi]\) 上，\(\cos x=0\) 给出 \(x=\dfrac{\pi}{2}\)，\(\dfrac{3\pi}{2}\)，\(\dfrac{5\pi}{2}\) 共 \(3\) 个；\(\sin x=\dfrac{1}{2}\) 给出 \(x=\dfrac{\pi}{6}\)，\(\dfrac{5\pi}{6}\)，\(\dfrac{13\pi}{6}\)，\(\dfrac{17\pi}{6}\) 共 \(4\) 个。合计 \(7\) 个交点。
+
+\gkanswer{答案：\(7\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+如图，在平面直角坐标系 \(xOy\) 中，\(F\) 是椭圆 \(\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\)（\(a>b>0\)）的右焦点，直线 \(y=\dfrac{b}{2}\) 与椭圆交于 \(B\)，\(C\) 两点，且 \(\angle BFC=90^{\circ}\)，则该椭圆的离心率是\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q10_ellipse}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 \(y=\dfrac{b}{2}\) 代入椭圆得 \(x^{2}=\dfrac{3}{4}a^{2}\)，故 \(B\left(-\dfrac{\sqrt{3}}{2}a,\dfrac{b}{2}\right)\)，\(C\left(\dfrac{\sqrt{3}}{2}a,\dfrac{b}{2}\right)\)，\(F(c,0)\)。由 \(\angle BFC=90^{\circ}\) 得
+\nopagebreak[4]
+\[
+\overrightarrow{FB}\cdot\overrightarrow{FC}=\left(-\frac{\sqrt{3}}{2}a-c\right)\left(\frac{\sqrt{3}}{2}a-c\right)+\frac{b^{2}}{4}=0
+\ \Longrightarrow\ c^{2}-\frac{3}{4}a^{2}+\frac{b^{2}}{4}=0.
+\]
+代入 \(b^{2}=a^{2}-c^{2}\) 化简得 \(3c^{2}=2a^{2}\)，故 \(e=\dfrac{c}{a}=\sqrt{\dfrac{2}{3}}=\dfrac{\sqrt{6}}{3}\)。
+
+\gkanswer{答案：\(\dfrac{\sqrt{6}}{3}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 \(f(x)\) 是定义在 \(\mathbf{R}\) 上且周期为 2 的函数，在区间 \([-1,1)\) 上
+\nopagebreak[4]
+\[
+f(x)=
+\begin{cases}
+x+a, & -1\leqslant x<0,\\
+\left|\dfrac{2}{5}-x\right|, & 0\leqslant x<1,
+\end{cases}
+\]
+其中 \(a\in\mathbf{R}\)。若 \(f\left(-\dfrac{5}{2}\right)=f\left(\dfrac{9}{2}\right)\)，则 \(f(5a)\) 的值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由周期 2：\(f\left(-\dfrac{5}{2}\right)=f\left(-\dfrac{1}{2}\right)=-\dfrac{1}{2}+a\)，\(f\left(\dfrac{9}{2}\right)=f\left(\dfrac{1}{2}\right)=\left|\dfrac{2}{5}-\dfrac{1}{2}\right|=\dfrac{1}{10}\)，故 \(a-\dfrac{1}{2}=\dfrac{1}{10}\)，\(a=\dfrac{3}{5}\)。于是 \(f(5a)=f(3)=f(1)=f(-1)=-1+\dfrac{3}{5}=-\dfrac{2}{5}\)。
+
+\gkanswer{答案：\(-\dfrac{2}{5}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知实数 \(x\)，\(y\) 满足
+\nopagebreak[4]
+\[
+\begin{cases}
+x-2y+4\geqslant 0,\\
+2x+y-2\geqslant 0,\\
+3x-y-3\leqslant 0,
+\end{cases}
+\]
+则 \(x^{2}+y^{2}\) 的取值范围是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+可行域为三直线 \(x-2y+4=0\)，\(2x+y-2=0\)，\(3x-y-3=0\) 围成的三角形，顶点为 \((0,2)\)，\((1,0)\)，\((2,3)\)（两两求交）。\(x^{2}+y^{2}\) 即点 \((x,y)\) 到原点距离的平方：顶点处取值 \(4\)，\(1\)，\(13\)；又在区域内到原点最近的点是原点到直线 \(2x+y-2=0\) 的垂足（垂足 \((0.8,0.4)\) 在区域内），距离平方为 \(\left(\dfrac{2}{\sqrt{5}}\right)^{2}=\dfrac{4}{5}\)。故取值范围为 \(\left[\dfrac{4}{5},13\right]\)。
+
+\gkanswer{答案：\(\left[\dfrac{4}{5},13\right]\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+如图，在 \(\triangle ABC\) 中，\(D\) 是 \(BC\) 的中点，\(E\)，\(F\) 是 \(AD\) 上两个三等分点，\(\overrightarrow{BA}\cdot\overrightarrow{CA}=4\)，\(\overrightarrow{BF}\cdot\overrightarrow{CF}=-1\)，则 \(\overrightarrow{BE}\cdot\overrightarrow{CE}\) 的值是\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q13_triangle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+以 \(D\) 为原点、\(BC\) 所在直线为 \(x\) 轴，设 \(B(-s,0)\)，\(C(s,0)\)，\(A(0,3t)\)，则 \(E(0,2t)\)，\(F(0,t)\)。由
+\nopagebreak[4]
+\[
+\overrightarrow{BA}\cdot\overrightarrow{CA}=(s,3t)\cdot(-s,3t)=-s^{2}+9t^{2}=4,\qquad
+\overrightarrow{BF}\cdot\overrightarrow{CF}=(s,t)\cdot(-s,t)=-s^{2}+t^{2}=-1,
+\]
+\Needspace{5\baselineskip}
+两式相减得 \(8t^{2}=5\)，\(t^{2}=\dfrac{5}{8}\)，\(s^{2}=t^{2}+1=\dfrac{13}{8}\)。故
+\nopagebreak[4]
+\[
+\overrightarrow{BE}\cdot\overrightarrow{CE}=(s,2t)\cdot(-s,2t)=-s^{2}+4t^{2}=-\frac{13}{8}+\frac{20}{8}=\frac{7}{8}.
+\]
+
+\gkanswer{答案：\(\dfrac{7}{8}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+在锐角 \(\triangle ABC\) 中，\(\sin A=2\sin B\sin C\)，则 \(\tan A\tan B\tan C\) 的最小值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 \(A=\pi-(B+C)\) 得 \(\sin A=\sin(B+C)=\sin B\cos C+\cos B\sin C=2\sin B\sin C\)，两边除以 \(\sin B\sin C\) 得 \(\cot B+\cot C=2\)。记 \(x=\cot B\)，\(y=\cot C\)（锐角三角形，\(x,y>0\)），则 \(x+y=2\)，\(xy\in(0,1]\)。又
+\nopagebreak[4]
+\[
+\tan A=-\tan(B+C)=-\frac{\tan B+\tan C}{1-\tan B\tan C}=-\frac{\frac{1}{x}+\frac{1}{y}}{1-\frac{1}{xy}}=-\frac{2}{xy-1},
+\]
+故 \(\tan A\tan B\tan C=-\dfrac{2}{xy(xy-1)}=\dfrac{2}{xy-(xy)^{2}}\)。令 \(u=xy\)，\(u-u^{2}\) 在 \(u=\dfrac{1}{2}\) 取最大值 \(\dfrac{1}{4}\)（此时 \(x\)，\(y\) 为方程 \(t^{2}-2t+\dfrac{1}{2}=0\) 的两正根，对应 \(\tan A=4\)，三角形为锐角三角形），故最小值为 \(8\)。
+
+\gkanswer{答案：\(8\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+在 \(\triangle ABC\) 中，\(AC=6\)，\(\cos B=\dfrac{4}{5}\)，\(C=\dfrac{\pi}{4}\)。
+
+（1） 求 \(AB\) 的长；
+
+（2） 求 \(\cos\left(A-\dfrac{\pi}{6}\right)\) 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+由 \(\cos B=\dfrac{4}{5}\)（\(B\) 为三角形内角）得 \(\sin B=\dfrac{3}{5}\)。由正弦定理 \(\dfrac{AB}{\sin C}=\dfrac{AC}{\sin B}\)，即 \(AB=\dfrac{6\sin\frac{\pi}{4}}{\frac{3}{5}}=\dfrac{6\times\frac{\sqrt{2}}{2}}{\frac{3}{5}}=5\sqrt{2}\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+\(A=\pi-B-C\)，故
+\nopagebreak[4]
+\[
+\sin A=\sin(B+C)=\sin B\cos C+\cos B\sin C=\frac{3}{5}\cdot\frac{\sqrt{2}}{2}+\frac{4}{5}\cdot\frac{\sqrt{2}}{2}=\frac{7\sqrt{2}}{10},
+\]
+\nopagebreak[4]
+\[
+\cos A=-\cos(B+C)=-\left(\frac{4}{5}\cdot\frac{\sqrt{2}}{2}-\frac{3}{5}\cdot\frac{\sqrt{2}}{2}\right)=-\frac{\sqrt{2}}{10}.
+\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[
+\cos\left(A-\frac{\pi}{6}\right)=\cos A\cdot\frac{\sqrt{3}}{2}+\sin A\cdot\frac{1}{2}=-\frac{\sqrt{6}}{20}+\frac{7\sqrt{2}}{20}=\frac{7\sqrt{2}-\sqrt{6}}{20}.
+\]
+
+\gkanswer{答案（1）：\(5\sqrt{2}\)。}
+
+\gkanswer{答案（2）：\(\dfrac{7\sqrt{2}-\sqrt{6}}{20}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+如图，在直三棱柱 \(ABC-A_{1}B_{1}C_{1}\) 中，\(D\)，\(E\) 分别为 \(AB\)，\(BC\) 的中点，点 \(F\) 在侧棱 \(B_{1}B\) 上，且 \(B_{1}D\perp A_{1}F\)，\(A_{1}C_{1}\perp A_{1}B_{1}\)。求证：
+
+（1） 直线 \(DE\parallel\) 平面 \(A_{1}C_{1}F\)；
+
+（2） 平面 \(B_{1}DE\perp\) 平面 \(A_{1}C_{1}F\)。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q16_prism}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\(D\)，\(E\) 分别为 \(AB\)，\(BC\) 的中点，故 \(DE\parallel AC\)。直三棱柱中 \(AC\parallel A_{1}C_{1}\)，故 \(DE\parallel A_{1}C_{1}\)。又 \(A_{1}C_{1}\subset\) 平面 \(A_{1}C_{1}F\)，\(DE\not\subset\) 平面 \(A_{1}C_{1}F\)，故 \(DE\parallel\) 平面 \(A_{1}C_{1}F\)。
+
+\gksubpart{(2)}
+
+直三棱柱中侧棱 \(BB_{1}\perp\) 底面 \(A_{1}B_{1}C_{1}\)，故 \(BB_{1}\perp A_{1}C_{1}\)；又 \(A_{1}C_{1}\perp A_{1}B_{1}\)（题设），\(BB_{1}\) 与 \(A_{1}B_{1}\) 是平面 \(ABB_{1}A_{1}\) 内相交直线，故 \(A_{1}C_{1}\perp\) 平面 \(ABB_{1}A_{1}\)，从而 \(A_{1}C_{1}\perp B_{1}D\)。又题设 \(B_{1}D\perp A_{1}F\)，而 \(A_{1}C_{1}\) 与 \(A_{1}F\) 是平面 \(A_{1}C_{1}F\) 内相交直线，故 \(B_{1}D\perp\) 平面 \(A_{1}C_{1}F\)。由 \(B_{1}D\subset\) 平面 \(B_{1}DE\)，得平面 \(B_{1}DE\perp\) 平面 \(A_{1}C_{1}F\)。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+现需要设计一个仓库，它由上下两部分组成，上部分的形状是正四棱锥 \(P-A_{1}B_{1}C_{1}D_{1}\)，下部分的形状是正四棱柱 \(ABCD-A_{1}B_{1}C_{1}D_{1}\)（如图所示），并要求正四棱柱的高 \(O_{1}O\) 是正四棱锥的高 \(PO_{1}\) 的 4 倍。
+
+（1） 若 \(AB=6\ \mathrm{m}\)，\(PO_{1}=2\ \mathrm{m}\)，则仓库的容积是多少？
+
+（2） 若正四棱锥的侧棱长为 \(6\ \mathrm{m}\)，当 \(PO_{1}\) 为多少时，仓库的容积最大？
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q17_warehouse}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+正四棱柱高 \(O_{1}O=4PO_{1}=8\ \mathrm{m}\)，容积 \(V_{1}=6^{2}\times8=288\ \mathrm{m}^{3}\)；正四棱锥容积 \(V_{2}=\dfrac{1}{3}\times6^{2}\times2=24\ \mathrm{m}^{3}\)。仓库容积 \(V=288+24=312\ \mathrm{m}^{3}\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+设 \(PO_{1}=h\ \mathrm{m}\)，则 \(O_{1}O=4h\)。正四棱锥侧棱 \(PA_{1}=6\)，故底面外接半径 \(A_{1}O_{1}=\sqrt{36-h^{2}}\)，底面边长 \(AB=\sqrt{2}\sqrt{36-h^{2}}\)，底面面积 \(S=2(36-h^{2})\)。于是
+\nopagebreak[4]
+\[
+V(h)=S\cdot 4h+\frac{1}{3}Sh=\frac{26}{3}h(36-h^{2})\quad(0<h<6).
+\]
+令 \(V'(h)=\dfrac{26}{3}(36-3h^{2})=0\) 得 \(h=2\sqrt{3}\)；\(0<h<2\sqrt{3}\) 时 \(V'>0\)，\(2\sqrt{3}<h<6\) 时 \(V'<0\)，故 \(h=2\sqrt{3}\) 时 \(V\) 最大（最大值 \(416\sqrt{3}\ \mathrm{m}^{3}\)）。即当 \(PO_{1}=2\sqrt{3}\ \mathrm{m}\) 时仓库容积最大。
+
+\gkanswer{答案（1）：\(312\ \mathrm{m}^{3}\)。}
+
+\gkanswer{答案（2）：\(PO_{1}=2\sqrt{3}\ \mathrm{m}\)（此时仓库容积为 \(416\sqrt{3}\ \mathrm{m}^{3}\)）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在平面直角坐标系 \(xOy\) 中，已知以 \(M\) 为圆心的圆 \(M\)：\(x^{2}+y^{2}-12x-14y+60=0\) 及其上一点 \(A(2,4)\)。
+
+（1） 设圆 \(N\) 与 \(x\) 轴相切，与圆 \(M\) 外切，且圆心 \(N\) 在直线 \(x=6\) 上，求圆 \(N\) 的标准方程；
+
+（2） 设平行于 \(OA\) 的直线 \(l\) 与圆 \(M\) 相交于 \(B\)，\(C\) 两点，且 \(BC=OA\)，求直线 \(l\) 的方程；
+
+（3） 设点 \(T(t,0)\) 满足：存在圆 \(M\) 上的两点 \(P\) 和 \(Q\)，使得 \(\overrightarrow{TA}+\overrightarrow{TP}=\overrightarrow{TQ}\)，求实数 \(t\) 的取值范围。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q18_circle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+圆 \(M\) 配方为 \((x-6)^{2}+(y-7)^{2}=25\)，圆心 \(M(6,7)\)，半径 \(r=5\)（\(A(2,4)\) 满足方程，在圆上）。
+
+\gksubpart{(1)}
+
+设 \(N(6,n)\)。圆 \(N\) 与 \(x\) 轴相切，半径 \(|n|\)；与圆 \(M\) 外切，故 \(|7-n|=5+|n|\)。若 \(n>0\)：\(7-n=5+n\)，\(n=1\)；若 \(n<0\)：\(7-n=5-n\) 不成立。故圆 \(N\) 的标准方程为 \((x-6)^{2}+(y-1)^{2}=1\)。
+
+\gksubpart{(2)}
+
+\(k_{OA}=2\)，设 \(l\)：\(y=2x+m\)。弦长 \(BC=OA=2\sqrt{5}\)，由弦长公式 \(BC=2\sqrt{r^{2}-d^{2}}\)（\(d\) 为 \(M\) 到 \(l\) 的距离）得 \(d^{2}=25-5=20\)。又 \(d=\dfrac{|12-7+m|}{\sqrt{5}}\)，故 \(|m+5|=10\)，\(m=5\) 或 \(m=-15\)。直线 \(l\)：\(y=2x+5\) 或 \(y=2x-15\)。
+
+\gksubpart{(3)}
+
+由 \(\overrightarrow{TA}+\overrightarrow{TP}=\overrightarrow{TQ}\) 得 \(\overrightarrow{PQ}=\overrightarrow{TA}\)，即 \(PQ=TA\)。\(P\)，\(Q\) 是圆 \(M\) 上两点，弦长 \(PQ\in[0,10]\)；反之 \([0,10]\) 内每个值都可作为弦长取到。故等价于 \(TA\leqslant10\)，即 \((t-2)^{2}+16\leqslant100\)，\(|t-2|\leqslant2\sqrt{21}\)，得 \(t\in[2-2\sqrt{21},2+2\sqrt{21}]\)。
+
+\gkanswer{答案（1）：\((x-6)^{2}+(y-1)^{2}=1\)。}
+
+\gkanswer{答案（2）：\(y=2x+5\) 或 \(y=2x-15\)。}
+
+\gkanswer{答案（3）：\(t\in[2-2\sqrt{21},\ 2+2\sqrt{21}]\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=a^{x}+b^{x}\)（\(a>0\)，\(b>0\)，\(a\neq1\)，\(b\neq1\)）。
+
+（1） 设 \(a=2\)，\(b=\dfrac{1}{2}\)。
+
+① 求方程 \(f(x)=2\) 的根；
+
+② 若对于任意 \(x\in\mathbf{R}\)，不等式 \(f(2x)\geqslant mf(x)-6\) 恒成立，求实数 \(m\) 的最大值；
+
+（2） 若 \(0<a<1\)，\(b>1\)，函数 \(g(x)=f(x)-2\) 有且只有 1 个零点，求 \(ab\) 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+① 此时 \(f(x)=2^{x}+2^{-x}\)。令 \(2^{x}=u>0\)，则 \(u+\dfrac{1}{u}=2\)，\((u-1)^{2}=0\)，\(u=1\)，\(x=0\)。
+
+② 由 \(f(2x)=2^{2x}+2^{-2x}=(2^{x}+2^{-x})^{2}-2\)，记 \(v=f(x)=2^{x}+2^{-x}\geqslant2\)，则不等式化为 \(v^{2}-2\geqslant mv-6\)，即 \(m\leqslant v+\dfrac{4}{v}\) 对一切 \(v\geqslant2\) 恒成立。由 \(v+\dfrac{4}{v}\geqslant2\sqrt{4}=4\)（\(v=2\) 取等），得 \(m\leqslant4\)，故 \(m\) 的最大值为 \(4\)。
+
+\gksubpart{(2)}
+
+\(g(0)=f(0)-2=0\)，故 \(x=0\) 恒为零点。\(g(x)\) 有且只有 1 个零点，则 \(0\) 是唯一零点，且 \(g\) 在 \(x=0\) 两侧不变号，故 \(x=0\) 是 \(g\) 的极小值点，\(g'(0)=a^{0}\ln a+b^{0}\ln b=\ln(ab)=0\)，得 \(ab=1\)。反之当 \(ab=1\) 时 \(f(x)=a^{x}+a^{-x}\geqslant2\)，等号仅当 \(a^{x}=1\) 即 \(x=0\)（\(a\neq1\)），确有且只有 1 个零点。故 \(ab=1\)。
+
+\gkanswer{答案（1）：① \(x=0\)；② \(m\) 的最大值为 \(4\)。}
+
+\gkanswer{答案（2）：\(ab=1\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+记 \(U=\{1,2,\cdots,100\}\)。对数列 \(\{a_{n}\}\)（\(n\in\mathbf{N}^{*}\)）和 \(U\) 的子集 \(T\)，若 \(T=\varnothing\)，定义 \(S_{T}=0\)；若 \(T=\{t_{1},t_{2},\cdots,t_{k}\}\)，定义 \(S_{T}=a_{t_{1}}+a_{t_{2}}+\cdots+a_{t_{k}}\)。例如：\(T=\{1,3,66\}\) 时，\(S_{T}=a_{1}+a_{3}+a_{66}\)。现设 \(\{a_{n}\}\)（\(n\in\mathbf{N}^{*}\)）是公比为 3 的等比数列，且当 \(T=\{2,4\}\) 时，\(S_{T}=30\)。
+
+（1） 求 \(\{a_{n}\}\) 的通项公式；
+
+（2） 对任意正整数 \(k\)（\(1\leqslant k\leqslant 100\)），若 \(T\subseteq\{1,2,\cdots,k\}\)，求证：\(S_{T}<a_{k+1}\)；
+
+（3） 设 \(C\subseteq U\)，\(D\subseteq U\)，\(S_{C}\geqslant S_{D}\)，求证：\(S_{C}+S_{C\cap D}\geqslant 2S_{D}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\(S_{\{2,4\}}=a_{2}+a_{4}=3a_{1}+27a_{1}=30a_{1}=30\)，故 \(a_{1}=1\)，\(a_{n}=3^{\,n-1}\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+\(T\subseteq\{1,2,\cdots,k\}\) 时，\(S_{T}\) 不超过前 \(k\) 项全取之和：
+\nopagebreak[4]
+\[
+S_{T}\leqslant a_{1}+a_{2}+\cdots+a_{k}=\frac{3^{k}-1}{2}<3^{k}=a_{k+1}.
+\]
+
+\gksubpart{(3)}
+
+记 \(S_{C}+S_{C\cap D}-2S_{D}=S_{C\setminus D}-2S_{D\setminus C}\)。若 \(C\setminus D=\varnothing\)，则由 \(S_{C}\geqslant S_{D}\) 与 \(C\subseteq D\) 得 \(S_{C}=S_{D}\)，此时 \(C\cap D=C\)，不等式取等号。若 \(C\setminus D\neq\varnothing\)，记 \(M=\max(C\setminus D)\)：
+
+\begin{itemize}
+\item 若 \(D\setminus C\) 中有元素 \(m>M\)，则 \(S_{D\setminus C}\geqslant a_{m}=3^{\,m-1}\geqslant3^{M}>\dfrac{3^{M}-1}{2}\geqslant S_{C\setminus D}\)（末式因 \(C\setminus D\subseteq\{1,\cdots,M\}\)），与 \(S_{C}\geqslant S_{D}\) 即 \(S_{C\setminus D}\geqslant S_{D\setminus C}\) 矛盾；
+\item 故 \(D\setminus C\subseteq\{1,2,\cdots,M-1\}\)，\(S_{D\setminus C}\leqslant\dfrac{3^{M-1}-1}{2}\)；又 \(M\in C\setminus D\) 给出 \(S_{C\setminus D}\geqslant3^{M-1}\)，故 \(2S_{D\setminus C}\leqslant3^{M-1}-1<S_{C\setminus D}\)。
+\end{itemize}
+
+综上 \(S_{C\setminus D}\geqslant2S_{D\setminus C}\)，即 \(S_{C}+S_{C\cap D}\geqslant2S_{D}\)。
+
+\gkanswer{答案（1）：\(a_{n}=3^{\,n-1}\)。}
+
+\gkanswer{答案（2）：见解析版}
+
+\gkanswer{答案（3）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+四选二。
+
+【A】如图，在 \(\triangle ABC\) 中，\(\angle ABC=90^{\circ}\)，\(BD\perp AC\)，\(D\) 为垂足，\(E\) 是 \(BC\) 中点。求证：\(\angle EDC=\angle ABD\)。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q21a_triangle}\end{center}
+\nopagebreak[4]
+【B】已知矩阵 $A=\begin{bmatrix}1&2\\0&-2\end{bmatrix}$，矩阵 \(B\) 的逆矩阵 $B^{-1}=\begin{bmatrix}1&-\dfrac{1}{2}\\0&2\end{bmatrix}$，求矩阵 \(AB\)。
+
+\Needspace{5\baselineskip}
+【C】在平面直角坐标系 \(xOy\) 中，已知直线 \(l\) 的参数方程为
+\nopagebreak[4]
+\[
+\begin{cases}
+x=1+\dfrac{1}{2}t,\\
+y=\dfrac{\sqrt{3}}{2}t,
+\end{cases}
+\]
+\Needspace{5\baselineskip}
+（\(t\) 为参数），椭圆 \(C\) 的参数方程为
+\nopagebreak[4]
+\[
+\begin{cases}
+x=\cos\theta,\\
+y=2\sin\theta,
+\end{cases}
+\]
+（\(\theta\) 为参数）。设直线 \(l\) 与椭圆 \(C\) 相交于 \(A\)，\(B\) 两点，求线段 \(AB\) 的长。
+
+【D】设 \(a>0\)，\(|x-1|<\dfrac{a}{3}\)，\(|y-2|<\dfrac{a}{3}\)，求证：\(|2x+y-4|<a\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{【A】}
+
+\(BD\perp AC\)，\(D\) 为垂足，故 \(\triangle BDC\) 为直角三角形（\(\angle BDC=90^{\circ}\)）。\(E\) 是斜边 \(BC\) 的中点，故 \(DE=BE=CE\)，\(\triangle EDC\) 为等腰三角形，\(\angle EDC=\angle ECD\)。又 \(E\) 在 \(BC\) 上，\(\angle ECD=\angle BCD=90^{\circ}-\angle DBC\)；而 \(\angle ABD=\angle ABC-\angle DBC=90^{\circ}-\angle DBC\)。故 \(\angle EDC=\angle ABD\)。
+
+\gksubpart{【B】}
+
+\Needspace{5\baselineskip}
+由 \(B=(B^{-1})^{-1}\)，\(\det B^{-1}=2\)，故
+\nopagebreak[4]
+\[
+B=\frac{1}{2}\begin{bmatrix}2&\dfrac{1}{2}\\0&1\end{bmatrix}=\begin{bmatrix}1&\dfrac{1}{4}\\0&\dfrac{1}{2}\end{bmatrix},
+\qquad
+AB=\begin{bmatrix}1&2\\0&-2\end{bmatrix}\begin{bmatrix}1&\dfrac{1}{4}\\0&\dfrac{1}{2}\end{bmatrix}=\begin{bmatrix}1&\dfrac{5}{4}\\0&-1\end{bmatrix}.
+\]
+
+\gksubpart{【C】}
+
+\Needspace{5\baselineskip}
+将参数方程代入椭圆方程 \(x^{2}+\dfrac{y^{2}}{4}=1\)：
+\nopagebreak[4]
+\[
+\left(1+\frac{t}{2}\right)^{2}+\frac{3t^{2}}{16}=1
+\ \Longrightarrow\
+t+\frac{7t^{2}}{16}=0
+\ \Longrightarrow\
+t=0\ \text{或}\ t=-\frac{16}{7}.
+\]
+\Needspace{5\baselineskip}
+两交点分别为 \((1,0)\) 与 \(\left(-\dfrac{1}{7},-\dfrac{8\sqrt{3}}{7}\right)\)，故
+\nopagebreak[4]
+\[
+AB=\sqrt{\left(\frac{8}{7}\right)^{2}+\left(\frac{8\sqrt{3}}{7}\right)^{2}}=\frac{8}{7}\times2=\frac{16}{7}.
+\]
+
+\gksubpart{【D】}
+
+\nopagebreak[4]
+\[
+|2x+y-4|=|2(x-1)+(y-2)|\leqslant2|x-1|+|y-2|<\frac{2a}{3}+\frac{a}{3}=a.
+\]
+
+\gkanswer{答案：【B】$AB=\begin{bmatrix}1&\dfrac{5}{4}\\0&-1\end{bmatrix}$；【C】\(\dfrac{16}{7}\)；【A】【D】为证明题，见解析版。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，在平面直角坐标系 \(xOy\) 中，已知直线 \(l\)：\(x-y-2=0\)，抛物线 \(C\)：\(y^{2}=2px\)（\(p>0\)）。
+
+（1） 若直线 \(l\) 过抛物线 \(C\) 的焦点，求抛物线 \(C\) 的方程；
+
+（2） 已知抛物线 \(C\) 上存在关于直线 \(l\) 对称的相异两点 \(P\) 和 \(Q\)。
+
+① 求证：线段 \(PQ\) 上的中点坐标为 \((2-p,-p)\)；
+
+② 求 \(p\) 的取值范围。
+\nopagebreak[4]
+\begin{center}\input{figures/f2016js_q22_parabola}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+抛物线的焦点为 \(\left(\dfrac{p}{2},0\right)\)，代入 \(l\)：\(\dfrac{p}{2}-0-2=0\)，得 \(p=4\)，故 \(C\)：\(y^{2}=8x\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+① 由 \(P\)，\(Q\) 关于 \(l\)：\(x-y-2=0\)（斜率 1）对称，得 \(PQ\perp l\)，故 \(PQ\) 所在直线斜率为 \(-1\)，设为 \(y=-x+t\)。代入 \(y^{2}=2px\) 得
+\nopagebreak[4]
+\[
+x^{2}-(2t+2p)x+t^{2}=0,
+\]
+设 \(P(x_{1},y_{1})\)，\(Q(x_{2},y_{2})\)，则 \(PQ\) 中点 \(x_{0}=\dfrac{x_{1}+x_{2}}{2}=t+p\)，\(y_{0}=-x_{0}+t=-p\)。又中点在对称轴 \(l\) 上：\(x_{0}-y_{0}-2=0\)，即 \((t+p)+p-2=0\)，\(t=2-2p\)（此式中 \(x_{0}=2-p\)）。故线段 \(PQ\) 的中点为 \((2-p,-p)\)。
+
+② 判别式 \(\Delta=(2t+2p)^{2}-4t^{2}=4p(2t+p)>0\)，代入 \(t=2-2p\) 得 \(4p(4-3p)>0\)，又 \(p>0\)，故 \(0<p<\dfrac{4}{3}\)。
+
+\gkanswer{答案（1）：\(y^{2}=8x\)。}
+
+\gkanswer{答案（2）：① 证明见解析版；② \(0<p<\dfrac{4}{3}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+（1） 求 \(7\mathrm{C}_6^3-4\mathrm{C}_7^4\) 的值；
+
+（2） 设 \(m\)，\(n\in\mathbf{N}^{*}\)，\(n\geqslant m\)，求证：\((m+1)\mathrm{C}_m^m+(m+2)\mathrm{C}_{m+1}^m+(m+3)\mathrm{C}_{m+2}^m+\cdots+n\mathrm{C}_{n-1}^m+(n+1)\mathrm{C}_n^m=(m+1)\mathrm{C}_{n+2}^{m+2}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1)}
+
+\(\mathrm{C}_6^3=\dfrac{6\times5\times4}{3\times2\times1}=20\)，\(\mathrm{C}_7^4=\dfrac{7\times6\times5\times4}{4\times3\times2\times1}=35\)，故 \(7\mathrm{C}_6^3-4\mathrm{C}_7^4=7\times20-4\times35=0\)。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+对 \(m\leqslant k\leqslant n\)，\((k+1)\mathrm{C}_k^m=(m+1)\mathrm{C}_{k+1}^{m+1}\)（两边按组合数公式展开即得）。故
+\nopagebreak[4]
+\[
+\text{左端}=(m+1)\sum_{k=m}^{n}\mathrm{C}_{k+1}^{m+1}
+=(m+1)\left(\mathrm{C}_{m+2}^{m+2}+\mathrm{C}_{m+2}^{m+1}+\mathrm{C}_{m+3}^{m+1}+\cdots+\mathrm{C}_{n+1}^{m+1}\right).
+\]
+逐次用组合数递推 \(\mathrm{C}_j^{r}+\mathrm{C}_j^{r+1}=\mathrm{C}_{j+1}^{r+1}\)（自左向右合并）：\(\mathrm{C}_{m+2}^{m+2}+\mathrm{C}_{m+2}^{m+1}=\mathrm{C}_{m+3}^{m+2}\)，再与 \(\mathrm{C}_{m+3}^{m+1}\) 合并…… 依次得 \(\mathrm{C}_{n+1}^{m+1}+\mathrm{C}_{n+1}^{m+2}=\mathrm{C}_{n+2}^{m+2}\)。故左端 \(=(m+1)\mathrm{C}_{n+2}^{m+2}=\) 右端。
+
+\gkanswer{答案（1）：\(0\)。}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
