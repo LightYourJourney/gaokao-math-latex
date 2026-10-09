@@ -1142,6 +1142,14 @@
         "gk-2015-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-shanghai-arts"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -1151,7 +1159,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e70e3441-fdc6-4074-ad6c-7c4b2b799a6f",
+  "last_transaction_id": "a67c696e-942d-4e14-8c00-220ba5e5402f",
   "papers": [
     {
       "blocked_from": null,
@@ -17989,9 +17997,72 @@
       "title": "2015 年·春季上海卷",
       "track": "none",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_上海卷_文科/figures/f2015sha_q19_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_上海卷_文科/figures/f2015sha_q21_route.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_shanghai_arts",
+        "id": "gk-2015-regular-shanghai-arts",
+        "note": "批次 phase3-b04；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 979/980）、无参考答案页；2017 改革前 3+1 体制：填空 1–14＋选择 15–18＋解答 19–23＝23 题（分值为结构推断——**卷面不印分值、不印题量、不印考生注意**）。固定源不附答案（等级 D）；解析全由本库独立推导（盲解两段互证、每题独立第二路校验）。源为 LaTeX（CM 系）重排产物（16 字体全嵌入、全矢量、文本层完整可读、无 PUA——与 Word/MathType 系来源不同）。标点按全库约定归一（题号句末全角、正文逗号全角、正文层括号全角）；选项标号源内半角 (A) 照源；向量源为粗斜体无箭头（写 \\boldsymbol）；弧记号源为 Yhcmex 宽弧（写 \\overset{\\frown}{}）。第 19 题圆锥图按源内容流精确复刻（**源内瑕疵照录**：C 参数角 249.30° 偏离题设中点 20.70°；母线 PA/PB 为椭圆切线、落点不在 A/B 上——均不影响本题结论）；第 21 题直角路线图为源内精确作图（直角 90.000000°、1 千米＝1 厘米）。第 14 题题干「\\(6\\pi\\)．且」源内句点代逗号（1200 dpi 亲验、照录）；第 5 题顿号连接、花括号后无标点、组末行尾逗号照录。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            15,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文"
+      },
+      "issue_ids": [
+        "ISSUE-1020",
+        "ISSUE-1021",
+        "ISSUE-1022",
+        "ISSUE-1023"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-shanghai-arts",
+      "production_state": "compiled",
+      "project_dir": "2015_上海卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_上海文_含解析.md",
+        "questions": "2015/2015_数学真题_上海文_试题.md",
+        "solution_body": "2015/2015_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-cc92124505f3372f75db33e14eb583bf18a3e93fc5164f1a67a8e77536b9668f"
+      ],
+      "title": "2015 年·上海卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 3569,
+  "revision": 3582,
   "schema_version": 1,
   "sources": [
     {
@@ -33008,8 +33079,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b15c5ec48af654ae64aba9275246222b156544df",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015上海文.pdf",
       "regions": [],
       "source_id": "src-cc92124505f3372f75db33e14eb583bf18a3e93fc5164f1a67a8e77536b9668f",
