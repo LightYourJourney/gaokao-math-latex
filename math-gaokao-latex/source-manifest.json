@@ -1198,6 +1198,14 @@
         "gk-2015-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b11",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1207,7 +1215,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4433b86e-c460-4303-b33e-b15e49b4819a",
+  "last_transaction_id": "59cc9529-2aef-4fd3-9567-7e3e44ce721e",
   "papers": [
     {
       "blocked_from": null,
@@ -18517,9 +18525,75 @@
       "title": "2015 年·天津卷·文科",
       "track": "arts",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_理科/figures/f2015tjl_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_理科/figures/f2015tjl_q05_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_理科/figures/f2015tjl_q10_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_理科/figures/f2015tjl_q17_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_tianjin_science",
+        "id": "gk-2015-regular-tianjin-science",
+        "note": "批次 phase3-b11；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 985/986）、无参考答案页；选择 1–8＋填空 9–14＋解答 15–20＝20 题（分值为结构推断——**卷面不印分值**）。固定源不附答案（等级 D）；解析全由本库独立推导（双路盲解互证＋主会话独立复算——第 2 题顶点枚举＋20 万点采样、第 3 题框图逐轮模拟＋回跳位置放大核读、第 5 题相交弦定理两路＋坐标法回代圆方程（88/9）、第 6 题四选项双条件全表回代、第 8 题细网格根计数（b=2 常值段整段为解）、第 10 题卡瓦列里数值积分（相对差 6×10⁻¹²）、第 11 题定积分＋50 万段中点法、第 12 题分数精确全展开（七项系数全对）、第 13 题 b=6,c=4 回代、第 14 题 20 万点扫描＋向量分解双路线（λ=2/3 处同为 29/18）、第 16 题穷举 70 组合、第 17 题二面角三法互证（法向量／垂足／点面距同为 3√10/10）、第 18 题错位相减逐项＋端点核对、第 19 题精确代入（M=(1,2√3/3) 代椭圆═1）＋m 扫描 11 档两支、第 20 题 25 组 (n,a) 数值核验（最紧裕度 2.5×10⁻⁷））。源为 LaTeX（CM 系）重排产物（全矢量、无位图；标点半角拉丁字形——按全库约定归一全角）。**向量记号分卷保留——本卷无 CMMIB10，向量为 CMMI10 常规斜体＋TeX-vect10 长箭头，录作 \\overrightarrow 不加粗斜体**（与天津文卷同型）。不等号按 MSAM10 实测排 \\leqslant；补集号 \\complement（MSAM10，U+2201）；实数集/正整数集为粗正体 \\mathbf{R}／\\mathbf{N}^*（LMRoman10-Bold）。**第 20 题 (1) 单调性须分 n 奇偶**（偶数情形不同于奇数情形）；**第 19 题 (3) 按题面字面取两支之并**（(−∞,−2√3/3)∪(√2/3,2√3/3)；若命题本意限于第二象限则缩为 (−∞,−2√3/3)，存疑登记于解析）；**第 5 题选项按题归并**（源断栏排于栏 2 首）；**第 3 题框图新拓扑照源**（i=2i 翻倍型、i>5? 判据）。4 图均按源内容流实测坐标复刻（本清单坐标为自行反算后的真实页 pt；pdftocairo 换算因子最小二乘自测 S≈0.999622、y 常项 +0.1040/+0.1034）：程序框图（7 框＋否支三段回折）、圆图（R=53.895 四段贝塞尔＋三等分点＋两割线共点 C＋实心圆心点）、三视图（三联＋尺寸箭头＋侧视半径引导线＋俯视图无水平尺寸线照源）、四棱柱（AA₁⊥底面＋BB₁∥AA₁＋E/F 中点＋虚线 7 条）；圆与圆角以 TikZ 真圆绘制（与源贝塞尔近似差 ≤0.015 pt 级）；‖ 三处为矢量双笔画照源。图源探针：坐标反算残差 ≤0.005 pt、600 dpi 墨迹 ≤0.080 pt、编译零警告。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2015_天津卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_天津理_含解析.md",
+        "questions": "2015/2015_数学真题_天津理_试题.md",
+        "solution_body": "2015/2015_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-d33a05491bfc4dd885411e0df35e5afe5fff29699387a590021af5dce81db1dd"
+      ],
+      "title": "2015 年·天津卷·理科",
+      "track": "science",
+      "year": 2015
     }
   ],
-  "revision": 3681,
+  "revision": 3689,
   "schema_version": 1,
   "sources": [
     {
@@ -33800,8 +33874,8 @@
       "exam_type": "regular",
       "git_blob_oid": "284030330abcd7fec5a171bf831addb80d796696",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015天津理.pdf",
       "regions": [],
       "source_id": "src-d33a05491bfc4dd885411e0df35e5afe5fff29699387a590021af5dce81db1dd",
