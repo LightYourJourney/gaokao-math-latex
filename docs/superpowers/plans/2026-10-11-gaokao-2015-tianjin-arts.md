@@ -44,19 +44,19 @@
 
 ### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–8 选择，含 Q3 框图与 Q6 圆图的存在性登记）：`.work/phase3-b10/transcripts/partA.md`。
-- [ ] 转录 B（Q9–20＋图表实测清单）：`.work/phase3-b10/transcripts/partB.md`＋`.work/phase3-b10/figure-inventory.md`。
-- [ ] 盲解 A（Q1–8）：`.work/phase3-b10/blind/partA.md`；盲解 B（Q9–20）：`.work/phase3-b10/blind/partB.md`。
-- [ ] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/` 下其它批的全部文件；`2015_天津卷_理科`、`2015_数学真题_天津理_*` 等）。**
+- [x] 转录 A（Q1–8 选择，含 Q3 框图与 Q6 圆图的存在性登记）：`transcripts/partA.md`（134 行；`\leqslant` MSAM10 三重闭合、无 CMMIB10、`\complement` U+2201、引号顿号全角/其余半角实测；7 条存疑）。
+- [x] 转录 B（Q9–20＋图表实测清单）：`transcripts/partB.md`（143 行）＋`figure-inventory.md`（283 行；pdftocairo 换算因子自行反算 a≈0.999621/+0.1044；栅格 100%/0.170pt；∥ 吞噬两处；4^{1/3} 竖排分式判定；S-1…S-10）。
+- [x] 盲解 A（Q1–8）：`blind/partA.md`（B C C A D A B A；Q3「输出 S」矛盾独立发现）；盲解 B（Q9–20）：`blind/partB.md`＋`recheck-B.py`（全断言过；Q19 四尺度三路径、Q20 1998 网格；6 条存疑）。
+- [x] **所有四代理 prompt 均含隔离禁令**（全路径面：他批/他卷/`.work/` 其它批；四代理均自证未读）。
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；五项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏）＋（N）空格锚点检查。
-- [ ] TikZ 图源生成 + 探针目检（含源坐标换算回验与 600 dpi 目检）。
-- [ ] 注册 `phase3-b10`；provenance 三角色导入；extract-batch 派生。
-- [ ] generate/short/editions 三连 write+check → build --formal（修复轮 → 重建 → 差分 → 复审）。
+- [x] 规范三件套＋含解析占位；五项自检全清（三份 md＋合并稿）；小问集合解析↔试题一致 [1,2,3]；`validate_solution_body` 工具校验通过；3 改写代理（176/156/281 行）合并 606 行。**Q3 裁定**：照源复刻（题干问 i、框图印「输出 S」）＋存疑登记；**Q18(2) 错位相减中间行订正**（盲解稿括号漏末项、答案未动）。
+- [x] TikZ 图源 4 处（235 行；113 项 tex↔清单残差**全 0.0000pt**；箭尖从 600dpi 墨迹独立重测（提取坐标系 +3.5pt 系统偏移弃用）；灵敏度自证过（唯一坐标注入）；四探针零告警；6 条存疑登记）。
+- [x] 注册 `phase3-b10`（rev 3668）；provenance 三角色导入（rev 3669/3672）；extract-batch 派生。
+- [x] 三连 write+check；首轮 build 0 失败；**生成期修复轮 2 处**（说明块裸 `∛` 缺字形×4 版 → 去字符；解析版 Q2 验证段长数字原子 Overfull 9.3pt → 改「与 9 的差在 10⁻⁹ 量级」表述）→ 重建**四版告警全 0**（7/31/9/24 页，attempt 3451c579）。
 
 ### Task 4 — Build, review, and close
 
-- [ ] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
+- [~] 审查代理（1 图自查 + 10 段：试题 1（1–7）＋解析 4（1–8/9–16/17–24/25–31）＋简答 2（1–5/6–9）＋印刷 3（1–8/9–16/17–24））；**分波 ≤5 支**——波 1（图自查＋试题＋解析 seg1/2/3）进行中 → 修复轮（如有）→ 重建 → 差分 → 复审。
 - [ ] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
