@@ -2,10 +2,10 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**264**；生产状态：blocked 45，compiled 187，complete 32
-- 批次总数：**130**；manifest 状态：closed 20，closed_with_blockers 6，compiled_pending_review 104
+- 试卷总数：**264**；生产状态：blocked 45，compiled 184，complete 29，editions_generated 6
+- 批次总数：**130**；manifest 状态：closed 19，closed_with_blockers 6，compiled_pending_review 102，provenance_verified 3
 - 正式复核门禁：FINALIZED 1，INVALID_OR_STALE 129
-- 已编译版本：1056/1056；构建回执状态：compiled_pending_review 220，succeeded 44
+- 已编译版本：1056/1056；构建回执状态：compiled_pending_review 221，succeeded 43
 - review 回执状态：failed 5，passed 257
 - 问题总账：1029 条，未解决问题：169，阻塞完成 103。
 - 回执日志警告汇总（包含待复核回执）：Overfull 23，Underfull 42，豁免记录 65。
@@ -17,8 +17,8 @@
 | 批次 | 试卷数 | manifest 状态 | 回执门禁 | ownership |
 |---|---:|---|---|---|
 | phase0-b01 | 4 | closed | INVALID_OR_STALE | validated |
-| phase0-b02 | 4 | compiled_pending_review | INVALID_OR_STALE | validated |
-| phase0-b03 | 3 | closed | INVALID_OR_STALE | validated |
+| phase0-b02 | 4 | provenance_verified | INVALID_OR_STALE | validated |
+| phase0-b03 | 3 | provenance_verified | INVALID_OR_STALE | validated |
 | phase0-b04 | 4 | compiled_pending_review | INVALID_OR_STALE | validated |
 | phase0-b05 | 4 | compiled_pending_review | INVALID_OR_STALE | validated |
 | phase0-b06 | 2 | compiled_pending_review | INVALID_OR_STALE | validated |
@@ -123,7 +123,7 @@
 | phase2-b05 | 4 | closed_with_blockers | INVALID_OR_STALE | validated |
 | phase2-b06 | 3 | closed | INVALID_OR_STALE | validated |
 | phase2-b07 | 4 | closed_with_blockers | INVALID_OR_STALE | validated |
-| phase2-b08 | 4 | compiled_pending_review | INVALID_OR_STALE | validated |
+| phase2-b08 | 4 | provenance_verified | INVALID_OR_STALE | validated |
 | phase2-b09 | 2 | closed_with_blockers | INVALID_OR_STALE | validated |
 | phase2-b10 | 4 | closed_with_blockers | INVALID_OR_STALE | validated |
 | phase2-b11 | 2 | closed_with_blockers | INVALID_OR_STALE | validated |

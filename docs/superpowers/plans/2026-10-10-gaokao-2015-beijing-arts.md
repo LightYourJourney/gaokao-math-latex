@@ -73,6 +73,8 @@
 1. `2017_北京卷_文科`（answers.tex:535）
 2. `2019_全国Ⅰ卷_文科`（answers.tex:798）
 3. `2021_新高考Ⅱ卷`（answers.tex 含星答案行）
-三卷均已 FINALIZED（receipts/{build,review}.json 在位；**无 印刷版.tex——三版时期产物**）。
+三卷均四版齐全、rebuild 状态：2017 北京文 production_state=compiled（批 phase2-b08 仍 compiled_pending_review）、2019 全国Ⅰ文 compiled（批 phase0-b02 同前）、2021 新高考Ⅱ卷 **complete（批 phase0-b03 closed——真·已 finalize）**。
 
-**待办（b07 收官后立即执行）**：逐卷 `generate --write` → `build --formal` → 同引擎 pdftoppm 差分定变化页 → 变化页定向复审（box 出现＋布局无破）→ 刷新 receipts（build.json 由 build 重写；review.json 变化页结果并入）→ 状态核验 → 显式路径提交。未决细节：重开已 finalize 卷的 review.json 刷新是否有工具路径（re-finalize 属不同 batch），执行时读 review_receipts.py 相关逻辑再定最小侵入法。
+**已执行（2026-10-10，当日收官后立即）**：三卷 `generate --write`（全库 `--all --check` 复绿＝**264 套一致**）→ short/editions 三连 check 全绿 → `build --formal` ×3 全成功（0 失败）→ 同引擎 100 dpi AE 差分（对照 `.work/starfix-3vol/prefix-build/<卷>/` 基线）：**变化页恰 6 个、模式整齐**——每卷「解析版 1 页＋印刷版 1 页」：2017 解析 p18(24669)/印刷 p13(1226)、2019 解析 p21(1382)/印刷 p18(1177)、2021 解析 p22(2790)/印刷 p16(2266)；试题版/简答版全卷 AE=0。定向复审代理覆盖 6 页（进行中）。
+
+**收据策略（本次裁定）**：`build.json` 由 build 自动刷新（新 attempt、现行工具链，三卷借此**离开** poppler 失配类）；`review.json` **不擅动**——它是各自批次 finalize 的冻结产品，重开需整批 prepare/collect/finalize（批内尚有未审兄弟卷、超出本修复范围）；三卷 review 回执与最新 attempt 的失配如实随提交注明，待各自批次下一次正规流程（b08 待审、phase0-b02 待审、phase0-b03 已 closed 属维护轮）自然刷新。产物质量由 6 变化页定向复审＋全库 generate/check 复绿背书。

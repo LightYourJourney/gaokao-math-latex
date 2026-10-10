@@ -63,7 +63,9 @@ def _normalize_post_baseline_repairs(relative, text):
     # content allowlist: 1aa2f46b (2017 regions), 94db44de (2019 arts q5),
     # 9172712f (2019 science q6 wording), 178b4c31 (2019 science q6 vector
     # figure), and 6ce2e0ac (2020 source/solution corrections), plus the two
-    # visually reviewed 2020 arts QED glyph substitutions below.  The actual
+    # visually reviewed 2020 arts QED glyph substitutions below, and the
+    # 2026-10-10 answer-box repair round (phase3-b07 converter fix:
+    # asterisk-bearing answer lines move from \textbf back to \gkanswer).  The actual
     # files remain hash-pinned in the ledger.
     if relative == (
         "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
@@ -118,7 +120,41 @@ def _normalize_post_baseline_repairs(relative, text):
         normalized_block += "\n" if block.endswith("\n") else ""
         result = text[:start] + normalized_block + text[end:]
         result_lines = [line for line in result.splitlines() if line != r"\textbf{解析}"]
+        # 2026-10-10 修复轮（md2tex ANSLINE 治本，含 * 答案行归位绿框）：Q18 答案（2）
+        # 由 \textbf 形态改为 \gkanswer——两侧形态都替换为哨兵，隐藏于历史布局 diff。
+        q18_prefixes = (
+            r"\textbf{答案（2）：$1\le n\le10$",
+            r"\gkanswer{答案（2）：$1\le n\le10$",
+        )
+        q18_matches = [
+            index for index, line in enumerate(result_lines)
+            if line.startswith(q18_prefixes)
+        ]
+        if len(q18_matches) != 1:
+            raise AssertionError(
+                "2019 arts q18 answer-box repair must match exactly once"
+            )
+        result_lines[q18_matches[0]] = "[post-baseline q18 answer-box repair]"
         return "\n".join(result_lines) + ("\n" if text.endswith("\n") else "")
+
+    if relative == "math-gaokao-latex/2021_新高考Ⅱ卷/answers.tex":
+        # 同一次 2026-10-10 修复轮：Q21 开放性答案行由 \textbf 形态改为 \gkanswer。
+        sentinel = "[post-baseline q21 answer-box repair]"
+        prefixes = (
+            r"\textbf{答案：$f(x)=x^{2}$",
+            r"\gkanswer{答案：$f(x)=x^{2}$",
+        )
+        lines = text.splitlines()
+        matches = [
+            index for index, line in enumerate(lines)
+            if line.startswith(prefixes)
+        ]
+        if len(matches) != 1:
+            raise AssertionError(
+                "2021 new-gaokao-2 q21 answer-box repair must match exactly once"
+            )
+        lines[matches[0]] = sentinel
+        return "\n".join(lines) + ("\n" if text.endswith("\n") else "")
 
     if relative in {
         "math-gaokao-latex/2019_全国Ⅰ卷_理科/questions.tex",
@@ -1569,6 +1605,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "075ed1c:" + relative,
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
+            head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
+            now_for_layout_diff = _normalize_post_baseline_repairs(relative, now)
             self.assertEqual(record["class"], "layout-regeneration")
             self.assertEqual(
                 record["legacy_sha256"],
@@ -1578,7 +1616,9 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
 
             removed = []
             added = []
-            for line in difflib.ndiff(head.splitlines(), now.splitlines()):
+            for line in difflib.ndiff(
+                head_for_layout_diff.splitlines(), now_for_layout_diff.splitlines()
+            ):
                 if line.startswith("- "):
                     removed.append(line[2:])
                 elif line.startswith("+ "):
