@@ -1158,6 +1158,14 @@
         "gk-2015-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-beijing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1167,7 +1175,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "181d1c85-a298-4758-bb87-02d5b154406c",
+  "last_transaction_id": "5eb42e99-6481-4cbb-866a-a2f6cd6a70e2",
   "papers": [
     {
       "blocked_from": null,
@@ -18131,9 +18139,79 @@
       "title": "2015 年·上海卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_理科/figures/f2015bjs_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_理科/figures/f2015bjs_q05_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_理科/figures/f2015bjs_q07_polyline.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_理科/figures/f2015bjs_q08_fuel.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_理科/figures/f2015bjs_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_beijing_science",
+        "id": "gk-2015-regular-beijing-science",
+        "note": "批次 phase3-b06；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 935/936）、无参考答案页；选择 1–8＋填空 9–14＋解答 15–20＝20 题（分值为结构推断——**卷面不印分值、不印题量、不印考生注意**）。固定源不附答案（等级 D）；解析全由本库独立推导（盲解两段互证、每题独立第二路校验；第 20 题 (3) 经 36 初值全穷举）。源为 LaTeX（CM 系）重排产物（14 字体全嵌入、全矢量、无位图；文本层整体可读、数学子集 ToUnicode 部分缺失）。标点按全库约定归一（题号句末全角、正文逗号/括号全角）；选项标号源内半角 (A) 照源；「∥」源为矢量描边（右倾双斜线）按语义排 \\parallel；虚数单位 \\mathrm{i}、ln/sin/cos 正体；向量用 \\overrightarrow（TeX-vect10 拼装，第 13、17 题）。五图均为源内矢量精确复刻：程序框图（8 框＋8 箭头）、三视图（31.1815 pt/单位足尺、尺寸线断口式）、折线图（28.3468 pt/单位）、燃油效率三线图（三系列标记：圆点/三角/方块）、四棱锥（实 5 虚 5、O 为 EF 精确中点）。第 16 题源折行「记/录」「证/明」按同句连写；第 5 题选项跨栏照栏位；第 8 题 74/132 km/h 越格点照录；第 17 题图为示意图（EF 与 BC 差 0.18°）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-beijing-science",
+      "production_state": "complete",
+      "project_dir": "2015_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_北京理_含解析.md",
+        "questions": "2015/2015_数学真题_北京理_试题.md",
+        "solution_body": "2015/2015_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-4909ebb2c4d650bb3bdbcc1a6866aff77b51114975760caa547680b1e7001e1f"
+      ],
+      "title": "2015 年·北京卷·理科",
+      "track": "science",
+      "year": 2015
     }
   ],
-  "revision": 3610,
+  "revision": 3626,
   "schema_version": 1,
   "sources": [
     {
@@ -33318,8 +33396,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6cc8a530655d3ca9724784418544f5f6ef7e7169",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015北京理.pdf",
       "regions": [],
       "source_id": "src-4909ebb2c4d650bb3bdbcc1a6866aff77b51114975760caa547680b1e7001e1f",

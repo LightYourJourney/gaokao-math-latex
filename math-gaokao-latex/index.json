@@ -9849,6 +9849,45 @@
       "track": "理科",
       "variant": "上海理",
       "year": 2015
+    },
+    {
+      "base": "2015_beijing_science",
+      "dir": "2015_北京卷_理科",
+      "figures": [
+        "f2015bjs_q03_flowchart.tex",
+        "f2015bjs_q05_three_views.tex",
+        "f2015bjs_q07_polyline.tex",
+        "f2015bjs_q08_fuel.tex",
+        "f2015bjs_q17_pyramid.tex"
+      ],
+      "id": "gk-2015-regular-beijing-science",
+      "legacy_ids": [],
+      "note": "批次 phase3-b06；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 935/936）、无参考答案页；选择 1–8＋填空 9–14＋解答 15–20＝20 题（分值为结构推断——**卷面不印分值、不印题量、不印考生注意**）。固定源不附答案（等级 D）；解析全由本库独立推导（盲解两段互证、每题独立第二路校验；第 20 题 (3) 经 36 初值全穷举）。源为 LaTeX（CM 系）重排产物（14 字体全嵌入、全矢量、无位图；文本层整体可读、数学子集 ToUnicode 部分缺失）。标点按全库约定归一（题号句末全角、正文逗号/括号全角）；选项标号源内半角 (A) 照源；「∥」源为矢量描边（右倾双斜线）按语义排 \\parallel；虚数单位 \\mathrm{i}、ln/sin/cos 正体；向量用 \\overrightarrow（TeX-vect10 拼装，第 13、17 题）。五图均为源内矢量精确复刻：程序框图（8 框＋8 箭头）、三视图（31.1815 pt/单位足尺、尺寸线断口式）、折线图（28.3468 pt/单位）、燃油效率三线图（三系列标记：圆点/三角/方块）、四棱锥（实 5 虚 5、O 为 EF 精确中点）。第 16 题源折行「记/录」「证/明」按同句连写；第 5 题选项跨栏照栏位；第 8 题 74/132 km/h 越格点照录；第 17 题图为示意图（EF 与 BC 差 0.18°）。",
+      "paper": "北京卷",
+      "paper_id": "gk-2015-regular-beijing-science",
+      "pdf_pages": {
+        "questions": null,
+        "solutions": null
+      },
+      "questions": 20,
+      "structure": {
+        "填空题": [
+          9,
+          14
+        ],
+        "解答题": [
+          15,
+          20
+        ],
+        "选择题": [
+          1,
+          8
+        ]
+      },
+      "title": "2015 年·北京卷·理科",
+      "track": "理科",
+      "variant": "北京理",
+      "year": 2015
     }
   ],
   "source_pdf": "../math-gaokao-2017-2026/main.pdf",
