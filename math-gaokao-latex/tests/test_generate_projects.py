@@ -753,6 +753,16 @@ class ConversionInterfaceTests(unittest.TestCase):
         self.assertEqual(result.text, "\\textbf{答案：$1$}")
         self.assertEqual(result.warnings, ())
 
+    def test_answer_line_with_an_asterisk_still_gets_the_answer_box(self):
+        # 含上标星号的答案值（$\mathbf N^{*}$ 类）曾使 ANSLINE 失配、
+        # 退化为 \textbf 而缺绿答案框；此处锁定块级识别不得再退化。
+        result = md2tex.convert_markdown(
+            "**答案（1）：$a_{n}=2n+2$（$n\\in\\mathbf{N}^{*}$）。**\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+        self.assertIn("\\gkanswer{答案（1）：", result.text)
+        self.assertNotIn("\\textbf", result.text)
+
     def test_the_figure_map_comes_from_the_context_not_a_global(self):
         result = md2tex.convert_markdown(
             "![太极](images/2017理-t2-太极图.png)\n",

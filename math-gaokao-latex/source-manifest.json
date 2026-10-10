@@ -1166,6 +1166,14 @@
         "gk-2015-regular-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1175,7 +1183,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5eb42e99-6481-4cbb-866a-a2f6cd6a70e2",
+  "last_transaction_id": "3a478769-a421-49a5-ae73-34e057a17d54",
   "papers": [
     {
       "blocked_from": null,
@@ -18209,9 +18217,82 @@
       "title": "2015 年·北京卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_文科/figures/f2015bjw_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_文科/figures/f2015bjw_q07_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_文科/figures/f2015bjw_q13_linear.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_文科/figures/f2015bjw_q14_scatter.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_北京卷_文科/figures/f2015bjw_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_beijing_arts",
+        "id": "gk-2015-regular-beijing-arts",
+        "note": "批次 phase3-b07；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 937/938——与理卷 935/936 同书连页）、无参考答案页；选择 1–8＋填空 9–14＋解答 15–20＝20 题（分值为结构推断——**卷面不印分值**）。固定源不附答案（等级 D）；解析全由本库独立推导（盲解两段互证、每题独立第二路校验；第 17 题 200 万次分层仿真、第 20 题 sympy 因式分解＋随机线扫描）。源为 LaTeX（CM 系）重排产物（全矢量、无位图）。标点按全库约定归一（题号句末全角、正文逗号/括号全角）；选项标号源内半角 (A) 照源；「∥」源为矢量描边按语义排 \\parallel；第 6 题向量为粗斜体 \\boldsymbol{a}/\\boldsymbol{b}；第 19 题区间端点 e 为**正体**（\\mathrm{e}）。全卷 3 张表（第 4/8/17 题）按本库制表规范以 booktabs 三线表录入（第 17 题表头斜线分栏录作「顾客人数＼商品」，√/× 以 \\(\\surd\\)/\\(\\times\\) 排印）。五图均为源内矢量精确复刻：程序框图（7 框＋回边）、三视图（正/侧同向直角△、俯视正方形＋对角线）、线性规划图（闭合三角形足尺）、双散点图（左 35 右 37 点逐点照源）、三棱锥（实 6 虚 3、O/M 精确中点）。第 14 题源图与题干不完全对应（35/37 点、未配对）照源复刻并登记、(2) 按跨图定位法读出。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文"
+      },
+      "issue_ids": [
+        "ISSUE-1028",
+        "ISSUE-1029"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2015_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_北京文_含解析.md",
+        "questions": "2015/2015_数学真题_北京文_试题.md",
+        "solution_body": "2015/2015_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d0b941bc2d6452a8ed6284fd56e7bb77fa5344766f53cd0dd4ed76f4cb6625bc"
+      ],
+      "title": "2015 年·北京卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 3626,
+  "revision": 3637,
   "schema_version": 1,
   "sources": [
     {
@@ -33372,8 +33453,8 @@
       "exam_type": "regular",
       "git_blob_oid": "833c3dff1be63bf5c763d46af00b451d73d1fd5e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015北京文.pdf",
       "regions": [],
       "source_id": "src-d0b941bc2d6452a8ed6284fd56e7bb77fa5344766f53cd0dd4ed76f4cb6625bc",

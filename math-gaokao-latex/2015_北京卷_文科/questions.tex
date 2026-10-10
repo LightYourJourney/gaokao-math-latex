@@ -1,0 +1,222 @@
+% questions.tex —— 2015 年·北京卷·文科 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_北京文_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 全 2 页逐题核对（p1＝页 937：栏 1 标题与「一、选择题」1–5、栏 2 6–14、栏 3 第 14 题图与 ①②＋「三、解答题」15–16；p2＝页 938：栏 1 解答 17–18、栏 2 解答 19、栏 3 解答 20）。原卷为 \textbf{A3 横向（1190.55 \(\times\) 841.89 pt）三栏书刊合排}，阅读序＝左→中→右；\textbf{页脚仅印合订本书页页码 937／938}（页面底部正中），\textbf{无页眉}。标题「2015 普通高等学校招生考试（北京卷文）」在栏 1 内排印。\textbf{全卷不印分值、不印题量、不印「考生注意」栏}——三处节头逐字仅「一、选择题」「二、填空题」「三、解答题」，解答题无「（本小题满分 N 分）」行；总分 150 为结构推断，\textbf{卷面无凭据}，本文件不作补写。
+
+\textbf{源制作体系判定}（\texttt{pdffonts}／\texttt{pdftotext -layout}／\texttt{pdfimages -list} 实测）：源\textbf{不是扫描件，而是 LaTeX（Computer Modern 系）重排产物}——\texttt{pdfimages -list} 零命中（全页无位图；p1 117 条路径＝98 描边＋19 纯填充箭头，p2 64 条路径全描边）；嵌入字体含中文 \textbf{STSong（宋体正文）／STHeiti（黑体标题与节头）／STKaiti（仅第 8 题「注」行）}，拉丁与数学 \textbf{LMRoman 系与 CM 系（CMR10／CMMI10／CMSY10／MSAM10／CMMIB10 等）}。文本层整体可读；\textbf{「$\parallel$」两处为矢量描边绘制}（第 6 题、第 18 题 (1)，文本层完全缺失——按语义排印 \(\parallel\)）；根号上划线、表线、全部箭头亦为矢量路径。
+
+\textbf{标点与字样约定（实测）}：① \textbf{题号与句末}源内为半角 \texttt{.}，按全库约定写作全角「．」；② \textbf{正文句读}源内为半角 ASCII（\texttt{, : ; ?}）与半角括号，本文件按全库约定归一为全角「，」「：」「；」「？」「（）」，\textbf{顿号「、」为全角 CJK·照源保留}，内容零改动；③ \textbf{选择题选项标号}源内为\textbf{半角「(A)」照录}；④ \textbf{作答空}：填空题为统一长度横线（实测 31.5 pt，写作 \texttt{\gkblank{}}），选择题作答括注按全库约定写作「（　）」；⑤ \textbf{分数}源内均为行间式样（真分式），排印一律按显示风格（如 \(\dfrac{a}{b}\)）；⑥ \textbf{不等号／集合／三角／角号}：不等号若出现按 MSAM10 排 \(\leqslant\)，\(\cap\)、\(\triangle\)、\(\angle\) 等按实测字形录入；⑦ \textbf{向量}：第 6 题的 \(\boldsymbol{a}\)、\(\boldsymbol{b}\) 源为\textbf{粗斜体}（CMMIB10），录作 \(\boldsymbol{a}\)／\(\boldsymbol{b}\)；⑧ \textbf{双曲线／椭圆等方程}照源；第 19 题 (2) 区间右端点的 \(\mathrm{e}\) 源为\textbf{正体拉丁}，录作 \(\sqrt{\mathrm{e}}\)；⑨ \textbf{表格}：全卷 3 张有线框 tabular（第 4 题 5\(\times\)2、第 8 题 3\(\times\)3、第 17 题 7\(\times\)5）——本文件按本库制表规范以 booktabs 三线表录入（内容逐格照源；第 17 题表头斜线分栏录作「顾客人数＼商品」）；⑩ \textbf{词间空格}照页面词界补，公式内部间距交数学模式自动还原。
+
+\textbf{存疑与登记}（源内异常一律照录；完整清单见工作档 \texttt{page-map.md} §7 与 \texttt{figure-inventory.md} 存疑表 S-1…S-13）：① \textbf{第 14 题两幅散点图与题干不完全对应}——题干称「某班 37 位学生」，但左幅（语文）实绘 \textbf{35 点}、右幅（数学）实绘 \textbf{37 点}，两幅横坐标集合互不相同（独立生成、无一一对应）；「甲」「乙」仅见于左幅、「丙」仅见于右幅——系源重排产物特征，\textbf{照源复刻}，第 ② 小问按「总成绩名次」为公共键的跨图定位法读出（见答案）；② 第 17 题表内 \(\surd\)／\(\times\) 的行归属在文本层不可判（词盒顶偏移 9.6／4.9 pt ＞ 行高 15.51 pt），终端判格以字形墨迹中心为准（已双路复核，(217,丁) 格为 \(\surd\)）；③ 第 6 题与第 18 题 (1) 的「$\parallel$」为矢量描边（右倾双斜线），文本层静默丢失，按语义排印；④ 第 4 题「某」字在内容流中以字面串写出（CID 0x0D2A），已按字节还原核对；⑤ 第 8 题「注」行源用楷体（全卷唯一），系源排字样、不影响内容。
+\end{gktip}
+
+\gkpart{试题}
+
+\gkpart{一、选择题}
+
+\begin{question}
+\gkti{1}若集合 \(A=\{x\mid -5<x<2\}\)，\(B=\{x\mid -3<x<3\}\)，则 \(A\cap B=\)（　）
+
+(A) \(\{x\mid -3<x<2\}\)　(B) \(\{x\mid -5<x<2\}\)
+
+(C) \(\{x\mid -3<x<3\}\)　(D) \(\{x\mid -5<x<3\}\)
+
+\end{question}
+\begin{question}
+\gkti{2}圆心为 \((1,1)\) 且过原点的圆的方程是（　）
+
+(A) \((x-1)^{2}+(y-1)^{2}=1\)　(B) \((x+1)^{2}+(y+1)^{2}=1\)
+
+(C) \((x+1)^{2}+(y+1)^{2}=2\)　(D) \((x-1)^{2}+(y-1)^{2}=2\)
+
+\end{question}
+\begin{question}
+\gkti{3}下列函数中为偶函数的是（　）
+
+(A) \(y=x^{2}\sin x\)　(B) \(y=x^{2}\cos x\)
+
+(C) \(y=|\ln x|\)　(D) \(y=2^{-x}\)
+
+\end{question}
+\begin{question}
+\gkti{4}某校老年、中年和青年教师的人数见下表，采用分层抽样的方法调查教师的身体状况，在抽取的样本中，青年教师有 \(320\) 人，则该样本中的老年教师人数为（　）
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+类别 & 人数 \\
+\midrule
+老年教师 & 900 \\
+中年教师 & 1800 \\
+青年教师 & 1600 \\
+合计 & 4300 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(A) \(90\)　(B) \(100\)　(C) \(180\)　(D) \(300\)
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{5}执行如图所示的程序框图，输出 \(k\) 的值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q05_flowchart}\end{center}
+\nopagebreak[4]
+(A) \(3\)　(B) \(4\)　(C) \(5\)　(D) \(6\)
+
+\end{question}
+\begin{question}
+\gkti{6}设 \(\boldsymbol{a}\)，\(\boldsymbol{b}\) 是非零向量，“\(\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\)”是“\(\boldsymbol{a}\parallel\boldsymbol{b}\)”的（　）
+
+(A) 充分而不必要条件　(B) 必要而不充分条件
+
+(C) 充分必要条件　(D) 既不充分也不必要条件
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{7}某四棱锥的三视图如图所示，该四棱锥最长棱的棱长为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q07_three_views}\end{center}
+\nopagebreak[4]
+(A) \(1\)　(B) \(\sqrt{2}\)　(C) \(\sqrt{3}\)　(D) \(2\)
+
+\end{question}
+\begin{question}
+\gkti{8}某辆汽车每次加油都把油箱加满，下表记录了该车相邻两次加油时的情况
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+加油时间 & 加油量 (升) & 加油时的累计里程 (千米) \\
+\midrule
+2015 年 5 月 1 日 & 12 & 35000 \\
+2015 年 5 月 15 日 & 48 & 35600 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+注：“累计里程”指汽车从出厂开始累计行驶的路程．
+
+在这段时间内，该车每 \(100\) 千米平均耗油量为（　）
+
+(A) \(6\) 升　(B) \(8\) 升　(C) \(10\) 升　(D) \(12\) 升
+
+\end{question}
+\gkpart{二、填空题}
+
+\begin{question}
+\gkti{9}复数 \(\mathrm{i}(1+\mathrm{i})\) 的实部为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{10}\(2^{-3}\)，\(3^{\frac{1}{2}}\)，\(\log_{2}5\) 三个数中最大的数是\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{11}在 \(\triangle ABC\) 中，\(a=3\)，\(b=\sqrt{6}\)，\(\angle A=\dfrac{2\pi}{3}\)，则 \(\angle B=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{12}已知 \((2,0)\) 是双曲线 \(x^{2}-\dfrac{y^{2}}{b^{2}}=1\) \((b>0)\) 的一个焦点，则 \(b=\)\gkblank{}．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{13}如图，\(\triangle ABC\) 及其内部的点组成的集合记为 \(D\)，\(P(x,y)\) 为 \(D\) 中任意一点，则 \(z=2x+3y\) 的最大值为\gkblank{}．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q13_linear}\end{center}
+\nopagebreak[4]
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{14}高三年级 \(267\) 位学生参加期末考试，某班 \(37\) 位学生的语文成绩、数学成绩与总成绩在全年级中的排名情况如图所示，甲、乙、丙为该班三位学生．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q14_scatter}\end{center}
+\nopagebreak[4]
+从这次考试成绩看，
+
+① 在甲、乙两人中，其语文成绩名次比其总成绩名次靠前的学生是\gkblank{}；
+
+② 在语文和数学两个科目中，丙同学的成绩名次更靠前的科目是\gkblank{}．
+
+\end{question}
+\gkpart{三、解答题}
+
+\begin{question}
+\gkti{15}已知函数 \(f(x)=\sin x-2\sqrt{3}\sin^{2}\dfrac{x}{2}\)．
+
+（1） 求 \(f(x)\) 的最小正周期；
+
+（2） 求 \(f(x)\) 在区间 \(\left[0,\dfrac{2\pi}{3}\right]\) 上的最小值．
+
+\end{question}
+\begin{question}
+\gkti{16}已知等差数列 \(\{a_{n}\}\) 满足 \(a_{1}+a_{2}=10\)，\(a_{4}-a_{3}=2\)．
+
+（1） 求 \(\{a_{n}\}\) 的通项公式；
+
+（2） 设等比数列 \(\{b_{n}\}\) 满足 \(b_{2}=a_{3}\)，\(b_{3}=a_{7}\)，问：\(b_{6}\) 与数列 \(\{a_{n}\}\) 的第几项相等？
+
+\end{question}
+\begin{question}
+\gkti{17}某超市随机选取 1000 位顾客，记录了他们购买甲、乙、丙、丁四种商品的情况，整理成如下统计表，其中“\(\surd\)”表示购买，“\(\times\)”表示未购买．
+
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+顾客人数＼商品 & 甲 & 乙 & 丙 & 丁 \\
+\midrule
+100 & \(\surd\) & \(\times\) & \(\surd\) & \(\surd\) \\
+217 & \(\times\) & \(\surd\) & \(\times\) & \(\surd\) \\
+200 & \(\surd\) & \(\surd\) & \(\surd\) & \(\times\) \\
+300 & \(\surd\) & \(\times\) & \(\surd\) & \(\times\) \\
+85 & \(\surd\) & \(\times\) & \(\times\) & \(\times\) \\
+98 & \(\times\) & \(\surd\) & \(\times\) & \(\times\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（1） 估计顾客同时购买乙和丙的概率；
+
+（2） 估计顾客在甲、乙、丙、丁中同时购买 3 种商品的概率；
+
+（3） 如果顾客购买了甲，则该顾客同时购买乙、丙、丁中哪种商品的可能性最大？
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{18}如图，在三棱锥 \(V-ABC\) 中，平面 \(VAB\perp\) 平面 \(ABC\)，\(\triangle VAB\) 为等边三角形，\(AC\perp BC\) 且 \(AC=BC=\sqrt{2}\)，\(O\)，\(M\) 分别为 \(AB\)，\(VA\) 的中点．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q18_pyramid}\end{center}
+\nopagebreak[4]
+（1） 求证：\(VB\parallel\) 平面 \(MOC\)；
+
+（2） 求证：平面 \(MOC\perp\) 平面 \(VAB\)；
+
+（3） 求三棱锥 \(V-ABC\) 的体积．
+
+\end{question}
+\begin{question}
+\gkti{19}设函数 \(f(x)=\dfrac{x^{2}}{2}-k\ln x\)，\(k>0\)．
+
+（1） 求 \(f(x)\) 的单调区间和极值；
+
+（2） 证明：若 \(f(x)\) 存在零点，则 \(f(x)\) 在区间 \((1,\sqrt{\mathrm{e}}]\) 上仅有一个零点．
+
+\end{question}
+\begin{question}
+\gkti{20}已知椭圆 \(C\)：\(x^{2}+3y^{2}=3\)，过点 \(D(1,0)\) 且不过点 \(E(2,1)\) 的直线与椭圆 \(C\) 交于 \(A\)，\(B\) 两点，直线 \(AE\) 与直线 \(x=3\) 交于点 \(M\)．
+
+（1） 求椭圆 \(C\) 的离心率；
+
+（2） 若直线 \(AB\) 垂直于 \(x\) 轴，求直线 \(BM\) 的斜率；
+
+（3） 试判断直线 \(BM\) 与直线 \(DE\) 的位置关系，并说明理由．
+
+\end{question}

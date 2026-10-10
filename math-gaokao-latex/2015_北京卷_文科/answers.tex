@@ -1,0 +1,1061 @@
+% answers.tex —— 2015 年·北京卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_北京文_试题.md + 2015/2015_数学真题_北京文_解析正文.md + 2015/2015_数学真题_北京文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定原卷不附参考答案（证据等级 D），以下为逐题独立推导、逐题校验的解析（非官方答案）。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+若集合 \(A=\{x\mid -5<x<2\}\)，\(B=\{x\mid -3<x<3\}\)，则 \(A\cap B=\)（　）
+
+(A) \(\{x\mid -3<x<2\}\)　(B) \(\{x\mid -5<x<2\}\)
+
+(C) \(\{x\mid -3<x<3\}\)　(D) \(\{x\mid -5<x<3\}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\(A=\{x\mid -5<x<2\}\) 即开区间 \((-5,2)\)，\(B=\{x\mid -3<x<3\}\) 即开区间 \((-3,3)\)。交集由同时落入这两个区间的数组成，故左端点取两者中较大的一个、右端点取两者中较小的一个：
+\nopagebreak[4]
+\[
+(-5,2)\cap(-3,3)=(\max\{-5,-3\},\ \min\{2,3\})=(-3,2).
+\]
+即 \(A\cap B=\{x\mid -3<x<2\}\)。
+
+（验证：改用逐段取点判定复核——\(x=-4\) 属于 \(A\) 但不属于 \(B\)，应舍；\(x=-2.5\) 与 \(x=0\) 在两个区间内都成立，应取；\(x=2.5\) 属于 \(B\) 但不属于 \(A\)，应舍。再看端点：\(-3\notin B\)、\(2\notin A\)，两端都取不到，说明交集的端点是 \(-3\) 与 \(2\) 且均为开。四个选项中只有 \(\{x\mid -3<x<2\}\) 同时容纳 \(-2.5\)、\(0\) 而排除 \(-4\)、\(2.5\)。）
+
+故选 (A)。
+
+\gkanswer{答案：A（\(\{x\mid -3<x<2\}\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+圆心为 \((1,1)\) 且过原点的圆的方程是（　）
+
+(A) \((x-1)^{2}+(y-1)^{2}=1\)　(B) \((x+1)^{2}+(y+1)^{2}=1\)
+
+(C) \((x+1)^{2}+(y+1)^{2}=2\)　(D) \((x-1)^{2}+(y-1)^{2}=2\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+圆心为 \((1,1)\)，圆过原点 \((0,0)\)，故半径的平方
+\nopagebreak[4]
+\[
+r^{2}=(1-0)^{2}+(1-0)^{2}=2.
+\]
+\Needspace{5\baselineskip}
+于是圆的方程为
+\nopagebreak[4]
+\[
+(x-1)^{2}+(y-1)^{2}=2.
+\]
+
+（验证：把原点代入该方程，左边 \((0-1)^{2}+(0-1)^{2}=2\) 等于右边，圆确过原点；再取该圆上一点 \((2,2)\) 复核，它到圆心的距离为 \(\sqrt{(2-1)^{2}+(2-1)^{2}}=\sqrt{2}\)，代入方程左边也得 \(2\)，与半径相符。另三项逐一排除：(A) 的右边为 \(1\)，原点代入得左边 \(2\)，不成立；(B) 与 (C) 的圆心写成 \((-1,-1)\)，与题给的圆心 \((1,1)\) 不符，且 (B) 的右边还是 \(1\)。）
+
+故选 (D)。
+
+\gkanswer{答案：D（\((x-1)^{2}+(y-1)^{2}=2\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+下列函数中为偶函数的是（　）
+
+(A) \(y=x^{2}\sin x\)　(B) \(y=x^{2}\cos x\)
+
+(C) \(y=|\ln x|\)　(D) \(y=2^{-x}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+偶函数要求定义域关于原点对称，且对定义域内任意 \(x\) 都有 \(f(-x)=f(x)\)。逐项检验：
+
+\begin{itemize}
+\item (A) \(y=x^{2}\sin x\)：\(f(-x)=(-x)^{2}\sin(-x)=-x^{2}\sin x=-f(x)\)，为奇函数，不是偶函数。
+\item (B) \(y=x^{2}\cos x\)：\(f(-x)=(-x)^{2}\cos(-x)=x^{2}\cos x=f(x)\)，为偶函数。
+\item (C) \(y=\left|\ln x\right|\)：定义域为 \((0,+\infty)\)，不关于原点对称，不是偶函数。
+\item (D) \(y=2^{-x}\)：\(f(-x)=2^{x}\)，与 \(f(x)=2^{-x}\) 一般不相等，不是偶函数。
+\end{itemize}
+
+只有 (B) 满足偶函数的定义。
+
+（验证：取 \(x=\pm1\) 逐项数值复算——(B) 在两处的函数值同为 \(\cos1=0.540302\)；(A) 在两处的函数值为 \(-0.841471\) 与 \(0.841471\)，互为相反数；(D) 在两处的函数值为 \(2\) 与 \(0.5\)，既不相等也不互为相反数；再以 \(x=\dfrac12\) 复核 (B)，同样满足 \(f(-x)=f(x)\)，与逐项判定一致。）
+
+故选 (B)。
+
+\gkanswer{答案：B（\(y=x^{2}\cos x\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+某校老年、中年和青年教师的人数见下表，采用分层抽样的方法调查教师的身体状况，在抽取的样本中，青年教师有 \(320\) 人，则该样本中的老年教师人数为（　）
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+类别 & 人数 \\
+\midrule
+老年教师 & 900 \\
+中年教师 & 1800 \\
+青年教师 & 1600 \\
+合计 & 4300 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(A) \(90\)　(B) \(100\)　(C) \(180\)　(D) \(300\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题给三类教师的人数与合计如下：
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+类别 & 人数 \\
+\midrule
+老年教师 & 900 \\
+中年教师 & 1800 \\
+青年教师 & 1600 \\
+合计 & 4300 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+分层抽样按各层人数占全体的比例分配样本。青年教师占全体教师的 \(\dfrac{1600}{4300}\)，而样本中青年教师有 \(320\) 人，设样本容量为 \(n\)，则
+\nopagebreak[4]
+\[
+320=n\times\frac{1600}{4300},
+\]
+\Needspace{5\baselineskip}
+解得
+\nopagebreak[4]
+\[
+n=320\times\frac{4300}{1600}=860.
+\]
+\Needspace{5\baselineskip}
+样本中老年教师的人数按同一比例分配：
+\nopagebreak[4]
+\[
+860\times\frac{900}{4300}=180.
+\]
+
+（验证：改走「同类比」路径——老年教师与青年教师的人数之比为 \(900:1600=9:16\)，分层抽样保持各层比例，故样本中两者之比也应为 \(9:16\)，于是老年教师人数为 \(320\times\dfrac{9}{16}=180\)，与上式同得 \(180\)；再核样本总数：中年教师为 \(1800\times\dfrac{860}{4300}=360\)，三部分相加 \(180+320+360=860\)，恰等于样本容量，各层人数之和自洽。(A)、(B)、(D) 均与 \(180\) 不符。）
+
+故选 (C)。
+
+\gkanswer{答案：C（\(180\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，输出 \(k\) 的值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q05_flowchart}\end{center}
+\nopagebreak[4]
+(A) \(3\)　(B) \(4\)　(C) \(5\)　(D) \(6\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+框图自上而下依次是：开始，处理框「\(k=0\)，\(a=3\)，\(q=\dfrac12\)」，处理框「\(a=aq\)」，处理框「\(k=k+1\)」，判断框「\(a<\dfrac14\)」，输出框「输出 \(k\)」，结束；判断框的「否」支向上回接到「\(a=aq\)」，即循环体先执行一轮、再判条件，条件成立时才退出循环。
+
+按此逐轮模拟，初值为 \(k=0\)、\(a=3\)、\(q=\dfrac12\)：
+
+\begin{itemize}
+\item 第 1 轮：\(a=3\times\dfrac12=1.5\)，\(k=1\)；判断 \(1.5<\dfrac14\) 不成立，继续循环。
+\item 第 2 轮：\(a=1.5\times\dfrac12=0.75\)，\(k=2\)；判断 \(0.75<\dfrac14\) 不成立，继续循环。
+\item 第 3 轮：\(a=0.75\times\dfrac12=0.375\)，\(k=3\)；判断 \(0.375<\dfrac14\) 不成立，继续循环。
+\item 第 4 轮：\(a=0.375\times\dfrac12=0.1875\)，\(k=4\)；此时 \(0.1875<\dfrac14\) 成立，退出循环并输出 \(k=4\)。
+\end{itemize}
+
+（验证：按框图结构写成程序独立复算——每轮先令 \(a\) 乘 \(\dfrac12\)、令 \(k\) 自增 \(1\)，再判 \(a<\dfrac14\) 是否成立，成立即输出 \(k\)。程序给出的循环轨迹为 \(a=1.5,\ 0.75,\ 0.375,\ 0.1875\) 与 \(k=1,2,3,4\)，输出 \(k=4\)，与手算逐轮一致。四个选项恰对应四种阈值误读：同一程序下，退出阈值取 \(\dfrac12\) 得 \(k=3\)（选项 A）、取 \(\dfrac14\) 得 \(k=4\)（选项 B）、取 \(\dfrac18\) 得 \(k=5\)（选项 C）、取 \(\dfrac{1}{16}\) 得 \(k=6\)（选项 D），只有按框图所写的 \(\dfrac14\) 才得 \(4\)。）
+
+故选 (B)。
+
+\gkanswer{答案：B（\(4\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设 \(\boldsymbol{a}\)，\(\boldsymbol{b}\) 是非零向量，“\(\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\)”是“\(\boldsymbol{a}\parallel\boldsymbol{b}\)”的（　）
+
+(A) 充分而不必要条件　(B) 必要而不充分条件
+
+(C) 充分必要条件　(D) 既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 \(p\)：「\(\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\)」，\(q\)：「\(\boldsymbol{a}\parallel\boldsymbol{b}\)」，其中 \(\boldsymbol{a}\)、\(\boldsymbol{b}\) 是非零向量（题干中两向量之间的符号是平行的双竖线）。
+
+由数量积的定义 \(\boldsymbol{a}\cdot\boldsymbol{b}=|\boldsymbol{a}||\boldsymbol{b}|\cos\langle\boldsymbol{a},\boldsymbol{b}\rangle\)，条件 \(p\) 即 \(\cos\langle\boldsymbol{a},\boldsymbol{b}\rangle=1\)，也就是两向量同向。同向的向量必平行，故 \(p\Rightarrow q\)，\(p\) 是 \(q\) 的充分条件。
+
+反过来，两向量平行时未必同向，还可能反向：此时 \(\cos\langle\boldsymbol{a},\boldsymbol{b}\rangle=-1\)，\(\boldsymbol{a}\cdot\boldsymbol{b}=-|\boldsymbol{a}||\boldsymbol{b}|\neq|\boldsymbol{a}||\boldsymbol{b}|\)，条件 \(p\) 不成立。故 \(q\not\Rightarrow p\)，\(p\) 不是 \(q\) 的必要条件。
+
+（验证：两个方向各取一组具体向量独立核对——充分性方向取 \(\boldsymbol{a}=\boldsymbol{b}=(1,0)\)，算得 \(\boldsymbol{a}\cdot\boldsymbol{b}=1=|\boldsymbol{a}||\boldsymbol{b}|\)，\(p\) 与 \(q\) 同时成立；必要性方向取 \(\boldsymbol{a}=(1,0)\)、\(\boldsymbol{b}=(-1,0)\)，两者都是非零向量且平行，\(q\) 成立，而 \(\boldsymbol{a}\cdot\boldsymbol{b}=-1\neq1=|\boldsymbol{a}||\boldsymbol{b}|\)，\(p\) 不成立，必要性被这一个反例直接否掉。(B)、(C)、(D) 分别断言「必要而不充分」「充分必要」「既不充分也不必要」，均与本结论矛盾。）
+
+故选 (A)。
+
+\gkanswer{答案：A（充分而不必要条件）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+某四棱锥的三视图如图所示，该四棱锥最长棱的棱长为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q07_three_views}\end{center}
+\nopagebreak[4]
+(A) \(1\)　(B) \(\sqrt{2}\)　(C) \(\sqrt{3}\)　(D) \(2\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由三视图还原几何体。正（主）视图是两直角边都为 \(1\) 的直角三角形；侧（左）视图也是同形的直角三角形，两直角边各为 \(1\)；俯视图是边长为 \(1\) 的正方形，其中只画出一条对角线（自左上角连到右下角）。
+
+俯视图中「正方形加一条对角线」正是锥顶位于底面某个顶点正上方时的投影：此时四条侧棱的投影分别是两条底边与一条对角线，与锥顶同处一条竖直线的那个底面顶点投影成一点。若锥顶在底面中心正上方，俯视图会出现两条对角线；若锥顶在底边中点正上方，投影则是一段折线——都与题给俯视图不符。故锥顶在底面顶点正上方；正视图、侧视图所标的直角边 \(1\) 又给出底面边长为 \(1\)、高为 \(1\)。
+
+\Needspace{5\baselineskip}
+取底面为边长 \(1\) 的正方形，锥顶在该正方形一个顶点的正上方、高为 \(1\)。各条棱长为：四条底棱都是 \(1\)；与锥顶同处一条竖直线的侧棱是 \(1\)；锥顶到两个相邻底面顶点的侧棱为
+\nopagebreak[4]
+\[
+\sqrt{1^{2}+1^{2}}=\sqrt{2},
+\]
+\Needspace{5\baselineskip}
+锥顶到对角顶点的侧棱为
+\nopagebreak[4]
+\[
+\sqrt{1^{2}+(\sqrt{2})^{2}}=\sqrt{3}.
+\]
+其中最长者为 \(\sqrt{3}\)。
+
+（验证：用坐标法复算——取底面顶点 \(A_{1}(0,0,0)\)、\(A_{2}(1,0,0)\)、\(A_{3}(1,1,0)\)、\(A_{4}(0,1,0)\)，锥顶 \(V(1,0,1)\)，八条棱长依次为 \(1,1,1,1,1,\sqrt{2},\sqrt{2},\sqrt{3}\)，最大者为 \(\sqrt{3}=1.7320508\ldots\)；再按这个几何体反推三视图，正视图与侧视图都是两直角边为 \(1\)、\(1\) 的直角三角形，俯视图为正方形并含由 \((0,1)\) 到 \((1,0)\) 的一条对角线，与题给三图逐项吻合。此外，若把侧视图竖直边的左右位置换个读法（相当于把锥顶改到另一个底面顶点正上方），最长棱仍是伸向对角顶点的那条，结论不变。）
+
+故选 (C)。
+
+\gkanswer{答案：C（\(\sqrt{3}\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+某辆汽车每次加油都把油箱加满，下表记录了该车相邻两次加油时的情况
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+加油时间 & 加油量 (升) & 加油时的累计里程 (千米) \\
+\midrule
+2015 年 5 月 1 日 & 12 & 35000 \\
+2015 年 5 月 15 日 & 48 & 35600 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+注：“累计里程”指汽车从出厂开始累计行驶的路程．
+
+在这段时间内，该车每 \(100\) 千米平均耗油量为（　）
+
+(A) \(6\) 升　(B) \(8\) 升　(C) \(10\) 升　(D) \(12\) 升
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题给两次加油的情况如下：
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+加油时间 & 加油量（升） & 加油时的累计里程（千米） \\
+\midrule
+2015 年 5 月 1 日 & 12 & 35000 \\
+2015 年 5 月 15 日 & 48 & 35600 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+题注指出「累计里程」是汽车从出厂开始累计行驶的路程，故两次累计里程之差就是这段时间的行驶里程。
+
+\Needspace{5\baselineskip}
+因为每次加油都把油箱加满，所以两次加油之间消耗掉的燃油恰好等于第二次加入的油量，即 \(48\) 升。这段时间内汽车行驶了
+\nopagebreak[4]
+\[
+35600-35000=600
+\]
+\Needspace{5\baselineskip}
+千米。故每 \(100\) 千米的平均耗油量为
+\nopagebreak[4]
+\[
+\frac{48}{600}\times100=8,
+\]
+即 \(8\) 升。表中第一次的 \(12\) 升是上一次加油时的加油量，与这段区间的耗油量无关。
+
+（验证：把四个选项当作每 \(100\) 千米耗油量逐个回代，反推 \(600\) 千米的总耗油量——(A) \(6\) 升对应 \(36\) 升，(B) \(8\) 升对应 \(48\) 升，(C) \(10\) 升对应 \(60\) 升，(D) \(12\) 升对应 \(72\) 升；只有 (B) 反推出的 \(48\) 升与表中第二次的加油量吻合，其余三项对应的总耗油量都与 \(48\) 升不等，与「两次加油都把油箱加满」这一条件不符。）
+
+故选 (B)。
+
+\gkanswer{答案：B（\(8\) 升）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+复数 \(\mathrm{i}(1+\mathrm{i})\) 的实部为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 \(\mathrm{i}^{2}=-1\)，按复数乘法展开：
+
+\nopagebreak[4]
+\[
+\mathrm{i}(1+\mathrm{i})=\mathrm{i}+\mathrm{i}^{2}=\mathrm{i}-1=-1+\mathrm{i}.
+\]
+
+所以 \(\mathrm{i}(1+\mathrm{i})\) 的实部为 \(-1\)（虚部为 \(1\)）。
+
+（验证：改用复数乘法的一般式 \((a+b\mathrm{i})(c+d\mathrm{i})=(ac-bd)+(ad+bc)\mathrm{i}\) 独立复算——取 \(a=0\)、\(b=1\)、\(c=1\)、\(d=1\)，得实部 \(ac-bd=0\times1-1\times1=-1\)、虚部 \(ad+bc=0\times1+1\times1=1\)，与直接展开逐项一致。）
+
+\gkanswer{答案：\(-1\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+\(2^{-3}\)，\(3^{\frac{1}{2}}\)，\(\log_{2}5\) 三个数中最大的数是\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+把三个数按各自所在的区间分层比较。
+
+\Needspace{5\baselineskip}
+\(2^{-3}\) 的底数 \(2>1\)、指数为负，故
+
+\nopagebreak[4]
+\[
+2^{-3}=\frac{1}{8}\in(0,1).
+\]
+
+\Needspace{5\baselineskip}
+又 \(3^{\frac{1}{2}}=\sqrt{3}\)，而 \(1<3<4\) 给出 \(1<\sqrt{3}<2\)，故
+
+\nopagebreak[4]
+\[
+3^{\frac{1}{2}}\in(1,2).
+\]
+
+\Needspace{5\baselineskip}
+再由 \(\log_{2}x\) 递增及 \(5>4\)，得
+
+\nopagebreak[4]
+\[
+\log_{2}5>\log_{2}4=2.
+\]
+
+三个数分别落在 \((0,1)\)、\((1,2)\)、\((2,+\infty)\) 三个互不相交的区间内，按区间依次增大，故最大的是 \(\log_{2}5\)。
+
+（验证：数值复算三个数——\(2^{-3}=0.125\)、\(3^{1/2}=1.732051\)、\(\log_{2}5=2.321928\)，最大者为 \(\log_{2}5\)，与区间论证一致。）
+
+\gkanswer{答案：\(\log_{2}5\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+在 \(\triangle ABC\) 中，\(a=3\)，\(b=\sqrt{6}\)，\(\angle A=\dfrac{2\pi}{3}\)，则 \(\angle B=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由正弦定理 \(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}\) 得
+
+\nopagebreak[4]
+\[
+\sin B=\frac{b\sin A}{a}=\frac{\sqrt{6}\sin\frac{2\pi}{3}}{3}=\frac{\sqrt{6}\times\frac{\sqrt{3}}{2}}{3}=\frac{\sqrt{2}}{2}.
+\]
+
+\Needspace{5\baselineskip}
+在三角形内角的范围内，正弦值为 \(\dfrac{\sqrt{2}}{2}\) 的角有两个，即
+
+\nopagebreak[4]
+\[
+B=\frac{\pi}{4}\quad\text{或}\quad B=\frac{3\pi}{4}.
+\]
+
+又 \(A=\dfrac{2\pi}{3}\)，三角形内角和为 \(\pi\)，故其余两角之和为 \(\pi-A=\dfrac{\pi}{3}\)，其中 \(B<\dfrac{\pi}{3}\)，只能取 \(B=\dfrac{\pi}{4}\)。
+
+所以 \(\angle B=\dfrac{\pi}{4}\)。
+
+\Needspace{5\baselineskip}
+（验证：代回验证三边与三角自洽——取 \(B=\dfrac{\pi}{4}\)，则 \(C=\pi-\dfrac{2\pi}{3}-\dfrac{\pi}{4}=\dfrac{\pi}{12}\)，由正弦定理配出的三边比为
+
+\nopagebreak[4]
+\[
+a:b:c=\sin\frac{2\pi}{3}:\sin\frac{\pi}{4}:\sin\frac{\pi}{12}=0.866025:0.707107:0.258819,
+\]
+
+题给 \(a=3\)、\(b=\sqrt{6}\) 的比为 \(3:2.449490=1:0.816497\)，而 \(0.866025:0.707107=1:0.816497\)，两者完全吻合；若取 \(B=\dfrac{3\pi}{4}\)，则 \(A+B=\dfrac{17\pi}{12}>\pi\)，内角和已越界，排除。）
+
+\gkanswer{答案：\(\dfrac{\pi}{4}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知 \((2,0)\) 是双曲线 \(x^{2}-\dfrac{y^{2}}{b^{2}}=1\) \((b>0)\) 的一个焦点，则 \(b=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线 \(x^{2}-\dfrac{y^{2}}{b^{2}}=1\) 与标准方程 \(\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\) 对照，得 \(a^{2}=1\)、即实半轴长 \(a=1\)。
+
+\Needspace{5\baselineskip}
+题给焦点 \((2,0)\) 在 \(x\) 轴上，且对双曲线有 \(c^{2}=a^{2}+b^{2}\)，故半焦距 \(c=2\) 给出
+
+\nopagebreak[4]
+\[
+b^{2}=c^{2}-a^{2}=4-1=3.
+\]
+
+又 \(b>0\)，所以 \(b=\sqrt{3}\)。
+
+（验证：把 \(b=\sqrt{3}\) 代回——半焦距 \(c=\sqrt{a^{2}+b^{2}}=\sqrt{1+3}=2\)，焦点为 \((\pm2,0)\)，与题给 \((2,0)\) 相符；且 \(b^{2}=3>0\) 同时满足 \(b>0\) 与曲线非退化的要求。）
+
+\gkanswer{答案：\(\sqrt{3}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+如图，\(\triangle ABC\) 及其内部的点组成的集合记为 \(D\)，\(P(x,y)\) 为 \(D\) 中任意一点，则 \(z=2x+3y\) 的最大值为\gkblank{}．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q13_linear}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先按图读出可行域。图中为标准直角坐标系（\(O\) 在原点，\(x\) 轴向右、\(y\) 轴向上），三角形三个顶点的标注为 \(C(0,2)\)（在 \(y\) 轴上）、\(B(1,0)\)（在 \(x\) 轴上）、\(A(2,1)\)（第一象限），即 \(D\) 是 \(\triangle ABC\) 及其内部的点集。（图读复核：为防图上位置与标注不符，另按像素量算——以 \(O\) 为原点量得 \(x\) 方向 \(1\) 个单位约 \(255\) px、\(y\) 方向 \(1\) 个单位约 \(257\) px，三个顶点的像素坐标为 \(B(1.00,0.00)\)、\(A(2.00,0.94)\)、\(C(0.00,2.00)\)，与所标坐标一致（\(A\) 的第二分量 \(0.94\) 为线宽与取整所致），故按 \(A(2,1)\)、\(B(1,0)\)、\(C(0,2)\) 读。）
+
+\Needspace{5\baselineskip}
+目标函数 \(z=2x+3y\) 是线性函数，而 \(D\) 是有界闭多边形（此处为三角形），其最值必在顶点处取得。三个顶点处的函数值为
+
+\nopagebreak[4]
+\[
+z(A)=2\times2+3\times1=7,\qquad z(B)=2\times1+3\times0=2,\qquad z(C)=2\times0+3\times2=6,
+\]
+
+其中最大者为 \(7\)。
+
+所以 \(z=2x+3y\) 的最大值为 \(7\)。
+
+（验证：三角形内随机取 \(40\) 万个点做数值扫描，最大值 \(6.999106\) 取在收敛于顶点 \(A(2,1)\) 的样本点上；以取整后的 \(7\) 为上确界，与顶点法一致。）
+
+\gkanswer{答案：\(7\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+高三年级 \(267\) 位学生参加期末考试，某班 \(37\) 位学生的语文成绩、数学成绩与总成绩在全年级中的排名情况如图所示，甲、乙、丙为该班三位学生．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q14_scatter}\end{center}
+\nopagebreak[4]
+从这次考试成绩看，
+
+① 在甲、乙两人中，其语文成绩名次比其总成绩名次靠前的学生是\gkblank{}；
+
+② 在语文和数学两个科目中，丙同学的成绩名次更靠前的科目是\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由两幅散点图读数（按源页 600 dpi 渲染判读）：左图纵轴为「语文成绩年级名次」、右图纵轴为「数学成绩年级名次」，两图横轴同为「总成绩年级名次」；两轴刻度均为 \(0\sim267\)，原点 \(O\) 在左下角，名次数越大越靠上、靠右（即越「靠后」）。读数以图框为标尺：左图 \(x=0\) 位于像素列 \(15\)、\(x=267\) 位于像素列 \(1106.5\)；右图 \(x=0\) 位于像素列 \(174.5\)、\(x=267\) 位于像素列 \(1266\)；两图框宽同为 \(1091.5\) px，即 \(1\) 个名次单位约 \(4.088\) px（纵向同比）。数据点径 \(20\) px，用连通域分析取质心（精度约 \(\pm0.5\) px，约合 \(\pm0.12\) 个名次）；「甲」「乙」「丙」三处为标注字（字形尺寸明显大于数据点），其标注点即紧邻该字左侧的那个点（点与字的竖直中心偏差小于 \(3\) px，可确认配对）。
+
+源图登记：两幅散点互不配对——左幅实绘 \(35\) 点、右幅实绘 \(37\) 点（600 dpi 栅格上能干净分离的连通点簇为左幅 \(33\) 个、右幅 \(34\) 个，其余墨迹与框线或相邻点相触而并入），且「甲」「乙」仅见于左幅、「丙」仅见于右幅，与题干所称「某班 \(37\) 位学生」并不一一对应。此为源图自身特征，解析照源复刻；第 ② 问以「总成绩名次」为公共键做跨图定位。
+
+\gksubpart{①}
+
+按图读数：左图中甲的点为（总 \(39.5\)，语文 \(81.4\)）、乙的点为（总 \(126.6\)，语文 \(67.7\)）。
+
+「语文成绩名次比总成绩名次靠前」即同一点的纵坐标（语文名次）小于横坐标（总名次）。以对角线 \(y=x\)（名次相等线）为参照：点在对角线上方表示语文名次更大（更靠后），在下方表示语文名次更小（更靠前）。
+
+甲、乙两人的点分别落在对角线的两侧：甲的点在对角线上方（语文名次约 \(81\) 大于总名次约 \(40\)，语文更靠后）；乙的点在对角线下方（语文名次约 \(68\) 小于总名次约 \(127\)，语文更靠前）。
+
+所以第 ① 问的答案是乙。
+
+\gksubpart{②}
+
+丙只在右图（数学）上标注，其点为（总 \(169.3\)，数学 \(172.9\)）：数学名次约 \(173\)，点几乎落在对角线上、仅略偏上（即比总名次 \(169\) 稍靠后）。
+
+丙的语文名次须在左图中按同一个「总成绩名次」定位：左图在横坐标约 \(169\) 处的数据点为（总 \(166.2\)，语文 \(221.8\)），即语文名次约 \(222\)。
+
+比较两个名次：\(222\) 大于 \(173\)，名次数越大越靠后，故丙的数学名次更靠前。
+
+所以第 ② 问的答案是数学。
+
+（验证：稳健性与交叉核对两路——① 甲、乙的读数与对角线分别相差 \(42\) 与 \(59\) 个名次单位（甲 \(81.4-39.5\)、乙 \(126.6-67.7\)），远超测量误差，结论稳定。② 把丙横坐标附近的左图候选点放宽到 \((166,222)\) 与 \((186,213)\) 两个，任取其一，语文名次都落在 \(213\sim222\)，都远大于 \(173\)，即结论不依赖跨图定位的精度。另做两图横坐标同构性核对：两图横坐标本应为同一批学生的同一「总成绩名次」，以纯比例对齐搜索得最佳比例 \(1.025\)，此时两图的 \(33\) 个横坐标可一一配对、残差多在 \(\pm2\) 个名次单位内（小于一个点的半径，约 \(2.4\) 个名次单位），确证两图横坐标同源；在该对齐下丙的对应点仍是 \((166,222)\)。此外全图可分离的数据点为左幅 \(33\) 个、右幅 \(34\) 个，未归属的像素经逐像素核对只聚成一簇，位于数据坐标 \(x\approx2\sim7\)、\(y\approx7\sim17\) 的左下角（与框线相触而并入框线连通域），不在丙的横坐标区间，不影响本题。又核源图自身：两幅图的图框等宽（均 \(1091.5\) px）而数据横向存在约 \(2.5\%\) 的比例差——同一批学生的「总成绩名次」在右图按像素折算出的数值系统性比左图大约 \(2.5\%\)（最佳对齐比例 \(1.025\)，否则两图横坐标无从配对），提示两幅图是用两套略有差异的坐标标定绘出的（同源数据、不同绘图比例）；按目视把两图同一横位置对应起来仍可正确作答（左图在该横位置附近的候选点只有 \((166,222)\) 与 \((186,213)\)，取值同侧），但严格读数时不应把两幅图的像素横坐标直接等同。此项为源页图形自身的问题，非读数误差。）
+
+\gkanswer{答案：① 乙；② 数学}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=\sin x-2\sqrt{3}\sin^{2}\dfrac{x}{2}\)．
+
+（1） 求 \(f(x)\) 的最小正周期；
+
+（2） 求 \(f(x)\) 在区间 \(\left[0,\dfrac{2\pi}{3}\right]\) 上的最小值．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+题设函数为
+\nopagebreak[4]
+\[
+f(x)=\sin x-2\sqrt{3}\sin^{2}\frac{x}{2},
+\]
+\Needspace{5\baselineskip}
+两小问共用同一个化简结果。由降幂公式 \(\sin^{2}\dfrac{x}{2}=\dfrac{1-\cos x}{2}\)，
+\nopagebreak[4]
+\[
+\begin{aligned}
+f(x)&=\sin x-\sqrt{3}(1-\cos x)=\sin x+\sqrt{3}\cos x-\sqrt{3}\\
+&=2\left(\frac{1}{2}\sin x+\frac{\sqrt{3}}{2}\cos x\right)-\sqrt{3}=2\sin\left(x+\frac{\pi}{3}\right)-\sqrt{3},
+\end{aligned}
+\]
+最后一步是辅助角公式：\(\sin x+\sqrt{3}\cos x=2\left(\dfrac{1}{2}\sin x+\dfrac{\sqrt{3}}{2}\cos x\right)=2\sin\left(x+\dfrac{\pi}{3}\right)\)，用到 \(\cos\dfrac{\pi}{3}=\dfrac{1}{2}\)、\(\sin\dfrac{\pi}{3}=\dfrac{\sqrt{3}}{2}\)。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+化简结果 \(f(x)=2\sin\left(x+\dfrac{\pi}{3}\right)-\sqrt{3}\) 是角频率 \(\omega=1\) 的正弦型函数，故最小正周期为
+\nopagebreak[4]
+\[
+T=\frac{2\pi}{\omega}=2\pi .
+\]
+
+（验证：恒等变形逐点核——原式与 \(2\sin\left(x+\dfrac{\pi}{3}\right)-\sqrt{3}\) 在 \(-20\leqslant x\leqslant20\) 上取 \(400001\) 点，最大偏差 \(3.1\times10^{-15}\)；周期性另测 \(f(x+2\pi)-f(x)\) 在 \(40001\) 点上最大偏差 \(1.3\times10^{-15}\)。且 \(\omega=1\) 时无更小的周期——正弦型函数的最小正周期即 \(\dfrac{2\pi}{\omega}\)。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+令 \(t=x+\dfrac{\pi}{3}\)，则 \(x\in\left[0,\dfrac{2\pi}{3}\right]\) 时 \(t\in\left[\dfrac{\pi}{3},\pi\right]\)。在 \(\left[\dfrac{\pi}{3},\pi\right]\) 上，\(\sin t\) 的最大值为 \(1\)（在 \(t=\dfrac{\pi}{2}\) 处取得），最小值为 \(0\)（在 \(t=\pi\) 处取得）。故 \(f(x)=2\sin t-\sqrt{3}\) 的最小值为
+\nopagebreak[4]
+\[
+2\cdot0-\sqrt{3}=-\sqrt{3},
+\]
+在 \(t=\pi\) 即 \(x=\dfrac{2\pi}{3}\) 处取得，而 \(\dfrac{2\pi}{3}\) 属于所给区间。
+
+（验证：端点与极值点手算——\(f(0)=0\)，\(f\left(\dfrac{\pi}{6}\right)=2-\sqrt{3}\approx0.2679\)，\(f\left(\dfrac{2\pi}{3}\right)=2\sin\pi-\sqrt{3}=-\sqrt{3}\approx-1.7321\)；区间上 \(200001\) 点数值扫描的最小值为 \(-1.73205080757\)，取得位置为 \(2.09439510239=\dfrac{2\pi}{3}\)，与 \(-\sqrt{3}=-1.73205080757\) 逐位一致。注意最小值不在内点 \(\dfrac{\pi}{6}\) 处取得，而在右端点——因 \(t\) 的上端 \(t=\pi\) 落在含端点的区间内。）
+
+\gkanswer{答案（1）：\(2\pi\)。}
+
+\gkanswer{答案（2）：\(-\sqrt{3}\)（在 \(x=\dfrac{2\pi}{3}\) 处取得）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知等差数列 \(\{a_{n}\}\) 满足 \(a_{1}+a_{2}=10\)，\(a_{4}-a_{3}=2\)．
+
+（1） 求 \(\{a_{n}\}\) 的通项公式；
+
+（2） 设等比数列 \(\{b_{n}\}\) 满足 \(b_{2}=a_{3}\)，\(b_{3}=a_{7}\)，问：\(b_{6}\) 与数列 \(\{a_{n}\}\) 的第几项相等？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设等差数列 \(\{a_{n}\}\) 满足 \(a_{1}+a_{2}=10\)，\(a_{4}-a_{3}=2\)；第（2）问的等比数列 \(\{b_{n}\}\) 由 \(b_{2}=a_{3}\)、\(b_{3}=a_{7}\) 定出。两小问依次使用所得通项。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+设 \(\{a_{n}\}\) 的公差为 \(d\)。由 \(a_{4}-a_{3}=d=2\) 得 \(d=2\)；再由
+\nopagebreak[4]
+\[
+a_{1}+a_{2}=a_{1}+(a_{1}+d)=2a_{1}+2=10
+\]
+\Needspace{5\baselineskip}
+得 \(a_{1}=4\)。故通项公式为
+\nopagebreak[4]
+\[
+a_{n}=a_{1}+(n-1)d=4+2(n-1)=2n+2\qquad(n\in\mathbf{N}^{*}).
+\]
+
+（验证：代回原条件——\(a_{1}+a_{2}=4+6=10\)、\(a_{4}-a_{3}=10-8=2\) 都成立；且 \(a_{n+1}-a_{n}=2=d\) 恒成立，确为等差数列。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+由（1）得 \(a_{3}=8\)、\(a_{7}=16\)。设等比数列 \(\{b_{n}\}\) 的公比为 \(q\)，则
+\nopagebreak[4]
+\[
+q=\frac{b_{3}}{b_{2}}=\frac{a_{7}}{a_{3}}=\frac{16}{8}=2,\qquad b_{1}=\frac{b_{2}}{q}=\frac{8}{2}=4,
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+b_{n}=b_{1}q^{\,n-1}=4\cdot2^{\,n-1}=2^{\,n+1},\qquad b_{6}=2^{7}=128 .
+\]
+令 \(a_{n}=2n+2=128\)，解得 \(n=63\)；因 \(\{a_{n}\}\) 严格递增（\(d=2>0\)），满足 \(a_{n}=128\) 的 \(n\) 唯一。故 \(b_{6}\) 与数列 \(\{a_{n}\}\) 的第 \(63\) 项相等，即 \(b_{6}=a_{63}=128\)。
+
+（验证：① 反代条件——\(b_{2}=2^{3}=8=a_{3}\)、\(b_{3}=2^{4}=16=a_{7}\) 都成立。② 在 \(1\leqslant n\leqslant300\) 内枚举，只有 \(n=63\) 使 \(a_{n}=128\)，确认解唯一、无邻项歧义。③ 注意等比数列各项均为正（\(b_{1}=4>0\)、\(q=2\)），无需讨论 \(q<0\) 的符号交替情形。）
+
+\gkanswer{答案（1）：\(a_{n}=2n+2\)（\(n\in\mathbf{N}^{*}\)）。}
+
+\gkanswer{答案（2）：\(b_{6}\) 与数列 \(\{a_{n}\}\) 的第 \(63\) 项相等（\(b_{6}=a_{63}=128\)）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+某超市随机选取 1000 位顾客，记录了他们购买甲、乙、丙、丁四种商品的情况，整理成如下统计表，其中“\(\surd\)”表示购买，“\(\times\)”表示未购买．
+
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+顾客人数＼商品 & 甲 & 乙 & 丙 & 丁 \\
+\midrule
+100 & \(\surd\) & \(\times\) & \(\surd\) & \(\surd\) \\
+217 & \(\times\) & \(\surd\) & \(\times\) & \(\surd\) \\
+200 & \(\surd\) & \(\surd\) & \(\surd\) & \(\times\) \\
+300 & \(\surd\) & \(\times\) & \(\surd\) & \(\times\) \\
+85 & \(\surd\) & \(\times\) & \(\times\) & \(\times\) \\
+98 & \(\times\) & \(\surd\) & \(\times\) & \(\times\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+（1） 估计顾客同时购买乙和丙的概率；
+
+（2） 估计顾客在甲、乙、丙、丁中同时购买 3 种商品的概率；
+
+（3） 如果顾客购买了甲，则该顾客同时购买乙、丙、丁中哪种商品的可能性最大？
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设给出 \(1000\) 位顾客购买甲、乙、丙、丁四种商品的统计表，其中 \(\surd\) 表示购买、\(\times\) 表示未购买。表里共六类顾客（每人恰属一类），行头是人数、列头是商品：
+
+\begin{center}
+\begin{tabular}{lllll}
+\toprule
+顾客人数＼商品 & 甲 & 乙 & 丙 & 丁 \\
+\midrule
+100 & \(\surd\) & \(\times\) & \(\surd\) & \(\surd\) \\
+217 & \(\times\) & \(\surd\) & \(\times\) & \(\surd\) \\
+200 & \(\surd\) & \(\surd\) & \(\surd\) & \(\times\) \\
+300 & \(\surd\) & \(\times\) & \(\surd\) & \(\times\) \\
+85 & \(\surd\) & \(\times\) & \(\times\) & \(\times\) \\
+98 & \(\times\) & \(\surd\) & \(\times\) & \(\times\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+六类人数之和 \(100+217+200+300+85+98=1000\)，与样本容量严格相等。三小问都以相应的样本频率作为概率的估计。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+「同时购买乙和丙」要求该行的乙、丙两格都是 \(\surd\)。逐行检查：100 那一行乙格为 \(\times\)，217 那一行丙格为 \(\times\)，200 那一行两格都是 \(\surd\)（甲、乙、丙，丁未购买），300 那一行乙格为 \(\times\)，85 那一行乙格为 \(\times\)，98 那一行丙格为 \(\times\)，故只有 200 人这一类顾客符合。所求概率用样本频率估计：
+\nopagebreak[4]
+\[
+P=\frac{200}{1000}=\frac{1}{5}=0.2 .
+\]
+
+（验证：① 分类枚举——逐行算「乙为 \(\surd\) 且丙为 \(\surd\)」的真值：100 行假、217 行假、200 行真、300 行假、85 行假、98 行假，唯一命中的是 200 人这一类。② 程序仿真——按各类人数比例构造 1000 人总体后独立抽 \(2\times10^{6}\) 次，经验频率 \(0.20000\)，与 \(0.2\) 一致。③ 边界自查：\(200\leqslant1000\)，概率值落在 \([0,1]\) 内。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+「同时购买 3 种商品」即该行的 \(\surd\) 恰好 3 个。逐行数：100 那一行 3 个（甲、丙、丁），217 那一行 2 个（乙、丁），200 那一行 3 个（甲、乙、丙），300 那一行 2 个（甲、丙），85 那一行 1 个（甲），98 那一行 1 个（乙）。命中的两类顾客共 \(100+200=300\) 人，故
+\nopagebreak[4]
+\[
+P=\frac{300}{1000}=\frac{3}{10}=0.3 .
+\]
+
+（验证：① 用总额恒等式反查——各格 \(\surd\) 的总数按行累加为 \(100\cdot3+217\cdot2+200\cdot3+300\cdot2+85\cdot1+98\cdot1=2117\)，与按商品求和（甲 \(685\)、乙 \(515\)、丙 \(600\)、丁 \(317\)，合计 \(2117\)）相等（此项只核人数与格数一致，与分类无关）。② 程序仿真经验频率 \(0.30021\)，与 \(0.3\) 一致。③ 注意题设是「同时购买 3 种」（恰 3 种），不含购买 4 种的情形；本表中没有 4 个 \(\surd\) 的行，故与「至少 3 种」两种读法答案相同。）
+
+\gksubpart{(3)}
+
+购买了甲的顾客是第 1、3、4、5 类，共 \(100+200+300+85=685\) 人。在这 \(685\) 人中分别统计（分母同为 \(685\)）：
+
+\begin{itemize}
+\item 同时购买乙：200 那一类，\(200\) 人，频率 \(\dfrac{200}{685}\approx0.2920\)；
+\item 同时购买丙：100、200、300 三类，\(100+200+300=600\) 人，频率 \(\dfrac{600}{685}\approx0.8759\)；
+\item 同时购买丁：100 那一类，\(100\) 人，频率 \(\dfrac{100}{685}\approx0.1460\)。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+这三个频率就是以「购买了甲」为条件的条件概率的估计，由于
+\nopagebreak[4]
+\[
+\frac{600}{685}>\frac{200}{685}>\frac{100}{685},
+\]
+故同时购买丙的可能性最大（三个条件概率之比 \(600:200:100=6:2:1\)），答案是\textbf{丙}。
+
+（验证：① 程序仿真——从 1000 人总体中抽 \(2\times10^{6}\) 人次，「购甲」子样本约 \(1.37\times10^{6}\) 人次，三个条件频率为 \(0.29211\)、\(0.87578\)、\(0.14637\)，与 \(\dfrac{200}{685}\)、\(\dfrac{600}{685}\)、\(\dfrac{100}{685}\) 一致，且大小次序不变。② 结果鲁棒性——单改一格不足以翻转结论：改一格最多把丙的分子从 \(600\) 压到 \(300\)（即 300 那一类），仍大于乙的 \(200\)；至少需同时改动两类、合计不少于 \(400\) 人，才可能使丙不再最大。③ 分母自查——购甲的 \(685\) 人加未购甲的 \(315\) 人共 \(1000\) 人。）
+
+\gkanswer{答案（1）：\(\dfrac{1}{5}\)。}
+
+\gkanswer{答案（2）：\(\dfrac{3}{10}\)。}
+
+\gkanswer{答案（3）：丙（同时购买丙的可能性最大，条件概率 \(\dfrac{600}{685}\approx 0.876\)）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在三棱锥 \(V-ABC\) 中，平面 \(VAB\perp\) 平面 \(ABC\)，\(\triangle VAB\) 为等边三角形，\(AC\perp BC\) 且 \(AC=BC=\sqrt{2}\)，\(O\)，\(M\) 分别为 \(AB\)，\(VA\) 的中点．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015bjw_q18_pyramid}\end{center}
+\nopagebreak[4]
+（1） 求证：\(VB\parallel\) 平面 \(MOC\)；
+
+（2） 求证：平面 \(MOC\perp\) 平面 \(VAB\)；
+
+（3） 求三棱锥 \(V-ABC\) 的体积．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设三棱锥 \(V\text{-}ABC\) 中，平面 \(VAB\perp\) 平面 \(ABC\)，\(\triangle VAB\) 为等边三角形，\(AC\perp BC\) 且 \(AC=BC=\sqrt{2}\)，\(O\)、\(M\) 分别为 \(AB\)、\(VA\) 的中点。三小问依次为线面平行、面面垂直的证明与体积计算。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+在 \(\triangle VAB\) 中，\(M\) 是 \(VA\) 的中点，\(O\) 是 \(AB\) 的中点，由三角形中位线定理得
+\nopagebreak[4]
+\[
+MO\parallel VB .
+\]
+又 \(MO\subset\) 平面 \(MOC\)，而 \(VB\not\subset\) 平面 \(MOC\)（点 \(V\) 不在平面 \(MOC\) 内），据直线与平面平行的判定定理，得 \(VB\parallel\) 平面 \(MOC\)。
+
+（验证：坐标核验——取 \(A(-1,0,0)\)、\(B(1,0,0)\)、\(C(0,1,0)\)、\(V(0,0,\sqrt{3})\)（该模型满足全部题设，见（2）（3）的核验），则 \(M\left(-\dfrac{1}{2},0,\dfrac{\sqrt{3}}{2}\right)\)，\(\overrightarrow{MO}=\left(\dfrac{1}{2},0,-\dfrac{\sqrt{3}}{2}\right)\)，\(\overrightarrow{VB}=(1,0,-\sqrt{3})\)，二者叉积为零向量，确为平行；且 \(V\) 不在平面 \(MOC\) 内（\(V\) 到该平面的距离不为零），排除 \(VB\subset\) 平面 \(MOC\) 的可能。）
+
+\gksubpart{(2)}
+
+① 因 \(AC=BC\)，且 \(O\) 为 \(AB\) 的中点，故 \(OC\perp AB\)（等腰三角形底边上的中线就是高）。
+
+② 因 \(\triangle VAB\) 为等边三角形，\(O\) 为 \(AB\) 的中点，故 \(VO\perp AB\)。
+
+③ 平面 \(VAB\perp\) 平面 \(ABC\)，交线为 \(AB\)；\(VO\subset\) 平面 \(VAB\) 且 \(VO\perp AB\)，由面面垂直的性质定理得 \(VO\perp\) 平面 \(ABC\)。又 \(OC\subset\) 平面 \(ABC\)，故 \(VO\perp OC\)。
+
+④ 由 ① 与 ③，\(OC\) 垂直于平面 \(VAB\) 内的两条相交直线 \(AB\) 与 \(VO\)（两者交于点 \(O\)），故 \(OC\perp\) 平面 \(VAB\)。
+
+⑤ 因 \(OC\subset\) 平面 \(MOC\)，由面面垂直的判定定理得平面 \(MOC\perp\) 平面 \(VAB\)。
+
+\Needspace{5\baselineskip}
+（验证：坐标核验——在同一坐标系中，平面 \(VAB\) 为 \(y=0\)，取法向量 \((0,1,0)\)；平面 \(MOC\) 的法向量为
+\nopagebreak[4]
+\[
+\overrightarrow{MO}\times\overrightarrow{MC}=\left(\frac{1}{2},0,-\frac{\sqrt{3}}{2}\right)\times\left(\frac{1}{2},1,-\frac{\sqrt{3}}{2}\right)=\left(\frac{\sqrt{3}}{2},0,\frac{1}{2}\right),
+\]
+两法向量点积为零，故两面垂直。另核 \(\overrightarrow{OC}=(0,1,0)\) 恰与平面 \(VAB\) 的法向量平行，即 \(OC\perp\) 平面 \(VAB\)；数值上 \(\overrightarrow{VO}\cdot\overrightarrow{OC}=0\)、\(\overrightarrow{VO}\cdot\overrightarrow{AB}=0\)、\(\overrightarrow{OC}\cdot\overrightarrow{AB}=0\) 三条正交关系全部成立。）
+
+\gksubpart{(3)}
+
+\Needspace{5\baselineskip}
+由 \(AC\perp BC\)、\(AC=BC=\sqrt{2}\) 得
+\nopagebreak[4]
+\[
+AB=\sqrt{AC^{2}+BC^{2}}=\sqrt{2+2}=2,\qquad S_{\triangle ABC}=\frac{1}{2}\cdot AC\cdot BC=\frac{1}{2}\cdot\sqrt{2}\cdot\sqrt{2}=1 .
+\]
+\Needspace{5\baselineskip}
+由（2）③ 已知 \(VO\perp\) 平面 \(ABC\)，故以 \(\triangle ABC\) 为底面时 \(VO\) 就是高。\(\triangle VAB\) 是边长为 \(AB=2\) 的等边三角形，\(O\) 为 \(AB\) 的中点，故
+\nopagebreak[4]
+\[
+VO=\frac{\sqrt{3}}{2}\cdot AB=\sqrt{3} .
+\]
+\Needspace{5\baselineskip}
+于是三棱锥的体积为
+\nopagebreak[4]
+\[
+V_{V\text{-}ABC}=\frac{1}{3}\cdot S_{\triangle ABC}\cdot VO=\frac{1}{3}\cdot1\cdot\sqrt{3}=\frac{\sqrt{3}}{3}.
+\]
+
+（验证：四路互核——① 换底核验：改以 \(\triangle VAB\) 为底，\(S_{\triangle VAB}=\dfrac{\sqrt{3}}{4}\cdot2^{2}=\sqrt{3}\)；由（2）④ 已证 \(OC\perp\) 平面 \(VAB\)，且 \(O\) 在平面 \(VAB\) 内，故点 \(C\) 到平面 \(VAB\) 的距离等于 \(|OC|\)，而直角三角形 \(ABC\) 中 \(OC\) 是斜边 \(AB\) 上的中线，\(OC=\dfrac{1}{2}AB=1\)，于是 \(V=\dfrac{1}{3}\cdot\sqrt{3}\cdot1=\dfrac{\sqrt{3}}{3}\)，与上式同值。② 坐标四面体行列式：\(\left|\det\left(\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AV}\right)\right|/6=\sqrt{3}/3\approx0.57735026919\)。③ 分解核验：用平面 \(VOC\) 把四面体 \(V\text{-}ABC\) 切成 \(V\text{-}AOC\) 与 \(V\text{-}BOC\) 两块，\(S_{\triangle AOC}=S_{\triangle BOC}=\dfrac{1}{2}\cdot AO\cdot OC=\dfrac{1}{2}\cdot1\cdot1=\dfrac{1}{2}\)，而 \(V\) 到平面 \(ABC\) 的距离为 \(\sqrt{3}\)，故两块体积各为 \(\dfrac{1}{3}\cdot\dfrac{1}{2}\cdot\sqrt{3}=\dfrac{\sqrt{3}}{6}\)，合计 \(\dfrac{\sqrt{3}}{3}\)。④ 坐标选取无关性：把该四面体作随机刚性变换（正交阵加平移）后重算行列式，体积仍为 \(\dfrac{\sqrt{3}}{3}\)（三组随机变换全部同值，且变换后 \(AC=BC=\sqrt{2}\)、\(AB=VA=VB=2\)、\(AC\perp BC\) 全部保持），说明结论不依赖所选的坐标摆放。）
+
+\gkanswer{答案（1）：成立（\(O\)、\(M\) 为中点故 \(OM\parallel VB\)，\(OM\subset\) 平面 \(MOC\)，故 \(VB\parallel\) 平面 \(MOC\)）。}
+
+\gkanswer{答案（2）：成立（\(VO\perp AB\) 且面面垂直得 \(VO\perp\) 平面 \(ABC\)；\(VO\perp OC\)、\(OC\perp AB\)，故 \(OC\perp\) 平面 \(VAB\)，从而平面 \(MOC\perp\) 平面 \(VAB\)）。}
+
+\gkanswer{答案（3）：\(\dfrac{\sqrt{3}}{3}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+设函数 \(f(x)=\dfrac{x^{2}}{2}-k\ln x\)，\(k>0\)．
+
+（1） 求 \(f(x)\) 的单调区间和极值；
+
+（2） 证明：若 \(f(x)\) 存在零点，则 \(f(x)\) 在区间 \((1,\sqrt{\mathrm{e}}]\) 上仅有一个零点．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+题设函数
+\nopagebreak[4]
+\[
+f(x)=\frac{x^{2}}{2}-k\ln x\qquad(k>0),
+\]
+\Needspace{5\baselineskip}
+定义域为 \(x>0\)。两小问共用同一个导数：
+\nopagebreak[4]
+\[
+f'(x)=x-\frac{k}{x}=\frac{x^{2}-k}{x}.
+\]
+
+\gksubpart{(1)}
+
+因 \(x>0\)，\(f'(x)\) 的符号完全由 \(x^{2}-k\) 决定。由 \(k>0\) 知 \(\sqrt{k}>0\)：
+
+\begin{itemize}
+\item 当 \(0<x<\sqrt{k}\) 时 \(x^{2}-k<0\)，\(f'(x)<0\)，\(f(x)\) 单调递减；
+\item 当 \(x>\sqrt{k}\) 时 \(x^{2}-k>0\)，\(f'(x)>0\)，\(f(x)\) 单调递增。
+\end{itemize}
+
+\Needspace{5\baselineskip}
+故 \(f(x)\) 的单调递减区间为 \(\left(0,\sqrt{k}\right)\)，单调递增区间为 \(\left(\sqrt{k},+\infty\right)\)；\(x=\sqrt{k}\) 是唯一的极小值点（也是最小值点），
+\nopagebreak[4]
+\[
+f\left(\sqrt{k}\right)=\frac{\left(\sqrt{k}\right)^{2}}{2}-k\ln\sqrt{k}=\frac{k}{2}-\frac{k}{2}\ln k=\frac{k}{2}(1-\ln k),
+\]
+且 \(f(x)\) 无极大值。
+
+（验证：① 导数符号数值抽验——取 \(k=1\)：\(f'(0.1)=-9.9\)、\(f'\left(\sqrt{k}-0.01\right)=-0.0201\)、\(f'\left(\sqrt{k}+0.01\right)=0.0199\)、\(f'(10)=9.9\)，分段符号与结论一致；\(k=4\) 同样（依次为 \(-39.9\)、\(-0.02\)、\(0.02\)、\(9.6\)）。② 极值代回——\(k=1\) 时极小值为 \(\dfrac{1}{2}(1-0)=\dfrac{1}{2}\)，而 \(f(1)=\dfrac{1}{2}-1\cdot\ln1=\dfrac{1}{2}\)，两者一致（\(\sqrt{k}=1\) 恰为极小值点，二者同一）。③ 定义域自查：\(\ln x\) 要求 \(x>0\)，故 \(0\) 取不到，递减区间须写成开区间 \(\left(0,\sqrt{k}\right)\)。）
+
+\gksubpart{(2)}
+
+证明分三步。
+
+\textbf{① 由「存在零点」定出 \(k\) 的取值范围。} 由（1），\(f(x)\) 在 \(x=\sqrt{k}\) 处取最小值 \(f\left(\sqrt{k}\right)=\dfrac{k}{2}(1-\ln k)\)，故对一切 \(x>0\) 有 \(f(x)\geqslant\dfrac{k}{2}(1-\ln k)\)。若 \(0<k<\mathrm{e}\)，则 \(\ln k<1\)，\(1-\ln k>0\)，于是 \(f(x)\geqslant\dfrac{k}{2}(1-\ln k)>0\)，\(f(x)\) 无零点，与题设「\(f(x)\) 存在零点」矛盾；故必有 \(k\geqslant\mathrm{e}\)（此时 \(f\left(\sqrt{k}\right)=\dfrac{k}{2}(1-\ln k)\leqslant0\)）。
+
+\Needspace{5\baselineskip}
+\textbf{② \(f(x)\) 在 \(\left(1,\sqrt{\mathrm{e}}\right]\) 上严格单调递减。} 由 \(k\geqslant\mathrm{e}\) 得 \(\sqrt{k}\geqslant\sqrt{\mathrm{e}}\)，故当 \(1<x\leqslant\sqrt{\mathrm{e}}\) 时 \(x^{2}\leqslant\mathrm{e}\leqslant k\)，从而
+\nopagebreak[4]
+\[
+f'(x)=\frac{x^{2}-k}{x}\leqslant0,
+\]
+且等号仅在 \(k=\mathrm{e}\) 且 \(x=\sqrt{\mathrm{e}}\) 处成立（\(x<\sqrt{\mathrm{e}}\) 时恒有 \(f'(x)<0\)），即 \(f(x)\) 在 \(\left(1,\sqrt{\mathrm{e}}\right]\) 上严格单调递减。
+
+\Needspace{5\baselineskip}
+\textbf{③ 用端点值与单调性夹出唯一零点。} \(f(x)\) 在 \(\left[1,\sqrt{\mathrm{e}}\right]\) 上连续，且
+\nopagebreak[4]
+\[
+f(1)=\frac{1}{2}-k\ln1=\frac{1}{2}>0,\qquad f\left(\sqrt{\mathrm{e}}\right)=\frac{\mathrm{e}}{2}-k\cdot\frac{1}{2}=\frac{\mathrm{e}-k}{2}\leqslant0 .
+\]
+由 \(f(1)>0\)、\(f\left(\sqrt{\mathrm{e}}\right)\leqslant0\) 及零点存在定理，\(f(x)\) 在 \(\left(1,\sqrt{\mathrm{e}}\right]\) 上至少有一个零点；再由 ② 的严格单调性，至多有一个零点。故 \(f(x)\) 在 \(\left(1,\sqrt{\mathrm{e}}\right]\) 上恰有一个零点。（细分：\(k>\mathrm{e}\) 时 \(f\left(\sqrt{\mathrm{e}}\right)<0<f(1)\)，零点落在开区间 \(\left(1,\sqrt{\mathrm{e}}\right)\) 内；\(k=\mathrm{e}\) 时 \(f\left(\sqrt{\mathrm{e}}\right)=0\)，零点就是右端点 \(\sqrt{\mathrm{e}}\)。）
+
+（验证：① 等价性交叉核——用符号计算解「最小值不大于零」，得 \(k\geqslant\mathrm{e}\)，与 ① 的结论一致。② 数值求根（区间上 \(200000\) 点扫描加二分精修）：\(k=0.3\)、\(1\)、\(2\)（均小于 \(\mathrm{e}\)）的零点数为 \(0\)，且区间上的最小值大于 \(0\)；\(k=\mathrm{e}\) 时恰在端点 \(x=\sqrt{\mathrm{e}}=1.6487212707\) 处为零（此时 \(f\left(\sqrt{\mathrm{e}}\right)=\dfrac{\mathrm{e}-\mathrm{e}}{2}=0\)）；\(k=\mathrm{e}+0.001\)、\(\mathrm{e}+0.01\)、\(3\)、\(10\)、\(10^{4}\) 时各恰有 \(1\) 个零点，依次为 \(1.6267125\)、\(1.5814883\)、\(1.3627853\)、\(1.0575091\)、\(1.00005\)，全部落在 \(\left(1,\sqrt{\mathrm{e}}\right)\) 内，且随 \(k\) 增大单调左移（\(k\to\infty\) 时趋于 \(1\)，与 \(f(1)=\dfrac{1}{2}>0\) 而 \(k\) 很大时 \(f(x)\) 在 \(1\) 附近迅速转负的直观相符）。③ 单调性独立复验——对每个 \(k\geqslant\mathrm{e}\) 在区间上取 \(2000\) 点抽样检查 \(f'(x)\leqslant0\) 全部成立（唯一例外是 \(k=\mathrm{e}\)、\(x=\sqrt{\mathrm{e}}\) 处因浮点舍入出现的 \(10^{-16}\) 量级正值，属数值噪声，解析上该点处 \(f'(x)=0\)）。④ 区间端点核对：\(\sqrt{\mathrm{e}}=1.6487\ldots>1\)，区间非空，\(\left(1,\sqrt{\mathrm{e}}\right]\) 合法。）
+
+\gkanswer{答案（1）：单调递减区间 \(\left(0,\sqrt{k}\right)\)，单调递增区间 \(\left(\sqrt{k},+\infty\right)\)；极小值 \(f(\sqrt{k})=\dfrac{k}{2}(1-\ln k)\)（无极大值）。}
+
+\gkanswer{答案（2）：成立（存在零点 当且仅当 \(k\geqslant\mathrm{e}\)；此时 \(f\) 在 \((1,\sqrt{\mathrm{e}}]\) 上递减、端点值 \(f(1)=\dfrac{1}{2}>0\geqslant f(\sqrt{\mathrm{e}})=\dfrac{\mathrm{e}-k}{2}\)，故恰有一个零点）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+已知椭圆 \(C\)：\(x^{2}+3y^{2}=3\)，过点 \(D(1,0)\) 且不过点 \(E(2,1)\) 的直线与椭圆 \(C\) 交于 \(A\)，\(B\) 两点，直线 \(AE\) 与直线 \(x=3\) 交于点 \(M\)．
+
+（1） 求椭圆 \(C\) 的离心率；
+
+（2） 若直线 \(AB\) 垂直于 \(x\) 轴，求直线 \(BM\) 的斜率；
+
+（3） 试判断直线 \(BM\) 与直线 \(DE\) 的位置关系，并说明理由．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设椭圆 \(C:x^{2}+3y^{2}=3\)，过点 \(D(1,0)\) 且不过点 \(E(2,1)\) 的直线与椭圆 \(C\) 交于 \(A\)、\(B\) 两点，直线 \(AE\) 与直线 \(x=3\) 交于点 \(M\)。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+把椭圆方程写成标准形式
+\nopagebreak[4]
+\[
+\frac{x^{2}}{3}+y^{2}=1\ \Longrightarrow\ a^{2}=3,\quad b^{2}=1,
+\]
+\Needspace{5\baselineskip}
+故 \(a=\sqrt{3}\)，且 \(c^{2}=a^{2}-b^{2}=3-1=2\)，\(c=\sqrt{2}\)。离心率为
+\nopagebreak[4]
+\[
+e=\frac{c}{a}=\frac{\sqrt{2}}{\sqrt{3}}=\frac{\sqrt{6}}{3}\approx0.8165 .
+\]
+
+（验证：① 用 \(b^{2}=a^{2}\left(1-e^{2}\right)\) 反算：\(a^{2}\left(1-e^{2}\right)=3\left(1-\dfrac{2}{3}\right)=3\cdot\dfrac{1}{3}=1=b^{2}\)。② 焦点位置核对：焦半距为 \(\sqrt{2}\)，焦点 \((\pm\sqrt{2},0)\) 代入方程左端得 \(\dfrac{2}{3}+0=\dfrac{2}{3}<1\)，确在椭圆内部。③ 类型自查：\(3>1\) 故长轴在 \(x\) 轴上、\(a=\sqrt{3}\) 是长半轴；若误取 \(a=1\)，则 \(c=\sqrt{2}>a\)、离心率大于 \(1\)，与椭圆矛盾，可见 \(a^{2}=3\)、\(b^{2}=1\) 的取值唯一自洽。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+\(AB\perp x\) 轴且过 \(D(1,0)\)，故 \(AB\) 的方程为 \(x=1\)。代入椭圆方程：
+\nopagebreak[4]
+\[
+1+3y^{2}=3\ \Longrightarrow\ y^{2}=\frac{2}{3}\ \Longrightarrow\ y=\pm\frac{\sqrt{6}}{3},
+\]
+即 \(A\)、\(B\) 是 \(\left(1,\dfrac{\sqrt{6}}{3}\right)\) 与 \(\left(1,-\dfrac{\sqrt{6}}{3}\right)\) 两点（题设直线不过 \(E\)，而 \(E\) 不在椭圆上，故这对交点合法）。
+
+\Needspace{5\baselineskip}
+取 \(A\left(1,\dfrac{\sqrt{6}}{3}\right)\)、\(B\left(1,-\dfrac{\sqrt{6}}{3}\right)\)。直线 \(AE\) 的斜率为
+\nopagebreak[4]
+\[
+k_{AE}=\frac{1-\dfrac{\sqrt{6}}{3}}{2-1}=1-\frac{\sqrt{6}}{3},
+\]
+\Needspace{5\baselineskip}
+故直线 \(AE\) 的方程为 \(y-\dfrac{\sqrt{6}}{3}=\left(1-\dfrac{\sqrt{6}}{3}\right)(x-1)\)。令 \(x=3\) 得
+\nopagebreak[4]
+\[
+y_{M}=\frac{\sqrt{6}}{3}+2\left(1-\frac{\sqrt{6}}{3}\right)=2-\frac{\sqrt{6}}{3},
+\]
+\Needspace{5\baselineskip}
+即 \(M\left(3,\ 2-\dfrac{\sqrt{6}}{3}\right)\)。于是
+\nopagebreak[4]
+\[
+k_{BM}=\frac{y_{M}-y_{B}}{x_{M}-x_{B}}=\frac{\left(2-\dfrac{\sqrt{6}}{3}\right)-\left(-\dfrac{\sqrt{6}}{3}\right)}{3-1}=\frac{2}{2}=1 .
+\]
+
+（验证：① 交换标号复核——题面只写「交于 \(A\)、\(B\) 两点」，未指定哪一点叫 \(A\)。取 \(A\left(1,-\dfrac{\sqrt{6}}{3}\right)\)、\(B\left(1,\dfrac{\sqrt{6}}{3}\right)\) 重算：\(k_{AE}=\dfrac{1+\dfrac{\sqrt{6}}{3}}{1}=1+\dfrac{\sqrt{6}}{3}\)，\(M\left(3,\ 2+\dfrac{\sqrt{6}}{3}\right)\)，则 \(k_{BM}=\dfrac{\left(2+\dfrac{\sqrt{6}}{3}\right)-\dfrac{\sqrt{6}}{3}}{3-1}=1\)，与原标号同值，两种标号答案一致。② 共线与取值核验——上面 \(M\) 的纵坐标满足 \(\dfrac{y_{M}-1}{3-2}=1-\dfrac{\sqrt{6}}{3}=k_{AE}\)（\(A\)、\(E\)、\(M\) 三点共线），且 \(x_{M}=3\)。③ 数值代入：\(\dfrac{\sqrt{6}}{3}=0.8164965809\)，\(y_{M}=1.1835034191\)，斜率 \(=\dfrac{1.1835034191+0.8164965809}{2}=1.0000000000\)。）
+
+\gksubpart{(3)}
+
+先算已知斜率：\(k_{DE}=\dfrac{1-0}{2-1}=1\)，即直线 \(DE\) 是过 \(D\) 且斜率为 \(1\) 的直线（斜率为 \(1\) 恰是「过 \(D(1,0)\) 且过 \(E(2,1)\)」的那条直线，正是题设排除的情形）。
+
+先处理 \(AB\perp x\) 轴（即 \(AB:x=1\)）的情形：由（2）得 \(k_{BM}=1=k_{DE}\)，结论成立。以下设过 \(D(1,0)\) 的直线 \(l\) 的斜率 \(k\) 存在，则 \(l:y=k(x-1)\)（题设 \(l\) 不过 \(E\)，故 \(k\neq1\)，但下面的推导其实对一切 \(k\) 成立）。
+
+\Needspace{5\baselineskip}
+将 \(y=k(x-1)\) 代入 \(x^{2}+3y^{2}=3\)：
+\nopagebreak[4]
+\[
+x^{2}+3k^{2}(x-1)^{2}=3\ \Longrightarrow\ \left(1+3k^{2}\right)x^{2}-6k^{2}x+3k^{2}-3=0 .
+\]
+\Needspace{5\baselineskip}
+设 \(A(x_{1},y_{1})\)、\(B(x_{2},y_{2})\)（\(x_{1}\)、\(x_{2}\) 即该方程的两根），由韦达定理
+\nopagebreak[4]
+\[
+x_{1}+x_{2}=\frac{6k^{2}}{1+3k^{2}},\qquad x_{1}x_{2}=\frac{3k^{2}-3}{1+3k^{2}},
+\]
+\Needspace{5\baselineskip}
+由此
+\nopagebreak[4]
+\[
+x_{1}x_{2}-2\left(x_{1}+x_{2}\right)+3=\frac{\left(3k^{2}-3\right)-12k^{2}+3\left(1+3k^{2}\right)}{1+3k^{2}}=\frac{3k^{2}-3-12k^{2}+3+9k^{2}}{1+3k^{2}}=0 . \tag{$\ast$}
+\]
+又 \(A\)、\(B\) 都在 \(l\) 上，故 \(y_{i}=k\left(x_{i}-1\right)\)（\(i=1,2\)）。
+
+\Needspace{5\baselineskip}
+设 \(M(3,m)\)。由 \(A\)、\(E\)、\(M\) 三点共线，\(\dfrac{m-1}{3-2}=\dfrac{y_{1}-1}{x_{1}-2}\)，即
+\nopagebreak[4]
+\[
+m=1+\frac{y_{1}-1}{x_{1}-2}=\frac{\left(x_{1}-2\right)+\left(y_{1}-1\right)}{x_{1}-2}=\frac{x_{1}+y_{1}-3}{x_{1}-2},
+\]
+其中 \(x_{1}\neq2\)（否则 \(4+3y_{1}^{2}=3\) 无解——椭圆在 \(x=2\) 处无点）。
+
+\Needspace{5\baselineskip}
+要证 \(BM\parallel DE\)，因两者斜率均存在，只需证 \(k_{BM}=1\)，即证
+\nopagebreak[4]
+\[
+m-y_{2}=3-x_{2}\iff m-\left(3-x_{2}+y_{2}\right)=0 .
+\]
+\Needspace{5\baselineskip}
+把 \(y_{i}=k\left(x_{i}-1\right)\) 代入并通分，分子为
+\nopagebreak[4]
+\[
+\left(x_{1}+y_{1}-3\right)-\left(3-x_{2}+y_{2}\right)\left(x_{1}-2\right)=\left[(1+k)x_{1}-(k+3)\right]-\left[(k-1)x_{2}+(3-k)\right]\left(x_{1}-2\right),
+\]
+\Needspace{5\baselineskip}
+展开整理：
+\nopagebreak[4]
+\[
+=(1+k)x_{1}-k-3-(k-1)x_{1}x_{2}-(3-k)x_{1}+2(k-1)x_{2}+2(3-k)
+\]
+\nopagebreak[4]
+\[
+=2(k-1)x_{1}-(k-1)x_{1}x_{2}+2(k-1)x_{2}-3(k-1)
+\]
+\nopagebreak[4]
+\[
+=(k-1)\left(2x_{1}+2x_{2}-x_{1}x_{2}-3\right)=-(k-1)\left[x_{1}x_{2}-2\left(x_{1}+x_{2}\right)+3\right],
+\]
+\Needspace{5\baselineskip}
+末式由 \((\ast)\) 恒为 \(0\)。故 \(m-y_{2}=3-x_{2}\)，即
+\nopagebreak[4]
+\[
+k_{BM}=\frac{m-y_{2}}{3-x_{2}}=1=k_{DE},
+\]
+且 \(x_{2}\neq3\)（椭圆在 \(x=3\) 处同样无点，故分母非零），所以两直线斜率相等，\(BM\parallel DE\)。
+
+（说明条件的作用：「不过 \(E(2,1)\)」确保 \(A\)、\(B\) 都不是 \(E\)，从而直线 \(AE\) 有定义、点 \(M\) 有定义；又过 \(D\) 且斜率为 \(1\) 的直线恰过 \(E\)，被题设排除。注意上述推导中的因子 \((k-1)\) 最终不必除掉——\((\ast)\) 使整个分子恒为 \(0\)。）
+
+（验证：① 数值大批量——随机取 \(2\) 万条过 \(D\) 且不过 \(E\) 的直线（斜率绝对值达 \(50\)），对 \(A\)、\(B\) 的两种标号各自计算 \(k_{BM}\)，与 \(1\) 的最大偏差 \(7.1\times10^{-15}\)，即恒等成立。② 退化端点手算——取 \(k=0\)（\(l\) 即 \(x\) 轴，与椭圆交于 \((\sqrt{3},0)\)、\((-\sqrt{3},0)\)）：标号 \(A(\sqrt{3},0)\) 时 \(k_{AE}=\dfrac{1}{2-\sqrt{3}}=2+\sqrt{3}\)，\(M(3,\ 3+\sqrt{3})\)，\(k_{BM}=\dfrac{3+\sqrt{3}-0}{3-(-\sqrt{3})}=1\)；标号 \(A(-\sqrt{3},0)\) 时 \(k_{AE}=\dfrac{1}{2+\sqrt{3}}=2-\sqrt{3}\)，\(M(3,\ 3-\sqrt{3})\)，\(k_{BM}=\dfrac{3-\sqrt{3}}{3-(-\sqrt{3})}=1\)。③ 与（2）自洽——竖直情形正是（2），那里算得 \(1\)，与此处结论同值。④ 分母与特例自查——椭圆在 \(x=2\) 与 \(x=3\) 处均无点，故 \(x_{1}\neq2\)、\(x_{2}\neq3\)，通分与除法均合法。另用 sympy 对上述分子作因式分解，得到 \((k-1)\left(2x_{1}+2x_{2}-x_{1}x_{2}-3\right)\) 的形式，与手算恒等式一致。）
+
+\gkanswer{答案（1）：\(\dfrac{\sqrt{6}}{3}\)。}
+
+\gkanswer{答案（2）：\(1\)。}
+
+\gkanswer{答案（3）：\(BM\parallel DE\)（恒等式对任意过 \(D\) 且不过 \(E\) 的直线成立）。}
+
+\end{answer}
