@@ -1,0 +1,63 @@
+# 2015 天津理卷 Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:subagent-driven-development` to implement this plan task-by-task. 卷面转录与独立求解由不同角色分头完成，主会话独占规范整合、manifest、回执与提交。Steps use checkbox (`- [ ]`) syntax.
+
+**Goal:** 将固定上游中的 2015 天津理科卷整理为可追溯、可编译、可逐页复核的四版本 LaTeX 项目。
+
+**Architecture:** 同 phase3-b00–b10 批次：固定来源 ID 是身份根；转录与盲解角色分离；规范三件套 + TikZ 图源由主会话整合；不提交扫描件与构建中间件。**与 2015 天津文（b10）同书连页**：A3 横向三栏书刊合排（印刷页码 **985/986**）、LaTeX（CM 系）重排产物、**无答案页（等级 D）**。题量 **20 题（选择 1–8＋填空 9–14＋解答 15–20）**。
+
+**Spec:** `docs/superpowers/specs/2026-08-04-高考数学真题全量LaTeX工程-design.md` 与仓库 `CLAUDE.md`。建模先例：`2015_天津卷_文科`（phase3-b10）。
+
+## Global Constraints
+
+- 正式批次 `phase3-b11`；工作目录 `.work/phase3-b11/`。
+- **并行会话**：phase2-b14（2016 上海文理）由另一会话推进；提交全程**显式路径** `git add`，绝不 `-A`、不 push。
+- 固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`；固定源已核定（下表；sha 与 manifest 逐字一致；**blob 28403033… 在 34c13a6 与上游 HEAD 266afe2 实证相同**）。
+- 源 2 页 A3 横向三栏，**无答案页**（p1 印 985、p2 印 986）→ **答案证据等级 D**（解析全由盲解撰写）。
+- **文理对照纪律（照 b05/b08 先例）**：文卷（`2015_天津卷_文科`，b10）已完成并 FINALIZED——**仅作主会话事后互证**；**转录/盲解代理不得读取文卷任何产物（含 `.work/phase3-b10/` 全部文件）**。文理同题已知（初判）：理 Q5＝文 Q6 圆图同图（CM=2、MD=4、CN=3）；理 Q7＝文 Q7 偶函数同题；理 Q10 三视图与文 Q10 同款；理 Q13 ⊂ 文 Q16（同 △ABC 条件，理只求 a）；理 Q15/16 为文 Q15/16 变体；理独有（Q3 新框图、Q6 双曲线、Q8 b 范围、Q9 复数、Q11 封闭图形面积、Q12 二项式、Q14 等腰梯形变体、Q17 四棱柱、Q18 递推数列、Q19 椭圆、Q20 n 次函数）。
+- **图形/表初判 4 处（待转录 B 实测确认）**：Q3 程序框图（p1 栏 1，**与文卷不同构**：7 框「开始／S=20,i=1／i=2i／S=S−i／i>5?／输出 S／结束」，判据 i>5?、「是」支向下、「否」支右回折——照源实测）；Q5 圆图（p1 栏 1 下部，与文卷 Q6 同图）；Q10 三视图（p1 栏 2，与文卷同款三视图）；Q17 四棱柱立体图（p2 栏 1，A₁ 顶、D₁C₁/B₁A₁ 等含虚线隐藏棱、N 在 B₁C 上、M 在 D₁D 上）。
+- **规范源写裸 `%`（构建前强制 grep 自检，并加扫空参数命令 `\\[a-zA-Z]+{}`＋孤需参宏 `\\([a-zA-Z]+\)`＋`&` 不在 `$…$`/`\[…\]` 内）**；重编后先 `prepare-batch` 换绑 attempt 再写工作项。
+- 沉淀纪律（b15–b23/phase3 全量 + b08 + b09 + **b10 新增**）：解答题小问「（N） 内容」；长定义式 `\frac`；含 `&` 的 cases/array 行间 `\[ \]`、答案行用 `$...$`——**行内 `\(...\)` 含 `&` 一律整段改 `$...$`（b10 Q8 实案，自检第 6 项）**；CJK 不入数学（用 `\text{}`——**显示式内 `\text{CJK␣}` 尾随空格会丢、须写 `\text{CJK}\ `**）；**答案行含 `*` 已由 md2tex 治本**；**规范源反引号内禁裸 `$`（写 `\$`）、禁包 LaTeX 命令、禁空参数命令**；↔ 等 lmroman 无字形符号不裸入正文（**∛ 亦无字形——b10 实案**）；**图标签一律绝对字号 `\fontsize{10.5pt}{12.6pt}\selectfont`**（`\small` 是相对值，印刷版 zihao=5 底会回落 9pt——b10 定型）、`inner sep=0`、分数型标签按源墨迹定位；**差分同引擎 pdftoppm**；审查代理 ≤8 页、**524 限流时分批 ≤4 支补派**、**分波 ≤5 支**；图自查含线段采样矩阵＋**判据灵敏度自证**；**finalize-batch 先于 check-batch**；**not_applicable 必须写理由**；孤儿尾框/Needspace 留白/选项栏漂移/链接色为已接受类；**四项自检扩第 5 项「孤需参宏扫」**（b09 实案）＋**第 6 项「`&` 转义扫」**（b10 实案）；**行宽判据双口径**——`pdftotext -bbox` 的 xMax 含行末全角标点 advance 高估（~9pt 伪影），判溢出前先测全版常态、确证用墨迹像素实测；**分数系数以渲染图为准**；**纯题面版说明块不印答案值**（b10 定型）；**审查代理中途回报可能为「中途稿级」错误结论，只信落盘 JSON＋主会话亲测**（b09 实案）；**审查回执键名三变体（`check`/`name`/`key`）——merge 一律全兼容**（b19/b10 实案）；**bp↔TeXpt 换算**（10.4608bp ≡ 10.5 TeX pt，判字号变动须换算，b10 定型）。
+- **答案要点禁「① 答案：」式**；主选择组逐题答案**纯字母**（`**答案：A**`）；**单题面题**的解析须流水式、答案单一答案行。
+- 标点与记号口径以**天津卷源页字体实测为准**（同书文卷已实测：题号句末半角、正文标点半角→全角归一、`\leqslant` MSAM10、无 CMMIB10→`\overrightarrow` 不加粗、`\complement`、`\mathbf{R}`——**理卷须以本卷实测复核**）。
+
+## Fixed Sources
+
+| 试卷 | paper_id | 项目目录 | source_id | SHA-256 | Git blob OID | 上游路径 | 页数 |
+|---|---|---|---|---|---|---|---|
+| 天津理卷 | `gk-2015-regular-tianjin-science` | `2015_天津卷_理科` | `src-d33a05491bfc4dd885411e0df35e5afe5fff29699387a590021af5dce81db1dd` | `8fc64adbf568879dbd3608c7314a33a8b5deb49f878b8e17a4d234277e83ef5d` | `284030330abcd7fec5a171bf831addb80d796696` | `普通高考/2015/2015天津理.pdf` | 2 |
+
+## Review Focus
+
+- 20 题结构核定（选择 1–8＋填空 9–14＋解答 15–20；题号连续）、无答案页（等级 D）。
+- Q3 框图（**S=20,i=1／i=2i／i>5?——翻倍型循环，与文卷框图不同构**）按源复刻。
+- Q5 圆图（与文卷同图）与 Q10 三视图（同款）——**主会话事后与 b10 对照互证**（代理独立转录，不读文卷）。
+- Q17 四棱柱（新图元：含上底面可见棱与三条虚线隐藏棱、N/M 中点）按源复刻。
+- 理独有重题（Q19 椭圆 |FM|=4√3/c 与 |x₂−x₁|<a/(1−n)+2 型不等式、Q20 n 次函数）逐题双代理互证。
+
+## Tasks
+
+### Task 1 — Freeze and visually identify the source
+
+- [x] 源冻结：cp 至 `.work/phase3-b11/source/2015天津理.pdf`，现场 sha256＝`8fc64adb…`（与 manifest artifact.sha256 逐字一致）；blob OID `28403033…` 在 34c13a6 与上游 HEAD 266afe2 实证相同。
+- [x] 页面图像化：`src-1.png/src-2.png`（150 dpi）；`source-text.txt`（-layout，129 行）。
+- [x] 版式判读：A3 横向三栏书刊合排；p1＝栏1（标题＋选择 1–5 含 Q3 框图与 Q5 圆图）／栏2（选择 6–8＋填空 9–14 含 Q10 三视图）／栏3（三、解答题 15–16）；p2＝栏1（Q17 四棱柱＋Q18）／栏2（Q19）／栏3（Q20）。页码 985/986。LaTeX CM 系重排、全矢量、文本层完整。
+
+### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
+
+- [ ] 转录 A（Q1–8 选择，含 Q3 框图与 Q5 圆图的存在性登记）：`.work/phase3-b11/transcripts/partA.md`。
+- [ ] 转录 B（Q9–20＋图表实测清单）：`.work/phase3-b11/transcripts/partB.md`＋`.work/phase3-b11/figure-inventory.md`。
+- [ ] 盲解 A（Q1–8）：`.work/phase3-b11/blind/partA.md`；盲解 B（Q9–20）：`.work/phase3-b11/blind/partB.md`。
+- [ ] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b10/` 全部文件、`2015_天津卷_文科/`、`2015_数学真题_天津文_*` 等）。**
+
+### Task 3 — Integrate and register
+
+- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查。
+- [ ] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；含源坐标换算回验与 600 dpi 目检）。
+- [ ] 注册 `phase3-b11`；provenance 三角色导入；extract-batch 派生。
+- [ ] generate/short/editions 三连 write+check → build --formal（修复轮 → 重建 → 差分 → 复审）。
+
+### Task 4 — Build, review, and close
+
+- [ ] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
+- [ ] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
