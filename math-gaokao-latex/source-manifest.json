@@ -1182,6 +1182,14 @@
         "gk-2015-regular-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-sichuan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1191,7 +1199,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "723bf75a-04b0-419c-9288-b3e0022c35a2",
+  "last_transaction_id": "5e2bd339-e6e6-4644-8e7c-f81f834cb6f7",
   "papers": [
     {
       "blocked_from": null,
@@ -18360,9 +18368,84 @@
       "title": "2015 年·四川卷·文科",
       "track": "arts",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_四川卷_理科/figures/f2015scl_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_四川卷_理科/figures/f2015scl_q14_squares.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_四川卷_理科/figures/f2015scl_q18_net_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_四川卷_理科/figures/f2015scl_q19_quadrilateral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_四川卷_理科/figures/f2015scl_q20_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_sichuan_science",
+        "id": "gk-2015-regular-sichuan-science",
+        "note": "批次 phase3-b09；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 981/982，与文卷 983/984 同书连页）、无参考答案页；选择 1–10＋填空 11–15＋解答 16–21＝21 题（分值为结构推断——**卷面不印分值**）。固定源不附答案（等级 D）；解析全由本库独立推导（盲解全题复算——第 3 题框图逐轮模拟＋回接反证、第 6 题 python 枚举 120、第 9 题网格最大化 18（**源文本层吞 ½ 之坑，以渲染图为准**）、第 10 题切点参数化逐条验证、第 14 题坐标模型单调性、第 17 题超几何逐项、第 19 题托勒密自洽、第 20 题韦达恒等式、第 21 题二分与网格扫描（临界 a₀≈0.2495968 照实登记））。源为 LaTeX（CM 系）重排产物（全矢量、无位图；标点为半角拉丁字形——按全库约定归一全角）。「∥」为矢量描边按语义排 \\parallel；**向量记号分卷保留——本卷无 CMMIB10，向量为 CMMI10 常规斜体＋TeX-vect10 箭头，录作 \\overrightarrow 不加粗斜体**（与同书文卷不同）。第 9、21 题用 \\geqslant。5 图均按源内容流实测坐标复刻（本清单坐标为反算后的真实页 pt——pdftocairo -svg 输出含 0.99962 缩放，已校准）：程序框图（7 框＋「否」支 3 段回折）、四边形＋互垂正方形（45° 斜投影 1/2 缩短）、展开图＋直观图（9 实 3 虚棱＋M 实心点）、四边形图（0.7 cm/单位照源）、椭圆图（两轴箭头＋过 P 割线照源实测端点）。第 20 题割线未精确过 P(0,1)（差 1.9455 pt，照源复刻＋登记）；第 18 题 (1) 的 F/G/H 由拓扑唯一确定（字母贴格点读法，见解析对齐提示）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理"
+      },
+      "issue_ids": [
+        "ISSUE-1030",
+        "ISSUE-1031",
+        "ISSUE-1032",
+        "ISSUE-1033"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-sichuan-science",
+      "production_state": "complete",
+      "project_dir": "2015_四川卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_四川理_含解析.md",
+        "questions": "2015/2015_数学真题_四川理_试题.md",
+        "solution_body": "2015/2015_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-5aca318d1827632415c28e26a7727648d1f31f26b2eccfa9c546e18834fc01e6"
+      ],
+      "title": "2015 年·四川卷·理科",
+      "track": "science",
+      "year": 2015
     }
   ],
-  "revision": 3656,
+  "revision": 3667,
   "schema_version": 1,
   "sources": [
     {
@@ -33595,8 +33678,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1debef009098d6cfce6089585eb1ab132afdfb19",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-sichuan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015四川理.pdf",
       "regions": [],
       "source_id": "src-5aca318d1827632415c28e26a7727648d1f31f26b2eccfa9c546e18834fc01e6",
