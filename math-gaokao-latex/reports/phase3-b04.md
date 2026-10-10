@@ -9,8 +9,8 @@
 
 - 标题：2015 年·上海卷·文科
 - 项目目录：`2015_上海卷_文科`
-- 构建：`succeeded`（attempt `92c8d8b8-4f1f-4ada-b73d-5d3cbcfcb4bf`）
-- 审查：`passed`（2026-10-10T03:45:52+08:00）
+- 构建：`succeeded`（attempt `f1835c4c-1f5d-495c-8ef5-e37844d2eb7a`）
+- 审查：`passed`（2026-10-10T12:42:31+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 6；解析版 31；简答版 8；印刷版 23
 - 警告豁免：0

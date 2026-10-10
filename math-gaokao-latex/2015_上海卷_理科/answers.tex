@@ -1,0 +1,1261 @@
+% answers.tex —— 2015 年·上海卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_上海理_试题.md + 2015/2015_数学真题_上海理_解析正文.md + 2015/2015_数学真题_上海理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定原卷不附参考答案（证据等级 D），以下为逐题独立推导、逐题校验的解析（非官方答案）。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设全集 \(U=\mathbf{R}\)．若集合 \(A=\{1,2,3,4\}\)，\(B=\{x\mid 2\leqslant x\leqslant 3\}\)，则 \(A\cap\complement_{U}B=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\(B=\{x\mid 2\leqslant x\leqslant 3\}\) 即闭区间 \([2,3]\)，它在全集 \(U=\mathbf{R}\) 中的补集为
+\nopagebreak[4]
+\[
+\complement_{U}B=(-\infty,2)\cup(3,+\infty).
+\]
+\Needspace{5\baselineskip}
+与 \(A=\{1,2,3,4\}\) 取交，只需在 \(A\) 的四个元素中逐一与 \(B\) 比对：\(1\notin B\) 故保留，\(2\in B\) 故剔除，\(3\in B\) 故剔除，\(4\notin B\) 故保留。于是
+\nopagebreak[4]
+\[
+A\cap\complement_{U}B=\{1,4\}.
+\]
+（验证：改用等价写法 \(A\setminus B\) 把同一个逐元素判定重做一遍——在 \(\{1,2,3,4\}\) 中剔除落入 \([2,3]\) 的 \(2,3\)，同得 \(\{1,4\}\)，两条路径结果一致。）
+
+\gkanswer{答案：\(\{1,4\}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+若复数 \(z\) 满足 \(3z+\overline{z}=1+\mathrm{i}\)，其中 \(\mathrm{i}\) 为虚数单位，则 \(z=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 \(z=a+b\mathrm{i}\ (a,b\in\mathbf{R})\)，则 \(\overline{z}=a-b\mathrm{i}\)，代入得
+\nopagebreak[4]
+\[
+3z+\overline{z}=3(a+b\mathrm{i})+(a-b\mathrm{i})=4a+2b\mathrm{i}.
+\]
+\Needspace{5\baselineskip}
+把它与题给右端 \(1+\mathrm{i}\) 比较实部与虚部：
+\nopagebreak[4]
+\[
+4a=1,\qquad 2b=1,
+\]
+\Needspace{5\baselineskip}
+故 \(a=\dfrac{1}{4}\)、\(b=\dfrac{1}{2}\)，即
+\nopagebreak[4]
+\[
+z=\frac{1}{4}+\frac{1}{2}\mathrm{i}.
+\]
+（验证：把 \(z=\dfrac{1}{4}+\dfrac{1}{2}\mathrm{i}\) 回代原式，\(3z+\overline{z}=\left(\dfrac{3}{4}+\dfrac{1}{4}\right)+\left(\dfrac{3}{2}-\dfrac{1}{2}\right)\mathrm{i}=1+\mathrm{i}\)，实部、虚部与题设逐项相符。）
+
+\gkanswer{答案：\(\dfrac{1}{4}+\dfrac{1}{2}\mathrm{i}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+若线性方程组的增广矩阵为 $\begin{pmatrix} 2 & 3 & c_{1}\\ 0 & 1 & c_{2} \end{pmatrix}$、解为 $\begin{cases} x=3,\\ y=5, \end{cases}$ 则 \(c_{1}-c_{2}=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+增广矩阵
+\nopagebreak[4]
+\[
+\begin{pmatrix} 2 & 3 & c_{1}\\ 0 & 1 & c_{2} \end{pmatrix}
+\]
+\Needspace{5\baselineskip}
+的前两列是系数、最后一列是常数项，故其对应的线性方程组为
+\nopagebreak[4]
+\[
+\begin{cases}
+2x+3y=c_{1},\\
+y=c_{2}.
+\end{cases}
+\]
+\Needspace{5\baselineskip}
+把题给解 \(x=3\)、\(y=5\) 代入第二式得 \(c_{2}=5\)，再代入第一式得
+\nopagebreak[4]
+\[
+c_{1}=2\times3+3\times5=6+15=21.
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+c_{1}-c_{2}=21-5=16.
+\]
+（验证：把 \(c_{1}=21\)、\(c_{2}=5\) 代回方程组求解，由第二式取 \(y=5\)，代回第一式得 \(2x=21-15=6\)、\(x=3\)，与题设解完全一致。）
+
+\gkanswer{答案：\(16\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+若正三棱柱的所有棱长均为 \(a\)，且其体积为 \(16\sqrt{3}\)，则 \(a=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+正三棱柱的底面是边长为 \(a\) 的正三角形，其面积为
+\nopagebreak[4]
+\[
+S=\frac{\sqrt{3}}{4}a^{2}.
+\]
+\Needspace{5\baselineskip}
+「所有棱长均为 \(a\)」意味着侧棱长也是 \(a\)，即柱高 \(h=a\)，故体积
+\nopagebreak[4]
+\[
+V=Sh=\frac{\sqrt{3}}{4}a^{2}\cdot a=\frac{\sqrt{3}}{4}a^{3}=16\sqrt{3}.
+\]
+于是 \(a^{3}=64\)，由棱长 \(a>0\) 得 \(a=4\)。
+（验证：把 \(a=4\) 代回，\(V=\dfrac{\sqrt{3}}{4}\times4^{3}=\dfrac{\sqrt{3}}{4}\times64=16\sqrt{3}\)，与原条件相符；数值上 \(16\sqrt{3}=27.712813\ldots\)，与代入 \(a=4\) 直接算得的值逐位相同。）
+
+\gkanswer{答案：\(4\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+抛物线 \(y^{2}=2px\ (p>0)\) 上的动点 \(Q\) 到焦点的距离的最小值为 1，则 \(p=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+抛物线 \(y^{2}=2px\) 的焦点为 \(F\left(\dfrac{p}{2},0\right)\)。设抛物线上的动点 \(Q\left(\dfrac{y^{2}}{2p},y\right)\)，则
+\nopagebreak[4]
+\[
+|QF|^{2}=\left(\frac{y^{2}}{2p}-\frac{p}{2}\right)^{2}+y^{2}=\left(\frac{y^{2}}{2p}+\frac{p}{2}\right)^{2},
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+|QF|=\frac{y^{2}}{2p}+\frac{p}{2}\geqslant\frac{p}{2},
+\]
+等号当且仅当 \(y=0\)，即 \(Q\) 在顶点 \((0,0)\) 处时成立。所以 \(|QF|\) 的最小值为 \(\dfrac{p}{2}\)，由题意 \(\dfrac{p}{2}=1\)，得 \(p=2\)。
+（验证：取 \(p=2\)，对 \(y\in[-20,20]\) 以步长 \(0.001\) 扫描抛物线上各点到焦点 \((1,0)\) 的距离，最小值为 \(1.000000\)，且在顶点 \((0,0)\) 处取得。）
+
+\gkanswer{答案：\(2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+若圆锥的侧面积与过轴的截面面积之比为 \(2\pi\)，则其母线与轴的夹角的大小为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设圆锥的底面半径为 \(r\)、高为 \(h\)、母线长为 \(l\)，则 \(l=\sqrt{r^{2}+h^{2}}\)。侧面积与过轴的截面面积分别为
+\nopagebreak[4]
+\[
+S_{\text{侧}}=\pi rl,\qquad S_{\text{轴}}=\frac{1}{2}\cdot2r\cdot h=rh,
+\]
+\Needspace{5\baselineskip}
+其中过轴的截面是底为 \(2r\)、高为 \(h\) 的等腰三角形。由题设
+\nopagebreak[4]
+\[
+\frac{\pi rl}{rh}=\frac{\pi l}{h}=2\pi,
+\]
+\Needspace{5\baselineskip}
+故 \(l=2h\)。设母线与轴的夹角为 \(\theta\)，在轴、母线与底面半径构成的直角三角形中 \(\theta\in\left(0,\dfrac{\pi}{2}\right)\) 且
+\nopagebreak[4]
+\[
+\cos\theta=\frac{h}{l}=\frac{1}{2},
+\]
+故 \(\theta=\dfrac{\pi}{3}\)。
+（验证：取 \(h=1\)、\(l=2\)、\(r=\sqrt{3}\) 代入，侧面积为 \(2\sqrt{3}\pi\)、过轴截面面积为 \(\sqrt{3}\)，比值恰为 \(2\pi\)，与题设相符；夹角再以数值复核，\(\arccos\dfrac{1}{2}=1.047198\) rad，即 \(60^{\circ}=\dfrac{\pi}{3}\)。）
+
+\gkanswer{答案：\(\dfrac{\pi}{3}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+方程 \(\log_{2}(9^{x-1}-5)=\log_{2}(3^{x-1}-2)+2\) 的解为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 \(t=3^{x-1}>0\)，则 \(9^{x-1}=t^{2}\)，原方程化为
+\nopagebreak[4]
+\[
+\log_{2}(t^{2}-5)=\log_{2}(t-2)+2=\log_{2}\left[4(t-2)\right].
+\]
+\Needspace{5\baselineskip}
+由对数的定义域需 \(t^{2}-5>0\) 且 \(t-2>0\)，即 \(t>\sqrt{5}\)。在此前提下比较真数：
+\nopagebreak[4]
+\[
+t^{2}-5=4(t-2)\ \Longrightarrow\ t^{2}-4t+3=0\ \Longrightarrow\ t=1\ \text{或}\ t=3,
+\]
+其中 \(t=1<\sqrt{5}\) 不满足定义域，舍去，故 \(t=3\)，即 \(3^{x-1}=3\)，得 \(x=2\)。
+（验证：把 \(x=2\) 代回，左端 \(\log_{2}(9-5)=2\)，右端 \(\log_{2}(3-2)+2=0+2=2\)，相等；再对 \(F(x)=\log_{2}(9^{x-1}-5)-\log_{2}(3^{x-1}-2)-2\) 作数值扫描，得 \(F(2)=0.000000\)，且 \(F(1.9)=-0.306625<0<F(2.1)=0.203744\)，零点唯一落在 \(x=2\)。）
+
+\gkanswer{答案：\(x=2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+在报名的 3 名男教师和 6 名女教师中，选取 5 人参加义务献血，要求男、女教师都有，则不同的选取方式的种数为\gkblank{}．（结果用数值表示）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+从 \(3+6=9\) 名教师中任选 \(5\) 人，选法总数为
+\nopagebreak[4]
+\[
+C_{9}^{5}=126.
+\]
+\Needspace{5\baselineskip}
+不满足「男、女教师都有」的只有「全为女教师」一类：男教师仅 \(3\) 人，凑不满 \(5\) 人，故不存在全为男教师的选法；而全为女教师的选法有
+\nopagebreak[4]
+\[
+C_{6}^{5}=6
+\]
+\Needspace{5\baselineskip}
+种。故所求种数为
+\nopagebreak[4]
+\[
+126-6=120.
+\]
+（验证：穷举全部 \(126\) 个五人子集并按男女构成分类计数，得全男 \(0\) 种、全女 \(6\) 种、男、女兼有 \(120\) 种，与补集相减所得一致。）
+
+\gkanswer{答案：\(120\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+已知点 \(P\) 和 \(Q\) 的横坐标相同，\(P\) 的纵坐标是 \(Q\) 的纵坐标的 2 倍，\(P\) 和 \(Q\) 的轨迹分别为双曲线 \(C_{1}\) 和 \(C_{2}\)．若 \(C_{1}\) 的渐近线方程为 \(y=\pm\sqrt{3}x\)，则 \(C_{2}\) 的渐近线方程为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设 \(Q(x,y)\)，由「\(P\) 和 \(Q\) 的横坐标相同、\(P\) 的纵坐标是 \(Q\) 的 \(2\) 倍」得 \(P(x,2y)\)。
+
+\Needspace{5\baselineskip}
+\(C_{1}\) 的渐近线为 \(y=\pm\sqrt{3}x\)，即由 \(3x^{2}-y^{2}=0\) 给出，故 \(C_{1}\) 的方程形如
+\nopagebreak[4]
+\[
+3x^{2}-y^{2}=\lambda\qquad(\lambda\neq0).
+\]
+\Needspace{5\baselineskip}
+把 \(P(x,2y)\) 的坐标代入 \(C_{1}\) 的方程，即得 \(Q\) 的轨迹方程，也就是 \(C_{2}\)：
+\nopagebreak[4]
+\[
+3x^{2}-4y^{2}=\lambda.
+\]
+\Needspace{5\baselineskip}
+\(C_{2}\) 的渐近线由 \(3x^{2}-4y^{2}=0\) 给出，即
+\nopagebreak[4]
+\[
+y=\pm\frac{\sqrt{3}}{2}x.
+\]
+（验证：取 \(C_{1}:3x^{2}-y^{2}=3\)，沿其右支取样 \(x=10^{4}\)，该点对应 \(Q\) 的纵坐标与横坐标之比的绝对值为 \(0.866025399\)，与 \(\dfrac{\sqrt{3}}{2}=0.866025404\) 相符；同法取样 \(x=10^{2},10^{3}\) 依次得 \(0.86598,0.86602\)，随 \(x\) 增大逼近该值。）
+
+\gkanswer{答案：\(y=\pm\dfrac{\sqrt{3}}{2}x\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+设 \(f^{-1}(x)\) 为 \(f(x)=2^{x-2}+\dfrac{x}{2}\)，\(x\in[0,2]\) 的反函数，则 \(y=f(x)+f^{-1}(x)\) 的最大值为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先看 \(f\) 在 \([0,2]\) 上的单调性。对 \(x\in[0,2]\)，
+\nopagebreak[4]
+\[
+f'(x)=2^{x-2}\ln2+\frac{1}{2}>0,
+\]
+\Needspace{5\baselineskip}
+故 \(f\) 严格递增，其值域为
+\nopagebreak[4]
+\[
+\left[f(0),f(2)\right]=\left[\frac{1}{4},2\right],
+\]
+这也正是 \(f^{-1}\) 的定义域，且 \(f^{-1}\) 在其定义域上同样严格递增。
+
+\Needspace{5\baselineskip}
+\(y=f(x)+f^{-1}(x)\) 的定义域是两者定义域之交：
+\nopagebreak[4]
+\[
+[0,2]\cap\left[\frac{1}{4},2\right]=\left[\frac{1}{4},2\right].
+\]
+\Needspace{5\baselineskip}
+两个增函数之和仍严格递增，故最大值在 \(x=2\) 处取得。此时
+\nopagebreak[4]
+\[
+f(2)=2^{0}+1=2,
+\]
+\Needspace{5\baselineskip}
+而由 \(f(2)=2\) 得 \(f^{-1}(2)=2\)，于是
+\nopagebreak[4]
+\[
+y_{\max}=f(2)+f^{-1}(2)=2+2=4.
+\]
+（验证：在 \(\left[\dfrac{1}{4},2\right]\) 上以 \(8.75\times10^{-6}\) 的步长数值扫描 \(f(x)+f^{-1}(x)\)（其中 \(f^{-1}\) 用二分法求值），最大值为 \(4.000000\)，在 \(x=2\) 处取得；左端点 \(x=\dfrac{1}{4}\) 处的函数值远小于最大值，与「处处递增」吻合。）
+
+\gkanswer{答案：\(4\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+在 \(\left(1+x+\dfrac{1}{x^{2015}}\right)^{10}\) 的展开式中，\(x^{2}\) 项的系数为\gkblank{}．（结果用数值表示）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+把 \(\left(1+x+\dfrac{1}{x^{2015}}\right)^{10}\) 看成 \(10\) 个因式相乘，按每个因式中取哪一项分类。设取 \(1\) 的因式数为 \(a\)、取 \(x\) 的为 \(b\)、取 \(\dfrac{1}{x^{2015}}\) 的为 \(c\)，则 \(a+b+c=10\) 且该项为
+\nopagebreak[4]
+\[
+\frac{10!}{a!\,b!\,c!}x^{\,b-2015c}.
+\]
+\Needspace{5\baselineskip}
+要求 \(x^{2}\) 项，令指数
+\nopagebreak[4]
+\[
+b-2015c=2.
+\]
+\Needspace{5\baselineskip}
+若 \(c=0\)，则 \(b=2\)，从而 \(a=8\)；若 \(c\geqslant1\)，则 \(b=2+2015c\geqslant2017>10\)，超出相乘的因式数，不可能。故 \(x^{2}\) 项只有 \(a=8,b=2,c=0\) 这一种来源，其系数为
+\nopagebreak[4]
+\[
+\frac{10!}{8!\,2!}=C_{10}^{2}=45.
+\]
+（验证：改用「指数 \(\to\) 系数」字典做多项式连乘，把 \(1+x+x^{-2015}\) 逐步自乘 \(10\) 次，读出指数为 \(2\) 的项的系数为 \(45\)，与通项法一致。）
+
+\gkanswer{答案：\(45\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+赌博有陷阱．某种赌博每局的规则是：赌客先在标记有 \(1,2,3,4,5\) 的卡片中随机摸取一张，将卡片上的数字作为其赌金（单位：元）；随后放回该卡片，再随机摸取两张，将这两张卡片上数字之差的绝对值的 \(1.4\) 倍作为其奖金（单位：元）．若随机变量 \(\xi_{1}\) 和 \(\xi_{2}\) 分别表示赌客在一局赌博中的赌金和奖金，则 \(E\xi_{1}-E\xi_{2}=\)\gkblank{}（元）．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+赌金 \(\xi_{1}\) 是先从标记 \(1,2,3,4,5\) 的五张卡片中随机摸取一张所得的数字，五个数字等可能，故
+\nopagebreak[4]
+\[
+E\xi_{1}=\frac{1+2+3+4+5}{5}=3.
+\]
+\Needspace{5\baselineskip}
+放回该卡片后，再从这五张卡片中摸取两张（两张为不同的卡片），设两数字之差的绝对值为 \(|d|\)，则奖金 \(\xi_{2}=1.4\,|d|\)。从五张卡片中取两张共 \(C_{5}^{2}=10\) 种等可能取法，其中 \(|d|=1,2,3,4\) 的取法分别有 \(4,3,2,1\) 种，故
+\nopagebreak[4]
+\[
+E|d|=\frac{4\times1+3\times2+2\times3+1\times4}{10}=\frac{20}{10}=2,
+\]
+\Needspace{5\baselineskip}
+从而
+\nopagebreak[4]
+\[
+E\xi_{2}=1.4\,E|d|=1.4\times2=2.8.
+\]
+\Needspace{5\baselineskip}
+由期望的线性性质，
+\nopagebreak[4]
+\[
+E\xi_{1}-E\xi_{2}=3-2.8=0.2.
+\]
+（验证：把 \(C_{5}^{2}=10\) 对卡片逐一列出后直接求平均，得 \(E|d|=2.0\)，进而 \(E\xi_{2}=2.8\)、差值为 \(0.2\)，与上面的分类计数一致。）
+
+\gkanswer{答案：\(0.2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=\sin x\)．若存在 \(x_{1}\)，\(x_{2}\)，\(\cdots\)，\(x_{m}\) 满足 \(0\leqslant x_{1}<x_{2}<\cdots<x_{m}\leqslant 6\pi\)．且 \(|f(x_{1})-f(x_{2})|+|f(x_{2})-f(x_{3})|+\cdots+|f(x_{m-1})-f(x_{m})|=12\ (m\geqslant 2,\ m\in\mathbf{N}^{*})\)，则 \(m\) 的最小值为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+记
+\nopagebreak[4]
+\[
+S=\sum_{i=1}^{m-1}\left|f(x_{i+1})-f(x_{i})\right|.
+\]
+\Needspace{5\baselineskip}
+对每个小区间 \([x_{i},x_{i+1}]\)，两端函数值之差不超过 \(\sin x\) 在该区间上的总变差，故 \(S\) 不超过 \(\sin x\) 在 \([x_{1},x_{m}]\) 上的总变差；而 \(\sin x\) 在一个完整周期内的总变差为 \(2+2=4\)，\([0,6\pi]\) 恰含 \(3\) 个周期，总变差为
+\nopagebreak[4]
+\[
+3\times4=12.
+\]
+要使 \(S=12\) 达到这个上界，必须处处取等：区间两端必须取满，即 \(x_{1}=0\)、\(x_{m}=6\pi\)，否则 \([x_{1},x_{m}]\) 短于 \([0,6\pi]\)、总变差小于 \(12\)；每个 \([x_{i},x_{i+1}]\) 内也不能含有 \(\sin x\) 的临界点，否则该段的总变差严格大于 \(\left|f(x_{i+1})-f(x_{i})\right|\)，求和后小于 \(12\)。
+
+\Needspace{5\baselineskip}
+\((0,6\pi)\) 内 \(\cos x=0\) 的点即 \(\sin x\) 的临界点，共 \(6\) 个：
+\nopagebreak[4]
+\[
+\frac{\pi}{2},\ \frac{3\pi}{2},\ \frac{5\pi}{2},\ \frac{7\pi}{2},\ \frac{9\pi}{2},\ \frac{11\pi}{2}.
+\]
+它们都必须取作某个 \(x_{i}\)，连同两端点 \(x_{1}=0\)、\(x_{m}=6\pi\) 共需 \(m\geqslant8\)。
+
+\Needspace{5\baselineskip}
+最后说明 \(m=8\) 可以取到。取 \(x_{1},\cdots,x_{8}\) 依次为上述 \(6\) 个临界点与两端点
+\nopagebreak[4]
+\[
+0,\ \frac{\pi}{2},\ \frac{3\pi}{2},\ \frac{5\pi}{2},\ \frac{7\pi}{2},\ \frac{9\pi}{2},\ \frac{11\pi}{2},\ 6\pi,
+\]
+\Needspace{5\baselineskip}
+它们严格递增且都在 \([0,6\pi]\) 内，对应的函数值为 \(0,1,-1,1,-1,1,-1,0\)，相邻两项之差的绝对值依次为 \(1,2,2,2,2,2,1\)，其和
+\nopagebreak[4]
+\[
+1+2+2+2+2+2+1=12.
+\]
+故 \(m\) 的最小值为 \(8\)。
+（验证：在 \([0,6\pi]\) 的 \(601\) 点等距网格（步长 \(\dfrac{\pi}{100}\)）上作动态规划，求「恰用 \(m\) 个点」可达到的最大总变差：\(m=7\) 时最大仅为 \(11<12\)，\(m=8\) 时恰为 \(12.000000\)，与上述下界论证一致。）
+
+\gkanswer{答案：\(8\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+在锐角三角形 \(ABC\) 中，\(\tan A=\dfrac{1}{2}\)，\(D\) 为边 \(BC\) 上的点，\(\triangle ABD\) 与 \(\triangle ACD\) 的面积分别为 2 和 4．过 \(D\) 作 \(DE\perp AB\) 于 \(E\)，\(DF\perp AC\) 于 \(F\)，则 \(\overrightarrow{DE}\cdot\overrightarrow{DF}=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取 \(A\) 为原点，记 \(\hat{u}\)、\(\hat{v}\) 为 \(\overrightarrow{AB}\)、\(\overrightarrow{AC}\) 方向的单位向量，\(\alpha=\angle A\)。由 \(\tan\alpha=\dfrac{1}{2}\) 及 \(ABC\) 为锐角三角形得
+\nopagebreak[4]
+\[
+\cos\alpha=\frac{2}{\sqrt{5}},\qquad \sin\alpha=\frac{1}{\sqrt{5}}.
+\]
+
+\Needspace{5\baselineskip}
+\(\triangle ABD\) 与 \(\triangle ACD\) 分别以 \(BD\)、\(DC\) 为底且共用由 \(A\) 引出的高，故面积之比等于底长之比：
+\nopagebreak[4]
+\[
+BD:DC=[ABD]:[ACD]=2:4=1:2,
+\]
+\Needspace{5\baselineskip}
+即 \(D\) 是 \(BC\) 上满足 \(BD:DC=1:2\) 的分点，
+\nopagebreak[4]
+\[
+D=\frac{2B+C}{3}.
+\]
+\Needspace{5\baselineskip}
+记 \(AB=c\)、\(AC=b\)，则 \(B=c\hat{u}\)、\(C=b\hat{v}\)，故
+\nopagebreak[4]
+\[
+D=\frac{2c\hat{u}+b\hat{v}}{3}.
+\]
+
+\Needspace{5\baselineskip}
+\(E\) 是 \(D\) 在直线 \(AB\) 上的投影、\(F\) 是 \(D\) 在直线 \(AC\) 上的投影，由 \(\hat{u}\cdot\hat{v}=\cos\alpha\) 得
+\nopagebreak[4]
+\[
+E=\frac{2c+b\cos\alpha}{3}\hat{u},\qquad F=\frac{2c\cos\alpha+b}{3}\hat{v},
+\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[
+\overrightarrow{DE}=E-D=\frac{b}{3}\left(\cos\alpha\,\hat{u}-\hat{v}\right),\qquad
+\overrightarrow{DF}=F-D=\frac{2c}{3}\left(\cos\alpha\,\hat{v}-\hat{u}\right).
+\]
+\Needspace{5\baselineskip}
+两者作内积，用 \(\hat{u}\cdot\hat{u}=\hat{v}\cdot\hat{v}=1\)、\(\hat{u}\cdot\hat{v}=\cos\alpha\) 化简得
+\nopagebreak[4]
+\[
+\overrightarrow{DE}\cdot\overrightarrow{DF}=\frac{2bc}{9}\left(\cos^{3}\alpha-\cos\alpha\right).
+\]
+
+\Needspace{5\baselineskip}
+再由 \([ABC]=[ABD]+[ACD]=2+4=6\) 及面积公式
+\nopagebreak[4]
+\[
+[ABC]=\frac{1}{2}bc\sin\alpha=6\ \Longrightarrow\ bc=\frac{12}{\sin\alpha}=12\sqrt{5}.
+\]
+\Needspace{5\baselineskip}
+代入 \(\cos\alpha=\dfrac{2}{\sqrt{5}}\)，得
+\nopagebreak[4]
+\[
+\cos^{3}\alpha-\cos\alpha=\frac{8}{5\sqrt{5}}-\frac{2}{\sqrt{5}}=-\frac{2}{5\sqrt{5}},
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+\overrightarrow{DE}\cdot\overrightarrow{DF}=\frac{2\times12\sqrt{5}}{9}\times\left(-\frac{2}{5\sqrt{5}}\right)=-\frac{16}{15}.
+\]
+（验证：取锐角情形 \(b=5\)、\(c=\dfrac{12\sqrt{5}}{5}\approx5.3666\)（满足 \(bc=12\sqrt{5}\)，此时三边长约为 \(2.408,5,5.367\)，确为锐角三角形），按坐标法算出 \(E,F\)，得 \(\overrightarrow{DE}\cdot\overrightarrow{DF}=-1.06666666=-\dfrac{16}{15}\)；再用另一条路径 \(\overrightarrow{DE}\cdot\overrightarrow{DF}=-|DE||DF|\cos\alpha=-\dfrac{b\sin\alpha}{3}\cdot\dfrac{2c\sin\alpha}{3}\cos\alpha=-\dfrac{2bc}{9}\sin^{2}\alpha\cos\alpha\) 复核，得同一数值；另取不同的 \((b,c)\)（保持乘积 \(bc=12\sqrt{5}\)）重算，结果同为 \(-1.06667\)，与 \(b,c\) 的具体取值无关。）
+
+\gkanswer{答案：\(-\dfrac{16}{15}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+设 \(z_{1}\)，\(z_{2}\in\mathbf{C}\)，则“\(z_{1}\)，\(z_{2}\) 中至少有一个数是虚数”是“\(z_{1}-z_{2}\) 是虚数”的（　）
+
+(A) 充分非必要条件　　(B) 必要非充分条件
+
+(C) 充要条件　　(D) 既非充分又非必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 \(p\)：「\(z_{1},z_{2}\) 中至少有一个数是虚数」（即其中至少一个不是实数），记 \(q\)：「\(z_{1}-z_{2}\) 是虚数」。要判定的是 \(p\) 是 \(q\) 的什么条件。
+
+\Needspace{5\baselineskip}
+先看充分性（\(p\Rightarrow q\)）：取 \(z_{1}=z_{2}=\mathrm{i}\)，两者都不是实数、\(p\) 成立，但
+\nopagebreak[4]
+\[
+z_{1}-z_{2}=\mathrm{i}-\mathrm{i}=0\in\mathbf{R},
+\]
+是实数而不是虚数，\(q\) 不成立。所以 \(p\) 不是 \(q\) 的充分条件。
+
+再看必要性（\(q\Rightarrow p\)）：用逆否命题。若 \(z_{1},z_{2}\) 均为实数，则 \(z_{1}-z_{2}\) 是两实数之差、仍为实数，即「\(p\) 不成立」必有「\(q\) 不成立」，取其逆否就得 \(q\Rightarrow p\)，故 \(p\) 是 \(q\) 的必要条件。
+
+其余各项：(A) 充分非必要条件要求 \(p\Rightarrow q\) 成立，已被 \(z_{1}=z_{2}=\mathrm{i}\) 推翻；(C) 充要条件要求两个方向都成立，同样不成立；(D) 既非充分又非必要条件还要求 \(q\Rightarrow p\) 不成立，而该方向已证成立。
+
+（验证：两个方向各作一次独立核对——充分性方向把 \(z_{1}=z_{2}=\mathrm{i}\) 直接代入，算得 \(z_{1}-z_{2}\) 的实部与虚部都是 \(0\)，确认它不是虚数；必要性方向改用「实数的差仍为实数」这一逆否形式独立重写一遍，与上面的论证互为印证，条件关系唯一确定为必要非充分。）
+
+故选 (B)。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知点 \(A\) 的坐标为 \((4\sqrt{3},1)\)，将 \(OA\) 绕坐标原点 \(O\) 逆时针旋转 \(\dfrac{\pi}{3}\) 至 \(OB\)，则点 \(B\) 的纵坐标为（　）
+
+(A) \(\dfrac{3\sqrt{3}}{2}\)　(B) \(\dfrac{5\sqrt{3}}{2}\)　(C) \(\dfrac{11}{2}\)　(D) \(\dfrac{13}{2}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由点 \(A\) 的坐标得 \(\overrightarrow{OA}=(4\sqrt{3},\,1)\)。绕原点 \(O\) 逆时针旋转 \(\dfrac{\pi}{3}\) 的变换矩阵为
+\nopagebreak[4]
+\[
+\begin{pmatrix}\cos\frac{\pi}{3} & -\sin\frac{\pi}{3}\\ \sin\frac{\pi}{3} & \cos\frac{\pi}{3}\end{pmatrix}=\begin{pmatrix}\frac{1}{2} & -\frac{\sqrt{3}}{2}\\ \frac{\sqrt{3}}{2} & \frac{1}{2}\end{pmatrix},
+\]
+\Needspace{5\baselineskip}
+它把 \(\overrightarrow{OA}\) 变为
+\nopagebreak[4]
+\[
+\overrightarrow{OB}=\begin{pmatrix}\frac{1}{2} & -\frac{\sqrt{3}}{2}\\ \frac{\sqrt{3}}{2} & \frac{1}{2}\end{pmatrix}\begin{pmatrix}4\sqrt{3}\\ 1\end{pmatrix}=\begin{pmatrix}\frac{1}{2}\cdot4\sqrt{3}-\frac{\sqrt{3}}{2}\cdot1\\ \frac{\sqrt{3}}{2}\cdot4\sqrt{3}+\frac{1}{2}\cdot1\end{pmatrix}=\begin{pmatrix}\frac{3\sqrt{3}}{2}\\ \frac{13}{2}\end{pmatrix}.
+\]
+故点 \(B\) 的纵坐标为 \(\dfrac{13}{2}\)。
+
+其余各项：\(\dfrac{3\sqrt{3}}{2}\) 恰是同一乘积算出的横坐标（(A) 把它当成了纵坐标）；若把旋转方向误取为顺时针 \(\dfrac{\pi}{3}\)，所得点为 \(\left(\dfrac{5\sqrt{3}}{2},\,-\dfrac{11}{2}\right)\)，而 (B) \(\dfrac{5\sqrt{3}}{2}\) 与 (C) \(\dfrac{11}{2}\) 正是该点两个坐标分量的绝对值，即方向判反的产物。
+
+（验证：旋转是保长变换，\(\left|\overrightarrow{OA}\right|=\sqrt{(4\sqrt{3})^{2}+1^{2}}=\sqrt{48+1}=7\)，而 \(\left|\overrightarrow{OB}\right|=\sqrt{\left(\dfrac{3\sqrt{3}}{2}\right)^{2}+\left(\dfrac{13}{2}\right)^{2}}=\sqrt{\dfrac{27}{4}+\dfrac{169}{4}}=\sqrt{49}=7\)，两者相符；数值上 \(B\approx(2.598076,\,6.5)\)，\(\left|\overrightarrow{OB}\right|=7.000000\)。）
+
+故选 (D)。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+记方程①：\(x^{2}+a_{1}x+1=0\)，方程②：\(x^{2}+a_{2}x+2=0\)，方程③：\(x^{2}+a_{3}x+4=0\)，其中 \(a_{1}\)，\(a_{2}\)，\(a_{3}\) 是正实数．当 \(a_{1}\)，\(a_{2}\)，\(a_{3}\) 成等比数列时，下列选项中，能推出方程③无实根的是（　）
+
+(A) 方程①有实根，且②有实根　　(B) 方程①有实根，且②无实根
+
+(C) 方程①无实根，且②有实根　　(D) 方程①无实根，且②无实根
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+三个方程的判别式依次为 \(a_{1}^{2}-4\)、\(a_{2}^{2}-8\)、\(a_{3}^{2}-16\)，故：方程①有实根 \(\iff a_{1}\geqslant2\)；方程②有实根 \(\iff a_{2}^{2}\geqslant8\)；方程③无实根 \(\iff a_{3}^{2}<16\iff a_{3}<4\)（都用到了 \(a_{i}>0\)，故 \(a_{1}\geqslant2\) 与 \(a_{3}<4\) 不必带绝对值）。又 \(a_{1},a_{2},a_{3}\) 是正实数且成等比数列，故
+\nopagebreak[4]
+\[
+a_{2}^{2}=a_{1}a_{3}.
+\]
+
+\Needspace{5\baselineskip}
+先看 (B) 确能推出结论：由方程①有实根得 \(a_{1}\geqslant2\)，由方程②无实根得 \(a_{2}^{2}<8\)、即 \(a_{1}a_{3}<8\)，于是
+\nopagebreak[4]
+\[
+a_{3}<\frac{8}{a_{1}}\leqslant\frac{8}{2}=4,
+\]
+故方程③无实根。
+
+其余各项均被反例推翻：
+
+(A) 取 \(a_{1}=a_{2}=a_{3}=4\)（成等比，\(a_{2}^{2}=a_{1}a_{3}\)）：方程①有实根（\(a_{1}^{2}=16\geqslant4\)）、方程②有实根（\(a_{2}^{2}=16\geqslant8\)），但方程③的判别式 \(a_{3}^{2}-16=0\)，有实根，与「③无实根」相反。
+
+\Needspace{5\baselineskip}
+(C) 由方程①无实根得 \(a_{1}<2\)，由方程②有实根得 \(a_{1}a_{3}=a_{2}^{2}\geqslant8\)，于是
+\nopagebreak[4]
+\[
+a_{3}\geqslant\frac{8}{a_{1}}>\frac{8}{2}=4,
+\]
+方程③必有实根，恰与「③无实根」相反。
+
+(D) 取 \(a_{1}=1.9\)、\(a_{3}=4.2\)，则 \(a_{2}=\sqrt{a_{1}a_{3}}=\sqrt{7.98}>0\)，三数成等比：方程①无实根（\(a_{1}^{2}=3.61<4\)）、方程②无实根（\(a_{2}^{2}=7.98<8\)），但方程③有实根（\(a_{3}^{2}=17.64>16\)），故 (D) 推不出结论。
+
+（验证：在 \((0,20)^{2}\) 上以步长 \(0.02\) 对 \((a_{1},a_{3})\) 作近 \(10^{6}\) 个点的网格扫描（每点取 \(a_{2}=\sqrt{a_{1}a_{3}}\)）并逐项统计——满足 (B) 的样本中「方程③有实根」者为 \(0\) 个；满足 (A) 的样本中反例（③有实根）有 \(720000\) 个，满足 (D) 的样本中反例有 \(31831\) 个，与上述排除论证一致。）
+
+故选 (B)。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+设 \(P_{n}(x_{n},y_{n})\) 是直线 \(2x-y=\dfrac{n}{n+1}\ (n\in\mathbf{N}^{*})\) 与圆 \(x^{2}+y^{2}=2\) 在第一象限的交点，则极限 \(\lim\limits_{n\to\infty}\dfrac{y_{n}-1}{x_{n}-1}=\)（　）
+
+(A) \(-1\)　(B) \(-\dfrac{1}{2}\)　(C) \(1\)　(D) \(2\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 \(c=\dfrac{n}{n+1}\)，则 \(c=1-\dfrac{1}{n+1}<1\) 且 \(c\to1\)，直线方程即 \(y=2x-c\)。
+
+先看极限位置：\(c\to1\) 时直线趋于 \(2x-y=1\)，它与圆 \(x^{2}+y^{2}=2\) 在第一象限的交点由 \(x^{2}+(2x-1)^{2}=2\)、即 \(5x^{2}-4x-1=0\) 定出，取正根 \(x=1\)（另一根为负，不合第一象限），得点 \((1,1)\)，故 \(P_{n}\to(1,1)\)。
+
+\Needspace{5\baselineskip}
+而 \(\dfrac{y_{n}-1}{x_{n}-1}\) 正是连结点 \((1,1)\) 与 \(P_{n}\) 的直线的斜率，其极限就是圆 \(x^{2}+y^{2}=2\) 在 \((1,1)\) 处切线的斜率。由 \(2x+2yy'=0\) 得
+\nopagebreak[4]
+\[
+y'=-\frac{x}{y}\Big|_{(1,1)}=-1.
+\]
+
+\Needspace{5\baselineskip}
+直接计算亦可：令 \(x_{n}=1+\varepsilon\)、\(c=1-\delta\)（\(\delta=\dfrac{1}{n+1}\to0^{+}\)），代入直线方程 \(2x-y=c\) 得
+\nopagebreak[4]
+\[
+6\varepsilon+2\delta+4\delta\varepsilon+5\varepsilon^{2}+\delta^{2}=0,
+\]
+\Needspace{5\baselineskip}
+其首阶给出 \(\varepsilon=-\dfrac{\delta}{3}+O(\delta^{2})\)，于是
+\nopagebreak[4]
+\[
+\frac{y_{n}-1}{x_{n}-1}=\frac{2x_{n}-c-1}{x_{n}-1}=\frac{2\varepsilon+\delta}{\varepsilon}=2+\frac{\delta}{\varepsilon}\to2-3=-1.
+\]
+
+其余各项：把 \(n=1\) 代入便知该比值是负数（约 \(-0.849\)），故 (C) \(1\) 与 (D) \(2\) 这两个候选立即排除；而 (B) \(-\dfrac{1}{2}\) 与序列的实际走向也不符（见下验证，比值单调下降且恒大于 \(-1\)），极限由切线斜率唯一确定为 \(-1\)。
+
+（验证：取 \(n=1,\,10,\,100,\,1000,\,10^{5}\) 数值计算 \(\dfrac{y_{n}-1}{x_{n}-1}\)，依次得 \(-0.8490\)、\(-0.9703\)、\(-0.9967\)、\(-0.99967\)、\(-0.999997\)，单调下降且始终大于 \(-1\)，收敛到 \(-1\)；其中 \(n=10^{5}\) 时交点为 \((0.9999967,\,1.0000033)\)，与切线斜率 \(-1\) 相符。）
+
+故选 (A)。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，在长方体 \(ABCD\text{-}A_{1}B_{1}C_{1}D_{1}\) 中，\(AA_{1}=1\)，\(AB=AD=2\)，\(E\)，\(F\) 分别是棱 \(AB\)，\(BC\) 的中点．证明 \(A_{1}\)，\(C_{1}\)，\(F\)，\(E\) 四点共面，并求直线 \(CD_{1}\) 与平面 \(A_{1}C_{1}FE\) 所成角的正弦值．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015shs_q19_cuboid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+以 \(A\) 为原点，\(\overrightarrow{AB}\)、\(\overrightarrow{AD}\)、\(\overrightarrow{AA_{1}}\) 的方向为 \(x\) 轴、\(y\) 轴、\(z\) 轴建立空间直角坐标系（长方体的三条棱两两垂直），则各顶点与中点的坐标为 \(A(0,0,0)\)、\(B(2,0,0)\)、\(C(2,2,0)\)、\(D(0,2,0)\)、\(A_{1}(0,0,1)\)、\(C_{1}(2,2,1)\)、\(E(1,0,0)\)、\(F(2,1,0)\)。
+
+\Needspace{5\baselineskip}
+先证 \(A_{1},C_{1},F,E\) 四点共面。由坐标直接检验，四点都满足
+\nopagebreak[4]
+\[
+x-y+z=1,
+\]
+因为 \(A_{1}:0-0+1=1\)、\(C_{1}:2-2+1=1\)、\(E:1-0+0=1\)、\(F:2-1+0=1\)，而 \(x-y+z=1\) 表示一个平面（法向量可取 \((1,-1,1)\)，它与 \(\overrightarrow{A_{1}C_{1}}=(2,2,0)\)、\(\overrightarrow{A_{1}E}=(1,0,-1)\) 都正交），故四点共面。
+
+再给一个不依赖坐标的说法：在 \(\triangle ABC\) 中 \(E,F\) 分别是 \(AB,BC\) 的中点，故 \(EF\parallel AC\)；又 \(ACC_{1}A_{1}\) 是平行四边形，\(AC\parallel A_{1}C_{1}\)；于是 \(EF\parallel A_{1}C_{1}\)，两条平行直线确定一个平面，同样得到 \(A_{1},C_{1},F,E\) 四点共面。
+
+\Needspace{5\baselineskip}
+（验证：用三点行列式为零独立复核——以 \(A_{1}\) 为起点，
+\nopagebreak[4]
+\[
+\det\left(\overrightarrow{A_{1}C_{1}},\overrightarrow{A_{1}F},\overrightarrow{A_{1}E}\right)=\det\begin{pmatrix}2&2&0\\ 2&1&-1\\ 1&0&-1\end{pmatrix}=0
+\]
+（数值核对为 \(0\)），三向量共面即四点共面；且 \(x-y+z=1\) 确为过 \(A_{1},C_{1},E\) 的平面（法向量 \((-2,2,-2)\) 与两个方向向量都正交），四点中最后一点 \(F\) 也满足该方程。）
+
+\Needspace{5\baselineskip}
+由共面结论，平面 \(A_{1}C_{1}FE\) 的方程就是 \(x-y+z=1\)，取它的法向量
+\nopagebreak[4]
+\[
+\vec{n}=\overrightarrow{A_{1}C_{1}}\times\overrightarrow{A_{1}E}=(2,2,0)\times(1,0,-1)=(-2,2,-2)\parallel(1,-1,1),
+\]
+\Needspace{5\baselineskip}
+并取其同向的最简向量 \(\vec{n}=(1,-1,1)\) 参与计算，\(\left|\vec{n}\right|=\sqrt{3}\)。直线 \(CD_{1}\) 的方向向量为
+\nopagebreak[4]
+\[
+\overrightarrow{CD_{1}}=D_{1}-C=(0,2,1)-(2,2,0)=(-2,0,1),\qquad\left|\overrightarrow{CD_{1}}\right|=\sqrt{5}.
+\]
+\Needspace{5\baselineskip}
+设所成的角为 \(\theta\)，则
+\nopagebreak[4]
+\[
+\sin\theta=\frac{\left|\vec{n}\cdot\overrightarrow{CD_{1}}\right|}{\left|\vec{n}\right|\left|\overrightarrow{CD_{1}}\right|}=\frac{\left|(1,-1,1)\cdot(-2,0,1)\right|}{\sqrt{3}\times\sqrt{5}}=\frac{\left|-2+0+1\right|}{\sqrt{15}}=\frac{1}{\sqrt{15}}=\frac{\sqrt{15}}{15},
+\]
+即直线 \(CD_{1}\) 与平面 \(A_{1}C_{1}FE\) 所成角的正弦值为 \(\dfrac{\sqrt{15}}{15}\)（约 \(0.2582\)）。
+
+（验证：另用「点到平面距离 ÷ 斜线段长」的几何法独立复核——点 \(C\) 到平面 \(x-y+z=1\) 的距离 \(d=\dfrac{\left|2-2+0-1\right|}{\sqrt{3}}=\dfrac{1}{\sqrt{3}}\)；把直线 \(C+s(-2,0,1)\) 代入平面方程解得 \(s=-1\)，交点 \(P(4,2,-1)\)，\(\left|CP\right|=\sqrt{5}\)；于是 \(\sin\theta=\dfrac{d}{\left|CP\right|}=\dfrac{1/\sqrt{3}}{\sqrt{5}}=\dfrac{1}{\sqrt{15}}\)，与向量法一致（数值 \(0.25819889\)）。）
+
+\gkanswer{答案：\(A_{1}\)，\(C_{1}\)，\(F\)，\(E\) 四点共面（它们所在平面为 \(x-y+z=1\)）；直线 \(CD_{1}\) 与平面 \(A_{1}C_{1}FE\) 所成角的正弦值为 \(\dfrac{\sqrt{15}}{15}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+如图，\(A\)，\(B\)，\(C\) 三地有直道相通，\(AB=5\) 千米，\(AC=3\) 千米，\(BC=4\) 千米．现甲、乙两警员同时从 \(A\) 地出发匀速前往 \(B\) 地，过 \(t\) 小时，他们之间的距离为 \(f(t)\)（单位：千米）．甲的路线是 \(AB\)，速度为 5 千米/小时，乙的路线是 \(ACB\)，速度为 8 千米/小时．乙到达 \(B\) 地后在原地等待．设 \(t=t_{1}\) 时，乙到达 \(C\) 地．
+
+（1） 求 \(t_{1}\) 与 \(f(t_{1})\) 的值；
+
+（2） 已知警员的对讲机的有效通话距离是 3 千米．当 \(t_{1}\leqslant t\leqslant 1\) 时，求 \(f(t)\) 的表达式，并判断 \(f(t)\) 在 \([t_{1},1]\) 上的最大值是否超过 3？说明理由．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015shs_q20_triangle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 \(AC=3\)、\(BC=4\)、\(AB=5\) 得 \(3^{2}+4^{2}=5^{2}\)，故 \(\angle ACB=90^{\circ}\)。取 \(A(0,0)\)、\(B(5,0)\)，设 \(C(x,y)\)，由 \(\left|AC\right|^{2}=x^{2}+y^{2}=9\) 与 \(\left|BC\right|^{2}=(x-5)^{2}+y^{2}=16\) 相减得 \(10x-25=-7\)，即 \(x=\dfrac{9}{5}\)，代回得 \(y=\dfrac{12}{5}\)，所以可取
+\nopagebreak[4]
+\[
+C\left(\frac{9}{5},\frac{12}{5}\right).
+\]
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+乙沿路线 \(ACB\) 行进，从 \(A\) 到 \(C\) 走 \(AC=3\) 千米，速度为 \(8\) 千米/小时，故
+\nopagebreak[4]
+\[
+t_{1}=\frac{3}{8}.
+\]
+\Needspace{5\baselineskip}
+此时甲从 \(A\) 沿 \(AB\) 走过 \(5t_{1}=\dfrac{15}{8}\) 千米，位于 \(P\left(\dfrac{15}{8},0\right)\)，而乙恰在 \(C\)，于是
+\nopagebreak[4]
+\[
+f(t_{1})=\left|PC\right|=\sqrt{\left(\frac{15}{8}-\frac{9}{5}\right)^{2}+\left(0-\frac{12}{5}\right)^{2}}=\sqrt{\frac{9}{1600}+\frac{9216}{1600}}=\sqrt{\frac{369}{64}}=\frac{3\sqrt{41}}{8}.
+\]
+
+\Needspace{5\baselineskip}
+（验证：改用余弦定理独立复算——\(\cos A=\dfrac{5^{2}+3^{2}-4^{2}}{2\times5\times3}=\dfrac{3}{5}\)，故
+\nopagebreak[4]
+\[
+f(t_{1})^{2}=\left(\frac{15}{8}\right)^{2}+3^{2}-2\times\frac{15}{8}\times3\times\frac{3}{5}=\frac{225}{64}+9-\frac{27}{4}=\frac{369}{64},
+\]
+与坐标法一致；又乙到达 \(C\) 之前，两人的位置分别在 \(AB\)、\(AC\) 上距 \(A\) 为 \(5t\)、\(8t\) 处，有 \(f(t)^{2}=(5t)^{2}+(8t)^{2}-2\times5t\times8t\times\dfrac{3}{5}=41t^{2}\)，取 \(t=\dfrac{3}{8}\) 也得 \(\dfrac{369}{64}\)，三条路径互相闭合。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+乙从 \(A\) 经 \(C\) 到 \(B\) 共走 \(3+4=7\) 千米，用时 \(\dfrac{7}{8}\) 小时，故 \(t\in\left[\dfrac{7}{8},1\right]\) 时乙已停在 \(B\) 等候，而甲仍在 \(AB\) 上、位置为 \((5t,0)\)，此时
+\nopagebreak[4]
+\[
+f(t)=5-5t\qquad\left(\frac{7}{8}\leqslant t\leqslant1\right).
+\]
+
+\Needspace{5\baselineskip}
+当 \(\dfrac{3}{8}\leqslant t\leqslant\dfrac{7}{8}\) 时，乙在 \(CB\) 上、已从 \(C\) 走出 \(8t-3\) 千米，行进方向为 \(C\to B\) 的单位向量 \(\left(\dfrac{4}{5},-\dfrac{3}{5}\right)\)，故乙的位置为
+\nopagebreak[4]
+\[
+Q=\left(\frac{9}{5},\frac{12}{5}\right)+(8t-3)\left(\frac{4}{5},-\frac{3}{5}\right)=\left(\frac{32t-3}{5},\ \frac{21-24t}{5}\right)
+\]
+\Needspace{5\baselineskip}
+（\(t=\dfrac{3}{8}\) 时 \(Q=C\)、\(t=\dfrac{7}{8}\) 时 \(Q=B(5,0)\)，两端都与实际相符），甲的位置为 \(P(5t,0)\)，于是
+\nopagebreak[4]
+\[
+\begin{aligned}
+f(t)^{2}&=\left(5t-\frac{32t-3}{5}\right)^{2}+\left(0-\frac{21-24t}{5}\right)^{2}\\
+&=\frac{(3-7t)^{2}+(21-24t)^{2}}{25}=\frac{450-1050t+625t^{2}}{25}\\
+&=25t^{2}-42t+18.
+\end{aligned}
+\]
+\Needspace{5\baselineskip}
+即 \(f(t)=\sqrt{25t^{2}-42t+18}\)。综合两段得
+\nopagebreak[4]
+\[
+f(t)=\begin{cases}
+\sqrt{25t^{2}-42t+18}, & \dfrac{3}{8}\leqslant t\leqslant\dfrac{7}{8},\\
+5-5t, & \dfrac{7}{8}\leqslant t\leqslant1.
+\end{cases}
+\]
+
+\Needspace{5\baselineskip}
+再判断最大值是否超过 \(3\)。在 \(\left[\dfrac{3}{8},\dfrac{7}{8}\right]\) 上配方：
+\nopagebreak[4]
+\[
+25t^{2}-42t+18=25\left(t-\frac{21}{25}\right)^{2}+\frac{9}{25},
+\]
+\Needspace{5\baselineskip}
+顶点 \(t=\dfrac{21}{25}\) 落在这段区间内，故该段的最大值在两端点处取得：
+\nopagebreak[4]
+\[
+\max\left\{f\left(\frac{3}{8}\right),\ f\left(\frac{7}{8}\right)\right\}=\max\left\{\frac{3\sqrt{41}}{8},\ \frac{5}{8}\right\}=\frac{3\sqrt{41}}{8};
+\]
+\Needspace{5\baselineskip}
+另一段 \(f(t)=5-5t\) 在 \(\left[\dfrac{7}{8},1\right]\) 上递减，最大值 \(f\left(\dfrac{7}{8}\right)=\dfrac{5}{8}\)。两段合起来，
+\nopagebreak[4]
+\[
+\max_{t_{1}\leqslant t\leqslant1}f(t)=\frac{3\sqrt{41}}{8}<3\qquad(41<64),
+\]
+所以 \(f(t)\) 在 \([t_{1},1]\) 上的最大值不超过 \(3\)，即在 \(t_{1}\leqslant t\leqslant1\) 的整段时间内两人的距离始终在对讲机 \(3\) 千米的有效通话距离之内（最远约 \(2.4012\) 千米）。
+
+（验证：按题意直接模拟两人的位置（甲为 \((5t,0)\)，乙按 \(t\leqslant\dfrac{3}{8}\)、\(\dfrac{3}{8}\leqslant t\leqslant\dfrac{7}{8}\)、\(t\geqslant\dfrac{7}{8}\) 三段分段）与所得分段式逐点比对，在 \(\left[\dfrac{3}{8},1\right]\) 上完全吻合（误差小于 \(10^{-12}\)）；再对 \(2\times10^{6}\) 个采样点求数值最大值，得 \(2.401171589\)（在 \(t=0.375\) 处取得），与 \(\dfrac{3\sqrt{41}}{8}\) 相符。）
+
+\gkanswer{答案（1）：\(t_{1}=\dfrac{3}{8}\) 小时；\(f(t_{1})=\dfrac{3\sqrt{41}}{8}\) 千米。}
+
+\gkanswer{答案（2）：$f(t)=\begin{cases}\sqrt{25t^{2}-42t+18}, & \dfrac{3}{8}\leqslant t\leqslant\dfrac{7}{8},\\ 5-5t, & \dfrac{7}{8}\leqslant t\leqslant1.\end{cases}$；\(f(t)\) 在 \([t_{1},1]\) 上的最大值为 \(\dfrac{3\sqrt{41}}{8}\)（约 \(2.40\)，在 \(t=t_{1}=\dfrac{3}{8}\) 处取得），小于 \(3\)，故不超过 3。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+己知椭圆 \(x^{2}+2y^{2}=1\)，过原点的两条直线 \(l_{1}\) 和 \(l_{2}\) 分别与椭圆交于点 \(A\)，\(B\) 和 \(C\)，\(D\)．记得到的平行四边形 \(ACBD\) 的面积为 \(S\)．
+
+（1） 设 \(A(x_{1},y_{1})\)，\(C(x_{2},y_{2})\)．用 \(A\)，\(C\) 的坐标表示点 \(C\) 到直线 \(l_{1}\) 的距离，并证明 \(S=2|x_{1}y_{2}-x_{2}y_{1}|\)；
+
+（2） 设 \(l_{1}\) 与 \(l_{2}\) 的斜率之积为 \(-\dfrac{1}{2}\)，求面积 \(S\) 的值．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设椭圆为 \(x^{2}+2y^{2}=1\)，过原点的两条直线 \(l_{1}\)、\(l_{2}\) 分别与椭圆交于点 \(A\)、\(B\) 和 \(C\)、\(D\)，记平行四边形 \(ACBD\) 的面积为 \(S\)。椭圆关于原点中心对称，而两条直线都过原点，故每条直线与椭圆的两个交点关于原点对称：记 \(A(x_{1},y_{1})\)、\(C(x_{2},y_{2})\)，则 \(B(-x_{1},-y_{1})\)、\(D(-x_{2},-y_{2})\)。又原点不满足 \(x^{2}+2y^{2}=1\)，所以 \(A\neq O\)，即 \((x_{1},y_{1})\neq(0,0)\)。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+直线 \(l_{1}\) 过 \(O\) 与 \(A(x_{1},y_{1})\)，取其一般式
+\nopagebreak[4]
+\[
+y_{1}x-x_{1}y=0
+\]
+\Needspace{5\baselineskip}
+（\(O\)、\(A\) 的坐标代入都成立；由 \(A\neq O\) 知 \(x_{1}\)、\(y_{1}\) 不同时为零，这确是一条直线。写成一般式就不必区分 \(x_{1}\) 是否为零，分母 \(\sqrt{x_{1}^{2}+y_{1}^{2}}\) 也恒大于零）。由点到直线的距离公式，点 \(C(x_{2},y_{2})\) 到 \(l_{1}\) 的距离为
+\nopagebreak[4]
+\[
+d=\frac{|y_{1}x_{2}-x_{1}y_{2}|}{\sqrt{y_{1}^{2}+x_{1}^{2}}}=\frac{|x_{1}y_{2}-x_{2}y_{1}|}{\sqrt{x_{1}^{2}+y_{1}^{2}}}.
+\]
+
+\Needspace{5\baselineskip}
+再证 \(S=2|x_{1}y_{2}-x_{2}y_{1}|\)。由 \(B=-A\)、\(D=-C\) 知对角线 \(AB\) 与 \(CD\) 都过原点且被原点平分，故四边形 \(ACBD\) 是平行四边形（\(AC\parallel DB\)，\(CB\parallel AD\)）。对角线 \(AB\) 把它分成 \(\triangle ACB\) 与 \(\triangle ADB\)，两者以 \(AB\) 为公共底，高分别是 \(C\)、\(D\) 到 \(l_{1}\) 的距离；而 \(l_{1}\) 过原点，故
+\nopagebreak[4]
+\[
+d(D,l_{1})=d(-C,l_{1})=d(C,l_{1})=d,
+\]
+\Needspace{5\baselineskip}
+于是这两个三角形等积，从而
+\nopagebreak[4]
+\[
+S=2\times\frac{1}{2}|AB|\cdot d=|AB|\cdot d=2\sqrt{x_{1}^{2}+y_{1}^{2}}\cdot\frac{|x_{1}y_{2}-x_{2}y_{1}|}{\sqrt{x_{1}^{2}+y_{1}^{2}}}=2|x_{1}y_{2}-x_{2}y_{1}|,
+\]
+其中 \(|AB|=|B-A|=2|OA|=2\sqrt{x_{1}^{2}+y_{1}^{2}}\)。也可以按两条对角线写：设 \(\theta=\angle(l_{1},l_{2})\)，则 \(S=\dfrac{1}{2}|AB|\cdot|CD|\sin\theta=2|x_{1}y_{2}-x_{2}y_{1}|\)，与上式同。
+
+（验证：对随机斜率对 \((k_{1},k_{2})\) 取椭圆上相应的两点，用鞋带公式按顶点顺序 \(A,C,B,D\) 直接算面积，再与公式 \(2|x_{1}y_{2}-x_{2}y_{1}|\) 和 \(|AB|\cdot d\) 互核，三条路对 5 组随机数据给出完全一致的结果（如 \(k_{1}=0.9056\)、\(k_{2}=-2.5654\) 时三者同为 \(1.1352536900\)）。）
+
+\gksubpart{(2)}
+
+设 \(l_{1}\)、\(l_{2}\) 的斜率分别为 \(k_{1}\)、\(k_{2}\)，题设 \(k_{1}k_{2}=-\dfrac{1}{2}\neq0\)，故两斜率都存在、有限且不为零——若某条直线垂直于 \(x\) 轴，它的斜率不存在，题设的「斜率之积」便无从谈起。
+
+\Needspace{5\baselineskip}
+把 \(y=k_{1}x\) 代入 \(x^{2}+2y^{2}=1\) 得 \(x^{2}(1+2k_{1}^{2})=1\)，取 \(x>0\) 的一支
+\nopagebreak[4]
+\[
+A\left(\frac{1}{\sqrt{1+2k_{1}^{2}}},\ \frac{k_{1}}{\sqrt{1+2k_{1}^{2}}}\right),\qquad
+C\left(\frac{1}{\sqrt{1+2k_{2}^{2}}},\ \frac{k_{2}}{\sqrt{1+2k_{2}^{2}}}\right),
+\]
+\Needspace{5\baselineskip}
+（取 \(x<0\) 的一支相当于把 \(A\) 或 \(C\) 换成关于原点的对称点，而（1）的结论只含行列式的绝对值，面积不受影响）。代入（1）的结论得
+\nopagebreak[4]
+\[
+S=2|x_{1}y_{2}-x_{2}y_{1}|=\frac{2|k_{2}-k_{1}|}{\sqrt{(1+2k_{1}^{2})(1+2k_{2}^{2})}}.
+\]
+\Needspace{5\baselineskip}
+由 \(k_{1}k_{2}=-\dfrac{1}{2}\) 有
+\nopagebreak[4]
+\[
+(k_{2}-k_{1})^{2}=k_{1}^{2}+k_{2}^{2}-2k_{1}k_{2}=k_{1}^{2}+k_{2}^{2}+1,
+\]
+\nopagebreak[4]
+\[
+(1+2k_{1}^{2})(1+2k_{2}^{2})=1+2(k_{1}^{2}+k_{2}^{2})+4k_{1}^{2}k_{2}^{2}=1+2(k_{1}^{2}+k_{2}^{2})+1=2(k_{1}^{2}+k_{2}^{2}+1),
+\]
+\Needspace{5\baselineskip}
+两式相除（\(k_{1}^{2}+k_{2}^{2}+1>0\)，约分不受影响）得
+\nopagebreak[4]
+\[
+S^{2}=\frac{4(k_{1}^{2}+k_{2}^{2}+1)}{2(k_{1}^{2}+k_{2}^{2}+1)}=2,\qquad S=\sqrt2.
+\]
+即只要两直线的斜率之积为 \(-\dfrac{1}{2}\)，面积就恒为 \(\sqrt2\)，与 \(k_{1}\)、\(k_{2}\) 各自取何值无关。
+
+（验证：随机取 8 组满足 \(k_{1}k_{2}=-\dfrac{1}{2}\) 的斜率对（如 \(\left(1,-\dfrac{1}{2}\right)\)、\(\left(2,-\dfrac{1}{4}\right)\)），由（1）的行列式公式（等价地由鞋带公式）算得的面积全为 \(1.414213562373\ldots=\sqrt2\)。另用对角线公式复核 \(k_{1}=1\)、\(k_{2}=-\dfrac{1}{2}\)：\(|AB|=2\sqrt{\dfrac{2}{3}}\)、\(|CD|=2\sqrt{\dfrac{5}{6}}\)，\(\tan\angle(l_{1},l_{2})=\left|\dfrac{k_{2}-k_{1}}{1+k_{1}k_{2}}\right|=3\)，故 \(S=\dfrac{1}{2}\cdot2\sqrt{\dfrac{2}{3}}\cdot2\sqrt{\dfrac{5}{6}}\cdot\dfrac{3}{\sqrt{10}}=\sqrt2\)，与上式一致。）
+
+\gkanswer{答案（1）：\(d=\dfrac{|x_{1}y_{2}-x_{2}y_{1}|}{\sqrt{x_{1}^{2}+y_{1}^{2}}}\)；且 \(S=2|x_{1}y_{2}-x_{2}y_{1}|\)。}
+
+\gkanswer{答案（2）：\(S=\sqrt{2}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+已知数列 \(\{a_{n}\}\) 与 \(\{b_{n}\}\) 满足 \(a_{n+1}-a_{n}=2(b_{n+1}-b_{n})\)，\(n\in\mathbf{N}^{*}\)．
+
+（1） 若 \(b_{n}=3n+5\)，且 \(a_{1}=1\)，求 \(\{a_{n}\}\) 的通项公式；
+
+（2） 设 \(\{a_{n}\}\) 的第 \(n_{0}\) 项是最大项，即 \(a_{n_{0}}\geqslant a_{n}\)（\(n\in\mathbf{N}^{*}\)），求证：\(\{b_{n}\}\) 的第 \(n_{0}\) 项是最大项；
+
+（3） 设 \(a_{1}=\lambda<0\)，\(b_{n}=\lambda^{n}\)（\(n\in\mathbf{N}^{*}\)）．求 \(\lambda\) 的取值范围，使得 \(\{a_{n}\}\) 有最大值 \(M\) 与最小值 \(m\)，且 \(\dfrac{M}{m}\in(-2,2)\)．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+题设递推式为
+\nopagebreak[4]
+\[
+a_{n+1}-a_{n}=2(b_{n+1}-b_{n})\qquad(n\in\mathbf{N}^{*}).
+\]
+\Needspace{5\baselineskip}
+把它对 \(k=1,2,\cdots,n-1\) 累加（\(n=1\) 时两端都是 \(0\)，同样成立）：左端中间项两两相消，只剩 \(a_{n}-a_{1}\)；右端提出公因子 \(2\) 后同样相消，剩 \(2(b_{n}-b_{1})\)。于是
+\nopagebreak[4]
+\[
+a_{n}-a_{1}=2(b_{n}-b_{1}),
+\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[
+a_{n}=2b_{n}+(a_{1}-2b_{1})\qquad(\text{对一切 }n\in\mathbf{N}^{*}),
+\]
+其中 \(a_{1}-2b_{1}\) 是与 \(n\) 无关的常数。这一关系表明两数列的对应项之间只差一个固定的平移与二倍伸缩，下标一一对应，是（2）、（3）两问的共同出发点。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+由 \(b_{n}=3n+5\) 得 \(b_{n+1}-b_{n}=3\)，故 \(a_{n+1}-a_{n}=2\times3=6\) 对一切 \(n\in\mathbf{N}^{*}\) 成立，即 \(\{a_{n}\}\) 是首项 \(a_{1}=1\)、公差为 \(6\) 的等差数列，所以
+\nopagebreak[4]
+\[
+a_{n}=1+6(n-1)=6n-5\qquad(n\in\mathbf{N}^{*}).
+\]
+
+（验证：回代原递推式逐项验算——\(a_{2}-a_{1}=7-1=6\)，而 \(2(b_{2}-b_{1})=2(11-8)=6\)，两边相等；所得通项与 \(b_{n}=3n+5\) 还满足恒等式 \(a_{n}=2b_{n}-15\)（即 \(6n-5=2(3n+5)-15\)），由它立刻推出 \(a_{n+1}-a_{n}=2(b_{n+1}-b_{n})\)，与原式相容。）
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+题设给出 \(a_{n_{0}}\geqslant a_{n}\) 对一切 \(n\in\mathbf{N}^{*}\) 成立。由上面的一般关系式，两端同时减去同一个常数 \(a_{1}-2b_{1}\)，再约去公因子 \(2\)，得
+\nopagebreak[4]
+\[
+a_{n_{0}}\geqslant a_{n}\iff 2b_{n_{0}}+(a_{1}-2b_{1})\geqslant 2b_{n}+(a_{1}-2b_{1})\iff b_{n_{0}}\geqslant b_{n}.
+\]
+由于这对任意 \(n\in\mathbf{N}^{*}\) 都成立，故 \(b_{n}\leqslant b_{n_{0}}\) 对一切 \(n\in\mathbf{N}^{*}\) 成立，即 \(\{b_{n}\}\) 的第 \(n_{0}\) 项是最大项。（推导中只用到 \(a_{n_{0}}\geqslant a_{n}\) 这一条，并未用到 \(\{a_{n}\}\) 的单调性或 \(n_{0}\) 的唯一性，所以即使最大项不止一项，结论照样成立。）
+
+（验证：以（1）所得的 \(b_{n}=3n+5\)、\(a_{n}=6n-5\) 作模型核对——两者满足 \(a_{n}-2b_{n}\equiv-15\) 为常数，即 \(\{a_{n}\}\) 的各项是 \(\{b_{n}\}\) 对应项的二倍再平移同一个常数，最大项的下标自然一致；由该恒等式出发，\(a_{n_{0}}\geqslant a_{n}\) 与 \(b_{n_{0}}\geqslant b_{n}\) 也已验证是同一件事。）
+
+\gksubpart{(3)}
+
+\Needspace{5\baselineskip}
+此时 \(b_{n}=\lambda^{n}\)，故 \(b_{1}=\lambda\)，又题设 \(a_{1}=\lambda<0\)，代入上面的一般关系式得
+\nopagebreak[4]
+\[
+a_{n}=a_{1}+2(b_{n}-b_{1})=\lambda+2(\lambda^{n}-\lambda)=2\lambda^{n}-\lambda\qquad(n\in\mathbf{N}^{*}).
+\]
+\Needspace{5\baselineskip}
+记 \(\mu=|\lambda|=-\lambda>0\)，则 \(\lambda^{n}=(-1)^{n}\mu^{n}\)，奇、偶项符号交替：
+\nopagebreak[4]
+\[
+a_{2k-1}=\mu-2\mu^{2k-1},\qquad a_{2k}=\mu+2\mu^{2k}\qquad(k\in\mathbf{N}^{*}).
+\]
+按 \(\mu\) 与 \(1\) 的大小分情形。
+
+\Needspace{5\baselineskip}
+\textbf{第一情形是 \(0<\mu<1\)，即 \(-1<\lambda<0\)。} 先看奇数项 \(a_{2k-1}=\mu-2\mu^{2k-1}\)：因 \(0<\mu<1\)，\(\mu^{2k-1}\) 随 \(k\) 增大而减小（\(k\geqslant 2\) 时更有 \(\mu^{2k-1}<\mu\)），故奇数项随 \(k\) 增大而增大，最小值为
+\nopagebreak[4]
+\[
+a_{1}=\mu-2\mu=-\mu=\lambda,
+\]
+\Needspace{5\baselineskip}
+且每一项都满足 \(a_{2k-1}<\mu\)（\(k=1\) 时 \(a_{1}=-\mu<\mu\)，\(k\geqslant 2\) 时由 \(\mu^{2k-1}>0\) 同样得 \(a_{2k-1}<\mu\)）。再看偶数项 \(a_{2k}=\mu+2\mu^{2k}\)：它随 \(k\) 增大而减小，最大值为 \(a_{2}=2\mu^{2}+\mu=2\lambda^{2}-\lambda\)，且每一项都大于 \(\mu\)（因 \(2\mu^{2k}>0\)）。于是所有奇数项都小于 \(\mu\)、所有偶数项都大于 \(\mu\)，最大值只能在偶数项中取到，又因偶数项递减而取 \(a_{2}\)；最小值只能在奇数项中取到，又因奇数项递增而取 \(a_{1}\)。即
+\nopagebreak[4]
+\[
+M=a_{2}=2\lambda^{2}-\lambda,\qquad m=a_{1}=\lambda\neq0,
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+\frac{M}{m}=\frac{2\lambda^{2}-\lambda}{\lambda}=2\lambda-1.
+\]
+\Needspace{5\baselineskip}
+条件 \(-2<\dfrac{M}{m}<2\) 即
+\nopagebreak[4]
+\[
+-2<2\lambda-1<2\iff-1<2\lambda<3\iff-\frac{1}{2}<\lambda<\frac{3}{2},
+\]
+\Needspace{5\baselineskip}
+其中 \(\lambda<\dfrac{3}{2}\) 已被 \(\lambda<0\) 蕴含，故本情形下只需
+\nopagebreak[4]
+\[
+-\frac{1}{2}<\lambda<0.
+\]
+
+\textbf{第二情形是 \(\mu=1\)，即 \(\lambda=-1\)。} 此时 \(a_{n}=2(-1)^{n}+1\)，取值只在 \(3\)（\(n\) 为偶数）与 \(-1\)（\(n\) 为奇数）之间交替，故 \(M=3\)、\(m=-1\)，\(\dfrac{M}{m}=-3\notin(-2,2)\)，不合。
+
+\textbf{第三情形是 \(\mu>1\)，即 \(\lambda<-1\)。} 此时 \(\mu^{2k}\to+\infty\) 使偶数项 \(a_{2k}\to+\infty\)，\(\mu^{2k-1}\to+\infty\) 使奇数项 \(a_{2k-1}\to-\infty\)，数列既无最大值也无最小值，不合。
+
+\Needspace{5\baselineskip}
+综上，所求范围为
+\nopagebreak[4]
+\[
+\lambda\in\left(-\frac{1}{2},\ 0\right)
+\]
+（此时 \(m=\lambda\neq0\)，比值 \(\dfrac{M}{m}\) 有意义）。
+
+（验证：数值枚举——\(\lambda=-0.49\) 时前 200 项的最大值 \(0.9702=a_{2}\)、最小值 \(-0.49=a_{1}\)，\(\dfrac{M}{m}=-1.98\in(-2,2)\)，合；\(\lambda=-0.5\) 时比值恰为 \(-2\)，因 \((-2,2)\) 为开区间而不合（端点排除）；\(\lambda=-0.51,\ -0.6,\ -0.9\) 的比值分别为 \(-2.02,\ -2.2,\ -2.8\)，均不合；\(\lambda=-1\) 给 \(-3\)，不合；\(\lambda=-1.5,\ -2\) 时偶数项按 \(\mu^{2k}\) 发散、奇数项按 \(-\mu^{2k-1}\) 发散，有限前缀上算出的「比值」无意义，数列确无最值。以上与解析结论一致。）
+
+\gkanswer{答案（1）：\(a_{n}=6n-5\)（\(n\in\mathbf{N}^{\ast}\)）。}
+
+\gkanswer{答案（2）：成立（\(b_{n}\leqslant b_{n_{0}}\) 对一切 \(n\in\mathbf{N}^{\ast}\)）。}
+
+\gkanswer{答案（3）：\(\lambda\in\left(-\dfrac{1}{2},0\right)\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+对于定义域为 \(\mathbf{R}\) 的函数 \(g(x)\)，若存在正常数 \(T\)，使得 \(\cos g(x)\) 是以 \(T\) 为周期的函数，则称 \(g(x)\) 为余弦周期函数，且称 \(T\) 为其余弦周期．已知 \(f(x)\) 是以 \(T\) 为余弦周期的余弦周期函数，其值域为 \(\mathbf{R}\)．设 \(f(x)\) 单调递增，\(f(0)=0\)，\(f(T)=4\pi\)．
+
+（1） 验证 \(h(x)=x+\sin\dfrac{x}{3}\) 是以 \(6\pi\) 为余弦周期的余弦周期函数；
+
+（2） 设 \(a<b\)，证明对任意 \(c\in[f(a),f(b)]\)，存在 \(x_{0}\in[a,b]\)，使得 \(f(x_{0})=c\)；
+
+（3） 证明：“\(u_{0}\) 为方程 \(\cos f(x)=1\) 在 \([0,T]\) 上的解”的充要条件是“\(u_{0}+T\) 为方程 \(\cos f(x)=1\) 在 \([T,2T]\) 上的解”，并证明对任意 \(x\in[0,T]\) 都有 \(f(x+T)=f(x)+f(T)\)．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+题中给出的定义是：对定义域为 \(\mathbf{R}\) 的函数 \(g(x)\)，若存在正常数 \(T\)，使 \(\cos g(x)\) 是以 \(T\) 为周期的函数，则称 \(g(x)\) 为余弦周期函数，称 \(T\) 为其余弦周期。按周期函数的定义，\(\cos g(x)\) 以 \(T\) 为周期就是
+\nopagebreak[4]
+\[
+\cos g(x+T)=\cos g(x)\qquad(\text{对一切 }x\in\mathbf{R}).
+\]
+已知 \(f(x)\) 满足：以 \(T\) 为余弦周期、值域为 \(\mathbf{R}\)、单调递增、\(f(0)=0\)、\(f(T)=4\pi\)。注意定义只要求这样的正常数存在，并不要求 \(T\) 是最小正周期。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+对一切 \(x\in\mathbf{R}\)，
+\nopagebreak[4]
+\[
+h(x+6\pi)=(x+6\pi)+\sin\frac{x+6\pi}{3}=x+6\pi+\sin\left(\frac{x}{3}+2\pi\right)=h(x)+6\pi ,
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+\cos h(x+6\pi)=\cos\bigl(h(x)+6\pi\bigr)=\cos h(x).
+\]
+即 \(\cos h(x)\) 以 \(6\pi\) 为周期；又 \(6\pi>0\) 是正常数，按定义 \(h(x)\) 是余弦周期函数、\(6\pi\) 是它的一个余弦周期（定义只要求这样的正常数存在，不要求它是最小正周期）。
+
+（验证：取 \(x=0,\ 1,\ 2.5,\ -4,\ 10,\ 123.456\) 逐个代入，\(\cos h(x+6\pi)-\cos h(x)\) 均为 \(0\)（量级不超过 \(10^{-15}\)）。另可指出 \(3\pi\) 不是 \(\cos h(x)\) 的周期：\(x=0\) 处 \(\cos h(3\pi)=-1\neq1=\cos h(0)\)，但这不影响结论——余弦周期只要求存在一个正常数。）
+
+\gksubpart{(2)}
+
+这里不需要用到连续性，关键只用「值域为 \(\mathbf{R}\)」与「单调递增」两条。
+
+由 \(f\) 的值域为 \(\mathbf{R}\)，而 \(c\in[f(a),f(b)]\subset\mathbf{R}\)，故存在 \(x_{0}\in\mathbf{R}\) 使 \(f(x_{0})=c\)。
+
+\Needspace{5\baselineskip}
+再证这个 \(x_{0}\) 必落在 \([a,b]\) 内。若 \(x_{0}<a\)，由单调递增得 \(f(x_{0})<f(a)\)，而 \(f(a)\leqslant c\)，于是
+\nopagebreak[4]
+\[
+f(x_{0})<f(a)\leqslant c=f(x_{0}),
+\]
+\Needspace{5\baselineskip}
+矛盾；若 \(x_{0}>b\)，同理
+\nopagebreak[4]
+\[
+f(x_{0})>f(b)\geqslant c=f(x_{0}),
+\]
+也矛盾。所以 \(a\leqslant x_{0}\leqslant b\)。
+
+事实上满足要求的 \(x_{0}\) 还是唯一的：若 \(x_{0}\)、\(x_{0}'\) 都在 \([a,b]\) 内且都满足 \(f(x)=c\)，而 \(x_{0}<x_{0}'\)，则由严格递增得 \(f(x_{0})<f(x_{0}')\)，与两者都等于 \(c\) 矛盾。
+
+\Needspace{5\baselineskip}
+（验证：取同时满足全部题设的模型
+\nopagebreak[4]
+\[
+f(x)=4\pi\left(\frac{x}{T}+\frac{1}{10}\sin\frac{2\pi x}{T}\right)
+\]
+\Needspace{5\baselineskip}
+做数值检验——其导数为
+\nopagebreak[4]
+\[
+\frac{4\pi}{T}\left(1+\frac{\pi}{5}\cos\frac{2\pi x}{T}\right)\geqslant\frac{4\pi}{T}\left(1-\frac{\pi}{5}\right)>0,
+\]
+故全局严格递增；值域为 \(\mathbf{R}\)；\(\cos f(x+T)=\cos(f(x)+4\pi)=\cos f(x)\)；\(f(0)=0\)、\(f(T)=4\pi\)。随机取 \(a<b\) 与 \(c\in[f(a),f(b)]\)，二分求根均得 \(x_{0}\in[a,b]\) 且 \(f(x_{0})=c\)。另做灵敏性检查：若把「单调递增」按弱读法理解成单调不减，则 \(x_{0}<a\) 时由 \(f(x_{0})\leqslant f(a)\leqslant c=f(x_{0})\) 得 \(f(a)=c\)，改取 \(x_{0}=a\) 即可，\(x_{0}>b\) 时同理改取 \(x_{0}=b\)，结论照样成立。）
+
+\gksubpart{(3)}
+
+\textbf{① 两个命题互为充要条件。}
+
+\Needspace{5\baselineskip}
+由定义，\(\cos f(x+T)=\cos f(x)\) 对一切 \(x\in\mathbf{R}\) 成立，而区间之间有关系
+\nopagebreak[4]
+\[
+u_{0}\in[0,T]\iff u_{0}+T\in[T,2T].
+\]
+于是「\(u_{0}\) 是 \(\cos f(x)=1\) 在 \([0,T]\) 上的解」与「\(u_{0}+T\) 是 \(\cos f(x)=1\) 在 \([T,2T]\) 上的解」互为充要条件——两个方向用的是同一条等式 \(\cos f(u_{0}+T)=\cos f(u_{0})\) 与同一个区间对应，无需再分别论证。
+
+\textbf{② 对任意 \(x\in[0,T]\) 有 \(f(x+T)=f(x)+f(T)=f(x)+4\pi\)。}
+
+*第一步，定出特殊点。* 先注意一个一般事实：对任意区间 \([a,b]\)，由（2）与严格单调性，\(\cos f(x)=1\) 在 \([a,b]\) 上的解与 \(2\pi\) 的整数倍在 \([f(a),f(b)]\) 中的元素一一对应——因为 \(\cos f(x)=1\iff f(x)\in2\pi\mathbf{Z}\)，而方程 \(f(x)=2\pi m\) 的解存在且唯一，它落在 \([a,b]\) 内当且仅当 \(2\pi m\in[f(a),f(b)]\)。
+
+由 \(f(0)=0<2\pi<4\pi=f(T)\)，\([0,4\pi]\) 中 \(2\pi\) 的整数倍恰为 \(0,\ 2\pi,\ 4\pi\) 三个，故 \(\cos f(x)=1\) 在 \([0,T]\) 上恰有 \(3\) 个解：\(0\)、\(T\)，以及使 \(f(x_{1})=2\pi\) 的唯一一点 \(x_{1}\in(0,T)\)。由①，把这 \(3\) 个解整体平移 \(T\)，即得 \([T,2T]\) 上的解集 \(\{T,\ x_{1}+T,\ 2T\}\)，也恰有 \(3\) 个。
+
+\Needspace{5\baselineskip}
+另一方面，由上述一般事实，\([T,2T]\) 上解的个数等于 \(2\pi\) 的整数倍在 \([f(T),f(2T)]=[4\pi,f(2T)]\) 中的个数。这里 \(\cos f(2T)=\cos f(T)=1\)（\(\cos f\) 以 \(T\) 为周期），故 \(f(2T)\in2\pi\mathbf{Z}\)；又 \(f\) 严格递增给出 \(f(2T)>f(T)=4\pi\)，故可设 \(f(2T)=2\pi m\)，整数 \(m\geqslant3\)，此时 \([4\pi,2\pi m]\) 中 \(2\pi\) 的整数倍个数为 \(m-1\)。两种数法必须相等，即 \(m-1=3\)，得 \(m=4\)，于是
+\nopagebreak[4]
+\[
+f(2T)=8\pi.
+\]
+\Needspace{5\baselineskip}
+再按函数值配对：\([T,2T]\) 上三个解的函数值依次为 \(4\pi,\ 6\pi,\ 8\pi\)，故其中间的 \(x_{1}+T\) 满足
+\nopagebreak[4]
+\[
+f(x_{1}+T)=6\pi.
+\]
+
+\Needspace{5\baselineskip}
+*第二步，在 \([0,x_{1}]\) 上证明恒等式。* 对每个 \(c\in[0,2\pi]\)，由（2）知方程 \(f(x)=c\) 在 \([0,x_{1}]\) 上有唯一解，记作 \(x(c)\)，并令
+\nopagebreak[4]
+\[
+\varphi(c)=f\bigl(x(c)+T\bigr)\qquad(c\in[0,2\pi]).
+\]
+\Needspace{5\baselineskip}
+由 \(f\) 严格递增知 \(c\mapsto x(c)\) 严格递增，从而 \(\varphi\) 严格递增；又 \(\cos f\) 以 \(T\) 为周期，故
+\nopagebreak[4]
+\[
+\cos\varphi(c)=\cos f\bigl(x(c)+T\bigr)=\cos f\bigl(x(c)\bigr)=\cos c.
+\]
+\Needspace{5\baselineskip}
+端点处 \(\varphi(0)=f(T)=4\pi\)、\(\varphi(2\pi)=f(x_{1}+T)=6\pi\)，故 \(c\in(0,2\pi)\) 时 \(\varphi(c)\in(4\pi,6\pi)\)。在 \((4\pi,6\pi)\) 内满足 \(\cos t=\cos c\) 的 \(t\) 只能是
+\nopagebreak[4]
+\[
+t=c+4\pi\quad\text{或}\quad t=6\pi-c,
+\]
+\Needspace{5\baselineskip}
+即
+\nopagebreak[4]
+\[
+\psi(c):=\varphi(c)-4\pi\in\{c,\ 2\pi-c\}.
+\]
+\(\psi\) 严格递增，且 \(\psi(0)=0\)、\(\psi(2\pi)=2\pi\)。反射支 \(c\mapsto2\pi-c\) 的不动点是 \(c=\pi\)，而由 \(\psi(\pi)\in\{\pi,\ 2\pi-\pi\}\) 知 \(\psi(\pi)=\pi\)：若某个 \(c<\pi\) 处取到 \(\psi(c)=2\pi-c>\pi=\psi(\pi)\)，则因 \(c<\pi\) 应有 \(\psi(c)<\psi(\pi)\)，与严格递增矛盾；若某个 \(c>\pi\) 处取到 \(\psi(c)=2\pi-c<\pi=\psi(\pi)\)，则因 \(c>\pi\) 应有 \(\psi(c)>\psi(\pi)\)，同样矛盾。故 \(\psi(c)=c\) 对一切 \(c\in[0,2\pi]\) 成立，即 \(\varphi(c)=c+4\pi\)。
+
+\Needspace{5\baselineskip}
+取 \(x\in[0,x_{1}]\)，令 \(c=f(x)\in[0,2\pi]\)，由唯一性得 \(x(c)=x\)，代入上式得
+\nopagebreak[4]
+\[
+f(x+T)=f(x(c)+T)=\varphi(c)=c+4\pi=f(x)+4\pi.
+\]
+
+\Needspace{5\baselineskip}
+*第三步，在 \([x_{1},T]\) 上重复同一论证。* 仍对每个 \(c\in[2\pi,4\pi]\) 记 \(x(c)\) 为 \(f(x)=c\) 在 \([x_{1},T]\) 上的唯一解（此时 \(f(x_{1})=2\pi\)、\(f(T)=4\pi\)），并令 \(\varphi(c)=f(x(c)+T)\)。同样有 \(\varphi\) 严格递增、\(\cos\varphi(c)=\cos c\)，而端点
+\nopagebreak[4]
+\[
+\varphi(2\pi)=f(x_{1}+T)=6\pi,\qquad\varphi(4\pi)=f(T+T)=f(2T)=8\pi,
+\]
+\Needspace{5\baselineskip}
+故 \(c\in(2\pi,4\pi)\) 时 \(\varphi(c)\in(6\pi,8\pi)\)。在 \((6\pi,8\pi)\) 内满足 \(\cos t=\cos c\) 的 \(t\) 只能是
+\nopagebreak[4]
+\[
+t=c+4\pi\quad\text{或}\quad t=10\pi-c,
+\]
+即 \(\psi(c):=\varphi(c)-4\pi\in\{c,\ 6\pi-c\}\)：反射支 \(c\mapsto6\pi-c\) 的不动点为 \(c=3\pi\)，而 \(\psi(3\pi)=3\pi\)，仍由 \(\psi\) 严格递增排除反射支，得 \(\psi(c)=c\)，即 \(f(x+T)=f(x)+4\pi\) 对一切 \(x\in[x_{1},T]\) 成立。
+
+\Needspace{5\baselineskip}
+两步合并，即得对任意 \(x\in[0,T]\) 都有
+\nopagebreak[4]
+\[
+f(x+T)=f(x)+4\pi=f(x)+f(T).
+\]
+
+（验证：在与（2）同一模型 \(f(x)=4\pi\allowbreak\left(\dfrac{x}{T}+\dfrac{1}{10}\sin\dfrac{2\pi x}{T}\right)\) 上数值核对——\(f(x+T)-f(x)-4\pi\) 在 \(x=0,\ 0.2T,\ 0.5T,\ 0.77T,\ T\) 处均为 \(0\)；\(\cos f(x)=1\) 在 \([0,T]\) 上的解集为 \(\left\{0,\ \dfrac{T}{2},\ T\right\}\)，整体平移 \(T\) 后正是 \([T,2T]\) 上的解集 \(\left\{T,\ \dfrac{3T}{2},\ 2T\right\}\)，与①相符。②较长，其中「由解数计数定出 \(f(2T)=8\pi\)」与「分支分析加严格递增排除反射支」两步已分别独立核对；另用退化的线性模型 \(f(x)=\dfrac{4\pi x}{T}\) 复核，它也满足全部题设与恒等式。）
+
+\gkanswer{答案（1）：成立（\(h(x+6\pi)=h(x)+6\pi\)，故 \(\cos h(x+6\pi)=\cos h(x)\)，即 \(h\) 以 \(6\pi\) 为余弦周期）。}
+
+\gkanswer{答案（2）：成立（对任意 \(c\in[f(a),f(b)]\)，存在 \(x_{0}\in[a,b]\) 使 \(f(x_{0})=c\)；由单调性唯一）。}
+
+\gkanswer{答案（3）：① 两命题互为充要条件（\(u_{0}\in[0,T]\) 与 \(u_{0}+T\in[T,2T]\) 由 \(\cos f(u_{0}+T)=\cos f(u_{0})\) 逐点等价）；② 对任意 \(x\in[0,T]\) 有 \(f(x+T)=f(x)+f(T)=f(x)+4\pi\)。}
+
+\end{answer}
