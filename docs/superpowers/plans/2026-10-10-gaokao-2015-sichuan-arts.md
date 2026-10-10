@@ -44,17 +44,21 @@
 
 ### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–10 选择）：`.work/phase3-b08/transcripts/partA.md`；转录 B（Q11–21＋图表实测清单）：`.work/phase3-b08/transcripts/partB.md`。
-- [ ] 盲解 A（Q1–10）：`.work/phase3-b08/blind/partA.md`；盲解 B（Q11–21）：`.work/phase3-b08/blind/partB.md`。
+- [x] 转录 A（Q1–10 选择）：`.work/phase3-b08/transcripts/partA.md`（零存疑、双向机械核对；字体归属实测：CMMIB10 向量/MSAM10 ⩽/CMEX10 可伸缩括号/LMRoman10 半角标点判定）。
+- [x] 转录 B（Q11–21＋图表实测清单）：`.work/phase3-b08/transcripts/partB.md`（含归一替换台账：逗号 75/句号 23/分号 12/小问 13 组等，总账闭合）＋ `.work/phase3-b08/figure-inventory.md`（451 行；**首代理因 API 429 中断于算术自查，续作代理 17 处实测订正全闭合**——含差 1 归属（p1 path 7 分数线）与 §6.3 基准发现（SVG 坐标带 0.999622 等比项，交叉比对须换算））。
+- [x] 盲解 A（Q1–10）：`.work/phase3-b08/blind/partA.md`（1A 2B 3C 4A 5B 6D 7D 8C 9A 10D；Q6 逐轮模拟＋回接反证、Q10「垂足＝中点」精确分支逐条验证）。
+- [x] 盲解 B（Q11–21）：`.work/phase3-b08/blind/partB.md`（7 个复算脚本；Q17 双口径、Q18 24 旋转枚举（含镜像登记）、Q20 精确分数、Q21 构造性证明）。
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；四项自检（`%`、空参数、反引号、CJK 入数学）。
-- [ ] TikZ 图源 4 处生成 + 探针目检。
-- [ ] 注册 `phase3-b08`；provenance 三角色导入；extract-batch 派生。
-- [ ] generate/short/editions 三连 write+check → build --formal（修复轮 → 重建 → 差分 → 复审）。
+- [x] 规范三件套＋含解析占位；四项自检（`%`、空参数、反引号、CJK 入数学——5 处 CJK 全在 `\text{}` 保护内、合法）＋（N）空格锚点 13 处修复。
+- [x] 解析正文 1010 行（3 改写代理分段 Q1–10/Q11–16/Q17–21 → 合并；改写 A/B 各含对盲解稿的实测订正：Q5 奇偶性、Q8 浮点、Q15④ 残差表述——结论均不变）。
+- [x] TikZ 图源 3 处（f2015scw_q06_flowchart／q18_net_cube／q20_ellipse）+ 探针目检（零告警、三图与源结构吻合）。
+- [x] 注册 `phase3-b08`（rev 3644）；provenance 三角色导入（rev 3645）；extract-batch 派生。
+- [x] generate/short/editions 三连 write+check → build --formal **首轮 COMPILED_PENDING_REVIEW 0 失败**；**生成期修复轮**（解析版 3 Overfull＋1 Underfull → 0）：Q20 两式 aligned 断行（4.3pt/45.4pt）、Q19 化简改行间式（0.23pt）、Q17 验证段数字列表改全角逗号文本串＋拆段（Underfull 2205 → 0）→ 重建后**四版告警全 0**（7/42/9/30 页）。
 
 ### Task 4 — Build, review, and close
 
-- [ ] 审查代理（1 图自查 + 分段并发 ≤8 页/段）→ 修复轮（如有）→ 重建 → 差分 → 复审。
-- [ ] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+- [x] prepare-batch 换绑（构建后执行，工作项 7/42/9/30 核验一致）；**14 代理并发**（1 图自查＋13 段审查：试题 1（1–7）＋解析 6（1–7/8–14/15–21/22–28/29–35/36–42）＋简答 2（1–5/6–9）＋印刷 4（1–8/9–16/17–24/25–30））——进行中。
+- [ ] 归集脚本预置（`.work/phase3-b08/collect_receipts.py`，EXPECT 7/42/9/30）。
+- [ ] 裁定 findings → 修复轮（如有）→ 重建 → 差分 → 复审 → collect_receipts → finalize → check-batch → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
