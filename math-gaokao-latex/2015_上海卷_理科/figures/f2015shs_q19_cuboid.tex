@@ -25,15 +25,16 @@
 \draw[dash pattern=on 2.989pt off 2.989pt, line width=0.398bp] (42.4727,42.4726)--(42.4727,102.5469);   % D–D1
 \draw[dash pattern=on 2.989pt off 2.989pt, line width=0.398bp] (42.4727,102.5469)--(162.625,42.4726);   % D1–C
 \draw[dash pattern=on 2.989pt off 2.989pt, line width=0.398bp] (60.0742,0)--(141.3867,21.2383);   % E–F
-% ===== 标注（照源字形包围盒中心，显式坐标）=====
+% ===== 标注（照源字形包围盒中心，显式坐标；D₁ 上移后加 overlay——
+%       其旧位与 C₁ 同高、本就是包围盒顶界之一，加 overlay 后上移不改变图块尺寸，避免整块重排）=====
 \node[anchor=center,inner sep=0] at (-4.7053,-6.0022) {\(A\)};
 \node[anchor=center,inner sep=0] at (125.0897,-6.0022) {\(B\)};
 \node[anchor=center,inner sep=0] at (169.5097,41.4178) {\(C\)};
 \node[anchor=center,inner sep=0] at (35.5947,41.4178) {\(D\)};
 \node[anchor=center,inner sep=0] at (60.0197,-8.0422) {\(E\)};
 \node[anchor=center,inner sep=0] at (145.8697,15.2428) {\(F\)};
-\node[anchor=center,inner sep=0] at (-4.9553,64.3028) {\(A_{1}\)};
+\node[anchor=center,inner sep=0] at (-4.9553,65.1028) {\(A_{1}\)};
 \node[anchor=center,inner sep=0] at (126.5147,53.0278) {\(B_{1}\)};
 \node[anchor=center,inner sep=0] at (167.5947,106.7928) {\(C_{1}\)};
-\node[anchor=center,inner sep=0] at (37.5347,106.7928) {\(D_{1}\)};
+\node[overlay,anchor=center,inner sep=0] at (37.5347,107.5928) {\(D_{1}\)};
 \end{tikzpicture}
