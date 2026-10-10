@@ -1190,6 +1190,14 @@
         "gk-2015-regular-sichuan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b10",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-tianjin-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1199,7 +1207,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5e2bd339-e6e6-4644-8e7c-f81f834cb6f7",
+  "last_transaction_id": "4433b86e-c460-4303-b33e-b15e49b4819a",
   "papers": [
     {
       "blocked_from": null,
@@ -18443,9 +18451,75 @@
       "title": "2015 年·四川卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_文科/figures/f2015tjw_q03_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_文科/figures/f2015tjw_q06_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_文科/figures/f2015tjw_q10_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_天津卷_文科/figures/f2015tjw_q17_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_tianjin_arts",
+        "id": "gk-2015-regular-tianjin-arts",
+        "note": "批次 phase3-b10；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 987/988）、无参考答案页；选择 1–8＋填空 9–14＋解答 15–20＝20 题（分值为结构推断——**卷面不印分值**）。固定源不附答案（等级 D）；解析全由本库独立推导（双路盲解互证——第 2 题格点扫描、第 3 题逐轮模拟＋闭式复算、第 5 题逐选项排除、第 6 题等幂桥接、第 8 题分段解析＋数值扫描、第 12 题替换＋驻点、第 13 题坐标与向量基双路线、第 14 题候选唯一性枚举（仅 k=0）、第 17 题向量法与几何法互证、第 18 题错位相减 n=1..11 逐项、第 19 题四尺度＋三路径（λ≡7/8）、第 20 题二分 1998 网格全过＋端点临界）。源为 LaTeX（CM 系）重排产物（全矢量、无位图；标点为半角拉丁字形——按全库约定归一全角）。**向量记号分卷保留——本卷无 CMMIB10，向量为 CMMI10 常规斜体＋TeX-vect10 长箭头，录作 \\overrightarrow 不加粗斜体**（与四川理卷同型）。不等号按 MSAM10 实测排 \\leqslant；补集号 \\complement（MSAM10，U+2201）；实数集/正整数集为粗正体 \\mathbf{R}／\\mathbf{N}^*（LMRoman10-Bold）。**第 3 题源内矛盾照源复刻**（题干问输出 i、框图输出框印「输出 S」，答案按题干与选项体系判 4，存疑登记）；**第 20 题 (3) 末项按源誊写 4^{1/3}**（指数位竖排小分式，非 ∛）。4 图均按源内容流实测坐标复刻（本清单坐标为自行反算后的真实页 pt；pdftocairo 换算因子经最小二乘自测 a≈0.999621、y 常项 +0.1044）：程序框图（7 框＋「否」支三段回折落 i=i+1 框上边）、圆图（R=53.892＋三等分点＋两割线共点 C＋实心圆心）、三视图（三联＋尺寸箭头＋侧视半径 1 引导线）、立体图（AA₁⊥底面＋BB₁∥AA₁＋E/F 中点＋虚线 2.98883 节距）。第 6 题标签 C 在圆外系避让外移（照源复刻）；「∥」三处被文本层吞掉（照渲染图）；第 10 题侧视图「1」为半径（直径误读与正视图双 1 矛盾，已排除）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "天津文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-tianjin-arts",
+      "production_state": "complete",
+      "project_dir": "2015_天津卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_天津文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_天津文_含解析.md",
+        "questions": "2015/2015_数学真题_天津文_试题.md",
+        "solution_body": "2015/2015_数学真题_天津文_解析正文.md"
+      },
+      "source_ids": [
+        "src-2a48e998637ee8209b7b54a1c74fff26ed06b78e3473302e92038b7e064807e9"
+      ],
+      "title": "2015 年·天津卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 3667,
+  "revision": 3681,
   "schema_version": 1,
   "sources": [
     {
@@ -33702,8 +33776,8 @@
       "exam_type": "regular",
       "git_blob_oid": "00ae7ebafc29bb4b6980efb6cb828b2d990f2a29",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-tianjin-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015天津文.pdf",
       "regions": [],
       "source_id": "src-2a48e998637ee8209b7b54a1c74fff26ed06b78e3473302e92038b7e064807e9",

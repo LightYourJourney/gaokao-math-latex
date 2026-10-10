@@ -1,0 +1,172 @@
+% questions.tex —— 2015 年·天津卷·文科 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_天津文_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 全 2 页逐题核对（p1＝页 987：栏 1 标题与「一、选择题」1–5（含第 3 题框图）＋第 6 题题干末两行；栏 2 第 6 题圆图与选项、第 7–8 题＋「二、填空题」9–14（含第 10 题三视图）；栏 3「三、解答题」15、16；p2＝页 988：栏 1 第 17 题（含立体图）、第 18 题；栏 2 第 19 题；栏 3 第 20 题）。原卷为 \textbf{A3 横向（1190.55 \(\times\) 841.89 pt）三栏书刊合排}，阅读序＝左→中→右；\textbf{页脚仅印合订本书页页码 987／988}（页面底部正中），\textbf{无页眉}。标题「2015 普通高等学校招生考试（天津卷文）」在栏 1 内排印。\textbf{全卷不印分值、不印题量、不印「考生注意」栏}——三处节头逐字仅「一、选择题」「二、填空题」「三、解答题」；总分 150 为结构推断，\textbf{卷面无凭据}，本文件不作补写。
+
+\textbf{源制作体系判定}（\texttt{pdffonts}／\texttt{pdftotext -layout}／\texttt{pdfimages -list} 实测）：源\textbf{不是扫描件，而是 LaTeX（Computer Modern 系）重排产物}——\texttt{pdfimages -list} 零命中（全页无位图，无 Type3 字体）；嵌入字体含中文 \textbf{STSong（宋体正文）／STHeiti（黑体标题与节头）}，拉丁与数学 \textbf{LMRoman 系与 CM 系（CMR10／CMMI10／CMSY10／CMEX10／MSAM10／CMR7／CMMI7 等）}，另有 \textbf{TeX-vect10}（专供向量长箭头绘制）。文本层整体可读；根号上划线、作答空线、\textbf{「$\parallel$」「$\perp$」}（第 13、17 题）、全部箭头与向量箭杆均为矢量路径。
+
+\textbf{标点与字样约定（实测）}：① \textbf{题号与句末}源内为半角 \texttt{.}（LMRoman10 出字），按全库约定写作全角「．」；② \textbf{正文句读}源内为半角 ASCII（\texttt{, : ; ?}）与半角圆括号（\texttt{pdftotext -bbox} 与内容流双证：逗号墨迹宽 2.44 pt、出的正是 LMRoman10 的 \texttt{<002d>} 码位），本文件按全库约定归一为全角「，」「：」「；」「？」「（）」，\textbf{顿号「、」与引号「“”」为全角 CJK·照源保留}（第 15 题事件引号照源全角），内容零改动；③ \textbf{选择题选项标号}源内为\textbf{半角「(A)」照录}；④ \textbf{作答空}：填空题为统一长度横线（实测 \textbf{31.50 pt}，写作 \texttt{\gkblank{}}），选择题作答括注按全库约定写作「（　）」；⑤ \textbf{分数}源内均为显示风格（真分式：第 5 题分数线 10.5–26.3 pt、第 13 题两系数分子分母全字号），排印一律按显示风格（如 \(\dfrac{a}{b}\)）；⑥ \textbf{不等号}按 MSAM10 实测字形排 \(\leqslant\)（字形名 \texttt{lessorequalslant}，U+2A7D；第 2、3、8、20 题；同子集含 \texttt{greaterorequalslant} 备用）；⑦ \textbf{向量}：本卷源\textbf{无 CMMIB10}——向量字母为 \textbf{CMMI10 常规数学斜体}、箭杆为 \textbf{TeX-vect10 长箭头}，一律录作 \(\overrightarrow{BE}\) 类（\textbf{不加粗斜体向量记号}）；⑧ \textbf{常数与函数名}：\(\log\)／\(\sin\)／\(\cos\)／\(\ln\) 源为\textbf{正体}（LMRoman10／CMR10），照录正体；实数集与正整数集源为\textbf{粗正体}（LMRoman10-Bold），录作 \(\mathbf{R}\)／\(\mathbf{N}^*\)；补集号 \(\complement\) 出自 MSAM10（字形名 \texttt{complement}，U+2201）；⑨ \textbf{第 15 题}的 ①② 为圈号字形；⑩ \textbf{第 18 题}的 \(A_1,\dots,A_6\) 下标与 \(\mathbf{N}^*\) 上标照源；⑪ \textbf{词间空格}照页面词界补。
+
+\textbf{存疑与登记}（源内异常一律照录；完整清单见工作档 \texttt{figure-inventory.md} 存疑表 S-1…S-10 与转录稿存疑表）：① \textbf{固定源不附参考答案}（等级 D）——本题面无答案区，解析全部由本库独立推导；② \textbf{第 3 题源内矛盾}：题干问「则输出 \(i\) 的值为」，而程序框图的输出框内印「\textbf{输出 \(S\)}」（600 dpi 渲染与文本层双证一致；若严格按框内输出则为 \(S=0\)，不在选项 2/3/4/5 之列）——\textbf{照源复刻、不作改动}，判读与答案处置见《答案要点》与解析正文登记（纯题面版不印答案值）；③ \textbf{第 6 题图}：标签 \(C\) 落在圆轮廓外（紧邻下方），题干称「弦 \(CD\)，\(CE\)」——\(C\) 系两弦公共端点、应在圆上，标签因避让线段外移，\textbf{照源复刻}（图清单实测 \(C/D/E\) 三点落圆偏差 \(\leqslant0.06\) pt）；④ \textbf{第 13、17 题的「$\parallel$」}在文本层被整体吞掉（pdftotext 输出「AB DC」「BB1 AA1」「EF 平面 A1B1BA」），渲染图实测符号均在——\textbf{凡平行记号一律以渲染图为准}；⑤ \textbf{第 20 题 (3) 末项指数}在文本层被打散错排，渲染图实测为 \textbf{\(4^{\frac{1}{3}}\)}（指数位「1 在上、3 在下」的竖排小分式，分数杆线宽 0.3387 w 为全卷唯一；\textbf{非立方根号形}）；⑥ 全卷标点为半角拉丁字形，已按全库约定归一全角（源形在转录稿登记）；⑦ 全卷无分值印制，不录不补。
+\end{gktip}
+
+\gkpart{试题}
+
+\gkpart{一、选择题}
+
+\begin{question}
+\gkti{1}已知全集 \(U=\{1,2,3,4,5,6\}\)，集合 \(A=\{2,3,5\}\)，集合 \(B=\{1,3,4,6\}\)，则集合 \(A\cap\complement_U B=\)（　）
+
+(A) \(\{3\}\)　(B) \(\{2,5\}\)　(C) \(\{1,4,6\}\)　(D) \(\{2,3,5\}\)
+
+\end{question}
+\begin{question}
+\gkti{2}设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}x-2\leqslant0,\\x-2y\leqslant0,\\x+2y-8\leqslant0,\end{cases}\) 则目标函数 \(z=3x+y\) 的最大值为（　）
+
+(A) 7　(B) 8　(C) 9　(D) 14
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{3}阅读程序框图，运行相应的程序，则输出 \(i\) 的值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015tjw_q03_flowchart}\end{center}
+\nopagebreak[4]
+(A) 2　(B) 3　(C) 4　(D) 5
+
+\end{question}
+\begin{question}
+\gkti{4}设 \(x\in\mathbf{R}\)，则“\(1<x<2\)”是“\(|x-2|<1\)”的（　）
+
+(A) 充分而不必要条件　(B) 必要而不充分条件
+
+(C) 充要条件　(D) 既不充分也不必要条件
+
+\end{question}
+\begin{question}
+\gkti{5}已知双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)（\(a>0\)，\(b>0\)）的一焦点为 \(F(2,0)\)，且双曲线的渐近线与圆 \((x-2)^2+y^2=3\) 相切，则双曲线的方程为（　）
+
+(A) \(\dfrac{x^2}{9}-\dfrac{y^2}{13}=1\)　(B) \(\dfrac{x^2}{13}-\dfrac{y^2}{9}=1\)
+
+(C) \(\dfrac{x^2}{3}-y^2=1\)　(D) \(x^2-\dfrac{y^2}{3}=1\)
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{6}如图，在圆 \(O\) 中，\(M\)，\(N\) 是弦 \(AB\) 的三等分点，弦 \(CD\)，\(CE\) 分别经过点 \(M\)，\(N\)，若 \(CM=2\)，\(MD=4\)，\(CN=3\)，则线段 \(NE\) 的长为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015tjw_q06_circle}\end{center}
+\nopagebreak[4]
+(A) \(\dfrac{8}{3}\)　(B) 3　(C) \(\dfrac{10}{3}\)　(D) \(\dfrac{5}{2}\)
+
+\end{question}
+\begin{question}
+\gkti{7}已知定义在 \(\mathbf{R}\) 上的函数 \(f(x)=2^{|x-m|}-1\)（\(m\) 为实数）为偶函数，记 \(a=f(\log_{0.5}3)\)，\(b=f(\log_2 5)\)，\(c=f(2m)\)，则 \(a\)，\(b\)，\(c\) 的大小关系为（　）
+
+(A) \(a<b<c\)　(B) \(c<a<b\)　(C) \(a<c<b\)　(D) \(c<b<a\)
+
+\end{question}
+\begin{question}
+\gkti{8}已知函数 $f(x)=\begin{cases}2-|x|,&x\leqslant2,\\(x-2)^2,&x>2,\end{cases}$ 函数 \(g(x)=3-f(2-x)\)，则函数 \(y=f(x)-g(x)\) 的零点个数为（　）
+
+(A) 2　(B) 3　(C) 4　(D) 5
+
+\end{question}
+\gkpart{二、填空题}
+
+\begin{question}
+\gkti{9}\(\mathrm{i}\) 是虚数单位，计算 \(\dfrac{1-2\mathrm{i}}{2+\mathrm{i}}\) 的结果为\gkblank{}．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{10}一个几何体的三视图如图所示（单位：m），则该几何体的体积为\gkblank{}m³．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015tjw_q10_views}\end{center}
+\nopagebreak[4]
+\end{question}
+\begin{question}
+\gkti{11}已知函数 \(f(x)=ax\ln x\)，\(x\in(0,+\infty)\)，其中 \(a\) 为实数，\(f'(x)\) 为 \(f(x)\) 的导函数．若 \(f'(1)=3\)，则 \(a\) 的值为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{12}已知 \(a>0\)，\(b>0\)，\(ab=8\)，则当 \(a\) 的值为\gkblank{}时，\(\log_2 a\cdot\log_2(2b)\) 取得最大值．
+
+\end{question}
+\begin{question}
+\gkti{13}在等腰梯形 \(ABCD\) 中，已知 \(AB\parallel DC\)，\(AB=2\)，\(BC=1\)，\(\angle ABC=60^{\circ}\)．点 \(E\) 和 \(F\) 分别在线段 \(BC\) 和 \(DC\) 上，且 \(\overrightarrow{BE}=\dfrac{2}{3}\overrightarrow{BC}\)，\(\overrightarrow{DF}=\dfrac{1}{6}\overrightarrow{DC}\)，则 \(\overrightarrow{AE}\cdot\overrightarrow{AF}\) 的值为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{14}已知函数 \(f(x)=\sin\omega x+\cos\omega x\)（\(\omega>0\)），\(x\in\mathbf{R}\)，若函数 \(f(x)\) 在区间 \((-\omega,\omega)\) 内单调递增，且函数 \(y=f(x)\) 的图象关于直线 \(x=\omega\) 对称，则 \(\omega\) 的值为\gkblank{}．
+
+\end{question}
+\gkpart{三、解答题}
+
+\begin{question}
+\gkti{15}设甲、乙、丙三个乒乓球协会的运动员人数分别为 27，9，18．现采用分层抽样的方法从这三个协会中抽取 6 名运动员组队参加比赛．
+
+（1） 求应从这三个协会中分别抽取的运动员的人数；
+
+（2） 将抽取的 6 名运动员进行编号，编号分别为 \(A_1\)，\(A_2\)，\(A_3\)，\(A_4\)，\(A_5\)，\(A_6\)．现从这 6 名运动员中随机抽取 2 人参加双打比赛．
+
+① 用所给编号列出所有可能的结果；
+
+② 设 \(A\) 为事件：“编号为 \(A_5\) 和 \(A_6\) 的两名运动员中至少有 1 人被抽到”，求事件 \(A\) 发生的概率．
+
+\end{question}
+\begin{question}
+\gkti{16}在 \(\triangle ABC\) 中，内角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)．已知 \(\triangle ABC\) 的面积为 \(3\sqrt{15}\)，\(b-c=2\)，\(\cos A=-\dfrac{1}{4}\)．
+
+（1） 求 \(a\) 和 \(\sin C\) 的值；
+
+（2） 求 \(\cos\left(2A+\dfrac{\pi}{6}\right)\) 的值．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{17}如图，已知 \(AA_1\perp\) 平面 \(ABC\)，\(BB_1\parallel AA_1\)，\(AB=AC=3\)，\(BC=2\sqrt{5}\)，\(AA_1=\sqrt{7}\)，\(BB_1=2\sqrt{7}\)，点 \(E\) 和 \(F\) 分别为 \(BC\) 和 \(A_1C\) 的中点．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015tjw_q17_solid}\end{center}
+\nopagebreak[4]
+（1） 求证：\(EF\parallel\) 平面 \(A_1B_1BA\)；
+
+（2） 求证：平面 \(AEA_1\perp\) 平面 \(BCB_1\)；
+
+（3） 求直线 \(A_1B_1\) 与平面 \(BCB_1\) 所成角的大小．
+
+\end{question}
+\begin{question}
+\gkti{18}已知数列 \(\{a_n\}\) 是各项均为正数的等比数列，\(\{b_n\}\) 是等差数列，且 \(a_1=b_1=1\)，\(b_2+b_3=2a_3\)，\(a_5-3b_2=7\)．
+
+（1） 求 \(\{a_n\}\) 和 \(\{b_n\}\) 的通项公式；
+
+（2） 设 \(c_n=a_nb_n\)，\(n\in\mathbf{N}^*\)，求数列 \(\{c_n\}\) 的前 \(n\) 项和．
+
+\end{question}
+\begin{question}
+\gkti{19}已知椭圆 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的上顶点为 \(B\)，左焦点为 \(F\)，离心率为 \(\dfrac{\sqrt{5}}{5}\)．
+
+（1） 求直线 \(BF\) 的斜率；
+
+（2） 设直线 \(BF\) 与椭圆交于点 \(P\)（\(P\) 异于点 \(B\)），过点 \(B\) 且垂直于 \(BP\) 的直线与椭圆交于点 \(Q\)（\(Q\) 异于点 \(B\)），直线 \(PQ\) 与 \(y\) 轴交于点 \(M\)，\(|PM|=\lambda|MQ|\)．
+
+① 求 \(\lambda\) 的值；
+
+② 若 \(|PM|\sin\angle BQP=\dfrac{7\sqrt{5}}{9}\)，求椭圆的方程．
+
+\end{question}
+\begin{question}
+\gkti{20}已知函数 \(f(x)=4x-x^4\)，\(x\in\mathbf{R}\)．
+
+（1） 求 \(f(x)\) 的单调区间；
+
+（2） 设曲线 \(y=f(x)\) 与 \(x\) 轴正半轴的交点为 \(P\)，曲线在点 \(P\) 处的切线方程为 \(y=g(x)\)，求证：对于任意的实数 \(x\)，都有 \(f(x)\leqslant g(x)\)；
+
+（3） 若方程 \(f(x)=a\)（\(a\) 为实数）有两个正实数根 \(x_1\)，\(x_2\)，且 \(x_1<x_2\)，求证：\(x_2-x_1\leqslant-\dfrac{a}{3}+4^{\frac{1}{3}}\)．
+
+\end{question}
