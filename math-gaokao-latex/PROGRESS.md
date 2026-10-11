@@ -323,3 +323,12 @@
 - 已完成阶段：b35 内容和报告投影已提交为 `ac60c0fe`；不 push。
 - 待完成：预检并继续推进 manifest 顺序中的 b36。
 - 下一步：核查 b36 四卷的来源/provenance、issue、旧构建与复核回执，确定可复用内容和需更新门禁。
+
+### `phase2-b36` — 1977 云南、贵州、广西文科、广西理科
+
+- 预检完成：四卷关联 25 条 issue（`ISSUE-0246`—`ISSUE-0270`）逐条确认均 resolved；source manifest 校验通过（775 artifacts）。
+- 已有内容：四卷 `provenance.json` 共 25 题，逐题转录复核均 passed、答案证据均 A、无冲突、无未解决 provenance issue；复用已完成转录/核查，不重新处理内容。既有 PDF 四版页数分别为云南 10/4/12/3（29）、贵州 10/4/13/3（30）、广西文科 6/3/8/2（19）、广西理科 9/4/12/3（28），合计 106 页。
+- 旧构建：四卷 build receipts 均因生成输入树与工具链指纹变化 stale，review receipts 随 build stale；provenance 缓存仍为 `compiled`/`compiled_pending_review`，现场派生为四卷 `editions_generated`、批次 `provenance_verified`。需正式构建并由事务刷新派生状态。
+- 修改文件：本进度文件；本预检阶段未改题目源、答案、provenance、回执或 manifest。
+- 待完成：正式构建四卷四版，逐页视觉复核及候选页高分辨率检查，登记复核并 finalize；之后清理、跑 scoped/full-report gates 并提交。
+- 下一步：formal build 四卷，刷新 build attempt 后准备绑定当前 attempts 的 review work items。
