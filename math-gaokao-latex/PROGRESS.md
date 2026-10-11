@@ -571,3 +571,14 @@
 - 已完成阶段：b45 内容与报告投影提交 `9e7767b7`（`docs: 完成1958京滇川苏四卷复核`）；未 push。
 - 下一批：manifest 顺序为 `phase2-b46`（1958 湖北、湖南、东北、华东四卷），当前 `compiled_pending_review`。
 - 下一步：单独提交本进度记录；随后检查并继续 b46。
+
+### `phase2-b46` — 1958 湖北、湖南、东北、华东
+
+- 预检完成：起始 manifest revision 3887；source manifest validate 通过（775 项）；批次 issue 列表为空；生成器 `--check` 显示四卷输出一致。
+- provenance 共 28 题（湖北 5、湖南 8、黑龙江吉林辽宁 8、华东 7），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用既有转录与解题/盲核结果，不重做内容。
+- 四份固定来源 PDF 均为 ready、各 1 页；来源路径依次为 `普通高考/1958/1958湖北.pdf`、`普通高考/1958/1958湖南.pdf`、`普通高考/1958/1958黑龙江,吉林,辽宁.pdf`、`普通高考/1958/1958华东(上海,福建).pdf`。
+- `provenance.py status` 显示四卷 `editions_generated`、批次 `provenance_verified`；缓存状态仍为 compiled/compiled_pending_review。旧 build receipts 四卷均因生成输入树与工具链指纹变化 stale，review receipts 随 build 失效。
+- 四卷现有四版 PDF 页数分别为湖北 1/8/2/7（18）、湖南 1/7/2/5（15）、东北 1/7/2/6（16）、华东 2/10/3/7（22），共 71 页；每卷 build 目录仅含四版 PDF，无编译中间物。无题目、答案或 provenance 变更需求。
+- 阶段修改文件：仅本进度文件；预检未更改来源、manifest、provenance 或试卷内容。
+- 待完成：正式重建、逐页视觉复核、finalize、清理中间物、scoped gates、全库报告投影和提交。
+- 下一步：b46 formal build 四卷各四版，记录实际页数、warning 和 build attempt 后准备 16 份 review work items。
