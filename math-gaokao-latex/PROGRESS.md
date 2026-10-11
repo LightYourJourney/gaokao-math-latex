@@ -489,3 +489,28 @@
 - 下一批：manifest 顺序为 `phase2-b43`（1977 江苏淮阴、盐城、苏州地区、苏州市四卷），当前 `compiled_pending_review`。
 - 已完成阶段：b42 内容与报告投影提交 `f978bcea`（`docs: 完成1977苏常徐扬锡四卷复核`）；未 push。
 - 下一步：单独提交本进度记录；随后检查并继续 b43。
+
+### `phase2-b43` — 1977 江苏淮阴、盐城、苏州地区、苏州市
+
+- 预检完成：起始 manifest revision 3878；source manifest validate 通过；批次 issue 列表为空；生成器 `--check` 显示四卷输出一致。
+- provenance 共 29 题（淮阴 9、盐城 8、苏州地区 6、苏州市 6），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用既有转录/解题和盲核结果，不重做内容。
+- `provenance.py status` 显示四卷 `editions_generated`、批次 `provenance_verified`；`check-batch` 报告 manifest 缓存状态与现场派生状态不一致，属于此前未 finalize 的缓存状态差异，不是题目 provenance 缺失。四卷旧 build receipts 均因生成输入树和工具链指纹变化 stale，需要重建。
+- 现有四版 PDF 页数依次为淮阴 2/9/3/6、盐城 2/10/3/8、苏州地区 2/11/3/8、苏州市 2/12/3/9，共 93 页；每卷现有 build 目录仅有四版 PDF。
+- 已完成子阶段：正式构建四卷四版完成，manifest revision 3880；页数与既有 PDF 相同，共 93 页。Build attempts：淮阴 `87f4d274-6472-4dc0-b026-5398ec280020`、盐城 `f27c1389-6a00-443b-830f-8c41b2eaaf4b`、苏州地区 `c5e3d2d8-7646-456d-87a4-4af0bf247a9c`、苏州市 `f1dff174-4434-4251-9fd4-cfb05de943a1`。无 missing-character warning；盐城解析版有一条 4.48792pt Overfull hbox（line 34），其余三卷无 overfull。Build receipt 校验无 failed/invalid/missing/stale，四卷待复核为预期状态。
+- 修改文件：本进度文件、四卷 build receipts/PDF；预检与构建未更改题目源、答案或 provenance。
+- 已完成子阶段：`prepare-batch` 建立 16 个当前 attempt review work items；生成 16 张接触表，覆盖四卷四版 93/93 页并逐页检查，未见裁切、遮叠、缺字或异常分页。
+- 已完成子阶段：16 个候选页完成 120dpi 逐张复核，未见版式缺陷；另对盐城解析版警告页第 3 页完成 120dpi 检查。Overfull 精确指向 `answers.tex` 第 34 行行间公式，宽度 4.48792pt；视觉上公式完整可读、无裁切或遮挡，按既有规则记录精确 warning exemption，保留原题解不改内容。
+- 阶段修改文件：本进度文件；接触表、高分辨率图和 work items 位于临时目录/忽略 `.work`，不进入版本控制；本阶段未改题目、答案、provenance 或生成源。
+- 验证结果：接触表逐页覆盖 93/93；候选页复核 16/16，另有 warning 关联页 1 页完成高分辨率复核。下一阶段登记 744 项（93 页 × 8 检查项）并登记上述单条 warning 豁免。
+- 已完成子阶段：16 份当前 attempt work items 登记 93 页 × 8 项共 744 项具体说明的 pass 检查，0 pending、0 non-pass；盐城解析版单条 Overfull 按当前 build 日志字段精确登记豁免（`answers.tex` 第 34 行、PDF 第 3 页、120dpi 视觉 pass）。`check-batch` 仅报告正式 review receipts 仍绑定旧 build，属 finalize 刷新回执前预期状态。
+- 阶段修改文件：本进度文件及忽略的 `.work/phase2-b43/review/` 下 16 份工作项；未改题目、答案、provenance 或生成源。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b43 状态 `closed`、无问题；单条 warning exemption 与 build warning 逐字段匹配，正式 review receipts 更新并生成 `reports/phase2-b43.md`，manifest revision 3881。
+- 阶段修改文件：四卷 review receipts、manifest 状态投影、本批报告与本进度文件；忽略工作项和临时 PNG 待清理。
+- 已完成子阶段：四卷 build 目录各删除 24 个非 PDF 编译中间物，共 96 个，每卷保留 4 份 PDF、0 个非 PDF；16 份 `.work/phase2-b43/` 工作项与 `/tmp/gk-phase2-b43-review.EfQ1QQ/` 下 126 张 PNG 已移入系统废纸篓，两临时路径确认不存在。
+- 已完成子阶段：scoped gates 全通过：source manifest validate；生成器 `--check` 显示 4 卷一致；build receipts 4 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：4 卷`。
+- 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认投影与全量 manifest 一致并保留未完成状态。
+- 最终 diff 审核：`git diff --check` 通过；17 个 tracked 文件仅涉及四卷 build/review receipts、manifest、全量 README/报告投影、本批报告与进度；无题目/答案/provenance/LaTeX 源或代码改动。四卷 16 份 PDF 保留；盐城解析版单条 warning 已有视觉豁免证据。
+- 验证快照：manifest revision 3881；b43 `closed`，93 页、744 项检查通过，1 条精确 warning exemption。全库批次状态：closed 62、closed_with_blockers 17、compiled_pending_review 57、provenance_verified 2；试卷 production state：complete 129、compiled 94、blocked 45、editions_generated 4。该快照仅代表当前进度，不代表全库完成。
+- 下一批：manifest 顺序为 `phase2-b44`（1977 江苏连云港、镇江、黑龙江三卷），当前 `compiled_pending_review`。
+- 已完成阶段：b43 内容与报告投影提交 `cc6baf2c`（`docs: 完成1977苏淮盐苏四卷复核`）；未 push。
+- 下一步：单独提交本进度记录；随后检查并继续 b44。
