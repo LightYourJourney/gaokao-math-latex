@@ -332,5 +332,6 @@
 - 已完成子阶段：formal build 四卷四版成功，manifest revision 3856；云南 3/12/4/10（29 页）、贵州 3/13/4/10（30 页）、广西文科 2/8/3/6（19 页）、广西理科 3/12/4/9（28 页），合计 106 页。Build attempts：`dac709ac-f809-45ee-8b2a-0157ed33d58f`、`46ca254d-de9a-4d55-b015-50f914568693`、`3b0ba108-b399-4425-b365-1f2f3edb2900`、`93ccf863-4ed6-48f0-ad29-633051257127`。
 - 构建警告：仅贵州卷出现 18 条 missing-character 警告（试题版 2、解析版 7、简答版 2、印刷版 7），字符为 `θ`、`α`、`ⁿ`，来自 `questions.tex`/`answers.tex` 的源注文本；尚未判定视觉影响，不予豁免。
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`。未改题目源、答案或 provenance。
+- 已完成子阶段：`prepare-batch` 生成 16 个 work items，覆盖四卷 × 四版并绑定本轮 build attempts。
 - 待完成：准备 work items，检查 106 页与候选/警告页；明确贵州缺字是否可见，再决定是否需最小 TeX 表示修复及 provenance 重核；完成复核和 finalize 后清理、跑 gates 并提交。
-- 下一步：运行 `prepare-batch`，再渲染全部 106 页接触表与贵州 warning 相关页高分辨率图。
+- 下一步：渲染并逐页检查 106 页接触表，定位贵州缺字警告对应页并高分辨率复核。
