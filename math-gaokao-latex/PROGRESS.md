@@ -368,5 +368,7 @@
 - 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认投影与全量 manifest 当前一致并保留未完成状态；`git diff --check` 通过。
 - 最终 diff 初审：17 个 tracked 文件，限于四卷 build/review receipts、manifest 驱动的六个全量报告/README 投影、本批报告、manifest 与进度文件；没有题目源、答案、provenance 或代码改动。四卷 16 份 PDF 均保留。
 - 验证快照：manifest revision 3863；批次 `phase2-b37` 状态 `closed`，140 页、1120 项视觉检查均通过。该批完成不代表全库完成。
-- 待完成：审阅关键 receipts/manifest/report diff，确认无越界变化后提交 b37 内容与投影；随后单独更新进度记录提交哈希。
-- 下一步：完成最终 diff 审阅并提交；不 push。
+- 已完成阶段：b37 内容与报告投影提交 `42556c39`（`docs: 完成1977湘鄂吉四卷复核`）；未 push。
+- 下一批：按 manifest 顺序为 `phase2-b38`（1977 江苏南通、江西、辽宁、宁夏四卷），当前状态 `compiled_pending_review`。
+- 待完成：b38 预检、正式构建、逐页复核与批次 finalize。
+- 下一步：检查 b38 四卷的来源/provenance、issue、构建与复核回执，确认可复用内容后再构建。
