@@ -313,5 +313,6 @@
 - 已完成子阶段：按 16 个 work items 登记的候选页完成 120dpi 复核；包括安徽理科印刷版第 14 页、广东印刷版第 9 页、广东解析版第 4 页、四川解析版第 4 页、四川印刷版第 3 页及其余首页，共 16 页，均无可见版面缺陷。
 - 已完成子阶段：16 个 work items 已登记 132 页 × 8 项共 1056 个带非空说明的 pass 检查；0 pending、0 non-pass，候选页 16 页全部高分辨率检查通过，工作项绑定 4 个当前 build attempts。
 - 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，状态 `closed`，无问题；`reports/phase2-b35.md` 已生成，manifest revision 3854。
-- 待完成：清理四卷非 PDF build 中间物、本批 work items 与临时 PNG；运行 scoped/full-report gates、diff 检查并提交。
-- 下一步：先精确盘点四卷 build 中非 PDF 文件、16 个 work items 和 `/tmp/gk-phase2-b35-review.XNYJgg` 临时图，再执行范围限定清理。
+- 已完成子阶段：清理四卷 `build/` 内各 24 个非 PDF 文件（每卷保留四份 PDF）、本批 16 个 work items 与临时目录 164 张 PNG；复查四卷各 4 PDF、0 非 PDF，work/temp 目录均已删除。
+- 待完成：运行 scoped/full-report gates、diff 检查并提交。
+- 下一步：运行 source/build/review/provenance scoped gates，再刷新并检查全库报告投影。
