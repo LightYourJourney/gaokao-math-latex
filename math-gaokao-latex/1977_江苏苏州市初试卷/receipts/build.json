@@ -1,5 +1,5 @@
 {
-  "attempt_id": "e1fb3938-5c6f-4234-b8f8-b1f1f6062f1f",
+  "attempt_id": "f1dff174-4434-4251-9fd4-cfb05de943a1",
   "dependency_tree": {
     "files": [
       {
@@ -71,7 +71,7 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/试题版.pdf",
-        "sha256": "b6483b3f0c7cfb4159291adb64aa2c4f05f2d51a667b5283d79ad63ed50f56a6",
+        "sha256": "44f2d71847b108ff3a9f55d13c4b2d64037cb98c5c2fdd241201e8a9115cc50c",
         "size_bytes": 89584
       },
       "problems": [],
@@ -95,8 +95,8 @@
       "pdf": {
         "page_count": 12,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/解析版.pdf",
-        "sha256": "5e7b1c3aca398be51f004bce70634f2a38245553cb2f8cf68e24b353bd17da6a",
-        "size_bytes": 148859
+        "sha256": "3ac2761a43ba6b9cd85af7fc1ce647b38e8b632598128b9b9fbe9f87f15c346b",
+        "size_bytes": 148860
       },
       "problems": [],
       "result": "succeeded",
@@ -119,8 +119,8 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/简答版.pdf",
-        "sha256": "5abf3eb4190a7465763688ecfe16a72c39025893731459a34b2dd19c387f2320",
-        "size_bytes": 96748
+        "sha256": "7fdd4d83a87c323f4e04d238bbbe19f6b3cd2955f9dd735dc0fac4fe11b5be6a",
+        "size_bytes": 96749
       },
       "problems": [],
       "result": "succeeded",
@@ -143,15 +143,15 @@
       "pdf": {
         "page_count": 9,
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/build/印刷版.pdf",
-        "sha256": "9818c0bec0545f27f8165d1ccd764885c84db4072aec636973ef1b8611c13d77",
-        "size_bytes": 149505
+        "sha256": "3200e8dc24cc1b5fc4f4896877581bbc9ad06ae6832d1a001c5996e20e049597",
+        "size_bytes": 149506
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_江苏苏州市初试卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-30T19:55:19+08:00",
+  "finished_at": "2026-10-12T05:54:30+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "40f69299bb2335d23d932b4f35d0c6a0adefb1607ccf0f998aafcdd7ef10a586"
       },
       {
         "path": "math-gaokao-latex/1977_江苏苏州市初试卷/figures/f1977_js_suzhou_shi_t1_parabola.tex",
@@ -231,39 +231,39 @@
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "67cbe68fcd05798164f22e4246faaa2031f4edeed452dbd04c64ebb3491ab8b0"
+    "tree_sha256": "7af0526b46794196e88c1cfc8f889400215f6beed835fde94fecac0b72250f51"
   },
   "input_projection": "9c345baeb1bb0b27a8cdc4ff1926f388f934cea41e3f240d4bac5076d3b3cf06",
-  "manifest_revision": 3318,
+  "manifest_revision": 3879,
   "paper_id": "gk-1977-chushi-js-suzhou-shi",
-  "previous_attempt_id": "33b6b640-d736-47ae-8bbf-2af0eed33fa3",
+  "previous_attempt_id": "e1fb3938-5c6f-4234-b8f8-b1f1f6062f1f",
   "project_dir": "1977_江苏苏州市初试卷",
   "schema_version": 1,
-  "started_at": "2026-09-30T19:38:11+08:00",
-  "status": "compiled_pending_review",
+  "started_at": "2026-10-12T05:53:48+08:00",
+  "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",
