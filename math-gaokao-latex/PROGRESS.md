@@ -514,3 +514,28 @@
 - 下一批：manifest 顺序为 `phase2-b44`（1977 江苏连云港、镇江、黑龙江三卷），当前 `compiled_pending_review`。
 - 已完成阶段：b43 内容与报告投影提交 `cc6baf2c`（`docs: 完成1977苏淮盐苏四卷复核`）；未 push。
 - 下一步：单独提交本进度记录；随后检查并继续 b44。
+
+### `phase2-b44` — 1977 江苏连云港、镇江、黑龙江
+
+- 预检完成：起始 manifest revision 3881；source manifest validate 通过，批次 issue 列表为空；生成器 `--check` 显示 3 卷生成输出一致。
+- provenance 共 29 题（连云港 8、镇江 9、黑龙江 12），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用既有转录与解题/盲核结果，不重做内容。
+- `provenance.py status` 显示三卷 `editions_generated`、批次 `provenance_verified`；旧 build receipts 三卷均因生成输入树和工具链指纹变化 stale，需要正式重建。
+- 既有四版 PDF 页数依次为连云港 3/13/4/10、镇江 3/14/4/10、黑龙江 3/11/4/8，共 87 页；未见需修改题目、答案或 provenance 的证据。
+- 已完成子阶段：正式构建三卷四版完成，manifest revision 3883；页数与既有 PDF 相同，共 87 页。Build attempts：连云港 `9052ba28-4bf5-48be-bf38-7986e7a530ca`、镇江 `77eb05ee-c50a-4130-b33b-9048c210017c`、黑龙江 `2c3333af-500c-44e8-99e7-a7c5ce4c22cc`。三卷均无 failed/missing-character/Overfull warning；build receipt 校验无 failed/invalid/missing/stale，pending review 为预期状态。
+- 修改文件：本进度文件、三卷 build receipts/PDF；未更改题目源、答案或 provenance。
+- 已完成子阶段：`prepare-batch` 建立 12 个当前 attempt review work items，覆盖三卷 × 四版。
+- 已完成子阶段：12 张接触表逐页覆盖最终 87 页并检查；未见裁切、缺字、图形遮叠、异常分页或答案串版。12 个候选页均以 120dpi 逐张复核通过。
+- 阶段修改文件：本进度文件；接触表、候选图和 work items 位于临时目录/忽略 `.work`，不进入版本控制；未改题目源、答案、provenance 或生成源。
+- 验证结果：接触表覆盖 87/87 页；高分辨率候选复核 12/12 页通过，构建无 warning。
+- 已完成子阶段：12 份当前 attempt 工作项登记 87 页 × 8 项共 696 项具体说明的 pass 检查，0 pending、0 non-pass，无 warning exemption。`check-batch` 仅报告正式 review receipts 仍绑定旧 build，属 finalize 刷新回执前的预期状态。
+- 阶段修改文件：本进度文件及忽略的 `.work/phase2-b44/review/` 下 12 份工作项；未改题目、答案、provenance 或生成源。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b44 状态 `closed`、无问题；正式 review receipts 更新并生成 `reports/phase2-b44.md`，manifest revision 3884。
+- 阶段修改文件：三卷 review receipts、manifest 状态投影、本批报告与本进度文件；忽略工作项和临时 PNG 待清理。
+- 已完成子阶段：三卷 build 目录各删除 24 个非 PDF 编译中间物，共 72 个；每卷保留四份 PDF、0 个非 PDF。12 份 `.work/phase2-b44/` review 工作项与 `/tmp/gk-phase2-b44-review.s51RED/` 下 111 张 PNG 已移入系统废纸篓，两路径确认不存在。
+- 已完成子阶段：scoped gates 全通过：source manifest validate；生成器 `--check` 显示 3 卷一致；build receipts 3 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：3 卷`。
+- 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认输出与全量 manifest 当前一致，并保留未完成状态。
+- 最终 diff 审核：`git diff --check` 通过；15 个 tracked 文件仅涉及三卷 build/review receipts、manifest、全量 README/报告投影、本批报告与进度文件；无题目/答案/provenance/LaTeX 源或代码改动。三卷 12 份 PDF 保留。
+- 验证快照：manifest revision 3884；b44 `closed`，87 页、696 项视觉检查通过。全库批次状态：closed 63、closed_with_blockers 17、compiled_pending_review 56、provenance_verified 2；试卷 production state：complete 132、compiled 91、blocked 45、editions_generated 4。该快照仅反映当前进度，不代表全库完成。
+- 下一批：manifest 顺序为 `phase2-b45`（1958 北京、云南、四川、江苏四卷），当前 `compiled_pending_review`。
+- 已完成阶段：b44 内容与报告投影提交 `99a01770`（`docs: 完成1977连云镇江黑龙江三卷复核`）；未 push。
+- 下一步：单独提交本进度记录；随后检查并继续 b45。
