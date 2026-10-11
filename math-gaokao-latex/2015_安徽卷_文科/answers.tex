@@ -1,0 +1,917 @@
+% answers.tex —— 2015 年·安徽卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_安徽文_试题.md + 2015/2015_数学真题_安徽文_解析正文.md + 2015/2015_数学真题_安徽文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定原卷不附参考答案（等级 D），以下为逐题独立推导、逐题校验的解析（非官方答案）。第 7 题框图按源复刻（√2 近似型：判据 \(|a-1.414|\geqslant 0.005?\)、「是」支向下回环、「否」支向右输出，见试题文件存疑 ⑦）；第 12 题的 \(AB=\sqrt{6}\)（源文本层丢根号，以像素为准，见存疑 ②）；第 15 题④的「\(\parallel\)」为矢量双笔画（照源排印）；第 17 题 (1) 的 \(a\) 值原图未印数值，由各矩形面积之和为 1 推得；第 19 题的 \(\angle BAC=60^{\circ}\) 由题面给出（\textbf{图中无对应角标注}，见存疑 ⑤）；第 21 题 (2) 按「极值须在区间内取到」口径，结论为极大值 100、无极小值。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设 \(\mathrm{i}\) 是虚数单位，则复数 \((1-\mathrm{i})(1+2\mathrm{i})=\)（　）
+
+(A) \(3+3\mathrm{i}\)　(B) \(-1+3\mathrm{i}\)　(C) \(3+\mathrm{i}\)　(D) \(-1+\mathrm{i}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按多项式乘法展开，并注意虚数单位 \(\mathrm{i}\) 是正体记号且满足 \(\mathrm{i}^2=-1\)：
+
+\nopagebreak[4]
+\[
+(1-\mathrm{i})(1+2\mathrm{i})=1+2\mathrm{i}-\mathrm{i}-2\mathrm{i}^2=1+\mathrm{i}+2=3+\mathrm{i}.
+\]
+
+故选 (C)。
+
+（验证：改用「除以 \(1+2\mathrm{i}\) 应回得 \(1-\mathrm{i}\)」这一反向手段逐个选项核验：\(\dfrac{3+\mathrm{i}}{1+2\mathrm{i}}=\dfrac{(3+\mathrm{i})(1-2\mathrm{i})}{5}=\dfrac{5-5\mathrm{i}}{5}=1-\mathrm{i}\)，恰为原式首因子；而 (A) \((3+3\mathrm{i})/(1+2\mathrm{i})=1.8-0.6\mathrm{i}\)、(B) \((-1+3\mathrm{i})/(1+2\mathrm{i})=1+\mathrm{i}\)、(D) \((-1+\mathrm{i})/(1+2\mathrm{i})=0.2+0.6\mathrm{i}\) 均不等于 \(1-\mathrm{i}\)，四项中仅 (C) 通过。另以复数乘法直算：\((1-\mathrm{i})(1+2\mathrm{i})=3+\mathrm{i}\)，与 (C) 逐位相等。）
+
+\gkanswer{答案：C（\(3+\mathrm{i}\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设全集 \(U=\{1,2,3,4,5,6\}\)，\(A=\{1,2\}\)，\(B=\{2,3,4\}\)，则 \(A\cap(\complement_U B)=\)（　）
+
+(A) \(\{1,2,5,6\}\)　(B) \(\{1\}\)　(C) \(\{2\}\)　(D) \(\{1,2,3,4\}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先求补集：由 \(U=\{1,2,3,4,5,6\}\)、\(B=\{2,3,4\}\) 得 \(\complement_U B=\{1,5,6\}\)，再与 \(A=\{1,2\}\) 取交：
+
+\nopagebreak[4]
+\[
+A\cap(\complement_U B)=\{1,2\}\cap\{1,5,6\}=\{1\}.
+\]
+
+故选 (B)。
+
+（验证：不借助补集运算，改用逐元素归属表核验六个元素：\(1\in A\) 且 \(1\notin B\)，取；\(2\in A\) 但 \(2\in B\)，舍；\(3\)、\(4\) 均属于 \(B\)，舍；\(5\)、\(6\) 均不属于 \(A\)，舍。仅 \(1\) 被取，结果为 \(\{1\}\)，与 (B) 一致，与 (A) \(\{1,2,5,6\}\)、(C) \(\{2\}\)、(D) \(\{1,2,3,4\}\) 均不符。）
+
+\gkanswer{答案：B（\(\{1\}\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+设 \(p\)：\(x<3\)，\(q\)：\(-1<x<3\)，则 \(p\) 是 \(q\) 成立的（　）
+
+(A) 充分必要条件　(B) 充分不必要条件
+
+(C) 必要不充分条件　(D) 既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+把两个条件还原成数集：\(p\) 对应 \(P=(-\infty,3)\)，\(q\) 对应 \(Q=(-1,3)\)，有 \(Q\subset P\) 且 \(Q\neq P\)。
+
+\begin{itemize}
+\item 由 \(q\) 成立可推出 \(p\) 成立：凡 \(x\in Q\) 必有 \(x\in P\)，故 \(p\) 是 \(q\) 成立的必要条件；
+\item 反之取 \(x=-2\)，有 \(x\in P\) 而 \(x\notin Q\)，即 \(p\) 成立时 \(q\) 未必成立，故 \(p\) 不是 \(q\) 的充分条件。
+\end{itemize}
+
+所以 \(p\) 是 \(q\) 的必要不充分条件。故选 (C)。
+
+（验证：在 \(x=-10.0\) 至 \(9.9\)、步长 \(0.1\) 的 200 个格点上做双向反例扫描：满足「\(q\) 真而 \(p\) 假」的格点数为 \(0\)，即 \(q\Rightarrow p\) 无反例；满足「\(p\) 真而 \(q\) 假」的格点数为 \(91\)，全部落在 \(x\leqslant -1.0\)（如 \(x=-2.0\) 处 \(p\) 真、\(q\) 假）。两端不对称，恰好确认 \(q\Rightarrow p\) 单向成立，即 \(p\) 必要而不充分。）
+
+\gkanswer{答案：C（必要不充分条件）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+下列函数中，既是偶函数又存在零点的是（　）
+
+(A) \(y=\cos x\)　(B) \(y=\sin x\)　(C) \(y=\ln x\)　(D) \(y=x^2+1\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+逐项检验「偶函数」与「存在零点」两个条件：
+
+\begin{itemize}
+\item (A) \(y=\cos x\)：\(\cos(-x)=\cos x\)，为偶函数；又在 \(x=\dfrac{\pi}{2}+k\pi\)（\(k\) 为整数）处取零，两项均满足；
+\item (B) \(y=\sin x\)：为奇函数，不合「偶」；
+\item (C) \(y=\ln x\)：定义域为 \((0,+\infty)\)，不关于原点对称，不是偶函数；
+\item (D) \(y=x^2+1\)：为偶函数，但 \(x^2+1\geqslant 1>0\) 恒成立，无零点。
+\end{itemize}
+
+故选 (A)。
+
+（验证：数值角度复核——在采样点 \(-3\)、\(-1.5\)、\(0.7\)、\(2.2\)、\(4.4\) 上 \(\max|\cos(-x)-\cos x|=0.0\)，偶性精确成立；\(\cos\dfrac{\pi}{2}=6.12\times 10^{-17}\)，且扫描检出 \(\cos x\) 在 \(\dfrac{\pi}{2}\) 两侧异号，零点确实存在；\(\sin 1=0.8415\) 与 \(\sin(-1)=-0.8415\) 不相等，非偶；\(x^2+1\) 在 \(x=-2\)、\(-1\)、\(0\)、\(1\)、\(2\) 上的最小值为 \(1>0\)，确无零点；\(\ln(-1)\) 无定义。）
+
+\gkanswer{答案：A（\(y=\cos x\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+已知 \(x\)，\(y\) 满足约束条件 \(\begin{cases}x-y\geqslant 0,\\x+y-4\leqslant 0,\\y\geqslant 1,\end{cases}\) 则 \(z=-2x+y\) 的最大值是（　）
+
+(A) \(-1\)　(B) \(-2\)　(C) \(-5\)　(D) 1
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+约束条件
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x-y\geqslant 0,\\
+x+y-4\leqslant 0,\\
+y\geqslant 1
+\end{cases}
+\]
+
+\Needspace{5\baselineskip}
+围成一个有界三角形，其顶点为两两边界直线的交点：\(y=1\) 与 \(x=y\) 交于 \((1,1)\)，\(y=1\) 与 \(x+y=4\) 交于 \((3,1)\)，\(x=y\) 与 \(x+y=4\) 交于 \((2,2)\)。线性目标函数 \(z=-2x+y\) 在有界可行域上的最值必在顶点处取得，逐点回代：
+
+\nopagebreak[4]
+\[
+z(1,1)=-2+1=-1,\qquad z(3,1)=-6+1=-5,\qquad z(2,2)=-4+2=-2.
+\]
+
+最大值为 \(-1\)。故选 (A)。
+
+（验证：（i）三个顶点逐一回代原约束确认可行，\(x-y\geqslant 0\)、\(x+y-4\leqslant 0\)、\(y\geqslant 1\) 三条全部满足；（ii）不用「最值在顶点取得」这一定理，改在可行域 \(y\in[1,3]\)、\(x\in[y,4-y]\) 上以步长 \(0.02\) 做格点穷举扫描，实测最大值为 \(-1.0\)，取到于 \((1.00,1.00)\)，与顶点法结论一致；（iii）选项 (C) 的 \(-5\) 恰是另一顶点 \((3,1)\) 处的取值，系「取最小」的干扰项。）
+
+\gkanswer{答案：A（\(-1\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+下列双曲线中，渐近线方程为 \(y=\pm 2x\) 的是（　）
+
+(A) \(x^2-\dfrac{y^2}{4}=1\)　(B) \(\dfrac{x^2}{4}-y^2=1\)
+
+(C) \(x^2-\dfrac{y^2}{2}=1\)　(D) \(\dfrac{x^2}{2}-y^2=1\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) 的渐近线为 \(y=\pm\dfrac{b}{a}x\)，故要求渐近线为 \(y=\pm 2x\) 即需 \(\dfrac{b}{a}=2\)。逐项读出 \(a\)、\(b\)：
+
+\begin{itemize}
+\item (A) \(x^2-\dfrac{y^2}{4}=1\)：\(a=1\)，\(b=2\)，\(\dfrac{b}{a}=2\)，渐近线 \(y=\pm 2x\)；
+\item (B) \(\dfrac{x^2}{4}-y^2=1\)：\(a=2\)，\(b=1\)，\(\dfrac{b}{a}=\dfrac{1}{2}\)，渐近线 \(y=\pm\dfrac{x}{2}\)；
+\item (C) \(x^2-\dfrac{y^2}{2}=1\)：\(a=1\)，\(b=\sqrt{2}\)，渐近线 \(y=\pm\sqrt{2}\,x\)；
+\item (D) \(\dfrac{x^2}{2}-y^2=1\)：\(a=\sqrt{2}\)，\(b=1\)，渐近线 \(y=\pm\dfrac{\sqrt{2}}{2}x\)。
+\end{itemize}
+
+仅 (A) 的斜率为 \(2\)。故选 (A)。
+
+（验证：不作代数化简，改沿曲线取极限。对每个选项由 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) 解出 \(y=\sqrt{b^2\left(\dfrac{x^2}{a^2}-1\right)}\)，在 \(x=10^6\) 处实测比值 \(y/x\)：(A) \(1.999999999999\)、(B) \(0.500000000000\)、(C) \(1.414213562372\)、(D) \(0.707106781186\)，只有 (A) 收敛到 \(2\)。另一独立手段是把 \(y=2x\) 代回二次式，看 \(\dfrac{x^2}{a^2}-\dfrac{(2x)^2}{b^2}\) 除以 \(x^2\) 的极限（渐近线要求该极限为 \(0\)）：(A) \(+0.000000\)、(B) \(-3.750000\)、(C) \(-1.000000\)、(D) \(-3.500000\)，同样只有 (A) 归零。）
+
+\gkanswer{答案：A（\(x^2-\dfrac{y^2}{4}=1\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图（算法流程图），输出的 \(n\) 为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015ahw_q07_flowchart}\end{center}
+\nopagebreak[4]
+(A) 3　(B) 4　(C) 5　(D) 6
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按框图执行。初值 \(a=1\)、\(n=1\)，进入菱形判断框比较 \(|a-1.414|\) 与 \(0.005\) 的大小（判据为 \(|a-1.414|\geqslant 0.005\)）：判「是」则向下进入赋值框 \(a=1+\dfrac{1}{1+a}\) 与 \(n=n+1\)，再自左侧回环重判；判「否」则向右进入平行四边形输出框，输出 \(n\)。逐轮计算如下。
+
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+轮次 & 判断前的 \(a\) & \(a\) 与 \(1.414\) 的差 & 判据 & 本轮执行 \\
+\midrule
+1 & \(1\) & \(0.414\) & \(\geqslant 0.005\)，是 & \(a=1+\dfrac{1}{2}=\dfrac{3}{2}\)，\(n=2\) \\
+2 & \(\dfrac{3}{2}\) & \(0.086\) & \(\geqslant 0.005\)，是 & \(a=1+\dfrac{1}{5/2}=\dfrac{7}{5}\)，\(n=3\) \\
+3 & \(\dfrac{7}{5}\) & \(0.014\) & \(\geqslant 0.005\)，是 & \(a=1+\dfrac{1}{12/5}=\dfrac{17}{12}\)，\(n=4\) \\
+4 & \(\dfrac{17}{12}\approx 1.416667\) & \(0.002667\) & \(<0.005\)，否 & 输出 \(n=4\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+第 4 轮判断为「否」，输出 \(n=4\)。故选 (B)。
+
+（验证：（i）不依赖浮点，全程用精确有理数模拟（Python 的 fractions.Fraction）：迭代序列为 \(1\to\dfrac{3}{2}\to\dfrac{7}{5}\to\dfrac{17}{12}\)，终止时输出 \(n=4\)，这四个值恰是 \(\sqrt{2}\) 的连分数渐近分数；（ii）阈值停点双向核对——\(n=4\) 时差为 \(\left|\dfrac{17}{12}-1.414\right|=0.002667<0.005\)，应在此停；\(n=3\) 时差为 \(\left|\dfrac{7}{5}-1.414\right|=0.014\geqslant 0.005\)，不应在此停；两侧余量分别为 \(0.00233\) 与 \(0.009\)，结论对判读误差稳健；（iii）框图分支方向另经三倍放大裁片复核：菱形「是」端向下接赋值框、「否」端向右接平行四边形输出框「输出 \(n\)」，回环线自 \(n=n+1\) 框左侧回到菱形入口，且 \(n\) 初值为 \(1\) 而非 \(0\)。）
+
+\gkanswer{答案：B（\(4\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+直线 \(3x+4y=b\) 与圆 \(x^2+y^2-2x-2y+1=0\) 相切，则 \(b\) 的值是（　）
+
+(A) \(-2\) 或 \(12\)　(B) \(2\) 或 \(-12\)　(C) \(-2\) 或 \(-12\)　(D) \(2\) 或 \(12\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+圆方程配方得 \((x-1)^2+(y-1)^2=1\)，故圆心为 \(C(1,1)\)，半径 \(r=1\)。
+
+\Needspace{5\baselineskip}
+直线方程化为一般式 \(3x+4y-b=0\)，圆心到直线的距离为
+
+\nopagebreak[4]
+\[
+d=\dfrac{|3\times 1+4\times 1-b|}{\sqrt{3^2+4^2}}=\dfrac{|7-b|}{5}.
+\]
+
+直线与圆相切等价于 \(d=r=1\)，即 \(|7-b|=5\)，解得 \(b=2\) 或 \(b=12\)。
+
+故选 (D)。
+
+（验证：两条互不依赖的路径。(1) 切点回代：\(b=2\) 时圆心到直线的垂足为 \((0.4,0.2)\)，代入圆方程左边得 \((0.4-1)^2+(0.2-1)^2=0.36+0.64=1.000000\)（与 \(1\) 的偏差 \(2.2\times10^{-16}\)），确在圆上；\(b=12\) 时垂足为 \((1.6,1.8)\)，同样得 \(0.36+0.64=1.000000\)，也精确落在圆上。(2) 消元看判别式：把 \(y=(b-3x)/4\) 代入圆方程，相切等价于所得一元二次方程的判别式为 \(0\)，实跑 \(b=2\) 与 \(b=12\) 时判别式均为 \(+0.0000\)；而 \(b=-2\)、\(b=-12\) 时判别式为 \(-14.0\)、\(-84.0\)（对应圆心到直线的距离 \(1.8\)、\(3.8\)，均大于半径 \(1\)，直线与圆无公共点），故含负值的 (A)(C) 被排除。）
+
+\gkanswer{答案：D（\(2\) 或 \(12\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+一个四面体的三视图如图所示，则该四面体的表面积是（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015ahw_q09_views}\end{center}
+\nopagebreak[4]
+(A) \(1+\sqrt{3}\)　(B) \(2+\sqrt{3}\)　(C) \(1+2\sqrt{2}\)　(D) \(2\sqrt{2}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+第一步，读三视图。正（主）视图是底边被一条竖直中线分成 \(1\) 与 \(1\) 两段（合长 \(2\)）、两腰各标注 \(\sqrt{2}\) 的等腰三角形；侧（左）视图是两条直角边均为 \(1\) 的直角三角形，斜边未标注，由勾股定理为 \(\sqrt{2}\)；俯视图是一条边同样被分成 \(1\) 与 \(1\)（合长 \(2\)）、另两边各标注 \(\sqrt{2}\) 的三角形，顶点朝下。正视图中自底边中点向上、俯视图中自长边中点向下，各有一条连到对顶点的实线。
+
+\Needspace{5\baselineskip}
+第二步，还原四面体。俯视图给出四个顶点在 \(xy\) 平面的投影，正视图给出在 \(xz\) 平面的投影。两个视图内的那条实线说明：有两个顶点的投影恰好落在另一条棱的投影上。据此取
+
+\nopagebreak[4]
+\[
+A(-1,1,0),\quad B(1,1,0),\quad C(0,1,1),\quad D(0,0,0).
+\]
+
+（另一种把高度 \(1\) 分配给俯视长边中点所对应顶点的方式，即取 \(C(0,1,0)\)、\(D(0,0,1)\)，会使命题的三投影退化成一条线段，与题图不符，故予排除。）
+
+第三步，核对三视图。主视投影 \((x,z)\) 为 \((-1,0)\)、\((1,0)\)、\((0,1)\)、\((0,0)\)，外廓正是底 \(2\)、腰 \(\sqrt{2}\) 的等腰三角形，内部实线是棱 \(CD\) 的投影（自底边中点竖直向上到顶点）；侧视投影 \((y,z)\) 为 \((1,0)\)（\(A\)、\(B\) 重合）、\((1,1)\)（\(C\)）、\((0,0)\)（\(D\)），外廓正是两条直角边为 \(1\) 与 \(1\) 的直角三角形且内部无线；俯视投影 \((x,y)\) 为 \((-1,1)\)、\((1,1)\)、\((0,1)\)（\(C\) 落在长边中点）、\((0,0)\)，外廓是长边 \(2\)、斜边 \(\sqrt{2}\) 的三角形，内部实线同样是棱 \(CD\) 的投影。三视图逐项吻合。
+
+\Needspace{5\baselineskip}
+第四步，算棱长与各面面积。由坐标得
+
+\nopagebreak[4]
+\[
+AB=2,\qquad AC=BC=AD=BD=CD=\sqrt{1^2+1^2}=\sqrt{2}.
+\]
+
+\Needspace{5\baselineskip}
+四个面中，\(\triangle ABC\) 与 \(\triangle ABD\) 都是边长为 \(2,\sqrt{2},\sqrt{2}\) 的等腰三角形，底 \(2\) 上的高为 \(\sqrt{2-1}=1\)，各面积 \(\dfrac{1}{2}\times 2\times 1=1\)；\(\triangle ACD\) 与 \(\triangle BCD\) 都是边长为 \(\sqrt{2}\) 的等边三角形，各面积 \(\dfrac{\sqrt{3}}{4}\times 2=\dfrac{\sqrt{3}}{2}\)。故
+
+\nopagebreak[4]
+\[
+S=1+1+\dfrac{\sqrt{3}}{2}+\dfrac{\sqrt{3}}{2}=2+\sqrt{3}.
+\]
+
+故选 (B)。
+
+（验证：(i) 用三维坐标与叉积公式独立重算四个面的面积，实跑得 \(1.000000\)、\(1.000000\)、\(0.866025\)、\(0.866025\)，合计 \(3.732050808\)，与 \(2+\sqrt{3}\) 逐位相符。(ii) 反向验证：对还原出的四面体自行计算三组正交投影的凸包——主视凸包顶点 \((-1,0)\)、\((1,0)\)、\((0,1)\)，边长 \(2,\sqrt{2},\sqrt{2}\)；侧视凸包顶点 \((0,0)\)、\((1,0)\)、\((1,1)\)，边长 \(1,1,\sqrt{2}\)；俯视凸包顶点 \((-1,1)\)、\((1,1)\)、\((0,0)\)，边长 \(\sqrt{2},\sqrt{2},2\)；三组边长与题图标注逐项相符，且投影后落在棱上的额外顶点恰在长边中点处，正好生成题图中那两条内部实线。(iii) 非退化：\(\det[(B-A),(C-A),(D-A)]=2\neq 0\)，四顶点不共面。(iv) 量级排查：三个干扰项 \(1+\sqrt{3}\approx 2.732\)、\(1+2\sqrt{2}\approx 3.828\)、\(2\sqrt{2}\approx 2.828\)，与实算 \(3.732\) 最接近的是 (C) 的 \(3.828\)，按精确值可排除。）
+
+\gkanswer{答案：B（\(2+\sqrt{3}\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+函数 \(f(x)=ax^3+bx^2+cx+d\) 的图象如图所示，则下列结论成立的是（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015ahw_q10_graph}\end{center}
+\nopagebreak[4]
+(A) \(a>0\)，\(b<0\)，\(c>0\)，\(d>0\)　(B) \(a>0\)，\(b<0\)，\(c<0\)，\(d>0\)
+
+(C) \(a<0\)，\(b<0\)，\(c>0\)，\(d>0\)　(D) \(a>0\)，\(b>0\)，\(c>0\)，\(d<0\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(f(x)=ax^3+bx^2+cx+d\) 得 \(f'(x)=3ax^2+2bx+c\)。设两个驻点为 \(x_1<x_2\)，即图中极大值点、极小值点的横坐标。
+
+先从图象读出形态信息：曲线右端上升到无界，故 \(a>0\)；曲线与 \(y\) 轴的交点在 \(x\) 轴上方，故 \(d=f(0)>0\)；标注 \(x_1\)、\(x_2\) 的两条竖直虚线都落在 \(y\) 轴右侧，即极大值点与极小值点均在 \(y\) 轴右侧，故 \(0<x_1<x_2\)。
+
+\Needspace{5\baselineskip}
+由韦达定理，
+
+\nopagebreak[4]
+\[
+x_1+x_2=-\dfrac{2b}{3a},\qquad x_1x_2=\dfrac{c}{3a}.
+\]
+
+由 \(x_1x_2=\dfrac{c}{3a}>0\) 且 \(a>0\)，得 \(c>0\)；由 \(x_1+x_2=-\dfrac{2b}{3a}>0\) 且 \(a>0\)，得 \(b<0\)。其中 \(c\) 的符号另有一路直读：\(x=0\) 落在曲线递增段上，故 \(f'(0)=c>0\)，与 \(x_1x_2>0\) 的结论互证。
+
+四个系数的符号全部确定。
+
+故选 (A)。
+
+（验证：(i) 像素测量（400 dpi 页面，与文本层坐标互校）：\(y\) 轴所在列为页面横坐标 \(3030\)，极大值点上方的虚线在 \(3075\) 至 \(3081\)（即位于 \(y\) 轴右侧 \(+45\) 至 \(+51\) px，折合约 \(+8\) 至 \(+9\) pt），极小值点的虚线在页面横坐标 \(3444\) 附近，更在其右，故 \(0<x_1<x_2\) 成立而非 \(x_1<0\)；\(x=0\) 左右各 \(20\) px 的两列上，曲线墨迹的最高点明显高于 \(x\) 轴所在行（页面纵坐标 \(2253\)），得 \(d>0\)；在页面横坐标 \(2955\) 附近（\(y\) 轴左侧）另检出曲线穿过 \(x\) 轴一次，即存在一个负根，与题图左段相容。(ii) 符号与根的穷举侧证：随机取 \(58019\) 组满足 \(a>0\)、\(b<0\)、\(c>0\) 且判别式为正的系数，\(58019/58019\) 组的两驻点均为正，与「两驻点同在 \(y\) 轴右侧」这一图象特征配成充要关系，反例零个。(iii) 排除对抗项：若 \(c<0\)（选项 (B)），则 \(x_1x_2=\dfrac{c}{3a}<0\)，两驻点必异号，极大值点将落到 \(y\) 轴左侧，与题图直接矛盾（取 \(a=1\)、\(b=-1\)、\(c=-1\) 实算 \(x_1=-0.333\)、\(x_2=1.000\)）；选项 (C) 的 \(a<0\) 使曲线右端下降，选项 (D) 的 \(d<0\) 使曲线与 \(y\) 轴交于 \(x\) 轴下方，均与题图不符。(iv) 构造对拍：\(f(x)=x^3-3.9x^2+3x+1\) 满足 \(a>0\)、\(b<0\)、\(c>0\)、\(d>0\)，实算极大值点 \(x_1=0.4693\)、极小值点 \(x_2=2.1307\)（\(f(x_1)=1.6523>0\) 使点 \(P\) 在轴上方，\(f(x_2)=-0.6403<0\) 在轴下方），\(f(0)=1.0000\)，三个零点为 \(-0.2482\)、\(1.5522\)、\(2.5960\)（一负两正），形态与题图一致。）
+
+\gkanswer{答案：A（\(a>0\)，\(b<0\)，\(c>0\)，\(d>0\)）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+计算：\(\lg\dfrac{5}{2}+2\lg 2-\left(\dfrac{1}{2}\right)^{-1}=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由对数的运算法则与负整数指数幂，
+
+\nopagebreak[4]
+\[
+\lg\dfrac{5}{2}+2\lg 2-\left(\dfrac{1}{2}\right)^{-1}=(\lg 5-\lg 2)+2\lg 2-2=\lg 5+\lg 2-2=\lg 10-2=1-2=-1.
+\]
+
+所以原式的值为 \(-1\)。
+
+（验证：改用数值直算这一独立手段，程序对 \(\lg 2.5+2\lg 2-\left(\dfrac{1}{2}\right)^{-1}\) 求值输出 \(-1.0\)，浮点下精确到末位；再拆步核对 \(\lg 5\approx 0.6989700043\)、\(\lg 2\approx 0.3010299957\)，二者之和为 \(1.0000000000\)，减 \(2\) 即得 \(-1\)。）
+
+\gkanswer{答案：\(-1\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+在 \(\triangle ABC\) 中，\(AB=\sqrt{6}\)，\(\angle A=75^{\circ}\)，\(\angle B=45^{\circ}\)，则 \(AC=\)\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+在 \(\triangle ABC\) 中，\(AB=\sqrt{6}\)，\(\angle A=75^\circ\)，\(\angle B=45^\circ\)，故
+
+\nopagebreak[4]
+\[
+\angle C=180^\circ-75^\circ-45^\circ=60^\circ.
+\]
+
+\Needspace{5\baselineskip}
+由正弦定理 \(\dfrac{AC}{\sin B}=\dfrac{AB}{\sin C}\)，得
+
+\nopagebreak[4]
+\[
+AC=AB\cdot\dfrac{\sin 45^\circ}{\sin 60^\circ}=\sqrt{6}\cdot\dfrac{\sqrt{2}/2}{\sqrt{3}/2}=\dfrac{\sqrt{12}}{\sqrt{3}}=2.
+\]
+
+所以 \(AC\) 的值为 \(2\)。
+
+（验证：数值代入 \(\sqrt{6}\cdot\sin 45^\circ/\sin 60^\circ=1.9999999999999998\)，即 \(2\)（差值属浮点舍入）。另由余弦定理反求第三边：\(BC^2=AB^2+AC^2-2\cdot AB\cdot AC\cos 75^\circ=6+4-2\sqrt{6}\cdot 2\cdot 0.2588190451=7.4641016151\)，\(BC=2.7320508076=1+\sqrt{3}\)；再核正弦定理的三个比值 \(a/\sin A\)、\(b/\sin B\)、\(c/\sin C\) 全等于 \(2.8284271247=2\sqrt{2}\)，自洽。又：源文本层在此处把 \(\sqrt{6}\) 排成 \(6\)（整枚根号丢失），像素渲染与逐词框均作 \(\sqrt{6}\)，且根号上线实测长 \(5.25\) pt、恰好只覆盖数字 \(6\)，故以像素为准。）
+
+\gkanswer{答案：\(AC=2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知数列 \(\{a_n\}\) 中，\(a_1=1\)，\(a_n=a_{n-1}+\dfrac{1}{2}\)（\(n\geqslant 2\)），则数列 \(\{a_n\}\) 的前 9 项和等于\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 \(a_1=1\) 与 \(a_n=a_{n-1}+\dfrac{1}{2}\)（\(n\geqslant 2\)）知 \(\{a_n\}\) 是首项为 \(1\)、公差为 \(\dfrac{1}{2}\) 的等差数列，于是
+
+\nopagebreak[4]
+\[
+a_9=1+8\times\dfrac{1}{2}=5,
+\]
+
+\Needspace{5\baselineskip}
+故
+
+\nopagebreak[4]
+\[
+S_9=\dfrac{9(a_1+a_9)}{2}=\dfrac{9\times 6}{2}=27.
+\]
+
+所以数列 \(\{a_n\}\) 的前 \(9\) 项和为 \(27\)。
+
+（验证：用精确有理数逐项累加得 \(1,\dfrac{3}{2},2,\dfrac{5}{2},3,\dfrac{7}{2},4,\dfrac{9}{2},5\)，和为 \(\dfrac{27}{1}\)，即精确的 \(27\) 而非浮点近似；又用另一公式 \(S_9=9a_1+\dfrac{9\times 8}{2}d=9+36\times\dfrac{1}{2}=27\)，两路一致。）
+
+\gkanswer{答案：\(27\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+在平面直角坐标系 \(xOy\) 中，若直线 \(y=2a\) 与函数 \(y=|x-a|-1\) 的图象只有一个交点，则 \(a\) 的值为\gkblank{}．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两图象的交点即方程 \(|x-a|-1=2a\) 的解，也就是 \(|x-a|=2a+1\) 的解。按右端 \(2a+1\) 的符号分三种情形：
+
+\begin{itemize}
+\item 若 \(2a+1>0\)：\(x=a\pm(2a+1)\)，两个不同的解，即两个交点；
+\item 若 \(2a+1=0\)：\(x=a\)，唯一解，恰一个交点；
+\item 若 \(2a+1<0\)：方程无解，零个交点。
+\end{itemize}
+
+故恰有一个交点当且仅当 \(2a+1=0\)，即 \(a=-\dfrac{1}{2}\)。此时直线 \(y=2a=-1\) 恰好经过 \(y=|x-a|-1\) 的顶点 \((a,-1)\)，与该折线只交于顶点一处，与上述情形一致。
+
+所以 \(a\) 的值为 \(-\dfrac{1}{2}\)。
+
+（验证：枚举实跑解数——\(a=-0.5\) 时 \(2a+1=0.000000\)，解数为 \(1\)；\(a=-0.4999\) 时 \(2a+1=0.000200>0\)，解数为 \(2\)；\(a=-0.6\) 时 \(2a+1=-0.200000<0\)，解数为 \(0\)；\(a=0.3\)、\(a=-0.4\)、\(a=0\) 均给 \(2\) 个解。可见只有 \(a=-\dfrac{1}{2}\) 落在「唯一解」的临界点上，两侧分别是「两个解」与「零个解」。）
+
+\gkanswer{答案：\(-\dfrac{1}{2}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+\(\triangle ABC\) 是边长为 2 的等边三角形，已知向量 \(\boldsymbol{a}\)，\(\boldsymbol{b}\) 满足 \(\overrightarrow{AB}=2\boldsymbol{a}\)，\(\overrightarrow{AC}=2\boldsymbol{a}+\boldsymbol{b}\)，则下列结论中正确的是\gkblank{}．（写出所有正确结论的序号）
+
+① \(\boldsymbol{a}\) 为单位向量；　② \(\boldsymbol{b}\) 为单位向量；　③ \(\boldsymbol{a}\perp\boldsymbol{b}\)；
+
+④ \(\boldsymbol{b}\parallel\overrightarrow{BC}\)；　⑤ \((4\boldsymbol{a}+\boldsymbol{b})\perp\overrightarrow{BC}\)．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(\overrightarrow{AB}=2\boldsymbol{a}\) 得 \(\boldsymbol{a}=\dfrac{1}{2}\overrightarrow{AB}\)；由 \(\overrightarrow{AC}=2\boldsymbol{a}+\boldsymbol{b}\) 得 \(\boldsymbol{b}=\overrightarrow{AC}-2\boldsymbol{a}=\overrightarrow{AC}-\overrightarrow{AB}=\overrightarrow{BC}\)。
+
+\Needspace{5\baselineskip}
+取坐标 \(A(0,0)\)，\(B(2,0)\)，\(C(1,\sqrt{3})\)，则 \(\triangle ABC\) 是边长 \(2\) 的等边三角形，且 \(\overrightarrow{AB}=(2,0)\)，\(\overrightarrow{AC}=(1,\sqrt{3})\)，于是
+
+\nopagebreak[4]
+\[
+\boldsymbol{a}=\dfrac{1}{2}(2,0)=(1,0),\qquad \boldsymbol{b}=(1,\sqrt{3})-(2,0)=(-1,\sqrt{3}).
+\]
+
+逐条判断：
+
+\begin{itemize}
+\item ① \(|\boldsymbol{a}|=\sqrt{1^2+0^2}=1\)，\(\boldsymbol{a}\) 为单位向量，正确；
+\item ② \(|\boldsymbol{b}|=\sqrt{(-1)^2+(\sqrt{3})^2}=2\neq1\)，\(\boldsymbol{b}\) 不是单位向量，错误；
+\item ③ \(\boldsymbol{a}\cdot\boldsymbol{b}=1\times(-1)+0\times\sqrt{3}=-1\neq0\)，两向量不垂直，错误；
+\item ④ 由 \(\boldsymbol{b}=\overrightarrow{BC}\) 得 \(\boldsymbol{b}\parallel\overrightarrow{BC}\)，正确；
+\item ⑤ \(4\boldsymbol{a}+\boldsymbol{b}=(4,0)+(-1,\sqrt{3})=(3,\sqrt{3})\)，而 \(\overrightarrow{BC}=C-B=(-1,\sqrt{3})\)，故 \((4\boldsymbol{a}+\boldsymbol{b})\cdot\overrightarrow{BC}=3\times(-1)+\sqrt{3}\times\sqrt{3}=0\)，即 \((4\boldsymbol{a}+\boldsymbol{b})\perp\overrightarrow{BC}\)，正确。
+\end{itemize}
+
+所以所有正确结论的序号为 ①④⑤。
+
+（验证：数值实跑：\(|\boldsymbol{a}|=1.0\)，\(|\boldsymbol{b}|=2.0\)，\(\boldsymbol{a}\cdot\boldsymbol{b}=-1.0\)；\(\boldsymbol{b}\) 与 \(\overrightarrow{BC}\) 的叉积为 \(0.0\)，两者严格共线且模相等，故为相等向量；\((4\boldsymbol{a}+\boldsymbol{b})\cdot\overrightarrow{BC}=-4.44\times10^{-16}\approx0\)（浮点零），垂直关系成立。另以纯几何路径复核 ⑤：由 \(\overrightarrow{BC}=\overrightarrow{AC}-\overrightarrow{AB}\) 得 \(4\boldsymbol{a}+\boldsymbol{b}=2\overrightarrow{AB}+\overrightarrow{BC}=\overrightarrow{AB}+\overrightarrow{AC}\)，而 \(\overrightarrow{AB}\)、\(\overrightarrow{AC}\) 与 \(\overrightarrow{BC}\) 的夹角依次为 \(120^{\circ}\)、\(60^{\circ}\)，于是 \((\overrightarrow{AB}+\overrightarrow{AC})\cdot\overrightarrow{BC}=2\times2\times\left(-\dfrac{1}{2}\right)+2\times2\times\dfrac{1}{2}=0\)，与坐标法结论一致。）
+
+\gkanswer{答案：①④⑤。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=(\sin x+\cos x)^2+\cos 2x\)．
+
+（1） 求 \(f(x)\) 最小正周期；
+
+（2） 求 \(f(x)\) 在区间 \(\left[0,\dfrac{\pi}{2}\right]\) 上的最大值和最小值．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先用平方展开与二倍角公式把 \(f(x)\) 化为正弦型一次式，再由该形式读出最小正周期，并按自变量的取值范围确定最大值与最小值。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+展开平方并合并同角项：
+
+\nopagebreak[4]
+\[
+f(x)=\sin^2x+2\sin x\cos x+\cos^2x+\cos 2x=1+\sin 2x+\cos 2x .
+\]
+
+\Needspace{5\baselineskip}
+由辅助角公式 \(\sin 2x+\cos 2x=\sqrt{2}\sin\left(2x+\dfrac{\pi}{4}\right)\)，得
+
+\nopagebreak[4]
+\[
+f(x)=1+\sqrt{2}\sin\left(2x+\dfrac{\pi}{4}\right).
+\]
+
+\Needspace{5\baselineskip}
+其中 \(\sin\left(2x+\dfrac{\pi}{4}\right)\) 的最小正周期为 \(\dfrac{2\pi}{2}=\pi\)，故
+
+\nopagebreak[4]
+\[
+T=\pi .
+\]
+
+\gksubpart{(2)}
+
+当 \(0\leqslant x\leqslant\dfrac{\pi}{2}\) 时，\(u=2x+\dfrac{\pi}{4}\) 满足 \(\dfrac{\pi}{4}\leqslant u\leqslant\dfrac{5\pi}{4}\)。
+
+\(\sin u\) 在 \(\left[\dfrac{\pi}{4},\dfrac{\pi}{2}\right]\) 上递增、在 \(\left[\dfrac{\pi}{2},\dfrac{5\pi}{4}\right]\) 上递减，故最大值在 \(u=\dfrac{\pi}{2}\) 处取得，为 \(1\)；最小值在两端点处比较得出，\(\sin\dfrac{\pi}{4}=\dfrac{\sqrt{2}}{2}\)，\(\sin\dfrac{5\pi}{4}=-\dfrac{\sqrt{2}}{2}\)，即最小值在 \(u=\dfrac{5\pi}{4}\) 处取得，为 \(-\dfrac{\sqrt{2}}{2}\)。
+
+\Needspace{5\baselineskip}
+代回 \(x\)：由 \(2x+\dfrac{\pi}{4}=\dfrac{\pi}{2}\) 得 \(x=\dfrac{\pi}{8}\)，由 \(2x+\dfrac{\pi}{4}=\dfrac{5\pi}{4}\) 得 \(x=\dfrac{\pi}{2}\)，于是
+
+\nopagebreak[4]
+\[
+f_{\max}=1+\sqrt{2}\times1=1+\sqrt{2}\quad\left(x=\dfrac{\pi}{8}\right),
+\]
+
+\nopagebreak[4]
+\[
+f_{\min}=1+\sqrt{2}\times\left(-\dfrac{\sqrt{2}}{2}\right)=1-1=0\quad\left(x=\dfrac{\pi}{2}\right).
+\]
+
+（验证：① 恒等式核验：在 \(\left[0,\dfrac{\pi}{2}\right]\) 上取 1571 个等分点，比较原式 \((\sin x+\cos x)^2+\cos 2x\) 与化简式 \(1+\sqrt{2}\sin\left(2x+\dfrac{\pi}{4}\right)\)，最大偏差 \(8.88\times10^{-16}\)（机器精度），化简无误。② 网格穷举：以 \(\dfrac{\pi}{2}\times\dfrac{1}{200000}\) 为步长扫描 200001 个点，最大值 \(2.414213562373\) 在 \(x=0.392699\) 处取得（即 \(\dfrac{\pi}{8}=0.3926991\)），最小值 \(0.000000000000\) 在 \(x=1.570796\) 处取得（即 \(\dfrac{\pi}{2}\) 处）。③ 候选点直算：\(f\left(\dfrac{\pi}{8}\right)=1+\sin\dfrac{\pi}{4}+\cos\dfrac{\pi}{4}=1+\dfrac{\sqrt{2}}{2}+\dfrac{\sqrt{2}}{2}=1+\sqrt{2}=2.4142135624\)；\(f\left(\dfrac{\pi}{2}\right)=1+\cos\pi=0\)；而 \(f(0)=2\) 介于 \(0\) 与 \(1+\sqrt{2}\) 之间，故端点 \(x=0\) 既不取到最大也不取到最小。）
+
+\gkanswer{答案（1）：\(T=\pi\)。}
+
+\gkanswer{答案（2）：最大值 \(1+\sqrt{2}\)（在 \(x=\dfrac{\pi}{8}\) 处取得），最小值 \(0\)（在 \(x=\dfrac{\pi}{2}\) 处取得）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+某企业为了解下属某部门对本企业职工的服务情况，随机访问 50 名职工，根据这 50 名职工对该部门的评分，绘制频率分布直方图（如图所示），其中样本数据分组区间为：\([40,50)\)，\([50,60)\)，\(\cdots\)，\([80,90)\)，\([90,100]\)．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015ahw_q17_histogram}\end{center}
+\nopagebreak[4]
+（1） 求频率分布直方图中 \(a\) 的值；
+
+（2） 估计该企业的职工对该部门评分不低于 80 的概率；
+
+（3） 从评分在 \([40,60)\) 的受访职工中，随机抽取 2 人，求此 2 人评分都在 \([40,50)\) 的概率．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+直方图中各矩形的面积等于相应组的频率，各面积之和为 \(1\)，据此先定出 \(a\)；再用频率估计概率；第 (3) 问按人数还原后用古典概型计算。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+各组组距均为 \(10\)，各矩形面积之和为 \(1\)，故
+
+\nopagebreak[4]
+\[
+(0.004+a+0.022+0.028+0.022+0.018)\times10=1,
+\]
+
+\Needspace{5\baselineskip}
+即 \(0.094+a=0.1\)，所以
+
+\nopagebreak[4]
+\[
+a=0.006 .
+\]
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+评分不低于 80 即落在 \([80,90)\) 与 \([90,100]\) 两组，其频率之和为
+
+\nopagebreak[4]
+\[
+(0.022+0.018)\times10=0.4 ,
+\]
+
+故评分不低于 80 的概率估计为 \(0.4\)（按人数核，这两组共 \(0.4\times50=20\) 人）。
+
+\gksubpart{(3)}
+
+评分在 \([40,50)\) 的职工有 \(0.004\times10\times50=2\) 人，评分在 \([50,60)\) 的职工有 \(0.006\times10\times50=3\) 人，两者合计 \(5\) 人。
+
+\Needspace{5\baselineskip}
+从这 \(5\) 人中随机抽取 \(2\) 人，所有等可能的抽法共 \(\mathrm{C}_5^2=10\) 种；而 \(2\) 人评分都在 \([40,50)\) 的抽法只有从这 \(2\) 人中取 \(2\) 人这一种，即 \(\mathrm{C}_2^2=1\) 种，故所求概率
+
+\nopagebreak[4]
+\[
+P=\dfrac{\mathrm{C}_2^2}{\mathrm{C}_5^2}=\dfrac{1}{10}.
+\]
+
+（验证：① 柱高像素测量（独立于题面文字）：把直方图区域以 300 dpi 灰度渲染为 PGM 后逐行扫描黑色像素的长水平段，得六根柱的顶部行位置（以 \(y\) 计，数值越小柱越高）：\([40,50)\) 顶 \(y=641.5\)、\([50,60)\) 顶 \(y=606.5\)、\([60,70)\) 顶 \(y=322.5\)、\([70,80)\) 顶 \(y=216.5\)、\([80,90)\) 顶 \(y=322.5\)、\([90,100]\) 顶 \(y=393.5\)，其中 \(x\) 轴在 \(y=712.5\)。用两根有明确标注的柱顶定标：\(0.028\) 柱顶 \(y=216.5\)、\(0.004\) 柱顶 \(y=641.5\)，频率差 \(0.024\) 对应 \(425\) 像素，故每像素合 \(5.647\times10^{-5}\)；代入 \(a\) 柱顶得 \(0.028-5.647\times10^{-5}\times(606.5-216.5)=0.028-0.022023=0.005977\)，与 \(0.006\) 相差约 \(2\times10^{-5}\)（合 \(0.4\) 像素，属绘制舍入）。用 \(0.018\)、\(0.022\) 两柱复核定标：预测值分别为 \(0.01801\)、\(0.02201\)，残差均不超过 \(0.000015\)（合 \(0.3\) 像素以内），标定可信。② 柱与区间的对应：柱边竖线的像素横坐标（换算到 PDF 点：913.8、933.7、953.5、973.4、993.2、1013.2、1032.9）与 \(x\) 轴刻度标签 40、50、60、70、80、90、100 的文字中心（914.0、933.8、953.7、973.5、993.4、1013.2、1033.1）逐一相差不超过 \(0.2\) pt，故六柱依次为 \([40,50)\) 至 \([90,100]\)；原点 0 的标签在 \(894.1\) pt 处（首柱左方），其间有断轴折线，不影响首柱区间的判定。③ 全局自洽：六柱频率之和为 \(0.1\times10=1.0\) 恰为 \(1\)；换算人数 \(2,3,11,14,11,9\) 之和恰为 \(50\)，与题干给出的受访职工总数严格吻合，这对 \(a\) 是强约束（人数必须为正整数且总和为 50）。④ 第 (3) 问穷举：把 5 人编号为 \(1,2\)（属 \([40,50)\)）与 \(3,4,5\)（属 \([50,60)\)），用 itertools.combinations 列出全部 10 对 \((1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5),(4,5)\)，其中 2 人都在 \([40,50)\) 的只有 \((1,2)\) 一对，故 \(P=\dfrac{1}{10}\)。）
+
+\gkanswer{答案（1）：\(a=0.006\)。}
+
+\gkanswer{答案（2）：\(0.4\)。}
+
+\gkanswer{答案（3）：\(\dfrac{1}{10}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知数列 \(\{a_n\}\) 是递增的等比数列，且 \(a_1+a_4=9\)，\(a_2a_3=8\)．
+
+（1） 求数列 \(\{a_n\}\) 的通项公式；
+
+（2） 设 \(S_n\) 为数列 \(\{a_n\}\) 的前 \(n\) 项和，\(b_n=\dfrac{a_{n+1}}{S_nS_{n+1}}\)，求数列 \(\{b_n\}\) 的前 \(n\) 项和 \(T_n\)．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先由等比数列的性质定出首项与公比，得到通项；再对 \(b_n\) 裂项相消，求前 \(n\) 项和。
+
+\gksubpart{(1)}
+
+等比数列中下标之和相等的两项之积相等，故 \(a_2a_3=a_1a_4=8\)。于是 \(a_1\) 与 \(a_4\) 是方程 \(t^2-9t+8=0\) 的两根，即 \((t-1)(t-8)=0\)，得 \(t=1\) 或 \(t=8\)。
+
+\Needspace{5\baselineskip}
+数列递增，故 \(a_1<a_4\)，得 \(a_1=1\)，\(a_4=8\)。设公比为 \(q\)，则 \(q^3=\dfrac{a_4}{a_1}=8\)，取正根得 \(q=2\)（各项为正且递增），所以
+
+\nopagebreak[4]
+\[
+a_n=a_1q^{\,n-1}=2^{\,n-1}.
+\]
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+由 (1) 得 \(S_n=\dfrac{a_1(1-q^n)}{1-q}=\dfrac{1-2^n}{1-2}=2^n-1\)，且 \(a_{n+1}=2^n\)，故
+
+\nopagebreak[4]
+\[
+b_n=\dfrac{a_{n+1}}{S_nS_{n+1}}=\dfrac{2^n}{(2^n-1)(2^{n+1}-1)} .
+\]
+
+\Needspace{5\baselineskip}
+注意到裂项关系
+
+\nopagebreak[4]
+\[
+\dfrac{1}{2^n-1}-\dfrac{1}{2^{n+1}-1}=\dfrac{(2^{n+1}-1)-(2^n-1)}{(2^n-1)(2^{n+1}-1)}=\dfrac{2^n}{(2^n-1)(2^{n+1}-1)}=b_n ,
+\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[
+T_n=\sum_{k=1}^{n}\left(\dfrac{1}{2^k-1}-\dfrac{1}{2^{k+1}-1}\right)=1-\dfrac{1}{2^{\,n+1}-1}.
+\]
+
+（验证：逐项累加与闭式对照（\(n=1\) 至 \(8\)）：\(T_1=\dfrac{2}{3}=0.6666666666666667\)，\(T_2=\dfrac{6}{7}=0.8571428571428571\)，\(T_3=\dfrac{14}{15}=0.9333333333333333\)，\(T_4=\dfrac{30}{31}=0.967741935483871\)，\(T_5=\dfrac{62}{63}=0.9841269841269842\)，\(T_6=\dfrac{126}{127}=0.9921259842519685\)，\(T_7=\dfrac{254}{255}=0.996078431372549\)，\(T_8=\dfrac{510}{511}=0.9980430528375734\)——逐项求和与裂项闭式在全部 8 个 \(n\) 上吻合到浮点末位，且 \(T_n\to1^{-}\)，与留首项、末项随 \(n\) 迅速减小的定性预期一致；另单独核 \(b_1=\dfrac{2}{1\times3}=\dfrac{2}{3}\)，\(b_2=\dfrac{4}{3\times7}=\dfrac{4}{21}\)，\(b_3=\dfrac{8}{7\times15}=\dfrac{8}{105}\)，均与裂项式一致。）
+
+\gkanswer{答案（1）：\(a_n=2^{n-1}\)。}
+
+\gkanswer{答案（2）：\(T_n=1-\dfrac{1}{2^{n+1}-1}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+如图，三棱锥 \(P\text{-}ABC\) 中，\(PA\perp\) 平面 \(ABC\)，\(PA=1\)，\(AB=1\)，\(AC=2\)，\(\angle BAC=60^{\circ}\)．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015ahw_q19_pyramid}\end{center}
+\nopagebreak[4]
+（1） 求三棱锥 \(P\text{-}ABC\) 的体积；
+
+（2） 证明：在线段 \(PC\) 上存在点 \(M\)，使得 \(AC\perp BM\)，并求 \(\dfrac{PM}{MC}\) 的值．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+第 (1) 问以 \(\triangle ABC\) 为底面、\(PA\) 为锥体的高求体积；第 (2) 问建立空间直角坐标系，把垂直条件化为关于分点参数的方程，解出分点并得到分点比。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+\(PA\perp\) 平面 \(ABC\)，故 \(PA\) 即锥体以 \(\triangle ABC\) 为底面时的高。由题设 \(AB=1\)，\(AC=2\)，\(\angle BAC=60^{\circ}\)（该角由题面文字给出，图中并无对应的角标注），
+
+\nopagebreak[4]
+\[
+S_{\triangle ABC}=\dfrac{1}{2}\cdot AB\cdot AC\cdot\sin\angle BAC=\dfrac{1}{2}\times1\times2\times\dfrac{\sqrt{3}}{2}=\dfrac{\sqrt{3}}{2},
+\]
+
+\nopagebreak[4]
+\[
+V_{P-ABC}=\dfrac{1}{3}S_{\triangle ABC}\cdot PA=\dfrac{1}{3}\times\dfrac{\sqrt{3}}{2}\times1=\dfrac{\sqrt{3}}{6}.
+\]
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+取 \(A\) 为原点，射线 \(AC\) 为 \(x\) 轴正方向，平面 \(ABC\) 为 \(xOy\) 平面，\(z\) 轴垂直于平面 \(ABC\)。由 \(AC=2\)、\(AB=1\)、\(\angle BAC=60^{\circ}\) 及 \(PA=1\)、\(PA\perp\) 平面 \(ABC\)，可取
+
+\nopagebreak[4]
+\[
+A(0,0,0),\quad B\left(\dfrac{1}{2},\dfrac{\sqrt{3}}{2},0\right),\quad C(2,0,0),\quad P(0,0,1).
+\]
+
+\Needspace{5\baselineskip}
+设 \(M\) 在线段 \(PC\) 上，写成 \(M=P+t(C-P)=(2t,0,1-t)\)，其中 \(0\leqslant t\leqslant1\)。则
+
+\nopagebreak[4]
+\[
+\overrightarrow{AC}=(2,0,0),\qquad \overrightarrow{BM}=\left(2t-\dfrac{1}{2},-\dfrac{\sqrt{3}}{2},1-t\right),
+\]
+
+\nopagebreak[4]
+\[
+\overrightarrow{AC}\cdot\overrightarrow{BM}=2\left(2t-\dfrac{1}{2}\right)+0+0=4t-1 .
+\]
+
+令 \(4t-1=0\)，得 \(t=\dfrac{1}{4}\)，它落在 \([0,1]\) 内，故在线段 \(PC\) 上存在（且唯一）满足 \(AC\perp BM\) 的点 \(M\left(\dfrac{1}{2},0,\dfrac{3}{4}\right)\)。
+
+\Needspace{5\baselineskip}
+由 \(M=P+t(C-P)\) 知 \(PM=t\cdot PC\)，\(MC=(1-t)\cdot PC\)，故
+
+\nopagebreak[4]
+\[
+\dfrac{PM}{MC}=\dfrac{t}{1-t}=\dfrac{1/4}{3/4}=\dfrac{1}{3} .
+\]
+
+（验证：① 坐标代入：\(t=\dfrac{1}{4}\) 时 \(\overrightarrow{BM}=\left(0,-\dfrac{\sqrt{3}}{2},\dfrac{3}{4}\right)\)，\(\overrightarrow{AC}\cdot\overrightarrow{BM}=2\times0+0\times\left(-\dfrac{\sqrt{3}}{2}\right)+0\times\dfrac{3}{4}=0.0\)（程序实跑输出 \(0.0\)），垂直关系成立。② 扫描 \(t\) 检验唯一性：\(\overrightarrow{AC}\cdot\overrightarrow{BM}=4t-1\) 在 \(t=0.20,0.24,0.25,0.26,0.30\) 处依次取 \(-0.200000,-0.040000,0.000000,0.040000,0.200000\)，严格线性且只在 \(t=0.25\) 处变号，点 \(M\) 在 \(PC\) 上的存在性与唯一性均确认；\(|PM|/|MC|\) 由坐标直算得 \(0.3333333333333333\)。③ 独立的纯向量路径：设 \(M=P+t(C-P)\)，则 \(\overrightarrow{AC}\cdot\overrightarrow{BM}=\overrightarrow{AC}\cdot\left[(P-B)+t(C-P)\right]=\left(\overrightarrow{AC}\cdot\overrightarrow{AP}-\overrightarrow{AC}\cdot\overrightarrow{AB}\right)+t\left(|\overrightarrow{AC}|^2-\overrightarrow{AC}\cdot\overrightarrow{AP}\right)\)；由 \(PA\perp\) 平面 \(ABC\) 得 \(\overrightarrow{AC}\cdot\overrightarrow{AP}=0\)，又 \(\overrightarrow{AC}\cdot\overrightarrow{AB}=2\times1\times\cos60^{\circ}=1\)，\(|\overrightarrow{AC}|^2=4\)，故 \(\overrightarrow{AC}\cdot\overrightarrow{BM}=-1+4t\)，与坐标法得到同一方程，同样得 \(t=\dfrac{1}{4}\)、\(\dfrac{PM}{MC}=\dfrac{1}{3}\)。④ 体积的混合积核验：\(\overrightarrow{AB}\times\overrightarrow{AC}=(0,0,-\sqrt{3})\)，故 \(S_{\triangle ABC}=\dfrac{1}{2}\times\sqrt{3}=\dfrac{\sqrt{3}}{2}\)，且 \(V=\dfrac{1}{6}\left|(\overrightarrow{AB}\times\overrightarrow{AC})\cdot\overrightarrow{AP}\right|=\dfrac{\sqrt{3}}{6}=0.2886751346\)，与 (1) 的面积法结果逐位一致。）
+
+\gkanswer{答案（1）：\(\dfrac{\sqrt{3}}{6}\)。}
+
+\gkanswer{答案（2）：存在（唯一）点 \(M\)，使得 \(AC\perp BM\)；此时 \(\dfrac{PM}{MC}=\dfrac{1}{3}\)。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设椭圆 \(E\) 的方程为 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)），点 \(O\) 为坐标原点，点 \(A\) 的坐标为 \((a,0)\)，点 \(B\) 的坐标为 \((0,b)\)，点 \(M\) 在线段 \(AB\) 上，满足 \(|BM|=2|MA|\)，直线 \(OM\) 的斜率为 \(\dfrac{\sqrt{5}}{10}\)．
+
+（1） 求 \(E\) 的离心率 \(e\)；
+
+（2） 设点 \(C\) 的坐标为 \((0,-b)\)，\(N\) 为线段 \(AC\) 的中点，证明：\(MN\perp AB\)．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+第 (1) 问由分点比写出 \(M\) 的坐标，用直线 \(OM\) 的斜率解出 \(b\) 与 \(a\) 的比，进而求离心率；第 (2) 问写出 \(M\)、\(N\) 的坐标，用数量积为零证明垂直。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+由 \(|BM|=2|MA|\) 且 \(M\) 在线段 \(AB\) 上，得 \(|AM|=\dfrac{1}{3}|AB|\)，即 \(\overrightarrow{AM}=\dfrac{1}{3}\overrightarrow{AB}\)，于是
+
+\nopagebreak[4]
+\[
+M=A+\dfrac{1}{3}(B-A)=\left(\dfrac{2a}{3},\dfrac{b}{3}\right).
+\]
+
+\Needspace{5\baselineskip}
+直线 \(OM\) 的斜率为
+
+\nopagebreak[4]
+\[
+k_{OM}=\dfrac{b/3}{2a/3}=\dfrac{b}{2a}=\dfrac{\sqrt{5}}{10},
+\]
+
+\Needspace{5\baselineskip}
+故 \(\dfrac{b}{a}=\dfrac{2\sqrt{5}}{10}=\dfrac{\sqrt{5}}{5}\)，从而 \(\dfrac{b^2}{a^2}=\dfrac{1}{5}\)。所以
+
+\nopagebreak[4]
+\[
+e=\dfrac{c}{a}=\sqrt{\dfrac{a^2-b^2}{a^2}}=\sqrt{1-\dfrac{1}{5}}=\sqrt{\dfrac{4}{5}}=\dfrac{2}{\sqrt{5}}=\dfrac{2\sqrt{5}}{5}.
+\]
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+\(C(0,-b)\)，\(N\) 为线段 \(AC\) 的中点，故 \(N\left(\dfrac{a}{2},-\dfrac{b}{2}\right)\)。结合 (1) 中 \(M\) 的坐标得
+
+\nopagebreak[4]
+\[
+\overrightarrow{MN}=\left(\dfrac{a}{2}-\dfrac{2a}{3},-\dfrac{b}{2}-\dfrac{b}{3}\right)=\left(-\dfrac{a}{6},-\dfrac{5b}{6}\right).
+\]
+
+\Needspace{5\baselineskip}
+取 \(AB\) 的方向向量 \(\overrightarrow{AB}=B-A=(-a,b)\)，则
+
+\nopagebreak[4]
+\[
+\overrightarrow{MN}\cdot\overrightarrow{AB}=\left(-\dfrac{a}{6}\right)(-a)+\left(-\dfrac{5b}{6}\right)b=\dfrac{a^2}{6}-\dfrac{5b^2}{6}=\dfrac{a^2-5b^2}{6},
+\]
+
+由 (1) 有 \(b^2=\dfrac{a^2}{5}\)，即 \(a^2=5b^2\)，故该数量积为 \(0\)，即 \(\overrightarrow{MN}\perp\overrightarrow{AB}\)，所以 \(MN\perp AB\)。
+
+（验证：取 \(a=1\)，\(b=\dfrac{\sqrt{5}}{5}=0.4472135955\) 实跑：① 条件核：\(|BM|=0.73029674334\)，\(2|MA|=0.73029674334\)，两者相等；\(k_{OM}=0.22360679775\) 与 \(\dfrac{\sqrt{5}}{10}\) 精确吻合。② 结论核：\(\overrightarrow{MN}\cdot\overrightarrow{AB}=-8.33\times10^{-17}\approx0\)（浮点零）；另用斜率核：\(k_{MN}=2.2360679775\)，\(k_{AB}=-0.4472135955\)，二者乘积为 \(-1.0000000000\)，确为垂直。③ 离心率数值：\(e=0.8944271910\)，与 \(\dfrac{2\sqrt{5}}{5}=0.8944271910\) 逐位一致，且 \(0<e<1\) 合理。）
+
+\gkanswer{答案（1）：\(e=\dfrac{2\sqrt{5}}{5}\)。}
+
+\gkanswer{答案（2）：成立（\(\overrightarrow{MN}\cdot\overrightarrow{AB}=\dfrac{a^2-5b^2}{6}=0\)，由 \(a^2=5b^2\) 得垂直）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=\dfrac{ax}{(x+r)^2}\)（\(a>0\)，\(r>0\)）．
+
+（1） 求 \(f(x)\) 的定义域，并讨论 \(f(x)\) 的单调性；
+
+（2） 若 \(\dfrac{a}{r}=400\)，求 \(f(x)\) 在 \((0,+\infty)\) 内的极值．
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先由分母不为零确定定义域，再用商法则求导，按 \(x\) 与 \(-r\)、\(r\) 的位置关系分段判号，由此讨论单调性；第 (2) 问在 \(\dfrac{a}{r}=400\) 的条件下沿用同一判号结论，定出区间内的极值。
+
+\gksubpart{(1)}
+
+\Needspace{5\baselineskip}
+分母 \((x+r)^2\neq0\)，即 \(x\neq-r\)，故定义域为
+
+\nopagebreak[4]
+\[
+\{x\mid x\neq-r\}=(-\infty,-r)\cup(-r,+\infty).
+\]
+
+\Needspace{5\baselineskip}
+用商法则求导：
+
+\nopagebreak[4]
+\[
+f'(x)=\dfrac{a(x+r)^2-ax\cdot2(x+r)}{(x+r)^4}=\dfrac{a(x+r)-2ax}{(x+r)^3}=\dfrac{a(r-x)}{(x+r)^3}.
+\]
+
+因 \(a>0\)，\(f'(x)\) 的符号由 \(\dfrac{r-x}{(x+r)^3}\) 决定，分三段讨论：
+
+\begin{itemize}
+\item 当 \(x<-r\) 时，\(r-x>0\)，\((x+r)^3<0\)，故 \(f'(x)<0\)，\(f(x)\) 递减；
+\item 当 \(-r<x<r\) 时，\(r-x>0\)，\((x+r)^3>0\)，故 \(f'(x)>0\)，\(f(x)\) 递增；
+\item 当 \(x>r\) 时，\(r-x<0\)，\((x+r)^3>0\)，故 \(f'(x)<0\)，\(f(x)\) 递减。
+\end{itemize}
+
+所以 \(f(x)\) 在 \((-\infty,-r)\) 与 \((r,+\infty)\) 上单调递减，在 \((-r,r)\) 上单调递增。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+由 \(\dfrac{a}{r}=400\) 得 \(a=400r\)，此时
+
+\nopagebreak[4]
+\[
+f(x)=\dfrac{400rx}{(x+r)^2},\qquad f'(x)=\dfrac{400r(r-x)}{(x+r)^3}.
+\]
+
+\Needspace{5\baselineskip}
+在 \((0,+\infty)\) 上：当 \(0<x<r\) 时 \(f'(x)>0\)，当 \(x>r\) 时 \(f'(x)<0\)，且 \(f'(r)=0\)，故 \(x=r\) 是 \(f(x)\) 在该区间内的唯一极大值点，极大值为
+
+\nopagebreak[4]
+\[
+f(r)=\dfrac{a\cdot r}{(r+r)^2}=\dfrac{ar}{4r^2}=\dfrac{a}{4r}=\dfrac{400r}{4r}=100 .
+\]
+
+又 \(x\to0^{+}\) 时 \(f(x)\to0\)，\(x\to+\infty\) 时 \(f(x)=\dfrac{400rx}{(x+r)^2}=\dfrac{400r}{x+2r+r^2/x}\to0\)，而 \(f(x)>0\) 在 \((0,+\infty)\) 上恒成立，故 \(0\) 只能被两端趋近、在区间内取不到，即无极小值。
+
+综上，\(f(x)\) 在 \((0,+\infty)\) 内存在极大值 \(100\)（在 \(x=r\) 处取得），无极小值。
+
+（验证：① 导数公式数值核验（取 \(a=3\)，\(r=0.4\)，\(x=1.7\)）：中心差分 \(\dfrac{f(x+h)-f(x-h)}{2h}\)（\(h=10^{-6}\)）得 \(-0.421120829\)，而解析式 \(\dfrac{a(r-x)}{(x+r)^3}\) 得 \(-0.421120829\)，两者吻合到 \(7\times10^{-11}\)（差分截断误差量级），求导无误。② 单调性采样（\(a=3\)，\(r=0.4\)）：\((-\infty,-0.4)\) 取 \(x=-3,-0.9,-0.6\)，\((-0.4,0.4)\) 取 \(x=-0.3,0,0.3\)，\((0.4,+\infty)\) 取 \(x=0.5,1,10\)；实跑 \(f\) 值依次严格递减（\(-1.331\to-45.0\)）、严格递增（\(-90.0\to1.837\)）、严格递减（\(1.852\to0.277\)），三段符号与 \(f'(x)=\dfrac{a(r-x)}{(x+r)^3}\) 的判号结论完全一致。③ 极值数值扫描（\(a=400\)，\(r=1\)）：以 \(10^{-3}\) 为步长在 \((0,10]\) 上扫 10000 个点，最大值 \(100\) 在 \(x=1=r\) 处取得；左右微扰 \(f(1\pm0.001)\approx 99.999975\) 均小于 100，确为极大；\(f(10^{-4})\approx 0.039992\)、\(f(10^{6})\approx 0.0004\)，两端趋 \(0\) 而不取 \(0\)，与无极小值的结论一致。④ 闭式核对：\(f(r)=\dfrac{a}{4r}=\dfrac{400r}{4r}=100\)，与逐点代入 \(f(1)=\dfrac{400\times1}{2^2}=100\) 一致。）
+
+\gkanswer{答案（1）：定义域为 \(\{x\mid x\neq-r\}\)；\(f(x)\) 在 \((-\infty,-r)\) 与 \((r,+\infty)\) 上单调递减，在 \((-r,r)\) 上单调递增。}
+
+\gkanswer{答案（2）：在 \((0,+\infty)\) 内存在极大值 \(100\)（在 \(x=r\) 处取得），无极小值。}
+
+\end{answer}

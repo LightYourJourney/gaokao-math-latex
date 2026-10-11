@@ -46,19 +46,30 @@
 
 ### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–10 选择，含 Q7 框图、Q9 三视图、Q10 图象的存在性登记）：`.work/phase3-b12/transcripts/partA.md`。
-- [ ] 转录 B（Q11–21＋图表实测清单）：`.work/phase3-b12/transcripts/partB.md`＋`.work/phase3-b12/figure-inventory.md`。
-- [ ] 盲解 A（Q1–10）：`.work/phase3-b12/blind/partA.md`；盲解 B（Q11–21）：`.work/phase3-b12/blind/partB.md`。
-- [ ] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b10/`、`.work/phase3-b11/`、2015 天津/四川/北京/上海/江苏各卷、2016 各卷等全部）。**
+- [x] 转录 A（Q1–10 选择，含 Q7 框图、Q9 三视图、Q10 图象的存在性登记）：`.work/phase3-b12/transcripts/partA.md`。
+- [x] 转录 B（Q11–21＋图表实测清单）：`.work/phase3-b12/transcripts/partB.md`＋`.work/phase3-b12/figure-inventory.md`。
+- [x] 盲解 A（Q1–10）：`.work/phase3-b12/blind/partA.md`；盲解 B（Q11–21）：`.work/phase3-b12/blind/partB.md`。
+- [x] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b10/`、`.work/phase3-b11/`、2015 天津/四川/北京/上海/江苏各卷、2016 各卷等全部）。**
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查。
-- [ ] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；含源坐标换算回验与 600 dpi 目检＋判据灵敏度自证）。
-- [ ] 注册 `phase3-b12`；provenance 三角色导入；extract-batch 派生。
-- [ ] generate/short/editions 三连 write+check → build --formal（修复轮 → 重建 → 差分 → 复审）。
+- [x] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查。
+- [x] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；含源坐标换算回验与 600 dpi 目检＋判据灵敏度自证）。
+- [x] 注册 `phase3-b12`；provenance 三角色导入；extract-batch 派生。
+- [x] generate/short/editions 三连 write+check → build --formal（修复轮 → 重建 → 差分 → 复审）。
 
 ### Task 4 — Build, review, and close
 
-- [ ] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
-- [ ] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+- [x] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
+- [x] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+
+---
+
+## 收官记录（2026-10-11）
+
+- **FINALIZED：phase3-b12**（全库第 24 份）。四版页数 **5/28/7/22**，审查 **9 段 62 页＋图自查 20 项，0 fail、0 警告**（本项目少有的无需修复轮的批次）。
+- **生成期修复轮（3 项／v1→v4 四次构建）**：① **来源说明框过长（框高 ~760pt > 版心 717pt）** → p2 空页＋p3 框体溢出（Overfull vbox 65.8pt）＋页脚压盖（3 fail）——压缩说明块四段（减 ~250 字），**与 b04 已记录的「说明框增行=整框推出」坑同型（写作时未执行预算法——升级为下批硬纪律）**；② 解析版 Q21 验证段长数值原子 Overfull 9.15pt（③ 段长小数串）＋印刷版同段 Underfull 1371——缩短数值串；③ 复诊发现真溢出在 **② 单调性采样段**（15 值长内联数学链、数学内逗号不可断）——改「采样点＋趋势区间」写法。v4 四版 Overfull/Underfull/Missing 全 0。
+- **审查口径补充（一次）**：图后段落（含选项行、小问标号）齐左（`\end{center}` 后 parindent 被吞、全库同构）——v4 派单中**明列升格**为接受类（此前 b06-b11 为「首段齐左」窄表述），并向在跑支追发口径。
+- **首见项**：① 印刷版页眉盒窄 34.02bp 根因精确定位（`\headwidth` 未随印刷版壳 geometry 同步——**仅印刷版壳**有此冲突、修法一行在生成器模板层）；② 作答横线 \gkblank=2.2em＝26.28pt vs 源 3em（全库同构版式值）；③ 图清单「纵轴 6 档」表述小误（实为 5 档＋分式头）。三项均留档。
+- **图源**：5 图直录（探针反算 115 元素＋52 标签最大残差 0.0006pt、F03 曲线 300 节点逐点 0；灵敏度自证并升级检查器为逐命令元素级）。
+- **沉淀（并入记忆）**：① 说明框预算法硬纪律（写作时预估行数 ≤ 版心余量，超长即压缩——b04 已记、b12 复犯）；② 生成期构建审计三连（每次 build 后 grep 四版 log 的 Overfull/Underfull/Missing——v2/v3 各抓到一层）；③ 差分脚本须规避 `&&` 链吞差异页（compare 差异时退出码 1 短路——v2→v4 差分曾全假 0，md5＋pdftotext 交叉验证揪出）。

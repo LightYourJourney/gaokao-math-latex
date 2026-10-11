@@ -1206,6 +1206,14 @@
         "gk-2015-regular-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1215,7 +1223,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "59cc9529-2aef-4fd3-9567-7e3e44ce721e",
+  "last_transaction_id": "6c8884ed-a4b5-4107-b174-0ddebdaa4d7b",
   "papers": [
     {
       "blocked_from": null,
@@ -18591,9 +18599,79 @@
       "title": "2015 年·天津卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_安徽卷_文科/figures/f2015ahw_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_安徽卷_文科/figures/f2015ahw_q09_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_安徽卷_文科/figures/f2015ahw_q10_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_安徽卷_文科/figures/f2015ahw_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_安徽卷_文科/figures/f2015ahw_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_anhui_arts",
+        "id": "gk-2015-regular-anhui-arts",
+        "note": "批次 phase3-b12；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 933/934）、无参考答案页；选择 1–10＋填空 11–15＋解答 16–21＝21 题（安徽卷传统结构；分值为结构推断——**卷面不印分值**）。固定源不附答案（等级 D）；解析全由本库独立推导（双路盲解互证＋主会话独立复算——第 7 题框图以精确有理数模拟（迭代 1→3/2→7/5→17/12 即 √2 连分数渐近分数、n=4 停）、第 9 题三视图三路互证（还原四面体＋正交投影凸包反证＋叉积面积，2+√3）、第 10 题 600 dpi 像素测量＋图内 f′(0)>0 双判据＋58019 组系数扫描＋构造对拍、第 15 题坐标法与几何法两路、第 17 题柱顶像素标定（0.00598）＋人数恰为 50 双重复核、第 19 题混合积与纯向量路径双证＋唯一性、第 20 题斜率积与点积互证、第 21 题中心差分核验导数）。源为 LaTeX（CM 系）重排产物（全矢量、无位图；句读为半角西文体系——按全库约定归一全角，句末不用「。」为源体系特征）。**向量记号分卷保留——本卷有 CMMIB10**：第 15 题向量 a、b 为粗斜体，录 \\boldsymbol{a}／\\boldsymbol{b}（与无 CMMIB10 各卷相反）；\\overrightarrow 类为 TeX-vect10 长箭头照录。不等号按 MSAM10 实测排 \\leqslant／\\geqslant；补集号 \\complement（MSAM10，U+2201）；虚数单位 i 为正体 \\mathrm{i}；正体函数名 sin/cos/lg（LMRoman10-Regular）；度数记号 CMSY7 复合录 ^{\\circ}。**第 12 题的 \\sqrt{6}**（文本层丢根号、像素为准）；**第 15 题④「∥」**为矢量双笔画照源；**第 17 题 (1) 的 a=0.006** 由面积归一约束推得（原图未印数值）；**第 19 题图无 ∠BAC 标注**（∠由题面给出，照源不补）；**第 5、10 题作答栏紧贴**照源。5 图均按源内容流实测坐标复刻（本卷换算因子最小二乘自测 a=0.999622）：程序框图（7 节点＋否支右行输出＋回注环流）、三视图（三联＋1/√2 两组尺寸标注体系＋独立根号上线并入 \\sqrt）、三次函数图象（300 节点密采样曲线复刻源 299 段贝塞尔）、频率分布直方图（6 柱＋a 柱虚线导引＋断轴 zigzag）、三棱锥（AC 唯一虚线）。图源探针：坐标反算 115 元素＋52 标签最大残差 0.0006 pt、600 dpi 墨迹 ≤0.42 pt、编译零警告、灵敏度自证通过（检查器升级为逐命令元素级）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2015_安徽卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_安徽文_含解析.md",
+        "questions": "2015/2015_数学真题_安徽文_试题.md",
+        "solution_body": "2015/2015_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-862dd57cdcddd31d2b870965ed2d33fba58a63867762b54cf9d2dbb16f0f5dfa"
+      ],
+      "title": "2015 年·安徽卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 3689,
+  "revision": 3701,
   "schema_version": 1,
   "sources": [
     {
@@ -33898,8 +33976,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a109532722c687d284b1c3165dc5f676f6a668f9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015安徽文.pdf",
       "regions": [],
       "source_id": "src-862dd57cdcddd31d2b870965ed2d33fba58a63867762b54cf9d2dbb16f0f5dfa",
