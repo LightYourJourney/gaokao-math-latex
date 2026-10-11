@@ -27,7 +27,8 @@
 | `phase1-b15` | 1959 全国卷 | 历史回执过期后正式重建；四版 22 页复核、4 个候选页高分辨率复核；FINALIZED；门禁通过；构建目录仅保留 PDF | `3188b06f` |
 | `phase1-b16` | 1960 全国卷 | 历史回执过期后正式重建；四版 26 页复核、4 个候选页高分辨率复核；FINALIZED；门禁通过；构建目录仅保留 PDF | `f89e260e` |
 | `phase1-b17` | 1961 全国卷 | 历史回执过期后正式重建；四版 24 页复核、4 个候选页高分辨率复核；FINALIZED；门禁通过；构建目录仅保留 PDF | `67016eff` |
-| `phase1-b18` | 1962 全国卷 | 历史回执过期后正式重建；四版 30 页复核、4 个候选页高分辨率复核；既存 Underfull 精确豁免；FINALIZED；门禁通过；构建目录仅保留 PDF | 本阶段待提交 |
+| `phase1-b18` | 1962 全国卷 | 历史回执过期后正式重建；四版 30 页复核、4 个候选页高分辨率复核；既存 Underfull 精确豁免；FINALIZED；门禁通过；构建目录仅保留 PDF | `c140aa65` |
+| `phase1-b19` | 1958 河北卷 | 历史回执过期后正式重建；四版 18 页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；门禁通过；构建目录仅保留 PDF | 本阶段待提交 |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -40,27 +41,27 @@
 - 已完成：全量报告事务更新并通过一致性检查；只删除 `1962_全国卷/build/` 中非 PDF 编译产物，保留四份 PDF；清理本批 `.work/` 与本次临时 PNG。
 - 修改文件：1962 build/review receipts、`source-manifest.json`、`reports/phase1-b18.md`；renderer 更新的全量 README/报告投影；本进度文件。
 - 验证：source manifest `OK：1 卷`；build receipt `FINALIZED：phase1-b18`；review receipt `OK：1 卷`；provenance `OK：1 卷`；`report.py check --all` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”；`git diff --check` 通过。构建目录核验仅剩四份 PDF。
-- 提交状态：尚未提交；下一步审阅并提交 1962 批次及进度记录，不 push。
+- 提交状态：已提交 `c140aa65`，未 push。
 
 ## 当前进行阶段
 
-### `phase1-b18` — 1962 全国卷
+### `phase1-b19` — 1958 河北卷（本阶段待提交）
 
-- 既有状态：源稿与 10 题 provenance 已存在；正式 build receipt 因生成输入树与工具链指纹变化失效，review receipt 绑定旧构建；两条历史编译 issue（`ISSUE-0123/0124`）均标记 resolved，说明已在后续正式构建通过。未重做转录或解题。
-- 已完成子阶段：正式重建成功（`COMPILED_PENDING_REVIEW`，0 失败）；试题版 3 页、解析版 13 页、简答版 4 页、印刷版 10 页，共 30 页。
-- 已完成子阶段：四版全页视觉检查及各版候选页高分辨率复核；30 页全部通过。对解析版第 9 页 answers.tex 第 349 行的既存 Underfull 警告，按本轮高分辨率检查结果登记精确豁免；`finalize-batch` 返回 `FINALIZED`。
-- 修改文件：1962 build/review receipts、批次报告、manifest；构建 PDF；忽略目录 `.work/phase1-b18/` 为本批视觉复核工作项。
-- 已完成：清理 build 下非 PDF 产物及临时 PNG；运行 scoped gates、更新全量报告并通过全库报告检查。
-- 待完成：精确审阅并提交 1962 批次及进度记录，不 push。
-- 下一步：提交本批后接手 `phase1-b19`，不要重做来源转录。
+- 既有状态：源稿与 8 题 provenance 已存在，manifest `issue_ids=[]`；formal build receipt 因生成输入树、工具链指纹变化失效，旧 review 绑定旧构建且视觉指纹过期。未重做转录或解题。
+- 已完成子阶段：来源/provenance、问题项与历史 build/review receipts 核对；旧 PDF 页数为 1/8/2/7，旧 build 与 review 均不得作为当前证据。formal build 成功、0 失败；新页数为 1/8/2/7，共 18 页，未产生构建警告；四版 review 工作项已准备。
+- 已完成子阶段：四版共 18 页全部视觉检查；试题版第 1 页、解析版第 1 页、简答版第 1 页、印刷版第 1 页高分辨率复核，未见缺陷；构建无警告；`finalize-batch` 返回 `FINALIZED`。
+- 已完成：清理非 PDF 编译产物与本批临时 PNG；构建目录只保留四版 PDF；scoped gates 与全量报告检查通过。
+- 修改文件：1958 河北卷 build/review receipts、`source-manifest.json`、`reports/phase1-b19.md`；renderer 更新的全量 README/报告投影；本进度文件。
+- 验证：source manifest `OK`（要求 775 项）；build receipt `FINALIZED：phase1-b19`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致；`git diff --check` 通过。
+- 提交状态：尚未提交；下一步审阅并提交 b19 批次及进度记录，不 push。
 
 ## 最近一次全库状态快照
 
-来自 1962 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
+来自 1958 河北卷 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
 
 - 来源 775；试卷 272；批次 138。
-- 批次状态：closed 41、closed_with_blockers 13、compiled_pending_review 82、provenance_verified 2。
-- 试卷状态：complete 76、blocked 45、compiled 147、editions_generated 4。
+- 批次状态：closed 42、closed_with_blockers 13、compiled_pending_review 81、provenance_verified 2。
+- 试卷状态：complete 77、blocked 45、compiled 146、editions_generated 4。
 - 这说明仍有大量待复核/阻塞工作；这些数字是进度快照，不是验收目标，也不应伪装成已完成。
 
 ## 最近验证与已知问题
@@ -71,8 +72,9 @@
 - 1960 视觉复核：26 页逐页检查；试题版第 2 页、解析版第 4 页、简答版第 1 页、印刷版第 7 页高分辨率复核；四页均无视觉缺陷。
 - 1961 视觉复核：24 页逐页检查；试题版第 1 页、解析版第 1 页、简答版第 2 页、印刷版第 7 页高分辨率复核；四页均无视觉缺陷。
 - 1962 视觉复核：30 页逐页检查；试题版第 2 页、解析版第 9 页、简答版第 4 页、印刷版第 8 页高分辨率复核；四页均无视觉缺陷；一条既存 Underfull 警告已逐项豁免。
-- 本批验证输出：1962 source manifest `OK：1 卷`；build receipts `FINALIZED：phase1-b18`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致。
-- 全套单元测试最近一次（早于 phase1-b13—b18）：862 tests，848 passed、13 skipped、1 failed。唯一失败为 `tests/test_provenance.py::LiveRepositoryTests::test_the_cached_states_match_the_recomputed_ones`，当时全库旧缓存状态与现场派生不一致（报告 297 项）。1956—1962 已按正式批次推进状态；该测试尚未重跑，不能声称全库测试通过。
+- 1958 河北卷视觉复核：18 页逐页检查；四版均高分辨率复核第 1 页；未发现视觉缺陷。
+- 本批验证输出：1958 河北卷 source manifest `OK`（775 项）；build receipt `FINALIZED：phase1-b19`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致。
+- 全套单元测试最近一次（早于 phase1-b13—b19）：862 tests，848 passed、13 skipped、1 failed。唯一失败为 `tests/test_provenance.py::LiveRepositoryTests::test_the_cached_states_match_the_recomputed_ones`，当时全库旧缓存状态与现场派生不一致（报告 297 项）。1956—1962 已按正式批次推进状态；该测试尚未重跑，不能声称全库测试通过。
 - 分支不 push；提交前核对 branch/worktree，当前 canonical worktree 是 `仓库根`。
 
 ## 下一步
@@ -81,7 +83,8 @@
 - `phase1-b14` 已于 `890d4def` 提交。
 - `phase1-b15` 已于 `3188b06f` 提交；`phase1-b16` 已于 `f89e260e` 提交。
 - `phase1-b17`（1961 全国卷）已于 `67016eff` 提交。
-- `phase1-b18`（1962 全国卷）已完成正式重建、30 页视觉复核和所有批次门禁；尚待提交。
-- 下一批为 `phase1-b19`（1958 河北卷），状态 `compiled_pending_review`；恢复时先查来源/provenance、问题项与历史 receipts，只刷新失效证据，不重复转录。
-- 下一步：审阅并提交 1962 阶段；随后接手 `phase1-b19`。
+- `phase1-b18`（1962 全国卷）已于 `c140aa65` 提交。
+- `phase1-b19`（1958 河北卷）已完成 formal build、18 页视觉复核及所有 scoped/global 报告门禁；尚待提交。
+- 下一批为 `phase1-b20`（1963 全国卷），状态 `compiled_pending_review`；恢复时先查来源/provenance、问题项与历史 receipts，只刷新失效证据，不重复转录。
+- 下一步：审阅并提交 b19 阶段，然后接手 `phase1-b20`。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
