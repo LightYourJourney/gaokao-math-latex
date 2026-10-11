@@ -202,16 +202,26 @@
 - 历史回执：四版旧 build 成功，页数 3/14/4/11，共 32 页；因生成输入树和工具链指纹变化 stale。旧 review passed 但绑定不同 build attempt，不可复用；四份旧 PDF 仍在。
 - 已完成子阶段：provenance 检查未发现题目证据错误，仅报告 paper/batch 派生缓存状态不一致；build validator 显示 1 卷 stale、0 失败；review validator 显示 build stale。
 - 修改文件：本进度文件；尚未修改河南卷题目源、答案、provenance 或 issue 内容。
-- 待完成：正式重建四版，逐页复核并覆盖候选/历史 issue 关联页；finalize 后清理中间物，执行 scoped gates 与全量报告检查并单批提交。
-- 下一步：formal build `phase2-b32` 并准备当前 attempt review work items；不重复已登记的 10 题转录与解题。
+- 已完成子阶段：formal build 四版成功、0 失败、0 警告，共 32 页；新 attempt `37072bea-5dbb-496f-9f0c-9e2d0342d554`。四个 review 工作项绑定当前 attempt；候选页为试题 p.2、解析 p.12、简答 p.2、印刷 p.9。
+- 修改文件：本进度文件；河南卷 build receipt/PDF；忽略目录 `.work/phase2-b32/review/` 四个工作项。未修改题目源、答案或 provenance。
+- 已完成子阶段：四版接触表逐页检查 32 页；四版首页与自动候选页共 9 个不同页面高分辨率复核，无缺字、遮挡、裁切或分页异常。既有 `ISSUE-0140`—`ISSUE-0149` 均 resolved，相关页面说明完整。
+- 修改文件：本进度文件；临时复核图位于 `/tmp/gk-phase2-b32-review.l26pFP/`。未修改题目源、答案、provenance 或 issue 内容。
+- 已完成子阶段：四个当前 attempt work item 登记 32 页、256 项检查全部 pass 且 note 非空；`finalize-batch` 返回 `FINALIZED`，批次状态 `closed`，manifest revision 3845。finalize 前历史 review 因绑定旧 build 而 stale，事务后已刷新。
+- 修改文件：本进度文件；河南卷 build/review receipts 与 PDF；`source-manifest.json`；`reports/phase2-b32.md`；忽略目录 `.work/phase2-b32/review/` 四个 work item；临时复核图位于 `/tmp/gk-phase2-b32-review.l26pFP/`。
+- 已完成子阶段：清除河南卷 `build/` 下所有非 PDF 文件，保留四份 PDF；清理本批 `.work/phase2-b32` 与临时复核图。
+- 已完成子阶段：source manifest（775 项）、build receipt（1 卷 current/final）、review receipt（FINALIZED）、provenance（1 卷）scoped gates 全部退出码 0；`report.py render --all` 与 `check --all` 通过，报告与 manifest 一致且保留未完成状态；`git diff --check` 通过。
+- 修改文件：河南卷 build/review receipts 与 PDF；`source-manifest.json`；`reports/phase2-b32.md`；本进度文件；renderer 管理的全量投影 `README_数学.md`、`math-gaokao-2017-2026/README.md`、本项目 `README.md`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`。未修改题目源、答案、provenance 或 10 条 resolved issue 内容。
+- 验证快照：manifest revision 3845；来源 775、试卷 272、批次 138；批次 closed 51、closed_with_blockers 17、compiled_pending_review 68、provenance_verified 2；试卷 complete 88、blocked 45、compiled 135、editions_generated 4。河南卷 production state `complete`，`ISSUE-0140`—`ISSUE-0149` 均 resolved。
+- 待完成：核对精确 diff 并提交本批；之后按 manifest 顺序继续。
+- 下一步：复查 worktree/branch 与本批 diff，单批提交 `phase2-b32`；不 push。
 
 ## 最近一次全库状态快照
 
-来自 1977 内蒙古理科 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
+来自 1977 河南卷 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
 
 - 来源 775；试卷 272；批次 138。
-- 批次状态：closed 50、closed_with_blockers 17、compiled_pending_review 69、provenance_verified 2。
-- 试卷状态：complete 87、blocked 45、compiled 136、editions_generated 4。
+- 批次状态：closed 51、closed_with_blockers 17、compiled_pending_review 68、provenance_verified 2。
+- 试卷状态：complete 88、blocked 45、compiled 135、editions_generated 4。
 - 这说明仍有大量待复核/阻塞工作；这些数字是进度快照，不是验收目标，也不应伪装成已完成。
 
 ## 最近验证与已知问题
@@ -249,5 +259,5 @@
 - `phase2-b29`（1977 福建文科）已于 `aeacb7cd` 提交；四个内容 blocker 保持 open。
 - `phase2-b30`（1977 福建理科）已于 `984a2bde` 提交；三个内容 blocker 保持 open。
 - `phase2-b31`（1977 内蒙古理科）已于 `315a56e7` 提交；该卷无内容 issue。
-- 当前推进 `phase2-b32`（1977 河南卷）；10 条既存 issue 均 resolved，历史 build/review stale，需正式重建与重审。
+- `phase2-b32`（1977 河南卷）已完成 32 页/256 项视觉复核、finalize、清理和全量报告检查；10 条历史 issue 均 resolved，待提交。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
