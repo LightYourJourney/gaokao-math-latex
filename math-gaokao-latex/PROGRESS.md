@@ -333,5 +333,6 @@
 - 构建警告：仅贵州卷出现 18 条 missing-character 警告（试题版 2、解析版 7、简答版 2、印刷版 7），字符为 `θ`、`α`、`ⁿ`，来自 `questions.tex`/`answers.tex` 的源注文本；尚未判定视觉影响，不予豁免。
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`。未改题目源、答案或 provenance。
 - 已完成子阶段：`prepare-batch` 生成 16 个 work items，覆盖四卷 × 四版并绑定本轮 build attempts。
-- 待完成：准备 work items，检查 106 页与候选/警告页；明确贵州缺字是否可见，再决定是否需最小 TeX 表示修复及 provenance 重核；完成复核和 finalize 后清理、跑 gates 并提交。
-- 下一步：渲染并逐页检查 106 页接触表，定位贵州缺字警告对应页并高分辨率复核。
+- 已完成子阶段：16 个版本接触表覆盖全部 106 页并逐页检查；未见明显裁切、重叠或分页异常。贵州卷 18 条 missing-character warning 仍待页面级高分辨率确认。
+- 待完成：检查候选/警告页；明确贵州缺字是否可见，再决定是否需最小 TeX 表示修复及 provenance 重核；完成复核和 finalize 后清理、跑 gates 并提交。
+- 下一步：高分辨率检查 16 个候选页及贵州警告相关页（试题 p2、简答 p2、解析 p8—p10、印刷 p2/p7/p8），判定缺字是否影响源注。
