@@ -1,5 +1,5 @@
 {
-  "attempt_id": "01cd48fd-bb5e-4e0b-9c86-82caa66fd55f",
+  "attempt_id": "9209c79d-4ba8-4b36-9a54-58e30d635a32",
   "dependency_tree": {
     "files": [
       {
@@ -63,8 +63,8 @@
       "pdf": {
         "page_count": 2,
         "path": "math-gaokao-latex/1952_全国卷/build/试题版.pdf",
-        "sha256": "12e3cbbd48a8e1a0e77fe03f824469d30054870f7ef84e6f2c42d64a52ed5171",
-        "size_bytes": 62897
+        "sha256": "880f9559e3f1a0052dc4807780922bbfe6572414a8913f6b90b9fa87e0235aa2",
+        "size_bytes": 62899
       },
       "problems": [],
       "result": "succeeded",
@@ -87,7 +87,7 @@
       "pdf": {
         "page_count": 15,
         "path": "math-gaokao-latex/1952_全国卷/build/解析版.pdf",
-        "sha256": "3eb7e23975e799eeaae4391be978e4b76133e2859a60af0ad4c75add5a7dcc0d",
+        "sha256": "99ba4f1959853a022e46af83a513a1035202724f7c35c6415a49beaa5925c08b",
         "size_bytes": 125007
       },
       "problems": [],
@@ -111,8 +111,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1952_全国卷/build/简答版.pdf",
-        "sha256": "8cf14c7da399d091d9adf939c6911001ed8e3eaa3b453f4e6649afa19d33ee9d",
-        "size_bytes": 76034
+        "sha256": "b17248d13bcb8fcc921eb48aca11455470a3167431a82315f17c86e19acf47df",
+        "size_bytes": 76036
       },
       "problems": [],
       "result": "succeeded",
@@ -143,15 +143,15 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1952_全国卷/build/印刷版.pdf",
-        "sha256": "9741afd62a5e02b2ef6e95589d3329404c30736b331c210252b30748d7136e8e",
-        "size_bytes": 124080
+        "sha256": "9d8d6c9225357edc8e576a1fa8a6e67400ae0dc0b653e90f624a407684d60ff6",
+        "size_bytes": 124079
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1952_全国卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-30T19:43:50+08:00",
+  "finished_at": "2026-10-11T22:53:09+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "40f69299bb2335d23d932b4f35d0c6a0adefb1607ccf0f998aafcdd7ef10a586"
       },
       {
         "path": "math-gaokao-latex/1952_全国卷/印刷版.tex",
@@ -223,39 +223,39 @@
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "5f0f28ef2c9c6f36fe2d6b61c2cd678d85785e83199b681b97c438737da0b197"
+    "tree_sha256": "674f954677358c492fec025bf1d11ad28aadd5bef521846fc5deca21e57e26b1"
   },
   "input_projection": "55290eb2537332ca254267efd8f876aa584a43ac83db57efac24afbb66bc1e8d",
-  "manifest_revision": 3318,
+  "manifest_revision": 3770,
   "paper_id": "gk-1952-regular-national",
-  "previous_attempt_id": "71900683-e659-4eb9-a687-6f7537710412",
+  "previous_attempt_id": "01cd48fd-bb5e-4e0b-9c86-82caa66fd55f",
   "project_dir": "1952_全国卷",
   "schema_version": 1,
-  "started_at": "2026-09-30T19:38:10+08:00",
-  "status": "compiled_pending_review",
+  "started_at": "2026-10-11T22:53:00+08:00",
+  "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",
