@@ -673,4 +673,38 @@
 - 已完成阶段：b47 内容、正式回执及报告投影提交 `09c764b0`（`docs: 完成1958粤皖不明卷三卷复核`）；未 push。
 - 阶段关闭快照：manifest revision 3899；b47 `closed`，三卷 complete、73 页、584 项视觉检查通过，0 warning exemption。12 份 PDF 保留，编译目录仅 PDF；工作项/临时 PNG 已移入系统废纸篓。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段仅关闭 b47，不代表全库完成。
-- 下一步：单独提交本进度记录；随后预检 manifest 下一批 `phase2-b48`。
+- 已完成阶段：b47 独立进度记录提交 `29613c7a`（`docs: 记录b47完成进度`）；未 push。
+- 下一步：预检 manifest 下一批 `phase2-b48`。
+
+### `phase2-b48` — 1978 全国、1979 全国文理、1980 全国理科
+
+- 预检完成：起始 manifest revision 3899；批次问题列表为空；source manifest validate 通过；生成器 `--check` 显示四卷输出一致；provenance status 显示四卷 `editions_generated`、批次 `provenance_verified`。
+- provenance 共 34 题（1978 全国 7、1979 理科 10、1979 文科 8、1980 理科 9），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用已完成的转录与盲核，不重做内容。
+- 四份固定来源 PDF 均为 ready、各 1 页；四卷均登记 1 份 TikZ 图稿。
+- 既有四版 PDF 页数依次为 1978 全国 2/13/3/9（27）、1979 理科 2/12/3/8（25）、1979 文科 2/11/3/7（23）、1980 理科 2/15/3/10（30），共 105 页；无新增题目/答案/provenance 修改需求。
+- 已完成子阶段：四卷四版正式构建完成，manifest revision 3901，共 105 页。Build attempts：1978 全国 `35ea8128-8b40-41c1-9c8a-a9a47883c1bb`、1979 理科 `068dc0fd-988d-41bd-b2ab-7521acec5806`、1979 文科 `b300937a-6147-4172-823d-8abea0979dbd`、1980 理科 `7a893ad1-492b-4077-b0c4-515e0177cd7d`。四卷各版均 succeeded，页数与既有 PDF 相同；总计 6 条 log warning、0 build failure。
+- 警告明细：1978 试题/解析/简答版同一处 Underfull hbox（badness 1953，行 10–11，width 未知）；1979 理科解析版 Overfull 33.71384pt（行 457）；1980 理科印刷版 Overfull 23.20967pt（行 69–70、467–468）；1979 文科无 warning。
+- 阶段验证：build receipt validator 无 failed/invalid/missing/stale；警告待联系具体 PDF 页做视觉核查后决定精确豁免或纯版式修复。
+- 阶段修改文件：本进度文件、四卷 build receipts/PDF；未更改题目、答案、provenance 或图稿。
+- 阶段修改文件：仅本进度文件；预检未更改试卷源、manifest、provenance、图稿或 PDF。
+- 已完成子阶段：当前 build attempt 下准备 16 份 work items；已渲染 105 页并检查 16 张接触表，逐页覆盖四卷四版全部 105 页；16 个候选页均完成 120dpi 复核。没有发现缺字、裁切、图稿缺失/遮挡、孤立标题、答案串版或妨碍阅读的分页异常。
+- 已完成子阶段：6 条构建警告均已精确映射并目视复核。1978 全国三版 Underfull（`answers.tex` 行 10–11）在各版第 1 页，警告段为编注，三页均无异常留白/断行问题；1979 理科解析版 Overfull（`answers.tex` 行 457）为解析版第 12 页特值复算的行间公式，公式未裁切且可读；1980 理科印刷版 Overfull（行 69–70、467–468）为附加题 10 同一参数方程段在题面第 2 页与解析第 8 页的两次呈现，文字/方程均完整、未越出页面或妨碍阅读。均判定无需改源，按精确页面与 warning 指纹记录豁免。
+- 阶段验证：16/16 接触表、覆盖 105/105 页；16/16 候选页通过；另对警告关联的 1978 三版第 1 页、1980 印刷版第 2 页和候选图中的解析版第 8 页做高分辨率核查，所有 6 条警告均对应到实际版面且无视觉缺陷。1979 理科解析版第 12 页候选图已核对。
+- 阶段修改文件：本进度文件；16 份忽略的 `.work/phase2-b48/review/` 工作项；警告页补充渲染图及既有 105 页渲染图均在 `/tmp/gk-phase2-b48-review.Am8DGu/`；未更改题目、答案、provenance、生成源或 PDF。
+- 已完成子阶段：16 份当前 attempt work items 均已登记，覆盖 105 页 × 8 项，共 840 条 pass；候选页记录 120dpi 核验，其余页记录接触表逐页核验。对 6 条警告分别登记精确 warning 指纹、源文件、PDF 页码及目视结论（1978 三条 p1；1979 理科解析 p12；1980 印刷 p2/p8）。
+- 阶段验证：工作项结构核验 16/16，105 页及 840 项全部 pass、0 pending/non-pass；6 条 warning exemption 均绑定当前 build warning 的 edition/kind/box/lines/width_pt，无新增题目内容或版式修改。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b48/review/` 下 16 份工作项。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b48 状态 `closed`、无问题；正式 review receipts 与当前四卷 build attempts 对齐，并生成 `reports/phase2-b48.md`，manifest revision 3902。
+- 阶段验证：批次 4 卷、105 页、840 项视觉检查全部通过；6 条当前 warning 均有对应页面和视觉证据豁免，无失败项。
+- 阶段修改文件：四卷正式 review receipts、manifest 批次状态投影、本批报告与本进度文件；忽略 `.work` 和临时 PNG 尚待清理。
+- 已完成子阶段：四卷 build 目录各 24 个非 PDF 编译中间物，共 96 个，均移入系统废纸篓；每卷保留 4 份 PDF、0 个非 PDF。16 份 `.work/phase2-b48/` work items 与本次 142 张临时 PNG 也移入系统废纸篓；对应路径已确认不存在。
+- 阶段验证：逐卷核验 4 PDFs、0 intermediates；PDF 未删除，TeX/规范源文件未触动；临时工作项和图像已清理。
+- 阶段修改文件：本进度文件及四卷 build 目录的忽略编译产物；删除操作可从系统废纸篓恢复。
+- 已完成阶段：五项 b48 scoped gates 全部通过：source manifest validate；generator `--check` 四卷一致；build receipts 为 4 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：4 卷`。
+- 阶段验证：五项命令均退出码 0；manifest revision 3902，b48 `closed`。
+- 阶段修改文件：仅本进度文件；门禁检查未产生额外内容源改动。
+- 已完成阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认报告与当前全量 manifest 一致，并保留整个语料库的未完成状态。
+- 阶段验证：全量报告 render/check 均成功退出；b48 scoped gates 仍全部通过。
+- 阶段修改文件：全量 README/报告投影、本批报告、四卷 receipts、manifest 与本进度文件；未更改转录/答案/provenance 内容。
+- 已完成阶段：b48 内容、正式回执与全量报告投影提交 `f48d6a1d`（`docs: 完成1978-1980全国四卷复核`）；未 push。
+- 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b49`。
