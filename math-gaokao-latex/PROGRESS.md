@@ -237,9 +237,10 @@
 - 历史产物：四卷旧 PDF 页数依次为山西 31、新疆理科 24、甘肃 31、浙江 24，合计 110 页。build receipts 因生成输入树和工具链指纹变化 stale，review 绑定旧 build；provenance 的 compiled/批次缓存状态也随旧回执而 stale。
 - 已完成子阶段：source manifest 验证通过（775 项）；旧构建 validator 报 4 卷 stale、0 failed，review 报 4 卷 build stale；无来源/答案改动需求。已 formal build 四卷四版，全部 succeeded，manifest revision 3850；新页数为 3/14/4/10、2/10/3/9、3/14/4/10、2/10/3/9，共 110 页。准备 16 个当前 attempt review work items。
 - 构建警告：山西解析版 1 条 Overfull（源行 377）；浙江解析版 1 条 Overfull（源行 431）和 1 条 Underfull（源行 442—443）。尚未决定豁免，须结合全页与高分辨率视觉复核确认。
+- 已完成子阶段：四卷四版 110 页接触表均已逐页目视检查，未见明显裁切、重叠或版面断裂；警告均落在解析版末页附近（第 10 页），需高分辨率复查后再判定。
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`；忽略目录 `.work/phase2-b34/review/` 下 16 个工作项。未修改题目源、答案、provenance 或 issue。
-- 待完成：逐页视觉复核 110 页及首页/候选/警告页；按证据登记 review、finalize、清理、scoped gates、全库报告检查并提交。
-- 下一步：先渲染四卷四版接触表检查全页，再对所有首页、候选页和警告对应页高分辨率复核。
+- 待完成：高分辨率复核首页、候选页及两份解析版第 10 页警告区域；按证据登记 review、finalize、清理、scoped gates、全库报告检查并提交。
+- 下一步：逐版高分辨率检查 24 个首页/候选/警告页；确定三条警告是否需要局部版式修复或可精确豁免。
 
 ## 最近一次全库状态快照
 
