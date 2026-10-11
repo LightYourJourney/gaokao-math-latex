@@ -22,38 +22,43 @@
 | `phase1-b10` | 1953 全国卷 | 四版 25 页复核；FINALIZED；构建目录仅保留 PDF | `c66dcdbb` |
 | `phase1-b11` | 1954 全国卷 | 四版 21 页复核；两条现存警告豁免与当前日志逐项匹配；FINALIZED | `ec61de91` |
 | `phase1-b12` | 1955 全国卷 | 四版 14 页复核；FINALIZED；构建目录仅保留 PDF | `219ddd4b` |
+| `phase1-b13` | 1956 全国卷 | 四版 21 页复核；FINALIZED；source/build/review/provenance/report gates 通过；构建目录仅保留 PDF | `ec368208` |
+| `phase1-b14` | 1957 全国卷 | 旧 build/review 指纹过期后正式重建；四版 24 页复核、4 个候选页高分辨率复核；FINALIZED；门禁通过；构建目录仅保留 PDF | 本阶段待提交 |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
 ## 最近完成阶段
 
-### `phase1-b13` — 1956 全国卷（待本阶段提交）
+### `phase1-b14` — 1957 全国卷（本阶段待提交）
 
-- 已完成：formal build；四版共 21 页逐页视觉检查；试题版第 1 页、解析版第 1 页、简答版第 1 页、印刷版第 5 页高分辨率复核；未发现视觉缺陷；`finalize-batch` 返回 `FINALIZED`。
-- 已完成：清理 `1956_全国卷/build/` 的非 PDF 编译中间物，仅保留四个 PDF；删除本批 `.work/` 和本次临时 PNG。
-- 已完成：全量报告重新渲染（content transaction）。
-- 修改文件：1956 build/review receipts、`source-manifest.json`、`reports/phase1-b13.md`；以及 renderer 管理的 `README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`；另含本进度文件和收尾计划。
-- 验证：`source_manifest.py validate --require-artifacts 775`、该批 `build_projects.py validate-receipts --require-final`、`review_receipts.py check-batch`、`provenance.py check-batch`、`report.py check --all` 均通过；`git diff --check` 通过。构建目录检查确认仅有四个 PDF，本批 `.work/` 与临时 PNG 路径均已清理。
-- 提交状态：尚未提交；下一步先审阅精确 staged diff，再将本批及进度记录作为一个提交，不 push。
+- 既有状态：源稿与 provenance 已存在；旧报告/review receipt 虽记录 closed/passed，但 manifest 为 `compiled_pending_review`，build/review 指纹均过期。现场 provenance 内容有效，未重做转录或解题。
+- 已完成：formal build；四版共 24 页逐页视觉检查；试题版第 1 页、解析版第 7 页、简答版第 1 页、印刷版第 6 页高分辨率复核；未发现视觉缺陷；`finalize-batch` 返回 `FINALIZED`。
+- 已完成：全量报告事务更新并通过全量报告一致性检查；精确清理 `1957_全国卷/build/` 中全部非 PDF 文件，仅保留四份 PDF；清理本批 `.work/` 与本次临时 PNG。
+- 修改文件：1957 build/review receipts、`source-manifest.json`、`reports/phase1-b14.md`；renderer 更新的全量 README/报告投影；本进度文件。
+- 验证：source manifest `OK：1 卷`；build receipt `FINALIZED：phase1-b14`；review receipt `OK：1 卷`；provenance `OK：1 卷`；`report.py check --all` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”；`git diff --check` 通过。PDF 目录核验仅剩四份 PDF。
+- 过程说明：曾误用 `clean-build --execute`，该命令删除整个 build 目录；随后已通过正式重建恢复四份 PDF，并重新全页复核、finalize 和门禁验证。最终采用逐文件清理，PDF 与回执哈希一致。
+- 提交状态：尚未提交；下一步检查精确 diff 后将 1957 批次与本进度更新单独提交，不 push。
 
 ## 最近一次全库状态快照
 
-来自 1956 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
+来自 1957 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
 
 - 来源 775；试卷 272；批次 138。
-- 批次状态：closed 36、closed_with_blockers 13、compiled_pending_review 87、provenance_verified 2。
-- 试卷状态：complete 71、blocked 45、compiled 152、editions_generated 4。
+- 批次状态：closed 37、closed_with_blockers 13、compiled_pending_review 86、provenance_verified 2。
+- 试卷状态：complete 72、blocked 45、compiled 151、editions_generated 4。
 - 这说明仍有大量待复核/阻塞工作；这些数字是进度快照，不是验收目标，也不应伪装成已完成。
 
 ## 最近验证与已知问题
 
-- 1956 本批次视觉复核：21 页全页接触表检查；试题版第 1 页、解析版第 1 页、简答版第 1 页、印刷版第 5 页高分辨率复核；试卷中的 TikZ 几何图在接触表中可见。
-- 本阶段验证输出：source manifest `OK：1 卷`；build receipts `FINALIZED：phase1-b13`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致。
-- 全套单元测试最近一次：862 tests，848 passed、13 skipped、1 failed。唯一失败为 `tests/test_provenance.py::LiveRepositoryTests::test_the_cached_states_match_the_recomputed_ones`，全库旧缓存状态与现场派生不一致（首次报告共 297 项）。未解决前不得声称全库测试通过；按批次正式刷新回执与复核，不手工批量改状态。
+- 1956 视觉复核：21 页逐页检查；试题版第 1 页、解析版第 1 页、简答版第 1 页、印刷版第 5 页高分辨率复核。
+- 1957 视觉复核：24 页逐页检查；试题版第 1 页、解析版第 7 页、简答版第 1 页、印刷版第 6 页高分辨率复核；四页均无视觉缺陷。
+- 本批验证输出：1957 source manifest `OK：1 卷`；build receipts `FINALIZED：phase1-b14`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致。
+- 全套单元测试最近一次（早于 phase1-b13/b14）：862 tests，848 passed、13 skipped、1 failed。唯一失败为 `tests/test_provenance.py::LiveRepositoryTests::test_the_cached_states_match_the_recomputed_ones`，当时全库旧缓存状态与现场派生不一致（报告 297 项）。1956、1957 已按正式批次推进状态；该测试尚未重跑，不能声称全库测试通过。
 - 分支不 push；提交前核对 branch/worktree，当前 canonical worktree 是 `仓库根`。
 
 ## 下一步
 
-- 完成本阶段精确 diff 审阅并提交 1956 批次与进度/计划文件。
-- 然后按时间顺序接手 `phase1-b14`（1957 全国卷；manifest 当前标记 `compiled_pending_review`）：先检查已有构建、回执和工作项，只执行尚缺的复核/收尾，不重复转录或构建。
+- 1956 阶段已于提交 `ec368208` 完成。
+- 当前批次 `phase1-b14` 的复核/构建/全库报告门禁均已完成；下一步精确审阅并提交 1957 批次与进度更新。
+- 然后按 manifest 顺序接手 `phase1-b15`（1959 全国卷；当前 `compiled_pending_review`）：先检查现有来源、build/review 回执和问题项，只执行尚缺的步骤，不重复已有转录。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
