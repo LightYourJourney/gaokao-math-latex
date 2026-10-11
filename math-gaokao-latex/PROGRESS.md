@@ -240,8 +240,9 @@
 - 已完成子阶段：四卷四版 110 页接触表均已逐页目视检查，未见明显裁切、重叠或版面断裂；警告均落在解析版末页附近（第 10 页），需高分辨率复查后再判定。
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`；忽略目录 `.work/phase2-b34/review/` 下 16 个工作项。未修改题目源、答案、provenance 或 issue。
 - 已完成子阶段：完成 24 张首页/候选/警告页 120dpi 复核，并额外复核山西、浙江解析版第 9 页；未见视觉缺陷，三条日志 warning 均确认不影响可读性和页面边界。
-- 待完成：在 16 份 work items 中登记 110 页 × 8 项视觉检查（880 项）及三条 warning exemptions；随后 check/finalize、清理、scoped gates、全库报告检查并提交。
-- 下一步：逐页写入非空检查说明和 pass；把山西解析版第 10 页 Overfull、浙江解析版第 10 页 Overfull/Underfull 与当前日志逐项绑定，再运行 batch validator。
+- 已完成子阶段：16 份 work items 已登记 110 页 × 8 项共 880 项非空 pass 检查；三条 warning 均按当前日志 kind/box/width/lines、`answers.tex` 源路径和第 10 页逐项登记，视觉结果均为 pass。
+- 待完成：transactional finalize 验证完整覆盖及 warning 精确匹配；清理、scoped gates、全库报告检查并提交。
+- 下一步：运行 `finalize-batch`；若接受三条精确豁免，刷新正式 review/build 回执并关闭 b34。
 
 ## 最近一次全库状态快照
 
