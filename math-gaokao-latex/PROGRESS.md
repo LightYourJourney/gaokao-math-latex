@@ -215,7 +215,7 @@
 - 验证快照：manifest revision 3845；来源 775、试卷 272、批次 138；批次 closed 51、closed_with_blockers 17、compiled_pending_review 68、provenance_verified 2；试卷 complete 88、blocked 45、compiled 135、editions_generated 4。河南卷 production state `complete`，`ISSUE-0140`—`ISSUE-0149` 均 resolved。
 - 提交状态：已提交 `1a5c5fd1`，未 push；提交后工作树干净。
 
-## 当前进行阶段
+## 最近批次进展
 
 ### `phase2-b33` — 1977 黑龙江、 西藏、青海、广西百色文科
 
@@ -229,8 +229,16 @@
 - 已完成子阶段：source manifest 校验通过（775 artifacts）；build receipts `OK`（4 succeeded、0 stale/invalid/missing/failed）；review `FINALIZED`；provenance `OK：4 卷`。
 - 已完成子阶段：全量 `report.py render --all` 成功，以一个 content 事务写入并回读校验六个全量报告目标；`check --all` 成功，报告与当前 manifest 一致且保留未完成状态。
 - 已完成子阶段：`git diff --check` 通过；审阅确认 17 个 tracked 文件均为本批 receipts、manifest 驱动报告/README 投影及进度文件，没有题目源、答案或 provenance 改动。四卷各保留 4 份 PDF。
-- 待完成：单批提交 b33；提交后记录提交号，再预检下一批。
-- 下一步：提交本批，不 push；随后刷新 Git/manifest 状态，确定 1977 年顺序中的下一未关闭批次。
+- 已完成阶段：本批已单批提交 `c80bc829`，进度记录提交为 `272c5187`；未 push。下一步转入 b34 预检。
+
+### `phase2-b34` — 1977 山西、新疆理科、甘肃、浙江
+
+- 预检完成：4 卷共 33 条既有 issue（`ISSUE-0182`—`ISSUE-0214`），逐条确认均 resolved；现有 provenance 与题目源可复用。
+- 历史产物：四卷均有四版 PDF，旧页数依次为山西 31、新疆理科 24、甘肃 31、浙江 24，合计 110 页。build receipts 均因生成输入树和工具链指纹变化 stale，review 绑定旧 build；provenance validator 的 compiled/批次缓存状态也因正式回执 stale 而不匹配。
+- 已完成子阶段：source manifest 验证通过（775 项）；构建 validator 报 4 卷 stale、0 failed；review validator 报 4 卷 build stale；provenance validator 显示 4 卷与批次 derived cache 不符。无来源/答案改动需求。
+- 修改文件：仅本进度文件；未改四卷题目源、答案、provenance 或 issue。
+- 待完成：formal build 四卷四版；逐页视觉复核全部新页及首页/候选页；登记 review、finalize、清理、scoped gates、全库报告检查并提交。
+- 下一步：执行 `phase2-b34` formal build 并准备四卷当前 attempt 的 review work items；不重复转录或解题。
 
 ## 最近一次全库状态快照
 
