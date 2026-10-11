@@ -751,4 +751,13 @@
 - 已完成阶段：b49 内容、正式回执与全量报告投影提交 `4e8e712a`（`docs: 完成1980-1982全国四卷复核`）；未 push。
 - 阶段关闭快照：manifest revision 3905；b49 `closed`，4 卷、120 页、960 项视觉检查通过，11 条 warning 均有精确页面豁免；16 份 PDF 保留，编译目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b49，不代表全库完成。
-- 下一步：单独提交本进度记录；随后工作树核对并预检 manifest 下一批 `phase2-b50`。
+- 已完成阶段：b49 独立进度记录提交 `e1783ef8`（`docs: 记录b49阶段进度`）；未 push。提交后工作树干净。
+
+### `phase2-b50` — 1982 全国文、1983 全国文理、1984 全国理科
+
+- 预检完成：起始 manifest revision 3905；批次 issues 为空；source manifest validate 通过；generator `--check` 显示四卷一致；provenance status 为四卷 `editions_generated`、批次 `provenance_verified`。
+- 本批 55 题（1982 文科 9、1983 理科 13、1983 文科 13、1984 理科 20），沿用已登记转录/解题与 provenance，不重复录入；四份固定来源 PDF 均为 `ready`，每份 1 页且 PDF artifact 校验通过。四卷 `legacy_ids=[]`。
+- 既有四版 PDF 页数依次为 1982 文科 2/15/3/11（31）、1983 理科 3/20/4/14（41）、1983 文科 3/19/4/14（40）、1984 理科 3/19/4/15（41），共 153 页。
+- Build receipt validator 显示四卷均 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 当前批次仍为 `compiled_pending_review`。下一步须正式重建四卷四版，再检查警告与复核状态。
+- 阶段修改文件：仅本进度文件；只读预检未更改试卷源、manifest、provenance、图稿或 PDF。
+- 下一步：正式构建四卷四版并记录 attempt、页数与 warning；随后准备当前 attempt work items 并执行全页视觉复核。
