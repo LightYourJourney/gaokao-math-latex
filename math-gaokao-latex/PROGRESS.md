@@ -311,5 +311,6 @@
 - 已完成子阶段：`prepare-batch` 生成 16 个 review work items，覆盖四卷 × 四版，均绑定本轮 build attempts。
 - 已完成子阶段：16 个版本接触表覆盖全部 132 页，已逐页检查；未见明显裁切、重叠、缺字或分页断裂。
 - 已完成子阶段：按 16 个 work items 登记的候选页完成 120dpi 复核；包括安徽理科印刷版第 14 页、广东印刷版第 9 页、广东解析版第 4 页、四川解析版第 4 页、四川印刷版第 3 页及其余首页，共 16 页，均无可见版面缺陷。
-- 待完成：登记 132 页 × 8 项检查并 transactional finalize；之后清理、跑 scoped/full-report gates 并提交。
-- 下一步：为 16 个 work items 写入 1056 项有说明的 pass 检查，运行 review coverage 检查后 finalize。
+- 已完成子阶段：16 个 work items 已登记 132 页 × 8 项共 1056 个带非空说明的 pass 检查；0 pending、0 non-pass，候选页 16 页全部高分辨率检查通过，工作项绑定 4 个当前 build attempts。
+- 待完成：transactional finalize；之后清理、跑 scoped/full-report gates 并提交。
+- 下一步：运行 `finalize-batch` 验证 review 覆盖、attempt 绑定和 issue 状态，并刷新正式回执/批次报告。
