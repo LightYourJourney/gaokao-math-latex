@@ -312,5 +312,6 @@
 - 已完成子阶段：16 个版本接触表覆盖全部 132 页，已逐页检查；未见明显裁切、重叠、缺字或分页断裂。
 - 已完成子阶段：按 16 个 work items 登记的候选页完成 120dpi 复核；包括安徽理科印刷版第 14 页、广东印刷版第 9 页、广东解析版第 4 页、四川解析版第 4 页、四川印刷版第 3 页及其余首页，共 16 页，均无可见版面缺陷。
 - 已完成子阶段：16 个 work items 已登记 132 页 × 8 项共 1056 个带非空说明的 pass 检查；0 pending、0 non-pass，候选页 16 页全部高分辨率检查通过，工作项绑定 4 个当前 build attempts。
-- 待完成：transactional finalize；之后清理、跑 scoped/full-report gates 并提交。
-- 下一步：运行 `finalize-batch` 验证 review 覆盖、attempt 绑定和 issue 状态，并刷新正式回执/批次报告。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，状态 `closed`，无问题；`reports/phase2-b35.md` 已生成，manifest revision 3854。
+- 待完成：清理四卷非 PDF build 中间物、本批 work items 与临时 PNG；运行 scoped/full-report gates、diff 检查并提交。
+- 下一步：先精确盘点四卷 build 中非 PDF 文件、16 个 work items 和 `/tmp/gk-phase2-b35-review.XNYJgg` 临时图，再执行范围限定清理。
