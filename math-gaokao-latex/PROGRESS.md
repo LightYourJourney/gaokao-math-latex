@@ -30,41 +30,29 @@
 | `phase1-b18` | 1962 全国卷 | 历史回执过期后正式重建；四版 30 页复核、4 个候选页高分辨率复核；既存 Underfull 精确豁免；FINALIZED；门禁通过；构建目录仅保留 PDF | `c140aa65` |
 | `phase1-b19` | 1958 河北卷 | 历史回执过期后正式重建；四版 18 页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；门禁通过；构建目录仅保留 PDF | `67f82cc3` |
 | `phase1-b20` | 1963 全国卷 | 历史回执过期后正式重建；四版 32 页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；门禁通过；构建目录仅保留 PDF | `61f3cffe` |
-| `phase1-b21` | 1964 全国卷 | 历史回执过期后正式重建；四版 25 页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；门禁通过；构建目录仅保留 PDF | 本阶段待提交 |
+| `phase1-b21` | 1964 全国卷 | 历史回执过期后正式重建；四版 25 页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；门禁通过；构建目录仅保留 PDF | `788ef1b0` |
+| `phase1-b22` | 1965 全国卷 | 四版 32 页逐页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；scoped gates 与全量报告检查通过；构建目录仅保留 PDF | 本阶段待提交 |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
 ## 最近完成阶段
 
-### `phase1-b20` — 1963 全国卷（已提交）
+### `phase1-b22` — 1965 全国卷（待提交）
 
-- 既有状态：源稿与 10 题 provenance 已存在，manifest `issue_ids=[]`；formal build receipt 因生成输入树、工具链指纹变化失效，旧 review 绑定失效构建。未重做转录或解题。
-- 已完成：formal build；四版共 32 页逐页视觉检查；四版候选页均为第 1 页并完成高分辨率复核；未发现视觉缺陷，构建无警告；`finalize-batch` 返回 `FINALIZED`。
-- 已完成：全量报告事务更新并通过一致性检查；只删除 `1963_全国卷/build/` 中非 PDF 编译产物，保留四份 PDF；清理本批 `.work/` 与本次临时 PNG。
-- 修改文件：1963 全国卷 build/review receipts、`source-manifest.json`、`reports/phase1-b20.md`；renderer 更新的全量 README/报告投影；本进度文件。
-- 验证：source manifest `OK`（775 项）；build receipt `FINALIZED：phase1-b20`；review receipt `OK：1 卷`；provenance `OK：1 卷`；`report.py check --all` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”；`git diff --check` 通过。构建目录核验仅剩四份 PDF。
-- 提交状态：已提交 `61f3cffe`，未 push。
-
-## 当前进行阶段
-
-### `phase1-b21` — 1964 全国卷
-
-- 既有状态：源稿与 8 题 provenance 已存在，manifest `issue_ids` 对应 11 条旧视觉 issue，均标记 `resolved`；build receipt 因生成输入树与工具链指纹变化失效，review 绑定旧 build。旧 PDF 页数为 2/11/3/9；不沿用旧复核，也不重做转录/解题。
-- 已完成子阶段：来源/provenance、问题项与历史 receipts 核对；旧 build 四版均成功且无编译警告，但只能作为页数参考，当前证据须刷新。formal build 成功、0 失败；新页数为 2/11/3/9，共 25 页、0 警告；四版 review 工作项已准备。
-- 已完成子阶段：四版共 25 页全部视觉检查；试题版第 1 页、解析版第 1 页、简答版第 1 页、印刷版第 7 页高分辨率复核，未见缺陷；旧 11 条已 resolved 的视觉 issue 所涉位置在新 PDF 中均复核正常；`finalize-batch` 返回 `FINALIZED`。
-- 修改文件：1964 全国卷 build/review receipts、`source-manifest.json`、`reports/phase1-b21.md`；renderer 更新的全量 README/报告投影；本进度文件。
-- 已完成：登记 25 页复核；清理非 PDF 编译产物与本批临时 PNG，build 目录仅保留四版 PDF；scoped gates、全量报告渲染与一致性检查通过。
-- 验证：source manifest `OK`（775 项）；build receipt `FINALIZED：phase1-b21`；review receipt `OK：1 卷`；provenance `OK：1 卷`；全量报告与 manifest 当前一致。
-- 待完成：审阅并提交 b21 批次及进度记录，不 push。
-- 下一步：审阅并提交本批，然后接手 `phase1-b22`；不重复来源转录。
+- 既有状态：源稿与 7 题 provenance 已存在；两条历史正式构建 issue（`ISSUE-0117/0118`）已 resolved。旧 build/review 指纹过期，不重做转录或解题。
+- 已完成：formal build 成功、0 警告；四版共 32 页逐页视觉检查，候选页分别为试题版 p.3、解析版 p.10、简答版 p.3、印刷版 p.11 并完成高分辨率复核；另高分辨率检查解析版 p.14，三个结论框及页眉页脚完整，无视觉缺陷；`finalize-batch` 返回 `FINALIZED`。
+- 已完成：清理 `1965_全国卷/build/` 的非 PDF 编译产物，仅保留四份 PDF；清理本批 `.work/` 工作项与临时 PNG；全量报告事务更新并通过一致性检查。
+- 修改文件：1965 全国卷 build/review receipts、`source-manifest.json`、`reports/phase1-b22.md`；renderer 更新的全量 README/报告投影；本进度文件。
+- 验证：source manifest `OK`（775 项）；build receipt `OK：1 卷`；review `FINALIZED：phase1-b22`；provenance `OK：1 卷`；`report.py check --all` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”；`git diff --check` 通过；构建目录仅剩四份 PDF。
+- 提交状态：本阶段待提交，未 push。
 
 ## 最近一次全库状态快照
 
 来自 1964 全国卷 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
 
 - 来源 775；试卷 272；批次 138。
-- 批次状态：closed 44、closed_with_blockers 13、compiled_pending_review 79、provenance_verified 2。
-- 试卷状态：complete 79、blocked 45、compiled 144、editions_generated 4。
+- 批次状态：closed 45、closed_with_blockers 13、compiled_pending_review 78、provenance_verified 2。
+- 试卷状态：complete 80、blocked 45、compiled 143、editions_generated 4。
 - 这说明仍有大量待复核/阻塞工作；这些数字是进度快照，不是验收目标，也不应伪装成已完成。
 
 ## 最近验证与已知问题
@@ -91,7 +79,7 @@
 - `phase1-b18`（1962 全国卷）已于 `c140aa65` 提交。
 - `phase1-b19`（1958 河北卷）已于 `67f82cc3` 提交。
 - `phase1-b20`（1963 全国卷）已于 `61f3cffe` 提交。
-- `phase1-b21`（1964 全国卷）已完成正式构建、25 页复核和全部门禁；尚待提交。
-- 下一批为 `phase1-b22`（1965 全国卷），状态 `compiled_pending_review`；先检查来源/provenance、问题项与旧 receipts，再决定需要刷新哪些证据。
-- 下一步：审阅并提交 b21 阶段，然后接手 `phase1-b22`。
+- `phase1-b21`（1964 全国卷）已于 `788ef1b0` 提交。
+- `phase1-b22`（1965 全国卷）已完成 formal build、32 页视觉复核、finalize 和门禁；本阶段待提交。
+- 下一批 manifest 中待处理阶段为 `phase2-b23`（1977 上海文理卷）；提交 b22 后先检查其来源/provenance 与历史回执，再确定刷新范围。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
