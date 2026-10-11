@@ -306,6 +306,7 @@
 - 预检完成：四卷关联 37 条 issue（`ISSUE-0215`—`ISSUE-0245`、`ISSUE-0271`—`ISSUE-0276`）均为 resolved；source manifest 校验通过（775 artifacts）。
 - 已有内容：四卷 `provenance.json` 共 31 题，逐题转录复核均 passed、答案证据均 A、无冲突、无未解决 provenance issue；按既有核查成果复用，不重做转录/解题。既有 PDF 页数依次为安徽理科 43、安徽文科 25、广东 30、四川 34 页，共 132 页。
 - 旧构建：四卷均有四版 PDF；build receipts 均 stale（生成输入树、工具链指纹变化），review receipts 随 build stale。`provenance.py check-batch` 仅报缓存 production 状态 `compiled` 与现场派生 `editions_generated` 不符（四卷），以及 batch 缓存 `compiled_pending_review` 与现场派生 `provenance_verified` 不符；provenance status 输出四卷 `editions_generated`、批次 `provenance_verified`。无需改来源、题目或答案；正式构建/事务 finalize 后刷新派生缓存。
-- 修改文件：本进度文件；本阶段没有改动题目源、答案、provenance、回执或 manifest。
-- 待完成：正式重建四卷四版，逐页视觉复核并高分辨率检查候选页/警告页，登记复核并 finalize；之后清理、跑 scoped/full-report gates 并提交。
-- 下一步：formal build 四卷并准备绑定当前 attempts 的 review work items；视觉复核前再次核对页数、warning 与候选页。
+- 已完成子阶段：formal build 四卷四版成功，manifest revision 3853；页数分别为安徽理科 4/19/5/15（43）、安徽文科 2/11/3/9（25）、广东 3/13/4/10（30）、四川 3/15/4/12（34），共 132 页，四卷均 0 warning。Build attempts：`26b7a80b-4b7b-4953-ab83-67db60a65fe6`、`3341aa58-134d-421f-b714-8de0ecf0dbd3`、`31663c9d-fb2d-4df9-ab0f-f8b356f370ed`、`0a1f1d25-3d40-4c8f-828a-66a83e18e467`。
+- 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`。题目源、答案与 provenance 未改。
+- 待完成：绑定当前 attempts 准备 review work items，逐页视觉复核及高分辨率候选页检查，登记复核并 finalize；之后清理、跑 scoped/full-report gates 并提交。
+- 下一步：运行 `prepare-batch`，确认 16 个 edition work items 与当前 build attempts 绑定，再检查全部 132 页。
