@@ -440,3 +440,23 @@
 - 下一批：按 manifest 顺序为 `phase2-b41`（1977 江苏农垦、南京、南通地区、南通市四卷），当前状态 `compiled_pending_review`。
 - 待完成：提交本进度记录中的 b40 提交哈希与下一批状态。
 - 下一步：仅提交本进度文件；随后核查 b41 四卷来源/provenance、issue、构建和复核状态。
+
+### `phase2-b41` — 1977 江苏农垦、南京、南通地区、南通市
+
+- 预检完成：manifest revision 3872；source manifest 校验通过，该批 issue 列表为空。生成器 `--check` 显示四卷生成结果一致。
+- provenance 共 40 题，逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用现有转录/核查，不重新转录或解题。关联 issue 共 40 项且均为 resolved，不属于该批待处理 issue。
+- 固定源 PDF 页数分别为农垦 2、南京 2、南通地区 1、南通市 3。既有四版 PDF 页数分别为 16、24、16、29 页，共 85 页。
+- 旧 build receipts 四卷均因生成输入树与工具链指纹变化 stale；review receipts 随 build stale。`provenance.py status` 确认现场派生四卷均为 `editions_generated`、批次为 `provenance_verified`；manifest 缓存仍为 `compiled`/`compiled_pending_review`。无题目、答案或来源变更需求。
+- 修改文件：本进度文件；本阶段只读预检未更改来源、manifest、provenance 或试卷内容。
+- 已完成子阶段：formal build 四卷四版完成，manifest revision 3874；农垦 16 页、南京 24 页、南通地区 16 页、南通市 29 页，共 85 页，四卷均无 overfull warning。Build receipts 无 failed/invalid/missing/stale；4 卷 pending review 为预期状态。Build attempts：农垦 `765d292d-422a-49cf-bbd1-d65ca38d3fce`、南京 `878379ae-6032-4f9c-a516-b6d3f06935fa`、南通地区 `5cebf97a-987e-4c5f-b212-191bca28bf20`、南通市 `6d889f37-c762-4814-b680-2549407ce942`。
+- 已完成子阶段：`prepare-batch` 生成 16 个当前 attempt review work items，覆盖四卷 × 四版。
+- 已完成子阶段：16 张接触表覆盖四卷四版最终 85 页并逐页检查；未见裁切、缺字、图形遮叠、异常分页或答案串版。16 个候选页均以 120dpi 逐张复核，字形、公式和图稿清晰完整。
+- 已完成子阶段：16 份当前 attempt 工作项登记 85 页 × 8 项共 680 项具体说明的 pass 检查，0 pending、0 non-pass。`check-batch` 唯一问题为四份正式 review receipts 仍绑定旧 build attempt/输入树/工具链/PDF，属 finalize 刷新回执前的预期陈旧状态。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b41 状态 `closed`、无问题；正式回执与批次状态更新至 manifest revision 3875，并生成 `reports/phase2-b41.md`。
+- 已完成子阶段：清除四卷 build 目录各 24 个非 PDF 编译中间物，共 96 个；每卷仅保留四份 PDF。16 份 `.work/phase2-b41/` 工作项与本轮 `/tmp/gk-phase2-b41-review.SXn73v/` 下 117 张页面/接触表/候选 PNG 已移入系统废纸篓。四卷各 4 PDFs、0 非 PDF，临时路径均不存在。
+- 已完成子阶段：b41 scoped gates 全通过：source manifest 校验、生成器 `--check`、build receipts 4 succeeded/0 pending-failed-invalid-missing-stale、review `FINALIZED`、provenance `OK：4 卷`。
+- 已完成子阶段：`report.py render --all` 通过，单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认投影与全量 manifest 一致并保留未完成状态。
+- 最终 diff 审阅：17 个 tracked 文件，限于四卷 build/review receipts、manifest 驱动报告/README/清单投影、本批报告、manifest 与进度文件；无 `.tex`、答案、provenance 或代码源改动。`git diff --check` 通过；四卷 16 份 PDF 均保留。
+- 验证快照：manifest revision 3875；b41 状态 `closed`，85 页、680 项视觉检查通过。全库批次状态为 closed 60、closed_with_blockers 17、compiled_pending_review 59、provenance_verified 2；试卷状态 complete 121、compiled 102、blocked 45、editions_generated 4。仅为当前快照，不代表全库完成。
+- 待完成：提交 b41 内容与报告投影，再单独提交本进度记录中的提交哈希和下一批状态。
+- 下一步：提交已核验的 b41 变更（不 push）；提交后记录哈希并检查下一批 `phase2-b42`（1977 江苏常州、徐州、扬州、无锡四卷）。
