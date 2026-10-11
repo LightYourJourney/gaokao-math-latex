@@ -634,8 +634,43 @@
 - 阶段修改文件：本进度文件；门禁检查未产生额外内容源改动。
 - 已完成子阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认与当前全量 manifest 一致，并保留未完成状态。
 - 阶段验证：全量报告 render/check 均成功退出。
-- 阶段修改文件：全量 README/报告投影、本批报告与本进度文件；待最终 diff 审核确定精确范围。
+- 阶段修改文件：全量 README/报告投影、本批报告与本进度文件；最终审核确认 b46 内容提交共 18 个非进度跟踪文件。
 - 已完成阶段：b46 内容、正式回执及报告投影提交 `7ed0318e`（`docs: 完成1958鄂湘东北华东四卷复核`）；未 push。
 - 阶段关闭快照：manifest revision 3896；b46 `closed`，四卷 complete、71 页、568 项视觉检查通过，0 warning exemption。16 份 PDF 保留，编译目录仅 PDF；工作项/临时 PNG 已移入系统废纸篓。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b46，不代表全库完成。
-- 下一步：单独提交本进度记录；随后检查并预检 manifest 下一批 `phase2-b47`。
+- 已完成阶段：b46 独立进度记录提交 `b654c2c3`（`docs: 记录b46完成进度`）；未 push。
+- 下一步：检查并预检 manifest 下一批 `phase2-b47`。
+
+### `phase2-b47` — 1958 广东、安徽、不明卷
+
+- 预检完成：起始 manifest revision 3896；批次问题列表为空；source manifest validate 通过；生成器 `--check` 显示三卷生成输出一致；provenance status 显示三卷 `editions_generated`、批次 `provenance_verified`。
+- provenance 共 22 题（广东 9、安徽 5、不明卷 8），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；按既有转录与盲核结果继续，不重做内容。
+- 三份固定来源 PDF 均为 ready：广东原卷 6 页、安徽（来源网络、真实性存疑）1 页、不明卷（可能与云南部分同源）7 页。安徽与不明卷身份说明保留，不扩大来源断言。
+- 既有四版 PDF 页数依次为广东 3/14/4/11（32）、安徽 1/10/2/8（21）、不明卷 1/10/2/7（20），共 73 页；无新增题目/答案/provenance 修改需求。
+- 当前 build receipts 因生成输入树及工具链指纹变化 stale，需正式重建；正式构建、逐页视觉复核、finalize、清理、门禁、报告投影和提交待完成。
+- 阶段修改文件：仅本进度文件；预检未更改试卷源、manifest、provenance 或 PDF。
+- 已完成子阶段：三卷四版正式构建完成，manifest revision 3898，共 73 页。Build attempts：广东 `1583f07a-fc55-45a3-9207-c365348e8d3f`、安徽 `9e527efd-31a6-4226-bc3e-c611efc18f91`、不明卷 `6d64f1c4-0f4e-439a-94ef-c93ff8146a25`。四版均 succeeded，页数与原 PDF 相同，0 warning。
+- 阶段验证：build receipt validator 无 failed/invalid/missing/stale；3 套待视觉复核状态符合预期。
+- 阶段修改文件：本进度文件、三卷 build receipts/PDF；未更改题目、答案或 provenance。
+- 已完成子阶段：`prepare-batch` 建立 12 个当前 attempt review work items；渲染并检查 12 张接触表覆盖全部 73 页。
+- 已完成子阶段：12 个候选页均完成 120dpi 逐张复核；广东、存疑安徽与不明卷的版头/来源说明均如实显示，未见裁切、缺字、图形遮叠、异常分页或串版。
+- 阶段验证：接触表覆盖 73/73 页；候选页复核 12/12 通过；三卷构建均无 warning。安徽与不明卷不确定来源标签在题面及解析版页面可见。
+- 阶段修改文件：仅本进度文件；接触表、候选图与工作项分别在 `/tmp/gk-phase2-b47-review.sBQahI/` 与忽略的 `.work/phase2-b47/review/`；未改题目、答案、provenance 或生成源。
+- 已完成子阶段：核对 12 份 work items 全部绑定当前 attempt、PDF SHA-256 与页数；登记 73 页 × 8 项共 584 条 pass 检查，候选页说明 120dpi 复核，其余说明逐页接触表复核。
+- 阶段验证：12/12 工作项、73 页全部绑定正确，584 项 pass、0 pending/non-pass、0 warning exemption。`check-batch` 仅报告正式 review receipts 仍绑定旧 build，为 finalize 刷新前预期状态。
+- 阶段修改文件：本进度文件及忽略的 `.work/phase2-b47/review/` 下 12 份工作项；未更改题目、答案、provenance 或生成源。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b47 `closed`、无问题；三卷正式 review receipts 与当前 build 对齐，并生成 `reports/phase2-b47.md`，manifest revision 3899。
+- 阶段修改文件：三卷 review receipts、manifest 状态投影、本批报告与本进度文件；工作项/PNG 已在后续清理子阶段移入废纸篓。
+- 已完成子阶段：三卷 build 目录各移除 24 个非 PDF 编译中间物，共 72 个；每卷保留 4 份 PDF、0 个非 PDF。12 份 `.work/phase2-b47/` 工作项与 `/tmp/gk-phase2-b47-review.sBQahI/` 下 97 张 PNG 已移入系统废纸篓（可恢复），路径确认不存在。
+- 阶段验证：逐卷核验 4 PDFs、0 intermediates；PDF 保留，临时审查产物已清理。
+- 阶段修改文件：本进度文件及三卷 build 目录里的忽略编译产物；未删除源文件或 PDF。
+- 已完成子阶段：五项 b47 scoped gates 全部通过：source manifest validate；generator `--check` 显示三卷一致；build receipts 三卷 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：3 卷`。
+- 阶段验证：五项命令均退出码 0；manifest revision 3899，b47 `closed`。
+- 阶段修改文件：本进度文件；门禁检查未产生额外内容源改动。
+- 已完成子阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认与当前全量 manifest 一致，并保留未完成状态。
+- 阶段验证：全量报告 render/check 均成功退出。
+- 阶段修改文件：全量 README/报告投影、本批报告与本进度文件；最终审核确认 b47 内容提交共 14 个非进度跟踪文件。
+- 已完成阶段：b47 内容、正式回执及报告投影提交 `09c764b0`（`docs: 完成1958粤皖不明卷三卷复核`）；未 push。
+- 阶段关闭快照：manifest revision 3899；b47 `closed`，三卷 complete、73 页、584 项视觉检查通过，0 warning exemption。12 份 PDF 保留，编译目录仅 PDF；工作项/临时 PNG 已移入系统废纸篓。
+- 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段仅关闭 b47，不代表全库完成。
+- 下一步：单独提交本进度记录；随后预检 manifest 下一批 `phase2-b48`。
