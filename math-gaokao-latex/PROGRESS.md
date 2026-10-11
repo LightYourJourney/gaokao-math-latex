@@ -300,3 +300,12 @@
 - `phase2-b34`（1977 山西、新疆理科、甘肃、浙江四卷）已于 `751b88d6` 提交；110 页/880 项复核通过，三条版面 warning 已精确豁免，manifest 状态 `closed`。
 - 下一批按 manifest 顺序为 `phase2-b35`：1977 安徽理科、安徽文科、广东、四川四卷，当前状态 `compiled_pending_review`。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
+
+### `phase2-b35` — 1977 安徽理科、安徽文科、广东、四川
+
+- 预检完成：四卷关联 37 条 issue（`ISSUE-0215`—`ISSUE-0245`、`ISSUE-0271`—`ISSUE-0276`）均为 resolved；source manifest 校验通过（775 artifacts）。
+- 已有内容：四卷 `provenance.json` 共 31 题，逐题转录复核均 passed、答案证据均 A、无冲突、无未解决 provenance issue；按既有核查成果复用，不重做转录/解题。既有 PDF 页数依次为安徽理科 43、安徽文科 25、广东 30、四川 34 页，共 132 页。
+- 旧构建：四卷均有四版 PDF；build receipts 均 stale（生成输入树、工具链指纹变化），review receipts 随 build stale。`provenance.py check-batch` 仅报缓存 production 状态 `compiled` 与现场派生 `editions_generated` 不符（四卷），以及 batch 缓存 `compiled_pending_review` 与现场派生 `provenance_verified` 不符；provenance status 输出四卷 `editions_generated`、批次 `provenance_verified`。无需改来源、题目或答案；正式构建/事务 finalize 后刷新派生缓存。
+- 修改文件：本进度文件；本阶段没有改动题目源、答案、provenance、回执或 manifest。
+- 待完成：正式重建四卷四版，逐页视觉复核并高分辨率检查候选页/警告页，登记复核并 finalize；之后清理、跑 scoped/full-report gates 并提交。
+- 下一步：formal build 四卷并准备绑定当前 attempts 的 review work items；视觉复核前再次核对页数、warning 与候选页。
