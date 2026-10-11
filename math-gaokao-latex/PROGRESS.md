@@ -458,5 +458,7 @@
 - 已完成子阶段：`report.py render --all` 通过，单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认投影与全量 manifest 一致并保留未完成状态。
 - 最终 diff 审阅：17 个 tracked 文件，限于四卷 build/review receipts、manifest 驱动报告/README/清单投影、本批报告、manifest 与进度文件；无 `.tex`、答案、provenance 或代码源改动。`git diff --check` 通过；四卷 16 份 PDF 均保留。
 - 验证快照：manifest revision 3875；b41 状态 `closed`，85 页、680 项视觉检查通过。全库批次状态为 closed 60、closed_with_blockers 17、compiled_pending_review 59、provenance_verified 2；试卷状态 complete 121、compiled 102、blocked 45、editions_generated 4。仅为当前快照，不代表全库完成。
-- 待完成：提交 b41 内容与报告投影，再单独提交本进度记录中的提交哈希和下一批状态。
-- 下一步：提交已核验的 b41 变更（不 push）；提交后记录哈希并检查下一批 `phase2-b42`（1977 江苏常州、徐州、扬州、无锡四卷）。
+- 已完成阶段：b41 内容与报告投影提交 `676783f2`（`docs: 完成1977苏南四卷复核`）；未 push。
+- 下一批：按 manifest 顺序为 `phase2-b42`（1977 江苏常州、徐州、扬州、无锡四卷），当前状态 `compiled_pending_review`。
+- 待完成：提交本进度记录中的 b41 提交哈希与下一批状态。
+- 下一步：仅提交本进度文件；随后核查 b42 四卷来源/provenance、issue、构建和复核状态。
