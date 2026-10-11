@@ -825,4 +825,12 @@
 - 已完成阶段：b51 内容、正式回执与全量报告投影提交 `c1ca8068`（`docs: 完成1984全国文科复核`）；未 push。
 - 阶段关闭快照：manifest revision 3911；b51 `closed`，1 卷、40 页、320 项视觉检查通过，零 warning；4 份 PDF 保留，build 目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b51，不代表全库完成。
-- 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b52`。
+- 已完成阶段：b51 独立进度记录提交 `e509d804`（`docs: 记录b51阶段进度`）；未 push。提交后工作树干净。
+
+### `phase2-b52` — 1985 全国卷文科
+
+- 预检完成：起始 manifest revision 3911；批次仅含 `gk-1985-regular-national-arts`，issues 为空；source manifest validate 通过；generator `--check` 显示该卷一致；provenance status 为该卷 `editions_generated`、批次 `provenance_verified`。
+- 本卷 17 题，固定来源 PDF 为 ready、1 页且 artifact PDF 校验通过，`legacy_ids=[]`；沿用已登记转录/解题与 provenance，不重复录入。项目目录以 manifest 为准为 `1985_全国卷_文科`。既有四版 PDF 页数为试题 3、解析 15、简答 4、印刷 12，共 34 页。
+- Build receipt validator 显示该卷 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 批次仍为 `compiled_pending_review`。下一步须正式重建四版，再检查 warning 与复核状态。
+- 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
+- 下一步：正式构建该卷四版并继续逐页复核。
