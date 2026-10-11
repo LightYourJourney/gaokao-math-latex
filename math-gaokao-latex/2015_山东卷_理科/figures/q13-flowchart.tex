@@ -1,0 +1,25 @@
+\begin{tikzpicture}[
+  node distance=8mm and 12mm,
+  every node/.style={font=\small, align=center},
+  startstop/.style={draw, rectangle, rounded corners=3pt, minimum width=18mm, minimum height=7mm},
+  process/.style={draw, rectangle, minimum width=29mm, minimum height=8mm},
+  decision/.style={draw, diamond, aspect=2.1, inner sep=1pt},
+  output/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+    minimum width=20mm, minimum height=7mm},
+  flow/.style={draw, -{Stealth[length=2mm]}}
+]
+\node[startstop] (start) {开始};
+\node[process, below=of start] (init) {$n=1,\ T=1$};
+\node[decision, below=of init] (test) {$n<3$};
+\node[process, below=of test] (sum) {$T=T+\displaystyle\int_0^1 x^n\,\mathrm{d}x$};
+\node[process, below=of sum] (inc) {$n=n+1$};
+\node[output, right=20mm of test] (print) {输出 $T$};
+\node[startstop, below=of print] (stop) {结束};
+\draw[flow] (start) -- (init);
+\draw[flow] (init) -- (test);
+\draw[flow] (test) -- node[right, midway] {是} (sum);
+\draw[flow] (sum) -- (inc);
+\draw[flow] (inc.west) -- ++(-12mm,0) |- (test.west);
+\draw[flow] (test.east) -- node[above, midway] {否} (print.west);
+\draw[flow] (print) -- (stop);
+\end{tikzpicture}

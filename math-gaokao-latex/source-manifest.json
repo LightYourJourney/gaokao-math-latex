@@ -1230,6 +1230,14 @@
         "gk-2015-regular-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1239,7 +1247,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7c27e0c2-dfe9-4ce7-bd1f-54a942949145",
+  "last_transaction_id": "71f96d9d-aca5-4ce8-ba21-4068b6dc49c2",
   "papers": [
     {
       "blocked_from": null,
@@ -18813,9 +18821,72 @@
       "title": "2015 年·山东卷·文科",
       "track": "arts",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_山东卷_理科/figures/q13-flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_山东卷_理科/figures/q17-frustum.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_shandong_science",
+        "id": "gk-2015-regular-shandong-science",
+        "note": "原卷无答案页；答案为项目独立推导，证据等级 D",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": null
+      },
+      "issue_ids": [
+        "ISSUE-1034",
+        "ISSUE-1035",
+        "ISSUE-1036",
+        "ISSUE-1037"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2015_山东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_山东理_含解析.md",
+        "questions": "2015/2015_数学真题_山东理_试题.md",
+        "solution_body": "2015/2015_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-501fd8b49559a60c0ab5208279e15d7d036a082f972029884741c90784c13225"
+      ],
+      "title": "2015 普通高等学校招生考试（山东卷理）",
+      "track": "science",
+      "year": 2015
     }
   ],
-  "revision": 3726,
+  "revision": 3739,
   "schema_version": 1,
   "sources": [
     {
@@ -34192,8 +34263,8 @@
       "exam_type": "regular",
       "git_blob_oid": "918cf28fc78e590513942d2b0cbb681e171166ad",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015山东理.pdf",
       "regions": [],
       "source_id": "src-501fd8b49559a60c0ab5208279e15d7d036a082f972029884741c90784c13225",

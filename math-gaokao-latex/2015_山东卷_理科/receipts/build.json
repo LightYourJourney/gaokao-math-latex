@@ -1,0 +1,300 @@
+{
+  "attempt_id": "f06473d1-96eb-406e-877f-929a4b34d97d",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/answers.tex",
+        "sha256": "0218fce02b11aeabab549bde1e76002213d2a782466b8ceb1c856aad36c612d9"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/answers_short.tex",
+        "sha256": "b7e820ef131333b61102c116e31dc503fd3c440309246ec77fe8ca27fb70ebf9"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/figures/q13-flowchart.tex",
+        "sha256": "1cd28759e342e19bc277d8ca7b3eb7f81b3f06f3f7369e78f5bc430b8a43f7ac"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/figures/q17-frustum.tex",
+        "sha256": "5b13727f8f7daff6101e6e0e44cf7eb73c3648f4e4255c9b5389785d3e8e4dbf"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/questions.tex",
+        "sha256": "4daf3f8038602507156a6680a23dbcd04152dfc5926c3d9de5722ae83b3a4859"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/印刷版.tex",
+        "sha256": "2301fd74ba719c1758acca49097ee6057f2d18807c5080cbb35870531ae208ff"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/简答版.tex",
+        "sha256": "2a438a6a663a634694813f7cde5c50627fe820b6f2176315f4790176fbd8ab47"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/解析版.tex",
+        "sha256": "3e6b76bf7d9deb4b0226f586402f94d03a42c31982bcaf5bd4b99c346f67c47b"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/试题版.tex",
+        "sha256": "7ebd7cf0ccc5d897619f483b98fff1c0da76c3556c660066e169e6f1bca8b011"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "89b2c65f407ff1afbc47e880c939ae927bc63c129f08eed382c2b38991f0aa32"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 5,
+        "path": "math-gaokao-latex/2015_山东卷_理科/build/试题版.pdf",
+        "sha256": "e5ff60ab8c592b8f60bee4af2281b399bf24f9fe440903916c93c50e68f356bd",
+        "size_bytes": 118597
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2015_山东卷_理科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "98--100",
+            "text": "Underfull \\hbox (badness 2469) in paragraph at lines 98--100",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 18,
+        "path": "math-gaokao-latex/2015_山东卷_理科/build/解析版.pdf",
+        "sha256": "a04d83d68a03512fd2d75f644a525705a47ef3fa280fed7f5ac06e69b3e21c13",
+        "size_bytes": 212864
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2015_山东卷_理科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/2015_山东卷_理科/build/简答版.pdf",
+        "sha256": "d8a7b7b2407858ed0f174b4910d2cb39de4d48f0e00a52b35f6ae3c81551b684",
+        "size_bytes": 129648
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2015_山东卷_理科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "360--363",
+            "text": "Underfull \\hbox (badness 1859) in paragraph at lines 360--363",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 13,
+        "path": "math-gaokao-latex/2015_山东卷_理科/build/印刷版.pdf",
+        "sha256": "d2c505e2ed835789ae7163d58c04e647daac6890efb1b7c8fda50b77322f18d7",
+        "size_bytes": 210893
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2015_山东卷_理科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-10-11T16:24:56+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2015/2015_数学真题_山东理_答案要点.md",
+        "sha256": "9db89078d6049cbd86c33387738349244112178a605217ea8a651e5a915fd6fa"
+      },
+      {
+        "path": "2015/2015_数学真题_山东理_解析正文.md",
+        "sha256": "f79a123f8c0a3a7ea4036ec2bf9339249ee1bf3ee5d302aa253b6f0a9318f6e6"
+      },
+      {
+        "path": "2015/2015_数学真题_山东理_试题.md",
+        "sha256": "3a0a944980ab2769cfe191b7274ad431f21bc62b3d642a61ebf669733b7504c5"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "40f69299bb2335d23d932b4f35d0c6a0adefb1607ccf0f998aafcdd7ef10a586"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/figures/q13-flowchart.tex",
+        "sha256": "1cd28759e342e19bc277d8ca7b3eb7f81b3f06f3f7369e78f5bc430b8a43f7ac"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/figures/q17-frustum.tex",
+        "sha256": "5b13727f8f7daff6101e6e0e44cf7eb73c3648f4e4255c9b5389785d3e8e4dbf"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/印刷版.tex",
+        "sha256": "2301fd74ba719c1758acca49097ee6057f2d18807c5080cbb35870531ae208ff"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/简答版.tex",
+        "sha256": "2a438a6a663a634694813f7cde5c50627fe820b6f2176315f4790176fbd8ab47"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/解析版.tex",
+        "sha256": "3e6b76bf7d9deb4b0226f586402f94d03a42c31982bcaf5bd4b99c346f67c47b"
+      },
+      {
+        "path": "math-gaokao-latex/2015_山东卷_理科/试题版.tex",
+        "sha256": "7ebd7cf0ccc5d897619f483b98fff1c0da76c3556c660066e169e6f1bca8b011"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "fc07ecebf8ed10eafed40a697c49aa23975d645d09fb0ac560b42bf2cd799c9e"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "79d4acaed1c43a09c48d6281507a4891c65318a341be67ea684cac20f58734d2"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
+      }
+    ],
+    "tree_sha256": "7b77fd432e6431f5c1db2852e7dd1614464c24815b8ac7ba2987c95efd8f94df"
+  },
+  "input_projection": "4be21ce5af42ba25ec0b3ac27ac1611de794542cd3c285dc1ae7ede4fc514795",
+  "manifest_revision": 3737,
+  "paper_id": "gk-2015-regular-shandong-science",
+  "previous_attempt_id": "8b13e050-f9a0-498a-8db0-f00a266a6408",
+  "project_dir": "2015_山东卷_理科",
+  "schema_version": 1,
+  "started_at": "2026-10-11T16:24:44+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}
