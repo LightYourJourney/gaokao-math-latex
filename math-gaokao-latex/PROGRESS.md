@@ -40,6 +40,7 @@
 | `phase2-b28` | 1977 江苏卷 | 四版 23 页逐页复核、16 个首面/候选/问题关联页高分辨率复核；0 警告；FINALIZED；保留两个 open 内容 blocker；四项门禁与全量报告检查通过 | `8867a327` |
 | `phase2-b29` | 1977 福建文科 | 四版 28 页逐页复核、11 个高分辨率页面复核；224 项检查通过；FINALIZED with blockers；全量报告检查通过 | `aeacb7cd` |
 | `phase2-b30` | 1977 福建理科 | 四版 33 页逐页复核、13 个高分辨率页面复核；264 项检查通过；FINALIZED with blockers；全量报告检查通过 | `984a2bde` |
+| `phase2-b31` | 1977 内蒙古理科 | 四版 28 页逐页复核、6 个首页/候选页高分辨率复核；224 项检查通过；FINALIZED；全量报告检查通过 | `315a56e7` |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -173,9 +174,9 @@
 - 验证快照：manifest revision 3839；来源 775、试卷 272、批次 138；批次 closed 49、closed_with_blockers 17、compiled_pending_review 70、provenance_verified 2；试卷 complete 86、blocked 45、compiled 137、editions_generated 4。福建理科仍 blocked；`ISSUE-0137/0138/0139` open，`ISSUE-0799` resolved。
 - 提交状态：已提交 `984a2bde`，未 push；提交后工作树干净。
 
-## 当前进行阶段
+## 最近完成阶段
 
-### `phase2-b31` — 1977 内蒙古理科
+### `phase2-b31` — 1977 内蒙古理科（已提交 `315a56e7`）
 
 - 预检完成：单卷、6 题 provenance 已登记，`issue_ids=[]`，无需重做转录或解题。
 - 历史回执：四版旧 build 均成功、页数 3/12/4/9，共 28 页；因生成输入树和工具链指纹变化 stale，旧 review 虽 passed 但绑定不同 build attempt，不可复用。旧 PDF 仍在。
@@ -191,8 +192,18 @@
 - 已完成子阶段：source manifest（775 项）、build receipt（1 卷 current/final）、review receipt（FINALIZED）、provenance（1 卷）scoped gates 全部退出码 0；`report.py render --all` 与 `check --all` 通过，报告与 manifest 一致且保留未完成状态；`git diff --check` 通过。
 - 修改文件：内蒙古理科 build/review receipts 与 PDF；`source-manifest.json`；`reports/phase2-b31.md`；本进度文件；renderer 管理的全量投影 `README_数学.md`、`math-gaokao-2017-2026/README.md`、本项目 `README.md`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`。未修改题目源、答案或 provenance。
 - 验证快照：manifest revision 3842；来源 775、试卷 272、批次 138；批次 closed 50、closed_with_blockers 17、compiled_pending_review 69、provenance_verified 2；试卷 complete 87、blocked 45、compiled 136、editions_generated 4。内蒙古理科无 issue，production state `complete`。
-- 待完成：核对精确 diff 并提交本批；之后按 manifest 顺序继续。
-- 下一步：复查 worktree/branch 与本批 diff，单批提交 `phase2-b31`；不 push。
+- 提交状态：已提交 `315a56e7`，未 push；提交后工作树干净。
+
+## 当前进行阶段
+
+### `phase2-b32` — 1977 河南卷
+
+- 预检完成：单卷、10 题 provenance 已登记；`ISSUE-0140` 至 `ISSUE-0149` 全部为 resolved，旧有题目与解答成果可复用。
+- 历史回执：四版旧 build 成功，页数 3/14/4/11，共 32 页；因生成输入树和工具链指纹变化 stale。旧 review passed 但绑定不同 build attempt，不可复用；四份旧 PDF 仍在。
+- 已完成子阶段：provenance 检查未发现题目证据错误，仅报告 paper/batch 派生缓存状态不一致；build validator 显示 1 卷 stale、0 失败；review validator 显示 build stale。
+- 修改文件：本进度文件；尚未修改河南卷题目源、答案、provenance 或 issue 内容。
+- 待完成：正式重建四版，逐页复核并覆盖候选/历史 issue 关联页；finalize 后清理中间物，执行 scoped gates 与全量报告检查并单批提交。
+- 下一步：formal build `phase2-b32` 并准备当前 attempt review work items；不重复已登记的 10 题转录与解题。
 
 ## 最近一次全库状态快照
 
@@ -237,5 +248,6 @@
 - `phase2-b28`（1977 江苏卷）已于 `8867a327` 提交；两个题面疑义保留为 blocker。
 - `phase2-b29`（1977 福建文科）已于 `aeacb7cd` 提交；四个内容 blocker 保持 open。
 - `phase2-b30`（1977 福建理科）已于 `984a2bde` 提交；三个内容 blocker 保持 open。
-- `phase2-b31`（1977 内蒙古理科）已完成 28 页/224 项视觉复核、finalize、清理和全量报告检查；待提交。
+- `phase2-b31`（1977 内蒙古理科）已于 `315a56e7` 提交；该卷无内容 issue。
+- 当前推进 `phase2-b32`（1977 河南卷）；10 条既存 issue 均 resolved，历史 build/review stale，需正式重建与重审。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
