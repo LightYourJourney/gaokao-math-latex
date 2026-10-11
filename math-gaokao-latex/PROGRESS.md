@@ -315,5 +315,6 @@
 - 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，状态 `closed`，无问题；`reports/phase2-b35.md` 已生成，manifest revision 3854。
 - 已完成子阶段：清理四卷 `build/` 内各 24 个非 PDF 文件（每卷保留四份 PDF）、本批 16 个 work items 与临时目录 164 张 PNG；复查四卷各 4 PDF、0 非 PDF，work/temp 目录均已删除。
 - 已完成子阶段：scoped gates 全部通过：source manifest 775 artifacts；build receipts 4 succeeded、0 stale/invalid/missing/failed；review `FINALIZED`；provenance `OK：4 卷`。
-- 待完成：全量报告 render/check、diff 核查并提交。
-- 下一步：运行 `report.py render --all` 与 `report.py check --all`，确认所有投影与 manifest 一致并保留未完成状态。
+- 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标。
+- 待完成：运行 `report.py check --all`、最终 diff 核查并提交。
+- 下一步：确认六个报告投影与 manifest 一致、未完成状态被保留，再审阅本批 diff。
