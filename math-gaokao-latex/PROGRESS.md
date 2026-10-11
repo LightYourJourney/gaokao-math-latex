@@ -539,3 +539,35 @@
 - 下一批：manifest 顺序为 `phase2-b45`（1958 北京、云南、四川、江苏四卷），当前 `compiled_pending_review`。
 - 已完成阶段：b44 内容与报告投影提交 `99a01770`（`docs: 完成1977连云镇江黑龙江三卷复核`）；未 push。
 - 下一步：单独提交本进度记录；随后检查并继续 b45。
+
+### `phase2-b45` — 1958 北京、云南、四川、江苏
+
+- 预检完成：起始 manifest revision 3884；source manifest validate 通过，批次 issue 列表为空；生成器 `--check` 显示四卷输出一致。
+- provenance 共 32 题（北京 11、云南 8、四川 8、江苏 5），逐题 transcription review 均 passed、答案证据均 A、conflict 均 none；复用既有转录与解题/盲核结果，不重做内容。
+- `provenance.py status` 显示四卷 `editions_generated`、批次 `provenance_verified`；四卷旧 build receipts 因生成输入树和工具链指纹变化 stale，需要正式重建。
+- 既有四版 PDF 页数依次为北京 2/12/3/10、云南 1/10/2/8、四川 1/8/2/6、江苏 1/8/2/6，共 82 页；每卷 build 目录现有四版 PDF，无需改题目、答案或 provenance。
+- 已完成子阶段：正式构建四卷四版完成，manifest revision 3886；页数与既有 PDF 相同，共 82 页。Build attempts：北京 `6915f50f-0562-40f9-aebf-a899be72e6cd`、云南 `d6aba18a-7afa-4e19-846c-7871851d2a26`、四川 `791ae4ae-9980-48a4-9a0f-a9a8962f1376`、江苏 `427245e1-9579-4332-af96-bf3b1bb5a270`。四卷均无 failed/missing-character/Overfull warning；build receipt 校验无 failed/invalid/missing/stale，pending review 为预期状态。
+- 修改文件：本进度文件、四卷 build receipts/PDF；未更改题目源、答案或 provenance。
+- 已完成子阶段：16 张接触表检查覆盖四卷四版全部 82 页；未见裁切、遮叠、缺字、异常分页或答案串版。
+- 已完成子阶段：16 个候选页均已 120dpi 高分辨率逐张复核；字形、公式、图稿、页眉页脚和页面边界清晰，无需版式修复或重编。
+- 阶段验证：接触表覆盖 82/82 页，候选页复核 16/16 通过；后续已登记 656 项逐页视觉检查（82 页 × 8 项），全部通过。
+- 阶段修改文件：仅本进度文件；渲染图和 review work items 位于临时目录/忽略 `.work`，不进入版本控制。
+- 已完成子阶段：16 份当前 attempt review work items 登记 82 页 × 8 项共 656 项 pass 检查，0 pending、0 non-pass；逐份核对 paper/edition、build attempt 与 PDF SHA-256 均匹配当前 build receipts。
+- 阶段验证：`check-batch` 仅报告正式 review receipts 仍绑定旧 build attempt/输入树/依赖闭包/工具链/PDF；此为 finalize 刷新正式回执前的预期状态。无 warning，无需 warning exemption。
+- 阶段修改文件：本进度文件及忽略的 `.work/phase2-b45/review/` 下 16 份工作项；未改题目、答案、provenance 或 LaTeX 源。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b45 状态 `closed`、无问题；正式 review receipts 更新并生成 `reports/phase2-b45.md`，manifest revision 3887。
+- 阶段修改文件：四卷 review receipts、manifest 状态投影、本批报告与本进度文件；忽略工作项和临时 PNG 待清理。
+- 已完成子阶段：清除四卷 build 目录各 24 个非 PDF 编译中间物，共 96 个；每卷保留四份 PDF、0 个非 PDF。`.work/phase2-b45/` 工作项与 `/tmp/gk-phase2-b45-review.bpWipZ/` 临时页面/接触表/候选 PNG 已移入系统废纸篓，两路径确认不存在。
+- 阶段验证：四卷 build 目录逐卷核验为 4 PDFs、0 非 PDF；四卷 PDF 均保留。
+- 阶段修改文件：本进度文件及四卷 build 目录中的忽略编译产物；未删除源文件或 PDF。
+- 已完成子阶段：b45 scoped gates 全通过：source manifest validate；生成器 `--check` 显示 4 卷一致；build receipts 4 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：4 卷`。
+- 阶段验证：五项 scoped gates 均退出码 0，批次维持 `closed`。
+- 阶段修改文件：本进度文件；门禁检查未产生额外内容源改动。
+- 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认投影与全量 manifest 当前一致，并保留未完成状态。
+- 阶段验证：全量报告 render/check 均退出码 0。
+- 阶段修改文件：全量报告/README 投影、本批报告及本进度文件；尚待最终 diff 审核确认完整范围。
+- 已完成子阶段：最终 diff 审核确认 17 个 tracked 文件，范围仅含四卷 build/review receipts、manifest、全量报告/README 投影、本批报告及本进度文件；无题目/答案/provenance/LaTeX 源或代码改动。`git diff --check` 通过，四卷 16 份 PDF 保留。
+- 验证快照：manifest revision 3887；b45 `closed`，82 页、656 项视觉检查通过，0 warning exemption。全库批次状态：closed 64、closed_with_blockers 17、compiled_pending_review 55、provenance_verified 2；试卷 production state：complete 136、compiled 87、blocked 45、editions_generated 4。该快照只反映当前进度，不代表全库完成。
+- 已完成阶段：b45 内容与报告投影提交 `9e7767b7`（`docs: 完成1958京滇川苏四卷复核`）；未 push。
+- 下一批：manifest 顺序为 `phase2-b46`（1958 湖北、湖南、东北、华东四卷），当前 `compiled_pending_review`。
+- 下一步：单独提交本进度记录；随后检查并继续 b46。
