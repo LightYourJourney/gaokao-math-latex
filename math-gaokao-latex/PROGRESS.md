@@ -309,5 +309,6 @@
 - 已完成子阶段：formal build 四卷四版成功，manifest revision 3853；页数分别为安徽理科 4/19/5/15（43）、安徽文科 2/11/3/9（25）、广东 3/13/4/10（30）、四川 3/15/4/12（34），共 132 页，四卷均 0 warning。Build attempts：`26b7a80b-4b7b-4953-ab83-67db60a65fe6`、`3341aa58-134d-421f-b714-8de0ecf0dbd3`、`31663c9d-fb2d-4df9-ab0f-f8b356f370ed`、`0a1f1d25-3d40-4c8f-828a-66a83e18e467`。
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`。题目源、答案与 provenance 未改。
 - 已完成子阶段：`prepare-batch` 生成 16 个 review work items，覆盖四卷 × 四版，均绑定本轮 build attempts。
+- 已完成子阶段：16 个版本接触表覆盖全部 132 页，已逐页检查；未见明显裁切、重叠、缺字或分页断裂。
 - 待完成：逐页视觉复核及高分辨率候选页检查，登记复核并 finalize；之后清理、跑 scoped/full-report gates 并提交。
-- 下一步：生成并逐页检查覆盖 132 页的版面接触表，然后高分辨率检查候选页。
+- 下一步：按 16 个 work items 登记的候选页，在 120dpi 下逐页复核后登记全页检查结果。
