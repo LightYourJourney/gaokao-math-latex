@@ -580,5 +580,62 @@
 - `provenance.py status` 显示四卷 `editions_generated`、批次 `provenance_verified`；缓存状态仍为 compiled/compiled_pending_review。旧 build receipts 四卷均因生成输入树与工具链指纹变化 stale，review receipts 随 build 失效。
 - 四卷现有四版 PDF 页数分别为湖北 1/8/2/7（18）、湖南 1/7/2/5（15）、东北 1/7/2/6（16）、华东 2/10/3/7（22），共 71 页；每卷 build 目录仅含四版 PDF，无编译中间物。无题目、答案或 provenance 变更需求。
 - 阶段修改文件：仅本进度文件；预检未更改来源、manifest、provenance 或试卷内容。
-- 待完成：正式重建、逐页视觉复核、finalize、清理中间物、scoped gates、全库报告投影和提交。
-- 下一步：b46 formal build 四卷各四版，记录实际页数、warning 和 build attempt 后准备 16 份 review work items。
+- 已完成子阶段：正式构建四卷四版完成，manifest revision 3889；页数与既有 PDF 相同，共 71 页。Build attempts：湖北 `bf8ac118-14d3-496e-a2cc-7ac30dc0c16f`、湖南 `d638bc82-8185-41c1-8b48-a3d3f75601cf`、东北 `fc9177a5-1544-47b2-a762-a3f66f6fe1d6`、华东 `1fbc335b-b101-476d-ac4c-2cf17ab70356`。四卷均无 failed/missing-character/Overfull warning；build receipt 校验无 failed/invalid/missing/stale，pending review 为预期状态。
+- 阶段修改文件：本进度文件、四卷 build receipts/PDF；未更改题目源、答案或 provenance。
+- 已完成子阶段：`prepare-batch` 建立 16 个当前 attempt review work items，覆盖四卷 × 四版。
+- 阶段验证：16 个工作项均与本轮 build attempt 配对，待复核页数共 71 页。
+- 阶段修改文件：本进度文件及忽略的 `.work/phase2-b46/review/` 工作项；未改题目、答案、provenance 或生成源。
+- 已完成子阶段：将四卷四版 PDF 全部渲染为 71 张页面图，并生成 16 张接触表。初次 montage 因 ImageMagick 未解析字体名失败；确认系统字体存在后改用 `/System/Library/Fonts/Helvetica.ttc`，单张探测和全部接触表生成均成功，没有重跑构建。
+- 阶段验证：页面图覆盖 71/71 页，16 张接触表均生成；当前临时渲染目录为 `/tmp/gk-phase2-b46-review.EBlT0A/`。
+- 阶段修改文件：仅本进度文件；页面图/接触表为临时 PNG。
+- 已完成子阶段：16 张接触表逐页覆盖全部 71 页；16 个候选页均完成 120dpi 高分辨率复核。发现湖北解析版第 6 页末尾仅余“附加题 6”标题、第 7 页才开始对应解析正文；该问题仅涉及分页，其他已检页面未见视觉缺陷。
+- 阶段验证：接触表覆盖 71/71 页；候选页复核 16/16，其中 15 页确认通过，湖北解析版候选页记录一项待修版式问题；另将第 7 页以 120dpi 补充核对以确认跨页关系。
+- 阶段修改文件：本进度文件；原始页面图、接触表和候选图位于临时目录/忽略 `.work`；尚未修改试卷源。
+- 已完成子阶段：定位到 `1958_湖北/answers.tex` 中“附加题 6”标题前的分页保护不足；在标题前增加 `\Needspace{5\baselineskip}`，只约束分页，不改题目、解答文字或结论。
+- 阶段修改文件：本进度文件、`1958_湖北/answers.tex`；修复尚待正式重建和视觉复核验证。
+- 已完成子阶段：湖北卷四版正式重建，manifest revision 3891；build attempt `53e2fe5c-1d39-4b30-96f3-935aac5bb40f`。四版页数仍为 1/8/2/7，共 18 页，0 warning，构建成功。
+- 阶段验证：`validate-receipts` 对湖北卷无 failed/invalid/missing/stale；原题面/答案内容未改，打印版页数不变；分页修复待视觉复核验证。
+- 阶段修改文件：`1958_湖北/answers.tex`、湖北 build receipt/PDF、manifest、本进度文件。
+- 已完成子阶段：恢复时先核对 Git diff 与本进度记录；旧 b46 review 工作项共 16 份、覆盖 71 页，全部为 pending 模板，无检查结果、批注或候选页覆盖修改。将旧 review 工作项目录移入系统废纸篓（可恢复），按 manifest revision 3891 的当前 attempt 重新 `prepare-batch`，成功生成 16 份工作项、覆盖 71 页。
+- 阶段验证：新工作项已绑定湖北重建后的当前 build；未改动湖南、东北、华东 PDF 或源文件。旧模板仅可从系统废纸篓恢复。
+- 阶段修改文件：忽略的 `.work/phase2-b46/review/` 工作项及本进度文件；未改题目、答案、provenance 或生成源。
+- 已完成子阶段：重渲染湖北四版 18 页并生成 4 张接触表；修复后解析版第 6 页已完整收束附加题 5，第 7 页从附加题 6 开始。不过 120dpi 复核发现第 7 页末尾另有“附加题 8／解析”孤立标题，故不将此次视觉验证判为通过。
+- 阶段验证：湖北四版图像共 18 页、4 张接触表；修复目标第 6–7 页实图已核对。初次批量渲染无输出的根因是 zsh 不对未加引号的标量作预期分词，致 edition 与 candidate 页码连成一个路径；改为明确的 edition 循环后渲染成功。
+- 阶段修改文件：仅本进度文件；临时图像在 `/tmp/gk-phase2-b46-review.EBlT0A/rebuild/`。
+- 已完成子阶段：在“附加题 8”标题前增加 `\Needspace{5\baselineskip}`，只约束分页、不改题目或解答内容；待再次构建及视觉复核。
+- 阶段修改文件：`1958_湖北/answers.tex`、本进度文件。
+- 已完成子阶段：湖北四版再次正式重建，manifest revision 3893；新 build attempt `7727ac7d-cccc-4667-b4a1-ad7f5ad4a188`，四版均 succeeded、0 warning，页数仍为试题版 1、解析版 8、简答版 2、印刷版 7（18 页）。
+- 阶段验证：正式 build 汇总无 failed；修复仅在解析版答案源增加分页保护，其他内容未改。视觉复核尚待完成。
+- 阶段修改文件：`1958_湖北/answers.tex`、湖北 build receipt/PDF、manifest、本进度文件。
+- 已完成子阶段：当前 attempt 下湖北四版重新渲染 18 页并生成 4 张新版接触表；湖北候选页（印刷版 5、简答版 1、解析版 6、试题版 1）均完成 120dpi 复核，解析版第 7、8 页另做高分辨率复核。第 6 页附加题 5 收束完整，第 7 页附加题 6、7 内容完整，第 8 页附加题 8 正文完整，未见孤立标题、裁切、缺字或答案串版。
+- 阶段验证：结合其他三卷未变 PDF 的 12 张既有接触表/候选页复核，覆盖全批 71/71 页与 16/16 候选页；所有页面通过。无警告需要豁免。
+- 阶段修改文件：仅本进度文件；更新后的湖北渲染图位于 `/tmp/gk-phase2-b46-review.EBlT0A/rebuild2/`，其他卷复用已检查图像。
+- 已完成子阶段：当前 16 份 review work items 全部绑定最终 build attempt、PDF SHA-256 与页数；登记 71 页 × 8 项共 568 条 pass 检查，候选页结论注明 120dpi，其余页面注明接触表逐页复核。
+- 阶段验证：工作项核验 16/16，覆盖 71 页；所有页面与检查均 pass，0 pending、0 non-pass，且无 warning exemption。`check-batch` 当前仅报告正式 review receipts 仍绑定旧 build（attempt、输入树、依赖、工具链/视觉工具指纹及 PDF 已变化），这是 finalize 刷新正式回执前的预期状态。
+- 阶段修改文件：忽略的 `.work/phase2-b46/review/` 下 16 份工作项及本进度文件；未改题目内容或 provenance。
+- 阶段发现与修复：首次 finalize 被 artifact stale 门禁拒绝。根因是生成器规定 `answers.tex` 为派生文件、禁止手改；generator `--check` 发现差异后，已将纯分页指令移入规范源 `1958/1958_湖北_数学真题_解析正文.md` 的附加题 6/8 前，并完成规范重生成、正式重编和最终视觉复核。
+- 阶段修改文件：规范解析正文、其派生 `answers.tex` 与本进度文件；派生文件已由生成器更新并通过一致性检查。
+- 已完成子阶段：从规范解析正文运行单卷 generator `--write`，原子更新 3 个派生目标；随后单卷 `--check` 通过，b46 全批 generator `--check` 也通过。
+- 已完成子阶段：湖北再次正式构建，manifest revision 3895；build attempt `a491993a-e0e1-45c0-b560-45dced498262`，四版 succeeded、共 18 页、0 warning。此 attempt supersedes `7727ac7d-cccc-4667-b4a1-ad7f5ad4a188`。
+- 阶段修改文件：规范解析正文、湖北派生 TeX/index、湖北 build receipt/PDF、manifest 与本进度文件。
+- 已完成子阶段：针对最终 attempt `a491993a-e0e1-45c0-b560-45dced498262` 重渲染湖北四版 18 页并生成 4 张接触表；全部接触表及湖北 4 个候选页（另复查解析版第 7、8 页）重新目视通过。解析版第 6 页末附加题 5 结束，第 7 页完整呈现附加题 6、7，第 8 页完整呈现附加题 8。
+- 阶段验证：全批 71/71 页与 16/16 候选页复核通过；湖北新版无裁切、孤立标题、缺字或异常留白。三卷其余 PDF 未改变，沿用已完成的逐页视觉核查。
+- 阶段修改文件：仅本进度文件；当前湖北截图位于 `/tmp/gk-phase2-b46-review.EBlT0A/final/`。
+- 已完成子阶段：按最终 build attempt 重新生成 16 份工作项；保存旧工作项备份，恢复三卷未变的 12 份 pass 记录，仅以最终湖北 PDF 重建 4 份工作项并登记 18 页 × 8 项共 144 条 pass。最终核验 16/16 工作项、71 页、568 项均 pass，0 pending/non-pass；build receipt 校验无 failed/invalid/missing/stale。
+- 阶段验证：逐项比对当前 attempt、PDF 路径/页数/SHA-256；湖北 4 份绑定 `a491993a-e0e1-45c0-b560-45dced498262`，其余三卷原 12 份仍绑定各自当前 attempt。`check-batch` 仍报告正式 review receipts 旧于当前构建，这是 finalize 应刷新前的预期状态。
+- 阶段修改文件：忽略的 `.work/phase2-b46/review/` 当前工作项与 `review-before-a491993a/` 旧记录备份、本进度文件。
+- 已完成子阶段：`finalize-batch` 返回 `FINALIZED`，b46 状态 `closed`、无问题；四卷正式 review receipts 与当前 build 对齐，并生成 `reports/phase2-b46.md`，manifest revision 3896。
+- 阶段修改文件：四卷 review receipts、manifest 状态投影、本批报告与本进度文件；忽略工作项和临时 PNG 在后续清理子阶段已移入废纸篓。
+- 已完成子阶段：清理四卷 build 目录各 24 个非 PDF 编译中间物，共 96 个；每卷现仅保留四版 PDF、0 个非 PDF。b46 `.work` 下 32 份工作项/备份及本次临时渲染目录中的 189 张 PNG 均移入系统废纸篓（可恢复），路径确认不存在。
+- 阶段验证：逐卷核验 4 PDFs、0 intermediates；PDF 未删除；工作项与临时图像已清理。
+- 阶段修改文件：本进度文件及四卷 build 目录内忽略的编译产物；未删除源文件或 PDF。
+- 已完成子阶段：五项 b46 scoped gates 全部通过：source manifest validate；generator `--check` 显示四卷一致；build receipts 四卷 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：4 卷`。
+- 阶段验证：五项命令均退出码 0；manifest revision 3896，b46 状态 `closed`。
+- 阶段修改文件：本进度文件；门禁检查未产生额外内容源改动。
+- 已完成子阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认与当前全量 manifest 一致，并保留未完成状态。
+- 阶段验证：全量报告 render/check 均成功退出。
+- 阶段修改文件：全量 README/报告投影、本批报告与本进度文件；待最终 diff 审核确定精确范围。
+- 已完成阶段：b46 内容、正式回执及报告投影提交 `7ed0318e`（`docs: 完成1958鄂湘东北华东四卷复核`）；未 push。
+- 阶段关闭快照：manifest revision 3896；b46 `closed`，四卷 complete、71 页、568 项视觉检查通过，0 warning exemption。16 份 PDF 保留，编译目录仅 PDF；工作项/临时 PNG 已移入系统废纸篓。
+- 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b46，不代表全库完成。
+- 下一步：单独提交本进度记录；随后检查并预检 manifest 下一批 `phase2-b47`。
