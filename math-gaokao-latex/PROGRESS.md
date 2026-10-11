@@ -34,7 +34,7 @@
 | `phase1-b22` | 1965 全国卷 | 四版 32 页逐页复核、4 个候选页高分辨率复核；0 警告；FINALIZED；scoped gates 与全量报告检查通过；构建目录仅保留 PDF | `e401d383` |
 | `phase2-b23` | 1977 上海卷文理科 | 四版 53 页逐页复核、8 个候选页及 2 个历史问题页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `3477d184` |
 | `phase2-b24` | 1977 北京卷文理科 | 四版 39 页逐页复核、8 个候选页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `b59a82f9` |
-| `phase2-b25` | 1977 天津卷 | 四版 24 页逐页复核、候选及问题相关页高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `b0a8f0ff` |
+| `phase2-b25` | 1977 天津卷 | 四版 24 页逐页复核、候选及问题相关页高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `d0ae344e` |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -49,9 +49,9 @@
 - 验证：source manifest `OK`（775 项）；build `OK：2 卷`；review `FINALIZED：phase2-b24`；provenance `OK：2 卷`；`report.py check --all` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”；构建目录各仅剩四份 PDF。
 - 提交状态：已提交 `b59a82f9`，未 push。
 
-## 当前进行阶段
+## 最近完成阶段
 
-### `phase2-b25` — 1977 天津卷
+### `phase2-b25` — 1977 天津卷（已提交 `d0ae344e`）
 
 - 既有状态：5 题 provenance 已存在；`ISSUE-0127/0128` 均为 resolved。旧 build 四版成功、旧 review passed，但 review 与 build attempt 不匹配；build validator 确认生成输入树和工具链指纹变化导致旧构建回执失效；旧页数为 3/9/4/8，共 24 页。
 - 已完成子阶段：核对 manifest、provenance、问题项与 receipts；provenance 检查未报题目证据错误，只指出派生状态缓存不一致（paper `compiled` vs `editions_generated`，batch `compiled_pending_review` vs `provenance_verified`）。不重做题目转录或解题。
@@ -69,8 +69,18 @@
 - 已完成子阶段：`report.py check --all` 通过，报告与全量 manifest 当前一致，未完成状态已在报告中保留；回执说明修正后的 scoped gates 全部通过，全量报告再次经单事务 render 写入并回读校验六个目标。
 - 已完成子阶段：最终 `report.py check --all` 再次通过；manifest revision 3824，来源 775、试卷 272、批次 138；批次状态 closed 48、closed_with_blockers 13、compiled_pending_review 75、provenance_verified 2；试卷状态 complete 85、blocked 45、compiled 138、editions_generated 4。
 - 最终核对：`git diff --check` 通过；天津卷 build 目录只有四份 PDF；11 个受本批事务影响的 tracked 文件包含天津卷回执、批次/全量报告投影、manifest 与本进度文件，无题目源文件改动。
-- 提交状态：已提交 `b0a8f0ff`，未 push；提交后工作树待验证。
-- 下一步：验证提交后工作树干净，再按计划进入 `phase2-b26`（1977 河北卷）预检。
+- 提交状态：已提交 `d0ae344e`，未 push。
+
+## 当前进行阶段
+
+### `phase2-b26` — 1977 河北卷
+
+- 既有状态：单卷、8 题 provenance 已登记，`issue_ids=[]`；不重做转录或解题。manifest 缓存为 `compiled_pending_review`，provenance 检查未发现题目证据问题，仅报告派生缓存状态不一致（paper `compiled` vs `editions_generated`，batch `compiled_pending_review` vs `provenance_verified`）。
+- 历史回执：旧 build 四版均成功，页数 3/11/4/8，共 26 页；build 因生成输入树与工具链指纹变化失效。旧 review `passed` 但绑定另一 build attempt，不能复用。
+- 已完成子阶段：核对 batch、paper/source 映射、provenance、问题项与历史 receipts；build/review validators 均确认旧证据失效。工作树在 b25 提交后干净。
+- 修改文件：仅本进度文件；尚未修改河北卷源文件或正式回执。
+- 待完成：对河北卷进行 formal build，准备并绑定新 attempt 的四版 review 工作项，随后逐页视觉复核。
+- 下一步：只重建 `phase2-b26`，复用现存 provenance 与题目内容，不重做转录/解题。
 
 ## 最近一次全库状态快照
 
@@ -109,6 +119,6 @@
 - `phase1-b22`（1965 全国卷）已于 `e401d383` 提交。
 - `phase2-b23`（1977 上海文理卷）已于 `3477d184` 提交。
 - `phase2-b24`（1977 北京文理卷）已于 `b59a82f9` 提交。
-- `phase2-b25`（1977 天津卷）已于 `b0a8f0ff` 提交。
-- 下一批按时间顺序为 `phase2-b26`（1977 河北卷，1 卷，`compiled_pending_review`）。
+- `phase2-b25`（1977 天津卷）已于 `d0ae344e` 提交。
+- 当前推进 `phase2-b26`（1977 河北卷）；provenance 已有且问题项为空，旧 build/review 指纹失效，需正式重建。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
