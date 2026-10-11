@@ -760,4 +760,34 @@
 - 既有四版 PDF 页数依次为 1982 文科 2/15/3/11（31）、1983 理科 3/20/4/14（41）、1983 文科 3/19/4/14（40）、1984 理科 3/19/4/15（41），共 153 页。
 - Build receipt validator 显示四卷均 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 当前批次仍为 `compiled_pending_review`。下一步须正式重建四卷四版，再检查警告与复核状态。
 - 阶段修改文件：仅本进度文件；只读预检未更改试卷源、manifest、provenance、图稿或 PDF。
-- 下一步：正式构建四卷四版并记录 attempt、页数与 warning；随后准备当前 attempt work items 并执行全页视觉复核。
+- 已完成阶段：四卷四版正式构建成功，manifest revision 3907，共 153 页；build attempts：1982 文科 `ad6ead08-5ebd-494a-97a3-fb50702babc2`、1983 理科 `58951bd6-388d-480a-9735-54b79b901bcb`、1983 文科 `753e5d37-6c2b-4638-84a8-69bda776d143`、1984 理科 `e8c80b25-f7d6-491b-bdea-c8073456df15`。四版页数与构建前既有 PDF 完全一致；无 build failure。
+- 阶段验证：build receipt validator `OK`，四卷均成功、0 failed/invalid/missing/stale，当前为 4 pending review。共 1 条 Overfull warning：1983 理科解析版行 424、45.68964pt；其他三卷及其余版本无 warning。
+- 阶段修改文件：本进度文件、四卷 build receipts/PDF；未更改题目、答案、provenance、图稿或生成源。
+- 已完成子阶段：`prepare-batch` 为四个当前 build attempts 生成 16 份 review work items，覆盖 153 页；共 1 条待核 warning，所有 1,224 个页面检查项初始为 pending。
+- 阶段验证：16/16 工作项均绑定正确 attempt 与当前 PDF SHA-256/页数；每页八项齐全，覆盖 153/153 页。
+- 阶段修改文件：本进度文件与忽略的 `math-gaokao-latex/.work/phase2-b50/review/` 当前工作项；未改试卷内容。
+- 已完成子阶段：153 页已渲染为 16 张接触表并完成逐页浏览；未见明显缺页、裁切、缺图或串版。唯一 warning 为 1983 理科解析版 `answers.tex` 行 424、Overfull hbox 45.68964pt，经源行和 PDF 文本定位至解析版 p11 的三角恒等式长公式。
+- 阶段验证：接触表覆盖 153/153 页，16/16 接触表已检查；warning 对应 p11 的定位已由日志、源行和 PDF 文本交叉确认，尚待高分辨率目视结论。
+- 阶段修改文件：仅本进度文件；接触表及 153 页预览位于 `/tmp/gk-phase2-b50-review.nHjJJW/`；未更改试卷源或 PDF。接触表工具初次因 ImageMagick 默认字体未配置而失败，确认原因后显式指定系统 Arial 字体，未重做 PDF 渲染。
+- 已完成子阶段：16 个候选页均完成 120dpi 复核；另高分辨率检查 1983 理科解析版 p11 warning 页。各页字形、标题题号、选项公式、图稿标注、页眉页脚、分页留白、字号与答案泄漏均无可见问题；warning 公式完整可读、未裁切且不妨碍阅读，无需改源。
+- 阶段验证：候选页 16/16 通过；唯一 warning 的 PDF 页码为 p11，由构建日志、`answers.tex:424` 和页面文本/高分辨率图像相互确认，可作精确视觉豁免。
+- 阶段修改文件：仅本进度文件；16 张候选图及 warning 页图位于 `/tmp/gk-phase2-b50-review.nHjJJW/candidates/`；未更改试卷源或 PDF。
+- 已完成子阶段：16 份当前 attempt work items 均已登记，覆盖 153 页 × 8 项共 1,224 条 pass；唯一 warning exemption 精确绑定 Overfull/hbox、源行 424、宽度 45.68964pt、`answers.tex` 与 PDF p11，视觉结果 pass。
+- 阶段验证：结构汇总 16/16 工作项、153 页、1,224 pass、0 pending、1 exemption；`git diff --check` 通过。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b50/review/` 下 16 份工作项。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b50 状态 `closed`、无问题；正式 review receipts 与四卷当前 build attempts 对齐，并生成 `reports/phase2-b50.md`，manifest revision 3908。
+- 阶段验证：4 卷、153 页、1,224 项视觉检查全部通过；唯一当前 build warning 有精确页面及视觉豁免，无失败项。
+- 阶段修改文件：四卷正式 review receipts、manifest 批次状态投影、本批报告与本进度文件；忽略工作项及临时 PNG 尚待清理。
+- 已完成子阶段：四卷 build 目录各 24 个非 PDF 编译中间物，共 96 个，均移入系统废纸篓；每卷保留 4 份 PDF、0 个非 PDF。16 份 `.work/phase2-b50/review/` 工作项与 `/tmp/gk-phase2-b50-review.nHjJJW/` 临时审阅目录（186 张 PNG）也移入系统废纸篓，路径确认不存在。
+- 阶段验证：逐卷核验 4 PDFs、0 intermediates；PDF 保留，LaTeX 源与正式回执未删除；忽略工作项及临时图像已清理，操作可从系统废纸篓恢复。
+- 阶段修改文件：本进度文件及四卷 build 目录中的忽略编译产物；未删除源文件或 PDF。
+- 已完成阶段：五项 b50 scoped gates 全部通过：source manifest validate；generator `--check` 四卷一致；build receipts 为 4 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：4 卷`。
+- 阶段验证：五项命令均退出码 0；manifest revision 3908，b50 `closed`。
+- 阶段修改文件：仅本进度文件；门禁检查未产生额外内容源改动。
+- 已完成阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认报告与当前全量 manifest 一致，并保留整个语料库的未完成状态。
+- 阶段验证：全量报告 render/check 均成功退出；b50 五项 scoped gates 仍全部通过。
+- 阶段修改文件：全量 README/报告投影、本批报告、四卷 build/review receipts、manifest 与本进度文件；未更改试卷转录、答案、provenance 或 LaTeX 源。
+- 已完成阶段：b50 内容、正式回执与全量报告投影提交 `5670311f`（`docs: 完成1982-1984全国四卷复核`）；未 push。
+- 阶段关闭快照：manifest revision 3908；b50 `closed`，4 卷、153 页、1,224 项视觉检查通过，1 条 warning 有精确页面豁免；16 份 PDF 保留，编译目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
+- 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b50，不代表全库完成。
+- 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b51`。
