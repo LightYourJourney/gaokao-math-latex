@@ -334,5 +334,7 @@
 - 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`。未改题目源、答案或 provenance。
 - 已完成子阶段：`prepare-batch` 生成 16 个 work items，覆盖四卷 × 四版并绑定本轮 build attempts。
 - 已完成子阶段：16 个版本接触表覆盖全部 106 页并逐页检查；未见明显裁切、重叠或分页异常。贵州卷 18 条 missing-character warning 仍待页面级高分辨率确认。
-- 待完成：检查候选/警告页；明确贵州缺字是否可见，再决定是否需最小 TeX 表示修复及 provenance 重核；完成复核和 finalize 后清理、跑 gates 并提交。
-- 下一步：高分辨率检查 16 个候选页及贵州警告相关页（试题 p2、简答 p2、解析 p8—p10、印刷 p2/p7/p8），判定缺字是否影响源注。
+- 已完成子阶段：16 个候选页与贵州 warning 关联页完成 120dpi 检查（共 20 个不同页码）；确认源注在四版均实际缺字：试题/简答/印刷版源注的 `θ` 消失，解析/印刷版源注的 `ⁿ` 与 `α` 消失。其他候选页无可见布局缺陷。
+- 判断：这是 `questions.tex`、`answers.tex` 两处源注中 Unicode 数学字符未按数学模式排版造成的视觉缺字；不涉及题目转录、数学结论或答案。将只改这两处 TeX 表示，随后对贵州卷 provenance 重新校验并重建四版，不把缺字 warning 豁免。
+- 待完成：最小 TeX 标记修复、provenance check、四卷重建、全页/候选/警告页复核、登记和 finalize；之后清理、跑 gates 并提交。
+- 下一步：修改贵州卷 `questions.tex` 与 `answers.tex` 两处源注，将 Unicode 希腊字母/上标替换为等义数学模式排版；核查 diff 仅含表示变化。
