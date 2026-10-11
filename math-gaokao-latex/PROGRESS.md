@@ -791,3 +791,11 @@
 - 阶段关闭快照：manifest revision 3908；b50 `closed`，4 卷、153 页、1,224 项视觉检查通过，1 条 warning 有精确页面豁免；16 份 PDF 保留，编译目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b50，不代表全库完成。
 - 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b51`。
+
+### `phase2-b51` — 1984 全国文科
+
+- 预检完成：起始 manifest revision 3908；批次仅含 `gk-1984-regular-arts`，issues 为空；source manifest validate 通过；generator `--check` 显示该卷一致；provenance status 为该卷 `editions_generated`、批次 `provenance_verified`。
+- 本卷 17 题，固定来源 PDF 为 ready、1 页且 artifact PDF 校验通过，`legacy_ids=[]`。既有四版 PDF 页数为试题 2、解析 20、简答 3、印刷 15，共 40 页；沿用已登记转录/解题与 provenance，不重复录入。
+- Build receipt validator 显示该卷 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 批次仍为 `compiled_pending_review`。下一步须正式重建四版，再检查 warning 与复核状态。
+- 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
+- 下一步：单独提交本预检记录后，正式构建该卷四版并继续逐页复核。
