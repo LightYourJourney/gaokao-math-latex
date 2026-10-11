@@ -234,11 +234,12 @@
 ### `phase2-b34` — 1977 山西、新疆理科、甘肃、浙江
 
 - 预检完成：4 卷共 33 条既有 issue（`ISSUE-0182`—`ISSUE-0214`），逐条确认均 resolved；现有 provenance 与题目源可复用。
-- 历史产物：四卷均有四版 PDF，旧页数依次为山西 31、新疆理科 24、甘肃 31、浙江 24，合计 110 页。build receipts 均因生成输入树和工具链指纹变化 stale，review 绑定旧 build；provenance validator 的 compiled/批次缓存状态也因正式回执 stale 而不匹配。
-- 已完成子阶段：source manifest 验证通过（775 项）；构建 validator 报 4 卷 stale、0 failed；review validator 报 4 卷 build stale；provenance validator 显示 4 卷与批次 derived cache 不符。无来源/答案改动需求。
-- 修改文件：仅本进度文件；未改四卷题目源、答案、provenance 或 issue。
-- 待完成：formal build 四卷四版；逐页视觉复核全部新页及首页/候选页；登记 review、finalize、清理、scoped gates、全库报告检查并提交。
-- 下一步：执行 `phase2-b34` formal build 并准备四卷当前 attempt 的 review work items；不重复转录或解题。
+- 历史产物：四卷旧 PDF 页数依次为山西 31、新疆理科 24、甘肃 31、浙江 24，合计 110 页。build receipts 因生成输入树和工具链指纹变化 stale，review 绑定旧 build；provenance 的 compiled/批次缓存状态也随旧回执而 stale。
+- 已完成子阶段：source manifest 验证通过（775 项）；旧构建 validator 报 4 卷 stale、0 failed，review 报 4 卷 build stale；无来源/答案改动需求。已 formal build 四卷四版，全部 succeeded，manifest revision 3850；新页数为 3/14/4/10、2/10/3/9、3/14/4/10、2/10/3/9，共 110 页。准备 16 个当前 attempt review work items。
+- 构建警告：山西解析版 1 条 Overfull（源行 377）；浙江解析版 1 条 Overfull（源行 431）和 1 条 Underfull（源行 442—443）。尚未决定豁免，须结合全页与高分辨率视觉复核确认。
+- 修改文件：本进度文件；四卷 build receipts/PDF；`source-manifest.json`；忽略目录 `.work/phase2-b34/review/` 下 16 个工作项。未修改题目源、答案、provenance 或 issue。
+- 待完成：逐页视觉复核 110 页及首页/候选/警告页；按证据登记 review、finalize、清理、scoped gates、全库报告检查并提交。
+- 下一步：先渲染四卷四版接触表检查全页，再对所有首页、候选页和警告对应页高分辨率复核。
 
 ## 最近一次全库状态快照
 
