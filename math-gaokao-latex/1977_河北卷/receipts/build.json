@@ -1,5 +1,5 @@
 {
-  "attempt_id": "26cfdee7-026b-4b70-8aad-059a479425cc",
+  "attempt_id": "820c4c17-8fe4-4e4c-9f44-fdabc66c25b7",
   "dependency_tree": {
     "files": [
       {
@@ -75,7 +75,7 @@
       "pdf": {
         "page_count": 3,
         "path": "math-gaokao-latex/1977_河北卷/build/试题版.pdf",
-        "sha256": "01ae36285d4a5aa45ce3271f783f6edc8e2e128f2a7706a01ab79dfd0737a042",
+        "sha256": "f25fcf240e5a8a67a230b7739e07c781fca1a4fac8bc427a859e60659ae04f5e",
         "size_bytes": 86913
       },
       "problems": [],
@@ -99,7 +99,7 @@
       "pdf": {
         "page_count": 11,
         "path": "math-gaokao-latex/1977_河北卷/build/解析版.pdf",
-        "sha256": "285f53f55cb45812df676bd1a2a34a2726feb0c447371101f1955cc7644f5d46",
+        "sha256": "2119cb503fbe013801adc0e8327de87af0bfcc2ff51ad8c6ab7a01e5d091422e",
         "size_bytes": 136578
       },
       "problems": [],
@@ -123,7 +123,7 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/1977_河北卷/build/简答版.pdf",
-        "sha256": "1f69e225cf3e17976988b7291c5ba9885da44bfb43b62673ca89797b8fa63d02",
+        "sha256": "48d1cdcbd129e3ba8302eb5eb397b3b52236c17ea3f709c968eb30764320bbc3",
         "size_bytes": 95380
       },
       "problems": [],
@@ -147,15 +147,15 @@
       "pdf": {
         "page_count": 8,
         "path": "math-gaokao-latex/1977_河北卷/build/印刷版.pdf",
-        "sha256": "759d5ff6d0157b8b45d055cdcecaa924fa20cc62be19add13f58c039a65adb63",
-        "size_bytes": 136389
+        "sha256": "21dd3de9a8705198e8f99d6950340fc6a4aaa68f15a473966b63bb447aa10ef8",
+        "size_bytes": 136388
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/1977_河北卷/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-30T19:47:01+08:00",
+  "finished_at": "2026-10-12T02:52:13+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -172,7 +172,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "40f69299bb2335d23d932b4f35d0c6a0adefb1607ccf0f998aafcdd7ef10a586"
       },
       {
         "path": "math-gaokao-latex/1977_河北卷/figures/f1977_hebei_t2_circle.tex",
@@ -239,39 +239,39 @@
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "d43206d87f6fc6274416374ba9b4ce1eb9871ff13179868b5a421838128ce9b2"
+    "tree_sha256": "d7993eb294105f93b1c2eadb72ea3501e66d65f011c6c4c6c9942a92b4b9d76f"
   },
   "input_projection": "d81304d1704ba643934e356f709b0d59baefd56c18c99602364fa454ba0ed54c",
-  "manifest_revision": 3318,
+  "manifest_revision": 3825,
   "paper_id": "gk-1977-regular-hebei",
-  "previous_attempt_id": "36184195-d77a-4569-839a-ee97e1f606f9",
+  "previous_attempt_id": "26cfdee7-026b-4b70-8aad-059a479425cc",
   "project_dir": "1977_河北卷",
   "schema_version": 1,
-  "started_at": "2026-09-30T19:38:10+08:00",
-  "status": "compiled_pending_review",
+  "started_at": "2026-10-12T02:51:37+08:00",
+  "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",

@@ -35,6 +35,7 @@
 | `phase2-b23` | 1977 上海卷文理科 | 四版 53 页逐页复核、8 个候选页及 2 个历史问题页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `3477d184` |
 | `phase2-b24` | 1977 北京卷文理科 | 四版 39 页逐页复核、8 个候选页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `b59a82f9` |
 | `phase2-b25` | 1977 天津卷 | 四版 24 页逐页复核、候选及问题相关页高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `d0ae344e` |
+| `phase2-b26` | 1977 河北卷 | 四版 26 页逐页复核、4 个候选页及首面高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | 本批待提交 |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -78,17 +79,26 @@
 - 既有状态：单卷、8 题 provenance 已登记，`issue_ids=[]`；不重做转录或解题。manifest 缓存为 `compiled_pending_review`，provenance 检查未发现题目证据问题，仅报告派生缓存状态不一致（paper `compiled` vs `editions_generated`，batch `compiled_pending_review` vs `provenance_verified`）。
 - 历史回执：旧 build 四版均成功，页数 3/11/4/8，共 26 页；build 因生成输入树与工具链指纹变化失效。旧 review `passed` 但绑定另一 build attempt，不能复用。
 - 已完成子阶段：核对 batch、paper/source 映射、provenance、问题项与历史 receipts；build/review validators 均确认旧证据失效。工作树在 b25 提交后干净。
-- 修改文件：仅本进度文件；尚未修改河北卷源文件或正式回执。
-- 待完成：对河北卷进行 formal build，准备并绑定新 attempt 的四版 review 工作项，随后逐页视觉复核。
-- 下一步：只重建 `phase2-b26`，复用现存 provenance 与题目内容，不重做转录/解题。
+- 已完成子阶段：formal build 四版成功、0 失败、0 警告，共 26 页；新 attempt `820c4c17-8fe4-4e4c-9f44-fdabc66c25b7`。四个 review 工作项均绑定当前 attempt；候选页待读取工作项后登记。
+- 修改文件：本进度文件；河北卷 build receipt/PDF；忽略目录 `.work/phase2-b26/review/` 下四个工作项。未修改题目源文件或 provenance。
+- 已完成子阶段：四版接触表逐页复核全部 26 页，无可见缺字、遮挡、裁切或分页异常；试题版、解析版、简答版、印刷版第 1 页及 4 个候选页（试题 p.2、解析 p.11、简答 p.2、印刷 p.6）共 8 页高分辨率复核，无视觉缺陷。
+- 已完成子阶段：四个当前 attempt 工作项已登记 26 页、208 项检查全部 pass；`finalize-batch` 返回 `FINALIZED：phase2-b26`，生成批次报告并事务性更新回执与 manifest。
+- 修改文件：本进度文件；河北卷 build/review receipts 与 PDF；`source-manifest.json`；`reports/phase2-b26.md`；忽略目录 `.work/phase2-b26/review/` 四个工作项；临时复核图位于 `/tmp/gk-phase2-b26-review.dHJekq/`。
+- 已完成子阶段：删除河北卷 `build/` 下所有非 PDF 中间物，保留四版 PDF；清理本批 `.work/phase2-b26` 与临时复核图。
+- 已完成子阶段：source manifest 校验（`--require-artifacts 775`）、build receipt `OK：1 卷`、review `FINALIZED：phase2-b26`、provenance `OK：1 卷`，全部退出码 0。
+- 已完成子阶段：`report.py render --all` 通过，以单个 content 事务写入并回读校验六个全量报告目标。
+- 已完成子阶段：全量报告 `check --all` 通过，确认报告与全量 manifest 当前一致，并保留未完成状态；manifest revision 3827，来源 775、试卷 272、批次 138；批次状态 closed 49、closed_with_blockers 13、compiled_pending_review 74、provenance_verified 2；试卷状态 complete 86、blocked 45、compiled 137、editions_generated 4。
+- 最终核对：`git diff --check` 通过；河北卷构建目录仅保留四份 PDF；11 个受本批事务影响的 tracked 文件为卷回执、批次/全量报告投影、manifest 与进度文件，无题目源文件或 provenance 改动。
+- 待完成：提交本批；后续按时间顺序进入 `phase2-b27`（1977 内蒙古文科）预检。
+- 下一步：提交当前已验收改动，不 push。
 
 ## 最近一次全库状态快照
 
-来自 1977 天津卷 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
+来自 1977 河北卷 finalize 后的当前 `source-manifest.json`（每次恢复须刷新）：
 
 - 来源 775；试卷 272；批次 138。
-- 批次状态：closed 48、closed_with_blockers 13、compiled_pending_review 75、provenance_verified 2。
-- 试卷状态：complete 85、blocked 45、compiled 138、editions_generated 4。
+- 批次状态：closed 49、closed_with_blockers 13、compiled_pending_review 74、provenance_verified 2。
+- 试卷状态：complete 86、blocked 45、compiled 137、editions_generated 4。
 - 这说明仍有大量待复核/阻塞工作；这些数字是进度快照，不是验收目标，也不应伪装成已完成。
 
 ## 最近验证与已知问题
@@ -120,5 +130,6 @@
 - `phase2-b23`（1977 上海文理卷）已于 `3477d184` 提交。
 - `phase2-b24`（1977 北京文理卷）已于 `b59a82f9` 提交。
 - `phase2-b25`（1977 天津卷）已于 `d0ae344e` 提交。
-- 当前推进 `phase2-b26`（1977 河北卷）；provenance 已有且问题项为空，旧 build/review 指纹失效，需正式重建。
+- `phase2-b26`（1977 河北卷）已完成 formal build、26 页视觉复核、finalize、scoped gates 和全量报告检查；本批待提交。
+- 下一批按时间顺序为 `phase2-b27`（1977 内蒙古文科，1 卷，`compiled_pending_review`）。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
