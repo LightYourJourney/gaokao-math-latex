@@ -37,7 +37,7 @@
 | `phase2-b25` | 1977 天津卷 | 四版 24 页逐页复核、候选及问题相关页高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `d0ae344e` |
 | `phase2-b26` | 1977 河北卷 | 四版 26 页逐页复核、4 个候选页及首面高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `c42fa4d6` |
 | `phase2-b27` | 1977 内蒙古文科 | 四版 20 页逐页复核、13 个首面/候选/问题关联页高分辨率复核；0 警告；FINALIZED；保留两个 open 内容 blocker；四项门禁与全量报告检查通过 | `d2124e2a` |
-| `phase2-b28` | 1977 江苏卷 | 四版 23 页逐页复核、16 个首面/候选/问题关联页高分辨率复核；0 警告；FINALIZED；保留两个 open 内容 blocker；四项门禁与全量报告检查通过 | 本批待提交 |
+| `phase2-b28` | 1977 江苏卷 | 四版 23 页逐页复核、16 个首面/候选/问题关联页高分辨率复核；0 警告；FINALIZED；保留两个 open 内容 blocker；四项门禁与全量报告检查通过 | `8867a327` |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -113,9 +113,9 @@
 - 最终核对：`git diff --check` 通过；内蒙古文科 build 目录仅四份 PDF；11 个受本批事务影响的 tracked 文件为回执、批次/全量报告投影、manifest 与进度文件，未更改争议题面、答案或 provenance。
 - 提交状态：已提交 `d2124e2a`，未 push。
 
-## 当前进行阶段
+## 最近完成阶段
 
-### `phase2-b28` — 1977 江苏卷
+### `phase2-b28` — 1977 江苏卷（已提交 `8867a327`）
 
 - 既有状态：单卷、6 题 provenance 已登记；`ISSUE-0131/0132` 为两条仍开放的内容 blocker，分别涉及第 1 题负数负半次幂及附加题极限变量不一致。按现有证据保留原式，不擅改为可计算表达式；最终须保留 blocker。
 - 历史回执：旧 build 四版成功，页数 2/10/3/8，共 23 页；生成输入树与工具链指纹变化使其失效。旧 review passed 但绑定另一 build attempt，不可复用。
@@ -131,8 +131,18 @@
 - 已完成子阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`check --all` 确认报告与全量 manifest 当前一致，未完成状态如实保留。
 - 已完成子阶段：manifest revision 3833，来源 775、试卷 272、批次 138；批次状态 closed 49、closed_with_blockers 15、compiled_pending_review 72、provenance_verified 2；试卷状态 complete 86、blocked 45、compiled 137、editions_generated 4。江苏卷仍为 blocked，`ISSUE-0131/0132` 未解决。
 - 最终核对：`git diff --check` 通过；江苏卷 build 目录仅四份 PDF；11 个受本批事务影响的 tracked 文件为回执、批次/全量报告投影、manifest 与进度文件，未修改争议题面、答案、provenance 或 issue 内容。
-- 待完成：提交本批；下一批按 manifest 顺序为 `phase2-b29`（1977 福建文科）预检。
-- 下一步：提交本批已验收改动，不 push。
+- 提交状态：已提交 `8867a327`，未 push。
+
+## 当前进行阶段
+
+### `phase2-b29` — 1977 福建文科
+
+- 既有状态：单卷、6 题 provenance；`ISSUE-0133/0134/0135/0136` 为四条 open 内容 blocker，涉及第 3 题产量条件不足、第 4 题“切线”对象不明、第 5 题参数/角度单位疑义、第 6 题角度与图示矛盾。`ISSUE-0798` 已 resolved（第 2 题根式转录已修正并验证）。
+- 历史回执：旧 build 四版成功，页数 3/12/4/9，共 28 页；因生成输入树与工具链指纹变化失效。旧 review passed 但绑定另一 attempt，不可复用。
+- 已完成子阶段：核对 batch、来源映射、6 题 provenance、5 条 issue 状态及历史 receipts；provenance 未报题目证据错误，仅 batch 派生缓存未刷新；build/review validators 确认需重建重审。当前 production_state `blocked`。
+- 修改文件：仅本进度文件；尚未修改福建文科题目源、答案或 provenance。
+- 待完成：formal build、逐页视觉复核并覆盖四条 open blocker 相关页；finalize 保留 blockers，清理中间物，执行 scoped gates 与全量报告检查后提交。
+- 下一步：正式重建 `phase2-b29`；保留 `ISSUE-0133/0134/0135/0136`，不补造缺失条件、切线对象或几何长度。
 
 ## 最近一次全库状态快照
 
@@ -174,6 +184,6 @@
 - `phase2-b25`（1977 天津卷）已于 `d0ae344e` 提交。
 - `phase2-b26`（1977 河北卷）已于 `c42fa4d6` 提交。
 - `phase2-b27`（1977 内蒙古文科）已于 `d2124e2a` 提交；两条答案冲突保留为 blocker。
-- `phase2-b28`（1977 江苏卷）已完成 formal build、23 页视觉复核、finalize、scoped gates 和全量报告检查；两个题面疑义保留为 blocker，本批待提交。
-- 当前推进 `phase2-b28`（1977 江苏卷）；两条题面疑义仍 open，旧 build/review 失效，需重建、重审并保留 blocker。
+- `phase2-b28`（1977 江苏卷）已于 `8867a327` 提交；两个题面疑义保留为 blocker。
+- 当前推进 `phase2-b29`（1977 福建文科）；四个内容 blocker 保持 open，旧 build/review 失效，需重建、重审并保留 blockers。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
