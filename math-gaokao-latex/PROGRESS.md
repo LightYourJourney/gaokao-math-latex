@@ -247,8 +247,9 @@
 - 已完成子阶段：`report.py render --all` 以一个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认报告与全量 manifest 一致并保留未完成状态。
 - 已完成子阶段：`git diff --check` 通过；最终 diff 共 17 个 tracked 文件，仅含四卷 build/review receipts、manifest 驱动的 6 个报告/README 投影、本批报告与进度记录，无题目源、答案或 provenance 改动。
 - 验证快照：manifest revision 3851；来源 775、试卷 272、批次 138；批次状态 closed 53、closed_with_blockers 17、compiled_pending_review 66、provenance_verified 2。该快照反映 b34 finalize 后的阶段进度，不代表全库完成。
-- 待完成：提交 b34 内容与全量投影，随后单独记录提交哈希和 b35 下一步；不 push。
-- 下一步：提交本批已验证内容，再更新进度提交并预检 manifest 顺序中的下一批。
+- 已完成阶段：b34 内容与报告投影已提交为 `751b88d6`；不 push。
+- 待完成：预检并继续推进 manifest 顺序中的 b35。
+- 下一步：核查 b35 四卷的来源/provenance、issue、旧构建与复核回执，确定可复用内容和需更新门禁。
 
 ## 最近一次全库状态快照
 
@@ -296,5 +297,6 @@
 - `phase2-b31`（1977 内蒙古理科）已于 `315a56e7` 提交；该卷无内容 issue。
 - `phase2-b32`（1977 河南卷）已于 `1a5c5fd1` 提交；10 条历史 issue 均 resolved。
 - `phase2-b33`（1977 黑龙江、西藏、青海、广西百色文科四卷）已于 `c80bc829` 提交；32 条历史 issue 均 resolved，97 页/776 项复核通过。
-- 下一批按 manifest 顺序为 `phase2-b34`：1977 山西、新疆理科、甘肃、浙江四卷，当前状态 `compiled_pending_review`。
+- `phase2-b34`（1977 山西、新疆理科、甘肃、浙江四卷）已于 `751b88d6` 提交；110 页/880 项复核通过，三条版面 warning 已精确豁免，manifest 状态 `closed`。
+- 下一批按 manifest 顺序为 `phase2-b35`：1977 安徽理科、安徽文科、广东、四川四卷，当前状态 `compiled_pending_review`。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
