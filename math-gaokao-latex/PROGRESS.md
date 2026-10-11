@@ -277,5 +277,6 @@
 - `phase2-b30`（1977 福建理科）已于 `984a2bde` 提交；三个内容 blocker 保持 open。
 - `phase2-b31`（1977 内蒙古理科）已于 `315a56e7` 提交；该卷无内容 issue。
 - `phase2-b32`（1977 河南卷）已于 `1a5c5fd1` 提交；10 条历史 issue 均 resolved。
-- 当前推进 `phase2-b33`（黑龙江、西藏、青海、广西百色文科四卷）；32 条历史 issue 均 resolved，4 卷旧 build/review stale，需重建重审。
+- `phase2-b33`（1977 黑龙江、西藏、青海、广西百色文科四卷）已于 `c80bc829` 提交；32 条历史 issue 均 resolved，97 页/776 项复核通过。
+- 下一批按 manifest 顺序为 `phase2-b34`：1977 山西、新疆理科、甘肃、浙江四卷，当前状态 `compiled_pending_review`。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
