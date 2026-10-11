@@ -1,7 +1,7 @@
 {
   "batch_id": "phase2-b08",
-  "build_attempt_id": "40885311-f768-42a7-b173-20967856b1f1",
-  "dependency_tree_sha256": "0422a828fdabfa6226fb4766b692a4fdac4450015d9ff1dfc2bfdf14cc7cf686",
+  "build_attempt_id": "63a4007d-55d6-4ee3-af90-51794a7e2d05",
+  "dependency_tree_sha256": "ab449919e86377c94b62697047d0a93d8bea0962627d1381bf67bcc37d9122d0",
   "editions": [
     {
       "candidate_override": null,
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "28c2902ab954b9d98c78852832898c0b77e7697cfc35ca4353ef0a9b720aad4e",
+      "pdf_sha256": "7b5edec5f5d6f5464f522f86fbf97958bc2e6ae375f3c720d64b3994a1e4c498",
       "result": "pass"
     },
     {
@@ -1128,7 +1128,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "f8ea0689952818ec85defb85911c3224edf66cfc158b4aa0fa9171f419426152",
+      "pdf_sha256": "668c36e831b2727b68226c7ed84d7d3a27515c71ede064c0710519ddefe82510",
       "result": "pass"
     },
     {
@@ -1462,7 +1462,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "00f93617b11ab082dcf95e4ec5b1fde7e56452f252e794ab4bf22b96f4681c02",
+      "pdf_sha256": "bfa63cb095dd646ccb4370c6cff01f8cbdf870d45c6f9602ba68408119c786c5",
       "result": "pass"
     },
     {
@@ -1650,12 +1650,12 @@
             },
             {
               "check": "answer_leak",
-              "note": "目视第4页发现橙色内部校勘说明框，含 ISSUE-0962、ISSUE-0963、ISSUE-0964、ISSUE-0965；按要求如实记录，存在内部 ISSUE 文字，判 fail。",
-              "result": "fail"
+              "note": "复核当前正式 PDF 第4页：解析归属框仅保留 U 状态与题面歧义说明，未显示内部 ISSUE 编号；本版为答案解析版，答案内容属于预期内容。",
+              "result": "pass"
             }
           ],
           "page": 4,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -2118,40 +2118,40 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "27d7529f003362dcc8c8582d81fd4f6399818bc0a9ea921dcec2f54a199886ae",
-      "result": "fail"
+      "pdf_sha256": "846717bf414da41b1299c5cd7e90242847fb13b761b4a4d5a98ab0f132adcedf",
+      "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "18cf59b6d1a1723e8db89e1d7cdbb1d7f62340953f51719a23c2b5da41a5698b",
+  "generation_input_tree_sha256": "eb9aaf0a520783250934dba8c334508d2f2e57a36a57a44a3a080746b2b4adcf",
   "input_projection": "bc8ec2e9063dd52e30260096c40b85808795288fdc1799b22d07f7ae4fd97988",
   "paper_id": "gk-2017-regular-tianjin-science",
   "project_dir": "2017_天津卷_理科",
-  "reviewed_at": "2026-10-01T06:26:39+08:00",
+  "reviewed_at": "2026-10-11T14:08:50+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",
@@ -2174,16 +2174,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       }
     ]
   },

@@ -137,3 +137,12 @@
 - [x] Commit the verified content stage and final receipts/reports as separate commits when each is complete; stage exact paths, do not use `git add .`, and do not push.
 
 **Expected:** Batch report/global state match machine-derived evidence; no batch scratch outside ignored `.work/`, and commits contain only this batch's approved deliverables.
+
+## Completion record — 2026-10-11
+
+- Refresh found all four old build receipts stale or pending. Rebuilt all 16 editions at manifest revision 3719; all succeeded with no TeX errors, missing glyphs, unresolved references, or unreviewed Overfull warnings.
+- Current-PDF visual review covered all 214 pages and 1,712 page checks. Fixed the prior Tianjin Science print-edition page 4 answer-leak finding by removing internal `ISSUE-*` identifiers from reader-facing prose while retaining both U outcomes, their source-based ambiguity explanations, and issue-ledger links. The corrected page was re-rendered and rechecked; all four review receipts now pass. Historical `ISSUE-0992` remains resolved in the ledger.
+- Finalization at manifest revision 3720 reports `closed_with_blockers`, correctly retaining `ISSUE-0962`–`ISSUE-0965` for Tianjin Science Q17(3) and Q19(2). These source ambiguities remain U; no answers were invented or promoted.
+- Source manifest, issue ledger, project generation, solution-source consistency, provenance, current/final build receipts, batch review and global report checks pass. Full suite: 862 tests run, 13 baseline skips, 1 unrelated live-repository cache test fails because 335 other papers' cached `complete` states differ from their derived `editions_generated` states; this batch did not alter those papers.
+- Committed the reader-facing note correction as `f3c00676` and refreshed formal build receipts as `3e4f3d30`. Final review receipts, manifest/report projections, and this plan completion record are to be committed separately after exact-scope staging. No push.
+- Build cleanup retains exactly four final PDFs in each ignored `build/` directory; rendered PNGs and TeX intermediates are removed after final verification.
