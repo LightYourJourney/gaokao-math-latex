@@ -35,7 +35,7 @@
 | `phase2-b23` | 1977 上海卷文理科 | 四版 53 页逐页复核、8 个候选页及 2 个历史问题页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `3477d184` |
 | `phase2-b24` | 1977 北京卷文理科 | 四版 39 页逐页复核、8 个候选页高分辨率复核；0 警告；FINALIZED；门禁与全量报告检查通过；两卷构建目录仅保留 PDF | `b59a82f9` |
 | `phase2-b25` | 1977 天津卷 | 四版 24 页逐页复核、候选及问题相关页高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `d0ae344e` |
-| `phase2-b26` | 1977 河北卷 | 四版 26 页逐页复核、4 个候选页及首面高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | 本批待提交 |
+| `phase2-b26` | 1977 河北卷 | 四版 26 页逐页复核、4 个候选页及首面高分辨率复核；0 警告；FINALIZED；四项门禁与全量报告检查通过；构建目录仅保留 PDF | `c42fa4d6` |
 
 上述批次的提交在当前工作树中可由 `git log` 查证；不代表 1952—2006 或整个题库已完成。
 
@@ -72,9 +72,9 @@
 - 最终核对：`git diff --check` 通过；天津卷 build 目录只有四份 PDF；11 个受本批事务影响的 tracked 文件包含天津卷回执、批次/全量报告投影、manifest 与本进度文件，无题目源文件改动。
 - 提交状态：已提交 `d0ae344e`，未 push。
 
-## 当前进行阶段
+## 最近完成阶段
 
-### `phase2-b26` — 1977 河北卷
+### `phase2-b26` — 1977 河北卷（已提交 `c42fa4d6`）
 
 - 既有状态：单卷、8 题 provenance 已登记，`issue_ids=[]`；不重做转录或解题。manifest 缓存为 `compiled_pending_review`，provenance 检查未发现题目证据问题，仅报告派生缓存状态不一致（paper `compiled` vs `editions_generated`，batch `compiled_pending_review` vs `provenance_verified`）。
 - 历史回执：旧 build 四版均成功，页数 3/11/4/8，共 26 页；build 因生成输入树与工具链指纹变化失效。旧 review `passed` 但绑定另一 build attempt，不能复用。
@@ -89,8 +89,18 @@
 - 已完成子阶段：`report.py render --all` 通过，以单个 content 事务写入并回读校验六个全量报告目标。
 - 已完成子阶段：全量报告 `check --all` 通过，确认报告与全量 manifest 当前一致，并保留未完成状态；manifest revision 3827，来源 775、试卷 272、批次 138；批次状态 closed 49、closed_with_blockers 13、compiled_pending_review 74、provenance_verified 2；试卷状态 complete 86、blocked 45、compiled 137、editions_generated 4。
 - 最终核对：`git diff --check` 通过；河北卷构建目录仅保留四份 PDF；11 个受本批事务影响的 tracked 文件为卷回执、批次/全量报告投影、manifest 与进度文件，无题目源文件或 provenance 改动。
-- 待完成：提交本批；后续按时间顺序进入 `phase2-b27`（1977 内蒙古文科）预检。
-- 下一步：提交当前已验收改动，不 push。
+- 提交状态：已提交 `c42fa4d6`，未 push。
+
+## 当前进行阶段
+
+### `phase2-b27` — 1977 内蒙古文科
+
+- 既有状态：单卷、4 题 provenance 已登记；`ISSUE-0129/0130` 是该卷两个尚未解决的答案冲突，涉及第 1 题根式底数与第 2 题圆台面积末值。按既有证据保留题面与源解答，不改写数字或结论；本批应如实以 blocker 关闭。
+- 历史回执：旧 build 四版成功，页数 2/9/3/6，共 20 页；因生成输入树和工具链指纹变化而失效。旧 review 已通过但绑定不同 build attempt，不可复用。
+- 已完成子阶段：核对 batch、来源映射、provenance、问题项与历史 receipts；provenance 无题目证据错误，仅 batch 派生缓存尚未刷新；build/review validators 确认需重建与重审。manifest 当前显示 production_state `blocked`，issue IDs 均 open。
+- 修改文件：仅本进度文件；尚未改动内蒙古文科题目源、答案或 provenance。
+- 待完成：正式重建四版、视觉复核并 finalize 为含 blocker 状态；清理中间物，运行 scoped gates 与全量报告检查，提交本批。
+- 下一步：只重建 `phase2-b27`，严格保留 `ISSUE-0129/0130` 记录的源印刷值与冲突说明，不尝试无依据修正。
 
 ## 最近一次全库状态快照
 
@@ -130,6 +140,6 @@
 - `phase2-b23`（1977 上海文理卷）已于 `3477d184` 提交。
 - `phase2-b24`（1977 北京文理卷）已于 `b59a82f9` 提交。
 - `phase2-b25`（1977 天津卷）已于 `d0ae344e` 提交。
-- `phase2-b26`（1977 河北卷）已完成 formal build、26 页视觉复核、finalize、scoped gates 和全量报告检查；本批待提交。
-- 下一批按时间顺序为 `phase2-b27`（1977 内蒙古文科，1 卷，`compiled_pending_review`）。
+- `phase2-b26`（1977 河北卷）已于 `c42fa4d6` 提交。
+- 当前推进 `phase2-b27`（1977 内蒙古文科）；保留两个未解决答案冲突，旧 build/review 失效，需重建、重审并以 blocker 状态关闭。
 - 继续前刷新 manifest 与 Git 状态；每完成一个批次阶段，更新本文件、运行对应 scoped gates 与全量报告检查，再单批提交。
