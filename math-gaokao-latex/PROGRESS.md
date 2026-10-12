@@ -1005,3 +1005,8 @@
 - 阶段修改文件：仅本 `PROGRESS.md`。
 - 剩余任务：为当前 attempts 刷新 8 份 review work items，核对每份绑定当前 attempt 与 PDF 哈希；完成两卷 91 页逐页视觉复核及登记问题页面核查；按正式流程登记回执、清理构建中间产物与临时图像、运行 scoped gates 和全量报告校验。
 - 下一步：用 `review_receipts.py prepare-batch` 为 `phase2-b57` 生成当前 attempt 的 8 份工作项，先验证哈希绑定，再进行逐页复核；不沿用旧报告或旧回执。
+- 已完成可验证子阶段（当前 attempt 复核工作项准备）：执行 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b57`，为两卷四版共生成 8 份 ignored work items。逐项核对后，文科全部绑定 attempt `6b44ba20-7ddd-4b0f-8849-b4f5fca44154`、理科全部绑定 `ff815137-1e49-41e7-94d1-8361cf029bec`；PDF 路径、SHA-256、页数与对应 build receipts 一致，页集合精确覆盖各版完整页数，所有审查项仍为 pending。
+- 阶段验证：准备命令报告“共 8 个工作项”；对 8 项执行只读 JSON 核验，attempt/PDF hash/page count 均匹配 build receipts；当前 `review_receipts.py check-batch` 按预期报告两卷 `INVALID_OR_STALE`（旧正式回执不匹配新 attempt），尚未尝试 finalize。
+- 阶段修改文件：ignored `math-gaokao-latex/.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/` 下两卷 8 个工作项；tracked 文件无变化。
+- 剩余任务：逐页检查文科 41 页、理科 50 页的版面和八项检查标准；对题面/解答的关键图形、易混公式及五条既有 issue 页面做高分辨率复核；完成后在工作项记录真实结果，再运行 checked finalize、清理中间物并完成 scoped gates/全量报告。
+- 下一步：继续 91 页视觉审查，先以单页高分辨率图核对候选版面与登记的五条来源歧义页，再逐版完成全页检查并据实登记，不把 contact sheet 粗看当作字形验收。
