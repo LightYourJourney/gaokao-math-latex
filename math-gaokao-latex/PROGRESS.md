@@ -2328,3 +2328,8 @@
 - 验证结果：旧工作项绑定attempt `26f77fd6-a451-438b-9018-421a8f846e99`且456项全pending；官方`prepare-batch`重建四份当前attempt工作项，绑定新PDF SHA，覆盖57页/456项且全pending。候选页：试题2、解析2、简答2、印刷19。
 - 剩余任务：渲染并逐页复核57页，重点检查候选页、六幅登记图稿及末页；再finalize、报告、门禁/测试、清理和提交。
 - 下一步：提交当前构建checkpoint后渲染四版全部57页并逐页视觉检查。
+- 已完成当前attempt逐页视觉复核阶段（phase2-b75）：四版接触表覆盖全部57页；候选页（试题2、解析2、简答2、印刷19）、六幅图稿在题面/解析/印刷版对应页及各版末页均经150dpi放大检查。页眉页码连续、题号/公式/选项清楚、图形标注完整；未见缺字、裁切、遮挡、答案泄漏或异常分页。
+- 阶段修改文件：四份ignored `.work/phase2-b75/review/` 当前attempt工作项及本进度文件；57页接触表与26页重点渲染仅在ignored `.work/phase2-b75/render-5d79a826/`。试卷源、答案、provenance、TikZ图稿及模板未改。
+- 验证结果：四份工作项均绑定attempt `5d79a826-af8a-4f69-bc00-69a706b8884b`和相应PDF SHA；57页×8项共456项，404 pass、52 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
+- 剩余任务：官方finalize后刷新全库报告、运行批次门禁和定向测试；清理LaTeX中间物与PNG、核验PDF及最终diff后提交。
+- 下一步：提交视觉复核checkpoint，再调用`finalize-batch`正式登记本attempt的逐页结论。
