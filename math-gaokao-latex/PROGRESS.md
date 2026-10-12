@@ -2574,6 +2574,11 @@
 - 验证结果：全卷范围与既有计划一致（试题/解析/简答/印刷共5/21/7/17页）；`provenance status --batch phase2-b82`返回`provenance_verified`；`build_projects.py validate-receipts --batch phase2-b82 --json`返回1 stale、0 succeeded；当前tracked差异在提交前核对。
 - 剩余任务：用当前输入正式重建四版；对新attempt执行全页视觉复核并更新回执，再跑报告、门禁/定向测试、清理与最终差异审阅。
 - 下一步：先提交此恢复预检记录，再检查现存build工具参数与batch锁状态，执行phase2-b82正式重建；不重做来源核查或内容转录。
+- 已完成phase2-b82正式重建阶段：官方`build --formal --batch phase2-b82`在manifest revision 4062生成新attempt `1c6ecf11-b94d-4243-b23f-b30d1c6b4db2`，状态`compiled_pending_review`。
+- 阶段修改文件：本卷`receipts/build.json`与全局`source-manifest.json`；四份构建PDF为忽略本地产物，未入库。
+- 验证结果：试题/解析/简答/印刷版分别5/21/7/17页，均`succeeded`；errors、missing characters、overfull、undefined references为空；build validator返回1 pending、0 stale/failed，provenance `check-batch`返回`OK：1 卷`。
+- 剩余任务：旧review receipt/workitems绑定失效attempt；需要为新attempt生成工作项，复核50页并更新400项视觉回执，然后运行余下门禁、报告、定向测试和清理。
+- 下一步：提交本构建回执checkpoint，再准备并复核当前attempt页面；沿用此前review覆盖选择，仅在新PDF变化的页面与首面/候选页做高分辨率检查。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
