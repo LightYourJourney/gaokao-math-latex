@@ -1148,3 +1148,19 @@
 - 阶段验证：四份审查报告均声明当前 attempt `27645bca-21d1-4984-9a5a-28d663584373`、PDF 哈希匹配且各版全页覆盖；主会话独立放大了共享图稿在试题版 p7、解析版 p26、简答版 p7、印刷版 p21 的实际输出，逐页确认 E 标签与斜边相交；对解析版 p2/p9、试题版 p1/p6 做高分辨率和文本层交叉检查。题面及答案数字未改，正式 work items 仍待后续按新 attempt 生成/登记。
 - 剩余任务：仅修复 E 标签位置并正式重建四版，之后刷新 work items、复查当前批次 65 页和六处图稿页、如实登记检查结果；另需决定如何处置试题版 p1/p6 的答案泄漏后再走 finalize。完成后清理中间产物与临时图像，运行 scoped gates 和全量报告检查。
 - 下一步：以当前 p7/p26 等 PDF 作为修复前 RED 证据，只改 TikZ 中 E 的文字锚点/偏移，不动点位和任何题目数据；单卷正式重建后以六页高分辨率输出验证 GREEN，随后刷新并填完当前 attempt 的 520 个复核检查项。
+- 已完成可验证子阶段（E 标注首次微调与正式试编）：将 TikZ 的 E 标签从 `right` 改为 `below left`，保持点 E、所有线段及题目/答案不变；正式四版 build attempt `f21ea186-681b-4a33-b05c-b76dbe9425aa` 成功，manifest revision 3942，页数仍为 7/28/8/22。
+- 阶段验证：build receipt validator 与 `provenance.py check-batch` 均通过，四版编译日志无错误、缺字、Overfull 或未解析引用。修复后简答版 p7 以 300dpi 检查确认原先 E 字母被 C—B 斜边穿过的问题已消除，但 E 与 D 两个字母靠得过近；该视觉回归仍为 RED，故此 attempt 不接受、不准备当前复核工作项，需再微调标签。
+- 阶段修改文件：图稿 `figures/f1986_guangdong_arts_t6_pyramid.tex`、仓库正式生成的广东文史 `receipts/build.json` 与 `source-manifest.json`、本 `PROGRESS.md`；四份新 PDF 为 ignored 构建输出，预览在 `/tmp/phase2-b58-post.wE2rvP/`。试题版 p1/p6 的答案泄漏问题尚未处置。
+- 剩余任务：继续只调整 E 字母的排版偏移，避免遮边且与 D 留出清晰间隔；重新正式构建四版并逐页高分辨率检查六处图稿，随后才刷新 review work items。答案泄漏继续保留为未决 blocker。
+- 下一步：在 `below left` 基础上给 E 标签增加少量向右和向下偏移；以同一简答版 p7 300dpi 图作回归检查，确认 E 不碰 C—B / D—B 边线且与 D 分离，再重建四版。
+- 已完成可验证子阶段（E 标注第二次位置试验；仍未通过）：将 E 标签改为 `below left,xshift=2pt,yshift=-3pt` 并正式四版重建，当前 attempt `cecb27c3-9923-45ab-81d9-8d3aefb0c10c`，manifest revision 3944，页数不变。
+- 阶段验证：source manifest validate、provenance check-batch、build receipt validator 均通过；四版均 succeeded，零编译错误/缺字/Overfull/未解析引用。300dpi 复查发现 E 与斜边已分开且 D/E 文字分开，但较大的向下位移使 E 字形与底边 AB 相碰；视觉回归仍 RED，不接受该 attempt，不刷新复核工作项。
+- 阶段修改文件：同一图稿、广东文史 `receipts/build.json`、`source-manifest.json` 与本进度文件；4 份 PDF 为 ignored 构建输出，第二次试验页图位于 `/tmp/phase2-b58-final.Mfd03l/`。未更改题面、答案或 provenance 逐题记录。
+- 剩余任务：保持 E 标签在点左下方且不改变点位，去掉造成底边相碰的 yshift，仅用小幅横移增加其与 D 的可辨间隔；重新正式构建并复核六个图稿页。试题版 p1/p6 的答案泄漏仍为未决 blocker。
+- 下一步：用 `below left,xshift=3pt` 作第三次定向试验（相对第二版不再下移，避免触及 AB；相对第一版向右移开 D），正式重建后放大六页确认。
+- 已完成可验证子阶段（第三次位置试验及结构性根因核对；仍未通过）：正式 attempt `70e92843-0d54-4077-a91c-6020502de226` 四版均成功、manifest revision 3946，页数维持 7/28/8/22。E 标签改为 `below left,xshift=3pt` 后，六处输出仍需最终验收；简答版 p7 的 300dpi 2×局部放大确认 E 字母底横与 AB 底边相碰，当前版仍 RED，不刷新/登记 work items，不 finalize。
+- 根因证据：固定源 PDF 第 9 页（书页 268）的原始三棱锥图只标 S、A、B、C，没有 D/E 辅助点；项目共用 TikZ 在题面和答案中均加了 D/E，E 标签所在区域同时受 C—B、D—B、D 标签及 AB 底边限制。连续三个只调 E 锚点/偏移的试验均未通过（依次压斜边、挤近 D、触碰 AB），不再盲试第四种偏移。源 PDF 渲染有 JBIG2 解码警告但生成的 p9 页面图可读；不据此推断源文件损坏。
+- 阶段修改文件：广东文史三棱锥 TikZ 图稿、正式 build receipt、`source-manifest.json`、本 `PROGRESS.md`；四版 PDF 为 ignored 构建输出，最新放大图在 `/tmp/phase2-b58-verify.zBx5hu/`，来源扫描页图在 `/tmp/phase2-b58-source-p9-09.png`。未改题面正文、辅助点坐标、答案或逐题 provenance。
+- 阶段验证：当前 attempt 的 build receipt validator、provenance `check-batch` 与 source manifest validate 均 exit 0；四版编译零错误/缺字/Overfull/未解析引用。主会话高分辨率查看六处当前图稿输出，并 2×放大简答版 p7；E 与 AB 仍相碰，不能登记为版式通过。已向用户请求选择是否拆分题面图/解析图，以及是否概括试题版的答案泄漏说明；等待答复。
+- 剩余任务：根据用户对图稿结构和试题版说明的选择继续；之后正式重建、刷新 work items、完成当前 attempt 全页复核并如实处理答案泄漏，再进入批次收尾。未获选择前不再改图稿或泄漏说明。
+- 下一步：等待用户答复；按获准方向开展最小改动，并以固定源图、六个含图输出页和最新 attempt 逐项验收。若用户选择保留当前内容，则将相关页记 fail/blocker，不伪报通过。
