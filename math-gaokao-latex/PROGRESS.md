@@ -2172,3 +2172,7 @@
 - 阶段修改文件：六个全库报告/索引投影及本进度文件；paper源和PDF未因报告生成而变化。
 - 剩余任务：运行全库报告一致性检查、build/provenance/review/issues scoped gates和定向测试；清理LaTeX中间物与本批渲染输出，确认只留四份PDF且SHA吻合回执；检查diff并提交。
 - 下一步：先单独运行`report.py check --all`，再运行本批四类scoped gates与测试，避免同时扫描全库争用资源。
+- 已完成全库报告一致性与批次门禁阶段（phase2-b71）：`report.py check --all`确认全量报告与manifest一致并保留未完成状态；本批build receipt、provenance、review（`FINALIZED：phase2-b71`）、issues validate、生成器`--check`及`git diff --check`全部通过。
+- 阶段修改文件：本进度文件；检查均只读，正式回执与全库报告未再变化。
+- 剩余任务：跑相关review/report测试；执行latexmk清理并只清除本批自建`.work/phase2-b71/render-*`图片，保留work items；核对build只剩四份PDF且SHA与receipt一致，审查全部tracked diff后本地提交、不push。
+- 下一步：顺序运行 `test_review_receipts.py` 与 `test_report.py`；不重跑已通过的全库报告/批次门禁。
