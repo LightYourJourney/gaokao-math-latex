@@ -2432,3 +2432,8 @@
 - 验证结果：全量render与check均退出码0；render确认六目标事务写入/回读，check确认报告一致。
 - 剩余任务：运行phase2-b77七项scoped gates与两组定向测试；随后清理中间物、核验PDF并最终提交。
 - 下一步：串行运行七项scoped gates，避免共享仓库事务锁竞争。
+- 已完成批次门禁阶段（phase2-b77）：build receipt、provenance、review FINALIZED、issues、generator、short-answer与edition-shell七项检查均通过。
+- 阶段修改文件：仅本进度文件；门禁均为只读或`--check`，未更改正式内容。
+- 验证结果：七项命令退出码均为0；receipt/provenance/review报告`OK：1卷`、`OK：1卷`、`FINALIZED：phase2-b77`，派生输入与模板检查一致。
+- 剩余任务：运行两组定向测试；随后清理LaTeX中间物及PNG，核验PDF后最终提交。
+- 下一步：依次执行`test_review_receipts.py`和`test_report.py`。
