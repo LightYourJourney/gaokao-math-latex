@@ -2246,3 +2246,32 @@
 - 验证结果：当前build receipt失效（生成输入树和Poppler工具链指纹变化）；provenance缓存仍为compiled，而现场派生为editions_generated/provenance_verified；旧四份review work items均pending、绑定旧attempt `d4763305-07ca-4e76-bc35-758089bd42f3`，不能用于当前构建。当前build receipt attempt为`818c045e-b8bc-4c33-90b0-c5a9910efc7b`，试题/解析/简答/印刷版页数4/22/5/18。故下一步必须formal rebuild并重建当前attempt工作项，不沿用过时PDF回执。
 - 剩余任务：formal rebuild、当前attempt全页视觉复核并finalize；后续报告、门禁/测试、清理、哈希核验与提交。“41项待核”定向检索仅见本进度历史说明，没有权威映射，仍独立待办。
 - 下一步：提交本预检检查点，再运行phase2-b73 formal build；核验构建日志、页数和PDF SHA后再刷新review工作项。
+- 已完成正式构建阶段（phase2-b73）：official formal build attempt `54fdc591-c181-4904-b2c5-b6dd9991ccd3`；试题/解析/简答/印刷版均 succeeded，页数4/22/5/18，共49页。四版 problems、missing characters、overfull、undefined references 与 TeX errors 均为0；build receipt validator、provenance batch check、生成器`--check`均通过。
+- 阶段修改文件：1999全国文科卷 `receipts/build.json`、manifest正式构建派生字段与本进度文件；PDF仅留在ignored `build/`，未加入Git。
+- 剩余任务：用官方`prepare-batch`刷新当前attempt工作项，逐页视觉复核49页并finalize；随后报告、门禁/测试、清理构建中间物与PNG、SHA复核及本地提交。41项待核仍没有权威清单映射。
+- 下一步：因旧工作项均绑定旧attempt且全部pending，按脚本规则刷新为当前attempt；确认新工作项均绑定attempt `54fdc591…` 后开始渲染和逐页审查。
+- 已完成逐页视觉复核阶段（phase2-b73）：当前attempt四版接触表覆盖试题4、解析22、简答5、印刷18页，共49页；接触表逐页检查，候选页、题1/10/22/23/24图稿页和各版末页另作150dpi放大检查。页码/页眉连续，题号与公式排布正常，图稿和标注清楚；未见缺字、裁切、遮挡、答案串版或异常分页。
+- 阶段修改文件：四份ignored `.work/phase2-b73/review/` 工作项与本进度文件；本批49页PNG及接触表仅在ignored `.work/phase2-b73/render-54fdc591/`，未改题目、答案、provenance或图稿。
+- 验证结果：四份工作项均绑定当前attempt `54fdc591-c181-4904-b2c5-b6dd9991ccd3` 与对应PDF SHA；49页×8项共392项，347 pass、45 not_applicable（非试题版答案泄漏项）、0 fail/pending。候选页均已高清复核，五幅登记图稿在各版出现处均清晰。
+- 剩余任务：官方finalize并刷新报告；运行全库报告检查、批次门禁与定向测试；清除LaTeX中间物和本批PNG、核验PDF SHA/页数，最终审查并本地提交。41项待核映射仍无权威来源。
+- 下一步：运行`review_receipts.py finalize-batch`登记本attempt的逐页结论，再刷新全库报告。
+- 已完成正式复核登记阶段（phase2-b73）：`review_receipts.py finalize-batch`返回`FINALIZED：phase2-b73`；49页392项逐页检查已写入当前attempt回执，纸卷进入review通过状态并生成批次报告。
+- 阶段修改文件：1999全国文科卷`receipts/review.json`、manifest派生状态、`reports/phase2-b73.md`与本进度文件；忽略的review工作项保留供审计。
+- 验证结果：官方finalizer事务成功，工作项均绑定当前build attempt和PDF SHA；0视觉失败、0待审。
+- 剩余任务：刷新并检查全库报告，运行本批scoped gates与定向测试，然后清理构建/渲染中间物、校验PDF并提交。
+- 下一步：执行全库`report.py render --all`及`report.py check --all`（均提供manifest/issues路径）。
+- 已完成报告刷新阶段（phase2-b73）：全库`report.py render --all`成功，以一个content事务写入并回读校验六个报告目标；随后`report.py check --all`通过，确认报告与全量manifest一致且未把未完成语料误标完成。
+- 阶段修改文件：六个全库报告/索引投影与本进度文件；phase2-b73批次报告由finalizer生成。
+- 验证结果：全量report render及check均成功；无额外生成源或试卷内容修改。
+- 剩余任务：build/provenance/review/issues/generator scoped gates及定向测试；清理编译中间物与本轮PNG，核验PDF，再审差异和提交。
+- 下一步：运行phase2-b73五项scoped gates并复跑`test_review_receipts.py`、`test_report.py`。
+- 已完成报告、门禁与定向测试阶段（phase2-b73）：build receipt validator、provenance `check-batch`、review `check-batch`（FINALIZED）、issues validate、generator `--check`五项均通过；全库report render/check已在上一阶段通过。`test_review_receipts.py` 66/66及`test_report.py` 11/11通过。
+- 阶段修改文件：仅本进度文件；门禁与测试没有更改试卷内容或回执。
+- 验证结果：两组测试进程退出码0，总计77项通过；批次门禁均退出码0。
+- 剩余任务：清理四版LaTeX中间物及本轮49页PNG/接触表，核验build仅留四份PDF且其SHA/页数吻合receipt；最终差异审查并本地提交，不push。
+- 下一步：对四个版次入口执行`latexmk -c -outdir=build`，只清理本轮唯一渲染目录，并逐份核对PDF当前性。
+- 已完成构建物清理与PDF核验阶段（phase2-b73）：四个入口运行`latexmk -c -outdir=build`成功，1999全国文科卷`build/`仅保留四版PDF。四份渲染PNG/接触表目录已整体移至系统废纸篓`~/.Trash/phase2-b73-review-renders.UvYDBn/`（可恢复）；当前attempt的review工作项和正式PDF保留。
+- 阶段修改文件：仅本进度文件与ignored构建/复核临时产物；未删除PDF、LaTeX/TikZ源或review工作项。
+- 验证结果：试题/解析/简答/印刷PDF分别4/22/5/18页；四份SHA-256逐项与build receipt一致；build目录精确包含四份PDF，无编译中间物；本轮render目录已离开工作树。
+- 剩余任务：最终核对tracked diff只含本批正式回执、manifest/报告投影与进度记录；`git diff --check`及必要门禁后本地提交，不push。全库1952—2026仍未完成，41项待核权威映射仍未知。
+- 下一步：检查git status、差异文件名/统计、无图片/PDF/编译物入库；通过后提交phase2-b73完成内容与进度checkpoint。
