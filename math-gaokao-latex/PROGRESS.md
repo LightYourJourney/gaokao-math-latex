@@ -3077,3 +3077,8 @@
 - 验证结果：8份PDF与前attempt SHA不同，但页数/字节大小均一致；新旧两组100dpi渲染逐页像素比较101/101均AE=0，因此精确复用已完成逐页视觉结论。当前workitem覆盖101/101页、808/808检查（717 pass、91 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4093、batch closed；`check-batch` FINALIZED无问题；build validator 2 succeeded/0 stale/failed/invalid/missing/pending；provenance `OK：2卷`，两卷status `complete`。
 - 剩余任务：刷新全库来源CSV与六目标报告投影，跑report全库check及定向测试；然后清理八版编译中间物、可恢复归档work/render、逐PDF核验页数/字节/SHA与最终receipt，审阅并提交b90输出。
 - 下一步：先提交finalize checkpoint，再做CSV/报告投影与测试；三份既有README差异仍排除在暂存/提交之外。
+- 已完成phase2-b90全库投影与定向回归阶段：刷新manifest CSV及全库报告投影，核验当前生成状态。
+- 阶段修改文件：`manifest.csv`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`；三份README仅保留生成后的人工复核差异，不纳入本阶段提交；另更新本进度。
+- 验证结果：`manifest_csv.py --check`通过（775行）；`report.py check --all`确认报告与全量manifest一致且保留未完成状态；`test_review_receipts.py` 66/66通过，`test_report.py` 11/11通过；`git diff --check`通过。
+- 剩余任务：提交本阶段非README投影；清理8版LaTeX编译中间物并可恢复归档b90工作复核/渲染文件；核验最终PDF与正式回执的SHA、字节数和页数；提交清理记录。全语料仍未完成。
+- 下一步：提交仅含进度、manifest CSV及三份非README报告的变更；随后清理/归档并逐PDF核验，不启动b91。
