@@ -2819,3 +2819,8 @@
 - 验证结果：54页全部目检；432项均已录入且绑定attempt `fc2e05f9-2541-451f-882c-536331ad56de`，383 pass、49 not_applicable（非试题版答案泄漏项）、0 fail/pending；页级结论54/54 pass。
 - 剩余任务：运行官方事务式`finalize-batch`并检查FINALIZED；随后刷新全库报告/manifest投影，执行scoped gates与定向测试，清理中间物和预览并核对四份PDF与最终回执。
 - 下一步：提交本逐页复核checkpoint，再执行官方finalize；三份已有README投影差异继续保留待人工复核，不纳入本批提交。
+- 已完成phase2-b85正式回执登记阶段：官方事务式`review_receipts.py finalize-batch`返回`FINALIZED`，批次状态关闭（manifest revision 4072），`check-batch`复核仍为`FINALIZED`。
+- 阶段修改文件：春季上海卷`receipts/review.json`、`receipts/build.json`最终状态、全局`source-manifest.json`派生状态及`reports/phase2-b85.md`；未修改试题/答案/图稿/provenance。
+- 验证结果：官方finalizer无问题并生成批次报告；432项工作项此前逐项齐全，383 pass、49 not_applicable、无失败，当前review检查`FINALIZED`。
+- 剩余任务：build/provenance及其余scoped gates、全库报告刷新与定向测试尚未执行；需清理本卷中间物/渲染文件并核对最终PDF页数和SHA。
+- 下一步：核验final build receipt与provenance，再刷新全库报告和CSV投影；README汇总差异仍待用户人工复核。
