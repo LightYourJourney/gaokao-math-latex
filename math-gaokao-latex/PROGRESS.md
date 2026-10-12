@@ -2972,3 +2972,8 @@
 - 验证结果：文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`、理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`；八版均`succeeded`，每卷页数5/20/7/16，错误、缺字、未解析引用、Overfull及build problems均为0。build validator为2 pending、0 stale/failed；provenance `OK：2卷`。
 - 剩余任务：为当前attempt生成8份review workitem，渲染并逐页复核96页、完成768项检查；随后finalize、刷新报告/门禁与测试、清理并核验8份PDF。
 - 下一步：提交build checkpoint后运行官方`prepare-batch`，再按文理两卷独立并行完成当前PDF复核；主会话独占finalizer、manifest及全库投影。
+- 已完成phase2-b88当前attempt复核准备与全页渲染阶段：官方`prepare-batch`生成8份当前attempt工作项；两卷四版PDF共96页均以100dpi渲染并生成8张接触表，主会话已快速扫描全部接触表，未见显著裁切、重叠或异常分页。
+- 阶段修改文件：仅ignored `.work/phase2-b88/review/`、`.work/phase2-b88/render/`及本进度文件；未改正式回执、来源/答案、PDF或共享清单。
+- 验证结果：8个workitem均绑定文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`或理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`；页数5/20/7/16各两卷，合计96页×8项=768项pending、0 fail；PNG 96张、接触表8张。编译警告0。
+- 剩余任务：按卷独立复核全部96页并填写768项检查；高分辨率检查当前workitem候选页和Q15/Q19图稿页，之后由主会话验证覆盖、attempt绑定与结论，再finalize。
+- 下一步：并行派发两名subagent，各独立审查一卷的当前PDF及专属workitems；主会话不复读已完成的转录/解题，只检查共享状态和整合结果。
