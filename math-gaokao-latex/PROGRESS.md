@@ -2483,5 +2483,8 @@
 - 已完成全库报告刷新阶段（phase2-b78）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留其他未完成状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无卷面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功，check输出“报告输出与全量manifest当前一致”；`git diff --check`通过，工作树报告差异恰为六项目标。
-- 剩余任务：执行b78的七项scoped gates及定向测试，清理临时产物与LaTeX中间文件，复核正式PDF和差异后提交。
-- 下一步：提交全库报告投影及本进度checkpoint，然后运行本卷build/provenance/review/issues/generator/short-answer/edition-shell门禁。
+- 已完成批次scoped gates阶段（phase2-b78）：build receipt final、provenance、review FINALIZED、issues ledger、生成题面/解析、简答版与四版壳检查全部通过。
+- 阶段修改文件：仅本进度文件；七项gate均为验证/`--check`，未写正式数据。
+- 验证结果：receipt返回1 succeeded/0 stale或failed；provenance `OK：1卷`；review `FINALIZED`；生成、简答和壳检查各`1套一致`；issues校验退出码0。
+- 剩余任务：运行定向receipt/report测试；清理构建中间物与PNG预览，核验四版PDF页数/SHA；最终差异审阅并提交。
+- 下一步：提交gate checkpoint后依次执行`test_review_receipts.py`和`test_report.py`，避免并行资源竞争。
