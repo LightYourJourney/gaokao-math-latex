@@ -2470,3 +2470,8 @@
 - 验证结果：工作项绑定当前attempt `e9bbc700-e08e-45ea-8b4d-3ed85dcc1bba`；51页×8项共408项，362 pass、46 not_applicable（非试题版答案泄漏检查）、0 fail/pending。finalize前`check-batch`提示正式review receipt绑定旧attempt，正是当前待登记状态。
 - 剩余任务：通过官方checked finalizer登记新视觉receipt；之后刷新全库报告，运行scoped gates与定向测试，清理LaTeX中间物和PNG并提交。
 - 下一步：运行`review_receipts.py finalize-batch-checked`登记phase2-b78当前attempt视觉结论。
+- 已完成formal build状态审阅阶段（phase2-b78）：finalizer因tracked工作树含正式构建回执和manifest两项未提交更新而安全拒绝，未写入任何回执；已审阅diff确认只包含新attempt、四版PDF SHA/字节数、输入树/工具链指纹及manifest事务/revision变化。
+- 阶段修改文件：本进度记录待提交；正式build receipt与source manifest待单独checkpoint提交；无正文或视觉结论变更。
+- 验证结果：差异仅2个预期tracked文件，四版页数仍为5/22/6/18且均成功；`git diff --check`通过。finalizer报告`committed=false`，状态未被部分登记。
+- 剩余任务：提交build receipt/manifest及本进度后，在tracked工作树干净状态下重试checked finalizer。
+- 下一步：先提交本checkpoint及两项正式构建状态，然后执行checked finalizer；不重跑构建或视觉复核。
