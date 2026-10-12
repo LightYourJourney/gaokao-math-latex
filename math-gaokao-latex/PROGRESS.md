@@ -956,4 +956,7 @@
 - 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认 2 卷唯一问题均为 stale；两个来源 artifact 与 8 份现存 PDF 已核对，页数如上。
 - 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
 - 剩余任务：两卷四版正式构建、95 页逐页视觉复核（重点检查理科第 20 题异文说明）、登记回执、清理中间产物并完成 scoped gates 与全量报告校验。
-- 下一步：提交 b56 预检进度 checkpoint，再正式重建两卷四版。
+- 已完成子阶段：1986 全国文理科八版正式构建成功，manifest revision 3925；文科 build attempt `d5d91fa1-600f-4ba5-960b-65a6ff822e6d`，理科 `b4121d8a-b708-4609-91c9-a4df5738f765`。页数保持文科 4/19/5/16（44 页）、理科 5/21/7/18（51 页），共 95 页；无 build failure。
+- 阶段验证：build receipt validator `OK`，2 卷无 failed/invalid/missing/stale，当前 2 卷待视觉复核。文科及理科四版页数无变化；理科解析版与印刷版各有 2 条缺字日志，均为 Latin Modern Roman 字体缺少中文句号 `。`（U+3002）；其余无 Overfull、build errors 或 missing characters。该 warning 的源行/PDF 页定位与视觉影响待下一子阶段核实。
+- 阶段修改文件：本进度文件、两卷 build receipts/PDF；未改题目、答案、provenance、图稿或生成源。
+- 下一步：提交本阶段进度 checkpoint，定位理科两版缺字 warning 的源行和 PDF 页，再准备当前 attempts 的逐页 review work items。
