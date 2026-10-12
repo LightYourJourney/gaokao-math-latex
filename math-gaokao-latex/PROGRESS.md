@@ -833,4 +833,31 @@
 - 本卷 17 题，固定来源 PDF 为 ready、1 页且 artifact PDF 校验通过，`legacy_ids=[]`；沿用已登记转录/解题与 provenance，不重复录入。项目目录以 manifest 为准为 `1985_全国卷_文科`。既有四版 PDF 页数为试题 3、解析 15、简答 4、印刷 12，共 34 页。
 - Build receipt validator 显示该卷 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 批次仍为 `compiled_pending_review`。下一步须正式重建四版，再检查 warning 与复核状态。
 - 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
-- 下一步：正式构建该卷四版并继续逐页复核。
+- 已完成子阶段：1985 全国文科四版正式构建成功，manifest revision 3913；build attempt `bf74bc72-5b97-4caa-8778-911fc302b74e`。页数仍为试题 3、解析 15、简答 4、印刷 12，共 34 页；零 warning、无 build failure。
+- 阶段验证：build receipt validator `OK`，无 failed/invalid/missing/stale；当前 1 卷待视觉复核。
+- 阶段修改文件：本进度文件、1985 文科 build receipt/PDF；未改试卷题目、答案、provenance、图稿或生成源。
+- 已完成子阶段：为当前 attempt 准备 4 份 review work items，覆盖 34 页；四版候选页均为 p1。
+- 阶段验证：4/4 工作项绑定 attempt `bf74bc72-5b97-4caa-8778-911fc302b74e`，页数及 PDF 哈希一致；每页八项齐全。
+- 阶段修改文件：本进度文件与忽略的 `.work/phase2-b52/review/` 当前工作项；未改试卷内容。
+- 已完成子阶段：34 页已渲染为 4 张接触表并逐页浏览；四个候选页均完成 120dpi 复核。未发现缺字、公式/图稿异常、裁切、孤立标题、答案串版或异常分页；本卷构建零 warning。
+- 阶段验证：接触表覆盖 34/34 页、4/4 接触表通过；候选页 4/4 通过。
+- 阶段修改文件：仅本进度文件；接触表、预览页与候选图位于 `/tmp/gk-phase2-b52-review.N9IHEk/`；未更改试卷源或 PDF。
+- 已完成子阶段：4 份当前 attempt work items 均已登记，覆盖 34 页 × 8 项共 272 条 pass；本卷零构建 warning，故无 warning exemption。
+- 阶段验证：工作项汇总 4/4、34 页、272 pass、0 pending、0 exemptions；`git diff --check` 通过。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b52/review/` 下 4 份工作项。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b52 状态 `closed`、无问题；正式 review receipt 与当前 build attempt 对齐，并生成 `reports/phase2-b52.md`，manifest revision 3914。
+- 阶段验证：本卷 34 页、272 项视觉检查全部通过，零 warning、无失败项。
+- 阶段修改文件：1985 文科正式 review receipt、manifest 批次状态投影、本批报告与本进度文件；忽略工作项及临时 PNG 尚待清理。
+- 已完成子阶段：1985 文科 build 目录的 24 个非 PDF 中间物移入系统废纸篓，保留 4 份 PDF、0 个非 PDF；4 份 `.work/phase2-b52/review/` 工作项与 `/tmp/gk-phase2-b52-review.N9IHEk/` 临时审阅目录（42 张 PNG）也移入系统废纸篓，路径确认不存在。
+- 阶段验证：build 目录核验为 4 PDFs、0 intermediates；PDF 保留，LaTeX 源和正式回执未删除；忽略工作项及临时图像已清理，操作可从系统废纸篓恢复。
+- 阶段修改文件：本进度文件及 build 目录中的忽略编译产物；未删除源文件或 PDF。
+- 已完成阶段：五项 b52 scoped gates 全部通过：source manifest validate；generator `--check` 单卷一致；build receipts 为 1 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance `OK：1 卷`。
+- 阶段验证：五项命令均退出码 0；manifest revision 3914，b52 `closed`。
+- 阶段修改文件：仅本进度文件；门禁检查未产生额外内容源改动。
+- 已完成阶段：`report.py render --all` 以单个 content 事务写入并回读校验六个全量报告目标；`report.py check --all` 确认报告与当前全量 manifest 一致，并保留整个语料库的未完成状态。
+- 阶段验证：全量报告 render/check 均成功退出；b52 五项 scoped gates 仍全部通过。
+- 阶段修改文件：全量 README/报告投影、本批报告、1985 文科 build/review receipts、manifest 与本进度文件；未更改转录、答案、provenance 或 LaTeX 源。
+- 已完成阶段：b52 内容、正式回执与全量报告投影提交 `3e8c8c34`（`docs: 完成1985全国文科复核`）；未 push。
+- 阶段关闭快照：manifest revision 3914；b52 `closed`，1 卷、34 页、272 项视觉检查通过，零 warning；4 份 PDF 保留，build 目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
+- 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b52，不代表全库完成。
+- 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b53`。
