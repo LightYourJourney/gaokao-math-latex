@@ -2372,3 +2372,28 @@
 - 验证结果：当前工作项均绑定attempt `e9824b79-07d3-4014-8b2e-0f032c88ee98`和对应PDF SHA；60页×8项共480项，425 pass、55 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
 - 剩余任务：官方finalize，刷新全库报告并执行批次门禁/测试；清理编译与PNG中间物，核验PDF SHA/页数，最终审查并提交。
 - 下一步：提交视觉复核checkpoint并由官方`finalize-batch`登记当前attempt逐页结论。
+- 已完成正式复核登记阶段（phase2-b76）：`review_receipts.py finalize-batch`返回`FINALIZED：phase2-b76`，当前attempt 60页/480项结论正式登记并生成批次报告。
+- 阶段修改文件：2000全国新课程文科卷`receipts/review.json`、manifest派生状态、`reports/phase2-b76.md`及本进度文件；旧工作项归档和当前review工作项保留于ignored `.work/`。
+- 验证结果：官方finalizer成功；0 fail、0 pending，55项答案泄漏检查not_applicable理由已逐页记录。
+- 剩余任务：刷新全库报告，运行scoped gates/定向测试；清理LaTeX中间物与PNG、核验正式PDF后提交。
+- 下一步：执行全库`report.py render --all`与`report.py check --all`。
+- 已完成全库报告刷新阶段（phase2-b76）：`report.py render --all`以一个content事务写入并回读校验六个报告目标；`report.py check --all`确认输出与当前全量manifest一致，并保留未完成状态。
+- 阶段修改文件：六个全库报告/索引投影、本批报告及本进度文件；无题目、答案、provenance或图稿内容变更。
+- 验证结果：全量render与check均退出码0；render确认六目标事务写入/回读，check确认报告一致。
+- 剩余任务：运行phase2-b76七项scoped gates和两组定向测试；清理编译中间物与PNG，核验PDF页数/SHA，最终审查并提交。
+- 下一步：串行运行七项scoped gates，避免共享事务锁竞争。
+- 已完成批次门禁阶段（phase2-b76）：build receipt、provenance、review FINALIZED、issues、generator、short-answer与edition-shell七项检查均通过。
+- 阶段修改文件：仅本进度文件；七项检查均为只读/`--check`，未更改正式内容。
+- 验证结果：七项命令退出码均为0；回执/来源/复核分别报告`OK：1卷`、`OK：1卷`、`FINALIZED：phase2-b76`，三个派生输入检查均与生成结果一致。
+- 剩余任务：运行`test_review_receipts.py`及`test_report.py`；随后清理中间物、核验PDF并最终提交。
+- 下一步：按序执行两组定向测试，避免资源竞争并记录各自结果。
+- 已完成定向测试阶段（phase2-b76）：`test_review_receipts.py`与`test_report.py`均通过。
+- 阶段修改文件：仅本进度文件；测试未修改正式数据。
+- 验证结果：`test_review_receipts.py` 66/66通过（101.823秒）；`test_report.py` 11/11通过（120.170秒）；总计77项通过。
+- 剩余任务：清除四版LaTeX中间物及source/render PNG，核验build仅含四份正式PDF且页数/SHA吻合receipt，最终差异审查并提交。
+- 下一步：逐版运行`latexmk -c -outdir=build`并将当前batch临时预览移入可恢复废纸篓。
+- 已完成构建物清理与正式PDF核验阶段（phase2-b76）：四版入口均成功执行`latexmk -c -outdir=build`，`build/`精确保留四份PDF。恢复执行时发现`.work/phase2-b76/source/`与`render-e9824b79/`均已不存在，指定废纸篓中也无对应目录，因此未对未知路径做删除/移动。
+- 阶段修改文件：仅本进度文件和ignored构建产物；LaTeX/TikZ源、正式PDF、回执及review工作项未删除或修改。
+- 验证结果：`build/`只含试题版/解析版/简答版/印刷版PDF；页数5/27/6/22，逐份SHA-256与当前build receipt相符；`git diff --check`通过。
+- 剩余任务：审阅本批tracked差异，确认只有回执/manifest与全库报告投影、进度记录；显式暂存并本地提交b76，不push。
+- 下一步：核查差异文件清单和统计、确认无图片/PDF/编译中间物入库后提交。
