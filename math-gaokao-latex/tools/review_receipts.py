@@ -579,17 +579,18 @@ def _require_build(
     manifest: Mapping[str, Any],
     paper_id: str,
     toolchain: Mapping[str, Any],
-    expected_status: str,
+    expected_status: Any,
 ) -> Dict[str, Any]:
     """逐卷直接问 build 回执，**不信缓存 batch status**。"""
     path = Path(root) / build_receipt_path(_paper(manifest, paper_id))
     if not path.is_file():
         raise ReviewError(f"{paper_id}: 缺 build 回执")
     receipt = build_projects.load_receipt(path)
-    if receipt["status"] != expected_status:
+    expected = (expected_status,) if isinstance(expected_status, str) else tuple(expected_status)
+    if receipt["status"] not in expected:
         raise ReviewError(
             "%s: build 回执状态是 %s，要求 %s"
-            % (paper_id, receipt["status"], expected_status)
+            % (paper_id, receipt["status"], " 或 ".join(expected))
         )
     current, reasons = build_projects.receipt_currency(
         root, manifest, receipt, toolchain=toolchain
@@ -999,6 +1000,72 @@ def _fail_records(
     return records
 
 
+def render_visual_failure_report(
+    batch_id: str,
+    manifest: Mapping[str, Any],
+    builds: Mapping[str, Mapping[str, Any]],
+    reviews: Mapping[str, Mapping[str, Any]],
+) -> str:
+    """渲染当前失败诊断；与只有成功闭环才生成的批次报告明确区分。"""
+    batch = _batch(manifest, batch_id)
+    paper_ids = list(batch["paper_ids"])
+    fails = [
+        record
+        for paper_id in paper_ids
+        for record in _fail_records(reviews[paper_id], builds[paper_id])
+    ]
+    page_total = sum(
+        len(edition["pages"])
+        for paper_id in paper_ids
+        for edition in reviews[paper_id]["editions"]
+    )
+    lines = [
+        "# 批次 %s 视觉审查诊断" % batch_id,
+        "",
+        "- 当前结论：`VISUAL_FAILED`",
+        "- 批次闭环：未完成；本诊断不得作为 `closed` 或 `closed_with_blockers` 报告",
+        "- 试卷数：%d" % len(paper_ids),
+        "- 审查页数：%d" % page_total,
+        "- 失败检查数：%d" % len(fails),
+        "",
+    ]
+    for paper_id in paper_ids:
+        paper = _paper(manifest, paper_id)
+        build = builds[paper_id]
+        review = reviews[paper_id]
+        lines.extend([
+            "## %s" % paper_id,
+            "",
+            "- 标题：%s" % paper["title"],
+            "- 项目目录：`%s`" % paper["project_dir"],
+            "- 构建状态：`%s`；attempt `%s`" % (
+                build["status"], build["attempt_id"]
+            ),
+            "- 复核状态：`%s`；时间 %s" % (
+                review["status"], review["reviewed_at"]
+            ),
+        ])
+        for edition in review["editions"]:
+            lines.append(
+                "- %s：%d 页；PDF SHA-256 `%s`" % (
+                    edition["edition"], edition["page_count"], edition["pdf_sha256"]
+                )
+            )
+        lines.append("")
+    lines.extend(["## 失败检查", ""])
+    for item in fails:
+        note = " ".join(item["note"].split()) or "视觉审查未通过"
+        lines.append(
+            "- %s｜%s 第 %d 页｜`%s`｜attempt `%s`｜%s" % (
+                item["paper_id"], item["edition"], item["page"],
+                item["check_code"], item["build_attempt_id"], note,
+            )
+        )
+    if not fails:
+        lines.append("- 无失败检查。")
+    return "\n".join(lines).rstrip("\n") + "\n"
+
+
 # ---------------------------------------------------------------- issues 对账
 
 
@@ -1323,8 +1390,8 @@ def finalize_batch(
 
     - 四版本全 `passed` → 提交 review 回执、final build 回执、issues、最终批次报告与
       paper/batch 状态（manifest 最后写），`code=FINALIZED`；
-    - 任一页 fail → **只**提交 `review=failed`、视觉 issues 与 paper/batch 状态
-      （build 保持 `compiled_pending_review`，不生成/覆盖报告），`code=VISUAL_FAILED`。
+    - 任一页 fail → 单一事务提交 `review=failed`、视觉 issues、当前失败诊断报告与
+      paper/batch 状态（build 保持 `compiled_pending_review`），`code=VISUAL_FAILED`。
 
     结构不完整、currency/CAS 不匹配、报告渲染或逐字段验证失败时零正式修改——这些分支
     在事务 `prepare()` 之前就抛出，工作树连一个临时文件都不会多出来。
@@ -1364,7 +1431,8 @@ def finalize_batch(
         builds = {
             paper_id: _require_build(
                 root, manifest, paper_id, chain,
-                "compiled_pending_review" if review_mode else "succeeded",
+                "compiled_pending_review" if review_mode
+                else ("succeeded", "compiled_pending_review"),
             )
             for paper_id in paper_ids
         }
@@ -1400,9 +1468,9 @@ def finalize_batch(
                 if not path.is_file():
                     raise ReviewError(f"{paper_id}: 缺 review 回执，无法只重算报告")
                 review = load_review(path)
-                if review["status"] != "passed":
+                if review["status"] not in {"passed", "failed"}:
                     raise ReviewError(
-                        "%s: review 状态是 %s，只重算报告要求 passed"
+                        "%s: review 状态是 %s，只重算报告要求 passed 或 failed"
                         % (paper_id, review["status"])
                     )
                 stale, reasons = is_stale(builds[paper_id], review, visual)
@@ -1412,6 +1480,24 @@ def finalize_batch(
                         % (paper_id, "；".join(reasons))
                     )
                 reviews[paper_id] = review
+                if review["status"] == "failed":
+                    fails.extend(_fail_records(review, builds[paper_id]))
+
+            if not review_mode:
+                expected_build_status = (
+                    "compiled_pending_review"
+                    if any(item["status"] == "failed" for item in reviews.values())
+                    else "succeeded"
+                )
+                invalid_builds = [
+                    paper_id for paper_id in paper_ids
+                    if builds[paper_id]["status"] != expected_build_status
+                ]
+                if invalid_builds:
+                    raise ReviewError(
+                        "report-only 状态下，批次 build 应为 %s：%s"
+                        % (expected_build_status, invalid_builds)
+                    )
 
         loaded = _loaded_facts(root, manifest, affected, issues_path, facts_loader)
         stale_artifacts = sorted(
@@ -1450,6 +1536,10 @@ def finalize_batch(
                 root, manifest, affected, loaded, builds,
                 issue_records=records, toolchain=chain,
             )
+            failure_report = render_visual_failure_report(
+                batch_id, manifest, builds, reviews
+            )
+            extra[report_relative] = failure_report.encode("utf-8")
             document = build_projects.commit_state(
                 root, manifest, review_targets, extra,
                 lambda transaction_id: build_projects.reconciled_manifest(
@@ -1469,7 +1559,9 @@ def finalize_batch(
                        item["check_code"])
                     for item in fails
                 ],
-                "report_written": False,
+                "report": report_relative,
+                "report_written": True,
+                "mode": "review" if review_mode else "report-only",
             }
 
         # ---- 3. build succeeded 候选（纯函数；review fail 时根本走不到这里）
@@ -1630,6 +1722,8 @@ def check_batch(
         if stale:
             problems.append("%s: review 已失效（%s）" % (paper_id, "；".join(reasons)))
             continue
+        builds[paper_id] = build
+        reviews[paper_id] = review
         if review["status"] == "failed":
             visual_failed = True
             problems.append(f"{paper_id}: 视觉审查未通过")
@@ -1640,11 +1734,23 @@ def check_batch(
                 % (paper_id, build["status"], review["status"])
             )
             continue
-        builds[paper_id] = build
-        reviews[paper_id] = review
 
     report_path = Path(root) / report_target(batch_id)
-    if not problems and not report_path.is_file():
+    diagnostic_report_invalid = False
+    if visual_failed and set(builds) == set(batch["paper_ids"]):
+        try:
+            expected = render_visual_failure_report(
+                batch_id, manifest, builds, reviews
+            )
+            if not report_path.is_file():
+                raise ReviewError("缺当前视觉失败诊断报告")
+            existing = report_path.read_text(encoding="utf-8")
+            if existing != expected:
+                raise ReviewError("诊断报告与当前 attempt/失败检查不一致")
+        except (ReviewError, OSError, UnicodeError) as error:
+            diagnostic_report_invalid = True
+            problems.append("批次诊断报告已失效：%s" % error)
+    if not visual_failed and not problems and not report_path.is_file():
         problems.append(f"缺批次报告：{report_target(batch_id)}")
 
     if not problems:
@@ -1688,7 +1794,7 @@ def check_batch(
 
     if not problems:
         code = "FINALIZED"
-    elif visual_failed:
+    elif visual_failed and not diagnostic_report_invalid:
         code = "VISUAL_FAILED"
     else:
         code = "INVALID_OR_STALE"
@@ -1742,8 +1848,8 @@ def batch_review_paths(
     """当前批次的所有权范围：各卷 build + review 回执，可选 manifest/issues 与报告。
 
     这一组路径是 `git add --pathspec-from-file` 的唯一来源：多一条就会夹带别的会话的
-    改动，少一条就会把诊断状态留在工作区。视觉失败路径用的是**不含报告**的那一版——
-    那次事务根本没有写报告，把它 add 进来只会把上一批的报告一起提交掉。
+    改动，少一条就会把诊断状态留在工作区。视觉失败事务会写入当前诊断报告，因此 checked
+    路径范围必须包含批次报告。
     """
     batch = _batch(manifest, batch_id)
     paths: List[str] = []
@@ -1800,7 +1906,7 @@ def finalize_batch_checked(
 
     - 进入时 tracked 工作树/索引必须干净——否则这次提交会夹带别的会话的改动；
     - `0/FINALIZED`：原样返回，**不 stage、不 commit**（正式关闭由执行者按流程提交）；
-    - `4/VISUAL_FAILED`：用**不含报告**的 ownership paths 精确 `git add`，跑
+    - `4/VISUAL_FAILED`：用包含当前失败诊断报告的 ownership paths 精确 `git add`，跑
       `check-staged` 与 `git diff --cached --check`，提交固定诊断消息后返回 4；
     - `2/6` 或其他：零 stage、零 commit。带着未提交的诊断状态继续改规范源，会让下一次
       构建的输入无法解释——那正是这条包装器要堵死的路。
@@ -1823,7 +1929,7 @@ def finalize_batch_checked(
 
     manifest = load_manifest(manifest_path)
     scope = list(batch_review_paths(
-        manifest, batch_id, include_state=True, report=False
+        manifest, batch_id, include_state=True, report=True
     ))
     _git(root, ["add", "--"] + scope)
     committed = False
@@ -1861,6 +1967,10 @@ def _parser() -> argparse.ArgumentParser:
         finalize.add_argument("--issues", required=True)
         finalize.add_argument("--batch", required=True)
         finalize.add_argument("--output-report", required=True)
+        finalize.add_argument(
+            "--work-dir",
+            help="默认使用项目 .work；指定其子目录可执行 report-only 刷新",
+        )
         finalize.add_argument("--json", action="store_true")
 
     check = subparsers.add_parser("check-batch")
@@ -1961,6 +2071,7 @@ def main(
                 Path(arguments.manifest), Path(arguments.issues), arguments.batch,
                 Path(arguments.output_report), facts_loader=facts_loader,
                 search_path=search_path, renderer=renderer,
+                work_dir=(Path(arguments.work_dir) if arguments.work_dir else None),
             )
             _emit(report, arguments.json, ["  ✗ %s" % item for item in report.get(
                 "problems", []

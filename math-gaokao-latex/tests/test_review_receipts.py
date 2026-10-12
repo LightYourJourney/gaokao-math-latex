@@ -682,7 +682,7 @@ class BatchIntegrationTests(unittest.TestCase):
             self.assertEqual("passed", review["status"])
             self.assertEqual(subject.EDITIONS, tuple(item["edition"] for item in review["editions"]))
 
-    def test_visual_fail_is_valid_diagnostic_without_build_or_report(self) -> None:
+    def test_visual_fail_atomically_replaces_stale_report_with_diagnostic(self) -> None:
         self.prepare()
         failure = (build_tests.PAPER_ID, subject.EDITIONS[1], 1)
         self.complete_work([failure])
@@ -696,8 +696,43 @@ class BatchIntegrationTests(unittest.TestCase):
         result = self.finalize(reviewed_at="2026-08-12T12:00:00+08:00")
         self.assertEqual("VISUAL_FAILED", result["code"])
         self.assertEqual("compiled_pending_review", result["batch_status"])
-        self.assertFalse(result["report_written"])
-        self.assertEqual(report_sentinel, self.report_path.read_bytes())
+        self.assertTrue(result["report_written"])
+        report = self.report_path.read_text(encoding="utf-8")
+        self.assertNotEqual(report_sentinel.decode(), report)
+        self.assertIn("VISUAL_FAILED", report)
+        expected_attempt = self.fixture.receipt(
+            self.fixture.manifest()["papers"][0]["project_dir"]
+        )["attempt_id"]
+        self.assertIn(expected_attempt, report)
+        self.assertIn("解析版 第 1 页｜`glyph`", report)
+        self.assertNotIn("批次结论：`closed", report)
+        checked = subject.check_batch(
+            self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+            toolchain=self.chain, facts_loader=self.loader,
+        )
+        self.assertEqual("VISUAL_FAILED", checked["code"])
+        self.assertFalse(any("诊断报告已失效" in item for item in checked["problems"]))
+        self.report_path.write_text("stale passed report\n", encoding="utf-8")
+        stale = subject.check_batch(
+            self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+            toolchain=self.chain, facts_loader=self.loader,
+        )
+        self.assertEqual("INVALID_OR_STALE", stale["code"], stale)
+        self.assertTrue(any("诊断报告与当前 attempt" in item for item in stale["problems"]))
+        shutil.rmtree(self.fixture.root / subject.WORK_RELATIVE / self.batch_id)
+        refreshed = self.finalize(
+            work_dir=self.fixture.root / subject.WORK_RELATIVE / "report-only"
+        )
+        self.assertEqual("VISUAL_FAILED", refreshed["code"])
+        self.assertEqual("report-only", refreshed["mode"])
+        self.assertTrue(refreshed["report_written"])
+        self.assertIn("VISUAL_FAILED", self.report_path.read_text(encoding="utf-8"))
+        checked = subject.check_batch(
+            self.fixture.manifest_path, self.fixture.issues_path, self.batch_id,
+            toolchain=self.chain, facts_loader=self.loader,
+        )
+        self.assertEqual("VISUAL_FAILED", checked["code"])
+        self.assertFalse(any("诊断报告已失效" in item for item in checked["problems"]))
         for paper in self.fixture.manifest()["papers"]:
             self.assertEqual(
                 builds_before[paper["paper_id"]],
@@ -1118,7 +1153,7 @@ class CheckedWrapperTests(BatchIntegrationTests):
                 )
                 self.assertTrue(retried["committed"])
 
-    def test_checked_visual_fail_commits_exact_diagnostic_scope_without_report(self) -> None:
+    def test_checked_visual_fail_commits_exact_diagnostic_scope_with_report(self) -> None:
         self.prepare()
         self.complete_work([(build_tests.PAPER_ID, subject.EDITIONS[0], 1)])
         result = subject.finalize_batch_checked(
@@ -1127,7 +1162,15 @@ class CheckedWrapperTests(BatchIntegrationTests):
         )
         self.assertEqual("VISUAL_FAILED", result["code"])
         self.assertTrue(result["committed"])
-        self.assertNotIn(subject.report_target(self.batch_id), result["committed_paths"])
+        self.assertIn(subject.report_target(self.batch_id), result["committed_paths"])
+        report = (self.fixture.root / subject.report_target(self.batch_id)).read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("VISUAL_FAILED", report)
+        expected_attempt = self.fixture.receipt(
+            self.fixture.manifest()["papers"][0]["project_dir"]
+        )["attempt_id"]
+        self.assertIn(expected_attempt, report)
         message = subprocess.check_output(
             ["git", "-C", str(self.fixture.root), "log", "-1", "--format=%s"], text=True
         ).strip()
