@@ -1127,3 +1127,8 @@
 - 阶段验证：source manifest、项目生成、简答答案、解析源一致性、四版入口生成器检查均通过。`provenance.py check-batch` 只报告缓存批次状态 `compiled_pending_review` 与现场派生 `provenance_verified` 不符，未报告逐题 provenance 内容错误；`build_projects.py validate-receipts` 报生成树/工具链漂移。首次并行运行只读检查时因共享 `RepoLock` 互斥导致生成器检查失败，改为串行重跑后通过；未删除或绕过锁文件。
 - 剩余任务：重建当前 attempt，确认四版构建日志和页数；刷新四个当前 attempt 工作项；逐页复核 65 页并登记结果；按门禁 finalize、清理本批中间产物、运行 scoped gates 和全量报告检查后提交。
 - 下一步：串行执行 `phase2-b58` 单卷正式重建；随后用官方 `prepare-batch` 刷新工作项并核对 PDF 哈希绑定，再开始逐页视觉审查。`phase2-b57` 的两项首页答案泄漏失败继续保留，未被本阶段改动。
+- 已完成可验证阶段（当前 attempt 正式重建）：单卷正式构建完成，manifest revision 3941；新 attempt 为 `27645bca-21d1-4984-9a5a-28d663584373`。四版页数仍为试题 7、解析 28、简答 8、印刷 22，共 65 页。
+- 阶段修改文件：1986 广东文史项目 `receipts/build.json` 与四份 ignored `build/*.pdf`；`source-manifest.json` 状态事务更新；本进度文件。旧 attempt 的四份 review work items 暂未刷新。
+- 阶段验证：构建状态 `COMPILED_PENDING_REVIEW`，1 卷待审、0 构建失败；`validate-receipts`、provenance check-batch、source manifest validate 均通过。逐版核对实际 PDF SHA-256 与 receipt 一致；四版均 succeeded，错误、缺字、Overfull、未解析引用数量均为 0。
+- 剩余任务：为新 attempt 刷新四份 review work items，核对哈希与完整页集合；完成 65 页逐页视觉审查并登记检查项；之后按门禁 finalize、清理本批中间物、运行 scoped gates 和全量报告检查。
+- 下一步：执行官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b58`，确认四份工作项绑定新 attempt `27645bca…` 和当前 PDF 哈希，然后启动四版分工审查。
