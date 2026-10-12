@@ -1068,3 +1068,8 @@
 - 阶段验证：`make_short_answers.py --check` 对 b57 两卷均通过；`tests/test_short_answers.py` 50 项全通过；生成 diff 仅含 Q7 最终答案一行；`git diff --check` 通过。
 - 剩余任务：重新正式构建两卷八版并验证新 build receipts/日志；随后重置 8 份 review 工作项绑定新 attempts，再进行 91 页逐页视觉复核。首页答案泄漏用户选择仍未决。
 - 下一步：重跑 `build_projects.py build --formal --batch phase2-b57`，确认页数、警告、输出哈希与新的 attempts，再准备新复核工作项。
+- 已完成可验证阶段（简答答案修复后重建）：phase2-b57 两卷八版重新正式构建成功。文史 attempt `82cfd59c-7c07-40ea-bb71-438a59b57801`，理工农医 attempt `15a812fe-aba2-4294-a00d-222fb0d66bc3`；页数分别为 4/18/5/14 与 5/22/6/17，总计 91 页。文史简答版 PDF 文本已确认 Q7 输出 $(7-\sqrt{17})/2$，不再是旧折叠题答案。
+- 阶段修改文件：两卷 `receipts/build.json`、`source-manifest.json` 与本进度文件；八份 PDF 为 ignored 构建产物。
+- 阶段验证：正式 build 返回 `COMPILED_PENDING_REVIEW：2 待审、0 失败`；`validate-receipts`、`provenance check-batch`、`make_short_answers.py --check` 均通过。八版日志逐项为 0 errors、0 missing characters、0 overfull、0 undefined references；页数与既有版式一致。尚未完成视觉验收，不将 pending 描述为正式通过。
+- 剩余任务：为新 attempt 刷新并核对 8 份 review work items；完成 91 页当前 PDF 逐页视觉复核并记录结果。试题版首页答案泄漏的处理选择仍未收到，故可记录已知失败但不得擅自改编辑说明或 finalize；随后还需正式登记、清理中间产物、运行 scoped gates 和全量报告。
+- 下一步：准备当前 attempt 的复核工作项，核对其 PDF 哈希、attempt 与页覆盖；之后启动新一轮逐页视觉复核，不复用旧 attempt 的页面结论。
