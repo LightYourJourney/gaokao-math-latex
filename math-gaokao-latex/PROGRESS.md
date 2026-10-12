@@ -2362,3 +2362,8 @@
 - 验证结果：旧build attempt `15e80718-ea50-44a5-bcd1-6992d7eaa00d`因生成输入树/工具链指纹变化stale；provenance缓存与现场派生状态不一致；review receipt绑定旧attempt `e98a279b-c074-49c9-affe-964a8d10bf81`。旧工作项绑定attempt `d0aa6a4a-59b6-49b6-9eee-8e77af2b8ebe`，原有5/27/6/22页共60页、480项全部pass；因缺少可证明新旧PDF逐页像素相同的证据，不复用这些结论，归档留存。旧PDF回执页数5/27/6/22且历史日志无problems。
 - 剩余任务：formal rebuild、当前attempt工作项和全部新PDF逐页复核后finalize；全库报告、门禁/测试、清理与提交。41项待核仍无权威映射。
 - 下一步：提交b76预检checkpoint，再执行official formal build；确认新PDF后生成当前attempt工作项，历史pass工作项归档不覆盖。
+- 已完成正式构建与工作项刷新阶段（phase2-b76）：official formal build创建attempt `e9824b79-07d3-4014-8b2e-0f032c88ee98`；四版均succeeded，页数5/27/6/22共60页，problems、overfull、missing characters、undefined references及TeX errors均为0。build receipt与provenance batch checks `OK：1卷`，PDF SHA与receipt匹配。
+- 阶段修改文件：2000全国新课程文科卷`receipts/build.json`、manifest派生状态与本进度文件；正式PDF仍仅在ignored `build/`。
+- 验证结果：官方`prepare-batch`创建四份绑定当前attempt/PDF SHA的工作项，60页×8项全pending。历史attempt `d0aa6a4a-59b6-49b6-9eee-8e77af2b8ebe`的四份全pass工作项已原样归档到`.work/phase2-b76/archive/`，原始pass观察不用于当前attempt。
+- 剩余任务：逐页复核新60页并finalize；随后报告/门禁/测试、清理、PDF核验与提交。
+- 下一步：提交b76正式构建checkpoint，渲染当前四版60页并制作接触表。
