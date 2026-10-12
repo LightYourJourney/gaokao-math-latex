@@ -2168,3 +2168,7 @@
 - 阶段修改文件：本卷 `receipts/review.json`、manifest派生状态、`reports/phase2-b71.md`、来源Markdown与生成的`questions.tex`、构建回执及本进度文件；临时复核工作项/渲染仅在ignored `.work/`。
 - 剩余任务：刷新全库报告投影并check；执行本批build/provenance/review/issues门禁、相关测试及`git diff --check`；清除本批渲染图和LaTeX中间物，核对PDF SHA后本地提交。41项待核权威映射仍未解决。
 - 下一步：运行`report.py render --all`和`check --all`，再做phase2-b71 scoped gates与适当定向测试。
+- 已完成全库报告刷新阶段（phase2-b71）：`report.py render --all`通过一个content事务写入并回读校验六个全量报告目标；phase2-b71的batch报告已由finalizer生成。当前尚未执行全库`check --all`和提交前scoped gates/测试。
+- 阶段修改文件：六个全库报告/索引投影及本进度文件；paper源和PDF未因报告生成而变化。
+- 剩余任务：运行全库报告一致性检查、build/provenance/review/issues scoped gates和定向测试；清理LaTeX中间物与本批渲染输出，确认只留四份PDF且SHA吻合回执；检查diff并提交。
+- 下一步：先单独运行`report.py check --all`，再运行本批四类scoped gates与测试，避免同时扫描全库争用资源。
