@@ -2598,3 +2598,8 @@
 - 验证结果：build receipt attempt `54543e02-5848-4cb4-9a6e-03a1d5c6cf05`因生成输入树/工具链指纹变化stale；旧review receipt及4份空白工作项均不绑定该build，工作项共400项pending；provenance事实状态当前为`provenance_verified`，manifest派生缓存尚未同步。
 - 剩余任务：正式重建b81四版并同步派生状态；归档旧工作项后为新attempt生成复核输入、逐页复核并登记；全库报告、门禁、测试、清理和提交。
 - 下一步：提交预检checkpoint并运行b81官方formal build；不复用旧build/review attempt，不重跑来源核验。
+- 已完成正式构建阶段（phase2-b81）：官方formal build成功，当前attempt为`5eba94fd-9c4b-4c45-831e-43f2165592dd`；四版页数4/22/5/19，共50页。
+- 阶段修改文件：b81 `receipts/build.json`、`source-manifest.json`及ignored编译产物；来源、题面、答案、图稿与provenance未改。
+- 验证结果：四版均`succeeded`，errors、missing characters、overfull、undefined references均为空；build receipt validator返回`OK`（1 pending review、0 stale/failed）；provenance `check-batch`返回`OK：1卷`。
+- 剩余任务：旧review回执和工作项绑定更早attempt，不可复用；需将空白工作项可恢复归档，为当前attempt重新prepare并逐页复核/登记，随后报告、门禁、测试、清理和提交。
+- 下一步：提交b81 build receipt/manifest checkpoint，再归档旧工作项并运行官方`prepare-batch`。
