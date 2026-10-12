@@ -2760,3 +2760,8 @@
 - 验证结果：试题/解析/简答/印刷版分别4/22/6/17页，四版`succeeded`；errors、missing characters、overfull、undefined references和problems均为空；build receipt validator为1 pending、0 stale/failed，provenance `check-batch`为`OK：1卷`。
 - 剩余任务：当前attempt尚无视觉复核；需生成新工作项、检查全52页及候选页并完成416项登记，再finalize、运行报告/门禁/定向测试、清理和PDF核验。
 - 下一步：提交b84 build checkpoint，为attempt `21f6787d-033c-408c-96e7-13179b7ec568`运行官方`prepare-batch`。
+- 已完成phase2-b84当前attempt复核准备阶段：归档旧attempt工作项后，官方`prepare-batch`为新build生成四份复核工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b84/review/`四份工作项；旧项可恢复归档于`~/.Trash/phase2-b84-review-workitems.fz7O3p/review`；正式review receipt未改。
+- 验证结果：四版均绑定attempt `21f6787d-033c-408c-96e7-13179b7ec568`及对应PDF SHA；连续覆盖试题4、解析22、简答6、印刷17页，共52页×8项=416项pending；候选页各为封面1页，warning exemptions为空。
+- 剩余任务：检查全部52页接触表并放大复核图稿/候选页，之后填写、校验并正式登记416项视觉结论。
+- 下一步：生成四版全页接触表，放大检查题11屋顶、题12信息网络、题19棱锥图及每版封面/异常页。
