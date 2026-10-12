@@ -2475,3 +2475,8 @@
 - 验证结果：差异仅2个预期tracked文件，四版页数仍为5/22/6/18且均成功；`git diff --check`通过。finalizer报告`committed=false`，状态未被部分登记。
 - 剩余任务：提交build receipt/manifest及本进度后，在tracked工作树干净状态下重试checked finalizer。
 - 下一步：先提交本checkpoint及两项正式构建状态，然后执行checked finalizer；不重跑构建或视觉复核。
+- 已完成正式视觉回执登记阶段（phase2-b78）：官方`finalize-batch-checked`返回`FINALIZED`，批次状态`closed`，报告`reports/phase2-b78.md`已写入。
+- 阶段修改文件：本卷`receipts/review.json`、manifest派生状态、phase2-b78报告；未改题目/provenance/图稿。
+- 验证结果：官方review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；current attempt与build匹配。四版51页×8项共408项，362 pass、46 not_applicable、0 fail/pending。
+- 剩余任务：全库报告render/check；运行本卷scoped gates及定向测试；清理中间文件/PNG，核验PDF页数与SHA，再最终审阅提交。
+- 下一步：记录并提交本阶段进度，然后执行`report.py render --all`及`check --all`刷新全库投影。
