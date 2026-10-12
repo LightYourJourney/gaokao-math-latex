@@ -2889,3 +2889,8 @@
 - 验证结果：文科四版页数4/20/6/16、理科5/22/7/16；8份PDF SHA-256与最终build receipt逐项相同；两个build目录均仅保留四份PDF；`.work/phase2-b86`已离开项目工作区。
 - 剩余任务：对本批tracked差异做最终范围审阅与`git diff --check`，提交非README改动；三份全库README待用户人工复核仍不提交。
 - 下一步：提交cleanup checkpoint，审阅并提交b86正式数据、报告投影与进度；不push。
+- 已完成phase2-b86最终差异审阅：正式变更仅限两卷build/review receipts、source manifest/CSV、批次报告、六份全库报告投影及本进度；未改试题、答案、LaTeX源、图稿或代码。
+- 阶段修改文件：三份README仍保持待人工复核，不暂存/提交；本批正式回执、manifest与报告投影连同本进度进入提交范围。
+- 验证结果：`git diff --check`通过；review `FINALIZED`、build 2/2 succeeded、provenance 2卷通过、生成器/简答/edition/CSV/全库report gates及77项定向测试均通过；8份PDF页数与SHA匹配最终receipt，两个build目录仅含PDF。
+- 剩余任务：用户人工复核三份README投影；后续manifest批次继续按既定计划处理，1952—2026全语料目标尚未完成。
+- 下一步：提交本b86闭环范围内的非README正式数据与报告；不push，不因本批完成而宣称全库完成。
