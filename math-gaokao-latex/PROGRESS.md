@@ -995,3 +995,8 @@
 - 阶段修改文件：仅本进度文件；预检未修改试卷源、manifest、provenance、issue 或构建产物。ignored `.work/phase2-b57/review/` 中既存工作项保持不动，待新 attempt 后由官方工具刷新。
 - 剩余任务：完成独立审计验收；两卷八版正式重建；逐页复核 91 页并重点检查既有五条来源问题所涉页面；登记正式回执并关闭批次；清理中间产物、工作项与临时 PNG；完成 scoped gates 与全量报告校验。
 - 下一步：核实分卷只读审计结果与问题记录；若无需要修正的转录/答案事实，再正式重建两卷四版，之后刷新 review work items。
+- 已完成子阶段：在两项只读内容审计并行进行期间，完成两卷八版正式重建；文科 attempt `6b44ba20-7ddd-4b0f-8849-b4f5fca44154`，理科 attempt `ff815137-1e49-41e7-94d1-8361cf029bec`，manifest revision 3929。页数保持文科 4/18/5/14（41 页）、理科 5/22/6/17（50 页），总计 91 页。
+- 阶段验证：build receipt validator `OK：2 卷`；八版日志均无 Missing character、Overfull、LaTeX error 或 undefined reference。当前 2 卷待视觉复核。provenance 逐题记录未被改动；复核工作项尚绑定旧 attempts，未复用。
+- 阶段修改文件：两卷 build receipts/PDF 与 `source-manifest.json`；两名只读 subagent 尚在审计源内容，未写入文件；本进度文件记录本阶段。
+- 剩余任务：验收两名独立审计证据；如无事实修正，刷新两卷 review work items 并检查其 attempt/PDF 哈希绑定；逐页复核 91 页并重点查看五条既有非阻塞来源问题涉及页；登记正式回执、清理中间产物与临时图像、完成 scoped gates 和全量报告校验。
+- 下一步：取得并核对两名审计者的证据；随后准备当前 attempt 的 review work items，不要在审计未收敛前 finalize。
