@@ -1026,3 +1026,8 @@
 - 阶段修改文件：仅本进度文件；来源转录、解答、图稿、manifest、provenance、review work items 和正式 receipts 均未改动。
 - 剩余任务：依证据修正文史类第 7 题及图稿/解析、理工农医类第 2 题解答公式、理工农医类第 6 题图稿和第 7 题重叠注记；按官方生命周期处理 ISSUE-0770 并登记新增问题；等待首页答案泄漏选择；随后刷新来源核验、两卷八版重建与仅对变化/未能证明相同的页面复核，登记最终回执并完成批次门禁。
 - 下一步：先把本阶段审查范围与发现作为进度 checkpoint 提交；继续只读查明 manifest 图稿登记、问题账和 provenance 更新的事务流程，避免直接改生成状态或覆盖现有记录。
+- 已完成可验证子阶段（来源/图稿修正）：按固定原卷第 36—37 页，将文史类第 7 题及答案/解析改回抛物线与圆问题，新增 TikZ 图稿，并移除不再引用的两份文史折叠图；理工农医类第 2(8) 解析修正余切差角分母及代入符号；第 6 题图稿将圆心移至 $(2,0)$ 并按题设抛物线、上半平面交点和中点重绘；第 7 题图稿移除与虚线相交的多余注记。首页答案-bearing 编辑说明未改。
+- 阶段修改文件：两卷规范题面/解析/答案源、文史类答案要点、三份规范 TikZ 图稿及两份废弃图稿删除、`source-manifest.json` 文史 Q7 图登记与索引说明、生成的两卷 `questions.tex/answers.tex/index.json`、文史类派生《含解析》、`tests/test_generate_projects.py`、本进度文件。来源清单删除文史折叠图登记并登记新 Q7 图，实际引用数为 2。
+- 阶段验证：新增两条真实生成器回归测试均先按预期 RED（错录题目/错误公式），修复后 GREEN；`solution_sources.py extract-batch --write` 提交 4 个派生目标；`generate_projects.py --batch phase2-b57 --write` 写入 5 个目标。其后 `source_manifest.py validate`、两卷 `solution_sources.py check-batch`、生成器 `--check`、两条回归测试与 `git diff --check` 全部通过。XeLaTeX 尚未重建，图稿的最终视觉验收仍待 PDF 阶段。
+- 剩余任务：查明并按受支持事务更新 ISSUE-0770 与此次已修复问题的登记策略；为 Q7 转录更正刷新来源/provenance 证据；等待试题版首页答案泄漏处理选择；随后重建两卷八版，按新旧页面哈希复用可证明未变的视觉检查、补查变化页，正式登记回执并完成 scoped gates/全量报告。
+- 下一步：检查当前问题账、manifest/provenance 工作项和官方 issue/provenance 写入接口；定妥状态更新路径后继续，不重跑已通过的生成器与来源清单验证，除非后续输入变化使其失效。

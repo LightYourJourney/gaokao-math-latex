@@ -1380,6 +1380,43 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
         self.assertIn(r"\par\noindent C~", q11.group(1))
         self.assertNotIn(r"\linebreak[4]", q11.group(1))
 
+    def test_1986_shanghai_arts_q7_uses_the_fixed_source_problem(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1986-regular-shanghai-arts"
+        )
+        result = generate_project(
+            ROOT.parent.parent.parent, paper_sources(paper)
+        )
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        q7 = re.search(
+            r"\\gkti\{7\}(.*?)\\end\{question\}", questions, re.DOTALL
+        )
+        self.assertIsNotNone(q7)
+        self.assertIn(r"y^2=px", q7.group(1))
+        self.assertIn(r"(x-2)^2+y^2=3", q7.group(1))
+        self.assertNotIn(r"AB=\sqrt7", q7.group(1))
+
+    def test_1986_shanghai_science_q2_8_cotangent_uses_correct_difference(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1986-regular-shanghai-science"
+        )
+        result = generate_project(
+            ROOT.parent.parent.parent, paper_sources(paper)
+        )
+        answers = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/answers.tex"
+        ].decode("utf-8")
+        self.assertIn(
+            r"\frac{\cos\theta+\sin\theta}{\sin\theta-\cos\theta}",
+            answers,
+        )
+
 
 # ------------------------------------------------------------------ CLI 契约
 

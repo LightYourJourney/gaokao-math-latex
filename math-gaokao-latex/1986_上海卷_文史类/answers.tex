@@ -834,81 +834,81 @@ A_1E=\frac32a.
 
 \textbf{题目}：
 
-（本题满分 12 分）已知直角三角形 $ABC$ 的两直角边 $AC=2$，$BC=3$，$P$ 为斜边 $AB$ 上一点（图 1）。现沿 $CP$ 将此直角三角形折成直二面角 $A\mathbin{-}CP\mathbin{-}B$，当 $AB=\sqrt7$ 时，求二面角 $P\mathbin{-}AC\mathbin{-}B$ 的大小（图 2）。
+（本题满分 12 分）如果抛物线 $y^2=px$ 和圆 $(x-2)^2+y^2=3$ 相交，它们在 $x$ 轴上方的交点为 $A$ 和 $B$，那么当 $p$ 为何值时，线段 $AB$ 的中点 $M$ 在直线 $y=x$ 上。
 \nopagebreak[4]
-\begin{center}\input{figures/f1986_shanghai_arts_t7_fold_before}\end{center}
-\nopagebreak[4]
-\nopagebreak[4]
-\begin{center}\input{figures/f1986_shanghai_arts_t7_fold_after}\end{center}
+\begin{center}\input{figures/f1986_shanghai_arts_t7_parabola_circle}\end{center}
 \nopagebreak[4]
 \Needspace{4\baselineskip}
 \textbf{解析}
 
 \Needspace{5\baselineskip}
-设 $\alpha=\angle BCP$。在折叠后的两个互相垂直平面内，过 $A\text{、}B$ 分别作 $CP$ 的垂线 $AD\text{、}BE$。则
+设 $A\text{、}B$ 的坐标分别为 $(x_1,y_1)$、$(x_2,y_2)$。由
 
 \nopagebreak[4]
 \[
-CD=2\sin\alpha,\quad AD=2\cos\alpha,
-\]
-
-\nopagebreak[4]
-\[
-CE=3\cos\alpha,\quad BE=3\sin\alpha.
-\]
-
-\Needspace{5\baselineskip}
-于是
-
-\nopagebreak[4]
-\[
-\begin{aligned}
-AB^2
-&=(CE-CD)^2+AD^2+BE^2\\
-&=(3\cos\alpha-2\sin\alpha)^2
-+(2\cos\alpha)^2+(3\sin\alpha)^2\\
-&=13-6\sin2\alpha.
-\end{aligned}
-\]
-
-按题设折叠后的空间距离 $AB=\sqrt7$，故 $\sin2\alpha=1$。又 $0<\alpha<\frac\pi2$，从而 $\alpha=\frac\pi4$。
-
-\Needspace{5\baselineskip}
-折叠后空间三角形 $ABC$ 的三边为 $2,3,\sqrt7$，因此
-
-\nopagebreak[4]
-\[
-\cos\angle ACB
-=\frac{2^2+3^2-7}{2\cdot2\cdot3}
-=\frac12,
+\begin{cases}
+y^2=px,\\
+(x-2)^2+y^2=3,
+\end{cases}
 \]
 
 \Needspace{5\baselineskip}
-即 $\angle ACB=60^\circ$。在两个分别包含 $AC$ 的截面内，过 $A$ 作垂直于 $AC$ 的线段 $AH\text{、}AK$，则
+得
 
 \nopagebreak[4]
 \[
-AH=AC\tan45^\circ=2,\qquad
-AK=AC\tan60^\circ=2\sqrt3.
+x^2+(p-4)x+1=0.
 \]
 
 \Needspace{5\baselineskip}
-因此二面角 $P\mathbin{-}AC\mathbin{-}B$ 的平面角满足
+因此
 
 \nopagebreak[4]
 \[
-\cos\angle HAK=\frac{AH}{AK}
-=\frac1{\sqrt3}=\frac{\sqrt3}{3}.
+x_1+x_2=4-p,\qquad x_1x_2=1.
 \]
 
 \Needspace{5\baselineskip}
-所以所求二面角为
+设线段 $AB$ 的中点为 $M(x_M,y_M)$。因 $A\text{、}B$ 均在 $x$ 轴上方，且圆上点的横坐标满足 $x_i\ge2-\sqrt3>0$，所以 $p>0$，
 
 \nopagebreak[4]
 \[
-\arccos\frac{\sqrt3}{3}.
+x_M=\frac{x_1+x_2}{2}=\frac{4-p}{2},
 \]
 
-\gkanswer{答案：$\arccos\dfrac{\sqrt3}{3}$}
+\nopagebreak[4]
+\[
+y_M=\frac{y_1+y_2}{2}
+=\frac{\sqrt{(y_1+y_2)^2}}2
+=\frac{\sqrt{y_1^2+y_2^2+2y_1y_2}}2
+=\frac{\sqrt{p(x_1+x_2)+2p\sqrt{x_1x_2}}}{2}
+=\frac{\sqrt{6p-p^2}}2.
+\]
+
+\Needspace{5\baselineskip}
+由 $M$ 在直线 $y=x$ 上，
+
+\nopagebreak[4]
+\[
+\frac{\sqrt{6p-p^2}}2=\frac{4-p}{2},
+\]
+
+\Needspace{5\baselineskip}
+所以
+
+\nopagebreak[4]
+\[
+p^2-7p+8=0,
+\]
+
+\Needspace{5\baselineskip}
+解得 $p=\dfrac{7\pm\sqrt{17}}2$。又 $x_M\ge0$，故 $p\le4$，舍去 $\dfrac{7+\sqrt{17}}2$，得到
+
+\nopagebreak[4]
+\[
+p=\frac{7-\sqrt{17}}2.
+\]
+
+\gkanswer{答案：$\dfrac{7-\sqrt{17}}2$}
 
 \end{answer}
