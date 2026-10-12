@@ -3005,3 +3005,11 @@
 - 验证结果：`test_report.py` 11/11通过（69.981秒）；测试覆盖事实汇总、六目标渲染与漂移检查，不修改正式README/报告。
 - 剩余任务：六份正式报告投影尚未刷新/核验，README范围等待用户选择；之后仍需最终差异审阅与b88剩余文件提交。
 - 下一步：提交测试checkpoint；确认README选择后执行全库report render/check，再完成最终范围检查。
+
+## phase2-b89 恢复预检（2026-10-13）
+
+- 已完成phase2-b89现状核对：下一manifest批次为2002年普通上海文、理两卷；既有来源转录、答案/解析、四版LaTeX、TikZ图稿和provenance已存在，计划`2026-09-15-gaokao-2002-shanghai.md`把这些内容标为完成，不重做。
+- 阶段修改文件：仅本进度文件；旧正式回执、PDF、LaTeX源与ignored workitem均未修改。
+- 验证结果：issues、source manifest、文理两卷题面生成/简答/edition检查通过。两卷旧build attempts分别为`08c47976-fc59-4302-82eb-17692093e86b`、`e15ae1bf-1242-468d-9668-18a735e3334c`，均因生成输入树和工具链指纹变化stale；旧review虽为passed但绑定更早attempt `a689702d-a861-4754-8844-f1256e2677c2`、`a50193c9-4433-41aa-a350-37a4cc7f8199`。8份现存workitem仍全pending且绑定更旧attempt，覆盖文科50页、理科48页，共784项pending。provenance内容核验未发现源记录问题，但缓存状态与现场派生状态不符；应由官方formal build事务刷新状态，不能手改manifest。
+- 剩余任务：可恢复归档旧b89预览/workitems；按当前输入重建8版、为新attempt重新准备并复核98页/784项，随后正式登记、刷新报告与全库门禁/测试、清理中间物并核验8份PDF SHA/页数。
+- 下一步：提交本恢复checkpoint，归档stale attempt材料后运行b89官方formal build；保留既有转录/解题/provenance成果，不push。
