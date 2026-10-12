@@ -2367,3 +2367,8 @@
 - 验证结果：官方`prepare-batch`创建四份绑定当前attempt/PDF SHA的工作项，60页×8项全pending。历史attempt `d0aa6a4a-59b6-49b6-9eee-8e77af2b8ebe`的四份全pass工作项已原样归档到`.work/phase2-b76/archive/`，原始pass观察不用于当前attempt。
 - 剩余任务：逐页复核新60页并finalize；随后报告/门禁/测试、清理、PDF核验与提交。
 - 下一步：提交b76正式构建checkpoint，渲染当前四版60页并制作接触表。
+- 已完成当前attempt逐页视觉复核阶段（phase2-b76）：四版接触表覆盖全部60页；候选页（四版均为第1页）、六幅图稿题5/8/16/18甲/18乙/22在题面/解析/印刷版对应页及各版末页经150dpi放大检查。页眉页码连续，题目公式和图稿标注清楚；未见缺字、裁切、遮挡、答案泄漏或异常分页。
+- 阶段修改文件：四份ignored `.work/phase2-b76/review/` 当前attempt工作项和本进度文件；60页接触表与25页重点渲染仅在ignored `.work/phase2-b76/render-e9824b79/`。未修改题面、答案、provenance、TikZ图稿或模板；先前480项全pass旧工作项仍在archive中保留，不混入当前复核。
+- 验证结果：当前工作项均绑定attempt `e9824b79-07d3-4014-8b2e-0f032c88ee98`和对应PDF SHA；60页×8项共480项，425 pass、55 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
+- 剩余任务：官方finalize，刷新全库报告并执行批次门禁/测试；清理编译与PNG中间物，核验PDF SHA/页数，最终审查并提交。
+- 下一步：提交视觉复核checkpoint并由官方`finalize-batch`登记当前attempt逐页结论。
