@@ -2599,6 +2599,11 @@
 - 验证结果：全量报告render成功；`report.py check --all`返回“报告输出与全量 manifest 当前一致”；`git diff --check`通过，tracked变更恰为六个派生报告文件。
 - 剩余任务：本批专项门禁与测试、构建产物清理、最终PDF回执/差异核对和提交。
 - 下一步：提交报告checkpoint；串行运行phase2-b82相关状态/generator/short-answer/edition门禁与review/report定向测试。
+- 已完成phase2-b82专项门禁阶段：build final receipt、review、provenance、source manifest、issue ledger、generator、short answers、edition shells均校验通过；发现manifest CSV派生投影滞后一行后，使用官方`manifest_csv.py --write`更新。
+- 阶段修改文件：`math-gaokao-latex/manifest.csv`与本进度文件；未改manifest事实、源题或回执。
+- 验证结果：build `--require-final`为1 succeeded/0 stale；review `FINALIZED`；provenance `OK：1 卷`；generator/short answers/edition checks各1套一致；issue/source manifest validators通过；`manifest_csv.py --check`确认当前且775行；`git diff --check`通过。
+- 剩余任务：定向测试、LaTeX中间物和PNG/workitems清理、PDF哈希/页数复验、最终差异审阅与提交。
+- 下一步：提交门禁checkpoint，然后串行运行`test_review_receipts.py`与`test_report.py`。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
