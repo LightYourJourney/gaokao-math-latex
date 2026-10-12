@@ -2598,6 +2598,11 @@
 - 验证结果：四版页数5/22/7/18、SHA-256逐项与正式build receipt一致；build目录仅4个PDF、0个非PDF文件；build final receipt validator返回`OK：1卷`；52页预览已离开项目工作目录。
 - 剩余任务：以b83恢复预检checkpoint为基准复核tracked差异范围、`git diff --check`及工作树状态，提交最终阶段记录；整个语料后续批次仍未完成。
 - 下一步：执行b83最终差异审阅并提交最终checkpoint，不push、不自动开始下一批。
+- 已完成phase2-b83最终差异审阅（报告README待人工确认）：从恢复预检checkpoint `45ecc30a`起，批次正式变更为6个文件，`git diff --check`通过；另有全库刷新生成的6项报告投影，diff只反映b83关闭后汇总计数、批次状态和门禁状态变化，无图片、PDF或编译中间物。
+- 阶段修改文件：上述6项全库报告投影；其中3个README投影依仓库规则须人工复核后方可提交，其余报告投影可随本阶段提交。
+- 验证结果：tracked差异逐项限定为回执、manifest/进度、phase2-b83报告及全库报告投影；build目录仅四份正式PDF；`git diff --check 45ecc30a..HEAD`通过，当前分支为`feat/gaokao-phase0`。
+- 剩余任务：等待用户人工复核3个README diff；确认后以含`[已核]`的提交信息提交剩余README投影并完成b83工作树收尾。批次内容已闭环，尚不开始后续批次。
+- 下一步：先提交已复核范围内的非README报告投影与本进度记录；取得人工确认后单独提交3个README投影，不push。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
