@@ -3072,3 +3072,8 @@
 - 验证结果：`solution_sources.py extract-batch --write`提交4目标；`check-batch`通过2卷×22题。`generate_projects.py --write`写入5目标，`--check`通过；生成的两份`answers.tex`均确含Q19/Q18前的`\Needspace{10\baselineskip}`。provenance仍`OK：2卷`；build validator准确报告两卷回执因`answers.tex`生成树变化stale，待正式重建。
 - 剩余任务：提交canonical解析源与其确定性投影；运行formal build生成当前attempt，比较新旧PDF页数/字节/SHA并依据相等性刷新workitems复核绑定或局部重审，再finalize、跑全库门禁/测试、清理并核验PDF。
 - 下一步：提交本源/投影checkpoint，然后formal build；不重做已经完成的101页视觉检查，除非PDF哈希证明内容变化。
+- 已完成phase2-b90复核后正式构建、attempt指纹对照及finalize阶段：revision 4092正式build后，文科attempt `ea342837-9a0c-48e2-872b-fa62ea286b02`、理科attempt `7c30040e-277a-4a67-b89b-cdcd8fea8e57`；8版成功，共101页（文5/20/7/17，理5/22/7/18）。
+- 阶段修改文件：两卷`receipts/build.json`、`receipts/review.json`、`source-manifest.json`派生状态、`reports/phase2-b90.md`与本进度；两卷来源/数学内容不变。
+- 验证结果：8份PDF与前attempt SHA不同，但页数/字节大小均一致；新旧两组100dpi渲染逐页像素比较101/101均AE=0，因此精确复用已完成逐页视觉结论。当前workitem覆盖101/101页、808/808检查（717 pass、91 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4093、batch closed；`check-batch` FINALIZED无问题；build validator 2 succeeded/0 stale/failed/invalid/missing/pending；provenance `OK：2卷`，两卷status `complete`。
+- 剩余任务：刷新全库来源CSV与六目标报告投影，跑report全库check及定向测试；然后清理八版编译中间物、可恢复归档work/render、逐PDF核验页数/字节/SHA与最终receipt，审阅并提交b90输出。
+- 下一步：先提交finalize checkpoint，再做CSV/报告投影与测试；三份既有README差异仍排除在暂存/提交之外。
