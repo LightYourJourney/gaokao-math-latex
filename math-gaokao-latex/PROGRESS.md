@@ -2909,3 +2909,8 @@
 - 验证结果：四版页数5/24/7/19，均`succeeded`；build validator为0 stale/failed、1 pending（待视觉复核）；provenance `OK：1卷`，manifest状态已由官方事务刷新。仅印刷版有一条Underfull警告（源行232–233，badness 1043），无Overfull、缺字、未解析引用或build problems。
 - 剩余任务：为当前attempt准备四份review workitem，视觉复核55页并逐项处理/豁免上述Underfull警告；之后finalize、全库投影/门禁/测试、清理和PDF核验。
 - 下一步：提交build checkpoint后运行官方`prepare-batch`，再核查候选页与警告绑定。
+- 已完成phase2-b87视觉复核准备及初步图稿检查：当前attempt工作项覆盖55页/440项，候选页为试题4、解析4、简答4、印刷3；全页接触表已生成。高分辨率检查试题版第2–4页、解析版第12–14页时发现Q12射线图的`M₁/M₂`、`N₁/N₂`及`P₁/P₂/Q₁/Q₂`标签相互贴叠，需先修图稿再正式完成复核。
+- 阶段修改文件：仅本进度文件及ignored `.work/phase2-b87/review/`、`render-64f57d63/`；Q12 TikZ源尚未修改，旧attempt workitem保留待归档。
+- 验证结果：完整页图55张、接触表4张；Q12标签拥挤已在试题版第3页与解析版第14页高分辨率图确认；页码文本映射为Q10试题2/解析12/印刷9，Q11为2/13/10，Q12为3/14/11，Q19为4/19/15。印刷版Underfull段落位于第8页、`answers.tex:232–233`。
+- 剩余任务：需仅改Q12图稿标签锚点；随后重新formal build、为新attempt生成工作项并逐页复核55页，处理印刷版Underfull豁免；本attempt尚无可finalize的视觉回执。
+- 下一步：提交该视觉发现checkpoint，修正共享TikZ图稿并重建四版；不改题文、答案或图形几何关系。
