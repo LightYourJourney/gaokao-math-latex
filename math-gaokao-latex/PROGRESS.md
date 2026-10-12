@@ -2854,3 +2854,8 @@
 - 验证结果：文科attempt `7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`四版4/20/6/16页；理科attempt `8bd7362c-9559-469d-8376-6a1765aff39e`四版5/22/7/16页；八版均`succeeded`，错误、缺字、overfull、未解析引用及problems合计0；build receipt与provenance各`OK：2卷`。
 - 剩余任务：为当前两个attempt生成新复核工作项，目检96页并登记768项，再finalize、刷新报告、跑门禁/测试、清理并核验PDF。
 - 下一步：提交b86 build checkpoint，运行官方`prepare-batch`；随后由两个独立subagents按卷并行复核，主会话审查结果并独占finalizer与全局状态。
+- 已完成phase2-b86当前attempt复核准备与渲染覆盖阶段：官方`prepare-batch`生成8份复核工作项；文理两卷四版PDF共96页均已渲染并生成8张接触表。
+- 阶段修改文件：仅本进度文件及ignored `.work/phase2-b86/review/`、`render-7dd02bc5-8bd7362c/`；未改生产回执、试题源或PDF。
+- 验证结果：8份工作项全部绑定当前build attempts（文科`7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`、理科`8bd7362c-9559-469d-8376-6a1765aff39e`）；页数4/20/6/16与5/22/7/16，合计96页×8项=768项pending；PNG计数96、接触表8。
+- 剩余任务：对96页完成逐页视觉检查，登记768项结论并核验无pending/fail后，才能运行正式review finalizer；之后全库报告、门禁、测试、清理及PDF回执核对尚未执行。
+- 下一步：按文/理分卷并行目检全部接触表与指定高分辨率关键页；主会话独立检查工作项覆盖和attempt绑定，不重跑formal build。
