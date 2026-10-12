@@ -1927,3 +1927,39 @@
 - 已完成阶段（phase2-b63 本地提交）：11个已核路径提交为 `8fd05bf1`（`[已核] docs(exams): 完成1987广东理科复核与回执`）；未 push。提交后 build validator 返回 `OK：1 卷`，review gate 返回 `FINALIZED`，工作树干净（分支 ahead 12）。
 - 剩余任务：1952—2026 全语料目标继续未完成；phase2-b63 的 ISSUE-0782/0784/0791/0792 仍阻塞内容完成，ISSUE-0781/0783 仍待更强来源核验。
 - 下一步：单独提交此进度 checkpoint；之后按 manifest 顺序核验下一批 phase2-b64（1987 上海数学卷）的来源/构建/复核状态。
+- 已完成可验证预检阶段（phase2-b64，1987上海数学）：批次仅含 `gk-1987-regular-shanghai-math` 一卷、7题、无登记问题；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过，issues ledger 校验通过。provenance 纸卷派生状态 `editions_generated`、批次 `provenance_verified`。
+- 核验发现：manifest 缓存仍为 `compiled_pending_review`、纸卷状态 `compiled`，但官方 build validator 判旧 attempt `031d0a1e-1859-4f83-a41d-b5f0b2447648` 因生成输入树及工具链指纹变化而 stale；provenance check 据此报告 manifest 派生缓存不同步。旧报告 `reports/phase2-b64.md` 声称 `closed` / 49页审查，与现场 manifest 和 stale 回执不一致，不能作为当前完成证据。工作树在本阶段诊断后仍 clean，未改 source/provenance/receipt/PDF。
+- 剩余任务：刷新 b64 四版 formal build 与当前 review work items；逐页复核、官方 finalize 后刷新旧报告和全量投影，跑门禁/测试、清理中间物并提交。
+- 下一步：在保留 provenance 的前提下运行 b64 官方 formal build，确认四版页数、日志与 SHA；build gate current 后再 prepare 新 attempt 工作项。
+- 已完成可验证阶段（b64 正式构建与当前复核工作项）：official formal build revision 4002 创建 attempt `d17093d0-e120-4fbd-8a14-a63a55e15273`；四版均 succeeded，页数为试题5、解析21、简答6、印刷17（49页），errors、missing characters、Overfull、undefined references、problems 均为0。build validator 与 provenance check 通过，paper 状态 compiled、batch 状态 compiled_pending_review；官方 `prepare-batch` 已生成四份当前 attempt 工作项（49页/392 checks）。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json`、ignored 四版 build PDF、`.work/phase2-b64/review/` 四项工作项及本 `PROGRESS.md`。
+- 阶段验证：旧 attempt `031d0a1e-1859-4f83-a41d-b5f0b2447648` 已由当前 build 替代；新 attempt 绑定页数与 PDF SHA。无来源问题或 source/provenance 修改。
+- 剩余任务：依据新 attempt 逐页复核49页并登记392项，官方 finalize 后更新旧 `phase2-b64` 报告及全量投影；跑门禁/回归，清理中间物并提交。
+- 下一步：渲染当前四版49页并检查全页接触表，放大复核两套 TikZ 图页及任何视觉候选页，再填写工作项。
+- 已完成可验证复核子阶段（b64 页面候选与图形放大检查）：续核简答版第3页、印刷版第16–17页及试题版第2、4页；第2题四图选项和第4题四面体 TikZ 图线条、顶点标注清楚。发现印刷版第7题答案（3）框单独落在第17页，该页其余区域空白；判定为 `pagination_whitespace` 版式失败候选，暂未填写正式复核工作项，也未修改题意、答案或版式源。
+- 阶段修改文件：仅本 `PROGRESS.md`；放大页图保存在 ignored `.work/phase2-b64/review-d17093d0/`。
+- 阶段验证：页图均来自 attempt `d17093d0-e120-4fbd-8a14-a63a55e15273` 当前 PDF；两幅登记图矢量渲染可读；印刷版p16/p17连续检查确认答案框分页关系。
+- 剩余任务：最小修复第7题答案框分页；随后必须四版正式重编，并对新 attempt 全49页重新复核，不能沿用旧 attempt 的视觉结论。
+- 下一步：检查项目源稿/生成器归属后，在单题范围调整分页；先做单卷构建验证，再刷新正式四版 build receipt 与 review work items。
+- 已完成可验证阶段（b64 第7题分页修正与正式重建）：将权威解析 Markdown 中第7题末尾极限等式改为行内数学表达，数学内容不变；官方 `generate_projects.py --batch phase2-b64 --write/--check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过。官方 formal build revision 4004 创建 attempt `2b8f48f3-9f85-4839-8f28-a76cce6e3c67`，四版成功且编译日志 errors、missing characters、overfull、undefined references、problems 均为0；页数试题/解析/简答/印刷版为5/21/6/16，印刷版从17页减至16页。build receipt validator 与 provenance batch check 通过。
+- 阶段修改文件：规范源 `1987/1987_数学真题_上海_解析正文.md`、官方生成的该卷 `answers.tex`、该卷 `receipts/build.json`、`source-manifest.json` 与本 `PROGRESS.md`；正式复核工作项已重新生成并绑定新 attempt。
+- 阶段验证：新 PDF 合计48页；`prepare-batch` 创建4份工作项，覆盖48页/384 checks，全部 pending。旧 attempt `d17093d0-e120-4fbd-8a14-a63a55e15273` 的复核结论未迁移。
+- 剩余任务：对新 attempt 的全部48页完成视觉复核，重点检查印刷版第7题合并后页面与解析版对应页；随后官方 finalize、更新批次/全量报告、执行门禁与定向测试、清理临时物、审 diff 并提交。
+- 下一步：按旧 attempt 相同 `pdftoppm -scale-to 550` 参数渲染当前四版；逐页像素比对以确认未变页可复用既有观察，对变化页及印刷版新第16页放大复核后填写384项工作项。
+- 已完成可验证阶段（b64 新 attempt 全页视觉复核及正式登记）：当前 attempt `2b8f48f3-9f85-4839-8f28-a76cce6e3c67` 的48页全覆盖；同尺寸/同工具逐像素比较后，试题版5页、简答版6页、印刷版1–15页、解析版1–20页与旧 attempt 同页完全一致；变化仅解析版p21与印刷版p16。两张变化页均放大复核，极限式可读，印刷版第7题三问和三个答案框同页完整，孤立末页已消除，无新视觉缺陷。官方 `finalize-batch` revision 4005 返回 `FINALIZED`、problems=0、批次 `closed`。
+- 阶段修改文件：四份 ignored `.work/phase2-b64/review/<版次>/gk-1987-regular-shanghai-math.json`；官方事务更新该卷 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b64.md` 与本进度文件。
+- 阶段验证：48页×8项=384项，341 pass、43 not_applicable（解析/简答/印刷版答案泄漏项）、0 fail/pending；build attempt/PDF SHA/page count 均绑定当前版本。正式构建与视觉复核均为当前。
+- 剩余任务：刷新并校验六个全库报告投影；运行 build/provenance/review/issues 门禁和 review/report 定向测试；清理本卷 latexmk 中间物及本批次临时 PNG；最终审阅精确 diff 并本地提交，不 push。
+- 下一步：运行 `report.py render --all`/`check --all`、phase2-b64 scoped gates 与两组相关测试；之后记录 PDF SHA，仅清理四个入口的中间物和 `.work/phase2-b64/{contact,render,review}-d17093d0`、本次新增临时渲染目录。
+- 已完成可验证阶段（b64 全库报告与回归门禁）：`report.py render --all` 以一个 content 事务写入并回读六个全量报告目标，`check --all` 确认报告与 manifest 一致且保留批次状态；build receipt、provenance、review FINALIZED、issues ledger scoped 校验均通过。`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过。
+- 阶段修改文件：六个全量报告投影及本 `PROGRESS.md`；无源内容或视觉结论变动。
+- 剩余任务：清理该卷四个 build 目录内 latexmk 中间物及本批次此次生成的临时页面/接触表 PNG，确认 PDF 哈希与正式回执相同；然后审阅最终 diff 并本地提交。
+- 下一步：先记录四版 PDF 的正式 SHA，再仅对 1987 上海卷四个入口运行 `latexmk -c -outdir=build`；移除已核验的本批次临时渲染目录，不触碰 build PDF、LaTeX/TikZ 源、正式复核工作项或回执。
+- 已完成可验证清理阶段（b64）：四入口 `latexmk -c -outdir=build` 后该卷 `build/` 仅有四版 PDF；清除本次本批次四个临时 contact/render/high-res 目录，共110张 PNG，保留4份正式 review work items。清理后四份 PDF SHA 与 formal build receipt 逐项一致；build receipt validator 返回 OK、stale=0。
+- 阶段修改文件：仅 ignored build 中间文件及 `.work/phase2-b64/{contact-d17093d0,render-d17093d0,render-2b8f48f3,review-d17093d0}` 临时图像已删除；PDF、LaTeX/TikZ 源、正式回执与工作项保留。
+- 阶段验证：当前 attempt `2b8f48f3-9f85-4839-8f28-a76cce6e3c67` 四份 SHA 均未改变；review gate `FINALIZED`；无渲染 PNG 或编译二进制需要提交。
+- 剩余任务：最终审阅本批次精确 Git diff、执行 staged diff check 并本地提交（不 push）；提交后确认工作树与 build/review/report gates current。
+- 下一步：查看 `git diff --check`、变更路径与源/进度记录，确认没有误入图像或 PDF，再只暂存 b64 已完成路径并提交。
+- 已完成最终审查阶段（b64）：`git diff --check` 通过；精确 diff 共13个受跟踪路径，含1个规范解析源、官方生成的 answers/build/review 记录、manifest、批次/全库报告投影与本进度文件。逐项核对 README/报告投影仅同步 manifest 状态和印刷版16页结果；无题意/答案结论变化，无 PDF、PNG 或编译中间物入库。build receipt、provenance、review `FINALIZED`、issues、全库 report check 全通过；review/report 定向测试77/77通过。
+- 剩余任务：将已核验的13个路径精确暂存、检查 staged diff 后本地提交；提交后再验证工作树与当前回执。
+- 下一步：本地提交 phase2-b64（提交信息带 `[已核]`，因报告事务更新了 README 投影）；不 push。
