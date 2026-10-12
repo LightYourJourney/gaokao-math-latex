@@ -2583,6 +2583,11 @@
 - 验证结果：review `check-batch`为`FINALIZED`；build receipt validator为1 succeeded、0 stale/missing/failed/pending；provenance `check-batch`返回`OK：1卷`；416项为369 pass、47 not_applicable、0 fail/pending。
 - 剩余任务：刷新并核对六项全库报告投影；完成七项批次门禁与两组定向测试；清理编译中间物/预览，核验四版PDF页数与SHA后最终提交b83。
 - 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`和`check --all`。
+- 已完成phase2-b83全库报告与批次门禁阶段：全库报告`render --all`及`check --all`通过；生成题面、简答答案、四版壳、issues ledger、source manifest及全库报告一致性校验均通过。
+- 阶段修改文件：官方`manifest_csv.py --write`刷新`manifest.csv`（775行），以及本进度文件；其他门禁为只读检查。
+- 验证结果：generator、short answers、edition shells各`1套一致`；manifest CSV初检发现派生文件过期，官方重写后`当前且775行`；issues、source manifest和全库report校验退出码均为0；build/review/provenance final gates已在前一阶段通过。
+- 剩余任务：运行定向review/report测试；清理LaTeX中间物及本批页面预览，核对四版PDF页数/SHA与最终receipt；最终差异审阅并提交b83。
+- 下一步：提交门禁checkpoint，然后依序运行`test_review_receipts.py`和`test_report.py`。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
