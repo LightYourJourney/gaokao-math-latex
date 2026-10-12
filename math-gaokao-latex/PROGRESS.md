@@ -2609,6 +2609,11 @@
 - 验证结果：`test_review_receipts.py` 66/66通过（43.520秒）；`test_report.py` 11/11通过（67.574秒），合计77项通过。
 - 剩余任务：清理四版LaTeX中间物及本attempt工作项/PNG预览，确认构建目录只留PDF并逐项匹配回执，再做最终差异审阅。
 - 下一步：提交测试checkpoint；检查四个入口所需`latexmk -c -outdir=build`，再把仅限phase2-b82的`.work`预览和review工作项移入可恢复归档。
+- 已完成phase2-b82构建清理与最终PDF核验阶段：四个`latexmk -c -outdir=build`入口均成功；12 MB当前attempt渲染图及四个review工作项整体移入可恢复目录`~/.Trash/phase2-b82-work.FAlJHl/phase2-b82/`。
+- 阶段修改文件：仅本进度文件；构建目录保留四份正式PDF，临时图像/工作项位于系统废纸篓归档，不在仓库工作目录。
+- 验证结果：PDF页数/SHA与build receipt逐项一致（试题5页、解析21页、简答7页、印刷17页）；`build_projects.py validate-receipts --require-final`为1 succeeded、0 stale/missing/failed；build目录仅4文件，`.work/phase2-b82`不存在，`git diff --check`通过。
+- 剩余任务：b82已闭环，1957—2006仍有后续manifest批次，题库全项目未完成。
+- 下一步：提交b82最终清理checkpoint，不push；更新恢复ledger后按manifest顺序预检phase2-b83，不重做b82转录或来源核验。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
