@@ -2775,3 +2775,8 @@
 - 验证结果：机械核验确认49页、392项，347 pass、45 not_applicable、0 fail/pending；49页结果均为pass，四份工作项全部绑定attempt `21f6787d-033c-408c-96e7-13179b7ec568`。
 - 剩余任务：官方finalizer生成正式回执并确认FINALIZED，然后运行全库报告、scoped gates和定向测试，再清理并核验PDF。
 - 下一步：提交结论录入checkpoint后执行`finalize-batch-checked`；finalize前不宣称批次正式闭环。
+- 已完成phase2-b84正式视觉回执登记及全库报告/门禁阶段：官方`finalize-batch`返回`FINALIZED`，批次关闭并生成`reports/phase2-b84.md`；全库报告render/check通过。
+- 阶段修改文件：豫粤卷`receipts/build.json`、`receipts/review.json`，`source-manifest.json`、`manifest.csv`、本卷报告和本进度文件；全库3个README汇总投影也更新了b83/b84状态，但依仓库规则暂不提交，等待人工复核。
+- 验证结果：review `check-batch`为`FINALIZED`；build receipt为1 succeeded、0 stale/missing/failed/pending；provenance `OK：1卷`；generator、short answers、edition shells各`1套一致`；manifest CSV官方重写后当前且775行；issues、source manifest、全库report检查均退出0。
+- 剩余任务：运行定向review/report测试；清理b84 LaTeX中间物和本批PNG/接触表，核验四版PDF页数/SHA与最终回执；最终差异审阅并提交非README文件。README人工复核仍待用户。
+- 下一步：提交回执、CSV、批次报告及进度checkpoint，再顺序运行`test_review_receipts.py`、`test_report.py`。
