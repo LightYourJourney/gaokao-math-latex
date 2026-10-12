@@ -2192,3 +2192,7 @@
 - 阶段修改文件：仅本进度文件；source PDF只读核对，生成器check只读。
 - 剩余任务：正式重编四版并刷新派生缓存，重新prepare并逐页复核当前attempt，finalize后刷新报告、门禁和测试、清理产物并提交。41项待核权威清单未找到。
 - 下一步：提交本预检checkpoint后执行phase2-b72 formal build；先确认页数、日志、当前build/provenance，再渲染PDF供复核。
+- 已完成正式构建与工作项刷新阶段（phase2-b72）：attempt `e659d51b-fd05-45a4-a56e-97312baa1665`；四版均succeeded，页数5/30/7/23，共65页，problem列表与missing character/overfull/undefined reference/TeX errors均为空；build receipt与provenance batch checks `OK：1卷`。review `prepare-batch`已生成四份绑定当前attempt与PDF SHA的工作项。
+- 阶段修改文件：该卷`receipts/build.json`、manifest派生状态与本进度文件；生成ignored `.work/phase2-b72/review/`四份工作项。源、题面、答案、provenance及图稿未改。
+- 剩余任务：复核当前65页、图稿及候选/末页并填写工作项，官方finalize；随后全库报告、门禁/测试、构建物清理、SHA核验及提交。41项待核映射仍未解决。
+- 下一步：用Poppler渲染四版全部65页，先审接触表，再高清复核候选页、题1/10/21/22/24图稿所在页和各版末页。
