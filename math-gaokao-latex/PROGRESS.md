@@ -2284,3 +2284,8 @@
 - 验证结果：build validator判旧回执因生成输入树及工具链指纹变化stale；provenance仅报manifest缓存状态与现场派生不一致，未见题面/答案冲突；review绑定旧attempt `4fb8bf90-ed99-4efc-98e5-e99d969869a4`，不能复用。当前旧build attempt `d6d4119b-a466-49fa-8b4a-44fb590e7057` 的四版页数为5/25/6/22，共58页，均曾编译成功且日志问题为0，但旧PDF与旧视觉回执均须以新构建刷新。
 - 剩余任务：formal rebuild并核对新页数、日志、PDF SHA；准备当前attempt工作项，逐页视觉复核并finalize；刷新报告、门禁/测试、清理中间物、核验PDF及提交。41项待核映射仍没有权威清单。
 - 下一步：先提交本预检checkpoint，再按官方命令对`phase2-b74`执行formal build；构建成功后立即准备并核验当前attempt工作项。
+- 已完成正式构建与工作项刷新阶段（phase2-b74）：official formal build创建attempt `5931dfe7-fc1d-47f4-a43b-96caf3283df0`；试题/解析/简答/印刷版均succeeded，页数5/25/6/22共58页，四版problems、overfull、missing characters、undefined references及TeX errors均为0。build receipt与provenance batch checks `OK：1卷`，四份实存PDF SHA与receipt一致。
+- 阶段修改文件：2000全国旧课程理科卷`receipts/build.json`、manifest构建派生状态与本进度文件；四版PDF仍只在ignored `build/`。
+- 验证结果：旧工作项绑定attempt `c87168cf-5283-4e42-a844-ad7f271cc39d`且464项全pending，无已完成人工记录；官方`prepare-batch`已重建四份工作项，全部绑定当前attempt及PDF SHA，覆盖58页/464项并全为pending。候选页：试题2、解析2、简答2、印刷20。
+- 剩余任务：渲染并逐页复核当前58页，重点检查候选页、六幅图稿所在页、页末和答案完整性；然后finalize、报告、门禁/测试、清理与提交。41项待核映射仍待权威来源。
+- 下一步：将正式构建与工作项刷新checkpoint提交后，渲染四版全部58页并制作接触表开始视觉复核。
