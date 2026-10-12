@@ -2442,3 +2442,11 @@
 - 验证结果：`test_review_receipts.py` 66/66通过（45.845秒）；`test_report.py` 11/11通过（68.667秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物及本批source/render PNG，核验build仅含四份正式PDF且页数/SHA吻合receipt，最终差异审查并提交。
 - 下一步：运行四版`latexmk -c -outdir=build`，并将b77来源预览/渲染目录移入可恢复废纸篓。
+- 已完成构建物清理与正式PDF核验阶段（phase2-b77）：四版入口均成功执行`latexmk -c -outdir=build`；`build/`精确保留四份正式PDF。110个source/render PNG及接触表整体移至可恢复目录`~/.Trash/phase2-b77-review-renders.PW3UPR/`；当前attempt review工作项保留。
+- 阶段修改文件：仅本进度文件和ignored构建/预览产物；源文件、PDF、正式回执和review工作项均保留。
+- 验证结果：build目录仅含试题版/解析版/简答版/印刷版PDF；页数6/29/7/22，四份SHA-256逐项匹配build receipt；预览目录已离开项目工作树，`git diff --check`通过。
+- 已完成最终差异审阅阶段（phase2-b77）：从b77阶段起点`ffb58b62`至当前HEAD共11个tracked文件；变更限于卷宗回执、manifest/报告投影、相关索引与本进度文件。`git diff --check`通过；变更清单无PNG/JPEG/PDF或LaTeX中间物。
+- 阶段修改文件：仅本进度文件；b77主体已由此前checkpoint提交，工作树目前仅此文件未提交。
+- 验证结果：`git status`确认唯一未提交文件为本进度文件；阶段diff共11个文件、禁止产物计数0，空白错误检查通过。此前构建、复核、门禁及77项定向测试均已在各checkpoint记录并通过。
+- 剩余任务：提交本进度checkpoint；之后按manifest检查phase2-b78预检条件并开始下一批。
+- 下一步：本地提交本进度checkpoint，不push；读取phase2-b78单条manifest记录与对应来源状态。
