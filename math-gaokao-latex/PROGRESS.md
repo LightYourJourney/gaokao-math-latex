@@ -3113,3 +3113,9 @@
 - 验证结果：8/8 build目录恰为4份PDF；文科页数5/22/7/20、理科5/24/7/18，逐份SHA-256/字节数/页数与正式build receipt相符；`git diff --check`通过；正式review/build/provenance门禁、全库报告/CSV检查与定向测试均已通过。
 - 剩余任务：phase2-b91已闭环；全语料仍未完成。三份既有README投影差异维持未提交、不纳入本批；不push。
 - 下一步：提交仅含b91回执、报告/manifest投影与进度的已完成内容；后续依manifest顺序开始下一批并继续逐阶段记录。
+- 已完成按全量收尾计划选择下一批并恢复phase0-b02当前状态阶段：依据manifest顺序，下一批是2019/2020全国Ⅰ卷文理四套。旧批次报告称closed，但manifest仍为`provenance_verified`；当前build门禁发现2019理科、2020文理三套回执因生成输入树/工具链变化失效，review门禁相应stale；2019文科build当前但review绑定失效。
+- 阶段修改文件：仅本进度文件；三份既有README差异保持原样。
+- 验证结果：source manifest validate、provenance batch check、四卷solution source check（每卷23题）、generate_projects/make_short_answers/make_editions四卷check均通过。build validator为`INVALID：4卷`（三卷失效）；review validator为`INVALID_OR_STALE`（build失效及2019文科旧review绑定失效）。2020文科旧review曾因原卷明示取消的第23题而失败，按用户既定裁定保留题目并登记失败；ISSUE-0920至0922为旧的已解决版式问题，不据此改内容。
+- Ruling：遵循全量收尾计划“manifest中最早未closed批次”而不是从上一工作年度顺延；先正式重建phase0-b02四卷，不重做已校验的转录/解析。若新旧PDF哈希相同，仅刷新正式绑定；若变化，逐页复核受影响版本。2020文科取消题失败按既有用户决定保留。误判哈希相等的代价是漏审新页面，因此必须等正式构建后比较。
+- 剩余任务：完成phase0-b02正式构建、哈希对照、必要的逐页复核与finalize；然后全库投影/测试、清理并核验16份PDF，最后单批提交。
+- 下一步：提交本恢复检查checkpoint；随后确认来源/provenance当前性及警告豁免，运行官方formal batch build。
