@@ -974,3 +974,8 @@
 - 阶段修改文件：本进度文件；忽略的 `.work/phase2-b56/review/` 8 份工作项；临时接触表/PNG 位于 `/tmp/gk-phase2-b56-review.T69VtV/`；未更改试卷源或正式 PDF。
 - 剩余任务：提交源修复与正式构建检查点；事务 finalize 正式 review/build 回执与批次报告；清理构建中间产物、工作项和临时 PNG；完成五项 scoped gates 与全量报告校验。
 - 下一步：先审阅 tracked diff 并提交源修复、生成物、正式构建回执/PDF 及本进度 checkpoint；随后运行事务 finalize。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，phase2-b56 已关闭，manifest revision 3928；1986 全国文理两卷 provenance 状态均为 `complete`，正式 build/review receipts 均与当前 attempts 对齐，批次报告 `reports/phase2-b56.md` 已生成。
+- 阶段验证：review `check-batch` 返回 `FINALIZED`；build receipt validator `OK：2 卷`；provenance status 显示两卷 `complete`、批次 `closed`。95 页、760 项视觉检查全 pass，构建零 warning。清理与全量报告一致性检查待执行。
+- 阶段修改文件：两卷正式 build/review receipts、manifest 批次状态、本批报告及本进度文件；当前 `.work/phase2-b56/review/` 与 build 中间文件/临时 PNG 尚待清理。
+- 剩余任务：只保留两卷各四份 PDF 与 LaTeX 源，清理 build 非 PDF 文件、review work items 和本轮临时渲染图；刷新并核验全量报告；完成五项 scoped gates 后提交关闭 checkpoint。
+- 下一步：先预览准确清理范围，保留 8 份 PDF，然后将 48 个非 PDF build 产物、8 份本轮 work items 与临时审阅 PNG 移入系统废纸篓；再跑 scoped gates 与 `report.py render/check --all`。
