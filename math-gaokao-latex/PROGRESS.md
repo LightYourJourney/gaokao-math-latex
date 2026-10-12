@@ -2184,3 +2184,7 @@
 - 阶段修改文件：本进度记录；PDF仅保留在ignored build目录，渲染图已从工作树移走。
 - 剩余任务：最终核对tracked diff仅含本卷来源/生成文本、回执/manifest/报告投影与进度；复跑最后的`git diff --check`和必要scoped gates后按`[已核]`本地提交、不push。41项待核权威映射仍未知。
 - 下一步：审查精确diff/status和文件清单，确认无图片/PDF/中间物 tracked，再提交phase2-b71并核验干净工作树。
+- 已完成阶段提交：phase2-b71已提交为 `97590999`（`[已核] docs(exams): 完成1998全国理科复核并登记回执`），本地提交、未push；提交后工作树干净。下一manifest批次为 `phase2-b72`：`gk-1999-regular-national-science`，状态`compiled_pending_review`，无登记issue。
+- 阶段修改文件：phase2-b71的12个受跟踪来源/生成文本、build/review receipts、manifest、报告投影及进度记录已提交。
+- 剩余任务：1952—2026全语料未完成；用户提及的41项待核仍未找到权威映射（全仓检索只命中不相关知识条目及历史说明），不能把已关闭批次当作其替代。
+- 下一步：先检查manifest phase2-b72的source/provenance/build currency并更新预检记录，再继续正式构建/复核；另继续寻找41项待核的原始正式清单。
