@@ -959,4 +959,7 @@
 - 已完成子阶段：1986 全国文理科八版正式构建成功，manifest revision 3925；文科 build attempt `d5d91fa1-600f-4ba5-960b-65a6ff822e6d`，理科 `b4121d8a-b708-4609-91c9-a4df5738f765`。页数保持文科 4/19/5/16（44 页）、理科 5/21/7/18（51 页），共 95 页；无 build failure。
 - 阶段验证：build receipt validator `OK`，2 卷无 failed/invalid/missing/stale，当前 2 卷待视觉复核。文科及理科四版页数无变化；理科解析版与印刷版各有 2 条缺字日志，均为 Latin Modern Roman 字体缺少中文句号 `。`（U+3002）；其余无 Overfull、build errors 或 missing characters。该 warning 的源行/PDF 页定位与视觉影响待下一子阶段核实。
 - 阶段修改文件：本进度文件、两卷 build receipts/PDF；未改题目、答案、provenance、图稿或生成源。
-- 下一步：提交本阶段进度 checkpoint，定位理科两版缺字 warning 的源行和 PDF 页，再准备当前 attempts 的逐页 review work items。
+- 已完成子阶段：理科缺字 warning 已由 XeLaTeX 日志映射到规范源 `1986/1986_数学真题_全国理_解析正文.md` 第 357、369 行（生成 TeX `answers.tex` 第 727、743 行）；两个位置都把中文句号置于数学显示环境内。对应理科解析版 p18、印刷版 p16；`pdftotext` 在这两处抽取出替代字符，确认是实际缺字而非无影响日志。两版各 2 条日志分别对应同两处标点。
+- 阶段验证：日志上下文、规范源行、生成 TeX 行和 PDF 页文本互相对应；已确认纯标点排版缺陷。理科第 20 题数值与结论未显示其他异常；需要将句号显式放入 CJK 文本标记后重新生成、检查 provenance 与正式构建状态。
+- 阶段修改文件：仅本进度文件；诊断未修改源、manifest、provenance、图稿或 PDF。
+- 下一步：提交 warning 根因 checkpoint；先以回归检查确认两个数学块内存在未转义句号，再做最小标点标记修复，重跑生成/provenance/构建与页面核验。
