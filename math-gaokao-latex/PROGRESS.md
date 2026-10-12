@@ -3000,3 +3000,8 @@
 - 验证结果：8次latexmk clean退出0；文理两卷build目录均仅含四版PDF；8份PDF页数、文件大小、SHA-256均与final build receipt逐项一致（文科5/20/7/16页，理科5/20/7/16页）；项目`.work/phase2-b88`已不存在。
 - 剩余任务：全库六目标report投影与`test_report.py`仍待三份README差异处理决定；完成后最终审阅/提交b88剩余正式输出。1952—2026全语料及后续manifest批次仍未完成。
 - 下一步：提交cleanup checkpoint；确定README投影范围后刷新报告并运行最终报告测试、门禁，审阅并提交b88非README文件；不push。
+- 已完成phase2-b88报告生成逻辑回归测试子阶段：在不写入六个正式投影的情况下运行完整report测试。
+- 阶段修改文件：仅本进度文件。
+- 验证结果：`test_report.py` 11/11通过（69.981秒）；测试覆盖事实汇总、六目标渲染与漂移检查，不修改正式README/报告。
+- 剩余任务：六份正式报告投影尚未刷新/核验，README范围等待用户选择；之后仍需最终差异审阅与b88剩余文件提交。
+- 下一步：提交测试checkpoint；确认README选择后执行全库report render/check，再完成最终范围检查。
