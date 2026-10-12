@@ -2594,6 +2594,11 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；provenance `check-batch`返回`OK：1 卷`；50页×8项共400项，355 pass、45 not_applicable、0 fail/pending，均绑定当前attempt。
 - 剩余任务：刷新并验证全库报告投影、运行本批门禁与定向测试、清理中间物/PNG/workitems并核验四份PDF与回执一致，随后精审差异提交。
 - 下一步：提交b82正式回执checkpoint，再运行`report.py render --all`及`check --all`。
+- 已完成全库报告刷新阶段（phase2-b82）：`report.py render --all`在单个content事务中写入并回读校验六个报告目标；`check --all`确认报告与全量manifest一致，未完成状态继续如实显示。
+- 阶段修改文件：六个全库README/报告/来源清单投影；未改本卷题面、答案、provenance或构建/复核回执。
+- 验证结果：全量报告render成功；`report.py check --all`返回“报告输出与全量 manifest 当前一致”；`git diff --check`通过，tracked变更恰为六个派生报告文件。
+- 剩余任务：本批专项门禁与测试、构建产物清理、最终PDF回执/差异核对和提交。
+- 下一步：提交报告checkpoint；串行运行phase2-b82相关状态/generator/short-answer/edition门禁与review/report定向测试。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
