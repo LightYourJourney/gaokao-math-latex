@@ -1119,3 +1119,11 @@
 - 阶段验证：只读审计 8 份当前 work items，覆盖两卷 91 页、728 项检查，结果为 726 pass、2 fail、0 pending；两项 fail 精确为文史及理工农医试题版 p1 的 `answer_leak`。8/8 项的 attempt、PDF 路径、实际 SHA-256、页数均匹配各自 build receipts；页码连续、每页八项齐全、失败项有说明，官方 `_validate_pages` 校验通过。
 - 剩余任务：两卷试题版首页答案泄漏的处置选择尚未收到；因此保留源文和两项失败，不写正式 `receipts/review.json`、不 finalize。之后还需依授权完成正式复核登记、清理明确属于本批的构建中间产物/临时渲染文件，并跑批次门禁及报告校验。
 - 下一步：等待并遵循用户对两卷首页泄漏的处置选择；若保留原文，则按失败状态走受支持登记流程；若批准改注，先重跑该卷所需来源核验、构建与受影响页面复核，再更新工作项。未获选择前不 finalize、不清理 PDF 或任何有歧义的文件。
+
+### `phase2-b58` — 1986 广东卷文史类
+
+- 已完成可验证子阶段（批次预检）：当前批次仅含文史卷。现有正式构建 attempt `59421cf0-2381-47e1-b9b0-8920b160fbd7` 的四版 PDF 均存在且与旧 build receipt 哈希一致，共 65 页（试题 7、解析 28、简答 8、印刷 22）；但 receipt validator 判定生成输入树与工具链指纹已过期。4 份旧 work items 全为 pending，绑定旧 attempt `17d0a798-ef8c-4746-ae74-e70cd1331e80`，不复用其审查状态。
+- 阶段修改文件：仅本进度记录；题源、provenance、build receipt、PDF 与 review work items 均未改。
+- 阶段验证：source manifest、项目生成、简答答案、解析源一致性、四版入口生成器检查均通过。`provenance.py check-batch` 只报告缓存批次状态 `compiled_pending_review` 与现场派生 `provenance_verified` 不符，未报告逐题 provenance 内容错误；`build_projects.py validate-receipts` 报生成树/工具链漂移。首次并行运行只读检查时因共享 `RepoLock` 互斥导致生成器检查失败，改为串行重跑后通过；未删除或绕过锁文件。
+- 剩余任务：重建当前 attempt，确认四版构建日志和页数；刷新四个当前 attempt 工作项；逐页复核 65 页并登记结果；按门禁 finalize、清理本批中间产物、运行 scoped gates 和全量报告检查后提交。
+- 下一步：串行执行 `phase2-b58` 单卷正式重建；随后用官方 `prepare-batch` 刷新工作项并核对 PDF 哈希绑定，再开始逐页视觉审查。`phase2-b57` 的两项首页答案泄漏失败继续保留，未被本阶段改动。
