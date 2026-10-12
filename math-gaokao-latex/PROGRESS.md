@@ -880,3 +880,7 @@
 - 阶段验证：接触表覆盖 44/44 页、4/4 接触表通过；候选页 4/4 通过。4 份当前 attempt 工作项登记 44 页 × 8 项共 352 条 pass、0 pending、0 warning exemption；`git diff --check` 通过。`check-batch` 仅报告正式 review receipt 仍绑定旧 build attempt/输入树/依赖/工具链/视觉工具/PDF，属 finalize 刷新前预期。
 - 阶段修改文件：本进度文件；忽略的 `.work/phase2-b53/review/` 下 4 份工作项；接触表、44 页预览与候选图位于 `/tmp/gk-phase2-b53-review.KRGw4u/`；未更改试卷源或 PDF。
 - 下一步：提交本阶段进度 checkpoint，运行事务 finalize 更新正式 review receipts 与批次状态。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b53 状态 `closed`、无问题；1985 全国理科正式 review receipt 与当前 build attempt 对齐，并生成 `reports/phase2-b53.md`，manifest revision 3917。
+- 阶段验证：`review_receipts.py check-batch` 返回 `FINALIZED`，批次无 problems；44 页、352 项视觉检查全部通过，零 warning、无失败项。
+- 阶段修改文件：1985 理科正式 review receipt、manifest 批次状态投影、本批报告；忽略工作项与临时 PNG 尚待清理。
+- 下一步：单独提交 finalize 阶段进度，之后将 24 个 build 非 PDF 中间物、4 份忽略工作项及本次 52 张 PNG 移入系统废纸篓，保留四版 PDF 和 LaTeX 源。
