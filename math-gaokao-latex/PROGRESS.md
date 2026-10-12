@@ -2874,3 +2874,8 @@
 - 验证结果：issues、source manifest、两卷generator/short-answer/edition checks、build receipt（2 succeeded/0 stale-failed-invalid-missing-pending）、review `FINALIZED`、provenance `OK：2卷`、`manifest.csv --check`（775行）及`report.py check --all`均通过。CSV首次check发现投影落后一版，官方`--write`后复验通过。
 - 剩余任务：定向review/report测试、清理LaTeX中间物和本批渲染预览、最终PDF页数/SHA核验及最终差异审阅/提交尚未完成。
 - 下一步：提交本门禁checkpoint，串行运行`test_review_receipts.py`和`test_report.py`。
+- 已完成phase2-b86复核回执回归测试阶段：针对review receipt与workitem验证运行定向测试。
+- 阶段修改文件：仅本进度文件；测试未改正式数据、回执或生成投影。
+- 验证结果：`python3 -m unittest discover -s math-gaokao-latex/tests -p test_review_receipts.py`通过，66/66项，42.775秒。
+- 剩余任务：`test_report.py`尚未运行；随后仍需清理LaTeX中间物/预览、核对最终PDF及SHA并审阅提交范围。
+- 下一步：提交此测试checkpoint后运行报告测试。
