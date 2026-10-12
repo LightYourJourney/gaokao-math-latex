@@ -2037,3 +2037,16 @@
 - 下一阶段预检（phase2-b67）：manifest 下一卷为 `gk-1988-regular-guangdong-science`（1988广东理工农医类），6题、登记 ISSUE-0785—0789 五项、生产状态 blocked。来源说明特别标注第1题(23)原卷右图缺失、(24) 的 `sin 10`/`cos 5` 按固定源原样保留，且第二卷第二题图形为 TikZ；继续保留这些来源边界，逐项读取固定源后再判断可推进范围。
 - 剩余任务：1952—2026 全目标仍未完成；用户确认的41项待核尚未映射到正式清单，继续作为全局待办。
 - 下一步：核对当前 diff/进度（预计工作树干净），检查 b67 固定源与现有 provenance/build/review 状态，保留五个既有问题及其状态，不重复已完成转录。
+- 已完成固定源与门禁预检阶段（phase2-b67）：从 manifest 指定的上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924` 取回 `普通高考/1988/1988广东理.pdf`；SHA-256 `5d2e7e5fb31b53c5422d415abd05996db955b89af240b2afd4ecea9a98d15050`、322706 bytes、9页A4，与 source artifact 完全一致。逐页接触表及第3页高清检查确认第23小题文字写“如右图”但该图在固定源确实缺失，未补造；第24题仍按原文保留 `sin 10`/`cos 5`；四棱锥题原图清晰可见。原固定源仅存于 `/tmp/gaokao-b67-range.GdxQnF/`。`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过；issues ledger validate 通过。provenance status 显示纸卷 blocked、逐题来源批次 provenance_verified；批次缓存状态不一致。build receipt validator 报生成输入树和工具链指纹变化，review check-batch 因其依赖的 build 回执失效而 stale。未改题面、答案、解析、provenance、issue 状态或 PDF。
+- 阶段修改文件：仅本 `PROGRESS.md`；PDF与9张渲染图/接触表均为 `/tmp` 临时文件；没有将图片或源PDF添加到仓库。
+- 剩余任务：重新 formal build 并刷新 b67 当前 attempt review work items；按全部页面逐页复核并完成登记。ISSUE-0785 是阻断完成的固定源缺图问题，保持 open，除非取得可核验的补充原始扫描；ISSUE-0786—0789 保持已解决。用户确认的全局41项待核尚未映射，不以本批代替。
+- 下一步：在保留 ISSUE-0785 的前提下对 `phase2-b67` 执行 official formal build；若构建成功，重新 prepare-batch、视觉复核、finalize 并重跑相关门禁与测试。
+- 已完成正式构建阶段（phase2-b67）：official formal build 创建 attempt `2b145713-fb2c-4d17-8b5b-aef85561baa8`，四版全部 succeeded，页数6/21/7/16（共50页）；四版 errors、missing characters、overfull、undefined references、problems 均为0。build receipt validator `OK：1卷`。构建保持 `compiled_pending_review`，没有绕过 ISSUE-0785 的阻断语义。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json` 的派生构建状态，以及 ignored 的四份 build PDF/编译文件；源题面、答案、解析、TikZ 和 provenance 未改。
+- 剩余任务：四版旧视觉回执未绑定本次 attempt，需要官方 prepare-batch 刷新50页工作项；逐页视觉复核、登记、报告/门禁/定向测试后再清中间物。
+- 下一步：运行 `review_receipts.py prepare-batch --manifest ... --batch phase2-b67`，核对所有工作项绑定 attempt `2b145713…` 和 PDF SHA，再复用/重做逐页核查（仅可复用与当前 SHA 完全相同的既有检查证据）。
+- 已完成逐页视觉复核与正式登记阶段（phase2-b67）：本次四版 PDF 哈希均不同于旧回执，故未复用旧视觉证据。新 attempt 的四版50页全部查看接触表，另高清查看自动候选、四棱锥图页与代表性解析页；未见裁切、乱码、错序、重叠或图形标签缺陷。第23小题缺图在各版均明确注记并保留 ISSUE-0785。400项工作检查中356 pass、44 not_applicable（非试题版不适用答案泄漏检查）、0 fail/pending；官方 finalizer 返回 `FINALIZED：phase2-b67`，review receipt 与当前 attempt `2b145713-fb2c-4d17-8b5b-aef85561baa8` 一致。
+- 已完成最终门禁、测试与清理阶段（phase2-b67）：build receipt `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b67`、issues validate、全库 `report.py render --all`/`check --all` 和 `git diff --check` 均通过；`test_review_receipts.py` 66/66、`test_report.py` 11/11通过。四个 PDF 实际SHA均匹配 build receipt；build目录仅保留试题/解析/简答/印刷四份 PDF，latexmk 中间文件、50页渲染图/接触表、高分辨率图和固定源临时副本均已清理。ISSUE-0785仍 open 且阻断该卷完成；ISSUE-0786—0789保持 resolved，paper production_state 仍为 blocked。
+- 阶段修改文件：该卷 build/review receipts、source-manifest 派生状态、phase2-b67 报告、全库报告投影/索引，以及本 `PROGRESS.md`；无题面/答案/解析/TikZ/provenance内容修改，无图片或编译中间产物入库。
+- 剩余任务：全库1952—2026目标未完成；用户提示的41项待核仍未映射到正式项目清单，不声称已清零。1988广东理缺图需等待补充可核验来源后再关闭 ISSUE-0785。
+- 下一步：先将本 b67 已完成且仍带来源阻断的成果本地提交（不 push）；之后优先核实“41项待核”的权威任务清单映射，再按 manifest 后续批次继续，不重复本批转录或视觉核验。
