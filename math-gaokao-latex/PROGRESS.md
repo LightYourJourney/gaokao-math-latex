@@ -2613,3 +2613,8 @@
 - 验证结果：Contact sheets覆盖试题4、解析22、简答5、印刷19页；24张高分辨率图覆盖试题4页、解析版封面与11/12/17–22页、印刷版封面/第2/9/10/15–19页、简答版封面和末页；视觉检查无待登记缺陷。
 - 剩余任务：将50页×8项共400项登记为354 pass、46 not_applicable（非试题版答案泄漏检查），执行官方finalizer；随后全库报告、门禁、测试、清理与PDF回执校验。
 - 下一步：提交本视觉复核checkpoint，再按类别向当前attempt工作项填写逐页结论并核对400项完整覆盖。
+- 已完成正式视觉回执登记阶段（phase2-b81）：官方`finalize-batch-checked`返回`FINALIZED`，批次`closed`，报告`reports/phase2-b81.md`已生成。
+- 阶段修改文件：本卷`receipts/review.json`、`receipts/build.json`最终状态、`source-manifest.json`派生状态、`reports/phase2-b81.md`及本进度文件；未修改题面、答案、图稿或provenance。
+- 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；50页×8项共400项，354 pass、46 not_applicable、0 fail/pending，绑定当前attempt `5eba94fd-9c4b-4c45-831e-43f2165592dd`。
+- 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
+- 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
