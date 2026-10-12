@@ -1872,3 +1872,6 @@
 - 阶段验证：revision 3994，build attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e`；视觉 review `passed`，批次 `closed_with_blockers`。ISSUE-1066–1069 已 resolved；ISSUE-1065、ISSUE-0779 仍 open。此状态符合尚有内容 blocker 的部分完成边界。
 - 剩余任务：创建本地提交并确认干净工作树；1952—2026 语料目标继续未完成，b59及b61来源 blocker待未来取得更可靠证据。
 - 下一步：对已核验的17个路径精确暂存并本地提交（不 push）；提交后确认状态与 receipt current，再按年份顺序检查下一批。
+- 已完成阶段（b61 内容本地提交）：17个受跟踪路径已提交为 `0301083e`（`[已核] docs(exams): 修复1987全国理科标点分页并登记复核`）；未 push。提交后 build receipt 验证 `OK：1卷`，review check 为 `FINALIZED`，attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e` current，工作树干净（分支 ahead 8）。
+- 剩余任务：1952—2026 全语料建设仍继续；b59来源缺陷、b61 ISSUE-1065/0779 内容阻塞未解决。
+- 下一步：单独提交本进度 checkpoint；之后核验 manifest 下一批 b62 是否有可安全推进的来源/构建/复核阶段。
