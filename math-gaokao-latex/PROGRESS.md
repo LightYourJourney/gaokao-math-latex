@@ -2829,3 +2829,8 @@
 - 验证结果：build receipt `OK：1卷`（要求final）；provenance `OK：1卷`；review `FINALIZED`；generator/edition/short answers各`1套一致`；issues及source manifest校验退出0；`manifest.csv`当前且775行；`git diff --check`通过。
 - 剩余任务：运行定向review/report测试；清理四版LaTeX中间物与当前attempt页面PNG/接触表，核验PDF页数及SHA与final receipt一致。
 - 下一步：提交非README报告/CSV投影和门禁checkpoint，随后依序运行`test_review_receipts.py`、`test_report.py`。
+- 已完成phase2-b85定向回归测试阶段：串行直接运行`test_review_receipts.py`与`test_report.py`，两组均通过。
+- 阶段修改文件：仅本进度文件；测试未修改正式题面、回执或报告投影。
+- 验证结果：review receipt测试66/66通过（42.597秒）；report测试11/11通过（67.718秒）；合计77项通过。
+- 剩余任务：清理四版LaTeX中间物及本attempt PNG/接触表，核验四份PDF页数与SHA匹配final build receipt，最终审阅并提交b85收尾checkpoint。
+- 下一步：提交测试checkpoint，按四版入口执行`latexmk -c -outdir=build`，再将本批render工作区移入可恢复归档并核验PDF。
