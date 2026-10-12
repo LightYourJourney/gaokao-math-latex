@@ -17499,17 +17499,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "11a5d524dc36f8fe2b6551871c53c626ffa1a0fcdee5c5fcb09117c5edaf610c",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-1987-regular-national-science",
   "pdf_sha256": "abc0306391322198e9887410281cf596c6dabf3840883a48fde1de133f246ced",
-  "resume_action": "修正 gk-1987-regular-national-science 的 印刷版 第 3 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1067
 
 ```json
@@ -17520,17 +17519,16 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "664118a63cfa0f130f8879f74d5edb037b876dae0273fa2d9c213f29637ae6d3",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1987-regular-national-science",
   "pdf_sha256": "30e7ce282687332532bbd22dfa0347e1afea03ba973eb264deba91b6bd3da9f4",
-  "resume_action": "修正 gk-1987-regular-national-science 的 简答版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1068
 
 ```json
@@ -17541,17 +17539,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "3b532759f7c11fcde9865764b33dfb1e95b50cb5500f14f0b6cec85c544fcd28",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1987-regular-national-science",
   "pdf_sha256": "51fc501200e0b436a24996d6c08417d8715831c963ebfab0f02cddb6dc216a52",
-  "resume_action": "修正 gk-1987-regular-national-science 的 解析版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1069
 
 ```json
@@ -17562,13 +17559,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "f04ae94447b3cf1aa6e3e9fbf77cf39f41a931b4eb9b4aa8cb45fc172e6925a2",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1987-regular-national-science",
   "pdf_sha256": "b24b7ea36d8d6b0a53ed35139ee582e73d57ace8d3729a09954f2763a551f117",
-  "resume_action": "修正 gk-1987-regular-national-science 的 试题版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```

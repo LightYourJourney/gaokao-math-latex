@@ -1830,3 +1830,45 @@
 - 验证结果：提交前 `git diff --check` 与 staged diff check 通过；正式 finalizer 的预期结果为 `VISUAL_FAILED`，登记4页版式失败；build receipt stale 0、provenance/issue ledger 校验通过。第15题冲突及原 ISSUE-0779 均保持 open。
 - 剩余任务：获取第15题独立盲核、修复第19题标点版式并重新构建复核、保留第22题来源 blocker；之后刷新报告并执行批次门禁。“41 项待核”未能映射到当前50页/400 checks 的 b61 工作项。
 - 下一步：先由用户或仓库现有清单明确“41 项待核”的位置/所属任务；同时可继续按既定年份顺序检查 b62 等后续独立批次，不将 b61 backlog 误作已解决。
+
+### `phase2-b61` 恢复后纯版式修复（第19题标点）
+
+- 已完成可验证阶段：恢复检查确认 phase2-b58 已于提交 `f690b60c` 完成并保留来源 blockers；旧 SDD ledger 的当前批次指针过期。b59 仍受固定来源缺图/缺字等问题阻塞，b60 已闭合，因此恢复到可局部推进的 b61。依据既有页面复核证据，仅修正第19题两处行间公式后的孤立分号、句号：把标点并入相应公式显示末尾，不改题干、公式、答案或结论。
+- 阶段修改文件：`1987/1987_数学真题_全国理_试题.md`、`math-gaokao-latex/tests/test_generate_projects.py`、本 `PROGRESS.md`。
+- 阶段验证：新增生成回归测试先在原稿上按预期失败；修订后定向测试 `test_1987_national_science_q19_keeps_proof_punctuation_with_formula` 通过（1/1），断言两种标点随公式生成且没有独立标点段落。第一次实现把分号重复包入 `\\text`，由测试发现并依转换器对中文标点的自动处理收敛为裸分号；句号用显式 `\\text{。}` 保持正确字形。
+- 剩余任务：需用官方生成器更新 `questions.tex`，按 provenance 事务更新 q19 当前来源哈希，formal build 新 attempt 并复核受影响页面和全卷；当前四项视觉失败回执不能直接迁移。第15题答案冲突 ISSUE-1065 与第22题 ISSUE-0779 保持 open。
+- 下一步：运行官方 `generate_projects.py --write/--check` 与 provenance 支持的写入/校验流程，再正式四版构建；依同参数渲染比较页面，重点复核四版第19题所在页及任何分页变化。
+- 已完成可验证阶段（b61 生成投影与 provenance 同步）：官方 `generate_projects.py --batch phase2-b61 --write` 更新 `questions.tex`；项目题面、简答答案和四版入口的 `--check` 均通过。对 q19 的 `question_text_sha256` 按 `provenance.py` 规范函数重算为 `6511186e…d3ffd4a761`，只在 ignored question-review work item 中机械更新该字段，原独立来源核对结论和证据文字不变；官方 `provenance.py import-batch` dry-run 与 `--write` 均成功，写入 revision 3991。此哈希同步仅因标点排版的 Markdown/公式块表示变化，不代表新增独立盲核。
+- 阶段修改文件：该卷 `questions.tex`、`provenance.json`、`source-manifest.json` 与本 `PROGRESS.md`；ignored provenance work item 仅更新 q19 的规范题面哈希。
+- 阶段验证：三项生成器检查通过；provenance 导入 dry-run 及 revision 3991 写入通过；定向回归测试 1/1 通过。第15题 ISSUE-1065 与第22题 ISSUE-0779 的状态不变。
+- 剩余任务：当前 formal build 和视觉回执仍绑定修复前 attempt；需重新四版构建并绑定新 attempt，审查全部受影响页面，登记旧第19题版式失败的解决状态，同时保留来源 blocker。
+- 下一步：执行 b61 官方 formal build；核验 PDF 页数、SHA、编译日志和收据后刷新 review work items，再以当前 PDF 为准完成视觉复核。
+- 已完成可验证阶段（b61 修复后正式重建与新复核工作项）：官方 formal build revision 3993 创建 attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e`；试题/解析/简答/印刷四版均 succeeded，页数 5/21/6/18 共50页，编译 errors、missing characters、overfull、undefined references、problems 均为0。新 build receipts 验证 `OK`，provenance `OK`，issues ledger 校验通过。官方 `prepare-batch` 已生成四份新工作项，全部绑定新 attempt 与当前 PDF，覆盖50页/400项，均 pending。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json`、四份 ignored build PDF、四份 ignored review work items 与本 `PROGRESS.md`；旧 attempt 结论未迁移。
+- 剩余任务：完成新 attempt 的全页视觉核查。四处旧 `pagination_whitespace` 失败绑定旧 attempt；解决情况须在新 PDF 复核后登记。第15题 ISSUE-1065、第22题 ISSUE-0779 继续阻塞内容核验。
+- 下一步：以与旧 attempt 相同的 `pdftoppm` 参数重新渲染50页，逐页比较图像并检查所有变化页；重点复核四版第19题对应页。
+- 已完成可验证阶段（b61 当前 attempt 全页视觉复核）：对新 attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e` 四版50页，以同尺寸 778×1100、同 `pdftoppm` 工具逐页比较旧版图像；44页像素完全一致。6页有预期变化：试题p4、解析p4/p17、简答p4、印刷p3/p15。六页均另以150dpi放大复核；原四项孤立标点现在随公式同行，余下页面文字、公式、分页完整可读，无新缺陷。旧 attempt 其余检查观察仅在对应页图像完全一致后沿用。
+- 阶段修改文件：仅四份 ignored `.work/phase2-b61/review/<版次>/gk-1987-regular-national-science.json` 与本 `PROGRESS.md`。
+- 阶段验证：四工作项均绑定当前 attempt/PDF；覆盖50页×8项=400项，355 pass、45 not_applicable、0 fail、0 pending。对六页变化的 `pagination_whitespace` 均重新登记 pass；解析/简答/印刷版答案泄漏项按设计保留 not_applicable。
+- 剩余任务：尚未用官方 finalizer 将当前 attempt 检查结果写入正式回执，且要确认旧 attempt 的四个视觉 issue 正确结案；第15题 ISSUE-1065 与第22题 ISSUE-0779 继续 open。
+- 下一步：运行 `review_receipts.py check-batch` 核对当前工作项，再用官方 `finalize-batch` 事务登记 400 项结论；若旧视觉 issue 未按新 attempt 自动关闭，按工具规则处理，不手改 issue 状态。
+- 已完成可验证阶段（b61 当前 attempt 复核事务）：官方 `finalize-batch` revision 3994 返回 `FINALIZED`、无 problems，批次状态 `closed_with_blockers`，正式报告 `reports/phase2-b61.md` 已写入。新 attempt 四版视觉 review 已通过；修复前 4 个 `pagination_whitespace` issues 由事务按新复核结论更新，内容 blocker 保持独立。
+- 阶段修改文件：该卷 `receipts/review.json`、`missing-issues.md` 中当前/旧视觉问题状态、`source-manifest.json`、`reports/phase2-b61.md` 与本 `PROGRESS.md`；无题意、答案或来源 blocker 被改为完成。
+- 阶段验证：finalizer 返回 `FINALIZED`、problems=0、manifest revision 3994。`ISSUE-1065`（第15题答案冲突）和 `ISSUE-0779`（第22题原卷变量不一致）仍 open，批次据此为 `closed_with_blockers`，不伪报完整闭合。
+- 剩余任务：六个全库报告投影待刷新/校验；相关 review/report 测试与 scope gates 待最终执行；build 目录含 latexmk 中间物，需精确清理并确认 PDF SHA 不变；之后审 diff 并本地提交。
+- 下一步：运行 review/report 定向测试、全量报告 `render --all`/`check --all` 与 b61 构建/来源/问题校验；随后仅清理本卷四版 build 中间物，复验当前 attempt 与 PDF 哈希。
+- 已完成可验证阶段（b61 报告投影与回归门禁）：`test_review_receipts.py` + `test_report.py` 共77项通过；`report.py render --all` 以事务写入并回读校验六份全库投影，`check --all` 通过且保留 `closed_with_blockers` 未完成状态。source manifest、issue ledger、build receipt、provenance、review 检查均通过；review 当前状态 `FINALIZED`。`git diff --check` 待清理及最终变更后再做。
+- 阶段修改文件：六份全库报告投影与本 `PROGRESS.md`；此阶段校验未改题面或答案。
+- 阶段验证：77/77 定向测试；全库报告一致；1卷 build/provenance/status、问题与复核门禁通过。另 `test_generate_projects.py` 完整测试命令已退出0，新增定向回归测试1/1通过。
+- 剩余任务：清理该卷四版 build 的非 PDF 文件；确认 PDF 哈希与 attempt 回执一致；最终 diff 审查并本地提交，不 push。
+- 下一步：先精确列出本卷四个 build 目录内容，再对四个入口执行 `latexmk -c -outdir=build`，清理后重验 PDF、receipt、manifest 和 diff。
+- 已完成可验证阶段（b61 编译中间物清理）：四入口均成功执行 `latexmk -c -outdir=build`。
+- 阶段修改文件：仅该卷 ignored `build/` 中的 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 等中间文件；四份 PDF 和全部 LaTeX/TikZ 源文件保留。
+- 阶段验证：待清理后列目录确认 build 内恰为四份 PDF，并以 build receipt validator 核对页数及 SHA；任何 PDF 哈希变化均须停下重查。
+- 剩余任务：清理结果的哈希/构建验收、最终 diff 审阅和本地提交。
+- 下一步：运行 build/provenance/review/report 最终 gates 与 `git diff --check`，审阅精确改动路径后提交，不 push。
+- 已完成可验证阶段（b61 清理与最终验收）：四版 `latexmk -c -outdir=build` 后，build 目录仅保留试题/解析/简答/印刷四份 PDF，四份 `.tex` 入口均存在。PDF SHA-256 与当前 formal build attempt 完全匹配；build/provenance/review、manifest/issues、六份全量报告一致性均通过。定向回归测试：生成器文件完整运行退出0（含新增测试1/1）；review/report 77/77通过；`git diff --check` 通过。
+- 阶段修改文件：最终 diff 共17个受跟踪文件：1987全国理科规范题面、生成的 questions/answers 与 provenance/build/review receipts、四个已解决的视觉 issues、批次及全量报告投影、来源清单、回归测试和本进度记录。无 PDF 或编译中间物入库；无答案内容修改。
+- 阶段验证：revision 3994，build attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e`；视觉 review `passed`，批次 `closed_with_blockers`。ISSUE-1066–1069 已 resolved；ISSUE-1065、ISSUE-0779 仍 open。此状态符合尚有内容 blocker 的部分完成边界。
+- 剩余任务：创建本地提交并确认干净工作树；1952—2026 语料目标继续未完成，b59及b61来源 blocker待未来取得更可靠证据。
+- 下一步：对已核验的17个路径精确暂存并本地提交（不 push）；提交后确认状态与 receipt current，再按年份顺序检查下一批。

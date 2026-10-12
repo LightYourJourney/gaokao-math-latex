@@ -1355,6 +1355,26 @@ class LiveIndexIsUnchangedTests(unittest.TestCase):
 
 
 class LiveQuestionRenderingRegressionTests(unittest.TestCase):
+    def test_1987_national_science_q19_keeps_proof_punctuation_with_formula(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1987-regular-national-science"
+        )
+        result = generate_project(
+            ROOT.parent.parent.parent, paper_sources(paper)
+        )
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        q19 = re.search(
+            r"\\gkti\{19\}(.*?)\\end\{question\}", questions, re.DOTALL
+        )
+        self.assertIsNotNone(q19)
+        self.assertIn(r"|z_1+A||z_2+A|=|A|^2\text{；}", q19.group(1))
+        self.assertIn(r"\right|\text{。}", q19.group(1))
+        self.assertNotRegex(q19.group(1), re.compile(r"(?m)^\s*[；。]\s*$"))
+
     def test_1985_guangdong_science_q11_break_ends_the_justified_paragraph(self):
         manifest = load_manifest(ROOT / "source-manifest.json")
         paper = next(
