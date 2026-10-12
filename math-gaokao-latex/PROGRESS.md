@@ -2574,7 +2574,7 @@
 - phase2-b83技术闭环已完成；报告汇总的3个README仍待用户人工复核，未绕过该提交规则。
 - 已完成phase2-b84恢复预检（2001豫粤卷）：来源、题面、答案及三份图稿已在本库；官方manifest无issue，provenance为`provenance_verified`。
 - 阶段修改文件：仅本进度文件及ignored SDD恢复账本；未修改b84题面、答案、图稿或provenance。
-- 验证结果：source manifest与issues校验、生成题面、简答答案和四版壳`--check`均通过；build receipt报告旧attempt因生成输入树/工具链指纹变化stale；旧review也因绑定attempt过期，四版共52页/416项均pending。历史页数为4/22/6/17。
+- 验证结果：source manifest与issues校验、生成题面、简答答案和四版壳`--check`均通过；build receipt报告旧attempt因生成输入树/工具链指纹变化stale；旧review也因绑定attempt过期，四版共49页/392项均pending。历史页数为4/22/6/17。
 - 剩余任务：以当前输入正式重建b84四版，为新attempt生成复核工作项、覆盖全部页面并登记；随后全库报告、门禁、定向测试、清理、PDF回执核验和提交。b83三个README投影的人工复核仍待用户回复。
 - 下一步：提交b84预检checkpoint后执行官方formal build；不重做转录、独立解题或provenance核验，不push。
 - 已完成phase2-b83逐页视觉复核阶段：接触表覆盖试题5、解析22、简答7、印刷18页；26页高分辨率复核覆盖试题全部5页、解析版封面及第12/13/17/20–22页、印刷版封面/第2–4/10/14–18页、简答版封面/第5/7页。题12土地沙化数据图、题19立方体图、题22流程图及候选页均清晰，未见缺字、遮挡、裁切、异常分页或答案泄漏。
@@ -2752,16 +2752,16 @@
 ## 最新恢复状态（2026-10-13）
 
 - phase2-b83（2001上海理科）已正式闭环；仅三份生成的README汇总投影仍待用户人工复核后提交，本会话不绕过该门槛。
-- 当前接续phase2-b84（2001豫粤卷）：provenance有效，来源/issue/generator/简答/四版壳校验通过；旧build attempt因输入树和工具链变化stale，旧复核项绑定旧attempt，52页/416项待新构建后重审。
+- 当前接续phase2-b84（2001豫粤卷）：provenance有效，来源/issue/generator/简答/四版壳校验通过；旧build attempt因输入树和工具链变化stale，旧复核项绑定旧attempt，49页/392项待新构建后重审。
 - 本次恢复预检未改b84内容或正式回执；剩余为formal build、新attempt逐页复核与finalize、报告/门禁/测试、清理和PDF核验。
 - 下一步：提交b84预检记录后按计划正式重建；不重做已有转录、解题或provenance，不push。
 - 已完成phase2-b84正式构建阶段：官方formal build在manifest revision 4067生成当前attempt `21f6787d-033c-408c-96e7-13179b7ec568`，状态`compiled_pending_review`。
 - 阶段修改文件：豫粤卷`receipts/build.json`、全局`source-manifest.json`派生状态及本进度文件；题面、答案、图稿、来源和provenance未改。
 - 验证结果：试题/解析/简答/印刷版分别4/22/6/17页，四版`succeeded`；errors、missing characters、overfull、undefined references和problems均为空；build receipt validator为1 pending、0 stale/failed，provenance `check-batch`为`OK：1卷`。
-- 剩余任务：当前attempt尚无视觉复核；需生成新工作项、检查全52页及候选页并完成416项登记，再finalize、运行报告/门禁/定向测试、清理和PDF核验。
+- 剩余任务：当前attempt尚无视觉复核；需生成新工作项、检查全49页及候选页并完成392项登记，再finalize、运行报告/门禁/定向测试、清理和PDF核验。
 - 下一步：提交b84 build checkpoint，为attempt `21f6787d-033c-408c-96e7-13179b7ec568`运行官方`prepare-batch`。
 - 已完成phase2-b84当前attempt复核准备阶段：归档旧attempt工作项后，官方`prepare-batch`为新build生成四份复核工作项。
 - 阶段修改文件：仅ignored `.work/phase2-b84/review/`四份工作项；旧项可恢复归档于`~/.Trash/phase2-b84-review-workitems.fz7O3p/review`；正式review receipt未改。
-- 验证结果：四版均绑定attempt `21f6787d-033c-408c-96e7-13179b7ec568`及对应PDF SHA；连续覆盖试题4、解析22、简答6、印刷17页，共52页×8项=416项pending；候选页各为封面1页，warning exemptions为空。
-- 剩余任务：检查全部52页接触表并放大复核图稿/候选页，之后填写、校验并正式登记416项视觉结论。
+- 验证结果：四版均绑定attempt `21f6787d-033c-408c-96e7-13179b7ec568`及对应PDF SHA；连续覆盖试题4、解析22、简答6、印刷17页，共49页×8项=392项pending；候选页各为封面1页，warning exemptions为空。
+- 剩余任务：检查全部49页接触表并放大复核图稿/候选页，之后填写、校验并正式登记392项视觉结论。
 - 下一步：生成四版全页接触表，放大检查题11屋顶、题12信息网络、题19棱锥图及每版封面/异常页。
