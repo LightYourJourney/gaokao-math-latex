@@ -3028,3 +3028,8 @@
 - 验证结果：CSV `--check`确认775行当前；report render以一个content事务写入并回读六目标，`report.py check --all`通过且保留全库未完成状态；`test_review_receipts.py` 66/66通过（41.973秒），`test_report.py` 11/11通过（71.231秒）。
 - 剩余任务：清理b89八版编译中间物、将预览/workitems可恢复归档并核对8份PDF页数/SHA；最终审阅和提交b89剩余非README正式改动。1952—2026全语料与后续manifest批次仍未完成。
 - 下一步：提交全库投影/测试checkpoint（排除三份README），再清理与核验PDF；b89闭环后继续manifest下一批。
+- 已完成phase2-b89中间物清理、复核预览归档与最终PDF核验阶段：8版均执行`latexmk -c -outdir=build`，work/render目录移入可恢复归档。
+- 阶段修改文件：仅ignored产物；8份PDF和LaTeX源保留。归档位于`~/.Trash/phase2-b89-work.3zCtWA/phase2-b89/`，含8份workitem、98张页图和8张接触表（106个PNG），约14.9MB。
+- 验证结果：8次latexmk clean退出0；两卷build目录仅保留PDF；文科页数6/20/8/16、理科6/19/8/15，8份PDF SHA-256、字节数及页数逐项匹配final build receipt；`.work/phase2-b89`不存在。`git diff --check`通过。
+- 剩余任务：phase2-b89已闭环并提交所有非README正式文件；三份全库README为最新生成投影但继续保留未提交供人工复核。全语料目标未完成。
+- 下一步：按manifest顺序进入phase2-b90（2002全国新课程文、理两卷，文科关联ISSUE-0812至0816），先核对进度/差异、计划、来源与回执，只处理尚未完成的阶段；不push。
