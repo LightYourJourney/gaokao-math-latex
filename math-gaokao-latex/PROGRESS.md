@@ -2508,3 +2508,8 @@
 - 验证结果：四版均`succeeded`、无problems；官方receipt校验返回`OK`，状态pending review。旧review receipt及四份工作项绑定旧attempt，不能迁移；工作项352项仍pending。
 - 剩余任务：checkpoint正式构建状态；归档旧b79工作项并生成当前attempt工作项，逐页复核及登记；报告、门禁、测试、清理与最终提交。
 - 下一步：检查并提交b79 build receipt/manifest，再把旧工作项可恢复归档，运行官方`prepare-batch`。
+- 已完成视觉复核准备阶段（phase2-b79）：四份旧attempt review工作项已完整移至可恢复目录`~/.Trash/phase2-b79-review-workitems.YThYJM/review/`；官方`prepare-batch`为当前attempt生成四个新工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b79/review/`四个当前attempt工作项及可恢复archive；正式review receipt未改。
+- 验证结果：四份新工作项均绑定attempt `fa1ae42a-6efc-452e-b624-8d40b4a73f0e`；44页×8项共352项pending，待视觉复核。
+- 剩余任务：覆盖全部四版页面并检查候选/图稿页，填写并finalize回执；报告、门禁、测试、清理和最终提交。
+- 下一步：渲染四版44页接触表；按题目图稿分布选择高分辨率复核页。
