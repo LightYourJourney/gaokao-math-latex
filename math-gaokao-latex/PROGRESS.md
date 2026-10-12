@@ -1898,3 +1898,31 @@
 - 已完成阶段（phase2-b62 本地提交）：上述 11 个受跟踪路径经暂存 diff 与 `git diff --cached --check` 审阅后提交为 `8b41b7f5`（`[已核] docs(exams): 完成1987广东文史卷复核与回执`）；未 push。提交仅含回执、进度和报告投影，无 PDF 或图片。
 - 提交后待验证：确认工作树干净、build receipt 仍 current、review gate 仍 FINALIZED；随后将此进度 checkpoint 单独本地提交。
 - 下一步：运行提交后状态与 scoped receipt 校验；确认后结束 phase2-b62，本阶段不自动扩展到下一批。
+- 总目标续行（phase2-b63，1987广东理工农医卷）：b62已完成；按当前全语料目标继续至 manifest 下一批 b63，范围仅此一卷。其固定源存在 ISSUE-0782/0784/0791/0792 等阻塞和 ISSUE-0781/0783 等非阻塞歧义，不得补造缺失选项或擅改冲突答案。
+- 已完成可验证预检：`generate_projects.py --batch phase2-b63 --check`、`make_short_answers.py --batch phase2-b63 --check`、`make_editions.py --batch phase2-b63 --check` 均通过；问题总账校验通过。旧 build attempt `22a0b73e-4fd1-4d8b-b489-a9044ddeb172` 的55页回执因生成输入树和工具链指纹变化而 stale，旧视觉回执不能直接迁移。provenance 单卷派生状态为 blocked，批次缓存状态 `compiled_pending_review` 与现场 `provenance_verified` 不同步；无已知来源哈希冲突，不应重导来源。
+- 阶段修改文件：仅本 `PROGRESS.md`；预检为只读，未改变生成源、provenance、旧 receipt 或 PDF。
+- 剩余任务：以官方 formal build 刷新四版回执，再准备当前 attempt 的工作项并全页视觉复核；最终登记 visual review、保留内容 blockers、跑回归门禁和报告投影、清理临时文件并本地提交。
+- 下一步：执行 b63 官方 formal build，核对四版页数、编译日志及 PDF SHA；随后确认 provenance 派生状态恢复一致，并准备新 attempt 的逐页工作项。
+- 已完成可验证阶段（b63 正式构建及复核工作项）：official formal build revision 3999 创建 attempt `2fb26af0-2fa9-41b6-91a1-c72afdd5321b`；四版全部 succeeded，页数为试题6、解析24、简答7、印刷18（共55页），errors、missing characters、Overfull、undefined references、problems 均为0。build receipt validator 与 provenance batch check 通过；纸卷仍 blocked，批次状态为 compiled_pending_review。`prepare-batch` 已生成四版当前 attempt 工作项，覆盖55页/440项。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json`、ignored 四版 build PDF、新 attempt 的 `.work/phase2-b63/review/` 四项工作项及本 `PROGRESS.md`。
+- 阶段验证：旧 attempt `22a0b73e-4fd1-4d8b-b489-a9044ddeb172` 已被 current build 替代；新 attempt 与当前 PDF 页数/SHA 绑定。内容问题 ISSUE-0782/0784/0791/0792 仍阻塞完成；不改题面、答案或缺失图形选项。
+- 剩余任务：按新 attempt 复核全部55页并登记440项，再由官方事务 finalize；保留源争议和完整性 blockers。
+- 下一步：渲染 b63 当前四版全部页面，检查全页接触表及含选项图/三棱台图/阻塞题所在页的放大图，之后填写工作项并 finalize。
+- 已完成可验证阶段（b63 当前 attempt 逐页视觉复核与登记）：核查试题6、解析24、简答7、印刷18页，共55页/440项。四版接触表与高风险页面放大复核（题面p1、p4；解析p14–17、p19–20；简答p7；印刷p3–4、p10–11、p13）未见字形、公式、图形标注、页眉页脚、裁切、重叠或分页缺陷。ISSUE-0782 答案冲突、ISSUE-0784 缺失选项图和其他源问题的说明在各版可读，未把固定答案标作已核。
+- 阶段修改文件：ignored `.work/phase2-b63/review/<版次>/gk-1987-regular-guangdong-science.json`；官方事务更新该卷 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b63.md` 与本进度文件；未改试题/答案源。
+- 阶段验证：官方 `finalize-batch` revision 4000 返回 `FINALIZED`、problems=0、批次 `closed_with_blockers`。当前 attempt `2fb26af0-2fa9-41b6-91a1-c72afdd5321b` 的55页全部 pass；440项计数为391 pass、49 not_applicable、0 fail/pending。build receipt、review gate 与 provenance batch check 通过。
+- 剩余任务：刷新六个全量报告投影，补跑 issues ledger 校验和本阶段相关回归测试；清理本卷 LaTeX 中间物及本次页面渲染，再核验 PDF SHA；检查 diff 后本地提交（不 push）。内容 blockers 保持 open。
+- 下一步：运行 `report.py render --all` / `check --all`，并完成 scoped issue/build/provenance/review gates 与 review/report 测试；随后只清理该卷 build 中间物和本批次临时 PNG。
+- 已完成可验证阶段（b63 全量报告与回归门禁）：`report.py render --all` 事务写入并回读六个报告投影，`check --all` 通过并保留 `closed_with_blockers` 状态。issues ledger、build receipt、provenance、review `FINALIZED` 校验均通过；`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过。
+- 阶段修改文件：六个全量报告投影与本 `PROGRESS.md`；该阶段未改来源内容、答案或问题状态。
+- 阶段验证：全量报告状态与 manifest 一致；55页 review 仍绑定 attempt `2fb26af0-2fa9-41b6-91a1-c72afdd5321b`，批次 `closed_with_blockers`。
+- 剩余任务：清理该卷四版 build 中间物及本批次接触表/页面 PNG；确认只剩四份 PDF 且 PDF SHA 不变，再做精确 diff 审阅并本地提交。
+- 下一步：先记下四份 PDF SHA，执行四入口 `latexmk -c -outdir=build` 并清理 `.work/phase2-b63/{render,contact,review}-2fb26af0` 临时图像目录，再复验回执。
+- 已完成可验证阶段（b63 编译及视觉临时物清理）：四个 `latexmk -c -outdir=build` 均完成，`1987_广东卷_理工农医类/build/` 仅保留四版 PDF；四份 SHA-256 与当前 formal build receipt 逐项相同。已删除本次生成的 contact/render/high-resolution PNG 目录，保留四份正式 review work items。
+- 阶段修改文件：ignored build 中间物和 `.work/phase2-b63/{contact,render,review}-2fb26af0/` PNG 已清理；PDF、LaTeX/TikZ 源、正式 receipt 与工作项保留；无二进制图片入库。
+- 阶段验证：清理前后 PDF hashes 与 build receipt 一致；当前 attempt `2fb26af0-2fa9-41b6-91a1-c72afdd5321b` 仍通过 validator，55页 review `FINALIZED`，batch `closed_with_blockers`。
+- 剩余任务：最终审查本批次精确 diff 与 `git diff --check`，确认没有 PDF/图片被追踪；随后提交已完成内容和独立进度 checkpoint，不 push。内容 blockers 保持 open。
+- 下一步：运行最终 scoped validators、核对待提交路径和生成报告变化，然后本地提交并确认工作树 clean。
+- 已完成最终审查阶段（b63）：`git diff --check` 通过；变更限于11个收据/manifest/进度/报告投影路径，无题目或答案源改动，build/渲染二进制均未纳入 Git。报告显示 `closed_with_blockers` 且明确列出4项 blocking issues；provenance/build/review gates、问题总账校验及 review/report 77项测试均通过。
+- 剩余任务：本地提交本批次11个已核路径（不 push），提交后复查干净状态及正式回执。
+- 下一步：精确暂存并提交 b63 成果，再单独提交最终进度 checkpoint。
