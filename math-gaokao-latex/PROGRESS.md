@@ -2573,6 +2573,11 @@
 - 验证结果：52页均已接触表检查，26页放大检查；当前attempt为`d5caa3af-ce5c-4c3d-ba8e-b220f791180c`，视觉检查未发现待登记缺陷。
 - 剩余任务：向52页×8项工作项登记416项结论（369 pass、47 not_applicable），运行官方finalizer；后续全库报告、批次门禁、定向测试、清理与PDF回执核验。
 - 下一步：提交本视觉复核checkpoint，再填写工作项并核验总数及attempt绑定。
+- 已完成phase2-b83逐页结论录入阶段：四份当前attempt工作项的416项检查均已填写，非试题版答案泄漏检查标记为不适用并附原因。
+- 阶段修改文件：仅ignored `.work/phase2-b83/review/`四份工作项；本卷题面、解析、答案、图稿、provenance与正式回执未改。
+- 验证结果：机械统计确认52页、416项，369 pass、47 not_applicable、0 fail/pending；四份工作项均绑定attempt `d5caa3af-ce5c-4c3d-ba8e-b220f791180c`，N/A数量与三个非试题版页数18+22+7吻合。
+- 剩余任务：运行官方`finalize-batch-checked`生成正式回执并确认FINALIZED，再更新全库报告、运行门禁和定向测试、清理并校验PDF。
+- 下一步：提交本阶段进度checkpoint后运行官方finalizer；未完成finalize前不将工作项计作正式闭环。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
