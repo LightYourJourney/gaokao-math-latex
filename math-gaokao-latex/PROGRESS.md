@@ -2294,3 +2294,23 @@
 - 验证结果：四份工作项均绑定attempt `5931dfe7-fc1d-47f4-a43b-96caf3283df0`及对应PDF SHA；58页×8项共464项，411 pass、53 not_applicable（非试题版答案泄漏检查）、0 fail/pending。高分辨率重点检查包含六幅登记图稿及四版末页。
 - 剩余任务：官方finalize，刷新全库报告并运行本批门禁/定向测试；清理编译中间物与渲染PNG，校验PDF SHA/页数，最终审查并提交。
 - 下一步：将逐页视觉复核阶段checkpoint提交，再调用官方`finalize-batch`登记本attempt的结论。
+- 已完成正式复核登记阶段（phase2-b74）：`review_receipts.py finalize-batch`返回`FINALIZED：phase2-b74`；当前attempt的58页/464项结论已登记，批次报告生成。
+- 阶段修改文件：2000全国旧课程理科卷`receipts/review.json`、manifest派生状态、`reports/phase2-b74.md`与本进度文件；ignored工作项保留。
+- 验证结果：官方finalizer成功；0 fail、0 pending，答案泄漏项的不适用说明已逐页记录。
+- 剩余任务：刷新/检查全库报告，运行b74批次门禁与定向测试，清理编译中间物和本轮渲染、核验PDF并提交。
+- 下一步：执行`report.py render --all`和`report.py check --all`，提供manifest与issues路径。
+- 已完成全库报告刷新阶段（phase2-b74）：`report.py render --all`以单个content事务写入并回读校验六个全量报告目标；`report.py check --all`通过，确认输出与manifest一致并保留全库未完成状态。
+- 阶段修改文件：六个全库报告/索引投影与本进度文件；批次报告由finalizer生成。
+- 验证结果：全量report render与check均成功；没有更改题面、答案、provenance或图稿。
+- 剩余任务：完成本批scoped gates与定向测试；清除LaTeX中间物及PNG，核验PDF SHA/页数，最终差异审查后提交。
+- 下一步：运行b74 build/provenance/review/issues/generator门禁及短答案/版次生成一致性检查，再运行定向测试。
+- 已完成报告、批次门禁与定向测试阶段（phase2-b74）：全库report render/check通过；build receipt、provenance、review `FINALIZED`、issues validate、generator `--check`、short-answer `--check`、edition-shell `--check`七项scoped gates全部通过。定向测试`test_review_receipts.py` 66/66、`test_report.py` 11/11通过。
+- 阶段修改文件：仅本进度文件；门禁和测试未修改试卷源/回执。此前并行启动多个获取同一仓库锁的只读dry-run时有锁竞争，失败命令串行重跑均成功，无写入副作用。
+- 验证结果：两组测试合计77项通过；report render/check及7项scoped gates退出码均为0。
+- 剩余任务：运行`latexmk -c -outdir=build`清理四版中间物；把本轮render目录移入可恢复废纸篓；验证build目录仅有四份PDF且SHA/页数与receipt一致，随后最终diff审查并提交。
+- 下一步：清理phase2-b74编译辅助文件与`.work/phase2-b74/render-5931dfe7/`，仅保留PDF、源文件、正式回执和ignored review工作项。
+- 已完成LaTeX中间物清理与正式PDF核验阶段（phase2-b74）：四个入口执行`latexmk -c -outdir=build`成功，build目录精确保留试题/解析/简答/印刷四份PDF；来源预览、58页PNG、接触表和重点页图均移入系统废纸篓`~/.Trash/phase2-b74-review-renders.2akHp0/`（可恢复），四份ignored review工作项保留。
+- 阶段修改文件：本进度文件与ignored构建/预览产物；未删除正式PDF、LaTeX/TikZ源、回执或工作项。
+- 验证结果：四PDF页数5/25/6/22，SHA-256逐项与当前build receipt一致；build目录无非PDF文件；`git diff --check`通过。
+- 剩余任务：最终核对tracked差异只含b74回执、manifest/报告投影和进度；无图片/PDF/编译中间物被跟踪，然后提交本批内容与checkpoint。
+- 下一步：检查`git status`、tracked文件清单和差异统计，确认无无关改动后本地提交，不push。
