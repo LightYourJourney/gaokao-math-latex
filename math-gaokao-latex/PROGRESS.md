@@ -2995,3 +2995,8 @@
 - 验证结果：issues/source manifest退出0；generator、short answers、editions各2套一致；`test_review_receipts.py` 66/66通过（42.036秒）。
 - 剩余任务：全库report六目标投影/`test_report.py`因三份README差异待用户决定；其余清理、PDF页数/SHA核验、最终审阅提交待完成。
 - 下一步：提交本验证checkpoint；收到README决定后完成全库report gate并运行`test_report.py`，继续处理产物与最终核验。
+- 已完成phase2-b88构建中间物清理、复核资料可恢复归档与PDF回执核验阶段：8个版次均运行`latexmk -c -outdir=build`，本批ignored review/render目录整体移出工作区。
+- 阶段修改文件：仅ignored产物；8份PDF和LaTeX源保留。归档位于`~/.Trash/phase2-b88-work.nZwyqe/phase2-b88/`，含8份workitem、96张页面PNG及8张接触表，共约15MB。
+- 验证结果：8次latexmk clean退出0；文理两卷build目录均仅含四版PDF；8份PDF页数、文件大小、SHA-256均与final build receipt逐项一致（文科5/20/7/16页，理科5/20/7/16页）；项目`.work/phase2-b88`已不存在。
+- 剩余任务：全库六目标report投影与`test_report.py`仍待三份README差异处理决定；完成后最终审阅/提交b88剩余正式输出。1952—2026全语料及后续manifest批次仍未完成。
+- 下一步：提交cleanup checkpoint；确定README投影范围后刷新报告并运行最终报告测试、门禁，审阅并提交b88非README文件；不push。
