@@ -870,4 +870,7 @@
 - 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认唯一问题为 stale；四份现存 PDF 均可读且页数已记录。预检过程中首次调用 source manifest validator 漏传必需参数、退出码 2；按其 CLI 用法补上 `--manifest` 后验证通过，未产生写入。
 - 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
 - 剩余任务：正式构建、逐页视觉复核、登记回执、清理中间产物并完成五项 scoped gates 与全量报告校验。
-- 下一步：提交本预检进度 checkpoint，然后正式构建 `phase2-b53` 四版。
+- 已完成子阶段：1985 全国理科四版正式构建成功，manifest revision 3916；build attempt `45f24548-3eb1-47fc-8e5b-181b34d4a481`。页数仍为试题 4、解析 19、简答 5、印刷 16，共 44 页；零 warning、无 build failure。
+- 阶段验证：build receipt validator `OK`，无 failed/invalid/missing/stale；当前 1 卷待视觉复核。
+- 阶段修改文件：本进度文件、1985 理科 build receipt/PDF；未改试卷题目、答案、provenance、图稿或生成源。
+- 下一步：提交本阶段进度 checkpoint，再为当前 build attempt 准备逐页 review work items。
