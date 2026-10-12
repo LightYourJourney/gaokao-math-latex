@@ -2422,3 +2422,8 @@
 - 验证结果：四份工作项绑定attempt `ae3fe0ca-63be-49df-a7d9-eabc793b9a63`和各自PDF SHA；64页×8项共512项，454 pass、58 not_applicable（非试题版答案泄漏检查）、0 fail/pending。旧attempt的正式receipt仍保留512 pass，但不用于当前观察。
 - 剩余任务：官方finalize登记当前视觉回执；全库报告刷新、七项scoped gates、定向测试、清理、PDF核验和最终提交。
 - 下一步：提交视觉复核checkpoint，再运行`review_receipts.py finalize-batch`登记当前64页结论。
+- 已完成正式复核登记阶段（phase2-b77）：官方`review_receipts.py finalize-batch`返回`FINALIZED：phase2-b77`，当前attempt的64页/512项结论正式登记并生成批次报告。
+- 阶段修改文件：2000全国新课程理科卷`receipts/review.json`、manifest派生状态、`reports/phase2-b77.md`及本进度文件；旧attempt历史receipt仍可由Git历史恢复。
+- 验证结果：finalizer成功；0 fail、0 pending，58项非试题版答案泄漏检查not_applicable理由均已记录。
+- 剩余任务：全库report render/check、七项scoped gates和两组定向测试；清理LaTeX中间物及PNG，核验PDF后审阅并提交。
+- 下一步：刷新并校验全部报告投影，避免局部手改统计数据。
