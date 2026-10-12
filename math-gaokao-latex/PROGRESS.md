@@ -2353,3 +2353,7 @@
 - 验证结果：PDF页数5/25/6/21、SHA-256逐项与当前build receipt相符；build目录无非PDF文件，预览目录已离开工作树，`git diff --check`通过。
 - 剩余任务：最终检查tracked差异仅含b75回执、manifest/报告投影及进度；确认无图片、PDF或编译中间物入库后提交本批。
 - 下一步：查看Git差异文件清单与统计，按`[已核]`本地提交，不push。
+- 已完成并提交阶段（phase2-b75）：2000全国旧课程文科四版57页复核、正式回执和全库报告投影已提交`249c66cb`（`[已核] docs(exams): 完成2000全国旧课程文科复核并登记回执`）；本checkpoint随后单独提交。仅本地提交，未push。
+- 最终验收：456项检查中404 pass、52 not_applicable、0 fail/pending；finalize、全库report render/check、7项scoped gates、77项定向测试、PDF页数/SHA核验及`git diff --check`均通过。源/PDF/TikZ保留，build仅留PDF，review工作项保留，PNG移入可恢复废纸篓；无图片/PDF/编译中间物入库。
+- 剩余任务：1952—2026全语料仍未完成；41项待核未找到权威映射，保持独立待办。
+- 下一步：预检manifest下一批phase2-b76，不重跑b75。
