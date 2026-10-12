@@ -2578,6 +2578,11 @@
 - 验证结果：机械统计确认52页、416项，369 pass、47 not_applicable、0 fail/pending；四份工作项均绑定attempt `d5caa3af-ce5c-4c3d-ba8e-b220f791180c`，N/A数量与三个非试题版页数18+22+7吻合。
 - 剩余任务：运行官方`finalize-batch-checked`生成正式回执并确认FINALIZED，再更新全库报告、运行门禁和定向测试、清理并校验PDF。
 - 下一步：提交本阶段进度checkpoint后运行官方finalizer；未完成finalize前不将工作项计作正式闭环。
+- 已完成phase2-b83正式视觉回执登记阶段：官方`finalize-batch-checked`返回`FINALIZED`并将批次关闭，生成`reports/phase2-b83.md`。
+- 阶段修改文件：上海理科卷`receipts/build.json`、`receipts/review.json`，全局`source-manifest.json`及本卷批次报告、本进度文件；未改卷面内容与provenance。
+- 验证结果：review `check-batch`为`FINALIZED`；build receipt validator为1 succeeded、0 stale/missing/failed/pending；provenance `check-batch`返回`OK：1卷`；416项为369 pass、47 not_applicable、0 fail/pending。
+- 剩余任务：刷新并核对六项全库报告投影；完成七项批次门禁与两组定向测试；清理编译中间物/预览，核验四版PDF页数与SHA后最终提交b83。
+- 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`和`check --all`。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
