@@ -3120,3 +3120,9 @@
 - 剩余任务：完成phase0-b02正式构建、哈希对照、必要的逐页复核与finalize；然后全库投影/测试、清理并核验16份PDF，最后单批提交。
 - 下一步：提交本恢复检查checkpoint；随后确认来源/provenance当前性及警告豁免，运行官方formal batch build。
 - Correction / Ruling：上一条把“manifest最早未closed”误读为跨过主计划的年份分段，错误指向2019/2020 `phase0-b02`。全量计划当前Task 2明确限于1957—2006；manifest显示紧随已关闭2002 `phase2-b91` 的是2003 `phase2-b92`（当前`compiled_pending_review`）。本轮对b02只做了只读状态核验，没有重建、改卷或刷新回执；停止b02，按年份分段优先顺序恢复b92。误按b02继续会跳过年份边界并打乱批次交付顺序。
+- 已完成phase2-b92恢复核对与输入一致性阶段：按全量计划Task 2的年份范围选择2003全国新/旧课程文理四卷。计划与历史报告虽记载批次已完成，当前manifest批次状态为`compiled_pending_review`；四卷build receipt均因生成输入树和工具链指纹变化stale，review gate随之失效；provenance逐题证据未变，但缓存为`compiled`而现场派生为`editions_generated`。
+- 阶段修改文件：仅本进度文件；四卷试题/答案/解析、图稿和生成文件均未修改，三份README差异未触碰。
+- 验证结果：source manifest validate通过；四卷provenance内容校验无逐题冲突，仅派生缓存状态不匹配。`solution_sources.py check-batch`确认新课程文23题、新课程理22题、旧课程文/理各22题；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`均4卷通过。build validator=`INVALID：4卷`；review validator=`INVALID_OR_STALE`。
+- Ruling：复用已核实的转录、解题、TikZ和旧视觉记录，不重新录题/解题；先按官方事务正式重建16版，然后逐PDF比较当前与旧review的SHA/页数。仅当字节哈希一致时才复用逐页结论，否则对变化版本重新逐页目检。若直接沿用旧receipt，会把过期工具链与生成输入伪装成当前产物。
+- 剩余任务：正式构建四卷16版，准备新attempt workitems，比较PDF哈希并覆盖所有变化页面；必要时按原有失败/issue状态据实复核；finalize、更新全库投影、跑门禁与测试、清理并核验PDF后提交。
+- 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
