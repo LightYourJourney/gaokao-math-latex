@@ -3018,3 +3018,8 @@
 - 验证结果：文科attempt `f8024a60-b55f-4db8-bca1-f20da000de9f`、理科attempt `824b2f73-377d-4516-9254-b3d03bd1fc75`；8版均`succeeded`，页数文科6/20/8/16、理科6/19/8/15，共98页；errors/missing characters/undefined references/Overfull/build problems均为0。build validator为2 pending、0 stale/failed；provenance `OK：2卷`。
 - 剩余任务：为新attempt生成8份review workitem并重新复核98页/784项，随后finalize、投影与全库门禁/测试、清理及PDF SHA/页数核验。
 - 下一步：提交build checkpoint，prepare当前attempt workitems并渲染逐页复核；不重做来源转录、答案推导或provenance。
+- 已完成phase2-b89当前attempt视觉复核与正式回执阶段：8张接触表覆盖文理两卷四版98页，另对候选页和Q13/Q15/Q16/Q17图稿页做26页高清复核；图形清楚、无明显缺字裁切/遮叠、分页异常或答案泄漏。
+- 阶段修改文件：8份ignored当前attempt workitem；finalizer更新两卷`receipts/review.json`、`receipts/build.json`、`source-manifest.json`派生状态和`reports/phase2-b89.md`。题面/答案/TikZ/provenance源及issues未改；三份README差异保持不动。
+- 验证结果：workitem绑定文科attempt `f8024a60-b55f-4db8-bca1-f20da000de9f`、理科attempt `824b2f73-377d-4516-9254-b3d03bd1fc75`，覆盖98/98页、784/784检查（698 pass、86 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4086；随后`check-batch` FINALIZED无问题，build validator 2 succeeded/0 stale/failed/pending，provenance `OK：2卷`。
+- 剩余任务：b89需刷新全库report投影及manifest CSV，运行生成器/简答/edition、report门禁与定向回归测试；清理8版编译中间物、可恢复归档预览/workitems，核验8份PDF页数/SHA并审阅提交。此前b88的六目标report投影也尚未刷新；README安全边界待用户回复。
+- 下一步：提交本视觉复核checkpoint；继续做b89全库投影以外可安全执行的校验/测试与产物核验，并在README选择明确后统一刷新全库投影。
