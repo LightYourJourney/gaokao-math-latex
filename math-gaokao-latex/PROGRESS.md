@@ -984,3 +984,14 @@
 - 阶段修改文件：本进度文件与六个全量报告目标：`README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`、`math-gaokao-latex/reports/baseline.md`、`report.md`、`docs/source-inventory.md`。本批三个提交为 `6734c7fd`（修复/构建）、`05f231a8`（正式复核登记）、`c99d3c84`（全量报告与收尾进度）。
 - 剩余任务：phase2-b56 已完整关闭；高考数学语料仍未全部完成。manifest 中下一批 `phase2-b57`（1986 上海文理两卷）当前为 `compiled_pending_review`，需按常规先预检再决定续作。
 - 下一步：本次工作树核验位于 `feat/gaokao-phase0`，无未提交更改；不 push。后续从 `phase2-b57` 预检开始，不重复 phase2-b56 操作。
+
+### `phase2-b57` — 1986 上海卷文理科
+
+- 预检完成：批次含 `gk-1986-regular-shanghai-arts`、`gk-1986-regular-shanghai-science`，manifest revision 3928；批次 issues 为空。source manifest validate 与两卷 generator `--check` 均通过；provenance status 为两卷 `editions_generated`、批次 `provenance_verified`。
+- 两卷各 7 题、`legacy_ids=[]`。固定来源 `普通高考/1986/1986上海文.pdf`（4 页，SHA-256 `c82132f9b00f53dcfd23f85803baa336737094e3394b63c563062a3171f91958`）与 `普通高考/1986/1986上海理.pdf`（5 页，SHA-256 `d4822a1d879b1f4ce5e9a16cba10a161237362841995220af59a07dd08d7df3f`）均登记 ready 且 PDF artifact 校验通过。四版既有页数：文科 4/18/5/14，共 41 页；理科 5/22/6/17，共 50 页；合计 91 页。
+- 既有来源问题保持 open、non-blocking：文科 ISSUE-0769（第 1 题第（9）小题幅角主值约定）、ISSUE-0770（第 7 题折叠几何的 AB=√7 语义）；理科 ISSUE-0771（幅角主值约定）、ISSUE-0772（第 5 题参数 k 定义域）、ISSUE-0773（第 7 题折叠后 AB=√7 语义）。不得擅自补源或更改既有事实裁定。
+- Build receipt validator 显示两卷均 stale（生成输入树、工具链指纹变化），非编译失败；manifest 批次状态仍为 `compiled_pending_review`。当前 8 份 review work items 绑定旧 attempts（文科 `8dc23918-5843-44d3-b429-afba1024afa6`、理科 `8d86d75a-5ff3-481a-907c-05d48d34277b`），新构建后需按工具规则刷新，不复用旧视觉结论。
+- 阶段验证：source manifest validate、两卷 generator `--check`、provenance status 均通过；build receipt 检查确认两卷需重建；固定来源 artifact 与当前四版 PDF 页数已核对。独立只读内容/来源审计由两名 subagent 分卷并行进行，尚待主会话验收其证据。
+- 阶段修改文件：仅本进度文件；预检未修改试卷源、manifest、provenance、issue 或构建产物。ignored `.work/phase2-b57/review/` 中既存工作项保持不动，待新 attempt 后由官方工具刷新。
+- 剩余任务：完成独立审计验收；两卷八版正式重建；逐页复核 91 页并重点检查既有五条来源问题所涉页面；登记正式回执并关闭批次；清理中间产物、工作项与临时 PNG；完成 scoped gates 与全量报告校验。
+- 下一步：核实分卷只读审计结果与问题记录；若无需要修正的转录/答案事实，再正式重建两卷四版，之后刷新 review work items。
