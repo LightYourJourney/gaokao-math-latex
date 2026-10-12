@@ -2498,3 +2498,8 @@
 - 验证结果：`build/`仅保留四版PDF；pdfinfo页数5/22/6/18，四版SHA逐项匹配build receipt；正式receipt final validator仍返回`OK`；预览文件已离开项目工作目录。
 - 剩余任务：最终审阅phase2-b78 tracked差异与全库变更范围，确认无图片/编译中间物入库，再提交最终checkpoint。
 - 下一步：核对自b78起点的tracked文件清单、统计、`git diff --check`与最终status；提交最终进度记录，不push。
+- 已完成下一批预检阶段（phase2-b79）：目标为2001全国旧课程文科卷（22题、无登记issue）。官方`provenance status`确认当前来源状态`provenance_verified`，可跳过重复转录与来源核对。
+- 阶段修改文件：仅本进度文件；未修改b79来源、题目、答案或provenance。
+- 验证结果：build receipt官方校验报生成输入树与工具链指纹变化；旧review attempt `44bd84a5-cb77-4943-a2d4-3ec20fe8209b`与build attempt `2a46c3e4-43d9-4951-afcb-7d3cdbe3c66b`不匹配。provenance `status`报告`provenance_verified phase2-b79`；check-batch提示manifest缓存状态旧，待正式构建同步。
+- 剩余任务：正式构建b79四版并同步派生状态；归档旧review草稿后准备当前attempt工作项，逐页复核并登记；报告、门禁、测试、清理和提交。
+- 下一步：提交本预检checkpoint并运行b79官方formal build；不重复来源核验，也不沿用旧视觉结论。
