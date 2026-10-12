@@ -1099,3 +1099,8 @@
 - 阶段验证：独立报告覆盖四版 50 页且未确认页为 0；主会话抽核试题 p1/p5、解析 p20–22、印刷 p12/p15–17 和图稿放大，交叉验证首页泄漏、Q6 标注重叠、Q2(8) 公式与 Q7 图稿。除两卷首页答案泄漏与本条 Q6 M 标签碰线外，未报告其他明显页面问题。
 - 剩余任务：在获准的纯版式修复边界内微调理工农医 Q6 图稿 M 标签，单卷重建后复核六个受影响页；其余 91 页审查结论待写入 728 项 work items。两卷首页答案泄漏仍待用户裁决，故不能最终 finalize。
 - 下一步：按纯版式范围实施 M 标签偏移，用当前图形源重建理工农医四版，先比较 attempts/页数/日志，再高分辨率复核六个引用页；不改题面、题目数字、答案或结论。
+- 已完成可验证阶段（理工农医 Q6 图稿标注修复及复建）：先把 M 改为 `above left` 后的高分辨率视觉检查看到字形仍过近圆弧，故继续仅加 $x=-4$ pt、$y=+4$ pt 偏移；点标记仍在 $(1.281,1.281)$，仅文字移位。最终科学卷正式 attempt 为 `dea4108d-f233-4641-8050-e2fac5986bb0`（上一试编 `e670ea51-5ad9-4219-9d67-8a711457fd4c` 已被替代）；四版页数保持 5/22/6/17，共 50 页。
+- 阶段修改文件：理工农医 `figures/f1986_shanghai_science_t6_parabola_circle.tex`、该卷 `receipts/build.json`、`source-manifest.json` 与本进度文件。六份构建 PDF 为 ignored 输出，渲染图在 `/tmp/phase2-b57-current.2cooZS/`。
+- 阶段验证：来源清单 validate、两卷生成器 `--check`、两卷 provenance check、简答答案 `--check`、两卷 build receipt validate 均通过；本轮科学卷四版全为 succeeded，零 warning/problem/error/missing-character/overfull/undefined-reference。对试题 p5、解析 p5/p20、简答 p5、印刷 p4/p15 逐页重渲染，且试题 p5 做 300 dpi 局部放大；最终 M 标签与弦/辅助虚线/圆弧分开，点位、图形关系与文字数学内容不变。
+- 剩余任务：旧科学卷 review work items 绑定已替代 attempt，须刷新至 `dea4108d…`；在最新 attempt 上复核这六个变化页并维护 50 页审查覆盖。文史 41 页仍绑定 `82cfd59c…`。两卷首页答案泄漏仍待用户裁决，暂不 finalize。
+- 下一步：调用官方 `prepare-batch` 刷新 stale work items，核对文史 attempt 保持不变、科学卷绑定 `dea4108d…`，再把两卷审查报告映射到当前 work items；变化的六页以本轮放大图为依据，其余页需保持有明确当前 attempt 覆盖证据。
