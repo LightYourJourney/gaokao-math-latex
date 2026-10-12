@@ -2275,3 +2275,7 @@
 - 验证结果：试题/解析/简答/印刷PDF分别4/22/5/18页；四份SHA-256逐项与build receipt一致；build目录精确包含四份PDF，无编译中间物；本轮render目录已离开工作树。
 - 剩余任务：最终核对tracked diff只含本批正式回执、manifest/报告投影与进度记录；`git diff --check`及必要门禁后本地提交，不push。全库1952—2026仍未完成，41项待核权威映射仍未知。
 - 下一步：检查git status、差异文件名/统计、无图片/PDF/编译物入库；通过后提交phase2-b73完成内容与进度checkpoint。
+- 已完成并提交阶段（phase2-b73）：1999全国文科卷四版49页复核及回执、全库报告投影已提交`cbe874c4`（`[已核] docs(exams): 完成1999全国文科复核并登记回执`）；随后另行提交本完成checkpoint。仅本地提交，未push。
+- 最终验收：392项检查中347 pass、45 not_applicable、0 fail/pending；finalize、全库report render/check、五项批次门禁、77项定向测试、PDF SHA/页数核对、`git diff --check`均通过。四份PDF与LaTeX/TikZ源、当前attempt工作项保留；PNG移入可恢复废纸篓，编译目录仅留四份PDF，无图片/PDF/中间物入库。
+- 剩余任务：1952—2026全语料仍未完成；“41项待核”没有找到权威清单映射，继续作为独立待办，不与本批392项逐页检查混同。
+- 下一步：按manifest下一批顺序另行预检；不重跑phase2-b73。
