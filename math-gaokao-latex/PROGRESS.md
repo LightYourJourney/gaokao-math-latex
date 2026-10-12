@@ -3098,3 +3098,18 @@
 - 验证结果：文科attempt `a775499b-d0c6-469f-a6d1-aa797354298b`、理科attempt `61f5bb79-1579-4454-8fd5-aa9cf435f21e`，8版全部成功，共108页（文科5/22/7/20，理科5/24/7/18）；formal build返回`COMPILED_PENDING_REVIEW：2待审、0失败`。build receipt validator、provenance batch check及source manifest validate均通过；两卷provenance缓存已同步为`editions_generated`、批次为`provenance_verified`。
 - 剩余任务：为当前attempt建立并填写8份逐页review workitem，覆盖108页/864项；随后finalize、全库门禁/报告与定向测试、清理中间文件并核对8份PDF回执。
 - 下一步：prepare当前attempt workitems，渲染四版PDF；按文/理卷并行进行独立逐页检查，主会话验收覆盖、绑定与结论后finalize。
+- 已完成phase2-b91当前attempt逐页视觉复核阶段：沿用已完成的108页渲染检查，补看理科印刷版末两页与简答版第1–7页细节；未发现缺字、题号/标注错位、裁切或需登记的版式失败。理科简答版第5页为第22题条件的续页，虽内容较少但非孤立标题，判通过。
+- 阶段修改文件：仅忽略的`.work/phase2-b91/review/`下8份workitem；三份既有README差异未触碰。
+- 验证结果：8个workitem覆盖文/理四版108/108页、864/864项；试题版答案泄漏检查40/40项通过，其余版本98项标记`not_applicable`并注明原因；其余766项通过。官方`check-batch`仍报告旧正式review receipt与新attempt绑定stale，这是finalize前预期的旧回执状态；尚未写入正式review receipt。
+- 剩余任务：使用当前build attempt和workitems执行`finalize-batch`，随后验证review/build/provenance门禁、刷新全库报告与CSV、运行定向测试；最后清理编译中间物和临时渲染/工作项并逐PDF对照回执。
+- 下一步：先正式finalize当前b91复核；若工具拒绝，保留workitems并按其具体绑定错误修复，不重跑构建或重复逐页目检。
+- 已完成phase2-b91正式复核登记与全库投影/定向测试阶段：官方`finalize-batch`将当前attempt逐页结论正式登记，批次关闭；刷新全量manifest CSV和六份报告投影。
+- 阶段修改文件：两卷`receipts/review.json`、`reports/phase2-b91.md`、`source-manifest.json`中的派生状态、`manifest.csv`、六份报告投影及本进度；未更改试题/答案/解析/图稿内容。
+- 验证结果：`review_receipts.py check-batch`=`FINALIZED`；`build_projects.py validate-receipts --require-final`=`OK：2卷`；`provenance.py check-batch`=`OK：2卷`；source manifest校验通过。`manifest_csv.py --check`确认775行当前；`report.py check --all`确认报告与全量manifest一致且保留未完成状态；定向测试`test_review_receipts.py` 66/66、`test_report.py` 11/11通过。
+- 剩余任务：按正式工具清除两卷8版编译辅助物、可恢复归档b91 workitems与108页渲染；对照正式回执核验8份PDF的SHA/字节/页数及目录仅留PDF；随后提交b91完成内容，不纳入三份既有README差异。
+- 下一步：先清理并核验构建目录与PDF回执，再记录最终清理阶段并提交。
+- 已完成phase2-b91编译中间物清理与PDF最终核验阶段：两卷8个build目录仅保留四版正式PDF；已finalize的review workitems与本轮渲染图可恢复归档至`~/.Trash/phase2-b91-finalized.P4ZjKH/`。
+- 阶段修改文件：本进度文件；8个build目录通过`latexmk -c -outdir=build`清除了辅助文件；项目内`.work/phase2-b91`移至上述废纸篓归档，未永久删除。LaTeX源文件与PDF均保留。
+- 验证结果：8/8 build目录恰为4份PDF；文科页数5/22/7/20、理科5/24/7/18，逐份SHA-256/字节数/页数与正式build receipt相符；`git diff --check`通过；正式review/build/provenance门禁、全库报告/CSV检查与定向测试均已通过。
+- 剩余任务：phase2-b91已闭环；全语料仍未完成。三份既有README投影差异维持未提交、不纳入本批；不push。
+- 下一步：提交仅含b91回执、报告/manifest投影与进度的已完成内容；后续依manifest顺序开始下一批并继续逐阶段记录。
