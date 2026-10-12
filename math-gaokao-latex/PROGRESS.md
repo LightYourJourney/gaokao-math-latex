@@ -3053,3 +3053,8 @@
 - 验证结果：分别以独立临时输出目录编译两份印刷版，XeLaTeX成功、无致命错误；文科17页（页数不变），理科18页（原17页，因完整解析段下移增加1页）。逐页目视确认标题不再孤悬，首个小问与标题同页；当前源改动仅目标两处阈值（外加文件末尾换行差异）。
 - 剩余任务：按正式事务刷新两卷provenance并重建8版；随后为新attempt重新渲染/检查全页、登记800项复核、finalize、更新报告/CSV及门禁测试，清理中间产物并核对PDF回执。
 - 下一步：提交修复checkpoint，再运行官方provenance刷新与phase2-b90正式build；不重复源转录/解题或当前仅供预览的印刷版编译。
+- 已完成phase2-b90修复后正式构建阶段：官方formal build在manifest revision 4090刷新两卷派生状态，并重建文/理四版。
+- 阶段修改文件：两卷`receipts/build.json`、`source-manifest.json`派生状态及本进度；题面、答案数学内容、图稿与provenance逐题证据未改。
+- 验证结果：文科attempt `d48780a3-34e0-4139-9a65-453a45b30784`，理科attempt `4e83bce5-52a4-46ee-a732-21ccb4749849`；8版均`succeeded`，文科页数5/20/7/17，理科5/22/7/18，共101页；两份build receipt的errors/missing characters/undefined references/overfull/build problems均为空。build validator为2 pending、0 stale/failed/invalid/missing；provenance `OK：2卷`；8份review workitem已重备并绑定新attempt。
+- 剩余任务：重渲染当前101页并完成800项逐页检查（710 pass预期、90 not_applicable、0 fail/pending）；之后finalize、全库投影/门禁与测试、清理和核对PDF页数/SHA。
+- 下一步：提交formal-build checkpoint；仅使用当前attempt的PDF与workitems继续视觉复核，不沿用上一attempt页面图。
