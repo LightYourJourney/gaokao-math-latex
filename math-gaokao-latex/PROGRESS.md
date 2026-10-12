@@ -2780,3 +2780,8 @@
 - 验证结果：review `check-batch`为`FINALIZED`；build receipt为1 succeeded、0 stale/missing/failed/pending；provenance `OK：1卷`；generator、short answers、edition shells各`1套一致`；manifest CSV官方重写后当前且775行；issues、source manifest、全库report检查均退出0。
 - 剩余任务：运行定向review/report测试；清理b84 LaTeX中间物和本批PNG/接触表，核验四版PDF页数/SHA与最终回执；最终差异审阅并提交非README文件。README人工复核仍待用户。
 - 下一步：提交回执、CSV、批次报告及进度checkpoint，再顺序运行`test_review_receipts.py`、`test_report.py`。
+- 已完成phase2-b84定向回归测试阶段：顺序运行review receipt与report测试。
+- 阶段修改文件：仅本进度文件；测试未改正式题目数据或回执。
+- 验证结果：`test_review_receipts.py` 66/66通过（46.718秒）；`test_report.py` 11/11通过（69.360秒）；共77项通过。
+- 剩余任务：清理b84四版LaTeX中间物与本批页面预览，核验四版PDF页数/SHA；最终差异审阅并提交非README改动。三份全库README投影仍待人工复核。
+- 下一步：提交测试checkpoint，执行四版`latexmk -c -outdir=build`，并把`.work/phase2-b84`整体移入可恢复归档。
