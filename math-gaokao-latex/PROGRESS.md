@@ -861,3 +861,13 @@
 - 阶段关闭快照：manifest revision 3914；b52 `closed`，1 卷、34 页、272 项视觉检查通过，零 warning；4 份 PDF 保留，build 目录仅 PDF；转录/答案/provenance/LaTeX 源未更改。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段只关闭 b52，不代表全库完成。
 - 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b53`。
+
+### `phase2-b53` — 1985 全国卷理科
+
+- 预检完成：起始 manifest revision 3914；批次仅含 `gk-1985-regular-national-science`，issues 为空；source manifest validate 通过；generator `--check` 显示该卷一致；provenance status 为该卷 `editions_generated`、批次 `provenance_verified`。
+- 本卷 18 题，固定来源 `普通高考/1985/1985全国理.pdf` 为 ready；artifact 校验通过，PDF、1 页，SHA-256 `3ed7864978068575dc864cb2db9d2524e0df218bc732c75e08efd65e630ab57d`，`legacy_ids=[]`。沿用已登记转录/解题与 provenance，不重复录入。既有四版 PDF 页数为试题 4、解析 19、简答 5、印刷 16，共 44 页。
+- Build receipt validator 显示该卷 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；manifest 批次仍为 `compiled_pending_review`。下一步须正式重建四版，再检查 warning 与复核状态。
+- 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认唯一问题为 stale；四份现存 PDF 均可读且页数已记录。预检过程中首次调用 source manifest validator 漏传必需参数、退出码 2；按其 CLI 用法补上 `--manifest` 后验证通过，未产生写入。
+- 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
+- 剩余任务：正式构建、逐页视觉复核、登记回执、清理中间产物并完成五项 scoped gates 与全量报告校验。
+- 下一步：提交本预检进度 checkpoint，然后正式构建 `phase2-b53` 四版。
