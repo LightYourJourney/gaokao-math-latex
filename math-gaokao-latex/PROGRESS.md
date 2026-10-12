@@ -2152,3 +2152,7 @@
 - 阶段修改文件：该卷 `questions.tex`、`receipts/build.json`、manifest派生状态和本进度文件；ignored work items已刷新，渲染比较仅在`.work/`。
 - 剩余任务：将基于完整旧attempt视觉检查加上新attempt逐页像素一致性证明，为当前61页填写432 pass、56 not_applicable、0 fail；官方finalize后刷新全库报告/门禁、跑定向测试，清理构建中间物并提交。41项待核映射仍未解决。
 - 下一步：把逐页视觉结论记录到当前attempt四份work items；非试题版答案泄漏检查记为not_applicable并写明理由。
+- 调试结论（phase2-b71）：finalize报artifact stale的根因已复现并定位到生成链：`provenance.default_artifacts_state()`从来源Markdown现场重算`questions.tex`等产物并逐字节比较；刚才仅直接修改生成文件`questions.tex`，来源 `1998/1998_数学真题_全国理_试题.md` 未变，故 `generate_projects.py --check --paper gk-1998-regular-national-science`明确报告`questions.tex 与生成结果不一致`。build receipt和provenance检查覆盖范围不同，不能替代artifact探针；finalize在任何正式事务前拒绝提交。没有尝试伪造current状态或绕开该门禁。
+- 阶段新增修改仅本进度文件；调试验证只读。工作树保留上一子阶段的 `questions.tex` 初步更正（尚未由权威Markdown生成器重写），review work items和正式review回执未被finalize改变。
+- 剩余任务：更正权威Markdown来源并由官方生成器重写TeX；确认生成器`--check`通过，刷新formal build（因为输入树包含Markdown），重新prepare当前review并以PDF字节哈希确认可复用既有视觉结论；然后finalize和余下门禁/测试/清理/提交。41项待核映射仍未知。
+- 下一步：在试题Markdown中将图形说明列为2、10、21、22、23，运行单卷`generate_projects.py --write`，随后`--check`确认工作树生成物一致。
