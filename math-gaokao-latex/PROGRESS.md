@@ -1553,6 +1553,30 @@
 - 剩余任务：当前卷仍被 ISSUE-0777/ISSUE-0793 的 q01(25) 来源图缺失及 q02(2) 乘号缺字限制阻塞；需未来取得更清晰同版来源后再核验/重建。其他语料和批次任务仍未完成。
 - 下一步：仅暂存以上本卷任务路径并创建本地提交；不 push。
 
+### `phase2-b57` 1986 上海文理四版全页复核正式登记
+
+- 已完成可验证阶段：对当前文史 attempt `82cfd59c-7c07-40ea-bb71-438a59b57801` 和理工农医 attempt `dea4108d-f233-4641-8050-e2fac5986bb0` 的 8 份工作项完成提交前哈希核验；attempt、PDF SHA-256、页数均与 build receipt 和磁盘 PDF 一致。官方 `review_receipts.py finalize-batch` 事务 revision 3967 登记 91 页/728 项复核结果：726 pass、2 fail、0 pending。两项失败均为两卷试题版第 1 页 `answer_leak`；批次保持 `compiled_pending_review`，审查结果 `VISUAL_FAILED`，finalizer 未生成成功报告。
+- 阶段修改文件：两卷 `receipts/review.json`、`missing-issues.md` 与 `source-manifest.json` 的事务派生状态；本 `PROGRESS.md`。未改题面、答案、LaTeX 源或正式 PDF。
+- 阶段验证：8/8 工作项的 SHA/attempt/page-count 与正式 build receipt 及实存 PDF 匹配；逐版覆盖完整 91 页，检查项总数和状态为 726/2/0。finalizer 明确列出两处首页泄漏并以退出码 4 报 `VISUAL_FAILED`，不是校验执行错误。
+- Ruling：保留两卷原有首页异文说明并按事实登记 `answer_leak` 失败，不擅自删改题面内容；这是遵循全量目标中“内容不足或有疑义时保留 blocker”的最小处理。若该边界判断错误，代价是两项视觉失败会继续阻塞批次完成，待取得单独内容处置授权后重开。
+- 剩余任务：批次报告因视觉失败未生成；仍需按受支持报告工具生成反映 `VISUAL_FAILED` 的批次/全库投影，执行 scoped gates，并清理本批 build 中间产物（保留 8 份 PDF）。
+- 下一步：先核对本事务实际 diff 与 report 工具命令，再更新批次报告/全库报告；随后做本批门禁、精确清理和本地提交，不 push。
+- 已完成可验证阶段（报告投影与 scoped gates）：官方 `report.py render --all` 以单个 content 事务写入并回读验证六个全量报告目标；报告 check 确认投影与当前 manifest 一致，并保留未完成状态。
+- 阶段修改文件：两卷 review receipts、`missing-issues.md`、`source-manifest.json`、renderer 管理的 `README_数学.md`、2017–2026 README、本项目 README、baseline、`report.md`、`docs/source-inventory.md` 与本进度文件。未修改共享模板/生成器或题目源。
+- 阶段验证：source manifest（775 artifacts）、两卷 solution-source extraction、project/short-answer/edition generator checks、provenance、build receipt validation 均通过；review check 返回预期 `VISUAL_FAILED`；`report.py check --all` 与 `git diff --check` 通过。未运行全量单测，因为本阶段仅刷新回执/报告，项目最终审计再执行全套测试。
+- 剩余任务：build 目录尚待确认和清除非 PDF 中间物；之后复验四版 PDF 与 receipt 哈希、运行相关 review/report 测试并核对精确 diff，再提交本阶段。
+- 下一步：先列出两卷当前 build 目录文件，确保 PDF 清单与路径无歧义，再仅以 `latexmk -c -outdir=build` 清除各版辅助文件。
+- 已完成可验证阶段（build 中间物清理与 PDF 保留核对）：对本批两项目四入口逐一执行 `latexmk -c -outdir=build`；两卷 `build/` 现在各仅保留试题、解析、简答、印刷四份正式 PDF。
+- 阶段修改文件：本 `PROGRESS.md`；仅清理两卷 ignored build 中的 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`，未触及任何 PDF、LaTeX/TikZ 源或其他批次文件。
+- 阶段验证：8 份保留 PDF 的 SHA-256、页数与正式 build receipts 全部一致（文史 4/18/5/14 页，理工农医 5/22/6/17 页）；目录无非 PDF 文件。
+- 剩余任务：对 review/report 事务执行相关回归测试，复核最终 diff/status；随后提交本批回执、问题与报告投影更新，不 push。
+- 下一步：定位并运行 `review_receipts.py` 与 `report.py` 对应的定向测试，再重跑 `report.py check --all` 和最终 `git diff --check`。
+- 已完成可验证阶段（相关回归测试）：运行 `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p test_review_receipts.py -v` 与 `... -p test_report.py -v`，共 77 项通过、0 失败。
+- 阶段修改文件：仅本 `PROGRESS.md`；测试未改写正式报告或事务状态。
+- 阶段验证：review receipts 66/66、report 11/11；前置全库报告检查、manifest/provenance/build 与生成器门禁均已通过，视觉检查仍按预期 `VISUAL_FAILED`。
+- 剩余任务：复跑最终报告一致性与 whitespace 检查，审阅本批精确 diff 和路径范围，并提交该阶段；不 push。
+- 下一步：执行 `report.py check --all`、`git diff --check`、`git status --short` 与 diff 摘要，确认无测试副作用后，仅暂存本批与全库生成投影的明确路径并本地提交。
+
 ### `phase2-b58` 已完成内容本地提交
 
 - 已完成可验证阶段：1986 广东文史卷本阶段已本地提交，提交信息为 `docs: 登记1986广东文史全页复核结果`；未 push。提交包含该卷来源转录与 LaTeX 投影、图稿、回执、复核问题、回归测试及本进度记录。
@@ -1560,3 +1584,11 @@
 - 阶段验证：提交前 `git diff --cached --check` 通过且无未暂存 diff；提交成功，提交后工作树干净。沿用前一阶段已记录的定向测试与来源/生成/回执门禁结果；未重复运行。
 - 剩余任务：该卷仍有 12 项来源限制复核失败，分别涉及 q01(25) 缺失的来源选项图和 q02(2) 乘号缺字，阻止将该卷标为视觉完成。更大范围待核清单不属于本次提交范围。
 - 下一步：取得适用的更清晰同版来源后，定向核验上述来源限制；在此之前保留当前 `VISUAL_FAILED` 结论，不扩展处理范围。
+
+### `phase2-b57` 1986 上海文理复核阶段本地提交
+
+- 已完成可验证阶段：两卷 91 页的视觉复核回执、两项 `answer_leak` blocker、批次状态与全库报告投影已本地提交，提交信息为 `docs(exams): 登记1986上海文理全页复核结果`；未 push。
+- 阶段修改文件：该阶段提交覆盖 11 个受跟踪文件，包含两卷 review receipts、`missing-issues.md`、`source-manifest.json`、六个报告投影与本进度记录。
+- 阶段验证：提交前 staged diff 精确覆盖上述 11 个路径且 `git diff --cached --check` 通过；review/report 定向测试 77/77 通过；`report.py check --all` 通过并保留 `VISUAL_FAILED` 状态；提交后工作树干净。
+- 剩余任务：phase2-b57 两卷仍因试题版首页答案泄漏保持 `VISUAL_FAILED` / `compiled_pending_review`，题源未擅改；1952—2026 全语料目标仍在推进中。
+- 下一步：按全量收尾计划继续处理最早尚未完成的批次；不重做 b57 已完成的来源、构建或页级复核。
