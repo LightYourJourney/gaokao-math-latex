@@ -2967,3 +2967,8 @@
 - 验证结果：issues与source-manifest校验通过；generator、简答答案、edition壳各2套一致。两份旧build attempt `0f780046-5958-468f-ae0e-dc466e8663d0`/`57149a17-950a-4f94-8ac8-878539d52e5c`均因生成输入树与工具链指纹变化stale；旧review虽标passed，但绑定attempt `1d0df410-92c6-40ef-8ea7-de70f8d9bc34`/`b2215b42-51e7-4489-8ccb-6d29a9002383`，不能作为当前PDF证据。仓库内无当前b88 `.work`复核项。缓存manifest状态`compiled`/`compiled_pending_review`与现场派生`editions_generated`/`provenance_verified`不符，后续由正式build事务刷新，不手改状态。
 - 剩余任务：对两卷执行官方formal build，准备当前attempt复核项，逐页检查8版共96页并登记结论；之后finalize、刷新全库投影/门禁与测试，清理中间物并核验8份PDF页数/SHA。
 - 下一步：提交本预检checkpoint后正式重建phase2-b88两卷；保留旧的转录/解题/provenance成果，不重复执行。
+- 已完成phase2-b88正式构建阶段：归档输入状态由官方formal build事务刷新，生成两卷当前attempt。
+- 阶段修改文件：文科、理科两卷`receipts/build.json`、全局`source-manifest.json`及本进度文件；题面、答案、图稿与provenance源未修改。
+- 验证结果：文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`、理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`；八版均`succeeded`，每卷页数5/20/7/16，错误、缺字、未解析引用、Overfull及build problems均为0。build validator为2 pending、0 stale/failed；provenance `OK：2卷`。
+- 剩余任务：为当前attempt生成8份review workitem，渲染并逐页复核96页、完成768项检查；随后finalize、刷新报告/门禁与测试、清理并核验8份PDF。
+- 下一步：提交build checkpoint后运行官方`prepare-batch`，再按文理两卷独立并行完成当前PDF复核；主会话独占finalizer、manifest及全库投影。
