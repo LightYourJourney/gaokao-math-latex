@@ -2164,3 +2164,7 @@
 - 阶段修改文件：build receipt、manifest派生状态及本进度文件；四份ignored review work items已刷新。来源Markdown和生成TeX沿用上一阶段修正。
 - 剩余任务：将已有61页检查结论重新写入当前attempt（432 pass、56 not_applicable、0 fail/pending），通过artifact-current最终门禁并官方finalize；再报告投影/全库校验、定向测试、PDF SHA与清理、提交。
 - 下一步：重录当前attempt四份工作项的逐页结论，随后官方finalize验证artifact状态和整体事务。
+- 已完成官方视觉回执登记阶段（phase2-b71）：当前attempt `6fd0dcb2-1b74-40f7-8f53-bf08121e8d37` 四版61页已登记，工作项为432 pass、56 not_applicable（非试题版answer_leak）、0 fail/pending；`finalize-batch` 返回 `FINALIZED：phase2-b71`，review receipt与新build/PDF SHA绑定，artifact-current检查通过。图形说明已准确涵盖第2、10、21、22、23题。
+- 阶段修改文件：本卷 `receipts/review.json`、manifest派生状态、`reports/phase2-b71.md`、来源Markdown与生成的`questions.tex`、构建回执及本进度文件；临时复核工作项/渲染仅在ignored `.work/`。
+- 剩余任务：刷新全库报告投影并check；执行本批build/provenance/review/issues门禁、相关测试及`git diff --check`；清除本批渲染图和LaTeX中间物，核对PDF SHA后本地提交。41项待核权威映射仍未解决。
+- 下一步：运行`report.py render --all`和`check --all`，再做phase2-b71 scoped gates与适当定向测试。
