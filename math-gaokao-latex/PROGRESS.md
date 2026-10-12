@@ -2985,3 +2985,8 @@
 - 验证结果：workitem绑定当前文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`、理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`，覆盖96/96页、768/768检查（682 pass、86 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4083；随后`check-batch`为`FINALIZED`且无问题，build receipt validator为2 succeeded/0 stale/failed/pending，provenance `OK：2卷`。初次误用只读`check-batch`检查尚未finalize的工作项，得到旧正式review回执过期提示；确认该命令只验证既有登记回执后改用官方finalizer，未修改或重建PDF。
 - 剩余任务：刷新全库报告投影与manifest CSV，执行本批issues/source-manifest、生成器/简答/edition、报告及定向测试门禁；再清理LaTeX中间物、可恢复归档本批预览/workitems，并核对8份PDF页数与最终receipt SHA；最后审阅并提交b88非README正式改动。
 - 下一步：先记录本阶段checkpoint，再刷新全库report/CSV投影并运行相关check；继续保留三份README差异不提交、不push。
+- 已完成phase2-b88来源CSV投影子阶段：根据当前source manifest刷新`manifest.csv`。
+- 阶段修改文件：`manifest.csv`与本进度文件；全库六份报告尚未刷新。
+- 验证结果：CSV生成器确认写入775行，随后`--check`通过并确认当前。
+- 剩余任务：六目标report生成器会原子更新三份已有未提交README；为保护其待人工复核内容，已向用户询问是否允许更新但不提交。其余定向门禁、测试、清理和PDF哈希核对待完成。
+- 下一步：收到README处理选择后决定是否刷新六份报告；不论选择，继续执行不涉及README的本批验证、测试、清理及PDF核对。
