@@ -1031,3 +1031,8 @@
 - 阶段验证：新增两条真实生成器回归测试均先按预期 RED（错录题目/错误公式），修复后 GREEN；`solution_sources.py extract-batch --write` 提交 4 个派生目标；`generate_projects.py --batch phase2-b57 --write` 写入 5 个目标。其后 `source_manifest.py validate`、两卷 `solution_sources.py check-batch`、生成器 `--check`、两条回归测试与 `git diff --check` 全部通过。XeLaTeX 尚未重建，图稿的最终视觉验收仍待 PDF 阶段。
 - 剩余任务：查明并按受支持事务更新 ISSUE-0770 与此次已修复问题的登记策略；为 Q7 转录更正刷新来源/provenance 证据；等待试题版首页答案泄漏处理选择；随后重建两卷八版，按新旧页面哈希复用可证明未变的视觉检查、补查变化页，正式登记回执并完成 scoped gates/全量报告。
 - 下一步：检查当前问题账、manifest/provenance 工作项和官方 issue/provenance 写入接口；定妥状态更新路径后继续，不重跑已通过的生成器与来源清单验证，除非后续输入变化使其失效。
+- 已完成可验证子阶段（文史类第 7 题解答筛选条件补严）：依据独立解题与盲核意见，明确两个不同上半平面交点对应关于 $x$ 的方程有两个不同实根；又因圆上 $x_i\ge2-\sqrt3>0$，两根皆正，故 $x_1+x_2=4-p>0$、$p<4$；结合判别式 $\Delta=(p-2)(p-6)>0$ 及此前已证 $p>0$，得 $0<p<2$，仅 $p=(7-\sqrt{17})/2$ 合题意。结论未改，仅补全筛根逻辑。
+- 阶段修改文件：规范解析源 `1986/1986_数学真题_上海文_解析正文.md`、其派生《含解析》、文史类 `answers.tex` 与本进度文件。
+- 阶段验证：`solution_sources.py extract-batch --write` 写入 4 个派生目标；`generate_projects.py --batch phase2-b57 --write` 写入 5 个目标。`source_manifest.py validate`、两卷 `solution_sources.py check-batch`、两卷生成器 `--check`、`test_generate_projects.py` 102 项及 `git diff --check` 均通过。独立求解与盲核均确认结论。全套 unittest 共 864 项：850 通过、13 跳过、1 失败；失败仅为全库 `test_the_cached_states_match_the_recomputed_ones`，发现 156 卷缓存状态漂移，未在本批范围内批量改写。
+- 剩余任务：尚未刷新文史类 Q6/Q7 provenance 与问题账，尚未重建本批 PDF；答案泄漏处理选择仍待用户决定；其余构建、页面复核、正式回执、清理与全量报告门禁未完成。
+- 下一步：先按官方事务接口只更新受影响的文史类 Q6/Q7 provenance，保留其余题目的角色与证据；审阅并更新 ISSUE-0770 等问题记录；随后处理未决答案泄漏选择，再重建并复核受影响版本。此前已完成的 91 页旧 attempt 视觉浏览不当作新 PDF 的复核结论。
