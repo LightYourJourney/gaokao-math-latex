@@ -2790,3 +2790,8 @@
 - 验证结果：试题/解析/简答/印刷版页数4/22/6/17、SHA-256逐项与final build receipt一致；build目录仅4个PDF；final receipt validator为`OK：1卷`；约9.5MB渲染图及review JSON已离开项目工作区，archive位于`~/.Trash/phase2-b84-work.oOs8vK/`。
 - 剩余任务：以b84预检为基准最终审阅tracked差异、`git diff --check`并提交本批进度；三份全库README仍需人工复核后提交，后续manifest批次未处理。
 - 下一步：提交cleanup checkpoint并核对b84本批精确文件范围；不push。
+- 已完成phase2-b84最终差异审阅（README待人工确认）：从b84预检checkpoint `8861aaf6`起，本批tracked变更为6个文件，`git diff --check`通过；全库6项报告投影仅更新b83/b84闭环后的汇总计数与批次状态。
+- 阶段修改文件：三份非README报告投影`reports/baseline.md`、`report.md`、`docs/source-inventory.md`与本进度文件随本阶段提交；其余三份README投影按仓库规则暂不提交，等待用户人工复核。
+- 验证结果：review/build/provenance final gates、全库report、generator、short-answer、edition、issues、source manifest、manifest CSV及77项定向测试均通过；PDF页数/SHA匹配receipt；`git diff --check 8861aaf6..HEAD`通过；当前分支`feat/gaokao-phase0`，无图像/编译中间物入库。
+- 剩余任务：人工复核并提交三份README汇总投影；后续manifest批次仍待处理，1952—2026全库目标未完成。
+- 下一步：提交非README报告投影和最终b84进度checkpoint；等待README复核期间不push、不改写其diff。
