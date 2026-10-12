@@ -2804,3 +2804,8 @@
 - 验证结果：source manifest/issues、生成题面、简答答案及四版壳检查均通过；build receipt因生成输入树/工具链指纹变化stale；四份旧review工作项绑定非当前build attempt `a2be9211-6a95-41ae-afdb-6b558a471351`，共54页/432项pending；历史build页数5/23/7/19。
 - 剩余任务：正式重建b85四版，为当前attempt重新准备工作项并逐页视觉复核/登记；后续报告、门禁、测试、清理、PDF核验及提交。
 - 下一步：提交本预检checkpoint后正式重建；不重做题目转录、独立解题、图稿绘制或provenance，不push。
+- 已完成phase2-b85正式构建阶段：官方formal build在manifest revision 4070生成当前attempt `fc2e05f9-2541-451f-882c-536331ad56de`，状态`compiled_pending_review`。
+- 阶段修改文件：春季上海卷`receipts/build.json`、全局`source-manifest.json`派生状态及本进度文件；题面、答案、图稿、来源和provenance未改。
+- 验证结果：试题/解析/简答/印刷版分别5/23/7/19页，四版`succeeded`；errors、missing characters、overfull、undefined references和problems均为空；build receipt validator为1 pending、0 stale/failed，provenance `check-batch`为`OK：1卷`。
+- 剩余任务：当前attempt无有效视觉复核；需归档旧工作项、prepare当前attempt复核项，覆盖54页并登记432项，然后finalize、运行报告/门禁/测试、清理和PDF核验。
+- 下一步：提交b85 build checkpoint，为attempt `fc2e05f9-2541-451f-882c-536331ad56de`运行官方`prepare-batch`。
