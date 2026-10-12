@@ -2939,3 +2939,8 @@
 - 验证结果：`report.py render --all`确认六目标事务写入并回读；`report.py check --all`通过且未完成状态仍保留；`manifest_csv.py --check`确认当前且775行。
 - 剩余任务：b87 scoped gates（issues/source manifest、generator/short answers/editions、review/build/provenance）、定向测试、产物清理与PDF页数/SHA核对、最终差异审阅/提交。
 - 下一步：运行b87必要门禁与定向回归测试，发现全库旧问题时区分存量与本批问题，不扩大修改范围。
+- 已完成phase2-b87 scoped gates阶段：issues、source manifest、generator、简答答案、edition壳、build/review/provenance receipts及全库report/manifest CSV投影校验均通过。
+- 阶段修改文件：仅本进度文件；生成内容与正式回执/报告均与当前来源及模板一致，无需重写。
+- 验证结果：issues/source manifest退出0；generator、short answers、editions各1套一致；build 1 succeeded且要求final；review `FINALIZED`；provenance `OK：1卷`；报告全库check通过，CSV为775行。共享仓库锁导致generator/short-answer首次并行校验冲突，串行重跑均通过；未改代码或数据规避锁。
+- 剩余任务：运行`test_review_receipts.py`和`test_report.py`；清理四版编译中间物及本attempt PNG/接触表并做PDF回执哈希核验；最后审阅并提交b87本批正式改动，README差异保持未提交。
+- 下一步：串行执行review receipt与report定向测试，防止共享锁冲突；完成后记录测试checkpoint再做清理。
