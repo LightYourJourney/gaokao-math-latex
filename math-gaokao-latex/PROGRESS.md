@@ -2573,6 +2573,11 @@
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
 - 剩余任务：运行b81七项scoped gates与定向测试；清理LaTeX中间物和PNG，核验四版PDF后最终审阅提交。
 - 下一步：提交报告投影checkpoint，再运行本卷build/provenance/review/issues/generator/short-answer/edition-shell门禁。
+- 已完成批次scoped gates阶段（phase2-b81）：build receipt final、provenance、review FINALIZED、issues ledger、生成题面/解析、简答版及四版壳检查全部通过；同时刷新并验证manifest.csv投影。
+- 阶段修改文件：官方`manifest_csv.py --write`更新`manifest.csv`；另记录本进度文件。其余七项gate均只读/`--check`，未改正式数据。
+- 验证结果：receipt 1 succeeded且0 stale/missing/failed；provenance `OK：1卷`；review `FINALIZED`；issues校验退出码0；生成、简答和壳检查各`1套一致`；manifest CSV初检不一致，官方重写后`当前且775行`；全库报告`check --all`一致。
+- 剩余任务：定向receipt/report测试；清理LaTeX中间物与本批预览，核验四版PDF及build receipt；最终审阅并提交。
+- 下一步：提交gate checkpoint，依序运行`test_review_receipts.py`和`test_report.py`。
 - 已完成全库报告刷新阶段（phase2-b80）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
