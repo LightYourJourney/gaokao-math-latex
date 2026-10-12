@@ -3013,3 +3013,8 @@
 - 验证结果：issues、source manifest、文理两卷题面生成/简答/edition检查通过。两卷旧build attempts分别为`08c47976-fc59-4302-82eb-17692093e86b`、`e15ae1bf-1242-468d-9668-18a735e3334c`，均因生成输入树和工具链指纹变化stale；旧review虽为passed但绑定更早attempt `a689702d-a861-4754-8844-f1256e2677c2`、`a50193c9-4433-41aa-a350-37a4cc7f8199`。8份现存workitem仍全pending且绑定更旧attempt，覆盖文科50页、理科48页，共784项pending。provenance内容核验未发现源记录问题，但缓存状态与现场派生状态不符；应由官方formal build事务刷新状态，不能手改manifest。
 - 剩余任务：可恢复归档旧b89预览/workitems；按当前输入重建8版、为新attempt重新准备并复核98页/784项，随后正式登记、刷新报告与全库门禁/测试、清理中间物并核验8份PDF SHA/页数。
 - 下一步：提交本恢复checkpoint，归档stale attempt材料后运行b89官方formal build；保留既有转录/解题/provenance成果，不push。
+- 已完成phase2-b89当前输入formal build阶段：旧review workitems已可恢复归档到`~/.Trash/phase2-b89-stale-review.O8oxVG/phase2-b89/`；官方formal build在manifest revision 4085生成两卷新attempt。
+- 阶段修改文件：两卷`receipts/build.json`、`source-manifest.json`派生状态与本进度；题面/答案/TikZ/provenance源未改。
+- 验证结果：文科attempt `f8024a60-b55f-4db8-bca1-f20da000de9f`、理科attempt `824b2f73-377d-4516-9254-b3d03bd1fc75`；8版均`succeeded`，页数文科6/20/8/16、理科6/19/8/15，共98页；errors/missing characters/undefined references/Overfull/build problems均为0。build validator为2 pending、0 stale/failed；provenance `OK：2卷`。
+- 剩余任务：为新attempt生成8份review workitem并重新复核98页/784项，随后finalize、投影与全库门禁/测试、清理及PDF SHA/页数核验。
+- 下一步：提交build checkpoint，prepare当前attempt workitems并渲染逐页复核；不重做来源转录、答案推导或provenance。
