@@ -2954,3 +2954,8 @@
 - 验证结果：四个latexmk clean均退出0；项目`.work/phase2-b87`不存在；build目录只含试题/解析/简答/印刷四份PDF；final build receipt校验`OK`（1 succeeded，0 stale/failed/invalid/missing/pending），页数仍为5/24/7/19且PDF指纹由receipt逐项核验。
 - 剩余任务：本批tracked正式数据/报告投影尚需最终差异审阅并提交；三份全库README保持待用户人工复核且不提交；之后按manifest顺序继续后续批次，语料目标仍未完成。
 - 下一步：检查b87差异范围、`git diff --check`、四份PDF页数与回执，再只暂存本批正式文件和进度（排除三份README）；不push。
+- 已完成phase2-b87批次闭环与最终提交阶段：正式回执、来源manifest/CSV、批次报告及非README报告投影经差异审阅后提交。
+- 阶段修改文件：本卷build/review receipts、`source-manifest.json`、`manifest.csv`、`reports/phase2-b87.md`、baseline/report/source-inventory投影及本进度；题面、答案和TikZ改动此前已单独提交；三份全库README未暂存或提交。
+- 验证结果：提交`54c240b0`；staged diff仅8个预期非README文件，staged/unstaged `git diff --check`通过；review FINALIZED，build 1 succeeded，provenance/全库报告/CSV/生成器等门禁及77项定向测试通过；四版PDF页数5/24/7/19且SHA与final receipt一致；构建目录仅留PDF，复核图像已可恢复归档；未push。
+- 剩余任务：三份README投影待用户人工复核；下一manifest批次为phase2-b88（2002春季京蒙皖文、理两卷），随后其余批次继续；1952—2026全库目标仍未完成。
+- 下一步：本阶段验收已完成，按任务边界停止；待后续继续时先核对Git diff与本进度，再从phase2-b88恢复，不重做b87。
