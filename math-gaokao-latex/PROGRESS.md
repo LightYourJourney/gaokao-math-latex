@@ -873,4 +873,7 @@
 - 已完成子阶段：1985 全国理科四版正式构建成功，manifest revision 3916；build attempt `45f24548-3eb1-47fc-8e5b-181b34d4a481`。页数仍为试题 4、解析 19、简答 5、印刷 16，共 44 页；零 warning、无 build failure。
 - 阶段验证：build receipt validator `OK`，无 failed/invalid/missing/stale；当前 1 卷待视觉复核。
 - 阶段修改文件：本进度文件、1985 理科 build receipt/PDF；未改试卷题目、答案、provenance、图稿或生成源。
-- 下一步：提交本阶段进度 checkpoint，再为当前 build attempt 准备逐页 review work items。
+- 已完成子阶段：为当前 attempt 准备 4 份 review work items，覆盖 44 页；候选页为印刷版 p13、其余三版 p3。
+- 阶段验证：4/4 工作项绑定 attempt `45f24548-3eb1-47fc-8e5b-181b34d4a481`，PDF 页数及 SHA-256 与构建回执一致；每页八项齐全，共 352 项初始 pending。
+- 阶段修改文件：本进度文件与忽略的 `.work/phase2-b53/review/` 当前工作项；未改试卷内容。
+- 下一步：提交本阶段进度 checkpoint，渲染并逐页检查 44 页，随后检查四版候选页。
