@@ -1895,3 +1895,6 @@
 - 阶段验证：当前 build attempt `8d404c97-3dcc-4e18-abe2-577af879e941`，四版59页 PDF SHA 与 receipt 一致；review `FINALIZED`，59页/472项；manifest/issues/provenance/build/review/report 检查通过；定向测试77/77通过。
 - 剩余任务：最终审阅精确 Git diff、执行 `git diff --check`，暂存本批次已完成路径并本地提交（不 push）；ISSUE-0780 仍 open/non_blocking，语料总目标继续未完成。
 - 下一步：复核所有本次受跟踪改动及生成投影，确认无 PDF/图片入库，再提交并检查提交后工作树与当前回执状态。
+- 已完成阶段（phase2-b62 本地提交）：上述 11 个受跟踪路径经暂存 diff 与 `git diff --cached --check` 审阅后提交为 `8b41b7f5`（`[已核] docs(exams): 完成1987广东文史卷复核与回执`）；未 push。提交仅含回执、进度和报告投影，无 PDF 或图片。
+- 提交后待验证：确认工作树干净、build receipt 仍 current、review gate 仍 FINALIZED；随后将此进度 checkpoint 单独本地提交。
+- 下一步：运行提交后状态与 scoped receipt 校验；确认后结束 phase2-b62，本阶段不自动扩展到下一批。
