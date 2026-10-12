@@ -2136,3 +2136,7 @@
 - 阶段修改文件：本进度记录；b70的11个受跟踪回执/manifest/报告文件已由 `ea467aca` 提交。
 - 剩余任务：1952—2026全语料和“41项待核”权威映射仍未完成；phase2-b71尚待预检、当前构建回执确认、逐页复核和关闭。
 - 下一步：核对phase2-b71纸卷来源、provenance与现存build回执是否当前；同时继续检索41项待核的权威任务来源，不重复b70。
+- 已完成下一批预检（phase2-b71，1998全国理科）：manifest顺序确认目标为 `gk-1998-regular-national-science`，25题、无登记issue，固定源记录为单页PDF、513271 bytes、SHA-256 `d65ba33846dffe2e794ff11c9ded07a6ecd7bab74328a5df5a400fa68fa2b5c2`；从只读来源仓 `gaokaomath-src` 取证，实际文件与Git blob均匹配登记SHA/OID。题面/答案hash和逐题独立复算、PDF逐题核对证据均已写入本卷provenance，冲突字段为none；但provenance门禁报告manifest缓存 `compiled` 与现场派生 `provenance_verified` 不一致。旧build receipt因生成输入树与工具链变化失效，不能复用旧review。未修改试题、答案、来源、provenance或图稿。
+- 阶段修改文件：仅本进度文件；来源PDF只读核对，源仓现有`.work`未触碰。
+- 剩余任务：正式重编四版并刷新当前build/provenance派生状态，重新绑定视觉工作项，逐页复核后finalize；随后报告、门禁、测试、清理和提交。41项待核定向检索仍未发现正式清单，暂仅在历史进度中看到其与b61工作项不对应的说明。
+- 下一步：执行phase2-b71 formal build，核验四版结果及新SHA，再准备当前attempt的逐页review工作项。
