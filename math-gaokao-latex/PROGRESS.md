@@ -2919,3 +2919,8 @@
 - 验证结果：源diff仅含8处TikZ node锚点调整，`git diff --check`通过；新标签布局必须以正式编译后的高分辨率PDF复验，当前attempt的build/review不再作为最终验收证据。
 - 剩余任务：归档旧attempt预览与workitems，重建四版，检查新图是否清晰且无新版面缺陷，再为新attempt逐页复核。
 - 下一步：提交本源图修正checkpoint后运行formal build；不改答案或重跑转录。
+- 已完成phase2-b87图稿修正后正式重建阶段：旧attempt review/render已移入可恢复归档`~/.Trash/phase2-b87-superseded-review.AbT04F/phase2-b87/`；官方formal build于manifest revision 4078生成新attempt `c09787d4-2ecd-42a6-8098-ca62af958884`。
+- 阶段修改文件：2002春季上海卷`receipts/build.json`、`source-manifest.json`派生状态及本进度；Q12 TikZ锚点修正已在前一阶段提交。
+- 验证结果：四版页数5/24/7/19，均`succeeded`；0 errors、missing characters、undefined references或build problems；build validator 0 stale/failed，provenance `OK：1卷`。仅印刷版仍有一条Underfull（`answers.tex`行232–233），待当前PDF目检并登记豁免。
+- 剩余任务：为新attempt生成4份workitem，完整复核55页并确认标签调整与Underfull表现；随后finalize、报告/门禁/测试、清理及PDF SHA核验。
+- 下一步：提交新build checkpoint，prepare当前attempt workitems后渲染并逐页复核。
