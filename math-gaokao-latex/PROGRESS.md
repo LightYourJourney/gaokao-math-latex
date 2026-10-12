@@ -2553,3 +2553,8 @@
 - 验证结果：四版均`succeeded`且problems/log errors、缺字、overfull、undefined references均为空；receipt validator返回`OK`、待复核。旧review及四份工作项绑定旧attempt，432项pending不可复用。
 - 剩余任务：checkpoint构建状态；归档旧工作项并准备当前attempt视觉输入，逐页复核、登记，随后报告/门禁/测试/清理/提交。
 - 下一步：提交b80 build receipt/manifest；将旧工作项可恢复归档，再运行官方`prepare-batch`。
+- 已完成视觉复核准备阶段（phase2-b80）：四份旧attempt review工作项已完整移至可恢复目录`~/.Trash/phase2-b80-review-workitems.2W1dZO/review/`；官方`prepare-batch`为当前attempt生成四份新工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b80/review/`四个工作项及可恢复archive；正式review receipt未改。
+- 验证结果：四份工作项均绑定attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`；54页×8项共432项pending。卷内已登记6份TikZ图稿（题11、12、18、20甲/乙、21）。
+- 剩余任务：覆盖全部四版页面，放大复核六幅图稿与候选/末页，填写并登记视觉回执；后续报告、门禁、测试、清理与提交。
+- 下一步：渲染四版54页接触表，结合图稿分布确定高分辨率复核页。
