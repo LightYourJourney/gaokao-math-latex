@@ -1132,3 +1132,8 @@
 - 阶段验证：构建状态 `COMPILED_PENDING_REVIEW`，1 卷待审、0 构建失败；`validate-receipts`、provenance check-batch、source manifest validate 均通过。逐版核对实际 PDF SHA-256 与 receipt 一致；四版均 succeeded，错误、缺字、Overfull、未解析引用数量均为 0。
 - 剩余任务：为新 attempt 刷新四份 review work items，核对哈希与完整页集合；完成 65 页逐页视觉审查并登记检查项；之后按门禁 finalize、清理本批中间物、运行 scoped gates 和全量报告检查。
 - 下一步：执行官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b58`，确认四份工作项绑定新 attempt `27645bca…` 和当前 PDF 哈希，然后启动四版分工审查。
+- 已完成可验证子阶段（当前 attempt 复核工作项准备）：官方 `review_receipts.py prepare-batch` 已为四版创建/刷新 4 份 ignored 工作项，全部绑定 attempt `27645bca-21d1-4984-9a5a-28d663584373`。
+- 阶段修改文件：ignored `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json` 与本进度文件；未改题源、build receipt 或正式 review receipt。
+- 阶段验证：四个工作项的 PDF 路径、SHA-256、页数与当前 build receipts 及实际文件一致；页码连续覆盖 65 页，每页八项齐全，520 项均为 pending。四版候选页均为 p1，当前构建没有 Overfull 警告。
+- 剩余任务：对当前 attempt 全部 65 页完成视觉检查，候选首页高分辨率复核，逐项写入 520 个有依据的结论；随后才进入 finalize、清理和完整门禁。
+- 下一步：按四个版次并行完成逐页视觉审查，独立审查者各自记录页覆盖和异常；主会话核对全部页数、重点页及 PDF/receipt 绑定后再登记工作项。
