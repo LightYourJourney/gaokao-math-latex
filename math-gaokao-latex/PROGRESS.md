@@ -2241,3 +2241,8 @@
 - 验证汇总：四版65页/520项检查，460 pass、60 not_applicable、0 fail/pending；finalize、全库report check、build/provenance/review/issues/generator门禁、77项定向测试、`git diff --check`均通过。
 - 剩余任务：用户提示的“41项待核”仍无可确认的权威映射；本次没有将其与逐页复核数混同。全库1952—2026仍未完成。
 - 下一步：用户确认继续后，从manifest下一批 `phase2-b73`（1999全国文科）预检；另行寻找41项待核的原始清单，不复做phase2-b72。
+- 已完成下一批预检阶段（phase2-b73，1999全国文科）：manifest登记24题、5幅TikZ图、issues为空，固定源`普通高考/1999/1999全国文.pdf`为ready；只读核验实际SHA-256 `8c15b937…334074`、508856 bytes、A3横向1页、Git blob `5e5a017d4275d88ec2ef90d7949039fbbc1078d8`均与登记一致，并目视源页确认题号1—24及第1/10/22/23/24题图位置。provenance含24题逐题核对记录且冲突为none；生成器`--check`与issues validate通过。
+- 阶段修改文件：仅本进度文件；源PDF在主检出内嵌的只读来源仓，未复制或改写。PDF预览图仅在ignored `.work/phase2-b73/source/`。
+- 验证结果：当前build receipt失效（生成输入树和Poppler工具链指纹变化）；provenance缓存仍为compiled，而现场派生为editions_generated/provenance_verified；旧四份review work items均pending、绑定旧attempt `d4763305-07ca-4e76-bc35-758089bd42f3`，不能用于当前构建。当前build receipt attempt为`818c045e-b8bc-4c33-90b0-c5a9910efc7b`，试题/解析/简答/印刷版页数4/22/5/18。故下一步必须formal rebuild并重建当前attempt工作项，不沿用过时PDF回执。
+- 剩余任务：formal rebuild、当前attempt全页视觉复核并finalize；后续报告、门禁/测试、清理、哈希核验与提交。“41项待核”定向检索仅见本进度历史说明，没有权威映射，仍独立待办。
+- 下一步：提交本预检检查点，再运行phase2-b73 formal build；核验构建日志、页数和PDF SHA后再刷新review工作项。
