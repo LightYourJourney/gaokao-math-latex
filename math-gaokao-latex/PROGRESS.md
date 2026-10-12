@@ -3131,3 +3131,8 @@
 - 验证结果：formal build=`COMPILED_PENDING_REVIEW：4待审、0失败`；新PDF页数与旧回执一致，16/16 PDF SHA变化，故旧视觉结论不可直接绑定到新attempt。build receipt validator与provenance当前检查`OK：4卷`；四卷旧review workitems仍绑定旧attempt，共16份，待归档后重备。
 - 剩余任务：为新attempt准备16个workitem；对当前PDF逐页复核188页，必要时处理视觉问题；完成finalize、全库报告/CSV、门禁/测试与PDF清理核验。
 - 下一步：归档旧review scratch，官方prepare新workitems并渲染当前attempt；分四卷独立视觉复核，主会话验收与登记。
+- 已完成phase2-b92当前attempt review准备阶段：旧16份workitem可恢复归档至`~/.Trash/phase2-b92-stale-review.KOpSCZ/`；官方`prepare-batch`已为四卷四版生成16份新workitem，绑定manifest revision 4097的四个当前attempt。
+- 阶段修改文件：仅忽略的`.work/phase2-b92/review/`；旧scratch未永久删除。
+- 验证结果：页码覆盖188/188，均连续；每页8项全部pending，共1504项。候选页16页（每版各一页）已由官方工具确定；四卷编译警告均为0，无警告豁免。
+- 剩余任务：渲染当前16份PDF并视觉复核所有188页，检查候选页及图形/稠密公式页；将审查结论写入workitem并核对attempt、PDF SHA和覆盖后finalize。
+- 下一步：建立当前attempt渲染图与细节拼图，分配四卷独立复核；主会话不复做已分派的逐页检查，只审结论、绑定和所有失败项。
