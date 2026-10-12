@@ -2104,3 +2104,31 @@
 - 阶段验收：1988上海卷四版49页全部当前attempt复核，392项检查348 pass/44 not_applicable/0 fail；官方review FINALIZED。全库报告、scoped gates、77项定向测试、PDF SHA核对和 `git diff --check` 均通过；build目录只留四份PDF，临时渲染图与LaTeX中间物已清理。ISSUE-0790继续保持有证据支持的resolved状态。
 - 剩余任务：1952—2026全语料仍未完成；用户提示的41项待核尚未找到权威映射。历史批次已有的来源/内容阻断继续按原issue保留。
 - 下一步：提交本进度检查点并确认工作树干净；继续处理manifest下一批phase2-b70，另行检索41项待核的权威任务表，不重做b69。
+- 下一阶段预检（phase2-b70，1997全国理科）：b69提交后工作树干净；manifest下一批为 `gk-1997-regular-national-science`，batch `compiled_pending_review`、纸卷 `compiled`，有4条已resolved的非阻断formal-build记录 ISSUE-0800—0803。固定源为已验证Git blob `acefc8b2c85cab60b95b942412a3537d13e588f6`，artifact SHA-256 `51963e62fb3a1df87724af2b08cd7247c84a65e58c601119489a71b655b81ffb`、519454 bytes、1页；provenance内容检查未见冲突，仅manifest派生缓存落后于 `provenance_verified`。旧报告显示四版58页已review passed，但旧build stale（生成输入树/工具链变化），不能沿用旧视觉结论。未修改题面、答案、来源、provenance或TikZ。
+- 阶段修改文件：仅本 `PROGRESS.md`；其他预检只读。
+- 剩余任务：formal rebuild后刷新当前视觉工作项，复核新attempt四版全部页面，官方登记，刷新报告/门禁和测试，清理临时产物并提交。
+- 下一步：执行 `build_projects.py build --formal --batch phase2-b70`，确认四版日志、页数和PDF SHA后生成新review work items。
+- 已完成正式构建与工作项刷新阶段（phase2-b70）：当前 attempt `380ddcfd-24f9-4780-9d13-7a59bf8e318b`，试题/解析/简答/印刷版均 succeeded，页数5/27/6/20共58页，四版problem列表均为空。build receipt `OK：1卷`、provenance `OK：1卷`；构建日志未检出missing character、overfull、undefined reference或TeX error。`prepare-batch`生成四份当前工作项，均绑定本attempt与PDF SHA，候选页为试题3、解析3、简答3、印刷2。
+- 阶段修改文件：该卷 `receipts/build.json`、manifest派生状态、本进度文件及ignored `.work/phase2-b70/review/` 四份工作项；源、题面、答案、provenance和TikZ未修改。
+- 剩余任务：当前58页全页视觉复核、官方登记、报告与门禁/测试、清理渲染和编译产物、提交。
+- 下一步：渲染当前四版58页并查看接触表；高清复核候选页和题3函数图、题23正方体图所在页及末页，不沿用旧视觉回执。
+- 已完成当前 attempt 逐页视觉复核阶段（phase2-b70）：四版58页接触表全部查看；题3四个函数图选项、题23正方体图及标签在试题/简答/解析/印刷版对应页均高清核查清楚。四个候选页（试题3、解析3、简答3、印刷2）无异常；三版末页高清检查确认解析版末题答案框完整、印刷版第25题解答完整、简答版25题答案齐全，空白为自然收尾，无裁切、重叠、遮挡或孤行。新工作项绑定attempt `380ddcfd-24f9-4780-9d13-7a59bf8e318b`及对应PDF SHA；464项登记为411 pass、53 not_applicable（非试题版答案泄漏项）、0 fail/pending。
+- 阶段修改文件：仅ignored `.work/phase2-b70/review/<版次>/gk-1997-regular-national-science.json` 四份工作项及本进度文件；渲染图位于ignored `.work/phase2-b70/render-380ddcfd/`，不入库。
+- 剩余任务：官方finalize，报告/门禁/定向测试，核对PDF SHA并清理构建物，随后提交。
+- 下一步：运行 `review_receipts.py finalize-batch` 登记当前attempt的58页视觉结果。
+- 已完成官方视觉回执登记阶段（phase2-b70）：`review_receipts.py finalize-batch` 返回 `FINALIZED：phase2-b70`，无视觉失败；review receipt与当前build attempt、四版PDF SHA及页数一致。ISSUE-0800—0803继续为已resolved非阻断记录。
+- 阶段修改文件：该卷 `receipts/review.json`、manifest派生状态、`reports/phase2-b70.md`、四份ignored review work items及本进度文件。
+- 剩余任务：全库报告投影、b70 scoped gates、review/report定向测试、PDF哈希核对与中间物清理，之后提交。
+- 下一步：运行全库report render/check及build/provenance/review/issues门禁和定向测试；通过后清理并最终提交。
+- 已完成报告、门禁与测试阶段（phase2-b70）：全库六份报告经单一content事务写入并回读，`report.py check --all`确认输出与manifest一致并保留未完成状态；本卷build `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b70`、issues validate均通过。定向测试 `test_review_receipts.py` 66/66、`test_report.py` 11/11通过。
+- 阶段修改文件：该卷build/review receipts、manifest派生状态、phase2-b70报告、全库报告/索引投影和本进度文件；无源内容改动。
+- 剩余任务：清理b70临时图像和LaTeX中间物，核对PDF SHA、最终门禁与diff后提交。
+- 下一步：运行四入口 `latexmk -c -outdir=build`，仅删除 `.work/phase2-b70/render-380ddcfd/`，验证build中只余PDF且SHA匹配回执。
+- 已完成构建物清理与PDF一致性阶段（phase2-b70）：四入口 `latexmk -c -outdir=build` 后build目录仅保留四份PDF，逐份SHA与正式build receipt相同（试题 `504d577e…c39bfe`、解析 `b3a728d2…e510a`、简答 `d79bdadb…d40501c`、印刷 `72ec9a18…c2f57fb`）；只删除本轮忽略渲染目录，review work items保留。
+- 阶段修改文件：受跟踪变更限于build/review receipts、manifest派生状态、批次报告、全库报告/索引与本进度文件；无PDF、图片或编译中间物入库，无题面/答案/TikZ源改动。
+- 剩余任务：最终scoped gates与 `git diff --check`、检查本批精确diff并本地提交（不push）。全库目标与41项待核映射仍未完成。
+- 下一步：复验build/provenance/review/issues门禁，审查差异并提交phase2-b70；之后接续manifest下一批。
+- 已完成提交前验收阶段（phase2-b70）：恢复后重新运行 build receipt validator、provenance batch check、review batch check、issues ledger validate，结果分别为 `OK：1卷`、`OK：1卷`、`FINALIZED：phase2-b70`、退出码0；`git diff --check`通过。全库 `report.py check --all` 与 `test_review_receipts.py`、`test_report.py` 的通过结果已在本进度上一阶段记录；恢复时重复启动的这三项全库计算因冗余且耗时而中断，不计作本次新验证。
+- 阶段修改文件：新增本进度验收记录；待提交的phase2-b70差异仍仅为该卷构建/复核回执、manifest派生状态、批次报告及全库报告投影/索引，无源题内容、图片、PDF或中间产物。
+- 剩余任务：提交phase2-b70并核验工作树；继续1952—2026全语料。对“41项待核”的定向检索仍只找到历史记录：它与b61的50页/400项工作项不对应；当前未发现权威任务清单或映射，不能虚构关闭关系。
+- 下一步：提交本批已核文件（不push），确认干净状态后检查manifest的phase2-b71并继续；另行定位41项待核的正式来源。
