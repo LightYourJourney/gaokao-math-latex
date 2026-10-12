@@ -2401,3 +2401,8 @@
 - 最终验收：480项逐页检查中425 pass、55 not_applicable、0 fail/pending；finalize、全库report render/check、7项scoped gates、77项定向测试、PDF页数/SHA核验及`git diff --check`通过。源/PDF/TikZ保留，build仅留PDF，无图片或中间物入库。
 - 剩余任务：1952—2026全语料仍未完成；41项待核仍无权威映射，保持独立待办。
 - 下一步：单独提交本checkpoint，然后预检manifest下一批phase2-b77，不重跑b76。
+- 已完成下一批预检与根因定位阶段（phase2-b77，2000全国新课程理科）：固定源PDF SHA-256 `14971abf14842908218855831004ccb4bfa92af6611bdd8b6788c863fcecfc34`、Git blob `3e6c499e684dc6c03b3ee2c367036ecfb8ee3a2d`与ready登记一致；文件为534322 bytes、A3横向2页，原卷视觉确认题1–22及图稿。provenance含22题，转录复核均passed、冲突none、answer evidence grade A；issues空，generator、short-answer、edition-shell检查通过。
+- 阶段修改文件：仅本进度文件；来源预览仅生成在ignored `.work/phase2-b77/source/`。尚未改题面/答案/provenance或TikZ源。
+- 验证结果：官方`build_projects.py validate-receipts`复现回执失效：生成输入树与工具链指纹变化；`provenance.py check-batch`报告缓存paper状态`compiled`与现场`editions_generated`不符、batch状态`compiled_pending_review`与现场`provenance_verified`不符。四版既有PDF为6/29/7/22页；旧review receipt不绑定有效的当前formal build，不能复用为当前复核。
+- 剩余任务：用官方formal build刷新build receipt及派生状态，创建绑定新attempt和PDF SHA的work items，再复核全部页并finalize；其后报告/门禁/测试、清理与提交。
+- 下一步：提交本预检checkpoint，然后按支持的`build_projects.py build --formal --batch phase2-b77`流程正式重建；禁止手改manifest状态或复用旧视觉结论。
