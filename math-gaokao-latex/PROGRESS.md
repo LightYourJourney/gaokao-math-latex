@@ -2924,3 +2924,8 @@
 - 验证结果：四版页数5/24/7/19，均`succeeded`；0 errors、missing characters、undefined references或build problems；build validator 0 stale/failed，provenance `OK：1卷`。仅印刷版仍有一条Underfull（`answers.tex`行232–233），待当前PDF目检并登记豁免。
 - 剩余任务：为新attempt生成4份workitem，完整复核55页并确认标签调整与Underfull表现；随后finalize、报告/门禁/测试、清理及PDF SHA核验。
 - 下一步：提交新build checkpoint，prepare当前attempt workitems后渲染并逐页复核。
+- 已完成phase2-b87当前attempt逐页视觉复核与工作项登记阶段：复核四版全部55页接触表，并高分辨率复核此前未判读的试题第2/4页、解析第12/13/19页、印刷第9/10/15页；结合此前已检查的Q12及印刷第8页，确认图稿标注清楚、文字无缺失裁切/遮叠，页眉页脚与分页无明显异常。印刷版第8页Underfull对应短尾行文字完整、未越出版心，已登记精确豁免。
+- 阶段修改文件：仅ignored `.work/phase2-b87/review/`四份当前attempt工作项与本进度文件；未改正式源、PDF或生产回执。
+- 验证结果：四工作项均绑定attempt `c09787d4-2ecd-42a6-8098-ca62af958884`，覆盖55/55页、440/440项；390 pass、50 not_applicable（非试题版答案泄漏检查）、0 fail/pending；仅印刷版登记1条 `answers.tex:232–233` / PDF第8页Underfull豁免；`git diff --check`通过。
+- 剩余任务：事务式review finalize、全库报告投影和批次/全库门禁、定向测试、LaTeX中间物与预览可恢复清理、四份PDF页数/SHA核验及最终差异审阅/提交。
+- 下一步：运行官方`finalize-batch`；若成功，核对review/build/provenance状态并刷新全库派生投影，不重跑已验证的formal build。
