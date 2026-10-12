@@ -2406,3 +2406,8 @@
 - 验证结果：官方`build_projects.py validate-receipts`复现回执失效：生成输入树与工具链指纹变化；`provenance.py check-batch`报告缓存paper状态`compiled`与现场`editions_generated`不符、batch状态`compiled_pending_review`与现场`provenance_verified`不符。四版既有PDF为6/29/7/22页；旧review receipt不绑定有效的当前formal build，不能复用为当前复核。
 - 剩余任务：用官方formal build刷新build receipt及派生状态，创建绑定新attempt和PDF SHA的work items，再复核全部页并finalize；其后报告/门禁/测试、清理与提交。
 - 下一步：提交本预检checkpoint，然后按支持的`build_projects.py build --formal --batch phase2-b77`流程正式重建；禁止手改manifest状态或复用旧视觉结论。
+- 已完成正式构建阶段（phase2-b77）：官方formal build创建attempt `ae3fe0ca-63be-49df-a7d9-eabc793b9a63`；试题版/解析版/简答版/印刷版均succeeded，页数6/29/7/22，共64页。所有problems、TeX errors、overfull、missing characters、undefined references为0。
+- 阶段修改文件：2000全国新课程理科卷`receipts/build.json`、manifest派生状态与本进度文件；正式PDF仅在ignored `build/`。
+- 验证结果：`build_projects.py validate-receipts`与`provenance.py check-batch`均返回`OK：1卷`；receipt记录的四份PDF SHA已写入当前attempt。
+- 剩余任务：为新attempt创建当前复核工作项，逐页复核64页并finalize；随后报告刷新、门禁/测试、清理与提交。
+- 下一步：提交正式构建checkpoint，再由官方`review_receipts.py prepare-batch`生成绑定本attempt及PDF SHA的工作项。
