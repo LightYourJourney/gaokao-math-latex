@@ -908,3 +908,7 @@
 - 阶段验证：接触表覆盖 39/39 页、4/4 接触表通过；候选页及来源问题关联页共 11 页高分辨率复核通过。4 份当前 attempt 工作项登记 39 页 × 8 项共 312 条 pass、0 pending、0 warning exemption；两条来源问题保持 open、non-blocking；`git diff --check` 通过。
 - 阶段修改文件：本进度文件；忽略的 `.work/phase2-b54/review/` 下 4 份工作项；接触表、39 页预览与高分辨率图位于 `/tmp/gk-phase2-b54-review.wtXBr3/`；未更改试卷源或 PDF。
 - 下一步：提交本阶段进度 checkpoint，运行事务 finalize 更新正式 review receipts 与批次状态。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b54 状态 `closed`、无问题；1985 上海文史类正式 review receipt 与当前 build attempt 对齐，并生成 `reports/phase2-b54.md`，manifest revision 3920。ISSUE-0761/0762 为既有 open、non-blocking 转录歧义，不阻止批次关闭，未变更其状态或事实。
+- 阶段验证：review finalize 报告 `closed`、无 problems；39 页、312 项视觉检查全部通过，零构建 warning。
+- 阶段修改文件：1985 上海文史类正式 review receipt、manifest 批次状态投影、本批报告；忽略工作项与临时图像尚待清理。
+- 下一步：单独提交 finalize 阶段进度，然后将 build 非 PDF 中间物、忽略工作项及临时审阅图像移入系统废纸篓，保留 PDF 与 LaTeX 源。
