@@ -2513,3 +2513,8 @@
 - 验证结果：四份新工作项均绑定attempt `fa1ae42a-6efc-452e-b624-8d40b4a73f0e`；44页×8项共352项pending，待视觉复核。
 - 剩余任务：覆盖全部四版页面并检查候选/图稿页，填写并finalize回执；报告、门禁、测试、清理和最终提交。
 - 下一步：渲染四版44页接触表；按题目图稿分布选择高分辨率复核页。
+- 已完成逐页视觉复核阶段（phase2-b79）：四版接触表覆盖全部44页；试题版4页全部110dpi放大检查，另放大检查四版封面/末页及第11、12、18题图稿的题干/解析页。未见缺字、遮挡、裁切、答案泄漏或异常分页。
+- 阶段修改文件：仅ignored `.work/phase2-b79/review/`当前attempt工作项；44页PNG与接触表位于ignored `.work/phase2-b79/render-fa1ae42a/`；旧工作项已保存在可恢复archive。
+- 验证结果：四份工作项绑定当前attempt `fa1ae42a-6efc-452e-b624-8d40b4a73f0e`；44页×8项共352项，312 pass、40 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
+- 剩余任务：checked finalizer登记新receipt；刷新全库报告，运行scoped gates和定向测试，清理PNG/中间物并核验PDF，最后审阅提交。
+- 下一步：提交视觉复核checkpoint，再运行`review_receipts.py finalize-batch-checked`登记phase2-b79当前attempt。
