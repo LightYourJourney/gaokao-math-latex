@@ -876,4 +876,7 @@
 - 已完成子阶段：为当前 attempt 准备 4 份 review work items，覆盖 44 页；候选页为印刷版 p13、其余三版 p3。
 - 阶段验证：4/4 工作项绑定 attempt `45f24548-3eb1-47fc-8e5b-181b34d4a481`，PDF 页数及 SHA-256 与构建回执一致；每页八项齐全，共 352 项初始 pending。
 - 阶段修改文件：本进度文件与忽略的 `.work/phase2-b53/review/` 当前工作项；未改试卷内容。
-- 下一步：提交本阶段进度 checkpoint，渲染并逐页检查 44 页，随后检查四版候选页。
+- 已完成子阶段：44 页已渲染为 4 张接触表并逐页浏览；四版候选页均完成 160dpi 高分辨率复核。未发现缺字、公式/图稿异常、裁切、孤立标题、答案串版或异常分页；本卷构建零 warning。
+- 阶段验证：接触表覆盖 44/44 页、4/4 接触表通过；候选页 4/4 通过。4 份当前 attempt 工作项登记 44 页 × 8 项共 352 条 pass、0 pending、0 warning exemption；`git diff --check` 通过。`check-batch` 仅报告正式 review receipt 仍绑定旧 build attempt/输入树/依赖/工具链/视觉工具/PDF，属 finalize 刷新前预期。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b53/review/` 下 4 份工作项；接触表、44 页预览与候选图位于 `/tmp/gk-phase2-b53-review.KRGw4u/`；未更改试卷源或 PDF。
+- 下一步：提交本阶段进度 checkpoint，运行事务 finalize 更新正式 review receipts 与批次状态。
