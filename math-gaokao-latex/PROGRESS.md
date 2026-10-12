@@ -2523,3 +2523,8 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）。新attempt匹配；44页×8项共352项，312 pass、40 not_applicable、0 fail/pending。
 - 剩余任务：刷新全库报告，运行b79 scoped gates与定向测试，清理PNG和LaTeX中间物，验证PDF后最终审阅提交。
 - 下一步：提交回执登记checkpoint，再运行全库`report.py render --all`与`check --all`。
+- 已完成全库报告刷新阶段（phase2-b79）：report render以一个content事务写入并回读六个全库目标；`check --all`确认报告与当前manifest一致并保留未完成状态。
+- 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
+- 验证结果：全量render事务成功，check返回“报告输出与全量manifest当前一致”；tracked差异恰为六目标，`git diff --check`通过。
+- 剩余任务：运行b79七项scoped gates及定向测试；清理LaTeX中间物和PNG，验证四版PDF后最终审阅提交。
+- 下一步：提交报告投影checkpoint，再运行本卷build/provenance/review/issues/generator/short-answer/edition-shell门禁。
