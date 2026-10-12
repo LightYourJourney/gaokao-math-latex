@@ -1063,3 +1063,8 @@
 - 阶段验证：当前失败命令、旧 PDF 文本与规范答案三方交叉确认 Q7 错答；phase2-b56 参照检查通过。理科简答源与答案核验未发现不一致。
 - 剩余任务：用 `make_short_answers.py --write` 同步文科速查答案并 `--check`、定向测试；重建两卷八版获得新 attempts，再刷新工作项和逐页视觉复核。
 - 下一步：只生成当前 phase2-b57 简答答案目标，检查 diff 确认为 Q7 单值更新后，重跑生成器检查和简答相关测试，再正式重编。
+- 已完成可验证子阶段（简答答案派生修复）：执行 `make_short_answers.py --manifest source-manifest.json --batch phase2-b57 --write`，只将文科 `answers_short.tex` 第 7 题从旧折叠题答案 $\arccos(\sqrt3/3)$ 更新为规范答案 $(7-\sqrt{17})/2$；理科简答源无变化。旧 attempt 的 PDF 与全部旧 attempt review 工作项作废，不得登记为最终结果。
+- 阶段修改文件：文科 `1986_上海卷_文史类/answers_short.tex` 与本进度文件。
+- 阶段验证：`make_short_answers.py --check` 对 b57 两卷均通过；`tests/test_short_answers.py` 50 项全通过；生成 diff 仅含 Q7 最终答案一行；`git diff --check` 通过。
+- 剩余任务：重新正式构建两卷八版并验证新 build receipts/日志；随后重置 8 份 review 工作项绑定新 attempts，再进行 91 页逐页视觉复核。首页答案泄漏用户选择仍未决。
+- 下一步：重跑 `build_projects.py build --formal --batch phase2-b57`，确认页数、警告、输出哈希与新的 attempts，再准备新复核工作项。
