@@ -2990,3 +2990,8 @@
 - 验证结果：CSV生成器确认写入775行，随后`--check`通过并确认当前。
 - 剩余任务：六目标report生成器会原子更新三份已有未提交README；为保护其待人工复核内容，已向用户询问是否允许更新但不提交。其余定向门禁、测试、清理和PDF哈希核对待完成。
 - 下一步：收到README处理选择后决定是否刷新六份报告；不论选择，继续执行不涉及README的本批验证、测试、清理及PDF核对。
+- 已完成phase2-b88定向数据门禁与回执测试阶段：校验issues/source manifest、文理两卷题面生成、简答答案及四版壳一致性，并运行review receipt测试。
+- 阶段修改文件：仅本进度文件；manifest CSV已在前一checkpoint提交，业务源/回执无新增修改。
+- 验证结果：issues/source manifest退出0；generator、short answers、editions各2套一致；`test_review_receipts.py` 66/66通过（42.036秒）。
+- 剩余任务：全库report六目标投影/`test_report.py`因三份README差异待用户决定；其余清理、PDF页数/SHA核验、最终审阅提交待完成。
+- 下一步：提交本验证checkpoint；收到README决定后完成全库report gate并运行`test_report.py`，继续处理产物与最终核验。
