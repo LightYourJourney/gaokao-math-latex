@@ -3082,3 +3082,8 @@
 - 验证结果：`manifest_csv.py --check`通过（775行）；`report.py check --all`确认报告与全量manifest一致且保留未完成状态；`test_review_receipts.py` 66/66通过，`test_report.py` 11/11通过；`git diff --check`通过。
 - 剩余任务：提交本阶段非README投影；清理8版LaTeX编译中间物并可恢复归档b90工作复核/渲染文件；核验最终PDF与正式回执的SHA、字节数和页数；提交清理记录。全语料仍未完成。
 - 下一步：提交仅含进度、manifest CSV及三份非README报告的变更；随后清理/归档并逐PDF核验，不启动b91。
+- 已完成phase2-b90构建产物清理与最终PDF回执核验阶段：文理两卷8个版本目录仅保留正式PDF；已结案的review workitem及两轮渲染图可恢复归档至`~/.Trash/phase2-b90-finalized.jRKOTM/`。
+- 阶段修改文件：本进度文件；8个build目录清理了latexmk生成的辅助文件；项目内`.work/phase2-b90`、`.work/phase2-b90-r4090`、`.work/phase2-b90-r4092`移出至上述归档，未永久删除。PDF与LaTeX源文件均保留。
+- 验证结果：8/8 build目录内容严格等于4份版本PDF；逐份PDF的SHA-256、字节数、pdfinfo页数均与正式build receipt相符（文科5/20/7/17页，理科5/22/7/18页）；官方`build_projects.py validate-receipts --require-final`返回`OK：2 卷`，`review_receipts.py check-batch`返回`FINALIZED：phase2-b90`；`git diff --check`通过。报告/CSV阶段提交为`4480d9e4`。
+- 剩余任务：本阶段b90已闭环；三份全库README投影仍留作人工复核且未提交。全语料与后续批次未完成，本次不启动b91；不push。
+- 下一步：本次阶段到此验收停止；后续按既定manifest顺序另行开始下一批，并继续逐阶段更新本文件。
