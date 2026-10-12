@@ -1058,3 +1058,8 @@
 - 阶段验证：对 8 份 JSON 与两卷当前 build receipts 做只读逐项比较，所有 attempt 与 PDF path/hash/page_count 匹配；页码序列均为 1…N，全部 728 项状态为 pending。正式 review receipts 仍因 build attempt 及四版 PDF 改变而 stale，尚未 finalize。
 - 剩余任务：对当前 91 页完成逐页视觉检查并登记真实结果；首页答案泄漏处理选择未回；随后 checked finalize、清理工作项/中间产物与临时 PNG、跑 scoped gates 和全量报告。
 - 下一步：按文理两卷独立分工并行复核四版页面；主会话检查关键页和任何代理发现，之后统一写入当前 work items。
+- 已完成可验证子阶段（简答版过期答案根因定位）：`make_short_answers.py --batch phase2-b57 --check` 稳定失败且只点名文科 `answers_short.tex`。规范答案要点和 `answers.tex` 的 Q7 答案均为 $(7-\sqrt{17})/2$，但简答版生成源仍是旧折叠题答案 $\arccos(\sqrt3/3)$；刚构建的简答版 PDF 文本亦确认输出该旧值。已完成的 phase2-b56 同一检查通过，表明本批修改答案源后漏跑独立简答答案生成器；正式构建读取旧派生文件而未拒绝，故本次两卷 build attempt 均不得用于最终复核。
+- 阶段修改文件：仅本进度文件；诊断未更改规范答案、派生简答源、PDF、review 工作项或 receipts。此前新 attempt 的 review work items 会随下一次重编失效，不沿用。
+- 阶段验证：当前失败命令、旧 PDF 文本与规范答案三方交叉确认 Q7 错答；phase2-b56 参照检查通过。理科简答源与答案核验未发现不一致。
+- 剩余任务：用 `make_short_answers.py --write` 同步文科速查答案并 `--check`、定向测试；重建两卷八版获得新 attempts，再刷新工作项和逐页视觉复核。
+- 下一步：只生成当前 phase2-b57 简答答案目标，检查 diff 确认为 Q7 单值更新后，重跑生成器检查和简答相关测试，再正式重编。
