@@ -1104,3 +1104,8 @@
 - 阶段验证：来源清单 validate、两卷生成器 `--check`、两卷 provenance check、简答答案 `--check`、两卷 build receipt validate 均通过；本轮科学卷四版全为 succeeded，零 warning/problem/error/missing-character/overfull/undefined-reference。对试题 p5、解析 p5/p20、简答 p5、印刷 p4/p15 逐页重渲染，且试题 p5 做 300 dpi 局部放大；最终 M 标签与弦/辅助虚线/圆弧分开，点位、图形关系与文字数学内容不变。
 - 剩余任务：旧科学卷 review work items 绑定已替代 attempt，须刷新至 `dea4108d…`；在最新 attempt 上复核这六个变化页并维护 50 页审查覆盖。文史 41 页仍绑定 `82cfd59c…`。两卷首页答案泄漏仍待用户裁决，暂不 finalize。
 - 下一步：调用官方 `prepare-batch` 刷新 stale work items，核对文史 attempt 保持不变、科学卷绑定 `dea4108d…`，再把两卷审查报告映射到当前 work items；变化的六页以本轮放大图为依据，其余页需保持有明确当前 attempt 覆盖证据。
+- 已完成可验证子阶段（新科学 attempt 工作项刷新）：官方 `prepare-batch` 首次因文史四份工作项仍绑定当前 attempt 而按安全机制拒绝覆盖。为保留文史 p1 已登记的 fail，本会话将四份文史工作项临时移入 ignored 备份目录 `.work/phase2-b57-preserve.0eOupU/current-arts/`，调用官方命令刷新八项，再把新生成的文史空白项另存并恢复原文史项；因此文史仍绑定 `82cfd59c…`，科学四项现绑定修复后的 `dea4108d…`。临时备份均保留，未删除工作项。
+- 阶段修改文件：ignored `.work/phase2-b57/review/` 内 8 个工作项；当前两卷试题版 p1 `answer_leak` 和页结果各为 fail，其余 726 个检查仍 pending；另有 ignored 的可恢复临时备份目录。
+- 阶段验证：8 个工作项总计 91 页、728 检查；逐项核对 build attempt、PDF 路径、SHA-256、page_count 与各卷 receipt 一致，页码覆盖连续且完整。新科学 attempt 首页再次用当前 PDF 高分辨率图确认答案泄漏后才登记 fail。临时文史原件恢复后页1批注仍在。
+- 剩余任务：独立审查者需针对最新科学 attempt `dea4108d…` 再次确认全部 50 页（尤其六个重绘图页面）；随后把两卷已审查页面的检查结果完整写入当前 work items、验证 728 项状态。首页答案泄漏选择仍未收到，未 finalize。
+- 下一步：取得最新科学 attempt 复查报告，核实修复后 M 标签清晰且无其他变化，再将审查结果登记到当前工作项并复核 JSON/官方回执门禁。
