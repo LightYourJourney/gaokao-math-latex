@@ -1698,3 +1698,8 @@
 - 阶段验证：build 目录精确列出四份 PDF；SHA 为试题 `30c259aa…fb7a64`、解析 `57e78223…7d3406`、简答 `b61e2b89…1c4046d`、印刷 `3e8c4ddf…664e50a`，与当前 build receipt 一致；build validator OK（stale 0）；source manifest/provenance/generator checks、review/report 定向测试（66+11）及 `git diff --check` 均通过。review check 仍按预期为 `VISUAL_FAILED`（8 项来源限制），批次保持 `compiled_pending_review`。
 - 剩余任务：核对完整 tracked diff、索引/报告范围和暂存路径，创建本地提交；不 push。全语料完整测试未运行，因为本阶段是单卷内容、回执与派生报告事务，review/report 定向测试和 scope gates 已覆盖变更面。
 - 下一步：执行最终 Git 状态与 diff 审阅，确认仅本卷、全量派生报告和本进度记录，然后本地提交。
+- 已完成阶段（`phase2-b59` 本地提交）：经核对暂存范围仅包含1986广东理科源稿/投影/回执、相关报告投影及本进度，`git diff --cached --check` 通过；已提交为 `5aa9b9ad`（`docs(exams): 修订1986广东理科并登记四版复核`），未 push。
+- 阶段修改文件：本提交的 22 个 tracked 文件；ignored review 工作项与 build PDF 未入库，build 中间产物已清理。
+- 阶段验证：提交后工作树干净；四版 build 及当前 review 回执仍绑定 attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`。视觉状态如实为 `VISUAL_FAILED`，不能在缺少更清晰同版来源时关闭 ISSUE-0778/0797/1053/1054；q20 语义歧义 ISSUE-1055 与整题组 ISSUE-1056 也仍 open。
+- 剩余任务：获取足以核验缺失图形/运算符/题意的固定版本来源，解除来源 blockers 后再更新 provenance、重建和全页复核；1952—2026 全语料目标继续未完成。
+- 下一步：按全语料计划选择下一个已准备批次；不重做 b59 已通过的题面/答案审计、正式构建、视觉核验及定向测试。
