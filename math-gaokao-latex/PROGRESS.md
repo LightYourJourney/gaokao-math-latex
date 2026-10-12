@@ -2619,6 +2619,11 @@
 - 验证结果：官方provenance status返回`provenance_verified phase2-b83`；build validator确认attempt `096824d0`因生成输入树/工具链变化stale；review receipt绑定`7bebe821`，四份ignored工作项绑定`2237deff`且52页均pending，均非当前build attempt；构建历史页数5/22/7/18。
 - 剩余任务：以当前输入正式重建四版；生成当前attempt review工作项并覆盖52页视觉审查/416项登记；再跑报告、门禁、定向测试、清理和最终提交。
 - 下一步：提交本恢复预检记录并执行phase2-b83正式构建；不重做来源核验和已完成转录。
+- 已完成phase2-b83正式重建阶段：官方`build --formal --batch phase2-b83`在manifest revision 4065生成attempt `d5caa3af-cec5-4c3d-ba8e-b220f791180c`，状态`compiled_pending_review`。
+- 阶段修改文件：本卷`receipts/build.json`及全局`source-manifest.json`派生状态；四份PDF仅为ignored本地构建产物。
+- 验证结果：试题/解析/简答/印刷版分别5/22/7/18页，均`succeeded`；errors、missing characters、overfull、undefined references及problems均为空；build validator为1 pending、0 stale/failed，provenance `check-batch`返回`OK：1 卷`。
+- 剩余任务：旧视觉回执/工作项不绑定当前attempt；需准备新工作项并复核52页、登记416项，后续报告、门禁/测试、清理与最终提交。
+- 下一步：提交当前build回执checkpoint，再为attempt `d5caa3af-cec5-4c3d-ba8e-b220f791180c`准备review工作项并按全页+候选页复核。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
