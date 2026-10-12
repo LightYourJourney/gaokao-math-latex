@@ -2397,3 +2397,7 @@
 - 验证结果：`build/`只含试题版/解析版/简答版/印刷版PDF；页数5/27/6/22，逐份SHA-256与当前build receipt相符；`git diff --check`通过。
 - 剩余任务：审阅本批tracked差异，确认只有回执/manifest与全库报告投影、进度记录；显式暂存并本地提交b76，不push。
 - 下一步：核查差异文件清单和统计、确认无图片/PDF/编译中间物入库后提交。
+- 已完成并提交阶段（phase2-b76）：2000全国新课程文科四版60页构建/视觉复核及正式回执、全库报告投影提交为`08ee1ef4`（`[已核] docs(exams): 完成2000全国新课程文科复核并登记回执`）；仅本地提交，未push。
+- 最终验收：480项逐页检查中425 pass、55 not_applicable、0 fail/pending；finalize、全库report render/check、7项scoped gates、77项定向测试、PDF页数/SHA核验及`git diff --check`通过。源/PDF/TikZ保留，build仅留PDF，无图片或中间物入库。
+- 剩余任务：1952—2026全语料仍未完成；41项待核仍无权威映射，保持独立待办。
+- 下一步：单独提交本checkpoint，然后预检manifest下一批phase2-b77，不重跑b76。
