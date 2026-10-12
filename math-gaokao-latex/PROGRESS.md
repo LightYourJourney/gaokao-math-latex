@@ -1114,3 +1114,8 @@
 - 阶段验证：只读校验确认 41 页页码连续、每页八项齐全、attempt/PDF 绑定当前文史 receipts；全部结论为 327 pass、1 fail、0 pending。未更新正式 `receipts/review.json`，未 finalize。
 - 剩余任务：最新科学 attempt `dea4108d…` 的 50 页复查仍在进行；完成后登记当前科学 work items，连同文史组成 91 页/728 项门禁。两卷试题首页答案泄漏仍各一项 fail，正式处置与 finalize 需遵守用户选择。
 - 下一步：收取并验收科学卷新 attempt 全页报告，重点确认 Q6 六页标签已充分避开弦、虚线与圆弧，再登记其 400 项结果。
+- 已完成可验证阶段（理工农医类当前 attempt 全页复核登记）：依据独立复核者对最新 attempt `dea4108d-f233-4641-8050-e2fac5986bb0` 的 50/50 页检查报告（0 页待确认），将科学卷四版 400 项检查写入当前 work items。Q6 六个图稿页的 M 标注与弦、辅助虚线及圆弧清楚分离；Q2(8) 解析/印刷页分母为 `sinθ−cosθ` 且结果为 7；Q7 折叠图标注清楚。科学卷试题版 p1 `answer_leak` 维持 fail。
+- 阶段修改文件：ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-shanghai-science.json`；tracked 为本 `PROGRESS.md`。未改正式 review receipts、题源、build receipt 或 PDF，也未重编。
+- 阶段验证：只读审计 8 份当前 work items，覆盖两卷 91 页、728 项检查，结果为 726 pass、2 fail、0 pending；两项 fail 精确为文史及理工农医试题版 p1 的 `answer_leak`。8/8 项的 attempt、PDF 路径、实际 SHA-256、页数均匹配各自 build receipts；页码连续、每页八项齐全、失败项有说明，官方 `_validate_pages` 校验通过。
+- 剩余任务：两卷试题版首页答案泄漏的处置选择尚未收到；因此保留源文和两项失败，不写正式 `receipts/review.json`、不 finalize。之后还需依授权完成正式复核登记、清理明确属于本批的构建中间产物/临时渲染文件，并跑批次门禁及报告校验。
+- 下一步：等待并遵循用户对两卷首页泄漏的处置选择；若保留原文，则按失败状态走受支持登记流程；若批准改注，先重跑该卷所需来源核验、构建与受影响页面复核，再更新工作项。未获选择前不 finalize、不清理 PDF 或任何有歧义的文件。
