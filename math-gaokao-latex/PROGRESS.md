@@ -1924,5 +1924,6 @@
 - 剩余任务：最终审查本批次精确 diff 与 `git diff --check`，确认没有 PDF/图片被追踪；随后提交已完成内容和独立进度 checkpoint，不 push。内容 blockers 保持 open。
 - 下一步：运行最终 scoped validators、核对待提交路径和生成报告变化，然后本地提交并确认工作树 clean。
 - 已完成最终审查阶段（b63）：`git diff --check` 通过；变更限于11个收据/manifest/进度/报告投影路径，无题目或答案源改动，build/渲染二进制均未纳入 Git。报告显示 `closed_with_blockers` 且明确列出4项 blocking issues；provenance/build/review gates、问题总账校验及 review/report 77项测试均通过。
-- 剩余任务：本地提交本批次11个已核路径（不 push），提交后复查干净状态及正式回执。
-- 下一步：精确暂存并提交 b63 成果，再单独提交最终进度 checkpoint。
+- 已完成阶段（phase2-b63 本地提交）：11个已核路径提交为 `8fd05bf1`（`[已核] docs(exams): 完成1987广东理科复核与回执`）；未 push。提交后 build validator 返回 `OK：1 卷`，review gate 返回 `FINALIZED`，工作树干净（分支 ahead 12）。
+- 剩余任务：1952—2026 全语料目标继续未完成；phase2-b63 的 ISSUE-0782/0784/0791/0792 仍阻塞内容完成，ISSUE-0781/0783 仍待更强来源核验。
+- 下一步：单独提交此进度 checkpoint；之后按 manifest 顺序核验下一批 phase2-b64（1987 上海数学卷）的来源/构建/复核状态。
