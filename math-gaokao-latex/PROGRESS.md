@@ -2755,3 +2755,8 @@
 - 当前接续phase2-b84（2001豫粤卷）：provenance有效，来源/issue/generator/简答/四版壳校验通过；旧build attempt因输入树和工具链变化stale，旧复核项绑定旧attempt，52页/416项待新构建后重审。
 - 本次恢复预检未改b84内容或正式回执；剩余为formal build、新attempt逐页复核与finalize、报告/门禁/测试、清理和PDF核验。
 - 下一步：提交b84预检记录后按计划正式重建；不重做已有转录、解题或provenance，不push。
+- 已完成phase2-b84正式构建阶段：官方formal build在manifest revision 4067生成当前attempt `21f6787d-033c-408c-96e7-13179b7ec568`，状态`compiled_pending_review`。
+- 阶段修改文件：豫粤卷`receipts/build.json`、全局`source-manifest.json`派生状态及本进度文件；题面、答案、图稿、来源和provenance未改。
+- 验证结果：试题/解析/简答/印刷版分别4/22/6/17页，四版`succeeded`；errors、missing characters、overfull、undefined references和problems均为空；build receipt validator为1 pending、0 stale/failed，provenance `check-batch`为`OK：1卷`。
+- 剩余任务：当前attempt尚无视觉复核；需生成新工作项、检查全52页及候选页并完成416项登记，再finalize、运行报告/门禁/定向测试、清理和PDF核验。
+- 下一步：提交b84 build checkpoint，为attempt `21f6787d-033c-408c-96e7-13179b7ec568`运行官方`prepare-batch`。
