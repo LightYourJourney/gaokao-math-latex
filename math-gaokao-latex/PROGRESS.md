@@ -2176,3 +2176,7 @@
 - 阶段修改文件：本进度文件；检查均只读，正式回执与全库报告未再变化。
 - 剩余任务：跑相关review/report测试；执行latexmk清理并只清除本批自建`.work/phase2-b71/render-*`图片，保留work items；核对build只剩四份PDF且SHA与receipt一致，审查全部tracked diff后本地提交、不push。
 - 下一步：顺序运行 `test_review_receipts.py` 与 `test_report.py`；不重跑已通过的全库报告/批次门禁。
+- 已完成定向测试阶段（phase2-b71）：`tests/test_review_receipts.py` 66/66通过；`tests/test_report.py` 11/11通过。无代码实现变化；测试覆盖当前回执finalization和报告逻辑。
+- 阶段修改文件：仅本进度记录；两组测试均未修改正式数据。
+- 剩余任务：对四版执行`latexmk -c -outdir=build`，移除仅本轮生成的三套ignored渲染目录，确认build目录只留四份PDF且其SHA/页数与attempt `6fd0dcb2-1b74-40f7-8f53-bf08121e8d37`一致；随后最终差异审查并提交，不push。
+- 下一步：执行构建中间物与本轮PNG清理，保留PDF和review工作项。
