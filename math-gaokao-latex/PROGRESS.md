@@ -2460,3 +2460,8 @@
 - 验证结果：构建命令返回`COMPILED_PENDING_REVIEW`、0 failed；四版均`succeeded`、退出码0，错误/缺字/overfull/undefined references均为空；官方receipt校验返回`OK`，pending=1。现存四份ignored review工作项绑定更旧的attempt `d27cb2bf-9cff-45bf-9268-fae6fc2a6236`，408项均为空状态，不能复用。
 - 剩余任务：归档旧工作项后为当前attempt生成review工作项，逐页复核并登记；随后全库报告、门禁、测试、清理及提交。
 - 下一步：核对`prepare-batch`参数后，将旧b78 review工作项完整移至可恢复归档，再准备当前attempt的视觉复核输入。
+- 已完成视觉复核准备阶段（phase2-b78）：四份旧attempt空白review工作项已完整移至可恢复目录`~/.Trash/phase2-b78-review-workitems.R06xgz/review/`；官方`prepare-batch`为当前attempt重建四版工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b78/review/`四个工作项及可恢复归档；正式回执未改。
+- 验证结果：prepare-batch成功生成4份工作项，均绑定当前构建；待复核页面共51页、408项（试题5、解析22、简答6、印刷18页，每页8项），尚未填写任何视觉结论。
+- 剩余任务：渲染并逐页复核当前四版PDF，填写所有适用工作项并由官方finalizer登记；之后执行全库报告、门禁、测试与清理。
+- 下一步：生成四版页面接触表并完成全页覆盖；图形页及版面候选页再高分辨率检查。
