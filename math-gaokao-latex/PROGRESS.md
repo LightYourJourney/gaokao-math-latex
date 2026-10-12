@@ -1789,4 +1789,8 @@
 - 已完成构建目录清理：四个入口执行 `latexmk -c -outdir=build` 后，build 目录仅保留四份 PDF（5/21/6/18页）；PDF SHA 未改变。
 - 阶段修改文件：该卷 `receipts/review.json`、`provenance.json`、`source-manifest.json`、`missing-issues.md`（新增 ISSUE-1065–1069）、本 `PROGRESS.md`；构建回执仍绑定当前 PDF。旧 `reports/phase2-b61.md` 是先前 attempt 报告，finalizer 明确未覆盖；批次未通过前不运行其完成报告渲染。
 - 剩余任务：取得第15题新的独立盲核并据此修正答案源/短答；修复第19题标点版式并重建、全页复核；保留第22题 ISSUE-0779；完成批次后再刷新报告、运行回归门禁并提交。
-- 下一步：审查本次 tracked diff 仅限 b61 及进度记录，提交已验证的失败诊断/阻断状态；不 push。其后继续处理下一个可独立批次，同时不丢弃 b61 backlog。
+- 已完成阶段（phase2-b61 诊断登记提交）：复核结论、失败问题、provenance 冲突状态、当前 build/review 收据与进度记录已提交为 `07a9190f`（`[已核] docs(exams): 登记1987全国理科复核失败项`）；未 push。
+- 提交范围：1987全国理科 `provenance.json`、build/review receipts、`missing-issues.md` 中 ISSUE-1065–1069、`source-manifest.json`、本 `PROGRESS.md`；未修改题目/答案源文件。四版 PDF 与当前回执绑定，编译中间物已清理。
+- 验证结果：提交前 `git diff --check` 与 staged diff check 通过；正式 finalizer 的预期结果为 `VISUAL_FAILED`，登记4页版式失败；build receipt stale 0、provenance/issue ledger 校验通过。第15题冲突及原 ISSUE-0779 均保持 open。
+- 剩余任务：获取第15题独立盲核、修复第19题标点版式并重新构建复核、保留第22题来源 blocker；之后刷新报告并执行批次门禁。“41 项待核”未能映射到当前50页/400 checks 的 b61 工作项。
+- 下一步：先由用户或仓库现有清单明确“41 项待核”的位置/所属任务；同时可继续按既定年份顺序检查 b62 等后续独立批次，不将 b61 backlog 误作已解决。
