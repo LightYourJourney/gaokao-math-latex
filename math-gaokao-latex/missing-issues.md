@@ -12202,15 +12202,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 2(9) 题高分辨率读作 a_3a_7=−12、a_6+a_9=−1、公差为正；该条件不存在实等差数列，但解答页列出 S_20=180。",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "e72707f8c2ff9a9066fdea6dfc6178c36dc43724c4930231d51af848a1f4edb1",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
-  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 2(9) 题第二条件的下标或常数；确认前保留固定源题面并阻断该小题答案。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -12219,15 +12220,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "按固定源第 2(9) 题字面消元得到 x^2−4x+108=0，判别式 −416<0，不存在实等差数列，因而 S_20 没有可确认数值；解答页的 180 不能直接作为题面答案。",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "00ba3aac44086883e6d7d849b0f114fc2fe393d8605c7b4bf997df435b00d988",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
-  "resume_action": "确认第 2(9) 题原始条件后，重新推导 S_20 并更新答案、解析和核验记录。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -12236,15 +12238,16 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 2(9) 题面条件与解答页 S_20=180 直接冲突；按题面不存在实解，按解答反推题面属于未经授权的排印修正。",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "1028f700367d9148ae99bb21ecc275b18af0eaa6a30138034ee24f3e3a2c8b24",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02-(9)",
-  "resume_action": "取得独立权威题面确认第 2(9) 题后，按确认版本完成答案冲突裁决。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
@@ -12543,52 +12546,55 @@
 ```json
 {
   "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "f37fc85f7b4489265ed34284aaecc711eb0c476bb50542077772c96f21639598",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
-  "resume_action": "取得同版更清晰排印或独立权威扫描，确认第 2(9) 题第二条件；确认前保留固定源题面。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
-
 ## ISSUE-0795
 
 ```json
 {
   "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "19c213f540ab41126f054a59c822558aa489334dcb1464cc4b06e62519ab933d",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
-  "resume_action": "确认第 2(9) 题原始条件后，重新推导 S_20 并更新答案、解析和核验记录。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
-
 ## ISSUE-0796
 
 ```json
 {
   "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "external_evidence": "先前记录的外部题库页面与本次固定源复核结果相符，但不用于确认本卷身份或替代固定源证据。",
   "fingerprint": "4b9aae5b64c90c7fc998570cc483e6748069c1e828e75ff21e7d74ddf78f75ce",
-  "external_evidence": "本轮检索到的百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1817012453924529858&fr=search）直接展示的是 a_3a_7=−12、a_4+a_6=−4，并给出相应通项推导；它不是固定源第 2(9) 的同一条件，也未标识为 1986 年广东卷。针对 a_6+a_9=−1 的精确检索未找到同版题面，因此只能记录存在相邻的常见题目，不能据此修正固定源。",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q02",
-  "resume_action": "取得独立权威题面确认第 2(9) 题后，按确认版本完成答案冲突裁决。",
+  "resolved_evidence": "固定源 PDF 第 8 页（书页267）350dpi复核第2大题第（9）题为 a3a7=-12、a4+a6=-4、公差为正；固定源 PDF 第11页（书页270）答案表第（9）项列180。独立盲算同得：a5=-2，d=2，a1=-10，a20=28，S20=180。旧的 a6+a9=-1、负判别式与冲突记录源于转录误读；规范试题、答案要点与解析已纠正。此前外部题库页面不作为本次结案依据。",
+  "resume_action": "已按固定源更正第2(9)题转录、答案与解析，并复核答案180；不再需要外部勘误或继续阻断。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
-
 ## ISSUE-0797
 
 ```json
@@ -16935,5 +16941,257 @@
   "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
   "status": "resolved",
   "type": "answer-conflict"
+}
+```
+
+## ISSUE-1039
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "c17334dd6465d2c3e761e17af461cbb7da6df72864e0f81dce6dd309cfc45cdc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1040
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "50cbe5be3aa8136eb1c4f3bc8f65283e9393000e0d90e901750f7de995c8c3e3",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1041
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "3949a27e80f85124cba257c1c39ead6ff9f95470fb7b9d022bd4f39e45e0d332",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 10,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 10 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1042
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "0cbf0c1e135bc4a05f0a136c18ca4fe0543bea1630a5d0403c1591a21cf18164",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 15,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 15 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1043
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "4ad353cffa91d1a55a61251d682147a84f2671b8b2e43a721bd7e2af2df185df",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "40479a968782b3e3546153b6c10fb79a90500f1228d8348e100934475b700687",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1044
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "a68d895064f70c20a3ba20eb29a8cb7a2e3b4a314ab89da7ae11da379b1d6ccc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "40479a968782b3e3546153b6c10fb79a90500f1228d8348e100934475b700687",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1045
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "7f0f08b1e8bf1f11a9ec0cee1fe383f108323e995659d0cc0045753f33cba36b",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1046
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "ef62af2ff0a6507adaa80b4fb1cb8ff0f9b268fccec0dae542863620cb256b03",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1047
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "afb6f0fad941fb22e81d44e127c07cc8823d4c24f76bed6e266bac088a142524",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 12,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 12 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1048
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "a96b37be2f15025b22bc23f248d23b913c3330dae42c12bb6dc031f7af026b9d",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 19,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 19 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1049
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "d746d0decda63ea2bf3997c1eaee9fd4c8607ae13519b211752904dcdece35f7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "e2f5ccad91073ecc8034afffd3e8b70cf104eca462cc73d33212a244eb6c889c",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1050
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "check_code": "glyph",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "6cd29832eb8cbad126b896fa962e6f35c3272a06e9fb1245646f5e1769e44e7c",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "e2f5ccad91073ecc8034afffd3e8b70cf104eca462cc73d33212a244eb6c889c",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
 }
 ```

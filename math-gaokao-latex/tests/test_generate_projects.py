@@ -1417,6 +1417,210 @@ class LiveQuestionRenderingRegressionTests(unittest.TestCase):
             answers,
         )
 
+    def test_1986_guangdong_arts_question_figure_is_source_faithful(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1986-regular-guangdong-arts"
+        )
+        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        answers = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/answers.tex"
+        ].decode("utf-8")
+
+        question_input = r"\input{figures/f1986_guangdong_arts_t6_question}"
+        solution_input = r"\input{figures/f1986_guangdong_arts_t6_solution}"
+        self.assertIn(question_input, questions)
+        self.assertNotIn(solution_input, questions)
+        self.assertIn(question_input, answers)
+        self.assertIn(solution_input, answers)
+        self.assertEqual(
+            result.figure_occurrences,
+            {
+                paper["project_dir"] + "/figures/f1986_guangdong_arts_t6_question.tex": 2,
+                paper["project_dir"] + "/figures/f1986_guangdong_arts_t6_solution.tex": 1,
+            },
+        )
+        self.assertEqual(validate_project_result(paper_sources(paper), result), ())
+
+        question_figure = (
+            ROOT / paper["project_dir"] / "figures/f1986_guangdong_arts_t6_question.tex"
+        ).read_text(encoding="utf-8")
+        solution_figure = (
+            ROOT / paper["project_dir"] / "figures/f1986_guangdong_arts_t6_solution.tex"
+        ).read_text(encoding="utf-8")
+
+        # The fixed source diagram has only S/A/B/C, with AC hidden; D/E are
+        # explanatory construction points and belong only in the solution art.
+        self.assertIn(r"\draw[dashed,thick] (A)--(C);", question_figure)
+        self.assertNotIn(r"\draw[thick] (A)--(B)--(C)--cycle;", question_figure)
+        self.assertNotRegex(question_figure, r"\\coordinate \([DE]\)")
+        self.assertRegex(solution_figure, r"\\coordinate \(D\)")
+        self.assertRegex(solution_figure, r"\\coordinate \(E\)")
+        self.assertRegex(
+            solution_figure,
+            r"\\fill\s+\(C\)\s+circle\s+\([^)]*\)\s+"
+            r"node\[right\]\s*\{\$C\$\};",
+        )
+
+        coordinates = {
+            match.group("name"): (
+                float(match.group("x")),
+                float(match.group("y")),
+            )
+            for match in re.finditer(
+                r"\\coordinate\s*\((?P<name>[ABCDE])\)\s*at\s*\("
+                r"\s*(?P<x>-?\d+(?:\.\d+)?)\s*,\s*"
+                r"(?P<y>-?\d+(?:\.\d+)?)\s*\);",
+                solution_figure,
+            )
+        }
+        self.assertEqual(set("ABCDE"), set(coordinates))
+        a, b, c, d, e = (coordinates[name] for name in "ABCDE")
+        self.assertAlmostEqual(d[0], (a[0] + c[0]) / 2)
+        self.assertAlmostEqual(d[1], (a[1] + c[1]) / 2)
+
+        bc = (c[0] - b[0], c[1] - b[1])
+        be = (e[0] - b[0], e[1] - b[1])
+        self.assertAlmostEqual(bc[0] * be[1] - bc[1] * be[0], 0)
+        e_fraction = (be[0] * bc[0] + be[1] * bc[1]) / (
+            bc[0] ** 2 + bc[1] ** 2
+        )
+        self.assertGreaterEqual(e_fraction, 0)
+        self.assertLessEqual(e_fraction, 1)
+
+        # A trial edition must not expose the disputed answer or its derivation.
+        self.assertNotIn(r"S_{20}=180", questions)
+        self.assertNotIn("判别式为负", questions)
+        self.assertIn(r"$180$", answers)
+
+        # The fixed scan's fill-in item (6) is the function problem; the
+        # arithmetic-progression condition occurs only in item (9).
+        fixed_condition = r"a_3a_7=-12,\qquad a_4+a_6=-4"
+        self.assertEqual(questions.count(fixed_condition), 1)
+        self.assertNotIn(r"a_6+a_9=-1", questions)
+        self.assertNotIn(r"a_6+a_9=-1", answers)
+        self.assertNotIn("不存在实等差数列", answers)
+        self.assertNotIn("本解析保留该冲突", answers)
+
+    def test_1986_guangdong_arts_fill_in_6_is_not_item_9(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1986-regular-guangdong-arts"
+        )
+        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        answers = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/answers.tex"
+        ].decode("utf-8")
+
+        question_two = re.search(
+            r"\\gkti\{2\}(.*?)\\end\{question\}", questions, re.DOTALL
+        )
+        self.assertIsNotNone(question_two)
+        item_six = re.search(
+            r"（6）(.*?)(?=（7）)", question_two.group(1), re.DOTALL
+        )
+        item_nine = re.search(
+            r"（9）(.*?)(?=（10）)", question_two.group(1), re.DOTALL
+        )
+        self.assertIsNotNone(item_six)
+        self.assertIsNotNone(item_nine)
+        self.assertIn(
+            r"f\left(1+\frac{1}{x}\right)=\frac{1}{x^2}-1",
+            item_six.group(1),
+        )
+        self.assertNotIn(r"a_3a_7=-12", item_six.group(1))
+        self.assertIn(r"a_3a_7=-12", item_nine.group(1))
+
+        question_two_solution = answers.split(r"\gksolhead{2}{}", 1)[1]
+        item_six_solution = re.search(
+            r"\\gksubpart\{（6）\}(.*?)\\gksubpart\{（7）\}",
+            question_two_solution,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(item_six_solution)
+        self.assertIn(r"x^2-2x", item_six_solution.group(1))
+        self.assertNotIn(r"S_{20}", item_six_solution.group(1))
+
+        item_six_answer = answers.rfind(r"\gkanswer{答案（6）：")
+        item_nine_answer = answers.rfind(r"\gkanswer{答案（9）：")
+        self.assertGreaterEqual(item_six_answer, 0)
+        self.assertGreaterEqual(item_nine_answer, 0)
+        answer_six_line = answers[item_six_answer:answers.find("\n", item_six_answer)]
+        answer_nine_line = answers[item_nine_answer:answers.find("\n", item_nine_answer)]
+        self.assertIn(r"x^2-2x", answer_six_line)
+        self.assertNotIn("180", answer_six_line)
+        self.assertIn("180", answer_nine_line)
+
+    def test_1986_guangdong_arts_reviewed_page_blocks_reserve_space(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1986-regular-guangdong-arts"
+        )
+        result = generate_project(ROOT.parent.parent.parent, paper_sources(paper))
+        questions = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/questions.tex"
+        ].decode("utf-8")
+        answers = result.targets[
+            PROJECT_RELATIVE + "/" + paper["project_dir"] + "/answers.tex"
+        ].decode("utf-8")
+
+        def context_before(text, token, length=120):
+            position = text.index(token)
+            return text[max(0, position - length):position]
+
+        question_two_solution = answers.split(r"\gksolhead{2}{}", 1)[1]
+        question_fifteen = questions.split("（15） 若", 1)[1].split(
+            "（16） 计算下式", 1
+        )[0]
+
+        expected_layout = (
+            (
+                "题面第（15）题前的空间预留",
+                context_before(questions, "（15） 若"),
+                r"\\Needspace\{12\\baselineskip\}\s+"
+                r"\\Needspace\{5\\baselineskip\}\s*$",
+            ),
+            (
+                "解析版第（12）小问标题前的空间预留",
+                context_before(answers, r"\gksubpart{（12）}"),
+                r"\\Needspace\{12\\baselineskip\}\s*$",
+            ),
+            (
+                "印刷版第 2 题解析标题前的空间预留",
+                context_before(question_two_solution, r"\textbf{解析}"),
+                r"\\Needspace\{12\\baselineskip\}\s*"
+                r"\\Needspace\{4\\baselineskip\}\s*$",
+            ),
+            (
+                "印刷版第（7）小问标题前的空间预留",
+                context_before(question_two_solution, r"\gksubpart{（7）}"),
+                r"\\Needspace\{12\\baselineskip\}\s*$",
+            ),
+            (
+                "解析版第（16）小问标题前的空间预留",
+                context_before(answers, r"\gksubpart{（16）}"),
+                r"\\Needspace\{12\\baselineskip\}\s*$",
+            ),
+        )
+        for label, generated_tex, pattern in expected_layout:
+            with self.subTest(layout=label):
+                self.assertRegex(generated_tex, re.compile(pattern))
+
+        self.assertNotRegex(question_fifteen, re.compile(r"(?m)^\s*且\s*$"))
+        self.assertRegex(
+            question_fifteen,
+            re.compile(r"\\\[\s*\\text\{且\}\\quad\s*\\operatorname\{tg\}"),
+        )
+
 
 # ------------------------------------------------------------------ CLI 契约
 

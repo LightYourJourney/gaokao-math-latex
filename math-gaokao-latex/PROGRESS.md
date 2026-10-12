@@ -1164,3 +1164,399 @@
 - 阶段验证：当前 attempt 的 build receipt validator、provenance `check-batch` 与 source manifest validate 均 exit 0；四版编译零错误/缺字/Overfull/未解析引用。主会话高分辨率查看六处当前图稿输出，并 2×放大简答版 p7；E 与 AB 仍相碰，不能登记为版式通过。已向用户请求选择是否拆分题面图/解析图，以及是否概括试题版的答案泄漏说明；等待答复。
 - 剩余任务：根据用户对图稿结构和试题版说明的选择继续；之后正式重建、刷新 work items、完成当前 attempt 全页复核并如实处理答案泄漏，再进入批次收尾。未获选择前不再改图稿或泄漏说明。
 - 下一步：等待用户答复；按获准方向开展最小改动，并以固定源图、六个含图输出页和最新 attempt 逐项验收。若用户选择保留当前内容，则将相关页记 fail/blocker，不伪报通过。
+
+### `phase2-b58` 恢复续做：来源图稿架构与试题版答案隔离
+
+- 恢复检查：当前规范工作树 `仓库根`、分支 `feat/gaokao-phase0`、HEAD `ce373bc4`；恢复时工作树干净。先读本进度尾部与 SDD 账本，未重跑已完成批次。当前四版 PDF 仍对应 attempt `70e92843-0d54-4077-a91c-6020502de226`。
+- Ruling：将原卷题面三棱锥图与解析辅助图拆开，并按固定源修正题面图中 AC 为虚线；固定源 PDF 第 9 页可见原图仅标 S/A/B/C 且 AC 为隐藏线，三次仅调整 E 字标签均未通过。成本若判断错误：需重新制图、重建并复核本卷，但不会改题目数据或结论。
+- Ruling：试题源的第 2(9) 题说明改为不披露具体答案/判别式的中性说明；完整冲突证据继续保留在答案要点与解析源中。试题版是无答案卷，当前说明直接暴露 `S20=180` 与负判别式。成本若判断错误：试题卷少了具体编辑背景，但题面照录、来源冲突和解析证据仍保留在答案版。
+- 已完成可验证阶段（回归测试 RED）：新增真实生成路径回归测试，要求题面生成只引用来源图，解析生成另引用含 D/E 的辅助图，图登记次数分别为 2/1，试题版生成结果不含 `$S_{20}=180$` 或判别式结论。当前测试按预期失败：生成的题面仍引用旧共享图 `f1986_guangdong_arts_t6_pyramid`。
+- 阶段修改文件：`math-gaokao-latex/tests/test_generate_projects.py`（仅新增回归测试）；本 `PROGRESS.md`；SDD 忽略账本同步追加本次裁定。源 Markdown、图稿、manifest、构建回执与 PDF 尚未改。
+- 阶段验证：固定源 PDF 第 9 页 150dpi 渲染确认 S/A/B/C 与 AC 虚线；当前简答版 PDF SHA-256 与 build receipt 一致，300dpi 第 7 页复现 E 标签与底边拥挤。`python3 -m unittest discover -s tests -p test_generate_projects.py -k 1986_guangdong_arts_question_figure_is_source_faithful` 返回 1 项失败，失败点是题面仍引用旧共享图，符合预期 RED。
+- 剩余任务：按裁定更新规范 Markdown、拆分并修正两份 TikZ、登记第二份图稿并同步引用次数；运行生成器、provenance 与单卷四版正式构建；对变化页复核并以像素一致性证据复用未变化页的既有审查，不重复整批人工审查。批次 finalize、清理、scoped gates、全量报告检查与提交仍未完成。
+- 下一步：先以最小改动更新源 Markdown 与图稿，运行同一回归测试至 GREEN，再按受支持入口重生成 `questions.tex`/`answers.tex` 并检查精确 diff；题面哈希变化时重跑该卷 provenance 后才正式构建。
+
+### `phase2-b58` 续做：源稿拆分、登记与生成器验证
+
+- 已完成可验证阶段：按已记录裁定将 1986 广东文史卷题面图与解析辅助图拆开。题面图仅保留固定源中的 S/A/B/C，并将隐藏棱 AC 画为虚线；解析版单独引用含 D/E 的辅助图。试题版第 2(9) 题说明改为中性描述，具体答案及判别式推导不再出现在试题源，解析与答案证据仍保留。新增图稿登记并将引用次数更新为题面图 2 次、解析图 1 次，manifest revision 3948、事务 `c2033700-0a3b-4b48-929a-aceb74093eea`。
+- 阶段修改文件：两份规范 Markdown（试题、解析正文）；项目生成文件 `questions.tex`、`answers.tex`、`index.json`；新增题面/解析 TikZ 并删除旧共享图；`source-manifest.json`；`tests/test_generate_projects.py`；本 `PROGRESS.md`。provenance 三角色草稿位于 ignored `.work/phase2-b58/provenance/`，未写正式 provenance。
+- 阶段验证：真实生成路径回归测试 `test_1986_guangdong_arts_question_figure_is_source_faithful` 已从预期 RED 转为通过；源清单 validate、图稿引用计数核对、phase2-b58 解析派生源检查、项目生成 `--check` 均通过。正式 provenance 导入 dry-run 校验三角色七题记录通过，但正式 `check-batch` 仍按预期报告旧 provenance 哈希与新源不符，尚未执行写入事务。
+- 哈希核对补充：对比当前题面规范源与既有正式记录，变化的是第 2 题（中性化冲突说明）和第 6 题（题面图由旧共享图片改为新登记矢量图），不是只有第 2 题。两题的数学题干/数据未改；第 2 题条件与问法已于固定源 PDF 第 8 页复核，第 6 题图稿依据第 9 页拆分。其余五题的题面哈希、全部答案哈希及既有解题/盲核记录均未变化，角色草稿只更新两题的题面哈希与对应来源核验说明。
+- 剩余任务：收取独立来源复核对第 2(9) 题条件及第 6 题原图标注/虚线的确认，再通过官方 `provenance.py import-batch --write` 事务刷新该卷记录与 manifest 状态；随后正式重建四版，复查新旧页面差异、六个图稿输出页与第 2 题说明页。批次页审、登记、清理、scoped gates、全量报告检查和提交均未完成。
+- 下一步：先核验独立复核报告；若与主会话对固定源的逐页核对一致，运行 `import-batch` dry-run 与 `--write`，接着 `provenance check-batch`；通过后才正式四版构建并重建当前 attempt 的 review work items。
+
+### `phase2-b58` 来源纠错：第 2(9) 题误读根因
+
+- 已完成可验证调查阶段：独立盲核指出固定源 PDF 第 8 页第（9）小题条件应读为 `a3*a7=-12, a4+a6=-4`，不是规范源中旧有的 `a6+a9=-1`。主会话用 350dpi 原页裁图核实两个条件；同页第（6）题列出完全相同条件。固定源 PDF 第 11 页（书页 270）解答又明确列第（9）题答案 `180`。据此，所谓“题面与答案冲突/负判别式”是旧转录误读及其派生错误解析，不是原卷异文。
+- 阶段修改文件：仅本 `PROGRESS.md`。证据图在 `/tmp/gk1986-source-review.CCCLIY/source-p08-q9-full-350dpi.png`、`answer-page-11.png`；正式题面、解析、issue ledger、provenance、build receipt/PDF 均尚未修改。provenance 的 dry-run 工作稿未导入。
+- 阶段验证：独立盲核与主会话 350dpi 原扫描分别核对题面条件；来源答案页图像核对 `（9）180`。按 `a_5=(a_4+a_6)/2=-2`、`d>0`、`a_3a_7=4-4d^2=-12` 得 `d=2`、`a_1=-10`、`a_{20}=28`、`S_{20}=180`，与来源答案一致。
+- 剩余任务：把试题转录更正为来源条件；删除基于误读的冲突说明并修正解析，复核答案要点；按官方 issue 工具解决由此失效的冲突/转录阻塞，并刷新 q02 当前 provenance 证据与哈希。之后才能单卷正式重建、重审受影响页面并继续 b58 收尾。
+- 下一步：先检查 issue ledger 对应 0774–0776、0794–0796 的完整记录和受支持更新命令，确认可以精确结案哪些记录；随后最小更正 q2(9) 题面/解析、运行题源和解答一致性测试。此纠错 supersedes 上一条中关于固定源第 8 页条件及“冲突原因未知”的临时结论；页面布局图稿拆分仍待 provenance/构建/视觉验收。
+
+### `phase2-b58` 来源纠错：题面、答案与解析同步
+
+- 已完成可验证阶段：将第 2 大题第（9）小题条件更正为固定源上的 `a_3a_7=-12, a_4+a_6=-4`，移除错误的异文说明；答案要点改为 `180`；解析改为从 `a_5=-2`、`d=2` 推得 `a_1=-10`、`a_{20}=28`、`S_{20}=180`。解析合并稿和简答版按官方生成器重建。
+- 阶段修改文件：规范试题 Markdown、答案要点 Markdown、解析正文 Markdown；官方生成的含解析 Markdown、`questions.tex`、`answers.tex`、`answers_short.tex`；回归测试 `tests/test_generate_projects.py`；本 `PROGRESS.md`。`source-manifest.json` 图稿事务和两份 TikZ 延续前一阶段，本阶段未改 issue ledger 或正式 provenance。
+- 阶段验证：新增“（6）与（9）同条件、且解析不再含误读条件/无实解”的断言先以 `1 != 2` 失败，修正源稿后同一回归测试通过。`solution_sources.py check-batch`、`make_short_answers.py --check`、`generate_projects.py --check`、`source_manifest.py validate` 通过；`test_short_answers.py` 50 项、`test_solution_sources.py` 109 项通过。简答生成器在旧 `answers.tex` 下曾安全拒写；先按依赖顺序重生成 TeX 后再生成简答，最终检查一致。独立盲算者从固定源 p8 条件推得 180，并确认 PDF p11 答案表列 180。
+- 剩余任务：六条误读派生的阻塞问题（ISSUE-0774/0775/0776/0794/0795/0796）仍在账本中，旧 provenance 仍标 q02 转录不确定、答案未知、冲突未解决；必须以保留历史记录的方式解决这些条目，并用三角色导入事务更新 q02/q06 当前哈希与 q02 证据。其他 q01 缺图问题保持原状态。
+- 下一步：用 `issues.upsert_issue` 在暂存副本更新六条记录为 resolved 并附原扫描证据，通过 `build_projects.commit_state` 原子提交 issue ledger 与 manifest；随后重建三角色工作文件（仅刷新 q02 的题面/答案审查状态及 q06 题面哈希）、dry-run/import provenance，再检查 batch 状态仍准确保留 q01 阻塞。
+
+### `phase2-b58` 问题账本与 provenance 纠正
+
+- 已完成可验证阶段：按固定源 p8/p11 与独立盲算，将 ISSUE-0774/0775/0776/0794/0795/0796 标记 resolved，原编号保留并附明确结案证据；使用 `build_projects.commit_state` 原子提交 `missing-issues.md` 与 manifest，revision 3949，事务 `3674bff5-eeec-403c-99d4-e25521561d4d`。随后使用官方 `provenance.py import-batch --write` 导入三角色记录，revision 3950。q02 现为转录 passed、答案 grade A、conflict none；q06 题面哈希绑定当前矢量图稿。q01 的图形选项缺失及其两项阻塞记录原样保留。
+- 阶段修改文件：`missing-issues.md`、1986 广东文史 `provenance.json`、`source-manifest.json`、本 `PROGRESS.md`；忽略工作文件 `.work/phase2-b58/{issues-reviewed.md,provenance/}`。规范源与生成 TeX 已在前一阶段登记。
+- 阶段验证：provenance import dry-run 与写事务成功；`provenance.py check-batch`、`issues.py validate`、`source_manifest.py validate`、解析派生源检查、简答生成检查和项目生成检查均通过。按导入前的状态预演，结案 q02 六项后仅剩 q01 的 `ISSUE-0777` 与 `ISSUE-0793` 阻塞；没有擅自关闭缺图问题。
+- 剩余任务：旧四版 PDF/build receipt 仍因题面、答案、图稿和生成源变化而失效，不能复用旧视觉回执；需要正式重建 4 版、刷新 review work items、逐页检查当前输出并登记。题面版 q01 图形选项缺失继续为待核阻塞；图稿拆分与 E 标注新位置还需输出页视觉验收。之后才可 finalize、清理本批中间产物、跑 scoped/full gates 并提交。
+- 下一步：先检查 `build_projects.py build --help` 与当前 receipt 状态，再以正式批次构建重建四版，记录 attempt、页数、日志和 PDF 哈希；通过后按官方流程刷新工作项并复核所有受影响页面。
+
+### `phase2-b58` 纠错后正式重建
+
+- 已完成可验证阶段：1986 广东文史卷四版以正式构建重建成功。当前 attempt `3ca22859-8c6f-426d-b381-19c0df54bf19`，manifest revision 3952，四版页数仍为试题 7、解析 28、简答 8、印刷 22，共 65 页。四版均 `succeeded`，PDF SHA-256 与 receipt 一致；错误、缺字、Overfull、未解析引用均为 0。
+- 阶段修改文件：项目 `receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`；四份 PDF 为 ignored 构建输出。旧 attempt `70e92843…` 的 review 工作项仍在 `.work`，尚未覆盖或刷新。
+- 阶段验证：正式构建状态 `COMPILED_PENDING_REVIEW`（1 待审、0 失败）；`build_projects.py validate-receipts --batch phase2-b58` 与 `provenance.py check-batch` 均通过。独立读取 receipt 并现场 SHA-256 比较为四版全匹配，日志的 errors/missing_characters/overfull/undefined_references 全空。
+- 剩余任务：为新 attempt 刷新四版 review work items；复核 65 页，重点覆盖试题第 2(9) 页、解析/简答中的纠错推导、题面原图与解析辅助图的全部引用页，以及 E 引线标注；完成真实逐页记录后再判断是否存在新的分页或遮叠问题。q01 缺图 issue 继续保持阻塞。
+- 下一步：调用官方 `review_receipts.py prepare-batch` 绑定当前 attempt，检查新工作项的 attempt、PDF 哈希、连续页码与 pending 项数，再启动当前 PDF 的视觉复核。
+
+### `phase2-b58` 当前 attempt 复核工作项准备
+
+- 已完成可验证子阶段：官方 `review_receipts.py prepare-batch` 为新 attempt `3ca22859-8c6f-426d-b381-19c0df54bf19` 创建/刷新四版 review work items。旧 attempt 文件均只含 pending 项；它们已被当前 attempt 的空白工作项替换，未丢失任何已登记页审结论。
+- 阶段修改文件：ignored `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json` 与本 `PROGRESS.md`；正式 review receipts 未改。
+- 阶段验证：四份工作项 attempt 与 build receipt 一致；每份 PDF 路径及 SHA-256 与当前 receipt/实际文件匹配；页数 7/28/8/22，页码连续，共 65 页、520 个检查项，全部 pending。
+- 剩余任务：完成当前 attempt 65 页逐页视觉审查并登记真实结果；重点审查 q02(9) 纠错后题面与答案、题面图/解析图及 E 引线的全部使用页；q01 缺图继续保留为唯一当前内容阻塞。
+- 下一步：并行检查四版当前 PDF 全页，逐页核实覆盖；主会话单独放大所有变化页并接受独立审查报告，再写回 work items。
+
+### `phase2-b58` 视觉抽核发现解析前言残留旧冲突说明
+
+- 已完成可验证根因修复：当前 attempt 试题版 p1/p6/p7 和解析版 p26/p27 高分辨率抽核显示题面已正确去答案化、q02(9) 条件转录正确、题面图为 S/A/B/C 且 AC 虚线，D/E 解析图已拆分。但解析 PDF p8 仍出现“题面不存在实等差数列/保留冲突”旧前言。追踪 `rg` 定位根因为规范 `1986_数学真题_广东文_解析正文.md` 顶部的过期来源说明（此前只修了 q9 正文段落），不是缓存或生成器缺陷。新增针对过期说明的断言后测试按预期 RED；移除该前言错误并按官方流程重建含解析 Markdown 与 `answers.tex` 后转 GREEN。
+- 阶段修改文件：解析正文 Markdown、`tests/test_generate_projects.py`、官方派生含解析 Markdown 与项目 `answers.tex`、本 `PROGRESS.md`。当前 PDF/receipt 仍是 attempt `3ca22859…` 的旧输出，review work items 仍绑定该 attempt；均不得当作新源版本的最终审查证据。
+- 阶段验证：定向回归测试通过；`solution_sources.py check-batch`、`generate_projects.py --check`、`git diff --check` 通过；直接检索规范解析、合并稿和 `answers.tex`，旧冲突语句及 `a_6+a_9=-1` 均无残留。
+- 剩余任务：因解析前言又有源树变化，attempt `3ca22859…` 与四份 pending review work items 现已 stale；须重新正式四版构建、重新绑定工作项后再开始 65 页复核。上一阶段对当前 PDF 的候选页/图稿观察仅作定位线索，不写入正式工作项。
+- 下一步：运行四版正式 build 并验证新 attempt 的 receipt、哈希、页数与日志；随后官方刷新 work items，重新逐页复核受影响页面和其余页面。
+
+### `phase2-b58` 解析前言修正后重建与复核项刷新
+
+- 已完成可验证阶段：在移除解析正文前言中的旧冲突结论后，再次正式四版构建成功。新 attempt `55663131-2dad-4f38-874a-c6367110acd7`，manifest revision 3954；页数 7/28/8/22，共 65 页。解析版 p8 文本层现在只含来源页说明与解析开篇，不再含“不存在实等差数列/保留冲突”旧结论。随后官方 `prepare-batch` 将四份 review work items 绑定到此 attempt。
+- 阶段修改文件：项目 `receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`；ignored 四版 PDF 与 `.work/phase2-b58/review/` 四份工作项。更正后的规范解析源和派生 TeX 记录在上一子阶段。
+- 阶段验证：build receipt validator 与 provenance check 均通过；四版均 succeeded，实际 PDF SHA-256 与 receipt 相符，页数正确，errors/missing_characters/overfull/undefined_references 均为空。工作项逐项绑定新 attempt、PDF 哈希和页数；覆盖连续 65 页、520 检查项，全部 pending。
+- 剩余任务：对当前 attempt 全部 65 页完成逐页视觉复核，重点检查 q02(9) 题面、简答/解析中的 180 推导、题面图与解析辅助图的全部出现页、E 标注位置及候选页；然后如实写入 work items。q01 图形选项缺失仍是保留的内容阻塞。
+- 下一步：四版独立复核与主会话重点页放大并行；接受报告前核对当前 attempt/PDF 哈希，发现源稿或版式问题即停止写入并重建受影响版本。
+
+### `phase2-b58` 中断恢复后定位第 2(6) 转录错误
+
+- 已完成可验证调查阶段：恢复时先检查规范工作树 Git diff 与本进度文件；当前分支为 `feat/gaokao-phase0`、HEAD `ce373bc4`，此前进行中的改动均仍在工作区。续审 5566 attempt 时，试题版审查报告发现第 2(6) 与第 2(9) 条件重复。对照固定源 PDF 第 8 页（书页 267）350dpi 页面图像，源第（6）题为函数 `f(1+1/x)=1/x^2-1`；固定源 PDF 第 11 页（书页 270）答案列第（6）题 `x^2-2x`、第（9）题 `180`。规范试题 Markdown、答案要点、解析正文及派生 TeX 当前把第（9）题数列题和 `180` 错复用于第（6）题，根因是第（6）题转录错位，不是源卷重复题。
+- 阶段修改文件：仅本 `PROGRESS.md`；主会话增加一份源 PDF 第 7 页临时高分辨率渲染于 `/tmp/gk1986-source-review.CCCLIY/source-p07-350dpi.png`，未改项目源文件、work item 或正式 review receipt。旧 attempt 的 3 份独立版次报告均只作诊断，不登记；收到内容错误证据后已中断仍在运行的印刷版旧 attempt 复核。
+- 阶段验证：原始题面扫描与答案扫描分别直接查看；规范 Markdown 的（6）与（9）及当前生成 `answers.tex` 可复现错配；答案速查把（6）列 `180`，而固定源答案列 `x^2-2x`。旧 attempt `55663131-2dad-4f38-874a-c6367110acd7` 对应错误转录版本，不能作为最终审查或 finalize 依据；四份 work items 仍 pending，正式 review receipt 未写入。
+- 剩余任务：先添加并观察 q02(6) 题面、答案和派生解析的回归测试 RED；随后更正规范题源、答案要点、解析正文及生成文件，刷新受影响的 q02 provenance，并重新构建四版。现有视觉报告覆盖的仅是已知错误的旧输出，必须在新 attempt 上重审全 65 页。q01(25) 源图形选项缺失仍保持 open blocker。
+- 下一步：新增一个经真实项目生成器执行的 q02(6)/q02(9) 分离回归测试，断言（6）呈现函数题、其答案为 `x^2-2x`，而（9）仍为等差数列题且答案 `180`；先运行至预期失败，再作最小源稿修正。
+
+### `phase2-b58` 第 2(6) 防回归测试 RED
+
+- 已完成可验证子阶段：新增真实项目生成器回归测试，覆盖题面 q02(6) 与 q02(9) 的区分、q02(6) 解答表达式，以及生成答案中 q02(6)=`x^2-2x`、q02(9)=`180`。测试在修改规范源之前按预期失败，失败点是当前生成题面 q02(6) 仍为等差数列条件，证实能捕获本次错位。
+- 阶段修改文件：仅 `tests/test_generate_projects.py` 与本 `PROGRESS.md`。源 Markdown、派生 TeX、provenance、receipt 和 work items 尚未修改。
+- 阶段验证：`python3 -m unittest discover -s tests -p test_generate_projects.py -k 1986_guangdong_arts_fill_in_6_is_not_item_9` 返回 1 项预期失败，断言找不到固定源中的 `f(1+1/x)=1/x^2-1`；失败不是导入、语法或测试配置错误。
+- 剩余任务：更正规范题面第 2(6)、对应答案要点与解析；同步更新此前错误的图稿回归测试中“第（6）与（9）源题条件相同”的断言。随后按依赖顺序生成 TeX/简答并验证测试 GREEN，再刷新 q02 provenance。
+- 下一步：只对规范 Markdown 作最小修正：将第（6）题改回函数反求题，答案改为 `x^2-2x`，解析按 (t=1+1/x) 代换推导；（9）题及其答案 `180` 保持不变。之后重跑新测试与相关生成器检查。
+
+### `phase2-b58` 第 2(6) 题源、答案与解析纠正
+
+- 已完成可验证阶段：规范题源第 2(6) 更正为 `f(1+1/x)=1/x^2-1`；答案要点更正为 `x^2-2x`；解析改为令 (t=1+1/x)，推出 (f(t)=(t-1)^2-1=t^2-2t)，并说明题设代换直接确定 (t\ne1) 时的函数值。第 2(9) 题和答案 `180` 保持原样。更新图稿回归测试断言：数列条件只在第（9）题出现。
+- 阶段修改文件：规范 `1986/1986_数学真题_广东文_试题.md`、`答案要点.md`、`解析正文.md`；`tests/test_generate_projects.py`；官方派生含解析 Markdown、`questions.tex`、`answers.tex`、`answers_short.tex`；本 `PROGRESS.md`。尚未更新 provenance、build receipt 或 work item。
+- 阶段验证：新增生成器回归测试先 RED（第（6）题生成结果仍含数列条件），修正源后 GREEN；图稿/引用回归测试通过。`test_generate_projects.py` 104 项、`test_short_answers.py` 50 项、`test_solution_sources.py` 109 项均通过。`solution_sources.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check` 均通过；测试中的 CLI 用法错误文本来自预期负例，测试套件整体 exit 0。
+- 剩余任务：现有三角色 provenance 仍绑定错误的 q02 题面与答案哈希/旧判断，需要按新源重新核对 q02 并以官方 importer 导入；正式 build receipt 仍对应错误转录，5566 四版 PDF 与 work items 不可用，必须在 provenance 通过后重建四版并重新完整复核 65 页。q01(25) 缺少源图形选项仍为 open blocker。
+- 下一步：检查三份 `.work/phase2-b58/provenance/{question-review,answer-solve,answer-review}/` 的 q02 记录与官方 hash 计算方式；获得与新题面相符的来源核验/独立求解/盲核证据后，dry-run 再导入 q02 记录，检查 batch provenance 状态及 q01 blocker 保持不变。
+
+### `phase2-b58` q02 provenance 纠正并事务导入
+
+- 已完成可验证阶段：主会话按固定源 PDF 第 8 页（书页267）复核 q02(6)/(9) 转录；两位隔离盲核只看题面独立推导 q02(6)，均得 (f(x)=x^2-2x)（仅对 (x\ne1) 可由关系确定，(f(1)) 未定）。答案页第 11 页（书页270）第（6）列 (x^2-2x)、第（9）列 180，与独立推导相符。三角色 `.work` 仅修正 q02 证据/摘要；清理 q01/q03–q06 角色证据中的过时“第2(9)冲突”描述，q01 缺图不变。
+- 阶段修改文件：三份 ignored `.work/phase2-b58/provenance/{question-review,answer-solve,answer-review}/gk-1986-regular-guangdong-arts.json`；官方导入的 `1986_广东卷_文史类/provenance.json`、`source-manifest.json` revision 3955；本 `PROGRESS.md`。题面、答案、解析和派生 TeX 在上一阶段已更正。
+- 阶段验证：`provenance.py import-batch` dry-run 通过；`--write` 事务提交 revision 3955；`provenance.py check-batch`、issues 校验、source manifest validate、项目生成 `--check`、简答 `--check`、解析源 `check-batch` 与 `git diff --check` 均通过。固定源答案与两份独立盲算一致；q01 的 ISSUE-0777/0793 仍 open。
+- 剩余任务：当前 build receipt / PDF / work items 均对应更正前的 attempt `55663131-2dad-4f38-874a-c6367110acd7`，全部作废；需正式四版重建、核对编译日志与哈希、刷新 work items，再对新 attempt 的 65 页完成全页复核和登记。尚未 finalize、清理本批临时渲染、运行全量报告检查或提交。
+- 下一步：检查正式构建命令与当前 receipt，再运行 `phase2-b58` 单卷四版 build；记录新 attempt、revision、页数、PDF 哈希和编译警告后，刷新 review work items。
+
+### `phase2-b58` q02 纠正后四版正式重建
+
+- 已完成可验证阶段：正式构建新 attempt `7b8a4633-49c8-441b-999a-fe1ba67ac98e`，manifest revision 3957，四版均 succeeded；页数为试题 7、解析 27、简答 8、印刷 22，共 64 页（解析版较旧 attempt 少 1 页）。
+- 阶段修改文件：1986 广东文史项目 `receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`；四份 PDF 为 ignored build 输出。旧 attempt `55663131-2dad-4f38-874a-c6367110acd7` 不再作为依据。
+- 阶段验证：`build_projects.py validate-receipts --batch phase2-b58` 与 provenance `check-batch` 通过；四份实际 PDF SHA-256 均与 receipt 相符；四版 log 的 errors、missing_characters、overfull、undefined_references 全为空。
+- 剩余任务：新 attempt 的 review work items 尚未刷新；需要将四版 64 页、512 个检查项绑定新 attempt/哈希并确认全部 pending，然后完成全页视觉复核。q01(25) 源图形选项缺失继续保持 open blocker。
+- 下一步：运行官方 `review_receipts.py prepare-batch` 刷新四份 work items，逐项核对 attempt、实际 PDF 哈希和页码连续性，再开始审查。
+
+### `phase2-b58` 新 attempt 复核工作项准备
+
+- 已完成可验证阶段：官方 `review_receipts.py prepare-batch` 为 attempt `7b8a4633-49c8-441b-999a-fe1ba67ac98e` 刷新四版 work items；旧 attempt 工作项此前全为 pending，没有已登记页审结论需要迁移。
+- 阶段修改文件：ignored `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json`；本 `PROGRESS.md`。正式 review receipt 未写入。
+- 阶段验证：四份工作项均与新 build attempt、项目 PDF 路径/receipt SHA/实际 SHA 匹配；页码连续覆盖 7/27/8/22 页，共 64 页和 512 检查项，全部 pending；每版候选页为 p1。
+- 剩余任务：对当前 attempt 的 64 页逐页视觉审查并登记；特别重看试题/解析/简答/印刷中 q02(6) 函数题及答案、q02(9) 数列题，以及解析和印刷中拆分后的三棱锥辅助图。尚未 finalize、清理临时渲染、跑全量报告检查或提交。
+- 下一步：隔离分派四版只读复核，主会话同时检查当前 attempt 的变化页和候选页；只依据这次 attempt 的 PDF 哈希和图像，全部页完成且问题如实处理后再写 work items。
+
+### `phase2-b58` 主审发现解析辅助图构造点位置错误
+
+- 已完成可验证调查阶段：对当前正式 attempt `7b8a4633-49c8-441b-999a-fe1ba67ac98e` 的解析版第 26 页进行高分辨率检查。正文定义 D 为 AC 中点、E 为从 S 向 BC 作垂线的垂足，但登记图稿坐标为 A=(0,0)、B=(3.6,0)、C=(1.25,1.35)、D=(1.8,0.68)、E=(2.4,0.5)：D 不在 AC 上且不是其中点，E 也不在 BC 上。PDF 图像与源坐标一致，属于辅助图几何关系错误，不是标签遮叠或截图观感问题。
+- 阶段修改文件：仅本 `PROGRESS.md`。未改图稿、生成源、build receipt、review work items 或正式 review receipt；当前 64 页审查仍不可登记。
+- 阶段验证：主会话已查看当前 attempt 的试题版 p6/p7、解析版 p8/p20/p21/p25/p26/p27、简答版 p7/p8；当前 PDF 图像确认 p26 的 D/E 坐标错误，TikZ 源文件给出一致的数值坐标。解析版其它已抽页未见裁切、遮叠或答案泄漏；这些抽页结论不替代全页复核。
+- 剩余任务：先增加几何回归断言并观察预期失败，再把解析辅助图 D 放到 AC 中点、E 放到 BC 线上；重生成并检查相关页面，随后四版重新正式构建、刷新 work items，并从新 attempt 开始完成全 64 页审查。q01(25) 图形选项缺失仍为已登记的内容阻塞。
+- 下一步：扩展 `test_1986_guangdong_arts_question_figure_is_source_faithful`，从解析 TikZ 中读取 A/B/C/D/E 坐标并机械验证 D 是 AC 中点、E 在 BC 线段上；先运行到预期 RED，再修图稿并按官方生成/构建流程重建。
+
+### `phase2-b58` 解析辅助图几何断言 RED
+
+- 已完成可验证子阶段：将图稿回归测试扩展为解析 A/B/C/D/E 的 TikZ 数值坐标，并断言 D 等于 AC 中点、E 落在线段 BC 上。测试在修复图稿之前按预期失败，首个失败为 D 的 x 坐标 `1.8 != 0.625`，与视觉检查发现相符。
+- 阶段修改文件：`tests/test_generate_projects.py`；本 `PROGRESS.md`。图稿与 build/work-item 文件未改。
+- 阶段验证：`python3 -m unittest discover -s tests -p test_generate_projects.py -k 1986_guangdong_arts_question_figure_is_source_faithful` 运行 1 项并以预期 AssertionError 失败；测试正常执行到几何断言，无导入或语法错误。
+- 剩余任务：修正解析辅助图的 D/E 坐标，使 D 真为 AC 中点、E 真在线段 BC 上；同一测试应转绿，再渲染确认标签及线段清楚。当前正式 PDF/64 页 work items 仍绑定旧图稿 attempt，后续须重建四版并从新 attempt 重审。
+- 下一步：只改 `f1986_guangdong_arts_t6_solution.tex` 的 D/E 坐标，运行上述定向测试至 GREEN，并编译单卷确认 PDF 图形位置；随后再按正式流程四版重建及刷新审查工作项。
+
+### `phase2-b58` 解析辅助图几何修复与预览验证
+
+- 已完成可验证阶段：将解析辅助图 D 移至 AC 中点 `(0.625,0.675)`，E 移至 BC 中点 `(2.425,0.675)`；题面源图、题目文字、答案和结论未改。扩展后的几何回归断言从预期 RED 转为 GREEN。
+- 阶段修改文件：`1986_广东卷_文史类/figures/f1986_guangdong_arts_t6_solution.tex`、`tests/test_generate_projects.py`、本 `PROGRESS.md`。旧 attempt 的 build receipt、正式 review receipt 与 work items 尚未改。
+- 阶段验证：定向 `test_1986_guangdong_arts_question_figure_is_source_faithful` 通过；`generate_projects.py --batch phase2-b58 --check` 通过。使用仓库相同 latexmk/XeLaTeX 参数，将解析版预览输出隔离到 `/tmp/phase2-b58-figure-preview.KPOYKu/`；27 页编译成功，350dpi 检查第 26 页，D 落在 AC、E 落在 BC，D/E 标签及 SD、SE、DE 线条可辨且无碰撞。正式 PDF 与 receipt 未被预览构建覆盖。
+- 剩余任务：图稿变更使 attempt `7b8a4633-49c8-441b-999a-fe1ba67ac98e` 的 build 回执和四版 64 页 work items 失效；旧 attempt 的四个独立审查进程已停止，不会将旧 PDF 结果登记。需正式重建四版、核验新哈希和日志、刷新 work items，再从新 attempt 完成全部 64 页审查。q01(25) 缺少源图形选项仍为 open blocker。
+- 下一步：按官方流程运行 `phase2-b58` 四版正式构建，记录新 attempt、页数、PDF 哈希及编译日志；验证成功后通过 `review_receipts.py prepare-batch` 绑定新工作项，再启动全页复核。
+
+### `phase2-b58` 几何修复后四版正式重建
+
+- 已完成可验证阶段：官方四版正式构建生成新 attempt `35994390-fc54-4784-b6ae-b98628958908`，manifest revision 3958；四版均 succeeded，页数 7/27/8/22，共 64 页。新 build input tree 已包含修正后的解析辅助图。
+- 阶段修改文件：`1986_广东卷_文史类/receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`；四版 PDF 与 `.log/.aux/.fls/.xdv` 为 ignored 构建输出。旧 attempt `7b8a4633…` 不再作为最终审查依据。
+- 阶段验证：官方 `build_projects.py validate-receipts --manifest source-manifest.json --batch phase2-b58` 与 `provenance.py check-batch --manifest source-manifest.json --batch phase2-b58` 均通过；source manifest validate 通过。现场 SHA-256 与 receipt 一致：试题版 `d14b1181…`、解析版 `38b42c76…`、简答版 `12d0ca03…`、印刷版 `1bd45c04…`；各版问题列表为空。解析版预览的第 26 页已按前一阶段完成 350dpi 视觉确认。
+- 剩余任务：尚未为新 attempt 刷新正式 review work items，也未做当前版本 64 页完整复核；新图中 D/E 几何关系已确认，但须复核含该图的正式新 PDF。q01(25) 源选项图缺失继续是已知内容阻塞。尚未 finalize、清理临时中间产物、执行最终 gates 或提交。
+- 下一步：调用 `review_receipts.py prepare-batch` 绑定新 attempt，逐项确认 PDF 路径、receipt/实际哈希、页码覆盖及 pending 数，再从这 64 页新 PDF 开始四版全页复核。
+
+### `phase2-b58` 新 attempt 复核工作项刷新
+
+- 已完成可验证子阶段：官方 `review_receipts.py prepare-batch` 将四份复核工作项重新绑定至 attempt `35994390-fc54-4784-b6ae-b98628958908`。
+- 阶段修改文件：ignored `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json` 与本 `PROGRESS.md`；正式页级 review receipts 尚未写入。
+- 阶段验证：四份工作项的 attempt、PDF 路径、页数和 SHA-256 均匹配当前 build receipt；本地实际 PDF SHA 与 receipt 相符。连续覆盖试题/解析/简答/印刷版 7/27/8/22 页，共 64 页、512 检查项，全部 pending。
+- 剩余任务：对当前 attempt 全部 64 页进行逐页视觉复核并记录八类检查；不能复用旧 attempt 的复核结果。q01(25) 缺少固定源图形选项仍为已知内容 blocker，须在复核中保留并如实表述；页审后还需 finalize、清理临时中间产物、最终 gates 与提交。
+- 下一步：重新启动四个隔离的只读版次复核，各自覆盖一个当前 PDF 的全部页面；主会话复核关键变化页及候选页。登记前再次核对所有报告所指的 attempt 和 PDF SHA。
+
+### `phase2-b58` 新 attempt 主会话重点页抽核
+
+- 已完成可验证子阶段：主会话直接渲染并检查当前正式 PDF 的候选首页及关键变化页：试题版 p1/p6/p7，解析版 p1/p8/p26，简答版 p1/p8，印刷版 p1/p21/p22。第 6 题题面图、解析辅助图及相邻分页均可辨；p26 的 D 位于 AC 中点、E 位于 BC，标签未遮叠；q02(6) 与 q02(9) 区分清楚，试题版未泄露具体答案；q02(2) 的来源方框缺字及 q01(25) 缺图说明均保持显式标注。
+- 阶段修改文件：仅本 `PROGRESS.md`。当前 PDF 与 review work items 未改。
+- 阶段验证：上述图像均由 attempt `35994390-fc54-4784-b6ae-b98628958908` 的 PDF 直接以 300/350dpi 渲染；复核项 PDF 哈希与正式 receipt 一致。抽核页未发现新视觉失败。此项是重点页复核，不替代独立审查者对全部 64 页的逐页覆盖。
+- 剩余任务：四名独立只读审查者分别检查当前四版全部 64 页并返回逐页覆盖及例外；之后主会话核验报告与 SHA，并将真实检查结果写入工作项。q01(25) 缺图仍为内容 blocker，尚未 finalize、清理中间文件、执行最后 gates 或提交。
+- 下一步：接收并核查四份独立报告；若任一报告指向版式/内容问题，先处理并重新构建受影响版本，不能先登记通过。若全页通过，则按 64 页逐项登记八类检查，再运行 review receipts 验证及批次 finalize。
+
+### `phase2-b58` 独立逐页复核完成一半
+
+- 已完成可验证子阶段：试题版 7 页和简答版 8 页分别由隔离复核者逐页检查完毕；每版均覆盖八类检查，所报 attempt `35994390-fc54-4784-b6ae-b98628958908`、PDF SHA 与页数匹配当前 receipt。两份报告均未发现版式失败，且只把第 1(25) 选项图缺失、第 2(2) 源乘号缺字方框作为已登记的 source limitations。
+- 阶段修改文件：仅本 `PROGRESS.md`。两份对应 ignored work items 仍保持 pending，尚未把复核报告折入检查项，也未写正式 review receipt。
+- 阶段验证：复核者分别报告试题版 SHA `d14b1181…`、7 页及简答版 SHA `12d0ca03…`、8 页；主会话已直接核对 receipt/实际 SHA，且查看当前试题版 p1/p6/p7、简答版 p1/p8。全页范围为连续页码 1..7 与 1..8，八类检查均全覆盖。
+- 剩余任务：解析版 27 页、印刷版 22 页仍在隔离复核中；收齐后需再次核对报告 attempt/SHA，再更新四份 work items 并用 `review_receipts.py` 验证/最终登记。q01(25) 图形缺源仍保持 open blocker。
+- 下一步：继续对解析版和印刷版当前 PDF 完成全页审查；收到报告后只登记有当前 PDF 证据的逐页结果，必要时保留来源限制的详细 note。
+
+### `phase2-b58` 当前 attempt 全版次复核揭示分页缺陷
+
+- 已完成可验证阶段：当前 attempt `35994390-fc54-4784-b6ae-b98628958908` 的四版独立逐页复核均已完成，覆盖试题版 7 页、解析版 27 页、简答版 8 页、印刷版 22 页，共 64 页。试题版与简答版通过；解析版发现 p14 仅留下第（12）小题标题、正文移至 p15；印刷版发现 p2/p3 把第（15）题条件句拆开（p3 页首孤立“且”）、p16 页末孤立“解析”标题、p17 页末孤立第（7）小题标题而正文到 p18。
+- 阶段修改文件：仅本 `PROGRESS.md`。正式页级 review receipt 与四个 work item 暂未登记通过或失败；当前构建和工作项仍绑定 attempt `35994390…`。
+- 阶段验证：独立报告的 attempt、PDF SHA 与当前 build receipt 一致；主会话直接检查印刷版 p3、p16–p18 和解析版 p14–p15 的当前 PDF 高分辨率页面，确认上述缺陷真实存在；印刷版 p2 的断句亦由当前页图与 p3 对照确认。另 60 页报告无新增分页异常，已知来源限制仍为 q01(25) 缺选项图与 q02(2) 乘号缺字方框。
+- 剩余任务：定位并用回归测试覆盖四处纯分页问题，最小化修正规范源稿/本卷分页；随后重新生成并正式四版构建。新 attempt 将使全部 64 页需重新复核。未解决的来源限制继续保留，不能由排版修复代替内容核验。
+- 下一步：检查本卷源稿到 TeX 的转换路径、现有换页控制宏及可用源级分页指令；先补能复现目标分页约束的回归测试并观察预期失败，再实施局部版式修复。
+
+### `phase2-b58` 四处分页约束回归测试 RED
+
+- 已完成可验证阶段：新增本卷生成级回归测试，检查第（15）题题面、第（12）小问、第 2 题“解析”标题、第（7）小问前均有 `\Needspace{12\baselineskip}` 源级预留。检查对象是 `generate_project()` 返回的实际 `questions.tex` / `answers.tex` 内容，不是只检查源 Markdown 字符串。
+- 阶段修改文件：`tests/test_generate_projects.py`、本 `PROGRESS.md`；规范源稿、派生 TeX、build receipt 与 review work items 未改。
+- 阶段验证：执行 `python3 -m unittest discover -s tests -p test_generate_projects.py -k 1986_guangdong_arts_reviewed_page_blocks_reserve_space`，测试运行 1 项、四个子检查均按预期失败；失败点分别确认四处源级预留缺失。测试已使用局部上下文断言，避免在失败时输出整份生成 TeX。
+- 剩余任务：在规范源稿四处加入纯分页指令；通过生成器刷新派生文件，目标回归测试转绿后进行单卷预览编译与页图核验。题目、答案与解析数学内容不得变更。
+- 下一步：只改 1986 广东文史试题 Markdown 的第（15）题前和解析正文中对应标题/小问前的 `\Needspace`，按生成器 `--write` 重建规范派生物，再跑定向测试及 `--check`。
+
+### `phase2-b58` 四处源级分页修复与派生物刷新
+
+- 已完成可验证阶段：在本卷试题第（15）题、解析正文第（12）小问、第 2 题 `**解析**` 标题及第（7）小问前加入 `\Needspace{12\baselineskip}`，未改题干、答案或数学推导。通过官方事务流程刷新含解析派生稿及 `questions.tex`、`answers.tex` / index 投影。
+- 阶段修改文件：规范 `1986_数学真题_广东文_试题.md`、`1986_数学真题_广东文_解析正文.md`；派生 `1986_数学真题_广东文_含解析.md`、项目 `questions.tex`、`answers.tex` / `index.json`；`tests/test_generate_projects.py` 与本 `PROGRESS.md`。正式 PDF、build receipt、review receipt 和 review work items 未覆盖。
+- 阶段验证：新分页生成级回归测试通过；`python3 -m unittest discover -s tests -p test_generate_projects.py` 通过 105 项；`generate_projects.py --batch phase2-b58 --check`、`solution_sources.py check-batch`、`source_manifest.py validate --manifest source-manifest.json` 及 `git diff --check` 均通过。逐段检查生成 TeX，四处预留均处于目标标题之前。
+- 剩余任务：源/TeX 已更新，正式 attempt `35994390…` 与其 64 页 work items 均已过期；尚未确认 PDF 中的真实分页效果。之后须重新正式四版构建并从新 attempt 重新复核全部 64 页。
+- 下一步：在临时隔离目录用仓库相同 XeLaTeX/latexmk 配置预览解析版与印刷版，检查印刷版原 p2/p3、p16/p17/p18 对应处及解析版原 p14/p15 对应处；修复未达标时继续限定在源稿分页指令内。
+
+### `phase2-b58` 隔离预览确认分页修复
+
+- 已完成可验证阶段：在隔离目录 `/tmp/phase2-b58-layout-preview.4lhmTG/` 用与正式构建相同的 latexmk/XeLaTeX 参数编译解析版和印刷版。印刷版仍为 22 页、解析版 27 页；原印刷 p2/p3 的第（15）题现完整从 p3 开始，p16 不再孤立“解析”，p17 解析标题与第（1）至（6）题同页，p18 第（7）题标题与正文同页；解析版 p14 结束于第（11）题，p15 第（12）题标题与推导同页。
+- 阶段修改文件：仓库无新改动；临时预览 PDF、日志及 350dpi 页面图均位于上述 `/tmp` 目录。规范源、生成 TeX、正式 PDF/receipt 与 work items 未被预览构建覆盖。
+- 阶段验证：两版 latexmk 均退出 0；`pdfinfo` 页数为 27/22；逐页目视检查印刷版 p2、p3、p16–p18 与解析版 p14–p15（350dpi）确认分页达到预期，题目/结论未改变。两份日志检索不到 Overfull、Missing character、LaTeX Warning 或错误记录；`git diff --check` 通过。
+- 剩余任务：正式 attempt `35994390…` 仍绑定旧输入且不可作为修复版凭证；尚未正式重建四版，也未刷新新 attempt 的 64 页工作项或重新全页复核。q01(25) 缺选项图与 q02(2) 源乘号缺字方框仍为登记中的来源限制。
+- 下一步：正式四版重建 `phase2-b58`；核对新 attempt、四版页数、PDF SHA/receipt 与编译日志，再用官方 `prepare-batch` 刷新 64 页工作项。之后全部页面从新 PDF 重新复核，不能挪用本次预览或旧 attempt 的页级结论。
+
+### `phase2-b58` 正式重建前 provenance 门禁发现 q1 哈希变化
+
+- 已完成可验证诊断阶段：四处布局指令中，只有放入试题 Markdown 的 q1 第（15）题前标记改变了 provenance 所记录的 q1 题面哈希；数学内容和题干未变。批次状态从旧回执的 `compiled_pending_review` 显示为现场 `planned`，是源文件变更使旧 attempt 失效的预期状态，不属于额外题目事实错误。
+- 阶段修改文件：仅本 `PROGRESS.md`；provenance、正式构建回执及复核工作项未改。
+- 阶段验证：`provenance.py check-batch --manifest source-manifest.json --batch phase2-b58` 如实失败，报告 q1 题面哈希变化及旧构建状态与现场派生状态不一致；其余卷项未报来源核验问题。
+- 剩余任务：按已授权的版式变更边界，通过仓库支持的事务方式刷新 q1 受影响哈希，不重跑或改写题目事实；随后 provenance 与各源门禁通过后正式四版重建。批次状态差异需由新正式构建解决。
+- 下一步：检查 `provenance.py` 支持的 q1 事务更新接口和当前 provenance 记录，确认只更新受影响的 q1 题面哈希，再重跑 `check-batch`。
+
+### `phase2-b58` q1 版式哈希经事务刷新
+
+- 已完成可验证阶段：去除题面唯一新增的分页标记后重算 q1 digest，与旧哈希完全一致；仅更新 ignored `question-review` 工作项的 q1 `question_text_sha256` 声明，原三角色证据文本、身份、审查结果、来源页和答案哈希均保留。官方 `provenance.py import-batch --write` 事务成功，manifest revision 更新为 3960，现场批次状态回到 `planned`。
+- 阶段修改文件：ignored `.work/phase2-b58/provenance/question-review/gk-1986-regular-guangdong-arts.json`；正式 `1986_广东卷_文史类/provenance.json` 与 `source-manifest.json` revision；本 `PROGRESS.md`。题目事实、答案与问题总账内容未改。
+- 阶段验证：`import-batch` dry-run 校验通过后才写事务；`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate`、`generate_projects.py --check` 和 `solution_sources.py check-batch` 均通过。
+- 剩余任务：旧 build receipt / PDF 与 64 页 work items 仍绑定 attempt `35994390…`，不可用于修复版。尚未四版正式重建、刷新 review work items、重审、finalize、清理仓库中间产物或提交。
+- 下一步：运行 `phase2-b58` 四版正式构建，随后核对 attempt、输入 revision、各 PDF 页数/hash、日志 findings 与 receipt；通过后刷新工作项并重新审查完整 64 页。
+
+### `phase2-b58` 修复后四版正式构建
+
+- 已完成可验证阶段：正式四版构建生成 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069`。试题/解析/简答/印刷版页数依次为 7/27/8/22，共 64 页；build receipt 绑定输入 manifest revision 3961，构建状态为 `compiled_pending_review`。
+- 阶段修改文件：1986 广东文史 `receipts/build.json`、`source-manifest.json` 状态 revision、本 `PROGRESS.md`；四版 PDF 与 `.log/.aux/.fls/.xdv` 为 ignored 构建输出。旧 attempt `35994390…` 不再作为新版本证据。
+- 阶段验证：`build_projects.py validate-receipts --require-current-inputs`、`provenance.py check-batch`、`source_manifest.py validate`、`git diff --check` 均通过。现场 SHA 与 receipt 完全一致：试题版 `73921e89…`、解析版 `eb9a827c…`、简答版 `54895780…`、印刷版 `7dae1e00…`；四版 errors、missing_characters、overfull、undefined_references 和 problems 全空。
+- 剩余任务：官方 review work items 仍绑定旧 attempt；新正式 PDF 尚未完成 64 页全页复核。已知 q01(25) 缺选项图、q02(2) 源乘号方框继续作为来源限制保留。尚未 finalize、清理仓库编译中间产物或提交。
+- 下一步：官方 `review_receipts.py prepare-batch` 将四份工作项绑定到 attempt `53d535ef…`，核实实际 PDF 路径、哈希、连续页码与 512 个检查项全部 pending，再开始全页复核。
+
+### `phase2-b58` 修复后 attempt 复核工作项刷新
+
+- 已完成可验证阶段：官方 `review_receipts.py prepare-batch` 将四份版次 work item 绑定至 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069`。
+- 阶段修改文件：ignored `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json` 与本 `PROGRESS.md`；正式 review receipt 未写入。
+- 阶段验证：逐项比对 work item 与 build receipt 及实际 PDF：attempt、PDF 路径、SHA、页数全匹配；连续覆盖 7/27/8/22 页，共 64 页、512 项（每页八类检查），全部 pending。
+- 剩余任务：修复版 PDF 尚未完成全页视觉审查或写入正式页级回执；q01(25) 缺选项图与 q02(2) 缺字方框仍需作为已知来源限制准确记录。
+- 下一步：对当前 attempt 的四版 PDF 重新完成 64 页全页复核；重点复核本次分页修复页及 q02 图稿页，同时主会话抽查关键页面。完成报告后先核实 attempt/SHA，再写入 work items。
+
+### `phase2-b58` 试题版与简答版当前 attempt 全页视觉复核
+
+- 已完成可验证子阶段：直接从 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069` 的正式 PDF 渲染并检查试题版 7 页、简答版 8 页，共 15 页；逐页覆盖 glyph、heading_number、option_formula_alignment、figure_label、header_footer、pagination_whitespace、font_size、answer_leak 八类检查。未发现新增答案泄漏、裁切、公式/选项错位、图标不清或页眉页码问题。q01(25) 来源选项图缺失与 q02(2) 来源乘号方框均保留显式说明，不作为新排版失败。
+- 阶段修改文件：仅本 `PROGRESS.md`；实际复核图片生成在 `/tmp/pdfs/phase2-b58-review.PEltpf/`，尚待全部复核完成后清理。
+- 阶段验证：复核前核对当前 PDF 页数与 SHA：试题版 7 页 `73921e8929be2e65a171e63dc8d943c0505d65abd8c9896790c27d8bdf247cfd`，简答版 8 页 `5489578029a873e3fe1b54cdd9dd8a866bb2621d34cc8c7626bf5cad17e30361`；全部页面以 150dpi 渲染并逐页检查。试题版第 3 页第 1(15) 题的“且”在页内单独成行，未再跨页；该行观感将与独立复核报告交叉确认，暂不登记为失败。
+- 剩余任务：解析版 27 页、印刷版 22 页须由独立审查者对当前 attempt 全页核验；主会话收到报告后检查 attempt/SHA 与逐页覆盖。全部 64 页确认后再写入 512 项工作项并执行官方复核/登记门禁；之后清理构建中间文件、运行最终验证并提交。尚未推送。
+- 下一步：取得解析版和印刷版当前 attempt 的独立逐页报告；若报告确认分页修复有效且没有新的严重问题，则审定试题版第 3 页“且”单行的版面性质，再登记逐页检查结果。
+
+### `phase2-b58` 当前 attempt 关键修复页高分辨率复核
+
+- 已完成可验证子阶段：主会话从当前正式 PDF 以 300dpi 检查印刷版 p2–3、p16–18，解析版 p14–15 及解析版 p26 辅助图。旧分页异常均已消失：印刷版 p3 的题 1(15) 完整同页，p16 无孤置“解析”，p17 的解析标题及(1)–(6) 正文在同页，p18 的(7)标题与正文同页；解析版 p14 结束于(11)，p15 的(12)标题与解答同页。p26 的 D/E 构造点和图中文字清楚，未见遮叠或裁切。
+- 阶段修改文件：仅本 `PROGRESS.md`；300dpi 栅格图仍在 `/tmp/pdfs/phase2-b58-review.PEltpf/`。
+- 阶段验证：四个正式 PDF SHA 与 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069` 的记录一致；目视核对上述 8 页渲染图。印刷版 p3 的连接词“且”仍为页内独立一行，但题干已完整落在同一页；等待独立复核报告对其作为行内断句或分页失败的分类。解析版 p26 中 D 位于 AC 中点、E 位于 BC 上，辅助图与推导关系一致。
+- 剩余任务：解析版及印刷版独立复核仍在进行，尚未全部确认 64 页、尚未写入 512 个检查结果或正式视觉回执。后续还需完成 finalization、精确清理构建中间文件、全部最终门禁和提交。
+- 下一步：收到独立报告后对照当前 attempt/SHA、核实连续页码与八类覆盖；对印刷版 p3“且”单独成行作出一致判定后，才登记页级工作项。
+
+### `phase2-b58` 印刷版当前 attempt 独立全页复核
+
+- 已完成可验证阶段：独立审查者对 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069` 的印刷版连续复核 p1–p22，22/22 页覆盖八类检查；未发现新分页、标注、字号、页眉页脚、公式选项或答案泄漏问题。之前识别的 p2/p3、p16–p18 分页问题已由当前 attempt 修复。p3 的“且”属于同页题干中的短连接行，不是跨页孤行，独立报告判为通过。
+- 阶段修改文件：仅本 `PROGRESS.md`；独立审查者未修改 work items 或正式回执，临时渲染图留在 `/tmp` 并待统一清理。
+- 阶段验证：审查者现场确认 SHA `7dae1e0020c8b9c995955a409748d60e9992a9103256e367343efb7574f4d09a`、22 页和当前 attempt 与 build receipt/预期一致；以 180dpi 全页渲染逐页检查，另有主会话 300dpi 复核修复关键页 p2–3、p16–18。八类每项均 22/22 通过。q01(25) 来源图形选项缺失及 q02(2) 来源乘号方框为已登记限制，未猜补内容，未计为版面失败。
+- 剩余任务：解析版 27 页仍待独立复核完成；之后合并核对四版 64 页覆盖、attempt/SHA 与已知限制，再填写 512 个页级检查并运行复核回执门禁。
+- 下一步：收取解析版当前 attempt 的全页报告；确认报告页数、SHA 和每页八类检查后，再进入 work item 登记阶段。
+
+### `phase2-b58` 四版全页复核揭示两处余留行级版式问题
+
+- 已完成可验证诊断阶段：当前正式 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069` 的四版全页复核已覆盖试题/解析/简答/印刷版 7/27/8/22 页，共 64 页。旧的四处分页缺陷均已修复；复核者另发现：试题版与简答版 p3 的题 1(15) 连接词“且”单独占行，形成明显行级孤置；解析版 p16 页首“有”单字承接 p15 题 1(16) 的句子，形成跨页孤字。两处均为版式问题，不涉及题目事实或答案。印刷版审查及另一份解析版说明将“且”判为通过，主会话图像亦确认它在页内单独成行；该点需统一按版式标准处理。
+- 阶段修改文件：仅本 `PROGRESS.md`；所有四份 ignored review work items 仍保持 pending，正式 review receipt 未写入。
+- 阶段验证：四份报告的 attempt、PDF SHA 与页数均匹配当前 build receipt，页码连续无漏页；试题版主审 7 页、简答版独立审查 8 页、解析版独立审查 27 页、印刷版独立审查 22 页均逐页检查八类项目。关键修复页另经主会话 300dpi 复看。q01(25) 来源选项图缺失、q02(2) 来源乘号方框仍是既有来源限制，所有报告均未建议猜补。
+- 剩余任务：先定位“且”与“有”两处的规范 Markdown 到生成 TeX 排版来源；依据最小生成级回归测试修正行级断裂及跨页孤字，再重生成、正式重建四版并对新 attempt 的 64 页全部重审。当前 attempt 的 512 个复核项不得登记通过。
+- 下一步：检查题 1(15) 与题 1(16) 的源稿、转换后 TeX 和现有分页指令；先补覆盖两类可观察排版结果的回归测试并看到预期失败，再作局部纯版式修正。
+
+### `phase2-b58` 两处余留版式问题根因确认
+
+- 已完成可验证诊断阶段：题 1(15) 的规范题面 Markdown 把“且”作为独立段落放在两组展示公式之间，生成器原样输出独立正文行，因此所有包含该题的版次都会出现页内孤立连接词；题 1(16) 解析稿把“利用半角公式”及第一组恒等式与后续“有”及第二组推导分成独立段落，但该小问前没有空间预留，故第二组前的单字“有”可被分页到下一页页首。根因在源稿结构/局部分页约束，不是 PDF 渲染或字体问题。
+- 阶段修改文件：仅本 `PROGRESS.md`；源稿、派生 TeX、构建回执及 review work items 未改。
+- 阶段验证：对照规范 Markdown 行 162–176 与生成 `questions.tex` 的对应输出，确认独立“且”段落被保留；对照 `解析正文.md` q1(16) 行 205–222 与生成 `answers.tex`，确认“有”位于两个展示公式块之间且无 `\Needspace` 局部预留。重现页面分别为当前试题版/简答版 p3、解析版 p16。
+- 剩余任务：为生成结果添加回归断言：题 1(15) 的连接词并入第二组公式而不再是独立段落，题 1(16) 小问前有足够的分页预留；先确认新增断言对当前源稿按预期失败，再只调整版式源标记并重新验证。
+- 下一步：检查现有 `1986_guangdong_arts` 生成级测试的组织方式，新增两项最小 RED 断言并运行定向测试。
+
+### `phase2-b58` 印刷版独立复核补充发现辅助图标签干扰
+
+- 已完成可验证诊断阶段：另一名独立审查者复核当前印刷版全部 22 页，在 p3 与解析 p8 再次指出 q1(15) 的“且”各自独占一行；并发现印刷版 p21 q6 解析辅助图中的 `C` 标签与虚线相交/紧贴，辨识受干扰。来源已知限制仍仅为 q01(25) 缺来源选项图与 q02(2) 乘号缺字方框。当前实际正式 PDF 直接渲染 p21（300dpi）已确认 `C` 标签问题可见。
+- 阶段修改文件：本 `PROGRESS.md`；生成级回归测试 `tests/test_generate_projects.py` 已开始添加 q1(15) 和解析 q1(16) 的两项断言，但尚未运行验证；源稿与图稿未改，work items 仍 pending。
+- 阶段验证：复核者确认印刷版 SHA `7dae1e0020c8b9c995955a409748d60e9992a9103256e367343efb7574f4d09a`、22 页、attempt `53d535ef-8274-4f4d-b200-a7cfbe106069` 与当前 receipt 一致；150dpi 全页及关键页 300dpi 复核。主会话也在当前 PDF 高分辨率 p21 确认标注相交/贴线。四版 64 页已全覆盖，但这三类余留缺陷使 512 项不得登记通过。
+- 剩余任务：完成 q1(15) 及 q1(16) 生成级回归测试的 RED/GREEN；为辅助图 C 标签添加针对标签与线段间距的回归保护后仅移动标签、不改几何坐标。之后生成新四版正式 attempt，并重审全部 64 页，检查修复不引入新问题。
+- 下一步：先运行新增生成级测试，确认 q1(15) 连接词结构及 q1(16) 空间预留断言都按预期 RED；随后检查解析辅助图 TikZ 标签锚点并设计最小图稿断言。
+
+### `phase2-b58` 三处余留版式回归测试 RED
+
+- 已完成可验证阶段：为生成 TeX 增加断言，要求题 1(15) 的“且”不再独立成段并并入第二组展示公式、解析 q1(16) 标题前预留空间；为 q6 解析图增加 C 标签采用 `above left` 锚点的图稿保护，防止标签继续压住 AC 虚线。当前实现下三项均按预期失败。
+- 阶段修改文件：`tests/test_generate_projects.py`、本 `PROGRESS.md`；规范试题/解析 Markdown、辅助图和派生 TeX 未改，正式 PDF/receipt/work items 未改。
+- 阶段验证：分别运行两个定向 unittest。分页回归测试以两个 AssertionError 失败（q1(16) 前缺少 12-baseline 预留；q1(15) 生成 TeX 仍有独立“且”段落）；图稿回归测试以一个 AssertionError 失败（现有 C 标签仍用 `node[left]`）。无测试运行错误。
+- 剩余任务：只调整三处版式源：把“且”放入 tg 条件展示式、在解析 q1(16) 前加入足够的 `\Needspace`、将解析图 C 标签移至 `above left`；题目数值、推导、几何坐标不改。GREEN 后须预览相关页，更新因版式标记变化而受影响的 provenance，再四版正式重建并重审 64 页。
+- 下一步：实施最小源级版式调整后，重生成派生 TeX并运行上述两个定向测试至 GREEN；再单卷隔离编译，确认孤行与标签问题实际消失。
+
+### `phase2-b58` 三处纯版式修复与定向回归测试 GREEN
+
+- 已完成可验证阶段：题 1(15) 将“且”并入第二组 tg 条件展示公式；解析正文 q1(16) 标题前增加 `\Needspace{12\baselineskip}`；辅助图 C 标签从 `left` 移到 `above left`。没有改题目数字、结论、推导或图中 A/B/C/D/E 坐标。CJK 数学文本交由转换器包装为 `\text{且}`，避免源稿显式 `\text{}` 造成双层包装。
+- 阶段修改文件：`1986/1986_数学真题_广东文_试题.md`、`1986/1986_数学真题_广东文_解析正文.md`、`1986_广东卷_文史类/figures/f1986_guangdong_arts_t6_solution.tex`、`tests/test_generate_projects.py`、本 `PROGRESS.md`。派生稿/TeX、provenance、build receipt、正式 PDF 与 review work items 尚未刷新。
+- 阶段验证：针对生成级分页测试和图稿来源性测试均 GREEN；其中新增断言确认转换结果中的“且”不再单独成段、q1(16) 前有空间预留、C 标签锚点改为 above-left。实现前均观察到对应的预期 RED。
+- 剩余任务：需通过官方事务刷新含解析派生稿及 TeX/index 投影；复跑整个 `test_generate_projects.py` 和源/生成器门禁。再在隔离目录编译四版预览，目视确认题 1(15) 连接词、q1(16) 跨页及解析图 C 标注确已改善。之后刷新受影响 provenance，四版正式重建并从新 attempt 重新复核 64 页。
+- 下一步：按批次 `phase2-b58` 的官方 `solution_sources.py` 与 `generate_projects.py --write` 流程更新派生文件，再跑全文件测试和门禁。
+
+### `phase2-b58` 派生稿刷新与测试/来源门禁阶段
+
+- 已完成可验证阶段：按批次事务重新生成来源派生稿与该卷 TeX 投影；生成器检查、来源抽取检查、manifest 校验、`test_generate_projects.py` 全文件 105 项测试及 `git diff --check` 均通过。未重复运行这些已通过检查。
+- 阶段修改文件：该卷派生 Markdown/TeX、相关生成索引与现有事务回执，以及本 `PROGRESS.md`；具体文件以当前 Git diff 为准。原始三处版式修复与新增回归测试仍在工作树中。
+- 阶段验证：`solution_sources.py check-batch`、`generate_projects.py --check`、`source_manifest.py validate` 均通过；105 tests OK；diff whitespace 检查通过。随后运行 provenance 检查发现第 1 题题面哈希变化，批次现场状态仍为 `compiled_pending_review` 而派生状态为 `planned`，因此来源门禁暂未通过；这是当前源稿结构重排后的待处理证据，不代表校验通过。
+- 剩余任务：按既有正式来源事务核验该哈希变化是否仅为等价版式重排，再决定是否只更新对应 question-review 摘要；完成 provenance 门禁后隔离预编译，验证三项版式修复的实际 PDF 效果。新源稿尚未正式编译，旧 attempt 的页面复核不可复用。
+- 下一步：定向检查 provenance 哈希计算与 `phase2-b58` question-review 工作项，只触及第 1 题相关证据；不得直接绕过 import/check 门禁或改答案证据。
+
+### `phase2-b58` q01 版式摘要核验与来源事务刷新
+
+- 已完成可验证阶段：确认 provenance 对规范题面块逐字计算摘要；本次 q01 摘要变化来自仅调整“且”的段落/公式位置，连接词与两个条件的数学含义未变。固定来源仍为已逐页核对的同一份 PDF，既有 q01 transcription review 结论和已登记缺图 issue 保持不变。
+- 阶段修改文件：忽略目录 `.work/phase2-b58/provenance/question-review/gk-1986-regular-guangdong-arts.json` 仅更新 q01 的 `question_text_sha256`（旧值 `74deae…158a8`，新值 `061dba…e384a`）；正式 provenance 与 manifest 由官方导入事务更新；本 `PROGRESS.md`。
+- 阶段验证：`provenance.py import-batch` dry-run 通过且未落盘；随后官方 `--write` 事务提交 revision 3963；`provenance.py check-batch --batch phase2-b58` 返回 `OK：1 卷`。答案摘要、其余题目摘要、来源引用与审核结论未手工改动。
+- 剩余任务：隔离编译当前四版并检查“且”行内呈现、解析 q1(16) 分页及解析图 C 标签；预览确认后才正式构建新 attempt。旧 attempt 的 64 页审核仍不可复用。
+- 下一步：根据构建脚本的受支持参数，在独立临时目录编译预览版；只检查受影响页及编译日志，不覆盖正式 PDF/receipt。
+
+### `phase2-b58` 四版隔离预编译与关键页复核
+
+- 已完成可验证阶段：以 latexmk 相同 XeLaTeX 参数将四版输出到 `/tmp/pdfs/phase2-b58-preview.K5OYg6/`，未覆盖正式 `build/` PDF 或 receipt。四版均成功，页数分别为试题 7、解析 28、简答 8、印刷 22。
+- 阶段修改文件：仅本 `PROGRESS.md`；预览 PDF 与 180/300dpi 检查图均在上述临时目录。
+- 阶段验证：目视复核试题/简答 p3、印刷 p3/p8，题 1(15) 的“且”已与第二组条件同一行；解析 p15–16，题 1(16) 从 p16 小问标题起完整排版，未再以“有”单字开页；解析新增 p28 含完整第 7 题，不是空白页。印刷版解析辅助图位于 p20；300dpi 检查发现 C 标签仍与 S–D 虚线相交，故该项修复尚未通过。其他预览版页未经全面复核，预览不作为正式回执。
+- 剩余任务：先把图稿 C 标签从 `above left` 移至右侧空白区，并更新回归断言；再重编受图稿影响的解析版、印刷版预览及高分辨率检查标签间距。之后正式四版构建并对新 attempt 的 64 页逐页复核。
+- 下一步：把图稿回归断言改为要求 C 标签置于点的右侧，先运行观察到预期 RED，再最小调整锚点并验证 GREEN。
+
+### `phase2-b58` C 标签版式修正与预览复核
+
+- 已完成可验证阶段：高分辨率复核确认 `above left` 仍与 S–D 虚线相交；将图稿 C 标签改到点右侧空白区，未移动任何几何坐标。对应图稿测试先按新锚点断言 RED，再在修复后 GREEN。
+- 阶段修改文件：`1986_广东卷_文史类/figures/f1986_guangdong_arts_t6_solution.tex`、`tests/test_generate_projects.py`、本 `PROGRESS.md`。
+- 阶段验证：两个定向生成器测试（图稿来源/标签断言、三处版式回归）通过；解析版和印刷版在隔离目录成功重编。解析版 p27 与印刷版 p20 的 300dpi 图像确认 C 标签现位于右侧且不与虚线/边线相交；页面数仍为 28/22。四个预览 log 未发现 Overfull、LaTeX Warning、undefined、Error 或 Missing character 匹配项。解析版 p28 的第 7 题布局清楚。
+- 剩余任务：更新图稿后尚未正式构建新 attempt；旧 64 页视觉复核报告不可复用。需进行正式四版构建、按当前 PDF SHA 和页数重建 review work items、逐页复核 64 页，再完成 receipt/finalization 门禁。
+- 下一步：运行正式四版批次构建与构建回执验证；确认构建 SHA、页数、日志和 attempt 后，才启动新的页级复核。
+
+### `phase2-b58` 四版正式构建 attempt `4f48ddc0-7717-45a0-a040-d69b1602dfa8`
+
+- 已完成可验证阶段：该卷正式四版均编译成功，状态为 `compiled_pending_review`；当前 attempt 替代旧 attempt `53d535ef-8274-4f4d-b200-a7cfbe106069`。
+- 阶段修改文件：该卷 `receipts/build.json`、批次 manifest 状态及正式 `build/` 下四份 PDF/编译产物；具体跟踪状态见 Git diff 与忽略构建目录。
+- 阶段验证：`build_projects.py validate-receipts --paper gk-1986-regular-guangdong-arts` 返回 `OK`、无 failed/invalid/missing/stale。页数与 SHA：试题版 7 页 `e2f5ccad…b6c889c`；解析版 28 页 `aab14a0f…b1c01c05`；简答版 8 页 `40479a96…b700687`；印刷版 22 页 `711b8189…a71144f`。四版 log 的 error、missing character、undefined reference、overfull 列表均为空。
+- 剩余任务：为新 attempt 准备四份新的 pending 页级 work item（合计 65 页、520 个八类检查），不得复用旧 attempt 的视觉结果；完成全部页面复核和必要的来源限制标注后再写回执。
+- 下一步：查看 `review_receipts.py` 支持的初始化/刷新事务，按新 attempt、页数和 SHA 重置该卷工作项，再启动逐页视觉复核。
+
+### `phase2-b58` 新 attempt 视觉工作项准备完成
+
+- 已完成可验证阶段：按 attempt `4f48ddc0-7717-45a0-a040-d69b1602dfa8` 为四版准备全新工作项，覆盖试题 7 页、解析 28 页、简答 8 页、印刷 22 页，共 65 页 / 520 项检查；四个工作项全部是 `pending`，绑定 SHA 与正式 build receipt 一致。旧 attempt 结果未迁移。
+- 阶段修改文件：忽略目录 `.work/phase2-b58/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-arts.json`；本 `PROGRESS.md`。review receipt 尚未登记。
+- 阶段验证：`review_receipts.py prepare-batch` 创建 4 项；逐项核对 attempt、SHA、页数、检查总数。生成器检查、solution source 检查、manifest/provenance 检查和 `git diff --check` 均通过。完整单测套件正在运行；四版只读逐页盲核已并行派发。
+- 剩余任务：收齐并核验四份独立报告，核对 SHA/页数/连续覆盖及八类结果，再把真实结论登记入工作项；已知来源限制须注明，不能计作版式通过或臆补内容。
+- 下一步：等待完整测试与四版复核结果；若发现新缺陷，按批准范围修复并重建新 attempt，否则进入回执检查与事务 finalization。
+
+### `phase2-b58` 新 attempt 四版全页盲核与结果录入
+
+- 已完成可验证阶段：四名独立审查者均核验 attempt `4f48ddc0-7717-45a0-a040-d69b1602dfa8`、各自 PDF SHA 与连续页数，并实际渲染逐页覆盖全部 65 页。520 个检查项中 508 项通过、12 项失败；失败全部是既知来源限制，无新发现版式问题。q01(25) 来源选项图空白在六处出现，统一登记为 `figure_label`；一份审查报告原标为 `option_formula_alignment`，根据仓库 rubric“图形与标注”及其余三版一致结果归一。q02(2) 乘号缺字方框在六处统一登记为 `glyph`。
+- 阶段修改文件：四份忽略的 `.work/phase2-b58/review/<edition>/gk-1986-regular-guangdong-arts.json` 已逐页登记 pass/fail 和失败说明；本 `PROGRESS.md`。12 项来源限制均保留原样并在 note 中注明；review receipt 尚未事务写入。
+- 阶段验证：工作项均绑定当前 SHA/attempt，页覆盖 7/28/8/22，失败数按版为 2/4/2/4；唯一发现差异的分类按 `CHECK_CODES` rubric 统一为缺失图稿 `figure_label`。只读 `review_receipts.py check-batch` 因正式 review receipt 仍绑定旧 attempt 而报 stale；这是 finalization 前状态，工作项自身已按新 attempt 登记。`test_generate_projects.py` 的 105 项测试此前全通过，图稿锚点修订后两个相关回归测试仍通过；另一次宽泛 `unittest discover -s tests` 运行约 9 分钟后因额度优化中断（退出 130），不记为通过或失败。
+- 剩余任务：用官方事务把失败结论与对应 visual issues 写入正式回执，验证批次报告/状态并按项目流程提交该已核验阶段；随后精确清理编译中间产物但保留四份 PDF 与 LaTeX 源文件，复跑最终门禁并核对 Git diff/status。
+- 下一步：运行 `review_receipts.py finalize-batch` 的批次事务；预期状态为 `VISUAL_FAILED`，因为来源限制必须如实保留，不能伪报全部通过。
+
+### `phase2-b58` 全页审查结论正式登记
+
+- 已完成可验证阶段：官方 `review_receipts.py finalize-batch` 以单一事务写入新 attempt 的 review 失败回执、视觉问题与批次派生状态，revision 3966。结果为 `VISUAL_FAILED`，12 个失败检查均对应既知来源限制（六处 q01(25) 缺来源选项图、六处 q02(2) 乘号方框），未发现新视觉缺陷；因此未生成成功报告，build 保持 `compiled_pending_review`。
+- 阶段修改文件：该卷 `receipts/review.json`、`missing-issues.md`、`source-manifest.json`、本 `PROGRESS.md`；正式四版 PDF 与 build receipt 均绑定当前 attempt。忽略目录中的 4 份 work item 已登记全部 520 项结论。
+- 阶段验证：`review_receipts.py check-batch` 返回预期 `VISUAL_FAILED`；`build_projects.py validate-receipts` 返回 `OK`（pending 1、stale 0）；`provenance.py check-batch` 返回 `OK：1 卷`。视觉失败并非校验异常，而是来源缺陷需保留并阻止错误标成 passed。
+- 剩余任务：按 `clean-build --dry-run` 精确确认可清理的 LaTeX 中间产物，执行后保留四份 PDF 与所有 `.tex` 源稿；核对 tracked diff 和 staged scope，提交本阶段已完成的内容，不 push。宽泛全量 `unittest discover` 已中断，退出 130，不视作测试通过；相关完整 105 项生成器测试此前通过，新增两项定向回归通过。
+- 下一步：先对本卷运行构建清理 dry-run，审定删除清单只含中间产物后再执行；之后检查四 PDF、源 TeX、receipt 仍存在并核对 Git diff/status。
+
+### `phase2-b58` 编译中间产物清理与 PDF 保留验证
+
+- 已完成可验证阶段：`build_projects.py clean-build --dry-run` 确认其会删除整个 build 目录（包含 PDF），因此未执行该命令；先在隔离预览目录实测 `latexmk -c -outdir=...` 会清理辅助文件并保留 PDF，再对四版正式构建目录逐版执行相同清理。
+- 阶段修改文件：仅本 `PROGRESS.md`；删除了该卷 `build/` 中四版 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 等编译中间产物。PDF、项目 `.tex` 源稿、构建/复核回执均保留。清理了本次确切临时目录 `/tmp/pdfs/phase2-b58-preview.K5OYg6/` 和此前保留的 `/tmp/pdfs/phase2-b58-review.PEltpf/`。
+- 阶段验证：正式 `build/` 现在仅含四份 PDF；SHA 仍与 build receipt 一致：试题 `e2f5ccad…b6c889c`、解析 `aab14a0f…b1c01c05`、简答 `40479a96…b700687`、印刷 `711b8189…a71144f`。四版 `.tex` 壳和题面/解析/图稿 `.tex` 均存在；`validate-receipts` 仍 `OK`、stale 0；复核状态仍如实为 `VISUAL_FAILED`。
+- 剩余任务：最终审阅 tracked diff 与索引范围，提交已完成的来源、生成、正式构建、失败复核记录及进度；不 push。`unittest discover -s tests` 曾因耗时退出 130，不能称全量测试通过。
+- 下一步：核对 `git status`、staged diff、完整 diff 摘要与 `git diff --check`；确认只包含本卷任务后，按现有提交规范提交。
+
+### `phase2-b58` 提交前最终验收
+
+- 已完成可验证阶段：最终复核确认 12 个 visual-review issues 全部绑定当前 attempt，均为 `open / blocks_completion`；四版 PDF、TeX 源稿和回执仍在，build 目录仅保留四份 PDF。
+- 阶段修改文件：仅本 `PROGRESS.md`；提交候选范围为当前 Git status 中 1986 广东文史卷源稿、生成投影、图稿、测试、manifest/index/issues、build/review receipts 与本进度文件；没有 staged 变更。
+- 阶段验证：本轮最新定向测试 2/2 通过；生成器、来源投影、manifest、provenance 与 build receipt 均通过；review check 返回预期 `VISUAL_FAILED`；`git diff --check` 通过。完整 `unittest discover -s tests` 因耗时退出 130，不宣称通过。最终检查报告了 12 项既知来源限制，未伪装成全绿。
+- 剩余任务：当前卷仍被 ISSUE-0777/ISSUE-0793 的 q01(25) 来源图缺失及 q02(2) 乘号缺字限制阻塞；需未来取得更清晰同版来源后再核验/重建。其他语料和批次任务仍未完成。
+- 下一步：仅暂存以上本卷任务路径并创建本地提交；不 push。
+
+### `phase2-b58` 已完成内容本地提交
+
+- 已完成可验证阶段：1986 广东文史卷本阶段已本地提交，提交信息为 `docs: 登记1986广东文史全页复核结果`；未 push。提交包含该卷来源转录与 LaTeX 投影、图稿、回执、复核问题、回归测试及本进度记录。
+- 阶段修改文件：本提交覆盖 17 个受跟踪文件；详细范围以该提交记录为准。此次提交后仅追加本阶段状态记录。
+- 阶段验证：提交前 `git diff --cached --check` 通过且无未暂存 diff；提交成功，提交后工作树干净。沿用前一阶段已记录的定向测试与来源/生成/回执门禁结果；未重复运行。
+- 剩余任务：该卷仍有 12 项来源限制复核失败，分别涉及 q01(25) 缺失的来源选项图和 q02(2) 乘号缺字，阻止将该卷标为视觉完成。更大范围待核清单不属于本次提交范围。
+- 下一步：取得适用的更清晰同版来源后，定向核验上述来源限制；在此之前保留当前 `VISUAL_FAILED` 结论，不扩展处理范围。
