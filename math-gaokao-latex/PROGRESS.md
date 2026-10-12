@@ -1703,3 +1703,43 @@
 - 阶段验证：提交后工作树干净；四版 build 及当前 review 回执仍绑定 attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`。视觉状态如实为 `VISUAL_FAILED`，不能在缺少更清晰同版来源时关闭 ISSUE-0778/0797/1053/1054；q20 语义歧义 ISSUE-1055 与整题组 ISSUE-1056 也仍 open。
 - 剩余任务：获取足以核验缺失图形/运算符/题意的固定版本来源，解除来源 blockers 后再更新 provenance、重建和全页复核；1952—2026 全语料目标继续未完成。
 - 下一步：按全语料计划选择下一个已准备批次；不重做 b59 已通过的题面/答案审计、正式构建、视觉核验及定向测试。
+- 新批次恢复（plan Task 2，BASE `47aea2349c8c42fed67f807179b8661749749e6e`）：按 1957—2006 时间顺序，b57–b59 均已有正式视觉失败与明确来源 blockers，未擅自更改；可前进的下一批为 phase2-b60（1987 全国文科）。此批已有三角色 provenance、旧 formal build 与四份 pending 工作项，不需重做转录/解题。
+- 预检发现：b60 build attempt `047675d9-9ed5-4d3d-b552-f21a993a0abe` 的 48 页 PDF 曾构建成功，但当前 `validate-receipts` 判 stale，具体为生成输入树及工具链指纹变化；四份 work items 仍绑旧 attempt `f6d4e011-8268-42bf-a3b6-81fb15f49bb5`，全 pending，不能复用到新 PDF。
+- 已完成可验证子阶段（b60 输入/来源门禁）：`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 全通过；`provenance.py status` 显示试卷 `editions_generated`、批次 `provenance_verified`。`provenance.py check-batch` 只报告 manifest 派生缓存 `compiled` vs `editions_generated` 与批次缓存 `compiled_pending_review` vs `provenance_verified` 不同步，未报告题面/答案哈希冲突；不重导 provenance，沿官方 formal build 刷新缓存。
+- 阶段修改文件：仅本进度记录；所有检查均只读，尚未触碰 b60 TeX/receipt/PDF/work items。
+- 下一步：以官方 `build_projects.py build --formal --batch phase2-b60` 刷新 stale build 与派生状态；核验四版页数、SHA、日志，再准备当前 attempt 工作项。
+- 已完成可验证阶段（b60 stale build 正式重建）：官方 formal build 事务 revision 3977 创建 attempt `38ec3c7e-4120-4410-87ee-9c79f8d1f923`；四版 succeeded，批次保持 `compiled_pending_review`。
+- 阶段修改文件：1987 全国文科 build receipt、manifest 派生状态及四版 ignored PDF；本 `PROGRESS.md`。
+- 阶段验证：页数 5/21/6/16，共 48；errors、missing characters、overfull、undefined references、problems 共 0。`build_projects.py validate-receipts` 返回 OK（stale 0），`provenance.py check-batch` 返回 OK；三个生成器一致性检查也全通过。
+- 剩余任务：旧 review work items 仍绑定 stale attempt `f6d4e011…`；需要新建当前 attempt 工作项，之后完整复核 48 页。
+- 下一步：执行官方 `review_receipts.py prepare-batch --batch phase2-b60`，逐项校验四版 SHA/页数及连续页面，再并行启动四个版次的只读审查。
+- 已完成可验证子阶段（b60 当前 attempt 工作项）：官方 `prepare-batch` 为 4 个版次创建工作项，均绑定 attempt `38ec3c7e-4120-4410-87ee-9c79f8d1f923`，连续覆盖 5/21/6/16 页、共 48 页/384 checks，全为 pending。
+- 阶段修改文件：ignored `.work/phase2-b60/review/{试题版,解析版,简答版,印刷版}/gk-1987-regular-national-arts.json` 与本进度文件。
+- 阶段验证：4/4 工作项的 attempt、PDF 路径、SHA-256、页数和连续页码均与新 build receipt 匹配。
+- 下一步：并行按版次核查 48 页；检查具体视觉缺陷及可能的内容/答案泄漏，完成后由主会话复核失败证据并登记。
+- 并行审查工具状态：平台因 agent thread limit 再次拒绝创建四个版次审查代理；没有任何代理任务或文件改动。停止重试，改由主会话本地全页审查并记录工具限制。
+- 已完成可验证版式阶段（b60 第21题分页）：联系表后放大检查确认试题版第4页第21题被拆分、第5页仅余第21题第二问和第22题，导致页面大面积空白。仅在权威源 `1987/1987_数学真题_全国文_试题.md` 第21题前加 `\Needspace{12\baselineskip}`，没有改题文、数字、答案或解析；官方生成器同步 `questions.tex`。生成器、简答投影、版式壳一致性检查全部通过。
+- 阶段修改文件：1987 全国文科试题 Markdown、生成的 `questions.tex` / `answers.tex`、该卷 `provenance.json` 与 build receipt、`source-manifest.json`、本进度文件。provenance 工具检查指出题20规范化哈希受题间排版指令影响；对比确认仅题20题面哈希变化，其他21题题面及全部答案哈希不变。沿用既有三角色身份和逐题证据，刷新受影响哈希后由官方 `provenance.py import-batch --write` 原子提交 revision 3978；不是重做或伪造内容核验。
+- 阶段验证：`provenance.py check-batch` 通过；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 通过。正式四版构建事务 revision 3980，attempt `b95cb514-9795-4d60-8fb2-d0a191b65ee4`，四版成功，页数 5/21/6/16，无构建失败；批次保持 `compiled_pending_review`。
+- 剩余任务：本 attempt 还没有当前复核工作项；需确认第21题完整移至新页且其他页未产生新问题，再完成48页/384检查的当前 attempt 复核、正式登记、报告门禁、构建中间物清理与提交。
+- 下一步：刷新并核对当前 attempt 四版 review work items；重点高分辨率复核试题版第4–5页及其他受分页影响的末页，然后完成本批全页复核。
+- 已完成可验证来源说明纠错阶段（b60 第22题图形说明）：从上游 `deekur/gaokaomath` 取得固定源 `普通高考/1987/1987全国文.pdf`，SHA-256 `5716cf2083d31e5f4c766918730100cfd2b6eac94dfbee7bd75b7fb39020be71` 与本卷 source manifest 完全相同；原件为1页A3，核实第22题无配图，题面无需补图。仅将卷首“第5、8、18、22题有重绘图”改为“第5、8、18题有重绘图”；未新增图稿，也未改题目。原先第22题排版怀疑因此排除。
+- 阶段修改文件：1987 全国文科权威题源 Markdown、生成的 `questions.tex` / `answers.tex`、正式 build receipt 与 source manifest 派生状态、本进度文件；题面及答案逐题 provenance 哈希未受说明文字影响。
+- 阶段验证：题面/答案/版式三个生成器检查通过；正式重建 revision 3981，attempt `5887b697-f9ac-4151-89ac-914e02f590a4`，四版5/21/6/16页均成功，errors、missing characters、overfull、undefined references、problems 均为0；`validate-receipts` OK（stale 0）、provenance check OK、`git diff --check` 通过。
+- 剩余任务：attempt `5887b697…` 尚未绑定当前全页复核结果；前一 attempt `b95cb514…` 的观察不可直接登记，须按像素差复用未变化页并复核本次改动页。
+- 下一步：为 revision 3981 执行 `review_receipts.py prepare-batch`，渲染当前 PDF，与已审渲染比较像素，放大核对变更页后登记 48 页/384 项结论。
+- 已完成可验证阶段（b60 当前 attempt 四版全页复核）：当前 attempt `5887b697-f9ac-4151-89ac-914e02f590a4` 的 48 页全部完成视觉核查；与上次已检查渲染逐页比较后，最终版本只有四版首页因更正卷首图形说明而变化，重新放大复核；第21题分页受影响页此前已逐页放大检查，其余像素相同页沿用逐页观察。官方 finalizer revision 3983 登记 384 项：341 pass、43 not_applicable（解析/简答/印刷版的答案泄漏项，因版次设计含答案而不适用）、0 fail、0 pending；review 状态 `passed`，批次 `closed`。
+- 阶段修改文件：1987 全国文科 `receipts/review.json`、最终 `receipts/build.json`、批次报告 `reports/phase2-b60.md`、`source-manifest.json` 事务状态与本进度文件；review work items 保存在 ignored `.work/phase2-b60/`。
+- 阶段验证：finalizer 返回 `FINALIZED`；`review_receipts.py check-batch` 返回 `FINALIZED` 且无问题；四版 work items 与 build attempt、PDF SHA、页数完全一致。源 PDF 的 SHA 与 source manifest 一致；试题版无答案泄漏。所有已审 PDF 页面页眉页脚/题号/公式字形/图形/字号/分页均清晰，无缺字、裁切、异常重复或遮叠。
+- 剩余任务：需刷新六个全库报告投影并复核 `report.py check --all`；执行 review/report 定向测试及最终 scoped gates；清理本卷 build 中间物（仅保留四份 PDF），最终审 diff 并本地提交，不 push。
+- 下一步：按 report.py 支持的命令先检查并通过官方 `render --all` 刷新派生报告，再做测试和最终验收。
+- 已完成可验证阶段（b60 全库报告与定向回归）：官方 `report.py render --all` 以一个事务刷新并回读校验六个全库报告目标；随后 `report.py check --all` 通过，报告与 manifest 一致并保留未完成语料状态。`test_review_receipts.py` 66/66、`test_report.py` 11/11 均通过。
+- 阶段修改文件：六个 renderer 管理的全库报告投影、本卷 `reports/phase2-b60.md` 与本进度文件；无共享转换器/模板改动。
+- 阶段验证：全库报告检查返回一致；定向测试合计77通过；review check 仍为 `FINALIZED`；build receipt current、provenance 与生成器检查均通过。
+- 剩余任务：清理该卷四个 build 目录里的辅助编译文件，仅保留四份 PDF；之后重跑最终 receipts/review/report/provenance/generator gates，审阅完整 diff 并本地提交，不 push。
+- 下一步：仅对本卷四个已确认 build 目录运行 `latexmk -c -outdir=build`，验证四份 PDF 哈希不变且无中间产物遗留。
+- 已完成可验证阶段（b60 build 清理与最终 scoped gates）：对四个入口分别执行 `latexmk -c -outdir=build`，只清除辅助文件，正式 build 目录现在仅含四份 PDF。
+- 阶段修改文件：该卷 build 中的 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 辅助文件已删除且均被忽略；tracked 修改仍为本卷题源/生成物/收据、六份全量报告投影及本进度记录。
+- 阶段验证：PDF SHA 与正式回执一致（试题 `0b1cd557…`、解析 `9f6772c7…`、简答 `327c8db7…`、印刷 `5cfa4795…`）；build validation `OK`（1 succeeded、0 stale/failed），provenance、三个本卷生成器、review `FINALIZED`、全库 report check、66+11 定向测试及 `git diff --check` 均通过。
+- 剩余任务：最终审查完整 diff、确认暂存路径仅含 phase2-b60 与官方报告投影，创建本地提交；不 push。1952—2026 全语料目标仍继续，不能将本卷闭合视为项目完成。
+- 下一步：核对 Git status、逐项查看当前 batch 的题源/派生文件与收据差异，提交已验证内容；提交后确认工作树干净及 attempt/回执仍 current。
