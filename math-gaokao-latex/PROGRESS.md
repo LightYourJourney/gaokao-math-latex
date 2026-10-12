@@ -2568,6 +2568,11 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；54页×8项共432项，383 pass、49 not_applicable、0 fail/pending，绑定当前attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`。
 - 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
 - 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
+- 已完成phase2-b83逐页视觉复核阶段：接触表覆盖试题5、解析22、简答7、印刷18页；26页高分辨率复核覆盖试题全部5页、解析版封面及第12/13/17/20–22页、印刷版封面/第2–4/10/14–18页、简答版封面/第5/7页。题12土地沙化数据图、题19立方体图、题22流程图及候选页均清晰，未见缺字、遮挡、裁切、异常分页或答案泄漏。
+- 阶段修改文件：仅本进度文件；四份当前attempt复核工作项仍pending；页面预览仅在ignored `.work/phase2-b83/render-d5caa3af/`。
+- 验证结果：52页均已接触表检查，26页放大检查；当前attempt为`d5caa3af-ce5c-4c3d-ba8e-b220f791180c`，视觉检查未发现待登记缺陷。
+- 剩余任务：向52页×8项工作项登记416项结论（369 pass、47 not_applicable），运行官方finalizer；后续全库报告、批次门禁、定向测试、清理与PDF回执核验。
+- 下一步：提交本视觉复核checkpoint，再填写工作项并核验总数及attempt绑定。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
