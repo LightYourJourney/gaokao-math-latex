@@ -1963,3 +1963,7 @@
 - 已完成最终审查阶段（b64）：`git diff --check` 通过；精确 diff 共13个受跟踪路径，含1个规范解析源、官方生成的 answers/build/review 记录、manifest、批次/全库报告投影与本进度文件。逐项核对 README/报告投影仅同步 manifest 状态和印刷版16页结果；无题意/答案结论变化，无 PDF、PNG 或编译中间物入库。build receipt、provenance、review `FINALIZED`、issues、全库 report check 全通过；review/report 定向测试77/77通过。
 - 剩余任务：将已核验的13个路径精确暂存、检查 staged diff 后本地提交；提交后再验证工作树与当前回执。
 - 下一步：本地提交 phase2-b64（提交信息带 `[已核]`，因报告事务更新了 README 投影）；不 push。
+- 已完成阶段（phase2-b64 内容与回执本地提交）：13个受跟踪路径提交为 `c9b33877`（`[已核] docs(exams): 完成1987上海数学卷复核并修正分页`）；未 push。提交后 build receipt `OK`、review `FINALIZED`、provenance `OK`，工作树干净。
+- 阶段验收：1987上海数学卷四版构建通过（5/21/6/16页）、48页视觉复核通过、批次 `closed`；打印版孤立答案末页已修正；六份全量报告投影同步；定向测试77/77通过。无 PDF/图片入库。
+- 剩余任务：1952—2026 全语料目标仍未完成；更早批次中既有的来源/内容 blockers 仍保留。“41项待核”仍未映射到正式工作清单，不能计作已处理。
+- 下一步：按 manifest 顺序进入 phase2-b65（1988全国理科），先检查当前 Git diff 与本进度状态，再核验现有来源/provenance/build，避免重复转录和复核。
