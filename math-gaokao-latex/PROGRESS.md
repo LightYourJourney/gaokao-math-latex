@@ -2593,6 +2593,11 @@
 - 验证结果：`test_review_receipts.py` 66/66通过（45.173秒）；`test_report.py` 11/11通过（69.046秒）；共77项通过。首次测试会话的最终输出句柄未保留，待该次自然结束后重新运行以取得完整汇总，最终有效结果为上述第二次运行。
 - 剩余任务：清理四版LaTeX中间物与本批预览，按build receipt复核四版PDF页数/SHA；最终差异审阅并提交b83。
 - 下一步：提交测试checkpoint，执行四版`latexmk -c -outdir=build`并将本批预览整体移出项目工作目录。
+- 已完成phase2-b83构建产物清理与PDF核验阶段：四版入口均成功执行`latexmk -c -outdir=build`；build目录现精确保留试题、解析、简答、印刷四份PDF；当前ignored work目录（复核工作项及页面PNG/接触表，约13MB）整体移至可恢复目录`~/.Trash/phase2-b83-work.vr1p16/phase2-b83`。
+- 阶段修改文件：仅本进度文件与ignored构建/预览文件；PDF及LaTeX源文件保留。
+- 验证结果：四版页数5/22/7/18、SHA-256逐项与正式build receipt一致；build目录仅4个PDF、0个非PDF文件；build final receipt validator返回`OK：1卷`；52页预览已离开项目工作目录。
+- 剩余任务：以b83恢复预检checkpoint为基准复核tracked差异范围、`git diff --check`及工作树状态，提交最终阶段记录；整个语料后续批次仍未完成。
+- 下一步：执行b83最终差异审阅并提交最终checkpoint，不push、不自动开始下一批。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
