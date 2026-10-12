@@ -2455,3 +2455,8 @@
 - 验证结果：官方`build_projects.py validate-receipts --batch phase2-b78 --json`返回`INVALID`，问题为生成输入树变化及工具链指纹变化；因此旧构建/视觉结论不可作为当前attempt验收依据。工作树在本记录前干净，b77 checkpoint已提交。
 - 剩余任务：对b78执行正式四版构建，复核新attempt的每页视觉工作项，finalize并刷新全库报告；随后运行scoped gates、定向测试、清理和提交。
 - 下一步：按`build_projects.py build --manifest ... --batch phase2-b78 --formal`运行官方正式构建，不复用旧attempt的视觉结论。
+- 已完成正式构建阶段（phase2-b78）：官方formal build成功，当前attempt为`e9bbc700-e08e-45ea-8b4d-3ed85dcc1bba`；试题/解析/简答/印刷四版页数为5/22/6/18。
+- 阶段修改文件：本卷`receipts/build.json`、`source-manifest.json`及ignored构建PDF/LaTeX中间产物；未改题目、答案、provenance或视觉回执。
+- 验证结果：构建命令返回`COMPILED_PENDING_REVIEW`、0 failed；四版均`succeeded`、退出码0，错误/缺字/overfull/undefined references均为空；官方receipt校验返回`OK`，pending=1。现存四份ignored review工作项绑定更旧的attempt `d27cb2bf-9cff-45bf-9268-fae6fc2a6236`，408项均为空状态，不能复用。
+- 剩余任务：归档旧工作项后为当前attempt生成review工作项，逐页复核并登记；随后全库报告、门禁、测试、清理及提交。
+- 下一步：核对`prepare-batch`参数后，将旧b78 review工作项完整移至可恢复归档，再准备当前attempt的视觉复核输入。
