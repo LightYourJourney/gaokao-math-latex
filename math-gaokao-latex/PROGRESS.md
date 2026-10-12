@@ -3056,5 +3056,19 @@
 - 已完成phase2-b90修复后正式构建阶段：官方formal build在manifest revision 4090刷新两卷派生状态，并重建文/理四版。
 - 阶段修改文件：两卷`receipts/build.json`、`source-manifest.json`派生状态及本进度；题面、答案数学内容、图稿与provenance逐题证据未改。
 - 验证结果：文科attempt `d48780a3-34e0-4139-9a65-453a45b30784`，理科attempt `4e83bce5-52a4-46ee-a732-21ccb4749849`；8版均`succeeded`，文科页数5/20/7/17，理科5/22/7/18，共101页；两份build receipt的errors/missing characters/undefined references/overfull/build problems均为空。build validator为2 pending、0 stale/failed/invalid/missing；provenance `OK：2卷`；8份review workitem已重备并绑定新attempt。
-- 剩余任务：重渲染当前101页并完成800项逐页检查（710 pass预期、90 not_applicable、0 fail/pending）；之后finalize、全库投影/门禁与测试、清理和核对PDF页数/SHA。
+- 剩余任务：当前attempt视觉复核已完成，但须先修复生成物与canonical源一致性，再刷新workitem绑定并正式finalize；之后全库投影/门禁与测试、清理和核对PDF页数/SHA。
 - 下一步：提交formal-build checkpoint；仅使用当前attempt的PDF与workitems继续视觉复核，不沿用上一attempt页面图。
+- 已完成phase2-b90当前attempt视觉复核阶段（正式登记暂缓）：扫描文理四版8张接触表覆盖101/101页，并对候选页、图稿及修复分页页做高清复核；未发现除已修复孤标题外的新视觉失败。文科印刷版第14页、理科印刷版第13页确认标题/甲/第(1)问同页；理科印刷版第18页仅有两个答案框的大留白，与旧attempt同页完全一致，属既有排版，不纳入本次范围。
+- 阶段修改文件：仅ignored `.work/phase2-b90/review/`与`.work/phase2-b90-r4090/render/`；8 workitem已填808项检查（717 pass、91 not_applicable、0 fail/pending）。
+- 验证结果：`review_receipts.py check-batch`只读核验既有正式回执，报告其attempt/PDF绑定已stale；官方`finalize-batch`未写入正式文件，因两卷artifact状态stale而拒绝。根因为本阶段曾直接修改生成的`answers.tex`；`generate_projects.py --check`确实失败并指出两卷不一致。`solution_sources.py`已有canonical Markdown版式指令白名单，可将`\Needspace{10\baselineskip}`置于对应`**解析**`前并由官方生成器物化。
+- Correction / Ruling: `_含解析.md` 是确定性投影，不是生成器事实源；source manifest 指向 `_解析正文.md`、`_试题.md` 与`_答案要点.md`。将分页指令放进 `_解析正文.md` 的Q18/Q19题块、`**解析**`前；通过`solution_sources.py extract-batch`重建`_含解析.md`，再由`generate_projects.py`生成LaTeX。此前在投影文件上的改动已撤销。若正式重建后PDF SHA改变，只重审变化卷/版；若SHA完全相同，以逐PDF哈希证明复核可复用。
+- 已完成phase2-b90 source-of-truth定位与错误假设纠正阶段：`solution_sources.py check-batch`证实此前直接修改`_含解析.md`导致两卷投影不一致；`generate_projects.py --check`虽通过但没有消费该投影，生成答案仍为4行阈值，因此不得作为canonical验证。
+- 阶段修改文件：本进度、两卷`_含解析.md`已撤销的错误改动，以及两份canonical `_解析正文.md`中的分页指令（待官方提取/生成验证）；尚未提交。
+- 验证结果：确认`source_manifest.json`中`solution_body`是`_解析正文.md`、`combined_rendered`是`_含解析.md`；`solution_sources.py`实现明确从`solution_body`生成解析块和含解析投影。此前两组unittest通过（109/109、106/106），但未覆盖本卷端到端数据位置；当前正确验证须先看提取后生成LaTeX确有10行指令，再重编视觉确认。
+- 剩余任务：运行官方`solution_sources.py extract-batch --write/--check`和`generate_projects.py --write/--check`，确认10行指令实际落入两份`answers.tex`且artifact current；随后正式build并比较PDF SHA，再刷新当前attempt review绑定、finalize、全库报告/CSV与测试门禁，清理中间物并逐PDF核对页数/SHA。
+- 下一步：先通过canonical解析正文物化链，不重做转录/解题；仅当该链生成正确的指令后才正式重建。
+- 已完成phase2-b90正确事实源的分页指令物化阶段：将10行保留空间放入两卷`_解析正文.md`的Q19/Q18题块，撤销对投影`_含解析.md`的直接修改；官方事务重写解析正文投影、含解析投影与答案LaTeX。
+- 阶段修改文件：两卷`_解析正文.md`、`_含解析.md`、生成的`answers.tex`及本进度；README既有差异不纳入。
+- 验证结果：`solution_sources.py extract-batch --write`提交4目标；`check-batch`通过2卷×22题。`generate_projects.py --write`写入5目标，`--check`通过；生成的两份`answers.tex`均确含Q19/Q18前的`\Needspace{10\baselineskip}`。provenance仍`OK：2卷`；build validator准确报告两卷回执因`answers.tex`生成树变化stale，待正式重建。
+- 剩余任务：提交canonical解析源与其确定性投影；运行formal build生成当前attempt，比较新旧PDF页数/字节/SHA并依据相等性刷新workitems复核绑定或局部重审，再finalize、跑全库门禁/测试、清理并核验PDF。
+- 下一步：提交本源/投影checkpoint，然后formal build；不重做已经完成的101页视觉检查，除非PDF哈希证明内容变化。
