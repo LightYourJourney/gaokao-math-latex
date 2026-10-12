@@ -2357,3 +2357,8 @@
 - 最终验收：456项检查中404 pass、52 not_applicable、0 fail/pending；finalize、全库report render/check、7项scoped gates、77项定向测试、PDF页数/SHA核验及`git diff --check`均通过。源/PDF/TikZ保留，build仅留PDF，review工作项保留，PNG移入可恢复废纸篓；无图片/PDF/编译中间物入库。
 - 剩余任务：1952—2026全语料仍未完成；41项待核未找到权威映射，保持独立待办。
 - 下一步：预检manifest下一批phase2-b76，不重跑b75。
+- 已完成下一批预检阶段（phase2-b76，2000全国新课程文科）：manifest登记22题、6幅TikZ图、issues为空；固定源`普通高考/2000/2000全国新课程文(江西,山西,天津).pdf`为ready，来源仓SHA-256 `1a42ff954278b41b3e82084da549aa2ee5114738a10b8cfa15459798345a5b95`、Git blob `5443a40948c7ec931ee8b765252638537a2e316d`与登记一致，530405 bytes、A3横向2页；原卷目视确认题面与图稿。provenance包含22题转录记录、无冲突；issues、generated inputs、short answers、edition shells检查通过。
+- 阶段修改文件：仅本进度文件；源PDF只读，原卷预览仅在ignored `.work/phase2-b76/source/`。旧review工作项已原样复制到`.work/phase2-b76/archive/d0aa6a4a-59b6-49b6-9eee-8e77af2b8ebe/`并逐文件SHA验证，原工作项保留。
+- 验证结果：旧build attempt `15e80718-ea50-44a5-bcd1-6992d7eaa00d`因生成输入树/工具链指纹变化stale；provenance缓存与现场派生状态不一致；review receipt绑定旧attempt `e98a279b-c074-49c9-affe-964a8d10bf81`。旧工作项绑定attempt `d0aa6a4a-59b6-49b6-9eee-8e77af2b8ebe`，原有5/27/6/22页共60页、480项全部pass；因缺少可证明新旧PDF逐页像素相同的证据，不复用这些结论，归档留存。旧PDF回执页数5/27/6/22且历史日志无problems。
+- 剩余任务：formal rebuild、当前attempt工作项和全部新PDF逐页复核后finalize；全库报告、门禁/测试、清理与提交。41项待核仍无权威映射。
+- 下一步：提交b76预检checkpoint，再执行official formal build；确认新PDF后生成当前attempt工作项，历史pass工作项归档不覆盖。
