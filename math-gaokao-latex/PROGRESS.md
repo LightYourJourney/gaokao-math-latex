@@ -2548,3 +2548,8 @@
 - 验证结果：build receipt因生成输入树与工具链指纹变化而stale；旧review receipt attempt `061f10ed-51d2-42c7-ab1a-b4ba8dc5805d`与build attempt `53288f2f-e68e-4dcd-9ea8-54740b365d56`不匹配。官方provenance status确认`provenance_verified phase2-b80`。
 - 剩余任务：正式构建b80四版并同步派生状态；归档旧工作项、生成当前attempt复核输入并逐页登记；报告、门禁、测试、清理和提交。
 - 下一步：提交预检checkpoint，执行b80官方formal build；不复用旧构建/视觉结论。
+- 已完成正式构建阶段（phase2-b80）：官方formal build成功，当前attempt为`6219426c-2af9-4e1b-ae57-c6144b0c61cc`；四版页数5/23/6/20，共54页。
+- 阶段修改文件：b80 `receipts/build.json`、`source-manifest.json`及ignored编译产物；来源、题面、答案与provenance未改。
+- 验证结果：四版均`succeeded`且problems/log errors、缺字、overfull、undefined references均为空；receipt validator返回`OK`、待复核。旧review及四份工作项绑定旧attempt，432项pending不可复用。
+- 剩余任务：checkpoint构建状态；归档旧工作项并准备当前attempt视觉输入，逐页复核、登记，随后报告/门禁/测试/清理/提交。
+- 下一步：提交b80 build receipt/manifest；将旧工作项可恢复归档，再运行官方`prepare-batch`。
