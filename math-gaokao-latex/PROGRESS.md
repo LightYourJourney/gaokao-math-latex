@@ -2533,3 +2533,8 @@
 - 验证结果：receipt 1 succeeded且0 stale/missing/failed；provenance `OK：1卷`；review `FINALIZED`；生成、简答与壳检查各1套一致；issues校验退出码0。
 - 剩余任务：定向测试；清理LaTeX中间物与本批PNG，核验build仅含四版PDF且页数/SHA吻合；最终审阅和提交。
 - 下一步：提交gate checkpoint，依序运行`test_review_receipts.py`与`test_report.py`。
+- 已完成定向测试阶段（phase2-b79）：按序运行`test_review_receipts.py`和`test_report.py`，两组均通过。
+- 阶段修改文件：仅本进度文件；测试未修改正式数据。
+- 验证结果：review receipt测试66/66通过（43.397秒）；report测试11/11通过（67.021秒）；合计77项通过。
+- 剩余任务：清理四版LaTeX中间物与当前attempt PNG，核验build仅保留四版PDF且页数/SHA吻合receipt；最终差异审阅并提交。
+- 下一步：四版入口执行`latexmk -c -outdir=build`，再把本批渲染预览整体移入可恢复archive。
