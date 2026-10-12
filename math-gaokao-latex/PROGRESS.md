@@ -3221,3 +3221,11 @@
 - 阶段验证：`review_receipts.py check-batch` 返回预期 `VISUAL_FAILED` 且无报告陈旧问题；build receipt `OK`（stale 0），provenance `OK：1卷`，source manifest validate 通过。共享 finalizer 的 `test_review_receipts` 66/66、`test_report` 11/11 已通过。
 - 剩余任务：b59 因固定源缺图/缺字、题意和整题组证据不足保持阻塞；全语料尚有大量卷待处理。
 - 下一步：精确提交本次 b59 报告状态同步，再依计划选择最早可推进批次；b58/b59 不重做既有复核。
+
+### phase2-b93 中断恢复预检（2004 全国Ⅰ/Ⅱ文理四卷）
+
+- 已完成可验证阶段：在提交 b58/b59 报告状态同步后重新检查当前 Git 状态与 manifest。phase2-b93 是现有清单中最早未处理的新批次：2004 全国Ⅰ/Ⅱ文理四卷；四卷旧正式 build receipts 均 stale（生成输入树与工具链指纹变化），四版 16 个 ignored review work items 仍全为 pending，且绑定旧 attempt，不能复用。当前 manifest 页数合计157页；此前工作树中的三份 README 改动保持未触碰。
+- 阶段修改文件：本 `PROGRESS.md`。该预检未修改题源、receipt、PDF、工作项或 README。
+- 阶段验证：`build_projects.py validate-receipts --batch phase2-b93` 报4卷 stale；`review_receipts.py check-batch` 因同一 stale build 返回 `INVALID_OR_STALE`。读取确认四份现有工作项页数/页码骨架全 pending；与旧 attempt 不匹配，不会将其当作当前复核证据。
+- 剩余任务：先确认四卷 provenance、源/派生一致性及 blocker 清单；若源证据当前则以官方 formal build 生成新 attempt，刷新四版工作项并对全部新 PDF 逐页核查。
+- 下一步：运行 phase2-b93 专项 provenance 与四类生成一致性检查；只修复有证据的源问题，不因 receipt stale 重做已验证转录/解题。
