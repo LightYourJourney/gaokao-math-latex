@@ -2859,3 +2859,8 @@
 - 验证结果：8份工作项全部绑定当前build attempts（文科`7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`、理科`8bd7362c-9559-469d-8376-6a1765aff39e`）；页数4/20/6/16与5/22/7/16，合计96页×8项=768项pending；PNG计数96、接触表8。
 - 剩余任务：对96页完成逐页视觉检查，登记768项结论并核验无pending/fail后，才能运行正式review finalizer；之后全库报告、门禁、测试、清理及PDF回执核对尚未执行。
 - 下一步：按文/理分卷并行目检全部接触表与指定高分辨率关键页；主会话独立检查工作项覆盖和attempt绑定，不重跑formal build。
+- 已完成phase2-b86逐页视觉复核与结论录入阶段：文理两卷8张接触表覆盖全部96页；高分辨率复核文科试题第2页、解析第10页及理科试题第2/4页、解析第11/13页，重点核对Q11展开图与理科Q19空间几何图。未发现缺字、遮挡、裁切、异常分页或图稿标注问题。
+- 阶段修改文件：本进度文件与ignored `.work/phase2-b86/review/`八份当前attempt工作项；PNG和接触表留在ignored `.work/phase2-b86/render-7dd02bc5-8bd7362c/`；未改题面、答案、LaTeX源、正式review/build回执或manifest。
+- 验证结果：96页×8项=768项，681 pass、87 not_applicable（解答类版本的答案泄漏检查）、0 fail/pending；页级结论96/96 pass。八份workitem的build attempt、PDF SHA与页数均与正式build receipt一致（文科attempt `7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`，理科attempt `8bd7362c-9559-469d-8376-6a1765aff39e`）。
+- 剩余任务：尚未运行官方review finalizer、全库报告刷新、scoped gates及定向测试；尚未清理本批LaTeX中间物和渲染预览、核对最终PDF receipt并提交批次闭环。
+- 下一步：提交本视觉复核checkpoint后执行官方事务式`finalize-batch`并验证`FINALIZED`；不重跑已成功的formal build。
