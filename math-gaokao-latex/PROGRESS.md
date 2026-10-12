@@ -3038,3 +3038,8 @@
 - 验证结果：issues与source manifest通过；文理两卷generator、简答答案、edition壳各2套一致。ISSUE-0812至0816均为resolved：文科Q21原始条件/结论冲突按固定源保留并以反例说明，四条历史formal-build错误已resolved。两卷旧build attempts `bf748d0e-b222-4fe2-81d4-c11091fe9fc8`/`4ef5cb55-0373-4fad-8ee0-b32d03bd7d7a`因生成输入树/工具链变化stale；旧review attempts `ce688cb6-0828-4390-865d-c5d85c488568`/`a3e868cf-ffa3-4f07-b1f3-60eaad2d317d`不能证明当前PDF。8份workitem仍全pending，绑定更早attempt `1f1808bc-8f2e-464d-9f84-1c4091c94b26`/`c510fd0f-7bf9-4b1d-b63f-0d6b0b7fe905`，旧页数共100页/800项。provenance条目本身可核，但缓存状态与现场派生不一致，应由官方formal build刷新，不手改manifest。
 - 剩余任务：归档旧b90 workitems；按当前输入正式重建8版，fresh prepare后复核当前全部页面，登记finalize，刷新报告/CSV与全库门禁及测试，再清理中间物并核对8份PDF页数/SHA。
 - 下一步：提交b90恢复checkpoint，归档stale workitems后运行官方formal build；保留已通过的来源、转录、解题与provenance成果，不push。
+- 已完成phase2-b90当前输入formal build阶段：旧pending workitems已可恢复归档至`~/.Trash/phase2-b90-stale-review.ymbYEB/phase2-b90/`；官方formal build在manifest revision 4088生成两卷新attempt。
+- 阶段修改文件：两卷`receipts/build.json`、`source-manifest.json`派生状态与本进度；来源转录、题面、答案/解析、TikZ及provenance源未改。
+- 验证结果：文科attempt `19af91b3-1b4f-4078-9ff0-779c950ee160`、理科attempt `fddda1dd-5aa3-484c-9bf7-22f2184ac3c1`；8版均`succeeded`，文科页数5/20/7/17、理科5/22/7/17，共100页；errors/missing characters/undefined references/Overfull/build problems均为0；build validator 2 pending、0 stale/failed，provenance `OK：2卷`。
+- 剩余任务：为新attempt准备8份workitem并复核100页/800项；随后finalize、全库投影/门禁与测试、清理并核验8份PDF页数/SHA。
+- 下一步：提交build checkpoint，prepare新attempt workitems并按候选页/图稿页完成视觉复核，不重做已完成源内容。
