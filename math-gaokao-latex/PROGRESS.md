@@ -2180,3 +2180,7 @@
 - 阶段修改文件：仅本进度记录；两组测试均未修改正式数据。
 - 剩余任务：对四版执行`latexmk -c -outdir=build`，移除仅本轮生成的三套ignored渲染目录，确认build目录只留四份PDF且其SHA/页数与attempt `6fd0dcb2-1b74-40f7-8f53-bf08121e8d37`一致；随后最终差异审查并提交，不push。
 - 下一步：执行构建中间物与本轮PNG清理，保留PDF和review工作项。
+- 已完成构建物清理与PDF一致性阶段（phase2-b71）：四个入口执行`latexmk -c -outdir=build`后，build目录仅保留试题/解析/简答/印刷四份正式PDF；逐份`pdfinfo`页数和SHA-256均与当前build receipt一致（5/29/6/21页）。本轮三套ignored渲染目录已移入系统废纸篓 `~/.Trash/phase2-b71-review-renders.CIb26w/`（可恢复）；四份正式review work items仍保留。无PNG/JPEG或LaTeX中间产物入库。
+- 阶段修改文件：本进度记录；PDF仅保留在ignored build目录，渲染图已从工作树移走。
+- 剩余任务：最终核对tracked diff仅含本卷来源/生成文本、回执/manifest/报告投影与进度；复跑最后的`git diff --check`和必要scoped gates后按`[已核]`本地提交、不push。41项待核权威映射仍未知。
+- 下一步：审查精确diff/status和文件清单，确认无图片/PDF/中间物 tracked，再提交phase2-b71并核验干净工作树。
