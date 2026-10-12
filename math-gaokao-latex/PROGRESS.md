@@ -2518,3 +2518,8 @@
 - 验证结果：四份工作项绑定当前attempt `fa1ae42a-6efc-452e-b624-8d40b4a73f0e`；44页×8项共352项，312 pass、40 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
 - 剩余任务：checked finalizer登记新receipt；刷新全库报告，运行scoped gates和定向测试，清理PNG/中间物并核验PDF，最后审阅提交。
 - 下一步：提交视觉复核checkpoint，再运行`review_receipts.py finalize-batch-checked`登记phase2-b79当前attempt。
+- 已完成正式视觉回执登记阶段（phase2-b79）：官方checked finalizer返回`FINALIZED`，批次`closed`，报告`reports/phase2-b79.md`已写入。
+- 阶段修改文件：b79 `receipts/review.json`、build receipt最终状态、manifest派生状态、phase2-b79报告；未改正文、答案或provenance。
+- 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）。新attempt匹配；44页×8项共352项，312 pass、40 not_applicable、0 fail/pending。
+- 剩余任务：刷新全库报告，运行b79 scoped gates与定向测试，清理PNG和LaTeX中间物，验证PDF后最终审阅提交。
+- 下一步：提交回执登记checkpoint，再运行全库`report.py render --all`与`check --all`。
