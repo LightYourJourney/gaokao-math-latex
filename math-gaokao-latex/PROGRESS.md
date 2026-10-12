@@ -2076,3 +2076,27 @@
 - 阶段验收：1988广东文史类四版共59页，472项视觉检查419 pass/53 not_applicable/0 fail；官方 review 已 FINALIZED。全库报告、批次门禁、77项定向测试、PDF SHA核对与 `git diff --check` 均通过；build 目录仅保留四份 PDF，临时源文件/渲染图及编译中间物已清理。
 - 剩余任务：全语料目标仍未完成；用户提示的“41项待核”尚无权威清单映射，继续作为独立全局待办，不将本卷复核计作其关闭。1988广东理工卷 ISSUE-0785 的固定源缺图仍阻断该卷。
 - 下一步：提交本进度检查点并核实工作树干净；随后继续 manifest 后续批次，同时寻找41项待核的权威映射，不重复已完成的 b68 核验。
+- 下一阶段预检（phase2-b69，1988上海卷）：b68 后工作树干净，manifest 下一批为 `gk-1988-regular-shanghai`，当前 batch `compiled_pending_review`，纸卷 `compiled`。固定源 artifact 已登记且 Git blob 校验通过：SHA-256 `eba069161024fb508a36ecb51e8707afb1114c8e873548a9aff5c187635aa51a`、162789 bytes、6页；provenance 状态为 `provenance_verified`。旧报告显示49页曾完成视觉审查，但旧 attempt `fbaebb86-2048-4b8d-9773-de20f09d365e` 的 build receipt 当前已 stale（生成输入树和工具链指纹变化），不能复用旧 review。ISSUE-0790 已登记为 resolved，记录固定源缺选项及独立同题扫描补证；当前无本批 open issues。未修改题面、答案、provenance或图稿。
+- 阶段修改文件：仅本 `PROGRESS.md`；源、答案、provenance和现存 PDF 均未改动。
+- 剩余任务：正式重编 phase2-b69、按新 SHA 重新绑定四版工作项并复核49页，finalize 后刷新报告/门禁、跑定向测试、清理中间物并提交。本轮仍未找到“41项待核”的权威映射，不把本批当作该待办的替代。
+- 下一步：执行 `build_projects.py build --formal --batch phase2-b69`，检查四版日志与页数，再 `prepare-batch` 绑定新的当前 attempt。
+- 已完成正式构建与复核工作项刷新阶段（phase2-b69）：official formal build 创建当前 attempt `b9b475ea-6fb7-4430-8e9e-46c1534e7f9b`，试题/解析/简答/印刷版均 succeeded，页数5/21/6/17共49页。receipt build validator与provenance batch check均`OK：1卷`；四版日志未检出 missing character、overfull、undefined reference、TeX error，problem列表为空。官方 `prepare-batch` 已生成四个当前工作项，全部绑定该 attempt及相应 PDF SHA，候选页为试题2、解析10、简答2、印刷2。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json` 派生构建状态、本进度文件及 ignored `.work/phase2-b69/review/` 四份工作项；LaTeX题面、答案、provenance与图稿未改。
+- 剩余任务：逐页复核当前49页（含三个TikZ图稿与候选页高清检查），填写并官方finalize；再刷新报告、跑门禁和测试、清理中间物并提交。
+- 下一步：渲染当前四版49页，浏览接触表并高清检查候选页和题3/5/8图稿所在页；不沿用旧attempt视觉结论。
+- 已完成当前 attempt 逐页视觉复核阶段（phase2-b69）：四版49页接触表全部查看；试题/简答/解析/印刷版的页序与版面连续，题3容器截面图、题5四面体图、题8四个函数选项图及已补证的题2(6)选项均高清核查，文字与标注清楚。自动候选页（试题2、解析10、简答2、印刷2）均无异常。末页高清核验：解析版第7题推导与两个答案框齐全，印刷版末页对应续解完整，简答版7题答案完整；留白是内容自然收尾，无孤行、裁切、遮挡。四工作项仍绑定当前 attempt `b9b475ea-6fb7-4430-8e9e-46c1534e7f9b` 与PDF SHA；392项填写为348 pass、44 not_applicable（非试题版答案泄漏项）、0 fail/pending。
+- 阶段修改文件：仅 ignored `.work/phase2-b69/review/<版次>/gk-1988-regular-shanghai.json` 四份工作项及本进度文件；视觉输出留在 ignored `.work/phase2-b69/render-b9b475ea/`，不入库。
+- 剩余任务：官方finalize-batch；刷新六份全库报告、门禁和定向测试；清理本批图像与LaTeX中间物、核对PDF SHA后本地提交。
+- 下一步：运行 `review_receipts.py finalize-batch` 登记已完成的49页视觉结论，再执行报告、门禁与测试。
+- 已完成官方复核登记阶段（phase2-b69）：`review_receipts.py finalize-batch` 返回 `FINALIZED：phase2-b69`，无视觉失败；最终review receipt与 attempt `b9b475ea-6fb7-4430-8e9e-46c1534e7f9b`、四份PDF页数和SHA相绑定。
+- 阶段修改文件：该卷 `receipts/review.json`、manifest派生状态、`reports/phase2-b69.md`、四份 ignored review work items及本进度文件。
+- 剩余任务：刷新全库报告投影，执行 build/provenance/review/issues gates 与定向测试，核验PDF SHA，清理本批渲染图和编译中间物，然后本地提交、不 push。
+- 下一步：运行 `report.py render --all` 后 `check --all`，再并行执行 b69 scoped gates 与 review/report tests。
+- 已完成报告、门禁与定向测试阶段（phase2-b69）：`report.py render --all` 以单一content事务写入并回读六份全库投影，`check --all`确认输出与manifest一致且保留批次状态；build receipt `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b69`、issues ledger validate均通过。`test_review_receipts.py` 66/66与`test_report.py` 11/11通过。
+- 阶段修改文件：该卷 build/review receipts、source-manifest派生状态、phase2-b69报告、全库报告/索引投影及本进度文件；无题面/答案/provenance/TikZ内容改动。
+- 剩余任务：清理本批检查PNG/JPEG与LaTeX中间产物，核对四份PDF SHA、最终scoped gates与diff，然后本地提交（不push）。41项待核清单映射仍未知。
+- 下一步：对四个入口执行 `latexmk -c -outdir=build`，只清理本批忽略渲染目录；验证build目录仅有四份PDF且哈希与receipt吻合。
+- 已完成构建物清理与PDF一致性阶段（phase2-b69）：四个入口执行 `latexmk -c -outdir=build` 后，build目录仅保留四份正式PDF；逐份实际SHA与当前build receipt吻合（试题 `90d722b0…f0bc0`、解析 `aec0b3b9…a1cca`、简答 `6fe31498…c8fd8`、印刷 `a5e6cb74…f4b5f`）。仅删除本轮忽略目录 `.work/phase2-b69/render-b9b475ea/`，正式review work items保留；未触碰其他批次产物。
+- 阶段修改文件：受跟踪变更为该卷build/review receipts、manifest派生状态、phase2-b69报告、全库报告/索引投影及本进度文件；无PDF、PNG/JPEG或编译中间文件入库，无题面/答案/来源/图稿变更。
+- 剩余任务：最终复验build/provenance/review/issues scoped gates与 `git diff --check`，审查精确差异，然后按 `[已核]` 本地提交并复核干净状态。全库1952—2026目标与41项待核映射仍未完成。
+- 下一步：核对本批diff仅含预期回执/报告投影/进度文本，通过最终门禁后提交（不push）。
