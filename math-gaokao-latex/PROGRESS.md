@@ -901,4 +901,10 @@
 - 已完成子阶段：1985 上海文史类四版正式构建成功，manifest revision 3919；build attempt `f7bcfd6c-2b86-4f88-bda9-6b41b4340450`。页数仍为试题 4、解析 17、简答 5、印刷 13，共 39 页；零 warning、无 build failure。
 - 阶段验证：build receipt validator `OK`，无 failed/invalid/missing/stale；当前 1 卷待视觉复核。两条预存来源问题 ISSUE-0761/0762 状态保持 open，未更改问题事实或题目源。
 - 阶段修改文件：本进度文件、1985 上海文史类 build receipt/PDF；未改试卷题目、答案、provenance、图稿或生成源。
-- 下一步：提交本阶段进度 checkpoint，再为当前 build attempt 准备逐页 review work items。
+- 已完成子阶段：为当前 attempt 准备 4 份 review work items，覆盖 39 页；候选页为印刷版 p3、其余三版 p2。
+- 阶段验证：4/4 工作项绑定 attempt `f7bcfd6c-2b86-4f88-bda9-6b41b4340450`，PDF 页数及 SHA-256 与构建回执一致；每页八项齐全，共 312 项初始 pending。
+- 阶段修改文件：本进度文件与忽略的 `.work/phase2-b54/review/` 当前工作项；未改试卷内容。
+- 已完成子阶段：39 页已渲染为 4 张接触表并逐页浏览；4 个自动候选页与 ISSUE-0761/0762 涉及题目所在页合计 11 页完成 160dpi 高分辨率复核。固定源未见第 5、8 题“如图”所指图形，页面注记忠实保留该事实，未补绘；没有发现新增缺字、裁切、公式/图稿异常、答案串版或异常分页。
+- 阶段验证：接触表覆盖 39/39 页、4/4 接触表通过；候选页及来源问题关联页共 11 页高分辨率复核通过。4 份当前 attempt 工作项登记 39 页 × 8 项共 312 条 pass、0 pending、0 warning exemption；两条来源问题保持 open、non-blocking；`git diff --check` 通过。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b54/review/` 下 4 份工作项；接触表、39 页预览与高分辨率图位于 `/tmp/gk-phase2-b54-review.wtXBr3/`；未更改试卷源或 PDF。
+- 下一步：提交本阶段进度 checkpoint，运行事务 finalize 更新正式 review receipts 与批次状态。
