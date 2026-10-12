@@ -3317,3 +3317,11 @@
 - 验证结果：`manifest_csv.py --check`=`当前且775行`；`report.py check --all`=`报告输出与全量 manifest 当前一致；未完成状态已在报告中保留`。本阶段未改论文、receipt或PDF。
 - 剩余任务：清理四卷 build 目录中除PDF以外的编译中间物；可恢复归档本批忽略目录中的页面 PNG/联系图；之后核对16份PDF SHA、字节数、页数与 build receipt，执行清理后门禁并提交剩余完成内容。
 - 下一步：逐卷检查精确 build 目录及文件清单，再执行 `latexmk -c -outdir=build`，保留PDF与LaTeX源。
+
+### phase2-b93 编译中间物清理与PDF回执核验
+
+- 已完成可验证阶段：四卷各执行 `latexmk -c -outdir=build`；四个 `build/` 目录现各只含四版正式PDF，四卷的7份LaTeX源均保留。将本批 229 个临时复核/渲染文件（35 MB）可恢复归档至 `~/.Trash/phase2-b93-finalized.5vJ9bE/phase2-b93`，项目 `.work/phase2-b93` 已清空。
+- 阶段修改文件：仅四卷 `build/` 中非PDF编译辅助文件被清理及本 `PROGRESS.md`；项目TeX源、16份PDF和正式receipt均保留。
+- 验证结果：16/16 PDF的SHA-256、字节数、页数逐一匹配正式 build receipt；review=`FINALIZED`，build validator=`OK`（4 succeeded、0 pending/stale），provenance=`OK：4卷`，source manifest validate通过。此前 `manifest_csv --check` 和 `report.py check --all` 均通过；`git diff --check` 待最终提交前再跑。
+- 剩余任务：审阅本批最终 tracked diff，保留三份既有 README 差异不暂存；提交最后的进度/清理阶段记录。phase2-b93 已闭环，但1952—2026全语料及后续批次仍未完成。
+- 下一步：复查 Git 状态、暂存范围和diff，仅提交本进度文件；不push。
