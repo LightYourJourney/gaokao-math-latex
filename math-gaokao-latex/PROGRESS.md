@@ -1043,3 +1043,8 @@
 - 剩余任务：实现并验证单题 Q6 provenance 与 ISSUE-0770 的原子更新，同时保持其余 13 题记录字节/语义不变；答案泄漏选择仍未决；之后重建两卷八版并逐页复核新 attempt。
 - 下一步：使用共享 state transaction 校验当前 revision、重算文科 Q6 摘要、更新 ISSUE-0770 为有固定源证据支持的 resolved 状态，并只为实际更正创建必要的问题记录；提交前核对事务目标只含文科 provenance、问题账及 manifest 状态投影。
 - 更正前条核验范围：`check-batch` 每卷只报告首个过期摘要；逐题重新计算后确认文科 Q7 的题面与答案摘要也已过期。实际 provenance 摘要更新范围为文科 Q6 题面、Q7 题面及答案；理科 7 题均无题面或答案摘要漂移。前条所述“Q7 已匹配”不正确，按本条结果继续；其余逐题证据与角色未见漂移。
+- 已完成可验证子阶段（局部 provenance 与问题账原子刷新）：在仓库锁内以 state transaction 更新文科 Q6 题面摘要、Q7 题面与答案摘要；将 ISSUE-0770 依固定源第 3—4 页证据标为 resolved 并关联文科 Q7；为理科 Q2 第（8）小题错误分母建立 resolved 的 ISSUE-1038 并关联该题。保留全部三角色身份与既有证据；其余 11 题的全部 provenance 字段未变。事务同批提交两份 provenance、`missing-issues.md` 与 manifest，revision 3931。
+- 阶段修改文件：文史类与理工农医类 `provenance.json`、`missing-issues.md`、`source-manifest.json`、本进度文件。
+- 阶段验证：两卷 `provenance.py check-batch` 返回 `OK`；状态派生为文科 `answers_verified`、理科 `editions_generated`、批次 `provenance_verified`；`issues.py validate`、`source_manifest.py validate`、`git diff --check` 均通过。提交前逐字段断言仅涉及文科 Q6/Q7、理科 Q2 的摘要/issue 关联，角色身份与答案/转录证据未被改写。
+- 剩余任务：旧 build receipts 与 review work items 不能代表更正后的来源状态；两卷八版需重新正式构建并为当前 attempt 逐页复核。两卷试题版首页编辑说明仍泄漏答案 `11π/6` 与 `−π/6`，尚未获得对“修订说明后重建”或“保留原文并登记视觉失败”的选择。中间产物清理、正式回执 finalize、scoped gates 与全量报告更新尚未完成。
+- 下一步：先等待首页答案泄漏处理选择；选定后按该边界生成新 attempt、复核新构建中所有变化页（不复用旧 attempt 页面结论），再登记正式复核与收尾门禁。

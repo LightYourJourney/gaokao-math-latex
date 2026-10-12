@@ -12138,14 +12138,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源先说直角三角形 AC=2、BC=3，随后在折成直二面角后给 AB=√7；折叠前斜边应为 √13，源解答按折叠后的空间距离使用 √7。",
+  "current_evidence": "固定源 PDF 第 3 页（原卷第 36 页）题面与第 4 页（原卷第 37 页）解答均为抛物线 y^2=px 与圆 (x-2)^2+y^2=3 相交问题；本库第 7 题已按固定源更正。旧登记的折叠题及 AB=√7 语义不属于本卷第 7 题，原歧义据此关闭。",
   "fingerprint": "ed9ad51f816ff0bad0c56146d5e30333d14c1d790936fa9065da8c6cfc129a5a",
   "impact": "non_blocking",
   "paper_id": "gk-1986-regular-shanghai-arts",
   "question_id": "gk-1986-regular-shanghai-arts-q07",
-  "resume_action": "取得同版更清晰题面，确认 AB=√7是否明确指折叠后的空间距离；确认前保留上下文解释。",
+  "resume_action": "已按固定源第 3—4 页恢复本题；若发现新的同版来源异文，另立可核验问题。",
   "source_id": "src-d2fb778ac710a05ac590cdbb3594ceac90133b3d15047ae12b1dbb725f991d10",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -16918,5 +16918,22 @@
   "resume_action": "已在新一次正式构建中通过，无需动作",
   "status": "resolved",
   "type": "compile-error"
+}
+```
+
+## ISSUE-1038
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 3 页第二大题第（8）小题答案为 7。旧解析分母写作 cosθ−sinθ，却按 sinθ−cosθ 代入并得 7；现已按余切差角恒等式改正，分母与代入一致且结果为 7。",
+  "fingerprint": "682fa6fefff14b55e971528b27b9dec00fb1559a31e0639679244886add4b02e",
+  "impact": "non_blocking",
+  "paper_id": "gk-1986-regular-shanghai-science",
+  "question_id": "gk-1986-regular-shanghai-science-q02",
+  "resume_action": "已按固定源答案表及余切差角恒等式更正；未来改动时重新核对符号与代入。",
+  "source_id": "src-194e8e0291756d4efe602fdad56cd93f41da514be669a940d5510dedcc6bc2f4",
+  "status": "resolved",
+  "type": "answer-conflict"
 }
 ```
