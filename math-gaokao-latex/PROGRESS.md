@@ -2465,3 +2465,8 @@
 - 验证结果：prepare-batch成功生成4份工作项，均绑定当前构建；待复核页面共51页、408项（试题5、解析22、简答6、印刷18页，每页8项），尚未填写任何视觉结论。
 - 剩余任务：渲染并逐页复核当前四版PDF，填写所有适用工作项并由官方finalizer登记；之后执行全库报告、门禁、测试与清理。
 - 下一步：生成四版页面接触表并完成全页覆盖；图形页及版面候选页再高分辨率检查。
+- 已完成逐页视觉复核阶段（phase2-b78）：四版接触表覆盖全部51页；试题版5页全部110dpi放大检查，另放大检查四版封面/候选页、4幅登记图稿的题干与解析页、解析版题17跨页及末页、简答版/印刷版末页。未见缺字、遮挡、裁切、答案泄漏或异常分页。
+- 阶段修改文件：仅ignored `.work/phase2-b78/review/`四个当前attempt工作项；四版PNG预览仅位于ignored `.work/phase2-b78/render-e9bbc700/`；旧空白工作项保存在可恢复archive。
+- 验证结果：工作项绑定当前attempt `e9bbc700-e08e-45ea-8b4d-3ed85dcc1bba`；51页×8项共408项，362 pass、46 not_applicable（非试题版答案泄漏检查）、0 fail/pending。finalize前`check-batch`提示正式review receipt绑定旧attempt，正是当前待登记状态。
+- 剩余任务：通过官方checked finalizer登记新视觉receipt；之后刷新全库报告，运行scoped gates与定向测试，清理LaTeX中间物和PNG并提交。
+- 下一步：运行`review_receipts.py finalize-batch-checked`登记phase2-b78当前attempt视觉结论。
