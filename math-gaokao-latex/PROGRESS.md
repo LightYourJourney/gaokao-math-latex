@@ -3301,3 +3301,11 @@
 - 验证结果：本卷39页/312检查项，221 pass、91 not_applicable、0 fail、0 pending。四卷合计157页/1256检查项，888 pass、368 not_applicable、0 fail、0 pending；项目复核器页结构校验通过，16份工作项的 build attempt、PDF SHA与页数均与当前receipt一致。`git diff --check` 通过。
 - 剩余任务：视觉检查已全覆盖；须执行四卷事务 finalize，核验正式review/build/provenance门禁，刷新manifest CSV/报告投影，清理编译中间物及临时渲染图，最后核对16份PDF回执并提交批次完成内容。全语料仍有后续年份/批次待处理。
 - 下一步：调用官方 `review_receipts.py finalize-batch --batch phase2-b93`；检查返回值及事务输出，不重复目检、渲染或构建。
+
+### phase2-b93 四卷视觉复核事务登记
+
+- 已完成可验证阶段：官方 `review_receipts.py finalize-batch` 返回 `FINALIZED`，事务 revision 4108；四卷状态关闭，正式 review receipt、批次报告、issues 与 manifest 状态同事务登记。
+- 阶段修改文件：四卷 `receipts/review.json`、`reports/phase2-b93.md`、事务涉及的 `missing-issues.md` 与 `source-manifest.json`、本进度；题源和PDF未改。
+- 验证结果：`review_receipts.py check-batch`=`FINALIZED`；build receipt validator=`OK`（4 succeeded、0 pending/stale）；`provenance.py check-batch`=`OK：4卷`；source manifest validate通过。`manifest_csv.py --check`发现 CSV 尚未刷新，故未记为通过；全库报告投影也待更新。
+- 剩余任务：刷新manifest CSV和全库报告投影；清理编译辅助产物与`.work/phase2-b93`渲染/复核图；核对16份PDF的SHA、字节数、页数与receipt；最终门禁并提交本批内容，不push。全语料尚有后续批次。
+- 下一步：按官方入口刷新CSV和报告；不重跑构建、provenance或页面复核。
