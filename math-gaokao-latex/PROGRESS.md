@@ -2879,3 +2879,8 @@
 - 验证结果：`python3 -m unittest discover -s math-gaokao-latex/tests -p test_review_receipts.py`通过，66/66项，42.775秒。
 - 剩余任务：`test_report.py`尚未运行；随后仍需清理LaTeX中间物/预览、核对最终PDF及SHA并审阅提交范围。
 - 下一步：提交此测试checkpoint后运行报告测试。
+- 已完成phase2-b86全库报告回归测试阶段：运行`test_report.py`覆盖报告投影生成与一致性检查。
+- 阶段修改文件：仅本进度文件；测试未修改正式报告/回执或报告投影。
+- 验证结果：`python3 -m unittest discover -s math-gaokao-latex/tests -p test_report.py`通过，11/11项，67.211秒；与此前review receipt测试合计77项通过。
+- 剩余任务：LaTeX编译中间物与本批PNG/接触表仍待清理，需验证8份PDF页数/SHA匹配final receipt，再最终审阅并提交非README文件。
+- 下一步：提交测试checkpoint，按四个edition入口分别执行`latexmk -c -outdir=build`，仅保留PDF；将`.work/phase2-b86`整体移入可恢复归档。
