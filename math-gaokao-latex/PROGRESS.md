@@ -3023,3 +3023,8 @@
 - 验证结果：workitem绑定文科attempt `f8024a60-b55f-4db8-bca1-f20da000de9f`、理科attempt `824b2f73-377d-4516-9254-b3d03bd1fc75`，覆盖98/98页、784/784检查（698 pass、86 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4086；随后`check-batch` FINALIZED无问题，build validator 2 succeeded/0 stale/failed/pending，provenance `OK：2卷`。
 - 剩余任务：b89需刷新全库report投影及manifest CSV，运行生成器/简答/edition、report门禁与定向回归测试；清理8版编译中间物、可恢复归档预览/workitems，核验8份PDF页数/SHA并审阅提交。此前b88的六目标report投影也尚未刷新；README安全边界待用户回复。
 - 下一步：提交本视觉复核checkpoint；继续做b89全库投影以外可安全执行的校验/测试与产物核验，并在README选择明确后统一刷新全库投影。
+- 已完成phase2-b89全库来源/报告投影与定向回归测试阶段：manifest CSV及六目标报告已按当前manifest刷新；两卷生成器、简答答案、edition壳检查通过。
+- 阶段修改文件：`manifest.csv`、六个全库报告投影及本进度。三份README由官方生成器更新为当前投影，但仍保持未暂存/未提交供人工复核；其余三份报告与CSV可纳入本批提交。
+- 验证结果：CSV `--check`确认775行当前；report render以一个content事务写入并回读六目标，`report.py check --all`通过且保留全库未完成状态；`test_review_receipts.py` 66/66通过（41.973秒），`test_report.py` 11/11通过（71.231秒）。
+- 剩余任务：清理b89八版编译中间物、将预览/workitems可恢复归档并核对8份PDF页数/SHA；最终审阅和提交b89剩余非README正式改动。1952—2026全语料与后续manifest批次仍未完成。
+- 下一步：提交全库投影/测试checkpoint（排除三份README），再清理与核验PDF；b89闭环后继续manifest下一批。
