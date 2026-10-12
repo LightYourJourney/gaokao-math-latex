@@ -2411,3 +2411,9 @@
 - 验证结果：`build_projects.py validate-receipts`与`provenance.py check-batch`均返回`OK：1卷`；receipt记录的四份PDF SHA已写入当前attempt。
 - 剩余任务：为新attempt创建当前复核工作项，逐页复核64页并finalize；随后报告刷新、门禁/测试、清理与提交。
 - 下一步：提交正式构建checkpoint，再由官方`review_receipts.py prepare-batch`生成绑定本attempt及PDF SHA的工作项。
+- 已完成当前attempt复核工作项准备阶段（phase2-b77）：官方`prepare-batch`创建四版工作项，均绑定attempt `ae3fe0ca-63be-49df-a7d9-eabc793b9a63`及对应PDF SHA；64页×8项共512项均为pending。
+- 阶段修改文件：四份ignored `math-gaokao-latex/.work/phase2-b77/review/`工作项；未改正式review receipt或正文。
+- 验证结果：工作项覆盖6/29/7/22页、512项全部pending；旧attempt `c5ec5a33-224d-4a5b-8740-e96ecdda6b3e`的正式review receipt仍保留512项pass，但不复用旧视觉结论。`prepare-batch`覆盖了旧的ignored工作草稿；其正式结论仍由原tracked receipt完整保留，未发现其他副本。
+- 纠正记录（phase2-b76）：项目临时目录实际位于`math-gaokao-latex/.work/`；此前检查根目录`.work/`导致误报预览目录不存在。现已把b76的2张source PNG及93个render文件整体移至可恢复目录`~/.Trash/phase2-b76-review-renders.XbvLok/`；b76 review工作项与旧工作项archive均保留。此前称“预览目录已不存在”的记录以本纠正为准。
+- 剩余任务：逐页复核b77当前64页并finalize；随后报告刷新、门禁/测试、清理与提交。
+- 下一步：检查当前四版PDF并生成64页接触表，放大检查候选页与全部图稿页后填写当前attempt工作项。
