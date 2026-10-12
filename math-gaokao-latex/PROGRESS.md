@@ -3087,3 +3087,9 @@
 - 验证结果：8/8 build目录内容严格等于4份版本PDF；逐份PDF的SHA-256、字节数、pdfinfo页数均与正式build receipt相符（文科5/20/7/17页，理科5/22/7/18页）；官方`build_projects.py validate-receipts --require-final`返回`OK：2 卷`，`review_receipts.py check-batch`返回`FINALIZED：phase2-b90`；`git diff --check`通过。报告/CSV阶段提交为`4480d9e4`。
 - 剩余任务：本阶段b90已闭环；三份全库README投影仍留作人工复核且未提交。全语料与后续批次未完成，本次不启动b91；不push。
 - 下一步：本次阶段到此验收停止；后续按既定manifest顺序另行开始下一批，并继续逐阶段更新本文件。
+- 已完成恢复核对与phase2-b91现状门禁阶段：计划 `2026-09-15-gaokao-2002-national-old.md` 和批次报告记载的两卷内容/逐页复核曾闭环，但当前官方 build 回执 validator 发现两卷回执均因生成输入树及工具链指纹变化失效，review gate 随之 stale；provenance 缓存仍为 `compiled`/`compiled_pending_review`，与现场派生状态不同。
+- 阶段修改文件：仅本进度文件；当前既有三份README差异保持未暂存/未提交。
+- 验证结果：`source_manifest.py validate`、两卷 `solution_sources.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过；build gate 为 `INVALID：2卷`，review gate 为 `INVALID_OR_STALE`，provenance gate 仅报告两卷与批次缓存状态不一致，无逐题证据冲突。并发执行三个带仓库锁的只读生成检查曾造成锁竞争；确认无存活持锁进程后串行重跑，三项均通过。
+- Ruling：不重做已存在的2002文/理转录、解题与TikZ内容；按官方事务对两卷正式重建，并基于新attempt重新逐页复核后finalize。依据是来源与生成器校验全部当前，但build/review回执均不能证明当前工具链产物；代价是重复进行一次全页目检。
+- 剩余任务：归档旧b91 workitems；正式构建8版、刷新当前视觉workitems并检查108页，finalize后复跑本批和全库投影/门禁/定向测试，清理中间物并逐PDF核验回执。
+- 下一步：提交此恢复checkpoint，再按官方 `build_projects.py build --formal --batch phase2-b91` 事务刷新派生状态；不重做来源转录与解题。
