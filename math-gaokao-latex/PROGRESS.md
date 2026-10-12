@@ -2568,6 +2568,15 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；54页×8项共432项，383 pass、49 not_applicable、0 fail/pending，绑定当前attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`。
 - 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
 - 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
+
+## 恢复续接（2026-10-13）
+
+- phase2-b83技术闭环已完成；报告汇总的3个README仍待用户人工复核，未绕过该提交规则。
+- 已完成phase2-b84恢复预检（2001豫粤卷）：来源、题面、答案及三份图稿已在本库；官方manifest无issue，provenance为`provenance_verified`。
+- 阶段修改文件：仅本进度文件及ignored SDD恢复账本；未修改b84题面、答案、图稿或provenance。
+- 验证结果：source manifest与issues校验、生成题面、简答答案和四版壳`--check`均通过；build receipt报告旧attempt因生成输入树/工具链指纹变化stale；旧review也因绑定attempt过期，四版共52页/416项均pending。历史页数为4/22/6/17。
+- 剩余任务：以当前输入正式重建b84四版，为新attempt生成复核工作项、覆盖全部页面并登记；随后全库报告、门禁、定向测试、清理、PDF回执核验和提交。b83三个README投影的人工复核仍待用户回复。
+- 下一步：提交b84预检checkpoint后执行官方formal build；不重做转录、独立解题或provenance核验，不push。
 - 已完成phase2-b83逐页视觉复核阶段：接触表覆盖试题5、解析22、简答7、印刷18页；26页高分辨率复核覆盖试题全部5页、解析版封面及第12/13/17/20–22页、印刷版封面/第2–4/10/14–18页、简答版封面/第5/7页。题12土地沙化数据图、题19立方体图、题22流程图及候选页均清晰，未见缺字、遮挡、裁切、异常分页或答案泄漏。
 - 阶段修改文件：仅本进度文件；四份当前attempt复核工作项仍pending；页面预览仅在ignored `.work/phase2-b83/render-d5caa3af/`。
 - 验证结果：52页均已接触表检查，26页放大检查；当前attempt为`d5caa3af-ce5c-4c3d-ba8e-b220f791180c`，视觉检查未发现待登记缺陷。
@@ -2739,3 +2748,10 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；50页×8项共400项，354 pass、46 not_applicable、0 fail/pending，绑定当前attempt `5eba94fd-9c4b-4c45-831e-43f2165592dd`。
 - 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
 - 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
+
+## 最新恢复状态（2026-10-13）
+
+- phase2-b83（2001上海理科）已正式闭环；仅三份生成的README汇总投影仍待用户人工复核后提交，本会话不绕过该门槛。
+- 当前接续phase2-b84（2001豫粤卷）：provenance有效，来源/issue/generator/简答/四版壳校验通过；旧build attempt因输入树和工具链变化stale，旧复核项绑定旧attempt，52页/416项待新构建后重审。
+- 本次恢复预检未改b84内容或正式回执；剩余为formal build、新attempt逐页复核与finalize、报告/门禁/测试、清理和PDF核验。
+- 下一步：提交b84预检记录后按计划正式重建；不重做已有转录、解题或provenance，不push。
