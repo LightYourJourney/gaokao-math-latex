@@ -2624,6 +2624,11 @@
 - 验证结果：试题/解析/简答/印刷版分别5/22/7/18页，均`succeeded`；errors、missing characters、overfull、undefined references及problems均为空；build validator为1 pending、0 stale/failed，provenance `check-batch`返回`OK：1 卷`。
 - 剩余任务：旧视觉回执/工作项不绑定当前attempt；需准备新工作项并复核52页、登记416项，后续报告、门禁/测试、清理与最终提交。
 - 下一步：提交当前build回执checkpoint，再为attempt `d5caa3af-cec5-4c3d-ba8e-b220f791180c`准备review工作项并按全页+候选页复核。
+- 已完成phase2-b83当前attempt复核准备阶段：官方`prepare-batch`为新build生成四个工作项，替换了旧attempt绑定文件。
+- 阶段修改文件：仅ignored `.work/phase2-b83/review/`四份工作项；tracked文件无变化。
+- 验证结果：四版均绑定attempt `d5caa3af-cec5-4c3d-ba8e-b220f791180c`，连续覆盖试题5、解析22、简答7、印刷18页，共52页×8项=416项pending；算法候选页为试题1、解析20、简答1、印刷16。
+- 剩余任务：逐页检查全部52页，放大复核题12/19/22图稿与候选页，再更新视觉回执。
+- 下一步：渲染四版全页接触表，按当前PDF确认三幅图稿的题面/解析对应页和布局候选页。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
