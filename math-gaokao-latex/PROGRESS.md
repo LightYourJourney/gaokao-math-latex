@@ -3274,6 +3274,14 @@
 
 - 已完成可验证阶段：完成2004全国Ⅰ卷文科四版全部40页的视觉核查，并在当前 build attempt 对应工作项中登记每页八项检查结论。试题版3页、解析版17页、简答版5页、印刷版15页；未见版面缺陷。无图形/选择项的页及答案版中的泄漏检查按具体不适用项登记理由。
 - 阶段修改文件：仅 ignored 的 `.work/phase2-b93/review/{试题版,解析版,简答版,印刷版}/gk-2004-regular-national-1-arts.json` 四项与本 `PROGRESS.md`；未改源稿、正式PDF或build receipt。
-- 验证结果：四版共40页/320检查项，229 pass、91 not_applicable、0 fail、0 pending；本地结构核对确认每页结果与检查项一致，所有 not_applicable 均含理由。`check-batch` 当前返回 `INVALID_OR_STALE`，原因是四卷正式 review receipt 尚未 finalize 到本次 build attempt（不是工作项绑定失败）；需等四卷工作项全部完成后统一事务登记。现有 build receipts 与本阶段 PDF 未重建。
+- 验证结果：逐页对照PDF正文分页后，纠正了第一轮将解析/简答/印刷版前置试题页误判为答案区的适用性标记，并将更正写回工作项；四版共40页/320检查项，最终为225 pass、95 not_applicable、0 fail、0 pending。工作项的 attempt、PDF SHA与页数均再次核对匹配。`check-batch` 当前返回 `INVALID_OR_STALE`，原因是四卷正式 review receipt 尚未 finalize 到本次 build attempt；需等四卷工作项全部完成后统一事务登记。现有 build receipts 与PDF未重建。
 - 剩余任务：全国Ⅰ理科、全国Ⅱ文理科共117页/936项视觉检查；随后逐项核验四卷工作项对当前 build attempt/PDF SHA/页数绑定，执行事务 finalize、门禁与报告刷新。
 - 下一步：复核全国Ⅰ理科全部四版页面；继续利用现有 PDF/工作项，只为必要的高风险页做高清检查，不重复全国Ⅰ文科复核。
+
+### phase2-b93 全国Ⅰ理科四版逐页视觉复核
+
+- 已完成可验证阶段：完成2004全国Ⅰ卷理科四版全部39页视觉核查，并在当前 attempt 工作项逐页登记八项结论。逐版页数为3/17/5/14；查看四版全页联系图、各版第1/3页高清图，以及解析版第15页与印刷版第12页的第20题几何图和解答页，未见裁切、遮叠、缺字、图形标签问题或试题页泄漏答案。
+- 阶段修改文件：仅 ignored 的 `.work/phase2-b93/review/{试题版,解析版,简答版,印刷版}/gk-2004-regular-national-1-science.json` 四项与本 `PROGRESS.md`；未改源稿、正式PDF或build receipt。
+- 验证结果：39页/312检查项，221 pass、91 not_applicable、0 fail、0 pending；运行项目复核器的页形状校验，且四版工作项的 attempt、PDF SHA、页数与当前 build receipts 全部匹配。`git diff --check` 通过。前置试题页中选项和答案泄漏检查均按实际内容适用；答案区及无图页只将确实不适用项登记为 N/A 并写理由。
+- 剩余任务：全国Ⅱ文理科共78页/624项视觉检查；之后复核四卷全量工作项绑定并统一事务 finalize。
+- 下一步：复核全国Ⅱ文科四版全部页面；不重跑构建或来源/生成投影检查。
