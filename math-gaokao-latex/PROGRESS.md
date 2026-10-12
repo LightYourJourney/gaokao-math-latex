@@ -2578,6 +2578,11 @@
 - 验证结果：receipt 1 succeeded且0 stale/missing/failed；provenance `OK：1卷`；review `FINALIZED`；issues校验退出码0；生成、简答和壳检查各`1套一致`；manifest CSV初检不一致，官方重写后`当前且775行`；全库报告`check --all`一致。
 - 剩余任务：定向receipt/report测试；清理LaTeX中间物与本批预览，核验四版PDF及build receipt；最终审阅并提交。
 - 下一步：提交gate checkpoint，依序运行`test_review_receipts.py`和`test_report.py`。
+- 已完成定向测试阶段（phase2-b81）：按序运行`test_review_receipts.py`和`test_report.py`，两组均通过。
+- 阶段修改文件：仅本进度文件；测试未修改正式数据。
+- 验证结果：review receipt测试66/66通过（44.017秒）；report测试11/11通过（67.321秒）；合计77项通过。
+- 剩余任务：清理四版LaTeX中间物与当前attempt PNG，核验build仅含四版PDF且页数/SHA吻合receipt；最终审阅并提交。
+- 下一步：提交测试checkpoint后，四版入口执行`latexmk -c -outdir=build`，再将本批PNG/接触表和review工作项移入可恢复archive。
 - 已完成全库报告刷新阶段（phase2-b80）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
