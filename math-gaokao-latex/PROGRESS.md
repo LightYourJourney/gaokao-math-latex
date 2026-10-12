@@ -3033,3 +3033,8 @@
 - 验证结果：8次latexmk clean退出0；两卷build目录仅保留PDF；文科页数6/20/8/16、理科6/19/8/15，8份PDF SHA-256、字节数及页数逐项匹配final build receipt；`.work/phase2-b89`不存在。`git diff --check`通过。
 - 剩余任务：phase2-b89已闭环并提交所有非README正式文件；三份全库README为最新生成投影但继续保留未提交供人工复核。全语料目标未完成。
 - 下一步：按manifest顺序进入phase2-b90（2002全国新课程文、理两卷，文科关联ISSUE-0812至0816），先核对进度/差异、计划、来源与回执，只处理尚未完成的阶段；不push。
+- 已完成phase2-b90恢复预检：计划`2026-09-15-gaokao-2002-national-new.md`所列来源转录、答案/解析、可选分支和TikZ源均已完成；固定源核验与生产内容不需重做。
+- 阶段修改文件：仅本进度文件；题面、答案、图稿、provenance、回执与旧ignored workitems均未修改。
+- 验证结果：issues与source manifest通过；文理两卷generator、简答答案、edition壳各2套一致。ISSUE-0812至0816均为resolved：文科Q21原始条件/结论冲突按固定源保留并以反例说明，四条历史formal-build错误已resolved。两卷旧build attempts `bf748d0e-b222-4fe2-81d4-c11091fe9fc8`/`4ef5cb55-0373-4fad-8ee0-b32d03bd7d7a`因生成输入树/工具链变化stale；旧review attempts `ce688cb6-0828-4390-865d-c5d85c488568`/`a3e868cf-ffa3-4f07-b1f3-60eaad2d317d`不能证明当前PDF。8份workitem仍全pending，绑定更早attempt `1f1808bc-8f2e-464d-9f84-1c4091c94b26`/`c510fd0f-7bf9-4b1d-b63f-0d6b0b7fe905`，旧页数共100页/800项。provenance条目本身可核，但缓存状态与现场派生不一致，应由官方formal build刷新，不手改manifest。
+- 剩余任务：归档旧b90 workitems；按当前输入正式重建8版，fresh prepare后复核当前全部页面，登记finalize，刷新报告/CSV与全库门禁及测试，再清理中间物并核对8份PDF页数/SHA。
+- 下一步：提交b90恢复checkpoint，归档stale workitems后运行官方formal build；保留已通过的来源、转录、解题与provenance成果，不push。
