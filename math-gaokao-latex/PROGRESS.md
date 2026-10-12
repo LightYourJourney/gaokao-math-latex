@@ -3210,5 +3210,6 @@
 - 已完成可验证阶段：按失败测试先行修复复核 finalizer。失败分支现在把 `VISUAL_FAILED` 诊断报告、failed review receipt、视觉问题及 manifest 状态放入同一个 state 事务；报告明确列出 build attempt、四版页数与 PDF SHA、失败页/检查项和说明，并声明批次未闭环。report-only 模式支持基于当前 failed receipt 刷新报告，不重做页面指标或目检；`check-batch` 精确核对报告与当前回执，不匹配时返回 `INVALID_OR_STALE`。checked 提交所有权范围现包括诊断报告。
 - 阶段修改文件：`tools/review_receipts.py`、`tests/test_review_receipts.py`、`reports/phase2-b58.md`、`source-manifest.json`（事务 revision 4104）、事务规范化的 `missing-issues.md` 空行、以及本 `PROGRESS.md`。三份既有 README 差异未触碰。未改题源、正式 PDF 或 build/review receipt；未重新栅格化 b58 的 65 页。
 - 阶段验证：新增/修改失败分支测试先按预期 RED，随后专项覆盖旧报告替换、attempt/失败详情、陈旧报告拒绝、report-only 刷新和 checked 提交范围；`test_review_receipts` 66/66、`test_report` 11/11 通过。b58 `check-batch`=`VISUAL_FAILED`（当前诊断报告一致）、build receipts=`OK`（pending 1、stale 0）、provenance=`OK：1卷`；报告已更新为 attempt `4f48ddc0-7717-45a0-a040-d69b1602dfa8`、65 页/12 个来源限制失败。全库 `report.py check --all`仍未完成，不宣称通过。
-- 剩余任务：全库报告门禁尚未验证；题库其余年份/批次仍待处理，b58 的来源限制仍阻塞视觉完成。此修复改动共享事务逻辑，需继续以相关测试和后续真实失败批次验证行为；本工作尚未提交，不 push。
-- 下一步：运行 `git diff --check` 和本模块最终回归确认，精审本次事务及代码 diff（保留三份 README 差异）；确认范围后提交本阶段。随后按项目计划选取最早未完成批次继续，避免重复 b58 复核。
+- 剩余任务：全库报告门禁尚未验证；题库其余年份/批次仍待处理，b58 的来源限制仍阻塞视觉完成。此修复改动共享事务逻辑，需继续以相关测试和后续真实失败批次验证行为；不 push。
+- 提交记录：本阶段已提交为 `5a18de61 fix(exams): keep failed review batch reports current`。提交后工作树仅保留三份既有 README 修改；`git diff --check` 通过，无 staged 变更。
+- 下一步：依总计划核对当前 manifest 中最早未闭合批次及其已有进度/工作项，从断点继续，不重做 b58 复核。
