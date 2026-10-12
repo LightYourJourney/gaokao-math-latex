@@ -1875,3 +1875,23 @@
 - 已完成阶段（b61 内容本地提交）：17个受跟踪路径已提交为 `0301083e`（`[已核] docs(exams): 修复1987全国理科标点分页并登记复核`）；未 push。提交后 build receipt 验证 `OK：1卷`，review check 为 `FINALIZED`，attempt `a5311417-eafb-49a6-8b9c-b031f84dfa0e` current，工作树干净（分支 ahead 8）。
 - 剩余任务：1952—2026 全语料建设仍继续；b59来源缺陷、b61 ISSUE-1065/0779 内容阻塞未解决。
 - 下一步：单独提交本进度 checkpoint；之后核验 manifest 下一批 b62 是否有可安全推进的来源/构建/复核阶段。
+- 新批次恢复（phase2-b62，1987广东文史）：manifest 指定 `gk-1987-regular-guangdong-arts` 一卷、6题、问题 ISSUE-0780（原解答页缺失，保留本库独立推导，为 non_blocking）。provenance 派生状态为 `provenance_verified`；旧 build attempt `a9faaccb-b506-4c6b-8875-71374fdc77f2` 四版原页数 7/25/8/19、共59页，旧 review attempt `8f8e0ed9-e8e3-4d78-be14-832deeda9be5` 曾通过，但 build validator 现判旧回执 stale（生成输入树和工具链指纹变化），故旧 review 不能作为新构建回执。
+- 已完成可验证预检阶段：`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 全通过；`provenance.py status` 为该卷 `editions_generated`、批次 `provenance_verified`。`build_projects.py validate-receipts` 明确报告旧 build stale，无来源哈希冲突或生成差异。
+- 阶段修改文件：仅本 `PROGRESS.md`；以上诊断为只读，没有覆盖旧 PDF/receipt/review。
+- 剩余任务：刷新正式四版 build attempt 与 review work items；按当前 PDF 复核全部页面并登记；保留 ISSUE-0780 来源限制；之后跑门禁、清理中间物、更新报告并提交。
+- 下一步：执行 phase2-b62 官方 formal build，确认四版页数/日志/SHA；再为新 attempt 准备逐页工作项，按旧新渲染像素差合理复用未变化页面结论。
+- 已完成可验证阶段（b62 正式重建与当前复核工作项）：官方 formal build revision 3996 创建 attempt `8d404c97-3dcc-4e18-abe2-577af879e941`；四版均 succeeded，页数仍为试题7、解析25、简答8、印刷19（59页），错误、缺字、Overfull、未解析引用及 problems 均为0。build validator、provenance 校验通过；官方 `prepare-batch` 已生成4份当前 attempt 工作项，绑定 PDF SHA/页数，59页/472 checks 全 pending。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json`、ignored 四版 build PDF、`.work/phase2-b62/review/` 四项工作项与本 `PROGRESS.md`。
+- 阶段验证：当前 attempt 与 PDF 的 SHA/页数均在官方 build receipt；候选页为试题p1、解析p1、简答p1、印刷p3；无编译 warning。ISSUE-0780 仍 open/non_blocking。
+- 剩余任务：旧 attempt PDF 图像已不可用，不能以旧 review receipt 代替新 review；须检查当前 attempt 全59页并完成472项，再事务 finalize。
+- 下一步：以当前 PDF 渲染四版全页接触表并检查全部59页，放大复核四个候选页及实际疑点页。
+- 已完成可验证阶段（b62 当前 attempt 全页视觉复核与回执登记）：检查试题7、解析25、简答8、印刷19页，共59页；结合四版全页接触表及候选/疑点页放大图，未见缺字、题号异常、错位、标注遮挡、页眉页脚问题、裁切/重叠或异常分页。解析版第21–22页第4题独立推导及来源缺页提示可读，印刷版第5页棱台图标注清晰；ISSUE-0780 来源缺页保持 open/non_blocking。四版共472项均已填结论：pass 420、not_applicable 52、fail/pending 0（解析/简答/印刷版各页答案泄漏项按版次设计 not_applicable）。
+- 阶段修改文件：ignored `.work/phase2-b62/review/{试题版,解析版,简答版,印刷版}/gk-1987-regular-guangdong-arts.json`；官方事务更新本卷 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b62.md`，并更新本 `PROGRESS.md`。
+- 阶段验证：官方 `review_receipts.py finalize-batch --batch phase2-b62` 返回 `FINALIZED`、problems=0、revision 3997、batch `closed`；472 项全部有结论且绑定 attempt `8d404c97-3dcc-4e18-abe2-577af879e941`。视觉复核不代表固定源答案已核实，ISSUE-0780 保持原状。
+- 剩余任务：执行报告投影及 manifest/issues/build/provenance/review 门禁；清理本批次 TeX 编译中间物和本次生成的页面预览图，保留 PDF、LaTeX 源与正式回执/报告；核对 PDF SHA 后检查 diff 并本地提交。
+- 下一步：先运行 phase2-b62 的 scoped validators 与报告 render/check，再仅对本卷四个 build 入口运行 `latexmk -c -outdir=build`，逐项确认 PDF 哈希与正式 build receipt 一致。
+- 已完成可验证阶段（b62 报告、回归门禁与产物清理）：`report.py render --all` 写入并回读校验六个全量投影，`check --all` 通过且保留本批次状态；build receipts、provenance、issues ledger、review receipt 均通过 scoped 校验。`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过。四入口 `latexmk -c -outdir=build` 后 build 目录仅有四份 PDF，SHA 与 attempt receipt 全部相同；已清除本批次生成的 PNG 接触表和页面预览，保留正式复核工作项、回执、报告、PDF 与 LaTeX/TikZ 源。
+- 阶段修改文件：本卷 `receipts/build.json`、`receipts/review.json`、`source-manifest.json`、`reports/phase2-b62.md`、六个全量报告投影及本进度文件；页面渲染 PNG 和 TeX 编译中间物为 ignored 临时文件，已清理。
+- 阶段验证：当前 build attempt `8d404c97-3dcc-4e18-abe2-577af879e941`，四版59页 PDF SHA 与 receipt 一致；review `FINALIZED`，59页/472项；manifest/issues/provenance/build/review/report 检查通过；定向测试77/77通过。
+- 剩余任务：最终审阅精确 Git diff、执行 `git diff --check`，暂存本批次已完成路径并本地提交（不 push）；ISSUE-0780 仍 open/non_blocking，语料总目标继续未完成。
+- 下一步：复核所有本次受跟踪改动及生成投影，确认无 PDF/图片入库，再提交并检查提交后工作树与当前回执状态。
