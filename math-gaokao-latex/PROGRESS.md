@@ -2528,3 +2528,8 @@
 - 验证结果：全量render事务成功，check返回“报告输出与全量manifest当前一致”；tracked差异恰为六目标，`git diff --check`通过。
 - 剩余任务：运行b79七项scoped gates及定向测试；清理LaTeX中间物和PNG，验证四版PDF后最终审阅提交。
 - 下一步：提交报告投影checkpoint，再运行本卷build/provenance/review/issues/generator/short-answer/edition-shell门禁。
+- 已完成批次scoped gates阶段（phase2-b79）：build receipt final、provenance、review FINALIZED、issues ledger、生成题面/解析、简答版及四版壳检查全部通过。
+- 阶段修改文件：仅本进度文件；七项gate均为只读验证/`--check`。
+- 验证结果：receipt 1 succeeded且0 stale/missing/failed；provenance `OK：1卷`；review `FINALIZED`；生成、简答与壳检查各1套一致；issues校验退出码0。
+- 剩余任务：定向测试；清理LaTeX中间物与本批PNG，核验build仅含四版PDF且页数/SHA吻合；最终审阅和提交。
+- 下一步：提交gate checkpoint，依序运行`test_review_receipts.py`与`test_report.py`。
