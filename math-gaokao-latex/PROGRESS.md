@@ -2156,3 +2156,7 @@
 - 阶段新增修改仅本进度文件；调试验证只读。工作树保留上一子阶段的 `questions.tex` 初步更正（尚未由权威Markdown生成器重写），review work items和正式review回执未被finalize改变。
 - 剩余任务：更正权威Markdown来源并由官方生成器重写TeX；确认生成器`--check`通过，刷新formal build（因为输入树包含Markdown），重新prepare当前review并以PDF字节哈希确认可复用既有视觉结论；然后finalize和余下门禁/测试/清理/提交。41项待核映射仍未知。
 - 下一步：在试题Markdown中将图形说明列为2、10、21、22、23，运行单卷`generate_projects.py --write`，随后`--check`确认工作树生成物一致。
+- 已完成来源更正与生成器一致性阶段（phase2-b71）：权威源文件 `1998/1998_数学真题_全国理_试题.md` 已把原卷图形清单补为第2、10、21、22、23题；随后官方 `generate_projects.py --write --paper gk-1998-regular-national-science` 写入3个生成目标，`--check`立即确认1套试卷与生成结果一致。artifact stale根因已修正到输入源，不再手改生成物。
+- 阶段修改文件：上述源Markdown与本卷生成的`questions.tex`；生成器写入的其余目标与HEAD一致。既有formal build回执现在因Markdown generation-input hash变化而需要刷新；上一次PDF未finalize，不视为正式回执。
+- 剩余任务：再次formal build并验证current输入/provenance/artifacts，然后重绑work items；若当前PDF SHA与已审视觉版本一致，可复用逐页结论，否则仅复核发生变化页；之后finalize、报告门禁/测试、清理与提交。41项待核映射仍未找到。
+- 下一步：对phase2-b71执行formal rebuild，检查新的build attempt和四版PDF SHA，并再次运行生成器check与provenance/build门禁。
