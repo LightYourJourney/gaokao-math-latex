@@ -2588,6 +2588,11 @@
 - 验证结果：generator、short answers、edition shells各`1套一致`；manifest CSV初检发现派生文件过期，官方重写后`当前且775行`；issues、source manifest和全库report校验退出码均为0；build/review/provenance final gates已在前一阶段通过。
 - 剩余任务：运行定向review/report测试；清理LaTeX中间物及本批页面预览，核对四版PDF页数/SHA与最终receipt；最终差异审阅并提交b83。
 - 下一步：提交门禁checkpoint，然后依序运行`test_review_receipts.py`和`test_report.py`。
+- 已完成phase2-b83定向回归测试阶段：顺序运行review receipt与report测试。
+- 阶段修改文件：仅本进度文件；测试不修改正式题目数据或回执。
+- 验证结果：`test_review_receipts.py` 66/66通过（45.173秒）；`test_report.py` 11/11通过（69.046秒）；共77项通过。首次测试会话的最终输出句柄未保留，待该次自然结束后重新运行以取得完整汇总，最终有效结果为上述第二次运行。
+- 剩余任务：清理四版LaTeX中间物与本批预览，按build receipt复核四版PDF页数/SHA；最终差异审阅并提交b83。
+- 下一步：提交测试checkpoint，执行四版`latexmk -c -outdir=build`并将本批预览整体移出项目工作目录。
 
 - 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
 - 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
