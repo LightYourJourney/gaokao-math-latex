@@ -2160,3 +2160,7 @@
 - 阶段修改文件：上述源Markdown与本卷生成的`questions.tex`；生成器写入的其余目标与HEAD一致。既有formal build回执现在因Markdown generation-input hash变化而需要刷新；上一次PDF未finalize，不视为正式回执。
 - 剩余任务：再次formal build并验证current输入/provenance/artifacts，然后重绑work items；若当前PDF SHA与已审视觉版本一致，可复用逐页结论，否则仅复核发生变化页；之后finalize、报告门禁/测试、清理与提交。41项待核映射仍未找到。
 - 下一步：对phase2-b71执行formal rebuild，检查新的build attempt和四版PDF SHA，并再次运行生成器check与provenance/build门禁。
+- 已完成根因修复后的正式构建与像素等价阶段（phase2-b71）：当前attempt `6fd0dcb2-1b74-40f7-8f53-bf08121e8d37`，四版页数5/29/6/21共61，全部succeeded、问题列表为空；`generate_projects.py --check`、build validator及provenance batch check均通过，status派生为paper `compiled` / batch `compiled_pending_review`。新四份review work items已绑定当前attempt。与已人工复核的attempt `224ad92c-860d-4d04-9bf3-9a803cd2be9a`比较，同一pdftoppm参数下四版全部61张逐页PNG SHA-256完全相同（虽PDF文件哈希因构建元数据变化而不同），故既有逐页视觉观察可严格复用；新attempt无页面内容/像素变化。
+- 阶段修改文件：build receipt、manifest派生状态及本进度文件；四份ignored review work items已刷新。来源Markdown和生成TeX沿用上一阶段修正。
+- 剩余任务：将已有61页检查结论重新写入当前attempt（432 pass、56 not_applicable、0 fail/pending），通过artifact-current最终门禁并官方finalize；再报告投影/全库校验、定向测试、PDF SHA与清理、提交。
+- 下一步：重录当前attempt四份工作项的逐页结论，随后官方finalize验证artifact状态和整体事务。
