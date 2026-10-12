@@ -1592,3 +1592,109 @@
 - 阶段验证：提交前 staged diff 精确覆盖上述 11 个路径且 `git diff --cached --check` 通过；review/report 定向测试 77/77 通过；`report.py check --all` 通过并保留 `VISUAL_FAILED` 状态；提交后工作树干净。
 - 剩余任务：phase2-b57 两卷仍因试题版首页答案泄漏保持 `VISUAL_FAILED` / `compiled_pending_review`，题源未擅改；1952—2026 全语料目标仍在推进中。
 - 下一步：按全量收尾计划继续处理最早尚未完成的批次；不重做 b57 已完成的来源、构建或页级复核。
+
+### `phase2-b59` 1986 广东理工农医卷续作预检
+
+- 已完成可验证子阶段：确认 b59 仅含 `gk-1986-regular-guangdong-science`，正式 build receipt 为 attempt `4178bc96-691e-4c97-b5b4-580cab0eb76c`、四版均 succeeded；既存四份 ignored review work items 仍全 pending，但绑定旧 attempt `3cba4219-937f-47bf-97cf-eda56e3440c4`。官方 `prepare-batch` 因生成输入树与工具链指纹变化拒绝复用/刷新旧构建。
+- 阶段修改文件：未修改 tracked 文件；CLI 帮助及受支持工具均只读。一次带不支持 `--json` 参数的 prepare 命令以 usage 错误退出，未写入状态；无效 receipt 后，正确 prepare 调用也安全拒绝。
+- 阶段验证：source manifest、solution-source、project、short-answer、edition checks 均通过；provenance 检查未通过，唯一已报告差异为缓存批次状态 `compiled_pending_review` 与现场派生 `provenance_verified` 不符。未覆盖状态，也未开始复核 stale PDF。
+- 进一步核验：官方 `provenance.py status --batch phase2-b59` 显示试卷维持 `blocked`、批次 provenance 派生状态为 `provenance_verified`；没有题面/答案内容哈希失配。故不在缺少新角色证据时重导 provenance，选择通过正式构建事务刷新 stale build 与派生批次状态。
+- 剩余任务：正式 build receipt 刷新至 current 后，才能准备当前 attempt 工作项并复核 60 页。现有来源 blocker ISSUE-0778/ISSUE-0797 必须保留。
+- 下一步：执行 `build_projects.py build --formal --batch phase2-b59` 更新正式四版 attempt；验证页数、警告、SHA、receipt 和 provenance 派生状态，再刷新工作项。
+- 已完成可验证阶段（stale build 正式重建）：官方 formal build 事务 revision 3969 完成四版并创建新 attempt `d185c2df-20ab-4f8b-ad88-91cddb6f3568`，替代 stale attempt `4178bc96-691e-4c97-b5b4-580cab0eb76c`。页数保持 7/26/8/19，共 60 页；四版均 succeeded。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json` 事务状态及 ignored `build/*.pdf`；本 `PROGRESS.md`。
+- 阶段验证：`validate-receipts` 返回 `OK`（1 pending、0 stale/invalid/missing/failed）；`provenance check-batch` 返回 `OK：1 卷`。四版 logs 的 errors、missing characters、overfull、undefined references 和 problems 均为空。
+- 剩余任务：四份工作项仍绑定旧 attempt，须刷新后再做 60 页/480 检查；两项既有来源问题继续阻断完成。
+- 下一步：运行官方 `review_receipts.py prepare-batch --batch phase2-b59`，逐项确认新 attempt、PDF SHA 和页数后分派视觉复核。
+- 已完成可验证阶段（当前 attempt 工作项刷新）：官方 `prepare-batch` 为 b59 刷新 4 份 ignored review work items，均绑定新 attempt `d185c2df-20ab-4f8b-ad88-91cddb6f3568`。
+- 阶段修改文件：仅 `.work/phase2-b59/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-science.json` 四个 ignored 工作项；tracked 内容未变。
+- 阶段验证：4/4 项的 attempt、PDF 路径/SHA-256、页数均与新 build receipt 和实存 PDF 相同；覆盖 60 页，480 项全为 pending。
+- 剩余任务：对当前 attempt 的 60 页完成逐页视觉复核，记录真实的来源限制与任何新排版发现；之后正式 finalize、更新报告、清理中间物、复跑门禁并提交。
+- 下一步：独立并行复核试题+简答、解析、印刷三个版本组；主会话核验页覆盖与 fail 依据后再登记正式回执。
+- 已完成可验证阶段（当前 b59 attempt 四版视觉复核）：三组独立审查者覆盖全部 60 页/480 项；结果为 451 pass、29 fail、0 pending。每项 work item 绑定 attempt `d185c2df-20ab-4f8b-ad88-91cddb6f3568` 与各版当前 PDF SHA/页数；临时审查图已由各审查者清理。尚未写正式 review receipt。
+- 阶段修改文件：仅四份 ignored `.work/phase2-b59/review/*/gk-1986-regular-guangdong-science.json` 与本 `PROGRESS.md`；正式题源和 review receipt 未改。
+- 阶段发现：已知 q01(25) A—E 图形缺失、q01(12)/(15) 重复 D 标记继续保留；另见试题选项跨页、印刷版解析标题孤置、三棱锥 E 标签碰线、解析题号错配。主会话对照固定源 PDF（SHA-256 `ad1042cc…cda24`）目视确认：源 PDF 第 5 页“第二卷·二”为直线/平面关系题，并非当前源稿和图稿中的三棱锥题；“辐角主值”题为第一卷第 5 小题，而非第 9 小题。当前解析正文多个第一卷小题编号与题意不对应，不能以现 attempt 通过构建作为内容正确证据。
+- Ruling：暂停 b59 正式 review finalize；先按固定源纠正明确的题面/解析错配并独立复算受影响答案，再更新 provenance、正式重建和受影响页面复核。若源页结构理解有误，代价是需返工题源和后续 build；本决定以已核验的固定 PDF 页图、页码和逐字文本为依据。
+- 剩余任务：完整复算第一卷 25 道选择题的详细解析与答案要点对应关系；按 PDF 转录第二卷第二题及两幅平面关系图，并从固定解答页核对证明/数值；修正首页题号说明、版式跨页/孤置与图稿；保留无法核对的 q01(25) 图形 blocker。
+- 下一步：并行委派互不重叠的 q01(1–12) 与 q01(13–25) 独立盲解/题解映射；主会话对照固定源第 5、7–11 页完成 q4 及解答源核查，随后整合并按官方事务刷新 provenance、生成、build 和 review。
+- 已完成可验证阶段（第二卷第二题源稿错配核实）：重新目视检查固定 PDF 第 5 页并以 `pdftotext -layout` 对照第 5、7–11 页，确认第二卷第二题为两小题的直线—平面关系题，原题干与图均不是三棱锥；固定解答给出第（1）题证明链与第（2）题角度结果 `arcsin(sqrt(4b^2+a^2)/(2a))`。原题文档、答案要点和详细解析仍未修改；未经逐题独立核对，不沿用现稿中不匹配的三棱锥答案。
+- 阶段修改文件：仅本 `PROGRESS.md`；题源稿、答案和图稿未改。尝试恢复上一轮三项盲审时，subagent 服务返回 `agent thread limit reached`，未生成新代理或报告；避免重复提交同样无效的调用，继续在主会话直接核查。
+- 阶段验证：固定 PDF SHA-256 与上段记录的来源清单值一致；第 5 页图像可辨识题干及两幅图；文本提取与官方解答内容一致。尚未运行生成器或构建，因为源稿尚未修改。
+- 剩余任务：替换第二卷第二题题面与错误图稿、答案及解析；独立核验第一卷 25 小题解析和答案映射；处理已确认的题号说明和纯版式缺陷，同时保留 q01(25) 缺图 blocker。
+- 下一步：先完成第二卷第二题的受控源文修订和对应 TikZ 图稿，加入精确题面/数值回归检查，再更新 provenance 并走正式生成、构建与复核事务。
+- 已完成可验证阶段（第二卷第二题题面、解析和图稿纠正）：按固定 PDF 第 5 页把错录的三棱锥题替换为直线—平面两问；题面恢复源符号 $\alpha$ 和分值 14，答案要点及解析改为平面垂直证明与角度公式 $\arcsin(\sqrt{4b^2+\alpha^2}/(2\alpha))$。两幅矢量示意图替换错误三棱锥图；解析不把原图标记 E 的交叠误读为空间交点。同步更正第 5 题辐角说明，并把第 8、9、20、25 题的源限制明示为待核/歧义，不凭空补符号或选项图。
+- 阶段修改文件：`1986/1986_数学真题_广东理_{试题,答案要点,解析正文,含解析}.md`；本卷 `questions.tex`、`answers.tex`、TikZ 图稿（删除旧 pyramid，新增 planes）、`index.json`、`source-manifest.json`；本 `PROGRESS.md`。`questions.tex`、`answers.tex`、`index.json` 与含解析文档均由官方确定性生成器/解析正文抽取器刷新。
+- 阶段验证：固定源 PDF 第 5 页已目视核对；`source_manifest.py validate --manifest source-manifest.json` 通过；本卷 `generate_projects.py --check` 通过；`solution_sources.py check-batch --batch phase2-b59` 通过；`test_generate_projects.py` 105 项通过；`git diff --check` 通过。第一次门禁发现试题小问标记后缺分隔空格、又发现含解析投影残留旧 PNG 记号；经证实分别是解析器锚点格式与未刷新的派生投影问题，已按源稿排版补空格并用受支持抽取器重生成后复验通过。
+- 剩余任务：第一卷 25 题的既存解析正文仍有题号/题意错配，需逐题按固定源改写并对照独立盲解；之后重新登记 provenance、正式四版构建及视觉复核。q8/q9 缺字、q20 语义歧义、q25 缺图继续作为明确限制。
+- 下一步：依据 `.work/phase2-b59/answer-audit/q01-01-12.md` 与 `q01-13-25.md` 逐题映射当前第一卷解析，先处理 1–12 题并记录仍不能确定的选项，再继续 13–25 题；不复做来源 PDF 比对。
+- 已完成可验证阶段（第一卷选择题 1–12 解析重映射与复算）：将解析正文前 12 个锚点逐项按原题更正，覆盖直线斜率、三角差角、正三棱锥二面角、参数椭圆、复数辐角、复数幂、复平面轨迹、医生组选法、节目排序、指数和最值、余切条件三角式、根式化简。第 8、9 题保留可复算数值 2156/7200，但答案要点不再把 E/C 写成无条件答案；因扫描连接符是不可辨方框，仅记录“若为乘号则对应 E/C”，字母待核。
+- 阶段修改文件：1986 广东理科 `_解析正文.md` 与 `_答案要点.md`；官方抽取器生成的 `_含解析.md`、本卷 `answers.tex` 及 `index.json`（题面投影未变化）；本 `PROGRESS.md`。
+- 阶段验证：两份独立盲解审计报告 `.work/phase2-b59/answer-audit/q01-01-12.md` 和 `q01-13-25.md` 已逐项作为答案依据；`solution_sources.py check-batch --batch phase2-b59`、本卷 `generate_projects.py --check`、`source_manifest.py validate` 均通过；`test_solution_sources.py` 109 项通过；`git diff --check` 通过。
+- 剩余任务：第一卷选择题 13–25 的解析锚点仍与原题错配，尚需重写并核验答案要点，尤其 q20 语义歧义、q25 选项图缺失；q8/q9 的源字形 blocker 也尚未写入独立问题记录。构建 receipt 仍需待全部源内容稳定后经正式事务刷新。
+- 下一步：依 `q01-13-25.md` 的独立推导重写第一卷 13–25 解析；只对 q20 保留语义条件结论，对 q25 只记可确定的函数图形性质、不映射缺失字母。
+- 已完成可验证阶段（第一卷选择题 13–25 解析重映射与歧义保留）：按独立盲解报告替换错配推导，覆盖最大值、反正切、交点数、动圆轨迹、焦点圆、单调区间、对数值域、空间命题、四棱锥判定、奇偶性、函数图象辨析、抛物线距离和、反函数图象。q20 明示“边”为线段/支撑直线两种含义导致的结论差异；q25 只登记 $f(x)=-\sqrt{2x-x^2}$、定义域和弧段性质，并说明原答案表 E 因选项图空白而无法核验。
+- 阶段修改文件：1986 广东理科 `_解析正文.md` 与 `_答案要点.md`；官方抽取器生成的 `_含解析.md`、本卷 `answers.tex`、`index.json`；本 `PROGRESS.md`。
+- 阶段验证：按 `.work/phase2-b59/answer-audit/q01-13-25.md` 逐题复算；`solution_sources.py check-batch --batch phase2-b59`、本卷 `generate_projects.py --check`、`source_manifest.py validate` 通过；`test_solution_sources.py` 109 项通过；`git diff --check` 通过。
+- 剩余任务：需要核查并按规范登记 q8/q9 缺字、q20 几何语义与 q25 缺图问题；核验全部 25 项答案要点、详细解析与固定答案表之间的对应；之后更新 provenance、正式四版重建、全页复核及版式问题处置。
+- 下一步：定向检查本卷 `missing-issues.md` 与 manifest issue_ids，补齐三类已有证据支持的 blocker（不引入推测）；随后做解析/答案全卷交叉核查及四版正式重建。
+- 已完成可验证阶段（第一卷选择题 13–25 解析及答案边界核验）：按独立题面报告重写 13–25 推导；q20 对“边”按线段解释给出 E、按支撑直线解释指出五项均非普遍成立，不擅改原文；q25 将反函数写为 $f(x)=-\sqrt{2x-x^2}$（$0\le x\le1$），保留答案表 E 作为来源记录并明确图形选项缺失、字母不可核验。
+- 阶段修改文件：1986 广东理科 `_解析正文.md`、`_答案要点.md`；官方抽取器生成的 `_含解析.md`、本卷 `answers.tex`、`index.json`；本 `PROGRESS.md`。
+- 阶段验证：对照 `.work/phase2-b59/answer-audit/q01-13-25.md` 的独立逐题推导；`solution_sources.py check-batch --batch phase2-b59`、本卷 `generate_projects.py --check`、`source_manifest.py validate` 通过；`test_solution_sources.py` 109 项通过。抽取器报告投影已最新；`git diff --check` 将与问题登记阶段一并复核。
+- 剩余任务：q8/q9 运算符缺字与 q20 语义歧义尚未各自登记到问题总账；q25 虽已有 ISSUE-0778/0797，但须确认其文字涵盖本轮限定源核查结论。答案表、解析与源答案页还需全卷交叉核对，之后再刷新 provenance/build/review。
+- 下一步：仅在 `missing-issues.md` 追加有固定源证据的 q8、q9、q20 问题记录；遵循 issue fingerprint 与 manifest 派生规则，验证登记后本卷 blocker id 完整。
+- 已完成可验证阶段（题源限制登记）：在问题总账末尾新增 ISSUE-1053/1054/1055，分别记录 q01(8) 连接符缺字、q01(9) 连接符缺字及 q01(20)“边”的语义分歧；全部关联固定 PDF source_id，列明可复算结果、条件选项与解除条件。现存 ISSUE-0778/0797 继续保留 q01(25) 原图缺失。
+- 阶段修改文件：`math-gaokao-latex/missing-issues.md` 与本 `PROGRESS.md`；尚未刷新 manifest 派生 issue_ids 或 provenance。
+- 阶段验证：`issues.py validate --file missing-issues.md`、source manifest 校验、solution-source batch check、本卷生成检查及 `git diff --check` 均通过；新增 fingerprint 由项目 `issue_fingerprint()` 对规范身份计算并通过总账校验。
+- 剩余任务：manifest 当前卷的 `issue_ids` 仍只有旧记录，需由受支持 provenance 事务从问题总账重算；然后重跑 provenance、正式四版构建与视觉回执，核对既有 29 个版面/内容失败是否仍适用。
+- 下一步：查看 provenance CLI 的当前支持操作，按已授权范围重核本卷来源与答案证据，更新问题绑定后再执行正式构建；不手工改派生 issue_ids 或 build receipt。
+- 继续核验：`provenance.py status --batch phase2-b59` 当前报告卷为 `blocked`、批次为 `planned`；旧 provenance 与本轮改稿哈希不一致，不能直接复用。`init-batch` 已创建三角色、6 大题骨架，忽略文件位于 `.work/phase2-b59/provenance/phase2-b59/provenance/{question-review,answer-solve,answer-review}/gk-1986-regular-guangdong-science.json`；CLI 的 `--work-dir` 是 `.work` 基目录，本次传入了更深的合法 ignored 子目录，故文件额外嵌套一层，尚未填充或导入，正式 provenance 未变。
+- 当前实际修改：除前述题源、图稿、派生投影、问题总账及本进度外，未编辑 provenance 或构建回执；未正式重建 PDF。
+- 下一步：审读该卷现有 provenance 和三份角色骨架，复用未变题的有效证据，仅为本次更改的题面/答案重算哈希并补足独立复核；待 `provenance check-batch` 通过后，走正式 build 事务并重新准备四版页审工作项。
+- 已完成可验证阶段（b59 provenance 刷新）：三角色工作项基于固定 PDF 与独立审计证据填写；官方 `provenance.py import-batch --write` 事务 revision 3970 写入当前题面/答案哈希并从问题总账推导 issue_ids。更新涵盖 q01 25 小题的未决项、q03 题面分值修订、q04 题面/答案重写；其余答案哈希与既有记录一致。
+- 阶段修改文件：1986 广东理科 `provenance.json`、`source-manifest.json` 事务 revision/issue_ids、`missing-issues.md` 新增整题组 blocker ISSUE-1056；ignored 三角色工作项；本 `PROGRESS.md`。
+- 阶段验证：官方 `provenance.py import-batch` 只读预检通过后以 `--write` 提交；`provenance.py check-batch --batch phase2-b59` 返回 `OK：1 卷`；status 为试卷 `blocked`、批次 `provenance_verified`，与 q01 未决 blocker 一致。manifest 当前卷登记 ISSUE-0778/0797/1053/1054/1055/1056。
+- 剩余任务：正式 PDF 仍对应旧输入；需先正式构建四版，核对页数、PDF 哈希、工具链和 warning，再为新 attempt 刷新工作项并重新逐页审查。不得沿用旧 451/480 视觉结论。
+- 下一步：运行官方 `build_projects.py build --formal --batch phase2-b59`；构建后验证四版 receipt 与生成输入当前性，再启动新 attempt 的页级复核。
+- 已完成可验证阶段（1986 广东理科四版正式重建）：官方 `build_projects.py build --formal --batch phase2-b59 --json` 事务 revision 3972 创建 attempt `5167c87d-c1a7-4e96-bcc1-d1125298bb7f`，四版 succeeded。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json` 事务派生状态及四份 ignored `build/*.pdf`；本 `PROGRESS.md`。
+- 阶段验证：页数为试题 7、解析 26、简答 8、印刷 19，共 60 页；四版 errors、missing characters、overfull、undefined references、problems 均为 0；`build_projects.py validate-receipts --batch phase2-b59 --json` 返回 `OK`（failed/invalid/missing/stale/running 均 0）；provenance batch check 与本卷生成一致性检查均通过。卷状态仍是 compiled_pending_review，不因构建成功而标为完成。
+- 剩余任务：60 页的新 attempt 尚无当前 review 工作项；旧 attempt 的 451/480 结果不能复用。仍需全页视觉审查、登记真实失败、报告投影/门禁、清理编译中间物及提交。
+- 下一步：官方 `review_receipts.py prepare-batch --batch phase2-b59` 刷新四版工作项；校验 attempt、PDF SHA 和页数后，重新覆盖全部 60 页。
+- 中断恢复核验：先检查了规范工作树 `phase0-wt`、分支 `feat/gaokao-phase0`、当前 Git diff 与本进度文件。b59 当前正式 build attempt 仍为 `5167c87d-c1a7-4e96-bcc1-d1125298bb7f`；但 `.work/phase2-b59/review/` 及其页审工作项在本次恢复时不存在，因此不能把先前准备状态或旧 attempt 的 451/480 结论当作当前证据。tracked diff 仍仅涉及 1986 广东理科题源/派生文件、问题总账、manifest 和本进度记录。
+- 本次优化执行约束：复用已通过的解析、provenance 与正式构建门禁，不重跑全库；只重建当前 attempt 的四版 review work items，按 PDF 版次并行核查相互独立页组，完成后运行 review/report 相关门禁并更新本记录。
+- 恢复状态更正：工作项实际位于项目内 `math-gaokao-latex/.work/phase2-b59/review/`（而非仓库根 `.work/`）。四份文件均已存在并绑定 attempt `5167c87d-c1a7-4e96-bcc1-d1125298bb7f`，分别覆盖试题 7 页、解析 26 页、简答 8 页、印刷 19 页，共 60 页/480 项，当前全为 pending。误用根目录路径检查及一次安全拒绝覆盖的 `prepare-batch` 调用均未改写工作项；不再重复准备命令。此前“工作项目录不存在”的表述系路径检查错误，以本条实测为准。
+- 并行工具状态：尝试并行分派四版审查，但平台因 agent thread limit 拒绝启动，未创建子任务；不重复尝试，改由主会话本地完成全页视觉核查。临时渲染只存于 `/tmp/gk1986-b59-pages.9OVfAJ/`，尚未写入 review 结果。
+- 本轮审查结论暂不登记：四版 60 页完成目视检查后，finalizer 因 artifact stale 安全拒绝；构建回执本身 current（build validate pending 1、stale 0）。定向生成器检查确认唯一 stale 投影为 `answers_short.tex`；只读差异发现该投影保留了修订前的 q01(8)/(9)/(20)/(25) 结论及旧 q04 三棱锥答案，与当前规范源不符。当前 attempt 的 480 项审查已作废，不写入正式 receipts；须官方刷新简答投影后正式重编，再审新 attempt。
+- 已完成可验证阶段（简答答案投影同步）：通过官方 `make_short_answers.py --write --paper gk-1986-regular-guangdong-science` 从当前题面、答案和解析生成 `answers_short.tex`；投影现覆盖 q01(8)/(9) 条件选项待核、q01(20) 语义歧义、q01(25) 函数信息/选项图缺失及 q04 新答案，不再保留旧结论。
+- 阶段修改文件：仅该卷 `answers_short.tex` 与本 `PROGRESS.md`；未手改生成文件。
+- 阶段验证：本卷 `make_short_answers.py --check`、`generate_projects.py --check`、`make_editions.py --check` 全通过。旧 PDF/构建回执及 480 项视觉工作项都不再与当前简答投影闭合，尚未正式重编或登记复核。
+- 下一步：仅对 phase2-b59 执行正式四版构建，验证新 attempt 的四份 PDF、页数/哈希/警告与构建 receipt；再准备并核验新 attempt 工作项，不能复用本次已作废结论。
+- 已完成可验证阶段（同步简答投影后的正式重建）：官方 `build_projects.py build --formal --batch phase2-b59 --json` 事务 revision 3974 创建新 attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`；四版全部 succeeded，卷状态仍为 `compiled_pending_review`。
+- 阶段修改文件：该卷 `receipts/build.json`、`source-manifest.json` 派生状态、四份 ignored build PDF 与本 `PROGRESS.md`；新 attempt 替代之前因简答投影陈旧而失效的 `5167c87d…`。
+- 阶段验证：页数仍为 7/26/8/19，共 60 页；errors、missing characters、overfull、undefined references、problems 合计 0；四 PDF 新 SHA 已记入 build receipt。`build_projects.py validate-receipts` 返回 OK（stale 0），provenance batch check 与题面/答案/简答生成一致性检查通过。
+- 剩余任务：新 attempt 尚无视觉工作项；此前 480 项结论绑定旧 attempt，必须全部重审。复核仅登记来源缺陷 q8/q9 运算符、q25 图形选项缺失等真实项目，不复核已通过的来源解题过程。
+- 下一步：对新 attempt 执行官方 `review_receipts.py prepare-batch`；核对四版 hash、页数与 60 页覆盖后，使用低开销联系表核查并放大疑点页。
+- 已完成可验证子阶段（新 attempt 复核工作项）：官方 `review_receipts.py prepare-batch --batch phase2-b59` 为四版创建 4 份工作项，均绑定 attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`；页数 7/26/8/19，合计 60 页/480 checks，全部 pending。
+- 阶段修改文件：仅 ignored `.work/phase2-b59/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-science.json` 与本 `PROGRESS.md`。旧 attempt 工作项因输入投影陈旧而由官方工具刷新；其结论不视为当前 attempt 回执。
+- 阶段验证：4/4 工作项的 attempt、PDF 路径、SHA-256、页数及连续页码与新 build receipt 相符；未复用旧页级状态。
+- 剩余任务：新 attempt 的全页审查；此前旧 attempt 已经做过目视检查，但不能直接依旧 attempt 登记。为避免重复劳动，下一步将逐页对比两次同工具渲染图像，仅像素完全一致的页面沿用已有视觉观察，变化页重新放大检查，再登记新 attempt 结论。
+- 下一步：以相同 `pdftoppm` 版本/参数重新渲染当前四版，按页和旧 `/tmp/gk1986-b59-pages.9OVfAJ/` 图像做像素差；所有变化页定向复核。
+- 已完成可验证阶段（新 attempt 四版视觉复核）：attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c` 的 60 页全部有当前结论。旧 attempt 与新 attempt 以相同渲染器/参数逐页比较，59 页 PNG 字节完全一致；唯一变化为简答版 p8，已放大复核 q8/q9/q20/q25 限定答案和 q4 新答案，排版清晰。其余页面复用已完成的逐页视觉观察，仅在像素完全相同后迁移观察结论，不沿用旧 attempt 的工作项状态。
+- 阶段修改文件：4 份 ignored 新 attempt review work items 与本 `PROGRESS.md`；review receipt 尚未正式写入。
+- 阶段验证：60 页 × 8 checks 全覆盖，无 pending、无空 note；合计 472 pass、8 fail。每版各 2 项 fail：p2 `glyph`（q8/q9 源运算符不可辨，ISSUE-1053/1054）及 q25 所在页 `figure_label`（选项图缺失，ISSUE-0778/0797）；印刷版页码分别为 p2/p3，其余版本 p2/p4。四份 work items 的 attempt、PDF SHA 和页数均与新 build receipt 一致。
+- 剩余任务：把 8 项真实来源限制正式登记为 review receipt/visual issues，并验证批次状态与报告；随后运行 review/report 定向测试与相关门禁、清理编译中间产物、复核 diff 并提交。不 push。
+- 下一步：官方 `review_receipts.py finalize-batch` 执行单批事务；预期结果 `VISUAL_FAILED`，保留 blocked 状态，不把来源缺陷伪报为版式通过。
+- 已完成可验证阶段（新 attempt review 正式登记）：`review_receipts.py finalize-batch` revision 3975 原子登记当前 attempt 的 60 页/480 项结果、视觉问题及派生状态；472 pass、8 fail、0 pending。失败为四版各一项 q8/q9 源运算符未决 `glyph` 与一项 q25 来源选项图缺失 `figure_label`，未发现新的排版缺陷。
+- 阶段修改文件：该卷 `receipts/review.json`、`missing-issues.md` 新增当前 attempt 视觉问题、`source-manifest.json` 事务派生状态与本 `PROGRESS.md`；正式构建仍绑定 attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`。
+- 阶段验证：finalizer 返回预期 `VISUAL_FAILED`，批次保持 `compiled_pending_review` 且未生成成功报告；review check、build receipt validation、provenance check 和本卷三个生成器一致性检查通过。一次 `report.py check --all` 因漏传必需的 `--manifest/--issues` 参数仅显示 usage，未写入状态，现将按帮助补齐参数重跑。
+- 剩余任务：跑 review/report 定向回归测试、正确参数的全库报告一致性只读检查及 whitespace/diff 检查；确认视觉问题和报告状态，清理该卷构建中间产物但保留 PDF/TeX，然后按用户要求提交已完成阶段，不 push。
+- 下一步：以支持的参数运行 `report.py check --all --manifest source-manifest.json --issues missing-issues.md`，并运行 `test_review_receipts.py`、`test_report.py`。
+- 已完成可验证子阶段（review/report 定向测试与报告投影诊断）：`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过。带齐参数的 `report.py check --all` 发现 6 个由本事务变更导致的全库报告投影 stale（source inventory、exams report/README、LaTeX 项目 README、2017–2026 README、baseline），没有修改这些文件。
+- 阶段修改文件：仅本 `PROGRESS.md`；测试和只读报告检查未落盘。
+- 剩余任务：用官方 `report.py render --all` 刷新这 6 个派生投影，再 `check --all` 确认一致；之后清理中间产物、跑最终门禁、审阅并提交。
+- 下一步：运行 `report.py render --all --manifest source-manifest.json --issues missing-issues.md`，随后再次检查报告投影。
+- 已完成可验证阶段（报告投影与中间物清理）：官方 `report.py render --all` 事务更新并回读校验 6 个报告投影；`report.py check --all` 随后通过，报告与 manifest 一致且保留 blocked/未完成状态。对该卷四个入口分别执行 `latexmk -c -outdir=build`。
+- 阶段修改文件：六个全库派生报告、本卷四版 build 中间物删除及本 `PROGRESS.md`。build 目录仅保留四份 PDF；题面/解析/图稿 TeX、PDF、build/review receipts 均保留。
+- 阶段验证：build 目录精确列出四份 PDF；SHA 为试题 `30c259aa…fb7a64`、解析 `57e78223…7d3406`、简答 `b61e2b89…1c4046d`、印刷 `3e8c4ddf…664e50a`，与当前 build receipt 一致；build validator OK（stale 0）；source manifest/provenance/generator checks、review/report 定向测试（66+11）及 `git diff --check` 均通过。review check 仍按预期为 `VISUAL_FAILED`（8 项来源限制），批次保持 `compiled_pending_review`。
+- 剩余任务：核对完整 tracked diff、索引/报告范围和暂存路径，创建本地提交；不 push。全语料完整测试未运行，因为本阶段是单卷内容、回执与派生报告事务，review/report 定向测试和 scope gates 已覆盖变更面。
+- 下一步：执行最终 Git 状态与 diff 审阅，确认仅本卷、全量派生报告和本进度记录，然后本地提交。

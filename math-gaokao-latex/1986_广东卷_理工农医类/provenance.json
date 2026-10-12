@@ -5,17 +5,23 @@
   "questions": [
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "独立盲解覆盖第一卷 25 小题。可确定项与固定答案页逐项相符；第 8、9 题分别算得 2156、7200，但原连接符不可辨，选项字母仅作条件判断；第 20 题依‘边’的几何含义有分歧；第 25 题函数可求但源选项图缺失。",
         "grade": "B"
       },
-      "answer_sha256": "baacade9231e680310b7048d6bdb841570c966c8070862dddff5e3484eec184f",
-      "conflict_status": "none",
+      "answer_sha256": "69ca2d91852b6d038f0938a7dbc414646f2afb1e2c1b6cabf4fa5bd5148bf21f",
+      "conflict_status": "unresolved",
       "issue_ids": [
         "ISSUE-0778",
-        "ISSUE-0797"
+        "ISSUE-0797",
+        "ISSUE-1053",
+        "ISSUE-1054",
+        "ISSUE-1055",
+        "ISSUE-1056"
       ],
+      "printed_label": "1",
       "printed_number": 1,
       "question_id": "gk-1986-regular-guangdong-science-q01",
+      "question_order": 1,
       "question_text_sha256": "2ac69ae32114b52cd8e47e35d57a301da937c7e5cfb9b1f414d374f991043e67",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
@@ -23,30 +29,30 @@
         1,
         2,
         3,
-        4,
-        5,
-        6
+        4
       ],
       "source_ref": {
         "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e"
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 1—4 页逐题目视并与转录核对；第 1(8)、1(9) 连接符字形为不可辨方框，第 1(25) A—E 图形选项区域缺失，保留原样并登记待核问题。",
         "result": "uncertain",
         "role": "phase2-b59-question-review-pdf"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "对照固定源第 7—11 页解答并独立复算；答案结论与源表一致。",
         "grade": "A"
       },
       "answer_sha256": "09d3aaa23491e82701681e467945e9ceb818b9e16c5230271bf2da6db1601f91",
       "conflict_status": "none",
       "issue_ids": [],
+      "printed_label": "2",
       "printed_number": 2,
       "question_id": "gk-1986-regular-guangdong-science-q02",
+      "question_order": 2,
       "question_text_sha256": "bbd8795ed72586f707c9484aba04044cc72749a779ba356a15b5477759bd58f9",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
@@ -63,91 +69,83 @@
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；该题题干与可见符号已按源稿保留。",
         "result": "passed",
         "role": "phase2-b59-question-review-pdf"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "对照固定源第 7—11 页解答并独立复算；分值校正不改变本题答案，结论与源表一致。",
         "grade": "A"
       },
       "answer_sha256": "9a47bf297a9cd4fb68a661f18cb41e2c4b67dc50d2830b9519382769c4b7a3a2",
       "conflict_status": "none",
       "issue_ids": [],
+      "printed_label": "3",
       "printed_number": 3,
       "question_id": "gk-1986-regular-guangdong-science-q03",
-      "question_text_sha256": "a4a06fe878b265c413f216377ca11e92c148314646ec3495c9a8337bd6164eb9",
+      "question_order": 3,
+      "question_text_sha256": "b6f803436345e83defa305edbf3bc6c7f3a7e03eaa9c53d9285c7cf4b1afad21",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        5
       ],
       "source_ref": {
         "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e"
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 5 页视觉核对题面；源题第二卷第一题分值为 12，题面与原题一致。",
         "result": "passed",
         "role": "phase2-b59-question-review-pdf"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "独立空间坐标推导与固定源 PDF 第 8—9 页官方解答交叉核对；题面长度 α 对应解答临时记号 a，结果为 arcsin(sqrt(4b^2+α^2)/(2α))。另验证非退化与端点情形，图中 E 不作空间交点解释。",
         "grade": "A"
       },
-      "answer_sha256": "25afffc36e6acd06fea948c4d03f84a8c3c4832e03323109785971c8599e67f5",
+      "answer_sha256": "34221d8687808af95af6b7c0a60599cd24861fb8e27ea3f0366901fdc49b911e",
       "conflict_status": "none",
       "issue_ids": [],
+      "printed_label": "4",
       "printed_number": 4,
       "question_id": "gk-1986-regular-guangdong-science-q04",
-      "question_text_sha256": "fc73cec999a1fccac53dd88ebfeee28f1f788324ab2e463c780efe839fa68d18",
+      "question_order": 4,
+      "question_text_sha256": "d526813aa392668662e1e743e2ca5046aa4b934b828040792b935eaaaaf20aa0",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        5
       ],
       "source_ref": {
         "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e"
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 5 页及第 8—9 页对应解答经独立视觉审计；题面长度符号为希腊字母 α，图中 E 的二维交叠不作为真实空间交点。",
         "result": "passed",
         "role": "phase2-b59-question-review-pdf"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "对照固定源第 7—11 页解答并独立复算；答案结论与源表一致。",
         "grade": "A"
       },
       "answer_sha256": "4c7dd6299d9a5c400775786ccfa6b423cc1de320b84ffd5b117f1b0bf61c6ed7",
       "conflict_status": "none",
       "issue_ids": [],
+      "printed_label": "5",
       "printed_number": 5,
       "question_id": "gk-1986-regular-guangdong-science-q05",
-      "question_text_sha256": "ea6ab66843596215b35e05e6357deee32758d5e018072d58d16e71c4f3128c63",
+      "question_order": 5,
+      "question_text_sha256": "6d11cde71395ca117c74c90a2e18130931cd496b76e6adcdf47f340322dd963a",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
-        1,
-        2,
-        3,
-        4,
         5,
         6
       ],
@@ -156,30 +154,27 @@
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 5—6 页逐题视觉核对；分值及题面转录与扫描页一致。",
         "result": "passed",
         "role": "phase2-b59-question-review-pdf"
       }
     },
     {
       "answer_evidence": {
-        "evidence": "固定源第 7—11 页答案与解答逐题对照，并独立复算可确认项；第 1(25) 题因选项图形缺失仅记录源表答案，不据缺失图形作判断。",
+        "evidence": "对照固定源第 7—11 页解答并独立复算；答案结论与源表一致。",
         "grade": "A"
       },
       "answer_sha256": "e1e009c30ee79fd3b86fe856c9b1ebe990bc493bddd7dec27f09db3fc98ae284",
       "conflict_status": "none",
       "issue_ids": [],
+      "printed_label": "6",
       "printed_number": 6,
       "question_id": "gk-1986-regular-guangdong-science-q06",
-      "question_text_sha256": "3fc2e34467e0be5aed88fae6dec5004b73d8f6ea322e62fa7b4c1191aad7abfe",
+      "question_order": 6,
+      "question_text_sha256": "56fe69e5f73911ee0e9c230f47a580f48b9b40eb2ef344fbe5ecb221ef4c1cba",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
         6
       ],
       "source_ref": {
@@ -187,7 +182,7 @@
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；第 1(25) 题 A—E 图形选项整段缺失，题干和答案表可见部分照录并保留阻塞说明。",
+        "evidence": "固定源 PDF 第 6 页逐题视觉核对；题面转录与可见条件一致。",
         "result": "passed",
         "role": "phase2-b59-question-review-pdf"
       }

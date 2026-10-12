@@ -17237,3 +17237,239 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1053
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页第 1(8) 题五个选项中的运算连接符呈不可辨识方框，限页文本层为私用区字形 U+F067；从题意可独立算得选法数 2156，但不能据数学结构确认原印符号或唯一选项字母。若相关方框均为乘号，E 与结果相符。题面与答案均保留缺字，不补猜。",
+  "fingerprint": "eb0204962f69f9af9bd7c28407f534eb4a242455768632e22cd3d53742ab1c50",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01-(8)",
+  "resume_action": "取得可辨识同版题面或权威勘误，确认选择式连接符；在此之前保留缺字方框、计数 2156 与条件式选项映射。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1054
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 2 页第 1(9) 题排列数表达式中的连接符呈不可辨识方框，限页文本层为私用区字形 U+F067；由节目排序条件可独立算得 5!P_5^3=7200，但不能据数学结构确认原印符号或唯一选项字母。若 C 中方框为乘号，C 与结果相符。题面与答案均保留缺字，不补猜。",
+  "fingerprint": "aa9dbcf0ad0d731aa8232ca043035516795d173434b560fc50dc20191da27c62",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01-(9)",
+  "resume_action": "取得可辨识同版题面或权威勘误，确认排列数连接符；在此之前保留缺字方框、计数 7200 与条件式选项映射。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1055
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第 3 页第 1(20) 题写作‘点 P 到三角形的三条边的距离相等’。若边指闭线段，独立论证支持投影为内心；若指三边所在直线，旁心反例使 E 不成立，且 A—D 也均非普遍成立。原题没有进一步限定，故不能在两种读法间擅自选择。",
+  "fingerprint": "bec9042df73beddfe34833035cce5072a3e51ce08478960a2c8c076e2f43755c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01-(20)",
+  "resume_action": "取得同版清晰题面、权威解答或勘误，确认‘三条边的距离’指线段还是所在直线；在此之前保留原题和两种读法的条件结论。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1056
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第一卷选择题组 q01 的独立复核确认：子题 8、9 的源连接符不可辨，子题 20 的‘三条边’存在会改变答案的几何语义分歧，子题 25 的图形选项缺失。故答案结论组仍有未解决冲突；具体证据分别见 ISSUE-1053、ISSUE-1054、ISSUE-1055、ISSUE-0778、ISSUE-0797。",
+  "fingerprint": "89407570267f2e41219099fda6657e600a5fdb8320532f388b93623893900a51",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q01",
+  "resume_action": "分别取得 q01(8)、q01(9) 的可辨识同版符号、q01(20) 的可靠语义说明，以及 q01(25) 的同版选项图；完成逐子题核验后再解除整题组冲突状态。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1057
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "glyph",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "cb0b202acf3b7b69341b3672526a5189228db847ec96a2ababfe876a2bf246fc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "3e8c4ddfef6dcbb205cd3ca10dc3c8e93522210f930c575d3ff412fc3664e50a",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 印刷版 第 2 页 glyph（FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1058
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "6aacd9729ec12ca907855037301d99cfbde0583938243d61c04ed3aa6d66cc35",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 3,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "3e8c4ddfef6dcbb205cd3ca10dc3c8e93522210f930c575d3ff412fc3664e50a",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 印刷版 第 3 页 figure_label（FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1059
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "glyph",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "9e25e900913a0bbd5c969a33d58fb68b638fd33defed381b6df436c5913a6906",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "b61e2b892efd5a6a3c9b06fb993c005910ee4d9e62c603aeea1ada9661c4046d",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 简答版 第 2 页 glyph（FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1060
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "824d0b3773ad808cd7ce4c35443f30068c9832482dcb80b3d7fd4833dbb8fe34",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "b61e2b892efd5a6a3c9b06fb993c005910ee4d9e62c603aeea1ada9661c4046d",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 简答版 第 4 页 figure_label（FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1061
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "glyph",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "2c19c9f53916925c8d942120df3cc773549a3f9f459c3b2aacf854721ebf2116",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "57e78223c9d27d5535d6afbb90626bef7e6c5aa4c14193461ca8ed12a37d3406",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 解析版 第 2 页 glyph（FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1062
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "f5b3f608ec36a10978cf2abd3026a9e97b71260b57d16b01d36e7ca819984150",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "57e78223c9d27d5535d6afbb90626bef7e6c5aa4c14193461ca8ed12a37d3406",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 解析版 第 4 页 figure_label（FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1063
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "glyph",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "3d43954d71c28418ca71e9fee681c8cce457a5c72628f0f7536aa5e0550f6003",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "30c259aa46a2d653cfb5231b6c3ba049c52e30030adbead9927ab3d042fb7a64",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 试题版 第 2 页 glyph（FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；字形可见但原符号不可核，需更清晰同版来源。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1064
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4282128a-6c7e-4b68-ab5d-6ac670b3a70c",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "d2d4a5114002067d040aa7a09959cc3a17f65622c0ada9990acc14dbb8f637fa",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "pdf_sha256": "30c259aa46a2d653cfb5231b6c3ba049c52e30030adbead9927ab3d042fb7a64",
+  "resume_action": "修正 gk-1986-regular-guangdong-science 的 试题版 第 4 页 figure_label（FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
