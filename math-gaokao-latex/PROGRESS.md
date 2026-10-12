@@ -1593,6 +1593,42 @@
 - 剩余任务：phase2-b57 两卷仍因试题版首页答案泄漏保持 `VISUAL_FAILED` / `compiled_pending_review`，题源未擅改；1952—2026 全语料目标仍在推进中。
 - 下一步：按全量收尾计划继续处理最早尚未完成的批次；不重做 b57 已完成的来源、构建或页级复核。
 
+### `phase2-b57` 上海文理试题版答案泄漏恢复诊断
+
+- 已完成可验证诊断：正式 review receipt 与问题账一致，1986 上海文史卷 41 页、理工农医卷 50 页，共 91 页/728 检查；仅两卷试题版首页各有 1 项 `answer_leak`，均由共享题面说明直接印出第 9 题幅角答案值触发。此前复核与 build 已完成，不重复运行旧 attempt。
+- Ruling：上一条“保留原首页说明、等待另行授权”的临时边界与用户完整验收目标“试题版无答案泄漏”冲突。仅从两卷试题源的编辑性“版式与异文说明”中删去答案数值，保留固定源的 $[0,2\pi)$ 区间约定及其他题面异文；不改第 9 题题干、选项、答案或解析。代价：题面页不再展示现代区间下的等价答案值，但异文核查及全部来源证据仍由问题账/provenance 保留。
+- 已完成可验证子阶段（答案泄漏说明最小修订）：两卷规范题面 Markdown 的第 9 题异文说明均已删除两个答案值，只保留固定源 $[0,2\\pi)$ 主值区间和其他异文；官方 `generate_projects.py --batch phase2-b57 --write` 写入 5 个派生目标，随后 `--check` 通过（2 卷一致）。未更改第 9 题题干、选项、答案要点或解析正文。
+- 阶段修改文件：两卷规范试题 Markdown 与生成的 `questions.tex` 投影；本 `PROGRESS.md`。生成器报告5个目标有更新；本次源/投影变更未写入答案文件。
+- 阶段验证：针对两卷的官方题面生成器检查通过；diff 检查仅触及两处题面说明及对应 `questions.tex`。91 页旧构建/复核回执绑定旧内容，不能复用。TDD 单测不适用于本次规范内容和生成文件更新；以项目生成器一致性、来源 provenance、正式构建和 PDF 页审作为验收门禁。
+- 已完成可验证子阶段（答案说明修订后正式重建）：正式 build revision 3989，文史 attempt `860f5cf6-e1e3-45b9-b286-503f27a6d004`、理工农医 attempt `e87d0e90-dd76-45ab-aa4c-d47f82ab631d`；四版页数分别仍为 4/18/5/14 与 5/22/6/17，共 91 页。所有版本 succeeded，errors、missing characters、overfull、undefined references、problems 均为 0；新试题 PDF 首页说明只保留区间约定，不再列出答案数值。`validate-receipts` 为 2 pending、0 stale/invalid/missing/failed，`provenance check-batch` 返回 OK，源/简答/入口生成器检查通过。
+- 阶段修改文件：两卷 `receipts/build.json` 与 manifest 派生状态、八份 ignored build PDF、本进度文件；题面 Markdown 与两份 `questions.tex` 已在前一子阶段同步。
+- 阶段验证：从两份试题 PDF 首页文本层确认说明不再包含“若采用现代常见”及第二个答案值；题目第9题原有选择项保持题面照录。两卷当前 attempt 替代旧 91 页 review receipt，旧页审回执不可复用为正式新 attempt 结论。
+- 已完成可验证子阶段（phase2-b57 当前 attempt 页审工作项）：官方 `review_receipts.py prepare-batch` 为两卷八版生成 8 份工作项；全部绑定当前 attempt、receipt 中 PDF SHA 和页数，页面连续覆盖文史 41 页、理工农医 50 页，共 91 页/728 checks，状态全为 pending。
+- 阶段修改文件：ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/` 下两卷 8 份 JSON 工作项；本进度文件。未改正式 review receipt。
+- 阶段验证：逐份检查 `build_attempt_id`、PDF SHA、页数、页码范围及 pending 数；八份工作项与当前 build attempt 完全对应，91 页无遗漏/重复。
+- 已完成可验证子阶段（phase2-b57 当前 attempt 视觉检查）：按八张联系表逐页检查两卷全部 91 页，无可见缺页、裁切、重叠或异常分页；8 个候选首页均以 150dpi 放大复核，题号、图形/公式、页眉页脚和字号清楚。两份试题首页异文说明已不再列出答案值，固定区间说明和题目选项照原文保留。除首页外题源与前一已审版本无变化，逐页联系表亦未发现新缺陷；旧 receipt 对其余页面的详细逐项观察可沿用，当前首页检查采用新观察。
+- 阶段修改文件：仅本 `PROGRESS.md`；当前 PNG、联系表位于 ignored `.work/phase2-b57/render-current/`。尚未修改 review work item 或正式 review receipt。
+- 阶段验证：当前 attempt 四版联系表覆盖文史 41 页与理工农医 50 页；八个首页高分辨率 PNG 均已检查。首页试题版 answer_leak 候选复核为 pass；版本内的第9题选项保持照录，不构成首页额外答案提示。
+- 已完成可验证子阶段（phase2-b57 新 attempt 逐页结论）：将旧版已逐页核查的详细检查说明迁移至内容未变页；当前 91 页联系表复核确认未见版面异常，8 个首页均按新 PDF 高分辨率复核；两卷试题版首页 `answer_leak` 据修改后输出登记 pass。8 份 work items 共 91 页/728 checks，全部 pass，0 fail/pending，所有说明非空。
+- 阶段修改文件：仅 ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/` 下 8 份当前 attempt 工作项及本 `PROGRESS.md`；正式 review receipts 尚未更新。
+- 阶段验证：逐项检查 workitems 的 attempt/PDF SHA/页数/连续页号与 current build receipt；覆盖页集合无缺漏，检查数728，状态全 pass。p1 answer_leak 更新说明只反映本轮当前输出复核。
+- 已完成可验证预检：`finalize-batch-checked` 因当前 tracked 源稿/构建/进度 diff 非空而按设计返回 `INVALID_OR_STALE`，`committed=false`，无文件或状态写入。其源码显示该包装器附加了 clean-tree 前置条件和仅在视觉失败时的精确诊断自动提交；常规 `finalize-batch` 才是本批采用的事务登记命令。
+- Ruling：使用项目标准 `review_receipts.py finalize-batch` 领域事务，而不为通过包装器提前提交不完整批次源/构建。运行前已逐项核验八份 work items 与当前 build SHA/页数、728 项全 pass，并检查精确 diff；若常规事务返回失败即保留问题，不绕过拒绝。
+- 已完成可验证阶段（phase2-b57 正式复核登记）：官方 `finalize-batch` 事务 revision 3990 返回 `FINALIZED`，批次 `closed`，两卷 8 版的 91 页/728 checks 全通过，无新问题；报告 `reports/phase2-b57.md` 已按当前 attempt 原子刷新。此前两卷试题版首页 `answer_leak` 失败被当前视觉复核解除。
+- 阶段修改文件：两卷 `receipts/review.json`、`missing-issues.md` 中本批视觉问题状态、`source-manifest.json` 派生批次/试卷状态、`reports/phase2-b57.md`、本 `PROGRESS.md`；被官方事务写入。
+- 阶段验证：finalizer 返回 `FINALIZED`/无问题；build receipts 仍为当前 attempt，provenance check 先前 OK；报告需再经全库 renderer check。八份页审工作项覆盖91页、728项，全部 pass/无空批注。
+- 已完成可验证阶段（phase2-b57 全库报告投影）：官方 `report.py render --all` 用一个 content 事务写入并回读校验六个报告目标；随后 `check --all` 确认报告与 manifest 一致且如实保留项目未完状态。
+- 阶段修改文件：本批 `reports/phase2-b57.md`、全库 renderer 管理的六个报告/README 投影及本 `PROGRESS.md`；无共享工具/模板修改。
+- 阶段验证：renderer 与全库 report check 均退出码0；全量清单状态一致，b57 显示 closed。
+- 已完成可验证阶段（phase2-b57 scoped gates 与定向回归）：source manifest 验证（775 artifacts）、build receipts（2 succeeded/0 stale）、review (`FINALIZED`)、provenance（2 卷 OK）及题面/简答/版式三个生成器检查全部通过；`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过；全库 report check 通过。
+- 阶段修改文件：仅本 `PROGRESS.md`；validators 和测试为只读，无额外 tracked 副作用。
+- 阶段验证：上述 gates 与测试均退出码0，batch closed，四版 PDF current，报告投影与 manifest 一致。
+- 已完成可验证阶段（phase2-b57 build 与临时物清理）：两卷八入口均经 `latexmk -c -outdir=build` 清理；两个 build 目录各仅保留试题/解析/简答/印刷四份 PDF。删除了本批 ignored `.work/phase2-b57/render-current/` PNG/联系表与已完成的 review work items。
+- 阶段修改文件：本 `PROGRESS.md`；8 个 build 目录中的非 PDF `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 被清理；ignored `.work/phase2-b57` 仅剩空目录。无正式题目、答案、TikZ 或 PDF 被删除。
+- 阶段验证：清理前后 `validate-receipts` 均为 2 succeeded/0 stale/failed，八份 PDF 页数与 SHA 保持为当前回执值；build 目录精确列出四份 PDF、无中间文件；临时 PNG 和工作项已移除。
+- 剩余任务：最终审阅精确 tracked diff 与所有本批门禁，然后本地提交 b57 成果（不 push）。1952—2026 全库目标和其他批次 backlog 继续存在。
+- 下一步：重新运行轻量最终 gates（build/review/provenance/report、`git diff --check`），审查 staged 路径只含 b57 源/投影/回执/报告和必要全库派生投影及本进度，再本地提交。
+
 ### `phase2-b59` 1986 广东理工农医卷续作预检
 
 - 已完成可验证子阶段：确认 b59 仅含 `gk-1986-regular-guangdong-science`，正式 build receipt 为 attempt `4178bc96-691e-4c97-b5b4-580cab0eb76c`、四版均 succeeded；既存四份 ignored review work items 仍全 pending，但绑定旧 attempt `3cba4219-937f-47bf-97cf-eda56e3440c4`。官方 `prepare-batch` 因生成输入树与工具链指纹变化拒绝复用/刷新旧构建。

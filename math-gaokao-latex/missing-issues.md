@@ -17206,17 +17206,16 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "ba07a1d35446713218f019541e42452f2b47430b5d6b86019feb92bc93d1117f",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-1986-regular-shanghai-arts",
   "pdf_sha256": "c8b77ff26bbd33c426b663bf2e917a9535596f45b1d58b3bc99381aac38480f1",
-  "resume_action": "修正 gk-1986-regular-shanghai-arts 的 试题版 第 1 页 answer_leak（首页版式与异文说明直接给出第9题幅角答案 11π/6 和 −π/6，试题版泄漏答案。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1052
 
 ```json
@@ -17227,17 +17226,16 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "df018694875302c8005e0c1249bd5ce7db9c29338b92826854a064f3c836e393",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-1986-regular-shanghai-science",
   "pdf_sha256": "0ed683d124d852036fbb73af67f4757ceb3948e7074b7af90ec9ecdb92877204",
-  "resume_action": "修正 gk-1986-regular-shanghai-science 的 试题版 第 1 页 answer_leak（首页“版式与异文说明”直接列出第9题答案 11π/6 与 −π/6，试题版因此存在答案泄漏。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1053
 
 ```json

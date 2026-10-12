@@ -1,7 +1,7 @@
 {
   "batch_id": "phase2-b57",
-  "build_attempt_id": "82cfd59c-7c07-40ea-bb71-438a59b57801",
-  "dependency_tree_sha256": "ed8a6386a440e150e8360e988dea720f46515552fc8728df678c457e93698677",
+  "build_attempt_id": "860f5cf6-e1e3-45b9-b286-503f27a6d004",
+  "dependency_tree_sha256": "bca4ecd81e8aac98ab304f02a82825c310170e52c8d3b345d095257b632d7c78",
   "editions": [
     {
       "candidate_override": null,
@@ -50,12 +50,12 @@
             },
             {
               "check": "answer_leak",
-              "note": "首页版式与异文说明直接给出第9题幅角答案 11π/6 和 −π/6，试题版泄漏答案。",
-              "result": "fail"
+              "note": "本版卷首异文说明仅保留固定源的 [0,2π) 区间约定，未直接列出第9题答案值；选项照录原题，未泄漏答案。",
+              "result": "pass"
             }
           ],
           "page": 1,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -196,8 +196,8 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "c8b77ff26bbd33c426b663bf2e917a9535596f45b1d58b3bc99381aac38480f1",
-      "result": "fail"
+      "pdf_sha256": "5ff264f4001792addddd8a347039ce57a0fc7d3a81230802e33e9279d7e3b218",
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -1036,7 +1036,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "310c3973a57886cf93e068d7fa18d291955eb1f75eb9b8916cdc9166bed160bf",
+      "pdf_sha256": "a07ca6d3f72ae022d7eedfcedc8cc65c3ec71372b186ccd91581cfbf021542b9",
       "result": "pass"
     },
     {
@@ -1278,7 +1278,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "e2d70eb77e4fc0d952e75391ab7504b462ff468e9dcb0ff123beee6c98afe8f3",
+      "pdf_sha256": "641ef6b2521d840b3f47ce7ca5b46332e478999078012c1718f98b54b62b9840",
       "result": "pass"
     },
     {
@@ -1934,17 +1934,17 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "ae52223a6c7e8fccba58ee40bcb405cd32fc409d90c04adbb19159f89bc0c948",
+      "pdf_sha256": "38b6fd3039ef58b66c43a4c907b58dbd0c702f1197c1bad32a0304feb300d75a",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "29996a90259b4a1a2b3f970d3d00576716c0e1aac581bf264a9fa4379272300f",
+  "generation_input_tree_sha256": "cdb4f380511645ea0b644d931508340ede31d3e336c51ddae0cbad65f7569a16",
   "input_projection": "a022d30e966ad4201896a406489632b27fcaf740615ea584aaa8bcc40a021055",
   "paper_id": "gk-1986-regular-shanghai-arts",
   "project_dir": "1986_上海卷_文史类",
-  "reviewed_at": "2026-10-12T16:04:41+08:00",
+  "reviewed_at": "2026-10-12T19:28:15+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
