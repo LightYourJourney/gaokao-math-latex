@@ -2593,3 +2593,8 @@
 - 验证结果：`git diff --check 37d68308..HEAD`通过；差异统计611 insertions/566 deletions（回执JSON重写占主要行数）；工作树干净，分支`feat/gaokao-phase0`。
 - 剩余任务：phase2-b80已闭环；本地提交尚未push的累计分支内容与其余批次继续留待后续，不属于本阶段。
 - 下一步：提交最终checkpoint并停止于phase2-b80验收边界；不自动开始下一卷，不push。
+- 已完成下一批预检阶段（phase2-b81）：按全量收尾计划与manifest顺序选择2001全国新课程文科卷（22题、5份TikZ图稿）；官方`provenance status`确认`provenance_verified`，不重复来源转录/核验。
+- 阶段修改文件：仅本进度文件；未改b81正文、答案、图稿或provenance。
+- 验证结果：build receipt attempt `54543e02-5848-4cb4-9a6e-03a1d5c6cf05`因生成输入树/工具链指纹变化stale；旧review receipt及4份空白工作项均不绑定该build，工作项共400项pending；provenance事实状态当前为`provenance_verified`，manifest派生缓存尚未同步。
+- 剩余任务：正式重建b81四版并同步派生状态；归档旧工作项后为新attempt生成复核输入、逐页复核并登记；全库报告、门禁、测试、清理和提交。
+- 下一步：提交预检checkpoint并运行b81官方formal build；不复用旧build/review attempt，不重跑来源核验。
