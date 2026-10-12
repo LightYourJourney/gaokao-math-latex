@@ -937,3 +937,7 @@
 - 阶段验证：接触表覆盖 41/41 页、4/4 接触表通过；高分辨率页面 5/5 通过。4 份当前 attempt 工作项登记 41 页 × 8 项共 328 条 pass、0 pending、0 warning exemption；三条既有问题保持 resolved；`git diff --check` 通过。
 - 阶段修改文件：本进度文件；忽略的 `.work/phase2-b55/review/` 下 4 份工作项；接触表、41 页预览及高分辨率图位于 `/tmp/gk-phase2-b55-review.ALrEHV/`；未更改试卷源或 PDF。
 - 下一步：提交本阶段进度 checkpoint，运行事务 finalize 更新正式 review receipts 与批次状态。
+- 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b55 状态 `closed`、无问题；1985 上海理工农医类正式 review receipt 与当前 build attempt 对齐，并生成 `reports/phase2-b55.md`，manifest revision 3923。ISSUE-0763/0764/0765 均保持 resolved。
+- 阶段验证：review finalize 报告 `closed`、无 problems；41 页、328 项视觉检查全部通过，零构建 warning。
+- 阶段修改文件：1985 上海理工农医类正式 review receipt、manifest 批次状态投影、本批报告；忽略工作项与临时图像尚待清理。
+- 下一步：单独提交 finalize 阶段进度，然后将 build 非 PDF 中间物、忽略工作项及临时审阅图像移入系统废纸篓，保留 PDF 与 LaTeX 源。
