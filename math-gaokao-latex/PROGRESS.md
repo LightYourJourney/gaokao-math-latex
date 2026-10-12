@@ -2809,3 +2809,8 @@
 - 验证结果：试题/解析/简答/印刷版分别5/23/7/19页，四版`succeeded`；errors、missing characters、overfull、undefined references和problems均为空；build receipt validator为1 pending、0 stale/failed，provenance `check-batch`为`OK：1卷`。
 - 剩余任务：当前attempt无有效视觉复核；需归档旧工作项、prepare当前attempt复核项，覆盖54页并登记432项，然后finalize、运行报告/门禁/测试、清理和PDF核验。
 - 下一步：提交b85 build checkpoint，为attempt `fc2e05f9-2541-451f-882c-536331ad56de`运行官方`prepare-batch`。
+- 已完成phase2-b85当前attempt复核准备阶段：旧attempt工作项完整移至可恢复目录后，官方`prepare-batch`为新build生成四份工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b85/review/`四份工作项；旧项归档于`~/.Trash/phase2-b85-review-workitems.ihZz5L/review`；正式review receipt未改。
+- 验证结果：四版均绑定attempt `fc2e05f9-2541-451f-882c-536331ad56de`及对应PDF SHA；连续覆盖试题5、解析23、简答7、印刷19页，共54页×8项=432项pending；候选页为试题1、解析11、简答1、印刷1，warning exemptions为空。
+- 剩余任务：检查全部54页并放大复核候选页及Q19/Q20图稿题面/解析页，之后填写、校验和正式登记432项视觉结论。
+- 下一步：渲染四版全页接触表，并依据当前PDF页码放大复核图稿与候选页。
