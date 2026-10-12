@@ -1988,3 +1988,50 @@
 - 已完成最终验收阶段（phase2-b65）：build receipt validator `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b65`、issues validate、全库 report check（输出与全量 manifest 一致）及 `git diff --check` 均通过。review/report 定向测试共77项通过；README 与库存投影只反映本批 closed/finalized 的统计变化。精确 diff 为11个受跟踪文本/JSON路径，无 PDF、PNG 或编译中间物入库。
 - 剩余任务：仅本地提交本阶段11个已核路径；未 push。1952—2026 全语料仍未完成，用户确认的全局41项待核尚未映射到正式工作清单，继续保留为未处理范围。
 - 下一步：提交后核对工作树、当前批次 receipts/gates，再停止于 b65 阶段验收边界。
+- 已完成可验证预检阶段（phase2-b66，1988 全国文科）：当前分支为 `feat/gaokao-phase0`，HEAD `0f6662bb`，工作树干净。manifest 指定单卷 `gk-1988-regular-national-arts`、25题、0个登记 issue，图稿3项各预期引用2次；状态为 `compiled_pending_review`。现有正式 build attempt `b760aef8-badf-4aba-91e1-f58c9e8f59f2`（6/22/7/18页）已被 build validator 判 stale（生成输入树、工具链指纹变化）；正式 review receipt 绑定另一 attempt `643e9619-9d8d-48c6-8cc9-239063f6e307`，ignored 四份工作项又绑定第三 attempt `3e01efd5-5a4e-47ff-984e-57877e603342`，全部 pending，均不能作为当前复核证据。provenance 没有题面/答案冲突，但 manifest 纸卷/批次派生状态缓存不同步（compiled/compiled_pending_review vs editions_generated/provenance_verified）。
+- 阶段修改文件：仅本 `PROGRESS.md`；核验未改转录、答案、provenance、receipts 或 PDF。固定源记录为上游 `deekur/gaokaomath` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924` 的 `普通高考/1988/1988全国文.pdf`；当前 checkout 与主检出下均未找到该本地文件，manifest 记录的 blob OID 也不在本地 Git object database，尚需按固定来源重新取得以完成源核对。
+- 剩余任务：获取/验证固定源 PDF；运行 b66 当前生成与来源一致性检查；必要时 formal rebuild 并重新绑定四版 review work items，完成内容与逐页视觉复核及官方登记。
+- 下一步：从指定上游 commit 取得单页原始 PDF并核对 SHA/页面与25题；再检查题面、图稿和答案解析，不沿用 stale build/review。
+- 已完成可验证来源阶段（phase2-b66）：按 manifest 固定的上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924` 经 GitHub Contents API 取回《1988全国文.pdf》；SHA-256=`3ea4457d57da8b4f384ff689cea4e002a067e70e01b36ee7830901cf6996a704`，508473 bytes，单页 A3 横向，印刷页码33，与 manifest 元数据完全一致。已视觉查看整页并确认原卷题号1—25及第4/12/22题图形均在页内；PDF文字层可提取。临时 PDF/渲染图位于 `/tmp/gaokao-b66-range.0UePpv/`，不在仓库。
+- 阶段修改文件：仅本 `PROGRESS.md`；固定源内容尚未转写或修改任何权威题面/答案文件。因 subagent 并发额度已满，未派出独立答案核验代理，后续由主会话依据该固定 PDF 与既有 provenance/解析做定向核验。
+- 剩余任务：检查既有题面转录/provenance 的覆盖与内容，运行生成一致性检查；随后 formal rebuild、刷新当前 attempt 工作项并完成全页视觉检查/官方登记。
+- 下一步：用定向脚本比对 1988 全国文科 Markdown→生成 TeX→四版入口的一致性，并逐题确认来源文本和已登记独立推导的覆盖；不重复已经有证据支持的转录工作。
+- 已完成可验证生成/来源一致性阶段（phase2-b66）：原始 PDF 逐页视觉核验后确认与 manifest SHA、单页 A3 元数据一致；provenance 的25条题目记录 source_sha 全匹配、来源转录核验25/25 passed、答案哈希齐全、conflict=0，沿用既有独立求解与盲核角色记录；不重做已有内容工作。`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均对该卷通过，issues ledger validate 通过。首次两项只读生成检查遇到共享事务锁；确认无活跃持有者后串行重跑，随后通过，没有清理/删除锁文件。旧 build validator仍判 stale，故必须正式重建并刷新 review。
+- 阶段修改文件：仅本 `PROGRESS.md`；其余检查只读。上游固定源 PDF 的工作副本/页面渲染留在 `/tmp/gaokao-b66-range.0UePpv/`，不入库。
+- 剩余任务：官方 formal build，检查四版日志、页数与当前 PDF SHA；`prepare-batch` 生成绑定当前 attempt 的四版工作项，然后视觉检查所有页面、登记 review、刷新报告/门禁/测试、清理中间物并提交。
+- 下一步：对已确认的源/生成文件运行 `build_projects.py build --formal --batch phase2-b66`；不改动 Markdown、答案、provenance 与 TikZ 图稿，除非重编或视觉验收出现证据明确的问题。
+- 已完成可验证正式构建阶段（phase2-b66）：官方 formal build revision 4010 创建当前 attempt `949adc18-1ce1-4265-800d-1585c0d064c3`；试题/解析/简答/印刷版均 succeeded，页数6/22/7/18，共53页。四版 build log 的 errors、missing characters、overfull、undefined references、problems 均为0；build receipt validator `OK：1卷`，provenance `OK：1卷`。PDF SHA 已写入 receipt 并与本机实际 `shasum` 一致。
+- 阶段修改文件：1988 全国文科卷 `receipts/build.json`、`source-manifest.json` 中的正式构建派生状态、ignored 四版 build PDF，以及本进度文件。
+- 剩余任务：现存四份 ignored work items 绑定旧 attempt `3e01…`，需要官方 `prepare-batch` 刷新到当前 `949adc18…` 后进行53页全覆盖视觉审查并登记。
+- 下一步：运行官方 `review_receipts.py prepare-batch --manifest ... --batch phase2-b66`，确认新工作项 attempt/PDF SHA/page count，再渲染页面接触表与候选图页。
+- 已完成可验证 review 工作项阶段（phase2-b66）：官方 `prepare-batch` 已为四版刷新工作项，全部绑定当前 build attempt `949adc18-1ce1-4265-800d-1585c0d064c3` 及对应 PDF SHA/页数；覆盖试题6、解析22、简答7、印刷18，共53页/424个检查项，全部 pending。旧 attempt 工作项已被官方事务替换，不手工改动其结构。
+- 阶段修改文件：ignored `.work/phase2-b66/review/{试题版,解析版,简答版,印刷版}/gk-1988-regular-national-arts.json` 四项；正式回执尚待完成视觉 review。
+- 剩余任务：全页逐页视觉复核、图页高分辨率检查及可能的排版问题登记；之后 official finalize、报告/门禁/测试、清理 build 中间物和临时图片、提交。
+- 下一步：将当前四版 PDF 全部渲染到 ignored work area，按接触表核查全部53页，并放大检查所有三幅 TikZ 图及版面候选页；所有裁决绑定当前 SHA。
+- 已完成可验证全页概览阶段（phase2-b66）：当前 attempt 四版 PDF 共53页已全部按版次渲染；接触表覆盖试题6、简答7、解析22、印刷18页。已逐张查看8张接触表，页序完整，题目/解答顺序连贯，初检未见缺页、裁切、文字重叠或图形缺失；少数短末页留白较多但题目与答案连续完整，需结合候选页高清图确认版式是否合理。当前 work items 自动候选页为试题p1、解析p20、简答p1、印刷p2；图题页还需高清检查（试题q4/q12/q22；解析及印刷对应图页）。
+- 阶段修改文件：仅 ignored `.work/phase2-b66/render-949adc18/` 的53张检查图与 `.work/phase2-b66/contact-949adc18/` 的8张接触表；无跟踪源文件改动。
+- 剩余任务：高分辨率复核4个候选页、全部图形页、关键答案/推导页，按当前 PDF SHA 填写424项 work items 并用官方 finalizer 登记。
+- 下一步：渲染并检查候选页及三个 TikZ 图在四版中的实际页面；若发现实质内容或版式缺陷，先记录证据和影响范围，再决定修复与否。
+- 已完成可验证全页视觉/数学复核阶段（phase2-b66）：53页接触表全看；另高清检查14页，覆盖四版全部自动候选页、题4/12/22三幅 TikZ 图在试题/解析/印刷版中的9个出现页，以及第19—25题关键推导/答案页。无缺字、裁切、遮挡、图形标签问题、题号错序或分页缺页；印刷版p18仅第25题、下方留白较多，但题目、推导、答案同页，非孤立答案页。复核题19旋转体体积 $48\pi/5\,\mathrm{cm}^3$、题22坐标向量得 $\sin\alpha=1/\sqrt5$、题23右支交点 $(5/4,-3/4)$、题24对数不等式定义域/区间、题25前 $2m$ 项和 $5m^2+m+2^{m+1}-2$；与简答表一致。原卷无官方答案页；沿用 provenance 中25题既有独立求解/盲核记录，未把模型重算冒充外部标准答案。
+- 阶段修改文件：仅 ignored 当前四版 review work items；逐页填写53×8=424项，377 pass、47 not_applicable（非试题版答案泄漏检查）、0 fail/pending。高分辨率 PNG/接触表全部仅位于 ignored `.work/phase2-b66/{render,contact,review}-949adc18/`。
+- 剩余任务：执行官方 review check/finalize，确认正式 receipt 绑定当前 attempt；随后全库报告刷新/检查、scoped gates 与定向测试，清除该卷编译中间文件和临时 PNG，再精确审 diff 并本地提交。
+- 下一步：先执行 `review_receipts.py check-batch` 验证424项和当前性，通过后官方 `finalize-batch` 登记，遇到校验问题先读取原始诊断再修正 work items。
+- 已完成可验证正式复核登记阶段（phase2-b66）：旧 receipt 的 `check-batch` 明确报 stale（它检查旧正式回执，而非待登记 work items；列出的 build/tool/PDF 变化均符合本次重建），随后官方 `finalize-batch` revision 4011 返回 `FINALIZED`、problems=0、batch=`closed`，报告 `reports/phase2-b66.md` 写入。工作项由 finalizer 验证并聚合，未手改正式 receipts/manifest。
+- 阶段修改文件：该卷 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b66.md` 与本进度文件。
+- 剩余任务：刷新全库派生报告并检查一致性；重跑 b66 build/provenance/review/issues gates；执行相关测试；清理中间物/PNG，审查精确 diff 并提交。
+- 下一步：`report.py render --all` 后执行全库 `report.py check --all`；再跑 b66 scoped gates 和 review/report 定向测试。
+- 已完成可验证全量报告阶段（phase2-b66）：`report.py render --all` 通过，单个事务写入并回读校验六份全库报告投影；`report.py check --all` 确认报告与全量 manifest 一致，并保留其他未完成/blocked 状态。
+- 阶段修改文件：六份全库报告投影和本进度文件；该卷报告在 finalizer 阶段已生成。
+- 剩余任务：build/provenance/review/issues scoped gates，review/report 定向测试，精确清理 build 中间文件及 `.work/phase2-b66/` 渲染 PNG，最后审查/提交。
+- 下一步：串行执行只读批次门禁和 issues validate；完成后运行 review/report 测试，避免并发 RepoLock 冲突。
+- 已完成可验证门禁/测试阶段（phase2-b66）：build receipt validator `OK：1卷`，provenance `OK：1卷`，review gate `FINALIZED：phase2-b66`，issues ledger validate 与 `git diff --check` 均通过；`test_review_receipts.py` 66/66、`test_report.py` 11/11 通过。全库 report render/check 均通过。
+- 阶段修改文件：仅测试/门禁读取既有 receipts、manifest、报告；无新增跟踪文件改动。
+- 剩余任务：确认本卷构建中间物和忽略图像范围后清理，校验四 PDF SHA 与 receipt，再做最终 gates、精确 diff 审阅并本地提交。
+- 下一步：仅对 `1988_全国卷_文科/build/` 执行四入口 `latexmk -c`，只移除本 attempt 的 `.work/phase2-b66/{render,contact,review}-949adc18/` PNG，保留四份 PDF 与 `.work/phase2-b66/review/` 正式工作项。
+- 已完成可验证清理阶段（phase2-b66）：四个入口均执行 `latexmk -c -outdir=build`；build 目录现仅保留四份正式 PDF。已删除本 attempt 的53张逐页 PNG、8张接触表、15张高分辨率 PNG及源 PDF临时副本；保留四份正式 review work items。四份 PDF 当前 SHA 与 build receipt 一致：试题 `6766f498…4e385`、解析 `7cb59386…9ae91`、简答 `95e313b9…67f00`、印刷 `341ad39c…1dbbd`；没有图片、PDF 或编译中间物进入 Git diff。
+- 阶段修改文件：仅 ignored build/视觉核查临时产物清理；正式 PDF 与 review work items保留。
+- 剩余任务：再跑最终 current gates/`git diff --check`，核对精确的 tracked diff 和报告投影，随后本地提交（不 push）。
+- 下一步：串行复验 b66 build/provenance/review/issues，确认 tracked diff 只含 receipts/manifest/报告/索引/进度文本，然后按 `[已核]` 提交。
+- 已完成最终验收阶段（phase2-b66）：全库 report check 保持一致；build `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b66`、issues validate、`git diff --check` 全通过；review/report 定向测试77/77通过。精确 diff 为11个受跟踪文本/JSON文件（四回执/manifest、六份报告与索引投影、本进度文件）；README/报告仅反映一卷由 stale/compiled 转为 current/complete 与 closed/finalized。无题目/答案/provenance/TikZ源变更，无 PDF、PNG 或编译中间物入库。
+- 剩余任务：仅本地提交该已验收阶段（不 push）；项目全目标仍未完成，41项全局待核待映射/逐项处理。
+- 下一步：提交 phase2-b66 后复查工作树及当前 receipt gates；按 manifest 顺序进入 phase2-b67，不预设其来源/内容状态。
