@@ -2279,3 +2279,8 @@
 - 最终验收：392项检查中347 pass、45 not_applicable、0 fail/pending；finalize、全库report render/check、五项批次门禁、77项定向测试、PDF SHA/页数核对、`git diff --check`均通过。四份PDF与LaTeX/TikZ源、当前attempt工作项保留；PNG移入可恢复废纸篓，编译目录仅留四份PDF，无图片/PDF/中间物入库。
 - 剩余任务：1952—2026全语料仍未完成；“41项待核”没有找到权威清单映射，继续作为独立待办，不与本批392项逐页检查混同。
 - 下一步：按manifest下一批顺序另行预检；不重跑phase2-b73。
+- 已完成下一批预检阶段（phase2-b74，2000全国旧课程理科）：manifest登记22题、6幅TikZ图、issues为空；固定源`普通高考/2000/2000全国旧课程理.pdf`为ready，来源仓实际SHA-256 `8cc0483e5f30cdc25df99b7ae68dd4eb7f593f3dd7792c47e284368af39075ef`、Git blob `b8aa9a946d612509244feb1dcecda5923a106e88`与登记一致，621130 bytes、A3横向2页。只读目视原卷确认第1—22题和第5/12/16/18/21/22题图。生成器`--check`一致，issues validate通过。
+- 阶段修改文件：仅本进度文件；固定PDF位于只读来源仓，预览仅在ignored `.work/phase2-b74/source/`。题目、答案、provenance及图稿未改。
+- 验证结果：build validator判旧回执因生成输入树及工具链指纹变化stale；provenance仅报manifest缓存状态与现场派生不一致，未见题面/答案冲突；review绑定旧attempt `4fb8bf90-ed99-4efc-98e5-e99d969869a4`，不能复用。当前旧build attempt `d6d4119b-a466-49fa-8b4a-44fb590e7057` 的四版页数为5/25/6/22，共58页，均曾编译成功且日志问题为0，但旧PDF与旧视觉回执均须以新构建刷新。
+- 剩余任务：formal rebuild并核对新页数、日志、PDF SHA；准备当前attempt工作项，逐页视觉复核并finalize；刷新报告、门禁/测试、清理中间物、核验PDF及提交。41项待核映射仍没有权威清单。
+- 下一步：先提交本预检checkpoint，再按官方命令对`phase2-b74`执行formal build；构建成功后立即准备并核验当前attempt工作项。
