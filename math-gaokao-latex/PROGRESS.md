@@ -3126,3 +3126,8 @@
 - Ruling：复用已核实的转录、解题、TikZ和旧视觉记录，不重新录题/解题；先按官方事务正式重建16版，然后逐PDF比较当前与旧review的SHA/页数。仅当字节哈希一致时才复用逐页结论，否则对变化版本重新逐页目检。若直接沿用旧receipt，会把过期工具链与生成输入伪装成当前产物。
 - 剩余任务：正式构建四卷16版，准备新attempt workitems，比较PDF哈希并覆盖所有变化页面；必要时按原有失败/issue状态据实复核；finalize、更新全库投影、跑门禁与测试、清理并核验PDF后提交。
 - 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
+- 已完成phase2-b92当前输入正式构建阶段：官方formal build在manifest revision 4097刷新四卷16版；四卷页数分别为新课程文5/20/7/16、新课程理5/19/7/16、旧课程文4/19/6/16、旧课程理5/20/7/16，共188页。四卷attempt分别为`20adf3b2-8c72-40ab-ac94-bbf78ac47cf8`、`a3c2d92a-bc30-43b8-ae89-d3bc88d9207b`、`3009247d-e1ae-443a-a75b-daea2dbe8b5c`、`00142336-2324-436f-992f-d8e8855421a1`。
+- 阶段修改文件：四卷`receipts/build.json`、`source-manifest.json`中的派生状态及本进度；规范题源与生成LaTeX未改。
+- 验证结果：formal build=`COMPILED_PENDING_REVIEW：4待审、0失败`；新PDF页数与旧回执一致，16/16 PDF SHA变化，故旧视觉结论不可直接绑定到新attempt。build receipt validator与provenance当前检查`OK：4卷`；四卷旧review workitems仍绑定旧attempt，共16份，待归档后重备。
+- 剩余任务：为新attempt准备16个workitem；对当前PDF逐页复核188页，必要时处理视觉问题；完成finalize、全库报告/CSV、门禁/测试与PDF清理核验。
+- 下一步：归档旧review scratch，官方prepare新workitems并渲染当前attempt；分四卷独立视觉复核，主会话验收与登记。
