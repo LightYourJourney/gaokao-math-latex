@@ -2188,3 +2188,7 @@
 - 阶段修改文件：phase2-b71的12个受跟踪来源/生成文本、build/review receipts、manifest、报告投影及进度记录已提交。
 - 剩余任务：1952—2026全语料未完成；用户提及的41项待核仍未找到权威映射（全仓检索只命中不相关知识条目及历史说明），不能把已关闭批次当作其替代。
 - 下一步：先检查manifest phase2-b72的source/provenance/build currency并更新预检记录，再继续正式构建/复核；另继续寻找41项待核的原始正式清单。
+- 已完成下一批预检（phase2-b72，1999全国理科）：batch唯一试卷`gk-1999-regular-national-science`，25题、无issue；固定单页PDF 507132 bytes，来源仓文件SHA-256 `b51b6bd72d0c59fc472c3a6117245d76accc34f7576252b52a902bed9089a57b`与登记Git blob `11855f9e7cc15ab803059b2218370c837684dded`匹配，source_state=ready。题面/答案provenance现算为`provenance_verified`且无冲突，仅manifest缓存仍为compiled；旧build回执因生成输入树/工具链指纹变化失效。issues ledger validate通过，`generate_projects.py --check`确认生成的题面/解析与来源一致。未改题面、答案或来源。
+- 阶段修改文件：仅本进度文件；source PDF只读核对，生成器check只读。
+- 剩余任务：正式重编四版并刷新派生缓存，重新prepare并逐页复核当前attempt，finalize后刷新报告、门禁和测试、清理产物并提交。41项待核权威清单未找到。
+- 下一步：提交本预检checkpoint后执行phase2-b72 formal build；先确认页数、日志、当前build/provenance，再渲染PDF供复核。
