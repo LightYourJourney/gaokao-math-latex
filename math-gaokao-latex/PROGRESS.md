@@ -2869,3 +2869,8 @@
 - 验证结果：`review_receipts.py check-batch`为`FINALIZED`且无problems；build receipt要求final校验为2 succeeded、0 stale/failed/pending。
 - 剩余任务：全库报告/派生投影刷新、provenance与各scoped gates、定向测试、清理编译中间物/图像预览、最终PDF页数/SHA核对及最终差异审阅尚未完成。
 - 下一步：提交finalize checkpoint；随后运行全库报告和批次门禁，暂不重跑PDF构建。
+- 已完成phase2-b86全库报告与专项门禁阶段：刷新全部报告投影并通过全库report check；同步更新来源CSV投影。
+- 阶段修改文件：六份全库报告投影、`manifest.csv`、两卷receipt、批次报告、`source-manifest.json`及本进度文件；三份README投影包含既有待人工复核改动并随官方报告生成器更新，仍不单独提交。
+- 验证结果：issues、source manifest、两卷generator/short-answer/edition checks、build receipt（2 succeeded/0 stale-failed-invalid-missing-pending）、review `FINALIZED`、provenance `OK：2卷`、`manifest.csv --check`（775行）及`report.py check --all`均通过。CSV首次check发现投影落后一版，官方`--write`后复验通过。
+- 剩余任务：定向review/report测试、清理LaTeX中间物和本批渲染预览、最终PDF页数/SHA核验及最终差异审阅/提交尚未完成。
+- 下一步：提交本门禁checkpoint，串行运行`test_review_receipts.py`和`test_report.py`。
