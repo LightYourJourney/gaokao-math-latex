@@ -2944,3 +2944,8 @@
 - 验证结果：issues/source manifest退出0；generator、short answers、editions各1套一致；build 1 succeeded且要求final；review `FINALIZED`；provenance `OK：1卷`；报告全库check通过，CSV为775行。共享仓库锁导致generator/short-answer首次并行校验冲突，串行重跑均通过；未改代码或数据规避锁。
 - 剩余任务：运行`test_review_receipts.py`和`test_report.py`；清理四版编译中间物及本attempt PNG/接触表并做PDF回执哈希核验；最后审阅并提交b87本批正式改动，README差异保持未提交。
 - 下一步：串行执行review receipt与report定向测试，防止共享锁冲突；完成后记录测试checkpoint再做清理。
+- 已完成phase2-b87定向回归测试阶段：按序运行review receipt/workitem与报告投影测试。
+- 阶段修改文件：仅本进度文件；测试未改生产源、回执或报告投影。
+- 验证结果：`test_review_receipts.py` 66/66通过（42.728秒）；`test_report.py` 11/11通过（67.711秒）；合计77项通过。
+- 剩余任务：四版LaTeX中间产物及本attempt页面PNG/接触表尚待清理；需核验四份PDF页数与SHA匹配final build receipt，并完成最终差异审阅/提交。
+- 下一步：先检查当前build目录及`.work/phase2-b87`范围，再按四版入口执行latexmk清理，将复核预览移入可恢复归档；只保留PDF。
