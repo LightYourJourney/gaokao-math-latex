@@ -981,6 +981,6 @@
 - 下一步：先预览准确清理范围，保留 8 份 PDF，然后将 48 个非 PDF build 产物、8 份本轮 work items 与临时审阅 PNG 移入系统废纸篓；再跑 scoped gates 与 `report.py render/check --all`。
 - 已完成阶段：1986 全国文理批次收尾清理完成。两卷 build 目录的 48 个非 PDF 中间产物、8 份本轮 review work items 与 `/tmp/gk-phase2-b56-review.T69VtV/` 临时审阅目录均移入系统废纸篓；各保留试题/解析/简答/印刷 PDF 各一份，核验为每卷 4 PDFs、0 非 PDF。
 - 阶段验证：五项 scoped gates 全部通过：source manifest validate；两卷 generator `--check` 一致；build receipts 为 2 succeeded、0 stale/invalid/failed；review `FINALIZED`（95 页、760 项全 pass）；provenance 两卷 complete、批次 closed。`report.py render --all` 单事务更新并回读六个全量报告目标；`report.py check --all` 确认输出与全量 manifest 一致，未完成状态保留；`git diff --check` 通过。
-- 阶段修改文件：本进度文件与六个全量报告目标：`README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`、`math-gaokao-latex/reports/baseline.md`、`report.md`、`docs/source-inventory.md`。此前修复/构建 checkpoint 已提交 `6734c7fd`，正式 finalize checkpoint 已提交 `05f231a8`；当前六个全量报告与本进度收尾记录尚待提交。
-- 剩余任务：phase2-b56 已完成并提交前述两个阶段 checkpoint；整个高考数学语料仍有后续批次待做，本批关闭不代表全库完成。
-- 下一步：提交六个全量报告与本进度收尾 checkpoint；核对工作树干净、分支状态与最终提交记录；不 push。
+- 阶段修改文件：本进度文件与六个全量报告目标：`README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`、`math-gaokao-latex/reports/baseline.md`、`report.md`、`docs/source-inventory.md`。本批三个提交为 `6734c7fd`（修复/构建）、`05f231a8`（正式复核登记）、`c99d3c84`（全量报告与收尾进度）。
+- 剩余任务：phase2-b56 已完整关闭；高考数学语料仍未全部完成。manifest 中下一批 `phase2-b57`（1986 上海文理两卷）当前为 `compiled_pending_review`，需按常规先预检再决定续作。
+- 下一步：本次工作树核验位于 `feat/gaokao-phase0`，无未提交更改；不 push。后续从 `phase2-b57` 预检开始，不重复 phase2-b56 操作。
