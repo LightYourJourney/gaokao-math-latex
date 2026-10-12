@@ -2604,6 +2604,11 @@
 - 验证结果：build `--require-final`为1 succeeded/0 stale；review `FINALIZED`；provenance `OK：1 卷`；generator/short answers/edition checks各1套一致；issue/source manifest validators通过；`manifest_csv.py --check`确认当前且775行；`git diff --check`通过。
 - 剩余任务：定向测试、LaTeX中间物和PNG/workitems清理、PDF哈希/页数复验、最终差异审阅与提交。
 - 下一步：提交门禁checkpoint，然后串行运行`test_review_receipts.py`与`test_report.py`。
+- 已完成phase2-b82定向测试阶段：按序串行运行review receipts与report测试，均通过。
+- 阶段修改文件：仅本进度文件；测试未改正式数据。
+- 验证结果：`test_review_receipts.py` 66/66通过（43.520秒）；`test_report.py` 11/11通过（67.574秒），合计77项通过。
+- 剩余任务：清理四版LaTeX中间物及本attempt工作项/PNG预览，确认构建目录只留PDF并逐项匹配回执，再做最终差异审阅。
+- 下一步：提交测试checkpoint；检查四个入口所需`latexmk -c -outdir=build`，再把仅限phase2-b82的`.work`预览和review工作项移入可恢复归档。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
