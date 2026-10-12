@@ -2538,3 +2538,8 @@
 - 验证结果：review receipt测试66/66通过（43.397秒）；report测试11/11通过（67.021秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物与当前attempt PNG，核验build仅保留四版PDF且页数/SHA吻合receipt；最终差异审阅并提交。
 - 下一步：四版入口执行`latexmk -c -outdir=build`，再把本批渲染预览整体移入可恢复archive。
+- 已完成构建产物清理与正式PDF核验阶段（phase2-b79）：四版入口均成功执行`latexmk -c -outdir=build`；65个预览/接触表PNG移入可恢复目录`~/.Trash/phase2-b79-render-fa1ae42a.Z4VKmO/render-fa1ae42a/`。
+- 阶段修改文件：仅本进度文件和ignored build/render产物；正式PDF、回执、review工作项均保留。
+- 验证结果：build目录精确保留四份PDF，页数4/19/5/16、SHA逐项匹配receipt；final receipt validator返回`OK`。从b78 closeout至当前的tracked差异共11文件，0图片/PDF/编译中间产物，`git diff --check`通过。
+- 剩余任务：b79仅待提交最终进度checkpoint；整个manifest后续批次仍未完成。
+- 下一步：提交b79 closeout checkpoint，不push；随后按manifest预检phase2-b80，跳过来源已核验的工作。
