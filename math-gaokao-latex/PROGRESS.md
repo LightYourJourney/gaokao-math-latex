@@ -2437,3 +2437,8 @@
 - 验证结果：七项命令退出码均为0；receipt/provenance/review报告`OK：1卷`、`OK：1卷`、`FINALIZED：phase2-b77`，派生输入与模板检查一致。
 - 剩余任务：运行两组定向测试；随后清理LaTeX中间物及PNG，核验PDF后最终提交。
 - 下一步：依次执行`test_review_receipts.py`和`test_report.py`。
+- 已完成定向测试阶段（phase2-b77）：`test_review_receipts.py`与`test_report.py`均通过，按序执行。
+- 阶段修改文件：仅本进度文件；测试未修改正式数据。
+- 验证结果：`test_review_receipts.py` 66/66通过（45.845秒）；`test_report.py` 11/11通过（68.667秒）；合计77项通过。
+- 剩余任务：清理四版LaTeX中间物及本批source/render PNG，核验build仅含四份正式PDF且页数/SHA吻合receipt，最终差异审查并提交。
+- 下一步：运行四版`latexmk -c -outdir=build`，并将b77来源预览/渲染目录移入可恢复废纸篓。
