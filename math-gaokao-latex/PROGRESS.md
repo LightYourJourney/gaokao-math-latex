@@ -2588,6 +2588,11 @@
 - 验证结果：build目录精确保留四版PDF，页数4/22/5/19、SHA逐项匹配build receipt；final receipt validator返回`OK`；预览/工作项已离开项目工作目录。
 - 剩余任务：最终审阅phase2-b81 tracked差异与全库变更范围，确认无图片/PDF/编译中间产物入库，再提交最终checkpoint。
 - 下一步：核对自b81起点的tracked文件清单、统计、`git diff --check`与最终status；提交最终进度记录，不push。
+- 已完成phase2-b81最终差异审阅阶段：以`a6e5b408`为批次起点核对12个tracked文件；变更仅含本卷派生回执、进度/批次报告、manifest.csv及六个全库报告投影，无图片、PDF或编译中间物。
+- 阶段修改文件：仅本进度文件。
+- 验证结果：`git diff --check a6e5b408..HEAD`通过；build receipt `OK`（1 succeeded，0 stale/missing/failed），review `FINALIZED`，manifest.csv当前且775行；build仅4份PDF，两个批次`.work`目录均已清理，工作树干净。
+- 剩余任务：phase2-b81已闭环；1957—2006时间段尚有后续批次，整个题库项目远未完成。
+- 下一步：提交b81最终checkpoint，不push；随后依manifest顺序预检phase2-b82，不重做b81来源/视觉核查。
 - 已完成全库报告刷新阶段（phase2-b80）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
