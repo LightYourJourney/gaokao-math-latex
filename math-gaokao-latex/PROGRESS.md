@@ -946,3 +946,14 @@
 - 已完成阶段：b55 内容、正式回执与全量报告投影提交 `ccc4f6ac`（`docs: 完成1985上海理工类复核`）；未 push。b55 关闭快照：manifest revision 3923；1 卷、41 页、328 项视觉检查通过，零 warning；4 份 PDF 保留，build 目录仅 PDF。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段仅关闭 b55，不代表全库完成。
 - 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b56`（1986 全国文理科两卷）。
+
+### `phase2-b56` — 1986 全国卷文理科
+
+- 预检完成：起始 manifest revision 3923；批次含 `gk-1986-regular-national-arts` 与 `gk-1986-regular-national-science`，batch issues 为空；source manifest validate 通过；generator `--check` 显示 2 卷一致；provenance status 为两卷 `editions_generated`、批次 `provenance_verified`。
+- 文科 22 题、理科 24 题，均 `legacy_ids=[]`。固定来源 `普通高考/1986/1986全国文.pdf` 与 `普通高考/1986/1986全国理.pdf` 均为 ready、1 页且 artifact PDF 校验通过；SHA-256 分别为 `3208a80f44c61212cf0cfd6ea35849fa31f12ac21489cf78ddea0c995b316cf9`、`f63a3e838fb7c3fb39228ba4fdf76451965d1518421bd693ba279fe34e48957f`。既有四版页数：文科试题 4、解析 19、简答 5、印刷 16，共 44 页；理科试题 5、解析 21、简答 7、印刷 18，共 51 页；合计 95 页。
+- 理科卷已登记 ISSUE-0766/0767/0768 均为 resolved：固定扫描第 20 题 `A∪B` 与独立资料交叉核定的 `A∩B` 有异文，规范题面采用 `A∩B`，答案 1084，原扫描差异保留在 issue 证据中。沿用既有裁定，不重开核查或更改转录。
+- Build receipt validator 显示两卷均 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；批次仍为 `compiled_pending_review`。
+- 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认 2 卷唯一问题均为 stale；两个来源 artifact 与 8 份现存 PDF 已核对，页数如上。
+- 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
+- 剩余任务：两卷四版正式构建、95 页逐页视觉复核（重点检查理科第 20 题异文说明）、登记回执、清理中间产物并完成 scoped gates 与全量报告校验。
+- 下一步：提交 b56 预检进度 checkpoint，再正式重建两卷四版。
