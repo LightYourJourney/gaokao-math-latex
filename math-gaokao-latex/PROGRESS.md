@@ -1078,3 +1078,8 @@
 - 阶段验证：逐项对照 build receipts，8 项的 attempt、PDF path/SHA-256/page_count 一致；页码连续覆盖 91 页，728 项检查全部 pending。此步骤不复用旧 attempt 的审查结论。
 - 剩余任务：对新 attempt 的 91 页完成逐页视觉审查并写入准确结果；首页试题版答案泄漏已知，须保留失败事实，用户此前的处理选择未收到。其后才可 checked finalize、清理中间产物、运行 scoped gates 和全量报告检查。
 - 下一步：文史类与理工农医类各由独立审查者检查四版全部页面，主会话复核重点页与代理报告证据，再更新当前工作项；不写正式回执，直到所有页面结论真实且首页失败处置边界明确。
+- 已完成可验证子阶段（当前 attempt 首页泄漏复核）：对当前 attempt `82cfd59c…` 与 `15a812fe…` 的两份试题版第 1 页执行高分辨率渲染并目视确认；首页“版式与异文说明”均直接列出第 9 题答案 $11\pi/6$ 与 $-\pi/6$。已在各自当前 work item 将 `answer_leak` 与页面结果登记为 `fail`，其余首页检查仍 pending；未修改试题源或正式回执。
+- 阶段修改文件：ignored `.work/phase2-b57/review/试题版/gk-1986-regular-shanghai-{arts,science}.json` 与本进度文件。
+- 阶段验证：两份当前 PDF 首页的 PNG 目视图与 `pdftotext -f 1 -l 1` 交叉确认泄漏；工作项仍绑定本轮 attempt/PDF 哈希。`review_receipts.py check-batch` 仍报 `INVALID_OR_STALE`，原因是正式回执尚未刷新至新 attempt（属预期），当前不做 finalize。
+- 剩余任务：完成其余 90 页及两首页其他七项检查，复核两名审查者的全页报告；保持已确认失败事实，首页内容改动与否仍待用户决定。未通过前不 finalize。
+- 下一步：继续本轮文史与理工农医四版逐页视觉检查，主会话优先抽查文史 Q7、理工农医 Q2/Q6/Q7 当前输出，并与独立报告比对。
