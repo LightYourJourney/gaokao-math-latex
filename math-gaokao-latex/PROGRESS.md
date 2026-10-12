@@ -2914,3 +2914,8 @@
 - 验证结果：完整页图55张、接触表4张；Q12标签拥挤已在试题版第3页与解析版第14页高分辨率图确认；页码文本映射为Q10试题2/解析12/印刷9，Q11为2/13/10，Q12为3/14/11，Q19为4/19/15。印刷版Underfull段落位于第8页、`answers.tex:232–233`。
 - 剩余任务：需仅改Q12图稿标签锚点；随后重新formal build、为新attempt生成工作项并逐页复核55页，处理印刷版Underfull豁免；本attempt尚无可finalize的视觉回执。
 - 下一步：提交该视觉发现checkpoint，修正共享TikZ图稿并重建四版；不改题文、答案或图形几何关系。
+- 已完成phase2-b87 Q12图稿标注布局修正阶段：仅调整共享射线示意图中M₁/M₂、N₁/N₂、P₁/P₂、Q₁/Q₂的文本锚点以拉开间距；点位、线段、几何关系和题文/答案均未改。
+- 阶段修改文件：`2002_春季上海卷/figures/f2002_spring_t12_rays.tex`与本进度文件；旧attempt PDF/review workitems暂仍在ignored `.work/phase2-b87/`，待重建前归档。
+- 验证结果：源diff仅含8处TikZ node锚点调整，`git diff --check`通过；新标签布局必须以正式编译后的高分辨率PDF复验，当前attempt的build/review不再作为最终验收证据。
+- 剩余任务：归档旧attempt预览与workitems，重建四版，检查新图是否清晰且无新版面缺陷，再为新attempt逐页复核。
+- 下一步：提交本源图修正checkpoint后运行formal build；不改答案或重跑转录。
