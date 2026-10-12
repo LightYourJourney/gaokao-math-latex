@@ -2543,3 +2543,8 @@
 - 验证结果：build目录精确保留四份PDF，页数4/19/5/16、SHA逐项匹配receipt；final receipt validator返回`OK`。从b78 closeout至当前的tracked差异共11文件，0图片/PDF/编译中间产物，`git diff --check`通过。
 - 剩余任务：b79仅待提交最终进度checkpoint；整个manifest后续批次仍未完成。
 - 下一步：提交b79 closeout checkpoint，不push；随后按manifest预检phase2-b80，跳过来源已核验的工作。
+- 已完成下一批预检阶段（phase2-b80）：目标为2001全国新课程理科卷（22题、无登记issue）。官方provenance状态为`provenance_verified`，不重复来源转录/核验。
+- 阶段修改文件：仅本进度文件；未修改b80正文、来源、答案或provenance。
+- 验证结果：build receipt因生成输入树与工具链指纹变化而stale；旧review receipt attempt `061f10ed-51d2-42c7-ab1a-b4ba8dc5805d`与build attempt `53288f2f-e68e-4dcd-9ea8-54740b365d56`不匹配。官方provenance status确认`provenance_verified phase2-b80`。
+- 剩余任务：正式构建b80四版并同步派生状态；归档旧工作项、生成当前attempt复核输入并逐页登记；报告、门禁、测试、清理和提交。
+- 下一步：提交预检checkpoint，执行b80官方formal build；不复用旧构建/视觉结论。
