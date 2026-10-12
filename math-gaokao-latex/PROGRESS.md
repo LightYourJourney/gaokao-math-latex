@@ -1743,3 +1743,7 @@
 - 阶段验证：PDF SHA 与正式回执一致（试题 `0b1cd557…`、解析 `9f6772c7…`、简答 `327c8db7…`、印刷 `5cfa4795…`）；build validation `OK`（1 succeeded、0 stale/failed），provenance、三个本卷生成器、review `FINALIZED`、全库 report check、66+11 定向测试及 `git diff --check` 均通过。
 - 剩余任务：最终审查完整 diff、确认暂存路径仅含 phase2-b60 与官方报告投影，创建本地提交；不 push。1952—2026 全语料目标仍继续，不能将本卷闭合视为项目完成。
 - 下一步：核对 Git status、逐项查看当前 batch 的题源/派生文件与收据差异，提交已验证内容；提交后确认工作树干净及 attempt/回执仍 current。
+- 已完成阶段（phase2-b60 本地提交）：经审查的1987全国文科题源与分页、当前四版 PDF/build/review receipts、provenance、六份全量报告投影及进度记录已提交为 `409d3da9`（`[已核] docs(exams): 校订1987全国文科分页并完成四版复核`）；未 push。
+- 提交后验证：分支 `feat/gaokao-phase0`，ahead 3；工作树干净。`validate-receipts` 为 1 succeeded/0 stale，review check 为 `FINALIZED`，attempt `5887b697-f9ac-4151-89ac-914e02f590a4` 仍 current。
+- 剩余任务：1952—2026 全语料整理、核查和四版构建仍大量未完成；本提交只闭合 phase2-b60，不代表阶段或项目整体完成。
+- 下一步：按既定年份顺序检查 phase2 后续批次的准备状态与阻塞项，选取下一个最早且可推进批次，继续执行逐卷验证工作流。
