@@ -1053,3 +1053,8 @@
 - 阶段修改文件：两卷四版 PDF、两份 `receipts/build.json`、`source-manifest.json` 与本进度文件；build 目录内非 PDF 中间产物待完成复核后按清理门禁处理。
 - 剩余任务：为两个新 attempt 生成并核对 8 份页面级工作项；逐页复核 91 页并在当前 attempt 中据实登记。试题版首页答案泄漏选择仍未决，最终复核登记须遵守用户选择；随后 finalize、清理中间产物、运行 scoped gates 与全量报告校验。
 - 下一步：调用 `review_receipts.py prepare-batch` 生成绑定上述 attempts 的工作项，确认 PDF 哈希与页覆盖后再开始逐页检查；不复用旧 attempt 的页面结果。
+- 已完成可验证子阶段（当前 build attempt 复核工作项准备）：`prepare-batch` 为新 attempt 刷新 8 份 ignored 工作项；逐项核对 paper/edition/attempt、PDF 路径、SHA-256、页数与 build receipts 一致，页集合精确覆盖文科 41 页和理科 50 页，共 91 页 × 8 项 = 728 条 pending。旧工作项只绑定旧 attempt，不复用其页面结论；先前发现的首页答案泄漏待在新 PDF 上复核。
+- 阶段修改文件：ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/` 下两卷 8 个当前 attempt 工作项；tracked 文件仅本进度文件。
+- 阶段验证：对 8 份 JSON 与两卷当前 build receipts 做只读逐项比较，所有 attempt 与 PDF path/hash/page_count 匹配；页码序列均为 1…N，全部 728 项状态为 pending。正式 review receipts 仍因 build attempt 及四版 PDF 改变而 stale，尚未 finalize。
+- 剩余任务：对当前 91 页完成逐页视觉检查并登记真实结果；首页答案泄漏处理选择未回；随后 checked finalize、清理工作项/中间产物与临时 PNG、跑 scoped gates 和全量报告。
+- 下一步：按文理两卷独立分工并行复核四版页面；主会话检查关键页和任何代理发现，之后统一写入当前 work items。
