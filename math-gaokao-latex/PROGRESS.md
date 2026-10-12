@@ -2959,3 +2959,11 @@
 - 验证结果：提交`54c240b0`；staged diff仅8个预期非README文件，staged/unstaged `git diff --check`通过；review FINALIZED，build 1 succeeded，provenance/全库报告/CSV/生成器等门禁及77项定向测试通过；四版PDF页数5/24/7/19且SHA与final receipt一致；构建目录仅留PDF，复核图像已可恢复归档；未push。
 - 剩余任务：三份README投影待用户人工复核；下一manifest批次为phase2-b88（2002春季京蒙皖文、理两卷），随后其余批次继续；1952—2026全库目标仍未完成。
 - 下一步：本阶段验收已完成，按任务边界停止；待后续继续时先核对Git diff与本进度，再从phase2-b88恢复，不重做b87。
+
+## 下一批恢复状态（phase2-b88）
+
+- 已完成phase2-b88恢复预检：文、理两卷来源均为canonical/ready，固定PDF分别2页A3且SHA/大小与计划一致；各22题、issues为空、`legacy_ids=[]`。现有`provenance.json`各22题，记录独立解题、盲核及PDF题面复核；无需重做转录、答案推导或来源核验。
+- 阶段修改文件：仅本进度文件；两卷题面、答案、图稿及provenance源文件未修改。工作树原有三份README差异继续保留，不涉及本批。
+- 验证结果：issues与source-manifest校验通过；generator、简答答案、edition壳各2套一致。两份旧build attempt `0f780046-5958-468f-ae0e-dc466e8663d0`/`57149a17-950a-4f94-8ac8-878539d52e5c`均因生成输入树与工具链指纹变化stale；旧review虽标passed，但绑定attempt `1d0df410-92c6-40ef-8ea7-de70f8d9bc34`/`b2215b42-51e7-4489-8ccb-6d29a9002383`，不能作为当前PDF证据。仓库内无当前b88 `.work`复核项。缓存manifest状态`compiled`/`compiled_pending_review`与现场派生`editions_generated`/`provenance_verified`不符，后续由正式build事务刷新，不手改状态。
+- 剩余任务：对两卷执行官方formal build，准备当前attempt复核项，逐页检查8版共96页并登记结论；之后finalize、刷新全库投影/门禁与测试，清理中间物并核验8份PDF页数/SHA。
+- 下一步：提交本预检checkpoint后正式重建phase2-b88两卷；保留旧的转录/解题/provenance成果，不重复执行。
