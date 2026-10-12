@@ -2929,3 +2929,8 @@
 - 验证结果：四工作项均绑定attempt `c09787d4-2ecd-42a6-8098-ca62af958884`，覆盖55/55页、440/440项；390 pass、50 not_applicable（非试题版答案泄漏检查）、0 fail/pending；仅印刷版登记1条 `answers.tex:232–233` / PDF第8页Underfull豁免；`git diff --check`通过。
 - 剩余任务：事务式review finalize、全库报告投影和批次/全库门禁、定向测试、LaTeX中间物与预览可恢复清理、四份PDF页数/SHA核验及最终差异审阅/提交。
 - 下一步：运行官方`finalize-batch`；若成功，核对review/build/provenance状态并刷新全库派生投影，不重跑已验证的formal build。
+- 已完成phase2-b87正式视觉回执事务登记阶段：官方`review_receipts.py finalize-batch`完成批次关闭，并登记唯一Underfull豁免。
+- 阶段修改文件：2002春季上海卷`receipts/review.json`、`receipts/build.json`、`source-manifest.json`、`reports/phase2-b87.md`及本进度文件；三份README汇总差异仍待用户人工复核。
+- 验证结果：review `FINALIZED`、problems为空；build receipt `OK`（1 succeeded，0 stale/failed/invalid/missing/pending）；provenance `OK：1卷`。批次报告显示closed、55页、无视觉/阻塞问题。
+- 剩余任务：刷新全库报告投影与manifest CSV，运行issues/source-manifest/生成器/简答答案/edition/报告等门禁及定向测试，清理编译中间物和预览并核验PDF页数/SHA，最终审阅提交本批已完成文件。
+- 下一步：刷新全库report投影并check；再跑b87 scoped gates，保留三份README差异不提交。
