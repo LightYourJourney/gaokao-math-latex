@@ -2603,3 +2603,8 @@
 - 验证结果：四版均`succeeded`，errors、missing characters、overfull、undefined references均为空；build receipt validator返回`OK`（1 pending review、0 stale/failed）；provenance `check-batch`返回`OK：1卷`。
 - 剩余任务：旧review回执和工作项绑定更早attempt，不可复用；需将空白工作项可恢复归档，为当前attempt重新prepare并逐页复核/登记，随后报告、门禁、测试、清理和提交。
 - 下一步：提交b81 build receipt/manifest checkpoint，再归档旧工作项并运行官方`prepare-batch`。
+- 已完成视觉复核准备阶段（phase2-b81）：四份旧attempt空白review工作项完整移至可恢复目录`~/.Trash/phase2-b81-review-workitems.4LaHWh/review/`；官方`prepare-batch`为当前attempt生成四份新工作项。
+- 阶段修改文件：仅ignored `.work/phase2-b81/review/`四个当前attempt工作项及可恢复archive；正式review receipt未改。
+- 验证结果：四份新工作项均绑定attempt `5eba94fd-9c4b-4c45-831e-43f2165592dd`；页码连续覆盖试题4、解析22、简答5、印刷19页，合计50页×8项=400项pending。
+- 剩余任务：覆盖全部四版页面并检查图稿/候选页，填写并登记视觉回执；随后报告、门禁、测试、清理和提交。
+- 下一步：渲染四版50页接触表，按计划的五幅图稿分布选取高分辨率复核页。
