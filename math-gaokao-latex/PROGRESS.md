@@ -2148,3 +2148,7 @@
 - 阶段修改文件：仅本进度文件；首次attempt的61页仍未写入work items。来源证据为固定源PDF题22文本、题面/解析中的登记图稿引用及manifest登记。
 - 剩余任务：仅更正该处说明为包含第22题，重新正式构建；复核新PDF并对逐页渲染SHA，确认仅首面发生像素变化后，复用此前像素完全一致页面的审查结论并重建当前attempt工作项。其余门禁/测试/清理/提交尚未完成；41项待核映射仍未找到。
 - 下一步：将 `questions.tex` 的图形说明改为列出2、10、21、22、23；正式重建并对照两次渲染结果。
+- 已完成说明修正与当前构建阶段（phase2-b71）：仅将 `questions.tex` 首面图形说明补入第22题。当前attempt `224ad92c-860d-4d04-9bf3-9a803cd2be9a` 四版均 succeeded，页数仍为5/29/6/21，共61页；四版构建日志问题列表为空，build与provenance门禁 `OK：1卷`。四份work items已重绑当前attempt。以同一 `pdftoppm -scale-to 1000` 逐页SHA比较两次attempt：四版各仅第1页渲染发生变化，其余57页逐页字节哈希完全相同；新attempt四版第1页已高清检查，新增的“22”清晰且未造成换行/裁切问题。
+- 阶段修改文件：该卷 `questions.tex`、`receipts/build.json`、manifest派生状态和本进度文件；ignored work items已刷新，渲染比较仅在`.work/`。
+- 剩余任务：将基于完整旧attempt视觉检查加上新attempt逐页像素一致性证明，为当前61页填写432 pass、56 not_applicable、0 fail；官方finalize后刷新全库报告/门禁、跑定向测试，清理构建中间物并提交。41项待核映射仍未解决。
+- 下一步：把逐页视觉结论记录到当前attempt四份work items；非试题版答案泄漏检查记为not_applicable并写明理由。
