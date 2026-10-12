@@ -2849,3 +2849,8 @@
 - 验证结果：两卷build receipt均因生成输入树和工具链指纹变化stale；旧review receipts分别绑定attempt `c3d89340-aa78-40cb-a76e-5392ad90eca9`/`08f4ed7b-a0d3-4584-a91f-83e7bbf2de67`，当前build attempts为`8c08170a-3e1a-4695-9dc1-88274443a18c`/`f34cb151-7522-4ce0-8c85-fdf41bca24a4`；八份空白工作项又绑定更早的`7b6763c3-8d16-4bcb-a8db-038e5cf96125`/`e1a9725c-091e-4ef2-8f7b-a6f0d1463ffb`。当前历史页数文科4/20/6/16、理科5/22/7/16，合计96页/768项pending。
 - 剩余任务：可恢复归档旧工作项，正式重建两卷四版，为新attempt准备审核项并逐页复核；之后事务finalize、全库投影、门禁/测试、清理与PDF核验。
 - 下一步：提交b86预检checkpoint后归档旧attempt工作项并运行两卷formal build；保持主会话独占manifest/finalizer/全库投影，逐卷复核交由独立subagents并行。
+- 已完成phase2-b86正式构建阶段：旧attempt八份空白工作项可恢复归档至`~/.Trash/phase2-b86-stale-review.tSp2an/review/`；官方formal build在manifest revision 4074成功重建文、理两卷。
+- 阶段修改文件：京蒙皖文、理两卷`receipts/build.json`、全局`source-manifest.json`及本进度文件；试题、答案、图稿、来源与provenance未修改。
+- 验证结果：文科attempt `7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`四版4/20/6/16页；理科attempt `8bd7362c-9559-469d-8376-6a1765aff39e`四版5/22/7/16页；八版均`succeeded`，错误、缺字、overfull、未解析引用及problems合计0；build receipt与provenance各`OK：2卷`。
+- 剩余任务：为当前两个attempt生成新复核工作项，目检96页并登记768项，再finalize、刷新报告、跑门禁/测试、清理并核验PDF。
+- 下一步：提交b86 build checkpoint，运行官方`prepare-batch`；随后由两个独立subagents按卷并行复核，主会话审查结果并独占finalizer与全局状态。
