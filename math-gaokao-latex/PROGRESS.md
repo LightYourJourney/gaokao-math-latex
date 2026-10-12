@@ -2563,3 +2563,8 @@
 - 验证结果：高分辨率复核覆盖解析版题11/12/18/20/21（含20甲乙和21解答续页）以及印刷版题11/12、18、20续页、21及末页；视觉结论与54页接触表一致，均无待登记缺陷。
 - 剩余任务：将54页×8项共432项登记为383 pass、49 not_applicable，执行官方checked finalizer；随后全库报告、7项门禁、定向测试、清理及PDF回执校验。
 - 下一步：提交本视觉复核checkpoint，然后以当前attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`更新review工作项；非试题版仅将答案泄漏检查置为`not_applicable`。
+- 已完成正式视觉回执登记阶段（phase2-b80）：官方`finalize-batch-checked`返回`FINALIZED`，批次`closed`，报告`reports/phase2-b80.md`已生成。
+- 阶段修改文件：本卷`receipts/review.json`、`receipts/build.json`最终状态、`source-manifest.json`派生状态、`reports/phase2-b80.md`及本进度文件；未修改题面、答案或provenance。
+- 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；54页×8项共432项，383 pass、49 not_applicable、0 fail/pending，绑定当前attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`。
+- 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
+- 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
