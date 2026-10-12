@@ -2480,3 +2480,8 @@
 - 验证结果：官方review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；current attempt与build匹配。四版51页×8项共408项，362 pass、46 not_applicable、0 fail/pending。
 - 剩余任务：全库报告render/check；运行本卷scoped gates及定向测试；清理中间文件/PNG，核验PDF页数与SHA，再最终审阅提交。
 - 下一步：记录并提交本阶段进度，然后执行`report.py render --all`及`check --all`刷新全库投影。
+- 已完成全库报告刷新阶段（phase2-b78）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留其他未完成状态。
+- 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无卷面、答案、provenance或回执变更。
+- 验证结果：全量render事务成功，check输出“报告输出与全量manifest当前一致”；`git diff --check`通过，工作树报告差异恰为六项目标。
+- 剩余任务：执行b78的七项scoped gates及定向测试，清理临时产物与LaTeX中间文件，复核正式PDF和差异后提交。
+- 下一步：提交全库报告投影及本进度checkpoint，然后运行本卷build/provenance/review/issues/generator/short-answer/edition-shell门禁。
