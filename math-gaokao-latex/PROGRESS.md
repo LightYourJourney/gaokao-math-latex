@@ -2834,3 +2834,13 @@
 - 验证结果：review receipt测试66/66通过（42.597秒）；report测试11/11通过（67.718秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物及本attempt PNG/接触表，核验四份PDF页数与SHA匹配final build receipt，最终审阅并提交b85收尾checkpoint。
 - 下一步：提交测试checkpoint，按四版入口执行`latexmk -c -outdir=build`，再将本批render工作区移入可恢复归档并核验PDF。
+- 已完成phase2-b85产物清理与最终PDF核验阶段：四版入口均执行`latexmk -c -outdir=build`；当前attempt的render PNG/接触表及四份review工作项整体移入可恢复归档`~/.Trash/phase2-b85-work.VsLU3h/phase2-b85/`。
+- 阶段修改文件：仅本进度文件及ignored产物清理/归档；源LaTeX、TikZ图稿和四份正式PDF保留。
+- 验证结果：build目录仅4份PDF；试题/解析/简答/印刷版页数5/23/7/19且SHA-256逐项匹配final build receipt；归档约12MB，项目`.work/phase2-b85`已清空。
+- 剩余任务：对b85本批差异执行最终精确范围审阅并提交收尾进度；三份全库README投影待用户人工复核，不因本卷闭环自动提交；后续manifest批次未处理。
+- 下一步：复核b85最终门禁、PDF与tracked文件清单，提交非README收尾checkpoint并停止在b85验收边界；不push、不自动进入b86。
+- 已完成phase2-b85最终差异审阅：本批正式源/图稿未改；final build/review receipts、批次报告、source manifest、非README报告投影/CSV和本进度均已分阶段提交。当前tracked工作树剩余差异恰为三份全库README的汇总计数与门禁列表更新，内容与已通过的全库report check一致。
+- 阶段修改文件：仅本进度文件；未暂存或提交待用户人工复核的`README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`。
+- 验证结果：最终build receipt `OK：1卷`、review `FINALIZED`、provenance `OK：1卷`；77项定向测试通过；`git diff --check`通过；build仅四份PDF，未将页面图像或编译中间物入库。
+- 剩余任务：用户人工复核并决定是否提交三份README投影；后续批次仍按总计划顺序处理，1952—2026全库目标未完成。
+- 下一步：提交本最终进度checkpoint后停止于phase2-b85闭环边界；等待README人工复核或后续明确任务，不push、不自动启动phase2-b86。
