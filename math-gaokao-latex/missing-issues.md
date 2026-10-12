@@ -17473,3 +17473,104 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1065
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 仅含题面。第15题题干要求斜高；本库解析正文由底面周长30、12得两底边长10、4，侧面积为21l，底面积差为 √3/4·(10²−4²)=21√3，故推导 l=√3 cm；但答案要点表、分题答案及简答版均记为 3π。既有 provenance 的盲核证据也同时写‘斜高为√3，体积为3π’，与题目所求和推导不一致。尚无新的独立盲核，故不擅自改答案或沿用旧无冲突结论。",
+  "fingerprint": "b4fe160c16c4b3919b84809194e242ef288686ccf18f13bc892458bbdf23a574",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1987-regular-national-science",
+  "question_id": "gk-1987-regular-national-science-q15",
+  "resume_action": "取得一次新的独立盲核，复核第15题正确斜高；确认后更正答案要点和短答输出、刷新逐题 provenance 与四版构建，并重新复核。",
+  "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1066
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e42f95a0-326c-4b2e-9241-82d16c23c3a9",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "11a5d524dc36f8fe2b6551871c53c626ffa1a0fcdee5c5fcb09117c5edaf610c",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 3,
+  "paper_id": "gk-1987-regular-national-science",
+  "pdf_sha256": "abc0306391322198e9887410281cf596c6dabf3840883a48fde1de133f246ced",
+  "resume_action": "修正 gk-1987-regular-national-science 的 印刷版 第 3 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1067
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e42f95a0-326c-4b2e-9241-82d16c23c3a9",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "664118a63cfa0f130f8879f74d5edb037b876dae0273fa2d9c213f29637ae6d3",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1987-regular-national-science",
+  "pdf_sha256": "30e7ce282687332532bbd22dfa0347e1afea03ba973eb264deba91b6bd3da9f4",
+  "resume_action": "修正 gk-1987-regular-national-science 的 简答版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1068
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e42f95a0-326c-4b2e-9241-82d16c23c3a9",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "3b532759f7c11fcde9865764b33dfb1e95b50cb5500f14f0b6cec85c544fcd28",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1987-regular-national-science",
+  "pdf_sha256": "51fc501200e0b436a24996d6c08417d8715831c963ebfab0f02cddb6dc216a52",
+  "resume_action": "修正 gk-1987-regular-national-science 的 解析版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1069
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "e42f95a0-326c-4b2e-9241-82d16c23c3a9",
+  "check_code": "pagination_whitespace",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "f04ae94447b3cf1aa6e3e9fbf77cf39f41a931b4eb9b4aa8cb45fc172e6925a2",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1987-regular-national-science",
+  "pdf_sha256": "b24b7ea36d8d6b0a53ed35139ee582e73d57ace8d3729a09954f2763a551f117",
+  "resume_action": "修正 gk-1987-regular-national-science 的 试题版 第 4 页 pagination_whitespace（第19题句末分号与句号各自落在页面左侧独立行首，属于已复核的版式缺陷。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```

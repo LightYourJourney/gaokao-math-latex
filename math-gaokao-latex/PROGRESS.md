@@ -1747,3 +1747,46 @@
 - 提交后验证：分支 `feat/gaokao-phase0`，ahead 3；工作树干净。`validate-receipts` 为 1 succeeded/0 stale，review check 为 `FINALIZED`，attempt `5887b697-f9ac-4151-89ac-914e02f590a4` 仍 current。
 - 剩余任务：1952—2026 全语料整理、核查和四版构建仍大量未完成；本提交只闭合 phase2-b60，不代表阶段或项目整体完成。
 - 下一步：按既定年份顺序检查 phase2 后续批次的准备状态与阻塞项，选取下一个最早且可推进批次，继续执行逐卷验证工作流。
+- 新批次恢复（plan Task 2，phase2-b61）：按时间顺序下一卷为 1987 全国理科 `gk-1987-regular-national-science`，23题，已有 ISSUE-0779（第22题极限下标 n 与被取幂变量 x 不一致，缺同版勘误）且不改数学内容；先完成可独立的版面复核，保留该来源 blocker。
+- 预检发现：旧正式 build attempt `a604468b-b92f-4718-bd16-90d7d310d386` 的四版 PDF 实存且与旧 receipt SHA 匹配，但 `validate-receipts` 判 stale（生成输入树、工具链指纹变化）；现有4份 review 工作项绑定 attempt `50b29af5-a2e8-4030-a4de-912abe60e045`，不是当前 build，不能复用。页数5/21/6/18，共50页/400 checks。
+- 已完成可验证诊断子阶段：`provenance.py check-batch` 未报题面/答案哈希冲突，仅报 manifest 派生缓存 `compiled_pending_review` vs 现场 `provenance_verified` 不同步；这是 stale formal build 的派生状态，不重导来源。当前 ISSUE-0779 保持 open。
+- 阶段修改文件：仅本 `PROGRESS.md`；诊断只读，旧 build receipt/PDF 和 4 份 work items 尚未改写。
+- 下一步：运行 phase2-b61 的题面、简答答案与四版入口生成器一致性检查；全部通过后以官方 formal build 刷新 stale receipt，再准备新 attempt 的50页/400项工作项。
+- 已完成可验证阶段（phase2-b61 生成输入一致性）：`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过，分别确认1套题面、简答投影与四版入口和生成结果一致。首次并行调用中前两项因同时争用仓库事务锁失败；确认无锁持有进程后改为顺序执行并通过，四版检查原次通过无需重跑。
+- 阶段修改文件：仅本 `PROGRESS.md`；一致性检查均为只读，未改源文件、回执或 PDF。
+- 下一步：以官方 `build_projects.py build --formal --batch phase2-b61 --json` 重建 stale build，随后核对新 attempt 回执、页数/SHA/日志，再准备并复核当前 attempt 的50页/400项工作项。
+- 已完成可验证阶段（phase2-b61 正式重建）：官方 formal build revision 3985 成功，当前 attempt `e42f95a0-326c-4b2e-9241-82d16c23c3a9`，四版全部 succeeded，页数为试题5、解析21、简答6、印刷18（共50页）；errors、missing characters、overfull、undefined references、problems 均为0。`validate-receipts` 返回 OK（stale 0），`provenance.py check-batch` 返回 OK；四份实存 PDF 的 SHA-256 均与当前回执吻合。
+- 阶段修改文件：1987全国理科当前 `receipts/build.json`、manifest 派生批次状态、四份 ignored PDF 与本 `PROGRESS.md`；未改题目内容，ISSUE-0779 保持 open。
+- 下一步：对当前 attempt 运行官方 `review_receipts.py prepare-batch`，核对50页工作项绑定的 attempt、PDF SHA、页数与连续页码，再开展逐页复核。
+- 已完成可验证阶段（phase2-b61 当前 attempt 复核工作项）：官方 `prepare-batch` 为四版生成工作项；逐项确认均绑定 attempt `e42f95a0-326c-4b2e-9241-82d16c23c3a9`，PDF SHA、页数和从1开始的连续页码均与正式回执一致。覆盖试题5、解析21、简答6、印刷18页，共50页/400 checks，全部 pending。
+- 阶段修改文件：ignored `.work/phase2-b61/review/{试题版,解析版,简答版,印刷版}/gk-1987-regular-national-science.json` 与本进度文件。
+- 下一步：渲染当前四版 PDF 并全页视觉核查；旧 attempt 的视觉观察不得直接用于本次登记。
+- 已完成视觉复核子阶段（phase2-b61 试题版）：按当前 attempt 渲染并逐页检查5页；页眉页脚、题号、字形、公式、图形和整体分页清晰，未见缺字、裁切、重叠或答案泄漏。发现第4页第19题两处标点（第一问分号、第二问句号）各自单独落在左侧行首，登记为版式候选问题，尚未改源或填写复核结论。
+- 阶段修改文件：仅本 `PROGRESS.md`；当前 attempt 页图保存在 ignored `.work/phase2-b61/render-current/`。
+- 下一步：核对第19题权威 Markdown/生成 TeX 中标点与换行来源，再决定是否属于纯版式失败；随后继续解析版21页复核。
+- 已完成视觉复核子阶段（phase2-b61 解析版）：逐页检查当前 attempt 全21页，版次页眉、题号、图形、公式字形、解析与答案框均可读，无裁切/缺页/答案泄漏。发现第17页第19题分号和句号各自孤立在左侧行首，与试题版第4页同源；另发现第14页第15题解析推导斜高为 $\\sqrt{3}$ cm，但答案框写成 $3\\pi$，属待核实的内容不一致；未改题或回执。
+- 阶段修改文件：仅本 `PROGRESS.md`；视觉页面仍在 ignored `.work/phase2-b61/render-current/`。
+- 下一步：核对第15题权威答案源与短答投影，判定是否为答案转录错误；随后继续简答版和印刷版的当前 PDF 逐页复核。
+- 已完成视觉复核阶段（phase2-b61 当前 attempt 四版全页）：试题5、解析21、简答6、印刷18页，共50页全部按原尺寸逐页检查。总体未见缺页/缺字/公式图形损坏/裁切/答案泄漏；第22题的 n 与 x 不一致及解释框已按固定源如实保留。
+- 复核发现：第19题两个证明式后的全角分号、句号在权威 Markdown 中各自作为独立段落，导致试题版p4、解析版p4、简答版p4、印刷版p3出现左侧孤立标点；第15题权威答案要点与各答案版答案框均为 $3\\pi$，但解析正文及解析版/印刷版解答明确推导 $l=\\sqrt3$ cm，短答版列答案仍为 $3\\pi$。两项均未修源/未将 400 项复核结论写回正式回执。
+- 阶段修改文件：仅本 `PROGRESS.md`；四版当前页图与工作项均在 ignored `.work/phase2-b61/`。
+- 剩余任务：需要决定是否修正第15题答案（将影响答案源、provenance 与四版重建）及是否调整第19题标点排版；在决定前不得把冲突登记为通过。第22题 ISSUE-0779 仍 open。
+- 下一步：根据项目正式 review receipt 的校验规则登记已确认的 pass/fail/not_applicable；对需要实质修订的答案或排版先取得明确范围后再执行，并重建受影响版本与复核。
+- 决策门槛：本批现场仅有50页/400项工作项，无法对应用户提到的“41项待核”；当前四份工作项仍全 pending，正式 review receipt 未写入。待确认第15题按解答推导改正答案，还是保留现状并登记失败；以及是否调整第19题标点排版。未获决定前不改题源/答案，也不把相关检查记为通过。
+- 根因核实（phase2-b61）：题源 PDF 仅含题面；本库解析正文独立推导第15题侧面积 $21l$ 等于两底面积差 $21\\sqrt3$，明确得 $l=\\sqrt3$ cm；答案要点及短答输出却误录 $3\\pi$。第19题的分号、句号在试题 Markdown 中确为独立段落，生成 PDF 后落到左侧行首。依据直接推导和源文件定位，按最小范围修正答案转录及标点排版；不改变原题数学陈述，ISSUE-0779 原文保持不动。
+- 阶段修改文件：待修正 `1987/1987_数学真题_全国理_答案要点.md`、`1987/1987_数学真题_全国理_试题.md`，及由官方生成器派生的 TeX/provenance/回执；本记录。
+- 下一步：查清 provenance 项结构及官方写入命令，最小修源后运行生成器一致性检查和正式来源复核，再重建四版并复核受影响页。
+- 已完成问题登记阶段（phase2-b61 第15题答案冲突）：因现有盲核记录自身矛盾，且当前无可用独立复核代理，不把它冒充为已复核或擅自改答案。新增 open/blocking `ISSUE-1065`，并通过官方 `provenance.py import-batch --write` 将第15题 `conflict_status` 标记为 unresolved、关联该问题，revision 3986；其余题的题面/答案哈希与角色证据沿用原值。
+- 阶段修改文件：`math-gaokao-latex/missing-issues.md` 新增 ISSUE-1065；1987全国理科 `provenance.json`；`source-manifest.json`；本 `PROGRESS.md`；provenance work items 仅在 ignored `.work/phase2-b61/`。
+- 阶段验证：官方 import dry-run 与 write 成功；`provenance.py check-batch` OK，`issues.py validate` OK。第15题答案源暂不改，等待新的独立盲核。
+- 下一步：确认 revision 3986 后 formal build 与当前 review workitems 是否仍 current；随后登记四版第19题的 `pagination_whitespace` 失败与其余逐页检查结论。
+- 已完成复核工作项阶段（phase2-b61）：当前 attempt 四版50页共400项逐页结论已写入 ignored work items：351 pass、45 not_applicable（解析/简答/印刷版按设计含答案）、4 fail。fail 分别为试题版p4、解析版p4、简答版p4、印刷版p3的第19题孤立标点 `pagination_whitespace`；第15题内容矛盾独立记录为 ISSUE-1065。
+- 阶段修改文件：ignored `.work/phase2-b61/review/{试题版,解析版,简答版,印刷版}/gk-1987-regular-national-science.json` 与本 `PROGRESS.md`。
+- 阶段验证：四版工作项均指向当前 attempt 和当前 PDF SHA；页数及页码连续；每页8项；总计400项，状态计数合计400。
+- 下一步：调用官方 `review_receipts.py finalize-batch` 事务写入当前 attempt 的视觉失败回执与版式问题；预期返回 `VISUAL_FAILED`，批次不伪装为完成。
+- 已完成正式复核登记阶段（phase2-b61）：官方 finalizer revision 3987 返回 `VISUAL_FAILED`，绑定 attempt `e42f95a0-326c-4b2e-9241-82d16c23c3a9`，四个版次对应页均记录 `pagination_whitespace` fail；批次保持 `compiled_pending_review`，未生成过期或虚假的完成报告。问题总账新增 ISSUE-1066–1069，分别对应印刷版p3、简答版p4、解析版p4、试题版p4；第15题 ISSUE-1065 仍 open，原第22题 ISSUE-0779 仍 open。
+- 阶段验证：review check-batch 返回预期 `VISUAL_FAILED`；provenance check OK；issue ledger validate OK；build receipt validate OK（stale 0）；`git diff --check` 通过。四个 PDF 的实际 SHA 与 attempt 回执一致。
+- 已完成构建目录清理：四个入口执行 `latexmk -c -outdir=build` 后，build 目录仅保留四份 PDF（5/21/6/18页）；PDF SHA 未改变。
+- 阶段修改文件：该卷 `receipts/review.json`、`provenance.json`、`source-manifest.json`、`missing-issues.md`（新增 ISSUE-1065–1069）、本 `PROGRESS.md`；构建回执仍绑定当前 PDF。旧 `reports/phase2-b61.md` 是先前 attempt 报告，finalizer 明确未覆盖；批次未通过前不运行其完成报告渲染。
+- 剩余任务：取得第15题新的独立盲核并据此修正答案源/短答；修复第19题标点版式并重建、全页复核；保留第22题 ISSUE-0779；完成批次后再刷新报告、运行回归门禁并提交。
+- 下一步：审查本次 tracked diff 仅限 b61 及进度记录，提交已验证的失败诊断/阻断状态；不 push。其后继续处理下一个可独立批次，同时不丢弃 b61 backlog。
