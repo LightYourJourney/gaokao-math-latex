@@ -2864,3 +2864,8 @@
 - 验证结果：96页×8项=768项，681 pass、87 not_applicable（解答类版本的答案泄漏检查）、0 fail/pending；页级结论96/96 pass。八份workitem的build attempt、PDF SHA与页数均与正式build receipt一致（文科attempt `7dd02bc5-2dc6-4d88-968e-3df80bb6a6ca`，理科attempt `8bd7362c-9559-469d-8376-6a1765aff39e`）。
 - 剩余任务：尚未运行官方review finalizer、全库报告刷新、scoped gates及定向测试；尚未清理本批LaTeX中间物和渲染预览、核对最终PDF receipt并提交批次闭环。
 - 下一步：提交本视觉复核checkpoint后执行官方事务式`finalize-batch`并验证`FINALIZED`；不重跑已成功的formal build。
+- 已完成phase2-b86正式视觉回执登记阶段：官方事务式`review_receipts.py finalize-batch`返回`FINALIZED`，revision 4075，批次状态closed，并生成本批报告。
+- 阶段修改文件：两卷`receipts/review.json`与最终`receipts/build.json`、`source-manifest.json`及`reports/phase2-b86.md`；三份全库README仍仅保留待人工复核差异。
+- 验证结果：`review_receipts.py check-batch`为`FINALIZED`且无problems；build receipt要求final校验为2 succeeded、0 stale/failed/pending。
+- 剩余任务：全库报告/派生投影刷新、provenance与各scoped gates、定向测试、清理编译中间物/图像预览、最终PDF页数/SHA核对及最终差异审阅尚未完成。
+- 下一步：提交finalize checkpoint；随后运行全库报告和批次门禁，暂不重跑PDF构建。
