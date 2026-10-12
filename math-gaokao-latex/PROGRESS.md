@@ -1073,3 +1073,8 @@
 - 阶段验证：正式 build 返回 `COMPILED_PENDING_REVIEW：2 待审、0 失败`；`validate-receipts`、`provenance check-batch`、`make_short_answers.py --check` 均通过。八版日志逐项为 0 errors、0 missing characters、0 overfull、0 undefined references；页数与既有版式一致。尚未完成视觉验收，不将 pending 描述为正式通过。
 - 剩余任务：为新 attempt 刷新并核对 8 份 review work items；完成 91 页当前 PDF 逐页视觉复核并记录结果。试题版首页答案泄漏的处理选择仍未收到，故可记录已知失败但不得擅自改编辑说明或 finalize；随后还需正式登记、清理中间产物、运行 scoped gates 和全量报告。
 - 下一步：准备当前 attempt 的复核工作项，核对其 PDF 哈希、attempt 与页覆盖；之后启动新一轮逐页视觉复核，不复用旧 attempt 的页面结论。
+- 已完成可验证阶段（当前 attempt 复核工作项刷新）：`review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b57` 为文史/理工农医两卷四版生成并刷新 8 份 ignored work items，均绑定本轮 attempt（文史 `82cfd59c-7c07-40ea-bb71-438a59b57801`、理工农医 `15a812fe-aba2-4294-a00d-222fb0d66bc3`）。
+- 阶段修改文件：ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/` 内 8 个 JSON work items；tracked 仅本进度文件。
+- 阶段验证：逐项对照 build receipts，8 项的 attempt、PDF path/SHA-256/page_count 一致；页码连续覆盖 91 页，728 项检查全部 pending。此步骤不复用旧 attempt 的审查结论。
+- 剩余任务：对新 attempt 的 91 页完成逐页视觉审查并写入准确结果；首页试题版答案泄漏已知，须保留失败事实，用户此前的处理选择未收到。其后才可 checked finalize、清理中间产物、运行 scoped gates 和全量报告检查。
+- 下一步：文史类与理工农医类各由独立审查者检查四版全部页面，主会话复核重点页与代理报告证据，再更新当前工作项；不写正式回执，直到所有页面结论真实且首页失败处置边界明确。
