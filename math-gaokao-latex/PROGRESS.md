@@ -2795,3 +2795,12 @@
 - 验证结果：review/build/provenance final gates、全库report、generator、short-answer、edition、issues、source manifest、manifest CSV及77项定向测试均通过；PDF页数/SHA匹配receipt；`git diff --check 8861aaf6..HEAD`通过；当前分支`feat/gaokao-phase0`，无图像/编译中间物入库。
 - 剩余任务：人工复核并提交三份README汇总投影；后续manifest批次仍待处理，1952—2026全库目标未完成。
 - 下一步：提交非README报告投影和最终b84进度checkpoint；等待README复核期间不push、不改写其diff。
+
+## 下一批恢复状态（2026-10-13）
+
+- phase2-b84（2001豫粤卷）已闭环；本地仅保留3个待人工复核的全库README投影差异。
+- 已完成phase2-b85恢复预检（2001春季上海卷）：manifest无未解决batch issue，纸卷provenance为`provenance_verified`；旧ISSUE-0804至0807均已resolved。
+- 阶段修改文件：仅本进度文件及ignored SDD恢复账本；未修改b85题面、答案、图稿或provenance。
+- 验证结果：source manifest/issues、生成题面、简答答案及四版壳检查均通过；build receipt因生成输入树/工具链指纹变化stale；四份旧review工作项绑定非当前build attempt `a2be9211-6a95-41ae-afdb-6b558a471351`，共54页/432项pending；历史build页数5/23/7/19。
+- 剩余任务：正式重建b85四版，为当前attempt重新准备工作项并逐页视觉复核/登记；后续报告、门禁、测试、清理、PDF核验及提交。
+- 下一步：提交本预检checkpoint后正式重建；不重做题目转录、独立解题、图稿绘制或provenance，不push。
