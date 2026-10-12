@@ -2589,6 +2589,11 @@
 - 验证结果：四版全页覆盖5/21/7/17页；400项检查完整登记为355 pass、45 not_applicable（仅非试题版答案泄漏检查），0 fail/pending，所有工作项绑定当前attempt `1c6ecf11-b94d-4243-b23f-b30d1c6b4db2`；not_applicable项均写明理由。
 - 剩余任务：执行官方checked finalizer，刷新全库报告并运行批次门禁/定向测试；清理LaTeX中间物、review工作项及预览PNG后复验PDF回执与最终差异。
 - 下一步：提交视觉复核checkpoint；随后运行`finalize-batch-checked`，再按项目既定顺序完成报告、验证、测试和清理。
+- 已完成phase2-b82正式视觉回执登记阶段：`finalize-batch-checked`返回`FINALIZED`，批次closed，manifest revision 4063。
+- 阶段修改文件：本卷`receipts/review.json`、build receipt最终状态、`source-manifest.json`派生批次状态、`reports/phase2-b82.md`；本进度文件同步记录；未改题面、答案、解析、图稿或provenance。
+- 验证结果：review `check-batch`返回`FINALIZED`；build `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；provenance `check-batch`返回`OK：1 卷`；50页×8项共400项，355 pass、45 not_applicable、0 fail/pending，均绑定当前attempt。
+- 剩余任务：刷新并验证全库报告投影、运行本批门禁与定向测试、清理中间物/PNG/workitems并核验四份PDF与回执一致，随后精审差异提交。
+- 下一步：提交b82正式回执checkpoint，再运行`report.py render --all`及`check --all`。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
