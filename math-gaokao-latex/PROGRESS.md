@@ -1036,3 +1036,9 @@
 - 阶段验证：`solution_sources.py extract-batch --write` 写入 4 个派生目标；`generate_projects.py --batch phase2-b57 --write` 写入 5 个目标。`source_manifest.py validate`、两卷 `solution_sources.py check-batch`、两卷生成器 `--check`、`test_generate_projects.py` 102 项及 `git diff --check` 均通过。独立求解与盲核均确认结论。全套 unittest 共 864 项：850 通过、13 跳过、1 失败；失败仅为全库 `test_the_cached_states_match_the_recomputed_ones`，发现 156 卷缓存状态漂移，未在本批范围内批量改写。
 - 剩余任务：尚未刷新文史类 Q6/Q7 provenance 与问题账，尚未重建本批 PDF；答案泄漏处理选择仍待用户决定；其余构建、页面复核、正式回执、清理与全量报告门禁未完成。
 - 下一步：先按官方事务接口只更新受影响的文史类 Q6/Q7 provenance，保留其余题目的角色与证据；审阅并更新 ISSUE-0770 等问题记录；随后处理未决答案泄漏选择，再重建并复核受影响版本。此前已完成的 91 页旧 attempt 视觉浏览不当作新 PDF 的复核结论。
+- 已完成可验证子阶段（来源核验与局部更新范围审计）：实时 `provenance.py check-batch` 只报告文史类 Q6 题面哈希过期；Q7 题面与答案摘要均已匹配当前源，故从待更新范围剔除。文科当前派生状态 `blocked`、理科 `editions_generated`、批次 `planned`，manifest 缓存仍记旧 `compiled` / `compiled_pending_review`，须在当前来源状态和后续构建后按事务重算。ISSUE-0770 仍为 `open/non_blocking`，旧折叠题描述与固定源实际题目不符；未检出理科 Q2(8) 专属 issue。
+- 阶段发现：官方 `import-batch` 强制覆盖整个 phase2-b57 批次的两卷、三个角色和每题记录；`.work/phase2-b57/provenance/` 当前不存在，不能在未完整重建 14 题角色证据的情况下使用。故保留各题现有角色证据，只刷新确实失配的文科 Q6，问题账与 manifest 必须纳入同一状态事务。
+- 阶段修改文件：仅本进度文件；审计命令均为只读，没有改 provenance、问题账、manifest、构建产物或工作项。
+- 阶段验证：`provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase2-b57` 返回预期 `INVALID：2 卷`，唯一内容级失败为文科第 6 题哈希变化；其余是已记录的缓存状态漂移。此前已确认来源清单、两卷解析抽取与生成器校验通过。
+- 剩余任务：实现并验证单题 Q6 provenance 与 ISSUE-0770 的原子更新，同时保持其余 13 题记录字节/语义不变；答案泄漏选择仍未决；之后重建两卷八版并逐页复核新 attempt。
+- 下一步：使用共享 state transaction 校验当前 revision、重算文科 Q6 摘要、更新 ISSUE-0770 为有固定源证据支持的 resolved 状态，并只为实际更正创建必要的问题记录；提交前核对事务目标只含文科 provenance、问题账及 manifest 状态投影。
