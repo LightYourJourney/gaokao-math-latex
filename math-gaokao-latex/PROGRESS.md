@@ -2100,3 +2100,7 @@
 - 阶段修改文件：受跟踪变更为该卷build/review receipts、manifest派生状态、phase2-b69报告、全库报告/索引投影及本进度文件；无PDF、PNG/JPEG或编译中间文件入库，无题面/答案/来源/图稿变更。
 - 剩余任务：最终复验build/provenance/review/issues scoped gates与 `git diff --check`，审查精确差异，然后按 `[已核]` 本地提交并复核干净状态。全库1952—2026目标与41项待核映射仍未完成。
 - 下一步：核对本批diff仅含预期回执/报告投影/进度文本，通过最终门禁后提交（不push）。
+- 已完成阶段提交：phase2-b69的11个受跟踪文本/JSON路径提交为 `42e91f69`（`[已核] docs(exams): 完成1988上海卷复核并登记回执`），本地提交，未push。
+- 阶段验收：1988上海卷四版49页全部当前attempt复核，392项检查348 pass/44 not_applicable/0 fail；官方review FINALIZED。全库报告、scoped gates、77项定向测试、PDF SHA核对和 `git diff --check` 均通过；build目录只留四份PDF，临时渲染图与LaTeX中间物已清理。ISSUE-0790继续保持有证据支持的resolved状态。
+- 剩余任务：1952—2026全语料仍未完成；用户提示的41项待核尚未找到权威映射。历史批次已有的来源/内容阻断继续按原issue保留。
+- 下一步：提交本进度检查点并确认工作树干净；继续处理manifest下一批phase2-b70，另行检索41项待核的权威任务表，不重做b69。
