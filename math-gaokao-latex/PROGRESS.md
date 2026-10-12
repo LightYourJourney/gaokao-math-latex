@@ -2427,3 +2427,8 @@
 - 验证结果：finalizer成功；0 fail、0 pending，58项非试题版答案泄漏检查not_applicable理由均已记录。
 - 剩余任务：全库report render/check、七项scoped gates和两组定向测试；清理LaTeX中间物及PNG，核验PDF后审阅并提交。
 - 下一步：刷新并校验全部报告投影，避免局部手改统计数据。
+- 已完成全库报告刷新阶段（phase2-b77）：`report.py render --all`以一个content事务写入并回读校验六个报告目标；`report.py check --all`确认输出与当前全量manifest一致，并保留未完成状态。
+- 阶段修改文件：六个全库报告/索引投影、本批报告及本进度文件；无题目、答案、provenance或图稿内容变更。
+- 验证结果：全量render与check均退出码0；render确认六目标事务写入/回读，check确认报告一致。
+- 剩余任务：运行phase2-b77七项scoped gates与两组定向测试；随后清理中间物、核验PDF并最终提交。
+- 下一步：串行运行七项scoped gates，避免共享仓库事务锁竞争。
