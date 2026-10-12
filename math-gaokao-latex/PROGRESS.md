@@ -2934,3 +2934,8 @@
 - 验证结果：review `FINALIZED`、problems为空；build receipt `OK`（1 succeeded，0 stale/failed/invalid/missing/pending）；provenance `OK：1卷`。批次报告显示closed、55页、无视觉/阻塞问题。
 - 剩余任务：刷新全库报告投影与manifest CSV，运行issues/source-manifest/生成器/简答答案/edition/报告等门禁及定向测试，清理编译中间物和预览并核验PDF页数/SHA，最终审阅提交本批已完成文件。
 - 下一步：刷新全库report投影并check；再跑b87 scoped gates，保留三份README差异不提交。
+- 已完成phase2-b87全库派生报告与来源CSV刷新阶段：report生成器使用一个事务更新并回读六个全量报告目标，随后同步来源manifest CSV。
+- 阶段修改文件：六个全库报告目标（包含三份待人工复核的README投影）、`manifest.csv`及本进度文件；README差异未暂存/提交。
+- 验证结果：`report.py render --all`确认六目标事务写入并回读；`report.py check --all`通过且未完成状态仍保留；`manifest_csv.py --check`确认当前且775行。
+- 剩余任务：b87 scoped gates（issues/source manifest、generator/short answers/editions、review/build/provenance）、定向测试、产物清理与PDF页数/SHA核对、最终差异审阅/提交。
+- 下一步：运行b87必要门禁与定向回归测试，发现全库旧问题时区分存量与本批问题，不扩大修改范围。
