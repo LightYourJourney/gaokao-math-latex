@@ -2583,3 +2583,8 @@
 - 验证结果：review receipt测试66/66通过（42.760秒）；report测试11/11通过（66.731秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物与当前attempt PNG，核验build仅含四版PDF且页数/SHA吻合receipt；最终差异审阅并提交。
 - 下一步：提交测试checkpoint后，四版入口执行`latexmk -c -outdir=build`，再将本批PNG/接触表整体移入可恢复archive。
+- 已完成构建产物清理与正式PDF核验阶段（phase2-b80）：四版入口均成功执行`latexmk -c -outdir=build`；84个当前attempt PNG/接触表整体移入可恢复目录`~/.Trash/phase2-b80-render-6219426c.pJdt5K/render-6219426c/`。
+- 阶段修改文件：仅本进度文件和ignored build/render产物；正式PDF、LaTeX源文件、回执及review工作项均保留。
+- 验证结果：build目录精确保留四版PDF，页数5/23/6/20、SHA逐项匹配build receipt；final receipt validator返回`OK`；84个预览文件已离开项目工作目录。
+- 剩余任务：最终审阅phase2-b80 tracked差异与全库变更范围，确认无图片/PDF/编译中间产物入库，再提交最终checkpoint。
+- 下一步：核对自b80起点的tracked文件清单、统计、`git diff --check`与最终status；提交最终进度记录，不push。
