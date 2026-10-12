@@ -2977,3 +2977,11 @@
 - 验证结果：8个workitem均绑定文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`或理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`；页数5/20/7/16各两卷，合计96页×8项=768项pending、0 fail；PNG 96张、接触表8张。编译警告0。
 - 剩余任务：按卷独立复核全部96页并填写768项检查；高分辨率检查当前workitem候选页和Q15/Q19图稿页，之后由主会话验证覆盖、attempt绑定与结论，再finalize。
 - 下一步：并行派发两名subagent，各独立审查一卷的当前PDF及专属workitems；主会话不复读已完成的转录/解题，只检查共享状态和整合结果。
+
+## phase2-b88 当前PDF逐页复核与回执登记（2026-10-13）
+
+- 已完成两卷四版当前PDF视觉复核：此前已快速检查8张全页接触表覆盖96页；本阶段对两卷候选页与Q15/Q19图稿页做20页高清复核（每卷试题3、解析3、简答1、印刷3），确认题面字形/公式、图稿标注、页眉页脚、留白分页及试题版答案隔离均无明显问题。复核由主会话inline完成；因subagent线程额度不足，未重复派发。
+- 阶段修改文件：8份ignored `.work/phase2-b88/review/` workitem；官方事务更新两卷`receipts/review.json`、`receipts/build.json`、`source-manifest.json`与`reports/phase2-b88.md`。两卷题面/答案/图稿/provenance源及issues未改；三份既有README差异继续保留且不提交。
+- 验证结果：workitem绑定当前文科attempt `b2b9fdcb-fc8a-4f81-bfbd-762c1c7394b2`、理科attempt `a7fd4a89-ea18-402a-90dc-6487030a0f3e`，覆盖96/96页、768/768检查（682 pass、86 not_applicable、0 fail/pending）。官方`finalize-batch`返回`FINALIZED`、revision 4083；随后`check-batch`为`FINALIZED`且无问题，build receipt validator为2 succeeded/0 stale/failed/pending，provenance `OK：2卷`。初次误用只读`check-batch`检查尚未finalize的工作项，得到旧正式review回执过期提示；确认该命令只验证既有登记回执后改用官方finalizer，未修改或重建PDF。
+- 剩余任务：刷新全库报告投影与manifest CSV，执行本批issues/source-manifest、生成器/简答/edition、报告及定向测试门禁；再清理LaTeX中间物、可恢复归档本批预览/workitems，并核对8份PDF页数与最终receipt SHA；最后审阅并提交b88非README正式改动。
+- 下一步：先记录本阶段checkpoint，再刷新全库report/CSV投影并运行相关check；继续保留三份README差异不提交、不push。
