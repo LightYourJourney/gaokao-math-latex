@@ -2417,3 +2417,8 @@
 - 纠正记录（phase2-b76）：项目临时目录实际位于`math-gaokao-latex/.work/`；此前检查根目录`.work/`导致误报预览目录不存在。现已把b76的2张source PNG及93个render文件整体移至可恢复目录`~/.Trash/phase2-b76-review-renders.XbvLok/`；b76 review工作项与旧工作项archive均保留。此前称“预览目录已不存在”的记录以本纠正为准。
 - 剩余任务：逐页复核b77当前64页并finalize；随后报告刷新、门禁/测试、清理与提交。
 - 下一步：检查当前四版PDF并生成64页接触表，放大检查候选页与全部图稿页后填写当前attempt工作项。
+- 已完成当前attempt逐页视觉复核阶段（phase2-b77）：四版90dpi接触表覆盖全部64页；四版候选页、试题版6页、简答版7页，以及解析版/印刷版7幅登记图稿的题干、解析出现页和末页已150dpi放大检查。未见缺字、裁切、遮挡、答案泄漏或异常分页。
+- 阶段修改文件：四份ignored `math-gaokao-latex/.work/phase2-b77/review/`当前attempt工作项及本进度文件；渲染图仅在ignored `.work/phase2-b77/render-ae3fe0ca/`。
+- 验证结果：四份工作项绑定attempt `ae3fe0ca-63be-49df-a7d9-eabc793b9a63`和各自PDF SHA；64页×8项共512项，454 pass、58 not_applicable（非试题版答案泄漏检查）、0 fail/pending。旧attempt的正式receipt仍保留512 pass，但不用于当前观察。
+- 剩余任务：官方finalize登记当前视觉回执；全库报告刷新、七项scoped gates、定向测试、清理、PDF核验和最终提交。
+- 下一步：提交视觉复核checkpoint，再运行`review_receipts.py finalize-batch`登记当前64页结论。
