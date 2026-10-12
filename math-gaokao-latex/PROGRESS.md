@@ -927,4 +927,7 @@
 - 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认唯一问题为 stale；固定来源 artifact 与四份现存 PDF 均已核对，页数记录如上。
 - 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
 - 剩余任务：正式构建、逐页视觉复核、登记回执、清理中间产物并完成 scoped gates 与全量报告校验。
-- 下一步：提交 b55 预检进度 checkpoint，再正式重建该卷四版。
+- 已完成子阶段：1985 上海理工农医类四版正式构建成功，manifest revision 3922；build attempt `139fb324-6cb4-4773-9ed2-5f366658729c`。页数仍为试题 4、解析 18、简答 5、印刷 14，共 41 页；零 warning、无 build failure。
+- 阶段验证：build receipt validator `OK`，无 failed/invalid/missing/stale；当前 1 卷待视觉复核。既有 ISSUE-0763/0764/0765 状态均 resolved，本阶段未修改其记录或试卷源。
+- 阶段修改文件：本进度文件、1985 上海理工农医类 build receipt/PDF；未改试卷题目、答案、provenance、图稿或生成源。
+- 下一步：提交本阶段进度 checkpoint，再为当前 build attempt 准备逐页 review work items。
