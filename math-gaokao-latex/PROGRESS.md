@@ -1109,3 +1109,8 @@
 - 阶段验证：8 个工作项总计 91 页、728 检查；逐项核对 build attempt、PDF 路径、SHA-256、page_count 与各卷 receipt 一致，页码覆盖连续且完整。新科学 attempt 首页再次用当前 PDF 高分辨率图确认答案泄漏后才登记 fail。临时文史原件恢复后页1批注仍在。
 - 剩余任务：独立审查者需针对最新科学 attempt `dea4108d…` 再次确认全部 50 页（尤其六个重绘图页面）；随后把两卷已审查页面的检查结果完整写入当前 work items、验证 728 项状态。首页答案泄漏选择仍未收到，未 finalize。
 - 下一步：取得最新科学 attempt 复查报告，核实修复后 M 标签清晰且无其他变化，再将审查结果登记到当前工作项并复核 JSON/官方回执门禁。
+- 已完成可验证子阶段（文史类当前工作项登记）：依据 41/41 页独立审查及主会话重点页复核，将当前文史四版 328 项检查写入对应 ignored work items；327 项 pass，文史试题版 p1 `answer_leak` fail，其余无 pending。p4 与简答版 p5 的留白按主会话复看记为 pass 并注明是正常卷末/短答案版留白。
+- 阶段修改文件：文史四版 ignored `.work/phase2-b57/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-shanghai-arts.json`；tracked 仅本进度文件。
+- 阶段验证：只读校验确认 41 页页码连续、每页八项齐全、attempt/PDF 绑定当前文史 receipts；全部结论为 327 pass、1 fail、0 pending。未更新正式 `receipts/review.json`，未 finalize。
+- 剩余任务：最新科学 attempt `dea4108d…` 的 50 页复查仍在进行；完成后登记当前科学 work items，连同文史组成 91 页/728 项门禁。两卷试题首页答案泄漏仍各一项 fail，正式处置与 finalize 需遵守用户选择。
+- 下一步：收取并验收科学卷新 attempt 全页报告，重点确认 Q6 六页标签已充分避开弦、虚线与圆弧，再登记其 400 项结果。
