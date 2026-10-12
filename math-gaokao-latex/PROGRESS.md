@@ -2493,3 +2493,8 @@
 - 验证结果：review receipt测试66/66通过（44.707秒）；report测试11/11通过（65.951秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物与当前attempt PNG预览，校验build目录仅保留四份正式PDF且页数/SHA吻合receipt；最终差异审阅并提交。
 - 下一步：运行四个入口的`latexmk -c -outdir=build`，再将本批渲染预览整体移入可恢复目录。
+- 已完成构建产物清理阶段（phase2-b78）：四个版本入口均成功执行`latexmk -c -outdir=build`；76个当前attempt接触表/PNG整体移入可恢复目录`~/.Trash/phase2-b78-render-e9bbc700.fruZKW/render-e9bbc700/`。
+- 阶段修改文件：仅本进度文件和ignored build/render产物；review工作项、正式PDF和回执均保留。
+- 验证结果：`build/`仅保留四版PDF；pdfinfo页数5/22/6/18，四版SHA逐项匹配build receipt；正式receipt final validator仍返回`OK`；预览文件已离开项目工作目录。
+- 剩余任务：最终审阅phase2-b78 tracked差异与全库变更范围，确认无图片/编译中间物入库，再提交最终checkpoint。
+- 下一步：核对自b78起点的tracked文件清单、统计、`git diff --check`与最终status；提交最终进度记录，不push。
