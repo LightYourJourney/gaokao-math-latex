@@ -2884,3 +2884,8 @@
 - 验证结果：`python3 -m unittest discover -s math-gaokao-latex/tests -p test_report.py`通过，11/11项，67.211秒；与此前review receipt测试合计77项通过。
 - 剩余任务：LaTeX编译中间物与本批PNG/接触表仍待清理，需验证8份PDF页数/SHA匹配final receipt，再最终审阅并提交非README文件。
 - 下一步：提交测试checkpoint，按四个edition入口分别执行`latexmk -c -outdir=build`，仅保留PDF；将`.work/phase2-b86`整体移入可恢复归档。
+- 已完成phase2-b86构建中间物清理、复核预览归档与PDF回执核验阶段：两卷8个edition入口均执行`latexmk -c -outdir=build`；本批`.work`已整体移入可恢复归档。
+- 阶段修改文件：仅本进度文件及ignored构建/预览产物；LaTeX源、图稿、正式PDF和回执保留。归档路径为`~/.Trash/phase2-b86-work.poLdNi/phase2-b86/`（约18MB、125个文件）。
+- 验证结果：文科四版页数4/20/6/16、理科5/22/7/16；8份PDF SHA-256与最终build receipt逐项相同；两个build目录均仅保留四份PDF；`.work/phase2-b86`已离开项目工作区。
+- 剩余任务：对本批tracked差异做最终范围审阅与`git diff --check`，提交非README改动；三份全库README待用户人工复核仍不提交。
+- 下一步：提交cleanup checkpoint，审阅并提交b86正式数据、报告投影与进度；不push。
