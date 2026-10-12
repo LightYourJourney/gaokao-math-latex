@@ -3213,3 +3213,11 @@
 - 剩余任务：全库报告门禁尚未验证；题库其余年份/批次仍待处理，b58 的来源限制仍阻塞视觉完成。此修复改动共享事务逻辑，需继续以相关测试和后续真实失败批次验证行为；不 push。
 - 提交记录：本阶段已提交为 `5a18de61 fix(exams): keep failed review batch reports current`。提交后工作树仅保留三份既有 README 修改；`git diff --check` 通过，无 staged 变更。
 - 下一步：依总计划核对当前 manifest 中最早未闭合批次及其已有进度/工作项，从断点继续，不重做 b58 复核。
+
+### phase2-b59 旧批次报告按当前 failed receipt 刷新
+
+- 已完成可验证阶段：phase2-b59 原报告仍写旧 attempt `cf62aebc-2579-4615-adc6-6069f844f811` 已通过；使用新 finalizer 的 report-only 模式，基于当前 failed receipt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c` 与对应 build 更新为 `VISUAL_FAILED` 诊断，覆盖60页与8项来源限制失败。未重做页面指标或视觉检查。
+- 阶段修改文件：`reports/phase2-b59.md`、`source-manifest.json`（revision 4105）、事务规范化的 `missing-issues.md` 空行与本进度文件。未改题源、PDF、build/review receipt，三份既有 README 未触碰。
+- 阶段验证：`review_receipts.py check-batch` 返回预期 `VISUAL_FAILED` 且无报告陈旧问题；build receipt `OK`（stale 0），provenance `OK：1卷`，source manifest validate 通过。共享 finalizer 的 `test_review_receipts` 66/66、`test_report` 11/11 已通过。
+- 剩余任务：b59 因固定源缺图/缺字、题意和整题组证据不足保持阻塞；全语料尚有大量卷待处理。
+- 下一步：精确提交本次 b59 报告状态同步，再依计划选择最早可推进批次；b58/b59 不重做既有复核。
