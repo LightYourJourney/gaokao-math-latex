@@ -3093,3 +3093,8 @@
 - Ruling：不重做已存在的2002文/理转录、解题与TikZ内容；按官方事务对两卷正式重建，并基于新attempt重新逐页复核后finalize。依据是来源与生成器校验全部当前，但build/review回执均不能证明当前工具链产物；代价是重复进行一次全页目检。
 - 剩余任务：归档旧b91 workitems；正式构建8版、刷新当前视觉workitems并检查108页，finalize后复跑本批和全库投影/门禁/定向测试，清理中间物并逐PDF核验回执。
 - 下一步：提交此恢复checkpoint，再按官方 `build_projects.py build --formal --batch phase2-b91` 事务刷新派生状态；不重做来源转录与解题。
+- 已完成phase2-b91当前输入正式构建阶段：将旧8份review workitem可恢复归档至`~/.Trash/phase2-b91-stale-review.HkfRMm/review/`；官方formal build在manifest revision 4094为文理两卷刷新8版及构建回执。
+- 阶段修改文件：文理两卷`receipts/build.json`、`source-manifest.json`中的构建派生状态及本进度；题面、答案、解析和图稿源均未改。
+- 验证结果：文科attempt `a775499b-d0c6-469f-a6d1-aa797354298b`、理科attempt `61f5bb79-1579-4454-8fd5-aa9cf435f21e`，8版全部成功，共108页（文科5/22/7/20，理科5/24/7/18）；formal build返回`COMPILED_PENDING_REVIEW：2待审、0失败`。build receipt validator、provenance batch check及source manifest validate均通过；两卷provenance缓存已同步为`editions_generated`、批次为`provenance_verified`。
+- 剩余任务：为当前attempt建立并填写8份逐页review workitem，覆盖108页/864项；随后finalize、全库门禁/报告与定向测试、清理中间文件并核对8份PDF回执。
+- 下一步：prepare当前attempt workitems，渲染四版PDF；按文/理卷并行进行独立逐页检查，主会话验收覆盖、绑定与结论后finalize。
