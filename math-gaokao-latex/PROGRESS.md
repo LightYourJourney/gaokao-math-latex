@@ -940,4 +940,9 @@
 - 已完成阶段：`finalize-batch` 返回 `FINALIZED`，b55 状态 `closed`、无问题；1985 上海理工农医类正式 review receipt 与当前 build attempt 对齐，并生成 `reports/phase2-b55.md`，manifest revision 3923。ISSUE-0763/0764/0765 均保持 resolved。
 - 阶段验证：review finalize 报告 `closed`、无 problems；41 页、328 项视觉检查全部通过，零构建 warning。
 - 阶段修改文件：1985 上海理工农医类正式 review receipt、manifest 批次状态投影、本批报告；忽略工作项与临时图像尚待清理。
-- 下一步：单独提交 finalize 阶段进度，然后将 build 非 PDF 中间物、忽略工作项及临时审阅图像移入系统废纸篓，保留 PDF 与 LaTeX 源。
+- 已完成子阶段：1985 上海理工农医类 build 目录 24 个非 PDF 中间物、4 份 `.work/phase2-b55/review/` 工作项与 `/tmp/gk-phase2-b55-review.ALrEHV/` 临时审阅目录（50 张 PNG）均移入系统废纸篓；路径确认不存在，空 review 目录一并移除。保留四版 PDF，build 目录核验为 4 PDFs、0 个非 PDF。
+- 阶段验证：五项 b55 scoped gates 全部通过：source manifest validate；generator `--check` 单卷一致；build receipts 为 1 succeeded、0 pending/failed/invalid/missing/stale；review `FINALIZED`；provenance status 显示该卷 complete、批次 closed。`report.py render --all` 单事务写入并回读校验六个全量报告目标；`report.py check --all` 确认报告与当前全量 manifest 一致，未完成状态保留。ISSUE-0763/0764/0765 均 resolved。
+- 阶段修改文件：本进度文件、b55 build/review receipts、manifest、本批报告与六个全量报告目标；构建中间物、忽略工作项和临时图像已清理；未更改题目、答案、provenance 或 LaTeX 源。
+- 已完成阶段：b55 内容、正式回执与全量报告投影提交 `ccc4f6ac`（`docs: 完成1985上海理工类复核`）；未 push。b55 关闭快照：manifest revision 3923；1 卷、41 页、328 项视觉检查通过，零 warning；4 份 PDF 保留，build 目录仅 PDF。
+- 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段仅关闭 b55，不代表全库完成。
+- 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b56`（1986 全国文理科两卷）。
