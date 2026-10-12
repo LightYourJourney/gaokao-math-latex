@@ -2583,6 +2583,11 @@
 - 验证结果：review receipt测试66/66通过（44.017秒）；report测试11/11通过（67.321秒）；合计77项通过。
 - 剩余任务：清理四版LaTeX中间物与当前attempt PNG，核验build仅含四版PDF且页数/SHA吻合receipt；最终审阅并提交。
 - 下一步：提交测试checkpoint后，四版入口执行`latexmk -c -outdir=build`，再将本批PNG/接触表和review工作项移入可恢复archive。
+- 已完成构建产物清理与正式PDF核验阶段（phase2-b81）：四版入口均成功执行`latexmk -c -outdir=build`；79张当前attempt PNG/接触表和4份已登记review工作项整体移入可恢复目录`~/.Trash/phase2-b81-work.odWL3W/phase2-b81/`。先前空白工作项保存在`~/.Trash/phase2-b81-review-workitems.4LaHWh/review/`；误生成且空的单卷`.work`目录已移除。
+- 阶段修改文件：仅本进度文件和ignored build/render产物；正式PDF、LaTeX源文件与回执均保留。
+- 验证结果：build目录精确保留四版PDF，页数4/22/5/19、SHA逐项匹配build receipt；final receipt validator返回`OK`；预览/工作项已离开项目工作目录。
+- 剩余任务：最终审阅phase2-b81 tracked差异与全库变更范围，确认无图片/PDF/编译中间产物入库，再提交最终checkpoint。
+- 下一步：核对自b81起点的tracked文件清单、统计、`git diff --check`与最终status；提交最终进度记录，不push。
 - 已完成全库报告刷新阶段（phase2-b80）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
