@@ -963,3 +963,14 @@
 - 阶段验证：日志上下文、规范源行、生成 TeX 行和 PDF 页文本互相对应；已确认纯标点排版缺陷。理科第 20 题数值与结论未显示其他异常；需要将句号显式放入 CJK 文本标记后重新生成、检查 provenance 与正式构建状态。
 - 阶段修改文件：仅本进度文件；诊断未修改源、manifest、provenance、图稿或 PDF。
 - 下一步：提交 warning 根因 checkpoint；先以回归检查确认两个数学块内存在未转义句号，再做最小标点标记修复，重跑生成/provenance/构建与页面核验。
+- 已完成子阶段：按纯排版边界修复理科解析正文第 357、369 行，将数学环境内句号改为 `\text{。}`；RED 检查曾准确命中两处，修复后 GREEN 检查通过，`git diff --check` 通过。生成器写入理科项目 3 个派生目标，单卷 `--check` 通过；题目数值、论证和答案结论未改。随后两卷八版正式重建，文科 attempt `d5d91fa1-600f-4ba5-960b-65a6ff822e6d`、理科 `b4121d8a-b708-4609-91c9-a4df5738f765`，manifest revision 3925；构建命令无失败。
+- 阶段验证：理科补建 attempt `80391215-3b2a-42dc-9ba1-071468d02361` 后，build receipt validator 显示两卷 `OK`，provenance `check-batch` 通过，manifest revision 3927；理科最终四版日志均无 Missing character、Overfull、LaTeX error 或 undefined reference。复核工具已为当前两卷八版准备 8 个 work items，覆盖 95 页，均绑定最新 attempts。
+- 阶段修改文件：规范源 `1986/1986_数学真题_全国理_解析正文.md`、生成的理科 LaTeX 目标、两卷正式 build receipts/PDF、source-manifest、本进度文件及忽略的 `.work/phase2-b56/review/` 8 份新工作项；未改题面、数学结论、问题账或 provenance 逐题证据。
+- 已完成子阶段：95 页接触表全覆盖浏览；8 个候选首页完成 160dpi 高分辨率复核。理科第 20 题题面与异文说明所在的试题版 p4、解析版 p18、简答版 p6、印刷版 p16 完成 180dpi 高分辨率复核；两处修复句号在解析版 p18、印刷版 p16 均清晰呈现，`A∩B` 异文说明与答案 1084 正确可读。未发现缺页、裁切、图形/公式异常、答案串版或异常分页。
+- 阶段验证：8/8 接触表覆盖并检查 95/95 页；高分辨率检查 12/12 页通过。接触表生成初次因 ImageMagick 字体别名 `Arial` 无法解析而打印告警，随后指定系统字体文件重生成；该问题仅影响接触表标注渲染，不影响 PDF 页面图像。新工作项待登记页面级检查结果。
+- 阶段修改文件：仅本进度文件与忽略的 `.work/phase2-b56/review/` 工作项；接触表及高分辨率预览位于 `/tmp/gk-phase2-b56-review.T69VtV/`；未更改试卷源或 PDF。
+- 已完成子阶段：8 份当前 attempt 工作项已登记 95 页 × 8 项，共 760 条 pass、0 pending、0 warning exemption；文理科各版页数与 attempt 均匹配正式构建回执。`git diff --check` 通过。
+- 阶段验证：工作项页覆盖分别为文科 44 页、理科 51 页，检查项合计 760/760 pass；重点页和候选页备注记录了对应检查尺度与结论。
+- 阶段修改文件：本进度文件；忽略的 `.work/phase2-b56/review/` 8 份工作项；临时接触表/PNG 位于 `/tmp/gk-phase2-b56-review.T69VtV/`；未更改试卷源或正式 PDF。
+- 剩余任务：提交源修复与正式构建检查点；事务 finalize 正式 review/build 回执与批次报告；清理构建中间产物、工作项和临时 PNG；完成五项 scoped gates 与全量报告校验。
+- 下一步：先审阅 tracked diff 并提交源修复、生成物、正式构建回执/PDF 及本进度 checkpoint；随后运行事务 finalize。
