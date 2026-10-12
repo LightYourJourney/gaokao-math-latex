@@ -2568,6 +2568,12 @@
 - 验证结果：review `check-batch`返回`FINALIZED`；build receipt `--require-final`返回`OK`（1 succeeded、0 stale/missing/failed）；54页×8项共432项，383 pass、49 not_applicable、0 fail/pending，绑定当前attempt `6219426c-2af9-4e1b-ae57-c6144b0c61cc`。
 - 剩余任务：全库报告render/check；7项批次门禁、定向测试；清理LaTeX中间物与PNG，核对四版PDF页数/SHA并最终提交。
 - 下一步：提交正式回执checkpoint，再运行全库`report.py render --all`与`check --all`刷新投影。
+
+- 已完成恢复预检阶段（phase2-b82，2001上海文科）：历史提交`b1a64a6d`曾关闭本卷，但当前manifest状态为`compiled_pending_review`；现有build receipt attempt `38fcd770`被官方validator判为stale（输入树、工具链指纹变化），provenance当前verified。旧review receipt 400项全pass但绑定attempt `263a568f`，ignored工作项绑定另一旧attempt `e8681d36`，均不能替代当前构建复核。
+- 阶段修改文件：仅本进度文件；未改题面、答案、解析、图稿或provenance。
+- 验证结果：全卷范围与既有计划一致（试题/解析/简答/印刷共5/21/7/17页）；`provenance status --batch phase2-b82`返回`provenance_verified`；`build_projects.py validate-receipts --batch phase2-b82 --json`返回1 stale、0 succeeded；当前tracked差异在提交前核对。
+- 剩余任务：用当前输入正式重建四版；对新attempt执行全页视觉复核并更新回执，再跑报告、门禁/定向测试、清理与最终差异审阅。
+- 下一步：先提交此恢复预检记录，再检查现存build工具参数与batch锁状态，执行phase2-b82正式重建；不重做来源核查或内容转录。
 - 已完成全库报告刷新阶段（phase2-b81）：`report.py render --all`以单个content事务写入并回读校验六个报告目标；`check --all`确认与全量manifest一致，并保留未完成批次状态。
 - 阶段修改文件：六个全库README/索引/报告投影及本进度文件；无题面、答案、provenance或回执变更。
 - 验证结果：全量render事务成功；`check --all`返回“报告输出与全量manifest当前一致”；`git diff --check`通过，tracked报告差异恰为六项目标。
