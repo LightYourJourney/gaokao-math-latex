@@ -2785,3 +2785,8 @@
 - 验证结果：`test_review_receipts.py` 66/66通过（46.718秒）；`test_report.py` 11/11通过（69.360秒）；共77项通过。
 - 剩余任务：清理b84四版LaTeX中间物与本批页面预览，核验四版PDF页数/SHA；最终差异审阅并提交非README改动。三份全库README投影仍待人工复核。
 - 下一步：提交测试checkpoint，执行四版`latexmk -c -outdir=build`，并把`.work/phase2-b84`整体移入可恢复归档。
+- 已完成phase2-b84构建产物清理及PDF回执核验阶段：四版入口均执行`latexmk -c -outdir=build`；build目录现仅保留4份PDF；本批根目录渲染工作区与项目review工作项已整体移入可恢复归档。
+- 阶段修改文件：仅本进度文件与ignored文件归档；LaTeX源文件、正式PDF和回执保留。
+- 验证结果：试题/解析/简答/印刷版页数4/22/6/17、SHA-256逐项与final build receipt一致；build目录仅4个PDF；final receipt validator为`OK：1卷`；约9.5MB渲染图及review JSON已离开项目工作区，archive位于`~/.Trash/phase2-b84-work.oOs8vK/`。
+- 剩余任务：以b84预检为基准最终审阅tracked差异、`git diff --check`并提交本批进度；三份全库README仍需人工复核后提交，后续manifest批次未处理。
+- 下一步：提交cleanup checkpoint并核对b84本批精确文件范围；不push。
