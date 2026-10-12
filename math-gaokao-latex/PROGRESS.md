@@ -2450,3 +2450,8 @@
 - 验证结果：`git status`确认唯一未提交文件为本进度文件；阶段diff共11个文件、禁止产物计数0，空白错误检查通过。此前构建、复核、门禁及77项定向测试均已在各checkpoint记录并通过。
 - 剩余任务：提交本进度checkpoint；之后按manifest检查phase2-b78预检条件并开始下一批。
 - 下一步：本地提交本进度checkpoint，不push；读取phase2-b78单条manifest记录与对应来源状态。
+- 已完成下一批预检阶段（phase2-b78）：目标为2001全国旧课程理科卷（22题、4幅已登记TikZ图）。检查发现已有正式build receipt attempt `f1ee0a8c-9d89-42ce-8843-bd326515c934`状态`compiled_pending_review`，旧视觉receipt绑定attempt `54644188-2568-47ab-8d5e-2754a13bad83`，二者不匹配。
+- 阶段修改文件：仅本进度文件；未运行会覆盖review工作项的`prepare-batch`，未改题目、来源或回执。
+- 验证结果：官方`build_projects.py validate-receipts --batch phase2-b78 --json`返回`INVALID`，问题为生成输入树变化及工具链指纹变化；因此旧构建/视觉结论不可作为当前attempt验收依据。工作树在本记录前干净，b77 checkpoint已提交。
+- 剩余任务：对b78执行正式四版构建，复核新attempt的每页视觉工作项，finalize并刷新全库报告；随后运行scoped gates、定向测试、清理和提交。
+- 下一步：按`build_projects.py build --manifest ... --batch phase2-b78 --formal`运行官方正式构建，不复用旧attempt的视觉结论。
