@@ -2844,3 +2844,8 @@
 - 验证结果：最终build receipt `OK：1卷`、review `FINALIZED`、provenance `OK：1卷`；77项定向测试通过；`git diff --check`通过；build仅四份PDF，未将页面图像或编译中间物入库。
 - 剩余任务：用户人工复核并决定是否提交三份README投影；后续批次仍按总计划顺序处理，1952—2026全库目标未完成。
 - 下一步：提交本最终进度checkpoint后停止于phase2-b85闭环边界；等待README人工复核或后续明确任务，不push、不自动启动phase2-b86。
+- 已完成phase2-b86恢复预检（2001春季京蒙皖文、理两卷，各22题）：批次issues为空、provenance为`provenance_verified`；文/理两卷来源、生成题面、简答答案、四版壳及issue/source-manifest校验通过，无需重做转录、解题或provenance。
+- 阶段修改文件：仅本进度文件及ignored SDD恢复账本；尚未改两卷源内容或production receipts。
+- 验证结果：两卷build receipt均因生成输入树和工具链指纹变化stale；旧review receipts分别绑定attempt `c3d89340-aa78-40cb-a76e-5392ad90eca9`/`08f4ed7b-a0d3-4584-a91f-83e7bbf2de67`，当前build attempts为`8c08170a-3e1a-4695-9dc1-88274443a18c`/`f34cb151-7522-4ce0-8c85-fdf41bca24a4`；八份空白工作项又绑定更早的`7b6763c3-8d16-4bcb-a8db-038e5cf96125`/`e1a9725c-091e-4ef2-8f7b-a6f0d1463ffb`。当前历史页数文科4/20/6/16、理科5/22/7/16，合计96页/768项pending。
+- 剩余任务：可恢复归档旧工作项，正式重建两卷四版，为新attempt准备审核项并逐页复核；之后事务finalize、全库投影、门禁/测试、清理与PDF核验。
+- 下一步：提交b86预检checkpoint后归档旧attempt工作项并运行两卷formal build；保持主会话独占manifest/finalizer/全库投影，逐卷复核交由独立subagents并行。
