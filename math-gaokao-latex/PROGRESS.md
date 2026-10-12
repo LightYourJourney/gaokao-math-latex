@@ -1042,3 +1042,4 @@
 - 阶段验证：`provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase2-b57` 返回预期 `INVALID：2 卷`，唯一内容级失败为文科第 6 题哈希变化；其余是已记录的缓存状态漂移。此前已确认来源清单、两卷解析抽取与生成器校验通过。
 - 剩余任务：实现并验证单题 Q6 provenance 与 ISSUE-0770 的原子更新，同时保持其余 13 题记录字节/语义不变；答案泄漏选择仍未决；之后重建两卷八版并逐页复核新 attempt。
 - 下一步：使用共享 state transaction 校验当前 revision、重算文科 Q6 摘要、更新 ISSUE-0770 为有固定源证据支持的 resolved 状态，并只为实际更正创建必要的问题记录；提交前核对事务目标只含文科 provenance、问题账及 manifest 状态投影。
+- 更正前条核验范围：`check-batch` 每卷只报告首个过期摘要；逐题重新计算后确认文科 Q7 的题面与答案摘要也已过期。实际 provenance 摘要更新范围为文科 Q6 题面、Q7 题面及答案；理科 7 题均无题面或答案摘要漂移。前条所述“Q7 已匹配”不正确，按本条结果继续；其余逐题证据与角色未见漂移。
