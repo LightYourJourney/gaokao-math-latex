@@ -3341,3 +3341,11 @@
 - 验证结果：该卷四版 smoke build 全部成功；生成器 --check 通过，git diff --check 通过。目检确认试题版第22题完整位于第5页；解析版同页保留完整题面；印刷版第4页题面完整、对应解析页未遮叠。第5页仍是短末页，但现为完整末题而非单独公式，分页边界具有题目语义。
 - 剩余任务：此版式指令改变来源哈希，官方 provenance 检查现报告全国Ⅰ理科第21题题面哈希变化（仅因指令位于两题之间）；四卷 build receipt 仍因旧工具链指纹失效。尚未刷新正式 provenance/build/review receipts，批次不得 finalize。
 - 下一步：按已批准的批次核验流程刷新 phase2-b94 来源记录（核对第21题内容未变并登记新哈希）、正式构建四卷；依据 PDF SHA 区分可复用的逐页旧结论与实际变化页，只复核受影响页面，再完成批次事务及报告门禁。
+
+### phase2-b94 来源记录与四卷正式构建刷新
+
+- 已完成可验证阶段：对照修复前后题面源确认唯一差异是题间分页指令，第21题数学文字未变；按原有三角色 provenance 证据构造复核工作草稿，官方 importer 现场重算题目/答案哈希并预检通过，事务提交 revision 4109。随后正式重建批内四卷全部四版，manifest revision 4111。
+- 阶段修改文件：四卷 `provenance.json`、四卷 `receipts/build.json`、`source-manifest.json` 与本 `PROGRESS.md`；PDF 位于忽略的 build 目录。此前提交的题源与生成 LaTeX 保持不变。
+- 验证结果：provenance `OK：4卷`；source manifest validate 通过；正式 build `validate-receipts`=`OK`（4卷，0 stale、0 failed）。16份 PDF 页数均与旧回执一致；但16份 PDF 的SHA-256均变化，因此旧逐页审查不能直接重绑。`git diff --check` 通过。
+- 剩余任务：保存旧 `.work/phase2-b94/review` 结论以供对照；新建与当前 build attempt 绑定的审查工作项，对新生成的167页/1336项逐页复核，确认并处理第22题分页标注；之后 finalize、刷新报告/CSV、清理中间产物并提交批次闭环。全语料后续批次仍待处理。
+- 下一步：先只读核对16个新 build attempt 和工作项覆盖范围，再备份旧工作项、由官方 prepare-batch 创建当前 attempt 工作项；按四个 edition 逐页检查并在每个复核小阶段后更新本文件。
