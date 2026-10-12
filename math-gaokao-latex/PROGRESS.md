@@ -3141,3 +3141,50 @@
 - 验证结果：48/48页、384/384检查已填；341项pass、43项为非试题版`answer_leak` not_applicable、0 fail/pending。拼图曾将不足四页的尾页缩进四格画布；根因是末组页数少于2×2，已改成按实际数量排版；PDF第5页的独立渲染与`pdftotext`均含完整题目，确认不是空白PDF页。
 - 剩余任务：复核新课程理科、旧课程文理科共140页及其候选页；再总审16份workitem后finalize。
 - 下一步：逐卷检查剩余三个当前attempt，不重新检查已经复核的新课程文科页。
+- 已完成phase2-b92新课程理科解析版孤标题缺陷确认阶段：2003新课程理科解析版第14页底部仅剩第17题“解析”标题，第15页从“(1)”正文开始；`pdftotext -layout`和第14/15页局部高清渲染相互印证。这是分页问题，不是内容缺失或渲染空白。
+- 阶段修改文件：仅本进度文件；三份既有README工作区差异未触碰。
+- 验证结果：核对权威源 `2003/2003_数学真题_全国新课程理_解析正文.md` 第17题内容与生成 `answers.tex`；`solution_sources.py`支持在题目解析标记前保留独立 `\Needspace{...}` 源级指令，项目已有相同格式测试。确认标题后需容纳标题与首个小问，采用局部 `\Needspace{5\baselineskip}`，不改动题目、数值、结论或解答。
+- 剩余任务：将分页指令加在规范解析正文第17题 `**解析**` 前，经官方 `solution_sources.py` 与 `generate_projects.py` 物化；运行定向检查及正式构建。仅新attempt变化的PDF需要重做视觉检查，再继续另外三卷复核与全批收尾。
+- 下一步：实施上述单处源级分页修复，验证解析源投影与生成LaTeX一致后正式重建。
+- 已完成phase2-b92新课程理科分页源修复与物化验证阶段：在规范解析正文第17题 `**解析**` 前加 `\Needspace{5\baselineskip}`；官方提取器刷新含解析投影，官方生成器刷新该卷LaTeX。
+- 阶段修改文件：2003新课程理科 `_解析正文.md`、确定性生成的 `_含解析.md` 与 `answers.tex`、本进度文件；三份README差异未触碰。
+- 验证结果：`solution_sources.py check-batch`四卷全部通过，`generate_projects.py --check`该卷通过；`test_solution_sources.py` 109/109通过。provenance检查未发现逐题证据冲突，仅提示该卷及批次的派生缓存状态须由正式构建刷新。
+- 剩余任务：正式重建新课程理科单卷四版；比较旧/新attempt的页数与SHA，对变化版重做视觉检查并完成该卷工作项。其余三卷仍需逐页复核，之后finalize、报告/门禁/测试、清理与提交。
+- 下一步：运行官方 `build_projects.py build --formal --paper gk-2003-regular-national-new-science`，不重编其他三卷。
+- 修复验证更正：首次formal build attempt `9bc1412e-8a38-4648-94a0-6e41becb75f4`虽成功编译四版，但新解析版第14页仍以孤立“解析”结尾，证明5行预留不足；该attempt不得用于复核结案。同期四版页数仍为5/19/7/16、构建日志无错误，但四版SHA均较旧attempt改变。
+- 阶段修改文件：规范解析正文与本进度；本次只将分页预留从5行提高至10行，不改其他内容。旧 attempt 暂作失效中间构建，等待新正式attempt覆盖。
+- 剩余任务：经官方投影生成后重新正式构建；检查解析版第14/15页缺陷消失，再校验当前回执并完成四版页面绑定。
+- 下一步：采用已用于同类孤标题修复的 `\Needspace{10\baselineskip}`，重新生成单卷并正式编译。
+- 已完成phase2-b92新课程理科孤标题修复与正式重建阶段：将规范源分页预留提高至10行，经官方提取/生成后重建单卷四版。新attempt `16de78bf-a8c7-40b4-8bd9-c41b67daeb49`（revision 4101）四版全部成功，页数仍为5/19/7/16，errors、missing characters、overfull、undefined references、problems均为空；build receipt校验`OK：1卷`。
+- 阶段修改文件：规范解析正文、生成的`_含解析.md`与`answers.tex`、该卷build receipt/source manifest派生状态及本进度；三份README差异未触碰。
+- 验证结果：解析版新第14页不再出现第17题孤立解析标题，第15页以解析标题起始，随后紧接(1)小问与正文；局部高清页图和`pdftotext -layout`一致。5行阈值的上一attempt已被覆盖，不作为有效修复。四版PDF SHA相对前一attempt均变化，页数不变，尚需通过旧/新页图逐页像素比较确定可复用的视觉结论范围。
+- 已完成phase2-b92新课程理科当前attempt逐页复核阶段：四版47页与r4097页面按相同尺寸逐页比较，44页AE=0；仅解析版14/15页和印刷版12页有像素变化。已高清检查三页及四版候选第2页；14页孤标题消失，15页标题与首问同页，印刷版12页题文/图稿/分页正常。其余44页精确复用既有逐页结论。
+- 阶段修改文件：仅忽略的四份新课程理科review workitem及`.work/phase2-b92/render-r4100/`当前attempt渲染图；workitem均重绑attempt `16de78bf-a8c7-40b4-8bd9-c41b67daeb49`并记录SHA/页数。三份README工作区差异未触碰。
+- 验证结果：新课程理科47/47页、376/376项已填（334 pass、42项非试题版答案泄漏检查not_applicable；0 fail/pending）；候选页2均高清通过。正式构建receipt与provenance均`OK：4卷`；原正式review receipt尚stale是finalize前预期状态。
+- 剩余任务：新课程旧课程文科/理科两卷共93页/744项仍待目检；之后核验四卷workitem绑定和失败项，finalize、刷新全库投影/报告、跑门禁与定向测试、清理并核对16份PDF。
+- 下一步：复核旧课程文科45页与旧课程理科48页，不重复检查已完成的新课程文/理页。
+- 已完成phase2-b92旧课程文理两卷逐页视觉复核阶段：旧课程文科45页、理科48页均检查四版细节拼图，并高清复核各版候选第1页；理科试题版第5页另独立放大复核，确认第21、22题完整且非空白/裁切页。解析版第19页（文科）及印刷版第16页（理科）为长题合理续页，未发现孤立标题或内容缺失。
+- 阶段修改文件：仅忽略的8份旧课程文理review workitem与候选高分辨率渲染图；PDF、源稿、正式回执未改。
+- 验证结果：旧课程文科45/45页、360/360检查通过（319 pass、41 not_applicable）；旧课程理科48/48页、384/384检查通过（341 pass、43 not_applicable）。候选页均按workitem登记页高分辨率核验；当前16份workitem合计188/188页、1504项检查，1335 pass、169 not_applicable、0 fail/pending。
+- 剩余任务：通过官方finalize事务登记16版视觉结论；之后更新全库报告/manifest投影、跑全库门禁及定向测试、清理中间产物并核对16份PDF回执，最后分阶段提交。
+- 下一步：调用 `review_receipts.py finalize-batch` 对phase2-b92做事务性正式登记；若拒绝，仅依据其具体绑定/覆盖错误处理，不重渲或重复目检。
+- 已完成phase2-b92正式复核登记阶段：官方 `finalize-batch` 返回`FINALIZED`，四卷16版复核结论和当前attempt绑定已事务写入。
+- 阶段修改文件：四卷`receipts/review.json`、批次报告、`source-manifest.json`派生状态及本进度；未修改数学内容源。
+- 验证结果：`review_receipts.py check-batch`=`FINALIZED`；`build_projects.py validate-receipts --require-final`=`OK：4卷`；`provenance.py check-batch`=`OK：4卷`；source manifest validate成功。
+- 剩余任务：刷新manifest CSV及报告投影并执行定向测试；清理16版构建辅助文件、归档ignored工作/渲染目录，核对PDF和最终回执，提交本批完成内容但不push。
+- 下一步：检查CSV/report命令接口后仅刷新必要投影，运行`test_review_receipts.py`、`test_report.py`与本次涉及的`test_solution_sources.py`。
+- 已完成phase2-b92全库报告/CSV投影与定向回归阶段：事务刷新manifest CSV及六个全量报告投影。
+- 阶段修改文件：`manifest.csv`、六份全库报告、`reports/phase2-b92.md`（批次报告由finalize更新）及本进度；README既有差异仍未触碰。
+- 验证结果：`manifest_csv.py --check`确认775行当前；`report.py check --all`确认报告与manifest一致并保留未完成状态；`test_review_receipts.py` 66/66、`test_report.py` 11/11、`test_solution_sources.py` 109/109通过。
+- 剩余任务：清除16版构建目录中的编译辅助文件，保留PDF和TeX；可恢复归档`.work/phase2-b92`临时复核/渲染；核对16份PDF的SHA、字节、页数与正式receipt；审阅并提交本批完成内容，不push。
+- 下一步：使用各项目目录的`latexmk -c -outdir=build`清理辅助文件；清理前确认目标目录及文件类型，归档工作目录到唯一废纸篓路径。
+- 已完成phase2-b92编译中间物清理与PDF回执核验阶段：四卷16个build目录均运行`latexmk -c -outdir=build`，各目录现仅保留四版PDF；16份已结案workitem、188页渲染和临时比对图可恢复归档至`~/.Trash/phase2-b92-finalized.AUrn8M/phase2-b92`。
+- 阶段修改文件：仅本进度及四卷build目录的非PDF辅助产物清理；项目LaTeX源和PDF均保留，临时工作目录未永久删除。
+- 验证结果：16/16 PDF的SHA-256、字节数、页数全部与正式build receipt一致；每卷build目录恰有4份PDF、卷根目录4份TeX；归档后项目`.work/phase2-b92`不存在。finalized review/build/provenance门禁、全库报告/CSV检查及定向测试均通过。
+- 剩余任务：phase2-b92工作已闭环；复核本次Git diff/暂存范围并提交批次产物，保留三份既有README差异，不push。全语料目标仍未完成。
+- 下一步：检查`git diff --check`、状态和变更路径；只提交b92已完成回执、源修复、报告/manifest投影与进度，不纳入README既有差异。
+- 已完成phase2-b92最终范围审计阶段：`git diff --check`通过；变更集中于2003新课程理科纯分页源/确定性投影、四卷正式构建与复核回执、manifest/报告投影及本进度。三份既有README差异与本批无关，保持未暂存。
+- 阶段修改文件：本进度；全批提交范围为上述2003四卷、正式回执、manifest/CSV/报告和`PROGRESS.md`，明确排除三份README。
+- 验证结果：review=`FINALIZED`、build receipt=`OK：4卷`、provenance=`OK：4卷`、CSV 775行当前、全库报告当前；定向测试77项（review 66、report 11）和解析源109项全部通过。16份PDF SHA/字节/页数与正式回执一致；build目录仅留PDF，TeX源保留。
+- 剩余任务：本次2003批次已闭环；1952—2026全语料目标尚有后续批次，不在本阶段自动启动。
+- 下一步：提交本批已完成内容，不push；停止于phase2-b92验收边界。
