@@ -2211,3 +2211,8 @@
 - 验证结果：工作项更新前断言四份均为当前attempt且65页、每页八项全pending；结构化更新后计数精确为460 pass/60 not_applicable；视觉初查与高清重点复核未发现需修复问题。
 - 剩余任务：官方finalize登记当前65页结论；刷新全库报告并运行scoped gates/定向测试，清理本批渲染和LaTeX中间物、核对PDF哈希并提交。
 - 下一步：执行 `review_receipts.py finalize-batch`，再核查review回执与报告投影。
+- 已完成官方视觉回执登记阶段（phase2-b72）：`review_receipts.py finalize-batch` 成功返回 `FINALIZED：phase2-b72`，当前attempt的四版PDF SHA和65页检查正式写入review回执，视觉状态通过。
+- 阶段修改文件：1999卷 `receipts/review.json`、manifest派生状态、`reports/phase2-b72.md` 与本进度文件；review工作项仍保留于ignored目录。
+- 验证结果：官方finalizer完整通过并完成事务；无视觉失败，答案泄漏项的60个not_applicable有明确版次理由。
+- 剩余任务：刷新全库报告投影并check；运行build/provenance/review/issues及生成器scoped gates和review/report定向测试；清理中间物及渲染文件、核对PDF SHA后提交本批。
+- 下一步：运行全库 `report.py render --all` 及回读校验，随后按序跑批次门禁和相关测试。
