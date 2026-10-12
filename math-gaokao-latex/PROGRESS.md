@@ -2949,3 +2949,8 @@
 - 验证结果：`test_review_receipts.py` 66/66通过（42.728秒）；`test_report.py` 11/11通过（67.711秒）；合计77项通过。
 - 剩余任务：四版LaTeX中间产物及本attempt页面PNG/接触表尚待清理；需核验四份PDF页数与SHA匹配final build receipt，并完成最终差异审阅/提交。
 - 下一步：先检查当前build目录及`.work/phase2-b87`范围，再按四版入口执行latexmk清理，将复核预览移入可恢复归档；只保留PDF。
+- 已完成phase2-b87中间产物清理与复核预览可恢复归档阶段：四版入口均执行`latexmk -c -outdir=build`；当前attempt的页面PNG、接触表及workitems整体移出项目工作区。
+- 阶段修改文件：仅本进度文件及ignored产物清理；84个work/render文件归档至`~/.Trash/phase2-b87-work.8WSq3a/phase2-b87/`（11MB），LaTeX源、四份正式PDF及回执保留。
+- 验证结果：四个latexmk clean均退出0；项目`.work/phase2-b87`不存在；build目录只含试题/解析/简答/印刷四份PDF；final build receipt校验`OK`（1 succeeded，0 stale/failed/invalid/missing/pending），页数仍为5/24/7/19且PDF指纹由receipt逐项核验。
+- 剩余任务：本批tracked正式数据/报告投影尚需最终差异审阅并提交；三份全库README保持待用户人工复核且不提交；之后按manifest顺序继续后续批次，语料目标仍未完成。
+- 下一步：检查b87差异范围、`git diff --check`、四份PDF页数与回执，再只暂存本批正式文件和进度（排除三份README）；不push。
