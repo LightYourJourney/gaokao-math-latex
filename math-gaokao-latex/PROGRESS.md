@@ -3309,3 +3309,11 @@
 - 验证结果：`review_receipts.py check-batch`=`FINALIZED`；build receipt validator=`OK`（4 succeeded、0 pending/stale）；`provenance.py check-batch`=`OK：4卷`；source manifest validate通过。`manifest_csv.py --check`发现 CSV 尚未刷新，故未记为通过；全库报告投影也待更新。
 - 剩余任务：刷新manifest CSV和全库报告投影；清理编译辅助产物与`.work/phase2-b93`渲染/复核图；核对16份PDF的SHA、字节数、页数与receipt；最终门禁并提交本批内容，不push。全语料尚有后续批次。
 - 下一步：按官方入口刷新CSV和报告；不重跑构建、provenance或页面复核。
+
+### phase2-b93 manifest 与报告投影刷新
+
+- 已完成可验证阶段：刷新 `manifest.csv`（775行）及全库报告投影；全库报告将四卷计为 complete，并保留其余批次未完成/受阻状态。
+- 阶段修改文件：`math-gaokao-latex/manifest.csv`、`math-gaokao-latex/reports/baseline.md`、`report.md`、`docs/source-inventory.md` 与本 `PROGRESS.md`。项目 `README.md` 等既有差异未修改或暂存。
+- 验证结果：`manifest_csv.py --check`=`当前且775行`；`report.py check --all`=`报告输出与全量 manifest 当前一致；未完成状态已在报告中保留`。本阶段未改论文、receipt或PDF。
+- 剩余任务：清理四卷 build 目录中除PDF以外的编译中间物；可恢复归档本批忽略目录中的页面 PNG/联系图；之后核对16份PDF SHA、字节数、页数与 build receipt，执行清理后门禁并提交剩余完成内容。
+- 下一步：逐卷检查精确 build 目录及文件清单，再执行 `latexmk -c -outdir=build`，保留PDF与LaTeX源。
