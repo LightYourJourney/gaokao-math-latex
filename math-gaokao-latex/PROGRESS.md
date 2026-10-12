@@ -2333,3 +2333,23 @@
 - 验证结果：四份工作项均绑定attempt `5d79a826-af8a-4f69-bc00-69a706b8884b`和相应PDF SHA；57页×8项共456项，404 pass、52 not_applicable（非试题版答案泄漏检查）、0 fail/pending。
 - 剩余任务：官方finalize后刷新全库报告、运行批次门禁和定向测试；清理LaTeX中间物与PNG、核验PDF及最终diff后提交。
 - 下一步：提交视觉复核checkpoint，再调用`finalize-batch`正式登记本attempt的逐页结论。
+- 已完成正式复核登记阶段（phase2-b75）：`review_receipts.py finalize-batch`返回`FINALIZED：phase2-b75`；当前attempt的57页/456项结论已登记并生成批次报告。
+- 阶段修改文件：2000全国旧课程文科卷`receipts/review.json`、manifest派生状态、`reports/phase2-b75.md`和本进度文件；review工作项保留。
+- 验证结果：finalizer官方事务成功；0 fail、0 pending，非试题版答案泄漏检查均带not_applicable理由。
+- 剩余任务：刷新全库报告，跑批次门禁/定向测试，再清理构建和渲染中间物、核验PDF并提交。
+- 下一步：执行全库`report.py render --all`及`report.py check --all`。
+- 已完成报告刷新与批次门禁阶段（phase2-b75）：全库`report.py render --all`以一个content事务写入并回读六个报告目标，`report.py check --all`通过并保留未完成状态；build receipt、provenance、review `FINALIZED`、issues validate、generator、short-answer、edition-shell七项scoped gates均通过。
+- 阶段修改文件：全库六个报告/索引投影与本进度文件；批次报告由finalizer生成。
+- 验证结果：report render/check与七项b75 scoped gates均退出码0；题面、答案、provenance及图稿未因该阶段改变。
+- 剩余任务：运行`test_review_receipts.py`与`test_report.py`；清理LaTeX中间物和来源/渲染PNG，核验四版PDF SHA与页数，最终差异审查并提交。
+- 下一步：串行运行两组定向测试，避免测试/生成器争用共享仓库事务锁。
+- 已完成定向测试阶段（phase2-b75）：`test_review_receipts.py` 66/66通过，`test_report.py` 11/11通过；两组按序运行。
+- 阶段修改文件：仅本进度文件；测试未修改正式数据。
+- 验证结果：两组测试退出码0，合计77项通过。
+- 剩余任务：清除四版LaTeX中间物和本轮source/render PNG，核验build仅余四份PDF且SHA/页数与receipt一致，最终差异审查并提交。
+- 下一步：运行四版`latexmk -c -outdir=build`，将`source/`与`render-5d79a826/`移入可恢复废纸篓，逐份验证PDF。
+- 已完成构建物清理与正式PDF核验阶段（phase2-b75）：四版入口均成功执行`latexmk -c -outdir=build`；`build/`精确保留四份PDF，source预览与本批全部PNG/接触表已移至系统废纸篓`~/.Trash/phase2-b75-review-renders.4CRxY4/`（可恢复）；正式review工作项保留。
+- 阶段修改文件：仅本进度文件和ignored构建/预览产物；未删除PDF、LaTeX/TikZ源、正式回执或工作项。
+- 验证结果：PDF页数5/25/6/21、SHA-256逐项与当前build receipt相符；build目录无非PDF文件，预览目录已离开工作树，`git diff --check`通过。
+- 剩余任务：最终检查tracked差异仅含b75回执、manifest/报告投影及进度；确认无图片、PDF或编译中间物入库后提交本批。
+- 下一步：查看Git差异文件清单与统计，按`[已核]`本地提交，不push。
