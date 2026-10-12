@@ -2770,3 +2770,8 @@
 - 验证结果：49页全覆盖；16张高分辨率图分别为试题版1–4页、解析版1/11/17/22页、简答版1/2/3/6页、印刷版1/9/13/17页。当前attempt `21f6787d-033c-408c-96e7-13179b7ec568`未发现需修复的视觉缺陷。
 - 剩余任务：登记49页×8项=392项复核结论（非试题版答案泄漏检查45项not_applicable，其余347项pass），校验工作项后执行官方finalizer。
 - 下一步：提交视觉复核checkpoint，再填写工作项并核对页数、检查项及attempt绑定。
+- 已完成phase2-b84逐页复核结论录入阶段：四份当前attempt工作项共392项均已填写，非试题版答案泄漏检查标记为不适用并附原因。
+- 阶段修改文件：仅ignored `.work/phase2-b84/review/`四份工作项；正式review/build回执及题目内容未改。
+- 验证结果：机械核验确认49页、392项，347 pass、45 not_applicable、0 fail/pending；49页结果均为pass，四份工作项全部绑定attempt `21f6787d-033c-408c-96e7-13179b7ec568`。
+- 剩余任务：官方finalizer生成正式回执并确认FINALIZED，然后运行全库报告、scoped gates和定向测试，再清理并核验PDF。
+- 下一步：提交结论录入checkpoint后执行`finalize-batch-checked`；finalize前不宣称批次正式闭环。
