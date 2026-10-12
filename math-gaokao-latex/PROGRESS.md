@@ -1048,3 +1048,8 @@
 - 阶段验证：两卷 `provenance.py check-batch` 返回 `OK`；状态派生为文科 `answers_verified`、理科 `editions_generated`、批次 `provenance_verified`；`issues.py validate`、`source_manifest.py validate`、`git diff --check` 均通过。提交前逐字段断言仅涉及文科 Q6/Q7、理科 Q2 的摘要/issue 关联，角色身份与答案/转录证据未被改写。
 - 剩余任务：旧 build receipts 与 review work items 不能代表更正后的来源状态；两卷八版需重新正式构建并为当前 attempt 逐页复核。两卷试题版首页编辑说明仍泄漏答案 `11π/6` 与 `−π/6`，尚未获得对“修订说明后重建”或“保留原文并登记视觉失败”的选择。中间产物清理、正式回执 finalize、scoped gates 与全量报告更新尚未完成。
 - 下一步：先等待首页答案泄漏处理选择；选定后按该边界生成新 attempt、复核新构建中所有变化页（不复用旧 attempt 页面结论），再登记正式复核与收尾门禁。
+- 已完成可验证子阶段（phase2-b57 更正后正式重建）：两卷八版正式构建完成，文科 attempt `634fad00-ca04-4a0a-98b8-919432ff65c3`，理科 attempt `17bd4b56-d2e3-4902-8063-63d05bee5ac6`；页数仍为文科 4/18/5/14（41 页）、理科 5/22/6/17（50 页），总计 91 页。所有版本构建日志均无 LaTeX error、Missing character、Overfull 或 undefined reference，receipt problems 为空。
+- 阶段验证：构建器返回 `COMPILED_PENDING_REVIEW：2 待审、0 失败`；`validate-receipts --batch phase2-b57` 报 2 pending、0 stale/invalid/missing/failed，provenance `check-batch` 仍为 `OK：2 卷`，source manifest validate 通过。此状态尚非视觉验收完成，不登记正式成功回执。
+- 阶段修改文件：两卷四版 PDF、两份 `receipts/build.json`、`source-manifest.json` 与本进度文件；build 目录内非 PDF 中间产物待完成复核后按清理门禁处理。
+- 剩余任务：为两个新 attempt 生成并核对 8 份页面级工作项；逐页复核 91 页并在当前 attempt 中据实登记。试题版首页答案泄漏选择仍未决，最终复核登记须遵守用户选择；随后 finalize、清理中间产物、运行 scoped gates 与全量报告校验。
+- 下一步：调用 `review_receipts.py prepare-batch` 生成绑定上述 attempts 的工作项，确认 PDF 哈希与页覆盖后再开始逐页检查；不复用旧 attempt 的页面结果。
