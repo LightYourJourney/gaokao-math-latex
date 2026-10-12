@@ -3293,3 +3293,11 @@
 - 验证结果：39页/312检查项，221 pass、91 not_applicable、0 fail、0 pending；项目复核器页形状检查通过，工作项 attempt、PDF SHA、页数与当前 build receipts 全匹配。`git diff --check` 通过；无图或无选择项页面的检查按实际对象登记 N/A 并注明理由。
 - 剩余任务：仅全国Ⅱ理科39页/312项尚待视觉复核；之后统一核验四卷工作项并 finalize。
 - 下一步：复核全国Ⅱ理科四版全部页面；不重跑构建或已通过的来源/生成检查。
+
+### phase2-b93 全国Ⅱ理科四版逐页视觉复核
+
+- 已完成可验证阶段：完成2004全国Ⅱ卷理科四版全部39页视觉核查，并逐页登记八项结论；查看全页联系图、四版第1/3页高清图，以及解析版第15页与印刷版第12页的第20题立体几何图/解析。未见裁切、遮叠、缺字、图形标签问题或试题页泄漏答案。
+- 阶段修改文件：仅 ignored 的 `.work/phase2-b93/review/{试题版,解析版,简答版,印刷版}/gk-2004-regular-national-2-science.json` 四项与本 `PROGRESS.md`；未改源稿、正式PDF或build receipt。
+- 验证结果：本卷39页/312检查项，221 pass、91 not_applicable、0 fail、0 pending。四卷合计157页/1256检查项，888 pass、368 not_applicable、0 fail、0 pending；项目复核器页结构校验通过，16份工作项的 build attempt、PDF SHA与页数均与当前receipt一致。`git diff --check` 通过。
+- 剩余任务：视觉检查已全覆盖；须执行四卷事务 finalize，核验正式review/build/provenance门禁，刷新manifest CSV/报告投影，清理编译中间物及临时渲染图，最后核对16份PDF回执并提交批次完成内容。全语料仍有后续年份/批次待处理。
+- 下一步：调用官方 `review_receipts.py finalize-batch --batch phase2-b93`；检查返回值及事务输出，不重复目检、渲染或构建。
