@@ -2033,5 +2033,7 @@
 - 剩余任务：再跑最终 current gates/`git diff --check`，核对精确的 tracked diff 和报告投影，随后本地提交（不 push）。
 - 下一步：串行复验 b66 build/provenance/review/issues，确认 tracked diff 只含 receipts/manifest/报告/索引/进度文本，然后按 `[已核]` 提交。
 - 已完成最终验收阶段（phase2-b66）：全库 report check 保持一致；build `OK：1卷`、provenance `OK：1卷`、review `FINALIZED：phase2-b66`、issues validate、`git diff --check` 全通过；review/report 定向测试77/77通过。精确 diff 为11个受跟踪文本/JSON文件（四回执/manifest、六份报告与索引投影、本进度文件）；README/报告仅反映一卷由 stale/compiled 转为 current/complete 与 closed/finalized。无题目/答案/provenance/TikZ源变更，无 PDF、PNG 或编译中间物入库。
-- 剩余任务：仅本地提交该已验收阶段（不 push）；项目全目标仍未完成，41项全局待核待映射/逐项处理。
-- 下一步：提交 phase2-b66 后复查工作树及当前 receipt gates；按 manifest 顺序进入 phase2-b67，不预设其来源/内容状态。
+- 已完成阶段提交：phase2-b66 11个路径提交为 `90e0b77a`（`[已核] docs(exams): 完成1988全国文科复核并登记回执`），未 push。提交后工作树干净，build/provenance gates `OK：1卷`，review `FINALIZED：phase2-b66`。
+- 下一阶段预检（phase2-b67）：manifest 下一卷为 `gk-1988-regular-guangdong-science`（1988广东理工农医类），6题、登记 ISSUE-0785—0789 五项、生产状态 blocked。来源说明特别标注第1题(23)原卷右图缺失、(24) 的 `sin 10`/`cos 5` 按固定源原样保留，且第二卷第二题图形为 TikZ；继续保留这些来源边界，逐项读取固定源后再判断可推进范围。
+- 剩余任务：1952—2026 全目标仍未完成；用户确认的41项待核尚未映射到正式清单，继续作为全局待办。
+- 下一步：核对当前 diff/进度（预计工作树干净），检查 b67 固定源与现有 provenance/build/review 状态，保留五个既有问题及其状态，不重复已完成转录。
