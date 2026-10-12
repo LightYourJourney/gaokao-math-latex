@@ -2824,3 +2824,8 @@
 - 验证结果：官方finalizer无问题并生成批次报告；432项工作项此前逐项齐全，383 pass、49 not_applicable、无失败，当前review检查`FINALIZED`。
 - 剩余任务：build/provenance及其余scoped gates、全库报告刷新与定向测试尚未执行；需清理本卷中间物/渲染文件并核对最终PDF页数和SHA。
 - 下一步：核验final build receipt与provenance，再刷新全库报告和CSV投影；README汇总差异仍待用户人工复核。
+- 已完成phase2-b85全库报告刷新与专项门禁阶段：`report.py render --all`事务写入并回读六份全库报告投影，`check --all`通过并保留未完成语料状态；final build receipt、provenance、review、issues、source manifest、generator、edition、short-answer及manifest CSV校验均通过。
+- 阶段修改文件：六份全库报告投影、`manifest.csv`与本进度文件；其中三份README投影因等待用户人工复核未提交，其余生成投影待随本阶段提交。
+- 验证结果：build receipt `OK：1卷`（要求final）；provenance `OK：1卷`；review `FINALIZED`；generator/edition/short answers各`1套一致`；issues及source manifest校验退出0；`manifest.csv`当前且775行；`git diff --check`通过。
+- 剩余任务：运行定向review/report测试；清理四版LaTeX中间物与当前attempt页面PNG/接触表，核验PDF页数及SHA与final receipt一致。
+- 下一步：提交非README报告/CSV投影和门禁checkpoint，随后依序运行`test_review_receipts.py`、`test_report.py`。
