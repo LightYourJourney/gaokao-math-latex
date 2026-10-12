@@ -3229,3 +3229,51 @@
 - 阶段验证：`build_projects.py validate-receipts --batch phase2-b93` 报4卷 stale；`review_receipts.py check-batch` 因同一 stale build 返回 `INVALID_OR_STALE`。读取确认四份现有工作项页数/页码骨架全 pending；与旧 attempt 不匹配，不会将其当作当前复核证据。
 - 剩余任务：先确认四卷 provenance、源/派生一致性及 blocker 清单；若源证据当前则以官方 formal build 生成新 attempt，刷新四版工作项并对全部新 PDF 逐页核查。
 - 下一步：运行 phase2-b93 专项 provenance 与四类生成一致性检查；只修复有证据的源问题，不因 receipt stale 重做已验证转录/解题。
+
+### phase2-b93 题源与生成投影一致性检查
+
+- 已完成可验证阶段：四卷均通过 `solution_sources.py check-batch`（每卷22题）、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 及 `source_manifest.py validate`。没有发现需要改动题源、答案、解析或图稿的问题。
+- 阶段修改文件：仅本 `PROGRESS.md`；所有检查只读，未改写源文件、PDF、receipt、工作项或README。
+- 验证结果：来源抽取器四卷全部通过；题面/简答/四版入口均与确定性投影一致；manifest validate 通过。provenance check 仍仅报告派生缓存 `compiled` 对现场 `editions_generated` 不一致，以及 batch cache `compiled_pending_review` 对现场 `provenance_verified` 不一致；未报告源内容哈希冲突。需由正式构建事务刷新派生状态。
+- 剩余任务：四卷四版 build receipts 与旧 review 工作项仍 stale/绑定旧 attempt；须新建正式 build attempt 后刷新工作项，旧页审不能迁移。
+- 下一步：官方 `build_projects.py build --formal --batch phase2-b93 --json`；核对四卷构建状态、页数、SHA、日志与receipt后，准备新 attempt 的 review 工作项并逐页检查。
+
+### phase2-b93 四卷正式构建刷新
+
+- 已完成可验证阶段：官方 `build_projects.py build --formal --batch phase2-b93 --json` 以事务 revision 4107 刷新四卷正式 attempt；四卷均成功编译，保持 `compiled_pending_review`，未因构建成功误标完成。
+- 阶段修改文件：四卷 `receipts/build.json`、`source-manifest.json` 派生状态、四版 ignored `build/*.pdf` 与本进度文件；源题/答案/解析/图稿未改。
+- 验证结果：当前 attempt 为 Ⅰ文 `1e5fc0ac-8438-4a3f-9107-c0c70fa7e4aa`、Ⅰ理 `6803e85a-8cc4-446b-aed8-881c11ae9383`、Ⅱ文 `f2d775f3-4847-4849-ae9a-1b9e34bb762b`、Ⅱ理 `136102e1-a919-4851-977d-b84e0dba7bbc`。四版页数分别为 3/17/5/15、3/17/5/14、3/17/5/14、3/17/5/14，共157页；errors、missing characters、overfull、undefined references 全部为0。build validator `OK`（4 pending、0 stale），provenance `OK：4卷`。
+- 剩余任务：旧 attempt 的16个 pending 工作项不可复用；需用当前 attempt 重建工作项，再审查157页×8项并登记真实结论。
+- 下一步：官方 `review_receipts.py prepare-batch --batch phase2-b93`，核对每项 attempt/SHA/页数后，将每卷分配给独立复核代理；主会话只负责聚合验收与正式 finalization。
+
+### phase2-b93 当前 attempt 复核工作项准备
+
+- 已完成可验证阶段：官方 `review_receipts.py prepare-batch` 将四卷四版共16份 ignored review work items 重绑到 revision 4107 的当前 build receipts，覆盖157页/1256项检查；每项全为 pending。
+- 阶段修改文件：仅 `.work/phase2-b93/review/<版次>/<paper_id>.json` 中16份 ignored 工作项与本 `PROGRESS.md`。正式 PDF、build receipt、源文件与报告未改。
+- 阶段验证：逐项断言工作项的 attempt、PDF SHA-256、page_count 与所属卷正式 build receipt 一致；四版页数合计157，页记录与检查项连续且全部 pending。16项全部通过绑定校验。
+- 剩余任务：逐页人工视觉核查157页，记录八类检查的真实 pass/fail/not_applicable，并辨明内容来源 blocker 与排版问题，不从旧 attempt 迁移结论。
+- 下一步：一卷一独立复核代理分别覆盖2004全国Ⅰ文/理、全国Ⅱ文/理四卷的四版全部页；主会话验收每个工作项的页覆盖、SHA/attempt与结论后，再调用事务 finalizer。
+
+### phase2-b93 代理分派受限，切换主会话本地复核
+
+- 已完成可验证诊断：尝试同时为四卷启动互不重叠的 review subagents；平台明确返回 `agent thread limit reached`，没有创建代理或子任务。没有重复尝试。
+- 阶段修改文件：仅本 `PROGRESS.md`；四卷16份当前 attempt 工作项保持 untouched/pending。
+- 验证结果：工具返回失败发生在代理创建前，未有人写入工作项或临时渲染目录；Git tracked 状态无代理改动。
+- 剩余任务：157页/1256项当前 attempt 视觉复核仍未做，旧 attempt 结论不可复用。
+- 下一步：主会话按四卷逐个渲染并完整复核全部页；仍维持每卷独占工作项路径，最终由主会话审计并登记事务。
+
+### phase2-b93 中断恢复与全国Ⅰ文科复核续接
+
+- 已完成可验证阶段：按中断恢复要求先核对 `git status`、当前分支、差异与本进度末尾。确认 b93 四卷正式 PDF、当前 attempt 工作项和全国Ⅰ文科已有渲染图均仍在项目级 `.work/phase2-b93/`；之前检查时误用仓库根 `.work` 路径，现已纠正，没有重建产物。三份既有 README 差异保持未触碰。
+- 阶段修改文件：仅本 `PROGRESS.md`；本阶段未修改题源、PDF、正式回执、review 工作项或README。
+- 验证结果：核对全国Ⅰ文科四版全部40页的现有联系图，并高清查看试题版第1/3页、解析版第3页、简答版第1页、印刷版第1/3页。未见裁切、文字遮叠、图形标注缺失、异常页码或答题内容泄漏；四棱锥题图标签可辨，试题版第1页的题面留白和选项布局正常。该视觉抽查结论尚未写入工作项，不视为该卷完成复核。
+- 剩余任务：全国Ⅰ文科四版3/17/5/15页的工作项仍全部 pending；全国Ⅰ理科、全国Ⅱ文理科共117页尚待视觉复核。四卷均须完成八项/页检查、核对当前 attempt 绑定并通过事务 finalize。
+- 下一步：继续完成全国Ⅰ文科全部页面的逐页目检及工作项记录；仅在该卷四版每页检查均有真实结论后，登记该卷复核阶段。
+
+### phase2-b93 全国Ⅰ文科四版逐页视觉复核
+
+- 已完成可验证阶段：完成2004全国Ⅰ卷文科四版全部40页的视觉核查，并在当前 build attempt 对应工作项中登记每页八项检查结论。试题版3页、解析版17页、简答版5页、印刷版15页；未见版面缺陷。无图形/选择项的页及答案版中的泄漏检查按具体不适用项登记理由。
+- 阶段修改文件：仅 ignored 的 `.work/phase2-b93/review/{试题版,解析版,简答版,印刷版}/gk-2004-regular-national-1-arts.json` 四项与本 `PROGRESS.md`；未改源稿、正式PDF或build receipt。
+- 验证结果：四版共40页/320检查项，229 pass、91 not_applicable、0 fail、0 pending；本地结构核对确认每页结果与检查项一致，所有 not_applicable 均含理由。`check-batch` 当前返回 `INVALID_OR_STALE`，原因是四卷正式 review receipt 尚未 finalize 到本次 build attempt（不是工作项绑定失败）；需等四卷工作项全部完成后统一事务登记。现有 build receipts 与本阶段 PDF 未重建。
+- 剩余任务：全国Ⅰ理科、全国Ⅱ文理科共117页/936项视觉检查；随后逐项核验四卷工作项对当前 build attempt/PDF SHA/页数绑定，执行事务 finalize、门禁与报告刷新。
+- 下一步：复核全国Ⅰ理科全部四版页面；继续利用现有 PDF/工作项，只为必要的高风险页做高清检查，不重复全国Ⅰ文科复核。
