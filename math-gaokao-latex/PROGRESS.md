@@ -2894,3 +2894,13 @@
 - 验证结果：`git diff --check`通过；review `FINALIZED`、build 2/2 succeeded、provenance 2卷通过、生成器/简答/edition/CSV/全库report gates及77项定向测试均通过；8份PDF页数与SHA匹配最终receipt，两个build目录仅含PDF。
 - 剩余任务：用户人工复核三份README投影；后续manifest批次继续按既定计划处理，1952—2026全语料目标尚未完成。
 - 下一步：提交本b86闭环范围内的非README正式数据与报告；不push，不因本批完成而宣称全库完成。
+
+## 下一批恢复状态（2026-10-13）
+
+- phase2-b86已闭环；按manifest年份顺序，下一批phase2-b87为2002春季上海卷，单卷、22题，batch issues为空。
+- 已完成phase2-b87恢复预检：题面/答案生成器、简答答案、四版壳、source manifest和issues校验通过；固定来源与既有题面/解题无需重做。
+- 阶段修改文件：仅本进度文件与ignored SDD恢复账本；尚未修改b87题面、答案、图稿、provenance或正式回执。
+- 验证结果：历史build receipt attempt `bab716bf-e9ca-4b49-bb17-7e2d9af3f2db`因生成输入树和工具链指纹变化stale；正式build validator返回1 stale。旧review receipt不能通过批次门禁，四份旧workitem覆盖55页/440项pending并绑定更早attempt `a9aa50a0-5875-4ca0-9cc4-fa0030b03601`。provenance文件本身未报重算错误，但manifest缓存状态`compiled`/`compiled_pending_review`与现场派生`editions_generated`/`provenance_verified`不符；后续由官方formal build事务刷新状态，不手改manifest。
+- 历史PDF页数为5/24/7/19；生成题面、简答答案和版式壳均与当前manifest一致。
+- 剩余任务：归档旧attempt workitems；运行单卷formal build并准备当前attempt复核项，覆盖55页逐页视觉复核；随后finalize、全库报告/门禁/测试、清理和PDF回执核验。
+- 下一步：提交此预检checkpoint后归档旧workitems并正式重建；不重复转录、独立解题或已通过的provenance核验，也不push。
