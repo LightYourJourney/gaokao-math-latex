@@ -889,3 +889,13 @@
 - 已完成阶段：b53 内容、正式回执与全量报告投影提交 `b3e28f28`（`docs: 完成1985全国理科复核`）；未 push。b53 关闭快照：manifest revision 3917；1 卷、44 页、352 项视觉检查通过、零 warning；4 份 PDF 保留，build 目录仅 PDF。
 - 剩余任务：1952–2026 高考数学语料仍有大量未完成批次；本阶段仅关闭 b53，不代表全库完成。
 - 下一步：单独提交本进度记录；随后核对工作树并预检 manifest 下一批 `phase2-b54`（1985 上海文科）。
+
+### `phase2-b54` — 1985 上海卷文史类
+
+- 预检完成：起始 manifest revision 3917；批次仅含 `gk-1985-regular-shanghai-arts`，batch issues 为空；source manifest validate 通过；generator `--check` 显示该卷一致；provenance status 为该卷 `editions_generated`、批次 `provenance_verified`。
+- 本卷 8 题，固定来源 `普通高考/1985/1985上海文.pdf` 为 ready；artifact 校验通过，PDF、2 页，SHA-256 `c4a114f9e96fb329c34b651a9ad29c7e755b6eab709cbcb8f256af7ecb1035aa`，`legacy_ids=[]`。沿用已登记转录/解题与 provenance，不重复录入。既有四版 PDF 页数为试题 4、解析 17、简答 5、印刷 13，共 39 页。
+- Build receipt validator 显示该卷 stale（生成输入树、工具链指纹变化），无 failed/missing/pending；批次仍为 `compiled_pending_review`。paper 已登记两条 open、non-blocking 来源问题 ISSUE-0761/0762：第 5、8 题题干称“如图”，固定扫描未见可独立核验配图；既有源文档明确不得凭空补图，继续沿用原记录。
+- 阶段验证：source manifest validate、generator `--check`、provenance status 均退出码 0；build receipt 检查确认唯一问题为 stale；固定来源 artifact 与四份现存 PDF 均已核对，页数记录如上。
+- 阶段修改文件：仅本进度文件；只读预检未修改试卷源、manifest、provenance、图稿或 PDF。
+- 剩余任务：正式构建、逐页视觉复核并记录已登记来源问题的可见影响、登记回执、清理中间产物并完成 scoped gates 与全量报告校验。
+- 下一步：提交 b54 预检进度 checkpoint，再正式重建该卷四版。
