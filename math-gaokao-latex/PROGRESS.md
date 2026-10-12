@@ -2216,3 +2216,23 @@
 - 验证结果：官方finalizer完整通过并完成事务；无视觉失败，答案泄漏项的60个not_applicable有明确版次理由。
 - 剩余任务：刷新全库报告投影并check；运行build/provenance/review/issues及生成器scoped gates和review/report定向测试；清理中间物及渲染文件、核对PDF SHA后提交本批。
 - 下一步：运行全库 `report.py render --all` 及回读校验，随后按序跑批次门禁和相关测试。
+- 已完成全库报告刷新阶段（phase2-b72）：`report.py render --all --manifest … --issues …` 通过单一content事务写入并回读校验六个全量报告目标；命令输出确认六项目标均已校验。首次调用遗漏必需的manifest/issues参数而由argparse拒绝，补齐参数后成功，无产生内容变更的错误重试。
+- 阶段修改文件：全库六个报告/索引投影文件与本进度记录；批次报告由finalizer生成。
+- 验证结果：事务写入并逐项回读成功；待单独运行全库report check及其余scoped gates。
+- 剩余任务：报告一致性check、批次门禁与定向测试、产物清理/哈希核验和提交。
+- 下一步：运行 `report.py check --all`（提供manifest/issues参数），然后执行本批build/provenance/review/issues/生成器门禁。
+- 已完成报告一致性、批次门禁与定向测试阶段（phase2-b72）：全库 `report.py check --all` 通过，确认报告与manifest一致且未把全库未完成状态误标完成；本批build receipt、provenance、review（`FINALIZED：phase2-b72`）、issues validate及生成器`--check`均通过。`test_review_receipts.py` 66/66、`test_report.py` 11/11通过。一次 `python -m unittest tests.test_review_receipts` 因本仓库tests目录不可按该模块路径导入而失败，随后直接执行两份测试文件入口并通过。
+- 阶段修改文件：本进度记录；报告投影文件由前一阶段事务刷新，门禁/测试均未再改正式数据。
+- 验证结果：全库报告check及5项scoped gates成功，2组定向测试共77项通过；完整输出均已读回。
+- 剩余任务：清理四版LaTeX中间物和本批自建渲染PNG，确认build仅留四份正式PDF且SHA/页数与receipt一致；最终diff核查后本地提交。
+- 下一步：逐版执行 `latexmk -c -outdir=build`，之后只清理本批ignored渲染目录并校验PDF摘要和页数。
+- 已完成LaTeX中间物清理与正式PDF核验阶段（phase2-b72）：四个入口依次运行 `latexmk -c -outdir=build`；build目录仅保留试题/解析/简答/印刷版四份PDF。通过 `pdfinfo` 与SHA-256脚本逐份核对当前build receipt，页数5/30/7/23、SHA均匹配。
+- 阶段修改文件：无新增tracked文件；清理仅作用于该卷build下LaTeX辅助中间物，正式PDF保留。
+- 验证结果：build目录文件清单精确等于四份PDF；receipt中四份PDF的SHA-256和页数全部一致。
+- 剩余任务：将本批自建ignored PNG渲染目录移入废纸篓（保留正式复核工作项）；最终审查diff和无图片/PDF/编译中间物入库，再提交。
+- 下一步：只移动 `.work/phase2-b72/render-e659d51b/` 到废纸篓，核实工作项保留，然后最终门禁与提交。
+- 已完成phase2-b72清理与最终差异复核阶段：本轮因工作目录路径误差生成的根级渲染副本与项目级正式复核渲染目录均已移入 `~/.Trash/phase2-b72-review-renders.ET0CVt/`，可恢复；四份review work items保留。根级空临时目录已清除。tracked diff仅含六个报告/索引投影、当前build receipt状态和本进度记录；无图片、PDF、编译产物或题目源变更入库。`git diff --check`通过。下一批为无issues的 `phase2-b73`（1999全国文科）。
+- 阶段修改文件：六个全库报告/索引投影、1999全国理科 `receipts/build.json`（finalizer将状态从compiled_pending_review更新为succeeded）和本进度文件；渲染文件未进入Git。
+- 验证结果：两套渲染目录移出工作树、四份工作项仍在；build仅余四份正式PDF且SHA/页数匹配receipt；全库report check、5项scoped gates、77项定向测试均通过，差异空白检查通过。
+- 剩余任务：phase2-b72正式提交；“41项待核”的权威清单/映射仍未找到，须保持未解决，不与逐页视觉回执混同；1952—2026全语料仍在进行。
+- 下一步：提交phase2-b72已完成回执与报告投影（不push），确认工作树；随后对phase2-b73预检并继续，同时保留41项映射为独立待办。
