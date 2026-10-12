@@ -2904,3 +2904,8 @@
 - 历史PDF页数为5/24/7/19；生成题面、简答答案和版式壳均与当前manifest一致。
 - 剩余任务：归档旧attempt workitems；运行单卷formal build并准备当前attempt复核项，覆盖55页逐页视觉复核；随后finalize、全库报告/门禁/测试、清理和PDF回执核验。
 - 下一步：提交此预检checkpoint后归档旧workitems并正式重建；不重复转录、独立解题或已通过的provenance核验，也不push。
+- 已完成phase2-b87当前输入formal build阶段：旧review工作项已可恢复归档至`~/.Trash/phase2-b87-stale-review.Cc4YsD/review/`；官方单卷formal build于manifest revision 4076生成当前attempt `64f57d63-1ad7-4a69-9f7a-e273b2a7fa5b`。
+- 阶段修改文件：2002春季上海卷`receipts/build.json`、`source-manifest.json`派生状态及本进度；题面、答案、图稿和provenance源文件未改。
+- 验证结果：四版页数5/24/7/19，均`succeeded`；build validator为0 stale/failed、1 pending（待视觉复核）；provenance `OK：1卷`，manifest状态已由官方事务刷新。仅印刷版有一条Underfull警告（源行232–233，badness 1043），无Overfull、缺字、未解析引用或build problems。
+- 剩余任务：为当前attempt准备四份review workitem，视觉复核55页并逐项处理/豁免上述Underfull警告；之后finalize、全库投影/门禁/测试、清理和PDF核验。
+- 下一步：提交build checkpoint后运行官方`prepare-batch`，再核查候选页与警告绑定。
