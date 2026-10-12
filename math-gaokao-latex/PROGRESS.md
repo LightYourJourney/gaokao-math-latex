@@ -1000,3 +1000,8 @@
 - 阶段修改文件：两卷 build receipts/PDF 与 `source-manifest.json`；两名只读 subagent 尚在审计源内容，未写入文件；本进度文件记录本阶段。
 - 剩余任务：验收两名独立审计证据；如无事实修正，刷新两卷 review work items 并检查其 attempt/PDF 哈希绑定；逐页复核 91 页并重点查看五条既有非阻塞来源问题涉及页；登记正式回执、清理中间产物与临时图像、完成 scoped gates 和全量报告校验。
 - 下一步：取得并核对两名审计者的证据；随后准备当前 attempt 的 review work items，不要在审计未收敛前 finalize。
+- 已完成可验证子阶段（固定来源与旧回执核验）：在隔离工作树外的既有来源检出 `gaokaomath-src/普通高考/1986/1986上海文.pdf`、`1986上海理.pdf` 找回固定 PDF；两文件 SHA-256 分别与 manifest 一致（文 `c82132f9b00f53dcfd23f85803baa336737094e3394b63c563062a3171f91958`、理 `d4822a1d879b1f4ce5e9a16cba10a161237362841995220af59a07dd08d7df3f`），页数为 4/5，且两份 book checkout 副本哈希相同。已查看源 PDF 全部 9 页图像，题面页、答案表、解析页与登记的来源页范围相符；五条既有歧义仍保持登记，不据此改动事实。旧 `reports/phase2-b57.md` 记录的是 2026-09-25 attempts（文 `60659bc1-d0b6-4f5f-949e-1c54cca7834f`、理 `4c4d0742-10f1-45d5-b200-71c234642048`），与本次 2026-10-12 新 build 不同，故旧 `closed` 结论和旧视觉回执均不适用于当前 attempt；该生成报告待正式复核后重建。
+- 阶段验证：`shasum -a 256` 两个来源位置的四个 PDF 与 manifest 哈希一致；`pdfinfo` 页数 4/5；人工查看源 PDF 9 页扫描图，涵盖两卷题面、答案表和解答页。主工作树在此阶段开始前干净，未改来源或回执。
+- 阶段修改文件：仅本 `PROGRESS.md`。
+- 剩余任务：为当前 attempts 刷新 8 份 review work items，核对每份绑定当前 attempt 与 PDF 哈希；完成两卷 91 页逐页视觉复核及登记问题页面核查；按正式流程登记回执、清理构建中间产物与临时图像、运行 scoped gates 和全量报告校验。
+- 下一步：用 `review_receipts.py prepare-batch` 为 `phase2-b57` 生成当前 attempt 的 8 份工作项，先验证哈希绑定，再进行逐页复核；不沿用旧报告或旧回执。
