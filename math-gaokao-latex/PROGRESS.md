@@ -2503,3 +2503,8 @@
 - 验证结果：build receipt官方校验报生成输入树与工具链指纹变化；旧review attempt `44bd84a5-cb77-4943-a2d4-3ec20fe8209b`与build attempt `2a46c3e4-43d9-4951-afcb-7d3cdbe3c66b`不匹配。provenance `status`报告`provenance_verified phase2-b79`；check-batch提示manifest缓存状态旧，待正式构建同步。
 - 剩余任务：正式构建b79四版并同步派生状态；归档旧review草稿后准备当前attempt工作项，逐页复核并登记；报告、门禁、测试、清理和提交。
 - 下一步：提交本预检checkpoint并运行b79官方formal build；不重复来源核验，也不沿用旧视觉结论。
+- 已完成正式构建阶段（phase2-b79）：官方formal build成功，当前attempt为`fa1ae42a-6efc-452e-b624-8d40b4a73f0e`；试题/解析/简答/印刷版页数4/19/5/16，共44页。
+- 阶段修改文件：b79 `receipts/build.json`、`source-manifest.json`及ignored编译产物；题面/答案/provenance未改。
+- 验证结果：四版均`succeeded`、无problems；官方receipt校验返回`OK`，状态pending review。旧review receipt及四份工作项绑定旧attempt，不能迁移；工作项352项仍pending。
+- 剩余任务：checkpoint正式构建状态；归档旧b79工作项并生成当前attempt工作项，逐页复核及登记；报告、门禁、测试、清理与最终提交。
+- 下一步：检查并提交b79 build receipt/manifest，再把旧工作项可恢复归档，运行官方`prepare-batch`。
