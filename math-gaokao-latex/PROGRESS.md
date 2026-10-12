@@ -2140,3 +2140,7 @@
 - 阶段修改文件：仅本进度文件；来源PDF只读核对，源仓现有`.work`未触碰。
 - 剩余任务：正式重编四版并刷新当前build/provenance派生状态，重新绑定视觉工作项，逐页复核后finalize；随后报告、门禁、测试、清理和提交。41项待核定向检索仍未发现正式清单，暂仅在历史进度中看到其与b61工作项不对应的说明。
 - 下一步：执行phase2-b71 formal build，核验四版结果及新SHA，再准备当前attempt的逐页review工作项。
+- 已完成正式构建与复核工作项刷新阶段（phase2-b71）：official attempt `48b17f60-3780-47b2-8d9a-83359d8c5778`；试题/解析/简答/印刷版均 succeeded，页数5/29/6/21，共61页，problem列表为空。每版无missing characters、overfull、undefined references或TeX errors；build receipt与provenance batch checks均 `OK：1卷`。新四份review work items已绑定当前attempt和PDF SHA。
+- 阶段修改文件：本卷 `receipts/build.json`、manifest派生状态和本进度文件；另生成ignored `.work/phase2-b71/review/` 四份work items。未改动试题、答案、provenance、TikZ或来源PDF；正式PDF保留在build目录供视觉复核。
+- 剩余任务：当前61页视觉检查（含候选页、五幅登记图稿和末页），填写四份work items并官方finalize；然后全库报告/门禁/测试、清理中间物、核对SHA并提交。41项待核权威映射仍未找到。
+- 下一步：逐页查看四版61页当前PDF，记录页面检查结论；只在完成视觉核查后finalize。
