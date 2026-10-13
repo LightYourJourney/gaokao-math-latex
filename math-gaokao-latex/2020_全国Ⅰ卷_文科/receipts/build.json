@@ -1,5 +1,5 @@
 {
-  "attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
+  "attempt_id": "98d762e5-02e8-4480-828c-75d4b4aed0d9",
   "dependency_tree": {
     "files": [
       {
@@ -79,8 +79,8 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/2020_全国Ⅰ卷_文科/build/试题版.pdf",
-        "sha256": "15b01d56cce365bc80a3b603ebd19c88c31f175be59e8f803e7a462e959ac827",
-        "size_bytes": 146005
+        "sha256": "bb6a04d3dca253dc706f7d92a53abe73903d705812d05f59cf3da14b476b52f8",
+        "size_bytes": 146007
       },
       "problems": [],
       "result": "succeeded",
@@ -103,8 +103,8 @@
       "pdf": {
         "page_count": 32,
         "path": "math-gaokao-latex/2020_全国Ⅰ卷_文科/build/解析版.pdf",
-        "sha256": "1c1b8441513330886fd1e1c969d0fa88da849d8696747a50330c6ff818fb4b95",
-        "size_bytes": 344369
+        "sha256": "1c895f445b7d2c2d739b9d9723f6bcfc8b753f1451d3d68f59ad464223213c85",
+        "size_bytes": 344370
       },
       "problems": [],
       "result": "succeeded",
@@ -127,8 +127,8 @@
       "pdf": {
         "page_count": 7,
         "path": "math-gaokao-latex/2020_全国Ⅰ卷_文科/build/简答版.pdf",
-        "sha256": "2798d897d02b2a52775b55f40980be96adec3b673c39c3e1093b1592cfa17046",
-        "size_bytes": 158881
+        "sha256": "9f36ecb4f9b66f300e758c0a5618e681e1df03bc2003b2b5cd62b8c29ece503f",
+        "size_bytes": 158880
       },
       "problems": [],
       "result": "succeeded",
@@ -151,7 +151,7 @@
       "pdf": {
         "page_count": 23,
         "path": "math-gaokao-latex/2020_全国Ⅰ卷_文科/build/印刷版.pdf",
-        "sha256": "d3556d0464dadc73f36ffe5a32126a3766057d3b481feec783c33831e5a5a540",
+        "sha256": "7fd798a11b3da5636626de056891462d640952668fb8a438da60550cf295ca2e",
         "size_bytes": 343131
       },
       "problems": [],
@@ -159,7 +159,7 @@
       "source": "math-gaokao-latex/2020_全国Ⅰ卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-30T19:40:16+08:00",
+  "finished_at": "2026-10-13T09:02:07+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -176,7 +176,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "40f69299bb2335d23d932b4f35d0c6a0adefb1607ccf0f998aafcdd7ef10a586"
       },
       {
         "path": "math-gaokao-latex/2020_全国Ⅰ卷_文科/figures/f2020li_t5_scatter.tex",
@@ -247,15 +247,15 @@
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "e22536551b983fd981c4d2c8193a1c7640a8ab58333b032011a96ad1ac16d65d"
+    "tree_sha256": "271d64b888ecae2a95124420fc0fdf7b17a92cbb9b6f19409429e27eeda7064c"
   },
   "input_projection": "ecbcadf1e12b49c25d653fa1a0543c8c7a2c9392498c0c89c564436459ba5342",
-  "manifest_revision": 3318,
+  "manifest_revision": 4116,
   "paper_id": "gk-2020-regular-national-1-arts",
-  "previous_attempt_id": "689c7c0e-349b-4028-8571-29f713b76877",
+  "previous_attempt_id": "2a6af094-0915-4fac-b8da-8816ff3d300a",
   "project_dir": "2020_全国Ⅰ卷_文科",
   "schema_version": 1,
-  "started_at": "2026-09-30T19:38:10+08:00",
+  "started_at": "2026-10-13T09:01:08+08:00",
   "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
@@ -263,23 +263,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",

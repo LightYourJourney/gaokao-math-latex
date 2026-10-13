@@ -3573,3 +3573,19 @@
 - 验证结果：两个提交的文件范围符合预期；`git diff --check`通过；提交后工作区仅剩三份先前存在的README用户差异，合并二进制diff SHA-256仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。b95定向门禁均通过、16版166页复核及PDF回执指纹核对已在前述阶段记录。完整测试的唯一失败仍是全库65条跨批缓存状态漂移，不影响b95定向门禁；未扩大修复。
 - 剩余任务：全库provenance缓存状态漂移需另立范围处理；高考语料后续批次未完成。本阶段b95范围已关闭。
 - 下一步：停止本阶段扩展；待用户指定后续批次或另行授权全库状态修复再继续。
+
+### phase0-b02 2020全国Ⅰ理科当前attempt逐页视觉复核
+
+- 已完成可验证阶段：按当前attempt四版 contact sheet 逐页检查79页；高分辨率复看试题版第2–4页、解析版第2–5及38页、简答版第2–5页、印刷版第2/3/8/10/17/19/26页，覆盖散点/函数图、三棱锥展开图、圆锥图、长解析、候选末段与取消题留档页。未发现新增视觉缺陷；取消题说明清晰且保持原稿内容。
+- 阶段修改文件：仅ignored `.work/phase0-b02/review/` 中2020理科四份当前attempt workitem，将已完成的页面检查/明确not_applicable说明从旧workitem迁移到新绑定；本进度文件。当前attempt PDF和LaTeX源未改。
+- 验证结果：四版工作项绑定attempt `4245576d-9f44-451e-9dd9-c65d206aadee`，候选页与旧工作项一致（3/38/3/26），无警告、无豁免；79/79页完成，632项中567 pass、65有理由的not_applicable、0 fail/pending；所有not_applicable均有说明。四版页数5/39/7/28。
+- 剩余任务：对phase0-b02四卷16个workitem做统一attempt/页覆盖/警告豁免核对，完成官方checked finalize及provenance、报告/CSV刷新；再运行批次门禁和适量全套测试，清理中间物，核对PDF回执并提交。2020文科已批准保留的5个取消题`heading_number`失败必须保留。
+- 下一步：聚合核验299页/2392项的当前工作项，核对四卷build warning与豁免；不得覆盖三份既有README用户差异。
+
+### phase0-b02 四卷16版复核与finalize前置核验
+
+- 已完成可验证阶段：合并四卷此前已完成的逐页复核与2020理科本轮复核；核验16份当前attempt workitem的paper/edition/attempt、页数、连续覆盖、候选页及检查项。逐卷核对build receipt警告与review豁免。
+- 阶段修改文件：四卷 `receipts/build.json` 与 `source-manifest.json` 为本批正式构建产物；16份ignored review workitem记录当前视觉结论；本进度文件。三份既有README用户差异保持未暂存。
+- 验证结果：16版共299/299页、2392/2392项完成；2131 pass、256有说明的not_applicable、5 fail、0 pending。5个fail均为2020文科已批准保留的取消题题号检查。2019两卷共6条Underfull警告，分别与当前日志文件/行号及六条豁免逐一匹配；其余两卷无警告/豁免。source manifest/provenance=`OK：4卷`；build=`4 pending、0 stale/failed/invalid/missing`；`git diff --check`通过。review正式回执仍绑定旧attempt，`check-batch`预期返回`INVALID_OR_STALE`，须由checked finalize刷新。
+- 剩余任务：以可审计checkpoint提交当前四卷build receipt、manifest及进度；随后在工作树清洁且README差异临时可恢复隔离时运行官方 `finalize-batch-checked`；恢复并逐字节核验README差异，再刷新全库投影/报告、跑定向门禁与测试、清理中间物、复核PDF指纹并提交闭环。
+- 下一步：精确暂存并提交四卷build receipts、source manifest和本进度checkpoint，不包含任何README；提交后处理finalize所需的隔离状态。
