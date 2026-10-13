@@ -119,3 +119,22 @@ python3 math-gaokao-latex/tools/recognize_formula.py path/to/formula.png --engin
 - 新增4项测试通过，覆盖缓存/权重变化/损坏结果、空结果/失败不入缓存、超时/无效worker协议和环境错误；连同页分析6项，相关10项测试通过。
 
 两次Paddle推理使pilot记录累计实际本地OCR调用达到4次。Tesseract使用整页/中文行，Paddle使用公式局部图，输入任务不同；上述结果不能直接用于引擎准确率排名。MinerU整页解析、PaddleOCR正文/布局识别、独立分层gold与完整端到端流程仍待验证。原来的Tesseract结果、失败裁剪与成功提取均已持久记录，不重复执行。
+
+### OCR Phase 1：来源绑定评分接口（初始样本仍待人工复核）
+
+`tools/score_ocr.py` 对人工确认的OCR片段提供可复算评分，输入为：
+
+```bash
+python3 tools/score_ocr.py benchmarks/ocr-gold.json path/to/ocr-runs.jsonl \
+  --manifest source-manifest.json
+```
+
+Gold记录用 `source_id + source_sha256 + source_page` 定位固定原件；区域样本可额外给定正数宽高的像素bbox、渲染DPI和 `review_status`。评分前核对source manifest中的来源ID、SHA和页数。`human_verified` 必须带非空参考文本、复核人及ISO日期；`pending_human_review` 可暂存候选区域但永不进入分数。运行记录每行提供case ID、引擎及版本、输出字符串。
+
+正文按移除空白后的Unicode NFC字符计算CER；公式和结构字段在移除空白、NFC后逐字符精确匹配，任何正负号、运算符或符号差异都不会被折叠。报告保留逐项结果并按引擎/版本/任务给出微平均；它不是题目来源真实性、数学正确性或构建验收门禁。
+
+初始 `benchmarks/ocr-gold.json` 含2个待复核候选：1977新疆理科局部公式，以及2008延考区文第5页的扫描版立体几何解答页。后者已由整页栅格对象和可视内容确认属于真实的原生文本页/扫描页混合PDF。**目前没有已批准的人工gold样本，因此该阶段不产生OCR准确率或引擎排名**；需完成独立人工核对并加入同任务OCR运行记录后，评分结果才有解释意义。
+
+2008延考区文扫描页已用隔离环境中的PaddleOCR3.7.0/PaddlePaddle3.3.1做真实整页CPU试跑，显式选择`PP-OCRv5_mobile_det`与`PP-OCRv5_mobile_rec`，禁用方向、去畸变等额外子模型。官方API支持配置检测/识别模型路径；此次模型缓存在忽略目录`.work/ocr-model-cache/official_models/`，两模型磁盘合计约20.8MB。输入页图SHA绑定到`benchmarks/ocr-runs.jsonl`，144dpi、1190×1685；冷初始化23.905秒（含首次模型下载）+页推理19.614秒，热缓存进程初始化3.037秒+页推理20.598秒，峰值RSS为1,522,876,416 bytes（macOS `ru_maxrss`）。第二次OCR仅因首轮工具输出被截断而采集可持久化的完整文本，不代表独立重复样本；无聊天/API调用。
+
+视觉抽查显示整页OCR能检出题文区域，但公式符号、下标、几何标签有明显错识、碎片化；全文未人工核对，所以不能报CER/准确率，也不能作为题目转录。冷启动新下载约20.8MB，热缓存后的页推理约20.6秒、进程级峰值RSS约1.42GiB；没有批量成本、缓存命中节省或Token/API账单数据。MinerU 4.x官方资料要求Python `>=3.10,<3.15`，支持模型档位与本地模型配置；本机未安装或评测，现阶段不为单页强行引入Torch运行时。
