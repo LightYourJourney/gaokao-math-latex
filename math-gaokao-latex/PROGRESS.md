@@ -3349,3 +3349,11 @@
 - 验证结果：provenance `OK：4卷`；source manifest validate 通过；正式 build `validate-receipts`=`OK`（4卷，0 stale、0 failed）。16份 PDF 页数均与旧回执一致；但16份 PDF 的SHA-256均变化，因此旧逐页审查不能直接重绑。`git diff --check` 通过。
 - 剩余任务：保存旧 `.work/phase2-b94/review` 结论以供对照；新建与当前 build attempt 绑定的审查工作项，对新生成的167页/1336项逐页复核，确认并处理第22题分页标注；之后 finalize、刷新报告/CSV、清理中间产物并提交批次闭环。全语料后续批次仍待处理。
 - 下一步：先只读核对16个新 build attempt 和工作项覆盖范围，再备份旧工作项、由官方 prepare-batch 创建当前 attempt 工作项；按四个 edition 逐页检查并在每个复核小阶段后更新本文件。
+
+### phase2-b94 当前 attempt 四卷逐页视觉复核
+
+- 已完成可验证阶段：对当前正式构建的四卷16份PDF共167页逐页目检；所有页面均以100dpi复核字符/公式与题号、选项和图形标注、页眉页脚、分页留白、字号及答案泄漏。另对全国Ⅰ理科第22题改分页及相邻页作高清复看。未发现新增视觉失败；原两项第5页分页失败均确认修复：试题与解析中的第22题不再有孤立尾项，短末页承载完整题目。旧 attempt 的1334项通过、2项失败记录保留不覆盖；仅将上述两项按当前PDF复核后改为通过。
+- 阶段修改文件：忽略目录 `.work/phase2-b94/review/{印刷版,简答版,解析版,试题版}/` 下16份当前 attempt 工作项（167页、1336项均为 pass）；新增100dpi页面渲染与47张联系图位于 `.work/phase2-b94/review-100dpi/`；本 `PROGRESS.md`。未改源稿、正式PDF或三份既有 README。
+- 验证结果：工作项结构核对通过，167页/1336检查项全部完成、0 pending、0 fail；当前 attempt 的PDF SHA、页数和构建元数据保留自官方 prepare-batch 结果。`review_receipts.py check-batch` 仍返回 `INVALID_OR_STALE`，提示正式 review receipt 尚未由事务 finalize 绑定到新 build attempt；这是登记前状态，需通过官方 checked finalizer 完成，而非工作项内容缺失。
+- 剩余任务：执行四卷 checked finalize；随后核验 review/build/provenance/source manifest 门禁，刷新manifest CSV及报告投影，清理LaTeX编译中间物和本批临时复核图，逐一核对16份PDF回执，审阅并提交本批改动（不push）。2005全国Ⅰ理科第4题固定源选项与题面冲突的既有说明继续保留，不属于本次版面复核范围；全语料后续批次仍未完成。
+- 下一步：运行官方 `review_receipts.py finalize-batch-checked` 事务并核对输出；不重复渲染、复核或构建。
