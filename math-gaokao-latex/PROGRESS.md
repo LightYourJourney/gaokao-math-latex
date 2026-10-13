@@ -3589,3 +3589,11 @@
 - 验证结果：16版共299/299页、2392/2392项完成；2131 pass、256有说明的not_applicable、5 fail、0 pending。5个fail均为2020文科已批准保留的取消题题号检查。2019两卷共6条Underfull警告，分别与当前日志文件/行号及六条豁免逐一匹配；其余两卷无警告/豁免。source manifest/provenance=`OK：4卷`；build=`4 pending、0 stale/failed/invalid/missing`；`git diff --check`通过。review正式回执仍绑定旧attempt，`check-batch`预期返回`INVALID_OR_STALE`，须由checked finalize刷新。
 - 剩余任务：以可审计checkpoint提交当前四卷build receipt、manifest及进度；随后在工作树清洁且README差异临时可恢复隔离时运行官方 `finalize-batch-checked`；恢复并逐字节核验README差异，再刷新全库投影/报告、跑定向门禁与测试、清理中间物、复核PDF指纹并提交闭环。
 - 下一步：精确暂存并提交四卷build receipts、source manifest和本进度checkpoint，不包含任何README；提交后处理finalize所需的隔离状态。
+
+### phase0-b02 官方checked finalize与已批准视觉失败登记
+
+- 已完成可验证阶段：将三份既有README按精确路径临时stash并验证工作树清洁，运行官方 `finalize-batch-checked`；随后立即恢复README并校验合并二进制diff SHA与stash前一致。
+- 阶段修改文件：官方事务提交 `93eac614` 更新四卷build/review receipts、`source-manifest.json`、`missing-issues.md` 与 `reports/phase0-b02.md`；README差异仍为未暂存用户改动。事务同时登记provenance派生状态。
+- 验证结果：事务 `committed=true`、revision 4118；批次为 `compiled_pending_review`，返回 `VISUAL_FAILED`，失败准确为2020文科第23题在试题版第5页、解析版第5/32页、简答版第5页、印刷版第23页的5条`heading_number`，均按既有授权保留，不改原文。README合并diff SHA-256为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，与stash前一致；stash已移除。
+- 剩余任务：刷新manifest CSV与全库报告/来源投影并验证；运行批次定向来源/生成/build/review/provenance门禁和适量测试；清理四卷编译中间物及ignored预览/工作项、逐项核验正式PDF，再提交最终闭环。批次视觉失败按预期保留，不可改为通过。
+- 下一步：隔离三份README用户差异后运行官方CSV与全库report投影刷新；恢复并比对差异，再检查产生的受控文件清单。
