@@ -1723,7 +1723,7 @@ $P_{n+1}$ 是 $Q_n$ 关于 $y$ 轴的对称点，即 $x_{n+1}=-x'$、$y_{n+1}=y'
 
 \textbf{(3) 证明}
 
-\textbf{思路：找出一个把 $P_n$ 送到 $P_{n+1}$ 的「保面积变换」，则相邻两个三角形自然全等（面积相等）。}
+\textbf{思路：找出一个把 $P_n$ 送到 $P_{n+1}$ 的「保面积变换」，则相邻两个三角形的面积相等。}
 
 \textbf{第一步，写出 $\left\{v_n\right\}$ 的递推。}
 
@@ -1796,10 +1796,11 @@ $P_{n+1}$ 是 $Q_n$ 关于 $y$ 轴的对称点，即 $x_{n+1}=-x'$、$y_{n+1}=y'
 \textbf{结果与 $n$ 无关}，故 $S_n=S_{n+1}$，与上面的证明一致。
 
 \Needspace{5\baselineskip}
-（\textbf{自检}：$k=\dfrac12$ 时 $S_n=\dfrac{36\times\dfrac18}{\left(\dfrac34\right)^{2}}=\dfrac{4.5}{0.5625}=8$。而由 (1) 及递推可得 $P_1(5,4)$、$P_2(3,0)$、$P_3(5,-4)$，
+\textbf{自检}：$k=\dfrac12$ 时 $S_n=\dfrac{36\times\dfrac18}{\left(\dfrac34\right)^{2}}=\dfrac{4.5}{0.5625}=8$。而由 (1) 及递推可得 $P_1(5,4)$、$P_2(3,0)$、$P_3(5,-4)$，
 \nopagebreak[4]
 \[S_1=\frac12\left|\overrightarrow{P_1P_2}\times\overrightarrow{P_1P_3}\right|=\frac12\left|(-2)\times(-8)-(-4)\times0\right|=8\ \checkmark\]
-）
+
+\Needspace{24\baselineskip}
 
 \begin{gktip}
 \textbf{方法总结}：本题是一道「\textbf{换个坐标就变简单}」的典范题。双曲线 $x^{2}-y^{2}=9$ 在 $u=x-y$、$v=x+y$ 这套坐标下就是双曲线 $uv=9$（等轴双曲线的标准形式），而题目给的两个操作恰好在这套坐标下变得极其简单：
