@@ -3133,6 +3133,14 @@
 - 验证结果：source manifest validate、四卷 `solution_sources check-batch`、project/short-answer/edition 三类 `--check` 均通过；provenance=`OK：4卷`。build validator=`INVALID`（4卷中3 stale、1 pending）；review=`INVALID_OR_STALE`，分别由生成输入/工具链变化及旧 attempt/PDF 绑定导致。`.work/phase0-b02/review/` 仍有16份旧 attempt 工作项，不能沿用。
 - 剩余任务：为四卷创建当前正式 build attempt；复用无变化 PDF 的逐页证据，仅对哈希或页数变化的版次重新完整检查；2020文科取消题按既定裁定保留并如实记失败；完成 finalize、投影/门禁、清理和精确提交。
 - 下一步：把旧 attempt 工作项可恢复归档，运行官方 phase0-b02 formal batch build；保留 LaTeX 源和 PDF，不改题目内容。
+
+### phase0-b02 旧 attempt 复核资料归档
+
+- 已完成可验证阶段：确认 `.work/phase0-b02/review/` 内16份 review workitem 均绑定旧attempt，且该目录含旧版面PNG；将整个精确目录可恢复移动至 `~/.Trash/phase0-b02-stale-review.ryj6Kt/review`。
+- 阶段修改文件：仅移动 ignored 旧 review/render 资料；归档共318个文件、62 MB，题源、正式PDF、LaTeX、回执和用户README未改。
+- 验证结果：归档目录文件数与大小已核实，原 `.work/phase0-b02/review/` 已不存在；旧内容仍在系统Trash可恢复。
+- 剩余任务：四卷旧build回执 stale，正式review尚不能对应下一次build；需官方formal build创建当前attempt，再依据新旧PDF SHA决定复核复用范围。
+- 下一步：运行 `build_projects.py build --formal --batch phase0-b02 --json`，保存完整结果并核对四卷attempt、页数、PDF SHA和编译问题。
 - 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
 - 已完成phase2-b92当前输入正式构建阶段：官方formal build在manifest revision 4097刷新四卷16版；四卷页数分别为新课程文5/20/7/16、新课程理5/19/7/16、旧课程文4/19/6/16、旧课程理5/20/7/16，共188页。四卷attempt分别为`20adf3b2-8c72-40ab-ac94-bbf78ac47cf8`、`a3c2d92a-bc30-43b8-ae89-d3bc88d9207b`、`3009247d-e1ae-443a-a75b-daea2dbe8b5c`、`00142336-2324-436f-992f-d8e8855421a1`。
 - 阶段修改文件：四卷`receipts/build.json`、`source-manifest.json`中的派生状态及本进度；规范题源与生成LaTeX未改。
