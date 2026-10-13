@@ -3963,3 +3963,12 @@
 - 验证：`score_ocr.py benchmarks/ocr-gold.json benchmarks/ocr-runs.jsonl --manifest source-manifest.json`成功校验当前运行与来源gold，结果为 `scored_runs=0`、`pending_cases=2`、该运行状态`pending_gold`；评分器6项与既有PDF analyzer 6项单测分别通过；运行JSONL可解析，`git diff --check`通过。没有改生产代码，亦未重跑全套884项测试。
 - 成本与边界：单页OCR热运行约20.6秒、峰值RSS约1.42GiB；首次约20.8MB模型下载，热缓存无需重复下载。没有实际Token/API账单、稳定批量数据或缓存节省率，仍标为未知；不能由单页推断全卷成本和精度。
 - 剩余/下一步：完成上述CLI与定向测试，再逐区域人工核验本页重要文字/公式并形成审核记录；之后才可让样本进入评分。再选同页执行受控Tesseract对照及适量MinerU测试，若识别不可靠则保留人工复核，不自动回写规范Markdown。题目IR、模型路由、完整OCR pipeline、三种LaTeX版本和八项端到端门禁尚未实现/验收；总项目目标仍未完成。
+
+### 1989 年来源覆盖缺口：五份候选 PDF 定向核验
+
+- 已完成：按 `source-manifest.json` 的 `source_ids` 关联关系核算，当前有504份 `ready` PDF 尚未关联任何 canonical paper（该数量是未绑定文件候选，不等同504套不同试卷）。1989 年目前无任何 canonical paper；1989 上海、全国文、全国理、广东文史、广东理工农医五份原件均为 `ready`，source_id、SHA-256 与固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 的 Git blob OID逐份吻合。PDF页数分别为5、1、1、9、9，总计25页。
+- 身份证据：五份 PDF 第1页均以110dpi渲染并目视核对。上海页标题为“1989年全国普通高等学校招生统一考试 上海数学试题”；全国文/理单页A3页分别明确印有“全国卷文/理”，纸面页号35/34，题号完整排至24；广东文史页标题/类别清楚，显示第一卷25道选择题、50分说明；广东理页标题明确为“广东省数学试题（理工农医类）”，并说明两卷结构与全卷120分。当前只抽查第一页，尚不据此断言其余页面题目/答案完整。
+- 文件核验表：上海 `src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd` / `79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766` / `d01a9c8b8656b87d9fd1d16eabb541bb6f2e103f`；全国文 `src-1da61ba2ff864f3a18d22ed9f208fb30d2d24eddcfdb1fb4fa90caad681107bd` / `a2b62ea9e940eb46b853c4155c436cc0200f31578056582c9f62b667c93d2758` / `cb9296387173f498996d25645988fc86b2b74ec4`；全国理 `src-8c89c264e42a69889be86693fb12c587fa47681f48f20cf363b130c8f8d9a3f0` / `0984fa714aa5e3e3fe171a7770a5f3caa16d55d108a83446bd72a3ca0f995fff` / `41a1dbc59c07b47dbb6035b2758f76a56e02e726`；广东文 `src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766` / `e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f` / `ee0f4dfcd5af015b510348df03671c224630d9e4`；广东理 `src-db4a50c280ed27fa5f0f5542adec7d7fe605a216210ebbff7165fe4396b75256` / `e300fb9ae1d2b606f2cf4e6da4ee985b0014baf04c656f560326dd68d22031d1` / `ca382169158b732491681481ae5f2ebf41b04713`。
+- 边界：全国两张单页、广东理第1页有可提取文字；上海和广东文史扫描页没有文字层。未运行OCR、未搜索或绑定答案、未创建canonical paper，也未改 manifest/题目/构建/复核数据；正式上游 PDF 未复制进仓库。
+- 修改与验证：本进度更新；文件SHA/Git blob比对和第一页视觉核验均完成，未运行构建测试（尚无源稿代码/项目）。本阶段0 OCR/模型/聊天API调用。临时渲染位于 `/tmp/gaokao-1989-national-arts.5qYfPO/`。
+- 剩余/下一步：继续核验全部25页和题号/页映射；检查仓库可复用的答案/解析来源，若无可靠答案，则按项目规则独立推导并安排盲核，无法盲核处保持 U/blocker。确认五卷是否均应纳入、题数与选项/图形后，创建独立工作草稿与source registration spec，再经支持的事务注册、生成、编译和逐页复核；不得将OCR输出直接当规范转录。
