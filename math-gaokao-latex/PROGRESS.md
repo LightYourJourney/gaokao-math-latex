@@ -3645,3 +3645,11 @@
 - 验证结果：build=`COMPILED_PENDING_REVIEW`，3 pending、0 failed；三个attempt分别为2020新高考Ⅱ `0b35b837-3c1a-4eb1-ac40-0bfd0d62f241`、2021新高考Ⅰ `587376ee-9a93-400b-9b1b-31ae77163772`、2021新高考Ⅱ `82e37c27-6574-448e-80e7-42c43110ba39`。各卷四版页数分别为6/42/8/33、4/37/6/30、5/44/7/33，总计255页。12版均succeeded，编译错误、缺字、未解析引用、build problems为0。唯一警告为2020Ⅱ解析版Underfull `answers.tex` 行871--872，须高清复看后才决定豁免。provenance=`OK：3卷`，build receipt validator=`3 pending、0 stale/failed/invalid/missing`。
 - 剩余任务：为当前attempt准备12份workitem和255页预览；对三卷各自独立视觉复核、核对该Underfull警告；主会话整合并验证覆盖/答案呈现。
 - 下一步：官方prepare-batch，检查attempt绑定与页码覆盖后生成当前渲染图，按paper_id拆给三个独立复核者。
+
+### phase0-b03 当前attempt复核工作项
+
+- 已完成可验证阶段：官方 `review_receipts.py prepare-batch` 为phase0-b03三卷四版建立12份当前attempt工作项。
+- 阶段修改文件：仅ignored `.work/phase0-b03/review/{试题版,解析版,简答版,印刷版}/` 的12份JSON；旧工作项保留于Trash归档。
+- 验证结果：12/12工作项绑定各自当前paper attempt；页码覆盖连续且与PDF页数一致，总计255页/2040项检查，全部pending；候选页共12页（每个edition×paper一页），没有沿用旧attempt pass结果或警告豁免。
+- 剩余任务：渲染255页并检查全部联系表；分别复核三卷所有页面及候选页；主会话高清复核2020新高考Ⅱ解析版Underfull警告对应页，随后审计工作项、finalize与收尾门禁。
+- 下一步：在ignored当前attempt目录生成100dpi页面PNG和每版联系表；页面文件不进入Git。
