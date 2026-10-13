@@ -3746,3 +3746,39 @@
 - 验证结果：清理后16/16 PDF的SHA-256、字节数和页数匹配正式receipt；每个build目录严格保留4份PDF，LaTeX源保留；387份临时复核资料已可恢复归档至Trash。全库report check只剩三份受保护README汇总行差异；其本地合并diff哈希为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，stash为空。未push。
 - 剩余任务：1952—2026全语料及其他批次仍未完成；全库65条跨批provenance缓存漂移仍是单独待处理问题。
 - 下一步：phase0-b04已达到本阶段验收标准，停止扩展；恢复工作时先核对Git diff和本进度文件，再从清单下一批phase0-b05继续，不重做b04。
+
+## PDF → LaTeX 自动化升级：Phase 0 仓库审计
+
+- 已完成可验证阶段：定向审计来源 PDF 管理、题目规范源、四版 LaTeX 生成、XeLaTeX/latexmk 构建、视觉复核、缓存与自动门禁。确认当前项目是既有成熟题库流水线，不是 OCR 应用；仓库内未发现 OCR 引擎或聊天模型 API 集成。来源记录 775、试卷 272、批次 138；现有工具/test 各 18 个 Python 模块/测试文件。
+- 阶段修改文件：新增 `docs/TOKEN_AUDIT.md`；本进度文件。未改试卷题源、生成结果、PDF、manifest、回执或既有报告；三份受保护 README 用户差异未触碰。
+- 验证结果：检查工具与测试源码、模板、来源清单结构和本地环境；Poppler 26.10.0、XeTeX/TeX Live 2026、latexmk 4.88、Tesseract 5.5.3 可用，Tesseract 安装含 `chi_sim`/`eng`，但项目未集成；未发现 PaddleOCR、MinerU、pix2tex、PyMuPDF、pdfplumber、pytesseract Python 模块。当前 checkout 的 Git 元数据 PDF cache 无已缓存 PDF。API Token、缓存 Token、模型/图像调用次数及费用没有可核实的数据，审计明确标为未知，不估算。
+- 阶段结论：最小下一步建议是新增使用现有 Poppler 的页级 PDF 文字层预分析与哈希/版本缓存，只对空白或混合页提示 OCR/人工复核；不安装 OCR 全家桶，不改规范 Markdown，不绕开来源、构建、数学与视觉门禁。审计报告列明后续结构化 IR、分级路由和基准阶段。
+- 剩余任务：用户要求的首次代码增量尚未实施；需先定下 PDF 分析命令的输入/输出与忽略缓存边界，再按 TDD 实现并用文字型/扫描型/混合型 fixture 验证。OCR 引擎真实试卷比较、Token 调用台账及端到端基准仍未开展。
+- 下一步：审阅 `docs/TOKEN_AUDIT.md` 中的最小页分析设计；确定首个实现边界后实现与测试，不扩展到模型路由或真实 OCR 安装。
+
+### 自动化升级首项代码增量 — PDF 文字层预分析与页级缓存
+
+- 已完成：新增 `tools/analyze_pdf.py`，使用现有 Poppler 提取页文字、异常字符和页分类；支持 `--page` 局部提取、默认精简 JSON、显式全文输出、内容/工具/配置版本缓存、每页原子 checkpoint、失败恢复与可配置超时。分类只是复核信号，全部页面仍要求内容核验。
+- 修改文件：`tools/analyze_pdf.py`、`tests/test_analyze_pdf.py`、`docs/TOKEN_AUDIT.md`、本进度文件。运行缓存位于 ignored `.work/pdf-analysis-cache/`。未修改规范题目源或既有回执；三份 README 用户差异保持原哈希。
+- 验证：6 项定向测试全部通过，含实际 Poppler 的原生文字/图像/空白三页 PDF；覆盖缓存缺页补算、损坏缓存、输入/配置/版本失效、checkpoint 恢复、禁用缓存和错误处理。既有 2024 新高考Ⅰ卷试题版 PDF 4 页首次提取4页（0.358007s），第二次4页缓存命中、0页重复提取（0.064376s）；非空白字符数均2479。CLI 单页输出正确，默认不输出全文。缓存忽略规则与 `git diff --check` 通过。
+- 成本观察：本增量 OCR/模型调用均0；已验证重复运行不重复提取页面文本。现有 Agent Token 和费用基线仍未知，不声称 Token 节省比例。真实试卷样本为生成型 PDF，上游扫描原件及 OCR 数学准确率尚未验证。
+- 剩余任务：固定来源扫描/文字/混合原件的分层样本与人工标注集；OCR 引擎小规模实测；题目 IR、任务路由、实际调用用量台账与端到端基准。全量题库、phase0-b05及既有65条缓存漂移问题仍待后续推进。
+- 下一步：本次“审计＋首项可运行改进”已达到阶段验收标准；后续从固定来源抽取小型评测集，按当前页缓存增量处理。恢复先核对 Git diff 和本进度，复用现有4页提取缓存，不重复本阶段测试与提取。
+
+### 固定来源原件预分析与本地 OCR 小样本实测
+
+- 已完成：定位并复用主检出 `gaokaomath-src/` 中的1952全国卷、1977上海理、2024新高考Ⅰ、2025全国Ⅰ和1977新疆理原件；按来源清单核对内容 SHA-256/Git blob OID/页数。共5份11页首次分析后再次运行全部缓存命中。1977新疆理4页均无文字层，pdfimages确认逐页栅格图，第1页视读确认为带题面/解答的扫描资料。
+- 修改文件：新增 `benchmarks/pdf-ocr-pilot.json`，更新 `docs/TOKEN_AUDIT.md` 与本进度文件。页提取缓存、扫描第1页渲染和局部裁剪均在ignored `.work/`；未修改题目规范源、manifest或正式回执。
+- 验证与结果：原件11页中6页为text_candidate、1页review（6个异常字符）、4页needs_ocr_or_blank。实际Tesseract 5.5.3（chi_sim+eng）对扫描第1页整页/局部行两次运行成功退出，但数学忠实度均失败；人工核对的方程 `x^2-2x+Lg a=0` 在输出中丢失上标/等号，局部还错读系数与函数名。gold记录保留原始来源、稳定question_id、页号、150dpi像素bbox和裁剪SHA，明确是Agent视读小样本而非独立正式gold。
+- 成本观察：5份原件第一次提取累计1.599423秒，再次缓存运行累计0.545201秒；Tesseract整页3.788693秒、局部0.882757秒，模式不同，不能断言裁剪单独带来该差异。仅2次本地OCR；Agent视觉核对Token/费用未知，未宣称端到端节省率。
+- 剩余任务：真实混合PDF样本；覆盖题型与复杂公式/图形的独立gold；MinerU/PaddleOCR实测；OCR/题目IR与分级路由；题库后续批次及65条历史缓存漂移。扫描/原生样本具备，OCR引擎比较尚未完成。
+- 下一步：复用机器可读pilot和 `.work` 缓存扩充评测样本；先对两个专业OCR候选核实版本/环境要求，再选最小安装与实测范围。不要重跑已记录的两次Tesseract失败方案或重做既有题目解析。
+
+### 专业公式 OCR：PaddleOCR 局部推理与持久缓存
+
+- 已完成：查官方文档与PyPI元数据确认MinerU4.0.12/PaddleOCR3.7.0/PaddlePaddle3.3.1及Apple Silicon路线；本机Python3.15不适合MinerU，使用已有3.11.17创建ignored `.work/ocr-env/`，仅安装PaddleOCR/PaddleX OCR/框架依赖，下载一个PP-FormulaNet_plus-S模型。MinerU未安装/未实测。
+- 修改文件：新增 `tools/recognize_formula.py`、`tools/requirements-ocr.txt`、`tests/test_recognize_formula.py`；更新pilot JSON、TOKEN_AUDIT和本进度。worker指定本地模型/隔离解释器、CPU、超时，无自动重试；缓存绑定图像/模型内容与环境版本；结果保持needs-review，不写题目规范源。
+- 验证：新增4项定向测试通过，与页分析6项共10项通过。实图公式首次裁剪混入汉字碎笔、模型多识别1/2，已登记失败；视读收紧边界后输出 `x^{2}-2x+L g a=0`，与源图符号一致但Lg算子规范化仍待复核。输入、bbox、输出、权重SHA、环境版本与缓存键均登记到 `benchmarks/pdf-ocr-pilot.json`。
+- 资源/成本：干净裁剪加载7.023472秒、推理0.530120秒、峰值RSS941670400字节；含进程启动等总耗时14.865541秒。相同图像再次运行缓存命中、0次OCR、0.297260秒。隔离环境1031840KiB，模型目录516160KiB（含归档）；Token/API/Agent视读费用仍未知。不同引擎输入范围不同，不排名或推算节省率。
+- 剩余任务：独立核对并覆盖题型/公式/图形的gold、真实混合文档、正文/布局OCR和MinerU实际对照、题目IR及任务路由、全流程验收；phase0-b05和全题库后续批次、65条缓存漂移仍待推进。
+- 下一步：复用现有源PDF、模型和formula-cache扩大分层样本与正文OCR测试；保留裁剪边界失败证据，不重跑已验证的单公式推理。当前阶段成果按精确文件范围提交，README用户差异和ignored环境/模型/图像均排除。

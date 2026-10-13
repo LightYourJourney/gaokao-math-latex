@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-13",
+  "manifest_revision": 4124,
+  "upstream_commit": "34c13a6cf632c0b69c95f89b9b923bbc4a08924d",
+  "scope": "Five fixed-source PDFs; page text triage, two Tesseract and two Paddle formula inferences. Not an OCR accuracy benchmark or corpus acceptance.",
+  "tools": {"analyzer_version": 1, "poppler_version": "26.10.0", "tesseract_version": "5.5.3"},
+  "source_root_hint": "Existing gaokaomath-src checkout; resolve upstream_path from source-manifest.json using source_id.",
+  "samples": [
+    {
+      "source_id": "src-caa87e429c42fa2c5bf8416596fcf8967913cdb2218a2e05320f3ac001b70d0c",
+      "paper_id": "gk-1952-regular-national",
+      "sha256": "53f03cbec489ea4d8c82b168f83c51d719904b04462470f6bca173e2298c87a5",
+      "page_count": 2,
+      "page_classifications": ["text_candidate", "text_candidate"],
+      "page_char_counts": [650, 472],
+      "page_suspicious_counts": [0, 0],
+      "cache_key": "86efe691b8a377f05167bfc1ad4416e18f4f76acff8be0f9cfa484cb047e4fec",
+      "first_seconds": 0.323531,
+      "repeat_seconds": 0.086591,
+      "first_page_misses": 2,
+      "repeat_page_hits": 2
+    },
+    {
+      "source_id": "src-addb7f32b711ba733d06cf3d9eec0d14fe3dcca05f5edfc52d58cf79c2fee8f3",
+      "paper_id": "gk-1977-regular-shanghai-science",
+      "sha256": "64471eda28872c9607dfef407ee418d3e9e7b7b74eb58f58f537f1ca3f4351fe",
+      "page_count": 1,
+      "page_classifications": ["review"],
+      "page_char_counts": [788],
+      "page_suspicious_counts": [6],
+      "cache_key": "b7ad536ed0d229401f692f90121b4a4a00484d6138c8bdbf8eb182a883031098",
+      "first_seconds": 0.198695,
+      "repeat_seconds": 0.076389,
+      "first_page_misses": 1,
+      "repeat_page_hits": 1
+    },
+    {
+      "source_id": "src-c914711690e239f541141b43c6da9a999570c6e6ca481633494cab4d80fcb01e",
+      "paper_id": "gk-2024-regular-new-gaokao-1",
+      "sha256": "76b353a6cc76e01840a3f2092a57bcdccd8c26ecdb598562d3d670729c13720b",
+      "page_count": 2,
+      "page_classifications": ["text_candidate", "text_candidate"],
+      "page_char_counts": [1639, 504],
+      "page_suspicious_counts": [0, 0],
+      "cache_key": "6a57f11eee05ef80f277d4f0d9969eb05b2dbe1e44ba54cb73eed9fb11aafabf",
+      "first_seconds": 0.380024,
+      "repeat_seconds": 0.130869,
+      "first_page_misses": 2,
+      "repeat_page_hits": 2
+    },
+    {
+      "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
+      "paper_id": "gk-2025-regular-national-1",
+      "sha256": "221aeea90ccb7fb26c181693d06618170931038a73732c1018b02aa7feb4379a",
+      "page_count": 2,
+      "page_classifications": ["text_candidate", "text_candidate"],
+      "page_char_counts": [1625, 448],
+      "page_suspicious_counts": [0, 0],
+      "cache_key": "8a2cc15b45db954d261bb7c1991692415e562d37871e898d0c3cba339edd1f3e",
+      "first_seconds": 0.279642,
+      "repeat_seconds": 0.141997,
+      "first_page_misses": 2,
+      "repeat_page_hits": 2
+    },
+    {
+      "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+      "paper_id": "gk-1977-regular-xinjiang-science",
+      "sha256": "d6b42603b7f2ed9a8557d9d93ef9e5f08ae147f3d349145473229fabb183cb4e",
+      "page_count": 4,
+      "page_classifications": ["needs_ocr_or_blank", "needs_ocr_or_blank", "needs_ocr_or_blank", "needs_ocr_or_blank"],
+      "page_char_counts": [0, 0, 0, 0],
+      "page_suspicious_counts": [0, 0, 0, 0],
+      "cache_key": "fba72fb1cdcbf5a10d204afee5b23c07d8e964313dfcd4517371f1fd5c868b23",
+      "first_seconds": 0.417531,
+      "repeat_seconds": 0.109355,
+      "first_page_misses": 4,
+      "repeat_page_hits": 4,
+      "image_evidence": "pdfimages -list reports one raster image on each of pages 1..4; page 1 visually confirmed nonblank scanned mathematics and source solutions."
+    }
+  ],
+  "gold_cases": [
+    {
+      "case_id": "xinjiang-1977-science-q01-sub02-equation",
+      "question_id": "gk-1977-regular-xinjiang-science-q01",
+      "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+      "source_sha256": "d6b42603b7f2ed9a8557d9d93ef9e5f08ae147f3d349145473229fabb183cb4e",
+      "source_page": 1,
+      "printed_subquestion_number": "2",
+      "source_kind": "scanned mathematics question-and-solution book material; official-answer status not asserted",
+      "render_dpi": 150,
+      "render_page_size_pixels": [1060, 1535],
+      "crop_bbox_pixels_top_left_xywh": [170, 875, 600, 44],
+      "crop_sha256": "3e69ee5689d8a56881fade435da467b37fed32251e4e7fdae6de0d8780561f0d",
+      "review_method": "Codex visually read the original full-page render and the exact crop; matched existing question transcription without editing it.",
+      "expected_chinese_stem_normalized": "当a取什么值时，方程x²−2x+Lga=0有实数根",
+      "expected_equation_latex": "x^2-2x+\\operatorname{Lg}a=0",
+      "review_status": "visually_checked_pilot_not_independent_benchmark_gold",
+      "runs": [
+        {
+          "engine": "tesseract",
+          "language": "chi_sim+eng",
+          "psm": 3,
+          "input_region": "full_page",
+          "elapsed_seconds": 3.788693,
+          "exit_code": 0,
+          "observed_stem": "2, 当a取什么值时，方程x*一2x十Lga一 0 有实数根",
+          "math_fidelity": "failed",
+          "errors": ["Superscript 2 became *", "Equality sign became 一; operators need source review"]
+        },
+        {
+          "engine": "tesseract",
+          "language": "chi_sim+eng",
+          "psm": 7,
+          "input_region": "crop_bbox",
+          "elapsed_seconds": 0.882757,
+          "exit_code": 0,
+          "observed_stem": "2 . 当a取什么值时， Fifax* —ax+Lea= 0 有实数根  “",
+          "math_fidelity": "failed",
+          "errors": ["Superscript 2 became *", "Coefficient 2 became a", "Lg became Le", "方程 was corrupted"]
+        }
+      ]
+    }
+  ],
+  "usage": {
+    "local_ocr_calls": 4,
+    "tesseract_local_ocr_calls": 2,
+    "paddle_local_ocr_calls": 2,
+    "chat_api_input_tokens": null,
+    "chat_api_output_tokens": null,
+    "chat_api_cached_tokens": null,
+    "chat_api_cost": null,
+    "agent_visual_review_cost": null,
+    "note": "Analyzer makes no model calls; this record does not claim the surrounding Agent review or end-to-end workflow is free. Render time and total resource consumption were not measured."
+  },
+  "paddle_formula_pilot": {
+    "tested_environment": {"architecture": "macOS arm64", "unified_memory_bytes": 17179869184, "python": "3.11.17", "paddleocr": "3.7.0", "paddlepaddle": "3.3.1", "paddlex": "3.7.2", "numpy": "2.3.5"},
+    "model_name": "PP-FormulaNet_plus-S",
+    "model_source": "https://paddle-model-ecology.bj.bcebos.com/paddlex/official_inference_model/paddle3.0.0/PP-FormulaNet_plus-S_infer.tar",
+    "model_tree_sha256": "897ed87a5ef8f822b8432295a0492367f283f0edc7673a08bbc5ec9784d74596",
+    "question_id": "gk-1977-regular-xinjiang-science-q01",
+    "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+    "source_sha256": "d6b42603b7f2ed9a8557d9d93ef9e5f08ae147f3d349145473229fabb183cb4e",
+    "source_page": 1,
+    "render_dpi": 150,
+    "expected_equation_latex": "x^2-2x+\\operatorname{Lg}a=0",
+    "runs": [
+      {
+        "crop_bbox_pixels_top_left_xywh": [435, 875, 185, 44],
+        "image_sha256": "b0e00ba840a7dabcb4887988b60e2788dcf631646a2c1f8ee64db8a61b64806f",
+        "cache_key": "f8f95381b7422b833a25f5b37e4d9ec0f9d83340c51e5639e81df479fef7612e",
+        "latex": "\\frac{1}{2}x^{2}-2x+L g a=0",
+        "elapsed_seconds": 20.682218,
+        "model_load_seconds": 8.746264,
+        "predict_seconds": 0.591587,
+        "peak_rss_bytes": 1060405248,
+        "local_ocr_calls": 1,
+        "source_review": "failed: left crop retained part of preceding Chinese glyph and recognition added an unsupported factor 1/2"
+      },
+      {
+        "crop_bbox_pixels_top_left_xywh": [441, 875, 179, 40],
+        "image_sha256": "46ba8d3dfd3a541970922a580a64b18d8162d6434c64ecce9302c5a845fa456a",
+        "cache_key": "84447224643f3660957c61ada134abfc99c03f73dd41b81f95cfbc145e746369",
+        "latex": "x^{2}-2x+L g a=0",
+        "elapsed_seconds": 14.865541,
+        "repeat_elapsed_seconds": 0.29726,
+        "model_load_seconds": 7.023472,
+        "predict_seconds": 0.53012,
+        "peak_rss_bytes": 941670400,
+        "local_ocr_calls": 1,
+        "repeat_local_ocr_calls": 0,
+        "repeat_cache_hit": true,
+        "source_review": "Superscript, coefficient and equality match the visually checked source; Lg still needs operator normalization. Not independently verified.",
+        "review_status": "needs-review",
+        "mathematical_verification_status": "not_verified"
+      }
+    ],
+    "mineru": {"pypi_version_observed": "4.0.12", "requires_python": ">=3.10,<3.15", "installation_status": "not_installed", "inference_status": "not_tested"},
+    "comparison_limit": "Paddle uses a formula-only crop; earlier Tesseract inputs were full page and Chinese text line. These are different tasks/regions, not a controlled engine accuracy comparison."
+  },
+  "limitations": [
+    "No real hybrid source was established; only the automated synthetic fixture covers that case.",
+    "One scanned question is insufficient to estimate CER, formula accuracy or engine quality across Gaokao papers.",
+    "Crop and full-page modes have different layout settings; timings do not isolate cropping as a causal performance factor.",
+    "PaddleOCR formula-only small-sample inference is recorded separately; full document parsing and MinerU, pix2tex, Mathpix remain untested.",
+    "No acceptance receipt or question source was modified."
+  ]
+}
