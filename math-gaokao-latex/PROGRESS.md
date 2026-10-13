@@ -3397,3 +3397,11 @@
 - 验证结果：build validator 当前返回 `PENDING_REVIEW`，4卷 pending、0 stale/failed/invalid/missing；所有构建 errors、missing characters、undefined references 为空，receipt 中的 overfull 项均为工具报告的排版警告。16版页数与旧回执逐项相同，共166页；16份PDF的SHA-256全部变化，部分字节数变化1–3字节，故旧视觉结论尚未与新attempt绑定，必须复核全部166页。
 - 剩余任务：为当前attempt建立/绑定新review工作项，复核16份PDF共166页；随后按官方事务刷新provenance、review、批次状态与报告，再运行批次/全库门禁和完整测试，清理可重建中间产物、核验PDF回执并分阶段提交。三份README差异继续保持原样。
 - 下一步：提交此构建checkpoint；再用官方 `review_receipts.py prepare-batch` 为 phase2-b95 当前attempt建立审查工作项，检查其页数和attempt绑定后开始逐页复核。
+
+### phase2-b95 当前attempt复核工作项准备
+
+- 已完成可验证阶段：将 `.work/phase2-b95/review/` 中16份旧attempt的pending工作项可恢复归档至 `~/.Trash/phase2-b95-stale-review.ud9Md6/review`；运行官方 `review_receipts.py prepare-batch` 为当前四卷build attempt生成16份新工作项。
+- 阶段修改文件：仅 ignored `.work/phase2-b95/review/{印刷版,简答版,解析版,试题版}/*.json`；旧pending工作项保留在上述Trash归档。未修改正式review receipt、内容源、PDF或README。
+- 验证结果：四卷各有4份工作项，均绑定当前build attempt且无错配；覆盖页数为38、38、46、44，共166页；所有逐项检查均处于pending，尚未声称视觉通过。
+- 剩余任务：对当前16份PDF共166页逐页复核；然后官方checked finalize并更新来源派生状态、报告/CSV投影，全库门禁与完整测试，最后清理build辅助产物和临时渲染、核验正式PDF回执并提交。
+- 下一步：生成仅用于忽略工作区的逐页预览/联系表，按四卷四版完成全页视觉复核；每个可独立验收的复核分段后更新本进度。
