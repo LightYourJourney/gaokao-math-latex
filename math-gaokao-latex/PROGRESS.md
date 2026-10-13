@@ -3461,3 +3461,11 @@
 - 验证结果：`review_receipts.py check-batch`=`FINALIZED`；`build_projects.py validate-receipts --require-final`=`OK`（4 succeeded，0 stale/failed/invalid/missing/pending）；`provenance.py check-batch`=`OK：4卷`；source manifest validate通过。
 - 剩余任务：刷新manifest CSV与全库报告投影并验证；运行phase2-b95生成/来源/receipt门禁及完整测试；清理四卷build辅助产物和本批临时渲染，核验PDF指纹；最终审阅并提交b95所有权文件。三份README差异不得纳入提交。
 - 下一步：运行 `manifest_csv.py --write` 更新当前投影，再运行全库 `report.py` 投影更新和check；单独记录该阶段结果。
+
+### phase2-b95 全库manifest CSV与报告投影
+
+- 已完成可验证阶段：用官方 `manifest_csv.py --write` 刷新CSV；运行全库 `report.py render --all` 同步汇总报告及source inventory。
+- 阶段修改文件：`manifest.csv`、`reports/baseline.md`、`reports/phase2-b95.md`、`report.md`、`docs/source-inventory.md`、`source-manifest.json`及四卷正式build/review receipts；README用户差异保持未暂存。
+- 验证结果：`manifest_csv.py --check`=`当前且775行`；`report.py check --all`=`输出与全量manifest一致，未完成状态保留`；报告检查耗时约60秒。`git diff --check`通过。
+- 剩余任务：运行phase2-b95来源/生成/provenance/review/build/manifest定向门禁和完整测试；清理编译中间文件与临时渲染、逐份PDF对回执；检查并精确提交b95闭环文件。
+- 下一步：依序运行b95的 `solution_sources`、三项生成器检查及provenance/review/build回执门禁，再选用可用Python版本执行全量测试。
