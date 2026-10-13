@@ -3357,3 +3357,19 @@
 - 验证结果：工作项结构核对通过，167页/1336检查项全部完成、0 pending、0 fail；当前 attempt 的PDF SHA、页数和构建元数据保留自官方 prepare-batch 结果。`review_receipts.py check-batch` 仍返回 `INVALID_OR_STALE`，提示正式 review receipt 尚未由事务 finalize 绑定到新 build attempt；这是登记前状态，需通过官方 checked finalizer 完成，而非工作项内容缺失。
 - 剩余任务：执行四卷 checked finalize；随后核验 review/build/provenance/source manifest 门禁，刷新manifest CSV及报告投影，清理LaTeX编译中间物和本批临时复核图，逐一核对16份PDF回执，审阅并提交本批改动（不push）。2005全国Ⅰ理科第4题固定源选项与题面冲突的既有说明继续保留，不属于本次版面复核范围；全语料后续批次仍未完成。
 - 下一步：运行官方 `review_receipts.py finalize-batch-checked` 事务并核对输出；不重复渲染、复核或构建。
+
+### phase2-b94 四卷复核事务与报告投影刷新
+
+- 已完成可验证阶段：在三份既有 README 改动临时收纳期间，通过官方 `finalize-batch-checked` 登记四卷，事务 revision 4112，状态 `closed_with_blockers`；仅全国Ⅰ理科因既有 ISSUE-0834 保留内容阻塞，其余三卷无阻塞。随后刷新全库 manifest CSV 及报告投影。
+- 阶段修改文件：四卷 `receipts/review.json`、四卷 build receipt、`source-manifest.json`、批次报告 `reports/phase2-b94.md`、`manifest.csv`、全库报告投影，以及本进度。三份 README 差异未纳入事务或提交。
+- 验证结果：`review_receipts.py check-batch`=`FINALIZED`；build receipt validator=`OK`（4 succeeded，0 pending/stale/failed）；provenance=`OK：4卷`；source manifest validate通过；manifest CSV check=`当前且775行`；全库报告 check=`与全量 manifest 当前一致，并保留未完成状态`；`git diff --check`通过。全库报告检查耗时约77秒，最终成功。
+- 剩余任务：按卷清理LaTeX辅助产物（保留所有PDF及LaTeX源），归档本批忽略目录中的临时渲染/工作项，核对16份PDF SHA/字节数/页数与正式回执，再做最终门禁和提交。ISSUE-0834保留为内容阻塞；1952—2026全语料仍未完成。
+- 下一步：只读检查四卷精确 build 文件清单后执行 `latexmk -c -outdir=build`；不重编PDF。
+
+### phase2-b94 编译中间物清理与PDF回执核验
+
+- 已完成可验证阶段：四卷分别执行 `latexmk -c -outdir=build`，并删除清理器不处理的4份 smoke-build `.diagnostics.json`。四个 `build/` 目录现各仅有四版PDF；各卷7份LaTeX源仍在。将本批 `.work/phase2-b94` 中457个临时文件（45 MB，含旧/新工作项及渲染图）可恢复归档至 `~/.Trash/phase2-b94-finalized.xTe6Ng/phase2-b94`，项目 `.work/phase2-b94` 已移空。
+- 阶段修改文件：四卷 ignored `build/` 中非PDF编译产物被清理、忽略临时目录归档，以及本 `PROGRESS.md`；正式PDF、LaTeX源、build/review receipt均保留。
+- 验证结果：16/16 PDF的SHA-256、字节数和页数均与正式build receipt匹配；归档目标存在且大小45 MB。b94 review/build/provenance/source-manifest、manifest CSV及报告投影门禁在清理前均通过；清理后待复跑review/build定向门禁及最终 `git diff --check`。
+- 剩余任务：完成清理后门禁；检查本批最终tracked diff和精确暂存范围；提交 b94 完成内容，不push。三份既有 README 改动已逐文件与临时stash字节比对后恢复，保持未暂存；临时stash已安全移除。ISSUE-0834仍是全国Ⅰ理科内容阻塞，全语料未完成。
+- 下一步：复跑review与build receipt validator，核查仓库状态及暂存范围；只提交本批所有权路径。
