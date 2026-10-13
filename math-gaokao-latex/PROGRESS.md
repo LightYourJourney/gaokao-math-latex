@@ -3477,3 +3477,11 @@
 - 验证结果：完整套件运行868项、跳过13项、失败1项，耗时273.834秒；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，断言全库 `problems=[]`，实际65条paper/batch缓存状态与现场派生状态不一致。只读 `provenance.py check-all` 复现这些跨2015–2026既有记录的状态漂移（如 `complete/compiled` 对 `editions_generated`、`closed` 对 `provenance_verified`）；该诊断退出码4并汇总 `INVALID：272卷`。phase2-b95自身的定向provenance检查仍为 `OK：4卷`，review/build/生成器/来源门禁全部通过。没有全库重写或改动非b95回执。
 - 剩余任务：不在b95中扩大到数百条历史状态/回执刷新；记录该全局测试失败，完成当前四卷build辅助文件与临时预览的安全清理、PDF回执指纹核验、b95精确diff提交。之后若要全库测试全绿，需另立全库状态迁移/回执刷新范围。
 - 下一步：清理前只读检查四卷 `build/` 文件清单和当前PDF回执SHA/字节/页数；确认无额外文件后执行 `latexmk -c -outdir=build`，保留四版PDF与LaTeX源，并将本批临时图/工作项移入可恢复归档。
+
+### phase2-b95 清理范围与正式PDF清单核验
+
+- 已完成可验证阶段：只读列出四卷 `build/` 文件；每卷恰有四份正式PDF及各版 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 编译辅助物，无不明文件。用当前build receipt、SHA-256、文件字节数及 `pdfinfo` 页数交叉核对。
+- 阶段修改文件：无；没有执行清理。三份README差异未动。
+- 验证结果：16/16 PDF 的SHA-256、字节数、页数与正式build receipt一致；四卷目标范围仅为 `build/` 内非PDF编译中间文件。此前全量测试唯一失败及全库provenance漂移已如上记录，不归因于这次PDF内容。
+- 剩余任务：逐卷运行 `latexmk -c -outdir=build`，确认每个build目录严格只剩四份PDF；将本批100dpi渲染/联系表及ignored review work items可恢复归档；再跑清理后批次门禁、最终diff审阅并提交。
+- 下一步：在四个精确项目目录执行latexmk clean，保留PDF及LaTeX源，随后逐目录核验文件集合。
