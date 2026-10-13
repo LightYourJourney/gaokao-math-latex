@@ -3413,3 +3413,11 @@
 - 验证结果：该卷四份工作项均绑定当前attempt、JSON结构可读，38/38页为pass；无图页的 `figure_label` 标记 `not_applicable` 并注明无图。视觉复核不替代后续warning豁免对账与官方checked finalize。
 - 剩余任务：复核其余三卷128页；完成四卷warning豁免/回执对账，checked finalize并刷新provenance与报告/CSV；再做全库门禁、完整测试、清理和提交。
 - 下一步：生成并检查全国Ⅰ理科四版联系表，完成该卷38页复核后更新进度。
+
+### phase2-b95 全国Ⅰ卷理科当前PDF逐页复核
+
+- 已完成可验证阶段：对全国Ⅰ理科四版共38页的当前attempt PDF进行100 dpi逐页视觉检查；重点放大复看试题版第3页、解析版第13/16页、简答版末页和印刷版末页。检查题号/选项、公式与立体图标注、页眉页脚、分页留白、字号和答案呈现，未见新增视觉缺陷。
+- 阶段修改文件：ignored `.work/phase2-b95/review-100dpi/2006_全国Ⅰ卷_理科/` 下页面PNG及四版联系表；该卷四份 ignored review work item 记录38页、共304项检查通过；本进度文件。正式PDF及回执未改。
+- 验证结果：该卷四份工作项均绑定当前attempt、JSON结构可读，38/38页为pass；无图页的 `figure_label` 标记 `not_applicable` 并注明无图。全国Ⅰ两卷累计视觉复核76/166页。
+- 剩余任务：复核全国Ⅱ文理两卷90页；完成四卷warning豁免/回执对账，checked finalize并刷新provenance与报告/CSV；再做全库门禁、完整测试、清理和提交。
+- 下一步：生成并检查全国Ⅱ文科四版联系表，完成该卷46页复核后更新进度。
