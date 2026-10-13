@@ -3902,6 +3902,6 @@
 - 已完成：六文件构建检查点提交后，三份受保护README按原哈希暂时隔离；`finalize-batch-checked` 返回 `FINALIZED`、`committed=false`、batch=`closed`、manifest revision 4143，报告已写入 `reports/phase1-b08.md`。finalizer只完成工作区事务，尚未提交本次复核回执。
 - 已完成最终范围门禁：manifest 775项通过；生成器、solution-source（23题）、provenance（1卷）通过；build `require-final`=`OK`、review=`FINALIZED`；manifest.csv刷新后检查通过且775行。4份PDF逐一匹配receipt的SHA、字节数、页数，总计57页、669720字节。
 - 清理完成：`latexmk -c -outdir=build` 后本卷 `build/` 仅留四份PDF；检查 `.work/phase1-b08/` 仅含153个PNG/JSON当前批次视觉资产与工作项，已删除该精确临时目录。规范/派生LaTeX源、图稿与PDF均保留。
-- 当前仅三份受保护README改动仍在专用stash中，下一步立即恢复并确认diff SHA=`9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`；随后提交finalize闭环文件，不push。
 - README保护差异已恢复，SHA-256复核仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，临时stash已删除。发现并规范化复核说明中的344处重复句号，review `check-batch` 仍为 `FINALIZED`；`git diff --check`通过。
-- 阶段结果：2023全国甲卷文科phase1-b08已closed，无本批未解决视觉项；OCR流水线总体审计/升级计划与1952—2026全库仍未完成。当前接下来仅提交本批finalize回执、CSV、报告、manifest与进度的收尾记录，不push。
+- 阶段结果：2023全国甲卷文科phase1-b08已closed，无本批未解决视觉项；检查点提交 `aec13422`、闭环提交 `30206e1b`，未push。三份README用户差异未纳入提交，SHA保持原值。
+- 下一阶段：回到OCR升级：复用已验证PDF analyzer、5份/11页来源pilot、Tesseract及Paddle公式缓存，先建立跨选择/填空/解答/公式/图形的人工核对gold子集和真实混合PDF样本，再比较正文/布局OCR；不重跑已做的单公式识别，不声称Token节省率。OCR路由、题目IR、八项质量门禁与端到端成本基准仍待实现/验收，题库其余批次也未完成。
