@@ -3453,3 +3453,11 @@
 - 验证结果：拒绝原因精确列出 `README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`；无其他工作区差异。
 - 剩余任务：提交本checkpoint后，仅临时stash上述三路径，确认工作树干净；重跑checked finalize；随即恢复stash并逐字节核对三份README与原差异一致，删除已验证的临时stash引用。
 - 下一步：精确stash三份既有README变更并复核暂存范围，再重试checked finalize。
+
+### phase2-b95 官方复核事务登记
+
+- 已完成可验证阶段：临时stash仅包含三份既有README差异，工作树清洁后运行官方 `finalize-batch-checked`；四卷事务成功，批次 `closed`，revision 4115，报告写入 `reports/phase2-b95.md`。事务后立即恢复README改动，与stash前二进制diff SHA-256完全一致，并移除已验证的临时stash。
+- 阶段修改文件：四卷 `receipts/build.json`、`receipts/review.json`，`source-manifest.json`、`reports/phase2-b95.md`；三份README用户差异已恢复且未暂存；本进度文件。
+- 验证结果：`review_receipts.py check-batch`=`FINALIZED`；`build_projects.py validate-receipts --require-final`=`OK`（4 succeeded，0 stale/failed/invalid/missing/pending）；`provenance.py check-batch`=`OK：4卷`；source manifest validate通过。
+- 剩余任务：刷新manifest CSV与全库报告投影并验证；运行phase2-b95生成/来源/receipt门禁及完整测试；清理四卷build辅助产物和本批临时渲染，核验PDF指纹；最终审阅并提交b95所有权文件。三份README差异不得纳入提交。
+- 下一步：运行 `manifest_csv.py --write` 更新当前投影，再运行全库 `report.py` 投影更新和check；单独记录该阶段结果。
