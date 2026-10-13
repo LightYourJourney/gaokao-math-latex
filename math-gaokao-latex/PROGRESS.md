@@ -3125,6 +3125,14 @@
 - 验证结果：source manifest validate通过；四卷provenance内容校验无逐题冲突，仅派生缓存状态不匹配。`solution_sources.py check-batch`确认新课程文23题、新课程理22题、旧课程文/理各22题；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`均4卷通过。build validator=`INVALID：4卷`；review validator=`INVALID_OR_STALE`。
 - Ruling：复用已核实的转录、解题、TikZ和旧视觉记录，不重新录题/解题；先按官方事务正式重建16版，然后逐PDF比较当前与旧review的SHA/页数。仅当字节哈希一致时才复用逐页结论，否则对变化版本重新逐页目检。若直接沿用旧receipt，会把过期工具链与生成输入伪装成当前产物。
 - 剩余任务：正式构建四卷16版，准备新attempt workitems，比较PDF哈希并覆盖所有变化页面；必要时按原有失败/issue状态据实复核；finalize、更新全库投影、跑门禁与测试、清理并核验PDF后提交。
+
+### phase0-b02 在 1957—2006 年段收尾后的恢复续接
+
+- 已完成可验证阶段：完成 1956 与 1957—2006 年段后，按总计划转入 2007—2016、2017—2026 段；清单中较早批次均已关闭或以明确 blocker 状态记录。重新核对 `phase0-b02` 后，确认它是 2019/2020 全国Ⅰ卷四套的首个可推进批次；继续复用已核验转录，不再重复录题/解题。
+- 阶段修改文件：仅本 `PROGRESS.md`。没有修改题源、LaTeX 投影、正式回执、PDF、manifest 或三份 README 用户改动。
+- 验证结果：source manifest validate、四卷 `solution_sources check-batch`、project/short-answer/edition 三类 `--check` 均通过；provenance=`OK：4卷`。build validator=`INVALID`（4卷中3 stale、1 pending）；review=`INVALID_OR_STALE`，分别由生成输入/工具链变化及旧 attempt/PDF 绑定导致。`.work/phase0-b02/review/` 仍有16份旧 attempt 工作项，不能沿用。
+- 剩余任务：为四卷创建当前正式 build attempt；复用无变化 PDF 的逐页证据，仅对哈希或页数变化的版次重新完整检查；2020文科取消题按既定裁定保留并如实记失败；完成 finalize、投影/门禁、清理和精确提交。
+- 下一步：把旧 attempt 工作项可恢复归档，运行官方 phase0-b02 formal batch build；保留 LaTeX 源和 PDF，不改题目内容。
 - 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
 - 已完成phase2-b92当前输入正式构建阶段：官方formal build在manifest revision 4097刷新四卷16版；四卷页数分别为新课程文5/20/7/16、新课程理5/19/7/16、旧课程文4/19/6/16、旧课程理5/20/7/16，共188页。四卷attempt分别为`20adf3b2-8c72-40ab-ac94-bbf78ac47cf8`、`a3c2d92a-bc30-43b8-ae89-d3bc88d9207b`、`3009247d-e1ae-443a-a75b-daea2dbe8b5c`、`00142336-2324-436f-992f-d8e8855421a1`。
 - 阶段修改文件：四卷`receipts/build.json`、`source-manifest.json`中的派生状态及本进度；规范题源与生成LaTeX未改。
