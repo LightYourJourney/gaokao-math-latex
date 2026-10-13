@@ -25,12 +25,18 @@ class PdfAnalysisTests(unittest.TestCase):
             pdf = root / 'source.pdf'
             pdf.write_bytes(b'%PDF-1.4 fixture')
             def run(command, timeout):
+                if command[0] == 'pdfimages':
+                    return subprocess.CompletedProcess(command, 0,
+                        'page num type width height color comp bpc enc interp object ID x-ppi y-ppi size ratio\n'
+                        '--------------------------------------------------------------------------------\n', '')
                 if command[0] == 'pdfinfo':
                     output = 'Pages: 3\n'
                 else:
                     output = ('原题条件 x = 2 ' * 20) if command[command.index('-f') + 1] != '2' else ''
                 return subprocess.CompletedProcess(command, 0, output, '')
-            with patch.object(analyze_pdf, 'tool_fingerprints', return_value={'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'}}), patch.object(analyze_pdf, 'run_tool', side_effect=run) as runner:
+            tools = {'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'},
+                     'pdfimages': {'path': 'pdfimages'}}
+            with patch.object(analyze_pdf, 'tool_fingerprints', return_value=tools), patch.object(analyze_pdf, 'run_tool', side_effect=run) as runner:
                 first = analyze_pdf.analyze(pdf, cache_dir=root / 'cache', pages=[1, 2])
                 self.assertEqual(first['cache']['misses'], 2)
                 runner.reset_mock()
@@ -52,11 +58,13 @@ class PdfAnalysisTests(unittest.TestCase):
             root = Path(temp)
             pdf = root / 'source.pdf'
             pdf.write_bytes(b'%PDF-1.4 fixture')
-            with patch.object(analyze_pdf, 'tool_fingerprints', return_value={'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'}}), patch.object(analyze_pdf, 'run_tool', return_value=subprocess.CompletedProcess([], 0, 'Pages: 1\n', '')):
+            tools = {'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'},
+                     'pdfimages': {'path': 'pdfimages'}}
+            with patch.object(analyze_pdf, 'tool_fingerprints', return_value=tools), patch.object(analyze_pdf, 'run_tool', return_value=subprocess.CompletedProcess([], 0, 'Pages: 1\n', '')):
                 with self.assertRaises(analyze_pdf.AnalysisError):
                     analyze_pdf.analyze(pdf, cache_dir=root / 'cache', pages=[2])
             self.assertFalse(list(root.glob('cache/*.json')))
-            with patch.object(analyze_pdf, 'tool_fingerprints', return_value={'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'}}), patch.object(analyze_pdf, 'run_tool', side_effect=analyze_pdf.AnalysisError('failed')):
+            with patch.object(analyze_pdf, 'tool_fingerprints', return_value=tools), patch.object(analyze_pdf, 'run_tool', side_effect=analyze_pdf.AnalysisError('failed')):
                 with self.assertRaises(analyze_pdf.AnalysisError):
                     analyze_pdf.analyze(pdf, cache_dir=root / 'cache')
             self.assertFalse(list(root.glob('cache/*.json')))
@@ -66,10 +74,15 @@ class PdfAnalysisTests(unittest.TestCase):
             root = Path(temp)
             pdf = root / 'source.pdf'
             pdf.write_bytes(b'%PDF-1.4 fixture')
-            tools = {'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'}}
+            tools = {'pdfinfo': {'path': 'pdfinfo'}, 'pdftotext': {'path': 'pdftotext'},
+                     'pdfimages': {'path': 'pdfimages'}}
             def run(command, timeout):
                 if command[0] == 'pdfinfo':
                     return subprocess.CompletedProcess(command, 0, 'Pages: 2\n', '')
+                if command[0] == 'pdfimages':
+                    return subprocess.CompletedProcess(command, 0,
+                        'page num type width height color comp bpc enc interp object ID x-ppi y-ppi size ratio\n'
+                        '--------------------------------------------------------------------------------\n', '')
                 if command[command.index('-f') + 1] == '2':
                     raise analyze_pdf.AnalysisError('page failed')
                 return subprocess.CompletedProcess(command, 0, 'math question ' * 10, '')
@@ -81,7 +94,7 @@ class PdfAnalysisTests(unittest.TestCase):
                 changed = analyze_pdf.analyze(pdf, cache_dir=root / 'cache', pages=[1], min_chars=200)
                 self.assertEqual(changed['cache']['misses'], 1)
                 self.assertEqual(changed['pages'][0]['classification'], 'review')
-                with patch.object(analyze_pdf, 'VERSION', 2):
+                with patch.object(analyze_pdf, 'VERSION', 3):
                     versioned = analyze_pdf.analyze(pdf, cache_dir=root / 'cache', pages=[1])
                     self.assertEqual(versioned['cache']['misses'], 1)
                 uncached = analyze_pdf.analyze(pdf, cache_dir=None, pages=[1])
@@ -97,7 +110,23 @@ class PdfAnalysisTests(unittest.TestCase):
             with self.assertRaisesRegex(analyze_pdf.AnalysisError, 'exited 3'):
                 analyze_pdf.run_tool(['pdfinfo', 'source.pdf'], 1)
 
-    @unittest.skipUnless(shutil.which('pdfinfo') and shutil.which('pdftotext'), 'Poppler required')
+    def test_parse_image_inventory_counts_renderable_images_not_auxiliary_masks(self):
+        listing = (
+            'page num type width height color comp bpc enc interp object ID x-ppi y-ppi size ratio\n'
+            '--------------------------------------------------------------------------------\n'
+            '   3     0 image     437   311  index   1   8  image  no        13  0   140   140 2737B 2.0%\n'
+            '   3     1 smask     437   311  gray    1   8  image  no        13  0   140   140 3113B 2.3%\n'
+            '   5     3 image    1190  1685  rgb     3   8  image  yes     1035  0   144   144  119K 2.0%\n'
+        )
+        self.assertEqual(analyze_pdf.parse_image_inventory(listing, 5), {
+            1: {'image_objects': 0, 'auxiliary_mask_objects': 0, 'largest_image_px': None},
+            2: {'image_objects': 0, 'auxiliary_mask_objects': 0, 'largest_image_px': None},
+            3: {'image_objects': 1, 'auxiliary_mask_objects': 1, 'largest_image_px': [437, 311]},
+            4: {'image_objects': 0, 'auxiliary_mask_objects': 0, 'largest_image_px': None},
+            5: {'image_objects': 1, 'auxiliary_mask_objects': 0, 'largest_image_px': [1190, 1685]},
+        })
+
+    @unittest.skipUnless(shutil.which('pdfinfo') and shutil.which('pdftotext') and shutil.which('pdfimages'), 'Poppler required')
     def test_real_poppler_text_image_and_blank_pages(self):
         # A valid three-page PDF: native text, image-only, genuinely blank.
         # This distinction cannot be resolved from text extraction alone.
@@ -131,10 +160,16 @@ class PdfAnalysisTests(unittest.TestCase):
             self.assertEqual(result['page_count'], 3)
             self.assertEqual([p['classification'] for p in result['pages']],
                              ['text_candidate', 'needs_ocr_or_blank', 'needs_ocr_or_blank'])
+            self.assertEqual([p['content_evidence'] for p in result['pages']],
+                             ['text_layer', 'raster_only', 'no_text_or_raster'])
+            self.assertEqual([p['image_objects'] for p in result['pages']], [0, 1, 0])
+            self.assertEqual(result['pages'][1]['largest_image_px'], [1, 1])
             self.assertEqual(result['document_classification'], 'mixed_candidates')
+            self.assertEqual(result['document_content_classification'], 'mixed_text_and_raster_candidates')
             repeat = analyze_pdf.analyze(pdf, cache_dir=Path(temp) / 'cache')
             self.assertEqual(repeat['cache']['hits'], 3)
             self.assertEqual(repeat['cache']['misses'], 0)
+            self.assertEqual(repeat['pages'][1]['image_objects'], 1)
 
 
 if __name__ == '__main__':

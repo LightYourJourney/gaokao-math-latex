@@ -55,7 +55,7 @@
 
 ## 首项已实现改进及运行方法
 
-新增 `math-gaokao-latex/tools/analyze_pdf.py`，依赖现有 `pdfinfo` 和 `pdftotext`，无需新 Python 包。在仓库根目录运行：
+新增 `math-gaokao-latex/tools/analyze_pdf.py`，依赖现有 Poppler 的 `pdfinfo`、`pdftotext` 和 `pdfimages`，无需新 Python 包。在仓库根目录运行：
 
 ```bash
 python3 math-gaokao-latex/tools/analyze_pdf.py path/to/source.pdf
@@ -66,7 +66,7 @@ python3 -m unittest discover -s math-gaokao-latex/tests -p test_analyze_pdf.py
 
 默认 JSON 只输出页级指标，避免把全文重复带入 Agent 上下文；`--include-text` 可显式读取所选页文字。缓存保留提取文字用于下游复用，位于已忽略的 `.work/pdf-analysis-cache/`；`--cache-dir` 可设置位置，`--no-cache` 跳过读写。每页成功后以临时文件和原子替换保存 checkpoint；中断或后续页失败后，恢复时仅补提取缺页。缓存键绑定 PDF SHA-256、分析器版本、文字阈值、提取设置，以及工具的路径、版本和二进制哈希。输入变化、配置变化或版本变化自动使用新缓存；损坏缓存重算。外部命令超时/退出失败会返回非零退出码及 JSON 错误，不自动重试。
 
-页分类含义：`text_candidate` 表示文字量达到阈值且未发现已定义的异常字符；`review` 表示字数偏少或含替换字符、私用区等信号；`needs_ocr_or_blank` 表示未提取到文字，不能据此区分扫描页与真正空白页。所选页面分类不同则卷级标记为 `mixed_candidates`；这表示文字提取结果不同，不等价于已证明扫描/文字混合文档。所有页均要求内容复核。工具暂不判断图形、倾斜、模糊、裁切、题号或数学语义，不能自动放行。
+文字层分类含义：`text_candidate` 表示文字量达到阈值且未发现已定义的异常字符；`review` 表示字数偏少或含替换字符、私用区等信号；`needs_ocr_or_blank` 表示未提取到文字。卷级 `mixed_candidates` 仅反映文字层类别差异。Schema v2 另通过 `pdfimages -list` 提供页级 `content_evidence`（文字层、栅格对象、两者兼有或两者皆无）及图像对象数/最大像素尺寸；新增 `document_content_classification` 可区分文字+栅格页候选与真正出现“有文字页/仅栅格页”的混合候选。该字段仅依据所选页汇总，必须同时查看 `complete_document` 判断是否覆盖全卷。它们仍是结构证据：栅格对象可能是插图，不代表整页扫描；没有对象也不证明页面空白。所有页仍须复核。工具不判断图形语义、倾斜、模糊、裁切、题号或数学正确性，不能自动放行。
 
 ### 本次可复现验证
 
@@ -89,7 +89,7 @@ python3 -m unittest discover -s math-gaokao-latex/tests -p test_analyze_pdf.py
 | 2025 全国Ⅰ卷 | 2 | 两页有文字，仍需内容复核 | 0.279642 / 0.141997 |
 | 1977 新疆理科 | 4 | 四页无文字；pdfimages 列出逐页栅格图像，已视读第1页扫描内容 | 0.417531 / 0.109355 |
 
-共 5 份原件、11 页，首次提取11页，再次全部命中缓存、未重提取；每份原件 SHA-256、Git blob OID、页数均核对来源清单。以上计时是一次运行观察，不是统计基准。尚未找到并确认真实混合型原件，不能以合成 fixture 代表真实混合卷准确性。
+共 5 份原件、11 页，首次提取11页，再次全部命中缓存、未重提取；每份原件 SHA-256、Git blob OID、页数均核对来源清单。以上计时是一次运行观察，不是统计基准。该轮筛查时尚未找到真实混合型原件；后续2008混合卷实测见本报告末尾，合成fixture仍不替代真实试卷验证。
 
 对 1977 新疆理科第1页开展了两个本地 Tesseract 5.5.3 对照：150dpi 整页（`chi_sim+eng`、PSM 3）耗时3.788693秒；150dpi局部单行（PSM 7）耗时0.882757秒。人工视读核对的题面方程是 `x^2-2x+\operatorname{Lg}a=0`，整页识别丢失上标/等号，局部识别还把系数2识为a、Lg识为Le；两次均标记数学忠实度失败。局部图像、bbox、来源页、输出片段和错误项已关联；图像保存在忽略目录，未入库。两种模式设置不同，不能把计时差异全部归因于裁剪。
 
@@ -144,3 +144,11 @@ Gold记录用 `source_id + source_sha256 + source_page` 定位固定原件；区
 2008延考区文扫描页已用隔离环境中的PaddleOCR3.7.0/PaddlePaddle3.3.1做真实整页CPU试跑，显式选择`PP-OCRv5_mobile_det`与`PP-OCRv5_mobile_rec`，禁用方向、去畸变等额外子模型。官方API支持配置检测/识别模型路径；此次模型缓存在忽略目录`.work/ocr-model-cache/official_models/`，两模型磁盘合计约20.8MB。输入页图SHA绑定到`benchmarks/ocr-runs.jsonl`，144dpi、1190×1685；冷初始化23.905秒（含首次模型下载）+页推理19.614秒，热缓存进程初始化3.037秒+页推理20.598秒，峰值RSS为1,522,876,416 bytes（macOS `ru_maxrss`）。第二次OCR仅因首轮工具输出被截断而采集可持久化的完整文本，不代表独立重复样本；无聊天/API调用。
 
 视觉抽查显示整页OCR能检出题文区域，但公式符号、下标、几何标签有明显错识、碎片化；全文未人工核对，所以不能报CER/准确率，也不能作为题目转录。冷启动新下载约20.8MB，热缓存后的页推理约20.6秒、进程级峰值RSS约1.42GiB；没有批量成本、缓存命中节省或Token/API账单数据。MinerU 4.x官方资料要求Python `>=3.10,<3.15`，支持模型档位与本地模型配置；本机未安装或评测，现阶段不为单页强行引入Torch运行时。
+
+### OCR Phase 1：真实混合页结构证据增量（2026-10-13）
+
+页分析器升级到 schema/version 2，在已有页文字抽取之外调用同一 Poppler 工具链的 `pdfimages -list`，解析每页可见图像/模板对象和辅助 mask 数量，并将结果与文字层一并缓存。缓存键包含版本及 `pdfimages` 路径、版本、二进制 SHA；首次扫描建立全卷图像页映射，后续只补未提取的页面文字，复用全部栅格元数据。保留原有 `classification` 与 `document_classification` 兼容字段，新增证据字段不会把视觉证据升级成内容验收。
+
+固定来源 2008 延考区文原件（SHA-256 `fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2`，7 页）实测：第 1、2、6、7 页仅检出文字层；第 3、4 页同时有文字层与栅格插图；第 5 页文字为 0 但有 1 个 1190×1685 栅格对象。全卷分类为 `mixed_text_and_raster_candidates`，不再把此具体页仅留在“扫描或空白”二选一里。顺序复跑，全页缓存命中 7/7、未重提取，0 OCR/模型调用。全卷首轮在第 5 页已有缓存时为 1 hit/6 misses，0.151179 秒；重复运行 0.035072 秒。这是单机单样本观察；另有两次并发单页烟测都报告 miss，属于缓存尚未写入时的竞争，不用于缓存节省量统计。
+
+`test_analyze_pdf.py` 7/7、直接依赖分析器公共方法的 `test_recognize_formula.py` 4/4 通过，覆盖图像与辅助 mask 计数、真实 Poppler 三页文字/图像/空白 fixture、页缓存与损坏缓存恢复。完整套件 886 项运行293.345秒：870通过、13跳过、3失败。失败仍为已记录的历史漂移：task28/task29的来源摘要哈希不匹配，以及52卷缓存派生状态不符；未修改这些基线。真实扫描页的OCR准确率、页面倾斜/清晰度判断、人工gold和聊天模型Token/费用仍未知；不宣称OCR或Token节省率。

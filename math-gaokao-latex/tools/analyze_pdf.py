@@ -14,8 +14,9 @@ import tempfile
 import time
 import unicodedata
 
-VERSION = 1
+VERSION = 2
 DEFAULT_CACHE = Path(__file__).resolve().parents[1] / '.work/pdf-analysis-cache'
+IMAGE_ROW = re.compile(r'^\s*(\d+)\s+\d+\s+(\w+)\s+(\d+)\s+(\d+)\b')
 
 
 class AnalysisError(ValueError):
@@ -47,7 +48,7 @@ def run_tool(command, timeout):
 
 def tool_fingerprints(timeout):
     tools = {}
-    for name in ('pdfinfo', 'pdftotext'):
+    for name in ('pdfinfo', 'pdftotext', 'pdfimages'):
         executable = shutil.which(name)
         if not executable:
             raise AnalysisError(f'Missing executable: {name}')
@@ -59,6 +60,64 @@ def tool_fingerprints(timeout):
         tools[name] = {'path': executable, 'version': match.group(1),
                        'sha256': digest_file(executable)}
     return tools
+
+
+def parse_image_inventory(output, page_count):
+    """Return per-page raster-object evidence from Poppler's pdfimages -list."""
+    if not re.search(r'^\s*page\s+num\s+type\s+width\s+height\b', output, re.MULTILINE):
+        raise AnalysisError('pdfimages output has no recognized image-list header')
+    pages = {number: {'image_objects': 0, 'auxiliary_mask_objects': 0,
+                      'largest_image_px': None}
+             for number in range(1, page_count + 1)}
+    for line in output.splitlines():
+        match = IMAGE_ROW.match(line)
+        if not match:
+            if re.match(r'^\s*\d+\s+\d+\s+', line):
+                raise AnalysisError(f'Unrecognized pdfimages row: {line[:160]}')
+            continue
+        page_number, image_type, width, height = match.groups()
+        page_number, width, height = int(page_number), int(width), int(height)
+        if not 1 <= page_number <= page_count or width < 1 or height < 1:
+            raise AnalysisError('pdfimages reported an invalid page or image dimension')
+        stats = pages[page_number]
+        if image_type.lower() in ('image', 'stencil'):
+            stats['image_objects'] += 1
+        elif image_type.lower() in ('mask', 'smask'):
+            stats['auxiliary_mask_objects'] += 1
+        else:
+            raise AnalysisError(f'Unsupported pdfimages object type: {image_type}')
+        size = [width, height]
+        if stats['largest_image_px'] is None or width * height > stats['largest_image_px'][0] * stats['largest_image_px'][1]:
+            stats['largest_image_px'] = size
+    return pages
+
+
+def content_evidence(text_chars, image_stats):
+    has_text = text_chars > 0
+    has_raster = image_stats['image_objects'] + image_stats['auxiliary_mask_objects'] > 0
+    if has_text and has_raster:
+        return 'text_and_raster'
+    if has_text:
+        return 'text_layer'
+    if has_raster:
+        return 'raster_only'
+    return 'no_text_or_raster'
+
+
+def document_content_classification(pages):
+    evidence = {page['content_evidence'] for page in pages}
+    has_text = bool(evidence & {'text_layer', 'text_and_raster'})
+    has_raster = bool(evidence & {'raster_only', 'text_and_raster'})
+    has_raster_only_page = 'raster_only' in evidence
+    if has_text and has_raster_only_page:
+        return 'mixed_text_and_raster_candidates'
+    if has_text and has_raster:
+        return 'text_with_raster_content_candidate'
+    if has_text:
+        return 'text_layer_candidate'
+    if has_raster:
+        return 'raster_only_candidate'
+    return 'blank_or_unrecognized'
 
 
 def assess_text(text, min_chars):
@@ -81,8 +140,19 @@ def read_cache(path, key):
             return None
         if body['key'] != key or type(body['page_count']) is not int or body['page_count'] < 1:
             return None
-        if not isinstance(body['pages'], dict):
+        if not isinstance(body['pages'], dict) or not isinstance(body.get('raster_pages'), dict):
             return None
+        if set(body['raster_pages']) != {str(number) for number in range(1, body['page_count'] + 1)}:
+            return None
+        for stats in body['raster_pages'].values():
+            if (not isinstance(stats, dict)
+                    or type(stats.get('image_objects')) is not int or stats['image_objects'] < 0
+                    or type(stats.get('auxiliary_mask_objects')) is not int or stats['auxiliary_mask_objects'] < 0
+                    or (stats.get('largest_image_px') is not None
+                        and (not isinstance(stats['largest_image_px'], list)
+                             or len(stats['largest_image_px']) != 2
+                             or any(type(value) is not int or value < 1 for value in stats['largest_image_px'])))):
+                return None
         for number, page in body['pages'].items():
             if str(int(number)) != number or not 1 <= int(number) <= body['page_count']:
                 return None
@@ -119,7 +189,7 @@ def analyze(pdf, *, cache_dir=DEFAULT_CACHE, pages=None, min_chars=40, timeout=6
     pdf_hash = digest_file(pdf)
     tools = tool_fingerprints(timeout)
     key = {'version': VERSION, 'pdf_sha256': pdf_hash, 'tools': tools,
-           'min_chars': min_chars, 'extraction': 'layout-utf8'}
+           'min_chars': min_chars, 'extraction': 'layout-utf8+pdfimages-list'}
     key_hash = hashlib.sha256(canonical(key).encode()).hexdigest()
     cache_path = Path(cache_dir) / (key_hash + '.json') if cache_dir is not None else None
     body = read_cache(cache_path, key) if cache_path is not None else None
@@ -128,7 +198,11 @@ def analyze(pdf, *, cache_dir=DEFAULT_CACHE, pages=None, min_chars=40, timeout=6
         match = re.search(r'^Pages:\s*(\d+)\s*$', info, re.MULTILINE)
         if not match or int(match.group(1)) < 1:
             raise AnalysisError('pdfinfo did not provide a positive page count')
-        body = {'key': key, 'page_count': int(match.group(1)), 'pages': {}}
+        page_count = int(match.group(1))
+        image_listing = run_tool([tools['pdfimages']['path'], '-list', str(pdf)], timeout).stdout
+        raster_pages = parse_image_inventory(image_listing, page_count)
+        body = {'key': key, 'page_count': page_count, 'pages': {},
+                'raster_pages': {str(number): stats for number, stats in raster_pages.items()}}
     selected = sorted(set(pages)) if pages is not None else list(range(1, body['page_count'] + 1))
     if not selected or any(type(p) is not int or not 1 <= p <= body['page_count'] for p in selected):
         raise AnalysisError(f'Pages must lie in 1..{body["page_count"]}')
@@ -148,7 +222,9 @@ def analyze(pdf, *, cache_dir=DEFAULT_CACHE, pages=None, min_chars=40, timeout=6
         else:
             hits += 1
             page = assess_text(page['text'], min_chars)
-        output.append({'page': number, **page})
+        image_stats = body['raster_pages'][str(number)]
+        output.append({'page': number, **page, **image_stats,
+                       'content_evidence': content_evidence(page['non_whitespace_chars'], image_stats)})
     if digest_file(pdf) != pdf_hash:
         raise AnalysisError('PDF changed during analysis; no cache written')
     kinds = {page['classification'] for page in output}
@@ -157,6 +233,7 @@ def analyze(pdf, *, cache_dir=DEFAULT_CACHE, pages=None, min_chars=40, timeout=6
             'page_count': body['page_count'], 'analyzed_pages': selected,
             'complete_document': len(selected) == body['page_count'],
             'document_classification': classification, 'pages': output,
+            'document_content_classification': document_content_classification(output),
             'toolchain': tools, 'cache': {'enabled': cache_path is not None,
                 'key': key_hash, 'hits': hits, 'misses': len(selected) - hits},
             'elapsed_seconds': round(time.monotonic() - started, 6),

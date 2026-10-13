@@ -3980,3 +3980,19 @@
 - 验证：新增错配 SHA 负例先失败（原行为未拒绝），实现后评分测试7/7通过；真实 benchmark CLI 接受现存运行记录，列出2个待审样本、0个已评分样本。全套885项测试耗时434.326秒：869通过、13跳过、3失败；3项为已知历史基线漂移（task28/task29摘要哈希及52卷缓存派生状态），与本次修改无关。最终 `git diff --check`通过，检查点外的三份 README 用户差异未改动。
 - 成本/质量：0次 OCR、0次模型调用、没有API费用或Token用量变化；没有宣称节省比例。改进仅防止跨来源/页/区域的错误评测归属，不能替代gold人工核对。
 - 剩余/下一步：继续搭建人工签核的分层 gold 切片，签核前仍不报引擎准确率。之后才在同一局部输入上比较正文/布局 OCR 与MinerU候选。图像输入端到端预分析、题目IR、任务路由/通用缓存、三版LaTeX流水线及八项全流程门禁仍未全部完成。
+
+### 1989 上海卷：固定源逐页身份与结构核验
+
+- 已完成：复核固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 的 `普通高考/1989/1989上海.pdf`，SHA-256=`79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766`，5页，Poppler报告页面尺寸501.08×702.63pt、文字层仅5字符（不适于题面提取）。逐页渲染核对：印刷页码5-5/5-6为题面，5-7至5-9为答案与解答；题面包含七个大题，前两题分别10小题，第三题4小题，第四题证明，第五题复数集合3问，第六题数列，第七题轨迹2问。固定源内确有作答表与解析，尚不能据此称其为考试机构正式答案。
+- 图形初盘：题面含长方体示意图与二面角图；答案解答中另绘复平面集合和轨迹图。后续需依据固定源几何关系重绘TikZ，不入库扫描截图。
+- 执行/修改：subagent 调度因 `agent thread limit reached` 全部未启动；没有重试，改为主会话内联核页。创建的渲染图只存于忽略的 `.work/1989-intake/`；tracked 修改仅本进度。上游 checkout 另有用户的 `普通高考/2016/.work/` 未跟踪目录，本阶段未触碰。未注册canonical paper、未改题目/答案、manifest、构建物或回执。
+- 验证/成本：来源SHA与 manifest 一致；`pdfinfo`确认5页，页面号及全卷题目/答案分区经全页渲染确认。无OCR/模型调用、无可核算Token或API成本；没有报告识别准确率。独立盲核未完成。
+- 剩余/下一步：转录全部题面和固定源印载答案/解析，逐处标示不清字形，建立4份Markdown规范源与TikZ图稿；由主会话通过 `source_manifest.py register-papers` 支持的事务注册，不直接编辑manifest。题面与答案转录复核、四版生成/编译、provenance与逐页视觉验收尚未进行。
+
+### OCR Phase 1：PDF页级栅格证据与真实混合文档识别
+
+- 已完成：扩展 `tools/analyze_pdf.py` 至 schema/version 2，除逐页原生文字层外，使用 Poppler `pdfimages -list` 读取栅格/模板图像对象与辅助 mask。逐页输出 `content_evidence`、`image_objects`、`auxiliary_mask_objects`、`largest_image_px`，并增加候选级 `document_content_classification`。保留既有 `classification`、`document_classification`、文字分类语义与缓存/API字段；不从“存在图像”推断整页扫描、内容正确或视觉可读。缓存键涵盖新的 schema 和 `pdfimages` 可执行文件指纹；版本变化将自动使旧缓存失效。
+- 修改文件：`math-gaokao-latex/tools/analyze_pdf.py`、对应 `tests/test_analyze_pdf.py`、`docs/TOKEN_AUDIT.md` 与本 `PROGRESS.md`。未修改OCR输出/gold、题目与答案、来源manifest、生成器、LaTeX、PDF、构建/provenance/复核回执；三份 README 用户差异未动。分析缓存只写入忽略的 `.work/pdf-analysis-cache/`。
+- 验证：TDD新增的 Poppler 表格解析测试先按预期失败（解析函数不存在）；实现后页分析单测7/7、直接调用 `analyze_pdf` 公共函数的公式识别器回归4/4通过，其中页分析含真实Poppler读取原生文本、1×1栅格图像和空白页的合成PDF。再对固定来源2008延考区文（7页，SHA-256 `fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2`）全卷运行：1/2/6/7只有文字层，3/4有文字与图像对象，5页文字0且含1190×1685栅格对象；分类 `mixed_text_and_raster_candidates`。首轮在第5页既有缓存下1 hit/6 misses、0.151179秒，顺序重跑7/7命中、0.035072秒。并发启动的两次局部烟测均为cache miss，因此未把它们作为缓存收益证据。完整套件886项运行293.345秒，870通过、13跳过、3失败；失败仍是task28/task29摘要SHA漂移及52卷缓存派生状态不符的历史问题，未改基线。`git diff --check`通过；工作树检查确认仅新增两段OCR相关源/文档差异，三份既有README差异保持不变。
+- 成本/质量：本阶段0 OCR调用、0聊天模型调用；真实 Agent Token/API费用仍不可得，不能量化节省率。记录到的时间是本机单份7页样本观察，不能外推。栅格元数据只定位需要检查/可能OCR的页面，不是OCR准确度或试卷内容验收。
+- 剩余/下一步：`pdfimages -list`可给图像对象维度，不给语义位置，故仍无法判断图像是整页扫描、图表还是装饰；倾斜、模糊、裁切、阅读顺序和数学符号仍需视觉核对。人工签核gold、MinerU/Paddle正文/布局同输入比较、题目级IR/路由、通用题目缓存、三版输出/八项端到端门禁和真实Token/费用基线尚未完成。下一步复核pending OCR gold并形成可由人签核的短评测切片，再比较候选OCR；不重复公式识别或已验证试卷解题。
