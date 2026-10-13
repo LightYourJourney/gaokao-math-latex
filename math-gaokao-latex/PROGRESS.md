@@ -3637,3 +3637,11 @@
 - 验证结果：source manifest validate、solution_sources（3卷×22题）、projects/short-answer/edition `--check`、provenance=`OK：3卷`均通过。build validator发现2020新高考Ⅱ及2021新高考Ⅰ回执因生成输入树和工具链变更stale，2021新高考Ⅱ为pending；review旧回执/工作项均不再与当前批次输入绑定（已登记255页旧review结果）。决定对3卷统一正式重建，再复核全部当前attempt页面。Ruling：phase0-b02依用户决定保留5项取消题题号视觉失败；这不阻止继续时间顺序中的phase0-b03，代价是b02仍保持未闭环VISUAL_FAILED，报告中如实保留。
 - 剩余任务：归档旧attempt的12份workitem，正式重建3卷12版；准备新workitem并为三卷分配互不重叠视觉复核；主会话负责warning核验、事务finalize和总manifest/报告。
 - 下一步：运行phase0-b03 formal batch build，保存attempt/PDF页数/警告数据，不改题源与生成文件。
+
+### phase0-b03 三卷当前输入正式构建
+
+- 已完成可验证阶段：官方 `build_projects.py build --formal --batch phase0-b03 --json` 于manifest revision 4119重建三卷12版；旧12份review workitem已可恢复归档至 `~/.Trash/phase0-b03-stale-review.S0Q0Am/review`（12文件/636KB）。
+- 阶段修改文件：三卷 `receipts/build.json`、`source-manifest.json`派生状态和忽略的build PDF/中间物；原LaTeX题源、答案、图稿未修改。
+- 验证结果：build=`COMPILED_PENDING_REVIEW`，3 pending、0 failed；三个attempt分别为2020新高考Ⅱ `0b35b837-3c1a-4eb1-ac40-0bfd0d62f241`、2021新高考Ⅰ `587376ee-9a93-400b-9b1b-31ae77163772`、2021新高考Ⅱ `82e37c27-6574-448e-80e7-42c43110ba39`。各卷四版页数分别为6/42/8/33、4/37/6/30、5/44/7/33，总计255页。12版均succeeded，编译错误、缺字、未解析引用、build problems为0。唯一警告为2020Ⅱ解析版Underfull `answers.tex` 行871--872，须高清复看后才决定豁免。provenance=`OK：3卷`，build receipt validator=`3 pending、0 stale/failed/invalid/missing`。
+- 剩余任务：为当前attempt准备12份workitem和255页预览；对三卷各自独立视觉复核、核对该Underfull警告；主会话整合并验证覆盖/答案呈现。
+- 下一步：官方prepare-batch，检查attempt绑定与页码覆盖后生成当前渲染图，按paper_id拆给三个独立复核者。
