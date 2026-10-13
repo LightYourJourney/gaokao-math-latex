@@ -18,6 +18,16 @@ def source_manifest():
     }
 
 
+def run_record(case, output, *, engine='ocr-a', engine_version='1'):
+    identity = ('source_id', 'source_sha256', 'source_page',
+                'bbox_pixels_top_left_xywh', 'task')
+    return {
+        'case_id': case['case_id'], 'engine': engine,
+        'engine_version': engine_version, 'output': output,
+        'metadata': {field: case[field] for field in identity},
+    }
+
+
 class OcrScoringTests(unittest.TestCase):
     def test_text_cer_and_math_exactness_are_scored_separately(self):
         gold = {
@@ -49,10 +59,8 @@ class OcrScoringTests(unittest.TestCase):
                 },
             ],
         }
-        runs = [
-            {'case_id': 'prose-1', 'engine': 'ocr-a', 'engine_version': '1', 'output': '我爱数'},
-            {'case_id': 'formula-1', 'engine': 'ocr-a', 'engine_version': '1', 'output': 'x + 1 = 0'},
-        ]
+        runs = [run_record(gold['cases'][0], '我爱数'),
+                run_record(gold['cases'][1], 'x + 1 = 0')]
 
         report = score_ocr.score_benchmark(gold, runs, source_manifest())
 
@@ -84,10 +92,8 @@ class OcrScoringTests(unittest.TestCase):
                 },
             ],
         }
-        runs = [
-            {'case_id': 'short', 'engine': 'ocr-a', 'engine_version': '1', 'output': '我爱数'},
-            {'case_id': 'long', 'engine': 'ocr-a', 'engine_version': '1', 'output': 'abc'},
-        ]
+        runs = [run_record(gold['cases'][0], '我爱数'),
+                run_record(gold['cases'][1], 'abc')]
 
         report = score_ocr.score_benchmark(gold, runs, source_manifest())
 
@@ -110,7 +116,7 @@ class OcrScoringTests(unittest.TestCase):
                 'review_status': 'pending_human_review',
             }],
         }
-        runs = [{'case_id': 'pending', 'engine': 'ocr-a', 'engine_version': '1', 'output': 'x^2=1'}]
+        runs = [run_record(gold['cases'][0], 'x^2=1')]
 
         report = score_ocr.score_benchmark(gold, runs, source_manifest())
 
@@ -129,7 +135,7 @@ class OcrScoringTests(unittest.TestCase):
                 'reviewed_by': 'reviewer-a', 'reviewed_at': '2026-10-13',
             }],
         }
-        runs = [{'case_id': 'blank-output', 'engine': 'ocr-a', 'engine_version': '1', 'output': ''}]
+        runs = [run_record(gold['cases'][0], '')]
 
         report = score_ocr.score_benchmark(gold, runs, source_manifest())
 
@@ -174,6 +180,27 @@ class OcrScoringTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'reviewed_by'):
             score_ocr.score_benchmark(
                 {'schema_version': 1, 'cases': [case]}, [], source_manifest(),
+            )
+
+    def test_ocr_run_metadata_must_match_the_scored_source_region(self):
+        case = {
+            'case_id': 'case-1', 'source_id': 'src-sample', 'source_sha256': 'a' * 64,
+            'source_page': 1, 'bbox_pixels_top_left_xywh': [0, 0, 100, 20],
+            'task': 'text', 'reference_text': '题目', 'review_status': 'human_verified',
+            'reviewed_by': 'reviewer-a', 'reviewed_at': '2026-10-13',
+        }
+        run = {
+            'case_id': 'case-1', 'engine': 'ocr-a', 'engine_version': '1', 'output': '题目',
+            'metadata': {
+                'source_id': 'src-sample', 'source_sha256': 'b' * 64,
+                'source_page': 1, 'bbox_pixels_top_left_xywh': [0, 0, 100, 20],
+                'task': 'text',
+            },
+        }
+
+        with self.assertRaisesRegex(ValueError, 'source_sha256 mismatch for case-1'):
+            score_ocr.score_benchmark(
+                {'schema_version': 1, 'cases': [case]}, [run], source_manifest(),
             )
 
 

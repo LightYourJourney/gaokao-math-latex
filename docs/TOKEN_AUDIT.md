@@ -120,6 +120,12 @@ python3 math-gaokao-latex/tools/recognize_formula.py path/to/formula.png --engin
 
 两次Paddle推理使pilot记录累计实际本地OCR调用达到4次。Tesseract使用整页/中文行，Paddle使用公式局部图，输入任务不同；上述结果不能直接用于引擎准确率排名。MinerU整页解析、PaddleOCR正文/布局识别、独立分层gold与完整端到端流程仍待验证。原来的Tesseract结果、失败裁剪与成功提取均已持久记录，不重复执行。
 
+### 评分输入来源一致性门禁（2026-10-13）
+
+复核发现评分器此前只校验 gold 对应的来源身份，没有将 OCR 运行记录的 `metadata` 和 gold 样本做关联检查；因此同一 `case_id` 下误附其他来源/页的识别输出有机会被评分。现要求每个运行记录携带来源元数据，并核对其中存在的 `source_id`、SHA-256、页码、像素 bbox 与任务类型；来源 SHA、页码和任务为必需字段，区域 gold 的 bbox 也必须出现在运行元数据中。已有2008整页pilot记录包含并通过 SHA、页码及 task 校验；gold 仍 pending，不产生分数。
+
+验证：新增负例先按预期失败（错误源 SHA 未被拒绝），实现后 OCR scorer 测试7/7通过；对现存 `ocr-gold.json`、`ocr-runs.jsonl` 和 manifest 的 CLI 校验成功，仍为2个待审、0个计分。全套测试885项：869通过、13跳过、3失败，失败仍为两项既有摘要哈希漂移和52卷缓存派生状态不符；本次未修改历史基线。此增量不调用OCR或模型，不引入成本变化；它减少的是错配运行污染评测的风险，不能换算成Token节省。
+
 ### OCR Phase 1：来源绑定评分接口（初始样本仍待人工复核）
 
 `tools/score_ocr.py` 对人工确认的OCR片段提供可复算评分，输入为：
