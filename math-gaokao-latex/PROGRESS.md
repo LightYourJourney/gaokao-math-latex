@@ -3896,3 +3896,12 @@
 - 修改文件：本进度文件、Q19规范解析源及其派生文件、2023全国甲文四版build receipt/PDF、解析源投影、manifest派生状态；忽略目录中为当前PDF重新渲染的接触表、PNG与待finalize工作项。题目、答案和推导未改，未修改共享转换器。
 - 下一步：运行 checked finalizer 事务登记并核验来源清单、build/review/provenance与PDF哈希/页数；随后按约定只清理本卷构建中间产物和本批临时work目录，保留PDF与LaTeX源文件。
 - 事务保护：首次 `finalize-batch-checked` 在写入前拒绝，返回 `committed=false`，原因是tracked工作树/索引不干净（含本批待提交产物与三份受保护README差异）。没有发生finalize写入。先提交本批精确范围作为可恢复检查点，暂存时排除三份README；随后隔离其既有差异，在干净树重跑checked finalizer，再逐字节恢复并校验README差异。
+
+### `phase1-b08` — checked finalizer 已关闭批次
+
+- 已完成：六文件构建检查点提交后，三份受保护README按原哈希暂时隔离；`finalize-batch-checked` 返回 `FINALIZED`、`committed=false`、batch=`closed`、manifest revision 4143，报告已写入 `reports/phase1-b08.md`。finalizer只完成工作区事务，尚未提交本次复核回执。
+- 已完成最终范围门禁：manifest 775项通过；生成器、solution-source（23题）、provenance（1卷）通过；build `require-final`=`OK`、review=`FINALIZED`；manifest.csv刷新后检查通过且775行。4份PDF逐一匹配receipt的SHA、字节数、页数，总计57页、669720字节。
+- 清理完成：`latexmk -c -outdir=build` 后本卷 `build/` 仅留四份PDF；检查 `.work/phase1-b08/` 仅含153个PNG/JSON当前批次视觉资产与工作项，已删除该精确临时目录。规范/派生LaTeX源、图稿与PDF均保留。
+- 当前仅三份受保护README改动仍在专用stash中，下一步立即恢复并确认diff SHA=`9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`；随后提交finalize闭环文件，不push。
+- README保护差异已恢复，SHA-256复核仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，临时stash已删除。发现并规范化复核说明中的344处重复句号，review `check-batch` 仍为 `FINALIZED`；`git diff --check`通过。
+- 阶段结果：2023全国甲卷文科phase1-b08已closed，无本批未解决视觉项；OCR流水线总体审计/升级计划与1952—2026全库仍未完成。当前接下来仅提交本批finalize回执、CSV、报告、manifest与进度的收尾记录，不push。
