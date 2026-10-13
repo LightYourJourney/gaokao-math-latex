@@ -3661,3 +3661,11 @@
 - 验证结果：build receipt validator `OK`（3 pending review、0 stale/failed/invalid/missing）；12工作项仍分别绑定当前3个attempt，255/255页覆盖、2040/2040项完成，全部2040项为pass且有说明。唯一build警告与豁免逐字段匹配：2020新高考Ⅱ解析版 `Underfull hbox`，`answers.tex` 871--872行，PDF第22页；高清复核显示方法总结框、答案框、正文与公式完整清晰，无碰撞、裁切或有害留白，按版心内未铺满行宽登记视觉通过。
 - 剩余任务：官方checked finalize；刷新来源/全库报告和manifest投影；运行批次门禁及定向测试；清理编译中间物与ignored复核资产（先核验PDF回执指纹并可恢复归档）；审阅并提交phase0-b03闭环，保持三份README用户差异不变。
 - 下一步：在保护并逐字节核验三份README差异的前提下运行 `finalize-batch-checked`；不得修改或隐去已有批次的失败记录。
+
+### phase0-b03 checked finalize、全库投影与定向测试
+
+- 已完成可验证阶段：官方 `finalize-batch-checked` 返回 `FINALIZED`，revision 4121，批次关闭；三卷正式build/review回执和phase0-b03报告已更新。随后刷新manifest CSV与全库报告/来源投影；为避免覆盖用户内容，三份README在渲染期间隔离，渲染器新生成的README汇总差异另行丢弃，再恢复用户原差异。
+- 阶段修改文件：三卷 `receipts/build.json`、`receipts/review.json`，`source-manifest.json`、`manifest.csv`、`reports/phase0-b03.md`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`；本进度文件。三份README仍保留既有用户差异，不在本批提交范围。
+- 验证结果：review=`FINALIZED`；build validator=`OK`（3 succeeded、0 stale/failed/invalid/missing/pending）；provenance=`OK：3卷`；source manifest、solution sources、questions/short answers/edition生成检查均通过；manifest CSV当前且775行。全库报告检查仅报三份受保护README与汇总行不同，其余投影匹配。定向测试：review receipts 66/66、report 11/11、manifest CSV 2/2、source manifest 52/52、build projects 133/133通过；provenance 109项中108通过，唯一失败是全库65项历史缓存状态漂移（覆盖2017—2026），不在phase0-b03范围，未批量改写。
+- 剩余任务：清理三卷build目录中的非PDF编译中间物；将本批 `.work/phase0-b03/` 页面渲染、联系表和review工作项可恢复归档；清理后再次验证build/review/provenance及12份PDF的SHA/字节/页数；检查最终diff、提交本批收尾。全库缓存漂移及后续语料批次仍未完成。
+- 下一步：基于已核验的当前build回执，对三卷精确执行 `latexmk -c -outdir=build`，保留PDF和全部LaTeX源。
