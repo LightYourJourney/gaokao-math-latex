@@ -3501,3 +3501,11 @@
 - 验证结果：归档前16/16 PDF SHA/字节/页数匹配receipt；归档后review=`FINALIZED`、build=`OK`（4 succeeded、0 stale/failed/invalid/missing/pending）、provenance=`OK：4卷`、source manifest validate通过、manifest CSV=`当前且775行`。此前全库report check通过。三份README差异仍保持未暂存。
 - 剩余任务：最终检查tracked diff与b95文件所有权、`git diff --check`，只提交b95 receipts/manifest/reports/CSV/全局派生报告与本进度；保留README差异。全量测试的唯一失败仍是65条跨批缓存状态漂移，未在b95中批量重写。
 - 下一步：逐文件审阅b95当前diff和暂存范围；精确提交b95闭环，之后复核最终Git状态与README差异未变。
+
+### phase2-b95 README 用户差异恢复核验
+
+- 已完成可验证阶段：发现全库 `report.py render --all` 在恢复用户README差异后重写了三份README汇总行。使用临时stash遗留的可恢复Git对象逐份恢复原文，没有保留报告渲染器覆盖内容。
+- 阶段修改文件：三份既有用户README差异恢复为原内容；本进度文件。
+- 验证结果：三个文件的SHA-256均与stash对象内容一致；三文件合并后的二进制diff SHA-256为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，与覆盖发生前记录相同；README `git diff --check`通过。
+- 剩余任务：提交本进度checkpoint；精确暂存并提交phase2-b95正式闭环文件，确保三份README仅保留为未暂存用户差异；最后核验提交后状态与diff。
+- 下一步：提交仅包含本进度文件的checkpoint，然后按b95文件清单暂存、核查并提交本批闭环。
