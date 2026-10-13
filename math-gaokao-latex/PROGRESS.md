@@ -3493,3 +3493,11 @@
 - 验证结果：四个build目录各恰有4个PDF；清理后16/16 PDF的SHA-256、字节数、pdfinfo页数与正式build receipt一致；`build_projects.py validate-receipts --require-final`=`OK`（4 succeeded，0 stale/failed/invalid/missing/pending）。本批忽略工作区精确检查为198个文件、36 MB，仅含当前review work items与100 dpi页面PNG/联系表。
 - 剩余任务：把 `.work/phase2-b95/` 整体移入可恢复Trash归档；复跑收尾门禁；审阅b95 tracked diff，精确提交所有权文件并保留三份README用户差异。完整测试唯一失败与跨批全库provenance状态漂移已记录，不能宣称全量测试全绿。
 - 下一步：将已核实的本批 `.work/phase2-b95/` 移入唯一Trash归档目录，确认归档文件数/大小与项目工作区清空。
+
+### phase2-b95 临时复核资料归档与收尾门禁
+
+- 已完成可验证阶段：将本批 `.work/phase2-b95/` 可恢复移动到 `~/.Trash/phase2-b95-finalized.0seELP/phase2-b95`；归档精确为198文件、36 MB，项目内对应workdir不存在。旧attempt的16份pending空工作项另在 `~/.Trash/phase2-b95-stale-review.ud9Md6/review` 保留。
+- 阶段修改文件：ignored临时review/render目录移出项目工作区；本 `PROGRESS.md`。正式PDF、TeX源、receipts保留。
+- 验证结果：归档前16/16 PDF SHA/字节/页数匹配receipt；归档后review=`FINALIZED`、build=`OK`（4 succeeded、0 stale/failed/invalid/missing/pending）、provenance=`OK：4卷`、source manifest validate通过、manifest CSV=`当前且775行`。此前全库report check通过。三份README差异仍保持未暂存。
+- 剩余任务：最终检查tracked diff与b95文件所有权、`git diff --check`，只提交b95 receipts/manifest/reports/CSV/全局派生报告与本进度；保留README差异。全量测试的唯一失败仍是65条跨批缓存状态漂移，未在b95中批量重写。
+- 下一步：逐文件审阅b95当前diff和暂存范围；精确提交b95闭环，之后复核最终Git状态与README差异未变。
