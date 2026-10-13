@@ -3605,3 +3605,11 @@
 - 验证结果：manifest CSV=`当前且775行`；来源manifest validate、phase0-b02 provenance=`OK：4卷`、solution source四卷23题校验、projects/short answers/editions三项batch `--check`均通过。build validator保持`PENDING_REVIEW`（4 pending，0 stale/failed/invalid/missing）；review validator返回预期`VISUAL_FAILED`（仅批准保留的2020文科5项）。`report.py check --all`仅报告三份被保护README与渲染器期望汇总行不一致；其余全库投影均无差异，不覆盖README。定向测试6个模块共373项，372通过、1失败；唯一失败仍是全库 `test_the_cached_states_match_the_recomputed_ones`，发现2017—2026既存65条跨批缓存状态漂移，与phase0-b02无关（此前全量测试已记录同一问题）。
 - 剩余任务：安全清理本批build中间物及ignored渲染/workitem，逐PDF核验SHA/字节/页数；最终检查批次receipt/报告、README哈希和diff，提交投影与阶段收尾。视觉失败需继续准确保留。
 - 下一步：先只读盘点四卷 `build/` 文件和299页PDF回执指纹、`.work/phase0-b02`文件数/体积；确认目标后清理非PDF编译物并将临时复核资料可恢复归档。
+
+### phase0-b02 编译中间物清理与PDF核验
+
+- 已完成可验证阶段：清理前确认四个build目录仅含四版PDF与对应的latexmk `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`；运行前后均逐份对照正式build receipt的SHA-256、字节数和pdfinfo页数。执行四卷 `latexmk -c -outdir=build` 后，每目录严格只保留四份PDF。
+- 阶段修改文件：四卷ignored `build/` 清除了编译中间物，PDF与LaTeX源均保留；包含299页PNG、16张联系表、16份review workitem的 `.work/phase0-b02/` 共337文件/52MB已可恢复移动至 `~/.Trash/phase0-b02-finalized.oa6w5Z/phase0-b02`；本进度文件。
+- 验证结果：清理后16/16 PDF的SHA-256、字节数及页数仍与receipt一致；四个build目录各恰有4份PDF，无非PDF文件；原项目`.work/phase0-b02`已不存在，完整资料仍在Trash归档。
+- 剩余任务：审阅phase0-b02闭环diff和报告/manifest受控文件范围；复核三份README用户差异hash；提交投影及最终进度。当前批次保留官方`VISUAL_FAILED`状态，不能报告为全通过；全库报告check的唯一差异是受保护README汇总行。
+- 下一步：运行清理后的phase0-b02最终定向门禁、核验receipt与PDF，再精确暂存manifest CSV/非README报告投影及本进度并提交；README差异继续保留。
