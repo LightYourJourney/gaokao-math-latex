@@ -3824,3 +3824,13 @@
 - 登记结果：16工作项、297页、2376项全部pass且note非空；3警告逐项精确豁免：2024Ⅰ印刷answers.tex517–518行→PDF10页；2025Ⅱ解析answers.tex857行→PDF20页；2025Ⅱ简答answers_short.tex36–37行→PDF6页。高清确认均无裁切/重叠，只有轻微行宽不齐或长答案正常分行。
 - 验证：provenance OK：4卷，build validator OK（4pending、0stale/failed/invalid），questions生成检查通过，review工具定向测试66/66通过。2025Ⅰ第11题源文sinC/sin²C冲突未改，仍内容blocked；尚未finalize。
 - 修改文件：两份2025解析正文及生成answers.tex、两卷build receipts、manifest事务元数据与本进度；ignored workitem和视觉证据。下一步：定向测试完成后精确提交前置检查点，保护README用户差异并checked finalize，刷新报告/CSV、清理编译中间物、核对16PDF后提交闭环。
+
+### phase0-b05 正式关闭、报告刷新与构建清理
+
+- 已完成：checked finalizer 返回 `FINALIZED`，批次 `closed_with_blockers`，revision 4131；报告明确保留 2025 全国1卷第11题来源冲突 ISSUE-0048。四卷16版、297页的8项复核记录全部通过；3条轻微 Underfull 已按具体页/源码行记录豁免。最终报告 `reports/phase0-b05.md` 已生成，保留 2024Ⅱ既有视觉问题记录 ISSUE-0981–0983。
+- 修改文件：四卷 `receipts/build.json` / `receipts/review.json`、`source-manifest.json`、`missing-issues.md`、`manifest.csv`、phase0-b05报告、全量 baseline/README/inventory 报告投影及本进度。三份用户 README 差异先隔离后恢复，精确 diff SHA-256 仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`；专用 stash 已清空。
+- 验证：manifest 校验775条通过；构建回执 `OK`（4 succeeded，0 missing/stale/failed）；review `FINALIZED`（4卷）；provenance `OK：4卷`；CSV check当前且775行；报告全量渲染及check成功；`git diff --check`通过。16份PDF逐一核对 SHA-256、字节数和 `pdfinfo` 页数均匹配正式receipt，共4,137,307字节、297页。四个build目录执行 `latexmk -c -outdir=build` 后各仅剩4份PDF，7份TeX源齐全。
+- 临时资产说明：本次归档前 `.work/phase0-b05/` 已不存在，检查到 `.work/` 为空；没有声称本轮将工作项/PNG归档。清理尝试生成的空Trash目录已移除。OCR模型、环境及其缓存路径不在清理范围内。之前已归档的旧review工作项仍在各自Trash目录。
+- 阶段结果：本批内容、来源、构建和视觉审查已按门禁登记；仅 ISSUE-0048 来源冲突未解除。报告生成时三份README与渲染投影一致；恢复用户原始README改动后，全量报表投影仍会显示这三份受保护README的已知差异，不覆盖其用户内容。
+- 剩余任务：全题库1952—2026尚未完成；下一批 `phase0-b06` 已在manifest中处于 `compiled_pending_review`，包含2026全国1回忆版及全国2卷。OCR升级的独立gold、正文/layout OCR与MinerU对比、题目IR、路由和成本基准仍待推进；65条历史跨批provenance漂移仍待单独处理。
+- 下一步：提交本批正式关闭记录（不含三份受保护README）；随后恢复时先检查diff与本进度，按manifest现有attempt继续phase0-b06复核，不重复b05构建或视觉检查。
