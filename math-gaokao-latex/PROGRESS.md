@@ -3613,3 +3613,11 @@
 - 验证结果：清理后16/16 PDF的SHA-256、字节数及页数仍与receipt一致；四个build目录各恰有4份PDF，无非PDF文件；原项目`.work/phase0-b02`已不存在，完整资料仍在Trash归档。
 - 剩余任务：审阅phase0-b02闭环diff和报告/manifest受控文件范围；复核三份README用户差异hash；提交投影及最终进度。当前批次保留官方`VISUAL_FAILED`状态，不能报告为全通过；全库报告check的唯一差异是受保护README汇总行。
 - 下一步：运行清理后的phase0-b02最终定向门禁、核验receipt与PDF，再精确暂存manifest CSV/非README报告投影及本进度并提交；README差异继续保留。
+
+### phase0-b02 清理后门禁与提交准备
+
+- 已完成可验证阶段：清理后复跑manifest CSV、provenance、build/review batch校验；审阅manifest CSV的四行差异、全库baseline/汇总表及来源库存的phase0-b02状态变化。
+- 阶段修改文件：最终投影候选为 `manifest.csv`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md` 与本进度文件；三份README仍是既有用户差异，不纳入提交。
+- 验证结果：CSV当前且775行；provenance=`OK：4卷`；build=`PENDING_REVIEW`（当前正式receipt有效，4卷pending review）；review=`VISUAL_FAILED`（诊断报告/receipt当前且精确登记5项已批准题号失败）；`git diff --check`通过。三个README合并二进制diff SHA-256仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。manifest/report投影将四卷显示为compiled与批次`compiled_pending_review`，符合receipt；完整测试的65项历史状态漂移失败和受保护README导致的`report.py check --all`三路径差异均已如实记录。
+- 剩余任务：提交已验证的CSV和三项非README投影及本进度；最后核验HEAD提交范围、工作树只剩三份README用户差异，且不push。phase0-b02有正式登记的视觉失败，维持未关闭状态。
+- 下一步：精确暂存上述4个投影文件与本进度，审阅cached diff后提交并执行最终status核验。
