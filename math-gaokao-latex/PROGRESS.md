@@ -3429,3 +3429,11 @@
 - 验证结果：该卷四份工作项均绑定当前attempt、JSON结构可读，46/46页为pass。三卷累计视觉复核122/166页。
 - 剩余任务：复核全国Ⅱ理科44页；完成四卷warning豁免/回执对账，checked finalize并刷新provenance与报告/CSV；再做全库门禁、完整测试、清理和提交。
 - 下一步：生成并检查全国Ⅱ理科四版联系表，完成该卷44页复核后更新进度。
+
+### phase2-b95 全国Ⅱ卷理科当前PDF逐页复核
+
+- 已完成可验证阶段：对全国Ⅱ理科四版共44页的当前attempt PDF进行100 dpi逐页视觉检查；放大复看试题版第2页几何图、第3页频率直方图、第5页抛物线图，以及印刷版第2/3/13页的频率图、立体图和末题。解析版所有图稿、答案框、分页、字号、题号/选项及页眉页脚均逐页检查，未见新增视觉缺陷。
+- 阶段修改文件：ignored `.work/phase2-b95/review-100dpi/2006_全国Ⅱ卷_理科/` 下页面PNG及四版联系表；该卷四份 ignored review work item 记录44页、共352项检查通过；本进度文件。正式PDF及回执未改。
+- 验证结果：该卷四份工作项均绑定当前attempt、JSON结构可读，44/44页为pass；四卷累计166/166页视觉检查通过，尚未登记正式receipt。
+- 剩余任务：对账四卷警告豁免与当前build记录；通过官方checked finalize刷新provenance、review、batch/report及manifest CSV；再跑批次/全库门禁和完整测试，清理辅助文件/临时渲染，逐PDF核验SHA/字节/页数并提交。
+- 下一步：逐卷比较build receipt中的overfull警告与旧review豁免，精确补入当前工作项豁免；先做review结构自检，再checked finalize，不改题源或PDF。
