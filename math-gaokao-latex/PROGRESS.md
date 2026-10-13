@@ -3621,3 +3621,11 @@
 - 验证结果：CSV当前且775行；provenance=`OK：4卷`；build=`PENDING_REVIEW`（当前正式receipt有效，4卷pending review）；review=`VISUAL_FAILED`（诊断报告/receipt当前且精确登记5项已批准题号失败）；`git diff --check`通过。三个README合并二进制diff SHA-256仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。manifest/report投影将四卷显示为compiled与批次`compiled_pending_review`，符合receipt；完整测试的65项历史状态漂移失败和受保护README导致的`report.py check --all`三路径差异均已如实记录。
 - 剩余任务：提交已验证的CSV和三项非README投影及本进度；最后核验HEAD提交范围、工作树只剩三份README用户差异，且不push。phase0-b02有正式登记的视觉失败，维持未关闭状态。
 - 下一步：精确暂存上述4个投影文件与本进度，审阅cached diff后提交并执行最终status核验。
+
+### phase0-b02 阶段提交与工作树核验
+
+- 已完成可验证阶段：已提交phase0-b02正式复核事务（`93eac614`）、构建/复核checkpoint（`3bf376fe`）、事务与门禁记录（`9404e7fa`、`085f69af`、`f037fa56`）及全库投影（`5a018c3c`）。
+- 阶段修改文件：当前阶段所有权改动已分别提交；最后投影提交包括manifest CSV、baseline/全库报告/来源库存和本进度。无新增题源、答案、LaTeX/PDF内容改动。
+- 验证结果：提交后分支 `feat/gaokao-phase0`，无staged改动；工作树只剩三份既有README用户差异，合并diff SHA-256仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`；`git diff --check`通过；stash列表为空；未push。批次保留官方`VISUAL_FAILED`状态，5项用户批准的2020文科取消题检查失败已如实登记。
+- 剩余任务：phase0-b02未获得“视觉全通过”的闭环状态；若后续要将取消题题号检查转为通过，须先有新的明确内容裁定，不能擅自删题或伪造通过。1952—2026总语料继续未完成；完整测试仍有65条跨批缓存状态漂移，README汇总行差异是用户改动保护导致。
+- 下一步：本阶段停止，不自动推进到后续批次；等待后续范围/裁定。保留本地提交，不push。
