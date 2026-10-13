@@ -3629,3 +3629,11 @@
 - 验证结果：提交后分支 `feat/gaokao-phase0`，无staged改动；工作树只剩三份既有README用户差异，合并diff SHA-256仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`；`git diff --check`通过；stash列表为空；未push。批次保留官方`VISUAL_FAILED`状态，5项用户批准的2020文科取消题检查失败已如实登记。
 - 剩余任务：phase0-b02未获得“视觉全通过”的闭环状态；若后续要将取消题题号检查转为通过，须先有新的明确内容裁定，不能擅自删题或伪造通过。1952—2026总语料继续未完成；完整测试仍有65条跨批缓存状态漂移，README汇总行差异是用户改动保护导致。
 - 下一步：本阶段停止，不自动推进到后续批次；等待后续范围/裁定。保留本地提交，不push。
+
+### phase0-b03 中断恢复与重建前核验
+
+- 已完成可验证阶段：按恢复约定检查分支、未提交差异及本进度文件；依据总计划确认 phase0-b03 是下一批（2020新高考Ⅱ、2021新高考Ⅰ/Ⅱ）。核对三卷来源manifest、题数、issue/provenance记录、生成结果与既有报告；复用现有转录/解析，不重复录题。
+- 阶段修改文件：本进度文件；另更新本计划的ignored SDD ledger。三份既有README差异保持原样。
+- 验证结果：source manifest validate、solution_sources（3卷×22题）、projects/short-answer/edition `--check`、provenance=`OK：3卷`均通过。build validator发现2020新高考Ⅱ及2021新高考Ⅰ回执因生成输入树和工具链变更stale，2021新高考Ⅱ为pending；review旧回执/工作项均不再与当前批次输入绑定（已登记255页旧review结果）。决定对3卷统一正式重建，再复核全部当前attempt页面。Ruling：phase0-b02依用户决定保留5项取消题题号视觉失败；这不阻止继续时间顺序中的phase0-b03，代价是b02仍保持未闭环VISUAL_FAILED，报告中如实保留。
+- 剩余任务：归档旧attempt的12份workitem，正式重建3卷12版；准备新workitem并为三卷分配互不重叠视觉复核；主会话负责warning核验、事务finalize和总manifest/报告。
+- 下一步：运行phase0-b03 formal batch build，保存attempt/PDF页数/警告数据，不改题源与生成文件。
