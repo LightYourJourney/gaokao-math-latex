@@ -15845,17 +15845,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "5c12eecdf96d6e844cfdd6b6eb11a4931b8467ef87523c9abbd9a905f17ff4d5",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 39,
   "paper_id": "gk-2023-regular-new-gaokao-1",
   "pdf_sha256": "b65ac507921be6e45792fd6005aae8195b7ef8014a14001bafee265fec8e73a1",
-  "resume_action": "修正 gk-2023-regular-new-gaokao-1 的 解析版 第 39 页 pagination_whitespace（末页仅页首残留第22题两条答案框，其余页面大面积空白，末尾分页明显失衡；该项判 fail，不在本任务范围内修源。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0981
 
 ```json

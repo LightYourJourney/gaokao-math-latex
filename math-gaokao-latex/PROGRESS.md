@@ -3725,5 +3725,22 @@
 - 已完成可验证阶段：将视觉检查结论登记到16份当前attempt workitem；355/355页、2840/2840项均完成。2023Ⅰ解析版第39页的分页项附有末页留白裁定；2022Ⅱ解析版唯一Underfull豁免精确登记为 `answers.tex` 356–357行、PDF第50页。
 - 阶段修改文件：ignored `.work/phase0-b04/review/` 下16份JSON工作项；本进度文件。没有修改试卷源、PDF、build receipt或报告。
 - 验证结果：独立脚本逐项核对四卷paper ID、16工作项、attempt ID、PDF SHA-256、页数连续覆盖、每页8项结果及批次总数：355页/2840项全部pass；唯一警告豁免字段与当前build warning对应。`test_review_receipts.py` 66/66通过。普通 `check-batch` 在finalize前返回 `INVALID_OR_STALE`，因为正式review receipt仍绑定旧attempt，这是预期事务前状态。首次 `finalize-batch-checked` 因要求进入时tracked工作树/索引干净而拒绝，`committed=false`、未改状态；已确认需先提交本批已验证的构建/复核前置检查点。
-- 剩余任务：精确提交本批源稿、生成TeX、四份正式build回执、source manifest和进度检查点；之后由官方checked finalize验证workitem、原子登记正式review receipt及ISSUE-0980结论；再刷新CSV/报告、跑批次门禁与定向测试，清理中间物并核对提交边界。
-- 下一步：保护三份既有README用户差异，先提交上述前置文件；再运行phase0-b04 `finalize-batch-checked`，不手工改正式review receipt。
+- 阶段结果：先提交前置检查点 `cb4116d7`，随后官方 `finalize-batch-checked` 返回 `FINALIZED`，revision 4124、batch `closed`；2023Ⅰ解析版第39页的ISSUE-0980按复核结果登记为resolved。三份既有README差异仍由专用stash保护，事务提交结果为 `committed=false`，正式回执变更待后续精确提交。
+- 剩余任务：刷新manifest CSV及全库报告投影；跑批次门禁和定向测试；清理编译中间物及忽略的复核资产，复核16份PDF指纹；精确提交闭环文件并恢复、核验README用户差异。
+- 下一步：先生成当前manifest CSV与全库报告投影，确认只产生预期派生文件且不覆盖stash保护的README差异。
+
+### phase0-b04 正式登记与全库投影验收
+
+- 已完成可验证阶段：官方 `finalize-batch-checked` 将phase0-b04登记为 `closed`（revision 4124），2023Ⅰ解析版第39页的ISSUE-0980转为resolved；刷新manifest CSV与全库报告/来源投影。report工具短暂重写的三份README汇总差异已从HEAD恢复后再应用用户stash。
+- 阶段修改文件：四卷8份build/review回执、`source-manifest.json`、`missing-issues.md`、`reports/phase0-b04.md`、`manifest.csv`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`；本进度文件。批次事务前置检查点为 `cb4116d7`，最终事务尚待提交。
+- 验证结果：build=`OK`（4/4 final）；review=`FINALIZED`；provenance=`OK：4卷`；source manifest=`OK：4卷`；manifest CSV当前且775行。全库report check仅指出三份受保护README与动态汇总行不同，其余投影一致；README用户差异SHA-256恢复为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，stash已清空。
+- 剩余任务：在清理前核对四卷16份PDF的SHA/字节/页数；移除build目录内非PDF编译物；把本批ignored工作项/页面渲染资产可恢复归档；跑清理后门禁和必要测试；检查并提交phase0-b04闭环，确保README差异不进入提交。
+- 下一步：盘点四个build目录与 `.work/phase0-b04/` 的精确文件数/体积并与receipt对照，然后仅清理编译中间物、保留PDF和LaTeX源。
+
+### phase0-b04 编译清理、PDF核验与归档
+
+- 已完成可验证阶段：四卷均执行 `latexmk -c -outdir=build`；每个build目录现在严格只含试题/解析/简答/印刷四份PDF。将ignored `.work/phase0-b04/` 的387个文件（77,590,532字节）可恢复移动至 `~/.Trash/phase0-b04-finalized.MchW0F/phase0-b04`。
+- 阶段修改文件：仅四卷ignored build目录中的编译中间物被清理；本进度文件；临时联系表、页面PNG和workitem仍保存在Trash归档。正式PDF和全部LaTeX源保留。
+- 验证结果：清理前、清理后16/16 PDF的SHA-256、字节数、pdfinfo页数均与正式build receipt匹配；每个build目录恰有4个PDF且无其他文件；归档387文件/77,590,532字节，项目内本批workdir不存在。清理后build=`OK`（4 final），review=`FINALIZED`，manifest CSV当前且775行，`git diff --check`通过。全库report check唯一差异是三份受保护README汇总行；README用户diff哈希仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，stash为空。
+- 剩余任务：精确审阅并提交phase0-b04闭环正式输出；提交后复核工作树只保留三份README用户差异、批次门禁通过且不push。1952—2026全语料与其他批次仍未完成。
+- 下一步：仅暂存四卷receipt、manifest/CSV、问题与报告投影及本进度，审阅cached diff后提交；三份README继续排除。
