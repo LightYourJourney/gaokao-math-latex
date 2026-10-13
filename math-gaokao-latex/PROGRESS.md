@@ -3863,3 +3863,36 @@
 - 修改文件：本进度文件；2021全国甲卷文科 build/review receipts、PDF；`source-manifest.json`、`manifest.csv`、`reports/phase1-b07.md`。未改题源、答案、provenance逐题证据或其他卷内容。
 - 提交状态：本批六个文件已合并为单一提交；三份受保护README未暂存、未提交；未push。
 - 下一步：按manifest顺序预检 `phase1-b08`，只在当前旧回执stale时重建并重新复核。
+
+### `phase1-b08` — 2023 全国甲卷文科预检（进行中）
+
+- 已完成可验证预检：manifest显示单卷、23题；`generate_projects --check`、`solution_sources check-batch` 通过；provenance逐题证据无题文/答案摘要错误，但派生状态缓存为 `compiled`，现场为 `editions_generated`，批次为 `provenance_verified`。此前 build/review validator 已确认旧构建因生成依赖树与工具链指纹变化 stale，不能复用旧页级回执。
+- 已完成子阶段：官方 formal build 以 attempt `a550db73-00fb-467a-9373-3e9e3a2ccdf7` 重建四版。页数试题4、解析27、简答6、印刷20，共57页；四版均 succeeded，编译错误、缺字符、Overfull/Underfull、引用与build problems均为0。Build receipt validator=`OK`（1 pending review、0 stale/failed/invalid/missing），provenance check=`OK：1卷`。
+- 修改文件：本进度文件、该卷 build receipt/PDF及manifest派生状态；未改题源、答案、provenance逐题证据或解题，也未重做OCR。
+- 下一步：官方 `prepare-batch` 建立当前attempt工作项，核对绑定与页覆盖，再对当前57页逐页复核并重点查看候选页。
+
+### `phase1-b08` — 首轮逐页视觉检查（发现局部分页问题）
+
+- 已完成：复用当前 attempt 的四版联系表检查57页，并查看11张既有120dpi候选页（试题3、解析2、简答3、印刷3），未重复渲染。其余页面未见明显裁切、遮挡、缺字或图文错配。
+- 发现待处理项：2023全国甲卷文科印刷版第15页底部仅余“解析”小标题，属于孤立标题风险；尚未查看下一页高清图或对应生成源，未登记该页/该版通过。
+- 修改文件：仅本进度文件；未改题文、答案、生成TeX或回执内容。
+- 下一步：定向查看印刷版第16页及Q18/Q19分页源码，确认是否能通过局部分页提示修复；若需改源，按官方生成/构建门禁仅重建受影响版本并复核变动页，再完成全卷逐页登记。
+
+### `phase1-b08` — Q19 孤立解析标题的局部修复（生成验证通过）
+
+- 根因确认：印刷版第15页在Q19题面后仅剩“解析”标题，第16页才有“(1)”与首段。规范源生成的标题前仅有 `\Needspace{4\baselineskip}`，而 `\gksubpart` 自身需要6行；这是标题和小问保护量衔接不足。
+- 修复：只在2023全国甲文Q19解析标题前加入 `\Needspace{8\baselineskip}`，让标题和首个小问整体移至下一页。原题、数字、解答步骤及结论不变；未改共享转换器，避免扩散至其他已构建卷。
+- 验证：官方 `generate_projects.py --paper gk-2023-regular-national-a-arts --write` 写入3个派生目标；随后同卷 `--check` 通过。生成的 `answers.tex` 中Q19解析前实际出现本地8行保护，后续仍保留统一4行解析标题保护。
+- 构建前门禁结果：source manifest 775项校验通过。首轮 `solution_sources check-batch` 指出由规范解析源派生的 `*_含解析.md` 尚未刷新；provenance/build validator 同时指出派生状态与依赖哈希已按预期变为stale，尚未正式构建。这些是传播顺序门禁，不是题目证据变化。
+- 已按项目唯一来源链运行 `solution_sources extract-batch --batch phase1-b08 --write`，提交2个目标；随后solution-source batch check通过（23题）。`test_generate_projects.py` 106项全部通过；负例测试的CLI报错输出是断言用例预期内容，整体测试退出码为0。
+- 修改文件：规范解析源、本卷派生TeX/provenance及本进度文件。当前构建和逐页复核回执仍绑定旧源，尚未重建；未对第15页登记通过。
+- 下一步：`generate_projects --check`确认解析投影同步后，正式重建本卷四版以刷新当前派生状态；再核验provenance内容与build回执，对新旧页增量比对，仅高清复核变化页及受影响的候选/页边界，再完成全部57页登记。
+
+### `phase1-b08` — 当前构建全页复核完成，待事务登记
+
+- 当前attempt：`75a647cf-162e-4ba3-880b-327713f7da4c`；四版页数4/27/6/20，共57页。四版contact sheets重新渲染并逐页检查；全部57页×8项共456条检查记录已填为pass且说明非空，警告豁免为0。
+- 高清复核当前attempt：试题版p1/p3/p4，解析版p1/p20/p21/p22，简答版p1/p3/p6，印刷版p1/p4/p15/p16/p17。已确认本地修复使印刷版Q19“解析”标题与(1)及首段同处第16页，第15页题干干净收尾；第17页Q20起始正常。解析版第21页Q19解析结构完整，无挤压/溢出。接触表未发现其他需返工问题。
+- 编译日志：四版均0 errors、missing glyphs、Overfull、Underfull及build problems；build validator=`OK`，provenance=`OK：1卷`。
+- 修改文件：本进度文件、Q19规范解析源及其派生文件、2023全国甲文四版build receipt/PDF、解析源投影、manifest派生状态；忽略目录中为当前PDF重新渲染的接触表、PNG与待finalize工作项。题目、答案和推导未改，未修改共享转换器。
+- 下一步：运行 checked finalizer 事务登记并核验来源清单、build/review/provenance与PDF哈希/页数；随后按约定只清理本卷构建中间产物和本批临时work目录，保留PDF与LaTeX源文件。
+- 事务保护：首次 `finalize-batch-checked` 在写入前拒绝，返回 `committed=false`，原因是tracked工作树/索引不干净（含本批待提交产物与三份受保护README差异）。没有发生finalize写入。先提交本批精确范围作为可恢复检查点，暂存时排除三份README；随后隔离其既有差异，在干净树重跑checked finalizer，再逐字节恢复并校验README差异。
