@@ -3996,3 +3996,13 @@
 - 验证：TDD新增的 Poppler 表格解析测试先按预期失败（解析函数不存在）；实现后页分析单测7/7、直接调用 `analyze_pdf` 公共函数的公式识别器回归4/4通过，其中页分析含真实Poppler读取原生文本、1×1栅格图像和空白页的合成PDF。再对固定来源2008延考区文（7页，SHA-256 `fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2`）全卷运行：1/2/6/7只有文字层，3/4有文字与图像对象，5页文字0且含1190×1685栅格对象；分类 `mixed_text_and_raster_candidates`。首轮在第5页既有缓存下1 hit/6 misses、0.151179秒，顺序重跑7/7命中、0.035072秒。并发启动的两次局部烟测均为cache miss，因此未把它们作为缓存收益证据。完整套件886项运行293.345秒，870通过、13跳过、3失败；失败仍是task28/task29摘要SHA漂移及52卷缓存派生状态不符的历史问题，未改基线。`git diff --check`通过；工作树检查确认仅新增两段OCR相关源/文档差异，三份既有README差异保持不变。
 - 成本/质量：本阶段0 OCR调用、0聊天模型调用；真实 Agent Token/API费用仍不可得，不能量化节省率。记录到的时间是本机单份7页样本观察，不能外推。栅格元数据只定位需要检查/可能OCR的页面，不是OCR准确度或试卷内容验收。
 - 剩余/下一步：`pdfimages -list`可给图像对象维度，不给语义位置，故仍无法判断图像是整页扫描、图表还是装饰；倾斜、模糊、裁切、阅读顺序和数学符号仍需视觉核对。人工签核gold、MinerU/Paddle正文/布局同输入比较、题目级IR/路由、通用题目缓存、三版输出/八项端到端门禁和真实Token/费用基线尚未完成。下一步复核pending OCR gold并形成可由人签核的短评测切片，再比较候选OCR；不重复公式识别或已验证试卷解题。
+
+### OCR Phase 1：按页文字 OCR、来源绑定与持久缓存（2026-10-13）
+
+- 已完成：新增 `tools/ocr_pdf.py`，复用 `analyze_pdf.py` 的文字/栅格判据，并通过 Poppler 渲染单页、Tesseract 5 OCR。自动模式只处理“无文字层且存在栅格对象”的页；`--page` 是显式覆盖，输出仍保持未核验。每页回执保留 source_id、源PDF SHA、页码、渲染DPI/bbox、图像SHA、引擎和语言模型指纹；没有自动写回规范题目、答案、解析或 gold。
+- 缓存：渲染缓存位于忽略目录 `.work/ocr-page-cache/render/`，按PDF SHA/页/DPI/Poppler二进制指纹寻址，并由哈希 sidecar 检查图像完整性；OCR结果在 `.work/ocr-page-cache/results/`，键还包括渲染图SHA、Tesseract二进制/版本、语言及对应 `traineddata` SHA、PSM/DPI。成功的空识别结果保存为 `empty_unverified`；异常不重试、不缓存；`--no-cache` 关闭分析/渲染/OCR三层缓存。默认输出摘要，全文只在显式 `--include-text` 时输出。
+- 修改文件：新增 `tools/ocr_pdf.py`、`tests/test_ocr_pdf.py`；更新 `docs/TOKEN_AUDIT.md` 与本 `PROGRESS.md`。仅增加忽略 `.work/` 缓存；未改上游PDF、题源、答案、OCR gold、manifest、LaTeX、构建产物或审核回执。三份预存 README 用户差异未修改、未暂存。
+- 验证：新增单测10项覆盖自动筛页、显式覆盖的未验证状态、DPI失效、损坏渲染重建、OCR错误不缓存/不重试、无候选时不启动OCR、traineddata指纹变化及缺少语言失败、非对象缓存体按损坏处理。后者先按预期以 `AttributeError: 'list' object has no attribute 'get'` 失败，再经字典类型校验修复。与 `test_analyze_pdf.py`、`test_recognize_formula.py`、`test_score_ocr.py` 合计28/28通过。真实源1989上海卷第1页（source SHA `79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766`）以Tesseract 5.5.3、chi_sim+eng、180dpi识别1次，页面1253×1757；第一次约2.513秒。复跑命中OCR缓存、0次OCR；渲染sidecar稳定后再次运行两级缓存皆命中、0次OCR、0.111671秒。stdout摘要明确 `recognized_unverified` / `needs-review`。查看缓存OCR片段发现标题基本可读，但公式、上下标和若干字符明显错识；未据此修改或补齐题源，也未计算CER/准确率。CLI `--help` 正常；`git check-ignore` 确认缓存不入库。
+- 成本：0聊天模型/API调用；本阶段实际1次本地Tesseract页推理（2.512923秒），其后缓存命中均为0 OCR调用。单页数字只说明此次运行和断点复用，不是批量基准；真实Token、费用和总体OCR成本变化未知，不宣称节省率。没有重跑全量测试；相关27项通过，历史全量套件的3个已知基线漂移未在本轮复测。
+- 剩余/下一步：该入口只对PDF整页工作；尚不支持独立图片和混合页局部裁剪，自动筛选也不能判断栅格对象的语义。还没有人工签核 gold，不能报告CER或引擎排名；MinerU、Paddle正文/布局对照、题目IR/路由、三种LaTeX版本、八项全流程检查与真实用量基准仍未完成。
+- 下一步：从已经固定的真实来源中选极少量题文/公式区域，与OCR结果逐字符人工对照并按 scorer 格式登记 pending/human_verified 状态；确认标注规则后，再在同页同区域对比 Tesseract、Paddle 和 MinerU 候选。任何未签核输出继续保留为待审，禁止自动进规范转录。

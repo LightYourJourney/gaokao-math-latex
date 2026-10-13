@@ -152,3 +152,23 @@ Gold记录用 `source_id + source_sha256 + source_page` 定位固定原件；区
 固定来源 2008 延考区文原件（SHA-256 `fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2`，7 页）实测：第 1、2、6、7 页仅检出文字层；第 3、4 页同时有文字层与栅格插图；第 5 页文字为 0 但有 1 个 1190×1685 栅格对象。全卷分类为 `mixed_text_and_raster_candidates`，不再把此具体页仅留在“扫描或空白”二选一里。顺序复跑，全页缓存命中 7/7、未重提取，0 OCR/模型调用。全卷首轮在第 5 页已有缓存时为 1 hit/6 misses，0.151179 秒；重复运行 0.035072 秒。这是单机单样本观察；另有两次并发单页烟测都报告 miss，属于缓存尚未写入时的竞争，不用于缓存节省量统计。
 
 `test_analyze_pdf.py` 7/7、直接依赖分析器公共方法的 `test_recognize_formula.py` 4/4 通过，覆盖图像与辅助 mask 计数、真实 Poppler 三页文字/图像/空白 fixture、页缓存与损坏缓存恢复。完整套件 886 项运行293.345秒：870通过、13跳过、3失败。失败仍为已记录的历史漂移：task28/task29的来源摘要哈希不匹配，以及52卷缓存派生状态不符；未修改这些基线。真实扫描页的OCR准确率、页面倾斜/清晰度判断、人工gold和聊天模型Token/费用仍未知；不宣称OCR或Token节省率。
+
+### OCR Phase 1：缓存式按页文字 OCR 闭环（2026-10-13）
+
+新增 `tools/ocr_pdf.py`，串接既有 `analyze_pdf.py`、Poppler `pdftoppm` 与系统 Tesseract，不新增 Python 依赖。默认完整扫描页级文字/栅格证据，只自动识别“无原生文字且有栅格对象”的页；原生文字页、混合内容页、疑似空白页不自动重复 OCR。`--page` 可显式覆盖选择，但会在结果里标记 `explicit_page_override`。Tesseract 文档支持 `-l` 多语言、`--psm` 页面分割模式及 `--dpi` 输入分辨率；本机 5.5.3 的这些参数已在实际 1989 来源页调用中验证。[Tesseract CLI 文档](https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md)
+
+两级缓存位于忽略目录 `.work/ocr-page-cache/`：渲染缓存键绑定 PDF SHA、页码、DPI、Poppler 可执行文件路径/版本/SHA，并用原子 sidecar 校验 PNG 内容哈希和尺寸；OCR 结果键绑定页面图像 SHA、Tesseract 可执行文件与版本、请求语言、对应 `.traineddata` 模型 SHA、PSM/DPI 和工具链配置。成功但空白的识别结果也会缓存为 `empty_unverified`；工具失败、超时不重试且不缓存。`--no-cache` 同时关闭页分析、渲染及识别缓存。默认 stdout 只给摘要，`--include-text` 才输出识别全文。
+
+使用示例：
+
+```bash
+python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf --source-id src-...
+python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf --page 3 --dpi 180 --include-text
+python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf --languages chi_sim+eng --psm 3 --no-cache
+```
+
+每页结果携带来源 SHA、source_id（若提供）、原页码、渲染 bbox/DPI、图像 SHA、引擎及模型指纹、缓存状态。所有结果固定为 `recognized_unverified` 或 `empty_unverified`、`needs-review`、`not_verified`；不修改规范题目、答案、解析或 OCR gold。`page_text` 目前是整页识别，不处理图文混合页的局部区域，也不支持独立图片输入；页面分析不能判断图像语义，因此显式页 OCR 仍可能重复识别页内已有文本。
+
+真实烟测复用固定来源 1989 上海卷第1页（source_id `src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd`，PDF SHA-256 `79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766`），180dpi 得到1253×1757图像。Tesseract 5.5.3 首次OCR约2.513秒，实际识别1次；同页复跑识别缓存命中，`ocr_calls=0`（此前单次观察0.100秒）；加入渲染 sidecar 校验后再跑，页面/识别两级缓存都命中，`ocr_calls=0`、0.112秒。只作为单页执行与恢复验证，不是通用性能基准。输出标题大致可读，但题目中的公式、上下标、字符有明显错误；按设计保留为待人工核对候选，**没有得到可报告的CER或数学准确率**。没有调用聊天/API模型，真实Token及费用仍未知。
+
+新增 `test_ocr_pdf.py` 10项；与页分析、局部公式 OCR、评分器相关测试合计28项全部通过。代码审查发现并用回归测试修复了“校验和正确但 JSON cache body 类型错误”会逸出 `AttributeError` 的边界。全量测试未在本小阶段重跑；当前历史全量基线仍记录三项无关漂移（task28/task29来源摘要SHA、52卷派生缓存状态）。下一步先形成少量人工核对 gold，再在相同页/区域比较 OCR；MinerU、完整 Paddle 正文/布局识别、图片输入、题目级 IR/路由、三版 LaTeX 和八项端到端验收仍未完成。该增量只证明可选择性调用和续用本地缓存，不声称已经降低了可观测聊天 Token 或整体OCR成本。
