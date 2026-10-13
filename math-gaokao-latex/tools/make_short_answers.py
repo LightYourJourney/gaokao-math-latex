@@ -58,6 +58,10 @@ SEE_SOLUTION = "见解析版"
 SHORT_ANSWER_OVERRIDES = {
     ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
 }
+# 单选题速查表的本卷排版例外：25列会超出可用版心，分成两张表显示。
+TABLE_COLUMN_LIMIT_OVERRIDES = {
+    "gk-1989-regular-guangdong-science": 13,
+}
 
 _SOLUTION_HEAD = re.compile(r"^\\gksolhead(?:withlabel)?\{(\d+)\}\{")
 # 生成答案块转成 LaTeX 后的两种形态：`**答案：X**` 独立段落走 \gkanswer；答案值里含
@@ -342,12 +346,27 @@ def _table(labels: Sequence[str], letters: Sequence[str]) -> str:
             "\\end{tabular}\\end{center}")
 
 
+def _tables(
+    labels: Sequence[str], letters: Sequence[str], max_columns: Optional[int]
+) -> str:
+    if max_columns is None or len(labels) <= max_columns:
+        return _table(labels, letters)
+    if max_columns < 1:
+        raise ShortAnswerError("答案表列数上限必须为正整数")
+    tables = [
+        _table(labels[start:start + max_columns], letters[start:start + max_columns])
+        for start in range(0, len(labels), max_columns)
+    ]
+    return "\\medskip\n".join(tables)
+
+
 def render_short_answers(
     title: str,
     answer_key_relative: str,
     structure: Mapping[str, Sequence[int]],
     answers: Mapping[int, str],
     printed_labels: Optional[Mapping[int, str]] = None,
+    max_choice_columns: Optional[int] = None,
 ) -> str:
     """渲染一卷的 answers_short.tex 全文。"""
     groups = normalize_structure(structure)
@@ -374,8 +393,9 @@ def render_short_answers(
         if name in CHOICE_GROUPS:
             parts.append(
                 "\\gkpart{" + name + "}\n"
-                + _table([display(number) for number in numbers],
-                         [letters[number] for number in numbers])
+                + _tables([display(number) for number in numbers],
+                          [letters[number] for number in numbers],
+                          max_choice_columns)
             )
             continue
         lines = ["\\gkpart{" + name + "}", "\\begin{itemize}[leftmargin=2.6em]"]
@@ -486,6 +506,7 @@ def generate_short_answers(
         {name: (low, high) for name, low, high in sources.structure},
         answers,
         printed_labels=printed_labels,
+        max_choice_columns=TABLE_COLUMN_LIMIT_OVERRIDES.get(sources.paper_id),
     )
     target = "%s/%s/answers_short.tex" % (PROJECT_RELATIVE, sources.project_dir)
     return (

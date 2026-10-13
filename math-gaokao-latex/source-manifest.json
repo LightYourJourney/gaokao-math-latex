@@ -1262,6 +1262,14 @@
         "gk-1989-regular-national-science"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-1989-regular-guangdong-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1271,7 +1279,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cf47992f-cbcb-41ad-b4c2-d08f47d53f53",
+  "last_transaction_id": "77ebae5c-105a-4a9b-b716-8d902c0904d0",
   "papers": [
     {
       "blocked_from": null,
@@ -19126,9 +19134,77 @@
       "title": "1989 年·全国卷·理科",
       "track": "science",
       "year": 1989
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1989_广东卷_理科/figures/f1989_guangdong_science_q25_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1989_广东卷_理科/figures/f1989_guangdong_science_q27_geometry_schematic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1989_广东卷_理科/figures/f1989_guangdong_science_q30_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1989_guangdong_science",
+        "id": "gk-1989-regular-guangdong-science",
+        "note": "固定来源普通高考/1989/1989广东理.pdf，SHA-256 e300fb9ae1d2b606f2cf4e6da4ee985b0014baf04c656f560326dd68d22031d1；9页，PDF第1—4页为题面，第6—9页为固定来源所附答案与解答，第5页空白。图稿依题设重建处已在题面标明非原卷图。答案与解析不是已独立审核结论，待独立复核。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          6,
+          9
+        ],
+        "paper": "广东卷（理科）",
+        "structure": {
+          "填空题": [
+            26,
+            26
+          ],
+          "解答题": [
+            27,
+            30
+          ],
+          "选择题": [
+            1,
+            25
+          ]
+        },
+        "track": "理科",
+        "variant": "广东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1989-regular-guangdong-science",
+      "production_state": "planned",
+      "project_dir": "1989_广东卷_理科",
+      "question_count": 30,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1989/1989_数学真题_广东理_答案要点.md",
+        "combined_rendered": "1989/1989_数学真题_广东理_含解析.md",
+        "questions": "1989/1989_数学真题_广东理_试题.md",
+        "solution_body": "1989/1989_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-db4a50c280ed27fa5f0f5542adec7d7fe605a216210ebbff7165fe4396b75256"
+      ],
+      "title": "1989 年·广东卷·理科",
+      "track": "science",
+      "year": 1989
     }
   ],
-  "revision": 4146,
+  "revision": 4148,
   "schema_version": 1,
   "sources": [
     {
@@ -23009,8 +23085,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ca382169158b732491681481ae5f2ebf41b04713",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1989-regular-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1989广东理.pdf",
       "regions": [],
       "source_id": "src-db4a50c280ed27fa5f0f5542adec7d7fe605a216210ebbff7165fe4396b75256",

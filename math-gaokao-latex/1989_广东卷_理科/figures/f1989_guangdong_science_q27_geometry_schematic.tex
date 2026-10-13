@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=0.9cm,y=0.58cm,line cap=round,line join=round]
+\coordinate (P1) at (-2.2,-0.5);
+\coordinate (P2) at (2.0,-0.5);
+\coordinate (P3) at (2.8,0.3);
+\coordinate (P4) at (-1.4,0.3);
+\coordinate (A) at (-1.1,0.1);
+\coordinate (B) at (1.1,0.1);
+\coordinate (C) at (0,1.35);
+\coordinate (D) at (0,-0.2);
+\coordinate (S) at (0,2.6);
+\draw[thin] (P1)--(P2)--(P3)--(P4)--cycle;
+\node at (2.35,0.05) {$\beta$};
+\draw[thick] (A)--(B)--(C)--cycle;
+\draw[dashed] (D)--(A) (D)--(B);
+\draw[thick] (S)--(A) (S)--(B) (S)--(C) (S)--(D);
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[above] at (C) {$C$};
+\node[below] at (D) {$D$};
+\node[above] at (S) {$S$};
+\node[font=\small,align=center] at (0,-1.75) {依题设关系重建的示意图；非原卷图，不表示长度比例或题目未给定的度量条件。};
+\end{tikzpicture}

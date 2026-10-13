@@ -1,0 +1,86 @@
+"""1989 广东理科规范源必须完整对齐并与来源答案保持清晰归属。"""
+from pathlib import Path
+import sys
+import unittest
+import json
+
+
+PROJECT = Path(__file__).resolve().parents[1]
+EXAMS = PROJECT.parent
+QUESTIONS = EXAMS / '1989' / '1989_数学真题_广东理_试题.md'
+ANSWERS = EXAMS / '1989' / '1989_数学真题_广东理_答案要点.md'
+SOLUTIONS = EXAMS / '1989' / '1989_数学真题_广东理_解析正文.md'
+FIGURES = PROJECT / '1989_广东卷_理科' / 'figures'
+sys.path.insert(0, str(PROJECT / 'tools'))
+import solution_sources
+import make_short_answers
+
+
+class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.questions_text = QUESTIONS.read_text(encoding='utf-8')
+        cls.answers_text = ANSWERS.read_text(encoding='utf-8')
+        cls.solutions_text = SOLUTIONS.read_text(encoding='utf-8')
+
+    def test_question_source_has_30_blocks_and_original_second_volume_labels(self):
+        blocks = solution_sources.parse_question_blocks(self.questions_text)
+        self.assertEqual(len(blocks), 30)
+        self.assertEqual([block.number for block in blocks], list(range(1, 31)))
+        self.assertEqual([block.printed_label for block in blocks[25:]],
+                         ['一', '二', '三', '四', '五'])
+        self.assertEqual([block.subparts for block in blocks[25:]],
+                         [(1, 2, 3, 4, 5), (1, 2), (1, 2), (1, 2), (1, 2)])
+
+    def test_source_notes_do_not_leak_into_printable_question_copy(self):
+        self.assertNotIn('来源第1页此处确实', self.questions_text)
+        self.assertNotIn('这是待重绘图稿的内容索引', self.questions_text)
+        self.assertIn('printed-label: 一', self.questions_text)
+        self.assertIn('3x-4y-12=0', self.questions_text)
+
+    def test_vector_figure_sources_have_valid_text_and_q25_intercepts(self):
+        figures = {path.name: path.read_text(encoding='utf-8')
+                   for path in FIGURES.glob('*.tex')}
+        self.assertEqual(len(figures), 3)
+        self.assertTrue(all(r'\不表示' not in text for text in figures.values()))
+        choices = figures['f1989_guangdong_science_q25_options.tex']
+        self.assertIn('(-2,2)--(2,-2)', choices)
+        self.assertIn('(-2,2.5)--(3,0)', choices)
+        self.assertIn('(-2,0)--(0,1.5)', choices)
+        self.assertIn('(-2,0)--(0,-2)', choices)
+        self.assertIn('(3,0)', choices)
+        self.assertIn(r'\draw[graph] (0,1.5) circle', choices)
+
+    def test_short_answer_table_is_split_to_avoid_overfull_for_25_choices(self):
+        manifest = json.loads((PROJECT / 'source-manifest.json').read_text(encoding='utf-8'))
+        paper = next(p for p in manifest['papers']
+                     if p['paper_id'] == 'gk-1989-regular-guangdong-science')
+        sources = make_short_answers.paper_sources(
+            paper, make_short_answers.INDEX_METADATA)
+        result, problems = make_short_answers.generate_short_answers(
+            PROJECT.parents[2], sources)
+        self.assertEqual(problems, ())
+        output = result.targets[
+            f"math-gaokao-latex/{paper['project_dir']}/answers_short.tex"
+        ].decode('utf-8')
+        self.assertEqual(output.count(r'\begin{tabular}'), 2)
+
+    def test_answers_and_solutions_align_with_every_question_and_keep_provenance(self):
+        question_blocks = solution_sources.parse_question_blocks(self.questions_text)
+        answer_points = solution_sources.parse_answer_points(self.answers_text)
+        solution_blocks = solution_sources.validate_solution_body(self.solutions_text)
+        self.assertEqual(len(answer_points), 30)
+        self.assertEqual(len(solution_blocks), 30)
+        self.assertEqual([point.printed_label for point in answer_points[25:]],
+                         ['一', '二', '三', '四', '五'])
+        self.assertEqual([block.printed_label for block in solution_blocks[25:]],
+                         ['一', '二', '三', '四', '五'])
+        self.assertEqual(answer_points[7].answers, ((None, 'C'),))
+        self.assertIn('B型', self.answers_text)
+        self.assertIn('待独立复核', self.answers_text)
+        solution_sources.render_combined(
+            self.questions_text, self.solutions_text, self.answers_text)
+
+
+if __name__ == '__main__':
+    unittest.main()

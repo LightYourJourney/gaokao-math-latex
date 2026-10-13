@@ -1,5 +1,14 @@
 # 高考数学 LaTeX 题库进度
 
+## 1989 广东理科：规范源、图稿登记与四版烟测（2026-10-13）
+
+- 已完成：从已核固定 PDF（SHA-256 `e300fb9ae1d2b606f2cf4e6da4ee985b0014baf04c656f560326dd68d22031d1`，9页）整理 30 个规范题块，保留来源两卷编号/第二卷“一—五”印载标签及来源答案与主会话推导的归属区别。题面可见原文照录，图稿说明明确 q27 为依题设重建示意图而非原卷图。通过 `register-papers` 将唯一来源绑定至 `gk-1989-regular-guangdong-science`、批次 `phase4-b04`（planned）；三幅 `.tex` 图稿登记次数各2（题面与合并稿）。
+- 已完成：修复 q25 四选项图的线/垂线和截距表达，纠正 q27 图中文字转义，并给 25 题简答表增加仅适用于本卷的 13 列分组，解决初次烟测发现的 130.6pt overfull hbox；未改变其他试卷布局。用现有生成器生成合并解析稿、`questions.tex`/`answers.tex`/`index.json`、简答源和四版本壳。
+- 修改文件：新增 `1989/1989_数学真题_广东理_{试题,答案要点,解析正文,含解析}.md`、`math-gaokao-latex/1989_广东卷_理科/` 下三幅 TikZ、生成 TeX/四版入口及答案速查；更新 `source-manifest.json`、`index.json`、`tools/make_short_answers.py`；新增 `tests/test_1989_guangdong_science_sources.py`；本 `PROGRESS.md`。三份既有 README 用户差异保持原样、未纳入。
+- 验证：题源与数学定向测试 13/13 通过；`test_short_answers.py` 50/50 通过；manifest validate、`solution_sources check-batch`（1卷/30题）、三个生成器 `--check` 均通过；`git diff --check` 通过。四版 XeLaTeX 烟测成功，页数依次为试题5、解析24、简答7、印刷17；四版诊断均无错误、缺字、未定义引用或 overfull/underfull。渲染并查看四版 53 页接触表，另以150dpi查看含 q25/q27 的试题第4页、以130dpi查看答案速查页；确认 q25选项图与截距、q27示意图注释和两张简答表可见，无空白页/明显裁切。此为主会话排版检查，不是独立逐题校样回执。
+- 成本/边界：复用固定原件与已有转录/数学草稿，0新下载、0 OCR、0模型/API调用；会话Token与API费用未知，不报告节省率。manifest production_state 仍为 `planned`；未写 formal build、provenance、视觉复核或 finalize 回执，不能视为内容已独立审核/正式验收。
+- 剩余/下一步：安排独立题面核源、独立解答与盲核；处理核验意见后，再进行该卷正式构建、完整逐页校样与回执门禁。广东文科缺失的来源解答部分仍需显式列出缺口/独立补解。其他已登记待审卷及1952—2026题库主目标继续进行；不得将此单卷烟测宣称为全库完成。
+
 ## 当前 OCR 增量：source manifest 身份绑定（2026-10-13）
 
 - 已完成：`ocr_pdf.py` 新增可选 manifest 接口，要求 `--source-id` 唯一匹配 `sources[]`，校验 `artifact.sha256`，并在页分析/渲染/OCR 前将固定 SHA 与实际 PDF 比较；若同时传 `--expected-sha256`，也校验其与 manifest 一致。成功结果明确给出 `source_identity_status`（manifest_verified/caller_supplied/unbound）；旧调用未启用 manifest 时兼容。
