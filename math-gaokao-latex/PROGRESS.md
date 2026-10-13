@@ -3381,3 +3381,11 @@
 - 验证结果：提交前清理后 review=`FINALIZED`、build receipt=`OK`（4成功、0失败/过期/待审）、provenance=`OK：4卷`、manifest CSV=`当前且775行`、报告投影检查通过、`git diff --check`通过；16/16 PDF SHA-256、字节数、页数与回执一致。
 - 剩余任务：ISSUE-0834需按其来源证据另行处理；1952—2026语料及后续批次尚未完成。三份既有 README 的工作区差异保留给用户。
 - 下一步：本阶段到此停止；待明确下一批范围后再继续，不自动扩展任务。
+
+### 中断恢复审计：phase2-b95 状态核验
+
+- 已完成可验证阶段：按恢复约定检查 Git diff、当前分支和本进度文件；确认仅三份既有 README 有未提交差异，b94 已提交。读取 b95 计划和报告，并运行 b95 的 review、build、provenance、source manifest 定向校验。
+- 阶段修改文件：仅本 `PROGRESS.md`；三份既有 README、b95 源稿、LaTeX 文件、PDF 与回执均未改。
+- 验证结果：b95 计划虽全勾选、旧报告标记 `closed`、四卷 review receipt 标为 `passed`，但官方现场校验均不认可：review/build 四卷回执因生成输入树与工具链指纹变化而 stale（build `stale=4`）；provenance 现场派生状态与缓存状态不符（4卷）；manifest 本身结构校验通过，但批次仍为 `compiled_pending_review`。逐项比对确认 receipt 纳入的共享转换器 `math-gaokao-2017-2026/tools/md2tex.py` 已变化，Poppler 从 26.09.0 升至 26.10.0，XeLaTeX 与 latexmk 指纹未变；四卷 `solution_sources check-batch`、生成 projects/short answers/edition 的只读检查串行运行均通过，生成内容与当前权威源一致。首次并行启动会争用 RepoLock、已改为串行且未产生写入。因此 b95 尚未完成；尚未触发正式构建。
+- 剩余任务：按当前指纹正式重建四卷16版；比较新旧 PDF SHA/页数并对新 attempt 做逐页视觉复核；通过官方事务刷新 provenance、review、batch/report 与投影，再按计划做全库门禁、完整测试、清理及提交。不得覆盖或暂存三份既有 README。
+- 下一步：先提交恢复/根因 checkpoint；随后官方 `build_projects.py build --formal --batch phase2-b95`，不重做已验证通过的转录、解题和生成内容。
