@@ -3653,3 +3653,11 @@
 - 验证结果：12/12工作项绑定各自当前paper attempt；页码覆盖连续且与PDF页数一致，总计255页/2040项检查，全部pending；候选页共12页（每个edition×paper一页），没有沿用旧attempt pass结果或警告豁免。
 - 剩余任务：渲染255页并检查全部联系表；分别复核三卷所有页面及候选页；主会话高清复核2020新高考Ⅱ解析版Underfull警告对应页，随后审计工作项、finalize与收尾门禁。
 - 下一步：在ignored当前attempt目录生成100dpi页面PNG和每版联系表；页面文件不进入Git。
+
+### phase0-b03 当前attempt逐页视觉复核
+
+- 已完成可验证阶段：按恢复约定先复核Git差异和本进度文件；发现复核资产一直保存在项目内 `math-gaokao-latex/.work/phase0-b03/`（先前只检查了仓库根 `.work`，因此没有重新生成或覆盖）。使用该目录现有12张联系表检查全部255页；此前已对12个候选页及2020新高考Ⅱ解析版第22页高清复看。三卷所有当前页均未发现版面、字形、图题、分页或答案泄漏问题。代理线程额度不可用，改由主会话内联复核；以当前attempt联系表逐页审阅、候选页高清查看和事务校验降低独立复核缺失风险。
+- 阶段修改文件：仅ignored `.work/phase0-b03/review/` 下12份当前attempt工作项，补齐2040项逐页检查及说明；本进度文件；计划SDD ledger。源稿、生成文件、正式PDF和build回执未改。
+- 验证结果：build receipt validator `OK`（3 pending review、0 stale/failed/invalid/missing）；12工作项仍分别绑定当前3个attempt，255/255页覆盖、2040/2040项完成，全部2040项为pass且有说明。唯一build警告与豁免逐字段匹配：2020新高考Ⅱ解析版 `Underfull hbox`，`answers.tex` 871--872行，PDF第22页；高清复核显示方法总结框、答案框、正文与公式完整清晰，无碰撞、裁切或有害留白，按版心内未铺满行宽登记视觉通过。
+- 剩余任务：官方checked finalize；刷新来源/全库报告和manifest投影；运行批次门禁及定向测试；清理编译中间物与ignored复核资产（先核验PDF回执指纹并可恢复归档）；审阅并提交phase0-b03闭环，保持三份README用户差异不变。
+- 下一步：在保护并逐字节核验三份README差异的前提下运行 `finalize-batch-checked`；不得修改或隐去已有批次的失败记录。
