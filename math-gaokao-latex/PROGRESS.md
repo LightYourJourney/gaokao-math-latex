@@ -3173,6 +3173,14 @@
 - 验证结果：覆盖153/153页、1224项检查；1089 pass、135个有明确原因的not_applicable、0 fail/pending。6条Underfull豁免逐项与当前日志的来源文件/行号对应，相关第2页已高分辨率复看；workitem均绑定2019两卷当前attempt `99021ceb…` / `e5a9e821…`。
 - 剩余任务：复核2020文理两卷146页；2020文科已取消的第23题继续保留既定失败结论；再统一对账四卷warning并finalize。
 - 下一步：逐页检查2020全国Ⅰ文理四版联系表，放大高密页、图稿页、warning页和已知取消题页，再更新两卷workitem。
+
+### phase0-b02 2020全国Ⅰ文科当前PDF复核
+
+- 已完成可验证阶段：逐张检查2020文科四版联系表，并高分辨率复看散点图/回归曲线、函数图、程序框图、圆锥图、较密解析页及末页。四版版面与图形清晰，无新增视觉缺陷。
+- 阶段修改文件：仅ignored当前attempt下2020文科四份review workitem；正式receipt尚未finalize。
+- 验证结果：覆盖67/67页、536项检查；475 pass、56 not_applicable、5 fail、0 pending。5个fail均为第23题在原卷明确标记“已取消”后仍按用户既定裁定保留，分布于试题版第5页、解析版第5/32页、简答版第5页、印刷版第23页；失败类型均为`heading_number`，未改写原题。对应contact sheet与高分辨率页面均核实当前PDF仍含该题。
+- 剩余任务：复核2020理科79页；再核对四卷当前warning、页覆盖和workitem结构。
+- 下一步：逐页复核2020全国Ⅰ理科四版，优先检查图稿、候选密集页和末页。
 - 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
 - 已完成phase2-b92当前输入正式构建阶段：官方formal build在manifest revision 4097刷新四卷16版；四卷页数分别为新课程文5/20/7/16、新课程理5/19/7/16、旧课程文4/19/6/16、旧课程理5/20/7/16，共188页。四卷attempt分别为`20adf3b2-8c72-40ab-ac94-bbf78ac47cf8`、`a3c2d92a-bc30-43b8-ae89-d3bc88d9207b`、`3009247d-e1ae-443a-a75b-daea2dbe8b5c`、`00142336-2324-436f-992f-d8e8855421a1`。
 - 阶段修改文件：四卷`receipts/build.json`、`source-manifest.json`中的派生状态及本进度；规范题源与生成LaTeX未改。
