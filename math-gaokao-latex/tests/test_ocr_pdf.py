@@ -42,6 +42,73 @@ def fake_toolchain(languages='chi_sim+eng'):
 
 
 class PdfOcrPipelineTests(unittest.TestCase):
+    def test_manifest_binds_source_id_to_pdf_hash_before_analysis(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            pdf = root / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            pdf_hash = hashlib.sha256(pdf.read_bytes()).hexdigest()
+            manifest = root / 'source-manifest.json'
+            manifest.write_text(ocr_pdf.analyze_pdf.canonical({
+                'sources': [{'source_id': 'source-123', 'artifact': {'sha256': pdf_hash}}]
+            }), encoding='utf-8')
+            evidence = analysis_for(pdf)
+            evidence['pages'] = [dict(item, classification='text_candidate')
+                                 for item in evidence['pages']]
+            with patch.object(ocr_pdf.analyze_pdf, 'analyze', return_value=evidence), \
+                    patch.object(ocr_pdf, 'tool_fingerprints') as ocr_tools:
+                result = ocr_pdf.process_pdf(pdf, source_id='source-123',
+                                             manifest_path=manifest, cache_dir=None)
+            self.assertEqual(result['source_identity_status'], 'manifest_verified')
+            self.assertEqual(result['source_id'], 'source-123')
+            ocr_tools.assert_not_called()
+
+    def test_manifest_rejects_unknown_or_duplicate_source_id_before_analysis(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            pdf = root / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            entry = {'source_id': 'source-123', 'artifact': {'sha256': 'a' * 64}}
+            manifest = root / 'source-manifest.json'
+            for entries, source_id in (([entry], 'unknown'), ([entry, entry], 'source-123')):
+                manifest.write_text(ocr_pdf.analyze_pdf.canonical({'sources': entries}), encoding='utf-8')
+                with self.subTest(entries=len(entries), source_id=source_id), \
+                        patch.object(ocr_pdf.analyze_pdf, 'analyze',
+                                     side_effect=AssertionError('must reject before analysis')):
+                    with self.assertRaisesRegex(ocr_pdf.OcrPdfError, 'source_id'):
+                        ocr_pdf.process_pdf(pdf, source_id=source_id,
+                                            manifest_path=manifest)
+
+    def test_manifest_sha_mismatch_rejects_before_analysis(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            pdf = root / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            manifest = root / 'source-manifest.json'
+            manifest.write_text(ocr_pdf.analyze_pdf.canonical({
+                'sources': [{'source_id': 'source-123', 'artifact': {'sha256': 'a' * 64}}]
+            }), encoding='utf-8')
+            with patch.object(ocr_pdf.analyze_pdf, 'analyze',
+                              side_effect=AssertionError('must reject before analysis')):
+                with self.assertRaisesRegex(ocr_pdf.OcrPdfError, 'manifest SHA-256 mismatch'):
+                    ocr_pdf.process_pdf(pdf, source_id='source-123', manifest_path=manifest)
+
+    def test_manifest_requires_source_id_and_rejects_conflicting_expected_hash(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            pdf = root / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            pdf_hash = hashlib.sha256(pdf.read_bytes()).hexdigest()
+            manifest = root / 'source-manifest.json'
+            manifest.write_text(ocr_pdf.analyze_pdf.canonical({
+                'sources': [{'source_id': 'source-123', 'artifact': {'sha256': pdf_hash}}]
+            }), encoding='utf-8')
+            with self.assertRaisesRegex(ocr_pdf.OcrPdfError, 'source_id is required'):
+                ocr_pdf.process_pdf(pdf, manifest_path=manifest)
+            with self.assertRaisesRegex(ocr_pdf.OcrPdfError, 'conflicts with manifest'):
+                ocr_pdf.process_pdf(pdf, source_id='source-123', manifest_path=manifest,
+                                    expected_sha256='0' * 64)
+
     def test_expected_sha256_rejects_wrong_pdf_before_analysis(self):
         with tempfile.TemporaryDirectory() as temp:
             pdf = Path(temp) / 'source.pdf'

@@ -11,9 +11,9 @@
 - 主要剩余瓶颈：独立核对的数学 OCR gold 不足、MinerU/Paddle 同样本比较未完成、题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
 - 成本基线：历史 Agent 调用量、输入/输出/缓存 Token、账单费用、端到端完成率均未知。已有本地计时与缓存证据不能换算成聊天 Token 节省率。
 
-### 本轮最小增量：OCR 前校验来源文件身份
+### 首轮最小增量：OCR 前校验来源文件身份
 
-`ocr_pdf.py` 新增可选 `--expected-sha256`（Python API 为 `expected_sha256`）。严格接受 64 位十六进制摘要，兼容大小写；在调用页分析、渲染或 OCR 前核对实际文件 SHA，不匹配返回非零退出码和结构化错误。省略参数保留原行为，缓存键不变，不重新识别已缓存内容。`--source-id` 仍只是调用者提供的标识，**没有自动核对 manifest 中 ID 与 SHA 的对应关系**；应从已核验来源记录取得摘要。
+`ocr_pdf.py` 新增可选 `--expected-sha256`（Python API 为 `expected_sha256`）。严格接受 64 位十六进制摘要，兼容大小写；在调用页分析、渲染或 OCR 前核对实际文件 SHA，不匹配返回非零退出码和结构化错误。省略参数保留原行为，缓存键不变，不重新识别已缓存内容。
 
 ```bash
 # 将路径、source-id 和摘要替换为同一来源记录中的实际值。
@@ -24,7 +24,18 @@ python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf --source-id src-..
 
 定向验证：`test_ocr_pdf.py` 13、`test_analyze_pdf.py` 7、`test_recognize_formula.py` 4、`test_score_ocr.py` 7，合计 31 项通过。新增 3 项先观察到参数尚未实现的失败，再实现通过，覆盖错文件提前拦截、畸形摘要和匹配摘要的原生文字路径；另用真实 CLI 验证参数接线与退出码。本轮未重跑全库套件或编译全部试卷；没有改动 LaTeX 依赖链，历史全量测试失败情况见后文，未宣称全库通过。
 
-下一最小阶段：先把固定来源 ID 与期望 SHA 绑定到入口并验证错配拒绝，再扩充少量独立核对 gold；同一来源区域复用缓存比较本地 OCR。题目 IR、路由与批量端到端验收按后续阶段推进，不扩展转录批次。
+### 本轮增量：manifest 来源 ID/SHA 绑定
+
+新增可选 `--manifest source-manifest.json`（Python API 为 `manifest_path`）。启用时要求同时提供 `--source-id`，并要求该 ID 在 `sources` 中唯一、对应 `artifact.sha256` 格式有效；程序自动将此 SHA 作为输入 PDF 的期望摘要，在页分析、渲染及 OCR 前拒绝未知/重复 ID、manifest 损坏、摘要缺失、CLI 摘要冲突和 PDF 内容不匹配。输出新增 `source_identity_status`：`manifest_verified`、`caller_supplied` 或 `unbound`，避免把未绑定的调用者字符串伪装成来源核验。未使用 manifest 时旧 API 与 CLI 行为兼容；缓存键、选择策略和 OCR 输出状态不变。
+
+```bash
+python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf \
+  --source-id src-... --manifest math-gaokao-latex/source-manifest.json
+```
+
+真实烟测使用 manifest 中的固定来源 `src-1da61ba2ff864f3a18d22ed9f208fb30d2d24eddcfdb1fb4fa90caad681107bd`（1989全国文科，SHA `a2b62ea9e940eb46b853c4155c436cc0200f31578056582c9f62b667c93d2758`）。CLI 输出 `source_identity_status=manifest_verified`、1页原生文字候选、0 OCR 调用，退出码0。失败路径由测试覆盖，并在分析调用前拒绝。共新增4项manifest边界测试；`test_ocr_pdf.py` 17项通过。此变更是来源完整性保护，不调用模型/OCR，不产生可量化的Token或费用节省。
+
+下一最小阶段：扩充少量独立核对 gold；在同一来源和同一区域复用缓存比较本地 OCR。题目 IR、路由与批量端到端验收按后续阶段推进，不扩展转录批次。
 
 范围：当前工作树中 `math-gaokao-latex/` 的来源管理、转录存储、LaTeX 生成、构建、复核和测试代码。未扫描构建目录、缓存内容、用户会话日志或外部服务账单。
 

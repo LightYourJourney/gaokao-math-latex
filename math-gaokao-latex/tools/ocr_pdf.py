@@ -42,6 +42,27 @@ def parse_languages(value):
     return languages
 
 
+def manifest_source_sha256(manifest_path, source_id):
+    if source_id is None:
+        raise OcrPdfError('source_id is required when a source manifest is supplied')
+    try:
+        manifest = json.loads(Path(manifest_path).read_text(encoding='utf-8'))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise OcrPdfError(f'Cannot read source manifest: {error}') from error
+    sources = manifest.get('sources') if isinstance(manifest, dict) else None
+    if not isinstance(sources, list):
+        raise OcrPdfError('Source manifest must contain a sources array')
+    matches = [source for source in sources
+               if isinstance(source, dict) and source.get('source_id') == source_id]
+    if len(matches) != 1:
+        raise OcrPdfError(f'source_id must identify exactly one manifest entry: {source_id}')
+    artifact = matches[0].get('artifact')
+    sha256 = artifact.get('sha256') if isinstance(artifact, dict) else None
+    if not isinstance(sha256, str) or re.fullmatch(r'[0-9a-fA-F]{64}', sha256) is None:
+        raise OcrPdfError(f'Manifest source_id has no valid artifact SHA-256: {source_id}')
+    return sha256.lower()
+
+
 def _executable(name, args, pattern, timeout):
     path = shutil.which(name)
     if not path:
@@ -196,7 +217,7 @@ def recognize_page(image, page, pdf_hash, source_id, dimensions, dpi,
             'page_height_px': dimensions[1]}
 
 
-def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=180, languages='chi_sim+eng',
+def process_pdf(pdf, *, source_id=None, expected_sha256=None, manifest_path=None, pages=None, dpi=180, languages='chi_sim+eng',
                 psm=3, cache_dir=DEFAULT_CACHE,
                 analysis_cache_dir=analyze_pdf.DEFAULT_CACHE, min_chars=40, timeout=120):
     started = time.monotonic()
@@ -210,6 +231,15 @@ def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=18
         if not isinstance(expected_sha256, str) or re.fullmatch(r'[0-9a-fA-F]{64}', expected_sha256) is None:
             raise OcrPdfError('expected_sha256 must contain exactly 64 hexadecimal characters')
         expected_sha256 = expected_sha256.lower()
+    source_identity_status = 'unbound'
+    if manifest_path is not None:
+        manifest_sha256 = manifest_source_sha256(manifest_path, source_id)
+        if expected_sha256 is not None and expected_sha256 != manifest_sha256:
+            raise OcrPdfError('expected_sha256 conflicts with manifest source identity')
+        expected_sha256 = manifest_sha256
+        source_identity_status = 'manifest_verified'
+    elif source_id is not None:
+        source_identity_status = 'caller_supplied'
     languages = '+'.join(parse_languages(languages))
     if pages is not None:
         if not pages or any(type(page) is not int or page < 1 for page in pages):
@@ -224,6 +254,8 @@ def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=18
             raise OcrPdfError('Input has no PDF header')
     pdf_hash = analyze_pdf.digest_file(pdf)
     if expected_sha256 is not None and pdf_hash != expected_sha256:
+        if source_identity_status == 'manifest_verified':
+            raise OcrPdfError(f'PDF manifest SHA-256 mismatch: expected {expected_sha256}, got {pdf_hash}')
         raise OcrPdfError(f'PDF SHA-256 mismatch: expected {expected_sha256}, got {pdf_hash}')
 
     try:
@@ -265,6 +297,7 @@ def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=18
 
     if not selected:
         return {'schema_version': VERSION, 'pdf_sha256': pdf_hash, 'source_id': source_id,
+                'source_identity_status': source_identity_status,
                 'page_count': page_count, 'selection_mode': selection_mode,
                 'selected_pages': [], 'skipped_pages': skipped, 'pages': [],
                 'cache_hits': 0, 'render_cache_hits': 0, 'ocr_calls': 0,
@@ -295,6 +328,7 @@ def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=18
                 temporary.cleanup()
 
     return {'schema_version': VERSION, 'pdf_sha256': pdf_hash, 'source_id': source_id,
+            'source_identity_status': source_identity_status,
             'page_count': page_count, 'selection_mode': selection_mode,
             'selected_pages': [page for page, _ in selected], 'skipped_pages': skipped,
             'pages': output, 'toolchain': toolchain,
@@ -308,6 +342,8 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('pdf', type=Path)
     parser.add_argument('--source-id', help='Optional source-manifest ID for traceable run metadata')
+    parser.add_argument('--manifest', type=Path,
+                        help='Bind --source-id and the input PDF SHA-256 to source-manifest.json')
     parser.add_argument('--expected-sha256', help='Reject a PDF not matching this SHA-256 before analysis or OCR')
     parser.add_argument('--page', type=int, action='append', help='Repeat to OCR explicit pages, even if text exists')
     parser.add_argument('--dpi', type=int, default=180)
@@ -320,7 +356,8 @@ def main(argv=None):
     parser.add_argument('--timeout', type=float, default=120)
     args = parser.parse_args(argv)
     try:
-        result = process_pdf(args.pdf, source_id=args.source_id, expected_sha256=args.expected_sha256, pages=args.page,
+        result = process_pdf(args.pdf, source_id=args.source_id, expected_sha256=args.expected_sha256,
+                             manifest_path=args.manifest, pages=args.page,
                              dpi=args.dpi, languages=args.languages, psm=args.psm,
                              cache_dir=None if args.no_cache else args.cache_dir,
                              analysis_cache_dir=None if args.no_cache else analyze_pdf.DEFAULT_CACHE,

@@ -1,5 +1,14 @@
 # 高考数学 LaTeX 题库进度
 
+## 当前 OCR 增量：source manifest 身份绑定（2026-10-13）
+
+- 已完成：`ocr_pdf.py` 新增可选 manifest 接口，要求 `--source-id` 唯一匹配 `sources[]`，校验 `artifact.sha256`，并在页分析/渲染/OCR 前将固定 SHA 与实际 PDF 比较；若同时传 `--expected-sha256`，也校验其与 manifest 一致。成功结果明确给出 `source_identity_status`（manifest_verified/caller_supplied/unbound）；旧调用未启用 manifest 时兼容。
+- 修改文件：`tools/ocr_pdf.py`、`tests/test_ocr_pdf.py`、`../../TOKEN_AUDIT.md`、本进度文件。没有改 manifest、题源、缓存键、OCR策略、模型安装或构建产物。
+- 验证：manifest 边界测试先失败后通过；`test_ocr_pdf.py` 17/17、`test_analyze_pdf.py` 7/7、`test_recognize_formula.py` 4/4、`test_score_ocr.py` 7/7，共35项相关测试通过。真实固定原件1989全国文使用仓库manifest跑 CLI 成功，输出身份状态`manifest_verified`，1页原生文字、`ocr_calls=0`。完整测试集938项：922通过、13跳过、3失败；失败为 `test_baseline.py::test_task28_updates_exactly_eight_existing_b04_keys_with_layout_only_diffs`、`test_baseline.py::test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs` 的历史源SHA漂移，以及 `test_provenance.py::test_the_cached_states_match_the_recomputed_ones` 的52卷派生缓存状态不一致，均非本次改动涉及。
+- 成本/质量边界：未调用OCR/模型、无网络下载；Token与费用未知，本增量只保护来源身份，不声称节省比例。OCR结果仍是未验证候选，不推进题目状态。
+- 剩余/下一步：增加独立人工核对的 gold 样本，在同一来源/页/局部区域开展本地 OCR 对照；随后再考虑题目级IR/路由。继续遵守先查diff与本文件、不重复跑已完成检查的恢复规则。
+- 并行工作保护：工作树中另有三份用户README差异与未跟踪的1989广东理科转录/图稿；本阶段未改写、纳入或清理这些文件。
+
 ## 题库主目标续跑：1989 广东文理来源接收（2026-10-13）
 
 - 上一轮分类：已提交OCR前置SHA校验 `a9462428`，属于实质进展；本轮按持续题库目标恢复来源工作，未重复OCR增量。Git核对仅三份既有用户README差异，均未触碰。
