@@ -3469,3 +3469,11 @@
 - 验证结果：`manifest_csv.py --check`=`当前且775行`；`report.py check --all`=`输出与全量manifest一致，未完成状态保留`；报告检查耗时约60秒。`git diff --check`通过。
 - 剩余任务：运行phase2-b95来源/生成/provenance/review/build/manifest定向门禁和完整测试；清理编译中间文件与临时渲染、逐份PDF对回执；检查并精确提交b95闭环文件。
 - 下一步：依序运行b95的 `solution_sources`、三项生成器检查及provenance/review/build回执门禁，再选用可用Python版本执行全量测试。
+
+### phase2-b95 定向门禁与全量测试结果
+
+- 已完成可验证阶段：b95定向 `solution_sources check-batch`、projects/short answers/edition三项`--check`、provenance、review、build `--require-final` 与source manifest validate全部通过。使用本机Python 3.12运行完整测试发现集。
+- 阶段修改文件：无新正式文件；测试产生的 Python 缓存已通过 `PYTHONDONTWRITEBYTECODE=1` 禁止。本节记录全量测试与全库诊断结果。
+- 验证结果：完整套件运行868项、跳过13项、失败1项，耗时273.834秒；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，断言全库 `problems=[]`，实际65条paper/batch缓存状态与现场派生状态不一致。只读 `provenance.py check-all` 复现这些跨2015–2026既有记录的状态漂移（如 `complete/compiled` 对 `editions_generated`、`closed` 对 `provenance_verified`）；该诊断退出码4并汇总 `INVALID：272卷`。phase2-b95自身的定向provenance检查仍为 `OK：4卷`，review/build/生成器/来源门禁全部通过。没有全库重写或改动非b95回执。
+- 剩余任务：不在b95中扩大到数百条历史状态/回执刷新；记录该全局测试失败，完成当前四卷build辅助文件与临时预览的安全清理、PDF回执指纹核验、b95精确diff提交。之后若要全库测试全绿，需另立全库状态迁移/回执刷新范围。
+- 下一步：清理前只读检查四卷 `build/` 文件清单和当前PDF回执SHA/字节/页数；确认无额外文件后执行 `latexmk -c -outdir=build`，保留四版PDF与LaTeX源，并将本批临时图/工作项移入可恢复归档。
