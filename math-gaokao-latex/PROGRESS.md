@@ -3742,5 +3742,7 @@
 - 已完成可验证阶段：四卷均执行 `latexmk -c -outdir=build`；每个build目录现在严格只含试题/解析/简答/印刷四份PDF。将ignored `.work/phase0-b04/` 的387个文件（77,590,532字节）可恢复移动至 `~/.Trash/phase0-b04-finalized.MchW0F/phase0-b04`。
 - 阶段修改文件：仅四卷ignored build目录中的编译中间物被清理；本进度文件；临时联系表、页面PNG和workitem仍保存在Trash归档。正式PDF和全部LaTeX源保留。
 - 验证结果：清理前、清理后16/16 PDF的SHA-256、字节数、pdfinfo页数均与正式build receipt匹配；每个build目录恰有4个PDF且无其他文件；归档387文件/77,590,532字节，项目内本批workdir不存在。清理后build=`OK`（4 final），review=`FINALIZED`，manifest CSV当前且775行，`git diff --check`通过。全库report check唯一差异是三份受保护README汇总行；README用户diff哈希仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，stash为空。
-- 剩余任务：精确审阅并提交phase0-b04闭环正式输出；提交后复核工作树只保留三份README用户差异、批次门禁通过且不push。1952—2026全语料与其他批次仍未完成。
-- 下一步：仅暂存四卷receipt、manifest/CSV、问题与报告投影及本进度，审阅cached diff后提交；三份README继续排除。
+- 阶段结果：前置构建/视觉检查点提交为 `cb4116d7`；phase0-b04正式闭环精确提交为 `3ae91e45`（16个文件，不含三份README）。提交后build=`OK`（4 final）、review=`FINALIZED`、provenance=`OK：4卷`，source manifest=`OK：4卷`，CSV当前且775行；`git diff --check`通过。
+- 验证结果：清理后16/16 PDF的SHA-256、字节数和页数匹配正式receipt；每个build目录严格保留4份PDF，LaTeX源保留；387份临时复核资料已可恢复归档至Trash。全库report check只剩三份受保护README汇总行差异；其本地合并diff哈希为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，stash为空。未push。
+- 剩余任务：1952—2026全语料及其他批次仍未完成；全库65条跨批provenance缓存漂移仍是单独待处理问题。
+- 下一步：phase0-b04已达到本阶段验收标准，停止扩展；恢复工作时先核对Git diff和本进度文件，再从清单下一批phase0-b05继续，不重做b04。
