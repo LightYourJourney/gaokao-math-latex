@@ -3850,3 +3850,16 @@
 - 剩余：批次的回忆版身份与全国2卷官方来源身份限制继续保留；全量报告检查因三份受保护 README 差异而受限。OCR 升级仍需混合 PDF 与人工 gold、MinerU/PaddleOCR 对照、题目级 IR/任务路由、端到端成本和质量基准；1952—2026 题库也未整体完成。
 - 提交状态：已与本批全部17个文件合并为单一提交；三份受保护 README 未暂存、未提交；未 push。
 - 下一步建议：后续恢复 OCR 升级时，进入真实混合文档/人工 gold 评测；复用已有 analyzer、PaddleOCR 模型与缓存，不重做本批转录或复核。
+
+### `phase1-b07` — 2021 全国甲卷文科预检（进行中）
+
+- 已完成可验证预检：按恢复约定核对工作树与进度。manifest 显示该批单卷、23题；题目生成检查一致，solution source check 通过，source manifest 775项通过。Provenance 逐题证据无新题文/答案哈希错误，但派生状态缓存为 `compiled`，与现场 `editions_generated` 及批次 `provenance_verified` 不一致。
+- 旧构建与复核：build/review 当前检查确认旧构建因生成依赖树和工具链指纹变化失效；旧 review 不能作为当前构建页的结论。历史四版页数试题5、解析20、简答7、印刷15，共47页；旧 build PDF SHA 与其旧回执绑定，不重用作新回执证据。
+- 已完成子阶段：官方 formal build 以 attempt `0a64575f-f12b-49be-8696-2c087b1d0d5d` 重建四版；当前页数仍为5/20/7/15，共47页。四版全部 succeeded，错误、缺字、Overfull/Underfull、引用与构建问题均为0；构建receipt validator=`OK`（1 pending review、0 stale/failed/invalid/missing），provenance check=`OK：1卷`。
+- 当前attempt 视觉复核：官方工作项四版绑定一致、覆盖47页/376 checks。四张接触表全页检查47页；120dpi额外复核9页（试题p1，解析p1/p18，简答p1/p2/p7，印刷p1/p4/p14）。未见缺字、裁切、答案错配、选项/公式重叠或图形标签错误。简答p7留白对应分离的解答题参考答案清单；印刷p4页末横线已在入口源码确认由题目与答案区分隔规则生成，均按设计记录。
+- 阶段修改文件：本进度文件、该卷 build receipt/PDF 和 manifest 派生状态；忽略目录 `.work/phase1-b07/` 的4份当前attempt工作项与页面接触表/高清PNG；未改规范题源、答案、provenance题目证据或解题内容，也未重做OCR/解题。
+- 已完成：47页×8项共376条非空检查说明已录入工作项；`finalize-batch` 返回 `FINALIZED`，batch=`closed`、revision 4138，生成 `reports/phase1-b07.md`。
+- 验证与清理：source manifest 775项、manifest.csv（775行）、生成器、build `--require-final`、review `FINALIZED`、provenance 均通过；四份PDF文件大小/SHA/`pdfinfo`页数逐项与当前receipt一致，build目录仅留四份PDF；ignored `.work/phase1-b07/` 临时渲染和工作项已删除；`git diff --check`通过。未重跑耗时的全量 report check；全量报告投影计划在剩余批次完成后统一刷新，避免反复扫描全库；三份README用户改动保持原diff SHA。
+- 修改文件：本进度文件；2021全国甲卷文科 build/review receipts、PDF；`source-manifest.json`、`manifest.csv`、`reports/phase1-b07.md`。未改题源、答案、provenance逐题证据或其他卷内容。
+- 提交状态：本批六个文件已合并为单一提交；三份受保护README未暂存、未提交；未push。
+- 下一步：按manifest顺序预检 `phase1-b08`，只在当前旧回执stale时重建并重新复核。
