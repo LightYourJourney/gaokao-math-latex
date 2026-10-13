@@ -3485,3 +3485,11 @@
 - 验证结果：16/16 PDF 的SHA-256、字节数、页数与正式build receipt一致；四卷目标范围仅为 `build/` 内非PDF编译中间文件。此前全量测试唯一失败及全库provenance漂移已如上记录，不归因于这次PDF内容。
 - 剩余任务：逐卷运行 `latexmk -c -outdir=build`，确认每个build目录严格只剩四份PDF；将本批100dpi渲染/联系表及ignored review work items可恢复归档；再跑清理后批次门禁、最终diff审阅并提交。
 - 下一步：在四个精确项目目录执行latexmk clean，保留PDF及LaTeX源，随后逐目录核验文件集合。
+
+### phase2-b95 编译中间物清理与PDF回执核对
+
+- 已完成可验证阶段：四卷各执行 `latexmk -c -outdir=build`；四个build目录现严格各保留试题/解析/简答/印刷四份PDF。LaTeX源文件与正式PDF均保留。
+- 阶段修改文件：四卷ignored `build/` 中 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 等辅助物已清理；本进度文件。尚未归档本批 `.work/phase2-b95`。
+- 验证结果：四个build目录各恰有4个PDF；清理后16/16 PDF的SHA-256、字节数、pdfinfo页数与正式build receipt一致；`build_projects.py validate-receipts --require-final`=`OK`（4 succeeded，0 stale/failed/invalid/missing/pending）。本批忽略工作区精确检查为198个文件、36 MB，仅含当前review work items与100 dpi页面PNG/联系表。
+- 剩余任务：把 `.work/phase2-b95/` 整体移入可恢复Trash归档；复跑收尾门禁；审阅b95 tracked diff，精确提交所有权文件并保留三份README用户差异。完整测试唯一失败与跨批全库provenance状态漂移已记录，不能宣称全量测试全绿。
+- 下一步：将已核实的本批 `.work/phase2-b95/` 移入唯一Trash归档目录，确认归档文件数/大小与项目工作区清空。
