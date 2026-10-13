@@ -3677,3 +3677,11 @@
 - 验证结果：清理后12/12 PDF的SHA-256、字节数与页数均匹配正式build receipt；三个build目录各恰有4份PDF、无其他文件；Trash归档完整存在且279文件/56 MB。清理后build=`OK`（3 succeeded、0 pending/stale/failed/invalid/missing），review=`FINALIZED`，provenance=`OK：3卷`，source manifest validate通过，`git diff --check`通过。三份README差异仍与基线合并哈希相同；stash列表为空。
 - 剩余任务：审阅phase0-b03正式diff和文件所有权；精确暂存/提交三卷回执、manifest、CSV、批次与全库报告投影及进度记录；提交后复核工作区仅剩三份README用户差异，不push。全库65条provenance缓存漂移和后续语料批次仍未处理。
 - 下一步：先比较本批完整diff与预期文件清单、复核README哈希，再提交phase0-b03已完成内容。
+
+### phase0-b03 最终diff与提交范围审计
+
+- 已完成可验证阶段：结构化审阅最终diff；变更路径精确为12个phase0-b03正式输出（3卷build/review receipts、source manifest、manifest CSV、批次/全库报告与来源库存）及3份受保护README用户差异。review回执为255页全pass、2040项全pass；没有新增题源、LaTeX源或PDF内容改动。
+- 阶段修改文件：本进度文件。README仍未暂存，合并diff SHA-256=`9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。
+- 验证结果：`git diff --check`通过；批次build/review/provenance/source-manifest门禁及CSV门禁通过；报告全库检查仅有三份受保护README与渲染器汇总行差异；相关测试为review 66/66、report 11/11、manifest CSV 2/2、source manifest 52/52、build projects 133/133通过。provenance测试中唯一失败为已知全库65项跨批缓存漂移。
+- 剩余任务：精确提交12个本批正式输出；提交后确认工作树仅留三份README用户差异、stash为空且不push。
+- 下一步：只暂存上述12个本批输出并审阅cached diff，随后提交。
