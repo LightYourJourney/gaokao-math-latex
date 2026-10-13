@@ -1238,6 +1238,30 @@
         "gk-2015-regular-shandong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b01",
+      "issues": [],
+      "paper_ids": [
+        "gk-1989-regular-shanghai"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b02",
+      "issues": [],
+      "paper_ids": [
+        "gk-1989-regular-national-arts"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b03",
+      "issues": [],
+      "paper_ids": [
+        "gk-1989-regular-national-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1247,7 +1271,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2391b075-d63c-4b00-a849-ed3b666d0a3a",
+  "last_transaction_id": "cf47992f-cbcb-41ad-b4c2-d08f47d53f53",
   "papers": [
     {
       "blocked_from": null,
@@ -18916,9 +18940,195 @@
       "title": "2015 普通高等学校招生考试（山东卷理）",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1989_上海卷/figures/f1989_shanghai_q1_6_cuboid.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "1989_上海卷/figures/f1989_shanghai_q4_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1989_上海卷/figures/f1989_shanghai_q5_complex_segment.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1989_上海卷/figures/f1989_shanghai_q7_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1989_shanghai",
+        "id": "gk-1989-regular-shanghai",
+        "note": "固定来源 1989上海.pdf，SHA-256 79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766；扫描印刷页 5-5、5-6 为题面，5-7—5-9 含印载答案与解答。答案仅标为固定源印载，未认定为考试机构官方答案。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          3,
+          5
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "大题": [
+            1,
+            7
+          ]
+        },
+        "track": "未分科",
+        "variant": "上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1989-regular-shanghai",
+      "production_state": "planned",
+      "project_dir": "1989_上海卷",
+      "question_count": 7,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1989/1989_数学真题_上海_答案要点.md",
+        "combined_rendered": "1989/1989_数学真题_上海_含解析.md",
+        "questions": "1989/1989_数学真题_上海_试题.md",
+        "solution_body": "1989/1989_数学真题_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      ],
+      "title": "1989 年·上海卷",
+      "track": "none",
+      "year": 1989
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1989_全国卷_文科/figures/f1989_national_arts_q18_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1989_全国卷_文科/figures/f1989_national_arts_q21_parallelepiped.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1989_national_arts",
+        "id": "gk-1989-regular-national-arts",
+        "note": "固定源为一页 A3 排印题面，印刷页码35，SHA-256 a2b62ea9e940eb46b853c4155c436cc0200f31578056582c9f62b667c93d2758；没有答案、解析或分值。集合补集和命题否定横线已按图页恢复。答案与解析为主会话推导草稿，未独立复核，非官方答案。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "填空题": [
+            13,
+            18
+          ],
+          "解答题": [
+            19,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1989-regular-national-arts",
+      "production_state": "planned",
+      "project_dir": "1989_全国卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1989/1989_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1989/1989_数学真题_全国文_含解析.md",
+        "questions": "1989/1989_数学真题_全国文_试题.md",
+        "solution_body": "1989/1989_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-1da61ba2ff864f3a18d22ed9f208fb30d2d24eddcfdb1fb4fa90caad681107bd"
+      ],
+      "title": "1989 年·全国卷·文科",
+      "track": "arts",
+      "year": 1989
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1989_全国卷_理科/figures/f1989_national_science_q18_cylinder.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1989_全国卷_理科/figures/f1989_national_science_q20_parallelepiped.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1989_national_science",
+        "id": "gk-1989-regular-national-science",
+        "note": "固定源为一页 A3 排印题面，印刷页码34，SHA-256 0984fa714aa5e3e3fe171a7770a5f3caa16d55d108a83446bd72a3ca0f995fff；没有答案、解析或分值。补集、否定和复数共轭横线已按图页保留。答案解析为主会话推导草稿，待独立复核，非官方答案。第24题兼述自然数含0/不含0的两种约定。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "填空题": [
+            13,
+            18
+          ],
+          "解答题": [
+            19,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1989-regular-national-science",
+      "production_state": "planned",
+      "project_dir": "1989_全国卷_理科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1989/1989_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1989/1989_数学真题_全国理_含解析.md",
+        "questions": "1989/1989_数学真题_全国理_试题.md",
+        "solution_body": "1989/1989_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-8c89c264e42a69889be86693fb12c587fa47681f48f20cf363b130c8f8d9a3f0"
+      ],
+      "title": "1989 年·全国卷·理科",
+      "track": "science",
+      "year": 1989
     }
   ],
-  "revision": 4143,
+  "revision": 4146,
   "schema_version": 1,
   "sources": [
     {
@@ -22703,8 +22913,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d01a9c8b8656b87d9fd1d16eabb541bb6f2e103f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1989-regular-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "1989上海.pdf",
       "regions": [],
       "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd",
@@ -22727,8 +22937,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cb9296387173f498996d25645988fc86b2b74ec4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1989-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1989全国文.pdf",
       "regions": [],
       "source_id": "src-1da61ba2ff864f3a18d22ed9f208fb30d2d24eddcfdb1fb4fa90caad681107bd",
@@ -22751,8 +22961,8 @@
       "exam_type": "regular",
       "git_blob_oid": "41a1dbc59c07b47dbb6035b2758f76a56e02e726",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1989-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1989全国理.pdf",
       "regions": [],
       "source_id": "src-8c89c264e42a69889be86693fb12c587fa47681f48f20cf363b130c8f8d9a3f0",
