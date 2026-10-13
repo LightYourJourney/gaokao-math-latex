@@ -20,9 +20,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 对照件：上游 普通高考/2026/2026全国1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf，manifest source_id src-a6848f53cf4932dc654a47dc89f3ce68bcd68c88c1e90e1bfeb7fb504fb59536，现场 shasum -a 256 得 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1，与 manifest artifact.sha256 相同（15 页登记为 5 页，实测 pdfinfo 亦 5 页，一致）。该件第 1 页页眉逐字印「2026 年全国 1 卷高考数学真题(回忆版)」——对照件自身即标注为回忆版，不是正式卷；19 题分布于 p1-p4，p5 空白。比对口径：剥离 LaTeX 数学包裹与空白后逐字符对照，CJK 标点计入差异；PDF 文本层存在字体 ToUnicode 缺陷（连续拉丁字母整段塌缩为首字母，如 ABC 提取成 AAA），故所有多字母记号一律以 170 dpi / 600 dpi 页面渲染视读为准，不单信 pdftotext。 本题：PDF p1 印「1．样本数据6,8,4,5,12的中位数为（ ）A．5 B．6 C．8 D．9」，与规范源第 24-26 行逐字相同。分类：逐字一致。文档级差异（规范源相对 PDF 的编辑性增补，不摊入各题四分类，集中记于此）：md 第 14 行增设「版本说明」引用块自陈回忆版、第 16 行增设适用省份行，PDF 正文无此二者；md 第 22 行增设单选段段首说明「本题共 8 小题，每小题 5 分，共 40 分。…」，PDF 单选段只有「一、单选题」一行、全卷无任何分值标记；md 第 148 行页脚指向 ../原卷PDF/2026全国1(...).pdf，而 原卷PDF/ 目录在库内不存在，属死链（与既有 ISSUE-0007/0023/0028 同类）。适用省份串只见于上游文件名与 md 自述，PDF 正文不含省份信息，故不作现实断言；官方原卷的适用范围【未能核实】。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 对照件：上游 普通高考/2026/2026全国1(山东,广东,湖南,湖北,河北,江苏,福建,浙江,河南,江西,安徽).pdf，manifest source_id src-a6848f53cf4932dc654a47dc89f3ce68bcd68c88c1e90e1bfeb7fb504fb59536，现场 shasum -a 256 得 f6f8ed7cdab86bedd7b3d261b7066c97a9fe24e3ad71538d1d01e6ce03f3fcb1，与 manifest artifact.sha256 相同（15 页登记为 5 页，实测 pdfinfo 亦 5 页，一致）。该件第 1 页页眉逐字印「2026 年全国 1 卷高考数学真题(回忆版)」——对照件自身即标注为回忆版，不是正式卷；19 题分布于 p1-p4，p5 空白。比对口径：剥离 LaTeX 数学包裹与空白后逐字符对照，CJK 标点计入差异；PDF 文本层存在字体 ToUnicode 缺陷（连续拉丁字母整段塌缩为首字母，如 ABC 提取成 AAA），故所有多字母记号一律以 170 dpi / 600 dpi 页面渲染视读为准，不单信 pdftotext。 本题：PDF p1 印「1．样本数据6,8,4,5,12的中位数为（ ）A．5 B．6 C．8 D．9」，与规范源第 24-26 行逐字相同。分类：逐字一致。文档级差异（规范源相对 PDF 的编辑性增补，不摊入各题四分类，集中记于此）：md 第 14 行增设「版本说明」引用块自陈回忆版、第 16 行增设适用省份行，PDF 正文无此二者；md 第 22 行增设单选段段首说明「本题共 8 小题，每小题 5 分，共 40 分。…」，PDF 单选段只有「一、单选题」一行、全卷无任何分值标记；md 第 148 行页脚指向 ../原卷PDF/2026全国1(...).pdf，而 原卷PDF/ 目录在库内不存在，属死链（与既有 ISSUE-0007/0023/0028 同类）。适用省份串只见于上游文件名与 md 自述，PDF 正文不含省份信息，故不作现实断言；官方原卷的适用范围【未能核实】。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -37,16 +37,16 @@
       "issue_ids": [],
       "printed_number": 2,
       "question_id": "gk-2026-regular-national-1-recall-q02",
-      "question_text_sha256": "24638b74933262efd00554860ba4d8ab63d1b826e07d733ae7175a4467e5c92d",
+      "question_text_sha256": "415669a37e53a32663218fc012c072cfaca553f3fc8970d42ad39cb409844c5b",
       "reviewer_role": "b06-answer-blind-reviewer-opus",
       "solver_role": "b06-answer-solver-opus",
       "source_pages": [],
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「2．已知平面向量𝑎⃗，𝑏⃗不共线，且2𝑎⃗+𝑦𝑏⃗=𝑥𝑎⃗−3𝑏⃗，则（ ）」，四选项 x=2,y=−3 / x=−2,y=3 / x=2,y=3 / x=−2,y=−3，与规范源第 28-30 行逐字相同（PDF 选项内「𝑦= − 3」的空格系排版 kerning，非字符差异）。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「2．已知平面向量𝑎⃗，𝑏⃗不共线，且2𝑎⃗+𝑦𝑏⃗=𝑥𝑎⃗−3𝑏⃗，则（ ）」，四选项 x=2,y=−3 / x=−2,y=3 / x=2,y=3 / x=−2,y=−3，与规范源第 28-30 行逐字相同（PDF 选项内「𝑦= − 3」的空格系排版 kerning，非字符差异）。分类：逐字一致。本题无配图。【版式哈希续核，2026-10-13】规范 Markdown 仅将本题 A—D 选项改写为显式 gkopts(2) 列布局；题干、四个选项及数学符号逐字保留。题面块哈希随格式标记更新；未重新判定来源身份，本卷仍为回忆版且保持身份阻塞。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -68,9 +68,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「3．已知集合𝐴={sin 7π/6, cos 5π/3, tan 5π/4}，𝐵={−√3/2, −1/2, 1}，则𝐴∩𝐵=（ ）」，四选项 {−√3/2,−1/2} / {−√3/2,1} / {−1/2,1} / {−√3/2,−1/2,1}，与规范源第 32-34 行逐字相同。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「3．已知集合𝐴={sin 7π/6, cos 5π/3, tan 5π/4}，𝐵={−√3/2, −1/2, 1}，则𝐴∩𝐵=（ ）」，四选项 {−√3/2,−1/2} / {−√3/2,1} / {−1/2,1} / {−√3/2,−1/2,1}，与规范源第 32-34 行逐字相同。分类：逐字一致。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -92,9 +92,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「4．曲线𝑦=5𝑥+8ln𝑥在点(1,5)处的切线方程为（ ）A．𝑦=3𝑥+2 B．𝑦=5𝑥 C．𝑦=8𝑥−3 D．𝑦=13𝑥−8」，与规范源第 36-38 行逐字相同。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「4．曲线𝑦=5𝑥+8ln𝑥在点(1,5)处的切线方程为（ ）A．𝑦=3𝑥+2 B．𝑦=5𝑥 C．𝑦=8𝑥−3 D．𝑦=13𝑥−8」，与规范源第 36-38 行逐字相同。分类：逐字一致。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -116,9 +116,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「5．已知抛物线𝐶₁:𝑦²=2𝑝₁𝑥（𝑝₁>0）和𝐶₂:𝑥²=2𝑝₂𝑦（𝑝₂>0）均经过点(4,8)，则𝐶₁的焦点与𝐶₂的焦点之间的距离为（ ）」，四选项 12 / 4√5 / 6 / √65/2，与规范源第 40-42 行内容相同。唯一差异：PDF 两处条件括注用全角括号「（𝑝₁>0）」「（𝑝₂>0）」，md 写作数学模式内的 \\ (p_1>0)、\\ (p_2>0)，渲染为半角括号。属排版载体层的括号宽度改动，不改题意。分类：实质一致但表述有出入（全角括号→半角括号，2 处）。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「5．已知抛物线𝐶₁:𝑦²=2𝑝₁𝑥（𝑝₁>0）和𝐶₂:𝑥²=2𝑝₂𝑦（𝑝₂>0）均经过点(4,8)，则𝐶₁的焦点与𝐶₂的焦点之间的距离为（ ）」，四选项 12 / 4√5 / 6 / √65/2，与规范源第 40-42 行内容相同。唯一差异：PDF 两处条件括注用全角括号「（𝑝₁>0）」「（𝑝₂>0）」，md 写作数学模式内的 \\ (p_1>0)、\\ (p_2>0)，渲染为半角括号。属排版载体层的括号宽度改动，不改题意。分类：实质一致但表述有出入（全角括号→半角括号，2 处）。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -140,9 +140,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「6．已知函数𝑓(𝑥)=(𝑥+2)/(e^𝑥+𝑎)的最大值为 1，则𝑎=（ ）A．1/2 B．1 C．3/2 D．2」，与规范源第 44-46 行逐字相同。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「6．已知函数𝑓(𝑥)=(𝑥+2)/(e^𝑥+𝑎)的最大值为 1，则𝑎=（ ）A．1/2 B．1 C．3/2 D．2」，与规范源第 44-46 行逐字相同。分类：逐字一致。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -164,9 +164,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「7．一百零八塔位于宁夏回族自治区青铜峡市…该塔群共有 108 座塔，依山势自上而下排成 12 行，将第𝑖行中塔的座数记为𝑎ᵢ(𝑖=1,2,⋯,12)，其中𝑎₁=1，𝑎₂=𝑎₃=3，𝑎₄=𝑎₅=5，且𝑎₆，𝑎₇，…，𝑎₁₂是一个首项为 7，公差为 2 的等差数列．将𝑎₁，𝑎₂，…，𝑎₁₂分为 6 组，每组 2 个数，使得每组的 2 个数之和可构成一个项数为 6 且公差为𝑑(𝑑>0)的等差数列，则𝑑=（ ）」，四选项 2/4/6/8。逐字符比对差异一处：PDF 作「首项为 7，公差为 2」（U+FF0C 全角逗号，已用字符码位核验），md 第 48 行作「首项为 $7$、公差为 $2$」（U+3001 顿号）。属标点规范化，不改题意。分类：实质一致但表述有出入（，→、）。本题无配图。数据自洽核验：a₁..a₅=1,3,3,5,5 与 a₆..a₁₂ 首项 7 公差 2 共 12 项，合计 1+3+3+5+5+7+9+11+13+15+17+19=108，与题述「共有 108 座塔」相符，转录无数字脱漏。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「7．一百零八塔位于宁夏回族自治区青铜峡市…该塔群共有 108 座塔，依山势自上而下排成 12 行，将第𝑖行中塔的座数记为𝑎ᵢ(𝑖=1,2,⋯,12)，其中𝑎₁=1，𝑎₂=𝑎₃=3，𝑎₄=𝑎₅=5，且𝑎₆，𝑎₇，…，𝑎₁₂是一个首项为 7，公差为 2 的等差数列．将𝑎₁，𝑎₂，…，𝑎₁₂分为 6 组，每组 2 个数，使得每组的 2 个数之和可构成一个项数为 6 且公差为𝑑(𝑑>0)的等差数列，则𝑑=（ ）」，四选项 2/4/6/8。逐字符比对差异一处：PDF 作「首项为 7，公差为 2」（U+FF0C 全角逗号，已用字符码位核验），md 第 48 行作「首项为 $7$、公差为 $2$」（U+3001 顿号）。属标点规范化，不改题意。分类：实质一致但表述有出入（，→、）。本题无配图。数据自洽核验：a₁..a₅=1,3,3,5,5 与 a₆..a₁₂ 首项 7 公差 2 共 12 项，合计 1+3+3+5+5+7+9+11+13+15+17+19=108，与题述「共有 108 座塔」相符，转录无数字脱漏。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -188,9 +188,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「8．设𝑈={(𝑥₁,𝑥₂,𝑥₃)|𝑥ᵢ∈{−2,−1,1,2}, 𝑖=1,2,3}为空间中 64 个点构成的集合，点𝑃(1,1,1)，记样本空间Ω=∁_𝑈 𝑃，从Ω中随机取一个点，定义随机变量𝑋如下：对Ω中的每个点𝐴(𝑥₁,𝑥₂,𝑥₃)，令𝑋(𝐴)=𝑥₁+𝑥₂+𝑥₃，则𝑋的数学期望值为（ ）」，四选项 −1/21 / −1/63 / 0 / 1/7，与规范源第 52-54 行逐字相同（md 用 \\mid、\\complement 表 | 与 ∁，为同义记号）。数据自洽核验：|{−2,−1,1,2}|³=64，与题述「64 个点」相符。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「8．设𝑈={(𝑥₁,𝑥₂,𝑥₃)|𝑥ᵢ∈{−2,−1,1,2}, 𝑖=1,2,3}为空间中 64 个点构成的集合，点𝑃(1,1,1)，记样本空间Ω=∁_𝑈 𝑃，从Ω中随机取一个点，定义随机变量𝑋如下：对Ω中的每个点𝐴(𝑥₁,𝑥₂,𝑥₃)，令𝑋(𝐴)=𝑥₁+𝑥₂+𝑥₃，则𝑋的数学期望值为（ ）」，四选项 −1/21 / −1/63 / 0 / 1/7，与规范源第 52-54 行逐字相同（md 用 \\mid、\\complement 表 | 与 ∁，为同义记号）。数据自洽核验：|{−2,−1,1,2}|³=64，与题述「64 个点」相符。分类：逐字一致。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -212,9 +212,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「9．设𝑧=3+2i，则（ ）A．𝑧̄=3−2i B．|𝑧|=5 C．𝑧²=5+12i D．(𝑧+3)/(𝑧−i)∈R」，与规范源第 62-64 行逐字相同。分类：逐字一致。本题无配图。段级差异（文档级，不计入本题分类）：md 第 60 行增设多选段段首说明「本题共 3 小题，每小题 6 分，共 18 分。…全部选对的得 6 分，部分选对的得部分分，有选错的得 0 分。」，PDF 多选段只有「二、多选题」一行、无任何分值说明；该说明行在本卷来源中无对应，其分值规则【未能核实】（与既有 ISSUE-0026 同类）。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1「9．设𝑧=3+2i，则（ ）A．𝑧̄=3−2i B．|𝑧|=5 C．𝑧²=5+12i D．(𝑧+3)/(𝑧−i)∈R」，与规范源第 62-64 行逐字相同。分类：逐字一致。本题无配图。段级差异（文档级，不计入本题分类）：md 第 60 行增设多选段段首说明「本题共 3 小题，每小题 6 分，共 18 分。…全部选对的得 6 分，部分选对的得部分分，有选错的得 0 分。」，PDF 多选段只有「二、多选题」一行、无任何分值说明；该说明行在本卷来源中无对应，其分值规则【未能核实】（与既有 ISSUE-0026 同类）。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -236,9 +236,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1 末至 p2 首「10．在空间中，𝐴、𝐵为两个定点，动点𝐶到直线𝐴𝐵的距离为 2，动点𝐷到直线𝐴𝐵的距离为 1．若二面角𝐶−𝐴𝐵−𝐷为60°，则（ ）A．∠𝐶𝐴𝐷≥60° B．𝐶𝐷≥√3 C．当𝐴𝐵⊥𝐶𝐷时，𝐶𝐷⊥平面𝐴𝐵𝐷 D．当𝐴𝐵⊥平面𝐴𝐶𝐷时，𝐴𝐶⊥𝐴𝐷」，多字母记号 CAD/AB/CD/ABD/ACD 均经 170 dpi 渲染视读确认（文本层因 ToUnicode 缺陷不可据），与规范源第 66-70 行逐字相同，含「𝐴、𝐵为两个定点」的顿号亦一致。分类：逐字一致。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p1 末至 p2 首「10．在空间中，𝐴、𝐵为两个定点，动点𝐶到直线𝐴𝐵的距离为 2，动点𝐷到直线𝐴𝐵的距离为 1．若二面角𝐶−𝐴𝐵−𝐷为60°，则（ ）A．∠𝐶𝐴𝐷≥60° B．𝐶𝐷≥√3 C．当𝐴𝐵⊥𝐶𝐷时，𝐶𝐷⊥平面𝐴𝐵𝐷 D．当𝐴𝐵⊥平面𝐴𝐶𝐷时，𝐴𝐶⊥𝐴𝐷」，多字母记号 CAD/AB/CD/ABD/ACD 均经 170 dpi 渲染视读确认（文本层因 ToUnicode 缺陷不可据），与规范源第 66-70 行逐字相同，含「𝐴、𝐵为两个定点」的顿号亦一致。分类：逐字一致。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -262,9 +262,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「11．已知圆𝐶₁:(𝑥+1)²+𝑦²=1，圆𝐶₂:(𝑥−1)²+𝑦²=1，圆𝐶₃:𝑥²+(𝑦−√3)²=1，直线𝑙:𝑦=𝑘𝑥+𝑏与𝐶₁，𝐶₂，𝐶₃均有两个交点．记𝑙被𝐶₁，𝐶₂，𝐶₃截得的弦长分别为𝑠₁、𝑠₂、𝑠₃，则（ ）」，四选项与规范源第 74-80 行一致（含 D 的 2√21/3）。逐字符比对差异一处：PDF 弦长三元用顿号「𝑠₁、𝑠₂、𝑠₃」（U+3001，已用字符码位核验），md 第 72 行作「$s_1$，$s_2$，$s_3$」（U+FF0C 全角逗号）——与第 7 题恰好方向相反，说明规范源的标点改写不是单向规则。属标点规范化，不改题意。分类：实质一致但表述有出入（、→，）。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「11．已知圆𝐶₁:(𝑥+1)²+𝑦²=1，圆𝐶₂:(𝑥−1)²+𝑦²=1，圆𝐶₃:𝑥²+(𝑦−√3)²=1，直线𝑙:𝑦=𝑘𝑥+𝑏与𝐶₁，𝐶₂，𝐶₃均有两个交点．记𝑙被𝐶₁，𝐶₂，𝐶₃截得的弦长分别为𝑠₁、𝑠₂、𝑠₃，则（ ）」，四选项与规范源第 74-80 行一致（含 D 的 2√21/3）。逐字符比对差异一处：PDF 弦长三元用顿号「𝑠₁、𝑠₂、𝑠₃」（U+3001，已用字符码位核验），md 第 72 行作「$s_1$，$s_2$，$s_3$」（U+FF0C 全角逗号）——与第 7 题恰好方向相反，说明规范源的标点改写不是单向规则。属标点规范化，不改题意。分类：实质一致但表述有出入（、→，）。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -286,9 +286,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「12．双曲线5𝑥²−6𝑦²=1的离心率为__________．」，句末为全角句号 U+FF0E（字符码位核验），md 第 88 行同为「．」，逐字相同。分类：逐字一致。本题无配图。段级差异（文档级）：md 第 86 行增设填空段段首说明「本题共 3 小题，每小题 5 分，共 15 分。」，PDF 只有「三、填空题」一行。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「12．双曲线5𝑥²−6𝑦²=1的离心率为__________．」，句末为全角句号 U+FF0E（字符码位核验），md 第 88 行同为「．」，逐字相同。分类：逐字一致。本题无配图。段级差异（文档级）：md 第 86 行增设填空段段首说明「本题共 3 小题，每小题 5 分，共 15 分。」，PDF 只有「三、填空题」一行。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -310,9 +310,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「13．已知𝑓(𝑥)=2sin(𝑎𝑥+𝜃)（𝑎∈𝑍，0≤𝜃<2π）是偶函数，𝑓(𝑥)在区间(0, π/2)单调递增．则𝜃=__________，𝑓(2π/3)=__________．」。差异两处：一、PDF 作「单调递增．则」（U+FF0E 句号，字符码位核验），md 第 90 行作「单调递增，则」（U+FF0C 逗号）；二、PDF 用斜体 𝑍 表整数集，md 用 \\mathbb{Z}。均为标点/记号规范化，不改题意。分类：实质一致但表述有出入。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「13．已知𝑓(𝑥)=2sin(𝑎𝑥+𝜃)（𝑎∈𝑍，0≤𝜃<2π）是偶函数，𝑓(𝑥)在区间(0, π/2)单调递增．则𝜃=__________，𝑓(2π/3)=__________．」。差异两处：一、PDF 作「单调递增．则」（U+FF0E 句号，字符码位核验），md 第 90 行作「单调递增，则」（U+FF0C 逗号）；二、PDF 用斜体 𝑍 表整数集，md 用 \\mathbb{Z}。均为标点/记号规范化，不改题意。分类：实质一致但表述有出入。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -334,9 +334,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「14．设实数𝑞满足：存在数列{𝑎ₙ}，使得对于任意𝑛∈N*，均有𝑎₁+𝑎₂+⋯+𝑎_{3𝑛}=𝑛²+𝑛，且{𝑎ₙ}中有某连续 9 项𝑎_𝑘，𝑎_{𝑘+1}，⋯，𝑎_{𝑘+8}是公比为𝑞的等比数列．则𝑞的最大值为__________．」。差异一处：PDF 作「等比数列．则」（U+FF0E 句号，字符码位核验），md 第 92 行作「等比数列，则」（U+FF0C 逗号）。属标点规范化。分类：实质一致但表述有出入。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2「14．设实数𝑞满足：存在数列{𝑎ₙ}，使得对于任意𝑛∈N*，均有𝑎₁+𝑎₂+⋯+𝑎_{3𝑛}=𝑛²+𝑛，且{𝑎ₙ}中有某连续 9 项𝑎_𝑘，𝑎_{𝑘+1}，⋯，𝑎_{𝑘+8}是公比为𝑞的等比数列．则𝑞的最大值为__________．」。差异一处：PDF 作「等比数列．则」（U+FF0E 句号，字符码位核验），md 第 92 行作「等比数列，则」（U+FF0C 逗号）。属标点规范化。分类：实质一致但表述有出入。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -360,9 +360,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2 下部「15．如图，在直三棱柱𝐴𝐵𝐶−𝐴₁𝐵₁𝐶₁中，∠𝐴𝐶𝐵=90°，𝐴𝐶=𝐵𝐶，𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点．(1)证明：𝐷𝐸//平面𝐵𝐶𝐶₁𝐵₁；(2)设𝐶𝐶₁=2，直线𝐷𝐸与平面𝐴𝐶𝐶₁𝐴₁所成的角为45°，求直线𝐷𝐸到平面𝐵𝐶𝐶₁𝐵₁的距离．」（多字母记号经 170/600 dpi 渲染视读确认）。文字差异三处：一、md 第 100 行增补「（13 分）」，PDF 全卷无任何分值标记；二、PDF「𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点」用两处全角逗号，md 作「$D$、$E$ 分别为 $AB$、$AC_1$ 的中点」用两处顿号；三、PDF 平行号写 //，md 用 \\parallel。均不改题意。配图核查：md 第 102 行引 images/2026-t15-棱柱.png（320x350，RGB）。该件不是重绘件而是 PDF p2 的页面截图裁剪——图内上方混入题干残行「5．如图，在直三棱柱 ABC−A₁B」，下方混入其后正文行「(1)证明：」的顶部像素；墨迹包围盒 rows 18-349 / cols 0-319，末行 31 px、左列 16 px、右列 9 px 触及画布边缘，A₁ 标注中 A 字的左侧笔画被左缘切去一小截（放大后仍可辨认为 A₁）。几何信息本身无损：八个标注 C₁/A₁/B₁/E/C/A/D/B 齐全，实线（A₁B₁、A₁C₁、B₁C₁ 上沿与 A₁A、B₁B 侧棱、AB 底边）与虚线（C₁—C、C₁—A、A—C、C—B、E 所在的 A—C₁ 段）走向与 PDF 原图一致。属越界毛边+边缘微裁，与既有 ISSUE-0020/0032 同类。分类：实质一致但表述有出入。段级差异（文档级）：md 第 98 行增设解答段段首说明「本题共 5 小题，共 77 分。解答应写出文字说明、证明过程或演算步骤。」，PDF 只有「四、解答题」一行；md 五道解答题补注分值 13+15+15+17+17=77，与该说明行自洽，与单选 8×5=40、多选 3×6=18、填空 3×5=15 合计 150，内部无加法矛盾，但全部分值信息在本卷来源中无对应，【未能核实】。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p2 下部「15．如图，在直三棱柱𝐴𝐵𝐶−𝐴₁𝐵₁𝐶₁中，∠𝐴𝐶𝐵=90°，𝐴𝐶=𝐵𝐶，𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点．(1)证明：𝐷𝐸//平面𝐵𝐶𝐶₁𝐵₁；(2)设𝐶𝐶₁=2，直线𝐷𝐸与平面𝐴𝐶𝐶₁𝐴₁所成的角为45°，求直线𝐷𝐸到平面𝐵𝐶𝐶₁𝐵₁的距离．」（多字母记号经 170/600 dpi 渲染视读确认）。文字差异三处：一、md 第 100 行增补「（13 分）」，PDF 全卷无任何分值标记；二、PDF「𝐷，𝐸分别为𝐴𝐵，𝐴𝐶₁的中点」用两处全角逗号，md 作「$D$、$E$ 分别为 $AB$、$AC_1$ 的中点」用两处顿号；三、PDF 平行号写 //，md 用 \\parallel。均不改题意。配图核查：md 第 102 行引 images/2026-t15-棱柱.png（320x350，RGB）。该件不是重绘件而是 PDF p2 的页面截图裁剪——图内上方混入题干残行「5．如图，在直三棱柱 ABC−A₁B」，下方混入其后正文行「(1)证明：」的顶部像素；墨迹包围盒 rows 18-349 / cols 0-319，末行 31 px、左列 16 px、右列 9 px 触及画布边缘，A₁ 标注中 A 字的左侧笔画被左缘切去一小截（放大后仍可辨认为 A₁）。几何信息本身无损：八个标注 C₁/A₁/B₁/E/C/A/D/B 齐全，实线（A₁B₁、A₁C₁、B₁C₁ 上沿与 A₁A、B₁B 侧棱、AB 底边）与虚线（C₁—C、C₁—A、A—C、C—B、E 所在的 A—C₁ 段）走向与 PDF 原图一致。属越界毛边+边缘微裁，与既有 ISSUE-0020/0032 同类。分类：实质一致但表述有出入。段级差异（文档级）：md 第 98 行增设解答段段首说明「本题共 5 小题，共 77 分。解答应写出文字说明、证明过程或演算步骤。」，PDF 只有「四、解答题」一行；md 五道解答题补注分值 13+15+15+17+17=77，与该说明行自洽，与单选 8×5=40、多选 3×6=18、填空 3×5=15 合计 150，内部无加法矛盾，但全部分值信息在本卷来源中无对应，【未能核实】。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -384,9 +384,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「16．已知在△𝐴𝐵𝐶中，𝐴𝐵=3，𝐵𝐶=2√3，cos𝐵=√3/3．(1)求cos𝐴；(2)设𝐷，𝐸两点满足：𝐷在𝐵𝐴的延长线上，𝐷𝐸//𝐵𝐶，𝐴𝐸⊥𝐴𝐶．若𝐷𝐸=√6，求𝐶𝐸．」（多字母记号经 170 dpi 渲染视读确认）。差异两处：一、md 第 108 行增补「（15 分）」；二、PDF「设𝐷，𝐸两点满足」用全角逗号，md 作「设 $D$、$E$ 两点满足」用顿号（PDF 内 // 亦被 md 改写为 \\parallel）。均不改题意。分类：实质一致但表述有出入。本题无配图（PDF 该题下方为空白，无插图）。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「16．已知在△𝐴𝐵𝐶中，𝐴𝐵=3，𝐵𝐶=2√3，cos𝐵=√3/3．(1)求cos𝐴；(2)设𝐷，𝐸两点满足：𝐷在𝐵𝐴的延长线上，𝐷𝐸//𝐵𝐶，𝐴𝐸⊥𝐴𝐶．若𝐷𝐸=√6，求𝐶𝐸．」（多字母记号经 170 dpi 渲染视读确认）。差异两处：一、md 第 108 行增补「（15 分）」；二、PDF「设𝐷，𝐸两点满足」用全角逗号，md 作「设 $D$、$E$ 两点满足」用顿号（PDF 内 // 亦被 md 改写为 \\parallel）。均不改题意。分类：实质一致但表述有出入。本题无配图（PDF 该题下方为空白，无插图）。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -410,9 +410,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「17．设整数𝑁≥2．某同学用一个球进行投篮练习，至多投篮𝑁次，当且仅当投中 1 次时或𝑁次均未投中时，停止练习．设该同学每次投中的概率为𝑝(0<𝑝<1)，各次投中与否相互独立．记𝑋为停止练习时该同学的投篮次数．(1)当𝑁=4，𝑝=1/3时，求𝑋的分布列；(2)设𝑘，𝑚均为自然数．（i）当𝑘≤𝑁−1时，求𝑃(𝑋>𝑘)；（ii）当𝑘+𝑚≤𝑁−1时，证明：𝑃(𝑋>𝑘+𝑚|𝑋>𝑘)=𝑃(𝑋>𝑚)．」。差异两处：一、md 第 114 行增补「（15 分）」；二、实词删改一处——PDF 作「当且仅当投中 1 次时或𝑁次均未投中时」，md 作「当且仅当投中 $1$ 次或 $N$ 次均未投中时」，删去「1 次」后的「时」字。已用 600 dpi 渲染视读确认 PDF 该「时」字确实存在，非文本层伪影；两处「…时或…时」为并列结构，删去前一「时」后语义不变、不改作答方式。分类：实质一致但表述有出入（本卷唯一一处非标点性的字词改动）。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p3「17．设整数𝑁≥2．某同学用一个球进行投篮练习，至多投篮𝑁次，当且仅当投中 1 次时或𝑁次均未投中时，停止练习．设该同学每次投中的概率为𝑝(0<𝑝<1)，各次投中与否相互独立．记𝑋为停止练习时该同学的投篮次数．(1)当𝑁=4，𝑝=1/3时，求𝑋的分布列；(2)设𝑘，𝑚均为自然数．（i）当𝑘≤𝑁−1时，求𝑃(𝑋>𝑘)；（ii）当𝑘+𝑚≤𝑁−1时，证明：𝑃(𝑋>𝑘+𝑚|𝑋>𝑘)=𝑃(𝑋>𝑚)．」。差异两处：一、md 第 114 行增补「（15 分）」；二、实词删改一处——PDF 作「当且仅当投中 1 次时或𝑁次均未投中时」，md 作「当且仅当投中 $1$ 次或 $N$ 次均未投中时」，删去「1 次」后的「时」字。已用 600 dpi 渲染视读确认 PDF 该「时」字确实存在，非文本层伪影；两处「…时或…时」为并列结构，删去前一「时」后语义不变、不改作答方式。分类：实质一致但表述有出入（本卷唯一一处非标点性的字词改动）。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -434,9 +434,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「18．已知椭圆𝐶:𝑥²/𝑎²+𝑦²/𝑏²=1(𝑎>𝑏>0)的左焦点为𝐹(−1,0)，离心率为 1/2．(1)求𝐶的方程；(2)设𝑂为坐标原点，过𝐹且斜率大于0的动直线𝑙与𝐶交于𝑃，𝑄两点，其中𝑄在第三象限，直线𝑃𝑂与𝐶的另一个交点为𝑅．（i）若△𝑃𝑄𝑅的面积是△𝑃𝐹𝑂的面积的3倍，求𝑙的方程；（ii）求tan∠𝑃𝑄𝑅的最小值．」。三角形记号 PQR / PFO / ∠PQR 与直线 PO 均经 170 dpi 渲染视读逐一确认（文本层受 ToUnicode 缺陷影响塌缩为 𝑃𝑃𝑃𝑃𝑃𝑃，不可据），与规范源第 124-132 行相符。差异一处：md 第 124 行增补「（17 分）」。其余逐字一致。分类：实质一致但表述有出入（仅分值补注）。本题无配图。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「18．已知椭圆𝐶:𝑥²/𝑎²+𝑦²/𝑏²=1(𝑎>𝑏>0)的左焦点为𝐹(−1,0)，离心率为 1/2．(1)求𝐶的方程；(2)设𝑂为坐标原点，过𝐹且斜率大于0的动直线𝑙与𝐶交于𝑃，𝑄两点，其中𝑄在第三象限，直线𝑃𝑂与𝐶的另一个交点为𝑅．（i）若△𝑃𝑄𝑅的面积是△𝑃𝐹𝑂的面积的3倍，求𝑙的方程；（ii）求tan∠𝑃𝑄𝑅的最小值．」。三角形记号 PQR / PFO / ∠PQR 与直线 PO 均经 170 dpi 渲染视读逐一确认（文本层受 ToUnicode 缺陷影响塌缩为 𝑃𝑃𝑃𝑃𝑃𝑃，不可据），与规范源第 124-132 行相符。差异一处：md 第 124 行增补「（17 分）」。其余逐字一致。分类：实质一致但表述有出入（仅分值补注）。本题无配图。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }
@@ -458,9 +458,9 @@
       "source_ref": {
         "path": "2026/2026_数学真题_试题.md"
       },
-      "source_sha256": "9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1",
+      "source_sha256": "3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee",
       "transcription_review": {
-        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 9a7b161d42029833ebd0c38c4c6add67576ecfd390a1c52f3f428d12bd0bb5e1，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「19．已知函数𝑓(𝑥)的定义域为𝑅，且当𝑥<0时，𝑓(𝑥)=2^𝑥．对任意𝑥₀∈𝑅，定义集合𝐷(𝑥₀)={𝑑∈R|𝑓(𝑥₀+𝑑)>𝑓(𝑥₀)}．(1)若当𝑥≥0时，𝑓(𝑥)=1−𝑥，求𝐷(−1)；(2)若𝑓(𝑥)是奇函数，𝑓(𝑥₁)≤𝑓(𝑥₂)，且𝑥₁𝑥₂≠0，证明：𝐷(𝑥₂)⊆𝐷(𝑥₁)；(3)设𝑓(𝑥)满足：①若𝑓(𝑥₁)≤𝑓(𝑥₂)，则𝐷(𝑥₂)⊆𝐷(𝑥₁)；②当0<𝑥<1时，𝑓(𝑥)<𝑓(0)．（i）证明：𝑓(0)≥1；（ii）证明：𝑓(𝑥)在区间(0,+∞)单调递增．」。差异两处：一、md 第 134 行增补「（17 分）」；二、记号统一——PDF 同题内两种写法（定义域处用斜体 𝑅，集合条件处用正体 R），md 一律作 \\mathbb{R}，并把集合竖线写成 \\mid。均不改题意。分类：实质一致但表述有出入。本题无配图。卷末：PDF p5 为整页空白（pdftotext 与 170 dpi 渲染均无内容），不存在正式卷独有而回忆版缺失的第 20 题以后内容；19 题一一对应，无「正式卷无对应题」情形。",
+        "evidence": "定位与口径：规范源 2026/2026_数学真题_试题.md（本卷唯一登记源，manifest source_ids 为空、仅有 legacy_source_files 一条）；现场 shasum -a 256 得 3b7ba03cdcf007c382d45b773fb6e0af39602b673cab3bb3cf2814d08808d1ee，与 manifest 登记值逐字相同。result 判据按本卷特殊口径只判「题面块可完整提取、无内部损坏、哈希与登记一致」：库内工具 question_text_digests 对该 md 返回整数键 1-19 全号无缺、无异常，本题 digest 见 question_text_sha256 字段，块内无截断、无残留包装标记。以下与上游 PDF 的比对不进 result，仅作 ISSUE-0001 处置输入。 本题：PDF p4「19．已知函数𝑓(𝑥)的定义域为𝑅，且当𝑥<0时，𝑓(𝑥)=2^𝑥．对任意𝑥₀∈𝑅，定义集合𝐷(𝑥₀)={𝑑∈R|𝑓(𝑥₀+𝑑)>𝑓(𝑥₀)}．(1)若当𝑥≥0时，𝑓(𝑥)=1−𝑥，求𝐷(−1)；(2)若𝑓(𝑥)是奇函数，𝑓(𝑥₁)≤𝑓(𝑥₂)，且𝑥₁𝑥₂≠0，证明：𝐷(𝑥₂)⊆𝐷(𝑥₁)；(3)设𝑓(𝑥)满足：①若𝑓(𝑥₁)≤𝑓(𝑥₂)，则𝐷(𝑥₂)⊆𝐷(𝑥₁)；②当0<𝑥<1时，𝑓(𝑥)<𝑓(0)．（i）证明：𝑓(0)≥1；（ii）证明：𝑓(𝑥)在区间(0,+∞)单调递增．」。差异两处：一、md 第 134 行增补「（17 分）」；二、记号统一——PDF 同题内两种写法（定义域处用斜体 𝑅，集合条件处用正体 R），md 一律作 \\mathbb{R}，并把集合竖线写成 \\mid。均不改题意。分类：实质一致但表述有出入。本题无配图。卷末：PDF p5 为整页空白（pdftotext 与 170 dpi 渲染均无内容），不存在正式卷独有而回忆版缺失的第 20 题以后内容；19 题一一对应，无「正式卷无对应题」情形。",
         "result": "passed",
         "role": "b06-question-reviewer-opus"
       }

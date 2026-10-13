@@ -3834,3 +3834,19 @@
 - 阶段结果：本批内容、来源、构建和视觉审查已按门禁登记；仅 ISSUE-0048 来源冲突未解除。报告生成时三份README与渲染投影一致；恢复用户原始README改动后，全量报表投影仍会显示这三份受保护README的已知差异，不覆盖其用户内容。
 - 剩余任务：全题库1952—2026尚未完成；下一批 `phase0-b06` 已在manifest中处于 `compiled_pending_review`，包含2026全国1回忆版及全国2卷。OCR升级的独立gold、正文/layout OCR与MinerU对比、题目IR、路由和成本基准仍待推进；65条历史跨批provenance漂移仍待单独处理。
 - 下一步：提交本批正式关闭记录（不含三份受保护README）；随后恢复时先检查diff与本进度，按manifest现有attempt继续phase0-b06复核，不重复b05构建或视觉检查。
+
+### `phase0-b06` — 2026 全国1卷回忆版、全国2卷（已完成：closed_with_blockers）
+
+- 已完成子阶段：恢复时核对规范工作树 `feat/gaokao-phase0` 的 Git diff 与本进度；b06 原始转录、数学核查和全国2卷旧成果均复用。回忆版仅针对已批准的版式问题修改选项布局和分页提示，未改题目文字、数字、结论或答案；按项目事务同步 provenance 来源哈希，回忆版身份仍保持 blocked。
+- 已完成：四卷版 formal build 当前 attempts 成功，回忆版 attempt `5ff46319-3ae7-48b9-a452-60f3e0b873b8`、全国2卷 `84ecb2fa-1011-4cbd-a70e-a304a478d49b`，共149页，build validator 显示两卷 current、无失败或 stale；已准备8份绑定当前 attempt 的复核工作项。
+- 已完成视觉子阶段：四版接触表逐页检查149页；11个候选/首页/既存问题页以120dpi复核，并另查回忆版解析 Underfull 警告页12。未见缺字、遮挡、裁切、图形错配或选项换行异常。回忆版第1页两个版本的 Q2 已正确呈两栏；解析末页的方法总结与三个答案框同页，接受此次批准的留白分页取舍。Underfull 警告与当前 build 日志精确对应，页面视觉正常，待登记豁免。
+- 修改文件：回忆版规范题目 Markdown、解析正文 Markdown、生成的回忆版 `questions.tex`/`answers.tex`/`provenance.json`、两卷 build receipts、`source-manifest.json`、`reports/adjudicated-drifts.json`；忽略目录 `.work/phase0-b06/` 含8个待填复核工作项与149页接触表/局部渲染。三份受保护 README 的既有用户改动仍须保持原样且排除提交。
+- 验证：生成器 `--check`、b06 batch check、provenance `check-batch`（2卷）、来源清单（775项）、既有 layout-baseline 精确漂移测试、layout policy（2项）、generate_projects（106项）、`git diff --check` 均通过。首次官方构建共8个PDF，0构建失败；当前页数为回忆版4/39/6/29、全国2卷4/35/6/26。Token/API/模型调用成本无本批可核实计量，不宣称节省率。
+- 已完成：8份工作项登记149页×8项、1192条非空检查说明；回忆版解析 Underfull 警告精确登记为视觉通过豁免。`finalize-batch` 返回 `FINALIZED`，manifest revision 4135、批次状态 `closed_with_blockers`，报告 `reports/phase0-b06.md` 已生成。
+- 验证：来源清单（775项）、build `--require-final`（2卷）、review finalizer/check-batch、provenance（2卷）均通过。8份 PDF 文件大小、SHA-256、PDF 签名及页数与正式 receipts 逐一匹配。三份保护 README 的既有 diff SHA-256 仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。
+- 报告投影：全量 `report.py check --all` 不通过，原因为六个投影过期；不覆盖三份受保护 README。基于同一 report facts 通过项目 `Transaction` 只更新另外三份安全生成文件（`docs/source-inventory.md`、`report.md`、`reports/baseline.md`），逐字节比对均匹配；故全量报告门禁仍因三份有意保留的 README 用户差异未通过，不声称整体通过。
+- 清理：两卷 `build/` 中仅删除 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 等非 PDF 产物，保留四版 PDF；删除本批忽略目录 `.work/phase0-b06/`（接触表、局部渲染和临时工作项）。删除前确认目标仅含本批生成临时文件。
+- 修改文件：回忆版规范题目 Markdown、解析正文 Markdown、生成 TeX/provenance/build receipts；全国2卷 build receipt；manifest、`reports/adjudicated-drifts.json`、批次报告、全量来源/项目/基线报告投影及本进度。三份受保护 README 未改动本轮之前内容；未改全国2卷题目、答案或 provenance。
+- 剩余：批次的回忆版身份与全国2卷官方来源身份限制继续保留；全量报告检查因三份受保护 README 差异而受限。OCR 升级仍需混合 PDF 与人工 gold、MinerU/PaddleOCR 对照、题目级 IR/任务路由、端到端成本和质量基准；1952—2026 题库也未整体完成。
+- 提交状态：已与本批全部17个文件合并为单一提交；三份受保护 README 未暂存、未提交；未 push。
+- 下一步建议：后续恢复 OCR 升级时，进入真实混合文档/人工 gold 评测；复用已有 analyzer、PaddleOCR 模型与缓存，不重做本批转录或复核。

@@ -15925,17 +15925,16 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "94904600f9cfc02b1285ad9ee54810472963c56cd899561f19186ace04bdc784",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2026-regular-national-1-recall",
   "pdf_sha256": "f7d7f0385319068e6ef27449aa8f883e314ccef1e11eccec91484f4e3c5bfc1d",
-  "resume_action": "修正 gk-2026-regular-national-1-recall 的 简答版 第 1 页 option_formula_alignment（第2题D项“x=-2, y=-3”在行末断开，首行停在“y=”，−3孤悬下一行，选项基线与其他项不齐。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0985
 
 ```json
@@ -15946,17 +15945,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "dd5d60fbdc7417877960185db10f12fc49a79568ff10abc494907627623b0b00",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 39,
   "paper_id": "gk-2026-regular-national-1-recall",
   "pdf_sha256": "490c122a3dd3a972bec60bab5da33538ea44442e25f960c83ed68c82346a3358",
-  "resume_action": "修正 gk-2026-regular-national-1-recall 的 解析版 第 39 页 pagination_whitespace（末页仅顶部三条答案框，页面其余约八成留白，末页内容与留白明显失衡；记录为分页/留白缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0986
 
 ```json
@@ -15967,17 +15965,16 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "320730b48cdd9f6d44f48dde590bf67fdb4ee1ee11633beb9a83f7453fb204cd",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2026-regular-national-1-recall",
   "pdf_sha256": "e4c8269e0b6fe9987380581220dffcca95806336d14ef3cbd968d8bade4d5fa5",
-  "resume_action": "修正 gk-2026-regular-national-1-recall 的 试题版 第 1 页 option_formula_alignment（第2题D项‘x=-2，y=-3’在右侧栏末发生断行，y=-3孤立落到下一行并贴近左侧；选项排布明显破坏，记为真实视觉缺陷。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-0987
 
 ```json
