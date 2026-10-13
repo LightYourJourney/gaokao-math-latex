@@ -3693,3 +3693,12 @@
 - 验证结果：批次build=`OK`（3 succeeded）、review=`FINALIZED`、provenance=`OK：3卷`；255页/2040检查全pass，唯一Underfull豁免精确对应2020Ⅱ解析版第22页。清理后12份PDF指纹/大小/页数均匹配receipt，PDF与LaTeX源保留，编译中间物清理；279份临时复核文件可恢复归档至Trash。review/report/manifest CSV/source manifest/build项目测试通过；provenance测试唯一失败仍是全库65项历史缓存漂移。受保护README合并diff哈希仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。
 - 剩余任务：1952—2026全语料后续批次未完成；全库65项provenance缓存状态差异需另行定界处理。README用户差异仍待原作者审阅。
 - 下一步：本批验收完成，按“阶段达标即停”要求停止扩展；后续恢复时从总计划中phase0-b03之后的下一批继续，不重做本批。
+
+### phase0-b04 中断恢复与四卷复核预检
+
+- 已完成可验证阶段：复核Git差异和PROGRESS；按 manifest 确认下一时间序列批次为 phase0-b04（2022新高考Ⅰ/Ⅱ、2023新高考Ⅰ/Ⅱ）。source manifest、四卷×22题solution source校验、questions/short-answer/edition生成检查通过。build回执因生成输入树与工具链指纹变化全部stale，故不能沿用旧PDF/视觉回执，需对16版正式重建。现存构建页数共355页；三卷旧review passed、一卷旧review failed，均与本次stale build绑定；2022新高考Ⅱ解析版有一条Underfull警告。
+- 阶段修改文件：仅本 `PROGRESS.md` 与ignored SDD ledger；未改试卷源、正式回执或README用户差异。
+- 验证结果：build validator=`INVALID`（4 stale、0其他故障）；review=`INVALID_OR_STALE`（四卷build回执失效）；source manifest validate、solution source 4×22题及三项生成 `--check`全部通过。2023新高考Ⅰ卷既有 `ISSUE-0980` 指向解析版第39页：仅第22题两个答案框落在大量空白末页，当前旧receipt为failed。已用当前旧PDF高清查看第38/39页确认视觉问题；源答案内容不改。
+- 决策记录：Ruling：将 `ISSUE-0980` 按既有用户授权作为纯分页问题处理，只在权威解析正文加入局部分页约束，保持题文、答案和解析不变；原因是该缺陷阻碍可打印性，且已有“批准修复纯版式问题”的用户裁定；风险是新分页仍可能不均衡，缓解方式是正式重建后检查前后页并重审当前PDF，若仍有缺陷则如实保留fail，不绕过门禁。
+- 剩余任务：修改2023新高考Ⅰ卷解析源的局部分页并检查确定性生成结果；按官方事务刷新该卷受影响provenance；归档phase0-b04旧attempt的16份工作项；四卷正式重建、复核警告/新增视觉变化；完成当前attempt逐页复核、checked finalize、报告/CSV刷新、定向测试、清理和提交。2023新高考Ⅰ未授权的内容问题继续保留。
+- 下一步：在权威 `2023/2023_数学真题_解析正文.md` 的第22题方法总结前加入Needspace分页约束；先检查生成器输出与该卷单卷试编，再刷新本卷provenance并扩展构建到四卷。
