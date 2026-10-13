@@ -3149,6 +3149,14 @@
 - 验证结果：16版全部`succeeded`；每卷页数依次为文科5/31/7/26、理科6/39/8/31（2019），文科5/32/7/23、理科5/39/7/28（2020），合计299页。编译错误、缺字、未解析引用及build problems均为0；build validator=`OK`（4 pending review、0 stale/failed/invalid/missing）。16/16 PDF SHA均不同于旧review receipt，故必须重新复核全部299页；页数均与旧值一致。
 - 剩余任务：创建当前attempt的16份review workitem，对299页完成视觉检查；2020文科第23题按已授权既定结论保留失败；随后finalize、全量投影/门禁、清理和提交。
 - 下一步：通过官方 `review_receipts.py prepare-batch` 为revision 4117绑定当前attempt，开始分卷逐页复核。
+
+### phase0-b02 当前 attempt 复核工作项
+
+- 已完成可验证阶段：官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase0-b02` 为四卷16版创建当前attempt工作项。
+- 阶段修改文件：仅 ignored `.work/phase0-b02/review/{试题版,解析版,简答版,印刷版}/` 下16份JSON；正式receipt尚未finalize。
+- 验证结果：16/16工作项均绑定本次四个build attempt；覆盖299/299页、2392项检查，全部初始pending，未提前继承旧attempt结论或标记通过。
+- 剩余任务：逐页检查当前299页；记录所有真实版式问题和已知来源失败；警告豁免须与当前日志逐项匹配。
+- 下一步：用Poppler渲染四卷16版页面，生成可读联系表，按论文/版次分段完成视觉审查并每卷更新本进度。
 - 下一步：提交b92恢复核对checkpoint；随后按官方`build_projects.py build --formal --batch phase2-b92`构建，不更改内容源。
 - 已完成phase2-b92当前输入正式构建阶段：官方formal build在manifest revision 4097刷新四卷16版；四卷页数分别为新课程文5/20/7/16、新课程理5/19/7/16、旧课程文4/19/6/16、旧课程理5/20/7/16，共188页。四卷attempt分别为`20adf3b2-8c72-40ab-ac94-bbf78ac47cf8`、`a3c2d92a-bc30-43b8-ae89-d3bc88d9207b`、`3009247d-e1ae-443a-a75b-daea2dbe8b5c`、`00142336-2324-436f-992f-d8e8855421a1`。
 - 阶段修改文件：四卷`receipts/build.json`、`source-manifest.json`中的派生状态及本进度；规范题源与生成LaTeX未改。
