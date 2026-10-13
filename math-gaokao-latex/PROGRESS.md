@@ -3437,3 +3437,11 @@
 - 验证结果：该卷四份工作项均绑定当前attempt、JSON结构可读，44/44页为pass；四卷累计166/166页视觉检查通过，尚未登记正式receipt。
 - 剩余任务：对账四卷警告豁免与当前build记录；通过官方checked finalize刷新provenance、review、batch/report及manifest CSV；再跑批次/全库门禁和完整测试，清理辅助文件/临时渲染，逐PDF核验SHA/字节/页数并提交。
 - 下一步：逐卷比较build receipt中的overfull警告与旧review豁免，精确补入当前工作项豁免；先做review结构自检，再checked finalize，不改题源或PDF。
+
+### phase2-b95 四卷当前attempt视觉复核闭环
+
+- 已完成可验证阶段：全国Ⅱ理科四版44页完成100 dpi逐页视觉复核；重点放大题面第2/3/5页几何图、频数直方图、抛物线图，以及印刷版第2/3/13页图形与末题。结合前述三卷记录，b95四卷16版166页全部复核完毕，未发现新增视觉缺陷。
+- 阶段修改文件：ignored `.work/phase2-b95/review-100dpi/2006_全国Ⅱ卷_理科/` 页面PNG/联系表；四卷16份当前attempt review work item。将四卷旧review receipt的3条underfull豁免逐字段核对当前build警告，确认版次/日志行/宽度一致，并重新检查对应当前PDF页后写入工作项。修改本进度文件。
+- 验证结果：结构自检确认16个工作项均绑定当前attempt、166/166页完成、1328项检查中1258 pass、70项无图页 `figure_label=not_applicable` 且说明原因，0 fail；3条warning exemption与当前warning逐项相符。视觉记录仍是ignored草稿，尚未checked finalize；正式review receipt当前仍待刷新。
+- 剩余任务：官方 `finalize-batch-checked` 事务登记四卷review/provenance/批次报告与manifest状态；刷新CSV和全库报告；运行b95及全库门禁、完整测试；清理四卷编译辅助物和临时PNG、核验16份PDF与正式build receipt；精确提交批次闭环。
+- 下一步：使用官方 `review_receipts.py finalize-batch-checked`，输出到 `reports/phase2-b95.md`；事务后检查revision、status与四卷所有receipt，不手工修改正式receipt或manifest。
