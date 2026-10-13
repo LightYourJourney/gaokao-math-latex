@@ -3685,3 +3685,11 @@
 - 验证结果：`git diff --check`通过；批次build/review/provenance/source-manifest门禁及CSV门禁通过；报告全库检查仅有三份受保护README与渲染器汇总行差异；相关测试为review 66/66、report 11/11、manifest CSV 2/2、source manifest 52/52、build projects 133/133通过。provenance测试中唯一失败为已知全库65项跨批缓存漂移。
 - 剩余任务：精确提交12个本批正式输出；提交后确认工作树仅留三份README用户差异、stash为空且不push。
 - 下一步：只暂存上述12个本批输出并审阅cached diff，随后提交。
+
+### phase0-b03 批次完成
+
+- 已完成可验证阶段：phase0-b03三卷正式回执、manifest、CSV和报告投影已按精确12文件范围提交，批次提交为 `907e8a90`；此前逐阶段进度checkpoint亦已提交。未push。
+- 阶段修改文件：三卷（2020新高考Ⅱ、2021新高考Ⅰ/Ⅱ）正式build/review receipts、source manifest、manifest CSV、批次报告、全库baseline/报告/来源库存；本进度文件。仅三份原有README差异留在工作树，未纳入提交。
+- 验证结果：批次build=`OK`（3 succeeded）、review=`FINALIZED`、provenance=`OK：3卷`；255页/2040检查全pass，唯一Underfull豁免精确对应2020Ⅱ解析版第22页。清理后12份PDF指纹/大小/页数均匹配receipt，PDF与LaTeX源保留，编译中间物清理；279份临时复核文件可恢复归档至Trash。review/report/manifest CSV/source manifest/build项目测试通过；provenance测试唯一失败仍是全库65项历史缓存漂移。受保护README合并diff哈希仍为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`。
+- 剩余任务：1952—2026全语料后续批次未完成；全库65项provenance缓存状态差异需另行定界处理。README用户差异仍待原作者审阅。
+- 下一步：本批验收完成，按“阶段达标即停”要求停止扩展；后续恢复时从总计划中phase0-b03之后的下一批继续，不重做本批。
