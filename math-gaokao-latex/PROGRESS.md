@@ -3597,3 +3597,11 @@
 - 验证结果：事务 `committed=true`、revision 4118；批次为 `compiled_pending_review`，返回 `VISUAL_FAILED`，失败准确为2020文科第23题在试题版第5页、解析版第5/32页、简答版第5页、印刷版第23页的5条`heading_number`，均按既有授权保留，不改原文。README合并diff SHA-256为 `9385a05de48551b4c3121bca6ed16cb3a18c4a5ab77df42742e19792fbcde842`，与stash前一致；stash已移除。
 - 剩余任务：刷新manifest CSV与全库报告/来源投影并验证；运行批次定向来源/生成/build/review/provenance门禁和适量测试；清理四卷编译中间物及ignored预览/工作项、逐项核验正式PDF，再提交最终闭环。批次视觉失败按预期保留，不可改为通过。
 - 下一步：隔离三份README用户差异后运行官方CSV与全库report投影刷新；恢复并比对差异，再检查产生的受控文件清单。
+
+### phase0-b02 全库投影与定向测试
+
+- 已完成可验证阶段：刷新 `manifest.csv` 与全库报告/来源投影；为防止报告生成器覆盖用户内容，先隔离三份README差异，运行后隔离并放弃工具生成的README汇总行，再恢复用户原差异并核对哈希。
+- 阶段修改文件：`manifest.csv`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`；三份README未纳入本阶段更改。全库六个报告目标在事务写入后完成回读校验。
+- 验证结果：manifest CSV=`当前且775行`；来源manifest validate、phase0-b02 provenance=`OK：4卷`、solution source四卷23题校验、projects/short answers/editions三项batch `--check`均通过。build validator保持`PENDING_REVIEW`（4 pending，0 stale/failed/invalid/missing）；review validator返回预期`VISUAL_FAILED`（仅批准保留的2020文科5项）。`report.py check --all`仅报告三份被保护README与渲染器期望汇总行不一致；其余全库投影均无差异，不覆盖README。定向测试6个模块共373项，372通过、1失败；唯一失败仍是全库 `test_the_cached_states_match_the_recomputed_ones`，发现2017—2026既存65条跨批缓存状态漂移，与phase0-b02无关（此前全量测试已记录同一问题）。
+- 剩余任务：安全清理本批build中间物及ignored渲染/workitem，逐PDF核验SHA/字节/页数；最终检查批次receipt/报告、README哈希和diff，提交投影与阶段收尾。视觉失败需继续准确保留。
+- 下一步：先只读盘点四卷 `build/` 文件和299页PDF回执指纹、`.work/phase0-b02`文件数/体积；确认目标后清理非PDF编译物并将临时复核资料可恢复归档。
