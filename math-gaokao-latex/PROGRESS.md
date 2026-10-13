@@ -3669,3 +3669,11 @@
 - 验证结果：review=`FINALIZED`；build validator=`OK`（3 succeeded、0 stale/failed/invalid/missing/pending）；provenance=`OK：3卷`；source manifest、solution sources、questions/short answers/edition生成检查均通过；manifest CSV当前且775行。全库报告检查仅报三份受保护README与汇总行不同，其余投影匹配。定向测试：review receipts 66/66、report 11/11、manifest CSV 2/2、source manifest 52/52、build projects 133/133通过；provenance 109项中108通过，唯一失败是全库65项历史缓存状态漂移（覆盖2017—2026），不在phase0-b03范围，未批量改写。
 - 剩余任务：清理三卷build目录中的非PDF编译中间物；将本批 `.work/phase0-b03/` 页面渲染、联系表和review工作项可恢复归档；清理后再次验证build/review/provenance及12份PDF的SHA/字节/页数；检查最终diff、提交本批收尾。全库缓存漂移及后续语料批次仍未完成。
 - 下一步：基于已核验的当前build回执，对三卷精确执行 `latexmk -c -outdir=build`，保留PDF和全部LaTeX源。
+
+### phase0-b03 编译清理、PDF复核与收尾门禁
+
+- 已完成可验证阶段：三卷分别执行 `latexmk -c -outdir=build`；三个build目录现各只保留试题/解析/简答/印刷四份PDF，LaTeX源未动。将当前批次279份忽略临时文件（267张渲染PNG、12份review工作项，56 MB）可恢复移动至 `~/.Trash/phase0-b03-finalized.on2sI5/phase0-b03`。
+- 阶段修改文件：三卷ignored build目录中的`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`等编译中间物已清理；ignored `.work/phase0-b03`已可恢复归档。正式PDF、LaTeX源、receipt未删改。
+- 验证结果：清理后12/12 PDF的SHA-256、字节数与页数均匹配正式build receipt；三个build目录各恰有4份PDF、无其他文件；Trash归档完整存在且279文件/56 MB。清理后build=`OK`（3 succeeded、0 pending/stale/failed/invalid/missing），review=`FINALIZED`，provenance=`OK：3卷`，source manifest validate通过，`git diff --check`通过。三份README差异仍与基线合并哈希相同；stash列表为空。
+- 剩余任务：审阅phase0-b03正式diff和文件所有权；精确暂存/提交三卷回执、manifest、CSV、批次与全库报告投影及进度记录；提交后复核工作区仅剩三份README用户差异，不push。全库65条provenance缓存漂移和后续语料批次仍未处理。
+- 下一步：先比较本批完整diff与预期文件清单、复核README哈希，再提交phase0-b03已完成内容。
