@@ -42,6 +42,41 @@ def fake_toolchain(languages='chi_sim+eng'):
 
 
 class PdfOcrPipelineTests(unittest.TestCase):
+    def test_expected_sha256_rejects_wrong_pdf_before_analysis(self):
+        with tempfile.TemporaryDirectory() as temp:
+            pdf = Path(temp) / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            with patch.object(ocr_pdf.analyze_pdf, 'analyze') as analyze:
+                with self.assertRaisesRegex(ocr_pdf.OcrPdfError, 'SHA-256 mismatch'):
+                    ocr_pdf.process_pdf(pdf, expected_sha256='0' * 64,
+                                        cache_dir=Path(temp) / 'cache')
+                analyze.assert_not_called()
+            self.assertFalse((Path(temp) / 'cache').exists())
+
+    def test_expected_sha256_rejects_malformed_hash(self):
+        with tempfile.TemporaryDirectory() as temp:
+            pdf = Path(temp) / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            for value in ('', 'f' * 63, 'g' * 64, ' f' * 32, 123):
+                with self.subTest(value=value), self.assertRaisesRegex(
+                        ocr_pdf.OcrPdfError, '64 hexadecimal'):
+                    ocr_pdf.process_pdf(pdf, expected_sha256=value)
+
+    def test_expected_sha256_match_preserves_no_ocr_path(self):
+        with tempfile.TemporaryDirectory() as temp:
+            pdf = Path(temp) / 'source.pdf'
+            pdf.write_bytes(b'%PDF-1.4 fixed-source')
+            evidence = analysis_for(pdf)
+            evidence['pages'] = [dict(item, classification='text_candidate')
+                                 for item in evidence['pages']]
+            with patch.object(ocr_pdf.analyze_pdf, 'analyze', return_value=evidence), \
+                    patch.object(ocr_pdf, 'tool_fingerprints') as ocr_tools:
+                result = ocr_pdf.process_pdf(
+                    pdf, expected_sha256=evidence['pdf_sha256'].upper(), cache_dir=None)
+            self.assertEqual(result['pdf_sha256'], evidence['pdf_sha256'])
+            self.assertEqual(result['ocr_calls'], 0)
+            ocr_tools.assert_not_called()
+
     def test_invalid_source_identity_is_rejected_before_external_tools(self):
         with tempfile.TemporaryDirectory() as temp:
             pdf = Path(temp) / 'source.pdf'

@@ -196,7 +196,7 @@ def recognize_page(image, page, pdf_hash, source_id, dimensions, dpi,
             'page_height_px': dimensions[1]}
 
 
-def process_pdf(pdf, *, source_id=None, pages=None, dpi=180, languages='chi_sim+eng',
+def process_pdf(pdf, *, source_id=None, expected_sha256=None, pages=None, dpi=180, languages='chi_sim+eng',
                 psm=3, cache_dir=DEFAULT_CACHE,
                 analysis_cache_dir=analyze_pdf.DEFAULT_CACHE, min_chars=40, timeout=120):
     started = time.monotonic()
@@ -206,6 +206,10 @@ def process_pdf(pdf, *, source_id=None, pages=None, dpi=180, languages='chi_sim+
     if source_id is not None and (not isinstance(source_id, str)
                                   or not source_id.strip() or source_id != source_id.strip()):
         raise OcrPdfError('source_id must be a non-empty, trimmed string when supplied')
+    if expected_sha256 is not None:
+        if not isinstance(expected_sha256, str) or re.fullmatch(r'[0-9a-fA-F]{64}', expected_sha256) is None:
+            raise OcrPdfError('expected_sha256 must contain exactly 64 hexadecimal characters')
+        expected_sha256 = expected_sha256.lower()
     languages = '+'.join(parse_languages(languages))
     if pages is not None:
         if not pages or any(type(page) is not int or page < 1 for page in pages):
@@ -219,6 +223,8 @@ def process_pdf(pdf, *, source_id=None, pages=None, dpi=180, languages='chi_sim+
         if not stream.read(1024).lstrip().startswith(b'%PDF-'):
             raise OcrPdfError('Input has no PDF header')
     pdf_hash = analyze_pdf.digest_file(pdf)
+    if expected_sha256 is not None and pdf_hash != expected_sha256:
+        raise OcrPdfError(f'PDF SHA-256 mismatch: expected {expected_sha256}, got {pdf_hash}')
 
     try:
         analysis = analyze_pdf.analyze(pdf, cache_dir=analysis_cache_dir,
@@ -302,6 +308,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('pdf', type=Path)
     parser.add_argument('--source-id', help='Optional source-manifest ID for traceable run metadata')
+    parser.add_argument('--expected-sha256', help='Reject a PDF not matching this SHA-256 before analysis or OCR')
     parser.add_argument('--page', type=int, action='append', help='Repeat to OCR explicit pages, even if text exists')
     parser.add_argument('--dpi', type=int, default=180)
     parser.add_argument('--languages', default='chi_sim+eng')
@@ -313,7 +320,7 @@ def main(argv=None):
     parser.add_argument('--timeout', type=float, default=120)
     args = parser.parse_args(argv)
     try:
-        result = process_pdf(args.pdf, source_id=args.source_id, pages=args.page,
+        result = process_pdf(args.pdf, source_id=args.source_id, expected_sha256=args.expected_sha256, pages=args.page,
                              dpi=args.dpi, languages=args.languages, psm=args.psm,
                              cache_dir=None if args.no_cache else args.cache_dir,
                              analysis_cache_dir=None if args.no_cache else analyze_pdf.DEFAULT_CACHE,
