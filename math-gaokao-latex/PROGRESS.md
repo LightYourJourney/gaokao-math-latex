@@ -3373,3 +3373,11 @@
 - 验证结果：16/16 PDF的SHA-256、字节数和页数均与正式build receipt匹配；归档目标存在且大小45 MB。b94 review/build/provenance/source-manifest、manifest CSV及报告投影门禁在清理前均通过；清理后待复跑review/build定向门禁及最终 `git diff --check`。
 - 剩余任务：完成清理后门禁；检查本批最终tracked diff和精确暂存范围；提交 b94 完成内容，不push。三份既有 README 改动已逐文件与临时stash字节比对后恢复，保持未暂存；临时stash已安全移除。ISSUE-0834仍是全国Ⅰ理科内容阻塞，全语料未完成。
 - 下一步：复跑review与build receipt validator，核查仓库状态及暂存范围；只提交本批所有权路径。
+
+### phase2-b94 批次收尾与提交
+
+- 已完成可验证阶段：四卷来源记录、正式构建、167页视觉复核、复核事务、报告/CSV投影和编译产物清理全部闭环；批次于提交 `e5d060c8` 登记。官方状态为 `closed_with_blockers`：四卷视觉复核均通过，仅全国Ⅰ理科既有 ISSUE-0834 内容阻塞仍保留。
+- 阶段修改文件：提交 `e5d060c8` 收录15个 b94 所有权文件；提交 `769729df` 记录视觉复核阶段。三份恢复前既有 README 改动仍未暂存/提交，PDF与LaTeX源保留，45MB临时工作目录已移至Trash可恢复归档。
+- 验证结果：提交前清理后 review=`FINALIZED`、build receipt=`OK`（4成功、0失败/过期/待审）、provenance=`OK：4卷`、manifest CSV=`当前且775行`、报告投影检查通过、`git diff --check`通过；16/16 PDF SHA-256、字节数、页数与回执一致。
+- 剩余任务：ISSUE-0834需按其来源证据另行处理；1952—2026语料及后续批次尚未完成。三份既有 README 的工作区差异保留给用户。
+- 下一步：本阶段到此停止；待明确下一批范围后再继续，不自动扩展任务。
