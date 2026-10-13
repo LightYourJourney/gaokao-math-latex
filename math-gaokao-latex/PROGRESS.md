@@ -3445,3 +3445,11 @@
 - 验证结果：结构自检确认16个工作项均绑定当前attempt、166/166页完成、1328项检查中1258 pass、70项无图页 `figure_label=not_applicable` 且说明原因，0 fail；3条warning exemption与当前warning逐项相符。视觉记录仍是ignored草稿，尚未checked finalize；正式review receipt当前仍待刷新。
 - 剩余任务：官方 `finalize-batch-checked` 事务登记四卷review/provenance/批次报告与manifest状态；刷新CSV和全库报告；运行b95及全库门禁、完整测试；清理四卷编译辅助物和临时PNG、核验16份PDF与正式build receipt；精确提交批次闭环。
 - 下一步：使用官方 `review_receipts.py finalize-batch-checked`，输出到 `reports/phase2-b95.md`；事务后检查revision、status与四卷所有receipt，不手工修改正式receipt或manifest。
+
+### phase2-b95 finalize 前置门禁恢复
+
+- 已完成可验证阶段：首次调用官方 `finalize-batch-checked`；工具在任何写入前拒绝执行，因为 tracked 工作树存在恢复时已确认的三份 README 用户差异。
+- 阶段修改文件：本进度文件；finalizer `committed=false`，未修改正式receipt、manifest、issues或报告。三份 README 差异保持原样。
+- 验证结果：拒绝原因精确列出 `README_数学.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/README.md`；无其他工作区差异。
+- 剩余任务：提交本checkpoint后，仅临时stash上述三路径，确认工作树干净；重跑checked finalize；随即恢复stash并逐字节核对三份README与原差异一致，删除已验证的临时stash引用。
+- 下一步：精确stash三份既有README变更并复核暂存范围，再重试checked finalize。
