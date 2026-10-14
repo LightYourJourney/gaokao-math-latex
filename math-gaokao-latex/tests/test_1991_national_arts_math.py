@@ -64,6 +64,10 @@ class NationalArts1991SourceTests(unittest.TestCase):
         self.assertRegex(self.answers, r"(?s)\*\*5．\*\*\s+\*\*答案：B\*\*")
         self.assertIn("异面直线对数为 24", self.solution)
 
+    def test_q17_answer_point_preserves_the_sine_shift_sign(self):
+        points = solution_sources.parse_answer_points(self.answers)
+        self.assertEqual(points[16].answer_for(None), r"$2-\sqrt5$")
+
     def test_source_uncertainties_are_preserved(self):
         self.assertRegex(self.questions, r"\$b_1\s+\+\s+\+b_2\s*\+\s*b_3=")
         self.assertIn("$a_n=2n-3$ 或 $a_n=5-2n$", self.answers)
