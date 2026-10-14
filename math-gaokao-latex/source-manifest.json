@@ -1270,6 +1270,14 @@
         "gk-1989-regular-guangdong-science"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b05",
+      "issues": [],
+      "paper_ids": [
+        "gk-1991-regular-national-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1279,7 +1287,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "77ebae5c-105a-4a9b-b716-8d902c0904d0",
+  "last_transaction_id": "bc838a5b-4a01-4981-82a9-448322282d49",
   "papers": [
     {
       "blocked_from": null,
@@ -19202,9 +19210,66 @@
       "title": "1989 年·广东卷·理科",
       "track": "science",
       "year": 1989
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1991_全国卷_文科/figures/f1991_national_arts_q23_frustum.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1991_national_arts",
+        "id": "gk-1991-regular-national-arts",
+        "note": "固定题面源为一页A3三栏排印稿，印刷页码40，PDF SHA-256 45e5e668b01ecbfc8297b1903f94b394d29e9d2555bc6d7c4ea34b6f702bbea6；原件未附答案、解析或分值。推导为非官方草稿待独立复核；第24题原页双加号照录且条件允许两种公差，第26题未指定长轴方向而保留两种互换方程。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "填空题": [
+            16,
+            21
+          ],
+          "解答题": [
+            22,
+            26
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1991-regular-national-arts",
+      "production_state": "planned",
+      "project_dir": "1991_全国卷_文科",
+      "question_count": 26,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1991/1991_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1991/1991_数学真题_全国文_含解析.md",
+        "questions": "1991/1991_数学真题_全国文_试题.md",
+        "solution_body": "1991/1991_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-21109a45ef1d5414c0cd3294cb13d0844e5e973d0bcac83a31dacd8dc036f955"
+      ],
+      "title": "1991 年·全国卷·文科",
+      "track": "arts",
+      "year": 1991
     }
   ],
-  "revision": 4148,
+  "revision": 4149,
   "schema_version": 1,
   "sources": [
     {
@@ -23277,8 +23342,8 @@
       "exam_type": "regular",
       "git_blob_oid": "58628f530f4d839ca9aa7bdf4e14bc27c0cee096",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1991-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1991全国文.pdf",
       "regions": [],
       "source_id": "src-21109a45ef1d5414c0cd3294cb13d0844e5e973d0bcac83a31dacd8dc036f955",

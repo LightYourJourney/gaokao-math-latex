@@ -1,0 +1,135 @@
+{
+  "schema": "unbound-source-map/v1",
+  "audit_date": "2026-10-14",
+  "source_manifest_revision": 4148,
+  "upstream_commit": "34c13a6cf632c0b69c95f89b9b923bbc4a08924d",
+  "selection": "year=1991 and paper_id=null",
+  "summary": {
+    "records_reviewed": 4,
+    "year_region_confirmed": 4,
+    "track_confirmed": 2,
+    "track_unspecified": 2,
+    "paper_bindings_performed": 0
+  },
+  "method": [
+    "Rechecked the current manifest revision and the four 1991 source records by source_id, artifact SHA-256, Git blob OID, and paper_id. Their local upstream PDFs, byte hashes, blob identities, and page counts were verified in the preceding source-audit stage; this report does not repeat rendering or hashing.",
+    "Used the printed page-one titles extracted from the three text-bearing PDFs; the Shanghai PDF has no text layer, so its page-one title was visually inspected in the preceding stage.",
+    "Used the Hunan Provincial People's Government portal to corroborate that the 1991 '三南' pilot refers to Hunan, Yunnan, and Hainan. The article lists four subject groups and mathematics in groups 2–4, but does not establish whether this source PDF was the sole/shared mathematics paper across those groups."
+  ],
+  "records": [
+    {
+      "source_id": "src-ebe687fb91c528cd9ca3b747c7af22635654a95ade8d922bf8a587899295bd83",
+      "raw_paper_name": "1991三南(湖南,海南,云南).pdf",
+      "upstream_path": "普通高考/1991/1991三南(湖南,海南,云南).pdf",
+      "sha256": "0c1fe2909986c82bf03fcddca2d8ce2a871b47714942903464f78095abcaae48",
+      "git_blob_oid": "72817784dbc76ef0c6d82a2a84d3752cd67176db",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1991,
+        "region": "湖南、云南、海南（三南试点）",
+        "track": null,
+        "candidate_paper_key": "1991_三南卷_数学",
+        "printed_title": "1991 普通高等学校招生考试（三南卷）"
+      },
+      "answer_material": "not assessed during this identity-mapping stage",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed title identifies the 1991 examination as the 三南卷."
+        },
+        {
+          "location": "Hunan Provincial People's Government portal, article '恢复之后:不断探索的高考制度改革' (2018-11-16)",
+          "method": "official historical account",
+          "url": "https://www.hunan.gov.cn/topic/ggkfsszn/hnyj/201811/t20181116_5186044.html",
+          "observation": "The article explicitly defines the 1991 三南 pilot as Hunan, Yunnan, and Hainan, and describes four subject groups. Mathematics appears in groups 2, 3, and 4; the article does not prove this PDF's track or whether separate mathematics variants existed."
+        }
+      ],
+      "registration_action": "none; keep unbound until the mathematics-paper/track relationship is established"
+    },
+    {
+      "source_id": "src-de45d6075f9038c7b46c233df86b014753be6f32fb2eb832653b00cbad96fcb9",
+      "raw_paper_name": "1991上海.pdf",
+      "upstream_path": "普通高考/1991/1991上海.pdf",
+      "sha256": "210d9c28d9cb6e90274a436177b0f4ef0cf2b4c6e5ef85583df939d8e2f4394a",
+      "git_blob_oid": "100f8f65d97dbd4e9d86104019d7cbdb2fe15afa",
+      "page_count": 7,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1991,
+        "region": "上海",
+        "track": null,
+        "candidate_paper_key": "1991_上海卷_数学",
+        "printed_title": "1991年全国普通高等学校招生统一考试 上海 数学试题"
+      },
+      "answer_material": "not assessed during this identity-mapping stage",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "visual inspection",
+          "observation": "The scanned heading explicitly identifies the 1991 Shanghai mathematics examination; no arts/science track is stated on that page."
+        }
+      ],
+      "registration_action": "none; year and region identified, track and canonical binding remain unspecified"
+    },
+    {
+      "source_id": "src-21109a45ef1d5414c0cd3294cb13d0844e5e973d0bcac83a31dacd8dc036f955",
+      "raw_paper_name": "1991全国文.pdf",
+      "upstream_path": "普通高考/1991/1991全国文.pdf",
+      "sha256": "45e5e668b01ecbfc8297b1903f94b394d29e9d2555bc6d7c4ea34b6f702bbea6",
+      "git_blob_oid": "58628f530f4d839ca9aa7bdf4e14bc27c0cee096",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1991,
+        "region": "全国",
+        "track": "文科",
+        "candidate_paper_key": "1991_全国卷_文科",
+        "printed_title": "1991 普通高等学校招生考试（全国卷文）"
+      },
+      "answer_material": "not assessed during this identity-mapping stage",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed title explicitly identifies the 1991 national arts paper."
+        }
+      ],
+      "registration_action": "none; source remains unbound"
+    },
+    {
+      "source_id": "src-46d610089dad2e2020d262785761b9cf06ab946f66af6c4d56adbb086f1bc21c",
+      "raw_paper_name": "1991全国理.pdf",
+      "upstream_path": "普通高考/1991/1991全国理.pdf",
+      "sha256": "b2d5fd64fbae7b988c4a0ae36bba5006ff50f5ff1e64e12650b91dedfc99855c",
+      "git_blob_oid": "42db1744144a188d8d86156621c84603090b7c8e",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1991,
+        "region": "全国",
+        "track": "理科",
+        "candidate_paper_key": "1991_全国卷_理科",
+        "printed_title": "1991 普通高等学校招生考试（全国卷理）"
+      },
+      "answer_material": "not assessed during this identity-mapping stage",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed title explicitly identifies the 1991 national science paper."
+        }
+      ],
+      "registration_action": "none; source remains unbound"
+    }
+  ]
+}

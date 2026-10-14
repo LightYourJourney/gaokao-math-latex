@@ -1,0 +1,170 @@
+{
+  "schema": "unbound-source-map/v1",
+  "audit_date": "2026-10-14",
+  "source_manifest_revision": 4148,
+  "selection": "year=1990 and paper_id=null",
+  "summary": {
+    "records_reviewed": 5,
+    "title_confirmed": 4,
+    "year_unresolved": 1,
+    "paper_bindings_performed": 0
+  },
+  "method": [
+    "Matched each source_id, artifact SHA-256, Git blob OID, and page count against source-manifest.json.",
+    "Extracted page-one text from the cached original PDFs with pdftotext -layout where a text layer was available.",
+    "Visually inspected cached renders of pages 1 and 7 for the scanned Guangdong arts PDF; those renders remain ignored temporary files under .work/."
+  ],
+  "records": [
+    {
+      "source_id": "src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987",
+      "raw_paper_name": "1990上海.pdf",
+      "upstream_path": "普通高考/1990/1990上海.pdf",
+      "cache_path": "math-gaokao-latex/.work/source-pdf-cache/48ff97de01ef245a42bb95f1a67f9e38ea9490f6a781c045026e31a910f0b4a2.pdf",
+      "sha256": "48ff97de01ef245a42bb95f1a67f9e38ea9490f6a781c045026e31a910f0b4a2",
+      "git_blob_oid": "a8ffbc0103202f0b62559af22d4093c5de137d02",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1990,
+        "region": "上海",
+        "track": null,
+        "candidate_paper_key": "1990_上海卷",
+        "printed_title": "1990 普通高等学校招生考试（上海卷）"
+      },
+      "answer_material": "one-page question sheet; no answer or solution section observed",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed heading explicitly identifies the 1990 Shanghai examination."
+        }
+      ],
+      "registration_action": "none"
+    },
+    {
+      "source_id": "src-4d319a8fc41be0c0fa7ce90615870abbabe5c3670150609e3cb0c37944091866",
+      "raw_paper_name": "1990全国文.pdf",
+      "upstream_path": "普通高考/1990/1990全国文.pdf",
+      "cache_path": "math-gaokao-latex/.work/source-pdf-cache/89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029.pdf",
+      "sha256": "89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029",
+      "git_blob_oid": "08f2e2beaa40f48083b8190143c5a68f18ede4d1",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1990,
+        "region": "全国",
+        "track": "文科",
+        "candidate_paper_key": "1990_全国卷_文科",
+        "printed_title": "1990 普通高等学校招生考试（全国卷文）"
+      },
+      "answer_material": "one-page question sheet; no answer or solution section observed",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed heading explicitly identifies the 1990 national arts paper."
+        }
+      ],
+      "registration_action": "none"
+    },
+    {
+      "source_id": "src-9c2fc92cdbbeac0484bf7355db2d32805c316e1a7be74e3bf175a3891a167a49",
+      "raw_paper_name": "1990全国理.pdf",
+      "upstream_path": "普通高考/1990/1990全国理.pdf",
+      "cache_path": "math-gaokao-latex/.work/source-pdf-cache/7801e6dab50ca58eabdc74d074cdaa7012cdee873dcc5304e0df37248986b43a.pdf",
+      "sha256": "7801e6dab50ca58eabdc74d074cdaa7012cdee873dcc5304e0df37248986b43a",
+      "git_blob_oid": "b5c3755c3d1ec57c4a26a83c1d6d8dcf6350390b",
+      "page_count": 1,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1990,
+        "region": "全国",
+        "track": "理科",
+        "candidate_paper_key": "1990_全国卷_理科",
+        "printed_title": "1990 普通高等学校招生考试（全国卷理）"
+      },
+      "answer_material": "one-page question sheet; no answer or solution section observed",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed heading explicitly identifies the 1990 national science paper."
+        }
+      ],
+      "registration_action": "none"
+    },
+    {
+      "source_id": "src-4be3a6a1c45d116ea3c31ac818922a12606e2b844a71c6193b1e3c4d28ca0e23",
+      "raw_paper_name": "1990广东文.pdf",
+      "upstream_path": "普通高考/1990/1990广东文.pdf",
+      "cache_path": "math-gaokao-latex/.work/source-pdf-cache/04d3894a1e20f0696e957800a53889b02945b2fb1e79a606b37ab48953023dd5.pdf",
+      "sha256": "04d3894a1e20f0696e957800a53889b02945b2fb1e79a606b37ab48953023dd5",
+      "git_blob_oid": "81d5a68474bd71dc087bfaec59ddbc9ce77c0b3f",
+      "page_count": 7,
+      "paper_id_before": null,
+      "identity_status": "year_unresolved",
+      "identity": {
+        "year": null,
+        "year_candidate": 1990,
+        "region": "广东（候选，来自文件名与来源路径）",
+        "track": "文史类",
+        "candidate_paper_key": null,
+        "printed_title": null
+      },
+      "answer_material": "scanned questions and solution material are present; exact exam year is unresolved",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "visual inspection of cached original-page render",
+          "observation": "The page shows '(文史类)', '[试题]' and '第一卷', but no exam year or full paper title."
+        },
+        {
+          "location": "PDF page 7",
+          "method": "visual inspection of cached original-page render",
+          "observation": "A note says Guangdong candidates take the national entrance examination in 1991. This is contextual evidence, not conclusive identification of this scan as the 1990 paper."
+        }
+      ],
+      "registration_action": "none; do not bind until year and paper relation are corroborated"
+    },
+    {
+      "source_id": "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a",
+      "raw_paper_name": "1990广东理.pdf",
+      "upstream_path": "普通高考/1990/1990广东理.pdf",
+      "cache_path": "math-gaokao-latex/.work/source-pdf-cache/ad544a4c0a1131daf7edbd9bfc59bbb9ca497a1fd79eaa87403d7834d627bb19.pdf",
+      "sha256": "ad544a4c0a1131daf7edbd9bfc59bbb9ca497a1fd79eaa87403d7834d627bb19",
+      "git_blob_oid": "ed38bf04282c207899fa1dea3bbdf5674e4a4d33",
+      "page_count": 8,
+      "paper_id_before": null,
+      "identity_status": "title_confirmed",
+      "identity": {
+        "year": 1990,
+        "region": "广东",
+        "track": "理工农医类",
+        "candidate_paper_key": "1990_广东卷_理科",
+        "printed_title": "1990 年全国普通高等学校招生统一考试（广东省理工农医类）"
+      },
+      "answer_material": "page 5 includes a 1990 Guangdong science answer table; pages 5–8 contain solutions and scoring standards",
+      "paper_relation": null,
+      "evidence": [
+        {
+          "location": "PDF page 1",
+          "method": "pdftotext -layout",
+          "observation": "The printed heading explicitly identifies the 1990 Guangdong science-track paper."
+        },
+        {
+          "location": "PDF pages 5–8",
+          "method": "pdftotext -layout",
+          "observation": "The material is headed '1990 年广东省理工农医类数学试题解答及评分标准'; page 5 includes the answer key."
+        }
+      ],
+      "registration_action": "none"
+    }
+  ]
+}

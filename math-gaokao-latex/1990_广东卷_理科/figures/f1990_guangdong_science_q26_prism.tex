@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=0.78cm,y=0.66cm,line cap=round,line join=round]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (1.4,1.9);
+\coordinate (Aone) at (-0.35,2.0);
+\coordinate (Bone) at (3.65,2.0);
+\coordinate (Cone) at (1.05,3.9);
+\coordinate (E) at (2,0);
+\coordinate (F) at (0.7,0.95);
+
+% 原卷三棱柱及平面 EB_1C_1F 的拓扑关系；投影不表示长度比例。
+\fill[gray!14] (E)--(Bone)--(Cone)--(F)--cycle;
+\draw[thick] (A)--(B)--(C)--cycle;
+\draw[thick] (Aone)--(Bone)--(Cone)--(Aone);
+\draw[thick] (A)--(Aone) (B)--(Bone) (C)--(Cone);
+\draw[dashed] (A)--(C);
+\draw[very thick] (E)--(Bone) (Cone)--(F) (F)--(E) (Bone)--(Cone);
+
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[above right] at (C) {$C$};
+\node[above left] at (Aone) {$A_1$};
+\node[above right] at (Bone) {$B_1$};
+\node[above] at (Cone) {$C_1$};
+\node[below] at (E) {$E$};
+\node[left] at (F) {$F$};
+\node at (0.6,0.85) {$V_1$};
+\node at (3.1,0.9) {$V_2$};
+\node[font=\small,align=center] at (1.7,-0.8)
+  {依原卷关系重绘的示意图；非比例图。};
+\end{tikzpicture}
