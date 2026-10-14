@@ -68,6 +68,10 @@ class NationalArts1991SourceTests(unittest.TestCase):
         points = solution_sources.parse_answer_points(self.answers)
         self.assertEqual(points[16].answer_for(None), r"$2-\sqrt5$")
 
+    def test_q13_opposite_coefficient_signs_exclude_quadrant_three(self):
+        points = solution_sources.parse_answer_points(self.answers)
+        self.assertEqual(points[12].answer_for(None), "C")
+
     def test_source_uncertainties_are_preserved(self):
         self.assertRegex(self.questions, r"\$b_1\s+\+\s+\+b_2\s*\+\s*b_3=")
         self.assertIn("$a_n=2n-3$ 或 $a_n=5-2n$", self.answers)
