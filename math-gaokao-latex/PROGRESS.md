@@ -1,3 +1,34 @@
+## 1994 全国卷理科：原页第二次对照（2026-10-15；主会话非独立复核）
+
+- 已完成：恢复时先核对当前工作树和本进度。复用固定来源PDF（SHA-256 `e4511d861907c36870489c60d5f150690c8d7d5c10805937609a3bb62c532a2f`）的既有文字提取，并查看唯一横向A3原页的170dpi渲染，与已登记的25题三栏题稿对照题号、顺序、文字和公式外观；本次快速对照未发现明显漏题、错序或转录差异。该检查由主会话完成，不是独立盲核，不能据此证明题面或数学答案正确。
+- 修改文件：仅更新本 `PROGRESS.md`。没有改动题面、答案、来源JSON、LaTeX、清单或构建成果；没有完成一套新试卷转录，转录完成数不变；临时原页PNG保留在 `/tmp/gk1994-source-review.cI5xL6/`，未入库。
+- 验证：`python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_1994_national_science_*.py' -q`，10项通过；本条写入后对相关路径运行 `git diff --check`。本阶段没有OCR或外部模型/API调用，未重复提取文字层或重做图稿烟测；真实Codex Token/费用不可见。
+- 剩余/下一步：1994理科仍保持 `needs-review`、`not-verified`、`paper_id=null`、`canonical_question_source_ready=false`；待独立逐题核对、盲解及来源出版身份核实，再做正式版本构建和视觉回执。不得将本次同会话对照记作异人复核，也不重录本卷25题。后续按来源门禁继续处理既有未完成项；每套试卷的转录阶段一旦完成，立即在本文件登记题数、改动文件、验证、剩余事项和下一步。
+
+## 1994 全国卷理科：25题主会话解答草稿完成（2026-10-15；待独立盲核）
+
+- 已完成：基于上条已登记的固定来源题面，为1—25题各写一项主会话推导/结论；选择题答案键为D、D、D、A、B、D、B、A、A、C、C、B、D、B、C，填空及解答题也记录在草稿。来源没有印载答案；本稿明确标为非官方、`primary-agent`、`pending-independent-review`，未把AI推导改称官方答案，也未将数学状态从`not-verified`提升。未发现待解题号不等于已通过独立验证。
+- 修改文件：新增`1994_全国卷_理科/解答草稿.md`与`tests/test_1994_national_science_math.py`；更新同目录`来源校对.json`中的解答归属、题面绑定SHA与解答SHA；更新本进度。当前解答SHA-256为`b448540b6a03b739db07faab33043dc7a74ae143f18da07ea749804f2b2fda0b`，题面SHA仍为`807bbeabbfd9e35a3fa2dae1d51d74034ad8984b4a4d0764ac712ae44011e0ef`。题面转录、来源PDF/manifest、索引及其他卷未改。
+- 验证：来源测试5项+数学/解答测试5项共10项通过。检查覆盖25个稳定题号及结论槽位、解答与固定题面哈希绑定、非官方状态、15道选择题答案、Q13球截面、Q18三角函数根的原式筛选、Q23法向量余弦平方、Q24正半轴选根与Q25递推负分支/望远镜求和等。首轮测试暴露过时解答SHA及LaTeX命令格式锚点；仅同步实际草稿SHA、修正测试锚点后通过，未改数学结论。全量测试最近一次仍是题面阶段的1157项结果（1141通过、13跳过、3项既有失败），本解析阶段没有重跑全量；本阶段改动后的本卷定向测试为10/10。进度更新后再次运行`git diff --check`通过。
+- 审核与成本边界：独立审阅子代理因线程额度达到上限而未能启动；没有重试，也不把主会话推导或程序测试称为独立盲核。数学仍未独立验证，来源出版者/官方性未确认。此次没有OCR或外部聊天/API模型调用；真实Codex Token和费用不可见，不估算节省率。
+- 剩余/下一步：安排可用的独立审阅资源逐题核对题面并盲核25项推导，优先复查Q3极坐标式、Q14值域端点、Q21复数分式、Q23平面法向量/棱柱关系和Q25数列递推。复核前保持`review_status=needs-review`、`mathematical_verification_status=not-verified`、`official_answer=null`、`paper_id=null`、`canonical_question_source_ready=false`。不要重录这25题、重做来源哈希或重复已通过的10项测试；题面阶段记录见下条。
+
+## 1994 全国卷理科：固定来源25题题面转录完成（2026-10-15；待独立核验）
+
+- 已完成：固定来源绑定为manifest中的src-4cfac3e1fcb073f3743af5bf3b11e857eb918c955557e4f3f4acc7c208bd16cf（普通高考/1994/1994全国理.pdf）；PDF SHA-256 e4511d861907c36870489c60d5f150690c8d7d5c10805937609a3bb62c532a2f、Git blob d0f2b2f34c37a90677e1d558837107d61c77a74b与清单一致。来源为横向A3单页、印刷页码49；按三栏转录第1—25题，1—15选择、16—20填空、21—25解答。Q12反函数图和Q23正三棱柱/二面角图用两份本地TikZ源重绘。来源页不载答案、解析或分值，未补造。
+- 修改文件：新增1994_全国卷_理科/题面转录草稿.md、来源校对.json、两份figures/*.tex及tests/test_1994_national_science_sources.py；更新本进度。题面SHA-256 807bbeabbfd9e35a3fa2dae1d51d74034ad8984b4a4d0764ac712ae44011e0ef；Q12图SHA-256 727e545360b3398374440dcd88ea19ab8962e97b4323380eaa8d1a15817b9c70；Q23图SHA-256 8689cfc8992e3030727a72d0408fc2310c2a6cd28a6c2ba0669a0d70af59a711。
+- 验证：本卷5项定向测试通过；固定PDF SHA/Git blob、manifest绑定、来源JSON和题面/图稿SHA核对通过；git diff --check通过。PDF分析缓存显示2055个非空白字符、0次OCR，仍须视觉核对。两图用latexmk + XeLaTeX编译为2页烟测PDF，日志无警告、溢出、缺字或未定义命令，PNG逐页目视无裁切、标签缺失。
+- 全量测试：从仓库根运行python3 -m unittest discover -q未发现测试，exit 5；改用测试目录运行python3 -m unittest discover -s math-gaokao-latex/tests -q，完成1157项，1141通过、13跳过、3失败。三项失败与既有全库基线相同：test_task28_updates_exactly_eight_existing_b04_keys_with_layout_only_diffs、test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs（旧B04/B05派生文件哈希与漂移台账不符）及test_the_cached_states_match_the_recomputed_ones（缓存与现场状态367项不一致）；本卷没有新增全库失败。
+- 成本与质量边界：本卷0次OCR、0次聊天/API模型调用；实际Codex Token和API费用不可见，不估算节省比例。来源出版者/官方性未确认；转录和两幅示意图待独立盲核，数学尚未验证。保持paper_id=null、canonical_question_source_ready=false、review_status=needs-review、数学not-verified。
+- 剩余/下一步：先安排独立逐题核对固定原页，特别复核Q3极坐标式、Q14值域区间端点、Q21复数分式、Q23棱柱连线及Q25数列条件；再独立求解和验证答案。此条只表示题面转录阶段完成，不代表整卷验收。不要重复转录本卷25题、重算来源指纹或重复OCR。
+
+## 1994 全国卷文科：固定来源25题题面转录完成（2026-10-15；待独立核验）
+
+- 已完成：固定来源绑定为manifest中的`src-cafef4608133fbbf6e430e07061b30e714dded069fecffebce620e84186c5dbe`（`普通高考/1994/1994全国文.pdf`），实算PDF SHA-256 `68085b2f5b0285e127f63c87f6737434fddb156cbc4689b8957c2a4be4bb1bda`、Git blob `86b3ae6134b689ee64bf741d887ba1f14b4efc28`与登记一致。固定来源为横向单页、印刷页码50，按三栏转录第1—25题：1—15选择、16—21填空、22—25解答；Q12反函数图组选项及Q23正三棱柱示意图登记为两份TikZ矢量源。该页未载答案、解析、分值或总分，均未补造。
+- 修改文件：新增`1994_全国卷_文科/题面转录草稿.md`、`来源校对.json`、`figures/f1994_national_arts_q12_inverse_graphs.tex`、`figures/f1994_national_arts_q23_prism.tex`和`tests/test_1994_national_arts_sources.py`；更新本进度。题面SHA-256 `6d224d696a80b35d86f188524b52e7ad81ceba31e68566ec55740020a3c980c8`；两图SHA分别为`dfccf23f34282f7fa6dff5c279aaf8761929fa1e71d8091237c0d6ad6eec57c8`、`fbba4eb63dd9f191e57a6f88829ac29bbe8c04b255e386278f89bd097e435a26`。测试中的公式锚点按题稿实际使用的`\dfrac`记法修正，不改题面数学内容。
+- 验证：本卷5项来源定向测试通过；manifest来源绑定、原PDF SHA/Git blob、JSON解析及题面/图稿SHA核对通过；`git diff --check`通过。复用PDF分析缓存，原生文字提取候选1922个非空白字符、0次OCR，仍要求页面图像人工核对。两幅图稿以`latexmk + XeLaTeX`烟测编译为1页并目视检查；编译/校样产物只留在忽略的`.work/`，未入库。
+- 成本与质量边界：本卷0次OCR、0次聊天/API模型调用；真实Codex Token和API费用不可见，不估算节省比例。来源出版者/官方性未确认，题稿与两幅示意重绘未异人盲核，数学内容未独立验证。保持`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`、数学`not-verified`。
+- 剩余/下一步：安排独立逐题对照固定原页，特别复核高风险公式、Q12选项图和Q23空间关系；核验来源身份。之后再进入答案/解析及正式构建门禁。本条记录的是题面转录阶段，不表示整卷验收完成；后续不得重复转录这25题、重做已验证来源指纹或重复OCR。
 ## 1993 新科目组理科：固定来源28题转录与非官方推导完成（2026-10-15；待独立核验）
 
 - 已完成：依据manifest revision 4152的固定来源src-39987a89c2527e5343ab012618fb80ce6e9616594e86c6391e9f4d789b07ce8c（普通高考/1993/1993新科目组理(北京,湖南,湖北,云南,海南,贵州).pdf）转录28题：1—17选择、18—23填空、24—28解答。PDF SHA-256 14297950237f422e346d8c8a60ba0a9bb18d2ac4bcb69de4dabcb0ae2e83bd2d、Git blob ca911fecbf0c1128051d53381d5f9bc5e3b05b3f与manifest一致；单页横向A3、印刷页45。题面和文科卷相同题逐项映射核对，仅转录理科差异题4、9、19、28；Q23折叠图采用同卷文科版已用TikZ示意的本地衍生副本。原件未附答案、解析、分值，均未标为来源所载。Q28的arg值域未声明，已保留原题并将不同约定下的解集分别记录，不擅自选定。
