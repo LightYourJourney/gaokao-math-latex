@@ -5332,3 +5332,11 @@
 - 验证：1991定向测试9/9；`test_review_receipts.py` 66/66；`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts --require-final`、`source_manifest.py validate`、`provenance.py check-batch` 均通过；`report.py check --all` 在刷新6份派生摘要后通过；`git diff --check`通过。PDF文本层抽查确认第24题双加号仍照录。正式登记器首次因缺少3条Underfull豁免退出且零正式写入，补齐逐页证据后完成事务。
 - 来源/剩余：来源PDF无官方答案或解析；本卷答案仍明确标为独立推导、非官方。第24题双加号按一元正号求解但原件排印者本意无法从扫描确定；第26题未指定椭圆主轴方向，两种合法方程均保留。这些不确定性如实记载，不作为视觉失败或构建阻塞。下一步按来源清单选择下一卷；不得对本卷重复转录或重跑OCR。
 - 成本：本阶段0次OCR、0次外部模型/API调用；Codex实际Token及费用不可见，不估算。
+
+#### 1991 全国理科：恢复后来源与生成状态定向审计（2026-10-16）
+
+- 已完成：从 `phase4-b06` 恢复 `gk-1991-regular-national-science`，确认其仍为 planned，已有26题固定源转录、非官方答案/解析草稿、共享TeX与四版入口；不重复转录或OCR。固定源 `gaokaomath-src/普通高考/1991/1991全国理.pdf` SHA-256 `b2d5fd64fbae7b988c4a0ae36bba5006ff50f5ff1e64e12650b91dedfc99855c` 与 manifest 一致。核对来源/题面/答案状态后，并行启动只读全卷题面核源（Kant，`01a141d1-f36c-7222-854c-6b4797c6a45b`）和独立盲解Q1–Q26（Sagan，`01a141d1-f26d-79f2-8648-62ef36c0e1b3`）；两者不得改文件、互相看结果或读取对方职责范围外的答案材料。
+- 修改文件：仅本 `PROGRESS.md`。既有主会话复算记录覆盖Q14、18、19、23、25、26；此前简答Q21/22漂移已在单卷修复并有回归测试。当前工作树 tracked 内容在本次恢复前干净；忽略用户未跟踪的 `-.png`、`.mineru-service.lock` 原样保留。
+- 验证：`test_1991_national_science_math.py` 14/14；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均为1卷一致；`solution_sources.py check-batch --batch phase4-b06` 26题通过。以上只证明现有草稿/生成物一致，不证明原题完整忠实或答案正确。未触碰正式manifest、provenance或build/review回执，production仍为planned。
+- 剩余/下一步：收取两项独立复核结果，逐项比对现稿；对真实转录、推导错误作最小修正并补回归/复算，再完成三角色provenance、正式四版构建及逐页视觉验收。现存来源没有官方答案/解析，不能把项目推导标为官方答案。
+- 成本：本阶段0次OCR、0次外部聊天/API；两项只读子代理已启动，实际Token与费用不可见，不估算。
