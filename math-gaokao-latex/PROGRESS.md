@@ -5197,3 +5197,10 @@
 - 修改文件：`1989/1989_数学真题_全国理_答案要点.md`、同卷派生 `含解析.md`、`1989_全国卷_理科/answers.tex`、`answers_short.tex`、`tests/test_1989_national_science_math.py` 与本进度。没有改题面、详细证明、图稿或公共生成器；源 PDF 未重下、未OCR。
 - 验证：12项本卷数学/答案生成测试通过；`generate_projects.py --paper gk-1989-regular-national-science --check`、`make_short_answers.py --paper gk-1989-regular-national-science --check`、`solution_sources.py check-batch --batch phase4-b03` 与 `source_manifest.py validate` 全部通过。并发运行两个带仓库事务锁的只读生成检查曾导致一次锁争用；串行复跑成功，未删除或绕过锁。
 - 剩余/下一步：将审核通过的来源核对、独立解题与盲核证据写入忽略目录三角色 provenance 工作稿，重算当前题面/答案哈希并 dry-run；仅在验证通过后登记正式 provenance。再正式四版构建、诊断、逐页视觉验收和回执登记，按回执门禁清理编译中间物并关卷。全库1952—2026及最终 manifest.csv、缺失清单、构建报告仍未完成。本阶段无OCR或外部API调用；Codex/子代理实际Token与费用不可见。
+
+### 1989 全国卷理科：provenance 正式登记（2026-10-16）
+
+- 已完成：将题面来源核对、独立解题与盲态答案复核三角色证据正式登记。24题均引用已核验来源 PDF、当前题面/答案哈希及逐题证据；独立推导答案标为项目答案（B），不是官方答案。批次状态推进至 `provenance_verified`。
+- 修改文件：`1989_全国卷_理科/provenance.json`、`source-manifest.json`、本进度文件。忽略目录内三份角色工作稿保留作本地审计输入，不纳入版本控制。
+- 验证：`provenance.py import-batch` dry-run 通过；正式导入返回 revision 4184；`provenance.py check-batch --batch phase4-b03` 返回 `OK：1 卷`；`source_manifest.py validate` 通过。未运行 OCR 或外部 API；实际 Token/费用不可见。
+- 剩余/下一步：执行本卷试题版、解析版、简答版、印刷版正式 XeLaTeX 构建并检查诊断；随后四版逐页视觉校样、登记 review receipt、通过回执门禁后清理中间产物并关卷。全库1952—2026及最终清单/报告仍未完成。
