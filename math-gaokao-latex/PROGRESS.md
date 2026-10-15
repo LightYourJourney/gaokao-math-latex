@@ -5365,3 +5365,11 @@
 - 验证：`provenance.py import-batch` dry-run 通过且未写入；正式事务 revision `4215` 成功；`provenance.py check-batch`、`source_manifest.py validate --manifest ...`、`git diff --check` 均通过。status 显示 batch `provenance_verified`、paper `editions_generated`；后者不等于本轮已完成 formal build/review。
 - 剩余/下一步：对当前题面/答案/解析输入做本卷四版 XeLaTeX formal build，核对正式构建回执和 PDF，再逐页完成八项视觉复核并登记 review receipt；在这些门禁通过前，本卷仍未验收关闭。无新题面转录或 OCR。
 - 成本：0次OCR、0次外部模型/API；实际 Token/费用不可见，不估算。
+
+#### 1991 全国理科：四版 formal build 已完成，等待逐页视觉验收（2026-10-16）
+
+- 已完成：正式 XeLaTeX 构建 attempt `b9c1dc00-f2d5-40e3-b2fa-d505b980ad5d` 返回 `COMPILED_PENDING_REVIEW`，4版均成功，共41页：试题版4页、解析版18页、简答版6页、印刷版13页。构建回执记录 manifest revision 4216；随后 review workitem 准备事务使当前 manifest 到 revision 4217。四版均无编译错误、缺字、未定义引用或 Overfull；印刷版仅有两条 badness 1038 的 Underfull（`answers.tex` 171–172 行映射 PDF 第6页，373–374 行映射第10页），放大页已检查，暂未发现可见溢出，最终豁免仍须由正式视觉回执登记。
+- 修改文件：新增 `1991_全国卷_理科/receipts/build.json`；事务更新 `source-manifest.json` 的 batch/paper build 状态；追加本进度。PDF 与41张渲染图、接触表及待审工作项均留在忽略的 `build/`、`.work/phase4-b06/`，未纳入 Git。用户未跟踪的 `-.png`、`.mineru-service.lock` 未触碰。
+- 验证：四版 PDF 页数、构建日志及回执核验通过；41页接触表已作整体筛查，且若干高分辨率页面已放大检查；`build_projects.py` 回执验证为 `OK：1卷`。这不等于41页逐页八项 review 完成，当前状态仍是 `compiled_pending_review`；正式 `review.json` 尚未登记。
+- 剩余/下一步：逐页完成41页各8项检查，按实际证据填写4份 edition review workitems，登记两条 Underfull 的逐项处理；通过 review 检查后才能 finalize 并关闭本卷。当前没有新转录/OCR工作。
+- 成本：本阶段0次OCR、0次外部模型/API调用；Codex Token及费用不可见，不估算。
