@@ -5155,3 +5155,11 @@
 - 验证：`finalize-batch-checked` 返回 `VISUAL_FAILED`、`failed_pages=4`、`committed=true`；报告列明四个失败页。此前提交构建仍为当前 attempt，四版 XeLaTeX 均成功且无编译/缺字/溢出警告。0次 OCR、0次外部模型/API调用；Codex/代理实际 Token 与费用不可见。
 - 版式试验：曾在题源中试加本卷局部分页约束，生成器一致性及本卷9项数学测试通过；正式构建因题面哈希触发 provenance stale 安全门而未运行。随后撤回该试验、恢复生成文件并确认 `generate_projects --check` 与 provenance import dry-run 均通过，没有绕过哈希门，也没有把未验证版式写入正式成果。
 - 剩余/下一步：为试题末页与简答答案末页提出不改变题意、且可经 provenance 正式更新的局部版式方案；完成后须重建四版并复核全部变化页，再重做正式 review。修复前本卷保持 `compiled_pending_review`/视觉失败，不清理可恢复的编译中间物、不登记完成。全项目1952—2026总库及OCR/成本基准仍未完成。
+
+### 1989 全国卷文科：局部分页修复与 provenance 重新绑定（2026-10-16）
+
+- 已完成：在第21题前加入本卷局部 `\Needspace{0.65\textheight}`，使题面试题版将第17—20题留在第3页、第21—24题及图稿连续放在第4页；不改题目、答案或图形。正式源生成器写入的问题与答案 TeX 均包含同一分页约束。
+- provenance：该命令位于题20与题21的 Markdown 边界，逐题解析器将它纳入题20哈希。对照 HEAD 与当前源的逐题哈希仅题20变化；移除 HTML 注释和 `\Needspace` 行后，全部题面哈希与基线完全相同。保留原独立题面审核证据，仅重新绑定该非语义布局哈希；事务登记 revision 4177。
+- 验证：四版 smoke build 均 `succeeded`，页数仍为4/17/6/12，无错误、缺字、Overfull、未定义引用；全尺寸复看题面第3/4页、简答第4—6页、解析第14—17页及印刷第3/4页。试题末页密度已改善；简答答案按题型分节，简答版仍为6页，最后一节单独起页，是否可接受留白须在正式复审中判定。生成器 `--check`、本卷9项数学测试、provenance check 与 source manifest validate 通过。
+- 修改文件：全国文试题 Markdown、生成的 `questions.tex`/`answers.tex`、本卷 `provenance.json`、`source-manifest.json` 与本进度。没有公共宏、转换器或模板变更。
+- 剩余/下一步：smoke build 覆写了忽略目录里的 PDF，正式 build receipt 现需更新；运行正式四版构建与诊断，再按新 attempt 重新登记视觉回执。若简答版末页不能合理通过分页/留白检查，继续定位能保持生成确定性且不影响其他卷的处理方案。此阶段0次OCR和外部API调用，实际Token/费用不可见。
