@@ -428,6 +428,18 @@ class RenderTests(unittest.TestCase):
         self.assertIn("answers.tex", "\n".join(head))
         self.assertIn(ANSWER_KEY_PATH, "\n".join(head))
 
+    def test_custom_usage_notice_can_preserve_paper_specific_provenance(self):
+        notice = "来源解答整理，未经盲核；第25题待核。"
+        text = render_short_answers(
+            TITLE,
+            ANSWER_KEY_PATH,
+            INDEX_METADATA[PROJECT_DIR]["structure"],
+            self.answers,
+            usage_notice=notice,
+        )
+        self.assertIn(notice, text)
+        self.assertNotIn("答案为编写者独立推导", text)
+
     def test_a_choice_answer_that_is_not_a_letter_is_a_hard_error(self):
         answers = dict(self.answers)
         answers[1] = "$1$"

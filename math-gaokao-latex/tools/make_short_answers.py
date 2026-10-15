@@ -58,6 +58,12 @@ SEE_SOLUTION = "见解析版"
 SHORT_ANSWER_OVERRIDES = {
     ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
 }
+SHORT_ANSWER_NOTICE_OVERRIDES = {
+    "gk-1994-shanghai": (
+        "本卷第1—20题为项目整理；第21—26题据固定来源所附解答整理；整卷尚未经过异人盲核。"
+        "第25题来源答案分段有疑点，结论待核。\\textbf{非官方标准答案}。"
+    ),
+}
 # 单选题速查表的本卷排版例外：25列会超出可用版心，分成两张表显示。
 TABLE_COLUMN_LIMIT_OVERRIDES = {
     "gk-1989-regular-guangdong-science": 13,
@@ -367,6 +373,7 @@ def render_short_answers(
     answers: Mapping[int, str],
     printed_labels: Optional[Mapping[int, str]] = None,
     max_choice_columns: Optional[int] = None,
+    usage_notice: Optional[str] = None,
 ) -> str:
     """渲染一卷的 answers_short.tex 全文。"""
     groups = normalize_structure(structure)
@@ -386,6 +393,8 @@ def render_short_answers(
         "\\end{gknotice}\n\n"
         if "U" in letters.values() else ""
     )
+    if usage_notice is None:
+        usage_notice = "答案为编写者独立推导，\\textbf{非官方标准答案}。"
 
     parts: List[str] = []
     for name, low, high in groups:
@@ -412,8 +421,8 @@ def render_short_answers(
         "%% 并与 %s 逐题比对后生成，勿手改（改源 MD 后重跑）。\n\n"
         "\\begin{gknotice}\n"
         "\\textbf{使用说明}：本节只给最终答案便于快速核对，完整推导见解析版。"
-        "答案为编写者独立推导，\\textbf{非官方标准答案}。\n"
-        "\\end{gknotice}\n\n" % (title, answer_key_relative)
+        "%s\n"
+        "\\end{gknotice}\n\n" % (title, answer_key_relative, usage_notice)
     ) + pending_legend + "\n\n".join(parts) + "\n"
 
 
@@ -507,6 +516,7 @@ def generate_short_answers(
         answers,
         printed_labels=printed_labels,
         max_choice_columns=TABLE_COLUMN_LIMIT_OVERRIDES.get(sources.paper_id),
+        usage_notice=SHORT_ANSWER_NOTICE_OVERRIDES.get(sources.paper_id),
     )
     target = "%s/%s/answers_short.tex" % (PROJECT_RELATIVE, sources.project_dir)
     return (
