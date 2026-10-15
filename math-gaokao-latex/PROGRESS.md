@@ -5340,3 +5340,11 @@
 - 验证：`test_1991_national_science_math.py` 14/14；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均为1卷一致；`solution_sources.py check-batch --batch phase4-b06` 26题通过。以上只证明现有草稿/生成物一致，不证明原题完整忠实或答案正确。未触碰正式manifest、provenance或build/review回执，production仍为planned。
 - 剩余/下一步：收取两项独立复核结果，逐项比对现稿；对真实转录、推导错误作最小修正并补回归/复算，再完成三角色provenance、正式四版构建及逐页视觉验收。现存来源没有官方答案/解析，不能把项目推导标为官方答案。
 - 成本：本阶段0次OCR、0次外部聊天/API；两项只读子代理已启动，实际Token与费用不可见，不估算。
+
+#### 1991 全国理科：全卷盲解结果返回（2026-10-16）
+
+- 已完成：独立子代理 Sagan（`01a141d1-f26d-79f2-8648-62ef36c0e1b3`）仅凭固定原卷 PDF、先核SHA后盲解Q1–Q26，明确未看题库答案/解析/进度，也未改文件或调用OCR/API。其26题答案与现有答案速查表初步逐题一致；关键推导覆盖选择题、数列/极限、空间几何、复数、参数不等式及双曲线。代理特别放大确认Q15补集横线为 `\overline M\cup\overline N`，Q26斜率根号范围为 `\sqrt{3/5}`；报告未发现无法辨认题字。
+- 修改文件：仅本 `PROGRESS.md`；Sagan结果尚未导入正式provenance，现有题面/答案/解析均未改。
+- 验证/边界：本记录只记独立盲解返回及与答案表的初步比对；仍需结合Kant的独立题面核源结果，检查具体推导与源题条件的对应、核实答案/解析文本后才可登记三角色provenance。原件没有官方答案/解析，本结果是独立推导而非官方证据。
+- 剩余/下一步：等待Kant（`01a141d1-f36c-7222-854c-6b4797c6a45b`）完成Q1–Q26题面核源；再逐题对照现稿并处理差异，执行provenance dry-run与正式导入门禁。
+- 成本：未运行OCR或外部API；本盲解子代理实际Token及费用不可见，不估算。
