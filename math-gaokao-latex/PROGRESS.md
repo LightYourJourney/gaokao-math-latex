@@ -5357,3 +5357,11 @@
 - 验证：定向数学测试15/15；`solution_sources.py check-batch` 26题通过；来源生成器测试109/109、简答测试51/51、版次测试35/35；单卷 `generate_projects --check`、`make_short_answers --check`、`make_editions --check` 均一致；`git diff --check` 通过。测试中的 argparse 和错误答案输出来自预期负向用例。期间首次并行运行事务型只读检查遇共享锁而退出；未删锁/未绕过，查明无持有进程后串行执行成功；一次误指不存在的 `scripts/` 路径也仅是只读失败。
 - 剩余/下一步：将 Kant 题面审查、Codex 独立答案求解及 Sagan 答案复核（含 Q14 初始误判）连同 Linnaeus 独立仲裁按项目角色格式写入 `.work/phase4-b06/provenance/`，先 dry-run 再正式导入；随后进行本卷四版 formal build、逐页视觉复核与正式回执。卷及 batch 仍为 `planned`，未完成正式验收；原卷没有官方答案/解析，答案继续标为独立推导而非官方。
 - 成本：0次OCR、0次外部模型/API；子代理和 Codex 实际 Token/费用不可见，不估算。
+
+#### 1991 全国理科：三角色 provenance 正式登记（2026-10-16）
+
+- 已完成：按三角色工作件为 `phase4-b06` 正式导入本卷26题 provenance。题面核源角色 Kant 26/26 passed；答案求解由 Codex 主会话依据核验题面完成；答案复核记录 Sagan 的来源盲态独立解答，并由只看原卷的 Linnaeus 单独仲裁 Q14。26题答案均为 B 级非官方推导；Q14 的初始冲突及其独立解决保留为 `resolved`，不抹去 Sagan 最初的 B/2 点错误，也不将任何答案称作官方。
+- 修改文件：新增 `1991_全国卷_理科/provenance.json`，更新 `source-manifest.json`，追加本进度。忽略工作件留在 `.work/phase4-b06/provenance/` 供追溯；本卷题面、答案结论及解析未因登记而改动。
+- 验证：`provenance.py import-batch` dry-run 通过且未写入；正式事务 revision `4215` 成功；`provenance.py check-batch`、`source_manifest.py validate --manifest ...`、`git diff --check` 均通过。status 显示 batch `provenance_verified`、paper `editions_generated`；后者不等于本轮已完成 formal build/review。
+- 剩余/下一步：对当前题面/答案/解析输入做本卷四版 XeLaTeX formal build，核对正式构建回执和 PDF，再逐页完成八项视觉复核并登记 review receipt；在这些门禁通过前，本卷仍未验收关闭。无新题面转录或 OCR。
+- 成本：0次OCR、0次外部模型/API；实际 Token/费用不可见，不估算。
