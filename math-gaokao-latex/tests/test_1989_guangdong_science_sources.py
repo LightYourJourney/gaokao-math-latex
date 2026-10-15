@@ -3,6 +3,9 @@ from pathlib import Path
 import sys
 import unittest
 import json
+import shutil
+import subprocess
+import tempfile
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -16,6 +19,8 @@ sys.path.insert(0, str(PROJECT / 'tools'))
 import issues
 import solution_sources
 import make_short_answers
+import generate_projects
+import build_projects
 
 
 class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
@@ -78,6 +83,40 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         self.assertNotIn(r'-x^2+y^2', question)
         self.assertIn(r'(x-t^2)^2+(y-t)^2=t^2', q30)
         self.assertIn(r'半径为 $t$', q30)
+
+    def test_q30_proof_and_final_answers_share_the_last_detailed_page(self):
+        manifest = json.loads((PROJECT / 'source-manifest.json').read_text(encoding='utf-8'))
+        paper = next(p for p in manifest['papers']
+                     if p['paper_id'] == 'gk-1989-regular-guangdong-science')
+        with tempfile.TemporaryDirectory(prefix='gk1989-layout-') as temporary:
+            root = Path(temporary)
+            project_copy = root / 'docs' / 'exams' / 'math-gaokao-latex'
+            project_copy.mkdir(parents=True)
+            shutil.copytree(PROJECT / 'common', project_copy / 'common')
+            shutil.copytree(
+                PROJECT / paper['project_dir'],
+                project_copy / paper['project_dir'],
+                ignore=shutil.ignore_patterns('build', 'receipts', '.work'),
+            )
+            toolchain = build_projects.resolve_toolchain()
+            result = build_projects.build_target(
+                root,
+                paper['project_dir'],
+                '解析版',
+                toolchain,
+            )
+            pdf = root / result['record']['pdf']['path']
+            pdftotext = next(tool['path'] for tool in toolchain['tools']
+                             if tool['name'] == 'pdftotext')
+            last_page = result['record']['pdf']['page_count']
+            extracted = subprocess.run(
+                [pdftotext, '-f', str(last_page), '-l', str(last_page),
+                 str(pdf), '-'],
+                check=True, capture_output=True, text=True,
+            ).stdout
+        self.assertEqual([], result['record']['problems'])
+        self.assertIn('正切和角公式给出', extracted)
+        self.assertIn('答案（2）', extracted)
 
     def test_vector_figure_sources_have_valid_text_and_q25_intercepts(self):
         figures = {path.name: path.read_text(encoding='utf-8')

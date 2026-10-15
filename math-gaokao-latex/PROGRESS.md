@@ -5238,3 +5238,34 @@
 - 修改文件：本卷 `_解析正文.md`、派生 `_含解析.md`、`1989_广东卷_理科/answers.tex`、测试 `test_1989_guangdong_science_sources.py`、`missing-issues.md` 新增Q8 blocker；三份角色工作件更新于忽略目录 `.work/phase4-b04/provenance/`，不入库。Q8规范题面未改。
 - 验证：本卷规范源测试10/10、旧数学回归8/8；`issues.py validate`、`solution_sources check-batch`（30题）、`generate_projects --manifest source-manifest.json --batch phase4-b04 --check`、`make_short_answers --manifest source-manifest.json --batch phase4-b04 --check`、`source_manifest validate`、`provenance check-batch`（1卷）、`git diff --check`通过。三角色工作件写入前校验题数/题签/身份唯一，dry-run通过；正式 `provenance import-batch` 已写入revision 4197，`check-batch`通过，Q8使该卷保持blocked。全量 `test_provenance.py` 共109项、2项失败：`test_no_paper_advances_beyond_planning_without_provenance` 报告全库已有状态缺provenance；`test_the_cached_states_match_the_recomputed_ones` 报告363项缓存状态与现场派生状态不一致。未在本卷范围内修复，须单独审计全库状态/缓存。
 - 成本与下一步：本阶段0次OCR、0次外部模型/API调用；Codex/代理Token与费用不可见。后续仅按证据评估四版构建和逐页视觉QA，记录每项通过或阻塞，不能因题面转录已完成就关卷。1989广东理科既有30题不重录，也不增加转录卷数。
+
+#### 1989 广东理科：正式四版构建（2026-10-16）
+
+- 已完成：在 `feat/gaokao-phase0` 隔离工作树以 `build_projects.py build --formal --paper gk-1989-regular-guangdong-science` 执行单卷正式构建；结果 `COMPILED_PENDING_REVIEW`，0版失败、4版待视觉复核。PDF 页数：试题版5、解析版24、简答版7、印刷版17。当前 Q8 的 `ISSUE-1078` 仍为 completion blocker，因此此构建不代表试卷已验收或可关闭。
+- 修改文件/产物：正式构建事务更新 `source-manifest.json` 并生成 `1989_广东卷_理科/receipts/build.json`；四个 PDF 位于该卷 `build/` 目录（构建目录按仓库约定管理）。输入题源、答案、解析与图稿未由构建步骤改写。
+- 验证：构建工具检查到 `latexmk 4.88`、XeTeX 2026、Poppler 26.10；正式构建退出码0；`build_projects.py validate-receipts --manifest source-manifest.json --paper gk-1989-regular-guangdong-science` 返回 `OK：1 卷`。本阶段仅有的回执校验命令第一次因脚本路径误写/漏传必需参数返回 usage/error，查 `--help` 后用正确命令复核通过；未造成文件变更。
+- 成本/剩余/下一步：0次OCR、0次外部模型/API调用，编译Token/API费用不适用。四版逐页视觉审查、视觉回执和清理编译中间物尚未完成；Q8 blocker 与B型答案卷型映射限制继续保留。下一步先按 `review_receipts.py` 工作流建立本卷逐页检查范围，再渲染并检查全部53页，记录缺陷及页面证据；不能以旧烟测或编译通过代替本轮校样。
+
+#### 1989 广东理科：解析版末页分页根因定位（2026-10-16；版式修复待定）
+
+- 已完成：复核最新解析版 PDF 第23—24页，确认第23页完整排入原卷第30题题面和推导，第24页仅有两条重复结论答案框。根因是生成的 `answers.tex` 在每题解析末尾追加独立 `\gkanswer` 盒；当前两盒合计高度超过第23页剩余版心。用真实 XeLaTeX 临时构建测试检测末页文本，不再把“页数必须减少”误作版式验收条件。
+- 修改文件：压缩规范解析源第30题的正切和角证明（等价变形、证明条件及结论不变），同步派生 `_含解析.md` 与 `1989_广东卷_理科/answers.tex`；调整 `tests/test_1989_guangdong_science_sources.py`，要求最后一页同时含“正切和角公式给出”及答案（2），并在临时目录存活期间提取PDF文本。工作树中原有用户未跟踪文件未触碰。
+- 验证：压缩前后构建显示，两条答案框未能同留在末页；目前答案（1）可回到第23页，但答案（2）仍独占第24页。定向文件共11测，10项通过、1项按预期失败；首次失败是测试在 `TemporaryDirectory` 清理后才读取 PDF，已修正测试作用域，之后失败稳定复现实际分页缺陷。正式回执校验因 `answers.tex` 已变返回退出码4，明确标记“生成输入树变化”，所以旧四版正式构建暂时失效，尚未重编。
+- 成本与范围：未做OCR、未调用外部模型/API；定向测试在隔离临时副本编译，Token和费用未知。未重录或完成新试卷，卷数不变；Q8 `ISSUE-1078` 仍为整卷 blocker。
+- 剩余/下一步：需决定该卷解析版是否局部采用紧凑行内答案摘要（只影响本卷解析版入口，不改共享宏、其他版次或其他卷）；若不采用，则将末页留作明确视觉失败并据实登记，不用遮挡页脚或牺牲推导正确性。收到决定后再完成单卷重编、全页视觉核查和回执；不复跑已完成转录、来源核验或数学盲核。
+
+#### 1989 广东理科：当前正式重编与局部校样结果（2026-10-16）
+
+- 已完成：在第30题证明压缩后重新正式构建四版，attempt `81e1897a-a8d0-4a94-8a0f-51f514b86f3b`、manifest revision 4204；状态 `COMPILED_PENDING_REVIEW`。页数为试题版5、解析版24、简答版7、印刷版17，共53页。正式 build receipt 当前、4版均成功且无构建问题；manifest 校验通过。
+- 视觉校样：复用先前对未变化页的53页接触表检查，按当前PDF重新生成53张110dpi页图；180dpi全尺寸检查四版原候选第2页、解析版第23—24页、印刷版第16—17页及简答版第7页。四个第2页候选未见字形/公式/图题/版心异常；简答版第7页是有清晰“解答题”标题的四道解答题答案行，作为独立简答末页可读，留白与短答版用途相符。解析版第24页仍仅有第30题答案（2）框，第23页已含题面、推导和答案（1）；印刷版第16页把“解析”标题放在页底，正文从第17页开始。这两处均判分页视觉失败；印刷第17页推导和答案完整可读，无溢出或裁切。
+- 修改文件/临时产物：正式回执 `1989_广东卷_理科/receipts/build.json` 与本项目 manifest revision 4204；四版PDF和栅格检查图留在忽略的 `build/`、`.work/phase4-b04/visual/current-81e1897a/`。四份 review workitem 已刷新至本次 attempt，但尚未写入逐页结论/正式 review receipt。工作树中用户未跟踪的 `-.png` 与 `.mineru-service.lock` 未触碰。
+- 验证：`validate-receipts` 返回 `OK：1卷`；来源清单、30题 `solution_sources check-batch`、`generate_projects --check`、`make_short_answers --check` 均通过；独立数学回归8/8通过。版式集成测试10/11通过，剩余一项如实失败：末页文本没有“正切和角公式给出”，因末页实际只有答案（2）。`git diff --check`通过。0次OCR/外部模型/API，Token/费用未知。
+- 剩余/下一步：解析版答案摘要样式的选择仍待用户回复；印刷版第16页的孤立“解析”标题也需在修复或登记视觉失败之间处理。完成版式决定后，再更新回归测试、正式重编、逐页登记八项检查与失败项，保留 Q8 `ISSUE-1078` blocker；当前不能标记整卷验收或完成。
+
+#### 1989 广东理科：正式逐页视觉失败回执登记（2026-10-16）
+
+- 已完成：对当前正式构建 attempt `81e1897a-a8d0-4a94-8a0f-51f514b86f3b` 的四版53页逐页检查，登记424项八类视觉检查。解析版第24页“分页/留白”失败：仅有第30题答案（2），其题干、推导和答案（1）位于第23页；印刷版第16页同项失败：“解析”标题在页底，正文从第17页开始。两处依据当前页图作失败记录，没有更改答案框样式。
+- 修改文件：新增本卷 `receipts/review.json`；更新 `source-manifest.json`、`missing-issues.md`；新增 `reports/phase4-b04.md` 诊断报告；更新本进度。逐页工作项和当前渲染页图保留于忽略目录 `math-gaokao-latex/.work/phase4-b04/`。正式事务 revision `4206`，回执状态 `failed`，batch 保持 `compiled_pending_review`；两条视觉问题均阻止本卷完成。既有 `ISSUE-1078` 题意/答案来源 blocker 仍在。
+- 验证：`review_receipts.py check-batch` 返回预期 `VISUAL_FAILED` 并匹配两页；来源 manifest 校验及正式 build receipt 校验通过；`git diff --check` 通过。`test_review_receipts.py` 66/66、广东理科独立数学回归8/8通过。题源集成测试10/11，唯一失败仍是“解析版最后一页必须同时含证明和答案（2）”，实际末页只有答案框；该失败反映尚未修好的分页问题，不能报绿。
+- 执行纠偏：本项目测试文件使用 `unittest`，而非当前环境未安装的 `pytest`；改用 `python3 tests/...py` 后分别取得上述结果。ImageMagick 初次拼接因无默认字体失败，显式指定系统 Arial 后四版接触表生成成功；失败命令未造成项目源文件损坏。
+- 剩余/下一步：需在不改数学内容前提下处理这两处分页，或保留失败状态；解析版答案框样式选择尚未获用户回复，故不实施该样式变更。修复后重新跑题源集成测试、四版正式构建和当前 attempt 的全页复核。Q8 `ISSUE-1078` 未解决前，即使视觉通过也不能关闭整卷。本阶段0次OCR、0次外部模型/API调用；Codex Token/费用不可见。
