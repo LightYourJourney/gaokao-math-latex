@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "source_id": "src-a5f3ad39cbb2af980f5b963dc78e2083623a8db2e7004edb1d4db1087ec073f5",
+  "fixed_pdf_sha256": "aa3c0a314b5ea0bf990cbc7d768575e3b3931da6ddbfb6c727681a516a7eb7aa",
+  "status": "unresolved-conflicting-secondary-sources",
+  "accepted_correction": null,
+  "accepted_scores": null,
+  "accepted_official_answer": null,
+  "fixed_q16": "y=(e^x-e^x)/2",
+  "search_queries": [
+    "1992 全国 理科 数学 试题 反函数 e 28",
+    "1992 高考 理科 数学 试卷 答案 16 反函数",
+    "\"1992\" \"全国\" \"数学\" \"反函数\" \"e\" filetype:pdf",
+    "\"1992年全国\" \"数学\" \"120分\" 试题 答案",
+    "\"1992\" \"函数\" \"反函数\" \"16\" 高考 数学",
+    "\"1992\" \"理工农医类\" \"数学\" 试卷 扫描",
+    "\"1992\" \"全国\" \"数学\" \"16\" \"e-x\""
+  ],
+  "candidates": [
+    {
+      "url": "https://kmath.cn/math/Share_Paper.aspx?paperid=838&t=print",
+      "title": "1992年普通高等学校招生全国统一考试全国卷高考理科（含文科）数学真题及答案",
+      "access": "public-web-page-read",
+      "q16_formula": "y=(e^x+e^{-x})/2",
+      "observation": "已读取网页正文，题库条目公式与固定PDF冲突；在通常实数定义域上该加号函数为偶函数且非单射，不能由此确认反函数题条件",
+      "disposition": "rejected-for-correction",
+      "publisher_authority_verified": false
+    },
+    {
+      "url": "https://www.scribd.com/document/792990528/1992%E5%B9%B4%E5%85%A8%E5%9B%BD%E5%8D%B7%E7%90%86%E7%A7%91%E9%AB%98%E8%80%83%E6%95%B0%E5%AD%A6%E7%9C%9F%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88",
+      "title": "1992年全国卷理科高考数学真题及答案",
+      "access": "public-web-text-and-browser-preview-page3",
+      "q16_formula": null,
+      "observation": "文字提取和公开预览均未可靠显示Q16公式；浏览器document.fonts.status=loaded但页3汉字乱码、公式缺失。解析中的选项及代换方程不用于反推题干。正文Q8选项C/D为45°/135°，与固定PDF的110°/160°不一致",
+      "disposition": "unreadable-formula-and-content-conflict",
+      "publisher_authority_verified": false,
+      "screenshot_path": "/tmp/gk1992-national-science.VAFCWo/alternate-scribd-page3.png",
+      "screenshot_sha256": "2be7aba379ec6d3a0a04a68e7003a63cae641901b686f585931c36952bd22743",
+      "browser_tab_closed": true
+    },
+    {
+      "url": "https://max.book118.com/html/2016/0820/52122533.shtm",
+      "title": "1992年全国高考数学试题及其参考答案.doc",
+      "access": "public-text-preview-only",
+      "q16_formula": null,
+      "reported_total_score": 120,
+      "observation": "公开文本预览可见120分与120分钟说明，但公式大量缺失，展示范围未到Q16；未取得可核验的原卷页。仅保留总分线索，不直接写入正式分值",
+      "disposition": "bibliographic-score-lead-only",
+      "publisher_authority_verified": false
+    }
+  ],
+  "usage": {"search_tool_calls": 3, "queries": 7, "open_tool_calls": 1, "opened_urls": 3, "browser_proxy_requests": 7, "ocr_calls": 0},
+  "next_action": "优先取得可辨Q16的原卷或可溯源出版物原页；不要重复本轮相同查询或用来源解析反推公式"
+}
