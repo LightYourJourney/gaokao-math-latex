@@ -17608,3 +17608,87 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1074
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "a374ef25-7f08-4983-a2cc-b330cd6274ce",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "bbb456a41100a61fb7cdfddfc828cfc6ea4ff00c6f5365f3ca00cbdb231b9949",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1989-regular-national-arts",
+  "pdf_sha256": "0372a7f7a816b205d8d877df49810c653d1685cf5059b76476e6158c3e7b59d4",
+  "resume_action": "修正 gk-1989-regular-national-arts 的 简答版 第 4 页 pagination_whitespace（本页仅有第23、24题题面，约五分之四页面空白；与前页题量分布失衡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1075
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "a374ef25-7f08-4983-a2cc-b330cd6274ce",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "102f1374ae5b76d43eb40f5a79b972912eab6df31e95d0913841f28aff0e15c7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-1989-regular-national-arts",
+  "pdf_sha256": "0372a7f7a816b205d8d877df49810c653d1685cf5059b76476e6158c3e7b59d4",
+  "resume_action": "修正 gk-1989-regular-national-arts 的 简答版 第 5 页 pagination_whitespace（答案速查表及第13—18题答案止于页面上半部；第19题起被分页到下一页，留下近半页空白。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1076
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "a374ef25-7f08-4983-a2cc-b330cd6274ce",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "031c6ed6128a65064c0d301cc7385441e5c3172c79749e548cc5978bb5c46156",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1989-regular-national-arts",
+  "pdf_sha256": "0372a7f7a816b205d8d877df49810c653d1685cf5059b76476e6158c3e7b59d4",
+  "resume_action": "修正 gk-1989-regular-national-arts 的 简答版 第 6 页 pagination_whitespace（本页只有第19—24题简答，内容集中在页首约四分之一，余下大面积空白。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1077
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "a374ef25-7f08-4983-a2cc-b330cd6274ce",
+  "check_code": "pagination_whitespace",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "f6d74c07b5591e95640456bae82e4cabce10308233269238359877057ae6d82e",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1989-regular-national-arts",
+  "pdf_sha256": "b32e714eee425cb6563d1725b3abc1fdf4f16108041c5c82fadb963b80715390",
+  "resume_action": "修正 gk-1989-regular-national-arts 的 试题版 第 4 页 pagination_whitespace（仅第23、24题排在页首，正文约占页面上部五分之一，其余大面积留白；题目完整但末页密度明显失衡。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```

@@ -1319,7 +1319,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "39c1f3d9-4489-401f-8a6e-8068123ac6be",
+  "last_transaction_id": "72f942b8-9134-4789-82d7-9f1c69ebca0a",
   "papers": [
     {
       "blocked_from": null,
@@ -19056,7 +19056,7 @@
       "year": 1989
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -19094,15 +19094,20 @@
         "track": "文科",
         "variant": "全国文科"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1074",
+        "ISSUE-1075",
+        "ISSUE-1076",
+        "ISSUE-1077"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-1989-regular-national-arts",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "1989_全国卷_文科",
       "question_count": 24,
-      "resume_action": null,
+      "resume_action": "修正 gk-1989-regular-national-arts 的 简答版 第 4 页 pagination_whitespace（本页仅有第23、24题题面，约五分之四页面空白；与前页题量分布失衡。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "1989/1989_数学真题_全国文_答案要点.md",
         "combined_rendered": "1989/1989_数学真题_全国文_含解析.md",
@@ -19552,7 +19557,7 @@
       "year": 1994
     }
   ],
-  "revision": 4175,
+  "revision": 4176,
   "schema_version": 1,
   "sources": [
     {
