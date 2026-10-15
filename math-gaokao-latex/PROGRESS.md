@@ -5171,3 +5171,10 @@
 - 验证：`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`、`source_manifest validate`、`provenance check-batch`、`build_projects validate-receipts` 均通过；本卷9项数学测试通过。正式 XeLaTeX 构建 revision 4182，`failed=0`，状态 `compiled_pending_review`；四版分别4、17、5、12页，共38页，日志无错误、缺字、Overfull或未定义引用。逐版接触表检查全部页面，并对变化页做高分辨率复核；新版临时审查工作项为38页/304项全通过，未变化页沿用同一内容此前的逐页通过记录。
 - 回执状态：正式视觉回执尚未登记。`finalize-batch-checked` 因进入时存在本阶段未提交的 tracked 改动而按安全门返回 `INVALID_OR_STALE`，`committed=false`；这不是构建或页面校样失败。先提交本阶段检查点，再在干净工作树上重跑正式视觉回执事务并验证 receipts。
 - 成本与剩余：本阶段0次OCR、0次外部模型/API调用；Codex/子代理实际Token与费用不可见。待完成正式视觉回执、清理本卷可再生编译中间文件并保留PDF/LaTeX源与回执；1952—2026全库任务及OCR/Token基准仍未完成。
+
+### 1989 全国卷文科：正式视觉验收与中间物清理（2026-10-16）
+
+- 已完成：批次 `phase4-b02` 正式关闭，review 状态 `passed`（revision 4183）。试题版4页、解析版17页、简答版5页、印刷版12页，共38页/304项视觉检查全部通过；此前四个留白问题 ISSUE-1074—1077 均标记 resolved。
+- 修改文件：本卷 `receipts/review.json` 与 `receipts/build.json`、`source-manifest.json`、`missing-issues.md`、`reports/phase4-b02.md` 及本进度。报告记录本卷已通过视觉复核；旧 issue 保留审计记录并注明已解决。
+- 验证：`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=0, succeeded=1`。按已授权的范围清理24个 XeLaTeX 编译中间文件（`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`）；四份正式 PDF 与四份诊断 JSON 保留。
+- 剩余/下一步：1989全国文科卷的内容复核、四版构建和视觉回执已闭合；1952—2026 全库收录/转录、OCR流水线及实际 Token/成本基准仍未完成。本阶段0次OCR和外部模型/API调用；Codex实际Token与费用不可见。
