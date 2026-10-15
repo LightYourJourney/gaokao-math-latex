@@ -5139,3 +5139,10 @@
 - 修改文件：新增 `1989_全国卷_文科/provenance.json`；事务更新 `source-manifest.json`（batch 状态和卷 production_state=`editions_generated`）；本进度。未改题面、答案、解析、TikZ、公共生成器或宏。
 - 验证：`provenance.py import-batch` dry-run 成功后再 `--write`，返回 revision 4173；`provenance.py check-batch` 返回 `OK：1 卷`；`source_manifest.py validate --manifest source-manifest.json` 通过；`solution_sources.py check-batch --manifest source-manifest.json --batch phase4-b02` 返回1套/24题全部通过；结构抽查确认24题三角色各异、哈希齐全、页码均为1、答案证据B×24、冲突 `none`。本阶段无OCR/API调用，实际Token/费用不可见。
 - 剩余/下一步：目前仅 provenance 阶段通过，不等于 PDF 正式构建或本卷闭卷。继续正式编译四个版本，检查编译诊断，再对所有正式PDF逐页完成八项视觉回执；验收和清理通过后再将本卷标为完成。
+
+### 1989 全国卷文科：正式四版 XeLaTeX 构建（2026-10-16）
+
+- 已完成：对 `gk-1989-regular-national-arts` 执行正式四版构建；试题版4页、解析版17页、简答版6页、印刷版12页，共39页，均为A4。
+- 修改文件：`1989_全国卷_文科/receipts/build.json`、`source-manifest.json`、本进度。忽略目录 `build/` 生成四份正式PDF与四份诊断JSON；不把构建中间产物或页图入库。
+- 验证：正式构建返回 `failed=0`、revision 4175、状态 `compiled_pending_review`。四版诊断均 `succeeded`，无 problem、错误、缺字、Overfull、未定义引用；日志扫描未发现 Underfull、Overfull、LaTeX Warning/Error 或 Missing character。PDFinfo 确认页数4/17/6/12及A4。`validate-receipts` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=1`，pending 是预期的视觉校样未完成。
+- 剩余/下一步：正式编译不等于视觉通过。将四版39页渲染为页图，准备并完成每页八项视觉检查，登记正式 review receipt；门禁通过后再清除该卷 LaTeX 中间产物，保留PDF、TeX源和诊断/回执。
