@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "source_manifest_revision": 4152,
+  "upstream_path": "普通高考/1989/1989广东文.pdf",
+  "pdf_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
+  "git_blob_oid": "ee0f4dfcd5af015b510348df03671c224630d9e4",
+  "exam": {
+    "year": 1989,
+    "region": "广东（仓库来源候选，待核）",
+    "title": "1989 广东卷文科数学（候选；原PDF题签仅见文史类）",
+    "subject": "数学",
+    "candidate_group": "文史类",
+    "top_level_question_count": 30,
+    "choice_question_count": 25,
+    "second_volume_item_count": 5,
+    "paper_id": null
+  },
+  "source": {
+    "source_state": "ready",
+    "source_authenticity": "unverified",
+    "source_title_as_printed": "文史类",
+    "printed_year": null,
+    "printed_region": null,
+    "publisher": null,
+    "page_count": 9,
+    "printed_page_numbers": [643, 644],
+    "sha256_verified": true,
+    "git_blob_verified": true
+  },
+  "external_catalog_match": {
+    "repository": "https://github.com/deekur/gaokaomath",
+    "repository_path": "普通高考/1989/1989广东文.pdf",
+    "github_blob_oid": "ee0f4dfcd5af015b510348df03671c224630d9e4",
+    "matches_local_git_blob": true,
+    "match_kind": "identical-file-mirror-only",
+    "independent_source": false,
+    "source_authenticity_effect": "none",
+    "question_9_resolution_effect": "none",
+    "checked_on": "2026-10-15",
+    "evidence_note": "公开仓库README将1985—1990列为上海、广东、全国卷，但其资料为网络公开资料与已出版资料汇编，未将本PDF绑定到具体出版物或一手档案。仓库中的文件与本地固定输入Git blob完全一致，属于同源镜像，不能作为独立版次或独立答案证据。"
+  },
+  "bibliographic_leads": [
+    {
+      "record_url": "https://books.google.com/books/about/1989%E5%B9%B4%E4%B8%8A%E6%B5%B7%E9%AB%98%E8%80%83%E8%AF%95%E9%A2%98%E6%B1%87%E6%9E%90.html?id=G7UlAAAACAAJ",
+      "title": "1989年上海高考试题汇析/: 附全国高考部分试题及答案",
+      "compiler": "上海教育考试中心",
+      "publisher": "上海教育出版社",
+      "publication_year": 1990,
+      "page_count": 232,
+      "isbn": "9787532019052",
+      "evidence_level": "secondary-catalog-metadata-only",
+      "content_pages_verified": false,
+      "matches_fixed_pdf": false,
+      "source_authenticity_effect": "none",
+      "q9_resolution_effect": "none",
+      "checked_on": "2026-10-15",
+      "notes": "Google Books书目记录称该书附全国高考部分试题及答案；未取得书页、目录/版权页或一手馆藏记录，未核实是否收录此广东候选卷或与固定PDF同版。Google Books API本次连接超时。"
+    }
+  ],
+  "catalog_checks": [
+    {
+      "catalog": "Shanghai Library OPAC",
+      "official_entry_url": "https://www.library.sh.cn/",
+      "catalog_url": "https://vufind.library.sh.cn/",
+      "query": "ISBN 9787532019052",
+      "result_state": "access-verification-blocked",
+      "record_found": null,
+      "evidence_note": "上海图书馆官网将入口标为馆藏书目查询（OPAC）；在公开目录提交精确ISBN后跳转权限验证页，未取得结果页。此为访问受阻，不代表无馆藏。未尝试绕过验证。",
+      "source_authenticity_effect": "none",
+      "q9_resolution_effect": "none",
+      "checked_on": "2026-10-15"
+    },
+    {
+      "catalog": "National Library of China OPAC",
+      "official_entry_url": "https://www.nlc.cn/web/select.html",
+      "catalog_url": "https://opac.nlc.cn/",
+      "query": "ISBN 9787532019052 (not submitted)",
+      "result_state": "endpoint-unreachable-before-search",
+      "record_found": null,
+      "evidence_note": "国家图书馆官网说明其联机公共目录提供馆藏检索；目录端点在提交检索前连接超时/关闭，未取得记录。此不代表无馆藏。",
+      "source_authenticity_effect": "none",
+      "q9_resolution_effect": "none",
+      "checked_on": "2026-10-15"
+    },
+    {
+      "catalog": "National Version Data Center PDC",
+      "official_entry_url": "https://www.cnapc.cn/index.html",
+      "catalog_url": "https://pdc.capub.cn/",
+      "query": "ISBN 9787532019052 (search blocked by login redirect)",
+      "result_state": "login-required-before-search",
+      "record_found": null,
+      "evidence_note": "国家版本馆官网链接至PDC。PDC公开首页说明服务涉及ISBN/CIP、馆藏数据并提供公开检索入口；输入精确ISBN并提交后跳转登录页，尚未获得检索结果。未登录、未提交凭据、未绕过访问控制。",
+      "source_authenticity_effect": "none",
+      "q9_resolution_effect": "none",
+      "checked_on": "2026-10-15"
+    }
+  ],
+  "question_transcription_status": "transcribed-pending-independent-review",
+  "answer_transcription_status": "fixed-pdf-printed-key-transcribed",
+  "solution_transcription_status": "partial-fixed-pdf-solutions-transcribed",
+  "review_status": "needs-review",
+  "mathematical_verification_status": "not-verified",
+  "canonical_question_source_ready": false,
+  "source_has_answers": true,
+  "source_has_partial_solutions": true,
+  "answer_attribution": "printed-in-fixed-candidate-pdf; publisher-and-official-status-unverified",
+  "generated_answer_attribution": "agent-derived-unverified-not-official",
+  "official_answer": null,
+  "page_map": [
+    {
+      "source_pages": [1, 2, 3, 4, 5, 6, 7],
+      "printed_page_numbers": [636, 637, 638, 639, 640, 641, 642],
+      "roles": ["question-transcription"]
+    },
+    {
+      "source_pages": [8],
+      "printed_page_numbers": [643],
+      "roles": ["choice-answer-key", "second-volume-item-I-answers", "item-II-solution"]
+    },
+    {
+      "source_pages": [9],
+      "printed_page_numbers": [644],
+      "roles": ["item-II-solution-continuation", "item-III-solution", "item-IV-partial-solution"]
+    }
+  ],
+  "source_gaps": [
+    "原PDF题签没有印年份、广东地区或出版者，仓库路径归属尚未由版权页/出版物核实。",
+    "第二卷四（2）扫描页9在列出定义域及等价不等式后中止，没有可见最终解集。",
+    "第二卷第五题在当前固定PDF扫描页8—9中没有答案或解析。",
+    "选择题答案与第二卷印载解答尚未经过独立盲核。"
+  ],
+  "source_discrepancies": [
+    {
+      "question_number": 9,
+      "question_source_page": 3,
+      "question_printed_page": 638,
+      "answer_source_page": 8,
+      "answer_printed_page": 643,
+      "printed_answer": "C",
+      "answer_from_transcribed_mapping": "B",
+      "derivation_attribution": "agent-derived-from-transcribed-stem-not-official",
+      "status": "unresolved-source-conflict",
+      "note": "题面映射 (x,y)→(y−1,x+2) 令像点为 (3,−4)，逆算原象为 (−6,4)，对应选项B；固定扫描答案表第9题印作C。保留两处来源记录，不擅自更改题面或印载答案。"
+    }
+  ],
+  "artifacts": {
+    "question_draft": {
+      "path": "1989/1989_数学真题_广东文_试题.md",
+      "sha256": "47791f35f40864bcfd16cc76a03868be829b78b7df16882a3f4e28e8e8e9dd02"
+    },
+    "answer_draft": {
+      "path": "1989/1989_数学真题_广东文_答案要点草稿.md",
+      "sha256": "78ccd734825f18577bfbb6064d5d75002b8b380f30e652c900296b2c1b88f090"
+    },
+    "solution_draft": {
+      "path": "1989/1989_数学真题_广东文_解析草稿.md",
+      "sha256": "b8f3aa6373173f3d6dd480aec6fc06b98bb6cadc07b42db45855cf9db5be64a4"
+    },
+    "independent_solution_draft": {
+      "path": "1989/1989_数学真题_广东文_独立解答草稿.md",
+      "sha256": "a1ffd8ca106977e6ac5f3aad4833bd86a9c1567b70de6ab6c10e8a87d9de861e",
+      "questions": ["I-1", "I-2", "I-3", "I-4", "I-5", "II-1", "II-2", "III-1", "III-2", "IV-1", "IV-2", "V-1", "V-2"],
+      "attribution": "agent-derived-unverified-not-official"
+    },
+    "independent_choice_audit": {
+      "path": "1989/1989_数学真题_广东文_选择题独立核算草稿.md",
+      "sha256": "5c1e628740c0e36d0dfc9c69cbbd085c6cef65f124d05e6828daebcad3bea774",
+      "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+      "attribution": "agent-derived-unverified-not-official"
+    },
+    "figures": [
+      {
+        "path": "math-gaokao-latex/1989_广东卷_文科/figures/f1989_guangdong_arts_q12_options.tex",
+        "kind": "question-figure",
+        "question_number": 12,
+        "sha256": "b1365b0bd1d631e2f6aab7005979a1a586778322c94bce1a4f22e4b610bd462a"
+      },
+      {
+        "path": "math-gaokao-latex/1989_广东卷_文科/figures/f1989_guangdong_arts_q28_geometry.tex",
+        "kind": "question-figure",
+        "question_number": 28,
+        "sha256": "f1da07144dd16d5f1cbd8527f16927193d455fb3d78538daef8dfc05cd5c87b9"
+      },
+      {
+        "path": "math-gaokao-latex/1989_广东卷_文科/figures/f1989_guangdong_arts_q28_solution.tex",
+        "kind": "source-solution-figure",
+        "question_number": 28,
+        "sha256": "793ecd315c1b9de8117ecf0c6e52fcaed4be7abe5108c37cefc87d831b62d143"
+      }
+    ]
+  }
+}
