@@ -5075,6 +5075,13 @@
 - 验证：先执行无写入 dry-run；更正 Q6 角色文件中发现的哈希笔误后 dry-run 通过，随后才执行事务写入。`provenance.py check-batch --batch phase4-b01`、`source_manifest.py validate`、`solution_sources.py check-batch --batch phase4-b01`（1套/7题）、`test_source_manifest.py`（54项）及 `git diff --check` 通过；先前记录的7项本卷数学定向测试通过，本阶段未重复运行。另运行 `test_provenance.py` 共109项，因两项全库状态/来源覆盖不变量失败（其中报告363条缓存状态与现场派生不一致），未通过；目标卷自身 `check-batch` 通过，本阶段未扩大范围修复全库既有状态问题。
 - 成本与剩余：0次OCR/外部API，真实Agent Token及费用不可见。正式四版构建、逐页视觉复核、正式回执与最终登记仍未完成；后续应从正式构建阶段继续，不重做已完成的转录、独立求解和provenance。
 
+### 1989 上海卷：正式四版 XeLaTeX 构建通过（2026-10-16）
+
+- 已完成：对 `gk-1989-regular-shanghai` 执行 formal build，四版均编译成功；页数为试题版4、简答版5、解析版19、印刷版14，共42页，均为A4。机器诊断无编译错误、缺字、Overfull、未定义引用或其他 problems；简答版保留一条 Underfull `\hbox`（badness 1205，日志行15–16），待视觉复核判定影响。构建回执状态为 `compiled_pending_review`，不是最终验收。
+- 修改/产物：事务更新 `source-manifest.json` 并写入 `1989_上海卷/receipts/build.json`；PDF及诊断JSON在同卷 `build/`。LaTeX源文件未改，编译中间产物尚待本卷视觉检查后按清理入口移除。
+- 验证：formal build 输出 `failed=0`；四份诊断逐份均为 `succeeded`；`build_projects.py validate-receipts --paper gk-1989-regular-shanghai` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=1`；`pdfinfo` 确认页数和A4页面尺寸。此前本卷 provenance 批次与来源/题目结构检查仍通过。
+- 剩余/下一步：逐页检查正式输出42页（不能沿用烟测结论），尤其复核简答版 Underfull 对实际排版的影响；登记每页视觉回执，检查后清除 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`，保留PDF、LaTeX源和必要回执。只有正式视觉回执及 finalize 门禁通过后，本卷才可标为 finalized。
+
 ### 1989 全国卷文科：固定源核验与 24 题草稿
 
 - 已完成：取得固定 commit 下的全国文、理两份一页 A3 PDF，SHA-256 均与清单匹配；原生文本可提取，未调用 OCR。对文科全页及第 1/16 题局部图逐项对照，恢复提取工具遗漏的补集与命题否定横线；24 题题号完整，选择 1–12、填空 13–18、解答 19–24。文科固定源仅含题面和两图，没有答案、解析或分值，未自行补造来源答案/分值。
