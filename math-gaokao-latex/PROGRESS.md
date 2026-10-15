@@ -5082,6 +5082,14 @@
 - 验证：formal build 输出 `failed=0`；四份诊断逐份均为 `succeeded`；`build_projects.py validate-receipts --paper gk-1989-regular-shanghai` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=1`；`pdfinfo` 确认页数和A4页面尺寸。此前本卷 provenance 批次与来源/题目结构检查仍通过。
 - 剩余/下一步：逐页检查正式输出42页（不能沿用烟测结论），尤其复核简答版 Underfull 对实际排版的影响；登记每页视觉回执，检查后清除 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`，保留PDF、LaTeX源和必要回执。只有正式视觉回执及 finalize 门禁通过后，本卷才可标为 finalized。
 
+### 1989 上海卷：正式逐页视觉回执与闭卷（2026-10-16）
+
+- 已完成：逐页覆盖四版共42页、336项八类检查；正式页图在120dpi与之前已逐页检查的最终校样逐像素一致（42/42差异像素均为0），当前又检查全部接触表并全尺寸查看候选页、立体/复平面/轨迹图页和简答版答案速查页。未发现裁切、重叠、错页、缺字或异常空白。简答版第5页答案行自然换行且清晰；日志唯一 Underfull（`answers_short.tex` 第15–16行）已在视觉回执逐项说明并豁免。
+- 登记状态：`review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，revision 4172，batch `phase4-b01` closed，`gk-1989-regular-shanghai` production_state 为 `complete`。此状态仅关闭本卷，不代表1952—2026总库完成。
+- 验证：`review_receipts.py check-batch` 返回 FINALIZED；`build_projects.py validate-receipts --require-final` 返回 `succeeded=1, pending=0, stale=0, failed=0`；42页全部各8项检查为 pass，四版页数为4/5/19/14。视觉回执、批次报告和状态事务均已生成。
+- 修改文件：`1989_上海卷/receipts/{build,review}.json`、`source-manifest.json`、`reports/phase4-b01.md`、本进度；当前 PDF 保留于忽略的 `1989_上海卷/build/`。尚未清理正式编译产生的 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`。
+- 剩余/下一步：按既有授权清理本卷编译中间文件，只保留正式PDF、LaTeX源、机器诊断及正式回执；复验PDF仍在且正式回执仍有效。随后继续1952—2026总库，不重复转录/核验本卷。
+
 ### 1989 全国卷文科：固定源核验与 24 题草稿
 
 - 已完成：取得固定 commit 下的全国文、理两份一页 A3 PDF，SHA-256 均与清单匹配；原生文本可提取，未调用 OCR。对文科全页及第 1/16 题局部图逐项对照，恢复提取工具遗漏的补集与命题否定横线；24 题题号完整，选择 1–12、填空 13–18、解答 19–24。文科固定源仅含题面和两图，没有答案、解析或分值，未自行补造来源答案/分值。
