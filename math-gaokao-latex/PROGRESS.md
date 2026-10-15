@@ -5324,3 +5324,11 @@
 - 修改文件：新增 `1991_全国卷_文科/provenance.json`；更新 `source-manifest.json`；追加本进度记录。忽略目录三份角色工作件保留供追溯。
 - 验证：`provenance.py check-batch --batch phase4-b05` 通过（1卷）；`source_manifest.py validate` 通过；Git 差异核对只含该批次状态、事务ID/修订号及本卷 provenance，无其他卷内容变化。
 - 剩余/下一步：运行单卷四版本 XeLaTeX formal build，检查构建回执及实际 PDF；随后逐页视觉复核、登记正式回执。Q24 原页双加号排印意图仍 pending，Q26 保留两种轴向方程。未运行OCR/外部模型/API；Codex实际Token与费用不可见。
+
+#### 1991 全国文科：正式四版校样闭环与中间产物清理（2026-10-16）
+
+- 已完成：四版 XeLaTeX formal build attempt `ad334217-61f4-4c9f-93f5-6093dc81a7d9`，构建事务 revision 4213；试题版4页、解析版18页、简答版6页、印刷版13页，共41页。全页接触表逐页复核，四版各8项检查全部通过，共328项；候选页和第24题放大核验，未见裁切、缺页、遮叠、题号/图标错配或异常分页。编译错误、缺字和严重 Overfull 均为0；印刷版3条低 badness Underfull 分别映射到第7、10、12页，经180dpi页图复核后逐项豁免，视觉结果均为pass。正式 `finalize-batch` 返回 `FINALIZED`，revision 4214，batch `phase4-b05=closed`、本卷 `production_state=complete`；生成批次报告，无视觉或阻塞问题。
+- 修改文件：更新3份1991题面/解析/答案 Markdown 状态说明及 `1991_全国卷_文科/answers.tex`；更新 `tests/test_1991_national_arts_math.py`；新增本卷 `receipts/build.json`、`receipts/review.json` 和 `reports/phase4-b05.md`；更新 `source-manifest.json` 与6份由报告生成器维护的全量索引/摘要（`docs/source-inventory.md`、`report.md`、数学 README、LaTeX README、2017–2026 README、baseline）；追加本进度。四版PDF保留于忽略的 `build/`，按既有清理器删除24个 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 中间文件；LaTeX源文件保留。用户未跟踪的 `-.png`、`.mineru-service.lock` 未触碰。
+- 验证：1991定向测试9/9；`test_review_receipts.py` 66/66；`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts --require-final`、`source_manifest.py validate`、`provenance.py check-batch` 均通过；`report.py check --all` 在刷新6份派生摘要后通过；`git diff --check`通过。PDF文本层抽查确认第24题双加号仍照录。正式登记器首次因缺少3条Underfull豁免退出且零正式写入，补齐逐页证据后完成事务。
+- 来源/剩余：来源PDF无官方答案或解析；本卷答案仍明确标为独立推导、非官方。第24题双加号按一元正号求解但原件排印者本意无法从扫描确定；第26题未指定椭圆主轴方向，两种合法方程均保留。这些不确定性如实记载，不作为视觉失败或构建阻塞。下一步按来源清单选择下一卷；不得对本卷重复转录或重跑OCR。
+- 成本：本阶段0次OCR、0次外部模型/API调用；Codex实际Token及费用不可见，不估算。

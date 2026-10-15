@@ -1,0 +1,298 @@
+{
+  "attempt_id": "ad334217-61f4-4c9f-93f5-6093dc81a7d9",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/answers.tex",
+        "sha256": "18c65883799a63f5350b1b3325ac8490ee770e6c542afcb4e454722cdd8b1d7e"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/answers_short.tex",
+        "sha256": "cf18e7e394d5399ef86d9ebe7caccef1583069ff50c1bbe519f5862c4067ccc4"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/figures/f1991_national_arts_q23_frustum.tex",
+        "sha256": "2b8ceae4dad37637cfe0b8634f0d35321e96b9b83cdd98be49c7b4361b17119d"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/questions.tex",
+        "sha256": "eef9c1b916c5c069bb5c8d81414f08181be9dd39f1a5dfea9482f5815c6d0c44"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/印刷版.tex",
+        "sha256": "a1543d96c393295f9ae25ae7cc2bee0b0be6483423b9002046897b1c209d1178"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/简答版.tex",
+        "sha256": "ca7068239a9c558e410d9c411e3bc14bce5add28bff5a5610773c5d4b9c1275d"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/解析版.tex",
+        "sha256": "2b8bc8808d1b4038f410e3f0bc3ede20ce78e365fed9ba96f0a005941523d217"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/试题版.tex",
+        "sha256": "e982338c15441b2cd60d47235c887a7762a3629f1730fd50a1adb589cd22a293"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "09f040ee8c51413c99a05e01dfcc8cc88e8e38bfad5081c4de3fa3ada51ae96e"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 4,
+        "path": "math-gaokao-latex/1991_全国卷_文科/build/试题版.pdf",
+        "sha256": "5dc1c3cc420e1b897975f394df1ea87984b0fb39387e27bdd2e677e99dd946eb",
+        "size_bytes": 101957
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1991_全国卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 18,
+        "path": "math-gaokao-latex/1991_全国卷_文科/build/解析版.pdf",
+        "sha256": "d058e8a0e1723e23476d3cc4c83f47416c191d5427a07baa0b13cdbf4bb5731c",
+        "size_bytes": 175546
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1991_全国卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1991_全国卷_文科/build/简答版.pdf",
+        "sha256": "ad97a9c4ac690b0dc4addbc3e3dcc48b5cc4c897da8bdd601898bb759327b524",
+        "size_bytes": 113824
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1991_全国卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "177--178",
+            "text": "Underfull \\hbox (badness 1038) in paragraph at lines 177--178",
+            "width_pt": null
+          },
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "355--356",
+            "text": "Underfull \\hbox (badness 1038) in paragraph at lines 355--356",
+            "width_pt": null
+          },
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "487--487",
+            "text": "Underfull \\hbox (badness 3098) in paragraph at lines 487--487",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 13,
+        "path": "math-gaokao-latex/1991_全国卷_文科/build/印刷版.pdf",
+        "sha256": "19ae37c240d6128c70dec083ab0b0abf95266847a4424459a06362ebd1f95090",
+        "size_bytes": 172621
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1991_全国卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-10-16T06:55:37+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1991/1991_数学真题_全国文_答案要点.md",
+        "sha256": "b13467d1f1dd35b06cb69e6b84d3e047c40b648eb19cddfea2b526c9103e20c7"
+      },
+      {
+        "path": "1991/1991_数学真题_全国文_解析正文.md",
+        "sha256": "432cef9abd029765bfb865abdf5f6f733fa0042b3773427ceb3183eceab46516"
+      },
+      {
+        "path": "1991/1991_数学真题_全国文_试题.md",
+        "sha256": "befbbf8d92e468cfbc87bdfa1b84dbc103ae6f58d2e0fc6bc310e549c8141bbb"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "8823bec81b96a65c982fe69900d5b6d3f1191e3397dd073db6908b7d73c70c78"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/figures/f1991_national_arts_q23_frustum.tex",
+        "sha256": "2b8ceae4dad37637cfe0b8634f0d35321e96b9b83cdd98be49c7b4361b17119d"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/印刷版.tex",
+        "sha256": "a1543d96c393295f9ae25ae7cc2bee0b0be6483423b9002046897b1c209d1178"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/简答版.tex",
+        "sha256": "ca7068239a9c558e410d9c411e3bc14bce5add28bff5a5610773c5d4b9c1275d"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/解析版.tex",
+        "sha256": "2b8bc8808d1b4038f410e3f0bc3ede20ce78e365fed9ba96f0a005941523d217"
+      },
+      {
+        "path": "math-gaokao-latex/1991_全国卷_文科/试题版.tex",
+        "sha256": "e982338c15441b2cd60d47235c887a7762a3629f1730fd50a1adb589cd22a293"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "fc07ecebf8ed10eafed40a697c49aa23975d645d09fb0ac560b42bf2cd799c9e"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "69b988366c4e63e4875c1042ad2990fc5051f5a25f107d993d095d0c8f544df9"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
+      }
+    ],
+    "tree_sha256": "f6a201fce6b5afe4d0697f9d540720778f1e8db75e9c15c6cf7c26c01febbebe"
+  },
+  "input_projection": "183240e966d7989a9bbfc5af11df74d4e39db262f93e0f7524224a1a9c0ac6f4",
+  "manifest_revision": 4212,
+  "paper_id": "gk-1991-regular-national-arts",
+  "previous_attempt_id": "8496ad2a-9c15-4500-bf1e-7037c1286787",
+  "project_dir": "1991_全国卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-10-16T06:55:30+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

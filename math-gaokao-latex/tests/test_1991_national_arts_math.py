@@ -77,7 +77,10 @@ class NationalArts1991SourceTests(unittest.TestCase):
         self.assertIn("$a_n=2n-3$ 或 $a_n=5-2n$", self.answers)
         self.assertIn("\u539f\u9898\u6ca1\u6709\u8bf4\u660e\u957f\u8f74\u5e73\u884c", self.solution)
         self.assertIn("\u975e\u5b98\u65b9", self.answers)
-        self.assertIn("待独立复核", self.answers)
+        self.assertIn("已完成独立盲核", self.answers)
+        self.assertNotIn("独立核验尚未完成", self.answers)
+        self.assertIn("题面核源与答案独立复核已完成", self.solution)
+        self.assertNotIn("异人盲核尚未完成", self.solution)
 
     def test_q23_figure_is_a_local_vector_source(self):
         relative = "../math-gaokao-latex/1991_全国卷_文科/figures/f1991_national_arts_q23_frustum.tex"
