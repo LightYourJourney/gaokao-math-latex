@@ -5310,3 +5310,10 @@
 - 验证：本轮定向数学测试9/9；批次来源一致性26/26；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、source manifest validate均通过；当前provenance status仍为 paper/batch `planned`。验证脚本第一次因Python内联引号转义报SyntaxError，改用只读`jq`核对骨架成功，无数据影响。
 - 剩余/下一步：三角色拟为 Meitner（全卷题面核源）、Codex主会话（全卷独立求解）、Averroes+Sartre（答案盲核；Sartre负责Q7/Q15补核）。填充忽略的角色工作件并先dry-run `import-batch`；审核哈希/角色唯一性后写正式 provenance，再按正式流程构建四版、逐页检查和登记回执。Q24排印意图及无官方答案需在卷级报告中明确标作pending，不静默规范化、不阻止正确记录数学推导。
 - 成本：本轮累计7项子代理任务，其中2项因上下文泄露排除为严格盲核；未调用 OCR/商业 API。代理Token与实际费用不可见，不估算。
+
+#### 1991 全国文科：三角色 provenance 工作件与 dry-run（2026-10-16）
+
+- 已完成：填充忽略目录 `.work/phase4-b05/provenance/` 下的三份角色文件，各含26题。题面审核角色为 Meitner，答案求解角色为 Codex 主会话，答案复核角色为 Averroes+Sartre，三者身份不同。逐题 source_ref 绑定已登记且 ready 的上游 source `src-21109a45ef1d5414c0cd3294cb13d0844e5e973d0bcac83a31dacd8dc036f955`，SHA-256 为 `45e5e668b01ecbfc8297b1903f94b394d29e9d2555bc6d7c4ea34b6f702bbea6`，PDF第1页；题面/答案哈希均由 provenance 规范函数从当前 tracked 源计算。26题答案证据等级按本项目既有无官方答案独立推导惯例记为 B；不标作官方。Q24排印者本意仍 pending，双加号忠实保留；Q26两种长轴方向保留。
+- 修改文件：仅三个忽略工作件 JSON；题目、答案、解析、LaTeX、manifest 和正式 provenance 均未改。
+- 验证：`provenance.py import-batch --manifest ... --issues ... --batch phase4-b05 --work-dir ...` dry-run 通过（1卷/26题，仅校验、未落盘）；jq核验三角色题数、哈希绑定、答案等级与Q24/Q26记录。正式状态仍为 `planned`。首次只读查询误把角色文件路径当成直属 JSON 文件，按实际目录结构重新定位后验证通过，未造成写入。
+- 剩余/下一步：执行正式 `import-batch --write`，复核生成的 provenance/manifest 事务；随后按正式流程四版重建、视觉逐页复核并登记回执。未运行OCR或外部模型/API；Codex实际Token及费用不可见。
