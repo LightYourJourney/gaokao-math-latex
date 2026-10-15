@@ -17689,3 +17689,20 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1078
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定PDF第1页印作‘对称轴对x轴’，仅按‘对称轴为x轴’解释可推出选C；印载B型答案为C但canonical卷型映射未确认，尚无证据消除题干方位歧义。",
+  "fingerprint": "cef50dbf1b6a78bedf7a53baf3cddce285f8d24ea823445c8ee2588c00b8b3d3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-science",
+  "question_id": "gk-1989-regular-guangdong-science-q08",
+  "resume_action": "取得固定来源版本对应说明、同版更清晰题面或权威勘误以确认原句意图；在证据到位前保留原文和条件性答案，不解除阻断。",
+  "source_id": "src-db4a50c280ed27fa5f0f5542adec7d7fe605a216210ebbff7165fe4396b75256",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

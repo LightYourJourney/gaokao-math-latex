@@ -10,8 +10,10 @@ EXAMS = PROJECT.parent
 QUESTIONS = EXAMS / '1989' / '1989_数学真题_广东理_试题.md'
 ANSWERS = EXAMS / '1989' / '1989_数学真题_广东理_答案要点.md'
 SOLUTIONS = EXAMS / '1989' / '1989_数学真题_广东理_解析正文.md'
+ISSUES = PROJECT / 'missing-issues.md'
 FIGURES = PROJECT / '1989_广东卷_理科' / 'figures'
 sys.path.insert(0, str(PROJECT / 'tools'))
+import issues
 import solution_sources
 import make_short_answers
 
@@ -51,6 +53,22 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         self.assertIn(r'\theta=\theta_0+2k\pi', q21)
         self.assertIn(r'$k$ 为偶数', q21)
         self.assertIn('第二象限', q21)
+
+    def test_q8_solution_does_not_resolve_ambiguous_source_wording_by_assumption(self):
+        blocks = solution_sources.validate_solution_body(self.solutions_text)
+        q8 = blocks[7].body
+        self.assertIn('字面不能唯一确定抛物线对称轴的方位', q8)
+        self.assertIn('若将其理解为对称轴为 $x$ 轴', q8)
+
+    def test_q8_interpretation_ambiguity_is_a_blocking_answer_issue(self):
+        matches = [issue for issue in issues.load_issues(ISSUES)
+                   if issue.get('paper_id') == 'gk-1989-regular-guangdong-science'
+                   and issue.get('question_id') ==
+                   'gk-1989-regular-guangdong-science-q08'
+                   and issue.get('type') == 'answer-conflict']
+        self.assertEqual(len(matches), 1)
+        self.assertEqual(matches[0]['status'], 'open')
+        self.assertEqual(matches[0]['impact'], 'blocks_completion')
 
     def test_q30_solution_uses_completed_square_radius(self):
         blocks = solution_sources.validate_solution_body(self.solutions_text)
