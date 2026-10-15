@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 1952 全国卷：生成器变更后四版重编及视觉复核关闭（2026-10-16）
+
+- 已完成：共享生成器输入变化使旧构建回执失效后，仅重建既有 `gk-1952-regular-national`，未重做题面转录/OCR。正式构建 attempt=`f44be16b-69b1-4e74-a355-7cf581b6fbbc`，四版均成功；复用本阶段前已完成的逐页核对结果，通过事务式复核登记将 `phase1-b09` 关闭，manifest revision=`4168`。
+- 视觉范围与结果：试题版2页、解析版15页、简答版4页、印刷版11页，共32页；逐页检查8项共256项，其中62项按无图/不适用的版次规则注明原因。全页接触表之外，4个算法候选页及印刷版第1页警告页另作200dpi复核；未见裁切、重叠、缺字形、异常分页或溢出版心。印刷版既存1条 Underfull 警告经高清页图复核正常并保留对应豁免。
+- 修改文件：1952卷 `receipts/{build,review}.json`、`reports/phase1-b09.md`、`source-manifest.json`、全局报告投影 `README_数学.md`、`math-gaokao-2017-2026/README.md`、本项目 `README.md`、`reports/baseline.md`、`report.md`、`docs/source-inventory.md`，以及本进度文件。`manifest.csv` 校验为当前775行，本阶段无需改写。
+- 验证：`source_manifest.py validate` 通过；`build_projects.py validate-receipts --paper gk-1952-regular-national --require-final` 为 `OK`（1 succeeded、0 stale/missing/pending）；`review_receipts.py check-batch --batch phase1-b09` 为 `FINALIZED`；全量报告 render/check 通过；`manifest_csv.py --check` 通过（775行）；`test_baseline.py` 33项通过、13项按环境条件跳过；`git diff --check` 通过。全库其余卷的独立来源/数学/视觉状态不因本次关闭而改变。
+- 成本与范围：0次OCR、0次外部模型/API调用；一次单卷四版正式构建，检查32页120dpi页图及5张200dpi重点页图。Codex实际Token/费用未知。本阶段复核的是已有1952卷，不新增题面转录卷数。
+- 剩余/下一步：OCR对照试点的2个gold样本仍待独立人工核定，评分与代表性题型覆盖未完成；题目级IR、任务路由和批量端到端成本/质量基准仍未实现。后续从gold样本独立复核继续，不重复1952卷转录或本次视觉检查。
+
 ## MinerU / PaddleOCR 同页定性试点（2026-10-15；评测待盲核）
 
 - 已完成：在同一固定来源、同一缓存页图上对照既有 PaddleOCR 输出与一次 MinerU 4.0.12 ONNX 本地输出。MinerU 单页请求耗时 32.37 秒；已记录输入/输出指纹、模型来源与可测资源信息。仅作定性观察，不代表准确率比较。
