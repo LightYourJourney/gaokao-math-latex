@@ -1,5 +1,6 @@
 """1990 广东理科合并稿应忠实保留原卷的分数与希腊字母。"""
 from pathlib import Path
+import re
 import sys
 import unittest
 
@@ -15,6 +16,16 @@ import solution_sources
 
 
 class GuangdongScience1990SourceTests(unittest.TestCase):
+    def test_short_answers_retain_printed_attribution_and_q12_blocker(self):
+        short = (PROJECT / '1990_广东卷_理科' / 'answers_short.tex').read_text(encoding='utf-8')
+        self.assertIn('来源印载答案', short)
+        self.assertIn('第12题', short)
+        self.assertIn('题图缺失', short)
+        self.assertIn('B仅为来源印载', short)
+        self.assertNotIn('答案为编写者独立推导', short)
+        self.assertEqual([len(columns) for columns in re.findall(
+            r'\\begin\{tabular\}\{(c+)\}', short)], [14, 13])
+
     def test_q1_fraction_options_and_q2_alpha_survive_combined_render(self):
         combined = solution_sources.render_combined(
             QUESTIONS.read_text(encoding='utf-8'),

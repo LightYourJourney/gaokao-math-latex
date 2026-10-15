@@ -59,6 +59,10 @@ SHORT_ANSWER_OVERRIDES = {
     ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
 }
 SHORT_ANSWER_NOTICE_OVERRIDES = {
+    "gk-1990-regular-guangdong-science": (
+        "本卷包含来源印载答案与项目整理的推导，尚未经过异人盲核。"
+        "第12题题图缺失，B仅为来源印载答案，数学结论待核。\\textbf{非官方标准答案}。"
+    ),
     "gk-1994-shanghai": (
         "本卷第1—20题为项目整理；第21—26题据固定来源所附解答整理；整卷尚未经过异人盲核。"
         "第25题来源答案分段有疑点，结论待核。\\textbf{非官方标准答案}。"
@@ -67,6 +71,7 @@ SHORT_ANSWER_NOTICE_OVERRIDES = {
 # 单选题速查表的本卷排版例外：25列会超出可用版心，分成两张表显示。
 TABLE_COLUMN_LIMIT_OVERRIDES = {
     "gk-1989-regular-guangdong-science": 13,
+    "gk-1990-regular-guangdong-science": 13,
 }
 
 _SOLUTION_HEAD = re.compile(r"^\\gksolhead(?:withlabel)?\{(\d+)\}\{")
