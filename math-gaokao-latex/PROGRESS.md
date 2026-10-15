@@ -5317,3 +5317,10 @@
 - 修改文件：仅三个忽略工作件 JSON；题目、答案、解析、LaTeX、manifest 和正式 provenance 均未改。
 - 验证：`provenance.py import-batch --manifest ... --issues ... --batch phase4-b05 --work-dir ...` dry-run 通过（1卷/26题，仅校验、未落盘）；jq核验三角色题数、哈希绑定、答案等级与Q24/Q26记录。正式状态仍为 `planned`。首次只读查询误把角色文件路径当成直属 JSON 文件，按实际目录结构重新定位后验证通过，未造成写入。
 - 剩余/下一步：执行正式 `import-batch --write`，复核生成的 provenance/manifest 事务；随后按正式流程四版重建、视觉逐页复核并登记回执。未运行OCR或外部模型/API；Codex实际Token及费用不可见。
+
+#### 1991 全国文科：正式 provenance 导入（2026-10-16）
+
+- 已完成：正式 `provenance.py import-batch --write` 事务 revision 4207；26题逐题绑定 source、规范题面/答案哈希、来源核验、非官方答案推导等级B及三角色身份。`source-manifest.json` 中 `phase4-b05` 推进到 `provenance_verified`；本卷仍需 formal build 与视觉回执，不能据此算完成。
+- 修改文件：新增 `1991_全国卷_文科/provenance.json`；更新 `source-manifest.json`；追加本进度记录。忽略目录三份角色工作件保留供追溯。
+- 验证：`provenance.py check-batch --batch phase4-b05` 通过（1卷）；`source_manifest.py validate` 通过；Git 差异核对只含该批次状态、事务ID/修订号及本卷 provenance，无其他卷内容变化。
+- 剩余/下一步：运行单卷四版本 XeLaTeX formal build，检查构建回执及实际 PDF；随后逐页视觉复核、登记正式回执。Q24 原页双加号排印意图仍 pending，Q26 保留两种轴向方程。未运行OCR/外部模型/API；Codex实际Token与费用不可见。
