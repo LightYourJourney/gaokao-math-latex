@@ -1,0 +1,205 @@
+{
+  "batch_id": "phase4-b01",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-1989-regular-shanghai",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "Fermat 从题面独立求出10个填空：1/3，-√2i，4kπ+2π/3 或 4kπ-2π，16/3 cm³，(-∞,0)，60/13，4，-2√3/3，3/2，y=-17/16；逐项处理定义域、根式、空间距离、极限与抛物线准线。",
+        "grade": "A"
+      },
+      "answer_sha256": "c7a6dbbf28a42d24b52658cdd8a4e2f026e6105d335251760a335b5789df05f8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "1",
+      "printed_number": 1,
+      "question_id": "gk-1989-regular-shanghai-q01",
+      "question_order": 1,
+      "question_text_sha256": "c8dca922f02dc6c4ed038ad86f8f6fd3914f9f5985baf2629ac212c46cd98a0c",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立逐页核对固定 PDF 第 1 页（印刷页 5-5）并放大检查题面及长方体图；本题文字、10 个填空、符号与原图一致，未发现差异。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Fermat 独立逐项核算10道选择题，结果 C,A,B,D,B,C,D,A,B,D；第6题注明按通常 arc ctg 主值范围 (0,π)，该符号约定需保留。",
+        "grade": "A"
+      },
+      "answer_sha256": "f9d8a72ede21d144e502e567046d3f2233a7482dade8b249d2bcf30a809df545",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "2",
+      "printed_number": 2,
+      "question_id": "gk-1989-regular-shanghai-q02",
+      "question_order": 2,
+      "question_text_sha256": "4c0bfcdb9c2b14340f5073b93dc5b6f58ac9db6c11cd0abe17e1c13604cb5489",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立逐页核对固定 PDF 第 1–2 页（印刷页 5-5 至 5-6）；本题跨页延续部分、10 个选项、数字及符号均与原件一致，未发现差异。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Fermat 独立计算四题：-(5+6√2)/14；定义域 (0,π/2)∪[π,4]；两条直线 x+7y-25=0 与 7x-y+25=0；r=4 且 T16=-15504x^30、T6=-15504x^10。分别检查三角恒等式、定义域交集、斜率夹角及二项式项号。",
+        "grade": "A"
+      },
+      "answer_sha256": "fd80d2fe74f4ac6d39bd7c14e439ac2906ebe5eadd70e927615a1735399a1bfd",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "3",
+      "printed_number": 3,
+      "question_id": "gk-1989-regular-shanghai-q03",
+      "question_order": 3,
+      "question_text_sha256": "7a19296fa2e3e7de4fa41cf39e736a809c253f37f76f224dcb9a5285dbae76b8",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立核对固定 PDF 第 2 页（印刷页 5-6）；四个小问的文字、条件、公式與符号一致，未发现差异。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Fermat 独立证明 AE/BF=sinα/sinβ；Plato 盲核 answers.tex 第563–580行，确认 AC、BD 为点到平面的距离，三垂线定理给出 CE、DF⊥PQ，两个直角三角形以同一锐二面角平面角相似。比值证明要求非退化位置 A,B∉PQ；原题文字未明写该限制，保留边界说明。",
+        "grade": "A"
+      },
+      "answer_sha256": "9ecbc0944413ec8d65112d38863db227286d7e6955349c5ff440b867d0bd15f3",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "4",
+      "printed_number": 4,
+      "question_id": "gk-1989-regular-shanghai-q04",
+      "question_order": 4,
+      "question_text_sha256": "211e1896d666b7002dcbd68e2097caf06d909cddc1084af61ab8c7b9c2275e78",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立核对固定 PDF 第 2 页（印刷页 5-6）；二面角的面名、棱 PQ、点名及证明条件与原件一致，未发现差异。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Ptolemy 独立将等距条件化为 x-y=3，与闭圆盘相交得过圆心的闭直径线段；辐角范围端点及模范围分别由端点和垂足求得。印载解答 PDF 第4页（印刷页5-8）亦显示同一直线、圆心与端点关系。",
+        "grade": "A"
+      },
+      "answer_sha256": "6a631f6351cdc47774eb4efd4fc3828eeba1e11c86e645b4d5135cc74d2c11bb",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "5",
+      "printed_number": 5,
+      "question_id": "gk-1989-regular-shanghai-q05",
+      "question_order": 5,
+      "question_text_sha256": "10633f795f937c134c641d8922f2ef4c9a0179ca4e5acb3390593fbb38e5580c",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立核对固定 PDF 第 2 页（印刷页 5-6）；复数集合定义及三个小问文字、等式和符号一致，未发现差异。题面页本身没有配图。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Ptolemy 独立得到 Bn=q(1+q)An，并证明题设范围内 An>0；按 q²+q-1 的根分类，临界值 (√5-1)/2，分类结论与印载答案一致。",
+        "grade": "A"
+      },
+      "answer_sha256": "65256ab589bb4c9bb4e096108f39d66a740da010fe48154fabf459de64dd2909",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "6",
+      "printed_number": 6,
+      "question_id": "gk-1989-regular-shanghai-q06",
+      "question_order": 6,
+      "question_text_sha256": "d798e957b171dabab4aaf079212a76dabc3890e31c932563347dfc7dce35e5d9",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立核对固定 PDF 第 2 页（印刷页 5-6）；等比数列定义、q 的范围及比较要求一致，未发现差异。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "Ptolemy 独立推出 d=|MF|>1、|MN|=d²/(d-1)、轨迹 p²y²=(1-p²)x²+2px+p² 且 x>0，以及最小值分段式。独立推导使用既有示意图的 M-F-N 点序；主会话再核对固定来源印载解答 PDF 第5页（印刷页5-9），该页原图和推导均明确 M-F-N、x>0，故分支条件有来源支撑。",
+        "grade": "A"
+      },
+      "answer_sha256": "9fed08bd52c05fd378318ff66d48f46a10199049df4e1b1772fa012f886a1bec",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "7",
+      "printed_number": 7,
+      "question_id": "gk-1989-regular-shanghai-q07",
+      "question_order": 7,
+      "question_text_sha256": "789ebc8bf8ea4e9346b7a33e5071dd3f0b782c7757a0e2bd83095876c8a26a4f",
+      "reviewer_role": "phase4-b01-answer-review-blind-Plato",
+      "solver_role": "phase4-b01-answer-solve-independent-Fermat-Q1-4-Ptolemy-Q5-7",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-9085cdc9a4c6fd6f3c77225cda02cf3491cd5d8ebf2e1ae671df38a8156e10dd"
+      },
+      "source_sha256": "79f26e889678621a022423dc04afc47c799f0f3013056c61737ccc3ef84ff766",
+      "transcription_review": {
+        "evidence": "Peirce 独立核对固定 PDF 第 2 页（印刷页 5-6）；距离条件、运动点及两个求解目标一致，未发现题面文字差异。题面页本身没有配图。",
+        "result": "passed",
+        "role": "phase4-b01-question-review-source-Peirce"
+      }
+    }
+  ],
+  "schema_version": 1
+}
