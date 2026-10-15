@@ -1,0 +1,32 @@
+% Source-faithful schematic redraw of the two printed folding diagrams in question 23.
+% The schematic conveys labels and fold relationships only; it is not to scale.
+\begin{tikzpicture}[x=0.72cm,y=0.72cm,line cap=round,line join=round]
+  % Original square and its two printed fold lines.
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (3,3);
+  \coordinate (D) at (0,3);
+  \coordinate (E) at (1.5,0);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw[dashed] (D)--(E) (C)--(E);
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above left] at (D) {$D$};
+  \node[above right] at (C) {$C$};
+  \node[below] at (E) {$E$};
+
+  % Schematic after folding: D,C,E remain fixed; A and B coincide at P.
+  \begin{scope}[xshift=6.2cm]
+    \coordinate (D) at (0,3);
+    \coordinate (C) at (3,3);
+    \coordinate (E) at (1.5,0);
+    \coordinate (P) at (1.5,1.35);
+    \draw (D)--(C)--(E)--cycle;
+    \draw (D)--(P)--(C);
+    \draw (E)--(P);
+    \node[above left] at (D) {$D$};
+    \node[above right] at (C) {$C$};
+    \node[below] at (E) {$E$};
+    \node[right] at (P) {$P$};
+  \end{scope}
+\end{tikzpicture}
