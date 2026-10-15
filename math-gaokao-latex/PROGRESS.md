@@ -5132,3 +5132,10 @@
 - 修改文件：本进度文件；三角色审核草稿位于忽略的 `.work/phase4-b02/provenance/`，尚未导入正式 provenance，也未写 build/review 回执。没有改动题面、答案、解析、TikZ 或转换器。
 - 验证：独立求解与盲态答案复核覆盖题号1–24且结论一致；题面来源核对覆盖题号1–24且均通过。固定源整页图页脚目视为35，与文本提取一致，纠正此前临时记录的33。尚未运行角色哈希校验或 provenance 导入，故不宣称 provenance/本卷验收通过。真实Agent Token/费用不可见；本阶段无OCR或外部API调用。
 - 剩余/下一步：根据独立角色报告补全三份忽略目录工作记录，以当前规范源现场重算题面/答案哈希，先跑 `provenance.py import-batch` dry-run；只有所有角色题号、来源及哈希匹配才写入正式 provenance。随后再做正式构建与逐页视觉回执。本次复核阶段此前未及时写进度并提交，已补成独立检查点，避免留下只有会话记录的成果。
+
+### 1989 全国卷文科：provenance 事务登记（2026-10-16）
+
+- 已完成：为24题汇总三角色独立结论并通过项目正式事务登记，batch `phase4-b02` revision 4173、状态 `provenance_verified`；题面来源审核 `passed`、独立推导证据级别均为 B（非官方答案）、盲态冲突均为 `none`。每题绑定固定 source id、PDF页1、源SHA及当前规范题面/答案哈希。
+- 修改文件：新增 `1989_全国卷_文科/provenance.json`；事务更新 `source-manifest.json`（batch 状态和卷 production_state=`editions_generated`）；本进度。未改题面、答案、解析、TikZ、公共生成器或宏。
+- 验证：`provenance.py import-batch` dry-run 成功后再 `--write`，返回 revision 4173；`provenance.py check-batch` 返回 `OK：1 卷`；`source_manifest.py validate --manifest source-manifest.json` 通过；`solution_sources.py check-batch --manifest source-manifest.json --batch phase4-b02` 返回1套/24题全部通过；结构抽查确认24题三角色各异、哈希齐全、页码均为1、答案证据B×24、冲突 `none`。本阶段无OCR/API调用，实际Token/费用不可见。
+- 剩余/下一步：目前仅 provenance 阶段通过，不等于 PDF 正式构建或本卷闭卷。继续正式编译四个版本，检查编译诊断，再对所有正式PDF逐页完成八项视觉回执；验收和清理通过后再将本卷标为完成。
