@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## MinerU / PaddleOCR 同页定性试点（2026-10-15；评测待盲核）
+
+- 已完成：在同一固定来源、同一缓存页图上对照既有 PaddleOCR 输出与一次 MinerU 4.0.12 ONNX 本地输出。MinerU 单页请求耗时 32.37 秒；已记录输入/输出指纹、模型来源与可测资源信息。仅作定性观察，不代表准确率比较。
+- 结果边界：MinerU 输出部分公式与解答更连贯，但仍有杂散数字、坐标/图文归属问题和图形占位；两引擎输出都不是可直接采用的忠实转录。疑似“SK TJ”在同哈希原页上可见，原意未核，不擅自修正。候选参考转录保留该歧义并标记 `pending_human_review`。
+- 修改文件：`docs/TOKEN_AUDIT.md`、`benchmarks/ocr-gold.json`、`benchmarks/ocr-runs.jsonl`、本 `PROGRESS.md`。没有改正式试卷题面或 LaTeX 成果。
+- 验证：`test_score_ocr.py` 7/7 通过；评分器成功校验来源指纹，但如预期报告 `scored_runs=0`、`pending_cases=2`；source manifest 校验通过（775条来源），`manifest_csv.py --check` 通过。无外部聊天模型/API 调用；OCR 仅一次本地 MinerU 运行。真实 Codex Token 与费用未知。
+- 剩余/下一步：由独立复核者核定 gold 文本（尤其保留的歧义及图中文字），之后再评分并补足代表性题型；在此之前不报 CER、准确率或节省率。题目级 IR、任务路由和批量端到端验收仍未实现。
+
 ## 构建中间产物清理入口：补齐可复用实现（2026-10-16）
 
 - 已完成：恢复 `clean-build-intermediates` CLI，仅按固定扩展名移除四版 LaTeX 中间产物，保留 PDF、TeX、回执及非目标文件。执行前要求来源、review、构建与工具链证据均有效；显式选择 `--dry-run` 或 `--execute`，全体目标先通过路径、symlink、tracked 和 ignore 检查再删除。

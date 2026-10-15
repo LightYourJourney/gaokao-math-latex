@@ -23,9 +23,10 @@
       "render_dpi": 144,
       "bbox_pixels_top_left_xywh": null,
       "task": "text",
-      "reference_text": null,
+      "reference_text": "（Ⅱ）由（Ⅰ）知一次抽检后，设备需要调整的概率为 P(C)=0.9，故所求的概率为 1−0.9³=0.271。\n19．（Ⅰ）证明：因为 AD=BC₀=BD=1，AB=C₀D=√2，所以 ∠DBC₀=90°，∠ADB=90°。因为折叠过程中，∠DBC=∠DBC₀=90°，所以 DB⊥BC，又 DB⊥BC₀，故 DB⊥平面 CBC₀。又 DB⊂平面 ABC₀D，∴平面 ABC₀D⊥平面 CBC₀。\n（Ⅱ）解法一：如图，由（Ⅰ）知 BC⊥DB，BC₀⊥DB，所以 ∠CBC₀ 是二面角 C−BD−C₀ 的平面角，由已知得 ∠CBC₀=60°。作 CF⊥C₀B，垂足为 F，由 BC=BC₀=1，SK TJ CF=√3/2，BF=1/2，连结 AF，在△ABF中，AF²=(√2)²+(1/2)²−2×√2×1/2×cos135°=13/4。因为平面 ABC₀D⊥平面 CBC₀，所以 CF⊥平面 ABC₀D，可知 CF⊥AF，在△AFC中，AC=√(AF²+CF²)=√(13/4+3/4)=2。\n解法二：由已知得 ∠ADB=∠DBC₀=90°，以 D 为坐标原点，射线 DA、DB 分别为 x 轴正半轴和 y 轴正半轴，建立如图的空间直角坐标系 D−xyz，则 A(1,0,0)、B(0,1,0)、C₀(−1,1,0)、D(0,0,0)。由（Ⅰ）可知 BC⊥DB，BC₀⊥DB，所以 ∠CBC₀ 是二面角 C−BD−C₀ 的平面角，由已知得 ∠CBC₀=60°，故点 C 的坐标为 (1/2,1,√3/2)。∴|AC|=√((−1/2−1)²+1²+(√3/2)²)=2，即 AC 的长为 2。",
       "review_status": "pending_human_review",
-      "sample_context": "Embedded full-page raster scan containing a worked three-dimensional geometry problem and figure; PDF pages 1-4 and 6-7 have extractable text."
+      "sample_context": "Fixed source PDF page 5, full-page raster. reference_text is a candidate transcription of continuous body text and formulas; isolated labels inside the two diagrams are excluded from this text-CER case. PDF pages 1-4 and 6-7 have extractable text.",
+      "review_note": "Candidate transcribed by visual inspection from the source-bound cached page raster (SHA-256 17ceebb7c49cdb789120b2ab92a974309973f2982abd1e9423f0db495205904a). Keep pending_human_review: no human reviewer has approved it and a blind subagent request was blocked by agent thread limit. The visible string 'SK TJ' is retained literally without guessing its meaning. The printed coordinate for C appears as (+1/2,1,√3/2), while the following distance formula uses (−1/2−1)^2; both are transcribed as printed, not reconciled."
     }
   ]
 }

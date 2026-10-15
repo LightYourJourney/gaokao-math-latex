@@ -1,15 +1,23 @@
 # PDF → LaTeX 流程审计与 Token 成本基线
 
-审计日期：2026-10-13
+审计日期：2026-10-15
 
-## 当前恢复检查点（2026-10-13）
+## 当前恢复检查点（2026-10-15）
 
-本报告后续已积累实现与实测，以下“现状证据”和优先级表保留的是**最初接入前基线**，不是当前缺失清单。恢复时已核对 `feat/gaokao-phase0` 的 Git diff、项目 `PROGRESS.md` 与相关源码：当前有 775 个来源、275 套试卷、141 个批次，22 个 Python 工具、25 个测试文件。数量不代表完成率。
+本报告后续已积累实现与实测，以下“现状证据”和优先级表保留的是**最初接入前基线**，不是当前缺失清单。恢复时在隔离工作树 `仓库根` 核对 `feat/gaokao-phase0` 的 Git 状态、项目 `PROGRESS.md` 与 manifest：revision 4152 有 775 个来源、279 条试卷记录、145 个批次，22 个 Python 工具、62 个测试文件。manifest 的试卷 `production_state` 为 complete 226、compiled 3、blocked 43、planned 7；批次状态为 closed 112、compiled_pending_review 3、closed_with_blockers 23、planned 7。来源记录均为 `ready`，其中 278 条 `paper_relation=canonical`、497 条未设该关系。OCR gold 当前仅 2 个样例（text/formula 各1），均为 `pending_human_review`。以上是清单字段计数，不等同于题面转录完成量、最终验收完成量或准确率。
 
 - 已有：`analyze_pdf.py` 页级文字/栅格分析与断点缓存；`ocr_pdf.py` 选择性 Tesseract 页识别、渲染/识别缓存和待审状态；`recognize_formula.py` 可选 Paddle 局部公式识别；`score_ocr.py` 评分工具与既有少量真实样本记录。无需重复安装或再造这些模块。
 - 已有后段：Markdown 规范源、四版 LaTeX 生成、latexmk/XeLaTeX、来源/provenance/构建/逐页复核门禁。新识别流程尚未端到端接入题目级数据与这些门禁；不能据局部工具通过宣布全流水线完成。
-- 主要剩余瓶颈：独立核对的数学 OCR gold 不足、MinerU/Paddle 同样本比较未完成、题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
+- 主要剩余瓶颈：数学 OCR gold 仍只有 2 个且均待人工复核；已完成 1 个扫描页上的 MinerU/Paddle 同图定性对照，但没有可评分的人工参考，也没有形成准确率结论。题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
 - 成本基线：历史 Agent 调用量、输入/输出/缓存 Token、账单费用、端到端完成率均未知。已有本地计时与缓存证据不能换算成聊天 Token 节省率。
+
+### 同页 MinerU/Paddle OCR 定性试点（2026-10-15）
+
+选用现有 gold 候选 national-2008-extension-arts-page05-scan，只比较已有 PaddleOCR 输出和一次新的 MinerU 输出；二者输入对应同一张缓存页面图，SHA-256 为 17ceebb7c49cdb789120b2ab92a974309973f2982abd1e9423f0db495205904a（来源 PDF SHA fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2，第5页，144 DPI）。因 MinerU CLI 接受 PDF，本次将该原始栅格无损放入单页 PDF；包装 PDF SHA 为 27440850180b66e3528e61a7ff1c028db5eb0e24af5215482746cfa84114f919。输出 SHA 为 01202339eb47a0d15ea672ab3493c55af92f6a45cbae2d9b26d861a2ae8fe70e，原始 Markdown 暂存于忽略目录 math-gaokao-latex/.work/mineru-output/。
+
+MinerU 4.0.12，macOS arm64 / Python 3.11.17，本地 managed Basic、ONNX 小模型后端；模型来自 ModelScope 的 OpenDataLab/MinerU-4_models_onnx（下载时 revision 为浮动的 master），13 个模型文件通过 models verify。首次本地模型配置检查因服务进程未继承 MINERU_MODEL_SMALL_BACKEND=onnx 而误按 Torch 清单拒绝；重启隔离服务并在服务启动时设置该变量后成功。单页请求 32.37 秒，cache_hit=false。/usr/bin/time -l 测到的 CLI 最大 RSS 为 65,241,088 bytes、CLI peak footprint 为 49,562,128 bytes；独立托管推理服务进程 RSS 未测，不能与 Paddle 的进程 RSS 直接比较。OCR 模型环境和模型缓存保留在忽略的 math-gaokao-latex/.work/mineru-env 与 .work/mineru-home 以便后续复用；服务已停止。
+
+定性观察：MinerU 对概率指数、几何关系和解答步骤的输出比现存 PaddleOCR 结果连贯；有杂散数字、图文顺序/归属问题，并将图形留作占位引用。复看同哈希原页后，图中可见一段形似“SK TJ”的字形序列，因此目前证据不足以把它定为 OCR 错误；其印刷原意仍待人工核验。PaddleOCR 与 MinerU 输出均含该序列。MinerU 输出在 `P(C)=0.9` 后多出原图中未见的 `5`，并把图中的坐标轴字母混入坐标说明文本。两份输出仍不是可靠转录。gold 的 reference_text 仍为空且 review_status=pending_human_review，评分器因此正确返回 scored_runs=0、pending_cases=2；未计算 CER、未声称准确率。真实 Token、API 费用及模型调用成本未知；本地运行时间不能代表 Token 节省。
 
 ### 首轮最小增量：OCR 前校验来源文件身份
 
@@ -35,7 +43,7 @@ python3 math-gaokao-latex/tools/ocr_pdf.py path/to/source.pdf \
 
 真实烟测使用 manifest 中的固定来源 `src-1da61ba2ff864f3a18d22ed9f208fb30d2d24eddcfdb1fb4fa90caad681107bd`（1989全国文科，SHA `a2b62ea9e940eb46b853c4155c436cc0200f31578056582c9f62b667c93d2758`）。CLI 输出 `source_identity_status=manifest_verified`、1页原生文字候选、0 OCR 调用，退出码0。失败路径由测试覆盖，并在分析调用前拒绝。共新增4项manifest边界测试；`test_ocr_pdf.py` 17项通过。此变更是来源完整性保护，不调用模型/OCR，不产生可量化的Token或费用节省。
 
-下一最小阶段：扩充少量独立核对 gold；在同一来源和同一区域复用缓存比较本地 OCR。题目 IR、路由与批量端到端验收按后续阶段推进，不扩展转录批次。
+下一最小阶段：先为现有候选建立经人工确认的参考文本，之后再评分；再选代表性页面补充同样本引擎比较。题目 IR、路由与批量端到端验收按后续阶段推进，不扩展转录批次。
 
 范围：当前工作树中 `math-gaokao-latex/` 的来源管理、转录存储、LaTeX 生成、构建、复核和测试代码。未扫描构建目录、缓存内容、用户会话日志或外部服务账单。
 
