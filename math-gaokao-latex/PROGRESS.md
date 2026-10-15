@@ -5228,3 +5228,11 @@
 - 验证：本卷两个测试文件13/13通过；简答相关测试51/51通过；`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`（30题）与 `source_manifest validate` 通过。旧四版烟测存在，但尚无本轮正式 provenance/build/review 闭环。
 - 独立工作：启动只读题面核源、独立解题A、独立解题B三项任务；B先只看题目，返回后再与答案稿和来源B型答案逐题盲态比对。当前状态均待返回，暂不写正式角色结论。Agent IDs：`01a1416d-5356-7600-b387-58055c813bed`、`01a1416d-5565-7562-95d5-0033ce282800`、`01a1416d-5736-7f82-ac5f-76c4c1e0adda`。
 - 成本/剩余：0次OCR、0次网络下载、0次外部API；subagent实际token/费用不可见。下一步接收并交叉核验三份独立结果，若有源文或数学分歧先定位修正并重跑定向测试，再正式登记provenance、构建四版、逐页校样与回执清理。全库其他卷与最终报告仍未完成。
+
+#### 1989 广东理科：盲核发现的源文与推导修正（2026-10-16）
+
+- 已完成：逐页题面复核发现原卷第19、30题印作 `tg`，规范稿误转为 `tan`；题面现以 `\operatorname{tg}` 忠实保留印刷记号。补全第21题半角的周期性论证：写 `θ=θ₀+2kπ`，证明原等式当且仅当 `k` 为偶数，故半角角仍在第二象限。第30题解析明确由配方 `(x−t²)²+(y−t)²=t²` 得半径 `t`。确定性重生成还发现并修复旧派生物与规范题源的另一处失配：q30 圆方程首项旧 TeX 曾为 `−x²`，现已与固定来源及题源恢复为 `+x²`。这不是重录题面或OCR；第27题图仍明确为按题设重建示意，并非原卷插图。
+- 修改文件：本卷 `_试题.md`、`_解析正文.md`、派生 `_含解析.md`、`1989_广东卷_理科/{questions.tex,answers.tex}`、`tests/test_1989_guangdong_science_sources.py`。新增测试保护19/30题原记号、21题整周代表论证、30题原方程符号和半径结论。
+- 验证：新增断言先在原稿上按预期失败；修正后题源测试8/8、旧独立数学回归8/8通过。`solution_sources extract-batch --manifest source-manifest.json --batch phase4-b04 --write` 确定性更新两份派生Markdown；随后 `solution_sources check-batch`（1卷/30题）、`generate_projects --check`、`make_short_answers --check`、`source_manifest validate` 和 `git diff --check` 通过。期间一次生成检查发现合并Markdown未同步，已定位为它由 `solution_sources` 而非 `generate_projects` 单独生成并按正确流水线更新；无业务源数据丢失。
+- 复核边界：另一位独立求解者曾把第11题按“必须相交的公垂线”解释为B；题面未要求相交，当前解答依空间两直线方向夹角定义取D，与固定PDF上明确标注“B型卷答案”的D一致。已请求未参与解题的题面核源者独立复核答案/解析；正式答案复核仍 pending。B型答案与本 canonical 题面卷型的对应关系未证实，不能称官方答案。题面原文“对称轴对x轴”与第27题缺图限制继续保留，不推测改题。
+- 成本与下一步：0次OCR、0次下载、0次外部模型/API调用；subagent与Codex实际Token/费用不可见，记未知。待独立答案复核完成并解决任何分歧后，才填三角色provenance工作件并dry-run/正式登记；之后单卷四版正式构建、逐页视觉校样、回执关闭与中间物清理。该卷此前30题转录已完成，本记录不增加转录卷数；不得重复转录。

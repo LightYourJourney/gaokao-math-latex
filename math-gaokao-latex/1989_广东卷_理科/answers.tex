@@ -400,7 +400,7 @@
 
 \textbf{题目}：
 
-如果 $\tan\dfrac A2=\dfrac mn$，那么 $m\cos A-n\sin A=$（　）。
+如果 $\operatorname{tg}\dfrac A2=\dfrac mn$，那么 $m\cos A-n\sin A=$（　）。
 
 \begin{gkopts}(4)
 \task A．$n$
@@ -471,7 +471,7 @@
 \Needspace{4\baselineskip}
 \textbf{解析}
 
-恒等式 $1+\sin\theta=(\sin(\theta/2)+\cos(\theta/2))^2$。题设等式要求半角的正弦与余弦之和非负。取 $\theta$ 的第三象限代表 $\pi<\theta<3\pi/2$，则 $\pi/2<\theta/2<3\pi/4$，所以 $\theta/2$ 在第二象限，选 C；该区间上正弦与余弦之和非负，与等式相符。
+恒等式 $1+\sin\theta=(\sin(\theta/2)+\cos(\theta/2))^2$，故题设等式成立当且仅当 $\sin(\theta/2)+\cos(\theta/2)\ge0$。写成 $\theta=\theta_0+2k\pi$，其中 $\pi<\theta_0<3\pi/2$、$k\in\mathbb Z$。令 $u_0=\theta_0/2$，则 $\pi/2<u_0<3\pi/4$，从而 $\sin u_0+\cos u_0>0$；而 $\theta/2=u_0+k\pi$ 时，半角和为 $(-1)^k(\sin u_0+\cos u_0)$。因此等式要求且只要求 $k$ 为偶数，于是 $\theta/2$ 与 $u_0$ 同终边，属于第二象限，选 C。
 
 \gkanswer{答案：C}
 
@@ -740,7 +740,7 @@
 
 \nopagebreak[4]
 \[
-x^2+y^2-2x\left(\frac{1-\cos\theta}{1+\cos\theta}\right)-2y\tan\frac\theta2+\left(\frac{1-\cos\theta}{1+\cos\theta}\right)^2=0,
+x^2+y^2-2x\left(\frac{1-\cos\theta}{1+\cos\theta}\right)-2y\operatorname{tg}\frac\theta2+\left(\frac{1-\cos\theta}{1+\cos\theta}\right)^2=0,
 \]
 
 式中 $\theta$ 是实数，且 $0<\theta<\pi$。
@@ -762,7 +762,7 @@ x^2+y^2-2x\left(\frac{1-\cos\theta}{1+\cos\theta}\right)-2y\tan\frac\theta2+\lef
 \nopagebreak[4]
 \[\frac{1-\cos\theta}{1+\cos\theta}=t^2.\]
 
-圆方程配方为 $(x-t^2)^2+(y-t)^2=t^2$，圆心为 $(t^2,t)$。令 $y=t$ 得圆心轨迹 $y^2=x$ 且 $y>0$，不含原点。反之任意 $y>0$ 都对应唯一 $\theta=2\arctan y\in(0,\pi)$，故轨迹范围无遗漏。
+圆方程配方为 $(x-t^2)^2+(y-t)^2=t^2$。因 $t>0$，圆心为 $(t^2,t)$、半径为 $t$。令 $y=t$ 得圆心轨迹 $y^2=x$ 且 $y>0$，不含原点。反之任意 $y>0$ 都对应唯一 $\theta=2\arctan y\in(0,\pi)$，故轨迹范围无遗漏。
 
 \gksubpart{（2）}
 

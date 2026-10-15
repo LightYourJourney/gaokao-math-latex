@@ -38,6 +38,29 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         self.assertIn('printed-label: 一', self.questions_text)
         self.assertIn('3x-4y-12=0', self.questions_text)
 
+    def test_q19_and_q30_preserve_the_source_tangent_notation(self):
+        blocks = solution_sources.parse_question_blocks(self.questions_text)
+        self.assertIn(r'\operatorname{tg}', blocks[18].body)
+        self.assertNotIn(r'\tan', blocks[18].body)
+        self.assertIn(r'\operatorname{tg}', blocks[29].body)
+        self.assertNotIn(r'\tan', blocks[29].body)
+
+    def test_q21_solution_covers_all_coterminal_third_quadrant_angles(self):
+        blocks = solution_sources.validate_solution_body(self.solutions_text)
+        q21 = blocks[20].body
+        self.assertIn(r'\theta=\theta_0+2k\pi', q21)
+        self.assertIn(r'$k$ 为偶数', q21)
+        self.assertIn('第二象限', q21)
+
+    def test_q30_solution_uses_completed_square_radius(self):
+        blocks = solution_sources.validate_solution_body(self.solutions_text)
+        q30 = blocks[29].body
+        question = solution_sources.parse_question_blocks(self.questions_text)[29].body
+        self.assertIn(r'x^2+y^2-2x', question)
+        self.assertNotIn(r'-x^2+y^2', question)
+        self.assertIn(r'(x-t^2)^2+(y-t)^2=t^2', q30)
+        self.assertIn(r'半径为 $t$', q30)
+
     def test_vector_figure_sources_have_valid_text_and_q25_intercepts(self):
         figures = {path.name: path.read_text(encoding='utf-8')
                    for path in FIGURES.glob('*.tex')}
