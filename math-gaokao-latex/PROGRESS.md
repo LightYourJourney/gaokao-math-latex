@@ -5204,3 +5204,11 @@
 - 修改文件：`1989_全国卷_理科/provenance.json`、`source-manifest.json`、本进度文件。忽略目录内三份角色工作稿保留作本地审计输入，不纳入版本控制。
 - 验证：`provenance.py import-batch` dry-run 通过；正式导入返回 revision 4184；`provenance.py check-batch --batch phase4-b03` 返回 `OK：1 卷`；`source_manifest.py validate` 通过。未运行 OCR 或外部 API；实际 Token/费用不可见。
 - 剩余/下一步：执行本卷试题版、解析版、简答版、印刷版正式 XeLaTeX 构建并检查诊断；随后四版逐页视觉校样、登记 review receipt、通过回执门禁后清理中间产物并关卷。全库1952—2026及最终清单/报告仍未完成。
+
+### 1989 全国卷理科：末页分页修正与正式构建（2026-10-16）
+
+- 已完成：仅对试题版、简答版在第20题前保留Q20—Q24作为一个分页组；不改题面、答案、证明或图稿。排查出早期试写的版别判断宏未定义，导致条件分支无效；现有源中显式定义版别字符串，并新增生成器回归测试锁定行为。仅Q19来源哈希因插入版式控制而更新，其他23题题面哈希保持原值。
+- 修改文件：全国理试题与含解析Markdown、生成的 `questions.tex`/`answers.tex`、本卷 `provenance.json`、`source-manifest.json`、`tests/test_1989_national_science_math.py`、本进度，以及待审的 `receipts/build.json`。未改共享宏、模板、转换器或其他试卷。
+- 验证：本卷13项定向数学/生成测试通过；`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`、`provenance check-batch`、`source_manifest validate` 与 `git diff --check` 通过。正式构建 attempt `7183e6f5-a9ca-401e-81f7-6922a372848a`（manifest revision 4195）四版均成功：试题4页、解析17页、简答6页、印刷13页；错误、缺字、Overfull、未定义引用均为0。40页接触表已逐页检查，四个工作项候选页另做全尺寸复核，未见裁切、重叠、图形错配或异常留白。
+- 成本：本阶段0次OCR、0次外部模型/API调用；会话Token和费用无可用实测值，不估算节省率。
+- 剩余/下一步：把已完成的源稿/测试/构建与本进度作为一个检查点提交；随后填完320项逐页视觉检查并通过正式回执事务，再验证回执、按门禁清理可再生编译中间文件。此时构建状态仍为 `compiled_pending_review`，不得称本卷已验收关闭；全库1952—2026任务仍在进行。

@@ -13,6 +13,7 @@ PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / 'tools'))
 
 import make_short_answers
+import generate_projects
 from manifest import load_manifest
 
 
@@ -164,6 +165,41 @@ class NationalScience1989MathTests(unittest.TestCase):
         self.assertIn(r'\sin x', item)
         self.assertIn(r'\cos x+\cos2x', item)
         self.assertIn('恒等式成立', item)
+
+    def test_question_and_short_editions_reserve_questions_20_to_24_together(self):
+        manifest = load_manifest(PROJECT / 'source-manifest.json')
+        paper = next(
+            item for item in manifest['papers']
+            if item['paper_id'] == 'gk-1989-regular-national-science'
+        )
+        sources = generate_projects.paper_sources(paper)
+        result = generate_projects.generate_project(
+            PROJECT.parent.parent.parent, sources
+        )
+        questions_tex = result.targets[
+            f"math-gaokao-latex/{paper['project_dir']}/questions.tex"
+        ].decode('utf-8')
+
+        guard_before_q20 = re.search(
+            r"\\begin\{question\}\s*\\gkti\{19\}.*?"
+            r"\\long\\def\\gkquestionedition\{试题版\}\s*"
+            r"\\long\\def\\gkshortedition\{简答版\}\s*"
+            r"\\long\\edef\\gkcurrentedition\{\\gkheadR\}\s*"
+            r"\\ifx\\gkcurrentedition\\gkquestionedition\s*"
+            r"\\Needspace\{0\.70\\textheight\}\s*"
+            r"\\else\s*"
+            r"\\ifx\\gkcurrentedition\\gkshortedition\s*"
+            r"\\Needspace\{0\.70\\textheight\}\s*"
+            r"\\fi\s*\\fi\s*\\Needspace\{0\.4\\textheight\}\s*"
+            r"\\end\{question\}\s*"
+            r"\\begin\{question\}\s*\\gkti\{20\}",
+            questions_tex,
+            flags=re.DOTALL,
+        )
+        self.assertIsNotNone(
+            guard_before_q20,
+            "the generated question stream must reserve Q20-Q24 as one final-page group",
+        )
 
 
 if __name__ == '__main__':
