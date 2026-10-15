@@ -128,6 +128,12 @@ class NationalScience1991SourceTests(unittest.TestCase):
         self.assertIn("x+y-1=0", section)
         self.assertIn("x+y+3=0", section)
 
+    def test_q16_proves_the_sum_is_in_the_principal_tangent_interval(self):
+        section = self.solution.split("### 第 16 题", 1)[1].split("### 第 17 题", 1)[0]
+        self.assertIn(r"0<\arctan\dfrac13<\dfrac\pi4", section)
+        self.assertIn(r"0<\arctan\dfrac12<\dfrac\pi4", section)
+        self.assertIn(r"(0,\dfrac\pi2)", section)
+
     def test_q18_frustum_volume_from_linear_side_length(self):
         # h*sqrt(3)=2; integrate sqrt(3)/4 * side(t)^2 over the height.
         lower_side, upper_side = 4, 2
