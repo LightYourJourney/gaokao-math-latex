@@ -5220,3 +5220,11 @@
 - 清理与验证：通过 `clean-build-intermediates` 先 dry-run 确认、再删除24个 XeLaTeX 中间文件（`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`）；四版PDF与四份 `diagnostics.json` 保留。清理后 `review_receipts check-batch`、`build_projects validate-receipts` 与 `source_manifest validate` 再次通过。
 - 成本：0次OCR、0次外部模型/API调用；会话Token和费用无实测数据。
 - 剩余/下一步：提交本回执闭环；本卷1989全国理科已完成转录、三角色数学复核、四版构建与视觉验收。全库1952—2026其余卷、OCR/Token成本基准及最终汇总仍待完成；下一阶段按项目来源计划选取下一卷，不在本次闭环中扩展。
+
+### 1989 广东理科：恢复来源与独立审核准备（2026-10-16）
+
+- 已完成：按来源总账选择 `phase4-b04 / gk-1989-regular-guangdong-science`。该卷已有30题规范稿、三幅TikZ图、四版入口和先前烟测，本阶段不重复转录。固定原PDF为9页，manifest SHA-256 `e300fb9ae1d2b606f2cf4e6da4ee985b0014baf04c656f560326dd68d22031d1` 与只读原件实测相符；题面在原页1—4，原页5空白，原页6—9为标题“1989年广东数学试题解答及评分标准（理工农医类）”且标注“B型卷答案”的来源材料。由于试卷卷型对应关系尚未确认，不把该答案材料先验标成当前卷官方答案。
+- 修改/缓存：未改题面、答案、解析、图稿、manifest或构建产物；只将固定PDF复制到忽略的 `.work/phase4-b04/1989广东理.pdf`，并在 `.work/phase4-b04/source-pages/` 渲染题面页1—4和答案材料页6—9供隔离审核使用。来源文件仍只读、无图片入库。
+- 验证：本卷两个测试文件13/13通过；简答相关测试51/51通过；`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`（30题）与 `source_manifest validate` 通过。旧四版烟测存在，但尚无本轮正式 provenance/build/review 闭环。
+- 独立工作：启动只读题面核源、独立解题A、独立解题B三项任务；B先只看题目，返回后再与答案稿和来源B型答案逐题盲态比对。当前状态均待返回，暂不写正式角色结论。Agent IDs：`01a1416d-5356-7600-b387-58055c813bed`、`01a1416d-5565-7562-95d5-0033ce282800`、`01a1416d-5736-7f82-ac5f-76c4c1e0adda`。
+- 成本/剩余：0次OCR、0次网络下载、0次外部API；subagent实际token/费用不可见。下一步接收并交叉核验三份独立结果，若有源文或数学分歧先定位修正并重跑定向测试，再正式登记provenance、构建四版、逐页校样与回执清理。全库其他卷与最终报告仍未完成。
