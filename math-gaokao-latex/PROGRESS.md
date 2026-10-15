@@ -5178,3 +5178,13 @@
 - 修改文件：本卷 `receipts/review.json` 与 `receipts/build.json`、`source-manifest.json`、`missing-issues.md`、`reports/phase4-b02.md` 及本进度。报告记录本卷已通过视觉复核；旧 issue 保留审计记录并注明已解决。
 - 验证：`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=0, succeeded=1`。按已授权的范围清理24个 XeLaTeX 编译中间文件（`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`）；四份正式 PDF 与四份诊断 JSON 保留。
 - 剩余/下一步：1989全国文科卷的内容复核、四版构建和视觉回执已闭合；1952—2026 全库收录/转录、OCR流水线及实际 Token/成本基准仍未完成。本阶段0次OCR和外部模型/API调用；Codex实际Token与费用不可见。
+
+### 1989 全国卷理科：恢复审计与独立核验启动（2026-10-16）
+
+- 已完成：按中断恢复约定确认目标工作树为 `仓库根`、分支 `feat/gaokao-phase0`，无 tracked diff；保留用户未跟踪文件 `-.png` 与 `.mineru-service.lock`。确认本卷题面来源为缓存的一页 A3 PDF，SHA-256 与来源 ID 一致；manifest 中本卷和 `phase4-b03` 仍是 `planned`。
+- 审计发现：忽略目录内的三份角色草稿各列出24题，但题面审核、独立求解、盲态复核所需结果/证据字段仍为空；本卷正式 build 回执缺失，故不能依据已有 PDF 或旧进度宣称闭卷。
+- 已验证：`test_1989_national_science_math.py` 11项通过；`generate_projects.py --paper gk-1989-regular-national-science --check` 与 `make_short_answers.py --paper gk-1989-regular-national-science --check` 均通过；source manifest 校验与24题 solution source 批次检查通过。`build_projects.py validate-receipts --batch phase4-b03` 明确报告缺 build 回执（1卷），这是待完成项而非构建失败。
+- 独立题面复核：第1—12题逐题对照原PDF图像，全部 `PASS`，未发现文字、数字、公式、条件或选项差异；本范围无图形。第13—24题题面核对仍在进行。
+- 独立解答：第1—12题已由未读取其他解答稿的复核者独立求解，答案依次为 `1A, 2D, 3C, 4A, 5B, 6C, 7D, 8B, 9C, 10D, 11A, 12C`，均附推导；这些是生成/推导答案，不是官方答案，尚待另一角色盲核。第13—24题独立求解仍在进行。
+- 修改文件：仅本进度文件。临时原卷渲染保存在 `/tmp/gk1989-national-science-review.aq5XoL/`；未在仓库新增页图或编译产物。
+- 剩余/下一步：收到其余独立复核结果后，逐项核验分歧；写齐三角色 provenance 草稿并 dry-run 导入，确认来源/题面/答案哈希后才正式登记。随后正式四版构建、诊断、逐页视觉复核、回执登记与清理，再更新本卷状态。全库1952—2026任务及最终 manifest.csv、缺失清单和构建报告仍未完成；本阶段无OCR或外部API调用，Codex/子代理实际Token与费用不可见。
