@@ -12,6 +12,14 @@
 - 验证：`test_score_ocr.py` 7/7 通过；评分器成功校验来源指纹，但如预期报告 `scored_runs=0`、`pending_cases=2`；source manifest 校验通过（775条来源），`manifest_csv.py --check` 通过。无外部聊天模型/API 调用；OCR 仅一次本地 MinerU 运行。真实 Codex Token 与费用未知。
 - 剩余/下一步：由独立复核者核定 gold 文本（尤其保留的歧义及图中文字），之后再评分并补足代表性题型；在此之前不报 CER、准确率或节省率。题目级 IR、任务路由和批量端到端验收仍未实现。
 
+## 全量来源清单投影与基线报告同步（2026-10-16）
+
+- 已完成：以当前 `source-manifest.json`（revision 4165；775 条来源、281 条试卷记录、147 个批次）刷新全量报告投影，并同步 `manifest.csv`。统计仅描述登记字段，不代表281套均已转录或通过验收。
+- 修改文件：`README_数学.md`、`math-gaokao-2017-2026/README.md`、本项目 `README.md`、`manifest.csv`、`reports/adjudicated-drifts.json`、`reports/baseline.md`、`tests/test_baseline.py`、`report.md`、`docs/source-inventory.md`、本 `PROGRESS.md`。未改题面或答案源稿。
+- 验证：`source_manifest.py validate` 通过；`report.py render --all` 以单个 content 事务写入并回读校验六份报告，随后 `report.py check --all` 通过；`manifest_csv.py --check` 确认775行当前；`test_baseline.py` 33项通过、13项按条件跳过；`git diff --check` 通过。
+- 明确未纳入本阶段：1952全国卷构建回执仍被 `validate-receipts --batch phase1-b09 --require-final` 判为 stale（生成输入树变化），对应 review 回执也无效；其卷级报告/回执待定位输入变化并重新构建、视觉复核。全量报告投影一致不能替代该卷门禁。
+- 剩余/下一步：修复并重新验证1952卷的构建输入树与四版产物，只有输出与视觉检查证据均有效后再更新该卷回执。真实Codex Token及费用未知。
+
 ## 构建中间产物清理入口：补齐可复用实现（2026-10-16）
 
 - 已完成：恢复 `clean-build-intermediates` CLI，仅按固定扩展名移除四版 LaTeX 中间产物，保留 PDF、TeX、回执及非目标文件。执行前要求来源、review、构建与工具链证据均有效；显式选择 `--dry-run` 或 `--execute`，全体目标先通过路径、symlink、tracked 和 ignore 检查再删除。

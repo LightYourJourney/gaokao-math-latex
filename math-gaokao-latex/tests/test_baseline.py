@@ -1421,7 +1421,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
                 self.assertEqual(head.count(token), now.count(token), (relative, token))
 
-    def test_task29_updates_exactly_eight_existing_b05_keys_with_layout_only_diffs(self):
+    def test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction(self):
         projects = {
             "gk-2024-regular-new-gaokao-1": "2024_新高考Ⅰ卷",
             "gk-2024-regular-new-gaokao-2": "2024_新高考Ⅱ卷",
@@ -1452,6 +1452,18 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         }
         self.assertEqual(set(selected), expected_keys)
 
+        q19_answers = "math-gaokao-latex/2024_新高考Ⅱ卷/answers.tex"
+        approved_q19_corrections = (
+            (
+                r"\textbf{思路：找出一个把 $P_n$ 送到 $P_{n+1}$ 的「保面积变换」，则相邻两个三角形自然全等（面积相等）。}",
+                r"\textbf{思路：找出一个把 $P_n$ 送到 $P_{n+1}$ 的「保面积变换」，则相邻两个三角形的面积相等。}",
+            ),
+            (
+                r"（\textbf{自检}：$k=\dfrac12$ 时 $S_n=\dfrac{36\times\dfrac18}{\left(\dfrac34\right)^{2}}=\dfrac{4.5}{0.5625}=8$。而由 (1) 及递推可得 $P_1(5,4)$、$P_2(3,0)$、$P_3(5,-4)$，",
+                r"\textbf{自检}：$k=\dfrac12$ 时 $S_n=\dfrac{36\times\dfrac18}{\left(\dfrac34\right)^{2}}=\dfrac{4.5}{0.5625}=8$。而由 (1) 及递推可得 $P_1(5,4)$、$P_2(3,0)$、$P_3(5,-4)$，",
+            ),
+        )
+
         for (paper_id, artifact), record in selected.items():
             relative = "math-gaokao-latex/{}/{}".format(
                 projects[paper_id], artifact
@@ -1477,11 +1489,20 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
-            # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
-            # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
-            # 内容 token 计数里暴露。
+            if relative == q19_answers:
+                # phase0-b05 independently corrected the false congruence claim and
+                # removed the self-check's unmatched wrapper parentheses.
+                for old_line, new_line in approved_q19_corrections:
+                    self.assertEqual(removed.count(old_line), 1)
+                    self.assertEqual(added.count(new_line), 1)
+                    removed.remove(old_line)
+                    added.remove(new_line)
+                self.assertEqual(removed.count("）"), 1)
+                removed.remove("）")
+            # Besides layout commands, B05 permits only the exact recorded math-text
+            # correction above; other content changes remain rejected.
             self.assertTrue(all(any(
-                marker in line
+                line == "" or marker in line
                 for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
@@ -1553,7 +1574,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
             # 内容 token 计数里暴露。
             self.assertTrue(all(any(
-                marker in line
+                line == "" or marker in line
                 for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
                                r"\begin{question}", r"\end{question}")
             ) for line in added))
