@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=0.48,line cap=round,line join=round]
+\draw[->] (-0.6,0)--(7.0,0) node[right] {$l_1$};
+\draw[->] (0,-0.25)--(0,6.45) node[above] {$l_2$};
+\draw[thick,domain=3:6,samples=60,variable=\x] plot (\x,{sqrt(8*\x-16)});
+\fill (0,0) circle (2pt) node[below left] {$M$};
+\fill (4,0) circle (2pt) node[below] {$N$};
+\fill (3,{sqrt(8)}) circle (2pt) node[left] {$A$};
+\fill (6,{sqrt(32)}) circle (2pt) node[above right] {$B$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]
+\newcommand{\axes}{\draw[->] (-1.05,0)--(1.05,0) node[right] {$x$};\draw[->] (0,-0.12)--(0,1.18) node[above] {$y$};}
+\begin{scope}
+  \axes
+  \draw[thick] plot[smooth] coordinates {(-0.75,1.02) (-0.48,0.42) (-0.2,0.10) (0,0) (0.2,0.10) (0.48,0.42) (0.75,1.02)};
+  \node at (0,-0.38) {(A)};
+\end{scope}
+\begin{scope}[xshift=2.8cm]
+  \axes
+  \draw[densely dotted] (-0.08,0.36)--(0.08,0.36) node[right] {$1$};
+  \draw[thick] plot[smooth] coordinates {(-0.78,1.02) (-0.48,0.55) (-0.2,0.39) (0,0.36) (0.2,0.39) (0.48,0.55) (0.78,1.02)};
+  \node at (0,-0.38) {(B)};
+\end{scope}
+\begin{scope}[yshift=-2.1cm]
+  \axes
+  \draw[densely dotted] (-0.08,0.72)--(0.08,0.72) node[right] {$1$};
+  \draw[thick] (-0.78,0.15) .. controls (-0.4,0.54) and (-0.16,0.72) .. (0,0.72)
+    .. controls (0.16,0.72) and (0.4,0.54) .. (0.78,0.15);
+  \node at (0,-0.38) {(C)};
+\end{scope}
+\begin{scope}[xshift=2.8cm,yshift=-2.1cm]
+  \axes
+  \draw[densely dotted] (-0.08,0.36)--(0.08,0.36) node[right] {$1$};
+  \draw[thick] (-0.78,1.02) .. controls (-0.45,0.68) and (-0.18,0.40) .. (0,0.36)
+    .. controls (0.18,0.40) and (0.45,0.68) .. (0.78,1.02);
+  \node at (0,-0.38) {(D)};
+\end{scope}
+\end{tikzpicture}

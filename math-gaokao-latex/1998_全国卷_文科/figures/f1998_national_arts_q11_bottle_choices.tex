@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]
+% V(h) increases with decreasing slope; the dashed line marks h=H.
+\draw[->] (0,0)--(2.1,0) node[right] {$h$};
+\draw[->] (0,0)--(0,1.65) node[above] {$V$};
+\draw[dashed] (1.55,0)--(1.55,1.35);
+\draw[thick] (0,0) .. controls (0.20,0.9) and (0.55,1.2) .. (1.55,1.35);
+\node[below left] at (0,0) {$O$};
+\node[below] at (1.55,0) {$H$};
+
+% Four schematic vessel profiles, with dashed rear halves of the rims/bases.
+\newcommand{\bottle}[4]{%
+  \begin{scope}[shift={(#1,0)}]
+    \draw[thick] (#2,0.25)--(#3,1.45);
+    \draw[thick] (-#2,0.25)--(-#3,1.45);
+    \draw[thick] (0,1.45) ellipse [x radius=#3,y radius=0.12];
+    \draw[thick] (-#2,0.25) arc[start angle=180,end angle=360,x radius=#2,y radius=0.09];
+    \draw[dashed] (#2,0.25) arc[start angle=0,end angle=180,x radius=#2,y radius=0.09];
+    \node[below] at (0,-0.05) {#4};
+  \end{scope}}
+\bottle{3.0}{0.28}{0.47}{(A)}
+\bottle{4.25}{0.47}{0.28}{(B)}
+\begin{scope}[shift={(5.5,0)}]
+  \draw[thick] (-0.47,1.45) .. controls (-0.35,1.0) and (-0.2,0.82) .. (-0.28,0.25);
+  \draw[thick] (0.47,1.45) .. controls (0.35,1.0) and (0.2,0.82) .. (0.28,0.25);
+  \draw[thick] (0,1.45) ellipse [x radius=0.47,y radius=0.12];
+  \draw[thick] (-0.28,0.25) arc[start angle=180,end angle=360,x radius=0.28,y radius=0.09];
+  \draw[dashed] (0.28,0.25) arc[start angle=0,end angle=180,x radius=0.28,y radius=0.09];
+  \node[below] at (0,-0.05) {(C)};
+\end{scope}
+\begin{scope}[shift={(6.8,0)}]
+  \draw[thick] (-0.36,0.25)--(-0.36,1.45);
+  \draw[thick] (0.36,0.25)--(0.36,1.45);
+  \draw[thick] (0,1.45) ellipse [x radius=0.36,y radius=0.12];
+  \draw[thick] (-0.36,0.25) arc[start angle=180,end angle=360,x radius=0.36,y radius=0.09];
+  \draw[dashed] (0.36,0.25) arc[start angle=0,end angle=180,x radius=0.36,y radius=0.09];
+  \node[below] at (0,-0.05) {(D)};
+\end{scope}
+\end{tikzpicture}

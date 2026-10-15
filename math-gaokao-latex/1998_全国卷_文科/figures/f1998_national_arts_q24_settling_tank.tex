@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.0,0);
+\coordinate (C) at (3.0,1.35);
+\coordinate (D) at (0,1.35);
+\coordinate (Aback) at (0.55,0.42);
+\coordinate (Bback) at (3.55,0.42);
+\coordinate (Cback) at (3.55,1.77);
+\coordinate (Dback) at (0.55,1.77);
+\draw[thick] (A)--(B)--(C)--(D)--cycle;
+\draw[thick] (D)--(Dback)--(Cback)--(C);
+\draw[thick] (A)--(Aback)--(Dback);
+\draw[thick] (B)--(Bback)--(Cback);
+\draw[thick,dashed] (Aback)--(Bback);
+\fill (0.65,1.0) circle (1.4pt) node[left] {$A$};
+\fill (2.65,1.0) circle (1.4pt) node[right] {$B$};
+\draw[<->] (0,-0.35)--(3,-0.35) node[midway,below] {$a$};
+\draw[<->] (-0.28,0)--(-0.28,1.35) node[midway,left] {$b$};
+\draw[<->] (3.15,0.12)--(3.7,0.54) node[midway,right] {$2$};
+\end{tikzpicture}
