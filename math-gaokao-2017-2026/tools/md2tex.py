@@ -234,13 +234,65 @@ BARE_SYM = {
 CJK_IN_MATH = re.compile(r"([\u4e00-\u9fff、，；：「」]+)")
 
 
+def _text_argument_end(source: str, start: int) -> Optional[int]:
+    """返回未转义的 ``\\text{...}`` 分组末端（右花括号之后）。"""
+    command = r"\text{"
+    if not source.startswith(command, start):
+        return None
+    backslashes = 0
+    cursor = start - 1
+    while cursor >= 0 and source[cursor] == "\\":
+        backslashes += 1
+        cursor -= 1
+    if backslashes % 2:
+        return None
+
+    depth = 1
+    cursor = start + len(command)
+    while cursor < len(source):
+        char = source[cursor]
+        if char == "\\":
+            # 跳过 TeX 控制符及其转义花括号，避免误判分组边界。
+            cursor += 2
+            continue
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return cursor + 1
+        cursor += 1
+    return len(source)
+
+
+def _wrap_ideographic_full_stops_outside_text(source: str) -> str:
+    """把既有 ``\\text{...}`` 分组外的中文句号切到 CJK 文本字体。"""
+    output = []
+    cursor = 0
+    while cursor < len(source):
+        text_end = _text_argument_end(source, cursor)
+        if text_end is not None:
+            output.append(source[cursor:text_end])
+            cursor = text_end
+            continue
+        if source.startswith("。", cursor):
+            output.append(r"\text{。}")
+            cursor += 1
+            continue
+
+        output.append(source[cursor])
+        cursor += 1
+    return "".join(output)
+
+
 def conv_math_display(s: str) -> str:
     """行间公式体的清洗（$$ 块不经 conv_inline，需单独处理）：
     剥 emoji、裸中文包 \\text（西文数学字体缺 CJK 字形）。
     不剥内嵌 $ —— \\tag{$\\ast$} 等文本模式内的数学是合法嵌套（曾误剥致回归）。"""
     for ch in EMOJI:
         s = s.replace(ch, "")
-    return CJK_IN_MATH.sub(r"\\text{\1}", s)
+    s = CJK_IN_MATH.sub(r"\\text{\1}", s)
+    return _wrap_ideographic_full_stops_outside_text(s)
 
 
 def conv_inline(s: str, sink: _Sink) -> str:
@@ -265,6 +317,7 @@ def conv_inline(s: str, sink: _Sink) -> str:
     for i, seg in enumerate(parts):
         if i % 2 == 1:               # 数学段：仅把裸中文包进 \text（西文数学字体缺 CJK 字形）
             seg = CJK_IN_MATH.sub(r"\\text{\1}", seg)
+            seg = _wrap_ideographic_full_stops_outside_text(seg)
             out.append(f"${seg}$")
         else:                        # 文本段
             out.append(conv_text(seg))

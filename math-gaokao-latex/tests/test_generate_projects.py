@@ -617,6 +617,59 @@ class ConversionInterfaceTests(unittest.TestCase):
         )
         self.assertEqual(result.text.count(r"\nopagebreak[4]"), 1)
 
+    def test_display_math_routes_ideographic_full_stop_through_cjk_text_font(self):
+        result = md2tex.convert_markdown(
+            "$$\nx=1。\n$$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"x=1\text{。}", result.text)
+        self.assertNotIn("x=1。", result.text)
+
+    def test_display_math_does_not_nest_existing_cjk_text_commands(self):
+        result = md2tex.convert_markdown(
+            "$$\n\\right|\\text{。}\n$$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\right|\text{。}", result.text)
+        self.assertNotIn(r"\text{\text{。}}", result.text)
+
+    def test_display_math_does_not_partially_rewrap_existing_cjk_text_argument(self):
+        result = md2tex.convert_markdown(
+            "$$\n\\text{中文。}\n$$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\text{\text{中文}。}", result.text)
+        self.assertNotIn(r"\text{中\text{文。}}", result.text)
+
+    def test_inline_math_does_not_partially_rewrap_existing_cjk_text_argument(self):
+        result = md2tex.convert_markdown(
+            r"$\text{中文。}$",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\text{\text{中文}。}", result.text)
+        self.assertNotIn(r"\text{中\text{文。}}", result.text)
+
+    def test_display_math_preserves_nested_braces_inside_cjk_text_argument(self):
+        result = md2tex.convert_markdown(
+            "$$\n\\text{中文 \\textbf{加粗。}}\n$$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\text{\text{中文} \textbf{\text{加粗}。}}", result.text)
+        self.assertNotIn(r"\text{加粗。}", result.text)
+
+    def test_inline_math_routes_a_full_stop_after_existing_cjk_text(self):
+        result = md2tex.convert_markdown(
+            r"$\text{中文}。$",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\text{\text{中文}}\text{。}", result.text)
+
     def test_raw_display_math_keeps_the_introducing_line_with_the_formula(self):
         result = md2tex.convert_markdown(
             "因此\n\n\\[\nx=1.\n\\]\n",

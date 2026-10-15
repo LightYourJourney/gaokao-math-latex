@@ -90,6 +90,24 @@ class Shanghai1994SourceTests(unittest.TestCase):
             with self.subTest(fragment=fragment):
                 self.assertIn(re.sub(r"\s+", "", fragment), normalized_questions)
 
+    def test_cjk_sentence_stops_in_generated_math_use_text_font(self):
+        math_spans = re.compile(
+            r"\$\$.*?\$\$|\\\[.*?\\\]|\\\(.*?\\\)|"
+            r"(?<!\\)\$(?!\$)(?:\\.|[^$])*?(?<!\\)\$(?!\$)",
+            re.DOTALL,
+        )
+        sources = (PROJECT_DIR / "questions.tex", PROJECT_DIR / "answers.tex")
+        offenders = []
+        for path in sources:
+            text = path.read_text(encoding="utf-8")
+            for span in math_spans.finditer(text):
+                unwrapped = span.group().replace(r"\text{。}", "")
+                for punctuation in re.finditer("。", unwrapped):
+                    offset = span.start() + punctuation.start()
+                    line = text.count("\n", 0, offset) + 1
+                    offenders.append(f"{path.relative_to(REPO)}:{line}")
+        self.assertEqual(offenders, [], "数学字体中有未包装的句号: " + ", ".join(offenders))
+
     def test_printed_answers_are_attributed_and_q25_source_discrepancy_is_retained(self):
         self.assertTrue(ANSWER_SOURCE.is_file(), "canonical answer transcription is missing")
         if not self.record:
