@@ -947,6 +947,59 @@ def clean_build(
     return {"targets": sorted(targets), "removed": sorted(removed)}
 
 
+def clean_build_intermediates(
+    root: Path,
+    manifest: Mapping[str, Any],
+    paper_ids: Sequence[str],
+    execute: bool = False,
+    toolchain: Optional[Mapping[str, Any]] = None,
+    search_path: Optional[str] = None,
+) -> Dict[str, List[str]]:
+    """仅清理已验收、当前构建的非 PDF 中间产物，PDF 与回执保持不变。
+
+    与 `clean-build` 不同，本操作逐个枚举固定扩展名，不删除 build 目录；且复用
+    最严格的来源、review、build 与工具链证据门禁。计划先整体校验，之后才执行删除。
+    """
+    root = Path(root)
+    chain = toolchain if toolchain is not None else resolve_toolchain(
+        search_path=search_path
+    )
+    intermediate_suffixes = tuple(
+        suffix for suffix in LEGACY_SUFFIXES if suffix != ".pdf"
+    )
+    targets: List[str] = []
+    for paper_id in paper_ids:
+        paper = _paper(manifest, paper_id)
+        _legacy_evidence(root, manifest, paper_id, chain)
+        build_relative = _assert_safe_relative(
+            "%s/%s/%s" % (
+                PROJECT_RELATIVE, paper["project_dir"], BUILD_DIR_NAME
+            )
+        )
+        if not os.path.lexists(str(root / build_relative)):
+            continue
+        _guard_removable(root, build_relative, expect_dir=True)
+        for edition in EDITIONS:
+            for suffix in intermediate_suffixes:
+                relative = _assert_safe_relative(
+                    "%s/%s/%s/%s%s" % (
+                        PROJECT_RELATIVE, paper["project_dir"], BUILD_DIR_NAME,
+                        edition, suffix,
+                    )
+                )
+                if not os.path.lexists(str(root / relative)):
+                    continue
+                _guard_removable(root, relative, expect_dir=False)
+                targets.append(relative)
+
+    removed: List[str] = []
+    if execute:
+        for relative in sorted(targets):
+            (root / relative).unlink()
+            removed.append(relative)
+    return {"targets": sorted(targets), "removed": sorted(removed)}
+
+
 def _legacy_evidence(
     root: Path,
     manifest: Mapping[str, Any],
@@ -1664,6 +1717,15 @@ def _parser() -> argparse.ArgumentParser:
     action.add_argument("--dry-run", action="store_true")
     action.add_argument("--execute", action="store_true")
 
+    clean_intermediates = subparsers.add_parser("clean-build-intermediates")
+    clean_intermediates.add_argument("--manifest", required=True)
+    _add_selector(clean_intermediates)
+    intermediate_action = clean_intermediates.add_mutually_exclusive_group(
+        required=True
+    )
+    intermediate_action.add_argument("--dry-run", action="store_true")
+    intermediate_action.add_argument("--execute", action="store_true")
+
     legacy = subparsers.add_parser("cleanup-legacy")
     legacy.add_argument("--manifest", required=True)
     legacy_action = legacy.add_mutually_exclusive_group(required=True)
@@ -1781,7 +1843,9 @@ def main(
               + ["%s：%d 卷" % (report["code"], report["papers"])])
         return VALIDATE_EXIT[report["code"]]
 
-    if arguments.command in {"clean-build", "cleanup-legacy"}:
+    if arguments.command in {
+        "clean-build", "clean-build-intermediates", "cleanup-legacy"
+    }:
         manifest_path = Path(arguments.manifest).resolve()
         root = cli_common.repository_root(manifest_path.parent)
         manifest = load_manifest(manifest_path)
@@ -1791,6 +1855,12 @@ def main(
                 report = clean_build(
                     root, manifest, select_paper_ids(manifest, selector, value),
                     execute=arguments.execute,
+                )
+            elif arguments.command == "clean-build-intermediates":
+                selector, value = _selection(arguments)
+                report = clean_build_intermediates(
+                    root, manifest, select_paper_ids(manifest, selector, value),
+                    execute=arguments.execute, search_path=search_path,
                 )
             else:
                 report = cleanup_legacy(

@@ -1461,6 +1461,142 @@ class CleanBuildTests(unittest.TestCase):
         self.assertEqual(report["targets"], [])
 
 
+class CleanBuildIntermediatesTests(unittest.TestCase):
+    INTERMEDIATE_SUFFIXES = tuple(
+        suffix for suffix in build_projects.LEGACY_SUFFIXES if suffix != ".pdf"
+    )
+
+    def setUp(self):
+        self.fixture = RepositoryFixture()
+        self.addCleanup(self.fixture.cleanup)
+        atomic_write_json(
+            self.fixture.path(self.fixture.receipt_relative()), self.fixture.build()
+        )
+        self.build_dir = self.fixture.path(
+            "%s/%s/%s" % (PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME)
+        )
+
+    def seal_reviewed_build(self):
+        receipt_path = self.fixture.path(self.fixture.receipt_relative())
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        receipt["status"] = "succeeded"
+        atomic_write_json(receipt_path, receipt)
+        atomic_write_json(
+            self.fixture.path(
+                "%s/%s/receipts/review.json" % (PROJECT_RELATIVE, PROJECT_DIR)
+            ),
+            {"paper_id": PAPER_ID, "status": "passed"},
+        )
+        atomic_write_json(
+            self.fixture.path("%s/%s/provenance.json" % (PROJECT_RELATIVE, PROJECT_DIR)),
+            {"paper_id": PAPER_ID},
+        )
+
+    def intermediate_paths(self):
+        return sorted(
+            "%s/%s/%s/%s%s"
+            % (PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME, edition, suffix)
+            for edition in EDITIONS for suffix in self.INTERMEDIATE_SUFFIXES
+        )
+
+    def run_clean(self, execute=False):
+        cleaner = getattr(build_projects, "clean_build_intermediates", None)
+        self.assertTrue(callable(cleaner), "缺少仅清理构建中间产物的安全入口")
+        return cleaner(
+            self.fixture.root, self.fixture.manifest(), [PAPER_ID],
+            execute=execute, toolchain=self.fixture.toolchain(),
+        )
+
+    def test_dry_run_and_execute_remove_only_intermediates(self):
+        self.seal_reviewed_build()
+        unlisted = self.build_dir / "keep.png"
+        unlisted.write_bytes(b"not a LaTeX intermediate")
+        for edition in EDITIONS:
+            self.assertTrue((self.build_dir / (edition + ".pdf")).is_file())
+            for suffix in self.INTERMEDIATE_SUFFIXES:
+                self.fixture.write(
+                    "%s/%s/%s/%s%s" % (
+                        PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME,
+                        edition, suffix,
+                    ),
+                    "intermediate\n",
+                )
+
+        expected = self.intermediate_paths()
+        dry = self.run_clean()
+        self.assertEqual(dry["targets"], expected)
+        self.assertEqual(dry["removed"], [])
+        self.assertTrue(all((self.fixture.root / path).is_file() for path in expected))
+
+        pdf_hashes = {
+            edition: file_sha256(self.build_dir / (edition + ".pdf"))
+            for edition in EDITIONS
+        }
+        run = self.run_clean(execute=True)
+        self.assertEqual(run["targets"], expected)
+        self.assertEqual(run["removed"], expected)
+        self.assertTrue(self.build_dir.is_dir())
+        self.assertEqual(
+            {
+                edition: file_sha256(self.build_dir / (edition + ".pdf"))
+                for edition in EDITIONS
+            },
+            pdf_hashes,
+        )
+        self.assertFalse(any((self.fixture.root / path).exists() for path in expected))
+        self.assertEqual(unlisted.read_bytes(), b"not a LaTeX intermediate")
+        current, reasons = receipt_currency(
+            self.fixture.root, self.fixture.manifest(), self.fixture.receipt(),
+            toolchain=self.fixture.toolchain(),
+        )
+        self.assertTrue(current, reasons)
+
+    def test_pending_or_stale_receipt_deletes_nothing(self):
+        self.seal_reviewed_build()
+        sample = self.intermediate_paths()[0]
+        self.fixture.write(sample, "keep\n")
+        receipt_path = self.fixture.path(self.fixture.receipt_relative())
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        receipt["status"] = "compiled_pending_review"
+        atomic_write_json(receipt_path, receipt)
+        with self.assertRaises(BuildError):
+            self.run_clean(execute=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+        receipt["status"] = "succeeded"
+        atomic_write_json(receipt_path, receipt)
+        self.fixture.write(
+            "%s/%s/questions.tex" % (PROJECT_RELATIVE, PROJECT_DIR),
+            "changed after build\n",
+        )
+        with self.assertRaises(BuildError):
+            self.run_clean(execute=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+    def test_symlinked_intermediate_deletes_nothing(self):
+        self.seal_reviewed_build()
+        relative = self.intermediate_paths()[0]
+        target = self.fixture.path("outside-intermediate")
+        target.write_text("preserve\n", encoding="utf-8")
+        path = self.fixture.root / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.symlink_to(target)
+        with self.assertRaisesRegex(BuildError, "符号链接"):
+            self.run_clean(execute=True)
+        self.assertTrue(path.is_symlink())
+        self.assertEqual(target.read_text(encoding="utf-8"), "preserve\n")
+
+    def test_tracked_intermediate_deletes_nothing(self):
+        self.seal_reviewed_build()
+        relative = self.intermediate_paths()[0]
+        self.fixture.write(relative, "tracked\n")
+        self.fixture.git("add", "-f", relative)
+        self.fixture.git("commit", "-q", "-m", "误入库的中间产物")
+        with self.assertRaisesRegex(BuildError, "tracked"):
+            self.run_clean(execute=True)
+        self.assertTrue((self.fixture.root / relative).is_file())
+
+
 class CleanupLegacyTests(unittest.TestCase):
     LEGACY_SUFFIXES = (
         ".pdf", ".log", ".aux", ".out", ".toc", ".fls", ".xdv",
@@ -1648,6 +1784,51 @@ class CommandLineTests(unittest.TestCase):
         self.assertEqual(payload["code"], "OK")
         self.assertEqual(len(payload["toolchain"]["tools"]), 5)
 
+    def test_clean_build_intermediates_cli_preserves_pdf(self):
+        atomic_write_json(
+            self.fixture.path(self.fixture.receipt_relative()), self.fixture.build()
+        )
+        build_dir = self.fixture.path(
+            "%s/%s/%s" % (PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME)
+        )
+        for edition in EDITIONS:
+            self.fixture.write(
+                "%s/%s/%s/%s.aux" % (
+                    PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME, edition
+                ),
+                "aux\n",
+            )
+        receipt_path = self.fixture.path(self.fixture.receipt_relative())
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        receipt["status"] = "succeeded"
+        atomic_write_json(receipt_path, receipt)
+        atomic_write_json(
+            self.fixture.path(
+                "%s/%s/receipts/review.json" % (PROJECT_RELATIVE, PROJECT_DIR)
+            ),
+            {"paper_id": PAPER_ID, "status": "passed"},
+        )
+        atomic_write_json(
+            self.fixture.path("%s/%s/provenance.json" % (PROJECT_RELATIVE, PROJECT_DIR)),
+            {"paper_id": PAPER_ID},
+        )
+        code, output = self.capture(
+            "clean-build-intermediates", "--manifest", str(self.fixture.manifest_path),
+            "--paper", PAPER_ID, "--dry-run",
+        )
+        self.assertEqual(code, EXIT_OK)
+        self.assertIn(".aux", output)
+        self.assertTrue(build_dir.is_dir())
+        self.assertTrue(all((build_dir / (edition + ".pdf")).is_file() for edition in EDITIONS))
+        self.assertTrue(all((build_dir / (edition + ".aux")).is_file() for edition in EDITIONS))
+
+        code, output = self.capture(
+            "clean-build-intermediates", "--manifest", str(self.fixture.manifest_path),
+            "--paper", PAPER_ID, "--execute",
+        )
+        self.assertEqual(code, EXIT_OK)
+        self.assertFalse(any((build_dir / (edition + ".aux")).exists() for edition in EDITIONS))
+
     def test_check_tools_fails_closed_when_a_tool_is_missing(self):
         (self.fixture.bin_dir / "pdfinfo").unlink()
         code, output = self.capture("check-tools", "--json")
@@ -1659,9 +1840,11 @@ class CommandLineTests(unittest.TestCase):
             ("validate-receipts", "--manifest", "m", "--all", "--paper", PAPER_ID),
             ("validate-receipts", "--manifest", "m", "--batch", BATCH_ID, "--all"),
             ("clean-build", "--manifest", "m", "--all", "--dry-run", "--execute"),
+            ("clean-build-intermediates", "--manifest", "m", "--all", "--dry-run", "--execute"),
             ("cleanup-legacy", "--manifest", "m"),
             ("validate-receipts", "--manifest", "m"),
             ("clean-build", "--manifest", "m", "--all"),
+            ("clean-build-intermediates", "--manifest", "m", "--all"),
         ):
             with self.subTest(arguments=arguments):
                 with self.assertRaises(SystemExit) as caught:
