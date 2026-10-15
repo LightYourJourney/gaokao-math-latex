@@ -5212,3 +5212,11 @@
 - 验证：本卷13项定向数学/生成测试通过；`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`、`provenance check-batch`、`source_manifest validate` 与 `git diff --check` 通过。正式构建 attempt `7183e6f5-a9ca-401e-81f7-6922a372848a`（manifest revision 4195）四版均成功：试题4页、解析17页、简答6页、印刷13页；错误、缺字、Overfull、未定义引用均为0。40页接触表已逐页检查，四个工作项候选页另做全尺寸复核，未见裁切、重叠、图形错配或异常留白。
 - 成本：本阶段0次OCR、0次外部模型/API调用；会话Token和费用无可用实测值，不估算节省率。
 - 剩余/下一步：把已完成的源稿/测试/构建与本进度作为一个检查点提交；随后填完320项逐页视觉检查并通过正式回执事务，再验证回执、按门禁清理可再生编译中间文件。此时构建状态仍为 `compiled_pending_review`，不得称本卷已验收关闭；全库1952—2026任务仍在进行。
+
+### 1989 全国卷理科：视觉回执正式关闭与中间物清理（2026-10-16）
+
+- 已完成：批次 `phase4-b03` 正式关闭；四版40页视觉回执全部 `passed`，320项中288项通过、32项因本页无插图而标记 `not_applicable`，无视觉问题或阻塞项。正式 review/build/provenance/source-manifest 验证均通过。
+- 修改文件：新增本卷 `receipts/review.json` 与 `reports/phase4-b03.md`；`receipts/build.json` 状态更新为 `succeeded`，`source-manifest.json` 批次状态更新为 `closed`、卷状态更新为 `complete`；本进度。`missing-issues.md` 无变化。
+- 清理与验证：通过 `clean-build-intermediates` 先 dry-run 确认、再删除24个 XeLaTeX 中间文件（`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`）；四版PDF与四份 `diagnostics.json` 保留。清理后 `review_receipts check-batch`、`build_projects validate-receipts` 与 `source_manifest validate` 再次通过。
+- 成本：0次OCR、0次外部模型/API调用；会话Token和费用无实测数据。
+- 剩余/下一步：提交本回执闭环；本卷1989全国理科已完成转录、三角色数学复核、四版构建与视觉验收。全库1952—2026其余卷、OCR/Token成本基准及最终汇总仍待完成；下一阶段按项目来源计划选取下一卷，不在本次闭环中扩展。
