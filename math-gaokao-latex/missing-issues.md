@@ -17540,3 +17540,37 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1070
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原卷PDF第2页第12题题干指向函数图象，但对应图位为空白；第5页答案表印B仅为来源记录，因题图缺失而不能独立核验。",
+  "fingerprint": "cd14b529d21b4d7aaa9cabec5a3ecf10feebb0b452a371dfe1d21dc202636354",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-guangdong-science",
+  "question_id": "gk-1990-regular-guangdong-science-q12",
+  "resume_action": "取得可核验的同版完整题图或独立同版来源后复核题意与答案；不得凭模型记忆重建图形。",
+  "source_id": "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1071
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描件附载第25题分段定义域为t>0，第一支仅覆盖0<t<1/2，第二支写t≥2，区间[1/2,2)未被原印载分段覆盖。原文已保留，解析草稿的替代推导尚无独立复核。",
+  "fingerprint": "49bf094c939ffb965fcc1d872220956a66c0b3a282c3f6a0f3d227cea7a79da4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1994-shanghai",
+  "question_id": "gk-1994-shanghai-q25",
+  "resume_action": "由独立复核者对照固定扫描件第25题题面及印载解答，核实分段转录并独立推导S(t)；保留来源原文，未裁决前不得将该题答案或解析标记为已验证。",
+  "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

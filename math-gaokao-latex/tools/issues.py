@@ -243,6 +243,7 @@ QUESTION_ISSUE_TYPES = {
     "transcription": "transcription-ambiguous",
     "answer": "answer-missing",
     "conflict": "answer-conflict",
+    "figure": "figure-missing",
 }
 
 

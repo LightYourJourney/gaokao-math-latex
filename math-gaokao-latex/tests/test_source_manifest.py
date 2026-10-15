@@ -1681,6 +1681,88 @@ class RegisterPapersTests(unittest.TestCase):
                 "issues": [],
             }])
 
+    def test_registers_question_blocker_with_paper_in_one_state_transaction(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            issues_path = repo / "math-gaokao-latex/missing-issues.md"
+            issues_path.write_text("# Missing issues\n\n", encoding="utf-8")
+            paper_id = "gk-2021-regular-national-a-arts"
+            resume_action = "取得可核原图后补录；不得凭模型记忆重建图形"
+            spec = self._spec(source_id_value)
+            spec["papers"][0]["question_issues"] = [{
+                "kind": "figure",
+                "question_id": paper_id + "-q12",
+                "source_id": source_id_value,
+                "current_evidence": "固定扫描页题干指向下图，但对应图位为空白。",
+                "resume_action": resume_action,
+            }]
+
+            manifest_before = manifest_path.read_bytes()
+            issues_before = issues_path.read_bytes()
+            dry_run = source_manifest_module.register_papers(
+                repo, manifest_path, spec
+            )
+            self.assertFalse(dry_run["written"])
+            self.assertIn("issue_ids", dry_run)
+            self.assertEqual(dry_run["issue_ids"], {paper_id: ["ISSUE-0001"]})
+            self.assertEqual(manifest_path.read_bytes(), manifest_before)
+            self.assertEqual(issues_path.read_bytes(), issues_before)
+
+            transaction = RealTransaction(repo)
+            with mock.patch("source_manifest.Transaction", return_value=transaction):
+                with mock.patch.object(
+                    transaction, "prepare", wraps=transaction.prepare
+                ) as prepare:
+                    source_manifest_module.register_papers(
+                        repo, manifest_path, spec, write=True
+                    )
+                    prepare.assert_called_once()
+                    self.assertEqual(prepare.call_args.args[0], "state")
+                    self.assertEqual(
+                        set(prepare.call_args.args[1]),
+                        {
+                            "math-gaokao-latex/missing-issues.md",
+                            "math-gaokao-latex/source-manifest.json",
+                        },
+                    )
+            manifest = load_manifest(manifest_path)
+            paper = manifest["papers"][0]
+            self.assertEqual(paper["production_state"], "blocked")
+            self.assertEqual(paper["blocked_from"], "planned")
+            self.assertEqual(paper["issue_ids"], ["ISSUE-0001"])
+            self.assertEqual(paper["resume_action"], resume_action)
+            self.assertEqual(manifest["sources"][0]["paper_id"], paper_id)
+            issue, = load_issues(issues_path)
+            self.assertEqual(issue["issue_id"], "ISSUE-0001")
+            self.assertEqual(issue["type"], "figure-missing")
+            self.assertEqual(issue["question_id"], paper_id + "-q12")
+            self.assertEqual(issue["source_id"], source_id_value)
+            self.assertEqual(issue["current_evidence"], "固定扫描页题干指向下图，但对应图位为空白。")
+
+    def test_question_issue_source_must_be_bound_to_new_paper(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            issues_path = repo / "math-gaokao-latex/missing-issues.md"
+            issues_path.write_text("# Missing issues\n\n", encoding="utf-8")
+            spec = self._spec(source_id_value)
+            spec["papers"][0]["question_issues"] = [{
+                "kind": "figure",
+                "question_id": "gk-2021-regular-national-a-arts-q12",
+                "source_id": "src-not-bound-to-this-paper",
+                "current_evidence": "原卷对应图位为空白。",
+                "resume_action": "取得可核图源后复核。",
+            }]
+            manifest_before = manifest_path.read_bytes()
+            issues_before = issues_path.read_bytes()
+
+            with self.assertRaisesRegex(ValueError, "问题来源未绑定到该卷"):
+                source_manifest_module.register_papers(
+                    repo, manifest_path, spec, write=True
+                )
+
+            self.assertEqual(manifest_path.read_bytes(), manifest_before)
+            self.assertEqual(issues_path.read_bytes(), issues_before)
+
     def test_rejects_rebinding_a_source_already_owned_by_another_paper(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo, manifest_path, source_id_value = self._repo(tmp)

@@ -26,7 +26,7 @@ from pathlib import Path, PurePosixPath
 from typing import Any, Callable, Dict, Iterator, List, Mapping, MutableMapping, Optional, Sequence
 
 from issues import IMPACTS as ISSUE_IMPACTS
-from issues import issue_fingerprint, load_issues, upsert_issue
+from issues import issue_fingerprint, load_issues, question_issue, upsert_issue
 from manifest import (
     canonical_json,
     durable_fsync,
@@ -2348,6 +2348,97 @@ def _registered_paper_record(
     }
 
 
+def _prepare_registration_question_issues(
+    repo_root: Path,
+    entries: Sequence[Mapping[str, Any]],
+    records: Sequence[MutableMapping[str, Any]],
+) -> tuple[Optional[bytes], Dict[str, List[str]], Dict[str, List[str]]]:
+    """Validate and serialize optional question blockers without touching the repo."""
+    specs_by_paper: Dict[str, List[Mapping[str, Any]]] = {}
+    allowed_fields = {
+        "kind", "question_id", "source_id", "current_evidence", "resume_action",
+    }
+    for entry, record in zip(entries, records):
+        raw_specs = entry.get("question_issues", [])
+        if not isinstance(raw_specs, list):
+            raise ValueError(f"{record['paper_id']}: question_issues 必须是数组")
+        checked: List[Mapping[str, Any]] = []
+        seen = set()
+        for item in raw_specs:
+            if not isinstance(item, Mapping):
+                raise ValueError(f"{record['paper_id']}: question_issue 必须是对象")
+            if set(item) != allowed_fields:
+                raise ValueError(
+                    f"{record['paper_id']}: question_issue 字段必须恰好为 "
+                    + ", ".join(sorted(allowed_fields))
+                )
+            question_id = item.get("question_id")
+            match = (
+                re.fullmatch(
+                    re.escape(record["paper_id"]) + r"-q([1-9][0-9]*)",
+                    question_id,
+                )
+                if isinstance(question_id, str) else None
+            )
+            if match is None or int(match.group(1)) > record["question_count"]:
+                raise ValueError(
+                    f"{record['paper_id']}: question_id 不属于登记卷或题号越界："
+                    f"{question_id!r}"
+                )
+            source_id_value = item.get("source_id")
+            if source_id_value not in record["source_ids"]:
+                raise ValueError(
+                    f"{record['paper_id']}: 问题来源未绑定到该卷：{source_id_value!r}"
+                )
+            kind = item.get("kind")
+            identity = (question_id, source_id_value, kind)
+            if identity in seen:
+                raise ValueError(f"{record['paper_id']}: 重复逐题问题：{identity}")
+            seen.add(identity)
+            for field_name in ("current_evidence", "resume_action"):
+                value = item.get(field_name)
+                if not isinstance(value, str) or not value.strip():
+                    raise ValueError(
+                        f"{record['paper_id']}: {field_name} 必须是非空字符串"
+                    )
+            checked.append(item)
+        specs_by_paper[record["paper_id"]] = checked
+
+    if not any(specs_by_paper.values()):
+        return None, {}, {}
+
+    issue_path = Path(repo_root) / ISSUES_TARGET
+    prior_bytes = issue_path.read_bytes() if issue_path.is_file() else None
+    issue_ids_by_paper: Dict[str, List[str]] = {}
+    resume_actions_by_paper: Dict[str, List[str]] = {}
+    with tempfile.TemporaryDirectory(prefix="gaokao-register-issues-") as scratch:
+        scratch_path = Path(scratch) / "missing-issues.md"
+        if prior_bytes is not None:
+            scratch_path.write_bytes(prior_bytes)
+        for record in records:
+            paper_id = record["paper_id"]
+            for item in specs_by_paper.get(paper_id, []):
+                issue = question_issue(
+                    paper_id=paper_id,
+                    question_id=item["question_id"],
+                    source_id=item["source_id"],
+                    kind=item["kind"],
+                    resume_action=item["resume_action"],
+                )
+                issue["current_evidence"] = item["current_evidence"].strip()
+                issue_id = upsert_issue(scratch_path, issue)
+                issue_ids_by_paper.setdefault(paper_id, []).append(issue_id)
+                resume_actions_by_paper.setdefault(paper_id, []).append(
+                    item["resume_action"].strip()
+                )
+        return (
+            scratch_path.read_bytes(),
+            {paper_id: sorted(set(issue_ids))
+             for paper_id, issue_ids in issue_ids_by_paper.items()},
+            resume_actions_by_paper,
+        )
+
+
 def register_papers(
     repo: Path,
     manifest_path: Path,
@@ -2355,13 +2446,13 @@ def register_papers(
     *,
     write: bool = False,
 ) -> Dict[str, Any]:
-    """把「未绑定来源 → paper 记录 + batch 记录」登记进 manifest。
+    """把未绑定来源、paper/batch 记录及可选逐题 blocker 纳入一个 state 事务。
 
     这是阶段 1 起新增试卷的**唯一**写入口：阶段 0 的 21 套由 `migrate_legacy_index()`
     从冻结常量一次性种入且拒绝覆盖，此前没有任何通路能新建一套卷。
 
-    `write=False` 时全程零写盘，只把计划算出来给人看；`write=True` 时 paper 记录、
-    批次记录与来源反向绑定在**同一个** state 事务里落盘，不留半份注册。
+    `write=False` 时不写仓库，只把计划算出来给人看；`write=True` 时 paper 记录、
+    批次记录、来源反向绑定和可选问题总账在**同一个** state 事务里落盘。
     """
     root = _repository_root(Path(repo))
     manifest_path = Path(manifest_path)
@@ -2410,9 +2501,23 @@ def register_papers(
             existing_dirs.add(record["project_dir"])
             records.append(record)
 
+        issue_bytes, issue_ids_by_paper, resume_actions_by_paper = (
+            _prepare_registration_question_issues(root, entries, records)
+        )
+        for record in records:
+            issue_ids = issue_ids_by_paper.get(record["paper_id"], [])
+            if issue_ids:
+                record["production_state"] = "blocked"
+                record["issue_ids"] = issue_ids
+                record["blocked_from"] = "planned"
+                record["resume_action"] = "；".join(
+                    dict.fromkeys(resume_actions_by_paper[record["paper_id"]])
+                )
+
         paper_ids = [record["paper_id"] for record in records]
         report = {
             "code": "OK", "batch_id": batch_id, "paper_ids": paper_ids,
+            "issue_ids": issue_ids_by_paper,
             "written": False, "revision": revision,
         }
         if not write:
@@ -2435,9 +2540,13 @@ def register_papers(
         _validated_manifest_value(manifest_path, manifest)
         validate_manifest_semantics(manifest)
         _validate_paper_semantics(manifest)
+        targets = {}
+        if issue_bytes is not None:
+            targets[ISSUES_TARGET] = issue_bytes
+        targets[MANIFEST_TARGET] = canonical_json(manifest).encode("utf-8")
         transaction.prepare(
             "state",
-            {MANIFEST_TARGET: canonical_json(manifest).encode("utf-8")},
+            targets,
             inputs={},
             expected_revision=revision,
         )

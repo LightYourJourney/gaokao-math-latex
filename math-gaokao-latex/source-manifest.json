@@ -1278,6 +1278,38 @@
         "gk-1991-regular-national-arts"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-1991-regular-national-science"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-1991-regular-sannan"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase1-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-1990-regular-guangdong-science"
+      ],
+      "status": "planned"
+    },
+    {
+      "batch_id": "phase1-b24",
+      "issues": [],
+      "paper_ids": [
+        "gk-1994-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1287,7 +1319,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bc838a5b-4a01-4981-82a9-448322282d49",
+  "last_transaction_id": "fc30b93b-3a33-44dc-96c1-aa839afe48ed",
   "papers": [
     {
       "blocked_from": null,
@@ -19267,9 +19299,258 @@
       "title": "1991 年·全国卷·文科",
       "track": "arts",
       "year": 1991
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1991_national_science",
+        "id": "gk-1991-regular-national-science",
+        "note": "固定题面源为一页A3横向排印稿，印刷页码39，PDF SHA-256 b2d5fd64fbae7b988c4a0ae36bba5006ff50f5ff1e64e12650b91dedfc99855c；原件未附答案、解析或分值。答案与解析为非官方推导草稿，待独立数学复核。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            16,
+            20
+          ],
+          "解答题": [
+            21,
+            26
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1991-regular-national-science",
+      "production_state": "planned",
+      "project_dir": "1991_全国卷_理科",
+      "question_count": 26,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1991/1991_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1991/1991_数学真题_全国理_含解析.md",
+        "questions": "1991/1991_数学真题_全国理_试题.md",
+        "solution_body": "1991/1991_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-46d610089dad2e2020d262785761b9cf06ab946f66af6c4d56adbb086f1bc21c"
+      ],
+      "title": "1991 年·全国卷·理科",
+      "track": "science",
+      "year": 1991
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1991_三南卷/figures/f1991_sannan_q14_trig.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1991_三南卷/figures/f1991_sannan_q27_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1991_sannan",
+        "id": "gk-1991-regular-sannan",
+        "note": "固定题面为一页A3、印刷页41，PDF SHA-256 0c1fe2909986c82bf03fcddca2d8ce2a871b47714942903464f78095abcaae48；无答案、解析、分值或科类标注。答案解析为非官方推导，待独立复核；第9题注明辐角约定，第28题保留缺动词原文，第29题明确坐标选择。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "三南卷",
+        "structure": {
+          "填空题": [
+            19,
+            24
+          ],
+          "解答题": [
+            25,
+            30
+          ],
+          "选择题": [
+            1,
+            18
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "三南卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1991-regular-sannan",
+      "production_state": "planned",
+      "project_dir": "1991_三南卷",
+      "question_count": 30,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1991/1991_数学真题_三南_答案要点.md",
+        "combined_rendered": "1991/1991_数学真题_三南_含解析.md",
+        "questions": "1991/1991_数学真题_三南_试题.md",
+        "solution_body": "1991/1991_数学真题_三南_解析正文.md"
+      },
+      "source_ids": [
+        "src-ebe687fb91c528cd9ca3b747c7af22635654a95ade8d922bf8a587899295bd83"
+      ],
+      "title": "1991 年·三南卷",
+      "track": "none",
+      "year": 1991
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1990_广东卷_理科/figures/f1990_guangdong_science_q26_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_广东卷_理科/figures/f1990_guangdong_science_q27_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1990_guangdong_science",
+        "id": "gk-1990-regular-guangdong-science",
+        "note": "固定来源普通高考/1990/1990广东理.pdf，SHA-256 ad544a4c0a1131daf7edbd9bfc59bbb9ca497a1fd79eaa87403d7834d627bb19；PDF第1—4页为题面，第5页载来源答案表，第6—8页载来源解答及评分标准。已转录30题（第1—25题选择、第26—30题解答）。第12题固定来源第2页题干指向下图但图位为空白；答案表印B仅为来源记录，不代表已核答案。主会话复算及来源解答对照不等于异人盲核，待独立复核。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          5,
+          8
+        ],
+        "paper": "广东卷（理科）",
+        "structure": {
+          "解答题": [
+            26,
+            30
+          ],
+          "选择题": [
+            1,
+            25
+          ]
+        },
+        "track": "理科",
+        "variant": "广东理科"
+      },
+      "issue_ids": [
+        "ISSUE-1070"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1990-regular-guangdong-science",
+      "production_state": "blocked",
+      "project_dir": "1990_广东卷_理科",
+      "question_count": 30,
+      "resume_action": "取得可核验的同版完整题图或独立同版来源后复核题意与答案；不得凭模型记忆重建图形。",
+      "source_files": {
+        "answer_key": "1990/1990_数学真题_广东理_答案要点.md",
+        "combined_rendered": "1990/1990_数学真题_广东理_含解析.md",
+        "questions": "1990/1990_数学真题_广东理_试题.md",
+        "solution_body": "1990/1990_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a"
+      ],
+      "title": "1990 年·广东卷·理科",
+      "track": "science",
+      "year": 1990
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1994_上海卷/figures/f1994_shanghai_q11_graph_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1994_上海卷/figures/f1994_shanghai_q23_problem.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1994_上海卷/figures/f1994_shanghai_q23_solution.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1994_上海卷/figures/f1994_shanghai_q25_solution_cases.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1994_shanghai",
+        "id": "gk-1994-shanghai",
+        "note": "固定来源普通高考/1994/1994上海.pdf（SHA-256 2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d），题面共26题。来源出版身份未验证；第25题来源印载分段有区间缺口，答案与解析保持待核。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          3,
+          5
+        ],
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            10
+          ],
+          "解答题": [
+            21,
+            26
+          ],
+          "选择题": [
+            11,
+            20
+          ]
+        },
+        "track": null,
+        "variant": null
+      },
+      "issue_ids": [
+        "ISSUE-1071"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1994-shanghai",
+      "production_state": "blocked",
+      "project_dir": "1994_上海卷",
+      "question_count": 26,
+      "resume_action": "由独立复核者对照固定扫描件第25题题面及印载解答，核实分段转录并独立推导S(t)；保留来源原文，未裁决前不得将该题答案或解析标记为已验证。",
+      "source_files": {
+        "answer_key": "1994/1994_数学真题_上海_答案要点.md",
+        "combined_rendered": "1994/1994_数学真题_上海_含解析.md",
+        "questions": "1994/1994_数学真题_上海_试题.md",
+        "solution_body": "1994/1994_数学真题_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      ],
+      "title": "1994 年·上海卷·数学",
+      "track": "none",
+      "year": 1994
     }
   ],
-  "revision": 4149,
+  "revision": 4158,
   "schema_version": 1,
   "sources": [
     {
@@ -23270,8 +23551,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ed38bf04282c207899fa1dea3bbdf5674e4a4d33",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1990-regular-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1990广东理.pdf",
       "regions": [],
       "source_id": "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a",
@@ -23294,8 +23575,8 @@
       "exam_type": "regular",
       "git_blob_oid": "72817784dbc76ef0c6d82a2a84d3752cd67176db",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1991-regular-sannan",
+      "paper_relation": "canonical",
       "raw_paper_name": "1991三南(湖南,海南,云南).pdf",
       "regions": [],
       "source_id": "src-ebe687fb91c528cd9ca3b747c7af22635654a95ade8d922bf8a587899295bd83",
@@ -23366,8 +23647,8 @@
       "exam_type": "regular",
       "git_blob_oid": "42db1744144a188d8d86156621c84603090b7c8e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1991-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1991全国理.pdf",
       "regions": [],
       "source_id": "src-46d610089dad2e2020d262785761b9cf06ab946f66af6c4d56adbb086f1bc21c",
@@ -23606,8 +23887,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a5b42d8e3935f34a2d9eeee96f1a3dc66f941663",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1994-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "1994上海.pdf",
       "regions": [],
       "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65",
