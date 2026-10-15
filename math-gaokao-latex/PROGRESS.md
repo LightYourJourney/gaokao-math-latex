@@ -5163,3 +5163,11 @@
 - 验证：四版 smoke build 均 `succeeded`，页数仍为4/17/6/12，无错误、缺字、Overfull、未定义引用；全尺寸复看题面第3/4页、简答第4—6页、解析第14—17页及印刷第3/4页。试题末页密度已改善；简答答案按题型分节，简答版仍为6页，最后一节单独起页，是否可接受留白须在正式复审中判定。生成器 `--check`、本卷9项数学测试、provenance check 与 source manifest validate 通过。
 - 修改文件：全国文试题 Markdown、生成的 `questions.tex`/`answers.tex`、本卷 `provenance.json`、`source-manifest.json` 与本进度。没有公共宏、转换器或模板变更。
 - 剩余/下一步：smoke build 覆写了忽略目录里的 PDF，正式 build receipt 现需更新；运行正式四版构建与诊断，再按新 attempt 重新登记视觉回执。若简答版末页不能合理通过分页/留白检查，继续定位能保持生成确定性且不影响其他卷的处理方案。此阶段0次OCR和外部API调用，实际Token/费用不可见。
+
+### 1989 全国卷文科：版别限定分页修复与正式重建（2026-10-16）
+
+- 已完成：将第21题前的 `\Needspace{0.65\textheight}` 限定为仅“试题版”执行，避免它被解析版/印刷版继承并拆开第20题证明；在第24题之后增加仅对“简答版”生效的局部留白处理，将原来单独占页的第19—24题答案接回答案速查页。题面、答案、解析和图稿内容均未改动；没有改共享宏或生成器。
+- 修改文件：两份版式源 `1989_数学真题_全国文_试题.md`、派生 `1989_数学真题_全国文_含解析.md`，确定性生成的 `questions.tex`/`answers.tex`，本卷 `provenance.json`、正式 `receipts/build.json`、总账 `source-manifest.json` 与本进度。纯排版变化只使来源审核哈希 q20、q24 更新；独立核题证据原样保留。
+- 验证：`generate_projects --check`、`make_short_answers --check`、`solution_sources check-batch`、`source_manifest validate`、`provenance check-batch`、`build_projects validate-receipts` 均通过；本卷9项数学测试通过。正式 XeLaTeX 构建 revision 4182，`failed=0`，状态 `compiled_pending_review`；四版分别4、17、5、12页，共38页，日志无错误、缺字、Overfull或未定义引用。逐版接触表检查全部页面，并对变化页做高分辨率复核；新版临时审查工作项为38页/304项全通过，未变化页沿用同一内容此前的逐页通过记录。
+- 回执状态：正式视觉回执尚未登记。`finalize-batch-checked` 因进入时存在本阶段未提交的 tracked 改动而按安全门返回 `INVALID_OR_STALE`，`committed=false`；这不是构建或页面校样失败。先提交本阶段检查点，再在干净工作树上重跑正式视觉回执事务并验证 receipts。
+- 成本与剩余：本阶段0次OCR、0次外部模型/API调用；Codex/子代理实际Token与费用不可见。待完成正式视觉回执、清理本卷可再生编译中间文件并保留PDF/LaTeX源与回执；1952—2026全库任务及OCR/Token基准仍未完成。

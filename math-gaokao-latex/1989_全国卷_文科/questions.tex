@@ -170,7 +170,11 @@
 \tan\frac{3x}{2}-\tan\frac{x}{2}=\frac{2\sin x}{\cos x+\cos2x}\text{。}
 \]
 
+\long\def\gkquestionedition{试题版}
+\long\edef\gkcurrentedition{\gkheadR}
+\ifx\gkcurrentedition\gkquestionedition
 \Needspace{0.65\textheight}
+\fi
 
 \Needspace{0.4\textheight}
 \end{question}
@@ -210,5 +214,11 @@
 \gkti{24}
 
 给定椭圆方程 $\dfrac{x^2}{b^2}+\dfrac{y^2}{a^2}=1$（$a>b>0$），求与这个椭圆有公共焦点的双曲线，使得以它们的交点为顶点的四边形面积最大，并求相应的四边形的顶点坐标。
+
+\long\def\gkshortedition{简答版}
+\long\edef\gkcurrentedition{\gkheadR}
+\ifx\gkcurrentedition\gkshortedition
+\global\expandafter\let\expandafter\Needspace\csname @gobble\endcsname
+\fi
 
 \end{question}

@@ -355,7 +355,11 @@ $1-\sqrt3 i$ 的模为 2，辐角可取 $-\pi/3$。由棣莫弗公式，$z$ 的�
 \tan\frac{3x}{2}-\tan\frac{x}{2}=\frac{2\sin x}{\cos x+\cos2x}\text{。}
 \]
 
+\long\def\gkquestionedition{试题版}
+\long\edef\gkcurrentedition{\gkheadR}
+\ifx\gkcurrentedition\gkquestionedition
 \Needspace{0.65\textheight}
+\fi
 
 \Needspace{4\baselineskip}
 \textbf{解析}
@@ -486,6 +490,12 @@ x=\frac{a(k^2+1)}{2k},\qquad x-ak=\frac{a(1-k^2)}{2k}\text{。}
 \textbf{题目}：
 
 给定椭圆方程 $\dfrac{x^2}{b^2}+\dfrac{y^2}{a^2}=1$（$a>b>0$），求与这个椭圆有公共焦点的双曲线，使得以它们的交点为顶点的四边形面积最大，并求相应的四边形的顶点坐标。
+
+\long\def\gkshortedition{简答版}
+\long\edef\gkcurrentedition{\gkheadR}
+\ifx\gkcurrentedition\gkshortedition
+\global\expandafter\let\expandafter\Needspace\csname @gobble\endcsname
+\fi
 
 \Needspace{4\baselineskip}
 \textbf{解析}
