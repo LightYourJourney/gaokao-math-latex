@@ -4,12 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
-## 1997 全国理科 Q23(3)：原卷关系符号缺失的证据复核（2026-10-16；正式状态待修正）
+## 1997 全国理科 Q23(3)：原卷关系符号缺失已登记（2026-10-16；整卷阻断）
 
-- 已完成：复核固定来源 `普通高考/1997/1997全国理.pdf`，source_id=`src-930ed190601053d47a6c2d72d9d2185d4d734e0e92462e66ace578b294dbe9db`，SHA-256 `51963e62fb3a1df87724af2b08cd7247c84a65e58c601119489a71b655b81ffb`。`pdfinfo` 确认1页A3；原生文字层与 `pdftotext -bbox-layout` 均显示第23题（3）为“证明：面 AED 面 A1FD1”，两个“面”之间无关系符号；400 dpi 原页局部图 `.work/1997-national-science/q23.png`（SHA-256 `73242c43a0399671130114c529a91521b2d35bc4624e6824b9980937d2f7e36e`）经目视复核同样没有印出的符号。项目来源清单中该卷只有此一固定来源，未登记替代版本或勘误。
-- 发现的状态冲突：既有理科 `provenance.json` 将 Q23 题面复核登记为 passed，说明为“固定源 PDF 第1页逐题视觉核对”，但该表述没有单独记录此符号；现有规范题面写入了 `\perp`。新的原页局部证据直接与这条题面来源声明不符，因此暂不把旧的 Q23 题面复核或其 `\perp` 视为有效的来源证明。尚未修改规范题面、provenance、manifest 或构建/视觉回执，避免在确定来源处置前造成半更新。
-- 本阶段修改文件：仅本 `PROGRESS.md`。验证仅涉及固定 PDF 元数据、原生文字/坐标提取与局部图目视；未运行 OCR、编译、测试或外部模型/API。Codex Token 和费用不可见，记为未知。
-- 剩余/下一步：取得可核验的独立同版题面或权威勘误；若无法取得，则按原件保留缺符号并登记 `transcription-ambiguous` blocker，同步撤销 Q23 的来源复核通过状态、更新受影响的 provenance/build/review 回执，再复验四版。完成前，1997 全国理科不得据旧回执宣称题面来源逐题通过或整卷完成。
+- 已完成：固定来源仍为 `普通高考/1997/1997全国理.pdf`，source_id=`src-930ed190601053d47a6c2d72d9d2185d4d734e0e92462e66ace578b294dbe9db`，SHA-256 `51963e62fb3a1df87724af2b08cd7247c84a65e58c601119489a71b655b81ffb`。原生文字、版面坐标及400 dpi局部图一致证明第23题（3）两平面名称间没有印刷关系符号；未从本地来源清单找到已登记替代版本/勘误。规范题面现以“【原卷缺关系符号】”忠实标记，不再用独立推导补写 `\perp`；条件性垂直推导保留，但已明确不是已核原题答案。登记 `ISSUE-1072`（transcription-ambiguous）与 `ISSUE-1073`（answer-missing），Q23 转录复核为 failed、答案证据为 U，manifest 及批次状态不再报完成。
+- 修改文件：`1997/1997_数学真题_全国理_{试题,答案要点,解析正文,含解析}.md`；`math-gaokao-latex/{missing-issues.md,source-manifest.json,index.json,1997_全国卷_理科/{questions.tex,answers.tex,answers_short.tex,provenance.json,receipts/build.json},tests/test_1997_national_science_source_gap.py}`；本 `PROGRESS.md`。卷级索引注释也明确写出 23(3) 待核及条件推论。构建 PDF、PNG 与编译缓存仅在忽略的 `build/` 或 `/tmp`，没有将图片/缓存纳入 Git。
+- 验证：定向回归测试3/3通过（含来源标记、两条 blocker、hash、manifest 状态、简答和卷级索引）；相关单元测试 `test_issues` 11、`test_solution_sources` 109、`test_short_answers` 51、`test_status` 45、`test_build_projects` 138 均通过。`issues.py validate`、`solution_sources check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check` 全通过。单卷四版 XeLaTeX 正式构建0失败，共59页；构建回执当前且无 stale/failed，状态 `compiled_pending_review`，`validate-receipts --require-final` 如实返回 `PENDING_REVIEW`。逐页定向渲染核看题面/解析/简答/印刷版的受影响页：占位、条件说明及“待核”可读，无裁切或重叠。印刷版由旧20页变为21页，旧整卷视觉回执不能沿用；本次未完成59页全页视觉复核，未刷新视觉回执。未运行 OCR 或外部聊天/API；真实 Codex Token、费用未知，不估算；未运行全套单元测试。
+- 剩余/下一步：获取独立同版题面或权威勘误以裁决原缺关系；若找不到，保持原文占位及两条 open blocker，独立复核 Q23(3) 的后续处理。随后对新四版进行全页视觉复核并刷新回执。此卷在上述事项完成前保持 blocked；不能以编译成功或条件性证明宣称整卷通过。
 
 ## 1997 全国文科：固定来源25题草稿与Q23缺符号登记（2026-10-15—16；整卷待补源）
 

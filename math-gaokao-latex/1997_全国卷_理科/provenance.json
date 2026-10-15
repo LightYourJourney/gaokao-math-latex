@@ -577,15 +577,18 @@
     },
     {
       "answer_evidence": {
-        "evidence": "答案与解析由题面独立复算；代数、三角、立体几何、组合计数、数列极限和最值证明均逐题核对，未采用二手转录的答案字段。",
-        "grade": "A"
+        "evidence": "此前垂直证明只在把缺失关系假设为“垂直”时成立；因原卷待证命题未知，撤销该题已核状态。",
+        "grade": "U"
       },
-      "answer_sha256": "de5c96149e56dd37b9eaaac5392df8a3c10086726f2bbce613cf5ac409ec893c",
+      "answer_sha256": "844dbf2d7f27813c82f88ce58edb6a499af91ee32a3668f0ce074775fa828475",
       "conflict_status": "none",
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1072",
+        "ISSUE-1073"
+      ],
       "printed_number": 23,
       "question_id": "gk-1997-regular-national-science-q23",
-      "question_text_sha256": "d4a15926a4b2fc6f71fc65f764e26bdaf566288271d195d2eda6d051e34bfab7",
+      "question_text_sha256": "6dba97b26ce0b0ee069837d553e92bc695329c98ec24ea8f6a6dd5c96ed53567",
       "reviewer_role": "phase2-b70-answer-review-blind",
       "solver_role": "phase2-b70-answer-solve-independent",
       "source_pages": [
@@ -596,9 +599,9 @@
       },
       "source_sha256": "51963e62fb3a1df87724af2b08cd7247c84a65e58c601119489a71b655b81ffb",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1 页逐题视觉核对题号、题干、公式和选项；第 3、23 题的图形标记与对应矢量图源逐项核对。",
-        "result": "passed",
-        "role": "phase2-b70-question-review-pdf"
+        "evidence": "定向复核固定源 PDF 第1页（SHA-256 51963e62fb3a1df87724af2b08cd7247c84a65e58c601119489a71b655b81ffb）：原生文本与400dpi局部图均显示“证明：面 AED 面 A1FD1”，两平面间没有印刷关系符号。旧的 passed 记录已被本次原件证据推翻；暂无已登记的独立同版文本或勘误。",
+        "result": "failed",
+        "role": "targeted-source-gap-review"
       }
     },
     {

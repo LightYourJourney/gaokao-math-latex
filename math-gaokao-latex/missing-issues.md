@@ -17574,3 +17574,37 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1072
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源题面第23(3)两平面名之间缺少关系符号，原件不能判定待证关系。",
+  "fingerprint": "18240ff5f5c8f4386b2d7cfc8be6c0c000ffcbb20e527ba438d1dc5c9794b735",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1997-regular-national-science",
+  "question_id": "gk-1997-regular-national-science-q23",
+  "resume_action": "取得独立同版题面或权威勘误；此前保留缺符号并维持阻断。",
+  "source_id": "src-930ed190601053d47a6c2d72d9d2185d4d734e0e92462e66ace578b294dbe9db",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1073
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面待证关系未知；既有垂直证明仅为条件推论，不足以核验原题答案。",
+  "fingerprint": "9244ba108c2764eae3e1d3313161fb19b9087ebea2e09ab7209031afd10921a7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1997-regular-national-science",
+  "question_id": "gk-1997-regular-national-science-q23",
+  "resume_action": "确认第23(3)待证关系后重新求解并独立复核；不得把条件性垂直证明当作原题答案。",
+  "source_id": "src-930ed190601053d47a6c2d72d9d2185d4d734e0e92462e66ace578b294dbe9db",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
