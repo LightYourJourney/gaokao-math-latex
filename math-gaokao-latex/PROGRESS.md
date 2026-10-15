@@ -5285,7 +5285,7 @@
 - 修改文件：仅追加本进度记录。
 - 验证：`math-gaokao-latex/tests/test_1991_national_arts_math.py` 9/9；`solution_sources.py check-batch --batch phase4-b05`（1卷/26题）、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过；`source_manifest.py validate` 成功。Provenance 当前状态查询仍显示 paper 与 batch 均为 `planned`。
 - 命令复盘：首个测试命令误指仓库根 `tests/`，因路径不存在退出2；按 `rg --files` 定位到题库子目录后，在正确路径一次通过。该错误不涉及测试本身或文件修改。
-- 成本及剩余：本阶段2次独立子代理调用，未运行 OCR/商业 API；代理 Token/费用不可见，不估算。Q14–Q26 独立盲核正在进行；全部26题盲核后才可推进三角色 provenance、正式四版构建与逐页视觉复核。该卷目前仍为 `planned`，不能视作完成。
+- 成本及剩余：首轮核查使用2个独立子代理，未运行 OCR/商业 API；代理 Token/费用不可见，不估算。后续复用上下文的交叉核查已证实可能暴露另一段答案汇总，不计为严格盲核。现由全新、无历史上下文的代理盲核全部26题；Meitner另作Q1–Q13纯题面来源复核。两者核实后方可准备三角色 provenance、正式四版构建与逐页视觉复核；卷仍为 `planned`。
 
 #### 1991 全国文科：Q14–Q26 首轮独立核源与解题（2026-10-16）
 
@@ -5293,5 +5293,5 @@
 - 来源与边界：同一只读原件 SHA-256 `45e5e668b01ecbfc8297b1903f94b394d29e9d2555bc6d7c4ea34b6f702bbea6`，PDF第1页/卷面第40页。原件无官方答案/解析；本轮全部答案证据均是独立数学推导，不标作官方。代理未编辑文件。
 - 修改文件：仅追加本进度记录；源稿、答案、解析、LaTeX 与 manifest 未改。
 - 验证：定向数学测试9/9；批次题源一致性26/26、LaTeX内容生成、简答生成、四入口生成检查均通过；来源 manifest 校验通过。Provenance 状态仍为 `planned`。
-- 剩余/下一步：Q1–Q13 的第二独立数学盲核已由 Meitner 完成且与首轮答案一致；Dalton 对 Q14–Q26 的交叉盲解仍在运行。两段交叉核验完成后再写正式三角色 provenance；Q24 原件排印意图继续作为报告中的 pending，不静默修订，也不冒称官方答案。
-- 成本：本轮首轮核查及交叉核查共启动4个子代理任务；未调用 OCR/商业 API，代理实际 Token/费用不可见，不估算。
+- 剩余/下一步：复用上下文后进行的交叉核对中，Meitner可见Dalton前轮的答案汇总，Dalton也可见Meitner前轮的答案汇总；两者虽重新推导且一致，但不符合严格盲核，不登记为通过。当前改由全新、无历史上下文的单一代理盲核全部26题，Meitner另补Q1–Q13纯题面来源核对。待结果核实后再写正式三角色 provenance；Q24 原件排印意图仍为 pending，原字形保留。
+- 成本：截至本记录共启动6个子代理任务（包含2个未采纳为严格盲核的交叉核对）；未调用 OCR/商业 API，代理实际 Token/费用不可见，不估算。
