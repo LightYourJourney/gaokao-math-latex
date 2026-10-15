@@ -5087,8 +5087,8 @@
 - 已完成：逐页覆盖四版共42页、336项八类检查；正式页图在120dpi与之前已逐页检查的最终校样逐像素一致（42/42差异像素均为0），当前又检查全部接触表并全尺寸查看候选页、立体/复平面/轨迹图页和简答版答案速查页。未发现裁切、重叠、错页、缺字或异常空白。简答版第5页答案行自然换行且清晰；日志唯一 Underfull（`answers_short.tex` 第15–16行）已在视觉回执逐项说明并豁免。
 - 登记状态：`review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，revision 4172，batch `phase4-b01` closed，`gk-1989-regular-shanghai` production_state 为 `complete`。此状态仅关闭本卷，不代表1952—2026总库完成。
 - 验证：`review_receipts.py check-batch` 返回 FINALIZED；`build_projects.py validate-receipts --require-final` 返回 `succeeded=1, pending=0, stale=0, failed=0`；42页全部各8项检查为 pass，四版页数为4/5/19/14。视觉回执、批次报告和状态事务均已生成。
-- 修改文件：`1989_上海卷/receipts/{build,review}.json`、`source-manifest.json`、`reports/phase4-b01.md`、本进度；当前 PDF 保留于忽略的 `1989_上海卷/build/`。尚未清理正式编译产生的 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv`。
-- 剩余/下一步：按既有授权清理本卷编译中间文件，只保留正式PDF、LaTeX源、机器诊断及正式回执；复验PDF仍在且正式回执仍有效。随后继续1952—2026总库，不重复转录/核验本卷。
+- 修改文件：`1989_上海卷/receipts/{build,review}.json`、`source-manifest.json`、`reports/phase4-b01.md`、本进度；忽略的 `1989_上海卷/build/` 仅保留四份 PDF 和四份诊断 JSON。按既有授权清理了24个 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 中间文件，PDF、LaTeX源及回执未删除。
+- 验证/剩余：清理后 dry-run 显示0个剩余中间物；四份PDF仍在，`validate-receipts --require-final`、视觉批次检查、provenance committed 检查、manifest validate 均通过。1989上海卷已完成；1952—2026总库、其余卷、最终全量清单/构建报告仍未完成，下一步继续总库，不重复本卷转录/核验。
 
 ### 1989 全国卷文科：固定源核验与 24 题草稿
 
