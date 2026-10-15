@@ -5424,3 +5424,11 @@
 - 执行纠偏：误用PATH中的Python 2.7调用Python 3脚本，已按shebang改用python3；`init-batch --work-dir`应传`.work`根，第一次传入批次子目录后只生成了本次空骨架，已核实并精确清理后按正确路径重建；一次漏传`solution_sources.py`必需的`--manifest`，补参后通过。历史`.work`一次只读查找范围过宽，已收窄；无源题面、答案、图稿或用户未跟踪文件因此改变。
 - 剩余/下一步：四版XeLaTeX正式构建；检查完整编译报告和页数，渲染并逐页完成视觉/八项质量复核；登记review receipts并最终关闭批次。构建和校样完成后按项目规则清理非PDF编译中间产物。
 - 成本：本阶段0次OCR、0次外部模型/API；代理和Codex实际Token/费用不可见，不估算。
+
+#### 1991 三南卷：四版 formal build（2026-10-16）
+
+- 已完成：正式构建 attempt `647f9b12-1398-4527-838b-98cbca93ccc5` 完成，`COMPILED_PENDING_REVIEW`；试题版4页、解析版19页、简答版6页、印刷版16页，共45页。四版均成功且编译错误、缺字、未定义引用、Overfull、Underfull及构建问题均为0。四份PDF保留在本卷`build/`供后续校样和打印。
+- 修改文件：新增`1991_三南卷/receipts/build.json`；事务更新`source-manifest.json`至revision 4221、batch=`compiled_pending_review`、paper=`compiled`；追加本进度。LaTeX正文和版次入口未改。
+- 验证：`build_projects.py validate-receipts --manifest source-manifest.json --paper gk-1991-regular-sannan`返回`OK：1卷`；formal receipt页数与各edition成功状态已逐项核对。构建成功不代表视觉或数学检查已关闭。
+- 剩余/下一步：逐页渲染和检查45页，按8类检查填写工作项，必要时放大复核候选页；随后finalize回执、清理编译中间文件并检查PDF哈希不变。
+- 成本：本阶段0次OCR、0次外部模型/API；Codex Token/费用不可见，不估算。
