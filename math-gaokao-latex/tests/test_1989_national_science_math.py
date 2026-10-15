@@ -3,9 +3,17 @@
 import itertools
 import math
 import re
+import sys
 import unittest
 from fractions import Fraction as F
 from pathlib import Path
+
+
+PROJECT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT / 'tools'))
+
+import make_short_answers
+from manifest import load_manifest
 
 
 PREFIX = Path(__file__).resolve().parents[2] / '1989' / '1989_数学真题_全国理'
@@ -131,6 +139,31 @@ class NationalScience1989MathTests(unittest.TestCase):
                         (F(1,2),True),(F(1),True),(F(11,10),False)):
             self.assertEqual(-1<a<=1 and a!=0,valid)
         self.assertIn(r'M_0=(-1,0)\cup(0,1]',self.a[24])
+
+    def test_proof_question_short_answer_contains_result_and_key_identity(self):
+        manifest = load_manifest(PROJECT / 'source-manifest.json')
+        paper = next(
+            paper for paper in manifest['papers']
+            if paper['paper_id'] == 'gk-1989-regular-national-science'
+        )
+        sources = make_short_answers.paper_sources(
+            paper, make_short_answers.INDEX_METADATA
+        )
+        result, problems = make_short_answers.generate_short_answers(
+            PROJECT.parent.parent.parent, sources
+        )
+        self.assertEqual(problems, ())
+        target = (
+            f"math-gaokao-latex/{paper['project_dir']}/answers_short.tex"
+        )
+        output = result.targets[target].decode('utf-8')
+        match = re.search(r"\\item\[\\textbf\{19\.\}\] (.*)", output)
+        self.assertIsNotNone(match)
+        item = match.group(1)
+        self.assertIn('共同定义域', item)
+        self.assertIn(r'\sin x', item)
+        self.assertIn(r'\cos x+\cos2x', item)
+        self.assertIn('恒等式成立', item)
 
 
 if __name__ == '__main__':
