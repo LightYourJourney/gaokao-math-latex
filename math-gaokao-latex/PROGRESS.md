@@ -5415,3 +5415,12 @@
 - 验证：Gauss题面核源30/30无差异；Einstein与Hubble盲解范围分别为Q1–Q15、Q16–Q30，均未看答案稿；主会话完成30题答案结论对照及数学复算。既有数学/生成器检查结果保持适用，因为本次未改题目或派生文件；仅文档差异需`git diff --check`。
 - 剩余/下一步：按既有项目schema写入本卷30题source/solution/review provenance工作件；先运行dry-run和结构校验，再正式登记。随后正式构建试题版、解析版、简答版、印刷版，逐页视觉复核并登记回执，完成后方可关闭`phase4-b07`。
 - 成本：本阶段0次OCR、0次外部模型/API；代理和Codex实际Token/费用不可见，不估算。
+
+#### 1991 三南卷：30题 provenance 正式登记（2026-10-16）
+
+- 已完成：为`phase4-b07`三角色工作件登记30题 provenance，固定源为原卷`source_id=src-ebe687fb91c528cd9ca3b747c7af22635654a95ade8d922bf8a587899295bd83`、PDF SHA-256 `0c1fe2909986c82bf03fcddca2d8ce2a871b47714942903464f78095abcaae48`、source page 1。Gauss担任source-only题面核验；Codex主会话角色沿用核源记录中2026-10-14的30题独立推导；Einstein/Hubble分别盲解前/后15题，主会话完成答案对照。答案均标B级非官方推导，冲突均为none；Q9主值区间、Q28原文缺动词、Q29坐标选择仍如实注明。
+- 修改文件：新增`1991_三南卷/provenance.json`；事务更新`source-manifest.json`至revision 4219；追加本进度。三份角色工作件留在忽略的`.work/phase4-b07/provenance/`，不纳入提交。
+- 验证：`provenance.py import-batch` dry-run通过且未落盘，正式事务成功；`provenance.py check-batch`为OK，`source_manifest.py validate`通过，`solution_sources.py check-batch --manifest source-manifest.json --batch phase4-b07`确认30题全部通过，`git diff --check`通过。
+- 执行纠偏：误用PATH中的Python 2.7调用Python 3脚本，已按shebang改用python3；`init-batch --work-dir`应传`.work`根，第一次传入批次子目录后只生成了本次空骨架，已核实并精确清理后按正确路径重建；一次漏传`solution_sources.py`必需的`--manifest`，补参后通过。历史`.work`一次只读查找范围过宽，已收窄；无源题面、答案、图稿或用户未跟踪文件因此改变。
+- 剩余/下一步：四版XeLaTeX正式构建；检查完整编译报告和页数，渲染并逐页完成视觉/八项质量复核；登记review receipts并最终关闭批次。构建和校样完成后按项目规则清理非PDF编译中间产物。
+- 成本：本阶段0次OCR、0次外部模型/API；代理和Codex实际Token/费用不可见，不估算。
