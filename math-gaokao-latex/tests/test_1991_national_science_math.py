@@ -48,6 +48,15 @@ class NationalScience1991SourceTests(unittest.TestCase):
         self.assertTrue(questions[20].body.startswith("求函数"))
         self.assertTrue(questions[21].body.startswith("已知复数"))
 
+    def test_short_answer_groups_match_the_source_question_boundaries(self):
+        short = (ROOT / "1991_全国卷_理科" / "answers_short.tex").read_text(encoding="utf-8")
+        groups = re.findall(r"\\gkpart\{([^}]+)\}(.*?)(?=\\gkpart|\Z)", short, re.DOTALL)
+        self.assertEqual([name for name, _ in groups], ["选择题", "填空题", "解答题"])
+        for name, text in groups[1:]:
+            expected = range(16, 21) if name == "填空题" else range(21, 27)
+            numbers = re.findall(r"\\item\[\\textbf\{(\d+)\.\}\]", text)
+            self.assertEqual(numbers, [str(n) for n in expected])
+
     def test_math_source_documents_have_balanced_display_math_without_chinese_stop(self):
         for label, text in (
             ("试题", self.questions),
