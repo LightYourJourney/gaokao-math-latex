@@ -5373,3 +5373,12 @@
 - 验证：四版 PDF 页数、构建日志及回执核验通过；41页接触表已作整体筛查，且若干高分辨率页面已放大检查；`build_projects.py` 回执验证为 `OK：1卷`。这不等于41页逐页八项 review 完成，当前状态仍是 `compiled_pending_review`；正式 `review.json` 尚未登记。
 - 剩余/下一步：逐页完成41页各8项检查，按实际证据填写4份 edition review workitems，登记两条 Underfull 的逐项处理；通过 review 检查后才能 finalize 并关闭本卷。当前没有新转录/OCR工作。
 - 成本：本阶段0次OCR、0次外部模型/API调用；Codex Token及费用不可见，不估算。
+
+#### 1991 全国理科：四版逐页视觉复核与正式关闭（2026-10-16）
+
+- 已完成：对试题版4页、解析版18页、简答版6页、印刷版13页逐页复核，共41页、328个检查项；287项通过，41项 `figure_label` 因固定来源原卷没有插图而标为 `not_applicable`（第23题按文字条件作答）。页图检查覆盖字形/裁切、题号、选项与公式对齐、页眉页脚、分页留白、字号和答案边界；候选页另有高分辨率检查。印刷版两条 badness 1038 Underfull 分别映射第6页第9题解析标题、第10页第19题题干；180 dpi 页图确认可读且无断行、间距、裁切或版心异常，按逐项证据登记豁免。正式 `finalize-batch-checked` 返回 `FINALIZED`，manifest revision 4218；`phase4-b06=closed`、本卷 `production_state=complete`。
+- 修改文件：新增本卷 `receipts/review.json` 与 `reports/phase4-b06.md`；最终化更新 `receipts/build.json`、`source-manifest.json`；`report.py render --all` 刷新 `docs/source-inventory.md`、`report.md`、`README_数学.md`、数学 LaTeX README、2017–2026 README、`reports/baseline.md`；追加本进度。四份 PDF 留在忽略的 `build/`，LaTeX 源文件未改；删除本次 `build/` 中25个非 PDF 文件（24个 XeLaTeX 中间文件及1个诊断 JSON）。忽略的 `.work/phase4-b06/` 视觉页图/接触表/工作项留作复核追溯；用户未跟踪的 `-.png`、`.mineru-service.lock` 未触碰。
+- 验证：`test_review_receipts.py` 66/66；`review_receipts.py check-batch` 为 `FINALIZED`；`build_projects.py validate-receipts --require-final`、`source_manifest.py validate`、`provenance.py check-batch` 均通过；全局 `report.py check --all` 通过；`git diff --check` 通过。编译回执记录四版共41页、错误/缺字/未定义引用/Overfull 均为0。最终回执保留非官方答案属性及来源无官方答案的说明。
+- 执行纠偏：第一次 `finalize-batch-checked` 误带 `--work-dir .work/phase4-b06`，按工具语义进入 report-only，返回“缺 review 回执”且零写入；查明该参数只供既有回执报告刷新后，省略参数完成完整审查事务。首次全局报告检查发现6份派生索引陈旧，使用正式 `report.py render --all` 统一刷新后复核通过。一次 `rg` 误把整个项目目录作为输入导致输出过宽并截断，之后改为限定具体源文件；无文件改动。
+- 剩余/下一步：本卷与 phase4-b06 已正式关闭，不得重做转录/OCR。manifest 下一工作项为 `phase4-b07` 的 `gk-1991-regular-sannan`（1991 三南卷，30题，题图源已登记2项），先检查现有转录、图稿和 progress，再只补未完成核验/构建环节。1952—2026全库、OCR/成本基准与最终汇总仍未完成。
+- 成本：本阶段0次OCR、0次外部模型/API调用；Codex Token及费用不可见，不估算。
