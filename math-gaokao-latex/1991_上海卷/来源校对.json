@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "source_id": "src-de45d6075f9038c7b46c233df86b014753be6f32fb2eb832653b00cbad96fcb9",
+  "upstream_path": "普通高考/1991/1991上海.pdf",
+  "pdf_sha256": "210d9c28d9cb6e90274a436177b0f4ef0cf2b4c6e5ef85583df939d8e2f4394a",
+  "git_blob_oid": "100f8f65d97dbd4e9d86104019d7cbdb2fe15afa",
+  "source_manifest_revision": 4152,
+  "paper_id": null,
+  "track": null,
+  "review_status": "needs-review",
+  "canonical_question_source_ready": false,
+  "answer_attribution": "fixed-source-printed-unverified-authority",
+  "mathematical_verification_status": "not-verified",
+  "math_recomputation": {
+    "status": "pending-independent-review",
+    "path": "复算草稿.md",
+    "question_numbers": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 21, 22, 23, 24, 25, 26, 27],
+    "sha256": "89db201fcfdac8809e7b5de27f0d4672327668c721169a99236920e46c42065f",
+    "question_draft_sha256": "3ed836abc2393ceaafff4828bda205b2af9c437de9ec1518df8cd5f1b5389a87"
+  },
+  "source_recheck": {
+    "date": "2026-10-14",
+    "status": "unresolved",
+    "ocr_calls": 0,
+    "note": "600dpi局部渲染便于观察但不增加300ppi扫描信息；未取得可确认三处指数的另一份原卷。不能按印载答案反推。",
+    "crops": [
+      {"question_number": 8, "page": 1, "dpi": 600, "bbox_pt": [36, 444, 264, 516], "path": "/tmp/gk1991-shanghai-intake.BLXjan/q8-600.png", "sha256": "a21ee6c4a32c23834f6329cf9a6b667d0cc0402eb937e9550214611717283e85"},
+      {"question_number": 14, "page": 1, "dpi": 600, "bbox_pt": [268.8, 362.4, 484.8, 410.4], "path": "/tmp/gk1991-shanghai-intake.BLXjan/q14-600.png", "sha256": "6e9ca3902206ccd456afcdfb5908c79479b99ca1cae2ce6bdee6d9a4290de63c"},
+      {"question_number": 20, "page": 2, "dpi": 600, "bbox_pt": [14.4, 513.6, 242.4, 566.4], "path": "/tmp/gk1991-shanghai-intake.BLXjan/q20-600.png", "sha256": "e2d6ca4af8abcc49d8b1a6dff2b3b4d01465802f6d80706294330596b2e3b91b"}
+    ],
+    "queries": [
+      "1991 上海 高考 数学 试题 常数项 二项式",
+      "1991 上海 数学 下列各函数图象中 表示函数",
+      "1991 上海 高考 数学 4x 渐近线",
+      "\"1991\" \"上海\" \"数学试题\" -site:enjoyphysics.cn -site:scribd.com",
+      "\"1991\" \"上海\" \"常数项\" \"60\"",
+      "\"1991\" \"上海\" \"渐近线\" 数学"
+    ],
+    "candidates": [
+      {"url": "https://github.com/deekur/gaokaomath", "disposition": "当前固定来源上游，非独立副本；本轮未取得不同原件"},
+      {"url": "https://enjoyphysics.cn/ShowPaper/35", "disposition": "物理卷，排除"},
+      {"url": "https://www.51wendang.com/doc/0e99fdff1194bc85e2b6e881", "disposition": "竞赛试题目录，非本卷核源证据"},
+      {"url": "https://ww123.net/redirect.php?goto=lastpost&tid=4731243", "disposition": "论坛线索；未取得试题原页，不采用其题目或书目信息补题"}
+    ]
+  },
+  "question_count": 27,
+  "question_scores": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    8,
+    10,
+    12,
+    14,
+    14,
+    16,
+    16
+  ],
+  "subpart_scores": {
+    "24": [
+      6,
+      3,
+      5
+    ],
+    "25": [
+      6,
+      8
+    ],
+    "27": [
+      3,
+      10,
+      3
+    ]
+  },
+  "page_map": [
+    {
+      "page": 1,
+      "printed_page": "5-33",
+      "questions": "1—15及16题开头"
+    },
+    {
+      "page": 2,
+      "printed_page": "5-34",
+      "questions": "16题续文、17—25及26题标题"
+    },
+    {
+      "page": 3,
+      "printed_page": "5-35",
+      "questions": "26题正文、27题及答案1—22开头"
+    },
+    {
+      "page": 4,
+      "printed_page": "5-36",
+      "questions": "22题续解、23题及24题开头"
+    },
+    {
+      "page": 5,
+      "printed_page": "5-37",
+      "questions": "24题续解及25题"
+    },
+    {
+      "page": 6,
+      "printed_page": "5-38",
+      "questions": "25题续解、26题及27题开头"
+    },
+    {
+      "page": 7,
+      "printed_page": null,
+      "questions": "27题续解；本页未见印刷页码"
+    }
+  ],
+  "ocr_cache": {
+    "root": ".work/ocr-page-cache",
+    "dpi": 180,
+    "engine": "tesseract",
+    "engine_version": "5.5.3",
+    "languages": [
+      "chi_sim",
+      "eng"
+    ],
+    "psm": 3,
+    "pages": [
+      {
+        "page": 1,
+        "render": ".work/ocr-page-cache/render/452729f3523a6d238f41c55cb669c6c1665359f1f69b827c5ae3f03c44e1070f.png",
+        "result": ".work/ocr-page-cache/results/77b5adcf1bdbcaddde6f30ffc85ead19d28fd7c529aa069b8b77d3f676329f58.json"
+      },
+      {
+        "page": 2,
+        "render": ".work/ocr-page-cache/render/dd9ff1bbcd95f3eb50cdcaa985b3b76e1df829df470ab831b0fa109f9a893bb5.png",
+        "result": ".work/ocr-page-cache/results/ca962c39bd163fd1f0bb2a53beafbc1fa4f919b7d3be905b0ebf02f75fdd11cd.json"
+      },
+      {
+        "page": 3,
+        "render": ".work/ocr-page-cache/render/a753f051b30686dba0fadc6a25da0d71d0bb8450856369929ec0d27daace04d5.png",
+        "result": ".work/ocr-page-cache/results/39bf1958db4caa9c3a1fcaa6b418a96e37afc66863b6006772f53566da1dd8e5.json"
+      },
+      {
+        "page": 4,
+        "render": ".work/ocr-page-cache/render/11970bb0da4310fcd55d8291f0dbb0aeed4a626784d05ef55b1852bfc2d17c28.png",
+        "result": ".work/ocr-page-cache/results/e89fc3078977b38a88ae44ba695671cd89a4034d9a31ae55cab18f9efbd8be11.json"
+      },
+      {
+        "page": 5,
+        "render": ".work/ocr-page-cache/render/37868e0840113b6eae355e10cab3423454513b2d9d43e6ad2a3d8193fc967760.png",
+        "result": ".work/ocr-page-cache/results/e7523d316f408827af3ef7308e6cc040bd93f15d76b156c245af96b601715ec9.json"
+      },
+      {
+        "page": 6,
+        "render": ".work/ocr-page-cache/render/774ab9dc2199e8b39ba3ac795cf62dfbda7fa2e60b416ebc390208cfb8cebc5f.png",
+        "result": ".work/ocr-page-cache/results/93a401bebd2efd5c079eec7aa63c937715605beff64c07a2ae1c8718bc20b311.json"
+      },
+      {
+        "page": 7,
+        "render": ".work/ocr-page-cache/render/6a22f301cab71a9717db6957bf56cb12c94e1bc90c5641f720b773e78be370ae.png",
+        "result": ".work/ocr-page-cache/results/e16f1e4a2044909f58d12691a0eaf33a9ae0c7fc404ba324144933bce154cb08.json"
+      }
+    ]
+  },
+  "unresolved_regions": [
+    {
+      "question_number": 8,
+      "page": 1,
+      "bbox_pt": [
+        36,
+        444,
+        264,
+        516
+      ],
+      "issue": "二项式指数尚未可靠辨读；不得由印载答案60反推",
+      "crop_path": "/tmp/gk1991-shanghai-intake.BLXjan/q8-native.png"
+    },
+    {
+      "question_number": 14,
+      "page": 1,
+      "bbox_pt": [
+        268.8,
+        362.4,
+        484.8,
+        410.4
+      ],
+      "issue": "负分数指数分母尚未可靠辨读；不得由选项C反推",
+      "crop_path": "/tmp/gk1991-shanghai-intake.BLXjan/q14-native.png"
+    },
+    {
+      "question_number": 20,
+      "page": 2,
+      "bbox_pt": [
+        14.4,
+        513.6,
+        242.4,
+        566.4
+      ],
+      "issue": "曲线两个上标尚未确认；不得以答案A决定次数",
+      "crop_path": "/tmp/gk1991-shanghai-intake.BLXjan/q20-native.png"
+    }
+  ],
+  "question_figures_pending": [],
+  "figure_files": [
+    {
+      "question_number": 14,
+      "path": "figures/f1991_shanghai_q14_choices.tex",
+      "source_page": 1,
+      "classification": "source-faithful",
+      "sha256": "1a6f3f8e995fc3eae81c0e418e5877e86a0e60b0845f58a3ad7c399cf6e962c2"
+    },
+    {
+      "question_number": 24,
+      "path": "figures/f1991_shanghai_q24_tetrahedron.tex",
+      "source_page": 2,
+      "classification": "source-faithful",
+      "sha256": "80505dab0829ce839aa06038694388ce33e3564b23023b6e8fa5ba3b8e37d969"
+    },
+    {
+      "question_number": 26,
+      "path": "figures/f1991_shanghai_q26_parabola.tex",
+      "source_page": 3,
+      "classification": "mathematical-reconstruction",
+      "sha256": "7bba519e4514a1466c5dbb2b852515a8b8171f0ba135cd9bce7b8148eb4bc1f8"
+    },
+    {
+      "question_number": 27,
+      "path": "figures/f1991_shanghai_q27_triangle.tex",
+      "source_page": 3,
+      "classification": "source-faithful",
+      "sha256": "2603504ee42ca40635bf85aafde12f268002ab03f37e166dda4423dc0995777a"
+    }
+  ],
+  "solution_figure_files": [
+    {
+      "question_number": 22,
+      "path": "figures/f1991_shanghai_q22_focus_cases.tex",
+      "source_page": 3,
+      "classification": "explanatory-mathematical-reconstruction",
+      "review_status": "smoke-reviewed-main-session",
+      "sha256": "14d4c89782898150c2fa62f324206a033e1032a1b6855c23eac611f603b28912"
+    },
+    {
+      "question_number": 24,
+      "path": "figures/f1991_shanghai_q24_projection.tex",
+      "source_page": 4,
+      "classification": "explanatory-mathematical-reconstruction",
+      "review_status": "smoke-reviewed-main-session",
+      "sha256": "f0a1c78785a75f3ea6edd20bdcd2bee28e6288824091c11eb97135c4b1f2af50"
+    },
+    {
+      "question_number": 25,
+      "path": "figures/f1991_shanghai_q25_complex_cases.tex",
+      "source_page": 6,
+      "classification": "explanatory-mathematical-reconstruction",
+      "review_status": "smoke-reviewed-main-session",
+      "sha256": "963f2a16e9ed9dc1a7f5e57c8017b65873b3ec4dc69f2a934f3c67efee7f8b95"
+    }
+  ],
+  "solution_figure_inventory": [
+    {
+      "question_number": 22,
+      "page": 3,
+      "description": "两种焦点极角情形的抛物线示意图"
+    },
+    {
+      "question_number": 24,
+      "page": 4,
+      "description": "含H/R与投影辅助线的立体几何图"
+    },
+    {
+      "question_number": 25,
+      "page": 6,
+      "description": "三个辐角情形的圆图"
+    }
+  ],
+  "draft_sha256": "3ed836abc2393ceaafff4828bda205b2af9c437de9ec1518df8cd5f1b5389a87",
+  "answer_source_sha256": "bfbcb62b8d15f3e9f5a2ad029b71e4d899f14b42a31369861f9a79d5458de5fb"
+}

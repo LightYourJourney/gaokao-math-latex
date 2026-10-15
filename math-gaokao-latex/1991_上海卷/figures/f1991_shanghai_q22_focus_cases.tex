@@ -1,0 +1,33 @@
+% 解析说明图；由y^2=4px构建，非原题额外条件或原图精确比例。
+% 取绘图单位d=1：p=(2-/+sqrt(3))/4，E=(p+/-sqrt(3)/2,1/2)。
+\begin{tikzpicture}[x=2.4cm,y=2.4cm,line width=0.5pt]
+  \foreach \shift/\sgn/\title in {0/1/{沿轴正向},6/-1/{沿轴反向}}{
+    \begin{scope}[xshift=\shift cm]
+      \pgfmathsetmacro{\p}{(2-\sgn*sqrt(3))/4}
+      \pgfmathsetmacro{\ex}{\p+\sgn*sqrt(3)/2}
+      \coordinate (V) at (0,0);
+      \coordinate (F) at (\p,0);
+      \coordinate (E) at (\ex,0.5);
+      \draw[->] (-0.16,0)--(1.4,0) node[right] {$x$};
+      \draw[->] (0,-0.28)--(0,1.25) node[above] {$y$};
+      \ifnum\sgn=1
+        \draw[domain=-0.56:0.56,samples=80,smooth,variable=\t]
+          plot ({\t*\t/(4*\p)},\t);
+        \draw ({\p+0.24},0) arc[start angle=0,end angle=30,radius=0.24];
+        \node at ({\p+0.43},0.11) {$30^\circ$};
+      \else
+        \draw[domain=-0.75:1.15,samples=80,smooth,variable=\t]
+          plot ({\t*\t/(4*\p)},\t);
+        \draw ({\p-0.24},0) arc[start angle=180,end angle=150,radius=0.24];
+        \node at ({\p-0.43},0.11) {$30^\circ$};
+      \fi
+      \draw (F)--node[above,sloped] {$d$} (E);
+      \fill (F) circle[radius=0.7pt];
+      \fill (E) circle[radius=0.7pt];
+      \node[below left] at (V) {$V$};
+      \node[below right] at (F) {$F$};
+      \node[above right] at (E) {$E$};
+      \node at (0.6,-0.7) {\title};
+    \end{scope}
+  }
+\end{tikzpicture}
