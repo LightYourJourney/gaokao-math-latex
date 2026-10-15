@@ -1,3 +1,34 @@
+## 1996 上海卷理科：24题固定来源转录完成（2026-10-15；待独立复核）
+
+- 已完成：manifest revision 4152中`ready`且未绑定的固定来源`src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21`（`普通高考/1996/1996上海理.pdf`）已校验：PDF SHA-256 `3c0c6b1da5ad37389f6cccf555c72188500787510e60b9902af8d51c97bb1f18`、Git blob `6da50ed1a5c26c6337afa8c8d0613b6113e974b4`。扫描9页、A4；前8页印刷页码74—81，第9页为背面浅透字迹并续有第24题解析末行。按原卷转录24题/150分：1—8选择、9—18填空（A1/B1组选做）、19—24解答（第22题A2/B2组选做）；答案键与第19—24题来源评分解析已分层转录。第15题A1“P在直线OA上”与来源答案只列内分点有潜在不唯一，原文保留并列入来源疑点，不擅改。
+- 修改文件：新增`1996/1996_数学真题_上海理工农医_{试题,答案要点,解析正文,含解析}.md`、`1996_上海卷_理科/来源校对.json`、`figures/f1996_shanghai_science_{q7_center_locus,q8_graphs,q18_cone,q20_motion,q21_dihedral,q21_solution,q23_hyperbola}.tex`及`tests/test_1996_shanghai_science_sources.py`；本进度条目更新。合并稿由`solution_sources.render_combined()`确定性生成。图稿校样时仅调整Q20的A/9标签位置，并同步更新来源JSON中的图稿SHA。PDF与页面缓存留在忽略的`.work/`，仓库未加入扫描PNG/JPEG；未改source manifest、index或共享转换器。
+- 验证：定向测试6/6通过，覆盖PDF/manifest指纹、24题/分值/组选结构、题面与来源答案及解析锚点、答案非官方归属、来源疑点、7份TikZ登记与SHA、合并稿重建一致。测试先以预期RED确认题稿缺失，再发现并修复了题面小问锚点空格不符合生成器契约；没有改共享生成器。原图9页已目视检查；页面OCR共9次（Tesseract 5.5.3，`chi_sim+eng`，180 dpi，41.05秒，均`recognized_unverified`），继续读取6页缓存时6/6 OCR与渲染缓存命中、0次重识别、约0.18秒。7份TikZ由`latexmk + XeLaTeX`编译为7页临时PDF，日志无TeX错误、警告、缺字符、未定义命令或盒子溢出；7页均已渲染目视，Q20标签重叠已修正并复查。`git diff --check`通过，校样产物留在`.work/`及`/tmp`，未入库。
+- 成本与质量边界：本卷0次外部聊天/API模型调用；Codex Token与API费用不可见，不估算节省率。OCR文本未作题面真值；来源出版者/官方性未核，`official_answer=null`，数学`not-verified`，盲核和正式登记未完成。
+- 剩余/下一步：对照固定来源逐题独立核题并验证数学；优先处理第15题A1中“P在直线OA上”与来源答案只列内分点的潜在歧义，未取得可靠依据前保留原文、不补写官方答案。保持`paper_id=null`、`review_status=needs-review`、`canonical_question_source_ready=false`；本条只表示固定来源转录和图稿烟测完成，不代表数学盲核或整卷验收。后续不要重复OCR、页面复看、图稿烟测或已通过的定向测试。
+
+## 1996 上海卷文科：24题固定来源转录完成（2026-10-15；待独立复核）
+
+- 已完成：依据manifest revision 4152中`ready`且未绑定的固定来源`src-2cd0e37e0e31e5698fdc0f84ba902576f04a18869a73ec0f15565f94f2c0bd35`（`普通高考/1996/1996上海文.pdf`）完成24题题面、固定来源所载答案及评分解析转录。PDF SHA-256 `c1ab3c4cbe34a089b34b295330d594a9da2543601bed06ddddc519d9fbcf0ab1`、Git blob `34660c7f035f71d803a1f05fff75eef960f877bd`；扫描8页、印刷页83—90，首页为24题/150分。保留1—8选择、9—18填空（A1/B1选做组）、19—24解答（第22题含A2/B2组）。第1—18题仅转录原页答案键、未补造原卷未载解析；第19—24题按原页转录解析与评分步骤。出版者/官方性未核，答案没有标为官方答案。
+- 修改文件：新增`1996/1996_数学真题_上海文史_{试题,答案要点,解析正文,含解析}.md`、`1996_上海卷_文科/来源校对.json`、`figures/f1996_shanghai_arts_{q8_graphs,q20_parabola,q21_dihedral,q21_solution,q23_hyperbola}.tex`和`tests/test_1996_shanghai_arts_sources.py`；修正来源记录的图稿SHA及未登记卷的`paper_id=null`。本进度条目同步更新。五幅图均为TikZ源文件，未将扫描页PNG/JPEG加入仓库；未改source manifest、index或共享转换器。
+- 验证：本卷定向测试6/6通过，覆盖PDF/来源指纹、24题编号和选做结构、题面/答案/解析锚点、来源归属及图稿登记；`solution_sources.render_combined()`重建结果与合并稿逐字一致（19,851字节）。五幅TikZ图由`latexmk + XeLaTeX`编为临时5页PDF，日志无TeX错误/警告/缺字/溢出，逐页目视未见裁切或遮叠；烟测产物未入库。`git diff --check`通过。原始8页OCR已在本阶段前完成一次（Tesseract 5.5.3，8次，36.44秒，均`recognized_unverified`）；本次恢复没有重跑OCR或重复渲染来源页。
+- 成本与质量边界：本次恢复0次外部聊天/API模型调用；Codex Token和API费用不可见，不报告虚构节省率。测试与图稿编译只证明结构/可编译，不替代原题数学核对或答案独立验证。
+- 剩余/下一步：当前仅为固定来源转录稿，保持manifest `paper_id=null`、来源`review_status=needs-review`、`canonical_question_source_ready=false`、数学`not-verified`、`official_answer=null`。待独立逐题核题与数学解答复核、核实来源出版者/官方性；提交版/简洁版/详细版整卷PDF及视觉质量回执尚未完成。下一步做独立复核，不重录题目、不重跑OCR、不重复已通过的图稿烟测；复核及注册应作为单独阶段记账。
+
+## 1996 全国卷理科：25题固定来源题面转录完成（2026-10-15；待独立核验）
+
+- 已完成：绑定manifest revision 4152的固定来源`src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6`（`普通高考/1996/1996全国理.pdf`），PDF SHA-256 `cf9952ef5be41c7604605d651ada54a85217a4da09dfab19670a7a54cdc02bd4`、Git blob `2ae88cb4f08ce91c3b372c4d82bf40a3bebc2c13`与清单一致。固定来源为单页横向A3、印刷页码52；按原页三栏转录1—25题：1—15选择、16—19填空、20—25解答。第2、19、22题图分别以TikZ矢量示意稿保存，几何/曲线比例不作精确数据。第24题（2）在长度比条件后多印一个`l_1`，题稿按原样保留并登记疑似来源排印问题，未擅改。来源页无答案、解析或分值，均未补造。
+- 修改文件：新增`1996_全国卷_理科/题面转录草稿.md`、`来源校对.json`、`figures/f1996_national_science_{q2_exponential_logarithm,q19_folded_squares,q22_prism_section}.tex`、`tests/test_1996_national_science_sources.py`；本进度新增本条。题面SHA-256 `59f61b6fc18401bb20c706bfd0c55ed33c68893bbea1940048a795446cc8c0b6`，三个图稿SHA逐项登记于来源JSON。未改source manifest、索引、共享转换器或其他卷；PDF缓存、烟测PDF和PNG均在忽略的`.work/`，仓库不含本卷栅格图。
+- 验证：固定PDF/manifest指纹、25个题号/类型/栏位、题稿和图稿SHA及答案/分值空值检查由本卷5项定向测试覆盖；测试先按TDD出现预期RED，后续曾抓到Q18—19栏位回执误记及测试锚点与题稿`\dfrac`写法不匹配，修正回执映射和测试锚点后转绿（题面数学内容未变）。与1996文科来源回归测试合计10/10通过。PDF分析缓存判为`text_candidate`、2030个非空白字符、0个可疑字符/图像对象，OCR 0次；文字层仅作候选，题面按原页全页和局部图像核对。三幅TikZ图经`latexmk + XeLaTeX`编译为3页烟测PDF，日志无TeX错误、警告、缺字或溢出；三页PNG均已目视复查。`git diff --check`与本卷来源测试最终通过。
+- 成本与质量边界：本卷0次OCR、0次外部聊天/API模型调用；实际Codex Token和API费用不可见，不估算节省率。题面和示意图尚未异人盲核，数学答案未制作/验证；来源出版者/官方性未核实，不登记paper、不标canonical ready。
+- 剩余/下一步：保持`paper_id=null`、`review_status=needs-review`、`canonical_question_source_ready=false`、数学`not-verified`。待独立审阅逐题核对并另行求解，重点确认Q24多余`l_1`是否为原卷排印问题；其余继续按来源清单处理下一份未绑定试卷。不得重复转录本卷、重新做来源分析或重编已通过的图稿。
+
+## 1996 全国卷文科：25题固定来源题面转录完成（2026-10-15；待独立核验）
+
+- 已完成：绑定manifest revision 4152的固定来源src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a（普通高考/1996/1996全国文.pdf），复核SHA-256 0470ab13b1cd6af91b1268e91fdf8baa4412db573b0f411196a06f054776bca2和Git blob c214378b9ed2ebedd5ef555b720daacbd99a699a。固定来源为单页横向A3、印刷页53；按三栏转录1—25题：1—15选择、16—19填空、20—25解答。第2题四组指数/对数函数图、第19题折叠正方形、第23题正三棱柱以TikZ矢量示意稿保存；图示比例不作为数学数据。原页没有答案、解析或分值，未补造。
+- 修改文件：新增1996_全国卷_文科/题面转录草稿.md、来源校对.json、figures/f1996_national_arts_{q2_exponential_logarithm,q19_folded_squares,q23_triangular_prism}.tex和tests/test_1996_national_arts_sources.py；更新本进度。题面SHA-256 9db232957f01da795df862d640d4dfdf34d45482fab535760ead896d24b7a619，三份图稿SHA逐一记录于来源JSON。未修改manifest/index、共享转换器或其他试卷；PDF分析及编译校样留在忽略的.work/。
+- 验证：来源清单显示该PDF为ready、未绑定paper；实算指纹与manifest一致。已缓存的PDF分析结果为text_candidate、1857个非空白字符、0个可疑字符/图片对象，OCR 0次；逐题仍以固定页图像核对。三幅图经latexmk + XeLaTeX编译为3页烟测PDF，无错误、警告、未定义命令或溢出；三页PNG校样复看。首轮校样发现Q23的A_1F线型错误，改成虚线后重新编译、渲染并确认。新来源测试先按TDD完成RED，再5/5通过；与1994—1995相邻卷来源/数学测试共32/32通过。全量套件1179项：1163通过、13跳过、3失败；失败仍为已知基线B04/B05派生文件哈希账本漂移，以及367条缓存provenance状态不一致，与本卷无关。git diff --check通过。
+- 成本与质量边界：本卷0次OCR、0次外部聊天/API模型调用；实际Codex Token和API费用不可见，不估算节省比例。题面与示意图未独立盲核，数学状态仍not-verified；来源出版者/官方性未核实，不登记paper、不标canonical ready。
+- 剩余/下一步：保持paper_id=null、review_status=needs-review、canonical_question_source_ready=false；由独立审阅者逐题核对并另行求解。1995文/理独立审阅启动曾遇平台线程上限，本卷未重复启动子代理。下一步可按清单继续下一份未绑定来源；本卷25题不重录。
 ## 1995 上海卷理科：国图书目候选确认，PDF关联仍未核实（2026-10-15）
 
 - 已完成：在国家图书馆实体馆藏查询平台用ISBN `9787309016291` 查到题名《1994-1995上海市高考试题汇析》，著者为上海市教育考试院编、复旦大学出版社、1996年，馆藏详情页列ISBN `7-309-01629-7`。这是与本卷相符的书目候选，不证明当前固定PDF取自该书。

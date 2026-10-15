@@ -1,0 +1,18 @@
+% 固定来源 PDF 印刷页 76 第 18 题 A1 组图形的矢量示意。
+% 阴影对应上部 AEF 与两侧 BEH、FCG；仅绘结构，不补充比例条件。
+\begin{tikzpicture}[scale=1.0,font=\small,line cap=round,line join=round]
+  \coordinate (B) at (-2.2,0); \coordinate (C) at (2.2,0);
+  \coordinate (A) at (0,3.4); \coordinate (D) at (0,0);
+  \coordinate (E) at (-1.1,1.7); \coordinate (F) at (1.1,1.7);
+  \coordinate (H) at (-1.1,0); \coordinate (G) at (1.1,0);
+  \fill[pattern=north east lines] (A)--(E)--(F)--cycle;
+  \fill[pattern=north east lines] (B)--(E)--(H)--cycle;
+  \fill[pattern=north east lines] (F)--(C)--(G)--cycle;
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (E)--(F) (A)--(D) (E)--(H) (F)--(G);
+  \draw (H) rectangle ++(.18,.18); \draw (G) rectangle ++(-.18,.18);
+  \node[above] at (A) {$A$}; \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$}; \node[below] at (D) {$D$};
+  \node[left] at (E) {$E$}; \node[right] at (F) {$F$};
+  \node[below] at (H) {$H$}; \node[below] at (G) {$G$};
+\end{tikzpicture}
