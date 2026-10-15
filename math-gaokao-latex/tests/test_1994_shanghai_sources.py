@@ -104,6 +104,20 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
+    def test_q25_coordinate_derivation_remains_provisional_not_official(self):
+        checks = self.record.get("derived_solution_checks", [])
+        self.assertEqual(len(checks), 1)
+        check = checks[0]
+        self.assertEqual(check["question_id"], "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q025")
+        self.assertEqual(check["status"], "derived-pending-independent-review")
+        self.assertFalse(check["independent_review"])
+        self.assertIsNone(check["official_answer"])
+        self.assertEqual(check["jacobian"], "2(1+t^2)")
+        self.assertEqual(check["piecewise_area"], "2(1-t+t^2-t^3) for 0<t<=1/2; (t+1/t)/2 for t>=1/2")
+        self.assertEqual(check.get("first_branch_derivative"), "2(-1+2t-3t^2)<0 (discriminant -8)")
+        self.assertEqual(check["monotonicity"], "decreasing on (0,1]; increasing on [1,+infinity)")
+        self.assertIn("打印答案的第二支 t>=2", check["source_conflict"])
+
     def test_each_source_diagram_is_registered_vector_latex(self):
         self.assertTrue(RECORD.is_file(), "source audit record is missing")
         figures = self.record.get("figure_files", [])

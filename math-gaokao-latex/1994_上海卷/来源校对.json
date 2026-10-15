@@ -87,6 +87,28 @@
       "status": "open"
     }
   ],
+  "derived_solution_checks": [
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q025",
+      "method": "affine-parameterization-of-the-parallelogram",
+      "parameterization": "(x,y)=(a-2tb,ta+2b), 0<=a,b<=1",
+      "first_quadrant_parameter_region": "a>=2tb; y>=0 holds throughout the parameter square",
+      "jacobian": "2(1+t^2)",
+      "parameter_square_area": {
+        "0<t<=1/2": "integral_0^(2t) a/(2t) da + integral_(2t)^1 1 da = 1-t",
+        "t>=1/2": "integral_0^1 a/(2t) da = 1/(4t)"
+      },
+      "piecewise_area": "2(1-t+t^2-t^3) for 0<t<=1/2; (t+1/t)/2 for t>=1/2",
+      "first_branch_derivative": "2(-1+2t-3t^2)<0 (discriminant -8)",
+      "monotonicity": "decreasing on (0,1]; increasing on [1,+infinity)",
+      "boundary_check": "At t=1/2 both area formulas equal 5/4 and both one-sided derivatives equal -3/2; the derivative on t>=1/2 is (1-t^-2)/2, changing sign at t=1.",
+      "source_conflict": "打印答案的第二支 t>=2；题目定义域为 t>0，因此印载分段遗漏 [1/2,2)。本推导从题面坐标独立重算，并不改写来源印载答案。",
+      "status": "derived-pending-independent-review",
+      "independent_review": false,
+      "official_answer": null,
+      "provenance_note": "主会话仅依据题面坐标作参数面积复算；来源出版者未认证，尚无异人盲核，不能作为官方答案或最终数学验证。"
+    }
+  ],
   "combined_rendered_sha256": "4a14739622065eb9d87d4bfe577fc4a69c0bf1cd5353ac17d14d7f6625442048",
   "bbox_coordinate_space": "not-recorded; source page references only"
 }
