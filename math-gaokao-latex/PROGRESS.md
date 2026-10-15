@@ -5382,3 +5382,12 @@
 - 执行纠偏：第一次 `finalize-batch-checked` 误带 `--work-dir .work/phase4-b06`，按工具语义进入 report-only，返回“缺 review 回执”且零写入；查明该参数只供既有回执报告刷新后，省略参数完成完整审查事务。首次全局报告检查发现6份派生索引陈旧，使用正式 `report.py render --all` 统一刷新后复核通过。一次 `rg` 误把整个项目目录作为输入导致输出过宽并截断，之后改为限定具体源文件；无文件改动。
 - 剩余/下一步：本卷与 phase4-b06 已正式关闭，不得重做转录/OCR。manifest 下一工作项为 `phase4-b07` 的 `gk-1991-regular-sannan`（1991 三南卷，30题，题图源已登记2项），先检查现有转录、图稿和 progress，再只补未完成核验/构建环节。1952—2026全库、OCR/成本基准与最终汇总仍未完成。
 - 成本：本阶段0次OCR、0次外部模型/API调用；Codex Token及费用不可见，不估算。
+
+#### 1991 三南卷：恢复审计与三路独立复核启动（2026-10-16）
+
+- 已完成：确认 manifest 下一卷 `gk-1991-regular-sannan` 仍为 `planned`，固定原卷为一页 A3，SHA-256 `0c1fe2909986c82bf03fcddca2d8ce2a871b47714942903464f78095abcaae48` 与来源总账一致。复用已有30题转录、答案/解析、两幅 TikZ 图与四版45页预览，不重录、不重跑 OCR；已登记图稿各2处调用。当前题面 Markdown SHA-256 `a5c322d41c342c18061547664dc33824777347a4be4e3afa94d1e4f6c7297394`。
+- 独立复核分工：只读子代理 Gauss（`01a141ee-5574-7721-8b70-fd4d73870972`）仅对照原卷核题 Q1–Q30；Einstein（`01a141ee-5696-7f41-9a51-7325468544c4`）只据原卷盲解 Q1–Q15；Hubble（`01a141ee-594e-7ec3-80cf-877d2b38258a`）只据原卷盲解 Q16–Q30。三者均被明确禁止查看现有答案/解析或写文件，结果尚待返回；不得把子代理自报结果直接当作已通过，主会话需逐题整合/仲裁。
+- 验证：`test_1991_sannan_math.py` 15/15；`solution_sources.py check-batch --batch phase4-b07` 30题通过；单卷 `generate_projects --check`、`make_short_answers --check`、`make_editions --check` 均通过，四版旧 PDF 页数仍为4/19/6/16。tracked 文件在本检查点无内容改动；用户未跟踪的 `-.png`、`.mineru-service.lock` 未触碰。
+- 执行纠偏：来源 PDF 不在隔离 worktree 内，而由 manifest 指向共享只读来源库；先尝试的相对路径不存在，改用 `gaokaomath-src/...` 后哈希与 manifest 一致。生成器与简答 `--check` 曾并行争用共享 `.git/gaokao-latex.lock` 并失败；未删锁，确认无活动持有者后串行重跑通过，无文件写入。一次未匹配的 zsh 测试文件 glob 只读失败，改用 `rg --files` 定位到正式测试文件。
+- 剩余/下一步：等待三路盲审返回；先处理题面差异，再在不泄露答案的前提下比对两段盲解与现稿，解决数学冲突；随后建立并 dry-run provenance 工作件，正式登记后再 formal build、逐页视觉复核和回执关闭。原卷没有官方答案/解析，所有结论必须保持非官方推导标记。
+- 成本：本阶段0次OCR、0次外部模型/API调用；独立子代理与Codex实际Token/费用不可见，不估算。
