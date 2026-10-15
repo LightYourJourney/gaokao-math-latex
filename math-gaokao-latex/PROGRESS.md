@@ -5146,3 +5146,12 @@
 - 修改文件：`1989_全国卷_文科/receipts/build.json`、`source-manifest.json`、本进度。忽略目录 `build/` 生成四份正式PDF与四份诊断JSON；不把构建中间产物或页图入库。
 - 验证：正式构建返回 `failed=0`、revision 4175、状态 `compiled_pending_review`。四版诊断均 `succeeded`，无 problem、错误、缺字、Overfull、未定义引用；日志扫描未发现 Underfull、Overfull、LaTeX Warning/Error 或 Missing character。PDFinfo 确认页数4/17/6/12及A4。`validate-receipts` 返回 `failed=0, invalid=0, missing=0, stale=0, pending=1`，pending 是预期的视觉校样未完成。
 - 剩余/下一步：正式编译不等于视觉通过。将四版39页渲染为页图，准备并完成每页八项视觉检查，登记正式 review receipt；门禁通过后再清除该卷 LaTeX 中间产物，保留PDF、TeX源和诊断/回执。
+
+### 1989 全国卷文科：四版逐页视觉审查诊断（2026-10-16）
+
+- 已完成：四版正式PDF共39页完成逐页八项检查（312项）；308项通过，4项失败，全部属于分页/留白。试题版第4页只有第23—24题；简答版第4页同样只有第23—24题题面，第5页答案停在第18题并留下近半页空白，第6页只有第19—24题且约四分之三页空白。解析版17页、印刷版12页均通过。
+- 复核质量：各版独立逐页检查后，主会话对代理标出的疑似页眉缺失、题号格式问题及试题版第2页顶部间距逐一直接复看，确认页眉/题号正常、间距可读，未将这些误报登记为失败。没有改题面数学内容或解答。
+- 修改文件：新增 `1989_全国卷_文科/receipts/review.json`、`reports/phase4-b02.md`；事务更新 `source-manifest.json` 与 `missing-issues.md`；下一步再更新本进度。正式诊断事务 revision 4176，提交 `ff0bde93`，批次仍为 `compiled_pending_review`，本卷 review 状态为 `failed`；未宣称闭卷。
+- 验证：`finalize-batch-checked` 返回 `VISUAL_FAILED`、`failed_pages=4`、`committed=true`；报告列明四个失败页。此前提交构建仍为当前 attempt，四版 XeLaTeX 均成功且无编译/缺字/溢出警告。0次 OCR、0次外部模型/API调用；Codex/代理实际 Token 与费用不可见。
+- 版式试验：曾在题源中试加本卷局部分页约束，生成器一致性及本卷9项数学测试通过；正式构建因题面哈希触发 provenance stale 安全门而未运行。随后撤回该试验、恢复生成文件并确认 `generate_projects --check` 与 provenance import dry-run 均通过，没有绕过哈希门，也没有把未验证版式写入正式成果。
+- 剩余/下一步：为试题末页与简答答案末页提出不改变题意、且可经 provenance 正式更新的局部版式方案；完成后须重建四版并复核全部变化页，再重做正式 review。修复前本卷保持 `compiled_pending_review`/视觉失败，不清理可恢复的编译中间物、不登记完成。全项目1952—2026总库及OCR/成本基准仍未完成。
