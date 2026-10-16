@@ -13,6 +13,14 @@
 - 验证：正式构建4/4通过；`source_manifest.py validate`、该卷 `build_projects.py validate-receipts --require-final`、`review_receipts.py check-batch` 和 `provenance.py check-batch` 均通过（build 1 succeeded、0 stale/missing/pending；review `FINALIZED`；provenance `OK`）。全库回执快照更新为1 current、278 stale、2 missing；共同生成器依赖变更仍影响其余卷。前一轮全库单测的3个失败只在1952修复前观测，尚未重跑全库，不声称已消失。OCR/API为0；Codex Token/费用未知。
 - 剩余/下一步：其余278份 stale 回执须逐批正式重建，并基于当前PDF渲染相同的强证据复核/重绑定；1990广东理科、1994上海仍缺build receipt且各有来源/数学门禁，不得直接构建放行。随后重跑相关单测和全库状态审计。
 
+## 1953 全国卷：共享生成器变更后的重建与复核（2026-10-16）
+
+- 已完成：仅重建既有 `gk-1953-regular-national`，未重做题面、来源或答案核验。正式 build attempt=`e71f038b-a684-4879-bbcd-6d09237d7d29`，四版成功（2+11+4+8页）；事务 finalize 后 `phase1-b10` 关闭，manifest revision=4228。
+- 视觉证据：重建前先验证旧 PDF SHA-256 与旧 build receipt 一致并渲染基准；新旧 25/25 页120dpi图像及4/4候选页200dpi图像哈希完全相同。基于该像素同一性，将旧review receipt内完整的200项逐页判断绑定到新attempt；旧PNG已不存在，因此基准页图保存在独立 ignored `.work/rebuild-phase1-b10-2026-10-16/`，旧review工作区未覆盖。
+- 修改文件：1953卷 `receipts/{build,review}.json`、`reports/phase1-b10.md`、`source-manifest.json` 与本进度文件。没有题面/答案/OCR/API改动。
+- 验证：正式构建4/4成功；来源清单校验、`validate-receipts --batch phase1-b10 --require-final`（1 succeeded、0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1 卷`）及 `git diff --check` 均通过。全库receipt快照为2 current、277 stale、2 missing；这是构建当前性计数，不代表整库内容验收完成。Token/费用未知。
+- 剩余/下一步：继续按旧清单复核下一个失效批次 `phase1-b11`（1954全国卷）；其余276份stale及两份missing build receipt仍待处理。此轮未重跑全库单测。
+
 ## 1994 上海卷：Q25 独立盲核与答案来源分层（2026-10-16）
 
 - 已完成：独立复核者只收到固定扫描件第25题题面裁剪图，没有看到来源解答或主会话推导；其从题面坐标独立得到相同的分段面积与单调区间。将Q25答案明确标为项目推导且经独立复核；逐字保留固定来源所印第二支 `t≥2` 及其遗漏区间 `[1/2,2)`，不称官方答案。同步解析稿YAML来源字段，避免把Q25误归入“来源解答整理且待独立复核”。
