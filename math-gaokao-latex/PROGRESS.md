@@ -5753,3 +5753,13 @@
 - 剩余任务：先处理新登记的试题版答案泄漏——需决定移除注释中解释乘法的句子并重建/复核，或保留原稿并接受该项失败；图形空白与方框缺字继续忠实保留，除非找到可信同版来源。诊断报告和问题账已记录阻塞；尚未完成本卷视觉闭环。
 - 下一步：确认答案泄漏注释的处理边界后，按依赖关系做最小源修正（如获准）、刷新 provenance/build/工作项并复核受影响的当前 PDF；随后重新运行正式门禁。处理前不覆盖失败结论，也不复用旧 attempt 的页面审查。
 - 成本：0次OCR、0次外部模型/API；进行了本地 PDF 文本抽核、接触表与高清 PNG 目视复核及66项本地测试。Codex Token 与实际费用不可见，不估算。
+
+### phase2-b59：1986 广东理科卷共享生成器变更后的正式重建（2026-10-16）
+
+- 已完成可验证阶段：确认该卷已有完整6题转录、独立解析、答案源及四个入口，不重复 OCR 或重写。旧 formal build attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c` 因共享生成器输入树变化而 stale；对当前规范源正式重建得到新 attempt `9a280c96-45bc-483c-8418-29805baeeb07`。四版成功，页数7/26/8/19，共60页。
+- 修改文件：本次正式构建更新 `1986_广东卷_理工农医类/receipts/build.json` 与 `source-manifest.json`；PDF 保留在忽略的 `1986_广东卷_理工农医类/build/`。题面、解析、答案、图稿均未修改。当前构建中间文件尚未清理，待视觉检查和回执流程完成后再按项目清理命令处理。
+- 验证：`generate_projects.py --check` 通过（1卷）；`solution_sources.py check-batch` 通过（6题）；source manifest 校验通过。四版编译错误、缺字符、未解析引用、Overfull 与 build problems 均为0。`build_projects.py validate-receipts` 为1 pending、0 stale/failed/invalid/missing；`provenance.py check-batch` 为 `OK：1卷`。构建仍是 `compiled_pending_review`，不是内容/视觉验收通过。
+- 执行纠偏：一次只读帮助查询猜测了不存在的 `tools/check_solutions.py` 路径，命令失败但未读写项目文件；随后改查真实的 `solution_sources.py check-batch` 并通过，后续不再猜测脚本名。
+- 剩余任务：旧 review 与 ignored 工作项绑定 attempt `4282128a…`，不得沿用。还需为新 attempt 准备四版工作项、核对当前60页/480项视觉门禁并复核来源已知问题；视觉结果登记后再决定是否能关闭该卷。固定来源缺失的第1(25)题图形、第8/9题选项乘法符号方框等仍保持待核，禁止臆补。
+- 下一步：运行官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b59`，核验四份工作项绑定新 attempt 和 PDF SHA；然后逐页复核，不把旧 attempt 状态搬迁到新回执。
+- 成本：0次OCR、0次外部模型/API；本阶段仅做本地源码一致性检查、XeLaTeX/latexmk构建和回执验证。Codex Token 与实际费用不可见，不估算。
