@@ -5671,3 +5671,12 @@
 - 验证：`source_manifest.py validate`通过；build validator确认上述4 stale；review validator确认4卷均需新build；16/16 PDF SHA核对通过、合计299页。首次校验链在build stale处停止后，以独立只读命令完成source/provenance核验。首次哈希校验的一行式被zsh引号解析拒绝，未读写文件；改用heredoc后完成同一核验。
 - 剩余/下一步：以当前输入正式重建phase0-b02四卷16版；准备新attempt review工作项。对新旧PDF做SHA与页数逐版比较：仅精确相同的文件可沿用已有逐页视觉结论；变化版重新审查。完成2020理科79页、保留2020文科取消题失败、四卷warning逐项核对后再finalize、刷新投影/门禁、清理中间物并提交阶段。
 - 成本：本阶段0次OCR、0次外部模型/API；Codex Token/费用未知。
+
+### phase0-b02 四卷当前输入正式构建（2026-10-16）
+
+- 已完成可验证阶段：在题目源检查通过后，运行官方 `build_projects.py build --formal --batch phase0-b02 --json`；四卷16版全部 succeeded，manifest revision 4283，状态 `COMPILED_PENDING_REVIEW`，0 failed。attempt：2019文科 `c1e87ea0-b6e5-415c-bedd-06dd86b4f4e2`、2019理科 `a45eecf3-e012-4b36-bbd5-eafa15a3c58f`、2020文科 `05347335-dc73-471b-8d3b-8d8aba71f895`、2020理科 `1afb770e-0e35-483c-bd37-fef3dcb18641`。页数仍合计299（2019文科69、2019理科84、2020文科67、2020理科79）。
+- 构建质量：编译错误、缺字、未定义引用均为0。2019文理各三版有同一条 `Underfull \hbox`（`answers.tex` lines 53–54，6条总计）；对应页面须按本轮栅格比对结果决定是否可复用旧高分辨率检查；2020两卷0 warning。2020文科已取消第23题仍按原裁定留待视觉回执登记失败，不改题目。
+- 输入一致性：`solution_sources.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`均通过，四卷各23题源无差异。build validator为4 pending、0 stale/failed/invalid/missing；source manifest validate通过。新旧16份PDF SHA全部变化；变化不等于页面视觉必然变化，已保存的rev4281基准PDF将用于逐页栅格哈希比较，只有像素一致的页面才复用之前的视觉判断。
+- 阶段修改文件：四卷 `receipts/build.json`、`source-manifest.json` 与本进度；新PDF和编译中间物在各卷ignored `build/`。题面、答案、解析、图稿及LaTeX内容源均未修改；旧PDF在 `.work/phase0-b02-before-r4281.b34EYs/` 保留。
+- 剩余/下一步：比较新旧PDF各299页渲染结果；为本次attempt准备16个review workitem。复用像素完全一致页面的已有检查；对变化页与候选/警告页复查高分辨率，并完成尚缺的2020理科79页。随后登记取消题失败及警告处理、finalize、报告/门禁、构建中间物清理并分阶段提交。
+- 成本：OCR与外部模型/API均为0；实际Codex Token/费用未知。
