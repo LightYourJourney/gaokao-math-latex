@@ -114,9 +114,57 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
                  str(pdf), '-'],
                 check=True, capture_output=True, text=True,
             ).stdout
+            previous_page = subprocess.run(
+                [pdftotext, '-f', str(last_page - 1), '-l', str(last_page - 1),
+                 str(pdf), '-'],
+                check=True, capture_output=True, text=True,
+            ).stdout
         self.assertEqual([], result['record']['problems'])
-        self.assertIn('正切和角公式给出', extracted)
+        self.assertIn('三数成等比', previous_page)
+        self.assertIn('正切和角公式', extracted)
         self.assertIn('答案（2）', extracted)
+
+    def test_q30_print_solution_heading_is_not_orphaned_at_page_bottom(self):
+        manifest = json.loads((PROJECT / 'source-manifest.json').read_text(encoding='utf-8'))
+        paper = next(p for p in manifest['papers']
+                     if p['paper_id'] == 'gk-1989-regular-guangdong-science')
+        with tempfile.TemporaryDirectory(prefix='gk1989-print-layout-') as temporary:
+            root = Path(temporary)
+            project_copy = root / 'docs' / 'exams' / 'math-gaokao-latex'
+            project_copy.mkdir(parents=True)
+            shutil.copytree(PROJECT / 'common', project_copy / 'common')
+            shutil.copytree(
+                PROJECT / paper['project_dir'],
+                project_copy / paper['project_dir'],
+                ignore=shutil.ignore_patterns('build', 'receipts', '.work'),
+            )
+            toolchain = build_projects.resolve_toolchain()
+            result = build_projects.build_target(
+                root,
+                paper['project_dir'],
+                '印刷版',
+                toolchain,
+            )
+            pdf = root / result['record']['pdf']['path']
+            pdftotext = next(tool['path'] for tool in toolchain['tools']
+                             if tool['name'] == 'pdftotext')
+            extracted = subprocess.run(
+                [pdftotext, '-layout', str(pdf), '-'],
+                check=True, capture_output=True, text=True,
+            ).stdout
+        self.assertEqual([], result['record']['problems'])
+        pages = extracted.split('\f')
+        q30_page = next(i for i, page in enumerate(pages)
+                        if '第五题（原卷：五）' in page)
+        q30_content_lines = [
+            line.strip() for line in pages[q30_page].splitlines()
+            if line.strip() and not line.strip().startswith('——第 ')
+        ]
+        self.assertNotEqual('解析', q30_content_lines[-1])
+        self.assertTrue(any(
+            '解析' in page and '令 t' in page
+            for page in pages[q30_page:]
+        ))
 
     def test_vector_figure_sources_have_valid_text_and_q25_intercepts(self):
         figures = {path.name: path.read_text(encoding='utf-8')
