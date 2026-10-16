@@ -5800,3 +5800,12 @@
 - 剩余任务：检查点提交后运行官方 `finalize-batch-checked`，核验 review receipt、报告、issue ledger 与 manifest；再运行本卷最终门禁并提交回执阶段。整卷仍受 `ISSUE-0778/0797`（第1(25)源图缺失）、`ISSUE-1053/1054`（第1(8)/(9)源符号）、`ISSUE-1055/1056`（第1(20)语义及答案组冲突）及 `ISSUE-1082`—`ISSUE-1084`（第2/5题方框运算符）等开放问题阻塞。
 - 下一步：将本阶段源码、构建与进度作为本地 checkpoint 提交（不 push）；在 clean worktree 上完成并验证官方视觉失败登记，接着更新进度和本地提交。不得把本卷记为验收完成，也不得重复转录已核对的六题。
 - 成本：0次OCR、0次外部模型/API调用；使用本地 XeLaTeX、Poppler 与图像 SHA 进行增量重建/复核。Codex Token/费用不可见，不估算。
+
+### phase2-b59：1986 广东理科当前视觉回执登记与阶段结论（2026-10-16）
+
+- 已完成：在检查点提交 `8ea230a7` 后，官方 `finalize-batch-checked` 成功登记 attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee` 的四版视觉回执和报告；事务 revision `4314`，自动 Git 提交 `1f3d03f0`。最终报告为 `VISUAL_FAILED`，记录61页与4个失败检查：试题/解析/简答版第5页、印刷版第4页均为第1(25)题固定源 A—E 图形区缺失，登记为 `ISSUE-1085`—`ISSUE-1088`；不补画、不把来源缺陷伪装成排版通过。
+- 修改文件：官方事务更新该卷 `receipts/review.json`、`receipts/build.json`、`source-manifest.json`（revision 4314）、`missing-issues.md`、`reports/phase2-b59.md`；本进度随后追加本结论。正式报告注明构建为 `compiled_pending_review`，复核状态 `failed`。
+- 验证：`review_receipts.py check-batch` 按预期返回 `VISUAL_FAILED`；`build_projects.py validate-receipts --require-final` 返回 `PENDING_REVIEW`（1卷，0 stale/invalid/missing），因此门禁未放行；provenance、source manifest、issue ledger 与 `git diff --check` 均通过。此前本阶段 `test_1986_guangdong_science_layout.py` 为4/4、`test_review_receipts.py` 为66/66通过。最终回执明确逐页状态并绑定当前 PDF SHA。
+- 剩余任务：该卷不能标为验收完成。需取得包含原图的可信同版题源或权威勘误，方可重新核查第1(25)题图形；另有 `ISSUE-0778/0797`、`ISSUE-1053`—`ISSUE-1056`、`ISSUE-1082`—`ISSUE-1084` 的题源字形/语义问题仍开放。未完成题源核实前，当前编译件与失败回执保留为诚实状态，不重复OCR或臆造内容。
+- 下一步：保存本进度并本地提交；等待可靠的同版图形/符号来源后再做该卷定向修订与重建。此阶段视觉检查已登记，不重复本轮61页复核。
+- 成本：本阶段无OCR或外部模型/API调用；仅本地 PDF/PNG 复核与官方验证器。Codex Token 与费用未知，不估算。
