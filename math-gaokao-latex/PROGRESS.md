@@ -5763,3 +5763,11 @@
 - 剩余任务：旧 review 与 ignored 工作项绑定 attempt `4282128a…`，不得沿用。还需为新 attempt 准备四版工作项、核对当前60页/480项视觉门禁并复核来源已知问题；视觉结果登记后再决定是否能关闭该卷。固定来源缺失的第1(25)题图形、第8/9题选项乘法符号方框等仍保持待核，禁止臆补。
 - 下一步：运行官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b59`，核验四份工作项绑定新 attempt 和 PDF SHA；然后逐页复核，不把旧 attempt 状态搬迁到新回执。
 - 成本：0次OCR、0次外部模型/API；本阶段仅做本地源码一致性检查、XeLaTeX/latexmk构建和回执验证。Codex Token 与实际费用不可见，不估算。
+
+### phase2-b59：1986 广东理科当前构建的视觉工作项准备（2026-10-16）
+
+- 已完成：官方 `review_receipts.py prepare-batch` 为 attempt `9a280c96-45bc-483c-8418-29805baeeb07` 准备四版工作项，覆盖试题7、解析26、简答8、印刷19页，共60页/480项；四份均为 pending，未搬迁旧 attempt 的既有结论。
+- 修改文件：仅 ignored `.work/phase2-b59/review/{试题版,解析版,简答版,印刷版}/gk-1986-regular-guangdong-science.json` 与本进度；正式题面、构建回执、review回执和PDF均未改。
+- 验证：四份工作项的 paper_id、attempt、PDF路径、PDF SHA、页数均与当前 build receipt 一致；页码逐版连续覆盖，每页八项完整，480项全部 pending。
+- 剩余/下一步：逐页检查当前60页八项视觉要求；对原卷第8/9题缺字、第12/15题重复选项标签、第25题图形空白等已知来源限制保持忠实，并按实际页面登记失败；复核后再走官方 finalization。
+- 成本：无OCR、外部模型/API或编译；仅本地回执绑定核对。Codex Token 与费用未知。
