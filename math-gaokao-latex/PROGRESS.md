@@ -4,12 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
-## 1977 北京文理卷：回执失效审计（2026-10-16）
+## 1977 北京文理卷：重建与答案修正（2026-10-16）
 
-- 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。重建前8份正式 PDF 均存在并逐一匹配旧 build receipt SHA-256；文科16页、理科23页，共39页。旧 review receipt 为 `passed`、覆盖312项检查（文科128、理科184）；未发现该批可复用的 `.work` 页面图像。随后完成正式重建：文科 attempt `a13a2333-a766-4d50-81cd-23627021b1ca`，理科 attempt `1d6f9519-3714-4c3d-90eb-604ef7a9e992`，8版均成功、共39页；错误、缺字、未解析引用、Overfull 均为0。
-- 修改文件：本进度文件、两卷 `receipts/build.json`、`source-manifest.json`。未改题面或答案，未运行 OCR/API。
-- 验证：`source_manifest.py validate` 通过；build receipt 校验为 `OK`、2卷 `pending`、0 stale/missing。新旧8份 PDF 的二进制哈希均不同；但两卷 TeX dependency tree 与旧 receipt 完全一致，toolchain fingerprint 也一致。旧 PDF/栅格未在项目 `.work` 中留存，因此不能据哈希或旧 review receipt 声称当前 PDF 已复核；需要对当前正式 PDF 实际复核。
-- 剩余/下一步：对当前39页重新渲染并逐页做视觉校样，保留页级证据，再完成当前 review receipt；旧312项判断不得直接复制。Token/费用未知。
+- 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。重建前8份正式 PDF 均存在并逐一匹配旧 build receipt SHA-256；文科16页、理科23页，共39页。旧 review receipt 为 `passed`、覆盖312项检查（文科128、理科184）；未发现该批可复用的 `.work` 页面图像。随后完成首轮正式重建：文科 attempt `a13a2333-a766-4d50-81cd-23627021b1ca`，理科 attempt `1d6f9519-3714-4c3d-90eb-604ef7a9e992`，8版均成功、共39页；错误、缺字、未解析引用、Overfull 均为0。该轮因下述答案修正已被取代。
+- 已发现并修正：对新 PDF 的预览发现文科第10题答案摘要与推导矛盾。题面函数为 `y=x^2-4x+3` 与 `y=x-3`，联立得 `(x-2)(x-3)=0`，代回交点为 `(2,-1),(3,0)`。盲核代理独立推导并逐点代回，结论相同。修正源答案要点与合并解析，再按生成链更新两份 LaTeX；未改原题。首轮新 PDF 的视觉复核因此暂停，先完成数学修正。
+- 修改文件：除上述两卷 build receipt 与 `source-manifest.json` 外，本阶段修改 `1977/1977_数学真题_北京文_答案要点.md`、`1977_数学真题_北京文_含解析.md`、文科卷 `answers.tex` / `answers_short.tex`、新增 `tests/test_1977_beijing_arts_math.py` 及本进度文件。此前 build attempts `a13a2333-a766-4d50-81cd-23627021b1ca` / `1d6f9519-3714-4c3d-90eb-604ef7a9e992` 已因本次源答案修正而过期，不能用于最终验收。
+- 验证：新回归测试先对4个源/生成文件观察到预期失败；修正源稿并运行官方生成器后，定向测试通过。`generate_projects.py --check`、`make_short_answers.py --check` 通过；`test_generate_projects.py` 112项、`test_short_answers.py` 52项通过。本次发现的错误仅在答案摘要，完整推导、题面和图稿未改；其余视觉校验尚未完成。当前 PDF 仍须重建，provenance 的第10题答案哈希需重导入。
+- 剩余/下一步：仅刷新文科第10题的答案 provenance（保留其余已核验题目证据），再正式重建 `phase2-b24` 两卷四版本；对修正后 PDF 重新渲染全部39页并完成逐页视觉检查。此前 `.work/review-phase2-b24-20261016/` 是修正前快照，仅供追溯，不作为最终回执证据。OCR/API为0；Token/费用未知。
 
 ## Provenance 全库测试不变量校正（2026-10-16）
 
