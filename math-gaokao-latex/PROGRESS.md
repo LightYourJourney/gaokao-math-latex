@@ -5818,3 +5818,11 @@
 - 全量测试：`python3 -m unittest discover -s math-gaokao-latex/tests` 共1331项，13项跳过，1项失败；唯一失败是既有 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个全库缓存/现场派生状态不一致。此前进度已记该同一测试失败（当时379项）；本次 Q30 局部几何回归与定向测试通过。
 - 剩余/下一步：四版 build 仍为 `compiled_pending_review`；须先提交本检查点使 tracked worktree 干净，再运行官方 `finalize-batch-checked` 登记当前53页视觉回执并核对报告、issue ledger、manifest。即使视觉复核登记通过，`ISSUE-1078`（Q8原句/答案卷型映射未能由固定来源确定）仍阻止整卷关闭；不得把本次构建或图稿修复记作整卷完成。
 - 成本：0次OCR、0次外部模型/API；本地XeLaTeX重建四版、Poppler逐页比较与局部高清复核；Codex Token/实际费用未知，不估算。当前 tracked 检查点尚未提交；不 push。
+
+### phase4-b04：1989 广东理科当前 attempt 正式视觉回执登记（2026-10-16）
+
+- 已完成：官方 `review_receipts.py finalize-batch-checked` 对 attempt `198fb544-7296-40df-8d41-6569beef4a69` 返回 `FINALIZED`，事务 revision `4319`。四版 review 全部 `passed`，覆盖53页/424项，无视觉失败；报告和回执均绑定当前 PDF SHA。`ISSUE-1079`（印刷版孤立标题）与 `ISSUE-1080`（解析版答案孤页）已标记 resolved。
+- 修改文件：官方事务更新 `1989_广东卷_理科/receipts/review.json`、`receipts/build.json`（状态 `succeeded`）、`source-manifest.json`、`missing-issues.md` 与 `reports/phase4-b04.md`；本进度追加本结论。官方事务自身 `committed:false`，这些回执改动待本地提交。
+- 验证：`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts --require-final`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate`、`git diff --check` 全部通过。批次状态为 `closed_with_blockers`，不是 `closed`：`ISSUE-1078` 仍 open，固定来源不能确认Q8题干方位歧义与B型答案卷型映射；paper `production_state` 仍为 `blocked`。
+- 剩余/下一步：提交本次回执事务和进度；等待可信同版说明、题面或权威勘误以处理Q8。无需重做本卷转录或53页视觉检查；若继续其他卷，按manifest队列推进。
+- 成本：0次OCR、0次外部模型/API；仅本地正式构建、渲染与视觉核查；Codex Token及实际费用未知，不估算。本地提交，不 push。

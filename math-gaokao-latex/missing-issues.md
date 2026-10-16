@@ -17717,17 +17717,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "3be951e7d38648baf6c34b00e4f2de9ca2408b1347996adfca0cb7074e1e46d8",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 16,
   "paper_id": "gk-1989-regular-guangdong-science",
   "pdf_sha256": "76d45a603a977b77f44b22101e590ae73b216cda6cc914154b60c4b14563999a",
-  "resume_action": "修正 gk-1989-regular-guangdong-science 的 印刷版 第 16 页 pagination_whitespace（本页末尾仅出现“解析”标题，正文从第17页开始，标题孤行。见当前attempt第16–17页渲染图。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1080
 
 ```json
@@ -17738,17 +17737,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "7c35d895cb5a976b5c1157fff8f18d435ccdce08a60c2e3d33a6542514604225",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 24,
   "paper_id": "gk-1989-regular-guangdong-science",
   "pdf_sha256": "d86c90406bc66c703660f65f98fda512cca6c4752504ab36be7f93518e52412f",
-  "resume_action": "修正 gk-1989-regular-guangdong-science 的 解析版 第 24 页 pagination_whitespace（本页仅有第30题答案（2）框；题干、推导和答案（1）在第23页，形成答案孤页。见当前attempt第23–24页渲染图。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1081
 
 ```json
