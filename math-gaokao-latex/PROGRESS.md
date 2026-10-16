@@ -5845,3 +5845,12 @@
 - 状态边界：题面/短答局部复核不等于整卷验收；全卷 `review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071` 仍开放。未增加转录完成卷数，也未运行 OCR、XeLaTeX 构建或整卷视觉回执。
 - 剩余/下一步：按固定来源逐题复核 Q5—Q6 的题面与短答；保持 Q25 已有盲解结论，不重复盲算；随后继续其余题目并最终走正式 provenance、四版构建及逐页视觉验收流程。
 - 成本：0次OCR、0次外部 API；复用已有 PDF 与页图，2次隔离单题盲解。Codex/代理实际 Token 与费用不可见，不估算。
+
+## 1994 上海卷：Q5—Q6 题面与短答独立复核（2026-10-16）
+
+- 已完成：按固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 经 GitHub Contents API 重新取回来源 PDF，SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`、大小145637字节、5页均与清单一致。目视核对第1页Q5/Q6及第3页印载答案。隔离盲解确认：Q5轴截面等边三角形给出底面半径5 cm、母线10 cm；“整个表面”包括底面，面积75π=240 cm²，费用24元。Q6原定义域x≤−1、值域y≥0，反函数取负支 `y=−√(x²+1)` 且定义域x≥0。均与固定扫描件印载答案一致。
+- 修改文件：`1994_上海卷/来源校对.json` 新增Q5/Q6来源核对及独立推导证据；`tests/test_1994_shanghai_sources.py` 将Q1—Q6复核整理为表驱动测试，覆盖扫描哈希、答案页、盲核方法/结果、Q5总表面积/单位计算和Q6定义域/符号选择；本进度文件。未改题面、答案正文、LaTeX、正式provenance、manifest、issue ledger、构建回执或PDF；`official_answer`仍为null。
+- 验证：新增Q1—Q6测试先因Q5/Q6来源记录仍pending而按预期失败；登记后1994专项测试`16/16`通过，来源JSON可解析，`git diff --check`通过。全库`python3 -m unittest discover -s math-gaokao-latex/tests`运行1332项：1318通过、13跳过、1失败；唯一失败仍为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个全库缓存状态与现场派生状态不一致，与此前已记录的问题相同。
+- 状态边界：这是Q5/Q6局部题面与短答复核，不是新增试卷转录或整卷验收；全卷`review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071`仍开放。未运行OCR、XeLaTeX构建或整卷视觉回执。
+- 剩余/下一步：按固定来源继续核对Q7—Q8题面与短答；保持已完成的Q25盲解结论，不重复盲算。之后继续其余题目、正式provenance、四版构建和逐页视觉验收。
+- 成本：0次OCR、0次聊天模型/API调用；1次固定来源GitHub Contents API取回、2页本地渲染、2次隔离单题盲解。Codex/代理实际Token及费用不可见，不估算。

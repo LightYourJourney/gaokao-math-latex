@@ -44,8 +44,8 @@
     {"question_number": 2, "question_id": "gk-1994-shanghai-q002", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 3, "question_id": "gk-1994-shanghai-q003", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 4, "question_id": "gk-1994-shanghai-q004", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
-    {"question_number": 5, "question_id": "gk-1994-shanghai-q005", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
-    {"question_number": 6, "question_id": "gk-1994-shanghai-q006", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
+    {"question_number": 5, "question_id": "gk-1994-shanghai-q005", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
+    {"question_number": 6, "question_id": "gk-1994-shanghai-q006", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 7, "question_id": "gk-1994-shanghai-q007", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 8, "question_id": "gk-1994-shanghai-q008", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 9, "question_id": "gk-1994-shanghai-q009", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
@@ -152,6 +152,40 @@
       "independent_review_details": {
         "method": "blind solution from the question text only; printed answer withheld",
         "result": "independently derived x=4, rejected x=-1 by the domain x>1, and verified both logarithms equal 1 at x=4",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q005",
+      "method": "cone-total-surface-area-cost",
+      "derivation": "轴截面为边长10 cm的等边三角形，底边为底面直径，故 r=5 cm、l=10 cm；总表面积 πr²+πrl=25π+50π=75π cm²；取 π=3.2，75×3.2=240 cm²，费用0.10×240=24元。",
+      "derived_answer": "24",
+      "source_printed_answer": "24",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived r=5 cm and l=10 cm; included base and curved surface for 75π cm², used π=3.2 to get 240 cm² and cost 24 yuan; noted side-only coating would instead cost 16 yuan",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q006",
+      "method": "inverse-function-domain-range",
+      "derivation": "原函数定义域 x≤-1、值域 y≥0；由 y²=x²−1 且原输入 x≤-1，反解取负根 x=−sqrt(y²+1)；交换变量得反函数 y=−sqrt(x²+1)，定义域 x≥0。",
+      "derived_answer": "y=-\\sqrt{x^2+1}\\ (x\\ge0)",
+      "source_printed_answer": "y=-\\sqrt{x^2+1}\\ (x\\ge0)",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived f^{-1}(x)=-sqrt(x^2+1) on x≥0 from the original range [0,+infinity) and the negative branch forced by x≤-1",
         "date": "2026-10-16"
       },
       "official_answer": null,
