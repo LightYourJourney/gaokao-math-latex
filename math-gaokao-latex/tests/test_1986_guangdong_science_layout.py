@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -69,9 +70,16 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
 
     def test_question_paper_does_not_disclose_solutions_in_editorial_notes(self):
         self.assertEqual([], self.result["record"]["problems"])
-        self.assertNotIn("答案表对应", self.extracted)
-        self.assertNotIn("按题意解释为乘法", self.extracted)
-        self.assertIn("符号含义待核", self.extracted)
+        compact = re.sub(r"\s+", "", self.extracted)
+        self.assertTrue("答案表对应" not in compact, "question PDF leaks answer-key mapping")
+        self.assertTrue("按题意解释为乘法" not in compact, "question PDF guesses the missing operator")
+        self.assertTrue("具体符号待核" in compact, "question PDF omits uncertainty status")
+
+    def test_each_unreadable_source_operator_is_attributed_to_its_question(self):
+        compact = re.sub(r"\s+", "", self.extracted)
+        for marker in ("第2题（2）", "第2题（9）", "第5题（2）"):
+            with self.subTest(marker=marker):
+                self.assertTrue(marker in compact, f"missing uncertainty note: {marker}")
 
     def test_last_question_page_keeps_all_of_question_five_with_question_six(self):
         question_six_pages = [
@@ -80,9 +88,10 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
         ]
         self.assertEqual(1, len(question_six_pages))
         final_question_page = question_six_pages[0]
-        self.assertIn("试用 an−1", final_question_page)
-        self.assertIn("用数学归纳法证明", final_question_page)
-        self.assertIn("（3）求", final_question_page)
+        compact = re.sub(r"\s+", "", final_question_page)
+        self.assertTrue("试用an−1" in compact, "question 5 part 1 moved off the final page")
+        self.assertTrue("用数学归纳法证明" in compact, "question 5 part 2 moved off the final page")
+        self.assertTrue("（3）求" in compact, "question 5 part 3 moved off the final page")
 
 
 if __name__ == "__main__":

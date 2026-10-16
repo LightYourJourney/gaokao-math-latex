@@ -17769,3 +17769,54 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1082
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第4页第2题（2），tgθ 与 secθ 之间显示方框字形，扫描图不能确定原运算符。题面保留 □，不以答案解释代替源字形。",
+  "fingerprint": "496a2e23c7e5e09a2a5fd2574d55774fb4de149b5acfd7715f2a246cab8c811a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q02-(2)",
+  "resume_action": "取得清晰同版试题或官方勘误，确认第2题（2）极坐标方程中的原印运算符；确认前保留方框，不把答案页的解释冒充为题面字形。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1083
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第5页第2题（9），两个三角函数之间显示方框字形，扫描图不能确定原运算符。题面保留 □，不据解题推理还原题面字形。",
+  "fingerprint": "4f603dff8adcc57972f4efef47ecfd7b6c7c673a4d23b09a1dfb46cd067f5b27",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q02-(9)",
+  "resume_action": "取得清晰同版试题或官方勘误，确认第2题（9）方程中两个三角函数之间的原印运算符；确认前保留方框，不据解题推理还原题面字形。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1084
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第5页第5题（2），求和恒等式分子中的两个三角函数之间显示方框字形，扫描图不能确定原运算符。此前转录省略了该可见字形，现已补为 □ 并标待核；未据常见恒等式猜写为乘号。",
+  "fingerprint": "e2e6147cc4b1a066c36cde7112dda47e5486869428ad2daaffa8259968fbdd14",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1986-regular-guangdong-science",
+  "question_id": "gk-1986-regular-guangdong-science-q05-(2)",
+  "resume_action": "取得清晰同版试题或官方勘误，确认第5题（2）求和恒等式分子中两个三角函数之间的原印运算符；确认前保留方框，不把相邻函数的常见乘积写法当作原字形。",
+  "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

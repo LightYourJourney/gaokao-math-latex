@@ -5781,3 +5781,12 @@
 - 执行纠偏：开始时把进度文件误按仓库根路径读取（实际位于 `math-gaokao-latex/PROGRESS.md`），只读命令未找到文件且未改动；随后按实际路径恢复。生成器检查命令必须带 `--batch`/`--paper` 范围，避免无范围的 usage 失败。
 - 剩余/下一步：按项目官方流程刷新并复核本卷 provenance，确认题目来源/哈希后再运行单卷 formal build；为新 attempt 重新准备四版工作项，复核新 PDF 页面并登记回执、报告与门禁。当前旧 attempt `9a280c96-45bc-483c-8418-29805baeeb07` 的60页视觉检查不能代替新 attempt 的检查。
 - 成本：本阶段无OCR、外部模型/API调用；新增测试使用本地 XeLaTeX/Poppler 临时构建。Codex Token/费用不可见，不估算。
+
+### phase2-b59：1986 广东理科固定来源方框字形补录与解析标注（2026-10-16）
+
+- 已完成可独立验证的子阶段：重新核验固定来源 PDF（SHA-256 `ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24`）后，确认第2题（2）、第2题（9）、第5题（2）各有原印方框字形，扫描件不能判定其运算符；第5题（2）原转录漏掉了可见方框，现已补录。解析中按乘积求解之处明确标为解题假设，不再冒充题面字形。将第5题与第6题的分页回归约束加入源稿。
+- 修改文件：1986广东理科试题、解析正文、答案要点及含解析稿；该卷生成的 `questions.tex`、`answers.tex`；`missing-issues.md` 新增 `ISSUE-1082`—`ISSUE-1084`；`tests/test_1986_guangdong_science_layout.py`；本进度文件。六题转录主体未重做。
+- 验证：真实 XeLaTeX/Poppler 集成回归 `3/3` 通过；`solution_sources.py check-batch`（6题）、`generate_projects.py --check`（1卷）、`issues.py validate`、`git diff --check` 均通过。真实 PDF 回归确认三个未决符号均有归属说明，且第5题三个小问与第6题保留在同一末页。
+- 门禁与剩余：源文件哈希已变化，既有 provenance 和 formal build attempt 不再适用。本子阶段尚未刷新 provenance、正式重编四版、为新 attempt 逐页复核或登记回执；因此整卷仍未验收，也不能复用旧 attempt 的60页视觉结论。新登记的三个来源歧义问题继续阻塞整卷完成。
+- 下一步：更新并核对本卷 question-review provenance，再按官方流程单卷 formal build；为新 PDF attempt 建立四版复核项，检查当前 PDF 后登记视觉结论。此项源码/问题登记子阶段已通过针对性验证，可先单独本地提交，不 push。
+- 成本：本阶段0次OCR、0次外部模型/API调用；运行本地 PDF 集成构建约3秒。Codex Token 与费用未知，不估算。
