@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 全库构建回执失效根因定位（2026-10-16）
+
+- 已完成：对上次全库测试的 provenance 状态失败做只读重算。281 套、147 批次中，`check_batch` 报 379 条缓存/现场状态差异（234 条 paper、145 条 batch）；不是 379 个 provenance 缺文件。279 套有 build receipt，另有 1990 广东理科与 1994 上海两套缺回执。
+- 根因：279 份现存回执全部因 generation input tree 变化而 stale；其中 258 份仅此原因，21 份还同时有工具链指纹变化。逐回执比较发现，共同变化为 `tools/make_short_answers.py`（279/279），另有 `2017-2026/tools/md2tex.py`（270/279）。回执把生成器源码纳入依赖树，故不能通过直接改 manifest 状态消除失效。
+- 已完成的受控样本：对 1952 全国卷正式重建，build attempt=`cfb45a3c-e837-4210-ad37-90509a378fdc`；四版均成功。新旧PDF二进制哈希不同，但当前渲染与既存视觉证据逐像素文件哈希一致：32/32页在120dpi相同，4个候选页及印刷版警告页在200dpi为5/5相同。只在新的 ignored `.work` 子目录生成工作项，依据像素同一性和完整旧批注重绑定复核，不覆盖旧审查文件。事务 finalize 后 `phase1-b09` 为 `closed`，manifest revision=4225。
+- 修改文件：1952卷 `receipts/{build,review}.json`、`reports/phase1-b09.md`、`source-manifest.json` 与本进度文件。未改题面/答案；PDF在ignored build目录重建，未运行OCR或外部模型。
+- 验证：正式构建4/4通过；`source_manifest.py validate`、该卷 `build_projects.py validate-receipts --require-final`、`review_receipts.py check-batch` 和 `provenance.py check-batch` 均通过（build 1 succeeded、0 stale/missing/pending；review `FINALIZED`；provenance `OK`）。全库回执快照更新为1 current、278 stale、2 missing；共同生成器依赖变更仍影响其余卷。前一轮全库单测的3个失败只在1952修复前观测，尚未重跑全库，不声称已消失。OCR/API为0；Codex Token/费用未知。
+- 剩余/下一步：其余278份 stale 回执须逐批正式重建，并基于当前PDF渲染相同的强证据复核/重绑定；1990广东理科、1994上海仍缺build receipt且各有来源/数学门禁，不得直接构建放行。随后重跑相关单测和全库状态审计。
+
 ## 1994 上海卷：Q25 独立盲核与答案来源分层（2026-10-16）
 
 - 已完成：独立复核者只收到固定扫描件第25题题面裁剪图，没有看到来源解答或主会话推导；其从题面坐标独立得到相同的分段面积与单调区间。将Q25答案明确标为项目推导且经独立复核；逐字保留固定来源所印第二支 `t≥2` 及其遗漏区间 `[1/2,2)`，不称官方答案。同步解析稿YAML来源字段，避免把Q25误归入“来源解答整理且待独立复核”。
