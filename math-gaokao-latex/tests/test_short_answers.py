@@ -440,6 +440,19 @@ class RenderTests(unittest.TestCase):
         self.assertIn(notice, text)
         self.assertNotIn("答案为编写者独立推导", text)
 
+    def test_1994_source_answer_threshold_is_rendered_as_math_not_unicode_text(self):
+        text = render_short_answers(
+            TITLE,
+            ANSWER_KEY_PATH,
+            INDEX_METADATA[PROJECT_DIR]["structure"],
+            self.answers,
+            usage_notice=make_short_answers.SHORT_ANSWER_NOTICE_OVERRIDES[
+                "gk-1994-shanghai"
+            ],
+        )
+        self.assertIn("$t\\ge2$", text)
+        self.assertNotIn("≥", text)
+
     def test_a_choice_answer_that_is_not_a_letter_is_a_hard_error(self):
         answers = dict(self.answers)
         answers[1] = "$1$"

@@ -5614,3 +5614,12 @@
 - 验证：主会话目视对照固定来源第2页；Pauli独立只读核对同一题面，未提供答案页且未解题，未发现差异。该核验只证明Q25转录忠实，不证明印刷答案正确，也不关闭现存答案冲突。
 - 剩余/下一步：建立并导入完整三角色逐题provenance；`ISSUE-1071`所记来源解答漏掉`[1/2,2)`仍保持open；完成四版XeLaTeX正式构建、逐页视觉验收，并重新运行全库测试、定位此前未取得最终退出状态的失败。1994卷仍未完成，不得登记为closed。
 - 成本：0次OCR、0次外部模型/API；Codex Token和子代理用量不可见，不估算。
+
+#### 1994 上海卷：四版预览重编、图稿检查与简答版缺字符修复（2026-10-16）
+
+- 已完成：非正式 smoke 构建重编试题版、解析版、简答版、印刷版，页数依次为5、19、7、14；六张160dpi预览覆盖试题版/解析版/印刷版中含Q11、Q23图稿的页面。Q11标记位置、Q23边线/虚线和顶点相对位置在预览中可辨，无裁切或溢出；初看P/A标签关系似反，经核TikZ点坐标及原图后确认为标签偏移，几何坐标关系正确。
+- 缺陷修复：首轮构建发现简答版说明文字中的原始Unicode`≥`触发Latin Modern缺字。新增回归测试先失败，再将生成器说明改为数学模式`$t\ge2$`，用官方生成器重写`answers_short.tex`，复编后四版均无编译错误、缺字、Overfull或未解析引用。构建回执未登记，因整卷provenance仍未完成。
+- 修改文件：`tools/make_short_answers.py`、生成文件`1994_上海卷/answers_short.tex`、`tests/test_short_answers.py`、`tests/test_1994_shanghai_sources.py`及本进度。四份预览PDF与六张PNG留在忽略的build/`.work/`目录；未改题面或推导。
+- 验证：简答生成器测试52/52、1994来源测试10/10、1994数学测试5/5；`solution_sources.py check-batch`（26题）、`make_short_answers.py --check`、`make_editions.py --check`通过；四版smoke构建成功且日志缺字清单为空。全库测试`unittest discover -s tests`完成1319项，FAILED（3项，13项跳过）：1989广东理科Q30的PDF文本断言失败；`test_provenance.LiveRepositoryTests.test_no_paper_advances_beyond_planning_without_provenance`失败；`test_the_cached_states_match_the_recomputed_ones`报告379个状态不匹配。后两项为全库状态不一致，尚未进一步定位；这些测试依赖范围不在本轮修改文件内，但不能据此断言其属于基线。
+- 清理与剩余：`clean-build-intermediates --dry-run`因`gk-1994-shanghai`缺provenance而零删除；按项目门禁不绕过。现存build目录仍有`.aux/.fdb_latexmk/.fls/.log/.out/.xdv/diagnostics`，四个PDF保留；待provenance完成后用官方清理器复核并执行。仍需登记三角色逐题provenance、保留并处置`ISSUE-1071`冲突、完成四版全部页面视觉审查/正式回执，并定位全库三项失败；本卷不算完成。
+- 成本：0次OCR、0次外部模型API；另有1次Q25只读来源独立审阅。实际Codex/子代理Token与费用不可见，不估算。
