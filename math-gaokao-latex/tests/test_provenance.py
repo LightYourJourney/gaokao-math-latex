@@ -1811,16 +1811,26 @@ class LiveRepositoryTests(unittest.TestCase):
         self.assertEqual(self.provenance_papers(), expected)
 
     def test_no_paper_advances_beyond_planning_without_provenance(self):
-        """状态不得先于证据：离开初始/计划态的卷必有 provenance 文件。
+        """普通状态不得先于 provenance；有登记阻塞项的 planned 卷可提前标记 blocked。
 
         新转录卷注册时先进入 `planned`，随后才由三角色工作流建立 provenance；把
-        `planned` 也视为已推进会让合法注册事务在证据尚未导入时立即自相矛盾。
+        `planned` 也视为已推进会让合法注册事务在证据尚未导入时立即自相矛盾。状态机还
+        明确允许新卷在首份 provenance 导入前因阻塞性 issue 进入 `blocked`；这种情况必须
+        保留从 planned 阻塞的来源、issue 引用和恢复动作，不能泛化为其他状态的豁免。
         """
         advanced = {
             paper["paper_id"] for paper in self.manifest["papers"]
             if paper["production_state"] not in ("legacy_unverified", "planned")
         }
-        self.assertLessEqual(advanced, self.provenance_papers())
+        missing_provenance = advanced - self.provenance_papers()
+        blocked_before_provenance = {
+            paper["paper_id"] for paper in self.manifest["papers"]
+            if paper["production_state"] == "blocked"
+            and paper.get("blocked_from") == "planned"
+            and paper.get("issue_ids")
+            and paper.get("resume_action")
+        }
+        self.assertLessEqual(missing_provenance, blocked_before_provenance)
 
     def test_the_generated_artifacts_are_current(self):
         for paper in self.manifest["papers"][:2]:

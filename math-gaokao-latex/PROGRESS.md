@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## Provenance 全库测试不变量校正（2026-10-16）
+
+- 已完成：复现并修正 `test_no_paper_advances_beyond_planning_without_provenance` 的过宽断言。状态机允许新卷在首份 provenance 导入前因有效阻塞 issue 从 `planned` 进入 `blocked`；当前唯一两个实例为 1990 广东理科、1994 上海，均有 `blocked_from=planned`、issue 引用和恢复动作。测试现在只豁免这类有明确登记的初始阻塞，不豁免其他无 provenance 的推进状态。
+- 修改文件：`tests/test_provenance.py`、本进度文件。没有改 manifest、provenance、题面或答案；未运行 OCR/外部 API。
+- 验证：先观察原测试失败（正是上述两卷）；修正后 provenance 两个关系测试及 `test_status.py` 共47项通过。完整套件 `python3 -B -m unittest discover -s tests`：1320项，13项跳过，现仅余 `test_the_cached_states_match_the_recomputed_ones` 失败，列出379条缓存/现场状态差异；属于尚未重建的旧构建回执及其批次派生状态，不应手改缓存状态。
+- 剩余/下一步：按既定队列逐批重建失效回执并用当前 PDF 重新验证/绑定视觉证据；下一批为 `phase2-b23`（1977 上海文理卷）。其后再复跑全库 provenance 测试与全套测试。OCR/API为0；Codex Token与费用未知。
+
 ## 全库构建回执失效根因定位（2026-10-16）
 
 - 已完成：对上次全库测试的 provenance 状态失败做只读重算。281 套、147 批次中，`check_batch` 报 379 条缓存/现场状态差异（234 条 paper、145 条 batch）；不是 379 个 provenance 缺文件。279 套有 build receipt，另有 1990 广东理科与 1994 上海两套缺回执。
