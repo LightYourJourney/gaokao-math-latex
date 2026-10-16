@@ -5790,3 +5790,13 @@
 - 门禁与剩余：源文件哈希已变化，既有 provenance 和 formal build attempt 不再适用。本子阶段尚未刷新 provenance、正式重编四版、为新 attempt 逐页复核或登记回执；因此整卷仍未验收，也不能复用旧 attempt 的60页视觉结论。新登记的三个来源歧义问题继续阻塞整卷完成。
 - 下一步：更新并核对本卷 question-review provenance，再按官方流程单卷 formal build；为新 PDF attempt 建立四版复核项，检查当前 PDF 后登记视觉结论。此项源码/问题登记子阶段已通过针对性验证，可先单独本地提交，不 push。
 - 成本：本阶段0次OCR、0次外部模型/API调用；运行本地 PDF 集成构建约3秒。Codex Token 与费用未知，不估算。
+
+### phase2-b59：1986 广东理科分页修复、正式重建与当前视觉复核（2026-10-16）
+
+- 已完成可验证子阶段：对印刷版第1页第9题选项跨页进行真实 PDF 回归，新增测试先复现 D/E 两个公式选项不在同页的失败，再在规范题面第9题前加入 `\Needspace{6\baselineskip}` 后通过。仅调整分页，不改题干、数据或答案。按官方流程刷新受影响的题面投影与 provenance，并正式构建 attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`；试题/解析/简答/印刷版全部 succeeded，页数7/26/8/20，共61页。
+- 修改文件：`1986/1986_数学真题_广东理_试题.md`、`1986/1986_数学真题_广东理_含解析.md`、该卷 `questions.tex`、`answers.tex`、`answers_short.tex`、`provenance.json`、`receipts/build.json`、`source-manifest.json`、`missing-issues.md`、`tests/test_1986_guangdong_science_layout.py` 及本进度。此次无重做 OCR；首次构建检查还发现简答投影仍留有旧说明，已用官方生成器刷新并重建。
+- 验证：分页/投影集成测试 `4/4`、`test_review_receipts.py` `66/66` 通过；生成器投影检查、build receipt 校验、provenance 检查、source manifest 校验及 `git diff --check` 通过。四版编译 errors、missing characters、undefined references、overfull 与 build problems 均为0。当前视觉工作项逐页覆盖61页/488项：435 pass、49 not-applicable（答案/解析版的 answer-leak）、4 fail；4个失败均为第1题（25）固定源 A—E 图形区整段空白，当前页码为试题/解析/简答版 p5、印刷版 p4，未臆造图形。其余56页 PNG 与已人工复核的前一 attempt `e8d4d526-030f-4952-9473-9f4280095968` 逐字节相同并保留栅格 SHA；印刷版 p1–5 已按当前图像复看，第9题完整同页。当前页视觉失败不等于整卷通过，来源歧义继续阻塞。
+- 门禁与执行纠偏：官方 `finalize-batch-checked` 首次拒绝且 `committed:false`，原因是该工具要求进入时 tracked 工作树干净；故本条先作已验证内容的本地检查点提交，随后在干净树上重试官方登记。只读检查中曾用错扁平 PNG 文件夹名、manifest 字段和一版 `python -c` 引号，均在写入前失败、未损坏工作项；已按真实文件布局/字段改正。此前把所有页误判为已同 attempt 复核的风险已通过当前 attempt 栅格逐页比对排除：只有印刷版 p1–5 变化并重新目视检查。
+- 剩余任务：检查点提交后运行官方 `finalize-batch-checked`，核验 review receipt、报告、issue ledger 与 manifest；再运行本卷最终门禁并提交回执阶段。整卷仍受 `ISSUE-0778/0797`（第1(25)源图缺失）、`ISSUE-1053/1054`（第1(8)/(9)源符号）、`ISSUE-1055/1056`（第1(20)语义及答案组冲突）及 `ISSUE-1082`—`ISSUE-1084`（第2/5题方框运算符）等开放问题阻塞。
+- 下一步：将本阶段源码、构建与进度作为本地 checkpoint 提交（不 push）；在 clean worktree 上完成并验证官方视觉失败登记，接着更新进度和本地提交。不得把本卷记为验收完成，也不得重复转录已核对的六题。
+- 成本：0次OCR、0次外部模型/API调用；使用本地 XeLaTeX、Poppler 与图像 SHA 进行增量重建/复核。Codex Token/费用不可见，不估算。

@@ -22,7 +22,7 @@
       "printed_number": 1,
       "question_id": "gk-1986-regular-guangdong-science-q01",
       "question_order": 1,
-      "question_text_sha256": "2ac69ae32114b52cd8e47e35d57a301da937c7e5cfb9b1f414d374f991043e67",
+      "question_text_sha256": "47d33d1252ef90f744eb36ed6ec77529278780bbb2e4bcc0c3c6c92602f0bded",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
@@ -46,31 +46,30 @@
         "evidence": "对照固定源第 7—11 页解答并独立复算；答案结论与源表一致。",
         "grade": "A"
       },
-      "answer_sha256": "09d3aaa23491e82701681e467945e9ceb818b9e16c5230271bf2da6db1601f91",
+      "answer_sha256": "a95ab174e7d8ec21cc2aa21232ff027c70614413eaf552921f2b797092950bc2",
       "conflict_status": "none",
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1082",
+        "ISSUE-1083"
+      ],
       "printed_label": "2",
       "printed_number": 2,
       "question_id": "gk-1986-regular-guangdong-science-q02",
       "question_order": 2,
-      "question_text_sha256": "bbd8795ed72586f707c9484aba04044cc72749a779ba356a15b5477759bd58f9",
+      "question_text_sha256": "94516ca91c4081eda45c0c06e0dfdc789596ed6c67ab34b12e43eaafd95991e5",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
-        1,
-        2,
-        3,
         4,
-        5,
-        6
+        5
       ],
       "source_ref": {
         "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e"
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 1—6 页逐题视觉核对；该题题干与可见符号已按源稿保留。",
-        "result": "passed",
+        "evidence": "固定源 PDF SHA-256 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24：第2题（2）位于 PDF 第4页，rho=tg(theta) 与 sec(theta) 间为不可辨方框；第2题（9）位于 PDF 第5页，两个三角函数间为不可辨方框。题面已忠实照录，运算符仍待核。",
+        "result": "uncertain",
         "role": "phase2-b59-question-review-pdf"
       }
     },
@@ -114,7 +113,7 @@
       "printed_number": 4,
       "question_id": "gk-1986-regular-guangdong-science-q04",
       "question_order": 4,
-      "question_text_sha256": "d526813aa392668662e1e743e2ca5046aa4b934b828040792b935eaaaaf20aa0",
+      "question_text_sha256": "96ca182d1f4091e15b807b5f52b9cc68e195878a99ffd3fd8c6c5721583fcf3d",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
@@ -137,12 +136,14 @@
       },
       "answer_sha256": "4c7dd6299d9a5c400775786ccfa6b423cc1de320b84ffd5b117f1b0bf61c6ed7",
       "conflict_status": "none",
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1084"
+      ],
       "printed_label": "5",
       "printed_number": 5,
       "question_id": "gk-1986-regular-guangdong-science-q05",
       "question_order": 5,
-      "question_text_sha256": "6d11cde71395ca117c74c90a2e18130931cd496b76e6adcdf47f340322dd963a",
+      "question_text_sha256": "e05d592657a36e7b9e25242d7779a9c8fc919076dbab9503d77428d08bc78203",
       "reviewer_role": "phase2-b59-answer-blind-review",
       "solver_role": "phase2-b59-answer-solve-independent",
       "source_pages": [
@@ -154,8 +155,8 @@
       },
       "source_sha256": "ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24",
       "transcription_review": {
-        "evidence": "固定源 PDF 第 5—6 页逐题视觉核对；分值及题面转录与扫描页一致。",
-        "result": "passed",
+        "evidence": "固定源 PDF SHA-256 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24：第5题（2）位于 PDF 第5页，求和恒等式分子两个三角函数间存在不可辨方框；此前转录漏录，现已补录为方框并登记待核。整题其余题面已核对。",
+        "result": "uncertain",
         "role": "phase2-b59-question-review-pdf"
       }
     },

@@ -17775,12 +17775,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第4页第2题（2），tgθ 与 secθ 之间显示方框字形，扫描图不能确定原运算符。题面保留 □，不以答案解释代替源字形。",
-  "fingerprint": "496a2e23c7e5e09a2a5fd2574d55774fb4de149b5acfd7715f2a246cab8c811a",
+  "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第4页第2题（2）tgθ 与 secθ 之间、PDF 第5页第2题（9）两个三角函数之间均显示方框字形，扫描图不能确定原运算符。题面分别保留 □，不以答案解释代替源字形。",
+  "fingerprint": "d76dfc85115cc1a59976e70c22f19345e5eb17c43f5f5f7eba2ef0fe68576456",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-science",
-  "question_id": "gk-1986-regular-guangdong-science-q02-(2)",
-  "resume_action": "取得清晰同版试题或官方勘误，确认第2题（2）极坐标方程中的原印运算符；确认前保留方框，不把答案页的解释冒充为题面字形。",
+  "question_id": "gk-1986-regular-guangdong-science-q02",
+  "resume_action": "取得清晰同版试题或官方勘误，确认第2题（2）和（9）两处方框的原印运算符；确认前分别保留方框，不把答案页的解释冒充为题面字形。",
   "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
   "status": "open",
   "type": "transcription-ambiguous"
@@ -17810,10 +17810,10 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "固定源 artifact SHA-256 为 ad1042cc4b8ed8ed08322a37f79995930df446d1c4827c85b96b019cb00cda24（上游路径 普通高考/1986/1986广东理.pdf）；本轮核对 PDF 第5页第5题（2），求和恒等式分子中的两个三角函数之间显示方框字形，扫描图不能确定原运算符。此前转录省略了该可见字形，现已补为 □ 并标待核；未据常见恒等式猜写为乘号。",
-  "fingerprint": "e2e6147cc4b1a066c36cde7112dda47e5486869428ad2daaffa8259968fbdd14",
+  "fingerprint": "d1abd2ac6198f4b3d2f443c477171841171cf4ac1df28af4777bfc1931302934",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-science",
-  "question_id": "gk-1986-regular-guangdong-science-q05-(2)",
+  "question_id": "gk-1986-regular-guangdong-science-q05",
   "resume_action": "取得清晰同版试题或官方勘误，确认第5题（2）求和恒等式分子中两个三角函数之间的原印运算符；确认前保留方框，不把相邻函数的常见乘积写法当作原字形。",
   "source_id": "src-2a7296b77ab3d2d8a4f48ac252e07d6a11c1aa1cbba19955a355b45fccae9e3e",
   "status": "open",

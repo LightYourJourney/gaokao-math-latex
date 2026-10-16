@@ -64,6 +64,17 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
             text=True,
         ).stdout
 
+        cls.print_result = build_projects.build_target(
+            root, sources.project_dir, "印刷版", toolchain
+        )
+        print_pdf = root / cls.print_result["record"]["pdf"]["path"]
+        cls.print_extracted = subprocess.run(
+            [pdftotext, "-layout", str(print_pdf), "-"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+
     @classmethod
     def tearDownClass(cls):
         cls.temporary.cleanup()
@@ -92,6 +103,25 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
         self.assertTrue("试用an−1" in compact, "question 5 part 1 moved off the final page")
         self.assertTrue("用数学归纳法证明" in compact, "question 5 part 2 moved off the final page")
         self.assertTrue("（3）求" in compact, "question 5 part 3 moved off the final page")
+
+    def test_print_version_keeps_question_nine_options_on_one_page(self):
+        self.assertEqual([], self.print_result["record"]["problems"])
+        pages = [
+            re.sub(r"\s+", "", page)
+            for page in self.print_extracted.split("\f")
+            if page.strip()
+        ]
+        question_nine = next(
+            page for page in pages
+            if "（9）要排一张有5个独唱节目" in page
+        )
+        question_nine_block = question_nine.split("（10）")[0]
+        for option in ("（D）P55□P83", "（E）P85□P83"):
+            with self.subTest(option=option):
+                self.assertTrue(
+                    option in question_nine_block,
+                    f"print version splits question 9 {option} across pages",
+                )
 
 
 if __name__ == "__main__":
