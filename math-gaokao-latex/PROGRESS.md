@@ -5690,3 +5690,12 @@
 - 阶段修改文件：四卷 `receipts/build.json`、`source-manifest.json` 与本进度；新PDF和编译中间物在各卷ignored `build/`。题面、答案、解析、图稿及LaTeX内容源均未修改；旧PDF在 `.work/phase0-b02-before-r4281.b34EYs/` 保留。
 - 剩余/下一步：比较新旧PDF各299页渲染结果；为本次attempt准备16个review workitem。复用像素完全一致页面的已有检查；对变化页与候选/警告页复查高分辨率，并完成尚缺的2020理科79页。随后登记取消题失败及警告处理、finalize、报告/门禁、构建中间物清理并分阶段提交。
 - 成本：OCR与外部模型/API均为0；实际Codex Token/费用未知。
+
+### phase2-b70：共享生成器变更后的四版正式重建（2026-10-16）
+
+- 已完成：固定来源、25题来源抽取、题目/简答/版次生成投影检查均通过；旧构建仅因共享生成输入树变化而失效，provenance 内容无哈希冲突。通过官方 formal build 事务刷新当前 attempt 为 `d4b4f66b-a3d2-4428-834c-ad3dedd216c4`（前一 attempt `12c32d5b-4c7e-4604-ae6b-1200ee51facd`）。试题/解析/简答/印刷版共59页，四版均 `succeeded`，批次保持 `compiled_pending_review`。
+- 修改文件：`1997_全国卷_理科/receipts/build.json`、`source-manifest.json`（revision 4286）及本进度；正式构建目录中四版 PDF 更新。题面、答案、解析、TikZ与来源记录均未修改。
+- 验证：`solution_sources.py check-batch`（25题）、该卷 `generate_projects.py --check`、`make_short_answers.py --paper ... --check`、`make_editions.py --paper ... --check`、`source_manifest.py validate`均通过；构建后 `provenance.py check-batch`通过，build validator 为1 pending、0 stale/invalid/missing。四版日志 errors、missing characters、undefined references、overfull及problem均为0。页数/摘要：试题5页 `1e803fda…e827728`；解析27页 `7e48d87f…f2641a`；简答6页 `57706e19…f0adecf`；印刷21页 `18206bbc…193542`。复核状态未通过旧回执继承。
+- 执行纠偏：首次把简答与版次生成检查并行启动，二者争用共享 `RepoLock`，简答检查返回锁冲突；锁持有者消失后改为串行重跑并通过。该冲突由本轮并行检查引起，没有改动内容。
+- 剩余任务：为新 attempt 刷新四份视觉工作项并复核59页/472项，按当前PDF指纹重新登记结论；之后刷新报告、运行门禁、清理中间产物并本地提交。OCR/API为0，Codex Token与费用未知。
+- 下一步：用官方 `review_receipts.py prepare-batch` 建立绑定当前 attempt/SHA 的新工作项；四版分工独立逐页复核，主会话审查结果并负责 finalization。
