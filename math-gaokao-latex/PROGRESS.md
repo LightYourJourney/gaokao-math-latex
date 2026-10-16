@@ -5734,3 +5734,11 @@
 - 登记结果：`review_receipts.py finalize-batch` 返回 `FINALIZED`、无 problems，批次仍为 `closed_with_blockers`，未以版式修正掩盖 Q23(3) 来源缺少待证关系符号（`ISSUE-1072`）和答案待独立核实（`ISSUE-1073`）。`check-batch`、该卷 `validate-receipts --require-final`、provenance `check-batch`、source manifest `validate` 均通过；`git diff --check` 通过。全项目 `report.py check --all` 仍以 exit 4 指出六份其他生成报告不一致：`docs/source-inventory.md`、`report.md`、`README_数学.md`、本项目 `README.md`、`math-gaokao-2017-2026/README.md`、`reports/baseline.md`；这些文件未由本阶段修改，未扩展范围重建。
 - 剩余/下一步：Q23(3)仍须取得独立同版题面或权威勘误以确认待证关系，再重做该小题解答和独立核验；六份全局生成报告的不一致也尚未处理。此次图形版式问题已闭环，可提交本阶段本地变更；不 push。之后按批次进度继续未完成试卷，不重做本卷已通过的 OCR/转录。
 - 成本：0次OCR、0次外部模型/API；对本卷正式版进行本地渲染和局部高清视觉复核；Codex Token 与费用不可见，不估算。
+
+### phase2-b58：1986 广东文史卷共享生成器变更后的正式重建（2026-10-16）
+
+- 已完成可验证阶段：按 manifest 后续队列刷新 `gk-1986-regular-guangdong-arts` 的陈旧正式构建。题源/答案抽取（7题）、LaTeX、简答和版次投影检查全部通过；未改规范题源、答案或图稿。旧 attempt `4f48ddc0-7717-45a0-a040-d69b1602dfa8` 因生成输入树变化失效。
+- 修改文件：本阶段正式构建事务更新 `1986_广东卷_文史类/receipts/build.json` 与 `source-manifest.json`，并新增此进度记录；四版 PDF 和编译中间文件留在忽略的 `build/`。文史卷既有来源限制保持不变：第1题(25) A—E 图形区在固定来源中整段空白（`ISSUE-0777/ISSUE-0793`），第2题(2)乘号位置原件即印为空框；旧 review 对相应页面均登记失败，不据题意臆补。
+- 验证：官方 formal build attempt `8a9f76c8-9a00-4323-a3ba-5c05ef43ab67` 四版 succeeded，页数7/28/8/22、共65页；错误、缺字、未定义引用、Overfull 和 build problems 均为0。`build_projects.py validate-receipts` 为1 pending、0 stale/failed/invalid/missing；`provenance.py check-batch`、`source_manifest.py validate` 通过。一次只读摘要脚本误用了不存在的 `missing_glyphs` 字段，读取 JSON 键后改用实际字段 `missing_characters` 完成核对；没有改动数据。
+- 剩余/下一步：新 PDF 指纹已不同，旧65页视觉结论不得直接沿用；须为 attempt `8a9f76c8-9a00-4323-a3ba-5c05ef43ab67` 刷新工作项、检查当前65页/520项视觉门禁，并保留来源导致的对应失败；随后 finalize、报告/门禁及可用时的中间文件清理，再继续 manifest 队列。当前正式 review 尚未绑定新 attempt。
+- 成本：0次OCR、0次外部模型/API；本阶段仅用 XeLaTeX 本地构建；Token 与费用不可见，不估算。
