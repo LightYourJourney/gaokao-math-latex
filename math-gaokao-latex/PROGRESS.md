@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## phase0-b02：2019/2020 全国Ⅰ卷当前构建视觉复核登记（2026-10-16）
+
+- 已完成：对2019/2020全国Ⅰ卷文理四卷、16版当前PDF完成复核绑定，共299页。当前 attempt 为2019文 `c1e87ea0-b6e5-415c-bedd-06dd86b4f4e2`、2019理 `a45eecf3-e012-4b36-bbd5-eafa15a3c58f`、2020文 `05347335-dc73-471b-8d3b-8d8aba71f895`、2020理 `1afb770e-0e35-483c-bd37-fef3dcb18641`（build revision 4283）。新旧渲染图逐页字节比较299/299完全一致，视觉工具指纹一致；据此复用既有逐页判断。另逐页目检2020理科79页当前联系表，并以200dpi检查试题版p3、解析版p38、简答版p3、印刷版p26，未发现新增视觉问题。
+- 检查结论：2392项检查中2131 pass、256 not_applicable、5 fail、0 pending。全部5项失败均为2020文科第23题：原卷标注“已取消”，按既定用户裁定保留原文并记 `heading_number` 失败；未改题面、答案或解析。2019文理共6条Underfull警告均与当前构建逐字段匹配并保留原视觉豁免。
+- 修改文件：当前批次四卷 `receipts/{build,review}.json`、`source-manifest.json`、`missing-issues.md`、`reports/phase0-b02.md`，以及六个 `report.py render --all` 派生报告投影；本 `PROGRESS.md` 为本阶段记录。试卷题源、答案、LaTeX、PDF均未修改；渲染图与workitem仍是忽略目录 `.work/phase0-b02/` 中的临时资料。
+- 验证：官方 `finalize-batch-checked`（正确 `--work-dir .work`）返回 `VISUAL_FAILED`、revision 4284、batch `compiled_pending_review`，并按精确所有权路径提交诊断回执，提交 `b565d39a`。`build_projects.py validate-receipts --batch phase0-b02`：0 invalid/stale/missing，4 pending review；`source_manifest.py validate`、`provenance.py check-batch`（4卷）、`report.py check --all` 均通过；manifest CSV当前且775行；`test_review_receipts.py` 66项通过。`review_receipts.py check-batch` 返回预期 `VISUAL_FAILED`，只列上述取消题。`git diff --check`通过。
+- 失败命令与原因：首次 checked-finalizer 错把 `--work-dir` 传为 `.work/phase0-b02`，导致路径多拼一层批次名、误走 report-only 并报旧回执 stale；该次校验零修改。改为 `.work` 后正确识别16个工作项并完成事务；此参数语义已核实，恢复时勿重复错误调用。
+- 剩余任务：该批按授权保留的2020文科取消题仍使批次保持 `compiled_pending_review`，不得将其报为视觉通过。中间产物清理器因构建状态未达到 `succeeded` 而安全拒绝（dry-run零删除）；PDF和LaTeX源均保留。
+- 下一步：遵循既定取消题裁定保留失败状态；只有在项目门禁允许时再清理本批构建中间产物，然后按进度文件/manifest队列继续。不要重做已转录内容或将该批伪标为全通过。
+
 ## 1977 北京文理卷：重建与答案修正（2026-10-16）
 
 - 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。重建前8份正式 PDF 均存在并逐一匹配旧 build receipt SHA-256；文科16页、理科23页，共39页。旧 review receipt 为 `passed`、覆盖312项检查（文科128、理科184）；未发现该批可复用的 `.work` 页面图像。随后完成首轮正式重建：文科 attempt `a13a2333-a766-4d50-81cd-23627021b1ca`，理科 attempt `1d6f9519-3714-4c3d-90eb-604ef7a9e992`，8版均成功、共39页；错误、缺字、未解析引用、Overfull 均为0。该轮因下述答案修正已被取代。

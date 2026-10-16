@@ -4,7 +4,7 @@
 - 来源状态：ready 775
 - 试卷总数：**281**；生产状态：blocked 47，compiled 3，complete 231
 - 批次总数：**147**；manifest 状态：closed 117，closed_with_blockers 23，compiled_pending_review 5，planned 2
-- 正式复核门禁：FINALIZED 2，INVALID_OR_STALE 145
+- 正式复核门禁：FINALIZED 2，INVALID_OR_STALE 144，VISUAL_FAILED 1
 - 已编译版本：1116/1116；构建回执状态：compiled_pending_review 8，succeeded 271
 - review 回执状态：failed 4，passed 275
 - 问题总账：1080 条，未解决问题：186，阻塞完成 121。
