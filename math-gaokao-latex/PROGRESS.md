@@ -5826,3 +5826,13 @@
 - 验证：`review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts --require-final`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate`、`git diff --check` 全部通过。批次状态为 `closed_with_blockers`，不是 `closed`：`ISSUE-1078` 仍 open，固定来源不能确认Q8题干方位歧义与B型答案卷型映射；paper `production_state` 仍为 `blocked`。
 - 剩余/下一步：提交本次回执事务和进度；等待可信同版说明、题面或权威勘误以处理Q8。无需重做本卷转录或53页视觉检查；若继续其他卷，按manifest队列推进。
 - 成本：0次OCR、0次外部模型/API；仅本地正式构建、渲染与视觉核查；Codex Token及实际费用未知，不估算。本地提交，不 push。
+
+## 1994 上海卷：Q1—Q2 题面与短答独立复核（2026-10-16）
+
+- 已完成：按来源清单固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 取回 1994 上海 PDF，并校验 Git blob `a5b42d8e3935f34a2d9eeee96f1a3dc66f941663` 与 SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d` 均匹配。主会话目视比对来源页1的 Q1/Q2 与规范题面；两名隔离盲解代理各只收到一道题面、未见答案，分别独立得到 `-2<x<0` 与 `\sqrt7/4`。主会话核对来源页3印载答案表，两个结果均与来源印载一致。
+- 修改文件：`1994_上海卷/来源校对.json`、`tests/test_1994_shanghai_sources.py` 与本进度。新增 Q1/Q2 的题面来源核对证据和独立推导记录；未改题面、答案正文、LaTeX、`source-manifest.json`、正式 provenance、issue ledger、构建回执或 PDF。没有新增题目转录。
+- 验证：新增回归测试先按预期失败（两题仍无来源核对记录），补齐记录后 1994 上海来源/数学测试 `16/16` 通过；来源 JSON 可解析，`git diff --check` 通过。未运行 OCR、LaTeX 构建或整库测试。
+- 状态边界：来源答案仅记录为固定扫描件的“印载答案”，不称认证的官方答案；出版者身份仍未认证。全卷 `review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071` 保持开放；本阶段不构成正式 provenance 导入或整卷验收。
+- 执行纠偏：最初曾派出两项重复 Q25 盲算；核对 `ISSUE-1071` 已有结论后立即中断并关闭，未采纳结果、未写文件；后续只处理进度中仍为 pending 的 Q1/Q2。
+- 剩余/下一步：继续完成其余题目的来源与数学复核及正式 provenance；Q25 的题面来源核对也尚未完成，不重复其已完成的盲算。下一步按固定来源复核 Q3—Q4，并保留未认证/未核内容的 pending 状态。
+- 成本：0次OCR、0次聊天/API；固定来源 PDF 1 次下载、2 页本地渲染、2 次隔离盲解。实际 Codex/代理 Token 与费用不可见，不估算。

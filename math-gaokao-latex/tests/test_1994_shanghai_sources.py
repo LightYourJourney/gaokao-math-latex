@@ -146,11 +146,57 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
+    def test_q1_q2_source_transcriptions_and_short_answers_are_reviewed(self):
+        reviewed = {
+            item["question_number"]: item
+            for item in self.record["question_sources"]
+            if item.get("review_status") == "source-checked"
+        }
+        self.assertEqual(set(reviewed), {1, 2})
+        for number in (1, 2):
+            with self.subTest(question=number):
+                item = reviewed[number]
+                self.assertEqual(item["source_pages"], [1])
+                self.assertEqual(
+                    item["source_review"]["source_sha256"],
+                    self.source["artifact"]["sha256"],
+                )
+                self.assertEqual(
+                    item["source_review"]["method"],
+                    "visual comparison against the pinned fixed scan",
+                )
+                self.assertIn("matches the source scan", item["source_review"]["result"])
+
+        checks = {
+            item["question_id"]: item
+            for item in self.record.get("derived_solution_checks", [])
+        }
+        expected = {
+            f"{SOURCE_ID}:q001": ("-2<x<0", 1),
+            f"{SOURCE_ID}:q002": (r"\dfrac{\sqrt7}{4}", 2),
+        }
+        for question_id, (answer, number) in expected.items():
+            with self.subTest(question=number):
+                check = checks[question_id]
+                self.assertEqual(check["derived_answer"], answer)
+                self.assertEqual(check["source_printed_answer"], answer)
+                self.assertEqual(check["source_answer_page"], 3)
+                self.assertEqual(check["status"], "derived-independently-reviewed")
+                self.assertTrue(check["independent_review"])
+                self.assertIsNone(check["official_answer"])
+                self.assertIn(
+                    "blind solution from the question text only",
+                    check["independent_review_details"]["method"],
+                )
+
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.paper["production_state"], "blocked")
+        self.assertIsNone(self.record["official_answer"])
+
     def test_q25_coordinate_derivation_is_independently_reviewed_but_not_official(self):
         checks = self.record.get("derived_solution_checks", [])
-        self.assertEqual(len(checks), 1)
-        check = checks[0]
-        self.assertEqual(check["question_id"], "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q025")
+        check = next(item for item in checks if item["question_id"].endswith(":q025"))
         self.assertEqual(check["status"], "derived-independently-reviewed")
         self.assertTrue(check["independent_review"])
         self.assertEqual(
