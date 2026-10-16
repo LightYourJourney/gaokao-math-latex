@@ -11,6 +11,13 @@
 - 验证：先观察原测试失败（正是上述两卷）；修正后 provenance 两个关系测试及 `test_status.py` 共47项通过。完整套件 `python3 -B -m unittest discover -s tests`：1320项，13项跳过，现仅余 `test_the_cached_states_match_the_recomputed_ones` 失败，列出379条缓存/现场状态差异；属于尚未重建的旧构建回执及其批次派生状态，不应手改缓存状态。
 - 剩余/下一步：按既定队列逐批重建失效回执并用当前 PDF 重新验证/绑定视觉证据；下一批为 `phase2-b23`（1977 上海文理卷）。其后再复跑全库 provenance 测试与全套测试。OCR/API为0；Codex Token与费用未知。
 
+## 1977 上海文理卷：正式重建完成，视觉复核待绑定（2026-10-16）
+
+- 已完成：重建 `gk-1977-regular-shanghai-arts`（attempt `8c476b42-3fbb-4add-a1ce-7290dfc3bd2a`）与 `gk-1977-regular-shanghai-science`（attempt `c8579937-de95-4299-95c1-106afd57d2e3`）四版 PDF；两卷22页、31页，共53页。所有8版均 succeeded，错误/缺字/未解析引用/Overfull 均为0，PDF文件存在。旧8份PDF均先核验与旧build receipt的SHA-256一致；旧review含53页、424项且全部pass。
+- 修改文件：两卷 `receipts/build.json`、`source-manifest.json` 和本进度；重新生成的PDF保留在各卷 `build/`（按仓库规则被忽略，不入库）。当前状态为 `compiled_pending_review`，不声称批次关闭。
+- 验证：`build_projects.py validate-receipts --batch phase2-b23` 为2卷、0 stale/missing、2 pending、无问题；`source_manifest.py validate` 通过。现存 `.work/rebuild-phase2-b23-2026-10-16/` 有旧/新120dpi 53对、200dpi候选页8对，文件哈希互同，但新页尚未与本次正式attempt建立可信绑定；须以本次正式PDF重渲染核验后才可复用旧逐页判断。中间产物清理 dry-run 被工具安全门拒绝（批次尚 pending review、零删除），待最终复核关闭后再清理。
+- 剩余/下一步：对本次正式PDF逐页渲染并与旧基准比较（53页120dpi、8候选页200dpi）；若完全一致，在独立 `.work` 目录将旧424项复核判断绑定到新attempt，再事务finalize；否则只复核差异页。随后清理XeLaTeX中间文件、复验四版仅余PDF并检查review/provenance。OCR/API为0；Codex Token与费用未知。
+
 ## 全库构建回执失效根因定位（2026-10-16）
 
 - 已完成：对上次全库测试的 provenance 状态失败做只读重算。281 套、147 批次中，`check_batch` 报 379 条缓存/现场状态差异（234 条 paper、145 条 batch）；不是 379 个 provenance 缺文件。279 套有 build receipt，另有 1990 广东理科与 1994 上海两套缺回执。
