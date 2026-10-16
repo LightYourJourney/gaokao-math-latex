@@ -3,27 +3,23 @@
 - 当前结论：`VISUAL_FAILED`
 - 批次闭环：未完成；本诊断不得作为 `closed` 或 `closed_with_blockers` 报告
 - 试卷数：1
-- 审查页数：60
-- 失败检查数：8
+- 审查页数：61
+- 失败检查数：4
 
 ## gk-1986-regular-guangdong-science
 
 - 标题：1986 年·广东卷·理工农医类
 - 项目目录：`1986_广东卷_理工农医类`
-- 构建状态：`compiled_pending_review`；attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`
-- 复核状态：`failed`；时间 2026-10-12T17:58:55+08:00
-- 试题版：7 页；PDF SHA-256 `30c259aa46a2d653cfb5231b6c3ba049c52e30030adbead9927ab3d042fb7a64`
-- 解析版：26 页；PDF SHA-256 `57e78223c9d27d5535d6afbb90626bef7e6c5aa4c14193461ca8ed12a37d3406`
-- 简答版：8 页；PDF SHA-256 `b61e2b892efd5a6a3c9b06fb993c005910ee4d9e62c603aeea1ada9661c4046d`
-- 印刷版：19 页；PDF SHA-256 `3e8c4ddfef6dcbb205cd3ca10dc3c8e93522210f930c575d3ff412fc3664e50a`
+- 构建状态：`compiled_pending_review`；attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`
+- 复核状态：`failed`；时间 2026-10-16T15:29:12+08:00
+- 试题版：7 页；PDF SHA-256 `6112b20ec459e9bf308dc3799cd5a6e08092a39dbc5c30cce2bfe0b27edb5e20`
+- 解析版：26 页；PDF SHA-256 `2f74ade47dd3bfb7d2096cd2dc56f2ee19fcaedf1aec4a4e718e3f0ef6bd40bb`
+- 简答版：8 页；PDF SHA-256 `6093a02b3c15f95e35859c4bf8bbdcdaa7908977a79a5e14c30c90c686f891dd`
+- 印刷版：20 页；PDF SHA-256 `c3796f6c4cd18b219614a21960f18370c5e4d6ff8da5009e8de82645cd67f476`
 
 ## 失败检查
 
-- gk-1986-regular-guangdong-science｜试题版 第 2 页｜`glyph`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；字形可见但原符号不可核，需更清晰同版来源。
-- gk-1986-regular-guangdong-science｜试题版 第 4 页｜`figure_label`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。
-- gk-1986-regular-guangdong-science｜解析版 第 2 页｜`glyph`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。
-- gk-1986-regular-guangdong-science｜解析版 第 4 页｜`figure_label`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。
-- gk-1986-regular-guangdong-science｜简答版 第 2 页｜`glyph`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。
-- gk-1986-regular-guangdong-science｜简答版 第 4 页｜`figure_label`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。
-- gk-1986-regular-guangdong-science｜印刷版 第 2 页｜`glyph`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-1053/1054）：固定源第 2 页第 8、9 小题连接符为缺字方框，现以 □ 忠实呈现；原符号仍不可核。
-- gk-1986-regular-guangdong-science｜印刷版 第 3 页｜`figure_label`｜attempt `4282128a-6c7e-4b68-ab5d-6ac670b3a70c`｜FAIL（ISSUE-0778/0797）：第 25 小题 A—E 图形选项区在固定源中为空白；这是来源缺图，未擅自补画。
+- gk-1986-regular-guangdong-science｜试题版 第 5 页｜`figure_label`｜attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`｜第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。
+- gk-1986-regular-guangdong-science｜解析版 第 5 页｜`figure_label`｜attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`｜第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。
+- gk-1986-regular-guangdong-science｜简答版 第 5 页｜`figure_label`｜attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`｜第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。
+- gk-1986-regular-guangdong-science｜印刷版 第 4 页｜`figure_label`｜attempt `f61761f1-e312-481d-9b1a-c053e38dc3ee`｜第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。
