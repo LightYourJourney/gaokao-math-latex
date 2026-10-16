@@ -4,7 +4,8 @@
   \draw[->] (0,-4.2)--(0,4.2) node[above] {$y$};
   \draw[thick,domain=0:360,smooth,variable=\t]
     plot ({4*cos(\t)},{3*sin(\t)});
-  \draw[thick] (-5,0)--(-1.0,4.0) node[above right] {$y=x+5$};
-  \fill (-1,4) circle (1.3pt) node[above right] {切点};
+  \draw[thick] (-5,0)--(-1.0,4.0)
+    node[pos=0.08,above right] {$y=x+5$};
+  \fill (-3.2,1.8) circle (1.3pt);
   \node[below right] at (3.7,2.7) {$\dfrac{x^2}{16}+\dfrac{y^2}{9}=1$};
 \end{tikzpicture}
