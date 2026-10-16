@@ -5570,3 +5570,12 @@
 - 执行纠偏：项目工具和忽略工作件位于`math-gaokao-latex/`之下；首次按仓库根路径查找失败但未写入，此后均限定在正确项目目录。无其他题卷或用户未跟踪文件被触碰。
 - 剩余/下一步：本卷及`phase4-b07`已关闭，无遗留复核项。下一卷应按项目进度/manifest队列重新核定后启动，不在本阶段扩展批次。
 - 成本：本阶段0次OCR、0次外部模型/API；Codex Token与费用不可见，不估算。
+
+#### 1977 上海文理卷：生成器变更后回执刷新（2026-10-16）
+
+- 已完成：因共享生成器输入变化，仅刷新已完成的`phase2-b23`两卷正式构建和既有视觉回执，不是新转录或题目修订。文科 build attempt=`ed43f04c-2447-4fac-b97c-3cabe4ccd169`，四版22页；理科 attempt=`13917447-8c9f-4d2c-a606-bb66dd337af6`，四版31页；合计53页，构建均成功且无编译错误、缺字、未定义引用或Overfull。批次仍为`closed`。
+- 视觉证据：重建前的PDF SHA-256均与旧回执相符；新旧栅格哈希53/53页（120dpi）完全一致，8/8个候选页（200dpi）也完全一致；既有逐页视觉回执424项检查全部通过，无警告豁免。构建清理工具按dry-run后移除了48个XeLaTeX中间文件，复核两卷build目录只留PDF。
+- 修改文件：两卷`receipts/{build,review}.json`、`reports/phase2-b23.md`、`source-manifest.json`、全库报告投影及目录摘要，以及本进度。题面、答案、解析和图稿均未改；未执行OCR或外部模型/API。
+- 验证：`source_manifest.py validate`、`build_projects.py validate-receipts --require-final`（2卷）、`review_receipts.py check-batch`（`FINALIZED`）、`provenance.py check-batch`（2卷）及`report.py check --all`均通过。全库构建回执快照为16 current、263 stale、2 missing（1990广东理科、1994上海）；这只表示回执当前性，不代表转录完成度或待转录卷数。
+- 剩余/下一步：本次刷新已完成；其余stale/missing回执及转录队列需分别按manifest和进度记录继续核定，不能因本次刷新重复转录已完成题目。
+- 成本：0次OCR、0次外部模型/API；Codex Token与费用不可见，不估算。
