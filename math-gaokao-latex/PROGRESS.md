@@ -5579,3 +5579,12 @@
 - 验证：`source_manifest.py validate`、`build_projects.py validate-receipts --require-final`（2卷）、`review_receipts.py check-batch`（`FINALIZED`）、`provenance.py check-batch`（2卷）及`report.py check --all`均通过。全库构建回执快照为16 current、263 stale、2 missing（1990广东理科、1994上海）；这只表示回执当前性，不代表转录完成度或待转录卷数。
 - 剩余/下一步：本次刷新已完成；其余stale/missing回执及转录队列需分别按manifest和进度记录继续核定，不能因本次刷新重复转录已完成题目。
 - 成本：0次OCR、0次外部模型/API；Codex Token与费用不可见，不估算。
+
+#### 1994 上海卷：恢复全卷审核与盲核准备（2026-10-16）
+
+- 已完成：按`phase1-b24`与`ISSUE-1071`恢复，不重做Q25。确认固定来源`source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65`、SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`，共5页且无可提取文字层；用原卷第1、2页和第3页Q26题面裁剪图准备Q1–Q24、Q26的来源核题/盲解。Q25既有独立复核继续保持非官方项目推导标记。
+- 修改文件：仅本进度文件；复核页图位于忽略的`.work/phase1-b24/source-pages/`，未改源题、答案、解析、LaTeX、manifest或正式回执。已派发三个只读独立任务：Pauli核对Q1–Q24/Q26题面（`01a14254-d244-7473-86cf-4fcf97f5ab5a`），Anscombe盲解Q1–Q20（`01a14254-cf2b-7f61-be04-2ef615597fe2`），Newton盲解Q21–Q24/Q26（`01a14254-cdff-7312-97c3-afd4c2e8fc1a`）；均不得写文件或查看来源答案/解析。
+- 验证：来源文件当前SHA与manifest一致；`solution_sources.py check-batch`（26题）、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`通过；1994来源回归测试8/8通过。0次OCR、0次外部模型API。
+- 执行纠偏：环境未安装`pypdf`，改用已安装的`pdfinfo`/`pdftotext`只读确认5页与扫描状态。首次用`rg --files`列举忽略的`.work/`时返回空，误把空输出当作无既有材料；改用定向`ls`后发现原有Q25页图，确认本轮另生成的第1–3页复核图均留在忽略区，无跟踪文件被误改。今后盘点忽略目录使用显式`ls`或`rg --no-ignore`，不以空枚举断言目录为空。
+- 剩余/下一步：待三项盲核返回后逐题整合；再对照固定来源答案页（仅在盲解封存后）、完成Q1–Q24/Q26数学复核与provenance，随后四版正式构建、逐页视觉验收并处理Q25既有来源冲突。未完成上述门禁前全卷仍为blocked。
+- 成本：本阶段0次OCR、0次外部模型/API；子代理/Codex Token及费用不可见，不估算。
