@@ -5432,3 +5432,12 @@
 - 验证：`build_projects.py validate-receipts --manifest source-manifest.json --paper gk-1991-regular-sannan`返回`OK：1卷`；formal receipt页数与各edition成功状态已逐项核对。构建成功不代表视觉或数学检查已关闭。
 - 剩余/下一步：逐页渲染和检查45页，按8类检查填写工作项，必要时放大复核候选页；随后finalize回执、清理编译中间文件并检查PDF哈希不变。
 - 成本：本阶段0次OCR、0次外部模型/API；Codex Token/费用不可见，不估算。
+
+#### 1991 三南卷：逐页视觉复核与正式关闭（2026-10-16）
+
+- 已完成：试题版4页、简答版6页、解析版19页、印刷版16页，共45页全部完成八项逐页视觉检查（360项）。检查覆盖字形、题号、公式/选项排齐、图形标注、页眉页脚、分页留白、字号及答案泄漏。8张接触表覆盖全页；自动候选页及Q14/Q27图形页另作高分辨率复核。图形适用页10页，其余35页的图形项注明不适用；未发现裁切、重叠、缺图或异常分页。正式 review receipt 已登记，`phase4-b07` 状态为`closed`，manifest revision 4222。
+- 修改文件：新增`1991_三南卷/receipts/review.json`与`reports/phase4-b07.md`；更新本卷`receipts/build.json`、`source-manifest.json`及六份由全库报告工具生成的汇总报告；追加本进度。LaTeX题源和解析未改。构建目录仅保留四版PDF；按项目清理工具删除24个`.aux/.fdb_latexmk/.fls/.log/.out/.xdv`中间文件，四份PDF的SHA-256清理前后相同，全部TeX入口、题文、答案和图稿保留。
+- 验证：`review_receipts.py finalize-batch-checked`返回`FINALIZED`；`review_receipts.py check-batch`通过；`build_projects.py validate-receipts --batch phase4-b07 --require-final`为`OK：1卷`；`source_manifest.py validate`、全库`report.py check --all`、`git diff --check`均通过。首次全库报告检查识别出六份汇总报告过期，执行`report.py render --all`后重查通过。构建PDF哈希逐一比对一致。
+- 执行纠偏：项目工具和忽略工作件位于`math-gaokao-latex/`之下；首次按仓库根路径查找失败但未写入，此后均限定在正确项目目录。无其他题卷或用户未跟踪文件被触碰。
+- 剩余/下一步：本卷及`phase4-b07`已关闭，无遗留复核项。下一卷应按项目进度/manifest队列重新核定后启动，不在本阶段扩展批次。
+- 成本：本阶段0次OCR、0次外部模型/API；Codex Token与费用不可见，不估算。
