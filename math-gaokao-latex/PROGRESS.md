@@ -5836,3 +5836,12 @@
 - 执行纠偏：最初曾派出两项重复 Q25 盲算；核对 `ISSUE-1071` 已有结论后立即中断并关闭，未采纳结果、未写文件；后续只处理进度中仍为 pending 的 Q1/Q2。
 - 剩余/下一步：继续完成其余题目的来源与数学复核及正式 provenance；Q25 的题面来源核对也尚未完成，不重复其已完成的盲算。下一步按固定来源复核 Q3—Q4，并保留未认证/未核内容的 pending 状态。
 - 成本：0次OCR、0次聊天/API；固定来源 PDF 1 次下载、2 页本地渲染、2 次隔离盲解。实际 Codex/代理 Token 与费用不可见，不估算。
+
+## 1994 上海卷：Q3—Q4 题面与短答独立复核（2026-10-16）
+
+- 已完成：复用固定来源 PDF（SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`）及已有页图，目视比对第1页 Q3、Q4 题面；分别以只含单题题干的隔离盲解复核。Q3 由圆心到 y 轴距离得半径2，圆方程为 `(x+2)^2+(y-3)^2=4`；Q4 先限定定义域 `x>1`，换底后解出候选 `4,-1`，仅 `x=4` 合法，并代回验证。两题均与第3页固定扫描件印载答案一致。
+- 修改文件：`1994_上海卷/来源校对.json` 新增 Q3/Q4 题面来源核对及独立推导证据；`tests/test_1994_shanghai_sources.py` 新增 Q3/Q4 回归，并将 Q1/Q2 断言收窄到其负责题目，避免新增已核题导致误报；本进度文件。未改题面、答案正文、LaTeX、正式 provenance、manifest、issue ledger、构建回执或 PDF；`official_answer` 仍为 null。
+- 验证：新 Q3/Q4 测试先因两题尚无来源核对记录而按预期失败；登记后 1994 专项测试 `17/17` 通过，来源校对 JSON 可解析，`git diff --check` 通过。全库 `python3 -m unittest discover -s math-gaokao-latex/tests`：1333 项，13 项跳过，1 项失败；唯一失败仍为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个全库缓存状态与现场派生状态不一致，与此前记录的同一遗留问题相同。
+- 状态边界：题面/短答局部复核不等于整卷验收；全卷 `review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071` 仍开放。未增加转录完成卷数，也未运行 OCR、XeLaTeX 构建或整卷视觉回执。
+- 剩余/下一步：按固定来源逐题复核 Q5—Q6 的题面与短答；保持 Q25 已有盲解结论，不重复盲算；随后继续其余题目并最终走正式 provenance、四版构建及逐页视觉验收流程。
+- 成本：0次OCR、0次外部 API；复用已有 PDF 与页图，2次隔离单题盲解。Codex/代理实际 Token 与费用不可见，不估算。

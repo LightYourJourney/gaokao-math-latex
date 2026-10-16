@@ -152,7 +152,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
             for item in self.record["question_sources"]
             if item.get("review_status") == "source-checked"
         }
-        self.assertEqual(set(reviewed), {1, 2})
+        self.assertTrue({1, 2}.issubset(reviewed))
         for number in (1, 2):
             with self.subTest(question=number):
                 item = reviewed[number]
@@ -183,11 +183,62 @@ class Shanghai1994SourceTests(unittest.TestCase):
                 self.assertEqual(check["source_answer_page"], 3)
                 self.assertEqual(check["status"], "derived-independently-reviewed")
                 self.assertTrue(check["independent_review"])
+                self.assertEqual(
+                    check["independent_review_details"]["method"],
+                    "blind solution from the question text only; printed answer withheld",
+                )
+                self.assertIn(
+                    "independently derived",
+                    check["independent_review_details"]["result"],
+                )
                 self.assertIsNone(check["official_answer"])
                 self.assertIn(
                     "blind solution from the question text only",
                     check["independent_review_details"]["method"],
                 )
+
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.paper["production_state"], "blocked")
+        self.assertIsNone(self.record["official_answer"])
+
+    def test_q3_q4_source_transcriptions_and_short_answers_are_reviewed(self):
+        reviewed = {
+            item["question_number"]: item
+            for item in self.record["question_sources"]
+            if item.get("review_status") == "source-checked"
+        }
+        checks = {
+            item["question_id"]: item
+            for item in self.record.get("derived_solution_checks", [])
+        }
+        expected = {
+            3: (r"(x+2)^2+(y-3)^2=4", "distance-from-center-to-y-axis"),
+            4: ("x=4", "logarithm-domain-and-base-change"),
+        }
+        for number, (answer, method) in expected.items():
+            with self.subTest(question=number):
+                self.assertIn(number, reviewed, f"Q{number} source review is not recorded")
+                item = reviewed[number]
+                self.assertEqual(item["source_pages"], [1])
+                self.assertEqual(
+                    item["source_review"]["source_sha256"],
+                    self.source["artifact"]["sha256"],
+                )
+                self.assertEqual(
+                    item["source_review"]["method"],
+                    "visual comparison against the pinned fixed scan",
+                )
+                self.assertIn("matches the source scan", item["source_review"]["result"])
+
+                check = checks[f"{SOURCE_ID}:q{number:03d}"]
+                self.assertEqual(check["method"], method)
+                self.assertEqual(check["derived_answer"], answer)
+                self.assertEqual(check["source_printed_answer"], answer)
+                self.assertEqual(check["source_answer_page"], 3)
+                self.assertEqual(check["status"], "derived-independently-reviewed")
+                self.assertTrue(check["independent_review"])
+                self.assertIsNone(check["official_answer"])
 
         self.assertEqual(self.record["review_status"], "needs-review")
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")

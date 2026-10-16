@@ -42,8 +42,8 @@
   "question_sources": [
     {"question_number": 1, "question_id": "gk-1994-shanghai-q001", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 2, "question_id": "gk-1994-shanghai-q002", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
-    {"question_number": 3, "question_id": "gk-1994-shanghai-q003", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
-    {"question_number": 4, "question_id": "gk-1994-shanghai-q004", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
+    {"question_number": 3, "question_id": "gk-1994-shanghai-q003", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
+    {"question_number": 4, "question_id": "gk-1994-shanghai-q004", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 5, "question_id": "gk-1994-shanghai-q005", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 6, "question_id": "gk-1994-shanghai-q006", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 7, "question_id": "gk-1994-shanghai-q007", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
@@ -118,6 +118,40 @@
       "independent_review_details": {
         "method": "blind solution from the question text only; printed answer withheld",
         "result": "independently derived sqrt(7)/4 and selected the positive half-angle root from the principal arccos range",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q003",
+      "method": "distance-from-center-to-y-axis",
+      "derivation": "圆与 y 轴 x=0 相切，半径为圆心 C(-2,3) 到 x=0 的距离 |-2|=2；代入圆心式得 (x+2)^2+(y-3)^2=4",
+      "derived_answer": "(x+2)^2+(y-3)^2=4",
+      "source_printed_answer": "(x+2)^2+(y-3)^2=4",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived radius 2 and the same circle equation; confirmed the center and y-axis tangency determine a unique circle",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q004",
+      "method": "logarithm-domain-and-base-change",
+      "derivation": "定义域要求 x>1。由 log_9(x+5)=1/2 log_3(x+5)，原式等价于 2log_3(x-1)=log_3(x+5)，故 (x-1)^2=x+5，候选根为 4、-1；仅 x=4 满足定义域，代回原式两边均为 1。",
+      "derived_answer": "x=4",
+      "source_printed_answer": "x=4",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived x=4, rejected x=-1 by the domain x>1, and verified both logarithms equal 1 at x=4",
         "date": "2026-10-16"
       },
       "official_answer": null,
