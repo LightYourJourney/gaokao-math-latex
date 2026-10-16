@@ -5725,3 +5725,12 @@
 - 验证：官方 `review_receipts.py finalize-batch` 返回 `FINALIZED`；review validator `FINALIZED`、build receipt validator `OK`（1 succeeded、0 stale/failed/invalid/missing）、provenance 检查 `OK`、source manifest 校验通过。视觉审查结论为 passed，但批次维持 `closed_with_blockers`：`ISSUE-1072`（固定题源第23(3)两平面关系符号缺失）与 `ISSUE-1073`（待证关系未知，现有垂直证明仅为条件推论）仍开放；未猜补原题，也未把条件推论登记成正确答案。
 - 剩余/下一步：取得第23(3)的独立同版题面或权威勘误，确认待证关系；随后重做该小题数学解答与独立核验，再按新输入重建和复核。其他已验证内容无需重转录。root 未跟踪文件 `-.png`、`.mineru-service.lock` 继续保留。
 - 成本：本阶段0次OCR、0次外部模型/API；Codex Token 与费用未知。
+
+### phase2-b70：1997 全国理科第3题图形标注修正与重建（2026-10-16）
+
+- 已完成可验证阶段：重新检查旧回执后确认第3题四图的原点 `O` 均有真实缺陷：A 与 `-\pi/3` 刻度过近、B 的原位置被裁切且替代位置曾与渐近线过近、C 被曲线穿过、D 与 `-\pi/6` 刻度过近。最终将 A/C/D 放在原点左上方，将 B 放在右上方并左移 `2pt`；仅改图中文字标注位置，没有改函数、渐近线、刻度、题干或数学结论。先前异步盲核对简答版第2、3页页眉/页脚和留白的失败判断，经页面图像核对为误报。
+- 修改文件（本阶段共7个）：`1997_全国卷_理科/figures/f1997_t3_graphs.tex`、`1997_全国卷_理科/receipts/build.json`、`1997_全国卷_理科/receipts/review.json`、`tests/test_1997_national_science_layout.py`、`reports/phase2-b70.md`、`source-manifest.json`、本进度。构建 PDF 与 PNG 留在 ignored `.work/` / `build/`；没有修改主检出 `main`，未跟踪文件 `-.png` 与 `.mineru-service.lock` 保留未动。
+- 验证：回归测试新增定位约束，修改前曾对相应原点位置失败，最终 `python3 tests/test_1997_national_science_layout.py` 为2/2通过。正式构建 attempt `1ef765c2-6db9-486a-abad-8225329c4277` 四版成功，页数5/27/6/20、合计58页；编译错误、缺字、未定义引用、Overfull 与 problems 均为0。最终渲染与旧 attempt `e1b0f832-a256-4550-984c-292b8c78f702`逐页比较：58页齐全，52页 PNG 字节完全一致，6页有变化；对变化的试题版第1页、简答版第1页、解析版第1/7页、印刷版第1/6页作300 dpi整页及图稿复核。其余52页复用旧正式回执的通过结论，并在逐页8项记录中写入对应 PNG SHA-256 与旧 attempt 依据。当前正式 review 为58页、464/464项 pass。
+- 登记结果：`review_receipts.py finalize-batch` 返回 `FINALIZED`、无 problems，批次仍为 `closed_with_blockers`，未以版式修正掩盖 Q23(3) 来源缺少待证关系符号（`ISSUE-1072`）和答案待独立核实（`ISSUE-1073`）。`check-batch`、该卷 `validate-receipts --require-final`、provenance `check-batch`、source manifest `validate` 均通过；`git diff --check` 通过。全项目 `report.py check --all` 仍以 exit 4 指出六份其他生成报告不一致：`docs/source-inventory.md`、`report.md`、`README_数学.md`、本项目 `README.md`、`math-gaokao-2017-2026/README.md`、`reports/baseline.md`；这些文件未由本阶段修改，未扩展范围重建。
+- 剩余/下一步：Q23(3)仍须取得独立同版题面或权威勘误以确认待证关系，再重做该小题解答和独立核验；六份全局生成报告的不一致也尚未处理。此次图形版式问题已闭环，可提交本阶段本地变更；不 push。之后按批次进度继续未完成试卷，不重做本卷已通过的 OCR/转录。
+- 成本：0次OCR、0次外部模型/API；对本卷正式版进行本地渲染和局部高清视觉复核；Codex Token 与费用不可见，不估算。
