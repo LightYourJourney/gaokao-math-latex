@@ -5716,3 +5716,12 @@
 - 执行纠偏：首次 source-manifest 校验漏传必需的 `--manifest`，命令只打印 usage、未改文件；随后用正确参数通过。一次从仓库根运行项目相对路径的只读帮助/进度查看命令，因路径基准错误未找到文件；改在正确目录读取，未造成修改。后续命令均限定本卷并顺序执行，避免共享 `RepoLock` 冲突。
 - 剩余/下一步：当前新 attempt 尚未视觉签收；必须重新准备并核对绑定该 attempt 与 PDF SHA 的四版工作项，复核58页/464项后登记回执。此版印刷页数由21变20，重点确认分页变化及全部末页；通过正式复核/门禁后再提交该卷完整闭环阶段。此前 attempt 的视觉判断不得移植。
 - 成本：本阶段0次OCR、0次外部模型/API；Codex Token 与费用未知。
+
+### phase2-b70：1997 全国理科四版视觉复核与登记
+
+- 已完成：对当前 attempt `e1b0f832-a256-4550-984c-292b8c78f702` 的试题/解析/简答/印刷版全页复核，页数5/27/6/20，共58页、464项八类检查；正式回执全部 `pass`，无视觉失败。新旧页面做逐页像素比较：53页完全一致，复用本轮已检查的旧栅格证据；变化的解析版23–24页、印刷版18–20页均以高清图重审，另高清检查印刷候选页4。解析版第24页现从第(3)问开始；印刷版第20页结尾完整。四版候选页均已核验。
+- 复核方式：子代理工具当时达到线程上限，未打断其他运行线程；主会话依据实际页面图像完成复核。不得将此记作异人盲审。
+- 修改文件：`1997_全国卷_理科/receipts/review.json`、正式构建回执、`reports/phase2-b70.md`、`source-manifest.json`（revision 4289）及本进度。忽略区四份工作项只保留本次 attempt 的复核状态；`missing-issues.md` 未改。
+- 验证：官方 `review_receipts.py finalize-batch` 返回 `FINALIZED`；review validator `FINALIZED`、build receipt validator `OK`（1 succeeded、0 stale/failed/invalid/missing）、provenance 检查 `OK`、source manifest 校验通过。视觉审查结论为 passed，但批次维持 `closed_with_blockers`：`ISSUE-1072`（固定题源第23(3)两平面关系符号缺失）与 `ISSUE-1073`（待证关系未知，现有垂直证明仅为条件推论）仍开放；未猜补原题，也未把条件推论登记成正确答案。
+- 剩余/下一步：取得第23(3)的独立同版题面或权威勘误，确认待证关系；随后重做该小题数学解答与独立核验，再按新输入重建和复核。其他已验证内容无需重转录。root 未跟踪文件 `-.png`、`.mineru-service.lock` 继续保留。
+- 成本：本阶段0次OCR、0次外部模型/API；Codex Token 与费用未知。
