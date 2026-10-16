@@ -93,6 +93,14 @@
 - 验证：正式构建4/4成功，错误/缺字/未解析引用/Overfull 均为0；`source_manifest.py validate`、单卷 build `validate-receipts --require-final`（1 succeeded、0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1卷`）及 `report.py check --all` 均通过。构建清理工具按 dry-run 清除24个 XeLaTeX 中间文件，复核 build 目录仅余四份 PDF。全库构建回执快照为11 succeeded/current、268 stale、2 missing（1990广东理科、1994上海）；仅代表构建回执当前性，不代表全库验收。全库单测未在本阶段重跑。
 - 剩余/下一步：继续刷新 `phase1-b20`（1963全国卷）；另有268份 stale 回执及2份缺失回执待处理。OCR/API为0；Codex Token与费用不可见，不估算。
 
+## 1963 全国卷：共享生成器变更后的重建与复核（2026-10-16）
+
+- 已完成：仅刷新既有 `gk-1963-regular-national` 构建/视觉回执，不重复题面转录。正式 build attempt=`a5d6c809-dab1-4dca-93af-987b27116126`；四版成功（试题3、解析14、简答4、印刷11页，共32页）；`phase1-b20` 关闭，manifest revision=4258。
+- 视觉证据：重建前四份旧 PDF SHA-256 均与旧 build receipt 一致。新旧栅格哈希完全相同：32/32页120dpi，4/4候选页200dpi（四版均第1页）；候选页集合相同。旧 review receipt 的32页、256项检查完整且均通过，据此绑定到新 attempt；无历史警告豁免。基准和新渲染保存在独立 ignored `.work/rebuild-phase1-b20-2026-10-16/`。
+- 修改文件：1963卷 `receipts/{build,review}.json`、`reports/phase1-b20.md`、`source-manifest.json`、全库报告投影的6个文件及本进度。题面/答案/解析/图稿均未改，未执行OCR或外部模型/API。
+- 验证：正式构建4/4成功，错误/缺字/未解析引用/Overfull 均为0；`source_manifest.py validate`、单卷 build `validate-receipts --require-final`（1 succeeded、0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1卷`）及 `report.py check --all` 均通过。构建清理工具按 dry-run 清除24个 XeLaTeX 中间文件，复核 build 目录仅余四份 PDF。全库构建回执快照为12 succeeded/current、267 stale、2 missing（1990广东理科、1994上海）；仅代表构建回执当前性，不代表全库验收。全库单测未在本阶段重跑。
+- 剩余/下一步：继续刷新 `phase1-b21`（1964全国卷）；另有267份 stale 回执及2份缺失回执待处理。OCR/API为0；Codex Token与费用不可见，不估算。
+
 ## 1994 上海卷：Q25 独立盲核与答案来源分层（2026-10-16）
 
 - 已完成：独立复核者只收到固定扫描件第25题题面裁剪图，没有看到来源解答或主会话推导；其从题面坐标独立得到相同的分段面积与单调区间。将Q25答案明确标为项目推导且经独立复核；逐字保留固定来源所印第二支 `t≥2` 及其遗漏区间 `[1/2,2)`，不称官方答案。同步解析稿YAML来源字段，避免把Q25误归入“来源解答整理且待独立复核”。
