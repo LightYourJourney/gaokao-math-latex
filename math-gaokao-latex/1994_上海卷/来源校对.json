@@ -46,8 +46,8 @@
     {"question_number": 4, "question_id": "gk-1994-shanghai-q004", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 5, "question_id": "gk-1994-shanghai-q005", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 6, "question_id": "gk-1994-shanghai-q006", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
-    {"question_number": 7, "question_id": "gk-1994-shanghai-q007", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
-    {"question_number": 8, "question_id": "gk-1994-shanghai-q008", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
+    {"question_number": 7, "question_id": "gk-1994-shanghai-q007", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
+    {"question_number": 8, "question_id": "gk-1994-shanghai-q008", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 9, "question_id": "gk-1994-shanghai-q009", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 10, "question_id": "gk-1994-shanghai-q010", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 11, "question_id": "gk-1994-shanghai-q011", "question_type": "single-choice", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
@@ -186,6 +186,40 @@
       "independent_review_details": {
         "method": "blind solution from the question text only; printed answer withheld",
         "result": "independently derived f^{-1}(x)=-sqrt(x^2+1) on x≥0 from the original range [0,+infinity) and the negative branch forced by x≤-1",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q007",
+      "method": "standard-vertical-hyperbola-foci",
+      "derivation": "写成标准形式 y^2/2−x^2/1=1，得 a^2=2、b^2=1；纵轴为实轴，c^2=a^2+b^2=3，故 c=√3，焦点为 (0,±√3)，即 (0,√3) 和 (0,−√3)。",
+      "derived_answer": "(0,\\sqrt3),(0,-\\sqrt3)",
+      "source_printed_answer": "(0,\\sqrt3),(0,-\\sqrt3)",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived a²=2, b²=1, c²=3 and the foci (0,±√3) from the vertical hyperbola form, using the usual Cartesian x-y coordinates",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q008",
+      "method": "binomial-expansion-exponent-match",
+      "derivation": "二项式通项 T_{k+1}=\\binom{5}{k}(x^3)^{5-k}(-2x^{-2})^k=\\binom{5}{k}(-2)^k x^{15-5k}。令15-5k=5，得k=2；对应系数 \\binom{5}{2}(-2)^2=40。",
+      "derived_answer": "40",
+      "source_printed_answer": "40",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived k=2 from 15−5k=5 in the binomial general term; the x^5 coefficient is C(5,2)(−2)^2=40",
         "date": "2026-10-16"
       },
       "official_answer": null,

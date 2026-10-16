@@ -5854,3 +5854,12 @@
 - 状态边界：这是Q5/Q6局部题面与短答复核，不是新增试卷转录或整卷验收；全卷`review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071`仍开放。未运行OCR、XeLaTeX构建或整卷视觉回执。
 - 剩余/下一步：按固定来源继续核对Q7—Q8题面与短答；保持已完成的Q25盲解结论，不重复盲算。之后继续其余题目、正式provenance、四版构建和逐页视觉验收。
 - 成本：0次OCR、0次聊天模型/API调用；1次固定来源GitHub Contents API取回、2页本地渲染、2次隔离单题盲解。Codex/代理实际Token及费用不可见，不估算。
+
+## 1994 上海卷：Q7—Q8 题面与短答独立复核（2026-10-16）
+
+- 已完成：从固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 取回来源 PDF；SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`、145637 字节、5 页，与 source manifest 一致。逐页核对扫描第1页Q7/Q8题面及第3页印载答案。Q7化为纵轴为实轴的标准双曲线，`a²=2,b²=1,c²=3`，焦点`(0,±√3)`；Q8二项式通项指数`15−5k`，令其等于5得`k=2`，系数`C(5,2)(−2)²=40`。两题分别经隔离盲解复算，与扫描件印载答案一致。
+- 修改文件：`1994_上海卷/来源校对.json` 登记Q7/Q8题面源页、固定扫描哈希、独立推导、盲核和印载答案页；`tests/test_1994_shanghai_sources.py` 扩展Q1—Q8表驱动回归，覆盖双曲线参数/焦点与二项式指数/系数；本进度文件。未改题面正文、答案正文、解析、LaTeX、正式provenance、manifest、issue ledger、构建回执或PDF；`official_answer`仍为null。
+- 验证：扩展后的测试先按预期在Q7/Q8两个待核状态失败；补登记后1994专项测试`11/11`通过，来源JSON可解析，`git diff --check`通过。全库测试`python3 -m unittest discover -s math-gaokao-latex/tests`运行1332项：1318通过、13跳过、1失败；唯一失败仍为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个缓存状态与现场派生状态不一致，与此前已记录的问题相同。
+- 状态边界：仅完成Q7/Q8题面和短答局部复核，不是整卷验收或新增转录完成卷；全卷仍为`review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071`仍开放。未运行OCR、XeLaTeX构建或整卷视觉回执。
+- 剩余/下一步：继续按固定扫描复核Q9—Q10题面与短答；之后处理其余题目，再完成整卷正式provenance、四版构建和逐页视觉验收。
+- 成本/缓存：0次OCR；1次固定 GitHub Contents API 文件取回、仅渲染第1和第3页、2次隔离子代理盲解。原扫描 PDF 已按 SHA-256 缓存在 Git 忽略目录`.work/source-pdf-cache/2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d.pdf`，下阶段复用；Codex/子代理实际Token与费用不可见，不估算。尝试清理本轮临时渲染文件时被安全保护拒绝，未删除；两张PNG仍在仓库外 `/tmp/gaokao-1994-q7q8.boR6v0/`。

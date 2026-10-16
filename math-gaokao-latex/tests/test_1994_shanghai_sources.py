@@ -146,7 +146,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
-    def test_q1_to_q6_source_transcriptions_and_short_answers_are_reviewed(self):
+    def test_q1_to_q8_source_transcriptions_and_short_answers_are_reviewed(self):
         reviewed = {
             item["question_number"]: item
             for item in self.record["question_sources"]
@@ -169,6 +169,21 @@ class Shanghai1994SourceTests(unittest.TestCase):
                 r"y=-\sqrt{x^2+1}\ (x\ge0)",
                 "inverse-function-domain-range",
                 ("x≤-1", "y≥0", "x≥0"),
+            ),
+            7: (
+                r"(0,\sqrt3),(0,-\sqrt3)",
+                "standard-vertical-hyperbola-foci",
+                ("a^2=2", "b^2=1", "c^2=a^2+b^2=3", "(0,±√3)"),
+            ),
+            8: (
+                "40",
+                "binomial-expansion-exponent-match",
+                (
+                    r"T_{k+1}=\binom{5}{k}(x^3)^{5-k}(-2x^{-2})^k",
+                    "15-5k=5",
+                    "k=2",
+                    r"\binom{5}{2}(-2)^2=40",
+                ),
             ),
         }
         for number, (answer, method, derivation_fragments) in expected.items():
