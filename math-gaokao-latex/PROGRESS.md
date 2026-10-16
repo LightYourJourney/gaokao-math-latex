@@ -8,9 +8,9 @@
 
 - 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。重建前8份正式 PDF 均存在并逐一匹配旧 build receipt SHA-256；文科16页、理科23页，共39页。旧 review receipt 为 `passed`、覆盖312项检查（文科128、理科184）；未发现该批可复用的 `.work` 页面图像。随后完成首轮正式重建：文科 attempt `a13a2333-a766-4d50-81cd-23627021b1ca`，理科 attempt `1d6f9519-3714-4c3d-90eb-604ef7a9e992`，8版均成功、共39页；错误、缺字、未解析引用、Overfull 均为0。该轮因下述答案修正已被取代。
 - 已发现并修正：对新 PDF 的预览发现文科第10题答案摘要与推导矛盾。题面函数为 `y=x^2-4x+3` 与 `y=x-3`，联立得 `(x-2)(x-3)=0`，代回交点为 `(2,-1),(3,0)`。盲核代理独立推导并逐点代回，结论相同。修正源答案要点与合并解析，再按生成链更新两份 LaTeX；未改原题。首轮新 PDF 的视觉复核因此暂停，先完成数学修正。
-- 修改文件：除上述两卷 build receipt 与 `source-manifest.json` 外，本阶段修改 `1977/1977_数学真题_北京文_答案要点.md`、`1977_数学真题_北京文_含解析.md`、文科卷 `answers.tex` / `answers_short.tex`、新增 `tests/test_1977_beijing_arts_math.py` 及本进度文件。此前 build attempts `a13a2333-a766-4d50-81cd-23627021b1ca` / `1d6f9519-3714-4c3d-90eb-604ef7a9e992` 已因本次源答案修正而过期，不能用于最终验收。
-- 验证：新回归测试先对4个源/生成文件观察到预期失败；修正源稿并运行官方生成器后，定向测试通过。`generate_projects.py --check`、`make_short_answers.py --check` 通过；`test_generate_projects.py` 112项、`test_short_answers.py` 52项通过。本次发现的错误仅在答案摘要，完整推导、题面和图稿未改；其余视觉校验尚未完成。当前 PDF 仍须重建，provenance 的第10题答案哈希需重导入。
-- 剩余/下一步：仅刷新文科第10题的答案 provenance（保留其余已核验题目证据），再正式重建 `phase2-b24` 两卷四版本；对修正后 PDF 重新渲染全部39页并完成逐页视觉检查。此前 `.work/review-phase2-b24-20261016/` 是修正前快照，仅供追溯，不作为最终回执证据。OCR/API为0；Token/费用未知。
+- 修改文件：除上述两卷 build receipt 与 `source-manifest.json` 外，本阶段修改 `1977/1977_数学真题_北京文_答案要点.md`、`1977_数学真题_北京文_含解析.md`、文科卷 `answers.tex` / `answers_short.tex`、新增 `tests/test_1977_beijing_arts_math.py`、两卷 `provenance.json` 及本进度文件。此前 build attempts `a13a2333-a766-4d50-81cd-23627021b1ca` / `1d6f9519-3714-4c3d-90eb-604ef7a9e992` 已因本次源答案修正而过期，不能用于最终验收。
+- 验证：新回归测试先对4个源/生成文件观察到预期失败；修正源稿并运行官方生成器后，定向测试通过。`generate_projects.py --check`、`make_short_answers.py --check` 通过；`test_generate_projects.py` 112项、`test_short_answers.py` 52项通过。答案 provenance 已用官方 `import-batch` dry-run 后导入，revision 4274；复核角色恢复为原卷级 `phase2-b24-answer-review-blind`，Q10 的独立复核单独记在该题 evidence。`source_manifest.py validate --manifest source-manifest.json` 与 `provenance.py check-batch --batch phase2-b24` 均通过。`test_provenance.py` 共109项，其中108项通过；唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报373条全库缓存/现场状态不一致，首个例子为2017全国Ⅰ理科旧缓存 `complete`、现场派生 `editions_generated`，属于待刷新的旧构建回执/状态，不是本批 provenance 内容失败。OCR/API为0；Token/费用未知。
+- 剩余/下一步：本批文科 PDF 因答案源修正仍须重建；此前两卷首轮正式构建均已过期。接着重建 `phase2-b24` 两卷四版本，对当前 PDF 重新渲染全部39页并完成逐页视觉检查。此前 `.work/review-phase2-b24-20261016/` 是修正前快照，仅供追溯，不作为最终回执证据。题面转录、答案修正与 provenance 当前；构建与视觉验收未完成。
 
 ## Provenance 全库测试不变量校正（2026-10-16）
 
