@@ -37,6 +37,14 @@
 - 验证：正式构建4/4成功；来源清单校验、build `validate-receipts --require-final`（1 succeeded，0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1 卷`）和 `git diff --check` 均通过。全库构建回执当前性为4 current、275 stale、2 missing；非全库内容验收结果。Token/费用未知。
 - 剩余/下一步：继续 `phase1-b13`；其余275份stale及1990广东理科、1994上海两套missing receipt仍待处理。尚未重跑全库单测。
 
+## 1956 全国卷：共享生成器变更后的重建与复核（2026-10-16）
+
+- 已完成：仅重建既有 `gk-1956-regular-national`，未重做题面转录。正式 build attempt=`a6e1ff42-ee7a-43f8-9db8-39d191c7f84c`，四版成功（2+9+3+7页）；事务 finalize 后 `phase1-b13` 关闭，manifest revision=4237。
+- 视觉证据：重建前核对旧PDF与build receipt哈希一致，保存21页120dpi及4个候选页200dpi基准；新旧两档栅格哈希全部相同。复用旧review receipt中168项均pass的页检，写入独立ignored `.work/rebuild-phase1-b13-2026-10-16/`工作项并绑定新attempt。
+- 修改文件：1956卷 `receipts/{build,review}.json`、`reports/phase1-b13.md`、`source-manifest.json` 与本进度文件；无题面/答案/OCR/API改动。
+- 验证：正式构建4/4成功；来源清单校验、build `validate-receipts --require-final`（1 succeeded，0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1 卷`）和 `git diff --check` 均通过。全库build receipt为5 current、274 stale、2 missing；这是构建证据计数，非整库验收结果。Token/费用未知。
+- 剩余/下一步：继续 `phase1-b14`；其余274份stale及1990广东理科、1994上海两套missing receipt仍待处理。全库单测尚未重跑。
+
 ## 1994 上海卷：Q25 独立盲核与答案来源分层（2026-10-16）
 
 - 已完成：独立复核者只收到固定扫描件第25题题面裁剪图，没有看到来源解答或主会话推导；其从题面坐标独立得到相同的分段面积与单调区间。将Q25答案明确标为项目推导且经独立复核；逐字保留固定来源所印第二支 `t≥2` 及其遗漏区间 `[1/2,2)`，不称官方答案。同步解析稿YAML来源字段，避免把Q25误归入“来源解答整理且待独立复核”。
