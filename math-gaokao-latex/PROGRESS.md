@@ -6,10 +6,10 @@
 
 ## 1977 北京文理卷：回执失效审计（2026-10-16）
 
-- 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。当前8份正式 PDF 文件均存在，且逐一与旧 build receipt 中的 SHA-256 匹配；文科16页、理科23页，共39页。旧 review receipt 均为 `passed`，覆盖312项检查（文科128、理科184）；没有发现该批可复用的 `.work` 页面图像。
-- 修改文件：本进度文件。本阶段未改题面、答案、provenance、manifest 或既有回执；未运行 OCR/API。
-- 验证：`source_manifest.py validate` 通过。两卷 build receipt 均因生成输入树变化而 stale；review gate 随之报告 stale。provenance gate 的 editions_generated 差异是 stale build 的派生状态，不应手工改状态或复用为当前构建结论。
-- 剩余/下一步：正式重建 `phase2-b24` 四版本；随后从新旧正式 PDF 渲染隔离页面图像并比较哈希。只有对应页面图像完全一致时才重绑定旧 review 判断；不一致页须重新视觉复核。Token/费用未知。
+- 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。重建前8份正式 PDF 均存在并逐一匹配旧 build receipt SHA-256；文科16页、理科23页，共39页。旧 review receipt 为 `passed`、覆盖312项检查（文科128、理科184）；未发现该批可复用的 `.work` 页面图像。随后完成正式重建：文科 attempt `a13a2333-a766-4d50-81cd-23627021b1ca`，理科 attempt `1d6f9519-3714-4c3d-90eb-604ef7a9e992`，8版均成功、共39页；错误、缺字、未解析引用、Overfull 均为0。
+- 修改文件：本进度文件、两卷 `receipts/build.json`、`source-manifest.json`。未改题面或答案，未运行 OCR/API。
+- 验证：`source_manifest.py validate` 通过；build receipt 校验为 `OK`、2卷 `pending`、0 stale/missing。新旧8份 PDF 的二进制哈希均不同；但两卷 TeX dependency tree 与旧 receipt 完全一致，toolchain fingerprint 也一致。旧 PDF/栅格未在项目 `.work` 中留存，因此不能据哈希或旧 review receipt 声称当前 PDF 已复核；需要对当前正式 PDF 实际复核。
+- 剩余/下一步：对当前39页重新渲染并逐页做视觉校样，保留页级证据，再完成当前 review receipt；旧312项判断不得直接复制。Token/费用未知。
 
 ## Provenance 全库测试不变量校正（2026-10-16）
 
