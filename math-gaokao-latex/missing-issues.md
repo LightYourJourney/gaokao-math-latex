@@ -17563,12 +17563,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定扫描件附载第25题分段定义域为t>0，第一支仅覆盖0<t<1/2，第二支写t≥2，区间[1/2,2)未被原印载分段覆盖。原文已保留，解析草稿的替代推导尚无独立复核。",
+  "current_evidence": "固定扫描件附载第25题分段定义域为t>0，第一支仅覆盖0<t<1/2，第二支写t≥2，区间[1/2,2)未被原印载分段覆盖。独立复核者仅获题面裁剪图、未见印载解答及主会话推导，独立得到项目分段面积与单调区间；项目答案已注明为非官方推导并保留印载原文。来源差异仍在，出版者身份未认证，整卷其余25题未完成异人盲核，故本 issue 与整卷 blocker 保持开放。",
   "fingerprint": "49bf094c939ffb965fcc1d872220956a66c0b3a282c3f6a0f3d227cea7a79da4",
   "impact": "blocks_completion",
   "paper_id": "gk-1994-shanghai",
   "question_id": "gk-1994-shanghai-q25",
-  "resume_action": "由独立复核者对照固定扫描件第25题题面及印载解答，核实分段转录并独立推导S(t)；保留来源原文，未裁决前不得将该题答案或解析标记为已验证。",
+  "resume_action": "继续完成1994上海卷其余题目的独立来源/数学审核及正式 provenance；不得重复Q25盲算，不得把项目推导标成官方答案。保留固定来源t≥2原文与[1/2,2)差异记录；在整卷门禁完成前维持blocked。",
   "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65",
   "status": "open",
   "type": "answer-conflict"

@@ -118,23 +118,55 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
         self.assertIn(r"t\ge2", self.answers)
-        self.assertIn("原印载条件与上下文不一致", self.answers)
+        self.assertIn("原印载分段遗漏", self.answers)
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
-    def test_q25_coordinate_derivation_remains_provisional_not_official(self):
+    def test_q25_coordinate_derivation_is_independently_reviewed_but_not_official(self):
         checks = self.record.get("derived_solution_checks", [])
         self.assertEqual(len(checks), 1)
         check = checks[0]
         self.assertEqual(check["question_id"], "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q025")
-        self.assertEqual(check["status"], "derived-pending-independent-review")
-        self.assertFalse(check["independent_review"])
+        self.assertEqual(check["status"], "derived-independently-reviewed")
+        self.assertTrue(check["independent_review"])
+        self.assertEqual(
+            check["independent_review_details"]["method"],
+            "blind derivation from the question crop only; printed solution and primary derivation withheld",
+        )
+        self.assertIn("independently derived the same", check["independent_review_details"]["result"])
         self.assertIsNone(check["official_answer"])
         self.assertEqual(check["jacobian"], "2(1+t^2)")
         self.assertEqual(check["piecewise_area"], "2(1-t+t^2-t^3) for 0<t<=1/2; (t+1/t)/2 for t>=1/2")
         self.assertEqual(check.get("first_branch_derivative"), "2(-1+2t-3t^2)<0 (discriminant -8)")
         self.assertEqual(check["monotonicity"], "decreasing on (0,1]; increasing on [1,+infinity)")
         self.assertIn("打印答案的第二支 t>=2", check["source_conflict"])
+        self.assertEqual(self.record["official_answer"], None)
+        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.paper["production_state"], "blocked")
+
+    def test_q25_project_answer_and_generated_editions_preserve_source_boundary(self):
+        self.assertIn(
+            "第 21—24、26 题参照固定来源印载解答整理；第 25 题依据题面推导并经独立盲核",
+            self.combined,
+        )
+        normalized_answers = re.sub(r"\s+", "", self.answers)
+        self.assertIn(r"答案：$S(t)=\begin{cases}2(1-t+t^2-t^3),&0<t<\dfrac12", normalized_answers)
+        self.assertIn(r"\dfrac12\left(t+\dfrac1t\right),&t\ge\dfrac12", normalized_answers)
+        self.assertIn("固定来源原印载分段（原文保留）", normalized_answers)
+        self.assertIn(r"\dfrac12\left(t+\dfrac1t\right),&t\ge2", normalized_answers)
+        self.assertIn(re.sub(r"\s+", "", "$S(t)$ 在 $(0,1]$ 上递减、在 $[1,+\\infty)$ 上递增"), normalized_answers)
+
+        answers_tex = (PROJECT_DIR / "answers.tex").read_text(encoding="utf-8")
+        short_tex = (PROJECT_DIR / "answers_short.tex").read_text(encoding="utf-8")
+        self.assertIn(r"\gkanswer{答案（1）：$S(t)=\begin{cases}2(1-t+t^2-t^3),&0<t<\dfrac12", answers_tex)
+        self.assertIn(r"\dfrac12\left(t+\dfrac1t\right),&t\ge\dfrac12", answers_tex)
+        self.assertIn(r"经独立盲核", answers_tex)
+        self.assertIn(r"0<t<\dfrac12", short_tex)
+        self.assertIn("t≥2", short_tex)
+        self.assertIn("第25题项目推导经独立盲核", short_tex)
+        self.assertIn("整卷其余内容尚未经过异人盲核", short_tex)
+        self.assertIn(r"\textbf{非官方标准答案}", short_tex)
 
     def test_each_source_diagram_is_registered_vector_latex(self):
         self.assertTrue(RECORD.is_file(), "source audit record is missing")
