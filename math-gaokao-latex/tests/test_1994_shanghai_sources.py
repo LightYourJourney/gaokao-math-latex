@@ -46,6 +46,10 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["question_count"], 26)
         self.assertEqual(self.paper["production_state"], "blocked")
         self.assertEqual(self.paper["issue_ids"], self.record["issue_ids"])
+        index_note = self.paper["index_metadata"]["note"]
+        self.assertIn("Q25项目推导已独立复核", index_note)
+        self.assertIn("其余25题仍待复核", index_note)
+        self.assertNotIn("Q25答案与解析保持待核", index_note)
         self.assertEqual(self.record["pdf_sha256"], self.source["artifact"]["sha256"])
         self.assertEqual(self.record["question_source_sha256"], hashlib.sha256(QUESTION_SOURCE.read_bytes()).hexdigest())
         self.assertEqual(self.record["answer_source"]["sha256"], hashlib.sha256(ANSWER_SOURCE.read_bytes()).hexdigest())

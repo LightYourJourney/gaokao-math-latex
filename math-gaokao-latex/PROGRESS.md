@@ -12,6 +12,14 @@
 - 状态与边界：Q25派生核验记录改为 `derived-independently-reviewed`，但全卷 `review_status=needs-review`、`mathematical_verification_status=not-verified`、`official_answer=null`、生产状态仍为 `blocked`；`ISSUE-1071` 保持开放，反映固定来源本身的分段冲突。0次OCR、0次外部模型API；Codex/代理Token及费用未知。
 - 剩余/下一步：1994卷其余25题的异人来源/数学复核、完整provenance、正式XeLaTeX构建与四版PDF视觉复核仍未完成；不得把此前烟测PDF当作本次修改后的成果。后续直接从全卷审核与provenance门禁继续，不重复Q25盲算或26题转录。
 
+## 1994 上海卷：总清单索引状态同步（2026-10-16）
+
+- 已完成：修正 `source-manifest.json` 中仍将 Q25 答案概括为“保持待核”的索引说明，并重生成项目 `index.json`。现在明确原印载 `t≥2` 与经独立复核的项目推导 `t≥1/2` 有冲突，另外25题仍待复核且整卷仍 blocked。
+- 修改文件：`source-manifest.json`、生成的 `index.json`、`tests/test_1994_shanghai_sources.py` 与本进度文件；未改变题面、答案、解析或 PDF。
+- 验证：新增清单断言按预期先失败、更新后通过；1994来源测试8/8、单卷生成检查、`issues.py validate` 与 `git diff --check` 通过。
+- 全库测试：`python3 -m unittest discover -s math-gaokao-latex/tests` 完成1316项，13项跳过、3项失败：1989广东理科Q30页面文字断言失败；`test_provenance.LiveRepositoryTests.test_no_paper_advances_beyond_planning_without_provenance` 与 `test_the_cached_states_match_the_recomputed_ones` 失败，后者报告379项缓存/派生状态不一致。此处未把全库失败归因于本次索引说明修改，也未在本阶段扩大修复范围。
+- 成本与剩余：0次OCR、0次外部API；Token/费用未知。1994卷其余25题审核、provenance、正式四版编译与视觉复核仍未完成；全库三项失败待单独根因排查。
+
 ## OCR gold 两个样本：盲态交叉核对完成，仍待人工批准（2026-10-16）
 
 - 已完成：以 manifest 绑定且 SHA-256 相符的原件盲态复看两例。1977 新疆理科第1页公式裁剪的可见字符为 `x^2−2x+Lga=0`，与候选字母序列一致；`Lg` 的间距/数学解释仍需人工确认。2008 延考区文科第5页连续正文与候选转录相符；`SK TJ` 保留原样，另保留原文 C 坐标 `(1/2,1,√3/2)` 与后续距离式 `(-1/2-1)^2` 的不一致，不猜测或修正。图内标签按样本范围排除于文本CER。
