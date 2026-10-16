@@ -5661,3 +5661,13 @@
 - 验证：简答生成器测试52/52、1994来源测试10/10、1994数学测试5/5；`solution_sources.py check-batch`（26题）、`make_short_answers.py --check`、`make_editions.py --check`通过；四版smoke构建成功且日志缺字清单为空。全库测试`unittest discover -s tests`完成1319项，FAILED（3项，13项跳过）：1989广东理科Q30的PDF文本断言失败；`test_provenance.LiveRepositoryTests.test_no_paper_advances_beyond_planning_without_provenance`失败；`test_the_cached_states_match_the_recomputed_ones`报告379个状态不匹配。后两项为全库状态不一致，尚未进一步定位；这些测试依赖范围不在本轮修改文件内，但不能据此断言其属于基线。
 - 清理与剩余：`clean-build-intermediates --dry-run`因`gk-1994-shanghai`缺provenance而零删除；按项目门禁不绕过。现存build目录仍有`.aux/.fdb_latexmk/.fls/.log/.out/.xdv/diagnostics`，四个PDF保留；待provenance完成后用官方清理器复核并执行。仍需登记三角色逐题provenance、保留并处置`ISSUE-1071`冲突、完成四版全部页面视觉审查/正式回执，并定位全库三项失败；本卷不算完成。
 - 成本：0次OCR、0次外部模型API；另有1次Q25只读来源独立审阅。实际Codex/子代理Token与费用不可见，不估算。
+
+### phase0-b02 恢复预检：当前回执与旧视觉证据边界（2026-10-16）
+
+- 已完成可验证阶段：在隔离工作树 `feat/gaokao-phase0` 读取当前 manifest revision 4281；按 manifest 未关闭顺序选择 `phase0-b02`（2019/2020 全国Ⅰ文理四卷）。四卷均已有题目/答案/provenance，batch 无 open issue；不重做转录、解题或 OCR。
+- 发现的失效：四卷 formal build receipts 均因生成输入树变化而 stale（build validator：4 stale、0 failed/invalid/missing）；旧 review 也因绑定 stale build 而无效。`provenance check-batch` 仅报告缓存 production 状态 `compiled` 与现场派生 `editions_generated` 不符，以及 batch `compiled_pending_review` 与 `provenance_verified` 不符，未报告逐题证据缺陷。source manifest 校验通过。
+- 旧产物核验与保存：四卷16份现存PDF逐一匹配各自旧 build receipt SHA-256，共299页；建立忽略区快照 `.work/phase0-b02-before-r4281.b34EYs/`，副本16/16再次与回执指纹匹配（4,279,031 bytes）。当前 `.work/phase0-b02*` 无复核工作件/渲染图；现有 `review.json` 仍绑定2026-10-旧 attempts 且无逐页结果，不能用于finalize。历史进度记载的2019文理与2020文科页面判断仅在后续新PDF指纹一致时考虑复用；2020文科第23题已取消的5项视觉失败按既定裁定保留。2020理科79页仍未完成目视。
+- 阶段修改文件：仅本 `PROGRESS.md`；16份原PDF未覆盖，规范题源、LaTeX、答案、provenance与回执均未在本阶段改动。仓库根用户未跟踪的 `-.png`、`.mineru-service.lock` 保持原样。
+- 验证：`source_manifest.py validate`通过；build validator确认上述4 stale；review validator确认4卷均需新build；16/16 PDF SHA核对通过、合计299页。首次校验链在build stale处停止后，以独立只读命令完成source/provenance核验。首次哈希校验的一行式被zsh引号解析拒绝，未读写文件；改用heredoc后完成同一核验。
+- 剩余/下一步：以当前输入正式重建phase0-b02四卷16版；准备新attempt review工作项。对新旧PDF做SHA与页数逐版比较：仅精确相同的文件可沿用已有逐页视觉结论；变化版重新审查。完成2020理科79页、保留2020文科取消题失败、四卷warning逐项核对后再finalize、刷新投影/门禁、清理中间物并提交阶段。
+- 成本：本阶段0次OCR、0次外部模型/API；Codex Token/费用未知。
