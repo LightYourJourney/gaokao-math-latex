@@ -21,6 +21,14 @@
 - 验证：正式构建4/4成功；来源清单校验、`validate-receipts --batch phase1-b10 --require-final`（1 succeeded、0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1 卷`）及 `git diff --check` 均通过。全库receipt快照为2 current、277 stale、2 missing；这是构建当前性计数，不代表整库内容验收完成。Token/费用未知。
 - 剩余/下一步：继续按旧清单复核下一个失效批次 `phase1-b11`（1954全国卷）；其余276份stale及两份missing build receipt仍待处理。此轮未重跑全库单测。
 
+## 1954 全国卷：共享生成器变更后的重建与复核（2026-10-16）
+
+- 已完成：仅重建既有 `gk-1954-regular-national`，不重复题面转录。正式 build attempt=`5e8a1f5b-3c82-4a33-9191-3a60164f9872`，四版成功（2+9+3+7页）；事务 finalize 后 `phase1-b11` 关闭，manifest revision=4231。
+- 视觉证据：重建前核对旧PDF哈希与旧receipt一致，并保存21页120dpi及6个候选/警告页200dpi基准。重建后全部渲染图像哈希相同；旧review的168项检查均pass，两条warning exemption与新build日志逐条一致。新工作项写入独立ignored `.work/rebuild-phase1-b11-2026-10-16/`，未覆盖旧证据。
+- 修改文件：1954卷 `receipts/{build,review}.json`、`reports/phase1-b11.md`、`source-manifest.json` 与本进度文件。题面、答案、来源未改；OCR/API为0，Token/费用未知。
+- 验证：正式构建4/4成功；来源清单校验、`validate-receipts --batch phase1-b11 --require-final`（1 succeeded，0 stale/missing/pending）、review `check-batch`（`FINALIZED`）、provenance `check-batch`（`OK：1 卷`）和 `git diff --check` 均通过。全库receipt当前性为3 current、276 stale、2 missing；这不是整库内容验收结论。
+- 剩余/下一步：继续下一失效批次 `phase1-b12`；其余276份stale及1990广东理科、1994上海两套missing receipt仍待处理。尚未重跑全库单测。
+
 ## 1994 上海卷：Q25 独立盲核与答案来源分层（2026-10-16）
 
 - 已完成：独立复核者只收到固定扫描件第25题题面裁剪图，没有看到来源解答或主会话推导；其从题面坐标独立得到相同的分段面积与单调区间。将Q25答案明确标为项目推导且经独立复核；逐字保留固定来源所印第二支 `t≥2` 及其遗漏区间 `[1/2,2)`，不称官方答案。同步解析稿YAML来源字段，避免把Q25误归入“来源解答整理且待独立复核”。
