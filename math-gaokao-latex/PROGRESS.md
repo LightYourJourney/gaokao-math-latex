@@ -5742,3 +5742,14 @@
 - 验证：官方 formal build attempt `8a9f76c8-9a00-4323-a3ba-5c05ef43ab67` 四版 succeeded，页数7/28/8/22、共65页；错误、缺字、未定义引用、Overfull 和 build problems 均为0。`build_projects.py validate-receipts` 为1 pending、0 stale/failed/invalid/missing；`provenance.py check-batch`、`source_manifest.py validate` 通过。一次只读摘要脚本误用了不存在的 `missing_glyphs` 字段，读取 JSON 键后改用实际字段 `missing_characters` 完成核对；没有改动数据。
 - 剩余/下一步：新 PDF 指纹已不同，旧65页视觉结论不得直接沿用；须为 attempt `8a9f76c8-9a00-4323-a3ba-5c05ef43ab67` 刷新工作项、检查当前65页/520项视觉门禁，并保留来源导致的对应失败；随后 finalize、报告/门禁及可用时的中间文件清理，再继续 manifest 队列。当前正式 review 尚未绑定新 attempt。
 - 成本：0次OCR、0次外部模型/API；本阶段仅用 XeLaTeX 本地构建；Token 与费用不可见，不估算。
+
+### phase2-b58：1986 广东文史卷当前构建的逐页视觉复核与失败登记（2026-10-16）
+
+- 已完成可验证阶段：针对正式构建 attempt `8a9f76c8-9a00-4323-a3ba-5c05ef43ab67`，重新检查四版当前 PDF 的全部65页、520项视觉检查；用13张整页接触表覆盖全部页面，并对15张问题/候选页作300dpi复看。最终507项通过，13项失败，分布在11页。没有沿用旧 attempt 的视觉回执。
+- 已登记失败：原卷固定来源图形区/缺字共12项（试题版p5 figure_label、p6 glyph；解析版p5/p12 figure_label、p6/p19 glyph；简答版p5 figure_label、p6 glyph；印刷版p4 glyph+figure_label、p10 figure_label、p15 glyph）。另发现并登记试题版p6 `answer_leak`：题面注释“按题意和解答页解释为乘法”直接透露第2(2)题的关键运算符；此项旧 review 漏记。未修改题源、注释或 PDF，不臆补原卷符号/图形。
+- 修改文件：官方失败登记事务更新 `1986_广东卷_文史类/receipts/review.json`、`missing-issues.md`、`source-manifest.json` 与 `reports/phase2-b58.md`；本进度另作记录。build 回执仍绑定当前 attempt。四份 ignored `.work/phase2-b58/review/*/gk-1986-regular-guangdong-arts.json` 为本轮完整工作项；渲染 PNG/接触表仍留在 ignored `.work/`。
+- 验证：`tests/test_review_receipts.py` 66项通过；build receipt 校验 `OK`（1 pending、0 stale/failed/invalid/missing），provenance 检查 `OK：1卷`，source manifest 校验通过。正式 `finalize-batch-checked` 按预期返回 `VISUAL_FAILED`/exit 4，并提交诊断状态；`check-batch` 同样报告视觉未通过。当前 review 与 attempt / PDF SHA 绑定，结论为 `failed`，批次状态保持 `compiled_pending_review`，不得称该卷视觉验收通过。
+- 阶段提交：`2ba6c94a43769f4f34b22ec465f16184ec14dd37`（`fix(exams): 保存 phase2-b58 视觉审查诊断状态`）；本进度记录尚待单独提交。未 push。
+- 剩余任务：先处理新登记的试题版答案泄漏——需决定移除注释中解释乘法的句子并重建/复核，或保留原稿并接受该项失败；图形空白与方框缺字继续忠实保留，除非找到可信同版来源。诊断报告和问题账已记录阻塞；尚未完成本卷视觉闭环。
+- 下一步：确认答案泄漏注释的处理边界后，按依赖关系做最小源修正（如获准）、刷新 provenance/build/工作项并复核受影响的当前 PDF；随后重新运行正式门禁。处理前不覆盖失败结论，也不复用旧 attempt 的页面审查。
+- 成本：0次OCR、0次外部模型/API；进行了本地 PDF 文本抽核、接触表与高清 PNG 目视复核及66项本地测试。Codex Token 与实际费用不可见，不估算。
