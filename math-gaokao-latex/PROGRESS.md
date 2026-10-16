@@ -5771,3 +5771,13 @@
 - 验证：四份工作项的 paper_id、attempt、PDF路径、PDF SHA、页数均与当前 build receipt 一致；页码逐版连续覆盖，每页八项完整，480项全部 pending。
 - 剩余/下一步：逐页检查当前60页八项视觉要求；对原卷第8/9题缺字、第12/15题重复选项标签、第25题图形空白等已知来源限制保持忠实，并按实际页面登记失败；复核后再走官方 finalization。
 - 成本：无OCR、外部模型/API或编译；仅本地回执绑定核对。Codex Token 与费用未知。
+
+### phase2-b59：1986 广东理科题面校勘与末页回归（2026-10-16）
+
+- 已完成可独立验证的子阶段：题面卷首说明不再泄漏第1题答案（`-5°`/选项B），第8/9题的缺字方框不再被编辑注释猜作乘法；继续忠实保留源 PDF 的 `\square` 和“符号含义待核”，也保留“一个辐角”等原文，不改题目数学条件。用官方解析源抽取器和项目生成器刷新受影响投影。
+- 修改文件：`1986/1986_数学真题_广东理_试题.md`、`1986/1986_数学真题_广东理_含解析.md`、`math-gaokao-latex/1986_广东卷_理工农医类/questions.tex`、`answers.tex`、新增 `tests/test_1986_guangdong_science_layout.py` 及本进度。没有改答案结论、图稿或固定来源记录。
+- 验证：新增真实 PDF 集成回归在临时目录生成题面版，2/2通过：不再出现答案/乘法解释泄漏，符号未决状态可见，且末页第5题三个小问与第6题同页；`generate_projects.py --batch phase2-b59 --check`（1卷）、`solution_sources.py check-batch`（6题）、`source_manifest.py validate`、`git diff --check`均通过。测试先在旧规范源上复现了答案泄漏及分页断裂，再在修订源上转绿。
+- 门禁与范围：尝试正式构建时，`build_projects.py` 在编译前以 exit 4 拒绝：provenance 为 stale；这是源文件哈希变化后的预期安全门禁，不是 LaTeX 编译失败。本子阶段未刷新来源核验、未更新 build/review receipts，也未把旧 attempt 的视觉结论迁移到新输入；因此不能记作整卷完成或正式 PDF 已复核。
+- 执行纠偏：开始时把进度文件误按仓库根路径读取（实际位于 `math-gaokao-latex/PROGRESS.md`），只读命令未找到文件且未改动；随后按实际路径恢复。生成器检查命令必须带 `--batch`/`--paper` 范围，避免无范围的 usage 失败。
+- 剩余/下一步：按项目官方流程刷新并复核本卷 provenance，确认题目来源/哈希后再运行单卷 formal build；为新 attempt 重新准备四版工作项，复核新 PDF 页面并登记回执、报告与门禁。当前旧 attempt `9a280c96-45bc-483c-8418-29805baeeb07` 的60页视觉检查不能代替新 attempt 的检查。
+- 成本：本阶段无OCR、外部模型/API调用；新增测试使用本地 XeLaTeX/Poppler 临时构建。Codex Token/费用不可见，不估算。

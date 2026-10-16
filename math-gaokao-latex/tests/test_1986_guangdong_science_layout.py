@@ -1,0 +1,89 @@
+"""1986 广东理科试题版分页回归。"""
+
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+
+
+PROJECT = Path(__file__).resolve().parents[1]
+REPOSITORY_ROOT = PROJECT.parent.parent.parent
+PAPER_ID = "gk-1986-regular-guangdong-science"
+sys.path.insert(0, str(PROJECT / "tools"))
+
+import build_projects
+import generate_projects
+
+
+@unittest.skipUnless(
+    all(shutil.which(tool) for tool in ("latexmk", "xelatex", "pdfinfo", "pdftotext", "pdftoppm")),
+    "latexmk/xelatex/Poppler 不齐，无法运行真实 PDF 回归",
+)
+class GuangdongScience1986LayoutTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        manifest = json.loads((PROJECT / "source-manifest.json").read_text(encoding="utf-8"))
+        paper = next(p for p in manifest["papers"] if p["paper_id"] == PAPER_ID)
+        sources = generate_projects.paper_sources(paper)
+        generated = generate_projects.generate_project(REPOSITORY_ROOT, sources)
+
+        cls.temporary = tempfile.TemporaryDirectory(prefix="gk1986-science-layout-")
+        root = Path(cls.temporary.name)
+        project_copy = root / "docs" / "exams" / "math-gaokao-latex"
+        project_copy.mkdir(parents=True)
+        shutil.copytree(PROJECT / "common", project_copy / "common")
+        shutil.copytree(
+            PROJECT / sources.project_dir,
+            project_copy / sources.project_dir,
+            ignore=shutil.ignore_patterns("build", "receipts", ".work"),
+        )
+        questions_target = (
+            "math-gaokao-latex/%s/questions.tex" % sources.project_dir
+        )
+        (project_copy / sources.project_dir / "questions.tex").write_bytes(
+            generated.targets[questions_target]
+        )
+
+        toolchain = build_projects.resolve_toolchain()
+        cls.result = build_projects.build_target(
+            root, sources.project_dir, "试题版", toolchain
+        )
+        pdf = root / cls.result["record"]["pdf"]["path"]
+        pdftotext = next(
+            tool["path"] for tool in toolchain["tools"]
+            if tool["name"] == "pdftotext"
+        )
+        cls.extracted = subprocess.run(
+            [pdftotext, "-layout", str(pdf), "-"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.temporary.cleanup()
+
+    def test_question_paper_does_not_disclose_solutions_in_editorial_notes(self):
+        self.assertEqual([], self.result["record"]["problems"])
+        self.assertNotIn("答案表对应", self.extracted)
+        self.assertNotIn("按题意解释为乘法", self.extracted)
+        self.assertIn("符号含义待核", self.extracted)
+
+    def test_last_question_page_keeps_all_of_question_five_with_question_six(self):
+        question_six_pages = [
+            page for page in self.extracted.split("\f")
+            if "椭圆 C 的直角坐标方程" in page and "试确定 m 的取值范围" in page
+        ]
+        self.assertEqual(1, len(question_six_pages))
+        final_question_page = question_six_pages[0]
+        self.assertIn("试用 an−1", final_question_page)
+        self.assertIn("用数学归纳法证明", final_question_page)
+        self.assertIn("（3）求", final_question_page)
+
+
+if __name__ == "__main__":
+    unittest.main()
