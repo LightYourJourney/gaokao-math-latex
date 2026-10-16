@@ -9,8 +9,8 @@
 
 - 标题：1959 年·全国卷
 - 项目目录：`1959_全国卷`
-- 构建：`succeeded`（attempt `d29ab798-1cb6-44f6-b3cc-e688dfe99b6c`）
-- 审查：`passed`（2026-10-12T01:08:51+08:00）
+- 构建：`succeeded`（attempt `005badd4-a8a3-4732-a1eb-54bca2b216ac`）
+- 审查：`passed`（2026-10-16T08:59:12+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 9；简答版 3；印刷版 8
 - 警告豁免：0
