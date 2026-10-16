@@ -9,8 +9,8 @@
 
 - 标题：1965 年·全国卷
 - 项目目录：`1965_全国卷`
-- 构建：`succeeded`（attempt `8a5a830b-7974-43dd-ae1f-e93efa9fbce4`）
-- 审查：`passed`（2026-10-12T02:02:57+08:00）
+- 构建：`succeeded`（attempt `109eefc5-ac1c-4ab2-be0c-d3f08f957a36`）
+- 审查：`passed`（2026-10-16T09:16:07+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 3；解析版 14；简答版 4；印刷版 11
 - 警告豁免：0
