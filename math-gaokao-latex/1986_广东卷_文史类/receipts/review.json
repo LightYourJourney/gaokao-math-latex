@@ -1,6 +1,6 @@
 {
   "batch_id": "phase2-b58",
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "dependency_tree_sha256": "a895597b6bed3771b2ec936a989504be4eb6b69b285b3c796ed16124b63b8a33",
   "editions": [
     {
@@ -280,8 +280,8 @@
             },
             {
               "check": "answer_leak",
-              "note": "",
-              "result": "pass"
+              "note": "答案泄漏：试题版第 6 页注释写明“按题意和解答页解释为乘法”，直接消除了第 2(2) 题关键运算符歧义。当前仅登记失败，未擅改源稿。",
+              "result": "fail"
             }
           ],
           "page": 6,
@@ -334,7 +334,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "e2f5ccad91073ecc8034afffd3e8b70cf104eca462cc73d33212a244eb6c889c",
+      "pdf_sha256": "3e77d3ec0d5da6366ce411adad53976df4b91082c55376482b867d7d5c4020bd",
       "result": "fail"
     },
     {
@@ -1634,7 +1634,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+      "pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
       "result": "fail"
     },
     {
@@ -2014,7 +2014,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "40479a968782b3e3546153b6c10fb79a90500f1228d8348e100934475b700687",
+      "pdf_sha256": "61e0cc0cc4d1e43ada569670501eb7d72f689fd0e136afc5cc1d67021de1ae42",
       "result": "fail"
     },
     {
@@ -3038,15 +3038,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+      "pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
       "result": "fail"
     }
   ],
-  "generation_input_tree_sha256": "157326a32eac51cc13f82a5cd139ec52664f9744e9f5b41c8823c481948cde4a",
+  "generation_input_tree_sha256": "a41543565cc7175470719ee3cd2e88729057968f1252da61e3e277f84dbf8e33",
   "input_projection": "2693cd0d84750f8f0745f4fb185e63d1c1ffa87fd7db4c55631b7f50c79a68e6",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "project_dir": "1986_广东卷_文史类",
-  "reviewed_at": "2026-10-12T15:52:11+08:00",
+  "reviewed_at": "2026-10-16T13:36:53+08:00",
   "schema_version": 1,
   "status": "failed",
   "toolchain_fingerprint": {

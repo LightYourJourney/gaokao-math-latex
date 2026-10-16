@@ -16940,7 +16940,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -16949,7 +16949,7 @@
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -16960,7 +16960,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -16969,7 +16969,7 @@
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -16980,7 +16980,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -16989,7 +16989,7 @@
   "origin": "visual-review",
   "page": 10,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 10 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17000,7 +17000,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -17009,7 +17009,7 @@
   "origin": "visual-review",
   "page": 15,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "711b8189a0c448df3007d0f5b2526fad07f2966275d36b46e075f53a2e71144f",
+  "pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 15 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17020,7 +17020,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -17029,7 +17029,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "40479a968782b3e3546153b6c10fb79a90500f1228d8348e100934475b700687",
+  "pdf_sha256": "61e0cc0cc4d1e43ada569670501eb7d72f689fd0e136afc5cc1d67021de1ae42",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17040,7 +17040,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -17049,7 +17049,7 @@
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "40479a968782b3e3546153b6c10fb79a90500f1228d8348e100934475b700687",
+  "pdf_sha256": "61e0cc0cc4d1e43ada569670501eb7d72f689fd0e136afc5cc1d67021de1ae42",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17060,7 +17060,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -17069,7 +17069,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17080,7 +17080,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -17089,7 +17089,7 @@
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17100,7 +17100,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -17109,7 +17109,7 @@
   "origin": "visual-review",
   "page": 12,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 12 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17120,7 +17120,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -17129,7 +17129,7 @@
   "origin": "visual-review",
   "page": 19,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "aab14a0f57835f36b6bf7e4a9e94f851ea45bf1575853191fb876101b1c01c05",
+  "pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 19 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17140,7 +17140,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "figure_label",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -17149,7 +17149,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "e2f5ccad91073ecc8034afffd3e8b70cf104eca462cc73d33212a244eb6c889c",
+  "pdf_sha256": "3e77d3ec0d5da6366ce411adad53976df4b91082c55376482b867d7d5c4020bd",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17160,7 +17160,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "4f48ddc0-7717-45a0-a040-d69b1602dfa8",
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
   "check_code": "glyph",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -17169,7 +17169,7 @@
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
-  "pdf_sha256": "e2f5ccad91073ecc8034afffd3e8b70cf104eca462cc73d33212a244eb6c889c",
+  "pdf_sha256": "3e77d3ec0d5da6366ce411adad53976df4b91082c55376482b867d7d5c4020bd",
   "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 6 页 glyph（已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17744,6 +17744,27 @@
   "paper_id": "gk-1989-regular-guangdong-science",
   "pdf_sha256": "d86c90406bc66c703660f65f98fda512cca6c4752504ab36be7f93518e52412f",
   "resume_action": "修正 gk-1989-regular-guangdong-science 的 解析版 第 24 页 pagination_whitespace（本页仅有第30题答案（2）框；题干、推导和答案（1）在第23页，形成答案孤页。见当前attempt第23–24页渲染图。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1081
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
+  "check_code": "answer_leak",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "6d9eed2959c9890725fb162f168b83cb19a11082114bc4df3d1b685ce77cb689",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-1986-regular-guangdong-arts",
+  "pdf_sha256": "3e77d3ec0d5da6366ce411adad53976df4b91082c55376482b867d7d5c4020bd",
+  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 6 页 answer_leak（答案泄漏：试题版第 6 页注释写明“按题意和解答页解释为乘法”，直接消除了第 2(2) 题关键运算符歧义。当前仅登记失败，未擅改源稿。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
