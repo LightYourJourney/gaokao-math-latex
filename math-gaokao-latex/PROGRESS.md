@@ -5809,3 +5809,12 @@
 - 剩余任务：该卷不能标为验收完成。需取得包含原图的可信同版题源或权威勘误，方可重新核查第1(25)题图形；另有 `ISSUE-0778/0797`、`ISSUE-1053`—`ISSUE-1056`、`ISSUE-1082`—`ISSUE-1084` 的题源字形/语义问题仍开放。未完成题源核实前，当前编译件与失败回执保留为诚实状态，不重复OCR或臆造内容。
 - 下一步：保存本进度并本地提交；等待可靠的同版图形/符号来源后再做该卷定向修订与重建。此阶段视觉检查已登记，不重复本轮61页复核。
 - 成本：本阶段无OCR或外部模型/API调用；仅本地 PDF/PNG 复核与官方验证器。Codex Token 与费用未知，不估算。
+
+### phase4-b04：1989 广东理科 Q30 图稿修正、正式重建与逐页校样（2026-10-16）
+
+- 已完成：修复 Q30 轨迹图两个可复现的几何版面问题。旧曲线参数上限 `t=2.25` 使端点 `x=t^2=5.0625` 越过 x 轴箭头 `x=4`；旧文字锚点 `(3.1,1.76)` 落在 `y=√x` 曲线上。只将绘制上限改为 `1.8`、图中文字移至 `(0.85,2.15)`；不改题面、条件、公式、解析或答案。
+- 修改文件：图稿 `1989_广东卷_理科/figures/f1989_guangdong_science_q30_locus.tex`、回归测试 `tests/test_1989_guangdong_science_sources.py`、正式回执 `1989_广东卷_理科/receipts/build.json`、`source-manifest.json` 与本进度。当前 attempt 的四份逐页工作项、110dpi/200dpi PNG 均保留于忽略目录 `.work/phase4-b04/`。
+- 验证：两个新增几何测试在修复前分别按预期失败，修复后均通过；本卷源/分页测试 `14/14`。正式构建 attempt `198fb544-7296-40df-8d41-6569beef4a69` 四版成功，页数 `5/24/7/17` 共53页，build problems为0。manifest、provenance、build receipt 校验及 `git diff --check` 通过。逐页栅格对照旧 attempt `81e1897a-a8d0-4a94-8a0f-51f514b86f3b`：45页逐字节一致且旧回执八项全通过；另8页（试题版5、解析版5/23/24、简答版5、印刷版4/16/17）逐张200dpi人工复核，全页424/424项通过，四工作项无warning且已绑定新 attempt。当前 PNG SHA-256 保存在对应工作项的逐页记录中。
+- 全量测试：`python3 -m unittest discover -s math-gaokao-latex/tests` 共1331项，13项跳过，1项失败；唯一失败是既有 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个全库缓存/现场派生状态不一致。此前进度已记该同一测试失败（当时379项）；本次 Q30 局部几何回归与定向测试通过。
+- 剩余/下一步：四版 build 仍为 `compiled_pending_review`；须先提交本检查点使 tracked worktree 干净，再运行官方 `finalize-batch-checked` 登记当前53页视觉回执并核对报告、issue ledger、manifest。即使视觉复核登记通过，`ISSUE-1078`（Q8原句/答案卷型映射未能由固定来源确定）仍阻止整卷关闭；不得把本次构建或图稿修复记作整卷完成。
+- 成本：0次OCR、0次外部模型/API；本地XeLaTeX重建四版、Poppler逐页比较与局部高清复核；Codex Token/实际费用未知，不估算。当前 tracked 检查点尚未提交；不 push。

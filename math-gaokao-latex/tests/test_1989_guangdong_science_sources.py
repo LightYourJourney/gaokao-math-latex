@@ -1,5 +1,7 @@
 """1989 广东理科规范源必须完整对齐并与来源答案保持清晰归属。"""
 from pathlib import Path
+import math
+import re
 import sys
 import unittest
 import json
@@ -178,6 +180,35 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         self.assertIn('(-2,0)--(0,-2)', choices)
         self.assertIn('(3,0)', choices)
         self.assertIn(r'\draw[graph] (0,1.5) circle', choices)
+
+    def test_q30_locus_curve_endpoint_precedes_horizontal_axis_arrow(self):
+        figure = (FIGURES / 'f1989_guangdong_science_q30_locus.tex').read_text(
+            encoding='utf-8')
+        axis_match = re.search(
+            r'\\draw\[->,thin\].*--\(([-\d.]+),0\)', figure)
+        curve_match = re.search(r'domain=[\d.]+:([\d.]+),samples=90', figure)
+        self.assertIsNotNone(axis_match)
+        self.assertIsNotNone(curve_match)
+        axis_end_x = float(axis_match.group(1))
+        curve_end_parameter = float(curve_match.group(1))
+        curve_end_x = curve_end_parameter ** 2
+        self.assertLessEqual(
+            curve_end_x, axis_end_x - 0.25,
+            'the y^2=x curve must end before the x-axis arrow, not beyond it')
+
+    def test_q30_locus_label_has_clearance_above_the_curve(self):
+        figure = (FIGURES / 'f1989_guangdong_science_q30_locus.tex').read_text(
+            encoding='utf-8')
+        label_match = re.search(
+            r'\\node\[above right\] at \(([-\d.]+),([-\d.]+)\) '
+            r'\{\$y\^2=x,\\ y>0\$\};',
+            figure)
+        self.assertIsNotNone(label_match)
+        label_x, label_y = (float(value) for value in label_match.groups())
+        clearance = label_y - math.sqrt(label_x)
+        self.assertGreaterEqual(
+            clearance, 0.6,
+            'the locus label must sit visibly above y=sqrt(x) at its anchor')
 
     def test_short_answer_table_is_split_to_avoid_overfull_for_25_choices(self):
         manifest = json.loads((PROJECT / 'source-manifest.json').read_text(encoding='utf-8'))

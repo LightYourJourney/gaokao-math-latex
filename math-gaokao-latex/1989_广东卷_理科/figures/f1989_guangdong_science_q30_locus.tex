@@ -1,8 +1,8 @@
 \begin{tikzpicture}[x=1.0cm,y=1.0cm,>=stealth,line cap=round,line join=round]
 \draw[->,thin] (-0.35,0)--(4.0,0) node[right] {$x$};
 \draw[->,thin] (0,-0.3)--(0,2.45) node[above] {$y$};
-\draw[thick,domain=0.035:2.25,samples=90,smooth,variable=\t]
+\draw[thick,domain=0.035:1.8,samples=90,smooth,variable=\t]
   plot ({\t*\t},{\t});
 \node[below left] at (0,0) {$O$};
-\node[above right] at (3.1,1.76) {$y^2=x,\ y>0$};
+\node[above right] at (0.85,2.15) {$y^2=x,\ y>0$};
 \end{tikzpicture}
