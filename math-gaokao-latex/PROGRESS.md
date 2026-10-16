@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 1977 北京文理卷：回执失效审计（2026-10-16）
+
+- 已完成：确认 `phase2-b24` 含文科与理科两卷，manifest 均为 `complete`、来源无 issue。当前8份正式 PDF 文件均存在，且逐一与旧 build receipt 中的 SHA-256 匹配；文科16页、理科23页，共39页。旧 review receipt 均为 `passed`，覆盖312项检查（文科128、理科184）；没有发现该批可复用的 `.work` 页面图像。
+- 修改文件：本进度文件。本阶段未改题面、答案、provenance、manifest 或既有回执；未运行 OCR/API。
+- 验证：`source_manifest.py validate` 通过。两卷 build receipt 均因生成输入树变化而 stale；review gate 随之报告 stale。provenance gate 的 editions_generated 差异是 stale build 的派生状态，不应手工改状态或复用为当前构建结论。
+- 剩余/下一步：正式重建 `phase2-b24` 四版本；随后从新旧正式 PDF 渲染隔离页面图像并比较哈希。只有对应页面图像完全一致时才重绑定旧 review 判断；不一致页须重新视觉复核。Token/费用未知。
+
 ## Provenance 全库测试不变量校正（2026-10-16）
 
 - 已完成：复现并修正 `test_no_paper_advances_beyond_planning_without_provenance` 的过宽断言。状态机允许新卷在首份 provenance 导入前因有效阻塞 issue 从 `planned` 进入 `blocked`；当前唯一两个实例为 1990 广东理科、1994 上海，均有 `blocked_from=planned`、issue 引用和恢复动作。测试现在只豁免这类有明确登记的初始阻塞，不豁免其他无 provenance 的推进状态。
