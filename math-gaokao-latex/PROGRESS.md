@@ -5699,3 +5699,11 @@
 - 执行纠偏：首次把简答与版次生成检查并行启动，二者争用共享 `RepoLock`，简答检查返回锁冲突；锁持有者消失后改为串行重跑并通过。该冲突由本轮并行检查引起，没有改动内容。
 - 剩余任务：为新 attempt 刷新四份视觉工作项并复核59页/472项，按当前PDF指纹重新登记结论；之后刷新报告、运行门禁、清理中间产物并本地提交。OCR/API为0，Codex Token与费用未知。
 - 下一步：用官方 `review_receipts.py prepare-batch` 建立绑定当前 attempt/SHA 的新工作项；四版分工独立逐页复核，主会话审查结果并负责 finalization。
+
+### phase2-b70：当前构建 attempt 的复核工作项准备
+
+- 已完成：官方 `review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b70` 为新 attempt `d4b4f66b-a3d2-4428-834c-ad3dedd216c4` 创建四版工作项；每项均绑定当前 PDF SHA 与页数，覆盖试题5、解析27、简答6、印刷21页，共59页/472个检查项，全部 `pending`。旧 attempt 的视觉判断未迁移。
+- 修改文件：ignored `.work/phase2-b70/review/{试题版,解析版,简答版,印刷版}/gk-1997-regular-national-science.json` 四份工作项与本进度；未修改正式源、PDF、build receipt或review receipt。
+- 验证：四份工作项的 paper_id、attempt、PDF SHA、页数与当前正式 build receipt一致；每页8项且页号连续。正式构建回执仍为4/4 succeeded，批次待复核。
+- 剩余/下一步：对当前PDF的59页逐页检查八类视觉项目，高分辨率复看工具标记的候选页与图形/末页；将实际结果写回工作项，复核后再官方登记。旧 attempt 完成的视觉审核不替代本轮页面检查。
+- 成本：本阶段无OCR和外部模型/API调用；Codex Token/费用未知。
