@@ -5707,3 +5707,12 @@
 - 验证：四份工作项的 paper_id、attempt、PDF SHA、页数与当前正式 build receipt一致；每页8项且页号连续。正式构建回执仍为4/4 succeeded，批次待复核。
 - 剩余/下一步：对当前PDF的59页逐页检查八类视觉项目，高分辨率复看工具标记的候选页与图形/末页；将实际结果写回工作项，复核后再官方登记。旧 attempt 完成的视觉审核不替代本轮页面检查。
 - 成本：本阶段无OCR和外部模型/API调用；Codex Token/费用未知。
+
+### phase2-b70：1997 全国理科解析版第23题分页修复与重建
+
+- 已完成：在当前解析版 PDF 第24页发现孤立行首“且”，追溯至第23题第(2)问的连接词与点积公式被拆成独立段落。将规范解析正文并为一个行文段落：`又有 …，且 …。`，只改变段落/分页结构，坐标、向量、运算 `2-2=0` 与结论均未改。新增分页回归测试，先确认旧生成结果失败，再确认修复后通过。
+- 修改文件：`1997/1997_数学真题_全国理_解析正文.md`、确定性投影 `含解析.md` 与 `1997_全国卷_理科/answers.tex`、`source-manifest.json`、`1997_全国卷_理科/receipts/build.json`、新增 `tests/test_1997_national_science_layout.py` 及本进度。试题正文、答案要点、图稿和题目来源记录未改。root 下既有未跟踪的 `-.png` 与 `.mineru-service.lock` 保持原样。
+- 验证：新增 unittest 通过；`solution_sources.py check-batch`（25题）、`generate_projects.py --check`、简答/四版投影检查及 `source_manifest.py validate` 通过。正式构建 attempt `e1b0f832-a256-4550-984c-292b8c78f702` 四版均成功，页数为5/27/6/20（共58页）；编译错误、缺字、未定义引用、Overfull 与 problem 均为0；构建回执验证 `OK`，构建后 provenance 检查 `OK`。构建前 provenance 曾因旧缓存状态 `compiled_pending_review` 与新派生 `provenance_verified` 不同而报告 INVALID；正式构建刷新状态后复验通过。
+- 执行纠偏：首次 source-manifest 校验漏传必需的 `--manifest`，命令只打印 usage、未改文件；随后用正确参数通过。一次从仓库根运行项目相对路径的只读帮助/进度查看命令，因路径基准错误未找到文件；改在正确目录读取，未造成修改。后续命令均限定本卷并顺序执行，避免共享 `RepoLock` 冲突。
+- 剩余/下一步：当前新 attempt 尚未视觉签收；必须重新准备并核对绑定该 attempt 与 PDF SHA 的四版工作项，复核58页/464项后登记回执。此版印刷页数由21变20，重点确认分页变化及全部末页；通过正式复核/门禁后再提交该卷完整闭环阶段。此前 attempt 的视觉判断不得移植。
+- 成本：本阶段0次OCR、0次外部模型/API；Codex Token 与费用未知。
