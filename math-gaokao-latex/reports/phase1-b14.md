@@ -9,8 +9,8 @@
 
 - 标题：1957 年·全国卷
 - 项目目录：`1957_全国卷`
-- 构建：`succeeded`（attempt `def8699a-debd-4ada-b1e0-aa201e960b5c`）
-- 审查：`passed`（2026-10-12T00:57:17+08:00）
+- 构建：`succeeded`（attempt `b387337a-b0e1-4e7b-8f1f-554b86b69efb`）
+- 审查：`passed`（2026-10-16T08:54:17+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 2；解析版 10；简答版 3；印刷版 9
 - 警告豁免：0
