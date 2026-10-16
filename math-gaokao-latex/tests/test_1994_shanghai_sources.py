@@ -19,6 +19,26 @@ MANIFEST = ROOT / "source-manifest.json"
 SOURCE_ID = "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
 
 
+def _figure_coordinates(source):
+    return {
+        name: (float(x), float(y))
+        for name, x, y in re.findall(
+            r"\\coordinate\s+\(([^)]+)\)\s+at\s+\(([^,]+),([^)]+)\);", source
+        )
+    }
+
+
+def _figure_drawn_edges(source):
+    edges = {}
+    draw_commands = re.findall(r"\\draw(?:\[([^\]]*)\])?\s*(.*?);", source, re.DOTALL)
+    for options, path in draw_commands:
+        style = {part.strip() for part in options.split(",") if part.strip()}
+        for first, second in re.findall(r"(?=\(([^()]+)\)\s*--\s*\(([^()]+)\))", path):
+            edge = tuple(sorted((first.strip(), second.strip())))
+            edges.setdefault(edge, []).append(style)
+    return edges
+
+
 class Shanghai1994SourceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -171,6 +191,40 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("第25题项目推导经独立盲核", short_tex)
         self.assertIn("整卷其余内容尚未经过异人盲核", short_tex)
         self.assertIn(r"\textbf{非官方标准答案}", short_tex)
+
+    def test_q11_origin_labels_follow_the_scanned_option_positions(self):
+        figure = (PROJECT_DIR / "figures/f1994_shanghai_q11_graph_options.tex").read_text(encoding="utf-8")
+        match = re.search(r"\\foreach.*?\s+in\s*\{(.*?)\}\s*\{", figure, re.DOTALL)
+        self.assertIsNotNone(match)
+        positions = {}
+        for row in match.group(1).split(","):
+            fields = [field.strip() for field in row.split("/")]
+            if len(fields) >= 6:
+                positions[fields[2]] = fields[5]
+        self.assertEqual(positions, {"A": "right", "B": "left", "C": "right", "D": "left"})
+        self.assertIn(r"\node[below \originplace] at (0,0)", figure)
+
+    def test_q23_vector_preserves_parallel_edges_projection_and_hidden_line(self):
+        figure = (PROJECT_DIR / "figures/f1994_shanghai_q23_problem.tex").read_text(encoding="utf-8")
+        coordinates = _figure_coordinates(figure)
+        ax, ay = coordinates["A"]
+        bx, by = coordinates["B"]
+        cx, cy = coordinates["C"]
+        dx, dy = coordinates["D"]
+        px, _ = coordinates["P"]
+        self.assertGreater(ax, bx, "source projection places A to the right of B")
+        self.assertLess(px, ax, "source projection places P to the left of A")
+        ad = (dx - ax, dy - ay)
+        bc = (cx - bx, cy - by)
+        self.assertAlmostEqual(ad[0] * bc[1] - ad[1] * bc[0], 0, places=8)
+
+        edges = _figure_drawn_edges(figure)
+        self.assertEqual(edges[tuple(sorted(("A", "D")))], [{"dashed"}])
+        self.assertEqual(edges[tuple(sorted(("A", "P")))], [{"dashed"}])
+        for edge in (("B", "P"), ("C", "P"), ("D", "P"), ("B", "C"), ("C", "D")):
+            with self.subTest(edge=edge):
+                self.assertIn(tuple(sorted(edge)), edges)
+                self.assertTrue(all("dashed" not in style for style in edges[tuple(sorted(edge))]))
 
     def test_each_source_diagram_is_registered_vector_latex(self):
         self.assertTrue(RECORD.is_file(), "source audit record is missing")
