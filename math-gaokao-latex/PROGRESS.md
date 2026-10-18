@@ -5975,7 +5975,7 @@
 
 ### phase2-b23：理科Q5数轴TikZ修复与增量复核（2026-10-18）
 
-- 恢复：功能工作树feat/gaokao-phase0，HEAD `0a84f4a1`（以实际git log为准）、tracked diff为空；接续已登记的两项数轴失败，不重做转录/数学盲核。
+- 恢复：功能工作树feat/gaokao-phase0，HEAD `0a84f4aa`、tracked diff为空；接续已登记的两项数轴失败，不重做转录/数学盲核。
 - 测试先行：新增tests/test_1977_shanghai_numberline.py三项回归，先观察缺图/未登记导致3 fail；实现后3/3通过。解析实际图稿中的端点、开闭和线段，核对区间恰为[-4,-2)∪(3,4]并逐点与两不等式交集比较；数字标签与端点坐标绑定；调用真实md2tex验证规范Q5的登记链接输出矢量input而非ASCII片段。另纯内存变异实心端点坐标、标签锚点、跨越中间空白的高亮线段，三种均被测试拒绝，未写坏源码。
 - 最小修复：新增figures/f1977_t5_numberline.tex并在manifest登记一次引用，以规范解析普通Markdown链接替换~~~数轴；显式-4/4实心、-2/3空心、两条高亮区间和独立坐标标签。只由官方extract/generate投影含解析稿、answers.tex和index；公共转换器、数学题面、答案要点、简答、四版壳均未改。逐题question/answer摘要与正式provenance比较changed=[]，不重跑来源导入。
 - 验证：新增数轴3/3、现有生成器112/112通过（其中CLI用法/校验失败输出为隔离负向测试预期，不是实仓失败）；source check-batch两卷、单卷生成检查、简答检查及provenance check-batch两卷通过。未改共享代码，本阶段按定向验证策略不重复跑全库长测；旧全库基线不作为本轮结果。git diff --check通过。
@@ -5983,3 +5983,10 @@
 - 工作项保护：默认prepare遇到文科当前attempt工作项拒绝覆盖，在计划写入前退出；未删除/覆盖旧记录。读取官方prepare_batch现有API后，使用其work_dir参数创建隔离 `.work/numberline-fix-review/phase2-b23/review/` 八个绑定工作项，保持文科原attempt、理科新attempt及工具指纹；迁移未变页检查，仅变化两页实际重审八项。后续finalizer必须传此隔离work_dir，不能误用默认目录的旧理科工作项。
 - 修改文件：理科规范解析及生成含解析稿、answers.tex、新TikZ图、build回执；source-manifest、index、新数轴测试、增量复核JSON与本进度。先提交该修复/构建检查点，再官方finalize登记并校验状态；此刻还不声称旧视觉issue已关闭。剩余6卷刷新未启动，待本批实际验收后继续。不push。
 - 成本：0次OCR/取源/新数学求解/新子代理；只重建理科并渲染31页，变化2页目视。Token及费用未知，不估算。
+
+### phase2-b23：数轴修复验收完成（2026-10-18）
+
+- 修复检查点 `80c8d18` 后，以隔离 `.work/numberline-fix-review` 调用官方finalize-batch-checked，返回FINALIZED、revision4341、mode=review、committed=false，随后由主会话提交正式结果。批次closed，两卷production_state=complete、build=succeeded、review=passed、eligible_complete；本批53页424项为422 pass、2 not_applicable、0 fail（变化两页为解析区域，answer_leak明确不适用）。之前数轴标签错位的视觉失败已被正式对账关闭，报告无阻塞问题。
+- 验证：validate-receipts --batch phase2-b23 --require-current-inputs为OK：succeeded2、pending/stale/invalid/missing0；review_receipts check-batch返回FINALIZED且problems=[]；provenance check-batch为OK：2卷。新增数轴测试3/3、相关生成器112/112及三种纯内存变异拒绝结果见上一条；git diff --check通过。只声称本批验收，不代表整个1952—2026题库完成。
+- 正式修改：两卷各receipts/build.json和review.json、manifest、missing-issues、reports/phase2-b23.md及本进度。文科PDF未重编，复用仍当前的attempt；理科仅两页重新目视，其余29页及文科22页保留同像素证据来源。源码与测试已在80c8d18单独提交，未推送。
+- 下一步：本轮已真正修复并验收，不再重复处理1977上海数轴。原12卷失效清单余6卷尚未刷新：1977北京文/理、1986广东文/理、1997全国理、1989广东理；下阶段从1977北京文理的批次归属、当前输入与历史证据开始，保留既有已完成转录和数学证据。全库完整性与成本基准等长期目标仍未完成。

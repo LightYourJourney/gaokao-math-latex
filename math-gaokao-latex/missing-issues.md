@@ -14664,13 +14664,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "b175b8756b5081c48c4c32a27552a59623abaa0b670f3174687dd1166e1a96ec",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1977-regular-shanghai-science",
   "pdf_sha256": "d4ee341e79fadd6aa816b1b60cb62f1e1340442d6168a36a35d91ab5a53d196d",
-  "resume_action": "修正 gk-1977-regular-shanghai-science 的 印刷版 第 6 页 figure_label（本轮主会话实际目视当前PDF的150dpi页图：Q5数轴的-4、-2、3、4标号挤在图形左侧，未与四个端点对应；空心圆存在但标签/端点关系不清。旧结论漏检，在新旧像素相同的情况下仍覆盖为失败。根因：规范解析用~~~包裹ASCII数轴，生成LaTeX未置入等宽保空格环境，数字行空格被折叠。需要只改该题为带坐标标签的TikZ矢量数轴，保持[-4,-2)∪(3,4]不变。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -14704,13 +14704,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "ff1e71fd6c2629f63f4a99188310792d5eff50d4ce1f43f12856ca988d395139",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 9,
   "paper_id": "gk-1977-regular-shanghai-science",
   "pdf_sha256": "f3fecc50a012d2e64eefa3f432891aff1552532b2f90c8c352c48e4e9c8734eb",
-  "resume_action": "修正 gk-1977-regular-shanghai-science 的 解析版 第 9 页 figure_label（本轮主会话实际目视当前PDF的150dpi页图：Q5数轴的-4、-2、3、4标号挤在图形左侧，未与四个端点对应；空心圆存在但标签/端点关系不清。旧结论漏检，在新旧像素相同的情况下仍覆盖为失败。根因：规范解析用~~~包裹ASCII数轴，生成LaTeX未置入等宽保空格环境，数字行空格被折叠。需要只改该题为带坐标标签的TikZ矢量数轴，保持[-4,-2)∪(3,4]不变。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
