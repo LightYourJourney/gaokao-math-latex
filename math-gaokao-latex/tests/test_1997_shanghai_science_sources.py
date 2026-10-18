@@ -3,11 +3,15 @@
 import hashlib
 import json
 import re
+import sys
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from solution_sources import parse_question_blocks
+
 PAPER = ROOT / "1997_上海卷_理科"
 QUESTION = PAPER / "题面转录草稿.md"
 ANSWERS = PAPER / "答案要点草稿.md"
@@ -54,6 +58,13 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
         ])
         for group in ("A₁组", "B₁组", "A₂组", "B₂组"):
             self.assertIn(group, self.question)
+
+    def test_canonical_parser_recognizes_written_subparts(self):
+        blocks = parse_question_blocks(self.question)
+        self.assertEqual(blocks[18].subparts, (1, 2))
+        self.assertEqual(blocks[19].subparts, (1, 2))
+        self.assertEqual(blocks[20].subparts, (1, 2, 3))
+        self.assertEqual(blocks[21].subparts, (1, 2, 3))
 
     def test_source_specific_high_risk_notation_and_stems_are_retained(self):
         for fragment in (

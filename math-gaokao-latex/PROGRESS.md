@@ -6108,3 +6108,12 @@
 - 实际完成/修改文件：完成正式生成契约定向审计；仅更新本`PROGRESS.md`。生成器测试目标为22题号连续、答案覆盖与小问集合一致、figure引用计数一致；这轮尚未到达成功的生成阶段，故不报告生成通过、正式编译或视觉验收。没有触碰manifest、paper绑定、规范Markdown、答案归属或共享工具。
 - 验证与成本：工作区恢复状态已核对；两次内存dry-run分别稳定复现标题格式拒绝和题20重复题号拒绝；进度变更的`git diff --check`通过。新增OCR/API/数学求解/编译调用均为0，Codex Token及费用未知。不重跑此前13项来源/精确算术测试。
 - 下一步：先安排独立逐页盲核并核实固定源的出版者/版本身份；之后据人工核验结果按现有格式规范化题面、答案和覆盖22题的解析，明确把20题A₂/B₂分支收于唯一题号20下，补足21题答案小问的可溯源结论，再运行转换器dry-run。只有源角色、审核状态和格式门禁全部满足后，才考虑正式manifest绑定、四版编译及视觉验收。来源仍未认证、`paper_id=null`、试卷不是canonical或complete；不push，继续整个语料任务。
+
+### 1997上海理科：规范解析器小问识别与全套回归（2026-10-19）
+
+- 测试先行：新增真实解析器断言，要求第19、20题识别小问(1)—(2)，第21、22题识别(1)—(3)。先运行时按预期失败：四题均返回空小问集合，定位到题面每个小问闭括号后直接接正文、缺少解析器要求的分隔空格。
+- 最小修正：只在题面第19—22题的12个小问标记后添加一个空格；`git diff --ignore-all-space --exit-code -- 题面转录草稿.md`通过，确认除空白外题面逐字不变。更新来源校对记录的题面SHA-256为`55fb5a067bee435bf98c03bd5e72243b25850057e92ec5da5da2f1a4c3980cd1`。未改数字、题干、公式、分支或答案，来源与审核状态仍维持未核。
+- 定向验证：1997来源测试及独立数学回归共14/14通过；来源JSON可解析，`git diff --check`通过。全项目`unittest discover`共1357项、13 skipped，结束状态为FAILED：1 error、1 failure。error为`test_legacy_migration.FigureOccurrenceGuardTests.test_real_repository_matches_the_registered_occurrences`，指出1977上海理科旧式Markdown图片与注册图稿链接混用；failure为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，现场provenance重新派生发现365项production状态缓存不一致（例如manifest complete、派生为editions_generated）。两者涉及1977及其他既有卷、与本阶段三文件变更无交集；保留为全库已知红项，不在此处扩大范围处理。
+- 来源身份补核：只读上游README确认其参考书目列有《上海市高考试卷集 数学 1990-2003》，但没有把这份固定PDF对应到该出版物；仓库README也说明文件汇集自公开/出版资料并移除了元数据/水印。上游本地检出仅有grafted `main` tip `34c13a6 update readme`，文件历史未提供逐文件来源链。以上不足以证明当前PDF来自该书或官方出版，继续标记`publisher-unverified`，不作认证推断。
+- 修改文件：题面转录草稿、来源校对JSON、`tests/test_1997_shanghai_science_sources.py`、本进度。正式生成器仍未成功通过；解析正文标题/全卷覆盖、20题A₂/B₂合并及答案小问覆盖仍未解决。blind-review代理当前额度错误，无盲核结论。未修改manifest、生产文件或公共工具，不增加图片，不运行OCR/API/新数学求解或XeLaTeX。
+- Git/下一步：测试后确认没有staged污染，只有上述预期文件改动；当前分支`feat/gaokao-phase0`，HEAD为`3c65049f`。只读`git ls-remote`显示远端同名分支也在`3c65049f`，本会话未push。下一步待审阅资源恢复后完成异人逐页盲核；在此期间仅做格式与来源角色准备，不把本卷升级为canonical/complete。全题库目标继续active。成本Token/费用未知。
