@@ -1,0 +1,568 @@
+{
+  "batch_id": "phase3-b19",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-2015-regular-zhejiang-sci",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "7b712671a602aa0f585915ff0c6f2f013590b57e344c5b6c28f1b5bc4b644cfe",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "1",
+      "printed_number": 1,
+      "question_id": "gk-2015-regular-zhejiang-sci-q01",
+      "question_order": 1,
+      "question_text_sha256": "4142d1787b3f26a3646a9844478d07b871470100d6c9c9aef8827769ff9fa304",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 1 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "ced63c66863f99430b36f5d945f862c444ec61cb7e38a1790c982f7bdf422e0c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "2",
+      "printed_number": 2,
+      "question_id": "gk-2015-regular-zhejiang-sci-q02",
+      "question_order": 2,
+      "question_text_sha256": "38b14b35be46759c6acb95a07a852fdb463a52aa62b2b07632e9b324f32c0e0e",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 2 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "a7c55b9ed8acae3daef32bc735a69a4efe7ca4e14a673f5720bb317e683c3521",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "3",
+      "printed_number": 3,
+      "question_id": "gk-2015-regular-zhejiang-sci-q03",
+      "question_order": 3,
+      "question_text_sha256": "0540f962d19fde60db33d619a7e407202aba59de76f72008932b4b3f185b1c61",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 3 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "0f8d7d6b26fce38c03e53efe2bc7b3e52cce4887f1dd18922215d4158504f336",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "4",
+      "printed_number": 4,
+      "question_id": "gk-2015-regular-zhejiang-sci-q04",
+      "question_order": 4,
+      "question_text_sha256": "4e931d32ce42131dba8d426f25f84c9893315818b96897501278da341165246b",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 4 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "d09cb51e6902f50f5161b93df9b01b60663f46812db3ff123e7afed4213a311f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "5",
+      "printed_number": 5,
+      "question_id": "gk-2015-regular-zhejiang-sci-q05",
+      "question_order": 5,
+      "question_text_sha256": "74b523231d2c55e8b0aa401a5e66d463029d4658ad4f06b2af46890e33140d22",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 5 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "4c32b5f4e67190b64eef475f762c0da81a91bafeffb3959be538e73ed1b85189",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "6",
+      "printed_number": 6,
+      "question_id": "gk-2015-regular-zhejiang-sci-q06",
+      "question_order": 6,
+      "question_text_sha256": "ed470bfa784a19e4e26e570ed1839e90b279a8016107c9db8385c826b6aa9113",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 6 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "06a75b06fa966152225cbe3aa7f2a0776ecec656d4537858803cab9aceb60a56",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "7",
+      "printed_number": 7,
+      "question_id": "gk-2015-regular-zhejiang-sci-q07",
+      "question_order": 7,
+      "question_text_sha256": "69b2f2edd675d985d9af9363d642b751826a58b1d3b794891725ef3b46f41516",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 7 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "5564fb88b667bfa1e36f0c470de424e7e4a4bd6d63d29979ce39a1648492fb6c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "8",
+      "printed_number": 8,
+      "question_id": "gk-2015-regular-zhejiang-sci-q08",
+      "question_order": 8,
+      "question_text_sha256": "5bf7132db37836eda0bc098be0370f0aa593e788d6c80bb93462971633fca6d8",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 8 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "56317646d80393680a9b69fa5d2e915ba78064fd2c2e92d5f5e2b4db4cea8c98",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "9",
+      "printed_number": 9,
+      "question_id": "gk-2015-regular-zhejiang-sci-q09",
+      "question_order": 9,
+      "question_text_sha256": "e517a748a27e75f971a78b8251135904d0539d18f7981d97eb80d62c577f5613",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 9 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "71bcd3d07b147b1f45f77e507b5dd6f81f8ab268a5822c6af31fd9d1c534100c",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "10",
+      "printed_number": 10,
+      "question_id": "gk-2015-regular-zhejiang-sci-q10",
+      "question_order": 10,
+      "question_text_sha256": "03278ae8f2c9cc5c5faea5ea7a8dabc80e784a521aae482d027480f308b1e72f",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 10 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "b1295a0d66fffa9642279eafdafd1f56af288d250efe1b94b813bc9f3deda2e8",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "11",
+      "printed_number": 11,
+      "question_id": "gk-2015-regular-zhejiang-sci-q11",
+      "question_order": 11,
+      "question_text_sha256": "953553558c2b3852f4a6a77fe3731901e07bb25d8e3fe9fd78c7a5e9e53fd67c",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 11 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "a9294dff4a0d8e2fdc3350c8851682c95bf8364ff9e2f140a9a4af9649221266",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "12",
+      "printed_number": 12,
+      "question_id": "gk-2015-regular-zhejiang-sci-q12",
+      "question_order": 12,
+      "question_text_sha256": "396e5da5a0bcb0adf8a435c6d4c19d414c96fa7e951a918d400336b884946997",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 12 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "d908c06c859026f82b431b0c17fa926892eaf1b94622c46977d52fc999c50ee0",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "13",
+      "printed_number": 13,
+      "question_id": "gk-2015-regular-zhejiang-sci-q13",
+      "question_order": 13,
+      "question_text_sha256": "2214eee6bed22de76a1e8b760cbf1dabb7ca256ea0ddfcb3abb8e0d805f6a2d2",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 13 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "6e463626dfa64d5ecefa1a527087c081cdad62cdbab58464ec0704b6a2e86b90",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "14",
+      "printed_number": 14,
+      "question_id": "gk-2015-regular-zhejiang-sci-q14",
+      "question_order": 14,
+      "question_text_sha256": "31bf87be28ea96b760196f8a0f351b20cba8d971c1a1992e8e7b84f5732ed20d",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 14 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "be7764e54e9f36e59add3a4f02585fe411f620f5d6f96118fc9f17ccc2542e4e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "15",
+      "printed_number": 15,
+      "question_id": "gk-2015-regular-zhejiang-sci-q15",
+      "question_order": 15,
+      "question_text_sha256": "5e82125ba5484d8fb155d300c0bf94df07439cfb762b13c6dfaeda35244ad19e",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 15 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "32d3c6695d32e518e7f65e50852aa2fdad86d88b6238c6d36ba189927770ac61",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "16",
+      "printed_number": 16,
+      "question_id": "gk-2015-regular-zhejiang-sci-q16",
+      "question_order": 16,
+      "question_text_sha256": "733f8ce5e0826aea7ae86069d956ec7c786ace5e86fcc6b5ddd4672ba46655f7",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 16 题，原 PDF 第 1 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "b327493646efbb596831c9d61926fca8aa186c13bcd39d2d84aa80c13688dc64",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "17",
+      "printed_number": 17,
+      "question_id": "gk-2015-regular-zhejiang-sci-q17",
+      "question_order": 17,
+      "question_text_sha256": "53a63220914688ad291a57bdb0e616c1b72601895dfd90dea62c4e5fdd796488",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 17 题，原 PDF 第 2 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "87ebc6850889b3304a122d1c8fef1af0dfd83461d8b8c5916123747ac0d2a13d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "18",
+      "printed_number": 18,
+      "question_id": "gk-2015-regular-zhejiang-sci-q18",
+      "question_order": 18,
+      "question_text_sha256": "ae9da9baa218a20470feacb9ea8fe0b90ae74cfb6e9ccc5f586da3e9523b1490",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 18 题，原 PDF 第 2 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "fad4a57f2c9d15398c1b86feaf28096b5f8e8f48ba8d2415d21c6fb62b70420f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "19",
+      "printed_number": 19,
+      "question_id": "gk-2015-regular-zhejiang-sci-q19",
+      "question_order": 19,
+      "question_text_sha256": "4fee812bddb6a622bebe3af8eff0af3e69e7c72c84cf1a5d4e935d74c6e27ab7",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 19 题，原 PDF 第 2 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "固定原卷不附参考答案（等级 D）。盲解代理（两段分工，仅读题面页）逐题独立求解全 20 题（选择 8＋填空 7＋解答 5 题共 17 个小问），主会话独立复算并对关键项逐项复核（第 2 题三视图体积 32/3、第 5 题面积比 x_B/x_A=(|BF|−1)/(|AF|−1) 并以直线 y=−x+2 数值验证 7−4√3、第 8 题坐标法 ∠A′DB≥α 与两组反例排除 (C)(D)、第 10 题 f(f(−3))=0 与最小值 2√2−3、第 13 题向量基底得 7/8、第 14 题分段去绝对值最小值 3（在 (3/5,4/5) 取等）、第 15 题投影方程 x0+y0/2=2、x0/2+y0=5/2 得 x0=1、y0=2、|b|=2√2、第 16 题 tan C=2 与 b=3、第 17 题法向量与半平面符号判定得 −1/8、第 18 题端点约束得 |a|+|b| 最大值 3、第 19 题判别式 m²>2/3 与面积最大值 √2/2、第 20 题 S_n=1/2−a_{n+1} 与归纳界），全卷逐题一致。规范推导见解析正文。",
+        "grade": "D"
+      },
+      "answer_sha256": "d88138aa84e7da8be89f855bdebefcf5caf5549a16db1cc37bfcc7340dae72e9",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "20",
+      "printed_number": 20,
+      "question_id": "gk-2015-regular-zhejiang-sci-q20",
+      "question_order": 20,
+      "question_text_sha256": "9b4672a428dce46e5ab02cf27052d7c0fd467277308a2083906e4f311bde1025",
+      "reviewer_role": "盲解员（两段分工：Q1–8 / Q9–20）异人独立求解（源不附答案，无泄卷约束）",
+      "solver_role": "主会话 独立复算与规范解析整合（源不附答案，等级 D）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-ece72cc7546574caefb7f6dd684cece64d1dc1678ef9e2ebadea23d4497d3bd1"
+      },
+      "source_sha256": "801150f0a6d440ac967813d264face6d48b6ee9c69cc20f1c9d6b2b38dec2e9f",
+      "transcription_review": {
+        "evidence": "转录代理（分段分工；本卷为 **LaTeX（Computer Modern 系）重排产物**——非扫描件，pdfimages 零命中、全矢量、16 个嵌入字体全嵌入，故以页面图像为准录入并以内容流逐 path 解析交叉校验；A3 横向三栏书刊合排（页 989/990），栏位与阅读序经词框与渲染位图双路实测；句读为**半角西文体系**（LMRoman10 出字），按全库约定归一全角；**本卷有 CMMIB10 与 TeX-vect10**——第 15 题向量 e1、e2、b 以 CMMIB10 粗斜体为主、范数式中 b 带 TeX-vect10 箭头（源内混排，本库统一 \\boldsymbol，分卷独立实测）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg 出自 LMRoman10；6 幅图（三视图 30 路径、抛物线与三点 10 路径、翻折 5 路径、三棱锥 7 路径、三棱柱 13 路径含 5 虚线、椭圆 9 路径）经逐 path 坐标实测复刻，六图探针编译零警告、坐标残差 ≤6.4e-5 pt、600 dpi 墨迹检查与灵敏度自证均通过）逐题转录并产出全 2 页 page-map 与全卷图表实测清单；主会话另对关键判读独立复核：第 10 题分段函数按 600 dpi 像素校订、第 15 题向量记号统一、Q17 虚线五条（AC/BC/CC₁/A₁C/BD）逐段核对，与盲解结果交叉一致。第 20 题，原 PDF 第 2 页。",
+        "result": "passed",
+        "role": "转录员（三段分工：Q1–8 / Q9–16 / Q17–20＋图清单）原卷逐题转录、全 2 页三栏 page-map 与全卷图表实测清单"
+      }
+    }
+  ],
+  "schema_version": 1
+}

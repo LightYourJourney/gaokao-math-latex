@@ -10694,6 +10694,46 @@
       "track": "文科",
       "variant": "浙江文",
       "year": 2015
+    },
+    {
+      "base": "2015_zhejiang_science",
+      "dir": "2015_浙江卷_理科",
+      "figures": [
+        "f2015zjl_q02_views.tex",
+        "f2015zjl_q05_parabola.tex",
+        "f2015zjl_q08_fold.tex",
+        "f2015zjl_q13_tetra.tex",
+        "f2015zjl_q17_prism.tex",
+        "f2015zjl_q19_ellipse.tex"
+      ],
+      "id": "gk-2015-regular-zhejiang-sci",
+      "legacy_ids": [],
+      "note": "批次 phase3-b19；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 989/990）、无参考答案页；选择 1–8＋填空 9–15＋解答 16–20＝20 题；**卷面不印分值**，总分为结构推断。固定源不附答案（等级 D）；解析全由本库独立推导（双路盲解互证＋主会话独立复算——第 8 题坐标法 + 两反例排除、第 14 题分段去绝对值、第 15 题投影方程、第 17 题法向与半平面符号判定、第 18 题端点约束、第 19 题判别式与面积最值、第 20 题归纳界等逐项复核）。源为 LaTeX（CM 系）重排产物（全矢量、无位图；句读为半角西文体系——按全库约定归一全角）。**向量记号**：源有 CMMIB10 与 TeX-vect10，e₁/e₂/b 以粗斜体为主、唯范数式中 b 带箭头（源内混排），本库统一作 \\boldsymbol；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；实数集 R、自然数集 N* 为粗正体；正体函数名 sin/cos/tan/lg（LMRoman10）。**第 10 题分段函数**文本层错位（按 600 dpi 像素录）。6 图均按源内容流实测坐标复刻：三视图（30 路径）、抛物线与三点（10 路径）、翻折（5 路径）、三棱锥（7 路径）、三棱柱（13 路径含 5 虚线）、椭圆（9 路径）。图源探针逐点残差 ≤6.4e-5 pt、600 dpi 墨迹与灵敏度自证均通过。",
+      "paper": "浙江卷",
+      "paper_id": "gk-2015-regular-zhejiang-sci",
+      "pdf_pages": {
+        "questions": null,
+        "solutions": null
+      },
+      "questions": 20,
+      "structure": {
+        "填空题": [
+          9,
+          15
+        ],
+        "解答题": [
+          16,
+          20
+        ],
+        "选择题": [
+          1,
+          8
+        ]
+      },
+      "title": "2015 年·浙江卷·理科",
+      "track": "理科",
+      "variant": "浙江理",
+      "year": 2015
     }
   ],
   "source_pdf": "../math-gaokao-2017-2026/main.pdf",
