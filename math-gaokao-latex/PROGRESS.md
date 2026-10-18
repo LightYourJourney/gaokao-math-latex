@@ -6015,3 +6015,11 @@
 - 视觉增量：旧/新各126页以同一pdftoppm26.10.0、150dpi渲染，PNG逐页字节完全相同。持久reports/1986-guangdong-receipt-refresh-20261018.json包含各版PDF哈希、旧审查绑定、126页PNG哈希及全部17条原失败。主会话实际抽查当前文史类试题p6（缺字符号及泄漏说明仍存在）、理工农医类试题p5（缺图说明仍存在）；不声称重看全126页。官方prepare8工作项后只迁移同像素的原八项结论，保留所有fail及原审查时间/attempt，glyph note附当前SHA。
 - 修改文件：两卷build回执、source-manifest、比对证据JSON与本进度；题面/答案/解析/图形/公共工具未改，PNG不入库。先提交此构建/证据检查点，再分别finalize两批保存当前负结果；本阶段不称整卷验收完成。
 - 成本及下一步：0次OCR/取源/数学重算/新子代理，Token/费用未知。无代码变化，不重复运行全库测试，依据实际构建、生成一致性及正式状态验证。原12卷清单本两卷仍待本轮正式诊断刷新，另2卷未启动：1997全国理、1989广东理。刷新结束后须回到文史类泄漏说明，只去掉题面中的解答性推断、保留缺字事实和来源证据，再做必要哈希更新和局部验收；不能因源不全而搁置这一可修复问题。不push。
+
+### phase2-b58/b59：1986广东两卷当前失败回执正式登记（2026-10-18）
+
+- 构建/证据检查点f40ee8a2后，官方finalize-batch-checked分别返回VISUAL_FAILED并自动提交：文史类839d2107、revision4351；理工农医类35afbb8e、revision4352。两批仍compiled_pending_review、两卷仍保留失败及blocked，不伪称验收完成。
+- 机器复核：126页×8项共1008项，942 pass、49 not_applicable、17 fail。文史类13个失败检查对应11个独立(版本,页码)，理工农医类4项对应4页；API failed_pages在此仍是失败检查数，不能把文史类13误报成13个独立失败页。当前失败的版本/页码/检查类型与持久比对报告所保存的历史失败集合完全相同，逐页glyph note包含当前PNG SHA，build/review/证据报告attempt一致。
+- 验证：两批validate-receipts --require-current-inputs均OK，各papers1、pending1、stale/invalid/missing0；provenance check-batch各OK：1卷。git diff --check通过。第一次在b58仍运行时启动b59被RepoLock拒绝、没有写入；随后轮询原b58进程64278确认终止，再正常运行b59并完成，未删锁或启动重复b58。后续写事务必须等待前一句柄真正完成再启动。
+- 正式文件：两卷build/review回执、source-manifest、missing-issues、reports/phase2-b58.md与phase2-b59.md，均由官方事务已提交；本进度另行提交。未改正文/答案/图形，无新图片入库、无push。当前工作阶段是旧证据当前化，不是新增转录2套。
+- 下一步：原12卷失效清单只剩1997全国理、1989广东理待刷新；这不等于全库剩余两套。完成该小清单后，优先修复文史类试题p6已确认的编辑说明泄漏（应移除题面推断、保留缺字原貌及解析中的来源证据），其余缺图/缺字仍需可核验新来源，不可猜补。全题库目标继续，未完成也非整体受阻。
