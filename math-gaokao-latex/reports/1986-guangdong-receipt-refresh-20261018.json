@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-18",
+  "method": "Exact byte comparison of all old/new 150dpi page PNGs with same renderer. Reuse historic checks including failures, not a new whole-paper manual review or proof of source/mathematical correctness.",
+  "dpi": 150,
+  "renderer": "pdftoppm 26.10.0",
+  "total_pages": 126,
+  "changed_pages": 0,
+  "spot_checks": [
+    "Current arts question edition p6: source glyph box and answer-leaking editorial note still visible.",
+    "Current science question edition p5: missing source graph options notice still visible."
+  ],
+  "papers": [
+    {
+      "paper_id": "gk-1986-regular-guangdong-arts",
+      "batch_id": "phase2-b58",
+      "project_dir": "1986_广东卷_文史类",
+      "old_attempt_id": "8a9f76c8-9a00-4323-a3ba-5c05ef43ab67",
+      "new_attempt_id": "f5ecf4f2-d049-4fca-bc0c-b11fa1e9eefd",
+      "historical_reviewed_at": "2026-10-16T13:36:53+08:00",
+      "historical_review_status": "failed",
+      "old_review_sha256": "a6ad84e0e6382b9f482809fbe86a2d70ab87cec14bf932df32a4c7518796a17c",
+      "preserved_failures": [
+        {
+          "edition": "试题版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "试题版",
+          "page": 6,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        },
+        {
+          "edition": "试题版",
+          "page": 6,
+          "check": "answer_leak",
+          "note": "答案泄漏：试题版第 6 页注释写明“按题意和解答页解释为乘法”，直接消除了第 2(2) 题关键运算符歧义。当前仅登记失败，未擅改源稿。"
+        },
+        {
+          "edition": "解析版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "解析版",
+          "page": 6,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        },
+        {
+          "edition": "解析版",
+          "page": 12,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "解析版",
+          "page": 19,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        },
+        {
+          "edition": "简答版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "简答版",
+          "page": 6,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        },
+        {
+          "edition": "印刷版",
+          "page": 4,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        },
+        {
+          "edition": "印刷版",
+          "page": 4,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "印刷版",
+          "page": 10,
+          "check": "figure_label",
+          "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。"
+        },
+        {
+          "edition": "印刷版",
+          "page": 15,
+          "check": "glyph",
+          "note": "已知来源限制：固定源第 2(2) 乘号位置为缺字方框，题面按来源说明保留为 □，未当作渲染乱码。"
+        }
+      ],
+      "editions": [
+        {
+          "edition": "试题版",
+          "page_count": 7,
+          "old_pdf_sha256": "3e77d3ec0d5da6366ce411adad53976df4b91082c55376482b867d7d5c4020bd",
+          "new_pdf_sha256": "161963734eea4bfcb197df8277f9a4eb0e344b6a23658aa6852a86007e6effe2",
+          "equal_png_pages": 7,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "dec87175febd7f78a979b680c11c0a6c20bbefc8c11fdd583e69271c6f08f3f7"
+            },
+            {
+              "page": 2,
+              "sha256": "707299cbd89441f1145e8ecb13d9b2338d674cef6c709751f49f57da5d02cf28"
+            },
+            {
+              "page": 3,
+              "sha256": "f10fc8bdc4a848f690ed7f83e96bb7373ef149062f5255c41c2cefcd12492b22"
+            },
+            {
+              "page": 4,
+              "sha256": "78c11b0f891afb699e63aaab46fcbaca03b76400ad99443f659bc4873b2b6d8f"
+            },
+            {
+              "page": 5,
+              "sha256": "b8e3bc8e1e6c5bb1b55b1b5da749be42b7a4ae492932218e4228d6cd7f9a08cd"
+            },
+            {
+              "page": 6,
+              "sha256": "5b5be4b32754a2d391cf1922776e43c4d3b5b1f7a0959d60764d8a9209434263"
+            },
+            {
+              "page": 7,
+              "sha256": "6ef547e3b243413e9ffd7c08e9e3d3bc41a8f690fde680179f4162425fd5ad7b"
+            }
+          ]
+        },
+        {
+          "edition": "解析版",
+          "page_count": 28,
+          "old_pdf_sha256": "725116ed4334296ffa76f49e41ebc152e76baf54566be2341583eed3e0f89a32",
+          "new_pdf_sha256": "f8318574819ca9590b5b9ada4d8175963f215e8221c8dcec931254eb71e5bea5",
+          "equal_png_pages": 28,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "cefc95e0880a7528814176aca482e74fbaa45f29baa43b2a8f1099a587b94847"
+            },
+            {
+              "page": 2,
+              "sha256": "1865a0fa837b5d956a2a237264dc79787eec6e981dbf00af35055e8e1e896ca4"
+            },
+            {
+              "page": 3,
+              "sha256": "bd4eb34c9453648124597059b31b89a71e12b43d4b441a1bf2d780daf57871fa"
+            },
+            {
+              "page": 4,
+              "sha256": "c695e8ed898ea708de553f2f4a9b84763123ffd1b38feb4eeefec9a6fbed5f98"
+            },
+            {
+              "page": 5,
+              "sha256": "ac1c9875866b42cb15e410ed520584f70c1751f9a6c0fbdfbc1316146bf3e62f"
+            },
+            {
+              "page": 6,
+              "sha256": "743d6b9c9da83ef92bc8b87742f4f046cbd565879f7c98bc3ea589e3fdaf1bfa"
+            },
+            {
+              "page": 7,
+              "sha256": "04e6d077c84046d2d1c0ec4c301f9cbe034055dde87d9dff5097bdff378ef122"
+            },
+            {
+              "page": 8,
+              "sha256": "32a7d92b5bff38f58c9122cd97b061aa4320011860da9b08a031d02150f99ae4"
+            },
+            {
+              "page": 9,
+              "sha256": "d2e0fc0b74eae69dc7ef20f3c78e18047352d0e603a749ef5ae67f525479c1f9"
+            },
+            {
+              "page": 10,
+              "sha256": "177ef1dedbba29be0dc4f31ab34d0b14d1e299576b05b321daff22df9e2ded27"
+            },
+            {
+              "page": 11,
+              "sha256": "46750f9d6d7d0b93f89155907ab5cc3badb6c85c41fbec1a961e154d18cbfd89"
+            },
+            {
+              "page": 12,
+              "sha256": "c24c4f9864297baa18f5aa50796c7a1f3820653210aaf7a6b421e77920960505"
+            },
+            {
+              "page": 13,
+              "sha256": "01a0897f28607e9ce184dca2c82deaadd17e8eda9c7d9b9c0053bacc8ee5f95a"
+            },
+            {
+              "page": 14,
+              "sha256": "73cd4aca83f2efa5f1ea16aaedce48b0cf4b327fa7d358acb5bca294a090000d"
+            },
+            {
+              "page": 15,
+              "sha256": "15ebd1f8557ed453989dabf777037a47da1498ab38c48daca9657bf4fcccef3d"
+            },
+            {
+              "page": 16,
+              "sha256": "7375f859f0bc961473ff83e3a66081bad94c4071a5d9b21d088a57b220920795"
+            },
+            {
+              "page": 17,
+              "sha256": "fd0134522cca3a2275a0c769de4fdbc1168bf422371053062adb7b209ff68009"
+            },
+            {
+              "page": 18,
+              "sha256": "3809f28a75e083e6e8967c8dbb387e8c904ac0ddaf3d74ef626afbaa85188874"
+            },
+            {
+              "page": 19,
+              "sha256": "8bd5bff7fed1b21fde412a4c8f96c8646b4770fc6e0701c2eb42d8609996c046"
+            },
+            {
+              "page": 20,
+              "sha256": "5cf7c672297ef9f48793ca669eb73d516eb6d7d90285a835459da36029df2378"
+            },
+            {
+              "page": 21,
+              "sha256": "55b8cb346fd4689f766f01ce518ea772abcf3265611c10fb3cc9f70a265c6931"
+            },
+            {
+              "page": 22,
+              "sha256": "07a88a588890247780abb3a59c84add8ed719150debf0d37a668d9a41948e841"
+            },
+            {
+              "page": 23,
+              "sha256": "3b7ec6699ad3d12327705b9c2ab35590aaeee87fdcca7d43daaf3af88196fc6f"
+            },
+            {
+              "page": 24,
+              "sha256": "3eec73bf4b03054ecff57574018d409b4523be0669f037fe1bfe0b21e6531946"
+            },
+            {
+              "page": 25,
+              "sha256": "e3b39af9c0394566d0a6b1ddd7f03f48aa90a764a74a73db2e947a599a64c762"
+            },
+            {
+              "page": 26,
+              "sha256": "70e6b6d717384deb552a26398efb62c520688cfafd48b34f919d057ed6cd94f2"
+            },
+            {
+              "page": 27,
+              "sha256": "b83223f8e708d20e28088b52071624e6f6705fc7185bd9bc94136f94a6002d17"
+            },
+            {
+              "page": 28,
+              "sha256": "cb0c01fe2ac1ed8708a75090747919647a101255cedd01153ec90e810a45ea39"
+            }
+          ]
+        },
+        {
+          "edition": "简答版",
+          "page_count": 8,
+          "old_pdf_sha256": "61e0cc0cc4d1e43ada569670501eb7d72f689fd0e136afc5cc1d67021de1ae42",
+          "new_pdf_sha256": "43ea8ca4dd474576e4c8eb84cdd6903f2cf322f9d8e147033e6804813abd6d12",
+          "equal_png_pages": 8,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "42789ccc14722dae77b1c2b73e16e0d46792cc6451b5ba49122551932e89aaf3"
+            },
+            {
+              "page": 2,
+              "sha256": "19d210fa972a3be3b1e766d201ec57e484fcc356532d53a826fe7be5ca954ecf"
+            },
+            {
+              "page": 3,
+              "sha256": "a872c9df8f74429a37f8b7c048b304390812946852fbbec187baff123562012c"
+            },
+            {
+              "page": 4,
+              "sha256": "73946906bd4a2f2b963b202467232855f94f4e13fbce15a636524dda968a15de"
+            },
+            {
+              "page": 5,
+              "sha256": "34265d7fa63b9619d6494d9dd0b8dc75d552178089e4680363471afc93170912"
+            },
+            {
+              "page": 6,
+              "sha256": "f7781b1acb847b54231a048c32250b60b364cdfc8e7fce3cefba4fb200499acc"
+            },
+            {
+              "page": 7,
+              "sha256": "7da1505e3d4505ddbf6b4d923444ed6021dbf204407140c0ee89a698d4e8db25"
+            },
+            {
+              "page": 8,
+              "sha256": "1bf1c3cee380333b0ce36ed7b8ce15d71e0b9cb84a98ab613948dcedf76041ec"
+            }
+          ]
+        },
+        {
+          "edition": "印刷版",
+          "page_count": 22,
+          "old_pdf_sha256": "f757e6e0e4b11fad92d87f64b01bbca0c91663fe4e2fdeaeb703d8103a2ecf66",
+          "new_pdf_sha256": "c4f06a646058dd9cc18eee50de3088e5770fbab0df8eed6ad3a1d8bf89a01a1f",
+          "equal_png_pages": 22,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "05bd190e0f51293474e6610c7f8102e3af2c9f3069130574df8f4edb57affb60"
+            },
+            {
+              "page": 2,
+              "sha256": "6e79b883715a3b3704234930a0d47f6324451c362ea5a96dad72cd5d01b6ee61"
+            },
+            {
+              "page": 3,
+              "sha256": "bfa6c5797cdd9419271268582c1b9af27fd4e7fa41f85de279b56f9150aa094e"
+            },
+            {
+              "page": 4,
+              "sha256": "8fe5fb476f2577a2f86f97958f78d636e2996310e8a5f52cd3126d3978d8b1b1"
+            },
+            {
+              "page": 5,
+              "sha256": "dcec4ebbfa72b085d78963ecc9b424cbeaa58896c912dafcff7f6210bbe22a60"
+            },
+            {
+              "page": 6,
+              "sha256": "058919ffe4b2999485851a6e9c7557d07de8754e5e24f230a981984c3318e460"
+            },
+            {
+              "page": 7,
+              "sha256": "bd6b79fbc8393fb7cf6adbccb12ab8a2a72b407efe31813373d749c49c17810d"
+            },
+            {
+              "page": 8,
+              "sha256": "b9682efcaf1631a33af2ff07b4b93101ffad12b928494fe2dc18ef940c9c7492"
+            },
+            {
+              "page": 9,
+              "sha256": "1c4e9547980f375f28efe6efe46e45c6bbcd4e44dac24dbd7f1c78d761855d03"
+            },
+            {
+              "page": 10,
+              "sha256": "b0b3d0827541d37153611572439e151cca265cd9c2f92a47432c057f7aacf0c9"
+            },
+            {
+              "page": 11,
+              "sha256": "f4501151d8fcbb19156feef1a389d474a48e6d2a8600bccb0706b2efeed98437"
+            },
+            {
+              "page": 12,
+              "sha256": "def5375e6a7e06075f7d2cc141f221bdb4ed1eeda561972d6ce553cc708dfaf2"
+            },
+            {
+              "page": 13,
+              "sha256": "70221a2e073857385f581a4c20ed3eb2d6f324c0adcbbf263265097d736e6d1a"
+            },
+            {
+              "page": 14,
+              "sha256": "03f702960a0b7b93a3f235d30375d0a4a323afa345258e028180b6a0247f7f4d"
+            },
+            {
+              "page": 15,
+              "sha256": "039a9ba7b8fee9330a3db48602afccd7c4c1ac78c711f5d822b485180114b2a3"
+            },
+            {
+              "page": 16,
+              "sha256": "926bbcb267e6c95c2d582f05b4348809d8d1ec24a3ee7fbd847000b2dd6909dd"
+            },
+            {
+              "page": 17,
+              "sha256": "7af5ef350ef45bf7a85bcec77b14f835a78cfe74595557625aa5721a8089114f"
+            },
+            {
+              "page": 18,
+              "sha256": "f4b2e831a2d77d4ade08f33a8b90a2b44f0119ba0447534663572d8cb322162c"
+            },
+            {
+              "page": 19,
+              "sha256": "de2e75ae24b0fb842d0b271d563ba58e020f66dc50fd49d10bb0ac9a2f6901a0"
+            },
+            {
+              "page": 20,
+              "sha256": "6fbc3825c4239f7e2bef570983aa03ca3ba49da4c6409bd84f1a275bf9f8a855"
+            },
+            {
+              "page": 21,
+              "sha256": "14c58a40b42cd3a4dc2ae5e5deb32cab3dad8446c1bee3766f78967bc1810785"
+            },
+            {
+              "page": 22,
+              "sha256": "62077904b9f0ee2c6aca8b3faa5b727276d1d8832b253d40f09be0e8bd622189"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "paper_id": "gk-1986-regular-guangdong-science",
+      "batch_id": "phase2-b59",
+      "project_dir": "1986_广东卷_理工农医类",
+      "old_attempt_id": "f61761f1-e312-481d-9b1a-c053e38dc3ee",
+      "new_attempt_id": "15b083ec-f7ac-40de-9e81-4be25fb2fdc2",
+      "historical_reviewed_at": "2026-10-16T15:29:12+08:00",
+      "historical_review_status": "failed",
+      "old_review_sha256": "cde8f0bb5d5df99fa294412aa1e049132ad9fd82cc784afbf808bae0aacc850c",
+      "preserved_failures": [
+        {
+          "edition": "试题版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。"
+        },
+        {
+          "edition": "解析版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。"
+        },
+        {
+          "edition": "简答版",
+          "page": 5,
+          "check": "figure_label",
+          "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。"
+        },
+        {
+          "edition": "印刷版",
+          "page": 4,
+          "check": "figure_label",
+          "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。"
+        }
+      ],
+      "editions": [
+        {
+          "edition": "试题版",
+          "page_count": 7,
+          "old_pdf_sha256": "6112b20ec459e9bf308dc3799cd5a6e08092a39dbc5c30cce2bfe0b27edb5e20",
+          "new_pdf_sha256": "c5cda165b733f010d88ba29c5066435490d778f9643c433aa8d401c7a3293279",
+          "equal_png_pages": 7,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "a5cc6cf690542e8d13ea09b4aa6522dc688267b09a1ec6dfdff37a0922907b6a"
+            },
+            {
+              "page": 2,
+              "sha256": "5d16366ada850fd65f554fa4401cbba9d3cf8a0737cf3c919b0ed8148b36bc60"
+            },
+            {
+              "page": 3,
+              "sha256": "904c2dee0fa6c297090a33eb6737dd1dc57d2cced2eb4b3bdbc6438780a63f7c"
+            },
+            {
+              "page": 4,
+              "sha256": "76a5430224061c59f91e3bffc3b76e3f380a06dbe2dafcdfc04c1bb1daa849fc"
+            },
+            {
+              "page": 5,
+              "sha256": "e039e72cdf3abeb904b16a6afdc98652ad10ee1efe06b6cce1f7218f246325a3"
+            },
+            {
+              "page": 6,
+              "sha256": "ccea552d9cfc4248ce04f62e844eea7b946e1ddd9392cc2a58c224ed2bae0565"
+            },
+            {
+              "page": 7,
+              "sha256": "e4c3ca93ccf476b423773b01ea7b2682ec3b0305a56a07e83aad93e06d7a47a4"
+            }
+          ]
+        },
+        {
+          "edition": "解析版",
+          "page_count": 26,
+          "old_pdf_sha256": "2f74ade47dd3bfb7d2096cd2dc56f2ee19fcaedf1aec4a4e718e3f0ef6bd40bb",
+          "new_pdf_sha256": "bd6ac9b970eb596940c4721d4e44eae8534311faac90ef72a45f98ad0540be5c",
+          "equal_png_pages": 26,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "6b4e0d95c7ccee321752002cc2707830ab845be9abf422f72f4f478c3007103b"
+            },
+            {
+              "page": 2,
+              "sha256": "5d71070221abf0eaab3f09eabd2d24ff0df4048faa71dd6af641d0bd8f3cb903"
+            },
+            {
+              "page": 3,
+              "sha256": "9cabccd6fc21f3d2e52e73b6e584d3b36b220a8e7e82226432a2d101bd488a6a"
+            },
+            {
+              "page": 4,
+              "sha256": "a487181bc20bd3678f26947af29f344be588f9eff861d3329a7304fec1bacd55"
+            },
+            {
+              "page": 5,
+              "sha256": "2315ecd7f7326139bd1d5cb4ea53be2510bdd7d4c816105dcdab53330f329abc"
+            },
+            {
+              "page": 6,
+              "sha256": "99e2c57aca2b47173a3cb6f3978dda3731e65ab6a3fe597afb9252c5845fd482"
+            },
+            {
+              "page": 7,
+              "sha256": "04db5376d42858c8f790acb26b81624303390a96d5ce63e6ea8c2bf559a88639"
+            },
+            {
+              "page": 8,
+              "sha256": "bf38cb8b872910bbb1b761bbb79880299063a056c565ccdac68e77c2b1987c99"
+            },
+            {
+              "page": 9,
+              "sha256": "a336e4879109334671020baf0e8427bd63b2c60b49e2a1736bf93f4659a1a6b4"
+            },
+            {
+              "page": 10,
+              "sha256": "2abe72f69b518a2b2012fe95668478726440d20f374e93ea29bef05a41800c04"
+            },
+            {
+              "page": 11,
+              "sha256": "d0430775514cbad1d082f4cfc12e887798ad2af3eb6b56a9538542bb7524b3a9"
+            },
+            {
+              "page": 12,
+              "sha256": "e7e5723eb4ffb7bb807e936572778ae5bad2018b54fc9425a6ca825c606dee26"
+            },
+            {
+              "page": 13,
+              "sha256": "59e2cc3ac77a13b1fd04f072aafba27cbe7dc21dce8c13ccb7aa6f822bd21004"
+            },
+            {
+              "page": 14,
+              "sha256": "d021d2027df311a15980ee2d17cc3a73bf011883e9c52516cebe12dcc117d02b"
+            },
+            {
+              "page": 15,
+              "sha256": "e1f58c38b4b482ee7569be24bc9cdd84dec29730c0a6c97c346b8371423ae197"
+            },
+            {
+              "page": 16,
+              "sha256": "321c8dd2571c39f0baa8d861b9b56d01950fbd3c714396e506ca06f2ff1459b4"
+            },
+            {
+              "page": 17,
+              "sha256": "5798d3c9a445372d267e357f004f2a962b9f72374959706e7e8f42ba080a4c1a"
+            },
+            {
+              "page": 18,
+              "sha256": "ed4a5e7a9345b308ab93ecf1f67af5a3babef863aea93f48fafd94f3e68986d9"
+            },
+            {
+              "page": 19,
+              "sha256": "f223a8cb18abbf930a11f6a0511b21a46e2ff70cbe94eedaa5c95f5a8732cb60"
+            },
+            {
+              "page": 20,
+              "sha256": "705e3296d899a5754efb7ffc47abb48b52fd12087f22ee8b62a3b071d20adbf6"
+            },
+            {
+              "page": 21,
+              "sha256": "b59aa9eb0887e3c1e52ee04477758fe1d6353747db5f4c25996121ab60b5a11b"
+            },
+            {
+              "page": 22,
+              "sha256": "a48816d758ae22c60baa51d58f56555013e4766c5617354869358e9c3849fe46"
+            },
+            {
+              "page": 23,
+              "sha256": "c5df9650dc4ac99efe90b43e312dbf7f2f7c4f6658d57f53f6201f7ad7afcf49"
+            },
+            {
+              "page": 24,
+              "sha256": "645297b3af49a58ba898a684f7e040df425bea0795f852d324fc4af22d072b74"
+            },
+            {
+              "page": 25,
+              "sha256": "55fb886da241f62c1b213a6f92848d06aecec485246dd809ebd8fbcb9a677fea"
+            },
+            {
+              "page": 26,
+              "sha256": "c42155f54aa2f317935d8e8cbc53ab66231e557ad0e9c6efe98615c1bf4d5497"
+            }
+          ]
+        },
+        {
+          "edition": "简答版",
+          "page_count": 8,
+          "old_pdf_sha256": "6093a02b3c15f95e35859c4bf8bbdcdaa7908977a79a5e14c30c90c686f891dd",
+          "new_pdf_sha256": "550b792b643f44c9637ff1e116eca6f5818ab914f0fc12b85a739fb7bb51539e",
+          "equal_png_pages": 8,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "2b732c17a52e6f9daf52f73012d7949be6948f3d10643d20eb0f1205c89e1f55"
+            },
+            {
+              "page": 2,
+              "sha256": "38fac0543e54468bca673d8257fe1be878c33e8e275311313045bd688084970f"
+            },
+            {
+              "page": 3,
+              "sha256": "5261235a7089cf576578b536a383c52cf4c2051dbc46ff5939dc082e6d1a87e2"
+            },
+            {
+              "page": 4,
+              "sha256": "e36ef05278eb760c8cbed600988d3d99f90a7b9d8ffd8a3e974255e8a5c84100"
+            },
+            {
+              "page": 5,
+              "sha256": "15f17ff61cd11f25f83d84be930260d1ccc6e618bce823010ea6405a9a537f53"
+            },
+            {
+              "page": 6,
+              "sha256": "5b7b19f97c88734fc4e5d1deb13a1dab5e6d95a931e88176a59b99a108974a83"
+            },
+            {
+              "page": 7,
+              "sha256": "1c6a5be44d2e513c784fc416769272c0677a4b59fc702b45a86288fae8410a96"
+            },
+            {
+              "page": 8,
+              "sha256": "7453565c7492e9bee2567945dd7d6d9455cfc4247b687739512dbcf4d9f3b5b1"
+            }
+          ]
+        },
+        {
+          "edition": "印刷版",
+          "page_count": 20,
+          "old_pdf_sha256": "c3796f6c4cd18b219614a21960f18370c5e4d6ff8da5009e8de82645cd67f476",
+          "new_pdf_sha256": "de7c654b921355b96082b28c6cd98ba73c5d5888e39e5e15539eae0640ae27bb",
+          "equal_png_pages": 20,
+          "changed_pages": [],
+          "page_png_sha256": [
+            {
+              "page": 1,
+              "sha256": "90af38fa14967df573968c75314b217bf4df1860feb307408a67d765637cef05"
+            },
+            {
+              "page": 2,
+              "sha256": "59c5f3d2bfd1a8227df7472da518a355036d00106aed4b05e641e1ee8c3e84cd"
+            },
+            {
+              "page": 3,
+              "sha256": "850d5d7bf04ebba292aebe4a2185669f4ce0052311843385ea56e5528fc71d67"
+            },
+            {
+              "page": 4,
+              "sha256": "ae9b368966b10ed26cfce206c4162ca6f57a075d9e951f94d5832e4fe98a41a7"
+            },
+            {
+              "page": 5,
+              "sha256": "d8786d0ac8086ffa3ab0554d03d06ed06b35fa74b596f02df289ee64438d7473"
+            },
+            {
+              "page": 6,
+              "sha256": "c5150ce4c81d061d3234f33afc0ce2c9be8a249d39bd438c17f051a4a1d121d5"
+            },
+            {
+              "page": 7,
+              "sha256": "a0cba50d03e663b251da8324624f14df9a292be88b82e6c05856b2aa36aac47f"
+            },
+            {
+              "page": 8,
+              "sha256": "b6938ddb5e89a6a893e2b1ce2bcd5359e8f5f2850df88a35e4488a049960fa94"
+            },
+            {
+              "page": 9,
+              "sha256": "7e9bc84bf8e2d6dd2f73468e52f2a6c98022253dbc9422f0959c7bf79b527c49"
+            },
+            {
+              "page": 10,
+              "sha256": "b75853ee3c69d46b0315ebf07cc27bb2c6d2c6d72638dcb3eaa1dae0e1946664"
+            },
+            {
+              "page": 11,
+              "sha256": "88749b9af64353f6d5d381d80a0481dc9e13abbec07c6807457b97b1b591b3b1"
+            },
+            {
+              "page": 12,
+              "sha256": "6fe4c5d62d6e2857d4e03c2ce0dc4efefab65752663ccbee0467ce3265f519b1"
+            },
+            {
+              "page": 13,
+              "sha256": "ff7401ccd28ffbcc420c9502c188b923e04ccafb04f0f572fc0638563929493d"
+            },
+            {
+              "page": 14,
+              "sha256": "6932327ea6dcf78dcc53109eccc66018086c8cc64d269b56b9912b7eb3df052c"
+            },
+            {
+              "page": 15,
+              "sha256": "cd3273930959a8d042e0abd07d3dbe132f00ec6061ef92d84c38903e8e059a66"
+            },
+            {
+              "page": 16,
+              "sha256": "2eba316d2a3d4b1ac8524b5fe166f078d2ce2d96380f4effc7bd70502dbb63d0"
+            },
+            {
+              "page": 17,
+              "sha256": "cff53a6eef0afa319c121303d2ff9e8ee16a7e89ce1855d4b3dd66e301851a7c"
+            },
+            {
+              "page": 18,
+              "sha256": "dc92d5a5fe2c01b85f67e8dc372d59d5b0d4335f5030eae59a298facfb9bd1a3"
+            },
+            {
+              "page": 19,
+              "sha256": "5fa7be8f9197d2f13dd46906590ccccda57e75a1ac3cb9810baadaf034447ec2"
+            },
+            {
+              "page": 20,
+              "sha256": "b1c527545c2294e482ef57d0c9557d2ce8f3344d652bc31d2fc710308b9b155b"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

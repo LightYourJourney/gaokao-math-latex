@@ -6006,3 +6006,12 @@
 - 验证：validate-receipts --batch phase2-b24 --require-current-inputs为OK，succeeded2、pending/stale/invalid/missing0；review_receipts check-batch为FINALIZED且problems=[]；provenance check-batch为OK：2卷。两卷build/review attempt一致；git diff --check通过。北京相关4项测试和旧锚点变异拒绝已在上一检查点记录，不用旧全库结果代替本轮验证。
 - 修改文件：两卷receipts/build.json和review.json、manifest、reports/phase2-b24.md及本进度；原题/答案内容未变。最终同像素证据指向before与after-fix/after缓存；仅理科解析p9/印刷p7是本轮人工式目视校样，未谎称重看全部38页。新增回归揭示并防止原测试未覆盖的字形穿线问题。
 - 下一步：此批完成，不再重编或重复核对1977北京两卷；原12卷清单余4卷待刷新，先核对1986广东文/理的批次范围和输入失效维度，再处理1997全国理、1989广东理。仍是既有成果维护，不增加新增转录卷数，不代表全题库完成。所有写入仍限定feat/gaokao-phase0工作树，不push。
+
+### phase2-b58/b59：1986广东文理回执当前化检查点（2026-10-18）
+
+- 恢复：feat/gaokao-phase0功能工作树、HEAD3f61d54c、tracked diff为空，上一回合已完成北京两卷验收，是实际进展。定位广东两卷分属独立批次phase2-b58（文史类）、phase2-b59（理工农医类），两者旧review均failed、production_state blocked；仅共享make_short_answers.py生成输入哈希变化，依赖树未变。
+- 既有失败边界：文史类13项（源第1(25)缺A—E图形、源第2(2)缺字符号及试题p6编者说明“按题意和解答页解释为乘法”的答案泄漏），理工农医类4项（缺图）。本次不猜测原图、不替换来源□、不把blocked提升为complete。答案泄漏是可修复编辑问题，不是缺源的必然结果，已明确列入随后独立修复任务；当前先保留正式失败证据。
+- 已完成：保存旧8份PDF及回执至忽略 `.work/receipt-refresh-20261018/{1986_广东卷_文史类,1986_广东卷_理工农医类}/before/`，旧工作项分别备份old-phase2-b58-work/old-phase2-b59-work。两批三类生成检查各1/1通过，8版正式XeLaTeX+latexmk构建均succeeded，日志errors/missing_characters/overfull/undefined_references/problems为空。文史类attemptf5ecf4f2-d049-4fca-bc0c-b11fa1e9eefd，7/28/8/22页；理工农医类attempt15b083ec-f7ac-40de-9e81-4be25fb2fdc2，7/26/8/20页，共126页，revision4350。
+- 视觉增量：旧/新各126页以同一pdftoppm26.10.0、150dpi渲染，PNG逐页字节完全相同。持久reports/1986-guangdong-receipt-refresh-20261018.json包含各版PDF哈希、旧审查绑定、126页PNG哈希及全部17条原失败。主会话实际抽查当前文史类试题p6（缺字符号及泄漏说明仍存在）、理工农医类试题p5（缺图说明仍存在）；不声称重看全126页。官方prepare8工作项后只迁移同像素的原八项结论，保留所有fail及原审查时间/attempt，glyph note附当前SHA。
+- 修改文件：两卷build回执、source-manifest、比对证据JSON与本进度；题面/答案/解析/图形/公共工具未改，PNG不入库。先提交此构建/证据检查点，再分别finalize两批保存当前负结果；本阶段不称整卷验收完成。
+- 成本及下一步：0次OCR/取源/数学重算/新子代理，Token/费用未知。无代码变化，不重复运行全库测试，依据实际构建、生成一致性及正式状态验证。原12卷清单本两卷仍待本轮正式诊断刷新，另2卷未启动：1997全国理、1989广东理。刷新结束后须回到文史类泄漏说明，只去掉题面中的解答性推断、保留缺字事实和来源证据，再做必要哈希更新和局部验收；不能因源不全而搁置这一可修复问题。不push。
