@@ -65,7 +65,8 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["source_ids"], [SOURCE_ID])
         self.assertEqual(self.paper["question_count"], 26)
         self.assertEqual(self.paper["production_state"], "blocked")
-        self.assertEqual(self.paper["issue_ids"], self.record["issue_ids"])
+        self.assertEqual(self.record["issue_ids"], ["ISSUE-1071"])
+        self.assertTrue(set(self.record["issue_ids"]).issubset(self.paper["issue_ids"]))
         index_note = self.paper["index_metadata"]["note"]
         self.assertIn("Q25项目推导已独立复核", index_note)
         self.assertIn("全26题逐题局部复核已完成", index_note)
@@ -325,6 +326,25 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["production_state"], "blocked")
         self.assertEqual(self.record["known_question_issues"][0]["status"], "open")
 
+    def test_scanned_section_boundaries_and_scores_are_complete(self):
+        sections = re.findall(r"^## ([一二三四])、([^\n]+)\n(.*?)(?=^## |\Z)", self.questions, re.MULTILINE | re.DOTALL)
+        self.assertEqual([section[0] for section in sections], ["一", "二", "三", "四"])
+        expected = [(30, 1, 10), (30, 11, 20), (36, 21, 23), (54, 24, 26)]
+        total = 0
+        for (_, _, body), (score, first, last) in zip(sections, expected):
+            actual_score = re.search(r"本大题满分\s*(\d+)\s*分", body)
+            self.assertIsNotNone(actual_score)
+            self.assertEqual(int(actual_score.group(1)), score)
+            total += int(actual_score.group(1))
+            numbers = [int(n) for n in re.findall(r"^\*\*(\d+)．\*\*", body, re.MULTILINE)]
+            self.assertEqual(numbers, list(range(first, last+1)))
+        self.assertEqual(total, 150)
+        for source in (self.solutions, self.combined):
+            self.assertIn("## 四、解答题", source)
+        for name in ("questions.tex", "answers.tex"):
+            rendered = (PROJECT_DIR / name).read_text(encoding="utf-8")
+            self.assertIn(r"\gkpart{四、解答题}", rendered)
+
     def test_formal_provenance_keeps_unverified_officiality_and_source_conflict(self):
         path = PROJECT_DIR / "provenance.json"
         self.assertTrue(path.is_file(), "formal provenance has not been imported")
@@ -405,7 +425,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
                 positions[fields[2]] = fields[5]
                 directions[fields[2]] = (int(fields[3]), int(fields[4]))
         self.assertEqual(positions, {"A": "right", "B": "left", "C": "right", "D": "left"})
-        self.assertIn(r"\node[below \originplace] at (0,0)", figure)
+        self.assertRegex(figure, r"\\node\[below \\originplace(?:,[^\]]+)?\] at \(0,0\)")
         self.assertEqual(directions, {"A": (1, 1), "B": (-1, 1), "C": (1, -1), "D": (-1, -1)})
 
         # Inspect the actual geometry in both branches, not just their labels.

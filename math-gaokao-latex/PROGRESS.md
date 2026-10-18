@@ -5915,3 +5915,13 @@
 - 正式登记：官方 `finalize-batch-checked` 返回 `VISUAL_FAILED` 并实际提交 `3f7d842e`，revision4323；更新 `receipts/{build,review}.json`、manifest、missing-issues及 `reports/phase1-b24.md`。新增视觉问题 `ISSUE-1089`—`ISSUE-1105`。API字段 `failed_pages=17` 实际列举的是17条失败检查；按(版本,页码)去重为13页，不把它误报成17个独立失败页。当前build仍为compiled_pending_review、review为failed，不能放行。
 - 验证与证据：四个work文件无pending，每页八项齐全；45张PNG的SHA与glyph notes一致；遮叠另有当前PDF的300dpi局部证据。正式诊断绑定attempt `4713a95a-06b4-4399-9bab-c58f428d8b8c` 和四版PDF哈希；两名代理仅改各自忽略work文件，未修改正文或源码。Q25来源冲突仍unresolved、ISSUE-1071仍open。
 - 修改文件：本次官方事务自身已提交上述5个正式回执/报告文件；本进度追加本条，随后单独本地提交。下一步集中修复两个题图的标号位置，在规范题面与规范解析中补回原卷第四节及54分/3题说明，并以章节分值合计150和图标避让回归覆盖；刷新必要的题面/provenance哈希后单卷重建。保留本attempt作为已完成的失败校样证据，勿重新做本轮45页检查或数学盲解。
+
+### phase1-b24：章节恢复、标号避让与第二轮正式构建（2026-10-18）
+
+- 恢复检查：工作树 `仓库根`，分支 `feat/gaokao-phase0`，起点HEAD `65216aa1`。核对既存diff与本进度后接续未提交修复，未写main，未重复26题转录/数学盲核。
+- 已完成：规范题面补回Q24前第四节及54分/3题/必要步骤说明；规范解析补齐四节入口及原有分值说明，官方生成器投影到含解析稿、questions/answers及各版。Q11只缩小并微调原点O标号内距/位置，Q23题图只移动A标号，曲线/点线坐标与数学条件均未变；局部XeLaTeX预览实际目视检查。去掉本卷标题重复科目，更新索引、来源文件/图稿哈希。
+- 修改文件：1994上海规范试题/解析正文及生成含解析稿；本卷questions.tex、answers.tex、answers_short.tex、四版入口、Q11/Q23题图、来源校对.json、receipts/build.json；source-manifest.json、index.json、tests/test_1994_shanghai_sources.py与本进度。新增章节题号区间及30+30+36+54=150回归；来源问题集合断言允许正式视觉问题并存，但仍强制保留ISSUE-1071。
+- 验证：上海专项21/21通过；solution_sources check-batch、单卷generate_projects/make_short_answers/make_editions --check全部通过；正式provenance check-batch为OK。章节说明不改变逐题题面digest，故未重做provenance导入。源码变更后首次来源检查曾报告批次缓存compiled_pending_review与现场provenance_verified不符；正式重建后消除。两次生成检查误用省略必需选项的命令，在参数解析阶段拒绝、没有写入，随后改用明确check子命令/--check成功；不作为功能失败或通过证据。
+- 正式构建：attempt `a45689ef-169c-40eb-ab68-e16384084913`，revision4325，四版全部succeeded：试题5页、解析19页、简答7页、印刷16页，共47页。各版errors/missing_characters/undefined_references/overfull/problems均为空。validate-receipts --require-current-inputs返回OK，stale/invalid/missing均0，pending=1。git diff --check通过；未运行全库测试，不将此前遗留失败基线当成本轮结果。
+- 剩余/下一步：此阶段只完成修复及构建，不是新PDF视觉验收。印刷版由14变16页，不沿用旧页码与结论。下阶段先保存旧attempt的忽略review工作项副本，再官方prepare新attempt、渲染并逐页核查47页，最后正式登记回执；旧failed视觉回执及ISSUE-1089—1105在新验收前不伪造关闭。Q25来源分段冲突仍unresolved、ISSUE-1071仍open、整卷blocked，official_answer仍null。此前12卷回执刷新清单仍待后续阶段处理。
+- 成本：0次OCR、0次取源、0次新增数学求解调用；复用既有来源证据，仅单卷重建和局部预览。PNG及编译中间物均在忽略目录，不入库。实际Codex/子代理Token与费用不可见，不估算；本地提交，不push。
