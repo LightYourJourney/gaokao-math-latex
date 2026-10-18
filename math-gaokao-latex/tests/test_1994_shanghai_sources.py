@@ -68,7 +68,8 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["issue_ids"], self.record["issue_ids"])
         index_note = self.paper["index_metadata"]["note"]
         self.assertIn("Q25项目推导已独立复核", index_note)
-        self.assertIn("其余25题仍待复核", index_note)
+        self.assertIn("全26题逐题局部复核已完成", index_note)
+        self.assertIn("正式provenance", index_note)
         self.assertNotIn("Q25答案与解析保持待核", index_note)
         self.assertEqual(self.record["pdf_sha256"], self.source["artifact"]["sha256"])
         self.assertEqual(self.record["question_source_sha256"], hashlib.sha256(QUESTION_SOURCE.read_bytes()).hexdigest())
@@ -287,6 +288,43 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["production_state"], "blocked")
         self.assertIsNone(self.record["official_answer"])
 
+    def test_all_questions_have_local_source_and_independent_math_reviews(self):
+        self.assertTrue(all(q["review_status"] == "source-checked" for q in self.record["question_sources"]))
+        checks = {int(c["question_id"].rsplit("q", 1)[1]): c for c in self.record["derived_solution_checks"]}
+        self.assertEqual(set(checks), set(range(1, 27)))
+        self.assertEqual(self.record["solution_source"]["independently_reviewed_questions"], list(range(1, 27)))
+        expected = {
+            21: ("tangent-difference-with-domain-checks", 3, ("3/4≠0", "2≠0", "7/24")),
+            22: ("complex-ray-parameter-and-real-quotient", 3, ("s>0", "s^2=2", "2√2")),
+            23: ("coordinate-dihedral-angle-and-point-plane-distance", 4, ("a>0", "3a/√5", "√5/3", "a/√2")),
+            24: ("ellipse-parameterization-and-two-ray-locus", 4, ("t>1", "±", "x>1/√2", "x<−1/√2", "充分性")),
+            26: ("two-step-sequence-recurrence-and-discrete-extrema", 5, ("a_(n+2)=q a_n", "q=1", "101/5", "n=20", "n=21")),
+        }
+        expected_answers = {
+            21: r"\dfrac7{24}",
+            22: r"w=-\sqrt2+\sqrt2i",
+            23: r"\arctan\dfrac{\sqrt5}{3};\dfrac{\sqrt2}{2}a",
+            24: r"t^2(t^2-1)x^2+(t^2-1)y^2=t^2;\ x^2=\dfrac{\sqrt2}{2}y,\ x>\dfrac{\sqrt2}{2};\ x^2=-\dfrac{\sqrt2}{2}y,\ x<-\dfrac{\sqrt2}{2}",
+            26: r"0<q<\dfrac{1+\sqrt5}{2};\ b_n=(1+r)q^{n-1};\ \lim 1/S_n=\begin{cases}(1-q)/(1+r),&0<q<1\\0,&q\ge1\end{cases};\ \max=\dfrac94\ (n=21),\ \min=-4\ (n=20)",
+        }
+        for number, (method, page, fragments) in expected.items():
+            with self.subTest(question=number):
+                check = checks[number]
+                self.assertEqual(check["method"], method)
+                self.assertEqual(check["status"], "derived-independently-reviewed")
+                self.assertTrue(check["independent_review"])
+                self.assertTrue(check["independent_review_details"]["agent_id"])
+                self.assertEqual(check["derived_answer"], expected_answers[number])
+                self.assertEqual(check["derived_answer"], check["source_printed_answer"])
+                self.assertEqual(check["source_answer_page"], page)
+                self.assertIsNone(check["official_answer"])
+                for fragment in fragments:
+                    self.assertIn(fragment, check["derivation"])
+        # These are local reviews; publication identity and formal gates remain open.
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.paper["production_state"], "blocked")
+        self.assertEqual(self.record["known_question_issues"][0]["status"], "open")
+
     def test_q25_coordinate_derivation_is_independently_reviewed_but_not_official(self):
         checks = self.record.get("derived_solution_checks", [])
         check = next(item for item in checks if item["question_id"].endswith(":q025"))
@@ -329,7 +367,9 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("$t\\ge2$", short_tex)
         self.assertNotIn("t≥2", short_tex)
         self.assertIn("第25题项目推导经独立盲核", short_tex)
-        self.assertIn("整卷其余内容尚未经过异人盲核", short_tex)
+        self.assertIn("全26题逐题局部复核已完成", short_tex)
+        self.assertIn("正式provenance", short_tex)
+        self.assertNotIn("整卷其余内容尚未经过异人盲核", short_tex)
         self.assertIn(r"\textbf{非官方标准答案}", short_tex)
 
     def test_q11_graph_options_preserve_scanned_mathematical_features(self):
@@ -396,6 +436,52 @@ class Shanghai1994SourceTests(unittest.TestCase):
             with self.subTest(edge=edge):
                 self.assertIn(tuple(sorted(edge)), edges)
                 self.assertTrue(all("dashed" not in style for style in edges[tuple(sorted(edge))]))
+
+    def test_q23_solution_projection_preserves_auxiliary_point_incidence(self):
+        figure = (PROJECT_DIR / "figures/f1994_shanghai_q23_solution.tex").read_text(encoding="utf-8")
+        points = _figure_coordinates(figure)
+        vector = lambda first, second: tuple(b-a for a, b in zip(points[first], points[second]))
+        cross = lambda u, v: u[0]*v[1] - u[1]*v[0]
+        self.assertAlmostEqual(cross(vector("A", "D"), vector("B", "C")), 0)
+        self.assertAlmostEqual(cross(vector("C", "E"), vector("C", "D")), 0)
+        ce, cd = vector("C", "E"), vector("C", "D")
+        self.assertLess(sum(a*b for a, b in zip(ce, cd)), 0, "E lies beyond C, outside segment CD")
+        for ae, bc in zip(vector("A", "D"), vector("B", "C")):
+            self.assertAlmostEqual(ae, 3*bc)
+        for component, edge in zip(ce, cd):
+            self.assertAlmostEqual(component, -edge/5)
+        self.assertAlmostEqual(cross(vector("B", "H"), vector("B", "P")), 0)
+        for h, b, p in zip(points["H"], points["B"], points["P"]):
+            self.assertAlmostEqual(h, (b+p)/2, msg="PA=AB makes H the midpoint of PB")
+        edges = _figure_drawn_edges(figure)
+        for edge in (("A", "E"), ("A", "H")):
+            self.assertIn({"dashed"}, edges[tuple(sorted(edge))])
+        self.assertIn(tuple(sorted(("P", "E"))), edges)
+
+    def test_q25_case_figures_are_rectangles_with_correct_axis_intersections(self):
+        figure = (PROJECT_DIR / "figures/f1994_shanghai_q25_solution_cases.tex").read_text(encoding="utf-8")
+        points = _figure_coordinates(figure)
+        for suffix in ("a", "b"):
+            with self.subTest(case=suffix):
+                ox, oy = points["O"+suffix]
+                px, t = points["P"+suffix]
+                self.assertGreater(t, 0)
+                qx, qy = points["Q"+suffix]
+                rx, ry = points["R"+suffix]
+                self.assertEqual((ox, oy, px), (0, 0, 1))
+                self.assertAlmostEqual(rx, -2*t)
+                self.assertAlmostEqual(ry, 2)
+                self.assertAlmostEqual(qx, 1-2*t)
+                self.assertAlmostEqual(qy, 2+t)
+                self.assertAlmostEqual(px*rx+t*ry, 0, msg="adjacent rectangle edges are perpendicular")
+                if suffix == "a":
+                    self.assertLess(t, 0.5)
+                    self.assertEqual(points["Ka"][0], 0)
+                    self.assertAlmostEqual(points["Ka"][1], 2+2*t*t)
+                else:
+                    self.assertGreater(t, 0.5)
+                    self.assertEqual(points["Lb"][0], 0)
+                    self.assertAlmostEqual(points["Lb"][1], t+1/t)
 
     def test_each_source_diagram_is_registered_vector_latex(self):
         self.assertTrue(RECORD.is_file(), "source audit record is missing")

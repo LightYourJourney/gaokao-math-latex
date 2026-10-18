@@ -452,6 +452,9 @@ class RenderTests(unittest.TestCase):
         )
         self.assertIn("$t\\ge2$", text)
         self.assertNotIn("≥", text)
+        self.assertIn("全26题逐题局部复核已完成", text)
+        self.assertIn("正式provenance", text)
+        self.assertNotIn("尚未经过异人盲核", text)
 
     def test_a_choice_answer_that_is_not_a_letter_is_a_hard_error(self):
         answers = dict(self.answers)
