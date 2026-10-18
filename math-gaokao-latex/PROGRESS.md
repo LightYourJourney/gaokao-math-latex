@@ -5925,3 +5925,14 @@
 - 正式构建：attempt `a45689ef-169c-40eb-ab68-e16384084913`，revision4325，四版全部succeeded：试题5页、解析19页、简答7页、印刷16页，共47页。各版errors/missing_characters/undefined_references/overfull/problems均为空。validate-receipts --require-current-inputs返回OK，stale/invalid/missing均0，pending=1。git diff --check通过；未运行全库测试，不将此前遗留失败基线当成本轮结果。
 - 剩余/下一步：此阶段只完成修复及构建，不是新PDF视觉验收。印刷版由14变16页，不沿用旧页码与结论。下阶段先保存旧attempt的忽略review工作项副本，再官方prepare新attempt、渲染并逐页核查47页，最后正式登记回执；旧failed视觉回执及ISSUE-1089—1105在新验收前不伪造关闭。Q25来源分段冲突仍unresolved、ISSUE-1071仍open、整卷blocked，official_answer仍null。此前12卷回执刷新清单仍待后续阶段处理。
 - 成本：0次OCR、0次取源、0次新增数学求解调用；复用既有来源证据，仅单卷重建和局部预览。PNG及编译中间物均在忽略目录，不入库。实际Codex/子代理Token与费用不可见，不估算；本地提交，不push。
+
+### phase1-b24：第二轮47页视觉验收及带阻塞闭环（2026-10-18）
+
+- 恢复检查：功能工作树分支 `feat/gaokao-phase0`、HEAD `228b4858`、tracked diff为空；读取上一条进度后接续新PDF校样，没有重做转录/数学盲核。上一目标回合已提交修复和构建，属于实际进展。
+- 证据保存：旧attempt `4713a95a-06b4-4399-9bab-c58f428d8b8c` 的四份review工作项先复制到忽略目录 `.work/phase1-b24/review-history/<旧attempt>/`，原件及旧45页PNG保留。官方prepare新attempt `a45689ef-169c-40eb-ab68-e16384084913` 工作项；从当前四版PDF以110dpi实际渲染47页，逐页查看，不按旧页码/旧结论自动放行。当前正式试题版Q11(A)、Q23题图另以300dpi裁剪复核，O/A均与曲线/边线分离。
+- 已完成：主会话逐页检查试题5、简答7、解析19、印刷16页；每页登记8项及当前PNG SHA。共376项，314 pass、62 not_applicable、0 fail；47页均pass。不适用仅指无图页面的figure_label及答案/解析区域的answer_leak，保留原因。四节题号/分值完整、页眉去重、图形标签清楚；解析Q24的两个答案框跨相邻页但各框完整，接受；印刷版新增第四节分页正常。Q25来源冲突说明保留，视觉通过不等于来源冲突解决。
+- 正式登记：`review_receipts.py finalize-batch-checked` 返回FINALIZED、revision4326、committed=false（本次由主会话随后提交），batch_status=`closed_with_blockers`，content候选=`eligible_blocked`。build=`succeeded`、review=`passed`；官方事务将17条视觉检查问题ISSUE-1089—1105置resolved。来源ISSUE-1071仍open，paper production_state仍blocked，未伪报无阻塞完成。
+- 修改文件：本卷 `receipts/build.json`、`receipts/review.json`；`source-manifest.json`、`missing-issues.md`、`reports/phase1-b24.md`与本进度。未改题面/答案/数学推导、公共工具、模板或其他卷；47页PNG和工作草稿均忽略、不入库。
+- 验证：47个PNG SHA全部匹配各页glyph note，四工作项无pending且每页恰8项；正式finalizer无problems；`validate-receipts --require-current-inputs --json`为OK，succeeded=1、pending/stale/invalid/missing=0；provenance check-batch为OK；上海专项21/21通过；`git diff --check`通过。本轮无公共代码变化，未重复运行全库测试。
+- 剩余/下一步：1994上海已完成正式构建及视觉闭环，但Q25来源分段疑误需新的可核验来源才能解除，暂保留blocked不重复盲算。下一工程阶段按前述12卷旧回执失效清单逐卷刷新，先从2019全国Ⅰ理开始核验当前输入/历史回执和局部改动，复用未变来源和数学证据，再定向重建及校样；不可直接提升整库完成数或把该12卷清单当作全部剩余量。
+- 成本：0次OCR、0次取源、0次新子代理/聊天模型API调用；一次当前47页渲染加两处局部裁剪。沿用上轮正式PDF，无重编。Codex实际Token/费用未知，不估算；本地提交，不push。
