@@ -6056,3 +6056,10 @@
 - 视觉：150dpi比较仅10页变化：试题1/6、简答1/6、解析1/6/19、印刷1/4/15。主会话逐页实际查看这10页，确认卷首及题面说明中不再出现乘法解释，公式□仍留、解析解释及答案框保持完整，无新裁切/遮叠。其余55页PNG逐字节相同。官方prepare4工作项，变化页八项重新核对，未变页复用旧证据；仅试题p6 answer_leak由fail改pass，缺图/缺字来源限制12项继续fail。reports/phase2-b58-question-note-fix-20261019.json保存全部65页新旧哈希与复核方法。
 - 修改文件：规范试题、生成含解析稿、questions.tex/answers.tex、provenance.json、build回执、manifest、新回归测试、新增量校样JSON及本进度。先提交修复/构建检查点，再官方finalize对账关闭泄漏问题；目前不提前称issue已关闭或整卷验收完成。未改公共工具/其他卷，无图片入库，不push。
 - 成本/剩余：0次OCR/取源/新数学求解/新子代理；只重建本卷和渲染65页，10页目视、55页复用，Token费用未知。缺失源图与源字形仍待可靠资料，不可猜补。本阶段之后应从现场来源/进度清单选择尚未转录且有源的下一批，恢复题库覆盖推进，不再反复维护已当前化的12卷。
+
+### phase2-b58：题面泄漏修复正式登记完成（2026-10-19）
+
+- 修复检查点5470f380后，官方finalize-batch-checked返回VISUAL_FAILED、revision4362，并自动提交ec7ca8a6。65页520项现为508 pass、12 fail；旧试题p6 answer_leak失败已去除，对应visual issue经官方对账为resolved。剩余12项仅glyph/figure_label来源缺字及缺图（11个独立版本页），未假装整卷视觉通过；review failed、batch compiled_pending_review、paper blocked继续保留。
+- 验证：validate-receipts --paper gk-1986-regular-guangdong-arts --require-current-inputs返回OK，pending1、stale/invalid/missing0；provenance check-batch为OK1卷。正式回执的失败集合无answer_leak，所有65页及八项覆盖齐全，10页变化实看、55页同像素证据见增量报告；git diff --check通过。新增2项回归与变异检查在上一检查点通过，未重复跑全库测试。
+- 正式文件：build/review回执、manifest、missing-issues、reports/phase2-b58.md已由官方事务提交，本进度另行提交；原题公式/答案未变，官方答案属性和来源未决状态未提升。不push，写入仍只在feat/gaokao-phase0工作树。
+- 下一步：此次可修复的题面提示问题已结束，停止重复刷新/重编本卷。缺图缺字等候新来源；转回覆盖推进：先从当前manifest、阶段报告和已有草稿核对尚未转录且source ready的条目，排除已完成/已绑定/待审但已有内容者，再选择一个可核验的下一批。必须先检查既有草稿/历史提交，不按年份记忆重新做旧卷，不将已完成维护工作当新增转录数。全1952—2026题库目标仍未完成，不能标complete。
