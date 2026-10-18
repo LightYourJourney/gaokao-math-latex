@@ -48,8 +48,8 @@
     {"question_number": 6, "question_id": "gk-1994-shanghai-q006", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 7, "question_id": "gk-1994-shanghai-q007", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 8, "question_id": "gk-1994-shanghai-q008", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
-    {"question_number": 9, "question_id": "gk-1994-shanghai-q009", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
-    {"question_number": 10, "question_id": "gk-1994-shanghai-q010", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
+    {"question_number": 9, "question_id": "gk-1994-shanghai-q009", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
+    {"question_number": 10, "question_id": "gk-1994-shanghai-q010", "question_type": "fill-in", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "source-checked", "source_review": {"method": "visual comparison against the pinned fixed scan", "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d", "result": "Question text matches the source scan on page 1."}},
     {"question_number": 11, "question_id": "gk-1994-shanghai-q011", "question_type": "single-choice", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 12, "question_id": "gk-1994-shanghai-q012", "question_type": "single-choice", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
     {"question_number": 13, "question_id": "gk-1994-shanghai-q013", "question_type": "single-choice", "source_pages": [1], "source_bbox": null, "transcription_status": "text-transcribed", "review_status": "pending-independent-review"},
@@ -220,6 +220,40 @@
       "independent_review_details": {
         "method": "blind solution from the question text only; printed answer withheld",
         "result": "independently derived k=2 from 15−5k=5 in the binomial general term; the x^5 coefficient is C(5,2)(−2)^2=40",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q009",
+      "method": "trigonometric-linear-combination-maximum",
+      "derivation": "由2cos^2x=1+cos2x，y=sin2x−cos2x−1=√2sin(2x−π/4)−1；正弦函数最大值为1，故最大值为√2−1。",
+      "derived_answer": "\\sqrt2-1",
+      "source_printed_answer": "\\sqrt2-1",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived y=√2 sin(2x−π/4)−1; since sin is at most 1, the maximum is √2−1",
+        "date": "2026-10-16"
+      },
+      "official_answer": null,
+      "provenance_note": "固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。"
+    },
+    {
+      "question_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q010",
+      "method": "sum-to-product-tangent-period",
+      "derivation": "和差化积后分子为2sin(2x+π/6)cos(π/6)，分母为2cos(2x+π/6)cos(π/6)。因cos(π/6)≠0，且原分母非零要求cos(2x+π/6)≠0，即x≠π/6+kπ/2（k∈Z）；在原定义域内y=tan(2x+π/6)。正切角增加π时函数值周期重复，因此2T=π，最小正周期T=π/2；分母为零处原分子不为零，不能补入定义域。",
+      "derived_answer": "\\dfrac\\pi2",
+      "source_printed_answer": "\\dfrac\\pi2",
+      "source_answer_page": 3,
+      "status": "derived-independently-reviewed",
+      "independent_review": true,
+      "independent_review_details": {
+        "method": "blind solution from the question text only; printed answer withheld",
+        "result": "independently derived the period π/2 by simplifying to tan(2x+π/6), retaining the original domain x≠π/6+kπ/2 because the numerator is nonzero at denominator zeros, and proving this is the least positive period",
         "date": "2026-10-16"
       },
       "official_answer": null,

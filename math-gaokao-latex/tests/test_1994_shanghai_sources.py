@@ -103,6 +103,9 @@ class Shanghai1994SourceTests(unittest.TestCase):
             r"\sin\left(\dfrac12\arccos\dfrac18\right)",
             r"\log_3(x-1)=\log_9(x+5)",
             r"\dfrac{y^2}{2}-x^2=1",
+            r"\sin 2x-2\cos^2x",
+            r"\sin 2x+\sin\left(2x+\frac\pi3\right)",
+            r"\cos 2x+\cos\left(2x+\frac\pi3\right)",
             r"\rho=-\dfrac1{\cos\theta}",
             r"\dfrac{3\pi}4",
             r"\frac{|OP|}{|OQ|}=t\sqrt{t^2-1}",
@@ -146,7 +149,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
-    def test_q1_to_q8_source_transcriptions_and_short_answers_are_reviewed(self):
+    def test_q1_to_q10_source_transcriptions_and_short_answers_are_reviewed(self):
         reviewed = {
             item["question_number"]: item
             for item in self.record["question_sources"]
@@ -183,6 +186,28 @@ class Shanghai1994SourceTests(unittest.TestCase):
                     "15-5k=5",
                     "k=2",
                     r"\binom{5}{2}(-2)^2=40",
+                ),
+            ),
+            9: (
+                r"\sqrt2-1",
+                "trigonometric-linear-combination-maximum",
+                (
+                    "2cos^2x=1+cos2x",
+                    "sin2x−cos2x−1=√2sin(2x−π/4)−1",
+                    "√2−1",
+                ),
+            ),
+            10: (
+                r"\dfrac\pi2",
+                "sum-to-product-tangent-period",
+                (
+                    "2sin(2x+π/6)cos(π/6)",
+                    "2cos(2x+π/6)cos(π/6)",
+                    "tan(2x+π/6)",
+                    "分母非零",
+                    "x≠π/6+kπ/2",
+                    "分子不为零",
+                    "T=π/2",
                 ),
             ),
         }

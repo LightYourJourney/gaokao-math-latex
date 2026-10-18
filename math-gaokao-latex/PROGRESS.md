@@ -5863,3 +5863,12 @@
 - 状态边界：仅完成Q7/Q8题面和短答局部复核，不是整卷验收或新增转录完成卷；全卷仍为`review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071`仍开放。未运行OCR、XeLaTeX构建或整卷视觉回执。
 - 剩余/下一步：继续按固定扫描复核Q9—Q10题面与短答；之后处理其余题目，再完成整卷正式provenance、四版构建和逐页视觉验收。
 - 成本/缓存：0次OCR；1次固定 GitHub Contents API 文件取回、仅渲染第1和第3页、2次隔离子代理盲解。原扫描 PDF 已按 SHA-256 缓存在 Git 忽略目录`.work/source-pdf-cache/2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d.pdf`，下阶段复用；Codex/子代理实际Token与费用不可见，不估算。尝试清理本轮临时渲染文件时被安全保护拒绝，未删除；两张PNG仍在仓库外 `/tmp/gaokao-1994-q7q8.boR6v0/`。
+
+## 1994 上海卷：Q9—Q10 题面与短答独立复核（2026-10-18）
+
+- 已完成：复用已固定并校验 SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d` 的来源扫描及既有页图，目视核对第1页Q9/Q10题面与第3页印载答案。两道题分别由只收到单题题面的隔离盲解独立复核：Q9用三角函数线性组合得最大值 `√2−1`；Q10用和差化积化为定义域受限的 `tan(2x+π/6)`，保留原分母零点限制并证明最小正周期 `π/2`。两者均与固定扫描件印载答案一致。
+- 修改文件：`1994_上海卷/来源校对.json` 登记Q9/Q10题面源页核对、扫描哈希、独立推导及印载答案页；`tests/test_1994_shanghai_sources.py` 扩展Q1—Q10表驱动覆盖；本进度文件。未改题面、答案正文、解析、正式provenance、manifest、issue ledger、构建回执或PDF；`official_answer`保持null。
+- 验证：测试先在新增题目尚为pending时按预期失败；修复复核措辞后来源专项测试 `11/11` 通过。`来源校对.json` 可解析，`git diff --check` 通过。全库测试 `python3 -m unittest discover -s math-gaokao-latex/tests` 共1332项：1318通过、13跳过、1失败；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告365个全库缓存状态与现场派生状态不一致，与此前进度记录的遗留失败一致。全量运行耗时约12分57秒。测试运行期间检查器提示过范围外 `index.json` staged 状态；运行结束后复查暂存区为空，本阶段没有改写该文件。
+- 状态边界：只完成Q9/Q10题面与短答局部复核，不是整卷验收或新增转录完成卷。全卷仍为 `review_status=needs-review`、`mathematical_verification_status=not-verified`、`production_state=blocked`，`ISSUE-1071`仍开放；来源印载答案未认证为官方答案。未运行OCR、重新取源、PDF编译或整卷视觉回执。
+- 剩余/下一步：按固定扫描继续核对Q11—Q12题面与答案；其后再完成其余题目以及正式provenance、四版构建和逐页视觉验收。不要重做已经复核的Q1—Q10或Q25盲算。
+- 成本：本阶段0次OCR、0次外部模型/API调用、0次重新取源或渲染；复用了固定PDF和既有页图。2次隔离单题盲解在前序执行中完成。Codex/代理实际Token与费用不可见，不估算。
