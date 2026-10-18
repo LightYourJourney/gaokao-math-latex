@@ -5946,3 +5946,13 @@
 - 已知失败：2020文科旧review有5项heading_number失败（试题5、解析5/32、简答5、印刷23），原因为已取消Q23仍排入版面；沿用用户“保留原文并记复核失败”的决定，不伪造通过，不删原题。其余旧review为passed。
 - 修改文件：四卷receipts/build.json、source-manifest.json及本进度；无内容/模板/公共工具变更。下一步完成另三卷像素比较，对完全相同页面迁移旧八项结论并附新旧PNG哈希/旧attempt证据；任何变化页面必须重新目视。随后官方登记全批诊断，2020文科失败保留。先本地提交本构建检查点，防止进度再次积压；未push。
 - 验证/成本：三类生成稿检查各4/4通过、实际XeLaTeX+latexmk四卷16版成功；尚未登记新视觉回执，不称整批闭环。0次OCR/取源/新增数学求解或子代理调用，Token及费用未知。以前失效12卷清单中本批4卷只完成构建阶段，余8卷尚未刷新。
+
+### phase0-b02：299页同像素证据复用及当前诊断登记（2026-10-18）
+
+- 已完成：构建检查点 `2372fd37` 后，等待同一渲染句柄80404正常退出；四卷新旧16版共299页（84/69/79/67）均在同一pdftoppm 26.10.0、150dpi参数下渲染。逐页PNG字节完全相同，changed_pages=0，覆盖完整页码范围。PDF本身字节不同，未谎称PDF哈希相同；仅据可验证的全页渲染等价迁移历史视觉结论，包括全部失败项，不称本轮重新目视299页。主会话另抽看当前2019理试题首页，页眉、题号及公式完整。
+- 持久证据：新增 `reports/phase0-b02-raster-reuse-20261018.json`，记录16版旧/新PDF SHA、old/new attempt、历史review日期/哈希及299页PNG SHA，提交 `bc81ba47`。旧工作项先备份至忽略 `.work/receipt-refresh-20261018/old-batch-work/`；官方prepare绑定新attempt，再迁移每页八项原结论，glyph note明确“非重新目视”、同像素证据及旧attempt。既有Underfull豁免仅在对应页完全相同时迁移；不使用未经检查的新豁免。
+- 正式诊断：finalize-batch-checked返回VISUAL_FAILED、revision4335，并自动提交 `ff111ac5`。三卷review=passed，2020文review=failed；失败仍恰为原有5项heading_number（试题5、解析5/32、简答5、印刷23），遵守用户保留已取消Q23原文且记失败的决定。共2392项：2131 pass、256 not_applicable、5 fail；299页覆盖无遗漏。batch仍compiled_pending_review，四卷build仍compiled_pending_review；因为批次级视觉失败没有提升任何卷为最终succeeded，不将本轮描述为整批闭环。
+- 修改文件：证据JSON；四卷各 `receipts/{build,review}.json`；source-manifest.json、missing-issues.md、reports/phase0-b02.md及本进度。没有题面/答案/解析/图稿/公共代码变化，无新增图片入库，无推送。诊断事务11个路径已由官方提交，本进度随后单独提交。
+- 验证：validate-receipts --batch phase0-b02 --require-current-inputs返回OK：papers=4、pending=4、stale/invalid/missing=0；provenance check-batch返回OK：4卷。补充机器核对299页×8项、每页glyph证据哈希与持久比对报告一致、current attempt一致且保留5 fail；git diff --check通过。本阶段无代码变化，未重复跑全库测试，实际编译及正式状态门禁作为本轮验证。
+- 剩余/下一步：本清单4卷已完成当前构建和视觉诊断刷新（不是新增转录4卷），2020文取消题政策阻塞保持；不要反复重建同像素结果。原12卷失效清单余8卷：1977上海文/理、1977北京文/理、1986广东文/理、1997全国理、1989广东理。下一阶段先核对1977上海文/理的批次归属及输入失效维度，按批次边界保存旧证据、定向构建并比较；只有渲染改变的页才重新目视。不把该清单当成全库总剩余量。
+- 成本：0次OCR、取源、数学重解或新增子代理调用；确定性渲染并比较新旧各299页，复用既有2392项视觉检查而未消耗整批多模态重审。实际Token及费用未知，不给节省百分比。PNG/中间物均在忽略缓存保留，可断点恢复。
