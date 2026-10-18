@@ -91,7 +91,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
         ])
         by_number = {item["question_number"]: item["source_pages"] for item in self.record["question_sources"]}
         self.assertEqual(by_number[15], [1, 2])
-        self.assertEqual(by_number[21], [2, 3])
+        self.assertEqual(by_number[21], [2])
         self.assertTrue(all(by_number[number] == [1] for number in range(1, 15)))
         self.assertTrue(all(by_number[number] == [2] for number in range(16, 21)))
         self.assertTrue(all(by_number[number] == [2] for number in range(22, 26)))
@@ -149,7 +149,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("Q25", self.answers)
         self.assertEqual(self.record["review_status"], "needs-review")
 
-    def test_q1_to_q10_source_transcriptions_and_short_answers_are_reviewed(self):
+    def test_q1_to_q20_source_transcriptions_and_short_answers_are_reviewed(self):
         reviewed = {
             item["question_number"]: item
             for item in self.record["question_sources"]
@@ -210,13 +210,29 @@ class Shanghai1994SourceTests(unittest.TestCase):
                     "T=π/2",
                 ),
             ),
+            11: ("B", "logarithm-monotonicity-and-line-slope", ("a>1", "1-a<0", "(1,0)")),
+            12: ("A", "power-and-logarithm-signs-on-unit-interval", ("0<1-a<1", "1/3<1/2")),
+            13: ("C", "polar-to-cartesian-vertical-line", ("(-1,0)", "ρcosθ=-1")),
+            14: ("C", "parallel-lines-and-skew-line-contradiction", ("a∥b", "矛盾")),
+            15: ("D", "set-complement-inclusion-counterexample", ("I={1,2,3}", "P={1}", "Q={1,2}")),
+            16: ("B", "primitive-third-root-of-unity-order", ("z^3=1", "n≡1(mod3)", "n=4")),
+            17: ("A", "orthogonal-projection-counterexamples", ("(1,0,0)", "(0,0,1)", "(1,0,1)")),
+            18: ("D", "painting-block-permutations", ("2!×4!×5!=5760",)),
+            19: ("B", "coordinate-origin-translation", ("x=x′+π/2", "y=y′−π/2", "y′=−sinx′+π/2")),
+            20: ("C", "contrapositive-of-successor-implication", ("P(4)⇒P(5)", "¬P(5)⇒¬P(4)")),
         }
+        rendered = (PROJECT_DIR / "answers.tex").read_text(encoding="utf-8")
+        blocks = dict(re.findall(
+            r"\\gksolhead\{(\d+)\}\{\}(.*?)(?=\\gksolhead|\Z)",
+            rendered, re.DOTALL,
+        ))
         for number, (answer, method, derivation_fragments) in expected.items():
             with self.subTest(question=number):
                 self.assertIn(number, reviewed, f"Q{number} source review is not recorded")
                 item = reviewed[number]
                 self.assertEqual(item["review_status"], "source-checked")
-                self.assertEqual(item["source_pages"], [1])
+                expected_pages = [1] if number <= 14 else ([1, 2] if number == 15 else [2])
+                self.assertEqual(item["source_pages"], expected_pages)
                 self.assertEqual(
                     item["source_review"]["source_sha256"],
                     self.source["artifact"]["sha256"],
@@ -246,6 +262,25 @@ class Shanghai1994SourceTests(unittest.TestCase):
                     check["independent_review_details"]["result"],
                 )
                 self.assertIsNone(check["official_answer"])
+
+                if number >= 11:
+                    # Check the real answer sources as well as the audit record.
+                    self.assertRegex(
+                        self.answers,
+                        rf"\*\*{number}．\*\*\s+\*\*答案：{answer}\*\*",
+                    )
+                    self.assertIn(rf"\gkanswer{{答案：{answer}}}", blocks[str(number)])
+
+        short_answers = (PROJECT_DIR / "answers_short.tex").read_text(encoding="utf-8")
+        short_row = re.search(r"^答案 & (.+?) \\\\", short_answers, re.MULTILINE)
+        self.assertIsNotNone(short_row)
+        self.assertEqual(
+            [cell.strip() for cell in short_row.group(1).split("&")],
+            [expected[number][0] for number in range(11, 21)],
+        )
+        self.assertTrue(set(range(11, 21)).issubset(
+            self.record["solution_source"]["independently_reviewed_questions"]
+        ))
 
         self.assertEqual(self.record["review_status"], "needs-review")
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
@@ -297,17 +332,48 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertIn("整卷其余内容尚未经过异人盲核", short_tex)
         self.assertIn(r"\textbf{非官方标准答案}", short_tex)
 
-    def test_q11_origin_labels_follow_the_scanned_option_positions(self):
+    def test_q11_graph_options_preserve_scanned_mathematical_features(self):
         figure = (PROJECT_DIR / "figures/f1994_shanghai_q11_graph_options.tex").read_text(encoding="utf-8")
         match = re.search(r"\\foreach.*?\s+in\s*\{(.*?)\}\s*\{", figure, re.DOTALL)
         self.assertIsNotNone(match)
         positions = {}
+        directions = {}
         for row in match.group(1).split(","):
             fields = [field.strip() for field in row.split("/")]
             if len(fields) >= 6:
                 positions[fields[2]] = fields[5]
+                directions[fields[2]] = (int(fields[3]), int(fields[4]))
         self.assertEqual(positions, {"A": "right", "B": "left", "C": "right", "D": "left"})
         self.assertIn(r"\node[below \originplace] at (0,0)", figure)
+        self.assertEqual(directions, {"A": (1, 1), "B": (-1, 1), "C": (1, -1), "D": (-1, -1)})
+
+        # Inspect the actual geometry in both branches, not just their labels.
+        point_pattern = r"\((-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)\)"
+        line_branches = re.search(
+            r"\\ifnum\\lineup=1(.*?)\\else(.*?)\\fi", figure, re.DOTALL
+        )
+        self.assertIsNotNone(line_branches)
+        for direction, branch in zip((1, -1), line_branches.groups()):
+            points = [(float(x), float(y)) for x, y in re.findall(point_pattern, branch)]
+            self.assertEqual(len(points), 2)
+            (x1, y1), (x2, y2) = points
+            self.assertGreater(x2, x1)
+            self.assertGreater(direction * (y2 - y1), 0)
+            self.assertAlmostEqual(x1 * y2 - x2 * y1, 0, msg="line must pass through the origin")
+
+        log_branches = re.search(
+            r"\\ifnum\\logup=1(.*?)\\else(.*?)\\fi", figure, re.DOTALL
+        )
+        self.assertIsNotNone(log_branches)
+        for direction, branch in zip((1, -1), log_branches.groups()):
+            points = [(float(x), float(y)) for x, y in re.findall(point_pattern, branch)]
+            self.assertGreaterEqual(len(points), 3)
+            self.assertIn((1, 0), points)
+            self.assertTrue(all(x > 0 for x, _ in points))
+            self.assertTrue(all(direction * y * (x - 1) >= 0 for x, y in points))
+            for (x1, y1), (x2, y2) in zip(points, points[1:]):
+                self.assertGreater(x2, x1)
+                self.assertGreater(direction * (y2 - y1), 0)
 
     def test_q23_vector_preserves_parallel_edges_projection_and_hidden_line(self):
         figure = (PROJECT_DIR / "figures/f1994_shanghai_q23_problem.tex").read_text(encoding="utf-8")
