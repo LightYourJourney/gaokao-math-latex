@@ -6073,3 +6073,13 @@
 - 取源与图像边界：固定PDF SHA为 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`，上游Git blob为 `aedb00f81b60d133034602250130d9079b440761`；在只读上游检出 `gaokaomath-src` 中按源路径读取并实算SHA匹配，未写入该检出或工作树根。七页100dpi检查PNG仅生成于隔离工作树ignored `.work/coverage-continue-20261019/1997-shanghai-science/source/`；源PDF原件不复制、不入库。下一步以较高分辨率分区检查题面/答案，逐题转录并保留未能看清处，不凭印载答案倒推模糊原题。
 - 修改与验证：本阶段只更新本 `PROGRESS.md`；manifest、题目、答案、LaTeX、来源文件和构建产物均未改。`git status --short --branch`确认分支正确且改前干净；`python3`读取revision/计数和项目文件路径。一次`python`调用暴露本机别名为Python 2.7（未写文件）；一次将PDF SHA误作本地Git blob OID的只读检查失败，随后按登记blob ID确认本地两个仓库均不含对象。无OCR、无模型/API、无构建；Codex Token及费用未知。
 - 下一步：继续1997上海理科本阶段：高分辨率检查题面/来源答案，完成规范题面与来源校对JSON/回归测试，再将本阶段实际完成内容和验证结果追加到本进度并提交。若遇模糊符号或印载结论冲突，原样登记待核；不把印载答案当官方答案或把OCR推测作为条件。全库目标仍未完成。
+
+### 恢复题库覆盖：1997上海理科题面与印载答案初稿（2026-10-19）
+
+- 恢复检查：隔离工作树仍为 `feat/gaokao-phase0`、HEAD `6bb60b65`、tracked diff为空；按要求先读本进度末尾与当前Git状态后续作。没有在主检出 `main` 写入。确认候选仍为来源 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`、manifest revision 4362、`paper_id=null`；只读上游文件 SHA-256 与清单一致：`8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`。上游 `main` 仍有既存未跟踪 `普通高考/2016/.work/`，本阶段未触碰。
+- 阶段完成范围：首次为1997上海理工农医类整理完整22题题面稿，包含1—6选择、7—16填空、17—22解答，以及13—16 A₁/B₁、20 A₂/B₂ 选做变体；另摘录来源印载答案/结论。题目稳定ID、分值、来源页和变体进入来源校对JSON。题面来源页与答案页已在200dpi扫描图逐页查看；OCR只是先前缓存的粗略线索，本阶段新增OCR调用为0，未凭OCR补造公式。
+- 图稿：为18、19、20-B₂、21题提供4份`.tex`示意图并登记逐文件SHA；在忽略目录中用XeLaTeX/latexmk实际编译为4页PDF并检查contact sheet。曲线、拓扑均明确标成示意/非按比例，不提交扫描PNG/JPEG。编译无错误、无缺字/越界诊断；有一条本机XeCJK自动选择Fandol字体的环境提示，未影响图稿输出。
+- 修改文件：`1997_上海卷_理科/题面转录草稿.md`、`答案要点草稿.md`、`来源校对.json`、`figures/f1997_shanghai_science_q{18,19,20_b2,21}*.tex`及`tests/test_1997_shanghai_science_sources.py`，另更新本进度。未改manifest、生产题卷、答案文件、PDF或共享工具；`paper_id`仍为null，出版者未核、独立审核未完成、数学验证状态为`not-verified`、canonical来源未就绪。
+- 验证：`python3 -m unittest math-gaokao-latex/tests/test_1997_shanghai_science_sources.py -v`，最终6/6通过，覆盖来源哈希、22题顺序、150分、选做变体、关键数学符号、答案归属、图稿哈希及无栅格入库；首次复跑发现Q21图稿SHA录入多一位，已按文件实际哈希修正后重跑全过。`latexmk -xelatex -interaction=nonstopmode -halt-on-error -file-line-error figures.tex`成功，4页图稿视觉检查通过；上游PDF哈希复核一致；`git diff --check`通过。题面/答案草稿各自哈希已绑定到校对JSON。
+- 成本：本阶段模型/API调用0、OCR调用0；复用此前7页本地Tesseract粗识别（此前运行总耗时约28.04秒，仅估计的本地OCR耗时，识别不作为证据），Codex Token与API费用未知。PNG/PDF/日志/测试编译文件均在隔离工作树忽略的`.work/`，没有入库。
+- 剩余与下一步：这是**完整题面转录初稿**，不是该卷最终完成。需要独立逐页盲核题面和印载答案、复核特别是解析几何/向量/极限等高风险公式；继续转录来源第4—7页17—22题的印载解析至独立文件，并独立检验数学结论；随后再按项目流程生成/校验并考虑正式绑定来源。第21题第（3）问的两个参数区间结论保留为分支，不自行合并；未完成前不把该卷计作canonical/complete，也不可重做别卷排挤本候选。
