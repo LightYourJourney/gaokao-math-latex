@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "1997_上海卷_理科"
 QUESTION = PAPER / "题面转录草稿.md"
 ANSWERS = PAPER / "答案要点草稿.md"
+SOLUTIONS = PAPER / "解析草稿.md"
 SOURCE = PAPER / "来源校对.json"
 SOURCE_SHA256 = "8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9"
 SOURCE_BLOB = "aedb00f81b60d133034602250130d9079b440761"
@@ -21,6 +22,7 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
     def setUpClass(cls):
         cls.question = QUESTION.read_text(encoding="utf-8")
         cls.answers = ANSWERS.read_text(encoding="utf-8")
+        cls.solutions = SOLUTIONS.read_text(encoding="utf-8")
         cls.record = json.loads(SOURCE.read_text(encoding="utf-8"))
 
     def test_source_and_exam_identity_are_bound_and_unverified(self):
@@ -56,7 +58,7 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
     def test_source_specific_high_risk_notation_and_stems_are_retained(self):
         for fragment in (
             r"\overline M\cap N",
-            r"x^2\csc^2\theta-y^2\sec^2\theta=1",
+            r"x^2\csc\theta-y^2\sec\theta=1",
             r"\sin 2x=\dfrac12",
             r"\dfrac{-3-i}{1+2i}",
             r"3\sin x\cos x-4\cos^2x",
@@ -68,6 +70,8 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
         ):
             with self.subTest(fragment=fragment):
                 self.assertIn(fragment, self.question)
+        self.assertNotIn(r"\csc^2\theta", self.question)
+        self.assertIn("| 1—6 | B、D、B、C、A、D |", self.answers)
 
     def test_printed_answers_are_distinguished_from_verified_official_answers(self):
         self.assertTrue(self.record["source_has_answers"])
@@ -98,6 +102,14 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
     def test_record_hashes_match_current_drafts(self):
         self.assertEqual(self.record["draft_sha256"], hashlib.sha256(QUESTION.read_bytes()).hexdigest())
         self.assertEqual(self.record["answers_draft_sha256"], hashlib.sha256(ANSWERS.read_bytes()).hexdigest())
+        self.assertEqual(self.record["solutions_draft_sha256"], hashlib.sha256(SOLUTIONS.read_bytes()).hexdigest())
+
+    def test_printed_solution_transcription_covers_all_six_written_questions(self):
+        for number in range(17, 23):
+            self.assertIn(f"## 第 {number} 题", self.solutions)
+        self.assertIn("来源印载解答转录", self.solutions)
+        self.assertIn("独立数学验证", self.solutions)
+        self.assertIn(r"p=f(m)=\frac{m^2}{m+2}", self.solutions)
 
 
 if __name__ == "__main__":

@@ -102,9 +102,11 @@
   },
   "verification": {
     "source_page_visual_review": {"pages": [1, 2, 3, 4, 5, 6, 7], "status": "transcriber-visual-inspection", "resolution": "200dpi", "independent_review": false},
-    "transcription_tests": {"suite": "test_1997_shanghai_science_sources.py", "status": "pending"},
-    "figure_smoke": {"status": "pending", "raster_outputs_committed": false}
+    "transcription_tests": {"suite": "test_1997_shanghai_science_sources.py", "passed": 7, "status": "passed"},
+    "figure_smoke": {"status": "passed", "tool": "latexmk 4.88 + XeLaTeX (TeX Live 2026)", "page_count": 4, "paper_size": "A4", "visual_review": "passed", "log_diagnostics": "no-error-or-missing-character; XeCJK selected local Fandol fallback", "raster_outputs_committed": false},
+    "independent_math_review": "pending"
   },
-  "draft_sha256": "8aba191c89d5aa24d8a3192e5c1d068db2b5ff2f7ca4045c1f1d6a085d3c446c",
-  "answers_draft_sha256": "e23d9d14919bde68de0010feb127e137576f82922fbff85a577764b07b3a6496"
+  "draft_sha256": "79d925d719fe74a966c4e55faa93c209782d35710f75ae3c5d2bd992ce2224f1",
+  "answers_draft_sha256": "e23d9d14919bde68de0010feb127e137576f82922fbff85a577764b07b3a6496",
+  "solutions_draft_sha256": "67f320cd3ec73a00bab96430d22a8ab1cf7247ea000ca33de8803a4bf7b7ba24"
 }
