@@ -1,0 +1,165 @@
+% questions.tex —— 2015 年·浙江卷·文科 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_浙江文_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 全 2 页逐题核对（p1＝页 991：栏 1 标题与「一、选择题」1–8；栏 2 第 5 题后两个图象选项、6–8 与「二、填空题」9–15；栏 3「三、解答题」16–17；p2＝页 992：栏 1 第 18 题（三棱柱）；栏 2 第 19 题（抛物线与圆）；栏 3 第 20 题）。原卷为 \textbf{A3 横向三栏书刊合排}，阅读序＝左→中→右；\textbf{页脚仅印合订本书页页码 991／992}，\textbf{无页眉}；标题在栏 1 内排印。\textbf{全卷不印分值、不印题量}——三个节头逐字仅「一、选择题」「二、填空题」「三、解答题」；总分 150 为结构推断，\textbf{卷面无凭据}，本文件不作补写。
+
+\textbf{源制作体系判定}（实测）：源\textbf{不是扫描件，而是 LaTeX（Computer Modern 系）重排产物}——\texttt{pdfimages -list} 零命中（全页无位图）；嵌入字体含中文 \textbf{STSong／STHeiti／STKaiti}，拉丁与数学 \textbf{LMRoman 系与 CM 系（CMR10／CMR7／CMR5／CMMI10／CMMI7／CMSY10／CMSY7／CMEX10／MSAM10）}，另有 \textbf{CMMIB10（粗斜体）}；全卷 17 个嵌入字体。\textbf{CMMIB10 用于第 13 题的向量 \(\boldsymbol{e}_1\)、\(\boldsymbol{e}_2\)、\(\boldsymbol{b}\)}；LJVORJ+CMMI7、NBEQIK+CMMIB10、IYBSXN+CMR5 三款字体的 ToUnicode 为 no（文本层可能缺字，以像素为准）。
+
+\textbf{标点与字样约定（实测）}：① \textbf{题号与句末}源内为半角 \texttt{.}，按全库约定写作全角「．」；② \textbf{正文句读}源内为\textbf{半角 ASCII}（\texttt{,} \texttt{.} \texttt{;}）与半角圆括号，一律归一为全角「，」「：」「；」「？」「（）」（顿号照源）；③ \textbf{选项标号}半角「(A)」照录；④ \textbf{作答空}：选择为「（　）」，填空为统一横线 \texttt{\gkblank{}}（源为 31.5 pt 矢量线段）；⑤ \textbf{分数}均为显示风格（真分式），排印一律 \(\dfrac{a}{b}\)；⑥ \textbf{不等号}按 MSAM10 实测排 \(\geqslant\)／\(\leqslant\)；⑦ \textbf{向量}：本卷\textbf{有 CMMIB10}——第 13 题 \(\boldsymbol{e}_1,\boldsymbol{e}_2,\boldsymbol{b}\) 为粗斜体（分卷独立实测）；⑧ \textbf{正体}：\(\sin\)／\(\cos\)／\(\tan\)／\(\log\)（LMRoman10）、虚数单位与自然对数底照源、自然数集 \(\mathbf{N}^*\) 与实数集 \(\mathbf{R}\) 为粗正体；⑨ 词间空格照页面词界补。
+
+\textbf{存疑与登记}（源内异常一律照录；完整清单见工作档 \texttt{transcripts/} 与 \texttt{figure-inventory.md}）：① \textbf{固定源不附参考答案}（等级 D）——解析全部由本库独立推导；② \textbf{第 4 题选项 (C)(D) 的平行号 $\parallel$} 在文本层丢失（显示为空白）——600 dpi 像素复核确认，按 \(\parallel\) 录；③ \textbf{第 8 题选项 (C) 的分式 \(\dfrac{b}{2}\)} 文本层丢失——600 dpi 补录；④ \textbf{第 12 题分段函数}文本层错位（第一支 \(x^2\)（\(x\leqslant1\)）、第二支 \(x+\dfrac{6}{x}-6\)（\(x>1\)））——600 dpi 复核后照录；⑤ \textbf{第 5 题四个图象选项}在源内分列两处（(A)(B) 在栏 1 底部、(C)(D) 在栏 2 顶部）——本库按 2×2 紧凑排布合成一图，源内相对位置不逐列复刻；⑥ 第 2 题三视图尺寸「2」共 4 处（正视图高 2＋2、俯视图宽 2 与高 2），按源标注；⑦ 本卷含 \textbf{STKaiti} 字体，具体用字待转录实测（不排除仅用于个别符号）；⑧ 答题空「( )」源内间距约 1.75 em，本库统一作「（　）」。
+\end{gktip}
+
+\gkpart{试题}
+
+\gkpart{一、选择题}
+
+\begin{question}
+\gkti{1}已知集合 \(P=\{x\mid x^2-2x\geqslant 3\}\)，\(Q=\{x\mid 2<x<4\}\)，则 \(P\cap Q=\)（　）
+
+(A) \([3,4)\)　(B) \((2,3]\)　(C) \((-1,2)\)　(D) \((-1,3]\)
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{2}某几何体的三视图如图所示（单位：\(\mathrm{cm}\)），则该几何体的体积是（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015zjw_q02_views}\end{center}
+\nopagebreak[4]
+(A) \(8\,\mathrm{cm}^3\)　(B) \(12\,\mathrm{cm}^3\)　(C) \(\dfrac{32}{3}\,\mathrm{cm}^3\)　(D) \(\dfrac{40}{3}\,\mathrm{cm}^3\)
+
+\end{question}
+\begin{question}
+\gkti{3}设 \(a\)，\(b\) 是实数，则“\(a+b>0\)”是“\(ab>0\)”的（　）
+
+(A) 充分不必要条件　(B) 必要不充分条件　(C) 充分必要条件　(D) 既不充分也不必要条件
+
+\end{question}
+\begin{question}
+\gkti{4}设 \(\alpha\)，\(\beta\) 是两个不同的平面，\(l\)，\(m\) 是两条不同的直线，且 \(l\subset\alpha\)，\(m\subset\beta\)。（　）
+
+(A) 若 \(l\perp\beta\)，则 \(\alpha\perp\beta\)　(B) 若 \(\alpha\perp\beta\)，则 \(l\perp m\)　(C) 若 \(l\parallel\beta\)，则 \(\alpha\parallel\beta\)　(D) 若 \(\alpha\parallel\beta\)，则 \(l\parallel m\)
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{5}函数 \(f(x)=\left(x-\dfrac{1}{x}\right)\cos x\)（\(-\pi\leqslant x\leqslant\pi\) 且 \(x\neq0\)）的图象可能为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015zjw_q05_graphs}\end{center}
+\nopagebreak[4]
+(A)（见题图左上）　(B)（见题图右上）　(C)（见题图左下）　(D)（见题图右下）
+
+\end{question}
+\begin{question}
+\gkti{6}有三个房间需要粉刷，粉刷方案要求：每个房间只用一种颜色，且三个房间颜色各不相同。已知三个房间的粉刷面积（单位：\(\mathrm{m}^2\)）分别为 \(x\)，\(y\)，\(z\)，且 \(x<y<z\)，三种颜色涂料的粉刷费用（单位：元/\(\mathrm{m}^2\)）分别为 \(a\)，\(b\)，\(c\)，且 \(a<b<c\)。在不同的方案中，最低的总费用（单位：元）是（　）
+
+(A) \(ax+by+cz\)　(B) \(az+by+cx\)　(C) \(ay+bz+cx\)　(D) \(ay+bx+cz\)
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{7}如图，斜线段 \(AB\) 与平面 \(\alpha\) 所成的角为 \(60^\circ\)，\(B\) 为斜足，平面 \(\alpha\) 上的动点 \(P\) 满足 \(\angle PAB=30^\circ\)，则点 \(P\) 的轨迹是（　）
+\nopagebreak[4]
+\begin{center}\input{figures/f2015zjw_q07_plane}\end{center}
+\nopagebreak[4]
+(A) 直线　(B) 抛物线　(C) 椭圆　(D) 双曲线的一支
+
+\end{question}
+\begin{question}
+\gkti{8}设实数 \(a\)，\(b\)，\(t\) 满足 \(|a+1|=|\sin b|=t\)。则下列说法中正确的是（　）
+
+(A) 若 \(t\) 确定，则 \(b^2\) 唯一确定　(B) 若 \(t\) 确定，则 \(a^2+2a\) 唯一确定　(C) 若 \(t\) 确定，则 \(\sin\dfrac{b}{2}\) 唯一确定　(D) 若 \(t\) 确定，则 \(a^2+a\) 唯一确定
+
+\end{question}
+\gkpart{二、填空题}
+
+\begin{question}
+\gkti{9}计算 \(\log_2\dfrac{\sqrt{2}}{2}=\)\gkblank{}，\(2^{\log_2 3+\log_4 3}=\)\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{10}已知 \(\{a_n\}\) 是等差数列，公差 \(d\) 不为零。若 \(a_2\)，\(a_3\)，\(a_7\) 成等比数列，且 \(2a_1+a_2=1\)，则 \(a_1=\)\gkblank{}，\(d=\)\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{11}函数 \(f(x)=\sin^2x+\sin x\cos x+1\) 的最小正周期是\gkblank{}，最小值是\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{12}已知函数
+\nopagebreak[4]
+\[
+f(x)=\begin{cases}
+x^2, & x\leqslant1,\\
+x+\dfrac{6}{x}-6, & x>1,
+\end{cases}
+\]
+则 \(f(f(-2))=\)\gkblank{}，\(f(x)\) 的最小值是\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{13}已知 \(\boldsymbol{e}_1\)，\(\boldsymbol{e}_2\) 是平面单位向量，且 \(\boldsymbol{e}_1\cdot\boldsymbol{e}_2=\dfrac{1}{2}\)。若平面向量 \(\boldsymbol{b}\) 满足 \(\boldsymbol{b}\cdot\boldsymbol{e}_1=\boldsymbol{b}\cdot\boldsymbol{e}_2=1\)，则 \(|\boldsymbol{b}|=\)\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{14}已知实数 \(x\)，\(y\) 满足 \(x^2+y^2\leqslant1\)，则 \(|2x+y-4|+|6-x-3y|\) 的最大值是\gkblank{}。
+
+\end{question}
+\begin{question}
+\gkti{15}椭圆 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的右焦点 \(F(c,0)\) 关于直线 \(y=\dfrac{b}{c}x\) 的对称点 \(Q\) 在椭圆上，则椭圆的离心率是\gkblank{}。
+
+\end{question}
+\gkpart{三、解答题}
+
+\begin{question}
+\gkti{16}在 \(\triangle ABC\) 中，内角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)。已知 \(\tan\left(\dfrac{\pi}{4}+A\right)=2\)。
+
+（1） 求 \(\dfrac{\sin 2A}{\sin 2A+\cos^2A}\) 的值；
+
+（2） 若 \(B=\dfrac{\pi}{4}\)，\(a=3\)，求 \(\triangle ABC\) 的面积。
+
+\end{question}
+\begin{question}
+\gkti{17}已知数列 \(\{a_n\}\) 和 \(\{b_n\}\) 满足 \(a_1=2\)，\(b_1=1\)，\(a_{n+1}=2a_n\)（\(n\in\mathbf{N}^*\)），\(b_1+\dfrac{1}{2}b_2+\dfrac{1}{3}b_3+\cdots+\dfrac{1}{n}b_n=b_{n+1}-1\)（\(n\in\mathbf{N}^*\)）。
+
+（1） 求 \(a_n\) 与 \(b_n\)；
+
+（2） 记数列 \(\{a_nb_n\}\) 的前 \(n\) 项和为 \(T_n\)，求 \(T_n\)。
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{18}如图，在三棱柱 \(ABC-A_1B_1C_1\) 中，\(\angle BAC=90^\circ\)，\(AB=AC=2\)，\(AA_1=4\)，\(A_1\) 在底面 \(ABC\) 的射影为 \(BC\) 的中点，\(D\) 是 \(B_1C_1\) 的中点。
+
+（1） 证明：\(A_1D\perp\) 平面 \(A_1BC\)；
+
+（2） 求直线 \(A_1B\) 和平面 \(BB_1C_1C\) 所成的角的正弦值。
+\nopagebreak[4]
+\begin{center}\input{figures/f2015zjw_q18_prism}\end{center}
+\nopagebreak[4]
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{19}如图，已知抛物线 \(C_1\)：\(y=\dfrac{1}{4}x^2\)，圆 \(C_2\)：\(x^2+(y-1)^2=1\)，过点 \(P(t,0)\)（\(t>0\)）作不过原点 \(O\) 的直线 \(PA\)，\(PB\) 分别与抛物线 \(C_1\) 和圆 \(C_2\) 相切，\(A\)，\(B\) 为切点。
+
+（1） 求点 \(A\)，\(B\) 的坐标；
+
+（2） 求 \(\triangle PAB\) 的面积。
+
+注：直线与抛物线有且只有一个公共点，且与抛物线的对称轴不平行，则称该直线与抛物线相切，称该公共点为切点。
+\nopagebreak[4]
+\begin{center}\input{figures/f2015zjw_q19_conic}\end{center}
+\nopagebreak[4]
+\end{question}
+\begin{question}
+\gkti{20}设函数 \(f(x)=x^2+ax+b\)（\(a,b\in\mathbf{R}\)）。
+
+（1） 当 \(b=\dfrac{a^2}{4}+1\) 时，求函数 \(f(x)\) 在 \([-1,1]\) 上的最小值 \(g(a)\) 的表达式；
+
+（2） 已知函数 \(f(x)\) 在 \([-1,1]\) 上存在零点，\(0\leqslant b-2a\leqslant1\)，求 \(b\) 的取值范围。
+
+\end{question}
