@@ -44,19 +44,19 @@
 
 ### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–10 选择）：`.work/phase3-b16/transcripts/partA.md`。
-- [ ] 转录 B（Q11–21＋图表实测清单）：`.work/phase3-b16/transcripts/partB.md`＋`.work/phase3-b16/figure-inventory.md`。
-- [ ] 盲解 A（Q1–10）：`.work/phase3-b16/blind/partA.md`；盲解 B（Q11–21）：`.work/phase3-b16/blind/partB.md`。
-- [ ] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b12/`–`b15/`、`2015_安徽卷_*`、`2015_山东卷_*` 等）。**
+- [x] 转录 A（Q1–10 选择）：`.work/phase3-b16/transcripts/partA.md`。
+- [x] 转录 B（Q11–21＋图表实测清单）：`.work/phase3-b16/transcripts/partB.md`＋`.work/phase3-b16/figure-inventory.md`。
+- [x] 盲解 A（Q1–10）：`.work/phase3-b16/blind/partA.md`；盲解 B（Q11–21）：`.work/phase3-b16/blind/partB.md`。
+- [x] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b12/`–`b15/`、`2015_安徽卷_*`、`2015_山东卷_*` 等）。**
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查；**说明框行数预算法先行**。
-- [ ] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；源坐标换算回验与 600 dpi 目检＋判据灵敏度自证）。
-- [ ] 注册 `phase3-b16`；provenance 三角色导入；extract-batch 派生。
-- [ ] generate/short/editions 三连 write+check → build --formal（构建审计三连 → 修复轮 → 重建 → 差分 → 复审）。
+- [x] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查；**说明框行数预算法先行**。
+- [x] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；源坐标换算回验与 600 dpi 目检＋判据灵敏度自证）。
+- [x] 注册 `phase3-b16`；provenance 三角色导入；extract-batch 派生。
+- [x] generate/short/editions 三连 write+check → build --formal（构建审计三连 → 修复轮 → 重建 → 差分 → 复审）。
 
 ### Task 4 — Build, review, and close
 
-- [ ] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
-- [ ] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。
+- [x] 审查代理（1 图自查 + 分段并发 ≤8 页/段、分波 ≤5 支；524 限流时分批补派）→ 修复轮（如有）→ 重建 → 差分 → 复审。
+- [x] 审查回执填写（逐页×8 项）→ finalize → 报告刷新 → 全量测试 → 清理中间件 → 显式路径提交（不 push）。

@@ -1310,6 +1310,14 @@
         "gk-1994-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase3-b16",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1319,7 +1327,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "355054e5-0295-4516-996b-85d64b49006f",
+  "last_transaction_id": "452c0b08-9759-4b32-859c-d5981aebdd9b",
   "papers": [
     {
       "blocked_from": null,
@@ -19588,9 +19596,71 @@
       "title": "1994 年·上海卷",
       "track": "none",
       "year": 1994
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_广东卷_文科/figures/f2015gdw_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_广东卷_文科/figures/f2015gdw_q17_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_广东卷_文科/figures/f2015gdw_q18_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2015_guangdong_arts",
+        "id": "gk-2015-regular-guangdong-arts",
+        "note": "批次 phase3-b16；固定原卷 2 页 A3 横向三栏书刊合排（页脚合订本页码 949/950）、无参考答案页；选择 1–10＋填空 11–15＋解答 16–21＝21 题；**源内未印必做/选做分节**（600 dpi 复核）；分值为结构推断——**卷面不印分值**。固定源不附答案（等级 D）；解析全由本库独立推导（双路盲解互证＋主会话独立复算——第 17 题直方图七柱高度 600 dpi 逐柱读取＋面积归一（x=0.0075、众数 230、中位数 224、分层抽样 5 户）、第 18 题坐标法（距离 3√7/2）、第 19 题数列迭代对拍（a₄=7/8、aₙ=(2n−1)/2ⁿ⁻¹）、第 20 题轨迹圆与 k 范围端点数值验证、第 21 题分段单调性与零点个数数值佐证）。源为 LaTeX（CM 系）重排产物（全矢量、无位图；句读为半角西文体系——按全库约定归一全角）。**向量记号分卷保留——本卷无 CMMIB10**：一律 TeX-vect10 长箭头 \\overrightarrow（字母本体常规斜体、不加粗）；不等号按 MSAM10 实测排 \\geqslant／\\leqslant；虚数单位 i 为正体 \\mathrm{i}；自然数集 N 为粗正体 \\mathbf{N}；正体函数名 sin/cos/tan/card（LMRoman10）。**第 5 题选项 (D) 的根号**（文本层丢失、像素为准）；**第 5 题 C 后无逗号**照源；**第 18 题 (1) 的「∥」为矢量描边**（按语义排印 \\parallel）；**第 18 题边 DC 虚线短段与未画棱 PB** 照源。3 图均按源内容流实测坐标复刻（本卷换算经三处互证自测）：圆图（4 段贝塞尔 κ=0.55225、3 线段、6 标签＋圆心点字形）、频率分布直方图（7 柱＋7 虚线导引＋三齿断轴＋双箭头）、立体图（8 棱含 DC 虚线段、无 PB）。图源探针：逐元素匹配全图最大残差 0.000057 pt、600 dpi 墨迹 ≤0.285 pt（几何 0.064–0.213）、灵敏度自证 5 处注入全检出、编译零警告（主会话独立复核）。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2015_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_广东文_含解析.md",
+        "questions": "2015/2015_数学真题_广东文_试题.md",
+        "solution_body": "2015/2015_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a9cfb7624040e639d67a19c89fea581b80a75da4cbfab6255f2a6ccd0da68a84"
+      ],
+      "title": "2015 年·广东卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 4362,
+  "revision": 4372,
   "schema_version": 1,
   "sources": [
     {
@@ -34991,8 +35061,8 @@
       "exam_type": "regular",
       "git_blob_oid": "92da52358e0e3a279b3d6746dd15096597545544",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015广东文.pdf",
       "regions": [],
       "source_id": "src-a9cfb7624040e639d67a19c89fea581b80a75da4cbfab6255f2a6ccd0da68a84",

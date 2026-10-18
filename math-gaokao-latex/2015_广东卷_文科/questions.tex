@@ -1,0 +1,188 @@
+% questions.tex —— 2015 年·广东卷·文科 · 题目内容片段（无答案）
+% 由 tools/generate_projects.py 依来源总账自 2015/2015_数学真题_广东文_试题.md 生成，勿手改（改源 MD 后重跑）
+
+
+\gkpart{数学}
+
+\begin{gktip}
+\textbf{来源说明}：本题面依据固定源 PDF 全 2 页逐题核对（p1＝页 949：栏 1 标题与「一、选择题」1–10；栏 2「二、填空题」11–15（含第 15 题圆与切线几何图）与「三、解答题」节头、第 16 题；栏 3 第 17 题（频率分布直方图）及三小问；p2＝页 950：栏 1 第 18 题（三角形 PDC 与长方形 ABCD 的立体图）与第 19 题；栏 2 第 20 题；栏 3 第 21 题）。原卷为 \textbf{A3 横向三栏书刊合排}，阅读序＝左→中→右；\textbf{页脚仅印合订本书页页码 949／950}，\textbf{无页眉}；标题在栏 1 内排印。\textbf{全卷不印分值、不印题量}——三个节头逐字仅「一、选择题」「二、填空题」「三、解答题」；\textbf{源内未印「必做/选做」分节标注}（栏 2 顶部与第 13/14 题交界经 600 dpi 复核确认）；总分 150 为结构推断，\textbf{卷面无凭据}，本文件不作补写。
+
+\textbf{源制作体系判定}（实测）：源\textbf{不是扫描件，而是 LaTeX（Computer Modern 系）重排产物}——\texttt{pdfimages -list} 零命中（全页无位图）；嵌入字体含中文 \textbf{STSong／STHeiti}，拉丁与数学 \textbf{LMRoman 系与 CM 系（CMR10／CMR7／CMMI10／CMMI7／CMSY10／CMSY7／CMEX10／MSAM10）}，另有 \textbf{TeX-vect10}（向量长箭头）；\textbf{无 CMMIB10}；文本层整体可读；根号上横线、分式横线、作答横线与全部箭头为矢量路径（\textbf{第 5 题选项 (D) 的根号、第 18 题 (1) 的「$\parallel$」为文本层丢失符号}，以像素为准）。
+
+\textbf{标点与字样约定（实测）}：① \textbf{题号与句末}源内为半角 \texttt{.}，按全库约定写作全角「．」；② \textbf{正文句读}源内为\textbf{半角 ASCII}（\texttt{,} \texttt{.}）与半角圆括号，一律归一为全角「，」「：」「；」「？」「（）」（顿号照源）；③ \textbf{选项标号}半角「(A)」照录；④ \textbf{作答空}：选择为「（　）」（源为半角括号＋约 1 em 空档），填空为统一横线（源为 31.5 pt 矢量线段，写作 \texttt{\gkblank{}}）；⑤ \textbf{分数}均为显示风格（真分式），排印一律 \(\dfrac{a}{b}\)；⑥ \textbf{不等号}按 MSAM10 实测排 \(\geqslant\)／\(\leqslant\)；⑦ \textbf{向量}：本卷\textbf{无 CMMIB10}——一律为 TeX-vect10 长箭头 \(\overrightarrow{AB}\)（字母本体为常规斜体，不加粗）；⑧ \textbf{正体}：\(\sin\)／\(\cos\)／\(\tan\)／\(\operatorname{card}\)（LMRoman10）、虚数单位 \(\mathrm{i}\)（直立）、自然数集 \(\mathbf{N}\)（粗正体，非黑板体）；⑨ 词间空格照页面词界补。
+
+\textbf{存疑与登记}（源内异常一律照录；完整清单见工作档 \texttt{transcripts/partA.md}／\texttt{partB.md} 与 \texttt{figure-inventory.md}）：① \textbf{固定源不附参考答案}（等级 D）——解析全部由本库独立推导；② \textbf{第 5 题选项 (D) 的根号}为 CMSY10 根号字形＋独立矢量横线，文本层整枚丢失——按像素录 \(\sqrt{3}\)；③ \textbf{第 5 题「内角 \(A\)，\(B\)，\(C\) 的对边」中 C 后无逗号}（1200 dpi 复核确认真无）——照源不补；④ \textbf{第 18 题 (1) 的「$\parallel$」为矢量描边}（两笔斜线，文本层完全缺失；同题 (2) 的「\(\perp\)」为 CMSY10 字体字形，二者不同源）——按语义排印 \(\parallel\)；⑤ 第 18 题边 \(DC\) 自 \(D\) 起 13.6 pt 为\textbf{虚线段}（被棱 \(PA\) 遮挡的隐藏棱画法，虚线终点与 \(PA\cap DC\) 交点差 0.30 pt）——照源；⑥ 第 18 题图\textbf{未画棱 \(PB\)}——照源不补；⑦ 第 17 题断轴为\textbf{三齿 zigzag}（非「//」折断符），\(x\) 导引线与 \([240,260)\) 柱顶相差 0.117 pt——照源；⑧ 第 4 题约束条件三行以 cases 承托（源内「则…」与第二行同高，行列位置不复刻）；⑨ 答题空「( )」源内间距约 1.75 em，本库统一作「（　）」。
+\end{gktip}
+
+\gkpart{试题}
+
+\gkpart{一、选择题}
+
+\begin{question}
+\gkti{1}若集合 \(M=\{-1,1\}\)，\(N=\{-2,1,0\}\)，则 \(M\cap N=\)（　）
+
+(A) \(\{0,-1\}\)　(B) \(\{1\}\)　(C) \(\{0\}\)　(D) \(\{-1,1\}\)
+
+\end{question}
+\begin{question}
+\gkti{2}已知 \(\mathrm{i}\) 是虚数单位，则复数 \((1+\mathrm{i})^2=\)（　）
+
+(A) \(2\mathrm{i}\)　(B) \(-2\mathrm{i}\)　(C) \(2\)　(D) \(-2\)
+
+\end{question}
+\begin{question}
+\gkti{3}下列函数中，既不是奇函数，也不是偶函数的是（　）
+
+(A) \(y=x+\sin 2x\)　(B) \(y=x^2-\cos x\)
+
+(C) \(y=2^x+\dfrac{1}{2^x}\)　(D) \(y=x^2+\sin x\)
+
+\end{question}
+\begin{question}
+\gkti{4}若变量 \(x\)，\(y\) 满足约束条件
+
+\nopagebreak[4]
+\[
+\begin{cases}
+x+2y\leqslant 2,\\
+x+y\geqslant 0,\\
+x\leqslant 4,
+\end{cases}
+\]
+
+则 \(z=2x+3y\) 的最大值为（　）
+
+(A) \(2\)　(B) \(5\)　(C) \(8\)　(D) \(10\)
+
+\end{question}
+\begin{question}
+\gkti{5}设 \(\triangle ABC\) 的内角 \(A\)，\(B\)，\(C\) 的对边分别为 \(a\)，\(b\)，\(c\)．若 \(a=2\)，\(c=2\sqrt{3}\)，\(\cos A=\dfrac{\sqrt{3}}{2}\) 且 \(b<c\)，则 \(b=\)（　）
+
+(A) \(3\)　(B) \(2\sqrt{2}\)　(C) \(2\)　(D) \(\sqrt{3}\)
+
+\end{question}
+\begin{question}
+\gkti{6}若直线 \(l_1\) 和 \(l_2\) 是异面直线，\(l_1\) 在平面 \(\alpha\) 内，\(l_2\) 在平面 \(\beta\) 内，\(l\) 是平面 \(\alpha\) 与平面 \(\beta\) 的交线，则下列命题正确的是（　）
+
+(A) \(l\) 与 \(l_1\)，\(l_2\) 都不相交　(B) \(l\) 与 \(l_1\)，\(l_2\) 都相交
+
+(C) \(l\) 至多与 \(l_1\)，\(l_2\) 中的一条相交　(D) \(l\) 至少与 \(l_1\)，\(l_2\) 中的一条相交
+
+\end{question}
+\begin{question}
+\gkti{7}已知 \(5\) 件产品中有 \(2\) 件次品，其余为合格品，现从 \(5\) 件产品中任取 \(2\) 件，恰有一件次品的概率为（　）
+
+(A) \(0.4\)　(B) \(0.6\)　(C) \(0.8\)　(D) \(1\)
+
+\end{question}
+\begin{question}
+\gkti{8}已知椭圆 \(\dfrac{x^2}{25}+\dfrac{y^2}{m^2}=1\)（\(m>0\)）的左焦点为 \(F_1(-4,0)\)，则 \(m=\)（　）
+
+\par\vspace*{3pt}
+
+(A) \(2\)　(B) \(3\)　(C) \(4\)　(D) \(9\)
+
+\end{question}
+\begin{question}
+\gkti{9}在平面直角坐标系 \(xOy\) 中，已知四边形 \(ABCD\) 是平行四边形，\(\overrightarrow{AB}=(1,-2)\)，\(\overrightarrow{AD}=(2,1)\)，则 \(\overrightarrow{AD}\cdot\overrightarrow{AC}=\)（　）
+
+(A) \(5\)　(B) \(4\)　(C) \(3\)　(D) \(2\)
+
+\end{question}
+\begin{question}
+\gkti{10}若集合 \(E=\{(p,q,r,s)\mid 0\leqslant p<s\leqslant 4,\ 0\leqslant q<s\leqslant 4,\ 0\leqslant r<s\leqslant 4\) 且 \(p,q,r,s\in\mathbf{N}\}\)，\(F=\{(t,u,v,w)\mid 0\leqslant t<u\leqslant 4,\ 0\leqslant v<w\leqslant 4\) 且 \(t,u,v,w\in\mathbf{N}\}\)，用 \(\operatorname{card}\,(X)\) 表示集合 \(X\) 中元素个数，则 \(\operatorname{card}\,(E)+\operatorname{card}\,(F)=\)（　）
+
+(A) \(200\)　(B) \(150\)　(C) \(100\)　(D) \(50\)
+
+\end{question}
+\gkpart{二、填空题}
+
+\begin{question}
+\gkti{11}不等式 \(-x^2-3x+4>0\) 的解集为\gkblank{}．（用区间表示）
+
+\end{question}
+\begin{question}
+\gkti{12}已知样本数据 \(x_1\)，\(x_2\)，\(\cdots\)，\(x_n\) 的均值 \(\bar{x}=5\)，则样本数据 \(2x_1+1\)，\(2x_2+1\)，\(\cdots\)，\(2x_n+1\) 的均值为\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{13}若三个正数 \(a\)，\(b\)，\(c\) 成等比数列，其中 \(a=5+2\sqrt{6}\)，\(c=5-2\sqrt{6}\)，则 \(b=\)\gkblank{}．
+
+\end{question}
+\begin{question}
+\gkti{14}在平面直角坐标系 \(xOy\) 中，以原点 \(O\) 为极点，\(x\) 轴的正半轴为极轴建立极坐标系，曲线 \(C_1\) 的极坐标方程为 \(\rho(\cos\theta+\sin\theta)=-2\)，曲线 \(C_2\) 的参数方程为 \(\begin{cases}x=t^2,\\ y=2\sqrt{2}\,t,\end{cases}\)（\(t\) 为参数），则 \(C_1\) 与 \(C_2\) 交点的直角坐标为\gkblank{}．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{15}如图，\(AB\) 为圆 \(O\) 的直径，\(E\) 为 \(AB\) 延长线上一点，过 \(E\) 作圆 \(O\) 的切线，切点为 \(C\)，过 \(A\) 作直线 \(EC\) 的垂线，垂足为 \(D\)．若 \(AB=4\)，\(CE=2\sqrt{3}\)，则 \(AD=\)\gkblank{}．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015gdw_q15_circle}\end{center}
+\nopagebreak[4]
+\end{question}
+\gkpart{三、解答题}
+
+\begin{question}
+\gkti{16}已知 \(\tan\alpha=2\)．
+
+（1） 求 \(\tan\left(\alpha+\dfrac{\pi}{4}\right)\) 的值；
+
+（2） 求 \(\dfrac{\sin 2\alpha}{\sin^2\alpha+\sin\alpha\cos\alpha-\cos 2\alpha-1}\) 的值．
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{17}某城市 100 户居民的月平均用电量（单位：度），以 \([160,180)\)，\([180,200)\)，\([200,220)\)，\([220,240)\)，\([240,260)\)，\([260,280)\)，\([280,300)\) 分组的频率分布直方图如图．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015gdw_q17_histogram}\end{center}
+\nopagebreak[4]
+（1） 求直方图中 \(x\) 的值；
+
+（2） 求月平均用电量的众数和中位数；
+
+（3） 在月平均用电量为 \([220,240)\)，\([240,260)\)，\([260,280)\)，\([280,300)\) 的四组用户中，用分层抽样的方法抽取 11 户居民，则月平均用电量在 \([220,240)\) 的用户中应抽取多少户？
+
+\Needspace{0.4\textheight}
+\end{question}
+\begin{question}
+\gkti{18}如图，三角形 \(PDC\) 所在的平面与长方形 \(ABCD\) 所在的平面垂直，\(PD=PC=4\)，\(AB=6\)，\(BC=3\)．
+\nopagebreak[4]
+\begin{center}\input{figures/f2015gdw_q18_solid}\end{center}
+\nopagebreak[4]
+（1） 证明：\(BC\parallel\) 平面 \(PDA\)；
+
+（2） 证明：\(BC\perp PD\)；
+
+（3） 求点 \(C\) 到平面 \(PDA\) 的距离．
+
+\end{question}
+\begin{question}
+\gkti{19}设数列 \(\{a_n\}\) 的前 \(n\) 项和为 \(S_n\)，\(n\in\mathbf{N}^{*}\)，已知 \(a_1=1\)，\(a_2=\dfrac{3}{2}\)，\(a_3=\dfrac{5}{4}\)，且当 \(n\geqslant 2\) 时，\(4S_{n+2}+5S_n=8S_{n+1}+S_{n-1}\)．
+
+（1） 求 \(a_4\) 的值；
+
+（2） 证明：\(\left\{a_{n+1}-\dfrac{1}{2}a_n\right\}\) 为等比数列；
+
+（3） 求数列 \(\{a_n\}\) 的通项公式．
+
+\end{question}
+\begin{question}
+\gkti{20}已知过原点的动直线 \(l\) 与圆 \(C_1: x^2+y^2-6x+5=0\) 相交于不同的两点 \(A\)，\(B\)．
+
+（1） 求圆 \(C_1\) 的圆心坐标；
+
+（2） 求线段 \(AB\) 的中点 \(M\) 的轨迹 \(C\) 的方程；
+
+（3） 是否存在实数 \(k\)，使得直线 \(L: y=k(x-4)\) 与曲线 \(C\) 只有一个交点？若存在，求出 \(k\) 的取值范围；若不存在，说明理由．
+
+\end{question}
+\begin{question}
+\gkti{21}设 \(a\) 为实数，函数 \(f(x)=(x-a)^2+|x-a|-a(a-1)\)．
+
+（1） 若 \(f(0)\leqslant 1\)，求 \(a\) 的取值范围；
+
+（2） 讨论 \(f(x)\) 的单调性；
+
+（3） 当 \(a\geqslant 2\) 时，讨论 \(f(x)+\dfrac{4}{x}\) 在区间 \((0,+\infty)\) 内的零点个数．
+
+\end{question}
