@@ -10,50 +10,50 @@
 
 - 标题：2019 年·全国Ⅰ卷·理科
 - 项目目录：`2019_全国Ⅰ卷_理科`
-- 构建状态：`compiled_pending_review`；attempt `a45eecf3-e012-4b36-bbd5-eafa15a3c58f`
-- 复核状态：`passed`；时间 2026-10-16T12:02:31+08:00
-- 试题版：6 页；PDF SHA-256 `c5ea8cefde254b4dabf12cbf797cd623b12692a0c469215540f4be454476a786`
-- 解析版：39 页；PDF SHA-256 `e6b71a5242bc5713e458f197f02f0c30ba533c17a50318c756d1a923919da4e9`
-- 简答版：8 页；PDF SHA-256 `bc2788bcfd43a234a5793f193452543113587b0d76c94f0e9842b7926635f506`
-- 印刷版：31 页；PDF SHA-256 `979c055dfa949d887528a0dbdc95986973f6ac74a514cb15d3e3e9adf945ca82`
+- 构建状态：`compiled_pending_review`；attempt `669dc996-a08c-463e-a47c-5dbc8424d995`
+- 复核状态：`passed`；时间 2026-10-18T23:31:24+08:00
+- 试题版：6 页；PDF SHA-256 `db9625f5198babfdb3527b64c470fc2a729e82f1c071dbaeb339f6857833bfba`
+- 解析版：39 页；PDF SHA-256 `ff1df01267a7af414b0955feebe50fe0750d76ddd55cd1e38afff307c33a8ae6`
+- 简答版：8 页；PDF SHA-256 `d06c228482ccbaf732f623742205647bd9c95789f19b501c2fc4871d7da876b5`
+- 印刷版：31 页；PDF SHA-256 `1e3bf02907407709893eb9f8c2889d06cff9f8793515eced69a570d9c50b7f15`
 
 ## gk-2019-regular-national-1-arts
 
 - 标题：2019 年·全国Ⅰ卷·文科
 - 项目目录：`2019_全国Ⅰ卷_文科`
-- 构建状态：`compiled_pending_review`；attempt `c1e87ea0-b6e5-415c-bedd-06dd86b4f4e2`
-- 复核状态：`passed`；时间 2026-10-16T12:02:31+08:00
-- 试题版：5 页；PDF SHA-256 `9ac05b38469a2c9241d5a42d6de227bf937ee9b740e7eb56be1517e976dec249`
-- 解析版：31 页；PDF SHA-256 `b65d0d191a46dbb2adff84aa4f343a263fc29a49c25698ff563b6e7f59a1f118`
-- 简答版：7 页；PDF SHA-256 `37d03242d04ac8399bd0534816cbe50e751677b17548d0da141d6a939d83bcb5`
-- 印刷版：26 页；PDF SHA-256 `5a9fa61d9bc6ad6984261ad453975ea69619c6d879c03e806c8fe96e4ba5ae3d`
+- 构建状态：`compiled_pending_review`；attempt `a68e283b-3e39-4812-934a-e803f64a8644`
+- 复核状态：`passed`；时间 2026-10-18T23:31:24+08:00
+- 试题版：5 页；PDF SHA-256 `24465a1e307680d32aab21e73aa45142cd8d6ab26e4be15f5400eb49db46a8ad`
+- 解析版：31 页；PDF SHA-256 `611b6b0d1afeec23a3fef3f8d622221a9b3ee80419882f367fe987dfb651b4da`
+- 简答版：7 页；PDF SHA-256 `91301c726967dcb7480a85977ae14146bc74f499d6966a81f19a3aa45d4c7e5b`
+- 印刷版：26 页；PDF SHA-256 `a7c171ca75879faf9e8ffd4349f92310eaacd7808c2ee78348450fc000f1a435`
 
 ## gk-2020-regular-national-1-science
 
 - 标题：2020 年·全国Ⅰ卷·理科
 - 项目目录：`2020_全国Ⅰ卷_理科`
-- 构建状态：`compiled_pending_review`；attempt `1afb770e-0e35-483c-bd37-fef3dcb18641`
-- 复核状态：`passed`；时间 2026-10-16T12:02:31+08:00
-- 试题版：5 页；PDF SHA-256 `37206c8bc10da115ed8746d119c722b65e3ebb06f63e13a3eca347a1c13c0c22`
-- 解析版：39 页；PDF SHA-256 `1ed979b734681ce1129978e33ab619f4e5e057bc34f2930206e42d1d08e971d2`
-- 简答版：7 页；PDF SHA-256 `c8844a1a00c6f42b58c57476ec74377dca96afdbef2cb246b7c0591dbcb8dca3`
-- 印刷版：28 页；PDF SHA-256 `a9c5dffcea5371dfd1e237f4082540d8247bea1315406c4ce71829a996d4e972`
+- 构建状态：`compiled_pending_review`；attempt `9b2dead5-18ba-4b73-a2d3-3fa5bd22fa21`
+- 复核状态：`passed`；时间 2026-10-18T23:31:24+08:00
+- 试题版：5 页；PDF SHA-256 `caaa64555ee7e41596ff9a96331da29e5c16d0121cccb044fdc88359734895d2`
+- 解析版：39 页；PDF SHA-256 `6c1257cbb1409c0d087ff65a67fcda128795a33f0589d6c94a6e1fbe9cb8e369`
+- 简答版：7 页；PDF SHA-256 `9242e4600ac04b1e90a5fe88f07c0b24cd6630102b1e468e4d9f3f206e8668ca`
+- 印刷版：28 页；PDF SHA-256 `d394abef490e961116c3404f73b1b80699461b5a135e79a845c5127a544e4309`
 
 ## gk-2020-regular-national-1-arts
 
 - 标题：2020 年·全国Ⅰ卷·文科
 - 项目目录：`2020_全国Ⅰ卷_文科`
-- 构建状态：`compiled_pending_review`；attempt `05347335-dc73-471b-8d3b-8d8aba71f895`
-- 复核状态：`failed`；时间 2026-10-16T12:02:31+08:00
-- 试题版：5 页；PDF SHA-256 `ed8e48f79f118d4b7aac61945041fbc9107a8e2b6188900a6fbab932c0a07761`
-- 解析版：32 页；PDF SHA-256 `055c0a0b617b0bcb7c07b49669cf98e50c32cd8819da9650c53882cfd6873ba3`
-- 简答版：7 页；PDF SHA-256 `ce7873d9f3b8f45d9e14359cf15abcfca93bfb71b8f5ef60a160b23edb3fbb84`
-- 印刷版：23 页；PDF SHA-256 `623e1218aad3bbebe5fa27b7ef1bf82ef6f312696b00b824dc59a5bf1c9e84d1`
+- 构建状态：`compiled_pending_review`；attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`
+- 复核状态：`failed`；时间 2026-10-18T23:31:24+08:00
+- 试题版：5 页；PDF SHA-256 `1648718de3d624537d7e7e0a28cccaae0224f74e4d96b69410e8fffb994ecc41`
+- 解析版：32 页；PDF SHA-256 `529eb3dcd70d33516ca3b7cef6a2f8291eb5bec1bac6a61e4745e023815034a0`
+- 简答版：7 页；PDF SHA-256 `75ebcaf5992a5eb2b937af56b805bd6e7be3a18700a5f1e265884f125c0e34f8`
+- 印刷版：23 页；PDF SHA-256 `2a772b2b7ed06ca36fc6135d65ccb48ead3fc759d8cbb0a97f34f3f39e76068c`
 
 ## 失败检查
 
-- gk-2020-regular-national-1-arts｜试题版 第 5 页｜`heading_number`｜attempt `05347335-dc73-471b-8d3b-8d8aba71f895`｜第5页第23题仍排入版面；原卷标明已取消；依用户决定保留原文并登记失败
-- gk-2020-regular-national-1-arts｜解析版 第 5 页｜`heading_number`｜attempt `05347335-dc73-471b-8d3b-8d8aba71f895`｜第5页仍排入第23题题干。原卷标明已取消；依用户决定保留原文并登记失败
-- gk-2020-regular-national-1-arts｜解析版 第 32 页｜`heading_number`｜attempt `05347335-dc73-471b-8d3b-8d8aba71f895`｜第32页仍排入第23题题目及解析。原卷标明已取消；依用户决定保留原文并登记失败
-- gk-2020-regular-national-1-arts｜简答版 第 5 页｜`heading_number`｜attempt `05347335-dc73-471b-8d3b-8d8aba71f895`｜第23题仍排入本页；原卷标明已取消；依用户决定保留原文并登记失败
-- gk-2020-regular-national-1-arts｜印刷版 第 23 页｜`heading_number`｜attempt `05347335-dc73-471b-8d3b-8d8aba71f895`｜原卷标明已取消；依用户决定保留原文并登记失败
+- gk-2020-regular-national-1-arts｜试题版 第 5 页｜`heading_number`｜attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`｜第5页第23题仍排入版面；原卷标明已取消；依用户决定保留原文并登记失败
+- gk-2020-regular-national-1-arts｜解析版 第 5 页｜`heading_number`｜attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`｜第5页仍排入第23题题干。原卷标明已取消；依用户决定保留原文并登记失败
+- gk-2020-regular-national-1-arts｜解析版 第 32 页｜`heading_number`｜attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`｜第32页仍排入第23题题目及解析。原卷标明已取消；依用户决定保留原文并登记失败
+- gk-2020-regular-national-1-arts｜简答版 第 5 页｜`heading_number`｜attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`｜第23题仍排入本页；原卷标明已取消；依用户决定保留原文并登记失败
+- gk-2020-regular-national-1-arts｜印刷版 第 23 页｜`heading_number`｜attempt `6e7d5746-7589-4afc-ad21-5830e520f5e3`｜原卷标明已取消；依用户决定保留原文并登记失败
