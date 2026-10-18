@@ -44,9 +44,9 @@
 
 ### Task 2 — Transcribe (2 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–8 选择）：`.work/phase3-b17/transcripts/partA.md`。
-- [ ] 转录 B（Q9–21＋图表实测清单）：`.work/phase3-b17/transcripts/partB.md`＋`.work/phase3-b17/figure-inventory.md`。
-- [ ] 盲解 A（Q1–8）：`.work/phase3-b17/blind/partA.md`；盲解 B（Q9–21）：`.work/phase3-b17/blind/partB.md`。
+- [x] 转录 A（Q1–8 选择）：`.work/phase3-b17/transcripts/partA.md`。
+- [ ] 转录 B（Q9–21＋图表实测清单）：原单支挂起（30 分钟无产出，已停止），拆为 B1（Q9–17）＋B2（Q18–21＋精简图清单）：`.work/phase3-b17/transcripts/partB1.md`、`partB2.md`＋`.work/phase3-b17/figure-inventory.md`。
+- [x] 盲解 A（Q1–8）：`.work/phase3-b17/blind/partA.md`（1D 2A 3D 4B 5A 6B 7C 8B）；盲解 B（Q9–21）：`.work/phase3-b17/blind/partB.md`（0 存疑；Q20 轨迹弧段、Q21 恒等式已由主会话独立复算）。
 - [ ] **所有四代理 prompt 均含：不得读取任何他批/他卷产物（含 `.work/phase3-b12/`–`b16/`、`2015_广东卷_文科`、`2015_数学真题_广东文*` 等）。**
 
 ### Task 3 — Integrate and register
