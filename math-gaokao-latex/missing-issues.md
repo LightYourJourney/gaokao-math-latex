@@ -17902,3 +17902,360 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1089
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "80860921e587bd507a0b545cbd22733f27b798664ba36888807d7a57f73f3560",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "be6a861df5007dfbbd0c57412c03691601047caf53222bc3449facc5c2fe7561",
+  "resume_action": "修正 gk-1994-shanghai 的 印刷版 第 2 页 figure_label（Q11四选项图左上(A)中，原点字母O位于y轴右下方并被对数曲线穿过，标签与曲线实际遮叠（约页面宽35.7%、高23.0%处）；B/C/D的轴名及选项字母可辨。需调整O标签位置后复看；本次不修图。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1090
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "58e0fd9c2b8624a093396336bf88a4f334a9724f3e16580112dbdb089e742532",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 3,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "be6a861df5007dfbbd0c57412c03691601047caf53222bc3449facc5c2fe7561",
+  "resume_action": "修正 gk-1994-shanghai 的 印刷版 第 3 页 figure_label（Q23题面几何图中，A标签放在顶点A左侧，与左侧斜线PB相交，字母笔画被线穿过（约页面宽44.5%、高37.6%处）。P/B/C/D标签可辨。需移开题图A标签后复看；本次不修图。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1091
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "heading_number",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "29aae28418c09ca0a97b37be2a0297d003033408a3b9ff4c02e4206e78e5d9f7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 3,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "be6a861df5007dfbbd0c57412c03691601047caf53222bc3449facc5c2fe7561",
+  "resume_action": "修正 gk-1994-shanghai 的 印刷版 第 3 页 heading_number（已实际查看固定扫描第2页（.work/source-pdf-cache/1994-shanghai-page2.png）及本attempt印刷版page-03.png：扫描右栏Q23结束、Q24之前明确有“四、（本大题满分54分）本大题共有3题，解答下列各题必须写出必要的步骤”。印刷版第3页首次Q24前整段章节标题及说明缺失，Q23(2)后直接进入Q24；页上仅保留“三、解答题／本大题满分36分，共有3题”的说明，后续却连列Q21–26，章节归属与题数范围不完整。此为源章节完整性缺陷，heading_number判fail；保留当前attempt诊断，交主会话集中修复，本次不改内容。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1092
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "baf0a406a1a00f17b5e4533412e5192ae59400c6c2a8f3f7d5679d7c70669f0e",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "be6a861df5007dfbbd0c57412c03691601047caf53222bc3449facc5c2fe7561",
+  "resume_action": "修正 gk-1994-shanghai 的 印刷版 第 7 页 figure_label（Q11四选项图左上(A)中，原点字母O位于y轴右下方并被对数曲线穿过，标签与曲线实际遮叠（约页面宽35.7%、高60.3%处）；B/C/D的轴名及选项字母可辨。需调整O标签位置后复看；本次不修图。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1093
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "12a9e818e53a47b6452917527bc2ab14cd40d736968bcdb0563fe5265b18c7b6",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 11,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "be6a861df5007dfbbd0c57412c03691601047caf53222bc3449facc5c2fe7561",
+  "resume_action": "修正 gk-1994-shanghai 的 印刷版 第 11 页 figure_label（Q23题面几何图中，A标签放在顶点A左侧，与左侧斜线PB相交，字母笔画被线穿过（约页面宽44.5%、高66.1%处）。P/B/C/D标签可辨。页下方解析辅助图的P/A/B/C/D/E/H标签均可辨且图未裁切。需移开题图A标签后复看；本次不修图。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1094
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "56b8e410a8ffdd38200b66c6870057dab04b9674c93a893bb2a0950ce5aec8c9",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "1387c998560128ae2f7f913b0bbcd6429e25da28045b163472721110e6da8894",
+  "resume_action": "修正 gk-1994-shanghai 的 简答版 第 2 页 figure_label（Q11(A)原点O被递增曲线穿过；300dpi局部复核确认，须调整标号位置。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1095
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "eb6ec41188038767fa48c074c65de09950018ea8d161b13abb438cb40cd7907f",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "1387c998560128ae2f7f913b0bbcd6429e25da28045b163472721110e6da8894",
+  "resume_action": "修正 gk-1994-shanghai 的 简答版 第 4 页 figure_label（Q23题面图A标号被PB边线穿过；300dpi局部复核确认，须调整标号位置。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1096
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "heading_number",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "2fb58f0e5852e4c29a9d1d8dc41ec373360cfe845e3be9b0c4a7a4fac3a68baa",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "1387c998560128ae2f7f913b0bbcd6429e25da28045b163472721110e6da8894",
+  "resume_action": "修正 gk-1994-shanghai 的 简答版 第 4 页 heading_number（原卷Q24前第四节（54分、3题）标题与说明缺失，当前第三节36分共3题却连续列Q21—26。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1097
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "f20045c79de2e2a9b5284a66d257df5c339eada697d18be0c168176780bfb5fc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 2 页 figure_label（Q11左上(A)图的原点标签O放在y轴右侧、x轴下方，递增对数曲线直接穿过O字形（约x=435—454,y=482—505，坐标基于整页1241×1754 PNG）；该处文字与曲线遮叠。其余B/C/D、x/y及1可辨。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1098
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "3cb0321dcc962d1b2a59d55b2fa2731ee818ee2cfad86da9c943a831572a38c7",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 4 页 figure_label（Q23题图中A字母与左侧PB实线相交（约x=540—559,y=664—688）；A实际顶点位于其右侧、AD虚线左端，标签现落在线段上，影响标签辨识。P/B/C/D可辨，图整体未裁切。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1099
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "0e1fe457ef29816276b97d8a676e39906bba912cd67b77b2aef988692f8109cc",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 4 页 heading_number（本attempt已实际查看150dpi的page-04.png，并定向对照根目录.work/source-pdf-cache/1994-shanghai-page2.png：固定扫描第2页右栏在Q23结束、Q24之前明确有“四、（本大题满分54分）本大题共有3题。解答下列各题必须写出必要的步骤。”当前解析版首次承载Q24的第4页却由Q23两小问直接进入Q24，整段第四大题标题/分值/题数/作答说明缺失，只有页首“三、解答题，36分共3题”，导致21—26题连续挂在第三大题下；heading_number=fail。后续第17页Q24解析入口也未显示该第四大题结构。仅记录本attempt源章节完整性缺陷，未修改题面、解析或LaTeX，未重做来源盲核。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1100
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "fd533373bc5261192a62d3d8e1df59f932fed8cf882c3459f44b5f180fa057b9",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 10,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 10 页 figure_label（Q11重复题图的左上(A)图仍有对数曲线穿过原点标签O（约x=435—454,y=430—452，整页PNG坐标）；B/C/D及坐标轴字母完整。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1101
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "fc7718725b030084c0bfc30e647be3ef14715e261ab8185fc2dcb01fda66a437",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 16,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 16 页 figure_label（Q23上方题面重复图的A标签被PB边线穿过（约x=540—559,y=999—1025，整页1241×1754 PNG坐标），figure_label=fail；此处对应第4页题面图，并以同attempt的试题版/q23-crop.png局部证据再次确认。页底解析辅助图与上方题面图区分，P/A/B/C/D/E/H标签可辨，本次不将该已修辅助图列为失败对象。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1102
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "9ffe5189fdb4c7149638532cf789f055176053450d56cf68e9a1dbb2592746f8",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 17,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "a5890d6104e9ebbcd90a692f0cb6e719814acd9fa5b0b4c688ea63f0565c7633",
+  "resume_action": "修正 gk-1994-shanghai 的 解析版 第 17 页 heading_number（已实际查看本attempt的150dpi page-17.png：页首接续Q23的(1)(2)解答及两答案框后，直接出现“第24题”和“题目见第4页”，未见第四大题标题、54分/共3题或该章作答说明。定向查看根目录.work/source-pdf-cache/1994-shanghai-page2.png可见原扫描在Q24前有完整“四、（本大题满分54分）本大题共有3题。解答下列各题必须写出必要的步骤。”；第4页首次Q24题面亦缺该段，后续答案结构未呈现这一章界，故heading_number=fail。这是与第4页关联的章节遗漏，不是第17页长答案框的分页问题；内容留待主会话修复。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1103
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "3963dc0e6eaf58eaba191155d065ea5cd5edf1673908367f354a05e5744ac48c",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "ccab37f4975d751ab09d5d71309c2c0a070662c771851d82b18ba3f7f6023d6b",
+  "resume_action": "修正 gk-1994-shanghai 的 试题版 第 2 页 figure_label（Q11(A)原点O被递增曲线穿过；300dpi局部复核确认，须调整标号位置。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1104
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "7eef3e616ffa9de3ad654fdae6a83738c8271a3df0a0b52af1d158e1d1c16caa",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "ccab37f4975d751ab09d5d71309c2c0a070662c771851d82b18ba3f7f6023d6b",
+  "resume_action": "修正 gk-1994-shanghai 的 试题版 第 4 页 figure_label（Q23题面图A标号被PB边线穿过；300dpi局部复核确认，须调整标号位置。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1105
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "4713a95a-06b4-4399-9bab-c58f428d8b8c",
+  "check_code": "heading_number",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "02b986429411c9b0f6ba846381834ea01769a658933bb5b8f7df38a68ad3df90",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1994-shanghai",
+  "pdf_sha256": "ccab37f4975d751ab09d5d71309c2c0a070662c771851d82b18ba3f7f6023d6b",
+  "resume_action": "修正 gk-1994-shanghai 的 试题版 第 4 页 heading_number（原卷Q24前第四节（54分、3题）标题与说明缺失，当前第三节36分共3题却连续列Q21—26。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
