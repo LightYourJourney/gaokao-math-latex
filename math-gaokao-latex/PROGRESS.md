@@ -5966,3 +5966,9 @@
 - 修改文件：两卷build回执、source-manifest、上述比对报告和本进度；review工作项位于忽略缓存，尚待官方诊断登记。未改题面、答案、解析正文、图形或公共转换器；没有PNG入库。先提交此可恢复检查点，再运行finalizer保存真实负结果。
 - 下一步：正式登记两项新视觉失败；随后只把理科Q5的ASCII数轴替换为已登记TikZ矢量图，让-4/4闭端、-2/3开端标签明确对齐，保持解集[-4,-2)∪(3,4]不变。先补失败回归测试，再局部实现、必要的来源/解析哈希刷新、单卷重建及校样；不要修改公共转换器或把同像素结果自动认定合格。12卷刷新清单中本两卷构建已更新但未验收，另6卷仍未启动：1977北京文/理、1986广东文/理、1997全国理、1989广东理。
 - 执行纠偏/成本：首次定向rg猜错规范文件名，在读取阶段报不存在，随后从manifest取得准确的上海理路径，未写错文件。0次OCR、取源、数学重解及新子代理调用；本阶段为回执/证据维护，未跑全库测试，Token及费用未知。不push。
+
+### phase2-b23：数轴视觉失败正式登记检查点（2026-10-18）
+
+- 官方finalize-batch-checked实际返回VISUAL_FAILED、revision4338，自动提交 `04786253`（前置构建/证据提交 `012c7646`）。两卷53页共424项，422 pass、2 fail；文科review passed，理科review failed，批次和两卷build均compiled_pending_review。新增失败只为已实际目视的理科解析p9/印刷p6数轴端点标签错位；没有把同像素比较当成质量正确性证明。
+- 官方事务修改两卷build/review回执、manifest、missing-issues、reports/phase2-b23.md共7个路径。当前validate-receipts --require-current-inputs返回OK：papers2、pending2、stale/invalid/missing0；provenance check-batch为OK：2卷。git diff --check通过；题目/答案/解析/公共代码尚未变，未跑全库测试。
+- 继续位置：不要重新渲染/复核本attempt全部53页或再次重建文科。下一阶段先在tests新增理科Q5数轴回归，观察ASCII现状失败；再以单独登记的TikZ图替换规范解析中的~~~片段，经官方生成器投影，核对端点闭开和标签坐标；刷新必要的解析/答案来源证据、只重建理科，并对变化页面复核后重新登记本批。暂不切入剩余6卷；本卷真实缺陷优先修复。工作缓存及两个当前失败页面PNG路径见上一条的receipt-refresh-20261018目录。
