@@ -44,19 +44,19 @@
 
 ### Task 2 — Transcribe (3 agents) and solve independently (2 agents)
 
-- [ ] 转录 A（Q1–8）：`.work/phase3-b18/transcripts/partA.md`。
-- [ ] 转录 B1（Q9–17）：`partB1.md`；转录 B2（Q18–20＋5 图清单）：`partB2.md`＋`figure-inventory.md`。
-- [ ] 盲解 A（Q1–8）、盲解 B（Q9–20）：`.work/phase3-b18/blind/`。
-- [ ] 所有代理 prompt 含隔离纪律（不得读取他批/他卷产物与本批他人输出）。
+- [x] 转录 A（Q1–8）：`.work/phase3-b18/transcripts/partA.md`。
+- [x] 转录 B1（Q9–17）：`partB1.md`；转录 B2（Q18–20＋5 图清单）：`partB2.md`＋`figure-inventory.md`。
+- [x] 盲解 A（Q1–8）、盲解 B（Q9–20）：`.work/phase3-b18/blind/`。
+- [x] 所有代理 prompt 含隔离纪律（不得读取他批/他卷产物与本批他人输出）。
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套＋含解析占位；六项自检＋（N）锚点；说明框预算。
-- [ ] 5 图 TikZ 图源＋探针（绝对字号 10.5pt；残差 <0.05pt、600dpi 墨迹、灵敏度自证）。
-- [ ] 注册 `phase3-b18`；provenance 三角色；extract-batch 派生。
-- [ ] generate/short/editions 三连 → build --formal（审计三连→修复轮→重建→差分→复审）。
+- [x] 规范三件套＋含解析占位；六项自检＋（N）锚点；说明框预算。
+- [x] 5 图 TikZ 图源＋探针（绝对字号 10.5pt；残差 <0.05pt、600dpi 墨迹、灵敏度自证）。
+- [x] 注册 `phase3-b18`；provenance 三角色；extract-batch 派生。
+- [x] generate/short/editions 三连 → build --formal（审计三连→修复轮→重建→差分→复审）。
 
 ### Task 4 — Build, review, and close
 
-- [ ] 审查（图自查＋分段 ≤8 页、≤5 并发）→ 修复轮 → 重建 → 差分 → 复审。
-- [ ] 回执归集 → finalize → 报告 → 全量测试 → 清理 → 显式路径提交（不 push）。
+- [x] 审查（图自查＋分段 ≤8 页、≤5 并发）→ 修复轮 → 重建 → 差分 → 复审。
+- [x] 回执归集 → finalize → 报告 → 全量测试 → 清理 → 显式路径提交（不 push）。
