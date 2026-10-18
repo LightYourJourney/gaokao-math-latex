@@ -325,6 +325,27 @@ class Shanghai1994SourceTests(unittest.TestCase):
         self.assertEqual(self.paper["production_state"], "blocked")
         self.assertEqual(self.record["known_question_issues"][0]["status"], "open")
 
+    def test_formal_provenance_keeps_unverified_officiality_and_source_conflict(self):
+        path = PROJECT_DIR / "provenance.json"
+        self.assertTrue(path.is_file(), "formal provenance has not been imported")
+        document = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(document["paper_id"], PAPER_ID)
+        self.assertEqual(document["batch_id"], "phase1-b24")
+        self.assertEqual(len(document["questions"]), 26)
+        by_number = {q["question_number"]: q for q in self.record["question_sources"]}
+        for number, question in enumerate(document["questions"], 1):
+            with self.subTest(question=number):
+                self.assertEqual(question["printed_number"], number)
+                self.assertEqual(question["source_ref"], {"source_id": SOURCE_ID})
+                self.assertEqual(question["source_sha256"], self.record["pdf_sha256"])
+                self.assertEqual(question["source_pages"], by_number[number]["source_pages"])
+                self.assertEqual(question["transcription_review"]["result"], "passed")
+                self.assertEqual(question["answer_evidence"]["grade"], "D")
+                self.assertEqual(len({question["solver_role"], question["reviewer_role"], question["transcription_review"]["role"]}), 3)
+                self.assertEqual(question["conflict_status"], "unresolved" if number == 25 else "none")
+                self.assertEqual(question["issue_ids"], ["ISSUE-1071"] if number == 25 else [])
+        self.assertEqual(self.paper["production_state"], "blocked")
+
     def test_q25_coordinate_derivation_is_independently_reviewed_but_not_official(self):
         checks = self.record.get("derived_solution_checks", [])
         check = next(item for item in checks if item["question_id"].endswith(":q025"))

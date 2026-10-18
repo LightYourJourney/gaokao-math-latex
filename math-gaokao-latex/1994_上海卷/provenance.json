@@ -1,0 +1,739 @@
+{
+  "batch_id": "phase1-b24",
+  "generated_by": "tools/provenance.py",
+  "paper_id": "gk-1994-shanghai",
+  "questions": [
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[0]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q001；依题序映射至 gk-1994-shanghai-q01。既有方法：absolute-value-inequality；既有推导摘要：|x+1|<1 iff -1<x+1<1 iff -2<x<0。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived -2<x<0\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $-2<x<0$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第1题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "c673ce8bc72ad065168f2114536092d4f4e1b7e6f7fbd7549ccc80d325e9fbf6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "1",
+      "printed_number": 1,
+      "question_id": "gk-1994-shanghai-q01",
+      "question_order": 1,
+      "question_text_sha256": "055ee8c12ca9bac51eca34fe26bfa18c3be4ed0a05959430d59ae86a9c07eea0",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[1]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q002；依题序映射至 gk-1994-shanghai-q02。既有方法：principal-half-angle-identity；既有推导摘要：设 θ=1/2 arccos(1/8)。主值给出 0<θ<π/4，故 sinθ>0；sinθ=sqrt((1-cos(2θ))/2)=sqrt(7/16)=sqrt(7)/4。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived sqrt(7)/4 and selected the positive half-angle root from the principal arccos range\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $\\dfrac{\\sqrt7}{4}$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第2题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "5f111f767b053bc73aed570e0ffed993174061f4d440be832be69683cbdfc0dc",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "2",
+      "printed_number": 2,
+      "question_id": "gk-1994-shanghai-q02",
+      "question_order": 2,
+      "question_text_sha256": "69171c84d991f05277f9afaae4e7b11f148f9e721fdeaff95e70991d9f8267d4",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[2]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q003；依题序映射至 gk-1994-shanghai-q03。既有方法：distance-from-center-to-y-axis；既有推导摘要：圆与 y 轴 x=0 相切，半径为圆心 C(-2,3) 到 x=0 的距离 |-2|=2；代入圆心式得 (x+2)^2+(y-3)^2=4。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived radius 2 and the same circle equation; confirmed the center and y-axis tangency determine a unique circle\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $(x+2)^2+(y-3)^2=4$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第3题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "b8e812ea786680a71729c31b24af9da7f7c015b2d8256ce9cc5b7931a11a2a29",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "3",
+      "printed_number": 3,
+      "question_id": "gk-1994-shanghai-q03",
+      "question_order": 3,
+      "question_text_sha256": "d18e1ffd3f557d1eccd894e7df871deb24deff8cea8e413c8dd634cdb7313696",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[3]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q004；依题序映射至 gk-1994-shanghai-q04。既有方法：logarithm-domain-and-base-change；既有推导摘要：定义域要求 x>1。由 log_9(x+5)=1/2 log_3(x+5)，原式等价于 2log_3(x-1)=log_3(x+5)，故 (x-1)^2=x+5，候选根为 4、-1；仅 x=4 满足定义域，代回原式两边均为 1。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived x=4, rejected x=-1 by the domain x>1, and verified both logarithms equal 1 at x=4\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $x=4$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第4题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "5290ea8058148c55ae258faef9b2888050372399052b1b29d6ad9d71990b501f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "4",
+      "printed_number": 4,
+      "question_id": "gk-1994-shanghai-q04",
+      "question_order": 4,
+      "question_text_sha256": "57da8a4ca0002a256ecc55062d05758e5f5b02927c75944111771633556ecb78",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[4]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q005；依题序映射至 gk-1994-shanghai-q05。既有方法：cone-total-surface-area-cost；既有推导摘要：轴截面为边长10 cm的等边三角形，底边为底面直径，故 r=5 cm、l=10 cm；总表面积 πr²+πrl=25π+50π=75π cm²；取 π=3.2，75×3.2=240 cm²，费用0.10×240=24元。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived r=5 cm and l=10 cm; included base and curved surface for 75π cm², used π=3.2 to get 240 cm² and cost 24 yuan; noted side-only coating would instead cost 16 yuan\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $24$ 元；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第5题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "8a226dffd313257f5e6dca4432893a378a339f75e5654e1548ca703ea36221b1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "5",
+      "printed_number": 5,
+      "question_id": "gk-1994-shanghai-q05",
+      "question_order": 5,
+      "question_text_sha256": "84d4864a9e6aa8467ce0346fe135f99058247edddd45885acee7a77409464cae",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[5]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q006；依题序映射至 gk-1994-shanghai-q06。既有方法：inverse-function-domain-range；既有推导摘要：原函数定义域 x≤-1、值域 y≥0；由 y²=x²−1 且原输入 x≤-1，反解取负根 x=−sqrt(y²+1)；交换变量得反函数 y=−sqrt(x²+1)，定义域 x≥0。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived f^{-1}(x)=-sqrt(x^2+1) on x≥0 from the original range [0,+infinity) and the negative branch forced by x≤-1\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $y=-\\sqrt{x^2+1}\\ (x\\ge0)$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第6题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "820bd42f0a1e5fd29c24200a15b32ef713258bc27b41b1c86db41e105efa52d6",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "6",
+      "printed_number": 6,
+      "question_id": "gk-1994-shanghai-q06",
+      "question_order": 6,
+      "question_text_sha256": "fd98257030a9749368e533b434bdc89f932b010f8fa58fefeb61f9808067754e",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[6]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q007；依题序映射至 gk-1994-shanghai-q07。既有方法：standard-vertical-hyperbola-foci；既有推导摘要：写成标准形式 y^2/2−x^2/1=1，得 a^2=2、b^2=1；纵轴为实轴，c^2=a^2+b^2=3，故 c=√3，焦点为 (0,±√3)，即 (0,√3) 和 (0,−√3)。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived a²=2, b²=1, c²=3 and the foci (0,±√3) from the vertical hyperbola form, using the usual Cartesian x-y coordinates\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $(0,\\sqrt3)$ 和 $(0,-\\sqrt3)$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第7题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "7d43a7d45d1e91cfb1dfbc89fe16472256f8b97908779b40cfd8c1c9304e58f9",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "7",
+      "printed_number": 7,
+      "question_id": "gk-1994-shanghai-q07",
+      "question_order": 7,
+      "question_text_sha256": "e670fd6309a262aa3e1f8af53bd3ea896735561f2dc9c71197a1487647607bfc",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[7]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q008；依题序映射至 gk-1994-shanghai-q08。既有方法：binomial-expansion-exponent-match；既有推导摘要：二项式通项 T_{k+1}=\\binom{5}{k}(x^3)^{5-k}(-2x^{-2})^k=\\binom{5}{k}(-2)^k x^{15-5k}。令15-5k=5，得k=2；对应系数 \\binom{5}{2}(-2)^2=40。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived k=2 from 15−5k=5 in the binomial general term; the x^5 coefficient is C(5,2)(−2)^2=40\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $40$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第8题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "eb45e41e81f0ae83bc71ea751c23cd563756197cf5a0cd3eecbfefc24621db1a",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "8",
+      "printed_number": 8,
+      "question_id": "gk-1994-shanghai-q08",
+      "question_order": 8,
+      "question_text_sha256": "ab012fd2cc272c16fa50dd4eede390d23ce47e6b38376c4c1a7db5c16b30bb39",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[8]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q009；依题序映射至 gk-1994-shanghai-q09。既有方法：trigonometric-linear-combination-maximum；既有推导摘要：由2cos^2x=1+cos2x，y=sin2x−cos2x−1=√2sin(2x−π/4)−1；正弦函数最大值为1，故最大值为√2−1。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived y=√2 sin(2x−π/4)−1; since sin is at most 1, the maximum is √2−1\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $\\sqrt2-1$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第9题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "71e353e67c20de39edf8d41432b367cdff65aeed5359d90eb717f80278f18aad",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "9",
+      "printed_number": 9,
+      "question_id": "gk-1994-shanghai-q09",
+      "question_order": 9,
+      "question_text_sha256": "531a65e384674643cc52a07f670ba172e773cd61d80c3f5878d090d9842eed20",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[9]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q010；依题序映射至 gk-1994-shanghai-q10。既有方法：sum-to-product-tangent-period；既有推导摘要：和差化积后分子为2sin(2x+π/6)cos(π/6)，分母为2cos(2x+π/6)cos(π/6)。因cos(π/6)≠0，且原分母非零要求cos(2x+π/6)≠0，即x≠π/6+kπ/2（k∈Z）；在原定义域内y=tan(2x+π/6)。正切角增加π时函数值周期重复，因此2T=π，最小正周期T=π/2；分母为零处原分子不为零，不能补入定义域。。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived the period π/2 by simplifying to tan(2x+π/6), retaining the original domain x≠π/6+kπ/2 because the numerator is nonzero at denominator zeros, and proving this is the least positive period\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $\\dfrac\\pi2$；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第10题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描第1页题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "23ea6990af4d613d984491c95f92c44b73f426914461b9cca8f849efe053c0ba",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "10",
+      "printed_number": 10,
+      "question_id": "gk-1994-shanghai-q10",
+      "question_order": 10,
+      "question_text_sha256": "a5db37bd721ccf91e92c3e54cab9326b0857e7b01701256ec5269cc3b89fce64",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[10]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q011；依题序映射至 gk-1994-shanghai-q11。既有方法：logarithm-monotonicity-and-line-slope；既有推导摘要：a>1时log_a x定义域x>0，严格递增，过(1,0)，x=0为竖直渐近线；直线过原点且1-a<0。扫描选项B唯一同时满足，A直线斜率错误，C两曲线方向均错误，D对数曲线方向错误。。历史独立复核原记录：{\"agent_id\": \"01a14e6c-c224-72b1-ac2c-0022cd6f565c\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option B from the increasing logarithm through (1,0) and a negative-slope line through the origin; visually matched all four scanned options\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: B；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第11题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "3c26371e46ad69caffd185d48536b8eb6988855a423f95564546b8db20ead463",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "11",
+      "printed_number": 11,
+      "question_id": "gk-1994-shanghai-q11",
+      "question_order": 11,
+      "question_text_sha256": "4ea454bb9220f1abff5b95a6ea10396097d5433b38b6d0bcb4f55b12744c65db",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1. Graph options A-D preserve line slopes, logarithm directions, axes and the x=1 crossings.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[11]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q012；依题序映射至 gk-1994-shanghai-q12。既有方法：power-and-logarithm-signs-on-unit-interval；既有推导摘要：由0<1-a<1与1/3<1/2，底数在(0,1)时幂随指数增大严格减小，故A正确。B换底后分子ln(1+a)>0、分母ln(1-a)<0，值为负；C左边小于1、右边大于1；D底数小于1且指数1+a>0，值小于1。。历史独立复核原记录：{\"agent_id\": \"01a14e6c-7605-7692-8009-537126510514\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option A using monotonicity in the exponent for a base in (0,1), and disproved B, C and D by their signs and bounds\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: A；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第12题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "8a4e55f11f5fec8db603a7f6465e2f802542ef06d38596313371afa6ba043507",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "12",
+      "printed_number": 12,
+      "question_id": "gk-1994-shanghai-q12",
+      "question_order": 12,
+      "question_text_sha256": "ebfe7e9df2508c84f3dac4771e28d058a1a48205f0b825ecd2d72b214b177873",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[12]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q013；依题序映射至 gk-1994-shanghai-q13。既有方法：polar-to-cartesian-vertical-line；既有推导摘要：P(1,π)对应直角坐标(-1,0)，垂直极轴的直线是x=-1。由x=ρcosθ得ρcosθ=-1，即ρ=-1/cosθ；该直线上cosθ≠0，无除法漏点，故选C。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-21da-7873-aa45-42e5d7576a41\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived x=-1 and rho=-1/cos(theta), including the nonzero cosine condition; option C\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: C；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第13题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "e51929091725768f1c0128e8d2ffe2155ee6048880b7c8110f0ca63f2f1c9fd0",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "13",
+      "printed_number": 13,
+      "question_id": "gk-1994-shanghai-q13",
+      "question_order": 13,
+      "question_text_sha256": "3a65dca219a5612ac148e9d95e9a71ea773df7ea309feb884161c24b4bc675bb",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[13]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q014；依题序映射至 gk-1994-shanghai-q14。既有方法：parallel-lines-and-skew-line-contradiction；既有推导摘要：若c∥b，由c∥a得a∥b，与a,b异面矛盾，故C正确。取a=(t,0,0)、b=(0,s,1)，c=(t,0,1)时与b相交，c=(t,0,2)时与b异面；排除一定异面、一定相交及不可能相交。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-21da-7873-aa45-42e5d7576a41\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option C by parallelism transitivity and supplied explicit intersecting and skew examples for the other possibilities\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: C；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第14题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "7d5335067eb2a9a3168c4065d2fed27d7d5798f9e6198ef3f557d9d5590c60d2",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "14",
+      "printed_number": 14,
+      "question_id": "gk-1994-shanghai-q14",
+      "question_order": 14,
+      "question_text_sha256": "39ff93613ef224da2cafe508ab474e7214a40ca51455fd3ac6c39ac651b22a4a",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 1.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[14]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q015；依题序映射至 gk-1994-shanghai-q15。既有方法：set-complement-inclusion-counterexample；既有推导摘要：P包含于Q时，P∪Q=Q，P补∪Q=I，P∩Q补=空集；P补∩Q补=Q补。反例I={1,2,3}、P={1}、Q={1,2}给出交集{3}不等于P补={2,3}，故D不恒成立。即使子集符号允许P=Q，此严格包含反例仍满足题设，答案不变。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-21da-7873-aa45-42e5d7576a41\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option D with I={1,2,3}, P={1}, Q={1,2}; distinguished an identity from a statement true only when P=Q\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: D；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第15题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "eb44520b061a8ccea8f0b1d77f9525d515f83baf7c78c26a2e719037a4d3ab66",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "15",
+      "printed_number": 15,
+      "question_id": "gk-1994-shanghai-q15",
+      "question_order": 15,
+      "question_text_sha256": "7643297dd6476ab37694cec8530569eb444df2f47ee63972bfe078037b761dc3",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on pages 1 and 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[15]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q016；依题序映射至 gk-1994-shanghai-q16。既有方法：primitive-third-root-of-unity-order；既有推导摘要：z=cos(2π/3)+isin(2π/3)，z^3=1且z≠1，阶为3。z^n=z等价于z^(n-1)=1，故n≡1(mod3)；大于1的最小正整数n=4，选B。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-21da-7873-aa45-42e5d7576a41\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived n=4 from the congruence n=1 modulo 3, rather than confusing the order 3 with the requested exponent; option B\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: B；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第16题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "d1722eace630c5937024d928466346fb32849dc5df5cdcb033ccabca3af9659d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "16",
+      "printed_number": 16,
+      "question_id": "gk-1994-shanghai-q16",
+      "question_order": 16,
+      "question_text_sha256": "152df82d0e1664bce60527b64cbe0cba5536157a9feb3144592b5bd03650f7d3",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[16]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q017；依题序映射至 gk-1994-shanghai-q17。既有方法：orthogonal-projection-counterexamples；既有推导摘要：取α:z=0，两线段起点分别(0,0,1)、(0,1,1)，均在平面外。位移(1,0,0)与(0,0,1)时原长均为1、射影长为1和0，否定充分性；位移(1,0,0)与(1,0,1)时射影长均为1、原长为1和√2，否定必要性，故选A。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-1ef0-7fc3-90ff-0e9d11a93a74\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option A using two plane-exterior segment counterexamples: equal lengths with unequal projections, and equal projections with unequal lengths\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: A；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第17题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "baa74863ae90a4585423f0bf12c8c3ef502d2301dbf56d36cd0df670e11c8b0e",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "17",
+      "printed_number": 17,
+      "question_id": "gk-1994-shanghai-q17",
+      "question_order": 17,
+      "question_text_sha256": "7630636491a4e49e94cfc4dc718de2d62bbd212586d7faffc87996f86bcbcf8d",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[17]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q018；依题序映射至 gk-1994-shanghai-q18。既有方法：painting-block-permutations；既有推导摘要：同类画各组成一个连续块，唯一水彩画不能在两端，故水彩块只能居中。油画与国画两块可交换，内部各自排列，方式数2!×4!×5!=5760，选D。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-1ef0-7fc3-90ff-0e9d11a93a74\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived 2! times 4! times 5! = 5760 by fixing the watercolor block in the middle; option D\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: D；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第18题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "e6c89ce9a82d5e1bfc6632258aeb7d31a00df9bc5d6f43fa47adf80f93cb89ad",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "18",
+      "printed_number": 18,
+      "question_id": "gk-1994-shanghai-q18",
+      "question_order": 18,
+      "question_text_sha256": "7f55ae1154ba742564fa96147d58c18f9ade37897e0dc72dbbbb549f29236006",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[18]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q019；依题序映射至 gk-1994-shanghai-q19。既有方法：coordinate-origin-translation；既有推导摘要：新旧坐标满足x=x′+π/2、y=y′−π/2。代入y=cosx得y′−π/2=cos(x′+π/2)=−sinx′，故y′=−sinx′+π/2，选B。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-1ef0-7fc3-90ff-0e9d11a93a74\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived the coordinate substitution x=x'+pi/2, y=y'-pi/2 and y'=-sin(x')+pi/2; option B\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: B；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第19题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "7c56d16306421229ab178c78cf035260eede94b803f187b912edefdaeaa09e79",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "19",
+      "printed_number": 19,
+      "question_id": "gk-1994-shanghai-q19",
+      "question_order": 19,
+      "question_text_sha256": "557f6ba418e30139e2a6320423d2aaf4ef409f39305cb5fd1480259ba6a0cee0",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[19]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q020；依题序映射至 gk-1994-shanghai-q20。既有方法：contrapositive-of-successor-implication；既有推导摘要：递推条件取k=4得P(4)⇒P(5)，其逆否命题¬P(5)⇒¬P(4)，故C正确。P(n)恒假及P(n)表示n≥6均满足递推条件与P(5)假，却使P(6)真假不同，故A、B均不可推出；无起始成立条件，不补造归纳起点。。历史独立复核原记录：{\"agent_id\": \"01a14e6e-1ef0-7fc3-90ff-0e9d11a93a74\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived option C by contraposition and used all-false and n>=6 models to show P(6) is undecidable from the premises\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: C；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[]。解析引用：1994/1994_数学真题_上海_解析正文.md，第20题；Q1—20 解析为既有项目推导。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：固定扫描题面、第3页印载答案与独立盲解一致；来源仅记为印载答案，出版者身份未认证，不标作已认证官方答案。",
+        "grade": "D"
+      },
+      "answer_sha256": "13f67cf36adc1d7bd13a9daa23c13dee577252fdf615ab28770dd4ae92c16266",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "20",
+      "printed_number": 20,
+      "question_id": "gk-1994-shanghai-q20",
+      "question_order": 20,
+      "question_text_sha256": "7b0da5ec29f4ef287a768d29bd7b85b1a4d9bb542702699cddf11519ba1e53d8",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[20]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q021；依题序映射至 gk-1994-shanghai-q21。既有方法：tangent-difference-with-domain-checks；既有推导摘要：sinα=3/5且α在第二象限，cosα=−4/5，tanα=−3/4；tanβ=−1/2。倍角分母1−tan²β=3/4≠0，tan2β=−4/3；差角分母1+tanαtan2β=2≠0，得tan(α−2β)=7/24。直接核对sin差角=−7/25、cos差角=−24/25，结果一致。。历史独立复核原记录：{\"agent_id\": \"01a14e78-66bb-77f2-9343-e62a05c9a6ec\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived 7/24 and checked both tangent denominators and direct sine/cosine substitution\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $\\dfrac7{24}$。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[3]。解析引用：1994/1994_数学真题_上海_解析正文.md，第21题；Q21—24、26 解析据来源印载解答整理，另有已记录的独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：题面与固定扫描一致；独立盲解与来源印载答案一致。出版者身份未认证，不标作官方答案；逐题核验不替代正式provenance与四版编译视觉验收。",
+        "grade": "D"
+      },
+      "answer_sha256": "d57d35f20a534114cf58eab53e0aecb6ba8dc181684806cdcd90cc66c56d029f",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "21",
+      "printed_number": 21,
+      "question_id": "gk-1994-shanghai-q21",
+      "question_order": 21,
+      "question_text_sha256": "0ad2d3e3741a1366cc9fb4fcdc42cbcdfde147d987e842fa6307da88363a22f1",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[21]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q022；依题序映射至 gk-1994-shanghai-q22。既有方法：complex-ray-parameter-and-real-quotient；既有推导摘要：辐角主值3π/4给出w=s(−1+i)，s>0。商的虚部为(4−2s²)/(2s)，故s^2=2；只取s=√2，w=−√2+√2i。代回原商为2√2，且|w|=2、辐角3π/4，w≠0。。历史独立复核原记录：{\"agent_id\": \"01a14e78-66bb-77f2-9343-e62a05c9a6ec\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived the unique second-quadrant solution and verified the quotient is the real number 2sqrt(2)\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，整题: $w=-\\sqrt2+\\sqrt2i$。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=3；印载解答页码=[3]。解析引用：1994/1994_数学真题_上海_解析正文.md，第22题；Q21—24、26 解析据来源印载解答整理，另有已记录的独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：题面与固定扫描一致；独立盲解与来源印载答案一致。出版者身份未认证，不标作官方答案；逐题核验不替代正式provenance与四版编译视觉验收。",
+        "grade": "D"
+      },
+      "answer_sha256": "975b9f314f1727188b99cb57488d0a6f0c4bc7fa5d2903ade5431ea86ce5d598",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "22",
+      "printed_number": 22,
+      "question_id": "gk-1994-shanghai-q22",
+      "question_order": 22,
+      "question_text_sha256": "64ef9494f1dea9521c292636f0efffe061d21052a1d2e5ed3058ee4fbcf19e5f",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[22]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q023；依题序映射至 gk-1994-shanghai-q23。既有方法：coordinate-dihedral-angle-and-point-plane-distance；既有推导摘要：取a>0，A=(0,0,0)、B=(0,a,0)、D=(3a,0,0)、P=(0,0,a)。由∠ADC为锐角并且sin值√5/5，得C=(a,a,0)，排除钝角代数支。A在CD直线上的垂足E=(3a/5,6a/5,0)，在C外侧延长线上；AE=3a/√5，tan∠PEA=PA/AE=√5/3，直角三角形确认二面角锐角。平面PBC为y+z=a，A到该面距离a/√2，量纲为长度。。历史独立复核原记录：{\"agent_id\": \"01a14e78-5e58-79b1-8186-73f37344b144\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived the acute dihedral arctan(sqrt(5)/3), distance a/sqrt(2), and the exterior foot on the extension beyond C\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，小问1: 二面角 $P-CD-A$ 的大小为 $\\arctan\\dfrac{\\sqrt5}{3}$。；小问2: 点 $A$ 到平面 $PBC$ 的距离为 $\\dfrac{\\sqrt2}{2}a$。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=4；印载解答页码=[3, 4]。解析引用：1994/1994_数学真题_上海_解析正文.md，第23题；Q21—24、26 解析据来源印载解答整理，另有已记录的独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：题面与固定扫描一致；独立盲解与来源印载答案一致。出版者身份未认证，不标作官方答案；逐题核验不替代正式provenance与四版编译视觉验收。",
+        "grade": "D"
+      },
+      "answer_sha256": "3bdface685e29b694b63d8115fd78e92cfbf3ad405fce63ae5018128942eba09",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "23",
+      "printed_number": 23,
+      "question_id": "gk-1994-shanghai-q23",
+      "question_order": 23,
+      "question_text_sha256": "ac154f799a707824c1720552afc142957382627da1e8c725ec3660c22735c600",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[23]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q024；依题序映射至 gk-1994-shanghai-q24。既有方法：ellipse-parameterization-and-two-ray-locus；既有推导摘要：长短半轴比t>1且a²−b²=1，得a²=t²/(t²−1)、b²=1/(t²−1)。右半平面交点Q=(1,t)/√(2(t²−1))。距离比只约束长度，故P=±t√(t²−1)Q=(±t/√2,±t²/√2)，两坐标同号。消参得y=√2x²且x>1/√2，或y=−√2x²且x<−1/√2。充分性：轨迹任一点取t=√2|x|>1即可重构椭圆及距离比；t=1不合法，两个有限边界点均排除。。历史独立复核原记录：{\"agent_id\": \"01a14e78-5c49-7512-9603-a111c22a6d0d\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived both signed rays, strict endpoint exclusions, and the reverse construction proving sufficiency\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，小问1: $t^2(t^2-1)x^2+(t^2-1)y^2=t^2$。；小问2: 轨迹为抛物线 $x^2=\\dfrac{\\sqrt2}{2}y$ 在直线 $x=\\dfrac{\\sqrt2}{2}$ 右侧的部分，以及抛物线 $x^2=-\\dfrac{\\sqrt2}{2}y$ 在直线 $x=-\\dfrac{\\sqrt2}{2}$ 左侧的部分。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=4；印载解答页码=[4]。解析引用：1994/1994_数学真题_上海_解析正文.md，第24题；Q21—24、26 解析据来源印载解答整理，另有已记录的独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：题面与固定扫描一致；独立盲解与来源印载答案一致。出版者身份未认证，不标作官方答案；逐题核验不替代正式provenance与四版编译视觉验收。",
+        "grade": "D"
+      },
+      "answer_sha256": "b22b475eb5e9878d7d5ea5c115c07170787d50716a837969e34613dbc5c97cf1",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "24",
+      "printed_number": 24,
+      "question_id": "gk-1994-shanghai-q24",
+      "question_order": 24,
+      "question_text_sha256": "10f8478b79a0404c202ba8c5069ed3d295ac89f7947bb4187fe08b373c722418",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[24]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q025；依题序映射至 gk-1994-shanghai-q25。既有方法：affine-parameterization-of-the-parallelogram；既有推导摘要：parameterization=\"(x,y)=(a-2tb,ta+2b), 0<=a,b<=1\"；first_quadrant_parameter_region=\"a>=2tb; y>=0 holds throughout the parameter square\"；jacobian=\"2(1+t^2)\"；parameter_square_area={\"0<t<=1/2\": \"integral_0^(2t) a/(2t) da + integral_(2t)^1 1 da = 1-t\", \"t>=1/2\": \"integral_0^1 a/(2t) da = 1/(4t)\"}；piecewise_area=\"2(1-t+t^2-t^3) for 0<t<=1/2; (t+1/t)/2 for t>=1/2\"；first_branch_derivative=\"2(-1+2t-3t^2)<0 (discriminant -8)\"；monotonicity=\"decreasing on (0,1]; increasing on [1,+infinity)\"；boundary_check=\"At t=1/2 both area formulas equal 5/4 and both one-sided derivatives equal -3/2; the derivative on t>=1/2 is (1-t^-2)/2, changing sign at t=1.\"。历史独立复核原记录：{\"date\": \"2026-10-16\", \"method\": \"blind derivation from the question crop only; printed solution and primary derivation withheld\", \"result\": \"independently derived the same piecewise area and monotonicity; confirmed the printed second-branch threshold t>=2 conflicts with the question-derived threshold t>=1/2\"}；原记录未载 agent_id，不补造复核者身份。规范答案：1994/1994_数学真题_上海_答案要点.md，小问1: $S(t)=\\begin{cases}2(1-t+t^2-t^3),&0<t<\\dfrac12,\\\\[3pt]\\dfrac12\\left(t+\\dfrac1t\\right),&t\\ge\\dfrac12.\\end{cases}$；小问2: $S(t)$ 在 $(0,1]$ 上递减、在 $[1,+\\infty)$ 上递增，最小值为 $S(1)=1$。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案的第一支采用 0<t<1/2、第二支 t≥1/2；已有 piecewise_area 第一支写到 t≤1/2，两支在边界均为5/4（见原 boundary_check），仅边界分配不同，面积和单调区间一致。来源原印载第二支 t≥2，遗漏 [1/2,2)，与项目独立推导区分；原文保留，不作为项目答案。ISSUE-1071 保持 open。解析引用：1994/1994_数学真题_上海_解析正文.md，第25题；Q25 为既有项目推导及历史独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：独立复核者仅获题面裁剪图，未见来源解答或主会话推导，并独立得到相同分段面积与单调区间。此为项目推导且经独立复核，不是已认证的官方答案；固定来源的t>=2原文仍保留，整卷状态不因此升级。",
+        "grade": "D"
+      },
+      "answer_sha256": "ca3b79550c0d80f3eccb1f1a3178f0329d68e188e5b1772ab9d85b56b99f6dc5",
+      "conflict_status": "unresolved",
+      "issue_ids": [
+        "ISSUE-1071"
+      ],
+      "printed_label": "25",
+      "printed_number": 25,
+      "question_id": "gk-1994-shanghai-q25",
+      "question_order": 25,
+      "question_text_sha256": "94e1f38e5965ffcc11dce6c35e9cd074d3f4c2296a7d29e4ce06a4c1fdea9a7f",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        2
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 2.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    },
+    {
+      "answer_evidence": {
+        "evidence": "本次仅做已有证据整理与映射，未重新盲解、未新作独立数学复核。证据索引：math-gaokao-latex/1994_上海卷/来源校对.json#derived_solution_checks[25]，历史记录 question_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65:q026；依题序映射至 gk-1994-shanghai-q26。既有方法：two-step-sequence-recurrence-and-discrete-extrema；既有推导摘要：令c_n=a_na_(n+1)=rq^(n−1)>0，各a_n非零且为正，可除得a_(n+2)=q a_n；因此a_(2n−1)=q^(n−1)、a_(2n)=rq^(n−1)、b_n=(1+r)q^(n−1)。第一问化为1+q>q²，得0<q<(1+√5)/2，端点不取。q=1时S_n=n(1+r)；q≠1时S_n=(1+r)(1−q^n)/(1−q)，倒数极限在0<q<1为(1−q)/(1+r)，q≥1为0。第三问log₂b_n=101/5−n，分母零点101/5非整数；比值c_n=1+1/(n−101/5)。两段n≤20和n≥21分别严格递减，前段均<1、后段均>1；n=20得−4为最小，n=21得9/4为最大。。历史独立复核原记录：{\"agent_id\": \"01a14e78-7360-7101-98a2-8173210e704e\", \"date\": \"2026-10-18\", \"method\": \"blind solution from the question text only; printed answer withheld\", \"result\": \"independently derived the two-step recurrence, all q limit cases, the nonintegral pole 101/5, and unique extremizers n=20 and n=21\"}；agent_id 为原记录复核者身份，不是本次整理者。规范答案：1994/1994_数学真题_上海_答案要点.md，小问1: $0<q<\\dfrac{1+\\sqrt5}{2}$。；小问2: $b_n=(1+r)q^{n-1}$，且 $\\displaystyle\\lim_{n\\to\\infty}\\frac1{S_n}=\\begin{cases}\\dfrac{1-q}{1+r},&0<q<1,\\\\[3pt]0,&q\\ge1.\\end{cases}$；小问3: 最大项为 $\\dfrac94$，最小项为 $-4$。；答案哈希由当前规范源经 tools/provenance.py:answer_digests 计算。规范答案与该条 derived_answer 及 source_printed_answer 一致（小问、单位及表述差异按数学含义核对）。来源印载答案页码=5；印载解答页码=[5]。解析引用：1994/1994_数学真题_上海_解析正文.md，第26题；Q21—24、26 解析据来源印载解答整理，另有已记录的独立复核。固定来源：普通高考/1994/1994上海.pdf；source_id=src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65；固定扫描 pdf_sha256=2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d。此处仅引用已有来源校对结果，本次未重查扫描。出版者身份未认证，official_answer 仍为 null，grade=D，不标作已认证官方答案，不据本次迁移升级整卷状态。历史边界说明：题面与固定扫描一致；独立盲解与来源印载答案一致。出版者身份未认证，不标作官方答案；逐题核验不替代正式provenance与四版编译视觉验收。",
+        "grade": "D"
+      },
+      "answer_sha256": "b20286d4931c3428f54c4842729089fbebc5e93d89965b33d3a7ff2a30a2a78d",
+      "conflict_status": "none",
+      "issue_ids": [],
+      "printed_label": "26",
+      "printed_number": 26,
+      "question_id": "gk-1994-shanghai-q26",
+      "question_order": 26,
+      "question_text_sha256": "6380be59ce71b2fa8cf73ac68497b7ac6ae2e77c8839bd4dcebed577d4f58cbe",
+      "reviewer_role": "historical-independent-review-evidence-auditor",
+      "solver_role": "answer-solve-evidence-curator（仅整理既有证据；本次未进行盲解或独立复核）",
+      "source_pages": [
+        3
+      ],
+      "source_ref": {
+        "source_id": "src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65"
+      },
+      "source_sha256": "2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d",
+      "transcription_review": {
+        "evidence": "复用已完成的固定扫描逐题视觉核对，见来源校对.json question_sources；当前按规范题面重新计算哈希。Question text matches the source scan on page 3.",
+        "result": "passed",
+        "role": "phase1-b24-question-review-primary-pinned-scan"
+      }
+    }
+  ],
+  "schema_version": 1
+}
