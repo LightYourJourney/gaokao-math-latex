@@ -51,10 +51,10 @@
 
 ### Task 3 — Integrate and register
 
-- [ ] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查；**说明框行数预算法先行**。
-- [ ] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；源坐标换算回验与 600 dpi 目检＋判据灵敏度自证）。
-- [ ] 注册 `phase3-b17`；provenance 三角色导入；extract-batch 派生。
-- [ ] generate/short/editions 三连 write+check → build --formal（构建审计三连 → 修复轮 → 重建 → 差分 → 复审）。
+- [x] 规范三件套（试题/答案要点/解析正文）+ 含解析占位；六项自检（`%`、空参数、反引号、CJK 入数学、孤需参宏、`&` 转义）＋（N）空格锚点检查；**说明框行数预算法先行**（来源说明控制在预算内）。
+- [x] TikZ 图源生成 + 探针目检（**绝对字号 10.5pt 定型**；tex 反算残差 0.000050pt、600 dpi 墨迹 ≤0.295pt、判据灵敏度自证 5/5）。
+- [x] 注册 `phase3-b17`；provenance 三角色导入（rev 4377）；extract-batch 派生。
+- [x] generate/short/editions 三连 write+check → build --formal（生成期修复 3 条警告：简答版 Q17(1) Overfull 37.48pt、解析/印刷版 Underfull——源级缩短答案文本与来源说明路径串；重建四版 0 警告，5/29/7/22 页）。
 
 ### Task 4 — Build, review, and close
 
