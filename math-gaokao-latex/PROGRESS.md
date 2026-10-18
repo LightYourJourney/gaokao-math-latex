@@ -6023,3 +6023,13 @@
 - 验证：两批validate-receipts --require-current-inputs均OK，各papers1、pending1、stale/invalid/missing0；provenance check-batch各OK：1卷。git diff --check通过。第一次在b58仍运行时启动b59被RepoLock拒绝、没有写入；随后轮询原b58进程64278确认终止，再正常运行b59并完成，未删锁或启动重复b58。后续写事务必须等待前一句柄真正完成再启动。
 - 正式文件：两卷build/review回执、source-manifest、missing-issues、reports/phase2-b58.md与phase2-b59.md，均由官方事务已提交；本进度另行提交。未改正文/答案/图形，无新图片入库、无push。当前工作阶段是旧证据当前化，不是新增转录2套。
 - 下一步：原12卷失效清单只剩1997全国理、1989广东理待刷新；这不等于全库剩余两套。完成该小清单后，优先修复文史类试题p6已确认的编辑说明泄漏（应移除题面推断、保留缺字原貌及解析中的来源证据），其余缺图/缺字仍需可核验新来源，不可猜补。全题库目标继续，未完成也非整体受阻。
+
+### phase2-b70/phase4-b04：失效清单最后两卷当前化检查点（2026-10-19）
+
+- 恢复：feat/gaokao-phase0功能工作树，HEADbfc491ee、tracked diff为空；上一回合已实际刷新广东两卷并登记失败，是进展。1997全国理科、1989广东理科分别属于phase2-b70/phase4-b04，旧review passed、batch closed_with_blockers，仅make_short_answers.py生成输入哈希失效，依赖树未变。保留来源ISSUE-1072/1073及ISSUE-1078，不将旧的blocked误当待转录。
+- 已完成：将旧PDF/build/review保存到忽略 `.work/receipt-refresh-20261019/{1997_全国卷_理科,1989_广东卷_理科}/before/`，旧工作项另存old-phase2-b70-work/old-phase4-b04-work。两批三类生成检查各1/1通过，正式构建8版均succeeded，errors/missing_characters/overfull/undefined_references/problems为空。1997 attemptc7fa363f-9653-430b-b353-62571e4d3a23，5/27/6/20页；1989 attempta901a1f5-2a18-4a38-913a-411b0d4a31de，5/24/7/17页，共111页，revision4356。
+- 视觉证据：旧新各111页以pdftoppm26.10.0、150dpi渲染，PNG111/111逐页字节完全相同。两卷当前试题p1已实际抽查；其余逐页结论通过相同渲染证据迁移，不声称重新目视全111页。官方prepare8工作项后，校验旧review/PDF哈希和attempt、新PDF实际SHA、页数及候选页绑定，glyph note附当前PNG SHA和历史审查日期/attempt。reports/final-two-receipt-refresh-20261019.json持久记录各版PDF及111页PNG SHA。
+- 验证：1997全国理来源缺口专项3/3、1989广东理来源专项14/14通过；三类生成检查各两卷通过。无内容/公共代码变化，不重复跑全库长测；尚未登记新视觉回执，不提前声称两批closed_with_blockers已恢复。
+- 修改文件：两卷build回执、manifest、比对证据JSON及本进度。一次长工作项补丁在工具输出上限处被截断，JSON解析在apply前失败，没有写入该文件；跳过已完成的1997试题版，将剩余按每3页小段写入，保留所有原结论，并将在正式回执中核对页数/八项覆盖及哈希。未改题面/答案/图形，无图片入库、不push。
+- 下一步：先提交本构建/证据检查点，再严格串行finalize两个独立批次，每批结束并提交后才启动下一批，避免锁冲突及脏工作树。保持来源blocked，刷新完这最后2卷后，原12卷失效清单才算全部当前化；然后优先修复1986广东文史类题面说明泄漏，而不是重复本清单或虚报全库完成。
+- 成本：0次OCR/取源/新数学求解/新子代理，确定性渲染比较111页，无全量多模态重审。Token及费用未知，不估算。
