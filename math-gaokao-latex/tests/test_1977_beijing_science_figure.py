@@ -11,6 +11,24 @@ FIGURE = PROJECT_ROOT / "1977_北京卷_理科" / "figures" / "f1977_t10_ellipse
 
 
 class BeijingScience1977Q10FigureTests(unittest.TestCase):
+    def test_tangent_label_is_anchored_above_the_ellipse(self):
+        source = FIGURE.read_text(encoding="utf-8")
+        line = re.search(
+            r"\\draw\[thick\]\s*\(([-\d.]+),\s*([-\d.]+)\)"
+            r"--\(([-\d.]+),\s*([-\d.]+)\)\s*"
+            r"node\[pos=([-\d.]+),([^]]+)\]\s*\{\$y=x\+5\$\}",
+            source,
+        )
+        self.assertIsNotNone(line)
+        x1, y1, x2, y2, position = map(Fraction, line.groups()[:5])
+        anchor_x = x1 + position * (x2 - x1)
+        anchor_y = y1 + position * (y2 - y1)
+        # Above-left puts the whole label above y=3 and away from x=0.
+        # A low/right anchor allows the ellipse and tangent to cross its text.
+        self.assertGreater(anchor_y, 3)
+        self.assertLess(anchor_x, -1)
+        self.assertEqual(line.group(6).strip(), "above left")
+
     def test_marked_tangent_point_lies_on_ellipse_and_line(self):
         source = FIGURE.read_text(encoding="utf-8")
         marker = re.search(

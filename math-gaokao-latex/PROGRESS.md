@@ -5990,3 +5990,12 @@
 - 验证：validate-receipts --batch phase2-b23 --require-current-inputs为OK：succeeded2、pending/stale/invalid/missing0；review_receipts check-batch返回FINALIZED且problems=[]；provenance check-batch为OK：2卷。新增数轴测试3/3、相关生成器112/112及三种纯内存变异拒绝结果见上一条；git diff --check通过。只声称本批验收，不代表整个1952—2026题库完成。
 - 正式修改：两卷各receipts/build.json和review.json、manifest、missing-issues、reports/phase2-b23.md及本进度。文科PDF未重编，复用仍当前的attempt；理科仅两页重新目视，其余29页及文科22页保留同像素证据来源。源码与测试已在80c8d18单独提交，未推送。
 - 下一步：本轮已真正修复并验收，不再重复处理1977上海数轴。原12卷失效清单余6卷尚未刷新：1977北京文/理、1986广东文/理、1997全国理、1989广东理；下阶段从1977北京文理的批次归属、当前输入与历史证据开始，保留既有已完成转录和数学证据。全库完整性与成本基准等长期目标仍未完成。
+
+### phase2-b24：1977北京文理回执刷新与椭圆图标避让（2026-10-18）
+
+- 恢复：feat/gaokao-phase0功能工作树、HEAD3704f642、tracked diff为空；上一目标回合实际修复并验收上海两卷，是进展。定位本次北京两卷同属phase2-b24，旧回执仅make_short_answers.py哈希变化，依赖树未变。保存旧8份PDF/build/review至忽略 `.work/receipt-refresh-20261018/{1977_北京卷_文科,1977_北京卷_理科}/before/`，旧工作项另保存old-phase2-b24-work。
+- 首轮刷新：三类生成检查各2/2通过，北京专项3/3通过；正式重建revision4343，文科attempt1d2fdc73-598f-4154-ba1d-760fbaf3c234、理科a94c70a7-0e77-47cb-bdac-95986e409173。四版文科1/7/2/6页、理科2/9/3/8页，共38页；全部errors/missing_characters/overfull/undefined_references/problems为空，新旧150dpi PNG38/38逐字节相同。此事实只支持证据复用，不是质量正确性证明。
+- 实际缺陷及修复：主会话抽查理科解析p9/印刷p7，并用300dpi局部确认y=x+5标签被切线和椭圆穿过；原测试只限制标签距切点，未保证整字避开曲线。新增回归先失败（锚点y=8/25不大于椭圆最高y=3）；只将node从pos=.08/above right改为pos=.85/above left，使文字整体位于椭圆上方、切线左侧。椭圆参数、切线端点、切点(-3.2,1.8)及数学结论全未改。新增后北京专项4/4通过，恢复旧锚点的纯内存变异被拒绝。
+- 二次仅理科重建：attempt9d91abbd-8393-4e82-bfe0-90cdd36ed4da，revision4345，四版仍2/9/3/8页，所有编译问题数组空。当前与旧页图仅解析p9、印刷p7变化，主会话实际目视两张当前整页确认文字/曲线分离、页面及答案框完整；其余36页（含文科16页）PNG相同，迁移历史八项结论。用官方prepare_batch既有work_dir API准备 `.work/beijing-label-fix-review/phase2-b24/review/`，不覆盖同attempt旧工作项；新旧哈希/审查方法持久化到reports/phase2-b24-raster-review-20261018.json。
+- 验证与文件：生成一致性/简答/四版壳检查各2/2、provenance check-batch两卷OK，git diff --check通过。本阶段修改理科f1977_t10_ellipse.tex一处label锚点、tests/test_1977_beijing_science_figure.py、两卷build回执、manifest、比对报告与本进度；无题面/答案/解析/公共工具改动。按定向验证策略未重跑全库长测；先提交该修复检查点，再正式finalize并验证状态，不提前声称批次已closed。
+- 成本/下一步：0次OCR/取源/新数学求解/子代理；首轮新旧38页比较，修复后只重建/渲染理科22页，2页目视。Token/费用未知，PNG均忽略，不push。此批验收后余4卷失效回执尚未刷新：1986广东文/理、1997全国理、1989广东理。
