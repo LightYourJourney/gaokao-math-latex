@@ -6037,3 +6037,11 @@
 ### phase2-b70：1997全国理科回执刷新登记（2026-10-19）
 
 - 构建/证据提交c9f4398后，官方finalize-batch-checked返回FINALIZED、revision4357、closed_with_blockers、problems=[]、committed=false。保存当前build/review及报告，不解除ISSUE-1072/1073；未修改内容或重做数学推导。先提交本批事务，再启动独立phase4-b04，保持写事务串行。两批最终当前性/逐页哈希统一复核留在下一条。
+
+### phase4-b04及原12卷清单：刷新登记与当前性收口（2026-10-19）
+
+- 1997登记提交b078971后再启动1989，后者官方finalize-batch-checked返回FINALIZED、revision4358、closed_with_blockers、problems=[]、committed=false；本条随1989正式回执一起由主会话提交。两卷build succeeded、review passed，但来源阻塞和production_state blocked保持，不能称内容完整完成。
+- 两卷验证：review_receipts check-batch均FINALIZED且problems=[]；provenance check-batch各OK1卷。逐项复核持久比对报告与正式回执：111页、888项pass、无pending/fail；各版页数、build/review/证据attempt一致，每页glyph note包含对应当前PNG SHA。源码/答案/图形未改，不重复数学求解。
+- 12卷收口检查：对进度中原始12个paper_id分别执行validate-receipts --require-current-inputs，全部返回OK，合计stale=0、invalid=0、missing=0，succeeded=6、pending=6。succeeded为1977上海/北京文理4卷及1997全国理/1989广东理（后两卷内容仍blocked）；pending为phase0-b02四卷（2020文科取消题失败牵连批次待审）与1986广东两卷（来源缺图/缺字及泄漏失败）。这证明本轮共享简答生成器变动导致的特定12卷回执失效清单已全部处理，不证明全库所有历史回执当前或全题库已完成。
+- 修改文件：1989广东理build/review、manifest、reports/phase4-b04.md及本进度；1997对应文件已在前一提交。源/答案、公共工具无改动，无新PNG入库，不push；git diff --check通过。相关来源测试总17/17通过见上一条，未跑全库长测，不用旧基线充当本轮通过证据。
+- 下一步：停止重复刷新这12卷，优先修复1986广东文史类试题p6编者说明泄露运算符推断。按边界只移除题面中的解答性推断，保留来源缺字□和缺图事实、解析中的证据与未决状态；先写回归、定向生成/必要哈希更新，重编受影响卷并只复核变化页。其后应重新依据现场manifest/来源清单安排尚未转录的批次，不能把旧维护清单当成整个项目待办。全目标仍active。
