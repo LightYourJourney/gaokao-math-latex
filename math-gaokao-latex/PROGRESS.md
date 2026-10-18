@@ -5999,3 +5999,10 @@
 - 二次仅理科重建：attempt9d91abbd-8393-4e82-bfe0-90cdd36ed4da，revision4345，四版仍2/9/3/8页，所有编译问题数组空。当前与旧页图仅解析p9、印刷p7变化，主会话实际目视两张当前整页确认文字/曲线分离、页面及答案框完整；其余36页（含文科16页）PNG相同，迁移历史八项结论。用官方prepare_batch既有work_dir API准备 `.work/beijing-label-fix-review/phase2-b24/review/`，不覆盖同attempt旧工作项；新旧哈希/审查方法持久化到reports/phase2-b24-raster-review-20261018.json。
 - 验证与文件：生成一致性/简答/四版壳检查各2/2、provenance check-batch两卷OK，git diff --check通过。本阶段修改理科f1977_t10_ellipse.tex一处label锚点、tests/test_1977_beijing_science_figure.py、两卷build回执、manifest、比对报告与本进度；无题面/答案/解析/公共工具改动。按定向验证策略未重跑全库长测；先提交该修复检查点，再正式finalize并验证状态，不提前声称批次已closed。
 - 成本/下一步：0次OCR/取源/新数学求解/子代理；首轮新旧38页比较，修复后只重建/渲染理科22页，2页目视。Token/费用未知，PNG均忽略，不push。此批验收后余4卷失效回执尚未刷新：1986广东文/理、1997全国理、1989广东理。
+
+### phase2-b24：1977北京文理正式验收完成（2026-10-18）
+
+- 修复检查点ad6f992后，以隔离beijing-label-fix-review目录调用官方finalize-batch-checked，返回FINALIZED、revision4346、batch closed、problems=[]、committed=false；主会话随后本地提交结果。两卷production_state=complete、build=succeeded、review=passed。38页×8项共304项：302 pass、2 not_applicable、0 fail；后两项为实际重审的解析区域answer_leak，不把它误称漏检。
+- 验证：validate-receipts --batch phase2-b24 --require-current-inputs为OK，succeeded2、pending/stale/invalid/missing0；review_receipts check-batch为FINALIZED且problems=[]；provenance check-batch为OK：2卷。两卷build/review attempt一致；git diff --check通过。北京相关4项测试和旧锚点变异拒绝已在上一检查点记录，不用旧全库结果代替本轮验证。
+- 修改文件：两卷receipts/build.json和review.json、manifest、reports/phase2-b24.md及本进度；原题/答案内容未变。最终同像素证据指向before与after-fix/after缓存；仅理科解析p9/印刷p7是本轮人工式目视校样，未谎称重看全部38页。新增回归揭示并防止原测试未覆盖的字形穿线问题。
+- 下一步：此批完成，不再重编或重复核对1977北京两卷；原12卷清单余4卷待刷新，先核对1986广东文/理的批次范围和输入失效维度，再处理1997全国理、1989广东理。仍是既有成果维护，不增加新增转录卷数，不代表全题库完成。所有写入仍限定feat/gaokao-phase0工作树，不push。
