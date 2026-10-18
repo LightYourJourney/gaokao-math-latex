@@ -6063,3 +6063,13 @@
 - 验证：validate-receipts --paper gk-1986-regular-guangdong-arts --require-current-inputs返回OK，pending1、stale/invalid/missing0；provenance check-batch为OK1卷。正式回执的失败集合无answer_leak，所有65页及八项覆盖齐全，10页变化实看、55页同像素证据见增量报告；git diff --check通过。新增2项回归与变异检查在上一检查点通过，未重复跑全库测试。
 - 正式文件：build/review回执、manifest、missing-issues、reports/phase2-b58.md已由官方事务提交，本进度另行提交；原题公式/答案未变，官方答案属性和来源未决状态未提升。不push，写入仍只在feat/gaokao-phase0工作树。
 - 下一步：此次可修复的题面提示问题已结束，停止重复刷新/重编本卷。缺图缺字等候新来源；转回覆盖推进：先从当前manifest、阶段报告和已有草稿核对尚未转录且source ready的条目，排除已完成/已绑定/待审但已有内容者，再选择一个可核验的下一批。必须先检查既有草稿/历史提交，不按年份记忆重新做旧卷，不将已完成维护工作当新增转录数。全1952—2026题库目标仍未完成，不能标complete。
+
+### 恢复题库覆盖：分支与候选卷核对（2026-10-19）
+
+- 恢复检查：功能工作树 `仓库根` 当前为 `feat/gaokao-phase0`，HEAD `d00d1879`，tracked/untracked status干净；主检出仍在 `main`，本阶段没有改动主检出。先核对本进度尾部与Git历史，再按manifest、既有阶段稿和提交记录筛除已处理工作。
+- 当前清单截面：manifest revision 4362记录281套规范卷（production_state：231 complete、47 blocked、3 compiled）及775条来源记录（普通高考734、春季高考41）。其中495条来源为ready且尚未绑定paper_id；它们是来源记录，不能直接解释为495套不同试卷，也不能与blocked卷混算成待转录数。
+- 排重结果：1990广东理科已有30题题面/解答稿，当前因固定源Q12图位缺失而blocked；1994上海已有26题稿及来源差异记录，仍blocked；1992各候选卷已有逐卷题面阶段稿；1993上海、两科目组文理卷也已有转录或解析阶段稿。因此这些项目不得按“未做新卷”重新转录或计数。
+- 候选纠正：1991上海卷并非无既有工作；`rg --files`与来源校对确认已有27题题面、印载答案/解析和复算草稿，Q8/Q14/Q20指数仍无法从固定源确认，且未完成独立审核，不得重做成“新卷”。改选1997上海理科固定源 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`：manifest revision 4362为ready、paper_id=null、7页；项目内未发现对应题面/答案/解析稿或试卷目录。原页首页题签为“上海数学试卷（理工农医类）”，印有22题、满分150分；题型为选择6、填空10、解答6；第4—7页包含来源答案表及解答。上述题签与范围来自固定PDF逐页100dpi快速检查，尚不代表精确逐题转录或来源版本/出版身份最终核验。
+- 取源与图像边界：固定PDF SHA为 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`，上游Git blob为 `aedb00f81b60d133034602250130d9079b440761`；在只读上游检出 `gaokaomath-src` 中按源路径读取并实算SHA匹配，未写入该检出或工作树根。七页100dpi检查PNG仅生成于隔离工作树ignored `.work/coverage-continue-20261019/1997-shanghai-science/source/`；源PDF原件不复制、不入库。下一步以较高分辨率分区检查题面/答案，逐题转录并保留未能看清处，不凭印载答案倒推模糊原题。
+- 修改与验证：本阶段只更新本 `PROGRESS.md`；manifest、题目、答案、LaTeX、来源文件和构建产物均未改。`git status --short --branch`确认分支正确且改前干净；`python3`读取revision/计数和项目文件路径。一次`python`调用暴露本机别名为Python 2.7（未写文件）；一次将PDF SHA误作本地Git blob OID的只读检查失败，随后按登记blob ID确认本地两个仓库均不含对象。无OCR、无模型/API、无构建；Codex Token及费用未知。
+- 下一步：继续1997上海理科本阶段：高分辨率检查题面/来源答案，完成规范题面与来源校对JSON/回归测试，再将本阶段实际完成内容和验证结果追加到本进度并提交。若遇模糊符号或印载结论冲突，原样登记待核；不把印载答案当官方答案或把OCR推测作为条件。全库目标仍未完成。
