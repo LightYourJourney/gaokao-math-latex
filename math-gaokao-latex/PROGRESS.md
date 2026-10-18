@@ -6045,3 +6045,14 @@
 - 12卷收口检查：对进度中原始12个paper_id分别执行validate-receipts --require-current-inputs，全部返回OK，合计stale=0、invalid=0、missing=0，succeeded=6、pending=6。succeeded为1977上海/北京文理4卷及1997全国理/1989广东理（后两卷内容仍blocked）；pending为phase0-b02四卷（2020文科取消题失败牵连批次待审）与1986广东两卷（来源缺图/缺字及泄漏失败）。这证明本轮共享简答生成器变动导致的特定12卷回执失效清单已全部处理，不证明全库所有历史回执当前或全题库已完成。
 - 修改文件：1989广东理build/review、manifest、reports/phase4-b04.md及本进度；1997对应文件已在前一提交。源/答案、公共工具无改动，无新PNG入库，不push；git diff --check通过。相关来源测试总17/17通过见上一条，未跑全库长测，不用旧基线充当本轮通过证据。
 - 下一步：停止重复刷新这12卷，优先修复1986广东文史类试题p6编者说明泄露运算符推断。按边界只移除题面中的解答性推断，保留来源缺字□和缺图事实、解析中的证据与未决状态；先写回归、定向生成/必要哈希更新，重编受影响卷并只复核变化页。其后应重新依据现场manifest/来源清单安排尚未转录的批次，不能把旧维护清单当成整个项目待办。全目标仍active。
+
+### phase2-b58：广东文史类题面运算符提示移除（2026-10-19）
+
+- 恢复：feat/gaokao-phase0功能工作树、HEADde6f0e29、tracked diff为空。上一回合完成特定12卷失效回执清单，是实际进展；本轮回到已确认的编辑说明泄漏，不再次刷新其他卷。
+- 测试先行：新增tests/test_1986_guangdong_arts_question_boundary.py两项测试，调用真实md2tex验证题面/卷首说明不指认缺字符号为乘法，不引用解答页，保留原方程□和10个小题；解析中的乘法解释与结果仍在。先复现1 fail/1 pass（卷首“乘号”亦暴露解释），修复后2/2通过，重新注入“按解答页解释为乘法”的纯内存变异被拒绝。
+- 最小修改：规范试题两条编者说明改为“运算连接符缺字、原字形待核”，没有替换原式中的□，没有删除/改写原题或答案。忽略仅这两条编者说明后，新旧规范题面与HEAD逐字一致；正式逐题摘要仅第2大题改变。解析正文及答案要点、历史数学结论保持不变；官方extract/generate投影含解析稿及questions/answers，不手改副本。
+- 正式来源记录：保存旧PDF/build/review、三角色草稿和旧工作项到忽略 `.work/question-note-fix-20261019/before/`。只更新question-review草稿第2题题面哈希并追加本轮编辑边界说明，原源页、扫描哈希、历史角色/独立数学证据不变，不伪称新盲核。import先dry-run成功再write，revision4359；保留来源issue和blocked。provenance check-batch为OK1卷。
+- 构建：单卷四版正式attemptadabd0f9-5ce7-4764-9373-6583a64ea098，revision4361；仍7/28/8/22页共65页，errors/missing_characters/overfull/undefined_references/problems为空。source check-batch、生成一致性、简答和四版壳检查通过。公共工具未改，按定向验证策略不重复跑全库长测，旧基线不作本轮通过证据。
+- 视觉：150dpi比较仅10页变化：试题1/6、简答1/6、解析1/6/19、印刷1/4/15。主会话逐页实际查看这10页，确认卷首及题面说明中不再出现乘法解释，公式□仍留、解析解释及答案框保持完整，无新裁切/遮叠。其余55页PNG逐字节相同。官方prepare4工作项，变化页八项重新核对，未变页复用旧证据；仅试题p6 answer_leak由fail改pass，缺图/缺字来源限制12项继续fail。reports/phase2-b58-question-note-fix-20261019.json保存全部65页新旧哈希与复核方法。
+- 修改文件：规范试题、生成含解析稿、questions.tex/answers.tex、provenance.json、build回执、manifest、新回归测试、新增量校样JSON及本进度。先提交修复/构建检查点，再官方finalize对账关闭泄漏问题；目前不提前称issue已关闭或整卷验收完成。未改公共工具/其他卷，无图片入库，不push。
+- 成本/剩余：0次OCR/取源/新数学求解/新子代理；只重建本卷和渲染65页，10页目视、55页复用，Token费用未知。缺失源图与源字形仍待可靠资料，不可猜补。本阶段之后应从现场来源/进度清单选择尚未转录且有源的下一批，恢复题库覆盖推进，不再反复维护已当前化的12卷。
