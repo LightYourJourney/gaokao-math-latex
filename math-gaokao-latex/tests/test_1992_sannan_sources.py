@@ -75,9 +75,18 @@ class Sannan1992SourceTests(unittest.TestCase):
         self.assertEqual(self.record["question_figures_pending"], [])
         self.assertEqual(self.record["figure_files"], [])
         self.assertEqual(self.record["generated_solution"]["attribution"], "agent-derived-non-official")
-        self.assertEqual(self.record["generated_solution"]["status"], "pending-independent-review")
-        self.assertEqual([n["question_number"] for n in self.record["review_notes"]], [1])
+        self.assertEqual(self.record["generated_solution"]["status"],
+                         "independent-review-complete-with-open-issues")
+        self.assertEqual([n["question_number"] for n in self.record["review_notes"]], [1, 15])
         self.assertIn("同终边", self.record["review_notes"][0]["note"])
+
+    def test_q15_duplicate_options_are_recorded_as_unresolved_source_issue(self):
+        issue, = self.record["source_issues"]
+        self.assertEqual(issue["question_number"], 15)
+        self.assertEqual(issue["issue_code"], "possible-source-typo")
+        self.assertEqual(issue["status"], "needs-review")
+        self.assertIn("A、D", issue["description"])
+        self.assertIn("pdftotext -layout", issue["evidence"])
 
     def test_only_native_text_and_ignored_render_are_claimed(self):
         self.assertEqual(self.record["text_analysis"]["classification"], "text_layer_candidate")

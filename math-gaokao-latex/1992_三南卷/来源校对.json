@@ -69,16 +69,28 @@
   },
   "question_figures_pending": [],
   "figure_files": [],
-  "source_issues": [],
+  "source_issues": [
+    {
+      "question_number": 15,
+      "issue_code": "possible-source-typo",
+      "status": "needs-review",
+      "description": "固定来源第15题将A、D两项印为相同命题（充分但不必要），而三角形反例证明该命题既非充分也非必要；B、C亦不成立。忠实保留题面，不猜测原拟选项。",
+      "evidence": "固定PDF第1页全页图像复核；pdftotext -layout复核A、D原文。PDF SHA-256 42e4f375ec4f3bbaca8a921077ede88884e07bd5a3c93eca295482b48947d011。",
+      "source_page": 1,
+      "render_path": ".work/1992-sannan-page1.png",
+      "render_sha256": "b2be4b61ef186493923c4f2e6c3a356cfb85995f2c96c027f477455b9f7ca414"
+    }
+  ],
   "review_notes": [
-    {"question_number": 1, "category": "notation-ambiguity", "status": "needs-independent-review", "note": "arg按主辐角取值时选C；按全体辐角解释时选项D与C同终边，题面未声明约定。"}
+    {"question_number": 1, "category": "notation-ambiguity", "status": "needs-independent-review", "note": "arg按主辐角取值时选C；按全体辐角解释时选项D与C同终边，题面未声明约定。"},
+    {"question_number": 15, "category": "duplicated-and-invalid-choice", "status": "needs-review", "note": "A、D重复且两项命题均不成立；按原文保留，未推测原拟选项。"}
   ],
   "generated_solution": {
     "path": "解答草稿.md",
     "attribution": "agent-derived-non-official",
-    "status": "pending-independent-review",
+    "status": "independent-review-complete-with-open-issues",
     "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
-    "choice_key": ["C", "D", "A", "B", "C", "A", "D", "B", "C", "A", "A", "D", "B", "B", "D", "C", "A"],
+    "choice_key": ["C", "D", "A", "B", "C", "A", "D", "B", "C", "A", "A", "D", "B", "B", null, "C", "A"],
     "fill_in_answers": {
       "18": "\\sqrt2-1",
       "19": "y=\\sqrt3x+3-2\\sqrt3",
@@ -88,9 +100,10 @@
       "23": "3aV/(2S_1S_2)"
     },
     "question_draft_sha256": "422c5e540331103debb1e7f8c64eb29efd8513057f913ce5c807ce98a9100067",
-    "sha256": "0b0324525a3bf142eb23eec9f60c0622bd9ef9ff6c95a1ca623592c20900ba3d",
+    "sha256": "4083e49f7b949d9f95c0320cfb28afb109a12c0c180eea9b855a12b7e3cda278",
     "semantic_notes": [
-      "Q1答案C按主辐角约定；D为同终边角，待独立确认符号约定。",
+      "Q1按主值约定为C；D为同终边角，arg约定未说明。",
+      "Q15独立盲核发现A、D重复且题面选项均不成立；无有效答案选项，未猜测更正。",
       "Q24解答基于实数指数底数a>0。",
       "Q27由原文4√10截线长度精确求得(y−2)^2=32(x+3/2)，并代回检验。"
     ]

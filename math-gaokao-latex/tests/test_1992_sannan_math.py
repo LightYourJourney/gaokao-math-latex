@@ -30,11 +30,18 @@ class Sannan1992MathTests(unittest.TestCase):
                          hashlib.sha256((PROJECT / "解答草稿.md").read_bytes()).hexdigest())
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
-        self.assertEqual(record["status"], "pending-independent-review")
+        self.assertEqual(record["status"], "independent-review-complete-with-open-issues")
         self.assertEqual(record["choice_key"], [
-            "C", "D", "A", "B", "C", "A", "D", "B", "C", "A", "A", "D", "B", "B", "D", "C", "A"
+            "C", "D", "A", "B", "C", "A", "D", "B", "C", "A", "A", "D", "B", "B", None, "C", "A"
         ])
         self.assertEqual(record["fill_in_answers"]["18"], r"\sqrt2-1")
+
+    def test_q15_does_not_assign_an_option_when_the_source_duplicates_a_wrong_claim(self):
+        self.assertIsNone(self.record["generated_solution"]["choice_key"][14])
+        self.assertIn("没有正确选项", self.blocks[15].body)
+        self.assertIn("A、D", self.blocks[15].body)
+        self.assertIn("(30^\\circ,120^\\circ,30^\\circ)", self.blocks[15].body)
+        self.assertIn("(120^\\circ,30^\\circ,30^\\circ)", self.blocks[15].body)
 
     def test_q1_argument_convention_is_not_hidden(self):
         self.assertIn("主值约定下答案", self.blocks[1].body)
