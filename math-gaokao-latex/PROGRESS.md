@@ -70,6 +70,15 @@
 - 验证/成本：以文章正文交叉比对完整构造语句及“椭圆（除去一点）”描述；未改题面和数学结果，未运行代码测试、OCR或模型API。Token、检索耗时与费用未知。
 - 下一步：将这条旁证作为候选转录异文记录；仍需找到有明确年份/卷别、可回溯原卷或书页的来源，才可提高其证据级别。Q18同版原答案、1990上海PDF的直接出处/版次仍未核实；不绑定manifest、不重转录已完成的27题。
 
+### 1990 上海卷：canonical 登记与四版源文件生成（2026-10-20）
+
+- 已完成：恢复时确认本工作树为 `仓库根`、分支 `feat/gaokao-phase0`，并先检查当前 Git diff 与本进度；未重复 27 题转录、OCR、答案求解或盲核。此前阶段的只读登记预演已通过，本阶段用官方 `register-papers` 事务将固定来源 `src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987` 绑定至 `gk-1990-regular-shanghai`（batch `phase4-b09`，revision 4462），登记 27 题结构与 Q26 TikZ。由于 Q18 原印重复变量 `b`、Q23 原页疑缺“在”两项未决转录 issue，paper 状态保持 `blocked`；没有擅改题面或把独立推导标作官方答案。
+- 已完成生成：为满足现有简答生成器的三路校验，在答案要点中补 11–20 题速查表；Q18 用 `U/PENDING` 明确机器可识别的未决状态，仍保留原文冲突及“第三个量若为 `c` 则条件性 D”的说明。官方 `solution_sources.py extract-batch`、`generate_projects.py`、`make_short_answers.py`、`make_editions.py` 均只对该卷运行并成功，生成合并 Markdown、`questions.tex`、`answers.tex`、`index.json`、`answers_short.tex` 及试题版/解析版/简答版/印刷版四个入口壳文件。此处更新 supersede 前面检索条目中“尚未绑定”的旧状态描述。
+- 修改文件：`1990/1990_数学真题_上海_答案要点.md`、派生 `1990_数学真题_上海_含解析.md`、`tests/test_1990_shanghai_solutions.py`、本项目 `source-manifest.json`、`missing-issues.md`、`index.json`、全库六个派生报告，以及 `1990_上海卷/{questions.tex,answers.tex,answers_short.tex,试题版.tex,解析版.tex,简答版.tex,印刷版.tex}`；未新增栅格图片。
+- 验证：先新增速查表/待核标记回归测试，确认在源稿缺表时按预期失败（`parse_quick_table` 返回 `None`）；修正源稿后1990上海题面、图稿、答案解析相关测试12/12通过，简答生成器全套52/52通过。单卷 `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 及 `source_manifest.py validate` 均通过。构建器 smoke 模式四版全部成功（试题3页、解析16页、简答5页、印刷14页，共38页），诊断 `problems=[]`；38页接触表均已查看，并对解析版Q18页、简答末页及印刷末页作高分辨率检查，未见裁切/遮叠。全库 `report.py check --all` 首次发现6个投影过期，官方 `render --all` 事务刷新后复查通过、未完成状态仍被报告。临时42张PNG/接触表已从本轮专属忽略目录删除。正式 `build --formal` 未运行：源码检查确认其要求 `provenance=current`，本卷尚未达到；官方 `clean-build-intermediates --paper ... --dry-run` 因缺 provenance 返回“零删除”，故 smoke 生成的build中间文件保留以遵守安全门禁。`git diff --check`通过。
+- 成本：未运行 OCR，也未调用聊天模型或外部 API；复用既有转录、独立解题和已有图稿。实际 Codex Token/缓存 Token/API 费用不可观测，记未知，不估算节省比例。
+- 剩余/下一步：依据既有独立角色覆盖核对 provenance schema 与逐题证据，只有角色/来源约束真实满足时才导入；否则补齐缺失的独立核验，不伪造身份或完成度。之后运行正式单卷四版构建、逐页正式视觉回执及官方清理器；Q18/Q23 来源疑点未解除前仍保持 blocked，不能标为整卷完成。题面转录及答案盲解均已完成，不重复劳动。
+
 ## 1990 广东理科：既有答案表与解析来源复核（2026-10-20）
 
 - 已完成：逐项对照固定 PDF 第 5 页答案表与现有答案要点：第一卷 25 个字母答案均一致；第 12 题仅确认来源表印载 B，不认证数学答案，因为题图缺失。对照第 5–8 页来源答案/评分解答及现有解析，并独立复算可判定题目：第 1–11、13–25 题，以及第二卷第 26–30 题的答案和关键推导未发现冲突；第 26(5) 另以棱柱高度参数化积分复核体积比 7:5。第 26(4) 来源页图像清楚印作 `√2`，尽管 `pdftotext` 输出漏掉根号而显示 `2`，现有答案稿正确。答案来源仍严格标记为“固定来源印载”，未冒称官方答案。

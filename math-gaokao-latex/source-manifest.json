@@ -1382,6 +1382,14 @@
         "gk-2003-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-1990-regular-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1391,7 +1399,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d42a5097-18aa-483c-84b1-f4770c43732e",
+  "last_transaction_id": "9df7ff7c-3683-4832-9cdb-4e287e75b39b",
   "papers": [
     {
       "blocked_from": null,
@@ -20271,9 +20279,69 @@
       "title": "2003 年·春季上海卷",
       "track": "none",
       "year": 2003
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1990_上海卷/figures/gaokao_1990_shanghai_q26_planes.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1990_shanghai",
+        "id": "gk-1990-regular-shanghai",
+        "note": "固定来源普通高考/1990/1990上海.pdf，SHA-256 48ff97de01ef245a42bb95f1a67f9e38ea9490f6a781c045026e31a910f0b4a2；单页题面无答案页；答案解析为非官方独立推导；Q18/Q23留待核。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            10
+          ],
+          "解答题": [
+            21,
+            27
+          ],
+          "选择题": [
+            11,
+            20
+          ]
+        },
+        "track": null,
+        "variant": "上海卷"
+      },
+      "issue_ids": [
+        "ISSUE-1111",
+        "ISSUE-1112"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1990-regular-shanghai",
+      "production_state": "blocked",
+      "project_dir": "1990_上海卷",
+      "question_count": 27,
+      "resume_action": "取得可回溯的同版书页或勘误，核定原变量及选项后更新转录/条件答案并复核。；取得带年份卷别或原版书页的直接证据；保留扫描原字直到有证据，之后复核条件性轨迹结论。",
+      "source_files": {
+        "answer_key": "1990/1990_数学真题_上海_答案要点.md",
+        "combined_rendered": "1990/1990_数学真题_上海_含解析.md",
+        "questions": "1990/1990_数学真题_上海_试题.md",
+        "solution_body": "1990/1990_数学真题_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987"
+      ],
+      "title": "1990 年上海卷数学",
+      "track": "none",
+      "year": 1990
     }
   ],
-  "revision": 4461,
+  "revision": 4462,
   "schema_version": 1,
   "sources": [
     {
@@ -24178,8 +24246,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a8ffbc0103202f0b62559af22d4093c5de137d02",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1990-regular-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "1990上海.pdf",
       "regions": [],
       "source_id": "src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987",

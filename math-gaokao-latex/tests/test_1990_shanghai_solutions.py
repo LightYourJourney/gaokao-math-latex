@@ -12,6 +12,7 @@ ANSWERS = ROOT / "1990/1990_数学真题_上海_答案要点.md"
 SOLUTIONS = ROOT / "1990/1990_数学真题_上海_解析正文.md"
 sys.path.insert(0, str(PROJECT / "tools"))
 import solution_sources
+import make_short_answers
 
 
 class Shanghai1990SolutionTests(unittest.TestCase):
@@ -34,7 +35,7 @@ class Shanghai1990SolutionTests(unittest.TestCase):
         self.assertIn("**15．**\n\n**答案：C", self.answers)
         self.assertIn(r"\alpha=\alpha_0+2k\pi", self.solutions)
         self.assertIn("k$ 为奇数", self.solutions)
-        self.assertIn("**18．**\n\n**答案：待核", self.answers)
+        self.assertIn("**18．**\n\n**答案：U/PENDING；原文两次定义 $b$", self.answers)
         self.assertIn("条件性答案", self.answers)
         self.assertIn("若只把第三个量记号假设为 $c$", self.solutions)
         self.assertIn("假设原文意为点 $P$ 在直线 $x=2$ 上移动", self.solutions)
@@ -54,6 +55,16 @@ class Shanghai1990SolutionTests(unittest.TestCase):
         ):
             self.assertIn(expected, self.answers)
 
+    def test_choice_quick_table_keeps_q18_explicitly_pending(self):
+        self.assertEqual(
+            make_short_answers.parse_quick_table(self.answers, 10),
+            ("C", "B", "A", "A", "C", "B", "B", "U", "B", "D"),
+        )
+        records = make_short_answers.expected_answer_records(self.answers)
+        q18_answer = next(record.value for record in records if record.number == 18)
+        self.assertTrue(q18_answer.startswith("U/PENDING；"))
+        self.assertIn("条件性答案为 D", q18_answer)
+
     def test_project_solution_contract_accepts_sources_and_question_subparts(self):
         combined = solution_sources.render_combined(
             self.questions, self.solutions, self.answers
@@ -63,7 +74,7 @@ class Shanghai1990SolutionTests(unittest.TestCase):
         self.assertIn("### 第 26 题", combined)
         self.assertIn("**答案（1）：", combined)
         self.assertIn("**答案（2）：", combined)
-        self.assertIn("待核", combined)
+        self.assertIn("U/PENDING", combined)
 
 
 if __name__ == "__main__":

@@ -18328,3 +18328,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1111
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源原页第三个定义仍印 b，而选项使用 c；公开变体（https://ab1962.com/wp-content/uploads/2014/07/1%E3%80%81%E5%A4%A7%E7%BA%B2%E5%87%BD%E6%95%B0.pdf）写 c 但无原卷或勘误出处，不能据此修订题面。",
+  "fingerprint": "52dc23ffb3b5d29537b1ab32802281b6cb81a005b388394a55f59d2f18c44ae7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-shanghai",
+  "question_id": "gk-1990-regular-shanghai-q18",
+  "resume_action": "取得可回溯的同版书页或勘误，核定原变量及选项后更新转录/条件答案并复核。",
+  "source_id": "src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1112
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源原页在点 P 后直接接直线 x=2，未见在；二手教学文章（https://doc.xuehai.net/b411428fbe76059dc788cd795.html）有同结构题并含在字，但无1990上海卷来源链。",
+  "fingerprint": "353077e04fba922dd889cf8f25bf956d6c364324e85791ce97362f030d46c663",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-shanghai",
+  "question_id": "gk-1990-regular-shanghai-q23",
+  "resume_action": "取得带年份卷别或原版书页的直接证据；保留扫描原字直到有证据，之后复核条件性轨迹结论。",
+  "source_id": "src-bda5db939e3a48de23ec63fc5992d73c8e4a0e6a0ea39d36a5a81d4adf09a987",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
