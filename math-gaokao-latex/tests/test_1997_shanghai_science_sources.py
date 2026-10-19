@@ -37,7 +37,7 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
         self.assertIsNone(self.record["exam"]["paper_id"])
         self.assertEqual(self.record["source"]["source_authenticity"], "publisher-unverified")
         self.assertIsNone(self.record["official_answer"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "verified")
         self.assertFalse(self.record["canonical_question_source_ready"])
 
     def test_question_sequence_scores_and_optional_variants(self):

@@ -21,13 +21,18 @@ PROVENANCE = PAPER / "来源校对.json"
 
 
 class ShanghaiScienceMathChecks(unittest.TestCase):
-    def test_math_status_stays_unverified_after_rejected_blind_attempts(self):
+    def test_math_status_requires_full_independent_question_variant_coverage(self):
         import json
 
         record = json.loads(PROVENANCE.read_text(encoding="utf-8"))
-        self.assertEqual(record["mathematical_verification_status"], "not-verified")
-        self.assertIn("not-accepted", record["verification"]["independent_math_review"])
+        self.assertEqual(record["mathematical_verification_status"], "verified")
+        self.assertEqual(record["source"]["source_authenticity"], "publisher-unverified")
+        self.assertFalse(record["canonical_question_source_ready"])
+        self.assertIsNone(record["official_answer"])
+        self.assertEqual(record["review_status"], "needs-review")
         attempts = record["verification"]["blind_math_review_attempts"]
+        self.assertTrue(any(attempt["status"] == "not-accepted" for attempt in attempts))
+        self.assertTrue(any(attempt["status"] == "partial-not-accepted" for attempt in attempts))
         self.assertEqual([attempt["status"] for attempt in attempts],
                          [
                              "not-accepted",
@@ -36,6 +41,7 @@ class ShanghaiScienceMathChecks(unittest.TestCase):
                              "accepted-partial",
                              "accepted-partial",
                              "partial-not-accepted",
+                             "accepted-partial",
                          ])
         partial = record["verification"]["independent_math_review_partial"]
         self.assertEqual(partial["scope"], "question 19(2) only")
@@ -43,12 +49,30 @@ class ShanghaiScienceMathChecks(unittest.TestCase):
         self.assertEqual(partial["result"], r"arcsin(2√3/5)")
         self.assertEqual(
             record["verification"]["independent_math_review_accepted_scopes"],
-            ["Q1-Q8", "Q9-Q16", "Q19(2)"],
+            [
+                "Q1-Q8", "Q9-Q16 including A1/B1", "Q17-Q18",
+                "Q19(1)", "Q19(2)", "Q20 A2(1)", "Q20 A2(2)",
+                "Q20 B2(1-2)", "Q21(1-3)", "Q22(1-3)",
+            ],
         )
         self.assertIn(
             "Q20 A2(2) reports (pi/2, pi), omitting the attained minimum 3pi/4 at m=1",
-            attempts[-1]["rejected_errors"],
+            attempts[-2]["rejected_errors"],
         )
+        self.assertEqual(attempts[-2]["status"], "partial-not-accepted")
+        self.assertEqual(attempts[-2]["scope"], "Q17-Q22 except Q19(2), including Q20 A2/B2 variants")
+        self.assertEqual(attempts[-2]["independently_matching_results"], [
+            "Q17", "Q18", "Q19(1)", "Q20 A2(1)", "Q20 B2(1-2)",
+            "Q21(1-3)", "Q22(1-3)",
+        ])
+        self.assertEqual(attempts[-2]["rejected_errors"], [
+            "Q20 A2(2) reports (pi/2, pi), omitting the attained minimum 3pi/4 at m=1",
+        ])
+        self.assertEqual(attempts[-1]["reviewer"], "subagent-01a15662-347f-7921-9f78-390878ed9f5b")
+        self.assertEqual(attempts[-1]["scope"], "Q20 A2(2) only")
+        self.assertEqual(attempts[-1]["result"], "[3pi/4, pi)")
+        self.assertEqual(record["verification"]["independent_math_review_q20_a2_2"]["status"], "accepted")
+        self.assertEqual(record["verification"]["independent_math_review_q20_a2_2"]["result"], "[3pi/4, pi)")
         self.assertEqual(record["math_review_draft_sha256"], hashlib.sha256(MATH_REVIEW.read_bytes()).hexdigest())
 
     def test_question_19_coordinate_review_preserves_angle_dependent_terms(self):
