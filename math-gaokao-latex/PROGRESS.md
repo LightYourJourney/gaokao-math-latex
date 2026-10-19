@@ -6365,3 +6365,11 @@
 - 验证：回归先因缺少`B_1Q`边失败，修图后又因来源SHA和烟测状态过期失败；更新登记后`test_2015_hunan_science_transcription.py` 8/8、`test_2015_hunan_science_generation_inputs.py` 8/8、`test_short_answers.py` 52/52通过，来源JSON可解析、SHA核对一致，`git diff --check`通过。实际XeLaTeX smoke 1页成功；Q19 PDF渲染图目视无裁切/重叠，日志无error/overfull/underfull/warning。独立复核者在修图后确认`B_1Q`虚线与`AA_1`纯虚线均匹配原页，其它相关隐藏边未见差异。
 - 成本：复用已渲染原卷页，无OCR、PDF源件重渲染或外部API；新增一次单图XeLaTeX烟测与160dpi PNG渲染。实际Codex Token/API费用未知。
 - 剩余/下一步：本轮题面盲核、完整解题和独立盲解已返回，但三份provenance角色文件仍是空骨架，尚未导入；Q14答案定义约定仍由固定来源和两名求解者共同标为未决，官方答案亦不存在于固定PDF。下一步把独立角色结论逐题编码进项目`.work/phase3-b23/provenance/`，将Q14按已登记阻塞issue保持`U/unresolved`，核对21题哈希/来源页/角色互异后先跑`provenance`只读门禁；不得因单图修复或独立推导一致而绕过Q14 blocker。之后才决定是否可正式构建blocked draft以供排版校样；构建本身不能将本卷升为完成卷。
+
+### 2015 湖南理科：逐题 provenance 角色导入（2026-10-19）
+
+- 已完成：从已完成的独立题面审查、独立解答及盲核结果填充`.work/phase3-b23/provenance/`三角色工作件（每角色21题），角色分别为Newton、Confucius、Cicero；Q19修图后由Popper另行复核。题面角色覆盖固定来源完整两页（印刷页955–956），并记录Q12的35个茎叶值与主要题图核对；逐题题面、答案哈希均由当前规范解析函数现场计算，source绑定固定ready PDF。答案均为非官方独立推导证据B；Q14保留定义约定条件分支并关联`ISSUE-1106`。首次只读导入因把“约定未决”错误记成`U/unresolved`而拒绝（门禁只允许该组合关联`answer-missing`/`answer-conflict`类型）；据实际证据修正为条件推导B、盲核无求解冲突，原`answer-convention-ambiguous` blocker仍保持open且阻止完成，未改issue分类或状态。
+- 修改文件：新增`2015_湖南卷_理科/provenance.json`；更新`source-manifest.json`（revision 4442、`phase3-b23`→`provenance_verified`）；忽略目录下三角色`.work`文件。正式登记没有改题面、答案、issue总账、回执、PDF或完成状态。
+- 验证：`provenance.py import-batch`只读预演成功后，官方`--write`事务一次提交；`provenance.py check-batch`返回`OK：1卷`，`status --require-git-state validated`显示卷仍为`blocked`、批次为`provenance_verified`。题面及答案哈希各21项；Q14 blocker关联有效。报告检查命令首次漏传必需的manifest/issues参数而退出，随后使用项目事务渲染器刷新六份派生报告，`report.py check --all`成功。`test_provenance.py`运行109项，108通过、1失败：`test_the_cached_states_match_the_recomputed_ones`报告365条全库历史paper/batch缓存状态与现场派生状态不符；这与此前审计发现的共享生成器回执漂移同属全库状态门禁，未改写这些旧状态。`git diff --check`通过。尚未运行构建、PDF渲染或页面视觉验收。
+- 成本：复用已经产生的源页审查及独立角色结果；未OCR、未重渲染源PDF、未调用外部模型/API、未运行XeLaTeX。Codex实际Token和费用未知。
+- 剩余/下一步：已核对`run_formal()`：provenance不是current时会在写running回执前拒绝；对current provenance则允许编译，且状态最终仍由未解决issue派生。下一步可对本blocked draft执行单卷正式构建以检验排版，但须确认结果仍blocked，且不得将构建通过升格为完成卷。之后仍须逐页视觉验收所有版本；Q14定义约定、来源发布者/版次与官方答案仍未知，不能解除`ISSUE-1106`或标成完成卷。
