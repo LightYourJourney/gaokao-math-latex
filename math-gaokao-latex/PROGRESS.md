@@ -6338,3 +6338,13 @@
 - 验证：简答生成器先通过速查表三路一致性门禁，再写入1份简答；入口生成器写入4个壳。湖南理科`test_short_answers.py`共52/52、`test_2015_hunan_science_generation_inputs.py`共8/8通过；两个生成器单卷`--check`均通过；`generate_projects.py --all --check`确认289套源到共享TeX结果一致；`default_artifacts_state`现对本卷返回`current`；来源JSON可解析且答案要点哈希吻合。全卷仍因Q14定义约定及尚未完成的来源/盲核门禁保持blocked，尚未XeLaTeX正式构建或逐页终验。
 - 成本：无OCR、PDF重渲染或XeLaTeX；使用一次公开网页检索和本机Chrome后台页读取红网扫描图。Codex Token及外部实际费用不可见，未知。红网原图未下载/入库。
 - 剩余/下一步：官方答案仍缺，红网只作非官方交叉证据；Q14等比数列约定、整卷盲核终回执与图稿最终目视回执仍未闭合。下一步执行该blocked draft的provenance/正式四版构建时，必须保留待核标记，不得把非官方参考转成`official_answer`；旧卷共享转换器更新导致的267份build回执漂移仍未处理。
+
+### 恢复核对：2015 湖南理科 provenance 与正式构建门禁（2026-10-19）
+
+- 已确认：本次恢复首先核对了隔离 worktree 的 Git 状态与本进度文件。主检出 `主工作树` 当前位于 `main` 且只读检查显示干净；唯一工作分支仍是 `仓库根` 的 `feat/gaokao-phase0`，起始时干净、ahead 11。没有在主检出写入。
+- provenance：三份角色草稿实际位于项目级忽略目录 `math-gaokao-latex/.work/phase3-b23/provenance/{question-review,answer-solve,answer-review}/gk-2015-regular-hunan-science.json`，每份含21题，但`role`为空，尚无任何复核记录。此前恢复笔记将 `.work` 误记成仓库根目录；这次按`provenance.py`的`WORK_RELATIVE`约束确认了正确位置。初始化命令因目标草稿已存在而拒绝覆盖，未修改草稿。
+- 正式构建：曾尝试调用单卷formal build，脚本在编译前因provenance状态`missing`而fail closed；没有生成PDF或build receipt。当前`provenance status --batch phase3-b23 --require-git-state validated`仍报告`blocked/planned`，并指出本卷`provenance.json`尚未进入HEAD。该状态与角色草稿空白、正式门禁未完成一致。
+- 修改文件：仅本`PROGRESS.md`。无题面、答案、manifest、正式TeX/PDF或receipt改动；`.work`角色草稿保持原样。
+- 验证：`git status --short --branch`确认两个检出状态；`find`与JSON只读解析确认三份角色文件及21题/空role；`provenance status`确认blocked；正式build返回缺失provenance后提前退出；`git diff --check`通过。
+- 成本：未运行OCR、XeLaTeX、PDF渲染或外部API；只读CLI检查。实际Codex Token/API费用未知，不声称节省比例。
+- 剩余/下一步：需要可用的独立复核角色完成question-review、answer-solve、answer-review，并对已登记五张TikZ图与固定原卷进行图稿复核；此前新建复核代理因代理并发槽位已满而失败，尚未取得独立结果。完成前不得填造role/回执或重试formal build。完成角色文件后先跑provenance只读检查，再执行正式单卷构建、视觉复核及项目质量门禁；Q14来源约定与官方答案仍未决，故即使构建成功也仍是blocked draft，不得标作完成卷。
