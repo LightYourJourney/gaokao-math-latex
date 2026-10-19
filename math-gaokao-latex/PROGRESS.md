@@ -6313,3 +6313,12 @@
 - 全量回归限制：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`仍失败，现场报告394条已有paper/batch缓存状态与派生状态不一致；新增paper后状态确实增加，但既有大量状态在本阶段前已不同步。它不是新issue类型单测失败；本阶段没有盲目批量改写394条状态。完整的provenance/status/report组合165项此前也是仅此缓存一致性用例失败。需单独审计并按项目reconciler流程处理全量状态，之后重跑该门禁。
 - 成本：无OCR、XeLaTeX、外部模型/API；报告全量重算与138项定向测试为本地程序工作。Token和实际费用未知。
 - 剩余/下一步：本卷现在是可见的blocked draft，source binding与Q14 blocker已入manifest/问题总账；仍缺最终独立盲核回执、图稿最终视觉复核、官方答案及来源发布信息，尚未生成/正式构建四版。下一步先定向审计394项陈旧缓存的分布及官方reconcile命令的写入范围，避免手改状态；随后再推进本卷provenance初始化与正式四版构建，保持Q14 blocker不被绕过。全题库1952–2026总目标继续有效。
+
+### 全库状态门禁：394 项缓存漂移根因审计（2026-10-19）
+
+- 已完成：以 `provenance.check_batch()` 只读重算并分类全库不一致，共394项：241卷状态（238个缓存`complete`现场为`answers_verified`，3个缓存`compiled`现场为`answers_verified`）及153个批次状态（124个`closed`现场为`provenance_verified`、26个`closed_with_blockers`现场为`provenance_verified`、3个`compiled_pending_review`现场为`provenance_verified`）。逐卷重算这241套生成目标，差异目标全部且仅为全局`index.json`；逐项对照build回执输入树，267份回执含共享生成器文件变化：247份的`md2tex.py`哈希变化，267份的`make_short_answers.py`哈希变化（247份同时变化、20份仅后者变化）。样例`phase1-b07`正式批次检查明确报生成输入树变化。故状态漂移不是provenance缺失；批次完成证据因共享转换器版本更新而失效，不能直接批量改状态字段恢复绿色。
+- 诊断过程纠错：首次独立分类脚本错误地把项目子目录当作仓库根，得到不可能的“provenance missing”结果；发现与正式检查不一致后作废该结果，改用`cli_common.repository_root()`重跑，并以正式`check_batch`的394项结果作为准据。全程只读，没有刷新index、改写manifest/回执或重编PDF。
+- 修改文件：仅本`PROGRESS.md`；记录审计结果与纠错过程。没有其他文件改动。
+- 验证：正式`check_batch`返回`INVALID`、289卷、155批、394条问题；所有241份问题卷的生成目标比较均无异常、仅命中全局`index.json`；267份回执输入树哈希比较完成且无异常；`review_receipts.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase1-b07 --json`返回`INVALID_OR_STALE`，原因为生成输入树变化。此次未运行代码测试，因为没有代码改动；进度提交前运行`git diff --check`并核对工作树范围。
+- 成本：没有OCR、外部模型API、LaTeX构建或PNG重渲染；本地确定性哈希/生成器检查约一分钟。Codex Token、缓存用量及API费用不可见，未知。
+- 剩余/下一步：正式状态对账器没有独立批量刷新入口；build输入树中确有共享生成器版本变化，按现行完整性门禁须重建并复核受影响卷，不能用事务直接把缓存字段改成派生值。全库目前共有267份回执输入树漂移，另有全局index投影待生成；需要按既有批次粒度完成正式build与视觉回执，或由用户明确调整优先批次/全量重建范围。其间不声称这些旧`complete`缓存仍有效；优先继续已登记的2015湖南理科blocked draft，Q14 blocker与来源/官方答案待核项不得绕过。
