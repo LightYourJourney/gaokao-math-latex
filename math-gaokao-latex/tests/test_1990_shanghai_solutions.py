@@ -36,6 +36,9 @@ class Shanghai1990SolutionTests(unittest.TestCase):
         self.assertIn("条件性答案", self.answers)
         self.assertIn("若只把第三个量记号假设为 $c$", self.solutions)
         self.assertIn("假设原文意为点 $P$ 在直线 $x=2$ 上移动", self.solutions)
+        self.assertIn(r"3\cos^2x+5\cos x-2=0", self.solutions)
+        self.assertIn(r"(\frac12,\pm\frac12)", self.answers)
+        self.assertNotIn(r"(\frac12\pm\frac{1}{2\sqrt2},0)", self.answers)
 
     def test_high_risk_results_are_explicit(self):
         for expected in (
