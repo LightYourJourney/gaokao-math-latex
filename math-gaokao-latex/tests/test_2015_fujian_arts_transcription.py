@@ -38,10 +38,12 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         self.assertEqual(numbers, list(range(1, 23)))
         self.assertEqual(self.review["transcription"]["question_count"], 22)
         self.assertEqual(self.review["transcription"]["question_types"], {
-            "single_choice": list(range(1, 11)),
-            "fill_in": list(range(11, 17)),
+            "single_choice": list(range(1, 13)),
+            "fill_in": list(range(13, 17)),
             "written_response": list(range(17, 23)),
         })
+        self.assertLess(self.transcript.index("**12．**"), self.transcript.index("## 二、填空题"))
+        self.assertGreater(self.transcript.index("## 二、填空题"), self.transcript.index("**12．**"))
 
     def test_high_risk_formula_and_condition_strings_are_preserved(self):
         for expression in (
@@ -56,6 +58,10 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
             self.assertIn(expression, self.transcript)
         self.assertIn("结果如表所示", self.transcript)
         self.assertNotIn("结果如下表所示", self.transcript)
+        self.assertIn(r"当 \(x\in(1,x_0)\)，恒有 \(f(x)>k(x-1)\)", self.transcript)
+        self.assertNotIn(r"当 \(x\in(1,x_0)\) 时，恒有", self.transcript)
+        for option in (r"(A) \((0,\dfrac{\sqrt3}{2}]\)", r"(B) \((0,\dfrac34]\)", r"(C) \([\dfrac{\sqrt3}{2},1)\)", r"(D) \([\dfrac34,1)\)", "充分而不必要条件", "必要而不充分条件", "充分必要条件", "既不充分也不必要条件"):
+            self.assertIn(option, self.transcript)
 
     def test_diagrams_and_table_are_accounted_for_without_raster_assets(self):
         self.assertEqual(
