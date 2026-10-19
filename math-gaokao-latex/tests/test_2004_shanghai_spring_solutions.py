@@ -21,7 +21,7 @@ class ShanghaiSpring2004SolutionTests(unittest.TestCase):
         self.assertIn("official_answer: null", self.answers)
         self.assertIn("非来源印载答案", self.answers)
         self.assertIn("非来源印载解析", self.solutions)
-        self.assertIn("本库已有独立推导首稿，尚未独立盲核", self.transcript)
+        self.assertIn("Q14 条件歧义与 Q18 变量冲突待核", self.transcript)
 
     def test_all_questions_have_answer_and_solution_entries(self):
         answer_numbers = re.findall(r"^\*\*(\d+)．\*\*", self.answers, re.MULTILINE)
@@ -41,6 +41,14 @@ class ShanghaiSpring2004SolutionTests(unittest.TestCase):
         self.assertIn(r"|p|\ge2", self.solutions)
         self.assertIn(r"若经可靠原件证据确认", self.solutions)
         self.assertIn(r"official_answer: null", self.answers)
+
+    def test_question_14_does_not_assume_proper_subset(self):
+        self.assertIn(r"M\subseteq N", self.transcript)
+        self.assertIn(r"$M\subsetneq N$ 时 B", self.answers)
+        self.assertIn(r"$M=N$ 时 C", self.answers)
+        self.assertIn("答案待核", self.answers)
+        self.assertIn("原题条件不足以唯一确定选项", self.solutions)
+        self.assertNotIn("**14．** **答案：B**", self.answers)
 
     def test_prism_area_cosine_rule_uses_matching_faces_and_dihedral(self):
         relation = r"S_{AB}^2=S_{BC}^2+S_{AC}^2-2S_{BC}S_{AC}\cos\theta"
