@@ -25,7 +25,22 @@
     "git_blob_oid": "aedb00f81b60d133034602250130d9079b440761",
     "page_count": 7,
     "source_authenticity": "publisher-unverified",
-    "source_title_as_printed": "1997年全国普通高等学校招生统一考试 上海 数学试卷（理工农医类）"
+    "source_title_as_printed": "1997年全国普通高等学校招生统一考试 上海 数学试卷（理工农医类）",
+    "source_identity_research": {
+      "checked_on": "2026-10-20",
+      "status": "bibliographic-context-found-fixed-scan-edition-unidentified",
+      "records": [
+        {
+          "url": "https://books.google.com/books/about/1997%E5%B9%B4%E5%85%A8%E5%9B%BD%E6%99%AE%E9%80%9A%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E6%8B%9B%E7%94%9F%E7%BB%9F.html?id=JfBCAAAACAAJ",
+          "claim": "Catalogue record for the 1997 Shanghai entrance-exam instructions, compiled by Shanghai Municipal Education Examinations Authority and published by Fudan University Press; this is not identified as the fixed mathematics scan."
+        },
+        {
+          "url": "https://books.google.com/books/about/%E5%8E%86%E5%B1%8A%E4%B8%AD%E5%9B%BD%E9%AB%98%E8%80%83%E6%95%B0%E5%AD%A6%E8%AF%95%E9%A2%98%E5%8F%8A%E8%A7%A3%E7%AD%94.html?id=oZSfzgEACAAJ",
+          "claim": "Catalogue record for a 2018 Harbin Institute of Technology Press volume describing coverage of 1990-1997 mathematics entrance-exam papers; it does not identify the fixed scan or establish that the scan was copied from this edition."
+        }
+      ],
+      "conclusion": "These records corroborate relevant bibliographic context only. Publisher/edition of the fixed source PDF remains unverified; source_authenticity remains publisher-unverified."
+    }
   },
   "transcription_status": "transcribed-pending-independent-review",
   "review_status": "needs-review",
@@ -105,14 +120,23 @@
     "blind_transcription_review": {"reviewer": "subagent-01a15645-7078-7f22-b68f-2b82efa6397f", "reviewed_pages": [1, 2, 3, 4, 5, 6, 7], "scope": "source-only blind transcription of question statements, variants, printed answer conclusions, and high-risk notation", "result": "one material discrepancy corrected: Q20 variant-specific subpart scores (A2 8+8; B2 6+10)", "status": "completed"},
     "transcription_tests": {"suite": "test_1997_shanghai_science_sources.py", "passed": 7, "status": "passed"},
     "figure_smoke": {"status": "passed", "tool": "latexmk 4.88 + XeLaTeX (TeX Live 2026)", "page_count": 4, "paper_size": "A4", "visual_review": "passed", "log_diagnostics": "no-error-or-missing-character; XeCJK selected local Fandol fallback", "raster_outputs_committed": false},
-    "independent_math_review": "not-accepted-blind-attempts; main-session-reconciliation-pending-independent-accepted-review",
+    "independent_math_review": "not-accepted-blind-attempts; partial-accepted-Q19(2)-only; full-paper-review-pending",
+    "independent_math_review_partial": {
+      "scope": "question 19(2) only",
+      "status": "accepted",
+      "reviewer": "subagent-01a15658-22ca-7670-98fb-fab3c9974e9e",
+      "method": "blind orthogonal-coordinate derivation independent of the existing answer and solution drafts",
+      "result": "arcsin(2√3/5)",
+      "limitations": "does not verify any other question or the source edition"
+    },
     "blind_math_review_attempts": [
       {"reviewer": "subagent-01a1564a-b713-7f40-90ad-0d371a6bcb7a", "status": "not-accepted", "scope": "questions 1-22 and all optional variants", "rejected_errors": ["Q19(1) counterexample violates C'B' perpendicular AB", "Q19(2) incorrect vector orientation/decomposition", "Q20 A2(2) range omitted the maximum of 2m/(1+m^2)", "Q22(1-3) recurrence coefficient and derived answers incorrect"]},
-      {"reviewer": "subagent-01a1564e-ad32-7740-8768-400c11000e44", "status": "partial-not-accepted", "scope": "Q19(1-2), Q20 A2(2), B2(2), Q22(1-3)", "rejected_errors": ["Q19(2) vector decomposition treats AB as perpendicular to plane BCC' and drops the angle-dependent cross term"], "independently_matching_results": ["Q19(1)", "Q20 A2(2)", "Q20 B2(2)", "Q22(1-3)"]}
+      {"reviewer": "subagent-01a1564e-ad32-7740-8768-400c11000e44", "status": "partial-not-accepted", "scope": "Q19(1-2), Q20 A2(2), B2(2), Q22(1-3)", "rejected_errors": ["Q19(2) vector decomposition treats AB as perpendicular to plane BCC' and drops the angle-dependent cross term"], "independently_matching_results": ["Q19(1)", "Q20 A2(2)", "Q20 B2(2)", "Q22(1-3)"]},
+      {"reviewer": "subagent-01a15658-22ca-7670-98fb-fab3c9974e9e", "status": "accepted-partial", "scope": "Q19(2) only", "method": "blind orthogonal-coordinate derivation; checked rectangle, rhombus, angle, perpendicularity, plane normal and principal angle", "result": "arcsin(2√3/5)"}
     ]
   },
   "draft_sha256": "b16489304283813a6d4c4fce1bb1a2facc5188b57d7a36d68fc745965877846a",
   "answers_draft_sha256": "e23d9d14919bde68de0010feb127e137576f82922fbff85a577764b07b3a6496",
   "solutions_draft_sha256": "67f320cd3ec73a00bab96430d22a8ab1cf7247ea000ca33de8803a4bf7b7ba24",
-  "math_review_draft_sha256": "ff7a6bb3d23b16f89bc45b625efc849d9ccd88d3a5a6c3bed39043c48afbf935"
+  "math_review_draft_sha256": "7c1037c516cbd86608ffdd3410e4c054a1c42525454d91be5b2b31b60d360f05"
 }

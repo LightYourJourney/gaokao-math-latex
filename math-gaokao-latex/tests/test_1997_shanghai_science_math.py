@@ -29,7 +29,11 @@ class ShanghaiScienceMathChecks(unittest.TestCase):
         self.assertIn("not-accepted", record["verification"]["independent_math_review"])
         attempts = record["verification"]["blind_math_review_attempts"]
         self.assertEqual([attempt["status"] for attempt in attempts],
-                         ["not-accepted", "partial-not-accepted"])
+                         ["not-accepted", "partial-not-accepted", "accepted-partial"])
+        partial = record["verification"]["independent_math_review_partial"]
+        self.assertEqual(partial["scope"], "question 19(2) only")
+        self.assertEqual(partial["status"], "accepted")
+        self.assertEqual(partial["result"], r"arcsin(2√3/5)")
         self.assertEqual(record["math_review_draft_sha256"], hashlib.sha256(MATH_REVIEW.read_bytes()).hexdigest())
 
     def test_question_19_coordinate_review_preserves_angle_dependent_terms(self):
