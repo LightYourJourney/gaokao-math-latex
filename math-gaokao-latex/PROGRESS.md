@@ -6373,3 +6373,12 @@
 - 验证：`provenance.py import-batch`只读预演成功后，官方`--write`事务一次提交；`provenance.py check-batch`返回`OK：1卷`，`status --require-git-state validated`显示卷仍为`blocked`、批次为`provenance_verified`。题面及答案哈希各21项；Q14 blocker关联有效。报告检查命令首次漏传必需的manifest/issues参数而退出，随后使用项目事务渲染器刷新六份派生报告，`report.py check --all`成功。`test_provenance.py`运行109项，108通过、1失败：`test_the_cached_states_match_the_recomputed_ones`报告365条全库历史paper/batch缓存状态与现场派生状态不符；这与此前审计发现的共享生成器回执漂移同属全库状态门禁，未改写这些旧状态。`git diff --check`通过。尚未运行构建、PDF渲染或页面视觉验收。
 - 成本：复用已经产生的源页审查及独立角色结果；未OCR、未重渲染源PDF、未调用外部模型/API、未运行XeLaTeX。Codex实际Token和费用未知。
 - 剩余/下一步：已核对`run_formal()`：provenance不是current时会在写running回执前拒绝；对current provenance则允许编译，且状态最终仍由未解决issue派生。下一步可对本blocked draft执行单卷正式构建以检验排版，但须确认结果仍blocked，且不得将构建通过升格为完成卷。之后仍须逐页视觉验收所有版本；Q14定义约定、来源发布者/版次与官方答案仍未知，不能解除`ISSUE-1106`或标成完成卷。
+
+### 2015 湖南理科：四版正式构建与全页视觉回执（2026-10-19）
+
+- 已完成：对`gk-2015-regular-hunan-science`执行单卷四版正式XeLaTeX构建；试题版6页、解析版21页、简答版8页、印刷版17页，共52页。构建收据显示4/4版本编译成功、无缺字/未定义引用/Overfull；解析版仅有Q21 `answers.tex` 479–481行一条Underfull。将四份PDF各页渲染为110dpi PNG并逐页查看全部52页；另全分辨率复核Q19图稿、解析版Q20/Q21及印刷版首页来源框。未发现裁切、重叠、异常空页、图文错配、页眉页脚或分页问题。Q21 Underfull所涉第21页内容和页脚均在版心内、无可见异常空隙，作为不影响阅读的告警豁免记录。
+- 修改文件：新增该卷`receipts/build.json`及四版本视觉回执；新增`reports/phase3-b23.md`；manifest推进至revision 4445、批次`closed_with_blockers`；事务渲染器刷新六份全库派生报告；以及本进度。PDF及52张PNG留在忽略的build/`.work`，没有加入Git。
+- 验证：`build_projects.py build --formal`返回`COMPILED_PENDING_REVIEW`、失败0；视觉终结器返回`FINALIZED`、revision 4445；视觉回执逐页覆盖52页、每页八项合计416项。随后`review_receipts.py check-batch`为`FINALIZED`，`validate-receipts --require-final --require-current-inputs`为`OK`（成功1、pending0、stale0），全库`report.py check --all`通过。`test_review_receipts.py` 66/66通过。`test_provenance.py` 108/109通过；唯一失败为既有全库缓存状态核对，报告365条旧paper/batch状态与现场派生状态不一致，未批量改写或掩盖。
+- 状态边界：构建/视觉验收为成功，但`provenance status`仍显示本卷`blocked`、批次`closed_with_blockers`；`ISSUE-1106`仍开放，Q14定义约定以及来源出版者/版次、官方答案仍未核实。不得将“排版与视觉检查通过”误称整卷内容完成或官方答案认证。
+- 成本：没有重新OCR或调用外部模型/API；实际做一次四版本LaTeX构建和52页PNG渲染/检查。Codex Token、缓存token、实际API费用未知；未声称节省比例。
+- 剩余/下一步：可继续全库OCR流水线/Token审计等原任务阶段，或等待能解除`ISSUE-1106`的适用来源证据；Q14未决前，本卷不升级为complete。旧库365项缓存漂移仍需单独按既有生成输入树与回执治理处理，本阶段不扩展重建范围。
