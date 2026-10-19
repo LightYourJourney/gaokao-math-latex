@@ -35,6 +35,12 @@ class ShanghaiSpring2004SolutionTests(unittest.TestCase):
         self.assertIn(r"若经可靠原件证据确认", self.solutions)
         self.assertIn(r"official_answer: null", self.answers)
 
+    def test_prism_area_cosine_rule_uses_matching_faces_and_dihedral(self):
+        relation = r"S_{AB}^2=S_{BC}^2+S_{AC}^2-2S_{BC}S_{AC}\cos\theta"
+        self.assertIn(relation, self.answers)
+        self.assertIn(relation, self.solutions)
+        self.assertIn(r"\angle MNP=\theta", self.solutions)
+
     def test_2004_bus_fleet_threshold_and_annual_term(self):
         terms = [128 * Fraction(3, 2) ** year for year in range(8)]
         self.assertEqual(terms[6], 1458)
