@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -9,7 +10,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 PAPER = ROOT / "2003/2003_数学真题_春季上海_试题.md"
-FIGURES = ROOT / "2003/figures"
+FIGURES = ROOT / "math-gaokao-latex/2003_春季上海卷/figures"
+PROJECT_DIR = "2003_春季上海卷"
+sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
+from generate_projects import ProjectSources, generate_project, validate_project_result
 EXPECTED = {
     18: "gaokao_2003_shanghai_spring_q18_sine.tex",
     19: "gaokao_2003_shanghai_spring_q19_prism.tex",
@@ -26,7 +30,7 @@ class ShanghaiSpring2003FigureTests(unittest.TestCase):
             with self.subTest(question=question):
                 heading = re.search(rf"^\*\*{question}．.*?(?=^\*\*\d+．|\Z)", self.paper, re.M | re.S)
                 self.assertIsNotNone(heading)
-                self.assertIn(f"figures/{filename}", heading.group())
+                self.assertIn(f"../math-gaokao-latex/{PROJECT_DIR}/figures/{filename}", heading.group())
                 self.assertTrue((FIGURES / filename).is_file())
 
     def test_figures_are_vector_sources_and_keep_source_specific_features(self):
@@ -43,6 +47,23 @@ class ShanghaiSpring2003FigureTests(unittest.TestCase):
             self.assertIn(label, sources[19])
         for edge in ("(A)--(C)", "(B)--(C)", "(C)--(C1)", "(A1)--(C)"):
             self.assertIn(edge, sources[19])
+
+    def test_official_project_generator_accepts_sources_and_figure_mapping(self):
+        sources = ProjectSources(
+            paper_id="gk-2003-spring-shanghai",
+            project_dir=PROJECT_DIR,
+            title="2003 年·春季上海卷",
+            question_count=22,
+            questions="2003/2003_数学真题_春季上海_试题.md",
+            answer_key="2003/2003_数学真题_春季上海_答案要点.md",
+            solution_body="2003/2003_数学真题_春季上海_解析正文.md",
+            figures=tuple((f"{PROJECT_DIR}/figures/{name}", 2) for name in EXPECTED.values()),
+        )
+        result = generate_project(ROOT, sources)
+        self.assertEqual(validate_project_result(sources, result), ())
+        self.assertEqual(result.figure_occurrences, {
+            f"{PROJECT_DIR}/figures/{name}": 2 for name in EXPECTED.values()
+        })
 
     @unittest.skipUnless(shutil.which("latexmk") and all((FIGURES / name).is_file() for name in EXPECTED.values()), "latexmk and figure sources are required for vector figure smoke builds")
     def test_figures_compile_and_render(self):
