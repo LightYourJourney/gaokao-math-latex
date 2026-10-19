@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 1977 上海理科图稿矢量链接统一与批次回执刷新（2026-10-19）
+
+- 已完成：修复全库来源清单验证失败。根因是该卷混用旧式 Markdown PNG 嵌入与已登记 `figures/*.tex` 普通链接；校验器要求同卷采用一致的图稿引用模式。将第2、7、附加题9的题面图和第4题解析图统一链接到既有登记 TikZ 源，未改数学内容、未新增或删除图像。生成器 `--check` 确认生产 LaTeX 投影无需修改。
+- Provenance：固定来源PDF哈希未变，独立解题答案哈希全部未变；题面整题块哈希仅因链接文本更新而改变于第2、7、附加题9（内部第8题）。按已有三角色通过记录重建 ignored `.work/phase2-b23/provenance/` 导入材料，保留原角色身份、来源页、结论及证据；官方 `provenance.py import-batch` 先只读预检、再事务写入，manifest revision 4446，`check-batch` 返回 `OK：2卷`。未重新声称解题或盲核。
+- 构建/视觉：文理两卷各四版正式构建成功；新旧PDF经同版 `pdftoppm 26.10.0` 150dpi逐页渲染，53/53页PNG SHA-256与既有最终视觉回执完全一致。候选页、告警输入/豁免及视觉工具指纹均保持一致，据此沿用逐页判断并在页级glyph注释中注明非本轮重新目视。官方review终结器返回 `FINALIZED`，批次仍为 `closed`，revision 4451；文理卷状态仍由现有证据派生为 `complete`，这不表示题库全库已完成。
+- 修改文件：1977上海理科题面、解析正文、合并解析；文理卷 `provenance.json`、`receipts/build.json`、`receipts/review.json`；`source-manifest.json`、`reports/phase2-b23.md`、本测试及本进度。未改生产 `.tex`、题目答案、固定来源PDF或官方答案字段。工作树/分支为 `仓库根` / `feat/gaokao-phase0`；主检出 `主工作树` 保持 `main` 且干净。
+- 验证：新增回归测试先红后绿；定向测试4/4通过。Provenance、解答源同步、全量source manifest、文理四版当前build receipt（2 succeeded、stale/missing/pending均0）、review `FINALIZED`、生成器 `--check`、manifest CSV（775行）、全库报告一致性检查及 `git diff --check` 均通过。完整单测1384项：1项既有失败 `test_the_cached_states_match_the_recomputed_ones`，发现365条全库旧paper/batch缓存状态与现场派生状态不一致（首项为2017全国Ⅰ理科 `complete` vs `editions_generated`）；其余通过，13项跳过。未手改这些旧缓存状态。
+- 命令纠错：临时Python导入脚本需显式加入 `tools/` 到 `sys.path`；哈希实测显示变化为题面第2、7及附加题9，不能只预期第2题。报告检查必须传 `--manifest/--issues`；在项目目录运行CSV门禁要显式指定 `--output manifest.csv`。另有少数脚本路径点号误拼，均在任何有效执行前失败、没有额外状态写入。今后先核对命令入口与当前工作目录，再执行事务命令。
+- 成本/剩余：无OCR、无聊天模型或外部API；执行两卷四版重编及53页150dpi渲染哈希比对。实际Codex Token与费用不可见，未知。`.work` 中保留本阶段provenance/review工作项及渲染PNG供追溯；无需重复本批转录、解题或全页目视。下一步按本进度和manifest既有队列继续下一未完成批次；全库缓存状态漂移仍是独立治理任务。
+
 ## phase0-b02：2019/2020 全国Ⅰ卷当前构建视觉复核登记（2026-10-16）
 
 - 已完成：对2019/2020全国Ⅰ卷文理四卷、16版当前PDF完成复核绑定，共299页。当前 attempt 为2019文 `c1e87ea0-b6e5-415c-bedd-06dd86b4f4e2`、2019理 `a45eecf3-e012-4b36-bbd5-eafa15a3c58f`、2020文 `05347335-dc73-471b-8d3b-8d8aba71f895`、2020理 `1afb770e-0e35-483c-bd37-fef3dcb18641`（build revision 4283）。新旧渲染图逐页字节比较299/299完全一致，视觉工具指纹一致；据此复用既有逐页判断。另逐页目检2020理科79页当前联系表，并以200dpi检查试题版p3、解析版p38、简答版p3、印刷版p26，未发现新增视觉问题。

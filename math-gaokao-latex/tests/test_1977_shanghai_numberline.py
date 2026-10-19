@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parents[2]
 sys.path.insert(0, str(ROOT.parent / "math-gaokao-2017-2026/tools"))
 import md2tex
+sys.path.insert(0, str(ROOT / "tools"))
+import source_manifest
 
 NAME = "f1977_t5_numberline"
 FIGURE = ROOT / "1977_上海卷_理科/figures" / (NAME + ".tex")
@@ -53,6 +55,11 @@ class ShanghaiScience1977NumberLineTests(unittest.TestCase):
         self.assertIn(r"\input{figures/" + NAME + "}", result.text)
         self.assertNotIn("~~~", result.text)
         self.assertIn(r"[-4,-2)\cup(3,4]", result.text)
+
+    def test_registered_figures_use_one_consistent_markdown_reference_mode(self):
+        manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
+        paper = next(p for p in manifest["papers"] if p["paper_id"] == "gk-1977-regular-shanghai-science")
+        self.assertEqual(source_manifest.validate_figure_occurrences({"papers": [paper]}, REPO), 5)
 
 
 if __name__ == "__main__":
