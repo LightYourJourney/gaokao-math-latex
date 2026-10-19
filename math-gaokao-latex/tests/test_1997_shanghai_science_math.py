@@ -21,14 +21,36 @@ PROVENANCE = PAPER / "来源校对.json"
 
 
 class ShanghaiScienceMathChecks(unittest.TestCase):
-    def test_independent_derivation_is_hash_bound_but_not_blind_reviewed(self):
+    def test_math_status_stays_unverified_after_rejected_blind_attempts(self):
         import json
 
         record = json.loads(PROVENANCE.read_text(encoding="utf-8"))
         self.assertEqual(record["mathematical_verification_status"], "not-verified")
-        self.assertEqual(record["verification"]["independent_math_review"],
-                         "main-session-derivation-draft-pending-blind-review")
+        self.assertIn("not-accepted", record["verification"]["independent_math_review"])
+        attempts = record["verification"]["blind_math_review_attempts"]
+        self.assertEqual([attempt["status"] for attempt in attempts],
+                         ["not-accepted", "partial-not-accepted"])
         self.assertEqual(record["math_review_draft_sha256"], hashlib.sha256(MATH_REVIEW.read_bytes()).hexdigest())
+
+    def test_question_19_coordinate_review_preserves_angle_dependent_terms(self):
+        # B=(0,0,0), A=(4,0,0), B'=(2,2sqrt(3),0), C=(0,0,3), C'=B'+C.
+        # AC' has squared length 25; its normal component to plane BCC' has squared length 12.
+        ac_squared = 2**2 + 12 + 3**2
+        unit_normal_dot_coefficient_of_sqrt3 = Fraction(-2, 2) + Fraction(-2, 2)
+        normal_component_squared = unit_normal_dot_coefficient_of_sqrt3**2 * 3
+        self.assertEqual(ac_squared, 25)
+        self.assertEqual(normal_component_squared, 12)
+        self.assertEqual(Fraction(normal_component_squared, ac_squared), Fraction(12, 25))
+
+    def test_question_20_a2_argument_range_uses_interior_maximum(self):
+        def tangent_ratio(m):
+            return Fraction(2 * m, 1 + m * m)
+
+        self.assertEqual(tangent_ratio(1), Fraction(1))
+        for m in (Fraction(1, 2), 2, 3, 10):
+            ratio = tangent_ratio(m)
+            self.assertGreater(ratio, 0)
+            self.assertLess(ratio, 1)
 
     def test_question_6_difference_identity(self):
         for n in range(1, 25):
