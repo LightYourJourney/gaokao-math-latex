@@ -49,7 +49,8 @@ class BeijingSpring2004ArtsSolutionTests(unittest.TestCase):
         self.assertIn(r"x\ge1/2", solutions)
         self.assertIn("首轮独立盲解完成", answers)
         self.assertIn("Q16报告结论经主会话复算", answers)
-        self.assertIn("尚待独立盲核", transcript)
+        self.assertIn("首轮独立逐题盲核完成", transcript)
+        self.assertIn("Q20疑脱字按源文照录并标注", transcript)
         self.assertIn("未绑定正式 `paper_id`", transcript)
         self.assertNotIn("官方答案", answers.split("答案归属")[1].split("---")[0])
 

@@ -95,7 +95,15 @@
 - 修改文件：`2004/2004_数学真题_春季北京文_试题.md`、`2004_数学真题_春季北京文_答案要点.md`、`2004_数学真题_春季北京文_解析正文.md`、`2004_数学真题_春季北京文_图表清单.md`、`2004/figures/gaokao_2004_beijing_spring_arts_q18_orbit.tex`、`math-gaokao-latex/tests/test_2004_beijing_spring_arts_figures.py`、`test_2004_beijing_spring_arts_solutions.py` 及本进度。Q17矢量文件、题目数学答案均未改；源页、PDF及PNG仍仅在只读来源/忽略`.work`中，未入库栅格图。
 - 验证：`test_2004_beijing_spring_arts_solutions.py` 4/4、`test_2004_beijing_spring_arts_figures.py` 4/4（含Q17/Q18 TikZ编译无警告、Q20 array 单页XeLaTeX编译与150dpi渲染）、`test_2004_beijing_spring_arts_transcription.py` 1/1通过；主会话目视检查Q18修正版及Q20表格PNG；`git diff --check`通过。测试曾按TDD先因缺少Q14/Q18边界说明而失败，补充内容后通过。一次 dotted unittest 模块调用因目录名含连字符而无法导入，随后改用直接执行测试脚本；这不是产品失败。
 - 成本：无OCR、无商业API；一轮独立解题、一轮图表对照及修正后二次图表复核，调用实际Token/费用不可见。只进行两幅图和一张表的局部XeLaTeX/PNG校样；未做整卷四版正式构建。临时图像留在忽略`.work`和`/tmp`。
-- 剩余/下一步：答案/图表已有一轮复核，但答案非官方；独立题面逐字/公式核对仍待完成，尤其不得把Q8摆放假设、Q14直线前提或Q18计时解释改写成原题条件。出版物/版次未核，`paper_id=null`；故不登记、不生成正式四版验收回执。下一步优先完成题面盲核或取得可追溯来源书目信息，再按正式门禁构建与逐页视觉验收。
+- 剩余/下一步：答案/图表已有一轮复核，但答案非官方；题面盲核与Q20原文异文的处理见下方后续阶段。出版物/版次未核，`paper_id=null`；故不登记、不生成正式四版验收回执。下一步取得可追溯来源书目信息，再按正式门禁构建与逐页视觉验收。
+
+### 2004 春季北京文科卷：题面盲核与 Q20 原文异文保真（2026-10-20）
+
+- 已完成：复核者甲对Q1–Q10、复核者乙对Q11–Q20分别只依据固定PDF独立逐题核对；两份报告均称其范围通过。主会话复核两页原生文字层并查看120dpi整页及240dpi Q20 局部放大，发现复核者乙漏掉一处：原卷第20题末问确印作“计算公以及”，而旧稿写为“计算公式以及”。这是源文件本身疑脱“式”字，不将推测文字补入题面；现恢复照录原字，并加独立编辑注说明疑脱字。Q1–Q19与其余Q20数阵内容未发现可证实的转录差异，题号1–20完整。
+- 修改文件：`2004/2004_数学真题_春季北京文_试题.md`、`math-gaokao-latex/tests/test_2004_beijing_spring_arts_transcription.py`、本 `PROGRESS.md`。只读源PDF及页面PNG未入库，局部渲染保存在忽略目录 `math-gaokao-latex/.work/review-2004-beijing-transcription/`。
+- 验证：固定PDF SHA-256 为 `4670b402354afd088d6993fbc473490158f27e232b1c54730e5989b64a21ec26`，与登记值一致；`pdfinfo` 确认为2页A3、XeTeX生成；`pdftotext -layout` 与目视对照，另以240dpi裁图确认Q20的“计算公”缺“式”确为源文。先增加忠实性断言并观察其按预期失败，再改转录后题面测试1/1、解析回归4/4、图表回归4/4均通过，`git diff --check`通过。另跑全量 `unittest discover`：1448项中13项跳过、1项失败；失败为既有 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，其断言发现365条 manifest 缓存 `production_state` 与源文件现场推导状态不一致（首例为2017全国Ⅰ理科 `complete` vs `editions_generated`）。该检查只读；本阶段未刷新这些跨批状态，且工作树无测试引入的额外文件。
+- 成本：0次OCR、0次外部模型/API；调用实际Token与费用未知。只复用来源文字层并对2页做120dpi核查、Q20做240dpi局部放大。
+- 剩余/下一步：Q20保留源文疑脱字并明确标记；答案仍为非官方推导，来源出版物/版次仍未核实、`paper_id=null`，不登记、不制作正式四版构建回执。另有题库全量 provenance 状态缓存与现场派生不一致（365条），本阶段未刷新；需另按项目变更/收据门禁核实其成因和是否需要有界刷新。下一步优先查证该固定PDF的上游出版来源，同时将这项全量校验失败列入后续状态一致性处理，不将此卷报为完成。
 
 ## 1990 上海卷：27 题题面转录（2026-10-20）
 

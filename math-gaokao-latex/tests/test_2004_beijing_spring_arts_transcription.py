@@ -51,6 +51,8 @@ class BeijingSpring2004ArtsTranscriptionTests(unittest.TestCase):
         self.assertIn(r"\sqrt", transcript)
         self.assertIn("$2003$ 年 $10$ 月 $15$ 日 $9$ 时", transcript)
         self.assertIn("实数", transcript)
+        self.assertIn(r"计算公以及 $2008$", transcript)
+        self.assertIn("疑脱“式”字；本稿照录原文", transcript)
 
         for question in (17, 18, 20):
             self.assertIn(f"| {question} |", figures)
