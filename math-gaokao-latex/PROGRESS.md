@@ -6356,4 +6356,12 @@
 - 修改文件：仅本`PROGRESS.md`；没有改题面、图稿、答案或来源信息。
 - 验证：对照`.work/transcribe-2015-hunan-science/source/page-1.png`、当前题面Markdown与Q16(A) TikZ源码；`git blame`确认Q7附注修订提交为`0fe0afb4`。无代码测试；本进度提交前运行`git diff --check`。
 - 成本：复用已渲染扫描页，无PDF重渲染、OCR、XeLaTeX或外部API；Codex Token/API费用未知。
-- 剩余/下一步：不能沿用旧审查结果填`question-review`角色文件。已重新启动三项只读独立任务：当前题面/五图与Q12表格逐项对照、21题完整解答、独立盲解复核；截至本记录时三项仍在运行，未写任何tracked文件。收到结果后逐项核实；确认角色证据与问题账本完全对应后，才填`.work/phase3-b23/provenance`并复查formal build门禁。
+- 剩余/下一步：旧审查结果不能直接填角色文件。三项新只读独立任务现已返回：21题文字和Q12表格逐项无差异；Q19图稿差异已修复并由另一独立复核者确认；两名独立求解者的大多数结论一致，Q14仍保持未决。报告均尚未写入三份`.work/phase3-b23/provenance`角色文件；下一步按正式schema逐题编码并验证。
+
+### 2015 湖南理科：Q19 四棱台图稿忠实性修复（2026-10-19）
+
+- 已完成：当前版本独立源页复核发现Q19图稿将原卷虚线`B_1Q`错画为`B_1A`，并在虚线之外重复实画`AA_1`。依据印刷页956修正为`B_1Q`隐藏虚线，移除`AA_1`实线绘制；其他题面、答案、坐标和数学结论未改。另用正确的倾斜棱`DD_1`参数化复核第19(2)题：`P=(0,6-z/2,z)`、`Q=(6,6-z/2,0)`；法向量给出`cos=3/sqrt(45+z²/4)`，`z=4`，体积24。较早“题设矛盾”的独立解答错误地把P写在不属于`DD_1`的竖直坐标线上，已弃用。
+- 修改文件：`math-gaokao-latex/2015_湖南卷_理科/figures/f2015hns_q19_frustum.tex`；更新Q19图稿SHA和待复核构建状态于`2015/2015_湖南理科_来源校对.json`；更新`2015/2015_数学真题_湖南理_图形清单.md`；在`tests/test_2015_hunan_science_transcription.py`新增TikZ命名边/线型回归检查并将无差异图数从3调整为2；本进度。烟测TeX、PDF、PNG均留在忽略目录`math-gaokao-latex/.work/phase3-b23/`，未入库。
+- 验证：回归先因缺少`B_1Q`边失败，修图后又因来源SHA和烟测状态过期失败；更新登记后`test_2015_hunan_science_transcription.py` 8/8、`test_2015_hunan_science_generation_inputs.py` 8/8、`test_short_answers.py` 52/52通过，来源JSON可解析、SHA核对一致，`git diff --check`通过。实际XeLaTeX smoke 1页成功；Q19 PDF渲染图目视无裁切/重叠，日志无error/overfull/underfull/warning。独立复核者在修图后确认`B_1Q`虚线与`AA_1`纯虚线均匹配原页，其它相关隐藏边未见差异。
+- 成本：复用已渲染原卷页，无OCR、PDF源件重渲染或外部API；新增一次单图XeLaTeX烟测与160dpi PNG渲染。实际Codex Token/API费用未知。
+- 剩余/下一步：本轮题面盲核、完整解题和独立盲解已返回，但三份provenance角色文件仍是空骨架，尚未导入；Q14答案定义约定仍由固定来源和两名求解者共同标为未决，官方答案亦不存在于固定PDF。下一步把独立角色结论逐题编码进项目`.work/phase3-b23/provenance/`，将Q14按已登记阻塞issue保持`U/unresolved`，核对21题哈希/来源页/角色互异后先跑`provenance`只读门禁；不得因单图修复或独立推导一致而绕过Q14 blocker。之后才决定是否可正式构建blocked draft以供排版校样；构建本身不能将本卷升为完成卷。

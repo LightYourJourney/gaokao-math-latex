@@ -18,6 +18,21 @@ sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
 import issues
 
 
+def drawn_edges_by_style(tikz):
+    """Return named TikZ line edges split by solid/dashed draw command."""
+    edges = {"solid": set(), "dashed": set()}
+    for style, path in re.findall(
+        r"\\draw(?:\[([^]]+)\])?\s+([^;]+);", tikz
+    ):
+        line_style = "dashed" if "dashed" in style else "solid"
+        for segment in re.split(r"\s+(?=\()", path):
+            names = re.findall(r"\(([^()]+)\)", segment)
+            edges[line_style].update(
+                frozenset((left, right)) for left, right in zip(names, names[1:])
+            )
+    return edges
+
+
 class HunanScienceTranscriptionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -144,6 +159,15 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         self.assertIn(r"\draw (O)--(N);", fig16)
         self.assertNotIn(r"\draw[densely dotted] (O)--(N);", fig16)
 
+    def test_q19_frustum_uses_source_hidden_edges_and_does_not_double_draw_aa1(self):
+        fig19 = (ROOT / self.review["figures"]["vector_source_directory"] /
+                 "f2015hns_q19_frustum.tex").read_text(encoding="utf-8")
+        edges = drawn_edges_by_style(fig19)
+        self.assertIn(frozenset(("Bone", "Q")), edges["dashed"])
+        self.assertNotIn(frozenset(("Bone", "A")), edges["dashed"])
+        self.assertIn(frozenset(("A", "Aone")), edges["dashed"])
+        self.assertNotIn(frozenset(("A", "Aone")), edges["solid"])
+
     def test_every_original_figure_is_in_inventory_and_not_committed_as_raster(self):
         self.assertNotIn("尚未重绘为规范图稿", self.transcript)
         self.assertNotIn("图稿完成并复核前，不生成可发布的正式版本", self.figures)
@@ -151,14 +175,20 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         for q in (7, 10, 12, "16A", 19):
             self.assertIn(f"| {q} |", self.figures)
         self.assertNotIn("| 待制作 |", self.figures)
-        self.assertEqual(self.figures.count("独立源核无差异"), 3)
+        self.assertEqual(self.figures.count("独立源核无差异"), 2)
         self.assertIn("独立逐叶核对35/35一致", self.figures)
         self.assertIn("已修正M在FO上、ON为实线", self.figures)
         self.assertFalse(self.review["figures"]["source_raster_committed"])
         self.assertEqual(
             self.review["figures"]["vector_reconstruction_status"],
-            "draft-source-reviewed-smoke-compiled",
+            "draft-q19-corrected-smoke-pending",
         )
+        self.assertTrue(any(
+            "Q19" in item and "B_1Q" in item
+            for item in self.review["figures"]["independent_visual_review"][
+                "issues_found_and_fixed"
+            ]
+        ))
         visual_review = self.review["figures"]["independent_visual_review"]
         self.assertEqual(visual_review["question_numbers"], list(range(1, 22)))
         self.assertEqual(visual_review["figure_questions"], [3, 7, 10, 12, "16A", 19])

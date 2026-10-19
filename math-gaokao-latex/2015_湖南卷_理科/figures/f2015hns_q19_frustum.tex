@@ -15,9 +15,9 @@
   \draw (B)--(C)--(D);
   \draw[dashed] (D)--(A)--(B);
   \draw (Bone)--(Cone)--(Done)--(Aone)--cycle;
-  \draw (A)--(Aone) (B)--(Bone) (C)--(Cone) (D)--(Done);
+  \draw (B)--(Bone) (C)--(Cone) (D)--(Done);
   % Hidden edges and the construction segment shown in the source.
-  \draw[dashed] (A)--(Aone) (Bone)--(A) (A)--(Q) (B)--(P) (P)--(Q) (Q)--(D);
+  \draw[dashed] (A)--(Aone) (Bone)--(Q) (A)--(Q) (B)--(P) (P)--(Q) (Q)--(D);
   \draw (D)--(P);
   \foreach \pt/\pos/\lab in {A/below left/A,B/below left/B,C/below right/C,D/right/D,
       Aone/above left/A_1,Bone/left/B_1,Cone/above right/C_1,Done/above/D_1,P/right/P,Q/below/Q}
