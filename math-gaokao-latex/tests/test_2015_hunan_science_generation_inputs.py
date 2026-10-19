@@ -169,6 +169,22 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
 
             result = generate_project(repo, sources)
             self.assertEqual(validate_project_result(sources, result), ())
+            answers_tex = result.targets[
+                f"math-gaokao-latex/{project_dir}/answers.tex"
+            ].decode("utf-8")
+            questions_tex = result.targets[
+                f"math-gaokao-latex/{project_dir}/questions.tex"
+            ].decode("utf-8")
+            self.assertNotRegex(
+                answers_tex,
+                r"\\texttt\{[^}]*?(?<!\\)_[^}]*\}",
+                "inline-code filenames with raw underscores break XeLaTeX text mode",
+            )
+            self.assertNotRegex(
+                questions_tex,
+                r"\\texttt\{[0-9a-f]{64}\}",
+                "an unbreakable source digest in a text box overflows the print edition",
+            )
             self.assertEqual(
                 set(result.targets),
                 {
