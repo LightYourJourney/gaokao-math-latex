@@ -6348,3 +6348,12 @@
 - 验证：`git status --short --branch`确认两个检出状态；`find`与JSON只读解析确认三份角色文件及21题/空role；`provenance status`确认blocked；正式build返回缺失provenance后提前退出；`git diff --check`通过。
 - 成本：未运行OCR、XeLaTeX、PDF渲染或外部API；只读CLI检查。实际Codex Token/API费用未知，不声称节省比例。
 - 剩余/下一步：需要可用的独立复核角色完成question-review、answer-solve、answer-review，并对已登记五张TikZ图与固定原卷进行图稿复核；此前新建复核代理因代理并发槽位已满而失败，尚未取得独立结果。完成前不得填造role/回执或重试formal build。完成角色文件后先跑provenance只读检查，再执行正式单卷构建、视觉复核及项目质量门禁；Q14来源约定与官方答案仍未决，故即使构建成功也仍是blocked draft，不得标作完成卷。
+
+### 2015 湖南理科：复核旧审查意见与当前源稿（2026-10-19）
+
+- 已核验：取回的旧独立题面审查报告称Q7附注缺失、Q16(A)图形不符；这些结论不适用于当前HEAD。固定原卷第1页扫描图可见Q7“附”及两条正态概率式，当前题面稿已包含，且该修订在提交`0fe0afb4`已入库。Q3程序框图也在原卷及题面稿中以TikZ链接呈现，不是题目源稿缺图。
+- 图形复核：当前Q16(A)图稿坐标`F=(-1.20,0.6)`、`M=(-.52,.26)`、`O=(0,0)`满足共线（M、F的斜率比均为`-1/2`）；`O--N`明确以实线绘制，原卷扫描图也显示`F,M,O`共线及`ON`实线。旧审查把坐标共线关系判错，不能作为当前题面核验回执，也未据此改图。该检查只确认所报问题，不替代全卷正式盲核。
+- 修改文件：仅本`PROGRESS.md`；没有改题面、图稿、答案或来源信息。
+- 验证：对照`.work/transcribe-2015-hunan-science/source/page-1.png`、当前题面Markdown与Q16(A) TikZ源码；`git blame`确认Q7附注修订提交为`0fe0afb4`。无代码测试；本进度提交前运行`git diff --check`。
+- 成本：复用已渲染扫描页，无PDF重渲染、OCR、XeLaTeX或外部API；Codex Token/API费用未知。
+- 剩余/下一步：不能沿用旧审查结果填`question-review`角色文件。已重新启动三项只读独立任务：当前题面/五图与Q12表格逐项对照、21题完整解答、独立盲解复核；截至本记录时三项仍在运行，未写任何tracked文件。收到结果后逐项核实；确认角色证据与问题账本完全对应后，才填`.work/phase3-b23/provenance`并复查formal build门禁。
