@@ -1,0 +1,24 @@
+% Source: fixed 2015 Fujian arts paper, printed page 945.
+% Vector redraw from the exact function and rectangle conditions; not a raster crop.
+\begin{tikzpicture}[x=16mm,y=16mm,>=Stealth,
+  every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont,inner sep=1pt},
+  every path/.style={line width=.45pt}]
+  % From B=(1,0), f(1)=2 and the stated rectangle, the corners are
+  % A=(-2,0), B=(1,0), C=(1,2), D=(-2,2).
+  \coordinate (A) at (-2,0);
+  \coordinate (B) at (1,0);
+  \coordinate (C) at (1,2);
+  \coordinate (D) at (-2,2);
+  \coordinate (V) at (0,1);
+  \coordinate (O) at (0,0);
+  \fill[gray!28] (D) -- (C) -- (V) -- cycle;
+  \draw (A) rectangle (C);
+  \draw[thick] (D) -- (V) -- (C);
+  \draw[->] (-2.25,0) -- (1.45,0) node[right] {\(x\)};
+  \draw[->] (0,-.25) -- (0,2.45) node[above] {\(y\)};
+  \node[below left] at (A) {\(A\)};
+  \node[below right] at (B) {\(B\)};
+  \node[above right] at (C) {\(C\)};
+  \node[above left] at (D) {\(D\)};
+  \node[below left] at (O) {\(O\)};
+\end{tikzpicture}

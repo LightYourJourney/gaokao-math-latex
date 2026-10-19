@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[4]
 TRANSCRIPT = ROOT / "2015/2015_数学真题_福建文_试题.md"
 REVIEW = ROOT / "2015/2015_福建文科_来源校对.json"
 FIGURES = ROOT / "2015/2015_数学真题_福建文_图表清单.md"
+PAPER_ROOT = ROOT / "math-gaokao-latex/2015_福建卷_文科"
 
 
 class FujianArtsTranscriptionTests(unittest.TestCase):
@@ -59,8 +60,43 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
             self.review["figures_and_tables"]["items"],
             ["q4-flowchart", "q8-shaded-region", "q9-three-views", "q18-frequency-table", "q19-parabola-geometry", "q20-solid-geometry"],
         )
-        self.assertIn("待重建为 TikZ", self.figures)
+        self.assertIn("TikZ 已重绘", self.figures)
         self.assertFalse(self.review["figures_and_tables"]["raster_source_committed"])
+        self.assertEqual(
+            self.review["figures_and_tables"]["vector_reconstruction_status"],
+            "draft-linked-pending-independent-review",
+        )
+
+    def test_vector_assets_are_linked_hashed_and_tikz_only(self):
+        assets = self.review["figures_and_tables"]["vector_assets"]
+        self.assertEqual(len(assets), 5)
+        for asset in assets:
+            path = ROOT / asset["path"]
+            self.assertTrue(path.is_file(), asset["path"])
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), asset["sha256"])
+            source = path.read_text(encoding="utf-8")
+            self.assertIn(r"\begin{tikzpicture}", source)
+            self.assertIn(r"\end{tikzpicture}", source)
+            relative_target = asset["path"].removeprefix("math-gaokao-latex/")
+            self.assertIn(f"](../math-gaokao-latex/{relative_target})", self.transcript)
+        raster_suffixes = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".tif", ".tiff", ".bmp"}
+        tracked_rasters = [path for path in PAPER_ROOT.rglob("*") if path.suffix.lower() in raster_suffixes]
+        self.assertEqual(tracked_rasters, [])
+
+    def test_geometry_assets_preserve_only_registered_structure_and_given_dimensions(self):
+        q8 = (PAPER_ROOT / "figures/f2015fj_arts_q08_shaded_region.tex").read_text(encoding="utf-8")
+        for point in ("(-2,0)", "(1,0)", "(1,2)", "(-2,2)", "(0,1)"):
+            self.assertIn(point, q8)
+        q9 = (PAPER_ROOT / "figures/f2015fj_arts_q09_three_views.tex").read_text(encoding="utf-8")
+        self.assertIn(r"{\(2\)}", q9)
+        self.assertEqual(q9.count(r"{\(1\)}"), 3)
+        q19 = (PAPER_ROOT / "figures/f2015fj_arts_q19_parabola_geometry.tex").read_text(encoding="utf-8")
+        self.assertIn("y^2=4x", q19)
+        self.assertIn("(G) -- (A)", q19)
+        self.assertIn("(G) -- (B)", q19)
+        q20 = (PAPER_ROOT / "figures/f2015fj_arts_q20_solid_geometry.tex").read_text(encoding="utf-8")
+        for edge in ("(P) -- (A)", "(P) -- (B)", "(P) -- (C)", "(P) -- (D)", "(C) -- (E)", "(D) -- (E)"):
+            self.assertIn(edge, q20)
 
     def test_inline_math_delimiters_are_balanced_in_transcript_and_inventory(self):
         for text in (self.transcript, self.figures):

@@ -1,0 +1,25 @@
+% Source: fixed 2015 Fujian arts paper, printed page 946.
+% Geometrically consistent schematic from y^2=2px, A=(2,m), |AF|=3:
+% p=2, m=2sqrt(2), F=(1,0), B=(1/2,-sqrt(2)).
+\begin{tikzpicture}[x=13mm,y=13mm,>=Stealth,
+  every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont,inner sep=1pt},
+  every path/.style={line width=.45pt}]
+  \draw[->] (-1.35,0) -- (3.05,0) node[right] {\(x\)};
+  \draw[->] (0,-2.35) -- (0,2.75) node[above] {\(y\)};
+  % y^2=4x, shown parametrically so the plotted curve matches the derived data.
+  \draw[thick,domain=-2.15:2.15,samples=80,smooth,variable=\t]
+    plot ({\t*\t/4},{\t});
+  \coordinate (O) at (0,0);
+  \coordinate (G) at (-1,0);
+  \coordinate (F) at (1,0);
+  \coordinate (A) at (2,{2*sqrt(2)});
+  \coordinate (B) at (.5,{-sqrt(2)});
+  \draw (G) -- (A);
+  \draw (G) -- (B);
+  \draw (A) -- (B);
+  \node[below left] at (O) {\(O\)};
+  \node[below] at (G) {\(G\)};
+  \node[below] at (F) {\(F\)};
+  \node[above right] at (A) {\(A\)};
+  \node[below right] at (B) {\(B\)};
+\end{tikzpicture}

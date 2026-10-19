@@ -1,0 +1,27 @@
+% Source: fixed 2015 Fujian arts paper, printed page 945.
+% Vector redraw; the diagram records the printed branch labels and formulas.
+\begin{tikzpicture}[x=11mm,y=11mm,>=Stealth,
+  every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont,inner sep=2pt},
+  every path/.style={line width=.45pt}]
+  \node[draw,rounded corners] (start) at (0,0) {开始};
+  \node[draw,trapezium,trapezium left angle=70,trapezium right angle=110]
+    (input) at (0,-1.1) {输入 \(x\)};
+  \node[draw,diamond,aspect=2.1,minimum width=25mm,minimum height=10mm]
+    (test) at (0,-2.5) {\(x\geqslant2?\)};
+  \node[draw,rectangle,minimum width=19mm,minimum height=8mm]
+    (yes) at (-1.45,-4.0) {\(y=2^x\)};
+  \node[draw,rectangle,minimum width=19mm,minimum height=8mm]
+    (no) at (1.45,-4.0) {\(y=9-x\)};
+  \node[draw,trapezium,trapezium left angle=70,trapezium right angle=110]
+    (output) at (0,-5.25) {输出 \(y\)};
+  \node[draw,rounded corners] (finish) at (0,-6.35) {结束};
+
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (test);
+  \draw[->] (test.south) -- node[left,inner sep=1pt] {是} (yes.north);
+  \draw (test.east) -- ++(8mm,0) |- (no.north);
+  \node at (1.12,-2.62) {否};
+  \draw (yes.south) -- ++(0,-5mm) -| (output.north);
+  \draw[->] (no.south) -- ++(0,-5mm) -| (output.north);
+  \draw[->] (output) -- (finish);
+\end{tikzpicture}

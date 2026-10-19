@@ -1,0 +1,36 @@
+% Source: fixed 2015 Fujian arts paper, printed page 946.
+% Vector redraw of the printed cone-and-circle perspective; proportions are schematic.
+\begin{tikzpicture}[x=13mm,y=13mm,>=Stealth,
+  every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont,inner sep=1pt},
+  every path/.style={line width=.45pt}]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-3.1,0);
+  \coordinate (B) at (3.1,0);
+  \coordinate (P) at (0,3.2);
+  \coordinate (C) at (.802339,-.627852);
+  \coordinate (D) at (-1.148831,-.313926);
+  \coordinate (E) at (1.55,1.6);
+
+  % Projected circular base: hidden rear arc dashed, visible front arc solid.
+  \draw[dashed,domain=0:180,samples=50,variable=\t]
+    plot ({3.1*cos(\t)},{.65*sin(\t)});
+  \draw[domain=180:360,samples=50,variable=\t]
+    plot ({3.1*cos(\t)},{.65*sin(\t)});
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (O) -- (C);
+
+  % Cone edges and the marked interior points/segments in the source diagram.
+  \draw (P) -- (A) (P) -- (B) (P) -- (C) (P) -- (D);
+  \draw (A) -- (C);
+  \draw (C) -- (E);
+  \draw[dashed] (D) -- (E);
+  \draw[dashed] (O) -- (P);
+
+  \node[left] at (A) {\(A\)};
+  \node[right] at (B) {\(B\)};
+  \node[below right] at (C) {\(C\)};
+  \node[below] at (D) {\(D\)};
+  \node[below right] at (O) {\(O\)};
+  \node[above] at (P) {\(P\)};
+  \node[above right] at (E) {\(E\)};
+\end{tikzpicture}
