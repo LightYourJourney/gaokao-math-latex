@@ -1,0 +1,17 @@
+% Schematic redraw of the source construction; not to scale.
+\begin{tikzpicture}[line cap=round,line join=round,scale=0.9]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.65,1.55);
+  \coordinate (B) at (1.45,-1.54);
+  \coordinate (M) at (1.54,-0.10);
+
+  \draw[->] (-0.45,0)--(2.85,0) node[right] {$x$};
+  \draw[->] (0,-1.7)--(0,1.85) node[above] {$y$};
+  \draw[thick,smooth,samples=80,domain=-1.55:1.75,variable=\t]
+    plot ({0.42*\t*\t},{\t});
+  \draw (O)--(A) (O)--(B) (A)--(B) (O)--(M);
+  \node[below left] at (O) {$O$};
+  \node[above right] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right] at (M) {$M$};
+\end{tikzpicture}

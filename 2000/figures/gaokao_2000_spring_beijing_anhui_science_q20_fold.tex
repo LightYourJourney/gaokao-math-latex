@@ -1,0 +1,35 @@
+% 2000 春季京皖理科第20题。三幅均为原卷二维投影的示意重绘，非度量图。
+\begin{tikzpicture}[font=\small, line cap=round,line join=round]
+% 图一：直角梯形 ABCD，折痕 AC。
+\begin{scope}[xshift=0cm]
+  \coordinate (A) at (0,0); \coordinate (B) at (2.2,0);
+  \coordinate (C) at (1.45,0.9); \coordinate (D) at (0,0.9);
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw[dashed] (A)--(C);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$}; \node[above left] at (D) {$D$};
+  \node[below] at (1.1,-0.38) {图一};
+\end{scope}
+% 图二：沿 AC 折起，D' 位于折起三角面一侧，C 仍为折痕端点。
+\begin{scope}[xshift=3.2cm]
+  \coordinate (A) at (0,0); \coordinate (B) at (2.25,0);
+  \coordinate (C) at (0.25,0.42); \coordinate (P) at (1.0,1.55);
+  \draw (A)--(B)--(P)--cycle;
+  \draw[dashed] (A)--(C)--(B);
+  \draw[dashed] (P)--(C);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[left] at (C) {$C$}; \node[above] at (P) {$D'$};
+  \node[below] at (1.1,-0.38) {图二};
+\end{scope}
+% 图三：第二种折叠角的投影；线段与虚线仍按原图示意，不代表精确空间关系。
+\begin{scope}[xshift=6.35cm]
+  \coordinate (A) at (0,0); \coordinate (B) at (2.25,0);
+  \coordinate (C) at (0.48,0.38); \coordinate (P) at (1.0,1.5);
+  \draw (A)--(B)--(P)--cycle;
+  \draw[dashed] (A)--(C)--(B);
+  \draw[dashed] (P)--(C);
+  \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \node[left] at (C) {$C$}; \node[above] at (P) {$D'$};
+  \node[below] at (1.1,-0.38) {图三};
+\end{scope}
+\end{tikzpicture}
