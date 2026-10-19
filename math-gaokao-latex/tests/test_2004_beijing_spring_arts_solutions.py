@@ -47,7 +47,8 @@ class BeijingSpring2004ArtsSolutionTests(unittest.TestCase):
         self.assertIn("74950", solutions)
         self.assertIn("4017=3\\cdot13\\cdot103", solutions)
         self.assertIn(r"x\ge1/2", solutions)
-        self.assertIn("尚待独立复核", answers)
+        self.assertIn("首轮独立盲解完成", answers)
+        self.assertIn("Q16报告结论经主会话复算", answers)
         self.assertIn("尚待独立盲核", transcript)
         self.assertIn("未绑定正式 `paper_id`", transcript)
         self.assertNotIn("官方答案", answers.split("答案归属")[1].split("---")[0])
@@ -74,6 +75,25 @@ class BeijingSpring2004ArtsSolutionTests(unittest.TestCase):
             positions,
             {(1, 669), (6, 154), (19, 51), (51, 19), (154, 6), (669, 1)},
         )
+
+    def test_q14_line_distance_and_q18_time_window_boundaries_are_safe(self):
+        solutions = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn(r"m^2+n^2>0", solutions)
+        self.assertIn("发射时刻计时", solutions)
+        self.assertIn("7.943", solutions)
+
+        # For a genuine line mx+ny=3, (m,n) cannot be (0,0); then d^2=9/(m^2+n^2).
+        for norm_squared, expected_no_intersection in (
+            (Fraction(2), True),
+            (Fraction(3), False),
+            (Fraction(5), False),
+        ):
+            self.assertEqual(Fraction(9, norm_squared) > 3, expected_no_intersection)
+
+        orbit_seconds = 20 * 3600 + 49 * 60 + 10
+        launch_seconds = 20 * 3600 + 59 * 60
+        self.assertEqual(round(600000 / orbit_seconds), 8)
+        self.assertEqual(round(600000 / launch_seconds), 8)
 
     def test_project_combiner_consumes_all_questions_and_answer_blocks(self):
         sys.path.insert(0, str(PROJECT / "tools"))

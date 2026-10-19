@@ -1,23 +1,21 @@
 % Qualitative schematic of the source diagram; geometry is not to scale.
 \begin{tikzpicture}[line cap=round,line join=round,scale=0.78]
   \coordinate (O) at (0,0);
-  \coordinate (Fone) at (-1.8,0);
-  \coordinate (Ftwo) at (1.8,0);
-  \coordinate (A) at (3,0);
-  \coordinate (B) at (-3,0);
+  \coordinate (Fone) at (-0.6,0);
+  \coordinate (Ftwo) at (0.6,0);
+  \coordinate (A) at (2.2,0);
+  \coordinate (B) at (-2.2,0);
 
   % Axes and the elliptical orbit.  No unprovided distances are asserted.
-  \draw[->] (-3.45,0)--(3.55,0) node[right] {$x$};
-  \draw[->] (0,-2.75)--(0,2.85) node[above] {$y$};
-  \draw (O) ellipse (3 and 2.4);
-  % The source depicts the Earth as a circle centered at focus F_2.
-  \draw (Ftwo) circle[radius=0.82];
+  \draw[->] (-2.55,0)--(2.75,0) node[right] {$x$};
+  \draw[->] (0,-1.75)--(0,1.85) node[above] {$y$};
+  \draw (O) ellipse (2.2 and 1.55);
+  % The source depicts the Earth circle centered at F_2 and enclosing O.
+  \draw (Ftwo) circle[radius=1.05];
 
-  \fill (O) circle (1.2pt);
-  \fill (Fone) circle (1.2pt);
-  \fill (Ftwo) circle (1.2pt);
-  \fill (A) circle (1.2pt);
-  \fill (B) circle (1.2pt);
+  % Foci are shown as short axis ticks, as in the source.
+  \draw (-0.6,-0.08)--(-0.6,0.08);
+  \draw (0.6,-0.08)--(0.6,0.08);
   \node[above left] at (O) {$O$};
   \node[below] at (Fone) {$F_1$};
   \node[below] at (Ftwo) {$F_2$};
