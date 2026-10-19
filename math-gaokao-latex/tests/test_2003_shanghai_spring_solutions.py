@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[4]
 ANSWERS = ROOT / "2003/2003_数学真题_春季上海_答案要点.md"
 SOLUTIONS = ROOT / "2003/2003_数学真题_春季上海_解析正文.md"
 QUESTIONS = ROOT / "2003/2003_数学真题_春季上海_试题.md"
+COMBINED = ROOT / "2003/2003_数学真题_春季上海_含解析.md"
 SOURCE_ID = "src-81eebf19510de69780c4af1cec507bd6428e6a877b52bfd8d45b26539eab4be1"
 SOURCE_SHA256 = "a998ae0b65e90af8518be09b5dabfba5ad488c1b94cc81483dfe472858051f0f"
 sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
@@ -19,6 +20,7 @@ class ShanghaiSpring2003SolutionTests(unittest.TestCase):
         self.assertTrue(ANSWERS.is_file(), "answer key artifact is missing")
         self.assertTrue(SOLUTIONS.is_file(), "detailed solution artifact is missing")
         self.assertTrue(QUESTIONS.is_file(), "question transcript is missing")
+        self.assertTrue(COMBINED.is_file(), "generated combined source is missing")
         self.answers = ANSWERS.read_text(encoding="utf-8")
         self.solutions = SOLUTIONS.read_text(encoding="utf-8")
         self.questions = QUESTIONS.read_text(encoding="utf-8")
@@ -41,6 +43,7 @@ class ShanghaiSpring2003SolutionTests(unittest.TestCase):
 
     def test_formal_solution_source_renderer_round_trips_all_questions(self):
         combined = render_combined(self.questions, self.solutions, self.answers)
+        self.assertEqual(COMBINED.read_text(encoding="utf-8"), combined)
         extracted = extract_solution_blocks(combined, self.questions)
         self.assertEqual(render_combined(self.questions, extracted, self.answers), combined)
         self.assertEqual(len(re.findall(r"^### 第 (\d+) 题", combined, re.M)), 22)

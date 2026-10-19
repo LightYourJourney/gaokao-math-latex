@@ -47,6 +47,15 @@
 - 成本：只做一次本地内存生成器预检和一次图稿XeLaTeX/PNG烟测；未OCR、未调用外部模型/API。Token和费用未知。
 - 剩余/下一步：运行本卷全部定向测试；生成确定性的`_含解析.md`预登记源文件，准备新卷spec并核对paper_id=`gk-2003-spring-shanghai`、project_dir=`2003_春季上海卷`、question_count=22及题型范围，执行`register-papers`只读dry-run。确认dry-run只会新增此卷、绑定唯一ready source且批次号未占用之后，才考虑事务写入；正式manifest写后还要生成index/TeX、导入provenance、四版构建与逐页视觉门禁。
 
+### 2003 上海春季卷：合并源生成、登记预演与回执影响盘点（2026-10-19）
+
+- 已完成：用项目确定性`render_combined()`生成预登记的`_含解析.md`（17,297字节，SHA-256 `c47353cb2c72838ae04ab62c90259160d49189ad184b237289bdb1149ef90ee6`），并加入测试要求该派生文件与三份规范源逐字节一致、解析提取后再渲染幂等。登记规格保存在忽略目录`.work/phase4-b08/register-2003-shanghai-spring.json`；官方`source_manifest.py register-papers`只读dry-run返回`phase4-b08：1卷，仅校验，未落盘`。现场核实该批次号未占用，固定source `src-81eebf19510de69780c4af1cec507bd6428e6a877b52bfd8d45b26539eab4be1`目前`ready`且未绑定。
+- 共享回执影响：登记后的`generate_projects.py`会重建共享`index.json`；build receipt 的`generation_input_tree`包含该index，因此索引增添一卷会使原本current的receipt变stale。写入前只读运行全库`validate-receipts --all --json`：289卷中15卷`succeeded/current`、267卷`stale`、6卷`pending`、1卷缺build回执。当前不是全库干净基线；若登记并更新index，需重新正式构建/视觉复核至少原先15份current卷与新卷，不能将它们继续声称current。为避免未审慎的跨卷状态变化，本阶段尚未写manifest/source绑定/index/TeX/PDF。
+- 修改文件：新增派生`2003/2003_数学真题_春季上海_含解析.md`；更新`test_2003_shanghai_spring_solutions.py`验证派生内容；本进度。dry-run spec及所有烟测材料仅在忽略`.work/`中。项目manifest和旧卷回执均未改。
+- 验证：题面4/4、答案/解析/规范渲染5/5、图稿/正式项目生成器4/4，共13/13通过；包含XeLaTeX图稿编译和PNG烟测。登记CLI只读预演通过；全库receipt校验为`INVALID`，具体原因如上（主要267 stale，另15 succeeded、6 pending、1 missing），不是由本阶段造成。`git diff --check`通过。
+- 成本：仅本地确定性Markdown生成、13项定向测试和一次全库回执只读校验；OCR及外部模型/API调用0。实际Codex Token和费用不可见，未知。
+- 剩余/下一步：来源仍未注册，15份原current回执尚未被此阶段改变。继续执行正式注册会经共享index使它们失效；需将登记与至少15卷回执重建/视觉复核作为同一受控批次完成，或等待能合并登记的后续批次以减少index变更。获准执行登记/重建后，先导入本卷逐题provenance，再跑`generate_projects --paper ... --write`和正式四版构建；不得仅凭dry-run成功宣称已注册或验收。
+
 ## 2000 上海春季卷：扫描件书目来源核查（2026-10-19）
 
 - 已完成：对固定9页扫描件的页眉题名“高中数学能力型问题研究”作定向书目检索，并复核本地PDF元数据及source manifest现状。上海市徐汇教育部门人物简介记载况亦军“参与编写《高中数学能力型问题研究》”，可支持其参与过同名作品；但该简介未给出该作品的出版者、版次、ISBN、完整责任者或页码，也没有证据把当前扫描页182–190与该作品建立对应关系。国家图书馆与上海图书馆域名限定检索未返回该题名的书目结果；这只是本轮检索未获记录，不代表该书或馆藏不存在。扫描PDF自身Title/Author/Subject等元数据为空；页眉不足以确定书名。
