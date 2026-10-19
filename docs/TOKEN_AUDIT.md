@@ -15,6 +15,10 @@
 
 新增 `tools/export_question_ir.py`，从已登记的规范 Markdown 与逐题 provenance 输出 JSON；真实样本为 2017 全国Ⅰ理科 23 题。导出器使用稳定 `question_id`、source page/PDF hash、题面哈希和复核状态，并将项目答案证据与 `official_answer=null` 分开；哈希/绑定失配 fail-closed。现阶段不从 OCR 识别结果构造题块、不解析结构化选项或公式，也未接入缓存、路由、四版生成或八项 QA。该增量复用了已有本地文本/元数据，无 OCR/API 请求；Token/API 成本仍不可见，不能声称端到端成本下降。
 
+### OCR 页候选进入 IR 的安全边界（2026-10-20）
+
+新增 `tools/ocr_candidate_ir.py`，把现有 OCR run 封装为来源绑定的页候选，而不是题目记录。以已存 2008 延考文科第5页 MinerU run 验证：manifest SHA/source ID/page一致，输出SHA与已登记OCR输出SHA一致；但它仍是未核候选且来源没有 `paper_id`，因此输出不含 `question_id`、不触碰 canonical Markdown。候选封装会保留已有本地推理时间/缓存/资源字段，但本轮无新 OCR/API/模型调用。当前缺的是人工切题确认与review gate；不能将这项封装描述为完整 OCR→LaTeX 流水线。
+
 ### 同页 MinerU/Paddle OCR 定性试点（2026-10-15）
 
 选用现有 gold 候选 national-2008-extension-arts-page05-scan，只比较已有 PaddleOCR 输出和一次新的 MinerU 输出；二者输入对应同一张缓存页面图，SHA-256 为 17ceebb7c49cdb789120b2ab92a974309973f2982abd1e9423f0db495205904a（来源 PDF SHA fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2，第5页，144 DPI）。因 MinerU CLI 接受 PDF，本次将该原始栅格无损放入单页 PDF；包装 PDF SHA 为 27440850180b66e3528e61a7ff1c028db5eb0e24af5215482746cfa84114f919。输出 SHA 为 01202339eb47a0d15ea672ab3493c55af92f6a45cbae2d9b26d861a2ae8fe70e，原始 Markdown 暂存于忽略目录 math-gaokao-latex/.work/mineru-output/。

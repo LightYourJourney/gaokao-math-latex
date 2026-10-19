@@ -12,6 +12,14 @@
 - 成本/边界：本阶段零 OCR、零聊天模型/API 调用；只解析既有 Markdown 和 JSON，未复用缓存计数/耗时基准，Codex Token、API 费用仍未知，不声称节省比例。IR 是规范转录的结构化封装，不是 OCR 结果，不自动拆分题干/选项/公式，也不构成数学正确性或正式验收。
 - 剩余/下一步：让 IR 可消费可缓存的 OCR 页面结果仍未实现；OCR gold 仍待人工核对，混合页区域识别、模型路由、题目局部重建与端到端八项质量报告未闭环。继续前应先定义 OCR 候选到人工确认题块的字段/状态转换，并用一份现有固定来源页做 fail-closed 集成测试；试卷转录方面仍按 manifest 与各卷回执推进，未发现已具备完整来源证据且无 issue 的新转录目标时不臆造身份或重复做已完成卷。
 
+## 工程阶段：OCR 整页候选安全接入与来源绑定（2026-10-20）
+
+- 已完成：新增 `tools/ocr_candidate_ir.py`，将 OCR run 转为独立页级候选 IR。拒绝缺失/歧义 source ID、来源非 ready、PDF SHA 与 manifest 不同、非法页码、空文本和缺失引擎身份；保留候选文本 SHA、渲染 SHA/DPI、bbox 坐标系、模型版本与已有耗时/缓存/资源信息。输出显式 `paper_id`（来源未绑定时为 null）、`question_id=null`、`assignment_status=unassigned-page-level`、`recognized_unverified`、`needs-review`，绝不将整页 OCR 猜切成题目。
+- 真实样本：复用 `benchmarks/ocr-runs.jsonl` 中 2008 延考区文科第5页 MinerU 4.0.12/ONNX 已存记录；source ID `src-afb8c527efcbf4f06deb050f6d4d636069bbd1d2d5c0bd2d2ca8d42b15d7649e`、manifest PDF SHA `fdfb4e9e…a1e88c2`、页码5均一致。导出 1651 字候选，文本 SHA 与记录 `output_sha256` 一致，状态仍待人工核对，且该 source `paper_id=null`。本轮未重新 OCR：记录中的原推理耗时32.37秒、CLI峰值RSS 65,241,088 bytes；聊天Token与实际费用未知。
+- 修改文件：新增 `tools/ocr_candidate_ir.py`、`tests/test_ocr_candidate_ir.py`；更新本 `README.md`、本 `PROGRESS.md` 和 `docs/TOKEN_AUDIT.md`。既存规范试题/答案、manifest、OCR gold、OCR run、缓存及 `-.png` 均未修改。
+- 验证：新转换器测试 5/5、既有 `test_ocr_pdf.py` 17/17 通过；新增回归覆盖 run/meta 的 source ID、PDF SHA、页码冲突及登记 OCR 输出 SHA 失配。CLI 对真实 JSONL 第2条成功输出 JSON；标准库解析确认 `question_id=null`、`paper_id=null`、`needs-review`，输出 SHA 精确匹配 MinerU 元数据。全套测试在最后一轮输入一致性加固前运行：1483 项中1469通过、13跳过、1失败；唯一失败仍是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，392条缓存派生状态漂移，和前次全套一致。加固后重跑的相关测试全部通过；全套未因隔离校验变更而第三次重跑。`git diff --check`通过。未重跑OCR推理、未确认题面、未编译LaTeX或视觉校样。
+- 剩余/下一步：OCR candidates 尚未人工切题、比对扫描页并转成 canonical Markdown/provenance；2008来源未绑定paper_id，本阶段没有擅自绑定。后续需通过人工确认工作流写出有bbox与源页证据的题目候选，再复用现有题面哈希/provenance门禁验收；OCR gold、混合页区域识别、任务路由、三版本输出与八项自动QA仍未完成。
+
 ## 1992 三南卷：题面盲核与Q15来源问题登记（2026-10-20）
 
 - 已完成：独立题面核对覆盖Q1–Q28，未发现转录与固定来源不符；发现原卷Q15的A、D两项逐字表达同一命题。独立解答盲核确认Q2–Q14、Q16–Q28现有推导成立；Q1的`arg`主值约定仍有歧义。主会话直接查看固定PDF原页并用`pdftotext -layout`复核Q15，确认“充分但不必要”既非充分也非必要，A、D重复且B、C也不适用。题面按原件保留；解答改为“无正确选项”，不猜测原拟选项，结构化选择答案置空。
