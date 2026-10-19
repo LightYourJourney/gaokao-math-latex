@@ -25,6 +25,8 @@ from generate_projects import ProjectSources, generate_project, validate_project
 QUESTIONS = ROOT / "2015/2015_数学真题_湖南理_试题.md"
 SOLUTION = ROOT / "2015/2015_数学真题_湖南理_数学独立推导草稿.md"
 ANSWER_KEY = ROOT / "2015/2015_数学真题_湖南理_答案要点.md"
+SOLUTION_BODY = ROOT / "2015/2015_数学真题_湖南理_解析正文.md"
+COMBINED = ROOT / "2015/2015_数学真题_湖南理_含解析.md"
 CONVERTER = ROOT / "math-gaokao-2017-2026/tools/md2tex.py"
 REVIEW = ROOT / "2015/2015_湖南理科_来源校对.json"
 
@@ -36,11 +38,20 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
             ("question_transcript", QUESTIONS),
             ("generated_solution", SOLUTION),
             ("generated_answer_key", ANSWER_KEY),
+            ("derived_sources", SOLUTION_BODY),
         ):
+            if section == "derived_sources":
+                receipt = review[section]["solution_body"]
+            else:
+                receipt = review[section]
             self.assertEqual(
-                review[section]["sha256"],
+                receipt["sha256"],
                 hashlib.sha256(path.read_bytes()).hexdigest(),
             )
+        self.assertEqual(
+            review["derived_sources"]["combined_rendered"]["sha256"],
+            hashlib.sha256(COMBINED.read_bytes()).hexdigest(),
+        )
         self.assertEqual(
             review["generated_answer_key"]["status"], "generated-nonofficial-draft"
         )
@@ -96,6 +107,19 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         self.assertEqual(converted.warnings, ())
         self.assertEqual(set(converted.referenced_figures), set(figure_map.values()))
         self.assertEqual(len(converted.referenced_figures), len(links))
+
+    def test_derived_markdown_matches_deterministic_project_renderers(self):
+        question_text = QUESTIONS.read_text(encoding="utf-8")
+        solution_text = SOLUTION.read_text(encoding="utf-8")
+        answer_text = ANSWER_KEY.read_text(encoding="utf-8")
+        expected_body = extract_solution_blocks(solution_text, question_text)
+        expected_combined = render_combined(question_text, expected_body, answer_text)
+        self.assertEqual(SOLUTION_BODY.read_text(encoding="utf-8"), expected_body)
+        self.assertEqual(COMBINED.read_text(encoding="utf-8"), expected_combined)
+        self.assertIn("非官方", expected_body)
+        self.assertIn("非官方", expected_combined)
+        self.assertIn("q=0", expected_combined)
+        self.assertIn("q=3", expected_combined)
 
     def test_formal_project_generator_accepts_registered_figure_paths(self):
         project_dir = "2015_湖南卷_理科"
