@@ -6203,3 +6203,12 @@
 - 验证：从固定PDF运行`pdfinfo`和限定两页的`pdftotext -layout`，并查看既有160dpi本地页渲染确认封面标题、页面尺寸和页码；复核manifest原始记录仍为`source_state=ready,paper_id=null`。目录路径检索确认2015湖南理科尚无paper记录；正式生成路径要求由`generate_projects.py`及`register_papers()`源代码直接确认。未运行OCR、API、编译或写manifest。
 - 剩余/下一步：先统一五个矢量图稿的规范存放位置及题面链接，使正式生成器的登记路径匹配；补齐`_解析正文.md`与`_含解析.md`的确定性生成产物，再用`register-papers --write=false`预演；审核预演记录的题数、分卷结构、来源双向绑定、草稿/阻塞状态和事务目标后，才写入manifest并构建本卷。当前来源发布者、Q14公比约定和官方答案仍未核实，未完成最终四版编译/视觉门禁；本卷保持`paper_id=null`。
 - 成本：未重新渲染PDF、未调用OCR/外部模型/API/LaTeX；Token与费用未知。
+
+### 2015 湖南理科：正式生成器题面/矢量路径适配（2026-10-19）
+
+- 已完成：将五份TikZ源移入标准项目目录`2015_湖南卷_理科/figures/`并保持文件内容/登记SHA不变；题面矢量链接改为相对该项目目录的规范链接；题面题号改为正式转换器能识别的inline格式，同时保留题面小问原生`(1)/(2)`写法，Q16标题仍为单一题号“16．三选二”。来源校对JSON同步图稿目录和题面SHA。
+- 根因及修正：先以真实`generate_project()`写测试，首次红灯准确发现五个图稿链接不映射；迁移后排查发现测试夹具仍从旧目录搜图，且随后生成门禁又暴露题面`### 第 N 题`不会生成`\gkti`题号。按项目现行格式转为inline题号后，继续发现inline题面小问锚点必须是普通`(k)`，于是只对解析稿保留`#### (k)`解析锚点、题面恢复原格式。没有改数学正文/答案结论，也没有更改共享生成器或转换器。
+- 修改文件：题面、来源校对JSON、`test_2015_hunan_science_transcription.py`及`test_2015_hunan_science_generation_inputs.py`；五份`.tex`从旧草稿目录迁至标准项目`figures/`；本进度。
+- 验证：临时目录中以实际`ProjectSources`运行`generate_project()`并运行`validate_project_result()`，结果题目/解析题号1–21连续、所有答案块及小问集合通过、五图各引用2次，目标仅为`questions.tex`和`answers.tex`且未写入仓库；新增正式生成回归。两份2015湖南理科定向测试共13/13通过，来源JSON解析、图稿登记SHA和题面SHA通过，`git diff --check`通过。未运行XeLaTeX/latexmk；这证明共享片段生成正确，不代表四个独立入口编译完成。
+- 剩余/下一步：生成并登记规范`_解析正文.md`与`_含解析.md`，形成精确的`register-papers`规格并只读预演；审核状态和source双向绑定后再落manifest。随后正式生成项目文件、补建/接入四个可独立编译入口、运行XeLaTeX/latexmk与逐页校样。官方答案缺失、Q14零公比定义未决、源发布者未核实；当前paper仍未注册、不可宣称完成。
+- 成本：未重跑OCR、未调用外部API或LaTeX编译；测试只执行本地转换器；Token与费用未知。

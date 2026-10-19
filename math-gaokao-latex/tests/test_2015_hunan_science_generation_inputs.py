@@ -1,6 +1,8 @@
 import hashlib
 import json
+import shutil
 import sys
+import tempfile
 import unittest
 import importlib.util
 import re
@@ -17,6 +19,7 @@ from solution_sources import (  # noqa: E402
     parse_question_blocks,
     render_combined,
 )
+from generate_projects import ProjectSources, generate_project, validate_project_result  # noqa: E402
 
 
 QUESTIONS = ROOT / "2015/2015_数学真题_湖南理_试题.md"
@@ -92,6 +95,47 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         self.assertEqual(converted.warnings, ())
         self.assertEqual(set(converted.referenced_figures), set(figure_map.values()))
         self.assertEqual(len(converted.referenced_figures), len(links))
+
+    def test_formal_project_generator_accepts_registered_figure_paths(self):
+        project_dir = "2015_湖南卷_理科"
+        vector_dir = ROOT / "math-gaokao-latex/2015_湖南卷_理科/figures"
+        vector_files = sorted(vector_dir.glob("*.tex"))
+        figures = tuple(
+            (f"{project_dir}/figures/{path.name}", 2) for path in vector_files
+        )
+        sources = ProjectSources(
+            paper_id="gk-2015-regular-hunan-science",
+            project_dir=project_dir,
+            title="2015 年·湖南卷·理科",
+            question_count=21,
+            questions=QUESTIONS.relative_to(ROOT).as_posix(),
+            answer_key=ANSWER_KEY.relative_to(ROOT).as_posix(),
+            solution_body=SOLUTION.relative_to(ROOT).as_posix(),
+            figures=figures,
+        )
+        with tempfile.TemporaryDirectory(prefix="hunan-science-generation-") as temp:
+            repo = Path(temp)
+            for source in (QUESTIONS, ANSWER_KEY, SOLUTION):
+                target = repo / source.relative_to(ROOT)
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+            for source in vector_files:
+                target = (
+                    repo / "math-gaokao-latex" / project_dir
+                    / "figures" / source.name
+                )
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+
+            result = generate_project(repo, sources)
+            self.assertEqual(validate_project_result(sources, result), ())
+            self.assertEqual(
+                set(result.targets),
+                {
+                    f"math-gaokao-latex/{project_dir}/questions.tex",
+                    f"math-gaokao-latex/{project_dir}/answers.tex",
+                },
+            )
 
 
 if __name__ == "__main__":

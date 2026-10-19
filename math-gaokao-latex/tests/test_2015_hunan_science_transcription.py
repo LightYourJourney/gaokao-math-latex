@@ -38,7 +38,7 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         )
 
     def test_all_21_questions_are_present_in_three_source_sections(self):
-        numbers = [int(n) for n in re.findall(r"^### 第 (\d+) 题", self.transcript, re.M)]
+        numbers = [int(n) for n in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
         self.assertEqual(numbers, list(range(1, 22)))
         self.assertEqual(self.review["question_transcript"]["question_numbers"], numbers)
         self.assertEqual(self.review["question_transcript"]["question_types"], {
