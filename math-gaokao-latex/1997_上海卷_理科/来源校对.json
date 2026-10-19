@@ -73,7 +73,7 @@
     {"question_number": 17, "question_id": "1997-shanghai-science-q017", "question_type": "solution", "score": 10, "source_pages": [2], "answer_pages": [4, 5], "variants": ["common"]},
     {"question_number": 18, "question_id": "1997-shanghai-science-q018", "question_type": "solution", "score": 10, "source_pages": [2, 3], "answer_pages": [4], "variants": ["common"]},
     {"question_number": 19, "question_id": "1997-shanghai-science-q019", "question_type": "solution", "score": 14, "source_pages": [3], "answer_pages": [4, 5], "variants": ["common"]},
-    {"question_number": 20, "question_id": "1997-shanghai-science-q020", "question_type": "solution", "score": 16, "source_pages": [3], "answer_pages": [5, 6], "variants": ["A2", "B2"]},
+    {"question_number": 20, "question_id": "1997-shanghai-science-q020", "question_type": "solution", "score": 16, "source_pages": [3], "answer_pages": [5, 6], "variants": ["A2", "B2"], "variant_subpart_scores": {"A2": [8, 8], "B2": [6, 10]}},
     {"question_number": 21, "question_id": "1997-shanghai-science-q021", "question_type": "solution", "score": 18, "source_pages": [3], "answer_pages": [6, 7], "variants": ["common"]},
     {"question_number": 22, "question_id": "1997-shanghai-science-q022", "question_type": "solution", "score": 18, "source_pages": [4], "answer_pages": [7], "variants": ["common"]}
   ],
@@ -101,12 +101,13 @@
     "external_chat_api_cost": "unknown"
   },
   "verification": {
-    "source_page_visual_review": {"pages": [1, 2, 3, 4, 5, 6, 7], "status": "transcriber-visual-inspection", "resolution": "200dpi", "independent_review": false},
+    "source_page_visual_review": {"pages": [1, 2, 3, 4, 5, 6, 7], "status": "transcriber-visual-inspection", "resolution": "200dpi", "independent_review": true},
+    "blind_transcription_review": {"reviewer": "subagent-01a15645-7078-7f22-b68f-2b82efa6397f", "reviewed_pages": [1, 2, 3, 4, 5, 6, 7], "scope": "source-only blind transcription of question statements, variants, printed answer conclusions, and high-risk notation", "result": "one material discrepancy corrected: Q20 variant-specific subpart scores (A2 8+8; B2 6+10)", "status": "completed"},
     "transcription_tests": {"suite": "test_1997_shanghai_science_sources.py", "passed": 7, "status": "passed"},
     "figure_smoke": {"status": "passed", "tool": "latexmk 4.88 + XeLaTeX (TeX Live 2026)", "page_count": 4, "paper_size": "A4", "visual_review": "passed", "log_diagnostics": "no-error-or-missing-character; XeCJK selected local Fandol fallback", "raster_outputs_committed": false},
     "independent_math_review": "main-session-derivation-draft-pending-blind-review"
   },
-  "draft_sha256": "55fb5a067bee435bf98c03bd5e72243b25850057e92ec5da5da2f1a4c3980cd1",
+  "draft_sha256": "b16489304283813a6d4c4fce1bb1a2facc5188b57d7a36d68fc745965877846a",
   "answers_draft_sha256": "e23d9d14919bde68de0010feb127e137576f82922fbff85a577764b07b3a6496",
   "solutions_draft_sha256": "67f320cd3ec73a00bab96430d22a8ab1cf7247ea000ca33de8803a4bf7b7ba24",
   "math_review_draft_sha256": "81cf5db2f2b0c5eb9544cdc05ca327e2597806213a4ab0fe0396b3f888219557"

@@ -6869,3 +6869,12 @@
 - 修改文件：四卷 `receipts/build.json`、`receipts/review.json`，`source-manifest.json`、`reports/phase2-b92.md`、`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`reports/baseline.md`及本进度文件。`manifest.csv`未变；试题、答案、解析、TikZ源及原始PDF未改。视觉PNG和16份ignored workitem留在项目`.work/phase2-b92/`；正式PDF和LaTeX源保留。
 - 验证：来源manifest通过；四卷provenance `OK`；build receipts 4 succeeded/0 stale、failed、pending；review batch `FINALIZED`。四项生成器 `--check`及`solution_sources check-batch`均通过；全量报告首次检查发现六份旧投影，使用官方`report.py render --all`刷新后`check --all`通过；`test_review_receipts.py` 66/66通过。清理器dry-run明确列出本批96个XeLaTeX辅助文件，执行后96/96移除，正式PDF、LaTeX源和build diagnostics保留。OCR和外部API调用0；Codex Token及实际费用不可见。
 - 剩余/下一步：2003批次已闭环，不再重做其89题转录/解答或本次视觉检查。长期试卷语料尚未完成；继续前依据manifest与本进度选择最早未闭环/受阻后可执行的任务，维持来源身份及已登记issue边界，不要因本批`closed`误报全项目完成。精确提交本批闭环文件，不push。
+
+### 1997 上海理科：独立盲转录核对与选做分值纠正（2026-10-20）
+
+- 恢复依据：沿用既有固定来源 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`（PDF SHA-256 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`）和已转录的22题稿；此前记录要求先独立盲核，不重复转录/OCR。审阅者仅收到 7 页200dpi原始扫描图，未见题稿、答案、解析、OCR或Git历史，未写项目文件。
+- 已完成：独立审阅核对全部22题、A₁/B₁与A₂/B₂变体、印载答案/解析结论和高风险符号；主会话按页图复核差异。发现第20题分值误把B₂组的6+10套用于整题，A₂组原图实际为8+8。题面已按组拆开记载；来源校对JSON登记了变体分小题分值、盲核范围/差异及新题稿SHA。未改答案/解析、官方答案归属、来源版次或数学结论。
+- 修改文件：`1997_上海卷_理科/题面转录草稿.md`、`1997_上海卷_理科/来源校对.json`、`tests/test_1997_shanghai_science_sources.py`及本进度文件。规范源未晋升；`paper_id=null`、出版来源未核、`official_answer=null`保持不变。
+- 验证：针对来源稿与精确数学回归共14项测试全部通过；来源JSON语法、题稿SHA绑定、`git diff --check`均通过。OCR评分器实跑仍为2个pending gold、0个scored run；因此没有OCR准确率结论。
+- 剩余/下一步：独立盲转录仅复核来源字面，不等同于独立数学证明。继续前需由独立审阅者核验数学推导、处理题20分值差异对分值元数据/生成输入的影响，并查明来源出版者/版次；未完成前不得把草稿登记为canonical或complete，也不重跑已完成的22题OCR和题面转录。OCR gold仍待人类签核，不能把agent审阅伪称人工gold。
+- 成本：本阶段没有新增OCR或外部OCR/API调用；使用一次隔离盲审图像审阅，Token/实际费用不可见，记未知，不声称节省比例。

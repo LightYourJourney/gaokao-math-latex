@@ -56,8 +56,14 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
             {"groups": ["A1", "B1"], "question_numbers": [13, 14, 15, 16], "choose_one": True},
             {"groups": ["A2", "B2"], "question_numbers": [20], "choose_one": True},
         ])
+        self.assertEqual(items[19]["variant_subpart_scores"], {"A2": [8, 8], "B2": [6, 10]})
         for group in ("A₁组", "B₁组", "A₂组", "B₂组"):
             self.assertIn(group, self.question)
+        self.assertIn("A₂组（非试点校）：第 1 小题满分 8 分，第 2 小题满分 8 分。", self.question)
+        self.assertIn("B₂组（试点校）：第 1 小题满分 6 分，第 2 小题满分 10 分。", self.question)
+        blind_review = self.record["verification"]["blind_transcription_review"]
+        self.assertEqual(blind_review["status"], "completed")
+        self.assertEqual(blind_review["reviewed_pages"], list(range(1, 8)))
 
     def test_canonical_parser_recognizes_written_subparts(self):
         blocks = parse_question_blocks(self.question)
