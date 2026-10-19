@@ -9,6 +9,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[4]
 PAPER = REPO / "2000/2000_数学真题_春季北京安徽理_试题.md"
+ANSWERS = REPO / "2000/2000_数学真题_春季北京安徽理_答案要点.md"
+SOLUTIONS = REPO / "2000/2000_数学真题_春季北京安徽理_解析正文.md"
 FIGURES = REPO / "2000/figures"
 FIGURE_FILES = {
     14: "gaokao_2000_spring_beijing_anhui_science_q14_cubic.tex",
@@ -185,6 +187,28 @@ class BeijingAnhuiSpring2000TranscriptionTests(unittest.TestCase):
         self.assertNotIn("## 答案", self.text)
         self.assertNotIn("## 解析", self.text)
         self.assertIn("本稿不转录其中解答", self.text)
+
+    def test_independent_answer_and_solution_drafts_cover_all_questions(self):
+        answers = ANSWERS.read_text(encoding="utf-8")
+        solutions = SOLUTIONS.read_text(encoding="utf-8")
+        for document in (answers, solutions):
+            self.assertIn(
+                "source_id: src-a0269cc0034b8f71793418f0abb911e424058f04f18389e6ff78004045ca1eba",
+                document,
+            )
+            self.assertIn(
+                "source_sha256: 37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce",
+                document,
+            )
+            self.assertIn("official_answer: null", document)
+            self.assertIn("solution_status: draft-independent-solutions-pending-cross-check", document)
+        numbers = [int(value) for value in re.findall(r"^\*\*(\d+)．\*\*", solutions, re.M)]
+        self.assertEqual(numbers, list(range(1, 25)))
+        self.assertIn("| 答案 | D | B | C | D | C | B | B | B | D | B | A | D | C | A |", answers)
+        self.assertIn("| 答案 | $3$ | $2\\sqrt2$ | $210$ | ①④ |", answers)
+        self.assertIn("填 **①④**", solutions)
+        self.assertIn("若允许$a=b$", answers)
+        self.assertIn("若不把$a,b$理解为异线", solutions)
 
 
 if __name__ == "__main__":

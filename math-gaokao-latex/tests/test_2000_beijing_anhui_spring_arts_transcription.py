@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2000/2000_数学真题_春季北京安徽文_试题.md"
 INVENTORY = ROOT / "2000/2000_数学真题_春季北京安徽文_图表清单.md"
+ANSWERS = ROOT / "2000/2000_数学真题_春季北京安徽文_答案要点.md"
+SOLUTIONS = ROOT / "2000/2000_数学真题_春季北京安徽文_解析正文.md"
 FIGURES = ROOT / "2000/figures"
 SOURCE_ID = "src-6d9f6ee269b4dd80d69001f2f4399956b5d037bfbf1d383a78bfdb281c440e6b"
 SOURCE_SHA256 = "b9552b8354735296f6ea1ed051085e094e4af0c14ff97ada2dbd4e579b14287f"
@@ -118,6 +120,28 @@ class BeijingAnhuiSpring2000ArtsTranscriptionTests(unittest.TestCase):
     def test_transcript_contains_no_raster_figure_links(self):
         self.assertNotIn("![", self.transcript)
         self.assertNotRegex(self.transcript, r"(?i)\]\([^)]*\.(?:png|jpe?g|gif|webp|tiff?)\)")
+
+    def test_independent_answer_and_solution_drafts_cover_all_questions(self):
+        answers = ANSWERS.read_text(encoding="utf-8")
+        solutions = SOLUTIONS.read_text(encoding="utf-8")
+        for document in (answers, solutions):
+            self.assertIn(f"source_id: {SOURCE_ID}", document)
+            self.assertIn(f"source_sha256: {SOURCE_SHA256}", document)
+            self.assertIn("official_answer: null", document)
+            self.assertIn("solution_status: draft-independent-solutions-pending-cross-check", document)
+        numbers = [int(value) for value in re.findall(r"^\*\*(\d+)．\*\*", solutions, re.M)]
+        self.assertEqual(numbers, list(range(1, 25)))
+        self.assertIn("| 答案 | D | A | C | B | C | B | B | B | D | A | C | D | C | A |", answers)
+        self.assertIn("仅（B）关于 $x=y$ 对称", answers)
+        self.assertIn("若允许$a=b$", answers)
+        self.assertNotIn("A、B 都关于", solutions)
+        self.assertNotIn("官方答案", solutions.split("## 一、选择题", 1)[1])
+        self.assertIn("**19．** 令$t=\\lg a$", solutions)
+        self.assertIn("**20．** 由正弦定理", solutions)
+        self.assertIn("**21．** 取$a=1$作长度单位", solutions)
+        self.assertIn("二面角$\\beta-BC-\\gamma=45^\\circ$", solutions)
+        self.assertIn("**24．** (1) 降价后新增用电量", solutions)
+        self.assertNotIn("f_1", solutions)
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and Poppler are required")
     def test_all_new_tikz_sources_compile_and_render(self):
