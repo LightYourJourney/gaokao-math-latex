@@ -32,9 +32,10 @@ class ShanghaiSpring2003TranscriptionTests(unittest.TestCase):
         self.assertIn("**17．", self.text)
         self.assertIn("**22．", self.text)
 
-    def test_source_figures_remain_explicitly_pending_as_vector_art(self):
+    def test_source_figures_are_linked_to_vector_art(self):
         self.assertIn("第 18 题函数图象和第 19 题三棱柱图形均在 PDF 第 1 页", self.text)
-        self.assertIn("待按原图重绘为 TikZ 矢量图", self.text)
+        self.assertIn("figures/gaokao_2003_shanghai_spring_q18_sine.tex", self.text)
+        self.assertIn("figures/gaokao_2003_shanghai_spring_q19_prism.tex", self.text)
         self.assertNotRegex(self.text, r"(?i)\]\([^)]*\.(?:png|jpe?g|gif|webp|tiff?)\)")
 
     def test_high_risk_formula_transcription_matches_the_visual_source(self):
