@@ -40,6 +40,10 @@ class BeijingArts2002TranscriptionTests(unittest.TestCase):
         self.assertIsNone(self.review["paper_id"])
         self.assertIsNone(self.review["official_answer"])
         self.assertEqual(
+            self.review["transcription"]["secondary_text_layer_cross_check"]["status"],
+            "partial-text-layer-review-compared-to-source-raster",
+        )
+        self.assertEqual(
             hashlib.sha256(TRANSCRIPT.read_bytes()).hexdigest(),
             self.review["transcription"]["sha256"],
         )
@@ -74,6 +78,7 @@ class BeijingArts2002TranscriptionTests(unittest.TestCase):
             r"\dfrac{6\pi}{5}",
             r"\dfrac{7\pi}{5}",
             r"x_{n+1}=\frac12\left(x_n+\frac{a}{x_n}\right)",
+            r"x_n\geqslant\sqrt a",
             r"V_{\text{估}}=S_{\text{中截面}}\,h",
             r"V=\frac{h}{6}\left(S_{\text{上底面}}+4S_{\text{中截面}}+S_{\text{下底面}}\right)",
             r"f(a\cdot b)=a f(b)+b f(a)",
@@ -97,6 +102,10 @@ class BeijingArts2002TranscriptionTests(unittest.TestCase):
             self.assertIn(r"\begin{tikzpicture}", source)
             self.assertIn(r"\end{tikzpicture}", source)
             self.assertIn(asset["path"].removeprefix("math-gaokao-latex/"), self.transcript)
+        q12 = next(a for a in assets if a["item"] == "q12-convexity-graphs")
+        q12_source = (ROOT / q12["path"]).read_text(encoding="utf-8")
+        self.assertIn("change of concavity", q12_source)
+        self.assertNotIn(r"\draw[fill=white] (2", q12_source)
         self.assertIn("第一单位时间", self.transcript)
         self.assertIn("第三单位时间", self.transcript)
         self.assertIn("机器号", self.transcript)

@@ -15,17 +15,16 @@
 \begin{scope}
   \draw[thick] plot[smooth] coordinates {(0,1.0) (.35,.25) (.75,-.38) (1.15,-.62) (1.55,-.48) (1.85,-.10) (2,0)};
 \end{scope}
-% f_2: arch-like (concave) curve, with the right endpoint shown open.
+% f_2: arch-like (concave) curve; the endpoint at x=1 is part of [0,1].
 \begin{scope}[xshift=3.3cm]
-  \draw[thick] plot[smooth] coordinates {(0,-.3) (.35,.52) (.8,1.05) (1.2,1.22) (1.6,1.05) (1.9,.42)};
-  \draw[fill=white] (2,.2) circle (1.5pt);
+  \draw[thick] plot[smooth] coordinates {(0,-.3) (.35,.52) (.8,1.05) (1.2,1.22) (1.6,1.05) (1.88,.82) (2,.72)};
 \end{scope}
 % f_3: increasing line segment from the origin to the right endpoint.
 \begin{scope}[xshift=6.6cm]
   \draw[thick] (0,0)--(2,1.25);
 \end{scope}
-% f_4: S-shaped curve with an inflection, qualitative only.
+% f_4: S-shaped curve with a change of concavity, qualitative only.
 \begin{scope}[xshift=9.9cm]
-  \draw[thick] plot[smooth] coordinates {(0,-.88) (.28,-.7) (.6,-.42) (.95,-.08) (1.2,.18) (1.48,.47) (1.76,.82) (2,1.1)};
+  \draw[thick] plot[smooth] coordinates {(0,-.85) (.35,-.8) (.7,-.62) (1,-.25) (1.25,.25) (1.45,.65) (1.7,.9) (2,1.02)};
 \end{scope}
 \end{tikzpicture}
