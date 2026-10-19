@@ -6194,3 +6194,12 @@
 - 验证：新增回归覆盖题面/解析/答案小问集合、21题唯一性、Q14条件分支与非官方标记、登记SHA；真实调用`extract_solution_blocks`和`render_combined`后再以严格模式运行`md2tex.convert_markdown`，5个已登记矢量图均被引用、无转换警告。相关两组测试12/12通过；来源JSON解析与`git diff --check`通过。首次端到端测试发现Q18答案未按小问拆分，已修复并复测通过。未重新OCR、未运行XeLaTeX或生成文件构建；本阶段是内存确定性输入dry-run，不代表正式四版构建验收。
 - 剩余/下一步：需复核解析/答案源的题面语义与版式呈现，再通过项目manifest正式生成目标文件；之后对真实输出执行XeLaTeX、视觉校样和八项质量门禁。固定源身份/发布版本未认证，官方答案缺失，Q14公比约定未决；因此保持`paper_id=null`、draft，不注册为完成卷。
 - 成本：OCR、外部模型/API与XeLaTeX调用均为0；Codex Token、缓存命中和实际费用不可得，未知，不报告节省率。
+
+### 2015 湖南理科：固定来源身份与正式生成路径核验（2026-10-19）
+
+- 已确认：固定PDF第一页原文标题为“2015 普通高等学校招生考试（湖南卷理）”，PDF为2页A3横向，页脚印刷页955–956；原件哈希仍与manifest中`src-b53d0d464f06084b1f8ca8e0bcc2927b503df76dc31ce0ba00095e9eacb1a4c8`登记的60d271…160b相符。来源身份可确认为2015湖南理科试卷；PDF不含出版机构/公开发布平台信息，不能据此声称发布者已核实；官方答案仍缺失。
+- 关键发现：正式`register-papers`只接受仓库内既存三份规范Markdown，并按统一`markdown_prefix`约定`_解析正文.md`；正式生成器要求每个manifest图稿存在于`math-gaokao-latex/<project_dir>/figures/`，且题面链接能相对解析到同一登记路径。当前五份TikZ稿位于`2015/2015_湖南理科_图稿/`，题面也链接该目录，因此目前的内存dry-run尚未覆盖正式生成器的路径/图稿门禁，不能直接注册或正式构建。
+- 修改文件：仅本`PROGRESS.md`。未改source-manifest、paper_id、试卷题面/答案/解析和图稿，也没有写入主检出。
+- 验证：从固定PDF运行`pdfinfo`和限定两页的`pdftotext -layout`，并查看既有160dpi本地页渲染确认封面标题、页面尺寸和页码；复核manifest原始记录仍为`source_state=ready,paper_id=null`。目录路径检索确认2015湖南理科尚无paper记录；正式生成路径要求由`generate_projects.py`及`register_papers()`源代码直接确认。未运行OCR、API、编译或写manifest。
+- 剩余/下一步：先统一五个矢量图稿的规范存放位置及题面链接，使正式生成器的登记路径匹配；补齐`_解析正文.md`与`_含解析.md`的确定性生成产物，再用`register-papers --write=false`预演；审核预演记录的题数、分卷结构、来源双向绑定、草稿/阻塞状态和事务目标后，才写入manifest并构建本卷。当前来源发布者、Q14公比约定和官方答案仍未核实，未完成最终四版编译/视觉门禁；本卷保持`paper_id=null`。
+- 成本：未重新渲染PDF、未调用OCR/外部模型/API/LaTeX；Token与费用未知。
