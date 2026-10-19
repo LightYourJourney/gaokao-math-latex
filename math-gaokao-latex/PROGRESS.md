@@ -50,11 +50,27 @@
 ### 2003 上海春季卷：合并源生成、登记预演与回执影响盘点（2026-10-19）
 
 - 已完成：用项目确定性`render_combined()`生成预登记的`_含解析.md`（17,297字节，SHA-256 `c47353cb2c72838ae04ab62c90259160d49189ad184b237289bdb1149ef90ee6`），并加入测试要求该派生文件与三份规范源逐字节一致、解析提取后再渲染幂等。登记规格保存在忽略目录`.work/phase4-b08/register-2003-shanghai-spring.json`；官方`source_manifest.py register-papers`只读dry-run返回`phase4-b08：1卷，仅校验，未落盘`。现场核实该批次号未占用，固定source `src-81eebf19510de69780c4af1cec507bd6428e6a877b52bfd8d45b26539eab4be1`目前`ready`且未绑定。
-- 共享回执影响：登记后的`generate_projects.py`会重建共享`index.json`；build receipt 的`generation_input_tree`包含该index，因此索引增添一卷会使原本current的receipt变stale。写入前只读运行全库`validate-receipts --all --json`：289卷中15卷`succeeded/current`、267卷`stale`、6卷`pending`、1卷缺build回执。当前不是全库干净基线；若登记并更新index，需重新正式构建/视觉复核至少原先15份current卷与新卷，不能将它们继续声称current。为避免未审慎的跨卷状态变化，本阶段尚未写manifest/source绑定/index/TeX/PDF。
+- 共享回执影响（2026-10-20更正）：登记前只读基线确为289卷、15卷`succeeded/current`、267卷`stale`、6卷`pending`、1卷缺build回执。后来核对当前`build_projects.py:generation_input_paths()`和receipt保存的输入树，发现`index.json`并不在build输入中；因此**仅新增index条目不会使原15份current回执stale**。上一条“必须重建15卷”的判断不准确，现以实现和实测为准。此处仅修正影响分析，不改写当时实际发生的历史。
 - 修改文件：新增派生`2003/2003_数学真题_春季上海_含解析.md`；更新`test_2003_shanghai_spring_solutions.py`验证派生内容；本进度。dry-run spec及所有烟测材料仅在忽略`.work/`中。项目manifest和旧卷回执均未改。
 - 验证：题面4/4、答案/解析/规范渲染5/5、图稿/正式项目生成器4/4，共13/13通过；包含XeLaTeX图稿编译和PNG烟测。登记CLI只读预演通过；全库receipt校验为`INVALID`，具体原因如上（主要267 stale，另15 succeeded、6 pending、1 missing），不是由本阶段造成。`git diff --check`通过。
 - 成本：仅本地确定性Markdown生成、13项定向测试和一次全库回执只读校验；OCR及外部模型/API调用0。实际Codex Token和费用不可见，未知。
 - 剩余/下一步：来源仍未注册，15份原current回执尚未被此阶段改变。继续执行正式注册会经共享index使它们失效；需将登记与至少15卷回执重建/视觉复核作为同一受控批次完成，或等待能合并登记的后续批次以减少index变更。获准执行登记/重建后，先导入本卷逐题provenance，再跑`generate_projects --paper ... --write`和正式四版构建；不得仅凭dry-run成功宣称已注册或验收。
+
+### 2003 上海春季卷：来源正式登记与规范 LaTeX 源物化（2026-10-20）
+
+- 已完成：在`feat/gaokao-phase0`隔离工作树将固定来源正式绑定至`gk-2003-spring-shanghai`，登记批次`phase4-b08`，manifest revision由4451升至4452；来源仍为同一2页PDF，SHA-256 `a998ae0b65e90af8518be09b5dabfba5ad488c1b94cc81483dfe472858051f0f`。官方生成器随后物化本卷`questions.tex`、`answers.tex`和共享`index.json`，不改题面、答案或图稿内容。三角色provenance骨架仅写入忽略目录`.work/phase4-b08/`，尚未填充或导入。
+- 修改文件：`source-manifest.json`、`index.json`、`2003_春季上海卷/questions.tex`、`2003_春季上海卷/answers.tex`及本进度文件；`.work/phase4-b08/`内登记spec与provenance骨架均为忽略文件。没有改动其他试卷文件或旧build/review回执。
+- 验证：`source_manifest.py validate`通过；`generate_projects.py --paper gk-2003-spring-shanghai --check`通过；题面4/4、解答/渲染5/5、图稿/生成器4/4，共13/13定向测试通过；`git diff --check`通过。单卷receipt校验显示缺少预期的build回执（尚未正式构建），并非构建失败。一次以错误Python模块名运行unittest未加载测试，随后按项目约定直接运行三个测试文件通过。
+- 成本：本阶段无OCR、外部API或模型调用；运行确定性登记/生成及13项定向测试。整卷XeLaTeX正式构建和PNG逐页校样尚未运行；Codex Token及实际费用未知。
+- 剩余/下一步：将已记录的独立题面复核、独立求解和盲核证据按provenance schema填入三角色文件并核验哈希、题号和角色互异；随后检查provenance门禁，生成四版编译壳，执行单卷正式构建并逐页复核。2003卷虽已登记，仍未完成provenance、构建和视觉验收；不得计作已验收卷。纯index变更不要求重建原15份current回执。
+
+### 2003 上海春季卷：provenance、四版正式构建与逐页验收闭环（2026-10-20）
+
+- 已完成：复用本进度已记录的题面独立复核、独立求解、答案盲核和两幅图稿复核，不重做转录或解题；将22题逐题证据导入正式`provenance.json`，三个角色字段互异，答案明确为独立推导、非官方，Q11把退化区间边界作为已处理情形保留。新增选择题速查表D/A/C/A，由`make_short_answers.py`与逐题答案执行机器交叉核对。生成四版入口并正式编译，最终回执四版均`succeeded`：试题版4页、解析版17页、简答版6页、印刷版15页；共42页。逐页视觉复核覆盖42页×8项，共336项全通过；最终批次`phase4-b08`为`FINALIZED/closed`，provenance为`complete`。
+- 修改文件：更新2003题面、答案要点、解析正文及确定性合并稿的来源/验收状态说明；更新2003转录测试断言；更新`source-manifest.json`、派生`index.json`、`missing-issues.md`、`PROGRESS.md`；新增项目`2003_春季上海卷/{questions.tex,answers.tex,answers_short.tex,四版.tex,provenance.json,receipts/*}`和`reports/phase4-b08.md`。临时角色工作件、逐页PNG和渲染比较均位于忽略的`.work/phase4-b08/`，未入库。
+- 验证：manifest validate、provenance `check-batch`、来源生成器/简答答案/四版壳`--check`、单卷build receipt validator及review `check-batch`全部通过；题面4/4、解答5/5、图稿/生成器4/4，共13/13定向测试通过；`git diff --check`通过。最终LaTeX回执记录4版均0错误、0缺字、0 overfull、0未解析引用。视觉复核先覆盖全42页；随后更正封面/解析说明的状态文字并重建，页图字节比较确认未变化页与已阅版本完全相同，只重新目视检查发生变化的解析版第5页和印刷版第4页，再完成最终复核登记。
+- 成本：复用现有源PDF、文本层、解析、盲核与图稿；OCR及外部API/模型调用0。确定性生成、两轮单卷正式构建和本地PDF栅格化；Codex Token和实际费用不可见，未知。
+- 剩余/下一步：2003春季上海卷本阶段验收完成；官方答案仍为`null`（固定PDF不附答案，不能伪称官方）。全项目1952–2026转录与验收仍未完成；按manifest和`PROGRESS.md`选择下一套未完成且可执行的试卷，先查Git历史和现有回执去重，不重复本卷或已完卷。不要因为index更新重建与输入无关的旧卷；此提交只包含2003卷及对应进度记录。
 
 ## 2000 上海春季卷：扫描件书目来源核查（2026-10-19）
 

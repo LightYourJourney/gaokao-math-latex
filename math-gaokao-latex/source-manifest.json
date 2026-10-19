@@ -1374,6 +1374,14 @@
         "gk-2015-regular-hunan-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b08",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-spring-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1383,7 +1391,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "fa50ad63-73a4-4e25-8c43-3e0fc5293523",
+  "last_transaction_id": "d42a5097-18aa-483c-84b1-f4770c43732e",
   "papers": [
     {
       "blocked_from": null,
@@ -20194,9 +20202,78 @@
       "title": "2015 年·湖南卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季上海卷/figures/gaokao_2003_shanghai_spring_q18_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季上海卷/figures/gaokao_2003_shanghai_spring_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_spring_shanghai",
+        "id": "gk-2003-spring-shanghai",
+        "note": "固定源为2页题面，原卷印刷页码123–124；PDF不附答案与解析，答案和解析为本库独立推导；第18、19题图形依据固定源重绘为TikZ矢量图。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          1,
+          2
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1107",
+        "ISSUE-1108",
+        "ISSUE-1109",
+        "ISSUE-1110"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-spring-shanghai",
+      "production_state": "complete",
+      "project_dir": "2003_春季上海卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_春季上海_含解析.md",
+        "questions": "2003/2003_数学真题_春季上海_试题.md",
+        "solution_body": "2003/2003_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-81eebf19510de69780c4af1cec507bd6428e6a877b52bfd8d45b26539eab4be1"
+      ],
+      "title": "2003 年·春季上海卷",
+      "track": "none",
+      "year": 2003
     }
   ],
-  "revision": 4451,
+  "revision": 4461,
   "schema_version": 1,
   "sources": [
     {
@@ -20429,8 +20506,8 @@
       "exam_type": "spring",
       "git_blob_oid": "3a675b136ad9ecedf713b95f1ba1e4da23584f3c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003春季上海.pdf",
       "regions": [],
       "source_id": "src-81eebf19510de69780c4af1cec507bd6428e6a877b52bfd8d45b26539eab4be1",

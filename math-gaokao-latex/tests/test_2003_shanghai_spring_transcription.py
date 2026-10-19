@@ -18,7 +18,7 @@ class ShanghaiSpring2003TranscriptionTests(unittest.TestCase):
         self.assertIn("2003 普通高等学校春季招生考试（上海卷）", self.text)
         self.assertIn("PDF 第 1–2 页", self.text)
         self.assertIn("原卷印刷页码 123–124", self.text)
-        self.assertIn("paper_id 未绑定", self.text)
+        self.assertIn("正式 paper_id gk-2003-spring-shanghai", self.text)
 
     def test_question_numbers_are_complete_and_grouped_by_source_sections(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.text, re.M)]

@@ -18255,3 +18255,76 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1107
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "27cc4355f0a3b3eb688204fd89e7773ad29719e1e10ecd91209c7c81c81ef118",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-spring-shanghai",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1108
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "015b1662c016336b9674d1578ba2adb0c4f721ab9cb0858c83cc5c442806951b",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-spring-shanghai",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1109
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "300f7da1e5b76f595bd495b3dc68f366027aa0508e05d97a3ef693fd88f50174",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-spring-shanghai",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1110
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "0cd45e96aaf245708f58d98e004511113aecbcf1c4403599fa1095ed007aab32",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-spring-shanghai",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
