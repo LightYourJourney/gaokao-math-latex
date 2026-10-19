@@ -29,6 +29,13 @@ class ShanghaiSpring2004SolutionTests(unittest.TestCase):
         self.assertEqual(answer_numbers, [str(n) for n in range(1, 23)])
         self.assertEqual(solution_numbers, [str(n) for n in range(1, 23)])
 
+    def test_inverse_function_equation_solves_for_its_argument(self):
+        self.assertIn("**5．** **答案：$1$**", self.answers)
+        self.assertIn(r"对方程 $f^{-1}(x)=4$ 两边作用 $f$，得 $x=f(4)$", self.solutions)
+        self.assertIn(r"x=f(4)=\log_3\left(\frac44+2\right)=\log_3 3=1", self.solutions)
+        self.assertNotIn(r"答案：$\dfrac4{79}$", self.answers)
+        self.assertNotIn(r"答案：$\dfrac4{79}$", self.solutions)
+
     def test_source_ambiguity_is_preserved_as_conditional(self):
         self.assertIn(r"\dfrac{2x+1}{x+2}<0", self.transcript)
         self.assertIn(r"|p|\ge2", self.solutions)
@@ -68,7 +75,7 @@ class ShanghaiSpring2004SolutionTests(unittest.TestCase):
         ):
             self.assertIn(f"第 {question} 题", self.transcript)
             self.assertIn(f"gaokao_2004_shanghai_spring_{figure}.tex", self.transcript)
-        self.assertIn("仍待独立图像终核", self.transcript)
+        self.assertIn("通过独立图像复核", self.transcript)
         self.assertNotIn("尚待依据原图逐项矢量重绘", self.transcript)
 
 
