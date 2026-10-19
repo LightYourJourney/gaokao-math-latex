@@ -43,6 +43,7 @@ class Shanghai1990SolutionTests(unittest.TestCase):
     def test_high_risk_results_are_explicit(self):
         for expected in (
             r"m=-\frac43",
+            r"\frac{2}{\sqrt5}",
             r"x=2\pi-\arccos\frac13",
             r"a\in\{-1\}\cup[1,3]",
             r"\frac{\sqrt6}{4}",
