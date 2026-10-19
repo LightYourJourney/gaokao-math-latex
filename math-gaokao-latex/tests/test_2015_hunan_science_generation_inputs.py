@@ -69,6 +69,7 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         points = parse_answer_points(answer_text)
         self.assertEqual([point.number for point in points], list(range(1, 22)))
         self.assertEqual(points[15].subparts, (1, 2))
+        self.assertIn(r"-\infty", points[14].answers[0][1])
         q14 = points[13].answers[0][1]
         self.assertIn(r"q=0", q14)
         self.assertIn(r"q=3", q14)
