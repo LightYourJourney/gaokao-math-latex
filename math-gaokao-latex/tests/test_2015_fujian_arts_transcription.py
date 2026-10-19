@@ -41,6 +41,11 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         numbers = [int(n) for n in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
         self.assertEqual(numbers, list(range(1, 23)))
         self.assertEqual(self.review["transcription"]["question_count"], 22)
+        self.assertEqual(
+            self.review["transcription"]["status"],
+            "draft-transcribed-independently-reviewed-pending-formal-acceptance",
+        )
+        self.assertEqual(self.review["transcription"]["independent_review"], "completed")
         self.assertEqual(self.review["transcription"]["question_types"], {
             "single_choice": list(range(1, 13)),
             "fill_in": list(range(13, 17)),
