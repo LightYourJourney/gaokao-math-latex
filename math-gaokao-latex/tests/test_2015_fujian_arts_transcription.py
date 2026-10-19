@@ -54,6 +54,8 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
             r"f(x)=\ln x-\dfrac{(x-1)^2}{2}",
         ):
             self.assertIn(expression, self.transcript)
+        self.assertIn("结果如表所示", self.transcript)
+        self.assertNotIn("结果如下表所示", self.transcript)
 
     def test_diagrams_and_table_are_accounted_for_without_raster_assets(self):
         self.assertEqual(
@@ -90,10 +92,19 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         q9 = (PAPER_ROOT / "figures/f2015fj_arts_q09_three_views.tex").read_text(encoding="utf-8")
         self.assertIn(r"{\(2\)}", q9)
         self.assertEqual(q9.count(r"{\(1\)}"), 3)
+        self.assertIn("(2,1)", q9)
+        self.assertNotIn("2.35", q9)
         q19 = (PAPER_ROOT / "figures/f2015fj_arts_q19_parabola_geometry.tex").read_text(encoding="utf-8")
         self.assertIn("y^2=4x", q19)
-        self.assertIn("(G) -- (A)", q19)
-        self.assertIn("(G) -- (B)", q19)
+        self.assertIn("domain=-2.35:3.0", q19)
+        self.assertIn("(2.25,{13*sqrt(2)/6})", q19)
+        self.assertIn("(1.1,{-7*sqrt(2)/5})", q19)
+        q4 = (PAPER_ROOT / "figures/f2015fj_arts_q04_flowchart.tex").read_text(encoding="utf-8")
+        self.assertIn(r"\draw[->] (test.east)", q4)
+        self.assertIn(r"\draw[->] (merge) -- (output.north)", q4)
+        self.assertIn(r"\draw[->] (no.south)", q4)
+        self.assertIn(r"(yes.south |- merge) -- (merge)", q4)
+        self.assertIn(r"(no.south |- merge) -- (merge)", q4)
         q20 = (PAPER_ROOT / "figures/f2015fj_arts_q20_solid_geometry.tex").read_text(encoding="utf-8")
         for edge in ("(P) -- (A)", "(P) -- (B)", "(P) -- (C)", "(P) -- (D)", "(C) -- (E)", "(D) -- (E)"):
             self.assertIn(edge, q20)

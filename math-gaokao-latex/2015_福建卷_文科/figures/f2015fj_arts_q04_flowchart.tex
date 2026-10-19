@@ -19,9 +19,11 @@
   \draw[->] (start) -- (input);
   \draw[->] (input) -- (test);
   \draw[->] (test.south) -- node[left,inner sep=1pt] {是} (yes.north);
-  \draw (test.east) -- ++(8mm,0) |- (no.north);
+  \draw[->] (test.east) -- ++(8mm,0) |- (no.north);
   \node at (1.12,-2.62) {否};
-  \draw (yes.south) -- ++(0,-5mm) -| (output.north);
-  \draw[->] (no.south) -- ++(0,-5mm) -| (output.north);
+  \coordinate (merge) at (0,-4.8);
+  \draw (yes.south) -- (yes.south |- merge) -- (merge);
+  \draw[->] (no.south) -- (no.south |- merge) -- (merge);
+  \draw[->] (merge) -- (output.north);
   \draw[->] (output) -- (finish);
 \end{tikzpicture}
