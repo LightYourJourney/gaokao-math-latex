@@ -6322,3 +6322,11 @@
 - 验证：正式`check_batch`返回`INVALID`、289卷、155批、394条问题；所有241份问题卷的生成目标比较均无异常、仅命中全局`index.json`；267份回执输入树哈希比较完成且无异常；`review_receipts.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase1-b07 --json`返回`INVALID_OR_STALE`，原因为生成输入树变化。此次未运行代码测试，因为没有代码改动；进度提交前运行`git diff --check`并核对工作树范围。
 - 成本：没有OCR、外部模型API、LaTeX构建或PNG重渲染；本地确定性哈希/生成器检查约一分钟。Codex Token、缓存用量及API费用不可见，未知。
 - 剩余/下一步：正式状态对账器没有独立批量刷新入口；build输入树中确有共享生成器版本变化，按现行完整性门禁须重建并复核受影响卷，不能用事务直接把缓存字段改成派生值。全库目前共有267份回执输入树漂移，另有全局index投影待生成；需要按既有批次粒度完成正式build与视觉回执，或由用户明确调整优先批次/全量重建范围。其间不声称这些旧`complete`缓存仍有效；优先继续已登记的2015湖南理科blocked draft，Q14 blocker与来源/官方答案待核项不得绕过。
+
+### 全库确定性生成物刷新与湖南理科共享 TeX 首次生成（2026-10-19）
+
+- 已完成：正式生成器全库预检确认只有3项目标偏离规范源：全局`index.json`以及新登记2015湖南理科的`questions.tex`、`answers.tex`。运行`generate_projects.py --all --write`原子刷新目标；事务覆盖579个目标，Git中实际仅3个目标内容变化。湖南答案片段继续标为独立推导非官方稿，Q14来源定义仍标待核；未改题面/答案源、manifest、build或review回执。
+- 修改文件：`math-gaokao-latex/index.json`；新增`2015_湖南卷_理科/questions.tex`、`2015_湖南卷_理科/answers.tex`。
+- 验证：`generate_projects.py --all --check`通过，289套均与生成结果一致；2015湖南理科定向生成输入测试8/8通过；抽查2017全国Ⅰ理、2021全国甲文的生成物状态均为`current`。2015湖南理科完整生成物状态仍为`stale`（其余入口/简答生成物待补）；`phase1-b07`正式回执复核仍因生成输入树变化返回`INVALID_OR_STALE`，因此未宣称修复394状态门禁。`git diff --check`通过。
+- 成本：复用本地生成器，未跑OCR、外部API、XeLaTeX或PNG渲染；实际Token用量和费用未知。
+- 剩余/下一步：补跑湖南卷的四版本壳与简答版确定性生成、测试其内容/非官方来源标记，然后在隔离目录执行单卷正式构建和必要复核；共享生成器更新导致的旧回执漂移仍须按既有构建/视觉门禁处理，不能仅更新状态缓存。
