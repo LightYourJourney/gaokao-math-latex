@@ -6860,3 +6860,12 @@
 - 验证：1994上海定向测试21/21、`test_review_receipts.py` 66/66通过；四项生成`--check`通过；manifest、provenance（1卷）、build receipt（1 succeeded、0 stale/missing/pending）、review batch（FINALIZED）及全量报告`report.py check --all`均通过。初查确认旧回执过期后重建，没有沿用旧PDF视觉结论。全量报告首次check因六份投影旧而失败，官方renderer刷新后复查通过；CLI第一次check调用漏带必需的manifest/issues参数，按`--help`补齐后成功，没有写坏状态。
 - 剩余/下一步：整卷依旧blocked，不计完成卷；出版来源身份未确证，Q25固定来源解答区间冲突及其他已登记issues（`ISSUE-1071`、`ISSUE-1089`—`ISSUE-1105`）继续开放。下一步只在获得可靠同版来源或新证据后处置这些问题；已完成的26题题面、数学盲核、当前视觉审查不重复做。此前build stale根因已由正式重构建解决；全库provenance测试中历史缓存状态不一致仍是单独问题，未在本阶段批量改写。
 - 成本：无OCR和外部模型/API调用；复用本地已核验题面、答案、解析及图稿。Codex Token/费用不可见，未知。
+
+### phase2-b92：2003 全国新旧课程文理卷正式重构建（2026-10-20）
+
+- 恢复依据：按已记录的年份阶段纠正，`phase0-b02`暂不推进；本批是进度记录指定的下一项。先核对四卷的历史转录/解答与既有回执，不重做89题OCR、题面、答案或图稿。
+- 已完成：四卷`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`及`solution_sources.py check-batch`全部通过（23/22/22/22题）。旧正式build因生成输入树变化失效；正式四卷XeLaTeX重构建成功、0失败，manifest revision 4484；卷级attempt依次为`83a61a95-fca8-40d4-89a6-75a75cc6cf3c`、`8650be6e-f2ff-4a92-bfad-422b8cab8f0c`、`264e99b0-cd2c-4fea-907a-5fd37d0f97e3`、`c30221b2-8bc9-49d3-b12a-2868f199e857`。页数为新课程文48、新课程理47、旧课程文45、旧课程理48，合计188页。新旧各16份PDF页数相同但SHA-256全部不同，故不得直接沿用旧逐页视觉结论。
+- 已完成可验证阶段：对四卷当前 attempt 的试题、解析、简答、印刷四版 PDF 逐页检查，覆盖188页共1504项视觉检查；其中1335项通过，非试题版答案泄漏检查169项按规则记为`not_applicable`。另对16个候选页原尺寸复核。接触表与候选页均未发现裁切、遮叠、越界、图形标签异常或异常分页；本阶段只验版面，不替代题面/答案数学正确性核验。`review_receipts.py finalize-batch`事务以revision 4485登记，批次状态`closed`、无视觉失败。
+- 修改文件：四卷 `receipts/build.json`、`receipts/review.json`，`source-manifest.json`、`reports/phase2-b92.md`、`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`reports/baseline.md`及本进度文件。`manifest.csv`未变；试题、答案、解析、TikZ源及原始PDF未改。视觉PNG和16份ignored workitem留在项目`.work/phase2-b92/`；正式PDF和LaTeX源保留。
+- 验证：来源manifest通过；四卷provenance `OK`；build receipts 4 succeeded/0 stale、failed、pending；review batch `FINALIZED`。四项生成器 `--check`及`solution_sources check-batch`均通过；全量报告首次检查发现六份旧投影，使用官方`report.py render --all`刷新后`check --all`通过；`test_review_receipts.py` 66/66通过。清理器dry-run明确列出本批96个XeLaTeX辅助文件，执行后96/96移除，正式PDF、LaTeX源和build diagnostics保留。OCR和外部API调用0；Codex Token及实际费用不可见。
+- 剩余/下一步：2003批次已闭环，不再重做其89题转录/解答或本次视觉检查。长期试卷语料尚未完成；继续前依据manifest与本进度选择最早未闭环/受阻后可执行的任务，维持来源身份及已登记issue边界，不要因本批`closed`误报全项目完成。精确提交本批闭环文件，不push。
