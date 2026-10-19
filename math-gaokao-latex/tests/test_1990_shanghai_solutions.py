@@ -27,11 +27,13 @@ class Shanghai1990SolutionTests(unittest.TestCase):
         self.assertEqual(answer_numbers, list(range(1, 28)))
         self.assertEqual(solution_numbers, list(range(1, 28)))
 
-    def test_answers_are_independent_not_official_and_keep_ambiguities_open(self):
+    def test_answers_are_independent_not_official_and_keep_source_issues_open(self):
         self.assertIn("official_answer: null", self.answers)
         self.assertIn("独立推导", self.answers)
         self.assertIn("非官方", self.answers)
-        self.assertIn("**15．**\n\n**答案：待核", self.answers)
+        self.assertIn("**15．**\n\n**答案：C", self.answers)
+        self.assertIn(r"\alpha=\alpha_0+2k\pi", self.solutions)
+        self.assertIn("k$ 为奇数", self.solutions)
         self.assertIn("**18．**\n\n**答案：待核", self.answers)
         self.assertIn("条件性答案", self.answers)
         self.assertIn("若只把第三个量记号假设为 $c$", self.solutions)
