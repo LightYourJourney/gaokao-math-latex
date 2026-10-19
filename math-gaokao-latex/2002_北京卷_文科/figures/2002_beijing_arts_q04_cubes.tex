@@ -1,0 +1,64 @@
+% Topology-only reconstruction of the four printed cube options.
+\begin{tikzpicture}[x=0.48cm,y=0.48cm,line cap=round,line join=round]
+\tikzset{cube edge/.style={line width=.45pt}, hidden edge/.style={cube edge,dashed}}
+% A small projected cube: front square (0,0)--(2,0)--(2,2)--(0,2),
+% rear square shifted by (-.7,.55). Coordinates are schematic only.
+\newcommand{\cubeoption}[3]{%
+  \begin{scope}[shift={(#1,#2)}]
+    \coordinate (v000) at (0,0); \coordinate (v100) at (2,0);
+    \coordinate (v110) at (2,2); \coordinate (v010) at (0,2);
+    \coordinate (v001) at (-.7,.55); \coordinate (v101) at (1.3,.55);
+    \coordinate (v111) at (1.3,2.55); \coordinate (v011) at (-.7,2.55);
+    \draw[cube edge] (v000)--(v100)--(v110)--(v010)--cycle;
+    \draw[cube edge] (v010)--(v011)--(v111)--(v110);
+    \draw[cube edge] (v110)--(v101)--(v100);
+    \draw[hidden edge] (v000)--(v001)--(v011);
+    \draw[hidden edge] (v001)--(v101);
+    \node[font=\scriptsize,fill=white,inner sep=.3pt] at (#3) {};
+  \end{scope}}
+% Four independently labelled cube projections; dotted diagonal/vertical
+% segments reproduce the visible candidate construction without metric claims.
+\cubeoption{0}{0}{0,0}
+\node[font=\scriptsize] at (.05,2.18) {$A$};
+\node[font=\scriptsize] at (.65,1.86) {$C$};
+\node[font=\scriptsize] at (2.15,.02) {$B$};
+\node[font=\scriptsize] at (2.55,.72) {$D$};
+\draw[dashed,line width=.45pt] (.1,2)--(2.08,.12);
+\draw[line width=.45pt] (.65,1.86)--(2.53,.78);
+\node[font=\scriptsize] at (1,-.32) {(A)};
+
+\begin{scope}[shift={(4.4,0)}]
+  \begin{scope}
+    \coordinate (a) at (0,0);\coordinate (b) at (2,0);\coordinate (c) at (2,2);\coordinate (d) at (0,2);
+    \coordinate (e) at (-.7,.55);\coordinate (f) at (1.3,.55);\coordinate (g) at (1.3,2.55);\coordinate (h) at (-.7,2.55);
+    \draw[line width=.45pt] (a)--(b)--(c)--(d)--cycle (d)--(h)--(g)--(c) (c)--(f)--(b);
+    \draw[dashed,line width=.45pt] (a)--(e)--(h) (e)--(f);
+    \draw[line width=.45pt] (e)--(c) (h)--(b);
+    \node[font=\scriptsize] at (-.05,2.17) {$A$};\node[font=\scriptsize] at (-.73,2.08) {$C$};
+    \node[font=\scriptsize] at (-.76,.48) {$B$};\node[font=\scriptsize] at (2.15,.02) {$D$};
+  \end{scope}
+\end{scope}
+\node[font=\scriptsize] at (5.4,-.32) {(B)};
+
+\begin{scope}[shift={(8.8,0)}]
+  \coordinate (a) at (0,0);\coordinate (b) at (2,0);\coordinate (c) at (2,2);\coordinate (d) at (0,2);
+  \coordinate (e) at (-.7,.55);\coordinate (f) at (1.3,.55);\coordinate (g) at (1.3,2.55);\coordinate (h) at (-.7,2.55);
+  \draw[line width=.45pt] (a)--(b)--(c)--(d)--cycle (d)--(h)--(g)--(c) (c)--(f)--(b);
+  \draw[dashed,line width=.45pt] (a)--(e)--(h) (e)--(f);
+  \draw[line width=.45pt] (e)--(b) (d)--(f);
+  \node[font=\scriptsize] at (-.12,2.16) {$A$};\node[font=\scriptsize] at (2.1,2.13) {$C$};
+  \node[font=\scriptsize] at (.45,.04) {$B$};\node[font=\scriptsize] at (2.18,.02) {$D$};
+\end{scope}
+\node[font=\scriptsize] at (9.8,-.32) {(C)};
+
+\begin{scope}[shift={(13.2,0)}]
+  \coordinate (a) at (0,0);\coordinate (b) at (2,0);\coordinate (c) at (2,2);\coordinate (d) at (0,2);
+  \coordinate (e) at (-.7,.55);\coordinate (f) at (1.3,.55);\coordinate (g) at (1.3,2.55);\coordinate (h) at (-.7,2.55);
+  \draw[line width=.45pt] (a)--(b)--(c)--(d)--cycle (d)--(h)--(g)--(c) (c)--(f)--(b);
+  \draw[dashed,line width=.45pt] (a)--(e)--(h) (e)--(f);
+  \draw[line width=.45pt] (e)--(b);
+  \node[font=\scriptsize] at (-.1,2.18) {$A$};\node[font=\scriptsize] at (2.15,2.17) {$C$};
+  \node[font=\scriptsize] at (2.18,.02) {$B$};\node[font=\scriptsize] at (2.25,.76) {$D$};
+\end{scope}
+\node[font=\scriptsize] at (14.2,-.32) {(D)};
+\end{tikzpicture}

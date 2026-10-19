@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "source_id": "src-90f44916d96acc13cf570b10db11e0afffadc48c9f7139ba8411097f30f37449",
+  "paper_id": null,
+  "year": 2002,
+  "region": "北京",
+  "title_as_printed": "2002 普通高等学校招生考试（北京卷文）",
+  "track": "文科",
+  "subject": "数学",
+  "source": {
+    "path": "普通高考/2002/2002北京文.pdf",
+    "sha256": "65899ebe3859b55da2aa318d2ba79541675870468a89124240062b3e3d48c089",
+    "git_blob_oid": "e4137bc21f1e9dfe3fb706683e4389d268a9e919",
+    "page_count": 2,
+    "page_size": "A3 landscape",
+    "printed_pages": [102, 103],
+    "source_authenticity": "publisher-and-edition-unverified",
+    "contains_answers": false
+  },
+  "transcription": {
+    "path": "2002/2002_数学真题_北京文_试题.md",
+    "sha256": "5d12f83470ffce49612f884c854d1023c2286debe08c85eebb47eaf3015205e4",
+    "status": "draft-transcribed-pending-independent-review",
+    "question_count": 22,
+    "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+    "question_types": {
+      "single_choice": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "fill_in": [13, 14, 15, 16],
+      "written_response": [17, 18, 19, 20, 21, 22]
+    },
+    "page_map": [
+      {"source_page": 1, "printed_page": 102, "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]},
+      {"source_page": 2, "printed_page": 103, "questions": [20, 21, 22]}
+    ],
+    "extraction_method": "pdftotext -layout used as locating aid; both fixed-source pages visually inspected at 150 dpi; Q15, Q18, and Q20 locally enlarged for high-risk text/table review",
+    "ocr_calls": 0,
+    "independent_review": "pending"
+  },
+  "official_answer": null,
+  "generated_solution": {
+    "status": "not-started",
+    "is_official": false
+  },
+  "figures_and_tables": {
+    "inventory_path": "2002/2002_数学真题_北京文_图表清单.md",
+    "raster_source_committed": false,
+    "vector_reconstruction_status": "draft-pending-independent-review",
+    "items": ["q4-cube-options", "q11-sign-graph", "q12-convexity-graphs", "q18-polyhedron", "q20-computation-tables"],
+    "vector_assets": [
+      {"item": "q4-cube-options", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q04_cubes.tex", "sha256": "efcb92588220312234d1fbb3279bf2c0ee4133e24aca383039ef993a549cfca6"},
+      {"item": "q11-sign-graph", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q11_sign_graph.tex", "sha256": "4ef3f1db3a60455a7ddf939129aa439f2ac9d75c14c2ef63aa5c3ea5b02fb3f8"},
+      {"item": "q12-convexity-graphs", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q12_convexity_graphs.tex", "sha256": "b4f048ff8ab93c8daad505f0ef9ab1087db245dcc722c2076732ca98ca1df0ff"},
+      {"item": "q18-polyhedron", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q18_polyhedron.tex", "sha256": "38b7b9f077f44b49e66570d4dc3f079ffb22cc5113652331e0a5c0ca578eb4b0"}
+    ]
+  }
+}
