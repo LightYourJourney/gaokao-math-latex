@@ -6851,3 +6851,12 @@
 - 验证：`review_receipts.py finalize-batch`返回`FINALIZED`，但批次内容状态为`closed_with_blockers`；随后`check-batch`为`OK`（1卷、1 succeeded、0 stale/failed/invalid/missing），build receipt校验通过；source manifest校验、`provenance.py check-batch --batch phase1-b23`均通过；1990来源定向测试4/4通过。初次用包含连字符目录名的unittest模块导入形式失败（Python模块路径不接受该包名），已改为直接运行测试文件成功，没有重复使用错误调用。此前整套provenance测试曾有一项旧缓存状态漂移失败（365条历史状态不一致），本阶段未重跑该长套件，故不把该历史问题表述为已解决。
 - 剩余/下一步：该卷仍不得计为已验收完成。`ISSUE-1070`固定来源PDF的Q12图缺失、`ISSUE-1114`相应答案无法核验、`ISSUE-1113`Q2单选题与印刷答案表冲突仍开放；回执和报告保持`closed_with_blockers`。待获得可验证的同版Q12图源、解决Q2答案冲突后，再局部更新来源/答案并重建受影响版本与复核；本阶段不重跑已核题面。
 - 成本：OCR和外部模型/API调用0；复用已完成题面、解析、构建PDF与渲染页。Codex Token用量与实际费用不可见，未知。
+
+### 1994 上海卷：恢复失效回执并完成当前四版构建/视觉复核（2026-10-20）
+
+- 恢复核对：本卷26题转录、全题盲核及Q25推导此前均已完成，不重复OCR或转录。旧build/review回执因生成输入树变化而失效；`generate_projects.py`、`make_short_answers.py`、`make_editions.py --check`均确认生成源一致，无需重写题面或派生源。
+- 已完成：正式XeLaTeX四版构建成功，attempt=`334e6ca3-0bf1-40dd-aa2e-32f86a108949`，页数为试题版5、解析版19、简答版7、印刷版16，共47页。对47页逐页覆盖八项视觉检查（376项），四版全部通过；对题面Q23、解析Q23/Q24/Q25/Q26、Q11坐标图和各版系统候选锚点另作原尺寸查看。无裁切、重叠、越界或异常分页；Q25来源第二支`t≥2`与题面推导`t≥1/2`仍明确展示为来源差异，未修改原文或冒充官方结论。正式finalizer于revision 4482登记review，批次仍为`closed_with_blockers`。
+- 修改文件：本卷`receipts/build.json`、`receipts/review.json`，`source-manifest.json`及批次报告`reports/phase1-b24.md`；`report.py render --all`事务刷新六份全量派生报告；本进度。47张页面图和接触表只存于忽略目录`.work/phase1-b24/visual-review-r4481/`。build目录按官方清理器dry-run后精确移除24个XeLaTeX临时文件，保留正式四版PDF及四份build diagnostics；LaTeX源文件不变。
+- 验证：1994上海定向测试21/21、`test_review_receipts.py` 66/66通过；四项生成`--check`通过；manifest、provenance（1卷）、build receipt（1 succeeded、0 stale/missing/pending）、review batch（FINALIZED）及全量报告`report.py check --all`均通过。初查确认旧回执过期后重建，没有沿用旧PDF视觉结论。全量报告首次check因六份投影旧而失败，官方renderer刷新后复查通过；CLI第一次check调用漏带必需的manifest/issues参数，按`--help`补齐后成功，没有写坏状态。
+- 剩余/下一步：整卷依旧blocked，不计完成卷；出版来源身份未确证，Q25固定来源解答区间冲突及其他已登记issues（`ISSUE-1071`、`ISSUE-1089`—`ISSUE-1105`）继续开放。下一步只在获得可靠同版来源或新证据后处置这些问题；已完成的26题题面、数学盲核、当前视觉审查不重复做。此前build stale根因已由正式重构建解决；全库provenance测试中历史缓存状态不一致仍是单独问题，未在本阶段批量改写。
+- 成本：无OCR和外部模型/API调用；复用本地已核验题面、答案、解析及图稿。Codex Token/费用不可见，未知。
