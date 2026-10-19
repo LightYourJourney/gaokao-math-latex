@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 进度恢复补记：2017 全国Ⅱ/Ⅲ文理四卷已转录并完成构建/视觉复核（phase2-b07）
+
+- Git 证据：以下成果已在当前 `feat/gaokao-phase0` 历史中，题面/答案/解析及四版本工程由 `14d10ca1` 写入，正式回执和来源登记见 `12af6bb3`，视觉诊断与终结记录见 `97efad78`、`c7588069`。本次恢复只补齐卷级进度索引，不重新转录、不改各卷源稿或回执。
+- 已完成题面转录：2017 全国Ⅱ文、全国Ⅱ理、全国Ⅲ文、全国Ⅲ理各 23 题，共 92 题；每卷题面、答案要点、解析正文、四版 LaTeX、provenance 与 build/review receipt 均已入库。固定来源分别为 `src-0a282ae5bb0daabc25cea61ee4d965a48b2fc56a5877a5388d6795a178b22efa`（SHA-256 `2e729a89cf3fb8e475248c6bfd497d6a3a5c826e8d84f5617744e8f33ee20163`）、`src-66fc39c8a228d7f9d261ffecfbf73dcb48f52a25ea44ab64caee84b79660b751`（`7f6c2276742e50363332bab903cbef02cd1ffd35ef07ff3784cdaf8b002b1753`）、`src-7d6ac0cf61f57763f4e0dd11dbe9c630967ffbedd57eb7b43232a129ef7cea95`（`47d562cc2de59d6e1e8767d38eafebf92bab03a39fe3ad43cce8ab698109fbdb`）、`src-63aac70d1ccb26b495575266a078b3eeebdfa0fbe6e7f05ff309c4a1a6d7775b`（`433a998c064bca3d445e09edf6274828ddaa910b8bc4215678316cb896b269e4`）。
+- 验证：`reports/phase2-b07.md` 记录四卷 16 个版本成功构建，视觉审查 188 页、四份审查均 `passed`；最终批次为 `closed_with_blockers`。当前 manifest 的 production 状态为：全国Ⅱ文 `blocked`、全国Ⅱ理 `complete`、全国Ⅲ文 `complete`、全国Ⅲ理 `blocked`。视觉通过不解除内容 blockers，也不把整批视为全部 complete。
+- 本次修改文件：仅本 `PROGRESS.md`。验证：逐项核对当前 manifest 的 source_id/SHA、题数和 production_state，核对批次报告与 Git 提交可达性；`git diff --check` 通过。未运行 OCR、转录、构建或模型调用，成本不新增。
+- 剩余/下一步：四卷不再进入转录队列；只按各卷现有 issue/provenance 与 review receipt 处理未决事项。接续全局清单时跳过已完成的 phase2-b07/b08、2016 批次和 2023 批次；2015 福建文科及 2000 春季京皖文理也已有题面/图稿和独立答案草稿，但来源身份门禁未解除，不重复 OCR/转录或书目检索。
+
 ## 工程阶段：已登记卷的题目级 IR 确定性导出（2026-10-20）
 
 - 已完成：复用 `solution_sources.parse_question_blocks()` 与 `provenance.question_text_digests()`，新增从现有规范 Markdown / `source-manifest.json` / 逐题 `provenance.json` 导出机器可读题目 IR 的工具。以 2017 全国Ⅰ理科 23 题真实卷作为集成样本；校验 paper/source 唯一绑定、ready/canonical 关系、manifest 与逐题 provenance 中记录的 PDF SHA-256 一致、题数、题号、逐题 ID/source ID 与题面哈希（未重新打开/哈希 PDF 原件）。保留解析题块、题页、图片引用及题面复核；当前无证据字段用 null，项目答案证据与官方答案严格分离（`official_answer=null`）。
