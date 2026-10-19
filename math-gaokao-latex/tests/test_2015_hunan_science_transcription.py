@@ -47,7 +47,7 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
             "written_response": list(range(16, 22)),
         })
 
-    def test_high_risk_source_expressions_and_unresolved_answer_boundary_are_recorded(self):
+    def test_high_risk_source_expressions_and_q14_definition_review_are_recorded(self):
         for expression in (
             r"2x-y\leqslant 1",
             r"x^{\frac32}",
@@ -82,11 +82,16 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         )
         self.assertEqual(
             self.review["generated_solution"]["unresolved_review_items"],
-            ["Q14 zero-ratio convention"],
+            [],
         )
+        self.assertTrue(any(
+            "Q14" in note and "a_3/a_2" in note
+            for note in self.review["generated_solution"]["independent_review_notes"]
+        ))
         ledger = (ROOT / "2015/2015_数学真题_湖南理_盲核对账草稿.md").read_text(encoding="utf-8")
         self.assertIn(r"\(n=3\)时求和为\(1/3+1/15+1/35=3/7\)", ledger)
-        self.assertIn("唯一未决项为Q14", ledger)
+        self.assertIn("a_3/a_2", ledger)
+        self.assertIn("唯一符合题设比值定义", ledger)
 
     def test_stem_leaf_data_is_transcribed_without_omissions_or_reordering(self):
         body = re.search(

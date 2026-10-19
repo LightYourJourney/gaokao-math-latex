@@ -74,7 +74,7 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         for variant in ("【A】", "【B】", "【C】"):
             self.assertIn(variant, optional)
 
-    def test_answer_key_covers_all_questions_and_preserves_unofficial_branches(self):
+    def test_answer_key_covers_all_questions_and_keeps_answers_nonofficial(self):
         self.assertTrue(ANSWER_KEY.is_file(), "a separately sourced answer-key input is required")
         answer_text = ANSWER_KEY.read_text(encoding="utf-8")
         points = parse_answer_points(answer_text)
@@ -82,12 +82,23 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         self.assertEqual(points[15].subparts, (1, 2))
         self.assertIn(r"-\infty", points[14].answers[0][1])
         q14 = points[13].answers[0][1]
-        self.assertIn(r"q=0", q14)
-        self.assertIn(r"q=3", q14)
+        self.assertIn(r"3^{n-1}", q14)
+        self.assertNotIn("q=0", q14)
         self.assertIn("非官方", answer_text)
         q16 = points[15].answers[0][1]
         for variant in ("A", "B", "C"):
             self.assertIn(variant, q16)
+
+    def test_q14_excludes_zero_ratio_under_the_quotient_definition(self):
+        solution_blocks = parse_question_blocks(SOLUTION.read_text(encoding="utf-8"))
+        q14_solution = solution_blocks[13].body
+        q14_answer = parse_answer_points(
+            ANSWER_KEY.read_text(encoding="utf-8")
+        )[13].answers[0][1]
+        self.assertIn("相邻项比值定义", q14_solution)
+        self.assertIn("a_3/a_2", q14_solution)
+        self.assertIn(r"3^{n-1}", q14_answer)
+        self.assertNotIn("q=0", q14_answer)
 
     def test_real_generator_and_latex_converter_accept_all_three_sources(self):
         question_text = QUESTIONS.read_text(encoding="utf-8")
@@ -118,8 +129,8 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         self.assertEqual(COMBINED.read_text(encoding="utf-8"), expected_combined)
         self.assertIn("非官方", expected_body)
         self.assertIn("非官方", expected_combined)
-        self.assertIn("q=0", expected_combined)
-        self.assertIn("q=3", expected_combined)
+        self.assertIn(r"3^{n-1}", expected_combined)
+        self.assertIn("a_3/a_2", expected_combined)
 
     def test_formal_project_generator_accepts_registered_figure_paths(self):
         project_dir = "2015_湖南卷_理科"
