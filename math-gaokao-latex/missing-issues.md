@@ -18362,3 +18362,19 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1113
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "7fb50c805157093fe162a3f091d46c605c35c7a3ece7fda14cc1cbbdae486d72",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-guangdong-science",
+  "question_id": "gk-1990-regular-guangdong-science-q02",
+  "resume_action": "核得单选选项仅在A唯一正确，或取得同版勘误/可靠原题说明；在解决前保留原文和印载答案A，不猜改选项。",
+  "source_id": "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

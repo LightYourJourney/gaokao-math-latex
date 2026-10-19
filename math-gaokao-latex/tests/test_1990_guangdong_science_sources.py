@@ -12,10 +12,32 @@ ANSWERS = EXAMS / '1990' / '1990_数学真题_广东理_答案要点.md'
 SOLUTIONS = EXAMS / '1990' / '1990_数学真题_广东理_解析正文.md'
 COMBINED = EXAMS / '1990' / '1990_数学真题_广东理_含解析.md'
 sys.path.insert(0, str(PROJECT / 'tools'))
+import issues
 import solution_sources
 
 
 class GuangdongScience1990SourceTests(unittest.TestCase):
+    def test_q2_single_choice_conflict_is_blocked_without_rewriting_printed_answer(self):
+        solution = (EXAMS / '1990' / '1990_数学真题_广东理_解析正文.md').read_text(
+            encoding='utf-8'
+        )
+        q2 = solution.split('### 第 2 题', 1)[1].split('### 第 3 题', 1)[0]
+        self.assertIn('A、C均成立', q2)
+        self.assertIn('通常“垂直”定义', q2)
+
+        answers = (EXAMS / '1990' / '1990_数学真题_广东理_答案要点.md').read_text(
+            encoding='utf-8'
+        )
+        self.assertIn('| 来源答案 | D | A | C |', answers)
+
+        ledger = issues.load_issues(PROJECT / 'missing-issues.md')
+        issue, = [item for item in ledger if item['issue_id'] == 'ISSUE-1113']
+        self.assertEqual(issue['type'], 'answer-conflict')
+        self.assertEqual(issue['status'], 'open')
+        self.assertEqual(issue['impact'], 'blocks_completion')
+        self.assertEqual(issue['paper_id'], 'gk-1990-regular-guangdong-science')
+        self.assertEqual(issue['question_id'], 'gk-1990-regular-guangdong-science-q02')
+
     def test_short_answers_retain_printed_attribution_and_q12_blocker(self):
         short = (PROJECT / '1990_广东卷_理科' / 'answers_short.tex').read_text(encoding='utf-8')
         self.assertIn('来源印载答案', short)
