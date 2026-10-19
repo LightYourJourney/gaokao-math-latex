@@ -72,6 +72,21 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
             self.review["generated_solution"]["independent_review_status"],
             "partial-full-paper-review-pending",
         )
+        self.assertEqual(
+            self.review["generated_solution"]["independent_reviewed_questions"],
+            list(range(1, 16)) + [17, 18, 19, 20, 21],
+        )
+        self.assertEqual(
+            self.review["generated_solution"]["independent_reviewed_subparts"],
+            ["Q16A", "Q16B", "Q16C"],
+        )
+        self.assertEqual(
+            self.review["generated_solution"]["unresolved_review_items"],
+            ["Q14 zero-ratio convention"],
+        )
+        ledger = (ROOT / "2015/2015_数学真题_湖南理_盲核对账草稿.md").read_text(encoding="utf-8")
+        self.assertIn(r"\(n=3\)时求和为\(1/3+1/15+1/35=3/7\)", ledger)
+        self.assertIn("唯一未决项为Q14", ledger)
 
     def test_stem_leaf_data_is_transcribed_without_omissions_or_reordering(self):
         body = re.search(
