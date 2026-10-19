@@ -1,4 +1,5 @@
 import re
+import math
 import shutil
 import subprocess
 import tempfile
@@ -85,6 +86,53 @@ class BeijingAnhuiSpring2000TranscriptionTests(unittest.TestCase):
         self.assertEqual(set(Path(ref).name for ref in refs), set(FIGURE_FILES.values()))
         raster_files = [path for path in FIGURES.rglob("*") if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif"}]
         self.assertEqual(raster_files, [])
+
+    def test_science_q22_figure_obeys_the_stated_geometry(self):
+        source = (FIGURES / FIGURE_FILES[22]).read_text(encoding="utf-8")
+
+        def point(label):
+            match = re.search(
+                rf"\\coordinate \({label}\) at \(([-0-9.]+),([-0-9.]+)\)",
+                source,
+            )
+            self.assertIsNotNone(match, f"missing coordinate {label}")
+            return tuple(float(value) for value in match.groups())
+
+        a, b, m = point("A"), point("B"), point("M")
+        direction = (b[0] - a[0], b[1] - a[1])
+        self.assertAlmostEqual(a[1] ** 2, 2 * a[0], places=6)
+        self.assertAlmostEqual(b[1] ** 2, 2 * b[0], places=6)
+        self.assertAlmostEqual(a[0] * b[0] + a[1] * b[1], 0, places=6)
+        self.assertAlmostEqual(m[0] * direction[0] + m[1] * direction[1], 0, places=6)
+        self.assertAlmostEqual(
+            (m[0] - a[0]) * direction[1] - (m[1] - a[1]) * direction[0],
+            0,
+            places=6,
+        )
+        self.assertFalse(math.isclose(a[0], b[0]))
+        self.assertGreater(a[0], b[0])
+        self.assertLess(m[1], 0)
+        segment_parameter = (
+            (m[0] - a[0]) * direction[0] + (m[1] - a[1]) * direction[1]
+        ) / (direction[0] ** 2 + direction[1] ** 2)
+        self.assertGreater(segment_parameter, 0)
+        self.assertLess(segment_parameter, 1)
+
+    def test_science_q20_base_figure_obeys_the_stated_lengths(self):
+        source = (FIGURES / FIGURE_FILES[20]).read_text(encoding="utf-8")
+
+        def point(label):
+            match = re.search(
+                rf"\\coordinate \({label}\) at \(([-0-9.]+),([-0-9.]+)\)",
+                source,
+            )
+            self.assertIsNotNone(match, f"missing base coordinate {label}")
+            return tuple(float(value) for value in match.groups())
+
+        a, b, c, d = (point(label) for label in "ABCD")
+        distance = lambda first, second: math.hypot(first[0] - second[0], first[1] - second[1])
+        self.assertTrue(math.isclose(distance(a, d), distance(d, c)))
+        self.assertTrue(math.isclose(distance(a, b), 2 * distance(a, d)))
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and Poppler are required")
     def test_all_science_tikz_sources_compile_and_render(self):

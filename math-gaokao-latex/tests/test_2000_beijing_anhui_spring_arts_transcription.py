@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import re
 import shutil
@@ -96,6 +97,17 @@ class BeijingAnhuiSpring2000ArtsTranscriptionTests(unittest.TestCase):
         fold = (FIGURES / FIGURE_FILES[21]).read_text(encoding="utf-8")
         for label in ("$A$", "$B$", "$C$", "$D$", "$D'$", "图一", "图二", "图三"):
             self.assertIn(label, fold)
+        first_figure = {
+            label: tuple(float(value) for value in match.groups())
+            for label in "ABCD"
+            for match in [re.search(rf"\\coordinate \({label}1\) at \(([-0-9.]+),([-0-9.]+)\)", fold)]
+            if match
+        }
+        self.assertEqual(set(first_figure), set("ABCD"))
+        distance = lambda p, q: math.hypot(p[0] - q[0], p[1] - q[1])
+        self.assertTrue(math.isclose(distance(first_figure["A"], first_figure["D"]), 1))
+        self.assertTrue(math.isclose(distance(first_figure["D"], first_figure["C"]), 1))
+        self.assertTrue(math.isclose(distance(first_figure["A"], first_figure["B"]), 2))
         self.assertIn("review-needed", self.inventory)
         parabola = (FIGURES / FIGURE_FILES[23]).read_text(encoding="utf-8")
         for label in ("$O$", "$A$", "$B$", "$M$", "$x$", "$y$"):

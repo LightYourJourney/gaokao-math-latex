@@ -2,8 +2,9 @@
 \begin{tikzpicture}[font=\small, line cap=round,line join=round]
 % 图一：直角梯形 ABCD，折痕 AC。
 \begin{scope}[xshift=0cm]
-  \coordinate (A) at (0,0); \coordinate (B) at (2.2,0);
-  \coordinate (C) at (1.45,0.9); \coordinate (D) at (0,0.9);
+  % Metric figure one uses AD=DC=a and AB=2a from the printed conditions.
+  \coordinate (A) at (0,0); \coordinate (B) at (2,0);
+  \coordinate (C) at (1,1); \coordinate (D) at (0,1);
   \draw (A)--(B)--(C)--(D)--cycle;
   \draw[dashed] (A)--(C);
   \node[below left] at (A) {$A$}; \node[below right] at (B) {$B$};

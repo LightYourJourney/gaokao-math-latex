@@ -1,14 +1,17 @@
-% 2000 春季京皖理科第22题。抛物线与动点关系的拓扑示意，坐标和曲线均非比例。
+% 2000 春季京皖理科第22题。按题设关系构造拓扑示意，整体不按原图比例测绘。
 \begin{tikzpicture}[scale=0.9,font=\small]
   \draw[->] (-0.45,0)--(3.5,0) node[right] {$x$};
-  \draw[->] (0,-1.9)--(0,2.0) node[above] {$y$};
+  \draw[->] (0,-2.75)--(0,2.45) node[above] {$y$};
   \node[below left,inner sep=1pt] at (0,0) {$O$};
-  % Schematic right-opening parabola; not a fitted curve.
-  \draw[thick] (0.03,0.18) .. controls (0.55,0.35) and (1.15,1.15) .. (2.45,1.75);
-  \draw[thick] (0.03,-0.18) .. controls (0.55,-0.35) and (1.15,-1.15) .. (2.45,-1.75);
-  \coordinate (A) at (2.2,1.58); \coordinate (B) at (2.2,-1.58);
-  \coordinate (M) at (1.25,0.12);
+  % For y^2=2x, parameters t_A=11/5, t_B=-20/11 give OA perpendicular
+  % to OB, with A to the right of B. M is the perpendicular foot from O to AB.
+  \draw[thick,domain=-2.8:2.8,samples=100,variable=\t]
+    plot ({\t*\t/2},{\t});
+  \coordinate (A) at (2.42,2.2);
+  \coordinate (B) at (1.6528926,-1.8181818);
+  \coordinate (M) at (1.9296707,-0.3683917);
   \draw (0,0)--(A) (0,0)--(B) (A)--(B) (0,0)--(M);
   \node[above right] at (A) {$A$}; \node[below right] at (B) {$B$};
+  \fill (M) circle (1.2pt);
   \node[right] at (M) {$M$};
 \end{tikzpicture}
