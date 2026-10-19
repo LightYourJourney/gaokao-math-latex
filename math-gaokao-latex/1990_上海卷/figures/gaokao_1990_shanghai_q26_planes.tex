@@ -1,0 +1,31 @@
+% 1990 上海卷第 26 题：两平面及点线拓扑按原卷重绘，不表达精确比例。
+\begin{tikzpicture}[x=0.78cm,y=0.74cm,line cap=round,line join=round]
+  \coordinate (M) at (0,0);
+  \coordinate (N) at (6,0);
+  \coordinate (C) at (2.55,0);
+  \coordinate (A) at (3.15,1.05);
+  \coordinate (B) at (4.45,-0.9);
+  \coordinate (AlphaLeft) at (1.25,1.55);
+  \coordinate (AlphaRight) at (7.25,1.55);
+  \coordinate (BetaLeft) at (1.2,-1.45);
+  \coordinate (BetaRight) at (7.2,-1.45);
+
+  % 两平面共用 MN；远侧的 alpha 边按原图用虚线表示。
+  \draw[thin] (M)--(N)--(AlphaRight);
+  \draw[thin,dashed] (AlphaRight)--(AlphaLeft);
+  \draw[thin] (AlphaLeft)--(M);
+  \draw[thin] (N)--(BetaRight)--(BetaLeft)--(M);
+
+  % 原图中 A、B、C 的连线拓扑；透视坐标仅为排布，不代表测量值。
+  \draw[thick] (A)--(C) (C)--(B) (A)--(B);
+
+  \node[below left=2pt] at (M) {$M$};
+  \node[below right=2pt] at (N) {$N$};
+  \node[below=4pt] at (C) {$C$};
+  \node[above left=1pt] at (A) {$A$};
+  \node[below right=1pt] at (B) {$B$};
+  \node[above right=3pt] at (AlphaRight) {$\alpha$};
+  \node[below=5pt] at (BetaLeft) {$\beta$};
+  \node[font=\scriptsize,align=center] at (3.6,-2.15)
+    {按原卷点线关系重绘；图形不按比例。};
+\end{tikzpicture}

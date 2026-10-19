@@ -29,11 +29,15 @@ class Shanghai1990TranscriptionTests(unittest.TestCase):
         self.assertIn(r"x^2-3(a+1)x+2(3a+1)\leq0", self.text)
         self.assertIn(r"\sqrt{5\cos x+\cos 2x}+\sin x=0", self.text)
         self.assertIn("则它的矩形共有", self.text)
+        self.assertIn("第 15 题未说明角按主值还是任意终边角理解", self.text)
         self.assertIn("不擅自改正", self.text)
 
-    def test_question_26_diagram_is_explicitly_pending_vector_redraw(self):
+    def test_question_26_uses_the_vector_figure_without_embedding_a_raster(self):
         self.assertIn(r"\angle ACM=\angle BCN=45^\circ", self.text)
-        self.assertIn("待按原图点线关系矢量重绘", self.text)
+        self.assertIn(
+            "../math-gaokao-latex/1990_上海卷/figures/gaokao_1990_shanghai_q26_planes.tex",
+            self.text,
+        )
         self.assertNotIn("![](", self.text)
 
 
