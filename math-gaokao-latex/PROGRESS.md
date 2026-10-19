@@ -82,7 +82,7 @@
 ### 1990 上海卷：provenance、正式构建与逐页视觉登记（2026-10-20）
 
 - 已完成：复用既有三角色工作证据，为27题导入 provenance（question review、主会话独立推导、Goodall独立数学复核），revision 4463；逐题题面/答案哈希由规范解析器重算，`provenance check-batch` 通过。固定原页视觉裁决确认Q18第三个定义与稿件均为`b`（代理初读误作`c`，已用原图纠正）；Q23原图和稿件均无“在”。两题均保持忠实原文和开放 issue，Q18条件性答案及Q23条件性轨迹未冒充无条件结论。
-- 已完成构建/复核：正式四版构建 attempt `3c6b14a4-5bbe-460c-907a-11b2eccb0fa4` 成功，页数为试题3、解析16、简答5、印刷14（合计38页）；视觉工作件覆盖38页、304项检查，完整接触表逐版查看，4个自动重点页及Q26图稿页作高分辨率核验。`review_receipts finalize-batch` 返回`FINALIZED`、revision 4466；批次状态为`closed_with_blockers`，不等于整卷完成。正式 PDF 与 build receipt 中哈希/页数一致。官方清理器预演后删除24个LaTeX中间文件，保留4份PDF与LaTeX源文件。
+- 已完成构建/复核：正式四版构建 attempt `3c6b14a4-5bbe-460c-907a-11b2eccb0fa4` 成功，页数为试题3、解析16、简答5、印刷14（合计38页）；视觉工作件覆盖38页、304项检查，完整接触表逐版查看，4个自动重点页及Q26图稿页作高分辨率核验。`review_receipts finalize-batch` 返回`FINALIZED`、revision 4466；批次状态为`closed_with_blockers`，不等于整卷完成。正式 PDF 与 build receipt 中哈希/页数一致。官方清理器预演后删除24个LaTeX中间文件；随后比对发现4个被忽略的`.diagnostics.json`仍是旧PDF哈希的smoke副本，已按确切文件名删除。`build/`现只保留四份PDF，LaTeX源仍在项目目录。
 - 修改文件：本卷`provenance.json`、`receipts/build.json`、`receipts/review.json`，`source-manifest.json`，`reports/phase4-b09.md`，`report.py render --all` 刷新的6个派生报告投影，以及本进度文件。栅格校样只留在忽略目录`.work/phase4-b09/review-render/`；未新增/追踪 PNG/JPEG。
 - 验证：1990题面/答案/图稿测试12/12，视觉回执测试66/66；source manifest校验、该批 provenance 与 review 检查、`report.py check --all`均通过。`test_provenance.py`共109项，其中1项全库缓存状态一致性测试失败：发现365条历史状态缓存与现场派生状态不符（首条涉及2017批次）；本阶段未批量重写这些外卷状态，需后续独立治理。Codex Token、模型缓存Token与费用不可见，记未知。
 - 成本：未重做转录、OCR或数学求解；无 OCR/聊天模型/外部 API 调用。仅执行本地 XeLaTeX 四版编译、38页PDF渲染与逐页校样。
