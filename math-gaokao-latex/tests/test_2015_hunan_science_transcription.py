@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 import re
+import sys
 import unittest
 from pathlib import Path
 
@@ -12,6 +13,9 @@ TRANSCRIPT = ROOT / "2015/2015_数学真题_湖南理_试题.md"
 FIGURES = ROOT / "2015/2015_数学真题_湖南理_图形清单.md"
 REVIEW = ROOT / "2015/2015_湖南理科_来源校对.json"
 MANIFEST = ROOT / "math-gaokao-latex/manifest.csv"
+ISSUES = ROOT / "math-gaokao-latex/missing-issues.md"
+sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
+import issues
 
 
 class HunanScienceTranscriptionTests(unittest.TestCase):
@@ -21,17 +25,26 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         cls.figures = FIGURES.read_text(encoding="utf-8")
         cls.review = json.loads(REVIEW.read_text(encoding="utf-8"))
 
-    def test_manifest_source_is_ready_unbound_and_hash_matches_transcript_record(self):
+    def test_manifest_source_is_bound_to_blocked_draft_and_hash_matches(self):
         source_id = self.review["source"]["source_id"]
+        paper_id = "gk-2015-regular-hunan-science"
         with MANIFEST.open(encoding="utf-8", newline="") as handle:
             rows = list(csv.DictReader(handle))
         source = next(row for row in rows if row["source_id"] == source_id)
 
         self.assertEqual(source["source_state"], "ready")
-        self.assertEqual(source["paper_id"], "")
+        self.assertEqual(self.review["paper_id"], paper_id)
+        self.assertEqual(source["paper_id"], paper_id)
+        self.assertEqual(source["paper_relation"], "canonical")
+        self.assertEqual(source["production_state"], "blocked")
         self.assertEqual(source["source_sha256"], self.review["source"]["sha256"])
         self.assertEqual(self.review["source"]["pdf_pages"], 2)
         self.assertEqual(self.review["source"]["printed_pages"], [955, 956])
+        issue, = [item for item in issues.load_issues(ISSUES)
+                  if item.get("paper_id") == paper_id]
+        self.assertEqual(issue["type"], "answer-convention-ambiguous")
+        self.assertEqual(issue["question_id"], paper_id + "-q14")
+        self.assertEqual(issue["source_id"], source_id)
         self.assertEqual(
             hashlib.sha256(TRANSCRIPT.read_bytes()).hexdigest(),
             self.review["question_transcript"]["sha256"],

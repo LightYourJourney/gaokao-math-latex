@@ -20,6 +20,7 @@ ISSUE_TYPES = {
     "figure-missing",
     "answer-missing",
     "answer-conflict",
+    "answer-convention-ambiguous",
     "compile-error",
     "layout-warning",
     "source-mismatch",
@@ -36,7 +37,10 @@ REQUIRED_FIELDS = {
     "resume_action",
 }
 _SOURCE_TYPES = {"source-unavailable", "source-unreadable", "source-mismatch"}
-_QUESTION_TYPES = {"transcription-ambiguous", "answer-missing", "answer-conflict"}
+_QUESTION_TYPES = {
+    "transcription-ambiguous", "answer-missing", "answer-conflict",
+    "answer-convention-ambiguous",
+}
 _VISUAL_TYPES = {"figure-missing", "compile-error", "layout-warning"}
 _ISSUE_HEADING = re.compile(r"(?m)^## (ISSUE-[^ \t\r\n]+)[ \t]*$")
 _ANY_ISSUE_HEADING = re.compile(r"(?m)^##[ \t]+ISSUE[^\r\n]*$")
@@ -243,6 +247,7 @@ QUESTION_ISSUE_TYPES = {
     "transcription": "transcription-ambiguous",
     "answer": "answer-missing",
     "conflict": "answer-conflict",
+    "convention": "answer-convention-ambiguous",
     "figure": "figure-missing",
 }
 

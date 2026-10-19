@@ -15,6 +15,7 @@ from issues import (
     issue_fingerprint,
     load_issues,
     main,
+    question_issue,
     upsert_issue,
 )
 
@@ -46,6 +47,18 @@ def block(issue_id, value):
 
 
 class IssueLedgerTests(unittest.TestCase):
+    def test_answer_convention_issue_is_question_scoped_and_blocks_completion(self):
+        value = question_issue(
+            paper_id="gk-2015-regular-hunan-science",
+            question_id="gk-2015-regular-hunan-science-q14",
+            source_id="src-hunan-2015",
+            kind="convention",
+            resume_action="取得适用定义或可核答案后裁定并重核Q14",
+        )
+        self.assertEqual(value["type"], "answer-convention-ambiguous")
+        self.assertTrue(blocks_completion(value, "gk-2015-regular-hunan-science"))
+        self.assertEqual(len(value["fingerprint"]), 64)
+
     def test_fingerprint_is_stable_and_ignores_mutable_workflow_fields(self):
         base = issue()
         changed = issue(

@@ -18238,3 +18238,20 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1106
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源第955页明确题干为等比数列但未载入定义或答案页；条件化简得到 q(q-3)=0，两种定义约定会导致Q14答案不同，故暂保留分支。",
+  "fingerprint": "f7b8c9ca9c0a90e308df3c3dc7ddb5f2e143764892f3f63ec204d49fe4f692e1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-hunan-science",
+  "question_id": "gk-2015-regular-hunan-science-q14",
+  "resume_action": "取得适用于本卷的可追溯定义原页或授权答案后裁定定义约定，并独立复核Q14答案与解析。",
+  "source_id": "src-b53d0d464f06084b1f8ca8e0bcc2927b503df76dc31ce0ba00095e9eacb1a4c8",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

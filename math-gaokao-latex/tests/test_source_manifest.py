@@ -1739,6 +1739,34 @@ class RegisterPapersTests(unittest.TestCase):
             self.assertEqual(issue["source_id"], source_id_value)
             self.assertEqual(issue["current_evidence"], "固定扫描页题干指向下图，但对应图位为空白。")
 
+    def test_registers_answer_convention_blocker_without_misclassifying_transcription(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, source_id_value = self._repo(tmp)
+            issues_path = repo / "math-gaokao-latex/missing-issues.md"
+            issues_path.write_text("# Missing issues\n\n", encoding="utf-8")
+            paper_id = "gk-2021-regular-national-a-arts"
+            spec = self._spec(source_id_value)
+            spec["papers"][0]["question_issues"] = [{
+                "kind": "convention",
+                "question_id": paper_id + "-q14",
+                "source_id": source_id_value,
+                "current_evidence": "原题给出等比数列条件，但固定来源未说明本卷采用的定义；两种定义会改变Q14答案集合。",
+                "resume_action": "取得适用定义或可核答案后裁定并复核Q14。",
+            }]
+
+            report = source_manifest_module.register_papers(
+                repo, manifest_path, spec, write=True
+            )
+            manifest = load_manifest(manifest_path)
+            issue, = load_issues(issues_path)
+            paper = manifest["papers"][0]
+            self.assertTrue(report["written"])
+            self.assertEqual(paper["production_state"], "blocked")
+            self.assertEqual(paper["issue_ids"], ["ISSUE-0001"])
+            self.assertEqual(issue["type"], "answer-convention-ambiguous")
+            self.assertEqual(issue["question_id"], paper_id + "-q14")
+            self.assertEqual(manifest["sources"][0]["paper_relation"], "canonical")
+
     def test_question_issue_source_must_be_bound_to_new_paper(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo, manifest_path, source_id_value = self._repo(tmp)

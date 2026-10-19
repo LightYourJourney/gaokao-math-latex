@@ -6303,3 +6303,13 @@
 - 验证：查看固定来源第1、2页整页图并对照完整21题转录；运行2015湖南理科定向测试两组共15/15通过，覆盖21题齐全、图稿/表格数据、来源哈希及解析生成输入；`git diff --check`通过。
 - 成本：复用既有页面图；无OCR、外部API或编译。实际Token与费用未知。
 - 剩余/下一步：本轮主会话题面最终逐页对照完成，但独立盲核最终回执、图稿最终视觉复核、官方答案/发布版次证据、逐题未决项可表达的注册治理、正式四版构建及最终验收仍未完成。Q14来源约定继续pending；保持draft及`paper_id=null`，不得按本次人工对照宣称完成卷。下一步优先厘清问题总账是否需要新增准确的问题类别，再决定能否将该卷安全登记为blocked draft并启动正式构建。
+
+### 2015 湖南理科：登记 Q14 来源约定阻塞项（2026-10-19）
+
+- 已完成：问题总账原类型不能准确表达“题面无歧义、但等比数列定义约定未被固定来源说明，导致答案分支未决”。新增逐题 `convention` 类型，落账名为 `answer-convention-ambiguous`；它与转录歧义、来源答案缺失及答案来源冲突区分，并按题号+来源参与稳定指纹和阻断完成判断。以TDD先补新行为测试，观察到 `convention` 未知的预期失败，再实现集中映射。临时仓库集成测试证明注册事务将卷置为blocked、原子绑定source并生成正确问题记录。
+- 注册决定：固定PDF页眉明确“2015 普通高等学校招生考试（湖南卷理）”，2页PDF的SHA、Git blob OID及ready artifact均经manifest验证；将它绑定为本卷canonical内容来源，不推断或填写未知发布者。以原卷题目/来源记录绑定的正式事务新增 `gk-2015-regular-hunan-science`、批次`phase3-b23`及`ISSUE-1106`（Q14，blocks_completion）；paper=`blocked`、`blocked_from=planned`，Q14两种条件分支保持非官方草稿。来源发布者/版次、官方答案以及Q14适用定义仍未核实，未注册为完成卷。
+- 修改文件：`tools/issues.py`；`tests/test_issues.py`、`tests/test_source_manifest.py`及`tests/test_2015_hunan_science_transcription.py`；`source-manifest.json`、`missing-issues.md`、`manifest.csv`；2015湖南理科来源校对JSON的`paper_id`；以及报告渲染器生成的六个全量报告目标（项目README/总览、baseline等）。没有修改题面、答案、数学推导、图稿或正式PDF构建文件。
+- 验证：新测试先红后绿；问题账本/来源注册器和湖南卷题目/生成测试、status及report共138/138通过。`report.py render --all`成功以单个content事务更新六个目标，`report.py check --all`通过；CSV重建保持775个来源行；新issue经ledger parser回读，fingerprint有效，source-paper双向关系与blocked状态由manifest事务校验。一次测试命令在项目子目录下误用了仓库根模块路径，导入失败；改从工作树根目录运行后定向15/15通过，未因此改任何文件。
+- 全量回归限制：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`仍失败，现场报告394条已有paper/batch缓存状态与派生状态不一致；新增paper后状态确实增加，但既有大量状态在本阶段前已不同步。它不是新issue类型单测失败；本阶段没有盲目批量改写394条状态。完整的provenance/status/report组合165项此前也是仅此缓存一致性用例失败。需单独审计并按项目reconciler流程处理全量状态，之后重跑该门禁。
+- 成本：无OCR、XeLaTeX、外部模型/API；报告全量重算与138项定向测试为本地程序工作。Token和实际费用未知。
+- 剩余/下一步：本卷现在是可见的blocked draft，source binding与Q14 blocker已入manifest/问题总账；仍缺最终独立盲核回执、图稿最终视觉复核、官方答案及来源发布信息，尚未生成/正式构建四版。下一步先定向审计394项陈旧缓存的分布及官方reconcile命令的写入范围，避免手改状态；随后再推进本卷provenance初始化与正式四版构建，保持Q14 blocker不被绕过。全题库1952–2026总目标继续有效。
