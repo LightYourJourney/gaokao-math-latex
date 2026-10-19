@@ -1,0 +1,23 @@
+% Source: fixed 2015 Hunan science paper, printed page 955.
+% Vector redraw from the source diagram; not a raster crop.
+\begin{tikzpicture}[>=stealth, every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont, inner sep=3pt}]
+  \node[draw, rounded corners] (start) at (0,0) {开始};
+  \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110, below=7mm of start] (input) {输入 $n$};
+  \node[draw, rectangle, below=7mm of input] (init) {$i=1,\ S=0$};
+  \node[draw, rectangle, text width=48mm, align=center, below=7mm of init] (sum) {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
+  \node[draw, rectangle, below=7mm of sum] (inc) {$i=i+1$};
+  \node[draw, diamond, aspect=2.2, below=7mm of inc] (test) {$i>n?$};
+  \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110, below=7mm of test] (output) {输出 $S$};
+  \node[draw, rounded corners, below=7mm of output] (end) {结束};
+  \draw[->] (start) -- (input);
+  \draw[->] (input) -- (init);
+  \draw[->] (init) -- (sum);
+  \draw[->] (sum) -- (inc);
+  \draw[->] (inc) -- (test);
+  \draw[->] (test) -- node[right, inner sep=2pt] {是} (output);
+  \draw[->] (output) -- (end);
+  \coordinate (loopright) at ($(test.east)+(13mm,0)$);
+  \draw (test.east) -- (loopright |- test.east) -- (loopright |- sum.east);
+  \draw[->] (loopright |- sum.east) -- (sum.east);
+  \node[right, inner sep=2pt] at ($(loopright |- test.east)!0.55!(loopright |- sum.east)$) {否};
+\end{tikzpicture}

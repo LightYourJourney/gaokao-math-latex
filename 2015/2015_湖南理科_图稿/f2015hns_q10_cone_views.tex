@@ -1,0 +1,23 @@
+% Source: fixed 2015 Hunan science paper, printed page 955.
+% The three orthographic views identify a right circular cone; vector redraw.
+\begin{tikzpicture}[x=14mm,y=14mm, every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont, inner sep=1pt}, every path/.style={line width=.45pt}]
+  % Front view
+  \draw (0,0) -- (1,2) -- (2,0) -- cycle;
+  \draw[<->] (-.22,0) -- (-.22,2) node[midway,left] {$2$};
+  \draw[<->] (1,2.22) -- (2,2.22) node[midway,above] {$1$};
+  \draw[<->] (0,-.22) -- (2,-.22) node[midway,below] {$2$};
+  \node[below=7mm] at (1,0) {正视图};
+  % Side view
+  \begin{scope}[xshift=3.2cm]
+    \draw (0,0) -- (1,2) -- (2,0) -- cycle;
+    \draw[<->] (-.22,0) -- (-.22,2) node[midway,left] {$2$};
+    \draw[<->] (1,2.22) -- (2,2.22) node[midway,above] {$1$};
+    \draw[<->] (0,-.22) -- (2,-.22) node[midway,below] {$2$};
+    \node[below=7mm] at (1,0) {侧视图};
+  \end{scope}
+  % Plan view (diameter 2)
+  \begin{scope}[xshift=1.0cm,yshift=-3.8cm]
+    \draw (1,1) circle[radius=1];
+    \node[below=7mm] at (1,0) {俯视图};
+  \end{scope}
+\end{tikzpicture}

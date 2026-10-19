@@ -1,4 +1,5 @@
 import csv
+import hashlib
 import json
 import re
 import unittest
@@ -30,6 +31,10 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["source_sha256"], self.review["source"]["sha256"])
         self.assertEqual(self.review["source"]["pdf_pages"], 2)
         self.assertEqual(self.review["source"]["printed_pages"], [955, 956])
+        self.assertEqual(
+            hashlib.sha256(TRANSCRIPT.read_bytes()).hexdigest(),
+            self.review["question_transcript"]["sha256"],
+        )
 
     def test_all_21_questions_are_present_in_three_source_sections(self):
         numbers = [int(n) for n in re.findall(r"^### 第 (\d+) 题", self.transcript, re.M)]
@@ -53,14 +58,50 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
             self.assertIn(expression, self.transcript)
         self.assertIsNone(self.review["official_answer"]["value"])
         self.assertEqual(self.review["official_answer"]["status"], "not-present-in-fixed-source")
-        self.assertEqual(self.review["generated_solution"]["status"], "not-started")
+        self.assertEqual(
+            self.review["generated_solution"]["status"],
+            "main-session-draft-awaiting-blind-review",
+        )
+
+    def test_stem_leaf_data_is_transcribed_without_omissions_or_reordering(self):
+        body = re.search(
+            r"\\begin\{array\}\{c\|l\}\s*(.*?)\\end\{array\}",
+            self.transcript,
+            re.S,
+        ).group(1)
+        rows = {}
+        for line in body.splitlines():
+            if "&" in line:
+                stem, leaves = line.split("&", 1)
+                rows[stem.strip()] = re.findall(r"\d+", leaves)
+        self.assertEqual(rows, {
+            "13": ["0", "0", "3", "4", "5", "6", "6", "8", "8", "8", "9"],
+            "14": ["1", "1", "1", "2", "2", "2", "3", "3", "4", "4", "5", "5", "5", "6", "6", "7", "8"],
+            "15": ["0", "1", "2", "2", "3", "3", "3"],
+        })
+        self.assertEqual(sum(map(len, rows.values())), 35)
 
     def test_every_original_figure_is_in_inventory_and_not_committed_as_raster(self):
         self.assertIn("| 3 | 955 |", self.figures)
         for q in (7, 10, 12, "16A", 19):
             self.assertIn(f"| {q} |", self.figures)
+        self.assertNotIn("| 待制作 |", self.figures)
+        self.assertEqual(self.figures.count("草稿已建、smoke编译；待逐项对照原图复核"), 5)
+        self.assertIn("题面已录入35叶；待独立逐叶复核", self.figures)
         self.assertFalse(self.review["figures"]["source_raster_committed"])
-        self.assertEqual(self.review["figures"]["vector_reconstruction_status"], "pending")
+        self.assertEqual(
+            self.review["figures"]["vector_reconstruction_status"],
+            "draft-smoke-compiled-awaiting-page-review",
+        )
+        vector_dir = ROOT / self.review["figures"]["vector_source_directory"]
+        vector_files = sorted(vector_dir.glob("*.tex"))
+        self.assertEqual(len(vector_files), 5)
+        self.assertFalse(list(vector_dir.glob("*.png")))
+        self.assertFalse(list(vector_dir.glob("*.jpg")))
+        self.assertFalse(list(vector_dir.glob("*.jpeg")))
+        for name, expected_sha in self.review["figures"]["vector_sources"].items():
+            path = next(p for p in vector_files if f"_{name.lower()}_" in p.name)
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected_sha)
 
 
 if __name__ == "__main__":

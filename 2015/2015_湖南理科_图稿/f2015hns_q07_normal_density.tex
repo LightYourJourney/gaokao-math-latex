@@ -1,0 +1,13 @@
+% Source: fixed 2015 Hunan science paper, printed page 955.
+% Exact standard-normal density on [0,1], matching the unit-square diagram.
+\begin{tikzpicture}[x=38mm,y=38mm, every node/.style={font=\fontsize{10.5pt}{12.6pt}\selectfont, inner sep=1pt}]
+  \path[fill=black!18] (0,0) -- plot[domain=0:1,samples=80] (\x,{exp(-\x*\x/2)/sqrt(2*pi)}) -- (1,0) -- cycle;
+  \draw[line width=.45pt] (0,0) -- (1.12,0) node[right] {$x$};
+  \draw[line width=.45pt] (0,0) -- (0,1.12) node[above] {$y$};
+  \draw[line width=.45pt] (0,0) rectangle (1,1);
+  \draw[line width=.65pt,domain=0:1,samples=80] plot (\x,{exp(-\x*\x/2)/sqrt(2*pi)});
+  \draw (1,.025) -- (1,-.025) node[below=2pt] {$1$};
+  \draw (-.025,1) -- (.025,1) node[left=2pt] {$1$};
+  \node at (.52,.48) {$C$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
