@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[4]
 TRANSCRIPT = ROOT / "2015/2015_数学真题_福建文_试题.md"
 REVIEW = ROOT / "2015/2015_福建文科_来源校对.json"
 FIGURES = ROOT / "2015/2015_数学真题_福建文_图表清单.md"
+ANSWER_KEY = ROOT / "2015/2015_数学真题_福建文_答案要点.md"
+SOLUTIONS = ROOT / "2015/2015_数学真题_福建文_解析正文.md"
 PAPER_ROOT = ROOT / "math-gaokao-latex/2015_福建卷_文科"
 
 
@@ -18,6 +20,8 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         cls.transcript = TRANSCRIPT.read_text(encoding="utf-8")
         cls.review = json.loads(REVIEW.read_text(encoding="utf-8"))
         cls.figures = FIGURES.read_text(encoding="utf-8")
+        cls.answer_key = ANSWER_KEY.read_text(encoding="utf-8")
+        cls.solutions = SOLUTIONS.read_text(encoding="utf-8")
 
     def test_source_identity_and_transcription_hash(self):
         self.assertEqual(
@@ -62,6 +66,18 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         self.assertNotIn(r"当 \(x\in(1,x_0)\) 时，恒有", self.transcript)
         for option in (r"(A) \((0,\dfrac{\sqrt3}{2}]\)", r"(B) \((0,\dfrac34]\)", r"(C) \([\dfrac{\sqrt3}{2},1)\)", r"(D) \([\dfrac34,1)\)", "充分而不必要条件", "必要而不充分条件", "充分必要条件", "既不充分也不必要条件"):
             self.assertIn(option, self.transcript)
+
+    def test_independent_solution_sources_are_complete_and_not_official(self):
+        for source in (self.answer_key, self.solutions):
+            self.assertIn("official_answer: null", source)
+            self.assertIn("非官方", source)
+            self.assertIn("draft-independent-solutions-cross-verified-pending-formal-acceptance", source)
+        solution_numbers = [int(n) for n in re.findall(r"^### 第 (\d+) 题", self.solutions, re.M)]
+        answer_numbers = [int(n) for n in re.findall(r"^\*\*(\d+)．", self.answer_key, re.M)]
+        self.assertEqual(solution_numbers, list(range(1, 23)))
+        self.assertEqual(answer_numbers, list(range(1, 23)))
+        for expression in (r"m=\pm2\sqrt2", r"n_k", r"k<1", r"\frac{1+\sqrt3}{\sqrt2}"):
+            self.assertIn(expression, self.solutions)
 
     def test_diagrams_and_table_are_accounted_for_without_raster_assets(self):
         self.assertEqual(
@@ -116,9 +132,10 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
             self.assertIn(edge, q20)
 
     def test_inline_math_delimiters_are_balanced_in_transcript_and_inventory(self):
-        for text in (self.transcript, self.figures):
+        for text in (self.transcript, self.figures, self.answer_key, self.solutions):
             self.assertEqual(text.count(r"\("), text.count(r"\)"))
             self.assertGreater(text.count(r"\("), 0)
+            self.assertEqual(text.count(r"\["), text.count(r"\]"))
 
 
 if __name__ == "__main__":
