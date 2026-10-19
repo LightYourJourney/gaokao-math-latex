@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 全库来源清单与状态报告一致性（2026-10-20）
+
+- 已完成：只读检查发现 `manifest.csv` 与 `source-manifest.json` 投影不一致，`report.md` 和 `reports/baseline.md` 也与当前全量 manifest 漂移。使用仓库自带生成器刷新 775 行来源 CSV 与全量报告；不改来源事实或各卷正文。
+- 验证：`generate_projects.py --all --check` 确认 291 套卷的生成结果均与来源一致；`manifest_csv.py --check` 确认 CSV 当前且 775 行；`report.py check --all` 确认全量报告与 manifest 当前；`git diff --check` 通过。
+- 当前机器报告快照：来源 775（普通 734、春考 41）；试卷 291（生产状态 blocked 49、compiled 3、complete 239）；正式复核门禁 FINALIZED 15、INVALID_OR_STALE 139、VISUAL_FAILED 3。状态机各口径不同，239 个 production `complete` 不能替代正式复核门禁；项目全目标仍未完成。
+- 修改文件：`math-gaokao-latex/manifest.csv`、`report.md`、`math-gaokao-latex/reports/baseline.md` 由生成器更新；本进度补记本阶段。未运行全量 XeLaTeX 重编，也未修改 manifest、source record、issue 或卷内容。
+- 剩余/下一步：全局尚有 49 套 blocked、3 套 compiled 与 139 份 INVALID_OR_STALE 门禁状态、3 份视觉失败；必须按具体阻塞原因和当前输入回执分批修复。当前优先继续 2004 上海春季卷盲核；不可将报表同步误报为题库质量问题已解决。
+
 ## 2004 上海春季卷：22 题题面首稿（2026-10-20）
 
 - 恢复去重：确认工作树 仓库根、分支 feat/gaokao-phase0，初始工作区干净。检查当前 Git 历史和 git log --all：2004 全国Ⅰ/Ⅱ文理四套已有独立题面、答案解析、LaTeX 与验收记录；它们与春季上海卷不是同一试卷，故跳过。检查 manifest、项目题面路径及本进度未发现2004春季上海既有转录；候选源在 manifest 为 ready 且未绑定 paper_id。
