@@ -60,7 +60,7 @@ SHORT_ANSWER_OVERRIDES = {
 }
 SHORT_ANSWER_NOTICE_OVERRIDES = {
     "gk-1990-regular-guangdong-science": (
-        "本卷包含来源印载答案与项目整理的推导，尚未经过异人盲核。"
+        "本卷已完成独立盲核，但第2题按通常定义A、C同时成立，与单选形式及来源表仅印A冲突，未裁定唯一答案。"
         "第12题题图缺失，B仅为来源印载答案，数学结论待核。\\textbf{非官方标准答案}。"
     ),
     "gk-1994-shanghai": (

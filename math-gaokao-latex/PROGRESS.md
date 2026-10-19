@@ -6843,3 +6843,11 @@
 - 验证：`python3 -m unittest docs.exams.math-gaokao-latex.tests.test_2000_beijing_anhui_spring_arts_transcription docs.exams.math-gaokao-latex.tests.test_2000_spring_beijing_anhui`，17/17通过；`git diff --check`通过。答案和解析的独立数学复核已完成，但尚不是正式项目复核回执。
 - 成本：未重新OCR、未调用外部模型/API，复用固定PDF和已核题面；Token与实际费用不可见，记未知。
 - 剩余/下一步：两卷出版者/版次仍无法由现有扫描件和第三方存档证实，`paper_id=null`、`official_answer=null`；因此尚未写入正式来源/答案事务，也未做四版本XeLaTeX正式构建、逐页视觉校样或整卷验收。下一阶段应优先取得可验证的来源书目信息并按正式事务工作流登记；无法取得时维持unbound草稿，不得把本阶段误报为两套试卷已完成。
+
+### 1990 广东理科：四版本全页视觉回执登记（2026-10-20）
+
+- 已完成：延续既有30题转录与数学/答案复核，没有重做OCR或转录。对本次正式构建的试题版5页、解析版23页、简答版7页、印刷版17页共52页逐页完成八项视觉检查（字形、题号、选项公式对齐、图形标注、页眉页脚、分页留白、字号、答案泄漏），共416项，四版全部通过。另对候选锚点第2页逐版查看原尺寸渲染；Q12缺图提示清晰可读，题干和选项未被裁切或遮挡。视觉通过仅描述PDF版面，不解除题目来源/数学阻断。
+- 状态与修改文件：正式批次`phase1-b23` finalizer以 revision 4479 写入四版 review 回执及批次报告`reports/phase1-b23.md`；当前 build attempt `7d0511f1-6c73-4205-850b-22bc7b36ef5a`仍为成功构建、视觉审查后可用。更新范围包括1990广东理科正式产物/索引/来源manifest、provenance和build/review receipts、issues及本进度；另外更新两份来源/答案说明和生成测试。根目录既有未跟踪`-.png`属原有用户文件，未读取、移动或纳入修改。
+- 验证：`review_receipts.py finalize-batch`返回`FINALIZED`，但批次内容状态为`closed_with_blockers`；随后`check-batch`为`OK`（1卷、1 succeeded、0 stale/failed/invalid/missing），build receipt校验通过；source manifest校验、`provenance.py check-batch --batch phase1-b23`均通过；1990来源定向测试4/4通过。初次用包含连字符目录名的unittest模块导入形式失败（Python模块路径不接受该包名），已改为直接运行测试文件成功，没有重复使用错误调用。此前整套provenance测试曾有一项旧缓存状态漂移失败（365条历史状态不一致），本阶段未重跑该长套件，故不把该历史问题表述为已解决。
+- 剩余/下一步：该卷仍不得计为已验收完成。`ISSUE-1070`固定来源PDF的Q12图缺失、`ISSUE-1114`相应答案无法核验、`ISSUE-1113`Q2单选题与印刷答案表冲突仍开放；回执和报告保持`closed_with_blockers`。待获得可验证的同版Q12图源、解决Q2答案冲突后，再局部更新来源/答案并重建受影响版本与复核；本阶段不重跑已核题面。
+- 成本：OCR和外部模型/API调用0；复用已完成题面、解析、构建PDF与渲染页。Codex Token用量与实际费用不可见，未知。

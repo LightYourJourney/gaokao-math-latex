@@ -1,5 +1,6 @@
 """1990 广东理科合并稿应忠实保留原卷的分数与希腊字母。"""
 from pathlib import Path
+import json
 import re
 import sys
 import unittest
@@ -38,12 +39,39 @@ class GuangdongScience1990SourceTests(unittest.TestCase):
         self.assertEqual(issue['paper_id'], 'gk-1990-regular-guangdong-science')
         self.assertEqual(issue['question_id'], 'gk-1990-regular-guangdong-science-q02')
 
+        manifest = json.loads(
+            (PROJECT / 'source-manifest.json').read_text(encoding='utf-8')
+        )
+        paper = next(p for p in manifest['papers']
+                     if p['paper_id'] == 'gk-1990-regular-guangdong-science')
+        self.assertTrue({'ISSUE-1070', 'ISSUE-1113', 'ISSUE-1114'} <= set(paper['issue_ids']))
+        manifest_note = paper['index_metadata']['note']
+        self.assertIn('独立盲核已覆盖Q1—30', manifest_note)
+        self.assertIn('Q2按通常定义A、C同时成立', manifest_note)
+
+        provenance = json.loads(
+            (PROJECT / '1990_广东卷_理科' / 'provenance.json').read_text(encoding='utf-8')
+        )
+        q_by_number = {q['question_order']: q for q in provenance['questions']}
+        self.assertEqual(q_by_number[2]['conflict_status'], 'unresolved')
+        self.assertIn('ISSUE-1113', q_by_number[2]['issue_ids'])
+        self.assertEqual(q_by_number[12]['answer_evidence']['grade'], 'U')
+        self.assertIn('ISSUE-1114', q_by_number[12]['issue_ids'])
+
+        generated_answers = (PROJECT / '1990_广东卷_理科' / 'answers.tex').read_text(
+            encoding='utf-8'
+        )
+        self.assertIn('A、C均成立', generated_answers)
+
     def test_short_answers_retain_printed_attribution_and_q12_blocker(self):
         short = (PROJECT / '1990_广东卷_理科' / 'answers_short.tex').read_text(encoding='utf-8')
         self.assertIn('来源印载答案', short)
         self.assertIn('第12题', short)
         self.assertIn('题图缺失', short)
         self.assertIn('B仅为来源印载', short)
+        self.assertIn('已完成独立盲核', short)
+        self.assertIn('第2题按通常定义A、C同时成立', short)
+        self.assertNotIn('尚未经过异人盲核', short)
         self.assertNotIn('答案为编写者独立推导', short)
         self.assertEqual([len(columns) for columns in re.findall(
             r'\\begin\{tabular\}\{(c+)\}', short)], [14, 13])

@@ -18378,3 +18378,19 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1114
+
+```json
+{
+  "affected_paper_ids": [],
+  "fingerprint": "e80c4f92aa0f94565283868ba9e20ac029dfa0f3f7bf48412ca7243c757e5aed",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-guangdong-science",
+  "question_id": "gk-1990-regular-guangdong-science-q12",
+  "resume_action": "取得可核验的同版完整题图或独立同版来源后，重新求解第12题；不可把来源表印载B直接当成已验证答案。",
+  "source_id": "src-30b33e839ac3b04ec001587e1f600129eccb6a4b8ca3cc7a4c5ce79a5a205d5a",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

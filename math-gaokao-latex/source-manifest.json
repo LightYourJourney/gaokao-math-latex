@@ -1301,7 +1301,7 @@
       "paper_ids": [
         "gk-1990-regular-guangdong-science"
       ],
-      "status": "planned"
+      "status": "closed_with_blockers"
     },
     {
       "batch_id": "phase1-b24",
@@ -1399,7 +1399,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "137e1ff3-ae4f-4adc-90e2-26785e92ae0f",
+  "last_transaction_id": "344d0539-edec-4ef1-9a63-5b025ccc0759",
   "papers": [
     {
       "blocked_from": null,
@@ -19531,7 +19531,7 @@
       "index_metadata": {
         "base": "1990_guangdong_science",
         "id": "gk-1990-regular-guangdong-science",
-        "note": "固定来源普通高考/1990/1990广东理.pdf，SHA-256 ad544a4c0a1131daf7edbd9bfc59bbb9ca497a1fd79eaa87403d7834d627bb19；PDF第1—4页为题面，第5页载来源答案表，第6—8页载来源解答及评分标准。已转录30题（第1—25题选择、第26—30题解答）。第12题固定来源第2页题干指向下图但图位为空白；答案表印B仅为来源记录，不代表已核答案。主会话复算及来源解答对照不等于异人盲核，待独立复核。",
+        "note": "固定来源普通高考/1990/1990广东理.pdf，SHA-256 ad544a4c0a1131daf7edbd9bfc59bbb9ca497a1fd79eaa87403d7834d627bb19；PDF第1—4页为题面，第5页载来源答案表，第6—8页载来源解答及评分标准。已转录30题。独立盲核已覆盖Q1—30；Q2按通常定义A、C同时成立，与单选形式及来源答案表仅印A冲突，未裁定唯一答案。Q12固定来源第2页题干指向下图但图位为空白；答案表印B仅为来源记录，不代表已核答案。ISSUE-1113与ISSUE-1070/1114保持开放，阻断整卷完成。",
         "pages_q": [
           1,
           4
@@ -19555,7 +19555,9 @@
         "variant": "广东理科"
       },
       "issue_ids": [
-        "ISSUE-1070"
+        "ISSUE-1070",
+        "ISSUE-1113",
+        "ISSUE-1114"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -20341,7 +20343,7 @@
       "year": 1990
     }
   ],
-  "revision": 4466,
+  "revision": 4479,
   "schema_version": 1,
   "sources": [
     {
