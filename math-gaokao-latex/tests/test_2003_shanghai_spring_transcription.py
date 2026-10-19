@@ -39,6 +39,8 @@ class ShanghaiSpring2003TranscriptionTests(unittest.TestCase):
 
     def test_high_risk_formula_transcription_matches_the_visual_source(self):
         for source_detail in (
+            r"f(x)=\sqrt{x}+1",
+            r"y=\sqrt3x+3",
             r"f(x)=(\sin x)^2-\left(\dfrac23\right)^{|x|}+\dfrac12",
             r"(\lg 20)^{2\cos x}>1\ (x\in(0,\pi))",
             r"f(x)=\dfrac{1}{2^x+\sqrt2}",
