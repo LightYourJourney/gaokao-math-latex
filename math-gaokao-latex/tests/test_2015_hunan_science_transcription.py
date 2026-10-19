@@ -60,7 +60,16 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(self.review["official_answer"]["status"], "not-present-in-fixed-source")
         self.assertEqual(
             self.review["generated_solution"]["status"],
-            "main-session-draft-awaiting-blind-review",
+            "draft-partially-blind-reviewed",
+        )
+        solution_path = ROOT / self.review["generated_solution"]["path"]
+        self.assertEqual(
+            hashlib.sha256(solution_path.read_bytes()).hexdigest(),
+            self.review["generated_solution"]["sha256"],
+        )
+        self.assertEqual(
+            self.review["generated_solution"]["independent_review_status"],
+            "partial-full-paper-review-pending",
         )
 
     def test_stem_leaf_data_is_transcribed_without_omissions_or_reordering(self):
