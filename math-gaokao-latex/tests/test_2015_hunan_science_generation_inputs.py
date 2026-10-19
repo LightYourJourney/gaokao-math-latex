@@ -83,13 +83,14 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         self.assertIn(r"-\infty", points[14].answers[0][1])
         q14 = points[13].answers[0][1]
         self.assertIn(r"3^{n-1}", q14)
-        self.assertNotIn("q=0", q14)
+        self.assertIn("q=0", q14)
+        self.assertIn("约定尚待来源核实", q14)
         self.assertIn("非官方", answer_text)
         q16 = points[15].answers[0][1]
         for variant in ("A", "B", "C"):
             self.assertIn(variant, q16)
 
-    def test_q14_excludes_zero_ratio_under_the_quotient_definition(self):
+    def test_q14_preserves_both_definition_branches_pending_source_evidence(self):
         solution_blocks = parse_question_blocks(SOLUTION.read_text(encoding="utf-8"))
         q14_solution = solution_blocks[13].body
         q14_answer = parse_answer_points(
@@ -97,8 +98,11 @@ class HunanScienceGenerationInputTests(unittest.TestCase):
         )[13].answers[0][1]
         self.assertIn("相邻项比值定义", q14_solution)
         self.assertIn("a_3/a_2", q14_solution)
+        self.assertIn("只要求递推式", q14_solution)
+        self.assertIn("q=0", q14_solution)
         self.assertIn(r"3^{n-1}", q14_answer)
-        self.assertNotIn("q=0", q14_answer)
+        self.assertIn("q=0", q14_answer)
+        self.assertIn(r"(1,0,0,\ldots)", q14_answer)
 
     def test_real_generator_and_latex_converter_accept_all_three_sources(self):
         question_text = QUESTIONS.read_text(encoding="utf-8")

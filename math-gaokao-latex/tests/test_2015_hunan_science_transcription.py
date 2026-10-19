@@ -82,7 +82,9 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         )
         self.assertEqual(
             self.review["generated_solution"]["unresolved_review_items"],
-            [],
+            [
+                "Q14 intended geometric-sequence convention is not established by the fixed source; retain both conditional branches pending traceable source evidence."
+            ],
         )
         self.assertTrue(any(
             "Q14" in note and "a_3/a_2" in note
@@ -91,7 +93,7 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         ledger = (ROOT / "2015/2015_数学真题_湖南理_盲核对账草稿.md").read_text(encoding="utf-8")
         self.assertIn(r"\(n=3\)时求和为\(1/3+1/15+1/35=3/7\)", ledger)
         self.assertIn("a_3/a_2", ledger)
-        self.assertIn("唯一符合题设比值定义", ledger)
+        self.assertIn("原题意图和官方答案仍待来源核实", ledger)
 
     def test_stem_leaf_data_is_transcribed_without_omissions_or_reordering(self):
         body = re.search(
