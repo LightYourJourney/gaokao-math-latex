@@ -88,7 +88,12 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         self.assertFalse(self.review["figures_and_tables"]["raster_source_committed"])
         self.assertEqual(
             self.review["figures_and_tables"]["vector_reconstruction_status"],
-            "draft-linked-pending-independent-review",
+            "draft-linked-independently-reviewed-pending-formal-acceptance",
+        )
+        self.assertFalse(self.review["generated_solution"]["is_official"])
+        self.assertEqual(
+            self.review["generated_solution"]["status"],
+            "draft-independent-solutions-cross-verified-pending-formal-acceptance",
         )
 
     def test_vector_assets_are_linked_hashed_and_tikz_only(self):
