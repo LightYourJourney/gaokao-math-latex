@@ -1,5 +1,6 @@
 import csv
 import hashlib
+import importlib.util
 import json
 import re
 import unittest
@@ -90,18 +91,41 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         })
         self.assertEqual(sum(map(len, rows.values())), 35)
 
+    def test_source_footnote_and_all_vector_figures_are_embedded(self):
+        self.assertIn(r"P(\mu-\sigma<X\leqslant\mu+\sigma)=0.6826", self.transcript)
+        self.assertIn(r"P(\mu-2\sigma<X\leqslant\mu+2\sigma)=0.9544", self.transcript)
+        links = re.findall(r"\[[^\]]+\]\(([^)]+\.tex)\)", self.transcript)
+        self.assertEqual(len(links), 5)
+        self.assertEqual({Path(link).name for link in links}, {
+            "f2015hns_q03_flow.tex",
+            "f2015hns_q07_normal_density.tex",
+            "f2015hns_q10_cone_views.tex",
+            "f2015hns_q16a_circle_chords.tex",
+            "f2015hns_q19_frustum.tex",
+        })
+        fig16 = (ROOT / self.review["figures"]["vector_source_directory"] /
+                 "f2015hns_q16a_circle_chords.tex").read_text(encoding="utf-8")
+        self.assertIn(r"\coordinate (M) at (-.52,.26);", fig16)
+        self.assertIn(r"\draw (O)--(N);", fig16)
+        self.assertNotIn(r"\draw[densely dotted] (O)--(N);", fig16)
+
     def test_every_original_figure_is_in_inventory_and_not_committed_as_raster(self):
         self.assertIn("| 3 | 955 |", self.figures)
         for q in (7, 10, 12, "16A", 19):
             self.assertIn(f"| {q} |", self.figures)
         self.assertNotIn("| 待制作 |", self.figures)
-        self.assertEqual(self.figures.count("草稿已建、smoke编译；待逐项对照原图复核"), 5)
-        self.assertIn("题面已录入35叶；待独立逐叶复核", self.figures)
+        self.assertEqual(self.figures.count("独立源核无差异"), 3)
+        self.assertIn("独立逐叶核对35/35一致", self.figures)
+        self.assertIn("已修正M在FO上、ON为实线", self.figures)
         self.assertFalse(self.review["figures"]["source_raster_committed"])
         self.assertEqual(
             self.review["figures"]["vector_reconstruction_status"],
-            "draft-smoke-compiled-awaiting-page-review",
+            "draft-source-reviewed-smoke-compiled",
         )
+        visual_review = self.review["figures"]["independent_visual_review"]
+        self.assertEqual(visual_review["question_numbers"], list(range(1, 22)))
+        self.assertEqual(visual_review["figure_questions"], [3, 7, 10, 12, "16A", 19])
+        self.assertEqual(visual_review["final_check_status"], "pending")
         vector_dir = ROOT / self.review["figures"]["vector_source_directory"]
         vector_files = sorted(vector_dir.glob("*.tex"))
         self.assertEqual(len(vector_files), 5)
@@ -111,6 +135,23 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         for name, expected_sha in self.review["figures"]["vector_sources"].items():
             path = next(p for p in vector_files if f"_{name.lower()}_" in p.name)
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected_sha)
+
+    def test_local_tex_links_convert_to_registered_vector_inputs(self):
+        module_path = ROOT / "math-gaokao-2017-2026/tools/md2tex.py"
+        spec = importlib.util.spec_from_file_location("gaokao_md2tex", module_path)
+        md2tex = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(md2tex)
+        links = re.findall(r"\[[^\]]+\]\(([^)]+\.tex)\)", self.transcript)
+        figure_map = {link: Path(link).stem for link in links}
+        result = md2tex.convert_markdown(
+            self.transcript,
+            md2tex.ConversionContext(figure_map=figure_map, strict=True),
+        )
+        self.assertEqual(
+            result.referenced_figures,
+            tuple(Path(link).stem for link in links),
+        )
+        self.assertEqual(result.warnings, ())
 
 
 if __name__ == "__main__":
