@@ -11,6 +11,10 @@
 - 主要剩余瓶颈：数学 OCR gold 仍只有 2 个且均待人工复核；已完成 1 个扫描页上的 MinerU/Paddle 同图定性对照，但没有可评分的人工参考，也没有形成准确率结论。题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
 - 成本基线：历史 Agent 调用量、输入/输出/缓存 Token、账单费用、端到端完成率均未知。已有本地计时与缓存证据不能换算成聊天 Token 节省率。
 
+### 增量状态：题目级 IR 导出（2026-10-20）
+
+新增 `tools/export_question_ir.py`，从已登记的规范 Markdown 与逐题 provenance 输出 JSON；真实样本为 2017 全国Ⅰ理科 23 题。导出器使用稳定 `question_id`、source page/PDF hash、题面哈希和复核状态，并将项目答案证据与 `official_answer=null` 分开；哈希/绑定失配 fail-closed。现阶段不从 OCR 识别结果构造题块、不解析结构化选项或公式，也未接入缓存、路由、四版生成或八项 QA。该增量复用了已有本地文本/元数据，无 OCR/API 请求；Token/API 成本仍不可见，不能声称端到端成本下降。
+
 ### 同页 MinerU/Paddle OCR 定性试点（2026-10-15）
 
 选用现有 gold 候选 national-2008-extension-arts-page05-scan，只比较已有 PaddleOCR 输出和一次新的 MinerU 输出；二者输入对应同一张缓存页面图，SHA-256 为 17ceebb7c49cdb789120b2ab92a974309973f2982abd1e9423f0db495205904a（来源 PDF SHA fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2，第5页，144 DPI）。因 MinerU CLI 接受 PDF，本次将该原始栅格无损放入单页 PDF；包装 PDF SHA 为 27440850180b66e3528e61a7ff1c028db5eb0e24af5215482746cfa84114f919。输出 SHA 为 01202339eb47a0d15ea672ab3493c55af92f6a45cbae2d9b26d861a2ae8fe70e，原始 Markdown 暂存于忽略目录 math-gaokao-latex/.work/mineru-output/。

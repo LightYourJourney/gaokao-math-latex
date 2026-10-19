@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 工程阶段：已登记卷的题目级 IR 确定性导出（2026-10-20）
+
+- 已完成：复用 `solution_sources.parse_question_blocks()` 与 `provenance.question_text_digests()`，新增从现有规范 Markdown / `source-manifest.json` / 逐题 `provenance.json` 导出机器可读题目 IR 的工具。以 2017 全国Ⅰ理科 23 题真实卷作为集成样本；校验 paper/source 唯一绑定、ready/canonical 关系、manifest 与逐题 provenance 中记录的 PDF SHA-256 一致、题数、题号、逐题 ID/source ID 与题面哈希（未重新打开/哈希 PDF 原件）。保留解析题块、题页、图片引用及题面复核；当前无证据字段用 null，项目答案证据与官方答案严格分离（`official_answer=null`）。
+- 修改文件：`tools/export_question_ir.py`、`tests/test_export_question_ir.py`、本 `README.md` 使用说明、本 `PROGRESS.md`、`docs/TOKEN_AUDIT.md` 增量能力记录。根目录既存未跟踪 `-.png` 未碰触。
+- 验证：新增 IR 定向测试 3/3 通过（真实 2017 理科导出、题面哈希变更 fail-closed、未知 paper_id 拒绝）；既有 `test_solution_sources.py` 109/109 与 `test_provenance.HashContractTests` 12/12 通过；CLI 导出 JSON 后标准库成功解析，核对 23 题、23 条题面复核 passed、官方答案非空数为 0；`git diff --check` 通过。全套 `unittest discover -s tests` 共 1479 项：1465 通过、13 跳过、1 失败；唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告 392 项 manifest 缓存状态与现场派生值不符（首例 2017 全国Ⅰ理科 complete/editions_generated），属于现存全库状态缓存漂移，本阶段未改写 manifest/status 缓存。曾单独运行全 `test_provenance.py`，因同一全库重算约 1 分钟仍持续高 CPU 而停止；未重复该昂贵全文件运行。未跑 OCR、LaTeX 构建或视觉验收。
+- 成本/边界：本阶段零 OCR、零聊天模型/API 调用；只解析既有 Markdown 和 JSON，未复用缓存计数/耗时基准，Codex Token、API 费用仍未知，不声称节省比例。IR 是规范转录的结构化封装，不是 OCR 结果，不自动拆分题干/选项/公式，也不构成数学正确性或正式验收。
+- 剩余/下一步：让 IR 可消费可缓存的 OCR 页面结果仍未实现；OCR gold 仍待人工核对，混合页区域识别、模型路由、题目局部重建与端到端八项质量报告未闭环。继续前应先定义 OCR 候选到人工确认题块的字段/状态转换，并用一份现有固定来源页做 fail-closed 集成测试；试卷转录方面仍按 manifest 与各卷回执推进，未发现已具备完整来源证据且无 issue 的新转录目标时不臆造身份或重复做已完成卷。
+
 ## 1992 三南卷：题面盲核与Q15来源问题登记（2026-10-20）
 
 - 已完成：独立题面核对覆盖Q1–Q28，未发现转录与固定来源不符；发现原卷Q15的A、D两项逐字表达同一命题。独立解答盲核确认Q2–Q14、Q16–Q28现有推导成立；Q1的`arg`主值约定仍有歧义。主会话直接查看固定PDF原页并用`pdftotext -layout`复核Q15，确认“充分但不必要”既非充分也非必要，A、D重复且B、C也不适用。题面按原件保留；解答改为“无正确选项”，不猜测原拟选项，结构化选择答案置空。
