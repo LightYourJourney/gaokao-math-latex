@@ -125,6 +125,8 @@ class HunanScienceTranscriptionTests(unittest.TestCase):
         self.assertNotIn(r"\draw[densely dotted] (O)--(N);", fig16)
 
     def test_every_original_figure_is_in_inventory_and_not_committed_as_raster(self):
+        self.assertNotIn("尚未重绘为规范图稿", self.transcript)
+        self.assertNotIn("图稿完成并复核前，不生成可发布的正式版本", self.figures)
         self.assertIn("| 3 | 955 |", self.figures)
         for q in (7, 10, 12, "16A", 19):
             self.assertIn(f"| {q} |", self.figures)
