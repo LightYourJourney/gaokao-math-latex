@@ -63,6 +63,26 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertNotIn("canonical", draft)
         self.assertNotIn("complete", draft)
 
+    def test_q15_source_options_have_counterexamples_when_a_is_five(self):
+        # A=(-inf,-1) U (6,inf), B=(0,10); each witness is outside the
+        # corresponding union in the order transcribed from the fixed scan.
+        a_contains = lambda x: x < -1 or x > 6
+        b_contains = lambda x: 0 < x < 10
+        self.assertFalse((not a_contains(-2)) or b_contains(-2))
+        self.assertFalse(a_contains(1) or (not b_contains(1)))
+        self.assertFalse((not a_contains(7)) or (not b_contains(7)))
+        self.assertFalse(a_contains(0) or b_contains(0))
+
+    def test_q19_2_distinguishes_directed_vector_angle_from_line_angle(self):
+        left = (0, 2, 6)
+        right = (math.sqrt(3), 2, -3)
+        dot = sum(a * b for a, b in zip(left, right))
+        norm_product = math.sqrt(sum(x * x for x in left) * sum(x * x for x in right))
+        self.assertEqual(dot, -14)
+        cosine = dot / norm_product
+        self.assertLess(cosine, 0)
+        self.assertAlmostEqual(abs(cosine), 7 * math.sqrt(10) / 40)
+
 
 if __name__ == "__main__":
     unittest.main()
