@@ -68,6 +68,13 @@ def _normalize_post_baseline_repairs(relative, text):
     # asterisk-bearing answer lines move from \textbf back to \gkanswer).  The actual
     # files remain hash-pinned in the ledger.
     if relative == (
+        "math-gaokao-latex/2018_全国Ⅰ卷_理科/answers.tex"
+    ):
+        # 2026-10-20：将中文正文中的 ASCII 引号换为规范中文引号。只在历史
+        # 排版差异比较时统一字形；文件本身仍由 adjudicated-drift ledger 哈希锁定。
+        return text.replace("“", '"').replace("”", '"')
+
+    if relative == (
         "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
     ):
         old = (
@@ -1167,6 +1174,21 @@ class BaselineComparisonTests(unittest.TestCase):
 
 class AdjudicatedDriftLedgerTests(unittest.TestCase):
     """登记表的读入契约：缺文件退化成现状，读不懂一律报错。"""
+
+    def test_2018_science_typographic_quotes_normalize_only_in_historical_layout_diff(self):
+        relative = "math-gaokao-latex/2018_全国Ⅰ卷_理科/answers.tex"
+        before = '这是一句"中文引号"。'
+        after = '这是一句“中文引号”。'
+
+        self.assertEqual(
+            _normalize_post_baseline_repairs(relative, before),
+            _normalize_post_baseline_repairs(relative, after),
+        )
+        unrelated = "math-gaokao-latex/2018_全国Ⅰ卷_理科/questions.tex"
+        self.assertNotEqual(
+            _normalize_post_baseline_repairs(unrelated, before),
+            _normalize_post_baseline_repairs(unrelated, after),
+        )
 
     def test_2020_science_q23_inline_reflow_normalizes_only_the_same_formula(self):
         relative = "math-gaokao-latex/2020_全国Ⅰ卷_理科/answers.tex"
