@@ -519,6 +519,13 @@ class HashContractTests(unittest.TestCase):
             question_text_digests(noisy), question_text_digests(QUESTIONS_MD)
         )
 
+    def test_question_needspace_layout_metadata_does_not_change_question_digest(self):
+        question = "**1．** 附加题题面。\n"
+        annotated = question.rstrip() + "\n\n<!-- question-needspace: 0.08 -->\n"
+        self.assertEqual(
+            question_text_digests(question), question_text_digests(annotated)
+        )
+
     def test_editing_a_question_changes_only_that_digest(self):
         before = question_text_digests(QUESTIONS_MD)
         after = question_text_digests(QUESTIONS_MD.replace("求 $1+1$", "求 $2+2$"))

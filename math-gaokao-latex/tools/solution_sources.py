@@ -53,6 +53,7 @@ import re
 import subprocess
 import sys
 from dataclasses import dataclass
+from decimal import Decimal
 from pathlib import Path
 from typing import (
     AbstractSet, Any, Dict, FrozenSet, List, Mapping, Optional, Sequence, Set, Tuple,
@@ -84,6 +85,9 @@ SEE_SOLUTION = "见解析版"
 _HEADING_QUESTION = re.compile(r"^### 第 (\d+) 题(.*)$")
 _INLINE_QUESTION = re.compile(r"^\*\*(\d+)．(.*?)\*\*(.*)$")
 _PRINTED_LABEL_DIRECTIVE = re.compile(r"<!--\s*printed-label:\s*([^<>]+?)\s*-->")
+_QUESTION_NEEDSPACE_DIRECTIVE = re.compile(
+    r"^<!--\s*question-needspace:\s*(0\.\d+)\s*-->$"
+)
 _ATX_HEADING = re.compile(r"^(#{1,6}) ")
 _FENCE_LINE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})(.*)$")
 _HEADING_SUBPART = re.compile(r"^####[ \t]*[（(](\d+)[）)]")
@@ -156,6 +160,8 @@ class QuestionBlock:
     subparts: Tuple[int, ...]
     # 本题之前、上一题之后的非题目文本（章节标题、分隔线等），原样保留以便重建文档。
     lead: str
+    # 题目版局部分页控制，不属于题面事实或 provenance 哈希。
+    question_needspace: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -315,6 +321,33 @@ def parse_question_blocks(
                 limit = stop
                 break
         body_lines = ([remainder] if remainder.strip() else []) + lines[index + 1:limit]
+        needspace_lines = [
+            (line_index, line.strip())
+            for line_index, line in enumerate(body_lines)
+            if "question-needspace:" in line
+        ]
+        if len(needspace_lines) > 1:
+            raise SolutionSourceError(
+                f"第 {number} 题只能声明一个 question-needspace 指令"
+            )
+        question_needspace = None
+        if needspace_lines:
+            line_index, directive = needspace_lines[0]
+            match = _QUESTION_NEEDSPACE_DIRECTIVE.fullmatch(directive)
+            if match is None:
+                raise SolutionSourceError(
+                    f"第 {number} 题的 question-needspace 指令格式无效"
+                )
+            fraction = Decimal(match.group(1))
+            if not Decimal("0.05") <= fraction <= Decimal("0.5"):
+                raise SolutionSourceError(
+                    f"第 {number} 题的 question-needspace 必须在 0.05 到 0.5 之间"
+                )
+            question_needspace = format(fraction.normalize(), "f")
+            body_lines = [
+                line for current_index, line in enumerate(body_lines)
+                if current_index != line_index
+            ]
         blocks.append(QuestionBlock(
             number=number,
             printed_label=printed_label,
@@ -322,6 +355,7 @@ def parse_question_blocks(
             body="\n".join(body_lines).strip(),
             subparts=_subparts(style, body_lines),
             lead="\n".join(lines[previous_end:index]).strip(),
+            question_needspace=question_needspace,
         ))
         previous_end = limit
 

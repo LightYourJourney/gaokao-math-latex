@@ -425,35 +425,19 @@ def wrap(
     return "\n".join(out), nums
 
 
-_QUESTION_NEEDSPACE_COMMENT = re.compile(
-    r"^<!--\s*question-needspace:\s*(0\.\d+)\s*-->$"
-)
-
-
 def _question_needspace_overrides(
     question_blocks: Sequence[QuestionBlock],
 ) -> Dict[int, str]:
-    """读取题块内的局部换页注释；转换器会剥离它，不进入可打印题面。"""
+    """读取解析器从题面正文中剥离出的局部分页元数据。"""
     overrides: Dict[int, str] = {}
     for block in question_blocks:
-        candidates = [
-            line.strip()
-            for line in block.body.splitlines()
-            if "question-needspace:" in line
-        ]
-        if not candidates:
+        fraction = block.question_needspace
+        if fraction is None:
             continue
-        if len(candidates) != 1:
-            raise GenerationError(
-                f"第 {block.number} 题前只能有一条 question-needspace 指令"
-            )
-        match = _QUESTION_NEEDSPACE_COMMENT.fullmatch(candidates[0])
-        if match is None:
-            raise GenerationError(
-                f"第 {block.number} 题前的 question-needspace 指令格式无效"
-            )
-        fraction = match.group(1)
-        if not 0.05 <= float(fraction) <= 0.5:
+        if (
+            re.fullmatch(r"0\.\d+", fraction) is None
+            or not 0.05 <= float(fraction) <= 0.5
+        ):
             raise GenerationError(
                 f"第 {block.number} 题的 question-needspace 必须在 0.05 到 0.5 之间"
             )

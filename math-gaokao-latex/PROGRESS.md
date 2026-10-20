@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1985 广东理科：分页元数据与 provenance 哈希边界修复（2026-10-21）
+
+- 已完成：`parse_question_blocks()` 将 `question-needspace` 解析为独立 `QuestionBlock.question_needspace` 元数据，验证唯一性、格式及 0.05–0.5 范围，并从题面正文/小问扫描中剥离；生成器改为读取该字段。分页指令仍作用于 Q35 排版，但不再污染题面哈希。
+- 修改文件：`tools/solution_sources.py`、`tools/generate_projects.py`、`tests/test_solution_sources.py`、`tests/test_generate_projects.py`、`tests/test_provenance.py`、本进度文件。
+- 验证：解析器测试 19/19、生成器分页边界测试 8/8、哈希契约测试 13/13、1985 理科版式回归 3/3；完整 `test_solution_sources.py` 112/112、完整 `test_generate_projects.py` 115/115。修复后 `provenance.py check-batch --batch phase2-b09` 不再报告 Q35 题面哈希失效，但仍以退出码 4 报告批次缓存状态 `compiled_pending_review` 与现场派生 `provenance_verified` 不一致；该状态差异未绕过或手工改写。曾先用错误的 unittest 模块导入形式启动一次测试，随后改用测试文件直接选择用例并通过。
+- 成本与边界：未 OCR、未调用 LLM/外部 API；本阶段实际 Token/费用不可见，记未知。验证使用本机测试与当前规范源码，不改变题面内容、既有 provenance/build/review receipt、manifest 或 production state。
+- 剩余/下一步：对 1985 广东理科按授权流程正式重编四个版本并核查 Q1 图页与 Q34/Q35 分页；之后重新准备并逐页复核该卷四版本共 52 页，通过事务更新 review/batch 状态。整卷仍为 `blocked`，不得提前放行。
+
 ### 从 main 工作树恢复 1986 广东理科 b59 独立审计素材（2026-10-21）
 
 - 已完成：把 main 工作树中唯一缺于 feat、且仍直接支撑 b59 未决题目/答案核对的 3 份独立审计 Markdown（第一卷 1–12、13–25、第二卷第二题）和 4 张对应源页渲染图复制到本工作树 `.work/phase2-b59/answer-audit/`。main 原件保留不动。2017 全国Ⅱ的 8 份草稿在 feat 已逐字节相同；1977 上海草稿已被 feat 正式成果取代；2015 全国Ⅱ说明笔记在 feat 有更完整版本；其余 main 遗留为已替代草稿或构建/渲染中间件，未复制。
@@ -33,7 +41,7 @@
 - 修改文件：`1985/1985_数学真题_广东理工农医类_试题.md`、本卷 `figures/f1985_guangdong_science_v1_q1_graphs.tex`、`tools/generate_projects.py`、`tests/test_generate_projects.py`、新增 `tests/test_1985_guangdong_science_layout.py` 及本进度文件。
 - 验证：先运行新增回归，旧源码下如预期出现锚点错误、局部指令缺失和 Q34/Q35 分居第 4/5 页；修复后 `WrapBoundaryTests` + 本卷源稿/真实 PDF 回归共 11 项通过（含临时试题版实编并验证 Q34/Q35 同页）。`test_generate_projects`、`test_solution_sources`、`test_layout_policy` 合计 226 项通过；`git diff --check` 通过。还未正式重建四版本或检查正式 PDF 的改动页。
 - 成本与边界：测试临时 PDF 仅在系统 `/tmp` 生成；未 OCR、未调用 LLM/外部 API；Token 和费用不可见，记未知。此阶段未改 provenance、build/review receipt、manifest 或生产状态。
-- 剩余/下一步：依据本卷正式 provenance/构建流程刷新受影响的源指纹，再单卷正式重编四版；渲染并复核 Q1 图页和 Q34/Q35 分页，确认后重新准备整卷 52 页视觉复核。整卷仍为 `blocked`，旧 review receipt 不得放行。
+- 剩余/下一步：分页控制注释现已从题面正文和 provenance 哈希中剥离，Q35 的题面哈希失效已修复。按上方独立阶段回执，继续单卷正式重编四版；渲染并复核 Q1 图页和 Q34/Q35 分页，确认后重新准备整卷 52 页视觉复核。整卷仍为 `blocked`，旧 review receipt 不得放行。
 
 ### 构建回执区分生成器源码与物化输入（2026-10-21）
 

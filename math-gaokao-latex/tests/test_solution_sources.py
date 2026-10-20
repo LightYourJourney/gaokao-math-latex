@@ -457,6 +457,32 @@ class ParseQuestionBlocksTests(unittest.TestCase):
         self.assertNotIn("## 二、解答题", blocks[1].body)
         self.assertEqual(blocks[2].lead, "## 二、解答题")
 
+    def test_question_needspace_comment_is_metadata_not_question_text(self):
+        text = "**1．** 附加题题面。\n\n<!-- question-needspace: 0.08 -->\n"
+        block = parse_question_blocks(text)[0]
+        self.assertEqual("附加题题面。", block.body)
+        self.assertEqual("0.08", block.question_needspace)
+
+    def test_question_needspace_comment_rejects_invalid_values(self):
+        for comment in (
+            "<!-- question-needspace: 0.9 -->",
+            "<!-- question-needspace: 0.08\\textheight -->",
+            "<!-- question-needspace: .08 -->",
+        ):
+            with self.subTest(comment=comment):
+                text = "**1．** 附加题题面。\n\n" + comment + "\n"
+                with self.assertRaisesRegex(SolutionSourceError, "question-needspace"):
+                    parse_question_blocks(text)
+
+    def test_question_needspace_comment_must_not_be_duplicated(self):
+        text = (
+            "**1．** 附加题题面。\n\n"
+            "<!-- question-needspace: 0.08 -->\n\n"
+            "<!-- question-needspace: 0.09 -->\n"
+        )
+        with self.assertRaisesRegex(SolutionSourceError, "只能声明一个 question-needspace"):
+            parse_question_blocks(text)
+
     def test_preserves_repeated_source_labels_separately_from_unique_order(self):
         text = (
             "**1．** 甲题。\n\n"

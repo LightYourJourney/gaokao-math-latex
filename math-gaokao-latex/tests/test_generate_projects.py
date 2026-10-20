@@ -971,9 +971,10 @@ class WrapBoundaryTests(unittest.TestCase):
             number=35,
             printed_label="五",
             title="",
-            body="附加题题面\n<!-- question-needspace: 0.08 -->",
+            body="附加题题面",
             subparts=(),
             lead="",
+            question_needspace="0.08",
         )
         self.assertEqual(
             {35: "0.08"},
@@ -985,9 +986,10 @@ class WrapBoundaryTests(unittest.TestCase):
             number=35,
             printed_label="五",
             title="",
-            body="附加题题面\n<!-- question-needspace: 0.9 -->",
+            body="附加题题面",
             subparts=(),
             lead="",
+            question_needspace="0.9",
         )
         with self.assertRaisesRegex(GenerationError, "0.05 到 0.5"):
             generate_projects._question_needspace_overrides((block,))
