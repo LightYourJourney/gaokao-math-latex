@@ -27,6 +27,14 @@
 - 验证与成本：正式构建退出码 0；构建后旧 `check-batch phase2-b09` 返回 `INVALID_OR_STALE`，原因是需重做的 review receipt；两份 build receipt 状态及四版本 PDF 哈希/页数均已核对。五批次现场检查确认 17 份工具链 stale build：8 卷 manifest 原为 `complete`，另 9 卷保留原有 `blocked` 状态和对应 open issue，未误降/升状态。`phase2-b09` 的 96 页复核骨架与每页 8 项均已核验。构建加准备约 43 秒；无 OCR、LLM 或外部 API 调用；实际 Token 与费用不可见，记未知。
 - 剩余/下一步：按批次复核协议重新准备并逐页检查这两卷的全部四个版本，再通过事务登记 review receipts；其余受影响批次 `phase2-b05`、`phase2-b06`、`phase2-b07`、`phase2-b10` 的 15 份 stale build 仍待正式重编及复核。不得将旧 review receipt 或当前 `blocked` production state 提前放行为完成。
 
+### 1985 广东理科：视觉校样缺陷根因定位（2026-10-21）
+
+- 已完成：重新检查本地 160 dpi 校样图，确认第一卷 Q1 的 A–E 五个坐标图中，五个标注点均使用 `node[above right]`，造成坐标/曲线与坐标标签重叠；试题版第 4 页的 Q34 后有足够空间放下附加题 Q35 的实际内容，但共享 `question` 环境在每题前统一调用 `\Needspace{0.15\textheight}`，因此 Q35 被推至几乎空白的第 5 页。第 4 页 `[U2]` 为清晰可读的原文不确定标记，不是缺字形，不改题面。
+- 修改文件：仅本进度记录；图稿、试题 Markdown、共享宏、生成物和回执尚未修改。
+- 验证：查看既有 `test-4.png`、`test-5.png`、`print-a-02.png`，并对照规范图稿、Q35 原题源、`questions_env.tex` 与生成的 `questions.tex`；未重编，未改变数学内容/来源/状态。
+- 成本：复用 `/tmp/gaokao-1985-science-qa.BoEM8U` 页面渲染；无 OCR、LLM 或外部 API，Token 与费用不可见，记未知。
+- 剩余/下一步：添加仅针对 1985 理科 Q35 的局部换页控制和五点图标位置回归测试；测试先在旧源码下失败，再做最小修复、单卷正式重编，并只在相应生成页确认版式后重新启动整卷 52 页复核。整卷仍为 `blocked`，不得登记完成。
+
 ### 构建回执区分生成器源码与物化输入（2026-10-21）
 
 - 已完成：`generation_input_tree` 仍完整记录全部生成器源码、模板、四个物化 `.tex` 壳、图稿和规范 Markdown；完成态 build currency 比较时仅忽略 `GENERATOR_SOURCES` 的内容哈希，其余路径与哈希仍逐项比较。生成器源码变化但生成结果字节不变，不再单独使 PDF 回执 stale；真实生成物当前性仍由 provenance 的纯函数重算逐字节验证。`running` 回执仍比较完整树，生成器变化会开启新 attempt。
