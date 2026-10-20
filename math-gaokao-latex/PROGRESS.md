@@ -7343,3 +7343,19 @@
 - 验证：新增状态测试先因缺少`source_text_rechecks`按预期失败；登记后题面/来源测试5/5通过，答案、图稿、解析、题面/来源四组定向测试22/22通过，来源JSON可解析。测试未将作者核对误判为独立盲核。全量`python3 -m unittest discover -s tests`：1562项中1548通过、13跳过、1失败。唯一失败为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告388条历史缓存状态与现场派生状态不一致（首项2017全国Ⅰ理科`complete`对`editions_generated`）；该项不读取本卷新增的源页核对记录。
 - 成本：复用固定PDF和已渲染页，只新生成两张忽略缓存文本局部图；零OCR、零外部模型/API；真实Token及费用不可见，记未知。
 - 剩余/下一步：Q20修正图尚需独立复查；Q21沟口约束数学解释、全卷Q1—Q22独立复核、出版者/版次认证、四入口正式构建和逐页视觉验收均未完成，整卷维持pending。388条provenance差异继续留在全局队列，不修改无关回执；下一步在异人复核资源可用时复核图稿并推进余下题目/答案门禁。
+
+### Provenance 全库状态缓存差异只读定位（2026-10-20）
+
+- 已完成：在 `feat/gaokao-phase0` 工作树对 `source-manifest.json` 与现场 facts 做只读核对。291 套试卷共报告 388 项状态不一致：235 项 paper `production_state` 缓存差异，153 项 batch `status` 缓存差异；抽查首批问题为历史缓存 `complete` 对现场 `editions_generated`，以及缓存 batch `closed` 对现场 `provenance_verified`。核对器未报告 provenance 内容验算错误。该结果说明只读核对确实拒绝状态漂移，不能据此把受影响试卷视为当前已完成。
+- 修改文件：仅本 `PROGRESS.md`；未改 manifest、provenance、build/review receipts 或试卷内容。
+- 验证：调用 `tools.provenance.check_batch()` 完成全库只读重算，得到 291 papers / 388 problems；分类计数为 235 个 paper-state 与 153 个 batch-state mismatch。未重跑耗时较长的全量测试，也未执行任何写状态命令。
+- 成本：本阶段仅本地重算读取来源、回执与构建证据；无 OCR、PDF 渲染、外部 API。Token/费用不可见，记未知。
+- 剩余/下一步：尚未确定应通过哪个受控事务入口刷新这些派生缓存，也未判断所有 388 项的具体状态转移分布；不得直接批量覆盖。下一步检查现有 state/build/review 事务是否提供不重建产物的安全重算途径，再决定最小范围修复及回归测试。1999 上海理科仍为 pending，Q20 图稿异人复核、Q21约束裁定、整卷盲核、来源认证、四入口编译和视觉终验未完成。
+
+### 2017—2018 全国Ⅰ卷四套正式构建回执刷新（2026-10-20）
+
+- 已完成：核实 `phase0-b01` 四套（2017 全国Ⅰ文理、2018 全国Ⅰ文理）的旧回执因生成输入树和工具链指纹变化而 stale；使用正式两阶段事务重新构建四套试题版、解析版、简答版、印刷版，共16个版本，构建失败0。现场状态现为四卷 `compiled`、批次 `compiled_pending_review`，表明编译证据当前但尚未完成视觉复核，未标记为 complete。
+- 修改文件：四套试卷各自的 `receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`。正式 PDF/中间文件留在项目既定 build 输出位置；没有改题面、答案、解析或题图，也没有运行 OCR。
+- 验证：`check-tools` 为 OK；`validate-receipts --batch phase0-b01` 为 OK，4卷均 current、stale/missing/failed 为0、pending review为4；`provenance.py check-batch --batch phase0-b01` 为 OK（4卷）；`test_build_projects.py` 138/138通过。`test_provenance.py` 109项中108项通过，唯一 live-repository 测试仍因全库状态差异失败，问题由388降至383（本批4卷与1个批次状态差异被实际构建消除）。`git diff --check`通过。
+- 成本：重用本地 TeX Live 2026 / latexmk 与现有源码构建；无OCR或外部模型/API。Codex Token和实际费用不可见，记未知。
+- 剩余/下一步：本批16个 PDF 尚待逐页视觉校样及相应 review receipts；全部纸面内容/答案本身的历史来源与数学核验不能由编译替代。全库仍有383项状态差异，剩余 stale 构建应按批次逐步刷新，不能把单批结果外推为全库完成。下一步先对本批 PDF 做视觉检查并登记未通过项，再按已有复核流程更新审查回执；不得用状态重算绕过视觉门禁。
