@@ -47,12 +47,13 @@ class AnhuiSpring2004ArtsTranscriptionTests(unittest.TestCase):
         for source_sensitive_text in (
             r"\sqrt{2}\cos\left(\dfrac{\pi}{4}-\alpha\right)",
             r"\left(x+\frac{1}{x}-2\right)^n",
-            r"\log_{2a}^{2}x<2\log_ax",
+            r"\log_a^{2}x<2\log_ax",
             r"A_1B=\frac{\sqrt{6}}{2}a",
             r"Q=8300-170p-p^2",
             r"y=x^2+4x+\frac{7}{2}",
         ):
             self.assertIn(source_sensitive_text, transcript)
+        self.assertNotIn(r"\log_{2a}", transcript)
 
         self.assertIn("| 20 |", figures)
         self.assertIn(FIGURE.name, transcript)
