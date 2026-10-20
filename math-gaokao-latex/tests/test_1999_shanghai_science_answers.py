@@ -66,14 +66,25 @@ class Shanghai1999ScienceAnswerTranscriptionTests(unittest.TestCase):
         self.assertEqual(correction["source_notation"], r"\bar z(1-ci)")
         self.assertEqual(correction["status"], "corrected-pending-independent-review")
 
-    def test_q7_open_source_notation_vs_closed_monotonicity_is_recorded_as_pending(self):
+    def test_q7_source_open_interval_and_closed_monotonicity_are_distinguished(self):
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
         note = next(note for note in record["transcription_notes"] if note["question_number"] == 7)
         self.assertEqual(note["issue"], "source-open-vs-monotonic-closed-interval")
         self.assertEqual(note["source_answer_transcription"], r"(-5π/6,-π/3)")
         self.assertEqual(note["independent_derivation"], r"[-5π/6,-π/3]")
-        self.assertEqual(note["status"], "needs-review")
-        self.assertIn("两端导数为0", ANSWERS.read_text(encoding="utf-8"))
+        self.assertEqual(note["status"], "resolved-nonmaterial-endpoint-convention")
+        self.assertIn("两端为0", note["mathematical_note"])
+
+    def test_q19_principal_argument_convention_is_confirmed_by_scanned_answer(self):
+        record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        note = next((
+            note for note in record["transcription_notes"]
+            if note["issue"] == "source-principal-argument-convention-explicitly-stated"
+        ), None)
+        self.assertIsNotNone(note, "Q19 source convention evidence is not registered")
+        self.assertEqual(note["source_answer_range"], "[0,π/4) ∪ (7π/4,2π)")
+        self.assertEqual(note["implied_argument_convention"], "[0,2π)")
+        self.assertEqual(note["status"], "confirmed-by-source-answer-page")
 
 
 if __name__ == "__main__":
