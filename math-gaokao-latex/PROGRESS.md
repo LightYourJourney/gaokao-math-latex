@@ -44,6 +44,14 @@
 - 来源链接：[试卷及答案索引](https://edu.sina.com.cn/l/2002-07-09/27947.html)、[参考解答第1页](https://edu.sina.com.cn/l/2002-07-09/27748.html)、[第2页](https://edu.sina.com.cn/l/2002-07-09/27749.html)、[第3页](https://edu.sina.com.cn/l/2002-07-09/27751.html)、[第4页](https://edu.sina.com.cn/l/2002-07-09/27750.html)。新浪页面自述供给方为中国名师教育网，故不表述为官方原件。
 - 剩余/下一步：答案/解析仍须异人仅据题面完成盲解及正式逐题裁定；当前独立复核代理启动仍受`agent thread limit reached`阻塞。2002固定源PDF对应的出版物/版次仍未证实，继续保持`paper_id=null`、`official_answer=null`和未验收状态；不得因参考解答吻合而宣称正式数学验证通过。
 
+### 2002 北京文科卷：结构化记录同期参考解答核对（2026-10-20）
+
+- 已完成：在`answer_key.secondary_reference_crosscheck`记录同期第三方参考解答的标题、供给方、日期、4个来源页链接、覆盖题号及“最终结论相符”结果；显式标记`is_official=false`、`independent_review_completed=false`。不改`official_answer=null`、答案草稿状态或`generated_solution.verification_status=not-verified`。
+- 修改文件：`2002/2002_北京文科_来源校对.json`、`math-gaokao-latex/tests/test_2002_beijing_arts_solutions.py`、本`PROGRESS.md`。题面/答案/解析正文、来源PDF、manifest和正式PDF未改。
+- 验证：先新增回归断言并观察预期失败（缺少`secondary_reference_crosscheck`），补JSON后答案/解析测试7/7通过；同卷题面+答案测试合并运行13/13通过，JSON解析和`git diff --check`通过。完整`unittest discover`运行1515项、跳过13项，1项失败：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告388条manifest缓存production状态与现场派生值不符；本次未改manifest/state缓存，该失败不涉及本卷来源元数据。尝试`python3 -m pytest -q`时环境未安装pytest；改用项目现有unittest套件执行完整发现。
+- 成本：本阶段无OCR、LaTeX编译或额外网页调用；完整本地unittest运行693.938秒。Codex Token与实际费用不可见，记未知。
+- 剩余/下一步：此交叉证据不等于数学独立复核。仍需异人仅据题面盲解、来源版次确认及生产构建/终验；不得提升官方答案或整卷验收状态。
+
 ## 进度恢复补记：2017 全国Ⅱ/Ⅲ文理四卷已转录并完成构建/视觉复核（phase2-b07）
 
 - Git 证据：以下成果已在当前 `feat/gaokao-phase0` 历史中，题面/答案/解析及四版本工程由 `14d10ca1` 写入，正式回执和来源登记见 `12af6bb3`，视觉诊断与终结记录见 `97efad78`、`c7588069`。本次恢复只补齐卷级进度索引，不重新转录、不改各卷源稿或回执。

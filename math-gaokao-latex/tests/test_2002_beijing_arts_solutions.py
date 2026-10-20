@@ -58,6 +58,23 @@ class BeijingArts2002SolutionDraftTests(unittest.TestCase):
         self.assertIn("独立推导", self.answers_text)
         self.assertTrue("尚未经过异人独立数学盲核" in self.solutions_text, "solution draft must remain unverified")
 
+    def test_contemporary_reference_crosscheck_does_not_upgrade_unverified_answers(self):
+        crosscheck = self.record["answer_key"]["secondary_reference_crosscheck"]
+        self.assertEqual(crosscheck["status"], "final-results-match")
+        self.assertEqual(crosscheck["coverage"], list(range(1, 23)))
+        self.assertFalse(crosscheck["is_official"])
+        self.assertFalse(crosscheck["independent_review_completed"])
+        self.assertEqual(len(crosscheck["source_pages"]), 4)
+        self.assertTrue(
+            all(
+                page.startswith("https://edu.sina.com.cn/l/2002-07-09/")
+                for page in crosscheck["source_pages"]
+            )
+        )
+        self.assertIsNone(self.record["official_answer"])
+        self.assertEqual(self.record["generated_solution"]["verification_status"], "not-verified")
+        self.assertEqual(self.record["generated_solution"]["status"], "draft-generated-needs-independent-review")
+
     def test_choice_key_matches_hand_derived_results(self):
         answer_points = solution_sources.parse_answer_points(self.answers_text)
         actual = [(answer_points[n - 1].answer_for(None) or "").removesuffix("。") for n in range(1, 13)]
