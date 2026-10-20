@@ -61,13 +61,18 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
             with self.subTest(question=number):
                 self.assertIn(conclusion, text)
         self.assertIn("独立推导草稿", text)
-        self.assertIn("还没有第二位复核者复算", text)
+        self.assertIn("已完成首轮分段异人盲核", text)
 
     def test_machine_state_does_not_promote_draft_to_verified_solution(self):
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
         self.assertEqual(record["generated_solution_status"], "independent-draft-pending-review")
         self.assertEqual(record["review_status"], "pending")
         self.assertIsNone(record["official_answer"])
+        review = record["independent_review"]
+        self.assertEqual(review["status"], "partial-needs-adjudication")
+        self.assertEqual(review["reviewed_question_ranges"], [[1, 12], [13, 22]])
+        self.assertEqual(review["unresolved_questions"], [21])
+        self.assertEqual(review["reviewer_errors"], [12, 15])
 
     def test_exact_counting_and_geometry_examples_match_the_written_proofs(self):
         self.assertEqual(comb(5, 2) * 2**2, 40)
@@ -77,6 +82,17 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         base_area = math.sqrt(3) / 4
         height = math.sqrt(11 / 3)
         self.assertTrue(math.isclose(base_area * height / 3, math.sqrt(11) / 12, rel_tol=1e-14))
+
+        # Exact squared-coordinate check for the blind review's second Q12
+        # construction; determinant^2/36 yields V^2 = 7/72, i.e. (sqrt(14)/12)^2.
+        x2 = y2 = Fraction(1, 8)
+        z2 = Fraction(7, 8)
+        self.assertEqual(4 * (x2 + y2), 1)
+        self.assertEqual(4 * (x2 + z2), 4)
+        self.assertEqual(4 * (y2 + z2), 4)
+        determinant_squared = 256 * x2 * y2 * z2
+        self.assertEqual(determinant_squared, Fraction(7, 2))
+        self.assertEqual(determinant_squared / 36, Fraction(7, 72))
 
     def test_independent_solution_draft_covers_q17_to_q22_and_flags_argument_convention(self):
         text = SOLUTIONS.read_text(encoding="utf-8")
@@ -217,11 +233,26 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
                      (Fraction(-5, 2), Fraction(-3, 2))):
             self.assertLess(a, b)
             self.assertLess(b, 0)
+            first_a_inequality = Fraction(1, 1) / a > Fraction(1, 1) / b
+            second_a_inequality = (
+                Fraction(1, 1) / abs(a) > Fraction(1, 1) / abs(b)
+            )
+            self.assertTrue(first_a_inequality)
+            self.assertFalse(second_a_inequality)
             self.assertFalse(Fraction(1, 1) / (a - b) > Fraction(1, 1) / a)
             self.assertFalse(Fraction(1, 1) / abs(a) > Fraction(1, 1) / abs(b))
             left = (a + Fraction(1, 1) / b) ** 2
             right = (b + Fraction(1, 1) / a) ** 2
             self.assertGreater(left, right)
+            option_truth = (
+                not first_a_inequality and not second_a_inequality,
+                not (Fraction(1, 1) / (a - b) > Fraction(1, 1) / a)
+                and not second_a_inequality,
+                not (Fraction(1, 1) / (a - b) > Fraction(1, 1) / a)
+                and not (left > right),
+                not second_a_inequality and not (left > right),
+            )
+            self.assertEqual(option_truth, (False, True, False, False))
             self.assertEqual(
                 left - right,
                 (a - b) * (a + b) * (1 + Fraction(1, 1) / (a * b)) ** 2,
