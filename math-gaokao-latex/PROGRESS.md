@@ -30,7 +30,14 @@
 - 已完成：当前 attempt `f5d19751-d294-4dcf-84c3-f987dcc1d7e5` 的试题版 4 页、解析版 22 页、简答版 6 页、印刷版 18 页均逐页检查，共 50 页、400 项检查，全部 pass、0 fail、0 pending。第3题三视图与第19题棱柱图对照原扫描裁剪，图形标签、网格、实线及隐藏虚线完整；统计表、公式和分页清楚。候选页及印刷版第14、18页已高清复看；尾页第23题解析和答案完整，页末留白为自然终页留白。印刷版前4页为完整题面，第5页起才进入答案/解析区。
 - 修改文件：仅 `.work/phase2-b06/review/{试题版,解析版,简答版,印刷版}/gk-2023-regular-national-b-science.json` 四个忽略工作项和本进度；没有改源题、答案、图稿、PDF、正式 receipts、manifest 或 issues。四版 build receipt 的 warnings 均为空。
 - 验证：项目 `_validate_pages` 校验四版工作项通过，50页×8项=400项均通过；未重编。phase2-b06 三卷现行 attempt 工作项现均完成，共152页、1,216项 pass，尚未运行正式 `finalize-batch`。
-- 成本/剩余：仅查看本地现行 PDF 渲染与源图裁剪；无 OCR、外部模型/API 或 PDF 重编，Codex Token 与费用不可见、记未知。下一步按项目批次事务统一登记 phase2-b06 三卷正式 review receipts，并运行批次、构建回执和 provenance 检查；只处理本批，不扩展到其他批次。
+- 成本/阶段边界：仅查看本地现行 PDF 渲染与源图裁剪；无 OCR、外部模型/API 或 PDF 重编，Codex Token 与费用不可见、记未知。下一步的批次正式登记及结果见紧随其后的关闭记录。
+
+### phase2-b06：三卷现行构建视觉复核正式登记关闭（2026-10-21）
+
+- 已完成：官方 `review_receipts.py finalize-batch` 以 `FINALIZED` 关闭批次，3卷、12版本、152页、1,216项逐页检查全部通过，`problems=[]`，revision 4522；三卷 production state 均为 `complete`，batch state 为 `closed`。本结果绑定本进度所列三卷当前 build attempt，不沿用旧 attempt 的视觉结论。
+- 修改文件：三卷各自 `receipts/build.json`、`receipts/review.json`，`source-manifest.json` 与 `reports/phase2-b06.md`；没有改原题、答案、LaTeX 源稿、图稿、PDF 或 `missing-issues.md`。逐页工作项保留在忽略目录 `.work/phase2-b06/review/`，不入库。
+- 验证：`check-batch` 返回 `FINALIZED`、无问题；构建回执校验为 3 succeeded、0 failed/pending/stale/invalid/missing；provenance `check-batch` 为 3 卷 `OK`；`tests/test_review_receipts.py` 为 66 项通过；`git diff --check` 通过。错误传入批次子目录的首次命令只读到了旧回执并安全拒绝、未写入；改用默认 `.work` 后事务成功。
+- 成本/剩余：无 OCR、LLM/API 或 XeLaTeX 重编；Codex Token 与费用不可见、记未知。phase2-b06 已达到本阶段验收并停止扩展；项目其他批次与全库试卷工作仍未因此完成。
 
 ### phase0-b01：新版批次视觉复核通过并正式关闭（2026-10-21）
 
