@@ -4,12 +4,21 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海文科：Q1—19答案终值交叉核验（2026-10-20）
+
+- 已完成：Q1—9由独立复核者仅依据题面转录重算；Q10—18由另一复核者独立推导。主会话逐项对照现存题面、卷内答案表及相应解答，Q1—14、Q16—18终值相符；Q15再次确认条件仅推出$a>4$，不能保证唯一正确选项，继续保持`ISSUE-1115`阻塞，不将卷内D登记为已验证答案。Q19有此前独立复算与卷内最终直线角核对记录，本次不重复计算。
+- 图形复核：目视复用题面印刷页114原图，逐项确认Q6的10条有向边、工时与线型，零工时虚箭头为$n:4\to5$、$p:5\to6$；关键路径$1\to2\to5\to6\to7\to8$，总时长11天。卷内答案表Q1—11及Q12—16也与交叉核对记录一致，Q15例外如上。
+- 独立性边界：Q1—9复核未读取答案、解析或进度；Q10—18复核者报告在定位Q19时检索结果夹带Q19进度注记，因此该轮不称为Q10—19的全盲核验。其Q10—18推导仍由主会话逐项对照；后续如需宣称严格盲核，应另行隔离上下文复核。Q19依据此前记录独立处理。
+- 修改文件：仅修正`1998_上海卷_文科/解析草稿.md`中把已完成的Q6仍列在“尚待核验”、以及模糊描述Q1—19复核范围的问题；本`PROGRESS.md`记录阶段结论。未改题面、答案数值、来源登记、图稿、manifest或正式成果。
+- 验证：`python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_1998_shanghai_arts_figures.py'` 5/5通过。源页图与答案页图为忽略目录内已有缓存；无重OCR、重渲染或外部API调用。Token/费用不可见，记未知。
+- 剩余/下一步：Q1—19详细推导尚未完成逐步盲核；Q15仍须查同版勘误/可信异版；Q22(2)系数$a$记号边界仍待记录。整卷出版者/版次认证、正式登记、四版本XeLaTeX构建与逐页视觉校样均未完成，继续保持pending/needs-review。
+
 ### 1998 上海文科：Q19 异面直线角复核（2026-10-20）
 
 - 已完成：复核题面印刷页115与卷内解答页118。题面问异面直线 $OB_1$ 与 $D_1E$ 所成角；卷内中间步骤以有向向量计算得负余弦 $-7\sqrt{10}/40$，随后明确给出直线角 $\arccos(7\sqrt{10}/40)$，约 $56.4^\circ$。独立复算点积为 $-14$、向量模为 $2\sqrt{10}$ 和 $4$，有向向量夹角约 $123.6^\circ$，无向直线锐角约 $56.4^\circ$；题面与卷内最终结论一致。
 - 处置：更正答案要点草稿先前误称“角度约定不一致”的说明；未新增来源 issue，Q15 的 `ISSUE-1115` 仍独立保持 open / blocks_completion。
 - 修改文件：`1998_上海卷_文科/答案要点草稿.md`、`tests/test_1998_shanghai_arts_solutions.py`及本进度；未改原题、来源清单、来源登记、答案权威状态或 PDF。
-- 验证：`python3 -B -m unittest discover -s tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`git diff --check`通过。全量`python3 -B -m unittest discover -s tests`运行1585项，失败1项、跳过13项：唯一失败为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，检测到383条缓存状态与现场派生状态不一致（例如缓存`complete`、现场`editions_generated`）；该仓库级问题未在本阶段修复。
+- 验证：`python3 -B -m unittest discover -s tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`git diff --check`通过。全量`python3 -B -m unittest discover -s tests`运行1585项，失败1项、跳过13项：唯一失败为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，其问题列表有383项，涵盖production_state及批次状态缓存与现场派生不一致；该仓库级问题未在本阶段修复。
 - 成本与证据边界：复用并目视核对忽略目录既有的题面页图 `page-2.png` 与答案页图 `answer-hi-5.png`，未重新OCR、渲染或物化原PDF，未重算来源SHA；无外部API调用。Codex/Agent Token与费用不可见，记未知。
 - 剩余/下一步：继续核对Q20解答步骤、Q22条件与集合结论，并完成其余解析盲核；Q15来源冲突、整卷来源版次认证、正式登记、四版本构建与逐页视觉校样仍未完成。整卷保持pending/needs-review。
 
@@ -17,7 +26,7 @@
 
 - 已完成：发现并修正《解析草稿.md》仍把Q19中间有向向量的负余弦误述为来源差异、并把Q19列为待裁定的问题；现明确记录卷内最终直线角为约$56.4^\circ$，与标准锐角定义一致。Q15 `ISSUE-1115` 保持不变。
 - 修改文件：`1998_上海卷_文科/解析草稿.md`及本进度；未改题面、答案数值、来源登记或issue ledger。
-- 验证：`python3 -B -m unittest discover -s tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`git diff --check`通过，稿件中旧的Q19“来源差异/待裁定”表述检索为零。全量测试未因本次纯文字同步重复运行；本回合上一轮全量结果为1585项、失败1项、跳过13项，失败仍是383条无关缓存状态漂移。
+- 验证：`python3 -B -m unittest discover -s tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`git diff --check`通过，稿件中旧的Q19“来源差异/待裁定”表述检索为零。全量测试未因本次纯文字同步重复运行；本回合上一轮全量结果为1585项、失败1项、跳过13项，provenance门禁报告383条状态缓存不一致问题。
 - 成本与边界：仅复用本进度上一条所核对的缓存源页与答案页；无OCR、渲染或外部API调用；Token与费用不可见，记未知。
 - 剩余/下一步：继续Q20步骤核验及Q22条件复核；整卷来源认证、其他题盲核、正式登记、四版本构建与逐页校样仍未完成，保持pending/needs-review。
 
@@ -38,6 +47,15 @@
 - 验证：`test_q22_sequence_identities_and_limits_are_consistent` 1/1通过；`python3 -B -m unittest discover -s tests -p 'test_1998_shanghai_arts_solutions.py'` 8/8通过；`git diff --check`通过。全量测试未重跑；前次全量结果及383条仓库级provenance状态不一致见Q19回执。
 - 成本与证据边界：复用已核对的忽略目录题面页图`page-3.png`和卷内答案页图`answer-hi-6.png`；未重新OCR、渲染或物化原PDF，无外部API调用；Token与费用不可见，记未知。
 - 剩余/下一步：继续核对Q1—19其余解析并完成盲核；Q15来源问题、Q22系数记号边界、来源版次认证、正式登记、四版本构建和逐页视觉校样未完成，整卷保持pending/needs-review。仓库级全量测试provenance状态失败另行待查。
+
+### 仓库级 provenance 完成状态缓存漂移诊断（2026-10-20）
+
+- 已完成：针对全量测试失败`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，对样本`gk-2020-regular-new-gaokao-2`只读重算。manifest缓存为`complete`，现场派生为`legacy_unverified`；其`provenance=missing`、`artifacts=stale`、`build=missing`、`review=missing`，build/review currency均为`stale`。全量测试的383是问题列表项数（卷与批次缓存不匹配等），不能等同为383份独立试卷。
+- 处置边界：本样本说明缓存的`complete`状态缺少当前可复算证据；不能直接批量刷新或降级状态，因为需先区分可恢复的历史完成证据与确实缺失/过期的build、review、provenance。未写manifest、receipt或报告，也未变更任何试卷状态。
+- 修改文件：仅本`PROGRESS.md`；此诊断使用只读探针。
+- 验证：此前全量测试为1585项、失败1项、跳过13项；本回合定向1998上海文科测试8/8、Q20/Q22单测各1/1通过；目标样本现场状态已输出并核对；工作树变更范围仅为本进度。
+- 成本与边界：未重新OCR、构建或调用外部API；单卷现场状态探针用时约0.2秒。Token/费用不可见，记未知。
+- 剩余/下一步：对383条问题项分类，先确认旧卷正式回执能否重建，再按官方事务工具逐批迁移状态；不得手改manifest刷绿。并行中的Q1—9、Q10—19第二轮盲核完成后再整合差异；1998上海文科仍保持pending/needs-review。
 
 ### 1998 上海文科：Q15 题面/印载答案冲突登记（2026-10-20）
 
