@@ -59,7 +59,7 @@ class Shanghai1999ScienceAnswerTranscriptionTests(unittest.TestCase):
         self.assertIsNone(record["paper_id"])
         self.assertIsNone(record["official_answer"])
         self.assertEqual(record["source_answer_transcription_status"], "transcribed-draft-pending-independent-review")
-        self.assertEqual(record["generated_solution_status"], "not-started")
+        self.assertEqual(record["generated_solution_status"], "independent-draft-pending-review")
         self.assertEqual(record["review_status"], "pending")
         correction = record["transcription_notes"][0]
         self.assertEqual(correction["question_number"], 19)
