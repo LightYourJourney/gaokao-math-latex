@@ -18404,9 +18404,10 @@
   "fingerprint": "264f5ed68eae8a3e5bbea694ace76bc5e581fd5c06f6943ec53f05fd048aa2ea",
   "impact": "blocks_completion",
   "paper_id": null,
-  "resume_action": "取得可回溯的同版勘误或可信异版，核定第15题条件、选项与印载答案之间的矛盾；核定前保留原题与印载答案D，不作猜测性修订。",
+  "resolved_evidence": "固定来源保持不变：source_id=src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7，SHA-256=c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848，原登记PDF检查通过。复核既有高分辨率缓存题面印刷页115，原字形明确为11∈B；此前记录为1∈B系漏读一位数字。按原题B=(5-a,5+a)，11∈B推出a>6，进而[-1,6]包含于B，D项唯一成立，与同一固定扫描件答案表D相符。已更正题面转录；未改变源文件、来源身份、paper_id或答案权威等级。",
+  "resume_action": "无需动作；固定 blob 已重新验证并物化",
   "source_id": "src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7",
-  "status": "open",
+  "status": "resolved",
   "type": "source-mismatch"
 }
 ```

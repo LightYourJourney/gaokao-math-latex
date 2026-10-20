@@ -56,15 +56,15 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         denominator_lead = Fraction(2 * 12, 8)
         self.assertEqual(numerator_lead / denominator_lead, Fraction(1, 3))
 
-    def test_drafts_preserve_source_discrepancies_and_unverified_status(self):
+    def test_drafts_preserve_corrected_q15_condition_and_review_boundary(self):
         draft = DRAFT.read_text(encoding="utf-8")
         answers = ANSWERS.read_text(encoding="utf-8")
         questions = QUESTIONS.read_text(encoding="utf-8")
-        self.assertIn("不能保证唯一正确选项", draft)
-        self.assertIn("a=7", draft)
-        self.assertIn("选A", draft)
-        self.assertIn("A、D", answers)
-        self.assertIn("ISSUE-1115", answers)
+        self.assertIn(r"且 $11\in B$", questions)
+        self.assertIn("a>6", draft)
+        self.assertIn("D是唯一正确项", draft)
+        self.assertIn("此前登记的 `ISSUE-1115`", answers)
+        self.assertIn("现已按原页更正并解决", answers)
         self.assertIn("经过第三象限", draft)
         self.assertIn("123.6", draft)
         self.assertIn(r"\theta=\arccos\!\left(\frac{7\sqrt{10}}{40}\right)", draft)
@@ -74,23 +74,24 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertNotIn("canonical", draft)
         self.assertNotIn("complete", draft)
 
-    def test_q15_source_options_have_counterexamples_when_a_is_five(self):
-        # A=(-inf,-1) U (6,inf), B=(0,10); each witness is outside the
-        # corresponding union in the order transcribed from the fixed scan.
+    def test_q15_condition_11_in_b_makes_d_the_unique_true_option(self):
+        # 11 in (5-a,5+a) implies a>6. At a=7, B=(-2,12) contains
+        # the complement of A, while each other option has a counterexample.
+        a_parameter = 7
         a_contains = lambda x: x < -1 or x > 6
-        b_contains = lambda x: 0 < x < 10
-        self.assertFalse((not a_contains(-2)) or b_contains(-2))
-        self.assertFalse(a_contains(1) or (not b_contains(1)))
+        b_contains = lambda x: 5 - a_parameter < x < 5 + a_parameter
+        self.assertTrue(b_contains(11))
+        self.assertGreater(a_parameter, 6)
+        self.assertLess(5 - a_parameter, -1)
+        self.assertGreater(5 + a_parameter, 6)
+        self.assertFalse((not a_contains(-3)) or b_contains(-3))
+        self.assertFalse(a_contains(0) or (not b_contains(0)))
         self.assertFalse((not a_contains(7)) or (not b_contains(7)))
-        self.assertFalse(a_contains(0) or b_contains(0))
-        # But a=7 is also allowed: B=(-2,12) contains complement(A)=[-1,6],
-        # so both options A and D hold. The item does not determine one answer.
-        a = 7
-        self.assertGreater(a, 4)  # equivalent to 1 in (5-a, 5+a)
-        self.assertLess(5 - a, -1)
-        self.assertGreater(5 + a, 6)
+        self.assertTrue(a_contains(-2) or b_contains(-2))
+        self.assertTrue(a_contains(0) or b_contains(0))
+        self.assertTrue(a_contains(7) or b_contains(7))
 
-    def test_q15_source_issue_is_linked_without_inventing_paper_identity(self):
+    def test_q15_transcription_issue_is_resolved_without_inventing_paper_identity(self):
         manifest = json.loads(
             (PROJECT / "source-manifest.json").read_text(encoding="utf-8")
         )
@@ -101,7 +102,7 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         )
         self.assertIsNone(source["paper_id"])
         self.assertEqual(source["source_state"], "ready")
-        self.assertEqual(source["issue_ids"], ["ISSUE-1115"])
+        self.assertEqual(source["issue_ids"], [])
 
         issue = next(
             item for item in issue_ledger.load_issues(PROJECT / "missing-issues.md")
@@ -110,8 +111,9 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertEqual(issue["source_id"], source_id)
         self.assertIsNone(issue["paper_id"])
         self.assertEqual(issue["type"], "source-mismatch")
-        self.assertEqual(issue["status"], "open")
+        self.assertEqual(issue["status"], "resolved")
         self.assertEqual(issue["impact"], "blocks_completion")
+        self.assertIn("11∈B", issue["resolved_evidence"])
 
     def test_q19_2_distinguishes_directed_vector_angle_from_line_angle(self):
         left = (0, 2, 6)

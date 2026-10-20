@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海文科：Q15 漏读转录纠正（2026-10-20）
+
+- 已完成：复用忽略目录中既有高分辨率题面页图`.work/1998-shanghai-arts.2Wm0sf/question-hi-2.png`（印刷页115），直接核读为`11∈B`，此前转录成`1∈B`是漏读一位数字。由$B=(5-a,5+a)$得$a>6$，故$5-a<-1$且$5+a>11>6$，从而$\overline A=[-1,6]\subset B$，D唯一成立；A、B、C分别由$A$无界而$B$有界、$x=0$、$x=7$否定。原扫描、答案权威等级与题目数均未改变。
+- 来源处置：固定来源`src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`保持`ready`，PDF SHA-256仍为`c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`，`paper_id=null`。经来源状态事务`f138a4ca-2a84-4f69-9c56-6d7d14be1ea7`将转录误读事项`ISSUE-1115`标记为resolved并从来源的开放`issue_ids`移除；不据此推定出版者/版次、canonical身份或官方答案。
+- 修改文件：本卷题面转录、答案要点及解析草稿，`missing-issues.md`、`source-manifest.json`、该卷解答测试、来源`manifest.csv`、六个全量生成报告（source inventory、总报告、数学README、项目README、2017—2026 README、baseline）及本进度文件。其余60个`docs/courses/2026-autumn/`改动与本阶段无关，未纳入本次验证或提交。
+- 验证：人工查看原页图确认题面；本卷解答/题面/图稿测试8/8、3/3、5/5；issue、source-manifest、manifest CSV、report测试12/12、55/55、2/2、12/12；来源manifest validator通过；CSV检查通过且775行；六份报告检查与全量manifest一致，未完成状态仍保留；高考项目范围`git diff --check`通过。全套`unittest discover`共1585项，1项失败、13项跳过；唯一失败`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`报告383条production/batch缓存状态不一致（首条为2020新高考2卷缓存`complete`、现场派生`editions_generated`）。此门禁仍未解决，不批量刷新状态。Q15来源未绑定paper/batch，且事务只修正来源题面误读，不把该全库缓存失败归因于Q15。
+- 成本：未重新OCR/渲染PDF、未调用外部OCR或模型API；复用缓存页图。全套本地测试耗时约259秒，报告渲染约22秒；Token及API费用不可见，记未知。
+- 剩余/下一步：1998上海文科仍未完成来源版次认证、剩余题目完整推导盲核、Q22记号边界裁定、正式登记、四版本XeLaTeX构建和逐页视觉校样；整卷保持pending/needs-review。先将本次高考修正独立提交并在提交后刷新报告ownership投影，再专项诊断383条缓存漂移；不重复OCR、题面转录或已完成的答案终值核对。
+
 ### 1998 上海文科：Q1—19答案终值交叉核验（2026-10-20）
 
 - 已完成：Q1—9由独立复核者仅依据题面转录重算；Q10—18由另一复核者独立推导。主会话逐项对照现存题面、卷内答案表及相应解答，Q1—14、Q16—18终值相符；Q15再次确认条件仅推出$a>4$，不能保证唯一正确选项，继续保持`ISSUE-1115`阻塞，不将卷内D登记为已验证答案。Q19有此前独立复算与卷内最终直线角核对记录，本次不重复计算。
