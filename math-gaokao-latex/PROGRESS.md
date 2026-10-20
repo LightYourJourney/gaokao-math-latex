@@ -19,6 +19,14 @@
 - 验证与成本：`provenance.py check-batch --batch phase2-b09` 返回 `OK：2 卷`；构建约 22 秒。没有 OCR、LLM 或外部 API 调用；Token/费用不可见，记未知。当前 build attempt 为 `638a73af-6536-44b3-aef4-a5cf73550829`。
 - 剩余/下一步：现有批次视觉工作项共 96 页且全部检查仍为 pending，其中理科四版工作项绑定旧 build attempt；需先保留旧工作项并为新 build 准备当前回执，再完成 `phase2-b09` 批次级复核。批次包含广东文、理两卷，正式登记需要完整覆盖两卷四版 96 页；理科重点复核 Q1 图页及 Q34/Q35 分页。两卷生产状态不得因构建成功而从原有状态自动放行。
 
+### phase2-b09：当前 build attempt 的 96 页视觉复核项准备（2026-10-21）
+
+- 已完成：确认旧 8 个工作项覆盖文、理两卷四版 96 页，768 个检查均为 pending；理科工作项绑定已被新构建替代的 attempt。将整份旧骨架可逆移存至 `.work/phase2-b09/review-stale-638a73af/`，未删除；随后按正式工具为当前批次重建 8 个工作项。
+- 修改文件：追踪文件仅本 `PROGRESS.md`；忽略运行态新增 `.work/phase2-b09/review/` 下 8 个新工作项，旧工作项保留在同级 `review-stale-638a73af/`。
+- 验证：`review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b09` 成功；独立汇总确认 8 项、96 页、768 检查全部 pending，8 项均绑定文科当前 attempt `eebb66a1-4ca8-426c-9773-aba0b201901a` 或理科当前 attempt `638a73af-6536-44b3-aef4-a5cf73550829`，无 stale 项。生成期间自动抽取 PDF 页面指标成功。
+- 成本与边界：只重用现有 PDF 并生成页面指标/JSON 骨架；未 OCR、未调用 LLM/API；Token/费用不可见，记未知。未登记任何视觉通过结论。
+- 剩余/下一步：逐页查看两卷四版全部 96 页、逐页完成八项检查；若发现问题先保留失败状态与局部证据，不以同批其他版本替代。完成人工校样后再走正式批次事务登记；文、理两卷原有 production state 仍不得自动放行。
+
 ### 从 main 工作树恢复 1986 广东理科 b59 独立审计素材（2026-10-21）
 
 - 已完成：把 main 工作树中唯一缺于 feat、且仍直接支撑 b59 未决题目/答案核对的 3 份独立审计 Markdown（第一卷 1–12、13–25、第二卷第二题）和 4 张对应源页渲染图复制到本工作树 `.work/phase2-b59/answer-audit/`。main 原件保留不动。2017 全国Ⅱ的 8 份草稿在 feat 已逐字节相同；1977 上海草稿已被 feat 正式成果取代；2015 全国Ⅱ说明笔记在 feat 有更完整版本；其余 main 遗留为已替代草稿或构建/渲染中间件，未复制。
