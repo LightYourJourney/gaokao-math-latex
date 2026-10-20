@@ -211,6 +211,33 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertIn("c=1", solution)
         self.assertIn(r"4d(1-d)\ge1", solution)
 
+    def test_q15_reciprocal_and_squared_inequality_truth_values(self):
+        for a, b in ((Fraction(-3), Fraction(-2)),
+                     (Fraction(-2), Fraction(-1)),
+                     (Fraction(-5, 2), Fraction(-3, 2))):
+            self.assertLess(a, b)
+            self.assertLess(b, 0)
+            self.assertFalse(Fraction(1, 1) / (a - b) > Fraction(1, 1) / a)
+            self.assertFalse(Fraction(1, 1) / abs(a) > Fraction(1, 1) / abs(b))
+            left = (a + Fraction(1, 1) / b) ** 2
+            right = (b + Fraction(1, 1) / a) ** 2
+            self.assertGreater(left, right)
+            self.assertEqual(
+                left - right,
+                (a - b) * (a + b) * (1 + Fraction(1, 1) / (a * b)) ** 2,
+            )
+
+        solution = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn(
+            r"\left(a+\frac1b\right)^2-\left(b+\frac1a\right)^2" + "\n=(a-b)",
+            solution,
+        )
+        self.assertIn(
+            r"(a-b)(a+b)\left(1+\frac1{ab}\right)^2",
+            solution,
+        )
+        self.assertIn("选项B所列两个", solution)
+
 
 if __name__ == "__main__":
     unittest.main()
