@@ -51,6 +51,19 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
         self.assertIn("1999 年第 4 期", text)
         self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")
 
+    def test_q20_q21_source_text_rechecks_do_not_promote_paper_review(self):
+        record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        rechecks = record.get("source_text_rechecks", [])
+        self.assertEqual([item["question_number"] for item in rechecks], [20, 21])
+        for item in rechecks:
+            with self.subTest(question=item["question_number"]):
+                self.assertEqual(item["pdf_page"], 2)
+                self.assertEqual(item["printed_page"], "4-36")
+                self.assertEqual(item["result"], "transcription-matches-fixed-scan")
+                self.assertEqual(item["review_status"], "pending-independent-review")
+        self.assertEqual(record["transcription_status"], "draft")
+        self.assertEqual(record["review_status"], "pending")
+
     def test_question_figures_link_to_vector_sources_not_embedded_rasters(self):
         text = QUESTIONS.read_text(encoding="utf-8")
         figure_list = FIGURE_LIST.read_text(encoding="utf-8")
