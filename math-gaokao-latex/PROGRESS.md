@@ -6991,3 +6991,12 @@
 - 修改与验证：本阶段仅更新本进度文件。三卷PDF/review attempt绑定及哈希核对通过；每页均有8项检查且结果为pass/not_applicable；`review_receipts.py check-batch --batch phase0-b02`如实报告上述stale问题。第一次调用校验器误将issues路径传为`issues.json`，CLI拒绝并指出要求`missing-issues.md`；按提示改正后校验运行成功，无文件被改变。未重编、未写receipt、未触碰根目录既有未跟踪`-.png`。
 - 成本：无OCR、XeLaTeX或外部API调用；Codex Token与费用不可见，未知。
 - 剩余/下一步：这些旧视觉结论可以作为复核证据，但不能单独恢复正式成功状态。若要收尾该批，需先为仍可构建的卷生成当前正式build attempt，再确认新PDF及渲染页绑定；批次内2020全国Ⅰ文科仍需按其内容/source blockers单独处理。不得手工改状态或将旧review直接冒充为新build复核。此审计不改变转录完成数或任何卷的验收状态。
+
+### phase0-b02：revision 4487 当前正式构建与全页光栅一致性复核（2026-10-20）
+
+- 已完成：针对前一阶段查明的共享生成器哈希变化，使用官方`build_projects.py build --formal --batch phase0-b02 --json`刷新四卷16版正式构建。revision 4487，0失败、4卷待视觉复核；当前attempt为2019理`1bd670be-f39d-4518-b133-125cbfd42754`、2019文`988073db-9d2f-4935-88e8-9dd21235cf3e`、2020文`f59a2fbd-f3c2-4464-8d61-2f6655926f04`、2020理`ec374716-efde-419c-9451-a32ce8874e4f`。
+- 增量视觉证据：以与历史报告相同的Poppler `pdftoppm 26.10.0`、150dpi重新渲染当前四卷299页，并逐页SHA-256对照`phase0-b02-raster-reuse-20261018.json`保存的图像指纹；299/299页完全一致，0页变化。此证据允许沿用旧页级结论，但不是本轮重新目视，也不替代内容/数学验收。四卷toolchain fingerprint相同；编译日志和页数按新build回执记录。
+- 修改文件：官方formal build更新四卷`receipts/build.json`及`source-manifest.json`派生状态；本进度。临时PNG仅在`.work`临时目录生成并自动清理，未触碰根目录`-.png`。题面、答案、解析、图稿、LaTeX源未改。
+- 验证：formal build=`COMPILED_PENDING_REVIEW`（四卷待审、0失败）；`build_projects.py validate-receipts --batch phase0-b02`为4 pending、0 stale/failed/invalid/missing。每卷四版PDF均存在，SHA与新build receipt匹配，页数合计299；当前视觉PNG与历史同像素报告逐页相符。review仍绑定旧attempt，故批次尚不可finalize。
+- 成本：无OCR、外部API或数学重解；XeLaTeX正式构建16版、Poppler本地渲染299页。Codex Token与实际费用不可见，未知。
+- 剩余/下一步：为当前attempt准备16个官方review workitem；只在全页PNG逐字节一致基础上迁移旧八项结论、警告豁免及2020文科已裁定保留的5个失败项，明确记录非重新目视和旧attempt来源；随后运行官方checked finalizer、校验provenance/manifest/报告投影并提交。不得将这批视为新增完成转录。
