@@ -7018,3 +7018,12 @@
 - 验证：`source_manifest.py validate`通过；build receipt validator为4 pending、0 stale/failed/invalid/missing；provenance=`OK：4卷`；review `check-batch`返回预期`VISUAL_FAILED`并只列5项已知取消题；`test_review_receipts.py` 66/66通过。全量报告检查目前仅报告3份受保护README差异；其余三个全量报告投影已按manifest刷新。一次checked-finalizer路径参数相对仓库根目录解析错误，被工具拒绝且未写入；改用`math-gaokao-latex/.work`后成功。最终器事务及工作树/暂存范围由官方checked wrapper处理。
 - 成本：无OCR、外部API或重做题目推导；复用299页相同栅格证据。执行16版XeLaTeX正式构建、两次本地299页渲染比较及66项回执测试。Codex Token与实际费用不可见，未知。
 - 剩余/下一步：phase0-b02的构建与视觉回执已是当前，但批次仍因2020文科取消题失败与相关内容/source blockers未完成；不重复转录、不清除失败。按1952—2006、2007—2016、2017—2026的总计划边界，从当前manifest和本进度定位下一个未完成批次/卷，继续处理来源或题目阻断，不再重开本批，除非出现新证据或新裁定。
+
+### 1998 上海文科：历史去重与固定来源初检（2026-10-20）
+
+- 恢复与去重：在`feat/gaokao-phase0`隔离工作树核对了当前Git状态、`PROGRESS.md`、计划文件、manifest及`git log --all`。历史中已存在1998全国理科的试题、答案和解析；没有1998上海文科题稿或提交记录，当前年目录也没有其草稿，进度与计划中未发现上海文科已完成/在做的记录。故本卷是新候选，不是重做全国理科或已存在上海文科稿。
+- 来源初检：manifest中唯一未绑定来源为`src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`，固定路径`普通高考/1998/1998上海文.pdf`；上游固定commit为`34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。工作区外只读PDF SHA-256与manifest一致：`c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`。PDF共6页、A4、无原生文本层；逐页目视确认卷题签为“上海 数学试卷（文史类）”，标明22题、满分150分，印刷页码114—119；后3页含卷内“答案及评分标准”与解答。该扫描件没有可见出版者/版次凭据，不能据此宣称官方答案来源或出版身份。
+- 本阶段文件：新增`1998_上海卷_文科/题面转录草稿.md`，将22道题按原卷三部分录入，并对第6、19、20题的原图位置留有显式占位；修改本`PROGRESS.md`。6页105dpi页面图与Tesseract 5.5.3 `chi_sim+eng` PSM 3 OCR文本位于忽略目录`.work/1998-shanghai-arts.2Wm0sf/`，不入库；既有全国理科题面/答案/LaTeX及source manifest、回执未改。
+- 验证：六页渲染成功并逐页查看，首页面另以220dpi核读；源文件哈希与manifest精确匹配；题面草稿题号机械计数为22，`git diff --check`通过。OCR只是定位辅助，公式和选项字面仍待逐题独立核定；未核数学答案、未编译、未登记paper_id，不计入完成卷数。
+- 剩余/下一步：对新题面做隔离盲核，逐项复查高风险符号、选项与页码；重绘或忠实绑定第6、19、20题原图；另行转录卷内答案/评分解答并标注其仅“固定扫描件所载”、不宣称官方。来源出版身份未核前保持`paper_id=null`，不得晋升canonical或complete。不得重复处理1998全国理科已完成稿。
+- 成本：本阶段未调用外部聊天/OCR API；本地Tesseract运行6页，耗时约10秒。Codex Token及费用不可见，记未知。
