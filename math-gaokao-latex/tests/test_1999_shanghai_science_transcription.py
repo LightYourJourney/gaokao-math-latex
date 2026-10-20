@@ -37,6 +37,7 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
             r"(x-2)^2+y^2=3",
             r"\frac{2x-1}{x+2}<1",
             r"x^2+(4+i)x+4+ai=0",
+            r"\bar z(1-ci)",
             r"a_2=4",
             r"a_4=16",
             r"\min\{g(a),S(a)\}",
