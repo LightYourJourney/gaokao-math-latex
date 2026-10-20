@@ -7,6 +7,7 @@
   \coordinate (A2) at (3.35,0.95);
   \coordinate (B2) at (5.20,0.35);
   \coordinate (O2) at (4.05,-1.10);
+  \coordinate (M)  at (3.571,-0.088);
 
   % Near parabolic cross-section and prism length edges.
   \draw[visible edge] (A) .. controls (0.10,-0.90) and (0.33,-1.75) .. (O);
@@ -15,10 +16,11 @@
   \draw[visible edge] (B)--(B2);
   \draw[visible edge] (O)--(O2);
 
-  % Chord and far profile are hidden behind the near section.
+  % The source shows the outer far profile, but its occluded inner segment is dashed.
   \draw[hidden edge] (A)--(B);
-  \draw[hidden edge] (A2) .. controls (3.55,0.05) and (3.72,-1.10) .. (O2);
-  \draw[hidden edge] (O2) .. controls (4.40,-1.10) and (4.90,-0.20) .. (B2);
+  \draw[visible edge] (A2) .. controls (3.425,0.615) and (3.495,0.245) .. (M);
+  \draw[hidden edge] (M) .. controls (3.699,-0.647) and (3.843,-1.10) .. (O2);
+  \draw[visible edge] (O2) .. controls (4.40,-1.10) and (4.90,-0.20) .. (B2);
   \draw[hidden edge] (A2)--(B2);
 
   \node[left] at (A) {$A$};

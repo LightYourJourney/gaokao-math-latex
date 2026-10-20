@@ -7327,3 +7327,11 @@
 - 验证：新增元数据/复核状态断言先以预期RED失败（JSON缺少独立复核记录，解析草稿仍写“未有复核者”）；之后修订状态与登记。1999上海理科四组定向测试21/21通过，来源JSON解析和`git diff --check`通过。全库测试1561项：1547通过、13跳过、1失败；唯一失败仍为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告388条历史缓存/现场派生状态差异（首项2017全国Ⅰ理科`complete` vs `editions_generated`），非本次改动导致。源PDF `普通高考/1999/1999上海理.pdf`在当前工作树及`.work/source-cache/`均不存在，登记的上游提交路径不可读取且Git blob对象不在本地，因此没有伪称完成题图的源图盲核。
 - 成本：本阶段无OCR、PDF重渲染或外部API；使用两次本地独立盲核，模型Token与费用不可见，记未知。
 - 剩余/下一步：先复跑四组1999定向测试、JSON解析和`git diff --check`，再按项目套件要求做全量回归；Q21新口宽/图示约束、Q20/Q21图稿对源图的异人核查、题面与卷内答案逐页源图盲核仍未通过；来源出版身份未认证，`paper_id=null`；四入口编译、正式视觉验收和整卷登记均未完成。下一步寻找可核验的原PDF/页图后裁定Q21，不能仅凭现存源答案或解析草稿提升状态。
+
+### 1999 上海理科：Q20/Q21源图回查与Q21遮挡线型修正（2026-10-20）
+
+- 已完成：从上游归档路径`普通高考/1999/1999上海理.pdf`重新取得固定PDF，仅保存在忽略缓存`.work/source-cache/1999/1999上海理.pdf`；SHA-256为`055fd4d4468dd6db86a49b8addc9209ab497987269aea96a72f0b26ad35cd9dc`，与`来源校对.json`登记值一致。上游位置：[deekur/gaokaomath归档](https://github.com/deekur/gaokaomath/blob/main/%E6%99%AE%E9%80%9A%E9%AB%98%E8%80%83/1999/1999%E4%B8%8A%E6%B5%B7%E7%90%86.pdf)；该归档不构成出版者或版本真实性认证。独立复核确认Q21近端抛物线、AB弦、纵向棱、远端曲线可见/遮挡段及标签与源图相符；并发现Q20源图还有虚线BE，初稿仅画AB、AE、AD、PA。主会话重新查看源裁剪后保留AE并补入BE虚线。Q21题图不确定改挖后的沟口宽度条件，文字约束仍待裁定。
+- 修改文件：更新`1999_上海卷_理科/figures/1999_shanghai_science_q20_pyramid.tex`、`1999_上海卷_理科/figures/1999_shanghai_science_q21_canal.tex`、`tests/test_1999_shanghai_science_figures.py`、`1999_上海卷_理科/图表清单.md`及本进度。测试新增Q20的BE虚线断言及Q21远端可见/遮挡线型断言；PNG/PDF仅留忽略的`.work/`，无栅格图入库。图稿状态仍是`vector-draft-rendered-pending-independent-review`，整卷`review_status=pending`、`paper_id=null`、`official_answer=null`不变。
+- 验证：Q21远端曲线线型断言与Q20缺失BE断言均先在原稿上按预期失败；修订后答案、图稿、解析、题面/来源四组定向测试21/21通过，包含用`latexmk -xelatex`编译两图和`pdftoppm`渲染。独立复核者看过补BE之前的Q20渲染并指出差异，Q21复核无差异；主会话目视核对补线后的Q20新渲染与源裁剪。修正后的Q20异人复核再次委派因线程容量达到上限而失败，故尚无对最终Q20图的独立确认。来源SHA一致，JSON解析及`git diff --check`通过。全量测试`python3 -m unittest discover -s tests`：1561项中1547通过、13跳过、1失败；唯一失败`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`报告388条历史缓存状态/现场派生状态不一致，首项为2017全国Ⅰ理科`complete`与`editions_generated`不符；该测试所查回执未被本次修改。
+- 成本：复用固定PDF和已有页渲染，仅新生成忽略缓存中的局部校样；无OCR、无外部模型API。Token用量与实际费用不可见，记未知。
+- 剩余/下一步：Q20补线后的图稿尚需异人复核。Q21沟口约束解释、Q1—Q22题面/答案/解析异人复核、来源出版者/版次认证、四入口正式构建与逐页终验均未完成，整卷维持pending。另将388条provenance派生不一致留在全局修复队列；不借本卷图稿修正刷新或篡改其他卷回执。
