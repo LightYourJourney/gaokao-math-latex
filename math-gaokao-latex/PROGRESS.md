@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科印刷版当前构建视觉校样（2026-10-21）
+
+- 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；没有读取或修改 Main 工作区。原有 `docs/design/` 用户改动未触碰。
+- 已完成：对当前 build attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595` 的印刷版 18/18 页逐页检查。没有发现裁切、重叠、字号/字形不可读、分页或页眉页脚版式异常。无图页 5、9、10、11、12、14、15、17 的 `figure_label` 记 not_applicable，其余视觉项通过；本版共 136 pass、8 not_applicable、0 fail、0 pending。该视觉结论不代表题目来源、答案或解析已通过数学核验。
+- 内容风险（未在本阶段修改）：第7题 `answers.tex` 标为 B，但本卷图稿 `figures/q07_function-choices.tex` 将按题设函数直接绘出的双谷曲线标为 D；其端点值 `8-e^2` 约为0.61，低于图中 `y=1` 刻度，而手绘 B 的端点高于1。需另行对照固定来源页与独立答案证据后再决定是否修正。第24题题面要求画图，答案仅给分段函数，页面网格仍空白；另需核对答案完整性。本阶段只记录观察，不改答案/图稿。
+- 修改/证据：仅忽略目录 `.work/phase2-b05/review-refresh-stage-558edf7a/phase2-b05/review/印刷版/gk-2016-regular-national-1-science.json` 更新为当前attempt的18页检查结果，以及本进度文件。正式源稿、图稿、PDF、build receipt、manifest及其他试卷均未改；旧attempt的活动工作项暂未覆盖。
+- 验证：项目 `review_receipts._validate_pages` 通过；工作项 attempt、PDF SHA-256 `b8805583aa6439296ef9f179219bec1336573c6650eacba736d5ead4b6089f9d`、18页渲染数一致；`build_projects.py validate-receipts --paper gk-2016-regular-national-1-science` 输出 `OK：1 卷`。本阶段累计当前有效/暂存视觉覆盖125/219页、965 pass、35 not_applicable、0 fail；其余94页待审。批次未finalize。
+- 成本：本地读取/渲染已有PNG并目视复核；无OCR、聊天模型或外部API调用。Token、缓存Token及费用不可见，记未知。
+- 下一步：继续检查同一构建的解析版（24页；第15页结果仅在像素哈希一致时复用）与简答版8页，再做当前attempt绑定、页覆盖和批次状态核验；同时保留上述两项内容风险待单独处理。全国Ⅱ理科仍待审，整批完成前不登记最终视觉回执或运行finalizer。
+
 ### phase2-b05：2016 全国Ⅱ文科四版视觉复核（2026-10-21）
 
 - 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；没有读取或修改 Main 工作区。既有 `docs/design/` 用户改动保持原样。
