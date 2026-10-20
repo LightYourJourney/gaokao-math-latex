@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 仓库级 provenance 缓存漂移分型（2026-10-20）
+
+- 已完成：只读运行`check_batch`并按状态转移分类：291套规范卷、383项不一致，其中231套卷缓存`complete`而现场派生为`editions_generated`；另有152个批次状态不符（123个`closed→provenance_verified`、27个`closed_with_blockers→provenance_verified`、2个`compiled_pending_review→provenance_verified`）；没有其他类型的问题。
+- 代表卷`gk-2020-regular-new-gaokao-2`：现场facts为provenance=`current`、artifacts=`current`、build=`succeeded`但`build_currency=stale`、review=`passed`且current、`batch_report_valid=false`。该build回执完成于2026-10-13；`receipt_currency`精确指出生成输入树变化，差异路径为两个共享生成器`math-gaokao-2017-2026/tools/md2tex.py`及`math-gaokao-latex/tools/make_short_answers.py`，其最近修改分别在2026-10-15（`b2940a58`）和2026-10-20（`952eca08`）。这解释了该代表卷为什么失效，但尚未逐项核实其余230卷的具体变更，不能外推全部失效原因。
+- 处置：未改production_state、batch status、build/review回执或PDF；没有用状态降级掩盖缺失验证，也没有全量重编。上述两个生成器被纳入逐卷生成输入树，造成共用代码变化可能使很多回执失效；待逐卷归因后，按真实输出/依赖变化决定重编和视觉复核范围。
+- 修改文件：仅本`PROGRESS.md`；此前Q15修正与报告刷新已分别提交`6cd02ca3`、`89692e2c`，本诊断未改动它们。
+- 验证/成本：复现失败的只读审计输出291卷/383项；一卷facts和build receipt精查通过。全套测试仍是1585项、失败1项、跳过13项，唯一失败即上述缓存漂移门禁。只读全量审计约58秒，单卷收据核验不足1秒；没有OCR、PDF重编、外部API或状态写入；token不可见，费用未知。
+- 剩余/下一步：逐项提取231份失效build receipt的currency原因与输入路径分布，区分生成源码变动但输出未变、题面/图稿/模板变化、依赖/PDF缺失等类别；再按批次选择增量重编和复核。绝不以一次样本替代全量根因，也不直接批量改状态。
+
 ### 1998 上海文科：Q15 漏读转录纠正（2026-10-20）
 
 - 已完成：复用忽略目录中既有高分辨率题面页图`.work/1998-shanghai-arts.2Wm0sf/question-hi-2.png`（印刷页115），直接核读为`11∈B`，此前转录成`1∈B`是漏读一位数字。由$B=(5-a,5+a)$得$a>6$，故$5-a<-1$且$5+a>11>6$，从而$\overline A=[-1,6]\subset B$，D唯一成立；A、B、C分别由$A$无界而$B$有界、$x=0$、$x=7$否定。原扫描、答案权威等级与题目数均未改变。
