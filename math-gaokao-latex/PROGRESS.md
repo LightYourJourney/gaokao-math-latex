@@ -7000,3 +7000,12 @@
 - 验证：formal build=`COMPILED_PENDING_REVIEW`（四卷待审、0失败）；`build_projects.py validate-receipts --batch phase0-b02`为4 pending、0 stale/failed/invalid/missing。每卷四版PDF均存在，SHA与新build receipt匹配，页数合计299；当前视觉PNG与历史同像素报告逐页相符。review仍绑定旧attempt，故批次尚不可finalize。
 - 成本：无OCR、外部API或数学重解；XeLaTeX正式构建16版、Poppler本地渲染299页。Codex Token与实际费用不可见，未知。
 - 剩余/下一步：为当前attempt准备16个官方review workitem；只在全页PNG逐字节一致基础上迁移旧八项结论、警告豁免及2020文科已裁定保留的5个失败项，明确记录非重新目视和旧attempt来源；随后运行官方checked finalizer、校验provenance/manifest/报告投影并提交。不得将这批视为新增完成转录。
+
+### phase0-b02：current attempt 视觉证据迁移与复核工作项核验（2026-10-20）
+
+- 已完成：官方`prepare-batch`创建的16份工作项均绑定revision 4487新attempt。逐个重渲染当前四卷299页，以`pdftoppm 26.10.0`、150dpi对照10月18日逐页SHA报告，299页完全相同。仅据精确像素相等，将对应旧review的八项页检结论、候选页与日志警告豁免迁移至当前工作项；每页glyph说明记录新旧证据链及“非重新目视”。
+- 失败保留：2019文理和2020理科工作项保持pass；2020文科继续failed，恰为取消题的5项`heading_number`（试题版p5、解析版p5/p32、简答版p5、印刷版p23），没有将其改成通过。
+- 修改文件：新增`reports/phase0-b02-raster-reuse-20261020.json`，记录四卷新旧attempt、PDF SHA、299项当前页PNG SHA与精确比对结果；修改仅忽略的`.work/phase0-b02/review/`16份工作项；本进度。PDF/LaTeX源、题面、答案、解析均未修改。
+- 验证：工作项16/16、页覆盖299/299、检查2392/2392全部已填，pending=0；结果分布3卷pass、1卷fail，失败清单与用户既定裁定完全一致；报告哈希记录299/299，changed=0；`git diff --check`通过。正式review receipt尚未更新，待checked finalizer处理。
+- 成本：无OCR、外部API或人工重新目视；复用既有视觉检查结论，新增本地150dpi渲染/哈希比较299页。Codex Token与实际费用不可见，未知。
+- 剩余/下一步：提交本阶段机器证据报告与进度后，运行`review_receipts.py finalize-batch-checked`，预期登记一个保留2020文科5项视觉失败的有效负结果；再验证manifest、provenance、正式build/review receipts与全量派生报告。此批不是新增转录完成量，也不能标记整批全通过。
