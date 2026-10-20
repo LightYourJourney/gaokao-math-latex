@@ -24,6 +24,13 @@ import generate_projects
 
 
 class GuangdongScience1985LayoutSourceTests(unittest.TestCase):
+    def test_q1_graphs_are_spaced_to_keep_adjacent_coordinate_labels_separate(self):
+        figure = FIGURE_SOURCE.read_text(encoding="utf-8")
+        match = re.search(r"\\foreach \\x/\\label in \{([^}]+)\}", figure)
+        self.assertIsNotNone(match)
+        shifts = [float(item.split("/", 1)[0]) for item in match.group(1).split(",")]
+        self.assertEqual([0.0, 4.8, 9.6, 14.4, 19.2], shifts)
+
     def test_q1_coordinate_labels_use_open_quadrants(self):
         figure = FIGURE_SOURCE.read_text(encoding="utf-8")
         points = re.findall(
@@ -35,7 +42,7 @@ class GuangdongScience1985LayoutSourceTests(unittest.TestCase):
                 ("0,1", "above left", "0,1"),
                 ("1,1", "below left", "1,1"),
                 ("1,0", "above right", "1,0"),
-                ("1,0", "above left", "1,0"),
+                ("1,0", "below right", "1,0"),
                 ("0,1", "below left", "0,1"),
             ],
             points,

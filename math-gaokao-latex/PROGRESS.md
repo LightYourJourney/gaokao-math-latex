@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b09：1985 广东文理卷 Q1 图注/Q35 分页修复、正式校样与中间产物清理（2026-10-21）
+
+- 已完成：理科 Q1 五幅函数图之间扩大间距，并调整 D 图 `(1,0)` 标注锚点；修复生成器物化后的 Q35 分页，使 Q34 与附加题 Q35 同处正式试题版第 4 页。保留原题数字、条件及 `blocked` 生产状态。
+- 正式产物：文科 build attempt `9ac93a5f-e65e-4134-beb0-79d7c3f610f6`，试题/解析/简答/印刷版页数 4/19/7/14（44 页）；理科 attempt `0a24cd99-da41-468d-b592-06a6d4418ca9`，页数 4/22/7/16（49 页）。四版构建均成功，回执记载编译错误、缺字、Overfull、未定义引用为 0。
+- 视觉验收：按当前 PDF 与其逐页 PNG 完成 93 页 × 8 项 = 744 项检查，均通过；复用的旧页均经逐像素一致性核对。Q34/Q35 在理科试题 PDF 第 4 页同页已由渲染图及 `pdftotext` 核对。批次事务将两卷 review 记为 `passed`，批次报告更新为 93 页及 `closed_with_blockers`；两卷仍因既有内容/来源问题保持 `blocked`，问题号见 `reports/phase2-b09.md`。
+- 修改文件：理科 `figures/f1985_guangdong_science_v1_q1_graphs.tex`、生成的 `questions.tex`、版式回归测试；两卷 `receipts/build.json` 与 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b09.md`、本进度文件。未改题面/答案/解析正文或问题总账。
+- 清理与验证：正式清理器按 `phase2-b09` 范围移除 48 个编译中间文件（aux/fdb_latexmk/fls/log/out/xdv），保留两卷全部 8 份 PDF。`review_receipts.py check-batch`、`provenance.py check-batch`（2 卷）、`generate_projects.py --check`、版式回归测试 4/4、`git diff --check` 均通过。未 OCR、未调用 LLM 或外部 API；实际 Token 与费用不可见，记未知。
+- 计数更正：旧报告的 96 页来自分页修复前理科 5/23/8/16 页的构建；当前正式 PDF 是 44+49=93 页，旧工作项已由当前 attempt 的全页复核替换，不应再沿用 96 页。
+- 剩余/下一步：两卷仍有未解决的来源/内容阻塞（文科 ISSUE-0966、0967、0968、0969、0970、0975；理科 ISSUE-0971、0972、0973、0974），不得因构建或视觉通过提升为 `complete`。后续继续其他明确选定的 stale 批次或逐项处理这些阻塞；不得重做已完成的 OCR/题面转录。
+
 ### 1985 广东理科：分页元数据与 provenance 哈希边界修复（2026-10-21）
 
 - 已完成：`parse_question_blocks()` 将 `question-needspace` 解析为独立 `QuestionBlock.question_needspace` 元数据，验证唯一性、格式及 0.05–0.5 范围，并从题面正文/小问扫描中剥离；生成器改为读取该字段。分页指令仍作用于 Q35 排版，但不再污染题面哈希。
