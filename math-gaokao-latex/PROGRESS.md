@@ -7375,3 +7375,11 @@
 - 验证：四版正式PDF页数为6/32/8/26；`generate_projects.py --check`通过；单卷`validate-receipts`为`OK`，0 failed/invalid/missing/stale，视觉仍pending。引号专项测试2/2通过；漂移归一化、理科限域回归与task-25台账测试3/3通过；台账JSON有效，`git diff --check`通过。全库`unittest discover -s tests`共1567项：1553通过、13跳过、1失败；唯一失败为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，仍报告383项历史派生状态与现场状态不一致。首次全量运行还发现本次文科答案哈希未同步到漂移台账，已按红—绿测试修复并重跑全量，版式台账失败已消失。
 - 成本：复用本地正式PDF并对已审页面做像素一致性复用；无OCR、外部API或模型调用。Codex Token与实际费用不可见，记未知。
 - 剩余/下一步：本卷内容来源、题面忠实性、答案与解析的数学正确性尚未因版面校样而认证；`phase0-b01`其余两卷尚未完成视觉校样，因此不写最终review receipt、不提升批次状态。下一步校样2017全国Ⅰ卷尚未完成的版本，待四卷工作项都匹配当前attempt/PDF SHA/页数后再按批次登记。全库383项状态差异仍留在独立队列，不在本阶段批量改写。
+
+### 2017 全国Ⅰ卷文科：四版本当前PDF逐页视觉校样（2026-10-20）
+
+- 已完成：对当前正式构建的四个PDF完成83页目视版面检查：试题版6页、解析版39页、简答版8页、印刷版30页。逐页检查图形/公式是否显示完整、题号选项与页码是否连续、图文是否相互遮挡、分页和留白是否异常；没有发现裁切、重叠、公式越界或空白/重复页。Q6长解跨多页但内容连续，未见分页截断。页面图仅用于版面复核，不据其判断数学内容或原题来源已经认证。
+- 修改文件：仅本`PROGRESS.md`；视觉页图在忽略的临时目录`/tmp/phase0-b01-2017-arts.hp73C3/`。发现原16个批次工作项绑定旧build attempt后，运行受控`prepare-batch`，将`.work/phase0-b01/review/`下四卷16项全部重建为当前attempt的新待审工作项；这是ignored工作数据，不改正式review/build receipt或manifest。本卷已完成的目视检查结论尚未逐项写入新八项检查工作项，故正式批次回执仍pending。
+- 验证：本卷四版build receipt对应PDF页数为6/39/8/30；重建工作项前批次`validate-receipts`为`OK`（4卷均current，review pending=4）；`prepare-batch`成功为16个工作项生成当前attempt绑定与页数骨架。无源码/试卷内容改动，不需重跑编译或全量单元测试；本次只做本地Poppler渲染与目视检查。
+- 成本：无OCR、聊天模型或外部API；仅本地渲染83页。Token与实际费用不可见，记未知。
+- 剩余/下一步：需将本卷逐页观察结果落实到对应current-attempt工作项，并继续校样2017全国Ⅰ理科；2018文理两卷虽已逐页视觉检查，其新工作项也因build attempt更新而重新初始化。四卷共16项完整八检查工作项全部完成后，才运行batch finalize与相应门禁；整批仍保持pending，不把本阶段目视结果称为正式整批验收。
