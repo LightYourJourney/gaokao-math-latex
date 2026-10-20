@@ -22,6 +22,15 @@
 - 成本：该卷四版正式重编约7秒；本阶段0次 OCR、聊天模型或外部 API 调用。Token、缓存Token与费用不可见，记未知。
 - 下一步：先目检并处置全国Ⅰ文科印刷版两条 Overfull，再继续剩余157页，优先处理全国Ⅰ理科解析/简答告警页；所有页和构建警告均有复核结论后，才刷新正式 review receipt 并运行批次 finalizer。不得把当前工作项全 pass 误报成四卷整批验收完成。
 
+### phase2-b05：2016 全国Ⅰ文科解析长行拆段与 Overfull 消除（2026-10-21）
+
+- 已完成：在第16题目标函数结论与第18题两个法向量计算之间，仅于完整句界拆分解析段落，数字、公式和推理内容均未改。生成器据规范 Markdown 更新 `answers.tex`；四版正式重编 attempt `24599b45-84de-4504-9fcf-a0f7e4cc6079`，页数保持6/23/8/19。两条印刷版 Overfull 均消失。
+- 视觉复核：新旧56页以120dpi逐页像素比较，52页完全相同；解析版第15、17页及印刷版第13、14页为4个变化页，再以300dpi检查，文字、公式、图形、答案框及分页均清楚，无裁切/重叠/异常留白。四版当前工作项已刷新并绑定新 attempt，56页448项全 pass；上一轮工作项归档在 `.work/phase2-b05/review-stale-2026-10-21-before-answer-linebreak-fix-6f4f2136/`。
+- 修改文件：规范源 `2016/2016_数学真题_全国1文_解析正文.md`、生成件 `2016_全国Ⅰ卷_文科/answers.tex`、该卷 `receipts/build.json`、`source-manifest.json` 与本进度文件。未改题面、答案数值、图稿或简答输出。
+- 验证：生成器、解析源、构建工具定向测试分别115/115、112/112、140/140通过；`generate_projects.py --check` 与 `make_short_answers.py --check` 均通过。四版 XeLaTeX 全部成功，错误/未解析引用/缺字/Overfull/Underfull 均为0。`validate-receipts` 为四卷0 stale/failed/missing、4待审；`provenance.py check-batch` 为4卷 OK。正式 review receipt 仍因构建更新而过期，`check-batch` 对四卷返回 `INVALID_OR_STALE`；未运行 finalizer。生成器只读检查第一次遇共享仓库事务锁，确认锁已释放后重试通过，未触碰其他工作树文件。
+- 成本：本卷正式构建约7秒；三个定向测试约67秒；0次 OCR、聊天模型或外部 API 调用。Token、缓存Token与费用不可见，记未知。
+- 剩余/下一步：phase2-b05 当前已视觉复核62/219页（全国Ⅰ文科56页、全国Ⅰ理科试题版6页；495 pass、1 not_applicable），其余157页未核。全国Ⅰ理科解析/简答版仍有两条 Overfull 与一条 Underfull待检查；继续逐页复核三卷其余版本及这些告警，全部有记录后再刷新正式 review receipt 并执行批次 finalizer。其余卷的 blockers 不变。
+
 ### phase2-b05：2016 全国Ⅰ理科试题版逐页视觉校样（2026-10-21）
 
 - 已完成：目视检查当前正式构建的试题版6/6页；页面题号/标题、中文与数学字形、选择题选项、函数图与几何图标签、图文间距、分页、页眉页脚均清楚，未发现裁切、重叠、缺字或异常留白。全页先以180dpi检查，另将第2—6页以300dpi复核；这是生成件视觉检查，不替代与来源PDF逐题对照。
