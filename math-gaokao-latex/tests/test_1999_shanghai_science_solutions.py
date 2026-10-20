@@ -149,8 +149,11 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertEqual(note["issue"], "q21-no-fill-mouth-width-interpretation")
         self.assertEqual(note["source_answer_transcription"], "√2/2 m")
         self.assertEqual(note["fixed_original_mouth_alternative"], "1 m")
+        self.assertEqual(note["original_ditch_area"], "2 m²")
         self.assertEqual(note["tangent_candidate_area"], "3√2/2 m²")
+        self.assertEqual(note["tangent_candidate_additional_area"], "3√2/2−2 m²")
         self.assertEqual(note["fixed_mouth_candidate_area"], "9/4 m²")
+        self.assertEqual(note["fixed_mouth_candidate_additional_area"], "1/4 m²")
         self.assertEqual(note["status"], "author-adjudicated-pending-independent-review")
 
         solution = SOLUTIONS.read_text(encoding="utf-8")
@@ -158,6 +161,55 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertIn("若另加“沟口宽度固定为2米”", solution)
         self.assertIn("$3\\sqrt2/2$ 平方米", solution)
         self.assertIn("$9/4$ 平方米", solution)
+
+    def test_q21_global_minimum_covers_all_linear_trapezoid_sides(self):
+        candidate_area_sum_squared = Fraction(2)
+        nonpositive_slope_bound_squared = Fraction(2) ** 2
+        shallow_slope_bound_squared = Fraction(3, 2) ** 2
+        self.assertGreater(nonpositive_slope_bound_squared, candidate_area_sum_squared)
+        self.assertGreater(shallow_slope_bound_squared, candidate_area_sum_squared)
+
+        for slope in (Fraction(1, 2), Fraction(1), Fraction(3, 2)):
+            excess_squared = (slope + 1 / (2 * slope)) ** 2 - 2
+            square_identity = (2 * slope**2 - 1) ** 2 / (4 * slope**2)
+            self.assertEqual(excess_squared, square_identity)
+            self.assertGreaterEqual(excess_squared, 0)
+
+        def add(left, right):
+            return left[0] + right[0], left[1] + right[1]
+
+        def multiply(left, right):
+            return (
+                left[0] * right[0] + 2 * left[1] * right[1],
+                left[0] * right[1] + left[1] * right[0],
+            )
+
+        inverse_two_t = (Fraction(0), Fraction(1, 2))
+        for root_s in (Fraction(0), Fraction(1, 2), Fraction(1)):
+            s = root_s**2
+            tangent_difference = add(
+                multiply((s + Fraction(1, 2), Fraction(0)), inverse_two_t),
+                (-root_s, Fraction(0)),
+            )
+            root_minus_t = (root_s, Fraction(-1, 2))
+            squared_difference = multiply(root_minus_t, root_minus_t)
+            factored_difference = multiply(squared_difference, inverse_two_t)
+            self.assertEqual(tangent_difference, factored_difference)
+
+        solution = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn(r"h(s)\ge\sqrt{s}", solution)
+        self.assertIn(r"q(x)=a+dx^2-x\ge0", solution)
+        self.assertIn(r"\frac{s+t^2}{2t}-\sqrt{s}", solution)
+        self.assertIn(r"\frac{(\sqrt{s}-t)^2}{2t}\ge0", solution)
+        self.assertIn("h(s)=a+ds", solution)
+        self.assertIn("q(x)=a+dx^2-x", solution)
+        self.assertIn(r"d\le0", solution)
+        self.assertIn(r"0<d\le1/2", solution)
+        self.assertIn(r"d\ge1/2", solution)
+        self.assertIn(r"a\ge1/(4d)", solution)
+        self.assertIn(r"\ge d+\frac1{2d}\ge\sqrt2", solution)
+        self.assertIn("c=1", solution)
+        self.assertIn(r"4d(1-d)\ge1", solution)
 
 
 if __name__ == "__main__":
