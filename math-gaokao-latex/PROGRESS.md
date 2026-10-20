@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东文理卷：社区 LaTeX 候选源核查（2026-10-21）
+
+- 已完成：检查 DxAThing 社区整理仓在发布标签 `20261004` 下的 1986 广东文史/理工农医 LaTeX 与文件树。两份正文确实覆盖 1986 广东卷，但该仓 README 说明内容主要整理自 deekur/gaokaomath 等公开资料，并非原始出版/考试来源；该标签下 `img_repaint/1986/` 无文件，原始题图目录仅见文史 `q37_fig1.png`、理科 `q2_figures.png` 与 `q39_solution_fig1.png`，没有能核验当前 ISSUE-0777/0778 所缺 A—E 图的独立素材。因此它不能作为同版源图或独立版本证据，不能据此补画/登记选项图。
+- 修改文件：仅本进度文件；没有改两卷题目、答案、解析、issues、来源绑定、manifest、PDF 或回执。候选材料：[社区仓库](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation)、[1986 文史正文](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/20261004/content/1986/guangdong_liberal.tex)、[发布说明](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases)。
+- 验证：只读检查发布标签的 Git tree、两份正文和仓库发布说明；`img_repaint/1986/` 未列出图稿，相关原图文件名也未包含缺失选项组。仓库自述其重排以公开版本为基础，故即使文本相同也不足以独立证实该处图像。`git diff --check -- math-gaokao-latex/PROGRESS.md` 通过。
+- 成本：无 OCR、PDF 渲染、模型或付费 API；只读取公开 GitHub API/页面。Codex Token 与实际费用不可见，记未知。
+- 剩余/下一步：1986 文史/理科的选项图问题仍为 open，原始固定源与当前视觉失败状态不变。停止重复搜索相同二手转录；后续如获得可核验的同版扫描/出版物页再复核，否则保留待补。接下来按题库计划选择另一项仍可推进且不依赖这张缺失图的卷级工作，先核对其已有转录与清单，避免重做。
+
 ### phase2-b06：2023 三卷现行 attempt 视觉复核预检（2026-10-21）
 
 - 已完成：承接已批准的 2023 全国甲卷理科、全国乙卷文科与理科批次。现行 attempt 为 `4b32c3df-4831-4a11-8774-62035e8d0e63`、`9c4a4d8b-e719-41d4-9d84-f8643f0a0439`、`f5d19751-d294-4dcf-84c3-f987dcc1d7e5`；四版共 152 页。当前 build receipt 均成功且无编译错误、缺字、Overfull 或未解析引用；source manifest 校验通过，provenance `check-batch` 为 3 卷 OK。
