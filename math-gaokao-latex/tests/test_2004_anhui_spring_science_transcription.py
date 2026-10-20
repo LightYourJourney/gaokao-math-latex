@@ -37,6 +37,7 @@ class AnhuiSpring2004ScienceTranscriptionTests(unittest.TestCase):
         self.assertIn(SOURCE_SHA256, transcript)
         self.assertIn("paper_id 未绑定", transcript)
         self.assertIn("official_answer: null", transcript)
+        self.assertIn("题面复核状态: 独立盲核已完成", transcript)
 
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", transcript, re.M)]
         self.assertEqual(numbers, list(range(1, 23)))
@@ -98,10 +99,20 @@ class AnhuiSpring2004ScienceTranscriptionTests(unittest.TestCase):
                 frozenset(("A_1", "B")),
                 frozenset(("A", "B_1")),
                 frozenset(("B", "C_1")),
-                frozenset(("A_1", "C")),
                 frozenset(("B_1", "C")),
             },
         )
+        self.assertEqual(len(drawn_segments), 13)
+        coordinates = {
+            name: (float(x), float(y))
+            for name, x, y in re.findall(
+                r"\\coordinate \(([^)]+)\) at \(([-\d.]+),([\-\d.]+)\);",
+                figure,
+            )
+        }
+        a1, b1, c = coordinates["A_1"], coordinates["B_1"], coordinates["C"]
+        cross_product = (b1[0] - a1[0]) * (c[1] - a1[1]) - (b1[1] - a1[1]) * (c[0] - a1[0])
+        self.assertAlmostEqual(cross_product, 0.0, places=6)
         self.assertIn("not to scale", figure)
         self.assertNotIn(r"\includegraphics", figure)
 
