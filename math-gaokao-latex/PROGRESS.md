@@ -7009,3 +7009,12 @@
 - 验证：工作项16/16、页覆盖299/299、检查2392/2392全部已填，pending=0；结果分布3卷pass、1卷fail，失败清单与用户既定裁定完全一致；报告哈希记录299/299，changed=0；`git diff --check`通过。正式review receipt尚未更新，待checked finalizer处理。
 - 成本：无OCR、外部API或人工重新目视；复用既有视觉检查结论，新增本地150dpi渲染/哈希比较299页。Codex Token与实际费用不可见，未知。
 - 剩余/下一步：提交本阶段机器证据报告与进度后，运行`review_receipts.py finalize-batch-checked`，预期登记一个保留2020文科5项视觉失败的有效负结果；再验证manifest、provenance、正式build/review receipts与全量派生报告。此批不是新增转录完成量，也不能标记整批全通过。
+
+### phase0-b02：current attempt 正式复核登记与门禁复验（2026-10-20）
+
+- 已完成：官方`finalize-batch-checked`以manifest revision 4488写入当前attempt的四卷review/build状态、视觉问题账与`reports/phase0-b02.md`，自动提交诊断提交`8bb69c2d`。最终状态`VISUAL_FAILED`：2019文理、2020理科review通过；2020文科保留5项经用户裁定的取消题`heading_number`失败；批次继续`compiled_pending_review`，没有将四卷或批次伪记为全通过/已完成。
+- 全库投影：finalize后`report.py check --all`检测到6个过期投影。按`render_outputs()`同源数据与事务机制仅刷新3个未受保护的生成报告：`docs/source-inventory.md`、`report.md`、`reports/baseline.md`；3份受保护README（`README_数学.md`、本项目README、2017—2026 README）保持原样。复查结果只剩这3份受保护README与当前自动汇总不一致，不强行覆盖用户内容。
+- 修改文件：checked finalizer已提交四卷build/review receipts、`source-manifest.json`、`missing-issues.md`、`reports/phase0-b02.md`；随后更新上述3份安全投影及本进度。正式LaTeX源和题目内容未改。
+- 验证：`source_manifest.py validate`通过；build receipt validator为4 pending、0 stale/failed/invalid/missing；provenance=`OK：4卷`；review `check-batch`返回预期`VISUAL_FAILED`并只列5项已知取消题；`test_review_receipts.py` 66/66通过。全量报告检查目前仅报告3份受保护README差异；其余三个全量报告投影已按manifest刷新。一次checked-finalizer路径参数相对仓库根目录解析错误，被工具拒绝且未写入；改用`math-gaokao-latex/.work`后成功。最终器事务及工作树/暂存范围由官方checked wrapper处理。
+- 成本：无OCR、外部API或重做题目推导；复用299页相同栅格证据。执行16版XeLaTeX正式构建、两次本地299页渲染比较及66项回执测试。Codex Token与实际费用不可见，未知。
+- 剩余/下一步：phase0-b02的构建与视觉回执已是当前，但批次仍因2020文科取消题失败与相关内容/source blockers未完成；不重复转录、不清除失败。按1952—2006、2007—2016、2017—2026的总计划边界，从当前manifest和本进度定位下一个未完成批次/卷，继续处理来源或题目阻断，不再重开本批，除非出现新证据或新裁定。
