@@ -31,10 +31,14 @@ class AnhuiSpring2004ArtsSolutionsTests(unittest.TestCase):
         self.assertIn(r"\log_a^{2}x", transcript)
 
     def test_parameter_cases_and_under_specified_sequence_are_explicit(self):
+        transcript = TRANSCRIPT.read_text(encoding="utf-8")
         answers = ANSWERS.read_text(encoding="utf-8")
         solutions = SOLUTIONS.read_text(encoding="utf-8")
         self.assertIn("若 $a>1$，解集为 $(1,a^2)$", answers)
         self.assertIn("若 $0<a<1$，解集为 $(a^2,1)$", answers)
+        q18 = next(line for line in transcript.splitlines() if line.startswith("**18．**"))
+        self.assertIn("已知数列", q18)
+        self.assertNotIn("正项", q18)
         self.assertIn("通项不唯一", answers)
         self.assertIn(r"b_n=b_{n-1}+2", solutions)
         self.assertIn(r"b_n=-b_{n-1}", solutions)
