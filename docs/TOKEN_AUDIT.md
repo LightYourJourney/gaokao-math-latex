@@ -19,6 +19,10 @@
 
 新增 `tools/ocr_candidate_ir.py`，把现有 OCR run 封装为来源绑定的页候选，而不是题目记录。以已存 2008 延考文科第5页 MinerU run 验证：manifest SHA/source ID/page一致，输出SHA与已登记OCR输出SHA一致；但它仍是未核候选且来源没有 `paper_id`，因此输出不含 `question_id`、不触碰 canonical Markdown。候选封装会保留已有本地推理时间/缓存/资源字段，但本轮无新 OCR/API/模型调用。当前缺的是人工切题确认与review gate；不能将这项封装描述为完整 OCR→LaTeX 流水线。
 
+### OCR 评分 run 来源标识强制校验（2026-10-20）
+
+`score_ocr.py` 除 source SHA、页码与任务类型外，现在也要求每条 OCR run 元数据包含 `source_id`，并与 gold case 的来源 ID 精确一致。2008 延考文科第5页已有 PaddleOCR run 原先缺少该字段；按该 run 的 PDF SHA 在 manifest 中唯一匹配后补录。实际评分 CLI 通过来源校验，但因两个 gold case 都未获人工确认，结果仍为 `scored_runs=0`、`pending_cases=2`；无 CER/准确率结论，也没有新增 OCR 或模型调用。
+
 ### 同页 MinerU/Paddle OCR 定性试点（2026-10-15）
 
 选用现有 gold 候选 national-2008-extension-arts-page05-scan，只比较已有 PaddleOCR 输出和一次新的 MinerU 输出；二者输入对应同一张缓存页面图，SHA-256 为 17ceebb7c49cdb789120b2ab92a974309973f2982abd1e9423f0db495205904a（来源 PDF SHA fdfb4e9e88d4405f8a99380d6f2197f3269e061ef9b2c4f7ed7066a56a1e88c2，第5页，144 DPI）。因 MinerU CLI 接受 PDF，本次将该原始栅格无损放入单页 PDF；包装 PDF SHA 为 27440850180b66e3528e61a7ff1c028db5eb0e24af5215482746cfa84114f919。输出 SHA 为 01202339eb47a0d15ea672ab3493c55af92f6a45cbae2d9b26d861a2ae8fe70e，原始 Markdown 暂存于忽略目录 math-gaokao-latex/.work/mineru-output/。

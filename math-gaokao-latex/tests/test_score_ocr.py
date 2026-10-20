@@ -203,6 +203,20 @@ class OcrScoringTests(unittest.TestCase):
                 {'schema_version': 1, 'cases': [case]}, [run], source_manifest(),
             )
 
+    def test_ocr_run_requires_source_id_even_when_source_hash_matches(self):
+        case = {
+            'case_id': 'case-1', 'source_id': 'src-sample', 'source_sha256': 'a' * 64,
+            'source_page': 1, 'bbox_pixels_top_left_xywh': None, 'task': 'text',
+            'reference_text': '题目', 'review_status': 'pending_human_review',
+        }
+        run = run_record(case, '题目')
+        del run['metadata']['source_id']
+
+        with self.assertRaisesRegex(ValueError, 'metadata requires source_id'):
+            score_ocr.score_benchmark(
+                {'schema_version': 1, 'cases': [case]}, [run], source_manifest(),
+            )
+
 
 if __name__ == '__main__':
     unittest.main()

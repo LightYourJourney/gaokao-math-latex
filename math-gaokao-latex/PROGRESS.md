@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### OCR 评分输入来源 ID 强制校验（2026-10-20）
+
+- 已完成：`score_ocr.py` 现强制每条 OCR run 元数据同时提供 `source_id`、PDF SHA、页码和任务类型；已有逐字段相等校验继续保证 run 与 gold 样本绑定。发现 2008 延考文科第5页 PaddleOCR 记录缺少 `source_id`，依据其 PDF SHA 在 manifest 唯一匹配到 source ID 后补录；未改 OCR 输出或 gold 参考文本。
+- 修改文件：`tools/score_ocr.py`、`tests/test_score_ocr.py`、`benchmarks/ocr-runs.jsonl`、`docs/TOKEN_AUDIT.md` 与本进度。
+- 验证：新增“缺少 source_id 必须拒绝”测试先按预期失败，实施后 `test_score_ocr.py` 8/8 通过；真实评分 CLI 通过来源校验，返回 2 个 `pending_gold`、0 个 scored runs，没有计算 CER 或声称准确率；`git diff --check` 通过。全量套件 1584 项：1570 通过、13 跳过、1 失败；唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，其报出 383 条既有 manifest 派生状态缓存不一致（首例为 2020 新高考Ⅱ卷），与本次 OCR 来源 ID 修改无关；未批量改写 manifest 缓存。
+- 成本与边界：未重跑 OCR、未调用模型或外部 API；只做本地元数据校验及测试。Codex Token 与费用不可观测，记未知。公式样本裁片仍为 `pending_human_review`，已向用户请求核对可见字形；在得到明确确认前不得改变状态。
+- 剩余/下一步：现有 2 个 gold case 仍待人工核准，故不能产生准确率或引擎排名。收到用户对 1977 新疆理科 Q1 公式裁片的核对后，只更新该样本审核字段并评分；2008 延考文科第5页长文本仍须单独人工审阅。随后再扩展覆盖题型的 gold，并做 MinerU/Paddle 同输入对照。
+
 ### 2002 北京文科卷：Q7/Q21 定向独立复核（2026-10-20）
 
 - 已完成：另一位复核者仅依据固定 PDF（source ID `src-90f44916d96acc13cf570b10db11e0afffadc48c9f7139ba8411097f30f37449`，SHA-256 `65899ebe3859b55da2aa318d2ba79541675870468a89124240062b3e3d48c089`）盲核此前推导有误的两题，不读取答案/解析稿。Q7 由 $(1+i)^2=2i$、$(1+i)^4=-4$ 得答案 D（16）；Q21 重算 $G,F,H$ 坐标并验证 $H=3G-2F$，再由 $F_y=H_y$ 得 $3(b-1/2)^2+c^2=3/4$。排除 $c=0$ 导致的 $(0,0),(1,0)$ 退化三角形，以及 $(1/2,\pm\sqrt3/2)$ 正三角形处 $F=H$、直线 $FH$ 不确定。与现有解析及答案要点一致。

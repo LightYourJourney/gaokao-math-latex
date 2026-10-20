@@ -131,7 +131,7 @@ def score_benchmark(gold, runs, manifest):
         metadata = run.get('metadata')
         if not isinstance(metadata, dict):
             raise ValueError(f'OCR run requires source metadata: {case_id}')
-        for field in ('source_sha256', 'source_page', 'task'):
+        for field in ('source_id', 'source_sha256', 'source_page', 'task'):
             if field not in metadata:
                 raise ValueError(f'OCR run metadata requires {field}: {case_id}')
         if case['bbox_pixels_top_left_xywh'] is not None and 'bbox_pixels_top_left_xywh' not in metadata:
