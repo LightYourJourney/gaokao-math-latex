@@ -120,17 +120,38 @@ class Shanghai1998ScienceSolutionsTests(unittest.TestCase):
         self.assertAlmostEqual((8 * math.sqrt(3)) / 8, math.sqrt(3))
         self.assertAlmostEqual(6 / math.sqrt(3), 2 * math.sqrt(3))
         left = (0, 2, 6)
-        right = (math.sqrt(3), 2, -3)
+        right = (0, 2, -3)
         dot = sum(a * b for a, b in zip(left, right))
-        norm_product = math.sqrt(sum(x * x for x in left) * sum(x * x for x in right))
+        left_norm_squared = sum(x * x for x in left)
+        right_norm_squared = 3 + sum(x * x for x in right)
         self.assertEqual(dot, -14)
-        self.assertAlmostEqual(abs(dot / norm_product), 7 * math.sqrt(10) / 40)
+        self.assertEqual((left_norm_squared, right_norm_squared), (40, 16))
+        # The sqrt(3) component contributes 3 to the second norm square;
+        # the directed cosine is negative, while the line angle uses its magnitude.
+        self.assertLess(dot, 0)
+        self.assertEqual(
+            Fraction(dot * dot, left_norm_squared * right_norm_squared),
+            Fraction(49, 160),
+        )
+        self.assertAlmostEqual(7 * math.sqrt(10) / 40, math.sqrt(Fraction(49, 160)))
 
     def test_q20_locus_chord_area_and_line_inclinations(self):
         for parameter in (-2, 0, 3):
             x, y = parameter**2 + 1, 2 * parameter
             self.assertEqual(y * y, 4 * (x - 1))
         k_squared = Fraction(1, 3)
+        # For k^2 t^2 - 4t - 4 = 0, Δ=16(1+k^2).
+        discriminant = 16 * (1 + k_squared)
+        root_difference_squared = discriminant / (k_squared**2)
+        chord_length_squared = (1 + k_squared) * root_difference_squared
+        self.assertEqual(root_difference_squared, 192)
+        self.assertEqual(chord_length_squared, 256)
+        self.assertEqual(chord_length_squared.denominator, 1)
+        chord_length = math.isqrt(chord_length_squared.numerator)
+        self.assertEqual(chord_length, 16)
+        height_squared = k_squared / (1 + k_squared)
+        self.assertEqual(height_squared, Fraction(1, 4))
+        self.assertEqual(Fraction(1, 2) * chord_length * Fraction(1, 2), 4)
         self.assertEqual(4 * (1 + k_squared) / k_squared, 16)
         self.assertAlmostEqual(math.tan(math.pi / 6) ** 2, float(k_squared))
         self.assertAlmostEqual(math.tan(5 * math.pi / 6) ** 2, float(k_squared))
@@ -154,6 +175,16 @@ class Shanghai1998ScienceSolutionsTests(unittest.TestCase):
             self.assertEqual(2 * a_n, -2 * n - 3)
             self.assertEqual(4 * b_n, -12 * n - 5)
         self.assertEqual(sum(2 * j + 3 for j in range(1, 11)), 10**2 + 4 * 10)
+        for n in range(1, 24):
+            numerator = n**2 + 4 * n
+            denominator = Fraction((2 * n + 3) * (12 * n + 5), 8)
+            ratio = Fraction(numerator, 1) / denominator
+            # Exact division leaves a linear-over-quadratic remainder, hence 1/3.
+            remainder = Fraction(
+                50 * n - 15,
+                3 * (2 * n + 3) * (12 * n + 5),
+            )
+            self.assertEqual(ratio - Fraction(1, 3), remainder)
         c_n = lambda n: 7 - 24 * n
         self.assertEqual((c_n(1), c_n(10)), (-17, -233))
         self.assertTrue(-265 < c_n(10) < -125)
