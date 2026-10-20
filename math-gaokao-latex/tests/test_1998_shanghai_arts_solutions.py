@@ -1,11 +1,17 @@
 """Exact-arithmetic regression checks for the 1998 Shanghai arts solution draft."""
+import json
 import math
+import sys
 import unittest
 from fractions import Fraction
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[4]
+PROJECT = ROOT / "math-gaokao-latex"
+sys.path.insert(0, str(PROJECT / "tools"))
+import issues as issue_ledger
+
 PAPER = ROOT / "math-gaokao-latex/1998_上海卷_文科"
 DRAFT = PAPER / "解析草稿.md"
 ANSWERS = PAPER / "答案要点草稿.md"
@@ -57,6 +63,8 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertIn("不能保证唯一正确选项", draft)
         self.assertIn("a=7", draft)
         self.assertIn("选A", draft)
+        self.assertIn("A、D", answers)
+        self.assertIn("ISSUE-1115", answers)
         self.assertIn("经过第三象限", draft)
         self.assertIn("123.6", draft)
         self.assertIn(r"\theta=\arccos\!\left(\frac{7\sqrt{10}}{40}\right)", draft)
@@ -75,12 +83,35 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertFalse(a_contains(1) or (not b_contains(1)))
         self.assertFalse((not a_contains(7)) or (not b_contains(7)))
         self.assertFalse(a_contains(0) or b_contains(0))
-        # But a=7 is also allowed and its B interval covers complement(A),
-        # so option D becomes true. The item does not determine one answer.
+        # But a=7 is also allowed: B=(-2,12) contains complement(A)=[-1,6],
+        # so both options A and D hold. The item does not determine one answer.
         a = 7
         self.assertGreater(a, 4)  # equivalent to 1 in (5-a, 5+a)
         self.assertLess(5 - a, -1)
         self.assertGreater(5 + a, 6)
+
+    def test_q15_source_issue_is_linked_without_inventing_paper_identity(self):
+        manifest = json.loads(
+            (PROJECT / "source-manifest.json").read_text(encoding="utf-8")
+        )
+        source_id = "src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7"
+        source = next(
+            item for item in manifest["sources"]
+            if item["source_id"] == source_id
+        )
+        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["source_state"], "ready")
+        self.assertEqual(source["issue_ids"], ["ISSUE-1115"])
+
+        issue = next(
+            item for item in issue_ledger.load_issues(PROJECT / "missing-issues.md")
+            if item["issue_id"] == "ISSUE-1115"
+        )
+        self.assertEqual(issue["source_id"], source_id)
+        self.assertIsNone(issue["paper_id"])
+        self.assertEqual(issue["type"], "source-mismatch")
+        self.assertEqual(issue["status"], "open")
+        self.assertEqual(issue["impact"], "blocks_completion")
 
     def test_q19_2_distinguishes_directed_vector_angle_from_line_angle(self):
         left = (0, 2, 6)

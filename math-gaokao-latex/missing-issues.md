@@ -18394,3 +18394,19 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1115
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "复用忽略目录中的第2页和答案表页图；既有进度回执将该缓存关联到此固定来源（SHA-256 c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848），本阶段未重新物化原 PDF 或重算 SHA。题面页（印刷页115）第15题印有 A={x|x^2-5x-6>0}、B={x||x-5|<a}、a 为常数且 1∈B；答案及评分标准页第15题印载 D。由 1∈B 仅得 a>4：取 a=5 时 A–D 四项均不成立；取 a=7 时 A、D 两项同时成立。因此题面条件不能保证所印 D 为唯一正确项。",
+  "fingerprint": "264f5ed68eae8a3e5bbea694ace76bc5e581fd5c06f6943ec53f05fd048aa2ea",
+  "impact": "blocks_completion",
+  "paper_id": null,
+  "resume_action": "取得可回溯的同版勘误或可信异版，核定第15题条件、选项与印载答案之间的矛盾；核定前保留原题与印载答案D，不作猜测性修订。",
+  "source_id": "src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7",
+  "status": "open",
+  "type": "source-mismatch"
+}
+```
