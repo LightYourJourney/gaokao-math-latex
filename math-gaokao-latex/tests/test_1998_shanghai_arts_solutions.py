@@ -1,0 +1,68 @@
+"""Exact-arithmetic regression checks for the 1998 Shanghai arts solution draft."""
+import math
+import unittest
+from fractions import Fraction
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[4]
+PAPER = ROOT / "math-gaokao-latex/1998_上海卷_文科"
+DRAFT = PAPER / "解析草稿.md"
+ANSWERS = PAPER / "答案要点草稿.md"
+QUESTIONS = PAPER / "题面转录草稿.md"
+
+
+class Shanghai1998ArtsSolutionTests(unittest.TestCase):
+    def test_q20_chord_area_forces_the_two_reported_slopes(self):
+        # For y=k(x-2) on y^2=4(x-1), the triangle area is
+        # 2*sqrt(1+k^2)/|k|.  Squaring area=4 gives k^2=1/3.
+        k_squared = Fraction(1, 3)
+        area_squared = 4 * (1 + k_squared) / k_squared
+        self.assertEqual(area_squared, 16)
+        self.assertAlmostEqual(math.tan(math.pi / 6) ** 2, float(k_squared))
+        self.assertAlmostEqual(math.tan(5 * math.pi / 6) ** 2, float(k_squared))
+
+    def test_q21_cubic_satisfies_measurements_extrema_and_average(self):
+        temperature = lambda t: t**3 - 3 * t + 60
+        derivative = lambda t: 3 * t**2 - 3
+        self.assertEqual((temperature(-4), temperature(0), temperature(1)), (8, 60, 58))
+        self.assertEqual(derivative(-4), derivative(4))
+        candidates = [temperature(t) for t in (-2, -1, 1, 2)]
+        self.assertEqual(max(candidates), 62)
+        self.assertEqual((temperature(-1), temperature(2)), (62, 62))
+        # Exact antiderivative evaluation on [-4,4].
+        integral = Fraction(4**4 - (-4) ** 4, 4) - (4**2 - (-4) ** 2) + 60 * (4 - (-4))
+        average = Fraction(1, 8) * integral
+        self.assertEqual(average, 60)
+
+    def test_q22_sequence_identities_and_limits_are_consistent(self):
+        for n in range(1, 12):
+            a_n = Fraction(-(2 * n + 3), 2)
+            b_n = Fraction(-(12 * n + 5), 4)
+            sum_a = sum((Fraction(-(2 * j + 3), 2) for j in range(1, n + 1)), Fraction())
+            sum_b = sum((Fraction(-(12 * j + 5), 4) for j in range(1, n + 1)), Fraction())
+            self.assertEqual(4 * sum_b - 12 * sum_a, 13 * n)
+            self.assertEqual(2 * a_n, -2 * n - 3)
+            self.assertEqual(4 * b_n, -12 * n - 5)
+            self.assertEqual(sum(2 * j + 3 for j in range(1, n + 1)), n**2 + 4 * n)
+        # Leading coefficients of sum(k_i) and a_n*b_n are 1 and 24/8.
+        numerator_lead = Fraction(1)
+        denominator_lead = Fraction(2 * 12, 8)
+        self.assertEqual(numerator_lead / denominator_lead, Fraction(1, 3))
+
+    def test_drafts_preserve_source_discrepancies_and_unverified_status(self):
+        draft = DRAFT.read_text(encoding="utf-8")
+        answers = ANSWERS.read_text(encoding="utf-8")
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        self.assertIn("来源疑似错误", draft)
+        self.assertIn("123.6", draft)
+        self.assertIn(r"\theta=\arccos\!\left(\frac{7\sqrt{10}}{40}\right)", draft)
+        self.assertIn("原题未另作定义", draft)
+        self.assertIn("y=a(x-a_n)^2+b_n", questions)
+        self.assertIn("不能标作官方答案", answers)
+        self.assertNotIn("canonical", draft)
+        self.assertNotIn("complete", draft)
+
+
+if __name__ == "__main__":
+    unittest.main()
