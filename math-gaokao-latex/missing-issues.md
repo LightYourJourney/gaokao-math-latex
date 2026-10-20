@@ -18411,3 +18411,87 @@
   "type": "source-mismatch"
 }
 ```
+
+## ISSUE-1116
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "3e257c84-5a32-46fb-9ae5-b05ee0ee2f69",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "956fdc7afaebd6a2c2e95c9a8edb997a93dcc101b09ddb96b7a954a11cb67554",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 39,
+  "paper_id": "gk-2017-regular-national-1-arts",
+  "pdf_sha256": "868ca2c5b9c5f58209bad619afbb76c9a3b43dcce3cd0e361b99d431051bd78a",
+  "resume_action": "修正 gk-2017-regular-national-1-arts 的 解析版 第 39 页 pagination_whitespace（本页页首仅排有第23题(1)(2)两条绿色答案框，以下约四分之三页为空白；内容未截断但答案框孤立落在末页，留白显著异常。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1117
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "94c34e71-8564-4ce5-b13d-162fc4cb53ce",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "cdfad2415e9f351ba55131a3d5df30b7aea85bb7b536ab959d3df518bc637e6b",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "pdf_sha256": "83f4e184a9da17ee47e3de735f00051ee1d9250ceed61acea2eff04ca49ddff8",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 简答版 第 6 页 pagination_whitespace（第6页只排第23题两小问，正文集中在页首约五分之一，其余约四分之三为空白；题面未截断。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1118
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "94c34e71-8564-4ce5-b13d-162fc4cb53ce",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "61d574438efba6dab7c7a4d4fb30d868f75bf0ea5ba6c97d99548d155de38fd4",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "pdf_sha256": "477c0a02dd01edd16d0dcc72e11620984650d605558e28314a56ad78fcc65cf4",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 解析版 第 6 页 pagination_whitespace（第6页只排第23题两小问，正文集中在页首约五分之一，其余约四分之三为空白；题面未截断。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```
+
+## ISSUE-1119
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "94c34e71-8564-4ce5-b13d-162fc4cb53ce",
+  "check_code": "pagination_whitespace",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "dd3ef773c160a06be16f7e5d651ceb0145e4b27018c2ef724d292ca8bba33fbb",
+  "impact": "blocks_completion",
+  "origin": "visual-review",
+  "page": 6,
+  "paper_id": "gk-2018-regular-national-1-arts",
+  "pdf_sha256": "db974b0061f4ebaba2b34825cc412b6ad69128c38b44d6b25007705a4c20ef29",
+  "resume_action": "修正 gk-2018-regular-national-1-arts 的 试题版 第 6 页 pagination_whitespace（第6页只排第23题两小问，正文集中在页首约五分之一，其余约四分之三为空白；题面未截断。）后重跑 build --formal 并重新全页审查",
+  "status": "open",
+  "type": "layout-warning"
+}
+```

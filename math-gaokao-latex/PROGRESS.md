@@ -4,6 +4,34 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase0-b01：322 页视觉复核与正式登记完成（2026-10-21）
+
+- 已完成：2018 理科新 attempt 的 76/76 页、608/608 项检查全部通过；代理以 120dpi 全页渲染检查全部页，并对四个候选页以 240dpi 抽查。与其他三卷已验证的 246 页合并后，当前批次共 322 页 / 2,576 项：2,572 pass、4 fail、0 pending。四卷 attempt、PDF SHA、页数和实际 PDF 字节均交叉核对一致。官方 finalizer 已写入四卷 review receipts、视觉问题账本和诊断报告：理科两卷 `passed`，文科两卷 `failed`；批次与构建状态保持 `compiled_pending_review`。
+- 失败项仅为既有分页留白：2017 文科解析版第39页 1 项；2018 文科试题版、简答版、解析版第6页各1项。2017/2018 理科均无失败。未改这些卷的题面、答案、版式或 PDF。
+- 修改/验证：只读校验确认所有页面恰有八项且批注非空、warning 与豁免完整；其余三卷工作项与原记录逐字节一致。`review_receipts.py finalize-batch` 返回 `VISUAL_FAILED`、4 个失败页，写入 `reports/phase0-b01.md`；再次 `check-batch` 同样返回 `VISUAL_FAILED`（预期），`build_projects validate-receipts` 与 `provenance check-batch` 均为 4 卷 OK，`test_review_receipts.py` 66/66 通过，`git diff --check` 通过。新复核产物与工作项均位于忽略目录 `.work/phase0-b01-refresh/`。未重新 OCR；无外部 API 调用；Token 与实际费用不可见，记未知。
+- 剩余/下一步：批次未通过视觉验收，四个分页留白问题保持 open，不能登记为 `closed` / `closed_with_blockers`。本阶段到此停止，不扩大为版式修复；下一阶段需另行确认是否修复这四处分页。
+
+### phase0-b01：新 attempt 视觉复核工作项准备（2026-10-21）
+
+- 已完成：在独立忽略目录 `.work/phase0-b01-refresh/phase0-b01/` 准备 16 个当前 attempt 工作项。2017 文理科及 2018 文科的 12 项（246 页）从原工作项逐字节复用；2018 理科四版本（76 页）为新 attempt 新建 pending 项，覆盖 608 个检查。四卷工作项均与各自 build attempt、PDF SHA 和页数绑定。
+- 验证：`build_projects.py validate-receipts --batch phase0-b01` 返回 `OK`（4 卷）；`provenance.py check-batch --batch phase0-b01` 为 4 卷 `OK`；四卷 `default_artifacts_state` 均为 `current`。2018 理科 `generate_projects.py --check` 通过，`test_review_receipts.py` 66/66 通过；生成源差异已验证只涉及中文引号规范化。
+- 修改文件：跟踪文件为本进度、2018 理科派生 `answers.tex`、该卷 build receipt 与 `source-manifest.json`；运行态仅写入 `.work/phase0-b01-refresh/`。未改规范题面/答案草稿，未重复 OCR/构建其他三卷，也未触碰 Main。
+- 后续状态：新 attempt 的 76 页复核已完成，结果见紧接的“322 页视觉复核完成”回执；下一步只需正式批次登记。
+
+### phase0-b01：修复 2018 全国Ⅰ卷理科派生物并重编（2026-10-21）
+
+- 已完成：官方 `generate_projects.py --paper gk-2018-regular-national-1-science --write` 只使该卷 `answers.tex` 出现内容差异；`--check` 随后通过。正式重编 attempt 为 `4494bbf5-ea18-46d3-8571-375a67f955a9`，四版本仍为 5/36/7/28 页，共 76 页；编译错误、缺字、Overfull 与未定义引用均为 0。现场派生物状态恢复为 `current`。
+- 修改文件：派生 `2018_全国Ⅰ卷_理科/answers.tex`（将转换器规范化的中文引号输出写回）；构建事务更新该卷 build receipt/状态和四版 PDF。未改规范题面、答案/解析草稿、来源清单或数学内容；无 OCR、LLM/API 调用。
+- 验证：生成器 `--check` 通过；正式 build 返回 `COMPILED_PENDING_REVIEW`；现场 `default_artifacts_state` 为 `current`。PDF 页数、SHA 与新 attempt 绑定已在后续工作项准备阶段复核。Token 与费用不可见，记未知。
+- 后续状态：旧的 76 页视觉工作项已按 attempt 失效；新目录已复核并正式登记，完整结果见本条目之上的“322 页视觉复核与正式登记完成”回执。
+
+### phase0-b01：finalizer stale artifact 根因定位（2026-10-21）
+
+- 已完成：四卷 16 个视觉工作项覆盖 322 页 / 2,576 项检查，逐项结果为 2,572 pass、4 fail、0 pending；当前 build attempt、PDF SHA-256 与磁盘 PDF 字节一致。官方 `review_receipts.py finalize-batch` 安全返回 `INVALID_OR_STALE`，未提交事务。
+- 根因：现场重算生成物时，仅 `2018_全国Ⅰ卷_理科/answers.tex` 与当前生成器输出不一致（实际 53,236 字节、期望 53,084 字节）；差异是中文弯引号在当前转换器输出中变成直引号。该文件本身与 Git 版本一致。其余 7 个目标生成物及另外三卷的全部生成物均为 current。故当前 review 虽绑定现有 PDF，但不能通过 artifact 门禁；不能跳过此门禁登记批次。
+- 修改/验证：本条仅更新本 `PROGRESS.md`；尚未改 2018 理科任何题面、答案、LaTeX、PDF 或正式回执。`test_review_receipts.py` 66/66 通过；只读检查确认 stale target 唯一为上述 `answers.tex`。Token 与费用不可见，记未知；未调用 OCR、LLM 或外部 API。
+- 后续状态：派生物刷新、重编、新 attempt 视觉复核及正式批次登记均已完成；最终状态为 `VISUAL_FAILED`，四个分页问题仍 open，详见本进度最上方的批次回执。
+
 ### 1986 广东文史 phase2-b58：当前复核状态与缺失图源检索（2026-10-21）
 
 - 已完成：在 `feat/gaokao-phase0` 隔离工作树核对当前 receipt：正式 attempt `adabd0f9-5ce7-4764-9373-6583a64ea098` 的试题/解析/简答/印刷版为 7/28/8/22 页，共 **65 页**；构建回执无编译错误、缺字、Overfull 或未解析引用。当前视觉报告也绑定此 attempt，但有 **12 项失败检查**（四版分别 2/4/2/4），均指向固定扫描源缺失第 1(25) 题 A—E 选项图及第 2(2) 题缺字方框。官方 `review_receipts.py check-batch` 返回 `VISUAL_FAILED`；不得将该诊断登记为 `closed` 或 `closed_with_blockers`。

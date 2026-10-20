@@ -10,7 +10,7 @@
         "gk-2018-regular-national-1-science",
         "gk-2018-regular-national-1-arts"
       ],
-      "status": "provenance_verified"
+      "status": "compiled_pending_review"
     },
     {
       "batch_id": "phase0-b02",
@@ -1399,7 +1399,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "121f9127-755b-4e8b-b490-4a142cda409f",
+  "last_transaction_id": "7c5553ee-fdaf-4735-9c00-6189054225c4",
   "papers": [
     {
       "blocked_from": null,
@@ -1468,7 +1468,7 @@
       "year": 2017
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -1511,7 +1511,8 @@
         "ISSUE-0089",
         "ISSUE-0090",
         "ISSUE-0091",
-        "ISSUE-0092"
+        "ISSUE-0092",
+        "ISSUE-1116"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -1519,10 +1520,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-national-1-arts",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2017_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "修正 gk-2017-regular-national-1-arts 的 解析版 第 39 页 pagination_whitespace（本页页首仅排有第23题(1)(2)两条绿色答案框，以下约四分之三页为空白；内容未截断但答案框孤立落在末页，留白显著异常。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2017/2017_数学真题_文_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_文_含解析.md",
@@ -1574,7 +1575,7 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2018-regular-national-1-science",
-      "production_state": "answers_verified",
+      "production_state": "compiled",
       "project_dir": "2018_全国Ⅰ卷_理科",
       "question_count": 23,
       "resume_action": null,
@@ -1592,7 +1593,7 @@
       "year": 2018
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -1618,7 +1619,10 @@
         "ISSUE-0097",
         "ISSUE-0098",
         "ISSUE-0099",
-        "ISSUE-0100"
+        "ISSUE-0100",
+        "ISSUE-1117",
+        "ISSUE-1118",
+        "ISSUE-1119"
       ],
       "last_verified_hash": null,
       "legacy_ids": [
@@ -1626,10 +1630,10 @@
       ],
       "legacy_source_files": [],
       "paper_id": "gk-2018-regular-national-1-arts",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2018_全国Ⅰ卷_文科",
       "question_count": 23,
-      "resume_action": null,
+      "resume_action": "修正 gk-2018-regular-national-1-arts 的 简答版 第 6 页 pagination_whitespace（第6页只排第23题两小问，正文集中在页首约五分之一，其余约四分之三为空白；题面未截断。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2018/2018_数学真题_文_答案要点.md",
         "combined_rendered": "2018/2018_数学真题_文_含解析.md",
@@ -20343,7 +20347,7 @@
       "year": 1990
     }
   ],
-  "revision": 4511,
+  "revision": 4514,
   "schema_version": 1,
   "sources": [
     {
