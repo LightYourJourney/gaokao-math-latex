@@ -122,6 +122,9 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         cosine = dot / norm_product
         self.assertLess(cosine, 0)
         self.assertAlmostEqual(abs(cosine), 7 * math.sqrt(10) / 40)
+        line_angle = math.acos(abs(cosine))
+        self.assertLess(line_angle, math.pi / 2)
+        self.assertAlmostEqual(math.degrees(line_angle), 56.4, delta=0.1)
 
     def test_q6_activity_network_critical_path_is_eleven_days(self):
         edges = (
