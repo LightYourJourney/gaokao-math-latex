@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅱ理科试题版当前构建视觉校样（2026-10-21）
+
+- 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未查看或修改 Main 工作区；既有 `docs/design/` 用户改动未触碰。
+- 已完成：对全国Ⅱ理科当前 build attempt `a60fb37e-191d-4921-bacb-2cca8f148ce5` 的试题版6页逐页复看；路线图、三视图、流程图、统计图/几何图及标签均清晰，题号、公式、选项、分页、页眉页脚正常，未见裁切或重叠。第3、4页无独立图形，`figure_label` 记 not_applicable；本版46 pass、2 not_applicable、0 fail、0 pending。
+- 修改/证据：仅忽略目录 `.work/phase2-b05/review/试题版/gk-2016-regular-national-2-science.json` 与本进度文件；页图在 `.work/phase2-b05/qa-renders/gk-2016-regular-national-2-science/current-a60fb37e-180dpi/试题版/`。未改题目/答案源、PDF、build receipt、manifest或其他试卷。
+- 验证：工作项八项检查及6页覆盖校验通过，当前PDF SHA-256 `97d05129cbf40c3fb824fbde1996c2ec22acfd3ac2920fe54a4cb206c4be6ec7` 与工作项匹配；当前PNG覆盖6/6；`validate-receipts --manifest math-gaokao-latex/source-manifest.json --paper gk-2016-regular-national-2-science` 为 `OK：1 卷`。phase2-b05累计视觉覆盖169/219页、1299 pass、53 not_applicable、0 fail；剩余50页，正式批次仍未finalize。
+- 成本：仅本地Poppler渲染及目视/回执检查；无OCR、聊天模型或外部API调用。Token、缓存Token及实际费用不可见，记未知。
+- 下一步：复核全国Ⅱ理科当前attempt简答版8页，再检查印刷版19页及解析版23页；四卷总页数219完成前不运行批次finalizer。
+
 ### phase2-b05：2016 全国Ⅰ理科当前构建视觉工作项切换（2026-10-21）
 
 - 已完成：全国Ⅰ理科四版本（试题/解析/简答/印刷）共56页的当前构建视觉工作项完成归位。活动目录四项现均绑定 build attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595`；原绑定旧attempt `d8880f6d-2750-49fe-b810-92383110c12f` 的四项逐文件原样备份，未删除。
