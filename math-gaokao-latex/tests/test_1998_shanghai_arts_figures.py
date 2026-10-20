@@ -1,5 +1,6 @@
 """1998 上海文科原卷插图必须是可追溯、可编译的矢量图。"""
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -14,7 +15,7 @@ QUESTIONS = PAPER / "题面转录草稿.md"
 FIGURES = {
     "q06": ("f1998_shanghai_arts_q06_flowchart.tex", "第6题工序流程图"),
     "q19": ("f1998_shanghai_arts_q19_prism.tex", "第19题直四棱柱图"),
-    "q20": ("f1998_shanghai_arts_q20_parabola.tex", "第20题抛物线与直线图"),
+    "q20": ("f1998_shanghai_arts_q20_parabola.tex", "第20题解题辅助图"),
 }
 
 
@@ -44,6 +45,24 @@ class Shanghai1998ArtsFigureTests(unittest.TestCase):
                     self.assertIn(label, source)
                 self.assertNotIn(r"\includegraphics", source)
                 self.assertIn("不按比例", source)
+
+    def test_q19_coordinate_axes_are_collinear_with_the_stated_positive_rays(self):
+        source = (PAPER / "figures" / FIGURES["q19"][0]).read_text(encoding="utf-8")
+        coordinates = {
+            name: (float(x), float(y))
+            for name, x, y in re.findall(
+                r"\\coordinate \((\w+)\)\s+at \(([-\d.]+),([-\d.]+)\);", source
+            )
+        }
+        for endpoint, target in (("xAxisEnd", "A"), ("yAxisEnd", "B"), ("zAxisEnd", "O1")):
+            with self.subTest(axis=endpoint):
+                self.assertIn(f"(O) -- ({endpoint})", source)
+                direction = tuple(coordinates[target][i] - coordinates["O"][i] for i in (0, 1))
+                axis = tuple(coordinates[endpoint][i] - coordinates["O"][i] for i in (0, 1))
+                cross = direction[0] * axis[1] - direction[1] * axis[0]
+                dot = direction[0] * axis[0] + direction[1] * axis[1]
+                self.assertAlmostEqual(cross, 0.0, places=6)
+                self.assertGreater(dot, 0.0)
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and pdftoppm are required")
     def test_all_three_figures_compile_and_render_as_nonempty_pages(self):

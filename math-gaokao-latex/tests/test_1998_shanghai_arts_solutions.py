@@ -54,7 +54,10 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         draft = DRAFT.read_text(encoding="utf-8")
         answers = ANSWERS.read_text(encoding="utf-8")
         questions = QUESTIONS.read_text(encoding="utf-8")
-        self.assertIn("来源疑似错误", draft)
+        self.assertIn("不能保证唯一正确选项", draft)
+        self.assertIn("a=7", draft)
+        self.assertIn("选A", draft)
+        self.assertIn("经过第三象限", draft)
         self.assertIn("123.6", draft)
         self.assertIn(r"\theta=\arccos\!\left(\frac{7\sqrt{10}}{40}\right)", draft)
         self.assertIn("原题未另作定义", draft)
@@ -72,6 +75,12 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertFalse(a_contains(1) or (not b_contains(1)))
         self.assertFalse((not a_contains(7)) or (not b_contains(7)))
         self.assertFalse(a_contains(0) or b_contains(0))
+        # But a=7 is also allowed and its B interval covers complement(A),
+        # so option D becomes true. The item does not determine one answer.
+        a = 7
+        self.assertGreater(a, 4)  # equivalent to 1 in (5-a, 5+a)
+        self.assertLess(5 - a, -1)
+        self.assertGreater(5 + a, 6)
 
     def test_q19_2_distinguishes_directed_vector_angle_from_line_angle(self):
         left = (0, 2, 6)

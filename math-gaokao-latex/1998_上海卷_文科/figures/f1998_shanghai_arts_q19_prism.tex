@@ -32,8 +32,11 @@
   \node[below] at (O) {$O$};
   \node[above] at (O1) {$O_1$};
   \node[below left] at (E) {$E$};
-  % 坐标轴方向与题面指定一致，仅表示方向。
-  \draw[->] (O) -- ++(-1.55,-0.42) node[left] {$x$};
-  \draw[->] (O) -- ++(1.42,-0.38) node[right] {$y$};
-  \draw[->] (O) -- ++(0,1.2) node[above] {$z$};
+  % 三根正半轴分别严格沿题设的 OA、OB、OO_1 延长，仅表示方向。
+  \coordinate (xAxisEnd) at (-0.84,-0.416);
+  \coordinate (yAxisEnd) at (3.36,-0.416);
+  \coordinate (zAxisEnd) at (1.33,5.31);
+  \draw[->] (O) -- (xAxisEnd) node[left] {$x$};
+  \draw[->] (O) -- (yAxisEnd) node[below right] {$y$};
+  \draw[->] (O) -- (zAxisEnd) node[above] {$z$};
 \end{tikzpicture}
