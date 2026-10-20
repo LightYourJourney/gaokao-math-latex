@@ -370,6 +370,60 @@ class AnswerBoxXeLaTeXRegressionTests(unittest.TestCase):
         self.assertIn("起始标记", extracted)
         self.assertIn("结束标记", extracted)
 
+    def test_2016_national_i_science_q19_answers_fit_without_line_warnings(self):
+        xelatex = shutil.which("xelatex")
+        pdftotext = shutil.which("pdftotext")
+        if not (xelatex and pdftotext):
+            self.skipTest("xelatex/pdftotext 不齐，无法运行 Q19 实际答案版式回归")
+
+        paper = ROOT / "2016_全国Ⅰ卷_理科"
+        detailed = (paper / "answers.tex").read_text(encoding="utf-8")
+        short = (paper / "answers_short.tex").read_text(encoding="utf-8")
+        detailed_answer = next(
+            line for line in detailed.splitlines()
+            if line.startswith(r"\gkanswer{答案（1）：")
+        )
+        short_answer = next(
+            line for line in short.splitlines()
+            if r"\item[\textbf{19.}]" in line
+        )
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "q19-answers.tex"
+            source.write_text(
+                "\\documentclass[zihao=-4,a4paper,fontset=fandol]{ctexart}\n"
+                "\\usepackage[margin=2.2cm]{geometry}\n"
+                "\\usepackage{amsmath,amssymb,mathtools,enumitem}\n"
+                "\\usepackage[most]{tcolorbox}\n"
+                "\\usepackage{hyperref}\n"
+                f"\\input{{{(ROOT / 'common' / 'macros.tex').as_posix()}}}\n"
+                "\\begin{document}\n"
+                f"{detailed_answer}\n"
+                "\\begin{itemize}[leftmargin=2.6em]\n"
+                f"{short_answer}\n"
+                "\\end{itemize}\n"
+                "\\end{document}\n",
+                encoding="utf-8",
+            )
+            completed = subprocess.run(
+                [xelatex, "-interaction=nonstopmode", "-halt-on-error", source.name],
+                cwd=root, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                text=True,
+            )
+            log = (root / "q19-answers.log").read_text(
+                encoding="utf-8", errors="replace"
+            )
+            extracted = subprocess.run(
+                [pdftotext, "-layout", "q19-answers.pdf", "-"], cwd=root, check=True,
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+            ).stdout
+
+        self.assertNotIn("Underfull \\hbox", log, completed.stdout)
+        self.assertNotIn("Overfull \\hbox", log, completed.stdout)
+        for marker in ("0.04", "0.16", "19", "4040", "4080"):
+            self.assertIn(marker, extracted)
+
 
 class ImageQuestionXeLaTeXRegressionTests(unittest.TestCase):
     def compile_question(self, question, fill="9.2cm"):

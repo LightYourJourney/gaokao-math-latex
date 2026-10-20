@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科 Q19 答案框换行修复与局部复核（2026-10-21）
+
+- 已完成：仅在Q19(1)答案文本中加入两处显式换行，不改数字、符号、结论或解析；正式生成器更新解析版和简答版。当前正式构建 attempt `d8880f6d-2750-49fe-b810-92383110c12f` 下复看解析版第19页、简答版第8页，答案框现自然换行，未见裁切/重叠/贴边；解析版第15页复看通过。试题版当前6页与旧校样PNG逐页SHA-256相同，故迁移旧页检查。旧Q19两项版式失败均已消除。
+- 复核工作项：仅刷新全国Ⅰ理科四个忽略目录工作项并绑定当前attempt；既有四项先归档至 `.work/phase2-b05/review-stale-2026-10-21-q19-fix-d8880f6d/`。全批16项绑定检查均通过，已审65/219页（516 pass、4 not_applicable、0 fail），其余154页/1,232项仍pending；未finalize批次，其他三卷工作项未改。
+- 修改文件：`2016/2016_数学真题_全国1理_答案要点.md`、该卷 `answers.tex`、`answers_short.tex`、`provenance.json`、`receipts/build.json`、`source-manifest.json`、`tests/test_generate_projects.py`、本进度文件；复核工作项及旧项归档仅位于忽略目录 `.work/`。没有改题面/数学内容、共享宏或其他卷，没有OCR/模型/API调用。
+- 验证：新增XeLaTeX回归测试及 `test_generate_projects.py` 共116项通过；答案与简答生成器 `--check` 通过；单卷构建回执 `OK`、phase2-b05 provenance `OK`；受影响PDF页数仍为6/24/8/18，编译成功。全库 unittest 1,602项：1,587通过、13跳过、2失败。失败为既有 `test_2018_national1_science_typography...test_answer_source_uses_chinese_quotes_instead_of_ascii_quotes`（规范源稿与该卷生成答案不一致）和 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（另6卷/批次缓存状态漂移）；两者均不涉及本次2016 Q19差异，保持原范围不处理。`git diff --check`通过。
+- 成本与下一步：本地 XeLaTeX、Poppler 与测试；无OCR或外部模型/API调用。Codex Token和实际费用不可见，记未知。继续审查phase2-b05剩余154页；该批视觉回执仍未最终登记，来源与数学正确性也不能由版式修复/编译代替。
+
 ### phase2-b05：2016 全国Ⅰ理科当前构建的视觉工作项核验（2026-10-21）
 
 - 已完成：全国Ⅰ理科四版工作项均绑定当前构建 attempt `6ea36c15-0bbf-4ac4-8b63-128cea1abde9`，并与对应 build receipt 的 PDF SHA、页数一致。试题版6页的旧检查仅在旧/当前180dpi PNG逐页SHA-256完全相同后迁入；另登记解析版第15页通过、解析版第19页失败、简答版第8页失败。失败分别对应Q19(1)答案行距明显拉伸及简答页18.296pt Overfull/贴近正文右缘，均保留为真实版式问题，不豁免。
