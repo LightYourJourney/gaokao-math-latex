@@ -120,6 +120,15 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         top_half_width_squared = (1 + t_squared) ** 2 / (4 * t_squared)
         self.assertEqual(top_half_width_squared, Fraction(9, 8))
         self.assertGreater(top_half_width_squared, 1)
+        tangent_half_area_squared = Fraction(9, 16) * (
+            t_squared + 1 / (4 * t_squared) + 1
+        )
+        tangent_total_area_squared = 4 * tangent_half_area_squared
+        fixed_mouth_half_area = Fraction(3, 4) * (1 + Fraction(1, 2))
+        fixed_mouth_total_area_squared = (2 * fixed_mouth_half_area) ** 2
+        self.assertEqual(tangent_total_area_squared, Fraction(9, 2))
+        self.assertEqual(fixed_mouth_total_area_squared, Fraction(81, 16))
+        self.assertLess(tangent_total_area_squared, fixed_mouth_total_area_squared)
         # If the top opening were constrained to remain 2m, that is a
         # different optimization constraint; record its distinct candidate.
         self.assertEqual(2 * Fraction(1, 2), 1)
@@ -140,11 +149,15 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertEqual(note["issue"], "q21-no-fill-mouth-width-interpretation")
         self.assertEqual(note["source_answer_transcription"], "√2/2 m")
         self.assertEqual(note["fixed_original_mouth_alternative"], "1 m")
+        self.assertEqual(note["tangent_candidate_area"], "3√2/2 m²")
+        self.assertEqual(note["fixed_mouth_candidate_area"], "9/4 m²")
         self.assertEqual(note["status"], "author-adjudicated-pending-independent-review")
 
         solution = SOLUTIONS.read_text(encoding="utf-8")
         self.assertIn("没有要求新沟口仍固定", solution)
         self.assertIn("若另加“沟口宽度固定为2米”", solution)
+        self.assertIn("$3\\sqrt2/2$ 平方米", solution)
+        self.assertIn("$9/4$ 平方米", solution)
 
 
 if __name__ == "__main__":
