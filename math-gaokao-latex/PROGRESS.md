@@ -7359,3 +7359,11 @@
 - 验证：`check-tools` 为 OK；`validate-receipts --batch phase0-b01` 为 OK，4卷均 current、stale/missing/failed 为0、pending review为4；`provenance.py check-batch --batch phase0-b01` 为 OK（4卷）；`test_build_projects.py` 138/138通过。`test_provenance.py` 109项中108项通过，唯一 live-repository 测试仍因全库状态差异失败，问题由388降至383（本批4卷与1个批次状态差异被实际构建消除）。`git diff --check`通过。
 - 成本：重用本地 TeX Live 2026 / latexmk 与现有源码构建；无OCR或外部模型/API。Codex Token和实际费用不可见，记未知。
 - 剩余/下一步：本批16个 PDF 尚待逐页视觉校样及相应 review receipts；全部纸面内容/答案本身的历史来源与数学核验不能由编译替代。全库仍有383项状态差异，剩余 stale 构建应按批次逐步刷新，不能把单批结果外推为全库完成。下一步先对本批 PDF 做视觉检查并登记未通过项，再按已有复核流程更新审查回执；不得用状态重算绕过视觉门禁。
+
+### 2018 全国Ⅰ卷理科 PDF 视觉复核（部分页面）（2026-10-20）
+
+- 已完成：以 `pdftoppm` 120dpi 渲染后实际查看 2018 理科试题版全部5页、简答版全部7页、印刷版第1页（共13页）。所查页面未见文字/公式裁切、元素重叠、明显缺字或图文错配；留白与题目内容相称，页眉页码可见。对本批4卷全部16个当前构建PDF运行 `pdfimages -list`，均未发现栅格图像对象，支持这些输出未嵌入扫描页或位图题图；这一机械检查不代替矢量图语义核验。
+- 修改文件：仅本 `PROGRESS.md`；页面渲染临时文件位于 `/tmp/phase0-b01-2018-science-qa.dl9xZ6/`，检查后已清理；未写 review receipts、issues、manifest 或试卷源文件。
+- 验证：`pdfinfo` 显示本卷试题版5页、简答版7页；每一页均已打开目视检查。印刷版只查第1页；本卷解析版36页未查。其余三卷所有页面仍未查。无正式 review 回执，不提升本卷或批次为 passed。
+- 成本：仅使用本地 Poppler 渲染和人工图像核看；无OCR或模型API。Codex Token/费用不可见，记未知。
+- 剩余/下一步：继续检查2018理科印刷版第2—28页、解析版36页，再检查另外三卷其余版本的全部页面；之后使用正式 `review_receipts` 流程记录逐页结果，并进行来源/内容复核。当前 322 页总范围中仅13页目视核查，不能声称完成视觉校样。
