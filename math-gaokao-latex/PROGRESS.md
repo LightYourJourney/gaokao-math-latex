@@ -7391,3 +7391,12 @@
 - 验证：当前工作项绑定build attempt `563a045d-a7a3-4512-8d81-d57537a1c77d`及四版当前PDF SHA，页数7/44/9/31；检查工作项结构断言通过（4项、91页、728条八项检查均为pass）。本阶段只渲染当前正式PDF并目视校样，无OCR、聊天模型或外部API调用；未重跑编译。
 - 成本：Poppler本地渲染91页；OCR/API/聊天模型调用为0。Codex Token与实际费用不可见，记未知。
 - 剩余/下一步：本卷正式review receipt待`phase0-b01`四卷16项全部完成后批次登记；另需继续核对2018两卷的新当前attempt工作项及逐页视觉结论。整批门禁仍pending；本阶段不据视觉检查宣称题目转录、答案或解析已数学验收。
+
+### phase0-b01：视觉回执收口门禁诊断（2026-10-20）
+
+- 已完成：四卷16个当前attempt工作项均已填入逐页八项检查结论，覆盖322页；本阶段尝试正式批次收口时，事务门禁因`gk-2018-regular-national-1-science`生成物非current而拒绝提交，正式review receipt、manifest、issues和批次报告均未被修改。该卷构建回执本身验证为current；只读`provenance status`显示本批前三卷为`compiled`，该理科卷仍为`answers_verified`。
+- 根因：只读`generate_projects.py --paper gk-2018-regular-national-1-science --check`精确报告该卷`answers.tex`与生成结果不一致；`make_editions.py --check`及`make_short_answers.py --check`均通过。已追到此前已提交的引号版式修正只改了生成的`answers.tex`，规范解析Markdown仍保留ASCII引号，因此生成器无法复现当前答案源文件。没有以手改/放宽校验绕过单一来源约束。
+- 修改文件：本进度文件；忽略目录`.work/phase0-b01/review/`中的16个当前attempt工作项（非正式回执）。正式题目源、生成物、build/review receipts、manifest、issues及批次报告未改。上一轮并行启动两个只读生成器检查曾触发共享Git-dir锁冲突，检查均未写入；之后改为串行复核，`lsof`确认锁无人持有。
+- 验证：`provenance.py check-batch --batch phase0-b01`为`OK`（4卷）；2018理科`build_projects.py validate-receipts`为`OK`；生成物检查中仅`answers.tex`不一致，版本壳与简答输出一致；校样工作项结构为16卷版项、322页、2576条八项检查记录全pass。`finalize-batch-checked`退出码6，错误为该理科生成物状态stale，事务零正式修改。未重跑全量测试或编译。
+- 成本：本阶段均为本地只读/门禁与工作项维护，无OCR、模型或外部API；Token及实际费用不可见，记未知。
+- 剩余/下一步：2018理科规范Markdown与已批准的引号版式需要对齐；已向用户请求批准仅同步该文件的成对引号、重生成`answers.tex`并刷新该卷provenance，若PDF SHA变化再局部重编/复核。未获方向前不改规范题目源、不刷新provenance、不finalize批次；`phase0-b01`继续保持pending。
