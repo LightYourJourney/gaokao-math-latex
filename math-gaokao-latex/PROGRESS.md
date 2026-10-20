@@ -4,6 +4,25 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科试题版当前构建视觉校样（2026-10-21）
+
+- 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未查看或修改 Main 工作区；既有 `docs/design/` 用户改动未触碰。
+- 已完成：对当前 build attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595` 的试题版6页重新目视复核，未发现字形缺损、题号/选项错位、图形标注问题、裁切、重叠或分页异常。无独立图形的第1页 `figure_label` 记 not_applicable；本版47 pass、1 not_applicable、0 fail、0 pending。第7题答案与图稿选项仍不一致、第24题解析图形缺失，作为内容问题待另行核验。
+- 修改/证据：仅忽略目录 `.work/phase2-b05/review-refresh-stage-558edf7a/phase2-b05/review/试题版/gk-2016-regular-national-1-science.json` 与本进度文件。未改题面、答案、图稿、PDF、build receipt、manifest或其他试卷；旧attempt正式工作项尚待归档替换。
+- 验证：四版本当前暂存工作项均绑定attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595`，逐项结构校验通过，PDF SHA-256及PNG覆盖页数一致；本卷56页共424 pass、24 not_applicable、0 fail/pending。phase2-b05累计当前有效/暂存视觉覆盖163/219页、1253 pass、51 not_applicable、0 fail；余56页，正式批次仍未finalize。
+- 成本：本地PNG复看、结构校验和SHA-256核对；无OCR、聊天模型或外部API调用。Token、缓存Token及费用不可见，记未知。
+- 下一步：将全国Ⅰ理科四份当前attempt工作项归档旧版后提升至活动复核目录，并复验批次四卷绑定；随后完成全国Ⅱ理科尚余56页。整批219页未全完成前不生成正式批次回执或运行finalizer。
+
+### phase2-b05：2016 全国Ⅰ理科简答版当前构建视觉校样（2026-10-21）
+
+- 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未查看或修改 Main 工作区；既有 `docs/design/` 用户改动未触碰。
+- 已完成：对当前 build attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595` 的简答版8页逐页完成视觉检查。页面文字、公式、题号、页眉页脚、图表标签与分页均清楚；未发现裁切、重叠、错位或字号异常。无待检查插图标注的页面1、7、8将 `figure_label` 记为 not_applicable；本版合计61 pass、3 not_applicable、0 fail、0 pending。页面6题24答题网格仍空白的问题属于答案内容完整性风险，未在版式阶段修改。
+- 内容事项：第7题选项答案与图稿标注不一致，以及第24题虽要求作图但现有答案未绘图，仍待独立内容/数学核查；视觉通过不等于内容已认证。
+- 修改/证据：仅忽略目录 `.work/phase2-b05/review-refresh-stage-558edf7a/phase2-b05/review/简答版/gk-2016-regular-national-1-science.json` 与本进度文件。未改题面、答案、图稿、正式PDF、build receipt、manifest或其他试卷；旧attempt工作项未覆盖。
+- 验证：项目 `_validate_pages` 对完整8页和八项检查通过；当前PDF SHA-256 `87dbdd49463325074fd41eaa29e4e8ffcfb5d867cbae6e342d16ae9e9cdd964d` 与工作项一致，PNG渲染覆盖8/8；`build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --paper gk-2016-regular-national-1-science` 输出 `OK：1 卷`。本批当前有效/暂存视觉覆盖157/219页、1206 pass、50 not_applicable、0 fail；尚余62页，批次未finalize。
+- 成本：仅本地PNG目视检查及本地结构/回执验证；无OCR、聊天模型或外部API调用。Token、缓存Token及实际费用不可见，记未知。
+- 下一步：先核对已完成的试题版工作项是否确实绑定当前attempt、PDF SHA及6页证据，再完成全国Ⅰ理科试题版后续登记；全国Ⅱ理科仍待审。四卷总计219页全部完成前不覆盖旧attempt活动工作项、不登记批次正式回执、不运行finalizer。
+
 ### phase2-b05：2016 全国Ⅰ理科解析版当前构建视觉校样（2026-10-21）
 
 - 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未查看或修改 Main 工作区，未触碰既有 `docs/design/` 用户改动。
