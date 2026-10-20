@@ -19,8 +19,8 @@
   },
   "transcription": {
     "path": "2002/2002_数学真题_北京文_试题.md",
-    "sha256": "0ef0e703917e301d969584eeb0937633e83ac7539dc001d1957da9a1e8a7673f",
-    "status": "draft-transcribed-pending-independent-review",
+    "sha256": "a6f221ae851f17e658746b02a98f682cd749a7c8e802a4c2fed9f8fb38979bd0",
+    "status": "draft-transcribed-independently-reviewed",
     "question_count": 22,
     "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
     "question_types": {
@@ -34,7 +34,8 @@
     ],
     "extraction_method": "pdftotext -layout used as locating aid; both fixed-source pages visually inspected at 150 dpi; Q15, Q18, and Q20 locally enlarged for high-risk text/table review",
     "ocr_calls": 0,
-    "independent_review": "pending",
+    "independent_review": "passed",
+    "independent_review_scope": "Questions 1-22 text and mathematical notation; figures Q4, Q11, Q12, Q18; Q20 tables, visually compared against source-page renders.",
     "secondary_text_layer_cross_check": {
       "status": "partial-text-layer-review-compared-to-source-raster",
       "independent_reader_visual_access": false,
@@ -52,7 +53,7 @@
           "resolution": "source raster confirms the radical; manuscript retained √a"
         }
       ],
-      "remaining": "independent visual review of all question text and figure topology"
+      "remaining": "publisher/edition authenticity, generated answers and solutions, formal build, and final acceptance"
     },
     "visual_diff_resolutions": [
       {
@@ -71,11 +72,11 @@
   "figures_and_tables": {
     "inventory_path": "2002/2002_数学真题_北京文_图表清单.md",
     "raster_source_committed": false,
-    "vector_reconstruction_status": "draft-pending-independent-review",
+    "vector_reconstruction_status": "draft-independently-reviewed",
     "items": ["q4-cube-options", "q11-sign-graph", "q12-convexity-graphs", "q18-polyhedron", "q20-computation-tables"],
     "vector_assets": [
-      {"item": "q4-cube-options", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q04_cubes.tex", "sha256": "f44a306b4cf05e6d5a99a93634a71886e6274320c3f487eaec06ccf8dc7f2ae0"},
-      {"item": "q11-sign-graph", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q11_sign_graph.tex", "sha256": "4ef3f1db3a60455a7ddf939129aa439f2ac9d75c14c2ef63aa5c3ea5b02fb3f8"},
+      {"item": "q4-cube-options", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q04_cubes.tex", "sha256": "a8b436221ec39383e9822f011b77b6b0894a3c9057be22a6db242ba3abce594f"},
+      {"item": "q11-sign-graph", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q11_sign_graph.tex", "sha256": "6d7952915eeb84408af6e769e9a9310ad3e637655f345caddc9cd70495632795"},
       {"item": "q12-convexity-graphs", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q12_convexity_graphs.tex", "sha256": "35dd676e7e47ff80a851b225677614c0dd204ec3605ee60406d9a1f8de418e9c"},
       {"item": "q18-polyhedron", "path": "math-gaokao-latex/2002_北京卷_文科/figures/2002_beijing_arts_q18_polyhedron.tex", "sha256": "38b7b9f077f44b49e66570d4dc3f079ffb22cc5113652331e0a5c0ca578eb4b0"}
     ]

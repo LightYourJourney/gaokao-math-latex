@@ -69,7 +69,12 @@ class BeijingArts2002TranscriptionTests(unittest.TestCase):
         self.assertLess(self.transcript.index("**16．**"), self.transcript.index("## 三、解答题"))
         self.assertEqual(
             self.review["transcription"]["status"],
-            "draft-transcribed-pending-independent-review",
+            "draft-transcribed-independently-reviewed",
+        )
+        self.assertEqual(self.review["transcription"]["independent_review"], "passed")
+        self.assertEqual(
+            self.review["figures_and_tables"]["vector_reconstruction_status"],
+            "draft-independently-reviewed",
         )
 
     def test_source_high_risk_symbols_and_original_q15_duplicate_are_preserved(self):
@@ -111,9 +116,26 @@ class BeijingArts2002TranscriptionTests(unittest.TestCase):
         q12_source = (ROOT / q12["path"]).read_text(encoding="utf-8")
         self.assertIn("change of concavity", q12_source)
         self.assertNotIn(r"\draw[fill=white] (2", q12_source)
+        q4 = next(a for a in assets if a["item"] == "q4-cube-options")
+        q4_source = (ROOT / q4["path"]).read_text(encoding="utf-8")
+        for segment in (
+            r"\draw[hidden edge] (h)--(b);",
+            r"\draw[cube edge] (c)--(f);",
+            r"\draw[hidden edge] (h)--(a);",
+            r"\draw[cube edge] (d)--(b);",
+            r"\draw[hidden edge] (d)--(e);",
+            r"(g)--(f)--(b)",
+            r"\draw[cube edge] (g)--(f);",
+        ):
+            self.assertIn(segment, q4_source)
+        self.assertEqual(q4_source.count(r"\draw[hidden edge] (h)--(b);"), 2)
+        q11 = next(a for a in assets if a["item"] == "q11-sign-graph")
+        q11_source = (ROOT / q11["path"]).read_text(encoding="utf-8")
+        self.assertIn("(2.72,.08) (2.94,.025)", q11_source)
         self.assertIn("第一单位时间", self.transcript)
         self.assertIn("第三单位时间", self.transcript)
         self.assertIn("机器号", self.transcript)
+        self.assertNotIn("待独立复核", self.figures)
         self.assertFalse(self.review["figures_and_tables"]["raster_source_committed"])
         raster_suffixes = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".tif", ".tiff", ".bmp"}
         tracked_rasters = [p for p in PAPER_ROOT.rglob("*") if p.suffix.lower() in raster_suffixes]
