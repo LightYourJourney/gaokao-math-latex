@@ -1452,6 +1452,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             # 布局改动只允许：纯新增的布局命令、空括号的 \mbox 包装替换、gkopts 列数调整，
             # 以及 difflib 对齐假象里的 question 环境分隔行；任何内容行增删都会在下面的
             # 内容 token 计数里暴露。
+            # question-needspace is rendered as a locally scoped TeX group.
             self.assertTrue(all(any(
                 line == "" or marker in line
                 for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
@@ -1832,7 +1833,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             self.assertTrue(all(any(
                 marker in line
                 for marker in (r"\nopagebreak", r"\Needspace", r"\par\medskip", r"\mbox{（　　）}", r"\begin{gkopts}",
-                               r"\begin{question}", r"\end{question}")
+                               r"\begin{question}", r"\end{question}",
+                               r"\begingroup", r"\endgroup")
             ) or line == "" for line in added))
             self.assertTrue(all(
                 line == "" or r"\par\medskip" in line or r"（　　）" in line or r"\begin{gkopts}" in line
