@@ -42,7 +42,7 @@ class Shanghai1998ScienceTranscriptionTests(unittest.TestCase):
             r"-265<c_{10}<-125",
         ):
             self.assertIn(anchor, text)
-        self.assertIn("原卷示意图见固定来源 PDF 第2页（印刷页109）", text)
+        self.assertIn("](figures/1998_shanghai_science_q19_prism.tex)", text)
         self.assertIn("4B_n-12A_n=13n\n\\]。", text)
         self.assertNotIn("4B_n-12A_n=13n。", text)
         self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")
