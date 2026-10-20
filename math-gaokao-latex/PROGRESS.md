@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科四版视觉复核与Q9分页修复（2026-10-21）
+
+- 已完成：当前构建 attempt `558edf7a-c315-4d4b-b97c-05fa1af1d595` 四版页数为试题版6、解析版24、简答版8、印刷版18。解析版第11页的第9题“解析”标题孤行已修复：规范解析源稿在标题前增加 `\Needspace{10\baselineskip}`，题面、公式、答案和推导内容不变。更新后复查解析版第11、12页，标题与正文同页；解析版第15、19页当前渲染无裁切/遮叠。解析版其他已有页中，1–10、13–14、16–18、20–24页与修复前150dpi PNG逐页字节相同，沿用既有目视结论。简答版1–7页与既有PNG逐页字节相同，第8页当前渲染复看通过；印刷版18页与既有PNG逐页字节相同；试题版6页在当前构建下逐页目视通过。四版共56页，未发现其他视觉失败。
+- 修改文件：`2016/2016_数学真题_全国1理_解析正文.md`、`2016_全国Ⅰ卷_理科/answers.tex`、该卷 `receipts/build.json`、`source-manifest.json`、`tests/test_pagination_regressions.py` 与本进度。正式 XeLaTeX 构建重编四版并刷新 build 回执；未改题面、答案结论、共享模板或其他试卷。
+- 验证：新增PDF分页回归断言先按预期失败，再于正式重编后通过；生成器 `--check` 通过；单卷 `validate-receipts` 为 `OK`，`provenance check-batch --batch phase2-b05` 为4卷 `OK`。四版编译成功，日志错误/缺字/未定义引用/Overfull 均为0。全库 unittest 1603项：1588通过、13跳过、2失败；旧失败仍为 `test_2018_national1_science_typography...test_answer_source_uses_chinese_quotes_instead_of_ascii_quotes` 与 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（6项2015/2017全库缓存状态漂移），不涉及本次改动。`git diff --check` 通过。
+- 当前进度：按此前已记录的83页和本阶段新增解析版22页、简答版7页，phase2-b05人工目视检查累计112/219页；八项检查累计873 pass、23 not_applicable、0 fail，剩余107页/856项待查。注意：当前 `.work/phase2-b05/review/` 工作项目录未保留（只读检查仅见 `.work/phase2-b05/source-audit.json`），故本次没有改写或伪造机器工作项/正式review receipt；上述历史83页计数仍来自既有进度记录，批次正式视觉回执继续pending。finalize前须按PROGRESS与可用页图证据恢复当前attempt工作项，并再次验证绑定和完整页覆盖。
+- 成本与下一步：本地 Poppler 渲染和像素比较56页；无OCR、模型调用或外部API，Token/费用不可见，记未知。下一步先恢复phase2-b05忽略目录工作项的既有完成记录，再继续全国Ⅱ文、理两卷的107页视觉检查；不重复题面转录或OCR。
+
 ### phase2-b05：2016 全国Ⅰ理科印刷版18页视觉校样（2026-10-21）
 
 - 已完成：对当前 attempt `d8880f6d-2750-49fe-b810-92383110c12f` 的印刷版18页逐页查看渲染图并完成八项视觉检查。未发现缺字/乱码、题号错序、公式/选项错位、图形标注裁切、页眉页脚异常、内容重叠/截断或字号不可读。第5、9–11、14–15、17页无图形，`figure_label` 记 not_applicable，其余检查通过；其余11页八项均通过。视觉检查不证明转录来源或数学结论正确。

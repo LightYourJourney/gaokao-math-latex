@@ -24,6 +24,17 @@ def pdf_pages_text(path: Path):
 
 
 class PublishedPaginationRegressionTests(unittest.TestCase):
+    def test_2016_national_i_science_q9_solution_heading_is_not_orphaned(self):
+        pdf = ROOT / "2016_全国Ⅰ卷_理科" / "build" / "解析版.pdf"
+        pages = pdf_pages_text(pdf)
+        question_page = next(page for page in pages if "第9题" in page)
+        self.assertTrue(any("流程图先执行" in page for page in pages))
+        lines = question_page.splitlines()
+        options_index = next(i for i, line in enumerate(lines) if "(D) y = 5x" in line)
+        after_options = lines[options_index + 1 :]
+        if any(line.strip() == "解析" for line in after_options):
+            self.assertIn("流程图先执行", "\n".join(after_options))
+
     def test_2017_arts_q23_solution_and_answer_boxes_share_a_page(self):
         pdf = ROOT / "2017_全国Ⅰ卷_文科" / "build" / "解析版.pdf"
         pages = pdf_pages_text(pdf)
