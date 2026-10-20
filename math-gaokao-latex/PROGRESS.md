@@ -4,6 +4,25 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东文史 phase2-b58：当前复核状态与缺失图源检索（2026-10-21）
+
+- 已完成：在 `feat/gaokao-phase0` 隔离工作树核对当前 receipt：正式 attempt `adabd0f9-5ce7-4764-9373-6583a64ea098` 的试题/解析/简答/印刷版为 7/28/8/22 页，共 **65 页**；构建回执无编译错误、缺字、Overfull 或未解析引用。当前视觉报告也绑定此 attempt，但有 **12 项失败检查**（四版分别 2/4/2/4），均指向固定扫描源缺失第 1(25) 题 A—E 选项图及第 2(2) 题缺字方框。官方 `review_receipts.py check-batch` 返回 `VISUAL_FAILED`；不得将该诊断登记为 `closed` 或 `closed_with_blockers`。
+- 缺图来源核查：公开资料定向检索未找到可证明同版的 A—E 图形。可见的同函数题页面是未标识为 1986 广东原卷的四选项练习题；另见的 1986 文科资料属于全国四选项卷，均不能复原本卷五选项图。此结果仅表示本轮未发现合格来源，不证明其他来源不存在；继续保留 `ISSUE-0777`/`ISSUE-0793`，不按数学推导补画原题图。相邻理科 b59 也已核对：attempt `15b083ec-f7ac-40de-9e81-4be25fb2fdc2` 覆盖 61 页，4 项失败均为第 1(25) 题同源缺图（ISSUE-0778/0797），官方检查同样返回 `VISUAL_FAILED`。
+- 本阶段修改文件：仅本 `PROGRESS.md`。未改题面、答案、解析、问题账本、manifest、构建或复核回执；未从 Main 工作树读取、复制或修改文件。
+- 验证：b58 当前 build receipt 汇总为 65 页且四版编译 finding 均为 0；review receipt 汇总为 12 项 fail、无 pending；b59 当前 receipt 为 61 页、4 项 fail、无 pending。两卷的 `review_receipts.py check-batch` 均返回 `VISUAL_FAILED`。未重新 OCR、构建或复核旧页，也未运行写状态的 finalizer。
+- 成本与范围：公开检索使用 6 个定向查询；未调用 OCR、LLM 或付费 API。Codex Token 与实际费用不可见，记未知。先前旧 attempt 的 64 页记录仍是历史证据，不适用于当前 attempt。
+- 剩余/下一步：b58、b59 均因同版源图缺失保持 `VISUAL_FAILED`；不重复 OCR/转录或全页视觉劳动。按年份顺序，下一项未关闭批次为 `phase0-b01`（2017—2018 全国Ⅰ卷文理科），先核对其现有 provenance/build/review 绑定，再只推进失效阶段。
+
+### phase0-b01：2017—2018 全国Ⅰ卷四卷当前版本视觉复核准备（2026-10-21）
+
+- 已完成：在 `feat/gaokao-phase0` 隔离工作树核对四卷。`source_manifest.py validate` 通过；`provenance.py check-batch` 为 4 卷 `OK`；`build_projects.py validate-receipts` 为 `OK`，无 failed/invalid/missing，四卷均有当前正式 build receipt，状态待视觉复核。题面转录、来源/答案核验与当前构建不重做。
+- 复核失效原因：旧 review receipt 分别绑定旧 attempt（2017 文 `e999c540`、2017 理 `33878c27`、2018 文 `a1b4b532`、2018 理 `1bbfd850`）；与当前 attempt 不同，且当前四卷四版本的 PDF 哈希全部变化。当前 PDF 共 **322 页**，旧视觉通过不能作为新 PDF 的验收证据。原 `.work/phase0-b01/review/` 内 16 个工作项虽标 `pass`，但全部 2,576 条通过批注为空，不能采信；已原样可逆移存至 `.work/phase0-b01/review-pre-refresh-2026-10-21/`，未删除。
+- 本阶段工作项：官方 `prepare-batch --manifest source-manifest.json --batch phase0-b01` 为当前四卷生成 16 个新工作项，均绑定当前 build attempts/PDF，覆盖 322 页 × 8 项，即 **2,576 项待核**。这些 JSON 与 PNG 渲染目录均在忽略的 `.work/`，不纳入版本控制。
+- 修改文件：追踪文件仅本 `PROGRESS.md`；忽略运行态仅归档旧工作项并生成新复核骨架。未修改题面、答案、解析、manifest、正式 build/review receipt 或 PDF；未触碰 Main 工作树。
+- 验证：manifest 校验通过；provenance 四卷通过；build receipt 校验无缺失/失效/失败；旧 `review_receipts.py check-batch` 为 `INVALID_OR_STALE`（预期，因 attempt、输入/工具链指纹及 PDF 哈希变化）；新骨架汇总为 16 项、322 页、2,576 pending；`git diff --check -- PROGRESS.md` 通过。未 OCR、未重编、未调用 LLM/API。
+- 成本与剩余：Token 与实际费用不可见，记未知。已将 2017 文科当前四版 PDF 渲染为 83 张 PNG 和 22 张联系表，路径为 `.work/phase0-b01/render-current/gk-2017-regular-national-1-arts/`；已目视查看试题版 6 页联系表及 6 张整页 PNG，未填写正式检查项，故正式视觉复核仍为 0/322 页。曾尝试把四卷拆给并行代理，但平台两次提示 agent thread limit reached，未产生代理结果；不据此声称已复核。
+- 下一步：从已生成的 2017 文科渲染缓存续做，逐页完成四卷 322 页视觉复核并给每项填写非空、可追溯的页级批注；有问题则保留失败并定位页码，不自行猜补原题。通过当前绑定检查后才运行批次事务登记。分卷转录和重新构建不在此步骤范围内。
+
 ### phase2-b09：1985 广东文理卷 Q1 图注/Q35 分页修复、正式校样与中间产物清理（2026-10-21）
 
 - 已完成：理科 Q1 五幅函数图之间扩大间距，并调整 D 图 `(1,0)` 标注锚点；修复生成器物化后的 Q35 分页，使 Q34 与附加题 Q35 同处正式试题版第 4 页。保留原题数字、条件及 `blocked` 生产状态。
