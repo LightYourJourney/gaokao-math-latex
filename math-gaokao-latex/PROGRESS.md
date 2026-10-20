@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科 Q16 长行修复与正式重编（2026-10-21）
+
+- 已完成：仅在完整句界拆分 Q16 解析段落，公式、数字、推理和结论不变；官方生成器更新 `answers.tex`。正式 XeLaTeX attempt `6ea36c15-0bbf-4ac4-8b63-128cea1abde9` 四版均成功，页数为 6/24/8/18；编译错误、缺字、未定义引用为 0，Q16 原 48.106pt Overfull 已消失。
+- 未解决：Q19(1) 的解析版仍有 Underfull（日志 502 行），简答版仍有 18.296pt Overfull（日志 30–31 行）。300dpi 页面可读且未见裁切，但答案行间距明显拉伸/靠近正文右缘，问题保持 open，不作豁免。局部 `\allowbreak` 试验未改变 PDF 像素，已撤回；最终规范答案哈希恢复原值，未改共享宏。
+- provenance 与复核状态：三角色 `import-batch` 先 dry-run 通过，再正式提交；phase2-b05 四卷共 96 条 provenance 记录补入当前规范的 `printed_label`/`question_order` 字段，逐题题面/答案哈希均未改变。四份理科视觉工作项仍绑定旧 attempt `b1124c45-eb0d-49c6-b375-adb745f29c49`，副本已保存在 `.work/phase2-b05/review-stale-2026-10-21-before-current-science-build-6ea36c15/`，正式视觉计数暂不含这些旧项。旧试题版 6 页与当前 PDF 的 180dpi PNG SHA-256 逐页完全一致，可在刷新工作项时据此迁移已完成检查；Q16 第15页、Q19 解析第19页与简答第8页已目视，尚未写入新工作项。
+- 修改文件：`2016/2016_数学真题_全国1理_解析正文.md`、全国Ⅰ理科 `answers.tex` 与 `receipts/build.json`、phase2-b05 四卷 `provenance.json`、`source-manifest.json` 与本进度文件。答案要点和 `answers_short.tex` 最终无差异；没有 OCR、模型或外部 API 调用。
+- 验证：解析生成器与简答生成器 `--check` 均通过；`validate-receipts --batch phase2-b05` 与 `provenance.py check-batch` 均为 4 卷 OK。定向测试：`test_generate_projects` 115/115、`test_solution_sources` 112/112、`test_build_projects` 140/140 通过。`test_provenance` 共110项中1项失败，因 2015/2017 其他批次的6个缓存状态与派生状态不符；本次 `source-manifest.json` 的差异仅为 revision/transaction 元数据，没有改这些状态。`git diff --check` 通过。曾并行启动两个互斥写生成器导致一个被 RepoLock 拒绝；检查确认无锁持有者后改为顺序运行，最终生成检查通过。
+- 成本与剩余：本阶段共触发3次单卷正式构建（约16秒，含一轮无效断行试验后回退）；无 OCR/LLM/API，Codex Token 与费用不可见，记未知。当前绑定有效的视觉检查仍为 56/219 页；此前 6 页试题版检查仅经像素复核、待换绑后再计入，余163页待审。下一步只刷新全国Ⅰ理科四份工作项并保留同批其他三卷原工作项，转移已验证的6页检查，登记本次3页目视结果；随后继续整批视觉校样并单独解决 Q19 版式告警。批次 finalizer 暂不运行。
+
 ### phase2-b05：2016 全国Ⅰ/Ⅱ文理四卷正式重编与复核工作项刷新（2026-10-21）
 
 - 已完成：四卷原 build receipt 均因工具链指纹变化失效；执行 `python3 -B tools/build_projects.py build --formal --batch phase2-b05` 后，四卷四版本全部重编成功（`COMPILED_PENDING_REVIEW：4 待审、0 失败`）。原来已 complete 的 2016 全国Ⅱ文科现按正式状态迁移为 `compiled`，批次为 `compiled_pending_review`；其余三卷原有内容/来源 blockers 继续保留，不因重编放行为完成。
