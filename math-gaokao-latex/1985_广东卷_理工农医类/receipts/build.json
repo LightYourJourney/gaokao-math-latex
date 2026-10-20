@@ -1,5 +1,5 @@
 {
-  "attempt_id": "d9505587-1cb6-46be-bfb6-1d87f89e7627",
+  "attempt_id": "68a45045-dce8-4159-8b2c-3ac80f9fd37e",
   "dependency_tree": {
     "files": [
       {
@@ -71,8 +71,8 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/1985_广东卷_理工农医类/build/试题版.pdf",
-        "sha256": "3417fc7c96b49ce94d0d47fd5b1c25293aacb12019d61b2c8121373b6ca57320",
-        "size_bytes": 129412
+        "sha256": "4ea735ed6ad5160ad294cbe1e49e0e42ed687d224874c9835825a31b906a9477",
+        "size_bytes": 129414
       },
       "problems": [],
       "result": "succeeded",
@@ -95,7 +95,7 @@
       "pdf": {
         "page_count": 23,
         "path": "math-gaokao-latex/1985_广东卷_理工农医类/build/解析版.pdf",
-        "sha256": "02b5d475f7881ce0ea700ba1a8ab20e8a349a10d7314ca135b0311ed08d58119",
+        "sha256": "911937bf466b012b4fe6ce5240c184a8e4c808ff6430418467d2cfb58c32b010",
         "size_bytes": 219620
       },
       "problems": [],
@@ -119,8 +119,8 @@
       "pdf": {
         "page_count": 8,
         "path": "math-gaokao-latex/1985_广东卷_理工农医类/build/简答版.pdf",
-        "sha256": "18b1062852daf5be000bf66f7e0cf530572043ce340c20eddf7cb8165d049d96",
-        "size_bytes": 140056
+        "sha256": "8bfe5ec795a468c977ea79f857a734f5db53ec5f1bfa235478ac3f2b0ce92632",
+        "size_bytes": 140055
       },
       "problems": [],
       "result": "succeeded",
@@ -143,7 +143,7 @@
       "pdf": {
         "page_count": 16,
         "path": "math-gaokao-latex/1985_广东卷_理工农医类/build/印刷版.pdf",
-        "sha256": "18de1ab0b25cad85eae45abea2ac26f888169bd09384a818a5af576b08d3b4ab",
+        "sha256": "072d4a57093a689c982debb6309c22def20d227737d573b97767b65766190148",
         "size_bytes": 215585
       },
       "problems": [],
@@ -151,7 +151,7 @@
       "source": "math-gaokao-latex/1985_广东卷_理工农医类/印刷版.tex"
     }
   ],
-  "finished_at": "2026-09-30T20:22:46+08:00",
+  "finished_at": "2026-10-21T00:13:12+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "8823bec81b96a65c982fe69900d5b6d3f1191e3397dd073db6908b7d73c70c78"
       },
       {
         "path": "math-gaokao-latex/1985_广东卷_理工农医类/figures/f1985_guangdong_science_v1_q10_axes.tex",
@@ -224,46 +224,46 @@
       },
       {
         "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "79d4acaed1c43a09c48d6281507a4891c65318a341be67ea684cac20f58734d2"
+        "sha256": "8854faa217718e4ec6de06793088d24d686e489626183ef9a63ca59a22fb0c98"
       },
       {
         "path": "math-gaokao-latex/tools/solution_sources.py",
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "864138ddd200c1303abac520382da3fa0aeabb51b06a5c833ddb618256673e43"
+    "tree_sha256": "7eaeef9912dd62906e5be4f5aec50a973dfc623461377ed7e934b32dbb4ef00e"
   },
   "input_projection": "156c295eb70c3a02d3682ba85f74283f2c0004131c4cc5f763ac9c060c4bdb32",
-  "manifest_revision": 3318,
+  "manifest_revision": 4497,
   "paper_id": "gk-1985-regular-guangdong-science",
-  "previous_attempt_id": "0274643f-8195-475b-9ac6-274675bf4dd4",
+  "previous_attempt_id": "d9505587-1cb6-46be-bfb6-1d87f89e7627",
   "project_dir": "1985_广东卷_理工农医类",
   "schema_version": 1,
-  "started_at": "2026-09-30T19:38:11+08:00",
-  "status": "succeeded",
+  "started_at": "2026-10-21T00:12:28+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",

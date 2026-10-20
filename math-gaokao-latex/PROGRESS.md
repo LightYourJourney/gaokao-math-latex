@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b09：1985 广东文、理科四版本正式重编（2026-10-21）
+
+- 已完成：对 `gk-1985-regular-guangdong-arts` 与 `gk-1985-regular-guangdong-science` 执行 `python3 -B tools/build_projects.py build --formal --batch phase2-b09`。两卷的试题版、解析版、简答版、印刷版均重建成功，构建器报告 `2 待审、0 失败`；回执均为 `compiled_pending_review`。PDF 页数分别为文科 4/19/7/14、理科 5/23/8/16。
+- 状态边界：manifest 中两卷仍为 `blocked`，本次只刷新正式构建产物与构建回执，没有把题目/答案来源阻塞误记为完成。批次复核检查确认旧 review receipt 因 build attempt、工具链、PDF 哈希变化而失效；需重新完成逐页复核。`prepare-batch` 已创建 8 个忽略目录工作项，覆盖四版本共 96 页、每页 8 项；所有检查目前仍是 pending，尚未写入通过结论。
+- 修改文件：两卷的 `receipts/build.json`、`source-manifest.json`、本进度文件；PDF 位于各卷 `build/` 目录，均为构建产物，不作为源文件提交；复核工作项位于忽略的 `.work/phase2-b09/review/`。
+- 验证与成本：正式构建退出码 0；构建后旧 `check-batch phase2-b09` 返回 `INVALID_OR_STALE`，原因是需重做的 review receipt；两份 build receipt 状态及四版本 PDF 哈希/页数均已核对。五批次现场检查确认 17 份工具链 stale build：8 卷 manifest 原为 `complete`，另 9 卷保留原有 `blocked` 状态和对应 open issue，未误降/升状态。`phase2-b09` 的 96 页复核骨架与每页 8 项均已核验。构建加准备约 43 秒；无 OCR、LLM 或外部 API 调用；实际 Token 与费用不可见，记未知。
+- 剩余/下一步：按批次复核协议重新准备并逐页检查这两卷的全部四个版本，再通过事务登记 review receipts；其余受影响批次 `phase2-b05`、`phase2-b06`、`phase2-b07`、`phase2-b10` 的 15 份 stale build 仍待正式重编及复核。不得将旧 review receipt 或当前 `blocked` production state 提前放行为完成。
+
 ### 构建回执区分生成器源码与物化输入（2026-10-21）
 
 - 已完成：`generation_input_tree` 仍完整记录全部生成器源码、模板、四个物化 `.tex` 壳、图稿和规范 Markdown；完成态 build currency 比较时仅忽略 `GENERATOR_SOURCES` 的内容哈希，其余路径与哈希仍逐项比较。生成器源码变化但生成结果字节不变，不再单独使 PDF 回执 stale；真实生成物当前性仍由 provenance 的纯函数重算逐字节验证。`running` 回执仍比较完整树，生成器变化会开启新 attempt。
