@@ -6986,7 +6986,7 @@
 
 ### 全国Ⅰ卷旧构建回执：视觉记录绑定与失效原因审计（2026-10-20）
 
-- 已完成：定向核对2019全国Ⅰ文科、2019全国Ⅰ理科、2020全国Ⅰ理科三卷的四版本build/review回执及当前PDF。12份PDF均存在，文件SHA-256与build、review回执完全一致；四版逐页记录齐全，共300页、2400项页级检查，未发现缺页或失败项。已有`phase0-b02-raster-reuse-20261018.json`记录这三卷共232页新旧渲染PNG逐页字节相等、0页变化，并明确说明只是沿用原视觉结论，不证明内容/数学正确性。
+- 已完成：定向核对2019全国Ⅰ文科、2019全国Ⅰ理科、2020全国Ⅰ理科三卷的四版本build/review回执及当前PDF。12份PDF均存在，文件SHA-256与build、review回执完全一致；四版逐页记录齐全，共232页、1856项页级检查，未发现缺页或失败项。已有`phase0-b02-raster-reuse-20261018.json`记录这三卷共232页新旧渲染PNG逐页字节相等、0页变化，并明确说明只是沿用原视觉结论，不证明内容/数学正确性。
 - 门禁结论：不能直接finalize。正式`check-batch`返回`INVALID_OR_STALE`，涉及2019文理及2020文理四卷。四卷dependency tree逐项与当前文件一致；generation input tree各仅有共享文件`tools/make_short_answers.py`一处哈希变化。该变化来自2026-10-20提交`952eca08`对1990广东理科简答版专属提示语的两行调整，与这三卷题面无关，但构建回执协议仍判定失效；2020全国Ⅰ文科当前为blocked，不能假装已解决并越过同批门禁。
 - 修改与验证：本阶段仅更新本进度文件。三卷PDF/review attempt绑定及哈希核对通过；每页均有8项检查且结果为pass/not_applicable；`review_receipts.py check-batch --batch phase0-b02`如实报告上述stale问题。第一次调用校验器误将issues路径传为`issues.json`，CLI拒绝并指出要求`missing-issues.md`；按提示改正后校验运行成功，无文件被改变。未重编、未写receipt、未触碰根目录既有未跟踪`-.png`。
 - 成本：无OCR、XeLaTeX或外部API调用；Codex Token与费用不可见，未知。
