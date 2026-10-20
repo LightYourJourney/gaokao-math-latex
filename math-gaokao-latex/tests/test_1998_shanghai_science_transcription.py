@@ -27,6 +27,8 @@ class Shanghai1998ScienceTranscriptionTests(unittest.TestCase):
 
     def test_high_risk_formula_and_source_wording_anchors_are_present(self):
         text = QUESTIONS.read_text(encoding="utf-8")
+        self.assertIn(r"$\lg 20+\log_{100}25=$", text)
+        self.assertNotIn(r"$\\lg", text)
         for anchor in (
             r"\sqrt a\cos x",
             r"\log_{100}25",
@@ -34,12 +36,15 @@ class Shanghai1998ScienceTranscriptionTests(unittest.TestCase):
             r"\overline A\cup\overline B",
             r"(z-2)i=1+i",
             r"\frac{37\pi}{6}-2\alpha",
+            r"\operatorname{tg}2x",
             r"y^2=\frac12(x-2)",
             r"4B_n-12A_n=13n",
             r"-265<c_{10}<-125",
         ):
             self.assertIn(anchor, text)
         self.assertIn("原卷示意图见固定来源 PDF 第2页（印刷页109）", text)
+        self.assertIn("4B_n-12A_n=13n\n\\]。", text)
+        self.assertNotIn("4B_n-12A_n=13n。", text)
         self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")
 
     def test_fixed_source_is_ready_unbound_and_matches_recorded_fingerprint(self):
