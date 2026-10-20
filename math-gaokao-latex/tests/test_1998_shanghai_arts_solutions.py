@@ -56,6 +56,23 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         denominator_lead = Fraction(2 * 12, 8)
         self.assertEqual(numerator_lead / denominator_lead, Fraction(1, 3))
 
+    def test_q22_set_indices_follow_the_defined_positive_sequence_domain(self):
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"集合指标沿用题设数列项的正整数定义域，不另加未定义的$n=0$项", draft)
+        self.assertIn(r"$4b_n=-12n-5=2a_{6n+1}$", draft)
+        self.assertIn(r"$c_n=-101-12(n-1)=-12n-89$", draft)
+
+        x = lambda n: -2 * n - 3
+        y = lambda n: -12 * n - 5
+        for n in range(1, 21):
+            self.assertEqual(y(n), x(6 * n + 1))
+
+        # n=7 gives -89 (excluded); n=8 is the first term below -100.
+        self.assertEqual(y(7), -89)
+        self.assertEqual(y(8), -101)
+        self.assertEqual([y(n) for n in range(8, 11)], [-101, -113, -125])
+        self.assertEqual([-12 * j - 89 for j in range(1, 4)], [-101, -113, -125])
+
     def test_drafts_preserve_corrected_q15_condition_and_review_boundary(self):
         draft = DRAFT.read_text(encoding="utf-8")
         answers = ANSWERS.read_text(encoding="utf-8")
