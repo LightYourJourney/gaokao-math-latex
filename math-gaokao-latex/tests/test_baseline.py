@@ -75,6 +75,13 @@ def _normalize_post_baseline_repairs(relative, text):
         return text.replace("“", '"').replace("”", '"')
 
     if relative == (
+        "math-gaokao-latex/2018_全国Ⅰ卷_文科/answers.tex"
+    ):
+        # 2026-10-20：统一中文叙述引号字形，仅用于历史版式差异比较；真实文件
+        # 仍由 adjudicated-drift ledger 中的当前哈希精确锁定。
+        return text.replace("“", '"').replace("”", '"')
+
+    if relative == (
         "math-gaokao-latex/2017_全国Ⅰ卷_理科/questions.tex"
     ):
         old = (
@@ -1185,6 +1192,21 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             _normalize_post_baseline_repairs(relative, after),
         )
         unrelated = "math-gaokao-latex/2018_全国Ⅰ卷_理科/questions.tex"
+        self.assertNotEqual(
+            _normalize_post_baseline_repairs(unrelated, before),
+            _normalize_post_baseline_repairs(unrelated, after),
+        )
+
+    def test_2018_arts_typographic_quotes_normalize_only_in_historical_layout_diff(self):
+        relative = "math-gaokao-latex/2018_全国Ⅰ卷_文科/answers.tex"
+        before = '这是一句"中文引号"。'
+        after = '这是一句“中文引号”。'
+
+        self.assertEqual(
+            _normalize_post_baseline_repairs(relative, before),
+            _normalize_post_baseline_repairs(relative, after),
+        )
+        unrelated = "math-gaokao-latex/2018_全国Ⅰ卷_文科/questions.tex"
         self.assertNotEqual(
             _normalize_post_baseline_repairs(unrelated, before),
             _normalize_post_baseline_repairs(unrelated, after),

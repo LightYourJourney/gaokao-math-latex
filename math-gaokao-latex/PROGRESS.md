@@ -7367,3 +7367,11 @@
 - 验证：四个PDF页数分别为5、36、7、28；单卷 `validate-receipts --paper gk-2018-regular-national-1-science` 返回 `OK`，0 failed/invalid/missing/stale，视觉状态仍 pending。新增及相关定向测试3/3通过。全库 unittest 1564项：1550通过、13跳过、1失败；唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告383条全库派生缓存状态与现场状态不一致，属于既有全库漂移，未在本阶段批量改写状态。首次全库运行另捕获历史漂移台账哈希因本次真实引号修正而陈旧；已为该文件增加限域字形归一化、更新实际哈希，并复跑完整测试确认该失败消失。`git diff --check`通过；临时101张校样PNG已检查后删除。
 - 成本：只用本地 Poppler/XeLaTeX 构建及本地测试，无OCR、商业API或聊天模型调用；Codex Token与实际费用不可见，记未知。
 - 剩余/下一步：本卷的来源、题面忠实性、答案及解析仍未因视觉检查而整体认证；正式 review receipt 工具以 `phase0-b01` 批次为登记单位，而另外三卷尚未逐页校样，因此未写入或最终登记批次回执，不能将本卷/批次标为视觉通过或完整。下一步校样同批剩余三卷，再走批次回执流程；之后继续来源与数学内容复核。不得重复本卷已完成的OCR/转录或76页校样。
+
+### 2018 全国Ⅰ卷文科：四版本视觉校样与引号排版修正（2026-10-20）
+
+- 已完成：对当前正式PDF的四版本完成逐页版面校样：试题版6页、解析版32页、简答版8页、印刷版26页，共72页。解析版32页全部在源修正后重渲染并检查；印刷版已检查全部26页，源修正后复看12个受影响页（9、12、13、16–21、23–25）。简答版8页与试题版6页的现行PDF按120 dpi重渲染后，与修正前已逐页检查的PNG逐页像素差均为0，故沿用既有目视结果。未见裁切、重叠、公式越界或中文引号异常。修正仅把规范解析叙述中的ASCII双引号替换为中文引号，不改题目、数字、答案结论或图形。
+- 修改文件：`2018/2018_数学真题_文_解析正文.md`、`2018_全国Ⅰ卷_文科/answers.tex`、该卷`receipts/build.json`、`source-manifest.json`、`tests/test_2018_national1_arts_typography.py`、`tests/test_baseline.py`、`reports/adjudicated-drifts.json`及本进度。历史漂移比较只对精确限定的文科`answers.tex`归一化引号字形；真实文件仍由更新后的SHA-256锁定。临时校样PNG保存在`/tmp/phase0-b01-2018-arts-review.Wvo7rQ/`，未入库。
+- 验证：四版正式PDF页数为6/32/8/26；`generate_projects.py --check`通过；单卷`validate-receipts`为`OK`，0 failed/invalid/missing/stale，视觉仍pending。引号专项测试2/2通过；漂移归一化、理科限域回归与task-25台账测试3/3通过；台账JSON有效，`git diff --check`通过。全库`unittest discover -s tests`共1567项：1553通过、13跳过、1失败；唯一失败为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，仍报告383项历史派生状态与现场状态不一致。首次全量运行还发现本次文科答案哈希未同步到漂移台账，已按红—绿测试修复并重跑全量，版式台账失败已消失。
+- 成本：复用本地正式PDF并对已审页面做像素一致性复用；无OCR、外部API或模型调用。Codex Token与实际费用不可见，记未知。
+- 剩余/下一步：本卷内容来源、题面忠实性、答案与解析的数学正确性尚未因版面校样而认证；`phase0-b01`其余两卷尚未完成视觉校样，因此不写最终review receipt、不提升批次状态。下一步校样2017全国Ⅰ卷尚未完成的版本，待四卷工作项都匹配当前attempt/PDF SHA/页数后再按批次登记。全库383项状态差异仍留在独立队列，不在本阶段批量改写。
