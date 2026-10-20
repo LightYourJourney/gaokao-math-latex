@@ -92,6 +92,22 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertLess(cosine, 0)
         self.assertAlmostEqual(abs(cosine), 7 * math.sqrt(10) / 40)
 
+    def test_q6_activity_network_critical_path_is_eleven_days(self):
+        edges = (
+            (1, 2, 2), (1, 3, 0), (2, 5, 3), (3, 4, 3),
+            (4, 5, 0), (4, 6, 1), (5, 6, 0), (5, 7, 3),
+            (6, 7, 4), (7, 8, 2),
+        )
+        earliest = {1: 0}
+        for event in range(1, 9):
+            for start, end, duration in edges:
+                if start == event:
+                    earliest[end] = max(earliest.get(end, 0), earliest[event] + duration)
+        self.assertEqual(earliest[8], 11)
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn("关键路径为$1\\to2\\to5\\to6\\to7\\to8$", draft)
+        self.assertIn("$2+3+0+4+2=11$天", draft)
+
 
 if __name__ == "__main__":
     unittest.main()

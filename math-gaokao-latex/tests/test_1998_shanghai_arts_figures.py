@@ -64,6 +64,24 @@ class Shanghai1998ArtsFigureTests(unittest.TestCase):
                 self.assertAlmostEqual(cross, 0.0, places=6)
                 self.assertGreater(dot, 0.0)
 
+    def test_q6_flowchart_retains_all_source_edges_weights_and_dummy_arrows(self):
+        source = (PAPER / "figures" / FIGURES["q06"][0]).read_text(encoding="utf-8")
+        edges = (
+            r"\draw[->] (v1) -- node[activity,above left] {$a$\\$2$} (v2);",
+            r"\draw[->] (v1) -- node[activity,below left] {$m$\\$0$} (v3);",
+            r"\draw[->] (v2) -- node[activity,above] {$c$\\$3$} (v5);",
+            r"\draw[->] (v3) -- node[activity,below] {$b$\\$3$} (v4);",
+            r"\draw[->,dashed] (v4) -- node[activity,left] {$n$\\$0$} (v5);",
+            r"\draw[->] (v4) -- node[activity,below] {$d$\\$1$} (v6);",
+            r"\draw[->,dashed] (v5) -- node[activity,right] {$p$\\$0$} (v6);",
+            r"\draw[->] (v5) -- node[activity,above right] {$e$\\$3$} (v7);",
+            r"\draw[->] (v6) -- node[activity,below right] {$f$\\$4$} (v7);",
+            r"\draw[->] (v7) -- node[activity,above] {$g$\\$2$} (v8);",
+        )
+        for edge in edges:
+            with self.subTest(edge=edge):
+                self.assertIn(edge, source)
+
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and pdftoppm are required")
     def test_all_three_figures_compile_and_render_as_nonempty_pages(self):
         work_root = PROJECT / ".work"
