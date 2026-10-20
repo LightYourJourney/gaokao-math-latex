@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ理科当前构建的视觉工作项核验（2026-10-21）
+
+- 已完成：全国Ⅰ理科四版工作项均绑定当前构建 attempt `6ea36c15-0bbf-4ac4-8b63-128cea1abde9`，并与对应 build receipt 的 PDF SHA、页数一致。试题版6页的旧检查仅在旧/当前180dpi PNG逐页SHA-256完全相同后迁入；另登记解析版第15页通过、解析版第19页失败、简答版第8页失败。失败分别对应Q19(1)答案行距明显拉伸及简答页18.296pt Overfull/贴近正文右缘，均保留为真实版式问题，不豁免。
+- 当前进度：`phase2-b05` 共219页、1,752项检查；已完成65页（514 pass、4 not_applicable、2 fail），余154页/1,232检查仍pending。失败均在全国Ⅰ理科Q19相关页面。其余12个工作项未改；全国Ⅰ文科先前56页记录保留。
+- 修改文件：`.work/phase2-b05/review/{试题版,解析版,简答版,印刷版}/gk-2016-regular-national-1-science.json`（ignored复核工作项）及本 `PROGRESS.md`。未改其他三卷工作项、正式review receipt、manifest、题面/答案/解析源稿或PDF。
+- 验证：逐项检查16份工作项的当前attempt、PDF SHA/页数、精确页覆盖及每页8项检查；结构和状态一致。`python3 -B tools/build_projects.py validate-receipts --manifest source-manifest.json --batch phase2-b05`：4卷OK；`python3 -B tools/provenance.py check-batch --batch phase2-b05`：4卷OK。批次仍未finalize，因有154页pending及2个明确失败。
+- 成本与下一步：本阶段无OCR、模型或外部API调用；本地Token/费用不可见，记未知。先修复Q19纯版式问题并局部重编复核，再继续其余154页；全部页完成且失败问题解决前，不登记最终review receipt或运行批次finalizer。
+
 ### phase2-b05：2016 全国Ⅰ理科 Q16 长行修复与正式重编（2026-10-21）
 
 - 已完成：仅在完整句界拆分 Q16 解析段落，公式、数字、推理和结论不变；官方生成器更新 `answers.tex`。正式 XeLaTeX attempt `6ea36c15-0bbf-4ac4-8b63-128cea1abde9` 四版均成功，页数为 6/24/8/18；编译错误、缺字、未定义引用为 0，Q16 原 48.106pt Overfull 已消失。
