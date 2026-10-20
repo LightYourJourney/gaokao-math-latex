@@ -31,13 +31,31 @@ EXPECTED = {
     16: r"\boxed{\text{C}}",
 }
 
+EXPECTED_ADVANCED = {
+    17: r"\boxed{0\le a\le1}",
+    18: r"\boxed{\frac32\lg2}",
+    19: r"\boxed{[0,\frac\pi4)\cup(\frac{7\pi}4,2\pi)}",
+    20: r"\boxed{\arccos\frac{\sqrt2}{4}}",
+    21: r"2\sqrt6/3",
+    22: r"(0,\sqrt2)",
+}
+
+EXTRA_ADVANCED = (
+    r"400\sqrt6/9",
+    r"\frac{\sqrt2}{2}\text{米}",
+    r"P=\left(\frac a{\sqrt2},\frac{\sqrt2}{a}\right)",
+    r"\sqrt{2\left(1-\frac4{a^4}\right)}",
+    r"a^2-\dfrac4{a^2}",
+    r"a>\sqrt[4]6",
+)
+
 
 class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
     def test_independent_solution_draft_covers_q1_to_q16_with_checked_conclusions(self):
         self.assertTrue(SOLUTIONS.is_file(), "independent solution draft for Q1-Q16 is missing")
         text = SOLUTIONS.read_text(encoding="utf-8")
         numbers = [int(n) for n in re.findall(r"^### 第(\d+)题", text, re.MULTILINE)]
-        self.assertEqual(numbers, list(range(1, 17)))
+        self.assertEqual(numbers[:16], list(range(1, 17)))
         for number, conclusion in EXPECTED.items():
             with self.subTest(question=number):
                 self.assertIn(conclusion, text)
@@ -58,6 +76,29 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         base_area = math.sqrt(3) / 4
         height = math.sqrt(11 / 3)
         self.assertTrue(math.isclose(base_area * height / 3, math.sqrt(11) / 12, rel_tol=1e-14))
+
+    def test_independent_solution_draft_covers_q17_to_q22_and_flags_argument_convention(self):
+        text = SOLUTIONS.read_text(encoding="utf-8")
+        numbers = [int(n) for n in re.findall(r"^### 第(\d+)题", text, re.MULTILINE)]
+        self.assertEqual(numbers, list(range(1, 23)))
+        for number, conclusion in EXPECTED_ADVANCED.items():
+            with self.subTest(question=number):
+                self.assertIn(conclusion, text)
+        self.assertIn("[0,2\\pi)", text)
+        self.assertIn("不需填土", text)
+        for conclusion in EXTRA_ADVANCED:
+            with self.subTest(conclusion=conclusion):
+                self.assertIn(conclusion, text)
+
+    def test_exact_relations_for_q18_q20_q21_and_q22(self):
+        for n in range(1, 20):
+            self.assertEqual(sum(range(n + 1, 2 * n + 1)), n * (3 * n + 1) // 2)
+        # In Q20, AE has unit length, CD has squared length 2, and their dot product is 1/2.
+        self.assertEqual((1 / 2) ** 2 / 2, 1 / 8)
+        self.assertAlmostEqual(1 - 1 / (2 * (1 / math.sqrt(2)) ** 2), 0)
+        # The Q22 branch boundary is a^4=6, distinct from the admissible lower limit a^4>4.
+        self.assertEqual(6**2 - 10 * 6 + 24, 0)
+        self.assertEqual(4**2 - 10 * 4 + 24, 0)
 
 
 if __name__ == "__main__":
