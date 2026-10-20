@@ -3,6 +3,7 @@ import json
 import math
 import re
 import unittest
+from fractions import Fraction
 from math import comb
 from pathlib import Path
 
@@ -99,6 +100,51 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         # The Q22 branch boundary is a^4=6, distinct from the admissible lower limit a^4>4.
         self.assertEqual(6**2 - 10 * 6 + 24, 0)
         self.assertEqual(4**2 - 10 * 4 + 24, 0)
+
+    def test_q10_common_difference_and_unique_partial_sum_maximum(self):
+        a1 = Fraction(1)
+        d = -Fraction(4, 33) * a1
+        term = lambda n: a1 + (n - 1) * d
+        self.assertEqual(3 * term(4), 7 * term(7))
+        self.assertEqual(term(9), Fraction(1, 33))
+        self.assertEqual(term(10), -Fraction(1, 11))
+        self.assertLess(d, 0)
+        self.assertTrue(all(term(n) > 0 for n in range(1, 10)))
+        self.assertTrue(all(term(n) < 0 for n in range(10, 40)))
+
+    def test_q21_tangent_envelope_and_q22_valid_boundary_counterexample(self):
+        # Q21: at t^2=1/2, the tangent-envelope half-base is t/2 and
+        # its top half-width is >1, so it contains the original 1m half-span.
+        t_squared = Fraction(1, 2)
+        self.assertEqual(1 - Fraction(1, 2) / t_squared, 0)
+        top_half_width_squared = (1 + t_squared) ** 2 / (4 * t_squared)
+        self.assertEqual(top_half_width_squared, Fraction(9, 8))
+        self.assertGreater(top_half_width_squared, 1)
+        # If the top opening were constrained to remain 2m, that is a
+        # different optimization constraint; record its distinct candidate.
+        self.assertEqual(2 * Fraction(1, 2), 1)
+
+        # Q22: a=2,b=1 satisfies a>b>0 and ab=2, so the stated condition
+        # does not imply the stricter a>2 claimed by the blind reviewer.
+        a, b, u = Fraction(2), Fraction(1), Fraction(2)
+        self.assertGreater(a, b)
+        self.assertEqual(a * b, 2)
+        self.assertEqual(u / a**2 + 1 / (u * b**2), 1)
+
+    def test_q21_no_fill_does_not_impose_a_fixed_mouth_width(self):
+        record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        note = next(
+            item for item in record["transcription_notes"]
+            if item["question_number"] == 21
+        )
+        self.assertEqual(note["issue"], "q21-no-fill-mouth-width-interpretation")
+        self.assertEqual(note["source_answer_transcription"], "√2/2 m")
+        self.assertEqual(note["fixed_original_mouth_alternative"], "1 m")
+        self.assertEqual(note["status"], "author-adjudicated-pending-independent-review")
+
+        solution = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn("没有要求新沟口仍固定", solution)
+        self.assertIn("若另加“沟口宽度固定为2米”", solution)
 
 
 if __name__ == "__main__":
