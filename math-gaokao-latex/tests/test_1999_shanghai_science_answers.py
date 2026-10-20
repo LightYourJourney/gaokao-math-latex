@@ -66,6 +66,15 @@ class Shanghai1999ScienceAnswerTranscriptionTests(unittest.TestCase):
         self.assertEqual(correction["source_notation"], r"\bar z(1-ci)")
         self.assertEqual(correction["status"], "corrected-pending-independent-review")
 
+    def test_q7_open_source_notation_vs_closed_monotonicity_is_recorded_as_pending(self):
+        record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        note = next(note for note in record["transcription_notes"] if note["question_number"] == 7)
+        self.assertEqual(note["issue"], "source-open-vs-monotonic-closed-interval")
+        self.assertEqual(note["source_answer_transcription"], r"(-5π/6,-π/3)")
+        self.assertEqual(note["independent_derivation"], r"[-5π/6,-π/3]")
+        self.assertEqual(note["status"], "needs-review")
+        self.assertIn("两端导数为0", ANSWERS.read_text(encoding="utf-8"))
+
 
 if __name__ == "__main__":
     unittest.main()
