@@ -38,6 +38,7 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 import cli_common
 from manifest import canonical_json, load_manifest
 from solution_sources import (
+    QuestionBlock,
     SolutionSourceError,
     extract_solution_blocks,
     parse_answer_points,
@@ -349,24 +350,47 @@ class ProjectResult:
 
 
 def wrap(
-    text: str, mode: str, printed_labels: Optional[Mapping[int, str]] = None
+    text: str,
+    mode: str,
+    printed_labels: Optional[Mapping[int, str]] = None,
+    question_needspace: Optional[Mapping[int, str]] = None,
 ) -> Tuple[str, List[int]]:
     """按行首题头切分并包裹环境；保留内部顺序号与原卷显示题号的映射。"""
     try:
         head_re, struct_re, env = _WRAP_MODES[mode]
     except KeyError:
         raise GenerationError(f"未知包裹模式：{mode}")
+    question_needspace = question_needspace or {}
+    if mode != "questions" and question_needspace:
+        raise GenerationError("question-needspace 只适用于试题块")
+    for number, fraction in question_needspace.items():
+        if not re.fullmatch(r"0\.\d+", fraction) or not 0.05 <= float(fraction) <= 0.5:
+            raise GenerationError(
+                f"第 {number} 题的 question-needspace 必须在 0.05 到 0.5 之间"
+            )
     out: List[str] = []
     printed_labels = printed_labels or {}
     nums: List[int] = []
     in_block = False
+    in_needspace_group = False
     for line in text.split("\n"):
         match = head_re.match(line)
         if match:
             if in_block:
                 out.append("\\end{%s}" % env)
-            out.append("\\begin{%s}" % env)
+                if in_needspace_group:
+                    out.append(r"\endgroup")
+                    in_needspace_group = False
             number = int(match.group(1))
+            fraction = question_needspace.get(number)
+            if fraction is not None:
+                out.append(r"\begingroup")
+                out.append(
+                    r"\renewenvironment{question}{\Needspace{%s\textheight}}{}"
+                    % fraction
+                )
+                in_needspace_group = True
+            out.append("\\begin{%s}" % env)
             label = printed_labels.get(number, str(number))
             if label != str(number):
                 if mode == "questions":
@@ -382,13 +406,59 @@ def wrap(
         elif struct_re.match(line):
             if in_block:
                 out.append("\\end{%s}" % env)
+                if in_needspace_group:
+                    out.append(r"\endgroup")
+                    in_needspace_group = False
                 in_block = False
             out.append(line)
         else:
             out.append(line)
     if in_block:
         out.append("\\end{%s}" % env)
+        if in_needspace_group:
+            out.append(r"\endgroup")
+    missing_overrides = sorted(set(question_needspace) - set(nums))
+    if missing_overrides:
+        raise GenerationError(
+            "question-needspace 指向不存在的试题：%s" % missing_overrides
+        )
     return "\n".join(out), nums
+
+
+_QUESTION_NEEDSPACE_COMMENT = re.compile(
+    r"^<!--\s*question-needspace:\s*(0\.\d+)\s*-->$"
+)
+
+
+def _question_needspace_overrides(
+    question_blocks: Sequence[QuestionBlock],
+) -> Dict[int, str]:
+    """读取题块内的局部换页注释；转换器会剥离它，不进入可打印题面。"""
+    overrides: Dict[int, str] = {}
+    for block in question_blocks:
+        candidates = [
+            line.strip()
+            for line in block.body.splitlines()
+            if "question-needspace:" in line
+        ]
+        if not candidates:
+            continue
+        if len(candidates) != 1:
+            raise GenerationError(
+                f"第 {block.number} 题前只能有一条 question-needspace 指令"
+            )
+        match = _QUESTION_NEEDSPACE_COMMENT.fullmatch(candidates[0])
+        if match is None:
+            raise GenerationError(
+                f"第 {block.number} 题前的 question-needspace 指令格式无效"
+            )
+        fraction = match.group(1)
+        if not 0.05 <= float(fraction) <= 0.5:
+            raise GenerationError(
+                f"第 {block.number} 题的 question-needspace 必须在 0.05 到 0.5 之间"
+            )
+        overrides[block.number] = fraction
+    return overrides
 
 
 # ---------------------------------------------------------------- 身份与读取
@@ -492,6 +562,7 @@ def generate_project(
 
     try:
         question_blocks = parse_question_blocks(questions_text)
+        question_needspace = _question_needspace_overrides(question_blocks)
         printed_labels = {
             block.number: md2tex.convert_inline(block.printed_label, context).text
             for block in question_blocks
@@ -499,7 +570,10 @@ def generate_project(
     except SolutionSourceError as error:
         raise GenerationError(f"{sources.paper_id}: {error}") from error
     wrapped_questions, question_numbers = wrap(
-        converted_questions.text, "questions", printed_labels
+        converted_questions.text,
+        "questions",
+        printed_labels,
+        question_needspace=question_needspace,
     )
     wrapped_answers, answer_numbers = wrap(
         converted_answers.text, "answers", printed_labels

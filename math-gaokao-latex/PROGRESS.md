@@ -27,13 +27,13 @@
 - 验证与成本：正式构建退出码 0；构建后旧 `check-batch phase2-b09` 返回 `INVALID_OR_STALE`，原因是需重做的 review receipt；两份 build receipt 状态及四版本 PDF 哈希/页数均已核对。五批次现场检查确认 17 份工具链 stale build：8 卷 manifest 原为 `complete`，另 9 卷保留原有 `blocked` 状态和对应 open issue，未误降/升状态。`phase2-b09` 的 96 页复核骨架与每页 8 项均已核验。构建加准备约 43 秒；无 OCR、LLM 或外部 API 调用；实际 Token 与费用不可见，记未知。
 - 剩余/下一步：按批次复核协议重新准备并逐页检查这两卷的全部四个版本，再通过事务登记 review receipts；其余受影响批次 `phase2-b05`、`phase2-b06`、`phase2-b07`、`phase2-b10` 的 15 份 stale build 仍待正式重编及复核。不得将旧 review receipt 或当前 `blocked` production state 提前放行为完成。
 
-### 1985 广东理科：视觉校样缺陷根因定位（2026-10-21）
+### 1985 广东理科：坐标图标注与 Q35 分页修复（2026-10-21）
 
-- 已完成：重新检查本地 160 dpi 校样图，确认第一卷 Q1 的 A–E 五个坐标图中，五个标注点均使用 `node[above right]`，造成坐标/曲线与坐标标签重叠；试题版第 4 页的 Q34 后有足够空间放下附加题 Q35 的实际内容，但共享 `question` 环境在每题前统一调用 `\Needspace{0.15\textheight}`，因此 Q35 被推至几乎空白的第 5 页。第 4 页 `[U2]` 为清晰可读的原文不确定标记，不是缺字形，不改题面。
-- 修改文件：仅本进度记录；图稿、试题 Markdown、共享宏、生成物和回执尚未修改。
-- 验证：查看既有 `test-4.png`、`test-5.png`、`print-a-02.png`，并对照规范图稿、Q35 原题源、`questions_env.tex` 与生成的 `questions.tex`；未重编，未改变数学内容/来源/状态。
-- 成本：复用 `/tmp/gaokao-1985-science-qa.BoEM8U` 页面渲染；无 OCR、LLM 或外部 API，Token 与费用不可见，记未知。
-- 剩余/下一步：添加仅针对 1985 理科 Q35 的局部换页控制和五点图标位置回归测试；测试先在旧源码下失败，再做最小修复、单卷正式重编，并只在相应生成页确认版式后重新启动整卷 52 页复核。整卷仍为 `blocked`，不得登记完成。
+- 已完成：Q1 五个坐标图标分别改为 `above left`、`below left`、`above right`、`above left`、`below left`，把标签移入各曲线的空侧；新增仅作用于附加题 Q35 的 `question-needspace` Markdown 注释，生成器在该题环境外临时重定义预留高度，并在题块结束后恢复默认值。原题、数字、`[U2]` 不确定标记和 production state 均未修改。
+- 修改文件：`1985/1985_数学真题_广东理工农医类_试题.md`、本卷 `figures/f1985_guangdong_science_v1_q1_graphs.tex`、`tools/generate_projects.py`、`tests/test_generate_projects.py`、新增 `tests/test_1985_guangdong_science_layout.py` 及本进度文件。
+- 验证：先运行新增回归，旧源码下如预期出现锚点错误、局部指令缺失和 Q34/Q35 分居第 4/5 页；修复后 `WrapBoundaryTests` + 本卷源稿/真实 PDF 回归共 11 项通过（含临时试题版实编并验证 Q34/Q35 同页）。`test_generate_projects`、`test_solution_sources`、`test_layout_policy` 合计 226 项通过；`git diff --check` 通过。还未正式重建四版本或检查正式 PDF 的改动页。
+- 成本与边界：测试临时 PDF 仅在系统 `/tmp` 生成；未 OCR、未调用 LLM/外部 API；Token 和费用不可见，记未知。此阶段未改 provenance、build/review receipt、manifest 或生产状态。
+- 剩余/下一步：依据本卷正式 provenance/构建流程刷新受影响的源指纹，再单卷正式重编四版；渲染并复核 Q1 图页和 Q34/Q35 分页，确认后重新准备整卷 52 页视觉复核。整卷仍为 `blocked`，旧 review receipt 不得放行。
 
 ### 构建回执区分生成器源码与物化输入（2026-10-21）
 

@@ -10,12 +10,12 @@
   % A 递增，过 (0,1)
   \begin{scope}
     \draw[thick,domain=-0.7:1.1,samples=35] plot (\x,{2^\x});
-    \fill (0,1) circle (1pt) node[above right] {$(0,1)$};
+    \fill (0,1) circle (1pt) node[above left] {$(0,1)$};
   \end{scope}
   % B 递减，标 (1,1)
   \begin{scope}[shift={(2.8,0)}]
     \draw[thick,domain=0.45:1.9,samples=35] plot (\x,{1/\x});
-    \fill (1,1) circle (1pt) node[above right] {$(1,1)$};
+    \fill (1,1) circle (1pt) node[below left] {$(1,1)$};
   \end{scope}
   % C 递减，穿过 (1,0)
   \begin{scope}[shift={(5.6,0)}]
@@ -25,11 +25,11 @@
   % D 递增，穿过 (1,0)
   \begin{scope}[shift={(8.4,0)}]
     \draw[thick,domain=0.18:1.9,samples=35] plot (\x,{ln(\x)});
-    \fill (1,0) circle (1pt) node[above right] {$(1,0)$};
+    \fill (1,0) circle (1pt) node[above left] {$(1,0)$};
   \end{scope}
   % E 递减指数曲线，过 (0,1)
   \begin{scope}[shift={(11.2,0)}]
     \draw[thick,domain=-0.7:1.9,samples=35] plot (\x,{2^(-\x)});
-    \fill (0,1) circle (1pt) node[above right] {$(0,1)$};
+    \fill (0,1) circle (1pt) node[below left] {$(0,1)$};
   \end{scope}
 \end{tikzpicture}

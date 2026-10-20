@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT.parent / "math-gaokao-2017-2026" / "tools"))
 
 import md2tex
 from manifest import atomic_write_json, canonical_json, file_sha256, load_manifest
+from solution_sources import QuestionBlock
 from source_manifest import project_legacy_index
 from transaction import TRANSACTIONS_RELATIVE, recover_transactions
 
@@ -945,6 +946,51 @@ class WrapBoundaryTests(unittest.TestCase):
             wrapped, _ = wrap(head + "\n\\gkpart{二、填空题}\n", mode)
             self.assertIn("\\gkpart{二、填空题}", wrapped)
             self.assertNotIn("\\gkpart{二、填空题}\n\\end{", wrapped)
+
+    def test_question_needspace_override_is_scoped_to_one_question(self):
+        text = "\\gkti{1}第一题\n\\gkti{2}附加题\n\\gkti{3}第三题\n"
+        wrapped, numbers = wrap(
+            text,
+            "questions",
+            question_needspace={2: "0.08"},
+        )
+        self.assertEqual([1, 2, 3], numbers)
+        self.assertIn(
+            "\\end{question}\n\\begingroup\n"
+            "\\renewenvironment{question}{\\Needspace{0.08\\textheight}}{}\n"
+            "\\begin{question}",
+            wrapped,
+        )
+        self.assertIn(
+            "\\end{question}\n\\endgroup\n\\begin{question}\n\\gkti{3}",
+            wrapped,
+        )
+
+    def test_question_needspace_comment_is_parsed_from_question_block(self):
+        block = QuestionBlock(
+            number=35,
+            printed_label="五",
+            title="",
+            body="附加题题面\n<!-- question-needspace: 0.08 -->",
+            subparts=(),
+            lead="",
+        )
+        self.assertEqual(
+            {35: "0.08"},
+            generate_projects._question_needspace_overrides((block,)),
+        )
+
+    def test_malformed_question_needspace_comment_is_rejected(self):
+        block = QuestionBlock(
+            number=35,
+            printed_label="五",
+            title="",
+            body="附加题题面\n<!-- question-needspace: 0.9 -->",
+            subparts=(),
+            lead="",
+        )
+        with self.assertRaisesRegex(GenerationError, "0.05 到 0.5"):
+            generate_projects._question_needspace_overrides((block,))
 
 
 # ------------------------------------------------------------------ 生成与门禁
