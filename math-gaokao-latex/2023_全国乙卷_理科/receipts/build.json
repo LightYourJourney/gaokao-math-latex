@@ -1,5 +1,5 @@
 {
-  "attempt_id": "7785fc66-2417-4080-a538-edecb80289a9",
+  "attempt_id": "f5d19751-d294-4dcf-84c3-f987dcc1d7e5",
   "dependency_tree": {
     "files": [
       {
@@ -71,8 +71,8 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/2023_全国乙卷_理科/build/试题版.pdf",
-        "sha256": "0a11000b714dc1c518144b8cadc8034781940e5110555894e697ac021d6530f0",
-        "size_bytes": 105213
+        "sha256": "fa6de1ea5bbe7220056c8984d7659d1a72b54aa5102ca456e14356641a0f1528",
+        "size_bytes": 105211
       },
       "problems": [],
       "result": "succeeded",
@@ -95,7 +95,7 @@
       "pdf": {
         "page_count": 22,
         "path": "math-gaokao-latex/2023_全国乙卷_理科/build/解析版.pdf",
-        "sha256": "7d04b99f560b83e13d7a66bad06c31b647e31d94dca02ee5a6805eab187bfd3c",
+        "sha256": "0f1d9c50517421787bab0a0810eb32581eca12e80f0784a178508c677e2df981",
         "size_bytes": 209214
       },
       "problems": [],
@@ -119,8 +119,8 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/2023_全国乙卷_理科/build/简答版.pdf",
-        "sha256": "f489d351b8aab4618c98eadb07e7a88855752c145f3134fafb747d1467d502be",
-        "size_bytes": 117478
+        "sha256": "e613e4f419f230b974408e60081477f8f8031913cd5a545c47f61484507fa0f1",
+        "size_bytes": 117477
       },
       "problems": [],
       "result": "succeeded",
@@ -143,15 +143,15 @@
       "pdf": {
         "page_count": 18,
         "path": "math-gaokao-latex/2023_全国乙卷_理科/build/印刷版.pdf",
-        "sha256": "db4a656f55f12c406999bf7b71d69470ff9201382564169976f70dc511398195",
-        "size_bytes": 207435
+        "sha256": "3f7bfbf80e02fd57058d4ba366ceaa9a922a06232047d363e55971c8a637be77",
+        "size_bytes": 207438
       },
       "problems": [],
       "result": "succeeded",
       "source": "math-gaokao-latex/2023_全国乙卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-10-04T21:32:29+07:00",
+  "finished_at": "2026-10-21T00:30:53+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -168,7 +168,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "dea643d5ef42bc4c85ce0812c009c30ac803d8274e3eb46674a39137e7f2973f"
+        "sha256": "8823bec81b96a65c982fe69900d5b6d3f1191e3397dd073db6908b7d73c70c78"
       },
       {
         "path": "math-gaokao-latex/2023_全国乙卷_理科/figures/q03-three-view.tex",
@@ -224,46 +224,46 @@
       },
       {
         "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "79d4acaed1c43a09c48d6281507a4891c65318a341be67ea684cac20f58734d2"
+        "sha256": "8854faa217718e4ec6de06793088d24d686e489626183ef9a63ca59a22fb0c98"
       },
       {
         "path": "math-gaokao-latex/tools/solution_sources.py",
         "sha256": "97cc61de921bd1e38c35c4751fbf280b0e3c7501feaa0968d419180b140f588a"
       }
     ],
-    "tree_sha256": "1261fb55939319f0d5861e3475c4332e0db8be5defab9ad0de10babb68e61d35"
+    "tree_sha256": "331f7b84f7a4d2bfffe6c9f17fbfd6f7db4f86ab5cd04617ce1085f11ab59020"
   },
   "input_projection": "fc7f057a046c3966601429c36631ffa9c05d51cddf8091833d7ca775d04ecf96",
-  "manifest_revision": 3356,
+  "manifest_revision": 4499,
   "paper_id": "gk-2023-regular-national-b-science",
-  "previous_attempt_id": "8ae85987-7255-4c43-81d4-db168d58bb77",
+  "previous_attempt_id": "7785fc66-2417-4080-a538-edecb80289a9",
   "project_dir": "2023_全国乙卷_理科",
   "schema_version": 1,
-  "started_at": "2026-10-04T21:32:09+07:00",
-  "status": "succeeded",
+  "started_at": "2026-10-21T00:28:24+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdfinfo",
-        "sha256": "fafbf3c0999a707eb2792c8259f47585342c8d5e5c1b9a56ce494e41f5250753",
-        "version": "pdfinfo version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftoppm",
-        "sha256": "9a44364d0fa42a43c3efdb2cbab47d275973c4a5856c1109f6bf4513def6bb54",
-        "version": "pdftoppm version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.09.0/bin/pdftotext",
-        "sha256": "35b026441d599e8a002b557e3c0eb4aa0da56f96a217bb6a2d8ea1f8b138f7a3",
-        "version": "pdftotext version 26.09.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
       },
       {
         "name": "xelatex",

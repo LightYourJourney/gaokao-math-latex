@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b06：2023 全国甲理、乙文、乙理四版本正式重编（2026-10-21）
+
+- 已完成：执行 `python3 -B tools/build_projects.py build --formal --batch phase2-b06`，三卷四版本全部重建，构建器报告 `3 待审、0 失败`；`prepare-batch` 成功生成 12 个忽略目录工作项，覆盖 152 页、共 1216 个逐页检查格。每版 build receipt 当前且 12 份工作项均绑定本次 build attempt；Overfull/Underfull 警告数为 0。
+- 状态边界：三卷原来均为 `complete`，现在 build 阶段为待审，manifest 的 paper 状态为 `compiled`、batch 为 `compiled_pending_review`；没有提前恢复 complete。PDF 页数：甲理 4/23/6/19，乙文 4/21/6/19，乙理 4/22/6/18（顺序均为试题/解析/简答/印刷）。
+- 修改文件：三卷各自 `receipts/build.json`、`source-manifest.json`、本进度文件；PDF 在各卷 `build/` 忽略目录，复核骨架在 `.work/phase2-b06/review/`，均不是源稿。
+- 验证与成本：正式构建退出码 0；`prepare-batch` 退出码 0，并对每卷每版本的 current build receipt、PDF页数和页面指标进行了协议内核验；152 页无空检查骨架。构建与准备约 102 秒；无 OCR、LLM 或外部 API 调用；实际 Token 与费用不可见，记未知。
+- 剩余/下一步：逐页完成三卷四版本视觉 QA 后，通过批次事务登记 review receipt；本阶段五个受影响批次共 17 份 stale build 中，已重建 5 份（含本批三卷和 phase2-b09 两卷），余 12 份在 `phase2-b05`、`phase2-b07`、`phase2-b10`。这 12 份中 5 卷原为 complete、7 卷原为 blocked；原 blocked 继续保持不放行。
+
 ### phase2-b09：1985 广东文、理科四版本正式重编（2026-10-21）
 
 - 已完成：对 `gk-1985-regular-guangdong-arts` 与 `gk-1985-regular-guangdong-science` 执行 `python3 -B tools/build_projects.py build --formal --batch phase2-b09`。两卷的试题版、解析版、简答版、印刷版均重建成功，构建器报告 `2 待审、0 失败`；回执均为 `compiled_pending_review`。PDF 页数分别为文科 4/19/7/14、理科 5/23/8/16。
