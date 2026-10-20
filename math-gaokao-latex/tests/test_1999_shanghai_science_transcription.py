@@ -50,12 +50,20 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
         self.assertIn("1999 年第 4 期", text)
         self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")
 
-    def test_question_figures_are_marked_for_vector_redraw_not_embedded(self):
+    def test_question_figures_link_to_vector_sources_not_embedded_rasters(self):
         text = QUESTIONS.read_text(encoding="utf-8")
         figure_list = FIGURE_LIST.read_text(encoding="utf-8")
-        self.assertIn("1999_shanghai_science_q20_pyramid.tex", figure_list)
-        self.assertIn("1999_shanghai_science_q21_canal.tex", figure_list)
-        self.assertIn("待矢量重绘", text)
+        source_record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        for name in ("1999_shanghai_science_q20_pyramid.tex", "1999_shanghai_science_q21_canal.tex"):
+            with self.subTest(figure=name):
+                self.assertIn(f"](figures/{name})", text)
+                self.assertIn(name, figure_list)
+        self.assertEqual(
+            [figure["status"] for figure in source_record["figures"]],
+            ["vector-draft-rendered-pending-independent-review"] * 2,
+        )
+        self.assertNotIn("待矢量重绘", text)
+        self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")
 
     def test_fixed_source_fingerprint_and_unverified_boundary(self):
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))

@@ -1,0 +1,28 @@
+% 1999 上海理科 Q21：保留水沟柱体与抛物线横截面的示意关系，不表示尺度。
+\begin{tikzpicture}[line join=round, line cap=round, scale=0.82]
+  \tikzset{visible edge/.style={draw=black, line width=0.75pt}, hidden edge/.style={draw=black, dashed, line width=0.65pt}}
+  \coordinate (A)  at (0,0);
+  \coordinate (B)  at (1.85,-0.55);
+  \coordinate (O)  at (0.70,-1.75);
+  \coordinate (A2) at (3.35,0.95);
+  \coordinate (B2) at (5.20,0.35);
+  \coordinate (O2) at (4.05,-1.10);
+
+  % Near parabolic cross-section and prism length edges.
+  \draw[visible edge] (A) .. controls (0.10,-0.90) and (0.33,-1.75) .. (O);
+  \draw[visible edge] (O) .. controls (1.18,-1.75) and (1.68,-0.20) .. (B);
+  \draw[visible edge] (A)--(A2);
+  \draw[visible edge] (B)--(B2);
+  \draw[visible edge] (O)--(O2);
+
+  % Chord and far profile are hidden behind the near section.
+  \draw[hidden edge] (A)--(B);
+  \draw[hidden edge] (A2) .. controls (3.55,0.05) and (3.72,-1.10) .. (O2);
+  \draw[hidden edge] (O2) .. controls (4.40,-1.10) and (4.90,-0.20) .. (B2);
+  \draw[hidden edge] (A2)--(B2);
+
+  \node[left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (O) {$O$};
+  \node[below=12mm] at (2.80,-1.75) {示意图，不按比例};
+\end{tikzpicture}
