@@ -4,6 +4,20 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b06：2023 三卷现行 attempt 视觉复核预检（2026-10-21）
+
+- 已完成：承接已批准的 2023 全国甲卷理科、全国乙卷文科与理科批次。现行 attempt 为 `4b32c3df-4831-4a11-8774-62035e8d0e63`、`9c4a4d8b-e719-41d4-9d84-f8643f0a0439`、`f5d19751-d294-4dcf-84c3-f987dcc1d7e5`；四版共 152 页。当前 build receipt 均成功且无编译错误、缺字、Overfull 或未解析引用；source manifest 校验通过，provenance `check-batch` 为 3 卷 OK。
+- 复核状态：旧正式 review receipt 因 build attempt、生成输入树、工具链/视觉工具指纹及四版 PDF 变化而 stale，不能复用为当前验收。已存在 12 个现行 attempt 工作项，全部匹配当前 build attempt，覆盖 152 页 × 8 项 = 1,216 项且均为 pending；未重新 prepare、未覆盖工作项，也未改旧回执。批次 build receipt validator 为 3 卷 pending、0 stale/failed/invalid/missing。
+- 修改文件：仅本进度；没有重做转录、OCR 或构建，没有改题目、图稿、答案、正式 receipts 或 manifest。工作树仍为 `仓库根`、分支 `feat/gaokao-phase0`；`docs/design/` 用户改动未触碰，Main 未读取或写入。
+- 成本/下一步：本阶段只做本地 manifest/receipt/provenance/工作项核验；无 OCR、模型 API 或 PDF 重编，Token 与费用不可见，记未知。下一步按 12 个现行工作项逐页目视检查 152 页，并以原扫描只对可疑题面/公式/图稿做定向核对；所有结果通过官方批次事务登记，不提前改回 production `complete`。
+
+### phase2-b06：2023 全国甲卷理科四版逐页视觉复核（2026-10-21）
+
+- 已完成：按当前 build attempt 对试题版 4 页、解析版 23 页、简答版 6 页、印刷版 19 页逐页复核，共 52 页、416 项检查，全部 pass、0 fail、0 pending。已复核全套页面联系表及候选/疑难页高清图；试题版和印刷版的第 3 题流程图、第 18 题棱柱图对照固定源页裁剪，标签、箭头、虚实线未见遗漏或裁切。重新检查旧 ISSUE-0993（解析版第12页）和 ISSUE-0994（第21页）：留白/续页均可接受，答案框未被孤立。印刷版第19页的尾部留白属于答案解析终页；答案区按该版本模板置于完整题面之后，不是题面泄漏。
+- 修改文件：仅本批四个忽略工作项 `.work/phase2-b06/review/{试题版,解析版,简答版,印刷版}/gk-2023-regular-national-a-science.json` 和本进度；工作项仍绑定 attempt `4b32c3df-4831-4a11-8774-62035e8d0e63`。没有改题目、答案、图稿、PDF、正式 review receipt、manifest 或 issues。
+- 验证：项目 `_validate_pages` 对四版工作项校验通过，确认为 52 页 × 8 检查 = 416 项全通过。`review_receipts.py check-batch` 仍报告三卷旧正式 review receipt 相对当前 attempt/PDF stale（退出码6）；这是本批预期的待登记状态，不能当作新工作项失败或正式通过，须等乙文、乙理完成后统一 `finalize-batch`。前置 build receipts、manifest 与 provenance 检查结果见上条预检记录，未重编。
+- 成本/剩余：只查看已存在的本地渲染页和原图裁剪；无 OCR、外部模型/API 或 PDF 重编，Token 与费用不可见、记未知。phase2-b06 仍有全国乙卷文科和理科两卷待审，共 100 页、800 项；其全部工作项完成后才能正式登记批次回执。
+
 ### phase0-b01：新版批次视觉复核通过并正式关闭（2026-10-21）
 
 - 已完成：针对分页修复后的新 PDF 完成逐页复核并正式登记。当前 attempt 覆盖 4 卷、319 页、2,552 项检查，全部通过、0 失败、0 pending；官方 `review_receipts.py finalize-batch` 返回 `FINALIZED`，`batch_status=closed`，revision 4521，`problems=[]`。新 review receipt 与当前 PDF attempt、SHA 和页数匹配；这是对旧 attempt 视觉失败回执的后续替代，不改写旧阶段事实。
