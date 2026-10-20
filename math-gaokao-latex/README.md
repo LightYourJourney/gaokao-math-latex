@@ -4,10 +4,10 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**291**；生产状态：blocked 49，compiled 3，complete 239
-- 批次总数：**157**；manifest 状态：closed 125，closed_with_blockers 29，compiled_pending_review 3
-- 正式复核门禁：FINALIZED 3，INVALID_OR_STALE 154
-- 已编译版本：1164/1164；构建回执状态：compiled_pending_review 6，succeeded 285
+- 试卷总数：**291**；生产状态：answers_verified 1，blocked 49，compiled 6，complete 235
+- 批次总数：**157**；manifest 状态：closed 124，closed_with_blockers 29，compiled_pending_review 3，provenance_verified 1
+- 正式复核门禁：FINALIZED 3，INVALID_OR_STALE 153，VISUAL_FAILED 1
+- 已编译版本：1164/1164；构建回执状态：compiled_pending_review 10，succeeded 281
 - review 回执状态：failed 3，passed 288
 - 问题总账：1114 条，未解决问题：188，阻塞完成 123。
 - 回执日志警告汇总（包含待复核回执）：Overfull 23，Underfull 52，豁免记录 75。

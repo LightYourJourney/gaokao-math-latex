@@ -62,6 +62,13 @@ class ReportFactsTest(unittest.TestCase):
         self.assertIn("manifest.csv", readme)
         self.assertIn("manifest_csv.py", readme)
 
+    def test_readme_preserves_question_ir_and_ocr_candidate_guidance(self):
+        readme = report.render_outputs(self.facts)["math-gaokao-latex/README.md"]
+        self.assertIn("### 题目级 IR 导出（增量能力）", readme)
+        self.assertIn("python3 tools/export_question_ir.py", readme)
+        self.assertIn("python3 tools/ocr_candidate_ir.py", readme)
+        self.assertIn("recognized_unverified", readme)
+
     def test_check_outputs_reports_drifted_targets(self):
         outputs = report.render_outputs(self.facts)
         with tempfile.TemporaryDirectory() as temporary:

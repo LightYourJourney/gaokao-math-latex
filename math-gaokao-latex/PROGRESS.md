@@ -4,6 +4,21 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2002 北京文科卷：Q7/Q21 定向独立复核（2026-10-20）
+
+- 已完成：另一位复核者仅依据固定 PDF（source ID `src-90f44916d96acc13cf570b10db11e0afffadc48c9f7139ba8411097f30f37449`，SHA-256 `65899ebe3859b55da2aa318d2ba79541675870468a89124240062b3e3d48c089`）盲核此前推导有误的两题，不读取答案/解析稿。Q7 由 $(1+i)^2=2i$、$(1+i)^4=-4$ 得答案 D（16）；Q21 重算 $G,F,H$ 坐标并验证 $H=3G-2F$，再由 $F_y=H_y$ 得 $3(b-1/2)^2+c^2=3/4$。排除 $c=0$ 导致的 $(0,0),(1,0)$ 退化三角形，以及 $(1/2,\pm\sqrt3/2)$ 正三角形处 $F=H$、直线 $FH$ 不确定。与现有解析及答案要点一致。
+- 修改文件：仅本 `PROGRESS.md`；题面、答案/解析、来源 JSON、`official_answer`、`paper_id` 和正式产物均未改。
+- 验证：指定 PDF 的 SHA-256 与来源 JSON 相同；既有题面/答案定向测试 `test_2002_beijing_arts_*.py` 13/13 通过（复核后内容未变）；`git diff --check` 随本阶段进度更新复验。
+- 成本：复用同一固定 PDF，无 OCR、无网页或商业 API；完成 Q7/Q21 两题局部独立推导，Codex/subagent Token 与费用不可观测，记未知。
+- 剩余/下一步：本次仅补核两道曾出错的题，不等于对 Q1–Q22 全部解析完成正式数学认证；答案/解析仍为 `not-verified`，`official_answer=null`、`paper_id=null`，来源出版物/版次未认证，正式构建与逐页校样未完成。继续按正式复核门禁处理尚未闭合项，不重复题面转录、OCR 或已完成的整卷盲解。
+
+### 全量报告与状态快照同步（2026-10-20）
+
+- 已完成：`report.py check --all` 发现六份汇总文档与当前 manifest/回执不一致；首轮事务式渲染虽同步了状态，却暴露 README 生成器会删除既有 IR/OCR 操作指南。已修复 `render_outputs()` 并加回归测试，再次事务渲染后报告与账本一致。新快照记录来源 775、试卷 291；生产状态为 `answers_verified` 1、`blocked` 49、`compiled` 6、`complete` 235；正式复核门禁为 `FINALIZED` 3、`INVALID_OR_STALE` 153、`VISUAL_FAILED` 1。没有改试卷、manifest、回执或构建产物。
+- 修改文件：`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/reports/baseline.md`、`math-gaokao-latex/tools/report.py`、`math-gaokao-latex/tests/test_report.py`，以及本 `PROGRESS.md`。
+- 验证：新增测试先按预期失败（12 项中 1 项失败，锁定 IR/OCR 指南丢失），实现后 `python3 -m unittest discover -s tests -p 'test_report.py'` 12/12 通过；`python3 tools/report.py render --all --manifest source-manifest.json --issues missing-issues.md` 成功事务写入六份输出；随后 `python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 通过，README 保留 `题目级 IR 导出` 与 `recognized_unverified` 安全说明；`git diff --check` 通过。渲染/校验各约 22 秒。未运行 OCR、LaTeX 构建或外部 API；Codex Token 和费用不可观测，记未知。
+- 剩余/下一步：报告已与账本一致，但不代表题库验收完成；仍有 49 套生产状态 `blocked`、153 份正式复核回执 `INVALID_OR_STALE` 及 1 份 `VISUAL_FAILED`。2002 北京文科卷 Q7/Q21 定向独立复核已完成且与现有解析一致；该卷整体数学状态仍为 `not-verified`，其余来源认证、正式构建及逐页校样门禁照旧。继续逐项处理未完成卷级门禁，不重做已完成转录、OCR或复核。
+
 ### 2004 春季安徽理科卷：非官方答案/解析首稿与独立盲解交叉核对（2026-10-20）
 
 - 已完成：基于已盲核的 Q1–Q22 题面，新增全卷非官方答案要点和逐题解析首稿；固定来源 PDF 无答案页，`official_answer=null`、`paper_id` 未绑定。第二位解题者只读题面、不看答案稿，独立盲解 22 题；全部最终结论与主会话一致。重点复核了 Q3 离心率、Q5 折叠体积、Q7 线面方向角、Q10 对称直线、Q16 常数项、Q17 对数参数分类、Q18 正项递推、Q19 轨迹、Q20 两问几何、Q21 不放回抽样分布及 Q22 顶点法线分支。Q21 另以“两个次品位置在十个位置中均匀选取”的组合模型复算概率分布和期望；Q22 将顶点处竖直法线单独列出，避免有限斜率公式漏解。
