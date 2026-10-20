@@ -12,6 +12,13 @@
 - 成本与边界：未 OCR、未调用 LLM/外部 API；本阶段实际 Token/费用不可见，记未知。验证使用本机测试与当前规范源码，不改变题面内容、既有 provenance/build/review receipt、manifest 或 production state。
 - 剩余/下一步：对 1985 广东理科按授权流程正式重编四个版本并核查 Q1 图页与 Q34/Q35 分页；之后重新准备并逐页复核该卷四版本共 52 页，通过事务更新 review/batch 状态。整卷仍为 `blocked`，不得提前放行。
 
+### 1985 广东理科：分页元数据修复后的正式四版构建（2026-10-21）
+
+- 已完成：仅对 `gk-1985-regular-guangdong-science` 执行 `python3 -B tools/build_projects.py build --formal --paper gk-1985-regular-guangdong-science --json`；四版均成功，退出码 0，构建器报告 `COMPILED_PENDING_REVIEW`、0 失败。试题/解析/简答/印刷版页数为 5/23/8/16，共 52 页。四版 build receipt 均无编译错误、缺字、Overfull 或未定义引用。
+- 修改文件：本卷 `receipts/build.json`、`source-manifest.json`、本进度文件；PDF 留在忽略目录 `1985_广东卷_理工农医类/build/`。未重编同批文科卷，未改题面、答案、解析、provenance 或 production state。
+- 验证与成本：`provenance.py check-batch --batch phase2-b09` 返回 `OK：2 卷`；构建约 22 秒。没有 OCR、LLM 或外部 API 调用；Token/费用不可见，记未知。当前 build attempt 为 `638a73af-6536-44b3-aef4-a5cf73550829`。
+- 剩余/下一步：现有批次视觉工作项共 96 页且全部检查仍为 pending，其中理科四版工作项绑定旧 build attempt；需先保留旧工作项并为新 build 准备当前回执，再完成 `phase2-b09` 批次级复核。批次包含广东文、理两卷，正式登记需要完整覆盖两卷四版 96 页；理科重点复核 Q1 图页及 Q34/Q35 分页。两卷生产状态不得因构建成功而从原有状态自动放行。
+
 ### 从 main 工作树恢复 1986 广东理科 b59 独立审计素材（2026-10-21）
 
 - 已完成：把 main 工作树中唯一缺于 feat、且仍直接支撑 b59 未决题目/答案核对的 3 份独立审计 Markdown（第一卷 1–12、13–25、第二卷第二题）和 4 张对应源页渲染图复制到本工作树 `.work/phase2-b59/answer-audit/`。main 原件保留不动。2017 全国Ⅱ的 8 份草稿在 feat 已逐字节相同；1977 上海草稿已被 feat 正式成果取代；2015 全国Ⅱ说明笔记在 feat 有更完整版本；其余 main 遗留为已替代草稿或构建/渲染中间件，未复制。
@@ -41,7 +48,7 @@
 - 修改文件：`1985/1985_数学真题_广东理工农医类_试题.md`、本卷 `figures/f1985_guangdong_science_v1_q1_graphs.tex`、`tools/generate_projects.py`、`tests/test_generate_projects.py`、新增 `tests/test_1985_guangdong_science_layout.py` 及本进度文件。
 - 验证：先运行新增回归，旧源码下如预期出现锚点错误、局部指令缺失和 Q34/Q35 分居第 4/5 页；修复后 `WrapBoundaryTests` + 本卷源稿/真实 PDF 回归共 11 项通过（含临时试题版实编并验证 Q34/Q35 同页）。`test_generate_projects`、`test_solution_sources`、`test_layout_policy` 合计 226 项通过；`git diff --check` 通过。还未正式重建四版本或检查正式 PDF 的改动页。
 - 成本与边界：测试临时 PDF 仅在系统 `/tmp` 生成；未 OCR、未调用 LLM/外部 API；Token 和费用不可见，记未知。此阶段未改 provenance、build/review receipt、manifest 或生产状态。
-- 剩余/下一步：分页控制注释现已从题面正文和 provenance 哈希中剥离，Q35 的题面哈希失效已修复。按上方独立阶段回执，继续单卷正式重编四版；渲染并复核 Q1 图页和 Q34/Q35 分页，确认后重新准备整卷 52 页视觉复核。整卷仍为 `blocked`，旧 review receipt 不得放行。
+- 剩余/下一步：分页控制注释现已从题面正文和 provenance 哈希中剥离，Q35 的题面哈希失效已修复；正式四版构建见上方独立回执。批次视觉复核包含广东文、理两卷共 96 页，理科重点核查 Q1 图页及 Q34/Q35 分页；整卷仍为 `blocked`，旧 review receipt 不得放行。
 
 ### 构建回执区分生成器源码与物化输入（2026-10-21）
 
