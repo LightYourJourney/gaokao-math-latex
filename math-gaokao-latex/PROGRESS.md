@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ/Ⅱ文理四卷正式重编与复核工作项刷新（2026-10-21）
+
+- 已完成：四卷原 build receipt 均因工具链指纹变化失效；执行 `python3 -B tools/build_projects.py build --formal --batch phase2-b05` 后，四卷四版本全部重编成功（`COMPILED_PENDING_REVIEW：4 待审、0 失败`）。原来已 complete 的 2016 全国Ⅱ文科现按正式状态迁移为 `compiled`，批次为 `compiled_pending_review`；其余三卷原有内容/来源 blockers 继续保留，不因重编放行为完成。
+- 复核工作项：确认旧 `.work/phase2-b05/review/` 中16份已填写工作项分属4个旧 build attempt；为防止覆盖旧视觉记录，将其可恢复移至 `.work/phase2-b05/review-stale-2026-10-21-before-toolchain-refresh/`，未删除。随后为当前 attempt 新建16份工作项，覆盖四版本共219页、1,752个检查格，均从 pending 开始。当前正式 review receipt 仍绑定旧 attempt，`check-batch` 报 `INVALID_OR_STALE` 是预期状态；尚未登记视觉通过。
+- 修改文件：四卷 `receipts/build.json`、`source-manifest.json` 与本进度文件。PDF 和复核工作项均在项目忽略目录；没有改题面、答案/解析源稿或图稿。旧工作项保留在上述归档目录。
+- 验证：正式构建退出0；build receipt validator 为4卷、0 stale/failed/missing、4 pending；`provenance.py check-batch` 为4卷 OK。构建回执显示16版均编译成功，无错误、未定义引用或缺字；另有4条 Overfull（全国Ⅰ文科印刷版0.85pt与6.27pt、全国Ⅰ理科解析版48.11pt、简答版18.30pt）及1条 Underfull，须结合当前PDF逐页目检处置。仅为定位告警查看了全国Ⅰ理科解析版第15页与简答版第8页的300dpi渲染；这不是正式逐页复核，未填工作项。并行复核派发被 agent thread limit 拒绝，未收到可用代理结果。
+- 成本：正式构建约38秒，工作项准备约5秒；0次OCR/聊天模型/API调用。Codex Token、缓存Token和费用不可见，记未知。
+- 剩余/下一步：完成219页逐页视觉校样，优先核对上述告警页，必要时仅作不改变数学内容的局部版式修复并重编；全部检查完成后再走批次 finalizer、全量门禁和报告更新。三卷既有 blocker 继续阻止 complete。
+
 ### 1998 上海文科：Q13/Q15 当前题面独立盲核（2026-10-21）
 
 - 已完成：只读复核者仅收到当前转录的两道题，未见答案、解析或历史记录。Q13由$0<a<1$得$y>0$当且仅当$-5<x<-4$，$y<0$当且仅当$x>-4$；图象经过第二、三、四象限而不过第一象限，选A。Q15由$(x-6)(x+1)>0$得$A=(-\infty,-1)\cup(6,\infty)$、$\bar A=[-1,6]$；$11\in B$给出$a>6$，因此$B=(5-a,5+a)$覆盖$[-1,6]$，D为真；A因两集合皆有界而不等于$\mathbb R$，B可取$x=5$反例，C可取$x=11$反例。两题与当前稿件结论一致，无题面歧义。
