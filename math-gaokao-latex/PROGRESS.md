@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海文科：Q15 题面/印载答案冲突登记（2026-10-20）
+
+- 已完成：复看忽略目录中既有的题面第2页与答案表页图。题面印刷页115给出 $A=\{x\mid x^2-5x-6>0\}$、$B=\{x\mid |x-5|<a\}$、$a$为常数且$1\in B$；卷内答案及评分标准表第15题印载D。由条件仅得$a>4$：$a=5$时四项皆不成立；$a=7$时$B=(-2,12)$覆盖$\mathbb R\setminus A=[-1,6]$，A、D同时成立。保留原题及卷内答案，不推测勘误。
+- 登记：新增来源级 `ISSUE-1115`（`source-mismatch`、open、blocks_completion），fingerprint `264f5ed68eae8a3e5bbea694ace76bc5e581fd5c06f6943ec53f05fd048aa2ea`。在 source manifest 的对应来源项关联该 issue；来源仍为 `ready`，`paper_id` 继续为 null，未伪造 canonical paper 身份或官方答案。
+- 修改文件：`1998_上海卷_文科/答案要点草稿.md`、`tests/test_1998_shanghai_arts_solutions.py`、`missing-issues.md`、`source-manifest.json`、`manifest.csv`、`docs/source-inventory.md`、`report.md`、`README_数学.md`、两份项目 README、`reports/baseline.md`及本进度。刷新 `manifest.csv` 时一并同步了原已陈旧的1990、2017、2018三条投影行。
+- 验证：上海文科解答定向测试8/8、issue ledger 12/12、source manifest 55/55、manifest CSV 2/2通过；`report.py check --all`通过；`manifest_csv.py --check`通过（775行）；`git diff --check`通过。六个全量报告目标由生成器事务写入并回读校验。
+- 成本与证据边界：复用两张既有缓存页图，未重新OCR、渲染或物化原PDF，未重算SHA；图像与固定来源 `src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7` / SHA-256 `c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848` 的关联依据此前进度回执。无外部API调用；Codex/Agent Token与费用不可见，记未知。
+- 剩余/下一步：`ISSUE-1115`保持阻塞，需取得可回溯同版勘误或可信异版，不能以当前扫描件自证答案正确。1998上海文科整卷仍未完成来源版次认证、Q19角度约定裁定、Q20/Q22逐步核验、其余解析盲核、正式登记、四版本构建与逐页校样；继续保持pending/needs-review。
+
 ### 1998 上海文科：Q6 流程图矢量拓扑独立核验（2026-10-20）
 
 - 已完成：独立复核者只看原卷第1页高分辨率页图，读出10条有向边及工时：1→2(a,2)、1→3(m,0)、2→5(c,3)、3→4(b,3)、4→5(n,0虚箭头)、4→6(d,1)、5→6(p,0虚箭头)、5→7(e,3)、6→7(f,4)、7→8(g,2)。其首轮对n/p字形标不确定；主会话复用忽略目录中的既有`page-hi-1.png`，放大图确认两字母分别为n、p。逐项与TikZ图源和当前测试断言比对，拓扑、方向、线型、活动字母和权重一致。按此网络最长路径为1→2→5→6→7→8，工时11天。
