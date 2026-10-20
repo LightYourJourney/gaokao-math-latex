@@ -18,6 +18,13 @@
 - 验证：项目 `_validate_pages` 对四版工作项校验通过，确认为 52 页 × 8 检查 = 416 项全通过。`review_receipts.py check-batch` 仍报告三卷旧正式 review receipt 相对当前 attempt/PDF stale（退出码6）；这是本批预期的待登记状态，不能当作新工作项失败或正式通过，须等乙文、乙理完成后统一 `finalize-batch`。前置 build receipts、manifest 与 provenance 检查结果见上条预检记录，未重编。
 - 成本/剩余：只查看已存在的本地渲染页和原图裁剪；无 OCR、外部模型/API 或 PDF 重编，Token 与费用不可见、记未知。phase2-b06 仍有全国乙卷文科和理科两卷待审，共 100 页、800 项；其全部工作项完成后才能正式登记批次回执。
 
+### phase2-b06：2023 全国乙卷文科四版逐页视觉复核（2026-10-21）
+
+- 已完成：当前 attempt `9c4a4d8b-e719-41d4-9d84-f8643f0a0439` 的试题版 4 页、解析版 21 页、简答版 6 页、印刷版 19 页均逐页检查，共 50 页、400 项检查，全部 pass、0 fail、0 pending。第3题网格三视图和第19题棱锥图与固定源页裁剪对照，标签、网格、实虚线完整；统计题数据表、公式及分页清晰。候选页已高清复看。印刷版前4页为完整题面，第5页起进入模板规定的答案解析区；第19页为包含完整Q23解析的尾页，留白不属于空白插页。
+- 修改文件：仅 `.work/phase2-b06/review/{试题版,解析版,简答版,印刷版}/gk-2023-regular-national-b-arts.json` 四个忽略工作项和本进度；没有改源题、答案、图稿、PDF、正式 receipts、manifest 或 issues。构建回执告警列表为空。
+- 验证：项目 `_validate_pages` 校验四版工作项通过，50页×8项=400项均通过；未重编，前置 attempt/receipt 状态见预检记录。
+- 成本/剩余：本地 Poppler 渲染与查看现行PDF/源图，无 OCR、外部模型/API；Codex Token与费用不可见，记未知。phase2-b06 仅剩 2023 全国乙卷理科 50 页、400项待审；全批正式回执仍需三卷工作项齐全后统一登记。
+
 ### phase0-b01：新版批次视觉复核通过并正式关闭（2026-10-21）
 
 - 已完成：针对分页修复后的新 PDF 完成逐页复核并正式登记。当前 attempt 覆盖 4 卷、319 页、2,552 项检查，全部通过、0 失败、0 pending；官方 `review_receipts.py finalize-batch` 返回 `FINALIZED`，`batch_status=closed`，revision 4521，`problems=[]`。新 review receipt 与当前 PDF attempt、SHA 和页数匹配；这是对旧 attempt 视觉失败回执的后续替代，不改写旧阶段事实。
