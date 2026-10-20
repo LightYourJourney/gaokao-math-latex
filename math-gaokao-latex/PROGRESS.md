@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1987 / 1990 广东理科：公开题图恢复线索核验（2026-10-21）
+
+- 已完成：在 DxAThing 发布标签 `20261004` 找到明确对应现有阻塞项的材料：release note 声称补回 1987 广东理科第 22 题 A—D 原选项图和 1990 广东理科第 12 题原图；固定 tag tree 中存在四张 `q22_opt*.png` 与 `q12_fig1.png`。通过 GitHub Contents API 取回五张图至忽略缓存 `.work/gaokao-upstream-figures.SeO5GL/` 并目视检查。1987 图组选项 C 与本项目现有独立代数推导的两条开射线相符；1990 图显示带 $x=11\pi/12$ 标记的曲线，但尚未与本地第 12 题题干/答案逐项核对。
+- 来源边界：社区仓明确称正文主要基于公开版本，release note 未给出这五张图片各自的原始出版页或扫描来源；图像虽公开可取且被称为“原图”，现阶段仍是待核的二手来源线索，不足以单独关闭 ISSUE-0784、ISSUE-1070 或 ISSUE-1113。未将 PNG 加入项目、未用它们冒充最终 TikZ 图稿，也未更改题目/答案、issues、来源绑定、manifest 或任何构建/视觉回执。
+- 修改文件：仅本进度文件；缓存图的 SHA-256：A `332ceef209fde960570eccc0a293514a437d5e212366195cdfd3878565f83128`、B `88305cfbc7b8bd5a83f26d40b0a5da17edf058af81830689086864c8d02391be`、C `faecebc8822b7ef31722016f88733fc7f7c359b9a1ca3eff0f7564a065d7abb8`、D `e8607e03dcff9b10fb88c3dad075a5facd6969ddc305b70cb3113055f1355dfd`、1990 图 `eb9579f512fc8a04dd68354b50614048499be55457879db2e3295e9bbee05613`。候选出处：[发布说明](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases)、[1987 Q22 图稿目录](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/tree/20261004/img/1987/guangdong_science)、[1990 Q12 图](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/blob/20261004/img/1990/guangdong_science/q12_fig1.png)。
+- 验证与成本：本地 manifest/issues 与候选题号对上；release 页面、固定 tag 文件树/API 元数据和图像均已检查；没有 OCR、PDF 重渲染、聊天模型或付费 API。Codex Token 与费用不可见，记未知。候选图只保存在 ignored `.work/`，不入库。
+- 剩余/下一步：先追查社区图像的具体来源或找到独立同版页，再将 1987 四个选项与 1990 Q12 图分别对照固定源/题面；来源足够时按项目规范重绘 TikZ、更新规范 Markdown 与登记问题，并经官方 provenance/build/review 工具重走受影响门禁。否则保持 blockers，不凭模型或 PNG 自由重建。
+
 ### 1986 广东文理卷：社区 LaTeX 候选源核查（2026-10-21）
 
 - 已完成：检查 DxAThing 社区整理仓在发布标签 `20261004` 下的 1986 广东文史/理工农医 LaTeX 与文件树。两份正文确实覆盖 1986 广东卷，但该仓 README 说明内容主要整理自 deekur/gaokaomath 等公开资料，并非原始出版/考试来源；该标签下 `img_repaint/1986/` 无文件，原始题图目录仅见文史 `q37_fig1.png`、理科 `q2_figures.png` 与 `q39_solution_fig1.png`，没有能核验当前 ISSUE-0777/0778 所缺 A—E 图的独立素材。因此它不能作为同版源图或独立版本证据，不能据此补画/登记选项图。
