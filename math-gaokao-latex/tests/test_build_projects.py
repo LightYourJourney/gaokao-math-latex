@@ -10,7 +10,9 @@
 
 1. **依赖闭包**——两遍 `.fls` 的仓库内 INPUT 并集 + `generation_input_tree`
    （规范 Markdown / figure / index / 模板 / 四壳 / 全部生成器源码）+ 该卷 manifest
-   投影 + 工具链指纹，任一变化即 stale；manifest 的运行态字段变化则**不得**使其 stale；
+   投影 + 工具链指纹。生成器源码保留作溯源记录，但源码变化单独不使构建 stale；现场
+   生成物仍须由 provenance 探针重算并逐字节匹配。实际生成输入、依赖或工具链变化仍 stale；
+   manifest 的运行态字段变化则**不得**使其 stale；
 2. **两阶段回执**——formal build 先事务写 `running`，构建后第二事务写结果；中断留在
    `running` 的回执永远不能被当作 final；
 3. **状态机**——`running → failed` / `running → compiled_pending_review → succeeded`，
@@ -26,6 +28,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
@@ -872,14 +875,29 @@ class ReceiptCurrencyTests(unittest.TestCase):
         self.fixture.write(paper_entry()["source_files"]["questions"], "# 改了\n")
         self.assertFalse(self.currency()[0])
 
-    def test_a_changed_generator_makes_it_stale(self):
+    def test_a_changed_generator_with_unchanged_outputs_keeps_receipt_current(self):
+        edition_tex = self.fixture.path(
+            "%s/%s/%s.tex" % (PROJECT_RELATIVE, PROJECT_DIR, EDITIONS[0])
+        )
+        output_before = file_sha256(edition_tex)
         for relative in GENERATOR_SOURCES:
             with self.subTest(relative=relative):
                 original = self.fixture.read(relative)
                 self.fixture.write(relative, original + "# 改了\n")
-                self.assertFalse(self.currency()[0])
+                self.assertEqual(file_sha256(edition_tex), output_before)
+                current, reasons = self.currency()
+                self.assertTrue(current, reasons)
                 self.fixture.write(relative, original)
                 self.assertTrue(self.currency()[0])
+
+    def test_a_changed_generated_tex_makes_the_receipt_stale(self):
+        relative = "%s/%s/%s.tex" % (
+            PROJECT_RELATIVE, PROJECT_DIR, EDITIONS[0]
+        )
+        self.fixture.write(relative, "%% 生成后的 TeX 已变化\n")
+        current, reasons = self.currency()
+        self.assertFalse(current)
+        self.assertIn("生成输入树变化", reasons)
 
     def test_an_unrelated_index_entry_does_not_invalidate_the_receipt(self):
         target = self.fixture.path("%s/index.json" % PROJECT_RELATIVE)
@@ -1646,12 +1664,15 @@ class CleanupLegacyTests(unittest.TestCase):
             for edition in EDITIONS for suffix in self.LEGACY_SUFFIXES
         ]
 
-    def cleanup(self, execute=False, toolchain=None):
+    def cleanup(self, execute=False, toolchain=None, artifacts_state="current"):
         """cleanup_legacy 是唯一不可逆的删除，工具链维度必须一并当前。"""
-        return cleanup_legacy(
-            self.fixture.root, self.fixture.manifest(), execute=execute,
-            toolchain=toolchain if toolchain is not None else self.fixture.toolchain(),
-        )
+        with patch("provenance.default_artifacts_state", return_value=artifacts_state):
+            return cleanup_legacy(
+                self.fixture.root, self.fixture.manifest(), execute=execute,
+                toolchain=(
+                    toolchain if toolchain is not None else self.fixture.toolchain()
+                ),
+            )
 
     def test_a_complete_evidence_chain_removes_exactly_the_legacy_artifacts(self):
         self.prepare()
@@ -1684,6 +1705,15 @@ class CleanupLegacyTests(unittest.TestCase):
         before = self.fixture.snapshot()
         with self.assertRaises(BuildError):
             self.cleanup(execute=True)
+        self.assertEqual(self.fixture.snapshot(), before)
+
+    def test_stale_generated_artifacts_block_legacy_cleanup_after_generator_change(self):
+        self.prepare()
+        generator = GENERATOR_SOURCES[0]
+        self.fixture.write(generator, self.fixture.read(generator) + "# 改了\n")
+        before = self.fixture.snapshot()
+        with self.assertRaisesRegex(BuildError, "生成物"):
+            self.cleanup(execute=True, artifacts_state="stale")
         self.assertEqual(self.fixture.snapshot(), before)
 
     def test_a_missing_review_or_provenance_removes_nothing(self):

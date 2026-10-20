@@ -275,6 +275,15 @@ def generation_input_tree(
     return file_tree(root, generation_input_paths(manifest, paper_id))
 
 
+def _build_input_records(tree: Mapping[str, Any]) -> List[Dict[str, str]]:
+    """构建回执比较的物化输入；生成器源码另作溯源，不是 PDF 的直接输入。"""
+    generator_sources = set(GENERATOR_SOURCES)
+    return [
+        item for item in tree["files"]
+        if item["path"] not in generator_sources
+    ]
+
+
 # ---------------------------------------------------------------- .fls 与日志
 
 
@@ -756,6 +765,10 @@ def receipt_currency(
     TeX Live 的机器上旧回执照样绿。调用方一律显式传 toolchain；解析不出工具链时传一个
     与任何真实指纹都不相等的哨兵（见 `provenance.UNRESOLVED_TOOLCHAIN`），让回执当场
     降级为 stale——绝不要靠传 None 蒙混过去。默认值保留只为兼容既有调用点。
+
+    生成器源码指纹仍保存在 generation_input_tree 中供溯源和 running attempt 比较；
+    但源码不是已生成 PDF 的直接输入。生成器对产物的影响由 provenance 探针现场重算并逐
+    字节比较；因此完成态回执不会仅因生成器源码哈希变化而 stale，任何物化输入变化仍 stale。
     """
     reasons: List[str] = []
     if receipt["status"] == "running":
@@ -773,7 +786,9 @@ def receipt_currency(
     except BuildError as error:
         reasons.append(f"生成输入缺失：{error}")
     else:
-        if tree["tree_sha256"] != receipt["generation_input_tree"]["tree_sha256"]:
+        if _build_input_records(tree) != _build_input_records(
+            receipt["generation_input_tree"]
+        ):
             reasons.append("生成输入树变化")
 
     for item in receipt["dependency_tree"]["files"]:
@@ -1006,7 +1021,7 @@ def _legacy_evidence(
     paper_id: str,
     toolchain: Mapping[str, Any],
 ) -> None:
-    """删除前的证据链：provenance + review(passed) + build(succeeded 且**四条证据**当前)。
+    """删除前的共同证据链：provenance + review(passed) + 当前 build。
 
     工具链是必传的，不是可选的：这是全流程唯一不可逆的删除，换过 TeX Live 之后那份
     succeeded 回执描述的已经不是这台机器能复现的产物，此时删掉旧编译产物就是销毁唯一
@@ -1017,6 +1032,7 @@ def _legacy_evidence(
     provenance = Path(root) / project / PROVENANCE_RELATIVE
     if not provenance.is_file():
         raise BuildError(f"{paper_id}: 缺 provenance，零删除")
+
     review_path = Path(root) / project / REVIEW_RELATIVE
     if not review_path.is_file():
         raise BuildError(f"{paper_id}: 缺 review 回执，零删除")
@@ -1040,6 +1056,17 @@ def _legacy_evidence(
         raise BuildError(f"{paper_id}: build 回执已失效（{reasons}），零删除")
 
 
+def _require_current_generated_artifacts(
+    root: Path, manifest: Mapping[str, Any], paper_id: str
+) -> None:
+    """不可逆 legacy 清理额外要求当前生成物；中间文件清理不调用本门禁。"""
+    # Deliberately local: provenance imports this module for build receipt helpers.
+    from provenance import default_artifacts_state
+    artifact_state = default_artifacts_state(root, manifest, paper_id)
+    if artifact_state != "current":
+        raise BuildError(f"{paper_id}: 生成物状态是 {artifact_state}，零删除")
+
+
 def cleanup_legacy(
     root: Path,
     manifest: Mapping[str, Any],
@@ -1058,6 +1085,7 @@ def cleanup_legacy(
     for paper in manifest.get("papers", []):
         paper_id = paper["paper_id"]
         _legacy_evidence(root, manifest, paper_id, chain)
+        _require_current_generated_artifacts(root, manifest, paper_id)
         for edition in EDITIONS:
             for suffix in LEGACY_SUFFIXES:
                 relative = _assert_safe_relative(
@@ -1525,9 +1553,10 @@ def validate_receipts(
     require_current_inputs: bool = False,
     search_path: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """只读：逐卷重算**四条证据**（投影、生成输入树、依赖闭包、工具链）与 PDF；不写盘。
+    """只读：逐卷重算投影、物化生成输入、依赖闭包、工具链与 PDF；不写盘。
 
-    四条并列、没有开关：换了 TeX Live 的机器上旧回执必须当场 stale。
+    生成器源码指纹仍留在输入树供溯源，但不会单独使 PDF 构建回执 stale；生成物是否与
+    当前生成器结果一致由 provenance 探针单独检查。换了 TeX Live 的机器上旧回执必须 stale。
     `require_current_inputs` 只是显式声明（Interfaces 冻结了这个参数的存在），
     语义已并入默认行为，传不传结果一致。
     """

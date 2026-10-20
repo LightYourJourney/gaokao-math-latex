@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 构建回执区分生成器源码与物化输入（2026-10-21）
+
+- 已完成：`generation_input_tree` 仍完整记录全部生成器源码、模板、四个物化 `.tex` 壳、图稿和规范 Markdown；完成态 build currency 比较时仅忽略 `GENERATOR_SOURCES` 的内容哈希，其余路径与哈希仍逐项比较。生成器源码变化但生成结果字节不变，不再单独使 PDF 回执 stale；真实生成物当前性仍由 provenance 的纯函数重算逐字节验证。`running` 回执仍比较完整树，生成器变化会开启新 attempt。
+- 安全边界：不可逆的 `cleanup_legacy` 另外调用 `default_artifacts_state`；生成物不是 current 时零删除。`clean_build_intermediates` 不删除旧 PDF 对照物，继续沿用原有回执门禁。
+- 修改文件：`tools/build_projects.py`、`tests/test_build_projects.py`、本 `PROGRESS.md`。
+- 验证：新回归先在旧逻辑下因六个生成器指纹均变化而失败，修复后 `ReceiptCurrencyTests` 14/14；清理门禁修复后 `CleanupLegacyTests` + `CleanBuildIntermediatesTests` 15/15。最终全套 `python3 -B -m unittest discover -s tests` 为 1587 项、1 失败、13 跳过；唯一失败 `LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，其 13 项全部是尚未刷新正式构建/批次状态的现场差异。只读 `check-all` 核验 291 套卷，provenance 均通过，剩余恰为 8 卷 production state 与 5 个 batch state 不符；相较修复前 383 项，223 个生成器源码误报及其连带批次误报已消失。
+- 剩余真实构建：8 卷的回执失效原因为工具链指纹变化：`gk-2016-regular-national-2-arts`、`gk-2023-regular-national-a-science`、`gk-2023-regular-national-b-arts`、`gk-2023-regular-national-b-science`、`gk-2017-regular-national-2-science`、`gk-2017-regular-national-3-arts`、`gk-2015-regular-national-2-arts`、`gk-2015-regular-national-2-science`。影响批次为 `phase2-b05`、`phase2-b06`、`phase2-b07`、`phase2-b09`、`phase2-b10`；各批次回执核验共发现 17 份工具链 stale 回执，其中 8 份对应上述缓存为 complete 的卷。未重编、未改 production state / batch state、未改 review/build 回执或 PDF。
+- 成本与限制：全套测试耗时 427.3 秒；`check-all` 现场重算约 56 秒。未调用 OCR、LLM 或外部 API；实际 Token 和费用未知。
+- 下一步：对上述 8 份 complete 卷按正式构建流程重建四个版本并刷新视觉复核；核实 5 个 batch 中其他 9 份 stale 回执对应的既有状态是否准确。所有必需构建和复核完成后，再通过项目事务重算 production state / batch state；不得直接编辑 manifest，也不得提前把 stale 状态登记为 complete。
+
 ### 仓库级 provenance 缓存漂移分型（2026-10-20）
 
 - 已完成：只读运行`check_batch`并按状态转移分类：291套规范卷、383项不一致，其中231套卷缓存`complete`而现场派生为`editions_generated`；另有152个批次状态不符（123个`closed→provenance_verified`、27个`closed_with_blockers→provenance_verified`、2个`compiled_pending_review→provenance_verified`）；没有其他类型的问题。
