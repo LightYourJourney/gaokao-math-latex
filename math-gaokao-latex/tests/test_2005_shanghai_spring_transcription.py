@@ -81,23 +81,23 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn(r"a_n=0.1n", self.transcript)
         self.assertIn(r"\tan\alpha", self.transcript)
         self.assertIn("较小的根", self.transcript)
-        self.assertIn("Q1–8 为编者独立推导（非官方）", self.transcript)
+        self.assertIn("Q1–16 为编者独立推导（非官方）", self.transcript)
 
     def test_derived_answers_are_nonofficial_and_explicitly_partial(self):
-        self.assertIn("第 9–22 题待完成", self.transcript)
+        self.assertIn("第 17–22 题待完成", self.transcript)
         self.assertTrue(ANSWER_KEY.is_file(), "derived answer key must be kept separate from the source transcript")
         self.assertTrue(SOLUTION_BODY.is_file(), "derived solutions must be traceable as a separate artifact")
         answer_key = ANSWER_KEY.read_text(encoding="utf-8")
         solution_body = SOLUTION_BODY.read_text(encoding="utf-8")
         self.assertIn("非官方标准答案", answer_key)
-        self.assertIn("第 9–22 题：待完成", answer_key)
+        self.assertIn("第 17–22 题：待完成", answer_key)
         self.assertEqual(
             [int(number) for number in re.findall(r"^\*\*(\d+)．\*\*", answer_key, re.M)],
-            list(range(1, 9)),
+            list(range(1, 17)),
         )
         self.assertEqual(
             [int(number) for number in re.findall(r"^### 第 (\d+) 题$", solution_body, re.M)],
-            list(range(1, 9)),
+            list(range(1, 17)),
         )
         for expected in (
             r"**1．** $\{-1,2\}$",
@@ -108,6 +108,14 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
             r"**6．** $\dfrac1{260}$",
             r"**7．** $\dfrac56$",
             r"**8．** $11$",
+            r"**9．** ①②③",
+            r"**10．** $\{1\}$",
+            r"**11．** $[-\dfrac\pi2-\sin1,\dfrac\pi2+\sin1]$",
+            r"**12．** $110$",
+            r"**13．** D",
+            r"**14．** B",
+            r"**15．** A",
+            r"**16．** C",
         ):
             self.assertIn(expected, answer_key)
 
