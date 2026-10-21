@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
 PAPER_DIR = PROJECT / "2005_上海春季卷"
 sys.path.insert(0, str(PROJECT / "tools"))
+import make_short_answers
 import solution_sources
 
 TRANSCRIPT = ROOT / "2005/2005_数学真题_春季上海_试题.md"
@@ -76,6 +77,11 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
             "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_ellipse.tex": 2,
             "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_center_construction.tex": 1,
         })
+
+    def test_generated_source_note_has_no_unsafe_inline_identifier(self):
+        questions_tex = (PAPER_DIR / "questions.tex").read_text(encoding="utf-8")
+        self.assertNotIn(r"\texttt{paper_id}", questions_tex)
+        self.assertIn("故暂未登记为正式试卷", questions_tex)
 
     def test_all_22_questions_and_source_sections_are_present(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
@@ -163,6 +169,23 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
              (2, "弦中点轨迹为过原点的定直线"), (3, "作图见解析")),
         ]
         self.assertEqual([point.answers for point in parsed], expected)
+
+    def test_choice_quick_table_matches_questions_13_through_16(self):
+        answer_key = ANSWER_KEY.read_text(encoding="utf-8")
+        records = make_short_answers.expected_answer_records(answer_key)
+        answers = {
+            record.number: record.value
+            for record in records if record.subpart is None
+        }
+        structure = (
+            ("填空题", 1, 12),
+            ("选择题", 13, 16),
+            ("解答题", 17, 22),
+        )
+        self.assertEqual(
+            make_short_answers.cross_check_quick_table(answer_key, structure, answers),
+            (),
+        )
 
     def test_combined_markdown_is_deterministic_from_canonical_sources(self):
         questions = TRANSCRIPT.read_text(encoding="utf-8")

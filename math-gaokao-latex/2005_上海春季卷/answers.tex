@@ -1,0 +1,583 @@
+% answers.tex —— 2005 年·春季上海卷·数学 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2005/2005_数学真题_春季上海_试题.md + 2005/2005_数学真题_春季上海_解析正文.md + 2005/2005_数学真题_春季上海_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定源 PDF 不附答案。以下解析由编者依据固定题面独立推导，非官方解析；全卷仍待独立复核、正式来源绑定和编译验收。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+方程 $\lg x^2-\lg(x+2)=0$ 的解集是 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+定义域要求 $x^2>0$ 且 $x+2>0$，即 $x>-2$ 且 $x\ne0$。由对数差为零得 $\lg\dfrac{x^2}{x+2}=0$，所以 $x^2=x+2$，即 $(x-2)(x+1)=0$。两根 $x=2,-1$ 均在定义域内，故解集为 $\{-1,2\}$。
+
+\gkanswer{答案：$\{-1,2\}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+$\displaystyle\lim_{n\to\infty}\frac{n+2}{1+2+\cdots+n}=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+利用 $1+2+\cdots+n=\dfrac{n(n+1)}2$，原式化为
+
+\nopagebreak[4]
+\[
+\frac{n+2}{1+2+\cdots+n}=\frac{2(n+2)}{n(n+1)}\longrightarrow0\quad(n\to\infty)\text{。}
+\]
+
+\gkanswer{答案：$0$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+若 $\cos\alpha=\frac35$，且 $\alpha\in\left(0,\frac\pi2\right)$，则 $\tan\frac\alpha2=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $\cos\alpha=\dfrac35$ 且 $0<\alpha<\dfrac\pi2$，得 $\sin\alpha=\dfrac45$。因此
+
+\nopagebreak[4]
+\[
+\tan\frac\alpha2=\frac{\sin\alpha}{1+\cos\alpha}
+=\frac{4/5}{1+3/5}=\frac12\text{。}
+\]
+
+\gkanswer{答案：$\dfrac12$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+函数 $f(x)=-x^2\ (x\in(-\infty,-2])$ 的反函数 $f^{-1}(x)=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+原函数定义域为 $(-\infty,-2]$，值域为 $(-\infty,-4]$。由 $y=-x^2$ 且原变量 $x\leqslant-2$，反解取负支 $x=-\sqrt{-y}$；交换变量后
+
+\nopagebreak[4]
+\[
+f^{-1}(x)=-\sqrt{-x},\qquad x\leqslant-4\text{。}
+\]
+
+\gkanswer{答案：$f^{-1}(x)=-\sqrt{-x}\ (x\leqslant-4)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，若 $\angle C=90^\circ$，$AC=BC=4$，则 $\overrightarrow{BA}\cdot\overrightarrow{BC}=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取 $C=(0,0)$、$A=(4,0)$、$B=(0,4)$。则 $\overrightarrow{BA}=(4,-4)$、$\overrightarrow{BC}=(0,-4)$，所以
+
+\nopagebreak[4]
+\[
+\overrightarrow{BA}\cdot\overrightarrow{BC}=4\cdot0+(-4)(-4)=16\text{。}
+\]
+
+\gkanswer{答案：$16$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+某班共有 $40$ 名学生，其中只有一对双胞胎，若从中一次随机抽查三位学生的作业，则这对双胞胎的作业同时被抽中的概率是 $\underline{\qquad}$。（结果用最简分数表示。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+从 40 人中等可能地抽取 3 人，共有 $\binom{40}{3}$ 种结果。若双胞胎同时被抽中，第三人可从其余 38 人中任选，故
+
+\nopagebreak[4]
+\[
+P=\frac{\binom{38}{1}}{\binom{40}{3}}=\frac{38}{9880}=\frac1{260}\text{。}
+\]
+
+\gkanswer{答案：$\dfrac1{260}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+双曲线 $9x^2-16y^2=1$ 的焦距是 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+将双曲线写成标准形式：
+
+\nopagebreak[4]
+\[
+\frac{x^2}{1/9}-\frac{y^2}{1/16}=1\text{。}
+\]
+
+于是 $a^2=\dfrac19$、$b^2=\dfrac1{16}$，且 $c^2=a^2+b^2=\dfrac{25}{144}$，故两焦点间距离（焦距）为 $2c=\dfrac56$。
+
+\gkanswer{答案：$\dfrac56$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+若 $(x+2)^n=x^n+\cdots+ax^3+bx^2+cx+2^n\ (n\in\mathbb N,\ n\ge3)$，且 $a:b=3:2$，则 $n=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+二项式展开中，$x^3$ 与 $x^2$ 的系数分别为 $a=\binom n3 2^{n-3}$、$b=\binom n2 2^{n-2}$，因此
+
+\nopagebreak[4]
+\[
+\frac ab=\frac{\binom n3 2^{n-3}}{\binom n2 2^{n-2}}=\frac{n-2}{6}\text{。}
+\]
+
+由 $a:b=3:2$ 得 $\dfrac{n-2}{6}=\dfrac32$，解得 $n=11$，满足 $n\geqslant3$。
+
+\gkanswer{答案：$11$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n\ (n\in\mathbb N)$。关于数列 $\{a_n\}$ 有下列三个命题：
+
+① 若 $\{a_n\}$ 既是等差数列又是等比数列，则 $a_n=a_{n+1}\ (n\in\mathbb N)$；
+
+② 若 $S_n=an^2+bn\ (a,b\in\mathbb R)$，则 $\{a_n\}$ 是等差数列；
+
+③ 若 $S_n=1-(-1)^n$，则 $\{a_n\}$ 是等比数列。
+
+这些命题中，真命题的序号是 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+① 若数列同时为等差、等比，则对相邻三项有 $a_{n+1}=\dfrac{a_n+a_{n+2}}2$ 且 $a_{n+1}^2=a_na_{n+2}$。两式合并得 $(a_n-a_{n+1})^2=0$，所以相邻项相等，①真。② 对 $n\ge2$，$a_n=S_n-S_{n-1}=a(2n-1)+b$，首项 $a_1=S_1=a+b$，故通项为等差数列，②真。③ 由 $S_n=1-(-1)^n$ 得 $a_n=S_n-S_{n-1}=2(-1)^{n+1}$，为公比 $-1$ 的等比数列，③真。因此真命题为 ①②③。
+
+\gkanswer{答案：①②③}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+若集合 $A=\{x\mid 3\cos 2\pi x=3^x,\ x\in\mathbb R\}$，集合 $B=\{y\mid y^2=1,\ y\in\mathbb R\}$，则 $A\cap B=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+因为 $B=\{-1,1\}$，只需检验这两个数是否属于 $A$。$x=1$ 时 $3\cos2\pi=3=3^1$，故 $1\in A$；$x=-1$ 时左边为 $3$、右边为 $\dfrac13$，故 $-1\notin A$。所以 $A\cap B=\{1\}$。
+
+\gkanswer{答案：$\{1\}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+函数 $y=\sin x+\arcsin x$ 的值域是 $\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+定义域为 $[-1,1]$。在该区间内 $\sin x$ 与 $\arcsin x$ 均严格递增，故和函数严格递增。代入两端点，最小值为 $-\sin1-\dfrac\pi2$，最大值为 $\sin1+\dfrac\pi2$，值域为
+
+\nopagebreak[4]
+\[
+\left[-\frac\pi2-\sin1,\frac\pi2+\sin1\right]\text{。}
+\]
+
+\gkanswer{答案：$[-\dfrac\pi2-\sin1,\dfrac\pi2+\sin1]$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=2^x+\log_2 x$，数列 $\{a_n\}$ 的通项公式是 $a_n=0.1n\ (n\in\mathbb N)$，当 $\lvert f(a_n)-2005\rvert$ 取得最小值时，$n=\underline{\qquad}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+函数 $f(x)=2^x+\log_2x$ 在 $x>0$ 上严格递增，因为 $f'(x)=2^x\ln2+\dfrac1{x\ln2}>0$。因此只需比较阈值两侧相邻取值：
+
+\nopagebreak[4]
+\[
+f(10.9)\approx1914.2978,\qquad f(11)\approx2051.4594\text{。}
+\]
+
+于是 $|f(10.9)-2005|\approx90.7022$，而 $|f(11)-2005|\approx46.4594$。更小的 $n$ 给出不大于 $f(10.9)$ 的值，更大的 $n$ 给出不小于 $f(11)$ 的值；由单调性，它们都不可能优于这两个相邻候选。因此最小值在 $a_n=11$ 时取得，即 $n=110$。
+
+\gkanswer{答案：$110$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知直线 $l,m,n$ 及平面 $\alpha$，下列命题中的假命题是\mbox{（　　）}。
+
+（A）若 $l\parallel m$，$m\parallel n$，则 $l\parallel n$
+
+（B）若 $l\perp\alpha$，$n\parallel\alpha$，则 $l\perp n$
+
+（C）若 $l\perp m$，$m\parallel n$，则 $l\perp n$
+
+（D）若 $l\parallel\alpha$，$n\parallel\alpha$，则 $l\parallel n$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+（A）平行于同一直线的两直线互相平行；（B）垂直于平面的直线垂直于该平面内任一条直线方向，故也垂直于平行于该平面的直线；（C）垂直关系在直线平行替换下保持。只有（D）不成立：两条直线都平行于同一平面，并不能推出它们彼此平行。因此假命题为 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，若 $\dfrac{a}{\cos A}=\dfrac{b}{\cos B}=\dfrac{c}{\cos C}$，则 $\triangle ABC$ 是\mbox{（　　）}。
+
+（A）直角三角形　　（B）等边三角形
+
+（C）钝角三角形　　（D）等腰直角三角形
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由正弦定理 $a=2R\sin A$，故 $\dfrac a{\cos A}=2R\tan A$；同理另外两项分别为 $2R\tan B$、$2R\tan C$。三角形内角在 $(0,\pi)$ 且余弦不为零，正切在该范围内（去掉 $\pi/2$）取值一一对应，因此 $\tan A=\tan B=\tan C$ 推出 $A=B=C=\dfrac\pi3$，三角形为等边三角形，选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+若 $a,b,c$ 是常数，则“$a>0$ 且 $b^2-4ac<0$”是“对任意 $x\in\mathbb R$，有 $ax^2+bx+c>0$”的\mbox{（　　）}。
+
+（A）充分不必要条件　　（B）必要不充分条件
+
+（C）充要条件　　（D）既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+若 $a>0$ 且 $b^2-4ac<0$，二次函数开口向上且无实根，故对任意实数 $x$ 均严格大于零，所以该条件充分。它不是必要条件：取 $a=b=0,c=1$，则 $ax^2+bx+c=1>0$ 对任意 $x$ 成立，但前件中的 $a>0$ 不成立。因此是充分不必要条件，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+设函数 $f(x)$ 的定义域为 $\mathbb R$，有下列三个命题：
+
+① 若存在常数 $M$，使得对任意 $x\in\mathbb R$，有 $f(x)\le M$，则 $M$ 是函数 $f(x)$ 的最大值；
+
+② 若存在 $x_0\in\mathbb R$，使得对任意 $x\in\mathbb R$，且 $x\ne x_0$，有 $f(x)<f(x_0)$，则 $f(x_0)$ 是函数 $f(x)$ 的最大值；
+
+③ 若存在 $x_0\in\mathbb R$，使得对任意 $x\in\mathbb R$，有 $f(x)\le f(x_0)$，则 $f(x_0)$ 是函数 $f(x)$ 的最大值。
+
+这些命题中，真命题的个数是\mbox{（　　）}。
+
+（A）$0$ 个　　（B）$1$ 个　　（C）$2$ 个　　（D）$3$ 个
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+① 只有上界并不保证上界能取到，例如 $f(x)=-e^x$ 的上确界为 $0$，但没有最大值，故①假。② 条件直接说明 $f(x_0)$ 大于所有其他函数值，故为最大值；③ 条件说明 $f(x_0)$ 不小于定义域内任一函数值，亦为最大值。故真命题有 2 个，选 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+已知 $z$ 是复数，$z+2i$、$\dfrac{z}{2-i}$ 均为实数（$i$ 为虚数单位），且复数 $(z+ai)^2$ 在复平面上对应的点在第一象限，求实数 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设 $z=x+yi$。由 $z+2i$ 为实数得 $y=-2$；再由
+
+\nopagebreak[4]
+\[
+\frac{z}{2-i}=\frac{(x-2i)(2+i)}5
+=\frac{2x+2}{5}+\frac{x-4}{5}i
+\]
+
+\Needspace{5\baselineskip}
+为实数，得 $x=4$，所以 $z=4-2i$。于是
+
+\nopagebreak[4]
+\[
+(z+ai)^2=\bigl(4+(a-2)i\bigr)^2
+=16-(a-2)^2+8(a-2)i\text{。}
+\]
+
+对应点在第一象限要求 $8(a-2)>0$ 且 $16-(a-2)^2>0$，合并得 $2<a<6$。
+
+\gkanswer{答案：$2<a<6$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知 $\tan\alpha$ 是方程 $x^2+2x\sec\alpha+1=0$ 的两个根中较小的根，求 $\alpha$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $t=\tan\alpha$。代入题设方程并用 $1+\tan^2\alpha=\sec^2\alpha$，有
+
+\nopagebreak[4]
+\[
+\sec^2\alpha+2\tan\alpha\sec\alpha
+=\sec\alpha(\sec\alpha+2\tan\alpha)=0\text{。}
+\]
+
+\Needspace{5\baselineskip}
+由于 $\sec\alpha\ne0$，故 $1+2\sin\alpha=0$，即 $\sin\alpha=-\dfrac12$。候选为 $\alpha=\dfrac{7\pi}{6}+2k\pi$ 或 $\alpha=\dfrac{11\pi}{6}+2k\pi$。前者 $\tan\alpha=\dfrac1{\sqrt3}$，方程两根为 $\dfrac1{\sqrt3},\sqrt3$，正是较小根；后者 $\tan\alpha=-\dfrac1{\sqrt3}$，而方程两根为 $-\sqrt3,-\dfrac1{\sqrt3}$，正切值不是较小根。故
+
+\nopagebreak[4]
+\[
+\alpha=\frac{7\pi}{6}+2k\pi,\qquad k\in\mathbb Z\text{。}
+\]
+
+\gkanswer{答案：$\alpha=\dfrac{7\pi}{6}+2k\pi\ (k\in\mathbb{Z})$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知正三棱锥 $P-ABC$ 的体积为 $72\sqrt3$，侧面与底面所成的二面角的大小为 $60^\circ$。
+
+（1） 证明：$PA\perp BC$；
+
+（2） 求底面中心 $O$ 到侧面的距离。
+\nopagebreak[4]
+\begin{center}\input{figures/gaokao_2005_shanghai_spring_q19_pyramid}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设底面边长为 $a$、底面中心到底边的距离为 $r$、棱锥高为 $h$。取 $M$ 为 $BC$ 中点，则 $OM\perp BC$，且因 $PB=PC$，$PM\perp BC$。$\angle PMO$ 是侧面与底面所成二面角，故为 $60^\circ$；又 $PO\perp$ 底面，所以 $\triangle POM$ 在 $O$ 处直角，并有 $h=\sqrt3r$。等边三角形底面满足 $r=\dfrac{a\sqrt3}{6}$，从而 $h=\dfrac a2$。利用体积：
+
+\nopagebreak[4]
+\[
+72\sqrt3=\frac13\cdot\frac{\sqrt3}{4}a^2\cdot\frac a2
+=\frac{\sqrt3a^3}{24},
+\]
+
+得 $a=12$、$r=2\sqrt3$、$h=6$。
+
+\textbf{（1）证明：} 在底面等边三角形中 $AM\perp BC$，且侧面等腰三角形中 $PM\perp BC$。直线 $AM,PM$ 相交并确定平面 $APM$，所以 $BC\perp$ 平面 $APM$，从而 $PA\perp BC$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 点 $O$ 到侧面 $PBC$ 的距离等于截面直角三角形 $POM$ 中点 $O$ 到斜边 $PM$ 的距离。由 $PM=\sqrt{h^2+r^2}=4\sqrt3$，有
+
+\nopagebreak[4]
+\[
+d=\frac{PO\cdot OM}{PM}=\frac{6\cdot2\sqrt3}{4\sqrt3}=3\text{。}
+\]
+
+\gkanswer{答案（1）：$PA\perp BC$}
+
+\gkanswer{答案（2）：$3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+某市 $2004$ 年底有住房面积 $1200\text{ \text{万平方米}}$，计划从 $2005$ 年起，每年拆除 $20\text{ \text{万平方米}}$ 的旧住房。假定该市每年新建住房面积是上年年底住房面积的 $5\%$。
+
+（1） 分别求 $2005$ 年底和 $2006$ 年底的住房面积；
+
+（2） 求 $2024$ 年底的住房面积。（计算结果以万平方米为单位，且精确到 $0.01$。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $A_n$ 表示 $2004+n$ 年底的住房面积（万平方米），则
+
+\nopagebreak[4]
+\[
+A_0=1200,\qquad A_{n+1}=1.05A_n-20\text{。}
+\]
+
+\textbf{（1）}
+
+\Needspace{5\baselineskip}
+直接递推得 $A_1=1240$、$A_2=1282$。定点满足 $L=1.05L-20$，故 $L=400$；因此
+
+\nopagebreak[4]
+\[
+A_n=400+(A_0-400)1.05^n=400+800(1.05)^n\text{。}
+\]
+
+\textbf{（2）}
+
+于是 $A_{20}=400+800(1.05)^{20}\approx2522.638164$，按题意精确到 $0.01$ 为 $2522.64$ 万平方米。
+
+\gkanswer{答案（1）：$1240$、$1282$}
+
+\gkanswer{答案（2）：$2522.64$ 万平方米}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x+\dfrac ax$ 的定义域为 $(0,+\infty)$，且 $f(2)=2+\dfrac{\sqrt2}{2}$。设点 $P$ 是函数图象上的任意一点，过点 $P$ 分别作直线 $y=x$ 和 $y$ 轴的垂线，垂足分别为 $M,N$。
+
+（1） 求 $a$ 的值；
+
+（2） 问：$\lvert PM\rvert\cdot\lvert PN\rvert$ 是否为定值？若是，则求出该定值；若不是，则说明理由；
+
+（3） 设 $O$ 为坐标原点，求四边形 $OMPN$ 面积的最小值。
+\nopagebreak[4]
+\begin{center}\input{figures/gaokao_2005_shanghai_spring_q21_function}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{（1）} 由 $2+\dfrac a2=2+\dfrac{\sqrt2}{2}$ 得 $a=\sqrt2$。令 $P=(x,y)$，则 $x>0$ 且 $y=x+\dfrac{\sqrt2}{x}$。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 点到直线 $y=x$ 的距离为
+
+\nopagebreak[4]
+\[
+|PM|=\frac{|y-x|}{\sqrt2}=\frac1x,
+\]
+
+而点到 $y$ 轴的距离 $|PN|=x$，所以 $|PM|\,|PN|=1$，为定值。
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 有 $M=\left(\dfrac{x+y}{2},\dfrac{x+y}{2}\right)$、$N=(0,y)$。按顶点顺序 $O,M,P,N$ 用行列式求面积，得
+
+\nopagebreak[4]
+\[
+S_{OMPN}=\frac12\left(x^2+\frac1{x^2}+2\sqrt2\right)
+\ge1+\sqrt2,
+\]
+
+其中 $x^2+x^{-2}\ge2$，等号当且仅当 $x=1$。故最小值为 $1+\sqrt2$。
+
+\gkanswer{答案（1）：$a=\sqrt2$}
+
+\gkanswer{答案（2）：定值为 $1$}
+
+\gkanswer{答案（3）：面积最小值为 $1+\sqrt2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+（1） 求右焦点坐标是 $(2,0)$，且经过点 $(-2,-\sqrt2)$ 的椭圆的标准方程；
+
+（2） 已知椭圆 $C$ 的方程是 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$。设斜率为 $k$ 的直线 $l$，交椭圆 $C$ 于 $A,B$ 两点，$AB$ 的中点为 $M$。证明：当直线 $l$ 平行移动时，动点 $M$ 在一条过原点的定直线上；
+
+（3） 利用（2）所揭示的椭圆几何性质，用作图方法找出下面给定椭圆的中心，简要写出作图步骤，并在图中标出椭圆的中心。
+\nopagebreak[4]
+\begin{center}\input{figures/gaokao_2005_shanghai_spring_q22_ellipse}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\textbf{（1）} 设椭圆为 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$，则 $a^2-b^2=c^2=4$。代入点 $(-2,-\sqrt2)$ 得 $\dfrac4{a^2}+\dfrac2{b^2}=1$。解得 $b^2=4$、$a^2=8$，故方程为
+
+\nopagebreak[4]
+\[
+\frac{x^2}{8}+\frac{y^2}{4}=1\text{。}
+\]
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 设平行弦所在直线为 $y=kx+m$，与椭圆交于横坐标 $x_1,x_2$ 的两点。代入椭圆方程并用韦达定理，弦中点 $M=(x_M,y_M)$ 满足
+
+\nopagebreak[4]
+\[
+x_M=-\frac{a^2km}{b^2+a^2k^2},\qquad
+y_M=\frac{b^2m}{b^2+a^2k^2}\text{。}
+\]
+
+若 $k\ne0$，则 $y_M=-\dfrac{b^2}{a^2k}x_M$，其轨迹在一条过原点、斜率固定的直线上；若 $k=0$，则 $x_M=0$，中点在 $y$ 轴上。因此直线平行移动时，中点均落在过原点的定直线上。
+
+\textbf{（3）} 任选一种方向，作两条不同的平行弦，分别取其中点并连接；所得直线经过椭圆中心。再换一个不平行的方向重复作图，两个中点连线的交点即为椭圆中心。下图只示范作图关系，不表示原题椭圆的实际坐标、长短轴或比例。
+\nopagebreak[4]
+\begin{center}\input{figures/gaokao_2005_shanghai_spring_q22_center_construction}\end{center}
+\nopagebreak[4]
+\gkanswer{答案（1）：$\dfrac{x^2}{8}+\dfrac{y^2}{4}=1$}
+
+\gkanswer{答案（2）：弦中点轨迹为过原点的定直线}
+
+\gkanswer{答案（3）：作图见解析}
+
+\end{answer}
