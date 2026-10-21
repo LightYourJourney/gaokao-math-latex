@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b05：2016 全国Ⅰ/Ⅱ文理四卷当前构建视觉回执登记（2026-10-21）
+
+- 已完成：四卷四版本16份回执全部绑定当前 build attempt；219/219页通过逐页八项视觉检查，共1669 pass、83 not_applicable、0 fail。正式登记器返回 `FINALIZED`，批次状态为 `closed_with_blockers`，manifest revision `4546`；报告位于 `reports/phase2-b05.md`。
+- 当前结果：全国Ⅰ文科与理科、全国Ⅱ理科的内容候选均为 `eligible_blocked`，阻塞项分别保留为 `ISSUE-0932/0934`、`ISSUE-0933/0935`、`ISSUE-0931/0936`；全国Ⅱ文科为 `eligible_complete`。这些是内容/来源门禁，不是视觉失败；因此批次关闭状态明确保留 blockers，不能把四卷说成全部完成。
+- 修改文件：四卷各自 `receipts/build.json` 与 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b05.md` 及本进度文件。`missing-issues.md` 未变；既有 `docs/design/` 用户修改未暂存或纳入。
+- 验证：`review_receipts.py check-batch` 返回 `FINALIZED`、无问题；四卷 `build_projects.py validate-receipts` 均 `OK：1 卷`；`provenance.py check-batch` 为 `OK：4 卷`。工作项计数及构建尝试/PDF绑定经脚本复核。正式视觉回执已刷新；不代表未解决的题意、来源不确定性或数学内容问题已消失。
+- 成本：本地PDF页面指标/回执校验与事务登记；无OCR、聊天模型或外部API调用。Token、缓存Token及费用不可见，记未知。
+- 剩余/下一步：按阻塞项恢复动作分别核对原始来源、官方勘误或题意；在证据满足前保持 `closed_with_blockers`，不扩大本批次视觉复核范围或宣称整卷完成。
+
 ### phase2-b05：2016 全国Ⅱ理科解析版当前构建视觉校样（2026-10-21）
 
 - 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未查看或修改 Main 工作区；既有 `docs/design/` 用户改动未触碰。
