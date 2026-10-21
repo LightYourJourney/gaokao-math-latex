@@ -15,6 +15,12 @@ SOURCE_SHA256 = "c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f84
 
 
 class Shanghai1998ArtsTranscriptionTests(unittest.TestCase):
+    def test_q12_preserves_printed_tg_notation(self):
+        text = QUESTIONS.read_text(encoding="utf-8")
+        q12 = text.split("**12．**", 1)[1].split("**13．**", 1)[0]
+        self.assertIn(r"（C）$y=\operatorname{tg}2x$", q12)
+        self.assertNotIn(r"（C）$y=\tan2x$", q12)
+
     def test_question_numbers_are_contiguous_and_match_the_paper_total(self):
         text = QUESTIONS.read_text(encoding="utf-8")
         numbers = [int(value) for value in re.findall(r"^\*\*(\d+)．", text, re.MULTILINE)]
