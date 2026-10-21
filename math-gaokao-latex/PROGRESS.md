@@ -33,6 +33,13 @@
 - 验证：专项测试 7/7 通过，覆盖 16 题答案范围与各速查答案、非官方/未完成状态；Q12 使用本地浮点计算核实 $f(10.9)=1914.297823$、$f(11)=2051.459432$，两侧误差约 90.702177 与 46.459432。全量 `python3 -B -m unittest discover -s math-gaokao-latex/tests` 共 1687 项：1673 通过、13 跳过、1 失败；唯一失败仍为既有 `test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2025 全国Ⅰ卷 `answers.tex` 台账 SHA `174857e0…` 与现场 `11aa9482…` 不一致，与本卷无关。`git diff --check` 通过。
 - 成本与剩余：复用固定 PDF 和本地运算，无 OCR、重渲染、外部 API 或模型调用；真实 Token 与费用不可见，记未知。Q17–22 推导、题面/图稿独立盲核、来源出版身份确认及绑定、四版本 LaTeX 工程/构建/逐页验收仍待完成，整卷保持 pending。下一步推导 Q17–22；数学求解只依据已转录且可追溯的固定题面，不把第三方答案当官方答案。
 
+### 2005 春季上海卷：Q17–22 推导完成与作图示意（2026-10-22）
+
+- 已完成：依固定题面推导复数范围、三角方程的根序筛选、正三棱锥二面角与距离、住房面积递推、函数点距乘积/四边形最小面积，以及椭圆方程/平行弦中点轨迹/作图中心。答案和解析现覆盖 22/22 题，仍全部标为编者独立推导（非官方），不冒充原卷答案。Q22(3)新增 TikZ 弦中点作图示意，只说明构造步骤，明示不代表原图实际坐标或比例。
+- 修改文件：更新春季上海卷答案要点、解析正文、试题 frontmatter 与 `tests/test_2005_shanghai_spring_transcription.py`；新增 `figures/gaokao_2005_shanghai_spring_q22_center_construction.tex`；本进度文件。尚未创建标准 LaTeX 试卷目录、共享 `questions.tex`/`answers.tex`、四个版本入口或正式 receipts，也未向来源 manifest 绑定 `paper_id`。
+- 验证：新增全题覆盖及非官方状态测试；专项测试 7/7 通过，并使用 `latexmk -xelatex` 与 Poppler 将三幅原题 TikZ 图及 Q22 作图示意共同编译、渲染。住房递推用精确有理数计算为 $2522.638164115536\ldots$，按题意四舍五入为 $2522.64$。全量 unittest 1687 项：1673 通过、13 跳过、1 失败；唯一失败仍为 `test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2025 全国Ⅰ卷 `answers.tex` 的历史漂移台账 SHA 与当前 SHA 不一致；本卷不在该断言范围。`git diff --check` 通过。
+- 成本与剩余：使用已固定的本地两页 PDF 和本地精确计算/矢量编译；无 OCR、外部 API 或模型调用；Token/费用不可见，记未知。仍须独立盲核 22 题与四幅图、核验出版者/版次及来源绑定、整理进项目正式共享 LaTeX 目录、生成试题/解析/简答/印刷四入口并编译视觉验收；故卷级状态不能标为完成。下一步先遵循正式来源/manifest 工作流确认该春季卷的 paper identity 与来源关系，同时避免覆盖任何未绑定的存档素材。
+
 ### 2008 全国Ⅱ文科：Q18 同版答案补证检索（2026-10-22）
 
 - 已完成：围绕 `ISSUE-0839` 的明确门禁，定向检索同版官方答案或勘误。未找到能证明官方排除零公差的官方答案/勘误；找到一份第三方《2008年全国统一高考数学试卷（文科）（全国卷Ⅱ）参考答案与试题解析》，其第18题明确求得 `d=0` 或 `d=1`，并分别给出 `S_{20}=200` 与 `330`（[第三方解析页](https://www.yeyulingfeng.com/wendang/14727.html)）。这与当前按原题字面保留两值的解析相符，但不能替代同版官方来源，也不证明该网页版本与固定PDF同版。

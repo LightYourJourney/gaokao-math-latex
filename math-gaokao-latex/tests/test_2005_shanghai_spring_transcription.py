@@ -21,6 +21,7 @@ FIGURE_PATHS = {
     21: ROOT / "2005/figures/gaokao_2005_shanghai_spring_q21_function.tex",
     22: ROOT / "2005/figures/gaokao_2005_shanghai_spring_q22_ellipse.tex",
 }
+CONSTRUCTION_FIGURE = ROOT / "2005/figures/gaokao_2005_shanghai_spring_q22_center_construction.tex"
 
 
 class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
@@ -81,23 +82,24 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn(r"a_n=0.1n", self.transcript)
         self.assertIn(r"\tan\alpha", self.transcript)
         self.assertIn("较小的根", self.transcript)
-        self.assertIn("Q1–16 为编者独立推导（非官方）", self.transcript)
+        self.assertIn("Q1–22 为编者独立推导（非官方）", self.transcript)
 
-    def test_derived_answers_are_nonofficial_and_explicitly_partial(self):
-        self.assertIn("第 17–22 题待完成", self.transcript)
+    def test_derived_answers_are_nonofficial_and_cover_all_questions(self):
         self.assertTrue(ANSWER_KEY.is_file(), "derived answer key must be kept separate from the source transcript")
         self.assertTrue(SOLUTION_BODY.is_file(), "derived solutions must be traceable as a separate artifact")
         answer_key = ANSWER_KEY.read_text(encoding="utf-8")
         solution_body = SOLUTION_BODY.read_text(encoding="utf-8")
         self.assertIn("非官方标准答案", answer_key)
-        self.assertIn("第 17–22 题：待完成", answer_key)
+        self.assertIn("官方答案页缺失", answer_key)
+        self.assertIn("独立复核待进行", answer_key)
+        self.assertIn("q22_center_construction.tex", solution_body)
         self.assertEqual(
             [int(number) for number in re.findall(r"^\*\*(\d+)．\*\*", answer_key, re.M)],
-            list(range(1, 17)),
+            list(range(1, 23)),
         )
         self.assertEqual(
             [int(number) for number in re.findall(r"^### 第 (\d+) 题$", solution_body, re.M)],
-            list(range(1, 17)),
+            list(range(1, 23)),
         )
         for expected in (
             r"**1．** $\{-1,2\}$",
@@ -116,6 +118,12 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
             r"**14．** B",
             r"**15．** A",
             r"**16．** C",
+            r"**17．** $2<a<6$",
+            r"**18．** $\alpha=\dfrac{7\pi}{6}+2k\pi\ (k\in\mathbb{Z})$",
+            r"**19．** （1）$PA\perp BC$；（2）$3$",
+            r"**20．** （1）$1240$、$1282$；（2）$2522.64$ 万平方米",
+            r"**21．** （1）$a=\sqrt2$；（2）定值为 $1$；（3）面积最小值为 $1+\sqrt2$",
+            r"**22．** （1）$\dfrac{x^2}{8}+\dfrac{y^2}{4}=1$",
         ):
             self.assertIn(expected, answer_key)
 
@@ -161,6 +169,10 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertNotIn(r"\coordinate", ellipse)
         self.assertNotIn("![", self.transcript)
         self.assertNotRegex(self.transcript, r"(?i)\]\([^)]*\.(?:png|jpe?g|gif|webp|tiff?)\)")
+        self.assertTrue(CONSTRUCTION_FIGURE.is_file(), "Q22 answer construction diagram must be a TikZ source")
+        construction = CONSTRUCTION_FIGURE.read_text(encoding="utf-8")
+        self.assertIn(r"\begin{tikzpicture}", construction)
+        self.assertNotIn(r"\includegraphics", construction)
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and Poppler are required")
     def test_vector_figures_compile_and_render_together(self):
@@ -168,7 +180,10 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         work_root.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(prefix="2005-shanghai-figures-", dir=work_root) as temp:
             build_dir = Path(temp)
-            inputs = "\n".join(r"\input{" + str(path) + "}" for path in FIGURE_PATHS.values())
+            inputs = "\n".join(
+                r"\input{" + str(path) + "}"
+                for path in [*FIGURE_PATHS.values(), CONSTRUCTION_FIGURE]
+            )
             (build_dir / "figures.tex").write_text(
                 "\\documentclass{article}\n"
                 "\\usepackage[margin=1cm]{geometry}\n"
