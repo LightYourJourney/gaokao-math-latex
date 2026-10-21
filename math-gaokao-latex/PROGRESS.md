@@ -4,14 +4,18 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
-### phase2-b10：2015 全国Ⅱ卷构建工具链失效定位与文理二卷重建（2026-10-21）
+### phase2-b10：2015 全国卷构建工具链失效定位与四卷重建（2026-10-21）
 
 - 已完成：定位全库唯一`INVALID_OR_STALE`门禁根因之一：2015全国Ⅱ卷文理科构建回执的工具链指纹过旧。两卷`generate_projects.py --check`均通过，说明规范题面/答案生成物未漂移。用当前TeX Live 2026、XeLaTeX及Poppler工具链正式重建两卷8个版本，零构建失败；各版页数未变（文科6/22/8/18，理科7/23/9/17），但PDF SHA均变化，因此旧视觉结论不能直接沿用。
 - 修改文件：两卷`receipts/build.json`、`source-manifest.json`及本`PROGRESS.md`。未改题面、答案、解析、题图、问题总账或另外两卷内容。PDF写入各卷既有`build/`路径；没有运行OCR或外部模型。
 - 验证：`check-tools`确认当前TeX Live 2026、latexmk 4.88、Poppler 26.10；两卷`generate_projects --check`通过；正式`build --formal --paper`各零失败；两卷`validate-receipts --require-current-inputs`均OK。构建后现场状态为两卷`compiled`、批次`provenance_verified`。批次复核检查明确显示：另两卷（2015全国Ⅰ文理）构建回执也受同一工具链变化影响，而本次重建的全国Ⅱ两卷review因build attempt、输入树、工具链和PDF SHA改变而stale；因此没有finalize或刷新最终项目报告。
 - 命令纠错：一次`validate-receipts`调用漏传必需的`--manifest`，CLI以退出码2拒绝且未写入；按帮助补齐仓库根路径后，两卷校验均通过。
 - 成本与边界：8个版本本地XeLaTeX重建约30秒，无OCR、聊天模型或外部API；Codex Token与费用不可见、记未知。仅此二卷的旧页数和输出哈希已记录，不能复用旧视觉回执。
-- 剩余/下一步：先以当前工具链重建phase2-b10另两卷2015全国Ⅰ文理，再对该4卷批次中所有受当前attempt/PDF SHA影响的页重新走视觉复核（共216页），按正式批次事务收口；最后刷新README、CSV和报告投影。此前的review failure不是题面内容错误，禁止手改状态或复用失效回执。
+- 续接完成：按相同原因以当前工具链正式重建2015全国Ⅰ文理两卷8个版本，零构建失败；页数保持不变（文科6/22/8/17，理科6/22/8/17），8个PDF SHA均更新。新build attempt分别为文科`8d2b5a61-497a-4c99-a875-cbd885af3a35`、理科`bb1611e4-a4b5-4302-a8c1-89f88199f7c0`。`generate_projects.py --check`及两卷`validate-receipts --require-current-inputs`均通过。
+- 修改文件：在上述两卷之外，本续接只改两卷`receipts/build.json`、`source-manifest.json`及本`PROGRESS.md`；未改题面、答案、解析、题图或问题总账。PDF写入各卷既有且被忽略的`build/`路径；review工作清单写入被忽略的`.work/phase2-b10/review/`，未登记任何视觉结论。
+- 当前门禁与验证：`check-batch`仍正确报告四卷review均`INVALID_OR_STALE`，失效原因为当前build attempt、输入树、构建/视觉工具指纹及四版PDF哈希变化；`prepare-batch`成功生成4卷×4版共16个逐页工作项，合计216页，所有8项/页检查仍为`pending`。尚未进行视觉审查、批次finalize或刷新项目报告，不能声称视觉通过。
+- 成本与边界：本续接8个版本本地XeLaTeX构建约27秒；无OCR、聊天模型或外部API。Codex Token与费用不可见、记未知。
+- 剩余/下一步：对phase2-b10四卷216页按正式工作项逐页完成视觉检查，保留既有明确失败结论并只为当前PDF登记新证据；通过后按正式批次事务收口，再刷新README、CSV和报告投影。此前的review failure不是题面内容错误，禁止手改状态或复用失效回执。
 
 ### 派生项目报告与来源 CSV 刷新（2026-10-21）
 
