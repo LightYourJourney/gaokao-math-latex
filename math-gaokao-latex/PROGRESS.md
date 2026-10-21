@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2015 全国Ⅱ理科 Q18 数据围栏排版修复与复审收口（2026-10-21）
+
+- 已完成：根因是共享Markdown转换器把`text`代码围栏落入普通段落转换，导致围栏字样作为引号/正文排入PDF。转换器现在将围栏块渲染为`verbatim`，原样保留块内数据、空格和换行；严格模式下未闭合围栏报错。未更改题目数字、答案、解析结论或图稿；仅重生成全国Ⅱ理科四个版本。
+- 修改文件：`math-gaokao-2017-2026/tools/md2tex.py`、`tests/test_generate_projects.py`、2015全国Ⅱ理科`questions.tex`与`answers.tex`、该卷`receipts/build.json`及`receipts/review.json`、`source-manifest.json`、`missing-issues.md`、`reports/phase2-b10.md`、`manifest.csv`、六份派生全量报告及本`PROGRESS.md`。题目原始Markdown和`index.json`未改；既存`docs/design/`用户工作未纳入。
+- 验证：转换器定向测试118/118、报告测试12/12、CSV测试2/2通过；完整测试集`python3 -B -m unittest discover -s tests`为1656项、13项跳过、全部通过。全国Ⅱ理科四版共56页全部用新PDF重渲染并完成八项逐页目视复核，另以原尺寸复核Q18题页和印刷版答案页；数据及顺序与源转录一致，无围栏伪影、裁切或新增分页问题。正式`build`=`succeeded`、`review`=`passed`；`check-batch`=`FINALIZED`且`problems=[]`，ISSUE-1120至ISSUE-1123已解决。`report.py check --all`通过，来源CSV投影当前且775行。
+- 命令纠错：一次CSV刷新在项目子目录中漏传规范`--output manifest.csv`，路径门禁拒绝、未写文件；补传相对目标后`--write`与`--check`均通过。接触表首次合成遇到本机ImageMagick缺字体（仅临时图像未生成），移除文字标签重合成后完成复核。
+- 成本与边界：本阶段本地XeLaTeX重建、Poppler渲染和单元测试；OCR、聊天模型及外部API调用为0。Codex Token与费用不可见，记未知。
+- 剩余/下一步：phase2-b10仍为`closed_with_blockers`，阻塞来自2015全国Ⅰ文理的既存ISSUE-0976、ISSUE-0977，不是本次全国Ⅱ理科复审；它们不在本阶段范围内。四卷其余题目来源与数学验收状态保持原样。
+
 ### phase2-b10：2015 全国卷构建工具链失效定位与四卷重建（2026-10-21）
 
 - 已完成：定位全库唯一`INVALID_OR_STALE`门禁根因之一：2015全国Ⅱ卷文理科构建回执的工具链指纹过旧。两卷`generate_projects.py --check`均通过，说明规范题面/答案生成物未漂移。用当前TeX Live 2026、XeLaTeX及Poppler工具链正式重建两卷8个版本，零构建失败；各版页数未变（文科6/22/8/18，理科7/23/9/17），但PDF SHA均变化，因此旧视觉结论不能直接沿用。

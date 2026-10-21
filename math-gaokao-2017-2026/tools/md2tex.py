@@ -13,6 +13,7 @@
   > 引用块                           -> gknotice / gktip（按内容分类；含"原卷影印件/配套文档"者丢弃）
   **答案：…** 独立段                  -> \\gkanswer{...}
   管道表格                           -> booktabs 三线表
+  ```text 围栏块                     -> verbatim（内容原样保留，围栏/语言标记不输出）
   HTML 注释                          -> 丢弃（如 PDF 页码元数据）
   ![..](images/xxx.png)              -> \\input{figures/<slug>}（映射表见 FIGMAP）
   $$...$$                            -> \\[...\\]
@@ -458,6 +459,7 @@ OPTLINE = re.compile(r"^\s{0,4}[A-D]．")
 ANSLINE = re.compile(r"^\*\*((?:[^*]|\*(?!\*))*答案(?:[^*]|\*(?!\*))*)\*\*\s*$")
 SECTION_HEADING = re.compile(r"^(?:[一二三四五六七八九十]+、|附加题|选考题)")
 DISPLAY_OPENERS = ("$$", r"\[")
+CODE_FENCE_OPEN = re.compile(r"^ {0,3}(`{3,})(.*)$")
 
 
 def convert_block(lines: List[str], sink: _Sink) -> List[str]:
@@ -494,6 +496,26 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
                 j += 1
             out += emit_table(grp, sink)
             i = j
+            continue
+
+        # --- fenced text/code block ---
+        # Markdown 围栏是结构标记，不是正文。原样透传反引号会在 XeLaTeX 中变成
+        # 引号字形；因此保留块内字符、空格与换行，用标准 verbatim 环境输出。
+        fence = CODE_FENCE_OPEN.match(ln)
+        if fence:
+            marker = fence.group(1)
+            closing = re.compile(r"^ {0,3}`{%d,}[ \t]*$" % len(marker))
+            j = i + 1
+            while j < n and not closing.match(lines[j]):
+                j += 1
+            if j == n:
+                sink.warnings.append("未闭合的代码围栏")
+                content = lines[i + 1:]
+                i = n
+            else:
+                content = lines[i + 1:j]
+                i = j + 1
+            out.extend([r"\begin{verbatim}", *content, r"\end{verbatim}"])
             continue
 
         # --- 显示公式 ---

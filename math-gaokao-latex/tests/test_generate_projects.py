@@ -551,6 +551,31 @@ class ConversionInterfaceTests(unittest.TestCase):
         # 全局 warning 会让批量生成里「哪一卷出的问题」不可判定，必须彻底消失。
         self.assertFalse(hasattr(md2tex, "warnings"))
 
+    def test_fenced_text_block_preserves_content_without_emitting_markdown_fence(self):
+        source = (
+            "```text\n"
+            "A 地区：62  73  81\n"
+            "        92  95  85\n"
+            "```\n"
+        )
+        result = md2tex.convert_markdown(
+            source, md2tex.ConversionContext(figure_map={})
+        )
+
+        self.assertIn(r"\begin{verbatim}", result.text)
+        self.assertIn("A 地区：62  73  81", result.text)
+        self.assertIn("        92  95  85", result.text)
+        self.assertIn(r"\end{verbatim}", result.text)
+        self.assertNotIn("```", result.text)
+        self.assertNotIn("text", result.text)
+
+    def test_unclosed_fenced_text_block_fails_strict_conversion(self):
+        with self.assertRaises(md2tex.ConversionError):
+            md2tex.convert_markdown(
+                "```text\nA 地区：62  73  81\n",
+                md2tex.ConversionContext(figure_map={}, strict=True),
+            )
+
     def test_returns_text_warnings_and_referenced_figures(self):
         source = "**1．** 见图。\n\n![甲](images/a.png)\n"
         result = md2tex.convert_markdown(

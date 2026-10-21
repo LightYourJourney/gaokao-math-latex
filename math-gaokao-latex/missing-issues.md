@@ -18503,17 +18503,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "d12e16ca472076b3f9197e93280f0edf937442cc9c86730488d36f1aeccfbe48",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-2015-regular-national-2-science",
   "pdf_sha256": "ba40932629169f12e8c13ca0be2af2c9d9b32f3579454693c13b27b640136322",
-  "resume_action": "修正 gk-2015-regular-national-2-science 的 印刷版 第 4 页 glyph（第18题数据行将源稿中的Markdown代码围栏标记渲染成引号和text字样（本页可见“‘‘text…‘‘”）；questions.tex、answers.tex均含该代码围栏。需核对来源并修正题面排版。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1121
 
 ```json
@@ -18524,17 +18523,16 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "c9301bab6b2f698e0c042ba931cb629162492b3b73a7926cacf9ded75b35dd1c",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2015-regular-national-2-science",
   "pdf_sha256": "c77df24f8e29449678eda2fb9c5de7138905f16d0c4c14b593769a0ab4b196af",
-  "resume_action": "修正 gk-2015-regular-national-2-science 的 简答版 第 5 页 glyph（第18题数据行将源稿中的Markdown代码围栏标记渲染成引号和text字样（本页可见“‘‘text…‘‘”）；questions.tex、answers.tex均含该代码围栏。需核对来源并修正题面排版。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1122
 
 ```json
@@ -18545,17 +18543,16 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "74166b985791600435a4d2dff904f62d404e053869cb2e08667871b4025ae29a",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 18,
   "paper_id": "gk-2015-regular-national-2-science",
   "pdf_sha256": "99743cd52563142f81704de26c43462dcc9fd4a329cb7cda2c734b8506a9bc5d",
-  "resume_action": "修正 gk-2015-regular-national-2-science 的 解析版 第 18 页 glyph（第18题数据行将源稿中的Markdown代码围栏标记渲染成引号和text字样（本页可见“‘‘text…‘‘”）；questions.tex、answers.tex均含该代码围栏。需核对来源并修正题面排版。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1123
 
 ```json
@@ -18566,13 +18563,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "11e90e8e7c726a4cda1474c635a4252b6922acd075e290067377b4bda160de1f",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2015-regular-national-2-science",
   "pdf_sha256": "f901d96e238cff72b2e3c7a85a43b7163a95578f59d11f264950fbbb421def58",
-  "resume_action": "修正 gk-2015-regular-national-2-science 的 试题版 第 5 页 glyph（第18题数据行将源稿中的Markdown代码围栏标记渲染成引号和text字样（本页可见“‘‘text…‘‘”）；questions.tex、answers.tex均含该代码围栏。需核对来源并修正题面排版。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
