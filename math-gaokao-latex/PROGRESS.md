@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东理科 Q18 修订后四版正式重建（2026-10-21）
+
+- 已完成：沿用已验证的 Q18 来源括注修订和 revision 4575 provenance，正式重建 `gk-1986-regular-guangdong-science` 四版。当前 build attempt=`72e21875-2bfb-401c-bf50-f553d1045486`；试题版7页、简答版8页、解析版26页、印刷版20页，共61页，4版均 `succeeded`、构建失败数0。四份PDF仍在忽略构建目录，不另复制图像资产入库。
+- 修改文件：`1986_广东卷_理工农医类/receipts/build.json`、`source-manifest.json`、本 `PROGRESS.md`；四份构建 PDF 及本次检查 PNG 位于忽略的 `build/` 与 `.work/phase2-b59/visual-1986-science/`。未改题面、答案、解析、图稿或 `docs/design/`。
+- 验证：正式 `build_projects.py build --paper ... --formal` 返回 `COMPILED_PENDING_REVIEW`、`failed=0`；`generate_projects.py --check` 通过；`build_projects.py validate-receipts --batch phase2-b59` 返回 `OK：1 卷`；`provenance.py check-batch --batch phase2-b59` 返回 `OK：1 卷`；1986 广东理科布局回归测试5/5通过。对四版本中 Q18 题面及其答案/解析出现页（共8页）渲染查看，新增括注完整可读，未见裁切或重叠；此为受影响页复查，不是整卷逐页视觉验收。
+- 状态与成本：build receipt 当前；旧 review receipt 仍绑定前一 build attempt，不能代表当前 PDF，故新构建仍为 `compiled_pending_review`。论文继续 `blocked`，不解除缺字/缺图及 ISSUE-0778/0797 等源内容门禁。无 OCR、聊天模型或付费 API；Token/费用不可见，记未知。
+- 剩余/下一步：对当前61页按 review 协议完成或依据可验证页面指纹继承未变化页的检查，之后才可登记当前 attempt 的 review；源题缺图/字形问题仍须单独按固定来源处理。不得把本次8页抽查登记成整卷通过。
+
 ### 1986 广东理科 Q18 修订后的 provenance 刷新（2026-10-21）
 
 - 已完成：Q18 题面修订后，找到并复用了项目内忽略的 phase2-b59 三角色 provenance 工作项（位于 `math-gaokao-latex/.work/phase2-b59/provenance/`；此前按仓库根 `.work/` 查找而误报缺失）。依据固定源 PDF 第3页及独立审计，只补记题面复核角色的 Q1 当前题面哈希和 Q18 括注核对证据；答案求解与盲核角色记录未改。经 `provenance.py import-batch` 先 dry-run 再正式事务写入，manifest revision 更新至 4575，批次状态为 `provenance_verified`。这只证明 provenance 与当前输入一致，不解除试卷阻塞。
