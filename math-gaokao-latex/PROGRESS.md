@@ -32,6 +32,13 @@
 - 验证：新增测试修正题号分隔符后，在旧稿下按预期RED失败；修改题面后转录定向测试5/5、图形定向测试5/5通过，`git diff --check`通过。全项目`python3 -B -m unittest discover -s tests`共1605项：1590通过、13跳过、2失败；失败为`test_2018_national1_science_typography.ChineseQuotationTypographyTests.test_answer_source_uses_chinese_quotes_instead_of_ascii_quotes`（2018理科答案源码仍含ASCII引号）和`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（2015全国Ⅱ文理两卷缓存complete与现场editions_generated不符，phase2-b10缓存closed_with_blockers与现场provenance_verified不符）。两项均在其他卷/批次，本阶段未扩展修复。完整测试用时约370秒。无OCR、重渲染、模型/API；Token与费用未知。
 - 剩余/下一步：印刷页115的Q12—19及Q20(1)已有逐项视觉对照记录；Q20(2)及后续页题面/图稿仍待源图对照。来源出版身份认证、正式登记、四版构建和整卷视觉验收未完成，1998上海文科仍为`pending/needs-review`。
 
+### 1998 上海文科：原卷第3页 Q20(2)—22 题面字形对照（2026-10-21）
+
+- 已完成：复用 `.work/1998-shanghai-arts.2Wm0sf/question-hi-3.png` 对照印刷页116的题面区域。Q20(2)的$D(2,0)$、交点$P,Q$、$E(1,0)$、面积4及倾斜角条件与草稿一致；Q21的16分及6/7/3分拆分、温度函数、测温时刻、两个端点均计入的极值区间、积分平均值定义与草稿一致；Q22的18分及4/8/6分拆分、$a_n$与$A_n,B_n$条件、抛物线族/切线斜率极限、集合交集排序题面均与草稿一致，未发现可确认的转录差异。只核对“数学试卷答案及评分标准”标题之前的题面，未读取或利用下方答案区。
+- 修改文件：仅更新本 `PROGRESS.md`；无题面、解答、图稿、manifest、issue、正式LaTeX/PDF或回执改动。
+- 验证与成本：基于既有高分辨率缓存页图直接目视核对；无OCR、重新渲染、模型/API或图片生成。`git diff --check -- math-gaokao-latex/PROGRESS.md`通过；Token、耗时与费用未知。
+- 剩余/下一步：题面稿Q1—22的印刷页114—116均已有逐项主会话源图对照记录，但这不认证固定扫描件的出版者/版次，也不代替异人盲核。下一步汇总题面与数学复核的独立审查缺口，再推进来源身份认证、正式登记、四版构建和整卷视觉验收；1998上海文科维持`pending/needs-review`。
+
 ### 1998 上海文科：Q14 选择题解析补足四项论证（2026-10-21）
 
 - 已完成：依据现有转录逐项说明A—D。A由$\beta$内两条相交直线推出$l\perp\beta$，进而$\alpha\perp\beta$；B用两平面相交/重合时的反例排除前提；C以两平面交线反例证明不成立；D由平行平面无公共点推出其内任一直线均平行于另一平面。因此唯一假命题为C。该推理依赖现有题面转录，不构成原卷字样的再次核验。
