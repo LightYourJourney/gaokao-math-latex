@@ -1390,6 +1390,14 @@
         "gk-1990-regular-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b10",
+      "issues": [],
+      "paper_ids": [
+        "gk-1990-regular-national-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1399,7 +1407,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "dad4a616-d8f4-4eb2-8e3f-2b2764f8332c",
+  "last_transaction_id": "f27a58be-bcaf-47fa-b097-e923d2942cfb",
   "papers": [
     {
       "blocked_from": null,
@@ -20350,9 +20358,80 @@
       "title": "1990 年上海卷数学",
       "track": "none",
       "year": 1990
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_文科/figures/f1990_national_arts_q06_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_文科/figures/f1990_national_arts_q14_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_文科/figures/f1990_national_arts_q20_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_文科/figures/f1990_national_arts_q23_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1990_national_arts",
+        "id": "gk-1990-regular-national-arts",
+        "note": "固定题面来源普通高考/1990/1990全国文.pdf，SHA-256 89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029；PDF页眉印有“1990 普通高等学校招生考试（全国卷文）”，单页A3、印刷页37；文件中未见发行机构标识，故只认证到此固定文件，不宣称版本/出版者身份。该PDF仅含题面，无答案页、解析或分值。答案与解析为自行推导且已独立盲核，非官方来源答案；Q20两侧几何比为7:5但原件未标V1/V2对应，保持待核。Q23原件正文称D、图示标D′，题面保留此差异。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "填空题": [
+            16,
+            20
+          ],
+          "解答题": [
+            21,
+            26
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [
+        "ISSUE-1124"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1990-regular-national-arts",
+      "production_state": "blocked",
+      "project_dir": "1990_全国卷_文科",
+      "question_count": 26,
+      "resume_action": "取得能明确标示 V1/V2 与两侧对应关系的同版题页、权威答案或勘误；如始终无此证据，则继续保留无序比 7:5，并禁止给出唯一的 V1:V2。",
+      "source_files": {
+        "answer_key": "1990/1990_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1990/1990_数学真题_全国文_含解析.md",
+        "questions": "1990/1990_数学真题_全国文_试题.md",
+        "solution_body": "1990/1990_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-4d319a8fc41be0c0fa7ce90615870abbabe5c3670150609e3cb0c37944091866"
+      ],
+      "title": "1990 年·全国卷·文科",
+      "track": "arts",
+      "year": 1990
     }
   ],
-  "revision": 4578,
+  "revision": 4579,
   "schema_version": 1,
   "sources": [
     {
@@ -24281,8 +24360,8 @@
       "exam_type": "regular",
       "git_blob_oid": "08f2e2beaa40f48083b8190143c5a68f18ede4d1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1990-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1990全国文.pdf",
       "regions": [],
       "source_id": "src-4d319a8fc41be0c0fa7ce90615870abbabe5c3670150609e3cb0c37944091866",

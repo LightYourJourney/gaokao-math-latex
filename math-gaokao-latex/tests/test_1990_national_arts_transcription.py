@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -9,6 +10,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
+sys.path.insert(0, str(PROJECT / "tools"))
+import generate_projects
+
+
 PAPER = ROOT / "1990/1990_数学真题_全国文_试题.md"
 FIGURE_DIR = PROJECT / "1990_全国卷_文科/figures"
 SOURCE_ID = "src-4d319a8fc41be0c0fa7ce90615870abbabe5c3670150609e3cb0c37944091866"
@@ -49,6 +54,28 @@ class NationalArts1990TranscriptionTests(unittest.TestCase):
             if path.is_file() and path.suffix.lower() in {".png", ".jpg", ".jpeg"}
         ]
         self.assertEqual(raster_files, [])
+
+    def test_project_conversion_keeps_all_questions_and_each_vector_figure_twice(self):
+        manifest = generate_projects.load_manifest(PROJECT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-1990-regular-national-arts"
+        )
+        result = generate_projects.generate_project(
+            ROOT, generate_projects.paper_sources(paper)
+        )
+        self.assertEqual(result.question_numbers["questions"], tuple(range(1, 27)))
+        self.assertEqual(result.question_numbers["answers"], tuple(range(1, 27)))
+        expected = {
+            f"1990_全国卷_文科/figures/{name}": 2
+            for name in (
+                "f1990_national_arts_q06_sine.tex",
+                "f1990_national_arts_q14_tetrahedron.tex",
+                "f1990_national_arts_q20_prism.tex",
+                "f1990_national_arts_q23_pyramid.tex",
+            )
+        }
+        self.assertEqual(dict(result.figure_occurrences), expected)
 
     def test_prism_occluded_edges_and_cut_plane_segments_are_dashed(self):
         figure = FIGURE_DIR / "f1990_national_arts_q20_prism.tex"
