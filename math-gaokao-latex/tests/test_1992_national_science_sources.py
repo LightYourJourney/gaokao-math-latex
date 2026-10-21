@@ -48,9 +48,19 @@ class NationalScience1992SourceTests(unittest.TestCase):
         self.assertIn(r"\dfrac{e^x-e^x}{2}", body.split("\n\n")[0])
         self.assertIn("不擅改", body)
         issues = self.record["source_issues"]
-        self.assertEqual([r["question_number"] for r in issues], [16])
+        self.assertEqual([r["question_number"] for r in issues], [16, 26])
         self.assertEqual(issues[0]["category"], "suspected-source-error")
         self.assertEqual(issues[0]["status"], "needs-review")
+
+    def test_q26_endpoint_assignment_ambiguity_is_not_hidden(self):
+        q26 = self.questions[25].body
+        self.assertIn(r"A_1E=m", q26)
+        self.assertIn(r"AF=n", q26)
+        issue = self.record["source_issues"][1]
+        self.assertEqual(issue["question_number"], 26)
+        self.assertEqual(issue["category"], "notation-ambiguity")
+        self.assertEqual(issue["status"], "needs-review")
+        self.assertIn("未明确", issue["issue"])
 
     def test_q24_both_conjugates_and_q19_negative_exponent_preserved(self):
         self.assertEqual(self.questions[23].body.count(r"\overline z"), 2)
@@ -65,7 +75,7 @@ class NationalScience1992SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["total_score"])
         self.assertIsNone(self.record["paper_id"])
         self.assertFalse(self.record["canonical_question_source_ready"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
         pending = [q.number for q in self.questions if "题图待重绘" in q.body]
         self.assertEqual(pending, [])
         self.assertEqual(pending, self.record["question_figures_pending"])

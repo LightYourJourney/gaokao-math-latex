@@ -29,17 +29,47 @@ class NationalScience1992MathTests(unittest.TestCase):
         cls.blocks = {q.number: q for q in solution_sources.parse_question_blocks(cls.text)}
         cls.record = json.loads((PROJECT / "来源校对.json").read_text(encoding="utf-8"))
 
-    def test_27_solved_slots_and_one_unresolved_without_official_attribution(self):
+    def test_27_draft_solutions_and_two_unverified_without_official_attribution(self):
         self.assertEqual(list(self.blocks), list(range(1, 29)))
         self.assertEqual(self.blocks[27].subparts, (1, 2))
         self.assertIn("待核，未给选项答案", self.blocks[16].body)
         record = self.record["generated_solution"]
         self.assertEqual(record["question_numbers"], [n for n in range(1, 29) if n != 16])
-        self.assertEqual(record["status"], "pending-independent-review")
+        self.assertEqual(record["status"], "independently-reviewed")
         self.assertEqual(record["sha256"], hashlib.sha256((PROJECT / "解答草稿.md").read_bytes()).hexdigest())
         self.assertEqual(record["question_draft_sha256"], self.record["draft_sha256"])
         self.assertIsNone(self.record["official_answer"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
+
+    def test_independent_blind_review_coverage_hashes_and_open_issues(self):
+        review = self.record["independent_blind_review"]
+        self.assertEqual(review["status"], "reviewed-with-source-issues")
+        self.assertEqual(review["reviewers"], 3)
+        self.assertEqual(review["full_range_reviewers"], 2)
+        self.assertEqual(review["reviewed_question_numbers"], list(range(1, 29)))
+        self.assertEqual(
+            review["verified_answer_question_numbers"],
+            [n for n in range(1, 29) if n not in (16, 26)],
+        )
+        self.assertEqual(review["confirmed_source_issue_question_numbers"], [16, 26])
+        self.assertEqual(review["conditional_interpretation_question_numbers"], [26])
+        self.assertEqual(review["semantic_caveat_question_numbers"], [2])
+        self.assertEqual(review["transcription_discrepancy_question_numbers"], [])
+        self.assertEqual(review["source_pdf_sha256"], self.record["pdf_sha256"])
+        self.assertEqual(review["source_render_sha256"], self.record["render"]["sha256"])
+        self.assertEqual(review["question_draft_sha256"], self.record["draft_sha256"])
+        self.assertEqual(review["solution_draft_sha256"], "c678e5a3206863d984da812abaf3e69c4ad62a1d6af0924a80c0a1231ac0cedf")
+        self.assertEqual(
+            review["current_solution_draft_sha256"],
+            hashlib.sha256((PROJECT / "解答草稿.md").read_bytes()).hexdigest(),
+        )
+        self.assertEqual(
+            hashlib.sha256((PROJECT / review["report_path"]).read_bytes()).hexdigest(),
+            review["report_sha256"],
+        )
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertIsNone(self.record["paper_id"])
 
     def test_generated_choice_key_includes_no_guessed_q16_answer(self):
         key = ["A", "D", "D", "B", "D", "B", "B", "C", "D", "D", "B", "B", "A", "D", "D", None, "A", "C"]
@@ -48,6 +78,13 @@ class NationalScience1992MathTests(unittest.TestCase):
             if answer is not None:
                 self.assertIn(f"**答案：{answer}**", self.blocks[number].body)
         self.assertIn(r"\omega=\pm1/4", self.blocks[2].body)
+        self.assertIn("原题未设", self.blocks[2].body)
+
+    def test_q26_solution_is_explicitly_conditional_on_foot_assignment(self):
+        body = self.blocks[26].body
+        self.assertIn(r"A_1\in a,A\in b", body)
+        self.assertIn("原题未显式规定", body)
+        self.assertIn(r"\sqrt3d", body)
 
     def test_q3_circle_distance_and_q5_full_surface_ratio(self):
         self.assertEqual(F(1, 2) ** 2 + F(1, 2) ** 2, F(1, 2))
