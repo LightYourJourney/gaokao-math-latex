@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### manifest 汇总与来源 CSV 投影刷新（2026-10-22）
+
+- 已完成：发现 manifest revision 4588 已包含 293 套试卷、159 个批次，但六个全库汇总投影仍显示 291 套/157批次；来源级 `manifest.csv` 与清单也不一致。使用官方生成器刷新报告和CSV，没有改动规范题面、答案、来源绑定或构建/复核回执。
+- 修改文件：`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/reports/baseline.md`、`math-gaokao-latex/manifest.csv` 与本进度文件。`docs/design/` 中既有用户改动保持未暂存、未纳入。
+- 验证：刷新后 `report.py check --all --manifest source-manifest.json --issues missing-issues.md` 通过，并确认未完成状态仍如实保留；`manifest_csv.py --check` 确认为当前且 775 行；`test_report.py` 12/12、`test_manifest_csv.py` 2/2 通过。报告当前分布为 241 complete、48 blocked、3 compiled、1 planned；批次 126 closed、29 closed_with_blockers、3 compiled_pending_review、1 planned。另有 1 份 build/review 回执尚缺，对应新增 planned 卷，不伪装为已构建。
+- 成本与剩余：确定性报告计算，无 OCR、模型或外部 API；报告全量检查/渲染约各 2 分钟，报告测试 106.628 秒，CSV 测试即时通过；Token/费用不可见，记未知。当前 2005 春季上海卷仍 source-unbound/planned；phase0-b02、phase2-b58、phase2-b59 继续保留已知视觉失败/来源阻塞。下一步基于当前 293 卷清单与最新进度，选择来源已固定且尚有可执行工作的下一卷/批次，不重复已完成转录，也不把无法证实的来源强行绑定。
+
 ### 2005 春季上海卷：Q21 函数示意图按题面系数修订与复核（2026-10-22）
 
 - 已完成：此前 Q21 图稿虽保持正确的凸性和垂足拓扑，却使用了与题面不一致的示意系数 `0.35`。根据题面 `f(x)=x+a/x`、`f(2)=2+\sqrt2/2` 得 `a=\sqrt2`，现将曲线改为 `y=x+\sqrt2/x`；取 `x=2` 作为纯示意点 `P`，并同步计算 `N` 到 y 轴的水平投影和 `M` 到 `y=x` 的垂足。源图无比例刻度，所选点和坐标仅用于示意，不构成题目新增条件。独立复核者对修订后的源图与渲染图确认：函数、点位关系、标注和线段拓扑相容，无阻断问题。
