@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅰ卷理科：引号字形规范化与四版重编（2026-10-21）
+
+- 已完成：在 `feat/gaokao-phase0` canonical worktree 内，将规范答案/解析 Markdown 中的 ASCII 双引号统一为中文弯引号；由 `generate_projects.py` 重生成该卷 `answers.tex`，并正式重编四版。未触碰 Main 工作树、其他试卷、`.work` 中其他版本工作项或既有 `docs/design/` 改动。
+- 修改文件：`2018/2018_数学真题_理_解析正文.md`、`2018_数学真题_理_答案要点.md`；生成物 `math-gaokao-latex/2018_全国Ⅰ卷_理科/answers.tex` 与 `receipts/build.json`；更新该卷既有 `adjudicated-drifts.json` 项的 `current_sha256`（未新增豁免/漂移类别）；正式状态同步至 `source-manifest.json`；本进度文件。
+- 验证：排版回归测试 1/1、基线测试 35 项（22通过、13跳过）、单卷生成器 `--check` 通过、`validate-receipts --paper gk-2018-regular-national-1-science` 为 `OK`、`git diff --check` 通过。正式构建四版均成功：试题版5页、解析版36页、简答版7页、印刷版28页；编译日志错误/缺字/未解析引用均为0。全套测试1605项：1591通过、13跳过、1失败；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，仅报告2015全国Ⅱ文理两卷缓存 `complete` 与现场 `editions_generated` 不符、`phase2-b10` 缓存 `closed_with_blockers` 与现场 `provenance_verified` 不符。来源状态命令/参数曾误传 `manifest.csv`、`index.json`、`issues.json`，均在写入前报错；纠正为 `source-manifest.json` 与 `missing-issues.md` 后检查通过，无额外改动。
+- 成本：无 OCR、重渲染原卷、聊天模型或外部 API；本地测试全套368.4秒。Codex Token 与实际费用不可见，记未知。
+- 剩余/下一步：当前正式 build receipt 有效，但批次状态为 `compiled_pending_review`。只读批次门禁确认仅本卷旧 review receipt 因 build attempt、输入树、依赖闭包和四份 PDF 哈希变化而 stale；旧工作项绑定前次 attempt，故不把旧视觉结论冒充为新 PDF 校样，也不重建/重审其余三卷。下一步对当前四版PDF（共76页）完成视觉复核，安全刷新本卷工作项与回执后再收口 `phase0-b01`；全库缓存状态失败保持独立待处理。
+
 ### 1998 上海文科：原卷第1页 Q1—3 字形对照（2026-10-21）
 
 - 已完成：目视复用忽略目录中既有高分辨率缓存图 `.work/1998-shanghai-arts.2Wm0sf/page-hi-1.png`，核对印刷页114的题签与Q1—3转录。题签“1998年全国普通高等学校招生统一考试 / 上海 数学试卷（文史类）”与草稿卷名相符；Q1的`lg 20+log_{100}25`、Q2的`2 sin x+√a cos x+4`及最小值1，Q3的`lim_{x→1}(x^2+ax+3)/(x^3+3)=2`均与图像一致，未发现题面差异。本次只覆盖Q1—3，不据此推断同页其余题已校对。
