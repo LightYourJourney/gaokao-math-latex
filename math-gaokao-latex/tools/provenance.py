@@ -37,7 +37,7 @@ import json
 import re
 import sys
 from pathlib import Path, PurePosixPath
-from typing import Any, Callable, Dict, List, Mapping, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, List, Mapping, Optional, Sequence, Tuple, Union
 
 HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = HERE.parent
@@ -944,7 +944,7 @@ def _require_linked_blocker(
     ledger: Sequence[Mapping[str, Any]],
     paper_id: str,
     record: Mapping[str, Any],
-    kind: str,
+    kind: Union[str, Sequence[str]],
     detail: str,
 ) -> None:
     """未知 / U 级 / 未解决冲突都必须挂上一条**当前且仍在阻断**的同身份问题。
@@ -953,13 +953,20 @@ def _require_linked_blocker(
     随便挂一条别的问题顶数是过不了的；已 resolved 或 non_blocking 的也不算——那等于用
     一条已经结案的问题给一个仍然未知的答案背书。
     """
-    expected = issues_module.question_issue_fingerprint(
-        paper_id, record["question_id"], source_identity(record["source_ref"]), kind
+    kinds = (kind,) if isinstance(kind, str) else tuple(kind)
+    expected = {
+        issues_module.question_issue_fingerprint(
+            paper_id, record["question_id"], source_identity(record["source_ref"]), item
+        )
+        for item in kinds
+    }
+    expected_types = ", ".join(
+        issues_module.QUESTION_ISSUE_TYPES[item] for item in kinds
     )
     declared = set(record["issue_ids"])
     for item in ledger:
         if (
-            item["fingerprint"] == expected
+            item["fingerprint"] in expected
             and item["issue_id"] in declared
             and item["impact"] == "blocks_completion"
             and item["status"] != "resolved"
@@ -969,7 +976,7 @@ def _require_linked_blocker(
         "%s 第 %s 个内部题序（原卷题号 %s）%s，必须关联一条 fingerprint 当前、仍在阻断的 %s 问题"
         % (paper_id, record.get("question_order", record["printed_number"]),
            record.get("printed_label", str(record["printed_number"])), detail,
-           issues_module.QUESTION_ISSUE_TYPES[kind])
+           expected_types)
     )
 
 
@@ -1085,7 +1092,7 @@ def _build_document(
             )
         if record["answer_evidence"]["grade"] == "U":
             _require_linked_blocker(
-                ledger, paper_id, record, "answer", "的答案证据是 U 级"
+                ledger, paper_id, record, ("answer", "convention"), "的答案证据是 U 级"
             )
         if record["conflict_status"] == "unresolved":
             _require_linked_blocker(

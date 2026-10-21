@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1990 全国卷文科：逐题 provenance 与答案约定歧义门禁（2026-10-22）
+
+- 已完成：依据本进度中已完成的三段固定源核和三段答案盲核记录，按当前题面/答案现场哈希生成26题 provenance。Q20保留答案证据等级 `U`、`ISSUE-1124` 和 `conflict_status=none`（这是源约定缺失，不是求解者互相冲突）；其余25题按已记录的盲核结果登记。provenance 当前，批次为 `provenance_verified`，整卷仍因 `ISSUE-1124` 派生为 `blocked`，没有补猜 $V_1/V_2$ 顺序或改官方答案。
+- 门禁修复：正式构建前发现 provenance 导入器要求 `U` 级答案必须链接 `answer-missing`，无法接受当前语义正确的 `answer-convention-ambiguous`。窄范围扩展逐题指纹匹配：`U` 级只接受同题、同来源、当前且仍 `blocks_completion` 的 `answer-missing` 或 `answer-convention-ambiguous`；冲突仍只匹配 `answer-conflict`，没有放宽“错误问题不可顶数”的守卫。
+- 修改文件：新增 `1990_全国卷_文科/provenance.json`；事务更新 `source-manifest.json` 到 revision 4580；修改 `tools/provenance.py`、`tests/test_provenance.py`；本进度。三角色工作材料与生成脚本留在忽略目录 `.work/phase4-b10/`；`missing-issues.md` 内容未改。`docs/design/` 现有用户改动未纳入。
+- 验证：新增回归先按预期因误要求 `answer-missing` 而失败；修复后 `ImportBatchTests` 14/14通过，批次 `import-batch` dry-run 与正式事务均通过，`provenance check-batch` 为 `OK：1卷`，`status` 明确报告 paper `blocked` / batch `provenance_verified`；source manifest、issues 清单和 `git diff --check` 验证通过。全库测试1678项：1664通过、13跳过、1失败；唯一失败为既有 `test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科 `answers.tex` 哈希登记 `174857e0…` 与现场 `11aa9482…` 不一致，本阶段未触及该卷。
+- 成本与剩余：未调用OCR、外部API或新增独立审题代理；本地全量测试耗时686.4秒，Codex Token/费用不可见，记未知。尚未正式构建1990四版；前次构建尝试被 `provenance=missing` 门禁在编译启动前拒绝，当前 provenance 已补齐。下一步只重跑该卷四版正式构建，再做逐页视觉检查和对应回执；Q20答案约定及整卷最终验收仍未解决。
+
 ### 1999 上海理科：Q20 图稿与 Q21 挖沟约束独立复核（2026-10-22）
 
 - 已完成：独立视觉复核确认 Q20 矢量图的点名、棱拓扑及实/虚线与固定源图一致；虚线 $BE$ 在原图中已经存在，并非矢量稿新增。比例未评估，图仍只通过拓扑/标签复核，不等于整卷视觉验收。Q21 独立数学复核确认源文和原图没有明确要求新挖沟口仍宽2米；在“不填土”约束下，若新沟口可变，允许任意深度 $H\ge3/2$ 米及对称轴偏移后，最小底宽为 $1/\sqrt2$ 米（对应沟口宽 $3/\sqrt2$ 米、深 $3/2$ 米）；若另加沟口固定2米，则最小底宽为1米。全深度包含条件和面积下界均已复核。两种答案对应不同约束，因此原题对重挖沟口的意图仍有歧义；来源答案转录 $\sqrt2/2$ 米只与自由沟口解释吻合，不足以证明题面明示了该条件。

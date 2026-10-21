@@ -1219,6 +1219,35 @@ class ImportBatchTests(unittest.TestCase):
         self.assertTrue(facts["provenance_conflicts"])
         self.assertEqual(derive_status(facts), "blocked")
 
+    def test_answer_convention_ambiguity_can_back_an_unknown_answer(self):
+        issue_id = issues_module.upsert_issue(self.fixture.issues_path, {
+            "paper_id": PAPER_ONE,
+            "affected_paper_ids": [],
+            "type": "answer-convention-ambiguous",
+            "status": "open",
+            "impact": "blocks_completion",
+            "question_id": question_id(PAPER_ONE, 1),
+            "source_id": SOURCE_ONE,
+            "resume_action": "取得题面中缺失的答案约定",
+        })
+        self.fixture.fill_work({PAPER_ONE: {1: {
+            "answer_evidence": {"grade": "U", "evidence": "答案约定未给出"},
+            "issue_ids": [issue_id],
+        }}})
+
+        report = self.do_import()
+
+        self.assertEqual(report["code"], "OK")
+        document = json.loads(
+            (self.fixture.root / self.fixture.provenance_relative(PAPER_ONE))
+            .read_text(encoding="utf-8")
+        )
+        self.assertEqual(document["questions"][0]["answer_evidence"]["grade"], "U")
+        self.assertEqual(document["questions"][0]["issue_ids"], [issue_id])
+        facts = self.fixture.facts(PAPER_ONE)
+        self.assertTrue(facts["provenance_unknown"])
+        self.assertEqual(derive_status(facts), "blocked")
+
     def test_an_issue_of_the_wrong_kind_does_not_satisfy_the_linkage(self):
         issue_id = issues_module.upsert_issue(self.fixture.issues_path, {
             "paper_id": PAPER_ONE,
