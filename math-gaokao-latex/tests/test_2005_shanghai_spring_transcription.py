@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import re
 import shutil
@@ -235,11 +236,13 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertAlmostEqual(py, ny)
         self.assertAlmostEqual(mx, my)
         self.assertAlmostEqual(px + py, mx + my)
+        self.assertAlmostEqual(px, 2.0)
+        self.assertAlmostEqual(py, 2.0 + math.sqrt(2) / 2, places=5)
         self.assertIn(
-            r"plot[domain=0.12:3.55,samples=80,variable=\x] ({\x},{\x+0.35/\x})",
+            r"plot[domain=0.42:3.55,samples=80,variable=\x] ({\x},{\x+sqrt(2)/\x})",
             function_figure,
         )
-        self.assertAlmostEqual(py, px + 0.35 / px, places=5)
+        self.assertAlmostEqual(py, px + math.sqrt(2) / px, places=5)
 
         ellipse = FIGURE_PATHS[22].read_text(encoding="utf-8")
         self.assertNotIn(r"\node", ellipse)
