@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2025 全国Ⅰ卷 Q8 答案依据纠正与局部重建（2026-10-21）
+
+- 已完成：修正规范答案要点与解析正文中错误的 D 项见证和近似临界值。令 $x=2^{k-2},y=3^{k-3},z=5^{k-5}$，$z>y$ 要求 $k>9.301320$，$x>z$ 要求 $k<7.269412$，所以 B（$x>z>y$）不可能；D 的有效见证为 $k=8$、$(x,y,z)=(64,243,125)$。最终答案仍为 B；题面、其他题答案以及 Q11 歧义均未改。
+- 修改文件：`2025/2025_数学真题_答案要点.md`、`2025/2025_数学真题_解析正文.md`、`2025_全国1卷/answers.tex`、该卷 `receipts/build.json`、`source-manifest.json`、`missing-issues.md`（ISSUE-0049 置为 `resolved`）、新增 `tests/test_2025_national_1_q08_solution.py`、本进度，以及派生报告 `docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/reports/baseline.md`。正式构建事务重算 `phase0-b05` 与三卷缓存 production_state；`check-batch` 已确认四卷状态一致，这些投影状态不代表本次复核了相关试卷。
+- 验证：新增 Q8 数学与规范稿一致性测试 4/4；`generate_projects.py --check`、`make_short_answers.py --check` 通过，简答答案测试 52/52，ISSUE 校验通过。正式 XeLaTeX 构建 4 版全部成功、0 构建失败（试题版5页、解析版35页、简答版7页、印刷版26页）；构建回执仍为 `compiled_pending_review`。本次目视复核三张受影响答案页：解析版第13页、简答版第6页、印刷版第10页，未见裁切、重叠或公式越界；简答版答案表仍为 B。`check-batch --batch phase0-b05` 通过（4卷）；全量报告 `render --all` 后 `check --all` 通过。验证回执和报告检查的首次调用分别因缺少必需的 `--manifest`、以及 `--manifest/--issues` 以退出码2拒绝，均未写文件；补齐参数后通过。此局部目视复核不等于正式逐页 review 回执。
+- 成本与边界：未调用 OCR、聊天模型或付费 API；本地构建、测试及报告投影生成。Codex Token/费用未知。完整试卷和答案的最终验收状态未因此改变。
+- 剩余/下一步：正式逐页 review 回执尚未刷新；本次局部目视复核不替代批次工作流。保留 Q11 原有未决歧义；下一步按批次门禁处理正式视觉回执，不重做 Q8 已完成的数学核对、构建或局部检查。
+
 ### OCR Phase 1：1977 新疆理科公式裁剪 Paddle FormulaRecognition 与缓存复用（2026-10-21）
 
 - 已完成：在已校验来源的同一600 DPI公式裁剪上，使用既有 PaddleOCR FormulaRecognition `PP-FormulaNet_plus-S`（PaddleOCR 3.7.0 / PaddlePaddle 3.3.1 / PaddleX 3.7.2，CPU）运行一次。输出 `x^{2}-2x+L g a=0`，指数和系数与可见源式 `x^2-2x+Lg a=0` 相符，但函数字形空格化仍需人工判断；保留为 `needs-review` / `not_verified`。第二次调用确认内容寻址缓存命中（`local_ocr_calls_this_run=0`），不是第二次推理。

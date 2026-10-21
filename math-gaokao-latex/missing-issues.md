@@ -942,14 +942,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "盲核角色判 conflict_status=resolved，本条为该状态的承接指针（沿 b04 ISSUE-0033 口径：resolved 也要留一条可追溯条目，否则「这里曾有分歧、结论是什么」在 provenance 里只剩一个状态词）。盲核指出库内要点佐证两处硬伤：一是见证值 k=10 与其自述阈值自相矛盾（实测 z>y>x 而非 y>z>x），正确见证为 k=8；二是阈值 ≈9.32 应为 ≈9.3013。答案 B 经解析阈值与逐点扫描双重确认正确。求解角色的落盘证据可为阈值一项作旁证：其独立算得三条临界 x=y 于 k≈4.709、x=z 于 k≈7.270、y=z 于 k≈9.302——9.302 与盲核的 9.3013 相符，而与要点的 9.32 不符。",
+  "current_evidence": "盲核角色判 conflict_status=resolved，本条为该状态的承接指针（沿 b04 ISSUE-0033 口径：resolved 也要留一条可追溯条目，否则「这里曾有分歧、结论是什么」在 provenance 里只剩一个状态词）。已修正规范答案源与解析正文：z>y 的临界值为 (5 ln 5−3 ln 3)/(ln 5−ln 3)≈9.301320，x>z 的临界值为 (5 ln 5−2 ln 2)/(ln 5−ln 2)≈7.269412；k=8 时 (x,y,z)=(64,243,125)，确为 y>z>x（D）。B 要求 k 同时大于 9.301320 且小于 7.269412，仍不可能；答案 B 未变。独立算式用标准库对数重算，针对性测试覆盖阈值顺序、A/C/D 见证及答案源/解析正文一致。",
   "fingerprint": "3ba8cd72d53c8b630da71b4aa1eed378f729e2b9ee02641b4ad3344dcbd65a5c",
   "impact": "non_blocking",
   "paper_id": "gk-2025-regular-national-1",
   "question_id": "gk-2025-regular-national-1-q08",
-  "resume_action": "更正 2025 全国 1 卷 `_答案要点.md` 第 8 题的佐证：其见证值 k=10 与自述阈值自相矛盾（k=10 实测为 z>y>x，而非要点所称的 y>z>x），正确见证应取 k=8；所给阈值 ≈9.32 应为 ≈9.3013。答案 B 本身正确，只需改佐证",
+  "resume_action": "已修正第 8 题两份规范答案材料中的临界值与 D 项见证；最终答案 B 保持不变。",
   "source_id": "src-52c0a1ccacd7d0f6a8ba555e22474325194ac4aba7daa75012cc39626bc32ac3",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
