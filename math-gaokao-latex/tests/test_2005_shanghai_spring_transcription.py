@@ -12,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2005/2005_数学真题_春季上海_试题.md"
 FIGURES = ROOT / "2005/2005_数学真题_春季上海_图表清单.md"
+ANSWER_KEY = ROOT / "2005/2005_数学真题_春季上海_答案要点.md"
+SOLUTION_BODY = ROOT / "2005/2005_数学真题_春季上海_解析正文.md"
 SOURCE_ID = "src-2cd71e4caf6708c2589791bd24ba1b55d6d80d2c08b764a325587c7a991d8c83"
 SOURCE_SHA256 = "67d4850cc310a4c089729daf7ff1b8fa3bdacaaaf6b227918669bd0972fb56b5"
 FIGURE_PATHS = {
@@ -79,7 +81,35 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn(r"a_n=0.1n", self.transcript)
         self.assertIn(r"\tan\alpha", self.transcript)
         self.assertIn("较小的根", self.transcript)
-        self.assertIn("未生成答案或解析", self.transcript)
+        self.assertIn("Q1–8 为编者独立推导（非官方）", self.transcript)
+
+    def test_derived_answers_are_nonofficial_and_explicitly_partial(self):
+        self.assertIn("第 9–22 题待完成", self.transcript)
+        self.assertTrue(ANSWER_KEY.is_file(), "derived answer key must be kept separate from the source transcript")
+        self.assertTrue(SOLUTION_BODY.is_file(), "derived solutions must be traceable as a separate artifact")
+        answer_key = ANSWER_KEY.read_text(encoding="utf-8")
+        solution_body = SOLUTION_BODY.read_text(encoding="utf-8")
+        self.assertIn("非官方标准答案", answer_key)
+        self.assertIn("第 9–22 题：待完成", answer_key)
+        self.assertEqual(
+            [int(number) for number in re.findall(r"^\*\*(\d+)．\*\*", answer_key, re.M)],
+            list(range(1, 9)),
+        )
+        self.assertEqual(
+            [int(number) for number in re.findall(r"^### 第 (\d+) 题$", solution_body, re.M)],
+            list(range(1, 9)),
+        )
+        for expected in (
+            r"**1．** $\{-1,2\}$",
+            r"**2．** $0$",
+            r"**3．** $\dfrac12$",
+            r"**4．** $f^{-1}(x)=-\sqrt{-x}\ (x\leqslant-4)$",
+            r"**5．** $16$",
+            r"**6．** $\dfrac1{260}$",
+            r"**7．** $\dfrac56$",
+            r"**8．** $11$",
+        ):
+            self.assertIn(expected, answer_key)
 
     def test_question_13_uses_line_parallel_to_plane_in_options_b_and_d(self):
         question = self.transcript.split("**13．**", 1)[1].split("**14．**", 1)[0]
