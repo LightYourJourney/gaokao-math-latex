@@ -159,6 +159,36 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertLess(fourth_quadrant_y, 0)
         self.assertIn("第一象限不经过，选A", draft)
 
+    def test_q15_eleventh_element_in_b_makes_only_option_d_true(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"11\in B", questions)
+        self.assertIn(r"A=\{x\mid x^2-5x-6>0\}", questions)
+        self.assertIn(r"B=\{x\mid |x-5|<a\}", questions)
+        q15_solution = draft.split("**15．**", 1)[1].split("**16．**", 1)[0]
+        self.assertIn(r"$a>6$", q15_solution)
+
+        # |11-5|<a forces a>6. Then B contains [-1, 6], the
+        # complement of A=(-infinity,-1) union (6,infinity).
+        for a in (Fraction(601, 100), Fraction(7), Fraction(100)):
+            self.assertGreater(a, 6)
+            self.assertLess(Fraction(5) - a, -1)
+            self.assertGreater(Fraction(5) + a, 6)
+
+            # Witnesses disprove options A, B, and C respectively.
+            witness_a = 6 + a
+            self.assertGreater(witness_a, 6)  # in A, not in complement(A)
+            self.assertGreater(abs(witness_a - 5), a)  # outside B
+            self.assertGreater(5, -1)
+            self.assertLess(5, 6)  # 5 is in complement(A)
+            self.assertGreater(a, abs(5 - 5))  # 5 is in B
+            self.assertGreater(7, 6)  # 7 is in A
+            self.assertGreater(a, abs(7 - 5))  # and also in B
+
+        self.assertIn(r"\overline A=[-1,6]", q15_solution)
+        self.assertIn(r"\overline A\subset B", q15_solution)
+        self.assertIn("故D是唯一正确项", q15_solution)
+
     def test_q16_sine_rule_makes_the_two_lines_perpendicular(self):
         questions = QUESTIONS.read_text(encoding="utf-8")
         draft = DRAFT.read_text(encoding="utf-8")
