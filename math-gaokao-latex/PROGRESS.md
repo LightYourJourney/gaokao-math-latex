@@ -40,6 +40,13 @@
 - 验证：新增全题覆盖及非官方状态测试；专项测试 7/7 通过，并使用 `latexmk -xelatex` 与 Poppler 将三幅原题 TikZ 图及 Q22 作图示意共同编译、渲染。住房递推用精确有理数计算为 $2522.638164115536\ldots$，按题意四舍五入为 $2522.64$。全量 unittest 1687 项：1673 通过、13 跳过、1 失败；唯一失败仍为 `test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2025 全国Ⅰ卷 `answers.tex` 的历史漂移台账 SHA 与当前 SHA 不一致；本卷不在该断言范围。`git diff --check` 通过。
 - 成本与剩余：使用已固定的本地两页 PDF 和本地精确计算/矢量编译；无 OCR、外部 API 或模型调用；Token/费用不可见，记未知。仍须独立盲核 22 题与四幅图、核验出版者/版次及来源绑定、整理进项目正式共享 LaTeX 目录、生成试题/解析/简答/印刷四入口并编译视觉验收；故卷级状态不能标为完成。下一步先遵循正式来源/manifest 工作流确认该春季卷的 paper identity 与来源关系，同时避免覆盖任何未绑定的存档素材。
 
+### 2005 春季上海卷：正式题库登记与共享源规范化（2026-10-22）
+
+- 已完成：以 `gk-2005-spring-shanghai`、`2005_上海春季卷` 登记为新卷，批次 `phase4-b11`，生产状态 `planned`。因固定 PDF 的出版者、版次和与标准试卷的身份映射仍未核实，登记时明确 `source_ids=[]`，原 source record 仍为 `paper_id=null`、`paper_relation=null`，没有提前绑定或认证来源。将四幅 TikZ 源移入本卷 `figures/`，规范 Markdown 链接指向该卷图稿；答案块及题面/解析小问标记改为现有解析渲染器可识别的格式，只调整格式/空格，不改题意。使用项目 `solution_sources.render_combined()` 生成 `_含解析.md`。
+- 修改文件：`source-manifest.json`（revision 4587，新登记及 `phase4-b11`）；2005 春季上海卷试题、答案要点、解析正文和图表清单；新增确定性生成的 `2005_数学真题_春季上海_含解析.md`；四幅图稿从 `2005/figures/` 迁至 `2005_上海春季卷/figures/`；扩展 `test_2005_shanghai_spring_transcription.py`；本进度文件。未更改共享生成器或其他试卷内容。
+- 验证：注册 dry-run 返回 `OK`、`written=false`（revision 4586）；正式事务后 revision 4587。`validate_source_manifest()` 返回 775 个 ready 源档案，`validate_figure_occurrences()` 核对 889 条图稿登记；新卷 4 图的引用次数为 2/2/2/1。检查仍显示新卷 `planned`、`source_ids=[]`、PDF source 未绑定。2005 专项测试 10/10 通过，含答案块解析、22 题合并稿确定性比较，以及 `latexmk -xelatex`/Poppler 图稿构建与渲染。
+- 成本与剩余：零 OCR、零模型/API；本地确定性 Markdown 渲染和矢量测试。Codex Token/费用不可见，记未知。四版本正式 TeX/PDF、逐页视觉复核、独立盲核 22 题及四图、来源出版身份确认/绑定与正式验收回执仍未完成，卷状态必须保持 `planned`。下一步按正式工具生成共享 `questions.tex`/`answers.tex`、简答答案及四个独立编译入口，再针对本卷编译和检查；不将这些构建步骤当作数学或来源验收。
+
 ### 2008 全国Ⅱ文科：Q18 同版答案补证检索（2026-10-22）
 
 - 已完成：围绕 `ISSUE-0839` 的明确门禁，定向检索同版官方答案或勘误。未找到能证明官方排除零公差的官方答案/勘误；找到一份第三方《2008年全国统一高考数学试卷（文科）（全国卷Ⅱ）参考答案与试题解析》，其第18题明确求得 `d=0` 或 `d=1`，并分别给出 `S_{20}=200` 与 `330`（[第三方解析页](https://www.yeyulingfeng.com/wendang/14727.html)）。这与当前按原题字面保留两值的解析相符，但不能替代同版官方来源，也不证明该网页版本与固定PDF同版。

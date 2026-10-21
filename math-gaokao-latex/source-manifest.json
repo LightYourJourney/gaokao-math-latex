@@ -1398,6 +1398,14 @@
         "gk-1990-regular-national-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b11",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1407,7 +1415,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "02087ad8-5420-4c31-964c-3ccb73c87287",
+  "last_transaction_id": "ed4b7d9e-3e19-43ec-9f24-0f91a64b6f2b",
   "papers": [
     {
       "blocked_from": null,
@@ -20429,9 +20437,76 @@
       "title": "1990 年·全国卷·文科",
       "track": "arts",
       "year": 1990
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q21_function.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_center_construction.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_shanghai_spring",
+        "id": "gk-2005-spring-shanghai",
+        "note": "固定来源PDF为2页题面，印刷页217–218，不含答案/解析页；本库答案与解析均为编者独立推导（非官方）并待异人盲核。来源出版者、版次及与标准试卷身份的映射未核，故 source_id 暂不绑定。四幅矢量图按题面/解题用途分别登记；Q22中心构造图仅示意，不按比例。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "不分文理",
+        "variant": "春季上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-spring-shanghai",
+      "production_state": "planned",
+      "project_dir": "2005_上海春季卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_春季上海_含解析.md",
+        "questions": "2005/2005_数学真题_春季上海_试题.md",
+        "solution_body": "2005/2005_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [],
+      "title": "2005 年·春季上海卷·数学",
+      "track": "none",
+      "year": 2005
     }
   ],
-  "revision": 4586,
+  "revision": 4587,
   "schema_version": 1,
   "sources": [
     {

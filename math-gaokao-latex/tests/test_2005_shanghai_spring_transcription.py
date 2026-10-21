@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,18 +11,23 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
+PAPER_DIR = PROJECT / "2005_上海春季卷"
+sys.path.insert(0, str(PROJECT / "tools"))
+import solution_sources
+
 TRANSCRIPT = ROOT / "2005/2005_数学真题_春季上海_试题.md"
 FIGURES = ROOT / "2005/2005_数学真题_春季上海_图表清单.md"
 ANSWER_KEY = ROOT / "2005/2005_数学真题_春季上海_答案要点.md"
 SOLUTION_BODY = ROOT / "2005/2005_数学真题_春季上海_解析正文.md"
+COMBINED_RENDERED = ROOT / "2005/2005_数学真题_春季上海_含解析.md"
 SOURCE_ID = "src-2cd71e4caf6708c2589791bd24ba1b55d6d80d2c08b764a325587c7a991d8c83"
 SOURCE_SHA256 = "67d4850cc310a4c089729daf7ff1b8fa3bdacaaaf6b227918669bd0972fb56b5"
 FIGURE_PATHS = {
-    19: ROOT / "2005/figures/gaokao_2005_shanghai_spring_q19_pyramid.tex",
-    21: ROOT / "2005/figures/gaokao_2005_shanghai_spring_q21_function.tex",
-    22: ROOT / "2005/figures/gaokao_2005_shanghai_spring_q22_ellipse.tex",
+    19: PAPER_DIR / "figures/gaokao_2005_shanghai_spring_q19_pyramid.tex",
+    21: PAPER_DIR / "figures/gaokao_2005_shanghai_spring_q21_function.tex",
+    22: PAPER_DIR / "figures/gaokao_2005_shanghai_spring_q22_ellipse.tex",
 }
-CONSTRUCTION_FIGURE = ROOT / "2005/figures/gaokao_2005_shanghai_spring_q22_center_construction.tex"
+CONSTRUCTION_FIGURE = PAPER_DIR / "figures/gaokao_2005_shanghai_spring_q22_center_construction.tex"
 
 
 class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
@@ -45,6 +51,31 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn(SOURCE_SHA256, self.transcript)
         self.assertIn("原卷印刷页码 217–218", self.transcript)
         self.assertIn("paper_id 未绑定", self.transcript)
+
+    def test_formal_registration_is_planned_without_binding_unverified_source(self):
+        paper_id = "gk-2005-spring-shanghai"
+        paper = next(
+            (item for item in self.manifest["papers"] if item["paper_id"] == paper_id),
+            None,
+        )
+        self.assertIsNotNone(paper, "the 2005 spring Shanghai project must be registered")
+        self.assertEqual(paper["project_dir"], "2005_上海春季卷")
+        self.assertEqual(paper["question_count"], 22)
+        self.assertEqual(paper["production_state"], "planned")
+        self.assertEqual(paper["source_ids"], [])
+        self.assertEqual(paper["index_metadata"]["structure"], {
+            "填空题": [1, 12], "选择题": [13, 16], "解答题": [17, 22],
+        })
+        figures = {
+            item["path"]: item["expected_occurrences"]
+            for item in paper["figure_files"]
+        }
+        self.assertEqual(figures, {
+            "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q19_pyramid.tex": 2,
+            "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q21_function.tex": 2,
+            "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_ellipse.tex": 2,
+            "2005_上海春季卷/figures/gaokao_2005_shanghai_spring_q22_center_construction.tex": 1,
+        })
 
     def test_all_22_questions_and_source_sections_are_present(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
@@ -101,31 +132,46 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
             [int(number) for number in re.findall(r"^### 第 (\d+) 题$", solution_body, re.M)],
             list(range(1, 23)),
         )
-        for expected in (
-            r"**1．** $\{-1,2\}$",
-            r"**2．** $0$",
-            r"**3．** $\dfrac12$",
-            r"**4．** $f^{-1}(x)=-\sqrt{-x}\ (x\leqslant-4)$",
-            r"**5．** $16$",
-            r"**6．** $\dfrac1{260}$",
-            r"**7．** $\dfrac56$",
-            r"**8．** $11$",
-            r"**9．** ①②③",
-            r"**10．** $\{1\}$",
-            r"**11．** $[-\dfrac\pi2-\sin1,\dfrac\pi2+\sin1]$",
-            r"**12．** $110$",
-            r"**13．** D",
-            r"**14．** B",
-            r"**15．** A",
-            r"**16．** C",
-            r"**17．** $2<a<6$",
-            r"**18．** $\alpha=\dfrac{7\pi}{6}+2k\pi\ (k\in\mathbb{Z})$",
-            r"**19．** （1）$PA\perp BC$；（2）$3$",
-            r"**20．** （1）$1240$、$1282$；（2）$2522.64$ 万平方米",
-            r"**21．** （1）$a=\sqrt2$；（2）定值为 $1$；（3）面积最小值为 $1+\sqrt2$",
-            r"**22．** （1）$\dfrac{x^2}{8}+\dfrac{y^2}{4}=1$",
-        ):
-            self.assertIn(expected, answer_key)
+
+    def test_derived_answers_follow_the_formal_renderer_contract(self):
+        answer_key = ANSWER_KEY.read_text(encoding="utf-8")
+        parsed = solution_sources.parse_answer_points(answer_key)
+        self.assertEqual([point.number for point in parsed], list(range(1, 23)))
+        expected = [
+            ((None, r"$\{-1,2\}$"),),
+            ((None, "$0$"),),
+            ((None, r"$\dfrac12$"),),
+            ((None, r"$f^{-1}(x)=-\sqrt{-x}\ (x\leqslant-4)$"),),
+            ((None, "$16$"),),
+            ((None, r"$\dfrac1{260}$"),),
+            ((None, r"$\dfrac56$"),),
+            ((None, "$11$"),),
+            ((None, "①②③"),),
+            ((None, r"$\{1\}$"),),
+            ((None, r"$[-\dfrac\pi2-\sin1,\dfrac\pi2+\sin1]$"),),
+            ((None, "$110$"),),
+            ((None, "D"),),
+            ((None, "B"),),
+            ((None, "A"),),
+            ((None, "C"),),
+            ((None, "$2<a<6$"),),
+            ((None, r"$\alpha=\dfrac{7\pi}{6}+2k\pi\ (k\in\mathbb{Z})$"),),
+            ((1, r"$PA\perp BC$"), (2, "$3$")),
+            ((1, "$1240$、$1282$"), (2, "$2522.64$ 万平方米")),
+            ((1, r"$a=\sqrt2$"), (2, "定值为 $1$"), (3, r"面积最小值为 $1+\sqrt2$")),
+            ((1, r"$\dfrac{x^2}{8}+\dfrac{y^2}{4}=1$"),
+             (2, "弦中点轨迹为过原点的定直线"), (3, "作图见解析")),
+        ]
+        self.assertEqual([point.answers for point in parsed], expected)
+
+    def test_combined_markdown_is_deterministic_from_canonical_sources(self):
+        questions = TRANSCRIPT.read_text(encoding="utf-8")
+        answers = ANSWER_KEY.read_text(encoding="utf-8")
+        raw_solutions = SOLUTION_BODY.read_text(encoding="utf-8")
+        solution = solution_sources.extract_solution_blocks(raw_solutions, questions)
+        expected = solution_sources.render_combined(questions, solution, answers)
+        self.assertTrue(COMBINED_RENDERED.is_file(), "combined Markdown must be generated")
+        self.assertEqual(COMBINED_RENDERED.read_text(encoding="utf-8"), expected)
 
     def test_question_13_uses_line_parallel_to_plane_in_options_b_and_d(self):
         question = self.transcript.split("**13．**", 1)[1].split("**14．**", 1)[0]
@@ -137,7 +183,7 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn("第 21 题", self.figures)
         self.assertIn("第 22 题", self.figures)
         for question, path in FIGURE_PATHS.items():
-            relative_path = path.relative_to(ROOT / "2005")
+            relative_path = os.path.relpath(path, TRANSCRIPT.parent)
             self.assertIn(str(relative_path), self.transcript)
             self.assertIn(str(relative_path), self.figures)
             self.assertTrue(path.is_file(), f"missing vector figure for Q{question}")
