@@ -17,6 +17,7 @@ class NationalArts1992MathTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.text = (PROJECT / "解答草稿.md").read_text(encoding="utf-8")
+        cls.question_text = (PROJECT / "题面转录草稿.md").read_text(encoding="utf-8")
         cls.blocks = {q.number: q for q in solution_sources.parse_question_blocks(cls.text)}
         cls.record = json.loads((PROJECT / "来源校对.json").read_text(encoding="utf-8"))
 
@@ -30,9 +31,23 @@ class NationalArts1992MathTests(unittest.TestCase):
         self.assertEqual(self.blocks[28].subparts, (1, 2))
         self.assertEqual(generated["sha256"], hashlib.sha256((PROJECT / "解答草稿.md").read_bytes()).hexdigest())
         self.assertEqual(generated["question_draft_sha256"], self.record["draft_sha256"])
-        self.assertEqual(generated["status"], "pending-independent-review")
+        self.assertEqual(generated["status"], "independently-reviewed")
         self.assertIsNone(self.record["official_answer"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
+        review = self.record["independent_blind_review"]
+        self.assertEqual(review["status"], "reviewed-with-source-issues")
+        self.assertEqual(review["reviewers"], 2)
+        self.assertEqual(review["reviewed_question_numbers"], list(range(1, 29)))
+        self.assertEqual(review["verified_answer_question_numbers"], [n for n in range(1, 29) if n not in (16, 27)])
+        self.assertEqual(review["confirmed_source_issue_question_numbers"], [16, 27])
+        self.assertEqual(review["transcription_discrepancy_question_numbers"], [])
+        self.assertEqual(review["source_pdf_sha256"], self.record["pdf_sha256"])
+        self.assertEqual(review["question_draft_sha256"], self.record["draft_sha256"])
+        self.assertEqual(review["current_solution_draft_sha256"], generated["sha256"])
+        self.assertNotEqual(review["solution_draft_sha256"], review["current_solution_draft_sha256"])
+        review_report = PROJECT / review["report_path"]
+        self.assertEqual(hashlib.sha256(review_report.read_bytes()).hexdigest(), review["report_sha256"])
+        self.assertIn("状态`independently-reviewed`", (PROJECT / generated["path"]).read_text(encoding="utf-8"))
 
     def test_choice_key_and_arts_numbering(self):
         key = ["A", "D", "D", "C", "D", "B", "B", "D", "D", "D", "B", "A", "C", "D", "D", None, "A", "C"]
@@ -40,6 +55,64 @@ class NationalArts1992MathTests(unittest.TestCase):
         for number, answer in enumerate(key, 1):
             if answer is not None:
                 self.assertIn(f"**答案：{answer}**", self.blocks[number].body)
+
+    def test_q3_preserves_full_frequency_sign_solution(self):
+        self.assertIn(r"y=\sin(\omega x)\cos(\omega x)", self.question_text)
+        self.assertIn(r"\omega=\pm1/4", self.blocks[3].body)
+        self.assertIn("原题未设", self.blocks[3].body)
+        self.assertIn("选项只有正值", self.blocks[3].body)
+
+    def test_q9_four_right_lateral_faces_are_constructible(self):
+        points = {
+            "A": (0, 0, 0), "B": (1, 0, 0), "C": (1, 1, 0),
+            "D": (0, 1, 0), "S": (0, 0, 1),
+        }
+
+        def subtract(a, b):
+            return tuple(x - y for x, y in zip(a, b))
+
+        def dot(a, b):
+            return sum(x * y for x, y in zip(a, b))
+
+        def cross(a, b):
+            return (
+                a[1] * b[2] - a[2] * b[1],
+                a[2] * b[0] - a[0] * b[2],
+                a[0] * b[1] - a[1] * b[0],
+            )
+
+        right_angle_edges = (
+            (subtract(points["S"], points["A"]), subtract(points["B"], points["A"])),
+            (subtract(points["S"], points["B"]), subtract(points["C"], points["B"])),
+            (subtract(points["S"], points["D"]), subtract(points["C"], points["D"])),
+            (subtract(points["S"], points["A"]), subtract(points["D"], points["A"])),
+        )
+        base_normal = cross(subtract(points["B"], points["A"]), subtract(points["D"], points["A"]))
+        self.assertNotEqual(base_normal, (0, 0, 0))
+        self.assertNotEqual(dot(base_normal, subtract(points["S"], points["A"])), 0)
+        self.assertTrue(all(dot(first, second) == 0 for first, second in right_angle_edges))
+        self.assertTrue(all(cross(first, second) != (0, 0, 0) for first, second in right_angle_edges))
+        self.assertIn("四个侧面全为直角三角形", self.blocks[9].body)
+        self.assertIn("上界可达", self.blocks[9].body)
+
+    def test_q28_strict_difference_interval_makes_s6_unique_maximum(self):
+        lower, upper = -F(24, 7), F(-3)
+
+        def partial_sum(n, difference):
+            return F(n, 2) * (24 + (n - 5) * difference)
+
+        self.assertEqual(partial_sum(12, lower), 0)
+        self.assertEqual(partial_sum(13, upper), 0)
+        difference = -F(13, 4)
+        self.assertLess(lower, difference)
+        self.assertLess(difference, upper)
+        self.assertGreater(partial_sum(12, difference), 0)
+        self.assertLess(partial_sum(13, difference), 0)
+        self.assertGreater(12 + 3 * difference, 0)  # a_6
+        self.assertLess(12 + 4 * difference, 0)  # a_7
+        self.assertLess(difference, 0)  # later a_n continue decreasing
+        self.assertIn(r"-\dfrac{24}{7}<d<-3", self.blocks[28].body)
+        self.assertIn("$S_6$ 唯一最大", self.blocks[28].body)
 
     def test_16_reused_solutions_preserve_input_hash_and_question_mapping(self):
         generated = self.record["generated_solution"]

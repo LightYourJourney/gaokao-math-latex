@@ -94,7 +94,8 @@ class NationalArts1992SourceTests(unittest.TestCase):
             self.assertIsNone(self.record[field])
         self.assertFalse(self.record["source_has_answers"])
         self.assertFalse(self.record["canonical_question_source_ready"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
+        self.assertEqual(self.record["review_status"], "needs-review")
         self.assertEqual([q.number for q in self.questions if "题图待重绘" in q.body], [])
         self.assertEqual(self.record["question_figures_pending"], [])
 
