@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[4]
+QUESTIONS = ROOT / "1990/1990_数学真题_全国文_试题.md"
 ANSWERS = ROOT / "1990/1990_数学真题_全国文_答案要点.md"
 SOLUTIONS = ROOT / "1990/1990_数学真题_全国文_解析正文.md"
 
@@ -11,7 +12,7 @@ EXPECTED_RESULTS = {
     1: "A",
     2: "C",
     3: "D",
-    4: "D",
+    4: "B",
     5: "C",
     6: "C",
     7: "A",
@@ -50,6 +51,16 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
         self.assertIn("pending", answer_text.lower())
         self.assertIn("pending", solution_text.lower())
 
+    def test_answer_and_solution_state_math_blind_review_is_complete(self):
+        answer_text = ANSWERS.read_text(encoding="utf-8")
+        solution_text = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn("状态: pending", answer_text)
+        self.assertIn("状态: pending", solution_text)
+        self.assertIn("26题独立盲核已完成", answer_text)
+        self.assertIn("26题独立盲核已完成", solution_text)
+        self.assertNotIn("尚未完成独立盲核", answer_text)
+        self.assertNotIn("尚未完成独立盲核", solution_text)
+
     def test_answer_table_covers_each_question_once_with_expected_result_values(self):
         self.assertTrue(ANSWERS.is_file(), f"missing generated answer key: {ANSWERS}")
         text = ANSWERS.read_text(encoding="utf-8")
@@ -72,6 +83,16 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
             body = sections[index + 1]
             with self.subTest(question=number):
                 self.assertIn(f"结论：{EXPECTED_RESULTS[number]}", body)
+
+    def test_q04_clockwise_rotation_matches_the_exact_option_b_value(self):
+        question_text = QUESTIONS.read_text(encoding="utf-8")
+        answer_text = ANSWERS.read_text(encoding="utf-8")
+        solution_text = SOLUTIONS.read_text(encoding="utf-8")
+        self.assertIn(r"（B）$\dfrac{-1+\sqrt3}{2}+\dfrac{-1-\sqrt3}{2}i$", question_text)
+        answer_section = re.split(r"(?m)^### 第 4 题\s*$", answer_text)[1].split("### 第 5 题", 1)[0]
+        solution_section = re.split(r"(?m)^### 第 4 题\s*$", solution_text)[1].split("### 第 5 题", 1)[0]
+        self.assertIn(r"**结论：B**，$\dfrac{-1+\sqrt3}{2}+\dfrac{-1-\sqrt3}{2}i$。", answer_section)
+        self.assertIn(r"(1+i)e^{-2\pi i/3}=\frac{-1+\sqrt3}{2}-\frac{1+\sqrt3}{2}i", solution_section)
 
     def test_ambiguous_prism_ratio_stays_pending_despite_computed_unordered_volumes(self):
         self.assertTrue(ANSWERS.is_file(), f"missing generated answer key: {ANSWERS}")
