@@ -100,8 +100,22 @@
     {"question_number": 23, "role": "solution-construction", "path": "figures/f1995_shanghai_science_q23_solution_construction.tex", "source_page": 7, "classification": "source-derived-construction-schematic", "sha256": "c10c4890f2466c2f25b599164ca9698776dcaf8ab1983d0726ca7414b3520c67"}
   ],
   "source_issues": [
-    {"question_number": 24, "type": "source-answer-boundary-omission", "description": "来源最终区间排除 m/n=1，但题内 n≤m 的极值分支在 m=n、theta=pi/4 时仍给出 u=2mn>mn。原文保留，转录答案另附核查说明。"}
+    {"question_number": 6, "type": "schematic-option-ambiguity", "description": "当前矢量示意中A、B均呈正斜率直线、0<b<1截距及递减指数曲线；示意图精度不足以独立排除B，来源答案表列A仍照录。", "status": "awaiting-source-image"},
+    {"question_number": 21, "type": "diagram-dependent-mirror-coordinate", "description": "B2组文字条件允许D=(0,-1/2,±sqrt(3)/2)两个镜像；当前题图示意选择+z。第(2)问cos不随镜像改变。", "status": "awaiting-source-image"},
+    {"question_number": 24, "type": "source-answer-boundary-omission", "description": "来源最终区间排除 m/n=1，但题内 n≤m 的极值分支在 m=n、theta=pi/4 时仍给出 u=2mn>mn。原文保留，转录答案另附核查说明。", "independent_review": {"status": "mathematical-omission-independently-confirmed", "method": "blind derivation from the question text; source answer withheld", "result": "m/n=1 is included; the lower endpoint 2-sqrt(3) remains excluded"}}
   ],
+  "independent_math_review": {
+    "status": "reviewed-with-open-issues",
+    "method": "blind independent solution from question transcription and linked figure TeX only; answer and solution drafts withheld",
+    "date": "2026-10-21",
+    "question_draft_sha256": "d3af6aed083c7a5386dd4d1daaac10e064787a09c9aef6354f6ed086523c9c39",
+    "question_count": 25,
+    "prompt_variant_count": 30,
+    "tracks_reviewed": ["A1", "B1", "A2", "B2"],
+    "open_question_numbers": [6, 21],
+    "confirmed_source_answer_corrections": [24],
+    "summary": "30个题面版本均独立求解；除Q24来源范围漏掉m/n=1外，其余可判定的数值答案与现有解答相符，且Q24边界修正获独立确认。Q6选项示意不足以定唯一项，Q21 B2的坐标符号依赖题图；这两处等待固定原页复核。"
+  },
   "review_notes": [
     "固定来源为上游扫描PDF，哈希和Git blob均与revision 4152来源记录一致。",
     "题面文字层不可用；本地OCR输出仅作检索候选，题意和数学符号以原页图像为准。",
@@ -109,9 +123,11 @@
     "PDF第9页是空白背页；Q25答案续页在PDF第8页（印刷页65）。",
     "国家图书馆目录确认存在1994-1995年上海市高考试题汇析（上海市教育考试院编，复旦大学出版社，1996，ISBN 7-309-01629-7）；但尚未核对目录/版权页或具体内容，不能证明当前固定PDF来自该书，故PDF来源出版者与官方答案身份仍未核。答案不标为官方。",
     "Q6、Q21、Q23图稿均为基于来源关系的示意性矢量重绘，不主张尺量比例；Q23解答另绘辅助线E、F。",
-    "Q24来源答案的m/n范围遗漏1；保留源文并单独记录由本会话推导的修正，仍需异人复核。"
+    "Q6独立盲核认为示意图不能可靠地区分A/B，来源答案表仍照录A；待固定原页核图。",
+    "Q21 B2文字允许关于xy平面的镜像坐标；当前图稿取+z，问题（2）的余弦对镜像不变，仍待原图确认坐标符号。",
+    "Q24来源答案遗漏m/n=1，已由独立盲核再次确认；原文保留，转录答案区间修正为(2-sqrt(3),+infinity)。"
   ],
   "draft_sha256": "d3af6aed083c7a5386dd4d1daaac10e064787a09c9aef6354f6ed086523c9c39",
-  "answers_draft_sha256": "c0d116867f40a9ebf682599c4c1d94f73cfd348aa5ad6e7c45a09d08aaa98411",
-  "solutions_draft_sha256": "0f2129d173061fce1614e482bb427359fb58234dfb300f0b3a9463d6a0e5bed7"
+  "answers_draft_sha256": "d3fbcae4e1e1768d3bb9aec08487dfdc1be00321c781daba3a297414ca1e3f48",
+  "solutions_draft_sha256": "42689eb0d75f7d31d965a49013f82ac97afd2bd5225e4257957a698d72ab9f96"
 }
