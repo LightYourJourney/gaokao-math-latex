@@ -64,6 +64,8 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertEqual(paper["question_count"], 22)
         self.assertEqual(paper["production_state"], "planned")
         self.assertEqual(paper["source_ids"], [])
+        self.assertIn("Q1–22 分段异人盲核已完成", paper["index_metadata"]["note"])
+        self.assertIn("Q21 示意曲线已修订，待局部复核", paper["index_metadata"]["note"])
         self.assertEqual(paper["index_metadata"]["structure"], {
             "填空题": [1, 12], "选择题": [13, 16], "解答题": [17, 22],
         })
@@ -128,7 +130,8 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         solution_body = SOLUTION_BODY.read_text(encoding="utf-8")
         self.assertIn("非官方标准答案", answer_key)
         self.assertIn("官方答案页缺失", answer_key)
-        self.assertIn("独立复核待进行", answer_key)
+        self.assertIn("分段异人盲核已完成", answer_key)
+        self.assertIn("分段异人盲核已完成", solution_body)
         self.assertIn("q22_center_construction.tex", solution_body)
         self.assertEqual(
             [int(number) for number in re.findall(r"^\*\*(\d+)．\*\*", answer_key, re.M)],
@@ -232,6 +235,11 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertAlmostEqual(py, ny)
         self.assertAlmostEqual(mx, my)
         self.assertAlmostEqual(px + py, mx + my)
+        self.assertIn(
+            r"plot[domain=0.12:3.55,samples=80,variable=\x] ({\x},{\x+0.35/\x})",
+            function_figure,
+        )
+        self.assertAlmostEqual(py, px + 0.35 / px, places=5)
 
         ellipse = FIGURE_PATHS[22].read_text(encoding="utf-8")
         self.assertNotIn(r"\node", ellipse)

@@ -1,18 +1,17 @@
 \begin{tikzpicture}[line cap=round,line join=round,scale=0.9]
   \coordinate (O) at (0,0);
-  \coordinate (P) at (1.50,2.05);
-  \coordinate (N) at (0,2.05);
-  \coordinate (M) at (1.775,1.775);
+  \coordinate (P) at (1.50,1.733333);
+  \coordinate (N) at (0,1.733333);
+  \coordinate (M) at (1.6166665,1.6166665);
 
   % Coordinate axes and the diagonal y=x.
   \draw[->] (0,-0.15)--(0,4.0) node[above] {$y$};
   \draw[->] (-0.15,0)--(4.0,0) node[right] {$x$};
   \draw (0,0)--(3.55,3.55) node[above right] {$y=x$};
 
-  % Qualitative convex curve only; no numerical scale is implied.
-  \draw (0.20,3.65) .. controls (0.48,2.90) and (0.52,1.20) ..
-        (0.95,1.45) .. controls (1.18,1.60) and (1.25,1.86) .. (1.50,2.05)
-        .. controls (2.05,2.48) and (2.65,3.20) .. (3.55,3.65);
+  % Qualitative rescaling of x + c/x: positive and strictly convex for x>0.
+  % The coefficient and coordinates are illustrative, not measurements from the source.
+  \draw plot[domain=0.12:3.55,samples=80,variable=\x] ({\x},{\x+0.35/\x});
 
   % Projection from P to the y-axis and to y=x.
   \draw (P)--(N) (P)--(M);
