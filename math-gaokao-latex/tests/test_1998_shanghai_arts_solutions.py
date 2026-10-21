@@ -19,6 +19,55 @@ QUESTIONS = PAPER / "题面转录草稿.md"
 
 
 class Shanghai1998ArtsSolutionTests(unittest.TestCase):
+    def test_q1_logarithm_terms_combine_to_logarithm_of_100(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\lg 20+\log_{100}25", questions)
+        self.assertEqual(20 * 5, 100)
+        self.assertEqual(math.log10(100), 2.0)
+        self.assertIn(r"\lg20+\lg5=2", draft)
+
+    def test_q2_amplitude_and_minimum_force_a_to_equal_five(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\sqrt a\cos x", questions)
+        self.assertIn("最小值为 $1$", questions)
+        a = 3**2 - 2**2
+        self.assertEqual(a, 5)
+        self.assertEqual(4 - math.sqrt(4 + a), 1.0)
+        self.assertIn(r"a=5", draft)
+
+    def test_q3_limit_at_one_forces_a_to_equal_four(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"x^2+ax+3}{x^3+3}", questions)
+        denominator_at_one = 1**3 + 3
+        numerator_at_one = 2 * denominator_at_one
+        a = numerator_at_one - 1**2 - 3
+        self.assertEqual(Fraction(numerator_at_one, denominator_at_one), 2)
+        self.assertEqual(a, 4)
+        self.assertIn(r"得 $a=4$", draft)
+
+    def test_q4_inverse_composes_with_the_real_cube_root_transform(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"(x-1)^{1/3}+2", questions)
+        for x in range(-3, 4):
+            inverse_x = (x - 2) ** 3 + 1
+            real_cube_root = next(
+                root for root in range(-10, 11) if root**3 == inverse_x - 1
+            )
+            self.assertEqual(real_cube_root + 2, x)
+        self.assertIn(r"f^{-1}(x)=(x-2)^3+1", draft)
+
+    def test_q5_regular_tetrahedron_volume_is_two_sqrt_two_over_three(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"棱长为 $2$ 的正四面体", questions)
+        volume_squared = Fraction(3 * 8, 9) * Fraction(1, 3)
+        self.assertEqual(volume_squared, Fraction(8, 9))
+        self.assertIn(r"V=\frac{2\sqrt2}{3}", draft)
+
     def test_q18_complex_conditions_force_the_recorded_modulus(self):
         questions = QUESTIONS.read_text(encoding="utf-8")
         draft = DRAFT.read_text(encoding="utf-8")
