@@ -318,18 +318,66 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertEqual(issue["impact"], "blocks_completion")
         self.assertIn("11∈B", issue["resolved_evidence"])
 
-    def test_q19_2_distinguishes_directed_vector_angle_from_line_angle(self):
-        left = (0, 2, 6)
-        right = (math.sqrt(3), 2, -3)
-        dot = sum(a * b for a, b in zip(left, right))
-        norm_product = math.sqrt(sum(x * x for x in left) * sum(x * x for x in right))
+    def test_q19_1_cross_section_selects_the_named_dihedral_sector(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\angle DAB=60^\circ", questions)
+        self.assertIn(r"二面角 $O_1-BC-D$", questions)
+
+        side_squared = 4**2
+        cosine_60 = Fraction(1, 2)
+        diagonal_ac_squared = 2 * side_squared * (1 + cosine_60)
+        diagonal_bd_squared = 2 * side_squared * (1 - cosine_60)
+        oa_squared = diagonal_ac_squared / 4
+        ob_squared = diagonal_bd_squared / 4
+        triangle_obc_area_squared = oa_squared * ob_squared / 4
+        distance_of_squared = 4 * triangle_obc_area_squared / 4**2
+        tangent_squared = Fraction(6**2, 1) / distance_of_squared
+        self.assertEqual((oa_squared, ob_squared), (12, 4))
+        self.assertEqual(triangle_obc_area_squared, 12)
+        self.assertEqual(distance_of_squared, 3)
+        self.assertEqual(tangent_squared, 12)
+
+        # O and D are on the same side of BC, so the section rays FO and FO1
+        # represent the sector named by O1-BC-D rather than its supplement.
+        root3 = math.sqrt(3)
+        b, c, o, d = (0, 2), (-2 * root3, 0), (0, 0), (0, -2)
+        bc = (c[0] - b[0], c[1] - b[1])
+        bo = (o[0] - b[0], o[1] - b[1])
+        bd = (d[0] - b[0], d[1] - b[1])
+        cross_to_o = bc[0] * bo[1] - bc[1] * bo[0]
+        cross_to_d = bc[0] * bd[1] - bc[1] * bd[0]
+        self.assertGreater(cross_to_o * cross_to_d, 0)
+        self.assertIn(r"\arctan(2\sqrt3)", draft)
+
+    def test_q19_2_coordinates_and_line_angle_match_exact_dot_products(self):
+        draft = DRAFT.read_text(encoding="utf-8")
+        origin = (0, 0, 0)
+        a = (2 * math.sqrt(3), 0, 0)
+        b1 = (0, 2, 6)
+        d1 = (0, -2, 6)
+        o1 = (0, 0, 6)
+        e = tuple((u + v) / 2 for u, v in zip(o1, a))
+        self.assertEqual(e, (math.sqrt(3), 0, 3))
+
+        left = tuple(u - v for u, v in zip(b1, origin))
+        dot = 0 * 0 + 2 * 2 + 6 * (-3)
+        left_norm_squared = sum(value * value for value in left)
+        right_norm_squared = 3 + 2**2 + (-3) ** 2
         self.assertEqual(dot, -14)
-        cosine = dot / norm_product
+        self.assertEqual(left_norm_squared, 40)
+        self.assertEqual(right_norm_squared, 16)
+        self.assertEqual(Fraction(dot**2, left_norm_squared * right_norm_squared), Fraction(49, 160))
+        cosine = dot / math.sqrt(left_norm_squared * right_norm_squared)
         self.assertLess(cosine, 0)
         self.assertAlmostEqual(abs(cosine), 7 * math.sqrt(10) / 40)
         line_angle = math.acos(abs(cosine))
         self.assertLess(line_angle, math.pi / 2)
         self.assertAlmostEqual(math.degrees(line_angle), 56.4, delta=0.1)
+        self.assertIn(r"B_1(0,2,6)", draft)
+        self.assertIn(r"D_1(0,-2,6)", draft)
+        self.assertIn(r"E(\sqrt3,0,3)", draft)
+        self.assertIn(r"\arccos\!\left(\frac{7\sqrt{10}}{40}\right)", draft)
 
     def test_q6_activity_network_critical_path_is_eleven_days(self):
         edges = (
