@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase0-b02：保留复核结论并清理 LaTeX 编译中间产物（2026-10-21）
+
+- 已完成：为 `clean-build-intermediates` 增加显式 `--allow-reviewed-pending`；仅当 build 为 `compiled_pending_review`、正式 review 为 `passed`/`failed` 且与当前 build attempt、PDF 哈希/页数及视觉工具链绑定有效时才放行。默认门禁不变；不改 build/review 状态或回执。
+- 清理结果：对2019/2020全国Ⅰ卷文理四卷先做dry-run，再删除96个已登记编译副产物（`.aux`、`.fdb_latexmk`、`.fls`、`.log`、`.out`、`.xdv`）。PDF、LaTeX源、build/review回执、provenance、PNG及build目录均保留。
+- 修改文件：`tools/build_projects.py`、`tests/test_build_projects.py`、本 `PROGRESS.md`；另有上述96个被 `.gitignore` 排除的 `build/` 运行产物被删除。未改试卷内容、正式PDF或回执。
+- 验证：清理相关测试与CLI/legacy清理测试35/35通过；最终 `test_build_projects` 全文件144/144通过（61.552秒）。执行前dry-run列96项、执行后dry-run为0项；`validate-receipts` 与 `provenance.py check-batch` 均为 `OK：4卷`。review只读核验仍返回预期 `VISUAL_FAILED`，2020文科第23题的5项 `heading_number` 失败原样保留，未被清理逻辑掩盖。`git diff --check`通过。
+- 偏差与成本：首轮全文件测试发现把review严格校验扩展到共享 `cleanup-legacy` 路径会破坏既有兼容行为；已将严格绑定校验限定在显式opt-in路径，并由全文件测试验证。未重编、未重渲染、未OCR或调用外部API；测试耗时如上，Codex Token与费用不可见，记未知。
+- 剩余/下一步：该批仍为 `compiled_pending_review` / `VISUAL_FAILED`，不计为视觉通过或批次关闭。取消题的既定保留原文裁定不变；后续从manifest与本进度中的下一未完成项继续，跳过本批已完成转录和复核。
+
 ### 1998 上海文科：Q15 集合包含关系回归验证（2026-10-21）
 
 - 已完成：基于当前已校核的题面转录，$x^2-5x-6>0$ 给出 $A=(-\infty,-1)\cup(6,+\infty)$；固定源转录条件 $11\in B$ 令 $a>6$，于是 $B=(5-a,5+a)$ 包含 $[-1,6]=\overline A$，D项 $A\cup B=\mathbb R$ 成立。以 $x=6+a$、$x=5$、$x=7$ 分别反证A、B、C，故D为唯一正确项。此为对既有解答草稿的独立推导回归保护，不认证扫描件出版身份或官方答案。

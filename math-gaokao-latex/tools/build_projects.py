@@ -969,11 +969,13 @@ def clean_build_intermediates(
     execute: bool = False,
     toolchain: Optional[Mapping[str, Any]] = None,
     search_path: Optional[str] = None,
+    allow_reviewed_pending: bool = False,
 ) -> Dict[str, List[str]]:
     """仅清理已验收、当前构建的非 PDF 中间产物，PDF 与回执保持不变。
 
-    与 `clean-build` 不同，本操作逐个枚举固定扩展名，不删除 build 目录；且复用
-    最严格的来源、review、build 与工具链证据门禁。计划先整体校验，之后才执行删除。
+    与 `clean-build` 不同，本操作逐个枚举固定扩展名，不删除 build 目录；默认要求
+    provenance、通过的 review 和当前 build/工具链。显式 opt-in 仅放行绑定当前 build
+    的 passed/failed review；不改回执状态。计划先整体校验，之后才执行删除。
     """
     root = Path(root)
     chain = toolchain if toolchain is not None else resolve_toolchain(
@@ -985,7 +987,10 @@ def clean_build_intermediates(
     targets: List[str] = []
     for paper_id in paper_ids:
         paper = _paper(manifest, paper_id)
-        _legacy_evidence(root, manifest, paper_id, chain)
+        _legacy_evidence(
+            root, manifest, paper_id, chain,
+            allow_reviewed_pending=allow_reviewed_pending,
+        )
         build_relative = _assert_safe_relative(
             "%s/%s/%s" % (
                 PROJECT_RELATIVE, paper["project_dir"], BUILD_DIR_NAME
@@ -1020,12 +1025,15 @@ def _legacy_evidence(
     manifest: Mapping[str, Any],
     paper_id: str,
     toolchain: Mapping[str, Any],
+    allow_reviewed_pending: bool = False,
 ) -> None:
-    """删除前的共同证据链：provenance + review(passed) + 当前 build。
+    """删除前的共同证据链：provenance + review 状态 + 当前 build/toolchain。
 
     工具链是必传的，不是可选的：这是全流程唯一不可逆的删除，换过 TeX Live 之后那份
     succeeded 回执描述的已经不是这台机器能复现的产物，此时删掉旧编译产物就是销毁唯一
-    的对照物。
+    的对照物。默认只允许 succeeded+passed；显式 opt-in 可清理当前
+    compiled_pending_review+（passed 或 failed），并严格验证 review 与 PDF/build 绑定；
+    绝不改变构建/审查结论。
     """
     paper = _paper(manifest, paper_id)
     project = "%s/%s" % (PROJECT_RELATIVE, paper["project_dir"])
@@ -1040,20 +1048,44 @@ def _legacy_evidence(
         review = json.loads(review_path.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as error:
         raise BuildError(f"{paper_id}: review 回执不可读：{error}") from error
-    if not isinstance(review, dict) or review.get("status") != "passed":
-        raise BuildError(f"{paper_id}: review 未通过，零删除")
+    if not isinstance(review, dict):
+        raise BuildError(f"{paper_id}: review 回执顶层必须是对象，零删除")
 
     receipt_path = Path(root) / project / RECEIPT_RELATIVE
     if not receipt_path.is_file():
         raise BuildError(f"{paper_id}: 缺 build 回执，零删除")
     receipt = load_receipt(receipt_path)
-    if receipt["status"] != "succeeded":
+    pending_allowed = (
+        allow_reviewed_pending
+        and receipt["status"] == "compiled_pending_review"
+    )
+    if receipt["status"] != "succeeded" and not pending_allowed:
         raise BuildError(
             "%s: build 回执状态是 %s，零删除" % (paper_id, receipt["status"])
         )
+    if pending_allowed:
+        try:
+            import review_receipts
+
+            review = review_receipts.load_review(review_path)
+        except review_receipts.ReviewError as error:
+            raise BuildError(f"{paper_id}: review 回执无效：{error}，零删除") from error
+        if review["status"] not in {"passed", "failed"}:
+            raise BuildError(
+                f"{paper_id}: review 状态是 {review['status']}，零删除"
+            )
+    elif review.get("status") != "passed":
+        raise BuildError(f"{paper_id}: review 未通过，零删除")
+
     current, reasons = receipt_currency(root, manifest, receipt, toolchain=toolchain)
     if not current:
         raise BuildError(f"{paper_id}: build 回执已失效（{reasons}），零删除")
+    if pending_allowed:
+        stale, reasons = review_receipts.is_stale(
+            receipt, review, review_receipts.visual_fingerprint(toolchain)
+        )
+        if stale:
+            raise BuildError(f"{paper_id}: review 回执已失效（{reasons}），零删除")
 
 
 def _require_current_generated_artifacts(
@@ -1754,6 +1786,13 @@ def _parser() -> argparse.ArgumentParser:
     )
     intermediate_action.add_argument("--dry-run", action="store_true")
     intermediate_action.add_argument("--execute", action="store_true")
+    clean_intermediates.add_argument(
+        "--allow-reviewed-pending", action="store_true",
+        help=(
+            "允许清理已完成当前视觉复核（通过或失败）的 compiled_pending_review；"
+            "不改变回执状态，只删除固定清单中的非 PDF 中间文件"
+        ),
+    )
 
     legacy = subparsers.add_parser("cleanup-legacy")
     legacy.add_argument("--manifest", required=True)
@@ -1890,6 +1929,7 @@ def main(
                 report = clean_build_intermediates(
                     root, manifest, select_paper_ids(manifest, selector, value),
                     execute=arguments.execute, search_path=search_path,
+                    allow_reviewed_pending=arguments.allow_reviewed_pending,
                 )
             else:
                 report = cleanup_legacy(

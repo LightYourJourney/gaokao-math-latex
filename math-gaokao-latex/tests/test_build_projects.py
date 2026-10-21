@@ -1499,15 +1499,80 @@ class CleanBuildIntermediatesTests(unittest.TestCase):
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         receipt["status"] = "succeeded"
         atomic_write_json(receipt_path, receipt)
+        self.write_review("passed")
+        self.write_provenance()
+
+    def write_provenance(self):
+        atomic_write_json(
+            self.fixture.path(
+                "%s/%s/provenance.json" % (PROJECT_RELATIVE, PROJECT_DIR)
+            ),
+            {"paper_id": PAPER_ID},
+        )
+
+    def write_review(self, status):
+        import review_receipts
+
+        receipt = self.fixture.receipt()
+        failed = status == "failed"
+        editions = []
+        for edition_record in receipt["editions"]:
+            edition = edition_record["edition"]
+            pdf = edition_record["pdf"]
+            pages = []
+            for number in range(1, pdf["page_count"] + 1):
+                checks = []
+                for code in review_receipts.CHECK_CODES:
+                    is_failure = (
+                        failed and edition == EDITIONS[0] and number == 1
+                        and code == "heading_number"
+                    )
+                    checks.append({
+                        "check": code,
+                        "result": "fail" if is_failure else "pass",
+                        "note": "保留的视觉失败" if is_failure else "",
+                    })
+                page_failed = any(item["result"] == "fail" for item in checks)
+                pages.append({
+                    "page": number,
+                    "result": "fail" if page_failed else "pass",
+                    "checks": checks,
+                })
+            edition_failed = any(item["result"] == "fail" for item in pages)
+            editions.append({
+                "edition": edition,
+                "pdf_sha256": pdf["sha256"],
+                "page_count": pdf["page_count"],
+                "result": "fail" if edition_failed else "pass",
+                "candidate_pages": [],
+                "candidate_override": None,
+                "pages": pages,
+            })
+
+        review = {
+            "schema_version": 1,
+            "paper_id": PAPER_ID,
+            "project_dir": PROJECT_DIR,
+            "batch_id": BATCH_ID,
+            "status": status,
+            "reviewed_at": "2026-10-21T12:00:00+08:00",
+            "build_attempt_id": receipt["attempt_id"],
+            "input_projection": receipt["input_projection"],
+            "generation_input_tree_sha256": receipt["generation_input_tree"]["tree_sha256"],
+            "dependency_tree_sha256": receipt["dependency_tree"]["tree_sha256"],
+            "toolchain_fingerprint": receipt["toolchain_fingerprint"],
+            "visual_tool_fingerprint": review_receipts.visual_fingerprint(
+                self.fixture.toolchain()
+            ),
+            "editions": editions,
+            "warning_exemptions": [],
+        }
+        review_receipts.validate_review(review)
         atomic_write_json(
             self.fixture.path(
                 "%s/%s/receipts/review.json" % (PROJECT_RELATIVE, PROJECT_DIR)
             ),
-            {"paper_id": PAPER_ID, "status": "passed"},
-        )
-        atomic_write_json(
-            self.fixture.path("%s/%s/provenance.json" % (PROJECT_RELATIVE, PROJECT_DIR)),
-            {"paper_id": PAPER_ID},
+            review,
         )
 
     def intermediate_paths(self):
@@ -1517,12 +1582,13 @@ class CleanBuildIntermediatesTests(unittest.TestCase):
             for edition in EDITIONS for suffix in self.INTERMEDIATE_SUFFIXES
         )
 
-    def run_clean(self, execute=False):
+    def run_clean(self, execute=False, allow_reviewed_pending=False):
         cleaner = getattr(build_projects, "clean_build_intermediates", None)
         self.assertTrue(callable(cleaner), "缺少仅清理构建中间产物的安全入口")
         return cleaner(
             self.fixture.root, self.fixture.manifest(), [PAPER_ID],
             execute=execute, toolchain=self.fixture.toolchain(),
+            allow_reviewed_pending=allow_reviewed_pending,
         )
 
     def test_dry_run_and_execute_remove_only_intermediates(self):
@@ -1589,6 +1655,95 @@ class CleanBuildIntermediatesTests(unittest.TestCase):
         )
         with self.assertRaises(BuildError):
             self.run_clean(execute=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+    def test_opt_in_cleans_intermediates_for_current_failed_visual_review(self):
+        self.write_review("failed")
+        self.write_provenance()
+        unlisted = self.build_dir / "keep.png"
+        unlisted.write_bytes(b"preserve")
+        for edition in EDITIONS:
+            for suffix in self.INTERMEDIATE_SUFFIXES:
+                self.fixture.write(
+                    "%s/%s/%s/%s%s" % (
+                        PROJECT_RELATIVE, PROJECT_DIR, BUILD_DIR_NAME,
+                        edition, suffix,
+                    ),
+                    "intermediate\n",
+                )
+
+        sample = self.intermediate_paths()[0]
+        with self.assertRaises(BuildError):
+            self.run_clean(execute=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+        before_receipt = self.fixture.path(self.fixture.receipt_relative()).read_bytes()
+        review_path = self.fixture.path(
+            "%s/%s/receipts/review.json" % (PROJECT_RELATIVE, PROJECT_DIR)
+        )
+        before_review = review_path.read_bytes()
+        pdf_hashes = {
+            edition: file_sha256(self.build_dir / (edition + ".pdf"))
+            for edition in EDITIONS
+        }
+        expected = self.intermediate_paths()
+        dry = self.run_clean(allow_reviewed_pending=True)
+        self.assertEqual(dry["targets"], expected)
+        self.assertEqual(dry["removed"], [])
+
+        result = self.run_clean(execute=True, allow_reviewed_pending=True)
+        self.assertEqual(result["removed"], expected)
+        self.assertTrue(self.build_dir.is_dir())
+        self.assertTrue(all(
+            (self.build_dir / (edition + ".pdf")).is_file()
+            for edition in EDITIONS
+        ))
+        self.assertEqual(
+            {
+                edition: file_sha256(self.build_dir / (edition + ".pdf"))
+                for edition in EDITIONS
+            },
+            pdf_hashes,
+        )
+        self.assertFalse(any((self.fixture.root / path).exists() for path in expected))
+        self.assertEqual(unlisted.read_bytes(), b"preserve")
+        self.assertEqual(
+            self.fixture.path(self.fixture.receipt_relative()).read_bytes(),
+            before_receipt,
+        )
+        self.assertEqual(review_path.read_bytes(), before_review)
+
+    def test_opt_in_rejects_pending_or_stale_review(self):
+        self.write_review("passed")
+        self.write_provenance()
+        review_path = self.fixture.path(
+            "%s/%s/receipts/review.json" % (PROJECT_RELATIVE, PROJECT_DIR)
+        )
+        review = json.loads(review_path.read_text(encoding="utf-8"))
+        review["status"] = "pending"
+        atomic_write_json(review_path, review)
+        sample = self.intermediate_paths()[0]
+        self.fixture.write(sample, "preserve\n")
+        with self.assertRaises(BuildError):
+            self.run_clean(execute=True, allow_reviewed_pending=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+        self.write_review("failed")
+        review = json.loads(review_path.read_text(encoding="utf-8"))
+        review["build_attempt_id"] = "12345678-1234-4123-8123-123456789abc"
+        atomic_write_json(review_path, review)
+        with self.assertRaises(BuildError):
+            self.run_clean(execute=True, allow_reviewed_pending=True)
+        self.assertTrue((self.fixture.root / sample).is_file())
+
+    def test_opt_in_accepts_current_passed_review_for_pending_build(self):
+        self.write_review("passed")
+        self.write_provenance()
+        sample = self.intermediate_paths()[0]
+        self.fixture.write(sample, "preserve until execute\n")
+        report = self.run_clean(allow_reviewed_pending=True)
+        self.assertIn(sample, report["targets"])
+        self.assertEqual(report["removed"], [])
         self.assertTrue((self.fixture.root / sample).is_file())
 
     def test_symlinked_intermediate_deletes_nothing(self):
@@ -1858,6 +2013,20 @@ class CommandLineTests(unittest.TestCase):
         )
         self.assertEqual(code, EXIT_OK)
         self.assertFalse(any((build_dir / (edition + ".aux")).exists() for edition in EDITIONS))
+
+    def test_clean_intermediates_parser_requires_explicit_pending_opt_in(self):
+        with patch.object(
+            build_projects,
+            "clean_build_intermediates",
+            return_value={"targets": [], "removed": []},
+        ) as cleaner:
+            code, _ = self.capture(
+                "clean-build-intermediates", "--manifest",
+                str(self.fixture.manifest_path), "--paper", PAPER_ID,
+                "--dry-run", "--allow-reviewed-pending",
+            )
+        self.assertEqual(code, EXIT_OK)
+        self.assertTrue(cleaner.call_args.kwargs["allow_reviewed_pending"])
 
     def test_check_tools_fails_closed_when_a_tool_is_missing(self):
         (self.fixture.bin_dir / "pdfinfo").unlink()
