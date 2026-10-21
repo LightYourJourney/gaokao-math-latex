@@ -1,6 +1,7 @@
 """Integrity and derivation checks for generated 1994 national science solutions."""
 import hashlib
 import json
+import math
 import re
 import unittest
 from fractions import Fraction as F
@@ -35,19 +36,21 @@ class NationalScience1994MathTests(unittest.TestCase):
         self.assertTrue(SOLUTIONS.is_file(), "generated solution draft is missing")
         self.assertEqual(self.headings, list(range(1, 26)))
         self.assertEqual(set(self.outcomes), set(range(1, 26)))
-        self.assertEqual([n for n, (kind, _) in self.outcomes.items() if kind == "待核"], [])
+        self.assertEqual([n for n, (kind, _) in self.outcomes.items() if kind == "待核"], [4])
 
     def test_generated_solutions_are_bound_to_this_draft_and_not_official(self):
         generated = self.record.get("generated_solution", {})
         self.assertEqual(generated.get("path"), "解答草稿.md")
         self.assertEqual(generated.get("question_draft_sha256"), hashlib.sha256(QUESTIONS.read_bytes()).hexdigest())
         self.assertEqual(generated.get("sha256"), hashlib.sha256(SOLUTIONS.read_bytes()).hexdigest())
-        self.assertEqual(generated.get("status"), "pending-independent-review")
+        self.assertEqual(generated.get("status"), "independent-review-with-open-question-conflict")
         self.assertEqual(generated.get("question_numbers"), list(range(1, 26)))
-        self.assertEqual(generated.get("unresolved_question_numbers"), [])
+        self.assertEqual(generated.get("unresolved_question_numbers"), [4])
         self.assertEqual(generated.get("choice_key"), [
-            "D", "D", "D", "A", "B", "D", "B", "A", "A", "C", "C", "B", "D", "B", "C"
+            "D", "D", "D", None, "B", "D", "B", "A", "A", "C", "C", "B", "D", "B", "C"
         ])
+        self.assertEqual(generated.get("independent_review", {}).get("open_question_numbers"), [4])
+        self.assertEqual(generated.get("independent_review", {}).get("resolved_reviewer_mismatches"), [12])
         self.assertFalse(generated.get("official"))
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
@@ -58,7 +61,8 @@ class NationalScience1994MathTests(unittest.TestCase):
             return
         expected = {
             1: ("答案", "D"), 2: ("答案", "D"), 3: ("答案", "D"),
-            4: ("答案", "A"), 5: ("答案", "B"), 6: ("答案", "D"),
+            4: ("待核", "A、C 均成立，暂不能给出唯一选项"),
+            5: ("答案", "B"), 6: ("答案", "D"),
             7: ("答案", "B"), 8: ("答案", "A"), 9: ("答案", "A"),
             10: ("答案", "C"), 11: ("答案", "C"), 12: ("答案", "B"),
             13: ("答案", "D"), 14: ("答案", "B"), 15: ("答案", "C"),
@@ -77,6 +81,27 @@ class NationalScience1994MathTests(unittest.TestCase):
         self.assertIn("a=-1,b=2", self.text)
         self.assertIn("a_1=2,a_2=6,a_3=10", self.text)
         self.assertIn("极限为1", self.text)
+
+    def test_q12_inverse_curve_is_option_b_not_the_other_fourth_quadrant_arc(self):
+        self.assertEqual(self.outcomes[12], ("答案", "B"))
+        self.assertIn(r"y=-\sqrt{2x-x^2}", self.text)
+
+        # At t=pi/4, option B's reflected-curve parametrization satisfies
+        # y^2=2x-x^2, whereas option D's distinct arc does not.
+        root = math.sqrt(2) / 2
+        option_b = (1 - root, -root)
+        option_d = (root, root - 1)
+        self.assertAlmostEqual(option_b[1] ** 2, 2 * option_b[0] - option_b[0] ** 2)
+        self.assertNotAlmostEqual(option_d[1] ** 2, 2 * option_d[0] - option_d[0] ** 2)
+
+    def test_q4_multiple_correct_options_are_left_unresolved(self):
+        self.assertEqual(self.outcomes[4], ("待核", "A、C 均成立，暂不能给出唯一选项"))
+        self.assertEqual(self.record["generated_solution"]["choice_key"][3], None)
+        issue = next(
+            issue for issue in self.record.get("source_issues", [])
+            if issue.get("question_number") == 4
+        )
+        self.assertEqual(issue["status"], "awaiting-source-image")
 
     def test_high_risk_proofs_show_the_required_sign_and_domain_reasoning(self):
         if not SOLUTIONS.is_file():

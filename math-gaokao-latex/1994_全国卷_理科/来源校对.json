@@ -79,20 +79,39 @@
       "sha256": "8689cfc8992e3030727a72d0408fc2310c2a6cd28a6c2ba0669a0d70af59a711"
     }
   ],
-  "source_issues": [],
   "review_notes": [
     "PDF文字层提取候选2055个非空白字符；数学符号与分栏顺序须以固定PDF页面图像核对。",
     "出版者/官方性未核；该单页来源未载答案、解析或分值，不补造。",
-    "Q12和Q23图形为依据原页的TikZ示意重绘，非原图截图；比例不代表题设的精确度量，待独立复核。"
+    "Q12和Q23图形为依据原页的TikZ示意重绘，非原图截图；比例不代表题设的精确度量，待独立复核。",
+    "独立盲核仅依据转录题面，确认Q4按当前文字A、C同时成立，需原页核对；固定PDF不在当前feat/gaokao-phase0工作树或该分支Git对象中，故不能核实转录是否有误。",
+    "Q12盲核初报D，但只比较了端点；用反函数式及选项参数复核后，B满足y=-sqrt(2x-x^2)，D不满足，保留B并在解答稿中写明判别。"
+  ],
+  "source_issues": [
+    {
+      "question_number": 4,
+      "kind": "single-choice-multiple-correct-under-current-transcription",
+      "evidence": "若theta属于(pi/2,pi)，则theta/2属于(pi/4,pi/2)，A与C均成立。",
+      "status": "awaiting-source-image"
+    }
   ],
   "generated_solution": {
     "path": "解答草稿.md",
     "question_draft_sha256": "807bbeabbfd9e35a3fa2dae1d51d74034ad8984b4a4d0764ac712ae44011e0ef",
-    "sha256": "b448540b6a03b739db07faab33043dc7a74ae143f18da07ea749804f2b2fda0b",
-    "status": "pending-independent-review",
+    "sha256": "f75261aee95b6e09e9e7f3a5b0c9f45984d280df2362bb0ee87c6d9cfeb38844",
+    "status": "independent-review-with-open-question-conflict",
     "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-    "unresolved_question_numbers": [],
-    "choice_key": ["D", "D", "D", "A", "B", "D", "B", "A", "A", "C", "C", "B", "D", "B", "C"],
+    "unresolved_question_numbers": [4],
+    "choice_key": ["D", "D", "D", null, "B", "D", "B", "A", "A", "C", "C", "B", "D", "B", "C"],
+    "independent_review": {
+      "method": "blind solution from question transcription only; existing solution withheld",
+      "date": "2026-10-21",
+      "reviewed_question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+      "agreed_question_numbers": [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+      "reviewer_mismatches": [12],
+      "resolved_reviewer_mismatches": [12],
+      "open_question_numbers": [4],
+      "summary": "盲核确认其余已转录题的答案与推导；Q4在当前题面下有两个正确项。Q12的选项分歧以反函数方程和图稿参数解决为B。"
+    },
     "official": false,
     "derivation_origin": "primary-agent"
   },
