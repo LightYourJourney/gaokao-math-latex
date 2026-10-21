@@ -9,9 +9,9 @@
 - 已完成：核对固定题面PDF SHA-256 `89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029`，页眉标示“1990 普通高等学校招生考试（全国卷文）”；只确认到该固定文件，不推断发行者或版本。通过 `phase4-b10` 事务将本卷登记到 `source-manifest.json` revision 4579、绑定唯一 canonical 来源，并登记未决项 `ISSUE-1124`；因原图不能判断 $V_1,V_2$ 与两侧的对应关系，卷状态保持 `blocked`。随后用确定性合成器生成解析正文、含解析稿及共用 `questions.tex` / `answers.tex`，并更新项目索引。
 - 转换器修复：真实转换测试发现第18题把闭显示公式符 `\]` 与填空横线写在同一行，转换器未识别闭符，吞并第19—24题。仅拆开闭符与横线，没有改数学内容；新增端到端回归，检查题目/答案均连续包含1—26题，且四幅TikZ图在两份输出中的引用次数均为2。
 - 修改文件：`1990/1990_数学真题_全国文_试题.md`、`1990_数学真题_全国文_解析正文.md`、`1990_数学真题_全国文_含解析.md`、`math-gaokao-latex/index.json`、`source-manifest.json`、`1990_全国卷_文科/questions.tex`、`answers.tex`、`tests/test_1990_national_arts_transcription.py`及本进度文件。未触碰 `docs/design/`、其他卷生成物或旧构建回执。
-- 验证：1990转录相关测试14/14通过；`test_solution_sources.py` 112/112通过；manifest与issues校验通过；本卷生成物 `generate_projects.py --check` 通过。只读全库 `build_projects.py validate-receipts --all` 退出码4并输出 `INVALID：292 卷`，明确列出本卷缺 build 回执；统计口径/其他卷状态的原因尚未查明。本阶段没有重建或刷新任何旧卷回执。
+- 验证：1990转录相关测试14/14通过；`test_solution_sources.py` 112/112通过；manifest与issues校验通过；本卷生成物 `generate_projects.py --check` 通过。只读全库回执验证的文本汇总 `INVALID：292 卷` 中292是被检查的卷数，并非失效卷数；机器可读计数为`succeeded=285`、`pending=6`、`missing=1`、`stale=0`、`invalid=0`、`failed=0`，唯一问题是新登记但尚未正式构建的本卷缺build回执。其余291卷均为current，无需全量重建；没有重建或刷新任何旧卷回执。
 - 成本：OCR、聊天模型及外部API调用为0；使用本地解析/生成和测试。Codex Token、模型缓存Token及实际费用不可见，记未知。
-- 剩余/下一步：Q20答案中 $V_1,V_2$ 次序待可靠来源确认，卷继续保持 `blocked`；四种正式版式入口、XeLaTeX正式构建、逐页PNG校样和build回执均未完成。先定向查清全库回执检查为何报告292卷，再处理Q20阻塞；不得据当前内容宣称该卷最终验收，也不重做已完成的题面转录和来源核查。
+- 剩余/下一步：Q20答案中 $V_1,V_2$ 次序待可靠来源确认，卷继续保持 `blocked`；四种正式版式入口、XeLaTeX正式构建、逐页PNG校样和build回执均未完成。若后续找不到能明确对应标签的可靠证据，继续保留待核状态，不猜测顺序；可转做其他已登记且可推进的卷，不重做本卷已完成的题面转录和来源核查。
 
 ### 1990 全国卷文科：答案源接入确定性合成器（2026-10-22）
 
