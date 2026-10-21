@@ -10,7 +10,16 @@
 - 修改文件：`2025/2025_数学真题_答案要点.md`、`2025/2025_数学真题_解析正文.md`、`2025_全国1卷/answers.tex`、该卷 `receipts/build.json`、`source-manifest.json`、`missing-issues.md`（ISSUE-0049 置为 `resolved`）、新增 `tests/test_2025_national_1_q08_solution.py`、本进度，以及派生报告 `docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/reports/baseline.md`。正式构建事务重算 `phase0-b05` 与三卷缓存 production_state；`check-batch` 已确认四卷状态一致，这些投影状态不代表本次复核了相关试卷。
 - 验证：新增 Q8 数学与规范稿一致性测试 4/4；`generate_projects.py --check`、`make_short_answers.py --check` 通过，简答答案测试 52/52，ISSUE 校验通过。正式 XeLaTeX 构建 4 版全部成功、0 构建失败（试题版5页、解析版35页、简答版7页、印刷版26页）；构建回执仍为 `compiled_pending_review`。本次目视复核三张受影响答案页：解析版第13页、简答版第6页、印刷版第10页，未见裁切、重叠或公式越界；简答版答案表仍为 B。`check-batch --batch phase0-b05` 通过（4卷）；全量报告 `render --all` 后 `check --all` 通过。验证回执和报告检查的首次调用分别因缺少必需的 `--manifest`、以及 `--manifest/--issues` 以退出码2拒绝，均未写文件；补齐参数后通过。此局部目视复核不等于正式逐页 review 回执。
 - 成本与边界：未调用 OCR、聊天模型或付费 API；本地构建、测试及报告投影生成。Codex Token/费用未知。完整试卷和答案的最终验收状态未因此改变。
-- 剩余/下一步：正式逐页 review 回执尚未刷新；本次局部目视复核不替代批次工作流。保留 Q11 原有未决歧义；下一步按批次门禁处理正式视觉回执，不重做 Q8 已完成的数学核对、构建或局部检查。
+- 剩余/下一步：后续阶段已刷新当前 attempt 的逐页 review，详见紧邻下方记录；Q11 原有来源歧义仍保留。不可把 review 通过等同于来源争议解除或整批无阻塞。
+
+### 2025 全国Ⅰ卷当前 PDF 逐页复核与 phase0-b05 状态恢复（2026-10-21）
+
+- 已完成：前一阶段重建令 2025Ⅰ卷旧 review attempt 失效。仅为该卷重新绑定当前 build `7fe53eec-334e-4b58-920a-696bbe6e1886`，复用原已通过的逐页来源/数学核查结果；另用当前四版 PDF 联系表检查全部 73 页，并对改动/受影响页（试题版第2页、解析版第13页、简答版第6页、印刷版第10页）、算法候选页和图形页作原尺寸查看。阈值与见证表排版正常，未发现裁切、遮挡、公式越界或错配；答案仍为 B。
+- 修改文件：该卷 `receipts/review.json`（新 attempt，四版73页/584项 pass）、`receipts/build.json`（正式 finalize 为 succeeded）、`source-manifest.json`（revision 4574 与 phase0-b05状态）、`reports/phase0-b05.md`、全量派生投影 `docs/source-inventory.md`、`report.md`、`README_数学.md`、本目录 `README.md`、`math-gaokao-2017-2026/README.md`、`reports/baseline.md` 及本进度。临时PNG与工作项仅在 ignored `.work/phase0-b05/visual-refresh-2025-national-1/` 和既有 review 工作目录。
+- 验证：项目事务 finalizer=`FINALIZED`，build validator=`OK`（4 succeeded、0 stale/failed/missing），review `check-batch`=`FINALIZED`，provenance `OK：4卷`；issue validator 通过，manifest CSV 当前且775行；`report.py render --all` 后 `check --all` 通过。批次状态仍是 `closed_with_blockers`，仅反映未解除的 Q11 来源争议；不声称来源已认证或整批无阻塞。
+- 命令纠错：checked finalizer 因既有 `docs/design/` 用户改动而拒绝（没有写入/暂存）；随后采用同一领域事务的普通 finalizer，先完成全部 CAS/回执校验，再由执行者精确暂存高考范围。工作项重绑脚本末尾的摘要打印因 `set` 不可 JSON 序列化退出非零，但4份工作项已写完；立即逐项验证其 current attempt、页数、候选页及584条非空 pass 检查后才进入 finalizer。
+- 成本与边界：没有重编 PDF、OCR、聊天模型或外部 API；仅用 Poppler 生成 ignored 页面预览、逐页检查、项目事务及报告投影。Codex Token/费用未知；没有重审另外三卷的页面内容，只复用其仍 current 的 passed receipts。
+- 剩余/下一步：phase0-b05 正式视觉回执已当前，批次仍保留 Q11 来源 blocker。继续完整题库时，以当前 manifest 选取下一套有可核验固定来源、且尚未完成的卷；不重做本次73页检查，也不改写 Q11 原文。
 
 ### OCR Phase 1：1977 新疆理科公式裁剪 Paddle FormulaRecognition 与缓存复用（2026-10-21）
 
