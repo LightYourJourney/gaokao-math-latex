@@ -74,6 +74,14 @@ class NationalArts1990TranscriptionTests(unittest.TestCase):
         self.assertTrue(all("dashed" not in style for style in styles_of("(E)--(Bone)")))
         self.assertTrue(all("dashed" not in style for style in styles_of("(Bone)--(Cone)")))
 
+    def test_q23_preserves_source_text_and_figure_label_disagreement(self):
+        text = PAPER.read_text(encoding="utf-8")
+        question = text.split("**23．**", 1)[1].split("[原卷第 23 题", 1)[0]
+        self.assertIn("分别交 $AC,SC$ 于 $D,E$", question)
+        self.assertIn("正文称交点为 $D$，原图标为 $D'$", text)
+        figure = (FIGURE_DIR / "f1990_national_arts_q23_pyramid.tex").read_text(encoding="utf-8")
+        self.assertIn(r"\node[above] at (D) {$D'$};", figure)
+
     @unittest.skipUnless(shutil.which("xelatex") and shutil.which("pdftoppm"), "XeLaTeX and Poppler are required")
     def test_all_four_vector_figures_compile_and_render(self):
         links = sorted(FIGURE_DIR.glob("*.tex"))
