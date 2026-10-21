@@ -27,6 +27,16 @@ class NationalArts1992SourceTests(unittest.TestCase):
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
         self.assertEqual(source["source_state"], "ready")
         self.assertIsNone(source["paper_id"])
+        mirror = self.record["archive_mirror_verification"]
+        self.assertEqual(mirror["repository"], "deekur/gaokaomath")
+        self.assertEqual(mirror["commit"], "34c13a6cf632c0b69c95f89b9b923bbc4a08924d")
+        self.assertEqual(mirror["contents_api_path"].split("/contents/", 1)[1], self.record["upstream_path"])
+        self.assertEqual(mirror["git_blob_oid"], source["git_blob_oid"])
+        self.assertEqual(mirror["sha256"], source["artifact"]["sha256"])
+        self.assertEqual(mirror["page_count"], source["artifact"]["page_count"])
+        self.assertEqual(mirror["result"], "exact-bytes-match-manifest")
+        self.assertIn("出版者", mirror["limitation"])
+        self.assertEqual(self.record["source_authenticity"], "fixed-upstream-typeset-copy-unverified-publisher")
         self.assertEqual(hashlib.sha256((PROJECT / "题面转录草稿.md").read_bytes()).hexdigest(), self.record["draft_sha256"])
 
     def test_28_questions_with_subparts_only_at_arts_q28(self):
