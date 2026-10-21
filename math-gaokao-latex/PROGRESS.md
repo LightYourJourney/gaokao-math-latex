@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东理科 Q18 修订后的 provenance 刷新（2026-10-21）
+
+- 已完成：Q18 题面修订后，找到并复用了项目内忽略的 phase2-b59 三角色 provenance 工作项（位于 `math-gaokao-latex/.work/phase2-b59/provenance/`；此前按仓库根 `.work/` 查找而误报缺失）。依据固定源 PDF 第3页及独立审计，只补记题面复核角色的 Q1 当前题面哈希和 Q18 括注核对证据；答案求解与盲核角色记录未改。经 `provenance.py import-batch` 先 dry-run 再正式事务写入，manifest revision 更新至 4575，批次状态为 `provenance_verified`。这只证明 provenance 与当前输入一致，不解除试卷阻塞。
+- 修改文件：正式追踪文件 `1986_广东卷_理工农医类/provenance.json`、`source-manifest.json`；忽略工作文件仅更新对应 question-review 角色记录；本进度文件。`docs/design/` 中既有用户改动未纳入本阶段。
+- 验证：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 通过（1/1，284.624秒）；1986 广东理科布局回归测试通过（5/5）；`provenance.py check-batch --batch phase2-b59` 返回 `OK：1 卷`；`git diff --check -- math-gaokao-latex` 通过。正式回执检查按预期判定失效：`questions.tex` 与 `answers.tex` 已变，当前 PDF/构建回执不得视作修订后版本。此前全量测试 1661 项、13 skipped、2 failures；本次修复了其中的 provenance 派生状态失败，另一个既有漂移仍是 `gk-2025-regular-national-1/answers.tex` 登记哈希与现场不符（非本阶段文件）；未重跑耗时约397秒的全套。
+- 状态与成本：`gk-1986-regular-guangdong-science` 仍为 `blocked`；未更新正式 PDF、build/review 回执或视觉校样，缺图/字形问题及ISSUE-0778/0797等门禁仍在。OCR、模型及付费 API 调用 0；Token/费用不可见，记未知。
+- 剩余/下一步：提交本次 provenance 与进度记录后，按既定流程处理该卷后续来源/题面阻塞；需要正式重建时再生成新 PDF 并复核受影响页、更新有效回执。本次没有重新做整卷转录或答案推导。
+
 ### 1986 广东理科 Q18 恢复来源括注（2026-10-21）
 
 - 已完成：复用 b59 独立答案审计指出的漏录项，并核对当前工作树中的固定源页渲染图（PDF 第3页）：原文为“的单调下降区间（即在该区间内函数为减函数）是”。仅恢复该解释性括注，未改题目条件、选项或答案。
