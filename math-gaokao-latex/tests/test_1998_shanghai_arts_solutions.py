@@ -102,6 +102,92 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         self.assertEqual(admissible, [Fraction(4)])
         self.assertIn(r"自然数解为$n=4$", draft)
 
+    def test_q10_arithmetic_means_form_a_geometric_series_with_sum_two(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn("$a_1=2$", questions)
+        self.assertIn(r"3a_{n+1}-a_n=0", questions)
+        partial_sum = Fraction()
+        for n in range(1, 9):
+            a_n = Fraction(2, 3 ** (n - 1))
+            a_next = a_n / 3
+            b_n = (a_n + a_next) / 2
+            self.assertEqual(b_n, Fraction(4, 3**n))
+            partial_sum += b_n
+        self.assertEqual(partial_sum, 2 * (1 - Fraction(1, 3**8)))
+        self.assertIn(
+            r"\sum_{n=1}^\infty b_n=(2/3)\cdot 2/(1-1/3)=2", draft
+        )
+
+    def test_q11_shared_foci_and_asymptotes_force_hyperbola_axes(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\dfrac{x^2}{49}+\dfrac{y^2}{24}=1", questions)
+        self.assertIn(r"y=\pm\dfrac43x", questions)
+        focal_distance_squared = 49 - 24
+        scale_squared = Fraction(focal_distance_squared, 3**2 + 4**2)
+        self.assertEqual(focal_distance_squared, 25)
+        self.assertEqual(scale_squared, 1)
+        self.assertEqual((9 * scale_squared, 16 * scale_squared), (9, 16))
+        self.assertIn(r"\frac{x^2}{9}-\frac{y^2}{16}=1", draft)
+
+    def test_q12_only_option_b_is_even_with_fundamental_period_pi_over_two(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        x = math.pi / 11
+        option_b = lambda value: math.cos(4 * value)
+        self.assertAlmostEqual(option_b(-x), option_b(x))
+        self.assertAlmostEqual(option_b(x + math.pi / 2), option_b(x))
+        self.assertAlmostEqual(math.sin(4 * math.pi / 8), 1.0)
+        self.assertAlmostEqual(math.sin(-4 * math.pi / 8), -1.0)
+        self.assertAlmostEqual(math.tan(2 * math.pi / 8), 1.0)
+        self.assertAlmostEqual(math.tan(-2 * math.pi / 8), -1.0)
+        self.assertAlmostEqual(math.cos(2 * (0 + math.pi / 2)), -1.0)
+        self.assertIn(r"\cos^22x-\sin^22x", questions)
+        self.assertIn("选B", draft)
+
+    def test_q13_logarithm_graph_never_enters_the_first_quadrant(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn("$0<a<1$", questions)
+        base = 0.5
+        second_quadrant_y = math.log(-4.5 + 5, base)
+        third_quadrant_y = math.log(-3.5 + 5, base)
+        fourth_quadrant_y = math.log(1 + 5, base)
+        self.assertGreater(second_quadrant_y, 0)
+        self.assertLess(third_quadrant_y, 0)
+        self.assertLess(fourth_quadrant_y, 0)
+        self.assertIn("第一象限不经过，选A", draft)
+
+    def test_q16_sine_rule_makes_the_two_lines_perpendicular(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\sin A\,x+ay+c=0", questions)
+        self.assertIn(r"bx-\sin B\,y+\sin C=0", questions)
+        a, b, circumradius = 4, 6, 5
+        sin_a = Fraction(a, 2 * circumradius)
+        sin_b = Fraction(b, 2 * circumradius)
+        normal_dot = sin_a * b - a * sin_b
+        self.assertEqual(normal_dot, 0)
+        self.assertIn("故两直线垂直，选C", draft)
+
+    def test_q17_second_quadrant_angle_gives_the_exact_sine_value(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\alpha$ 是第二象限角", questions)
+        sin_alpha = Fraction(3, 5)
+        cos_alpha = Fraction(-4, 5)
+        sin_double = 2 * sin_alpha * cos_alpha
+        cos_double = cos_alpha**2 - sin_alpha**2
+        self.assertEqual(sin_double, Fraction(-24, 25))
+        self.assertEqual(cos_double, Fraction(7, 25))
+        value_without_sqrt = Fraction(7, 50)
+        sqrt3_coefficient = Fraction(24, 50)
+        exact_value = float(value_without_sqrt) + float(sqrt3_coefficient) * math.sqrt(3)
+        reduced_angle_value = math.sin(math.pi / 6 - 2 * (math.pi - math.asin(3 / 5)))
+        self.assertAlmostEqual(exact_value, reduced_angle_value)
+        self.assertIn(r"\frac{7+24\sqrt3}{50}", draft)
+
     def test_q18_complex_conditions_force_the_recorded_modulus(self):
         questions = QUESTIONS.read_text(encoding="utf-8")
         draft = DRAFT.read_text(encoding="utf-8")
