@@ -172,13 +172,30 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertEqual(note["fixed_mouth_candidate_additional_area"], "1/4 m²")
         self.assertEqual(note["source_diagram_scope"]["illustrates_question_part"], 2)
         self.assertEqual(note["source_diagram_scope"]["question_part_3_fixes_new_mouth_width"], False)
-        self.assertEqual(note["status"], "author-adjudicated-pending-independent-review")
+        self.assertEqual(
+            note["source_diagram_scope"]["review_status"],
+            "independently-reviewed-part-2-only",
+        )
+        review = note["independent_review"]
+        self.assertEqual(review["status"], "interpretation-remains-source-ambiguous")
+        self.assertEqual(review["free_mouth_bottom_width"], "1/√2 m")
+        self.assertEqual(review["fixed_original_mouth_bottom_width"], "1 m")
+        self.assertEqual(note["status"], "independent-review-confirms-source-ambiguity")
 
         solution = SOLUTIONS.read_text(encoding="utf-8")
         self.assertIn("没有要求新沟口仍固定", solution)
         self.assertIn("若另加“沟口宽度固定为2米”", solution)
         self.assertIn("$3\\sqrt2/2$ 平方米", solution)
         self.assertIn("$9/4$ 平方米", solution)
+
+    def test_q20_figure_review_confirms_source_topology_including_dashed_be(self):
+        record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
+        figure = next(item for item in record["figures"] if item["question_number"] == 20)
+        review = figure["independent_review"]
+        self.assertEqual(figure["status"], "vector-draft-rendered-independent-topology-review-passed")
+        self.assertEqual(review["result"], "source-topology-and-labels-match")
+        self.assertTrue(review["dashed_be_present_in_source"])
+        self.assertEqual(review["proportions"], "schematic-not-assessed")
 
     def test_q21_global_minimum_covers_all_linear_trapezoid_sides(self):
         candidate_area_sum_squared = Fraction(2)

@@ -74,7 +74,10 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
                 self.assertIn(name, figure_list)
         self.assertEqual(
             [figure["status"] for figure in source_record["figures"]],
-            ["vector-draft-rendered-pending-independent-review"] * 2,
+            [
+                "vector-draft-rendered-independent-topology-review-passed",
+                "vector-draft-rendered-pending-independent-review",
+            ],
         )
         self.assertNotIn("待矢量重绘", text)
         self.assertNotRegex(text, r"!\[[^]]*\]\([^)]*\.(?:png|jpe?g)\)")

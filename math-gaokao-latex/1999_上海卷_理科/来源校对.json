@@ -111,9 +111,17 @@
         "illustrates_question_part": 2,
         "question_part_3_fixes_new_mouth_width": false,
         "visual_basis": "The figure follows part (2)'s description of the cylinder-shaped solid; part (3) asks about the remade isosceles-trapezoid cross-section and gives no new mouth-width dimension or label.",
-        "review_status": "author-source-inspection-pending-independent-review"
+        "review_status": "independently-reviewed-part-2-only"
       },
-      "status": "author-adjudicated-pending-independent-review"
+      "independent_review": {
+        "scope": "Fixed source crop and full-depth containment/area optimization over non-crossed isosceles trapezoids with depth at least 3/2 m and arbitrary axis offset.",
+        "source_conclusion": "Part (3) does not explicitly fix the remade mouth width.",
+        "free_mouth_bottom_width": "1/√2 m",
+        "free_mouth_opening_width": "3/√2 m",
+        "fixed_original_mouth_bottom_width": "1 m",
+        "status": "interpretation-remains-source-ambiguous"
+      },
+      "status": "independent-review-confirms-source-ambiguity"
     }
   ],
   "figures": [
@@ -122,7 +130,13 @@
       "pdf_page": 2,
       "printed_page": "4-36",
       "planned_asset": "figures/1999_shanghai_science_q20_pyramid.tex",
-      "status": "vector-draft-rendered-pending-independent-review"
+      "independent_review": {
+        "scope": "Source figure topology, labels, and visible/hidden edges.",
+        "result": "source-topology-and-labels-match",
+        "dashed_be_present_in_source": true,
+        "proportions": "schematic-not-assessed"
+      },
+      "status": "vector-draft-rendered-independent-topology-review-passed"
     },
     {
       "question_number": 21,
