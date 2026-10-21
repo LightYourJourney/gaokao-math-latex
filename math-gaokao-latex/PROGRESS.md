@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东理科 Q18 修订后四版视觉复核登记（2026-10-21）
+
+- 已完成：当前正式构建 attempt=`72e21875-2bfb-401c-bf50-f553d1045486` 的四版61页视觉复核已登记。55页与归档旧 review 的同页150dpi Poppler PNG逐字节相同，按指纹继承旧八项结论；其余6页以当前300dpi整页图复核。解析版第10页题20选项A—C在本页末、D—E续于第11页页首，内容连续完整、无裁切，作为跨页观察记录。
+- 修改文件：事务更新 `1986_广东卷_理工农医类/receipts/review.json`、`source-manifest.json`、`missing-issues.md`、`reports/phase2-b59.md` 及本 `PROGRESS.md`；四份当前 attempt 工作项、150/300dpi PNG 位于忽略的 `.work/phase2-b59/`，未入库；未改规范题面、答案、解析或图稿，也未碰 `docs/design/`。
+- 验证：61页共488项检查，435 pass、49 not_applicable、4 fail、0 pending。`review_receipts.py finalize-batch` 返回 `VISUAL_FAILED`（退出码4，revision 4578），四个失败均为固定来源 PDF 第4页图形选项区缺图：试题版/简答版/解析版第5页及印刷版第4页 `figure_label`；相关 ISSUE-0778/ISSUE-0797 保留，未臆造补图。页审工作项结构与页码覆盖校验通过；`test_review_receipts.py` 72/72通过。此结果是如实登记失败，不是四版视觉通过或该卷验收完成。
+- 状态与成本：review receipt 已绑定当前 build attempt，但状态为 `failed`，批次保持 `compiled_pending_review`，该卷仍 `blocked`。本阶段未调用 OCR、聊天模型或付费 API；Codex Token 与费用不可见，记未知。
+- 剩余/下一步：按来源问题流程核实并处理固定源图形缺失；在取得忠实来源或明确裁定前不补画、不解除失败。来源问题解决后再局部修复、正式重建并复核受影响页；本次61页回执已完成，不需重复转录或重审未变化页。
+
 ### 1986 广东理科 Q18 修订后四版正式重建（2026-10-21）
 
 - 已完成：沿用已验证的 Q18 来源括注修订和 revision 4575 provenance，正式重建 `gk-1986-regular-guangdong-science` 四版。当前 build attempt=`72e21875-2bfb-401c-bf50-f553d1045486`；试题版7页、简答版8页、解析版26页、印刷版20页，共61页，4版均 `succeeded`、构建失败数0。四份PDF仍在忽略构建目录，不另复制图像资产入库。

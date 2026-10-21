@@ -17823,7 +17823,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "15b083ec-f7ac-40de-9e81-4be25fb2fdc2",
+  "build_attempt_id": "72e21875-2bfb-401c-bf50-f553d1045486",
   "check_code": "figure_label",
   "edition": "印刷版",
   "figure_id": "visual-review",
@@ -17832,7 +17832,7 @@
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-science",
-  "pdf_sha256": "de7c654b921355b96082b28c6cd98ba73c5d5888e39e5e15539eae0640ae27bb",
+  "pdf_sha256": "df6ff20ca20d95b60103555b6997cdb4d16c0ad9071215708e58928f76df99a4",
   "resume_action": "修正 gk-1986-regular-guangdong-science 的 印刷版 第 4 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17843,7 +17843,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "15b083ec-f7ac-40de-9e81-4be25fb2fdc2",
+  "build_attempt_id": "72e21875-2bfb-401c-bf50-f553d1045486",
   "check_code": "figure_label",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -17852,7 +17852,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
-  "pdf_sha256": "550b792b643f44c9637ff1e116eca6f5818ab914f0fc12b85a739fb7bb51539e",
+  "pdf_sha256": "ce31f5b41327c0e348c1d676ca3459979ea32fa12bba0c057c157c0211e9eb65",
   "resume_action": "修正 gk-1986-regular-guangdong-science 的 简答版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17863,7 +17863,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "15b083ec-f7ac-40de-9e81-4be25fb2fdc2",
+  "build_attempt_id": "72e21875-2bfb-401c-bf50-f553d1045486",
   "check_code": "figure_label",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -17872,7 +17872,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
-  "pdf_sha256": "bd6ac9b970eb596940c4721d4e44eae8534311faac90ef72a45f98ad0540be5c",
+  "pdf_sha256": "c4e021a487c93124d237c868ea042e427836d94243c1a69e770534a3b7c92595",
   "resume_action": "修正 gk-1986-regular-guangdong-science 的 解析版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -17883,7 +17883,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "15b083ec-f7ac-40de-9e81-4be25fb2fdc2",
+  "build_attempt_id": "72e21875-2bfb-401c-bf50-f553d1045486",
   "check_code": "figure_label",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -17892,7 +17892,7 @@
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
-  "pdf_sha256": "c5cda165b733f010d88ba29c5066435490d778f9643c433aa8d401c7a3293279",
+  "pdf_sha256": "fd3940cbc35a356f061c683de23bfe6c99231445ae1b48dec7bc52f2065db790",
   "resume_action": "修正 gk-1986-regular-guangdong-science 的 试题版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
