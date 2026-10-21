@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海文科：Q18 复数条件与模的精确复算（2026-10-21）
+
+- 已完成：依据当前题面转录复算$(z_1-2)i=1+i$，得$z_1=3-i$。令$z_2=u+2i$，由$\operatorname{Im}(z_1z_2)=6-u=0$得$u=6$；$z_1z_2=20$为实数且$|z_2|^2=6^2+2^2=40$，故$|z_2|=2\sqrt{10}$，与解析草稿一致。
+- 修改文件：仅在`tests/test_1998_shanghai_arts_solutions.py`增加Q18精确复数乘法/模回归测试，并更新本进度；未改题面、解析、答案摘录、source manifest、issue或正式成果。用错误值$z_2=5+2i$作临时变异时新测试按预期失败，随后恢复原解析稿。
+- 验证：Q18定向测试通过；该卷解析测试10/10通过；全项目`python3 -B -m unittest discover -s tests`共1612项：1598通过、13跳过、1失败。唯一失败仍为`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，仅报告2015全国Ⅱ文理两卷缓存`complete`与现场`editions_generated`不符，以及`phase2-b10`缓存`closed_with_blockers`与现场`provenance_verified`不符，与本次试题核算无关。`git diff --check`通过。
+- 核验边界与成本：本次数学复算仅依据`题面转录草稿.md`，不认证未物化扫描件的题面字形、出版者/版次或卷内答案权威性；全卷仍为`pending/needs-review`。无OCR、重渲染、XeLaTeX、模型或外部API；本地精确算术测试耗时不足1秒。Codex Token与费用不可见，记未知。
+- 剩余/下一步：Q18计算结论已有精确测试，但仍待整卷独立数学复核及来源身份认证；继续核验Q1—19未完成的逐步推导，不把本项提升为整卷数学验收。
+
 ### phase0-b01：混合状态增量视觉回执收口（2026-10-21）
 
 - 已完成：修复批次 finalizer 只能处理全卷同一 build 状态的问题。现在逐卷核验 build/review 当前性：已 `succeeded` 且绑定当前 `passed` review 的卷直接复用；仅待审且无当前 review 的卷读取其四版本工作项并重算页面候选。旧 `.work` 中已完成卷的过期/残留工作项不触发重审；同一待审 build 的 current 失败 review，只有四版本工作项都存在时才允许修订重审。事务仅写新 review 与本次从 pending 转成功的 build，其他已完成卷的正式回执保持不写。

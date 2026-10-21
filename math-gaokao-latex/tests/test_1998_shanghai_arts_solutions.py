@@ -19,6 +19,23 @@ QUESTIONS = PAPER / "题面转录草稿.md"
 
 
 class Shanghai1998ArtsSolutionTests(unittest.TestCase):
+    def test_q18_complex_conditions_force_the_recorded_modulus(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"复数 $z_2$ 的虚部为 $2$", questions)
+        self.assertIn(r"z_1\cdot z_2", questions)
+
+        # (x-2+yi)i=-y+(x-2)i=1+i, hence z1=3-i.
+        z1 = (3, -1)
+        self.assertEqual((-z1[1], z1[0] - 2), (1, 1))
+        # For z2=u+2i, Im(z1*z2)=3*2-u=0, so u=6.
+        z2 = (6, 2)
+        self.assertEqual(z1[0] * z2[1] + z1[1] * z2[0], 0)
+        self.assertEqual(z1[0] * z2[0] - z1[1] * z2[1], 20)
+        self.assertEqual(z2[0] ** 2 + z2[1] ** 2, 40)
+        self.assertIn(r"z_2=6+2i", draft)
+        self.assertIn(r"|z_2|=2\sqrt{10}", draft)
+
     def test_q20_chord_area_forces_the_two_reported_slopes(self):
         # For y=k(x-2) on y^2=4(x-1), the triangle area is
         # 2*sqrt(1+k^2)/|k|.  Squaring area=4 gives k^2=1/3.
