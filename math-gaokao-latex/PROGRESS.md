@@ -13,25 +13,25 @@
 - 成本与边界：8个版本本地XeLaTeX重建约30秒，无OCR、聊天模型或外部API；Codex Token与费用不可见、记未知。仅此二卷的旧页数和输出哈希已记录，不能复用旧视觉回执。
 - 续接完成：按相同原因以当前工具链正式重建2015全国Ⅰ文理两卷8个版本，零构建失败；页数保持不变（文科6/22/8/17，理科6/22/8/17），8个PDF SHA均更新。新build attempt分别为文科`8d2b5a61-497a-4c99-a875-cbd885af3a35`、理科`bb1611e4-a4b5-4302-a8c1-89f88199f7c0`。`generate_projects.py --check`及两卷`validate-receipts --require-current-inputs`均通过。
 - 修改文件：在上述两卷之外，本续接只改两卷`receipts/build.json`、`source-manifest.json`及本`PROGRESS.md`；未改题面、答案、解析、题图或问题总账。PDF写入各卷既有且被忽略的`build/`路径；review工作清单写入被忽略的`.work/phase2-b10/review/`，未登记任何视觉结论。
-- 当前门禁与验证：`prepare-batch`生成4卷×4版共16个逐页工作项、合计216页，现已全部完成人工视觉检查。累计1728项逐页检查中1724项通过、4项失败、0项pending；4项失败均为2015全国Ⅱ理科Q18源稿Markdown代码围栏被排入PDF（印刷版第4页、简答版第5页、解析版第18页、试题版第5页）。正式review回执仍为`INVALID_OR_STALE`，尚待官方批次finalize；尚未刷新项目报告。
+- 当前门禁与验证：`prepare-batch`生成的4卷×4版共16个逐页工作项、216页均已完成视觉检查并正式登记。累计1728项检查中1724项通过、4项失败、0项pending；失败均为2015全国Ⅱ理科Q18源稿Markdown代码围栏被排入PDF（印刷版第4页、简答版第5页、解析版第18页、试题版第5页）。三卷review为`passed`、全国Ⅱ理科为`failed`；四卷回执均与当前build绑定，批次状态`compiled_pending_review`、门禁`VISUAL_FAILED`，项目报告投影已刷新。
 - 成本与边界：本续接8个版本本地XeLaTeX构建约27秒；无OCR、聊天模型或外部API。Codex Token与费用不可见、记未知。
 - 已完成子阶段：2015全国Ⅰ卷文理科八个版本共106页视觉复核（每科均为印刷版17、简答版8、解析版22、试题版6页）；每页8项均已登记，未发现视觉缺陷。逐页检查全部接触表，并对八个候选页另作原尺寸核对。
 - 修改文件：八份被忽略的`.work/phase2-b10/review/`工作项JSON，以及本`PROGRESS.md`；未改试卷源文件、构建PDF或正式review回执。
-- 验证：八份工作项均为有效JSON，页数合计106；根状态均为`pass`，pending检查0、fail检查0、无缺少说明的非pass项。2015全国Ⅰ文理两卷完成当前PDF视觉复核，尚未进行四卷批次finalize。
+- 验证：八份工作项均为有效JSON，页数合计106；根状态均为`pass`，pending检查0、fail检查0、无缺少说明的非pass项。该两卷在后续四卷批次事务中正式登记为`passed`。
 - 成本与边界：本阶段仅本地PNG视觉检查与工作项登记；未调用OCR、聊天模型或外部API。Token用量、费用未知。
-- 剩余/下一步：四卷逐页视觉复核已完成；尚需按正式批次事务登记回执/问题并收口，再刷新README、CSV和报告投影。当前视觉失败是已记录的版面问题，不得手改状态或复用失效回执。
+- 剩余/下一步：四卷逐页视觉复核与正式登记已完成；批次因全国Ⅱ理科的4项视觉问题保持未关闭。不得手改状态或复用失效回执。
 
 - 已完成子阶段：2015全国Ⅱ文科四个版本共54页视觉复核（印刷版18、简答版8、解析版22、试题版6页）；检查全部PNG接触表，并对印刷版第18页、简答版第4页、解析版第19页、试题版第4页作原尺寸核对，未发现视觉缺陷。
 - 修改文件：四份被忽略的`.work/phase2-b10/review/`工作项JSON及本`PROGRESS.md`；未改试卷源文件、构建PDF或正式review回执。
-- 验证：四份工作项均为有效JSON，页数合计54；根状态均为`pass`，共432项检查通过，pending 0、fail 0、无缺少说明的非pass项，每页8项齐全。
+- 验证：四份工作项均为有效JSON，页数合计54；根状态均为`pass`，共432项检查通过，pending 0、fail 0、无缺少说明的非pass项，每页8项齐全；该卷在后续四卷批次事务中正式登记为`passed`。
 - 成本与边界：仅本地PNG视觉检查与工作项登记；未调用OCR、聊天模型或外部API。Token用量、费用未知。
-- 剩余/下一步：四卷逐页视觉复核已完成；尚需按正式批次事务登记回执/问题并收口，再刷新README、CSV和报告投影。当前视觉失败是已记录的版面问题，不得手改状态或复用失效回执。
+- 剩余/下一步：四卷逐页视觉复核与正式登记已完成；批次因全国Ⅱ理科的4项视觉问题保持未关闭。不得手改状态或复用失效回执。
 
 - 已完成子阶段：2015全国Ⅱ理科四个版本共56页视觉复核（印刷版17、简答版9、解析版23、试题版7页）；检查全部PNG接触表，并对印刷版第4页、简答版第5页、解析版第18页、试题版第5页作原尺寸核对。四版均在Q18数据附近显示源稿中的Markdown `text`围栏字样，按视觉缺陷登记；其余页面未发现需阻断的版面问题。
-- 修改文件：四份被忽略的`.work/phase2-b10/review/`工作项JSON及本`PROGRESS.md`；未改试卷源文件、构建PDF、正式review回执或问题总账。
-- 验证：16份批次工作项JSON均有效、版本和页码覆盖完整，共216页/1728项检查；1724项通过、4项为上述有说明的glyph失败、0项pending，每页8项检查齐全。该阶段复核记录尚未提交正式回执。
+- 修改文件：四份被忽略的`.work/phase2-b10/review/`工作项JSON及本`PROGRESS.md`；正式finalize另改四卷`receipts/review.json`、`source-manifest.json`、`missing-issues.md`和批次诊断报告；未改试卷源文件、答案、构建PDF或LaTeX源。
+- 验证：16份批次工作项JSON均有效、版本和页码覆盖完整，共216页/1728项检查；1724项通过、4项为上述有说明的glyph失败、0项pending，每页8项检查齐全。官方`finalize-batch`返回`VISUAL_FAILED`，正式登记ISSUE-1120至ISSUE-1123；三卷review=`passed`，全国Ⅱ理科review=`failed`。未运行`finalize-batch-checked`，因为它要求tracked工作树干净，而既存`docs/design/`有未提交工作；仅在批次目标路径本身干净后执行了官方事务，未触碰`docs/design/`。
 - 成本与边界：仅本地PNG视觉检查与工作项登记；未调用OCR、聊天模型或外部API。Token用量、费用未知。
-- 剩余/下一步：运行官方`finalize-batch-checked`事务登记四项视觉失败与问题，再检查并刷新批次及项目报告投影；不在本阶段修正题面内容。
+- 剩余/下一步：Q18源稿Markdown围栏仍需核对原始来源后决定如何作忠实排版；本阶段不改题面、不重编，后续若修正须重新构建并复核受影响版本。
 
 ### 派生项目报告与来源 CSV 刷新（2026-10-21）
 
@@ -40,6 +40,14 @@
 - 验证：`report.py check --all`最终通过，确认6份报告均与全量manifest当前一致，并在报告中保留未完成/失败状态；`manifest_csv.py --check`通过，确认CSV当前且775行；`test_report.py` 12/12、`test_manifest_csv.py` 2/2通过；`git diff --check`通过。初次CSV检查因从项目子目录传入仓库根相对路径而报路径重复，未写入文件；改从仓库根使用规范路径后重跑通过。全量报告检查约85秒、报告测试107.354秒；未调用OCR、XeLaTeX、渲染、外部API或模型，Token/费用不可见、记未知。
 - 当前快照（由生成报告得出）：来源775、试卷291；生产状态`complete` 241、`blocked` 47、`compiled` 3；批次`closed` 126、`closed_with_blockers` 28、`compiled_pending_review` 3；正式复核门禁`FINALIZED` 153、`INVALID_OR_STALE` 1、`VISUAL_FAILED` 3。此为全库状态快照，不代表未完成卷均缺少转录，也不代表项目整体完成。
 - 剩余/下一步：继续根据本进度和来源manifest选择具有可核验固定来源、且正式门禁尚未完成的卷；对来源身份未核实的2003春季北京文科仍不绑定`paper_id`，不将其纳入完成计数。不得为使统计更好看而修改源数据或弱化质量门禁。
+
+### phase2-b10 视觉批次正式登记与报告投影刷新（2026-10-21）
+
+- 已完成：官方批次事务将2015全国Ⅰ文理、全国Ⅱ文科登记为review `passed`，全国Ⅱ理科登记为`failed`；批次诊断报告如实返回`VISUAL_FAILED`、4个失败页，manifest revision 4568、批次仍`compiled_pending_review`。问题总账新增ISSUE-1120至ISSUE-1123，均为全国Ⅱ理科Q18围栏渲染缺陷且阻塞完成。
+- 派生报告：运行`report.py render --all`并重新生成来源CSV；README/来源清单/全库报告已反映本次失败。当前全库快照：来源775、试卷291；生产状态complete 239、blocked 48、compiled 4；批次closed 126、closed_with_blockers 27、compiled_pending_review 4；正式复核门禁FINALIZED 153、VISUAL_FAILED 4；问题总账1123条、未解决190条、阻塞完成125条。
+- 修改文件：四卷review回执、`source-manifest.json`、`missing-issues.md`、`reports/phase2-b10.md`、`manifest.csv`、项目README/基线报告、全库考试报告与来源清单、2017—2026 README及本`PROGRESS.md`。没有修改`docs/design/`里的既存工作，也未读写Main检出。
+- 验证：`report.py check --all`通过；`manifest_csv.py --check`确认775行且当前；`test_report.py` 12/12、`test_manifest_csv.py` 2/2通过；四卷正式review状态和216页覆盖核验通过，`git diff --check`通过。无需重编译或重跑OCR，未调用模型或外部API；Token与API费用未知。
+- 剩余/下一步：核对Q18数据源及转录约定后，决定是否授权排版修复；修复后须对受影响内容正式重编并复审，不能将本次`VISUAL_FAILED`覆盖为通过。
 
 ### phase0-b02：保留复核结论并清理 LaTeX 编译中间产物（2026-10-21）
 
