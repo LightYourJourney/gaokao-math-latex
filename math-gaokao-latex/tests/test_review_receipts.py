@@ -682,6 +682,89 @@ class BatchIntegrationTests(unittest.TestCase):
             self.assertEqual("passed", review["status"])
             self.assertEqual(subject.EDITIONS, tuple(item["edition"] for item in review["editions"]))
 
+    def test_finalize_mixed_batch_reuses_current_review_without_its_work_items(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.assertEqual("FINALIZED", self.finalize()["code"])
+
+        pending_id = build_tests.PAPER_ID
+        reused_id = build_tests.OTHER_ID
+        papers = {item["paper_id"]: item for item in self.fixture.manifest()["papers"]}
+        reused_review_path = self.fixture.root / subject.review_receipt_path(papers[reused_id])
+        reused_build_path = self.fixture.root / subject.build_receipt_path(papers[reused_id])
+        reused_review_before = reused_review_path.read_bytes()
+        reused_build_before = reused_build_path.read_bytes()
+
+        previous = self.fixture.receipt(papers[pending_id]["project_dir"])
+        pending_build = self.fixture.build(
+            pending_id,
+            attempt_id="22345678-1234-4123-8123-123456789abc",
+            previous_attempt_id=previous["attempt_id"],
+        )
+        self.assertEqual("compiled_pending_review", pending_build["status"])
+        self.fixture.write(
+            subject.build_receipt_path(papers[pending_id]),
+            canonical_json(pending_build),
+        )
+
+        work = self.fixture.root / subject.WORK_RELATIVE
+        visual_fingerprint = subject.visual_fingerprint(self.chain)
+        for edition in subject.EDITIONS:
+            metrics = self.probe(
+                self.fixture.root,
+                next(item for item in pending_build["editions"] if item["edition"] == edition)["pdf"]["path"],
+                2,
+                self.chain,
+            )
+            item = subject.new_review_work_item(
+                self.fixture.manifest(), self.batch_id, pending_id, edition,
+                pending_build, visual_fingerprint, subject.candidate_pages(metrics)["pages"],
+            )
+            item["result"] = "pass"
+            item["pages"] = [page(1), page(2)]
+            target = subject.work_item_path(work, self.batch_id, edition, pending_id)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(json.dumps(item), encoding="utf-8")
+
+            reused_item = subject.work_item_path(work, self.batch_id, edition, reused_id)
+            if reused_item.exists():
+                reused_item.unlink()
+
+        result = self.finalize(reviewed_at="2026-08-12T12:00:00+08:00")
+
+        self.assertEqual("FINALIZED", result["code"])
+        self.assertEqual("review", result["mode"])
+        self.assertEqual("succeeded", self.fixture.receipt(papers[pending_id]["project_dir"])["status"])
+        self.assertEqual(reused_review_before, reused_review_path.read_bytes())
+        self.assertEqual(reused_build_before, reused_build_path.read_bytes())
+
+    def test_finalize_ignores_leftover_work_items_when_all_reviews_are_current(self) -> None:
+        self.prepare()
+        self.complete_work()
+        self.assertEqual("FINALIZED", self.finalize()["code"])
+        path = subject.work_item_path(
+            self.fixture.root / subject.WORK_RELATIVE, self.batch_id,
+            subject.EDITIONS[0], build_tests.PAPER_ID,
+        )
+        path.write_text("not-json", encoding="utf-8")
+
+        result = self.finalize()
+
+        self.assertEqual("FINALIZED", result["code"])
+        self.assertEqual("report-only", result["mode"])
+
+    def test_finalize_rechecks_current_failed_review_when_its_work_items_are_complete(self) -> None:
+        self.prepare()
+        failure = (build_tests.PAPER_ID, subject.EDITIONS[1], 1)
+        self.complete_work([failure])
+        self.assertEqual("VISUAL_FAILED", self.finalize()["code"])
+
+        self.complete_work()
+        result = self.finalize(reviewed_at="2026-08-12T12:00:00+08:00")
+
+        self.assertEqual("FINALIZED", result["code"])
+        self.assertEqual("closed", result["batch_status"])
+
     def test_visual_fail_atomically_replaces_stale_report_with_diagnostic(self) -> None:
         self.prepare()
         failure = (build_tests.PAPER_ID, subject.EDITIONS[1], 1)

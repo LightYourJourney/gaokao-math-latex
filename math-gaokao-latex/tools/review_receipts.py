@@ -937,14 +937,20 @@ def aggregate_batch_in_memory(
     trusted_candidates: Optional[
         Mapping[str, Mapping[str, Sequence[int]]]
     ] = None,
+    review_paper_ids: Optional[Sequence[str]] = None,
 ) -> Dict[str, Any]:
     """把四版本工作项折成每卷一份 review 候选；**全在内存，一个字节都不写**。
 
-    paper 集合与 edition 集合必须恰好等于批次 × 四版本：多一个少一个都整批中止，
-    因为「差一份就先按通过算」正是视觉审查最容易失守的地方。
+    默认必须恰好覆盖批次 × 四版本。增量模式可显式限定待审卷子集；每个版本必须具备
+    该子集的全部工作项，且工作目录不得出现批次之外的卷，避免缺项被当成通过。
     """
     batch = _batch(manifest, batch_id)
-    paper_ids = list(batch["paper_ids"])
+    batch_paper_ids = list(batch["paper_ids"])
+    batch_paper_set = set(batch_paper_ids)
+    requested = batch_paper_set if review_paper_ids is None else set(review_paper_ids)
+    if not requested or not requested.issubset(batch_paper_set):
+        raise ReviewError("待审试卷集合必须是批次的非空子集")
+    paper_ids = [paper_id for paper_id in batch_paper_ids if paper_id in requested]
     stamp = reviewed_at or _now()
 
     for edition in EDITIONS:
@@ -952,10 +958,15 @@ def aggregate_batch_in_memory(
         if not directory.is_dir():
             raise ReviewError(f"缺少版本目录：{edition}")
         found = {item.stem for item in sorted(directory.glob("*.json"))}
-        if found != set(paper_ids):
+        extra = found - batch_paper_set
+        missing = requested - found
+        if (
+            extra or missing
+            or (requested == batch_paper_set and found != batch_paper_set)
+        ):
             raise ReviewError(
-                "%s 的试卷集合与批次不符：多 %s，缺 %s"
-                % (edition, sorted(found - set(paper_ids)), sorted(set(paper_ids) - found))
+                "%s 的试卷集合与待审范围不符：多 %s，缺 %s"
+                % (edition, sorted(extra), sorted(missing))
             )
 
     reviews: Dict[str, Dict[str, Any]] = {}
@@ -1419,29 +1430,59 @@ def finalize_batch(
         visual = visual_fingerprint(chain)
         resolved_work = _validated_work_dir(root, work_dir)
 
-        # ---- 模式判定：有工作项就是全页审查，没有就是 report-only 复核
-        present = [
-            edition for edition in EDITIONS
-            if (Path(resolved_work) / batch_id / "review" / edition).is_dir()
-        ]
-        if present and len(present) != len(EDITIONS):
-            raise ReviewError(f"工作项只准备了部分版本：{sorted(present)}")
-        review_mode = bool(present)
-
         builds = {
             paper_id: _require_build(
                 root, manifest, paper_id, chain,
-                "compiled_pending_review" if review_mode
-                else ("succeeded", "compiled_pending_review"),
+                ("succeeded", "compiled_pending_review"),
             )
             for paper_id in paper_ids
         }
 
-        # ---- 1. review 候选
+        # ---- 1. 逐卷复用 current review；只对待审卷读取工作项
+        reviews: Dict[str, Dict[str, Any]] = {}
+        review_paper_ids: List[str] = []
+        for paper_id in paper_ids:
+            path = Path(root) / review_receipt_path(_paper(manifest, paper_id))
+            build = builds[paper_id]
+            if path.is_file():
+                review = load_review(path)
+                stale, reasons = is_stale(build, review, visual)
+                if not stale:
+                    if build["status"] == "succeeded" and review["status"] != "passed":
+                        raise ReviewError(
+                            "%s: succeeded build 只能复用 passed review，实际 %s"
+                            % (paper_id, review["status"])
+                        )
+                    if (
+                        build["status"] == "compiled_pending_review"
+                        and review["status"] == "failed"
+                        and all(
+                            work_item_path(
+                                Path(resolved_work), batch_id, edition, paper_id
+                            ).is_file()
+                            for edition in EDITIONS
+                        )
+                    ):
+                        # 对同一失败 build 的显式修订以完整四版工作项表示；不冻结失败回执，
+                        # 但不因残留目录或其他已完成试卷的工作项而触发重审。
+                        review_paper_ids.append(paper_id)
+                        continue
+                    reviews[paper_id] = review
+                    continue
+                if build["status"] == "succeeded":
+                    raise ReviewError(
+                        "%s: review 已失效（%s），必须重编重审"
+                        % (paper_id, "；".join(reasons))
+                    )
+            elif build["status"] == "succeeded":
+                raise ReviewError(f"{paper_id}: succeeded build 缺 review 回执")
+            review_paper_ids.append(paper_id)
+
+        review_mode = bool(review_paper_ids)
         if review_mode:
             probe = metrics_probe or default_page_metrics
             trusted_candidates = {}
-            for paper_id in paper_ids:
+            for paper_id in review_paper_ids:
                 trusted_candidates[paper_id] = {}
                 for record in builds[paper_id]["editions"]:
                     pdf = record["pdf"]
@@ -1457,47 +1498,14 @@ def finalize_batch(
             aggregate = aggregate_batch_in_memory(
                 root, manifest, batch_id, builds, resolved_work, visual,
                 reviewed_at=reviewed_at, trusted_candidates=trusted_candidates,
+                review_paper_ids=review_paper_ids,
             )
-            reviews = aggregate["reviews"]
-            fails = aggregate["fails"]
-        else:
-            reviews = {}
-            fails = []
-            for paper_id in paper_ids:
-                path = Path(root) / review_receipt_path(_paper(manifest, paper_id))
-                if not path.is_file():
-                    raise ReviewError(f"{paper_id}: 缺 review 回执，无法只重算报告")
-                review = load_review(path)
-                if review["status"] not in {"passed", "failed"}:
-                    raise ReviewError(
-                        "%s: review 状态是 %s，只重算报告要求 passed 或 failed"
-                        % (paper_id, review["status"])
-                    )
-                stale, reasons = is_stale(builds[paper_id], review, visual)
-                if stale:
-                    raise ReviewError(
-                        "%s: review 已失效（%s），必须重编重审"
-                        % (paper_id, "；".join(reasons))
-                    )
-                reviews[paper_id] = review
-                if review["status"] == "failed":
-                    fails.extend(_fail_records(review, builds[paper_id]))
+            reviews.update(aggregate["reviews"])
 
-            if not review_mode:
-                expected_build_status = (
-                    "compiled_pending_review"
-                    if any(item["status"] == "failed" for item in reviews.values())
-                    else "succeeded"
-                )
-                invalid_builds = [
-                    paper_id for paper_id in paper_ids
-                    if builds[paper_id]["status"] != expected_build_status
-                ]
-                if invalid_builds:
-                    raise ReviewError(
-                        "report-only 状态下，批次 build 应为 %s：%s"
-                        % (expected_build_status, invalid_builds)
-                    )
+        fails = []
+        for paper_id in paper_ids:
+            if reviews[paper_id]["status"] == "failed":
+                fails.extend(_fail_records(reviews[paper_id], builds[paper_id]))
 
         loaded = _loaded_facts(root, manifest, affected, issues_path, facts_loader)
         stale_artifacts = sorted(
@@ -1521,7 +1529,7 @@ def finalize_batch(
         review_targets = {
             review_receipt_path(_paper(manifest, paper_id)):
                 canonical_json(reviews[paper_id]).encode("utf-8")
-            for paper_id in paper_ids
+            for paper_id in review_paper_ids
         }
 
         # ---- 视觉失败：有效负结果，单独一次诊断事务后停在退出码 4
@@ -1576,7 +1584,7 @@ def finalize_batch(
         final_builds = {
             paper_id: (
                 build_projects.finalize_receipt(builds[paper_id], reviews[paper_id])
-                if review_mode else
+                if builds[paper_id]["status"] == "compiled_pending_review" else
                 _revalidate_final(builds[paper_id], reviews[paper_id])
             )
             for paper_id in paper_ids
@@ -1631,9 +1639,10 @@ def finalize_batch(
 
         targets = dict(review_targets)
         for paper_id in paper_ids:
-            targets[build_receipt_path(_paper(manifest, paper_id))] = (
-                canonical_json(final_builds[paper_id]).encode("utf-8")
-            )
+            if builds[paper_id]["status"] == "compiled_pending_review":
+                targets[build_receipt_path(_paper(manifest, paper_id))] = (
+                    canonical_json(final_builds[paper_id]).encode("utf-8")
+                )
         document = build_projects.commit_state(
             root, manifest, targets,
             dict(extra, **{report_relative: rendered.encode("utf-8")}),

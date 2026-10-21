@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase0-b01：混合状态增量视觉回执收口（2026-10-21）
+
+- 已完成：修复批次 finalizer 只能处理全卷同一 build 状态的问题。现在逐卷核验 build/review 当前性：已 `succeeded` 且绑定当前 `passed` review 的卷直接复用；仅待审且无当前 review 的卷读取其四版本工作项并重算页面候选。旧 `.work` 中已完成卷的过期/残留工作项不触发重审；同一待审 build 的 current 失败 review，只有四版本工作项都存在时才允许修订重审。事务仅写新 review 与本次从 pending 转成功的 build，其他已完成卷的正式回执保持不写。
+- 实际收口：`phase0-b01` 四卷均 finalized；`gk-2018-regular-national-1-science` 的 current 76页视觉工作项生成正式 review/build 回执，其余三卷复用原 current 回执。批次状态为 `closed`，四卷状态均为 `complete`。用领域 `finalize-batch` 完成单次原子事务；未运行可能自动暂存/提交诊断的 checked 包装器，也未暂存 `docs/design/` 中既存改动。
+- 修改文件：`tools/review_receipts.py`、`tests/test_review_receipts.py`、本进度文件；正式状态目标仅为 2018 全国Ⅰ理科的 `receipts/build.json`、`receipts/review.json`，以及 `source-manifest.json` 和 `reports/phase0-b01.md`。`missing-issues.md`未变；没有修改或暂存任何 `docs/design/` 文件，也未触碰 Main 工作树。
+- 验证：3条新增集成用例均先按预期失败、修复后通过；`test_review_receipts.py` 72/72、`test_build_projects.py` 140/140。全项目 `python3 -B -m unittest discover -s tests` 共1611项：1597通过、13跳过、1失败。唯一失败为既有 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告2015全国Ⅱ文理两卷缓存 `complete` 与现场 `editions_generated` 不符，以及 `phase2-b10` 缓存 `closed_with_blockers` 与现场 `provenance_verified` 不符；该同一失败此前已登记，本次不扩展处理。收口后 `review_receipts.py check-batch` 为 `FINALIZED`，`build_projects.py validate-receipts --require-final` 为 `OK`（4 succeeded、0 pending/stale/failed），`provenance.py status` 显示四卷 `complete`、批次 `closed`；目标文件 `git diff --check`通过。
+- 成本：未调用OCR、聊天模型、商业API或XeLaTeX；收口时仅对待审理科四版共76页以本地 `pdftotext`/36dpi `pdftoppm` 重算候选指标，未重编PDF。该CLI调用约3.7秒；Codex Token与实际费用不可见，记未知。
+- 剩余/下一步：本阶段仅关闭 `phase0-b01` 视觉回执，不代表整个高考语料或自动化升级目标完成。继续按下方逐卷记录推进；1998上海文科仍缺可认证的原始来源出版身份，正式来源登记、四版构建及视觉终验未完成。全库缓存状态不一致另列待核，不在本阶段批量改写。
+
 ### 2018 全国Ⅰ卷理科：当前构建四版本逐页视觉复核（2026-10-21）
 
 - 已完成：对正式 build attempt `63bcd3da-58fd-4574-b18c-2a09e5808f2c` 的试题版5页、解析版36页、简答版7页、印刷版28页逐页目视复核，共76页/608项。未见裁切、重叠、错位、缺字/乱码、页眉页脚异常、不可读字号或异常分页；取消选考题均留在清晰标示的存档区。四个自动高关注候选页（试题版5、简答版5、解析版33、印刷版26）另作整页放大检查，均通过。新引号页中抽查的中文弯引号字形清晰；四版 PDF 文本抽取未发现残留 ASCII 双引号。视觉结论仅覆盖版面，不证明题面来源或数学答案正确。
