@@ -1498,6 +1498,7 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
         self.assertEqual(set(selected), expected_keys)
 
         q19_answers = "math-gaokao-latex/2024_新高考Ⅱ卷/answers.tex"
+        q8_answers = "math-gaokao-latex/2025_全国1卷/answers.tex"
         approved_q19_corrections = (
             (
                 r"\textbf{思路：找出一个把 $P_n$ 送到 $P_{n+1}$ 的「保面积变换」，则相邻两个三角形自然全等（面积相等）。}",
@@ -1508,6 +1509,33 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 r"\textbf{自检}：$k=\dfrac12$ 时 $S_n=\dfrac{36\times\dfrac18}{\left(\dfrac34\right)^{2}}=\dfrac{4.5}{0.5625}=8$。而由 (1) 及递推可得 $P_1(5,4)$、$P_2(3,0)$、$P_3(5,-4)$，",
             ),
         )
+        approved_q8_corrections = (
+            (
+                r"\[k>\frac{5\ln5-3\ln3}{\ln5-\ln3}\approx\frac{8.047-3.296}{1.609-1.099}=\frac{4.751}{0.510}\approx9.32\]",
+                r"\[k>\frac{5\ln5-3\ln3}{\ln5-\ln3}\approx9.301320\]",
+            ),
+            (
+                r"\[k<\frac{2\ln2-5\ln5}{\ln2-\ln5}=\frac{1.386-8.047}{0.693-1.609}=\frac{-6.661}{-0.916}\approx7.27\]",
+                r"\[k<\frac{2\ln2-5\ln5}{\ln2-\ln5}\approx7.269412\]",
+            ),
+            (
+                r"B 项要求 $k>9.32$ 且 $k<7.27$，\textbf{无解}，故 $x>z>y$ 不可能出现。",
+                r"B 项要求 $k>9.301320$ 且 $k<7.269412$，\textbf{无解}，故 $x>z>y$ 不可能出现。",
+            ),
+        )
+        approved_q8_removed_rows = (
+            r"$10$ & $256$ & $2187$ & $3125$ & $y<z$，且 $z>y>x$… 实为 $z>y>x$ & — \\",
+            r"$9$ & $128$ & $729$ & $625$ & $y>z>x$ & D  \\",
+        )
+        approved_q8_added_rows = (
+            r"$8$ & $64$ & $243$ & $125$ & $y>z>x$ & D  \\",
+        )
+        expected_q8_follow_up = {
+            "commit": "15bcab11a16f935941da3fe61a88fab18c1c3493",
+            "kind": "mathematical-correction",
+            "summary": "修正对数比较阈值，并以 k=8 验证 D 项。",
+            "test": "tests/test_2025_national_1_q08_solution.py",
+        }
 
         for (paper_id, artifact), record in selected.items():
             relative = "math-gaokao-latex/{}/{}".format(
@@ -1534,6 +1562,8 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 elif line.startswith("+ "):
                     added.append(line[2:])
             self.assertTrue(added)
+            approved_content_removed = []
+            approved_content_added = []
             if relative == q19_answers:
                 # phase0-b05 independently corrected the false congruence claim and
                 # removed the self-check's unmatched wrapper parentheses.
@@ -1542,10 +1572,30 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                     self.assertEqual(added.count(new_line), 1)
                     removed.remove(old_line)
                     added.remove(new_line)
+                    approved_content_removed.append(old_line)
+                    approved_content_added.append(new_line)
                 self.assertEqual(removed.count("）"), 1)
                 removed.remove("）")
-            # Besides layout commands, B05 permits only the exact recorded math-text
-            # correction above; other content changes remain rejected.
+                approved_content_removed.append("）")
+            if relative == q8_answers:
+                self.assertEqual(record.get("follow_up"), expected_q8_follow_up)
+                for old_line, new_line in approved_q8_corrections:
+                    self.assertEqual(removed.count(old_line), 1)
+                    self.assertEqual(added.count(new_line), 1)
+                    removed.remove(old_line)
+                    added.remove(new_line)
+                    approved_content_removed.append(old_line)
+                    approved_content_added.append(new_line)
+                for old_line in approved_q8_removed_rows:
+                    self.assertEqual(removed.count(old_line), 1)
+                    removed.remove(old_line)
+                    approved_content_removed.append(old_line)
+                for new_line in approved_q8_added_rows:
+                    self.assertEqual(added.count(new_line), 1)
+                    added.remove(new_line)
+                    approved_content_added.append(new_line)
+            # Besides layout commands, permit only the exact Q19 and later Q8
+            # mathematical corrections recorded by their independent checks.
             self.assertTrue(all(any(
                 line == "" or marker in line
                 for marker in (r"\nopagebreak", r"\Needspace", r"\enlargethispage", r"\mbox{（　　）}", r"\begin{gkopts}",
@@ -1557,7 +1607,12 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 for line in removed
             ))
             for token in (r"\gkti{", r"\task ", r"\input{figures/", "$", r"\["):
-                self.assertEqual(head.count(token), now.count(token), (relative, token))
+                expected_count = (
+                    head.count(token)
+                    - sum(line.count(token) for line in approved_content_removed)
+                    + sum(line.count(token) for line in approved_content_added)
+                )
+                self.assertEqual(expected_count, now.count(token), (relative, token))
 
     def test_task28_updates_exactly_eight_existing_b04_keys_with_layout_only_diffs(self):
         projects = {

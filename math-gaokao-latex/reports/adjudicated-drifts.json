@@ -436,7 +436,13 @@
       "adjudicated_by": "task-29-regeneration",
       "artifact": "answers.tex",
       "class": "layout-regeneration",
-      "current_sha256": "174857e0d75084381f36b8362c33de2fb40bd52b89f77106f79f52eb9c83ee29",
+      "current_sha256": "11aa948221be65166d8ed6a52cc31ceb60e0ab2b8227cdad6ab199742bc7d467",
+      "follow_up": {
+        "commit": "15bcab11a16f935941da3fe61a88fab18c1c3493",
+        "kind": "mathematical-correction",
+        "summary": "修正对数比较阈值，并以 k=8 验证 D 项。",
+        "test": "tests/test_2025_national_1_q08_solution.py"
+      },
       "legacy_sha256": "53c9ad2169bd4b40724507514fd69efc5c1b364eeb7292e65b0b6fdf0ed1084f",
       "paper_id": "gk-2025-regular-national-1"
     },
