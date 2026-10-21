@@ -92,6 +92,13 @@ class GuangdongScience1986LayoutTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertTrue(marker in compact, f"missing uncertainty note: {marker}")
 
+    def test_question_18_retains_source_note_that_interval_is_decreasing(self):
+        compact = re.sub(r"\s+", "", self.extracted)
+        self.assertIn(
+            "的单调下降区间（即在该区间内函数为减函数）是",
+            compact,
+        )
+
     def test_last_question_page_keeps_all_of_question_five_with_question_six(self):
         question_six_pages = [
             page for page in self.extracted.split("\f")
