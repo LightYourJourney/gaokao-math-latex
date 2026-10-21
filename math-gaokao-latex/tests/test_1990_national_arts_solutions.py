@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
 from solution_sources import parse_answer_points, render_combined
+from make_short_answers import parse_quick_table
 
 
 QUESTIONS = ROOT / "1990/1990_数学真题_全国文_试题.md"
@@ -76,6 +77,13 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
         }
         self.assertEqual(list(rows), list(range(1, 27)))
         self.assertEqual(rows, EXPECTED_RESULTS)
+
+    def test_short_answer_generator_can_read_the_choice_quick_reference(self):
+        text = ANSWERS.read_text(encoding="utf-8")
+        self.assertEqual(
+            parse_quick_table(text, 15),
+            ("A", "C", "D", "B", "C", "C", "A", "B", "A", "C", "B", "B", "A", "C", "B"),
+        )
 
     def test_answer_source_is_parseable_and_keeps_q20_pending(self):
         points = parse_answer_points(ANSWERS.read_text(encoding="utf-8"))

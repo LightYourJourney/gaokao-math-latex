@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1990 全国卷文科：简答输入、四版壳与 smoke 校样（2026-10-22）
+
+- 已完成：简答版生成器第三路校验要求独立横向选择题答案行；既有逐题答案表虽含1—15题答案，但格式不符合解析器契约。先新增针对真实答案源的回归测试，观察到 `parse_quick_table(..., 15)` 因此返回 `None`；再从已核答案表添加同序横向行，测试通过。确定性 `make_short_answers.py` 三路比对后生成 `answers_short.tex`，Q20仍显示待核、未猜顺序；模板生成试题版、解析版、简答版、印刷版四个独立入口。
+- 编译与校样：smoke 模式四版均由 XeLaTeX/latexmk 成功，页数分别为5/19/7/16，共47页；四份诊断均无构建问题、Overfull 与未定义引用。Poppler 100dpi 渲染后逐页检查全部47页，未见裁切、重叠、缺图或异常空白。smoke 只写忽略的 `build/` 诊断与PDF，不是正式build receipt或最终视觉回执。
+- 修改文件：`1990/1990_数学真题_全国文_答案要点.md`、`tests/test_1990_national_arts_solutions.py`、`1990_全国卷_文科/answers_short.tex`、四个 `1990_全国卷_文科/{试题版,解析版,简答版,印刷版}.tex` 及本进度文件。未改数学答案、Q20待核结论、正式回执或其他卷；`docs/design/`未暂存。
+- 验证：答案源测试9/9、简答生成器52/52、四版壳35/35、1990转录测试15/15通过；`make_short_answers.py --check`、`make_editions.py --check`、`generate_projects.py --check`均通过。全库`unittest discover -s tests`：1676项，1662通过、13跳过、1失败；唯一失败是已记录的`test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`现场SHA=`11aa948221be65166d8ed6a52cc31ceb60e0ab2b8227cdad6ab199742bc7d467`，台账期望=`174857e0d75084381f36b8362c33de2fb40bd52b89f77106f79f52eb9c83ee29`；本阶段未修改该卷或漂移台账。provenance状态仍显示`blocked`。
+- 成本：未调用OCR、聊天模型或外部API；本地执行四版XeLaTeX/latexmk smoke构建和47页Poppler渲染。Codex Token与实际费用不可见，记未知。
+- 剩余/下一步：1990卷仍因 `ISSUE-1124` 的 $V_1,V_2$ 区域对应不明而blocked；正式四版回执和最终视觉回执未生成。保持该题待核、不将smoke当正式验收；继续按manifest和进度选择其他可推进卷，避免重复本卷转录与盲核。
+
 ### 1990 全国卷文科：来源登记、合成输出与转换器回归修复（2026-10-22）
 
 - 已完成：核对固定题面PDF SHA-256 `89b85ba17cf8bbd3dcce6b88fd6b819e218b7d4dca2f043692ad10b2961aa029`，页眉标示“1990 普通高等学校招生考试（全国卷文）”；只确认到该固定文件，不推断发行者或版本。通过 `phase4-b10` 事务将本卷登记到 `source-manifest.json` revision 4579、绑定唯一 canonical 来源，并登记未决项 `ISSUE-1124`；因原图不能判断 $V_1,V_2$ 与两侧的对应关系，卷状态保持 `blocked`。随后用确定性合成器生成解析正文、含解析稿及共用 `questions.tex` / `answers.tex`，并更新项目索引。
