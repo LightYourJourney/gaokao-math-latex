@@ -11,6 +11,10 @@
 - 主要剩余瓶颈：数学 OCR gold 仍只有 2 个且均待人工复核；已完成 1 个扫描页上的 MinerU/Paddle 同图定性对照，但没有可评分的人工参考，也没有形成准确率结论。题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
 - 成本基线：历史 Agent 调用量、输入/输出/缓存 Token、账单费用、端到端完成率均未知。已有本地计时与缓存证据不能换算成聊天 Token 节省率。
 
+### 1977 新疆理科公式裁剪：Tesseract 单次基线（2026-10-21）
+
+复用来源SHA已匹配的既有600 DPI公式裁剪，只运行一次 Tesseract 5.5.3（Leptonica 1.87.0，CPU，`--psm 7`）。扫描字形可见 `x^2-2x+Lg a=0`，识别输出 `x?—9x+Lga= 0`，存在改变数学语义的指数/系数误识；该本地OCR不能直接作为数学转录。结果已写入 `benchmarks/ocr-runs.jsonl`，绑定来源ID、原件SHA、页码、规范bbox及图像哈希。当前 `score_ocr.py` 仍报告 `scored_runs=0`、`pending_cases=2`，因为两个人工gold尚待用户确认；未计算CER或准确率。单次推理耗时未独立测量，聊天Token及费用仍未知；本次无聊天模型或付费API调用。
+
 ### 增量状态：题目级 IR 导出（2026-10-20）
 
 新增 `tools/export_question_ir.py`，从已登记的规范 Markdown 与逐题 provenance 输出 JSON；真实样本为 2017 全国Ⅰ理科 23 题。导出器使用稳定 `question_id`、source page/PDF hash、题面哈希和复核状态，并将项目答案证据与 `official_answer=null` 分开；哈希/绑定失配 fail-closed。现阶段不从 OCR 识别结果构造题块、不解析结构化选项或公式，也未接入缓存、路由、四版生成或八项 QA。该增量复用了已有本地文本/元数据，无 OCR/API 请求；Token/API 成本仍不可见，不能声称端到端成本下降。

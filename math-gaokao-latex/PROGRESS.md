@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### OCR Phase 1：1977 新疆理科单公式 Tesseract 基线（2026-10-21）
+
+- 已完成：核对固定来源 PDF SHA-256 与 manifest 一致；复用既有 600 DPI 页面及公式裁剪，对公式 crop 单独运行一次 Tesseract 5.5.3 / Leptonica 1.87.0（CPU，`--psm 7`）。可见源式为 `x^2-2x+Lg a=0`，OCR 输出为 `x?—9x+Lga= 0`，指数/系数均有错误；不得用此结果回写题面或宣称达到公式识别质量门槛。运行记录绑定来源ID、PDF SHA、页码、规范bbox、渲染与crop哈希，并保留 `pending_human_review` 状态。
+- 修改文件：`benchmarks/ocr-runs.jsonl` 新增该次实际运行；更新 `docs/TOKEN_AUDIT.md` 与本进度。未改 gold `reference_text`/审核状态、原卷、题面、答案、manifest、正式LaTeX/PDF或回执。
+- 验证：来源SHA与清单匹配；`score_ocr.py` 接受3条run记录，仍返回 `scored_runs=0`、`pending_cases=2`；`test_score_ocr.py` 8/8通过，JSONL解析为3条，目标diff `--check`通过。由于gold未获人工批准，不输出CER或准确率。
+- 成本与边界：一次本地公式crop OCR；单次推理耗时未单独计量，Codex Token/费用不可见、记未知；无聊天模型或付费API调用。
+- 剩余/下一步：两个gold样本仍待用户人工确认（已提交核对请求）；确认前均不计分。获确认后再补充人工审核者/日期并运行正式评分，否则按源图修正候选后保持pending；之后扩充中文正文、公式、题号及图形样本，不重复本次OCR。
+
 ### 1998 上海文科：固定 Blob API 超时后复核独立只读源副本（2026-10-21）
 
 - 已完成：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作树继续。此前记录的原始下载通道已超时；本次 GitHub Blob API 对固定对象 OID `8a45930805e18e758d7c491f697e7d7531d71921` 的请求90秒后仅收到2,542,165/5,835,174字节，失败且不作为证据。随后只读检查独立资料目录 `gaokaomath-src/普通高考/1998/1998上海文.pdf`：文件大小5,835,174字节、SHA-256与manifest记录一致（`c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`）、Git blob OID也一致（`8a45930805e18e758d7c491f697e7d7531d71921`），`pdfinfo`显示6页A4。故固定字节已可从该只读副本取得；这不认证上游汇编资料的出版者/版次或官方权威性。本次部分下载已从`/private/tmp/gaokao-1998-source.LTai8I/`删除，未将PDF复制进仓库。
