@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 派生项目报告与来源 CSV 刷新（2026-10-21）
+
+- 已完成：只读全量检查发现6份报告投影与当前manifest不一致；通过正式生成器刷新来源清单摘要、考试资料说明、项目README、2017—2026 README、批次报告及基线快照。另刷新`manifest.csv`来源级投影，仍为775条来源记录。该阶段只更新派生报告，不修改来源、试卷、答案、解析、题目状态、构建/复核回执或批次状态。
+- 修改文件：`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-latex/manifest.csv`、`math-gaokao-latex/reports/baseline.md`、`math-gaokao-2017-2026/README.md`及本`PROGRESS.md`。未暂存/修改`docs/design/`中的既有工作区改动，未读写Main检出。
+- 验证：`report.py check --all`最终通过，确认6份报告均与全量manifest当前一致，并在报告中保留未完成/失败状态；`manifest_csv.py --check`通过，确认CSV当前且775行；`test_report.py` 12/12、`test_manifest_csv.py` 2/2通过；`git diff --check`通过。初次CSV检查因从项目子目录传入仓库根相对路径而报路径重复，未写入文件；改从仓库根使用规范路径后重跑通过。全量报告检查约85秒、报告测试107.354秒；未调用OCR、XeLaTeX、渲染、外部API或模型，Token/费用不可见、记未知。
+- 当前快照（由生成报告得出）：来源775、试卷291；生产状态`complete` 241、`blocked` 47、`compiled` 3；批次`closed` 126、`closed_with_blockers` 28、`compiled_pending_review` 3；正式复核门禁`FINALIZED` 153、`INVALID_OR_STALE` 1、`VISUAL_FAILED` 3。此为全库状态快照，不代表未完成卷均缺少转录，也不代表项目整体完成。
+- 剩余/下一步：继续根据本进度和来源manifest选择具有可核验固定来源、且正式门禁尚未完成的卷；对来源身份未核实的2003春季北京文科仍不绑定`paper_id`，不将其纳入完成计数。不得为使统计更好看而修改源数据或弱化质量门禁。
+
 ### phase0-b02：保留复核结论并清理 LaTeX 编译中间产物（2026-10-21）
 
 - 已完成：为 `clean-build-intermediates` 增加显式 `--allow-reviewed-pending`；仅当 build 为 `compiled_pending_review`、正式 review 为 `passed`/`failed` 且与当前 build attempt、PDF 哈希/页数及视觉工具链绑定有效时才放行。默认门禁不变；不改 build/review 状态或回执。
