@@ -19,6 +19,14 @@
 - 验证：`build_projects.py build --paper gk-1990-regular-national-arts --formal --json` 返回 `COMPILED_PENDING_REVIEW`、failed=0；`validate-receipts --manifest source-manifest.json --paper gk-1990-regular-national-arts --require-current-inputs --json` 返回 `OK`、stale=0、failed=0、missing=0、problems=[]。四版日志均无 TeX errors、missing characters、Overfull 或 undefined references。provenance 状态查询工具不接受 `--json`，该次只读查询参数被CLI拒绝；未写入。Q20 `ISSUE-1124` 仍阻塞整卷，构建成功不等于答案核验或视觉通过。
 - 成本与剩余：本地XeLaTeX/latexmk构建四版；无OCR、聊天模型或外部API调用，Codex Token/实际费用不可见，记未知。尚未检查本次正式PDF的47页并生成正式视觉回执；下一步仅进行该卷正式输出逐页视觉复核，不能把早先smoke版47页检查挪作正式版回执。
 
+### 1990 全国卷文科：选项/分页局部修复与正式视觉回执（2026-10-22）
+
+- 已完成：正式PDF校样发现解析版第7题D项和第9题D项存在断行；试题版、简答版第26题曾被推到末页并导致留白不均。仅调整第7、9题选项分段，给第26题增加单题 `question-needspace: 0.05` 排版提示；题目文字、数字、选项值、答案及数学结论均未改。新正式版页数为试题版4、解析版18、简答版6、印刷版16，共44页，Q26与前题同在第4页。因Q7/Q9规范题面哈希包含段落格式，通过 `provenance import-batch` 更新对应两题题面指纹并事务刷新manifest至revision 4583；随后正式构建和视觉事务分别推进至revision 4585、4586。卷仍因 `ISSUE-1124` 阻塞，批次状态为 `closed_with_blockers`。
+- 修改文件：`1990/1990_数学真题_全国文_试题.md`、`1990_全国卷_文科/{questions.tex,answers.tex,provenance.json,receipts/build.json,receipts/review.json}`、`source-manifest.json`、`reports/phase4-b10.md`、新增 `tests/test_1990_national_arts_layout.py` 及本进度。构建PDF、中间产物和校样PNG仅留在忽略的 `build/` 或 `/tmp/gk1990-formal-qa.SYnQrD/`；没有纳入栅格图。
+- 验证：版式回归先复现Q26分页失败及Q7选项断行，再修复；四个生成检查（projects、editions、short answers、provenance）均通过。新布局测试2/2通过，1990转录/答案/版式测试17/17通过，视觉回执模块72/72通过；provenance现场缓存一致性测试在刷新后1/1通过（约98秒）。正式构建 `c15ae9f6-a592-4755-9566-2589f057eda2` 为 `succeeded`，四版均无TeX错误、缺字、overfull或未定义引用；正式回执校验 `OK`、stale/missing/failed均为0。Poppler渲染44页总览并检查全部页面，另对11页以144dpi复查；352条逐页八项检查均通过，`review_receipts check-batch` 为 `FINALIZED`，视觉报告无问题。此前358项集成套件中唯一失败准确揭示Q7哈希及构建状态过期；刷新和重建后该现场一致性用例单独复跑通过。全库套件未重跑；较早全量基线中的2018全国Ⅰ理科哈希漂移仍是独立既知失败。
+- 成本：零OCR、零聊天模型、零外部API；本地XeLaTeX正式四版构建、Poppler 44页总览及11页高分辨率渲染。真实Codex Token和费用不可见，记未知。
+- 剩余/下一步：视觉审查已登记，但这不代表题面之外的数学/来源门禁已全部关闭；Q20 `ISSUE-1124` 仍未确定 $V_1,V_2$ 与区域的对应，试卷保持 `blocked`。本卷题面转录、答案盲核与此次正式视觉阶段无需重做；后续应从进度/manifest中的未完成队列选择下一卷，且不得将本卷描述为整卷验收完成。
+
 ### 1999 上海理科：Q20 图稿与 Q21 挖沟约束独立复核（2026-10-22）
 
 - 已完成：独立视觉复核确认 Q20 矢量图的点名、棱拓扑及实/虚线与固定源图一致；虚线 $BE$ 在原图中已经存在，并非矢量稿新增。比例未评估，图仍只通过拓扑/标签复核，不等于整卷视觉验收。Q21 独立数学复核确认源文和原图没有明确要求新挖沟口仍宽2米；在“不填土”约束下，若新沟口可变，允许任意深度 $H\ge3/2$ 米及对称轴偏移后，最小底宽为 $1/\sqrt2$ 米（对应沟口宽 $3/\sqrt2$ 米、深 $3/2$ 米）；若另加沟口固定2米，则最小底宽为1米。全深度包含条件和面积下界均已复核。两种答案对应不同约束，因此原题对重挖沟口的意图仍有歧义；来源答案转录 $\sqrt2/2$ 米只与自由沟口解释吻合，不足以证明题面明示了该条件。
