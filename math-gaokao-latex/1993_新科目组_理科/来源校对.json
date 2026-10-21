@@ -8,9 +8,9 @@
   "paper_id": null,
   "review_status": "needs-review",
   "canonical_question_source_ready": false,
-  "mathematical_verification_status": "not-verified",
+  "mathematical_verification_status": "independently-reviewed",
   "source_authenticity": "fixed-upstream-typeset-copy-publisher-unverified",
-  "transcription_status": "transcribed-pending-independent-review",
+  "transcription_status": "transcribed-independently-reviewed",
   "source_has_answers": false,
   "official_answer": null,
   "question_count": 28,
@@ -92,13 +92,13 @@
   ],
   "review_notes": [
     {"category": "publisher-identity", "status": "unverified", "note": "固定上游PDF的SHA和Git blob与manifest绑定；出版者及官方性尚未核实。"},
-    {"category": "mathematical-solutions", "status": "pending-independent-review", "note": "解答稿由主会话推导，不是来源所载答案。"},
+    {"category": "mathematical-solutions", "status": "independently-reviewed-with-open-issues", "note": "理科差异题Q4、Q9、Q19、Q28已独立推导；其余24道共题映射到文科盲核，答案非来源原载；Q21记号及Q28 arg约定须分别保留限定，详见独立盲核记录。"},
     {"category": "question-28-argument", "status": "needs-review", "note": "arg 的辐角取值约定未在来源页说明，需异人核查原卷惯例或可靠版本。"}
   ],
   "generated_solution": {
     "path": "解答草稿.md",
     "attribution": "agent-derived-non-official",
-    "status": "pending-independent-review",
+    "status": "independently-reviewed-with-open-issues",
     "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
     "choice_key": ["A", "C", "B", "B", "A", "D", "C", "A", "B", "D", "C", "A", "D", "D", "A", "C", "B"],
     "fill_in_answers": {
@@ -120,5 +120,25 @@
       "第28题arg取值约定不明；两种常见辐角值域导致不同答案集合，保留为待核问题。"
     ]
   },
-  "draft_sha256": "502cdfee450a44f5c3356fd1b121b0b6594a04fe909a26a847a50a14956074a3"
+  "draft_sha256": "502cdfee450a44f5c3356fd1b121b0b6594a04fe909a26a847a50a14956074a3",
+  "independent_blind_review": {
+    "reviewed_at": "2026-10-22",
+    "status": "reviewed-with-open-issues",
+    "reviewers": 2,
+    "full_range_question_reviewers": 1,
+    "review_method": "context-isolated full transcription comparison for science Q1-Q28 plus independently solved differential questions; 24 shared items reuse answers from the independently reviewed arts paper only after source-image and transcript mapping; see report",
+    "source_pdf_sha256": "14297950237f422e346d8c8a60ba0a9bb18d2ac4bcb69de4dabcb0ae2e83bd2d",
+    "source_render_sha256": "ccec89c0340959691ab851f086dcc2184dcb42873c189b20d9777ffc9461f474",
+    "question_draft_sha256": "502cdfee450a44f5c3356fd1b121b0b6594a04fe909a26a847a50a14956074a3",
+    "solution_draft_sha256": "bf123a6ff609bf64484936acf9dbe459a892d5589cf4feeb0ce5dd6c92cf7636",
+    "current_solution_draft_sha256": "bf123a6ff609bf64484936acf9dbe459a892d5589cf4feeb0ce5dd6c92cf7636",
+    "reviewed_question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+    "independently_solved_question_numbers": [4, 9, 19, 28],
+    "verified_answer_question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27],
+    "conditional_interpretation_question_numbers": [21, 28],
+    "shared_question_pairs": [[1, 1], [2, 2], [3, 3], [5, 5], [6, 6], [7, 7], [8, 8], [10, 10], [11, 11], [12, 12], [13, 13], [14, 14], [15, 15], [16, 16], [17, 17], [18, 18], [20, 20], [21, 21], [22, 22], [23, 23], [24, 25], [25, 26], [26, 27], [27, 28]],
+    "transcription_discrepancy_question_numbers": [],
+    "report_path": "数学独立盲核记录.md",
+    "report_sha256": "caf5dfabcbabb476865e9513984fedb0b63e0b19644b4055bf6cfe819e5ebe16"
+  }
 }

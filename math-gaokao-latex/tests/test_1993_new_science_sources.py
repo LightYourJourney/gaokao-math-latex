@@ -73,6 +73,58 @@ class NewTrackScience1993SourceTests(unittest.TestCase):
             hashlib.sha256(SOLUTIONS.read_bytes()).hexdigest(),
         )
 
+    def test_blind_review_receipt_binds_inputs_and_keeps_open_gates(self):
+        review = self.record.get("independent_blind_review")
+        self.assertIsInstance(review, dict)
+        self.assertEqual(review.get("status"), "reviewed-with-open-issues")
+        self.assertEqual(review.get("reviewers"), 2)
+        self.assertEqual(review.get("full_range_question_reviewers"), 1)
+        self.assertEqual(review.get("reviewed_question_numbers"), list(range(1, 29)))
+        self.assertEqual(
+            review.get("independently_solved_question_numbers"), [4, 9, 19, 28]
+        )
+        self.assertEqual(
+            review.get("verified_answer_question_numbers"),
+            [n for n in range(1, 29) if n not in (21, 28)],
+        )
+        self.assertEqual(
+            review.get("conditional_interpretation_question_numbers"), [21, 28]
+        )
+        self.assertEqual(review.get("transcription_discrepancy_question_numbers"), [])
+        self.assertEqual(
+            review.get("shared_question_pairs"),
+            [
+                [1, 1], [2, 2], [3, 3], [5, 5], [6, 6], [7, 7], [8, 8],
+                [10, 10], [11, 11], [12, 12], [13, 13], [14, 14], [15, 15],
+                [16, 16], [17, 17], [18, 18], [20, 20], [21, 21], [22, 22],
+                [23, 23], [24, 25], [25, 26], [26, 27], [27, 28],
+            ],
+        )
+        self.assertEqual(review.get("source_pdf_sha256"), self.record["pdf_sha256"])
+        self.assertEqual(review.get("source_render_sha256"), self.record["render"]["sha256"])
+        self.assertEqual(review.get("question_draft_sha256"), self.record["draft_sha256"])
+        solution_sha = hashlib.sha256(SOLUTIONS.read_bytes()).hexdigest()
+        self.assertEqual(review.get("solution_draft_sha256"), solution_sha)
+        self.assertEqual(review.get("current_solution_draft_sha256"), solution_sha)
+        report_path = review.get("report_path")
+        self.assertIsInstance(report_path, str)
+        self.assertFalse(Path(report_path).is_absolute())
+        report = PAPER / report_path
+        self.assertTrue(report.is_file())
+        self.assertEqual(
+            hashlib.sha256(report.read_bytes()).hexdigest(), review.get("report_sha256")
+        )
+        self.assertEqual(
+            self.record["generated_solution"]["status"],
+            "independently-reviewed-with-open-issues",
+        )
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
+        self.assertEqual(self.record["transcription_status"], "transcribed-independently-reviewed")
+        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertIsNone(self.record["paper_id"])
+        self.assertIsNone(self.record["official_answer"])
+
     def test_unprinted_answers_are_not_claimed_as_official(self):
         self.assertFalse(self.record["source_has_answers"])
         self.assertIsNone(self.record["official_answer"])
@@ -80,12 +132,12 @@ class NewTrackScience1993SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["total_score"])
         self.assertIsNone(self.record["paper_id"])
         self.assertFalse(self.record["canonical_question_source_ready"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "independently-reviewed")
         self.assertEqual(
             self.record["generated_solution"]["attribution"], "agent-derived-non-official"
         )
         self.assertEqual(
-            self.record["generated_solution"]["status"], "pending-independent-review"
+            self.record["generated_solution"]["status"], "independently-reviewed-with-open-issues"
         )
         self.assertEqual(
             self.record["generated_solution"]["question_numbers"], list(range(1, 29))
