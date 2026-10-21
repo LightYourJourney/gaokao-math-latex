@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅰ卷理科：当前构建四版本逐页视觉复核（2026-10-21）
+
+- 已完成：对正式 build attempt `63bcd3da-58fd-4574-b18c-2a09e5808f2c` 的试题版5页、解析版36页、简答版7页、印刷版28页逐页目视复核，共76页/608项。未见裁切、重叠、错位、缺字/乱码、页眉页脚异常、不可读字号或异常分页；取消选考题均留在清晰标示的存档区。四个自动高关注候选页（试题版5、简答版5、解析版33、印刷版26）另作整页放大检查，均通过。新引号页中抽查的中文弯引号字形清晰；四版 PDF 文本抽取未发现残留 ASCII 双引号。视觉结论仅覆盖版面，不证明题面来源或数学答案正确。
+- 检查统计：555项 `pass`、53项 `not_applicable`（仅无图页的 `figure_label`）、0项 `fail`、0项 `pending`。当前 PDF 页数分别为5/36/7/28，build 回执保持有效。
+- 修改文件：仅更新本 `PROGRESS.md`；将 `.work/phase0-b01/review/{试题版,解析版,简答版,印刷版}/gk-2018-regular-national-1-science.json` 四个忽略工作项刷新为当前 attempt 并记录逐页八项检查；旧四项保留副本于 `.work/phase0-b01/review-stale-2026-10-21-63bcd3da/`。未改题面、答案/解析源码、正式 PDF、build receipt、review receipt、manifest、issues、报告或其他三卷工作项；未触碰 Main 工作树及既有 `docs/design/` 改动。
+- 验证：`build_projects.py validate-receipts --paper gk-2018-regular-national-1-science` 为 `OK：1卷`；当前 attempt/PDF SHA/页数绑定、候选页重算、全部76页精确覆盖和八项结构校验均通过。完整接触表复核后，对自动高关注页及代表性弯引号页放大复看。曾先在仓库根查找 `.work/phase0-b01`，实际工作目录位于项目内 `math-gaokao-latex/.work/`；查找路径修正前的只读/预写断言失败没有写入。
+- 收口状态：尚未刷新正式 review receipt，也未 finalize `phase0-b01`。批次现为混合状态：三卷仍是当前 `succeeded/passed`，本卷 build 为 `compiled_pending_review` 且正式 review receipt 仍绑定旧 attempt `4494bbf5-ea18-46d3-8571-375a67f955a9`。现有 `finalize_batch` 的 review 模式要求批内所有 build 均为 `compiled_pending_review`；report-only 模式则要求所有 review 当前且所有 build 为 `succeeded`。没有适用于本卷的单卷事务入口；另外两卷的忽略工作项还保留旧 attempt/失败结果，虽其正式 review receipt 当前有效，本阶段未动它们。未手工改状态或重审其他卷。
+- 成本与下一步：复用当前构建 PDF 的本地渲染页，运行本地 Poppler 高关注页指标；无 OCR、LLM、商业 API 或 XeLaTeX 重编。Codex Token/实际费用不可见，记未知。下一步应先决定是否为混合状态实现并测试增量 review finalizer（复用三卷当前正式回执，只事务 finalize 本卷），或另行授权按整批重审/重建；在有受支持的事务路径前保持批次 pending，不直接改写任何正式 receipt/state。
+
 ### 2018 全国Ⅰ卷理科：引号字形规范化与四版重编（2026-10-21）
 
 - 已完成：在 `feat/gaokao-phase0` canonical worktree 内，将规范答案/解析 Markdown 中的 ASCII 双引号统一为中文弯引号；由 `generate_projects.py` 重生成该卷 `answers.tex`，并正式重编四版。未触碰 Main 工作树、其他试卷、`.work` 中其他版本工作项或既有 `docs/design/` 改动。
