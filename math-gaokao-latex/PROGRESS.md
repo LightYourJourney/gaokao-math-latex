@@ -12,6 +12,13 @@
 - 验证：新增定向测试 5/5 通过，覆盖来源 ID/SHA 与未绑定状态、22 题编号/分段、高风险公式片段、无栅格图引用、Q19 虚实棱，以及 Q21 两条垂足的几何关系；3 幅图由 `latexmk -xelatex` 编译并经 Poppler 渲染，主会话逐图对照源页。全套测试 `python3 -B -m unittest discover -s math-gaokao-latex/tests` 共 1685 项，1671 通过、13 跳过、1 失败；唯一失败为既有 `test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，`2025_全国1卷/answers.tex` 漂移台账期望 SHA `174857e0…` 与现场 `11aa9482…` 不一致；该文件本分支未修改，且该失败已在更早进度记录中出现。此卷定向测试在全套测试及复跑中均通过。
 - 成本与剩余：原生文本提取和本地矢量编译/渲染；OCR、聊天模型及外部 API 调用均为 0。真实 Codex Token 与费用不可见，记未知；全套测试耗时 397.535 秒。尚待独立盲核题面与三图、核验出版者/版次及来源身份、找到可靠答案来源并完成独立解答与答案验证；随后才可建立共享 `questions.tex`/`answers.tex`、四个独立编译入口及正式构建/视觉回执。下一步先完成独立源核与图核；在此之前保持未绑定和 pending，不将首稿登记为正式完成。
 
+### 2005 春季上海卷：Q13 直线—平面关系符号纠正（2026-10-22）
+
+- 已完成：复核固定源 PDF 第 1 页（印刷页 217）发现 Q13 的 B、D 选项把“直线平行于平面”误录为“直线包含于平面”；按原图改为 `n\parallel\alpha`，不改题目其他文字或结论。第三方网页文本也显示这两处为平行关系，但不作为权威来源；裁定依据是本地固定 PDF 原图。
+- 修改文件：`2005/2005_数学真题_春季上海_试题.md`、`math-gaokao-latex/tests/test_2005_shanghai_spring_transcription.py`、本 `PROGRESS.md`。测试新增精确断言：Q13 B/D 合计两处 `n\parallel\alpha`，且不含 `n\subset\alpha`。
+- 验证：新增回归断言先在旧题面上按预期失败，再于修正后通过；2005 春季上海专项测试 6/6 通过。全量 `python3 -B -m unittest discover -s math-gaokao-latex/tests` 共 1686 项：1672 通过、13 跳过、1 失败；唯一失败仍是既有 `test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`（2025 全国Ⅰ卷 `answers.tex` 期望 SHA `174857e0…`、现场 SHA `11aa9482…`），不涉及本次改动。来源固定 PDF SHA 与前一条卷级回执相同；`git diff --check` 通过。
+- 成本与剩余：只查看固定 PDF 局部源图并运行本地测试；无 OCR、PDF 全卷重渲染、模型或外部 API 调用。Token 与实际费用不可见，记未知。独立盲核、来源出版身份核验、答案/解析、正式构建与整卷验收仍未完成；本修正不改变该卷 pending 状态。下一步继续独立核对未复核题面与图稿，禁止重复已完成的整卷转录。
+
 ### 2008 全国Ⅱ文科：Q18 同版答案补证检索（2026-10-22）
 
 - 已完成：围绕 `ISSUE-0839` 的明确门禁，定向检索同版官方答案或勘误。未找到能证明官方排除零公差的官方答案/勘误；找到一份第三方《2008年全国统一高考数学试卷（文科）（全国卷Ⅱ）参考答案与试题解析》，其第18题明确求得 `d=0` 或 `d=1`，并分别给出 `S_{20}=200` 与 `330`（[第三方解析页](https://www.yeyulingfeng.com/wendang/14727.html)）。这与当前按原题字面保留两值的解析相符，但不能替代同版官方来源，也不证明该网页版本与固定PDF同版。

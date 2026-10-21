@@ -81,6 +81,11 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIn("较小的根", self.transcript)
         self.assertIn("未生成答案或解析", self.transcript)
 
+    def test_question_13_uses_line_parallel_to_plane_in_options_b_and_d(self):
+        question = self.transcript.split("**13．**", 1)[1].split("**14．**", 1)[0]
+        self.assertEqual(question.count(r"n\parallel\alpha"), 2)
+        self.assertNotIn(r"n\subset\alpha", question)
+
     def test_every_source_figure_has_a_vector_source_and_no_raster_embedding(self):
         self.assertIn("第 19 题", self.figures)
         self.assertIn("第 21 题", self.figures)
