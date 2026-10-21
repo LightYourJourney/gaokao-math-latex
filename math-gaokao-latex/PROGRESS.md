@@ -8548,3 +8548,17 @@
 - 验证：`provenance.py check-batch --batch phase0-b01`为`OK`（4卷）；2018理科`build_projects.py validate-receipts`为`OK`；生成物检查中仅`answers.tex`不一致，版本壳与简答输出一致；校样工作项结构为16卷版项、322页、2576条八项检查记录全pass。`finalize-batch-checked`退出码6，错误为该理科生成物状态stale，事务零正式修改。未重跑全量测试或编译。
 - 成本：本阶段均为本地只读/门禁与工作项维护，无OCR、模型或外部API；Token及实际费用不可见，记未知。
 - 剩余/下一步：2018理科规范Markdown与已批准的引号版式需要对齐；已向用户请求批准仅同步该文件的成对引号、重生成`answers.tex`并刷新该卷provenance，若PDF SHA变化再局部重编/复核。未获方向前不改规范题目源、不刷新provenance、不finalize批次；`phase0-b01`继续保持pending。
+
+### 1989 广东理科：Q8 卷型映射的有限公开来源检索（2026-10-22）
+
+- 已完成：针对`ISSUE-1078`中“印载B型答案是否对应当前固定卷”及Q8原句歧义，进行限定检索。找到一则搜狐号1989理工农医数学题图片转载，以及一个第三方试卷资料库对1989广东理科卷的索引；前者未给出同版答案映射，后者没有提供可核实的A/B卷型对应说明。没有找到考试机构原文、同版清晰对照或权威勘误。以上仅为检索线索，不能用来裁定卷型或修改Q8。
+- 修改文件：本进度文件；未改Q8题面、答案、解析、`missing-issues.md`、manifest、provenance或构建/视觉回执。`ISSUE-1078`保持open、blocks_completion，题面和条件性解释不变。
+- 验证：只读精确短语、题名和卷型检索，并打开可见转载/索引页面核对其内容范围；未把搜索摘要当作一手证据，也未下载或绑定新来源PDF。无本地代码测试。
+- 成本与下一步：无OCR、图片上传、数学模型或商业API调用；搜索服务和Codex实际Token/费用无可用计量，记未知。除非出现官方勘误、同版A/B卷对照或更清晰的固定版扫描，否则不重复相同关键词搜索；阻断继续保留。
+
+### 1999 上海理科：Q21 原图作用范围补证（2026-10-22）
+
+- 已完成：复用已固定且SHA-256为`055fd4d4468dd6db86a49b8addc9209ab497987269aea96a72f0b26ad35cd9dc`的来源PDF，仅渲染第2页（印刷页4-36）核对Q21。图示紧随第（2）问“如图所示形状的几何体称为柱体”的水量描述；第（3）问另行提出改挖成等腰梯形，原图没有给改挖后沟口的新尺寸或标注。因此“原沟宽2米”不能单凭该图扩张成“新沟口固定2米”。此观察支持现有自由沟口解释，但只是主会话源图复核，不是独立数学盲核。
+- 修改文件：`1999_上海卷_理科/来源校对.json`为Q21增加`source_diagram_scope`，记录图示所对应问次、未给新沟口尺寸及待独立复核状态；`tests/test_1999_shanghai_science_solutions.py`增加相应来源约束回归；本进度。未改题面、答案、解析、source manifest、正式provenance、PDF或构建回执。
+- 验证：新增回归先因缺少`source_diagram_scope`按预期失败（KeyError），补记录后1999上海理科四文件定向套件`22/22`通过；JSON解析与`git diff --check`通过。全量测试`python3 -m unittest discover -s math-gaokao-latex/tests`运行1676项：1662通过、13跳过、1失败；唯一失败为既有`test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`当前SHA `11aa9482…`与历史漂移台账SHA `174857e0…`不一致，与本次变更无关。测试过程中负向CLI用例输出的usage/error为预期；结束后核对Git index为空，没有遗留暂存改动。
+- 状态与下一步：1999卷Q21数学约束仍为`author-adjudicated-pending-independent-review`；整卷来源、数学和视觉状态未提升，`paper_id=null`不变。下一步由不同复核者只依据单题题面与源图独立评估“不填土”的几何约束及全局最小证明；在此之前不把`√2/2米`标记为最终验收答案。成本：零OCR、仅一页本地渲染和本地测试；Agent Token/费用不可见，记未知。

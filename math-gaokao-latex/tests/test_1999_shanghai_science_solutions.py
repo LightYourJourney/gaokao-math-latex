@@ -170,6 +170,8 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertEqual(note["tangent_candidate_additional_area"], "3√2/2−2 m²")
         self.assertEqual(note["fixed_mouth_candidate_area"], "9/4 m²")
         self.assertEqual(note["fixed_mouth_candidate_additional_area"], "1/4 m²")
+        self.assertEqual(note["source_diagram_scope"]["illustrates_question_part"], 2)
+        self.assertEqual(note["source_diagram_scope"]["question_part_3_fixes_new_mouth_width"], False)
         self.assertEqual(note["status"], "author-adjudicated-pending-independent-review")
 
         solution = SOLUTIONS.read_text(encoding="utf-8")
