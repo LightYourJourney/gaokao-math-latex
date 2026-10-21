@@ -4,6 +4,34 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase2-b07：2017 全国Ⅱ/Ⅲ文理四卷工具链失效后的正式重编（2026-10-21）
+
+- 工作区边界：仅在 `仓库根` 的 `feat/gaokao-phase0` 工作；未检查或修改 Main。既有 `docs/design/` 变更未触碰。
+- 已完成：因当前 build receipt 的工具链指纹变化，对原批次四卷按 `python3 -B tools/build_projects.py build --formal --batch phase2-b07 --json` 正式重编。四卷16个版本构建均成功，0 failed，状态为 `compiled_pending_review`，manifest revision 4548；页数仍为试题/解析/简答/印刷各 5/20/7/14（全国Ⅱ文）、5/20/7/15（全国Ⅱ理）、5/20/7/16（全国Ⅲ文）、5/20/7/15（全国Ⅲ理），合计188页。两卷既有 blockers（全国Ⅱ文、全国Ⅲ理）保留；两卷原 complete（全国Ⅱ理、全国Ⅲ文）现为 compiled，等待当前构建的复核，不提前恢复 complete。
+- 修改文件：四卷 `receipts/build.json`、`source-manifest.json`；正式PDF位于各卷忽略的 `build/` 目录。未改题面、答案/解析、图稿或来源登记。
+- 验证：批次构建器报告 `COMPILED_PENDING_REVIEW`、4 pending、0 failed；`build_projects.py validate-receipts --manifest source-manifest.json --batch phase2-b07 --json` 返回 `OK`，4 pending、0 stale/invalid/missing/failed。四卷16份回执各有成功编译记录，错误、缺字、Overfull 与未解析引用列表为空。首次从仓库根误用项目相对脚本路径的只读校验命令报文件不存在；在项目目录用正确路径复跑，未造成文件变更。
+- 既有视觉工作项：`.work/phase2-b07/review/` 中16份旧工作项绑定旧 attempt，包含188页、1,504项既有通过记录；因新 attempt 与工具链/视觉指纹更新，不能直接当作当前复核。旧件已原样复制到 `.work/phase2-b07/review-previous-20261021-ccb4eea4/` 并验证复制前一致，随后官方 `prepare-batch` 生成当前 attempt 工作项；旧件保留不删。
+- 成本：本次无OCR、聊天模型或外部API调用；构建耗时、Codex Token、缓存Token及费用未可靠记录，记未知。
+- 剩余/下一步：当前 attempt 的16份工作项全部待审；逐页复核四卷188页后再经正式批次事务登记。在此之前批次保持 `compiled_pending_review`，视觉通过也不得解除既有内容 blockers。
+
+### phase2-b07：当前构建视觉工作项准备与旧记录保全（2026-10-21）
+
+- 已完成：将旧 `.work/phase2-b07/review/` 复制保全到 `.work/phase2-b07/review-previous-20261021-ccb4eea4/`；复制时 `diff -qr` 无差异。旧工作项共188页、1,504项均有旧 attempt 下的人工通过记录，不把它们当作新构建的视觉验收。随后运行 `python3 -B tools/review_receipts.py prepare-batch --manifest source-manifest.json --batch phase2-b07`，为四卷四版本生成16个当前 attempt 工作项。
+- 当前状态：新工作项绑定新 attempt，188/188页及1,504/1,504项均 pending；旧件完整保留，可供逐页对照既有批注。没有重做 OCR/转录，也没有更改源题、解析或正式回执。
+- 修改范围：仅忽略目录 `.work/phase2-b07/review/` 新工作项、旧件副本 `.work/phase2-b07/review-previous-20261021-ccb4eea4/`，以及本进度文件。
+- 验证：`prepare-batch` 成功列出16个工作项；逐卷/版本核对全部新 attempt ID 与构建回执一致、页数合计188、pending合计1,504；旧工作项复制后核对无差异。`git diff --check` 通过。
+- 成本与下一步：本地读取PDF页面指标并生成工作项，无 OCR、模型或外部API；实际Token/费用未知。下一步按当前PDF逐页完成视觉 QA，再执行批次 finalizer；若有版面差异只做局部排版修复并重编受影响卷。
+
+### phase2-b07：2017 全国Ⅱ/Ⅲ文理四卷当前构建视觉复核与正式登记（2026-10-21）
+
+- 工作区边界：继续只在 `仓库根` 的 `feat/gaokao-phase0` 工作；没有检查、迁移或修改 Main。`docs/design/` 中既有未提交改动保持原样。
+- 已完成：对当前生成的16张版次接触表逐张检查，覆盖188页；另以180 dpi检查当前候选页16张（每卷每版一张）。将旧审查的逐页八项批注复用到当前 attempt 前，核对四卷旧/新依赖树相同、所有非 `tools/` 生成输入及页数相同、旧页集合与检查项均全部通过；输入树变化限定于工具文件，视觉工具链仅 Poppler 从26.09升至26.10，XeLaTeX 未变。当前构建/指纹仍由正式 finalizer 重新校验，并据此正式登记16份回执：188/188页、1,504/1,504检查项通过，0视觉失败。
+- 当前结果：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次为 `closed_with_blockers`，manifest revision 4549；四卷构建及视觉回执均为当前。全国Ⅱ理科、全国Ⅲ文科内容候选 `eligible_complete`；全国Ⅱ文科仍被第17题答案分支/官方答案证据阻塞（ISSUE-0952、0954），全国Ⅲ理科仍被第20题非唯一解/官方答案证据阻塞（ISSUE-0953、0955）。旧视觉问题 ISSUE-0987—0991 保持已解决；本次未新增视觉问题。
+- 修改文件：四卷 `receipts/build.json` 与 `receipts/review.json`、`source-manifest.json`、`reports/phase2-b07.md`、本进度文件。QA渲染图及新/归档工作项均在忽略的 `.work/` 下；归档旧工作项未删。
+- 验证：正式 finalizer `FINALIZED`；随后 `review_receipts.py check-batch` 返回 `FINALIZED`、无问题；`build_projects.py validate-receipts --batch phase2-b07 --json` 返回 `OK`（4 succeeded，0 stale/invalid/missing/pending/failed）；`provenance.py check-batch` 返回 `OK：4 卷`；`git diff --check` 通过。未改题面、答案/解析、图稿或来源文件，未执行 OCR/聊天模型/外部 API。
+- 命令纠错记录：一次 `jq @tsv` 查询因把工具链对象当作表格单元格而只读失败，改用结构化 JSON 对比、无文件影响。渲染阶段曾因工作目录与 PDF 相对路径不一致、以及页码文件名零填充未匹配而失败；改在仓库根执行并按页数补零后复用已生成图完成检查，无源文件影响。
+- 成本与剩余：OCR/模型/API调用为0；Codex Token、缓存Token、实际处理耗时及费用未可靠记录，记未知。该批视觉/构建阶段已闭合；剩余仅为上述四项内容证据阻塞，需同版权威勘误/来源说明后再处理，不重做本批转录或OCR。
+
 ### phase2-b05：2016 全国Ⅰ/Ⅱ文理四卷当前构建视觉回执登记（2026-10-21）
 
 - 已完成：四卷四版本16份回执全部绑定当前 build attempt；219/219页通过逐页八项视觉检查，共1669 pass、83 not_applicable、0 fail。正式登记器返回 `FINALIZED`，批次状态为 `closed_with_blockers`，manifest revision `4546`；报告位于 `reports/phase2-b05.md`。
