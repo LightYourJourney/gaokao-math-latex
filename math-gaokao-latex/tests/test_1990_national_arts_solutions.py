@@ -1,9 +1,14 @@
 import re
+import sys
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT / "math-gaokao-latex/tools"))
+from solution_sources import parse_answer_points, render_combined
+
+
 QUESTIONS = ROOT / "1990/1990_数学真题_全国文_试题.md"
 ANSWERS = ROOT / "1990/1990_数学真题_全国文_答案要点.md"
 SOLUTIONS = ROOT / "1990/1990_数学真题_全国文_解析正文.md"
@@ -72,6 +77,31 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
         self.assertEqual(list(rows), list(range(1, 27)))
         self.assertEqual(rows, EXPECTED_RESULTS)
 
+    def test_answer_source_is_parseable_and_keeps_q20_pending(self):
+        points = parse_answer_points(ANSWERS.read_text(encoding="utf-8"))
+        self.assertEqual([point.number for point in points], list(range(1, 27)))
+        answers = {point.number: point.answers[0][1] for point in points}
+        self.assertEqual(
+            {number: answers[number] for number in range(1, 16)},
+            {number: EXPECTED_RESULTS[number] for number in range(1, 16)},
+        )
+        self.assertTrue(answers[20].startswith("待核"), answers[20])
+
+    def test_canonical_sources_render_all_questions_without_resolving_q20(self):
+        rendered = render_combined(
+            QUESTIONS.read_text(encoding="utf-8"),
+            SOLUTIONS.read_text(encoding="utf-8"),
+            ANSWERS.read_text(encoding="utf-8"),
+        )
+        numbers = [
+            int(line.split()[2])
+            for line in rendered.splitlines()
+            if line.startswith("### 第 ")
+        ]
+        self.assertEqual(numbers, list(range(1, 27)))
+        q20 = rendered.split("### 第 20 题", 1)[1].split("### 第 21 题", 1)[0]
+        self.assertIn("**答案：待核（A侧:其余=7:5；V1/V2顺序未标）**", q20)
+
     def test_solution_sections_cover_all_questions_and_match_the_answer_key(self):
         self.assertTrue(SOLUTIONS.is_file(), f"missing generated solution draft: {SOLUTIONS}")
         text = SOLUTIONS.read_text(encoding="utf-8")
@@ -89,9 +119,9 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
         answer_text = ANSWERS.read_text(encoding="utf-8")
         solution_text = SOLUTIONS.read_text(encoding="utf-8")
         self.assertIn(r"（B）$\dfrac{-1+\sqrt3}{2}+\dfrac{-1-\sqrt3}{2}i$", question_text)
-        answer_section = re.split(r"(?m)^### 第 4 题\s*$", answer_text)[1].split("### 第 5 题", 1)[0]
+        answer_section = re.split(r"(?m)^\*\*4．\*\*\s*$", answer_text)[1].split("**5．**", 1)[0]
         solution_section = re.split(r"(?m)^### 第 4 题\s*$", solution_text)[1].split("### 第 5 题", 1)[0]
-        self.assertIn(r"**结论：B**，$\dfrac{-1+\sqrt3}{2}+\dfrac{-1-\sqrt3}{2}i$。", answer_section)
+        self.assertIn(r"**答案：B**，$\dfrac{-1+\sqrt3}{2}+\dfrac{-1-\sqrt3}{2}i$。", answer_section)
         self.assertIn(r"(1+i)e^{-2\pi i/3}=\frac{-1+\sqrt3}{2}-\frac{1+\sqrt3}{2}i", solution_section)
 
     def test_ambiguous_prism_ratio_stays_pending_despite_computed_unordered_volumes(self):
@@ -99,7 +129,7 @@ class NationalArts1990SolutionDraftTests(unittest.TestCase):
         self.assertTrue(SOLUTIONS.is_file(), f"missing generated solution draft: {SOLUTIONS}")
         answer_text = ANSWERS.read_text(encoding="utf-8")
         solution_text = SOLUTIONS.read_text(encoding="utf-8")
-        answer_section = re.split(r"(?m)^### 第 20 题\s*$", answer_text)[1].split("### 第 21 题", 1)[0]
+        answer_section = re.split(r"(?m)^\*\*20．\*\*\s*$", answer_text)[1].split("**21．**", 1)[0]
         solution_section = re.split(r"(?m)^### 第 20 题\s*$", solution_text)[1].split("### 第 21 题", 1)[0]
         self.assertIn("待核", answer_section)
         self.assertIn("7:5", solution_section)

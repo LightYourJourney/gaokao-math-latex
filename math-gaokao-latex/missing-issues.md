@@ -18573,3 +18573,20 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1124
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 只有试题页，图中未标出哪部分是 V1 或 V2；几何复算只确定靠 A 一侧与另一侧的体积比为 7:5。答案要点和解析已明确保持待核。",
+  "fingerprint": "20014849ae777195b4adc9b76eafb500cdab47d549f69ed0b5bd8b307bb13073",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-national-arts",
+  "question_id": "gk-1990-regular-national-arts-q20",
+  "resume_action": "取得能明确标示 V1/V2 与两侧对应关系的同版题页、权威答案或勘误；如始终无此证据，则继续保留无序比 7:5，并禁止给出唯一的 V1:V2。",
+  "source_id": "src-4d319a8fc41be0c0fa7ce90615870abbabe5c3670150609e3cb0c37944091866",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
