@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### OCR Phase 1：1977 新疆理科公式裁剪 Paddle FormulaRecognition 与缓存复用（2026-10-21）
+
+- 已完成：在已校验来源的同一600 DPI公式裁剪上，使用既有 PaddleOCR FormulaRecognition `PP-FormulaNet_plus-S`（PaddleOCR 3.7.0 / PaddlePaddle 3.3.1 / PaddleX 3.7.2，CPU）运行一次。输出 `x^{2}-2x+L g a=0`，指数和系数与可见源式 `x^2-2x+Lg a=0` 相符，但函数字形空格化仍需人工判断；保留为 `needs-review` / `not_verified`。第二次调用确认内容寻址缓存命中（`local_ocr_calls_this_run=0`），不是第二次推理。
+- 修改文件：`benchmarks/ocr-runs.jsonl` 新增一次真实模型运行；更新 `docs/TOKEN_AUDIT.md` 与本进度。未改 gold 参考文本/审核状态、模型依赖/权重、源PDF、题面或正式成果。
+- 验证：首次运行记录模型树SHA、crop SHA、运行环境、模型加载5.951509秒、推理0.286788秒、总耗时11.087858秒、峰值RSS 884,899,840 bytes；缓存复用调用返回 `cache_hit=true`、0次OCR、0.346411秒。`test_recognize_formula.py` 4/4、`test_score_ocr.py` 8/8通过；评分器成功校验4条run并仍返回 `scored_runs=0`、`pending_cases=2`；`git diff --check`通过。
+- 成本与边界：一次本地公式识别；复用已有模型与venv，无新依赖/模型下载、无聊天模型或付费API。Codex Token与费用不可见，记未知。即使公式结构更接近源图，也不能据此宣称公式正确率或放行转录。
+- 剩余/下一步：两个gold仍待人工批准；收到确认后才填入审核者/日期并进行真实评分，未获确认则保持pending。之后继续覆盖中文正文、题号和图形样本，不重复这次模型调用；复用已验证缓存。
+
 ### OCR Phase 1：1977 新疆理科单公式 Tesseract 基线（2026-10-21）
 
 - 已完成：核对固定来源 PDF SHA-256 与 manifest 一致；复用既有 600 DPI 页面及公式裁剪，对公式 crop 单独运行一次 Tesseract 5.5.3 / Leptonica 1.87.0（CPU，`--psm 7`）。可见源式为 `x^2-2x+Lg a=0`，OCR 输出为 `x?—9x+Lga= 0`，指数/系数均有错误；不得用此结果回写题面或宣称达到公式识别质量门槛。运行记录绑定来源ID、PDF SHA、页码、规范bbox、渲染与crop哈希，并保留 `pending_human_review` 状态。

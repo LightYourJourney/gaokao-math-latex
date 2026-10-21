@@ -8,12 +8,16 @@
 
 - 已有：`analyze_pdf.py` 页级文字/栅格分析与断点缓存；`ocr_pdf.py` 选择性 Tesseract 页识别、渲染/识别缓存和待审状态；`recognize_formula.py` 可选 Paddle 局部公式识别；`score_ocr.py` 评分工具与既有少量真实样本记录。无需重复安装或再造这些模块。
 - 已有后段：Markdown 规范源、四版 LaTeX 生成、latexmk/XeLaTeX、来源/provenance/构建/逐页复核门禁。新识别流程尚未端到端接入题目级数据与这些门禁；不能据局部工具通过宣布全流水线完成。
-- 主要剩余瓶颈：数学 OCR gold 仍只有 2 个且均待人工复核；已完成 1 个扫描页上的 MinerU/Paddle 同图定性对照，但没有可评分的人工参考，也没有形成准确率结论。题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
+- 主要剩余瓶颈：数学 OCR gold 仍只有 2 个且均待人工复核；已有 1 个扫描页上的 MinerU/Paddle 同图定性对照，另在 1977 新疆公式裁剪测试了 Tesseract 与 Paddle FormulaRecognition，但没有可评分的人工参考，也没有准确率结论。题目级 IR/任务路由尚未实现；混合页局部区域处理、独立图片输入、数学语义核源仍有缺口。
 - 成本基线：历史 Agent 调用量、输入/输出/缓存 Token、账单费用、端到端完成率均未知。已有本地计时与缓存证据不能换算成聊天 Token 节省率。
 
 ### 1977 新疆理科公式裁剪：Tesseract 单次基线（2026-10-21）
 
 复用来源SHA已匹配的既有600 DPI公式裁剪，只运行一次 Tesseract 5.5.3（Leptonica 1.87.0，CPU，`--psm 7`）。扫描字形可见 `x^2-2x+Lg a=0`，识别输出 `x?—9x+Lga= 0`，存在改变数学语义的指数/系数误识；该本地OCR不能直接作为数学转录。结果已写入 `benchmarks/ocr-runs.jsonl`，绑定来源ID、原件SHA、页码、规范bbox及图像哈希。当前 `score_ocr.py` 仍报告 `scored_runs=0`、`pending_cases=2`，因为两个人工gold尚待用户确认；未计算CER或准确率。单次推理耗时未独立测量，聊天Token及费用仍未知；本次无聊天模型或付费API调用。
+
+### 同一公式裁剪：PaddleOCR FormulaRecognition 与缓存验证（2026-10-21）
+
+复用同一600 DPI公式crop及既有本地PP-FormulaNet_plus-S权重，在现有PaddleOCR 3.7.0 / PaddlePaddle 3.3.1 / PaddleX 3.7.2 CPU venv运行一次：识别为 `x^{2}-2x+L g a=0`，模型加载5.951509秒、推理0.286788秒、总耗时11.087858秒、峰值RSS 884,899,840 bytes。它识对指数和系数，但函数字形空格化仍有表示歧义；状态为 `needs-review`、`not_verified`，不做数学正确率或CER声明。再次调用同一CLI后内容寻址缓存命中，0次OCR、0.346411秒，验证可跨调用恢复。评分器仍因gold未获人工批准返回0 scored / 2 pending。模型与venv原已存在，本轮未安装依赖或下载权重；无聊天模型/API调用，Token与费用未知。
 
 ### 增量状态：题目级 IR 导出（2026-10-20）
 
