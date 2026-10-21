@@ -16341,14 +16341,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面只写四种水果任选两种及两人各自所选，未明确独立等可能模型。该模型下为1/6，但不同选取分布概率不同。",
+  "current_evidence": "已按公开解析的古典概型解读并独立复算：每人从6种组合独立等可能选择，共36个有序结果、6个相同，概率1/6。百度题库的同题解析将其按古典概型处理（https://tiku.baidu.com/tikupc/chapterdetail/57bb913143323968011c9248-51-5-knowpoint），GaokaoHub题页给出1/6（https://gaokaohub.com/paper/2016-shanghai-wen-math.html）。原卷仍不附答案；两者均非考试院答案原件，故只确认通常模型/预期解，不标为官方答案。",
   "fingerprint": "6ac0d27b550ba3fcec06155060a390817b20be4255c8bcc3c34f8d2ce02f207c",
   "impact": "blocks_completion",
   "paper_id": "gk-2016-regular-shanghai-arts",
   "question_id": "gk-2016-regular-shanghai-arts-q11",
-  "resume_action": "核验可靠解析或命题说明中的概率模型；未确认前保留U和条件性计算。",
+  "resume_action": "结案但保留非官方属性；若取得考试院参考答案，再补充官方来源，不改原卷题面。",
   "source_id": "src-ef0138abbecb25086fbdd068f074763b3b155e173f33462156d89059fbad582d",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -16358,14 +16358,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面仅称任取不同两顶点，未明确等可能模型。不同顶点对等可能时为5/28；该模型不作为原题明示条件。",
+  "current_evidence": "已按公开解析的古典概型解读并独立精确复算：28个无序顶点对中有5对使P严格落在第一象限，概率5/28。GaokaoHub同题解析列出28个基本事件与5个有利事件（https://gaokaohub.com/q/item/36314608064002.html）；同题解析卷逐项列出5对（Scribd用户上传：https://www.scribd.com/document/926308400/2016%E5%B9%B4%E4%B8%8A%E6%B5%B7%E9%AB%98%E8%80%83%E7%90%86%E7%A7%91%E6%95%B0%E5%AD%A6%E7%9C%9F%E9%A2%98-%E8%A7%A3%E6%9E%90%E5%8D%B7）。原卷仍不附答案；这些均非考试院答案原件，只确认通常解读，不标为官方答案。",
   "fingerprint": "6cf5bfc3f13ac8a7a080a73d9f461829fb5e438edc9471dbca26cbadef54182a",
   "impact": "blocks_completion",
   "paper_id": "gk-2016-regular-shanghai-science",
   "question_id": "gk-2016-regular-shanghai-science-q14",
-  "resume_action": "核验可靠解析或命题说明中的概率模型；未确认前保留U和条件性计算。",
+  "resume_action": "结案但保留非官方属性；若取得考试院参考答案，再补充官方来源，不改原卷题面。",
   "source_id": "src-c7e426f42297f5bf556e490676dabce8a95bff5bcdf56a106f471c95cdb591ae",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
