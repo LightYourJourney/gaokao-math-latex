@@ -12,6 +12,13 @@
 - 验证：新增回归先按预期因误要求 `answer-missing` 而失败；修复后 `ImportBatchTests` 14/14通过，批次 `import-batch` dry-run 与正式事务均通过，`provenance check-batch` 为 `OK：1卷`，`status` 明确报告 paper `blocked` / batch `provenance_verified`；source manifest、issues 清单和 `git diff --check` 验证通过。全库测试1678项：1664通过、13跳过、1失败；唯一失败为既有 `test_baseline.AdjudicatedDriftLedgerTests.test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科 `answers.tex` 哈希登记 `174857e0…` 与现场 `11aa9482…` 不一致，本阶段未触及该卷。
 - 成本与剩余：未调用OCR、外部API或新增独立审题代理；本地全量测试耗时686.4秒，Codex Token/费用不可见，记未知。尚未正式构建1990四版；前次构建尝试被 `provenance=missing` 门禁在编译启动前拒绝，当前 provenance 已补齐。下一步只重跑该卷四版正式构建，再做逐页视觉检查和对应回执；Q20答案约定及整卷最终验收仍未解决。
 
+### 1990 全国卷文科：四版正式构建（2026-10-22）
+
+- 已完成：在 provenance 当前后，仅对 `gk-1990-regular-national-arts` 运行四版正式构建，零失败。试题版5页、解析版19页、简答版7页、印刷版16页，共47页；正式回执 attempt `6e85ce5d-8213-4b81-96e3-4590b2b38f1c`，状态 `compiled_pending_review`。manifest revision 4582，批次同为 `compiled_pending_review`。
+- 修改文件：生成 `1990_全国卷_文科/receipts/build.json`，更新 `source-manifest.json` 构建阶段状态与事务/revision，并更新本进度。PDF留在既有忽略目录 `build/`，未提交编译中间产物。
+- 验证：`build_projects.py build --paper gk-1990-regular-national-arts --formal --json` 返回 `COMPILED_PENDING_REVIEW`、failed=0；`validate-receipts --manifest source-manifest.json --paper gk-1990-regular-national-arts --require-current-inputs --json` 返回 `OK`、stale=0、failed=0、missing=0、problems=[]。四版日志均无 TeX errors、missing characters、Overfull 或 undefined references。provenance 状态查询工具不接受 `--json`，该次只读查询参数被CLI拒绝；未写入。Q20 `ISSUE-1124` 仍阻塞整卷，构建成功不等于答案核验或视觉通过。
+- 成本与剩余：本地XeLaTeX/latexmk构建四版；无OCR、聊天模型或外部API调用，Codex Token/实际费用不可见，记未知。尚未检查本次正式PDF的47页并生成正式视觉回执；下一步仅进行该卷正式输出逐页视觉复核，不能把早先smoke版47页检查挪作正式版回执。
+
 ### 1999 上海理科：Q20 图稿与 Q21 挖沟约束独立复核（2026-10-22）
 
 - 已完成：独立视觉复核确认 Q20 矢量图的点名、棱拓扑及实/虚线与固定源图一致；虚线 $BE$ 在原图中已经存在，并非矢量稿新增。比例未评估，图仍只通过拓扑/标签复核，不等于整卷视觉验收。Q21 独立数学复核确认源文和原图没有明确要求新挖沟口仍宽2米；在“不填土”约束下，若新沟口可变，允许任意深度 $H\ge3/2$ 米及对称轴偏移后，最小底宽为 $1/\sqrt2$ 米（对应沟口宽 $3/\sqrt2$ 米、深 $3/2$ 米）；若另加沟口固定2米，则最小底宽为1米。全深度包含条件和面积下界均已复核。两种答案对应不同约束，因此原题对重挖沟口的意图仍有歧义；来源答案转录 $\sqrt2/2$ 米只与自由沟口解释吻合，不足以证明题面明示了该条件。
