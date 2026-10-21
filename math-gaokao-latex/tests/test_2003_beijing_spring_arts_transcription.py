@@ -59,7 +59,18 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
             "fill_in": list(range(13, 17)),
             "written_response": list(range(17, 23)),
         })
-        self.assertEqual(self.review["transcription"]["status"], "draft-transcribed-pending-independent-review")
+        self.assertEqual(self.review["transcription"]["status"], "draft-transcribed-independently-reviewed")
+        self.assertEqual(self.review["transcription"]["independent_review"], "passed")
+        self.assertIn("Questions 1-22", self.review["transcription"]["independent_review_scope"])
+        self.assertIn("ambiguous between I and L", self.review["transcription"]["independent_review_notes"])
+        self.assertIn("题面复核状态: 独立盲核通过", self.transcript)
+        self.assertIn("I/L", self.transcript)
+        self.assertEqual(
+            self.review["figures_and_tables"]["vector_reconstruction_status"],
+            "draft-independently-reviewed",
+        )
+        self.assertIn("Q9, Q11, Q14, Q19, Q22", self.review["figures_and_tables"]["independent_review_scope"])
+        self.assertIn("Q14", self.review["figures_and_tables"]["independent_review_notes"])
         self.assertEqual(self.transcript.count("$") % 2, 0)
 
     def test_high_risk_symbols_and_table_cells_match_the_fixed_scan(self):
@@ -81,6 +92,13 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
         self.assertIn(r"\underline{\qquad}", self.transcript)
         self.assertIn("PDF 第 1–2 页", self.transcript)
         self.assertIn("原卷印刷页码 121–122", self.transcript)
+
+    def test_printed_title_and_q22_side_symbol_match_the_fixed_scan(self):
+        self.assertIn("# 2003 普通高等学校春季招生考试（北京卷文）", self.transcript)
+        self.assertNotIn("# 2003 年普通高等学校春季招生考试（北京卷文）", self.transcript)
+        self.assertNotIn("## 数学试卷", self.transcript)
+        self.assertIn("在边长为 $l$ 的等边", self.transcript)
+        self.assertNotIn(r"边长为 $\ell$", self.transcript)
 
     def test_nontext_figures_have_linked_vector_sources_and_no_raster_substitutes(self):
         expected = {
@@ -108,6 +126,19 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
         figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q11_folded_tetrahedron.tex"
         contents = figure.read_text(encoding="utf-8")
         self.assertIn(r"\draw (G)--(H) (J)--(I);", contents)
+
+    def test_q19_vector_includes_hidden_edges_of_the_asked_tetrahedron(self):
+        figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q19_square_prism.tex"
+        contents = figure.read_text(encoding="utf-8")
+        self.assertRegex(contents, r"\\draw\[dashed\][^\n]*\(D\)--\(B\)")
+        self.assertRegex(contents, r"\\draw\[dashed\][^\n]*\(D1\)--\(C\)")
+
+    def test_q22_vector_includes_the_third_tangent_circle_visible_in_the_scan(self):
+        figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q22_tangent_circle_sequence.tex"
+        contents = figure.read_text(encoding="utf-8")
+        self.assertIn(r"\coordinate (Othree)", contents)
+        self.assertIn(r"\draw (Othree) circle (", contents)
+        self.assertIn(r"\fill (Othree) circle (", contents)
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and pdftoppm are required")
     def test_all_vector_figures_compile_and_render_as_nonempty_pages(self):

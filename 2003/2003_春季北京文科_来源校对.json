@@ -19,8 +19,8 @@
   },
   "transcription": {
     "path": "2003/2003_数学真题_春季北京文_试题.md",
-    "sha256": "9f91c9dc5debbc776db31b9111f453fa28e8f83b62beb413d54dc63504c88c0d",
-    "status": "draft-transcribed-pending-independent-review",
+    "sha256": "c69f94c629aa7d8c825ec28bbd4701f96ed7245a673aac36726d1d829833e76d",
+    "status": "draft-transcribed-independently-reviewed",
     "question_count": 22,
     "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
     "question_types": {
@@ -34,7 +34,9 @@
     ],
     "extraction_method": "pdftotext -layout used as a locating aid; both fixed-source pages visually inspected at 150 dpi; Q9, Q11, Q15, Q19, and Q22 regions inspected from local crops",
     "ocr_calls": 0,
-    "independent_review": "pending"
+    "independent_review": "passed",
+    "independent_review_scope": "Questions 1-22 text and mathematical notation, title, question order and Q15 table blanks, visually compared against both fixed-source pages.",
+    "independent_review_notes": "The small point label in the Q11 source diagram between E and B is visually ambiguous between I and L; the source is insufficient to resolve the glyph. The stem's I is retained, and the ambiguity is not treated as settled source text."
   },
   "official_answer": null,
   "generated_solution": {
@@ -46,14 +48,16 @@
   "figures_and_tables": {
     "inventory_path": "2003/2003_数学真题_春季北京文_图表清单.md",
     "raster_source_committed": false,
-    "vector_reconstruction_status": "draft-linked-pending-independent-review",
+    "vector_reconstruction_status": "draft-independently-reviewed",
+    "independent_review_scope": "Q9, Q11, Q14, Q19, Q22 vector figures, visually compared against the fixed-source page renders and final vector renders.",
+    "independent_review_notes": "Q14 uses a full double arrow instead of the source's bracket-like water-rise mark and omits the continuous cup-rim stroke; this is a stylistic simplification, while the water-level relation and radius are clear. Q19 includes the hidden DB and D1C edges after correction. Q22 includes only the small B-side circle and center dot visible in the source; later circles not shown in the scan are not added.",
     "items": ["q09-conic-options", "q11-folded-tetrahedron", "q14-cylinder-sphere", "q15-blood-pressure-table", "q19-square-prism", "q22-tangent-circle-sequence"],
     "vector_assets": [
       {"item": "q09-conic-options", "path": "2003/figures/gaokao_2003_beijing_arts_q09_conics.tex", "sha256": "15cfb416fea3c6dc9f1b30bc44b8116e085c288255319ef5537ce160ce0ec974"},
       {"item": "q11-folded-tetrahedron", "path": "2003/figures/gaokao_2003_beijing_arts_q11_folded_tetrahedron.tex", "sha256": "fe984f3f20607e9bcbabb1d6f96f4ab03a5b4461076d25d39299e8b00ad9fc66"},
       {"item": "q14-cylinder-sphere", "path": "2003/figures/gaokao_2003_beijing_arts_q14_cylinder_sphere.tex", "sha256": "db699ea802736bdda1a677a4d826aa31d46a3898a0198965cd139a3c89f7916f"},
-      {"item": "q19-square-prism", "path": "2003/figures/gaokao_2003_beijing_arts_q19_square_prism.tex", "sha256": "06ab6ac2f21d8c5af6f8d096140ab48e0d01df851609fc1fb304eb89909cc451"},
-      {"item": "q22-tangent-circle-sequence", "path": "2003/figures/gaokao_2003_beijing_arts_q22_tangent_circle_sequence.tex", "sha256": "2beed3cb497a35d37b38bb41f68409c813044932b297a7556626d4db6c83450e"}
+      {"item": "q19-square-prism", "path": "2003/figures/gaokao_2003_beijing_arts_q19_square_prism.tex", "sha256": "6ee78f436328aff32ecfa1a7028e7364772fa9e60de3ca2d5f501a40f85dfe43"},
+      {"item": "q22-tangent-circle-sequence", "path": "2003/figures/gaokao_2003_beijing_arts_q22_tangent_circle_sequence.tex", "sha256": "f9d4aed1ae94641f2aa5414b8777850a377c75f7d9ae18c639ab688fdaaae2d2"}
     ]
   }
 }
