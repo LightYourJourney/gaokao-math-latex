@@ -64,9 +64,43 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
         questions = QUESTIONS.read_text(encoding="utf-8")
         draft = DRAFT.read_text(encoding="utf-8")
         self.assertIn(r"棱长为 $2$ 的正四面体", questions)
-        volume_squared = Fraction(3 * 8, 9) * Fraction(1, 3)
+        base_area_squared = 3
+        height_squared = Fraction(8, 3)
+        volume_squared = Fraction(base_area_squared, 9) * height_squared
         self.assertEqual(volume_squared, Fraction(8, 9))
         self.assertIn(r"V=\frac{2\sqrt2}{3}", draft)
+
+    def test_q7_hypergeometric_probability_is_eighteen_thirty_fifths(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn("4个白球和3个黑球", questions)
+        favorable = math.comb(3, 1) * math.comb(4, 2)
+        total = math.comb(7, 3)
+        self.assertEqual(Fraction(favorable, total), Fraction(18, 35))
+        self.assertIn(r"=18/35", draft)
+
+    def test_q8_piecewise_function_attains_global_maximum_four_at_one(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"2x+3,&x\le 0", questions)
+        self.assertIn(r"x+3,&0<x\le1", questions)
+        self.assertIn(r"-x+5,&x>1", questions)
+        self.assertEqual(2 * 0 + 3, 3)
+        self.assertEqual(1 + 3, 4)
+        self.assertLess(Fraction(5) - Fraction(101, 100), 4)
+        self.assertIn("故最大值4", draft)
+
+    def test_q9_binomial_coefficient_condition_has_unique_natural_solution_four(self):
+        questions = QUESTIONS.read_text(encoding="utf-8")
+        draft = DRAFT.read_text(encoding="utf-8")
+        self.assertIn(r"\left(1+\dfrac{x}{n}\right)^n", questions)
+        self.assertEqual(Fraction(math.comb(4, 3), 4**3), Fraction(1, 16))
+        roots = (Fraction(24 + 16, 10), Fraction(24 - 16, 10))
+        for root in roots:
+            self.assertEqual(5 * root**2 - 24 * root + 16, 0)
+        admissible = [root for root in roots if root.denominator == 1 and root >= 3]
+        self.assertEqual(admissible, [Fraction(4)])
+        self.assertIn(r"自然数解为$n=4$", draft)
 
     def test_q18_complex_conditions_force_the_recorded_modulus(self):
         questions = QUESTIONS.read_text(encoding="utf-8")
