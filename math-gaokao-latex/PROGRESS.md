@@ -25,6 +25,13 @@
 - 验证与成本：新增回归测试先在旧`\tan`写法下按预期RED失败，再修正后整份题面定向测试4/4通过；目标文件 `git diff --check`通过。测试只保护转录字形/结构，不代替源图核读；字形依据为复用缓存图的直接目视对照。初次误指不存在的缓存名`page-hi-2.png`，核对实际文件名及尺寸后改用`question-hi-2.png`；未生成或修改图片。无OCR、重新渲染、模型/API；Token、时间与费用未测，记未知。
 - 剩余/下一步：Q12/Q14/Q16已完成主会话源图对照，Q13/Q15沿用既有盲核/源页核读；继续核对其他未覆盖题目。1998上海文科仍待来源出版身份认证、正式登记、四版构建和整卷视觉验收，保持 `pending/needs-review`。
 
+### 1998 上海文科：原卷第2页 Q17—20(1) 字形对照（2026-10-21）
+
+- 已完成：复用 `.work/1998-shanghai-arts.2Wm0sf/question-hi-2.png` 对照印刷页115。Q17的第二象限条件、`sin α=3/5`及`37π/6−2α`一致；Q18的复数方程、虚部条件和乘积为实数的条件一致，发现原卷明确印有`z₁·z₂`而题面稿省略乘号，已改为`z_1\cdot z_2`；Q19的16分、两个各8分小问、棱柱/菱形条件、二面角与坐标/异面直线要求均相符，现有TikZ图为矢量源，主要点名及坐标轴方向与扫描图对应；Q20仅核对本页可见的第(1)问及6分/10分分值安排，点$D(2,0)$和到$y$轴等距的轨迹条件相符。未将扫描示意图比例当作精确几何数据。
+- 修改文件：只将 `1998_上海卷_文科/题面转录草稿.md` 中Q18乘积记法由隐式相邻`z_1z_2`改为源印字`z_1\cdot z_2`；在 `tests/test_1998_shanghai_arts_transcription.py` 加入该记法回归测试；更新本 `PROGRESS.md`。未改答案/解析、矢量图稿、来源绑定、issue、正式LaTeX/PDF或回执。
+- 验证：新增测试修正题号分隔符后，在旧稿下按预期RED失败；修改题面后转录定向测试5/5、图形定向测试5/5通过，`git diff --check`通过。全项目`python3 -B -m unittest discover -s tests`共1605项：1590通过、13跳过、2失败；失败为`test_2018_national1_science_typography.ChineseQuotationTypographyTests.test_answer_source_uses_chinese_quotes_instead_of_ascii_quotes`（2018理科答案源码仍含ASCII引号）和`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（2015全国Ⅱ文理两卷缓存complete与现场editions_generated不符，phase2-b10缓存closed_with_blockers与现场provenance_verified不符）。两项均在其他卷/批次，本阶段未扩展修复。完整测试用时约370秒。无OCR、重渲染、模型/API；Token与费用未知。
+- 剩余/下一步：印刷页115的Q12—19及Q20(1)已有逐项视觉对照记录；Q20(2)及后续页题面/图稿仍待源图对照。来源出版身份认证、正式登记、四版构建和整卷视觉验收未完成，1998上海文科仍为`pending/needs-review`。
+
 ### 1998 上海文科：Q14 选择题解析补足四项论证（2026-10-21）
 
 - 已完成：依据现有转录逐项说明A—D。A由$\beta$内两条相交直线推出$l\perp\beta$，进而$\alpha\perp\beta$；B用两平面相交/重合时的反例排除前提；C以两平面交线反例证明不成立；D由平行平面无公共点推出其内任一直线均平行于另一平面。因此唯一假命题为C。该推理依赖现有题面转录，不构成原卷字样的再次核验。

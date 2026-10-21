@@ -21,6 +21,11 @@ class Shanghai1998ArtsTranscriptionTests(unittest.TestCase):
         self.assertIn(r"（C）$y=\operatorname{tg}2x$", q12)
         self.assertNotIn(r"（C）$y=\tan2x$", q12)
 
+    def test_q18_preserves_printed_multiplication_dot(self):
+        text = QUESTIONS.read_text(encoding="utf-8")
+        q18 = text.split("**18．", 1)[1].split("**19．", 1)[0]
+        self.assertIn(r"z_1\cdot z_2", q18)
+
     def test_question_numbers_are_contiguous_and_match_the_paper_total(self):
         text = QUESTIONS.read_text(encoding="utf-8")
         numbers = [int(value) for value in re.findall(r"^\*\*(\d+)．", text, re.MULTILINE)]
