@@ -1681,6 +1681,120 @@ class RegisterPapersTests(unittest.TestCase):
                 "issues": [],
             }])
 
+    def _paper_with_tex_links(self, tmp):
+        repo, manifest_path, source_id_value = self._repo(tmp)
+        source_manifest_module.register_papers(
+            repo, manifest_path, self._spec(source_id_value), write=True
+        )
+        manifest = load_manifest(manifest_path)
+        paper = manifest["papers"][0]
+        name = "q16-vector.tex"
+        figure_dir = repo / "math-gaokao-latex" / paper["project_dir"] / "figures"
+        figure_dir.mkdir(parents=True)
+        (figure_dir / name).write_text("\\begin{tikzpicture}\\end{tikzpicture}\n", encoding="utf-8")
+        target = "../math-gaokao-latex/%s/figures/%s" % (paper["project_dir"], name)
+        link = "[题图](%s)\n" % target
+        for key in ("questions", "combined_rendered"):
+            (repo / paper["source_files"][key]).write_text(link, encoding="utf-8")
+        return repo, manifest_path, paper["paper_id"], figure_dir
+
+    def test_figure_registry_dry_run_is_read_only_and_derives_reference_count(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, paper_id, _ = self._paper_with_tex_links(tmp)
+            before = manifest_path.read_bytes()
+
+            report = source_manifest_module.sync_figure_registry(
+                repo, manifest_path, paper_id
+            )
+
+            self.assertFalse(report["written"])
+            self.assertEqual(report["paper_id"], paper_id)
+            self.assertEqual(report["figure_files"], [{
+                "path": "2021_全国甲卷_文科/figures/q16-vector.tex",
+                "expected_occurrences": 2,
+            }])
+            self.assertEqual(manifest_path.read_bytes(), before)
+
+    def test_figure_registry_write_is_one_scoped_state_transition_and_idempotent(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, paper_id, _ = self._paper_with_tex_links(tmp)
+            before = load_manifest(manifest_path)
+
+            report = source_manifest_module.sync_figure_registry(
+                repo, manifest_path, paper_id, write=True
+            )
+
+            after = load_manifest(manifest_path)
+            self.assertTrue(report["written"])
+            self.assertEqual(after["revision"], before["revision"] + 1)
+            self.assertEqual(after["papers"][0]["figure_files"], report["figure_files"])
+            self.assertEqual(
+                {key: value for key, value in after["papers"][0].items() if key != "figure_files"},
+                {key: value for key, value in before["papers"][0].items() if key != "figure_files"},
+            )
+            self.assertEqual(source_manifest_module.validate_figure_occurrences(after, repo), 1)
+            revision = after["revision"]
+            noop = source_manifest_module.sync_figure_registry(
+                repo, manifest_path, paper_id, write=True
+            )
+            self.assertFalse(noop["written"])
+            self.assertEqual(load_manifest(manifest_path)["revision"], revision)
+
+    def test_figure_registry_rejects_unreferenced_tex_files_without_writing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, paper_id, figure_dir = self._paper_with_tex_links(tmp)
+            (figure_dir / "orphan.tex").write_text("% not linked\n", encoding="utf-8")
+            before = manifest_path.read_bytes()
+
+            with self.assertRaisesRegex(ValueError, "figures 目录与图稿清单不一致"):
+                source_manifest_module.sync_figure_registry(
+                    repo, manifest_path, paper_id, write=True
+                )
+
+            self.assertEqual(manifest_path.read_bytes(), before)
+
+    def test_figure_registry_never_removes_existing_entries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, manifest_path, paper_id, figure_dir = self._paper_with_tex_links(tmp)
+            manifest = load_manifest(manifest_path)
+            paper = manifest["papers"][0]
+            second_name = "q17-geometry.tex"
+            second_path = figure_dir / second_name
+            second_path.write_text(
+                "\\begin{tikzpicture}\\end{tikzpicture}\n", encoding="utf-8"
+            )
+            second_link = "[题图](../math-gaokao-latex/%s/figures/%s)\n" % (
+                paper["project_dir"], second_name
+            )
+            for key in ("questions", "combined_rendered"):
+                source_path = repo / paper["source_files"][key]
+                source_path.write_text(
+                    source_path.read_text(encoding="utf-8") + second_link,
+                    encoding="utf-8",
+                )
+            source_manifest_module.sync_figure_registry(
+                repo, manifest_path, paper_id, write=True
+            )
+
+            first_link = "[题图](../math-gaokao-latex/%s/figures/q16-vector.tex)\n" % (
+                paper["project_dir"]
+            )
+            for key in ("questions", "combined_rendered"):
+                source_path = repo / paper["source_files"][key]
+                source_path.write_text(
+                    source_path.read_text(encoding="utf-8").replace(first_link, ""),
+                    encoding="utf-8",
+                )
+            (figure_dir / "q16-vector.tex").unlink()
+            before = manifest_path.read_bytes()
+
+            with self.assertRaisesRegex(ValueError, "不允许移除已登记图稿"):
+                source_manifest_module.sync_figure_registry(
+                    repo, manifest_path, paper_id, write=True
+                )
+
+            self.assertEqual(manifest_path.read_bytes(), before)
+
     def test_registers_question_blocker_with_paper_in_one_state_transaction(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo, manifest_path, source_id_value = self._repo(tmp)

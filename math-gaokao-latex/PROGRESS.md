@@ -8817,3 +8817,11 @@
 - 修改文件：`1999_上海卷_理科/来源校对.json`为Q21增加`source_diagram_scope`，记录图示所对应问次、未给新沟口尺寸及待独立复核状态；`tests/test_1999_shanghai_science_solutions.py`增加相应来源约束回归；本进度。未改题面、答案、解析、source manifest、正式provenance、PDF或构建回执。
 - 验证：新增回归先因缺少`source_diagram_scope`按预期失败（KeyError），补记录后1999上海理科四文件定向套件`22/22`通过；JSON解析与`git diff --check`通过。全量测试`python3 -m unittest discover -s math-gaokao-latex/tests`运行1676项：1662通过、13跳过、1失败；唯一失败为既有`test_task29_updates_eight_b05_keys_with_layout_and_documented_q19_correction`，2018全国Ⅰ理科`answers.tex`当前SHA `11aa9482…`与历史漂移台账SHA `174857e0…`不一致，与本次变更无关。测试过程中负向CLI用例输出的usage/error为预期；结束后核对Git index为空，没有遗留暂存改动。
 - 状态与下一步：1999卷Q21数学约束仍为`author-adjudicated-pending-independent-review`；整卷来源、数学和视觉状态未提升，`paper_id=null`不变。下一步由不同复核者只依据单题题面与源图独立评估“不填土”的几何约束及全局最小证明；在此之前不把`√2/2米`标记为最终验收答案。成本：零OCR、仅一页本地渲染和本地测试；Agent Token/费用不可见，记未知。
+
+### 来源清单：新增单卷 TikZ 图稿登记事务（2026-10-22）
+
+- 已完成：新增默认只读的 `sync-figure-registry` 命令，从指定试卷规范题面与合并稿中的独立段落 `.tex` 链接推导图名和引用数；检查链接只指向该卷 `figures/`、图稿目录闭合及来源清单语义。显式 `--write` 时仅更新该卷 `figure_files`，通过 revision-pinned `state` 事务单次提交；重复执行幂等，只允许新增已登记图稿，不允许删除。移除误加在既有 `state_source_result` 的两条校验调用，保持原事务行为不变。
+- 修改文件：`tools/source_manifest.py`、`tests/test_source_manifest.py`、本 `PROGRESS.md`。未改来源清单数据、试卷内容、图稿、缓存或 `docs/design/`。
+- 验证：新增干跑只读、受限写入/幂等、孤立图拒绝、禁止删除既有登记四项回归；删除保护回归先按预期失败，再实现拒绝逻辑。`test_source_manifest` 与 `test_legacy_migration` 共110项通过；CLI `sync-figure-registry --help` 正常；`git diff --check` 通过。此前全量套件的结果仍按上文记录，本阶段未重复运行。
+- 成本：零OCR、零PDF渲染、零外部API；仅本地单元测试；真实Codex Token与费用不可见，记未知。
+- 剩余/下一步：用该入口为2017上海春季卷 Q16/Q17/Q19 的来源忠实 TikZ 图稿登记，先 dry-run 再显式写入；随后运行生成器、构建与逐页视觉核验。三项答案冲突、三幅图的独立复核、题级来源核验及正式四版验收仍未完成，该卷继续保持 `blocked`。

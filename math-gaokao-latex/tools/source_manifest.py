@@ -1860,7 +1860,7 @@ def _figure_files(
     except OSError as error:
         raise ValueError(f"{project_dir}: 无法列出 figures 目录：{error}") from error
     if actual != list(figure_names):
-        raise ValueError(f"{project_dir}: figures 目录与 legacy index 登记不一致")
+        raise ValueError(f"{project_dir}: figures 目录与图稿清单不一致")
 
     stems = [str(name)[: -len(".tex")] for name in figure_names]
     source_texts = [
@@ -2021,6 +2021,148 @@ def _without_figure_occurrences(manifest: Mapping[str, Any]) -> Dict[str, Any]:
         for figure in paper.get("figure_files", []):
             figure.pop("expected_occurrences", None)
     return scrubbed
+
+
+def _figure_names_from_local_markdown_links(
+    repo_root: Path, paper: Mapping[str, Any]
+) -> List[str]:
+    """发现单卷规范 Markdown 中显式链接的本地 TikZ 文件名。"""
+    paper_id = str(paper.get("paper_id"))
+    project_dir = str(paper.get("project_dir"))
+    source_files = paper.get("source_files")
+    if not isinstance(source_files, Mapping):
+        raise ValueError(f"{paper_id}: source_files 必须是对象")
+
+    names = set()
+    inline_count = 0
+    standalone_count = 0
+    for key in FIGURE_COUNT_SOURCE_KEYS:
+        source_path = source_files.get(key)
+        if not isinstance(source_path, str):
+            raise ValueError(f"{paper_id}: source_files 缺少 {key}")
+        text = _read_repo_text(repo_root, source_path)
+        for match in _MARKDOWN_LINK_ANY_RE.finditer(text):
+            parsed = urllib.parse.urlsplit(urllib.parse.unquote(match.group(1)))
+            if (
+                parsed.scheme or parsed.netloc
+                or not parsed.path.lower().endswith(".tex")
+            ):
+                continue
+            inline_count += 1
+        for match in _MARKDOWN_TEX_FIGURE_LINK_RE.finditer(text):
+            parsed = urllib.parse.urlsplit(urllib.parse.unquote(match.group(1)))
+            if (
+                parsed.scheme or parsed.netloc
+                or not parsed.path.lower().endswith(".tex")
+            ):
+                continue
+            standalone_count += 1
+            if not parsed.path or parsed.path.startswith("/"):
+                raise ValueError(
+                    f"{paper_id}: 图稿链接必须是本卷 figures/*.tex 的相对路径"
+                )
+            resolved = posixpath.normpath(
+                posixpath.join(posixpath.dirname(source_path), parsed.path)
+            )
+            prefix = "%s/%s/figures/" % (PROJECT_RELATIVE, project_dir)
+            if not resolved.startswith(prefix):
+                raise ValueError(
+                    f"{paper_id}: 图稿链接必须指向本卷 figures/*.tex：{match.group(1)}"
+                )
+            names.add(PurePosixPath(resolved).name)
+
+    if inline_count != standalone_count:
+        raise ValueError(f"{paper_id}: 图稿链接必须独立成段")
+    if not names:
+        raise ValueError(f"{paper_id}: 规范 Markdown 中没有本地 .tex 图稿链接")
+    return sorted(names)
+
+
+def sync_figure_registry(
+    repo: Path,
+    manifest_path: Path,
+    paper_id: str,
+    *,
+    write: bool = False,
+) -> Dict[str, Any]:
+    """把单卷显式 Markdown TikZ 链接登记为 figure_files。
+
+    默认只验证并返回计划；`write=True` 时仅更新目标 paper 的 figure_files，
+    并通过一个 revision-pinned state transaction 提交。图名、文件存在性、
+    目录闭合和引用次数均由规范 Markdown 与 `_figure_files()` 校验，不接受手填清单。
+    此入口只添加/同步非空图稿集合，不提供删除未引用图稿的通路。
+    """
+    root = _repository_root(Path(repo))
+    manifest_path = Path(manifest_path)
+    if _relative_to_repo(root, manifest_path) != MANIFEST_TARGET:
+        raise ValueError(f"manifest 必须是 {MANIFEST_TARGET}")
+    if not isinstance(paper_id, str) or not paper_id.strip():
+        raise ValueError("paper_id 必须是非空字符串")
+
+    with RepoLock(root):
+        manifest = _load_json(manifest_path)
+        validate_manifest_semantics(manifest)
+        _validate_paper_semantics(manifest)
+        revision = manifest.get("revision")
+        if type(revision) is not int or revision < 0:
+            raise ValueError("manifest revision 必须是非负整数")
+        papers = manifest.get("papers")
+        if not isinstance(papers, list):
+            raise ValueError("manifest papers 必须是数组")
+        matches = [
+            paper for paper in papers
+            if isinstance(paper, Mapping) and paper.get("paper_id") == paper_id
+        ]
+        if len(matches) != 1:
+            raise ValueError(f"paper_id 必须唯一且已登记：{paper_id}")
+        paper = matches[0]
+        names = _figure_names_from_local_markdown_links(root, paper)
+        records = _figure_files(
+            root, str(paper["project_dir"]), names, paper["source_files"]
+        )
+        if not records:
+            raise ValueError(f"{paper_id}: 没有可登记的本卷图稿")
+        existing_paths = {
+            str(item["path"]) for item in paper.get("figure_files", [])
+        }
+        derived_paths = {str(item["path"]) for item in records}
+        if not existing_paths.issubset(derived_paths):
+            raise ValueError(f"{paper_id}: 不允许移除已登记图稿")
+        changed = records != paper.get("figure_files")
+        report = {
+            "code": "OK",
+            "paper_id": paper_id,
+            "figure_files": records,
+            "changed": changed,
+            "written": False,
+            "revision": revision,
+        }
+        if not write or not changed:
+            return report
+
+        updated = copy.deepcopy(manifest)
+        updated_paper = next(
+            item for item in updated["papers"]
+            if item.get("paper_id") == paper_id
+        )
+        updated_paper["figure_files"] = records
+        transaction = Transaction(root)
+        updated["revision"] = revision + 1
+        updated["last_transaction_id"] = transaction.transaction_id
+        _validated_manifest_value(manifest_path, updated)
+        validate_manifest_semantics(updated)
+        _validate_paper_semantics(updated)
+        validate_figure_occurrences(updated, root)
+        transaction.prepare(
+            "state",
+            {MANIFEST_TARGET: canonical_json(updated).encode("utf-8")},
+            inputs={},
+            expected_revision=revision,
+        )
+        transaction.commit()
+        report["written"] = True
+        report["revision"] = revision + 1
+        return report
 
 
 def state_figure_occurrences(repo: Path, manifest_path: Path) -> Optional[str]:
@@ -2817,6 +2959,12 @@ def _parser() -> argparse.ArgumentParser:
     validate_parser.add_argument("--manifest", required=True, type=Path)
     validate_parser.add_argument("--require-artifacts", type=_nonnegative)
 
+    # 窄入口：从单卷规范 Markdown 的本地图稿链接登记非空 figure 集合。
+    sync_registry = subparsers.add_parser("sync-figure-registry")
+    sync_registry.add_argument("--manifest", required=True, type=Path)
+    sync_registry.add_argument("--paper", required=True)
+    sync_registry.add_argument("--write", action="store_true")
+
     # 窄入口：内容迁移合法改变图引用数后，把登记值推进到规范 Markdown 的实际值。
     sync_figures = subparsers.add_parser("sync-figure-occurrences")
     sync_figures.add_argument("--manifest", required=True, type=Path)
@@ -2885,6 +3033,19 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         # live 树防丢图主守卫：规范 Markdown 图引用数 == manifest 登记值。
         root = _repository_root(Path(arguments.manifest).parent)
         validate_figure_occurrences(_load_json(Path(arguments.manifest)), root)
+        return 0
+    if arguments.command == "sync-figure-registry":
+        root = _repository_root(Path(arguments.manifest).parent)
+        report = sync_figure_registry(
+            root, arguments.manifest, arguments.paper, write=arguments.write
+        )
+        mode = (
+            "已提交 revision %s" % report["revision"]
+            if report["written"] else "仅校验，未落盘"
+        )
+        print("%s：%d 张图，%s" % (
+            arguments.paper, len(report["figure_files"]), mode
+        ))
         return 0
     if arguments.command == "sync-figure-occurrences":
         transaction_id = state_figure_occurrences(
