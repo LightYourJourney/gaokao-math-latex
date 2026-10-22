@@ -40,6 +40,15 @@
 - 成本与剩余：使用一次考试院页面浏览与四张参考答案图的直接读取；平台未提供可核 Token/费用统计，记未知；无 OCR 或付费 API。仍需认证本地扫描件出版者/版次/数字化来源链；不因答案核验完成而正式绑定、编译或关闭该来源门禁。
 - 下一步：查验固定 PDF 的可复现上游来源/版次证据；在不能证明来源链时保留 `paper_id=null` 和待核状态，不生成正式构建回执。
 
+### 2006 上海卷文科：固定题面 PDF 上游字节身份核验（2026-10-22）
+
+- 已完成：按 `source-manifest.json` 的固定上游 `deekur/gaokaomath`、commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 和精确路径 `普通高考/2006/2006上海文.pdf`，通过 GitHub Contents API 读取记录并下载该提交中的原始 PDF。API 返回 Git blob `82b54c4337468a5a1182d4bbef76831a0de98f33`、503,697 字节；本地 `git hash-object` 结果完全相同，PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174` 与 manifest 相同；`pdfinfo` 再确认 2 页、A3、503,697 字节。这证明固定文件与固定上游提交中对应文件逐字节相同；结合考试院正式题名和 Q1–Q22 参考答案逐题一致，2006 上海文史试卷身份有可追溯证据。
+- 来源边界：固定字节的可追溯上游是第三方 GitHub 镜像，不是考试院原件；原始出版社、印次及扫描/数字化链仍未证实。故不得称这份 PDF 为官方扫描，也不把版本/出版者的不确定性抹掉。当前 source manifest 尚未创建正式纸卷记录，`paper_id` 仍为 `null`；此阶段只建立可审计的 exam identity 证据。
+- 修改文件：仅更新本 `PROGRESS.md`；未改 source manifest、题面、答案、正式纸卷目录、图稿或 `docs/design/`。临时下载 PDF 曾保存在 `/tmp/gaokao-2006-shanghai-arts-upstream-pdf.0fT6md/`，用于 hash 与 PDF metadata 比对，核验后删除。
+- 验证：GitHub Contents API 的路径、commit、blob SHA、大小与本地 manifest 对照；`git hash-object`、`shasum -a 256`、`file`、`pdfinfo` 均核对成功。未运行 OCR、LaTeX、全库测试或付费 API。
+- 成本与剩余：一次只读 GitHub API 元数据查询及一次定点文件下载；API/token/费用明细不可见，记未知。仍需将此已识别的试卷正式登记到 manifest，并在数据中保留“上游字节已认证、原出版版次未知”的边界；四版生成、编译、逐页视觉复核、provenance 和最终回执仍未完成。
+- 下一步：根据现有 `register-papers` 与 Markdown→LaTeX 构建流程创建 2006 上海文科的正式 paper 记录和共享源文件；使用新 paper ID、`legacy_ids=[]`，将固定第三方镜像 PDF 作为本库 canonical question source 并保留其非官方来源说明。注册后仅在相应 provenance/内容/构建门禁通过时逐步推进生产状态。
+
 ### 2006 上海卷文科：题面独立盲核与 Q18 图稿清单补记（2026-10-22）
 
 - 已完成：独立复核者逐项对照固定 PDF 印刷页330–331，核过 Q1–Q22；题面文字、数字与公式均与来源一致。唯一遗漏是图稿清单：Q18 原图在 A 点上方有向上箭头并标“北”，已补入原图占位说明。题面状态更新为“文字已独立核对”；Q12、Q13、Q18、Q19 四幅图仍待矢量重绘和复核。
