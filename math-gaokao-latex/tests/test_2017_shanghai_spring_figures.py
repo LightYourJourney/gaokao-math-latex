@@ -10,6 +10,7 @@ PAPER_DIR = PROJECT / "2017_上海春季卷"
 FIGURE_DIR = PAPER_DIR / "figures"
 TRANSCRIPT = ROOT / "2017/2017_数学真题_春季上海_试题.md"
 COMBINED = ROOT / "2017/2017_数学真题_春季上海_含解析.md"
+FIGURE_LIST = ROOT / "2017/2017_数学真题_春季上海_图表清单.md"
 MANIFEST = PROJECT / "source-manifest.json"
 PAPER_ID = "gk-2017-spring-shanghai"
 FIGURES = {
@@ -46,8 +47,13 @@ class ShanghaiSpring2017FigureTests(unittest.TestCase):
             self.assertIn(r"\coordinate (A%d) at" % vertex, source)
             self.assertIn("$A_%d$" % vertex, source)
         self.assertIn("coordinate[pos=0.45] (P)", source)
+        self.assertIn("its exact position is not specified", source)
         self.assertIn("\\draw[->] (A1) -- (A3);", source)
         self.assertIn("\\draw[->] (A1) -- (P);", source)
+        self.assertIn(
+            "P 的绘制点仅为示意位置，不表示精确位置。",
+            FIGURE_LIST.read_text(encoding="utf-8"),
+        )
 
     def test_q17_distinguishes_hidden_prism_edges_from_auxiliary_segments(self):
         source = (FIGURE_DIR / FIGURES[17]).read_text(encoding="utf-8")
@@ -69,6 +75,21 @@ class ShanghaiSpring2017FigureTests(unittest.TestCase):
         self.assertIn(r"\fill (Mone) circle (1.2pt);", source)
         self.assertIn(r"\fill (Mtwo) circle (1.2pt);", source)
         self.assertIn("不标示意角度", source)
+
+    def test_q19_places_circle_labels_outside_the_circle_bodies(self):
+        source = (FIGURE_DIR / FIGURES[19]).read_text(encoding="utf-8")
+        self.assertIn(
+            r"\coordinate (MoneLabel) at ({\L+0.72*\rOne},{\rOne+0.72*\rOne});",
+            source,
+        )
+        self.assertIn(r"\node[above right=2pt] at (MoneLabel) {$M_1$};", source)
+        self.assertIn(r"\coordinate (MtwoLabel) at (\rTwo,{\L+\rTwo});", source)
+        self.assertIn(r"\node[above=2pt] at (MtwoLabel) {$M_2$};", source)
+
+    def test_q19_layout_does_not_encode_a_numeric_angle_parameter(self):
+        source = (FIGURE_DIR / FIGURES[19]).read_text(encoding="utf-8")
+        self.assertNotRegex(source, r"\\theta|(?:cos|sin)\s*\(")
+        self.assertIn("numerical coordinates are only a schematic layout", source)
 
     def test_unreviewed_diagrams_remain_open_completion_blockers(self):
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))

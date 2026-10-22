@@ -18647,12 +18647,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面与图表清单均指向原卷正八边形及向量图；项目 figures 尚无对应 TikZ 文件。",
+  "current_evidence": "正八边形与向量 TikZ 草稿已建立并登记，四版本地编译成功；独立复核确认顶点次序和箭头，指出 P 的绘图参数 pos=0.45 必须仅作示意点理解。规范题面和图稿均已注明该点位不表示精确比例；正式视觉回执尚未登记。",
   "fingerprint": "da73b3e55764c3f6ff5717260d23db961409685d2ed7773a7da09b2d6592ba79",
   "impact": "blocks_completion",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q16",
-  "resume_action": "依据固定源重绘为独立TikZ矢量图，保留顶点次序、P所在边和向量箭头，不从示意图比例推断条件。",
+  "resume_action": "在正式视觉回执中记录 P 仅为示意点、不表示题设位置；完成四版校样门禁后再关闭图稿问题。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
   "status": "open",
   "type": "figure-missing"
@@ -18664,12 +18664,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面与图表清单均指向原卷长方体及辅助线图；项目 figures 尚无对应 TikZ 文件。",
+  "current_evidence": "长方体与辅助线 TikZ 草稿已建立并登记；独立复核确认顶点连接、实虚线及辅助线与固定来源相符。正式四版视觉回执尚未登记，故问题仍阻塞最终验收。",
   "fingerprint": "8ec3c99bdf11741e1410acd5bbc38d99d3e1b40afcd9488d26ec6d248cb601ed",
   "impact": "blocks_completion",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q17",
-  "resume_action": "依据固定源重绘为独立TikZ矢量图，区分实棱、虚棱和辅助线，不按示意图比例添加几何条件。",
+  "resume_action": "完成四版视觉校样并登记正式回执；保持投影比例仅为示意，不增添几何条件。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
   "status": "open",
   "type": "figure-missing"
@@ -18681,12 +18681,12 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面与图表清单均指向原卷两圆形步道切线图，项目 figures 尚无对应TikZ文件。",
+  "current_evidence": "两圆切线 TikZ 草稿已建立并登记；独立复核指出即使注明仅作排版，源码中的54°参数仍易被误读。现已删除θ及三角函数角度参数，改用仅为示意的坐标布局；四版本地编译成功（4/6/18/13页），四版第3页完成目视检查。最终版本的独立复核及正式视觉回执仍待完成。",
   "fingerprint": "d9e79b9993d434d7e7c8b1dfe6e8a60d7c66425174b4f525c863720700d8f5db",
   "impact": "blocks_completion",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q19",
-  "resume_action": "依据固定源重绘为独立TikZ矢量图，保留垂直边、斜切线、切点和圆心标记，不推断精确比例。",
+  "resume_action": "由独立复核者检查最终坐标布局版本，并完成四版正式视觉回执；登记前保持问题开放，不把图示比例当作题设。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
   "status": "open",
   "type": "figure-missing"
