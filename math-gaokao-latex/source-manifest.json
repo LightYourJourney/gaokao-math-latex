@@ -1430,6 +1430,15 @@
         "gk-2006-regular-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-1992-regular-national-arts",
+        "gk-1992-regular-national-science"
+      ],
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -1439,7 +1448,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bacbb081-4ecc-40ab-ac09-afff700df632",
+  "last_transaction_id": "39033293-410b-495b-a2d4-ac39efae3fe8",
   "papers": [
     {
       "blocked_from": null,
@@ -20745,9 +20754,129 @@
       "title": "2006 年·上海卷·文科",
       "track": "arts",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1992_全国卷_文科/figures/f1992nw_q06_power_curves.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_全国卷_文科/figures/f1992nw_q14_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_全国卷_文科/figures/f1992nw_q26_cube_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1992_national_arts",
+        "id": "gk-1992-regular-national-arts",
+        "note": "1992 全国卷文科；1 页 A3 三栏 XeTeX 重排（页脚 43），无答案页（等级 D，编者推导）。第 16 题函数式、第 27 题高线方程源内缺损，照录并标注条件结论。三幅 TikZ 图由内容流逐路径生成。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            19,
+            23
+          ],
+          "解答题": [
+            24,
+            28
+          ],
+          "选择题": [
+            1,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1992-regular-national-arts",
+      "production_state": "compiled",
+      "project_dir": "1992_全国卷_文科",
+      "question_count": 28,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1992/1992_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1992/1992_数学真题_全国文_含解析.md",
+        "questions": "1992/1992_数学真题_全国文_试题.md",
+        "solution_body": "1992/1992_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9e4900caaaa8c1bceab2f9864a4724cc8e0a6f053a1af2f422988444acd07b9e"
+      ],
+      "title": "1992 年·全国卷·文科",
+      "track": "arts",
+      "year": 1992
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1992_全国卷_理科/figures/f1992nl_q06_power_curves.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_全国卷_理科/figures/f1992nl_q14_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1992_national_science",
+        "id": "gk-1992-regular-national-science",
+        "note": "1992 全国卷理科；1 页 A3 三栏 XeTeX 重排（页脚 42），无答案页（等级 D，编者推导）。第 16 题函数式源内缺损，照录并标注条件结论。两幅 TikZ 图由内容流逐路径生成。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            19,
+            23
+          ],
+          "解答题": [
+            24,
+            28
+          ],
+          "选择题": [
+            1,
+            18
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1992-regular-national-science",
+      "production_state": "compiled",
+      "project_dir": "1992_全国卷_理科",
+      "question_count": 28,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1992/1992_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1992/1992_数学真题_全国理_含解析.md",
+        "questions": "1992/1992_数学真题_全国理_试题.md",
+        "solution_body": "1992/1992_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-a5f3ad39cbb2af980f5b963dc78e2083623a8db2e7004edb1d4db1087ec073f5"
+      ],
+      "title": "1992 年·全国卷·理科",
+      "track": "science",
+      "year": 1992
     }
   ],
-  "revision": 4627,
+  "revision": 4634,
   "schema_version": 1,
   "sources": [
     {
@@ -24916,8 +25045,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f97c1763e911d929744ad4d3da8befba1e16276d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1992-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1992全国文.pdf",
       "regions": [],
       "source_id": "src-9e4900caaaa8c1bceab2f9864a4724cc8e0a6f053a1af2f422988444acd07b9e",
@@ -24940,8 +25069,8 @@
       "exam_type": "regular",
       "git_blob_oid": "aaf960d7713e9864174748679ee16a8cbc603b72",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1992-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1992全国理.pdf",
       "regions": [],
       "source_id": "src-a5f3ad39cbb2af980f5b963dc78e2083623a8db2e7004edb1d4db1087ec073f5",
