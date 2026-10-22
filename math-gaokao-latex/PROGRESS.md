@@ -8920,3 +8920,11 @@
 - 验证：`build_projects.py check-tools --json` 确认 TeX Live 2026、XeTeX、latexmk 4.88 与 Poppler 可用；`build_projects.py build --formal` 四版均 succeeded；`validate-receipts` 返回 code OK、failed/invalid/missing/stale 均为0、pending为1；`provenance.py check-batch --batch phase4-b13` 通过。日志和页数检查已覆盖四版。该构建回执目前明确待逐页视觉验收，未升级为 `succeeded`。
 - 成本：无 OCR、无外部模型或商业 API；只使用本地 XeLaTeX/Poppler。Codex 实际输入/输出/缓存 Token 与费用无可用计量，记未知。
 - 剩余/下一步：按视觉回执要求逐页检查全部50页（候选页只是优先锚点，不替代全页检查），再登记八项检查并生成批次报告；若无视觉失败，完成最终复核、测试并提交。Q20 区域对应问题与来源版次/原件身份认证仍是独立阻塞，本卷不得标记完成。不得重做已成功的四版编译；若临时PNG不存在再定向重渲染。
+
+### 1990 全国卷理科：四版全页视觉复核与批次收口（2026-10-22）
+
+- 已完成：对四版全部 50 页按八项标准检查字形、标题/题号、选项与公式、图形标注、页眉页脚、分页留白、字号和答案区分；无视觉失败、无警告豁免。试题版/简答版图形页为2–5；解析版为2–5、8、11、16、18；印刷版为1–3、9、13、15；其余页的图形标注检查按规则记为不适用。印刷版由独立复核者逐页检查，其余三版由主会话逐页检查。批次收口结论为 `closed_with_blockers`，不可等同于整卷完成。
+- 修改文件：`1990_全国卷_理科/receipts/review.json`、同目录 `receipts/build.json`（状态升为 `succeeded`）、`source-manifest.json`（revision 4600→4601）、`reports/phase4-b13.md`、本进度文件。正式 PDF 留在被忽略的 `build/`；PNG 留在临时目录，均未入库。
+- 验证：`review_receipts.py finalize-batch` 返回 `FINALIZED`、revision 4601；`check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts` 为 succeeded=1、pending/failed/invalid/missing/stale=0；`provenance.py check-batch --batch phase4-b13` 通过；`test_review_receipts.py` 72/72 通过。批次报告记录四版 review passed、50 页、视觉问题0、警告豁免0。
+- 成本：无 OCR、模型或商业 API；仅本地 50 页 PDF 渲染与视觉检查。Codex 实际 Token、缓存命中和费用不可用，记未知。
+- 剩余/下一步：Q20 的 $V_1,V_2$ 区域对应仍由 `ISSUE-1131` 阻塞，来源出版社/版次/原件身份亦未认证；因此即使构建和视觉回执通过，本卷内容状态仍受阻。只在取得同版权威答案、勘误或可核来源后继续裁定Q20，不重做已完成的26题转录、答案盲核或50页视觉检查；本阶段收口后停止扩展范围。
