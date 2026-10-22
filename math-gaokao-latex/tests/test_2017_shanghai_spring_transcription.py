@@ -12,6 +12,7 @@ TRANSCRIPT = ROOT / "2017/2017_数学真题_春季上海_试题.md"
 FIGURES = ROOT / "2017/2017_数学真题_春季上海_图表清单.md"
 ANSWER_KEY = ROOT / "2017/2017_数学真题_春季上海_答案要点.md"
 SOLUTION_BODY = ROOT / "2017/2017_数学真题_春季上海_解析正文.md"
+COMBINED = ROOT / "2017/2017_数学真题_春季上海_含解析.md"
 SOURCE_ID = "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9"
 SOURCE_SHA256 = "5379de046c452e20504865f84b019a4ad6b8e9edf73c209efe484fcbf68adc37"
 sys.path.insert(0, str(PROJECT / "tools"))
@@ -169,6 +170,18 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
         combined = solution_sources.render_combined(questions, extracted, answers)
         self.assertIn("2017 年上海市春季高考数学试卷", combined)
         self.assertIn("84\\pi\\approx263.9", combined)
+
+    def test_committed_combined_source_matches_the_deterministic_renderer(self):
+        self.assertTrue(COMBINED.is_file(), "generated combined source is missing")
+        questions = TRANSCRIPT.read_text(encoding="utf-8")
+        answers = ANSWER_KEY.read_text(encoding="utf-8")
+        raw_solutions = SOLUTION_BODY.read_text(encoding="utf-8")
+        solutions = solution_sources.extract_solution_blocks(raw_solutions, questions)
+
+        self.assertEqual(
+            COMBINED.read_text(encoding="utf-8"),
+            solution_sources.render_combined(questions, solutions, answers),
+        )
 
 
 if __name__ == "__main__":
