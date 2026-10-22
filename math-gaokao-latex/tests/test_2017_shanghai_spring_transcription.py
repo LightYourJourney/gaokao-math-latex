@@ -13,6 +13,7 @@ FIGURES = ROOT / "2017/2017_数学真题_春季上海_图表清单.md"
 ANSWER_KEY = ROOT / "2017/2017_数学真题_春季上海_答案要点.md"
 SOLUTION_BODY = ROOT / "2017/2017_数学真题_春季上海_解析正文.md"
 COMBINED = ROOT / "2017/2017_数学真题_春季上海_含解析.md"
+QUESTIONS_TEX = PROJECT / "2017_上海春季卷/questions.tex"
 SOURCE_ID = "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9"
 SOURCE_SHA256 = "5379de046c452e20504865f84b019a4ad6b8e9edf73c209efe484fcbf68adc37"
 sys.path.insert(0, str(PROJECT / "tools"))
@@ -56,6 +57,7 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
         )
         self.assertNotIn("尚未绑定 paper_id", transcript)
         self.assertIn("PDF 第 1–3 页", transcript)
+        self.assertNotIn(r"\texttt{paper_id=", QUESTIONS_TEX.read_text(encoding="utf-8"))
 
     def test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers(self):
         paper = next(item for item in self.manifest["papers"] if item["paper_id"] == PAPER_ID)
@@ -108,13 +110,20 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
             r"(-1)^{n+1}\frac{3x_n-1}{3-x_n}",
         ):
             self.assertIn(source_detail, normalized, f"missing source-critical anchor: {source_detail}")
+        self.assertIn(r"-f\left(\frac1a\right)\text{；}", transcript)
 
     def test_source_figures_are_inventoried_as_vector_redraw_work_not_raster_assets(self):
         self.assertTrue(FIGURES.is_file(), "the source diagrams must be inventoried before redraw")
         figures = FIGURES.read_text(encoding="utf-8")
         for question in (16, 17, 19):
             self.assertIn(f"第 {question} 题", figures)
-        self.assertIn("待重绘为 TikZ/PGFPlots", figures)
+        self.assertIn("TikZ 矢量草稿已创建并本地渲染；待独立视觉复核", figures)
+        for figure_name in (
+            "2017_shanghai_spring_q16_octagon.tex",
+            "2017_shanghai_spring_q17_prism.tex",
+            "2017_shanghai_spring_q19_tangent_circles.tex",
+        ):
+            self.assertTrue((PROJECT / "2017_上海春季卷/figures" / figure_name).is_file())
         raster_embed = r"!\[[^\]]*\]\([^)]*\.(?:png|jpe?g)(?:\?[^)]*)?\)"
         self.assertNotRegex(figures, raster_embed)
         self.assertNotRegex(TRANSCRIPT.read_text(encoding="utf-8"), raster_embed)
