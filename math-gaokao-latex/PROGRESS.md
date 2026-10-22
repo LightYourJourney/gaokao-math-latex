@@ -8856,3 +8856,11 @@
 - 修改文件：`source-manifest.json`（revision 4591→4592，批次状态更新为 `provenance_verified`）、`2017_上海春季卷/provenance.json`、本 `PROGRESS.md`。三角色中间 JSON 留在被忽略的项目 `.work/phase4-b12/`；未改题面、答案正文、图稿或 `docs/design/`。
 - 验证：`import-batch` dry-run 与事务写入通过；`check-batch` 显示 1 卷有效；`test_provenance.py` 111 项通过。状态派生仍为试卷 `blocked`、批次 `provenance_verified`；题面/答案哈希均由工具现场重算，六条未解决 issue 均保留。真实 Codex Token/费用不可见。
 - 剩余/下一步：按当前 provenance 门禁执行该卷四版 formal build，再复核正式构建 PDF 并登记逐页视觉回执；答案冲突与图稿验收问题未解决前不得将试卷标记完成。不要重做转录、独立求解或已通过的题面核对。
+
+### 2017 上海春季卷：正式构建与四版逐页视觉审查登记（2026-10-22）
+
+- 已完成：按有效题级 provenance 完成四版正式构建，并逐页检查试题版4页、简答版6页、解析版18页、印刷版13页，共41页。逐页八项检查合计328项：299项通过、29项因页面无图而标记 `not_applicable`；未发现裁切、重叠、公式/标签不可读或异常分页。正式构建日志无错误、缺字、未定义引用或 overfull。批次报告结论为 `closed_with_blockers`，该卷仍为 `blocked`，没有将视觉通过误当作整卷完成。
+- 修改文件：新增 `2017_上海春季卷/receipts/build.json`、`2017_上海春季卷/receipts/review.json` 与 `reports/phase4-b12.md`；更新 `source-manifest.json` 至 revision 4595 和本进度文件。四份正式 PDF 保留在忽略的 `2017_上海春季卷/build/`；按既有要求仅清除该精确目录内的 `.aux`、`.fdb_latexmk`、`.fls`、`.log`、`.out`、`.xdv` 中间产物。未修改 `missing-issues.md`、题面/答案/图稿或 `docs/design/`，没有将 PNG/JPEG 或临时页面图加入 Git。
+- 验证：`review_receipts.py finalize-batch` 返回 `FINALIZED`、revision 4595；随后 `check-batch` 返回 `FINALIZED`，`provenance.py check-batch` 显示 `OK：1 卷`，`source_manifest.py validate` 通过；`test_review_receipts.py` 72/72 通过。人工视觉检查覆盖全部41页，候选页另以原尺寸复核。正式PDF页数为4/6/18/13，receipt 哈希绑定当前来源与构建。
+- 成本：零 OCR、零商业API；本地 XeLaTeX、PDF 渲染与测试。Codex Token 与实际费用不可见，记未知。
+- 剩余/下一步：ISSUE-1125、1126、1127 的来源答案冲突及 ISSUE-1128、1129、1130 的图稿/来源问题仍开放；不得重做已核验题面与独立解答，也不得把该卷或整个项目标为完成。后续先按 issue 指向解决剩余来源/答案与图稿复核，再依门禁刷新受影响回执。此阶段的 Git 提交只纳入本批回执、报告、manifest 与进度记录，保留用户已有 `docs/design/` 工作区改动不动。
