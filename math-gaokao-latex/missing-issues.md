@@ -18686,7 +18686,7 @@
   "impact": "blocks_completion",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q19",
-  "resume_action": "完成四版正式视觉回执；登记前保持问题开放，不把图示比例当作题设。",
+  "resume_action": "先按门禁补齐/刷新当前题级 provenance，再完成正式四版构建与视觉回执；登记前保持问题开放，不把图示比例当作题设。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
   "status": "open",
   "type": "figure-missing"
