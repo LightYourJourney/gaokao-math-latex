@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：逐题来源、答案与盲核 provenance 登记（2026-10-22）
+
+- 已完成：`phase4-b14` 三角色材料覆盖 Q1–Q22，并通过单事务导入。逐题来源绑定固定 PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`；复用已存原页渲染核定 PDF 第1页含 Q1–Q19、第2页含 Q20–Q22。题面独立对照状态为 passed；答案依据引用已核对的考试院参考答案、编者推导和两段独立盲算记录；22题冲突均为 none。由于既有进度只记录盲算者分段而未保存个体名称，角色字段使用职责标签，不虚构个人身份。manifest revision 4603，批次 `provenance_verified`；paper 仍为 `editions_generated`，不等同编译/视觉验收完成。
+- 修改文件：新增 `2006_上海卷_文科/provenance.json`，更新 `source-manifest.json` 与本进度文件。`.work/phase4-b14/provenance/` 的角色材料保持忽略状态供追溯；本地一次性填充辅助脚本已移除。未改 `docs/design/`。
+- 验证：`provenance.py import-batch` dry-run 成功且未写盘；正式事务返回 revision 4603；随后 `provenance.py check-batch` 为 `OK：1 卷`，`provenance.py status` 为 `provenance_verified`；`source_manifest.py validate` 和 `git diff --check` 通过。22题哈希由导入器从规范题面/答案源现场复算，来源页映射由已有原页图像核实。一次性填充脚本首跑因误假设 `source_manifest.load_manifest` API 而在写入前失败；查明模块只提供校验函数后改用标准 JSON 读取，随后成功，正式数据仍由事务导入器校验。
+- 成本：复用忽略目录中的两页既有渲染，不重复 OCR 或 PDF 渲染；无模型/API 调用。Codex Token、缓存命中和费用不可见，记未知。
+- 剩余/下一步：当前还没有正式 build receipt；来源出版者、版次与扫描链仍未知并保留在来源说明。下一步核对本卷四个独立编译入口及项目工具链，执行正式四版 XeLaTeX 构建；再逐页完成八项视觉复核、刷新回执/报告并做最终批次门禁。不得将 `provenance_verified` 或 `editions_generated` 描述为整卷完成。
+
 ### 2006 上海卷文科：规范登记与可复现源/模板生成（2026-10-22）
 
 - 已完成：将 2006 上海文科试卷正式登记为 `gk-2006-regular-shanghai-arts`，canonical source 为 `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，固定 PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。登记保留边界：与第三方镜像固定提交的 PDF 字节一致、考试身份已核；原出版版次和扫描来源链仍未知，paper `production_state=planned`。将试题、答案要点、解析正文稿规范命名并绑定登记元数据；四幅 TikZ 源随卷归档，无 PNG/JPEG；确定性生成合并解析稿、题目/答案 LaTeX 源及四种版式入口。
