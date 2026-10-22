@@ -8928,3 +8928,12 @@
 - 验证：`review_receipts.py finalize-batch` 返回 `FINALIZED`、revision 4601；`check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts` 为 succeeded=1、pending/failed/invalid/missing/stale=0；`provenance.py check-batch --batch phase4-b13` 通过；`test_review_receipts.py` 72/72 通过。批次报告记录四版 review passed、50 页、视觉问题0、警告豁免0。
 - 成本：无 OCR、模型或商业 API；仅本地 50 页 PDF 渲染与视觉检查。Codex 实际 Token、缓存命中和费用不可用，记未知。
 - 剩余/下一步：Q20 的 $V_1,V_2$ 区域对应仍由 `ISSUE-1131` 阻塞，来源出版社/版次/原件身份亦未认证；因此即使构建和视觉回执通过，本卷内容状态仍受阻。只在取得同版权威答案、勘误或可核来源后继续裁定Q20，不重做已完成的26题转录、答案盲核或50页视觉检查；本阶段收口后停止扩展范围。
+
+### 全量报告投影刷新与 phase0-b02 当前门禁审计（2026-10-22）
+
+- 已完成：发现 manifest revision 4601 后六份确定性报告投影过期，运行 `report.py render --all` 以单个 content 事务刷新；随后 `report.py check --all` 通过，确认“报告输出与全量 manifest 当前一致”，报告保留 blocked/pending 状态而未伪装为完成。未改题面、答案、解析、来源或构建数据。
+- 修改文件：`docs/source-inventory.md`、`report.md`、`README_数学.md`、`math-gaokao-latex/README.md`、`math-gaokao-2017-2026/README.md`、`math-gaokao-latex/reports/baseline.md`、本进度文件。`docs/design/` 用户改动未触碰。
+- 验证：`report.py render --all` 成功并回读校验六个目标；`report.py check --all` 通过；`git diff --check` 通过。当前 manifest 汇总 295 套：241 complete、50 blocked、3 compiled、1 planned；该汇总是状态计数，不代表已逐题复核全部 295 套。
+- 后续批次证据：只读复核 `phase0-b02` 返回 `VISUAL_FAILED`：2019全国Ⅰ文/理、2020全国Ⅰ理的 build 均为 `compiled_pending_review`、review 为 passed；2020全国Ⅰ文的视觉回执为 failed，阻止全批原子收口。2019全国Ⅰ理 `validate-receipts` 为 pending=1、stale=0。未重做这些卷的转录或数学核验。
+- 成本：仅确定性本地报告生成与清单/回执检查，无 OCR、外部模型或商业 API；Codex Token 与费用不可见，记未知。
+- 下一步：定向读取 `phase0-b02` 的2020全国Ⅰ文失败页、八项失败检查、原工作项与现行源PDF/渲染绑定；先判断是内容缺陷、回执失效还是视觉问题，再按最小范围修复。不得越过视觉失败直接 finalize，也不得重做其他三卷已有的通过复核。
