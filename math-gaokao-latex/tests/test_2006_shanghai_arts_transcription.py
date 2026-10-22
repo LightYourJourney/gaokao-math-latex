@@ -34,7 +34,6 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
         self.assertEqual(paper["legacy_ids"], [])
         self.assertEqual(paper["source_ids"], [SOURCE_ID])
         self.assertEqual(paper["question_count"], 22)
-        self.assertEqual(paper["production_state"], "planned")
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
         self.assertIn(PAPER_ID, self.transcript)

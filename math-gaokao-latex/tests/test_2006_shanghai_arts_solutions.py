@@ -1,5 +1,7 @@
 """Regression checks for editor-derived 2006 Shanghai arts answers."""
+import json
 import re
+import sys
 import unittest
 from pathlib import Path
 
@@ -8,7 +10,11 @@ ROOT = Path(__file__).resolve().parents[4]
 ANSWER_KEY = ROOT / "2006/2006_数学真题_上海文_答案要点.md"
 SOLUTIONS = ROOT / "2006/2006_数学真题_上海文_解析正文.md"
 COMBINED = ROOT / "2006/2006_数学真题_上海文_含解析.md"
+MANIFEST = ROOT / "math-gaokao-latex/source-manifest.json"
+TOOLS = ROOT / "math-gaokao-latex/tools"
 QUESTION_NUMBERS = set(range(1, 23))
+sys.path.insert(0, str(TOOLS))
+import generate_projects
 
 
 class ShanghaiArts2006SolutionTests(unittest.TestCase):
@@ -54,6 +60,69 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
         self.assertEqual(len(answer_numbers), 22)
         self.assertEqual(set(solution_numbers), QUESTION_NUMBERS)
         self.assertEqual(len(solution_numbers), 22)
+
+    def test_detailed_render_does_not_duplicate_subpart_answer_boxes(self):
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-2006-regular-shanghai-arts"
+        )
+        generated = generate_projects.generate_project(
+            ROOT, generate_projects.paper_sources(paper)
+        )
+        answers_path = (
+            "math-gaokao-latex/"
+            f"{paper['project_dir']}/answers.tex"
+        )
+        answers_tex = generated.targets[answers_path].decode("utf-8")
+
+        # Q1–Q18 have one answer each; Q19–Q22 have 2, 2, 3, 3 subparts.
+        # These 28 official-key boxes are the only answer callouts in the detailed output.
+        self.assertEqual(answers_tex.count(r"\gkanswer{"), 28)
+
+    def test_source_disclosure_box_uses_ragged_right_text(self):
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-2006-regular-shanghai-arts"
+        )
+        generated = generate_projects.generate_project(
+            ROOT, generate_projects.paper_sources(paper)
+        )
+        questions_path = (
+            "math-gaokao-latex/"
+            f"{paper['project_dir']}/questions.tex"
+        )
+        questions_tex = generated.targets[questions_path].decode("utf-8")
+        notice = re.search(
+            r"\\begin\{gktip\}\s*(.*?)\\end\{gktip\}",
+            questions_tex,
+            re.DOTALL,
+        )
+
+        self.assertIsNotNone(notice)
+        self.assertTrue(notice.group(1).lstrip().startswith(r"\raggedright"))
+
+    def test_q15_choice_rows_break_after_the_second_option(self):
+        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-2006-regular-shanghai-arts"
+        )
+        generated = generate_projects.generate_project(
+            ROOT, generate_projects.paper_sources(paper)
+        )
+        answers_path = (
+            "math-gaokao-latex/"
+            f"{paper['project_dir']}/answers.tex"
+        )
+        answers_tex = generated.targets[answers_path].decode("utf-8")
+
+        self.assertIn(
+            "（A）充分非必要条件　（B）必要非充分条件\\\\\n"
+            "（C）充分必要条件　（D）既非充分又非必要条件",
+            answers_tex,
+        )
 
     def test_each_solution_conclusion_matches_the_answer_key(self):
         answer_key = self.require_file(ANSWER_KEY)

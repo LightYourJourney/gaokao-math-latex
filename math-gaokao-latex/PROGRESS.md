@@ -12,6 +12,14 @@
 - 成本：仅本地单元测试，无 OCR、模型或外部 API；Token 与 API 费用不可见，记未知。
 - 剩余/下一步：2017卷仍有三项答案冲突阻塞，沿现存 issue 记录处理；本次只修正测试与事实台账不一致，不扩大到该卷内容工作。
 
+### 2006 上海卷文科：四版视觉复核、回执关闭与回归验收（2026-10-22）
+
+- 已完成：`phase4-b14` 四版正式构建与逐页视觉验收收口。四份 PDF 共43页（试题版5、解析版18、简答版7、印刷版13），review 回执状态 `passed`，批次 `closed`；逐页完成8项检查，共344项，无视觉失败。修订后逐页比较确认32页与此前已复核版本像素完全一致，另11页（含封面来源框与第15题选项换行）逐页查看。本阶段删除解析正文Q19–Q22中与答案要点重复的10个答案框；答案框唯一性测试确认详细版保留28个答案框。封面来源提示改为左对齐，第15题选项拆为两行，题意和数字未变。最终仅保留一条可见排版告警：解析版第13页 `answers.tex` 第277–278行 Underfull hbox；整行放大检查可读、无溢出，按精确来源路径和页码登记豁免。manifest revision 4611，build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699`，paper `production_state=complete`。
+- 修改文件：本卷 `2006/` 题面、解析正文及合并解析稿；项目 `2006_上海卷_文科/` 的 `questions.tex`、`answers.tex`、`provenance.json`、build/review receipts；`source-manifest.json`；`reports/phase4-b14.md`；相关2006回归测试及本进度文件。未改 `docs/design/`；四个构建 PDF 留在忽略的 `build/`，24个 `.aux/.fdb_latexmk/.fls/.log/.out/.xdv` 中间产物由项目清理器删除，TeX源未删除。
+- 验证：`provenance.py check-batch`、来源 manifest 校验、solution-source/edition/short-answer 生成一致性检查、build receipt 当前性校验均通过；`review_receipts.py finalize-batch` 返回 `FINALIZED`；`report.py render --all` 回读成功，随后 `report.py check --all` 通过。改动相关测试31/31通过；全套 `python3 -B -m unittest discover -s tests -q` 共1753项，1753通过、13跳过、0失败，用时483.295秒。`git diff --check` 通过。
+- 成本：未调用 OCR、聊天模型或外部付费 API；复用已渲染页面，对变更页作局部比较/复核，重建仅执行一次四版 XeLaTeX。Codex Token、缓存命中和实际 API 费用不可见，记未知。
+- 剩余/下一步：固定 PDF 字节身份与考试身份已核；原出版者、版次及扫描件数字化来源链仍未知，继续按现有来源边界表述，不称其为官方原件。此次只关闭2006上海文科这一卷；整个题库仍有其他待录入及受阻工作。本阶段验收后停止扩展，下一卷按本文件/来源队列另行开工，避免重做本卷。
+
 ### 2006 上海卷文科：四版正式 XeLaTeX 构建（2026-10-22）
 
 - 已完成：`gk-2006-regular-shanghai-arts` 的试题版、简答版、解析版、印刷版均通过正式 XeLaTeX 构建；回执 `COMPILED_PENDING_REVIEW`，manifest revision 4605，paper 状态 `compiled`、批次状态 `compiled_pending_review`。输出共45页：5、7、19、14页。四份 PDF 保留在被忽略的 `2006_上海卷_文科/build/`，供下一阶段逐页复核；当前辅助编译文件仍在，视觉复核后按项目清理器删除中间产物并保留 PDF。
