@@ -1439,6 +1439,14 @@
         "gk-1992-regular-national-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b16",
+      "issues": [],
+      "paper_ids": [
+        "gk-1992-regular-sannan"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1448,7 +1456,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "75197d89-52ca-4642-a584-d1f871f011b2",
+  "last_transaction_id": "68c21f4d-f0e4-4f93-b670-c21219ea672a",
   "papers": [
     {
       "blocked_from": null,
@@ -20874,9 +20882,58 @@
       "title": "1992 年·全国卷·理科",
       "track": "science",
       "year": 1992
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "1992_sannan",
+        "id": "gk-1992-regular-sannan",
+        "note": "1992 三南卷；1 页 A3 三栏 XeTeX 重排（页脚 44），无答案页（等级 D，编者推导并经异人盲解），无题图。第 1 题 arg 约定、第 11 题选项 B 排印、第 15 题 D 项漏「既不」均照录并标注。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "三南卷",
+        "structure": {
+          "填空题": [
+            18,
+            23
+          ],
+          "解答题": [
+            24,
+            28
+          ],
+          "选择题": [
+            1,
+            17
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "三南卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1992-regular-sannan",
+      "production_state": "complete",
+      "project_dir": "1992_三南卷",
+      "question_count": 28,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1992/1992_数学真题_三南_答案要点.md",
+        "combined_rendered": "1992/1992_数学真题_三南_含解析.md",
+        "questions": "1992/1992_数学真题_三南_试题.md",
+        "solution_body": "1992/1992_数学真题_三南_解析正文.md"
+      },
+      "source_ids": [
+        "src-8df32bb090554db5f3b557ec330ca89cf1a276ff14efece57397a9fada845628"
+      ],
+      "title": "1992 年·三南卷",
+      "track": "none",
+      "year": 1992
     }
   ],
-  "revision": 4641,
+  "revision": 4656,
   "schema_version": 1,
   "sources": [
     {
@@ -24997,8 +25054,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1e294ca350afb60317d7b614b8a817b4affe9c98",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1992-regular-sannan",
+      "paper_relation": "canonical",
       "raw_paper_name": "1992三南(湖南,海南,云南).pdf",
       "regions": [],
       "source_id": "src-8df32bb090554db5f3b557ec330ca89cf1a276ff14efece57397a9fada845628",

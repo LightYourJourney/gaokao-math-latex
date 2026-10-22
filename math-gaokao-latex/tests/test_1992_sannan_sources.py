@@ -18,14 +18,15 @@ class Sannan1992SourceTests(unittest.TestCase):
         cls.questions = solution_sources.parse_question_blocks(cls.draft)
         cls.record = json.loads((PROJECT / "来源校对.json").read_text(encoding="utf-8"))
 
-    def test_fixed_manifest_identity_and_source_binding_are_unchanged(self):
+    def test_fixed_manifest_identity_and_bound_paper(self):
         manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
         source = next(s for s in manifest["sources"] if s["source_id"] == self.record["source_id"])
         self.assertEqual(source["artifact"]["sha256"], self.record["pdf_sha256"])
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1992-regular-sannan")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(hashlib.sha256((PROJECT / "题面转录草稿.md").read_bytes()).hexdigest(),
                          self.record["draft_sha256"])
 

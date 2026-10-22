@@ -9065,3 +9065,13 @@
 - 验证：`validate-receipts --paper` 两卷 OK；`check-batch phase4-b15` 为 `FINALIZED`；`provenance.py check-batch` 通过；`report.py check --all` 一致；全量单测 1753 项通过（含图稿 occurrences 守卫）。
 - 成本：无 OCR、外部模型或商业 API；仅本地 XeTeX/Poppler。
 - 剩余/下一步：两卷的来源疑点（文 Q16 `\dfrac{e^x-e^x}{2}`、文 Q27 `2-2y+1=0`、理 Q16 同式、理 Q26 端点记法）仍为 `needs-review`，属内容边界，不影响已完成的构建与视觉收口；取得同版可追溯原件后方可裁定，不据推测改题面。
+
+### 1992 三南卷：四版构建、逐页复核与批次收口（phase4-b16，2026-10-23）
+
+- 已完成：`gk-1992-regular-sannan`（28 题：选择 1–17、填空 18–23、解答 24–28；单页 A3 三栏 XeTeX 重排、页脚 44、无答案页、无题图）在既有转录与解答草稿基础上完成独立盲解（28 题，逐题结论一致）、独立转录复核（400 dpi 逐题 PASS，无图）、注册（rev 4642）、provenance 三角色（4643/4644/4647/4650/4653）、四版生成与正式构建、7 段 40 页逐页八项复核、修复轮 2 项、重建与定向复验，`finalize-batch` 返回 `FINALIZED`。最终构建：试题 3／解析 18／简答 5／印刷 14 页，四份日志 0 警告。
+- 修复轮：① 试题版 p1 题头「存疑与登记」直接写出选项判定（答案泄漏）→ 改为中性登记，判定移至答案卷；② 约定句「选项标号半角照录」与成品全角不符 → 改为「源为半角，排印统一作全角」。
+- 源内异常照录并登记：第 1 题 `arg z` 未声明主值区间；第 11 题选项 B 印作 `2(2−√3π)`（π 在括号内）；第 15 题 A、D 均称「充分但不必要」而命题既非充分也非必要，D 项漏印「既不」——答案按命题意图取 D 并标注条件结论。
+- 修改文件：`1992/1992_数学真题_三南_{试题,答案要点,解析正文,含解析}.md`、`1992_三南卷/` 下 `questions.tex`/`answers.tex`/`answers_short.tex`/四版壳/`provenance.json`/`receipts/`、`source-manifest.json`、`tests/test_1992_sannan_sources.py`、`reports/phase4-b16.md`、报告投影、本进度文件。PDF 与 PNG 均在被忽略目录，未入库。
+- 验证：`check-batch`＝`FINALIZED`；`validate-receipts --batch` 与 `provenance.py check-batch` 均 OK；报告投影一致；全量单测将随提交前复核运行。
+- 成本：无 OCR、外部模型或商业 API；仅本地 XeTeX/Poppler 与代理视觉复核。
+- 剩余/下一步：本卷无图形、无官方答案，答案等级 D 已在答案要点与 provenance 中标注；后续可继续 1992 上海（扫描件，需图像转录）或 1993 各卷。
