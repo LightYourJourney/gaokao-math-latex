@@ -51,6 +51,10 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
         self.assertIn(SOURCE_SHA256, transcript)
         self.assertIn("上游公开副本", transcript)
         self.assertIn("未核验为官方原件", transcript)
+        self.assertIn(
+            f"已绑定 paper_id {PAPER_ID}（canonical）", transcript
+        )
+        self.assertNotIn("尚未绑定 paper_id", transcript)
         self.assertIn("PDF 第 1–3 页", transcript)
 
     def test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers(self):
