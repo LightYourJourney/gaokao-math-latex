@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：题面转录初稿（2026-10-22）
+
+- 已完成：按固定 PDF 副本完成 22 题题面转录初稿，范围为填空题1–12、选择题13–16、解答题17–22；题号连续，关键公式与符号按此前已完成的原页/高分辨率局部检查转录。四幅原图仅作待矢量重绘占位，未将截图或 PNG/JPEG 纳入仓库。
+- 来源与状态：页首题签为“2006 普通高等学校招生考试（上海卷文）”，印刷页330–331；固定 source src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23，SHA-256 1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174，PDF共2页且只有题面。来源状态虽为 ready，paper_id 仍未绑定，出版者/版次/扫描件来源链未核；不把该副本称为官方原件，也未补写答案或解析。
+- 修改文件：新增 2006/2006_数学真题_上海文_题面转录草稿.md 与 math-gaokao-latex/tests/test_2006_shanghai_arts_transcription.py，并更新本进度文件；未改 source manifest、issues、正式试卷项目或 docs/design/。
+- 验证：新增转录测试覆盖 source ID/SHA/未绑定状态、22题连续题号、关键公式、四幅待重绘图及答案边界。矩阵行分隔回归先 RED（行尾只有一个反斜线），修正为 LaTeX 双反斜线后专项测试 6/6 通过。全库 python3 -B -m unittest discover -s math-gaokao-latex/tests -q 用时416.016秒：1740项中1725通过、13跳过、2失败；失败为 test_2017_shanghai_spring_figures.ShanghaiSpring2017FigureTests.test_unreviewed_diagrams_remain_open_completion_blockers 与 test_2017_shanghai_spring_transcription.ShanghaiSpring2017TranscriptionTests.test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers。定向核对确认两测试仍要求该卷图稿 issues 全部 open，而现台账中 ISSUE-1128–1130 已 resolved/non_blocking，仅 ISSUE-1125–1127 答案冲突仍 open/blocks_completion；本阶段不改动这组既有 2017 数据/测试，记录为本次全库测试失败，后续在2017卷状态同步阶段处理。git diff --cached --check 通过；暂存区仅含本题面稿、本专项测试与本进度文件，docs/design/ 用户改动未暂存。
+- 成本：本轮未调用 OCR、聊天模型或外部 API；复用此前保存在忽略 .work 下的 PDF 文本/页面及局部核验，不重复渲染。Codex 输入/输出/缓存 Token 与实际费用不可见，记未知；全库测试耗时按实测记录。
+- 剩余/下一步：当前仍是题面初稿，尚未异人逐题盲核；四幅 TikZ 图、独立数学解答与验证、来源身份认证、正式 paper/source 绑定、provenance、四版生成/正式构建和逐页视觉验收均未完成。先独立核对22题原文，再处理图稿与答案；来源身份未证实前保持 paper_id=null，不得登记为完整卷。
+
 ### 1990 全国卷理科：来源复核与卷级执行计划（2026-10-22）
 
 - 已完成：确认该卷是下一项未录入且来源已固定的候选；当前 `feat/gaokao-phase0` 中没有1990全国理科题面稿/项目目录，既有文件仅含1990全国文科和广东理科。固定来源 `src-9c2fc92cdbbeac0484bf7355db2d32805c316e1a7be74e3bf175a3891a167a49` 的SHA-256为 `7801e6dab50ca58eabdc74d074cdaa7012cdee873dcc5304e0df37248986b43a`，Git blob为 `b5c3755c3d1ec57c4a26a83c1d6d8dcf6350390b`；本地固定PDF字节哈希与manifest一致。PDF单页A3横向，题签明确为“1990 普通高等学校招生考试（全国卷理）”，含26题，无答案或解析页。原页核对确认Q9有 `\overline M\cap\overline N`（文本层抽取会丢上划线）；Q20写有 `V_1:V_2` 但未指明两体积对应哪一侧，保留待核。
