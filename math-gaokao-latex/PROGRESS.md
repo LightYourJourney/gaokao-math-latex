@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：四版正式 XeLaTeX 构建（2026-10-22）
+
+- 已完成：`gk-2006-regular-shanghai-arts` 的试题版、简答版、解析版、印刷版均通过正式 XeLaTeX 构建；回执 `COMPILED_PENDING_REVIEW`，manifest revision 4605，paper 状态 `compiled`、批次状态 `compiled_pending_review`。输出共45页：5、7、19、14页。四份 PDF 保留在被忽略的 `2006_上海卷_文科/build/`，供下一阶段逐页复核；当前辅助编译文件仍在，视觉复核后按项目清理器删除中间产物并保留 PDF。
+- 修改文件：新增 `2006_上海卷_文科/receipts/build.json`，更新 `source-manifest.json` 与本进度文件；未改题面、答案、解析或 `docs/design/`。
+- 验证：工具链检查 `OK`（TeX Live 2026、XeTeX、latexmk 4.88、Poppler 26.10.0）；`provenance.py check-batch --batch phase4-b14` 为 OK；`source_manifest.py validate --manifest ...` 通过；正式四版构建失败数为0；`validate-receipts --require-current-inputs` 返回 `OK`、missing/stale/invalid/failed 均为0。四份日志均未匹配到 TeX error、LaTeX/Package warning、Overfull/Underfull、missing character 或 undefined reference。首次运行 manifest 校验时漏传必需的 `--manifest`，CLI 在写入前拒绝；补参后通过，未产生文件变更。
+- 成本：仅本地 XeLaTeX 构建；无 OCR、模型或外部 API 调用。模型 Token、费用及独立计时数据不可见，记未知。
+- 剩余/下一步：45页尚未完成最终视觉校样，不能把编译通过称为交付完成；来源出版/扫描链仍按现有记录保留未知边界。下一步准备 `phase4-b14` 视觉复核材料，对四份正式 PDF 的全部页面逐页检查，登记机器可读视觉结论后再刷新最终回执；随后只清理固定清单中的非 PDF 中间产物并保留四份 PDF。
+
 ### 2006 上海卷文科：逐题来源、答案与盲核 provenance 登记（2026-10-22）
 
 - 已完成：`phase4-b14` 三角色材料覆盖 Q1–Q22，并通过单事务导入。逐题来源绑定固定 PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`；复用已存原页渲染核定 PDF 第1页含 Q1–Q19、第2页含 Q20–Q22。题面独立对照状态为 passed；答案依据引用已核对的考试院参考答案、编者推导和两段独立盲算记录；22题冲突均为 none。由于既有进度只记录盲算者分段而未保存个体名称，角色字段使用职责标签，不虚构个人身份。manifest revision 4603，批次 `provenance_verified`；paper 仍为 `editions_generated`，不等同编译/视觉验收完成。
