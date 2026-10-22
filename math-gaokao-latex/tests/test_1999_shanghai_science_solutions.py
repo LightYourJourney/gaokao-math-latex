@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[4]
 PAPER = ROOT / "math-gaokao-latex/1999_上海卷_理科"
 SOLUTIONS = PAPER / "解析草稿.md"
+ANSWERS = PAPER / "答案要点草稿.md"
 SOURCE_RECORD = PAPER / "来源校对.json"
 
 EXPECTED = {
@@ -174,7 +175,7 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertEqual(note["source_diagram_scope"]["question_part_3_fixes_new_mouth_width"], False)
         self.assertEqual(
             note["source_diagram_scope"]["review_status"],
-            "independently-reviewed-part-2-only",
+            "independently-reviewed-part-2-and-part-3-constraint-scope",
         )
         review = note["independent_review"]
         self.assertEqual(review["status"], "interpretation-remains-source-ambiguous")
@@ -187,6 +188,14 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
         self.assertIn("若另加“沟口宽度固定为2米”", solution)
         self.assertIn("$3\\sqrt2/2$ 平方米", solution)
         self.assertIn("$9/4$ 平方米", solution)
+        self.assertIn("独立数学复核已基于固定源题面与原图核验", solution)
+        self.assertIn("题意仍有来源歧义", solution)
+
+        answers = ANSWERS.read_text(encoding="utf-8")
+        self.assertIn("未认证为官方答案", answers)
+        self.assertIn("独立数学复核结合原图与题面确认", answers)
+        self.assertIn("题意仍有来源歧义", answers)
+        self.assertNotIn("仍待另一复核者裁定", answers)
 
     def test_q20_figure_review_confirms_source_topology_including_dashed_be(self):
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
