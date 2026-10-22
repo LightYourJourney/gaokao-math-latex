@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1990 全国卷理科：恢复核验并纠正重复计划状态（2026-10-22）
+
+- 已完成：核对当前 `feat/gaokao-phase0` 的 Git 历史、文件与正式回执，确认 1990 全国理科26题的转录、编者答案/解析、逐题 provenance、四版入口、XeLaTeX构建和50页视觉复核均已完成；四版构建为 `succeeded`，视觉批次 `phase4-b13` 为 `closed_with_blockers`。因此不重复该卷任何录入或构建步骤。
+- 状态纠正：`docs/superpowers/plans/2026-10-22-gaokao-1990-national-science.md` 中 Task 4 勾选框此前未同步；该计划在2026-10-22 14:31提交时写有“当前分支没有题稿/项目目录”，但本分支的题稿及纠正提交 `2c4d1fc7` 在13:21前已存在，且最终视觉验收于14:53由 `f53a962a` 提交。该“尚无题稿”陈述不符合当时的分支事实；本记录予以纠正，计划 Task 4 标为已完成。
+- 修改文件：仅更新上述实施计划的 Task 4 状态和本进度文件；未改题面、答案、manifest、provenance、回执或用户的 `docs/design/` 改动。
+- 验证：当前重跑 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase4-b13 --json` 返回 `code=OK`、succeeded=1、pending/failed/invalid/missing/stale=0；`provenance.py check-batch` 返回 `OK：1卷`；`review_receipts.py check-batch` 返回 `FINALIZED`。manifest 将本卷列为 `blocked`，`ISSUE-1131` 仍 `open/blocks_completion`；这与 `closed_with_blockers` 一致，不可表述为整卷无阻塞完成。
+- 成本与剩余：只运行本地只读状态校验；无 OCR、渲染、模型或外部 API。Token/费用不可见，记未知。剩余仅为 Q20 的 $V_1,V_2$ 区域方向歧义、来源出版社/版次/原件身份未认证；均有现存 issue/manifest 记录。
+- 下一步：不再处理1990卷；沿最新进度转向2006上海文科的来源身份核验，保留 `paper_id=null`，直至找到足够的可核来源证据。
+
 ### 2006 上海卷文科：Q12、Q13、Q18、Q19 矢量图稿与专项校样（2026-10-22）
 
 - 已完成：按固定扫描件印刷页330的可见内容，完成 Q12 距离坐标图、Q13 平行四边形、Q18 方位图、Q19 直三棱柱图四份独立 TikZ 源码，并将题面中的占位说明换成对应 `.tex` 源链接。Q18 保留与方位虚线分离且偏右的北向箭头；Q19 核对虚实线及辅助线连接。未改写原题文字，未加入 PNG/JPEG。四幅图均已分别编译，并目视复核合并预览。

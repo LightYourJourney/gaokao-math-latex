@@ -74,7 +74,9 @@
 - Create/update: 该卷 `receipts/build.json`、`receipts/review.json` 与所属 `reports/` 批次报告
 - Update: `source-manifest.json`、派生报告/CSV、测试与 `PROGRESS.md`
 
-- [ ] 通过provenance门禁后用XeLaTeX/latexmk正式编译试题、解析、简答、印刷四版；错误、缺字、引用和溢出按正式门禁处理。
-- [ ] 渲染并逐页完成八项视觉审查；区分通过、失败、not-applicable与仍待核内容。
-- [ ] 仅用事务工具登记当前回执；Q20或来源认证未解决时保持`blocked`/`closed_with_blockers`，不得标完成。
-- [ ] 跑该卷及report/manifest相关测试、`git diff --check`；更新全库投影并提交精确文件，不push。
+- [x] 通过provenance门禁后用XeLaTeX/latexmk正式编译试题、解析、简答、印刷四版；错误、缺字、引用和溢出按正式门禁处理。
+- [x] 渲染并逐页完成八项视觉审查；区分通过、失败、not-applicable与仍待核内容。
+- [x] 仅用事务工具登记当前回执；Q20或来源认证未解决时保持`blocked`/`closed_with_blockers`，不得标完成。
+- [x] 跑该卷及report/manifest相关测试、`git diff --check`；更新全库投影并提交精确文件，不push。
+
+执行记录见 `math-gaokao-latex/PROGRESS.md` 中的 1990 全国卷理科各阶段回执。最终批次 `phase4-b13` 为 `closed_with_blockers`：Q20 的 `V_1,V_2` 区域对应与来源出版版次/原件身份仍未核实；Task 4 完成不等于整卷解除阻塞。
