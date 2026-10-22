@@ -1406,6 +1406,14 @@
         "gk-2005-spring-shanghai"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase4-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-2017-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1415,7 +1423,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "34662a70-7a51-4dc8-b840-a2480fbc4018",
+  "last_transaction_id": "24a66b10-ac58-4780-84a5-85b3d8f28823",
   "papers": [
     {
       "blocked_from": null,
@@ -20504,9 +20512,71 @@
       "title": "2005 年·春季上海卷·数学",
       "track": "none",
       "year": 2005
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2017_spring_shanghai",
+        "id": "gk-2017-spring-shanghai",
+        "note": "固定来源为上游公开副本，未核验为官方原件；第4页仅标‘参考答案’且官方性未核。答案为编者独立推导（非官方）；Q12/Q13/Q19来源答案冲突待裁定，Q16/Q17/Q19矢量图待重绘。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          4
+        ],
+        "paper": "上海春季卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1125",
+        "ISSUE-1126",
+        "ISSUE-1127",
+        "ISSUE-1128",
+        "ISSUE-1129",
+        "ISSUE-1130"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2017_上海春季卷",
+      "question_count": 21,
+      "resume_action": "查找官方勘误或独立同版原卷/答案以裁定差异；保持编者答案为非官方，不以模型推测改写。；取得官方勘误或独立同版答案资料后裁定；未有证据前并列保存题面推导与副本参考答案。；核查官方勘误或独立同版资料的计价口径；在裁定前保留84π为编者推导、42.0为来源副本记载。；依据固定源重绘为独立TikZ矢量图，保留顶点次序、P所在边和向量箭头，不从示意图比例推断条件。；依据固定源重绘为独立TikZ矢量图，区分实棱、虚棱和辅助线，不按示意图比例添加几何条件。；依据固定源重绘为独立TikZ矢量图，保留垂直边、斜切线、切点和圆心标记，不推断精确比例。",
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_春季上海_含解析.md",
+        "questions": "2017/2017_数学真题_春季上海_试题.md",
+        "solution_body": "2017/2017_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9"
+      ],
+      "title": "2017 年·上海春季卷",
+      "track": "none",
+      "year": 2017
     }
   ],
-  "revision": 4588,
+  "revision": 4589,
   "schema_version": 1,
   "sources": [
     {
@@ -21267,8 +21337,8 @@
       "exam_type": "spring",
       "git_blob_oid": "ea2272d2b7ab09d2469b448ae373d9f32c4fb4b6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017春季上海.pdf",
       "regions": [],
       "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",

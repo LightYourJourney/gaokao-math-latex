@@ -18590,3 +18590,105 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1125
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定PDF第4页参考答案列(0,3-2√2)，而题面两不同根 r=3/2、s=7/4 给出 f(1)=3/8，超出该上界；独立推导范围为(0,1)。",
+  "fingerprint": "7c536c4502d33ab1111445eba3ee06af8f36461dcd85e772f6375a22200615f6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q12",
+  "resume_action": "查找官方勘误或独立同版原卷/答案以裁定差异；保持编者答案为非官方，不以模型推测改写。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1126
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面 f(x)=(x-1)^2 的单调递增区间为[1,+∞)，应选B；固定PDF第4页参考答案列D（递减区间）。",
+  "fingerprint": "b502b91998e2188e43fa3126581a529057d207dc8a2babd84ab3788a9605e0b8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q13",
+  "resume_action": "取得官方勘误或独立同版答案资料后裁定；未有证据前并列保存题面推导与副本参考答案。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1127
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题干按每米给圆形步道单价，按周长计价的最小总价为84π≈263.9千元；固定PDF第4页列42.0千元，恰未乘2π周长因子。",
+  "fingerprint": "b66540305042fe26927ecdd5e713b8b9059a62d08d5b6d486a4291834827f348",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q19",
+  "resume_action": "核查官方勘误或独立同版资料的计价口径；在裁定前保留84π为编者推导、42.0为来源副本记载。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1128
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面与图表清单均指向原卷正八边形及向量图；项目 figures 尚无对应 TikZ 文件。",
+  "fingerprint": "da73b3e55764c3f6ff5717260d23db961409685d2ed7773a7da09b2d6592ba79",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q16",
+  "resume_action": "依据固定源重绘为独立TikZ矢量图，保留顶点次序、P所在边和向量箭头，不从示意图比例推断条件。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1129
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面与图表清单均指向原卷长方体及辅助线图；项目 figures 尚无对应 TikZ 文件。",
+  "fingerprint": "8ec3c99bdf11741e1410acd5bbc38d99d3e1b40afcd9488d26ec6d248cb601ed",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q17",
+  "resume_action": "依据固定源重绘为独立TikZ矢量图，区分实棱、虚棱和辅助线，不按示意图比例添加几何条件。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1130
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面与图表清单均指向原卷两圆形步道切线图，项目 figures 尚无对应TikZ文件。",
+  "fingerprint": "d9e79b9993d434d7e7c8b1dfe6e8a60d7c66425174b4f525c863720700d8f5db",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2017-spring-shanghai",
+  "question_id": "gk-2017-spring-shanghai-q19",
+  "resume_action": "依据固定源重绘为独立TikZ矢量图，保留垂直边、斜切线、切点和圆心标记，不推断精确比例。",
+  "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
+  "status": "open",
+  "type": "figure-missing"
+}
+```

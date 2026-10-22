@@ -16,7 +16,13 @@ COMBINED = ROOT / "2017/2017_数学真题_春季上海_含解析.md"
 SOURCE_ID = "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9"
 SOURCE_SHA256 = "5379de046c452e20504865f84b019a4ad6b8e9edf73c209efe484fcbf68adc37"
 sys.path.insert(0, str(PROJECT / "tools"))
+import issues
+import make_short_answers
 import solution_sources
+
+
+PAPER_ID = "gk-2017-spring-shanghai"
+ISSUES = PROJECT / "missing-issues.md"
 
 
 class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
@@ -24,13 +30,20 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
     def setUpClass(cls):
         cls.manifest = json.loads((PROJECT / "source-manifest.json").read_text(encoding="utf-8"))
 
-    def test_fixed_source_fingerprint_is_preserved_without_claiming_official_original(self):
+    def test_fixed_source_is_bound_to_the_registered_paper_without_claiming_official_original(self):
         source = next(item for item in self.manifest["sources"] if item["source_id"] == SOURCE_ID)
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 4)
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], PAPER_ID)
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(source["upstream_path"], "春季高考/2017/2017春季上海.pdf")
+
+        paper = next(item for item in self.manifest["papers"] if item["paper_id"] == PAPER_ID)
+        self.assertEqual(paper["project_dir"], "2017_上海春季卷")
+        self.assertEqual(paper["question_count"], 21)
+        self.assertEqual(paper["source_ids"], [SOURCE_ID])
+        self.assertEqual(paper["production_state"], "blocked")
 
         self.assertTrue(TRANSCRIPT.is_file(), "the fixed-source transcription must be committed as a canonical input")
         transcript = TRANSCRIPT.read_text(encoding="utf-8")
@@ -39,6 +52,29 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
         self.assertIn("上游公开副本", transcript)
         self.assertIn("未核验为官方原件", transcript)
         self.assertIn("PDF 第 1–3 页", transcript)
+
+    def test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers(self):
+        paper = next(item for item in self.manifest["papers"] if item["paper_id"] == PAPER_ID)
+        paper_issues = [
+            item for item in issues.load_issues(ISSUES)
+            if item.get("paper_id") == PAPER_ID
+        ]
+        expected = {
+            (f"{PAPER_ID}-q12", "answer-conflict"),
+            (f"{PAPER_ID}-q13", "answer-conflict"),
+            (f"{PAPER_ID}-q19", "answer-conflict"),
+            (f"{PAPER_ID}-q16", "figure-missing"),
+            (f"{PAPER_ID}-q17", "figure-missing"),
+            (f"{PAPER_ID}-q19", "figure-missing"),
+        }
+
+        self.assertEqual(len(paper["issue_ids"]), len(expected))
+        self.assertEqual(
+            {(item["question_id"], item["type"]) for item in paper_issues},
+            expected,
+        )
+        self.assertTrue(all(item["status"] == "open" for item in paper_issues))
+        self.assertTrue(all(item["impact"] == "blocks_completion" for item in paper_issues))
 
     def test_transcription_covers_all_21_questions_and_preserves_high_risk_notation(self):
         self.assertTrue(TRANSCRIPT.is_file(), "the fixed-source transcription must exist before it can be checked")
@@ -136,6 +172,23 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
         answer_key = ANSWER_KEY.read_text(encoding="utf-8")
         self.assertIn("Q13 来源答案页列 D", answer_key)
         self.assertIn("Q19 来源答案页总造价写 42.0 千元", answer_key)
+
+    def test_short_answer_generator_accepts_editor_row_and_preserves_source_answer_row(self):
+        answer_key = ANSWER_KEY.read_text(encoding="utf-8")
+        paper = next(item for item in self.manifest["papers"] if item["paper_id"] == PAPER_ID)
+        sources = make_short_answers.paper_sources(
+            paper, make_short_answers.INDEX_METADATA
+        )
+
+        result, problems = make_short_answers.generate_short_answers(ROOT, sources)
+
+        self.assertEqual(problems, ())
+        self.assertIn("| 答案 | B | C | A | B |", answer_key)
+        self.assertIn("| 固定 PDF 第 4 页参考答案 | D | C | A | B |", answer_key)
+        self.assertIn(
+            "math-gaokao-latex/2017_上海春季卷/answers_short.tex",
+            result.targets,
+        )
 
     def test_detailed_solution_blocks_match_the_transcribed_question_structure(self):
         self.assertTrue(SOLUTION_BODY.is_file(), "detailed solutions must be stored independently from answer points")
