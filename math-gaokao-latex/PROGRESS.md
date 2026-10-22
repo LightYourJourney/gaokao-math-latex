@@ -8864,3 +8864,11 @@
 - 验证：`review_receipts.py finalize-batch` 返回 `FINALIZED`、revision 4595；随后 `check-batch` 返回 `FINALIZED`，`provenance.py check-batch` 显示 `OK：1 卷`，`source_manifest.py validate` 通过；`test_review_receipts.py` 72/72 通过。人工视觉检查覆盖全部41页，候选页另以原尺寸复核。正式PDF页数为4/6/18/13，receipt 哈希绑定当前来源与构建。
 - 成本：零 OCR、零商业API；本地 XeLaTeX、PDF 渲染与测试。Codex Token 与实际费用不可见，记未知。
 - 剩余/下一步：ISSUE-1125、1126、1127 的来源答案冲突及 ISSUE-1128、1129、1130 的图稿/来源问题仍开放；不得重做已核验题面与独立解答，也不得把该卷或整个项目标为完成。后续先按 issue 指向解决剩余来源/答案与图稿复核，再依门禁刷新受影响回执。此阶段的 Git 提交只纳入本批回执、报告、manifest 与进度记录，保留用户已有 `docs/design/` 工作区改动不动。
+
+### 2017 上海春季卷：图稿语义回执补注与 issue 对账（2026-10-22）
+
+- 已完成：针对已正式通过的四版逐页视觉回执，在12个含图页的 `figure_label` 说明中补充可追溯的语义边界：第16题 P 的绘制点、第17题投影比例、第19题坐标布局均仅作示意，不作为题设数据；补注明确依据来源图表清单和既有独立图稿复核，不改变原有页面通过结论。关闭图稿 issues `ISSUE-1128`、`ISSUE-1129`、`ISSUE-1130`，指纹保持不变。经正式 `finalize-batch` 事务将 manifest revision 4595→4596，批次仍为 `closed_with_blockers`；试卷仍 `blocked`，剩余阻塞为答案/来源冲突 `ISSUE-1125`、`ISSUE-1126`、`ISSUE-1127`。
+- 修改文件：`2017_上海春季卷/receipts/review.json`、`missing-issues.md`、`reports/phase4-b12.md`、`source-manifest.json`、本 `PROGRESS.md`。未改试卷题面、答案、解析、图稿、build receipt 或正式PDF；未触碰 `docs/design/`。
+- 验证：问题台账校验通过；`review_receipts.py finalize-batch` 返回 `FINALIZED`，随后目标批次 `check-batch` 返回 `FINALIZED`；`provenance.py check-batch` 为 `OK：1 卷`；`source_manifest.py validate` 通过；`test_review_receipts.py` 72/72 通过；`git diff --check` 通过。全库 `report.py check --all` 执行超过60秒仍未结束，已中止（exit 130），不记作通过；本目标批次的 report 与状态由 `finalize-batch`/`check-batch` 事务核验。此前针对官方评析页的定向检索未找到三题的逐题答案或勘误，因此三个答案冲突继续阻塞。
+- 成本：零 OCR、PDF 渲染、模型调用或商业 API；仅本地对账与72项测试。Codex Token/实际费用不可见，记未知。
+- 剩余/下一步：不重复已完成的四版校样或图稿独立复核。继续解决 `ISSUE-1125`–`ISSUE-1127` 需要可靠的逐题来源/勘误，保持现有题面与推导，不以当前发现推测修订答案；没有新权威证据时不关闭。后续处理应先针对单个问题找一手资料，再更新该卷受影响的来源/数学记录并按门禁局部刷新。

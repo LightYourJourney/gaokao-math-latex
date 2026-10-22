@@ -18647,14 +18647,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "正八边形与向量 TikZ 草稿已建立并登记，四版本地编译成功；独立复核确认顶点次序和箭头，指出 P 的绘图参数 pos=0.45 必须仅作示意点理解。规范题面和图稿均已注明该点位不表示精确比例；正式视觉回执尚未登记。",
+  "current_evidence": "正八边形与向量 TikZ 草稿已建立并登记，四版本地编译成功；独立复核确认顶点次序和箭头，指出 P 的绘图参数 pos=0.45 必须仅作示意点理解。规范题面及来源图表清单明确该绘制位置不表示题设精确比例。phase4-b12 正式视觉回执（build attempt bc3315cf-facc-4c00-a4e1-c832b5d68e4a）四版本共41页通过；12个含图页的 figure_label 注释现已补录上述图稿语义并引用独立复核/图表清单。",
   "fingerprint": "da73b3e55764c3f6ff5717260d23db961409685d2ed7773a7da09b2d6592ba79",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q16",
-  "resume_action": "在正式视觉回执中记录 P 仅为示意点、不表示题设位置；完成四版校样门禁后再关闭图稿问题。",
+  "resume_action": "已关闭：来源图表清单、独立图稿复核及正式四版视觉回执已共同记录 P 仅为示意点；若图稿或来源变更，再重开并复核受影响页面。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
@@ -18664,14 +18664,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "长方体与辅助线 TikZ 草稿已建立并登记；独立复核确认顶点连接、实虚线及辅助线与固定来源相符。正式四版视觉回执尚未登记，故问题仍阻塞最终验收。",
+  "current_evidence": "长方体与辅助线 TikZ 草稿已建立并登记；独立复核确认顶点连接、实虚线及辅助线与固定来源相符。来源图表清单及正式 phase4-b12 四版视觉回执记录图形标签/线型清晰，且投影比例仅为示意、不增添几何条件；41页全审通过，回执 build attempt 为 bc3315cf-facc-4c00-a4e1-c832b5d68e4a。",
   "fingerprint": "8ec3c99bdf11741e1410acd5bbc38d99d3e1b40afcd9488d26ec6d248cb601ed",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q17",
-  "resume_action": "完成四版视觉校样并登记正式回执；保持投影比例仅为示意，不增添几何条件。",
+  "resume_action": "已关闭：固定来源拓扑、示意比例边界及正式四版视觉检查均已记录；若图稿或来源变更，再重开并复核受影响页面。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
@@ -18681,14 +18681,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "两圆切线 TikZ 草稿已建立并登记；独立复核指出即使注明仅作排版，源码中的54°参数仍易被误读。现已删除θ及三角函数角度参数，改用仅为示意的坐标布局；四版本地编译成功（4/6/18/13页），四版第3页完成目视检查。最终源码与图像的独立复核已通过，确认无角度参数且坐标仅作排版示意；正式视觉回执仍待完成。",
+  "current_evidence": "两圆切线 TikZ 草稿已建立并登记；独立复核指出源码中的54°参数易被误读，现已删除θ及三角函数角度参数，改用仅为示意的坐标布局。最终源码/图像独立复核确认无角度参数；来源图表清单与正式 phase4-b12 四版视觉回执均说明示意布局不表示题设未给的角度或半径比例。41页全审通过，build attempt 为 bc3315cf-facc-4c00-a4e1-c832b5d68e4a。",
   "fingerprint": "d9e79b9993d434d7e7c8b1dfe6e8a60d7c66425174b4f525c863720700d8f5db",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "paper_id": "gk-2017-spring-shanghai",
   "question_id": "gk-2017-spring-shanghai-q19",
-  "resume_action": "先按门禁补齐/刷新当前题级 provenance，再完成正式四版构建与视觉回执；登记前保持问题开放，不把图示比例当作题设。",
+  "resume_action": "已关闭：最终图稿源码复核、来源图表清单和正式四版视觉回执已记录示意坐标及角度不构成题设；若图稿或来源变更，再重开并复核受影响页面。",
   "source_id": "src-480836465b22d00a9a18f0d5cdfe26306df617cbe558553c86a162ef92ea16c9",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
