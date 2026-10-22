@@ -26,7 +26,8 @@ class NationalArts1992SourceTests(unittest.TestCase):
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1992-regular-national-arts")
+        self.assertEqual(source["paper_relation"], "canonical")
         mirror = self.record["archive_mirror_verification"]
         self.assertEqual(mirror["repository"], "deekur/gaokaomath")
         self.assertEqual(mirror["commit"], "34c13a6cf632c0b69c95f89b9b923bbc4a08924d")

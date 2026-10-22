@@ -9056,3 +9056,12 @@
 - 影响与修改：`ISSUE-1070`（固定源图位空白）和 `ISSUE-1114`（Q12答案待核）继续开放；不采用候选 PNG 作为生产图、不把答案 B 提升为已核结论。仅修改本 `PROGRESS.md`；未改题目、答案、图稿、manifest、provenance、构建/视觉回执或 `docs/design/`。
 - 验证与成本：核对精确文件路径的公开 GitHub commit-history API 返回及提交说明，并与现有固定源/issue 状态对照；这是来源审计，没有转录、OCR、PDF 重渲染、编译或测试。一次只读公开 API 查询，无商业 API；Codex Token/实际费用不可见，记未知。
 - 剩余/下一步：不重复查询该文件的同一路径提交历史。只有获得具体原始出版页/扫描来源，或独立同版原卷，才继续判断图稿及答案；否则转向其他具备可核证据的待办，保持本卷 blocker，不推测补图或结案。
+
+### 1992 全国卷文/理：四版构建、逐页复核与批次收口（phase4-b15，2026-10-23）
+
+- 已完成：两卷（`gk-1992-regular-national-arts` / `-science`，各 28 题）在既有转录与独立盲解基础上完成注册（revision 4628）、provenance 三角色（4629/4632/4635/4636）、四版本生成与正式构建、14 段逐页视觉复核（文 7＋理 7，每页八项）、修复轮 8 项、重建后机械核验与回执覆盖，`finalize-batch` 返回 `FINALIZED`（revision 4641）。最终构建：文 试题4/解析20/简答6/印刷16 页，理 4/19/6/16 页，八份日志 0 警告。
+- 图稿：五幅 TikZ 图（文 Q6/Q14/Q26，理 Q6/Q14）由源内容流逐路径生成；早期草稿图迁入各卷 `figures/drafts/`，`来源校对.json` 与题面草稿的图链及草稿哈希同步更新（详见 `docs/superpowers/plans/2026-10-23-gaokao-1992-national.md` 记录节）。
+- 修改文件：`1992/` 两卷规范 Markdown、`1992_全国卷_{文科,理科}/` 下 `questions.tex`/`answers.tex`/`figures/`/`provenance.json`/`receipts/`/`来源校对.json`/`题面转录草稿.md`、`source-manifest.json`、`reports/phase4-b15.md`、报告投影与 `docs/source-inventory.md`、两份 1992 来源测试、本进度文件。PDF 与 PNG 留在被忽略的 `build/` 与临时目录，未入库。
+- 验证：`validate-receipts --paper` 两卷 OK；`check-batch phase4-b15` 为 `FINALIZED`；`provenance.py check-batch` 通过；`report.py check --all` 一致；全量单测 1753 项通过（含图稿 occurrences 守卫）。
+- 成本：无 OCR、外部模型或商业 API；仅本地 XeTeX/Poppler。
+- 剩余/下一步：两卷的来源疑点（文 Q16 `\dfrac{e^x-e^x}{2}`、文 Q27 `2-2y+1=0`、理 Q16 同式、理 Q26 端点记法）仍为 `needs-review`，属内容边界，不影响已完成的构建与视觉收口；取得同版可追溯原件后方可裁定，不据推测改题面。

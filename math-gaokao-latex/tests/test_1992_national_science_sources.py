@@ -25,7 +25,8 @@ class NationalScience1992SourceTests(unittest.TestCase):
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1992-regular-national-science")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(hashlib.sha256((PROJECT / "题面转录草稿.md").read_bytes()).hexdigest(),
                          self.record["draft_sha256"])
 

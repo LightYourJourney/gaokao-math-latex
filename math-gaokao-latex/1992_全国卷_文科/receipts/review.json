@@ -1,0 +1,2237 @@
+{
+  "batch_id": "phase4-b15",
+  "build_attempt_id": "e52535da-207e-4af1-8943-aebcb2817bd2",
+  "dependency_tree_sha256": "36e25df0d896e6ceb7ea48203fc6859e2a302bbeb3b016ca8d8b247d69935a94",
+  "editions": [
+    {
+      "candidate_override": null,
+      "candidate_pages": [
+        1
+      ],
+      "edition": "试题版",
+      "page_count": 4,
+      "pages": [
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文实测依据：pdffonts 显示正文中文全部走 OOOSSF+STSongti-SC-Regular、粗体走 KPCWAB+STSongti-SC-Bold（均 Identity-H 嵌入），数学为 LMRoman10/12、CMMI/CMSY/CMR 与 MSAM10，无 STHeiti 回落、无方框缺字；pdftotext 往返提取无替换字符；标题「1992 年·全国卷·文科」与页眉字形一致。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 1–4 连续，题号后为全角「．」（questions.tex \\gkti），无重号跳号；源页无大题标题，本页亦未加「一、选择题」类节头；卷首「数学」来自 \\gkpart{数学} 生成器统一结构标题（理科卷同），与页眉重名但未编号，不影响题号序列。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q1 四项 (A)2/3、(B)1、(C)3/2、(D)2 基线一致，两个分式按数学轴居中、括号与整数对齐；Q2–Q4 同行四项间距均匀；Q4 大括号与指数 8 位置正确，选项 −28／−7／7／28 左右对齐。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，故不适用——本卷三幅图分别落在第 2 页（Q6 幂函数四曲线）、第 3 页（Q14 正方体）、第 4 页（Q26 正方体与四棱锥），第 1 页只有题干与来源说明框。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左「1992 年·全国卷·文科·数学」、右「试题版」，横线贯通版心且不与标题相压；页脚居中「——第 1 页——」，与 PDF 实际第 1 页对应。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于第 4 题，页尾留白约 1.5 英寸，由 Q5 题块显式 \\Needspace{0.4\\textheight}（questions.tex 第 47 行）造成，属已接受类；无跨页断题、无页尾孤行标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt（ctexart zihao=-4），来源说明框为 \\small 约 10.5 pt 并整体缩进于框内，题号加粗与正文同号；三级字号稳定，未出现逐行跳变或压缩行距。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "全页无答案值与解题步骤，选择／填空处只留（　）与空白；来源说明框仅登记源内缺损与体例约定（如「疑为排印脱漏（应为 x−2y+1=0）」、Q16 分子两项指数同为 x），属题面校记而非题目答案，符合试题版无答案要求。",
+              "result": "pass"
+            }
+          ],
+          "page": 1,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文实测依据：中文 STSongti-SC 嵌入正常；Q6 的 ±、\\dfrac{1}{2}、y=x^n 上下标，Q11 的 ⩾（MSAM10 斜下横，与来源说明⑤相符）、扇区间符号 [ ] 均完整，无缺字或异体混入。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 5–13 连续，全角「．」，与源页逐题对应；本页无大题标题，未插入「一、选择题」类节头；无重号、无漏号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q7–Q9、Q11–Q13 单行四项基线与间距一致；Q10 四选项换行后 (C)(D) 与 (A)(B) 左端对齐（实测 (A)x=86.36 pt、(C)x=86.36 pt 同行起）。Q6 为两行 2×2 块：(A) 起于版心 x=62.36 pt，(C) 起于 x=86.36 pt，第二行缩进 24 pt（2 em，源页两行左端仅差约 1 pt）；该缩进来自模板对断行选项段的段首缩进，按已接受类「选项断行模板行为」记 pass，备查。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "修复后核验：Q6 图 C₃ 外框 y 227.8–237.1、C₄ y 239.2–248.5（分离 2.1pt），x 轴线 y≈249.60，C₄ 下标底 248.5，留 1.1pt 空隙；标签与轴、彼此均不再相交。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左右文字与横线同第 1 页一致；页脚「——第 2 页——」居中，页码与实际页序相符。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于第 13 题，页尾留白约 1.4 英寸，来自 Q14 题块 \\Needspace{0.15\\textheight} 使「题干＋正方体图」整体下移到第 3 页，属已接受类；无图题分离、无断题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt；Q6 图内标签统一 10.5 pt（与本卷另两幅图同规格），与题面 12 pt 形成正常层级；选项与题干同号，未见局部放大或缩小。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页无答案值与解析文字；Q6 只给 n 的四个取值 ±2、±1/2，未透露与 C₁–C₄ 的对应关系，无「故选」类字样。",
+              "result": "pass"
+            }
+          ],
+          "page": 2,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文实测依据：中文 STSongti-SC 嵌入正常；Q14 图内 A₁–D₁、M、N 下标，Q19 的 lim 下标 n→∞ 与 (−1)^{n−1}，Q21 的 3^{−x}／3^x 字形完整，无方框缺字或直排出错。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 14–23 连续（选择→填空过渡处无跳号），全角「．」；源页无大题标题，本页亦未加「二、填空题」；题号与源页一一对应。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "修复后核验：Q22 的 T/S 分式以 \\mbox 绑定，整式随「则」后的行首起排，不再出现分式跨行、行距被撑开。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q14 正方体 ABCD-A₁B₁C₁D₁：10 个标签齐全，M 位于 A₁B₁ 中点上方、N 位于 BB₁ 中点左侧，隐藏边 D₁D／DC／DA 以虚线绘制且走向与源一致；各标签均避让线条，未见相压或裁切。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左右与横线同前页一致；页脚「——第 3 页——」居中，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于第 23 题，页尾留白约 2 英寸，第 24 题由题块 \\Needspace{0.15\\textheight} 起于次页，属已接受类；无断题、无页尾孤行标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt；Q14 图内标签 10.5 pt；填空下划线 \\gkblank 与正文同号；全页字号分层一致，未见异常。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "填空题除 Q22 的分式外均为空白下划线，未印任何答案值；全页无解题步骤或「故选」类文字。",
+              "result": "pass"
+            }
+          ],
+          "page": 3,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文实测依据：中文 STSongti-SC 嵌入正常；Q25 的复数集粗正体 C、Q26 的 A₁B₁C₁D₁ 下标、Q27 的 ∠A、Q28 的 {a_n}／S_{12} 均完整；Q28 列表内用全角「，」系库内标点归一（源印半角逗号），同一句内一致，无混用。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 24–28 连续，全角「．」，小问（1）（2）缩进一致；正文止于第 28 题，无多余标题或残号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页无选择／填空选项；Q24–Q28 的公式与文字基线一致，（1）（2）两小问左端对齐，Q26 题干换行处公式未拆断。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q26 正方体与四棱锥：A、B、C、D、A₁、B₁、C₁、D₁、E、F 十个标签齐全；E 标在 AA₁ 虚线中点侧、F 标在 CC₁ 边中点侧，虚线（BA₁、BE、BD₁、ED₁）与实线（BF、D₁F、A₁D₁）走向与源页拓扑一致；标签均未压线，A、F 与源同位。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左右与横线同前三页一致；页脚「——第 4 页——」居中，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "末页自然收尾：正文止于第 28 题（约页面 55% 处），下部为末页余白，非被推空的页；无标题孤行、无跨页断题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt，Q26 图内标签 10.5 pt，与第 2、3 页三幅图规格一致；题号加粗与正文同号，未见字号异常。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "第 28 题只列（1）（2）两问，未印公差取值范围或最大项；Q27 保留源内缺损式「2−2y+1=0」而未补正；全页无答案、无解析。",
+              "result": "pass"
+            }
+          ],
+          "page": 4,
+          "result": "pass"
+        }
+      ],
+      "pdf_sha256": "200ef091af9bd3cd8311351f2a844f49245f8cbdb200308a8a6d4224d00e78b3",
+      "result": "pass"
+    },
+    {
+      "candidate_override": null,
+      "candidate_pages": [
+        1
+      ],
+      "edition": "解析版",
+      "page_count": 20,
+      "pages": [
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 逐字目视＋文本层核对：STSongti-SC-Regular/Bold 子集嵌入，无回落字体；文本层 632 行无 U+FFFD／□ 缺字；①②③ 圈号、「」引号、全角／、乘号×（1190.55×841.89）、真分式均正常出字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "标题「1992 年·全国卷·文科」＋副题「数学·解析版」；其下 \\gkpart{数学} 节头属全库模板行为（134 份解析版同现），非本卷新增标题；题号 1．–4． 全角「．」连续，无跳号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "四题选项均为单行四列，标签 (A)–(D) 左缘统一 86.36pt；第 1 题分数行与下一行墨迹间隙实测 1.0pt，与 1992 理科版同类块 0.8–1.9pt 同级，未相接。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable — 本页只有标题、来源说明框与文字题面，无插图可核。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左「1992 年·全国卷·文科·数学」、右「解析版」，下压 0.4pt 通栏横线；页脚居中「—— 第 1 页 ——」；全页墨迹 x 62.4–532.6pt，未越正文框 62.36–532.92pt。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文（第 4 题选项）止于 688.3pt，页脚基线 801.4pt，末留白约 92pt（12%）；第 5 题按 \\Needspace{0.4\\textheight} 整体移入次页，属既定留白。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "内容流 Tf 实测：正文 12pt（3272 次）、页眉页脚 10.5pt、主标题 18pt、副题 15pt、数学上下标约 8pt；说明框按宏 fontupper=\\small（10.5pt）属既定注记字号，层级无跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 解析版答案位于题面与解析之后；本页来源说明与题面均不含答案值。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 1,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视 Q5–Q13：⩾（MSAM10 斜下横）、√、真分式与上下标、区间方括号均正常；字体仍为 STSongti-SC＋LM/CM，无回落、无缺字框。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "Q5–Q13 共 9 题，题号 5．–13． 连续且与源页编号一致，无跳号、重号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "选项标签 (A) 统一起于 86.36pt；例外是第 6 题——选项紧随居中图后，首行落在 62.36pt、次行回到 86.36pt，两行左缘差 24pt。此属「图后段落失缩进」的模板行为（同卷试题版、1992 理科版同现，全库 134 份解析版一致），按已接受类「选项断行模板行为」不判 fail。两行分数墨迹间隙 1.0pt（Q10、Q12 同为 1.0pt），与理科版 0.8–1.9pt 同级，未相接。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 6 题幂函数图：x/y 轴箭头与字母、原点 O、两轴「1」刻度齐全；C1–C4 各贴对应曲线末端且互不交叠。C4 与 x 轴间距极紧（1200dpi 墨迹实测约 0.1pt，未越线），C3/C4 标签框相接而墨迹未触，仍可清晰辨读。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉格式同上，页脚「—— 第 2 页 ——」；墨迹 x 62.2–532.6pt 未越右缘。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 721.0pt，末留白 59pt（7.6%），为全段最小；第 14 题（含正方体图）按 \\Needspace 移至次页。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、页眉页脚 10.5pt、数学上下标 8pt／7.3pt；层级与第 1 页一致，无跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 解析版答案在题面与解析之后，本页题面不含答案值。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 2,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视 Q14–Q23：三次根式、√、∞（第 19 题极限）、省略号 ⋯、幂指数与真分式正常；第 16 题 e^x−e^x 系源内缺损照录（已登记），非本卷缺字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "Q14–Q23 连续，第 16 题按源缺损照录并以条件结论处理（不判 fail）；题号无跳号、重号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 14 题选项行（√3/2、√10/10、3/5、2/5）起于 62.36pt（紧随居中图后，同第 6 题模板行为），四标签同一基线；第 15、17、18 题起 86.36pt；第 16 题四条文字选项各占一行、左缘统一 86.36pt。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 14 题正方体：A/B/C/D 与 A1/B1/C1/D1 八顶点、M（A1B1 中点）、N（BB1 中点）齐全；隐藏棱 D1–D、D–A、D–C 虚线，M、N 及 AM/CN 实线在位，无标签遮挡。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页脚「—— 第 3 页 ——」；墨迹 x 62.2–532.6pt，未越正文框。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 675.1pt，末留白 105pt（13%）；第 14 题图文整体落在本页页首，属 \\Needspace 结果。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、页眉页脚 10.5pt；Q19 极限与 Q22 分数内嵌上下标 7.3–8pt，属常规数学缩号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 解析版答案在题面与解析之后，本页题面不含答案值。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 3,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视 Q24–Q28：度号°、√3、∈、粗正体 C、△ 与 ∠（第 27 题）、绝对值 |z| 均正常；第 27 题高线方程「2−2y+1=0」为源内缺损照录（已登记）。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "Q24–Q28 连续，(1)(2) 小问标号规范；第 28 题为全卷末题，编号与源页一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "not_applicable — 本页为解答题 Q24–Q28，无选择题选项行，亦无并列公式块可核。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 26 题正方体与四棱锥 A1–EBFD1：八顶点与 E（AA1 中点）、F（CC1 中点）齐全；侧棱 A1–E/B/F/D1、底棱 E–B、B–F、F–D1、D1–E 及隐藏棱虚线均与源图拓扑一致，无遮挡。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页脚「—— 第 4 页 ——」；墨迹 x 62.4–532.6pt，未越右缘。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "本页正文（第 28 题第 2 小问）止于 391.7pt，其下约 388pt 空白；系 解析版.tex 显式 \\clearpage 分隔「试题」与「参考答案与详细解析」的整页断点，属结构性分节，非分页异常。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt；本页无小字号注记，题号与题干同级，无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 解析版答案在题面与解析之后，本页仅有题目与图。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 4,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视第 1、2 题解析：换底公式真分式、log 下标、灰色注记、蓝色链接页码均正常；CJK 与数学字体无缺字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "节标题「参考答案与详细解析」不带编号；「第 1 题」「第 2 题」与题面 1、2 一一对应；灰字回链「（题目见第 1 页）」页码经 pageref 正确。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "两题重排选项行标签均起 86.36pt、同一基线；第 1 题「题目：」行与下方分数行墨迹间隙 0.4pt、选项分数行与「解析」行 0.84pt，属模板 \\lineskip 量级（全库同类 0.8–1.9pt），未相触。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable — 本页无插图。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页脚「—— 第 5 页 ——」；墨迹 x 62.4–532.6pt，未越右缘。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 614.6pt，末留白 165pt；第 3 题块需 \\Needspace 0.5\\textheight 预留而移至次页，属已接受类留白。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、页眉页脚 10.5pt；「第 N 题」题头 15pt 加粗、灰字回链 10.5pt，层级一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 解析版答案随解析给出，位于题面与解析之后，本页无提前泄题。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 5,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视第 3、4 题：二项式系数 (8 choose k)、指数 −1/3、真分式均正常出字，无缺字框。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "「第 3 题」「第 4 题」与题面编号一致，回链「（题目见第 1 页）」正确。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 3 题四选项同行、(A)–(D) 等距；第 4 题四选项同行；分数行与上下行墨迹间隙 ≥0.84pt，未相接。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable — 本页无插图。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页脚「—— 第 6 页 ——」；墨迹 x 62.4–532.6pt，未越右缘。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 614.9pt，末留白 165pt；第 5 题按 0.5\\textheight 预留移至次页。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt；行内与行间公式 12pt／8pt 协调，无跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 答案在解析之后，本页为解析正文。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 6,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600dpi 目视第 5、6 题：CJK 下标 S柱／S球、π、真分式均正常，无缺字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "「第 5 题」「第 6 题」与题面一致，回链「（题目见第 2 页）」正确。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 6 题两行选项（真分式）墨迹行距 1.0pt、标签基线齐；两行左缘 24pt 差同第 2 页说明（居中图后模板行为）。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 6 题图重排同题面：C1–C4 与曲线一一对应；C4 与 x 轴墨迹仅约 0.1pt（未越线），C3/C4 框相接而墨迹不交，可辨读。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页脚「—— 第 7 页 ——」；墨迹 x 62.4–532.6pt，未越右缘。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 679.0pt，末留白 101pt（13%），无异常断页。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、页眉页脚 10.5pt、下标 8pt，层级正常。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable — 答案在解析之后，本页为解析正文。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 7,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 7、8 题：log_a、log_b 下标、不等号链 0<a<b<1、分式 3/2、25/8、25/6 成型完整；汉字全为简体（题/见/页/解/析/答/案），无繁体、无豆腐块；pdffonts 全表 emb=yes（STSongti-SC-Regular/Bold、LMRoman10/12、CMMI/CMSY/CMEX）；构建日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 7 题（y=64.64）、第 8 题（y=269.89）连续，字号与缩进一致；两处「（题目见第 2 页）」（y=91.77/297.01）与试题版第 2 页实际含 Q5–Q13 相符，交叉引用正确。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q7 四项 (A)86.36/(B)198.38/(C)309.91/(D)399.92 同一基线 y=147.28；Q8 四项 86.36/165.12/257.53/325.05 同一基线 y=354.53，含 dfrac 的定界括号与标号同排、无错位；选项行最右墨迹 371.76pt，远在版心内；Q8 选项分母与次行「解析」最小净距 5.04pt（600 dpi 连通分量测距），未接触。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页为第 7、8 题（选择题），无插图或表格，无需核对图形标注。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」（x=62.36 起）与「解析版」（x=501.41–532.91，y=24.64–35.15）就位，页眉横线 y=37.44–37.62；页脚「——第 8 页——」居中（y=800.39–811.45）；与 p9–p14 逐页同位，正文未侵入页眉页脚。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q7、Q8 各题完整不跨页；正文末 y=457.78，其后至页脚留白 342.6pt，为 Q9 整题不落本页触发的 \\Needspace 留白（接受类）；构建日志 Overfull=0、Underfull=0；版面最右墨迹 533.52pt，仅超版心右缘（532.91pt）0.61pt，属行末全角标点悬挂（≤1pt，接受类）。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt（「第」「题目：」「解析」「答案：」字框高实测 12.00）、题注 10.5pt、页眉页脚 10.5pt、答案框内 12.0pt；逐行字高分布无 11/13pt 等离群值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义即呈现完整解析与答案框（本页「答案：B」「答案：D」），答案出现属该版本设计，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 8,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 9、10 题：S-ABCD、SA⊥底面、y²=2x、x=−1/2、|b|=b²/2+1/2、(u−1)²=0、b=±1、(x−1/2)²+(y−1)²=1 的上下标、绝对值与分式成型完整；汉字全简体，无缺字方框；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 9 题（y=64.64）、第 10 题（y=269.95）连续；题注 y=91.77/297.07 均指向第 2 页，与试题版分页（p2 含 Q5–Q13）相符。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q9 四项同一基线 y=147.28（x=86.36/145.93/205.01/264.25）；Q10 为 2×2 块，(A)(B) 基线 y=352.58、(C)(D) 基线 y=377.66，第二列 (B)257.48/(D)254.57 差 2.91pt，属全库 2×2 自由流约定（接受类）；选项内 1/4、1 分式与括号未裁切，最右墨迹 532.56pt 未越版心。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页为第 9、10 题，无插图或表格。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉文字与横线（y=37.44–37.62）位置同 p8；页脚「——第 9 页——」居中 y=800.39–811.45，页眉页脚未被正文侵入。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q9、Q10 完整落版、未拆断；正文末 y=609.87，至页脚留白 190.5pt，属 Q11 整题不落本页的 \\Needspace 留白（接受类）；构建日志 0 Overfull/Underfull；最右墨迹 532.56pt ≤ 版心 532.91pt（文本层 540.46pt 为全角括号侧边）。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、题注 10.5pt、页眉页脚 10.5pt、答案框内 12.0pt；居中行间公式字体层级与正文一致，无离群字号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义呈现解析与「答案：D」框，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 9,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 11、12 题：sin x ⩾ 1/2、[0,2π]、区间 [π/6,5π/6]、ax+by+c=0（ab>0）成型完整；汉字全简体；分式 1/2 与 π 记法无缺字；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 11 题（y=64.64）、第 12 题（y=304.66）连续；题注 y=91.77/331.78 指向第 2 页，与试题版 Q5–Q13 分页一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q11 四项同一基线 y=155.19（x=86.36/160.01/243.98/328.13），含 dfrac 的方括号上下延伸但未压上下行、标号与区间同排；Q12 2×2 基线 y=406.01/424.74，第二列 (B)207.73/(D)207.60 差 0.13pt；最右墨迹 532.56pt。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页为第 11、12 题，无插图或表格。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」与「解析版」位置同前页，横线 y=37.44–37.62；页脚「——第 10 页——」居中（两位数页码使起点左移 2.6pt，仍居中），y=800.39–811.45。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q11、Q12 完整落版、未拆断；正文末 y=513.17，至页脚留白 287.2pt（Q13 整题不落本页的 \\Needspace 留白，接受类）；0 Overfull/Underfull；最右墨迹 532.56pt，未越版心。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、题注 10.5pt、页眉页脚 10.5pt、答案框内 12.0pt；居中区间公式字号与正文一致，无离群值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义呈现解析与「答案：B」「答案：A」框，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 10,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 13、14 题：tan α−cot β 的分式链、−cos(α+β)/(cos α sin β)、α+β<3π/2 及正方体图内 A₁ 等下标成型完整；全页无缺字方框；pdffonts 全表 emb=yes；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 13 题（y=64.64）、第 14 题（y=377.20）连续；题注 y=91.77 指向第 2 页、y=404.32 指向第 3 页，与试题版自 Q14 起换至 p3 相符。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q13 四项同一基线 y=153.64（86.36/158.70/230.55/332.40）；Q14 四项同一基线 y=621.06，整体起于 x=62.36（题图后选项齐左，接受类），√3/2、√10/10、3/5、2/5 与标号同排无错位；Q14 选项分母与次行「解析」（y=639.13）最小净距 1.62pt（连通分量测距），白隙可见、未接触未重叠，宽于全库 0.8pt 先例，记录备查。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q14 正方体 ABCD-A₁B₁C₁D₁：A、B、C、D、A₁、B₁、C₁、D₁、M、N 共 10 个标签齐全，主标字高 9.29pt、下标 6.50pt 全图统一；M 在 A₁B₁ 中点、N 在 BB₁ 中点，与题干一致；虚线 3 条为 AD、DC、DD₁（不可见棱），AM、CN 为实线；600 dpi 连通分量检验 10 个标签均为独立墨迹分量，与线网最小净距 A₁ 0.54/C₁ 1.08/B₁ 1.08/D₁ 1.26/M 2.52/N 3.06/C 2.88/D 9.90/A 2.70/B 3.60 pt，无压线、无遮挡；A₁ 在阈值 100–245 六档下分量均不合并，属贴边未压线，仅记录。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉文字、横线（y=37.44–37.62）与页脚「——第 11 页——」（y=800.39–811.45）位置同前页；图块未侵入页眉页脚。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q13、Q14 题干与解析起始同页；Q14 解析自本页末续排至 p12，题干未被拆断；正文末 y=712.08，距页脚 88.3pt；最右墨迹 532.56pt；构建日志 0 Overfull/Underfull。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、题注 10.5pt、图内标签 9.29pt（10pt 数学斜体档）、页眉页脚 10.5pt；同层级字号全页一致，无离群值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义呈现解析与「答案：C」「答案：D」框，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 11,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核：向量箭头 AM→/CN→、(1/2,0,1)、(0,−1,1/2)、模 √5/2、点积 1/2、cos θ=2/5、复数 |z|=2、|z−i|=3、z=−2i 成型完整；无缺字与方框；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 15 题（y=203.82）承 p11 第 14 题连续编号；题注 y=230.94 指向第 3 页，与试题版 p3 含 Q15 相符。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q15 四项同一基线 y=286.46（x=86.36/133.93/181.00/238.24），√5 与整数选项同高排布，无错位、无遮叠；最右墨迹 483.4pt，远在版心内。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页无插图或表格（Q14 图在 p11），无需核对图形标注。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉文字与横线（y=37.44–37.62）位置同前页；页脚「——第 12 页——」居中 y=800.39–811.45，与 PDF 页码一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "本页首行为 Q14 解析续排，首行含大向量与分式，墨迹顶 y=51.92（高于常规首行 64.0），但距页眉横线 y=37.62 仍有 14.3pt，未侵入页眉；正文末 y=417.31，至页脚留白 383.1pt，为 Q16 整题不落本页的 \\Needspace 留白（接受类）；0 Overfull/Underfull。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、答案框内 12.0pt、题注 10.5pt、页眉页脚 10.5pt；行间公式（cos θ）字号层级正常。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义呈现解析与两处「答案：D」框，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 12,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 16 题：y=(e^x−e^x)/2、e^x−e^{−x}、t−1/t=2y、t=y+√(y²+1)、f^{−1}(x)=ln(x+√(x²+1))、导数 1/√(x²+1) 的上下标与根号成型完整；汉字全简体；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 16 题（y=64.64）承 p12 第 15 题连续编号；题注 y=91.77 指向第 3 页，与试题版 p3 含 Q16 相符。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q16 为文字型四选项，纵向单列 (A)147.28/(B)166.00/(C)184.72/(D)203.44，行距恒为 18.72pt，标号与正文同基线，无错位或遮叠。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页仅第 16 题，无插图或表格。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉文字与横线（y=37.44–37.62）位置同前页；页脚「——第 13 页——」居中 y=800.39–811.45；全宽答案框未触及页眉页脚。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q16 完整落版；条件结论答案框横跨版心 x=63.54–531.54、y≈425.7–466.9，框内文字起于 x=69.58、最右墨迹 524.16pt，四周约 6pt 内边距、未溢框；正文（含框底）末 y≈466.9，至页脚留白约 334pt，为 Q17 整题不落本页的 \\Needspace 留白（接受类）；文本层最右 539.77pt 为句末全角句号侧边，400 dpi 墨迹实测右缘 532.08pt，未越版心（≤1pt 悬挂，接受类）；0 Overfull。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、答案框内文字 12.0pt、题注 10.5pt、页眉页脚 10.5pt；框内两行字号一致，无离群值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版本就含「答案：C（条件结论…）」框，答案与解析属该版本应有内容，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 13,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 复核第 17、18 题：x²+bx+c、f(2+t)=f(2−t)、对称轴 x=2、f(2)=c−4、√(a²+b²+c²)=√((a+b+c)²−2(ab+bc+ca))=√(36−11)=5、2√3/√14 成型完整；汉字全简体；Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 17 题（y=64.64）、第 18 题（y=332.26）连续；题注 y=91.77/359.38 均指向第 3 页，与试题版 p3 含 Q17、Q18 相符。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q17 为 2×2：(A)86.36/(B)225.92 基线 y=147.28，(C)86.36/(D)225.60 基线 y=166.00，第二列差 0.32pt（自由流约定）；Q18 四项同一基线 y=433.61（86.36/149.80/212.75/259.99），2√3、√14 与整数同排，无错位。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "not_applicable——本页为第 17、18 题，无插图或表格。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉文字与横线（y=37.44–37.62）位置同前页；页脚「——第 14 页——」居中 y=800.39–811.45，与 PDF 页码一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q17、Q18 完整落版；第 18 题题干末「（　）」独占一行（文本层 x=54.42 为全角括号侧边，400 dpi 墨迹实测起 x=62.28，与正文左缘齐平），系长题干断行所致，与全库既有「长式断行不规范但非阻断性」判定同型（先例判 pass），本页无重叠、0 Overfull，建议该题干加不可断行分组（本次只审不改）；正文末 y=546.71，至页脚留白 253.7pt（\\Needspace，接受类）。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12.0pt、题注 10.5pt、页眉页脚 10.5pt、答案框内 12.0pt；行间公式与正文层级一致，无离群字号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "not_applicable——解析版按版本定义呈现解析与「答案：A」「答案：C」框，不构成泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 14,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『第 19 题』『题目』『解析』『答案：』与『（题目见第 3 页）』均为简体字形，STSongti-SC 已子集嵌入；极限下标、等比数列分式、三点省略、下划线填空与 −√5/5 均正常，无豆腐块、缺字或字体回退。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "本页题号 19、20 顺序连续，与前页止于 18、后页起于 21 吻合；两题均为『第 N 题』加页码指引，无重号跳号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q19、Q20 均为填空题，本页无 A–D 选项行，无选项与公式可作对齐比较。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图（本卷插图仅 Q6、Q14、Q26），无图号、图注与图内标注可查。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』加右端『解析版』，页脚『——第 15 页——』；页码与实际页序一致，位置与 p16–p20 逐点相同。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "页末留白 249 pt（约 35%），系 Q21 题块按 \\Needspace 整体下移所致（已接受类）；本页无孤行、无跨页断题、无重复内容。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文中文 12 pt、页眉 10.5 pt、题源指引 10.5 pt、行间公式 15.6 pt 档、下标 7.1 pt 档，与 p16–p20 完全一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版体例为题目＋完整解析＋答案框，答案本就明示，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 15,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：分式 (1+3^{−x})/(1+3^x)、二项式系数、2^{10}=1024 与 15/128 均正常渲染；『令』『则』『方程化为』『检验成立』字形正确，无缺字或回退字体。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "本页题号 21、22 连续，紧接 p15 的第 20 题，无跳号或重号；两题均带『（题目见第 3 页）』。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q21、Q22 为填空题，本页无 A–D 选项行，无选项对齐可言。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，无图号、图注或图内标注可查。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚文字同 p15，页码『第 16 页』与实际页序一致，位置一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "页末留白 225 pt（约 32%），系 Q23 题块 \\Needspace 下移所致（已接受类）；无孤行、无重复内容。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt、页眉 10.5 pt、公式 15.6 pt 档，与相邻页一致，无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版明示答案与解析，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 16,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：sin²20°、cos²80°、√3、双曲线方程及两枚答案框内分式均正常，无缺字或方块。另记：Q23 答案框句末无句号而 Q24 有句号，属源文标点不统一，不在八项检查范围，仅供参考。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "本页题号 23、24 连续（接 p16 第 22 题），编号与页码指引一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q23、Q24 为填空题，本页无选项行。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图（Q26 图排在 p18）。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚文字同前，页码『第 17 页』正确，位置一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "页末留白 178 pt（约 25%），Q25 题块下移（已接受类）；本页『又』单独成行系源文件自成一节的引导行（首行缩进 86.4 pt，answers.tex 中独立成段），非断行孤字。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt、页眉 10.5 pt、公式 15.6 pt 档、上下标 7.1 pt 档，与其余页一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版明示答案，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 17,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：复数方程 z−2|z|=−7+4i、r²=x²+16、3x²−14x+15=0 与两解 z=3+4i、z=5/3+4i 均正常；『如图』『正方体』字形正确，无豆腐块。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 25、26 连续（接 p17 第 24 题），无重号跳号。附记：本页末『解析』左边界 62.4 pt，其余各页均为 86.4 pt（紧随图片环境所致），属轻微缩进不一致，未达失败。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q25 为方程求解、Q26 为立体几何解答题，本页无选项行。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "修复后核验：Q6 图 C₃ 外框 y 227.8–237.1、C₄ y 239.2–248.5（分离 2.1pt），x 轴线 y≈249.60，C₄ 下标底 248.5，留 1.1pt 空隙；标签与轴、彼此均不再相交。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚文字同前，页码『第 18 页』正确，位置一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "修复后核验：Q26「解析」标题已随 Needspace 与正文整体移至 p19 页首，p18 以题图收束，无孤悬标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt、图内顶点标注 9.3 pt（约 9 pt，符合本卷图内字号规范）、下标 6.5 pt，字号规范一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版明示答案，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 18,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：向量箭头（EB、BF、FD₁）、空间坐标写法、叉积式 S=|EB×BF|=√6/2·a²、Q27 条件结论中的『2−2y+1=0』与角括号均正常显示，无缺字或错字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "本页为 Q26 续解（无重复题头）＋第 27 题；题号与 p18 的 25、26 及 p20 的 28 连续，无跳号重号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q27 为解答题，本页无 A–D 选项行。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图（Q26 图排在 p18）。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚文字同前，页码『第 19 页』正确，位置一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "修复后核验：p19「面积为」整体连续、不再拆成「其面／积」；「则」已并入前句，无单字孤行。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt、页眉 10.5 pt、公式 15.6 pt 档，与其余页一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版明示答案，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 19,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：{a_n}、S₁₂>0、S₁₃<0、24/7、a₆ 与 12/7 及两枚答案框均正常，无缺字或方块。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第 28 题，含 (1)(2) 两小问；接 p19 第 27 题，编号连续，无重号跳号。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "(1)(2) 为解答小问编号而非选项，本页无 A–D 选项行。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，无图注可查。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚文字同前，页码『第 20 页』正确，为本卷解析版末页。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "末页正文止于 y≈546 pt，其后 224 pt 为文档收尾留白，非缺页。『故』单字成段与 p17『又』同属源文件刻意写的引导行（首行缩进 86.4 pt，answers.tex 中独立成段），非断行孤字；两枚答案框完整落在页内。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12 pt、页眉 10.5 pt、行间公式 15.6 pt 档，与其余页一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "解析版明示答案，答案泄漏检查不适用。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 20,
+          "result": "pass"
+        }
+      ],
+      "pdf_sha256": "37fe26dd04c316e56128ac70ad98eb58fbe87209780cf1904b3e4d20f284058c",
+      "result": "pass"
+    },
+    {
+      "candidate_override": null,
+      "candidate_pages": [
+        1
+      ],
+      "edition": "简答版",
+      "page_count": 6,
+      "pages": [
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "嵌入字体为 STSongti-SC-Regular/Bold（简体宋体）+ LM/CM 数学字体；pdftotext 文本层 0 个 U+FFFD、0 个豆腐块（□）；「、。；：」「」均为全角，题号句点为全角「．」；第 11 题不等号按 MSAM10 斜下横渲染为 ⩾；构建日志无 Missing character / Overfull。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "主标题 18pt、副题 14.4pt 居中（中心 297.6pt＝版心中线）；节标题「数学」14.4pt 加粗左齐；题号 1．–4． 全角句点、连续无重号。注：科目「数学」在副题与节标题中各出现一次（\\gkpart{数学} 所致，源页无节头，属结构冗余不属错号）。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q1–Q4 四个选项行行首墨迹均为 86.4pt（左端同列），标号 (A)–(D) 与其公式同行、无孤立标号；Q1 (A)2/3、(B)1、(C)3/2、(D)2 与公式基线齐。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；本卷三幅图分别位于第 2 页（Q6 幂函数）、第 3 页（Q14 正方体）、第 4 页（Q26 正方体与四棱锥）。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左「1992 年·全国卷·文科·数学」右「简答版」(10.5pt)＋横线；页脚「——第 1 页——」居中于 297.6pt；与其余 5 页页眉字符串、横线位置逐字一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=676pt，页底余白 94pt，系 Q5 的 question 环境 \\Needspace{0.15\\textheight} 触发（已接受类留白）；Q4 选项未与题干分离，页内无重复内容。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "18pt 主标题／14.4pt 副题／14.4pt 节标题／12pt 正文／10.5pt gktip 来源说明框，层级稳定；正文各行字宽实测 12.0pt 无漂移。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "简答版答案集中于第 5–6 页「答案速查」，第 1–4 页题面不含答案；按简答版约定（答案速查在题面之后）不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 1,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "沿用 STSongti-SC 简体宋体 + LM/CM；Q7 下标 log_a 2／log_b 2、±、−、分数均正常；文本层 0 个替换字符、0 个豆腐块；构建日志无 Missing character。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 5．–13． 连续、全角句点、无重号；与第 5 页答案表 5–13 列一一对应。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "修复后核验：Q6 选项已合并为单段，四个选项同一行、行首一致（不再出现第二段 24pt 缩进）。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q6 幂函数图：四条曲线与 C₁–C₄、x、y、O、两处「1」共 9 个标注齐全，路径（4 条贝塞尔曲线）与标签中心逐点取自源 PDF 内容流；C₄ 标签基线与 x 轴相切（实测间隙 0pt，源页约 2.7pt），字可辨、未压线未遮挡其他标注，按「按源页拓扑重绘」不改。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「简答版」、横线；页脚「——第 2 页——」，与第 1 页几何完全一致，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=713pt（页底余白 57pt），Q14 由 question 环境 \\Needspace 推至下页（已接受类）；Q6 图与其选项、Q9 的「（　）」末行均为题干自然换行，未产生空页或重复内容。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、页眉 10.5pt，与第 1 页一致；Q6 图内标注 10.5pt 统一，图内与正文无字号串扰。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "第 2 页为纯题面（Q5–Q13），无答案标记；简答版约定不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 2,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "STSongti-SC + LM/CM；Q19 极限号、⋯、(−1)^{n−1}、Q21 分式、Q23 双曲线方程渲染正常；0 替换字符、0 豆腐块；无 Missing character。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 14．–23． 连续、全角句点、无重号；选择题止于 18、填空题自 19 起，与答案页分组（1–18/19–23）吻合。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q14 四个选项同一行、行首 62.4pt（图后段落齐左，已接受类）；Q15/Q16/Q17 选项行首均为 86.4pt，块内两行（Q17 的 A/B 与 C/D）左端一致；无孤立标号、分数与标号同行。Q22 的 T/S 分数落在续行行首，属行内公式自然换行，可读。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q14 正方体：8 顶点 + M、N 共 10 个标注齐全；M 在 A₁B₁ 中点 (42.5,87.1)、N 在 BB₁ 中点 (79.3,50.2)，AM 与 CN 连线端点正确；虚线 A—D、D—C、D—D₁ 对应三条不可见棱；标注互不遮挡、不压线，与源内容流逐点一致。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚同前，「——第 3 页——」页码正确，横线贯通版心 62.4–532.9pt。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=662pt，页底余白 108pt，Q24 由 \\Needspace 推至第 4 页（已接受类）；Q18 末行仅「（　）」为题干换行，无孤行选项、无重复。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、图注标注 10.5pt、页眉 10.5pt；Q14 图内标注与 Q15 正文无字号串扰。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "第 3 页为纯题面（Q14–Q23），无答案；简答版约定不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 3,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "STSongti-SC + LM/CM；Q24 的 °、√3、Q25 ｜z｜、Q26 的 A₁−EBFD₁、Q28 的 ⋯ 渲染正常；0 替换字符、0 豆腐块；无 Missing character。第 27 题按源照录「2−2y+1=0」，与来源说明框登记一致。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 24．–28． 连续、全角句点、无重号；Q28 内含 (1)(2) 两小问，缩进层级正确。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页为解答题 24–28，无选择题选项，无需对齐的选项/公式列。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q26 正方体与四棱锥：A₁ B₁ C₁ D₁ A B C D E F 共 10 个标注齐全；E 在 AA₁ 中点 (31.9,76.1)、F 在 CC₁ 中点 (79.8,49.9)；7 实线 7 虚线（AE、ED₁、EB、A₁F、A₁B、AD、DC、DD₁ 的虚实归属正确）；「A」标注紧贴虚线 AD 上方（源页同位置），未压字、未遮挡。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚同前，「——第 4 页——」页码正确；页眉与横线位置与前三页逐字一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=378pt，页底余白 392pt——试题部分至此结束，壳文件 \\clearpage 起「答案速查」（版式结构，非缺页）；本页无重复内容、无孤行选项。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、图内标注 10.5pt、页眉 10.5pt；Q26 图与 Q27 题干之间无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "第 4 页为纯题面（Q24–Q28），第 26 题答案 a³/6 仅出现在第 6 页；简答版约定不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 4,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "STSongti-SC + LM/CM；√5、分数线、二次曲线方程渲染正常；0 替换字符、0 豆腐块；无 Missing character。注：答案条目「19.」用半角句点，题面题号为全角「19．」，同一卷内两种写法并存（属条目列表体例，字形本身无误）。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "「答案速查」18pt；「选择题」「填空题」14.4pt；题号 1–18 与答案同行逐列对应，19–23 与题面填空题编号一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "选择题表 18 列：每个答案字母中心与上方题号中心完全重合（126.1/146.9/167.8/188.5/209.2/229.8/250.1/270.7/291.6/313.9/337.7/361.4/385.1/408.8/432.5/456.2/480.0/503.7pt）；填空题 19–23 标号右对齐、公式同起 93.6pt，竖排分式取 \\dfrac 无高低错位。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图（答案速查为表格与条目）。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚同前，「——第 5 页——」页码正确；节标题与表格三线未越出版心。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=398pt，页底余白 372pt——「解答题」被 \\gkpart 的 \\Needspace{0.6\\textheight} 推至第 6 页（已接受类留白）。该预留本为「标题＋首个解析块」设计，对 5 行速查偏大，导致本页半空、末页更空，属版式取舍非缺页。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "18pt 节题／14.4pt 小节／12pt 表格与条目／10.5pt 页眉；表内题号与答案同为 12pt，无串号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页即「答案速查」正文，答案集中于此为该版本设计；按简答版约定不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 5,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "STSongti-SC + LM/CM；Q24 的 1/4、Q25 正体 i、Q26 的 a³、Q27 括号内条件结论、Q28 的 −24/7 渲染正常；0 替换字符、0 豆腐块。注：24–27 句末带「。」、28 与第 5 页 19–23 无句末标点，标点体例不统一（不影响可读）。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "「解答题」14.4pt；24.–28. 标号右对齐、条目正文同起 93.6pt；27. 换行次行「登记）。」悬挂缩进与首行文本起点同为 93.6pt，未错位。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页仅解答题答案条目，无选择题选项可对齐。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉页脚同前，「——第 6 页——」页码正确，与第 1–5 页逐字一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "正文止于 y=217pt，末页余白 553pt（文档结束于此）；无重复内容、无跨页断裂条目。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 12pt、节标题 14.4pt、页眉 10.5pt；与第 5 页同字号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页为答案速查的解答题部分，答案集中于此为该版本设计；按简答版约定不判泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 6,
+          "result": "pass"
+        }
+      ],
+      "pdf_sha256": "df5c4ec7613e5d2a27e2fb51a4e1e2d4ca3f1fc035a74ef0007015541bea1968",
+      "result": "pass"
+    },
+    {
+      "candidate_override": null,
+      "candidate_pages": [
+        1
+      ],
+      "edition": "印刷版",
+      "page_count": 16,
+      "pages": [
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文实测依据：正文中文全部走嵌入 STSongti-SC（Regular/Bold，Identity-H），数学为 LMRoman9/10/12、CMMI/CMSY/CMR、MSAM10、CMEX10；pdftotext 逐页提取无 U+FFFD，常见繁体字（學/數/國/與/為）零命中；第 1 题分式与 log 上下标字形完整，来源说明框内「．」「。」归一结果与 questions.tex 一致。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "卷首居中「1992 年·全国卷·文科／数学·印刷版」；其下 \\gkpart 生成的分节标题「数学」不编号；题号 1．–5．连续、粗体加全角句点，无重号跳号，与源卷 1–28 连续编号一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 1–5 题选项均单行：(A)–(D) 同一基线（ymin=364.9／409.6／448.2／498.5／534.7 pt），行首统一 x=66.4 pt。第 2 题题干分式分母「25」字框 x=112–123.5 pt、y=102.8–115.8 pt，与「(B)」左括号墨迹 x=109.7–112.0 横向相距约 5.5 pt，无墨迹相碰。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，故不适用——本卷三幅图分落第 2 页（第 6 题幂函数四曲线）、第 3 页（第 14 题正方体）、第 4 页（第 26 题正方体与四棱锥），第 1 页仅有题面与来源说明框。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左「1992 年·全国卷·文科·数学」、右「印刷版」，全页眉中「数学」仅出现 1 次（页内另两处「数学」为卷首副题与 \\gkpart 分节标题，非页眉）；页脚「——第 1 页——」页码正确，中心较版心中心左偏约 18 pt、页眉横线短 35.9 pt 均为全库基线（b12/b20 裁定）。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 251 pt 空白（末行墨迹 ymax=545.2 pt，版心底界 796.65 pt）：第 6 题（题干 2 行＋图＋两行选项）整体超过 question 环境 \\Needspace{0.15\\textheight} 预留，被推至第 2 页；属已接受的 \\Needspace 留白，页末无孤置标题、无孤行。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 CJK 实测 10.5 pt（五号，pdftotext 字框高 10.5）；卷首标题 15 pt／副题 12 pt、分节标题 12 pt、页眉 9 pt；来源说明框 9 pt 系 gktip 宏 fontupper=\\small 的设计值，非正文缩小。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为「题目＋完整解析」合订本，答案与解析公开属该版本定义，不按泄漏计。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 1,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "题干、选项与图内 C₁–C₄、O、x、y 字形完整，字体同第 1 页；无 U+FFFD、无繁体字。第 11 题 ⩾（MSAM10 斜下横）与其余 < / > 的用法符合卷首字样约定。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 6．–13．连续，无重号跳号；第 12 题题干跨行时题号仍在行首，(A)–(D) 紧随其后另起行。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "修复后核验：Q6 选项已合并为单段，四个选项同一行、行首一致（不再出现第二段 24pt 缩进）。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "修复后核验：Q6 图 C₃ 外框 y 227.8–237.1、C₄ y 239.2–248.5（分离 2.1pt），x 轴线 y≈249.60，C₄ 下标底 248.5，留 1.1pt 空隙；标签与轴、彼此均不再相交。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左右与第 1 页逐字一致（「数学」仅 1 次），页脚「——第 2 页——」，页码连续，横线短 35.9 pt／页脚左偏 18 pt 属基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "修复后核验：Q12「那么 l2 的方程是（　）」以 \\mbox 绑定，括号与前置文字同处末行，不再独占一行。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "题干、选项与解析正文均 10.5 pt，行内 \\dfrac 按其数学尺寸排版；页眉 9 pt。全页 CJK 字框统计以 10.5 pt 为主峰，无正文缩字号迹象。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合订本，本页只有试题块，答案公开属版本定义，不按泄漏计。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 2,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "简体中文与数学字形完整。第 16 题分子照录源缺损「e^x − e^x」（两项指数同为 x、第二项确无负号笔画），与 questions.tex 及卷首存疑登记逐字一致；第 14 题 √3、√10 根号上划线覆盖整数字；第 25 题复数集为粗正体 C。无 U+FFFD。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 14．–25．连续，无重号跳号；第 16 题选项 (A)–(D) 各占一行，编号完整。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 14 题选项单行、图后齐左 x=45.4 pt（已接受）；第 15、16、17、18 题选项均自 x=66.4 pt 起，第 17 题两行 66.4/66.4 对齐，(A)–(D) 同基线（y=216.5／254.0／293.9…／375.5／426.9 pt）。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 14 题正方体：A、B、C、D、A₁、B₁、C₁、D₁ 与中点 M（A₁B₁）、N（BB₁）标注齐全；N 标注置于 BB₁ 左侧、CN 连线自棱上一点起笔，未压线；D 标注置于背底角内侧、避让虚线；隐藏棱 D–A、D–C、A–A₁ 用虚线，投影约定正确。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 3 页——」，页码正确，横线/页脚偏移属基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 189 pt 空白（末行 ymax=607.2 pt）：第 26 题题块含图，整体移至第 4 页，属 \\Needspace 留白；页末为第 25 题完整题行，无孤置标题、无孤行。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文与填空题干均 10.5 pt（CJK 字框主峰 10.5），题号为同号加粗；页眉 9 pt。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合订本，本页仅试题与填空横线，答案公开属版本定义。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 3,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "第 26 题图内 A₁/B₁/C₁/D₁ 与 E、F 下标，第 27 题方程（照录源缺损「2−2y+1=0」）、第 28 题数列记号字形完整；分隔线后「参考答案与详细解析」字形正常；无 U+FFFD、无繁体字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "题号 26．–28．连续，收尾于 28 与源卷一致；其后居中分节标题「参考答案与详细解析」不编号；解析题头「第 1 题」与试题 1 对应，内部编号自 1 起。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页仅第 1 题解析内重排的一组单行选项：(A)–(D) 同基线 y=478.0 pt，行首 x=66.4／110.8／152.5／196.7 pt，与「题目：」下重述题干左端一致。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "第 26 题正方体＋四棱锥：A、B、C、D、A₁、B₁、C₁、D₁ 与 E（AA₁ 中点，y=1.9 居中）、F（CC₁ 中点，y=1.1 居中）标注齐全，E、F 标注置于顶点右下方不压棱线；底面 E–B–F–D₁ 四边与顶点 A₁ 的四条侧棱均绘出，隐藏边用虚线，与题干「四棱锥 A₁−EBFD₁」一致。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 4 页——」；横线与页脚偏移属全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "第 1 题答案框之后至版心底界约 229 pt 空白（末元素 ymax=567.6 pt）：answer 环境 \\Needspace{0.5\\textheight} 为第 2 题整块预留，属已接受的 \\Needspace 留白；分节标题前有 \\Needspace{8\\baselineskip}，未出现页末孤置标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "解析正文 10.5 pt（CJK 主峰 10.5）；「（题目见第 1 页）」9 pt 灰色为 \\gksolhead 宏 \\small 设计值；答案框字号同为正文号，加粗。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页已进入「参考答案与详细解析」区，印刷版即题目＋解析合订本，答案公开属版本定义，不按泄漏计。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 4,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "第 2–4 题重述题干与解析字形完整：竖排真分式、√、上下标（T_{k+1}、x^{8−k}、(−x^{−1/3})^k）均正常渲染；无 U+FFFD、无繁体字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "解析题头「第 2 题」「第 3 题」「第 4 题」连续；回链「（题目见第 1 页）」与实际页码一致（三题题干均在印刷版第 1 页）。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "三处选项行 (A)–(D) 同基线（y=112.3／277.0／488.5 pt），行首统一 x=66.4 pt 且与重述题干左端齐。第 2 题上方分式分母「25」墨迹右下与「(B)」左括号墨迹横向间隔约 5.5 pt、无相交。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，故不适用——第 2、3、4 题均为选择题解析，无图形；本卷仅第 6、14、26 题有图。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 5 页——」，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 165 pt 空白（末元素 ymax=631.8 pt）：第 5 题解析块按 answer 环境 0.5\\textheight 整体换页，属已接受留白；页内无孤行、无孤置标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "解析正文与重述题干 10.5 pt（CJK 主峰 10.5），行间公式按 \\abovedisplayskip=3pt 紧凑排版但不缩字号；「（题目见第 1 页）」9 pt 为宏设计值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页为解析区，答案与详细推导公开属印刷版版本定义。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 5,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "第 5、6 题解析与重述题干字形完整，S_柱／S_球 下标、上下标、分式与图内 C₁–C₄ 标注均正常；无 U+FFFD、无繁体字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "解析题头「第 5 题」「第 6 题」连续；回链「（题目见第 1 页）」「（题目见第 2 页）」与实际页码一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "修复后核验：Q6 选项已合并为单段，四个选项同一行、行首一致（不再出现第二段 24pt 缩进）。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "修复后核验：Q6 图 C₃ 外框 y 227.8–237.1、C₄ y 239.2–248.5（分离 2.1pt），x 轴线 y≈249.60，C₄ 下标底 248.5，留 1.1pt 空隙；标签与轴、彼此均不再相交。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 6 页——」，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 259 pt 空白（末元素 ymax=537.9 pt）：第 7 题解析块按 0.5\\textheight 预留整体换页，属已接受留白。第 5 题解析中「全面积」3 字短行为公式前自然换行（上一行满行至版心右界），不计孤置。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "解析正文 10.5 pt（CJK 主峰 10.5）；「（题目见第 N 页）」9 pt、「答案：」框内文字 10.5 pt 加粗；无正文缩字号。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页为解析区，答案框「答案：D」「答案：B」公开属印刷版版本定义。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 6,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "第 7–9 题解析字形完整：log 下标、坐标分式 (2,3/2)、(25/8,25/6)、集合记号等均正常；无 U+FFFD、无繁体字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "解析题头「第 7 题」「第 8 题」「第 9 题」连续；回链「（题目见第 2 页）」与实际页码一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "三处选项行均单行、行首 x=66.4 pt：(A)–(D) 同基线（y=109.3／268.4／447.7 pt），与重述题干左端对齐，无缩进错位。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，故不适用——第 7、8、9 题均为无图的解析块。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 7 页——」，页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 274 pt 空白（末元素 ymax=522.2 pt）：第 10 题解析块按 0.5\\textheight 预留换页，属已接受留白；第 7 题解析末行「0<b<a<1。」为段末自然短行。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "解析正文 10.5 pt（CJK 主峰 10.5）；行间公式紧凑不缩字号；「（题目见第 2 页）」9 pt 为宏设计值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页为解析区，答案框「答案：B」「答案：D」公开属印刷版版本定义。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 7,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "第 10、11 题解析分式、根式、区间记号与 ⩾（第 11 题，卷首约定专用字形）字形完整；|b|、b²/2+1/2 等排印正确；无 U+FFFD、无繁体字。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "解析题头「第 10 题」「第 11 题」连续；回链「（题目见第 2 页）」与实际页码一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "第 10 题两行选项均自 x=66.4 pt 起（(A)/(C) 66.4、66.4 对齐），第 11 题单行 66.4 pt 起；(A)–(D) 同基线（y=111.1／133.2／401.1 pt），无第 6 题式两段错位。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图，故不适用——第 10、11 题解析均无图形，本卷三幅图分别在第 2、3、4 页。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「1992 年·全国卷·文科·数学」＋「印刷版」，「数学」仅 1 次；页脚「——第 8 页——」，页码正确，横线/页脚偏移属全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心底部约 296 pt 空白（末元素 ymax=500.7 pt）：第 12 题解析块按 answer 环境 0.5\\textheight 预留整体换至第 9 页，属已接受留白；本页无孤行、无孤置标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "解析正文 10.5 pt（CJK 主峰 10.5）；行间公式与页眉 9 pt 均为宏/分页样式设计值。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "本页为解析区，答案框「答案：D」「答案：B」公开属印刷版版本定义。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 8,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『已知直线』『夹角』『平分线』『对称变换』『解析』『答案』均为简体字形，无繁体、无豆腐块；STSongti-SC-Regular/Bold 子集嵌入（pdffonts emb=yes），数学由 LMRoman9/12、CMMI6/9、CMSY6/9、CMR5–10、CMEX10、MSAM10 承担。Q12 的 ab>0 括号与分式、Q13 的 3π/2、π/2 真分式与伸缩括号均成型完整；构建日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 12 题』y=46.3、『第 13 题』y=233.7 顺序连续；上承第 8 页末题 11、下接第 10 页题 14，无重号无跳号。回链『（题目见第 2 页）』经核对与本册自含题面区一致（本册 p1=Q1–Q5、p2=Q6–Q13、p3=Q14–Q25、p4=Q26–Q28）。回链页码呈链接蓝（RGB≈32,32,154），系全库 preamble 的 linkcolor=blue!55!black 基线，非本卷缺陷。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q12 两行两列：(A)(C) 同起 x=66.4，(B)x=174.4 与 (D)x=174.1 列对齐；(A)(B) 行 y=124.4、(C)(D) 行 y=139.6，同行基线一致。Q13 单行四项 x=66.4/130.6/194.5/285.3，四标签基线同为 y=303.7，3π/2 分式以标签高度居中，不压行不碰撞。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；本卷插图仅 Q6、Q14、Q26 三幅（Q6 在前段、Q14 见 p10、Q26 见 p15），本页无图号、图注或图内标注可查。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉左侧『1992 年·全国卷·文科·数学』x=45.4–515.8（文字墨迹 y=10.28–18.60），右侧『印刷版』x=488.9–515.9，全页『数学』仅出现一次；横线 y=20.40、x=45.4–515.8（宽 470.4pt，右端较版心右缘 549.91 短 34.2pt，合全库 35.9pt 基线）。页脚『——第 9 页——』x=248.2–312.8、y=819.4–827.8，中心 280.5 较页中线 297.64 左偏 17.1pt（合全库 18pt 基线），页码与页序一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "版心内首墨 y=47.0，末墨为 Q13 答案框底 y=460.2，其下至页脚留白 359.2pt；成因是解析题块 \\Needspace{0.5\\textheight} 整体移至次页，属全库接受类。正文墨迹 x∈[45.36,549.84]，未越版心（45.35/549.91）；无重复条目、无孤立标题。附记：Q12 末尾『（　）』独占续行（y=109.8–119.2，x=45.4 齐版心而非缩进），系段落换行产生的孤儿尾框，接受类。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文为五号 10.5pt（documentclass zihao=5；构建日志『Calculating math sizes for size <10.5>』；pdftohtml 1.5× 读数 16px=10.5pt），灰回链 \\small≈9pt，题头 subsubsection 加粗同为 10.5pt；全页无字号跳变、无缩放差异。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版按设计为『题面＋完整解析＋答案』合排版，本页的『答案：A／C』即版式本身，不存在需隐藏的答案泄漏。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 9,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『棱长』『正方体』『中点』『余弦值』『建立空间直角坐标系』『点积』均为简体；坐标串 A(0,0,0)、B(1,0,0) 等，\\overrightarrow{AM}/\\overrightarrow{CN} 箭头、√5/2 与 cosθ=(1/2)/(5/4)=2/5 分式均成型完整，无缺字、无回退字体；构建日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 14 题』y=46.3，上承 p9 题 13、下接 p11 题 15，无重号跳号；回链『（题目见第 3 页）』与本册题面区一致（p3 含 Q14–Q25，题 14 位于该页首题）。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "四项同处一行：标签 (A)x=45.4、(B)x=98.8、(C)x=157.0、(D)x=201.4，基线同为 y=263.9；√3/2、√10/10、3/5、2/5 四个真分式以分数线对齐、标签居分式中部，无相互压叠。该行紧接插图之后，按插图后段落不缩进规则左起于版心 45.4（常规选项行为 66.4），属『题图后段落齐左』接受类，且与试题版 p3 同题选项行同位置。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "正方体 ABCD–A1B1C1D1 图（墨迹 x=236.4–357.7、y≈128–248，居中：图心 297.05 对版心中线 297.63）：D1(263,128)、C1(347,128)、A1(236,156)、B1(322,162)、D(272,213)、C(349,207)、A(239,238)、B(319,239) 十处标注齐全且与源页拓扑一致；M 标在 A1B1 中点上方、N 标在 BB1 中点左侧，图中 AM、CN 两条线段与题干相符；虚线段 D1–D、D–C、A–D 为被遮棱，与试题版 p3 同一图稿；无标签互压、无图外压字。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，右『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt（右端短 34.2pt，合全库 35.9pt 基线）。页脚『——第 10 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt（合全库基线），页码与页序一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为答案框底 y=425.2，其下留白 394.2pt（\\Needspace 题块整移，接受类）；墨迹 x∈[45.36,549.36] 未越版心。纵向不重叠：题干止 y=119.8、插图 y=128–248、选项行起 y=246.6，三者分区清晰，图不被题面压住也不压选项。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5，日志 math sizes <10.5>），题干、图内标注、选项与解析字号一致；灰回链 \\small≈9pt；无局部缩放。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版自带完整解析，本页『答案：D』属版式本体，无可泄漏项。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 10,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：Q15 的 |z|=2、|z−i|、z=−2i 竖线与绝对值符号完整；Q16 题面照录源样 e^x−e^x，解析中通行形式 e^x−e^{−x} 的上标负号、t−1/t=2y 分式、ln(x+√(x²+1)) 嵌套根号、1/√(x²+1) 均成型完整；『奇函数』『偶函数』『递增』『递减』『反函数』简体无误；日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 15 题』y=46.3、『第 16 题』y=224.7 顺序连续；上承 p10 题 14、下接 p12 题 17；两处回链『（题目见第 3 页）』与本册 p3（Q14–Q25）一致。第 16 题的『条件结论』处理在本页题头下明确标注，属既定正确处置。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q15 四项单行 x=66.4/108.6/150.5/201.2，基线同为 y=109.3；Q16 四项分行、同起 x=66.4 齐左，行距 15.2pt（y=290.4/305.6/320.7/335.8），(A)–(D) 标签与后随文字基线一致，无错位、无缩进漂移。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；Q15 为复数模题、Q16 为函数反函数题，本卷插图仅 Q6、Q14、Q26 三幅，均不在本页。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 11 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线；页码与页序一致。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为 Q16 答案框底 y=518.5，其下留白 300.9pt（\\Needspace 题块整移，接受类）；墨迹 x∈[45.36,549.84]，仍在版心内（右缘 549.91）。Q16 的长答案框横跨 x=45.4–549.8，框内长句单行排下，未见裁切或跨行溢出。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt；Q16 答案框内文字为同号粗体 10.5pt，未因框宽自适应而被缩小；回链 \\small≈9pt；无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，答案随解析公开属设计，无泄漏问题。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 11,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『长方体』『全面积』『棱长之和』『对角线长』『等比数列』『首项』『公比』『极限』简体无误；Q19 极限式方括号 [ ] 与 (−1)^{n−1} 上标、3^n 分母、lim 下标 n→∞ 均完整；√36−11 与嵌套根号成型；日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 17 题』y=46.3、『第 18 题』y=240.6、『第 19 题』y=404.7 自上而下连续；上承 p11 题 16、下接 p13 题 20；三处回链均『第 3 页』，与本册题面区 p3（Q14–Q25）一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "Q17 两行两列：x=66.4/190.5 与 x=66.4/190.2，列对齐，行基线 y=109.3、124.4；Q18 单行四项 x=66.4/122.6/178.5/220.5，基线同为 y=303.6；各标签与后随不等式/根式基线一致，无错位。",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；Q17 为二次函数对称轴题、Q18 为长方体外接对角线题、Q19 为数列极限题，均无图形，本卷插图仅 Q6、Q14、Q26。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 12 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为 Q19 答案框底 y=577.0，留白 242.4pt；墨迹 x∈[45.36,479.64]，未越版心；三题各自成段、题间无拆断，无重复条目。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5），三题的题头、题干、解析、答案框字号统一；回链 \\small≈9pt；无缩放。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，答案公开属版式本体，不适用泄漏判定。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 12,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『第三象限』『平方关系』『取负值』『检验成立』『元素』『子集数』简体无误；Q20 的 cosα=−1/√5=−√5/5 分式与根号、Q21 的 t=3^x、3^{−x}=1/t、(t+1)/(t(1+t))=1/t=3、Q22 的组合数 C(10,3) 与分数 120/1024=15/128 均成型完整；日志 Missing character=0。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 20 题』y=46.3、『第 21 题』y=220.5、『第 22 题』y=412.0 连续；上承 p12 题 19、下接 p14 题 23（题 22→23 跨页，编号无跳）；三处回链均『第 3 页』，与本册 p3（Q14–Q25）一致。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页三题均为填空题，以 \\gkblank（2.2em 下划线）作空位，无 A–D 选项行，故不存在选项与公式的基线对齐问题；三处填空线长度一致（约 23pt），与题干基线齐平。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；Q20、Q21、Q22 分别为三角求值、指数方程、组合计数题，均无图形。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 13 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为 Q22 答案框底 y=578.5，留白 240.9pt；墨迹 x∈[45.36,527.04]，未越版心；三题题头—题目—解析—答案四段结构在本页完整，无跨页拆题、无重复。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5），行间公式按 10.5pt 数学字号（日志 math sizes <10.5>）排，未出现 12pt 分式混排；回链 \\small≈9pt。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，答案公开属版式本体，不适用泄漏判定。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 13,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『焦点』『离心率』『双曲线』『中心』『两式相加得』简体无误；(x−2)²/4 − y²/12 = 1 与 sin²20°+cos²80°+√3 sin20°cos80° 的度数符号、上标平方、根号均完整；日志 Missing character=0。附记：Q24 答案框内分数后带句末『。』，而 Q12–Q23 各答案框无句号，属标点风格不统一，不影响字形正确性。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 23 题』y=46.3、『第 24 题』y=220.8 连续；上承 p13 题 22、下接 p15 题 25；两处回链『（题目见第 3 页）』与本册题面区一致（p3 含 Q14–Q25，题 24 位于该页）。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页两题分别为求双曲线方程（填空）与三角求值（解答），无 A–D 选项行，故无选项对齐问题；题干内两处公式（双曲线条件、三角式）与文字基线一致。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；Q23 双曲线与 Q24 三角式均以纯公式呈现，本卷插图仅 Q6、Q14、Q26。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 14 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为 Q24 答案框底 y=446.2，留白 373.2pt，系 \\Needspace{0.5\\textheight} 题块整移（接受类）；墨迹 x∈[45.36,441.72]，远未及右版心；无重复、无孤行标题。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5）；两题行间公式、答案框文字同号；回链 \\small≈9pt；无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，本页答案（方程与 1/4）随解析公开属设计，不适用泄漏判定。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 14,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：Q25 的 z−2|z|=−7+4i 绝对值符号、复数集 C 粗正体、i 正体，z=3+4i 与 5/3+4i；Q26 的 \\overrightarrow{EB}、\\overrightarrow{BF}、叉积 |EB×BF|=√6/2·a²、h=|0−0+2a−a|/√(1+1+4)=a/√6、V=⅓Sh=a³/6 均成型完整；『菱形』『顶点』『距离』简体无误；日志 Missing character=0。附记：Q25、Q26 答案框句末带『。』，与 Q12–Q23 不一致（同 p14 附记）。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 25 题』y=46.3（回链第 3 页）、『第 26 题』y=310.2（回链第 4 页）连续；两处页码分别对应本册 p3 末题 25 与 p4 首题 26，均正确；上承 p14 题 24、下接 p16 题 27。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页两题均为解答题（复数方程求解、四棱锥体积），无 A–D 选项行，不存在选项与公式对齐问题；解析中各步行间公式左右对齐关系正常。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "Q26 正方体图（墨迹 y=358.4–511.3，居中对齐版心中线）：A1、D1、B1、C1、E、A、F、D、B、C 十处标注齐全，E 位于棱 AA1 中点、F 位于棱 CC1 中点，四棱锥 A1–EBFD1 的棱线拓扑与源页及试题版 p4 一致；虚线段为被遮棱（A1–B、A1–D、B–E），无标签互压、无图外压字、与上下文字不重叠。",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 15 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为 Q26 答案框底 y=750.0，其下留白 69.4pt，仍高于版心下界 796.5，未压页脚；墨迹 x∈[45.36,549.60] 未越版心；本页为全段最密页，图（y≈358–511）与题干（止约 y=350）、解析（起约 y=538）三段互不重叠。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5）；图内顶点标注为数学同号字，未缩小到不可读；回链 \\small≈9pt；全页字号一致。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，答案随解析公开属设计，不适用泄漏判定。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 15,
+          "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "600 dpi 抽检：『等差数列』『公差』『递减』『最大』简体无误；Q27 的 x−2y+1=0、y=−2x+4、y=−(x+1) 与 Q28 的 a3=12、S12=6(24+7d)>0、S13=13(12+4d)<0、a_n=12+(n−3)d、−24/7<d<−3、12/7 等公式与分式均成型完整，下标 a1…a6 清晰；日志 Missing character=0。附记：Q28 两个答案框句末带『。』（同 p14、p15 附记）。",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "『第 27 题』y=46.3、『第 28 题』y=312.1 连续，为卷末两题；上承 p15 题 26；两处回链均『第 4 页』，与本册 p4（Q26–Q28）一致。第 28 题 (1)(2) 分问编号与解析（1）（2）及两个答案框『答案（1）：／答案（2）：』逐条对应。",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "本页为解答题（解析几何求点坐标、数列最值），无 A–D 选项行；分问编号 (1)(2) 与解析内（1）（2）对齐一致，无错位。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "figure_label",
+              "note": "本页无插图；Q27 为坐标法解析几何、Q28 为数列不等式，均无图形，本卷插图仅 Q6、Q14、Q26。",
+              "result": "not_applicable"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉『1992 年·全国卷·文科·数学』x=45.4–515.8、文字墨迹 y=10.28–18.60，『印刷版』x=488.9–515.9，『数学』仅一次；横线 y=20.40、宽 470.4pt。页脚『——第 16 页——』x=245.9–315.1、y=819.4–827.8，中心 280.5 左偏 17.1pt，合全库基线，末页页码正确。",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "首墨 y=47.0，末墨为『答案（2）：S6 最大』框底 y=687.6，其下留白 131.8pt，卷末自然收尾不空转页；墨迹 x∈[45.36,549.84] 未越版心；两个答案框上下排列（约 y=600–630、640–675），框间距正常、不重叠。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "正文 10.5pt（zihao=5）；第 28 题分问与解析同号；答案框内文字为同号粗体；回链 \\small≈9pt；无字号跳变。",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "印刷版为题目＋完整解析合排版，卷末答案公开属版式本体，不适用泄漏判定。",
+              "result": "not_applicable"
+            }
+          ],
+          "page": 16,
+          "result": "pass"
+        }
+      ],
+      "pdf_sha256": "583f3289d6031c9548aef9a0e4530b72b32a8c7f27fcd035a0f633a9094c8bf8",
+      "result": "pass"
+    }
+  ],
+  "generation_input_tree_sha256": "b567924da59635a73953d0b88a6097d092280da78b82948077306dc6150be5f9",
+  "input_projection": "6f68f43b07ec75b8dffc6aaca0d071ea4bd6db401c34b648e5ab0dbbfa3be7de",
+  "paper_id": "gk-1992-regular-national-arts",
+  "project_dir": "1992_全国卷_文科",
+  "reviewed_at": "2026-10-23T03:30:12+08:00",
+  "schema_version": 1,
+  "status": "passed",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  },
+  "visual_tool_fingerprint": {
+    "tools": [
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      }
+    ]
+  },
+  "warning_exemptions": []
+}
