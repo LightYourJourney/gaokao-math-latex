@@ -15,15 +15,23 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
         self.assertTrue(path.is_file(), f"required answer artifact is missing: {path}")
         return path.read_text(encoding="utf-8")
 
-    def test_answer_key_and_solutions_are_explicitly_non_official(self):
+    def test_official_answer_source_is_recorded_and_solution_prose_is_distinguished(self):
         answer_key = self.require_file(ANSWER_KEY)
         solutions = self.require_file(SOLUTIONS)
 
         for document in (answer_key, solutions):
             with self.subTest(document=document[:80]):
-                self.assertIn("编者独立推导", document)
-                self.assertIn("非官方", document)
-                self.assertIn("考试院档案参考答案逐题比对", document)
+                self.assertIn("official_answer_status: verified", document)
+                self.assertIn(
+                    'official_answer_source: "https://www.shmeea.edu.cn/page/02200/20061015/3886.html"',
+                    document,
+                )
+        self.assertIn("编者独立撰写", solutions)
+        self.assertIn("非官方推导与说明", solutions)
+        self.assertIn("Q1–Q22 的最终答案要点均一致", answer_key)
+        for image_name in ("00007817.jpg", "00007819.jpg", "00007820.jpg", "00007822.jpg"):
+            with self.subTest(image=image_name):
+                self.assertIn(f"https://www.shmeea.edu.cn/u/cms/www/wdcms/{image_name}", answer_key)
 
     def test_both_documents_cover_each_question_once(self):
         answer_key = self.require_file(ANSWER_KEY)

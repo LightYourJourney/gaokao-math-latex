@@ -31,7 +31,7 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
         self.assertIn("`paper_id` 未绑定", self.transcript)
-        self.assertIn("版次及扫描件来源链未核", self.transcript)
+        self.assertIn("出版者、版次及固定扫描件来源链未核", self.transcript)
 
     def test_transcription_covers_all_22_questions_in_source_order(self):
         numbers = [int(n) for n in re.findall(r"^\*\*(\d+)．\*\*", self.transcript, re.M)]
@@ -90,15 +90,15 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
         figure_link = next(line for line in q18.group(0).splitlines() if "](figures/" in line)
         self.assertIn("北", figure_link)
 
-    def test_review_status_tracks_completed_answers_and_artwork_without_claiming_final_qa(self):
+    def test_review_status_tracks_official_answers_and_artwork_without_claiming_final_qa(self):
         self.assertIn(
-            "**状态：题面文字已独立核对；22 题答案要点与解析草稿已完成并经独立盲算交叉核验；四幅原图已矢量重绘并专项校样。**",
+            "**状态：题面文字已独立核对；22 题答案要点与解析草稿已完成并经独立盲算交叉核验，且最终答案已与考试院参考答案逐题比对一致；四幅原图已矢量重绘并专项校样。**",
             self.transcript,
         )
 
-    def test_source_answers_are_not_invented_or_mislabeled_official(self):
+    def test_official_answers_are_separate_from_the_question_only_scan(self):
         self.assertIn("固定 PDF 仅含题面，未附答案页", self.transcript)
-        self.assertIn("尚未与考试院档案参考答案逐题比对", self.transcript)
+        self.assertIn("最终答案已与考试院参考答案逐题比对一致", self.transcript)
         self.assertNotIn("官方答案：", self.transcript)
 
 
