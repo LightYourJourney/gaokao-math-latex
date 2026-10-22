@@ -91,13 +91,7 @@ class ShanghaiSpring2017FigureTests(unittest.TestCase):
         self.assertNotRegex(source, r"\\theta|(?:cos|sin)\s*\(")
         self.assertIn("numerical coordinates are only a schematic layout", source)
 
-    def test_unreviewed_diagrams_remain_open_completion_blockers(self):
-        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-        paper = next(item for item in manifest["papers"] if item["paper_id"] == PAPER_ID)
-        note = paper["index_metadata"]["note"]
-        self.assertIn("Q16/Q17/Q19图稿待独立复核", note)
-        self.assertNotIn("矢量图待重绘", note)
-
+    def test_reviewed_diagrams_are_resolved_nonblocking_issues(self):
         sys.path.insert(0, str(PROJECT / "tools"))
         import issues
 
@@ -109,8 +103,8 @@ class ShanghaiSpring2017FigureTests(unittest.TestCase):
         self.assertEqual({item["question_id"] for item in paper_issues}, {
             PAPER_ID + "-q16", PAPER_ID + "-q17", PAPER_ID + "-q19"
         })
-        self.assertTrue(all(item["status"] == "open" for item in paper_issues))
-        self.assertTrue(all(item["impact"] == "blocks_completion" for item in paper_issues))
+        self.assertTrue(all(item["status"] == "resolved" for item in paper_issues))
+        self.assertTrue(all(item["impact"] == "non_blocking" for item in paper_issues))
 
 
 if __name__ == "__main__":

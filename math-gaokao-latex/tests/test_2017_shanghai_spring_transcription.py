@@ -79,8 +79,21 @@ class ShanghaiSpring2017TranscriptionTests(unittest.TestCase):
             {(item["question_id"], item["type"]) for item in paper_issues},
             expected,
         )
-        self.assertTrue(all(item["status"] == "open" for item in paper_issues))
-        self.assertTrue(all(item["impact"] == "blocks_completion" for item in paper_issues))
+        expected_state = {
+            (f"{PAPER_ID}-q12", "answer-conflict"): ("open", "blocks_completion"),
+            (f"{PAPER_ID}-q13", "answer-conflict"): ("open", "blocks_completion"),
+            (f"{PAPER_ID}-q19", "answer-conflict"): ("open", "blocks_completion"),
+            (f"{PAPER_ID}-q16", "figure-missing"): ("resolved", "non_blocking"),
+            (f"{PAPER_ID}-q17", "figure-missing"): ("resolved", "non_blocking"),
+            (f"{PAPER_ID}-q19", "figure-missing"): ("resolved", "non_blocking"),
+        }
+        self.assertEqual(
+            {
+                (item["question_id"], item["type"]): (item["status"], item["impact"])
+                for item in paper_issues
+            },
+            expected_state,
+        )
 
     def test_transcription_covers_all_21_questions_and_preserves_high_risk_notation(self):
         self.assertTrue(TRANSCRIPT.is_file(), "the fixed-source transcription must exist before it can be checked")
