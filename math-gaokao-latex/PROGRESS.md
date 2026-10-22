@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：规范登记与可复现源/模板生成（2026-10-22）
+
+- 已完成：将 2006 上海文科试卷正式登记为 `gk-2006-regular-shanghai-arts`，canonical source 为 `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，固定 PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。登记保留边界：与第三方镜像固定提交的 PDF 字节一致、考试身份已核；原出版版次和扫描来源链仍未知，paper `production_state=planned`。将试题、答案要点、解析正文稿规范命名并绑定登记元数据；四幅 TikZ 源随卷归档，无 PNG/JPEG；确定性生成合并解析稿、题目/答案 LaTeX 源及四种版式入口。
+- 修改文件：`2006/` 下本卷试题、答案要点、解析正文与合并解析 Markdown；`math-gaokao-latex/source-manifest.json`、`index.json`、本目录下的本卷 TeX 入口/源与四个 `figures/*.tex`；本卷三个回归测试；本进度文件。未纳入 `docs/design/` 的用户改动。
+- 验证：本卷专项测试 16/16 通过；`solution_sources.py check-batch --batch phase4-b14` 确认 1 卷/22 题；`source_manifest.py validate` 成功；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均报告目标与确定性生成结果一致；`git diff --check` 通过。测试同步修正：答案结论须从系统实际交付层 `_含解析.md` 与答案源比较，而不是从刻意不含答案块的 `_解析正文.md` 比较。首轮并行执行两个带仓库锁的只读生成器检查时发生 `RepoLock` 竞争；串行重跑全部通过。此类共用锁的检查应串行运行。
+- 成本：本阶段未运行 OCR、未调用模型/API、未渲染页面或编译 PDF；Codex Token、缓存命中与费用不可见，记未知。
+- 剩余/下一步：这不是正式交付完成回执。manifest 中仍为 `planned`；扫描出版者/版次和数字化来源链未知；四版正式 XeLaTeX 编译、provenance/构建回执和逐页视觉校样尚未完成。下一阶段先检查本卷现有 provenance/构建门禁，再按项目流程生成并复核正式四版；不得把镜像字节身份说成官方原件认证。
+
 ### 1990 全国卷理科：恢复核验并纠正重复计划状态（2026-10-22）
 
 - 已完成：核对当前 `feat/gaokao-phase0` 的 Git 历史、文件与正式回执，确认 1990 全国理科26题的转录、编者答案/解析、逐题 provenance、四版入口、XeLaTeX构建和50页视觉复核均已完成；四版构建为 `succeeded`，视觉批次 `phase4-b13` 为 `closed_with_blockers`。因此不重复该卷任何录入或构建步骤。

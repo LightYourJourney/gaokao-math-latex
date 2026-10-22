@@ -5,8 +5,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[4]
-ANSWER_KEY = ROOT / "2006/2006_数学真题_上海文_答案要点草稿.md"
-SOLUTIONS = ROOT / "2006/2006_数学真题_上海文_解析正文草稿.md"
+ANSWER_KEY = ROOT / "2006/2006_数学真题_上海文_答案要点.md"
+SOLUTIONS = ROOT / "2006/2006_数学真题_上海文_解析正文.md"
+COMBINED = ROOT / "2006/2006_数学真题_上海文_含解析.md"
 QUESTION_NUMBERS = set(range(1, 23))
 
 
@@ -21,7 +22,11 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
 
         for document in (answer_key, solutions):
             with self.subTest(document=document[:80]):
+                self.assertIn("paper_id: gk-2006-regular-shanghai-arts", document)
                 self.assertIn("official_answer_status: verified", document)
+                self.assertIn("source_identity_status: exam_identity_verified", document)
+                self.assertIn("scan_publisher_edition_status: unknown", document)
+                self.assertIn("scan_lineage_status: unknown", document)
                 self.assertIn(
                     'official_answer_source: "https://www.shmeea.edu.cn/page/02200/20061015/3886.html"',
                     document,
@@ -39,7 +44,7 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
 
         answer_numbers = [
             int(value)
-            for value in re.findall(r"(?m)^\*\*(\d{1,2})．\*\* 答案：", answer_key)
+            for value in re.findall(r"(?m)^\*\*(\d{1,2})．\*\*", answer_key)
         ]
         solution_numbers = [
             int(value)
@@ -52,28 +57,48 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
 
     def test_each_solution_conclusion_matches_the_answer_key(self):
         answer_key = self.require_file(ANSWER_KEY)
-        solutions = self.require_file(SOLUTIONS)
-        answers = {
-            int(number): value.strip()
-            for number, value in re.findall(
-                r"(?m)^\*\*(\d{1,2})．\*\* 答案：(.*)$", answer_key
+        combined = self.require_file(COMBINED)
+        answers = {}
+        current_question = None
+        for line in answer_key.splitlines():
+            question = re.match(r"^\*\*(\d{1,2})．\*\*", line)
+            if question is not None:
+                current_question = int(question.group(1))
+            single = re.match(
+                r"^\*\*\d{1,2}．\*\* \*\*答案：(.*?)\*\*。?$", line
             )
-        }
+            if single is not None:
+                answers[(current_question, None)] = single.group(1).strip().rstrip("。")
+                continue
+            subpart = re.match(r"^\*\*\((\d+)\) 答案：(.*?)\*\*。?$", line)
+            if subpart is not None:
+                answers[(current_question, int(subpart.group(1)))] = (
+                    subpart.group(2).strip().rstrip("。")
+                )
         sections = {
             int(number): body
             for number, body in re.findall(
                 r"(?ms)^### 第 (\d{1,2}) 题\s*\n(.*?)(?=^### 第 \d{1,2} 题\s*$|\Z)",
-                solutions,
+                combined,
             )
         }
 
-        self.assertEqual(set(answers), QUESTION_NUMBERS)
         self.assertEqual(set(sections), QUESTION_NUMBERS)
         for number in sorted(QUESTION_NUMBERS):
             with self.subTest(question=number):
-                conclusion = re.search(r"(?m)^\*\*答案：\*\*\s*(.*)$", sections[number])
-                self.assertIsNotNone(conclusion, f"Q{number} has no explicit conclusion")
-                self.assertEqual(conclusion.group(1).strip(), answers[number])
+                conclusions = {}
+                single = re.search(r"(?m)^\*\*答案：(.*?)\*\*$", sections[number])
+                if single is not None:
+                    conclusions[(number, None)] = single.group(1).strip().rstrip("。")
+                for part, value in re.findall(
+                    r"(?m)^\*\*答案（(\d+)）：(.*?)\*\*$", sections[number]
+                ):
+                    conclusions[(number, int(part))] = value.strip().rstrip("。")
+                expected = {
+                    key: value for key, value in answers.items() if key[0] == number
+                }
+                self.assertTrue(conclusions, f"Q{number} has no explicit conclusion")
+                self.assertEqual(conclusions, expected)
 
     def test_high_risk_results_and_q22_domain_cases_remain_explicit(self):
         answer_key = self.require_file(ANSWER_KEY)
@@ -82,7 +107,7 @@ class ShanghaiArts2006SolutionTests(unittest.TestCase):
             r"\frac{x^2}{9}-\frac{y^2}{16}=1",
             r"\frac{14}{33}",
             r"b\in[-1,1]",
-            "D（36个）",
+            "D，即 $36$ 个",
             r"-\frac{13\sqrt2}{14}",
             r"71^\circ",
             r"\dfrac{\sqrt2}{6}",

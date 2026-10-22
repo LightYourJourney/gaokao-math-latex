@@ -9,19 +9,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
-PAPER_DRAFT = ROOT / "2006/2006_数学真题_上海文_题面转录草稿.md"
+PAPER_SOURCE = ROOT / "2006/2006_数学真题_上海文_试题.md"
 FIGURES = {
-    12: ROOT / "2006/figures/f2006_shanghai_arts_q12_distance_coordinates.tex",
-    13: ROOT / "2006/figures/f2006_shanghai_arts_q13_parallelogram.tex",
-    18: ROOT / "2006/figures/f2006_shanghai_arts_q18_bearing.tex",
-    19: ROOT / "2006/figures/f2006_shanghai_arts_q19_triangular_prism.tex",
+    12: ROOT / "math-gaokao-latex/2006_上海卷_文科/figures/f2006_shanghai_arts_q12_distance_coordinates.tex",
+    13: ROOT / "math-gaokao-latex/2006_上海卷_文科/figures/f2006_shanghai_arts_q13_parallelogram.tex",
+    18: ROOT / "math-gaokao-latex/2006_上海卷_文科/figures/f2006_shanghai_arts_q18_bearing.tex",
+    19: ROOT / "math-gaokao-latex/2006_上海卷_文科/figures/f2006_shanghai_arts_q19_triangular_prism.tex",
 }
+FIGURE_LINK_PREFIX = "../math-gaokao-latex/2006_上海卷_文科/figures/"
 
 
 class ShanghaiArts2006FigureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.transcript = PAPER_DRAFT.read_text(encoding="utf-8")
+        cls.transcript = PAPER_SOURCE.read_text(encoding="utf-8")
 
     def test_each_source_figure_is_linked_from_its_question(self):
         for number, path in FIGURES.items():
@@ -31,7 +32,7 @@ class ShanghaiArts2006FigureTests(unittest.TestCase):
                     self.transcript,
                 )
                 self.assertIsNotNone(section, f"Q{number} block is missing")
-                self.assertIn(f"](figures/{path.name})", section.group(0))
+                self.assertIn(f"]({FIGURE_LINK_PREFIX}{path.name})", section.group(0))
                 self.assertTrue(path.is_file(), f"Q{number} TikZ source is missing: {path}")
                 source = path.read_text(encoding="utf-8")
                 self.assertIn(r"\begin{tikzpicture}", source)
