@@ -8946,3 +8946,10 @@
 - 验证：`phase0-b02` 的现有失败回执按只读查询核实为上述5项；`build_projects.py validate-receipts` 对 phase2-b58/b59 均返回 `OK` 且各有1卷 pending；`review_receipts.py check-batch` 对两批均返回 `VISUAL_FAILED`。本阶段未重跑编译、渲染或转录；`git diff --check` 待提交前复核。
 - 成本：0次OCR、XeLaTeX重编译及外部付费API；仅本地只读检查与定向公开网页检索。Codex Token、缓存命中及费用不可见，记未知。
 - 剩余/下一步：三处批次均保留原失败和 blocker；只有取得可追溯、与目标卷/版本相符的题图或原件证据后，才可更新内容并重建相应回执。不得用全国卷、别版图或数学推测补画。之后按全量收尾计划检查最早且有可用来源证据、尚未重复完成的工作项；继续先查既有转录/provenance/回执，再决定是否推进，不为状态计数而强行 finalize。
+
+### 1990 广东理科 Q12 社区图稿提交历史追溯（2026-10-22）
+
+- 已完成：针对社区 tag `20261004` 中 `img/1990/guangdong_science/q12_fig1.png` 查询 GitHub 精确路径提交历史，仅找到提交 [`009953bcd079a219e18166d1e443ce8931b9c731`](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/commit/009953bcd079a219e18166d1e443ce8931b9c731)（2026-10-03）。提交说明是全仓答案、新试题和必要图稿的批量同步，没有给出该图对应的原始出版页、扫描文件或版次。因此它只能证明该图在该批量提交中出现，不能证明图稿来自固定来源的同版原卷。
+- 影响与修改：`ISSUE-1070`（固定源图位空白）和 `ISSUE-1114`（Q12答案待核）继续开放；不采用候选 PNG 作为生产图、不把答案 B 提升为已核结论。仅修改本 `PROGRESS.md`；未改题目、答案、图稿、manifest、provenance、构建/视觉回执或 `docs/design/`。
+- 验证与成本：核对精确文件路径的公开 GitHub commit-history API 返回及提交说明，并与现有固定源/issue 状态对照；这是来源审计，没有转录、OCR、PDF 重渲染、编译或测试。一次只读公开 API 查询，无商业 API；Codex Token/实际费用不可见，记未知。
+- 剩余/下一步：不重复查询该文件的同一路径提交历史。只有获得具体原始出版页/扫描来源，或独立同版原卷，才继续判断图稿及答案；否则转向其他具备可核证据的待办，保持本卷 blocker，不推测补图或结案。
