@@ -90,15 +90,15 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
         figure_link = next(line for line in q18.group(0).splitlines() if "](figures/" in line)
         self.assertIn("北", figure_link)
 
-    def test_review_status_distinguishes_checked_text_from_pending_artwork(self):
+    def test_review_status_tracks_completed_answers_and_artwork_without_claiming_final_qa(self):
         self.assertIn(
-            "**状态：题面文字已独立核对；答案与解析待独立推导，四幅原图待矢量重绘及复核。**",
+            "**状态：题面文字已独立核对；22 题答案要点与解析草稿已完成并经独立盲算交叉核验；四幅原图已矢量重绘并专项校样。**",
             self.transcript,
         )
 
     def test_source_answers_are_not_invented_or_mislabeled_official(self):
-        self.assertIn("题面文字已独立核对；答案与解析待独立推导", self.transcript)
-        self.assertIn("固定 PDF 仅含题面，未见答案页", self.transcript)
+        self.assertIn("固定 PDF 仅含题面，未附答案页", self.transcript)
+        self.assertIn("尚未与考试院档案参考答案逐题比对", self.transcript)
         self.assertNotIn("官方答案：", self.transcript)
 
 
