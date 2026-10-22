@@ -56,6 +56,13 @@ class NationalScience1990TranscriptionTests(unittest.TestCase):
         question = text.split("**9．**", 1)[1].split("**10．**", 1)[0]
         self.assertIn(r"\overline{M}\cap\overline{N}", question)
 
+    def test_q26_a_is_a_coefficient_of_n_to_the_x(self):
+        self.assertTrue(PAPER.is_file(), f"missing question draft: {PAPER}")
+        text = PAPER.read_text(encoding="utf-8")
+        question = text.split("**26．**", 1)[1]
+        self.assertIn(r"n^x a", question)
+        self.assertNotIn(r"n x^a", question)
+
     def test_four_source_diagrams_are_linked_tikz_without_raster_files(self):
         self.assertTrue(PAPER.is_file(), f"missing question draft: {PAPER}")
         text = PAPER.read_text(encoding="utf-8")
