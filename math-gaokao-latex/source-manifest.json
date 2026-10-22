@@ -1456,6 +1456,15 @@
         "gk-1993-new-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b18",
+      "issues": [],
+      "paper_ids": [
+        "gk-1993-old-arts",
+        "gk-1993-old-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1465,7 +1474,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "231438f0-0f26-4c01-8b2f-a6e50d44a8a8",
+  "last_transaction_id": "cd00a910-05f9-4c45-8edd-dbe9229786cc",
   "papers": [
     {
       "blocked_from": null,
@@ -21048,9 +21057,126 @@
       "title": "1993 年·新科目组·理科",
       "track": "science",
       "year": 1993
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1993_旧科目组_文科/figures/f1993_old_arts_q18_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1993_旧科目组_文科/figures/f1993_old_arts_q27_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1993_old_arts",
+        "id": "gk-1993-old-arts",
+        "note": "1993 旧科目组文科卷；1 页 A3 三栏 XeTeX 重排（页脚 48），无答案页（等级 D，编者推导并经盲解/复核）。 Q18/Q27 图按内容流重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "旧科目组",
+        "structure": {
+          "填空题": [
+            19,
+            24
+          ],
+          "解答题": [
+            25,
+            29
+          ],
+          "选择题": [
+            1,
+            18
+          ]
+        },
+        "track": "文科",
+        "variant": "旧科目组文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1993-old-arts",
+      "production_state": "complete",
+      "project_dir": "1993_旧科目组_文科",
+      "question_count": 29,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1993/1993_数学真题_旧科目组文_答案要点.md",
+        "combined_rendered": "1993/1993_数学真题_旧科目组文_含解析.md",
+        "questions": "1993/1993_数学真题_旧科目组文_试题.md",
+        "solution_body": "1993/1993_数学真题_旧科目组文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0a960477fc7d186c82e4c8cfd17a60ff77947338db3fb5ab6f57fd4446e71924"
+      ],
+      "title": "1993 年·旧科目组·文科",
+      "track": "arts",
+      "year": 1993
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1993_旧科目组_理科/figures/f1993_old_science_q26_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1993_old_science",
+        "id": "gk-1993-old-science",
+        "note": "1993 旧科目组理科卷；1 页 A3 三栏 XeTeX 重排（页脚 47），无答案页（等级 D，编者推导并经盲解/复核）。 Q26 图按内容流重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "旧科目组",
+        "structure": {
+          "填空题": [
+            19,
+            24
+          ],
+          "解答题": [
+            25,
+            29
+          ],
+          "选择题": [
+            1,
+            18
+          ]
+        },
+        "track": "理科",
+        "variant": "旧科目组理"
+      },
+      "issue_ids": [
+        "ISSUE-1132",
+        "ISSUE-1133",
+        "ISSUE-1134",
+        "ISSUE-1135"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1993-old-science",
+      "production_state": "complete",
+      "project_dir": "1993_旧科目组_理科",
+      "question_count": 29,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1993/1993_数学真题_旧科目组理_答案要点.md",
+        "combined_rendered": "1993/1993_数学真题_旧科目组理_含解析.md",
+        "questions": "1993/1993_数学真题_旧科目组理_试题.md",
+        "solution_body": "1993/1993_数学真题_旧科目组理_解析正文.md"
+      },
+      "source_ids": [
+        "src-cb514fd810e6a797f6e968a2009a69f8d5b9b570e257d44b4a1bd517657646ff"
+      ],
+      "title": "1993 年·旧科目组·理科",
+      "track": "science",
+      "year": 1993
     }
   ],
-  "revision": 4667,
+  "revision": 4695,
   "schema_version": 1,
   "sources": [
     {
@@ -25339,8 +25465,8 @@
       "exam_type": "regular",
       "git_blob_oid": "148d919ba3eaa45848ce865547da9f9c607ecae5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1993-old-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1993旧科目组文.pdf",
       "regions": [],
       "source_id": "src-0a960477fc7d186c82e4c8cfd17a60ff77947338db3fb5ab6f57fd4446e71924",
@@ -25363,8 +25489,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0fec0b58b978148bab64cc8e247387d69486fe87",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1993-old-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1993旧科目组理.pdf",
       "regions": [],
       "source_id": "src-cb514fd810e6a797f6e968a2009a69f8d5b9b570e257d44b4a1bd517657646ff",

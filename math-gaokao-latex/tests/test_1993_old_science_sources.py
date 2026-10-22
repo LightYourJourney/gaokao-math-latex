@@ -53,7 +53,8 @@ class OldTrackScience1993SourceTests(unittest.TestCase):
             if s["source_id"] == "src-cb514fd810e6a797f6e968a2009a69f8d5b9b570e257d44b4a1bd517657646ff"
         )
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1993-old-science")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(source["artifact"]["sha256"], self.record["pdf_sha256"])
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
@@ -76,7 +77,7 @@ class OldTrackScience1993SourceTests(unittest.TestCase):
         self.assertIn(r"z=-\dfrac{1-i}{\sqrt2}", self.questions[3].body)
         self.assertIn(r"\dfrac{2}{2^x-1}", self.questions[7].body)
         self.assertIn(r"0\le t\le5", self.questions[8].body)
-        self.assertIn(r"\left(\dfrac\ell6\right)^3\pi", self.questions[13].body)
+        self.assertIn(r"\left(\dfrac{l}{6}\right)^3\pi", self.questions[13].body)
         self.assertIn(r"(\sqrt3x+\sqrt[3]2)^{100}", self.questions[14].body)
         self.assertIn(r"3a=4b=6c", self.questions[15].body)
         self.assertIn(r"\dfrac2a+\dfrac2b", self.questions[15].body)
