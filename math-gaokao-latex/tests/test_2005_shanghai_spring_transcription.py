@@ -43,18 +43,20 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.transcript = TRANSCRIPT.read_text(encoding="utf-8")
         self.figures = FIGURES.read_text(encoding="utf-8")
 
-    def test_fixed_source_fingerprint_is_traceable_and_not_formally_bound(self):
+    def test_fixed_source_fingerprint_is_traceable_and_bound_to_the_paper(self):
         source = next(item for item in self.manifest["sources"] if item["source_id"] == SOURCE_ID)
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], "春季高考/2005/2005春季上海.pdf")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-2005-spring-shanghai")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
         self.assertIn("原卷印刷页码 217–218", self.transcript)
-        self.assertIn("paper_id 未绑定", self.transcript)
+        self.assertIn("来源已按上游固定文件绑定", self.transcript)
+        self.assertNotIn("paper_id 未绑定", self.transcript)
 
-    def test_formal_registration_is_planned_without_binding_unverified_source(self):
+    def test_formal_registration_is_complete_with_verified_source(self):
         paper_id = "gk-2005-spring-shanghai"
         paper = next(
             (item for item in self.manifest["papers"] if item["paper_id"] == paper_id),
@@ -63,10 +65,11 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
         self.assertIsNotNone(paper, "the 2005 spring Shanghai project must be registered")
         self.assertEqual(paper["project_dir"], "2005_上海春季卷")
         self.assertEqual(paper["question_count"], 22)
-        self.assertEqual(paper["production_state"], "planned")
-        self.assertEqual(paper["source_ids"], [])
+        self.assertEqual(paper["production_state"], "complete")
+        self.assertEqual(paper["source_ids"], [SOURCE_ID])
         self.assertIn("Q1–22 分段异人盲核已完成", paper["index_metadata"]["note"])
-        self.assertIn("Q21 示意曲线已修订，待局部复核", paper["index_metadata"]["note"])
+        self.assertIn("来源已按上游固定 blob/卷标题绑定", paper["index_metadata"]["note"])
+        self.assertIn("Q21 示意曲线已修订并经局部复核", paper["index_metadata"]["note"])
         self.assertEqual(paper["index_metadata"]["structure"], {
             "填空题": [1, 12], "选择题": [13, 16], "解答题": [17, 22],
         })
@@ -84,7 +87,7 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
     def test_generated_source_note_has_no_unsafe_inline_identifier(self):
         questions_tex = (PAPER_DIR / "questions.tex").read_text(encoding="utf-8")
         self.assertNotIn(r"\texttt{paper_id}", questions_tex)
-        self.assertIn("故暂未登记为正式试卷", questions_tex)
+        self.assertIn("已进入正式 LaTeX 四版本构建流程", questions_tex)
 
     def test_all_22_questions_and_source_sections_are_present(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
@@ -151,7 +154,7 @@ class ShanghaiSpring2005TranscriptionTests(unittest.TestCase):
             ((None, r"$\{-1,2\}$"),),
             ((None, "$0$"),),
             ((None, r"$\dfrac12$"),),
-            ((None, r"$f^{-1}(x)=-\sqrt{-x}\ (x\leqslant-4)$"),),
+            ((None, r"$f^{-1}(x)=-\sqrt{-x}\ (x\le-4)$"),),
             ((None, "$16$"),),
             ((None, r"$\dfrac1{260}$"),),
             ((None, r"$\dfrac56$"),),
