@@ -8912,3 +8912,11 @@
 - 验证：来源注册 dry-run 通过，原子写入 manifest revision 4597；provenance 导入 dry-run 通过，提交 revision 4598。独立源核逐题 Q1–26 PASS；独立盲解记录已与规范答案核对，补充Q5盲核现确认C，旧答案/解析文档中“盲核尚未提供”的陈述已同步订正。修正后本卷两测试模块14/14通过；`solution_sources check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`provenance.py check-batch` 均顺序运行通过；`source_manifest.py validate`、`manifest.csv --check`（775 行）与 `git diff --check` 通过。早先并行启动的仓库检查曾因共用 `.git/gaokao-latex.lock` 发生短暂 flock 冲突；没有清锁或中断进程，改为顺序运行后均通过。首次注册 dry-run 因缺生成型 `含解析.md` 被正确阻止；按确定性渲染生成后通过。一次注册写入因临时规格把 `figure_files` 写成字符串而遭 schema 拒绝，事务未提交；修正为带路径和出现次数的对象后成功。一次早期转录测试仍将 Task 1 临时题目头注当成最终生成结果，修正为与正式 `generate_projects` 当前输出比较后通过。最后额外启动的 `test_provenance + test_source_manifest` 合并运行超过25秒仍未返回汇总，已终止且不记为通过；全量测试未重跑。
 - 成本：无 OCR、无外部付费 API；仅一次独立只读源核及本地确定性渲染/生成。Codex 实际 Token、缓存命中与费用不可见，记未知；不据此声称节省比例。
 - 剩余/下一步：本卷仍因 Q20 的 $V_1,V_2$ 区域对应未标而阻塞；出版社/版次/原件身份也未认证。Task 4 进行四版正式 XeLaTeX 构建、日志门禁、PNG 临时渲染与逐页视觉复核，生成构建/视觉回执和批次报告；保留 Q20 blocker，不得将整卷标记完成。不得重做已完成的转录、答案推导或来源盲核。
+
+### 1990 全国卷理科：四版 XeLaTeX 正式构建（2026-10-22）
+
+- 已完成：对试题版、简答版、解析版、印刷版执行正式构建，attempt `fe33cfd3-bf28-40bb-ae13-6f538d1c7f1b`，构建回执为 `compiled_pending_review`。共生成 50 页：试题版5页、简答版7页、解析版21页、印刷版17页。四版构建均成功；日志未发现错误、缺字、未定义引用、Overfull 或 Underfull 警告。
+- 修改文件：`source-manifest.json`（revision 4598→4600，正式状态更新为 `compiled_pending_review`）、`1990_全国卷_理科/receipts/build.json`、本进度文件。四份 PDF 保留在被忽略的 `1990_全国卷_理科/build/`，不入库；50页 PNG 临时渲染在 `/tmp/gk1990-phase4.u74n5p/`，不入库。
+- 验证：`build_projects.py check-tools --json` 确认 TeX Live 2026、XeTeX、latexmk 4.88 与 Poppler 可用；`build_projects.py build --formal` 四版均 succeeded；`validate-receipts` 返回 code OK、failed/invalid/missing/stale 均为0、pending为1；`provenance.py check-batch --batch phase4-b13` 通过。日志和页数检查已覆盖四版。该构建回执目前明确待逐页视觉验收，未升级为 `succeeded`。
+- 成本：无 OCR、无外部模型或商业 API；只使用本地 XeLaTeX/Poppler。Codex 实际输入/输出/缓存 Token 与费用无可用计量，记未知。
+- 剩余/下一步：按视觉回执要求逐页检查全部50页（候选页只是优先锚点，不替代全页检查），再登记八项检查并生成批次报告；若无视觉失败，完成最终复核、测试并提交。Q20 区域对应问题与来源版次/原件身份认证仍是独立阻塞，本卷不得标记完成。不得重做已成功的四版编译；若临时PNG不存在再定向重渲染。
