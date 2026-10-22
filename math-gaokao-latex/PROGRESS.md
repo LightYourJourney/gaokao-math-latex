@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：Q12、Q13、Q18、Q19 矢量图稿与专项校样（2026-10-22）
+
+- 已完成：按固定扫描件印刷页330的可见内容，完成 Q12 距离坐标图、Q13 平行四边形、Q18 方位图、Q19 直三棱柱图四份独立 TikZ 源码，并将题面中的占位说明换成对应 `.tex` 源链接。Q18 保留与方位虚线分离且偏右的北向箭头；Q19 核对虚实线及辅助线连接。未改写原题文字，未加入 PNG/JPEG。四幅图均已分别编译，并目视复核合并预览。
+- 来源边界：复用固定扫描 PDF（SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`）；四幅图均见印刷页330，另渲染印刷页331用于页内定位。图稿是对可见拓扑的矢量重绘，不代表扫描件出版版次/来源链已认证；仍保持 `paper_id=null`，不作正式登记。
+- 修改文件：`2006/2006_数学真题_上海文_题面转录草稿.md`、`2006/figures/f2006_shanghai_arts_q12_distance_coordinates.tex`、`...q13_parallelogram.tex`、`...q18_bearing.tex`、`...q19_triangular_prism.tex`、`math-gaokao-latex/tests/test_2006_shanghai_arts_figures.py`、`math-gaokao-latex/tests/test_2006_shanghai_arts_transcription.py` 与本进度文件；未改 source manifest、正式试卷目录或 `docs/design/`。
+- 验证：四图结构/图稿链接专项测试 4/4 通过；本卷题面回归 8/8 通过；每份图稿由 XeLaTeX/latexmk 单独编译，无 LaTeX、宏包、未定义命令、缺失字符及 overfull/underfull 警告。四图合并预览共4页，渲染后逐页目视检查线型、标记、标签和边界。全库 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q` 用时412.573秒：1746项中1731通过、13跳过、2失败；失败仍是 `test_2017_shanghai_spring_figures.ShanghaiSpring2017FigureTests.test_unreviewed_diagrams_remain_open_completion_blockers` 与 `test_2017_shanghai_spring_transcription.ShanghaiSpring2017TranscriptionTests.test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers`，因测试要求该卷所有 issue 均为 open，而台账中 ISSUE-1128–1130 已为 resolved/non_blocking；本阶段未更改2017卷。`git diff --check` 通过。
+- 成本与剩余：本阶段未运行 OCR、未调用聊天模型或付费 API；因隔离工作树中无可复用的渲染缓存，确定性地将源 PDF 两页以180 DPI渲染一次并裁出局部供人工核图，临时图像留在忽略目录 `.work/2006-shanghai-arts.RXdLHp/`。API Token、缓存 Token 和费用均不可见，记未知。四图专项版式已复核，但整卷答案/解析、扫描来源身份认证、正式 source/paper 绑定、正式版本构建回执及最终各版逐页校样均未完成。
+- 下一步：不重复转录、盲核或重绘四图；继续前先处理来源身份门禁，再基于已核题面独立求解并验证答案/解析。来源身份未达正式登记标准前保持 `paper_id=null`，不生成正式构建回执。
+
 ### 2006 上海卷文科：题面独立盲核与 Q18 图稿清单补记（2026-10-22）
 
 - 已完成：独立复核者逐项对照固定 PDF 印刷页330–331，核过 Q1–Q22；题面文字、数字与公式均与来源一致。唯一遗漏是图稿清单：Q18 原图在 A 点上方有向上箭头并标“北”，已补入原图占位说明。题面状态更新为“文字已独立核对”；Q12、Q13、Q18、Q19 四幅图仍待矢量重绘和复核。

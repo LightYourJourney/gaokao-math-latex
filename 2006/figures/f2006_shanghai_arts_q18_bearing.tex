@@ -1,0 +1,26 @@
+% 2006 上海卷文科 Q18；线段长度和方向按题面与来源图标注，示意图不按比例。
+\begin{tikzpicture}[line cap=round,line join=round]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.3,0);
+  \coordinate (C) at (-1.5,-2.598);
+
+  % 原图中位于 A 左侧及穿过 A 的两条方位参考虚线。
+  \draw[dashed] (-1.45,0)--(A);
+  \draw[dashed] (0,1.75)--(0,-1.45);
+  \draw[->] (0.72,1.05)--(0.72,2.05);
+  \node[above] at (0.72,2.05) {北};
+
+  \draw[thick] (A)--(B);
+  \draw[thick] (A)--(C);
+  \draw (0,-0.66) arc[start angle=-90,end angle=-120,radius=0.66];
+  \node[above] at (2.15,0) {$20$};
+  \node[left] at (-0.92,-1.42) {$10$};
+  \node at (-0.28,-0.92) {$30^\circ$};
+
+  \fill (A) circle[radius=1.2pt];
+  \fill (B) circle[radius=1.2pt];
+  \fill (C) circle[radius=1.2pt];
+  \node[above left] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[below left] at (C) {$C$};
+\end{tikzpicture}

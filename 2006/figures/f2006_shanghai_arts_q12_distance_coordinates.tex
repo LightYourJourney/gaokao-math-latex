@@ -1,0 +1,22 @@
+% 2006 上海卷文科 Q12；按固定扫描件印刷页 330 的可见拓扑绘制。
+\begin{tikzpicture}[line cap=round,line join=round]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (1.55,1.55);
+  \coordinate (M) at (2.25,0.85);
+  \coordinate (Q) at (2.25,0);
+
+  \draw[thick] (-1.8,-1.8)--(3.1,3.1);
+  \node[above] at (2.75,2.75) {$l_1$};
+  \draw[thick] (-1.9,0)--(2.75,0);
+  \node[left] at (-1.9,0) {$l_2$};
+
+  \draw[dashed] (M)--(P);
+  \draw[dashed] (M)--(Q);
+  % 两个直角小方框均按原图绘制，不为垂足添加原图没有的标签。
+  \draw[thin] (P)--++(-0.14,-0.14)--++(0.14,-0.14)--++(0.14,0.14);
+  \draw[thin] (Q)--++(-0.14,0)--++(0,0.14)--++(0.14,0);
+
+  \node[below right=1pt] at (O) {$O$};
+  \fill (M) circle[radius=1.2pt];
+  \node[right] at (M) {$M(p,q)$};
+\end{tikzpicture}

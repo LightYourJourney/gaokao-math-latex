@@ -78,17 +78,17 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
             ],
         )
 
-    def test_source_figures_remain_pending_vector_redraw_without_raster_embedding(self):
-        self.assertEqual(self.transcript.count("原图：待矢量重绘"), 4)
+    def test_source_figures_are_linked_to_vector_sources_without_raster_embedding(self):
+        self.assertEqual(self.transcript.count("](figures/"), 4)
         self.assertNotIn(r"\includegraphics", self.transcript)
         self.assertNotIn(".png", self.transcript)
         self.assertNotIn("![", self.transcript)
 
-    def test_q18_figure_note_preserves_the_north_arrow_from_the_source(self):
+    def test_q18_figure_link_preserves_the_north_arrow_from_the_source(self):
         q18 = re.search(r"^\*\*18．\*\*.*?(?=^\*\*19．\*\*)", self.transcript, re.M | re.S)
         self.assertIsNotNone(q18)
-        figure_note = next(line for line in q18.group(0).splitlines() if "原图：待矢量重绘" in line)
-        self.assertIn("北向箭头", figure_note)
+        figure_link = next(line for line in q18.group(0).splitlines() if "](figures/" in line)
+        self.assertIn("北", figure_link)
 
     def test_review_status_distinguishes_checked_text_from_pending_artwork(self):
         self.assertIn(
