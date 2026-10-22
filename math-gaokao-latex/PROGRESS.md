@@ -8849,3 +8849,10 @@
 - 验证：以已完成的 Q19 专项 7/7、全量 1720 项（13 跳过、0 失败）、四版临时构建和第3页目视检查为图稿基线；本新增阶段的独立源码复核 PASS。问题台账校验、`phase4-b12` provenance consistency check 和 `git diff --check` 通过；只读构建回执校验显示该卷缺正式 build receipt，批次仍 `planned`、试卷仍 `blocked`、`last_verified_hash=null`。正式构建要求当前 provenance；没有尝试绕过或写正式回执。
 - 成本：未新增 OCR、渲染、编译或模型/API 调用；本次复核 Token 与费用不可见，记未知。
 - 剩余/下一步：先依现存证据补齐/刷新合规的题级 provenance，满足 formal build 门禁后再建四版正式构建并逐页登记视觉回执；Q12/Q13/Q19答案来源冲突仍阻止整卷验收。不得重做题面转录或重复本次图稿复核。
+
+### 2017 上海春季卷：三角色题级来源核验登记（2026-10-22）
+
+- 已完成：独立题面复核逐题确认 Q1–Q21 与固定来源 PDF 第1–3页一致，页码映射为 Q1–15 第1页、Q16–19 第2页、Q20–21 第3页；两个相互独立的数学求解/盲核代理对现有编者推导答案一致。按同类独立推导记录为 D 级，不把 PDF 第4页“参考答案”宣称为官方答案。Q12/Q13/Q19 来源答案冲突保持 unresolved，并链接 `ISSUE-1125`–`ISSUE-1127`；Q16/Q17/Q19 图稿问题继续链接 `ISSUE-1128`–`ISSUE-1130`。
+- 修改文件：`source-manifest.json`（revision 4591→4592，批次状态更新为 `provenance_verified`）、`2017_上海春季卷/provenance.json`、本 `PROGRESS.md`。三角色中间 JSON 留在被忽略的项目 `.work/phase4-b12/`；未改题面、答案正文、图稿或 `docs/design/`。
+- 验证：`import-batch` dry-run 与事务写入通过；`check-batch` 显示 1 卷有效；`test_provenance.py` 111 项通过。状态派生仍为试卷 `blocked`、批次 `provenance_verified`；题面/答案哈希均由工具现场重算，六条未解决 issue 均保留。真实 Codex Token/费用不可见。
+- 剩余/下一步：按当前 provenance 门禁执行该卷四版 formal build，再复核正式构建 PDF 并登记逐页视觉回执；答案冲突与图稿验收问题未解决前不得将试卷标记完成。不要重做转录、独立求解或已通过的题面核对。
