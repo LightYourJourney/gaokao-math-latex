@@ -1447,6 +1447,15 @@
         "gk-1992-regular-sannan"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b17",
+      "issues": [],
+      "paper_ids": [
+        "gk-1993-new-arts",
+        "gk-1993-new-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1456,7 +1465,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "68c21f4d-f0e4-4f93-b670-c21219ea672a",
+  "last_transaction_id": "231438f0-0f26-4c01-8b2f-a6e50d44a8a8",
   "papers": [
     {
       "blocked_from": null,
@@ -20931,9 +20940,117 @@
       "title": "1992 年·三南卷",
       "track": "none",
       "year": 1992
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1993_新科目组_文科/figures/f1993_new_arts_q23_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1993_new_arts",
+        "id": "gk-1993-new-arts",
+        "note": "1993 新科目组文科卷；1 页 A3 三栏 XeTeX 重排（页脚 46），无答案页（等级 D，编者推导并经异人盲核），Q23 折叠图为内容流逐路径重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "新科目组",
+        "structure": {
+          "填空题": [
+            18,
+            23
+          ],
+          "解答题": [
+            24,
+            28
+          ],
+          "选择题": [
+            1,
+            17
+          ]
+        },
+        "track": "文科",
+        "variant": "新科目组文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1993-new-arts",
+      "production_state": "complete",
+      "project_dir": "1993_新科目组_文科",
+      "question_count": 28,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1993/1993_数学真题_新科目组文_答案要点.md",
+        "combined_rendered": "1993/1993_数学真题_新科目组文_含解析.md",
+        "questions": "1993/1993_数学真题_新科目组文_试题.md",
+        "solution_body": "1993/1993_数学真题_新科目组文_解析正文.md"
+      },
+      "source_ids": [
+        "src-3c9130a8330fea27cd218b212fb8cd30d26545b82ee8c080d5c2060770f6d5d5"
+      ],
+      "title": "1993 年·新科目组·文科",
+      "track": "arts",
+      "year": 1993
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1993_新科目组_理科/figures/f1993_new_science_q23_fold.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1993_new_science",
+        "id": "gk-1993-new-science",
+        "note": "1993 新科目组理科卷；1 页 A3 三栏 XeTeX 重排（页脚 45），无答案页（等级 D，编者推导并经异人盲核），Q23 折叠图为内容流逐路径重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "新科目组",
+        "structure": {
+          "填空题": [
+            18,
+            23
+          ],
+          "解答题": [
+            24,
+            28
+          ],
+          "选择题": [
+            1,
+            17
+          ]
+        },
+        "track": "理科",
+        "variant": "新科目组理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1993-new-science",
+      "production_state": "complete",
+      "project_dir": "1993_新科目组_理科",
+      "question_count": 28,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1993/1993_数学真题_新科目组理_答案要点.md",
+        "combined_rendered": "1993/1993_数学真题_新科目组理_含解析.md",
+        "questions": "1993/1993_数学真题_新科目组理_试题.md",
+        "solution_body": "1993/1993_数学真题_新科目组理_解析正文.md"
+      },
+      "source_ids": [
+        "src-39987a89c2527e5343ab012618fb80ce6e9616594e86c6391e9f4d789b07ce8c"
+      ],
+      "title": "1993 年·新科目组·理科",
+      "track": "science",
+      "year": 1993
     }
   ],
-  "revision": 4656,
+  "revision": 4667,
   "schema_version": 1,
   "sources": [
     {
@@ -25174,8 +25291,8 @@
       "exam_type": "regular",
       "git_blob_oid": "2bfc222e9f09a16bb75b5f566e534fa4ded951db",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1993-new-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1993新科目组(北京,湖南,湖北,云南,海南,贵州).pdf",
       "regions": [],
       "source_id": "src-3c9130a8330fea27cd218b212fb8cd30d26545b82ee8c080d5c2060770f6d5d5",
@@ -25198,8 +25315,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ca911fecbf0c1128051d53381d5f9bc5e3b05b3f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1993-new-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1993新科目组理(北京,湖南,湖北,云南,海南,贵州).pdf",
       "regions": [],
       "source_id": "src-39987a89c2527e5343ab012618fb80ce6e9616594e86c6391e9f4d789b07ce8c",

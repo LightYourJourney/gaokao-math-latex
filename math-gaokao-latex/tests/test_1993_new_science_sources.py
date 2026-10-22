@@ -61,7 +61,8 @@ class NewTrackScience1993SourceTests(unittest.TestCase):
             s for s in manifest["sources"] if s["source_id"] == self.record["source_id"]
         )
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1993-new-science")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(source["artifact"]["sha256"], self.record["pdf_sha256"])
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])

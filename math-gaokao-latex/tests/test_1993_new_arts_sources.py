@@ -67,7 +67,8 @@ class NewTrackArts1993SourceTests(unittest.TestCase):
             "src-3c9130a8330fea27cd218b212fb8cd30d26545b82ee8c080d5c2060770f6d5d5",
         )
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1993-new-arts")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertEqual(source["artifact"]["sha256"], self.record["pdf_sha256"])
         self.assertEqual(source["git_blob_oid"], self.record["git_blob_oid"])
         self.assertEqual(source["upstream_path"], self.record["upstream_path"])
