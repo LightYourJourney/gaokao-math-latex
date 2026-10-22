@@ -84,8 +84,20 @@ class ShanghaiArts2006TranscriptionTests(unittest.TestCase):
         self.assertNotIn(".png", self.transcript)
         self.assertNotIn("![", self.transcript)
 
+    def test_q18_figure_note_preserves_the_north_arrow_from_the_source(self):
+        q18 = re.search(r"^\*\*18．\*\*.*?(?=^\*\*19．\*\*)", self.transcript, re.M | re.S)
+        self.assertIsNotNone(q18)
+        figure_note = next(line for line in q18.group(0).splitlines() if "原图：待矢量重绘" in line)
+        self.assertIn("北向箭头", figure_note)
+
+    def test_review_status_distinguishes_checked_text_from_pending_artwork(self):
+        self.assertIn(
+            "**状态：题面文字已独立核对；答案与解析待独立推导，四幅原图待矢量重绘及复核。**",
+            self.transcript,
+        )
+
     def test_source_answers_are_not_invented_or_mislabeled_official(self):
-        self.assertIn("题面草稿；答案与解析待独立推导", self.transcript)
+        self.assertIn("题面文字已独立核对；答案与解析待独立推导", self.transcript)
         self.assertIn("固定 PDF 仅含题面，未见答案页", self.transcript)
         self.assertNotIn("官方答案：", self.transcript)
 

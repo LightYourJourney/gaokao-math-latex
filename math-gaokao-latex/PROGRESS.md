@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海卷文科：题面独立盲核与 Q18 图稿清单补记（2026-10-22）
+
+- 已完成：独立复核者逐项对照固定 PDF 印刷页330–331，核过 Q1–Q22；题面文字、数字与公式均与来源一致。唯一遗漏是图稿清单：Q18 原图在 A 点上方有向上箭头并标“北”，已补入原图占位说明。题面状态更新为“文字已独立核对”；Q12、Q13、Q18、Q19 四幅图仍待矢量重绘和复核。
+- 来源边界：上海市教委[2005年正式办法](https://edu.sh.gov.cn/attach/hdpt/16.htm)说明上海卷数学分文史/理工农医类，并规定自2006年起在沪考生均考上海卷；结合扫描件自印题签，可佐证考试类别，但不认证这份扫描件为官方原件。当前分支 source-manifest 仍记为 ready、`paper_id=null`，且没有记录上游仓库/commit 字段；扫描件的原始出版者、版次与数字化来源链未核，不做正式绑定。
+- 修改文件：`2006/2006_数学真题_上海文_题面转录草稿.md`、`math-gaokao-latex/tests/test_2006_shanghai_arts_transcription.py` 与本进度文件；未改 source-manifest、issues、正式试卷目录或 `docs/design/`。
+- 验证：新增 Q18 北向箭头回归先按预期 RED；修正后本卷测试 8/8 通过。全库 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q` 用时418.678秒，1742项中1727通过、13跳过、2失败；失败为 `test_2017_shanghai_spring_figures.ShanghaiSpring2017FigureTests.test_unreviewed_diagrams_remain_open_completion_blockers` 与 `test_2017_shanghai_spring_transcription.ShanghaiSpring2017TranscriptionTests.test_registered_answer_conflicts_and_missing_figures_remain_explicit_blockers`，均为既有断言仍要求该卷全部图稿 issue 为 open，而 ISSUE-1128–1130 已在台账标为 resolved/non_blocking；本次未更改该卷。`git diff --check` 通过。
+- 成本与剩余：未运行 OCR、未新渲染 PDF、未调用付费 API；复用已有原页/局部图像。Token 与实际费用不可见，记未知。尚未重绘/复核四幅 TikZ 图、独立推导答案与解析、认证扫描版次/来源、绑定 paper/source、生成正式版本或构建及逐页视觉验收。
+- 下一步：按原图语义重绘并核查 Q12、Q13、Q18、Q19 四幅矢量图；继续保持 `paper_id=null`，直至扫描来源身份达到正式登记门槛，再进入独立解答、provenance、正式构建和视觉校样。
+
 ### 2006 上海卷文科：题面转录初稿（2026-10-22）
 
 - 已完成：按固定 PDF 副本完成 22 题题面转录初稿，范围为填空题1–12、选择题13–16、解答题17–22；题号连续，关键公式与符号按此前已完成的原页/高分辨率局部检查转录。四幅原图仅作待矢量重绘占位，未将截图或 PNG/JPEG 纳入仓库。
