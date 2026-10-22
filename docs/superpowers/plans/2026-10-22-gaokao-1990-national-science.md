@@ -63,10 +63,10 @@
 - Create: `math-gaokao-latex/1990_全国卷_理科/` 下四个版本入口与 `provenance.json`
 - Update: `index.json`、`source-manifest.json`、`manifest.csv`、必要的 `missing-issues.md`/批次报告、该卷测试与 `PROGRESS.md`
 
-- [ ] 仅在题签/固定来源关系通过既有登记门禁后，以 `gk-1990-regular-national-science` 建立canonical卷记录；出版社/版次仍保持未认证。
-- [ ] 按当前题面哈希登记逐题来源与验证状态，官方答案为 `null`、独立推导为生成内容；记录Q20阻塞。
-- [ ] 复用项目生成器产生四个独立编译入口；运行该卷生成、manifest、provenance及四版一致性检查。
-- [ ] 更新进度并提交本批所有权内文件，不包含构建产物、PNG/JPEG或 `docs/design/`。
+- [x] 仅在题签/固定来源关系通过既有登记门禁后，以 `gk-1990-regular-national-science` 建立canonical卷记录；出版社/版次仍保持未认证。
+- [x] 按当前题面哈希登记逐题来源与验证状态，官方答案为 `null`、独立推导为生成内容；记录Q20阻塞。
+- [x] 复用项目生成器产生四个独立编译入口；运行该卷生成、manifest、provenance及四版一致性检查。
+- [x] 更新进度并提交本批所有权内文件，不包含构建产物、PNG/JPEG或 `docs/design/`。
 
 ### Task 4：正式构建、逐页视觉复核与批次报告
 

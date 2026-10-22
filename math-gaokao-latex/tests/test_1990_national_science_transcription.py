@@ -29,7 +29,6 @@ FIGURES = {
 sys.path.insert(0, str(PROJECT / "tools"))
 import generate_projects
 import make_short_answers
-import md2tex
 from solution_sources import parse_answer_points
 
 
@@ -107,6 +106,10 @@ class NationalScience1990TranscriptionTests(unittest.TestCase):
         self.assertRegex(answer_text, r"(?m)^official_answer:\s*null\s*$")
         self.assertIn("编者自行推导，非官方答案", answer_text)
         self.assertIn("编者自行推导，非来源印载解析", solution_text)
+        self.assertIn("独立盲核已逐题完成", answer_text)
+        self.assertIn("独立盲解已逐题提供", solution_text)
+        self.assertNotIn("盲核尚待独立复核", answer_text)
+        self.assertNotIn("独立盲解报告尚未提供", solution_text)
         self.assertRegex(answer_text, r"(?m)^状态:\s*pending\s*$")
         self.assertRegex(solution_text, r"(?m)^状态:\s*pending\s*$")
 
@@ -150,7 +153,7 @@ class NationalScience1990TranscriptionTests(unittest.TestCase):
             self.assertIn("未标", text)
             self.assertNotRegex(text, r"V_1\s*:\s*V_2\s*=\s*(?:7:5|5:7)")
 
-    def test_generated_answer_tex_and_short_answers_match_their_source_contracts(self):
+    def test_generated_project_tex_and_short_answers_match_their_source_contracts(self):
         for path in (ANSWER_KEY, SOLUTION_BODY, ANSWERS_TEX, ANSWERS_SHORT_TEX):
             self.assertTrue(path.is_file(), f"missing answer-stage artifact: {path}")
 
@@ -170,6 +173,8 @@ class NationalScience1990TranscriptionTests(unittest.TestCase):
         )
         generated = generate_projects.generate_project(ROOT, sources)
         self.assertEqual(generate_projects.validate_project_result(sources, generated), ())
+        questions_target = "math-gaokao-latex/1990_全国卷_理科/questions.tex"
+        self.assertEqual(generated.targets[questions_target], QUESTIONS_TEX.read_bytes())
         answers_target = "math-gaokao-latex/1990_全国卷_理科/answers.tex"
         self.assertEqual(generated.targets[answers_target], ANSWERS_TEX.read_bytes())
 
@@ -269,26 +274,6 @@ class NationalScience1990TranscriptionTests(unittest.TestCase):
             pages = sorted(build_dir.glob("figure-*.png"))
             self.assertEqual(len(pages), 4)
             self.assertTrue(all(page.stat().st_size > 1000 for page in pages))
-
-    def test_questions_tex_is_the_deterministic_conversion_of_the_question_source(self):
-        self.assertTrue(PAPER.is_file(), f"missing question draft: {PAPER}")
-        self.assertTrue(QUESTIONS_TEX.is_file(), f"missing generated questions: {QUESTIONS_TEX}")
-        text = PAPER.read_text(encoding="utf-8")
-        links = re.findall(r"\]\(([^)]+\.tex)\)", text)
-        figure_map = {link: Path(link).stem for link in links}
-        converted = md2tex.convert_markdown(
-            text,
-            md2tex.ConversionContext(figure_map=figure_map, strict=True),
-        )
-        wrapped, numbers = generate_projects.wrap(converted.text, "questions")
-        self.assertEqual(numbers, list(range(1, 27)))
-        expected = (
-            "% questions.tex —— 1990 年·全国卷·理科 · 题目内容片段（无答案）\n"
-            "% 由 tools/generate_projects.py 依固定源稿生成，待来源登记后重生成\n"
-            + wrapped
-        )
-        self.assertEqual(QUESTIONS_TEX.read_text(encoding="utf-8"), expected)
-
 
 if __name__ == "__main__":
     unittest.main()

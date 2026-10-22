@@ -1414,6 +1414,14 @@
         "gk-2017-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b13",
+      "issues": [],
+      "paper_ids": [
+        "gk-1990-regular-national-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1423,7 +1431,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5328aafd-dc33-476c-8949-b4c60f3adafc",
+  "last_transaction_id": "050591cc-0a4a-4f35-9e60-726b1e30c86d",
   "papers": [
     {
       "blocked_from": null,
@@ -20587,9 +20595,80 @@
       "title": "2017 年·上海春季卷",
       "track": "none",
       "year": 2017
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_理科/figures/f1990_national_science_q05_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_理科/figures/f1990_national_science_q11_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_理科/figures/f1990_national_science_q20_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1990_全国卷_理科/figures/f1990_national_science_q23_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1990_national_science",
+        "id": "gk-1990-regular-national-science",
+        "note": "固定题面来源普通高考/1990/1990全国理.pdf，SHA-256 7801e6dab50ca58eabdc74d074cdaa7012cdee873dcc5304e0df37248986b43a；题签为“1990 普通高等学校招生考试（全国卷理）”；原PDF不含答案页；出版社与版次未认证。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（理科）",
+        "structure": {
+          "填空题": [
+            16,
+            20
+          ],
+          "解答题": [
+            21,
+            26
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理科"
+      },
+      "issue_ids": [
+        "ISSUE-1131"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1990-regular-national-science",
+      "production_state": "blocked",
+      "project_dir": "1990_全国卷_理科",
+      "question_count": 26,
+      "resume_action": "取得同版权威答案、勘误或可核来源，确认V_1、V_2与两侧区域的对应关系后再登记有序比；未解决前保留无序比并维持阻塞。",
+      "source_files": {
+        "answer_key": "1990/1990_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1990/1990_数学真题_全国理_含解析.md",
+        "questions": "1990/1990_数学真题_全国理_试题.md",
+        "solution_body": "1990/1990_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-9c2fc92cdbbeac0484bf7355db2d32805c316e1a7be74e3bf175a3891a167a49"
+      ],
+      "title": "1990 年·全国卷·理科",
+      "track": "science",
+      "year": 1990
     }
   ],
-  "revision": 4596,
+  "revision": 4598,
   "schema_version": 1,
   "sources": [
     {
@@ -24542,8 +24621,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b5c3755c3d1ec57c4a26a83c1d6d8dcf6350390b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1990-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1990全国理.pdf",
       "regions": [],
       "source_id": "src-9c2fc92cdbbeac0484bf7355db2d32805c316e1a7be74e3bf175a3891a167a49",

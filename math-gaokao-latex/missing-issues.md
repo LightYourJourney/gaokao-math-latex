@@ -18692,3 +18692,20 @@
   "type": "figure-missing"
 }
 ```
+
+## ISSUE-1131
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面和图示只能确定靠A侧与其余区域的无序体积比为7:5，未说明V_1、V_2分别对应哪一侧，因此无法核定V_1:V_2的方向。",
+  "fingerprint": "47c016d0bfd50b69decd174a3931fdb24bae5f77cc0f3433c88e849ef5ad4b9b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1990-regular-national-science",
+  "question_id": "gk-1990-regular-national-science-q20",
+  "resume_action": "取得同版权威答案、勘误或可核来源，确认V_1、V_2与两侧区域的对应关系后再登记有序比；未解决前保留无序比并维持阻塞。",
+  "source_id": "src-9c2fc92cdbbeac0484bf7355db2d32805c316e1a7be74e3bf175a3891a167a49",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
