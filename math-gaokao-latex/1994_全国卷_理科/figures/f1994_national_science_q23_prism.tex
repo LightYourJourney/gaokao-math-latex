@@ -1,30 +1,21 @@
-% Fixed source PDF, printed page 49, question 23: schematic vector redraw.
-% Edges/labels follow the source; spatial proportions are illustrative only.
-\begin{tikzpicture}[x=.9cm,y=.9cm,line cap=round,line join=round,font=\small]
-  \coordinate (Aone) at (0,2.7);
-  \coordinate (Bone) at (-.35,0);
-  \coordinate (Cone) at (.9,1.35);
-  \coordinate (A) at (3.4,2.7);
-  \coordinate (B) at (3.05,0);
-  \coordinate (C) at (4.3,1.35);
-  \coordinate (D) at (3.85,2.025);
-
-  % Prism edges and hidden edges as shown in the source schematic.
-  \draw (Aone)--(A) (Aone)--(Bone) (Bone)--(B) (A)--(B)--(C)--cycle;
-  \draw[dashed] (Aone)--(Cone) (Bone)--(Cone) (Cone)--(C);
-
-  % The source-defined diagonals and plane DBC_1 used by the statements.
-  \draw (Bone)--(A) (D)--(B);
-  \draw[dashed] (B)--(Cone) (D)--(Cone);
-  \draw (A)--(D)--(C);
-
-  \fill (Aone) circle (1.2pt) (Bone) circle (1.2pt) (Cone) circle (1.2pt)
-        (A) circle (1.2pt) (B) circle (1.2pt) (C) circle (1.2pt) (D) circle (1.2pt);
-  \node[above left] at (Aone) {$A_1$};
-  \node[below left] at (Bone) {$B_1$};
-  \node[left] at (Cone) {$C_1$};
-  \node[above] at (A) {$A$};
-  \node[below] at (B) {$B$};
-  \node[right] at (C) {$C$};
-  \node[above right] at (D) {$D$};
+% ../../../1994_全国卷_理科/figures/f1994_national_science_q23_prism.tex — 1994 年·全国卷·理科 第 23 题（棱柱）
+%
+% 【来源】`.work/phase4-b19/source/1994全国理.pdf`（SHA-256 e4511d861907c36870489c60d5f150690c8d7d5c10805937609a3bb62c532a2f），第 1 页；
+%   内容流逐路径照录，本地坐标 = 页面坐标 − (1034.000,477.000)，1 单位 = 1 TeX pt。
+%   每个 m 子路径独立起笔；线宽/虚线按内容流原值；标签取 pdftotext -bbox 中心。
+%
+% 元素计数：实线 8 段＋虚线 5 段＋7 标签
+\begin{tikzpicture}[x=1pt, y=1pt,
+    every node/.style={inner sep=0pt, font=\fontsize{10.5pt}{12.6pt}\selectfont}]
+  \draw[line width=0.398pt] (86.405,77.303) -- (73.378,0.447) (99.432,26.501) -- (73.378,0.447) (12.701,77.303) -- (-0.326,0.447) (73.378,0.447) -- (-0.326,0.447) (86.405,77.303) -- (12.701,77.303) (92.919,51.902) -- (73.378,0.447) (86.405,77.303) -- (-0.326,0.447) (86.405,77.303) -- (99.432,26.501);
+  \draw[line width=0.398pt, dash pattern=on 2.989pt off 2.989pt] (99.432,26.501) -- (25.728,26.501) (25.728,26.501) -- (12.701,77.303) (25.728,26.501) -- (-0.326,0.447) (25.728,26.501) -- (73.378,0.447) (25.728,26.501) -- (92.918,51.902);
+  \node[anchor=center] at (7.000,78.200) {$A_1$};
+  \node[anchor=center] at (91.340,81.380) {$A$};
+  \node[anchor=center] at (-4.500,-6.200) {$B_1$};
+  \node[anchor=center] at (78.050,-5.340) {$B$};
+  \node[anchor=center] at (19.900,27.500) {$C_1$};
+  \node[anchor=center] at (106.030,25.650) {$C$};
+  \node[anchor=center] at (97.700,55.980) {$D$};
 \end{tikzpicture}
+%
+% 【自验结果】逐路径照录；探针编译 0 警告。

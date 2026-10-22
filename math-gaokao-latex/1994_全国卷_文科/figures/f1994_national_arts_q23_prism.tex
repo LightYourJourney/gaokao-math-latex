@@ -1,30 +1,21 @@
-% 固定来源PDF印刷页50第23题正三棱柱图的矢量示意重绘。
-% 仅表示顶点、棱和题目指定线段；投影不按比例，不据图添加度量条件。
-\begin{tikzpicture}[x=.9cm,y=.9cm,line cap=round,line join=round,font=\small]
-  \coordinate (Aone) at (0,2.25);
-  \coordinate (Bone) at (-.2,.15);
-  \coordinate (Cone) at (1.15,1.15);
-  \coordinate (A) at (3.05,2.25);
-  \coordinate (B) at (2.85,.15);
-  \coordinate (C) at (4.2,1.15);
-  \coordinate (D) at (3.625,1.7);
-
-  % Prism edges. The hidden far-base edge is dashed in this view.
-  \draw (Aone)--(Bone)--(Cone);
-  \draw[dashed] (Cone)--(Aone);
-  \draw (A)--(B)--(C)--cycle;
-  \draw (Aone)--(A) (Bone)--(B) (Cone)--(C);
-  % Mark the source-defined midpoint D on AC and the lines used in the question.
-  \draw (A)--(D)--(C);
-  \draw (Bone)--(A);
-  \draw[dashed] (B)--(Cone);
-  \fill (Aone) circle (1.2pt) (Bone) circle (1.2pt) (Cone) circle (1.2pt)
-        (A) circle (1.2pt) (B) circle (1.2pt) (C) circle (1.2pt) (D) circle (1.2pt);
-  \node[above left] at (Aone) {$A_1$};
-  \node[below left] at (Bone) {$B_1$};
-  \node[left] at (Cone) {$C_1$};
-  \node[above] at (A) {$A$};
-  \node[below] at (B) {$B$};
-  \node[right] at (C) {$C$};
-  \node[above right] at (D) {$D$};
+% ../../../1994_全国卷_文科/figures/f1994_national_arts_q23_prism.tex — 1994 年·全国卷·文科 第 23 题（棱柱）
+%
+% 【来源】`.work/phase4-b19/source/1994全国文.pdf`（SHA-256 68085b2f5b0285e127f63c87f6737434fddb156cbc4689b8957c2a4be4bb1bda），第 1 页；
+%   内容流逐路径照录，本地坐标 = 页面坐标 − (1034.000,477.000)，1 单位 = 1 TeX pt。
+%   每个 m 子路径独立起笔；线宽/虚线按内容流原值；标签取 pdftotext -bbox 中心。
+%
+% 元素计数：实线 8 段＋虚线 5 段＋7 标签
+\begin{tikzpicture}[x=1pt, y=1pt,
+    every node/.style={inner sep=0pt, font=\fontsize{10.5pt}{12.6pt}\selectfont}]
+  \draw[line width=0.398pt] (86.405,98.269) -- (73.378,21.413) (99.432,47.467) -- (73.378,21.413) (12.701,98.269) -- (-0.326,21.413) (73.378,21.413) -- (-0.326,21.413) (86.405,98.269) -- (12.701,98.269) (92.919,72.868) -- (73.378,21.413) (86.405,98.269) -- (-0.326,21.413) (86.405,98.269) -- (99.432,47.467);
+  \draw[line width=0.398pt, dash pattern=on 2.989pt off 2.989pt] (25.728,47.467) -- (12.701,98.269) (25.728,47.467) -- (-0.326,21.413) (25.728,47.467) -- (73.377,21.413) (25.728,47.467) -- (92.918,72.868) (99.432,47.467) -- (25.728,47.467);
+  \node[anchor=center] at (7.000,99.600) {$A_1$};
+  \node[anchor=center] at (91.340,102.350) {$A$};
+  \node[anchor=center] at (-4.500,15.200) {$B_1$};
+  \node[anchor=center] at (78.050,15.630) {$B$};
+  \node[anchor=center] at (19.900,48.800) {$C_1$};
+  \node[anchor=center] at (106.030,46.620) {$C$};
+  \node[anchor=center] at (97.700,76.950) {$D$};
 \end{tikzpicture}
+%
+% 【自验结果】逐路径照录；探针编译 0 警告。
