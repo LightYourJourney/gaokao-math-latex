@@ -1,0 +1,558 @@
+% answers.tex —— 1994 年·全国卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 1994/1994_数学真题_全国文_试题.md + 1994/1994_数学真题_全国文_解析正文.md + 1994/1994_数学真题_全国文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gknotice}
+\textbf{解析归属}：固定源 PDF 只有题面，没有答案页。以下推导依据固定题面形成，\textbf{非官方解析}；已由独立解题者在只读题面条件下盲解（25 题），转录另经 400 dpi 与内容流逐项复核（补出向量上划线两处、共轭线一处）。原页疑点保留在题面与答案要点中，不以推导结果反改原题。
+\end{gknotice}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设全集 $I=\{0,1,2,3,4\}$，集合 $A=\{0,1,2,3\}$，集合 $B=\{2,3,4\}$，则 $\overline{A}\cup\overline{B}=$\mbox{（　　）}。
+
+（A）$\{0\}$　　（B）$\{0,1\}$　　（C）$\{0,1,4\}$　　（D）$\{0,1,2,3,4\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+理由：\(\complement_I A=\{4\}\)，\(\complement_I B=\{0,1\}\)，故 \(\complement_I A\cup\complement_I B=\{0,1,4\}\)，即 (C)。原页 \(A\)、\(B\) 上方均有补集横线（内容流实测两条 8pt 横线），转录初稿漏线，已据原页补正。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+如果方程 $x^2+ky^2=2$ 表示焦点在 $y$ 轴上的椭圆，那么实数 $k$ 的取值范围是\mbox{（　　）}。
+
+（A）$(0,+\infty)$　　（B）$(0,2)$　　（C）$(1,+\infty)$　　（D）$(0,1)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：D
+理由：化为 $\dfrac{x^2}{2}+\dfrac{y^2}{2/k}=1$。椭圆需 $k>0$；焦点在 $y$ 轴需 $\dfrac2k>2$，即 $0<k<1$。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+点 $(0,5)$ 到直线 $y=2x$ 的距离是\mbox{（　　）}。
+
+（A）$\dfrac52$　　（B）$\sqrt5$　　（C）$\dfrac32$　　（D）$\dfrac{\sqrt5}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：B
+理由：直线即 $2x-y=0$，$d=\dfrac{|2\cdot0-5|}{\sqrt{2^2+(-1)^2}}=\dfrac{5}{\sqrt5}=\sqrt5$。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+设 $\theta$ 是第二象限的角，则必有\mbox{（　　）}。
+
+（A）$\tan\dfrac\theta2>\cot\dfrac\theta2$　　（B）$\tan\dfrac\theta2<\cot\dfrac\theta2$
+
+（C）$\sin\dfrac\theta2>\cos\dfrac\theta2$　　（D）$\sin\dfrac\theta2<\cos\dfrac\theta2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：A
+理由：$\theta\in\left(\dfrac\pi2+2k\pi,\pi+2k\pi\right)\Rightarrow\dfrac\theta2\in\left(\dfrac\pi4+k\pi,\dfrac\pi2+k\pi\right)$，故 $\tan\dfrac\theta2>1$、$0<\cot\dfrac\theta2<1$，恒有 $\tan\dfrac\theta2>\cot\dfrac\theta2$。(C)(D) 在 $k$ 为奇数（半角落在第三象限）时不成立。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+某种细菌在培养过程中，每20分钟分裂一次（一个分裂为两个）。经过3小时，这种细菌由1个可繁殖成\mbox{（　　）}。
+
+（A）511个　　（B）512个　　（C）1023个　　（D）1024个
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：B
+理由：$3$ 小时 $=180$ 分钟 $=9$ 个 $20$ 分钟，分裂 $9$ 次，$1\cdot 2^9=512$。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+在下列函数中，以 $\dfrac\pi2$ 为周期的函数是\mbox{（　　）}。
+
+（A）$y=\sin2x+\cos4x$　　（B）$y=\sin2x\cos4x$
+
+（C）$y=\sin2x+\cos2x$　　（D）$y=\sin2x\cos2x$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：D
+理由：(D) $y=\sin2x\cos2x=\dfrac12\sin4x$，周期 $\dfrac{2\pi}{4}=\dfrac\pi2$。(A)(B)(C) 的周期均为 $\pi$（代入 $x+\frac\pi2$ 得 $-f$ 或变号，不满足）。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知正六棱台的上、下底面边长分别为2和4，高为2，则其体积为\mbox{（　　）}。
+
+（A）$32\sqrt3$　　（B）$28\sqrt3$　　（C）$24\sqrt3$　　（D）$20\sqrt3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：B
+理由：正六边形面积 $S=\dfrac{3\sqrt3}{2}a^2$，故 $S_1=6\sqrt3$，$S_2=24\sqrt3$，$\sqrt{S_1S_2}=12\sqrt3$。$V=\dfrac h3(S_1+S_2+\sqrt{S_1S_2})=\dfrac23\cdot42\sqrt3=28\sqrt3$。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设 $F_1$ 和 $F_2$ 为双曲线 $\dfrac{x^2}{4}-y^2=1$ 的两个焦点，点 $P$ 在双曲线上且满足 $\angle F_1PF_2=90^\circ$，则 $\triangle F_1PF_2$ 的面积是\mbox{（　　）}。
+
+（A）$1$　　（B）$\dfrac{\sqrt5}{2}$　　（C）$2$　　（D）$\sqrt5$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：A
+理由：$a=2,\ b=1,\ c=\sqrt5$。$\angle F_1PF_2=90^\circ$ 给 $|PF_1|^2+|PF_2|^2=4c^2=20$；双曲线定义给 $\big||PF_1|-|PF_2|\big|=2a=4$。两式相减得 $2|PF_1||PF_2|=20-16=4$，$S=\dfrac12|PF_1||PF_2|=1$。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+如果复数 $z$ 满足 $|z+i|+|z-i|=2$，那么 $|z+i+1|$ 的最小值是\mbox{（　　）}。
+
+（A）$1$　　（B）$\sqrt2$　　（C）$2$　　（D）$\sqrt5$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：A
+理由：$|z+i|+|z-i|=2$ 且 $|i-(-i)|=2$，故轨迹为虚轴上从 $-i$ 到 $i$ 的线段，$z=ti\ (t\in[-1,1])$。$|z+i+1|=|1+(t+1)i|$，$t=-1$ 时取最小值 $1$。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+有甲、乙、丙三项任务，甲需2人承担，乙、丙各需1人承担。从10人中选派4人承担这三项任务，不同的选法共有\mbox{（　　）}。
+
+（A）1260种　　（B）2025种　　（C）2520种　　（D）5040种
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：C
+理由：先选人再分派：$\binom{10}{2}\binom81\binom71=45\cdot8\cdot7=2520$（甲的两名视为一组，乙、丙各一人，任务不同，无需再乘）。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+对于直线 $m,n$ 和平面 $\alpha,\beta$，$\alpha\perp\beta$ 的一个充分条件是\mbox{（　　）}。
+
+（A）$m\perp n,\ m\parallel\alpha,\ n\parallel\beta$
+
+（B）$m\perp n,\ \alpha\cap\beta=m,\ n\subset\alpha$
+
+（C）$m\parallel n,\ n\perp\beta,\ m\subset\alpha$
+
+（D）$m\parallel n,\ m\perp\alpha,\ n\perp\beta$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：C
+理由：$m\parallel n,\ n\perp\beta\Rightarrow m\perp\beta$；又 $m\subset\alpha$，故 $\alpha\perp\beta$。(A)(B) 不足；(D) 只推出 $\alpha\parallel\beta$。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=1-\sqrt{1-x^2}\ (-1\le x\le0)$，则函数 $y=f^{-1}(x)$ 的图象是\mbox{（　　）}。
+\nopagebreak[4]
+\begin{center}\input{figures/f1994_national_arts_q12_inverse_graphs}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：B（图象为圆 $(x-1)^2+y^2=1$ 在 $x\in[0,1]$ 上位于 $x$ 轴下方的四分之一圆弧，端点为 $(0,0)$ 与 $(1,-1)$；四幅图象中 (B) 与之一致）
+理由：$f$ 在 $[-1,0]$ 上递减，值域 $[0,1]$。由 $y=1-\sqrt{1-x^2}$ 解出 $x=-\sqrt{2y-y^2}$，即 $f^{-1}(x)=-\sqrt{2x-x^2}\ (0\le x\le1)$，等价于 $(x-1)^2+y^2=1,\ y\le0$。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知过球面上 $A,B,C$ 三点的截面和球心的距离等于球半径的一半，且 $AB=BC=CA=2$，则球面面积是\mbox{（　　）}。
+
+（A）$\dfrac{16\pi}{9}$　　（B）$\dfrac{8\pi}{3}$　　（C）$4\pi$　　（D）$\dfrac{64\pi}{9}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：D
+理由：正 $\triangle ABC$ 边长 $2$，外接圆半径 $r=\dfrac{2}{\sqrt3}$。$R^2=r^2+\left(\dfrac R2\right)^2\Rightarrow\dfrac34R^2=\dfrac43\Rightarrow R^2=\dfrac{16}{9}$，球面积 $4\pi R^2=\dfrac{64\pi}{9}$。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+如果函数 $y=\sin2x+a\cos2x$ 的图象关于直线 $x=-\dfrac\pi8$ 对称，那么 $a=$\mbox{（　　）}。
+
+（A）$\sqrt2$　　（B）$-\sqrt2$　　（C）$1$　　（D）$-1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：D
+理由：关于 $x=-\dfrac\pi8$ 对称意味着该处取极值：$y'=2\cos2x-2a\sin2x$，$y'\!\left(-\frac\pi8\right)=\sqrt2(1+a)=0\Rightarrow a=-1$。（验证：$y=\sqrt2\sin\left(2x-\frac\pi4\right)$ 的对称轴 $x=\frac{3\pi}{8}+\frac{k\pi}{2}$ 含 $-\frac\pi8$。）
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+定义在 $(-\infty,+\infty)$ 上的任意函数 $f(x)$ 都可以表示成一个奇函数 $g(x)$ 和一个偶函数 $h(x)$ 之和。如果 $f(x)=\lg(10^x+1)$，$x\in(-\infty,+\infty)$，那么\mbox{（　　）}。
+
+（A）$g(x)=x,\quad h(x)=\lg(10^x+10^{-x}+2)$
+
+（B）$g(x)=\dfrac12[\lg(10^x+1)+x],\quad h(x)=\dfrac12[\lg(10^x+1)-x]$
+
+（C）$g(x)=\dfrac{x}{2},\quad h(x)=\lg(10^x+1)-\dfrac{x}{2}$
+
+（D）$g(x)=-\dfrac{x}{2},\quad h(x)=\lg(10^x+1)+\dfrac{x}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：C
+理由：$f(-x)=\lg(10^{-x}+1)=\lg(10^x+1)-x$。故 $g=\dfrac{f(x)-f(-x)}2=\dfrac x2$，$h=\dfrac{f(x)+f(-x)}2=\lg(10^x+1)-\dfrac x2$，且 $g$ 奇、$h$ 偶、两者和为 $f$。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+在 $(3-x)^7$ 的展开式中，$x^5$ 的系数是\underline{\qquad\qquad}。（用数字作答）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：$-189$
+理由：$x^5$ 项为 $\binom75 3^2(-x)^5$，系数 $21\cdot9\cdot(-1)=-189$。
+
+\gkanswer{答案：\(-189\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+抛物线 $y^2=8-4x$ 的准线方程是\underline{\qquad\qquad}，圆心在该抛物线的顶点且与其准线相切的圆的方程是\underline{\qquad\qquad}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：准线 $x=3$；圆 $(x-2)^2+y^2=1$
+理由：$y^2=-4(x-2)$，顶点 $(2,0)$，$2p=2$（即 $p=1$），开口向左，准线 $x=2+p=3$；圆心为顶点、与准线相切，半径 $=1$。
+
+\gkanswer{答案：准线 \(x=3\)；圆 \((x-2)^2+y^2=1\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+已知 $\sin\theta+\cos\theta=\dfrac15$，$\theta\in(0,\pi)$，则 $\cot\theta$ 的值是\underline{\qquad\qquad}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：$-\dfrac34$
+理由：$(\sin\theta+\cos\theta)^2=1+\sin2\theta=\dfrac1{25}\Rightarrow\sin2\theta=-\dfrac{24}{25}$，结合 $\theta\in(0,\pi)$ 得 $\theta\in\left(\frac\pi2,\pi\right)$，且 $\sin\theta-\cos\theta=\sqrt{1-\sin2\theta}=\dfrac75$。于是 $\sin\theta=\dfrac45,\ \cos\theta=-\dfrac35$，$\cot\theta=-\dfrac34$。
+
+\gkanswer{答案：\(-\dfrac34\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+设圆锥底面圆周上两点 $A,B$ 间的距离为2，圆锥顶点到直线 $AB$ 的距离为 $\sqrt3$，$AB$ 和圆锥的轴的距离为1，则该圆锥的体积为\underline{\qquad\qquad}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：$\dfrac{2\sqrt2\pi}{3}$
+理由：设底面圆心 $O$、半径 $r$，$AB$ 中点 $M$。轴与 $AB$ 的距离即 $O$ 到 $AB$ 的距离 $OM=1$，半弦 $AM=1$，故 $r^2=1+1=2$。顶点 $S$ 到 $AB$ 的距离 $SM=\sqrt3$，$SM^2=h^2+OM^2\Rightarrow h^2=2$。$V=\dfrac13\pi r^2h=\dfrac13\pi\cdot2\cdot\sqrt2=\dfrac{2\sqrt2\pi}{3}$。
+
+\gkanswer{答案：\(\dfrac{2\sqrt2}{3}\pi\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+在测量某物理量的过程中，因仪器和观察的误差，使得 $n$ 次测量分别得到 $a_1,a_2,\ldots,a_n$，共 $n$ 个数据。我们规定所测量物理量的“最佳近似值”$a$ 是这样一个量：与其他近似值比较，$a$ 与各数据的差的平方和最小。依此规定，从 $a_1,a_2,\ldots,a_n$ 推出的 $a=$\underline{\qquad\qquad}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：$a=\dfrac{a_1+a_2+\cdots+a_n}{n}$
+理由：设 $F(a)=\sum(a-a_i)^2=na^2-2a\sum a_i+\sum a_i^2$，为开口向上的二次函数，在 $a=\dfrac1n\sum a_i$ 处取最小值。
+
+\gkanswer{答案：\(\dfrac{a_1+a_2+\cdots+a_n}{n}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+求函数
+\nopagebreak[4]
+\[
+y=\frac{\sin3x\sin^3x+\cos3x\cos^3x}{\cos^2 2x}+\sin2x
+\]
+的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：最小值为 $-\sqrt2$
+\Needspace{5\baselineskip}
+理由：用 $\sin3x=3\sin x-4\sin^3x$、$\cos3x=4\cos^3x-3\cos x$ 展开分子：
+\nopagebreak[4]
+\[
+\sin3x\sin^3x+\cos3x\cos^3x=4(\cos^6x-\sin^6x)-3(\cos^4x-\sin^4x).
+\]
+\Needspace{5\baselineskip}
+而 $\cos^6x-\sin^6x=\cos2x\left(1-\dfrac{\sin^22x}{4}\right)$，$\cos^4x-\sin^4x=\cos2x$，故分子 $=\cos2x\left(4-\sin^22x-3\right)=\cos^3 2x$。于是
+\nopagebreak[4]
+\[
+y=\frac{\cos^32x}{\cos^22x}+\sin2x=\cos2x+\sin2x=\sqrt2\sin\left(2x+\frac\pi4\right)\quad(\cos2x\ne0).
+\]
+最小值 $-\sqrt2$，在 $2x+\frac\pi4=-\frac\pi2+2k\pi$ 即 $2x=-\frac{3\pi}{4}+2k\pi$ 时取得，此时 $\cos2x=-\frac{\sqrt2}{2}\ne0$，定义域允许。故最小值为 $-\sqrt2$。
+
+\gkanswer{答案：\(-\sqrt2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=\log_a x\ (a>0\text{\text{且}}a\ne1,\ x\in\mathbb R_+)$。若 $x_1,x_2\in\mathbb R_+$，判断 $\dfrac12[f(x_1)+f(x_2)]$ 与 $f\!\left(\dfrac{x_1+x_2}{2}\right)$ 的大小，并加以证明。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：$a>1$ 时 $\dfrac12[f(x_1)+f(x_2)]\le f\!\left(\dfrac{x_1+x_2}{2}\right)$；$0<a<1$ 时相反；两者均当且仅当 $x_1=x_2$ 取等号
+\Needspace{5\baselineskip}
+理由：由对数运算，
+\nopagebreak[4]
+\[
+\frac12[f(x_1)+f(x_2)]-f\!\left(\frac{x_1+x_2}{2}\right)=\log_a\frac{2\sqrt{x_1x_2}}{x_1+x_2}.
+\]
+由均值不等式 $2\sqrt{x_1x_2}\le x_1+x_2$，故 $0<\dfrac{2\sqrt{x_1x_2}}{x_1+x_2}\le1$，等号当且仅当 $x_1=x_2$。$a>1$ 时 $\log_a t\le0\ (0<t\le1)$，左边 $\le$ 右边；$0<a<1$ 时 $\log_a t\ge0$，左边 $\ge$ 右边。证毕。
+
+\gkanswer{答案：（条件结论）当 \(a>1\) 时 \(\dfrac12[f(x_1)+f(x_2)]\le f\!\left(\dfrac{x_1+x_2}{2}\right)\)；当 \(0<a<1\) 时不等号反向；两种情形均当且仅当 \(x_1=x_2\) 取等}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+如图，已知 $A_1B_1C_1-ABC$ 是正三棱柱，$D$ 是 $AC$ 中点。
+
+（1） 证明：$AB_1\parallel\text{\text{平面} }DBC_1$；
+
+（2） 假设 $AB_1\perp BC_1$，$BC=2$，求线段 $AB_1$ 在侧面 $B_1BCC_1$ 上的射影长。
+\nopagebreak[4]
+\begin{center}\input{figures/f1994_national_arts_q23_prism}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：（1）见证明；（2）射影长为 $\sqrt3$
+理由：
+\gksubpart{(1)}
+
+取 $D_1$ 为 $A_1C_1$ 中点。平移 $\overrightarrow{BB_1}$ 把 $B\mapsto B_1$、$D\mapsto D_1$（$D,D_1$ 为对应中点），故 $B_1D_1\parallel BD$；又 $AD_1$ 与 $DC_1$ 满足 $\overrightarrow{AD_1}=\overrightarrow{DC_1}$（$D$ 为 $AC$ 中点、$D_1=D+\overrightarrow{BB_1}$），故 $AD_1\parallel DC_1$。平面 $AB_1D_1$ 内两条相交直线 $B_1D_1,AD_1$ 分别平行于平面 $DBC_1$ 内两条相交直线 $BD,DC_1$，所以平面 $AB_1D_1\parallel$ 平面 $DBC_1$。而 $AB_1\subset$ 平面 $AB_1D_1$，且 $A\notin$ 平面 $DBC_1$，故 $AB_1\parallel$ 平面 $DBC_1$。
+
+\gksubpart{(2)}
+
+\Needspace{5\baselineskip}
+设高 $BB_1=h$，底面边长 $BC=2$。由 $AB_1\perp BC_1$：
+\nopagebreak[4]
+\[
+\overrightarrow{AB_1}\cdot\overrightarrow{BC_1}=(\overrightarrow{AB}+\overrightarrow{BB_1})\cdot(\overrightarrow{BC}+\overrightarrow{BB_1})
+=|\overrightarrow{AB}||\overrightarrow{BC}|\cos120^\circ+h^2=-\frac{4}{2}+h^2=0,
+\]
+（两处交叉项因 $\overrightarrow{BB_1}\perp$ 底面而为 $0$），得 $h^2=2$，即 $h=\sqrt2$，$|AB_1|=\sqrt{AB^2+h^2}=\sqrt6$。
+
+\Needspace{5\baselineskip}
+侧面 $B_1BCC_1\perp$ 底面，故 $A$ 到该侧面的距离等于正 $\triangle ABC$ 中 $A$ 到 $BC$ 的距离（高）$\sqrt3$。$B_1$ 在侧面上，于是
+\nopagebreak[4]
+\[
+\ell=\sqrt{|AB_1|^2-\left(\text{dist}(A,\text{\text{侧面}})\right)^2}=\sqrt{6-3}=\sqrt3.
+\]
+（坐标验证：$A(0,0,0),B(2,0,0),C(1,\sqrt3,0)$，高 $\sqrt2$ 时投影长同为 $\sqrt3$。）
+
+\gkanswer{答案（1）：见解析（\(AB_1\parallel\) 平面 \(DBC_1\)，用线面平行判定）}
+
+\gkanswer{答案（2）：\(\sqrt3\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{24}{}
+
+\textbf{题目}：
+
+已知直角坐标平面上点 $Q(2,0)$ 和圆 $C:x^2+y^2=1$，动点 $M$ 到圆 $C$ 的切线长与 $|MQ|$ 的比等于常数 $\lambda\ (\lambda>0)$。求动点 $M$ 的轨迹方程，说明它表示什么曲线。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：见下；$\lambda=1$ 时为直线 $x=\dfrac54$，$\lambda\ne1$ 时为圆 $\left(x-\dfrac{2\lambda^2}{\lambda^2-1}\right)^2+y^2=\dfrac{3\lambda^2+1}{(\lambda^2-1)^2}$
+\Needspace{5\baselineskip}
+理由：设 $M(x,y)$。$M$ 在圆外时切线长 $=\sqrt{x^2+y^2-1}$，$|MQ|=\sqrt{(x-2)^2+y^2}$。由条件
+\nopagebreak[4]
+\[
+\frac{x^2+y^2-1}{(x-2)^2+y^2}=\lambda^2
+\;\Longrightarrow\;
+(\lambda^2-1)(x^2+y^2)-4\lambda^2x+4\lambda^2+1=0.
+\]
+\begin{itemize}
+\item $\lambda=1$：$-4x+5=0$，即直线 $x=\dfrac54$（垂直于 $x$ 轴的直线，位于圆外）。
+\item $\lambda\ne1$：配方得
+\end{itemize}
+\nopagebreak[4]
+\[
+\left(x-\frac{2\lambda^2}{\lambda^2-1}\right)^2+y^2=\frac{4\lambda^4}{(\lambda^2-1)^2}-\frac{4\lambda^2+1}{\lambda^2-1}
+=\frac{3\lambda^2+1}{(\lambda^2-1)^2},
+\]
+即圆心 $\left(\dfrac{2\lambda^2}{\lambda^2-1},0\right)$、半径 $\dfrac{\sqrt{3\lambda^2+1}}{|\lambda^2-1|}$ 的圆（圆心在 $x$ 轴上）。
+
+\gkanswer{答案：\(\lambda=1\) 时为直线 \(x=\dfrac54\)；\(\lambda\ne1\) 时为圆 \(\left(x-\dfrac{2\lambda^2}{\lambda^2-1}\right)^2+y^2=\dfrac{3\lambda^2+1}{(\lambda^2-1)^2}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{25}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设数列 $\{a_n\}$ 的前 $n$ 项和为 $S_n$，若对于所有的自然数 $n$，都有
+\nopagebreak[4]
+\[
+S_n=\frac{n(a_1+a_n)}{2},
+\]
+证明 $\{a_n\}$ 是等差数列。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+答案：见证明
+\Needspace{5\baselineskip}
+理由：对 $n\ge2$，由 $S_n-S_{n-1}=a_n$：
+\nopagebreak[4]
+\[
+2a_n=n(a_1+a_n)-(n-1)(a_1+a_{n-1})
+\;\Longrightarrow\;
+a_1=(2-n)a_n+(n-1)a_{n-1}.\tag{1}
+\]
+\Needspace{5\baselineskip}
+同理把下标换成 $n+1$（$n\ge1$）：
+\nopagebreak[4]
+\[
+a_1=(1-n)a_{n+1}+n a_n.\tag{2}
+\]
+\Needspace{5\baselineskip}
+(1)$-$(2)，对 $n\ge2$：
+\nopagebreak[4]
+\[
+0=(2-2n)a_n+(n-1)(a_{n-1}+a_{n+1})
+=(n-1)\big(a_{n+1}+a_{n-1}-2a_n\big),
+\]
+\Needspace{5\baselineskip}
+因 $n\ge2$ 有 $n-1\ne0$，故
+\nopagebreak[4]
+\[
+a_{n+1}+a_{n-1}=2a_n\quad(n\ge2),
+\]
+即 $a_{n+1}-a_n=a_n-a_{n-1}$ 对一切 $n\ge2$ 成立，相邻两项之差为常数。故 $\{a_n\}$ 是等差数列（$n=2$ 时给出 $a_1+a_3=2a_2$，已含首项）。证毕。
+（附注：该条件对 $n=1,2$ 自动成立，故关键约束来自 $n\ge3$。）
+
+\gkanswer{答案：见解析（由 \(S_n-S_{n-1}=a_n\) 推出 \(a_{n+1}+a_{n-1}=2a_n\)）}
+
+\end{answer}

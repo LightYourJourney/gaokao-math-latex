@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "1994_全国卷_文科"
+PAPER_ID = "gk-1994-national-arts"
 SOURCE_ID = "src-cafef4608133fbbf6e430e07061b30e714dded069fecffebce620e84186c5dbe"
 DRAFT = PAPER / "题面转录草稿.md"
 RECORD = PAPER / "来源校对.json"
@@ -27,7 +28,8 @@ class NationalArts1994SourceTests(unittest.TestCase):
             self.fail("1994 national arts source record is missing")
             return
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], PAPER_ID)
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1994/1994全国文.pdf")
         self.assertEqual(self.record["source_id"], SOURCE_ID)
         self.assertEqual(self.record["pdf_sha256"], self.source["artifact"]["sha256"])
@@ -43,8 +45,8 @@ class NationalArts1994SourceTests(unittest.TestCase):
         self.assertEqual(self.record["question_count"], 25)
         self.assertEqual(self.record["question_type_ranges"], [
             {"type": "single-choice", "first": 1, "last": 15},
-            {"type": "fill-in", "first": 16, "last": 21},
-            {"type": "solution", "first": 22, "last": 25},
+            {"type": "fill-in", "first": 16, "last": 20},
+            {"type": "solution", "first": 21, "last": 25},
         ])
         expected_columns = [1] * 11 + [2] * 10 + [3] * 4
         self.assertEqual([q["question_number"] for q in self.record["question_sources"]], headings)

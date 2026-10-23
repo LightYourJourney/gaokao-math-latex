@@ -1465,6 +1465,15 @@
         "gk-1993-old-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b19",
+      "issues": [],
+      "paper_ids": [
+        "gk-1994-national-arts",
+        "gk-1994-national-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1474,7 +1483,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cd00a910-05f9-4c45-8edd-dbe9229786cc",
+  "last_transaction_id": "17e88dc1-a847-4502-a2df-10ad13338022",
   "papers": [
     {
       "blocked_from": null,
@@ -21174,9 +21183,125 @@
       "title": "1993 年·旧科目组·理科",
       "track": "science",
       "year": 1993
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1994_全国卷_文科/figures/f1994_national_arts_q12_inverse_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1994_全国卷_文科/figures/f1994_national_arts_q23_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1994_national_arts",
+        "id": "gk-1994-national-arts",
+        "note": "1994 全国卷文科卷；1 页 A3 三栏 XeTeX 重排（页脚 50），无答案页（等级 D，编者推导并经盲解/复核）。Q12 四图象选项与 Q23 棱柱按内容流重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            16,
+            20
+          ],
+          "解答题": [
+            21,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1994-national-arts",
+      "production_state": "complete",
+      "project_dir": "1994_全国卷_文科",
+      "question_count": 25,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1994/1994_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1994/1994_数学真题_全国文_含解析.md",
+        "questions": "1994/1994_数学真题_全国文_试题.md",
+        "solution_body": "1994/1994_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-cafef4608133fbbf6e430e07061b30e714dded069fecffebce620e84186c5dbe"
+      ],
+      "title": "1994 年·全国卷·文科",
+      "track": "arts",
+      "year": 1994
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1994_全国卷_理科/figures/f1994_national_science_q12_inverse_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1994_全国卷_理科/figures/f1994_national_science_q23_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "1994_national_science",
+        "id": "gk-1994-national-science",
+        "note": "1994 全国卷理科卷；1 页 A3 三栏 XeTeX 重排（页脚 49），无答案页（等级 D，编者推导并经盲解/复核）。Q12 四图象选项与 Q23 棱柱按内容流重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            16,
+            20
+          ],
+          "解答题": [
+            21,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "理科",
+        "variant": "全国理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1994-national-science",
+      "production_state": "complete",
+      "project_dir": "1994_全国卷_理科",
+      "question_count": 25,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1994/1994_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1994/1994_数学真题_全国理_含解析.md",
+        "questions": "1994/1994_数学真题_全国理_试题.md",
+        "solution_body": "1994/1994_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-4cfac3e1fcb073f3743af5bf3b11e857eb918c955557e4f3f4acc7c208bd16cf"
+      ],
+      "title": "1994 年·全国卷·理科",
+      "track": "science",
+      "year": 1994
     }
   ],
-  "revision": 4695,
+  "revision": 4715,
   "schema_version": 1,
   "sources": [
     {
@@ -25585,8 +25710,8 @@
       "exam_type": "regular",
       "git_blob_oid": "86b3ae6134b689ee64bf741d887ba1f14b4efc28",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1994-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1994全国文.pdf",
       "regions": [],
       "source_id": "src-cafef4608133fbbf6e430e07061b30e714dded069fecffebce620e84186c5dbe",
@@ -25609,8 +25734,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d0f2b2f34c37a90677e1d558837107d61c77a74b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1994-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1994全国理.pdf",
       "regions": [],
       "source_id": "src-4cfac3e1fcb073f3743af5bf3b11e857eb918c955557e4f3f4acc7c208bd16cf",

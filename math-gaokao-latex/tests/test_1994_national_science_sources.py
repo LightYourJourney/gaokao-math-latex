@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "1994_全国卷_理科"
+PAPER_ID = "gk-1994-national-science"
 SOURCE_ID = "src-4cfac3e1fcb073f3743af5bf3b11e857eb918c955557e4f3f4acc7c208bd16cf"
 DRAFT = PAPER / "题面转录草稿.md"
 RECORD = PAPER / "来源校对.json"
@@ -27,7 +28,8 @@ class NationalScience1994SourceTests(unittest.TestCase):
             self.fail("1994 national science source record is missing")
             return
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], PAPER_ID)
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1994/1994全国理.pdf")
         self.assertEqual(self.record["source_id"], SOURCE_ID)
         self.assertEqual(self.record["pdf_sha256"], self.source["artifact"]["sha256"])

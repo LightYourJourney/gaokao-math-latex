@@ -17,39 +17,238 @@
   "question_scores": null,
   "total_score": null,
   "question_type_ranges": [
-    {"type": "single-choice", "first": 1, "last": 15},
-    {"type": "fill-in", "first": 16, "last": 20},
-    {"type": "solution", "first": 21, "last": 25}
+    {
+      "type": "single-choice",
+      "first": 1,
+      "last": 15
+    },
+    {
+      "type": "fill-in",
+      "first": 16,
+      "last": 20
+    },
+    {
+      "type": "solution",
+      "first": 21,
+      "last": 25
+    }
   ],
   "question_sources": [
-    {"question_id": "1994-national-science-q001", "question_number": 1, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q002", "question_number": 2, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q003", "question_number": 3, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q004", "question_number": 4, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q005", "question_number": 5, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q006", "question_number": 6, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q007", "question_number": 7, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q008", "question_number": 8, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q009", "question_number": 9, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q010", "question_number": 10, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q011", "question_number": 11, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-science-q012", "question_number": 12, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q013", "question_number": 13, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q014", "question_number": 14, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q015", "question_number": 15, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q016", "question_number": 16, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q017", "question_number": 17, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q018", "question_number": 18, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q019", "question_number": 19, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q020", "question_number": 20, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q021", "question_number": 21, "question_type": "solution", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-science-q022", "question_number": 22, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-science-q023", "question_number": 23, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-science-q024", "question_number": 24, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-science-q025", "question_number": 25, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null}
+    {
+      "question_id": "1994-national-science-q001",
+      "question_number": 1,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q002",
+      "question_number": 2,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q003",
+      "question_number": 3,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q004",
+      "question_number": 4,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q005",
+      "question_number": 5,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q006",
+      "question_number": 6,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q007",
+      "question_number": 7,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q008",
+      "question_number": 8,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q009",
+      "question_number": 9,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q010",
+      "question_number": 10,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q011",
+      "question_number": 11,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q012",
+      "question_number": 12,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q013",
+      "question_number": 13,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q014",
+      "question_number": 14,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q015",
+      "question_number": 15,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q016",
+      "question_number": 16,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q017",
+      "question_number": 17,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q018",
+      "question_number": 18,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q019",
+      "question_number": 19,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q020",
+      "question_number": 20,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q021",
+      "question_number": 21,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q022",
+      "question_number": 22,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q023",
+      "question_number": 23,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q024",
+      "question_number": 24,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-science-q025",
+      "question_number": 25,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    }
   ],
   "page_map": [
-    {"page": 1, "printed_page": "49", "size_pt": [1190.55, 841.89], "columns": ["1—11", "12—21", "22—25"]}
+    {
+      "page": 1,
+      "printed_page": "49",
+      "size_pt": [
+        1190.55,
+        841.89
+      ],
+      "columns": [
+        "1—11",
+        "12—21",
+        "22—25"
+      ]
+    }
   ],
   "text_analysis": {
     "engine": "analyze_pdf.py / pdftotext -layout",
@@ -69,14 +268,14 @@
       "path": "figures/f1994_national_science_q12_inverse_graphs.tex",
       "source_page": 1,
       "classification": "source-faithful-schematic-redraw",
-      "sha256": "727e545360b3398374440dcd88ea19ab8962e97b4323380eaa8d1a15817b9c70"
+      "sha256": "551597ac69ec1a0bd73c41a8396655a60e463261f2575e9cbca5af32a1c86d41"
     },
     {
       "question_number": 23,
       "path": "figures/f1994_national_science_q23_prism.tex",
       "source_page": 1,
       "classification": "source-faithful-schematic-redraw",
-      "sha256": "8689cfc8992e3030727a72d0408fc2310c2a6cd28a6c2ba0669a0d70af59a711"
+      "sha256": "57e196c54a190ca82194c26f8155d8fddafe9f8c6010dfdbb59c32b9015fee2e"
     }
   ],
   "review_notes": [
@@ -96,24 +295,124 @@
   ],
   "generated_solution": {
     "path": "解答草稿.md",
-    "question_draft_sha256": "807bbeabbfd9e35a3fa2dae1d51d74034ad8984b4a4d0764ac712ae44011e0ef",
+    "question_draft_sha256": "976361e128d2fc67b4ee990ad8bf9923100f719924a41329467027085e6c8887",
     "sha256": "f75261aee95b6e09e9e7f3a5b0c9f45984d280df2362bb0ee87c6d9cfeb38844",
     "status": "independent-review-with-open-question-conflict",
-    "question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-    "unresolved_question_numbers": [4],
-    "choice_key": ["D", "D", "D", null, "B", "D", "B", "A", "A", "C", "C", "B", "D", "B", "C"],
+    "question_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "unresolved_question_numbers": [
+      4
+    ],
+    "choice_key": [
+      "D",
+      "D",
+      "D",
+      null,
+      "B",
+      "D",
+      "B",
+      "A",
+      "A",
+      "C",
+      "C",
+      "B",
+      "D",
+      "B",
+      "C"
+    ],
     "independent_review": {
       "method": "blind solution from question transcription only; existing solution withheld",
       "date": "2026-10-21",
-      "reviewed_question_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-      "agreed_question_numbers": [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-      "reviewer_mismatches": [12],
-      "resolved_reviewer_mismatches": [12],
-      "open_question_numbers": [4],
+      "reviewed_question_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "agreed_question_numbers": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "reviewer_mismatches": [
+        12
+      ],
+      "resolved_reviewer_mismatches": [
+        12
+      ],
+      "open_question_numbers": [
+        4
+      ],
       "summary": "盲核确认其余已转录题的答案与推导；Q4在当前题面下有两个正确项。Q12的选项分歧以反函数方程和图稿参数解决为B。"
     },
     "official": false,
     "derivation_origin": "primary-agent"
   },
-  "draft_sha256": "807bbeabbfd9e35a3fa2dae1d51d74034ad8984b4a4d0764ac712ae44011e0ef"
+  "draft_sha256": "976361e128d2fc67b4ee990ad8bf9923100f719924a41329467027085e6c8887"
 }

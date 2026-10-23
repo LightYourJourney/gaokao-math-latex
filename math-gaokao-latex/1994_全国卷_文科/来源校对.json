@@ -17,39 +17,238 @@
   "question_scores": null,
   "total_score": null,
   "question_type_ranges": [
-    {"type": "single-choice", "first": 1, "last": 15},
-    {"type": "fill-in", "first": 16, "last": 21},
-    {"type": "solution", "first": 22, "last": 25}
+    {
+      "type": "single-choice",
+      "first": 1,
+      "last": 15
+    },
+    {
+      "type": "fill-in",
+      "first": 16,
+      "last": 20
+    },
+    {
+      "type": "solution",
+      "first": 21,
+      "last": 25
+    }
   ],
   "question_sources": [
-    {"question_id": "1994-national-arts-q001", "question_number": 1, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q002", "question_number": 2, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q003", "question_number": 3, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q004", "question_number": 4, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q005", "question_number": 5, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q006", "question_number": 6, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q007", "question_number": 7, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q008", "question_number": 8, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q009", "question_number": 9, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q010", "question_number": 10, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q011", "question_number": 11, "question_type": "single-choice", "source_page": 1, "column": 1, "source_bbox": null},
-    {"question_id": "1994-national-arts-q012", "question_number": 12, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q013", "question_number": 13, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q014", "question_number": 14, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q015", "question_number": 15, "question_type": "single-choice", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q016", "question_number": 16, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q017", "question_number": 17, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q018", "question_number": 18, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q019", "question_number": 19, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q020", "question_number": 20, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q021", "question_number": 21, "question_type": "fill-in", "source_page": 1, "column": 2, "source_bbox": null},
-    {"question_id": "1994-national-arts-q022", "question_number": 22, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-arts-q023", "question_number": 23, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-arts-q024", "question_number": 24, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null},
-    {"question_id": "1994-national-arts-q025", "question_number": 25, "question_type": "solution", "source_page": 1, "column": 3, "source_bbox": null}
+    {
+      "question_id": "1994-national-arts-q001",
+      "question_number": 1,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q002",
+      "question_number": 2,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q003",
+      "question_number": 3,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q004",
+      "question_number": 4,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q005",
+      "question_number": 5,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q006",
+      "question_number": 6,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q007",
+      "question_number": 7,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q008",
+      "question_number": 8,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q009",
+      "question_number": 9,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q010",
+      "question_number": 10,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q011",
+      "question_number": 11,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 1,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q012",
+      "question_number": 12,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q013",
+      "question_number": 13,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q014",
+      "question_number": 14,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q015",
+      "question_number": 15,
+      "question_type": "single-choice",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q016",
+      "question_number": 16,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q017",
+      "question_number": 17,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q018",
+      "question_number": 18,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q019",
+      "question_number": 19,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q020",
+      "question_number": 20,
+      "question_type": "fill-in",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q021",
+      "question_number": 21,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 2,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q022",
+      "question_number": 22,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q023",
+      "question_number": 23,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q024",
+      "question_number": 24,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    },
+    {
+      "question_id": "1994-national-arts-q025",
+      "question_number": 25,
+      "question_type": "solution",
+      "source_page": 1,
+      "column": 3,
+      "source_bbox": null
+    }
   ],
   "page_map": [
-    {"page": 1, "printed_page": "50", "size_pt": [1190.55, 841.89], "columns": ["1—11", "12—21", "22—25"]}
+    {
+      "page": 1,
+      "printed_page": "50",
+      "size_pt": [
+        1190.55,
+        841.89
+      ],
+      "columns": [
+        "1—11",
+        "12—21",
+        "22—25"
+      ]
+    }
   ],
   "text_analysis": {
     "engine": "analyze_pdf.py / pdftotext -layout",
@@ -69,14 +268,14 @@
       "path": "figures/f1994_national_arts_q12_inverse_graphs.tex",
       "source_page": 1,
       "classification": "source-faithful-schematic-redraw",
-      "sha256": "dfccf23f34282f7fa6dff5c279aaf8761929fa1e71d8091237c0d6ad6eec57c8"
+      "sha256": "a8bf8f0e20e2da37a71cb83076179170e459a272fcf74c7cb90b547010df56c6"
     },
     {
       "question_number": 23,
       "path": "figures/f1994_national_arts_q23_prism.tex",
       "source_page": 1,
       "classification": "source-faithful-schematic-redraw",
-      "sha256": "fbba4eb63dd9f191e57a6f88829ac29bbe8c04b255e386278f89bd097e435a26"
+      "sha256": "7fc5457003a9df5a3a7048cd6a0aea183030dc5bf83cc3e319c5c03d069a9034"
     }
   ],
   "source_issues": [],
@@ -84,5 +283,5 @@
     "PDF文字层读取会丢失部分平行、垂直和上下标等数学符号；转录依据为固定PDF的页面图像与可提取文字交叉核对。",
     "出版者/官方性未核；单页来源未载答案、解析或分值，不补造。"
   ],
-  "draft_sha256": "6d224d696a80b35d86f188524b52e7ad81ceba31e68566ec55740020a3c980c8"
+  "draft_sha256": "465ef496c0013271093dde1a8b1157d0cb06f27116324bc6e8c8e8808348387f"
 }
