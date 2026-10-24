@@ -3,6 +3,12 @@
 更新时间：2026-10-22（中国标准时间）
 
 
+## 2026-10-25 后续（三）：1997 上海理工农医收口
+
+- `phase4-b25`（`gk-1997-regular-shanghai-science`）已提交 `158432f`：22 题、7 页扫描件附答案要点（等级 C）、四版 6/21/8/15 页；`FINALIZED`／`closed`／complete。独立盲解 22 题与印载答案全一致。
+- 生成端两处修复：① 解答题答案必须写成 `**答案（k）：X**` 才会进入答案框与简答版（原 `**（k）**` 会全部退化为「见解析版」）；② 简答版提示语用 `SHORT_ANSWER_NOTICE_OVERRIDES` 按「来源印载答案」改写，已加 1997 上海文/理两卷。
+- 现况：775 来源、312 卷（complete 257／compiled 3／blocked 52）、173 批，manifest rev 4846。
+
 ## 2026-10-25 后续（二）：1997 上海文史收口
 
 - `phase4-b24`（`gk-1997-regular-shanghai-arts`）已提交 `b0b0af6`：22 题、8 页 A4 扫描件附印载答案与评分（等级 C）、四版 5/20/7/15 页；finalize `FINALIZED`、批次 `closed`、整卷 complete。独立盲解 22 题与印载答案逐题一致。
