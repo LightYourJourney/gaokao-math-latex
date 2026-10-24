@@ -5,11 +5,11 @@
   "pdf_sha256": "b45c3f98d35b6ad0c7788945110e6295b686dfce4f330c678da769db31f5d6eb",
   "git_blob_oid": "167d15821e39d14042cee8d55715d1103c260eab",
   "source_manifest_revision": 4152,
-  "paper_id": null,
-  "review_status": "needs-review",
-  "canonical_question_source_ready": false,
-  "mathematical_verification_status": "not-verified",
-  "transcription_status": "transcribed-pending-independent-review",
+  "paper_id": "gk-1995-regular-shanghai-science",
+  "review_status": "reviewed",
+  "canonical_question_source_ready": true,
+  "mathematical_verification_status": "verified",
+  "transcription_status": "transcribed-reviewed",
   "source_authenticity": "fixed-upstream-copy-publisher-unverified",
   "bibliographic_candidate": {
     "title": "1994-1995上海市高考试题汇析",
@@ -36,47 +36,385 @@
     "total": 150
   },
   "question_type_ranges": [
-    {"type": "single-choice", "first": 1, "last": 8},
-    {"type": "fill-in", "first": 9, "last": 20},
-    {"type": "solution", "first": 21, "last": 25}
+    {
+      "type": "single-choice",
+      "first": 1,
+      "last": 8
+    },
+    {
+      "type": "fill-in",
+      "first": 9,
+      "last": 20
+    },
+    {
+      "type": "solution",
+      "first": 21,
+      "last": 25
+    }
   ],
   "question_sources": [
-    {"question_id": "1995-shanghai-science-q001", "question_number": 1, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q002", "question_number": 2, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q003", "question_number": 3, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q004", "question_number": 4, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q005", "question_number": 5, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q006", "question_number": 6, "question_type": "single-choice", "source_pages": [1], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q007", "question_number": 7, "question_type": "single-choice", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q008", "question_number": 8, "question_type": "single-choice", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q009", "question_number": 9, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q010", "question_number": 10, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q011", "question_number": 11, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q012", "question_number": 12, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q013", "question_number": 13, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q014", "question_number": 14, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q015", "question_number": 15, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q016", "question_number": 16, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q017", "question_number": 17, "question_type": "fill-in", "source_pages": [2], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q018", "question_number": 18, "question_type": "fill-in", "source_pages": [2], "tracks": ["A1", "B1"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q019", "question_number": 19, "question_type": "fill-in", "source_pages": [2], "tracks": ["A1", "B1"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q020", "question_number": 20, "question_type": "fill-in", "source_pages": [2, 3], "tracks": ["A1", "B1"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q021", "question_number": 21, "question_type": "solution", "source_pages": [3, 5], "tracks": ["A2", "B2"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q022", "question_number": 22, "question_type": "solution", "source_pages": [3, 5, 6], "tracks": ["A2", "B2"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q023", "question_number": 23, "question_type": "solution", "source_pages": [3, 4, 6, 7], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q024", "question_number": 24, "question_type": "solution", "source_pages": [4, 7, 8], "tracks": ["common"], "source_bbox": null},
-    {"question_id": "1995-shanghai-science-q025", "question_number": 25, "question_type": "solution", "source_pages": [4, 8], "tracks": ["common"], "source_bbox": null}
+    {
+      "question_id": "1995-shanghai-science-q001",
+      "question_number": 1,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q002",
+      "question_number": 2,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q003",
+      "question_number": 3,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q004",
+      "question_number": 4,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q005",
+      "question_number": 5,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q006",
+      "question_number": 6,
+      "question_type": "single-choice",
+      "source_pages": [
+        1
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q007",
+      "question_number": 7,
+      "question_type": "single-choice",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q008",
+      "question_number": 8,
+      "question_type": "single-choice",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q009",
+      "question_number": 9,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q010",
+      "question_number": 10,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q011",
+      "question_number": 11,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q012",
+      "question_number": 12,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q013",
+      "question_number": 13,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q014",
+      "question_number": 14,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q015",
+      "question_number": 15,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q016",
+      "question_number": 16,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q017",
+      "question_number": 17,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q018",
+      "question_number": 18,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "A1",
+        "B1"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q019",
+      "question_number": 19,
+      "question_type": "fill-in",
+      "source_pages": [
+        2
+      ],
+      "tracks": [
+        "A1",
+        "B1"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q020",
+      "question_number": 20,
+      "question_type": "fill-in",
+      "source_pages": [
+        2,
+        3
+      ],
+      "tracks": [
+        "A1",
+        "B1"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q021",
+      "question_number": 21,
+      "question_type": "solution",
+      "source_pages": [
+        3,
+        5
+      ],
+      "tracks": [
+        "A2",
+        "B2"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q022",
+      "question_number": 22,
+      "question_type": "solution",
+      "source_pages": [
+        3,
+        5,
+        6
+      ],
+      "tracks": [
+        "A2",
+        "B2"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q023",
+      "question_number": 23,
+      "question_type": "solution",
+      "source_pages": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q024",
+      "question_number": 24,
+      "question_type": "solution",
+      "source_pages": [
+        4,
+        7,
+        8
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    },
+    {
+      "question_id": "1995-shanghai-science-q025",
+      "question_number": 25,
+      "question_type": "solution",
+      "source_pages": [
+        4,
+        8
+      ],
+      "tracks": [
+        "common"
+      ],
+      "source_bbox": null
+    }
   ],
   "page_map": [
-    {"page": 1, "printed_page": "58", "role": "questions"},
-    {"page": 2, "printed_page": "59", "role": "questions"},
-    {"page": 3, "printed_page": "60", "role": "questions"},
-    {"page": 4, "printed_page": "61", "role": "questions"},
-    {"page": 5, "printed_page": "62", "role": "answers-and-solutions"},
-    {"page": 6, "printed_page": "63", "role": "answers-and-solutions"},
-    {"page": 7, "printed_page": "64", "role": "answers-and-solutions"},
-    {"page": 8, "printed_page": "65", "role": "answers-and-solutions"},
-    {"page": 9, "printed_page": null, "role": "blank-reverse"}
+    {
+      "page": 1,
+      "printed_page": "58",
+      "role": "questions"
+    },
+    {
+      "page": 2,
+      "printed_page": "59",
+      "role": "questions"
+    },
+    {
+      "page": 3,
+      "printed_page": "60",
+      "role": "questions"
+    },
+    {
+      "page": 4,
+      "printed_page": "61",
+      "role": "questions"
+    },
+    {
+      "page": 5,
+      "printed_page": "62",
+      "role": "answers-and-solutions"
+    },
+    {
+      "page": 6,
+      "printed_page": "63",
+      "role": "answers-and-solutions"
+    },
+    {
+      "page": 7,
+      "printed_page": "64",
+      "role": "answers-and-solutions"
+    },
+    {
+      "page": 8,
+      "printed_page": "65",
+      "role": "answers-and-solutions"
+    },
+    {
+      "page": 9,
+      "printed_page": null,
+      "role": "blank-reverse"
+    }
   ],
   "text_analysis": {
     "engine": "analyze_pdf.py / pdftotext",
@@ -87,22 +425,82 @@
     "ocr": {
       "engine": "Tesseract",
       "version": "5.5.3",
-      "languages": ["chi_sim", "eng"],
-      "candidate_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "languages": [
+        "chi_sim",
+        "eng"
+      ],
+      "candidate_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "calls": 9,
       "status": "unverified-candidate"
     }
   },
   "figure_files": [
-    {"question_number": 6, "role": "answer-options", "path": "figures/f1995_shanghai_science_q6_options.tex", "source_page": 1, "classification": "source-faithful-schematic-redraw", "sha256": "caa8baccce9eb6d3b35d600e4b333e289ed346c18eea7e560ee5ee4572dc7861"},
-    {"question_number": 21, "role": "B2-coordinate-diagram", "path": "figures/f1995_shanghai_science_q21_b2_coordinate.tex", "source_page": 3, "classification": "source-faithful-schematic-redraw", "sha256": "92ce4c81230a079e60358f5da3d15e7e8bfd6c51629ff4de59074dbc54b4d1d9"},
-    {"question_number": 23, "role": "question-diagram", "path": "figures/f1995_shanghai_science_q23_pyramid.tex", "source_page": 4, "classification": "source-faithful-schematic-redraw", "sha256": "4a8eb1878c7aafeacfa429d75af7f71da19fc25eeaa0a7438c2cf635cf64e3cb"},
-    {"question_number": 23, "role": "solution-construction", "path": "figures/f1995_shanghai_science_q23_solution_construction.tex", "source_page": 7, "classification": "source-derived-construction-schematic", "sha256": "c10c4890f2466c2f25b599164ca9698776dcaf8ab1983d0726ca7414b3520c67"}
+    {
+      "question_number": 6,
+      "role": "answer-options",
+      "path": "figures/f1995_shanghai_science_q6_options.tex",
+      "source_page": 1,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "5ce4fbc5c234ed2d1c8549a5bd89c4f935b4cde84a27d334e7a2e90395b417a8"
+    },
+    {
+      "question_number": 21,
+      "role": "B2-coordinate-diagram",
+      "path": "figures/f1995_shanghai_science_q21_b2_coordinate.tex",
+      "source_page": 3,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "05c77af4d02d5bf983c622fbce334cdfbd74efa788a67dbabfea72b4755db20a"
+    },
+    {
+      "question_number": 23,
+      "role": "question-diagram",
+      "path": "figures/f1995_shanghai_science_q23_pyramid.tex",
+      "source_page": 4,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "4a8eb1878c7aafeacfa429d75af7f71da19fc25eeaa0a7438c2cf635cf64e3cb"
+    },
+    {
+      "question_number": 23,
+      "role": "solution-construction",
+      "path": "figures/f1995_shanghai_science_q23_solution_construction.tex",
+      "source_page": 7,
+      "classification": "source-derived-construction-schematic",
+      "sha256": "c10c4890f2466c2f25b599164ca9698776dcaf8ab1983d0726ca7414b3520c67"
+    }
   ],
   "source_issues": [
-    {"question_number": 6, "type": "schematic-option-ambiguity", "description": "当前矢量示意中A、B均呈正斜率直线、0<b<1截距及递减指数曲线；示意图精度不足以独立排除B，来源答案表列A仍照录。", "status": "awaiting-source-image"},
-    {"question_number": 21, "type": "diagram-dependent-mirror-coordinate", "description": "B2组文字条件允许D=(0,-1/2,±sqrt(3)/2)两个镜像；当前题图示意选择+z。第(2)问cos不随镜像改变。", "status": "awaiting-source-image"},
-    {"question_number": 24, "type": "source-answer-boundary-omission", "description": "来源最终区间排除 m/n=1，但题内 n≤m 的极值分支在 m=n、theta=pi/4 时仍给出 u=2mn>mn。原文保留，转录答案另附核查说明。", "independent_review": {"status": "mathematical-omission-independently-confirmed", "method": "blind derivation from the question text; source answer withheld", "result": "m/n=1 is included; the lower endpoint 2-sqrt(3) remains excluded"}}
+    {
+      "question_number": 6,
+      "type": "schematic-option-ambiguity",
+      "description": "当前矢量示意中A、B均呈正斜率直线、0<b<1截距及递减指数曲线；示意图精度不足以独立排除B，来源答案表列A仍照录。",
+      "status": "awaiting-source-image"
+    },
+    {
+      "question_number": 21,
+      "type": "diagram-dependent-mirror-coordinate",
+      "description": "B2组文字条件允许D=(0,-1/2,±sqrt(3)/2)两个镜像；当前题图示意选择+z。第(2)问cos不随镜像改变。",
+      "status": "awaiting-source-image"
+    },
+    {
+      "question_number": 24,
+      "type": "source-answer-boundary-omission",
+      "description": "来源最终区间排除 m/n=1，但题内 n≤m 的极值分支在 m=n、theta=pi/4 时仍给出 u=2mn>mn。原文保留，转录答案另附核查说明。",
+      "independent_review": {
+        "status": "mathematical-omission-independently-confirmed",
+        "method": "blind derivation from the question text; source answer withheld",
+        "result": "m/n=1 is included; the lower endpoint 2-sqrt(3) remains excluded"
+      }
+    }
   ],
   "independent_math_review": {
     "status": "reviewed-with-open-issues",
@@ -111,9 +509,19 @@
     "question_draft_sha256": "d3af6aed083c7a5386dd4d1daaac10e064787a09c9aef6354f6ed086523c9c39",
     "question_count": 25,
     "prompt_variant_count": 30,
-    "tracks_reviewed": ["A1", "B1", "A2", "B2"],
-    "open_question_numbers": [6, 21],
-    "confirmed_source_answer_corrections": [24],
+    "tracks_reviewed": [
+      "A1",
+      "B1",
+      "A2",
+      "B2"
+    ],
+    "open_question_numbers": [
+      6,
+      21
+    ],
+    "confirmed_source_answer_corrections": [
+      24
+    ],
     "summary": "30个题面版本均独立求解；除Q24来源范围漏掉m/n=1外，其余可判定的数值答案与现有解答相符，且Q24边界修正获独立确认。Q6选项示意不足以定唯一项，Q21 B2的坐标符号依赖题图；这两处等待固定原页复核。"
   },
   "review_notes": [

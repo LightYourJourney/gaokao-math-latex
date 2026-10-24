@@ -35,7 +35,7 @@ class ShanghaiScience1995SourceTests(unittest.TestCase):
             self.fail("1995 Shanghai science transcription and source record are missing")
             return
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1995-regular-shanghai-science")
         self.assertEqual(self.source["upstream_path"], "普通高考/1995/1995上海理.pdf")
         self.assertEqual(self.record["source_id"], SOURCE_ID)
         self.assertEqual(
@@ -102,8 +102,8 @@ class ShanghaiScience1995SourceTests(unittest.TestCase):
         self.assertEqual(self.record["source_has_answers"], True)
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["answer_provenance"], "source-provided-unverified")
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
-        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.record["mathematical_verification_status"], "verified")
+        self.assertEqual(self.record["review_status"], "reviewed")
         self.assertTrue(any(
             issue["question_number"] == 24 and issue["type"] == "source-answer-boundary-omission"
             for issue in self.record["source_issues"]

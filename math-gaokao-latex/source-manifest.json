@@ -1539,6 +1539,14 @@
         "gk-1999-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b28",
+      "issues": [],
+      "paper_ids": [
+        "gk-1995-regular-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1548,7 +1556,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "626dda12-cedc-4160-a5a3-a31664a4d418",
+  "last_transaction_id": "07762cbb-68a7-4fe0-bed7-436dd839782c",
   "papers": [
     {
       "blocked_from": null,
@@ -22008,9 +22016,75 @@
       "title": "1999 年·上海卷·理工农医类",
       "track": "science",
       "year": 1999
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1995_上海卷_理工农医类/figures/f1995_shanghai_science_q21_b2_coordinate.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1995_上海卷_理工农医类/figures/f1995_shanghai_science_q23_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1995_上海卷_理工农医类/figures/f1995_shanghai_science_q23_solution_construction.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1995_上海卷_理工农医类/figures/f1995_shanghai_science_q6_options.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1995_shanghai_science",
+        "id": "gk-1995-regular-shanghai-science",
+        "note": "1995 上海理工农医类；8 页扫描（无文字层），题面 1–4 页、答案及评分 5–8 页；25 题（选择 1–8、填空 9–20、解答 21–25）；第 6 选项图、21B₂ 坐标图、23 棱锥图重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            9,
+            20
+          ],
+          "解答题": [
+            21,
+            25
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1995-regular-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "1995_上海卷_理工农医类",
+      "question_count": 25,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1995/1995_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1995/1995_数学真题_上海理_含解析.md",
+        "questions": "1995/1995_数学真题_上海理_试题.md",
+        "solution_body": "1995/1995_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ba07d7a09bef9f724f8587c86ffcfd862c046e315f01063cf37b3176262d384e"
+      ],
+      "title": "1995 年·上海卷·理工农医类",
+      "track": "science",
+      "year": 1995
     }
   ],
-  "revision": 4895,
+  "revision": 4933,
   "schema_version": 1,
   "sources": [
     {
@@ -26491,8 +26565,8 @@
       "exam_type": "regular",
       "git_blob_oid": "167d15821e39d14042cee8d55715d1103c260eab",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1995-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1995上海理.pdf",
       "regions": [],
       "source_id": "src-ba07d7a09bef9f724f8587c86ffcfd862c046e315f01063cf37b3176262d384e",

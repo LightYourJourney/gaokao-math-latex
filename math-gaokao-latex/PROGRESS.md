@@ -9200,3 +9200,13 @@
 - 版式/生成：解析前言与末尾草稿状态文字删除；Q11 题干改写消除孤立「16」行；Q14 选项 cases 修复；选择速查行补表头；简答提示语按「卷内所载」override（新增 1999 上海理）；Q7 长句致 Underfull 已缩短。
 - 图稿：Q20 四棱锥 A 标签左移 6pt、删去非源有的 B–E 虚线；Q21 水沟图 B 标签右移 4pt，均 200 dpi 复核无压线。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1995 上海理工农医类：扫描件转录、盲核与四版收口（phase4-b28，2026-10-25）
+
+- 已完成：`gk-1995-regular-shanghai-science`（25 题：选择 1–8、填空 9–20、解答 21–25；9 页扫描件、无文字层、印刷页 58–66；卷内附「答案及评分标准」第 5–9 页，等级 C）完成规范四稿、独立盲解（25 题与卷内答案逐项一致）、独立转录复核（P0 1、P1 2、P2 12 全部处理）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 4933）。
+- 最终构建：试题 5 / 解析 19 / 简答 7 / 印刷 14 页，共 45 页；仅余印刷版 1 条 Underfull（第 4 题填空干末行拉伸）已登记豁免，无缺字、无 Overfull。
+- **P0 纠错**：第 9 题源式为 $\frac{2x-1}{x+3}>1$（初稿误作 $2x+1$），答案 $x<-3$ 或 $x>4$（初稿 $x>2$），题干、答案、解析三处连带已全部改正。
+- **源答案补正**：第 24 题卷内答案 $\frac mn\in(2-\sqrt3,1)\cup(1,+\infty)$ 漏 $m=n$；独立盲解与转录复核双方确认应并入，本稿作 $(2-\sqrt3,+\infty)$ 并保留原文照录。
+- 转录修复：Q6 选项图按源恢复 B/D 直线截距（唯一相容 A），删除图下重复选项行；Q7/Q8 选项改为逐行；Q19 补「则…（结果用数值表示）」；Q21/Q22 补小问分值；Q23「又 $PA\perp AB$」；Q24「椭圆的方程为」；Q25「各项都是正数」。
+- 版式：A₁/B₂ 等 Unicode 下标改 LaTeX 下标（消除缺字）；Q3/Q8 行内 `\dfrac` 改 `\frac`（消除分母压选项行）；Q8(B) 改写为单行；几何体名 `P\text{-}ABCD`；Q21 图 y 轴恢复经 B 负半轴、C 上移至轴上方、O 白底；简答提示语按「卷内所载」override（新增 1995 上海理）。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
