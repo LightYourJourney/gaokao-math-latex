@@ -17,12 +17,13 @@
   \draw[thick] (A)--(A1) (B)--(B1) (C)--(C1);
   \draw[dashed] (A)--(D)--(C) (D)--(D1);
   % Face diagonals intersect at O and O1; O1A passes through its midpoint E.
-  \draw (A)--(C) (B)--(D) (A1)--(C1) (B1)--(D1);
+  \draw[dashed] (A)--(C) (B)--(D);
+  \draw (A1)--(C1) (B1)--(D1);
   \draw[densely dashed] (A)--(E)--(O1) (O)--(O1);
   \fill (O) circle (1.2pt);
   \fill (O1) circle (1.2pt);
-  \node[below left] at (A) {$A$};
-  \node[below right] at (B) {$B$};
+  \node[below=4pt] at (A) {$A$};
+  \node[below left=3pt] at (B) {$B$};
   \node[right] at (C) {$C$};
   \node[above left] at (D) {$D$};
   \node[left] at (A1) {$A_1$};
@@ -30,7 +31,7 @@
   \node[right] at (C1) {$C_1$};
   \node[above left] at (D1) {$D_1$};
   \node[below] at (O) {$O$};
-  \node[above] at (O1) {$O_1$};
+  \node[right=4pt] at (O1) {$O_1$};
   \node[left] at (E) {$E$};
   % Coordinate rays point from O along OA, OB, and OO_1 as specified.
   \coordinate (xAxisEnd) at (-0.84,-0.416);
@@ -38,5 +39,6 @@
   \coordinate (zAxisEnd) at (1.33,5.31);
   \draw[->] (O) -- (xAxisEnd) node[left] {$x$};
   \draw[->] (O) -- (yAxisEnd) node[below right] {$y$};
-  \draw[->] (O) -- (zAxisEnd) node[above] {$z$};
+  \draw[densely dashed] (O) -- (O1);
+  \draw[->] (O1) -- (zAxisEnd) node[above] {$z$};
 \end{tikzpicture}

@@ -55,7 +55,11 @@ class Shanghai1998ScienceFigureTests(unittest.TestCase):
         }
         for endpoint, target in (("xAxisEnd", "A"), ("yAxisEnd", "B"), ("zAxisEnd", "O1")):
             with self.subTest(axis=endpoint):
-                self.assertIn(f"(O) -- ({endpoint})", source)
+                if endpoint == "zAxisEnd":
+                    self.assertIn("(O) -- (O1)", source)
+                    self.assertIn(f"(O1) -- ({endpoint})", source)
+                else:
+                    self.assertIn(f"(O) -- ({endpoint})", source)
                 direction = tuple(coordinates[target][i] - coordinates["O"][i] for i in (0, 1))
                 axis = tuple(coordinates[endpoint][i] - coordinates["O"][i] for i in (0, 1))
                 cross = direction[0] * axis[1] - direction[1] * axis[0]

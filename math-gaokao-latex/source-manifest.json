@@ -1523,6 +1523,14 @@
         "gk-1997-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b26",
+      "issues": [],
+      "paper_ids": [
+        "gk-1998-regular-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1532,7 +1540,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "40f8db0b-42bb-4f4f-b909-5086a19950b5",
+  "last_transaction_id": "4fd48082-589c-486d-aaae-60073112bec0",
   "papers": [
     {
       "blocked_from": null,
@@ -21877,9 +21885,63 @@
       "title": "1997 年·上海卷·理工农医类",
       "track": "science",
       "year": 1997
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1998_上海卷_理科/figures/1998_shanghai_science_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1998_shanghai_science",
+        "id": "gk-1998-regular-shanghai-science",
+        "note": "1998 上海理工农医类；6 页 A4 扫描（无文字层），题面 1–3 页、答案及评分 4–6 页；22 题（填空 1–11、选择 12–16、解答 17–22）；第 19 题直四棱柱图重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            11
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            12,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1998-regular-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "1998_上海卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1998/1998_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1998/1998_数学真题_上海理_含解析.md",
+        "questions": "1998/1998_数学真题_上海理_试题.md",
+        "solution_body": "1998/1998_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-0965cb55b028616d561b059acccc3e23188f14aab4f25bd949c2c170a29d5d66"
+      ],
+      "title": "1998 年·上海卷·理工农医类",
+      "track": "science",
+      "year": 1998
     }
   ],
-  "revision": 4846,
+  "revision": 4864,
   "schema_version": 1,
   "sources": [
     {
@@ -26648,8 +26710,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4767a03bc748429b548e81ca3eb4c8d8b53df3c7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1998-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1998上海理.pdf",
       "regions": [],
       "source_id": "src-0965cb55b028616d561b059acccc3e23188f14aab4f25bd949c2c170a29d5d66",

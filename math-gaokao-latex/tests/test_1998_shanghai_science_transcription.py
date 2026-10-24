@@ -56,8 +56,8 @@ class Shanghai1998ScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 6)
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
-        self.assertIsNone(source["paper_relation"])
+        self.assertEqual(source["paper_id"], "gk-1998-regular-shanghai-science")
+        self.assertEqual(source["paper_relation"], "canonical")
 
 
 if __name__ == "__main__":
