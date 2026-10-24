@@ -9191,3 +9191,12 @@
 - 版面：Q21 解析补「（1）」；Q22(2) 极限行间公式；答案要点小问锚点与选择速查行修正，使简答版完整呈现 17–22 结论。
 - 余留（非阻塞）：Q18「辐角主值」区间约定在答案与解析中并列呈现；Q21 解析仅按一份推导整理（卷内步骤另见答案要点）。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1999 上海理工农医类：扫描件转录、盲核与四版收口（phase4-b27，2026-10-25）
+
+- 已完成：`gk-1999-regular-shanghai-science`（22 题：填空 1–12、选择 13–16、解答 17–22；5 页扫描件、无文字层、印刷页 4-35 至 4-39；卷内附「答案要点」及解答，等级 C）完成规范四稿、独立盲解（22 题与卷内答案逐题一致，Q7 开/闭区间等价）、独立转录复核（P0 0、P1 4、P2 6 全部处理）、注册（rev 4865）、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 4892）。
+- 最终构建：试题 4 / 解析 19 / 简答 6 / 印刷 15 页，共 44 页；四份日志无错误、缺字与 Overfull/Underfull。
+- 转录修复：来源页 4-35—4-39；Q8 多余 `}`、Q9 极坐标结论、Q19 并集结论补全；Q19 卷内辐角 $[0,2\pi)$ 与常见 $(-\pi,\pi]$ 并列；Q7 答案按卷内开区间、解析说明闭包等价；Q22(3) 分段式照录。
+- 版式/生成：解析前言与末尾草稿状态文字删除；Q11 题干改写消除孤立「16」行；Q14 选项 cases 修复；选择速查行补表头；简答提示语按「卷内所载」override（新增 1999 上海理）；Q7 长句致 Underfull 已缩短。
+- 图稿：Q20 四棱锥 A 标签左移 6pt、删去非源有的 B–E 虚线；Q21 水沟图 B 标签右移 4pt，均 200 dpi 复核无压线。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。

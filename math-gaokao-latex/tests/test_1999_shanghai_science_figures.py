@@ -34,9 +34,10 @@ class Shanghai1999ScienceFigureTests(unittest.TestCase):
         for label in ("$P$", "$A$", "$B$", "$C$", "$D$", "$E$"):
             with self.subTest(q20_label=label):
                 self.assertIn(label, q20)
-        for segment in (r"(P)--(A)", r"(P)--(B)", r"(P)--(C)", r"(P)--(D)", r"(A)--(E)", r"(B)--(E)"):
+        for segment in (r"(P)--(A)", r"(P)--(B)", r"(P)--(C)", r"(P)--(D)", r"(A)--(E)"):
             with self.subTest(q20_segment=segment):
                 self.assertIn(segment, q20)
+        self.assertNotIn(r"(B)--(E)", q20)
         self.assertIn(r"(A) .. controls", q21)
         self.assertIn(r"(O) .. controls", q21)
         self.assertIn(r"\draw[hidden edge] (A)--(B);", q21)

@@ -1531,6 +1531,14 @@
         "gk-1998-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b27",
+      "issues": [],
+      "paper_ids": [
+        "gk-1999-regular-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1540,7 +1548,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4fd48082-589c-486d-aaae-60073112bec0",
+  "last_transaction_id": "626dda12-cedc-4160-a5a3-a31664a4d418",
   "papers": [
     {
       "blocked_from": null,
@@ -21939,9 +21947,70 @@
       "title": "1998 年·上海卷·理工农医类",
       "track": "science",
       "year": 1998
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1999_上海卷_理科/figures/1999_shanghai_science_q20_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1999_上海卷_理科/figures/1999_shanghai_science_q21_canal.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1999_shanghai_science",
+        "id": "gk-1999-regular-shanghai-science",
+        "note": "1999 上海理工农医类；5 页扫描（无文字层），题面 1–2 页、答案与解答 2–5 页；22 题（填空 1–12、选择 13–16、解答 17–22）；第 20 四棱锥、第 21 水沟柱体两图重绘；第 19 题按卷内核勘为共轭 z。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理"
+      },
+      "issue_ids": [
+        "ISSUE-1166",
+        "ISSUE-1167"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1999-regular-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "1999_上海卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1999/1999_数学真题_上海理_答案要点.md",
+        "combined_rendered": "1999/1999_数学真题_上海理_含解析.md",
+        "questions": "1999/1999_数学真题_上海理_试题.md",
+        "solution_body": "1999/1999_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-f25a93d31d085187de864aff4bec94d037a9f96cb3cfc6682b87adfee4bfe97d"
+      ],
+      "title": "1999 年·上海卷·理工农医类",
+      "track": "science",
+      "year": 1999
     }
   ],
-  "revision": 4864,
+  "revision": 4895,
   "schema_version": 1,
   "sources": [
     {
@@ -26806,8 +26875,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1d76d728820d9302c707ccdfddddd9ec430df2b3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1999-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1999上海理.pdf",
       "regions": [],
       "source_id": "src-f25a93d31d085187de864aff4bec94d037a9f96cb3cfc6682b87adfee4bfe97d",

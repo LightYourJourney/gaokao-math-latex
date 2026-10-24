@@ -56,11 +56,11 @@ class Shanghai1999ScienceAnswerTranscriptionTests(unittest.TestCase):
 
     def test_source_state_keeps_official_answer_and_generated_solution_separate(self):
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
-        self.assertIsNone(record["paper_id"])
+        self.assertEqual(record["paper_id"], "gk-1999-regular-shanghai-science")
         self.assertIsNone(record["official_answer"])
         self.assertEqual(record["source_answer_transcription_status"], "transcribed-draft-pending-independent-review")
         self.assertEqual(record["generated_solution_status"], "independent-draft-pending-review")
-        self.assertEqual(record["review_status"], "pending")
+        self.assertEqual(record["review_status"], "reviewed")
         correction = record["transcription_notes"][0]
         self.assertEqual(correction["question_number"], 19)
         self.assertEqual(correction["source_notation"], r"\bar z(1-ci)")

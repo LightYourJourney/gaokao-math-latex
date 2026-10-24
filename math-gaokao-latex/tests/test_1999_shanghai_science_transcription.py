@@ -61,8 +61,8 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
                 self.assertEqual(item["printed_page"], "4-36")
                 self.assertEqual(item["result"], "transcription-matches-fixed-scan")
                 self.assertEqual(item["review_status"], "pending-independent-review")
-        self.assertEqual(record["transcription_status"], "draft")
-        self.assertEqual(record["review_status"], "pending")
+        self.assertEqual(record["transcription_status"], "transcribed-reviewed")
+        self.assertEqual(record["review_status"], "reviewed")
 
     def test_question_figures_link_to_vector_sources_not_embedded_rasters(self):
         text = QUESTIONS.read_text(encoding="utf-8")
@@ -92,17 +92,17 @@ class Shanghai1999ScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 5)
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
-        self.assertIsNone(source["paper_relation"])
+        self.assertEqual(source["paper_id"], "gk-1999-regular-shanghai-science")
+        self.assertEqual(source["paper_relation"], "canonical")
 
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
         self.assertEqual(record["source"]["source_id"], SOURCE_ID)
         self.assertEqual(record["source"]["sha256"], SOURCE_SHA256)
         self.assertEqual(record["source"]["page_count"], 5)
-        self.assertIsNone(record["paper_id"])
+        self.assertEqual(record["paper_id"], "gk-1999-regular-shanghai-science")
         self.assertEqual(record["source_authenticity"], "unverified")
         self.assertIsNone(record["official_answer"])
-        self.assertEqual(record["review_status"], "pending")
+        self.assertEqual(record["review_status"], "reviewed")
 
 
 if __name__ == "__main__":

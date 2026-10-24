@@ -13,7 +13,6 @@
   \draw[hidden edge] (A)--(B);
   \draw[hidden edge] (A)--(D);
   \draw[hidden edge] (A)--(E);
-  \draw[hidden edge] (B)--(E);
   % Visible pyramid edges and front/right base edges.
   \draw[visible edge] (P)--(B);
   \draw[visible edge] (P)--(C);
@@ -22,8 +21,8 @@
   \draw[visible edge] (C)--(D);
 
   \node[above] at (P) {$P$};
-  \node[below left] at (A) {$A$};
-  \node[below left] at (B) {$B$};
+  \node[below right=4pt] at (A) {$A$};
+  \node[left=3pt] at (B) {$B$};
   \node[below] at (C) {$C$};
   \node[right] at (D) {$D$};
   \node[above right] at (E) {$E$};

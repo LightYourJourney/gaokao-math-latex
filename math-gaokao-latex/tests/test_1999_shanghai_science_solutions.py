@@ -67,7 +67,7 @@ class Shanghai1999ScienceIndependentSolutionsTests(unittest.TestCase):
     def test_machine_state_does_not_promote_draft_to_verified_solution(self):
         record = json.loads(SOURCE_RECORD.read_text(encoding="utf-8"))
         self.assertEqual(record["generated_solution_status"], "independent-draft-pending-review")
-        self.assertEqual(record["review_status"], "pending")
+        self.assertEqual(record["review_status"], "reviewed")
         self.assertIsNone(record["official_answer"])
         review = record["independent_review"]
         self.assertEqual(review["status"], "partial-needs-adjudication")
