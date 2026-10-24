@@ -2,6 +2,18 @@
 
 更新时间：2026-10-22（中国标准时间）
 
+
+## 2026-10-24 阶段提交与1996上海理科接续
+
+本段优先于下方旧快照。用户明确授权“每完成一个阶段就提交”，仍不push。
+canonical worktree与分支仍为`phase0-wt` / `feat/gaokao-phase0`。
+
+- 2000春季京皖文理phase4-b20已提交`c4766f2c`；1996上海理科来源/数学/规范登记阶段已提交`be4e95b`。
+- 1996上海理科24题/150分、全部选做轨道与7幅TikZ图已登记为`gk-1996-regular-shanghai-science`，source已canonical绑定；不再重复转录或登记。
+- phase4-b21最终四版67页（7/28/9/23）视觉通过，finalize返回FINALIZED，manifest revision4752；批次closed_with_blockers、整卷blocked。最终attempt为`75a8a3fe-beda-4e63-bf17-3872c808876d`，见本卷receipts与reports/phase4-b21.md。
+- Q15 A1原文“直线OA”按通常无向距离有内外分两解，印载答案只列单解；ISSUE-1136/1137都open并阻碍完成，provenance为U/unresolved。不得按源答案把直线改线段，不得降级冲突以通过门禁。
+- 当前775来源、308卷（complete254、blocked51、compiled3）。这只是已登记状态，不是全项目完成。全量1757项测试通过（13跳过，1012.138秒）；详细校验见PROGRESS与1996阶段复核报告；后续先读当前manifest、Git及回执，不用旧截图或旧报告证明新版本合格。
+
 ## 2026-10-23 接续校正
 
 本文下方2026-10-22快照已过时。当前仍使用 canonical worktree
