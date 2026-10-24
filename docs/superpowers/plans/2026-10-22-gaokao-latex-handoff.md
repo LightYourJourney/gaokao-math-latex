@@ -3,6 +3,12 @@
 更新时间：2026-10-22（中国标准时间）
 
 
+## 2026-10-25 后续：2002 北京文科收口
+
+- `phase4-b23`（`gk-2002-regular-beijing-arts`）已提交 `6d10511a`：22 题、2 页 A3 重排件（有文字层、无答案页，等级 D）、四版 5/19/7/17 页；finalize `FINALIZED`，批次 `closed`，整卷 complete。独立盲解 22 题与库内答案逐题一致。
+- 修复要点：Q11 零点 0.6→1（原图与选项矛盾）、Q12 虚线仅 f₂/f₃/f₄、Q18 尺寸标注改「标签贴棱外侧、无箭头」、Q4 空选项占位行、Q20 八列表超宽（表头缩写＋题面说明）、Q11 两行选项 24pt 错位。
+- 现况：775 来源、310 卷（complete 255／compiled 3／blocked 52）、171 批，manifest rev 4799。
+
 ## 2026-10-24 后续：1996 上海文史收口
 
 - `phase4-b22`（`gk-1996-regular-shanghai-arts`）已提交 `72dd5dc3`：24 题、8 页扫描件附印载答案（等级 C）、四版 6/26/8/19 页；finalize `FINALIZED`，批次 `closed_with_blockers`、整卷 blocked（Q15 A1「直线 OA」外分点歧义，ISSUE-1138–1143）。
