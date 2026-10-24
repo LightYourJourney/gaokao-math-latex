@@ -9210,3 +9210,12 @@
 - 转录修复：Q6 选项图按源恢复 B/D 直线截距（唯一相容 A），删除图下重复选项行；Q7/Q8 选项改为逐行；Q19 补「则…（结果用数值表示）」；Q21/Q22 补小问分值；Q23「又 $PA\perp AB$」；Q24「椭圆的方程为」；Q25「各项都是正数」。
 - 版式：A₁/B₂ 等 Unicode 下标改 LaTeX 下标（消除缺字）；Q3/Q8 行内 `\dfrac` 改 `\frac`（消除分母压选项行）；Q8(B) 改写为单行；几何体名 `P\text{-}ABCD`；Q21 图 y 轴恢复经 B 负半轴、C 上移至轴上方、O 白底；简答提示语按「卷内所载」override（新增 1995 上海理）。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1998 上海文史类：扫描件转录、盲核与四版收口（phase4-b29，2026-10-25）
+
+- 已完成：`gk-1998-regular-shanghai-arts`（22 题：填空 1–11、选择 12–16、解答 17–22；6 页扫描件、无文字层、印刷页 114–119；卷内附「答案及评分标准」第 3–6 页，等级 C）完成规范四稿（重建自草稿，补 22 条答案块与 22 节解析）、独立盲解（22 题与卷内答案逐项一致）、独立转录复核（P0 1、P1 0、P2 6）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete）。
+- 最终构建：试题 4 / 解析 17 / 简答 6 / 印刷 13 页，共 40 页；四份日志无错误、缺字与 Overfull/Underfull。
+- **P0 纠错**：答案要点 Q22(2) 误记 $\lim k_n/n$，按卷内原式改为 $\lim (k_1+\cdots+k_n)/(a_nb_n)=1/3$（终值不变）。
+- 内容修复：Q15 按原页核读 $11\in B$（D 唯一）；Q19 用 $O_1\text{-}BC\text{-}D$ 文本连字符；Q20 辅助图从试题/简答/印刷移入解析版，删去图内 $y^2=4(x-1)$ 答案标注、割线改为一般斜率示意；Q22 末尾两条草稿状态说明删除；Q4 速查表补 $x\in\mathbb R$。
+- 图稿：Q19 上底对角线改实线、$D_1D$ 去重为虚线、O₁ 白底覆盖交点、B 改左下；Q20 抛物线延长至 P、E 置于点上方、Q 移开 y 轴。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。

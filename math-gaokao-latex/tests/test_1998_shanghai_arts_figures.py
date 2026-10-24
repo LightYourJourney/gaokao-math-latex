@@ -32,7 +32,7 @@ class Shanghai1998ArtsFigureTests(unittest.TestCase):
         expected = {
             "q06": ("{1}", "{2}", "{3}", "{4}", "{5}", "{6}", "{7}", "{8}", "a", "b", "c", "d", "e", "f", "g", "m", "n", "p"),
             "q19": ("$A$", "$B$", "$C$", "$D$", "$A_1$", "$B_1$", "$C_1$", "$D_1$", "$O$", "$O_1$", "$E$"),
-            "q20": ("$x$", "$y$", "$O$", "$D$", "$E$", "$P$", "$Q$", "$y^2=4(x-1)$"),
+            "q20": ("$x$", "$y$", "$O$", "$D$", "$E$", "$P$", "$Q$"),
         }
         for name, (filename, _) in FIGURES.items():
             with self.subTest(figure=name):

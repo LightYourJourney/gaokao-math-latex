@@ -333,7 +333,7 @@ class Shanghai1998ArtsSolutionTests(unittest.TestCase):
             item for item in manifest["sources"]
             if item["source_id"] == source_id
         )
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-1998-regular-shanghai-arts")
         self.assertEqual(source["source_state"], "ready")
         self.assertEqual(source["issue_ids"], [])
 
