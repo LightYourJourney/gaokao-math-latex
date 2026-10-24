@@ -18995,3 +18995,344 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1148
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "e02178e7e08f7a5f943175dad982be3060a53af6e985c1357c3e32dbed99a936",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 3,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "ff7bd1e37ac3e711944007344e397d67a45dfb080ddc15022a2626ef7214fe44",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1149
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "figure_label",
+  "edition": "印刷版",
+  "figure_id": "visual-review",
+  "fingerprint": "c64857aac7870c508be263c2b3164211d8f24b600cce007d73b0cb4467d45ac3",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "ff7bd1e37ac3e711944007344e397d67a45dfb080ddc15022a2626ef7214fe44",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1150
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "figure_label",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "dec0b6900c00bb76fcd9ae9cc2012ff1087f1500d9ebb6cae97905bdfd2787b4",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "4e1069e4154a0d7d2b1bc0c368acad06d16513ff7cf130f78c219014632d2ef1",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1151
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "简答版",
+  "figure_id": "visual-review",
+  "fingerprint": "b39a4425c95aa18e319f4ff36d453fa1f96672c3ca3ff1a15d75e659e3a30d7a",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "4e1069e4154a0d7d2b1bc0c368acad06d16513ff7cf130f78c219014632d2ef1",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1152
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "option_formula_alignment",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "b3c6659334605269a1fdebecc5fa8debcb9fda8318da77d92da39bba605d6365",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 2,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1153
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "705d76034728fd05e03f217a5192e7262f170363a16d8ce3f6eb58133e36e34d",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1154
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "83e133e4a04dccef8cf8513a10995ed2196d637a37ab1d48c0240b971ab55108",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 5,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1155
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "03e17a946cbe6d3869834b940a9c9f8966e681112a326a7870b4fc33193dff91",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 7,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1156
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "a3cf1268eae4a909d7325419e001f127902c98e7cf156c52a68640dab1554196",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 8,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1157
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "5396f1795ab082dd455345a93a3f830e9c5655fff2ddb07079699ef851a114a9",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 9,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1158
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "option_formula_alignment",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "ed61feb5afdef3f29d2031b675c51c2c0989bc04cd76df764f9fe1bb0193a817",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 11,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1159
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "5b965e921451f5b0f9946f44d115ae869864d802b9bcb5cfc5ce98cbd08b057f",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 11,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1160
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "pagination_whitespace",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "721c094c7abfb8446895554b4bc66d493ab900a61a9b8486673829442fd7f7fe",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 12,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1161
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "10ff42819b4d52eda637e27a49cd41daa8ce2666582b268d7d2d64646694c6a9",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 15,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1162
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "3c1c00b846c98bd9061ab012e3db9e3da2140315e87ff0113e7af34b83c29fb8",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 18,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1163
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "heading_number",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "7ce76245d7676fbfd9bbec872afaa9d60183d91083aedc4d2cab73fa8c8e57eb",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 18,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "5c07130e4f9746fe449f2d1c1f0b15f150e440a0f21f298bf6b14808a759477f",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```
+## ISSUE-1164
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "96ce7067-9f0c-4bdf-83d6-29809b6bf98b",
+  "check_code": "figure_label",
+  "edition": "试题版",
+  "figure_id": "visual-review",
+  "fingerprint": "e8b852a6c75c7ef886b1ca01e775a77567617bfb4ba908bbf720edc9a7ed4e4d",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1997-regular-shanghai-arts",
+  "pdf_sha256": "a8fbd5d18d5ef888aef9486a47180adda488331f9b99924107c66e47df994ed2",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```

@@ -36,7 +36,8 @@ class ShanghaiArts1997SourceTests(unittest.TestCase):
     def test_transcription_is_bound_to_the_fixed_unbound_source(self):
         self.assertIsNotNone(self.source)
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1997-regular-shanghai-arts")
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1997/1997上海文.pdf")
         self.assertEqual(self.source["artifact"]["sha256"], PDF_SHA256)
         self.assertEqual(self.source["git_blob_oid"], PDF_BLOB)
@@ -44,7 +45,7 @@ class ShanghaiArts1997SourceTests(unittest.TestCase):
         self.assertEqual(self.record["source"]["source_manifest_revision"], 4152)
         self.assertEqual(self.record["source"]["pdf_sha256"], PDF_SHA256)
         self.assertEqual(self.record["source"]["git_blob_oid"], PDF_BLOB)
-        self.assertIsNone(self.record["exam"]["paper_id"])
+        self.assertEqual(self.record["exam"]["paper_id"], "gk-1997-regular-shanghai-arts")
         expected_hashes = {
             "draft_sha256": QUESTION,
             "answers_draft_sha256": ANSWERS,
@@ -101,10 +102,10 @@ class ShanghaiArts1997SourceTests(unittest.TestCase):
         self.assertEqual(self.record["printed_solutions_attribution"], "printed-in-fixed-source-pdf")
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["source"]["source_authenticity"], "publisher-unverified")
-        self.assertEqual(self.record["review_status"], "needs-review")
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
-        self.assertFalse(self.record["canonical_question_source_ready"])
-        for fragment in ("来源印载答案", "不标作已核实官方答案", "not-verified"):
+        self.assertEqual(self.record["review_status"], "reviewed")
+        self.assertEqual(self.record["mathematical_verification_status"], "verified")
+        self.assertTrue(self.record["canonical_question_source_ready"])
+        for fragment in ("来源印载答案", "未核实", "不标作已核实官方答案"):
             self.assertIn(fragment, self.answers)
 
     def test_vector_figure_sources_are_registered_and_rasters_are_absent(self):

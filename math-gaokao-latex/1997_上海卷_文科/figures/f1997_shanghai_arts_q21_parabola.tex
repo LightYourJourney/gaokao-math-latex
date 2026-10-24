@@ -1,12 +1,13 @@
-% 抛物线、焦点、准线右侧截距与直线示意；本图取 p=1、m=0.1，仅示关系，不按比例。
-\begin{tikzpicture}[x=1.05cm,y=1.05cm,line cap=round,line join=round]
-  \draw[->] (-1.5,0)--(2.65,0) node[right] {$x$};
-  \draw[->] (0,-2.15)--(0,1.45) node[above] {$y$};
-  \draw[densely dashed] (-1.25,-1.9)--(-1.25,1.3) node[above] {准线};
-  \draw[thick,domain=-1.8:1.2,samples=90] plot ({\x*\x-1},{\x});
-  \draw[thick,domain=-1.9:1.2,samples=80] plot ({0.1-\x},{\x});
-  \fill (0,0) circle (1.3pt) node[below right] {$O$};
-  \fill (-0.75,0) circle (1.3pt) node[below] {$F$};
-  \fill (-0.56,0.66) circle (1.3pt) node[above left] {$Q$};
-  \fill (1.76,-1.66) circle (1.3pt) node[below right] {$R$};
+% 抛物线 y^2=p(x+1)、直线 x+y=m 与 OQ、OR 示意；本图取 p=1、m=2，仅示关系，不按比例。
+\begin{tikzpicture}[x=1.0cm,y=0.8cm,line cap=round,line join=round]
+  \draw[->] (-1.5,0)--(5.4,0) node[right] {$x$};
+  \draw[->] (0,-3.0)--(0,2.9) node[above] {$y$};
+  \draw[thick,domain=-2.8:1.9,samples=100] plot ({\x*\x-1},{\x});
+  \draw[thick,domain=-0.1:5.2,samples=60] plot ({2-\x},{\x});
+  \draw[thick] (0,0)--(0.697,1.303);
+  \draw[thick] (0,0)--(4.303,-2.303);
+  \fill (0,0) circle (1.3pt) node[below right=2pt] {$O$};
+  \fill (-0.75,0) circle (1.3pt) node[above left=3pt] {$F$};
+  \fill (0.697,1.303) circle (1.3pt) node[above=2pt] {$Q$};
+  \fill (4.303,-2.303) circle (1.3pt) node[below left=2pt] {$R$};
 \end{tikzpicture}
