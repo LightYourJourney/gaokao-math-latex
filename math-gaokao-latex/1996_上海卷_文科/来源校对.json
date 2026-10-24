@@ -16,74 +16,310 @@
   "official_answer": null,
   "question_count": 24,
   "total_score": 150,
-  "section_scores": {"single-choice": 24, "fill-in": 40, "solution": 86},
-  "question_scores": {"single-choice": {"first": 1, "last": 8, "each": 3}, "fill-in": {"first": 9, "last": 18, "each": 4}, "solution": {"19": 10, "20": 10, "21": 14, "22": 16, "23": 18, "24": 18}},
+  "section_scores": {
+    "single-choice": 24,
+    "fill-in": 40,
+    "solution": 86
+  },
+  "question_scores": {
+    "single-choice": {
+      "first": 1,
+      "last": 8,
+      "each": 3
+    },
+    "fill-in": {
+      "first": 9,
+      "last": 18,
+      "each": 4
+    },
+    "solution": {
+      "19": 10,
+      "20": 10,
+      "21": 14,
+      "22": 16,
+      "23": 18,
+      "24": 18
+    }
+  },
   "question_type_ranges": [
-    {"type": "single-choice", "first": 1, "last": 8},
-    {"type": "fill-in", "first": 9, "last": 18},
-    {"type": "solution", "first": 19, "last": 24}
+    {
+      "type": "single-choice",
+      "first": 1,
+      "last": 8
+    },
+    {
+      "type": "fill-in",
+      "first": 9,
+      "last": 18
+    },
+    {
+      "type": "solution",
+      "first": 19,
+      "last": 24
+    }
   ],
   "optional_groups": [
-    {"groups": ["A1", "B1"], "question_numbers": [15, 16, 17, 18]},
-    {"groups": ["A2", "B2"], "question_numbers": [22]}
+    {
+      "groups": [
+        "A1",
+        "B1"
+      ],
+      "question_numbers": [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "groups": [
+        "A2",
+        "B2"
+      ],
+      "question_numbers": [
+        22
+      ]
+    }
   ],
   "question_sources": [
-    {"question_id":"1996-shanghai-arts-q001","question_number":1,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q002","question_number":2,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q003","question_number":3,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q004","question_number":4,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q005","question_number":5,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q006","question_number":6,"question_type":"single-choice","source_page":1},
-    {"question_id":"1996-shanghai-arts-q007","question_number":7,"question_type":"single-choice","source_page":2},
-    {"question_id":"1996-shanghai-arts-q008","question_number":8,"question_type":"single-choice","source_page":2},
-    {"question_id":"1996-shanghai-arts-q009","question_number":9,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q010","question_number":10,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q011","question_number":11,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q012","question_number":12,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q013","question_number":13,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q014","question_number":14,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q015","question_number":15,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q016","question_number":16,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q017","question_number":17,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q018","question_number":18,"question_type":"fill-in","source_page":2},
-    {"question_id":"1996-shanghai-arts-q019","question_number":19,"question_type":"solution","source_page":3},
-    {"question_id":"1996-shanghai-arts-q020","question_number":20,"question_type":"solution","source_page":3},
-    {"question_id":"1996-shanghai-arts-q021","question_number":21,"question_type":"solution","source_page":3},
-    {"question_id":"1996-shanghai-arts-q022","question_number":22,"question_type":"solution","source_page":3},
-    {"question_id":"1996-shanghai-arts-q023","question_number":23,"question_type":"solution","source_page":4},
-    {"question_id":"1996-shanghai-arts-q024","question_number":24,"question_type":"solution","source_page":4}
+    {
+      "question_id": "1996-shanghai-arts-q001",
+      "question_number": 1,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q002",
+      "question_number": 2,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q003",
+      "question_number": 3,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q004",
+      "question_number": 4,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q005",
+      "question_number": 5,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q006",
+      "question_number": 6,
+      "question_type": "single-choice",
+      "source_page": 1
+    },
+    {
+      "question_id": "1996-shanghai-arts-q007",
+      "question_number": 7,
+      "question_type": "single-choice",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q008",
+      "question_number": 8,
+      "question_type": "single-choice",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q009",
+      "question_number": 9,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q010",
+      "question_number": 10,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q011",
+      "question_number": 11,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q012",
+      "question_number": 12,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q013",
+      "question_number": 13,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q014",
+      "question_number": 14,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q015",
+      "question_number": 15,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q016",
+      "question_number": 16,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q017",
+      "question_number": 17,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q018",
+      "question_number": 18,
+      "question_type": "fill-in",
+      "source_page": 2
+    },
+    {
+      "question_id": "1996-shanghai-arts-q019",
+      "question_number": 19,
+      "question_type": "solution",
+      "source_page": 3
+    },
+    {
+      "question_id": "1996-shanghai-arts-q020",
+      "question_number": 20,
+      "question_type": "solution",
+      "source_page": 3
+    },
+    {
+      "question_id": "1996-shanghai-arts-q021",
+      "question_number": 21,
+      "question_type": "solution",
+      "source_page": 3
+    },
+    {
+      "question_id": "1996-shanghai-arts-q022",
+      "question_number": 22,
+      "question_type": "solution",
+      "source_page": 3
+    },
+    {
+      "question_id": "1996-shanghai-arts-q023",
+      "question_number": 23,
+      "question_type": "solution",
+      "source_page": 4
+    },
+    {
+      "question_id": "1996-shanghai-arts-q024",
+      "question_number": 24,
+      "question_type": "solution",
+      "source_page": 4
+    }
   ],
   "page_map": [
-    {"page":1,"printed_page":"83","role":"instructions and questions 1-6"},
-    {"page":2,"printed_page":"84","role":"questions 6-18; A1/B1 begins"},
-    {"page":3,"printed_page":"85","role":"questions 17-22; A2/B2 begins; questions 19-21"},
-    {"page":4,"printed_page":"86","role":"questions 22-24"},
-    {"page":5,"printed_page":"87","role":"answer key 1-18; solutions 19-20; solution 21 begins"},
-    {"page":6,"printed_page":"88","role":"solutions 21-22"},
-    {"page":7,"printed_page":"89","role":"solutions 22-24"},
-    {"page":8,"printed_page":"90","role":"solution 24"}
+    {
+      "page": 1,
+      "printed_page": "83",
+      "role": "instructions and questions 1-6"
+    },
+    {
+      "page": 2,
+      "printed_page": "84",
+      "role": "questions 6-18; A1/B1 begins"
+    },
+    {
+      "page": 3,
+      "printed_page": "85",
+      "role": "questions 17-22; A2/B2 begins; questions 19-21"
+    },
+    {
+      "page": 4,
+      "printed_page": "86",
+      "role": "questions 22-24"
+    },
+    {
+      "page": 5,
+      "printed_page": "87",
+      "role": "answer key 1-18; solutions 19-20; solution 21 begins"
+    },
+    {
+      "page": 6,
+      "printed_page": "88",
+      "role": "solutions 21-22"
+    },
+    {
+      "page": 7,
+      "printed_page": "89",
+      "role": "solutions 22-24"
+    },
+    {
+      "page": 8,
+      "printed_page": "90",
+      "role": "solution 24"
+    }
   ],
   "text_analysis": {
-    "engine":"analyze_pdf.py",
-    "version":"2",
-    "classification":"raster-only",
-    "non_whitespace_chars":0,
-    "suspicious_chars":0,
-    "requires_content_review":true,
-    "page_count":8,
-    "ocr_calls":8,
-    "ocr_engine":"Tesseract 5.5.3",
-    "ocr_languages":"chi_sim+eng",
-    "ocr_dpi":180,
-    "ocr_elapsed_seconds":36.443412,
-    "ocr_status":"recognized_unverified"
+    "engine": "analyze_pdf.py",
+    "version": "2",
+    "classification": "raster-only",
+    "non_whitespace_chars": 0,
+    "suspicious_chars": 0,
+    "requires_content_review": true,
+    "page_count": 8,
+    "ocr_calls": 8,
+    "ocr_engine": "Tesseract 5.5.3",
+    "ocr_languages": "chi_sim+eng",
+    "ocr_dpi": 180,
+    "ocr_elapsed_seconds": 36.443412,
+    "ocr_status": "recognized_unverified"
   },
   "figure_files": [
-    {"question_number":8,"path":"figures/f1996_shanghai_arts_q8_graphs.tex","source_page":2,"classification":"source-faithful-schematic-redraw","sha256":"43b233add2bfc7bfd24b41fac74eeaa5237964c88e9067417e46b6285ae4ae68"},
-    {"question_number":20,"path":"figures/f1996_shanghai_arts_q20_parabola.tex","source_page":3,"classification":"source-faithful-schematic-redraw","sha256":"83e47062ba6d28ca3eeb8b7de1d3207b5d0219b408dbd8a46d7817e9036824a6"},
-    {"question_number":21,"path":"figures/f1996_shanghai_arts_q21_dihedral.tex","source_page":3,"classification":"source-faithful-schematic-redraw","sha256":"c5f47da18e9b1a1c81649d14ae17d9e7cc1175577d2c7b0995036faf24c849f1"},
-    {"question_number":21,"path":"figures/f1996_shanghai_arts_q21_solution.tex","source_page":5,"classification":"source-faithful-schematic-redraw-with-solution-construction","sha256":"0b98837fedb1b55982532be02d875615a50fafae78e37cfa01aeea2860ca25f3"},
-    {"question_number":23,"path":"figures/f1996_shanghai_arts_q23_hyperbola.tex","source_page":4,"classification":"source-faithful-schematic-redraw","sha256":"14a72e90194663fe63a5f251a1ac1917373c5f42995b35bd1432f87cab44b234"}
+    {
+      "question_number": 8,
+      "path": "figures/f1996_shanghai_arts_q8_graphs.tex",
+      "source_page": 2,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "f542aca67abc6c45dc7c1e7a0e1ad0a463f4b466f73ecb752fdbc75bb7507e69"
+    },
+    {
+      "question_number": 20,
+      "path": "figures/f1996_shanghai_arts_q20_parabola.tex",
+      "source_page": 3,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "27baabd92c63382cf2a5d5b74a212efff9ca3b28fa75ee18502257cc8854a87e"
+    },
+    {
+      "question_number": 21,
+      "path": "figures/f1996_shanghai_arts_q21_dihedral.tex",
+      "source_page": 3,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "6a35b540d483a49cfaa01d907567e47af40a49deab200214a1b608fc20392bf1"
+    },
+    {
+      "question_number": 21,
+      "path": "figures/f1996_shanghai_arts_q21_solution.tex",
+      "source_page": 5,
+      "classification": "source-faithful-schematic-redraw-with-solution-construction",
+      "sha256": "53e21dab92434e65b6951beb56c90343895d0e58f22e846d00cce17be33a6b9f"
+    },
+    {
+      "question_number": 23,
+      "path": "figures/f1996_shanghai_arts_q23_hyperbola.tex",
+      "source_page": 4,
+      "classification": "source-faithful-schematic-redraw",
+      "sha256": "39db0de0d04dd33359fc54f765caa70a65ce95f055caf02f09e4df0242eeac8c"
+    }
   ],
   "source_issues": [],
   "review_notes": [
@@ -94,10 +330,10 @@
     "固定来源未给第1-18题逐题推导；解析正文明确记录未载，不臆造来源解析。"
   ],
   "canonical_source_files": {
-    "question":"1996/1996_数学真题_上海文史_试题.md",
-    "answers":"1996/1996_数学真题_上海文史_答案要点.md",
-    "solutions":"1996/1996_数学真题_上海文史_解析正文.md",
-    "combined":"1996/1996_数学真题_上海文史_含解析.md"
+    "question": "1996/1996_数学真题_上海文史_试题.md",
+    "answers": "1996/1996_数学真题_上海文史_答案要点.md",
+    "solutions": "1996/1996_数学真题_上海文史_解析正文.md",
+    "combined": "1996/1996_数学真题_上海文史_含解析.md"
   },
-  "draft_sha256":"d21ba19ac4522448f6e59cff1fd4c40beabea0abdaebac48014fced9371ba8d9"
+  "draft_sha256": "144354a6076162f3988d94f5eddb918ffb82919cd6393c6dd4937efeab8e4cae"
 }

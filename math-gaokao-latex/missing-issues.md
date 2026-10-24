@@ -18816,3 +18816,109 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1138
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "cc6b426d010647ab2ab8abb5230eda7516376e9e2cb33c9599ed3507e88881bf",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1139
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "79d5c98108295b4c8b326883adb7b00316b121c763cf7e22abbca1e8c9033475",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1140
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "895cc26a73d70dea7f57adaf6b806ab5de1d732851ca7974325eff83206b2d3e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1141
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "94418c6f043a4ac4330f4665ec6c62d311cd5a12e6a3c293885c0183c9e01dd0",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1142
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 页 Q15 A1 写 P 在直线 OA 上且 OP/PA=1/2，第 5 页只列 B=(4,2)。通常无向距离解释 t=1/3 或 -1，故 B=(4,2) 或 (-12,-6)，题设未排除外分点。",
+  "fingerprint": "028570530cab8b825252454c2c34ed6151c64e798bcad2ca8047c9e3e4f5a82a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "question_id": "gk-1996-regular-shanghai-arts-q15",
+  "resume_action": "取得同版原始题页、可靠勘误或当年明确有向长度约定后裁定 Q15 A1；此前保留源题「直线 OA」、印载单解 (4,2) 与完整推导两解，整卷保持 blocked。",
+  "source_id": "src-2cd0e37e0e31e5698fdc0f84ba902576f04a18869a73ec0f15565f94f2c0bd35",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1143
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第 2 页写「直线 OA」，OP/PA=1/2；第 5 页只印 B=(4,2)。独立盲解与转录复核均得两解，印载答案与完整数学解集冲突，保持 U 级与 unresolved。",
+  "fingerprint": "0c9fdfd08b8c8cd6be3deb17f3ae2875852d2862a149123611a3d182351d0fbe",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-shanghai-arts",
+  "question_id": "gk-1996-regular-shanghai-arts-q15",
+  "resume_action": "取得同版题面勘误或明确有向距离约定后裁定 Q15 A1；来源只列 (4,2)，当前无向距离完整解含 (-12,-6)，冲突未解决，不得标完成。",
+  "source_id": "src-2cd0e37e0e31e5698fdc0f84ba902576f04a18869a73ec0f15565f94f2c0bd35",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

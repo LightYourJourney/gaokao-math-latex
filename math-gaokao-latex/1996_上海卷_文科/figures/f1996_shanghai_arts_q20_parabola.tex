@@ -1,16 +1,13 @@
-% 固定来源 PDF 印刷页 85 第 20 题坐标图的示意重绘。
-% 标出 A、P 与 x 轴区间 D=(6,7)；抛物线仅示意一条满足题中数值关系的轨迹。
-\begin{tikzpicture}[x=.48cm,y=.40cm,font=\small,line cap=round,line join=round]
-  \draw[->] (-1,0)--(8,0) node[right] {$x$};
-  \draw[->] (0,-1.4)--(0,10) node[above] {$y$};
-  \draw[thick,domain=-6.2:6.4,samples=100,variable=\x]
-    plot (\x,{9-.225*\x*\x});
-  \fill (0,9) circle (1.8pt) node[above left] {$A$};
+% 固定来源 PDF 印刷页 85 第 20 题原图结构示意重绘。
+% 原图只有直角坐标系、点 A(0,9)、点 P 与 x 轴刻度 6、7；轨迹方程 y=ax^2+c 由题干给出，
+% 图中不含抛物线与区间标注，重绘同样不添加。
+\begin{tikzpicture}[x=.55cm,y=.30cm,font=\small,line cap=round,line join=round]
+  \draw[->] (-0.6,0)--(8.2,0) node[right] {$x$};
+  \draw[->] (0,-1.2)--(0,10.2) node[above] {$y$};
+  \fill (0,9) circle (1.8pt) node[right=1pt] {$A$};
+  \node[left=2pt] at (0,9) {$9$};
   \fill (2,8.1) circle (1.8pt) node[above right] {$P$};
-  \draw[thick] (6,0)--(7,0);
-  \draw (6,.15)--(6,-.15) node[below=2pt] {$6$};
-  \draw (7,.15)--(7,-.15) node[below=2pt] {$7$};
-  \node[below=9pt] at (6.5,0) {$D=(6,7)$};
-  \node[left] at (0,9) {$9$};
+  \draw (6,.18)--(6,-.18) node[below=2pt] {$6$};
+  \draw (7,.18)--(7,-.18) node[below=2pt] {$7$};
   \node[below left,inner sep=1pt] at (0,0) {$O$};
 \end{tikzpicture}

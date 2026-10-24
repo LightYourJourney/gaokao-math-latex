@@ -9138,3 +9138,15 @@
 - 后续选择复核：1994上海实际早已绑定phase1-b24、blocked/closed_with_blockers，来源Q25分段与项目推导冲突仍需可靠证据，不能重复登记。只读盘点定位1996上海理科为候选：固定来源ready未绑定，已有规范四份MD/7幅TikZ，但无正式项目入口/provenance/回执；A1/B1、A2/B2选做轨道与Q15内外分歧义须先独立复核。仅定位资料，未重新哈希该源PDF、未宣称转录通过；交接文档已补具体入口。
 
 - 最终验收补记：全量单测 `Ran 1755 tests in 451.183s`，`OK (skipped=13)`；初跑唯一失败的旧来源未绑定断言已改为canonical双向关系校验，定向7+2项亦通过。`manifest.csv --check`为775行当前；`report.py check --all`确认全量报告与manifest一致；`validate-receipts --require-final --require-current-inputs`返回succeeded=2、pending/failed/invalid/missing/stale=0。独立终审未发现新增阻断问题；`git diff --check`通过。当前总账307卷：254 complete、50 blocked、3 compiled，仍非全范围完成。未提交或push。
+
+### 1996 上海文史类：独立复核、图稿重绘与四版收口（phase4-b22，2026-10-24）
+
+- 已完成：`gk-1996-regular-shanghai-arts`（24 题：选择 1–8、填空 9–18（15–18 分 A1/B1）、解答 19–24（22 分 A2/B2）；8 页 A4 扫描件、无文字层、印刷页码 83–90；源附印载 1–18 答案键与 19–24 评分解析，等级 C）完成独立转录复核（8 页逐页 300 dpi 目视）、独立数学复核（29 个可答项，28 项三方一致）、注册（rev 4753）、provenance 三角色、四版生成与正式构建、修复轮、`finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`、整卷 blocked（manifest rev 4773）。
+- 最终构建：试题 6 / 解析 26 / 简答 8 / 印刷 19 页，共 59 页；八份日志无错误、缺字与 Overfull/Underfull。
+- 转录修复：第 17 题 A1 补回续页条件「外文书也恰好排在一起」（按原页印刷页 84 末行—85 首行，补后与印载 1440 自洽）；第 6 题 (B) 补「都成立」；补录 1–18 题分值（选择 24 分/每题 3 分、填空 40 分/每空格 4 分）；第 10 题答案统一为 $\{x\mid 1<x<2\}$。
+- 图稿：第 8 题四图象（刻度「1」移轴右、O 移轴下）、第 20 题坐标图（按原页删除多余抛物线与 D 标注）、第 21 题两幅二面角图（放大重绘、平面边界外移、M 移矩形下沿内、α/β 外置；B 与 α、C/D 与 l 不再相压）、第 23 题双曲线图（原点 O 下移避开渐近线）。
+- 版面修复：第 6 题 (C)(D) 分行，消除满行折行后孤字「0」及 23.5pt 缩进错位。
+- 源内未决：第 15 题 A1「点 P 在直线 OA 上」按无向距离另有 B(−12,−6)，印载只列 (4,2)；保留题面原文与两解推导，登记 ISSUE-1138～1143，整卷维持 blocked，不据答案补条件。
+- 修改文件：`1996/` 文史类四份规范 Markdown、`1996_上海卷_文科/`（questions/answers/短答/四版壳/figures/provenance/receipts/来源校对）、`source-manifest.json`、`missing-issues.md`、`reports/phase4-b22.md`、报告投影与 `docs/source-inventory.md`、本进度文件。
+- 验证：`validate-receipts --batch` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+- 成本：无 OCR、外部付费 API；本地 XeTeX/Poppler＋代理复核。视觉审查代理本轮多次长时间无产出后由主会话接管逐页复核并留证。

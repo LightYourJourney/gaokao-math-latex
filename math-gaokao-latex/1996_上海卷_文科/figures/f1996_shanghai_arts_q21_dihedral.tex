@@ -1,27 +1,28 @@
-% 固定来源 PDF 印刷页 85 第 21 题原图结构示意重绘。
-% 两平面相交于 l，矩形 ABCD 位于 alpha，P 属于 beta 且 PA 垂直 alpha；空间投影不代表长度比例。
-\begin{tikzpicture}[scale=.78,font=\small,line cap=round,line join=round]
-  \coordinate (D) at (1,0);
-  \coordinate (C) at (4,0);
-  \coordinate (A) at (1,-1.45);
-  \coordinate (B) at (4,-1.45);
-  \coordinate (P) at (1,1.18);
-  \coordinate (M) at (2.5,-1.45);
-  \coordinate (N) at (2.5,.59);
-  % Plane alpha and beta share the line l=DC.
-  \draw[thin] (D)--(C)--(5,-1.7)--(2,-1.7)--cycle;
-  \draw[thin] (D)--(C)--(5,1.55)--(2,1.55)--cycle;
-  \draw[thick] (.55,0)--(4.75,0) node[right] {$l$};
-  \node at (2.4,-1.95) {$\alpha$};
-  \node at (2.35,1.37) {$\beta$};
-  % Rectangle and the given point/segments.
+% 固定来源 PDF 第 21 题原图结构示意重绘（扫描件无可解析内容流，按原页关系重绘）。
+% 两平面相交于 l，矩形 ABCD 在 alpha 内，P 在 beta 内且 PA 垂直 alpha；投影不表示度量比例。
+\begin{tikzpicture}[scale=.95,font=\small,line cap=round,line join=round]
+  \coordinate (D) at (1.2,0);
+  \coordinate (C) at (4.2,0);
+  \coordinate (A) at (1.2,-1.6);
+  \coordinate (B) at (4.2,-1.6);
+  \coordinate (P) at (1.2,1.5);
+  \coordinate (M) at (2.7,-1.6);
+  \coordinate (N) at (2.7,0.75);
+  % 两平面（相交于 l）
+  \draw[thin] (D)--(C)--(5.6,-2.0)--(0.2,-2.0)--cycle;
+  \draw[thin] (D)--(C)--(5.6,1.9)--(0.2,1.9)--cycle;
+  \draw[thick] (0.4,0)--(5.1,0) node[right] {$l$};
+  \node at (3.2,-2.35) {$\alpha$};
+  \node at (3.6,2.05) {$\beta$};
+  % 矩形与给定线段
   \draw[thick] (A)--(B)--(C)--(D)--cycle;
   \draw[thick] (P)--(A) (P)--(C) (M)--(N);
-  \fill (A) circle (1.7pt) node[below left] {$A$};
-  \fill (B) circle (1.7pt) node[below right] {$B$};
-  \fill (C) circle (1.7pt) node[right] {$C$};
-  \fill (D) circle (1.7pt) node[left] {$D$};
-  \fill (P) circle (1.7pt) node[above left] {$P$};
-  \fill (M) circle (1.7pt) node[below] {$M$};
-  \fill (N) circle (1.7pt) node[above right] {$N$};
+  % 标签
+  \fill (A) circle (1.7pt) node[below left=1pt] {$A$};
+  \fill (B) circle (1.7pt) node[below right=1pt] {$B$};
+  \fill (C) circle (1.7pt) node[below right=3pt] {$C$};
+  \fill (D) circle (1.7pt) node[below left=3pt] {$D$};
+  \fill (P) circle (1.7pt) node[right=2pt] {$P$};
+  \fill (M) circle (1.7pt) node[below=2pt] {$M$};
+  \fill (N) circle (1.7pt) node[above right=1pt] {$N$};
 \end{tikzpicture}

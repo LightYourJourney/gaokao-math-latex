@@ -48,7 +48,8 @@ class ShanghaiArts1996SourceTests(unittest.TestCase):
         for path in (DRAFT, RECORD, QUESTION, ANSWERS, SOLUTIONS, COMBINED):
             self.assertTrue(path.is_file(), f"missing transcription artifact: {path}")
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1996-regular-shanghai-arts")
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1996/1996上海文.pdf")
         self.assertEqual(self.source["artifact"]["sha256"], PDF_SHA256)
         self.assertEqual(self.source["git_blob_oid"], PDF_BLOB)
