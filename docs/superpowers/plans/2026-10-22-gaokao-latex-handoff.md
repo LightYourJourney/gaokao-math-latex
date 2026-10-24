@@ -2,6 +2,32 @@
 
 更新时间：2026-10-22（中国标准时间）
 
+## 2026-10-23 接续校正
+
+本文下方2026-10-22快照已过时。当前仍使用 canonical worktree
+`仓库根`、分支 `feat/gaokao-phase0`，
+本轮接手HEAD为 `77eeb66c`，未切main、未提交或推送。
+
+- 已接续并收口未提交的2000春季京皖文理两卷（phase4-b20）：48题、八版98页，
+  来源视觉/数学复核及全部输出页八项审查完成；修复推导、来源记录与图标注，补答案图。
+  当前manifest revision4740，批次closed，check-batch返回FINALIZED。
+- 当前全量投影：775来源、307卷（complete254、blocked50、compiled3），
+  168批，正式门禁FINALIZED165、VISUAL_FAILED3。此为状态统计，非全项目完成。
+- 本轮成果路径：`math-gaokao-latex/reports/phase4-b20.md`、
+  `reports/2000-spring-jingwan-review.md`，以及PROGRESS.md末尾。
+- 全量测试1753项初跑仅旧来源“未绑定”断言失败，已修为canonical双向绑定校验；
+  定向7+2项通过；最终全量1755项通过（13跳过，451.183秒），报告/CSV/最终回执检查均通过。
+- 旧PROGRESS把1994上海列为下一套，当前manifest却已将其绑定为phase1-b24、
+  blocked/closed_with_blockers；不要重复登记或转录，先核对当前报告和resume_action。
+- 可核下一候选为1996上海理科：当前source_id
+  `src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21`
+  为ready且未绑定；已有`1996_数学真题_上海理工农医_{试题,答案要点,解析正文,含解析}.md`
+  与项目内7幅TikZ图。没有四版入口、provenance或正式回执，需先独立核源/数学复核。
+  Q15—18的A1/B1及Q22的A2/B2选做轨道必须保留；Q15 A1直线OA内外分歧义待核。
+  固定源印载答案不能当成已认证官方答案。参见PROGRESS旧记录约2540行及
+  `tests/test_1996_shanghai_science_sources.py`；此次只读定位，未重验源PDF哈希。
+- 保留全部未提交成果；未获授权不Git提交，不push；不用旧PNG或旧QC作为当前验收证据。
+
 ## 状态摘要
 
 题库仍在持续建设，1952—2026 全范围目标尚未完成。请在 `feat/gaokao-phase0` 分支和 canonical worktree 继续；不要切到 `main`，不要 push，也不要覆盖既存未提交文件。

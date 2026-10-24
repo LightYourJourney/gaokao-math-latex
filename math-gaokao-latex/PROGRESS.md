@@ -9106,3 +9106,16 @@
 - 验证：`validate-receipts --batch` OK；`check-batch`＝`FINALIZED`；`provenance.py check-batch` OK；`report.py check --all` 一致；全量单测 1753 项通过（13 跳过）。
 - 成本：无 OCR、外部模型或商业 API；仅本地 XeTeX/Poppler 与代理视觉复核。
 - 剩余/下一步：1993 上海（Q23 源截断、不可重建）待登记为 blocked；1994 上海已有规范 Markdown，尚未绑定与构建，可作下一批；其余未绑定来源继续按可核证据推进，不据推测补题。
+
+### 2000 春季京皖文理：接续审计、修复及四版收口（phase4-b20，2026-10-23）
+
+- 接手状态：canonical worktree `phase0-wt` / `feat/gaokao-phase0`，HEAD `77eeb66c`。保留既存未提交的两卷规范源、图稿、provenance和总账；正式构建原为compiled_pending_review。未从main继续，也未覆盖main的排版治理工作。
+- 已完成：独立来源视觉复核固定PDF4页/12分栏，覆盖48题；独立数学复核48题，修正5处推导错误、1处题头引用、证明答案措辞、文科两幅折叠图C标签，并补理Q24实际函数答案图、分行理Q11长公式。修正前后最终答案一致。修复来源校对JSON的重复题号、身份及列位。所有内容经三源确定性渲染与四版生成；无公共样式改动。
+- 最终构建与视觉：文 试题4/解析18/简答6/印刷15页；理 5/24/7/19页，共98页。逐页八项实看，修订后变化页重验、未变页以PNG逐字节一致继承；最终八份日志无错误、缺字、未定义引用及Overfull/Underfull，无警告豁免。`finalize-batch`返回FINALIZED，revision4740，批次closed；`check-batch`通过。详细审查范围与残留分页观察见 `reports/2000-spring-jingwan-review.md`，正式回执及报告为权威。
+- 来源限制：固定源为2页A3三栏XeTeX重排件、无答案页，答案等级D/非官方；出版者、版次及官方原件身份未认证。Q18「都有垂直」与电价题缺标点照录保留。旧盲核角色只确认有落盘记录，不据文件存在认证隔离执行身份。
+- 验证：来源与生成一致性、简答三路核对、provenance均通过；新增来源定位/答案图隔离回归2项通过。全量测试已启动，最终结果后续追加，不把进行中测试记为通过。CSV与全量报告投影刷新已启动，结果另行登记。
+- 成本与边界：无OCR、外部付费API；仅本地XeTeX/Poppler与Subagents复核。实际Token/费用不可见，记未知。未Git提交或push；未入库PDF/PNG，未改`.obsidian/`、`.remember/`或公共字体/样式。1952—2026总目标仍未完成。
+
+- 后续选择复核：1994上海实际早已绑定phase1-b24、blocked/closed_with_blockers，来源Q25分段与项目推导冲突仍需可靠证据，不能重复登记。只读盘点定位1996上海理科为候选：固定来源ready未绑定，已有规范四份MD/7幅TikZ，但无正式项目入口/provenance/回执；A1/B1、A2/B2选做轨道与Q15内外分歧义须先独立复核。仅定位资料，未重新哈希该源PDF、未宣称转录通过；交接文档已补具体入口。
+
+- 最终验收补记：全量单测 `Ran 1755 tests in 451.183s`，`OK (skipped=13)`；初跑唯一失败的旧来源未绑定断言已改为canonical双向关系校验，定向7+2项亦通过。`manifest.csv --check`为775行当前；`report.py check --all`确认全量报告与manifest一致；`validate-receipts --require-final --require-current-inputs`返回succeeded=2、pending/failed/invalid/missing/stale=0。独立终审未发现新增阻断问题；`git diff --check`通过。当前总账307卷：254 complete、50 blocked、3 compiled，仍非全范围完成。未提交或push。

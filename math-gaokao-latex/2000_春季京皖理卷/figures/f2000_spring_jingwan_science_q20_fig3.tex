@@ -1,0 +1,33 @@
+% f2000_spring_jingwan_science_q20_fig3.tex — 2000 年·春季京皖卷·理科 第 20 题 图三（折叠后三棱锥 D′-ABC，二面角 60°）
+%
+% 【来源】`.work/phase4-b20/source/2000春季京皖理.pdf`
+%   （SHA-256 37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce），
+%   第 1 页（印刷页 61）；qpdf --qdf 解包后对内容流逐路径解析。
+% 【坐标口径】源 PDF 用户空间（原点左下、y 向上）。本图本地坐标
+%   (x, y) = (x_page − 1067.319, y_page − 629.419)，1 单位 = 1 TeX pt；
+%   A 取底面左端点；AB 水平（y_page ≡ 629.419）。
+% 【元素计数】6 条路径（AB／BD′／D′A 实线；AC／CB／CD′ 虚线）＋ 4 个标签。
+% 【标签】位置取 pdftotext -bbox 文本中心换算（源中心逐条记在 \node 行末）；
+%   本图有 1 处微调：「C」下移 3.0 pt，避开 AC 虚线（原净距 2.0 pt）；
+%   其余标签按源中心放置。
+\begin{tikzpicture}[x=1pt, y=1pt,
+    every node/.style={inner sep=0pt, font=\fontsize{10.5pt}{12.6pt}\selectfont}]
+  \draw[line width=0.399pt] (0,0) -- (68.037,0);
+  \draw[line width=0.399pt] (68.037,0) -- (25.514,34.019);
+  \draw[line width=0.399pt] (25.514,34.019) -- (0,0);
+  \draw[line width=0.399pt, dash pattern=on 2.99pt off 2.99pt] (0,0) -- (20.411,20.411);
+  \draw[line width=0.399pt, dash pattern=on 2.99pt off 2.99pt] (68.037,0) -- (20.411,20.411);
+  \draw[line width=0.399pt, dash pattern=on 2.99pt off 2.99pt] (20.411,20.411) -- (25.514,34.019);
+
+  \node[anchor=center] at (-4.929,-5.889) {$A$};  % 源中心 (1062.39,623.53)
+  \node[anchor=center] at (72.701,-5.889) {$B$};  % 源中心 (1140.02,623.53)
+  \node[anchor=center] at (20.031,9.471) {$C$};  % 源中心 (1087.35,641.89)；下移 3.0 pt 避 AC 虚线（原净距 2.0 pt）
+  \node[anchor=center] at (25.271,41.351) {$D'$};  % 源中心 (1092.59,670.77)；取 D 与标注撇号合框中心
+  % 图注（源页图下居中）
+  \node at (34.019,-12.000) {图三};
+\end{tikzpicture}
+%
+% 【自验】
+%   1) 探针编译：0 error、0 warning。
+%   2) 600 dpi 双渲染差分量测标签净距：B 3.48、A 3.56、D′ 3.68、C 4.07 —— 最小 3.48 pt。
+%   3) 线形：AB／AD′／BD′ 实线 0.399 pt；AC／CB／CD′ 虚线节距 on 2.99pt off 2.99pt（源 d=[2.99 2.99]）。

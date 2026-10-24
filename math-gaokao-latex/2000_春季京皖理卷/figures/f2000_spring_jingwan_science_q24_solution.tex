@@ -1,0 +1,14 @@
+% 编者解答图，依据第24题分段函数绘制；不属于原卷题图。
+\begin{tikzpicture}[x=4cm,y=4cm, every node/.style={font=\small}]
+  \draw[->] (-.10,0)--(1.15,0) node[right] {$x$};
+  \draw[->] (0,-.10)--(0,1.15) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \foreach \t in {0.5,1} {
+    \draw (\t,0)--(\t,.025) node[below=3pt] {$\t$};
+    \draw (0,\t)--(.025,\t) node[left=3pt] {$\t$};
+  }
+  \draw[dashed,thin] (.5,0)--(.5,1)--(0,1);
+  \draw[thick,domain=0:.5,samples=61] plot (\x,{-2*(\x-.5)^2+1});
+  \draw[thick] (.5,1)--(1,0);
+  \foreach \point in {(0,.5),(.5,1),(1,0)} \fill \point circle[radius=1.2pt];
+\end{tikzpicture}

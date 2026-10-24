@@ -32,14 +32,18 @@ class BeijingAnhuiSpring2000ArtsTranscriptionTests(unittest.TestCase):
         cls.transcript = TRANSCRIPT.read_text(encoding="utf-8")
         cls.inventory = INVENTORY.read_text(encoding="utf-8")
 
-    def test_fixed_source_identity_and_unbound_metadata(self):
+    def test_fixed_source_identity_and_registered_binding(self):
         manifest = json.loads((PROJECT / "source-manifest.json").read_text(encoding="utf-8"))
         source = next(item for item in manifest["sources"] if item["source_id"] == SOURCE_ID)
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], SOURCE_PATH)
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        # 草稿中的 paper_id:null 是转录阶段快照；当前来源已正式绑定本批项目。
+        self.assertEqual(source["paper_id"], "gk-2000-spring-jingwan-arts")
+        self.assertEqual(source["paper_relation"], "canonical")
+        paper = next(p for p in manifest["papers"] if p["paper_id"] == source["paper_id"])
+        self.assertIn(SOURCE_ID, paper["source_ids"])
         for value in (SOURCE_ID, SOURCE_SHA256, "paper_id: null", "official_answer: null", "出版物/版次未知"):
             self.assertIn(value, self.transcript)
         self.assertIn("末张 `arts/sxws09.gif` 含 Q23、Q24 解题内容", self.inventory)

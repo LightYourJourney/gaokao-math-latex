@@ -1,0 +1,33 @@
+% f2000_spring_jingwan_science_q20_fig1.tex — 2000 年·春季京皖卷·理科 第 20 题 图一（直角梯形 ABCD，虚线 AC）
+%
+% 【来源】`.work/phase4-b20/source/2000春季京皖理.pdf`
+%   （SHA-256 37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce），
+%   第 1 页（印刷页 61）；qpdf --qdf 解包后对内容流逐路径解析。
+% 【坐标口径】源 PDF 用户空间（原点左下、y 向上）。本图本地坐标
+%   (x, y) = (x_page − 832.206, y_page − 629.419)，1 单位 = 1 TeX pt；
+%   A 取梯形左下顶点；AB 水平（y_page ≡ 629.419），AD 铅直（x_page ≡ 832.206）。
+% 【元素计数】5 条路径（AB／BC／CD／DA／AC 虚线）＋ 4 个标签。
+% 【标签】位置取 pdftotext -bbox 文本中心换算（源中心逐条记在 \node 行末）；
+%   本图有 1 处微调：「C」上移 1.5 pt，避开梯形上底 CD（原净距 1.8 pt）；
+%   其余标签按源中心放置。
+\begin{tikzpicture}[x=1pt, y=1pt,
+    every node/.style={inner sep=0pt, font=\fontsize{10.5pt}{12.6pt}\selectfont}]
+  \draw[line width=0.399pt] (0,0) -- (68.037,0);
+  \draw[line width=0.399pt] (68.037,0) -- (34.019,34.019);
+  \draw[line width=0.399pt] (34.019,34.019) -- (0,34.019);
+  \draw[line width=0.399pt] (0,34.019) -- (0,0);
+  \draw[line width=0.399pt, dash pattern=on 2.99pt off 2.99pt] (0,0) -- (34.019,34.019);
+
+  \node[anchor=center] at (-4.936,-5.889) {$A$};  % 源中心 (827.27,623.53)
+  \node[anchor=center] at (72.704,-5.889) {$B$};  % 源中心 (904.91,623.53)
+  \node[anchor=center] at (38.574,39.491) {$C$};  % 源中心 (870.78,667.41)；上移 1.5 pt 避 CD 边（原净距 1.8 pt）
+  \node[anchor=center] at (-5.076,37.991) {$D$};  % 源中心 (827.13,667.41)
+  % 图注（源页图下居中）
+  \node at (34.019,-12.000) {图一};
+\end{tikzpicture}
+%
+% 【自验】
+%   1) 探针编译：0 error、0 warning。
+%   2) 600 dpi 双渲染差分量测标签净距：C 2.90、D 3.05、B 3.49、A 3.50 —— 最小 2.90 pt。
+%   3) 线形：实线 4 条 0.399 pt，虚线 AC 用源实测节距 dash pattern=on 2.99pt off 2.99pt；
+%      600 dpi 下沿 AC 数得 9 节（8 整节 + 末端 0.5 pt 残节），与源 PDF 同法计数一致。
