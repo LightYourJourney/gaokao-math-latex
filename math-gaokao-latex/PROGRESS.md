@@ -9150,3 +9150,14 @@
 - 修改文件：`1996/` 文史类四份规范 Markdown、`1996_上海卷_文科/`（questions/answers/短答/四版壳/figures/provenance/receipts/来源校对）、`source-manifest.json`、`missing-issues.md`、`reports/phase4-b22.md`、报告投影与 `docs/source-inventory.md`、本进度文件。
 - 验证：`validate-receipts --batch` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
 - 成本：无 OCR、外部付费 API；本地 XeTeX/Poppler＋代理复核。视觉审查代理本轮多次长时间无产出后由主会话接管逐页复核并留证。
+
+### 2002 北京文科：盲解复核、表格重排与四版收口（phase4-b23，2026-10-24）
+
+- 已完成：`gk-2002-regular-beijing-arts`（22 题：选择 1–12、填空 13–16、解答 17–22；固定源为 2 页 A3 横向 XeTeX 重排件，有文字层、无答案页，等级 D；印刷页 102–103）完成独立盲解（全 22 题，与库内答案逐题一致）、独立转录复核（16 题完全一致；P1 两项、P2 九项）、注册（rev 4774）、provenance 三角色、四版生成/构建、修复轮与 `finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 4794）。
+- 最终构建：试题 5 / 解析 19 / 简答 7 / 印刷 17 页，共 48 页；四份日志无错误、缺字与 Overfull。
+- 转录修复：Q19 数列记号按源作 `{a_n}`（元素仍为 `x_n`，源内符号混用照录并加注）；Q18「相交与→于」「估侧→估计」；Q6(B) 原文核对无改动。
+- 图稿重绘：Q11 函数零点移到 x=1（原稿 0.6，会与四个选项矛盾）；Q12 辅助虚线仅保留在 f₂/f₃/f₄ 且高度取端点值；Q18 多面体改为「标签贴棱外侧、无尺寸箭头」的示意（原箭头穿面、c/d 压棱与 C₁ 挤连）。Q4 题面空选项占位行删除，仅留图内 (A)–(D)。
+- 版面：Q20 八列计算表原 386pt 超宽，表头改排印缩写（1 读/1 果…）并在题面加全称说明，四版均无 Overfull；Q11 四项并为一行，消除「图后首段失缩进」造成的两行 24pt 错位。
+- 余留（非阻塞）：Q15 源内③④重复「可能是直角」照录；Q18「侧棱延长后相交于 E,F」为原印表述；Q18 图不补 E/F 延长线。四项已记入 `来源校对.json` source_issues。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+- 备注：本轮视觉审查代理前两批多次长时无产出，改为主会话逐页复核（解析 11–19、印刷 7–17）并留量化记录；已修正的 fail 由主会话逐条裁定。

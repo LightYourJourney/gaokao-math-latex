@@ -1,0 +1,681 @@
+% answers.tex —— 2002 年·北京卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2002/2002_数学真题_北京文_试题.md + 2002/2002_数学真题_北京文_解析正文.md + 2002/2002_数学真题_北京文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+以下解答仅基于来源校对记录中已核对的固定 PDF 题面。固定来源没有答案页，本解析为生成内容，不代表官方答案；本稿尚未经过异人独立数学盲核。原卷 Q15 重复印刷的两条“可能是直角”均按原文分别判断。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+满足条件 \(M\cup\{1\}=\{1,2,3\}\) 的集合 \(M\) 的个数是\mbox{（　　）}。
+
+（A）4　　（B）3　　（C）2　　（D）1
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 $M\cup\{1\}=\{1,2,3\}$ 可知 $2,3$ 必须属于 $M$，而 $1$ 可属于也可不属于 $M$，因此有两种集合。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在平面直角坐标系中，已知两点 \(A(\cos80^\circ,\sin80^\circ)\)，\(B(\cos20^\circ,\sin20^\circ)\)，则 \(|AB|\) 的值是\mbox{（　　）}。
+
+（A）\(\dfrac12\)　　（B）\(\dfrac{\sqrt2}{2}\)　　（C）\(\dfrac{\sqrt3}{2}\)　　（D）1
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$A,B$ 是单位圆上圆心角相差 $60^\circ$ 的两点，所以弦长
+
+\nopagebreak[4]
+\[|AB|=2\sin30^\circ=1.\]
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+下列四个函数中，以 \(\pi\) 为最小正周期，且在区间 \(\left(\dfrac\pi2,\pi\right)\) 上为减函数的是\mbox{（　　）}。
+
+（A）\(y=\cos x\)　　（B）\(y=2|\sin x|\)　　（C）\(y=\cos\dfrac{x}{2}\)　　（D）\(y=-\cot x\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$\cos x$ 的最小正周期为 $2\pi$，$\cos(x/2)$ 的最小正周期为 $4\pi$。在 $(\pi/2,\pi)$ 上，$|\sin x|=\sin x$ 严格递减；而 $-\cot x$ 的导数为 $\csc^2x>0$，在该区间递增。因此只有 $2|\sin x|$ 符合条件。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+在下列四个正方体中，能得出 \(AB\perp CD\) 的是\mbox{（　　）}。
+\nopagebreak[4]
+\begin{center}\input{figures/2002_beijing_arts_q04_cubes}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取正方体三条互相垂直的棱方向为标准正交基，以前下左顶点为原点，向右、向上、向后分别为坐标正方向。按四幅图逐一读出端点后，方向向量可取为
+
+\nopagebreak[4]
+\[\begin{array}{c|c|c|c}
+\text{选项}&\overrightarrow{AB}&\overrightarrow{CD}&\overrightarrow{AB}\cdot\overrightarrow{CD}\\\hline
+A&(1,-1,-1)&(0,-1,1)&0\\
+B&(0,-1,-1)&(1,-1,0)&1\\
+C&(0,-1,1)&(0,-1,0)&1\\
+D&(1,-1,-1)&(0,-1,0)&1
+\end{array}\]
+
+只有 A 的方向向量内积为零，所以只有 A 中 $AB\perp CD$。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+64 个直径都为 \(\dfrac a4\) 的球，记它们的体积之和为 \(V_{\text{甲}}\)，表面积之和为 \(S_{\text{甲}}\)；一个直径为 \(a\) 的球，记其体积为 \(V_{\text{乙}}\)，表面积为 \(S_{\text{乙}}\)，则\mbox{（　　）}。
+
+（A）\(V_{\text{甲}}>V_{\text{乙}},\ S_{\text{甲}}>S_{\text{乙}}\)　　（B）\(V_{\text{甲}}<V_{\text{乙}},\ S_{\text{甲}}<S_{\text{乙}}\)
+
+（C）\(V_{\text{甲}}=V_{\text{乙}},\ S_{\text{甲}}>S_{\text{乙}}\)　　（D）\(V_{\text{甲}}=V_{\text{乙}},\ S_{\text{甲}}=S_{\text{乙}}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+小球半径为 $a/8$，大球半径为 $a/2$，两者半径比为 $1:4$。体积比按半径三次方缩放，64 个小球总体积与大球相等；表面积比按半径平方缩放，64 个小球总表面积是大球的 $64/16=4$ 倍。
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+若直线 \(l:y=kx-\sqrt3\) 与直线 \(2x+3y-6=0\) 的交点位于第一象限，则直线 \(l\) 的倾斜角的取值范围是\mbox{（　　）}。
+
+（A）\(\left[\dfrac\pi6,\dfrac\pi3\right)\)　　（B）\(\left(\dfrac\pi6,\dfrac\pi2\right)\)
+
+（C）\(\left(\dfrac\pi3,\dfrac\pi2\right)\)　　（D）\(\left[\dfrac\pi6,\dfrac\pi2\right]\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+联立两直线，交点横坐标为
+
+\nopagebreak[4]
+\[x=\frac{2+\sqrt3}{k+2/3}.\]
+
+\Needspace{5\baselineskip}
+交点在第一象限要求 $x>0$ 且 $y=kx-\sqrt3>0$。前者给出 $k>-2/3$；在此条件下代入 $x$ 到 $y>0$，得到
+
+\nopagebreak[4]
+\[\frac{k(2+\sqrt3)}{k+2/3}>\sqrt3\quad\Longleftrightarrow\quad k>\frac1{\sqrt3}.\]
+
+倾斜角 $\alpha\in[0,\pi)$ 满足 $k=\tan\alpha$，故 $\pi/6<\alpha<\pi/2$。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+\((1+i)^8\) 等于\mbox{（　　）}。
+
+（A）\(16i\)　　（B）\(-16i\)　　（C）\(-16\)　　（D）16
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$(1+i)^2=2i$，从而 $(1+i)^4=-4$，再平方得 $(1+i)^8=16$。
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+若 \(\dfrac{\cot\theta-1}{2\cot\theta+1}=1\)，则 \(\cos2\theta\) 的值为\mbox{（　　）}。
+
+（A）\(\dfrac{3}{5}\)　　（B）\(-\dfrac{3}{5}\)　　（C）\(\dfrac{2\sqrt5}{5}\)　　（D）\(-\dfrac{2\sqrt5}{5}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $c=\cot\theta$。由
+
+\nopagebreak[4]
+\[\frac{c-1}{2c+1}=1\]
+
+\Needspace{5\baselineskip}
+得 $c-1=2c+1$，所以 $c=-2$，且原分母 $2c+1=-3\ne0$。因此
+
+\nopagebreak[4]
+\[\cos2\theta=\frac{\cot^2\theta-1}{\cot^2\theta+1}=\frac35.\]
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+5 本不同的书，全部分给四个学生，每个学生至少 1 本，则不同的分法的种数为\mbox{（　　）}。
+
+（A）480　　（B）240　　（C）120　　（D）96
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+先选出分给同一学生的两本书，有 $\binom52$ 种；再将这两本作为一组，与其余三本分别分给四名有区别的学生，有 $4!$ 种。因此共有
+
+\nopagebreak[4]
+\[\binom52\,4!=240\]
+
+种分法。
+
+\gkanswer{答案：B。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知椭圆 \(\dfrac{x^2}{3m^2}+\dfrac{y^2}{5n^2}=1\) 和双曲线 \(\dfrac{x^2}{2m^2}-\dfrac{y^2}{3n^2}=1\) 有公共的焦点，那么双曲线的渐近线方程是\mbox{（　　）}。
+
+（A）\(x=\pm\dfrac{\sqrt{15}}2y\)　　（B）\(y=\pm\dfrac{\sqrt{15}}2x\)
+
+（C）\(x=\pm\dfrac{\sqrt3}{4}y\)　　（D）\(y=\pm\dfrac{\sqrt3}{4}x\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+双曲线的焦点在 $x$ 轴上，故椭圆也必须以 $x$ 轴为长轴，即 $3m^2>5n^2$。椭圆与双曲线焦距平方分别为 $3m^2-5n^2$、$2m^2+3n^2$。公共焦点给出
+
+\nopagebreak[4]
+\[3m^2-5n^2=2m^2+3n^2,\]
+
+\Needspace{5\baselineskip}
+故 $m^2=8n^2$。双曲线的渐近线为
+
+\nopagebreak[4]
+\[y=\pm\sqrt{\frac{3n^2}{2m^2}}x=\pm\frac{\sqrt3}{4}x.\]
+
+\gkanswer{答案：D。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知 \(f(x)\) 是定义在 \((0,3)\) 上的函数，\(f(x)\) 的图象如图所示，那么不等式 \(f(x)\cos x<0\) 的解集是\mbox{（　　）}。
+\nopagebreak[4]
+\begin{center}\input{figures/2002_beijing_arts_q11_sign_graph}\end{center}
+\nopagebreak[4]
+（A）\((0,1)\cup(2,3)\)　　（B）\((1,\dfrac\pi2)\cup(\dfrac\pi2,3)\)　　（C）\((0,1)\cup(\dfrac\pi2,3)\)　　（D）\((0,1)\cup(1,3)\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由图可知 $f(x)<0$ 于 $(0,1)$，而 $f(x)>0$ 于 $(1,3)$；$f(1)=0$。又 $\cos x>0$ 于 $(0,\pi/2)$，$\cos x<0$ 于 $(\pi/2,3)$。两因子异号时乘积为负，故解集为
+
+\nopagebreak[4]
+\[ (0,1)\cup(\pi/2,3).\]
+
+\gkanswer{答案：C。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+如图所示，\(f_1(x),f_2(x),f_3(x),f_4(x)\) 是定义在 \([0,1]\) 上的四个函数，其中满足性质“对 \([0,1]\) 中任意的 \(x_1\) 和 \(x_2\)，\(f\left(\dfrac{x_1+x_2}{2}\right)\leqslant\dfrac12[f(x_1)+f(x_2)]\) 恒成立”的只有\mbox{（　　）}。
+\nopagebreak[4]
+\begin{center}\input{figures/2002_beijing_arts_q12_convexity_graphs}\end{center}
+\nopagebreak[4]
+（A）\(f_1(x),f_3(x)\)　　（B）\(f_2(x)\)　　（C）\(f_2(x),f_3(x)\)　　（D）\(f_4(x)\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+题设不等式是凸函数的中点凸性条件。图象 $f_1$ 为凸形，仿射函数 $f_3$ 也满足等号；凹形 $f_2$ 不满足，变凹凸的 $f_4$ 不能在整个区间满足凸性。因此符合者为 $f_1,f_3$。
+
+\gkanswer{答案：A。}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+\(\sin\dfrac{2\pi}{5},\ \cos\dfrac{6\pi}{5},\ \tan\dfrac{7\pi}{5}\) 从小到大的顺序是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+有 $\cos(6\pi/5)=-\cos(\pi/5)<0$，而 $\sin(2\pi/5)>0$。此外 $\tan(7\pi/5)=\tan(2\pi/5)$，且 $0<\cos(2\pi/5)<1$，故
+
+\nopagebreak[4]
+\[\sin(2\pi/5)<\frac{\sin(2\pi/5)}{\cos(2\pi/5)}=\tan(7\pi/5).\]
+
+\gkanswer{答案：$\cos\frac{6\pi}{5}<\sin\frac{2\pi}{5}<\tan\frac{7\pi}{5}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+等差数列 \(\{a_n\}\) 中，\(a_1=2\)，公差不为零，且 \(a_1,a_3,a_{11}\) 恰好是某等比数列的前三项，那么该等比数列公比的值等于\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设等差数列公差为 $d\ne0$。若 $a_1,a_3,a_{11}$ 是等比数列的前三项，则
+
+\nopagebreak[4]
+\[a_3^2=a_1a_{11},\qquad (2+2d)^2=2(2+10d).\]
+
+化简得 $4d(d-3)=0$，由 $d\ne0$ 知 $d=3$。等比数列前三项为 $2,8,32$，公比为 $4$。
+
+\gkanswer{答案：$4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+关于直角 \(AOB\) 在平面 \(\alpha\) 内的射影有如下判断：①可能是 \(0^\circ\) 的角；②可能是锐角；③可能是直角；④可能是直角；⑤可能是 \(180^\circ\) 的角。其中正确的序号是\gkblank{}。（注：把你认为正确判断的序号都填上。）
+
+\begin{gktip}
+原件 Q15 中③、④均印作“可能是直角”；此处按固定 PDF 原文照录，未推测或改正。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设原直角的两条单位方向向量为 $u=(1,0,0)$、$v=(0,1,0)$。正交投影到平面时，可以分别构造两投影同向、垂直、反向的情形；例如令平面法向量分别平行于 $(1,-1,0)$、$(0,1,1)$、$(1,1,0)$，便可得到投影夹角 $0^\circ$、$90^\circ$、$180^\circ$。再取法向量 $n=(1,-1,1)/\sqrt3$，两投影的内积为 $-n_xn_y=1/3>0$ 且两投影均非零，所以还可得到锐角。于是五条印刷判断均成立；③与④虽然文字重复，仍分别对应两个正确序号。
+
+\gkanswer{答案：①②③④⑤。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+圆 \(x^2+y^2-2x-2y+1=0\) 上的动点 \(Q\) 到直线 \(3x+4y+8=0\) 距离的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+配方得圆心为 $(1,1)$、半径为 $1$。圆心到直线的距离为
+
+\nopagebreak[4]
+\[\frac{|3+4+8|}{\sqrt{3^2+4^2}}=3.\]
+
+圆上点到该直线的最小距离等于圆心距减半径，即 $3-1=2$。
+
+\gkanswer{答案：$2$。}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+解不等式 \(\sqrt{2x-1}+2>x\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+定义域为 $x\ge1/2$。当 $1/2\le x\le2$ 时，左边至少为 $2$，右边不超过 $2$，原不等式成立。当 $x>2$ 时，两边均为正，可平方等价变形：
+
+\nopagebreak[4]
+\[\sqrt{2x-1}>x-2\quad\Longleftrightarrow\quad 2x-1>(x-2)^2\]
+
+\nopagebreak[4]
+\[\Longleftrightarrow\quad (x-1)(x-5)<0.\]
+
+结合 $x>2$ 得 $2<x<5$；合并两段区间即所求。
+
+\gkanswer{答案：$\left[\frac12,5\right)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在多面体 \(ABCD-A_1B_1C_1D_1\) 中，上、下底面平行且均为矩形，相对的侧面与同一底面所成的二面角大小相等，侧棱延长后相交于 \(E,F\) 两点。上、下底面矩形的长、宽分别为 \(c,d\) 与 \(a,b\)，且 \(a>c,b>d\)，两底面间的距离为 \(h\)。
+
+（1） 求侧面 \(ABB_1A_1\) 与底面 \(ABCD\) 所成二面角的正切值；
+
+\Needspace{5\baselineskip}
+（2） 在估计该多面体的体积时，经常运用近似公式 \(V_{\text{估}}=S_{\text{中截面}}\,h\) 来计算。已知它的体积公式是
+\nopagebreak[4]
+\[
+V=\frac{h}{6}\left(S_{\text{上底面}}+4S_{\text{中截面}}+S_{\text{下底面}}\right),
+\]
+试判断 \(V_{\text{估}}\) 与 \(V\) 的大小关系，并加以证明。
+
+注：与两个底面平行，且到两个底面距离相等的截面称为该多面体的中截面。
+\nopagebreak[4]
+\begin{center}\input{figures/2002_beijing_arts_q18_polyhedron}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 侧面与底面的二面角}
+
+\Needspace{5\baselineskip}
+由相对侧面与底面的二面角相等，平行的矩形上、下底面在水平投影中同心。沿垂直于 $AB$ 的方向作截面，上、下底对应边之间的水平距离为 $(b-d)/2$，竖直距离为 $h$。截面内的侧面与底面夹角为 $\theta$，于是直角三角形给出
+
+\nopagebreak[4]
+\[\tan\theta=\frac{h}{(b-d)/2}=\frac{2h}{b-d}.\]
+
+\gksubpart{(2) 中截面估算与准确体积}
+
+\Needspace{5\baselineskip}
+平行截面的长、宽随高度线性变化；中截面的两边分别为 $(a+c)/2$、$(b+d)/2$，所以
+
+\nopagebreak[4]
+\[S_{\mathrm{\text{中截面}}}=\frac{(a+c)(b+d)}4.\]
+
+\Needspace{5\baselineskip}
+将此式代入题给体积公式：
+
+\nopagebreak[4]
+\[V=\frac h6\left(ab+(a+c)(b+d)+cd\right).\]
+
+\Needspace{5\baselineskip}
+因此
+
+\nopagebreak[4]
+\[V_{\mathrm{\text{估}}}-V=\frac h{12}\left((a+c)(b+d)-2ab-2cd\right)
+=\frac h{12}(a-c)(d-b).\]
+
+已知 $a>c$、$b>d$、$h>0$，故右端严格小于零。
+
+\gkanswer{答案（1）：$\tan\theta=\dfrac{2h}{b-d}$。}
+
+\gkanswer{答案（2）：$V_{\mathrm{\text{估}}}<V$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+数列 \(\{a_n\}\) 由下列条件确定：\(x_1=a>0\)，
+\nopagebreak[4]
+\[
+x_{n+1}=\frac12\left(x_n+\frac{a}{x_n}\right),\qquad n\in\mathbb N.
+\]
+
+（1） 证明：对 \(n\geqslant2\)，总有 \(x_n\geqslant\sqrt a\)；
+
+（2） 证明：对 \(n\geqslant2\)，总有 \(x_n\geqslant x_{n+1}\)。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 下界}
+
+\Needspace{5\baselineskip}
+由 $a>0$ 及算术—几何平均不等式，
+
+\nopagebreak[4]
+\[x_2=\frac12\left(a+1\right)\ge\sqrt a.\]
+
+\Needspace{5\baselineskip}
+递推各项均为正。若 $x_n>0$，则
+
+\nopagebreak[4]
+\[x_{n+1}=\frac12\left(x_n+\frac a{x_n}\right)\ge\sqrt{x_n\frac a{x_n}}=\sqrt a.\]
+
+故从 $n=2$ 起每一项都不小于 $\sqrt a$。
+
+\gksubpart{(2) 单调性}
+
+\Needspace{5\baselineskip}
+对 $n\ge2$，利用前一问的结论及 $x_n>0$：
+
+\nopagebreak[4]
+\[x_n-x_{n+1}=\frac12\left(x_n-\frac a{x_n}\right)
+=\frac{x_n^2-a}{2x_n}\ge0.\]
+
+\gkanswer{答案（1）：$x_n\geqslant\sqrt a\quad(n\geqslant2)$。}
+
+\gkanswer{答案（2）：$x_n\geqslant x_{n+1}\quad(n\geqslant2)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+在研究并行计算的基本算法时，有以下简单模型问题：用计算机求 \(n\) 个不同的数 \(v_1,v_2,\ldots,v_n\) 的和
+\nopagebreak[4]
+\[
+\sum_{i=1}^n v_i=v_1+v_2+\cdots+v_n,
+\]
+计算开始前，\(n\) 个数存贮在 \(n\) 台由网络连接的计算机中，每台机器存一个数。计算开始后，在一个单位时间内，每台机器至多到一台其他机器中读数据，并与自己原有数据相加得到新的数据，各台机器可同时完成上述工作。为了用尽可能少的单位时间，即可完成计算，方法可用下表表示（表中「1 读」「1 果」分别表示第一单位时间的被读机号与结果，其余类推（表头为排印缩写，原页为「第一单位时间·被读机号」等全称）。）：
+
+\begin{center}
+\begingroup\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cccccccc}
+\toprule
+机器号 & 初始 & 1 读 & 1 果 & 2 读 & 2 果 & 3 读 & 3 果 \\
+\midrule
+1 & \(v_1\) & 2 & \(v_1+v_2\) &  &  &  &  \\
+2 & \(v_2\) & 1 & \(v_2+v_1\) &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{center}
+
+（1） 当 \(n=4\) 时，至少需要多少个单位时间可完成计算？把你设计的方法填入下表：
+
+\begin{center}
+\begingroup\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cccccccc}
+\toprule
+机器号 & 初始 & 1 读 & 1 果 & 2 读 & 2 果 & 3 读 & 3 果 \\
+\midrule
+1 & \(v_1\) &  &  &  &  &  &  \\
+2 & \(v_2\) &  &  &  &  &  &  \\
+3 & \(v_3\) &  &  &  &  &  &  \\
+4 & \(v_4\) &  &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{center}
+
+（2） 当 \(n=128\) 时，要使所有机器都得到 \(\sum_{i=1}^{n}v_i\)，至少需要多少个单位时间可完成计算？（结论不要求证明。）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 四台机器}
+
+\Needspace{5\baselineskip}
+第一单位时间分成两组互读：机器1、2分别读对方，得到 $v_1+v_2$；机器3、4分别读对方，得到 $v_3+v_4$。第二单位时间让机器1、3互读，机器2、4互读。此时每次读取的都是上一时刻已存的两数之和，故四台机器都得到
+
+\nopagebreak[4]
+\[v_1+v_2+v_3+v_4.\]
+
+每轮每台机器至多读取一台机器，自己的已知输入数目至多翻倍；一轮至多由1个输入扩展为2个，不能覆盖4个。因此两轮既可行又是最少。
+
+\gksubpart{(2) 一百二十八台机器}
+
+同理，$t$ 轮后每台机器至多汇集 $2^t$ 个初始数。$128=2^7$，七轮达到下界；按每轮成对合并的二叉树调度可使所有机器都得到总和。
+
+\gkanswer{答案（1）：至少2个单位时间。第一轮：1读2、2读1、3读4、4读3；第二轮：1读3、2读4、3读1、4读2；第二轮后四台机器都得到总和。}
+
+\gkanswer{答案（2）：7个单位时间。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知 \(O(0,0)\)，\(B(1,0)\)，\(C(b,c)\) 是 \(\triangle OBC\) 的三个顶点。
+
+（1） 写出 \(\triangle OBC\) 的重心 \(G\)、外心 \(F\)、垂心 \(H\) 的坐标，并证明 \(G,F,H\) 三点共线；
+
+（2） 当直线 \(FH\) 与 \(OB\) 平行时，求顶点 \(C\) 的轨迹。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 坐标与共线}
+
+\Needspace{5\baselineskip}
+三角形非退化要求 $c\ne0$。重心坐标为
+
+\nopagebreak[4]
+\[G=\left(\frac{1+b}{3},\frac c3\right).\]
+
+\Needspace{5\baselineskip}
+设外心为 $F=(p,q)$。由 $FO=FB$ 得 $p=1/2$；再用 $FO=FC$ 得
+
+\nopagebreak[4]
+\[F=\left(\frac12,\frac{b^2+c^2-b}{2c}\right).\]
+
+\Needspace{5\baselineskip}
+高线 $CH$ 垂直于 $OB$，所以 $x_H=b$；又 $OH\perp BC$，从而
+
+\nopagebreak[4]
+\[b(b-1)+c y_H=0,
+\qquad H=\left(b,\frac{b(1-b)}c\right).\]
+
+逐坐标可验 $H=3G-2F$，故 $G,F,H$ 共线。
+
+\gksubpart{(2) 轨迹}
+
+\Needspace{5\baselineskip}
+直线 $OB$ 为水平线，因此 $FH\parallel OB$ 要求 $F,H$ 的纵坐标相等。代入上式并整理：
+
+\nopagebreak[4]
+\[\frac{b^2+c^2-b}{2c}=\frac{b(1-b)}c
+\quad\Longleftrightarrow\quad 3\left(b-\frac12\right)^2+c^2=\frac34.\]
+
+还需排除不能构成三角形的 $c=0$ 两点 $(0,0)$、$(1,0)$。当 $C=(1/2,\pm\sqrt3/2)$ 时三角形为正三角形，$F=H$，直线 $FH$ 不确定，也应排除。因此轨迹为该椭圆去掉这四点。
+
+\gkanswer{答案（1）：$G(\frac{1+b}{3},\frac c3)$，$F(\frac12,\frac{b^2+c^2-b}{2c})$，$H(b,\frac{b(1-b)}c)$；三点共线。}
+
+\gkanswer{答案（2）：$3\left(b-\frac12\right)^2+c^2=\frac34$，去掉$(0,0)$、$(1,0)$及$(\frac12,\pm\frac{\sqrt3}{2})$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知 \(f(x)\) 是定义在 \(\mathbb R\) 上的不恒为零的函数，且对于任意的 \(a,b\in\mathbb R\) 都满足
+\nopagebreak[4]
+\[
+f(a\cdot b)=a f(b)+b f(a).
+\]
+
+（1） 求 \(f(0),f(1)\) 的值；
+
+（2） 判断 \(f(x)\) 的奇偶性，并证明你的结论；
+
+（3） 若 \(f(2)=2\)，\(u_n=f(2^n)\)（\(n\in\mathbb N\)），求证 \(u_{n+1}>u_n\)（\(n\in\mathbb N\)）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 两个函数值}
+
+在函数方程中取 $a=0,b=2$，得 $f(0)=2f(0)$，所以 $f(0)=0$。取 $a=b=1$，则 $f(1)=2f(1)$，故 $f(1)=0$。
+
+\gksubpart{(2) 奇偶性}
+
+\Needspace{5\baselineskip}
+先在函数方程中取 $a=b=-1$，有 $f(1)=-2f(-1)$，因此 $f(-1)=0$。再取 $a=-1,b=x$，便有
+
+\nopagebreak[4]
+\[f(-x)=-f(x)+x f(-1)=-f(x),\]
+
+故 $f$ 为奇函数。
+
+\gksubpart{(3) 数列单调性}
+
+\Needspace{5\baselineskip}
+令 $u_0=f(1)=0$。对 $n\ge0$，由函数方程及 $f(2)=2$ 得
+
+\nopagebreak[4]
+\[u_{n+1}=f(2\cdot2^n)=2u_n+2^n f(2)=2u_n+2^{n+1}.\]
+
+\Needspace{5\baselineskip}
+归纳可得 $u_n=n2^n$（$n\ge0$）：若 $u_n=n2^n$，则
+
+\nopagebreak[4]
+\[u_{n+1}=2n2^n+2^{n+1}=(n+1)2^{n+1}.\]
+
+\Needspace{5\baselineskip}
+于是
+
+\nopagebreak[4]
+\[u_{n+1}-u_n=(n+2)2^n>0\qquad(n\ge0).\]
+
+\gkanswer{答案（1）：$f(0)=f(1)=0$。}
+
+\gkanswer{答案（2）：$f$为奇函数。}
+
+\gkanswer{答案（3）：$u_n=n2^n$，故$u_{n+1}-u_n=(n+2)2^n>0$。}
+
+\end{answer}
