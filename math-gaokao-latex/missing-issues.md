@@ -19336,3 +19336,24 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1165
+
+```json
+{
+  "affected_paper_ids": [],
+  "build_attempt_id": "2db5e79a-9d7b-4bc5-baae-3cc4d7facdb1",
+  "check_code": "figure_label",
+  "edition": "解析版",
+  "figure_id": "visual-review",
+  "fingerprint": "7ab8e1ebe06bd90091595f34bc93365fd5d871ffc3c748d56e9b7623aa812d02",
+  "impact": "non_blocking",
+  "origin": "visual-review",
+  "page": 4,
+  "paper_id": "gk-1997-regular-shanghai-science",
+  "pdf_sha256": "4832a7067e994e83a1e14acb5c1c335269ccae816de941dd2be7abe26247f81d",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
+  "type": "layout-warning"
+}
+```

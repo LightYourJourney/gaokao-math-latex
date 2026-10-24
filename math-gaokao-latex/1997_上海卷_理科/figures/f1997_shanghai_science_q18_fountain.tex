@@ -2,7 +2,7 @@
 \begin{tikzpicture}[x=0.85cm,y=0.65cm,line cap=round,line join=round]
   \draw[thick] (-3.1,0)--(3.1,0) node[right]{水面};
   \draw[thick] (0,0)--(0,1.25);
-  \fill (0,1.25) circle (1.4pt) node[left]{A};
+  \fill (0,1.25) circle (1.4pt) node at (0.45,1.30) {$A$};
   \fill (0,0) circle (1.4pt) node[below left]{O};
   \draw[thick,domain=0:2.5,samples=80] plot (\x,{-(\x-1)^2+2.25});
   \draw[thick,domain=-2.5:0,samples=80] plot (\x,{-(\x+1)^2+2.25});

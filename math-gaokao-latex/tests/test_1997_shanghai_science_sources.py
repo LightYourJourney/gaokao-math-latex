@@ -34,11 +34,11 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(self.record["pdf_sha256"], SOURCE_SHA256)
         self.assertEqual(self.record["git_blob_oid"], SOURCE_BLOB)
         self.assertEqual(self.record["source"]["page_count"], 7)
-        self.assertIsNone(self.record["exam"]["paper_id"])
+        self.assertEqual(self.record["exam"]["paper_id"], "gk-1997-regular-shanghai-science")
         self.assertEqual(self.record["source"]["source_authenticity"], "publisher-unverified")
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["mathematical_verification_status"], "verified")
-        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertTrue(self.record["canonical_question_source_ready"])
 
     def test_question_sequence_scores_and_optional_variants(self):
         headings = [int(n) for n in re.findall(r"^\*\*(\d+)．", self.question, re.MULTILINE)]
@@ -95,9 +95,9 @@ class ShanghaiScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(self.record["answer_attribution"], "printed-in-fixed-source-pdf")
         self.assertEqual(self.record["printed_solutions_attribution"], "printed-in-fixed-source-pdf")
         self.assertIn("来源印载答案", self.answers)
-        self.assertIn("not-verified", self.answers)
+        self.assertIn("未核实", self.answers)
         self.assertIsNone(self.record["official_answer"])
-        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.record["review_status"], "reviewed")
 
     def test_page_map_ocr_provenance_and_figures_are_auditable(self):
         self.assertEqual([row["source_page"] for row in self.record["page_map"]], list(range(1, 8)))

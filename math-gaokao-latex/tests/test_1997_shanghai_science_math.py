@@ -27,9 +27,9 @@ class ShanghaiScienceMathChecks(unittest.TestCase):
         record = json.loads(PROVENANCE.read_text(encoding="utf-8"))
         self.assertEqual(record["mathematical_verification_status"], "verified")
         self.assertEqual(record["source"]["source_authenticity"], "publisher-unverified")
-        self.assertFalse(record["canonical_question_source_ready"])
+        self.assertTrue(record["canonical_question_source_ready"])
         self.assertIsNone(record["official_answer"])
-        self.assertEqual(record["review_status"], "needs-review")
+        self.assertEqual(record["review_status"], "reviewed")
         attempts = record["verification"]["blind_math_review_attempts"]
         self.assertTrue(any(attempt["status"] == "not-accepted" for attempt in attempts))
         self.assertTrue(any(attempt["status"] == "partial-not-accepted" for attempt in attempts))
