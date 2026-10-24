@@ -3,8 +3,8 @@
 \begin{tikzpicture}[x=.78cm,y=.78cm,font=\small,line cap=round,line join=round]
   \draw[->] (-3.2,0)--(3.4,0) node[right] {$x$};
   \draw[->] (0,-2.5)--(0,2.9) node[above] {$y$};
-  \draw[dashed] (-2.35,-2.35)--(2.35,2.35);
-  \draw[dashed] (-2.35,2.35)--(2.35,-2.35);
+  \draw[thin] (-2.35,-2.35)--(2.35,2.35);
+  \draw[thin] (-2.35,2.35)--(2.35,-2.35);
   \draw[thick,domain=-2.5:2.5,samples=70,variable=\x]
     plot (\x,{sqrt(\x*\x+2)});
   \draw[thick,domain=-2.5:2.5,samples=70,variable=\x]

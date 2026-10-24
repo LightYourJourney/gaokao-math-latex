@@ -18782,3 +18782,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1136
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第2页Q15 A1写P在直线OA上且OP/PA=1/2，第5页只列B=(4,2)。通常无向距离解释t=1/3或-1，故B=(4,2)或(-12,-6)，缺乏排除外分点的题设。",
+  "fingerprint": "7d921a8d5431af1ea7247cd51b5a51b247914942f8ad00c059207856c0165a06",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-shanghai-science",
+  "question_id": "gk-1996-regular-shanghai-science-q15",
+  "resume_action": "取得同版原始题页、可靠勘误或当年明确有向长度约定后裁定Q15 A1；此前保留源题、印载单解与完整推导两解，整卷保持blocked，不据答案补条件。",
+  "source_id": "src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1137
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第2页写直线OA，OP/PA=1/2；第5页只印B=(4,2)。独立解题得B=(4,2)或(-12,-6)。原ISSUE-1136保留题源约定阻塞，本条明确记录印载答案与完整数学解集的未决冲突，以满足逐题answer-conflict门禁。",
+  "fingerprint": "1b46e8099f014f308e909b89c11525436117c6fb22839e252f415ac410520f20",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-shanghai-science",
+  "question_id": "gk-1996-regular-shanghai-science-q15",
+  "resume_action": "取得同版题面勘误或明确有向距离约定后裁定Q15 A1；来源只列(4,2)，当前无向距离完整解含(-12,-6)，冲突未解决，保持U级与unresolved，不得标完成。",
+  "source_id": "src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

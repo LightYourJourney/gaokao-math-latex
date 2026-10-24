@@ -49,7 +49,8 @@ class ShanghaiScience1996SourceTests(unittest.TestCase):
         for path in self.REQUIRED_ARTIFACTS:
             self.assertTrue(path.is_file(), f"missing transcription artifact: {path}")
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1996-regular-shanghai-science")
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1996/1996上海理.pdf")
         self.assertEqual(self.source["artifact"]["sha256"], PDF_SHA256)
         self.assertEqual(self.source["git_blob_oid"], PDF_BLOB)
@@ -57,7 +58,7 @@ class ShanghaiScience1996SourceTests(unittest.TestCase):
         self.assertEqual(self.record["source_manifest_revision"], 4152)
         self.assertEqual(self.record["pdf_sha256"], PDF_SHA256)
         self.assertEqual(self.record["git_blob_oid"], PDF_BLOB)
-        self.assertIsNone(self.record["paper_id"])
+        self.assertEqual(self.record["paper_id"], self.source["paper_id"])
         self.assertEqual(self.record["draft_sha256"], hashlib.sha256(QUESTION.read_bytes()).hexdigest())
 
     def test_all_questions_sections_and_optional_tracks_are_preserved(self):
@@ -83,7 +84,7 @@ class ShanghaiScience1996SourceTests(unittest.TestCase):
         )
         self.assertEqual(
             [item["question_id"] for item in self.record["question_sources"]],
-            [f"1996-shanghai-science-q{number:03d}" for number in range(1, 25)],
+            [f"gk-1996-regular-shanghai-science-q{number:02d}" for number in range(1, 25)],
         )
         self.assertEqual([item["printed_page"] for item in self.record["page_map"][:8]],
                          [str(number) for number in range(74, 82)])
@@ -91,6 +92,21 @@ class ShanghaiScience1996SourceTests(unittest.TestCase):
             self.record["page_map"][8]["role"],
             "blank reverse scan with faint show-through; final solution 24 lines at top",
         )
+
+    def test_q17_a1_preserves_both_adjacent_book_groups(self):
+        block = self.question.split("**17．**", 1)[1].split("**18．**", 1)[0]
+        a1 = block.split("**A1 组：**", 1)[1].split("**B1 组：**", 1)[0]
+        self.assertIn("数学书恰好排在一起", a1)
+        self.assertIn("外文书也恰好排在一起", a1)
+
+    def test_q8_negative_parabola_roots_preserve_source_tick_order(self):
+        source = (PAPER / "figures/f1996_shanghai_science_q8_graphs.tex").read_text()
+        # C/D倒抛物线相对正负1刻度的位置是排除选项的数学条件。
+        offsets = re.findall(r"\\x,\{-[0-9.]+\*\\x\*\(\\x([+-][0-9.]+)\)\}", source)
+        self.assertEqual(len(offsets), 2)
+        roots = [-float(value) for value in offsets]
+        self.assertLess(roots[0], -1)
+        self.assertGreater(roots[1], 1)
 
     def test_source_specific_stems_and_printed_answers_are_retained(self):
         for fragment in (
@@ -125,16 +141,19 @@ class ShanghaiScience1996SourceTests(unittest.TestCase):
             with self.subTest(fragment=fragment):
                 self.assertIn(fragment, self.solutions)
 
-    def test_source_answers_are_not_claimed_as_official_or_independently_verified(self):
+    def test_source_answers_are_not_official_and_known_conflict_remains(self):
         self.assertTrue(self.record["source_has_answers"])
         self.assertTrue(self.record["source_has_solutions"])
         self.assertEqual(self.record["answer_attribution"], "printed-in-fixed-source-pdf")
         self.assertEqual(self.record["solution_attribution"], "printed-in-fixed-source-pdf")
         self.assertIsNone(self.record["official_answer"])
         self.assertEqual(self.record["source_authenticity"], "publisher-unverified")
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
-        self.assertEqual(self.record["review_status"], "needs-review")
-        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertEqual(self.record["mathematical_verification_status"], "verified-except-q15-A1-source-convention")
+        self.assertEqual(self.record["review_status"], "reviewed-with-source-blocker")
+        self.assertTrue(self.record["canonical_question_source_ready"])
+        paper = next(p for p in self.manifest["papers"] if p["paper_id"] == self.record["paper_id"])
+        self.assertEqual(paper["production_state"], "blocked")
+        self.assertIn("ISSUE-1136", paper["issue_ids"])
         self.assertIn("固定来源 PDF", self.answers)
         self.assertIn("官方标准答案", self.answers)
         self.assertIn("官方性尚待核验", self.answers)

@@ -1483,6 +1483,14 @@
         "gk-2000-spring-jingwan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b21",
+      "issues": [],
+      "paper_ids": [
+        "gk-1996-regular-shanghai-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1492,7 +1500,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "f9a83a79-6298-4b03-b93d-184c20b98708",
+  "last_transaction_id": "270cb0ae-882b-4f88-985b-6c84668d9137",
   "papers": [
     {
       "blocked_from": null,
@@ -21456,9 +21464,90 @@
       "title": "2000 年·春季京皖卷·理科",
       "track": "science",
       "year": 2000
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q18_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q20_motion.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q21_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q21_solution.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q23_hyperbola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q7_center_locus.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_上海卷_理科/figures/f1996_shanghai_science_q8_graphs.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1996_shanghai_science",
+        "id": "gk-1996-regular-shanghai-science",
+        "note": "固定源9页扫描件，题面24题/150分；A1/B1、A2/B2同号选做均保留。来源附印载答案与评分解析，官方身份未认证；编者补充1—18题推导。Q15 A1直线内外分歧义保留阻塞。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            9,
+            18
+          ],
+          "解答题": [
+            19,
+            24
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理工农医"
+      },
+      "issue_ids": [
+        "ISSUE-1136",
+        "ISSUE-1137"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1996-regular-shanghai-science",
+      "production_state": "blocked",
+      "project_dir": "1996_上海卷_理科",
+      "question_count": 24,
+      "resume_action": "取得同版原始题页、可靠勘误或当年明确有向长度约定后裁定Q15 A1；此前保留源题、印载单解与完整推导两解，整卷保持blocked，不据答案补条件。",
+      "source_files": {
+        "answer_key": "1996/1996_数学真题_上海理工农医_答案要点.md",
+        "combined_rendered": "1996/1996_数学真题_上海理工农医_含解析.md",
+        "questions": "1996/1996_数学真题_上海理工农医_试题.md",
+        "solution_body": "1996/1996_数学真题_上海理工农医_解析正文.md"
+      },
+      "source_ids": [
+        "src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21"
+      ],
+      "title": "1996 年·上海卷·理科",
+      "track": "science",
+      "year": 1996
     }
   ],
-  "revision": 4740,
+  "revision": 4746,
   "schema_version": 1,
   "sources": [
     {
@@ -26035,8 +26124,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6da50ed1a5c26c6337afa8c8d0613b6113e974b4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1996-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1996上海理.pdf",
       "regions": [],
       "source_id": "src-544d6951d540a551546ce474b93c3b9bc08e1863472ea0998f971dd4b619de21",
