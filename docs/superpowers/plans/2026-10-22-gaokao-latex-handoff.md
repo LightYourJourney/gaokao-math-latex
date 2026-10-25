@@ -3,6 +3,12 @@
 更新时间：2026-10-22（中国标准时间）
 
 
+## 2026-10-25 后续（九）：1992 上海卷收口
+
+- `phase4-b31`（`gk-1992-regular-shanghai`）已提交 `01bef09`：26 题、6 页扫描件附解答评分、四版 5/25/7/19 页；`FINALIZED`／`closed`／complete。盲解与卷内答案 26/26 一致。
+- 修复：解析 Q20 改 B（P0）、Q12 指数 1/8（P1）、Q22 口径、Q18 定义域、Q16 系数、Q10 向量方向、Q10/Q24/Q26/Q11 图标签。
+- 现况：775 来源、318 卷（complete 262／compiled 3／blocked 53）、179 批，manifest rev 5003。
+
 ## 2026-10-25 后续（八）：1991 上海卷（blocked）
 
 - `phase4-b30`（`gk-1991-regular-shanghai`）已提交 `4887d04`：27 题、7 页扫描件附解答评分、四版 5/25/7/21 页；批次 `closed_with_blockers`，整卷 **blocked**。
