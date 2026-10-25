@@ -9227,3 +9227,12 @@
 - 最终构建：试题 5 / 解析 25 / 简答 7 / 印刷 21 页，共 58 页；四份日志无错误、缺字与 Overfull/Underfull。
 - 其他修复：Q17 解析不等式链方向；Q19 选项分式改行内 `\frac`（花括号净距）；Q24 B 标签右下、Q27 θ 移出角弧；页眉「数学·数学」重复（登记标题与模板叠加）修正；Q8 源疑点段从题面区移出（泄漏）。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED（blocked）；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1992 上海卷：全量转录、盲核与四版收口（phase4-b31，2026-10-25）
+
+- 已完成：`gk-1992-regular-shanghai`（26 题：填空 1–10、选择 11–20、解答 21–26；6 页扫描件、无文字层、印刷页 5-3～5-7；卷内附解答及评分标准）完成全量转录（四稿 + 4 幅 TikZ）、独立盲解（26 题与卷内 26/26 一致）、独立转录复核（P0 1、P1 1、P2 4 全修）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 5003）。
+- 最终构建：试题 5 / 解析 25 / 简答 7 / 印刷 19 页，共 56 页；四份日志无错误、缺字与 Overfull/Underfull。
+- **P0**：解析 Q20 误判「既非充分也非必要」（D），按 `M∩P ⇒ M∪P` 改为必要非充分（B）。
+- **P1**：Q12(B) 指数经 300 ppi 同型比对确为 $x^{1/8}$（不是 1/3），试题与解析同步。
+- 其他：Q22 统一 $[0,2\pi)$ 口径、Q18 定义域 $x\ge1$、Q16 $4p=4$、Q10 向量 $\overrightarrow{EF}$ 方向与点积符号；Q10 补 B₁M、Q24 右图直径改 (A2)–(B2)、Q11「1」与 Q24/Q26 标签移位或白底。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；1992 两份遗留 intake 测试改写为 canonical 断言；全量单测随提交前复核。

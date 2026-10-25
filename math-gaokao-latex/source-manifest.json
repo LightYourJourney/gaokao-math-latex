@@ -1563,6 +1563,14 @@
         "gk-1991-regular-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b31",
+      "issues": [],
+      "paper_ids": [
+        "gk-1992-regular-shanghai"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1572,7 +1580,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0bd61cf8-3e56-4617-9207-3138e467f520",
+  "last_transaction_id": "9e32fd3f-1976-43dc-a6a0-59f7df7c18d9",
   "papers": [
     {
       "blocked_from": null,
@@ -22239,9 +22247,75 @@
       "title": "1991 年·上海卷",
       "track": "none",
       "year": 1991
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1992_上海卷/figures/f1992_shanghai_q10_parallelepiped.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_上海卷/figures/f1992_shanghai_q11_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_上海卷/figures/f1992_shanghai_q24_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1992_上海卷/figures/f1992_shanghai_q26_hyperbola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1992_shanghai",
+        "id": "gk-1992-regular-shanghai",
+        "note": "1992 上海卷（科类未标注）；6 页扫描（无文字层），题面 1–3 页、解答与评分 3–6 页；26 题（填空 1–10、选择 11–20、解答 21–26）；Q10 记号、Q12 指数源疑点已登记；4 幅题面图重绘。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            10
+          ],
+          "解答题": [
+            21,
+            26
+          ],
+          "选择题": [
+            11,
+            20
+          ]
+        },
+        "track": "none",
+        "variant": "上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1992-regular-shanghai",
+      "production_state": "complete",
+      "project_dir": "1992_上海卷",
+      "question_count": 26,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "1992/1992_上海_答案要点.md",
+        "combined_rendered": "1992/1992_上海_含解析.md",
+        "questions": "1992/1992_上海_试题.md",
+        "solution_body": "1992/1992_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-e77a322624ef0fc72f155d60b2f62edb79bccaa28883810f414768231e5e0a7d"
+      ],
+      "title": "1992 年·上海卷",
+      "track": "none",
+      "year": 1992
     }
   ],
-  "revision": 4977,
+  "revision": 5003,
   "schema_version": 1,
   "sources": [
     {
@@ -26386,8 +26460,8 @@
       "exam_type": "regular",
       "git_blob_oid": "aee122a54ad7c4fcc5a67166d9090f891e740882",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1992-regular-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "1992上海.pdf",
       "regions": [],
       "source_id": "src-e77a322624ef0fc72f155d60b2f62edb79bccaa28883810f414768231e5e0a7d",
