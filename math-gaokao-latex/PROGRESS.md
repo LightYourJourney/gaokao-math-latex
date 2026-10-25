@@ -9219,3 +9219,11 @@
 - 内容修复：Q15 按原页核读 $11\in B$（D 唯一）；Q19 用 $O_1\text{-}BC\text{-}D$ 文本连字符；Q20 辅助图从试题/简答/印刷移入解析版，删去图内 $y^2=4(x-1)$ 答案标注、割线改为一般斜率示意；Q22 末尾两条草稿状态说明删除；Q4 速查表补 $x\in\mathbb R$。
 - 图稿：Q19 上底对角线改实线、$D_1D$ 去重为虚线、O₁ 白底覆盖交点、B 改左下；Q20 抛物线延长至 P、E 置于点上方、Q 移开 y 轴。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1991 上海卷：全量转录、盲核与 blocked 收口（phase4-b30，2026-10-25）
+
+- 已完成：`gk-1991-regular-shanghai`（27 题：填空 1–10、选择 11–20、解答 21–27；7 页扫描件、无文字层、印刷页 5-33～5-38；卷内附「试题解答及评分标准」）完成全量转录（四稿 + 4 幅 TikZ）、独立盲解、独立转录复核（P0 0、P1 1、P2 2）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed_with_blockers`，整卷 **blocked**）。
+- **阻塞项**：`ISSUE-1178`——Q8 题面 $(2x^2-\frac1x)^8$ 按指数 8 无常数项，而卷内答案 60 只在指数 6 时成立；300 dpi 字形两孔确认 8，盲解与转录复核均独立确认，三说并列保留，不擅改。
+- 最终构建：试题 5 / 解析 25 / 简答 7 / 印刷 21 页，共 58 页；四份日志无错误、缺字与 Overfull/Underfull。
+- 其他修复：Q17 解析不等式链方向；Q19 选项分式改行内 `\frac`（花括号净距）；Q24 B 标签右下、Q27 θ 移出角弧；页眉「数学·数学」重复（登记标题与模板叠加）修正；Q8 源疑点段从题面区移出（泄漏）。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED（blocked）；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。

@@ -19595,3 +19595,21 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1178
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面第 8 题为 (2x^2-1/x)^8：通项 x^{16-3k}，k=16/3 非整数，常数项不存在；卷内答案 60 = C(6,4)·2^2，对应指数 6。300 dpi 复核上标字形为 8（两个封闭孔），盲解独立复现“无常数项”。",
+  "fingerprint": "63ebbe774ec627839476e6215a8db2a73fff1837d2b42657f83526bb2c722793",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1991-regular-shanghai",
+  "question_id": "gk-1991-regular-shanghai-q08",
+  "resume_action": "取得同版原页或勘误确认上标应为 6（则答案 60）或确为 8（则应改为“无常数项”）；此前保留题面 8、卷内 60 与独立结论“无常数项”三说并列，整卷保持 blocked。",
+  "source_id": "src-de45d6075f9038c7b46c233df86b014753be6f32fb2eb832653b00cbad96fcb9",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+

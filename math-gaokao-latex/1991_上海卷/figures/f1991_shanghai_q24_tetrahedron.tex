@@ -1,15 +1,13 @@
-% 来源：固定1991上海PDF第2页（印刷5-34），第24题。
-% 忠实投影复现：原图仅有AB、AC、BC、BD、CD五条实线。
-% 不补AD、H、R或解析辅助线；投影坐标不增加度量条件。
-\begin{tikzpicture}[line width=0.5pt,scale=1.0]
-  \coordinate (A) at (0.2,2.3);
-  \coordinate (B) at (1.25,0.65);
-  \coordinate (C) at (4.75,0.65);
-  \coordinate (D) at (-0.65,-0.8);
-  \draw (A)--(B)--(C)--(A);
-  \draw (B)--(D)--(C);
-  \node[above left] at (A) {$A$};
-  \node[above right] at (B) {$B$};
-  \node[right] at (C) {$C$};
-  \node[below left] at (D) {$D$};
+% 1991 年上海卷第 24 题：△ABC 与 △DBC 所在两平面互相垂直（依固定扫描页重绘，只画拓扑与标号，不按比例）
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (3.3,0.15);
+  \coordinate (A) at (-0.95,2.05);
+  \coordinate (D) at (-0.75,-2.05);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \draw[thick] (B)--(D)--(C);
+  \fill (A) circle (1pt) node[above left] {$A$};
+  \fill (B) circle (1pt) node[below right=2pt] {$B$};
+  \fill (C) circle (1pt) node[right] {$C$};
+  \fill (D) circle (1pt) node[below left] {$D$};
 \end{tikzpicture}

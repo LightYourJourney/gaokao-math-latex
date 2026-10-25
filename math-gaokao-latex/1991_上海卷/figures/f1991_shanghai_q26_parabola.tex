@@ -1,32 +1,30 @@
-% 来源：固定1991上海PDF第3页（印刷5-35），第26题。
-% 根据已给条件数学化重建，绘图例取L:y=-3(x-2)/2，非新增题设。
-% B=(1/2,9/4), C=(-2,6), P=(-2/11,36/11), Q=(20/33,12/11)。
-% 精确检查：BP/PC=(9/4)/6=3/8，Q为POA重心。
-\begin{tikzpicture}[x=1.02cm,y=0.52cm,line width=0.5pt]
-  \coordinate (O) at (0,0);
+% 1991 年上海卷第 26 题：过定点 A(2,0) 的动直线 L 与抛物线 y=x^2+2 交于 B、C（依固定扫描页重绘，只画拓扑与标号，不按比例）
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  % 坐标轴
+  \draw[->] (-2.8,0)--(3.4,0) node[below] {$x$};
+  \draw[->] (0,-0.8)--(0,5.6) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 抛物线（示意，非按比例）
+  \draw[thick,domain=-1.78:1.78,samples=90] plot (\x,{1.6*(\x)^2+0.6});
+  \node[right] at (1.55,5.05) {$y=x^{2}+2$};
+  % 动直线 L（过 A(2,0)）
+  \draw[thick] (-1.75,4.50)--(2.9,-1.08) ;
+  \node[left] at (-1.72,4.62) {$L$};
+  % 交点与射影
+  \coordinate (C) at (-1.50,4.20);
+  \coordinate (B) at (0.75,1.50);
+  \coordinate (Cp) at (-1.50,0);
+  \coordinate (Bp) at (0.75,0);
   \coordinate (A) at (2,0);
-  \coordinate (B) at ({1/2},{9/4});
-  \coordinate (C) at (-2,6);
-  \coordinate (Bp) at ({1/2},0);
-  \coordinate (Cp) at (-2,0);
-  \coordinate (P) at ({-2/11},{36/11});
-  \coordinate (Q) at ({20/33},{12/11});
-  \draw[->] (-2.7,0)--(2.9,0) node[right] {$x$};
-  \draw[->] (0,-0.5)--(0,7.3) node[above] {$y$};
-  \draw[domain=-2.2:1.85,samples=80,smooth] plot (\x,{\x*\x+2});
-  \draw (-2.3,6.45)--(A);
-  \draw (P)--(O);
-  \draw[dashed] (B)--(Bp);
+  \coordinate (P) at (0.16,2.21);
+  \coordinate (Q) at (0.72,0.74);
   \draw[dashed] (C)--(Cp);
-  \fill (Q) circle[radius=0.8pt];
-  \node[below left,inner sep=2pt] at (O) {$O$};
-  \node[below right] at (A) {$A(2,0)$};
-  \node[right] at (B) {$B$};
-  \node[left] at (C) {$C$};
-  \node[below right,inner sep=2pt] at (Bp) {$B'$};
-  \node[below] at (Cp) {$C'$};
-  \node[above left,inner sep=2pt] at (P) {$P$};
-  \node[right] at (Q) {$Q$};
-  \node[left] at (-2.3,6.45) {$L$};
-  \node[right] at (1.45,5.35) {$y=x^2+2$};
+  \draw[dashed] (B)--(Bp);
+  \fill (C) circle (1pt) node[left] {$C$};
+  \fill (B) circle (1pt) node[right] {$B$};
+  \fill (Cp) circle (1pt) node[below] {$C'$};
+  \fill (Bp) circle (1pt) node[below] {$B'$};
+  \fill (A) circle (1pt) node[above right] {$A(2,0)$};
+  \fill (P) circle (1pt) node[right] {$P$};
+  \fill (Q) circle (1pt) node[below right] {$Q$};
 \end{tikzpicture}
