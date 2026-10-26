@@ -9388,3 +9388,12 @@
 - 结果：Q3的A图渐近线`−π/3,5π/3`与零点`2π/3`匹配原函数，图序映射A确认；Q15原题确为从其余顶点及各棱中点选3点使其与A共面，选项含33种；Q23(3)两平面名间确无关系符号；Q25末句确为“求该的圆的方程”。重点区域与现题面草稿相符。
 - 修改文件：新增`reports/1997-national-arts-focused-source-reinspection.md`；更新该卷来源记录、来源定向测试与本进度。未补写Q23符号、未修订Q25原字。
 - 验证/边界：`test_1997_national_arts_sources.py` 9/9、`test_1997_national_arts_math_drafts.py` 5/5通过，`git diff --check`通过；核验仅针对Q3/Q15/Q23/Q25和题签栏序，不代表25题逐字复审。出版者/官方性未核；Q23缺符号仍阻塞，`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`不变，不开始正式构建。
+
+
+## 1989 广东文科：第一卷与第二卷项目推导异人数学盲核（2026-10-27）
+
+- 已完成：异人先依题面独立作答，再与既有答案/解析稿对照，覆盖25道选择题及第二卷13个小问。未查看固定PDF图像或裁定来源年份、地区、出版者。
+- 结论：Q1-8、Q10-15、Q17-25选择题计算相符；Q9题面映射将像点(3,-4)逆算为(-6,4)，选B，但固定扫描答案表印C，冲突明确保留。Q16印载D按异面直线方向夹角定义成立；若“垂直”要求相交则结论不同，定义仍待核。第二卷I-1至I-5、II-1/2、III-1/2、IV-1/2、V-1/2的独立计算均复核成立；IV-2和V题缺少扫描印载结论，不回填来源答案。Q12选项B仍依赖重绘图与原图选项位置一致。IV-1三角式角5π/4正确；只有要求主辐角且采用[-π,π)时应改写为-3π/4。未发现其他算术错误。
+- 更新：来源校对.json数学状态为`conditionally-reviewed-with-source-conditions`，登记盲核范围、报告及稿件指纹；独立解答与选择题核算稿标记异人复核。`official_answer=null`、`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`和Q9未决来源冲突均保留。
+- 修改文件：更新1989广东文科独立解答草稿、选择题独立核算草稿、答案要点草稿、来源记录、三个定向测试及本进度；新增`reports/1989-guangdong-arts-independent-math-review.md`。未改题面或四版、未构建PDF、未修改正式manifest。
+- 验证：`test_1989_guangdong_arts_transcription.py` 4/4、`test_1989_guangdong_arts_answers.py` 4/4、`test_1989_guangdong_arts_choice_audit.py` 2/2、`test_1989_guangdong_arts_independent_math.py` 8/8通过；独立稿SHA-256与登记相符，`git diff --check`通过。全库测试未运行；不以本记录宣称题源身份或卷级验收完成。

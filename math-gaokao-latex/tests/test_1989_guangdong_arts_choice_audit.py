@@ -39,14 +39,15 @@ class GuangdongArtsChoiceAuditTests(unittest.TestCase):
         self.assertEqual((derived[8], source[8]), ("B", "C"))
         self.assertEqual(q9["status"], "unresolved-source-conflict")
 
-    def test_choice_audit_is_provenanced_and_keeps_math_unverified(self):
+    def test_choice_audit_is_provenanced_and_keeps_source_conditions(self):
         self.assertTrue(AUDIT.is_file(), "choice audit draft is missing")
         artifact = self.record.get("artifacts", {}).get("independent_choice_audit", {})
         self.assertEqual(artifact.get("path"), str(AUDIT.relative_to(ROOT)))
         self.assertEqual(artifact.get("sha256"), hashlib.sha256(AUDIT.read_bytes()).hexdigest())
         self.assertEqual(artifact.get("questions"), list(range(1, 26)))
         self.assertEqual(artifact.get("attribution"), "agent-derived-unverified-not-official")
-        self.assertEqual(self.record.get("mathematical_verification_status"), "not-verified")
+        self.assertEqual(self.record.get("mathematical_verification_status"), "conditionally-reviewed-with-source-conditions")
+        self.assertEqual(self.record.get("verification", {}).get("independent_math_review", {}).get("status"), "conditional-pass")
         self.assertTrue(
             "1989 广东卷文科：第一卷选择题独立核算" in self.progress,
             "missing progress receipt for the choice audit",

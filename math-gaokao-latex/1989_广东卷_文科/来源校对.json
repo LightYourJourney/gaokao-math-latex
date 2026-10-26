@@ -100,7 +100,7 @@
   "answer_transcription_status": "fixed-pdf-printed-key-transcribed",
   "solution_transcription_status": "partial-fixed-pdf-solutions-transcribed",
   "review_status": "needs-review",
-  "mathematical_verification_status": "not-verified",
+  "mathematical_verification_status": "conditionally-reviewed-with-source-conditions",
   "canonical_question_source_ready": false,
   "source_has_answers": true,
   "source_has_partial_solutions": true,
@@ -151,7 +151,7 @@
     },
     "answer_draft": {
       "path": "1989/1989_数学真题_广东文_答案要点草稿.md",
-      "sha256": "78ccd734825f18577bfbb6064d5d75002b8b380f30e652c900296b2c1b88f090"
+      "sha256": "bfd92808552cded379732498247b7660aeaad25358827f65d89955b61c2ae50a"
     },
     "solution_draft": {
       "path": "1989/1989_数学真题_广东文_解析草稿.md",
@@ -159,15 +159,17 @@
     },
     "independent_solution_draft": {
       "path": "1989/1989_数学真题_广东文_独立解答草稿.md",
-      "sha256": "a1ffd8ca106977e6ac5f3aad4833bd86a9c1567b70de6ab6c10e8a87d9de861e",
+      "sha256": "3b2139104fa71429ef797c5881ac31c5d9cc755470e10ed5ffae9b527793cd4e",
       "questions": ["I-1", "I-2", "I-3", "I-4", "I-5", "II-1", "II-2", "III-1", "III-2", "IV-1", "IV-2", "V-1", "V-2"],
-      "attribution": "agent-derived-unverified-not-official"
+      "attribution": "agent-derived-unverified-not-official",
+      "independent_math_review": true
     },
     "independent_choice_audit": {
       "path": "1989/1989_数学真题_广东文_选择题独立核算草稿.md",
-      "sha256": "5c1e628740c0e36d0dfc9c69cbbd085c6cef65f124d05e6828daebcad3bea774",
+      "sha256": "04bd7084d98440fa1027fbfba41d9cd20891333fef40ef62dfd00ef5ebd45698",
       "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
-      "attribution": "agent-derived-unverified-not-official"
+      "attribution": "agent-derived-unverified-not-official",
+      "independent_math_review": true
     },
     "figures": [
       {
@@ -189,5 +191,16 @@
         "sha256": "793ecd315c1b9de8117ecf0c6e52fcaed4be7abe5108c37cefc87d831b62d143"
       }
     ]
+  },
+  "verification": {
+    "independent_math_review": {
+      "status": "conditional-pass",
+      "review_date": "2026-10-27",
+      "scope": "first-volume 25 choices and 13 second-volume subparts; reviewer solved from the question transcript before comparing answer/solution drafts; did not inspect source PDF images",
+      "report": "reports/1989-guangdong-arts-independent-math-review.md",
+      "reviewer_conclusion": "No arithmetic error found beyond Q9 source-key conflict. Q9 stem gives B while printed key records C; Q16 depends on the definition of perpendicular for skew lines; Q12 graph option mapping was not checked against the source image. Missing printed solutions remain project-derived only.",
+      "open_conditions": ["Q9 printed key C versus stem-derived B", "Q16 perpendicularity convention", "Q12 redrawn option graph to source figure mapping"],
+      "full_paper_acceptance": false
+    }
   }
 }

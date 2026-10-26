@@ -51,7 +51,8 @@ class GuangdongArtsAnswerSourceTests(unittest.TestCase):
         self.assertEqual(self.record.get("official_answer"), None)
         self.assertEqual(self.record.get("source", {}).get("source_authenticity"), "unverified")
         self.assertEqual(self.record.get("review_status"), "needs-review")
-        self.assertEqual(self.record.get("mathematical_verification_status"), "not-verified")
+        self.assertEqual(self.record.get("mathematical_verification_status"), "conditionally-reviewed-with-source-conditions")
+        self.assertEqual(self.record.get("verification", {}).get("independent_math_review", {}).get("status"), "conditional-pass")
         self.assertTrue("固定 PDF 印载" in self.answers, "missing source attribution label")
         self.assertTrue("出版者身份未核" in self.answers, "missing source identity caveat")
 

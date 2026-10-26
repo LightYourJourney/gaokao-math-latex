@@ -45,7 +45,8 @@ class GuangdongArtsIndependentMathTests(unittest.TestCase):
             self.record.get("generated_answer_attribution"),
             "agent-derived-unverified-not-official",
         )
-        self.assertEqual(self.record.get("mathematical_verification_status"), "not-verified")
+        self.assertEqual(self.record.get("mathematical_verification_status"), "conditionally-reviewed-with-source-conditions")
+        self.assertEqual(self.record.get("verification", {}).get("independent_math_review", {}).get("status"), "conditional-pass")
         self.assertTrue("非官方独立推导" in self.independent)
         self.assertTrue(r"\left(-1,-\frac12\right]\cup\left[-\frac15,+\infty\right)" in self.independent)
         self.assertTrue(r"\theta=0\ \text{或}\ \pi" in self.independent)
@@ -165,7 +166,7 @@ class GuangdongArtsIndependentMathTests(unittest.TestCase):
         self.assertEqual(q9["status"], "unresolved-source-conflict")
         self.assertTrue("1989 广东文科来源核查：公共馆藏目录访问结果" in self.progress)
 
-    def test_second_volume_subquestions_are_recomputed_and_provenanced(self):
+    def test_second_volume_subquestions_are_recomputed_and_conditionally_reviewed(self):
         rows = re.findall(
             r"^\|\s*(I-\d+|II-\d+|III-\d+|IV-\d+|V-\d+)\s*\|\s*([^|]+?)\s*\|",
             self.independent,
@@ -177,7 +178,8 @@ class GuangdongArtsIndependentMathTests(unittest.TestCase):
         self.assertEqual(artifact.get("questions"), [item for item, _ in SECOND_VOLUME_EXPECTED])
         self.assertEqual(artifact.get("attribution"), "agent-derived-unverified-not-official")
         self.assertEqual(self.record.get("official_answer"), None)
-        self.assertEqual(self.record.get("mathematical_verification_status"), "not-verified")
+        self.assertEqual(self.record.get("mathematical_verification_status"), "conditionally-reviewed-with-source-conditions")
+        self.assertEqual(self.record.get("verification", {}).get("independent_math_review", {}).get("status"), "conditional-pass")
         self.assertTrue(
             "1989 广东卷文科：第二卷独立复算" in self.progress,
             "missing second-volume progress receipt",
