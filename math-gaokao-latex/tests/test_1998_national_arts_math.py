@@ -62,14 +62,16 @@ class NationalArts1998MathDraftTests(unittest.TestCase):
         self.assertEqual(self.record["official_answer"], None)
         self.assertEqual(self.record["answer_attribution"], "none-found-in-fixed-source-pdf")
         self.assertEqual(self.record["generated_answer_attribution"], "agent-derived-unverified-not-official")
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(self.record["mathematical_verification_status"], "conditionally-reviewed-with-source-conditions")
+        self.assertEqual(self.record["verification"]["independent_math_review"]["status"], "conditional-pass")
+        self.assertFalse(self.record["verification"]["independent_math_review"]["full_paper_acceptance"])
 
     def test_solutions_keep_all_three_fixed_source_ambiguities_open(self):
         headings = [int(number) for number in re.findall(r"^## 第\s*(\d+)\s*题", self.solutions, re.MULTILINE)]
         self.assertEqual(headings, list(range(1, 26)), "solution draft must cover all questions in order")
         self.assertIn("不根据另一扫描件改动固定来源题文", self.solutions)
         self.assertIn("base 10", self.solutions)
-        self.assertIn("未经过异人盲核", self.solutions)
+        self.assertIn("现存数学推导已由独立审阅者逐题复核", self.solutions)
         observations = "\n".join(self.record.get("source_observations", []))
         self.assertIn("新浪旧扫描", observations)
         self.assertIn("145", observations)
@@ -115,6 +117,7 @@ class NationalArts1998MathDraftTests(unittest.TestCase):
             rhs = Fraction(3 * k - 1, 3 * k - 4)
             self.assertLess(lhs, rhs)
         self.assertIn("1998 全国卷文科：非官方答案与解析草稿完成", self.progress, "progress receipt is missing")
+        self.assertIn("1998 全国卷文科：现存答案与解析稿独立数学复核", self.progress, "independent review receipt is missing")
         self.assertIn("test_1998_national_arts_math.py", self.progress, "progress receipt omits the test suite")
         self.assertIn("Q25", self.progress, "progress receipt omits unresolved source issue")
 

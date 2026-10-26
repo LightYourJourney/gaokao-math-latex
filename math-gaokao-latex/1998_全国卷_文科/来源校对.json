@@ -30,7 +30,7 @@
   },
   "transcription_status": "transcribed-pending-independent-review",
   "review_status": "needs-review",
-  "mathematical_verification_status": "not-verified",
+  "mathematical_verification_status": "conditionally-reviewed-with-source-conditions",
   "canonical_question_source_ready": false,
   "source_has_answers": false,
   "answer_attribution": "none-found-in-fixed-source-pdf",
@@ -90,8 +90,8 @@
     "formal_editions_generated": false,
     "answer_draft_generated": true,
     "solution_draft_generated": true,
-    "answer_draft": {"path": "答案要点草稿.md", "sha256": "622fa9377054bb5cb9b00ca06588c6a05a62505c336ecbd726260467b1ba1712"},
-    "solution_draft": {"path": "解析草稿.md", "sha256": "2424500dcf4c0d7801a0b8d009a18c3a6af240f959d55de2c087da6d77fedd60"}
+    "answer_draft": {"path": "答案要点草稿.md", "sha256": "c97aae528dec4a9064167fbeb8d99020cca1232fa21ad3738bc0f88af61b58c3"},
+    "solution_draft": {"path": "解析草稿.md", "sha256": "f80dec90ef401e3a7bdfb1f572d97564a969505b2f6e74848f8555984a2d4a6b"}
   },
   "pdf_analysis": {
     "document_classification": "text_candidate",
@@ -114,6 +114,7 @@
     "secondary_scan_comparison": {"status": "variant-conflict-observed", "source": "Sina 1998 arts scan ZIP", "visual_reviewed_pages": [1, 2, 10, 11], "ocr_reviewed_pages": [1, 11], "not_used_to_rewrite_fixed_source": true},
     "alternate_public_copy_check": {"url": "https://www.yeyulingfeng.com/wendang/245154.html", "status": "secondary-copy-version-conflict", "observations": {"q13_answer_key": "B", "q25_first_ten_sum": 100, "q25_derived_bn": "2n-1"}, "publisher_verified": false, "lineage_to_sina_copy": "unknown", "used_to_rewrite_fixed_source": false},
     "answer_solution_tests": {"suite": "test_1998_national_arts_math.py", "passed": 7, "status": "passed"},
-    "transcription_tests_after_source_note_update": {"suite": "test_1998_national_arts_transcription.py", "passed": 6, "status": "passed"}
+    "transcription_tests_after_source_note_update": {"suite": "test_1998_national_arts_transcription.py", "passed": 6, "status": "passed"},
+    "independent_math_review": {"status": "conditional-pass", "review_date": "2026-10-27", "scope": "existing transcription and answer/solution drafts; fixed source PDF not re-inspected", "review_report": "reports/1998-national-arts-independent-math-review.md", "reviewer_conclusion": "All derivations were independently recalculated; source-dependent wording, option mapping, and diagram orientation remain open.", "open_source_questions": [2, 11, 12, 13, 22, 25], "full_paper_acceptance": false}
   }
 }
