@@ -1,4 +1,4 @@
-"""Source-bound integrity checks for the 1995 national arts paper draft."""
+"""Source-bound integrity checks for the 1995 national arts canonical paper."""
 import hashlib
 import json
 import re
@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PAPER = ROOT / "1995_全国卷_文科"
 SOURCE_ID = "src-0c51704136436568d67830f04de25d0a93485e4840a20d2586fc0614304e3c46"
-DRAFT = PAPER / "题面转录草稿.md"
+DRAFT = ROOT.parent / "1995/1995_数学真题_全国文_试题.md"
 RECORD = PAPER / "来源校对.json"
 MANIFEST = ROOT / "source-manifest.json"
 
@@ -27,7 +27,8 @@ class NationalArts1995SourceTests(unittest.TestCase):
             self.fail("1995 national arts draft and source record are missing")
             return
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1995-regular-national-1-arts")
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1995/1995全国文.pdf")
         self.assertEqual(self.record["source_id"], SOURCE_ID)
         self.assertEqual(self.record["pdf_sha256"], "eafe29dd184aded8687308b5eb0765c8a51b2b4c1ab954b4bbf0a454791b57fb")
@@ -56,7 +57,7 @@ class NationalArts1995SourceTests(unittest.TestCase):
 
     def test_source_specific_formulas_and_wording_are_transcribed(self):
         required = (
-            "1995 普通高等学校招生考试（全国卷文）",
+            "1995 年·全国卷·文科·数学",
             r"\overline{M}\cap N",
             r"y=\dfrac{1}{x+1}",
             r"4\sin\left(3x+\frac\pi4\right)+3\cos\left(3x+\frac\pi4\right)",
@@ -86,7 +87,7 @@ class NationalArts1995SourceTests(unittest.TestCase):
             self.assertTrue(path.is_file(), figure["path"])
             self.assertEqual(path.suffix, ".tex")
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), figure["sha256"])
-            self.assertIn(f"]({figure['path']})", self.text)
+            self.assertIn(f"/1995_全国卷_文科/{figure['path']})", self.text)
         raster_suffixes = {".png", ".jpg", ".jpeg"}
         paper_files = [p for p in PAPER.rglob("*") if p.is_file() and ".work" not in p.parts]
         self.assertFalse([p for p in paper_files if p.suffix.lower() in raster_suffixes])
@@ -99,10 +100,14 @@ class NationalArts1995SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["official_answer"])
         self.assertIsNone(self.record["question_scores"])
         self.assertIsNone(self.record["total_score"])
-        self.assertIsNone(self.record["paper_id"])
-        self.assertFalse(self.record["canonical_question_source_ready"])
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
-        self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertEqual(self.record["paper_id"], self.source["paper_id"])
+        self.assertTrue(self.record["canonical_question_source_ready"])
+        self.assertEqual(self.record["mathematical_verification_status"], "verified-project-derived")
+        self.assertEqual(self.record["review_status"], "reviewed")
+        self.assertEqual(self.record["answer_provenance"], "project-derived-double-solved")
+        paper = next(p for p in self.manifest["papers"] if p["paper_id"] == self.record["paper_id"])
+        self.assertEqual(paper["legacy_ids"], [])
+        self.assertEqual(paper["source_ids"], [SOURCE_ID])
 
 
 if __name__ == "__main__":
