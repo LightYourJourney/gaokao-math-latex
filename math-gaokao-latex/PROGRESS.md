@@ -9245,3 +9245,11 @@
 - 源疑点（照录）：Q24 题面「线段 OA」与「△ADO」的 O 未定义（卷内按 CA/ADC 计算，CR=a/2）；Q26 椭圆分母模糊，卷内解答反推为 a²。
 - 版式/图：Q10 D、Q24 P 标签白底移位；Q11 四联图「1」/O 改纯偏移避开曲线（不再遮断线）；Q26 删除非源有 A₁/A₂/H 与 PH，φ 移入 ∠F₁PF₂；Q24 的 PQ 改 P–C 虚线、C–Q 实线；试题区 Q24/Q26 解法提示段删除（防泄漏）。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
+
+### 1995 全国理科：无答案卷的项目推导与四版收口（phase4-b33，2026-10-26）
+
+- 已完成：`gk-1995-regular-national-1-science`（26 题：选择 1–15、填空 16–20、解答 21–26；单页 A3 横向扫描、印刷页 51、三栏；**来源页无答案、无分值**）完成题面转录与独立复核（P0 0、P1 2、P2 2 已修）、两名隔离求解员独立求解并逐题交叉核对（26 题结论一致，**答案等级 D：项目推导**）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 5066）。
+- 最终构建：试题 4 / 解析 23 / 简答 6 / 印刷 19 页，共 52 页；四份日志无错误、缺字与 Overfull/Underfull。
+- 源疑点（照录）：Q14 源页选项 (A)(C) 完全相同（源件缺陷，答案 D 不依赖）；Q23「E 在底面圆周上」未写上/下底面，按源图取下底面，答案 $\arctan\frac{\sqrt5}{5}$；Q17「下底面过球心」按底面平面过大圆解读。
+- 修复：Q1 `\subseteq`、Q23 图补 A–B 与 D–E/A–F 虚线、Q20 填空线与单位不再拆行、Q26 椭圆/直线改行内式避免断题、Q2 刻度偏移、Q5/Q15 标签白底；✓/✗ 因无字形改「（成立）/（不成立）」，直引号改弯引号。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
