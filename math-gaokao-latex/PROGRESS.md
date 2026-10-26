@@ -9598,3 +9598,11 @@
 - 已完成：按生成器锚点规范给题面 Q15–Q20 加入空格分隔的小问标记，并为解析正文 Q15–Q20 明确分段；数学推导与 Q19 原文疑点说明保持不变。由 `solution_sources.py extract-batch --batch phase1-b39 --write` 通过 content transaction 生成规范解析正文与 `_含解析.md`。
 - 验证：`solution_sources.py check-batch --batch phase1-b39` 返回 `ok`，20题题号与题面/解析/答案小问集合一致；`git diff --check` 通过。未运行测试或构建。
 - 阶段边界：`ISSUE-1203` 仍 open/blocks_completion；source 发布者/版本/官方身份未核；四幅图稿、图形 provenance、LaTeX 项目生成与四版构建/视觉回执尚未完成。
+
+
+## 2007 北京理科：四幅图稿、逐题 provenance 与项目骨架（2026-10-27）
+
+- 已完成：新增 Q13 弦图、Q16 空间几何、Q18 频数柱状图、Q19 半椭圆切割图四份 TikZ 源；题面改为直接链接本卷图稿，`solution_sources.py` 重建含解析稿。依据固定 PDF 页界，Q1–Q17 标注来源第1页，Q18–Q20 标注第2页；Q16 图中 D 点经目视检查放回 AB 线上。图稿目录及 `figure_files` 经 `sync-figure-registry` 登记，每张图预期引用2次；项目 `questions.tex`、`answers.tex`、`index.json` 已生成。
+- provenance：以三角色核验结果生成20题逐题记录；source SHA 与题面/答案哈希由导入器现场重算。Q19 `transcription_review.result=uncertain`，关联 ISSUE-1203；其他题面核对通过。状态工具显示 `blocked` 且 provenance verified，未解除 issue。
+- 验证：四幅 TikZ 独立 XeLaTeX smoke PDF 共4页并目视；`source_manifest.py validate`、`manifest_csv.py --check`（775行）、`provenance.py check-batch`（1卷）、`solution_sources.py check-batch`（20题）、`generate_projects.py --check` 均通过；`issues.py validate --file missing-issues.md` 与 `git diff --check` 通过。
+- 阶段边界：未构建四版正式 PDF、未生成 build/review receipts；source 发布者、出版信息、版本及官方身份仍未核。Q19 保留原字“半轴长”，ISSUE-1203 继续阻断整卷完成。

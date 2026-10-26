@@ -1646,7 +1646,7 @@
       "paper_ids": [
         "gk-2007-regular-beijing-science"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1656,7 +1656,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e42c01bc-2105-4d87-8efb-c8344cb85e3e",
+  "last_transaction_id": "9f7d99d4-c04d-4289-b887-bc3b69fabae3",
   "papers": [
     {
       "blocked_from": null,
@@ -23095,8 +23095,25 @@
       "year": 2000
     },
     {
-      "blocked_from": null,
-      "figure_files": [],
+      "blocked_from": "transcription_draft",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_北京卷_理科/figures/f2007_beijing_science_q13_chord.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_北京卷_理科/figures/f2007_beijing_science_q16_spatial.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_北京卷_理科/figures/f2007_beijing_science_q18_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_北京卷_理科/figures/f2007_beijing_science_q19_ellipse.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2007_beijing_science",
         "id": "gk-2007-regular-beijing-science",
@@ -23131,10 +23148,10 @@
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2007-regular-beijing-science",
-      "production_state": "transcription_draft",
+      "production_state": "blocked",
       "project_dir": "2007_北京卷_理科",
       "question_count": 20,
-      "resume_action": "独立复核完整题面、答案和解析，矢量重绘 Q13/Q16/Q18/Q19；保留并核查 ISSUE-1203。publisher 与 official 身份仍未核实。",
+      "resume_action": "找到可逐页比对的独立同期题面或清晰版本核实 Q19 术语；核实前保留“半轴长”原文，不静默改成“长半轴长”，并将依赖图示尺寸得到的公式明确标作编者推导。",
       "source_files": {
         "answer_key": "2007/2007_数学真题_北京理_答案要点.md",
         "combined_rendered": "2007/2007_数学真题_北京理_含解析.md",
@@ -23149,7 +23166,7 @@
       "year": 2007
     }
   ],
-  "revision": 5167,
+  "revision": 5169,
   "schema_version": 1,
   "sources": [
     {
