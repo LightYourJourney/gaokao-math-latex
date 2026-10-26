@@ -28,7 +28,7 @@
     "source_authenticity": "publisher-unverified",
     "source_title_as_printed": "1998 普通高等学校招生考试（全国卷文）"
   },
-  "transcription_status": "transcribed-pending-independent-review",
+  "transcription_status": "transcribed-independently-reviewed",
   "review_status": "needs-review",
   "mathematical_verification_status": "conditionally-reviewed-with-source-conditions",
   "canonical_question_source_ready": false,
@@ -108,13 +108,14 @@
   },
   "verification": {
     "source_page_visual_review": {"pages": [1], "printed_pages": [57], "status": "passed"},
-    "fixed_page_reinspection": {"status": "passed", "pages": [1], "render_dpi": 160, "ocr_calls": 0, "sha256_verified": "dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b", "git_blob_oid": "187701f7207338551455492be912749f669207e5", "scope": ["q12", "q13", "q25"]},
+    "fixed_page_reinspection": {"status": "passed", "pages": [1], "printed_pages": [57], "render_dpi": 300, "ocr_calls": 0, "sha256_verified": "dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b", "scope": "all 25 questions; q2/q11/q12/q13/q22/q25 and figures rechecked", "rendered_page_cache": ".work/1998-national-arts-source-review-300dpi.png"},
     "transcription_tests": {"suite": "test_1998_national_arts_transcription.py", "passed": 6, "status": "passed"},
     "figure_smoke": {"status": "passed", "toolchain": "latexmk 4.88 + XeLaTeX / TeX Live 2026", "page_count": 5, "paper_size": "A4", "visual_reviewed_pages": [1, 2, 3, 4, 5], "raster_outputs_committed": false},
     "secondary_scan_comparison": {"status": "variant-conflict-observed", "source": "Sina 1998 arts scan ZIP", "visual_reviewed_pages": [1, 2, 10, 11], "ocr_reviewed_pages": [1, 11], "not_used_to_rewrite_fixed_source": true},
     "alternate_public_copy_check": {"url": "https://www.yeyulingfeng.com/wendang/245154.html", "status": "secondary-copy-version-conflict", "observations": {"q13_answer_key": "B", "q25_first_ten_sum": 100, "q25_derived_bn": "2n-1"}, "publisher_verified": false, "lineage_to_sina_copy": "unknown", "used_to_rewrite_fixed_source": false},
     "answer_solution_tests": {"suite": "test_1998_national_arts_math.py", "passed": 7, "status": "passed"},
     "transcription_tests_after_source_note_update": {"suite": "test_1998_national_arts_transcription.py", "passed": 6, "status": "passed"},
-    "independent_math_review": {"status": "conditional-pass", "review_date": "2026-10-27", "scope": "existing transcription and answer/solution drafts; fixed source PDF not re-inspected", "review_report": "reports/1998-national-arts-independent-math-review.md", "reviewer_conclusion": "All derivations were independently recalculated; source-dependent wording, option mapping, and diagram orientation remain open.", "open_source_questions": [2, 11, 12, 13, 22, 25], "full_paper_acceptance": false}
+    "source_transcription_review": {"status": "passed", "review_date": "2026-10-27", "questions_checked": 25, "source_sha256": "dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b", "render_dpi": 300, "ocr_calls": 0, "text_differences": [], "report": "reports/1998-national-arts-source-reinspection.md"},
+    "independent_math_review": {"status": "conditional-pass", "review_date": "2026-10-27", "scope": "existing transcription and answer/solution drafts; reviewer did not inspect source PDF; a separate source reinspection followed", "review_report": "reports/1998-national-arts-independent-math-review.md", "reviewer_conclusion": "All derivations were independently recalculated. A separate source reinspection confirmed Q2/Q11/Q22 mappings; source conflicts at Q12/Q13/Q25 remain open.", "open_source_questions": [12, 13, 25], "full_paper_acceptance": false}
   }
 }

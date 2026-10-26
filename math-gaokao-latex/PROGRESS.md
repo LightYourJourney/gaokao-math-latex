@@ -9363,3 +9363,11 @@
 - 修改文件：1998_全国卷_文科/答案要点草稿.md、解析草稿.md、来源校对.json（更新稿件指纹并记录条件性独立数学复核）、reports/1998-national-arts-independent-math-review.md、本PROGRESS.md及对应定向测试。
 - 阶段边界：只完成数学推导的异人交叉复核。mathematical_verification_status=conditionally-reviewed-with-source-conditions 不等于来源通过；仍保持paper_id=null、canonical_question_source_ready=false、review_status=needs-review，不进入正式构建。
 - 下一步：取得固定PDF或可信同版页面后，复核第2、11、12、13、22、25题的来源字面与图示；只有解决来源门禁后再登记规范paper并生成四版。
+
+## 1998 全国卷文科：固定来源25题逐栏复核（2026-10-27；出版身份仍未核）
+
+- 已完成：从忽略的 phase4-b20 来源缓存找到固定 PDF，SHA-256 dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b 与来源校对记录一致；以 pdfinfo/pdftotext 检查并将整页按300 dpi重渲染，逐栏目视比对25题、所有选项、公式和图示，无转录差异，0次OCR。完整页图仅保留于忽略目录 .work/1998-national-arts-source-review-300dpi.png。
+- 关键确认：Q2原图正确选项为D；Q11图示对应B；Q22原图方向与现有上支曲线段解答一致。Q12选项在原件确为“7倍、5倍、4倍、3倍”，而推导为±√3/4；Q13条件推出2√3但原选项不符；Q25原式为lg而附注写a>0、a≠1。三处照录并保持未决。
+- 修改文件：来源校对.json更新题面复核状态、来源页复核证据与复核图缓存路径；新增 reports/1998-national-arts-source-reinspection.md；更新 tests/test_1998_national_arts_transcription.py 与本进度。
+- 验证与边界：定向测试结果见本阶段复核；此阶段仅确认固定文件的题面忠实转录。出版者、版次、官方性未核，paper仍未绑定、canonical题源状态仍false、review仍needs-review，不据此开始正式四版构建。
+- 下一步：保持Q12/Q13/Q25原件矛盾与答案条件分支；若无可独立追溯的出版页或勘误，不用二手扫描修题。继续从其他来源已固定且可验证的卷推进。

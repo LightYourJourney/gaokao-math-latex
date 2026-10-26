@@ -74,7 +74,10 @@ class NationalArts1998TranscriptionTests(unittest.TestCase):
         for question_number in (12, 13, 25):
             self.assertIn(f"第{question_number}题", notes)
         self.assertIn("改写题面", notes)
-        self.assertEqual(record["transcription_status"], "transcribed-pending-independent-review")
+        self.assertEqual(record["transcription_status"], "transcribed-independently-reviewed")
+        self.assertEqual(record["verification"]["source_transcription_review"]["status"], "passed")
+        self.assertEqual(record["verification"]["source_transcription_review"]["questions_checked"], 25)
+        self.assertEqual(record["verification"]["source_transcription_review"]["text_differences"], [])
 
     def test_vector_figure_sources_are_registered_and_no_raster_is_committed(self):
         if not RECORD_FILE.is_file():
