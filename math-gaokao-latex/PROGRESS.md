@@ -9551,3 +9551,11 @@
 - 验证：独立盲解与复核均只依据题面；主会话复核关键计算：Q5 960 种、Q6 参数边界、Q10 通项及最小项、Q13 弦图面积关系、Q16 空间角、Q17 双曲线左支、Q18 分布列、Q19 极值、Q20 集合双射。Q8 修正后独立复核通过。未查阅答案源、未用 OCR、未运行测试。
 - 成本：未调用外部 API 或 OCR；多角色本地推导与复核；Token/模型成本不可见，记未知。
 - 剩余/下一步：建立/确认 Q19 `transcription-ambiguous` issue 台账；查明本分支可用的 paper 注册事务流程（`source_manifest.py` 当前 CLI 无 `register-papers` 子命令）；待题面、答案、解析与 issue 结构确定后再登记候选 paper，继续图形重绘、答案层交叉复核和四版流程。本阶段不是答案正式定稿或全卷完成。
+
+
+## 2007 北京理科：Q19 原文疑点登记（2026-10-27）
+
+- 已完成：按原扫描件和图示关系将 Q19“其半轴长为 2r，短半轴长为 r”登记为未决题面歧义 `ISSUE-1203`（`transcription-ambiguous`、`open`、`blocks_completion`）。source 仅自题“2007北京卷理”且出版/官方身份未核；故问题指向候选 paper ID，不借此将 source 提前绑定或声称官方身份。
+- 修改文件：更新 `missing-issues.md`；在 Q19 题面、答案要点、解析正文注明 `ISSUE-1203`；更新本进度记录。未修改 source-manifest、index 或正式 paper 登记。
+- 验证：issue 由 `tools/issues.py` 的 `upsert_issue` 生成稳定编号；完整核对 issue 证据文字和恢复动作；未运行测试。
+- 剩余/下一步：取得可逐页比对的独立同期题面或清晰版本后复核术语；此前保留原字并由图示尺寸推导，ISSUE-1203 阻断整卷完成。paper 注册流程仍待查明。

@@ -20030,3 +20030,20 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1203
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第2页 Q19 印作“其半轴长为2r，短半轴长为r”；图中 AB 水平尺寸标 2r，半椭圆高度标 2r。图示与“长半轴长为2r、短半轴长为r”的解释相符，但题干第一处未明确写“长”，故规范转录保留印刷原文，解答只按图示尺寸推导。",
+  "fingerprint": "31f58f70e8fd6e5c69811804f2250961694c0bf5aaba84a0968538a0a4fd395d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-beijing-science",
+  "question_id": "gk-2007-regular-beijing-science-q19",
+  "resume_action": "找到可逐页比对的独立同期题面或清晰版本核实 Q19 术语；核实前保留“半轴长”原文，不静默改成“长半轴长”，并将依赖图示尺寸得到的公式明确标作编者推导。",
+  "source_id": "src-3612a22ce3848ad6ebbec4d94861dd64b009980e14c8e7a83efefb2ea39bd367",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
