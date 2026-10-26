@@ -20047,3 +20047,54 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1204
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源PDF第2页原文为“已知 y=cos x”，随后的两问使用 f(α) 与 f(x)，但该页没有给出 f 的定义。题面照录，编者仅在 f(x)=cos x 的条件下推导，规范答案仍为U/PENDING。",
+  "fingerprint": "41166858d84b2aeb20a6657e943d3ac189795363c038a87e784e21abfad6c332",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-spring-shanghai",
+  "question_id": "gk-2018-spring-shanghai-q17",
+  "resume_action": "寻找可追溯的独立同版题面或勘误，确认 y=cos x 是否对应未印出的 f(x) 定义；核实前保留原文及条件推导，答案保持U/PENDING。",
+  "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1205
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源PDF第2页先定义双曲线Γ，随后原文仅写“若点(2,1)在上”，未标明点属于哪条曲线。题面照录，焦点结果只在假设(2,1)∈Γ时给出，规范答案仍为U/PENDING。",
+  "fingerprint": "258a20774e1a25a10ea6d0b22ea96c405c8bfee9b8d7a3646539cce4cb906bd4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-spring-shanghai",
+  "question_id": "gk-2018-spring-shanghai-q18",
+  "resume_action": "寻找可追溯的独立同版题面或勘误，确认点(2,1)所属曲线；核实前保留原文及条件推导，答案保持U/PENDING。",
+  "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1206
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源PDF第6页Q21(3)将T_n称作数列{c_n}的“前n项”，未出现“和”字或其他定义。编者仅在T_n=Σ_{j=1}^n c_j的条件下推导a>0、q≥2；规范答案仍为U/PENDING。",
+  "fingerprint": "7b75fe9f51494a3eea1f3650e04846cf2be6721875c0e3d3129bf876360b2a25",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-spring-shanghai",
+  "question_id": "gk-2018-spring-shanghai-q21",
+  "resume_action": "寻找可追溯的独立同版题面或勘误，确认T_n是否定义为前n项和；核实前保留原文及条件推导，答案保持U/PENDING。",
+  "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

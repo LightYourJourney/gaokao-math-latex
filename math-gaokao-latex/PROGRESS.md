@@ -9674,3 +9674,13 @@
 - 修改文件：题面稿的5处图像引用与绘图状态、解析正文中的4条TikZ图稿映射、项目目录下5份TikZ源和1张原图照片；本进度记录。manifest、figure registry、provenance尚未登记，等待candidate paper/source事务阶段统一办理。
 - 验证：5份TikZ源以XeLaTeX独立smoke编译成功（2页PDF，无编译错误）；渲染全部图稿并目视检查标签、虚实线、点/边关系与画面边界；现场照片裁片目视与原PDF第4页相符。未运行测试套件或正式项目构建。
 - 剩余：正式登记时同步登记6项figure_files及生成稿映射/provenance；来源发布者、版本、官方身份未核，三处题面定义缺项仍阻塞完成。图稿smoke不等于正式四版构建或视觉验收。
+
+
+### 2018 上海春季卷：候选 paper/source、问题与图稿登记（2026-10-27）
+
+- 已完成：以 `gk-2018-spring-shanghai` 登记该固定文件对应的候选春季上海卷；source ID `src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc` 与 SHA-256 双向绑定，`paper_relation=canonical` 只表示本库候选卷唯一固定来源，不代表官方原件。新增 `phase1-b40`，manifest revision 5173→5174；纸卷 `production_state=blocked`，`blocked_from=planned`。
+- 问题：登记 `ISSUE-1204` Q17 的 $f$ 未定义、`ISSUE-1205` Q18(1) 点 $(2,1)$ 所属曲线缺失、`ISSUE-1206` Q21(3) 的 $T_n$ 未定义；三项均 open/blocks_completion。manifest登记6个TeX图稿，figure registry revision 5174→5175；按工具对“题面+合并稿”的计数口径，5幅数学图各3次，照片包装图2次（合并稿同时含题面和解析中的数学图链接；照片只在题面引用）。照片PNG素材置于 `assets/`，由 `.tex` 包装图引用。
+- 已完成：按内容事务确定性生成 `_含解析.md`，题目/解析/答案均为21题，小问集合全部对齐。为适配解析器，将Q17–Q21小问显示标签排成题面源稿格式；题干文字未改。
+- 修改文件：manifest、missing-issues、题面/答案/解析/源载答案 front matter、Q17–Q21题面小问排版、生成的含解析稿、照片图稿包装、进度记录。未生成项目 TeX/四版，未创建provenance或构建回执。
+- 验证：`source_manifest.py validate`通过；`issues.py validate`通过；`solution_sources.py check-batch --batch phase1-b40`输出21题/1套全部通过；`sync-figure-registry`复核6图引用当前。XeLaTeX重编译六图（含照片包装）为2页PDF成功并逐页目视。未运行测试套件。
+- 剩余：逐题三角色 provenance、正式生成项目 TeX/简答版/四版壳、四版XeLaTeX构建与逐页验收均未做；来源发布者/版本/官方身份未核，三个问题继续阻断本卷完成。`phase1-b40`目前只是 planned 批次，不能视作已关闭阶段。
