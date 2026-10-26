@@ -19891,3 +19891,57 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1195
+
+```json
+{
+  "paper_id": "gk-2000-regular-national-old-arts",
+  "affected_paper_ids": [],
+  "type": "answer-conflict",
+  "status": "open",
+  "impact": "blocks_completion",
+  "question_id": "gk-2000-regular-national-old-arts-q12",
+  "source_id": "src-a393ebd8958a2b13bc1971720c1c3e8703ed184cb9bc3e7db624e80ea591c461",
+  "resume_action": "取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。",
+  "fingerprint": "43533d728383cff2b37496d5a2c112d8448f7d408d5947436599fd0f667e2a3a",
+  "issue_id": "ISSUE-1195",
+  "current_evidence": "三个固定源PDF均无答案或解析页，题干与图示相同。按轴截面坐标设底面中心 O=(0,0)、顶点 V=(0,H)、底缘点 B=(R,0)，母线方程为 Hx+Rz=HR；垂足 A=(RH²/(R²+H²), HR²/(R²+H²))=(R cos²θ, H sin²θ)。旋转 OA 得到的内锥高为 H sin²θ、底半径为 R cos²θ，故内外体积比为 cos⁴θ sin²θ。令 u=cos²θ，则 u²(1-u) 的最大值为 4/27<1/2，按当前题面不可能平分体积。旧解析把内锥高度也写成整锥高度 h，漏掉 sin²θ 因子；此前答案 D 的推导不成立。"
+}
+```
+
+## ISSUE-1196
+
+```json
+{
+  "paper_id": "gk-2000-regular-national-old-science",
+  "affected_paper_ids": [],
+  "type": "answer-conflict",
+  "status": "open",
+  "impact": "blocks_completion",
+  "question_id": "gk-2000-regular-national-old-science-q12",
+  "source_id": "src-2df550ae82fa57dc70fc83d2c12364bf8a19f13cdc3e8cac49ad80fa8250d1fa",
+  "resume_action": "取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。",
+  "fingerprint": "0e5d2f166d140a09e0ff6fbca616ecf6d90e021790fd31027dd44cc21b62b80e",
+  "issue_id": "ISSUE-1196",
+  "current_evidence": "三个固定源PDF均无答案或解析页，题干与图示相同。按轴截面坐标设底面中心 O=(0,0)、顶点 V=(0,H)、底缘点 B=(R,0)，母线方程为 Hx+Rz=HR；垂足 A=(RH²/(R²+H²), HR²/(R²+H²))=(R cos²θ, H sin²θ)。旋转 OA 得到的内锥高为 H sin²θ、底半径为 R cos²θ，故内外体积比为 cos⁴θ sin²θ。令 u=cos²θ，则 u²(1-u) 的最大值为 4/27<1/2，按当前题面不可能平分体积。旧解析把内锥高度也写成整锥高度 h，漏掉 sin²θ 因子；此前答案 D 的推导不成立。"
+}
+```
+
+## ISSUE-1197
+
+```json
+{
+  "paper_id": "gk-2000-regular-national-new-science",
+  "affected_paper_ids": [],
+  "type": "answer-conflict",
+  "status": "open",
+  "impact": "blocks_completion",
+  "question_id": "gk-2000-regular-national-new-science-q12",
+  "source_id": "src-141d138f3d26910518b47759686b06eea4563ba9d9df53742fc363c6f69721b0",
+  "resume_action": "取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。",
+  "fingerprint": "2f1eae9bbb7ac0252ea5c6190394375136195a47b4a9635385d188680a7cc269",
+  "issue_id": "ISSUE-1197",
+  "current_evidence": "三个固定源PDF均无答案或解析页，题干与图示相同。按轴截面坐标设底面中心 O=(0,0)、顶点 V=(0,H)、底缘点 B=(R,0)，母线方程为 Hx+Rz=HR；垂足 A=(RH²/(R²+H²), HR²/(R²+H²))=(R cos²θ, H sin²θ)。旋转 OA 得到的内锥高为 H sin²θ、底半径为 R cos²θ，故内外体积比为 cos⁴θ sin²θ。令 u=cos²θ，则 u²(1-u) 的最大值为 4/27<1/2，按当前题面不可能平分体积。旧解析把内锥高度也写成整锥高度 h，漏掉 sin²θ 因子；此前答案 D 的推导不成立。"
+}
+```

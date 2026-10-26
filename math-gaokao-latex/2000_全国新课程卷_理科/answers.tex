@@ -483,43 +483,35 @@ p+q=\frac{m^2+1}{a},
 \textbf{解析}
 
 \Needspace{5\baselineskip}
-设母线与轴的夹角为 $\theta$。在圆锥的轴截面中使用垂线与投影的相似关系：若以 $OA$ 表示题图中的垂距，则原圆锥底面半径与旋转曲面所对应的截面半径分别可写为
+设圆锥底面半径为 $R$、高为 $H$，母线与轴的夹角为锐角 $\theta$。在轴截面中取底面中心 $O=(0,0)$、顶点 $V=(0,H)$、底缘点 $B=(R,0)$，则母线 $VB$ 的方程为
 
 \nopagebreak[4]
 \[
-\frac{OA}{\cos\theta}
-\quad\text{\text{和}}\quad
-OA\cos\theta.
+Hx+Rz=HR.
 \]
 
 \Needspace{5\baselineskip}
-旋转曲面把圆锥分成体积相等的两部分，轴截面中的等体积关系化为
+由点到直线的垂足公式，$O$ 到母线的垂足 $A$ 为
 
 \nopagebreak[4]
 \[
-\frac13\pi(OA\cos\theta)^2h
-=\frac12\cdot\frac13\pi\left(\frac{OA}{\cos\theta}\right)^2h.
+A=\left(\frac{RH^2}{R^2+H^2},\frac{HR^2}{R^2+H^2}\right)
+=(R\cos^2\theta,\,H\sin^2\theta),
 \]
 
 \Needspace{5\baselineskip}
-约去公共因子，得
+因为 $\cos\theta=H/\sqrt{R^2+H^2}$、$\sin\theta=R/\sqrt{R^2+H^2}$。旋转线段 $OA$ 得到的内锥底面半径为 $R\cos^2\theta$，高为 $H\sin^2\theta$；外侧整锥的半径、高分别是 $R,H$。所以体积比为
 
 \nopagebreak[4]
 \[
-\cos^4\theta=\frac12.
+\frac{V_{\rm \text{内}}}{V_{\rm \text{原}}}
+=\frac{(R\cos^2\theta)^2(H\sin^2\theta)}{R^2H}
+=\cos^4\theta\sin^2\theta.
 \]
 
-\Needspace{5\baselineskip}
-由于 $\theta$ 为锐角，
+令 $u=\cos^2\theta\in[0,1]$，则该比值为 $u^2(1-u)$，其最大值在 $u=2/3$ 处取得，为 $4/27<1/2$。因此按当前固定题面，旋转曲面不可能把圆锥分成体积相等的两部分。此前答案 D 的推导把内锥高度误当作整锥高度；A–D 均不能据此确认为本题答案。答案保留为 U/PENDING（ISSUE-1197），等待可追溯勘误或可靠版本。
 
-\nopagebreak[4]
-\[
-\cos\theta=\frac1{\sqrt[4]{2}},
-\]
-
-故选 D。
-
-\gkanswer{答案：D}
+\gkanswer{答案：U/PENDING；题面与等体积条件矛盾，待核固定源是否有勘误（ISSUE-1197）。}
 
 \end{answer}
 \gkpart{二、填空题}

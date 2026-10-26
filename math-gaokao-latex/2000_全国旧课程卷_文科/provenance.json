@@ -291,12 +291,14 @@
     },
     {
       "answer_evidence": {
-        "evidence": "答案与解析由题面独立复算；集合、复数、三角函数、解析几何、立体几何、等差数列、数列递推、税率和图象应用题均逐题核对，未采用二手转录的答案字段。",
-        "grade": "A"
+        "evidence": "原先独立推导遗漏内锥高度因子，导致误报 D。本次逐坐标复核得内外体积比 cos^4(theta) sin^2(theta)≤4/27<1/2，与题面平分条件冲突；固定源无答案页，答案与题面冲突未解决。",
+        "grade": "U"
       },
-      "answer_sha256": "9311a85930edb44782dfb85b36207e36bf8077fffae41e3fc2e0c202e960ab16",
-      "conflict_status": "none",
-      "issue_ids": [],
+      "answer_sha256": "e5e7c40fa3d5a4579c77fffa9dd3c3076f065e2ac5b6189666ce639837c59a25",
+      "conflict_status": "unresolved",
+      "issue_ids": [
+        "ISSUE-1195"
+      ],
       "printed_number": 12,
       "question_id": "gk-2000-regular-national-old-arts-q12",
       "question_text_sha256": "58537d322b17a8963695ec87b20dce471f60739520fb3530fe0422068e8025a8",
