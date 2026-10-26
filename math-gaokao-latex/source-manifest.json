@@ -1629,6 +1629,14 @@
         "gk-1999-regular-shanghai-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b38",
+      "issues": [],
+      "paper_ids": [
+        "gk-2000-regular-guangdong-unspecified"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -1638,7 +1646,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "32bd2f87-0335-4de6-9cb3-2e5fbd430ee4",
+  "last_transaction_id": "20d00451-6cce-4bc4-b0ea-f5a60e4c811c",
   "papers": [
     {
       "blocked_from": null,
@@ -22992,9 +23000,92 @@
       "title": "1999 年·上海卷·文史类",
       "track": "arts",
       "year": 1999
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t12_cone.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t16_projection.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t19_parallelepiped.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t21_marketcost.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t22_hyperbola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_广东卷_科类未标/figures/f2000_t5_graphs.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2000_guangdong_unspecified",
+        "id": "gk-2000-regular-guangdong-unspecified",
+        "note": "固定来源普通高考/2000/2000广东.pdf；SHA-256 0169a9a1f44f8cfab377f1c49423c5875147961d1965ee17cb8a3a84d38aedcb。扫描件自题广东卷；科类、发布者、出版者、版次未核，答案/解析为非官方独立推导。Q12题面断言与几何计算冲突；Q19原字“上菱形”语义待核；Q22分点比方向未定义。六幅图按扫描重绘，已完成视觉验收。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": null,
+        "variant": "科类未标"
+      },
+      "issue_ids": [
+        "ISSUE-1198",
+        "ISSUE-1199",
+        "ISSUE-1200",
+        "ISSUE-1201",
+        "ISSUE-1202"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2000-regular-guangdong-unspecified",
+      "production_state": "blocked",
+      "project_dir": "2000_广东卷_科类未标",
+      "question_count": 22,
+      "resume_action": "取得可追溯同版勘误或独立版本/可靠答案材料，确认题面或图示是否有缺漏；此前保留原文并将答案记为U/PENDING，不按选项猜填。",
+      "source_files": {
+        "answer_key": "2000/2000_数学真题_广东_答案要点.md",
+        "combined_rendered": "2000/2000_数学真题_广东_含解析.md",
+        "questions": "2000/2000_数学真题_广东_试题.md",
+        "solution_body": "2000/2000_数学真题_广东_解析正文.md"
+      },
+      "source_ids": [
+        "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6"
+      ],
+      "title": "2000 年·广东卷（科类未标）",
+      "track": "none",
+      "year": 2000
     }
   ],
-  "revision": 5153,
+  "revision": 5165,
   "schema_version": 1,
   "sources": [
     {
@@ -28099,8 +28190,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6be3ae05418e54f487cb869c561b3338bf10df64",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2000-regular-guangdong-unspecified",
+      "paper_relation": "canonical",
       "raw_paper_name": "2000广东.pdf",
       "regions": [],
       "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",

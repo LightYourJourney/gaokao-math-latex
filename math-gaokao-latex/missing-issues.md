@@ -19945,3 +19945,88 @@
   "current_evidence": "三个固定源PDF均无答案或解析页，题干与图示相同。按轴截面坐标设底面中心 O=(0,0)、顶点 V=(0,H)、底缘点 B=(R,0)，母线方程为 Hx+Rz=HR；垂足 A=(RH²/(R²+H²), HR²/(R²+H²))=(R cos²θ, H sin²θ)。旋转 OA 得到的内锥高为 H sin²θ、底半径为 R cos²θ，故内外体积比为 cos⁴θ sin²θ。令 u=cos²θ，则 u²(1-u) 的最大值为 4/27<1/2，按当前题面不可能平分体积。旧解析把内锥高度也写成整锥高度 h，漏掉 sin²θ 因子；此前答案 D 的推导不成立。"
 }
 ```
+
+## ISSUE-1198
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描题干与图示经逐页及300dpi局部复核一致，声称旋转OA所得曲面将圆锥分成等体积两部分。坐标计算所得内侧圆锥体积比为 cos^4(theta) sin^2(theta)，其最大值4/27<1/2，按当前题面不可能平分。扫描件不含答案页。",
+  "fingerprint": "699349e9e1e3bee9a076dbb11fa2e7350d410493e8a60971ace5a9e479ef6bf1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-guangdong-unspecified",
+  "question_id": "gk-2000-regular-guangdong-unspecified-q12",
+  "resume_action": "取得可追溯同版勘误或独立版本/可靠答案材料，确认题面或图示是否有缺漏；此前保留原文并将答案记为U/PENDING，不按选项猜填。",
+  "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1199
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描原文仅写“点E分有向线段AC所成的比为lambda”，没有明确比值分子和分母；当前 e 范围只在 lambda=AE/EC 约定下推导。",
+  "fingerprint": "cce89a643b7d9042be420cc49b40483097c287eac5153ae67f18c1e8c9e23e67",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-guangdong-unspecified",
+  "question_id": "gk-2000-regular-guangdong-unspecified-q22",
+  "resume_action": "寻找同版教材/勘误或可追溯权威定义确认有向分点比方向；此前保留U/PENDING，条件推导须显式标注定义。",
+  "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1200
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源只有题面，没有答案页；现有几何推导证明等体积条件与题面冲突，不能据此选择选项。",
+  "fingerprint": "929475dc310873e2fe90f5fcefc8ca97d3c59024e28285a997cc72c2f5125587",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-guangdong-unspecified",
+  "question_id": "gk-2000-regular-guangdong-unspecified-q12",
+  "resume_action": "取得可追溯同版勘误或独立可靠答案材料；此前将答案保持 U/PENDING。",
+  "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1201
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描第2页原字为“底面ABCD上菱形”；该句语义不通。本稿照录，不推定为“是菱形”。",
+  "fingerprint": "a0c6b63a0fa297458d1b260266e5b1f8e0d5130630b099e815107d4379c5c381",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-guangdong-unspecified",
+  "question_id": "gk-2000-regular-guangdong-unspecified-q19",
+  "resume_action": "取得同版勘误、独立版本或更清晰且可追溯来源，确认原字是否讹误；此前保持原字并将依赖该释读的结论标为 U/PENDING。",
+  "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1202
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源没有答案页；第(2)问的数值结论仅在将源文“上菱形”读作“是菱形”时成立，源文语义尚未核实。",
+  "fingerprint": "20a2a9ba376af83051fd4789bdb611e8ffdef925bd5af96c8f6ee1c361de4d6f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-guangdong-unspecified",
+  "question_id": "gk-2000-regular-guangdong-unspecified-q19",
+  "resume_action": "先确认题面释读并取得可追溯答案材料；此前最终答案保持 U/PENDING，条件推导须保留前提。",
+  "source_id": "src-c603aac0b64fcc89e162bd2b5358ce3c9a5c1ce8e5949a7f787f906fa25393a6",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
