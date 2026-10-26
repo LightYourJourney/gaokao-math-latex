@@ -9614,3 +9614,11 @@
 - provenance：Q5 答案规范化改变答案摘要，按现场哈希重算更新 answer-solve 与 answer-review 声明，正式导入器提交 revision 5170；manifest CSV 775 行保持当前。
 - 验证：`solution_sources.py check-batch`（20题）、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`provenance.py check-batch` 均通过。receipt 校验预期仍报 `缺 build 回执`；正式 PDF 构建尚未开始。
 - 阶段边界：ISSUE-1203 仍 open/blocks_completion；Q19 未决状态、来源身份限制不变。
+
+
+### 2007 北京理科：四版正式构建（2026-10-27）
+
+- 已完成：`gk-2007-regular-beijing-science` 四版正式 XeLaTeX 构建，build attempt `6639eede-4dde-471f-abc3-ff93c59da594`，manifest revision 5172，结果 `COMPILED_PENDING_REVIEW`。试题版5页、解析版18页、简答版7页、印刷版14页，共44页；四版均编译成功。PDF SHA 与 attempt、输入树和工具链指纹已写入 build receipt。
+- 修改文件：更新 `source-manifest.json` 构建状态、添加本卷 `receipts/build.json`、更新本进度。未改题面和解答内容。
+- 验证：`build_projects.py validate-receipts --paper gk-2007-regular-beijing-science` 返回 `code=OK`、failed/invalid/missing/stale 均为0；日志无 errors、missing characters、overfull 或 undefined references。印刷版存在6条 `Underfull \hbox`（答案源第221–222、476–477行），留待逐页视觉审查后登记精确豁免或修复。
+- 剩余：四版逐页八项视觉检查尚未完成；Q19原文“半轴长”含义仍由 `ISSUE-1203` 阻塞，不据此关闭试卷或声称题库完成。下一阶段复用 `phase1-b39` review 工作项完成全44页检查，再事务收口。未运行测试套件。
