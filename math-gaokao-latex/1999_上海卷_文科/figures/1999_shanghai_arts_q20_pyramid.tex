@@ -1,0 +1,32 @@
+% 1999 上海文科 Q20：依据固定扫描页的拓扑重绘；不表示长度/角度比例。
+\begin{tikzpicture}[line join=round, line cap=round, scale=0.9]
+  \tikzset{visible edge/.style={draw=black, line width=0.75pt}, hidden edge/.style={draw=black, dashed, line width=0.65pt}}
+  \coordinate (P) at (0,3.05);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-0.85,-1.65);
+  \coordinate (C) at (1.45,-1.65);
+  \coordinate (D) at (3.25,0.05);
+  \coordinate (E) at (1.52,1.645);
+
+  % Hidden base/back edges and the perpendicular projection to PD.
+  \draw[hidden edge] (P)--(A);
+  \draw[hidden edge] (A)--(B);
+  \draw[hidden edge] (A)--(D);
+  \draw[hidden edge] (A)--(E) (B)--(E);
+  % Small right-angle marker at E, matching the original perpendicular mark.
+  \draw[line width=0.55pt] (1.375,1.713)--(1.375,1.573)--(1.512,1.475);
+  % Visible pyramid edges and front/right base edges.
+  \draw[visible edge] (P)--(B);
+  \draw[visible edge] (P)--(C);
+  \draw[visible edge] (P)--(D);
+  \draw[visible edge] (B)--(C);
+  \draw[visible edge] (C)--(D);
+
+  \node[above] at (P) {$P$};
+  \node[below right=4pt] at (A) {$A$};
+  \node[left=3pt] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[below=12mm] at (1.15,-1.65) {示意图，不按比例};
+\end{tikzpicture}

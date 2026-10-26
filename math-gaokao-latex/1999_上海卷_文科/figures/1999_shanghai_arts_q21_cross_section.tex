@@ -1,0 +1,18 @@
+% 1999 上海文科 Q21：抛物线横截面及原图所示等腰梯形改挖轮廓；标签 P 的含义未由题干定义；非比例示意。
+\begin{tikzpicture}[line join=round, line cap=round, scale=1.05]
+  \tikzset{source curve/.style={draw=black,line width=0.75pt}, overlay/.style={draw=black,dashed,line width=0.65pt}}
+  \coordinate (A) at (-1.75,0);
+  \coordinate (B) at (1.75,0);
+  \coordinate (O) at (0,-1.85);
+  \coordinate (L) at (-0.52,-1.48);
+  \coordinate (R) at (0.52,-1.48);
+  \draw[source curve] (A) .. controls (-1.10,-1.28) and (-0.48,-1.85) .. (O)
+                          .. controls (0.48,-1.85) and (1.10,-1.28) .. (B);
+  \draw[overlay] (A)--(B);
+  \draw[overlay] (A)--(L)--(R)--(B);
+  \node[above left] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[below] at (O) {$O$};
+  \node[right=2pt] at (0.88,-1.08) {$P$};
+  \node[below=12pt] at (0,-2.06) {示意图，不按比例};
+\end{tikzpicture}

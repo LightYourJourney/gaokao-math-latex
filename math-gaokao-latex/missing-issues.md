@@ -19767,3 +19767,127 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1188
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描页3（印刷页136）题面直线逆时针旋转30度后为过圆心的水平线，独立计算得选A；同一PDF扫描页6（印刷页139）卷内答案表印C。两项均按固定源保留，尚无独立勘误或版次证据可裁定。",
+  "fingerprint": "8bfbbaba7f733ff4f04a1edc9ab99e6c5d47e62bd3597510ea8a51998d70b693",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "question_id": "gk-1999-regular-shanghai-arts-q13",
+  "resume_action": "取得同版可追溯原刊、勘误或可靠的题面/答案分开来源后复核；在此之前保留题面推导A与卷内C并列，不将任一方定为官方答案。",
+  "source_id": "src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1189
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描页3（印刷页136）题面写4z+2̅z=3+√3+i；扫描页7（印刷页140）卷内解答代入式写4(a+bi)+2(a-bi)=3√3+i，所得z和|z-w|范围不同。未用推导改写任何一页。",
+  "fingerprint": "2e677853d59a54b92cf461b0fb726d737fd47433e0891ffa4ed4d02e8042ae9e",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "question_id": "gk-1999-regular-shanghai-arts-q19",
+  "resume_action": "取得同版原刊、可核勘误或独立可信答案来源后逐字符复核并裁定；在此之前并列保留两种源读法，不登记单一答案。",
+  "source_id": "src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1190
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定扫描页4（印刷页137）第21题（2）可见原句“如图所示形状的几何体积为柱体”，语句疑似漏字或排印异常；题面照录，卷内计算按柱体等截面解释，不能据现件确认缺失文字。",
+  "fingerprint": "25a42b03f317848413fb319772b8c993c9ce492bedb997b32b9ac2682acf2737",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "question_id": "gk-1999-regular-shanghai-arts-q21",
+  "resume_action": "取得同版清晰原刊或可核勘误核对原句；在此之前保留源句并把体积结论标为等截面柱体条件下的解释。",
+  "source_id": "src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1191
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "edcc5c3cd38b8505e515751632707846e8831ace725b9b306a7e2ff1aee0ac97",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1192
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "6be9f202921525bdb474de99af1841453c4b8f458aef31d0876e9b71d35d6e68",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1193
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "6dbc87afa91505ee04bb8354eb7911600c5c07240df4df868d00855fb47dbe70",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1194
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "ed86cb994a42a3de3cefeb7b6c3c34f5cf57fa4ebf3dc768aba6efd45d803c67",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-1999-regular-shanghai-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

@@ -9443,3 +9443,25 @@
 - 已完成：固定 PDF SHA 与来源记录相符；使用 `pdfinfo` 并将题面页 1–5 以 250 dpi 渲染逐页目视复看，重点确认印刷页134的流程图和印刷页137的四棱锥、沟渠柱体/截面图。未使用 OCR。
 - 核对结果：Q8节点1–8的七条实线工序及两条虚线零工时活动逐项记录；Q20确认 `P-ABCD`、点E在PD上及原图隐藏棱/辅助虚线；Q21确认沿沟柱体图、横截面抛物线与等腰梯形改挖轮廓同时存在。详细边线依据见 `reports/1999-shanghai-arts-figures-source-review.md`。
 - 阶段边界：本阶段只固定来源图形结构，不生成/登记TikZ图稿，不改题面映射、manifest或provenance；Q13/Q19来源答案冲突与出版身份不确定性保持原状。未构建或运行测试。下一阶段应按同一事务同步图稿、Markdown引用、manifest `figure_files`、生成映射与逐题provenance。
+
+
+## 1999 上海文科：登记、四版生成与视觉校样（2026-10-27）
+
+- 已完成：批次 `phase4-b36` 注册 `gk-1999-regular-shanghai-arts`，manifest revision 5125 起登记三项来源问题（Q13答案表冲突、Q19题面与卷内解答冲突、Q21题干疑似漏字）；paper 保持 `production_state=blocked`。新增4幅TikZ图稿并同步题面引用、生成映射、manifest `figure_files` 与三类provenance。Q20原图E点小直角标记在第二轮复核后补入，Q21横截面未释义的P标签照录并明确无几何释义。
+- 答案边界：Q13独立求解与卷内答案表相冲突，Q19复数题面与卷内代入式不一致；Q21(2)疑似源文问题。均保留未决/阻断，不推定官方答案或擅改原文。
+- 构建与目视：首轮正式构建因Q8图稿中的PGF Math命令失败，修正为逐节点绘制后重建成功。正式 attempt `e44731b8-c207-4505-a3a1-592e1d82978f`，manifest revision 5130；试题/解析/简答/印刷版分别5/20/7/15页，共47页。四版全页逐页核看并检查字形、题号、公式选项对齐、图标、页眉页脚、分页留白、字号及答案泄漏；未发现视觉返修项。四版PDF SHA及最终收据将在批次最终报告记录。
+- 阶段状态：视觉核看已完成；确定性生成、收据验证、事务finalize及报告投影核对待执行。Q13、Q19、Q21来源问题继续阻止本卷完成；本阶段不代表1952—2026题库完成。
+
+
+## 1999 上海文科：构建修订与phase4-b36收口补记（2026-10-27）
+
+- 收口修订：首次finalize发现解析版Q8关键路径公式有14.11101pt行溢出；将三条路径改为aligned分行，重抽取解析及含解析稿并重建四版。新正式attempt `b300339a-1142-4ce0-a8d3-7adc577f742f`，build manifest revision 5132；试题/解析/简答/印刷版5/21/7/15页，共48页。四版PDF SHA依序为 `580200b908cef5ee85b04e869ae3d5aa7d7cf2514e2b1084d1547eb198100e01`、`63d26a87509302fe606bdff481fc04a2c196d854c85d899b3d9687cc5199996e`、`8e8187c1a3b4d6bfe550f848bda802961d5d320e664b88bf5c36759ed59bbffb`、`5b2f30a188fded8ba34b4a122b9b3dacf47380e7ac71f11be09e39d1e68255ff`。四版overfull/underfull均为0；TeX日志仍记有中文标点字形告警，已在四版逐页图像检查中复核相关页。
+- 回执：新attempt全部48页的8项视觉检查通过；`finalize-batch` 返回 `FINALIZED`，batch `closed_with_blockers`，manifest revision 5134。`validate-receipts --require-final --require-current-inputs` 返回OK（1成功、0过期/失效/缺失），`check-batch` 返回FINALIZED。CSV刷新后775行且check通过；来源manifest、provenance、题解来源及四类确定性生成check均通过。
+- 尚存范围：Q13、Q19、Q21三个来源事项继续阻止本卷完成，publisher/official answer身份也未认证。全库`report.py check --all`报6份既有汇总投影不一致（`docs/source-inventory.md`、`report.md`、`README_数学.md`、本库README、2017–2026 README、baseline）；本阶段未重写这些跨库报告。未运行全库测试套件。
+
+
+## 1999 上海文科：来源说明同步与最终attempt校正（2026-10-27）
+
+- 终稿状态框已同步更新为已完成题面主审、卷内答案/盲解对照、图稿重绘与四版校样，同时保留Q13/Q19冲突、Q21（2）疑文及出版身份未核。`_含解析.md` 按正式提取器重生成并通过一致性检查。
+- 最终正式attempt `101900b7-5e99-4928-b88e-d3fdf5231840`（build manifest revision 5141）；四版共48页，SHA依序为 `29fc90affa355c69ba6275ac4abe32a9499e0e93cc335fc4e0f4615a43259553`、`29361ec6ffcc5c27df067536818e508c65ef928abf3f3ec45ed79d175967c45e`、`635f745a86432a34d9b36247806824b1de820fa42540919d411ae0345965f0dc`、`75fa8797fd4c65a018f770ac7214f44a3cfc3f16733046a05b31bc46e72f5ad0`。全部页图与上一已审attempt逐页SHA相同；0 overfull/underfull。`finalize-batch` 返回 `FINALIZED`、批次 `closed_with_blockers`、manifest revision 5143。
+- 最终门禁：build receipts 1成功/0 stale-invalid-missing；review `FINALIZED`；provenance 1卷OK；solution source 22题OK；项目/简答/版本生成check、manifest validate、manifest.csv 775行check均通过。全库 `report.py check --all` 仍提示6份汇总投影不一致，未纳入本卷提交；未运行全库测试。
