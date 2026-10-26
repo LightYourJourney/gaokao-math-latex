@@ -9529,7 +9529,7 @@
 
 ## 2007 北京理科：固定题面来源接收与结构核验（2026-10-27）
 
-- 已完成：复核固定来源 `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14c8e7a83efefb2ea39bd367`；来源 checkout 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，PDF SHA-256 `2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4`、Git blob `1acd922a97cf7d72e98ead3f24c37f288fa1df20`、517,878 bytes、2页A3横向均复核相符。两页目视确认题签“2007 普通高等学校招生考试（北京卷理）”，题号1–20连续（选择1–8、填空9–14、解答15–20），印刷页351–352；无答案、解析、总分或逐题分值。
+- 已完成：复核固定来源 `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367`；来源 checkout 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，PDF SHA-256 `2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4`、Git blob `1acd922a97cf7d72e98ead3f24c37f288fa1df20`、517,878 bytes、2页A3横向均复核相符。两页目视确认题签“2007 普通高等学校招生考试（北京卷理）”，题号1–20连续（选择1–8、填空9–14、解答15–20），印刷页351–352；无答案、解析、总分或逐题分值。
 - 修改文件：新增 `reports/2007-beijing-science-source-intake.md`。固定PDF在只读来源 checkout 中，本体和临时渲染图未复制入题库。
 - 来源边界：页面自题及文件路径支持整理为2007北京理科候选卷；原始发布者、出版者、版次和官方发布身份未核。manifest尚未绑定 paper_id；source `ready` 仅代表文件级检查通过。四幅可见图（Q13、Q16、Q18、Q19）后续须在项目中矢量重绘。
 - 验证范围：SHA/Git blob与锁定上游路径核对；`pdfinfo`、`pdftotext -layout`定位、两页渲染目视和 `pdfimages -list`；未用OCR，未运行测试，未转录或登记正式 paper。本阶段不代表四版构建或交付完成。
@@ -9537,7 +9537,7 @@
 
 ## 2007 北京理科：题面逐题转录初稿（2026-10-27）
 
-- 已完成：依据固定 source `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14c8e7a83efefb2ea39bd367` 转录选择题1–8、填空题9–14、解答题15–20；主会话重新渲染并逐页目视检查两页，SHA-256 与 intake 记录一致。Q16 按原页记为“动点 D 在斜边 AB 上”；Q19“半轴长为 2r，短半轴长为 r”保留原文并标记术语疑点，没有推补。
+- 已完成：依据固定 source `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367` 转录选择题1–8、填空题9–14、解答题15–20；主会话重新渲染并逐页目视检查两页，SHA-256 与 intake 记录一致。Q16 按原页记为“动点 D 在斜边 AB 上”；Q19“半轴长为 2r，短半轴长为 r”保留原文并标记术语疑点，没有推补。
 - 修改文件：新增 `2007_数学真题_北京理_试题.md`，记录固定 source ID/SHA、页码、未核出版身份/官方身份、答案缺失及四幅待重绘图；更新本进度记录。未改 manifest、issues、答案/解析层、TeX 或回执。
 - 验证：固定 PDF SHA-256 `2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4`；两页 A3 扫描件重新渲染为 PNG 并目视对照；未使用 OCR；未运行测试。
 - 成本：未使用外部 API 或 OCR；转录由本地人工/agent 目视，Token 与实际 API 费用不可见，记未知。
@@ -9559,3 +9559,11 @@
 - 修改文件：更新 `missing-issues.md`；在 Q19 题面、答案要点、解析正文注明 `ISSUE-1203`；更新本进度记录。未修改 source-manifest、index 或正式 paper 登记。
 - 验证：issue 由 `tools/issues.py` 的 `upsert_issue` 生成稳定编号；完整核对 issue 证据文字和恢复动作；未运行测试。
 - 剩余/下一步：取得可逐页比对的独立同期题面或清晰版本后复核术语；此前保留原字并由图示尺寸推导，ISSUE-1203 阻断整卷完成。paper 注册流程仍待查明。
+
+
+## 2007 北京理科：source ID 引用校正（2026-10-27）
+
+- 已完成：发现 intake 与本轮新增题面/答案/解析/进度/ISSUE-1203 将 source ID 中的 `e14e8e7` 误录为 `e14c8e7`。以 source-manifest 与其 CSV 投影的来源记录为权威，统一修正所有文档引用；ISSUE-1203 保留编号和原问题身份字段，修正 source_id 并重算 fingerprint。此前 paper 注册事务在源 ID 对照时停止，manifest 未发生修改。
+- 修改文件：intake 报告、题面、答案要点、解析正文、missing-issues.md 与本进度记录。未改 source-manifest 或 manifest.csv。
+- 验证：逐文件核对 source_id 与 manifest 的 `2007北京理.pdf` 行完全相同；`issues.py validate` 检查修正后的 fingerprint 和 ledger 结构；manifest 当前仍为 revision 5165、source 未绑定、paper 未登记。
+- 剩余/下一步：重新执行 manifest 登记前，复核 source SHA、source ID、ISSUE-1203、所有题面层路径及 candidate ID，再按 state transaction 提交。这个校正不改变题面或数学结论。

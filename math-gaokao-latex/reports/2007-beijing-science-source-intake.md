@@ -6,7 +6,7 @@
 
 ## 固定文件与可复现性
 
-- `source_id`：`src-3612a22ce3848ad6ebbec4d94861dd64b009980e14c8e7a83efefb2ea39bd367`
+- `source_id`：`src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367`
 - 上游定位：固定来源 checkout `gaokaomath-src`，commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，路径 `普通高考/2007/2007北京理.pdf`
 - SHA-256：`2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4`
 - Git blob：`1acd922a97cf7d72e98ead3f24c37f288fa1df20`
