@@ -9631,3 +9631,12 @@
 - 修改文件：本卷 `receipts/review.json`、完成态 `receipts/build.json`、`source-manifest.json`、`reports/phase1-b39.md` 与本进度。无题面、答案或图稿变化。
 - 验证：`review_receipts.py check-batch --batch phase1-b39` 返回 `FINALIZED`；build receipt 当前性校验 `code=OK`，failed/invalid/missing/stale 均为0；正式构建四版成功，SHA/attempt/toolchain/current-input绑定未变化。没有运行测试套件。
 - 剩余：若要把该卷标为完成，须先取得足以裁定 Q19 原词义的证据并解除 `ISSUE-1203`；本阶段仅关闭视觉批次，不代表1952–2026题库完成。
+
+
+## 2018 上海春季卷：固定来源接收与页级核验（2026-10-27）
+
+- 已完成：核对来源 `src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc`，从锁定上游提交 `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 读取 `春季高考/2018/2018春季上海.pdf`；SHA-256 `05cc911cb05e7609c482a5f9cc2565b51a56c4edaec4cda09b557517332367b8`、Git blob `2875f68a0e693d81b68cebcff6700acd40563f81` 与 manifest 相符。PDF共7页A4，逐页渲染并目视核对；文件自题“2018年上海市春季高考数学试卷”、标注2018.01，含21题及第7页“参考答案”。
+- 来源边界：扫描件自题足以作为题面和答案整理的候选固定来源；本文件未证明原始发布者、出版版次、官方发布链或参考答案官方身份，故未登记paper、未绑定canonical身份。Q19第4页是整页图像，已目视读取；该页含现场照片和两幅数学示意图，后续须分别处理，不插入整页扫描件。
+- 修改文件：新增 `reports/2018-shanghai-spring-source-intake.md` 与本进度记录；未改 manifest、issues、题面/答案稿或项目文件。上游只读仓库有既存未跟踪 `.work/`，未触碰。
+- 验证：锁定Git blob、文件SHA、PDF页数/尺寸/加密状态、`pdfimages -list` 与七页渲染目视结果互相核对；第4页 `pdftotext` 无文本，使用渲染图人工读取而未用OCR。本阶段不代表转录、答案复核、图稿、LaTeX生成或四版验收完成。
+- 下一步：进入题面与参考答案分层转录，逐题记录页码与图稿映射；保持参考答案官方身份未核。
