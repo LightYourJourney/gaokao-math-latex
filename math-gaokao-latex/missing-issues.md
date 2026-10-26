@@ -19623,13 +19623,12 @@
   "impact": "blocks_completion",
   "paper_id": "gk-1996-regular-national-arts",
   "question_id": "gk-1996-regular-national-arts-q7",
-  "resume_action": "取得同版原始题页、可靠勘误或当年采用的空间异面直线垂直定义依据后裁定；此前保留转录及定义分支，不把选项结论称为无条件。",
+  "resume_action": "编号更正：provenance 的规范题号为 q07；同一未决定义问题已按 q07 重新登记，继续由新编号阻断该卷完成。",
   "source_id": "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-convention-ambiguous"
 }
 ```
-
 ## ISSUE-1180
 
 ```json
@@ -19712,5 +19711,22 @@
   "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
   "status": "open",
   "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1185
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面给 l=β∩γ、l∥α、m⊂α、m⊥γ；可推出方向夹角为90°，但未保证 l 与 m 相交。按空间直线方向夹角解释选A；若“垂直”限于相交，题面条件不足。",
+  "fingerprint": "107e25411c44f77c886cb573d46b8ad1fa606785e7407b994bcd957cdb93ec05",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-arts",
+  "question_id": "gk-1996-regular-national-arts-q07",
+  "resume_action": "取得同版原始题页、可靠勘误或当年采用的空间异面直线垂直定义依据后裁定；此前保留转录及定义分支，不把选项结论称为无条件。",
+  "source_id": "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
 }
 ```
