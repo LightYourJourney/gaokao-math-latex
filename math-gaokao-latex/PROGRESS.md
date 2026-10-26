@@ -9575,3 +9575,11 @@
 - 修改文件：`source-manifest.json` 与本进度文件。未生成 `index.json` 项目目录、合并题解文件、TeX、图稿或构建回执。
 - 验证：revision 5165→5166；项目内 JSON Schema 与 source/paper 双向关系语义验证通过。state transaction `9bc4388f-a8fc-45c9-b023-9cee2be875e1`；进度 content transaction `382df863-62c7-4f2f-b2e5-69965b25d828`。
 - 下一步：完成题面独立终核与四图矢量重绘，随后生成合并题解源及项目 TeX；保留 Q19 阻断和来源发布者未核状态。
+
+
+## 2007 北京理科：源稿目录归位（2026-10-27）
+
+- 已完成：将试题、答案要点、解析正文三层源稿归入 `2007/` 年份目录，并将 paper `gk-2007-regular-beijing-science` 的四个 `source_files` 路径全部改为该规范前缀；文件内容与 source ID/SHA 未变，合并解析稿登记为未来生成目标。
+- 修改文件：三个源稿路径、`source-manifest.json` 与本进度记录。
+- 验证：manifest revision 5166→5167；项目内 schema 和双向 source/paper 语义校验通过；迁移后的三层源稿存在且内容哈希作为事务输入固定。state transaction `e42c01bc-2105-4d87-8efb-c8344cb85e3e`；progress content transaction `80552031-e60f-4a57-9acd-85ec151597fe`。
+- 备注：这是路径校正，不代表答案草稿已定稿、issue 已解除或项目已生成。
