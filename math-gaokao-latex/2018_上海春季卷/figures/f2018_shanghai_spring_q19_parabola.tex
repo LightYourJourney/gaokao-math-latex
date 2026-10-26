@@ -1,0 +1,22 @@
+% Source: src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc, PDF p.4.
+% Reproduces the labeled parabola relation; curve shape and offset context are schematic.
+\begin{tikzpicture}[scale=0.82, every node/.style={font=\small}]
+  \coordinate (O) at (0,2.8);
+  \coordinate (A) at (-1.2,0);
+  \coordinate (B) at (1.2,0);
+  \coordinate (C) at (0,0);
+  \draw[densely dashed, domain=-2.55:-1.25, samples=60, variable=\x]
+    plot (\x,{2.8-1.95*(\x+1.25)^2});
+  \draw[thick, domain=-1.2:1.2, samples=80, variable=\x]
+    plot (\x,{2.8-1.95*\x^2});
+  \draw (A)--(B);
+  \draw (O)--(C);
+  \draw (0,0.18)--(0.18,0.18)--(0.18,0);
+  \fill (O) circle (1pt);
+  \fill (A) circle (1pt);
+  \fill (B) circle (1pt);
+  \node[above] at (O) {$O$};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+\end{tikzpicture}
