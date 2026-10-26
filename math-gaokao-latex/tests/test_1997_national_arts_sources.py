@@ -93,6 +93,19 @@ class NationalArts1997SourceTests(unittest.TestCase):
         self.assertTrue(self.record['generated_solution']['independent_review'])
         self.assertEqual(self.record['mathematical_verification_status'], 'conditionally-reviewed-with-source-conditions')
 
+    def test_focused_source_reinspection_confirms_selected_regions_and_keeps_gap(self):
+        review = self.record['verification']['focused_source_reinspection']
+        self.assertEqual(review['status'], 'passed-with-open-source-gap')
+        self.assertEqual(review['source_sha256'], SOURCE_SHA)
+        self.assertEqual(review['questions_checked'], [3, 15, 23, 25])
+        self.assertEqual(review['q03_option_mapping'], 'A')
+        self.assertEqual(review['q15_copanar_count'], 33)
+        self.assertEqual(review['q23_relation_symbol'], 'missing')
+        self.assertEqual(review['q25_literal_tail'], '求该的圆的方程')
+        self.assertEqual(review['report'], 'reports/1997-national-arts-focused-source-reinspection.md')
+        self.assertFalse(self.record['canonical_question_source_ready'])
+        self.assertEqual(self.record['review_status'], 'needs-review')
+
     def test_registered_figures_are_self_contained_vectors_and_convert_strictly(self):
         figures = self.record['figure_files']
         self.assertEqual([f['question_number'] for f in figures], [3, 23])

@@ -9381,3 +9381,10 @@
 - 修改文件：新增`1997/1997_数学真题_全国文_{独立解答草稿,答案要点,解析正文}.md`、`reports/1997-national-arts-independent-math-review.md`及数学草稿专项测试；更新该卷`来源校对.json`登记稿件指纹/数学复核状态与本进度。
 - 验证：`test_1997_national_arts_sources.py` 8/8、`test_1997_national_arts_math_drafts.py` 5/5通过；专项测试用 `fractions.Fraction` 精确枚举Q15 84组三点组合并验证分类数3/21/9/0，同时代数检验Q21两组首项/公差均满足均值条件；`git diff --cached --check`通过。未运行全库测试，未构建或视觉审查四版。
 - 阶段边界：数学状态为`conditionally-reviewed-with-source-conditions`，不改变`transcription_status=incomplete-source-gap-q23-relation`、`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`；发布者/官方性未核，不登记paper、不生成四版、不构建PDF、不声称整卷或长期题库完成。
+
+## 1997 全国文科：Q3/Q15/Q23/Q25 固定来源重点复看（2026-10-27）
+
+- 已完成：对忽略缓存中的固定PDF重新核SHA-256 `16fdb675583e09b4e3353e9903365aa152e21e3327b24a56b0101dbff5ceb6e9`，确认单页A3横向、印刷页55；用`pdfinfo`、`pdftotext -layout`与240dpi整页渲染目视复看，0次OCR。
+- 结果：Q3的A图渐近线`−π/3,5π/3`与零点`2π/3`匹配原函数，图序映射A确认；Q15原题确为从其余顶点及各棱中点选3点使其与A共面，选项含33种；Q23(3)两平面名间确无关系符号；Q25末句确为“求该的圆的方程”。重点区域与现题面草稿相符。
+- 修改文件：新增`reports/1997-national-arts-focused-source-reinspection.md`；更新该卷来源记录、来源定向测试与本进度。未补写Q23符号、未修订Q25原字。
+- 验证/边界：`test_1997_national_arts_sources.py` 9/9、`test_1997_national_arts_math_drafts.py` 5/5通过，`git diff --check`通过；核验仅针对Q3/Q15/Q23/Q25和题签栏序，不代表25题逐字复审。出版者/官方性未核；Q23缺符号仍阻塞，`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`不变，不开始正式构建。
