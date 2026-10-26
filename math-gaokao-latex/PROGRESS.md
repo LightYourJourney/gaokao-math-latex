@@ -9705,3 +9705,13 @@
 - 已完成：按`phase1-b40`生成`questions.tex`、`answers.tex`、索引投影、简答速查及试题版/解析版/简答版/印刷版四份壳文件。生成器首轮校验拒绝写入简答版：答案要点速查先列填空题、后列选择题，而第三路核对将答案行作为选择题速查；已按题号将13–16选择题速查表移到前面，答案值未改，再生成成功。
 - 验证：`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`均输出本批次1卷与生成结果一致；逐题答案一致性门禁通过。未运行测试、XeLaTeX正式构建或视觉检查。
 - 边界：四版文件目前仅为模板壳，尚无正式构建回执；Q17/Q18答案U及两个来源/定义阻断仍在，来源发布者、版本和官方身份未核。
+
+
+### 2018 上海春季卷：四版正式构建与视觉收口（2026-10-27）
+
+- 修复：删除解析正文 Q17 重复的 `**解析**` 标题；从题面 Q21 移除仅供转录过程记录的局部注记，保留题面源文“前 $n$ 项和”及文档前言/本进度中的纠错证据。按规范解析器重算 Q21 题面哈希并重新导入三角色 provenance；revision 5179→5180。Q17/Q18 仍为 `U`，`ISSUE-1204/1205` 继续 open/blocking。
+- 确定性门禁：provenance、项目 TeX、简答版、四版壳、题源内容检查均通过。正式构建 `attempt_id=2e7ae325-d67f-4666-b07b-91040f635f83`，manifest revision 5181；四版均 succeeded、0 warnings：试题版 5 页（SHA-256 `1828714d0491512a1e103318c6bba799568d1583cd242138da604803cc85cd22`）、解析版 20 页（`e11970d0e12c109d91ac4e611d4353edc9f551a7da44dd85db3deb90c550c585`）、简答版 7 页（`41e692fb68fe67934cb3e6f750662939eaef8ef943a3c1f151269b82539afb22`）、印刷版 16 页（`90ea271a3bfe782ce78a0bb222e31778d4b68ed783717df31e62b229e1b5648f`）。
+- 视觉审查：重新渲染 48 页、制作 13 张接触表逐页目视，并对解析版 p15、试题版 p5、印刷版 p12、简答版 p7 原尺寸复核。八项页面检查均通过；Q17 只剩一个解析标题，Q21 过程注记未进入试卷输出。review receipt 绑定上述 attempt、构建输入和 PDF SHA；四版 review `passed`，无视觉问题。
+- 收口：`review_receipts.py finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`，revision 5183；报告 `reports/phase1-b40.md`。试卷仍 blocked，仅有 Q17/Q18 两项内容阻断；固定来源的发布者、版本及源载答案官方身份仍未核验。
+- 投影：manifest CSV 775 行写入并 current；六个全量报告目标已写入并回读一致。全量 `report.py check --all` 在运行中，结果待记录。未运行测试套件；此阶段未 push。
+- 全量报告二次校验随后完成：`python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
