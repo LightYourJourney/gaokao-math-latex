@@ -1,5 +1,5 @@
-% 固定来源PDF第3页第24题的空间关系示意：两平面交于 PQ，A/B 分居两平面，C 在 PQ。
-% 面片与投影仅为示意；不编码原题未给出的长度、角度、垂足或点 O 的定义。
+% 依固定扫描页重绘；两平面以平行四边形示意，交棱为 PQ，A 在平面 α 内，B 在平面 β 内，C 在 PQ 上。
+% 面片与投影仅为拓扑示意，不按比例；不编码题面未给出的长度、角度、垂足或点 O 的定义。
 \begin{tikzpicture}[line width=.5pt,scale=1.05]
   \coordinate (P) at (0,0);
   \coordinate (Q) at (5,0);
@@ -10,15 +10,16 @@
   \coordinate (A) at (1.15,-1.02);
   \coordinate (B) at (1.15,.92);
   \coordinate (C) at (4.05,0);
-% 两个平面以平行四边形作投影边界，共用棱 PQ。
+  % 两个平面以平行四边形作投影边界，共用棱 PQ。
   \draw (P)--(BtL)--(BtR)--(Q);
   \draw (P)--(AlL)--(AlR)--(Q);
-  \draw[dashed] (P)--(Q);
+  \draw[dashed] (P)--(C);
+  \draw[thick] (C)--(Q);
   % 原图中的三角形 ABC 与交棱关系。
   \draw (A)--(B)--(C)--cycle;
   \fill (P) circle (1.2pt) (Q) circle (1.2pt) (A) circle (1.2pt)
     (B) circle (1.2pt) (C) circle (1.2pt);
-  \node[below left] at (P) {$P$};
+  \node[fill=white,inner sep=1pt,below left=2pt] at (P) {$P$};
   \node[right] at (Q) {$Q$};
   \node[below] at (A) {$A$};
   \node[above] at (B) {$B$};

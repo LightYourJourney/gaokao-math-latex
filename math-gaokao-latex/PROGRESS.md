@@ -9236,3 +9236,12 @@
 - **P1**：Q12(B) 指数经 300 ppi 同型比对确为 $x^{1/8}$（不是 1/3），试题与解析同步。
 - 其他：Q22 统一 $[0,2\pi)$ 口径、Q18 定义域 $x\ge1$、Q16 $4p=4$、Q10 向量 $\overrightarrow{EF}$ 方向与点积符号；Q10 补 B₁M、Q24 右图直径改 (A2)–(B2)、Q11「1」与 Q24/Q26 标签移位或白底。
 - 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；1992 两份遗留 intake 测试改写为 canonical 断言；全量单测随提交前复核。
+
+### 1993 上海卷：全量转录、盲核与四版收口（phase4-b32，2026-10-26）
+
+- 已完成：`gk-1993-regular-shanghai`（26 题：填空 1–10、选择 11–20、解答 21–26；7 页扫描件、无文字层、印刷页 5-24～5-29；卷内附解答与评分）完成全量转录（四稿 + 4 幅 TikZ）、独立盲解（26 题数值与卷内一致）、独立转录复核（P0 0、P1 1、P2 4 全修）、注册、provenance、四版构建与修复、`finalize-batch`（`FINALIZED`，批次 `closed`，整卷 complete，manifest rev 5024）。
+- 最终构建：试题 5 / 解析 28 / 简答 7 / 印刷 23 页，共 63 页；四份日志无错误、缺字与 Overfull/Underfull。
+- **P1**：Q13(D) 指数经原生位图判读应为 $x^{1/3}$（初稿 2/3），试题与解析同步；答案 D 不变。
+- 源疑点（照录）：Q24 题面「线段 OA」与「△ADO」的 O 未定义（卷内按 CA/ADC 计算，CR=a/2）；Q26 椭圆分母模糊，卷内解答反推为 a²。
+- 版式/图：Q10 D、Q24 P 标签白底移位；Q11 四联图「1」/O 改纯偏移避开曲线（不再遮断线）；Q26 删除非源有 A₁/A₂/H 与 PH，φ 移入 ∠F₁PF₂；Q24 的 PQ 改 P–C 虚线、C–Q 实线；试题区 Q24/Q26 解法提示段删除（防泄漏）。
+- 验证：`validate-receipts` OK；`check-batch`＝FINALIZED；`provenance check-batch` OK；`report check --all` 一致；全量单测随提交前复核。
