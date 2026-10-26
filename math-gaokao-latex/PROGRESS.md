@@ -9371,3 +9371,13 @@
 - 修改文件：来源校对.json更新题面复核状态、来源页复核证据与复核图缓存路径；新增 reports/1998-national-arts-source-reinspection.md；更新 tests/test_1998_national_arts_transcription.py 与本进度。
 - 验证与边界：定向测试结果见本阶段复核；此阶段仅确认固定文件的题面忠实转录。出版者、版次、官方性未核，paper仍未绑定、canonical题源状态仍false、review仍needs-review，不据此开始正式四版构建。
 - 下一步：保持Q12/Q13/Q25原件矛盾与答案条件分支；若无可独立追溯的出版页或勘误，不用二手扫描修题。继续从其他来源已固定且可验证的卷推进。
+
+
+## 1997 全国文科：项目答案/解析草稿与异人数学盲核（2026-10-27）
+
+- 已完成：新建项目答案要点及解析正文草稿，覆盖25题；Q23(3)明确保留源文缺符号，不补成某种关系。答案属性标为项目推导，固定来源无答案/解析，`official_answer=null`。
+- 独立复核与修正：异人按转录题意盲解，未检查固定PDF。Q15 对其余三顶点和六棱中点的84个三点组用精确有理行列式判定，33组与A共面，按含A棱中点数分类为3/21/9/0，选B；纠正盲核首轮把BCD面内任意三点都计入的错误。Q16展开式取8个根式项，系数`9a/16`，得`a=4`。Q21按代数条件`m²=xy`保留两解：首项/公差`(4,-12/5)`与`(-3,16/5)`；后者三项`1/5,-3/5,9/5`公比为-3。若“等比中项”被课程定义限定为非负几何平均数，则需排除第二解，来源无定义说明，暂不擅自排除。
+- 其他核查边界：Q3选项字母依赖图序与函数特征匹配；Q22最小值式以成本参数和限速为正为条件；Q23(3)若假设缺符号为垂直则可证明，但只作条件推论。Q25末句固定扫描转录确为“求该的圆的方程”，疑似源内文字异常，照录保留。
+- 修改文件：新增`1997/1997_数学真题_全国文_{独立解答草稿,答案要点,解析正文}.md`、`reports/1997-national-arts-independent-math-review.md`及数学草稿专项测试；更新该卷`来源校对.json`登记稿件指纹/数学复核状态与本进度。
+- 验证：`test_1997_national_arts_sources.py` 8/8、`test_1997_national_arts_math_drafts.py` 5/5通过；专项测试用 `fractions.Fraction` 精确枚举Q15 84组三点组合并验证分类数3/21/9/0，同时代数检验Q21两组首项/公差均满足均值条件；`git diff --cached --check`通过。未运行全库测试，未构建或视觉审查四版。
+- 阶段边界：数学状态为`conditionally-reviewed-with-source-conditions`，不改变`transcription_status=incomplete-source-gap-q23-relation`、`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`；发布者/官方性未核，不登记paper、不生成四版、不构建PDF、不声称整卷或长期题库完成。

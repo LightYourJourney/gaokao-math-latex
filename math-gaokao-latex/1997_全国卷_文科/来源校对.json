@@ -34,10 +34,10 @@
   "source_has_solutions": false,
   "official_answer": null,
   "generated_solution": {
-    "attribution": "not-created",
-    "independent_review": false
+    "attribution": "project-independent-derivation",
+    "independent_review": true
   },
-  "mathematical_verification_status": "not-verified",
+  "mathematical_verification_status": "conditionally-reviewed-with-source-conditions",
   "question_draft": {
     "path": "题面转录草稿.md",
     "sha256": "8bd2478b221b9c00ec0a183e2fa14c377d2989154f366ca7850df00e89a5c805"
@@ -336,5 +336,41 @@
       "recovery_action": "Obtain a reliable complete statement matching this question, or independently sourced erratum; do not infer the missing sign from a solution."
     }
   ],
-  "bbox_note": "Question-level precise bboxes not recorded; retain complete source page. The issue evidence crop has an exact render bbox."
+  "bbox_note": "Question-level precise bboxes not recorded; retain complete source page. The issue evidence crop has an exact render bbox.",
+  "artifacts": {
+    "question_draft": {
+      "path": "题面转录草稿.md",
+      "sha256": "8bd2478b221b9c00ec0a183e2fa14c377d2989154f366ca7850df00e89a5c805"
+    },
+    "formal_editions_generated": false,
+    "answer_draft_generated": true,
+    "solution_draft_generated": true,
+    "answer_draft": {
+      "path": "../../1997/1997_数学真题_全国文_答案要点.md",
+      "sha256": "36f1b56fd3faf26c4b4ed5e62421cd7b4c3ad923817b987e1238f085db4c683a"
+    },
+    "solution_draft": {
+      "path": "../../1997/1997_数学真题_全国文_解析正文.md",
+      "sha256": "1f53164774d0fa48bc7080c943b275a4c0cac163494c9ce99a089f38db0f66c8"
+    },
+    "independent_solution_draft": {
+      "path": "../../1997/1997_数学真题_全国文_独立解答草稿.md",
+      "sha256": "db5d10c4f511af740e5404bd8f3539c4d4030a930d87e667da44b4d2219a9870"
+    }
+  },
+  "verification": {
+    "independent_math_review": {
+      "status": "conditional-pass",
+      "review_date": "2026-10-27",
+      "scope": "25-question transcript and project answer/solution drafts; reviewer did not inspect fixed source PDF",
+      "review_report": "reports/1997-national-arts-independent-math-review.md",
+      "reviewer_conclusion": "Q1-Q14, Q16-Q20, Q22-Q25(1)(2)(4) recalculated; Q15 exact determinant count 33 confirmed after correcting the initial missed collinearity condition; Q21 retains both signed geometric means; Q23(3) source symbol gap remains unresolved.",
+      "open_source_questions": [
+        3,
+        21,
+        23
+      ],
+      "full_paper_acceptance": false
+    }
+  }
 }

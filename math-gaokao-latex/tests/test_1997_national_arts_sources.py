@@ -85,13 +85,13 @@ class NationalArts1997SourceTests(unittest.TestCase):
         self.assertEqual((issue['question_number'], issue['subpart'], issue['status']), (23, 3, 'unresolved'))
         self.assertEqual(self.record['question_sources'][22]['review_status'], 'needs-source-recovery')
 
-    def test_no_answer_or_mathematical_verification_is_fabricated(self):
+    def test_no_official_answer_is_fabricated_and_project_review_is_labeled(self):
         self.assertFalse(self.record['source_has_answers'])
         self.assertFalse(self.record['source_has_solutions'])
         self.assertIsNone(self.record['official_answer'])
-        self.assertEqual(self.record['generated_solution']['attribution'], 'not-created')
-        self.assertFalse(self.record['generated_solution']['independent_review'])
-        self.assertEqual(self.record['mathematical_verification_status'], 'not-verified')
+        self.assertEqual(self.record['generated_solution']['attribution'], 'project-independent-derivation')
+        self.assertTrue(self.record['generated_solution']['independent_review'])
+        self.assertEqual(self.record['mathematical_verification_status'], 'conditionally-reviewed-with-source-conditions')
 
     def test_registered_figures_are_self_contained_vectors_and_convert_strictly(self):
         figures = self.record['figure_files']
