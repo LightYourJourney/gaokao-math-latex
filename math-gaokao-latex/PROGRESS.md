@@ -9465,3 +9465,11 @@
 - 终稿状态框已同步更新为已完成题面主审、卷内答案/盲解对照、图稿重绘与四版校样，同时保留Q13/Q19冲突、Q21（2）疑文及出版身份未核。`_含解析.md` 按正式提取器重生成并通过一致性检查。
 - 最终正式attempt `101900b7-5e99-4928-b88e-d3fdf5231840`（build manifest revision 5141）；四版共48页，SHA依序为 `29fc90affa355c69ba6275ac4abe32a9499e0e93cc335fc4e0f4615a43259553`、`29361ec6ffcc5c27df067536818e508c65ef928abf3f3ec45ed79d175967c45e`、`635f745a86432a34d9b36247806824b1de820fa42540919d411ae0345965f0dc`、`75fa8797fd4c65a018f770ac7214f44a3cfc3f16733046a05b31bc46e72f5ad0`。全部页图与上一已审attempt逐页SHA相同；0 overfull/underfull。`finalize-batch` 返回 `FINALIZED`、批次 `closed_with_blockers`、manifest revision 5143。
 - 最终门禁：build receipts 1成功/0 stale-invalid-missing；review `FINALIZED`；provenance 1卷OK；solution source 22题OK；项目/简答/版本生成check、manifest validate、manifest.csv 775行check均通过。全库 `report.py check --all` 仍提示6份汇总投影不一致，未纳入本卷提交；未运行全库测试。
+
+
+## 2000 广东卷：固定来源身份与结构审计（2026-10-27）
+
+- 已完成：按 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 从 `deekur/gaokaomath` 读取 `普通高考/2000/2000广东.pdf`；Git blob `6be3ae05418e54f487cb869c561b3338bf10df64`、SHA-256 `0169a9a1f44f8cfab377f1c49423c5875147961d1965ee17cb8a3a84d38aedcb`、620,036字节及2页A3元数据均与manifest一致。仓库 `materialize_source` 完成校验；本地审计副本置于被忽略的 `.work/2000-guangdong/source.pdf`，不纳入版本库；manifest不变。
+- 结构核看：140dpi逐页目视两页（印刷页64–65），卷首自题“2000 普通高等学校招生考试（广东卷）”；题号1–22连续，选择1–12、填空13–16、解答17–22。可见Q5、Q12、Q16、Q19、Q21、Q22图形。PDF有文字层；未用OCR。固定文件无答案/答案表/解析。
+- 边界：仅能确认固定副本的字节与卷首自述；文理轨道、原始发布机构、出版者、版次和官方性未核。保持 `track=null`、`regions=[]`、`paper_id=null`，不绑定canonical paper、不补写答案、不开始四版构建。
+- 修改文件：新增 `reports/2000-guangdong-source-identity.md` 与本进度条目。后续应独立逐题转录/复核题面、矢量重绘图形，并另寻可核验答案来源或明确标注缺失。
