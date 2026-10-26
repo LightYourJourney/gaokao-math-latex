@@ -1,0 +1,300 @@
+{
+  "attempt_id": "b9e3cc6f-f56b-45ca-bf12-c2325dcda338",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/answers.tex",
+        "sha256": "a833d57c79a3baf8323c9322e797287bb6aea22811943d3327bc31cfeef94cdc"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/answers_short.tex",
+        "sha256": "899c5648192d1d655285fed5974744f944e635d0c01b753dccbbcaff95abdd0a"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q11_graph_options.tex",
+        "sha256": "3503b8dd5b77e0a1dd2a32d2c83cfea51da78b2c6c60c466170af4d9817cc418"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q23_trapezoid_pyramid.tex",
+        "sha256": "4394cd642ebe1828373d3b48fe9ce18c9747d3f1bd8c65f6e4f773889caf61ec"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q24_parabolas.tex",
+        "sha256": "328826af51165fe1fe071abeae0c119b835cc09fb045f967de7863d9cc62c550"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/questions.tex",
+        "sha256": "4db0d009954765a4188a302145372c7dff9f55f2a7f852e2089e62fc2bcabafe"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/印刷版.tex",
+        "sha256": "17b8ab503aeaad39d7e46627eacd61017ac7789e02b560298133a2526bc38604"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/简答版.tex",
+        "sha256": "3adb38ffd617f75b0a71faa0c6b09adb1c6902f6461eb0eb6f33bb2a2ab7a7a0"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/解析版.tex",
+        "sha256": "f4a415d1b109e67b2459a2317f5cd1c23a0f4e2f3d57ed9a87d2a3017dda3e7f"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/试题版.tex",
+        "sha256": "5070883257dbadef2d07d9d288528f08297d4eb048f85b757eb97b3405bc049c"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "885d28505d0b1e861fef135ef4672c53b2bccb98a471ea160e581a376bc17ffb"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 4,
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/build/试题版.pdf",
+        "sha256": "a6a44ccd35026eacc7d98533758a65cd7b535171d3499fd4e10959bdc6f046f7",
+        "size_bytes": 120036
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1994_上海试点教材_理科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "475--476",
+            "text": "Underfull \\hbox (badness 1067) in paragraph at lines 475--476",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 19,
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/build/解析版.pdf",
+        "sha256": "16776e5630e2caccb91e35ae281bfa6ecd8a60b6ef6be55f6f1d54e44107c907",
+        "size_bytes": 196488
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1994_上海试点教材_理科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/build/简答版.pdf",
+        "sha256": "adf5221624688bc3b8dc96eef2920117c28626e773a56329a9c9c458e02cf6ab",
+        "size_bytes": 133150
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1994_上海试点教材_理科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 15,
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/build/印刷版.pdf",
+        "sha256": "1106580d120db63328f3903e70bd94b90ff1943039b0533b148344b5fa4ad4d5",
+        "size_bytes": 195608
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/1994_上海试点教材_理科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-10-27T00:45:36+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "1994/1994_数学真题_上海试点理_答案要点.md",
+        "sha256": "1bc0bac067db6917ca057ff893a3f9308b2c6f508c41ac702c1b6e75df5404e2"
+      },
+      {
+        "path": "1994/1994_数学真题_上海试点理_解析正文.md",
+        "sha256": "0771dc710a6b646a35bb89990bfb67f994598ba2dab539a0a53c9bc2cc1b7155"
+      },
+      {
+        "path": "1994/1994_数学真题_上海试点理_试题.md",
+        "sha256": "078399ae48238e8ec3f2b4479d3fe1046399fe156b35f4d5db144ba3f0688118"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "8853d613db0241e49b32e95953921555b420666b0fab77a20f548589f58316cd"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q11_graph_options.tex",
+        "sha256": "3503b8dd5b77e0a1dd2a32d2c83cfea51da78b2c6c60c466170af4d9817cc418"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q23_trapezoid_pyramid.tex",
+        "sha256": "4394cd642ebe1828373d3b48fe9ce18c9747d3f1bd8c65f6e4f773889caf61ec"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/figures/f1994_shanghai_trial_science_q24_parabolas.tex",
+        "sha256": "328826af51165fe1fe071abeae0c119b835cc09fb045f967de7863d9cc62c550"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/印刷版.tex",
+        "sha256": "17b8ab503aeaad39d7e46627eacd61017ac7789e02b560298133a2526bc38604"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/简答版.tex",
+        "sha256": "3adb38ffd617f75b0a71faa0c6b09adb1c6902f6461eb0eb6f33bb2a2ab7a7a0"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/解析版.tex",
+        "sha256": "f4a415d1b109e67b2459a2317f5cd1c23a0f4e2f3d57ed9a87d2a3017dda3e7f"
+      },
+      {
+        "path": "math-gaokao-latex/1994_上海试点教材_理科/试题版.tex",
+        "sha256": "5070883257dbadef2d07d9d288528f08297d4eb048f85b757eb97b3405bc049c"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "d78c2768d39530b113a6b2fff716546ed98083dac061900a0707b4f472935858"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "20bd57f8e8e2cf8d7ef736508c87db8b48f5cf0314d4620024d939a096373383"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
+      }
+    ],
+    "tree_sha256": "3741f12e0434167f250a54b2b292fda5c826765db6a8b1aefaf17cd5f7ba0fe7"
+  },
+  "input_projection": "927be67516a892f3faeb614bf203ad9a910013f3b56970bdad65fe9289d359f0",
+  "manifest_revision": 5113,
+  "paper_id": "gk-1994-shanghai-trial-science",
+  "previous_attempt_id": "1c1502ce-18fa-47ab-a091-3d7a6676a46c",
+  "project_dir": "1994_上海试点教材_理科",
+  "schema_version": 1,
+  "started_at": "2026-10-27T00:44:51+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

@@ -9315,3 +9315,13 @@
 - provenance：每卷 26 题三角色记录均已准备并导入；manifest revision 5099，`provenance.py check-batch` 返回 `OK：2 卷`。答案按固定副本“卷内所载”记 C 级，发布者、出版者、版次和官方性仍未核；简答版提示明确区分卷内答案与项目推导，理科分段答案保留 cases 对齐符。Q11 补图后主会话核为 B；文科 Q14/Q23、理科 Q22 的盲核错误及纠正已逐题留证。
 - 确定性生成：补全两卷十题选择答案速查表后，题面/答案 TeX、简答稿、四版壳、索引已生成。解析正文规范化并重建含解析；`solution_sources check-batch` 两卷各26题通过。`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、manifest validate 与 `git diff --check` 均退出0。
 - 阶段边界：本阶段仅完成六图、逐题 provenance 与项目生成入口；四版正式 XeLaTeX 构建、正式 build/review 回执、所有正式输出页八项视觉校样及 `finalize-batch` 仍待后续阶段。整个 1952–2026 题库持续建设，未完成。
+
+
+### 1994 上海试点教材文理卷：正式构建、91页视觉回执与批次收口（phase1-b36，2026-10-27）
+
+- 完成对象：`gk-1994-shanghai-trial-arts` 与 `gk-1994-shanghai-trial-science`，各 26 题；`finalize-batch` 返回 `FINALIZED`，批次 `closed`、两卷 `complete`，manifest revision 5115。完成范围仅为两份固定来源副本的项目交付；来源发布者、出版者、版次及卷内答案官方性仍未核实，答案维持 C 级“卷内所载”，不宣称官方答案或题库完成。
+- 最终正式构建：文科 attempt `37767967-7ba8-4f4a-a9eb-622852a41929`，试题/解析/简答/印刷版分别 4/20/6/17 页（47页）；理科 attempt `b9e3cc6f-f56b-45ca-bf12-c2325dcda338`，分别 4/19/6/15 页（44页）。91 页日志均无 error、missing character、Overfull 或 undefined reference。理科解析版保留一条 Underfull：`answers.tex` 475–476 行、PDF 第19页；复核页面留白正常、文字完整，已绑定豁免。
+- PDF SHA-256：文科试题 `97c99463f23ad95f9896e92ff4c322b1e07367a81f501b592ead07863bd8c089`、解析 `a9f118f041316b0a5356d07e213c61a627e502a7def9d909235212bd07c2ff92`、简答 `1fb8980d6583765e10219a1b7871b282c21aac3999755222bb25053f9fa21b57`、印刷 `d1f26ae9aac83bb141b4208dea89903e1ed2310e09e63f58d7e6c2f9400cb873`；理科试题 `a6a44ccd35026eacc7d98533758a65cd7b535171d3499fd4e10959bdc6f046f7`、解析 `16776e5630e2caccb91e35ae281bfa6ecd8a60b6ef6be55f6f1d54e44107c907`、简答 `adf5221624688bc3b8dc96eef2920117c28626e773a56329a9c9c458e02cf6ab`、印刷 `1106580d120db63328f3903e70bd94b90ff1943039b0533b148344b5fa4ad4d5`。
+- 视觉证据：最终 attempt 91 张 120 dpi 栅格中，89 张与先前已实际审阅图逐字节一致，继承原八项通过结论；理科解析版第15页和印刷版第12页栅格变化，已重新目视复核，题号、公式、图表、页眉页脚、分页留白与答案边界均通过。正式 review 回执绑定最新 attempt。
+- 修正与验证：理科 Q22 仅调整 Markdown 中题号与分值的粗体边界，避免生成 TeX 尾随空格；更新该题 provenance 输入指纹并刷新确定性含解析稿，数学内容、答案及源 PDF 未变。来源 manifest validate、provenance `check-batch`、`solution_sources check-batch`、题面/答案 TeX、简答稿、四版壳一致性、最终 build receipts、review `FINALIZED`、全量报告 currentness、775 行 CSV 与 `git diff --check` 均通过。全量测试：`Ran 1714 tests in 839.291s`，`OK (skipped=13)`。
+- 阶段边界：上述 `complete` 仅指这两份 1994 上海试点教材试卷；1952–2026 长期题库仍持续建设，未完成。
