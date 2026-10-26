@@ -9591,3 +9591,10 @@
 - 修改文件：`2007/2007_数学真题_北京理_答案要点.md` 与本进度记录。
 - 验证：人工逐题对照答案速查与逐题答案块；与解析正文结果一致，Q19源文 ISSUE-1203 仍在题面说明中。未运行测试。
 - 下一步：完成图形矢量来源链后，使用 `solution_sources.py` 和 `generate_projects.py` 的规范生成入口检查三层源并产生派生物；issue 不解除。
+
+
+## 2007 北京理科：生成规范含解析稿（2026-10-27）
+
+- 已完成：按生成器锚点规范给题面 Q15–Q20 加入空格分隔的小问标记，并为解析正文 Q15–Q20 明确分段；数学推导与 Q19 原文疑点说明保持不变。由 `solution_sources.py extract-batch --batch phase1-b39 --write` 通过 content transaction 生成规范解析正文与 `_含解析.md`。
+- 验证：`solution_sources.py check-batch --batch phase1-b39` 返回 `ok`，20题题号与题面/解析/答案小问集合一致；`git diff --check` 通过。未运行测试或构建。
+- 阶段边界：`ISSUE-1203` 仍 open/blocks_completion；source 发布者/版本/官方身份未核；四幅图稿、图形 provenance、LaTeX 项目生成与四版构建/视觉回执尚未完成。
