@@ -9397,3 +9397,11 @@
 - 更新：来源校对.json数学状态为`conditionally-reviewed-with-source-conditions`，登记盲核范围、报告及稿件指纹；独立解答与选择题核算稿标记异人复核。`official_answer=null`、`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`和Q9未决来源冲突均保留。
 - 修改文件：更新1989广东文科独立解答草稿、选择题独立核算草稿、答案要点草稿、来源记录、三个定向测试及本进度；新增`reports/1989-guangdong-arts-independent-math-review.md`。未改题面或四版、未构建PDF、未修改正式manifest。
 - 验证：`test_1989_guangdong_arts_transcription.py` 4/4、`test_1989_guangdong_arts_answers.py` 4/4、`test_1989_guangdong_arts_choice_audit.py` 2/2、`test_1989_guangdong_arts_independent_math.py` 8/8通过；独立稿SHA-256与登记相符，`git diff --check`通过。全库测试未运行；不以本记录宣称题源身份或卷级验收完成。
+
+
+## 1989 广东文科：Q9题面/答案表与Q12图形固定扫描复看（2026-10-27）
+
+- 已完成：使用与来源校对记录SHA一致的固定PDF `e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f`，重新渲染第3、8页为300dpi，目视检查并用`pdfinfo`、`pdftotext -layout`定位；扫描图无文本层，未使用OCR。
+- 结果：第3页Q9题面原文及选项与现转录一致，(3,-4)的原象选项B；第8页答案表第9格确印C，故冲突在同一固定扫描件内部存在，非本稿错抄。第3页Q12原图B选项顶点为(1,0)，确认重绘选项映射B。
+- 修改文件：新增`reports/1989-guangdong-arts-q9-source-reinspection.md`；更新来源记录、独立数学测试及本进度。Q12图形条件关闭；Q9冲突、Q16术语边界保持未决。
+- 验证/边界：转录测试4/4、答案来源测试4/4、选择核算测试2/2、独立数学测试8/8通过，`git diff --check`通过；不修改题干或印载答案，不认证题源年份/地区/出版者/官方性，`official_answer=null`、`paper_id=null`、`canonical_question_source_ready=false`、`review_status=needs-review`继续保留。

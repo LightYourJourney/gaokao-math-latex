@@ -198,9 +198,23 @@
       "review_date": "2026-10-27",
       "scope": "first-volume 25 choices and 13 second-volume subparts; reviewer solved from the question transcript before comparing answer/solution drafts; did not inspect source PDF images",
       "report": "reports/1989-guangdong-arts-independent-math-review.md",
-      "reviewer_conclusion": "No arithmetic error found beyond Q9 source-key conflict. Q9 stem gives B while printed key records C; Q16 depends on the definition of perpendicular for skew lines; Q12 graph option mapping was not checked against the source image. Missing printed solutions remain project-derived only.",
-      "open_conditions": ["Q9 printed key C versus stem-derived B", "Q16 perpendicularity convention", "Q12 redrawn option graph to source figure mapping"],
+      "reviewer_conclusion": "No arithmetic error found beyond Q9 source-key conflict. Q9 stem gives B while printed key records C; Q16 depends on the definition of perpendicular for skew lines. Missing printed solutions remain project-derived only. A separate focused source review later confirmed Q12 option B.",
+      "open_conditions": ["Q9 printed key C versus stem-derived B", "Q16 perpendicularity convention"],
       "full_paper_acceptance": false
+    },
+    "q9_q12_focused_source_reinspection": {
+      "status": "passed-with-q9-conflict-open",
+      "review_date": "2026-10-27",
+      "source_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
+      "source_pages": [3, 8],
+      "printed_pages": [638, 643],
+      "render_dpi": 300,
+      "ocr_calls": 0,
+      "q9_stem_answer": "B",
+      "q9_printed_key": "C",
+      "q9_transcription_matches_source": true,
+      "q12_option_mapping": "B",
+      "report": "reports/1989-guangdong-arts-q9-source-reinspection.md"
     }
   }
 }

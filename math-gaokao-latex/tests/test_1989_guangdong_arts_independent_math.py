@@ -100,6 +100,14 @@ class GuangdongArtsIndependentMathTests(unittest.TestCase):
         self.assertEqual(q9.get("printed_answer"), "C")
         self.assertEqual(q9.get("answer_from_transcribed_mapping"), "B")
         self.assertEqual(q9.get("status"), "unresolved-source-conflict")
+        source_review = self.record.get("verification", {}).get("q9_q12_focused_source_reinspection", {})
+        self.assertEqual(source_review.get("status"), "passed-with-q9-conflict-open")
+        self.assertEqual(source_review.get("source_sha256"), "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f")
+        self.assertEqual(source_review.get("source_pages"), [3, 8])
+        self.assertEqual((source_review.get("q9_stem_answer"), source_review.get("q9_printed_key")), ("B", "C"))
+        self.assertTrue(source_review.get("q9_transcription_matches_source"))
+        self.assertEqual(source_review.get("q12_option_mapping"), "B")
+        self.assertEqual(source_review.get("report"), "reports/1989-guangdong-arts-q9-source-reinspection.md")
         self.assertTrue(
             "1989 广东卷文科：第9题来源答案冲突核查" in self.progress,
             "missing Q9 source-conflict progress receipt",
