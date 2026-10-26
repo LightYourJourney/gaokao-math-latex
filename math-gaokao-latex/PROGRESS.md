@@ -9622,3 +9622,12 @@
 - 修改文件：更新 `source-manifest.json` 构建状态、添加本卷 `receipts/build.json`、更新本进度。未改题面和解答内容。
 - 验证：`build_projects.py validate-receipts --paper gk-2007-regular-beijing-science` 返回 `code=OK`、failed/invalid/missing/stale 均为0；日志无 errors、missing characters、overfull 或 undefined references。印刷版存在6条 `Underfull \hbox`（答案源第221–222、476–477行），留待逐页视觉审查后登记精确豁免或修复。
 - 剩余：四版逐页八项视觉检查尚未完成；Q19原文“半轴长”含义仍由 `ISSUE-1203` 阻塞，不据此关闭试卷或声称题库完成。下一阶段复用 `phase1-b39` review 工作项完成全44页检查，再事务收口。未运行测试套件。
+
+
+### 2007 北京理科：四版逐页视觉审查与保留阻断收口（2026-10-27）
+
+- 已完成：复用 `phase1-b39` 对正式 attempt `6639eede-4dde-471f-abc3-ff93c59da594` 的四版全部44页完成八项视觉审查，共352项：283项通过、69项因本页无图或该版本按定义包含答案而标记不适用，0项失败。试题版5页、解析版18页、简答版7页、印刷版14页；警告逐项豁免6条。两类 Underfull 分别对应 `answers.tex` 第221–222行/印刷版第8页（题11公式换行）及第476–477行/印刷版第14页（题20末尾排版），放大复核均无重叠、碰撞或裁切。
+- 状态：`finalize-batch-checked` 返回 `FINALIZED`，manifest revision 5173，批次为 `closed_with_blockers`，该卷仍非完成态；唯一阻塞 `ISSUE-1203` 保持开放，Q19“半轴长”含义未裁定。报告 `reports/phase1-b39.md` 标记审查 `passed`、内容候选 `eligible_blocked`。
+- 修改文件：本卷 `receipts/review.json`、完成态 `receipts/build.json`、`source-manifest.json`、`reports/phase1-b39.md` 与本进度。无题面、答案或图稿变化。
+- 验证：`review_receipts.py check-batch --batch phase1-b39` 返回 `FINALIZED`；build receipt 当前性校验 `code=OK`，failed/invalid/missing/stale 均为0；正式构建四版成功，SHA/attempt/toolchain/current-input绑定未变化。没有运行测试套件。
+- 剩余：若要把该卷标为完成，须先取得足以裁定 Q19 原词义的证据并解除 `ISSUE-1203`；本阶段仅关闭视觉批次，不代表1952–2026题库完成。
