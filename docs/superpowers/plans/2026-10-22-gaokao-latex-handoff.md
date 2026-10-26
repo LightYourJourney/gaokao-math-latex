@@ -3,6 +3,14 @@
 更新时间：2026-10-22（中国标准时间）
 
 
+## 2026-10-26 后续（十二）：1995 全国文科接续验收
+
+- 接手HEAD6153e863，保留Claude Code既有未提交成果，继续phase4-b34（gk-1995-regular-national-1-arts）。来源/规范解析阶段已提交4d7c4a3f；四版验收阶段另按用户授权提交，不push。
+- 26题、单页A3扫描、无答案/分值，D级双求解员推导。修复Q24/Q25第二问推导漏录、Q24 AE/BE漏线及Q5 O压线；恢复来源json被覆盖丢失的逐题页/栏映射、类型范围和未知分值等字段，旧草稿测试升级为canonical双向绑定校验。
+- 最终四版4/20/6/16页，46页八项视觉通过；attempt761a4cb5-bd7b-47f7-b3f5-6f4c1fe91bcf，FINALIZED/closed/complete，rev5086。不得重复转录或使用旧图替代当前回执；完整证据见reports/1995-national-arts-*及reports/phase4-b34.md。
+- 当前775来源、321卷（complete265、blocked53、compiled3）、182批。全量1710项测试通过（13跳过，606.114秒），报告/CSV及当前回执检查均通过；详细见本轮交付复核报告；来源非官方、分值未知的边界保留。整个1952—2026目标仍未完成。
+- 下一可核候选：1995上海文科，source_id `src-ef7576922eed4ed30b369569c10911cf87356d83988aa0d9bdaf82927061e059`，manifest为ready/unbound；本轮只读确认没有对应项目目录、规范MD或paper记录。固定PDF记录SHA `7a54c35368fb8de8e0842c2da263affa0115f5d1d9afa9798322e3c389a023c0` 尚未本轮重验，不把它说成已核来源；开工先固定字节并逐页核源。
+
 ## 2026-10-26 后续（十一）：1995 全国理科（D 级）收口
 
 - `phase4-b33`（`gk-1995-regular-national-1-science`）已提交 `eb4cc57`：26 题、单页 A3 扫描、**来源无答案**；答案/解析为项目独立推导，两名隔离求解员 26 题结论一致；四版 4/23/6/19 页；`FINALIZED`／`closed`／complete。
