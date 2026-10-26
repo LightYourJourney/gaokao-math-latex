@@ -19613,3 +19613,104 @@
 }
 ```
 
+## ISSUE-1179
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面给 l=β∩γ、l∥α、m⊂α、m⊥γ；可推出方向夹角为90°，但未保证 l 与 m 相交。按空间直线方向夹角解释选A；若“垂直”限于相交，题面条件不足。",
+  "fingerprint": "d78eea92fa5411ad027c564445236129e6f05ce39ee3d2eeff1d3519f5a9f0c4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-arts",
+  "question_id": "gk-1996-regular-national-arts-q7",
+  "resume_action": "取得同版原始题页、可靠勘误或当年采用的空间异面直线垂直定义依据后裁定；此前保留转录及定义分支，不把选项结论称为无条件。",
+  "source_id": "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1180
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面未给 a1≠0。若 a1=0，零数列使任意实数公比 q 都满足；若 a1≠0，则 q=0 或 q=−1/∛2。",
+  "fingerprint": "c5b495efa16f380b1a3ada741075d4c98fbf175b602524158a3f697475172078",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-arts",
+  "question_id": "gk-1996-regular-national-arts-q21",
+  "resume_action": "取得当年等比数列定义或可靠同版答案/勘误以裁定零首项是否纳入；此前保留两种条件分支。",
+  "source_id": "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1181
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面使用 log_a 但未另述底数范围；规范答案仅按合法底数 a>0 且 a≠1 分段给解，未补写题面条件。",
+  "fingerprint": "1e94a65d1e7160014cf93993c5c08e87b8567323169f230895a8dfbc7898d236",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-science",
+  "question_id": "gk-1996-regular-national-science-q20",
+  "resume_action": "取得同版原始题页或可靠勘误以裁定底数范围；此前保留两种合法底数分支。",
+  "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1182
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面未给 a1≠0。若 a1=0，任意实数 q 都满足；若 a1≠0，则 q=0 或 q=−1/∛2。",
+  "fingerprint": "0041a8c7ea52dde17d72a7bfac937765680edbac000c3ec1911eae457451f56c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-science",
+  "question_id": "gk-1996-regular-national-science-q21",
+  "resume_action": "取得当年等比数列定义或可靠同版答案/勘误以裁定零首项是否纳入；此前保留两种条件分支。",
+  "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1183
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源可见原文为“侧面 AC1”，不足以唯一命名四边形侧面；答案与解析仅在它指 ACC1A1 时给出条件性解。",
+  "fingerprint": "3dadc100f6bb94273830d04bb64f4a2d8ce13223953691730bf345b7f2d6a268",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-science",
+  "question_id": "gk-1996-regular-national-science-q22",
+  "resume_action": "取得更清晰同版原页或可靠勘误确认侧面全名；此前保持原文照录，并将 BE=EB1 与45°标为条件性结论。",
+  "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1184
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源长度比条件后印有孤立 l1，之后又写“求 l1,l2 的方程”；规范答案保留该字符，当前推导以其不承载额外条件为前提。",
+  "fingerprint": "faa7385db74ebdeea93b9c459ce42085a7cf932efb339ccc02b3acc7b7b7a180",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1996-regular-national-science",
+  "question_id": "gk-1996-regular-national-science-q24",
+  "resume_action": "取得同版原页、勘误或独立版本确认孤立 l1 的含义；此前保留原文并将斜率/方程与弦长结论标为条件性。",
+  "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

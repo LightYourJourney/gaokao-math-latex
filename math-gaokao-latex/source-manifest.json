@@ -1612,6 +1612,15 @@
         "gk-1994-shanghai-trial-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b37",
+      "issues": [],
+      "paper_ids": [
+        "gk-1996-regular-national-arts",
+        "gk-1996-regular-national-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1621,7 +1630,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c98933c7-83b3-4c84-a28e-684b14bad519",
+  "last_transaction_id": "668b8012-76ac-4886-9e9b-3d732a9c9c91",
   "papers": [
     {
       "blocked_from": null,
@@ -22754,9 +22763,147 @@
       "title": "1994 年·上海试点教材理科卷",
       "track": "science",
       "year": 1994
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_文科/figures/f1996_national_arts_q19_folded_squares.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_文科/figures/f1996_national_arts_q23_triangular_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_文科/figures/f1996_national_arts_q2_exponential_logarithm.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1996_national_arts",
+        "id": "gk-1996-regular-national-arts",
+        "note": "固定来源 普通高考/1996/1996全国文.pdf，SHA-256 0470ab13b1cd6af91b1268e91fdf8baa4412db573b0f411196a06f054776bca2；单页横向 A3，印刷页码 53。来源页无答案、解析、分值或总分，出版者与原版关系未核。答案及解析为项目独立推导（D 级、异人逐题复核），非官方答案。Q7“垂直”依赖空间直线方向夹角定义；Q21 保留零首项下公比任意的定义分支。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            16,
+            19
+          ],
+          "解答题": [
+            20,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "arts",
+        "variant": "全国文科"
+      },
+      "issue_ids": [
+        "ISSUE-1179",
+        "ISSUE-1180"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1996-regular-national-arts",
+      "production_state": "blocked",
+      "project_dir": "1996_全国卷_文科",
+      "question_count": 25,
+      "resume_action": "取得同版原始题页、可靠勘误或当年采用的空间异面直线垂直定义依据后裁定；此前保留转录及定义分支，不把选项结论称为无条件。；取得当年等比数列定义或可靠同版答案/勘误以裁定零首项是否纳入；此前保留两种条件分支。",
+      "source_files": {
+        "answer_key": "1996/1996_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1996/1996_数学真题_全国文_含解析.md",
+        "questions": "1996/1996_数学真题_全国文_试题.md",
+        "solution_body": "1996/1996_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a"
+      ],
+      "title": "1996 年·全国卷·文科",
+      "track": "arts",
+      "year": 1996
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_理科/figures/f1996_national_science_q19_folded_squares.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_理科/figures/f1996_national_science_q22_prism_section.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1996_全国卷_理科/figures/f1996_national_science_q2_exponential_logarithm.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1996_national_science",
+        "id": "gk-1996-regular-national-science",
+        "note": "固定来源 普通高考/1996/1996全国理.pdf，SHA-256 cf9952ef5be41c7604605d651ada54a85217a4da09dfab19670a7a54cdc02bd4；单页横向 A3，印刷页码 52。来源页无答案、解析、分值或总分，出版者与原版关系未核。答案及解析为项目独立推导（D 级、异人逐题复核），非官方答案。Q20 底数范围未明；Q21 保留零首项分支；Q22“侧面 AC1”名称不完整；Q24(2) 保留孤立 l1，并将答案注明为条件性结论。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷",
+        "structure": {
+          "填空题": [
+            16,
+            19
+          ],
+          "解答题": [
+            20,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "science",
+        "variant": "全国理科"
+      },
+      "issue_ids": [
+        "ISSUE-1181",
+        "ISSUE-1182",
+        "ISSUE-1183",
+        "ISSUE-1184"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1996-regular-national-science",
+      "production_state": "blocked",
+      "project_dir": "1996_全国卷_理科",
+      "question_count": 25,
+      "resume_action": "取得同版原始题页或可靠勘误以裁定底数范围；此前保留两种合法底数分支。；取得当年等比数列定义或可靠同版答案/勘误以裁定零首项是否纳入；此前保留两种条件分支。；取得更清晰同版原页或可靠勘误确认侧面全名；此前保持原文照录，并将 BE=EB1 与45°标为条件性结论。；取得同版原页、勘误或独立版本确认孤立 l1 的含义；此前保留原文并将斜率/方程与弦长结论标为条件性。",
+      "source_files": {
+        "answer_key": "1996/1996_数学真题_全国理_答案要点.md",
+        "combined_rendered": "1996/1996_数学真题_全国理_含解析.md",
+        "questions": "1996/1996_数学真题_全国理_试题.md",
+        "solution_body": "1996/1996_数学真题_全国理_解析正文.md"
+      },
+      "source_ids": [
+        "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6"
+      ],
+      "title": "1996 年·全国卷·理科",
+      "track": "science",
+      "year": 1996
     }
   ],
-  "revision": 5115,
+  "revision": 5116,
   "schema_version": 1,
   "sources": [
     {
@@ -27357,8 +27504,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c214378b9ed2ebedd5ef555b720daacbd99a699a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1996-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1996全国文.pdf",
       "regions": [],
       "source_id": "src-14b5e41702770e8e042a2012628b4977636412e2adfb4e564c6ce6d4e72b063a",
@@ -27381,8 +27528,8 @@
       "exam_type": "regular",
       "git_blob_oid": "2ae88cb4f08ce91c3b372c4d82bf40a3bebc2c13",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1996-regular-national-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "1996全国理.pdf",
       "regions": [],
       "source_id": "src-fb045a4a0667851f33004aec1c020d6220dfa5733a9ee28cc4eeb10d7f6b7aa6",
