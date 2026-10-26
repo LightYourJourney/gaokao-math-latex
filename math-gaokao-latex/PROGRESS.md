@@ -9301,3 +9301,10 @@
 - 确定性检查：仓库 `solution_sources.render_combined(q,s,a)` 主会话运行成功，解析 26 题、26 答案、26 篇解析，小问锚点 Q22–24 各 2 小问、Q25–26 各 3 小问对齐；生成 10,809 字符的 `_含解析.md`。三份权威文本均显式绑定同一固定来源 SHA-256。
 - 盲核差异：Q14 盲核者误称 A、D 也可能成立；反例可同时证明 `c,b` 相交，同时保持 `a,b` 异面，因此唯一必真项仍为 C。Q23 盲核提出的 `C=(2a,a)` 不在 BC 上；固定 PDF 第 3 页图及角度条件确定 `C=(a,0)`（取 `A=(0,a), B=(0,0), D=(3a,a)`），不构成源冲突。核对细节见 `reports/1994-shanghai-trial-arts-math-review.md`。Q11 当前题稿未含选项图，盲核无法确认字母。
 - 未完成：Q11 四选项图及 Q23、Q24 原图尚未矢量转绘/绑定；尚未登记 paper/project 或 provenance，未建四版入口、正式构建与视觉回执。出版者、版次、答案官方性继续待核。本阶段只覆盖规范文字转录和盲核差异记录，不代表本卷或题库完成。
+
+### 1994 上海试点教材文理卷：固定来源与 planned 项目登记（2026-10-26）
+
+- 已完成：通过唯一 `source_manifest.py register-papers` 事务，以 `phase1-b36`、manifest revision 5095 登记 `gk-1994-shanghai-trial-arts` 与 `gk-1994-shanghai-trial-science`。两个未绑定 source 分别 canonical 绑定至各自 paper；文理卷各 26 题，source SHA、题数范围及 PDF 页段已登记。来源卷首自述身份与固定文件内容相符，但发布者、出版者、版次及卷内答案的官方性仍未核。
+- 状态边界：两卷 `production_state=planned`、`figure_files=[]`、无 issue/provenance 回执；此提交仅完成来源与项目身份登记，不表示逐题三角色来源核验、四版生成、构建、视觉校样或整卷完成。文理题面、答案、解析、确定性合并稿分别由此前两个独立转录阶段提交。
+- 验证：登记规格 `math-gaokao-latex/.work/phase1-b36/register-1994-shanghai-trial.json` 的 `register-papers` 只读预演返回“2 卷，仅校验，未落盘”；正式事务返回 revision 5095。随后 `source_manifest.py validate --manifest source-manifest.json` 通过；Git diff 仅含 `source-manifest.json` 与本进度条目，尚未生成项目 TeX 或版式入口。
+- 下一步：补齐文理卷 Q11 四选项图、Q23 空间图及 Q24 抛物线图的本卷 TikZ、Markdown 显式引用、manifest `figure_files` 与逐题图稿 provenance；再准备并导入独立三角色 provenance，运行确定性生成/检查后进入正式构建与逐页视觉回执。
