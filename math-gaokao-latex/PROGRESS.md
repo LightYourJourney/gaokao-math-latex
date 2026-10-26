@@ -9270,3 +9270,11 @@
 - 验证：最后图稿修改后源专项5/5通过；此前简答工具52/52通过；全库报告/CSV当前性、最终回执当前性（missing/stale/invalid/failed均0）、provenance和全部生成一致性检查通过；最终全量1710项测试通过（13跳过，0失败，606.114秒），命令exit0。四版构建日志errors/missing_characters/overfull/undefined_references均为空；清理器只删除24个非PDF中间文件，四份PDF保留。
 - 身份边界：来源无答案、解析或分值，答案是D级项目推导；未认证官方标准答案、出版者或版次，未知分值仍null。完成表示固定副本题面与项目解析四版交付，不代表全项目完成。
 - 提交：来源/规范解析阶段4d7c4a3f；验收阶段按用户“每完成一个阶段就提交”在全部验收结束后提交，不push。全库现775来源、321卷（complete265、blocked53、compiled3）、182批；1952—2026范围仍有未录入及受阻卷，继续按当前来源队列推进。
+
+### 1995 上海文史类：来源转录、复核与四版收口（phase4-b35，2026-10-26）
+
+- 本阶段收口：`gk-1995-regular-shanghai-arts`（25题：选择1–8、填空9–20、解答21–25；7页扫描件，题面页1–3、卷内答案及评分页4–7）完成规范题面/答案/解析三稿、四幅矢量图、三角色 provenance、四版正式构建与46页视觉审阅；`finalize-batch`=`FINALIZED`，批次`closed`、整卷`complete`，manifest revision 5094。
+- 来源身份：固定副本 SHA-256 `7a54c35368fb8de8e0842c2da263affa0115f5d1d9afa9798322e3c389a023c0`，已绑定 canonical source。出版者、版次及卷内答案是否为官方版本均未核实；答案来源一律标作“卷内所载”，不称官方答案。
+- 数学/转录边界：独立题面审阅发现并修正 Q23 二面角、Q24 分段最大值等推导差异；独立盲审的 Q2/Q18 读法与源图高分辨核读不符，已如实记录并由根审阅纠正，未把错误审阅记作通过。Q24 的 $m=n$ 情形显式补充。详细记录见 `reports/1995-shanghai-arts-source-audit.md` 与 `reports/1995-shanghai-arts-math-review.md`。
+- 最终 PDF：试题版 5 页（SHA-256 `c8cf5592285a673bf95b35bd357f1a9cbd2d126246ed22ac3152f72098d6f1a4`）；解析版 20 页（`77541aa8eb15bef8f62be7e9af789cba904738419be83570e18ae493c6a9b9a9`）；简答版 7 页（`2cc7a8b3036228b3b5ef448161bb3510037b4bb46cbc6e40008975cad6161164`）；印刷版 14 页（`936b154ad2b7b329135aa8cc1e1884bca2fcc03d9b59869955063e9782d85250`）。最终 attempt `8c299506-d8c2-4d31-bbd4-583215eaae3f`；46页均按八项检查实际复核，新 attempt 的 46 张 150 dpi 栅格与已实审图逐字节一致。印刷版仅余一条 Q4 题干占位行 Underfull 警告，已绑定 answers.tex 第69–70行和 PDF 第5页，视觉判定 pass 并记入豁免。
+- 验证：`build_projects.py validate-receipts --require-final --require-current-inputs`=`OK`（1 succeeded，0 pending/stale/invalid/failed）；`review_receipts.py check-batch`=`FINALIZED`；provenance、题面/答案/四版壳确定性检查均通过；CSV 775行、全库报告 render/check 当前；全量测试 `Ran 1714 tests in 445.832s`，`OK (skipped=13)`。本阶段完成仅指本卷固定副本及项目答案解析交付，全库1952—2026目标仍未完成。
