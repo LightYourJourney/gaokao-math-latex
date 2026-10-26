@@ -9606,3 +9606,11 @@
 - provenance：以三角色核验结果生成20题逐题记录；source SHA 与题面/答案哈希由导入器现场重算。Q19 `transcription_review.result=uncertain`，关联 ISSUE-1203；其他题面核对通过。状态工具显示 `blocked` 且 provenance verified，未解除 issue。
 - 验证：四幅 TikZ 独立 XeLaTeX smoke PDF 共4页并目视；`source_manifest.py validate`、`manifest_csv.py --check`（775行）、`provenance.py check-batch`（1卷）、`solution_sources.py check-batch`（20题）、`generate_projects.py --check` 均通过；`issues.py validate --file missing-issues.md` 与 `git diff --check` 通过。
 - 阶段边界：未构建四版正式 PDF、未生成 build/review receipts；source 发布者、出版信息、版本及官方身份仍未核。Q19 保留原字“半轴长”，ISSUE-1203 继续阻断整卷完成。
+
+
+## 2007 北京理科：简答稿与四版壳生成（2026-10-27）
+
+- 已完成：简答生成器拒绝 Q5 选择题答案块“960 种（B）”；规范答案块改为选项字母 `B`，960 的计数保留在解析推导中。重建含解析稿、`answers.tex`、`answers_short.tex` 与试题版/解析版/简答版/印刷版四份壳文件。
+- provenance：Q5 答案规范化改变答案摘要，按现场哈希重算更新 answer-solve 与 answer-review 声明，正式导入器提交 revision 5170；manifest CSV 775 行保持当前。
+- 验证：`solution_sources.py check-batch`（20题）、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`provenance.py check-batch` 均通过。receipt 校验预期仍报 `缺 build 回执`；正式 PDF 构建尚未开始。
+- 阶段边界：ISSUE-1203 仍 open/blocks_completion；Q19 未决状态、来源身份限制不变。
