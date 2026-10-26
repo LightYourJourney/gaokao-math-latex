@@ -7,10 +7,10 @@
   "source_manifest_revision": 4152,
   "paper_id": null,
   "review_status": "needs-review",
-  "canonical_question_source_ready": false,
+  "canonical_question_source_ready": true,
   "mathematical_verification_status": "not-verified",
   "source_authenticity": "fixed-upstream-typeset-copy-publisher-unverified",
-  "transcription_status": "transcribed-pending-independent-review",
+  "transcription_status": "transcribed-independently-reviewed",
   "source_has_answers": false,
   "official_answer": null,
   "question_count": 25,
@@ -69,10 +69,19 @@
     {"question_number": 23, "path": "figures/f1996_national_arts_q23_triangular_prism.tex", "source_page": 1, "classification": "source-faithful-schematic-redraw", "sha256": "9c6c6a49714c342d03aaadb0ecaf8d51f6339aefa875ebeb9bbd47b980c101fd"}
   ],
   "source_issues": [],
+  "transcription_review": {
+    "report": "reports/1996-national-question-transcription-review.md",
+    "reviewer": "independent-read-only-agent",
+    "scope": "questions-1-25-and-figures-2-19-23",
+    "result": "two-verbatim-differences-corrected; no-other-question-or-figure-semantic-differences-found",
+    "corrected_questions": [10, 24],
+    "reviewed_source_sha256": "0470ab13b1cd6af91b1268e91fdf8baa4412db573b0f411196a06f054776bca2"
+  },
   "review_notes": [
     "PDF文字层提取结果仅作为候选；题目正文、公式、三栏顺序和图形均按固定PDF页面图像复核。",
     "来源出版者/官方性尚未核实；来源页未载答案、解析或分值，不补造。",
-    "第2、19、23题以TikZ保留原图中的单调性/截距/渐近线或几何点线关系；曲线比例和透视长度不作精确数学数据，需独立复核。"
+    "第2、19、23题以TikZ保留原图中的单调性/截距/渐近线或几何点线关系；曲线比例和透视长度不作精确数学数据，已完成独立图意复核。",
+    "独立逐题复核后按原页修正Q10多出的“为”和Q24漏掉的“只”；答案数学与解析尚未核验。"
   ],
-  "draft_sha256": "9db232957f01da795df862d640d4dfdf34d45482fab535760ead896d24b7a619"
+  "draft_sha256": "a2ae378ee8881183a755e9fefce2d925633489d158c69f9d2f0eb159b5eded22"
 }

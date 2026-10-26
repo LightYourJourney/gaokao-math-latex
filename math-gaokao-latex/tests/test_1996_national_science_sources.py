@@ -114,14 +114,16 @@ class NationalScience1996SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["question_scores"])
         self.assertIsNone(self.record["total_score"])
         self.assertIsNone(self.record["paper_id"])
-        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertTrue(self.record["canonical_question_source_ready"])
+        self.assertEqual(self.record["transcription_status"], "transcribed-independently-reviewed")
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
         self.assertEqual(self.record["review_status"], "needs-review")
         self.assertEqual(
             [issue["question_number"] for issue in self.record["source_issues"]],
-            [24],
+            [20, 22, 24],
         )
-        self.assertEqual(self.record["source_issues"][0]["issue_code"], "possible-source-typo")
+        self.assertEqual(self.record["source_issues"][0]["issue_code"], "source-condition-underspecified")
+        self.assertIn("1996 全国卷文理科：题面独立复核与源内疑点登记", self.progress)
         self.assertIn("1996 全国卷理科：25题固定来源题面转录完成", self.progress)
 
 

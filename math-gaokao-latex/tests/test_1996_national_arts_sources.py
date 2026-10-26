@@ -114,9 +114,14 @@ class NationalArts1996SourceTests(unittest.TestCase):
         self.assertIsNone(self.record["question_scores"])
         self.assertIsNone(self.record["total_score"])
         self.assertIsNone(self.record["paper_id"])
-        self.assertFalse(self.record["canonical_question_source_ready"])
+        self.assertTrue(self.record["canonical_question_source_ready"])
+        self.assertEqual(self.record["transcription_status"], "transcribed-independently-reviewed")
+        self.assertIn("该圆锥的体积（", self.text)
+        self.assertNotIn("该圆锥的体积为（", self.text)
+        self.assertIn("平均每年至多只能减少", self.text)
         self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
         self.assertEqual(self.record["review_status"], "needs-review")
+        self.assertIn("1996 全国卷文理科：题面独立复核与源内疑点登记", self.progress)
         self.assertIn("1996 全国卷文科：25题固定来源题面转录完成", self.progress)
 
 

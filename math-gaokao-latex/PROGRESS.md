@@ -9325,3 +9325,12 @@
 - 视觉证据：最终 attempt 91 张 120 dpi 栅格中，89 张与先前已实际审阅图逐字节一致，继承原八项通过结论；理科解析版第15页和印刷版第12页栅格变化，已重新目视复核，题号、公式、图表、页眉页脚、分页留白与答案边界均通过。正式 review 回执绑定最新 attempt。
 - 修正与验证：理科 Q22 仅调整 Markdown 中题号与分值的粗体边界，避免生成 TeX 尾随空格；更新该题 provenance 输入指纹并刷新确定性含解析稿，数学内容、答案及源 PDF 未变。来源 manifest validate、provenance `check-batch`、`solution_sources check-batch`、题面/答案 TeX、简答稿、四版壳一致性、最终 build receipts、review `FINALIZED`、全量报告 currentness、775 行 CSV 与 `git diff --check` 均通过。全量测试：`Ran 1714 tests in 839.291s`，`OK (skipped=13)`。
 - 阶段边界：上述 `complete` 仅指这两份 1994 上海试点教材试卷；1952–2026 长期题库仍持续建设，未完成。
+
+
+### 1996 全国卷文理科：题面独立复核与源内疑点登记（2026-10-27）
+
+- 已完成：复核已存在的两份固定来源题面草稿及六幅 TikZ 图。文科 `src-14b5e417…b063a` 与理科 `src-fb045a4a…b7aa6` 均为单页 A3 横向固定副本，manifest 中 SHA-256、Git blob、页数匹配；题签分别标明“1996 普通高等学校招生考试（全国卷文/理）”，印刷页码 53、52。两卷各25题，1—15选择、16—19填空、20—25解答。
+- 文科纠正：Q10 草稿多录“为”；Q24 草稿漏录“只”。其余题面无确切差异，Q2/Q19/Q23图意与原页相符。理科 Q1—Q25 无确切转录差异，Q2/Q19/Q22图意与原页相符；Q20 底数 `a` 未另给范围、Q22“侧面 AC₁”、Q24(2) 孤立 `l₁` 均按原页保留并登记为源内待核疑点。
+- 来源边界：PDF 未载答案、解析、分值或总分，未补造；发布者、出版者及固定副本与原始出版物关系仍未知。两卷 `transcription_status=transcribed-independently-reviewed`、`canonical_question_source_ready=true`；但数学未核、paper 尚未绑定、无四版入口/构建/视觉回执，不代表卷级交付完成。
+- 修改文件：两份题面草稿、来源校对 JSON、对应源稿专项测试；新增 `reports/1996-national-question-transcription-review.md` 与本进度回执。
+- 下一步：分别完成两卷逐题独立求解并复核源内疑点，再准备正式登记所需规范题面/答案/解析文件与 paper 事务。
