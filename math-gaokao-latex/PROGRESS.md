@@ -9278,3 +9278,11 @@
 - 数学/转录边界：独立题面审阅发现并修正 Q23 二面角、Q24 分段最大值等推导差异；独立盲审的 Q2/Q18 读法与源图高分辨核读不符，已如实记录并由根审阅纠正，未把错误审阅记作通过。Q24 的 $m=n$ 情形显式补充。详细记录见 `reports/1995-shanghai-arts-source-audit.md` 与 `reports/1995-shanghai-arts-math-review.md`。
 - 最终 PDF：试题版 5 页（SHA-256 `c8cf5592285a673bf95b35bd357f1a9cbd2d126246ed22ac3152f72098d6f1a4`）；解析版 20 页（`77541aa8eb15bef8f62be7e9af789cba904738419be83570e18ae493c6a9b9a9`）；简答版 7 页（`2cc7a8b3036228b3b5ef448161bb3510037b4bb46cbc6e40008975cad6161164`）；印刷版 14 页（`936b154ad2b7b329135aa8cc1e1884bca2fcc03d9b59869955063e9782d85250`）。最终 attempt `8c299506-d8c2-4d31-bbd4-583215eaae3f`；46页均按八项检查实际复核，新 attempt 的 46 张 150 dpi 栅格与已实审图逐字节一致。印刷版仅余一条 Q4 题干占位行 Underfull 警告，已绑定 answers.tex 第69–70行和 PDF 第5页，视觉判定 pass 并记入豁免。
 - 验证：`build_projects.py validate-receipts --require-final --require-current-inputs`=`OK`（1 succeeded，0 pending/stale/invalid/failed）；`review_receipts.py check-batch`=`FINALIZED`；provenance、题面/答案/四版壳确定性检查均通过；CSV 775行、全库报告 render/check 当前；全量测试 `Ran 1714 tests in 445.832s`，`OK (skipped=13)`。本阶段完成仅指本卷固定副本及项目答案解析交付，全库1952—2026目标仍未完成。
+
+
+### 1994 上海试点教材文、理卷：固定来源身份审计（2026-10-26）
+
+- 结论：两份固定 PDF 分别是供使用试点教材（文）与（理）考生用的独立上海数学试卷版本，不是普通版 `gk-1994-shanghai` 的复本/答案附件。两卷均 26 题、150 分，结构为填空 1–10、选择 11–20、解答 21–26；各有自己对应的卷内答案/评分标准。
+- 来源证据：重算两份 PDF SHA-256 与 Git blob，匹配 source-manifest；文科 7 页 / 6,222,105 字节 / `86d8bc7b9f5eb467d29f09bf1963eba0075fccc0ba4359e714549fed6f69c488`，理科 5 页 / 199,405 字节 / `b7582351e09479e49306f4b59ee118955ad716fdde093f49f1f9ac3de8ee6234`。普通版另有不同 SHA、文件及已绑定 source id。正文无 PDF 文字层；页面图像复核未用 OCR。审计详情见 `reports/1994-shanghai-trial-source-identity.md`。
+- 边界：独立试卷身份判断置信度高；发行者、版次及卷内答案是否为官方版本未核实。文/理来源维持 `ready`、未绑定；不误用 duplicate 关系。普通版已在 `phase1-b24` 以 `closed_with_blockers` 收口。
+- 下一步：文、理卷分别逐页转录题面及卷内答案/解答；逐项保留不清字形和题面—答案冲突，由主会话复核后再以唯一 `register-papers` 事务绑定。
