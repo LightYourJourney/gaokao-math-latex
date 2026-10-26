@@ -9691,3 +9691,10 @@
 - 发现：在建立 provenance 前再次对照固定源 PDF 第6页原图及文字层，确认原卷明确印有“$T_n$ 是 $\{c_n\}$ 的前 $n$ 项和”；此前将它记为未定义，是转录稿漏掉“和”字造成的错误。
 - 已修正：题面稿补回原卷“和”字；答案要点与解析正文移除Q21(3)的条件假设和U/PENDING，按原题定义保留独立推导结果 $a>0,q\geq2$。`ISSUE-1206`改为resolved并记录源页证据；manifest说明及resume_action同步收敛。Q17与Q18(1)两个原文缺项继续开放并阻断。
 - 验证：对照第6页160dpi渲染图及固定PDF文字层，均可见“前 $n$ 项和”；未用第7页答案页替代题面证据。`issues.py validate`、`source_manifest.py validate`与`solution_sources.py check-batch --batch phase1-b40`均通过；含解析稿由规范解析源重生成。未运行测试、正式构建或外部检索。
+
+
+### 2018 上海春季卷：三角色 provenance（2026-10-27）
+
+- 已完成：为Q1–Q21记录固定source ID/SHA、各题源页、题面哈希、答案哈希及三角色证据；题面角色对照固定PDF第1–6页，Q19按第4页原图直接目视；独立盲解角色来自此前Q1–7、Q8–16、Q17–21三个隔离题段；答案复核角色由主会话复算并与第7页源载“参考答案”逐题对照，未将源载答案称为官方答案。
+- 不确定性：Q17、Q18答案等级保持U并分别关联`ISSUE-1204/1205`，其转录复核passed仅表示字面忠实，不代表语义完整；两题无计算结果冲突，`conflict_status=none`。Q21(3)按更正后的原卷“前n项和”记录为A，`ISSUE-1206`保持已解决。
+- 验证：`provenance.py import-batch`只读预检通过并事务导入；manifest revision 5176→5177，`provenance.py check-batch`输出`OK：1卷`，批次状态为`provenance_verified`，纸卷仍`blocked`。问题账、source manifest及21题内容层校验均通过；未运行测试、正式项目生成或构建。

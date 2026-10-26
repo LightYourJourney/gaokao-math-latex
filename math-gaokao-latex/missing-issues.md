@@ -20053,15 +20053,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定来源PDF第2页原文为“已知 y=cos x”，随后的两问使用 f(α) 与 f(x)，但该页没有给出 f 的定义。题面照录，编者仅在 f(x)=cos x 的条件下推导，规范答案仍为U/PENDING。",
-  "fingerprint": "41166858d84b2aeb20a6657e943d3ac189795363c038a87e784e21abfad6c332",
+  "current_evidence": "固定来源PDF第2页原文仅写“已知 y=cos x”，后续两问使用 f(α) 与 f(x)，没有给出 f 的定义。题面已照录；在明确假设 f(x)=cos x 下的推导与源载答案相符，但该假设未由题面确定，规范答案保持U/PENDING。",
+  "fingerprint": "3a2e1dda3639843155a90bb4c3800bfd5b7c93a9bde9440b9562d9dd7a3acf4f",
   "impact": "blocks_completion",
   "paper_id": "gk-2018-spring-shanghai",
   "question_id": "gk-2018-spring-shanghai-q17",
   "resume_action": "寻找可追溯的独立同版题面或勘误，确认 y=cos x 是否对应未印出的 f(x) 定义；核实前保留原文及条件推导，答案保持U/PENDING。",
   "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
   "status": "open",
-  "type": "transcription-ambiguous"
+  "type": "answer-convention-ambiguous"
 }
 ```
 
@@ -20070,15 +20070,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定来源PDF第2页先定义双曲线Γ，随后原文仅写“若点(2,1)在上”，未标明点属于哪条曲线。题面照录，焦点结果只在假设(2,1)∈Γ时给出，规范答案仍为U/PENDING。",
-  "fingerprint": "258a20774e1a25a10ea6d0b22ea96c405c8bfee9b8d7a3646539cce4cb906bd4",
+  "current_evidence": "固定来源PDF第3页定义双曲线Γ，随后原文仅写“若点(2,1)在上”，没有指明该点属于哪条曲线。题面已照录；仅在假设(2,1)∈Γ下可确定焦点，规范答案保持U/PENDING。",
+  "fingerprint": "621b24c7d08ca47e17d1f93c053772764eacce0a7a9980a1ec94892231de241e",
   "impact": "blocks_completion",
   "paper_id": "gk-2018-spring-shanghai",
   "question_id": "gk-2018-spring-shanghai-q18",
   "resume_action": "寻找可追溯的独立同版题面或勘误，确认点(2,1)所属曲线；核实前保留原文及条件推导，答案保持U/PENDING。",
   "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
   "status": "open",
-  "type": "transcription-ambiguous"
+  "type": "answer-convention-ambiguous"
 }
 ```
 
