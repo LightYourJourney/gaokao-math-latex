@@ -20087,14 +20087,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定来源PDF第6页Q21(3)将T_n称作数列{c_n}的“前n项”，未出现“和”字或其他定义。编者仅在T_n=Σ_{j=1}^n c_j的条件下推导a>0、q≥2；规范答案仍为U/PENDING。",
+  "evidence": "复查固定来源PDF第6页原图及文字层，Q21(3)明确印作“T_n 是 {c_n} 的前 n 项和”。此前题面转录漏掉“和”字，属于转录错误而非原卷定义缺项；已更正题面并据明示定义独立确认 a>0、q≥2，与第7页源载参考答案一致。该问题已解决。",
   "fingerprint": "7b75fe9f51494a3eea1f3650e04846cf2be6721875c0e3d3129bf876360b2a25",
   "impact": "blocks_completion",
   "paper_id": "gk-2018-spring-shanghai",
   "question_id": "gk-2018-spring-shanghai-q21",
-  "resume_action": "寻找可追溯的独立同版题面或勘误，确认T_n是否定义为前n项和；核实前保留原文及条件推导，答案保持U/PENDING。",
+  "resume_action": "已复查固定来源第6页并更正漏字转录；无需寻找外部版本。",
   "source_id": "src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-convention-ambiguous"
 }
 ```

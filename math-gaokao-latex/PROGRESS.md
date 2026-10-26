@@ -9684,3 +9684,10 @@
 - 修改文件：manifest、missing-issues、题面/答案/解析/源载答案 front matter、Q17–Q21题面小问排版、生成的含解析稿、照片图稿包装、进度记录。未生成项目 TeX/四版，未创建provenance或构建回执。
 - 验证：`source_manifest.py validate`通过；`issues.py validate`通过；`solution_sources.py check-batch --batch phase1-b40`输出21题/1套全部通过；`sync-figure-registry`复核6图引用当前。XeLaTeX重编译六图（含照片包装）为2页PDF成功并逐页目视。未运行测试套件。
 - 剩余：逐题三角色 provenance、正式生成项目 TeX/简答版/四版壳、四版XeLaTeX构建与逐页验收均未做；来源发布者/版本/官方身份未核，三个问题继续阻断本卷完成。`phase1-b40`目前只是 planned 批次，不能视作已关闭阶段。
+
+
+### 2018 上海春季卷：Q21(3)题面漏字纠正（2026-10-27）
+
+- 发现：在建立 provenance 前再次对照固定源 PDF 第6页原图及文字层，确认原卷明确印有“$T_n$ 是 $\{c_n\}$ 的前 $n$ 项和”；此前将它记为未定义，是转录稿漏掉“和”字造成的错误。
+- 已修正：题面稿补回原卷“和”字；答案要点与解析正文移除Q21(3)的条件假设和U/PENDING，按原题定义保留独立推导结果 $a>0,q\geq2$。`ISSUE-1206`改为resolved并记录源页证据；manifest说明及resume_action同步收敛。Q17与Q18(1)两个原文缺项继续开放并阻断。
+- 验证：对照第6页160dpi渲染图及固定PDF文字层，均可见“前 $n$ 项和”；未用第7页答案页替代题面证据。`issues.py validate`、`source_manifest.py validate`与`solution_sources.py check-batch --batch phase1-b40`均通过；含解析稿由规范解析源重生成。未运行测试、正式构建或外部检索。
