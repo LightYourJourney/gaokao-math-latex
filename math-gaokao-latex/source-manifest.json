@@ -1637,6 +1637,16 @@
         "gk-2000-regular-guangdong-unspecified"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b39",
+      "issues": [
+        "ISSUE-1203"
+      ],
+      "paper_ids": [
+        "gk-2007-regular-beijing-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1646,7 +1656,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "20d00451-6cce-4bc4-b0ea-f5a60e4c811c",
+  "last_transaction_id": "9bc4388f-a8fc-45c9-b023-9cee2be875e1",
   "papers": [
     {
       "blocked_from": null,
@@ -23083,9 +23093,63 @@
       "title": "2000 年·广东卷（科类未标）",
       "track": "none",
       "year": 2000
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2007_beijing_science",
+        "id": "gk-2007-regular-beijing-science",
+        "note": "固定题面源普通高考/2007/2007北京理.pdf，SHA-256 2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4；2页A3横向，印刷页码351–352，题签自称“2007普通高等学校招生考试（北京卷理）”。发布者、出版信息、版本及官方身份未核。固定源无答案、解析或评分标准；答案与解析为编者独立推导草稿，非官方。Q13/Q16/Q18/Q19待矢量重绘；Q19疑点 ISSUE-1203 阻断整卷完成。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "science",
+        "variant": "北京理科"
+      },
+      "issue_ids": [
+        "ISSUE-1203"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-beijing-science",
+      "production_state": "transcription_draft",
+      "project_dir": "2007_北京卷_理科",
+      "question_count": 20,
+      "resume_action": "独立复核完整题面、答案和解析，矢量重绘 Q13/Q16/Q18/Q19；保留并核查 ISSUE-1203。publisher 与 official 身份仍未核实。",
+      "source_files": {
+        "answer_key": "math-gaokao-latex/2007_数学真题_北京理_答案要点.md",
+        "combined_rendered": "math-gaokao-latex/2007_数学真题_北京理_含解析.md",
+        "questions": "math-gaokao-latex/2007_数学真题_北京理_试题.md",
+        "solution_body": "math-gaokao-latex/2007_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367"
+      ],
+      "title": "2007 年·北京卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 5165,
+  "revision": 5166,
   "schema_version": 1,
   "sources": [
     {
@@ -31165,14 +31229,18 @@
       },
       "exam_type": "regular",
       "git_blob_oid": "1acd922a97cf7d72e98ead3f24c37f288fa1df20",
-      "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "issue_ids": [
+        "ISSUE-1203"
+      ],
+      "paper_id": "gk-2007-regular-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007北京理.pdf",
-      "regions": [],
+      "regions": [
+        "北京"
+      ],
       "source_id": "src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367",
       "source_state": "ready",
-      "track": null,
+      "track": "science",
       "upstream_path": "普通高考/2007/2007北京理.pdf",
       "year": 2007
     },

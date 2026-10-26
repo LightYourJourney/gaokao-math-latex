@@ -9567,3 +9567,11 @@
 - 修改文件：intake 报告、题面、答案要点、解析正文、missing-issues.md 与本进度记录。未改 source-manifest 或 manifest.csv。
 - 验证：逐文件核对 source_id 与 manifest 的 `2007北京理.pdf` 行完全相同；`issues.py validate` 检查修正后的 fingerprint 和 ledger 结构；manifest 当前仍为 revision 5165、source 未绑定、paper 未登记。
 - 剩余/下一步：重新执行 manifest 登记前，复核 source SHA、source ID、ISSUE-1203、所有题面层路径及 candidate ID，再按 state transaction 提交。这个校正不改变题面或数学结论。
+
+
+## 2007 北京理科：候选 paper 与固定 source 登记（2026-10-27）
+
+- 已完成：以 canonical source ID `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367` 和 SHA-256 `2cea664b02860c04aa21fb6bdf80403b674befb8e61fa9f68970197bdf0f5ff4` 双向登记候选 paper `gk-2007-regular-beijing-science`；新增 `phase1-b39`（planned）。paper 状态为 `transcription_draft`，publisher/official 身份明确未核；source 内题签仅支持按北京理科候选卷整理。Q19 ISSUE-1203 保持 open/blocks_completion 并绑定至 source 与 paper。
+- 修改文件：`source-manifest.json` 与本进度文件。未生成 `index.json` 项目目录、合并题解文件、TeX、图稿或构建回执。
+- 验证：revision 5165→5166；项目内 JSON Schema 与 source/paper 双向关系语义验证通过。state transaction `9bc4388f-a8fc-45c9-b023-9cee2be875e1`；进度 content transaction `382df863-62c7-4f2f-b2e5-69965b25d828`。
+- 下一步：完成题面独立终核与四图矢量重绘，随后生成合并题解源及项目 TeX；保留 Q19 阻断和来源发布者未核状态。
