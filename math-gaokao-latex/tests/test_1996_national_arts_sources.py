@@ -119,9 +119,16 @@ class NationalArts1996SourceTests(unittest.TestCase):
         self.assertIn("该圆锥的体积（", self.text)
         self.assertNotIn("该圆锥的体积为（", self.text)
         self.assertIn("平均每年至多只能减少", self.text)
-        self.assertEqual(self.record["mathematical_verification_status"], "not-verified")
+        self.assertEqual(
+            self.record["mathematical_verification_status"],
+            "verified-project-derived-with-source-ambiguities",
+        )
         self.assertEqual(self.record["review_status"], "needs-review")
+        solution = ROOT.parent / "1996" / "1996_数学真题_全国文_独立解答草稿.md"
+        self.assertTrue(solution.is_file())
+        self.assertEqual(self.record["independent_solution"]["sha256"], hashlib.sha256(solution.read_bytes()).hexdigest())
         self.assertIn("1996 全国卷文理科：题面独立复核与源内疑点登记", self.progress)
+        self.assertIn("1996 全国卷文理科：项目独立解答交叉复核", self.progress)
         self.assertIn("1996 全国卷文科：25题固定来源题面转录完成", self.progress)
 
 

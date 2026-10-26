@@ -8,7 +8,7 @@
   "paper_id": null,
   "review_status": "needs-review",
   "canonical_question_source_ready": true,
-  "mathematical_verification_status": "not-verified",
+  "mathematical_verification_status": "verified-project-derived-with-source-ambiguities",
   "source_authenticity": "fixed-upstream-typeset-copy-publisher-unverified",
   "transcription_status": "transcribed-independently-reviewed",
   "source_has_answers": false,
@@ -69,10 +69,18 @@
     {"question_number": 22, "path": "figures/f1996_national_science_q22_prism_section.tex", "source_page": 1, "classification": "source-faithful-schematic-redraw", "sha256": "bc87872a2713bb7fdbf177e8d6585e8fe01cc70d7b2d38cd3167a03f3c11009b"}
   ],
   "source_issues": [
-    {"question_number": 20, "issue_code": "source-condition-underspecified", "description": "题面使用底数a的对数，但本题前未另行给出a的范围；原样保留，不补写条件。"},
+    {"question_number": 20, "issue_code": "source-condition-underspecified", "description": "题面使用底数a的对数，但本题前未另行给出a的范围；答案按0<a且a≠1分情况给出，不补写条件。"},
+    {"question_number": 21, "issue_code": "source-condition-underspecified", "description": "未明说首项a1非零。若允许a1=0，零数列使任意公比满足；若a1≠0且取实数公比，则q=0或q=−1/∛2，q=1不满足。"},
     {"question_number": 22, "issue_code": "possible-source-typo", "description": "原页可见写作“侧面 AC₁”，平面名称不完整或特殊；转录照录，单凭此固定来源不能裁定是否漏字。"},
-    {"question_number": 24, "issue_code": "possible-source-typo", "description": "固定来源第24题（2）在长度比条件后还印有一个孤立的l1，再次要求l1、l2方程；按原页原样保留，疑为源内排印问题，不静默删改。"}
+    {"question_number": 24, "issue_code": "possible-source-typo", "description": "固定来源第24题（2）在长度比条件后还印有一个孤立的l1，再次要求l1、l2方程；按原页原样保留，疑为源内排印问题，不静默删改。条件性解以孤立l1不承载额外条件为前提。"}
   ],
+  "generated_answer_attribution": "project-derived-independent-not-official",
+  "independent_solution": {
+    "path": "../../1996/1996_数学真题_全国理_独立解答草稿.md",
+    "sha256": "368d60edfade9be3122b39dc2d241964a6258a480188f5a6c194227b0cc4ef53",
+    "status": "independently-solved-and-cross-reviewed",
+    "review_report": "reports/1996-national-math-review.md"
+  },
   "transcription_review": {
     "report": "reports/1996-national-question-transcription-review.md",
     "reviewer": "independent-read-only-agent",
@@ -85,7 +93,7 @@
     "PDF文字层的提取顺序与公式结构只作为候选；三栏题面、公式、符号及图形均按固定PDF页面图像复核。",
     "固定PDF印刷页码52；来源出版者/官方性未核实，来源页未载答案、解析或分值，不补造。",
     "第2、19、22题为TikZ示意重绘，保留可见的图形关系但不代表精确比例；独立逐题复核未发现图意偏差。",
-    "第20题底数条件、第22题“侧面AC₁”文字及第24题孤立l₁均按原页照录并列为源内疑点；数学答案与解析尚未制作或验证。"
+    "第20题底数条件、第22题“侧面AC₁”文字、第21题零首项分支及第24题孤立l₁均保留边界；独立答案草稿经异人逐题复核，Q9推导与Q24(2)串题已纠正。"
   ],
   "draft_sha256": "59f61b6fc18401bb20c706bfd0c55ed33c68893bbea1940048a795446cc8c0b6"
 }
