@@ -9308,3 +9308,10 @@
 - 状态边界：两卷 `production_state=planned`、`figure_files=[]`、无 issue/provenance 回执；此提交仅完成来源与项目身份登记，不表示逐题三角色来源核验、四版生成、构建、视觉校样或整卷完成。文理题面、答案、解析、确定性合并稿分别由此前两个独立转录阶段提交。
 - 验证：登记规格 `math-gaokao-latex/.work/phase1-b36/register-1994-shanghai-trial.json` 的 `register-papers` 只读预演返回“2 卷，仅校验，未落盘”；正式事务返回 revision 5095。随后 `source_manifest.py validate --manifest source-manifest.json` 通过；Git diff 仅含 `source-manifest.json` 与本进度条目，尚未生成项目 TeX 或版式入口。
 - 下一步：补齐文理卷 Q11 四选项图、Q23 空间图及 Q24 抛物线图的本卷 TikZ、Markdown 显式引用、manifest `figure_files` 与逐题图稿 provenance；再准备并导入独立三角色 provenance，运行确定性生成/检查后进入正式构建与逐页视觉回执。
+
+### 1994 上海试点教材文理卷：图稿、三角色 provenance 与确定性项目生成（phase1-b36，2026-10-26）
+
+- 已完成阶段：文、理两卷 Q11 选择图、Q23 空间图、Q24 抛物线图共六幅 TikZ；题面 Markdown 显式映射，manifest `figure_files` 同步登记，六页 smoke PDF 已目视检查。报告及 TikZ 哈希见 `reports/1994-shanghai-trial-figures-review.md`。
+- provenance：每卷 26 题三角色记录均已准备并导入；manifest revision 5099，`provenance.py check-batch` 返回 `OK：2 卷`。答案按固定副本“卷内所载”记 C 级，发布者、出版者、版次和官方性仍未核；简答版提示明确区分卷内答案与项目推导，理科分段答案保留 cases 对齐符。Q11 补图后主会话核为 B；文科 Q14/Q23、理科 Q22 的盲核错误及纠正已逐题留证。
+- 确定性生成：补全两卷十题选择答案速查表后，题面/答案 TeX、简答稿、四版壳、索引已生成。解析正文规范化并重建含解析；`solution_sources check-batch` 两卷各26题通过。`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、manifest validate 与 `git diff --check` 均退出0。
+- 阶段边界：本阶段仅完成六图、逐题 provenance 与项目生成入口；四版正式 XeLaTeX 构建、正式 build/review 回执、所有正式输出页八项视觉校样及 `finalize-batch` 仍待后续阶段。整个 1952–2026 题库持续建设，未完成。
