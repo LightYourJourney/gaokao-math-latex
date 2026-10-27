@@ -6,6 +6,14 @@
 
 
 
+### 2004 春季安徽理科卷：38页逐页视觉验收并关闭批次（2026-10-27）
+
+- 已完成：为 build attempt `3f3fe168-903c-4008-8086-4347ee96c501` 绑定的四版工作项逐页审查全部38页；8项检查共304项，其中236 pass、68 not_applicable、0 fail、0 pending。每页以110dpi渲染接触表逐页检查，Q20图稿页、Q22解析末页、简答末页及印刷Q20/Q21–22页再以180dpi复核；题号、字体、公式、页眉页脚、图稿标签和分页均未见视觉问题。Q20隐藏边AC和顶点标签清晰；试题版Q22完整独立分页且无裁切。
+- 状态：`review_receipts.py finalize-batch` 返回 `FINALIZED`，revision 5217，批次 `closed`、paper `complete`。`review_receipts.py check-batch` 为 `FINALIZED`；build receipt currentness 0 invalid/missing/stale，四版成功；source manifest 校验通过。
+- 修改文件：四版 `receipts/review.json`、`receipts/build.json`状态、`source-manifest.json`、批次报告 `reports/phase1-b43.md`、全量报告投影及本进度。未修改任何题目、数学结论或图稿。
+- 边界：来源出版者、版次、原始来源链仍未知；`official_answer=null`，答案为D级独立推导。本卷生产闭合不代表1952–2026全库完成。
+
+
 ### 2004 春季安徽理科卷：修复说明文字并完成四版正式构建（2026-10-27）
 
 - 已完成：首轮构建四版均因题面说明中的裸 `_`（`official_answer`）在 TeX 文本模式触发 `Missing $ inserted` 失败；只改题面与解析正文的说明措辞，不改题目、数学结论、答案或来源身份，并由解析/项目生成器刷新派生文件。第二次 attempt `3f3fe168-903c-4008-8086-4347ee96c501` 四版正式构建成功，38页（试题4、解析17、简答6、印刷11），paper 状态 `compiled_pending_review`，manifest revision 5215。
