@@ -10007,3 +10007,9 @@
 - 已生成共享题面、解析、简答及试题版、解析版、简答版、印刷版四个入口，并更新 `index.json`；三个生成器的 `--check` 均通过。索引更新后抽查 `phase1-b44` 的批次复核门禁为 `FINALIZED`，此前报告中的全库状态失配须以本次报告重算结果为准。
 - 本阶段尚未导入逐题 provenance、正式构建及视觉审查；第 2、5 题仍有开放的完成阻断，固定副本的官方身份仍未核。
 - 全量报告重算后为 `FINALIZED 190 / INVALID_OR_STALE 1 / VISUAL_FAILED 3`；新增批次缺构建与复核回执。登记时 `ISSUE-1216`–`ISSUE-1218` 的题目 ID 使用 `q2/q5`，而 provenance 使用 `q02/q05`，指纹不能匹配；须按问题总账身份规则修正并重核后才能导入，不得将其视为已有有效逐题关联。
+
+### 2006 安徽文科：问题身份校正与逐题 provenance（2026-10-28）
+
+- 以状态事务修正 `ISSUE-1216`–`ISSUE-1218` 的题目 ID 为 `q02/q05` 并重算 fingerprint，保留原问题编号、证据和开放阻断状态；manifest revision 5227 → 5228。
+- 根据题面复核及非官方解答复算记录，导入 22 题三角色 provenance，manifest revision 5228 → 5229。Q5 题面核对记为 `uncertain`；Q2、Q5 答案证据为 `U`，关联相应阻断项；其余答案为项目推导 `D` 级。Q19/Q22 复算者已知部分先前结论，不称盲解。
+- `issues.py validate`、`source_manifest.py validate`、provenance 导入预检及 `check-batch` 均通过；状态为 paper `blocked`、批次 `provenance_verified`。来源身份未核，四版正式构建和逐页视觉审查尚待执行。
