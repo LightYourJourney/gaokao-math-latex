@@ -9903,3 +9903,11 @@
 - 页码边界：当时仅保留全卷两页 PDF 的逐页核对回执，未保留逐题页码映射；provenance 的 `source_pages=[1,2]` 对全部题目引用整份固定源，不声称精确单页归属。题面源 SHA-256 固定为 `17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8`。
 - 状态：Q18 仍阻断 completion，`official_answer=null`、paper 保持 `blocked`。本阶段未构建 PDF 或进行版面视觉复核。
 - 阶段报告：`reports/2004-spring-anhui-arts-provenance.md`。
+
+
+### 2004 春季安徽文科卷：TeX 元数据文本修正与四版正式构建（2026-10-27）
+
+- 根因：首轮四版均在 `questions.tex` 的来源说明行报 `Missing $ inserted`。LaTeX 日志定位到 Markdown 行内代码字段 `paper_id` 的未转义下划线；首个替换后又定位到 `official_answer` 同类问题。将题面正文改为自然语言 `paper ID` / “官方答案状态”，front matter 的机器字段保持不变，并增加通用断言拒绝正文行内代码标识符含下划线。
+- 验证：定向转录/解答测试 7/7 通过；三个生成器的逐卷 `--check` 通过；随后 `build_projects.py --formal` 四版成功，receipt 状态 `compiled_pending_review`。本次输出页数：试题版4、解析版17、简答版6、印刷版12；构建回执绑定本次 attempt、manifest revision、输入树与各 PDF SHA。
+- 构建失败的 ISSUE-1212–1215 已由后续成功的正式构建自动标记 resolved；Q18 的 `ISSUE-1211` 保持 open 并继续阻断整卷 completion。
+- 阶段报告：`reports/2004-spring-anhui-arts-build.md`。

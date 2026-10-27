@@ -37,6 +37,10 @@ class AnhuiSpring2004ArtsTranscriptionTests(unittest.TestCase):
         self.assertIn(SOURCE_ID, transcript)
         self.assertIn(SOURCE_SHA256, transcript)
         self.assertIn("paper_id=gk-2004-spring-anhui-arts", transcript)
+        self.assertIn("当前 paper ID 为 `gk-2004-spring-anhui-arts`", transcript)
+        self.assertNotIn("`paper_id=", transcript)
+        body = transcript.split("## 数学试卷", 1)[1]
+        self.assertIsNone(re.search(r"`[^`\n]*_[^`\n]*`", body), "TeX body contains inline code with unescaped underscores")
         self.assertNotIn("paper_id 未绑定", transcript)
         self.assertIn("official_answer: null", transcript)
 
