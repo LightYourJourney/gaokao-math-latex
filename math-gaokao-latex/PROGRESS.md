@@ -10063,3 +10063,12 @@
 - 纸卷当前 `blocked`、批次 `provenance_verified`。四版入口、正式构建和逐页视觉审查尚未进行；下一步生成四版并进入正式构建/回执流程，保留 Q3 阻断。成本未单独统计，记未知。
 
 阶段报告：`reports/2006-anhui-science-registration.md`。
+
+
+### 2006 安徽卷理：四版构建与视觉验收（2026-10-28）
+
+- 正式构建 attempt `ecde5ad1-87ea-4cb1-91ba-07468dd1e3c8` 四版均成功，试题/解析/简答/印刷版分别为 5/22/7/18 页，共 52 页；build receipt 记录 manifest revision 5246，最终阶段复核后 manifest 为 revision 5248。
+- 当前 PDF 的逐页审查回执 `passed`，52 页各有 8 项检查，未发现视觉问题；Q11 的 4 条 Underfull 按源文件行号与 PDF 页逐项记录并豁免。详见 `reports/phase1-b46.md` 与本卷 `receipts/`。
+- `review_receipts.py check-batch` 返回 `FINALIZED`；构建回执当前输入核验、provenance、题目/解析来源、项目/简答/版本生成器、manifest/issues、报告和 manifest.csv 当前性检查均通过。未运行全量测试套件。
+- Q3 椭圆式缺少可见等号及右侧，答案仍为 `U/PENDING`，`ISSUE-1219` 保持开放并阻断完成；固定副本的发布者、版次、来源链及官方身份未核。paper 状态 `blocked`，批次 `closed_with_blockers`，不得标为整卷完成。
+- 本阶段成果提交于 `62366dc8`（`build(gaokao): close 2006 Anhui science visual review`）。
