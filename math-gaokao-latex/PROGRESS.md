@@ -10052,3 +10052,14 @@
 - 两份规范源均保留 source_id 与 SHA-256，paper_id仍为null；未登记、未导入provenance，未运行测试、未生成派生稿或构建PDF。阶段报告：reports/2006-anhui-science-solutions.md；本阶段成本未单独计量，记为未知。
 - 解析器复核发现题面Q17–Q22小问编号后缺分隔空格，初次虽识别22题但未识别小问；补空格后，项目 `solution_sources` 解析器确认题面、答案、解析三份文档均识别22题，且小问集合逐题一致（Q20为三小问，其余解答题为两小问）。Q3答案解析为显式 `U/PENDING`。此为格式同步，不改题面文字；未运行测试套件。
 - 下一步：按源图重绘Q6/Q16/Q19/Q22四幅矢量图，并结合可追溯来源状态和Q3待核准备paper/source事务登记。
+
+
+### 2006 安徽卷理：题图登记、paper/source 与逐题 provenance（2026-10-28）
+
+- 将候选卷 `gk-2006-regular-anhui-science` 与固定来源内部 canonical 绑定，登记入 `phase1-b46`；source manifest revision `5235 → 5239`。固定来源仍未经发布者、版次、来源链或官方身份认证；`official_answer=null`。
+- 依据源图绘制 Q6/Q16/Q19/Q22 四幅 TikZ，题面及确定性含解析稿均有映射；manifest `figure_files` 每图 `expected_occurrences=2`。单独 XeLaTeX 临时预览为4页，`pdfimages -list` 无栅格对象，四页图稿预览已逐张目视检查；这不是正式四版页面验收。Q16/Q19按示意投影绘制，不补尺寸；Q22仅用符合几何关系的示意坐标。
+- 通过 `register-papers` 和 `sync-figure-registry` 事务完成paper/source及图稿登记；注册器先将 Q3 issue 写作 `q3`，随后状态事务校正为 provenance 规范 ID `q03` 并重算 fingerprint。`ISSUE-1219` 继续 open / blocks_completion，题面缺式原样保留，Q3答案为 `U/PENDING`。
+- 由 `solution_sources.render_combined()` 生成含解析稿；`generate_projects.py --write/--check` 同步共享 `questions.tex`、`answers.tex`、全卷 `index.json`。三角色导入22题 provenance：21题 D 级并由第二位盲算逐题核对，Q3 为 U。`solution_sources check-batch`、`issues.py validate`、`source_manifest.py validate`、`provenance.py check-batch` 均通过；未运行测试套件。
+- 纸卷当前 `blocked`、批次 `provenance_verified`。四版入口、正式构建和逐页视觉审查尚未进行；下一步生成四版并进入正式构建/回执流程，保留 Q3 阻断。成本未单独统计，记未知。
+
+阶段报告：`reports/2006-anhui-science-registration.md`。

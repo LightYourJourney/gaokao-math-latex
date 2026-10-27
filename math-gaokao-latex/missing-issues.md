@@ -20312,3 +20312,20 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1219
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本 Q3 只印出 x^2/6 + y^2/2，随后直接接“的右焦点”，未见等号和右侧。题面照录且经独立复核确认忠实；仅凭当前副本无法确定右焦点或 p，答案为 U/PENDING。",
+  "fingerprint": "5ffa2f8307ff0aa516cdbce8c8245ca876255336e9587e8a5283ff46401d3014",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-anhui-science",
+  "question_id": "gk-2006-regular-anhui-science-q03",
+  "resume_action": "取得可追溯的同版完整题面或可靠勘误，核明椭圆方程右侧后重新独立求解并更新答案及逐题来源记录。",
+  "source_id": "src-3aed0bc3d5875c8ce734b5b97f95992307ff56fc580067083caea214e3028675",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
