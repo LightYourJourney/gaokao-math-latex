@@ -1718,7 +1718,7 @@
       "paper_ids": [
         "gk-2020-spring-shanghai"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1728,7 +1728,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "80595e53-bf0a-43c0-acd1-2b90317f0484",
+  "last_transaction_id": "421e6742-aa3a-4261-bf02-219f0bee83cb",
   "papers": [
     {
       "blocked_from": null,
@@ -23800,11 +23800,16 @@
     },
     {
       "blocked_from": "planned",
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2020_上海春季卷/figures/f2020_shanghai_spring_q17_pyramid.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2020_shanghai_spring",
         "id": "gk-2020-spring-shanghai",
-        "note": "固定来源 src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2，SHA-256 4cb2e71aa66630c0154487dbb06436236701c22f79f770193436e20b60e9e327，共9页；第1–2页为题面，第3–9页附载参考答案与试题解析。canonical 表示本库固定副本绑定，不认证发布者、版次、来源链或官方答案身份；official_answer=null。Q17原图待矢量重绘，Q19坐标范围待核，Q21源附答案仅写奇数而项目独立推导为正奇数。",
+        "note": "固定来源 src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2，SHA-256 4cb2e71aa66630c0154487dbb06436236701c22f79f770193436e20b60e9e327，共9页；第1–2页为题面，第3–9页附载参考答案与试题解析。canonical 表示本库固定副本绑定，不认证发布者、版次、来源链或官方答案身份；official_answer=null。Q17图已按固定页重绘并登记为TikZ，Q19坐标范围待核，Q21源附答案仅写奇数而项目独立推导为正奇数。",
         "pages_q": [
           1,
           2
@@ -23843,7 +23848,7 @@
       "production_state": "blocked",
       "project_dir": "2020_上海春季卷",
       "question_count": 21,
-      "resume_action": "依固定 PDF 第 1 页绘制矢量图，并同步登记 manifest figure_files、题面及含解析映射、生成器映射和逐题 provenance 后复核。；取得可追溯的同版题面/勘误或明确采用的命题约定；确认前保留答案 U 与线段解释下的条件结论，不把该范围补写进原题。；取得同版勘误或可追溯答案材料后复核源附缺项；在此之前保留源附原结论、项目正奇数推导与 open/blocks_completion，不据源附答案单独裁定。",
+      "resume_action": "取得可追溯的同版题面/勘误或明确采用的命题约定；确认前保留答案 U 与线段解释下的条件结论，不把该范围补写进原题。",
       "source_files": {
         "answer_key": "2020/2020_数学真题_春季上海_答案要点.md",
         "combined_rendered": "2020/2020_数学真题_春季上海_含解析.md",
@@ -23858,7 +23863,7 @@
       "year": 2020
     }
   ],
-  "revision": 5257,
+  "revision": 5261,
   "schema_version": 1,
   "sources": [
     {

@@ -20437,18 +20437,17 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定 PDF 第 1 页 Q17 含四棱锥示意图；题面稿现为待重绘占位，项目尚无对应矢量图。",
+  "current_evidence": "固定 PDF 第 1 页 Q17 四棱锥图已重绘为 TikZ 源并登记到 figure_files；规范题面和生成的含解析稿映射到该图，questions.tex 与 answers.tex 各引用一次。图稿对照源图保留 AD、DC、PD 虚线，PA、PB、PC、AB、BC 实线及 A/B/C/D/P 顶点标签，未增添角标。正式四版构建与排版视觉检查尚未执行。",
   "fingerprint": "10172ef6227c196b66200c007d224e99199258f3f9e2a20fad90c6bcda9ff712",
   "impact": "blocks_completion",
   "paper_id": "gk-2020-spring-shanghai",
   "question_id": "gk-2020-spring-shanghai-q17",
-  "resume_action": "依固定 PDF 第 1 页绘制矢量图，并同步登记 manifest figure_files、题面及含解析映射、生成器映射和逐题 provenance 后复核。",
+  "resume_action": "图稿已按固定副本 Q17 源图重绘并登记，题面及确定性 TeX 映射已同步；此缺图问题结案。若正式构建中发现版面问题，另行登记具体修订事项。",
   "source_id": "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
-
 ## ISSUE-1227
 
 ```json

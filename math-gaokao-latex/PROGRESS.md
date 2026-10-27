@@ -6,6 +6,14 @@
 
 
 
+### 2020 上海春季卷：Q17 TikZ 图稿与逐题 provenance（2026-10-28）
+
+- 已完成：按固定 PDF 第 1 页重绘 Q17 四棱锥示意图，新增 2020_上海春季卷/figures/f2020_shanghai_spring_q17_pyramid.tex；原图 AD、DC、PD 为虚线，PA、PB、PC、AB、BC 为实线，未增加角标或尺寸。题面 Markdown、含解析稿、manifest figure_files 与确定性 TeX 映射均已同步，图稿登记引用次数为2。
+- ISSUE-1226（缺矢量图）已解决；ISSUE-1227（Q19坐标范围）与 ISSUE-1228（Q21源附“奇数”/项目“正奇数”）保持 open / blocks_completion。题面、答案层继续不补写缺失范围，不认证固定副本答案为官方。
+- 已导入 phase1-b48 的 Q1–Q21 provenance。第二位题面复核者没有审阅后来完成的 Q17 TikZ；主会话对照源页检查图稿。盲解者只看题面页，Q1–Q20与记录结论相符、Q21冲突未决；这不等于第二人逐字审阅后成答案文档。身份未记录时只记录角色，不推定姓名。
+- 验证：source manifest、issues、provenance、solution sources、projects、short answers、editions 检查通过；全量报告六项目标经一个 content 事务刷新并回读，report.py check --all 通过；manifest.csv 775行且当前。manifest revision 5261，批次 provenance_verified，paper blocked。
+- 使用 standalone TikZ 预览与固定源页图形对照；该预览不是正式试卷版面校样。未运行测试套件；尚无四版正式构建、PDF 回执或整页视觉校样。下一步进行四版构建与页面审查，Q19/Q21 阻断继续保留。
+
 ### 2020 上海春季卷：源附答案摘录与项目独立解析草稿（2026-10-28）
 
 - 已完成：固定 PDF 第 3–9 页答案结论独立摘录；新增 Q1–Q21 项目答案要点及逐题解析正文。官方答案状态仍为 null；不把扫描件所附材料标成官方答案。
