@@ -1711,6 +1711,14 @@
         "gk-2019-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b48",
+      "issues": [],
+      "paper_ids": [
+        "gk-2020-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1720,7 +1728,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5440c7bb-4335-4021-b92b-9f81f0664f30",
+  "last_transaction_id": "80595e53-bf0a-43c0-acd1-2b90317f0484",
   "papers": [
     {
       "blocked_from": null,
@@ -23789,9 +23797,68 @@
       "title": "2019 年·上海春季招生数学试卷",
       "track": "none",
       "year": 2019
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2020_shanghai_spring",
+        "id": "gk-2020-spring-shanghai",
+        "note": "固定来源 src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2，SHA-256 4cb2e71aa66630c0154487dbb06436236701c22f79f770193436e20b60e9e327，共9页；第1–2页为题面，第3–9页附载参考答案与试题解析。canonical 表示本库固定副本绑定，不认证发布者、版次、来源链或官方答案身份；official_answer=null。Q17原图待矢量重绘，Q19坐标范围待核，Q21源附答案仅写奇数而项目独立推导为正奇数。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          3,
+          9
+        ],
+        "paper": "上海春季卷",
+        "structure": {
+          "单选题": [
+            13,
+            16
+          ],
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            21
+          ]
+        },
+        "track": "春季招生",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1226",
+        "ISSUE-1227",
+        "ISSUE-1228"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2020-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2020_上海春季卷",
+      "question_count": 21,
+      "resume_action": "依固定 PDF 第 1 页绘制矢量图，并同步登记 manifest figure_files、题面及含解析映射、生成器映射和逐题 provenance 后复核。；取得可追溯的同版题面/勘误或明确采用的命题约定；确认前保留答案 U 与线段解释下的条件结论，不把该范围补写进原题。；取得同版勘误或可追溯答案材料后复核源附缺项；在此之前保留源附原结论、项目正奇数推导与 open/blocks_completion，不据源附答案单独裁定。",
+      "source_files": {
+        "answer_key": "2020/2020_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2020/2020_数学真题_春季上海_含解析.md",
+        "questions": "2020/2020_数学真题_春季上海_试题.md",
+        "solution_body": "2020/2020_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2"
+      ],
+      "title": "2020 年·上海春季招生数学试卷",
+      "track": "none",
+      "year": 2020
     }
   ],
-  "revision": 5256,
+  "revision": 5257,
   "schema_version": 1,
   "sources": [
     {
@@ -24624,8 +24691,8 @@
       "exam_type": "spring",
       "git_blob_oid": "6b2877388d0bae01db0a448457d7fdfbded972c5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2020-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2020春季上海.pdf",
       "regions": [],
       "source_id": "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2",

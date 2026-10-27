@@ -14,6 +14,15 @@
 - 验证：人工复算题目结论并对照固定 PDF 附载结论；git diff --check 待提交前执行。本阶段未运行测试套件、OCR、生成器、LaTeX、PDF 构建或视觉校样。
 - 成本与下一步：未用OCR或外部API，模型Token、费用与工时不可见。下一步在一个 state transaction 中登记 source/paper/batch，保留 Q19/Q21 阻断；随后绘制 Q17 矢量图并完成题面、答案、解析与来源的 provenance 门禁。
 
+### 2020 上海春季卷：paper/source、开放阻断登记与确定性生成（2026-10-28）
+
+- 注册 gk-2020-spring-shanghai、固定来源 src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2 及批次 phase1-b48，source manifest revision 5256 → 5257。paper 当前 blocked，batch 为 planned，official_answer=null；内部 canonical 绑定不认证发布者、版次、来源链或官方答案身份。
+- 新增 ISSUE-1226（Q17图）、ISSUE-1227（Q19坐标范围）和 ISSUE-1228（Q21答案冲突），均 open / blocks_completion。Q17图稿占位、Q19条件答案、Q21源附“奇数”与项目“正奇数”推导继续并列保留。
+- 在题面12行小问编号后补解析器所需分隔空格，不改题目文字；答案要点增加与现有逐题答案一致的Q13–Q16速查表 D/A/B/B。确定性生成解析正文、含解析稿、questions.tex、answers.tex、index.json、answers_short.tex及四版入口壳。
+- source_manifest.py validate、issues.py validate、solution_sources.py check-batch、generate_projects.py --check、make_short_answers.py --check、make_editions.py --check 均通过；全库报告投影经单一content事务刷新并通过 report.py check --all，775行 manifest.csv 当前性核验通过。
+- 本阶段未导入逐题 provenance、未运行测试套件、未做 XeLaTeX 正式构建或 PDF 视觉校样。出版者/版次/来源链与答案官方性仍未核。阶段报告：reports/2020-shanghai-spring-registration-generation.md。
+- 下一步绘制 Q17 矢量图并同步 manifest、Markdown映射、生成映射与provenance，再逐题导入题面、答案及解析 provenance。成本与工时未知。
+
 
 ### 2004 春季安徽理科卷：38页逐页视觉验收并关闭批次（2026-10-27）
 

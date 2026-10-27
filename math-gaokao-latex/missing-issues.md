@@ -20431,3 +20431,54 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1226
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第 1 页 Q17 含四棱锥示意图；题面稿现为待重绘占位，项目尚无对应矢量图。",
+  "fingerprint": "10172ef6227c196b66200c007d224e99199258f3f9e2a20fad90c6bcda9ff712",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2020-spring-shanghai",
+  "question_id": "gk-2020-spring-shanghai-q17",
+  "resume_action": "依固定 PDF 第 1 页绘制矢量图，并同步登记 manifest figure_files、题面及含解析映射、生成器映射和逐题 provenance 后复核。",
+  "source_id": "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1227
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面称步行道 OA 长 120 米并定义 B(x,0)、ω2(t,0)，但未明列 x,t 范围；固定源所附解析按 B、ω2 均在线段 OA 上推导。",
+  "fingerprint": "769aab6b7a42790d8eb7c499716993b4bf29f825b08354ad557f33f6d3241362",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2020-spring-shanghai",
+  "question_id": "gk-2020-spring-shanghai-q19",
+  "resume_action": "取得可追溯的同版题面/勘误或明确采用的命题约定；确认前保留答案 U 与线段解释下的条件结论，不把该范围补写进原题。",
+  "source_id": "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1228
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第 9 页第（3）问只写 m 为奇数；题面允许 m∈Z。项目按题面独立分类得到正奇数：m≤0 有 f(n)=-n 反例，正偶数有奇偶指示函数反例，正奇数由周期 2 与 m 且 gcd(2,m)=1 强制常值。",
+  "fingerprint": "f0a9b473d8ea7752d82508f30c41d23d3bf0b91097ae2ae67a6bc6bb530e5264",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2020-spring-shanghai",
+  "question_id": "gk-2020-spring-shanghai-q21",
+  "resume_action": "取得同版勘误或可追溯答案材料后复核源附缺项；在此之前保留源附原结论、项目正奇数推导与 open/blocks_completion，不据源附答案单独裁定。",
+  "source_id": "src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
