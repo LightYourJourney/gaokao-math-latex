@@ -9787,3 +9787,12 @@
 - 重生成项目 TeX、含解析、答案速查和四版壳；manifest、provenance、Markdown、项目、速查、入口及 775 行 CSV currentness 均通过。
 - 首轮 PDF build receipt 已因输入改变而失效；需重新构建、重渲全部页面并以新 attempt 完成 review。
 - 报告：`reports/2006-spring-shanghai-q21-solution-figure-correction.md`。
+
+
+### 2006 上海春季招生数学试卷：四版正式构建与视觉收口（2026-10-27）
+
+- 正式构建：attempt `530c4ed9-1621-4872-8146-1e9ee0ffe839`；试题版4页、解析版19页、简答版6页、印刷版16页，四版均 succeeded，构建警告0。
+- 视觉审查：四版共45页逐页检查八项，均通过；review receipt 与同一 attempt、PDF SHA、manifest投影、输入树及工具链绑定，警告豁免0、视觉问题0。
+- 收口：`review_receipts.py finalize-batch` 返回 `FINALIZED` / `closed`，manifest revision 5191→5194、production_state=complete；报告为 `reports/phase1-b41.md`。source manifest 与 build/review receipts 校验通过，775行 manifest CSV 已刷新并核对 current。
+- 来源边界：当前固定扫描副本的题签、内载参考答案及其扫描字节已记录；杂志出版链、扫描来源、题面和源载答案的官方身份仍未核实，`official_answer` 仍为 null。本卷收口不代表长期语料完成。
+- 验证范围：未运行测试套件；未 push。
