@@ -6,6 +6,15 @@
 
 
 
+### 2003 春季北京文科卷：四版正式构建与46页视觉审查收口（2026-10-28）
+
+- 首次正式构建发现题面说明中的行内代码 `official_answer` 被渲染为含未转义下划线的 `\texttt{official_answer}`，四版均以 XeLaTeX `Missing $ inserted` 失败；定位后仅将说明改为普通中文，保留“固定源无答案页、项目解析非官方”事实，未改题目内容。失败尝试登记的 `ISSUE-1230`–`ISSUE-1233` 已在成功重建后全部 resolved。
+- 正式 build attempt `9e8a5f0c-fa1b-4d4f-a145-853cf1cc4562` 成功，receipt 输入 manifest revision 5271。试题版5页 SHA-256 `53b835840db29865f23f63f04a8923cb229661b63420883ae99c32af323e59d0`；解析版19页 `bb3680fb86e36503660e44c6041abe51924011aafe1551ddc9e82e3edef30597`；简答版7页 `8175a8f16d93d8f5695fc2a7fe49e6aee477a54e82fab566dee3007e27655fd7`；印刷版15页 `207acd40108873245443e85193ea34c199f40b315e6cba8f491aefdf0fc3960a`。errors、missing characters、undefined references 均为0；4条 Overfull hbox 警告逐条登记视觉豁免。
+- 全页覆盖46页、368项八类检查：347 pass、21 not_applicable（仅无图页的 `figure_label`）、0 fail、0 pending。全部页面以110 dpi逐页目视检查；Q9/Q11、Q14、Q19、Q22图稿及关键密集页再以180 dpi复核。警告对应Q11题干与图稿；复核未见裁切、遮挡或可读性问题。Q11渲染标签清楚不等于来源字形确认，`ISSUE-1229` 仍 open / blocks_completion。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，最终 manifest revision 5273；batch `closed_with_blockers`，paper `blocked`。`official_answer=null`；固定 XeTeX 副本的发布者、版次、来源链仍未认证，未把独立推导称为官方答案。
+- build `validate-receipts --require-final --require-current-inputs`、review `check-batch`、provenance、source manifest、issues、`report.py render --all` 与 `report.py check --all` 均通过；六个全量报告投影当前，manifest.csv 当前且775行。未运行测试套件；模型Token、费用及工时不可见，记未知。
+- 阶段报告：`reports/phase1-b49.md`。本阶段完成的是该卷正式构建和视觉复核；Q11来源疑点仍阻塞该卷完成，不代表1952–2026语料库完成。
+
 ### 2020 上海春季卷：四版正式构建与39页视觉审查收口（2026-10-28）
 
 - 首轮视觉检查发现来源框中的 source ID/SHA 长串触发 Overfull 并越过边框；仅在规范题面来源说明添加显式换行，未改 source ID、PDF SHA 或题目内容。重生成后正式 build attempt `fb6f032a-b6be-480e-9e9e-8bb31a475ae1` 成功；build receipt 记录 manifest revision 5264，日志 errors、missing characters、overfull、undefined references 均为空。
