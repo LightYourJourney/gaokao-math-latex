@@ -9894,3 +9894,12 @@
 - 同步：全量报告六个投影经 `report.py render --all` 事务刷新并回读；`report.py check --all` 显示与当前 manifest 一致。来源 CSV 为775行且回读一致；source manifest、问题总账和 `phase1-b44` 22题答案源对齐校验通过。
 - 边界：试卷继续由 `ISSUE-1211` 阻断，`production_state=blocked`，`official_answer=null`；本阶段未导入逐题 provenance，未构建 PDF 或进行视觉复核，不得视为完成卷。
 - 阶段报告：`reports/2004-spring-anhui-arts-project-generation.md`。
+
+
+### 2004 春季安徽文科卷：逐题 provenance 导入（2026-10-27）
+
+- 已完成：基于现存题面盲核与独立盲解记录，为 Q1–Q22 填写三角色工作件；哈希由 `provenance.py` 读取当前题面/答案要点现场重算。事务写入 manifest revision 5219，`provenance.py check-batch --batch phase1-b44` 为 `OK：1卷`。
+- 核验结果：题面复核22题 passed；Q1–Q22 答案结论均由第二位隔离盲解交叉核对。Q1–Q17、Q19–Q22 记 D（本项目非官方推导）；Q18 记 U，关联 `ISSUE-1211`。两位解题者对Q18的不唯一结论一致，故 `conflict_status=none`；其阻断原因是题面欠定，不是复核者冲突。
+- 页码边界：当时仅保留全卷两页 PDF 的逐页核对回执，未保留逐题页码映射；provenance 的 `source_pages=[1,2]` 对全部题目引用整份固定源，不声称精确单页归属。题面源 SHA-256 固定为 `17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8`。
+- 状态：Q18 仍阻断 completion，`official_answer=null`、paper 保持 `blocked`。本阶段未构建 PDF 或进行版面视觉复核。
+- 阶段报告：`reports/2004-spring-anhui-arts-provenance.md`。
