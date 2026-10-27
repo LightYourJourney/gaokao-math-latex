@@ -10101,3 +10101,11 @@
 - Q16 短答使用 U；答案行保留固定副本选 A、严格轨迹与选项不匹配，`ISSUE-1222` 未决。Q9/Q11/Q18/Q19 的条件分支和六条 open/blocks_completion issue 均保持。
 - 已生成共享题面/答案 TeX、`index.json`、简答 TeX 与四版入口。`provenance check-batch`、`solution_sources check-batch`、三个生成器 `--check`、manifest/issues validate 与 775行CSV currentness检查通过。
 - `report.py render --all` 以一个 content 事务写入并回读六个报告目标；`report.py check --all` 确认全量投影与 manifest 当前一致，并保留未完成状态。当前 paper `blocked`、batch `provenance_verified`（`provenance.py status --batch phase1-b47`）；尚未正式构建/视觉复核。阶段报告：`reports/2019-shanghai-spring-provenance-generation.md`。
+
+### 2019 上海春季卷：四版正式构建与逐页视觉审查（2026-10-28）
+
+- 正式 XeLaTeX build attempt `9716d59b-d305-4e17-a3a9-ec5957d0bd07` 从 manifest revision `5254` 开始，输入投影 SHA-256 `c4f4314bb4ef920b8da274de245db306b8c20e4d870f42b9f748521377a79b92`；生成输入树 `8f61a8ba6e7bdc72ea4d96791b461a962130e51cb817b92c6b66007cfab5fe42`，依赖树 `a74d07fc5e3d8e3315a17edc5355015d617c7a81c4b4f4e745a6db718a80f058`。工具链为 TeX Live 2026、XeTeX、latexmk 4.88、Poppler 26.10.0；日志错误、overfull 与构建警告均为零。
+- 四版 PDF：试题版 4 页 SHA-256 `a6b51349f136589560f01455805ca88df4009c57d9e36a321077ebbdf346259d`；解析版 16 页 `4a10d4d55741e549f53ac3007af579c1752f09a2b840c6a74810c3d959225093`；简答版 6 页 `f5a0cb1cf3d92ffef9484880f2e17970149dc5b9573aea25f45a728a46441aef`；印刷版 11 页 `f3dcfe8fba5fead1138519438f8304e408e515a5f58a94fea3c3ea9f106a73dc`。
+- 四版共37页均已逐页查看最新渲染图，完成296项八类检查：244 pass、52 not_applicable、0 fail；无视觉问题。正式 build/review 回执绑定同一 attempt；`validate-receipts --require-final --require-current-inputs`、`review_receipts check-batch`、`provenance check-batch`、`solution_sources check-batch`、source manifest/issues validate、`report.py check --all` 与775行CSV currentness检查通过。
+- 全量报告投影已由一个 content 事务刷新并回读校验六个目标。最终 manifest revision `5256`；批次 `phase1-b47` 为 `closed_with_blockers`，paper 仍为 `blocked`。`ISSUE-1220` 至 `ISSUE-1225` 均继续开放并阻断完成，发布者/版次/来源链及官方身份仍未核；不得把本卷表述为官方或完成长线语料库。未运行测试套件。
+- 阶段审查报告：`reports/phase1-b47.md`；正式 SHA、页数和工具链明细绑定在 `2019_上海春季卷/receipts/{build,review}.json`。
