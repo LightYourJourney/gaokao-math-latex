@@ -9862,3 +9862,11 @@
 - 未完成：共享TeX/简答/四版入口和全局 `index.json` 尚未由生成器更新，因此旧项目 artifact currentness 暂报 stale；不声称历史build/review回执仍有效。未运行测试、正式构建、视觉检查或外部来源检索。
 - 下一步：生成本卷questions/answers TeX、简答速查、四版入口和全局index，随后再验证 receipt currentness；正式构建和逐页目视前仍不标记整卷完成。
 - 阶段报告：`reports/2004-spring-anhui-science-provenance.md`。
+
+### 2004 春季安徽文科卷：答案/解析结构规范化与含解析派生稿（2026-10-27）
+
+- 已完成：按 `solution_sources` 的规范格式补齐 Q17、Q18、Q19、Q20、Q22 的加粗答案块；Q20 第（2）问为证明题，答案速查诚实标为“见解析版”。在解析正文为 Q19、Q20、Q22 补齐（1）/（2）小问锚点。只规范答案块边界和小问结构，数学结论不变，Q18 的通项不唯一结论及两组见证数列原样保留。
+- 生成：调用 `extract_solution_blocks()` 与 `render_combined()` 从试题、答案要点、解析正文确定性生成 `2004_数学真题_春季安徽文_含解析.md`。核对 22 个题块、22 组解析、22 组答案逐题对齐；Q20 TikZ 引用在题面与含解析稿各 1 处，未复制光栅图。
+- 验证：生成后重新从当前三份规范源渲染并与派生稿逐字节比较，相同；含解析稿 SHA-256 `1885320dc2abb9f5ee7c7aedd70012dbff8a5b04f0e800424917f2ad5e193197`。本阶段未注册 paper/source、未改 manifest/issue ledger、未构建 LaTeX PDF、未运行测试套件。
+- 来源边界：固定文件 SHA-256 `17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8`；上游出版者与版次未核，官方答案为空。Q18 原题未给数列符号/取值范围，歧义待核，不强选唯一通项。
+- 阶段报告：`reports/2004-spring-anhui-arts-solution-source.md`。下一阶段先把候选 paper/source 及 Q18 阻断问题一并登记，再生成共享 TeX 和四版入口。
