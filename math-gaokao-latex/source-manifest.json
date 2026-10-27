@@ -1655,6 +1655,14 @@
         "gk-2018-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b41",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1664,7 +1672,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c42f0c9b-d9bf-4b71-94b0-ccd98efbe246",
+  "last_transaction_id": "71366c18-db56-49f3-9150-303154f86fe3",
   "papers": [
     {
       "blocked_from": null,
@@ -23256,9 +23264,64 @@
       "title": "2018 年上海市春季高考数学试卷",
       "track": "none",
       "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2006_shanghai_spring",
+        "id": "gk-2006-spring-shanghai",
+        "note": "固定扫描副本自题签为2006年上海市普通高等学校春季招生考试，页眉标《数学教学》2006年第2期、印刷页码2-39至2-42；source SHA-256 67fcf5d3aaa25ca7f22fa0b57dc9fdad5ccffaf1c9f7911919c65bad657e8762。杂志出版信息、扫描来源链、题面及源载参考答案的发布者/版本/官方身份均未核；源载答案仅按固定副本印载材料记录。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          2,
+          4
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季招生",
+        "variant": "春季上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-spring-shanghai",
+      "production_state": "planned",
+      "project_dir": "2006_上海春季卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_春季上海_含解析.md",
+        "questions": "2006/2006_数学真题_春季上海_试题.md",
+        "solution_body": "2006/2006_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-788a65aef8319a4a0abebc5ded42d68216d14d78d55583936dba4ab5d90a7a3b"
+      ],
+      "title": "2006 年·上海春季招生数学试卷",
+      "track": "none",
+      "year": 2006
     }
   ],
-  "revision": 5183,
+  "revision": 5184,
   "schema_version": 1,
   "sources": [
     {
@@ -23755,8 +23818,8 @@
       "exam_type": "spring",
       "git_blob_oid": "c4ba4c5ce56b54f7dc4826d2afa4757da4f06bdd",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006春季上海.pdf",
       "regions": [],
       "source_id": "src-788a65aef8319a4a0abebc5ded42d68216d14d78d55583936dba4ab5d90a7a3b",

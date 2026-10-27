@@ -9752,3 +9752,12 @@
 - 修改文件：新增答案要点、解析正文、独立推导报告；题面稿只细化转录复核状态，追加本进度记录。
 - 生成：调用`solution_sources.render_combined`校验规范源的题号/小问对齐，并确定性生成523行、22题的`_含解析.md`派生稿。
 - 报告：`reports/2006-spring-shanghai-independent-solutions.md`。下一阶段完成候选paper/source事务和逐题provenance，再进入图稿与项目生成。
+
+
+### 2006 上海春季招生数学试卷：候选 paper/source 绑定（2026-10-27）
+
+- 已完成：注册候选卷`gk-2006-spring-shanghai`及`phase1-b41`，manifest revision 5183→5184；固定 source `src-788a65aef8319a4a0abebc5ded42d68216d14d78d55583936dba4ab5d90a7a3b`反向绑定，`paper_relation=canonical`仅指本库当前固定副本关系，不表示官方原件。
+- 状态：22题，`track=none`，`production_state=planned`，无 question issue；源载答案发布者、版本及官方身份未核；图稿列表暂空，后续单独登记。
+- 页码：题面页`[1,2]`；源载答案/解答页`[2,4]`。报告/CSV投影刷新检查 current，manifest与问题账校验通过。
+- 修改文件：manifest、注册阶段报告及本进度；事务规格留在忽略的`.work/phase1-b41/`，未纳入提交。
+- 报告：`reports/2006-spring-shanghai-registration.md`。后续登记三幅题图与逐题provenance，再生成项目 TeX 和四版入口。
