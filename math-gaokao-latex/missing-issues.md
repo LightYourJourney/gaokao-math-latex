@@ -20171,3 +20171,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1211
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 PDF 第1页 Q18 仅给出 b_1=1 与前 n 项和 B_n=(b_n+1)^2/4，未规定 b_n 的符号或取值范围。递推化简为 (b_n+b_{n-1})(b_n-b_{n-1}-2)=0，因此每步可有 b_n=-b_{n-1} 或 b_n=b_{n-1}+2；例如 b_n=(-1)^(n-1) 与 b_n=2n-1 均满足题面，通项不唯一。题面忠实保留源文，现有答案不强选唯一式。固定 PDF 不含答案页，不能用来源载答案解决此点。",
+  "fingerprint": "ba606951d4705c7d429baba2b7307343077e1bae89b5d167fc1944986dc4c865",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-spring-anhui-arts",
+  "question_id": "gk-2004-spring-anhui-arts-q18",
+  "resume_action": "取得可追溯的同版勘误或独立同期题面/答案材料，核实是否漏印了对 b_n 的符号或取值范围限制；核实前保留原题与非唯一推导，将整卷 production_state 保持 blocked。",
+  "source_id": "src-9c46c959fc97e9d53c91e510403e97f1810d192e5049962539d9d4b54331c35d",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

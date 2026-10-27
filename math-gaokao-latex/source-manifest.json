@@ -1679,6 +1679,14 @@
         "gk-2004-spring-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b44",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-spring-anhui-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1688,7 +1696,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "fe7b4e93-e1a1-416a-a66d-74ce02430568",
+  "last_transaction_id": "7f34e4b6-5f0a-4b68-a7bc-4cb7023bbec6",
   "papers": [
     {
       "blocked_from": null,
@@ -23483,9 +23491,68 @@
       "title": "2004 年·普通高等学校春季招生考试·安徽卷理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_安徽春季卷_文科/figures/gaokao_2004_anhui_spring_arts_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_spring_anhui_arts",
+        "id": "gk-2004-spring-anhui-arts",
+        "note": "固定题面 PDF source ID src-9c46c959fc97e9d53c91e510403e97f1810d192e5049962539d9d4b54331c35d，SHA-256 17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8；2页A3、原卷印刷页码151–152，页眉题签自称2004年普通高等学校春季招生考试安徽卷文科。固定文件出版者、版次及来源链未核；不称官方原件。PDF无答案页，答案/解析为独立推导，official_answer=null。Q20有一幅TikZ矢量重绘。Q18原题未规定数列取值范围，满足条件的通项不唯一；关联阻断问题。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季高考安徽文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "春季高考文科",
+        "variant": "安徽春季文科"
+      },
+      "issue_ids": [
+        "ISSUE-1211"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-spring-anhui-arts",
+      "production_state": "blocked",
+      "project_dir": "2004_安徽春季卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版勘误或独立同期题面/答案材料，核实是否漏印了对 b_n 的符号或取值范围限制；核实前保留原题与非唯一推导，将整卷 production_state 保持 blocked。",
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_春季安徽文_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_春季安徽文_含解析.md",
+        "questions": "2004/2004_数学真题_春季安徽文_试题.md",
+        "solution_body": "2004/2004_数学真题_春季安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-9c46c959fc97e9d53c91e510403e97f1810d192e5049962539d9d4b54331c35d"
+      ],
+      "title": "2004 年·普通高等学校春季招生考试·安徽卷文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 5217,
+  "revision": 5218,
   "schema_version": 1,
   "sources": [
     {
@@ -23862,8 +23929,8 @@
       "exam_type": "spring",
       "git_blob_oid": "eda9b296003e705df44537fea413a52e18cf4793",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-spring-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004春季安徽文.pdf",
       "regions": [],
       "source_id": "src-9c46c959fc97e9d53c91e510403e97f1810d192e5049962539d9d4b54331c35d",

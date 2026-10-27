@@ -9870,3 +9870,12 @@
 - 验证：生成后重新从当前三份规范源渲染并与派生稿逐字节比较，相同；含解析稿 SHA-256 `1885320dc2abb9f5ee7c7aedd70012dbff8a5b04f0e800424917f2ad5e193197`。本阶段未注册 paper/source、未改 manifest/issue ledger、未构建 LaTeX PDF、未运行测试套件。
 - 来源边界：固定文件 SHA-256 `17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8`；上游出版者与版次未核，官方答案为空。Q18 原题未给数列符号/取值范围，歧义待核，不强选唯一通项。
 - 阶段报告：`reports/2004-spring-anhui-arts-solution-source.md`。下一阶段先把候选 paper/source 及 Q18 阻断问题一并登记，再生成共享 TeX 和四版入口。
+
+### 2004 春季安徽文科卷：paper/source 与 Q18 阻断项事务登记（2026-10-27）
+
+- 已完成：通过 `source_manifest.py register-papers` 将候选 `gk-2004-spring-anhui-arts` 登记到批次 `phase1-b44`，manifest revision `5217 → 5218`。固定 source `src-9c46c959fc97e9d53c91e510403e97f1810d192e5049962539d9d4b54331c35d` 绑定为本库 canonical 题面来源；此关系只表示内部固定副本绑定，不证明官方原件。
+- 状态：22题，`track=arts`，题面页 `[1,2]`，答案页 `null`；Q20 TikZ 图纳入 `figure_files`，预期在题面/含解析稿各出现一次。Q18 原题下通项不唯一，事务生成 `ISSUE-1211`（`answer-missing` / `blocks_completion`），paper 状态为 `blocked`、`blocked_from=planned`；`official_answer=null`。
+- 来源边界：固定 PDF SHA-256 `17f32ff6f385dfd59d80f5bccfa548dd9b7f8d20e697ce4a66b4de185b95d7a8`，2页A3、印刷页码151–152，文件题签自称2004年普通高等学校春季招生考试安徽卷文科。上游发布者、版次和来源链未核；不称官方原卷。
+- 验证：注册 dry-run 与事务写入成功；`source_manifest.py validate`、`issues.py validate`、`report.py check --all`、775行 `manifest_csv.py --check` 均通过；`solution_sources.py check-batch --batch phase1-b44` 显示22题全部通过。全量报告投影与来源 CSV 已刷新。
+- 未完成：尚未导入逐题 provenance、生成共享 `questions.tex`/`answers.tex` 与四个独立入口，未正式构建 PDF 或进行视觉复核；未运行测试套件、未 push。须在取得可追溯同版勘误/同期材料前保留 Q18 阻断状态。
+- 阶段报告：`reports/2004-spring-anhui-arts-registration.md`。
