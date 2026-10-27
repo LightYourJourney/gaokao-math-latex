@@ -32,10 +32,12 @@ class AnhuiSpring2004ArtsTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], "春季高考/2004/2004春季安徽文.pdf")
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-2004-spring-anhui-arts")
+        self.assertEqual(source["paper_relation"], "canonical")
         self.assertIn(SOURCE_ID, transcript)
         self.assertIn(SOURCE_SHA256, transcript)
-        self.assertIn("paper_id 未绑定", transcript)
+        self.assertIn("paper_id=gk-2004-spring-anhui-arts", transcript)
+        self.assertNotIn("paper_id 未绑定", transcript)
         self.assertIn("official_answer: null", transcript)
 
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", transcript, re.M)]

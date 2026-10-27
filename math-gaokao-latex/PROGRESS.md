@@ -9879,3 +9879,10 @@
 - 验证：注册 dry-run 与事务写入成功；`source_manifest.py validate`、`issues.py validate`、`report.py check --all`、775行 `manifest_csv.py --check` 均通过；`solution_sources.py check-batch --batch phase1-b44` 显示22题全部通过。全量报告投影与来源 CSV 已刷新。
 - 未完成：尚未导入逐题 provenance、生成共享 `questions.tex`/`answers.tex` 与四个独立入口，未正式构建 PDF 或进行视觉复核；未运行测试套件、未 push。须在取得可追溯同版勘误/同期材料前保留 Q18 阻断状态。
 - 阶段报告：`reports/2004-spring-anhui-arts-registration.md`。
+
+### 2004 春季安徽文科卷：canonical paper 绑定状态同步（2026-10-27）
+
+- 已完成：paper/source 登记后，将试题稿 front matter 与来源说明从 `paper_id 未绑定` 更新为 `paper_id=gk-2004-spring-anhui-arts`，明确 canonical 只表示本库固定副本绑定，不认证官方来源身份；上游出版者/版次未知与 `official_answer=null` 保持。
+- 派生稿：从更新后的题面、规范答案、解析正文重新调用确定性合并器生成 `_含解析.md`，22题仍逐题对齐；没有更改题目数学内容、答案结论或 Q18 不唯一状态。
+- 回归断言：现有转录测试改为核对 source manifest 的 `paper_id`/`paper_relation` 与题面说明一致。按新断言先运行得到预期失败（题面仍标未绑定），同步后转录与解答两套定向测试 7/7 通过（0.778秒）。
+- 阶段边界：paper 仍由 `ISSUE-1211` 阻塞；尚无逐题 provenance、共享 TeX、四版入口、PDF 构建或视觉校验。
