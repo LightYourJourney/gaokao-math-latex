@@ -37,7 +37,7 @@ class ShanghaiSpring2000SolutionTests(unittest.TestCase):
         ]
         self.assertEqual(numbers, list(range(1, 23)))
         self.assertIn("两路独立求解者交叉复算", self.solutions)
-        self.assertIn("题图重绘和正式构建尚未完成", self.solutions)
+        self.assertIn("三幅题图已矢量重绘并局部核对，正式构建尚未完成", self.solutions)
 
     def test_high_risk_conclusions_match_independent_checks(self):
         self.assertIn(r"| 18 | $z=\pm", self.answers)
