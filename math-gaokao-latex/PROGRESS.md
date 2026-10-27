@@ -6,6 +6,13 @@
 
 
 
+### 2004 春季安徽理科卷：修复说明文字并完成四版正式构建（2026-10-27）
+
+- 已完成：首轮构建四版均因题面说明中的裸 `_`（`official_answer`）在 TeX 文本模式触发 `Missing $ inserted` 失败；只改题面与解析正文的说明措辞，不改题目、数学结论、答案或来源身份，并由解析/项目生成器刷新派生文件。第二次 attempt `3f3fe168-903c-4008-8086-4347ee96c501` 四版正式构建成功，38页（试题4、解析17、简答6、印刷11），paper 状态 `compiled_pending_review`，manifest revision 5215。
+- 验证：四版 build receipt 均成功、latexmk 退出码0，错误/缺字/overfull/未解析引用/problems均为空；build 回执当前性、manifest、provenance、solution source 与三个生成器 `--check` 均通过。首次失败登记的 ISSUE-1207 至 ISSUE-1210 已解决。
+- 边界/下一步：未运行测试套件或视觉检查，PDF 尚未逐页目视验收。下一阶段检查四版全部38页并形成当前 attempt 绑定的视觉回执。固定来源出版者、版次和原始来源链仍未知；`official_answer=null`，答案是D级独立推导。
+
+
 ### 2004 春季安徽理科卷：共享 TeX、简答与四版入口生成（2026-10-27）
 
 - 已完成：`phase1-b43` 生成共享 `questions.tex`、`answers.tex`、全局 `index.json`、`answers_short.tex` 与试题/解析/简答/印刷四版入口。通过 `provenance.py import-batch --write` 官方状态事务从 revision 5211 更新到 5212；paper 状态为 `editions_generated`，batch 保持 `provenance_verified`。
