@@ -9796,3 +9796,11 @@
 - 收口：`review_receipts.py finalize-batch` 返回 `FINALIZED` / `closed`，manifest revision 5191→5194、production_state=complete；报告为 `reports/phase1-b41.md`。source manifest 与 build/review receipts 校验通过，775行 manifest CSV 已刷新并核对 current。
 - 来源边界：当前固定扫描副本的题签、内载参考答案及其扫描字节已记录；杂志出版链、扫描来源、题面和源载答案的官方身份仍未核实，`official_answer` 仍为 null。本卷收口不代表长期语料完成。
 - 验证范围：未运行测试套件；未 push。
+
+
+### 2006 上海理科卷：固定来源 intake（2026-10-27）
+
+- 已核对未绑定来源 `src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6`：本机固定 PDF SHA-256 `0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5`、Git blob OID `8dc621a6bdc166e14552d04130780898e0e05ee8` 与 manifest 相符；2页A3横向，扫描页码328–329，题签“2006 普通高等学校招生考试（上海卷理）”。
+- 两页140dpi渲染逐页目视：Q1–Q19在第1页、Q20–Q22在第2页；共22题，填空1–12、选择13–16、解答17–22。固定源无答案/解析页；Q13、Q16、Q18、Q19含图，后续需矢量重绘。
+- 来源发布/官方身份及扫描链未核。网页核查受本机 Chrome CDP 不可用阻断，未据此声称来源不存在。当前 source 仍未绑定 paper；按 `register-papers` 门槛，先完成三份规范 Markdown 与独立复算再登记。
+- 阶段报告：`reports/2006-shanghai-science-source-intake.md`。未改 manifest、题面、答案、解析、图稿或回执；未运行测试。
