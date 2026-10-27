@@ -9886,3 +9886,11 @@
 - 派生稿：从更新后的题面、规范答案、解析正文重新调用确定性合并器生成 `_含解析.md`，22题仍逐题对齐；没有更改题目数学内容、答案结论或 Q18 不唯一状态。
 - 回归断言：现有转录测试改为核对 source manifest 的 `paper_id`/`paper_relation` 与题面说明一致。按新断言先运行得到预期失败（题面仍标未绑定），同步后转录与解答两套定向测试 7/7 通过（0.778秒）。
 - 阶段边界：paper 仍由 `ISSUE-1211` 阻塞；尚无逐题 provenance、共享 TeX、四版入口、PDF 构建或视觉校验。
+
+
+### 2004 春季安徽文科卷：共享 TeX 与四版入口生成（2026-10-27）
+
+- 已完成：`generate_projects.py --paper gk-2004-spring-anhui-arts --write` 生成 `questions.tex`、`answers.tex` 与全局 `index.json`；随后生成 `answers_short.tex` 和试题版、解析版、简答版、印刷版四个入口。对应三个生成器的逐卷 `--check` 均通过。
+- 同步：全量报告六个投影经 `report.py render --all` 事务刷新并回读；`report.py check --all` 显示与当前 manifest 一致。来源 CSV 为775行且回读一致；source manifest、问题总账和 `phase1-b44` 22题答案源对齐校验通过。
+- 边界：试卷继续由 `ISSUE-1211` 阻断，`production_state=blocked`，`official_answer=null`；本阶段未导入逐题 provenance，未构建 PDF 或进行视觉复核，不得视为完成卷。
+- 阶段报告：`reports/2004-spring-anhui-arts-project-generation.md`。
