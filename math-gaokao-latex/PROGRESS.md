@@ -5,6 +5,15 @@
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
 
+### 2017 上海普通卷：逐题 provenance 与四版入口生成（2026-10-28）
+
+- `phase1-b50` 已导入21题 provenance：Q1–Q18 对应固定 PDF 第1页，Q19–Q21 对应第2页；题面与答案哈希由工具从当前规范源现场重算。答案均为 D 级编者推导，固定来源无答案页，`official_answer=null`。
+- 角色记录仅复现报告和规范源中已有的题面校对、项目推导与复核信息。答案要点 frontmatter 标记 `draft-independently-reviewed`，答案阶段报告记载逐题复算；因此保留“来源记录称已独立复核”，但复核者姓名与方法未记录，不称独立盲核或补写人员身份。Q19 首次计算错误已在答案阶段报告中记载为更正后从头复算；当前无未决答案冲突。
+- 简答生成预检发现两张速查表都以“答案”命名，提取器将前四个填空值误当选择答案。仅把填空表行名规范为“填空答案”，未更改任何答案值；同步重算来源侧记答案文件 SHA-256 为 `8954c9e577ac60ecb4bb1c5810b32e6f0387d9f83f5fc863fac2de80ad952860`。简答版随后生成成功。
+- 已生成 `provenance.json`、`answers_short.tex` 与试题/解析/简答/印刷四版入口。manifest revision `5276→5279`；paper 为 `editions_generated`，batch 为 `provenance_verified`。`source_manifest.py validate`、issues validate、`provenance.py check-batch`、`solution_sources.py check-batch` 和三个生成器 `--check` 均通过；未运行测试套件。
+- 尚无正式四版 PDF、build/review 回执或整页视觉检查。出版者、版次、原始来源链及来源官方身份未核；下一步为正式四版构建与逐页审查。
+- 阶段报告：`reports/phase1-b50-provenance-generation.md`。
+
 ### 2017 上海普通卷：Q7/Q12/Q17 源图重绘、登记与项目 TeX 生成（2026-10-28）
 
 - 固定 PDF 复核更正旧记录的图数：第1页只有 Q7 长方体、Q12 方格、Q17 直三棱柱三图；第2页 Q20 题干后空白，无椭圆图。已删 Q20 图位，未生成虚构图稿。
