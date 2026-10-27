@@ -20329,3 +20329,105 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1220
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第1页 Q9 写明4人参加连续5天活动、甲连续参加2天、其他人各1天，但未说明每天是否必须有人参加；若每日都须覆盖则24种，若允许空日及同日多人则500种。固定副本所附答案为24种，但适用前提未写明。",
+  "fingerprint": "922e0d7174a947eb3e3b8bf1ea9163ea1aeb8666c803958254b5a543606fbe95",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q9",
+  "resume_action": "取得可追溯的同版题面或可靠勘误，确认五天是否必须每日有人参加；未确认前保留24与500两种条件分支及待核状态。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1221
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第1页 Q11 使用 F_1、F_2 记号，但题干未显式定义二者为椭圆焦点；现有夹角结论以该解释为条件。",
+  "fingerprint": "b63d5185b560666e40ae189967e6d1b98acbff2909e94296573cca0ce3b415fa",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q11",
+  "resume_action": "取得可追溯的完整同版题面或原卷说明，确认 F_1、F_2 的定义；确认前保留条件性答案，不补写原题定义。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1222
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本所附答案选 A 并称轨迹为直线 x+y=2。按题面条件 y_i>0 且 y_i^2=1-2a_i，故 a_i<1/2；(1/a_1,1/a_2) 的严格轨迹还须满足 x<0 或 x>2，选项没有严格对应的两条开射线。两次独立推导均保留该差异。",
+  "fingerprint": "36ff9784459d7f5bd803e08220e025dfed19455752e01591e866ad0ed52778ab",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q16",
+  "resume_action": "取得可追溯的同版原卷或可靠勘误，核对 Q16 轨迹与选项；此前并列保留源附答案 A 和严格推导范围，不强行唯一化。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1223
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第10–11页源附答案将 q=0 排除；现有解析指出，采用允许零公比的递推定义时需包含 q=0，而采用各项非零的等比数列定义时不包含。题面未给出定义约定。",
+  "fingerprint": "b091893bb861fa16c98ae00945b41256f108d6c53819a533f76134c97dfd0c12",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q18",
+  "resume_action": "取得同版定义或可靠来源明确本卷采用的等比数列约定；此前保留 q=0 包含与排除两种条件结论。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1224
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第3页 Q19(3) 仅称 P_1、P_2、P_3 是抛物线准线上三点且 |P_1P_2|=|P_2P_3|，未说明三点互异；按互异条件可推出严格不等式，若 P_1=P_3 则结论不固定。",
+  "fingerprint": "211a2670f469d1327e32ddcca1ebe0d4b9aac83d36c6a105f27d00bc3bb0ac0a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q19",
+  "resume_action": "取得可追溯的同版完整题面或可靠勘误，确认 Q19(3) 是否要求三点互异；确认前保留两种条件下的结论并阻断唯一答案。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1225
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第12页“点睛”称非退化三角形的中线满足 2AE>AB+AC；这与严格三角形不等式给出的 2AE<AB+AC 方向相反。源附最终答案虽然给出 >，但源解析中的该段文字存在可见冲突，须分开保留。",
+  "fingerprint": "584d705f108a2702e3e62a9989ad1d3b450c7a79a9d4a975282fe36f385a52a2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2019-spring-shanghai",
+  "question_id": "gk-2019-spring-shanghai-q19",
+  "resume_action": "取得可追溯同版勘误或可靠解析核实该源解析文字；未核前不静默改写源附内容，项目独立证明须单独标明来源与逻辑。",
+  "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

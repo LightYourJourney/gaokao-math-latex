@@ -1703,6 +1703,14 @@
         "gk-2006-regular-anhui-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b47",
+      "issues": [],
+      "paper_ids": [
+        "gk-2019-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1712,7 +1720,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ba942437-2914-4350-9273-ddfacdfff43a",
+  "last_transaction_id": "5af7d939-eddf-4588-97d6-ec971b49077b",
   "papers": [
     {
       "blocked_from": null,
@@ -23710,9 +23718,80 @@
       "title": "2006 年·普通高考·安徽卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2019_上海春季卷/figures/2019_shanghai_spring_q10_curves.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2019_上海春季卷/figures/2019_shanghai_spring_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2019_shanghai_spring",
+        "id": "gk-2019-spring-shanghai",
+        "note": "固定 source src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631，SHA-256 432bfb1bfc16c7a915f1349432d1dbcfc151b859ad89e9e3a3f554c5fb768e1d，15页；题面 PDF 第1–3页，固定副本所附答案与解析第4–15页。canonical 仅表示本库固定副本绑定，不认证发布者、版次、来源链或官方身份，源附答案不标为官方。Q9每日覆盖条件、Q11记号定义、Q16轨迹选项、Q18零公比约定及Q19三点互异条件尚待核；源解析Q19点睛文字另有三角形不等式方向错误，均不得据现稿消除不确定性。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          15
+        ],
+        "paper": "上海春季卷",
+        "structure": {
+          "单选题": [
+            13,
+            16
+          ],
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            20
+          ]
+        },
+        "track": "春季招生",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1220",
+        "ISSUE-1221",
+        "ISSUE-1222",
+        "ISSUE-1223",
+        "ISSUE-1224",
+        "ISSUE-1225"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2019-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2019_上海春季卷",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版题面或可靠勘误，确认五天是否必须每日有人参加；未确认前保留24与500两种条件分支及待核状态。；取得可追溯的完整同版题面或原卷说明，确认 F_1、F_2 的定义；确认前保留条件性答案，不补写原题定义。；取得可追溯的同版原卷或可靠勘误，核对 Q16 轨迹与选项；此前并列保留源附答案 A 和严格推导范围，不强行唯一化。；取得同版定义或可靠来源明确本卷采用的等比数列约定；此前保留 q=0 包含与排除两种条件结论。；取得可追溯的同版完整题面或可靠勘误，确认 Q19(3) 是否要求三点互异；确认前保留两种条件下的结论并阻断唯一答案。；取得可追溯同版勘误或可靠解析核实该源解析文字；未核前不静默改写源附内容，项目独立证明须单独标明来源与逻辑。",
+      "source_files": {
+        "answer_key": "2019/2019_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2019/2019_数学真题_春季上海_含解析.md",
+        "questions": "2019/2019_数学真题_春季上海_试题.md",
+        "solution_body": "2019/2019_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631"
+      ],
+      "title": "2019 年·上海春季招生数学试卷",
+      "track": "none",
+      "year": 2019
     }
   ],
-  "revision": 5248,
+  "revision": 5249,
   "schema_version": 1,
   "sources": [
     {
@@ -24521,8 +24600,8 @@
       "exam_type": "spring",
       "git_blob_oid": "2eb483bb17e1267fe30f99a85af7321441c92cf8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2019-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2019春季上海.pdf",
       "regions": [],
       "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",

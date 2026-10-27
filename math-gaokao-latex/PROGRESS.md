@@ -10080,3 +10080,12 @@
 - 更新规范题面中的图稿链接，并调用 `solution_sources.render_combined()` 确定性重建含解析稿；新稿 SHA-256 `717108d4cfc270dd4597d2a4e656d89f8e5c62ebe61c6ef931b31339e571e4d3`。
 - 本阶段只整理图稿路径和派生文档；source 仍未绑定 paper，manifest/issues 未改，尚无正式 provenance、四版入口、构建或视觉回执。Q9、Q11、Q16、Q18、Q19 的原有待核保持不变。
 - 阶段报告：`reports/2019-shanghai-spring-figures.md`。下一步由主会话按现有待核证据执行 paper/source 与逐题 blocker 的单一登记事务；固定副本的出版者、版次与官方身份仍未核。
+
+
+### 2019 上海春季卷：paper/source 与待核项登记（2026-10-28）
+
+- 用 `source_manifest.py register-papers` 唯一事务将 `gk-2019-spring-shanghai` / `phase1-b47` 写入 manifest revision `5248 → 5249`。source `src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631` 绑定为本库 canonical 固定题面副本；PDF SHA-256 `432bfb1bfc16c7a915f1349432d1dbcfc151b859ad89e9e3a3f554c5fb768e1d`、Git blob `2eb483bb17e1267fe30f99a85af7321441c92cf8`、15页与 source manifest 一致。该绑定不认证出版者、版次、来源链或官方身份；卷内答案保持非官方，`official_answer=null`。
+- 登记20题，题面页映射 PDF 第1–3页，卷内答案/解析第4–15页；Q10/Q17 两幅矢量图计入 `figure_files`。正式事务新增六条开放完成阻断：`ISSUE-1220` Q9每日覆盖条件、`ISSUE-1221` Q11焦点记号、`ISSUE-1222` Q16轨迹与选项冲突、`ISSUE-1223` Q18零公比约定、`ISSUE-1224` Q19三点互异条件、`ISSUE-1225` Q19源解析不等式方向。未决内容均保留条件分支，未改成确定答案。
+- 当前 paper 为 `blocked`（`blocked_from=planned`），批次为 `planned`；manifest 337卷、196批，不能据内部绑定表述为已验收或官方试卷。
+- 注册 dry-run/写入、来源 manifest、issues、题目/答案/解析对齐、报告投影和775行CSV当前性检查均通过；未运行测试套件，尚未导入逐题 provenance 或构建四版。
+- 阶段报告：`reports/2019-shanghai-spring-registration.md`。下一阶段生成本卷共享 TeX、四版入口和兼容 `index.json`，再正式构建与视觉审查。
