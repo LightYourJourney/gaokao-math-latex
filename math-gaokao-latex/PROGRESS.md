@@ -9770,3 +9770,11 @@
 - 验证：manifest 图引用计数、provenance 当前性及22题解析投影通过；刷新 775 行 manifest CSV。尚未生成项目 TeX/PDF。
 - 身份边界：固定扫描副本可核，杂志出版/扫描来源链及题面、源载答案发布者/版本/官方身份仍未核；official_answer=null。
 - 报告：`reports/2006-spring-shanghai-figures-provenance.md`。下一阶段生成项目源与四版入口，然后构建并逐页目视复核。
+
+
+### 2006 上海春季招生数学试卷：项目 TeX 与四版入口生成（2026-10-27）
+
+- 已生成：questions.tex、answers.tex、index.json、answers_short.tex 及试题版、解析版、简答版、印刷版四份入口壳。
+- 验证：generate_projects、make_short_answers、make_editions 的本卷 --check 均通过；source_manifest figure registry 校验通过。
+- 状态：尚无 PDF 构建回执，production_state 仍为 answers_verified；本阶段未运行测试套件。
+- 报告：`reports/2006-spring-shanghai-project-generation.md`。下一阶段构建四个版本并目视检查所有页面。
