@@ -14,3 +14,10 @@
 - 使用 `latexmk -xelatex -halt-on-error -interaction=nonstopmode` 将两图装入临时两页文档，退出码 0；`pdfinfo` 显示 2 页。用 `pdftoppm -r 150` 逐页渲染并目视，图线、虚实关系和标签清楚，无裁切或重叠；`pdfimages -list` 未列出图像对象。临时 PDF、日志和 PNG 存在 `/private/tmp/gaokao2019draw/`，不作为正式交付或收据。
 - 主会话另行查看源 PDF 第 1、2 页与两张图稿渲染：Q10 的坐标轴、正方形、两条曲线和 $P,Q$ 对应关系，以及 Q17 的六条棱、$AC$ 虚线、两处中点和 $MN$ 均与源图所示一致；标签可辨。重新从临时 PDF 以 150 dpi 渲染，两页 PNG SHA-256 与受检图逐字节一致；当前两份 TikZ 源 SHA-256 与上列记录一致。
 - 来源图注/映射与 manifest `figure_files` 的正式登记、四版生成、正式构建及逐页视觉审查均未完成。题面来源仍未绑定 paper，Q16 轨迹和 Q19（3）源解析的疑点仍待核；不能以此次局部图稿核对代替全卷验收。
+
+
+## 正式项目目录整理（2026-10-28）
+
+- 将两份图稿迁入 `math-gaokao-latex/2019_上海春季卷/figures/`，源文件字节未变；Q10 SHA-256 `5374b17383c77b12cdd3ba5a60f88d27cfd773bd15b63cd354e260f33c4148b3`，Q17 SHA-256 `dc729cd4d7612810377c6e8b30b17e35647e19cf77e97eb8a1939ce98ad73995`。
+- 规范题面链接改为指向该项目目录；用 `solution_sources.render_combined()` 从题面、答案要点和解析正文重建含解析稿，SHA-256 `717108d4cfc270dd4597d2a4e656d89f8e5c62ebe61c6ef931b31339e571e4d3`。
+- 仅整理路径与派生稿，本卷尚未登记到 source manifest，未生成项目 TeX 或四版入口，未正式构建/视觉验收；题面、答案、图稿的数学内容未改。

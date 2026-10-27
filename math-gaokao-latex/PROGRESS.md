@@ -10072,3 +10072,11 @@
 - `review_receipts.py check-batch` 返回 `FINALIZED`；构建回执当前输入核验、provenance、题目/解析来源、项目/简答/版本生成器、manifest/issues、报告和 manifest.csv 当前性检查均通过。未运行全量测试套件。
 - Q3 椭圆式缺少可见等号及右侧，答案仍为 `U/PENDING`，`ISSUE-1219` 保持开放并阻断完成；固定副本的发布者、版次、来源链及官方身份未核。paper 状态 `blocked`，批次 `closed_with_blockers`，不得标为整卷完成。
 - 本阶段成果提交于 `62366dc8`（`build(gaokao): close 2006 Anhui science visual review`）。
+
+
+### 2019 上海春季卷：题图迁入正式项目目录（2026-10-28）
+
+- 将 Q10/Q17 两幅已完成局部复核的 TikZ 图从 `2019/figures/` 移入 `math-gaokao-latex/2019_上海春季卷/figures/`；两份文件字节不变，SHA-256 与原图稿报告一致。
+- 更新规范题面中的图稿链接，并调用 `solution_sources.render_combined()` 确定性重建含解析稿；新稿 SHA-256 `717108d4cfc270dd4597d2a4e656d89f8e5c62ebe61c6ef931b31339e571e4d3`。
+- 本阶段只整理图稿路径和派生文档；source 仍未绑定 paper，manifest/issues 未改，尚无正式 provenance、四版入口、构建或视觉回执。Q9、Q11、Q16、Q18、Q19 的原有待核保持不变。
+- 阶段报告：`reports/2019-shanghai-spring-figures.md`。下一步由主会话按现有待核证据执行 paper/source 与逐题 blocker 的单一登记事务；固定副本的出版者、版次与官方身份仍未核。
