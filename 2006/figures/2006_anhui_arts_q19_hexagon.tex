@@ -6,10 +6,11 @@
   \coordinate (D) at (3,0);
   \coordinate (E) at (2.7,0.45);
   \coordinate (F) at (1.1,0.45);
+  \coordinate (H) at (2.2333333,0.45); % PD 与 FE 的投影交点，不标为题设点
   \coordinate (O) at (0.7,0);
   \coordinate (P) at (0.7,1.35);
-  \draw[dashed] (A)--(F)--(E) (B)--(F) (P)--(F) (P)--(O);
-  \draw (A)--(B)--(C)--(D)--(E) (B)--(D) (P)--(A) (P)--(B) (P)--(D);
+  \draw[dashed] (A)--(F)--(H) (B)--(F) (P)--(F) (P)--(O);
+  \draw (H)--(E) (A)--(B)--(C)--(D)--(E) (B)--(D) (P)--(A) (P)--(B) (P)--(D);
   \node[left] at (A) {$A$};
   \node[below] at (B) {$B$};
   \node[below] at (C) {$C$};
