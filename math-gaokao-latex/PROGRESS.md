@@ -9820,3 +9820,13 @@
 - `source_manifest.py register-papers` dry-run 通过后写入候选卷 `gk-2006-regular-shanghai-science` / `phase1-b42`，manifest revision 5194→5195；固定 source 绑定为本卷 canonical 题面来源，`pages_s=null`，`production_state=planned`。
 - `source_manifest.py validate` 与 `report.py check --all` 通过。登记报告：`reports/2006-shanghai-science-registration.md`。
 - 尚无图稿、figure_files、逐题 provenance、项目入口或构建/视觉回执；官方答案未核，`official_answer=null`。本阶段未运行测试或联网核查；未 push。
+
+### 2004 春季安徽理科卷：规范源合并与 paper/source 登记（2026-10-27）
+
+- 已完成：登记候选卷 `gk-2004-spring-anhui-science` / `phase1-b43`，manifest revision 5208→5209。固定 source `src-7c00191d50c17971e6f514bf6066e92693aa2b71f0ff05a054e2abe22acb5075` 绑定为本卷 canonical 题面来源；题面页映射 PDF 第1–2页，答案页映射 `null`，22题，`production_state=planned`。
+- 来源边界：SHA-256 `51038ba6ecdfbb8c5c7edc417f871eda5a5a5c03cc5af510da08131ec0dbb151`；2页A3、印刷页码149–150，页眉题签可见。固定文件为 XeTeX 生成件，不是原始扫描；上游出版者、版次及扫描来源链未核。canonical 只表示本库来源绑定，不表示官方原件。PDF无答案页，答案/解析为本项目独立推导并经独立盲解交叉核对，`official_answer=null`。
+- 规范化：保留22题现有数学内容，仅将Q13–Q22答案整理为生成器识别的独立加粗答案块，为Q19/Q20/Q22解析补小问锚点；由 `extract_solution_blocks()` 规范化逐题 `**解析**` 标记，并通过 `render_combined()` 生成含解析稿。更新三份规范稿的来源边界文案和已过期的source未绑定测试断言。
+- 验证：`register-papers` dry-run及事务写入成功；`solution_sources.py check-batch --batch phase1-b43` 1/1通过；manifest校验、全量报告check、775行CSV回读和 `git diff --check` 通过。六个全量报告投影已刷新。本阶段未运行测试、正式构建、视觉校样或外部书目核查。
+- 当前边界：登记事务后 `index.json` 尚未含本卷，旧卷的生成物 currentness 暂报 stale；这不是已解决或已重审历史回执。下一阶段用项目生成器加入本卷并刷新 index 后再核验。当前仍未登记Q20 figure_files/provenance，保持 `planned`。
+- 下一步：登记Q20 TikZ图和逐题provenance，再生成项目TeX与四版入口；后续正式构建/逐页校样前保持 `planned`，不得称整卷完成。全库1952–2026目标仍持续建设。
+- 阶段报告：`reports/2004-spring-anhui-science-registration.md`。

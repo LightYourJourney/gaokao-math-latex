@@ -1671,6 +1671,14 @@
         "gk-2006-regular-shanghai-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b43",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-spring-anhui-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1680,7 +1688,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5c7ce005-1dce-4746-afde-c5d4b05fbf0f",
+  "last_transaction_id": "9e8e184f-fe51-4acd-9117-edcd43196328",
   "papers": [
     {
       "blocked_from": null,
@@ -23413,9 +23421,61 @@
       "title": "2006 年·普通高等学校招生考试·上海卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2004_spring_anhui_science",
+        "id": "gk-2004-spring-anhui-science",
+        "note": "固定题面 PDF source ID src-7c00191d50c17971e6f514bf6066e92693aa2b71f0ff05a054e2abe22acb5075，SHA-256 51038ba6ecdfbb8c5c7edc417f871eda5a5a5c03cc5af510da08131ec0dbb151；2页A3、原卷印刷页码149–150，页眉题签为2004年普通高等学校春季招生考试安徽卷理科。固定文件为XeTeX生成件，非原始扫描件；上游出版者、版次和扫描来源链未核。原PDF无答案页，答案/解析为本项目独立推导且经独立盲解交叉核对，非官方；official_answer保持null。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季高考安徽理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "春季高考理科",
+        "variant": "安徽春季理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-spring-anhui-science",
+      "production_state": "planned",
+      "project_dir": "2004_安徽春季卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_春季安徽理_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_春季安徽理_含解析.md",
+        "questions": "2004/2004_数学真题_春季安徽理_试题.md",
+        "solution_body": "2004/2004_数学真题_春季安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-7c00191d50c17971e6f514bf6066e92693aa2b71f0ff05a054e2abe22acb5075"
+      ],
+      "title": "2004 年·普通高等学校春季招生考试·安徽卷理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 5208,
+  "revision": 5209,
   "schema_version": 1,
   "sources": [
     {
@@ -23816,8 +23876,8 @@
       "exam_type": "spring",
       "git_blob_oid": "ca3dc43b0828da6450dfa837320a5de182995604",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-spring-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004春季安徽理.pdf",
       "regions": [],
       "source_id": "src-7c00191d50c17971e6f514bf6066e92693aa2b71f0ff05a054e2abe22acb5075",
