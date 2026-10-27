@@ -9812,3 +9812,11 @@
 - 已整理独立答案与逐题解析：`2006/2006_数学真题_上海理_答案要点.md`、`2006/2006_数学真题_上海理_解析正文.md`。答案非官方；源扫描件不含答案页，`official_answer: null`。
 - 图形题 Q13、Q16、Q18、Q19 后续须矢量重绘。paper/source 注册、逐题 provenance、图稿/映射/生成器同步、项目生成、四版构建与视觉审查均未完成；阶段细节见 `reports/2006-shanghai-science-transcription-solutions.md`。
 - 本阶段未运行测试或联网核查；未 push。
+
+
+### 2006 上海理科卷：规范合并稿与 paper/source 登记（2026-10-27）
+
+- 将三份规范 Markdown 调整为合并器支持的题号、解析小问与答案块锚点，使用 `solution_sources.render_combined()` 生成22题 `_含解析.md`；题号、小问集合和答案块对齐。
+- `source_manifest.py register-papers` dry-run 通过后写入候选卷 `gk-2006-regular-shanghai-science` / `phase1-b42`，manifest revision 5194→5195；固定 source 绑定为本卷 canonical 题面来源，`pages_s=null`，`production_state=planned`。
+- `source_manifest.py validate` 与 `report.py check --all` 通过。登记报告：`reports/2006-shanghai-science-registration.md`。
+- 尚无图稿、figure_files、逐题 provenance、项目入口或构建/视觉回执；官方答案未核，`official_answer=null`。本阶段未运行测试或联网核查；未 push。

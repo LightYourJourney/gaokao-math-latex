@@ -1663,6 +1663,14 @@
         "gk-2006-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b42",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-shanghai-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1672,7 +1680,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d2666f3a-f921-43b2-8dd9-a90f62cda1e7",
+  "last_transaction_id": "ca5d750d-df53-45f8-9414-ebdc7cba31a4",
   "papers": [
     {
       "blocked_from": null,
@@ -23336,9 +23344,61 @@
       "title": "2006 年·上海春季招生数学试卷",
       "track": "none",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2006_shanghai_science",
+        "id": "gk-2006-regular-shanghai-science",
+        "note": "固定题面 PDF source ID src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6，SHA-256 0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5；两页题面，无答案页。页内题签和印刷页码328–329可见。来源发布者、版次、扫描链与官方身份未核；答案为编者独立推导的非官方结果。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考上海卷理科",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-shanghai-science",
+      "production_state": "planned",
+      "project_dir": "2006_上海卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_上海理_含解析.md",
+        "questions": "2006/2006_数学真题_上海理_试题.md",
+        "solution_body": "2006/2006_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6"
+      ],
+      "title": "2006 年·普通高等学校招生考试·上海卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5194,
+  "revision": 5195,
   "schema_version": 1,
   "sources": [
     {
@@ -30507,8 +30567,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8dc621a6bdc166e14552d04130780898e0e05ee8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006上海理.pdf",
       "regions": [],
       "source_id": "src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6",
