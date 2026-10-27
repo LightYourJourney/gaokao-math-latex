@@ -5,6 +5,12 @@
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
 
+### 2017 上海普通高考卷：source/paper/batch 内部登记（2026-10-28）
+
+- `source_manifest.py register-papers` dry-run 通过；单一状态事务写入 manifest revision `5273→5274`。paper `gk-2017-regular-shanghai`、batch `phase1-b50`、21题、`track=none`，paper/batch 均为 `planned`；source `src-213fecea206481434c7eb8f292fa39ffff3d28572e6080db2429c327529b2bac` 绑定为内部 `canonical` 输入。
+- 登记根据固定副本题签和已核结构，只确定本库使用哪份输入；发布者、版本、来源链与官方身份仍未核，`official_answer=null`。题面、答案要点、解析正文 frontmatter 已绑定 paper ID，确定性含解析稿已重生成。当前无矢量图稿，`figure_files=[]`，无新增 blocker issue。
+- 阶段报告：`reports/2017-shanghai-regular-registration.md`。未生成兼容索引、TeX/PDF 或收据，未运行测试；下一步绘制四幅图并登记映射，随后生成 TeX、构建与逐页视觉复核。
+
 ### 2017 上海普通高考卷：非官方答案与逐题解析草稿（2026-10-28）
 
 - 已依据固定题面 source `src-213fecea206481434c7eb8f292fa39ffff3d28572e6080db2429c327529b2bac` / SHA-256 `44501ab771be2e0a625a47e1feb7afc6529e4038f363d238da73362d897c3675` 独立推导 Q1–Q21 答案和解析；固定 PDF 只有题面，所有答案均标记非官方，`official_answer=null`。

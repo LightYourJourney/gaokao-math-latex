@@ -1727,6 +1727,14 @@
         "gk-2003-spring-beijing-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b50",
+      "issues": [],
+      "paper_ids": [
+        "gk-2017-regular-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1736,7 +1744,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c44c6f8e-e88a-4a5c-998c-5088d85dadf0",
+  "last_transaction_id": "9d1ce394-1853-43a9-bb8d-5e7f30dc636d",
   "papers": [
     {
       "blocked_from": null,
@@ -23948,9 +23956,61 @@
       "title": "2003 年·春季北京卷·文科",
       "track": "arts",
       "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2017_shanghai_regular",
+        "id": "gk-2017-regular-shanghai",
+        "note": "题面来自固定2页上游副本；发布者、出版物、版次、来源链及官方身份未核。答案与解析为编者独立推导，非官方。四处图稿待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海普通卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "普通高考",
+        "variant": "普通上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2017-regular-shanghai",
+      "production_state": "planned",
+      "project_dir": "2017_上海普通卷",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2017/2017_数学真题_上海_答案要点.md",
+        "combined_rendered": "2017/2017_数学真题_上海_含解析.md",
+        "questions": "2017/2017_数学真题_上海_试题.md",
+        "solution_body": "2017/2017_数学真题_上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-213fecea206481434c7eb8f292fa39ffff3d28572e6080db2429c327529b2bac"
+      ],
+      "title": "2017 年·上海普通高考卷",
+      "track": "none",
+      "year": 2017
     }
   ],
-  "revision": 5273,
+  "revision": 5274,
   "schema_version": 1,
   "sources": [
     {
@@ -40171,8 +40231,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a187b22997bfe066cc488bb954333a31dfb51fd6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2017-regular-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2017上海.pdf",
       "regions": [],
       "source_id": "src-213fecea206481434c7eb8f292fa39ffff3d28572e6080db2429c327529b2bac",
