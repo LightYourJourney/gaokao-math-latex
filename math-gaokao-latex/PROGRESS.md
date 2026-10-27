@@ -9761,3 +9761,12 @@
 - 页码：题面页`[1,2]`；源载答案/解答页`[2,4]`。报告/CSV投影刷新检查 current，manifest与问题账校验通过。
 - 修改文件：manifest、注册阶段报告及本进度；事务规格留在忽略的`.work/phase1-b41/`，未纳入提交。
 - 报告：`reports/2006-spring-shanghai-registration.md`。后续登记三幅题图与逐题provenance，再生成项目 TeX 和四版入口。
+
+
+### 2006 上海春季招生数学试卷：题图与逐题 provenance（2026-10-27）
+
+- 已完成：按固定 PDF 第2页矢量重绘Q17长方体、Q20椭圆/抛物线轨迹、Q21题面空白坐标网格；规范题面、确定性含解析稿与 manifest figure_files 均登记三图。Q21没有使用第4页的答案函数图。
+- 来源证据：phase1-b41 的题面复核、分段独立求解、答案盲核三角色记录覆盖22题，逐题绑定source SHA、题面页码和规范题面/答案哈希；正式导入后 manifest revision 5186。
+- 验证：manifest 图引用计数、provenance 当前性及22题解析投影通过；刷新 775 行 manifest CSV。尚未生成项目 TeX/PDF。
+- 身份边界：固定扫描副本可核，杂志出版/扫描来源链及题面、源载答案发布者/版本/官方身份仍未核；official_answer=null。
+- 报告：`reports/2006-spring-shanghai-figures-provenance.md`。下一阶段生成项目源与四版入口，然后构建并逐页目视复核。
