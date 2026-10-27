@@ -9923,4 +9923,4 @@
 ### 1996 全国文理科固定来源测试断言同步（2026-10-27）
 
 - 全量测试定位到两条过期断言：1996 全国文、理科固定来源已分别 canonical 绑定到 `gk-1996-regular-national-arts` 与 `gk-1996-regular-national-science`，测试仍要求当前 manifest 的 `paper_id` 为空。来源校对 JSON 保留其历史 revision 4152 快照，本次只同步针对当前 manifest 的断言，并显式核对 `paper_relation=canonical`。
-- 验证：两个来源测试模块 10/10 通过。全量套件结果为 `Ran 1720 tests in 751.957s`、`FAILED (failures=2, skipped=13)`，两处失败均为本次修正的过期绑定断言；定向回归通过后未重跑全量套件。
+- 验证：两个来源测试模块 10/10 通过；修正断言后全量套件复跑 `Ran 1720 tests in 938.983s`、`OK (skipped=13)`。此前 `751.957s` 那次运行的两处失败均为已更新的过期绑定断言。
