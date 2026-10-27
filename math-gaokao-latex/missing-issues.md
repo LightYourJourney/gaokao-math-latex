@@ -20336,10 +20336,10 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "固定副本第1页 Q9 写明4人参加连续5天活动、甲连续参加2天、其他人各1天，但未说明每天是否必须有人参加；若每日都须覆盖则24种，若允许空日及同日多人则500种。固定副本所附答案为24种，但适用前提未写明。",
-  "fingerprint": "922e0d7174a947eb3e3b8bf1ea9163ea1aeb8666c803958254b5a543606fbe95",
+  "fingerprint": "908445ded075e7c1058dcce75f95765ee60e51b085ca27873c0c3727ecd52361",
   "impact": "blocks_completion",
   "paper_id": "gk-2019-spring-shanghai",
-  "question_id": "gk-2019-spring-shanghai-q9",
+  "question_id": "gk-2019-spring-shanghai-q09",
   "resume_action": "取得可追溯的同版题面或可靠勘误，确认五天是否必须每日有人参加；未确认前保留24与500两种条件分支及待核状态。",
   "source_id": "src-9bdb153dc0768790fc6e5af115cc9387a25f5f3dbdb3affdf6c74bc7058cd631",
   "status": "open",

@@ -23,3 +23,8 @@
 
 - 注册规格 dry-run 与写入均通过；`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase1-b47`、`manifest_csv.py --check` 通过；CSV 为 775 行。`report.py render --all` 与 `report.py check --all` 均确认六个全量报告投影当前。
 - 本阶段未运行测试套件；尚未导入逐题 provenance、生成共享 TeX/四版入口、正式构建或进行整卷视觉审查。下一步按当前题面/答案/解析和六条阻断导入 provenance，生成共享内容与四版，再正式构建和逐页复核。
+
+## 稳定题号补正
+
+- 导入 provenance 前对照 `provenance.question_id()` 发现 `ISSUE-1220` 使用 `gk-2019-spring-shanghai-q9`，应为规范内部题序 `gk-2019-spring-shanghai-q09`。保留 issue 编号 `ISSUE-1220`，重算 fingerprint，并用状态事务同步 manifest；最终 revision 为 `5251`。
+- 补正仅统一稳定标识，不改变题面、答案分支或待核判断；问题总账仍为 1225 条，纸卷仍 `blocked`、批次仍 `planned`。

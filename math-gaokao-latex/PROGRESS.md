@@ -10089,3 +10089,15 @@
 - 当前 paper 为 `blocked`（`blocked_from=planned`），批次为 `planned`；manifest 337卷、196批，不能据内部绑定表述为已验收或官方试卷。
 - 注册 dry-run/写入、来源 manifest、issues、题目/答案/解析对齐、报告投影和775行CSV当前性检查均通过；未运行测试套件，尚未导入逐题 provenance 或构建四版。
 - 阶段报告：`reports/2019-shanghai-spring-registration.md`。下一阶段生成本卷共享 TeX、四版入口和兼容 `index.json`，再正式构建与视觉审查。
+
+### 2019 上海春季卷：provenance 题号标识补正（2026-10-28）
+
+- 注册后核对 provenance 派生规则发现 `ISSUE-1220` 的单数字题号误写为 `q9`；按规范 `q09` 修正并重算 fingerprint，issue 编号保持 `ISSUE-1220`。同一状态事务重算 manifest，最终 revision `5251`；题卷仍 `blocked`、批次仍 `planned`，疑点本身未被更改或结案。
+- 问题总账仍 1225 条。该补正先于 provenance 导入，避免逐题记录引用到不同 question_id。
+
+### 2019 上海春季卷：逐题 provenance 与确定性生成（2026-10-28）
+
+- `phase1-b47` 的20题三角色 provenance 导入 manifest revision `5253`；题面复核均 passed。Q1–12 对应 PDF p1，Q13 p1–2，Q14–18 p2，Q19 p2–3，Q20 p3。答案证据为19题 D级项目推导、Q18 U级；不称全卷盲解或官方答案，`official_answer=null`。
+- Q16 短答使用 U；答案行保留固定副本选 A、严格轨迹与选项不匹配，`ISSUE-1222` 未决。Q9/Q11/Q18/Q19 的条件分支和六条 open/blocks_completion issue 均保持。
+- 已生成共享题面/答案 TeX、`index.json`、简答 TeX 与四版入口。`provenance check-batch`、`solution_sources check-batch`、三个生成器 `--check`、manifest/issues validate 与 775行CSV currentness检查通过。
+- `report.py render --all` 以一个 content 事务写入并回读六个报告目标；`report.py check --all` 确认全量投影与 manifest 当前一致，并保留未完成状态。当前 paper `blocked`、batch `provenance_verified`（`provenance.py status --batch phase1-b47`）；尚未正式构建/视觉复核。阶段报告：`reports/2019-shanghai-spring-provenance-generation.md`。
