@@ -6,6 +6,14 @@
 
 
 
+### 2004 春季安徽理科卷：共享 TeX、简答与四版入口生成（2026-10-27）
+
+- 已完成：`phase1-b43` 生成共享 `questions.tex`、`answers.tex`、全局 `index.json`、`answers_short.tex` 与试题/解析/简答/印刷四版入口。通过 `provenance.py import-batch --write` 官方状态事务从 revision 5211 更新到 5212；paper 状态为 `editions_generated`，batch 保持 `provenance_verified`。
+- 验证：三个生成器的 `--check` 均通过；`provenance.py check-batch` 为 1 卷 OK；`solution_sources.py check-batch` 的 22 题全部通过；`source_manifest.py validate` 与 `report.py check --all` 通过。六个全量报告目标以 content transaction 刷新并回读校验。
+- 当前性/阻断：全库 build 回执核对为333卷、326 succeeded、6 pending、1 missing、0 stale；唯一 missing 是本卷尚未构建的 build 回执。全库 `review_receipts.py check-all` 报 `INVALID_OR_STALE：192 批次`，包含历史未关闭/视觉失败批次及本卷缺 build 回执，本阶段未改写其他批次。未运行测试、正式 PDF 构建或视觉检查。
+- 来源边界与下一步：固定 PDF SHA-256 `51038ba6ecdfbb8c5c7edc417f871eda5a5a5c03cc5af510da08131ec0dbb151`；出版者/版次/原始来源链仍未知，`official_answer=null`，答案为D级独立推导。下一步正式构建四版，再逐页目视检查并生成回执；本阶段不代表整卷完成。
+
+
 ### 1996 上海卷理科：四版校样与保留阻断关闭（2026-10-24）
 
 - 已完成：`phase4-b21` 四版正式XeLaTeX构建及67页逐页八项视觉验收（试题7、解析28、简答9、印刷23，共536项，无失败）。修复Q8 B/D原点与−1标签挤碰、Q21辅助Q压PA及两幅图C压交线l；大题标题改为真实章节边界，避免计分/来源总说明串入前题解析。新旧逐页对照保留所有实际目视证据，变化页重新实看；最终attempt `75a8a3fe-beda-4e63-bf17-3872c808876d`。
