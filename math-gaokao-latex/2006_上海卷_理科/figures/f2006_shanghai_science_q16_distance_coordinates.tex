@@ -1,0 +1,19 @@
+% 2006 上海理科卷 Q16；点 M 到两条相交直线的距离用虚线垂线表示。
+\begin{tikzpicture}[line cap=round,line join=round]
+  \coordinate (O) at (0,0);
+  \coordinate (M) at (2.0,1.2);
+  \coordinate (P) at (1.6,1.6); % M 到 l_1 的垂足
+  \coordinate (Q) at (2.0,0);   % M 到 l_2 的垂足
+
+  \draw[thick] (-2.2,-2.2)--(2.6,2.6) node[above right] {$l_1$};
+  \draw[thick] (-2.4,0)--(3.0,0) node[right] {$l_2$};
+  \draw[dashed] (M)--(P);
+  \draw[dashed] (M)--(Q);
+  \draw[thin] (P)--++(-0.14,-0.14)--++(0.14,-0.14)--++(0.14,0.14);
+  \draw[thin] (Q)--++(-0.16,0)--++(0,0.16)--++(0.16,0);
+
+  \fill (O) circle[radius=1.2pt];
+  \fill (M) circle[radius=1.2pt];
+  \node[below left] at (O) {$O$};
+  \node[above right] at (M) {$M(p,q)$};
+\end{tikzpicture}
