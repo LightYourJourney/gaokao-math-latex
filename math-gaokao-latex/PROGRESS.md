@@ -10168,3 +10168,10 @@
 - 登记事务新增 `ISSUE-1229`：Q11 图中 E、B 之间点名字形无法辨清为 I 或 L，题干写 I；当前保留题干原文并将图中字形作为未决题面问题。issue 为 open / blocks_completion；paper 为 `blocked`（`blocked_from=planned`），batch 当前为 `planned`。
 - 同步题面、答案稿、解析稿和来源校对 JSON 的 paper/source 说明；sidecar 现指向已有的非官方独立答案与解析稿，题面 SHA-256 为 `723fe65b05fdeb082d2fb8b086ede756c29d45920d4be5d51fbc96dd2d8ec50e`。修正 Q13 解析把 `sin 2x+1` 误括为 `sin(2x+1)` 的笔误，并两次运行 `solution_sources extract-batch`，将解析正文与含解析稿保持确定性同步。
 - 五幅 TikZ 图迁入 `2003_春季北京文科/figures/`，题面、图表清单和 sidecar 已统一项目相对路径；每图预期在题面/印刷版本出现2次。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 与 `git diff --check` 均通过；未运行测试套件。逐题 provenance、共享 TeX/四版入口、兼容 `index.json`、正式 PDF 构建、整页视觉审查和回执尚未办理。阶段报告：`reports/2003-beijing-arts-registration.md`。
+
+### 2003 春季北京文科：逐题 provenance 与确定性生成（2026-10-28）
+
+- 依据既有题面和数学盲核记录，以三个独立角色草稿导入22题 provenance，manifest revision `5267 → 5268`。固定 source 页映射为Q1–19 PDF第1页、Q20–22第2页；题面哈希和答案哈希由 provenance 工具现场从规范源重算。题面复核21题 `passed`、Q11 `uncertain`；Q11关联 `ISSUE-1229`，图中文字形 I/L 继续阻断完成。
+- 答案证据均为项目独立推导 D 级、明确非官方；第二位读者仅依据题面盲核。Q9盲核确认曲线特征但没有选项图，因此 D 选项字母由主会话依已复核 TikZ 图对应；Q14采用铁球完全浸没解释，Q15为表格规律外推。`official_answer=null`。
+- `provenance.py check-batch` 通过；批次现为 `provenance_verified`，paper 仍 `blocked`，唯一完成阻断为 `ISSUE-1229`。确定性生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 和试题/解析/简答/印刷四个入口；项目目录下五幅图的两次复用计数校验通过。
+- 来源总账、issues、解析一致性、三类生成器 `--check`、六个全量报告投影 `report.py check --all`、775行 `manifest.csv --check` 均通过。`report.py render --all` 写入并回读六个全量投影。未运行测试套件，未正式 XeLaTeX 构建、渲染或做页面视觉审查。阶段报告：`reports/phase1-b49-provenance-generation.md`。
