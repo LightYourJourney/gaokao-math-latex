@@ -10000,3 +10000,10 @@
 - `register-papers` 预检通过后将 `gk-2006-regular-anhui-arts` 登记到 `phase1-b45`，manifest revision `5226 → 5227`；固定副本作本库内部 canonical 绑定，三幅独立复核图纳入 `figure_files`。此绑定不认证上游出版者、版次或官方身份。
 - 事务新增 `ISSUE-1216`（Q2无匹配选项）、`ISSUE-1217`（Q5缺可见方程右侧）、`ISSUE-1218`（Q5答案待核），均 open 且阻断完成；paper `blocked`、批次 `planned`。题面与答案/解析的绑定说明已同步，`official_answer=null` 和原印疑点保留。
 - 后续须导入逐题 provenance、生成共享 TeX 与四版入口，再正式构建与逐页审查；登记事务后的全局 `index.json` 尚未包含本卷。当前全库报告显示191个批次 `INVALID_OR_STALE`（含新批次），此前 `phase1-b44` 的 build receipt 单独检查仍 current，但批次 review 门禁暂报状态失配；下一阶段先生成并重新核对，不能将旧 review 门禁假称当前通过。登记明细见 `reports/2006-anhui-arts-registration.md`。
+
+### 2006 安徽文科：生成共享内容与四版入口（2026-10-28）
+
+- 按既有生成器约定，将选择题第 2、5 题的未决答案明确标作 `U/PENDING`，答案速查表两处记为 `U`，保留源内疑点和解析说明；重渲染含解析稿后 22 题来源一致性检查通过。
+- 已生成共享题面、解析、简答及试题版、解析版、简答版、印刷版四个入口，并更新 `index.json`；三个生成器的 `--check` 均通过。索引更新后抽查 `phase1-b44` 的批次复核门禁为 `FINALIZED`，此前报告中的全库状态失配须以本次报告重算结果为准。
+- 本阶段尚未导入逐题 provenance、正式构建及视觉审查；第 2、5 题仍有开放的完成阻断，固定副本的官方身份仍未核。
+- 全量报告重算后为 `FINALIZED 190 / INVALID_OR_STALE 1 / VISUAL_FAILED 3`；新增批次缺构建与复核回执。登记时 `ISSUE-1216`–`ISSUE-1218` 的题目 ID 使用 `q2/q5`，而 provenance 使用 `q02/q05`，指纹不能匹配；须按问题总账身份规则修正并重核后才能导入，不得将其视为已有有效逐题关联。
