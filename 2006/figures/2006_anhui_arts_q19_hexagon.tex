@@ -1,0 +1,21 @@
+% 2006 安徽文科 Q19；仿射投影为示意，O 为 BF 中点。
+\begin{tikzpicture}[scale=1.1,line cap=round,line join=round,font=\small]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0.3,-0.45);
+  \coordinate (C) at (1.9,-0.45);
+  \coordinate (D) at (3,0);
+  \coordinate (E) at (2.7,0.45);
+  \coordinate (F) at (1.1,0.45);
+  \coordinate (O) at (0.7,0);
+  \coordinate (P) at (0.7,1.35);
+  \draw[dashed] (A)--(F)--(E) (B)--(F) (P)--(F) (P)--(O);
+  \draw (A)--(B)--(C)--(D)--(E) (B)--(D) (P)--(A) (P)--(B) (P)--(D);
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[above right,inner sep=1pt] at (F) {$F$};
+  \node[below right,inner sep=1pt] at (O) {$O$};
+  \node[above] at (P) {$P$};
+\end{tikzpicture}

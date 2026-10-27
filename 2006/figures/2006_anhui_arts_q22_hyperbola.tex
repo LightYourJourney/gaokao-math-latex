@@ -1,0 +1,17 @@
+% 2006 安徽文科 Q22；取 a=1、e=2 作示意，P 在右支且 y>0。
+\begin{tikzpicture}[x=0.9cm,y=0.72cm,line cap=round,line join=round,>=stealth,font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (F) at (2,0);
+  \coordinate (M) at (-0.5,{sqrt(15)/2});
+  \coordinate (P) at (1.5,{sqrt(15)/2});
+  \draw[->] (-3.4,0)--(3.5,0) node[right] {$x$};
+  \draw[->] (0,-3.7)--(0,3.9) node[above] {$y$};
+  \draw (-0.5,-3.1)--(-0.5,3.1);
+  \draw[thick,domain=-3.4:3.4,samples=100] plot ({sqrt(1+\x*\x/3)},\x);
+  \draw[thick,domain=-3.4:3.4,samples=100] plot ({-sqrt(1+\x*\x/3)},\x);
+  \draw (O)--(M)--(P)--(F);
+  \node[below right] at (O) {$O$};
+  \node[below] at (F) {$F$};
+  \node[left] at (M) {$M$};
+  \node[above left] at (P) {$P$};
+\end{tikzpicture}
