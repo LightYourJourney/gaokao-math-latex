@@ -9911,3 +9911,11 @@
 - 验证：定向转录/解答测试 7/7 通过；三个生成器的逐卷 `--check` 通过；随后 `build_projects.py --formal` 四版成功，receipt 状态 `compiled_pending_review`。本次输出页数：试题版4、解析版17、简答版6、印刷版12；构建回执绑定本次 attempt、manifest revision、输入树与各 PDF SHA。
 - 构建失败的 ISSUE-1212–1215 已由后续成功的正式构建自动标记 resolved；Q18 的 `ISSUE-1211` 保持 open 并继续阻断整卷 completion。
 - 阶段报告：`reports/2004-spring-anhui-arts-build.md`。
+
+### 2004 春季安徽文科卷：四版视觉审查与批次收口（2026-10-27）
+
+- 已完成：复用 `phase1-b44` 逐页工作件，对试题版4页、解析版17页、简答版6页、印刷版12页共39页逐页核对；全部适用的字形、题号/标题、公式/选项、页眉页脚、分页留白、字号、图注与答案泄露检查通过，未发现视觉问题。
+- 收据：当前 build attempt `98f64b23-bbee-4b64-9d0c-4c00c0664fc5`；四版 PDF SHA 与页数均记录在 `receipts/build.json`，构建日志无错误、缺字、溢出或未定义引用。`review_receipts.py finalize-batch-checked` 写入视觉回执，manifest revision `5225 → 5226`，批次状态为 `closed_with_blockers`；详见 `reports/phase1-b44.md`。
+- 验证：review/build receipt 检查、provenance、三项逐卷生成器 currentness、solution source 对齐、全量报告投影检查及775行 CSV 回读均通过；本卷定向转录/解答测试 7/7 通过。全量 unittest 因 `test_report.py` 类级初始化长时间停留在全量 issue ledger 解析而中断，没有完整汇总，故不报告全量通过。
+- 阻断边界：Q18 原题条件允许多组通项，`ISSUE-1211` 继续 open；paper `production_state=blocked`、`official_answer=null`。固定 PDF 的上游发布者、版次与来源链仍未核实；本批次的关闭状态不等于试卷完成，更不代表1952–2026语料完成。
+- 阶段报告：`reports/phase1-b44.md`。
