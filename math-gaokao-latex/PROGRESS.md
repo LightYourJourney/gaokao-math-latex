@@ -5,6 +5,15 @@
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
 
+### 2017 上海普通卷：Q7/Q12/Q17 源图重绘、登记与项目 TeX 生成（2026-10-28）
+
+- 固定 PDF 复核更正旧记录的图数：第1页只有 Q7 长方体、Q12 方格、Q17 直三棱柱三图；第2页 Q20 题干后空白，无椭圆图。已删 Q20 图位，未生成虚构图稿。
+- 新增三份 source-faithful-schematic-redraw TikZ 与来源校对侧记；Q7 的 DA/DC/DD1 轴向、DB1 虚线向量及 x/y/z 方向，Q12 的 7×5 网格/四个 P 点/四个 ▲ 点，Q17 的 BC 隐藏边均按固定 PDF 标注。
+- 题面与确定性含解析稿各引用每图一次。manifest 登记三图、每图 expected_occurrences=2；状态事务将 revision 5274 推进至 5276，并同步更新旧“四处图稿” index note。
+- generate_projects 写入 questions.tex、answers.tex、index.json；generate_projects --check、source_manifest validate、solution_sources check-batch（21题）通过。standalone TikZ 预览编译3页、180 dpi逐幅检查，调整标签后无相碰或裁切。未运行测试套件。
+- 首轮生成发现源题面已有三处公式闭合符后紧接句读，转换器会报未闭合；旧 HEAD 同样复现。仅将句读移到下一源行，使闭合符独占一行，文字不变，随后生成成功。
+- 阶段报告：reports/2017-shanghai-regular-figures.md。尚未构建正式四版 PDF、整页视觉验收或回执；paper 和 phase1-b50 仍 planned，官方来源/答案身份未核。
+
 ### 2017 上海普通高考卷：source/paper/batch 内部登记（2026-10-28）
 
 - `source_manifest.py register-papers` dry-run 通过；单一状态事务写入 manifest revision `5273→5274`。paper `gk-2017-regular-shanghai`、batch `phase1-b50`、21题、`track=none`，paper/batch 均为 `planned`；source `src-213fecea206481434c7eb8f292fa39ffff3d28572e6080db2429c327529b2bac` 绑定为内部 `canonical` 输入。
