@@ -10013,3 +10013,8 @@
 - 以状态事务修正 `ISSUE-1216`–`ISSUE-1218` 的题目 ID 为 `q02/q05` 并重算 fingerprint，保留原问题编号、证据和开放阻断状态；manifest revision 5227 → 5228。
 - 根据题面复核及非官方解答复算记录，导入 22 题三角色 provenance，manifest revision 5228 → 5229。Q5 题面核对记为 `uncertain`；Q2、Q5 答案证据为 `U`，关联相应阻断项；其余答案为项目推导 `D` 级。Q19/Q22 复算者已知部分先前结论，不称盲解。
 - `issues.py validate`、`source_manifest.py validate`、provenance 导入预检及 `check-batch` 均通过；状态为 paper `blocked`、批次 `provenance_verified`。来源身份未核，四版正式构建和逐页视觉审查尚待执行。
+
+### 2006 安徽文科：四版首轮正式构建（2026-10-28）
+
+- 正式构建 attempt `9600e35e-d5a5-49f9-bd4e-70e219e26b2b` 四版均编译成功，试题/解析/简答/印刷版分别为 4/18/6/13 页；构建回执当前性核验通过，状态 `COMPILED_PENDING_REVIEW`。日志无错误、缺字或未定义引用；前三版分别有 1/2/1 条 Underfull，印刷版无该类提示。
+- 首轮逐页审查发现试题版和简答版第 1 页 Q4 选项断行、第 3 页 Q15 横线及 Q16 选项断行；印刷版第 1、6 页 Q5 行内分式与下一行选项贴碰。仍须修正并重构建、重审变动页；此构建未获视觉通过。Q2/Q5 来源与答案阻断继续开放。
