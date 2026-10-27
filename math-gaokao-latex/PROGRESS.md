@@ -10160,3 +10160,11 @@
 - 第二位复核者只看固定PDF第1–2页与题面稿，逐项核对题干、公式、选项、题号、小问和页码，未发现差异。高分辨率源图确认Q21为`≤`；Q20(3)原文为“且”。
 - Q19未明列$x,t$范围，源附解析按步道OA内选点；题面未补写此约定。Q21(3)源附解析仅给“$m$为奇数”，独立推导为正奇数，负奇数可由$f(x)=-x$反例排除；该源答案差异待后续paper/issues事务登记为开放完成阻断。
 - 本阶段未改manifest/issues、未生成源附答案稿或TeX/PDF、未运行测试。`official_answer=null`；发行版次、出版社、来源链与答案材料官方身份仍未核。阶段报告：`reports/2020-shanghai-spring-transcription.md`。
+
+### 2003 春季北京文科：固定题源内部绑定与 Q11 阻断登记（2026-10-28）
+
+- 结合历史记录作出范围明确的身份处理：2026-10-21 的公开资料追溯未能把固定 PDF 对应到可核实的出版者、版次或考试机构原件，因此这些认证事实继续标为未核；本次按当前分支对 2006 安徽及 2019/2020 春季卷的做法，仅把有固定内容指纹和可见卷题签的 PDF 绑定为本库内部 canonical 输入，不把该关系解释为来源认证。
+- `source_manifest.py register-papers` dry-run 与写入均成功；新增 `gk-2003-spring-beijing-arts` / `phase1-b49`，manifest revision `5266 → 5267`。固定 source `src-4ac986eba3d22fd3034252b57e1fed7e2b7b90eaaef7706499eb43fad52756e1` 的 SHA-256 `fbb6d54c9af88a7fc594be969b8e61c24bb37d98c05061cceaaf5d1be999c5c6`、Git blob、2 页与印刷页121–122照现有清单记录；PDF 为 XeTeX 排印副本，不是原卷扫描。`official_answer=null`。
+- 登记事务新增 `ISSUE-1229`：Q11 图中 E、B 之间点名字形无法辨清为 I 或 L，题干写 I；当前保留题干原文并将图中字形作为未决题面问题。issue 为 open / blocks_completion；paper 为 `blocked`（`blocked_from=planned`），batch 当前为 `planned`。
+- 同步题面、答案稿、解析稿和来源校对 JSON 的 paper/source 说明；sidecar 现指向已有的非官方独立答案与解析稿，题面 SHA-256 为 `723fe65b05fdeb082d2fb8b086ede756c29d45920d4be5d51fbc96dd2d8ec50e`。修正 Q13 解析把 `sin 2x+1` 误括为 `sin(2x+1)` 的笔误，并两次运行 `solution_sources extract-batch`，将解析正文与含解析稿保持确定性同步。
+- 五幅 TikZ 图迁入 `2003_春季北京文科/figures/`，题面、图表清单和 sidecar 已统一项目相对路径；每图预期在题面/印刷版本出现2次。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 与 `git diff --check` 均通过；未运行测试套件。逐题 provenance、共享 TeX/四版入口、兼容 `index.json`、正式 PDF 构建、整页视觉审查和回执尚未办理。阶段报告：`reports/2003-beijing-arts-registration.md`。

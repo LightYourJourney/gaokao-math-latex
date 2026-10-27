@@ -20481,3 +20481,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1229
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第1页（印刷页121）Q11 图中 E、B 之间的小点名无法从低清字形区分为 I 或 L；题干文字写 I。当前题面保留题干的 I，并在独立复核记录中明确图中字形未决，不能据图判定其确为 I。",
+  "fingerprint": "8ca6d86e1a3f56a6218370141ea4f73a0346f7358542f3ebfe4eb4c4e630c1f0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-spring-beijing-arts",
+  "question_id": "gk-2003-spring-beijing-arts-q11",
+  "resume_action": "取得可追溯的同版高清题页或可靠勘误，核定 Q11 图中字形；在此之前保留题干照录、图中文字形 uncertain 与完成阻断。",
+  "source_id": "src-4ac986eba3d22fd3034252b57e1fed7e2b7b90eaaef7706499eb43fad52756e1",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
