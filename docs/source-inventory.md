@@ -3,13 +3,13 @@
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
 - 试卷总数：**338**；生产状态：blocked 67，compiled 3，complete 268
-- 批次总数：**197**；manifest 状态：closed 147，closed_with_blockers 46，compiled_pending_review 3，provenance_verified 1
-- 正式复核门禁：FINALIZED 193，INVALID_OR_STALE 1，VISUAL_FAILED 3
-- 已编译版本：1348/1348；构建回执状态：compiled_pending_review 6，succeeded 331
-- review 回执状态：failed 3，passed 334
+- 批次总数：**197**；manifest 状态：closed 147，closed_with_blockers 47，compiled_pending_review 3
+- 正式复核门禁：FINALIZED 194，VISUAL_FAILED 3
+- 已编译版本：1352/1352；构建回执状态：compiled_pending_review 6，succeeded 332
+- review 回执状态：failed 3，passed 335
 - 问题总账：1228 条，未解决问题：228，阻塞完成 164。
 - 回执日志警告汇总（包含待复核回执）：Overfull 20，Underfull 88，豁免记录 108。
-- 回执完整性：build 缺失 1 / 无效 0；review 缺失 1 / 无效 0。
-- 门禁未通过批次：phase0-b02、phase2-b58、phase2-b59、phase1-b48。
+- 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
+- 门禁未通过批次：phase0-b02、phase2-b58、phase2-b59。
 
 来源逐项信息见 `exams/math-gaokao-latex/manifest.csv`。

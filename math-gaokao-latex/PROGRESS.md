@@ -6,6 +6,15 @@
 
 
 
+### 2020 上海春季卷：四版正式构建与39页视觉审查收口（2026-10-28）
+
+- 首轮视觉检查发现来源框中的 source ID/SHA 长串触发 Overfull 并越过边框；仅在规范题面来源说明添加显式换行，未改 source ID、PDF SHA 或题目内容。重生成后正式 build attempt `fb6f032a-b6be-480e-9e9e-8bb31a475ae1` 成功；build receipt 记录 manifest revision 5264，日志 errors、missing characters、overfull、undefined references 均为空。
+- 四版 PDF：试题版3页 SHA-256 `b9f82762de08f07af9b5dfd0c72ce964e7d7d584b52696113dd56e4dc086699a`；解析版18页 `42d4709319ceb915ec38a0ad8f4179fdf66ea005fc5c0e697b75c3bf8750b2e4`；简答版5页 `ce28a898473652f913f42150ca2c1e0c48f5ee2e4f9fc976e1f7a8078311ed55`；印刷版13页 `547550305be06a64975c42ca60294f15b7d510c193aa1e3c7367b1939a6069fd`。
+- 全页覆盖39页、312项八类检查：251 pass、61 not_applicable、0 fail。四版首页因修复重新渲染并目视检查；逐页PNG比较确认其余35页与此前本会话实际审过的页面字节一致，沿用对应审查结论。Q17图在试题/印刷题面及解析页标签清楚，实虚线可辨。没有内容依据或答案真实性结论由视觉审查推出。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，最终 manifest revision 5266；批次 `closed_with_blockers`、paper `blocked`。`ISSUE-1227`（Q19坐标范围）和 `ISSUE-1228`（Q21答案冲突）仍 open / blocks_completion；`official_answer=null`，发布者、版次、来源链及答案材料官方身份仍未核。
+- build 回执 `--require-final --require-current-inputs`、review `check-batch`、provenance、21题 solution sources、manifest/issues、项目/简答/版本生成器检查均通过。`report.py render --all` 事务刷新并回读六个全量投影，`report.py check --all` 当前；`manifest.csv` 当前且775行。未运行测试套件；模型Token、费用及工时不可见，记未知。
+- 阶段报告：`reports/phase1-b48.md`。本阶段关闭的是该卷构建与视觉审查，Q19/Q21阻塞仍在；不代表整卷来源认证或1952—2026语料库完成。
+
 ### 2020 上海春季卷：Q17 TikZ 图稿与逐题 provenance（2026-10-28）
 
 - 已完成：按固定 PDF 第 1 页重绘 Q17 四棱锥示意图，新增 2020_上海春季卷/figures/f2020_shanghai_spring_q17_pyramid.tex；原图 AD、DC、PD 为虚线，PA、PB、PC、AB、BC 为实线，未增加角标或尺寸。题面 Markdown、含解析稿、manifest figure_files 与确定性 TeX 映射均已同步，图稿登记引用次数为2。
