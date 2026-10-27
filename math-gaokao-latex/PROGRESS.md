@@ -9715,3 +9715,11 @@
 - 收口：`review_receipts.py finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`，revision 5183；报告 `reports/phase1-b40.md`。试卷仍 blocked，仅有 Q17/Q18 两项内容阻断；固定来源的发布者、版本及源载答案官方身份仍未核验。
 - 投影：manifest CSV 775 行写入并 current；六个全量报告目标已写入并回读一致。全量 `report.py check --all` 在运行中，结果待记录。未运行测试套件；此阶段未 push。
 - 全量报告二次校验随后完成：`python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md` 输出“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
+
+
+### 2006 上海春季招生数学试卷：固定来源 intake（2026-10-27）
+
+- 已核实：source `src-788a65aef8319a4a0abebc5ded42d68216d14d78d55583936dba4ab5d90a7a3b` 对应固定 PDF `gaokaomath-src/春季高考/2006/2006春季上海.pdf`，SHA-256 `67fcf5d3aaa25ca7f22fa0b57dc9fdad5ccffaf1c9f7911919c65bad657e8762` 与 manifest 一致，Git blob `c4ba4c5ce56b54f7dc4826d2afa4757da4f06bdd` 已验证。4 页扫描件页眉显示《数学教学》2006年第2期，印刷页码2-39至2-42；题签称2006年上海市普通高等学校春季招生考试，共22题、150分、120分钟。第2–4页含该副本的参考答案与解答。
+- 身份边界：固定副本及其内载题签可核；出版社资料、扫描来源链、题面/答案官方身份未核。该来源尚未绑定 paper；未转录、未修改 manifest/issues、未复制 PDF 入库。已确认 `gk-2006-regular-shanghai-arts` 是普通高考文科卷，不是本春季招生试卷。
+- 针对性验证：PDF 元数据确认4页且未加密；文字提取无正文层；四页160 dpi逐页目视确认题签、印刷页码、题数、分值、时长及答案/解答分布。出版链外部检索未做：web-access 的 CDP 预检未能连接本机 Chrome/Edge；故保留未核状态，不作来源不存在的判断。
+- 报告：`reports/2006-spring-shanghai-source-intake.md`。下一阶段可基于固定副本登记候选 paper/source 后开始题面转录与独立盲核；至少需核图并重绘第17、20、21题图，不插入扫描线稿。
