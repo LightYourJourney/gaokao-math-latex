@@ -10109,3 +10109,11 @@
 - 四版共37页均已逐页查看最新渲染图，完成296项八类检查：244 pass、52 not_applicable、0 fail；无视觉问题。正式 build/review 回执绑定同一 attempt；`validate-receipts --require-final --require-current-inputs`、`review_receipts check-batch`、`provenance check-batch`、`solution_sources check-batch`、source manifest/issues validate、`report.py check --all` 与775行CSV currentness检查通过。
 - 全量报告投影已由一个 content 事务刷新并回读校验六个目标。最终 manifest revision `5256`；批次 `phase1-b47` 为 `closed_with_blockers`，paper 仍为 `blocked`。`ISSUE-1220` 至 `ISSUE-1225` 均继续开放并阻断完成，发布者/版次/来源链及官方身份仍未核；不得把本卷表述为官方或完成长线语料库。未运行测试套件。
 - 阶段审查报告：`reports/phase1-b47.md`；正式 SHA、页数和工具链明细绑定在 `2019_上海春季卷/receipts/{build,review}.json`。
+
+
+### 2020 上海春季卷：固定来源 intake 与页面结构核对（2026-10-28）
+
+- 已复核固定来源 `src-aacbb6140d9e12bc5aca908afe4d613b6ae584f08da89de4fa537d174727f9c2`：文件 SHA-256 `4cb2e71aa66630c0154487dbb06436236701c22f79f770193436e20b60e9e327`、757,216 bytes、9页，与清单一致；清单 Git blob `6b2877388d0bae01db0a448457d7fdfbded972c5` 可在外部源库对象库读取。
+- 九页已逐页目视：题面共21题，前两页；第3–9页自称“参考答案与试题解析”。题面原图仅见Q17；Q11/Q12/Q15/Q19的图在附载解析中。Q18跨题面两页。
+- 上海市教育考试院同期点评将反函数、双曲线、垃圾分类站点、立体几何及整数集函数等描述与扫描件特征题相互印证；这支持考试身份识别，但不证明扫描件版次、出版社或复制来源链。答案材料官方身份未核。
+- 新增 `reports/2020-shanghai-spring-source-intake.md`。本阶段未转录题面、未绑定 paper/source、未改 manifest/issues、未整理答案解析、未运行测试或构建。页面核对由主会话完成，题面盲解正在独立进行、尚未回传。下一步转录题面并保留源内待核项。
