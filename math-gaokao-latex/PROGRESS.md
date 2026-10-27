@@ -9830,3 +9830,12 @@
 - 当前边界：登记事务后 `index.json` 尚未含本卷，旧卷的生成物 currentness 暂报 stale；这不是已解决或已重审历史回执。下一阶段用项目生成器加入本卷并刷新 index 后再核验。当前仍未登记Q20 figure_files/provenance，保持 `planned`。
 - 下一步：登记Q20 TikZ图和逐题provenance，再生成项目TeX与四版入口；后续正式构建/逐页校样前保持 `planned`，不得称整卷完成。全库1952–2026目标仍持续建设。
 - 阶段报告：`reports/2004-spring-anhui-science-registration.md`。
+
+### 2004 春季安徽理科卷：Q20 图稿登记与逐题 provenance（2026-10-27）
+
+- 已完成：Q20 TikZ 图 `gaokao_2004_anhui_spring_science_q20_prism.tex` 通过 Markdown 显式链接登记，预期引用2处（试题/含解析各1）；manifest revision 5209→5210。
+- Provenance：`phase1-b43` Q1–Q22 三角色 evidence 导入成功，revision 5210→5211；Q1–Q19映射固定PDF第1页，Q20–Q22映射第2页；所有 source SHA、题面哈希与答案哈希均由导入器现场校验。转录复核22题 passed；答案等级D（非官方独立推导）；第二位隔离盲解与主推导结论一致；冲突22题均为none。核查者姓名未留存，角色字段只用职责标签，不虚构身份。`official_answer=null`。
+- 验证：图稿 registry 闭合；`provenance.py check-batch --batch phase1-b43` 为 `OK：1卷`；`source_manifest.py validate`、`solution_sources.py check-batch` 通过；CSV 775行，六份全量报告刷新并回读校验。
+- 未完成：共享TeX/简答/四版入口和全局 `index.json` 尚未由生成器更新，因此旧项目 artifact currentness 暂报 stale；不声称历史build/review回执仍有效。未运行测试、正式构建、视觉检查或外部来源检索。
+- 下一步：生成本卷questions/answers TeX、简答速查、四版入口和全局index，随后再验证 receipt currentness；正式构建和逐页目视前仍不标记整卷完成。
+- 阶段报告：`reports/2004-spring-anhui-science-provenance.md`。
