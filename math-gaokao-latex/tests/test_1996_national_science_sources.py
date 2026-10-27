@@ -29,7 +29,8 @@ class NationalScience1996SourceTests(unittest.TestCase):
             self.fail("1996 national science draft and source record are missing")
             return
         self.assertEqual(self.source["source_state"], "ready")
-        self.assertIsNone(self.source["paper_id"])
+        self.assertEqual(self.source["paper_id"], "gk-1996-regular-national-science")
+        self.assertEqual(self.source["paper_relation"], "canonical")
         self.assertEqual(self.source["upstream_path"], "普通高考/1996/1996全国理.pdf")
         self.assertEqual(self.record["source_id"], SOURCE_ID)
         self.assertEqual(self.record["source_manifest_revision"], 4152)

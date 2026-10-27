@@ -9916,6 +9916,11 @@
 
 - 已完成：复用 `phase1-b44` 逐页工作件，对试题版4页、解析版17页、简答版6页、印刷版12页共39页逐页核对；全部适用的字形、题号/标题、公式/选项、页眉页脚、分页留白、字号、图注与答案泄露检查通过，未发现视觉问题。
 - 收据：当前 build attempt `98f64b23-bbee-4b64-9d0c-4c00c0664fc5`；四版 PDF SHA 与页数均记录在 `receipts/build.json`，构建日志无错误、缺字、溢出或未定义引用。`review_receipts.py finalize-batch-checked` 写入视觉回执，manifest revision `5225 → 5226`，批次状态为 `closed_with_blockers`；详见 `reports/phase1-b44.md`。
-- 验证：review/build receipt 检查、provenance、三项逐卷生成器 currentness、solution source 对齐、全量报告投影检查及775行 CSV 回读均通过；本卷定向转录/解答测试 7/7 通过。全量 unittest 因 `test_report.py` 类级初始化长时间停留在全量 issue ledger 解析而中断，没有完整汇总，故不报告全量通过。
+- 验证：review/build receipt 检查、provenance、三项逐卷生成器 currentness、solution source 对齐、全量报告投影检查及775行 CSV 回读均通过；本卷定向转录/解答测试 7/7 通过。后续全量测试完成 1720 项（13 项跳过），发现两条 1996 来源绑定断言过期；详见紧随的测试同步记录。
 - 阻断边界：Q18 原题条件允许多组通项，`ISSUE-1211` 继续 open；paper `production_state=blocked`、`official_answer=null`。固定 PDF 的上游发布者、版次与来源链仍未核实；本批次的关闭状态不等于试卷完成，更不代表1952–2026语料完成。
 - 阶段报告：`reports/phase1-b44.md`。
+
+### 1996 全国文理科固定来源测试断言同步（2026-10-27）
+
+- 全量测试定位到两条过期断言：1996 全国文、理科固定来源已分别 canonical 绑定到 `gk-1996-regular-national-arts` 与 `gk-1996-regular-national-science`，测试仍要求当前 manifest 的 `paper_id` 为空。来源校对 JSON 保留其历史 revision 4152 快照，本次只同步针对当前 manifest 的断言，并显式核对 `paper_relation=canonical`。
+- 验证：两个来源测试模块 10/10 通过。全量套件结果为 `Ran 1720 tests in 751.957s`、`FAILED (failures=2, skipped=13)`，两处失败均为本次修正的过期绑定断言；定向回归通过后未重跑全量套件。
