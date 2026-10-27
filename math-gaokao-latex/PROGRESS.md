@@ -10030,3 +10030,10 @@
 - 针对构建 attempt `2bcef33c-3040-4545-939e-0c1c21b67fd9`，逐页复核四版共 41 页并导入与 PDF 哈希、页数、工具链及输入树绑定的审查回执；4 条 Underfull 按 Q11 题干所在源文件及 PDF 页逐项记录视觉说明。印刷版两处留白和 Q19 跨页、简答版一处留白保留为可读的布局观察。
 - `finalize-batch-checked` 返回 `FINALIZED`；随后构建回执（`--require-final --require-current-inputs`）、批次复核门禁及 provenance 当前性均通过。批次 `closed_with_blockers`、paper `blocked`；`ISSUE-1216`、`ISSUE-1217`、`ISSUE-1218` 继续开放。明细见 `reports/phase1-b45.md`。
 - 本次仅收口该批构建与视觉审查，固定副本出版者、版次、来源链和官方身份仍未核，Q2/Q5 仍待可追溯同版来源或可靠勘误；不代表全库完成。
+
+### 2006 安徽卷理：固定题面来源接收（2026-10-28）
+
+- 已核固定来源 `src-3aed0bc3d5875c8ce734b5b97f95992307ff56fc580067083caea214e3028675`：SHA-256 `dfdf163d47fa3f279288d7000e2dfb729c7d412c64f4aa3b082d242f6ca2b093`、Git blob `5a7adad2311c8cb9af246aee962060f0f8785e53`、530,573 bytes，均与当前 source manifest revision 5235 相符。固定 PDF 两页、A3横向；首页题签为“2006 普通高等学校招生考试（安徽卷理）”，页码276–277。
+- 两页可见22题：Q1–Q12选择、Q13–Q16填空、Q17–Q22解答；Q6/Q16/Q19/Q22有题图。未见答案、解析、选项标记、逐题分值或总分。题签和路径仅支持候选卷整理，发布者、版次、来源链及官方身份仍未核；source 尚未绑定 paper。
+- 新增 `reports/2006-anhui-science-source-intake.md`。主会话对两页220 dpi渲染图逐页目视，另有160 dpi独立复核；`pdftotext -layout` 仅辅助定位。此阶段未转录题面、未修改manifest、未运行测试、未构建。
+- 下一步：逐题转录并记录源页/图位，完成题面复核后独立整理答案与解析；不得把固定副本或 `ready` 状态表述为官方认证。
