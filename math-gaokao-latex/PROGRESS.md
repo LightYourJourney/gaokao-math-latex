@@ -9778,3 +9778,12 @@
 - 验证：generate_projects、make_short_answers、make_editions 的本卷 --check 均通过；source_manifest figure registry 校验通过。
 - 状态：尚无 PDF 构建回执，production_state 仍为 answers_verified；本阶段未运行测试套件。
 - 报告：`reports/2006-spring-shanghai-project-generation.md`。下一阶段构建四个版本并目视检查所有页面。
+
+
+### 2006 上海春季招生数学试卷：Q21 解答函数图补全（2026-10-27）
+
+- 首轮 PDF 视觉检查发现解析版 Q20/Q21 仍输出旧占位说明；移除 Q20 重复占位，为 Q21 单独补绘基于分段函数的解答图，未将答案图插入题面空网格。
+- figure_files 增至四幅，Q21 解答图登记到解析正文及含解析稿，并补记 Q21 的独立推导 provenance；正式状态事务后 manifest revision 5191，production_state=editions_generated。
+- 重生成项目 TeX、含解析、答案速查和四版壳；manifest、provenance、Markdown、项目、速查、入口及 775 行 CSV currentness 均通过。
+- 首轮 PDF build receipt 已因输入改变而失效；需重新构建、重渲全部页面并以新 attempt 完成 review。
+- 报告：`reports/2006-spring-shanghai-q21-solution-figure-correction.md`。
