@@ -20261,3 +20261,54 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1216
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第1页 Q2 印 1/x<1/2，解集为 (-∞,0)∪(2,+∞)，所列四个选项均不相等；固定副本未附答案。",
+  "fingerprint": "8ebdb19d998bed395a6f3bceaec8ee50adabec8bec779f116f74d1ee73a6ec40",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-anhui-arts",
+  "question_id": "gk-2006-regular-anhui-arts-q2",
+  "resume_action": "取得可追溯的同版题页或可靠勘误核对 Q2 题干和选项，在此之前保留无匹配选项及阻断状态。",
+  "source_id": "src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1217
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本第1页 Q5 椭圆式仅见 x²/6+y²/2，之后直接接右焦点，未见等号及右侧；两次源页核对一致。",
+  "fingerprint": "1958baffd2a9f729870bba345b5cec2a01ffd418b27d410e1ffdf434c6613d89",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-anhui-arts",
+  "question_id": "gk-2006-regular-anhui-arts-q5",
+  "resume_action": "取得可追溯的同版题页或可靠勘误确认 Q5 椭圆方程，未核前不补写。",
+  "source_id": "src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1218
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本 Q5 椭圆式缺少可见等号及右侧，不能确定椭圆焦点或参数 p；固定副本未附答案。",
+  "fingerprint": "c02e617ffa81bea200f8c418a484980038fd3c8828bdc01f2e5abb9a593add9d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-anhui-arts",
+  "question_id": "gk-2006-regular-anhui-arts-q5",
+  "resume_action": "确认 Q5 完整题面后独立求解并复核；此前保留答案待核及阻断状态。",
+  "source_id": "src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

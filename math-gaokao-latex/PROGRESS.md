@@ -9994,3 +9994,9 @@
 
 - 将已独立复核的 Q9/Q19/Q22 TikZ 源迁入预定项目目录 `2006_安徽卷_文科/figures/`，更新题面图链接并从三份规范源重渲染含解析稿。图源字节不变，题面和含解析稿各引用每幅图一次；合并稿 SHA-256 `736769ccf22743b0568fdefa9e25290e2c19d154026ea3363ba0ca6a57394e6e`。
 - 本阶段仅整理图稿路径，来源尚未绑定，Q2/Q5 疑点与正式登记、provenance、构建和视觉验收仍待办理；不把内部登记等同官方来源认证。
+
+### 2006 安徽文科：paper/source 与 Q2/Q5 阻断登记（2026-10-27）
+
+- `register-papers` 预检通过后将 `gk-2006-regular-anhui-arts` 登记到 `phase1-b45`，manifest revision `5226 → 5227`；固定副本作本库内部 canonical 绑定，三幅独立复核图纳入 `figure_files`。此绑定不认证上游出版者、版次或官方身份。
+- 事务新增 `ISSUE-1216`（Q2无匹配选项）、`ISSUE-1217`（Q5缺可见方程右侧）、`ISSUE-1218`（Q5答案待核），均 open 且阻断完成；paper `blocked`、批次 `planned`。题面与答案/解析的绑定说明已同步，`official_answer=null` 和原印疑点保留。
+- 后续须导入逐题 provenance、生成共享 TeX 与四版入口，再正式构建与逐页审查；登记事务后的全局 `index.json` 尚未包含本卷。当前全库报告显示191个批次 `INVALID_OR_STALE`（含新批次），此前 `phase1-b44` 的 build receipt 单独检查仍 current，但批次 review 门禁暂报状态失配；下一阶段先生成并重新核对，不能将旧 review 门禁假称当前通过。登记明细见 `reports/2006-anhui-arts-registration.md`。

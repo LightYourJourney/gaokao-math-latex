@@ -1687,6 +1687,14 @@
         "gk-2004-spring-anhui-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b45",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-anhui-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1696,7 +1704,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c45fc04b-26de-49c7-81ef-e9e464ece46e",
+  "last_transaction_id": "53c9a9f0-b51e-45c7-a1aa-7069aab09207",
   "papers": [
     {
       "blocked_from": null,
@@ -23554,9 +23562,78 @@
       "title": "2004 年·普通高等学校春季招生考试·安徽卷文科",
       "track": "arts",
       "year": 2004
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2006_安徽卷_文科/figures/2006_anhui_arts_q09_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_安徽卷_文科/figures/2006_anhui_arts_q19_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_安徽卷_文科/figures/2006_anhui_arts_q22_hyperbola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2006_anhui_arts",
+        "id": "gk-2006-regular-anhui-arts",
+        "note": "固定副本 PDF 第1–2页题面，印刷页码278–279；出版者、版次、来源链及官方身份未核。文件未见答案页，答案为非官方项目推导。Q2选项与原印不等式解集不匹配；Q5椭圆式缺少可见等号及右端，均保留阻断。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考安徽卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [
+        "ISSUE-1216",
+        "ISSUE-1217",
+        "ISSUE-1218"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-anhui-arts",
+      "production_state": "blocked",
+      "project_dir": "2006_安徽卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版题页或可靠勘误核对 Q2 题干和选项，在此之前保留无匹配选项及阻断状态。；取得可追溯的同版题页或可靠勘误确认 Q5 椭圆方程，未核前不补写。；确认 Q5 完整题面后独立求解并复核；此前保留答案待核及阻断状态。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_安徽文_含解析.md",
+        "questions": "2006/2006_数学真题_安徽文_试题.md",
+        "solution_body": "2006/2006_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7"
+      ],
+      "title": "2006 年·普通高考·安徽卷文科",
+      "track": "arts",
+      "year": 2006
     }
   ],
-  "revision": 5226,
+  "revision": 5227,
   "schema_version": 1,
   "sources": [
     {
@@ -30989,8 +31066,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d6dad748397b41cbbd948572e6e2f44ceecd28ad",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006安徽文.pdf",
       "regions": [],
       "source_id": "src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7",
