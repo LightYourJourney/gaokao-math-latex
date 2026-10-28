@@ -29,3 +29,9 @@
 已将生成器的陕西卷说明改为“第22–24题均给出解答，固定副本未见选做说明”，重新生成简答内容；`make_short_answers.py --batch phase4-b40 --check`通过。四版正式构建返回COMPILED_PENDING_REVIEW，attempt `a4f0a16c-aa64-41ea-b3a1-2a60f4e49550`，manifest revision5409；本卷及批次处于待视觉复核状态，旧review回执不能代替此次构建的验收。
 
 尚需逐页核验当前PDF及绑定证据、正式finalize、检查其余卷确定性生成和回执、刷新全量报告并运行适当回归。现有全量报告是修正前快照，不可用于声称本轮已闭合。
+
+## 当前构建的视觉收口
+
+四版 64 页在 attempt `a4f0a16c-aa64-41ea-b3a1-2a60f4e49550` 下以 140 dpi 重新渲染并与上一轮实际审查图片逐页比对。19 页不同，主代理逐页目检；45 页 PNG 字节完全一致，继承 attempt `8585aac4-966e-4bcd-9652-85410d9aaad6` 的逐项视觉结论。旧审查工作目录已归档在忽略的 `.work/phase4-b40/review-history/`，新构建逐页哈希和查看记录在对应 `review-render/.../inspection-summary.json`。简答版第 7 页的更正说明完整可读。
+
+`finalize-batch` 返回 `FINALIZED` / `closed`（revision 5410）；本批最终构建回执和审查回执检查通过，manifest.csv 775 行当前，简答生成器全库 349 套结果一致。全库回执检查 343 套 succeeded、6 套 pending、0 stale、0 invalid；6 套仍待审，不能称为全库完成。简答生成器相关单元测试 52 项通过。全量报告仍为较早快照，尚待刷新；以上结果不证明 1952—2026 全部语料完成。
