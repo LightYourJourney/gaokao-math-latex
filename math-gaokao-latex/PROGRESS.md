@@ -10352,3 +10352,10 @@
 - 答案证据均为项目独立推导 D 级、明确非官方；第二位读者仅依据题面盲核。Q9盲核确认曲线特征但没有选项图，因此 D 选项字母由主会话依已复核 TikZ 图对应；Q14采用铁球完全浸没解释，Q15为表格规律外推。`official_answer=null`。
 - `provenance.py check-batch` 通过；批次现为 `provenance_verified`，paper 仍 `blocked`，唯一完成阻断为 `ISSUE-1229`。确定性生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 和试题/解析/简答/印刷四个入口；项目目录下五幅图的两次复用计数校验通过。
 - 来源总账、issues、解析一致性、三类生成器 `--check`、六个全量报告投影 `report.py check --all`、775行 `manifest.csv --check` 均通过。`report.py render --all` 写入并回读六个全量投影。未运行测试套件，未正式 XeLaTeX 构建、渲染或做页面视觉审查。阶段报告：`reports/phase1-b49-provenance-generation.md`。
+
+### 2004 北京春季文科：20题三角色provenance与源文漏字修正（2026-10-28）
+
+- 本轮独立题面复核实际重新渲染两页固定PDF，发现Q11“常数”漏“实”字；据源修正“常实数”，由复核者回看闭环。Q17/Q18当前矢量重新局部渲染比对，Q20网格/数阵及“计算公以及”忠实。Q1–17→PDF1，Q18–20→PDF2，固定源SHA匹配。
+- 另一只看题面/PDF的代理独立解20题，均与当前答案一致；主代理答案可见复算，Q16再次确认等边及√3/2，历史报告误值1记resolved；Q18时间/单位及Q20全部正整数位置现场复算。Q10解析补比值有定义语境，未改题面或答案值。
+- 正式导入20题provenance，revision5313→5314；batch provenance_verified，paper blocked，Q20 ISSUE-1238继续open/blocks_completion。答案均为D级非官方推导，Q20数学一致不等于源文完整；official_answer=null、出版/版次/来源链未知保留。专项9项OK，确定性生成同步，详见reports/phase1-b52-provenance.md。
+- 此阶段尚无本卷正式build/review回执，下一步四版构建与逐页视觉审查。不表示整卷或1952–2026题库完成。
