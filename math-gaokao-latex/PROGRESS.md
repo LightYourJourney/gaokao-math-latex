@@ -10359,3 +10359,10 @@
 - 另一只看题面/PDF的代理独立解20题，均与当前答案一致；主代理答案可见复算，Q16再次确认等边及√3/2，历史报告误值1记resolved；Q18时间/单位及Q20全部正整数位置现场复算。Q10解析补比值有定义语境，未改题面或答案值。
 - 正式导入20题provenance，revision5313→5314；batch provenance_verified，paper blocked，Q20 ISSUE-1238继续open/blocks_completion。答案均为D级非官方推导，Q20数学一致不等于源文完整；official_answer=null、出版/版次/来源链未知保留。专项9项OK，确定性生成同步，详见reports/phase1-b52-provenance.md。
 - 此阶段尚无本卷正式build/review回执，下一步四版构建与逐页视觉审查。不表示整卷或1952–2026题库完成。
+
+### 2004 北京春季文科：四版39页视觉验收，保留Q20来源阻断（2026-10-28）
+
+- 首轮63411d26的简答Q20裁切80.75885pt、解析Q20答案框Underfull，均实际查看并归档失败。只把规范答案中的六个位置集合改成逐项行内坐标、数学对和顺序不变，同步派生稿并正式更新Q20表示哈希/证据（revision5317），其他19题完整provenance及所有题面哈希不变。
+- 最终attempt `7798a4cc-8760-41ba-90e0-6dc870b1ff2b`：试题4页、解析16页、简答6页、印刷13页，共39页A4，四版零错误/缺字/引用/Overfull/Underfull。主代理实际逐页查看39张110dpi图，八项312检查为288pass/24not_applicable，0fail/pending，无旧页结论继承。
+- finalize-batch实际FINALIZED，revision5320；build succeeded、review passed，batch closed_with_blockers、paper blocked。ISSUE-1238和“计算公以及”保真注记保留；official_answer=null，来源认证未知。
+- 全量1724项测试实际OK（skipped=13），详见reports/phase1-b52-build-visual.md及reports/phase1-b52.md。下一批2004北京春季理科已有完整草稿可登记；1952—2026全集目标仍未完成。
