@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 春季上海卷：固定题源内部登记与 Q16 阻断（2026-10-28）
+
+- 已通过 `register-papers` dry-run 并以单一状态事务登记 `gk-2009-spring-shanghai` / `phase1-b53`，manifest revision `5302 → 5303`，事务 `10aca2eb-4803-41c1-af75-f436ad35f09d`。固定 source `src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f` 的 SHA-256、Git blob、9页与既有清单记录一致；仅绑定为本库内部 canonical 输入，不认证发布者、版次、来源链或官方身份。
+- 登记20题，题面 PDF 第1–4页，固定副本自称答案/评分材料位于第5–9页。事务新增 `ISSUE-1239`：Q16 角条件缺值，印载答案依赖未见直角条件；题面照录缺项、答案保持 U，paper 为 `blocked`，batch 为 `planned`，`official_answer=null`。
+- 五幅 TikZ 图迁入 `2009_春季上海卷/figures/`，题面和图表清单链接同步；manifest 每图预期2次引用。确定性含解析稿及 parser 所需答案/解析锚点同步完成。
+- `source_manifest.py validate`、`issues.py validate`、`solution_sources check-batch`、`report.py check --all`、`manifest_csv.py --check` 与 `git diff --check` 均通过；CSV 为775行。未运行测试套件；尚未导入逐题 provenance、生成共享 TeX/四版入口、构建或视觉审查 PDF。
+- 阶段报告：`reports/2009-shanghai-spring-registration.md`。下一步导入逐题 provenance 并生成共享内容与四版入口；Q16 继续阻断整卷完成。
+
 ### 2009 春季上海卷：题面与五幅图稿首轮转录（2026-10-28）
 
 - 已完成：依据固定 source `src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f` / SHA-256 `7012664a55336f327de730b2d7709256ca07e6c373110efa1a4d79ecedb64de2` 转录20题，并记录源页映射：PDF第1页Q1–Q11填空（11题12空、60分），第2页Q12–Q15选择（16分），第3页Q16–Q18解答，第4页Q19–Q20解答（解答题共74分）。全卷150分、120分钟。源 PDF 共9页，固定 Git blob `5928da1aeae41277da97b7b7d08ed3649705e6f4`；第5–9页载“参考答案及评分标准”与解答，但答案身份/官方性未核，不转称为官方答案，`official_answer=null`。

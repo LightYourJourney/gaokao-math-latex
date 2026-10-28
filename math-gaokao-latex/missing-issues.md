@@ -20661,3 +20661,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1239
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第3页 Q16 印有“∠A₁AC =”但未见数值；第5–6页副本所载解答将 △AA₁C 称为直角三角形并据 AC=4 得体积48。现有题面可构造满足可见条件但体积分别为48与48√3的向量情形，因此48不能由现存题面唯一推出；答案材料官方身份未核。",
+  "fingerprint": "ba65aae3dd9134245fac3eb616651c73a6ea44b46730d8def18827cfadb40c53",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-spring-shanghai",
+  "question_id": "gk-2009-spring-shanghai-q16",
+  "resume_action": "取得可追溯的同版清晰题页或可靠正式勘误以核定 ∠A₁AC 条件，再重新求解并盲核；此前保留题面缺项、答案 U，并保持整卷完成阻断。",
+  "source_id": "src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

@@ -1751,6 +1751,14 @@
         "gk-2004-spring-beijing-arts"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase1-b53",
+      "issues": [],
+      "paper_ids": [
+        "gk-2009-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1760,7 +1768,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4eb82365-26a4-46c7-bff1-4e9c8ffa6a93",
+  "last_transaction_id": "10aca2eb-4803-41c1-af75-f436ad35f09d",
   "papers": [
     {
       "blocked_from": null,
@@ -24173,9 +24181,87 @@
       "title": "2004 年·春季北京卷·文科",
       "track": "arts",
       "year": 2004
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2009_春季上海卷/figures/gaokao_2009_shanghai_spring_q11_number_line.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_春季上海卷/figures/gaokao_2009_shanghai_spring_q15_inverse_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_春季上海卷/figures/gaokao_2009_shanghai_spring_q16_oblique_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_春季上海卷/figures/gaokao_2009_shanghai_spring_q18_orbit.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2009_春季上海卷/figures/gaokao_2009_shanghai_spring_q19_squares.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2009_spring_shanghai",
+        "id": "gk-2009-spring-shanghai",
+        "note": "本库内部 canonical 固定输入：source ID src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f，SHA-256 7012664a55336f327de730b2d7709256ca07e6c373110efa1a4d79ecedb64de2，PDF 9 页；题面 PDF 第1–4页，副本自称“参考答案及评分标准”的内容位于第5–9页。此绑定只标识本库工作流采用的固定字节，不认证发布者、出版物、版次、来源链或官方身份；official_answer=null。Q16题面角条件缺值，印载答案48依赖未见条件，登记开放完成阻断。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          5,
+          9
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            11
+          ],
+          "解答题": [
+            16,
+            20
+          ],
+          "选择题": [
+            12,
+            15
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1239"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2009-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2009_春季上海卷",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版清晰题页或可靠正式勘误以核定 ∠A₁AC 条件，再重新求解并盲核；此前保留题面缺项、答案 U，并保持整卷完成阻断。",
+      "source_files": {
+        "answer_key": "2009/2009_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2009/2009_数学真题_春季上海_含解析.md",
+        "questions": "2009/2009_数学真题_春季上海_试题.md",
+        "solution_body": "2009/2009_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f"
+      ],
+      "title": "2009 年·春季上海卷",
+      "track": "none",
+      "year": 2009
     }
   ],
-  "revision": 5302,
+  "revision": 5303,
   "schema_version": 1,
   "sources": [
     {
@@ -24744,8 +24830,8 @@
       "exam_type": "spring",
       "git_blob_oid": "5928da1aeae41277da97b7b7d08ed3649705e6f4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2009-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2009春季上海.pdf",
       "regions": [],
       "source_id": "src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f",
