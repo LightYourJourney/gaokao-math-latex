@@ -1735,6 +1735,14 @@
         "gk-2017-regular-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b51",
+      "issues": [],
+      "paper_ids": [
+        "gk-2000-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1744,7 +1752,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7059d501-2a97-4a96-a0eb-133a91d1a4ba",
+  "last_transaction_id": "dfbbf3c5-871c-46ff-8b0d-bc1a955520b6",
   "papers": [
     {
       "blocked_from": null,
@@ -24021,9 +24029,77 @@
       "title": "2017 年·上海普通高考卷",
       "track": "none",
       "year": 2017
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2000_春季上海卷/figures/gaokao_2000_shanghai_spring_q08_geometry.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_春季上海卷/figures/gaokao_2000_shanghai_spring_q17_even_function.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_春季上海卷/figures/gaokao_2000_shanghai_spring_q22_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2000_spring_shanghai",
+        "id": "gk-2000-spring-shanghai",
+        "note": "内部 canonical 固定输入：source ID src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0，SHA-256 f58f3b980fef4e1b74955a9e37bbbf751056d4d3c9a2215d77b489fd14e5a954，PDF 9 页、印刷页 182–190；题面页 1–4，印刷附录页 5–9。出版者、出版物、版次、扫描来源链及官方身份未核；附录答案不标作官方答案，official_answer=null。三幅题图已矢量重绘并局部预览，正式四版与逐页审查尚未完成。",
+        "pages_q": [
+          1,
+          4
+        ],
+        "pages_s": [
+          5,
+          9
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2000-spring-shanghai",
+      "production_state": "planned",
+      "project_dir": "2000_春季上海卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2000/2000_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2000/2000_数学真题_春季上海_含解析.md",
+        "questions": "2000/2000_数学真题_春季上海_试题.md",
+        "solution_body": "2000/2000_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0"
+      ],
+      "title": "2000 年·春季上海卷",
+      "track": "none",
+      "year": 2000
     }
   ],
-  "revision": 5289,
+  "revision": 5290,
   "schema_version": 1,
   "sources": [
     {
@@ -24040,8 +24116,8 @@
       "exam_type": "spring",
       "git_blob_oid": "1d638c2ac9e78cd2bfcb9a31cd8ec31d9b7e5bb9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2000-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2000春季上海.pdf",
       "regions": [],
       "source_id": "src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0",
