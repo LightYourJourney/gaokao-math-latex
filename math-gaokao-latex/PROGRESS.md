@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2000 上海春季卷：逐题 provenance 导入（2026-10-28）
+
+- `phase1-b51` 的22题 provenance 已经正式导入，manifest revision `5292→5293`，事务 `0c261551-bd22-4505-bc52-9fd7adcc15bb`；题面与答案哈希由工具按当前规范源重算。paper 为 `editions_generated`，batch 为 `provenance_verified`。
+- 题面复核为 `passed`，逐题 PDF 页映射覆盖 Q1–Q22；Q22 映射第4–5页，第5页下半同时开始附录。记录沿用2026-10-19两段盲核和页图核对证据，复核者姓名未记录。
+- 22题答案证据均为 D 级本库独立推导，记录指向 Q1–Q11 / Q12–Q22 两段解题及对固定副本附录的逐题比较；解题者身份未记录，答案审阅角色来自同一记录的 solver cohort，没有独立第三审阅者姓名或单独流程。Q21早期比值误报更正为3的历史保留。附录身份/官方性未核，`official_answer=null`，无未决 conflict 或 issue ID。
+- `source_manifest.py validate`、issues validate、provenance check、22题 solution-source check、项目 TeX/简答稿/四版入口生成器 `--check` 均通过。全量 report 投影刷新并由 `report.py check --all` 验证当前；manifest.csv 当前且775行。
+- 未运行测试套件，未正式构建 PDF、生成 build/review 回执或逐页目视。来源发布者、出版物、版次、扫描链及官方身份仍未知；下一步为四版正式构建与逐页视觉审查。阶段报告：`reports/phase1-b51-provenance-generation.md`。
+
 ### 2000 上海春季卷：固定来源内部登记、图稿归档与确定性生成（2026-10-28）
 
 - 依据当前分支较新的登记实践，将固定副本 `src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0`（SHA-256 `f58f3b980fef4e1b74955a9e37bbbf751056d4d3c9a2215d77b489fd14e5a954`，9页）作为本库内部 canonical 输入登记为 `gk-2000-spring-shanghai` / `phase1-b51`，revision `5289→5290`。这只确定本库采用的固定字节副本，不证明出版社、版次、书目关联、扫描来源链或官方身份；附录答案仍非官方，`official_answer=null`。
