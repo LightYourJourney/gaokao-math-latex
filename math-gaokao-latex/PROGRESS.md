@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2000 上海春季卷：分页回流后的四版正式重建（2026-10-28）
+
+- 新正式构建 attempt `8fd91441-c7fc-4c19-9846-989f14559e84` supersedes 回流前 attempt `36aee468-9d50-403d-b997-7b62eca90d07`；输入 revision 5298，构建记录推进到 revision 5300。试题/解析/简答/印刷版分别为5/19/7/15页，共46页；SHA-256 见 `reports/phase1-b51-formal-rebuild.md`。
+- 四版构建成功，errors、missing characters、overfull、undefined references 与 receipt problems 均为空；PDF 页数与 SHA 和本机文件一致。receipt 当前性为0 failed / invalid / missing / stale，1 pending review。paper 为 `compiled`，batch 为 `compiled_pending_review`。
+- source manifest、issues、provenance（1卷/22题）、solution sources（22题）、三个生成器 `--check`、manifest CSV（775行）及全量 report currentness 检查通过；全量报告已刷新。未运行测试套件。
+- 下一阶段为当前 attempt 绑定的46页逐页视觉回执最终化。出版社、版次、扫描来源链及答案官方身份仍未核，`official_answer=null`；此阶段不代表整卷验收或长期语料库完成。
+
 ### 2000 上海春季卷：视觉复核发现后的分页回流修正（2026-10-28）
 
 - 47页初审与重点页180 dpi复核发现解析版 Q21(3) 答案框独占第18页页首、印刷版 Q22(3) 答案框独占第16页。框内内容完整但分页孤立、留白明显。
