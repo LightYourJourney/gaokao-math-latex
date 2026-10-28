@@ -8,6 +8,7 @@
 
 - 依据当前分支较新的登记实践，将固定副本 `src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0`（SHA-256 `f58f3b980fef4e1b74955a9e37bbbf751056d4d3c9a2215d77b489fd14e5a954`，9页）作为本库内部 canonical 输入登记为 `gk-2000-spring-shanghai` / `phase1-b51`，revision `5289→5290`。这只确定本库采用的固定字节副本，不证明出版社、版次、书目关联、扫描来源链或官方身份；附录答案仍非官方，`official_answer=null`。
 - 三幅既有 TikZ 图稿归档到 `2000_春季上海卷/figures/` 并登记，每图预期题面与含解析稿共引用2次；题面/答案/解析的 `paper_id` 与图稿链接同步。paper 与 batch 为 `planned`，尚未导入逐题 provenance。
+- 页码范围随后更正：复用以固定 PDF SHA 命名的 195 dpi 缓存页图，目视核对 PDF 第1–5页，确认 Q22 从第4页续至第5页，且第5页下方已开始“答案要点”附录。manifest revision `5290→5292` 以两笔 state transaction 将 `pages_q` 改为 `[1,5]` 并更正 index note；`pages_s` 保持 `[5,9]`。详见 `reports/2000-shanghai-spring-page-range-correction.md`。
 - 确定性生成已完成：共享 `questions.tex`、`answers.tex`、`index.json`、`answers_short.tex` 与四版入口均生成，三个生成器 `--check` 和 22 题 solution-source 对齐检查通过。答案要点补列 Q13–Q16 速查行（B、D、A、A），仅重复文档已有答案；含解析稿复查为当前。
 - 登记改动共享索引期间，旧卷当前性报告曾暂时显示 stale；索引刷新后，`phase1-b50`、`phase0-b01` 单批门禁复查均为 `FINALIZED`，旧回执未改写。全库当前门禁为196个 `FINALIZED`、3个既有 `VISUAL_FAILED`、本卷1个待构建的 `INVALID_OR_STALE`；全量报告投影和 manifest.csv 已刷新并核对当前。
 - 验证：注册 dry-run/事务、source manifest、issues、项目 TeX/简答稿/四版入口 `--check`、`solution_sources check-batch`、report render/check、`manifest.csv --check` 均通过。未跑测试、未导入 provenance、未构建或目视 PDF。下一步导入逐题 provenance，再正式构建并逐页审查。此阶段不等于该卷交付完成或1952–2026语料库完成。详见 `reports/2000-shanghai-spring-registration.md`。

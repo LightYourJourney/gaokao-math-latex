@@ -13,7 +13,7 @@
 ## 登记结果
 
 - `source_manifest.py register-papers` dry-run 通过，随后以一个状态事务登记 `gk-2000-spring-shanghai` / `phase1-b51`，manifest revision `5289 → 5290`，事务 ID `dfbbf3c5-871c-46ff-8b0d-bc1a955520b6`。
-- 纸卷22题，`track=none`；题面位于 PDF 第1–4页，附录位于第5–9页（印刷页182–190）。题型结构为填空1–12、选择13–16、解答17–22。paper 与 batch 均为 `planned`，无逐题阻断项；这只是工作流登记，不是四版验收或来源认证。
+- 纸卷22题，`track=none`；题面跨 PDF 第1–5页，附录位于第5–9页（印刷页182–190），第5页同时含 Q22 续文和附录起始内容。登记时初填题面范围 1–4 页，后经页码复核更正为 1–5 页，见 `reports/2000-shanghai-spring-page-range-correction.md`。题型结构为填空1–12、选择13–16、解答17–22。paper 与 batch 均为 `planned`，无逐题阻断项；这只是工作流登记，不是四版验收或来源认证。
 - 将三幅已完成的 TikZ 图稿从 `2000/figures/` 移入 `2000_春季上海卷/figures/`，题面与含解析稿链接改为项目内路径。三图 `expected_occurrences=2`，源文件 SHA-256 分别为：
   - Q8：`0ae4270069d998e83fcbfb37604d096772ce7d6a3a2d858c30c89152f6f0cfd8`
   - Q17：`d6fe979d1e66bedb9f4d14cc8babee94df078d3a3e557ee0a45ebd24ace0df24`
@@ -30,6 +30,6 @@
 
 `source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch`（22题）、本卷项目 TeX/简答稿/四版入口的三个 `--check`、`report.py render --all` / `check --all` 与 `manifest_csv.py --check` 均通过。全量门禁为 196 个 `FINALIZED`、3 个既有 `VISUAL_FAILED`、1 个 `INVALID_OR_STALE`（本卷尚无 build/review 回执）。未运行测试套件，未导入逐题 provenance，未正式构建 PDF 或逐页视觉审查。
 
-登记规格首次把 `pages_q/pages_s` 写成逐页数组时，CLI 按 schema 要求“起止页对”拒绝；改为 `[1,4]` 与 `[5,9]` 后 dry-run 通过。问题校验器要求 `--file`；首次错误参数调用在解析阶段退出、未写入，随后正确调用通过。
+登记规格首次把 `pages_q/pages_s` 写成逐页数组时，CLI 按 schema 要求“起止页对”拒绝；改为起止页对后 dry-run 通过；首次登记值 `[1,4]` 已由后续页码复核更正为 `[1,5]`，详见页码更正报告。问题校验器要求 `--file`；首次错误参数调用在解析阶段退出、未写入，随后正确调用通过。
 
 下一阶段复用已完成的题面、答案、解析、三图及确定性派生物，导入逐题 provenance；随后正式构建及逐页审查。不得重做已完成的转录或把附录答案称为官方答案。该卷登记不代表1952–2026语料库完成。
