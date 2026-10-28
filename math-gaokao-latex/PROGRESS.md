@@ -10373,3 +10373,10 @@
 - 新paper gk-2004-spring-beijing-science / phase1-b54，以内部canonical绑定固定字节（revision5321），不认证出版物/版次/来源链及官方身份，official_answer=null。随后正式导入20题D级provenance（revision5322），batch provenance_verified、paper editions_generated，尚未正式构建或视觉验收。
 - 两份既有矢量图等字节复制到项目figures并同步manifest/Markdown映射；题面、答案、解析三源规范化、含解析稿确定性生成、questions/answers/short与四个入口生成。Q19(2)补入已证三段函数以免简答缺项，未改数学结论。旧测试的未绑定断言改为双向绑定/正式图稿与链接检查。
 - 来源与数学专项5项OK，provenance/solution_sources/三个生成器检查通过；详见reports/phase1-b54-provenance-generation.md。下一阶段正式四版构建、日志与全部页视觉验收；本阶段不表示本卷或全集完成。
+
+### 2004 北京春季理科：四版40页构建及视觉门禁闭合（2026-10-28）
+
+- 登记/生成已提交2e927490。首轮b4ad5c68虽日志零警告，实看发现Q18 A/C标签碰线、Q20仅答案框的孤立末页；已归档6页实际观察及220dpi局部。仅改Q18两处标签锚点和Q20等价解析表达，题面/答案/逐题provenance字节均不变，未改公共样式或字体。
+- 最终attempt `27c3e3c9-d9e7-4778-877a-6a37b5dea0f6`：四版4/17/6/13页，共40页A4，错误/缺字/未解析引用/Overfull/Underfull均0，豁免0。主代理实际逐页查看40张110dpiPNG，八项320检查295pass/25NA，0fail/pending，无旧attempt视觉继承。
+- 独立只读复核75个SHA及输入/工具链绑定通过；完整1724项测试实际OK（skipped=13）。finalize-batch实际FINALIZED，revision5327，batch closed、paper complete，build succeeded、review passed。来源身份仍未知、official_answer=null，不冒称官方答案。
+- 自动报告reports/phase1-b54.md，构建/修复/逐页证据及PDF指纹详见reports/phase1-b54-build-visual.md。该卷闭合不代表1952—2026题库完成，下一批可启动2007上海春季卷图像来源转录。
