@@ -1743,6 +1743,14 @@
         "gk-2000-spring-shanghai"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b52",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-spring-beijing-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1752,7 +1760,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4a22df64-1e40-40ea-bb4b-a5758af69bfa",
+  "last_transaction_id": "4eb82365-26a4-46c7-bff1-4e9c8ffa6a93",
   "papers": [
     {
       "blocked_from": null,
@@ -24102,9 +24110,72 @@
       "title": "2000 年·春季上海卷",
       "track": "none",
       "year": 2000
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季北京文科/figures/gaokao_2004_beijing_spring_arts_q17_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季北京文科/figures/gaokao_2004_beijing_spring_arts_q18_orbit.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2004_spring_beijing_arts",
+        "id": "gk-2004-spring-beijing-arts",
+        "note": "内部 canonical 固定输入：source ID src-417d865aa928e69f32b3fcbc80abe4fa227259b79ababcce8765ea981117119b，SHA-256 4670b402354afd088d6993fbc473490158f27e232b1c54730e5989b64a21ec26；PDF题签为“2004年普通高等学校春季招生考试（北京卷文）”，XeTeX排印副本（非原卷扫描），2页、印刷页155–156。canonical仅表示本库选用该固定副本，不认证发布者、出版物、版次、来源链或官方身份；答案与解析为编者独立推导、非官方，official_answer=null。Q20尾问原文“计算公以及”疑脱“式”，照录并保持完成阻断。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季北京卷文科",
+        "structure": {
+          "单选题": [
+            1,
+            10
+          ],
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季北京文科"
+      },
+      "issue_ids": [
+        "ISSUE-1238"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-spring-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2004_春季北京文科",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版高清题页、原始扫描或可靠勘误，核定 Q20 尾问是否脱“式”及其完整原文；核实前继续照录“计算公以及”，保留转录标记并保持整卷完成阻断。",
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_春季北京文_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_春季北京文_含解析.md",
+        "questions": "2004/2004_数学真题_春季北京文_试题.md",
+        "solution_body": "2004/2004_数学真题_春季北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-417d865aa928e69f32b3fcbc80abe4fa227259b79ababcce8765ea981117119b"
+      ],
+      "title": "2004 年·春季北京卷·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 5301,
+  "revision": 5302,
   "schema_version": 1,
   "sources": [
     {
@@ -24433,8 +24504,8 @@
       "exam_type": "spring",
       "git_blob_oid": "d402a6935a3251aa8f5a6f918f5c3144728e064f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-spring-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004春季北京文.pdf",
       "regions": [],
       "source_id": "src-417d865aa928e69f32b3fcbc80abe4fa227259b79ababcce8765ea981117119b",

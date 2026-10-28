@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 春季北京文科卷：固定题源内部绑定与 Q20 阻断登记（2026-10-28）
+
+- 已完成：登记 `gk-2004-spring-beijing-arts` / `phase1-b52`，revision `5301 → 5302`。固定 source `src-417d865aa928e69f32b3fcbc80abe4fa227259b79ababcce8765ea981117119b` 的 SHA-256 `4670b402354afd088d6993fbc473490158f27e232b1c54730e5989b64a21ec26`、Git blob `d402a6935a3251aa8f5a6f918f5c3144728e064f`、2页和印刷页155–156与既有来源记录一致；XeTeX排印副本只登记为本库内部 canonical 输入，不认证出版者、版次、来源链或官方身份。
+- 登记新增 `ISSUE-1238`：固定 PDF 第2页 Q20尾问源文为“计算公以及”，是否脱“式”缺乏可追溯勘误或同版异本；题面继续照录并保持转录歧义。paper 为 `blocked`（`blocked_from=planned`），batch 为 `planned`。答案及解析仍是独立推导、非官方，`official_answer=null`。
+- 两幅已核 TikZ 图移入 `2004_春季北京文科/figures/`；题面和图表清单路径改为项目目录，试题与含解析稿各复用一次（每图预期引用2次）。由规范题面、答案和解析稿生成确定性含解析稿。相关既有定向测试断言同步更新；本阶段不运行测试套件。
+- 验证：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase1-b52`、`report.py check --all` 与 `manifest_csv.py --check` 均通过；六个全量报告投影刷新并回读，CSV 为775行且当前。含解析稿首轮直接渲染未规范化解析锚点，`check-batch` 捕获漂移；改由正式 `extract-batch --write` 生成后通过。
+- 状态影响：全量报告当前列出198个 `INVALID_OR_STALE` 复核门禁、3个 `VISUAL_FAILED`；build 与 review 各缺1份（新登记卷尚无回执）。本阶段未重建或重新视觉审查既有 PDF；这些是当前 receipt/manifest 核验状态，不是新产生的视觉结论。
+- 尚未导入逐题 provenance、生成共享 TeX/四版入口、正式构建 PDF 或做逐页视觉审查；无 build/review receipts。本阶段未运行 OCR、外部 API 或联网书目核查，Token、费用与耗时未知。
+- 阶段报告：`reports/2004-beijing-spring-arts-registration.md`。后续先完成逐题 provenance 与确定性生成门禁，再决定正式构建；当前登记不代表整卷完成或1952–2026语料库完成。
+
 ### 2000 上海春季卷：四版46页视觉复核并关闭批次（2026-10-28）
 
 - `review_receipts.py finalize-batch` 返回 `FINALIZED`，revision 5301；batch `phase1-b51` 为 `closed`，paper `gk-2000-spring-shanghai` 为 `complete`。最终报告：`reports/phase1-b51.md`；review receipt 绑定当前 build attempt `8fd91441-c7fc-4c19-9846-989f14559e84` 与四版 PDF SHA。

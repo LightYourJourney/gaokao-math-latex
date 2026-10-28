@@ -51,7 +51,8 @@ class BeijingSpring2004ArtsSolutionTests(unittest.TestCase):
         self.assertIn("Q16报告结论经主会话复算", answers)
         self.assertIn("首轮独立逐题盲核完成", transcript)
         self.assertIn("Q20疑脱字按源文照录并标注", transcript)
-        self.assertIn("未绑定正式 `paper_id`", transcript)
+        self.assertIn("paper_id: gk-2004-spring-beijing-arts", transcript)
+        self.assertIn("绑定为内部 canonical 输入", transcript)
         self.assertNotIn("官方答案", answers.split("答案归属")[1].split("---")[0])
 
     def test_arithmetic_values_and_factorized_positions_recompute_exactly(self):

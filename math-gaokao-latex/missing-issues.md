@@ -20644,3 +20644,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1238
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第2页（印刷页156）Q20尾问源文可辨为“计算公以及”。当前题面照录该短语并注记疑脱“式”字，但固定副本未提供勘误或可追溯的同版异本；依据上下文补成“计算公式”仍属推测，不能据此消除转录歧义。",
+  "fingerprint": "cbde11e7d07568313e2b6f78923a54c121a35b431d7de416d55014d15c1c55c9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-spring-beijing-arts",
+  "question_id": "gk-2004-spring-beijing-arts-q20",
+  "resume_action": "取得可追溯的同版高清题页、原始扫描或可靠勘误，核定 Q20 尾问是否脱“式”及其完整原文；核实前继续照录“计算公以及”，保留转录标记并保持整卷完成阻断。",
+  "source_id": "src-417d865aa928e69f32b3fcbc80abe4fa227259b79ababcce8765ea981117119b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
