@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2000 上海春季卷：四版正式构建（2026-10-28）
+
+- 首次正式 build attempt `b941a8a9-c34c-4f43-b7f1-fdc58560e0e8` 四版均因来源说明中的行内代码 `official_answer` 生成裸下划线 TeX 而以 exit code 12 失败；原始日志指向 `questions.tex:8` 的 `Missing $ inserted`。登记的 ISSUE-1234–1237 在修正并成功重建后全部 resolved / non_blocking。
+- 只将题面来源说明改为“本库官方答案状态仍为 null”，没有改题面、答案或解析。生成器刷新 `questions.tex`；逐题题面哈希22/22与 provenance 原值一致，provenance dry-run/check 均通过。
+- 成功 build attempt `36aee468-9d50-403d-b997-7b62eca90d07` supersedes 首轮失败；输入 manifest revision 5296，结果 revision 5297。试题/解析/简答/印刷版分别为5/19/7/16页，共47页；SHA-256 分别为 `53fbd1faaa33408aa87ed86893fb4a6bce8f85f2384045073bdc7f8eeb608ee7`、`dcd12b216d937d94163404f7446546a7c51cea90928e8daca29faa4e36a37bc3`、`d8d577d3945a0138f0229774e331a3d18259f21ebf5f02f4d0546f4599ce94e3`、`0206c9bf3dcfd2e43fcb3e446765cf48daa5905305315f4fa2a9f3c7a7962e1c`；均与本地 PDF 实测和 receipt 相符。四版错误、缺字、overfull、未解析引用均为空，工具链为 TeX Live 2026 / Poppler 26.10.0。
+- build receipt 当前性：0 invalid/stale/missing，1 pending review。paper `compiled`、batch `compiled_pending_review`；尚未进行47页视觉审查。出版者、版次、扫描来源链及官方答案身份仍未核，`official_answer=null`。未运行测试套件。阶段报告：`reports/phase1-b51-formal-build.md`。
+
 ### 2000 上海春季卷：逐题 provenance 导入（2026-10-28）
 
 - `phase1-b51` 的22题 provenance 已经正式导入，manifest revision `5292→5293`，事务 `0c261551-bd22-4505-bc52-9fd7adcc15bb`；题面与答案哈希由工具按当前规范源重算。paper 为 `editions_generated`，batch 为 `provenance_verified`。
