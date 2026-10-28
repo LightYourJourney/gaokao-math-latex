@@ -25,10 +25,15 @@ class BeijingSpring2004ArtsTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], "春季高考/2004/2004春季北京文.pdf")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-2004-spring-beijing-arts")
+        self.assertEqual(source["paper_relation"], "canonical")
+        paper = next(item for item in manifest["papers"] if item["paper_id"] == source["paper_id"])
+        self.assertIn(SOURCE_ID, paper["source_ids"])
+        self.assertEqual(paper["production_state"], "blocked")
+        self.assertIn("ISSUE-1238", paper["issue_ids"])
         self.assertIn(SOURCE_ID, transcript)
         self.assertIn(SOURCE_SHA256, transcript)
-        self.assertIn("paper_id 未绑定", transcript)
+        self.assertIn("paper_id: gk-2004-spring-beijing-arts", transcript)
         self.assertIn("official_answer: null", transcript)
 
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", transcript, re.M)]

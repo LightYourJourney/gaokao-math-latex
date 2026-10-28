@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 春季北京文科卷：补齐共享内容与四版入口、恢复相关测试（2026-10-28）
+
+- 从三份已登记规范源生成questions.tex、answers.tex、answers_short.tex及四版入口。补齐全库答案一致性测试发现的缺失answers.tex；三个生成器只读检查及20题solution_sources对齐检查通过。index投影字节未变，manifest仍revision5306；paper保持blocked、batch保持planned，未导入provenance。
+- Q20继续照录“计算公以及”并保留疑脱字注记，ISSUE-1238仍阻断完成。既有转录测试改为验证当前canonical双向绑定及阻断状态；图稿测试改读项目内Q17/Q18正式图稿，按题面/图表清单各自路径基准检查。旧Q17还被北京理科复用，旧图稿未删除。
+- 本卷专项9项通过，包含两幅项目图稿及Q20数阵的临时编译/渲染。最终provenance、short_answers与本卷三组专项合计172项：`Ran 172 tests in 146.571s` / `OK`；日志`.work/phase1-b52/verification/generation-tests.log`。全量report当前性与775行CSV检查通过，ownership细表按Git实际状态刷新，未改既有正式回执。
+- 阶段报告`reports/phase1-b52-generation.md`。来源身份未认证、official_answer=null；尚缺题面独立核对/逐题provenance、正式四版构建和逐页视觉验收，不表示单卷或长期题库完成。
+
 ### 2009 春季上海卷：20题 provenance 与四版入口生成（2026-10-28）
 
 - 新增 `provenance.json`，记录既有题面核对/题面盲解及本轮两名审阅者对Q1–Q15、Q16–Q20的独立数学复核。本轮可见答案，不称盲解；前轮未记录的人员身份不补写。19题D级，Q16为U/未解决冲突，Q10/Q19初稿差异复算已解决。

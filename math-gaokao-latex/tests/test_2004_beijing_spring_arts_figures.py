@@ -12,8 +12,8 @@ PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2004/2004_数学真题_春季北京文_试题.md"
 INVENTORY = ROOT / "2004/2004_数学真题_春季北京文_图表清单.md"
 FIGURES = {
-    17: ROOT / "2004/figures/gaokao_2004_beijing_spring_arts_q17_pyramid.tex",
-    18: ROOT / "2004/figures/gaokao_2004_beijing_spring_arts_q18_orbit.tex",
+    17: PROJECT / "2004_春季北京文科/figures/gaokao_2004_beijing_spring_arts_q17_pyramid.tex",
+    18: PROJECT / "2004_春季北京文科/figures/gaokao_2004_beijing_spring_arts_q18_orbit.tex",
 }
 
 
@@ -27,10 +27,10 @@ class BeijingSpring2004ArtsFigureTests(unittest.TestCase):
         for question, path in FIGURES.items():
             with self.subTest(question=question):
                 self.assertTrue(path.is_file(), f"Q{question} TikZ source is missing")
-                relative = path.relative_to(ROOT / "2004").as_posix()
+                relative = Path(os.path.relpath(path, ROOT / "2004")).as_posix()
                 self.assertIn(relative, transcript)
                 self.assertIn(f"| {question} |", inventory)
-                self.assertIn(relative, inventory)
+                self.assertIn(path.relative_to(PROJECT).as_posix(), inventory)
                 source = path.read_text(encoding="utf-8")
                 self.assertIn(r"\begin{tikzpicture}", source)
                 self.assertIn(r"\end{tikzpicture}", source)
