@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2004/2004_数学真题_春季北京理_试题.md"
 FIGURES = ROOT / "2004/2004_数学真题_春季北京理_图表清单.md"
-PARABOLA_FIGURE = ROOT / "2004/figures/gaokao_2004_beijing_spring_science_q18_parabola.tex"
+PARABOLA_FIGURE = PROJECT / "2004_春季北京理科/figures/gaokao_2004_beijing_spring_science_q18_parabola.tex"
 SOURCE_ID = "src-f845cde09dfedfcb590e7b0f5726822c767def9cd70ddf732102917e34c5fe12"
 SOURCE_SHA256 = "7e4af53fb7548e19fb987d562b4172fba170102503b556e27fbadf2b9a97ac3d"
 
@@ -31,10 +31,19 @@ class BeijingSpring2004ScienceTranscriptionTests(unittest.TestCase):
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], "春季高考/2004/2004春季北京理.pdf")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-2004-spring-beijing-science")
+        self.assertEqual(source["paper_relation"], "canonical")
+        paper = next(item for item in manifest["papers"] if item["paper_id"] == source["paper_id"])
+        self.assertIn(SOURCE_ID, paper["source_ids"])
+        for figure in paper["figure_files"]:
+            figure_path = PROJECT / figure["path"]
+            self.assertTrue(figure_path.is_file())
+            self.assertIn(figure["path"], figures)
+            links = re.findall(r"\]\(([^)]+)\)", transcript)
+            self.assertIn(figure_path.resolve(), [(TRANSCRIPT.parent / link).resolve() for link in links])
         self.assertIn(SOURCE_ID, transcript)
         self.assertIn(SOURCE_SHA256, transcript)
-        self.assertIn("paper_id 未绑定", transcript)
+        self.assertIn("paper_id: gk-2004-spring-beijing-science", transcript)
         self.assertIn("official_answer: null", transcript)
 
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", transcript, re.M)]
@@ -68,7 +77,7 @@ class BeijingSpring2004ScienceTranscriptionTests(unittest.TestCase):
         self.assertIn("reconstructed from the stated constraints", PARABOLA_FIGURE.read_text(encoding="utf-8"))
         for question in (17, 18, 20):
             self.assertIn(f"| {question} |", figures)
-        self.assertIn("论文/出版版次尚未核验", transcript)
+        self.assertIn("出版物/版次/来源链及官方身份未核", transcript)
 
     @unittest.skipUnless(shutil.which("latexmk") and shutil.which("pdftoppm"), "latexmk and Poppler are required")
     def test_q18_vector_and_q20_table_compile_and_render(self):

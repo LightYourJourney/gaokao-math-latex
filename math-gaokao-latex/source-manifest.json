@@ -1759,6 +1759,14 @@
         "gk-2009-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b54",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-spring-beijing-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1768,7 +1776,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ba11dc24-a70a-49c3-b584-e5bf115131cd",
+  "last_transaction_id": "7fb8c5d0-e467-482b-a57f-bf6e91364b8f",
   "papers": [
     {
       "blocked_from": null,
@@ -24260,9 +24268,70 @@
       "title": "2009 年·春季上海卷",
       "track": "none",
       "year": 2009
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季北京理科/figures/gaokao_2004_beijing_spring_arts_q17_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季北京理科/figures/gaokao_2004_beijing_spring_science_q18_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2004_spring_beijing_science",
+        "id": "gk-2004-spring-beijing-science",
+        "note": "本库内部canonical固定输入：source ID src-f845cde09dfedfcb590e7b0f5726822c767def9cd70ddf732102917e34c5fe12，SHA-256 7e4af53fb7548e19fb987d562b4172fba170102503b556e27fbadf2b9a97ac3d；PDF两页、印刷153–154页，XeTeX排印副本，非原始扫描。canonical仅绑定本库采用的固定字节，不认证出版物、出版者、版次、来源链或官方身份；来源无答案页，答案/解析为已独立盲解复核的本库非官方推导，official_answer=null。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季北京卷理科",
+        "structure": {
+          "单选题": [
+            1,
+            10
+          ],
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-spring-beijing-science",
+      "production_state": "editions_generated",
+      "project_dir": "2004_春季北京理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_春季北京理_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_春季北京理_含解析.md",
+        "questions": "2004/2004_数学真题_春季北京理_试题.md",
+        "solution_body": "2004/2004_数学真题_春季北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-f845cde09dfedfcb590e7b0f5726822c767def9cd70ddf732102917e34c5fe12"
+      ],
+      "title": "2004 年·春季北京卷·理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 5320,
+  "revision": 5322,
   "schema_version": 1,
   "sources": [
     {
@@ -24615,8 +24684,8 @@
       "exam_type": "spring",
       "git_blob_oid": "416cb91fdf024a22ba9627fb38025651693bb8b9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-spring-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004春季北京理.pdf",
       "regions": [],
       "source_id": "src-f845cde09dfedfcb590e7b0f5726822c767def9cd70ddf732102917e34c5fe12",

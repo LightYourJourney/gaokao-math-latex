@@ -22,7 +22,7 @@ class BeijingSpring2004ScienceSolutionsTests(unittest.TestCase):
         self.assertIn("official_answer: null", self.answers)
         self.assertIn("非来源印载答案", self.answers)
         self.assertIn("数学盲核状态: 一名独立复核者", self.answers)
-        self.assertIn("paper_id 未绑定", self.transcript)
+        self.assertIn("paper_id: gk-2004-spring-beijing-science", self.transcript)
         self.assertIn("official_answer: null", self.transcript)
 
     def test_all_questions_have_answer_and_solution_sections(self):

@@ -10366,3 +10366,10 @@
 - 最终attempt `7798a4cc-8760-41ba-90e0-6dc870b1ff2b`：试题4页、解析16页、简答6页、印刷13页，共39页A4，四版零错误/缺字/引用/Overfull/Underfull。主代理实际逐页查看39张110dpi图，八项312检查为288pass/24not_applicable，0fail/pending，无旧页结论继承。
 - finalize-batch实际FINALIZED，revision5320；build succeeded、review passed，batch closed_with_blockers、paper blocked。ISSUE-1238和“计算公以及”保真注记保留；official_answer=null，来源认证未知。
 - 全量1724项测试实际OK（skipped=13），详见reports/phase1-b52-build-visual.md及reports/phase1-b52.md。下一批2004北京春季理科已有完整草稿可登记；1952—2026全集目标仍未完成。
+
+### 2004 北京春季理科：固定来源登记、20题三角色与四版生成（2026-10-28）
+
+- 本轮对固定SHA 7e4af53fb7548e19fb987d562b4172fba170102503b556e27fbadf2b9a97ac3d的两页源件独立盲核；恢复Q9源C记号及Q10/16/19源标点后闭环20题passed。另一代理只看题面独立盲解，20题结论与既有稿一致，主代理答案可见复算。Q10比值有定义与Q14直线前提在解析显式说明，未补题面。
+- 新paper gk-2004-spring-beijing-science / phase1-b54，以内部canonical绑定固定字节（revision5321），不认证出版物/版次/来源链及官方身份，official_answer=null。随后正式导入20题D级provenance（revision5322），batch provenance_verified、paper editions_generated，尚未正式构建或视觉验收。
+- 两份既有矢量图等字节复制到项目figures并同步manifest/Markdown映射；题面、答案、解析三源规范化、含解析稿确定性生成、questions/answers/short与四个入口生成。Q19(2)补入已证三段函数以免简答缺项，未改数学结论。旧测试的未绑定断言改为双向绑定/正式图稿与链接检查。
+- 来源与数学专项5项OK，provenance/solution_sources/三个生成器检查通过；详见reports/phase1-b54-provenance-generation.md。下一阶段正式四版构建、日志与全部页视觉验收；本阶段不表示本卷或全集完成。

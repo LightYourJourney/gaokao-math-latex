@@ -1,0 +1,30 @@
+% Diagram reconstructed from the stated constraints, not traced from pixels.
+% A=(2,8) gives p=16 and F=(8,0). The centroid conditions imply
+% y_B+y_C=-8 and y_B^2+y_C^2=704, hence y_B/C=-4 +/- 4*sqrt(21);
+% M=(11,-4). These exact relations anchor the schematic; no pixel scale is used.
+\pgfmathsetmacro{\yb}{-4+4*sqrt(21)}
+\pgfmathsetmacro{\yc}{-4-4*sqrt(21)}
+\pgfmathsetmacro{\xb}{\yb*\yb/32}
+\pgfmathsetmacro{\xc}{\yc*\yc/32}
+\begin{tikzpicture}[line cap=round,line join=round,scale=0.19]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (2,8);
+  \coordinate (B) at (\xb,\yb);
+  \coordinate (C) at (\xc,\yc);
+  \coordinate (F) at (8,0);
+  \coordinate (M) at (11,-4);
+
+  \draw[->] (-1,0)--(18,0) node[right] {$x$};
+  \draw[->] (0,-25)--(0,18) node[above] {$y$};
+  \draw[domain=-24:16,samples=160,variable=\y]
+    plot ({\y*\y/32},{\y});
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A)--(M);
+
+  \fill (O) circle (0.7pt) node[below left] {$O$};
+  \fill (A) circle (0.7pt) node[above left] {$A$};
+  \fill (B) circle (0.7pt) node[above] {$B$};
+  \fill (C) circle (0.7pt) node[below right] {$C$};
+  \fill (F) circle (0.7pt) node[above] {$F$};
+  \fill (M) circle (0.7pt) node[right] {$M$};
+\end{tikzpicture}
