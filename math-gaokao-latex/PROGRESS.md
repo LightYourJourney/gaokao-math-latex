@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 春季上海卷：四版44页正式构建（2026-10-28）
+
+- 正式attempt `422df2e5-ccf1-4e71-9f56-bfedb978280a`，manifest5306→5308；回执记录输入revision5307。四版均succeeded，试题/解析/简答/印刷分别5/18/7/14页，共44页；PDF现场SHA与回执逐一一致，详见`reports/phase1-b53-formal-build.md`。
+- 日志errors、missing characters、undefined references及Overfull均0；解析版Q18段落有1条Underfull hbox（badness1838，answers.tex396–397行），首轮校样定位到解析版第15页cos E的等号处分行及字距松，待源稿段落回流后重建。receipt当前性code=OK，0failed/invalid/missing/running/stale，pending=1。
+- 构建前provenance、20题solution_sources及三个生成器只读检查通过。paper仍blocked，Q16为U，ISSUE-1239/1240仍阻断；batch为compiled_pending_review。尚未最终化44页视觉回执，不代表整卷完成或来源官方性认证。
+
 ### 2004 春季北京文科卷：补齐共享内容与四版入口、恢复相关测试（2026-10-28）
 
 - 从三份已登记规范源生成questions.tex、answers.tex、answers_short.tex及四版入口。补齐全库答案一致性测试发现的缺失answers.tex；三个生成器只读检查及20题solution_sources对齐检查通过。index投影字节未变，manifest仍revision5306；paper保持blocked、batch保持planned，未导入provenance。
