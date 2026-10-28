@@ -392,8 +392,10 @@ a=\frac{834+42}{2}=438,\qquad c=\frac{834-42}{2}=396,
 \cos^2E=\frac{b}{a+b}.
 \]
 
+探测器从近火点沿逆时针方向第一次到达该距离时位于第一象限。
+
 \Needspace{5\baselineskip}
-探测器从近火点沿逆时针方向第一次到达该距离时位于第一象限，取 $\cos E=\sqrt{b/(a+b)}$。到焦点的距离为 $a-c\cos E$，减去火星半径 $34$ 后为
+取 $\cos E=\sqrt{b/(a+b)}$。到焦点的距离为 $a-c\cos E$，减去火星半径 $34$ 后为
 
 \nopagebreak[4]
 \[
@@ -423,17 +425,11 @@ a=\frac{834+42}{2}=438,\qquad c=\frac{834-42}{2}=396,
 \Needspace{4\baselineskip}
 \textbf{解析}
 
-\Needspace{5\baselineskip}
-令 $m=n-1$。第 $n$ 个正方形对角线的起点横坐标为 $d+ma+\dfrac{d\,m(m-1)}2$；其顶点 $A_n$ 相对该起点向右、向上各移动 $a_n/2$，所以
-
-\nopagebreak[4]
-\[
-x_n=d+\left(m+\frac12\right)a+\frac{dm^2}{2},\qquad y_n=\frac{a+md}{2}.
-\]
+令 $m=n-1$。第 $n$ 个正方形左端点的横坐标为 $d+ma+dm(m-1)/2$；上顶点相对左端点向右、向上各移动 $(a+md)/2$，故 $x_n=d+(m+\frac12)a+\frac{dm^2}{2}$、$y_n=\frac{a+md}{2}$。
 
 \gksubpart{(1) 不共线}
 
-当 $a=8,d=4$ 时，$A_1=(8,4)$、$A_2=(18,6)$、$A_3=(32,8)$。相邻两段斜率为 $\dfrac{6-4}{18-8}=\dfrac15$ 与 $\dfrac{8-6}{32-18}=\dfrac17$，不相等，故三点不共线。
+当 $a=8,d=4$ 时，$A_1=(8,4)$、$A_2=(18,6)$、$A_3=(32,8)$。相邻两段斜率分别为 $1/5$、$1/7$，不相等，故三点不共线。
 
 \gksubpart{(2) 抛物线关系}
 
@@ -441,15 +437,9 @@ x_n=d+\left(m+\frac12\right)a+\frac{dm^2}{2},\qquad y_n=\frac{a+md}{2}.
 
 \gksubpart{(3) 求 $a,d$ 的关系}
 
-\Needspace{5\baselineskip}
-若所有点在 $y^2=2px$ 上，对恒等式
+将坐标代入 $y_n^2=2px_n$。比较 $m^2$ 系数，得 $d^2/4=pd$，故 $p=d/4$；比较常数项，得 $a^2/4=2p(d+a/2)$，即 $a^2=2d^2+ad$、$(a-2d)(a+d)=0$。由 $a>0,d>0$，得 $a=2d$，一次项系数也随之吻合。
 
-\nopagebreak[4]
-\[
-\frac{(a+md)^2}{4}=2p\left(d+\left(m+\frac12\right)a+\frac{dm^2}{2}\right)
-\]
-
-比较 $m^2$ 系数得 $p=d/4$。比较常数项得 $a^2=2d^2+ad$，即 $(a-2d)(a+d)=0$。由 $a>0,d>0$，只能有 $a=2d$。此时 $p=d/4$，与固定 PDF 第 8 页印载关系一致；首轮盲解的 $a=\sqrt2d$ 是代数推导错误。
+反之，$a=2d$ 时 $x_n=\frac d2(m+2)^2$、$y_n=\frac d2(m+2)$，故 $y_n^2=\frac d2x_n$；取 $p=d/4>0$ 即满足要求。因此所求关系为 $a=2d$。
 
 \gkanswer{答案（1）：$A_1,A_2,A_3$ 不共线}
 
@@ -482,15 +472,7 @@ $f_1(\theta)=\sin\theta-\cos\theta$，导数 $\cos\theta+\sin\theta>0$，故递�
 
 \gksubpart{(2) 恒等式}
 
-\Needspace{5\baselineskip}
-左边可写成
-
-\nopagebreak[4]
-\[
-2(u^3+v^3)-(u^2+v^2)=1-4uv=(v-u)^2,
-\]
-
-右边为 $(v^2-u^2)(v-u)=(u+v)(v-u)^2=(v-u)^2$，等式成立。
+左边可写成 $2(u^3+v^3)-(u^2+v^2)=1-4uv=(v-u)^2$。右边为 $(v^2-u^2)(v-u)=(u+v)(v-u)^2=(v-u)^2$，等式成立。
 
 \gksubpart{(3) 最大值与最小值}
 

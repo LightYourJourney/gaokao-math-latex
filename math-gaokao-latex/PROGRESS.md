@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
+
+- Q18分段消除Underfull后，完整校样继续发现Q19答案框脱离推导及Q20(3)孤立末页。仅重排规范解析源的Q19/Q20表达并补充分性，题面和最终答案哈希不变。最终attempt `bf351298-4607-4e0e-9a60-7b4b0c49beb3`，四版5/17/7/14页，共43页；所有日志错误/缺字/引用/Overfull/Underfull均0。
+- 四版43页、344项视觉检查：325pass/19not_applicable，0fail/pending。4个改动页新实看，39页在PNG SHA与旧attempt已实看通过页逐一相同后继承；旧失败页未继承。当前review绑定最新build attempt与PDF SHA，旧工作项/观察记录完整归档。
+- finalize-batch实际FINALIZED，manifest revision5313；build succeeded、review passed，batch closed_with_blockers，paper blocked。Q16继续U/未解决冲突，ISSUE-1239/1240保留；来源身份及官方答案未认证，official_answer=null。
+- 完整回归1724项 `OK (skipped=13)`；最终报告`reports/phase1-b53.md`，过程与PDF指纹`reports/phase1-b53-reflow-visual.md`。不表示整卷完成或1952—2026题库完成。
+
 ### 春季旧卷来源/图稿测试回归修复与2004北京文源页复核（2026-10-28）
 
 - 修正2000上海、2003北京文测试中迁移前图稿路径和未绑定断言，保留并强化canonical双向绑定、来源指纹、完整题号、图稿集合/路径、拓扑及无栅格检查；两组定向10项和9项均通过。2003题面说明行历史改动后sidecar SHA未同步，已证明22题题面块未变后只更新文件指纹；两卷旧正式回执仍require-final/current通过。
