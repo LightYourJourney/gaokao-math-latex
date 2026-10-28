@@ -39,3 +39,7 @@
 ## 全量报告刷新
 
 提交视觉收口后，`report.py render --all` 已按当前 manifest 重新生成并回读六个全量报告目标；独立运行 `report.py check --all` 返回“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。刷新未产生跟踪文件差异。此前“全量报告仍为较早快照”的描述仅反映刷新前状态。
+
+## 全量回归
+
+在修正生成器并完成本批收口后，运行 `python3 -m unittest discover -s math-gaokao-latex/tests`，最终结果 `Ran 1747 tests in 686.064s`，`OK (skipped=13)`。测试中构造的错误路径输出不是生产数据校验失败。
