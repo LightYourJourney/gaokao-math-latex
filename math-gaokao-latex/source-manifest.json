@@ -1799,6 +1799,14 @@
         "gk-2015-regular-chongqing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b40",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -1808,7 +1816,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ab61ba52-ed05-4376-a953-078e47df2e57",
+  "last_transaction_id": "88b3f668-dd9e-4a68-829f-e4efffab53a2",
   "papers": [
     {
       "blocked_from": null,
@@ -24648,9 +24656,87 @@
       "title": "2015 年·重庆卷·理工农医类",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q02_pie.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q05_threeviews.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q14_waterdepth.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q18_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q20_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_文科/figures/f2015_shaanxi_arts_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2015_shaanxi_arts",
+        "id": "gk-2015-regular-shaanxi-arts",
+        "note": "2015 陕西文史类；2 页 A3 扫描（印刷页 975–976），卷内无答案（等级 D，项目双解）；24 题，22–24 三选一；Q8 记法、Q2 饼图标注、Q11 表头均照录。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "arts",
+        "variant": "陕西文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2015_陕西卷_文科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_陕西文_含解析.md",
+        "questions": "2015/2015_数学真题_陕西文_试题.md",
+        "solution_body": "2015/2015_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b9bebd2452a2e3cd11d9619a9d3d7207834edc963a1f1855bedbc3a536a22efd"
+      ],
+      "title": "2015 年·陕西卷·文史类",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 5395,
+  "revision": 5406,
   "schema_version": 1,
   "sources": [
     {
@@ -40367,8 +40453,8 @@
       "exam_type": "regular",
       "git_blob_oid": "761abe51f4db63e9e68013fa75946bed18d7d29a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015陕西文.pdf",
       "regions": [],
       "source_id": "src-b9bebd2452a2e3cd11d9619a9d3d7207834edc963a1f1855bedbc3a536a22efd",
