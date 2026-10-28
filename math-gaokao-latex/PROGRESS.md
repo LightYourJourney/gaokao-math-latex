@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2000 上海春季卷：四版46页视觉复核并关闭批次（2026-10-28）
+
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，revision 5301；batch `phase1-b51` 为 `closed`，paper `gk-2000-spring-shanghai` 为 `complete`。最终报告：`reports/phase1-b51.md`；review receipt 绑定当前 build attempt `8fd91441-c7fc-4c19-9846-989f14559e84` 与四版 PDF SHA。
+- 逐页检查试题/解析/简答/印刷版共46页，368项：333 pass、35 not_applicable、0 fail、0 pending；46页结果全为 pass。回流后变动的解析版第17–19页与印刷版第14–15页以180 dpi重看；其余页图与此前已逐页实看页面 SHA 完全一致并继承实际视觉结论。最终报告登记0视觉问题、0阻断问题。
+- build 回执 `--require-final --require-current-inputs` 检查为0 failed / invalid / missing / stale，1 succeeded；review `check-batch` 为 `FINALIZED`。全量报告及775行 manifest CSV 已按revision 5301刷新并核对。
+- 来源发布者、出版物、版次、扫描来源链与附录答案官方身份仍未核；`official_answer=null`。本卷生产闭合不表示来源认证或1952–2026语料库完成。未运行测试套件。
+
 ### 2000 上海春季卷：分页回流后的四版正式重建（2026-10-28）
 
 - 新正式构建 attempt `8fd91441-c7fc-4c19-9846-989f14559e84` supersedes 回流前 attempt `36aee468-9d50-403d-b997-7b62eca90d07`；输入 revision 5298，构建记录推进到 revision 5300。试题/解析/简答/印刷版分别为5/19/7/15页，共46页；SHA-256 见 `reports/phase1-b51-formal-rebuild.md`。
