@@ -1,0 +1,17 @@
+% 依固定扫描页重绘；仅示意曲线在 y 轴上的截距、零点位置与升降次序，不按比例。
+% 卷面图 4-6-6：曲线过点 (0,1)，第二个正向零点标为 11π/12，该处曲线由下向上穿过 x 轴。
+\begin{tikzpicture}[line width=.5pt,scale=1.05,font=\small]
+  \draw[->] (-0.9,0)--(6.0,0) node[right] {$x$};
+  \draw[->] (0,-2.7)--(0,2.8) node[above] {$y$};
+  \node[below right=3pt] at (0,0) {$O$};
+  \begin{scope}
+    \clip (-0.85,-2.65) rectangle (5.95,2.75);
+    \draw[domain=-0.45:5.55,samples=220,smooth] plot (\x,{2*sin(deg(2*\x+pi/6))});
+  \end{scope}
+  % y 轴截距 1。
+  \draw (-0.07,1)--(0.07,1);
+  \node[left] at (-0.12,1) {$1$};
+  % 第二个正向零点，曲线在此由下向上穿过 x 轴。
+  \draw (2.879,0.07)--(2.879,-0.07);
+  \node[below left] at (2.80,-0.06) {$\dfrac{11\pi}{12}$};
+\end{tikzpicture}

@@ -199,6 +199,12 @@ git log -1 --oneline --decorate
 
 守则：来源不明或答案不能证明时标 pending/blocked/U；转录与独立求解分离；编者答案明确注明非官方；图稿须 TikZ/PGFPlots；题面和答案源通过确定性脚本渲染四版本，勿手改派生物。四版编译、逐页八项审查、回执当前性、finalize、报告/CSV刷新都是门禁。公共宏改动可能使全库回执失效。避免 `clean-build`（会删除 build PDF）。主代理独占 manifest/共享文件；subagent 写范围要互不重叠。提交只 stage 本批授权路径；不 push。
 
+## 2026-10-28 接续：phase4-b37（1990 广东文史类）已 FINALIZED
+
+- Codex 侧把批次推进到 b01–b36（含 b34 1995 全国文 complete）；本会话复核后取未绑定的 1990 广东文新建 phase4-b37。
+- 结果：30 条（选择 1–25、第二卷 26–30）、四版 5/25/7/20 页、零告警；Q26(2) 卷内 -10 经独立双解确认正确，原「-4 冲突」为误算已撤销；Q28–30 卷内无结果，另附推导并与 1990 广东理科对应题核对。批次 closed、paper complete，revision 5355。
+- 后续可选：1989 广东文（草稿与来源审计已在库，Q9 题面/答案表内部冲突未决）、1998 全国文（源件选项有误）、1997 全国文（Q23 关系缺失）；大量 2003–2025 春季卷尚未绑定，注意与 Codex 春季队列避让。
+
 ## 给新对话的启动提示
 
 > 请从 `仓库根` 的 `feat/gaokao-phase0` 分支继续高考数学 LaTeX 项目。先读 `docs/superpowers/plans/2026-10-22-gaokao-latex-handoff.md`，核对 git status/branch/HEAD；再读 `PROGRESS.md` 末尾、当前 manifest、baseline、相关报告和 issues。`typography/` 的排版治理改动属于 main 分支，勿合并或 stage 到题库分支；不切 main、不 push、不重复已完成工作。选择有固定、可核来源且尚未完成的下一项，按本仓库门禁推进。提交前检查实际 diff 并限定 staging 范围。

@@ -10380,3 +10380,11 @@
 - 最终attempt `27c3e3c9-d9e7-4778-877a-6a37b5dea0f6`：四版4/17/6/13页，共40页A4，错误/缺字/未解析引用/Overfull/Underfull均0，豁免0。主代理实际逐页查看40张110dpiPNG，八项320检查295pass/25NA，0fail/pending，无旧attempt视觉继承。
 - 独立只读复核75个SHA及输入/工具链绑定通过；完整1724项测试实际OK（skipped=13）。finalize-batch实际FINALIZED，revision5327，batch closed、paper complete，build succeeded、review passed。来源身份仍未知、official_answer=null，不冒称官方答案。
 - 自动报告reports/phase1-b54.md，构建/修复/逐页证据及PDF指纹详见reports/phase1-b54-build-visual.md。该卷闭合不代表1952—2026题库完成，下一批可启动2007上海春季卷图像来源转录。
+
+### 1990 广东文史类：30 条转录、双解与四版验收（2026-10-28）
+
+- 固定源 `src-4be3a6a1c45d116ea3c31ac818922a12606e2b844a71c6193b1e3c4d28ca0e23`（`普通高考/1990/1990广东文.pdf`，7 页、印刷页 656–662、无文字层）逐页 300 dpi 转录：第一卷选择 1–25，第二卷原「一、二、三、四、五」续编为 26–30，共 30 条。
+- 独立复核 P0=0：题面 30/30、选择答案 25/25 与卷内答案表一致；Q26(2) 卷内 `-10` 经展开 `-1-3-6=-10` 与独立盲解双重确认正确，早期「-4 冲突」系复核草稿符号误算，已从三份 md 与来源记录中撤销。Q28–30 卷内仅注「见理工农医类」对应题，另附项目推导并与理科卷逐题核对（Q29 为旋转 90° 变体，未照搬方程）。
+- 修复：Q28 图 D 移离 SB、Q18 原点 O 移至轴外右下；Q13 四选项分列、Q11 括号回行内；简答 25 列速查表按 `TABLE_COLUMN_LIMIT_OVERRIDES` 分两张表，Overfull 131pt 消失；Q24 解析「三点」改「四点」。
+- 四版构建 5/25/7/20 页共 57 页 A4，错误/缺字/未解析引用/Overfull/Underfull 均 0；逐段视觉审查 8 段 456 项（pass/not_applicable，0 fail）；finalize-batch FINALIZED，revision5355；provenance check-batch、report check --all、专项测试 6 项通过。
+- 来源边界：卷内答案与解答为 C 级（出版者/版次未核），`official_answer=null`；Q11 面积单位 cm³ 照录加注；卷末 1991 年广东转全国卷原注已照录声明。本卷闭合不代表 1952—2026 题库完成。

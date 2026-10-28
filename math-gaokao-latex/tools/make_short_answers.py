@@ -107,6 +107,10 @@ SHORT_ANSWER_NOTICE_OVERRIDES = {
         "答案据固定来源 PDF 后附解答及评分标准逐题转录（出版者、版次及答案官方性未核实）。"
         "\\textbf{非官方标准答案}。"
     ),
+    "gk-1990-regular-guangdong-arts": (
+        "答案为固定来源 PDF 卷内答案表与解答所载（出版者/版次未核实），非官方标准答案；"
+        "第二卷第三至五题卷内只注「见理工农医类解答」，另附项目推导。"
+    ),
     "gk-1994-shanghai": (
         "本卷第1—20题为项目整理；第21—24、26题据固定来源所附解答整理。"
         "第25题项目推导经独立盲核；固定来源原印载的$t\\ge2$分段仍保留，非官方答案。"
@@ -118,6 +122,7 @@ SHORT_ANSWER_NOTICE_OVERRIDES = {
 TABLE_COLUMN_LIMIT_OVERRIDES = {
     "gk-1989-regular-guangdong-science": 13,
     "gk-1990-regular-guangdong-science": 13,
+    "gk-1990-regular-guangdong-arts": 13,
 }
 
 _SOLUTION_HEAD = re.compile(r"^\\gksolhead(?:withlabel)?\{(\d+)\}\{")
