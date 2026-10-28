@@ -1,0 +1,24 @@
+% 2015 年重庆卷（理工农医类）第 21 题：椭圆与过右焦点的弦 PQ（依固定扫描页重绘，只画拓扑与标号，不按比例）
+\begin{tikzpicture}[>=stealth,scale=1.0]
+  % 坐标轴
+  \draw[->] (-3.9,0)--(4.1,0) node[below] {$x$};
+  \draw[->] (0,-2.3)--(0,2.7) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  % 椭圆
+  \draw[domain=0:360,samples=120] plot ({3*cos(\x)},{1.8*sin(\x)});
+  % 焦点与点
+  \coordinate (F1) at (-2,0);
+  \coordinate (F2) at (2,0);
+  \coordinate (P) at (1.268,1.631);
+  \coordinate (Q) at (2.462,-1.028);
+  % 弦 PQ 与线段 PF1
+  \draw (P)--(Q);
+  \draw (P)--(F1);
+  % 直角标记（PF1 与 PQ 在 P 处）
+  \draw (1.071,1.533)--(1.161,1.332)--(1.358,1.430);
+  % 标号
+  \fill (F1) circle (1.2pt) node[below] {$F_{1}$};
+  \fill (F2) circle (1.2pt) node[below left] {$F_{2}$};
+  \fill (P) circle (1.2pt) node[above left] {$P$};
+  \fill (Q) circle (1.2pt) node[right] {$Q$};
+\end{tikzpicture}

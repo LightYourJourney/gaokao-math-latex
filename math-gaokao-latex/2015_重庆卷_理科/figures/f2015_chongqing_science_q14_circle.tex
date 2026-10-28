@@ -1,0 +1,27 @@
+% 2015 年重庆卷（理工农医类）第 14 题：圆 O 的两条相交弦与过 A 的切线（依固定扫描页重绘，只画拓扑与标号，不按比例）
+% 按题设 PA=6、PC=3、CE:ED=2:1、AE=9 数值定形：CD 为不过圆心的弦，E 在 CD 上，O 在 CD 上方
+\begin{tikzpicture}[>=stealth,scale=0.55]
+  \coordinate (P) at (-9,0);
+  \coordinate (C) at (-6,0);
+  \coordinate (E) at (0,0);
+  \coordinate (D) at (3,0);
+  \coordinate (O) at (-1.5,3.7125);
+  \coordinate (A) at (-7,5.6569);
+  \coordinate (B) at (1.5556,-1.2571);
+  % 圆 O
+  \draw (O) circle (5.8338);
+  % 切线 PA
+  \draw (P)--(A);
+  % 割线 P-C-E-D
+  \draw (P)--(D);
+  % 弦 AB
+  \draw (A)--(B);
+  % 标号
+  \fill (P) circle (1.2pt) node[below left] {$P$};
+  \fill (C) circle (1.2pt) node[below left] {$C$};
+  \fill (D) circle (1.2pt) node[above right] {$D$};
+  \fill (E) circle (1.2pt) node[below] {$E$};
+  \fill (B) circle (1.2pt) node[below right] {$B$};
+  \fill (O) circle (1.2pt) node[right] {$O$};
+  \fill (A) circle (1.2pt) node[fill=white,inner sep=1pt,above left=1pt] {$A$};
+\end{tikzpicture}

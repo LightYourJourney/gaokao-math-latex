@@ -211,6 +211,12 @@ git log -1 --oneline --decorate
 - 盲解全一致；Q20(2) 图取 BC=3（另一解 3√3 已在答案披露）；Q8 框图分式改 `rac`，Q20/Q21 图标签已避让。
 - 注意：2015 福建文已有另一会话的 22 题草稿（未登记，Q12 选择答案疑为 B，独立核算应为 A，宜复核后再登记）。
 
+## 2026-10-28 接续：phase4-b39（2015 重庆理工农医类）已 FINALIZED
+
+- 22 题 D 级（选 1–10／填 11–16／解 17–22），四版 6/29/8/23 页、零告警，batch closed、paper complete，revision 5395。
+- 盲解改判 Q3 中位数为 20（B）；Q14 按题设重定形；Q7 框图分式、Q21 F₂ 标签已修。
+- 「解析」标题单独落在页尾：`\enlargethispage` 2 行不够、3 行会把正文压过页脚，最终按模板 Needspace 行为留档；后续若要治本需改公共排版层。
+
 ## 给新对话的启动提示
 
 > 请从 `仓库根` 的 `feat/gaokao-phase0` 分支继续高考数学 LaTeX 项目。先读 `docs/superpowers/plans/2026-10-22-gaokao-latex-handoff.md`，核对 git status/branch/HEAD；再读 `PROGRESS.md` 末尾、当前 manifest、baseline、相关报告和 issues。`typography/` 的排版治理改动属于 main 分支，勿合并或 stage 到题库分支；不切 main、不 push、不重复已完成工作。选择有固定、可核来源且尚未完成的下一项，按本仓库门禁推进。提交前检查实际 diff 并限定 staging 范围。
