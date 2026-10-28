@@ -20678,3 +20678,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1240
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "Q16 现存题面在 ∠A₁AC= 后缺值。独立数学复核确认两组满足其余可见条件的坐标构造分别给出体积48与48√3；因此没有可由当前题面唯一核定的数值答案，规范答案为 U。此条记录答案待补；既有 ISSUE-1239 单独记录印载48依赖未见直角条件的冲突。",
+  "fingerprint": "82b193904bdc2732d95cd080f840b3654415583b34732826bfc620355ef40161",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2009-spring-shanghai",
+  "question_id": "gk-2009-spring-shanghai-q16",
+  "resume_action": "取得可追溯的同版清晰题页或可靠正式勘误，核定缺失的 ∠A₁AC 条件后重新求解并独立复核；此前答案保持 U，并与 ISSUE-1239 的印载答案冲突共同阻断整卷完成。",
+  "source_id": "src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
