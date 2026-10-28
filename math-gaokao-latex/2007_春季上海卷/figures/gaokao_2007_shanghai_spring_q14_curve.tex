@@ -1,0 +1,7 @@
+% Q14: source PDF p2; unticked qualitative curve, no equation label.
+\begin{tikzpicture}[line cap=round,line join=round,thick]
+\draw[->] (-.45,0)--(3.15,0) node[right] {$x$};
+\draw[->] (0,-.45)--(0,2.65) node[above] {$y$};
+\draw[domain=-3:.45,samples=150,smooth] plot ({10^(\x)},{.65*(10^(\x)-\x)});
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}

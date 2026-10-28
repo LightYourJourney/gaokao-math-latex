@@ -1,0 +1,11 @@
+% Q18: source PDF p3; only the source's F1,F2,O,M,l labels.
+\begin{tikzpicture}[line cap=round,line join=round,thick]
+\draw[->] (-3.25,0)--(3.3,0) node[right] {$x$};
+\draw[->] (0,-2.25)--(0,2.3) node[above] {$y$};
+\draw (0,0) ellipse (2.7 and 1.9092);
+\draw (1.9092,-2.1)--(1.9092,2.1) node[above] {$l$};
+\node[below left] at (0,0) {$O$};
+\node[below] at (-1.9092,0) {$F_1$};
+\node[below left] at (1.9092,0) {$F_2$};
+\node[above right] at (1.9092,1.35) {$M$};
+\end{tikzpicture}
