@@ -16,6 +16,7 @@ REVIEW = ROOT / "2003/2003_春季北京文科_来源校对.json"
 FIGURE_INDEX = ROOT / "2003/2003_数学真题_春季北京文_图表清单.md"
 SOURCE_MANIFEST = PROJECT / "source-manifest.json"
 SOURCE_ID = "src-4ac986eba3d22fd3034252b57e1fed7e2b7b90eaaef7706499eb43fad52756e1"
+PAPER_ID = "gk-2003-spring-beijing-arts"
 SOURCE_SHA256 = "fbb6d54c9af88a7fc594be969b8e61c24bb37d98c05061cceaaf5d1be999c5c6"
 
 
@@ -27,24 +28,36 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
         self.transcript = TRANSCRIPT.read_text(encoding="utf-8")
         self.review = json.loads(REVIEW.read_text(encoding="utf-8"))
         self.figure_index = FIGURE_INDEX.read_text(encoding="utf-8")
+        self.manifest = json.loads(SOURCE_MANIFEST.read_text(encoding="utf-8"))
+        self.paper = next(item for item in self.manifest["papers"] if item["paper_id"] == PAPER_ID)
+        self.project_dir = PROJECT / self.paper["project_dir"]
 
-    def test_source_record_and_draft_remain_bound_to_fixed_unregistered_scan(self):
-        manifest = json.loads(SOURCE_MANIFEST.read_text(encoding="utf-8"))
-        source = next(item for item in manifest["sources"] if item["source_id"] == SOURCE_ID)
+    def test_source_record_and_transcript_remain_bound_to_fixed_canonical_input(self):
+        source = next(item for item in self.manifest["sources"] if item["source_id"] == SOURCE_ID)
         self.assertEqual(source["source_state"], "ready")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], PAPER_ID)
+        self.assertEqual(source["paper_relation"], "canonical")
+        self.assertEqual(self.paper["source_ids"], [SOURCE_ID])
+        self.assertEqual(ROOT / self.paper["source_files"]["questions"], TRANSCRIPT)
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertTrue(source["artifact"]["git_oid_verified"])
 
         self.assertEqual(self.review["source_id"], SOURCE_ID)
-        self.assertIsNone(self.review["paper_id"])
+        self.assertEqual(self.review["paper_id"], PAPER_ID)
+        self.assertEqual(self.review["transcription"]["path"], self.paper["source_files"]["questions"])
+        self.assertEqual(self.review["source"]["git_blob_oid"], source["git_blob_oid"])
         self.assertEqual(self.review["source"]["sha256"], SOURCE_SHA256)
         self.assertIsNone(self.review["official_answer"])
         actual_transcript_hash = hashlib.sha256(TRANSCRIPT.read_bytes()).hexdigest()
         self.assertEqual(self.review["transcription"]["sha256"], actual_transcript_hash)
         self.assertEqual(self.review["source"]["source_authenticity"], "publisher-and-edition-unverified")
-        self.assertIn("official_answer: null", self.transcript)
+        frontmatter = self.transcript.split("---", 2)[1]
+        self.assertRegex(frontmatter, rf"(?m)^paper_id: {re.escape(PAPER_ID)}$")
+        self.assertRegex(frontmatter, r"(?m)^official_answer: null$")
+        self.assertIn("内部 canonical 输入", frontmatter)
+        self.assertIn("发布者/版次/来源链未核", frontmatter)
+        self.assertIn("不认证其发布者、版次、来源链或官方身份", self.transcript)
 
     def test_all_22_questions_and_three_sections_are_transcribed_in_order(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
@@ -112,8 +125,15 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
         self.assertFalse(self.review["figures_and_tables"]["raster_source_committed"])
         self.assertNotIn("![", self.transcript)
         self.assertNotRegex(self.transcript, r"(?i)\]\([^)]*\.(?:png|jpe?g|gif|webp|tiff?)\)")
-        for figure in self.review["figures_and_tables"]["vector_assets"]:
+        figures = self.review["figures_and_tables"]["vector_assets"]
+        self.assertEqual({figure["item"] for figure in figures}, expected)
+        self.assertEqual(len(figures), len(expected))
+        manifest_figures = {PROJECT / figure["path"] for figure in self.paper["figure_files"]}
+        self.assertEqual(manifest_figures, {ROOT / figure["path"] for figure in figures})
+        self.assertTrue(all(figure["expected_occurrences"] == 2 for figure in self.paper["figure_files"]))
+        for figure in figures:
             file_path = ROOT / figure["path"]
+            self.assertEqual(file_path.parent, self.project_dir / "figures")
             self.assertTrue(file_path.is_file(), figure["path"])
             contents = file_path.read_text(encoding="utf-8")
             self.assertIn(r"\begin{tikzpicture}", contents)
@@ -121,20 +141,25 @@ class BeijingSpring2003ArtsTranscriptionTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(file_path.read_bytes()).hexdigest(), figure["sha256"])
             self.assertIn(file_path.name, self.transcript)
             self.assertIn(file_path.name, self.figure_index)
+            for document, contents in ((TRANSCRIPT, self.transcript), (FIGURE_INDEX, self.figure_index)):
+                links = re.findall(r"\]\(([^)]+\.tex)\)", contents)
+                matching_links = [link for link in links if Path(link).name == file_path.name]
+                self.assertEqual(len(matching_links), 1, f"missing or duplicated figure link in {document}")
+                self.assertEqual((document.parent / matching_links[0]).resolve(), file_path.resolve())
 
     def test_q11_vector_includes_the_two_segments_whose_angle_is_asked(self):
-        figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q11_folded_tetrahedron.tex"
+        figure = self.project_dir / "figures/gaokao_2003_beijing_arts_q11_folded_tetrahedron.tex"
         contents = figure.read_text(encoding="utf-8")
         self.assertIn(r"\draw (G)--(H) (J)--(I);", contents)
 
     def test_q19_vector_includes_hidden_edges_of_the_asked_tetrahedron(self):
-        figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q19_square_prism.tex"
+        figure = self.project_dir / "figures/gaokao_2003_beijing_arts_q19_square_prism.tex"
         contents = figure.read_text(encoding="utf-8")
         self.assertRegex(contents, r"\\draw\[dashed\][^\n]*\(D\)--\(B\)")
         self.assertRegex(contents, r"\\draw\[dashed\][^\n]*\(D1\)--\(C\)")
 
     def test_q22_vector_includes_the_third_tangent_circle_visible_in_the_scan(self):
-        figure = ROOT / "2003/figures/gaokao_2003_beijing_arts_q22_tangent_circle_sequence.tex"
+        figure = self.project_dir / "figures/gaokao_2003_beijing_arts_q22_tangent_circle_sequence.tex"
         contents = figure.read_text(encoding="utf-8")
         self.assertIn(r"\coordinate (Othree)", contents)
         self.assertIn(r"\draw (Othree) circle (", contents)

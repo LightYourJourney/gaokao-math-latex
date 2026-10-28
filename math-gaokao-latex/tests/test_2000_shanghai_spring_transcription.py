@@ -1,3 +1,4 @@
+import json
 import re
 import unittest
 from pathlib import Path
@@ -11,14 +12,31 @@ class ShanghaiSpring2000TranscriptionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.transcript = TRANSCRIPT.read_text(encoding="utf-8")
+        cls.manifest = json.loads((ROOT / "math-gaokao-latex/source-manifest.json").read_text(encoding="utf-8"))
 
-    def test_fixed_source_identity_and_unbound_status_are_explicit(self):
+    def test_fixed_source_identity_and_canonical_binding_are_explicit(self):
         self.assertIn("src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0", self.transcript)
         self.assertIn("f58f3b980fef4e1b74955a9e37bbbf751056d4d3c9a2215d77b489fd14e5a954", self.transcript)
-        self.assertIn("题面为 PDF 第 1–4 页", self.transcript)
-        self.assertIn("印刷页码 182–185", self.transcript)
-        self.assertIn("出版物/版次未核，paper_id 未绑定", self.transcript)
-        self.assertIn("不把附录内容标作官方答案", self.transcript)
+        paper_id = "gk-2000-spring-shanghai"
+        source_id = "src-2980f0ba5ee7c2ceec0fb5ea733769661ddc2a0012bd727f326ad93cd15a2bc0"
+        paper = next(row for row in self.manifest["papers"] if row["paper_id"] == paper_id)
+        source = next(row for row in self.manifest["sources"] if row["source_id"] == source_id)
+        self.assertEqual(paper["source_ids"], [source_id])
+        self.assertEqual(source["paper_id"], paper_id)
+        self.assertEqual(source["paper_relation"], "canonical")
+        self.assertEqual(source["source_state"], "ready")
+        self.assertEqual(source["artifact"]["sha256"], "f58f3b980fef4e1b74955a9e37bbbf751056d4d3c9a2215d77b489fd14e5a954")
+        self.assertEqual(source["artifact"]["page_count"], 9)
+        self.assertEqual(ROOT / paper["source_files"]["questions"], TRANSCRIPT)
+        self.assertRegex(self.transcript, rf"(?m)^paper_id: {paper_id}$")
+        self.assertEqual(paper["index_metadata"]["pages_q"], [1, 5])
+        self.assertEqual(paper["index_metadata"]["pages_s"], [5, 9])
+        self.assertIn("题面跨 PDF 第 1–5 页", self.transcript)
+        self.assertIn("印刷页码 182–186", self.transcript)
+        self.assertIn("第 5 页续 Q22 并起附录", self.transcript)
+        self.assertIn("出版者、出版物、版次、来源链及官方身份未核", self.transcript)
+        self.assertIn("不据此认定为官方答案", self.transcript)
+        self.assertIn("本库官方答案状态仍为 null", self.transcript)
 
     def test_question_numbers_sections_and_points_are_complete(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]
@@ -48,11 +66,11 @@ class ShanghaiSpring2000TranscriptionTests(unittest.TestCase):
         self.assertIn("图像不经过", self.transcript)
         self.assertIn("射线 $OA$ 于 $Q$", self.transcript)
 
-    def test_unfinished_diagrams_are_not_silently_dropped_or_replaced_with_rasters(self):
+    def test_registered_diagrams_are_not_silently_dropped_or_replaced_with_rasters(self):
         self.assertIn("第 8 题（PDF 第 1 页）", self.transcript)
         self.assertIn("第 17 题（PDF 第 3 页）", self.transcript)
         self.assertIn("第 22 题（PDF 第 5 页，印刷页 186）", self.transcript)
-        self.assertIn("本文件暂不作为正式构建输入", self.transcript)
+        self.assertIn("本阶段将图稿归入正式项目目录", self.transcript)
         self.assertNotIn("![", self.transcript)
         self.assertNotRegex(self.transcript, r"(?i)\]\([^)]*\.(?:png|jpe?g|gif|webp|tiff?)\)")
 

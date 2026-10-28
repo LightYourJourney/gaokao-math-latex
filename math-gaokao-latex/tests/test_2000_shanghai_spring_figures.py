@@ -1,3 +1,4 @@
+import json
 import re
 import os
 import shutil
@@ -9,7 +10,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 PAPER = ROOT / "2000/2000_数学真题_春季上海_试题.md"
-FIGURES = ROOT / "2000/figures"
+LATEX_ROOT = ROOT / "math-gaokao-latex"
+FIGURES = LATEX_ROOT / "2000_春季上海卷/figures"
 EXPECTED = {
     8: "gaokao_2000_shanghai_spring_q08_geometry.tex",
     17: "gaokao_2000_shanghai_spring_q17_even_function.tex",
@@ -21,6 +23,8 @@ class ShanghaiSpring2000FigureTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.paper = PAPER.read_text(encoding="utf-8")
+        manifest = json.loads((LATEX_ROOT / "source-manifest.json").read_text(encoding="utf-8"))
+        cls.record = next(paper for paper in manifest["papers"] if paper["paper_id"] == "gk-2000-spring-shanghai")
 
     def test_each_source_figure_is_linked_from_its_question(self):
         for question, filename in EXPECTED.items():
@@ -31,8 +35,17 @@ class ShanghaiSpring2000FigureTests(unittest.TestCase):
                     re.M | re.S,
                 )
                 self.assertIsNotNone(heading, f"missing question {question}")
-                self.assertIn(f"figures/{filename}", heading.group())
-                self.assertTrue((FIGURES / filename).is_file())
+                links = re.findall(r"\[图稿（TikZ 源）\]\(([^)]+)\)", heading.group())
+                self.assertEqual(len(links), 1)
+                figure = FIGURES / filename
+                # Markdown links are relative to the Markdown file; manifest figures
+                # are relative to the LaTeX corpus root.
+                self.assertEqual((PAPER.parent / links[0]).resolve(), figure.resolve())
+                registered = [entry for entry in self.record["figure_files"]
+                              if (LATEX_ROOT / entry["path"]).resolve() == figure.resolve()]
+                self.assertEqual(len(registered), 1)
+                self.assertEqual(registered[0]["expected_occurrences"], 2)
+                self.assertTrue(figure.is_file())
 
     def test_figure_sources_are_vector_tikz_without_embedded_rasters(self):
         for filename in EXPECTED.values():

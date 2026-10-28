@@ -1,3 +1,4 @@
+import math
 import os
 import re
 import shutil
@@ -59,6 +60,7 @@ class BeijingSpring2004ArtsFigureTests(unittest.TestCase):
         }
         earth_radius = float(re.search(r"\\draw \(Ftwo\) circle\[radius=([0-9.]+)\]", q18).group(1))
         self.assertLess(abs(coordinates["Ftwo"][0] - coordinates["O"][0]), earth_radius)
+        self.assertLess(math.dist(coordinates["Ftwo"], coordinates["Fone"]), earth_radius, "source F1 lies inside the Earth circle")
         self.assertNotRegex(q18, r"\\fill\s+\((?:O|Fone|Ftwo|A|B)\)")
 
         transcript = TRANSCRIPT.read_text(encoding="utf-8")
