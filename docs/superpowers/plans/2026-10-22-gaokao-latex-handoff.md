@@ -205,6 +205,12 @@ git log -1 --oneline --decorate
 - 结果：30 条（选择 1–25、第二卷 26–30）、四版 5/25/7/20 页、零告警；Q26(2) 卷内 -10 经独立双解确认正确，原「-4 冲突」为误算已撤销；Q28–30 卷内无结果，另附推导并与 1990 广东理科对应题核对。批次 closed、paper complete，revision 5355。
 - 后续可选：1989 广东文（草稿与来源审计已在库，Q9 题面/答案表内部冲突未决）、1998 全国文（源件选项有误）、1997 全国文（Q23 关系缺失）；大量 2003–2025 春季卷尚未绑定，注意与 Codex 春季队列避让。
 
+## 2026-10-28 接续：phase4-b38（2015 重庆文史类）已 FINALIZED
+
+- 21 题 D 级（选 1–10／填 11–15／解 16–21），四版 5/25/7/21 页、零告警，batch closed、paper complete，revision 5369。
+- 盲解全一致；Q20(2) 图取 BC=3（另一解 3√3 已在答案披露）；Q8 框图分式改 `rac`，Q20/Q21 图标签已避让。
+- 注意：2015 福建文已有另一会话的 22 题草稿（未登记，Q12 选择答案疑为 B，独立核算应为 A，宜复核后再登记）。
+
 ## 给新对话的启动提示
 
 > 请从 `仓库根` 的 `feat/gaokao-phase0` 分支继续高考数学 LaTeX 项目。先读 `docs/superpowers/plans/2026-10-22-gaokao-latex-handoff.md`，核对 git status/branch/HEAD；再读 `PROGRESS.md` 末尾、当前 manifest、baseline、相关报告和 issues。`typography/` 的排版治理改动属于 main 分支，勿合并或 stage 到题库分支；不切 main、不 push、不重复已完成工作。选择有固定、可核来源且尚未完成的下一项，按本仓库门禁推进。提交前检查实际 diff 并限定 staging 范围。
