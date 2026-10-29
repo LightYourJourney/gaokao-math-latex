@@ -16945,13 +16945,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "c17334dd6465d2c3e761e17af461cbb7da6df72864e0f81dce6dd309cfc45cdc",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "aeb3ea362ba465dfbef4e42f9c7748f06ef43acec5169c751822e8af260e6fe0",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 figure_label（来源图形选项A—E仍缺失，未猜补，原来源限制继续fail。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -16965,13 +16965,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "50cbe5be3aa8136eb1c4f3bc8f65283e9393000e0d90e901750f7de995c8c3e3",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "aeb3ea362ba465dfbef4e42f9c7748f06ef43acec5169c751822e8af260e6fe0",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 4 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=becd2fb531958e08935acba309c561bc5a04061147f13914aa239f2eb8bba9d4。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -16985,13 +16985,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "3949a27e80f85124cba257c1c39ead6ff9f95470fb7b9d022bd4f39e45e0d332",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 10,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "aeb3ea362ba465dfbef4e42f9c7748f06ef43acec5169c751822e8af260e6fe0",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 10 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17005,13 +17005,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "0cbf0c1e135bc4a05f0a136c18ca4fe0543bea1630a5d0403c1591a21cf18164",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 15,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "aeb3ea362ba465dfbef4e42f9c7748f06ef43acec5169c751822e8af260e6fe0",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 印刷版 第 15 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=4b9035dae00205f668e64c7e9d8fe786779c9cd984c25728b5758884b930d1c6。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17025,13 +17025,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "4ad353cffa91d1a55a61251d682147a84f2671b8b2e43a721bd7e2af2df185df",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "576152ece96ad04842efd7965a3c9e3ba24dc03cc53c3e90ba9e54362a3e4285",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17045,13 +17045,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "a68d895064f70c20a3ba20eb29a8cb7a2e3b4a314ab89da7ae11da379b1d6ccc",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "576152ece96ad04842efd7965a3c9e3ba24dc03cc53c3e90ba9e54362a3e4285",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 简答版 第 6 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=792841c252391709f44a2cec5a85af9dd39cb7a33875cb3272e1b35a7acc8dca。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17065,13 +17065,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "7f0f08b1e8bf1f11a9ec0cee1fe383f108323e995659d0cc0045753f33cba36b",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "e6457a7ef9058ada306823c54ff1c52cdfda7014c2ad6ceaedcd64879d30d411",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17085,13 +17085,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "ef62af2ff0a6507adaa80b4fb1cb8ff0f9b268fccec0dae542863620cb256b03",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "e6457a7ef9058ada306823c54ff1c52cdfda7014c2ad6ceaedcd64879d30d411",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 6 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=5c602b624aa80a0c728e619718c73d5c344900fb1cb769dc9d0710e63eaa039d。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17105,13 +17105,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "afb6f0fad941fb22e81d44e127c07cc8823d4c24f76bed6e266bac088a142524",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 12,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "e6457a7ef9058ada306823c54ff1c52cdfda7014c2ad6ceaedcd64879d30d411",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 12 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17125,13 +17125,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "a96b37be2f15025b22bc23f248d23b913c3330dae42c12bb6dc031f7af026b9d",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 19,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "e6457a7ef9058ada306823c54ff1c52cdfda7014c2ad6ceaedcd64879d30d411",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 解析版 第 19 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=353ad7d86be6a2f6ac6ca569af3141fa4caddf9aed720193644dcb5b3dc70141。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17145,13 +17145,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "d746d0decda63ea2bf3997c1eaee9fd4c8607ae13519b211752904dcdece35f7",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "8bed6d20ae20fd6d6bdd70f79cb25624ab0ab5481c3f8761dae755aad1730826",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 5 页 figure_label（已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17165,13 +17165,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "6cd29832eb8cbad126b896fa962e6f35c3272a06e9fb1245646f5e1769e44e7c",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 6,
   "paper_id": "gk-1986-regular-guangdong-arts",
   "pdf_sha256": "8bed6d20ae20fd6d6bdd70f79cb25624ab0ab5481c3f8761dae755aad1730826",
-  "resume_action": "修正 gk-1986-regular-guangdong-arts 的 试题版 第 6 页 glyph（本轮实际目视当前150dpi整页PNG，SHA256=fa0285a506d62e9191bb6160fcc21667c5817fdfdfc7521398ccd35effa2a30e。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```

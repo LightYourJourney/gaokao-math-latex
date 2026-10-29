@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1986 广东文史类：同一构建的视觉回执重判及阻塞收口（2026-10-30）
+
+- 固定构建 attempt `adabd0f9-5ce7-4764-9373-6583a64ea098` 未变；四版共65页。对既往失败位置复看11页当前180dpi整页图，其余页面沿用绑定同一构建且未变的既有检查结论。最终 review 为 `passed`：520项中514 pass、6 not_applicable；6项是正确渲染的方框占位，6项是固定来源空白图形区而无原图可核标注。来源缺字与 Q25 缺图仍未猜补，阻塞问题 `ISSUE-0777`、`ISSUE-0793` 保持开放。
+- manifest revision `5462→5463`；build receipt `succeeded`，batch `closed_with_blockers`，不表示来源内容已补齐或纸本身份已认证。正式报告 `reports/phase2-b58.md`。
+- `review_receipts.py check-batch` 与 `build_projects.py validate-receipts --require-final` 通过；source manifest、issues、全量报告当前性及775行 manifest CSV 检查通过。未重编 TeX；阶段成本未知。
+- 下一步：以同样依据收口1986广东理科 `phase2-b59`，再处理1989广东文理卷独立审核发现的题面/解析差异；不把单卷批次等同长期题库完成。
+
 ### 2005 春季北京文/理卷：固定题面登记、独立答案与三角色 provenance（2026-10-30）
 
 - 两卷各转录20题。固定 sources 分别为文科 `src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5` / SHA-256 `698a85348a8a0f96bfc3fec8be3113f19b646d20215bb9c4d9b520cfadee42ae`，理科 `src-786c297176584bdd68013a9c78428a46275919a77cb2f2ba2af059eb5e019901` / SHA-256 `d9ca7414ddbc1043ee487b49523694ef20db7e41511d5a44d0b78fe20870e5fe`。两份 PDF 均 2 页、只含题面；Q1–Q17 在第1页，Q18–Q20 在第2页。固定字节只作本库 canonical 输入绑定；发布者、版次、来源链未知，`official_answer=null`。

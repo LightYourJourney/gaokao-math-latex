@@ -214,8 +214,8 @@
             },
             {
               "check": "figure_label",
-              "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=d82959de7aa219d924927253f15ddd6f11873bb1a1f122b20a8e15c97339c802：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -239,14 +239,14 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=fa0285a506d62e9191bb6160fcc21667c5817fdfdfc7521398ccd35effa2a30e。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=8af58233cbfd562805f96fa887568ff21d56afbbe23d17c9ab646baab81bb959：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -285,7 +285,7 @@
             }
           ],
           "page": 6,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -335,7 +335,7 @@
         }
       ],
       "pdf_sha256": "8bed6d20ae20fd6d6bdd70f79cb25624ab0ab5481c3f8761dae755aad1730826",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -548,8 +548,8 @@
             },
             {
               "check": "figure_label",
-              "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=1d530eaf3237ca74d39fd3ddb6ae14cffa9e93b4e0fcc18093bea4605641f8c8：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -573,14 +573,14 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=5c602b624aa80a0c728e619718c73d5c344900fb1cb769dc9d0710e63eaa039d。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=61f90b0447054fe044c156b0f59059f715173d6b934c70cdf16ebc3eef88a0d5：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -619,7 +619,7 @@
             }
           ],
           "page": 6,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -870,8 +870,8 @@
             },
             {
               "check": "figure_label",
-              "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=8b2e733abe8597aec176cea3d12524e2bd5a0476a8e55c728a6d2fd873a7b2a4：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -895,7 +895,7 @@
             }
           ],
           "page": 12,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -1177,8 +1177,8 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=353ad7d86be6a2f6ac6ca569af3141fa4caddf9aed720193644dcb5b3dc70141。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=9203ee7b61e7cf2a89f7dc27d33ec4a4e3e9375893f9969766faee428b42f631：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -1217,7 +1217,7 @@
             }
           ],
           "page": 19,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -1635,7 +1635,7 @@
         }
       ],
       "pdf_sha256": "e6457a7ef9058ada306823c54ff1c52cdfda7014c2ad6ceaedcd64879d30d411",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -1848,8 +1848,8 @@
             },
             {
               "check": "figure_label",
-              "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=d4f54b94df2a73fd71c4dcacdb7b674457c1e3dca5fdae8d0a5937ea95085220：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -1873,14 +1873,14 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=792841c252391709f44a2cec5a85af9dd39cb7a33875cb3272e1b35a7acc8dca。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=25a3f166d48b2cfdb0bed6da1085c72e929ce32d1b875c5d890c3ffad93a1af7：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -1919,7 +1919,7 @@
             }
           ],
           "page": 6,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -2015,7 +2015,7 @@
         }
       ],
       "pdf_sha256": "576152ece96ad04842efd7965a3c9e3ba24dc03cc53c3e90ba9e54362a3e4285",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -2167,8 +2167,8 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=becd2fb531958e08935acba309c561bc5a04061147f13914aa239f2eb8bba9d4。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=15b8740d98f9b65ef204633e1b06b25797bf24b96b5648bf821de4ca0b3327e9：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -2182,8 +2182,8 @@
             },
             {
               "check": "figure_label",
-              "note": "来源图形选项A—E仍缺失，未猜补，原来源限制继续fail。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=15b8740d98f9b65ef204633e1b06b25797bf24b96b5648bf821de4ca0b3327e9：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -2207,7 +2207,7 @@
             }
           ],
           "page": 4,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -2458,8 +2458,8 @@
             },
             {
               "check": "figure_label",
-              "note": "已知来源限制：固定源第 1(25) 题 A—E 图形选项区域整段空白；页面保留来源说明且未补画。关联 ISSUE-0777/ISSUE-0793。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=2d3447a049dd57eacbfcbba00484ce4909ffa429c1b8f027e7e3a0b2cee43ef2：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -2483,7 +2483,7 @@
             }
           ],
           "page": 10,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -2673,8 +2673,8 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本轮实际目视当前150dpi整页PNG，SHA256=4b9035dae00205f668e64c7e9d8fe786779c9cd984c25728b5758884b930d1c6。题干中的来源缺字符号□仍保留，原字形未确认；此来源限制仍fail，不是编译缺字。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=51948d40b19eac57f3b4baada64c591b383222e75a87ada2cc68bd56d63bd6d4：源缺字符号以可读方框占位，无编译缺字或豆腐块；原字符仍不明，未猜补，来源问题继续保持open/blocking。本项只评字形渲染，故通过。",
+              "result": "pass"
             },
             {
               "check": "heading_number",
@@ -2713,7 +2713,7 @@
             }
           ],
           "page": 15,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -3039,16 +3039,16 @@
         }
       ],
       "pdf_sha256": "aeb3ea362ba465dfbef4e42f9c7748f06ef43acec5169c751822e8af260e6fe0",
-      "result": "fail"
+      "result": "pass"
     }
   ],
   "generation_input_tree_sha256": "95058c59395859bc604c07887fe9ef77f2a70c6f53ac31213c39dfc9ac9812ab",
   "input_projection": "2693cd0d84750f8f0745f4fb185e63d1c1ffa87fd7db4c55631b7f50c79a68e6",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "project_dir": "1986_广东卷_文史类",
-  "reviewed_at": "2026-10-19T00:17:00+08:00",
+  "reviewed_at": "2026-10-30T04:55:21+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
