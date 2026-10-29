@@ -12,6 +12,14 @@
 - 三角色 provenance 正式导入 revision `5449→5450`，两卷各20条；paper 状态均 `answers_verified`，batch 为 `provenance_verified`。`source_manifest validate`、`solution_sources check-batch`（两卷20题）与 `provenance check-batch`（`OK：2 卷`）通过；注册 dry-run 及图稿引用数校验通过。
 - 修改范围：`2005/2005_数学真题_春季北京{文,理}_*.md`、`math-gaokao-latex/2005_春季北京{文科,理科}/figures/`、两卷 `provenance.json`、source manifest、图表清单与报告。成本/耗时未知；未跑测试，未生成正式四版TeX/PDF或 receipts，未做正式 PDF 逐页视觉验收。来源与官方答案未认证。阶段报告：`reports/phase1-b58-registration.md`。下一步生成项目 TeX、简答稿和四版入口，完成正式构建与逐页审查；本批未关闭，也不代表长期语料库完成。
 
+### 2005 春季北京文/理卷：共享 TeX 与四版正式构建（2026-10-30）
+
+- 两卷的 `questions.tex`、`answers.tex`、`answers_short.tex`、四版入口及项目索引已由仓库生成器生成；三种生成器 `--check` 均通过。答案要点补入选择题速查表，保留逐题 D 级答案不变，供简答生成器进行第三路逐格核对。
+- 首轮理科四版因图形说明中裸露文件名下划线触发 `Missing $ inserted`。将源 Markdown 改为带“图表清单”显示标签的链接后重新生成；ISSUE-1255–1258 均已登记为 `resolved/non_blocking`。成功构建重跑保留 previous attempt ID。
+- 最终正式 build attempt：文科 `534500d2-d387-4022-9580-975fccd07596`，理科 `cf7c2253-6447-49c0-8da3-f08ad0d30515`；输入 manifest revision `5453`。四版日志均无错误、缺字、未解析引用或 Overfull。页数：文科 5/20/7/15，理科 5/20/7/16，共95页。SHA-256 与逐版指纹见 `reports/phase1-b58-formal-build.md`。
+- 当前 manifest revision `5454`：两卷 paper 状态 `compiled`、batch `compiled_pending_review`；`validate-receipts --require-current-inputs`、`provenance check-batch`（`OK：2 卷`）、`solution_sources check-batch`（两卷各20题）、source manifest 校验及三种生成器 `--check` 均通过。
+- **仍待逐页视觉审查**：95页尚未检查，review receipt 未生成，不能标为 `complete`。固定来源发布者/版次/来源链与官方答案身份仍未认证，`official_answer=null`。本阶段未运行测试；成本未知。下一步建立本批 review 工作区、逐页检查当前attempt所有PDF、创建视觉回执并执行 finalize。阶段报告：`reports/phase1-b58-formal-build.md`。
+
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 
 - Q18分段消除Underfull后，完整校样继续发现Q19答案框脱离推导及Q20(3)孤立末页。仅重排规范解析源的Q19/Q20表达并补充分性，题面和最终答案哈希不变。最终attempt `bf351298-4607-4e0e-9a60-7b4b0c49beb3`，四版5/17/7/14页，共43页；所有日志错误/缺字/引用/Overfull/Underfull均0。
