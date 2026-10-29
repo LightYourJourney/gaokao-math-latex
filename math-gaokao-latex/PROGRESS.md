@@ -10542,3 +10542,11 @@
 - 发现规范答案与解析稿自`73f0298d`起把第二卷三几何解答错配至Q27，并在Q28重复。已将Q27改为第二卷二的等比数列证明及$x=-1/2$，Q28保留几何解答，重新生成含解析稿；更新Q27 provenance答案哈希和证据、sidecar修订号及文件哈希。manifest revision `5473→5474`。
 - Q29（2）源页只显示定义域和不等式条件，未见最终解集；Q30解答未见于固定扫描。Q9答案冲突、Q16垂直定义边界、Q21选项与题设范围不符仍为开放阻断；来源真实性仍`unverified`、`official_answer=null`。batch `phase1-b59`仍`provenance_verified`、paper仍`blocked`。
 - 阶段报告：`reports/1989-guangdong-arts-answer-source-review.md`。尚未生成项目TeX/PDF或构建/视觉回执；未运行测试套件。
+
+
+### 1989 广东文科候选卷：项目 TeX 装配（2026-10-30）
+
+- 简答生成器要求项目答案与单独速查行三路一致。规范答案稿原先只有固定扫描答案表，故首轮生成被拒；新增项目独立答案速查行，25项由逐题答案自动折算，Q9/Q16/Q21记为`U`，不覆盖另列的扫描答案。
+- `generate_projects --write`生成全局`index.json`及本卷`questions.tex`、`answers.tex`；`make_short_answers --write`生成`answers_short.tex`；`make_editions --write`生成试题、解析、简答、印刷四版壳。三个生成器`--check`、`solution_sources check-batch`、`provenance check-batch`、source manifest与issues validate均通过。sidecar答案规范稿哈希已同步；manifest维持revision 5474。未运行测试。
+- 本阶段尚未XeLaTeX构建或形成构建/视觉回执。batch `phase1-b59`仍`provenance_verified`、paper仍`blocked`；Q9/Q16/Q21五项issues开放，固定来源身份未认证、`official_answer=null`；Q29（2）最终解集未见、Q30扫描解答缺失。
+- 阶段报告：`reports/1989-guangdong-arts-project-tex-generation.md`。
