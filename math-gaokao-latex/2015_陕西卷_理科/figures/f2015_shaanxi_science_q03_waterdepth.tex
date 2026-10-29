@@ -1,0 +1,17 @@
+% 2015 年陕西卷（理科）第 3 题：水深随时间变化的曲线（依固定扫描页重绘，只画拓扑与标号，不按比例）
+\begin{tikzpicture}[>=stealth,scale=1.0,xscale=0.55,yscale=0.62]
+  % 坐标轴
+  \draw[->] (0,0)--(7.2,0) node[above right] {时间/t} node[below right] {$x$};
+  \draw[->] (0,-0.5)--(0,4.0) node[above right] {水深/m} node[above left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \node[left] at (0,1.0) {$2$};
+  % 最低水位的虚线
+  \draw[dashed] (0,1.0)--(2.82,1.0);
+  % 曲线：最小值 2，最大值 8（示意）
+  \draw[thick,domain=1.9:5.6,samples=120] plot (\x,{2.5-1.5*cos(180*(\x-2.82)/1.85)});
+  % 时刻刻度
+  \draw (1.9,0.06)--(1.9,-0.06);
+  \node[below] at (1.9,0) {$6$};
+  \draw (5.6,0.06)--(5.6,-0.06);
+  \node[below] at (5.6,0) {$18$};
+\end{tikzpicture}

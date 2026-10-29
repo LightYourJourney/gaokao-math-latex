@@ -1,0 +1,49 @@
+% 2015 年陕西卷（理科）第 18 题：折叠前的直角梯形与折叠后的四棱锥（依固定扫描页重绘，只画拓扑与标号，不按比例）
+\begin{tikzpicture}[scale=0.85]
+  % 图 1：直角梯形 ABCD，E 为 AD 中点，O 为 AC 与 BE 的交点
+  \coordinate (A) at (0,2);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (2,0);
+  \coordinate (D) at (4,2);
+  \coordinate (E) at (2,2);
+  \coordinate (O) at (1,1);
+  \draw (A)--(D)--(C)--(B)--cycle;
+  \draw (A)--(C);
+  \draw (B)--(E);
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[above] at (E) {$E$};
+  \node[left] at (O) {$O$};
+  \node at (2,-1.05) {图 1};
+  % 图 2：折叠后所得四棱锥 A1-BCDE
+  \begin{scope}[xshift=5.4cm]
+    \coordinate (A1) at (0.9,3.0);
+    \coordinate (B2) at (0.2,0.2);
+    \coordinate (C2) at (2.2,0.2);
+    \coordinate (D2) at (3.4,1.4);
+    \coordinate (E2) at (1.4,1.4);
+    \coordinate (O2) at (0.8,0.8);
+    % 可见侧棱与底边：实线
+    \draw (A1)--(B2);
+    \draw (A1)--(C2);
+    \draw (A1)--(D2);
+    \draw (B2)--(C2);
+    \draw (C2)--(D2);
+    % 被遮挡的棱与辅助线：虚线
+    \draw[dashed] (A1)--(E2);
+    \draw[dashed] (D2)--(E2);
+    \draw[dashed] (A1)--(O2);
+    \draw[dashed] (B2)--(O2);
+    \draw[dashed] (O2)--(E2);
+    \draw[dashed] (O2)--(C2);
+    \node[above] at (A1) {$A_{1}(A)$};
+    \node[below left] at (B2) {$B$};
+    \node[below] at (C2) {$C$};
+    \node[right] at (D2) {$D$};
+    \node[above left] at (E2) {$E$};
+    \node[below] at (O2) {$O$};
+    \node at (1.7,-0.75) {图 2};
+  \end{scope}
+\end{tikzpicture}

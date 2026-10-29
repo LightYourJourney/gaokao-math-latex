@@ -1807,6 +1807,14 @@
         "gk-2015-regular-shaanxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b41",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-shaanxi-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1816,7 +1824,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d8df3e0b-3569-4dae-8e38-0c2e182c5b55",
+  "last_transaction_id": "2fbf0efd-5523-430c-8182-b79b0e099199",
   "papers": [
     {
       "blocked_from": null,
@@ -24734,9 +24742,95 @@
       "title": "2015 年·陕西卷·文史类",
       "track": "arts",
       "year": 2015
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q02_pie.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q03_waterdepth.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q05_threeviews.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q08_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q16_canal.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q18_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q20_ellipse_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_陕西卷_理科/figures/f2015_shaanxi_science_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2015_shaanxi_science",
+        "id": "gk-2015-regular-shaanxi-science",
+        "note": "固定两页 A3 副本，印刷页 973–974，未见答案及分值；身份未核；22–24 题按源顺排，未见选做说明。Q11、Q16 模型与 Q19 往返联合分布待核；答案为项目非官方求解。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "science",
+        "variant": "陕西理"
+      },
+      "issue_ids": [
+        "ISSUE-1245",
+        "ISSUE-1246",
+        "ISSUE-1247"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-shaanxi-science",
+      "production_state": "blocked",
+      "project_dir": "2015_陕西卷_理科",
+      "question_count": 24,
+      "resume_action": "寻找可追溯来源确认概率模型，或保留按均匀模型的条件结论。；核实原题和可追溯的流量模型，保留条件性结论。；寻找可核验的往返路况联合分布或原始题面；否则保留未定及条件分析。",
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_陕西理_含解析.md",
+        "questions": "2015/2015_数学真题_陕西理_试题.md",
+        "solution_body": "2015/2015_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-35a90f08c9b32a20289a652cad7019dba5a69a734c5686fe11c7739b801c212b"
+      ],
+      "title": "2015 年·陕西卷·理工农医类",
+      "track": "science",
+      "year": 2015
     }
   ],
-  "revision": 5410,
+  "revision": 5411,
   "schema_version": 1,
   "sources": [
     {
@@ -40477,8 +40571,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5e1e1cc6caef317b36f58afaec4cff8e90b73b7b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015陕西理.pdf",
       "regions": [],
       "source_id": "src-35a90f08c9b32a20289a652cad7019dba5a69a734c5686fe11c7739b801c212b",

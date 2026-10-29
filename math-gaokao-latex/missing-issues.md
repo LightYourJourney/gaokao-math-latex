@@ -20768,3 +20768,54 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1245
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面仅给出复数对应圆盘，未明确概率分布；圆盘均匀为项目建模假设。",
+  "fingerprint": "56d41084b5b2b175075a12f510a2146dba703e8d8962f2162e3b30cfe0e0bc26",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-shaanxi-science",
+  "question_id": "gk-2015-regular-shaanxi-science-q11",
+  "resume_action": "寻找可追溯来源确认概率模型，或保留按均匀模型的条件结论。",
+  "source_id": "src-35a90f08c9b32a20289a652cad7019dba5a69a734c5686fe11c7739b801c212b",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1246
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面要求最大流量比，截面积比例计算需流速等水力条件；源题未明示。",
+  "fingerprint": "a3204fcc5cbfece5eeb5a8ad695865f0327a323c2be87f655fe4a4104186f82d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-shaanxi-science",
+  "question_id": "gk-2015-regular-shaanxi-science-q16",
+  "resume_action": "核实原题和可追溯的流量模型，保留条件性结论。",
+  "source_id": "src-35a90f08c9b32a20289a652cad7019dba5a69a734c5686fe11c7739b801c212b",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1247
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面给出单程样本频率，未明确去返程联合分布；相同边缘下可构造不同结果。",
+  "fingerprint": "b5e5d092a77d23c2550166394660aa9263c0e951d026c500ddf99bd42ced4dbf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2015-regular-shaanxi-science",
+  "question_id": "gk-2015-regular-shaanxi-science-q19",
+  "resume_action": "寻找可核验的往返路况联合分布或原始题面；否则保留未定及条件分析。",
+  "source_id": "src-35a90f08c9b32a20289a652cad7019dba5a69a734c5686fe11c7739b801c212b",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
