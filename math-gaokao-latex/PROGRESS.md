@@ -10494,3 +10494,14 @@
 - 文科 Q12 的整面拼接分类经主会话独立复核；Q18 的斜率 k=0 与“两点相交”条件不符，作为边界注记保留。理科 Q12 拼接面积分类已复核；Q19(2) 按可辨原文保留“汽车站的平均速度”，解析依前文变量 v 解释，均不作为阻断问题。
 - 八幅题图 TikZ 候选已在 .work/candidate-2005-beijing-figures/ 单独完成并有逐图复核记录，仍待主会话抽验并同步接入题面映射、generator、manifest 与 provenance。
 - 当前阶段未登记 paper/batch，未建立逐题 provenance，未生成项目 LaTeX 或四版 PDF，未做正式构建/视觉回执；下一步完成图稿接入与来源登记后再进入四版流程。两卷的转录和本阶段答案稿均不表示 1952–2026 题库完成。
+
+
+### 1989 广东理科：Q22/Q25修订与四版视觉回执闭环（2026-10-30）
+
+- 固定来源仍为 `src-db4a50c280ed27fa5f0f5542adec7d7fe605a216210ebbff7165fe4396b75256`，即 `普通高考/1989/1989广东理.pdf`，9页，SHA-256 `e300fb9ae1d2b606f2cf4e6da4ee985b0014baf04c656f560326dd68d22031d1`。本批接手已有转录、答案和四版项目，不重做整卷转录。
+- 按固定扫描复核修正Q22解析“必要条件”方向；Q25选项图删去B图多添的横截距标记、补四图原点O、延长D图两线使其按来源拓扑相交，并将D图O移开“−2”标记。规范题面未因答案推断而改写，图仍标为重建示意。 含解析稿Q30证明前与第二种情形前的两处局部分页锚点经终版构建验证：解析版第24页现同时保留证明与答案（1）（2），不再单独落答案框。
+- 确定性生成检查通过：`solution_sources check-batch`（30题）、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`。正式构建 attempt `cf154707-8015-4e4e-b763-1603b812eb24` 使用 manifest revision 5467，四版5/24/7/17页，共53页；PDF SHA-256依次为试题版 `56a9e2c84eef19150c4d532e45cfa197403136d167f0d6c9ede6dd76eaa35e95`、解析版 `674a49ed09e5123076224cbed7bdc03888d00bb5edc85bce97fcdba02b3eab17`、简答版 `e2b81a48cb9b431fcef60baafe74bee83756cdce556f46d0aa9d32328d8b74a0`、印刷版 `fe5d265c70d7a146396583e1181462eb91f18852256a33de77135f5390cfb2ea`。
+- 四版53页均完成八项视觉检查：383 pass、41 not_applicable（各无图页的 `figure_label`）、0 fail。终版较前一已复核构建仅8页渲染变化；这些页均以180dpi重看，其他45页PNG SHA-256逐页相同并沿用上一轮实际视觉结论。Q25图形标签可辨，Q22正文清楚，无页面溢出。
+- `review_receipts finalize-batch` 返回 `FINALIZED`，manifest revision更新至5470；`review_receipts check-batch`、`build_projects validate-receipts --require-final`、source manifest与issues校验通过。全量报告投影事务已回读验证，`report.py check --all`通过；`manifest.csv` current且775行。未运行测试套件。
+- 批次 `phase4-b04` 为 `closed_with_blockers`，试卷仍 `blocked`。Q8原文“对称轴对x轴”含义仍不确定，`ISSUE-1078`保持open / blocks_completion；来源出版版次和B型答案表与本卷的对应关系未证，`official_answer=null`。本批只关闭构建与视觉验收，不表示来源疑点解决或1952—2026题库完成。
+- 阶段报告：`reports/phase4-b04.md`。下一步接续1989广东文科卷：核对Q21源面选项与数学结论、保留Q9答案表冲突及来源身份不确定，并按现有登记流程建立独立批次；不得把改正后的数学结论覆盖固定扫描原文。

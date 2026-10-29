@@ -7,6 +7,7 @@
   \draw[graph] (-2,2)--(2,-2);
   \draw[graph] (-2,-1.7)--(-2,1.7);
   \node[label] at (-2,-2.25) {$-2$};
+  \node[label] at (-0.3,-0.3) {$O$};
   \node[label] at (0,-2.25) {A};
 \end{scope}
 \begin{scope}[shift={(6,0)}]
@@ -17,7 +18,7 @@
   \draw[graph] (0,1.5) circle (1.3pt);
   \node[label,left] at (0,1.5) {$\frac32$};
   \node[label] at (-2,-2.25) {$-2$};
-  \node[label] at (3,-2.9) {$3$};
+  \node[label] at (-0.3,-0.3) {$O$};
   \node[label] at (0,-2.25) {B};
 \end{scope}
 \begin{scope}[shift={(12,0)}]
@@ -29,19 +30,24 @@
   \node[label,left] at (0,1.5) {$\frac32$};
   \node[label] at (-2,-2.25) {$-2$};
   \node[label] at (3,-3.3) {$3$};
+  \node[label] at (-0.3,-0.3) {$O$};
   \node[label] at (0,-2.25) {C};
 \end{scope}
-\begin{scope}[shift={(18,0)}]
-  \draw[axis] (-2.3,0)--(3.5,0) node[right] {$x$};
-  \draw[axis] (0,-2.1)--(0,1.9) node[above] {$y$};
-  \draw[graph] (-2,0)--(0,-2);
-  \draw[graph] (0,1.5)--(3,0);
+\begin{scope}[xshift=9.62cm,x=0.28cm,y=0.34cm]
+  \draw[axis] (-7.4,0)--(3.5,0) node[right] {$x$};
+  \draw[axis] (0,-2.4)--(0,5.6) node[above] {$y$};
+  % 按来源拓扑延长两条直线，交会点在左上方；坐标比例仅为示意。
+  \draw[graph] (-7.6,5.6)--(0.4,-2.4);
+  \draw[graph] (-7.4,5.2)--(3.5,-0.25);
   \fill (-2,0) circle (1.3pt);
   \fill (3,0) circle (1.3pt);
+  \fill (0,1.5) circle (1.3pt);
+  \fill (0,-2) circle (1.3pt);
   \node[label,left] at (0,1.5) {$\frac32$};
-  \node[label,left] at (-0.7,-2) {$-2$};
-  \node[label] at (-2,-2.75) {$-2$};
-  \node[label] at (3,-2.65) {$3$};
-  \node[label] at (0,-3.6) {D};
+  \node[label,left] at (0,-2) {$-2$};
+  \node[label] at (-2,-0.55) {$-2$};
+  \node[label] at (3,-0.55) {$3$};
+  \node[label] at (0.45,-0.45) {$O$};
+  \node[label] at (0,-3.5) {D};
 \end{scope}
 \end{tikzpicture}
