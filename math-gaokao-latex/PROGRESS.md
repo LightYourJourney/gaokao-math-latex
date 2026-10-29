@@ -10421,3 +10421,11 @@
 - Q17 按固定 PDF 第2页重绘 TikZ，图只保留顶点、拓扑与虚实线，不补几何标记；局部 XeLaTeX 预览编译并目视对照源图。manifest 与 Markdown 映射登记2次引用。
 - 确定性生成 `_含解析.md`、`questions.tex`、`answers.tex`、`index.json`、`answers_short.tex` 与四个入口壳。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`、`provenance.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过；全量 report 投影已原子刷新并回读；`manifest.csv` 重生成775行。未运行测试套件、未做正式四版编译/视觉验收。
 - 本阶段报告：`reports/2021-shanghai-spring-registration-provenance.md`。下一步核对 report/CSV 投影，正式构建四版 PDF、逐页视觉校样并生成绑定 manifest/input/toolchain/PDF 指纹的回执；Q9、Q12 继续阻断 paper 完成。
+
+### 2021 上海春季卷：四版正式构建与逐页视觉复核（2026-10-30）
+
+- 正式构建 attempt `0e43e552-bb8b-440c-9bc1-bba5a1b1fa8f` 使用 manifest revision `5446`，最终 manifest revision `5448`。四版共39页：试题版3页 SHA-256 `064d22fb7976150088b55fa64b4204f6a4a5f175284002b6656739e66ba53c60`；解析版18页 `1fbc88e39d2abbd214b70cb359bf4ce37bee2431b4c4e3a4f47f9cb65e051e71`；简答版5页 `81b4f2282af0051b6a260fb00c26fcfe90c25ae0d8f27bf36f1209527c445ce9`；印刷版13页 `5c9f7ca492b53e3aa875f7924364cbad102fdae5ce1c32256293f4b7b5cd45de`。四版日志错误、缺字和 overfull 均为0。
+- 39页均完成八项视觉核查：278 pass、34 not_applicable、0 fail；最终 attempt 中，题目版3页、解析版第1–17页、简答版5页、印刷版第1–12页与上一已审 attempt 的渲染图逐页字节一致并继承该视觉结论；解析版第18页和印刷版第13页已复看最终 attempt。Q21 等号构造公式拆行后无 overfull；无裁切、重叠、题号错位或意外答案泄漏。
+- `build_projects validate-receipts --require-final --require-current-inputs` 与 `review_receipts check-batch` 均通过；`solution_sources`、项目生成、简答与四版装配 currentness 检查通过。全量报告投影已事务刷新并由 `report.py check --all` 验证，`manifest.csv` current 且775行。
+- Q9 的等比数列零公比约定（ISSUE-1251）与 Q12 原题量词/附载参考解冲突（ISSUE-1252）继续 open / blocks_completion；来源版本与答案官方身份仍未核，`official_answer=null`。批次 `phase1-b57` 为 `closed_with_blockers`，paper 仍为 `blocked`。构建中间失败 ISSUE-1253/1254 已由最终干净构建解决。未运行测试套件。
+- 阶段报告：`reports/phase1-b57.md`；构建与视觉指纹绑定在 `2021_春季上海卷/receipts/{build,review}.json`。
