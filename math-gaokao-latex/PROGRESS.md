@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 春季北京文/理卷：固定题面登记、独立答案与三角色 provenance（2026-10-30）
+
+- 两卷各转录20题。固定 sources 分别为文科 `src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5` / SHA-256 `698a85348a8a0f96bfc3fec8be3113f19b646d20215bb9c4d9b520cfadee42ae`，理科 `src-786c297176584bdd68013a9c78428a46275919a77cb2f2ba2af059eb5e019901` / SHA-256 `d9ca7414ddbc1043ee487b49523694ef20db7e41511d5a44d0b78fe20870e5fe`。两份 PDF 均 2 页、只含题面；Q1–Q17 在第1页，Q18–Q20 在第2页。固定字节只作本库 canonical 输入绑定；发布者、版次、来源链未知，`official_answer=null`。
+- 注册为 `gk-2005-spring-beijing-arts`、`gk-2005-spring-beijing-science` / `phase1-b58`；manifest revision `5448→5449`。8幅 TikZ 图稿（每卷Q2/Q12/Q16/Q18）与题面链接、图表清单、manifest `figure_files` 同步；每图在题面和含解析稿各引用一次。standalone XeLaTeX 预览8/8已编译并目视检查。
+- 答案与解析为D级项目独立推导，非官方。两位独立盲核者各自仅看本卷规范题面和链接图稿，复算Q1–Q20；40题与答案块相符。文科盲核初稿Q1表格有符号笔误，复核后确认答案为D、`-2-i`，未改变规范源。Q12拼接形态与理科Q19“汽车站的平均速度”保留解释边界，均不作为阻断。
+- 三角色 provenance 正式导入 revision `5449→5450`，两卷各20条；paper 状态均 `answers_verified`，batch 为 `provenance_verified`。`source_manifest validate`、`solution_sources check-batch`（两卷20题）与 `provenance check-batch`（`OK：2 卷`）通过；注册 dry-run 及图稿引用数校验通过。
+- 修改范围：`2005/2005_数学真题_春季北京{文,理}_*.md`、`math-gaokao-latex/2005_春季北京{文科,理科}/figures/`、两卷 `provenance.json`、source manifest、图表清单与报告。成本/耗时未知；未跑测试，未生成正式四版TeX/PDF或 receipts，未做正式 PDF 逐页视觉验收。来源与官方答案未认证。阶段报告：`reports/phase1-b58-registration.md`。下一步生成项目 TeX、简答稿和四版入口，完成正式构建与逐页审查；本批未关闭，也不代表长期语料库完成。
+
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 
 - Q18分段消除Underfull后，完整校样继续发现Q19答案框脱离推导及Q20(3)孤立末页。仅重排规范解析源的Q19/Q20表达并补充分性，题面和最终答案哈希不变。最终attempt `bf351298-4607-4e0e-9a60-7b4b0c49beb3`，四版5/17/7/14页，共43页；所有日志错误/缺字/引用/Overfull/Underfull均0。

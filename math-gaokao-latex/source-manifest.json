@@ -1831,6 +1831,15 @@
         "gk-2021-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b58",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-spring-beijing-arts",
+        "gk-2005-spring-beijing-science"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1840,7 +1849,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ccbe29e5-4680-4b22-846c-2e2842db77d2",
+  "last_transaction_id": "a0181a26-0e08-49b2-aba9-804f1245bd4b",
   "papers": [
     {
       "blocked_from": null,
@@ -24983,9 +24992,147 @@
       "title": "2021 年·上海春季招生数学试卷",
       "track": "none",
       "year": 2021
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京文科/figures/f2005_spring_beijing_arts_q02_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京文科/figures/f2005_spring_beijing_arts_q12_cube_diagonal_plane.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京文科/figures/f2005_spring_beijing_arts_q16_triangular_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京文科/figures/f2005_spring_beijing_arts_q18_parabola_secants.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_spring_beijing_arts",
+        "id": "gk-2005-spring-beijing-arts",
+        "note": "固定题面 PDF source ID src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5，SHA-256 698a85348a8a0f96bfc3fec8be3113f19b646d20215bb9c4d9b520cfadee42ae，共2页（印刷页 215–216）。仅作本库内部 canonical 输入绑定，不认证发布者、版次或来源链；PDF 无答案页，答案与解析为 D 级项目独立推导，official_answer=null。四幅题图均由主会话对照固定源重绘为 TikZ。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "春季北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-spring-beijing-arts",
+      "production_state": "answers_verified",
+      "project_dir": "2005_春季北京文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_春季北京文_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_春季北京文_含解析.md",
+        "questions": "2005/2005_数学真题_春季北京文_试题.md",
+        "solution_body": "2005/2005_数学真题_春季北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5"
+      ],
+      "title": "2005 年·春季北京卷·文科",
+      "track": "arts",
+      "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京理科/figures/f2005_spring_beijing_science_q02_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京理科/figures/f2005_spring_beijing_science_q12_cube_diagonal_plane.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京理科/figures/f2005_spring_beijing_science_q16_folded_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_春季北京理科/figures/f2005_spring_beijing_science_q18_parabola_secants.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2005_spring_beijing_science",
+        "id": "gk-2005-spring-beijing-science",
+        "note": "固定题面 PDF source ID src-786c297176584bdd68013a9c78428a46275919a77cb2f2ba2af059eb5e019901，SHA-256 d9ca7414ddbc1043ee487b49523694ef20db7e41511d5a44d0b78fe20870e5fe，共2页（印刷页 213–214）。仅作本库内部 canonical 输入绑定，不认证发布者、版次或来源链；PDF 无答案页，答案与解析为 D 级项目独立推导，official_answer=null。四幅题图均由主会话对照固定源重绘为 TikZ。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "春季北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-spring-beijing-science",
+      "production_state": "answers_verified",
+      "project_dir": "2005_春季北京理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_春季北京理_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_春季北京理_含解析.md",
+        "questions": "2005/2005_数学真题_春季北京理_试题.md",
+        "solution_body": "2005/2005_数学真题_春季北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-786c297176584bdd68013a9c78428a46275919a77cb2f2ba2af059eb5e019901"
+      ],
+      "title": "2005 年·春季北京卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 5448,
+  "revision": 5450,
   "schema_version": 1,
   "sources": [
     {
@@ -25434,8 +25581,8 @@
       "exam_type": "spring",
       "git_blob_oid": "9a9ccb7e03bf5b3f6764f35b7bdade54e5c506d3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-spring-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005春季北京文.pdf",
       "regions": [],
       "source_id": "src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5",
@@ -25458,8 +25605,8 @@
       "exam_type": "spring",
       "git_blob_oid": "ec69672989a921864315ba57d7debe044e492705",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-spring-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005春季北京理.pdf",
       "regions": [],
       "source_id": "src-786c297176584bdd68013a9c78428a46275919a77cb2f2ba2af059eb5e019901",

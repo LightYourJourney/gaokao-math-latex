@@ -1,0 +1,13 @@
+% Source-page vector redraw from 2005 Spring Beijing Arts, printed p. 215, Q16.
+% Schematic placement only; no lengths or angles are encoded.
+\begin{tikzpicture}[line cap=round, line join=round, scale=1.0]
+\coordinate (A) at (0,1.0); \coordinate (B) at (2.2,0);
+\coordinate (C) at (3.55,1.1); \coordinate (S) at (1.8,3.0);
+\coordinate (M) at (2.875,.55); % midpoint of BC
+\draw[thick] (A)--(B)--(S)--cycle;
+\draw[thick] (S)--(C)--(B);
+\draw[dashed, thick] (A)--(C) (A)--(M);
+\draw[thick] (S)--(M);
+\foreach \P/\pos in {A/below left,B/below right,C/left,S/above,M/right}
+  \node[\pos=2pt] at (\P) {$\P$};
+\end{tikzpicture}
