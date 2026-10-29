@@ -33,3 +33,7 @@
 ## 第 8 题超宽修正及重建
 
 视觉回执校验曾报告 4 条第 8 题 `Overfull hbox`，涉及试题版、解析版、简答版。日志显示长题干在同一行内无法断开；隔离试排后在题干两个子句间增加换行指令，不更改可见文字，并重新绑定第 8 题题面哈希。正式构建 attempt `2a221356-e120-424d-88eb-da2ce9f4f476` 返回 `COMPILED_PENDING_REVIEW`，revision 5432，四版仍为 5、17、7、14 页；四版日志未见 Overfull hbox。新构建仍须重看变动页并完成视觉回执；原有三个内容问题仍开放。
+
+## 视觉验收及批次收口
+
+当前 attempt `2a221356-e120-424d-88eb-da2ce9f4f476` 四版共 43 页，重排变化的 14 页已实际逐页复看；其余 29 页逐一核验 PNG SHA-256 后，沿用此前实际查看且通过的页面结论，并保留原始 attempt 和页号。四版日志没有 Overfull hbox；正式视觉回执 `FINALIZED`，manifest revision 5433，批次为 `closed_with_blockers`。构建回执当前性、视觉回执、逐题来源、解析正文和三个生成器检查通过。`ISSUE-1248`、`ISSUE-1249`、`ISSUE-1250` 仍开放，第 8、14 题保持 U/PENDING，paper 仍为 `blocked`，不能视为整卷内容完成。
