@@ -17,3 +17,9 @@
 ## 正式构建，待视觉审查
 
 四版正式构建返回 `COMPILED_PENDING_REVIEW`，attempt `4c5d0150-a6ae-400a-a222-b62ee55a6c73`，manifest revision 5423；试题版 5 页、解析版 17 页、简答版 7 页、印刷版 14 页，共 43 页。构建回执检查无 missing、invalid 或 stale，CSV 当前。PDF 仍需逐页目视并生成绑定回执；paper 保持 blocked，三个问题仍开放。
+
+## 第 21 题图形调整及重建
+
+旧 attempt `4c5d0150-a6ae-400a-a222-b62ee55a6c73` 的解析版实际审查发现第 21 题小圆 $O_2$ 标记在第 5、16 页与圆弧、底边相碰。已在隔离目录试排并实际查看两页，将标记移到小圆下方，未改变图形几何；同步更新图形来源哈希。旧 attempt 的解析版逐页观察和审查模板已归档。
+
+正式重建返回 `COMPILED_PENDING_REVIEW`，新 attempt `0a6d7f28-1051-43ff-924d-a4ce9431b7ef`，manifest revision 5426；四版仍为 5、17、7、14 页，共 43 页。构建回执检查无 missing、invalid 或 stale；新构建的四版逐页视觉审查尚未完成，三个问题仍开放。
