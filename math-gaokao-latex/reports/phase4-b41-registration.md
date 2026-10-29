@@ -7,3 +7,7 @@
 登记事务 revision 5411 为第 11、16、19 题分别创建 `ISSUE-1245`、`ISSUE-1246`、`ISSUE-1247`，当前 paper 状态 `blocked`、batch 状态 `planned`。三项分别涉及圆盘均匀概率模型、流量与截面积的水力假设、以及往返联合分布未明。不得把有条件结果视为无条件官方答案；详见 `2015-shaanxi-science-q19-source-gap.md`。
 
 `solution_sources.py check-batch` 检查 24 题通过；题图登记预检 8 张通过，`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check` 通过。逐题 provenance 仅创建工作模板，尚未导入；共享 TeX、四个入口、正式编译、字体检查和当前 PDF 的逐页视觉验收均未完成。本阶段不声明试卷完成。
+
+## 逐题来源导入
+
+已将 24 题来源审查、项目求解和独立盲解记录导入 `provenance.json`，与当前题面、答案及固定源哈希绑定；第 11、16、19 题的答案证据为 U 级，分别关联 `ISSUE-1245`、`ISSUE-1246`、`ISSUE-1247`，当前卷仍为 `blocked`。`provenance.py check-batch` 通过，manifest revision 5412，CSV 已按新状态刷新。第 20 题独立初解曾误算，复核后已更正，不能把初始结果当作有效证据。四版生成及编译和视觉验收仍未完成。
