@@ -27,6 +27,12 @@
 - 首轮回流构建 attempt（已由后续 Q20 修正版取代）：文科 `193e94e8-824d-4f89-9c2f-74f512e6b115`，理科 `b9499a8d-8b63-4ece-bd64-bef760b25e78`；以 revision `5456` 构建，理科印刷版17页，后续发现其末页只有 Q20（3）、（4）答案框。该轮页数与 SHA 保留在 `reports/phase1-b58-reflow-build.md`。
 - 删除理科 Q20（4）解析末尾与答案框重复的 $T$ 展开式，保留原推导与答案；含解析稿及 `answers.tex` 已同步。最新 attempt：文科 `69f4326e-64de-40bb-9b2a-588accf02649`、理科 `4b0dff21-7f61-4aba-94ad-54c046263f6d`，以 revision `5458` 构建，当前 revision `5459`；页数文科 5/19/7/15、理科 5/20/7/16，共94页。8份构建日志错误/缺字/未解析引用/Overfull 均为0；manifest、解析、provenance、三个生成器及当前回执检查通过。**最新94页待逐页视觉复核**，review receipt 未 finalize；未运行测试。本批未关闭，固定来源身份未知、`official_answer=null`。阶段报告：`reports/phase1-b58-reflow-build.md`。
 
+### 2005 春季北京文/理卷：Q18 解析标题分页修正（2026-10-30）
+
+- 文科解析版第16页原先只留下 Q18 的“解析”标题。规范解析源在 Q18 解析前加入 `\Needspace{8\baselineskip}`，确定性生成器同步含解析稿与 `answers.tex`；最新解析版第16页保留题目和图，第17页从“解析”标题与完整解答开始。题干、推导及答案未改。
+- 正式 build attempt：文科 `2fcce5e3-2d52-49e5-9e00-8d0f362d1a1e`、理科 `ff3c1b03-8924-4d7f-bd78-c92712772754`，均以 manifest revision `5460` 构建，当前 revision `5461`。页数仍为文科 5/19/7/15、理科 5/20/7/16，共94页。文科印刷版第13页及解析版第16–17页为相对已审栅格变化页，均已实看；其余91页与 build-5458 栅格 SHA 字节一致，可继承此前逐页目视记录。
+- 两卷八份构建日志的错误、缺字、未解析引用、Overfull 均为0；构建状态仍为 `compiled_pending_review`。此提交只记录本轮版面修正与正式重编；最终视觉工作项和 review receipt 仍待完成，不能据此标为完成。未运行测试套件。阶段报告：`reports/phase1-b58-reflow-build.md`。
+
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 
 - Q18分段消除Underfull后，完整校样继续发现Q19答案框脱离推导及Q20(3)孤立末页。仅重排规范解析源的Q19/Q20表达并补充分性，题面和最终答案哈希不变。最终attempt `bf351298-4607-4e0e-9a60-7b4b0c49beb3`，四版5/17/7/14页，共43页；所有日志错误/缺字/引用/Overfull/Underfull均0。

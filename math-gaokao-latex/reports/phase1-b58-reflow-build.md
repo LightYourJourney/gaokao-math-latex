@@ -37,3 +37,9 @@ provenance 写入后 manifest revision 为 `5455`。以下构建以 revision `54
 - 新正式 build attempt：文科 `69f4326e-64de-40bb-9b2a-588accf02649`，理科 `4b0dff21-7f61-4aba-94ad-54c046263f6d`；两者以 manifest revision `5458` 为输入，当前 revision `5459`。文科页数仍为 5/19/7/15（46页）；理科为 5/20/7/16（48页），合计94页。理科印刷版由17页回流到16页，孤页已并回末页；需以本次实际逐页审查确认视觉结果。
 - 8份构建日志的错误、缺字、未解析引用与 Overfull 均为0。`source_manifest validate`、`solution_sources check-batch`、`provenance check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check` 及 `validate-receipts --require-current-inputs` 均通过。未运行测试。
 - 最新构建仍为 `compiled_pending_review`；本批94页的最终视觉回执尚未完成，不能标为完成。旧版中逐页实看且 PNG SHA 完全相同的页面才可继承既有结论；理科印刷版新末页及其他未审页面需实看。
+
+## Q18 解析标题分页修正与最新正式重编（2026-10-30）
+
+- 文科解析版第16页原先在 Q18 题干和图后仅余“解析”标题。规范解析源增加 `\Needspace{8\baselineskip}`，含解析稿与 `answers.tex` 由确定性生成器同步；最新解析版第16页保留题目与图，第17页从“解析”标题和完整解答开始。数学内容未改。
+- 最新 attempt：文科 `2fcce5e3-2d52-49e5-9e00-8d0f362d1a1e`、理科 `ff3c1b03-8924-4d7f-bd78-c92712772754`，manifest revision `5460`（当前 `5461`）。页数文科 5/19/7/15，理科 5/20/7/16，共94页。文科四版 PDF SHA-256：试题 `eb75013ac9e929d175385e401497f94e0f4ab302252c808d092208b5824bbe56`、解析 `a3c52dff0dda49e7fa0c4821ed225150e91052c162f025346b5b5bed5c852b6e`、简答 `7efaec4327a9be213d10d6b6c3887e02ceeb23f871a89288d27cead15e80005e`、印刷 `7eab5442a02c5f9ed89b89b236001b8c513780f470bdb467a6e04022ba529cc7`；理科：试题 `3b4d170899b9355d7b5dbdf80e8b508878594af1bfac705a9c01800194b6bf31`、解析 `1c5030d570cf5558602691f161b5ecc830d1ab116dbec5b3dcba8e9fe4e96d77`、简答 `6cf55caed868e317e4d1273d2f812fec1699c7cf1855256c4251c6df1576be27`、印刷 `b97af5efee4abdef9b0e1ecdcaa605ee3836a9671a1b7ea9512f7fa04478fefa`。
+- 与已检查的 build-5458 逐页栅格 SHA 比较，94页中91页完全相同；变化仅文科解析版第16、17页和印刷版第13页，三页已在 build-5460 栅格上实看。新 build-5460 当前仍为 `compiled_pending_review`，正式逐页 review receipt 尚未生成/最终化。未运行测试；不得将本批表述为长期语料库完成。
