@@ -24,8 +24,8 @@
 
 - 首轮视觉抽查发现理科题面中的17个字面 `<br>` 会原样印出。固定原卷 PDF 第1–2页复核后，将小问/命题处改为 TeX 断行，选择项组移除无效标签；题干、公式、选项值未改。刷新理科 Q3–8、Q15–20 共12题 provenance 哈希并补源页复核记录。
 - 文科 Q20 源题只有（1）–（3），不与理科版（4）混用；简化节点不等式证明后末页孤行消失，文科解析版由20页降为19页。
-- 新构建 attempt：文科 `193e94e8-824d-4f89-9c2f-74f512e6b115`，理科 `b9499a8d-8b63-4ece-bd64-bef760b25e78`；输入 manifest revision `5456`，当前 revision `5457`。页数文科 5/19/7/15、理科 5/20/7/17，共95页；错误、缺字、未解析引用与 Overfull 均为0。PDF SHA 见 `reports/phase1-b58-reflow-build.md`。
-- 来源/解析/provenance 检查与三个生成器 `--check` 均通过，正式回执 current。**最新95页仍待视觉复核**，未创建最终 review receipt；本批尚未关闭。未运行测试；固定来源身份未知、`official_answer=null`。阶段报告：`reports/phase1-b58-reflow-build.md`。
+- 首轮回流构建 attempt（已由后续 Q20 修正版取代）：文科 `193e94e8-824d-4f89-9c2f-74f512e6b115`，理科 `b9499a8d-8b63-4ece-bd64-bef760b25e78`；以 revision `5456` 构建，理科印刷版17页，后续发现其末页只有 Q20（3）、（4）答案框。该轮页数与 SHA 保留在 `reports/phase1-b58-reflow-build.md`。
+- 删除理科 Q20（4）解析末尾与答案框重复的 $T$ 展开式，保留原推导与答案；含解析稿及 `answers.tex` 已同步。最新 attempt：文科 `69f4326e-64de-40bb-9b2a-588accf02649`、理科 `4b0dff21-7f61-4aba-94ad-54c046263f6d`，以 revision `5458` 构建，当前 revision `5459`；页数文科 5/19/7/15、理科 5/20/7/16，共94页。8份构建日志错误/缺字/未解析引用/Overfull 均为0；manifest、解析、provenance、三个生成器及当前回执检查通过。**最新94页待逐页视觉复核**，review receipt 未 finalize；未运行测试。本批未关闭，固定来源身份未知、`official_answer=null`。阶段报告：`reports/phase1-b58-reflow-build.md`。
 
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 

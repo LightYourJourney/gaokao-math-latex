@@ -29,3 +29,11 @@ provenance 写入后 manifest revision 为 `5455`。以下构建以 revision `54
 - `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 全部通过；`build_projects.py validate-receipts --require-current-inputs`：`OK：2 卷`。
 - 未运行测试套件。当前构建尚未完成 PDF 页视觉复核，未生成最终视觉回执；两卷不能标为 `complete`。下一步比较并复核这8份最新 PDF 的逐页图像后完成视觉阶段。
 - 固定来源只绑定本库采用的字节，不认证发布者、版次或来源链；原卷不含答案页，答案仍为 D 级项目推导，`official_answer=null`。本批工作不表示长期语料库完成。
+
+
+## Q20（4）重复尾式回流与正式重编（2026-10-30）
+
+- 首轮逐页检查发现理科印刷版第17页只剩 Q20（3）、（4）答案框，属于本次换行回流产生的孤页。理科解析源的面积推导已得到分母为 $5T$ 的表达式，后续展开 $T=a_1+\cdots+a_5$ 与答案框重复；删去重复展示，保留完整推导，规范答案和题目内容不变。含解析稿与 `answers.tex` 已按确定性工具同步。
+- 新正式 build attempt：文科 `69f4326e-64de-40bb-9b2a-588accf02649`，理科 `4b0dff21-7f61-4aba-94ad-54c046263f6d`；两者以 manifest revision `5458` 为输入，当前 revision `5459`。文科页数仍为 5/19/7/15（46页）；理科为 5/20/7/16（48页），合计94页。理科印刷版由17页回流到16页，孤页已并回末页；需以本次实际逐页审查确认视觉结果。
+- 8份构建日志的错误、缺字、未解析引用与 Overfull 均为0。`source_manifest validate`、`solution_sources check-batch`、`provenance check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check` 及 `validate-receipts --require-current-inputs` 均通过。未运行测试。
+- 最新构建仍为 `compiled_pending_review`；本批94页的最终视觉回执尚未完成，不能标为完成。旧版中逐页实看且 PNG SHA 完全相同的页面才可继承既有结论；理科印刷版新末页及其他未审页面需实看。
