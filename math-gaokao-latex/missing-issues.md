@@ -20870,3 +20870,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1251
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源题面仅称无穷等比数列。允许q=0的递推定义下极限条件给a1=4且a2范围为(-4,4)；若约定q非零则去除0。当前没有本卷定义或命题约定证据可裁定。",
+  "fingerprint": "3135b921ba6fd7c942e58e5df036f65fb194040fac2fd75dcdb34cebcae33303",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-spring-shanghai",
+  "question_id": "gk-2021-spring-shanghai-q09",
+  "resume_action": "核对本卷采用的等比数列定义或可追溯命题约定；取得证据前保留两种范围与U/PENDING。",
+  "source_id": "src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1252
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面原句为对任意n存在实数φ使cos(nθ+φ)<√3/2。任取θ>0可令φ=π−nθ，故没有最小正θ；固定副本参考答案印2π/5，无法由录题推出。",
+  "fingerprint": "a11e63e085270b332b8f92860bf813d2bcf528688ffbc5b20a0b166bba5f3e5c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2021-spring-shanghai",
+  "question_id": "gk-2021-spring-shanghai-q12",
+  "resume_action": "寻找同版勘误或可追溯题源澄清量词；未澄清前保留题面照录与U/PENDING，不自行调换量词。",
+  "source_id": "src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

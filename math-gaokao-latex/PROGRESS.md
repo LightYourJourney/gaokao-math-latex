@@ -10412,3 +10412,12 @@
 - 图形：Q2 饼图 60%/男 标签分离；Q5 俯视图尺寸箭头跨平边至弧顶；Q18 折叠图按复核拓扑重绘（E 为底面顶点，虚线 A₁E/OE/ED 交于 E，不在 A₁C 上）；Q14 曲线收在 6–18；Q20 椭圆 P/Q、Q22 圆 O/D 标签避让。
 - 四版 6/28/8/22 页共 64 页，零告警；9 段审查，实质图形缺陷全修，选项续行顶格按先例 pass+note；FINALIZED，revision5406，batch closed、paper complete。
 - 来源边界：无卷内答案，等级 D（项目双解，非官方），`official_answer=null`。
+
+### 2021 上海春季卷：Q17 图稿、正式登记与逐题 provenance（2026-10-29）
+
+- 固定网络收集副本 SHA-256 `fab47237bfe016b5290c753ef2fb0155c72624d16e9a81523ad45f5e87663e1e`，12 页；source `src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1` 内部绑定到 `gk-2021-spring-shanghai`。出版者、版次、来源链和参考答案官方身份仍未核，`official_answer=null`。
+- 登记批次 `phase1-b57`：manifest revision `5433→5434`；provenance 导入后 revision `5435`。Q9 零公比约定关联 `ISSUE-1251`；Q12 照录量词与副本参考答冲突关联 `ISSUE-1252`；两项均 open / blocks_completion。现场状态为 batch `provenance_verified`、paper `blocked`。
+- Q1–Q21 的规范答案与解析、逐题 provenance 已建立。固定 PDF 第1–3页由主会话重新目视复核，未声称独立第二位转录者；答案解题证据分为 Q1–7、Q8–14、Q15–21 三段只读独立求解并由主会话复核。Q16 修正 `CE=(3u+v)/4`；Q19 按距离差正值修正象限，精确距离为 `sqrt(17375/47)` km、取整 19,227 m、北偏东66°。
+- Q17 按固定 PDF 第2页重绘 TikZ，图只保留顶点、拓扑与虚实线，不补几何标记；局部 XeLaTeX 预览编译并目视对照源图。manifest 与 Markdown 映射登记2次引用。
+- 确定性生成 `_含解析.md`、`questions.tex`、`answers.tex`、`index.json`、`answers_short.tex` 与四个入口壳。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`、`provenance.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过；全量 report 投影已原子刷新并回读；`manifest.csv` 重生成775行。未运行测试套件、未做正式四版编译/视觉验收。
+- 本阶段报告：`reports/2021-shanghai-spring-registration-provenance.md`。下一步核对 report/CSV 投影，正式构建四版 PDF、逐页视觉校样并生成绑定 manifest/input/toolchain/PDF 指纹的回执；Q9、Q12 继续阻断 paper 完成。

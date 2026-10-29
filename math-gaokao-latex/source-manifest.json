@@ -1823,6 +1823,14 @@
         "gk-2003-spring-beijing-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b57",
+      "issues": [],
+      "paper_ids": [
+        "gk-2021-spring-shanghai"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -1832,7 +1840,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ca8efa8f-095f-43d3-9d75-8bc3cefc00e4",
+  "last_transaction_id": "261c8c4a-76a1-48d5-ba1c-7e47df252e50",
   "papers": [
     {
       "blocked_from": null,
@@ -24910,9 +24918,72 @@
       "title": "2003 年·春季北京卷·理科",
       "track": "science",
       "year": 2003
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2021_春季上海卷/figures/f2021_shanghai_spring_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2021_shanghai_spring",
+        "id": "gk-2021-spring-shanghai",
+        "note": "固定副本 source src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1，SHA-256 fab47237bfe016b5290c753ef2fb0155c72624d16e9a81523ad45f5e87663e1e，共12页；第1–3页为题面，第4–12页为副本自称参考答案与试题解析。首页标注网络收集版，出版者、版次、来源链与参考答案身份未核；canonical 仅表示本库固定副本绑定，official_answer=null。Q9公比零约定、Q12量词与副本参考答案冲突保持开放阻断。Q17图按固定第2页重绘为TikZ。",
+        "pages_q": [
+          1,
+          3
+        ],
+        "pages_s": [
+          4,
+          12
+        ],
+        "paper": "上海春季卷",
+        "structure": {
+          "单选题": [
+            13,
+            16
+          ],
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            21
+          ]
+        },
+        "track": "春季招生",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1251",
+        "ISSUE-1252"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2021-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2021_春季上海卷",
+      "question_count": 21,
+      "resume_action": "核对本卷采用的等比数列定义或可追溯命题约定；取得证据前保留两种范围与U/PENDING。",
+      "source_files": {
+        "answer_key": "2021/2021_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2021/2021_数学真题_春季上海_含解析.md",
+        "questions": "2021/2021_数学真题_春季上海_试题.md",
+        "solution_body": "2021/2021_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1"
+      ],
+      "title": "2021 年·上海春季招生数学试卷",
+      "track": "none",
+      "year": 2021
     }
   ],
-  "revision": 5433,
+  "revision": 5435,
   "schema_version": 1,
   "sources": [
     {
@@ -25769,8 +25840,8 @@
       "exam_type": "spring",
       "git_blob_oid": "288bbcb9045f199626417c9b6a7b2d3c7e2a4115",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2021-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2021春季上海.pdf",
       "regions": [],
       "source_id": "src-7ae0174ccd32fd350e3842a1514ae63a3d1bf1bfb082340400feec85431fc1b1",
