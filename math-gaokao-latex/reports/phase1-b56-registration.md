@@ -9,3 +9,7 @@
 ## 逐题来源导入
 
 22 题逐题来源、独立求解及复核记录已绑定当前题面、答案和固定源哈希；第 8 题题面审查为 uncertain，答案证据 U，关联 `ISSUE-1248`、`ISSUE-1249`；第 14 题答案证据 U，关联 `ISSUE-1250`。第 6、8、18、21、22 题初始解答中出现的误读或运算分歧已复核更正；不能把错误初稿作为一致性证据。`provenance.py check-batch` 通过，manifest revision 5421，CSV 当前。paper 仍为 blocked；四版生成、正式编译和视觉审查尚未完成。
+
+## 共享内容与入口生成
+
+已由规范源生成共享 `questions.tex`、`answers.tex`、`answers_short.tex` 及四个版本入口；共享内容、简答与入口生成器的 `--check` 均通过。简答选择题表第 8 题显示 U，第 14 题显示 U/PENDING 并注明所列值只是可能规律。paper 的三个阻断仍开放；正式编译及 PDF 视觉验收尚未进行。
