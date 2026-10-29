@@ -25,3 +25,9 @@
 旧 attempt `1131f12e-55f9-460d-881b-56048c8374db` 的逐页查看发现第 8 题流程图与选项跨页、题目区最后一页仅有第 24 题。隔离试排后缩小第 8、20、22 题图的绘制尺度，并对第 24 题设置局部保留空间；题面逐题内容哈希不变，来源校对的题面及图形文件哈希已更新。试排实际查看相关页：第 8 题图与选项同页，第 24 题与前题同页。旧 attempt 的实际查看记录及审查模板归档于 `.work/phase4-b41/review-history/`。
 
 正式重建返回 `COMPILED_PENDING_REVIEW`，新 attempt `4e311e00-942f-4ac7-be9c-8c0879e12b1e`、manifest revision 5418；四版分别 6、21、8、17 页，共 52 页。当前回执检查无 missing、invalid 或 stale，但新 attempt 尚未逐页验收；仍须重渲染并实际查看变化页。第 11、16、19 题的三个阻断继续开放。
+
+## 当前构建视觉验收
+
+对 attempt `4e311e00-942f-4ac7-be9c-8c0879e12b1e` 的 52 页进行验收：其中 32 页由审查员按 110 dpi 整页实际查看，另外 20 页的 PNG 哈希与上一 attempt 实际查看并通过的页面字节一致，继承其结论。第 8 题流程图及选项同页、第 24 题并入前页，简答第 11 题显示 U、第 19 题第（2）问显示未定及独立同分布条件。第 6、12 题个别选项续行顶格，未见裁切重叠。逐页审查记录和图片哈希保存在 `.work/phase4-b41/review-render/`，正式回执绑定当前构建和 PDF。
+
+`finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`，revision 5419；最终构建与视觉回执、provenance、规范源、共享内容、简答、入口和 CSV 检查通过。paper 保持 `blocked`，`ISSUE-1245`、`ISSUE-1246`、`ISSUE-1247` 仍开放；视觉通过不消除这些内容问题。
