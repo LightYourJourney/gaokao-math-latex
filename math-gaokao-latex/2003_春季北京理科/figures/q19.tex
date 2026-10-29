@@ -1,0 +1,6 @@
+\begin{tikzpicture}[scale=1.15]
+\coordinate (A) at (0,0); \coordinate (B) at (2,0); \coordinate (C) at (2.7,.8); \coordinate (D) at (.7,.8); \coordinate (Ap) at (0,2.5); \coordinate (Bp) at (2,2.5); \coordinate (Cp) at (2.7,3.3); \coordinate (Dp) at (.7,3.3); \coordinate (E) at (1,0); \coordinate (F) at (2.35,.4); \coordinate (G) at (1.675,.2);
+\draw (A)--(B)--(C)--(Cp)--(Bp)--(Ap)--cycle (Ap)--(Dp)--(Cp) (Dp)--(Bp) (Bp)--(B) (E)--(Bp) (F)--(Bp);
+\draw[dashed] (A)--(D)--(C) (D)--(Dp) (D)--(B) (E)--(F) (Bp)--(G) (Dp)--(E) (Dp)--(F);
+\foreach \p/\place/\lab in {A/below left/A,B/below/B,C/right/C,D/left/D,E/below/E,F/right/F,G/below/G,Ap/left/{A_1},Bp/right/{B_1},Cp/right/{C_1},Dp/above/{D_1}} \node[\place] at (\p) {$\lab$};
+\end{tikzpicture}

@@ -1815,6 +1815,14 @@
         "gk-2015-regular-shaanxi-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b56",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-spring-beijing-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1824,7 +1832,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "eb464ebc-dc94-42ec-a519-c060a1ba0291",
+  "last_transaction_id": "ea285070-778a-4f3c-9f21-64be62fb70f3",
   "papers": [
     {
       "blocked_from": null,
@@ -24828,9 +24836,83 @@
       "title": "2015 年·陕西卷·理工农医类",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季北京理科/figures/q05.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季北京理科/figures/q08.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季北京理科/figures/q13.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季北京理科/figures/q19.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_春季北京理科/figures/q21.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2003_spring_beijing_science",
+        "id": "gk-2003-spring-beijing-science",
+        "note": "固定两页汇编副本，印刷页119–120，未见答案或分值，出版者及官方身份未核。Q8图文标记冲突，Q14规律未明；解答为项目独立推导。",
+        "pages_q": null,
+        "pages_s": null,
+        "paper": "春季北京卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "science",
+        "variant": "春季北京理"
+      },
+      "issue_ids": [
+        "ISSUE-1248",
+        "ISSUE-1249",
+        "ISSUE-1250"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-spring-beijing-science",
+      "production_state": "blocked",
+      "project_dir": "2003_春季北京理科",
+      "question_count": 22,
+      "resume_action": "寻找可核验独立来源核实图文标记；保留固定副本原貌。；核实第8题原图及文字对应关系，再评定答案。；寻找可核验来源或题设规则，缺失时保留 U/PENDING。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_春季北京理_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_春季北京理_含解析.md",
+        "questions": "2003/2003_数学真题_春季北京理_试题.md",
+        "solution_body": "2003/2003_数学真题_春季北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8"
+      ],
+      "title": "2003 年·春季北京卷·理科",
+      "track": "science",
+      "year": 2003
     }
   ],
-  "revision": 5419,
+  "revision": 5420,
   "schema_version": 1,
   "sources": [
     {
@@ -25111,8 +25193,8 @@
       "exam_type": "spring",
       "git_blob_oid": "941423aa23c9f38b4aa220653dd886cc9914d491",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-spring-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003春季北京理.pdf",
       "regions": [],
       "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",

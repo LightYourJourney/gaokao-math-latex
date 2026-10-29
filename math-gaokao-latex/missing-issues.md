@@ -20819,3 +20819,54 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1248
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本题干称 I 为 BE 中点，图中相应标字为 L，存在图文标记不一致。",
+  "fingerprint": "1e2be67d2b30b71d03d22b275374b22cbb3258e126cfacd1e033184e23b11e55",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-spring-beijing-science",
+  "question_id": "gk-2003-spring-beijing-science-q08",
+  "resume_action": "寻找可核验独立来源核实图文标记；保留固定副本原貌。",
+  "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1249
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "按题干 I 为 BE 中点求得 B，但图文标记不一致，答案与图中标记关系待核。",
+  "fingerprint": "9da32e12301818e713032a9d39f8d45f872cdee242319520842164490227de11",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-spring-beijing-science",
+  "question_id": "gk-2003-spring-beijing-science-q08",
+  "resume_action": "核实第8题原图及文字对应关系，再评定答案。",
+  "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1250
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "表格仅列有限样本，140、85 是一种可能的规律，不能仅凭数列唯一确定缺失值。",
+  "fingerprint": "372ca06d444474efa85ebe685967ba2d10ff4c355dd1e57026e541fabe29b965",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-spring-beijing-science",
+  "question_id": "gk-2003-spring-beijing-science-q14",
+  "resume_action": "寻找可核验来源或题设规则，缺失时保留 U/PENDING。",
+  "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
