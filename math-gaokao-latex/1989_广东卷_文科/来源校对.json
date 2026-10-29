@@ -98,12 +98,12 @@
       "checked_on": "2026-10-15"
     }
   ],
-  "question_transcription_status": "transcribed-pending-independent-review",
+  "question_transcription_status": "source-reviewed-after-correction",
   "answer_transcription_status": "fixed-pdf-printed-key-transcribed",
   "solution_transcription_status": "partial-fixed-pdf-solutions-transcribed",
   "review_status": "needs-review",
   "mathematical_verification_status": "conditionally-reviewed-with-source-conditions",
-  "canonical_question_source_ready": false,
+  "canonical_question_source_ready": true,
   "source_has_answers": true,
   "source_has_partial_solutions": true,
   "answer_attribution": "printed-in-fixed-candidate-pdf; publisher-and-official-status-unverified",
@@ -128,8 +128,7 @@
   ],
   "source_gaps": [
     "固定 PDF 题签只见“文史类”；年份、广东归属、出版者、版次和来源链仍未由独立证据认证。",
-    "第二卷四（2）扫描页9只见定义域及不等式化简，没有可见最终解集；第五题解答未见于固定扫描页8—9。",
-    "现有独立数学复核以转录题面为对象，未覆盖固定 PDF 第1—7页的完整逐字独立校勘；canonical_question_source_ready 继续为 false。"
+    "第二卷四（2）扫描页9只见定义域及不等式化简，没有可见最终解集；第五题解答未见于固定扫描页8—9。"
   ],
   "source_discrepancies": [
     {
@@ -175,7 +174,7 @@
   "artifacts": {
     "question_draft": {
       "path": "1989/1989_数学真题_广东文_试题.md",
-      "sha256": "1ebce00ae5322b40fe6cb2ae7439bc909f9c6039716e0c37082473b3c5215bbd"
+      "sha256": "065e72b2a48e4ad66048cc3312699a17b185a610ac97a2a8faf20e122ccf5c7f"
     },
     "answer_draft": {
       "path": "1989/1989_数学真题_广东文_答案要点草稿.md",
@@ -221,7 +220,7 @@
     ],
     "answer_canonical": {"path": "1989/1989_数学真题_广东文_答案要点.md", "sha256": "ea894ac121f8ac729de919d24c122a6d357c274487ee772691ad19e91d95a7c8"},
     "solution_canonical": {"path": "1989/1989_数学真题_广东文_解析正文.md", "sha256": "934f8bc9ebfa8252fcde01a9fb313f6ea7db858448a585cf2e3da8f9d8ea2b51"},
-    "combined_canonical": {"path": "1989/1989_数学真题_广东文_含解析.md", "sha256": "13e4b2a1055f117c58c8bfec129c5fe0e9c6e1f2b0c9cd7dd2743500bf9a2eb3"}
+    "combined_canonical": {"path": "1989/1989_数学真题_广东文_含解析.md", "sha256": "bdd37a7ff721737bdac13cc34350ca002184786b564be32a574c74a480a2c6b0"}
   },
   "verification": {
     "independent_math_review": {
@@ -280,6 +279,20 @@
       "official_answer": null,
       "note": "登记用于本库内部工作流，不证明固定PDF的年份、地区、出版者、版次或官方身份；paper保持blocked。",
       "figure_occurrence_sync": "Q12选项图2处，Q28题面图2处，Q28来源解答图1处；通过source_manifest窄事务同步。"
+    },
+    "full_question_source_review": {
+      "status": "passed-after-correction",
+      "review_date": "2026-10-30",
+      "source_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
+      "source_pages": [1, 2, 3, 4, 5, 6, 7],
+      "printed_pages": [636, 637, 638, 639, 640, 641, 642],
+      "render_dpi": 135,
+      "targeted_rerenders": {"page4_q16_dpi": 300, "page7_q28_dpi": 240},
+      "ocr_calls": 0,
+      "question_count": 30,
+      "reviewer_role": "Codex visual source-page review",
+      "finding": "Q16 fixed scan prints n, not m; corrected. Q1-Q30 question text matches the fixed pages after correction.",
+      "report": "reports/1989-guangdong-arts-full-source-review.md"
     }
   }
 }

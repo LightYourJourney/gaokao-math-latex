@@ -10520,3 +10520,10 @@
 - 登记三幅项目图稿：Q12选项图和Q28题面图各2处，Q28来源解答图1处；三类问题分别登记为 `ISSUE-1259` Q9 `answer-conflict`、`ISSUE-1260` Q16 `answer-convention-ambiguous`、`ISSUE-1261` Q21 `answer-conflict`，均 open / blocks_completion。paper 为 `blocked`，batch 为 `planned`，Q9/Q16/Q21 答案保持 U/PENDING。
 - 来源校对 sidecar 已同步 paper/source 绑定、Q16约定歧义、Q21源面复看、issue IDs 和规范文件 SHA；`canonical_question_source_ready=false`，因为已有数学盲核不能替代完整题面逐字源页复核。
 - `solution_sources` 对30题题面/答案/解析结构及含解析派生物的确定性核对通过。逐题三角色 provenance、TeX四版、构建和视觉回执尚未完成；本阶段未运行测试套件。详见 `reports/1989-guangdong-arts-registration.md`。
+
+
+### 1989 广东文科：Q1—Q30 全题面源文复核（2026-10-30）
+
+- 对照固定候选 PDF 第1—7页（印刷页636—642）逐题核对规范题面 Q1—Q30；整页135 dpi，Q16页4以300 dpi复看、Q28页7以240 dpi复看，未使用 OCR。页码映射与复核方法见 `reports/1989-guangdong-arts-full-source-review.md`。
+- 发现 Q16 第二条异面直线原文印作 `n`，旧稿误作 `m`；已按源文纠正并刷新确定性含解析稿。其余题干、公式、选项、小问结构及Q12/Q28图形转录与当前固定扫描相符。`canonical_question_source_ready=true` 仅指对这份内部固定字节的文本核对已完成。
+- Q9答案表冲突、Q16垂直定义边界、Q21选项与题设范围不符继续保持 U/PENDING 和 open/blocking；来源真实性仍 unverified，official_answer=null。答案/解析页尚未全页逐字复核；未生成 TeX、构建 PDF 或运行测试。
