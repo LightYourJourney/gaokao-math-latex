@@ -20,6 +20,13 @@
 - 当前 manifest revision `5454`：两卷 paper 状态 `compiled`、batch `compiled_pending_review`；`validate-receipts --require-current-inputs`、`provenance check-batch`（`OK：2 卷`）、`solution_sources check-batch`（两卷各20题）、source manifest 校验及三种生成器 `--check` 均通过。
 - **仍待逐页视觉审查**：95页尚未检查，review receipt 未生成，不能标为 `complete`。固定来源发布者/版次/来源链与官方答案身份仍未认证，`official_answer=null`。本阶段未运行测试；成本未知。下一步建立本批 review 工作区、逐页检查当前attempt所有PDF、创建视觉回执并执行 finalize。阶段报告：`reports/phase1-b58-formal-build.md`。
 
+### 2005 春季北京文/理卷：视觉问题修正与正式重编（2026-10-30）
+
+- 首轮视觉抽查发现理科题面中的17个字面 `<br>` 会原样印出。固定原卷 PDF 第1–2页复核后，将小问/命题处改为 TeX 断行，选择项组移除无效标签；题干、公式、选项值未改。刷新理科 Q3–8、Q15–20 共12题 provenance 哈希并补源页复核记录。
+- 文科 Q20 源题只有（1）–（3），不与理科版（4）混用；简化节点不等式证明后末页孤行消失，文科解析版由20页降为19页。
+- 新构建 attempt：文科 `193e94e8-824d-4f89-9c2f-74f512e6b115`，理科 `b9499a8d-8b63-4ece-bd64-bef760b25e78`；输入 manifest revision `5456`，当前 revision `5457`。页数文科 5/19/7/15、理科 5/20/7/17，共95页；错误、缺字、未解析引用与 Overfull 均为0。PDF SHA 见 `reports/phase1-b58-reflow-build.md`。
+- 来源/解析/provenance 检查与三个生成器 `--check` 均通过，正式回执 current。**最新95页仍待视觉复核**，未创建最终 review receipt；本批尚未关闭。未运行测试；固定来源身份未知、`official_answer=null`。阶段报告：`reports/phase1-b58-reflow-build.md`。
+
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 
 - Q18分段消除Underfull后，完整校样继续发现Q19答案框脱离推导及Q20(3)孤立末页。仅重排规范解析源的Q19/Q20表达并补充分性，题面和最终答案哈希不变。最终attempt `bf351298-4607-4e0e-9a60-7b4b0c49beb3`，四版5/17/7/14页，共43页；所有日志错误/缺字/引用/Overfull/Underfull均0。
