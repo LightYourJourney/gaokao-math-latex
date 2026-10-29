@@ -30,8 +30,9 @@
 ### 2005 春季北京文/理卷：Q18 解析标题分页修正（2026-10-30）
 
 - 文科解析版第16页原先只留下 Q18 的“解析”标题。规范解析源在 Q18 解析前加入 `\Needspace{8\baselineskip}`，确定性生成器同步含解析稿与 `answers.tex`；最新解析版第16页保留题目和图，第17页从“解析”标题与完整解答开始。题干、推导及答案未改。
-- 正式 build attempt：文科 `2fcce5e3-2d52-49e5-9e00-8d0f362d1a1e`、理科 `ff3c1b03-8924-4d7f-bd78-c92712772754`，均以 manifest revision `5460` 构建，当前 revision `5461`。页数仍为文科 5/19/7/15、理科 5/20/7/16，共94页。文科印刷版第13页及解析版第16–17页为相对已审栅格变化页，均已实看；其余91页与 build-5458 栅格 SHA 字节一致，可继承此前逐页目视记录。
-- 两卷八份构建日志的错误、缺字、未解析引用、Overfull 均为0；构建状态仍为 `compiled_pending_review`。此提交只记录本轮版面修正与正式重编；最终视觉工作项和 review receipt 仍待完成，不能据此标为完成。未运行测试套件。阶段报告：`reports/phase1-b58-reflow-build.md`。
+- 正式 build attempt：文科 `2fcce5e3-2d52-49e5-9e00-8d0f362d1a1e`、理科 `ff3c1b03-8924-4d7f-bd78-c92712772754`，均以 manifest revision `5460` 构建；review finalize 后当前 revision `5462`。页数仍为文科 5/19/7/15、理科 5/20/7/16，共94页。文科印刷版第13页及解析版第16–17页为相对已审栅格变化页，均已实看；其余91页与 build-5458 栅格 SHA 字节一致，可继承此前逐页目视记录。
+- 两卷八份构建日志错误、缺字、未解析引用、Overfull 均为0。最新 build attempt 以 revision `5460` 为输入；视觉 finalize 将 manifest 推至 revision `5462`。94页八项逐页检查共752项：701 pass、51 not_applicable、0 fail；91页与 build-5458 栅格 SHA 完全相同并继承已看图组结论，文科解析版第16–17页及印刷版第13页在 build-5460 上实看。review receipts 均绑定最新 build/PDF，`review_receipts check-batch` 与 `validate-receipts --require-final --require-current-inputs` 通过。
+- `phase1-b58` 为 `closed`，两卷内部 production state 为 `complete`；全量批次报告：`reports/phase1-b58.md`。固定 PDF 的发布者、版次和来源链仍未知；PDF不含答案，答案/解析为D级独立推导，`official_answer=null`。未运行测试套件；本阶段只关闭这两套2005年春季北京卷，不表示1952–2026语料库完成。阶段过程报告：`reports/phase1-b58-reflow-build.md`。
 
 ### 2009 春季上海卷：回流后43页视觉验收，closed_with_blockers（2026-10-28）
 
