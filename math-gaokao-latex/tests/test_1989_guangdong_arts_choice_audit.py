@@ -13,7 +13,7 @@ RECORD = PROJECT / "1989_广东卷_文科/来源校对.json"
 PROGRESS = PROJECT / "PROGRESS.md"
 EXPECTED_DERIVED = (
     "A", "C", "D", "C", "A", "B", "D", "D", "B", "A", "B", "B", "A",
-    "B", "C", "D", "A", "D", "C", "B", "A", "B", "D", "B", "B",
+    "B", "C", "D", "A", "D", "C", "B", "-", "B", "D", "B", "B",
 )
 
 
@@ -25,19 +25,24 @@ class GuangdongArtsChoiceAuditTests(unittest.TestCase):
         cls.record = json.loads(RECORD.read_text(encoding="utf-8"))
         cls.progress = PROGRESS.read_text(encoding="utf-8")
 
-    def test_independent_candidates_cover_all_choices_and_isolate_q9_conflict(self):
-        derived_rows = re.findall(r"^\|\s*(\d+)\s*\|\s*([ABCD])\s*\|", self.audit, re.MULTILINE)
+    def test_independent_candidates_cover_choices_and_isolate_q9_q21_source_problems(self):
+        derived_rows = re.findall(r"^\|\s*(\d+)\s*\|\s*([ABCD-])\s*\|", self.audit, re.MULTILINE)
         source_rows = re.findall(r"^\|\s*(\d+)\s*\|\s*([ABCD])\s*\|", self.answers, re.MULTILINE)
 
         self.assertEqual([int(n) for n, _ in derived_rows], list(range(1, 26)))
         derived = tuple(answer for _, answer in derived_rows)
         source = tuple(answer for _, answer in source_rows)
         self.assertEqual(derived, EXPECTED_DERIVED)
-        self.assertEqual([n for n, (left, right) in enumerate(zip(derived, source), 1) if left != right], [9])
+        self.assertEqual([n for n, (left, right) in enumerate(zip(derived, source), 1) if left != right], [9, 21])
 
         q9 = next(item for item in self.record["source_discrepancies"] if item["question_number"] == 9)
         self.assertEqual((derived[8], source[8]), ("B", "C"))
         self.assertEqual(q9["status"], "unresolved-source-conflict")
+        q21 = next(item for item in self.record["source_discrepancies"] if item["question_number"] == 21)
+        self.assertEqual(q21["printed_option_a"], "a≤3")
+        self.assertEqual(q21["stem_derived_range"], "a≤−3")
+        self.assertEqual(q21["printed_answer"], "A")
+        self.assertEqual(q21["status"], "unresolved-source-defect")
 
     def test_choice_audit_is_provenanced_and_keeps_source_conditions(self):
         self.assertTrue(AUDIT.is_file(), "choice audit draft is missing")

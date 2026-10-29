@@ -42,6 +42,7 @@ class GuangdongArtsTranscriptionTests(unittest.TestCase):
             r"2\log_x 8-3\log_8 x=1",
             r"y=|x-1|",
             r"\dfrac{x^2}{9}-y^2=1",
+            r"a\le3",
             r"a\le-3",
             r"|z|=1",
             r"0\le\theta<2\pi",

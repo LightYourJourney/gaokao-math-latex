@@ -142,12 +142,24 @@
       "derivation_attribution": "agent-derived-from-transcribed-stem-not-official",
       "status": "unresolved-source-conflict",
       "note": "题面映射 (x,y)→(y−1,x+2) 令像点为 (3,−4)，逆算原象为 (−6,4)，对应选项B；固定扫描答案表第9题印作C。保留两处来源记录，不擅自更改题面或印载答案。"
+    },
+    {
+      "question_number": 21,
+      "question_source_page": 5,
+      "question_printed_page": 640,
+      "answer_source_page": 8,
+      "answer_printed_page": 643,
+      "printed_option_a": "a≤3",
+      "stem_derived_range": "a≤−3",
+      "printed_answer": "A",
+      "status": "unresolved-source-defect",
+      "note": "固定扫描第5页A项照录为a≤3；由 f'(x)=2(x+a−1) 及区间(−∞,4]递减条件得a≤−3，四个印载选项均不与该完整取值范围一致。第8页答案表仍印A。保留题面、答案表与推导三者的原始区别，不推定漏印负号，也不擅自修复选项。"
     }
   ],
   "artifacts": {
     "question_draft": {
       "path": "1989/1989_数学真题_广东文_试题.md",
-      "sha256": "47791f35f40864bcfd16cc76a03868be829b78b7df16882a3f4e28e8e8e9dd02"
+      "sha256": "1e2e10c0542254320431695804c43557f3ef690a6c9e70f0b19cf8eaa60668ae"
     },
     "answer_draft": {
       "path": "1989/1989_数学真题_广东文_答案要点草稿.md",
@@ -166,7 +178,7 @@
     },
     "independent_choice_audit": {
       "path": "1989/1989_数学真题_广东文_选择题独立核算草稿.md",
-      "sha256": "04bd7084d98440fa1027fbfba41d9cd20891333fef40ef62dfd00ef5ebd45698",
+      "sha256": "7a6f994412f9c821fe5f809c65fb8b528a6a405da27c5e3c2f75792b6605e194",
       "questions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
       "attribution": "agent-derived-unverified-not-official",
       "independent_math_review": true
@@ -198,8 +210,8 @@
       "review_date": "2026-10-27",
       "scope": "first-volume 25 choices and 13 second-volume subparts; reviewer solved from the question transcript before comparing answer/solution drafts; did not inspect source PDF images",
       "report": "reports/1989-guangdong-arts-independent-math-review.md",
-      "reviewer_conclusion": "No arithmetic error found beyond Q9 source-key conflict. Q9 stem gives B while printed key records C; Q16 depends on the definition of perpendicular for skew lines. Missing printed solutions remain project-derived only. A separate focused source review later confirmed Q12 option B.",
-      "open_conditions": ["Q9 printed key C versus stem-derived B", "Q16 perpendicularity convention"],
+      "reviewer_conclusion": "No arithmetic error found beyond Q9 source-key conflict. Q9 stem gives B while printed key records C; Q16 depends on the definition of perpendicular for skew lines. Missing printed solutions remain project-derived only. A separate focused source review later confirmed Q12 option B. 后续固定源页复看发现Q21转录曾将A项a≤3误记为a≤−3；该题数学范围为a≤−3，但固定扫描四个选项没有完全匹配项，答案表仍印A。",
+      "open_conditions": ["Q9 printed key C versus stem-derived B", "Q16 perpendicularity convention", "Q21 fixed scan A option a≤3 versus derived range a≤−3"],
       "full_paper_acceptance": false
     },
     "q9_q12_focused_source_reinspection": {
@@ -215,6 +227,26 @@
       "q9_transcription_matches_source": true,
       "q12_option_mapping": "B",
       "report": "reports/1989-guangdong-arts-q9-source-reinspection.md"
+    },
+    "q21_source_reinspection": {
+      "status": "passed-source-reading-defect-open",
+      "review_date": "2026-10-30",
+      "source_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
+      "source_pages": [
+        5,
+        8
+      ],
+      "printed_pages": [
+        640,
+        643
+      ],
+      "render_dpi": 220,
+      "ocr_calls": 0,
+      "printed_option_a": "a≤3",
+      "stem_derived_range": "a≤−3",
+      "printed_key": "A",
+      "exact_matching_option": null,
+      "report": "reports/1989-guangdong-arts-q21-source-reinspection.md"
     }
   }
 }

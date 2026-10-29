@@ -10505,3 +10505,10 @@
 - `review_receipts finalize-batch` 返回 `FINALIZED`，manifest revision更新至5470；`review_receipts check-batch`、`build_projects validate-receipts --require-final`、source manifest与issues校验通过。全量报告投影事务已回读验证，`report.py check --all`通过；`manifest.csv` current且775行。未运行测试套件。
 - 批次 `phase4-b04` 为 `closed_with_blockers`，试卷仍 `blocked`。Q8原文“对称轴对x轴”含义仍不确定，`ISSUE-1078`保持open / blocks_completion；来源出版版次和B型答案表与本卷的对应关系未证，`official_answer=null`。本批只关闭构建与视觉验收，不表示来源疑点解决或1952—2026题库完成。
 - 阶段报告：`reports/phase4-b04.md`。下一步接续1989广东文科卷：核对Q21源面选项与数学结论、保留Q9答案表冲突及来源身份不确定，并按现有登记流程建立独立批次；不得把改正后的数学结论覆盖固定扫描原文。
+
+
+### 1989 广东文科：Q21 源面选项缺项复核与转录纠偏（2026-10-30）
+
+- 固定候选 PDF SHA-256 e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f、blob ee0f4dfcd5af015b510348df03671c224630d9e4 与 source manifest 一致。直接复看扫描页5（印刷页640）及页8（印刷页643）：Q21 A项原文为 a≤3，答案表印A；按题设函数在 (−∞,4] 递减的范围应为 a≤−3，固定四个选项均无完全匹配项。未推定源面漏印负号，保留为未决源面缺陷。
+- 已将题面稿恢复为扫描原文，在独立核算稿中将Q21标为无匹配选项，并在来源校对.json追加页码、原文、推导、答案表和未决状态；同步校正相关既有断言以反映源面事实。Q9答案表冲突、Q16术语歧义和来源身份未认证继续保留。
+- 阶段报告：reports/1989-guangdong-arts-q21-source-reinspection.md。本阶段未绑定 paper_id、未创建批次、未生成四版或运行测试套件；下一步仍须先依不认证边界决定内部候选登记，并在 provenance 中分别标记 Q9/Q16/Q21 限制。
