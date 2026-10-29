@@ -10429,3 +10429,10 @@
 - `build_projects validate-receipts --require-final --require-current-inputs` 与 `review_receipts check-batch` 均通过；`solution_sources`、项目生成、简答与四版装配 currentness 检查通过。全量报告投影已事务刷新并由 `report.py check --all` 验证，`manifest.csv` current 且775行。
 - Q9 的等比数列零公比约定（ISSUE-1251）与 Q12 原题量词/附载参考解冲突（ISSUE-1252）继续 open / blocks_completion；来源版本与答案官方身份仍未核，`official_answer=null`。批次 `phase1-b57` 为 `closed_with_blockers`，paper 仍为 `blocked`。构建中间失败 ISSUE-1253/1254 已由最终干净构建解决。未运行测试套件。
 - 阶段报告：`reports/phase1-b57.md`；构建与视觉指纹绑定在 `2021_春季上海卷/receipts/{build,review}.json`。
+
+### 2005 北京春季文科：题面转录与主会话复核（2026-10-30）
+
+- 固定源 `src-62dbddff15a86738e785c92afc5ba358ecaaf0b339911e508a4581333007a7e5`（`春季高考/2005/2005春季北京文.pdf`）SHA-256 `698a85348a8a0f96bfc3fec8be3113f19b646d20215bb9c4d9b520cfadee42ae`，2 页 A3 横向、印刷页 215–216；source 仍未绑定 paper，发布者/版次/来源链未知。
+- 逐页转录20题：选择1–8、填空9–14、解答15–20；PDF第1页为Q1–17、第2页为Q18–20。转录者目视校对后，主会话再逐页对照隔离稿复核；未用OCR，未发现需猜读字形。
+- Q2、Q12、Q16、Q18仅记图形占位，尚未矢量重绘；源件未见答案、解析或分值页，不增补相关内容。新增长期题面和图表清单及阶段报告。
+- 本批尚未登记 paper/batch，未更新 manifest/issues/provenance，未建立答案或项目 LaTeX，未构建/验收。下一步先完成图稿和独立数学核对，再决定是否登记；此转录不表示该卷或1952–2026题库完成。
