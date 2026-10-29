@@ -23,3 +23,9 @@
 旧 attempt `4c5d0150-a6ae-400a-a222-b62ee55a6c73` 的解析版实际审查发现第 21 题小圆 $O_2$ 标记在第 5、16 页与圆弧、底边相碰。已在隔离目录试排并实际查看两页，将标记移到小圆下方，未改变图形几何；同步更新图形来源哈希。旧 attempt 的解析版逐页观察和审查模板已归档。
 
 正式重建返回 `COMPILED_PENDING_REVIEW`，新 attempt `0a6d7f28-1051-43ff-924d-a4ce9431b7ef`，manifest revision 5426；四版仍为 5、17、7、14 页，共 43 页。构建回执检查无 missing、invalid 或 stale；新构建的四版逐页视觉审查尚未完成，三个问题仍开放。
+
+## 解析工作备注清理及重建
+
+逐页查看 attempt `0a6d7f28-1051-43ff-924d-a4ce9431b7ef` 时，印刷版第 6 页发现第 5 题解析含“须在绘图时再次对照选项图”的内部工作备注。已从解析正文及草稿移除该句，重新生成含解析与共享解析；不改变数学结论。前次主代理实际查看的 28 页及问题记录保存在 `.work/phase1-b56/review-render/`。
+
+正式重建返回 `COMPILED_PENDING_REVIEW`，attempt `8489f534-e58d-4b7f-87a1-adf868b03a3d`、manifest revision 5429；四版页数分别为 5、17、7、14。回执检查无 missing、invalid 或 stale；新构建仍须逐页审查或对实际通过且 PNG 字节相同的旧页继承结论，三个阻断继续开放。
