@@ -11,3 +11,7 @@
 ## 逐题来源导入
 
 已将 24 题来源审查、项目求解和独立盲解记录导入 `provenance.json`，与当前题面、答案及固定源哈希绑定；第 11、16、19 题的答案证据为 U 级，分别关联 `ISSUE-1245`、`ISSUE-1246`、`ISSUE-1247`，当前卷仍为 `blocked`。`provenance.py check-batch` 通过，manifest revision 5412，CSV 已按新状态刷新。第 20 题独立初解曾误算，复核后已更正，不能把初始结果当作有效证据。四版生成及编译和视觉验收仍未完成。
+
+## 共享内容与入口生成
+
+已从规范源生成 `questions.tex`、`answers.tex`、`answers_short.tex` 和试题版、解析版、简答版、印刷版四个入口；生成器及简答、入口的 `--check`、24 题来源层检查和 provenance 检查通过。第 11 题答案改为 `U/PENDING`，简答速查表显示 U，解析保留均匀模型下 D 的条件结论；第 16 题和第 19 题继续保留条件与未定说明。逐题哈希重新绑定后 manifest revision 5413；三条阻断仍开放。尚未正式编译或验收 PDF。
