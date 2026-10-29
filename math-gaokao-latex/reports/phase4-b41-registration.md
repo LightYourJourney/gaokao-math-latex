@@ -19,3 +19,9 @@
 ## 正式构建，待视觉验收
 
 四个版本正式构建返回 `COMPILED_PENDING_REVIEW`，attempt `1131f12e-55f9-460d-881b-56048c8374db`、manifest revision 5415：试题版 7 页、解析版 22 页、简答版 9 页、印刷版 17 页，共 55 页。回执检查无 missing、invalid 或 stale，状态为 compiled_pending_review；CSV 当前。三项源/模型问题仍开放，paper 保持 blocked，不能将构建成功称为试卷完成。当前 PDF 尚未逐页目视，视觉审查和绑定回执仍待完成。
+
+## 分页调整及新构建
+
+旧 attempt `1131f12e-55f9-460d-881b-56048c8374db` 的逐页查看发现第 8 题流程图与选项跨页、题目区最后一页仅有第 24 题。隔离试排后缩小第 8、20、22 题图的绘制尺度，并对第 24 题设置局部保留空间；题面逐题内容哈希不变，来源校对的题面及图形文件哈希已更新。试排实际查看相关页：第 8 题图与选项同页，第 24 题与前题同页。旧 attempt 的实际查看记录及审查模板归档于 `.work/phase4-b41/review-history/`。
+
+正式重建返回 `COMPILED_PENDING_REVIEW`，新 attempt `4e311e00-942f-4ac7-be9c-8c0879e12b1e`、manifest revision 5418；四版分别 6、21、8、17 页，共 52 页。当前回执检查无 missing、invalid 或 stale，但新 attempt 尚未逐页验收；仍须重渲染并实际查看变化页。第 11、16、19 题的三个阻断继续开放。
