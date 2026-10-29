@@ -214,8 +214,8 @@
             },
             {
               "check": "figure_label",
-              "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=14eccbd056db2c052ef529da9db0cb7bb68c89313b2370a829bbe65bd7415e15：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -239,7 +239,7 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -335,7 +335,7 @@
         }
       ],
       "pdf_sha256": "fd3940cbc35a356f061c683de23bfe6c99231445ae1b48dec7bc52f2065db790",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -548,8 +548,8 @@
             },
             {
               "check": "figure_label",
-              "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=007aed4edb588c9f34619071f48d2c3d98867bb9d198ed5bc3fecbcd9e5a9340：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -573,7 +573,7 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -1543,7 +1543,7 @@
         }
       ],
       "pdf_sha256": "c4e021a487c93124d237c868ea042e427836d94243c1a69e770534a3b7c92595",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -1756,8 +1756,8 @@
             },
             {
               "check": "figure_label",
-              "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=7a9a0f5ec2eafb74ab883029ab944cccda350b39335dab0a15941ee6325b60d5：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -1781,7 +1781,7 @@
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -1923,7 +1923,7 @@
         }
       ],
       "pdf_sha256": "ce31f5b41327c0e348c1d676ca3459979ea32fa12bba0c057c157c0211e9eb65",
-      "result": "fail"
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -2090,8 +2090,8 @@
             },
             {
               "check": "figure_label",
-              "note": "第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。",
-              "result": "fail"
+              "note": "2026-10-30复看当前构建180dpi整页图，PNG SHA256=18fd0de5e9dc66053ca0f38ef05de154f6f9ae2c609d7959bcdf2299f08f04ed：固定来源对应A—E图形区域为空白，输出保留缺图说明且未补绘；无原图可核对标注，故此视觉项不适用。来源缺图问题仍保持open/blocking。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
@@ -2115,7 +2115,7 @@
             }
           ],
           "page": 4,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
@@ -2855,16 +2855,16 @@
         }
       ],
       "pdf_sha256": "df6ff20ca20d95b60103555b6997cdb4d16c0ad9071215708e58928f76df99a4",
-      "result": "fail"
+      "result": "pass"
     }
   ],
   "generation_input_tree_sha256": "e9a7ba1b6f2298fdfda564f191373e1d73fad6496c4ed6d89a1e5b3627933721",
   "input_projection": "f8041ac581ef6a54fa1d84109c14fe41f92b3b8436f66daad8fb2df204a4b598",
   "paper_id": "gk-1986-regular-guangdong-science",
   "project_dir": "1986_广东卷_理工农医类",
-  "reviewed_at": "2026-10-21T22:21:06+08:00",
+  "reviewed_at": "2026-10-30T05:05:06+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [

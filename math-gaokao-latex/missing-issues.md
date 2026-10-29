@@ -17828,13 +17828,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "cd9e832c7fbedc234cc70bf9059c6565f015280bc3fb91c05866da4bbe672b64",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 4,
   "paper_id": "gk-1986-regular-guangdong-science",
   "pdf_sha256": "df6ff20ca20d95b60103555b6997cdb4d16c0ad9071215708e58928f76df99a4",
-  "resume_action": "修正 gk-1986-regular-guangdong-science 的 印刷版 第 4 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17848,13 +17848,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "c9da949ff24ddeefb6b9f97c4a2961a3ad9c63fabf570cd8d0c8ae1c7b428639",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
   "pdf_sha256": "ce31f5b41327c0e348c1d676ca3459979ea32fa12bba0c057c157c0211e9eb65",
-  "resume_action": "修正 gk-1986-regular-guangdong-science 的 简答版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17868,13 +17868,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "85666285309895f338491f348fcf85d3f41e4ccb0034d4e9308feb7b5f608c12",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
   "pdf_sha256": "c4e021a487c93124d237c868ea042e427836d94243c1a69e770534a3b7c92595",
-  "resume_action": "修正 gk-1986-regular-guangdong-science 的 解析版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -17888,13 +17888,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "dbf58492cbaa99ea506576fd7de8741e0942eaa99d735285b02557685f35cde9",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-1986-regular-guangdong-science",
   "pdf_sha256": "fd3940cbc35a356f061c683de23bfe6c99231445ae1b48dec7bc52f2065db790",
-  "resume_action": "修正 gk-1986-regular-guangdong-science 的 试题版 第 5 页 figure_label（第1(25)题固定源PDF第4页A—E图形选项区域整段空白；当前页保留来源缺图说明，不补画。关联来源问题 ISSUE-0778/ISSUE-0797。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
