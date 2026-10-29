@@ -10534,3 +10534,11 @@
 - 在Q1—Q30题面逐页复核完成后，将三角色逐题 provenance dry-run 验证并导入，manifest revision `5472→5473`。固定PDF SHA-256 `e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f`；30条题面记录均绑定固定源页与哈希。答案推导者及2026-10-27独立数学复核者个人姓名未记录，侧车如实保留身份限制。
 - 27题为D级本库推导、3题为U/PENDING；Q9仍有题面B与答案表C冲突（`ISSUE-1259`），并新增答案待核 `ISSUE-1262`；Q16垂直约定未明（`ISSUE-1260`）；Q21固定A项`a≤3`与推导`a≤−3`不符（`ISSUE-1261`），另有答案待核 `ISSUE-1263`。五项均open / blocks_completion。`official_answer=null`，固定PDF来源身份仍unverified。
 - manifest 当前派生状态为batch `provenance_verified`、paper `blocked`。来源PDF第8—9页尚未全页逐字复核；未生成项目TeX、四版PDF或视觉回执，未运行测试套件。阶段报告：`reports/1989-guangdong-arts-provenance-import.md`。
+
+
+### 1989 广东文科候选卷：答案与可见解答源页复核、Q27错位纠正（2026-10-30）
+
+- 对固定候选PDF第8—9页（印刷页643—644）以300 dpi用Poppler、Ghostscript交叉目视复核，未用OCR。第8页Q1—Q25答案表与转录相符；Q26可见五项答案；Q27源载数列映射证明及唯一解$x=-1/2$；第9页显示Q28几何解答（$AC=BC$、$SC=5$ cm）及Q29部分解答。
+- 发现规范答案与解析稿自`73f0298d`起把第二卷三几何解答错配至Q27，并在Q28重复。已将Q27改为第二卷二的等比数列证明及$x=-1/2$，Q28保留几何解答，重新生成含解析稿；更新Q27 provenance答案哈希和证据、sidecar修订号及文件哈希。manifest revision `5473→5474`。
+- Q29（2）源页只显示定义域和不等式条件，未见最终解集；Q30解答未见于固定扫描。Q9答案冲突、Q16垂直定义边界、Q21选项与题设范围不符仍为开放阻断；来源真实性仍`unverified`、`official_answer=null`。batch `phase1-b59`仍`provenance_verified`、paper仍`blocked`。
+- 阶段报告：`reports/1989-guangdong-arts-answer-source-review.md`。尚未生成项目TeX/PDF或构建/视觉回执；未运行测试套件。
