@@ -21014,3 +21014,54 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1259
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第3页（印刷页638）题面映射 (x,y)→(y−1,x+2)，像点 (3,−4) 的原象为 (−6,4)，对应选项 B；第8页（印刷页643）答案表清晰印 C。两处均照录，无法从同一扫描件裁定哪处代表正确答案。",
+  "fingerprint": "987e168fe7509e271bc023896e177beb4431159946be136d01f432f812ec4798",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-arts",
+  "question_id": "gk-1989-regular-guangdong-arts-q09",
+  "resume_action": "取得可追溯的同版勘误、独立版本或可靠出版资料以核对 Q9；在证据到位前保留题面推导 B 与扫描答案 C，并保持 U/PENDING 和完成阻断。",
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1260
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第4页（印刷页639）Q16未说明“与两异面直线都垂直”是否要求相交；按方向夹角定义有无穷多条，若要求同时相交则为唯一公垂线。第8页答案表印 D，但不能据此补定题目采用的定义。",
+  "fingerprint": "c425727c09f46c79e97f27881991efc98e09aff71b63d747042b2c30e2173ccf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-arts",
+  "question_id": "gk-1989-regular-guangdong-arts-q16",
+  "resume_action": "查得可靠教材语境、同版说明或勘误以确定本题“垂直”的约定；此前保留两种条件解释、答案 U/PENDING 与完成阻断。",
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1261
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第5页（印刷页640）Q21选项 A 照录为 a≤3；按题设函数在 (−∞,4] 单调递减应有 a≤−3，四个选项均无完全匹配项。第8页答案表仍印 A，不能以推测漏印负号修复题面。",
+  "fingerprint": "a902318a4fd18e349e2549b0551a025cdb793bd5d15f45d3dbc450c19e4bea74",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-arts",
+  "question_id": "gk-1989-regular-guangdong-arts-q21",
+  "resume_action": "取得同版清晰扫描、可靠勘误或可追溯异本核定 Q21 源面缺项；在此之前照录 A 项 a≤3、保留数学范围 a≤−3、答案 U/PENDING 与完成阻断。",
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

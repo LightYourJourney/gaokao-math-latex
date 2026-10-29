@@ -10512,3 +10512,11 @@
 - 固定候选 PDF SHA-256 e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f、blob ee0f4dfcd5af015b510348df03671c224630d9e4 与 source manifest 一致。直接复看扫描页5（印刷页640）及页8（印刷页643）：Q21 A项原文为 a≤3，答案表印A；按题设函数在 (−∞,4] 递减的范围应为 a≤−3，固定四个选项均无完全匹配项。未推定源面漏印负号，保留为未决源面缺陷。
 - 已将题面稿恢复为扫描原文，在独立核算稿中将Q21标为无匹配选项，并在来源校对.json追加页码、原文、推导、答案表和未决状态；同步校正相关既有断言以反映源面事实。Q9答案表冲突、Q16术语歧义和来源身份未认证继续保留。
 - 阶段报告：reports/1989-guangdong-arts-q21-source-reinspection.md。本阶段未绑定 paper_id、未创建批次、未生成四版或运行测试套件；下一步仍须先依不认证边界决定内部候选登记，并在 provenance 中分别标记 Q9/Q16/Q21 限制。
+
+
+### 1989 广东文科：内部候选登记与三项阻断（2026-10-30）
+
+- 登记 `gk-1989-regular-guangdong-arts` / `phase1-b59`，题量30，manifest revision 5470→5471；图引用计数窄事务随后推进到5472。固定 PDF `src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766` 仅作本库内部 canonical 固定字节；题签只见“文史类”，年份、地区、出版者、版次及官方身份仍未核，`source_authenticity=unverified`、`official_answer=null`。
+- 登记三幅项目图稿：Q12选项图和Q28题面图各2处，Q28来源解答图1处；三类问题分别登记为 `ISSUE-1259` Q9 `answer-conflict`、`ISSUE-1260` Q16 `answer-convention-ambiguous`、`ISSUE-1261` Q21 `answer-conflict`，均 open / blocks_completion。paper 为 `blocked`，batch 为 `planned`，Q9/Q16/Q21 答案保持 U/PENDING。
+- 来源校对 sidecar 已同步 paper/source 绑定、Q16约定歧义、Q21源面复看、issue IDs 和规范文件 SHA；`canonical_question_source_ready=false`，因为已有数学盲核不能替代完整题面逐字源页复核。
+- `solution_sources` 对30题题面/答案/解析结构及含解析派生物的确定性核对通过。逐题三角色 provenance、TeX四版、构建和视觉回执尚未完成；本阶段未运行测试套件。详见 `reports/1989-guangdong-arts-registration.md`。

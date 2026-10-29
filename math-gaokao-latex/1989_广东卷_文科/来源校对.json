@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
-  "source_manifest_revision": 4152,
+  "source_manifest_revision": 5472,
   "upstream_path": "普通高考/1989/1989广东文.pdf",
   "pdf_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
   "git_blob_oid": "ee0f4dfcd5af015b510348df03671c224630d9e4",
@@ -14,7 +14,7 @@
     "top_level_question_count": 30,
     "choice_question_count": 25,
     "second_volume_item_count": 5,
-    "paper_id": null
+    "paper_id": "gk-1989-regular-guangdong-arts"
   },
   "source": {
     "source_state": "ready",
@@ -26,7 +26,9 @@
     "page_count": 9,
     "printed_page_numbers": [643, 644],
     "sha256_verified": true,
-    "git_blob_verified": true
+    "git_blob_verified": true,
+    "paper_id": "gk-1989-regular-guangdong-arts",
+    "paper_relation": "canonical"
   },
   "external_catalog_match": {
     "repository": "https://github.com/deekur/gaokaomath",
@@ -125,10 +127,9 @@
     }
   ],
   "source_gaps": [
-    "原PDF题签没有印年份、广东地区或出版者，仓库路径归属尚未由版权页/出版物核实。",
-    "第二卷四（2）扫描页9在列出定义域及等价不等式后中止，没有可见最终解集。",
-    "第二卷第五题在当前固定PDF扫描页8—9中没有答案或解析。",
-    "选择题答案与第二卷印载解答尚未经过独立盲核。"
+    "固定 PDF 题签只见“文史类”；年份、广东归属、出版者、版次和来源链仍未由独立证据认证。",
+    "第二卷四（2）扫描页9只见定义域及不等式化简，没有可见最终解集；第五题解答未见于固定扫描页8—9。",
+    "现有独立数学复核以转录题面为对象，未覆盖固定 PDF 第1—7页的完整逐字独立校勘；canonical_question_source_ready 继续为 false。"
   ],
   "source_discrepancies": [
     {
@@ -141,7 +142,8 @@
       "answer_from_transcribed_mapping": "B",
       "derivation_attribution": "agent-derived-from-transcribed-stem-not-official",
       "status": "unresolved-source-conflict",
-      "note": "题面映射 (x,y)→(y−1,x+2) 令像点为 (3,−4)，逆算原象为 (−6,4)，对应选项B；固定扫描答案表第9题印作C。保留两处来源记录，不擅自更改题面或印载答案。"
+      "note": "题面映射 (x,y)→(y−1,x+2) 令像点为 (3,−4)，逆算原象为 (−6,4)，对应选项B；固定扫描答案表第9题印作C。保留两处来源记录，不擅自更改题面或印载答案。",
+      "issue_id": "ISSUE-1259"
     },
     {
       "question_number": 21,
@@ -153,13 +155,27 @@
       "stem_derived_range": "a≤−3",
       "printed_answer": "A",
       "status": "unresolved-source-defect",
-      "note": "固定扫描第5页A项照录为a≤3；由 f'(x)=2(x+a−1) 及区间(−∞,4]递减条件得a≤−3，四个印载选项均不与该完整取值范围一致。第8页答案表仍印A。保留题面、答案表与推导三者的原始区别，不推定漏印负号，也不擅自修复选项。"
+      "note": "固定扫描第5页A项照录为a≤3；由 f'(x)=2(x+a−1) 及区间(−∞,4]递减条件得a≤−3，四个印载选项均不与该完整取值范围一致。第8页答案表仍印A。保留题面、答案表与推导三者的原始区别，不推定漏印负号，也不擅自修复选项。",
+      "issue_id": "ISSUE-1261"
+    },
+    {
+      "question_number": 16,
+      "question_source_page": 4,
+      "question_printed_page": 639,
+      "answer_source_page": 8,
+      "answer_printed_page": 643,
+      "printed_answer": "D",
+      "direction_angle_result": "D",
+      "if_perpendicular_requires_intersection": "B",
+      "status": "unresolved-convention",
+      "issue_id": "ISSUE-1260",
+      "note": "题面未说明“与两异面直线都垂直”是否要求相交；方向夹角解释下有无穷多条，若限定共同公垂线则只有一条。答案表D不能替代对题意定义的核实。"
     }
   ],
   "artifacts": {
     "question_draft": {
       "path": "1989/1989_数学真题_广东文_试题.md",
-      "sha256": "1e2e10c0542254320431695804c43557f3ef690a6c9e70f0b19cf8eaa60668ae"
+      "sha256": "1ebce00ae5322b40fe6cb2ae7439bc909f9c6039716e0c37082473b3c5215bbd"
     },
     "answer_draft": {
       "path": "1989/1989_数学真题_广东文_答案要点草稿.md",
@@ -202,7 +218,10 @@
         "question_number": 28,
         "sha256": "793ecd315c1b9de8117ecf0c6e52fcaed4be7abe5108c37cefc87d831b62d143"
       }
-    ]
+    ],
+    "answer_canonical": {"path": "1989/1989_数学真题_广东文_答案要点.md", "sha256": "ea894ac121f8ac729de919d24c122a6d357c274487ee772691ad19e91d95a7c8"},
+    "solution_canonical": {"path": "1989/1989_数学真题_广东文_解析正文.md", "sha256": "934f8bc9ebfa8252fcde01a9fb313f6ea7db858448a585cf2e3da8f9d8ea2b51"},
+    "combined_canonical": {"path": "1989/1989_数学真题_广东文_含解析.md", "sha256": "13e4b2a1055f117c58c8bfec129c5fe0e9c6e1f2b0c9cd7dd2743500bf9a2eb3"}
   },
   "verification": {
     "independent_math_review": {
@@ -246,7 +265,21 @@
       "stem_derived_range": "a≤−3",
       "printed_key": "A",
       "exact_matching_option": null,
-      "report": "reports/1989-guangdong-arts-q21-source-reinspection.md"
+      "report": "reports/1989-guangdong-arts-q21-source-reinspection.md",
+      "issue_id": "ISSUE-1261"
+    },
+    "internal_candidate_registration": {
+      "status": "registered-blocked",
+      "review_date": "2026-10-30",
+      "paper_id": "gk-1989-regular-guangdong-arts",
+      "batch_id": "phase1-b59",
+      "manifest_revision": 5472,
+      "issue_ids": ["ISSUE-1259", "ISSUE-1260", "ISSUE-1261"],
+      "source_binding": "internal-canonical-fixed-bytes-only",
+      "source_authenticity": "unverified",
+      "official_answer": null,
+      "note": "登记用于本库内部工作流，不证明固定PDF的年份、地区、出版者、版次或官方身份；paper保持blocked。",
+      "figure_occurrence_sync": "Q12选项图2处，Q28题面图2处，Q28来源解答图1处；通过source_manifest窄事务同步。"
     }
   }
 }
