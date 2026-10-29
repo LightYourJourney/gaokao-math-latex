@@ -15,3 +15,7 @@
 ## 共享内容与入口生成
 
 已从规范源生成 `questions.tex`、`answers.tex`、`answers_short.tex` 和试题版、解析版、简答版、印刷版四个入口；生成器及简答、入口的 `--check`、24 题来源层检查和 provenance 检查通过。第 11 题答案改为 `U/PENDING`，简答速查表显示 U，解析保留均匀模型下 D 的条件结论；第 16 题和第 19 题继续保留条件与未定说明。逐题哈希重新绑定后 manifest revision 5413；三条阻断仍开放。尚未正式编译或验收 PDF。
+
+## 正式构建，待视觉验收
+
+四个版本正式构建返回 `COMPILED_PENDING_REVIEW`，attempt `1131f12e-55f9-460d-881b-56048c8374db`、manifest revision 5415：试题版 7 页、解析版 22 页、简答版 9 页、印刷版 17 页，共 55 页。回执检查无 missing、invalid 或 stale，状态为 compiled_pending_review；CSV 当前。三项源/模型问题仍开放，paper 保持 blocked，不能将构建成功称为试卷完成。当前 PDF 尚未逐页目视，视觉审查和绑定回执仍待完成。
