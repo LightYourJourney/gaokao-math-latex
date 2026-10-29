@@ -2517,7 +2517,7 @@ def _prepare_registration_question_issues(
             question_id = item.get("question_id")
             match = (
                 re.fullmatch(
-                    re.escape(record["paper_id"]) + r"-q([1-9][0-9]*)",
+                    re.escape(record["paper_id"]) + r"-q(0[1-9]|[1-9][0-9]+)",
                     question_id,
                 )
                 if isinstance(question_id, str) else None

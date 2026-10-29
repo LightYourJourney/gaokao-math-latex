@@ -1795,6 +1795,23 @@ class RegisterPapersTests(unittest.TestCase):
 
             self.assertEqual(manifest_path.read_bytes(), before)
 
+    def test_registration_requires_canonical_zero_padded_question_ids(self):
+        for suffix, accepted in (("q01", True), ("q08", True), ("q8", False), ("q008", False), ("q00", False), ("q99", False)):
+            with self.subTest(suffix=suffix), tempfile.TemporaryDirectory() as tmp:
+                repo, manifest_path, source_id = self._repo(tmp)
+                (repo / "math-gaokao-latex/missing-issues.md").write_text("# Missing issues\n\n", encoding="utf-8")
+                spec = self._spec(source_id)
+                spec["papers"][0]["question_issues"] = [{
+                    "kind": "answer", "question_id": "gk-2021-regular-national-a-arts-" + suffix,
+                    "source_id": source_id, "current_evidence": "来源存疑。", "resume_action": "核实来源。",
+                }]
+                if accepted:
+                    result = source_manifest_module.register_papers(repo, manifest_path, spec)
+                    self.assertEqual(result["issue_ids"], {"gk-2021-regular-national-a-arts": ["ISSUE-0001"]})
+                else:
+                    with self.assertRaisesRegex(ValueError, "question_id"):
+                        source_manifest_module.register_papers(repo, manifest_path, spec)
+
     def test_registers_question_blocker_with_paper_in_one_state_transaction(self):
         with tempfile.TemporaryDirectory() as tmp:
             repo, manifest_path, source_id_value = self._repo(tmp)
