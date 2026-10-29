@@ -13,3 +13,7 @@
 ## 共享内容与入口生成
 
 已由规范源生成共享 `questions.tex`、`answers.tex`、`answers_short.tex` 及四个版本入口；共享内容、简答与入口生成器的 `--check` 均通过。简答选择题表第 8 题显示 U，第 14 题显示 U/PENDING 并注明所列值只是可能规律。paper 的三个阻断仍开放；正式编译及 PDF 视觉验收尚未进行。
+
+## 正式构建，待视觉审查
+
+四版正式构建返回 `COMPILED_PENDING_REVIEW`，attempt `4c5d0150-a6ae-400a-a222-b62ee55a6c73`，manifest revision 5423；试题版 5 页、解析版 17 页、简答版 7 页、印刷版 14 页，共 43 页。构建回执检查无 missing、invalid 或 stale，CSV 当前。PDF 仍需逐页目视并生成绑定回执；paper 保持 blocked，三个问题仍开放。
