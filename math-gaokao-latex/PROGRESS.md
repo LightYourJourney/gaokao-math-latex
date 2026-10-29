@@ -10527,3 +10527,10 @@
 - 对照固定候选 PDF 第1—7页（印刷页636—642）逐题核对规范题面 Q1—Q30；整页135 dpi，Q16页4以300 dpi复看、Q28页7以240 dpi复看，未使用 OCR。页码映射与复核方法见 `reports/1989-guangdong-arts-full-source-review.md`。
 - 发现 Q16 第二条异面直线原文印作 `n`，旧稿误作 `m`；已按源文纠正并刷新确定性含解析稿。其余题干、公式、选项、小问结构及Q12/Q28图形转录与当前固定扫描相符。`canonical_question_source_ready=true` 仅指对这份内部固定字节的文本核对已完成。
 - Q9答案表冲突、Q16垂直定义边界、Q21选项与题设范围不符继续保持 U/PENDING 和 open/blocking；来源真实性仍 unverified，official_answer=null。答案/解析页尚未全页逐字复核；未生成 TeX、构建 PDF 或运行测试。
+
+
+### 1989 广东文科候选卷：逐题 provenance 导入与阻断确认（2026-10-30）
+
+- 在Q1—Q30题面逐页复核完成后，将三角色逐题 provenance dry-run 验证并导入，manifest revision `5472→5473`。固定PDF SHA-256 `e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f`；30条题面记录均绑定固定源页与哈希。答案推导者及2026-10-27独立数学复核者个人姓名未记录，侧车如实保留身份限制。
+- 27题为D级本库推导、3题为U/PENDING；Q9仍有题面B与答案表C冲突（`ISSUE-1259`），并新增答案待核 `ISSUE-1262`；Q16垂直约定未明（`ISSUE-1260`）；Q21固定A项`a≤3`与推导`a≤−3`不符（`ISSUE-1261`），另有答案待核 `ISSUE-1263`。五项均open / blocks_completion。`official_answer=null`，固定PDF来源身份仍unverified。
+- manifest 当前派生状态为batch `provenance_verified`、paper `blocked`。来源PDF第8—9页尚未全页逐字复核；未生成项目TeX、四版PDF或视觉回执，未运行测试套件。阶段报告：`reports/1989-guangdong-arts-provenance-import.md`。

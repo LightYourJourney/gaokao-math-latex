@@ -21065,3 +21065,37 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1262
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第3页题面独立求得选项B，第8页答案表印C；固定源内部无法判定最终答案。ISSUE-1259仍记录印载答案冲突；答案最终裁定缺失，规范答案维持U。",
+  "fingerprint": "53aa20335d8af8ceae19f1e92b1d9d9d643f94edfe10d066311ecee2eb67695b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-arts",
+  "question_id": "gk-1989-regular-guangdong-arts-q09",
+  "resume_action": "取得可追溯的同版勘误、独立版本或可靠出版资料核定Q9最终答案；在此之前保持U/PENDING，与ISSUE-1259的印载答案冲突共同阻断完成。",
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1263
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第5页照录选项A为a≤3，按题设推得完整范围a≤−3；第8页答案表印A，但固定源内部无法裁定最终正确选项。ISSUE-1261仍记录题面选项与推导冲突；答案最终裁定缺失，规范答案维持U。",
+  "fingerprint": "a7bd694f7ae25e783ab11d7f578416eccd261e9b879ca8da77c31475856a8356",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1989-regular-guangdong-arts",
+  "question_id": "gk-1989-regular-guangdong-arts-q21",
+  "resume_action": "取得可追溯的同版勘误、独立版本或可靠出版资料核定Q21最终答案及源面选项；在此之前保持U/PENDING，与ISSUE-1261的题面冲突共同阻断完成。",
+  "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
