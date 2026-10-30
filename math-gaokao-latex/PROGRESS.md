@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 北京文科候选卷：四版正式构建（2026-10-30）
+
+- 正式 build attempt `d3bf6424-8f6d-45c0-92e7-5be594f3a9bc` 取代旧目录注记对应的首轮 attempt `47d7ac49-05f4-4dfc-a156-83e9b488bf1e`；输入 manifest revision `5488`，当前 revision `5489`。四版为5/19/7/14页，共45页，构建 wall time 约11.8秒。PDF SHA、工具链及输入指纹见 `reports/2006-beijing-arts-formal-build.md` 与 build receipt。
+- 四版均成功；错误、缺字、未解析引用与 Overfull 均为0。source manifest 与三种生成器 `--check` 通过；`validate-receipts --require-current-inputs` 返回 `OK`，0 missing/invalid/stale、1 review pending。775行 CSV 已刷新。未运行测试套件。
+- 固定候选 PDF 的发布者、版次、来源链和官方身份未认证；PDF无答案页，答案为本库独立推导、非官方，`official_answer=null`。视觉审查尚待逐页完成；此阶段不表示整卷验收或长期语料库完成。
+
 ### 2006 北京文科候选卷：Q8/Q16/Q17 图稿、20题 provenance 与确定性装配（2026-10-30）
 
 - 依据固定候选 PDF source src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347（SHA-256 476c44dd673847bcf6b5a3f940cdf464720fcf89d4a7096d8c531b27327813ec）第1页（印刷页282）重绘 Q8 环岛流量图、Q16 导函数图、Q17 正四棱柱图。三份 TikZ 源、题面映射及确定性含解析稿已生成；manifest figure_files 登记每图两次引用。
