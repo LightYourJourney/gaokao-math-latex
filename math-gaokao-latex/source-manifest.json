@@ -1856,6 +1856,14 @@
         "gk-2006-regular-beijing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b61",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-beijing-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1865,7 +1873,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "562fcf5d-7d40-4816-af68-af5c210166bd",
+  "last_transaction_id": "40da0027-045a-4a9a-b582-20dcdfef65e5",
   "papers": [
     {
       "blocked_from": null,
@@ -25290,9 +25298,61 @@
       "title": "2006 年·北京卷·文科",
       "track": "arts",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2006_beijing_science",
+        "id": "gk-2006-regular-beijing-science",
+        "note": "固定候选 PDF source ID src-49f52e7c83c2b20d33f62d6dbc57b1610f96cf9de81c5743d41612834cb318de，SHA-256 878cd3b020d41450cb9876ad9263ec384840bb4c00597e720069a12f89d2016c，Git blob 4368ce3dfefce75019107dde3a836a975dc19c6c，2页A3（印刷页280–281）。canonical仅表示本库固定字节输入绑定，不认证发布者、版次、来源链或官方身份。题面经独立逐页复核并订正Q18（1）漏“时”；答案为本库非官方独立推导并经第二解题者复算，Q8/Q17非盲核；PDF未见答案页，official_answer=null；Q8/Q16/Q17图待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-beijing-science",
+      "production_state": "planned",
+      "project_dir": "2006_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_北京理_含解析.md",
+        "questions": "2006/2006_数学真题_北京理_试题.md",
+        "solution_body": "2006/2006_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-49f52e7c83c2b20d33f62d6dbc57b1610f96cf9de81c5743d41612834cb318de"
+      ],
+      "title": "2006 年·北京卷·理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5490,
+  "revision": 5492,
   "schema_version": 1,
   "sources": [
     {
@@ -32605,8 +32665,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4368ce3dfefce75019107dde3a836a975dc19c6c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006北京理.pdf",
       "regions": [],
       "source_id": "src-49f52e7c83c2b20d33f62d6dbc57b1610f96cf9de81c5743d41612834cb318de",
