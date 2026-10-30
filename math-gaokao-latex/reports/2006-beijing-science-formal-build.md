@@ -1,22 +1,28 @@
-# 2006 北京理科候选卷：四版正式构建
+# 2006 北京理科候选卷：四版正式构建与视觉验收
 
 日期：2026-10-30
 
 ## 当前正式构建
 
-- 当前 build attempt：c7eb4a45-455a-49ac-b4e4-02678eb9bf4b；前序 attempt：0e5ec32a-7461-4aa8-b116-e125ff89aa96。receipt 输入 manifest revision 为5501，构建完成后总账 revision 为5502；构建时间约8秒。
+- 当前 build attempt：`01470e69-89d4-4299-883f-517a2a237658`；前序 attempt：`b4f5693f-a13c-4611-bb97-262854b24f7d`。本次构建输入 manifest revision 为5508，构建完成后为5509；视觉 finalizer 关闭批次后 revision 为5510。
 - 工具链为 TeX Live 2026、XeLaTeX、latexmk 与 Poppler。四版页数分别为：试题版5页、解析版19页、简答版7页、印刷版15页，共46页。
 
 | 版本 | 页数 | PDF SHA-256 |
 |---|---:|---|
-| 试题版 | 5 | 4b06c459fadf3e6c6ba1cd99c6ebdcc2d918ceebfe9590720612a2bf0d1f9449 |
-| 解析版 | 19 | 6a48f36bb455cd1519a0b53277b56584e3ed4d7ac4081be243e7eecc0a122989 |
-| 简答版 | 7 | 295f86bfc73c5b11bff5abbb9926a9674e928b0c009ee8ab5e1a83ccb64c7dd8 |
-| 印刷版 | 15 | 8672f5cfca9ed7a855b1f66984ad9a0e97253bcb6b64f99e299db2e1e173e945 |
+| 试题版 | 5 | 389143ea51fd506ae024946cf58ea975c40a616e3308976e67672887ea2acd80 |
+| 解析版 | 19 | 0e511439fe32dbaf9cd38912f846007787ad849c3d466c6c737625161b7b1a20 |
+| 简答版 | 7 | 9dbe626088cdeb45d7551b40697d5fe8d6888b003336c23cc02a2d42cf8eb946 |
+| 印刷版 | 15 | 8c31433a038587ffd1da395f5fb13bbfbad8480e3b1f9c3cf1ed9b57f0bbf91c |
 
-- 四版构建结果均为 succeeded；errors、missing characters、overfull 与 undefined references 均为0。validate-receipts --require-current-inputs 返回 OK，当前 receipt 状态是 compiled_pending_review。
-- 第一次正式构建 attempt ee722b21-675c-436a-9687-e98e714f367b 的解析版与印刷版各有30条缺字告警。逐项计数与解析正文显示公式内30个全角标点一一对应（13个逗号、17个句号）。已在规范解析源中删除这些公式行尾标点，重新生成后最终构建告警为0。中间 attempt 0e5ec32a-7461-4aa8-b116-e125ff89aa96 已由当前 attempt 取代；第一次警告构建不再是当前输出。
+- 四版构建结果均为 `succeeded`；errors、missing characters、overfull 与 undefined references 均为0。构建回执验证 `OK`，pending=0、stale=0、failed=0。
+- `phase1-b61` 视觉回执为 `passed`，批次状态 `closed`，最终回执 revision 5510。46页逐页覆盖八项检查，共368项：336项 `pass`、32项无图页 `figure_label=not_applicable`、0项失败。候选复核锚点为：试题版第1页、解析版第18页、简答版第1页、印刷版第14页。
+- 此次状态文字同步后的最终 PDF 与上一轮已完成目视检查的构建逐页比较：44页 PNG SHA-256 完全一致，沿用相同像素对应的既有检查；解析版第6页与印刷版第4页发生变化，已重新目视检查，内容、字形、边界与分页均正常。无视觉问题或阻断项。逐批次证据见 `reports/phase1-b61.md`。
+
+## 构建修订记录
+
+- 首次正式构建 attempt `ee722b21-675c-436a-9687-e98e714f367b` 的解析版与印刷版各有30条缺字告警；逐项对应解析正文显示公式内的30个全角逗号/句号（13个逗号、17个句号）。已从规范解析源移除公式行尾标点并重生成派生稿。
+- 随后 attempt `c7eb4a45-455a-49ac-b4e4-02678eb9bf4b` 建立无缺字的正式构建；更新 manifest 状态注记后重建为 `b4f5693f-a13c-4611-bb97-262854b24f7d`；同步题面、答案要点与解析正文的视觉状态文字后，再构建为当前 attempt。历史 attempt 均由当前构建取代，当前日志无上述告警。
 
 ## 阶段边界
 
-本阶段只完成四版正式构建与当前 build receipt，不表示视觉验收或整卷完成。试题、解析、简答、印刷四版全部46页及Q8/Q16/Q17图稿仍需逐页目视检查，并创建与本 attempt、输入 manifest revision、PDF 指纹及页数绑定的 review receipt。固定 PDF 的发布者、版次、来源链及官方身份仍未核；答案为本库非官方推导，official_answer=null。
+本阶段完成2006北京理科四版构建、全部46页视觉复核及 `phase1-b61` 批次关闭。它不认证固定 PDF 的发布者、版次、来源链或官方身份；这些仍未核。答案是本库非官方推导，`official_answer=null`；Q8/Q17 的交叉复算不记为盲核，Q8/Q16/Q17 图稿仍无独立第二读者专项审查。本结论只覆盖这一批次，不代表长期语料库完成。
