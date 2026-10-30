@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1989 广东文科候选卷：四版正式构建（2026-10-30）
+
+- 正式 build attempt `06a36244-5d74-4489-a485-35f38b76391a`，输入 manifest revision `5477`，当前 revision `5478`；四版试题/解析/简答/印刷为6/24/8/19页，共57页。PDF SHA、工具链与输入指纹见 `reports/1989-guangdong-arts-formal-build.md` 及 build receipt。
+- 四版均成功；错误、缺字、未解析引用与 Overfull 均为0。首轮 attempt `df5e22a8-bc23-4187-976e-21675d0eb76a` 的简答版25列答案表宽度溢出版心；新增本卷13列拆表配置，重生简答 TeX 后正式重编，当前输出为13+12两表。
+- `source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`（1卷）、三种生成器 `--check`、`solution_sources.py check-batch`（30题）、`manifest_csv.py --check`（775行）均通过；`build_projects.py validate-receipts --batch phase1-b59 --require-current-inputs --json` 返回 `OK`，0 missing/invalid/stale，1 pending。此处仅为构建完成状态，视觉回执仍待 finalize；本阶段未运行测试套件。
+- 固定扫描来源身份与 `official_answer` 仍未认证；Q9、Q16、Q21保持未决并阻断整卷完成，Q29（2）与Q30固定扫描未见完整解答。下一步逐页审查同一 attempt 的四版 PDF 并完成 review receipt；不代表整卷或长期语料库完成。
+
 ### 1986 广东理工农医类：同一构建的视觉回执重判及阻塞收口（2026-10-30）
 
 - 固定构建 attempt `72e21875-2bfb-401c-bf50-f553d1045486` 未变；四版共61页。对原失败的4个缺图页复看当前180dpi整页图，其余页面沿用绑定同一构建且未变的既有检查结论。最终 review 为 `passed`：488项中435 pass、53 not_applicable、0 fail；53项 N/A 中含4处固定来源空白图形区，页面保留缺图说明且未补绘。来源缺图 `ISSUE-0778`、`ISSUE-0797`，Q1 子题连接符及语义/汇总冲突 `ISSUE-1053`—`ISSUE-1056`，以及第二卷缺字 `ISSUE-1082`—`ISSUE-1084` 均仍开放。

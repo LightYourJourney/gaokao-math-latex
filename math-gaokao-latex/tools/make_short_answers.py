@@ -131,6 +131,7 @@ SHORT_ANSWER_NOTICE_OVERRIDES = {
 }
 # 单选题速查表的本卷排版例外：25列会超出可用版心，分成两张表显示。
 TABLE_COLUMN_LIMIT_OVERRIDES = {
+    "gk-1989-regular-guangdong-arts": 13,
     "gk-1989-regular-guangdong-science": 13,
     "gk-1990-regular-guangdong-science": 13,
     "gk-1990-regular-guangdong-arts": 13,
