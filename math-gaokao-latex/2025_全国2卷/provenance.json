@@ -442,7 +442,7 @@
       },
       "source_sha256": "1fc58c22ef5643a0f81a2d5fbe41ffefb24c1fa197e7ebf5b9ec46b4b19ed65b",
       "transcription_review": {
-        "evidence": "PDF p2（页脚 1220）：四边形 ABCD 中 AB∥CD、∠DAB=90°、F 为 CD 中点、E 在 AB 上、EF∥AD、AB=3AD、CD=2AD，将四边形 EFDA 沿 EF 翻折至 EFD′A′ 使面 EFD′A′ 与面 EFCB 成 60° 二面角；(1) 证 A′B∥平面 CD′F；(2) 求面 BCD′ 与面 EFD′A′ 所成二面角的正弦值——逐字一致（源中三处「∥」文本层丢失，视读确认为平行号；D′、A′ 撇号齐备）。**本卷唯一含图题，已按条款在 PDF 第 2 页逐页视读核对**（200 dpi 整页 + 2 倍局部放大）：源图为 D′ 在顶、A′ 在 D′ 左下、底面 A—E—B 与虚线 A—D—F…C，虚线表示翻折前位置与被遮挡棱；仓库图 images/2025-2-t17-翻折四边形.png 八个标注 A/B/C/D/E/F/A′/D′ 全在、四边无墨迹触边（无裁切）；虚实线归属有一处翻转——源图 C—B 为虚线而仓库件为实线（三路互证：源 PDF 1200 dpi 视读、PNG 7 倍放大、TikZ 源 f2025g2_t17_fold.tex:19 的 \\draw (C) -- (B); 实线指令），已登记 ISSUE-0070；其余各段虚实归属与源一致，仅 C 标签相对虚线的上下位置与源略有差异，属排版性、非内容性。规范题面补注「（15 分）」。",
+        "evidence": "PDF p2（页脚1220）核对显示 C—B 为虚线。项目图源与共享图稿均已改为 \\draw[dashed] (C) -- (B);。phase0-b05 正式构建 attempt 0d9e803c-2f97-4d75-8d66-a3011e639a0a 完成后，以120dpi复核试题版第3页、印刷版第3/17页和解析版第23页，C—B均显示为虚线，标注完整且未见裁切。题面、答案和推导未改。历史 Markdown PNG 当前不在 Git 树中，本次未声称重建该文件。",
         "result": "passed",
         "role": "b05-question-reviewer-opus"
       }

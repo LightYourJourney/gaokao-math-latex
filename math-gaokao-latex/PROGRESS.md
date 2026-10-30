@@ -10685,3 +10685,14 @@
 - `generate_projects --write`生成全局`index.json`及本卷`questions.tex`、`answers.tex`；`make_short_answers --write`生成`answers_short.tex`；`make_editions --write`生成试题、解析、简答、印刷四版壳。三个生成器`--check`、`solution_sources check-batch`、`provenance check-batch`、source manifest与issues validate均通过。sidecar答案规范稿哈希已同步；manifest维持revision 5474。未运行测试。
 - 本阶段尚未XeLaTeX构建或形成构建/视觉回执。batch `phase1-b59`仍`provenance_verified`、paper仍`blocked`；Q9/Q16/Q21五项issues开放，固定来源身份未认证、`official_answer=null`；Q29（2）最终解集未见、Q30扫描解答缺失。
 - 阶段报告：`reports/1989-guangdong-arts-project-tex-generation.md`。
+
+
+### phase0-b05 新 attempt 全量复核与正式收尾（2026-10-30）
+
+- 接手时 `phase0-b05` 因四卷新构建仍为 `compiled_pending_review`；旧 review 回执绑定先前 attempt，不能沿用。完成新 attempt 的逐页复核后，正式构建覆盖四卷16版、297页：2024新高考Ⅰ卷4/37/6/27页，2024新高考Ⅱ卷6/40/8/29页，2025全国1卷5/35/7/26页，2025全国2卷4/33/6/24页。297页八项检查全部 pass，共2376项；16个候选页、4条 Underfull 警告页及改动影响页均以120dpi复核，其余逐页通过64dpi全卷联系表检查。
+- 本轮修订：2024新高考Ⅱ卷Q19解析将“相邻三角形自然全等”纠正为“面积相等”，并以局部分页锚点稳定总结与答案；放大复核解析版第36—40页及印刷版第26页。2025全国2卷Q17将C—B棱在两份共享TikZ源中恢复为虚线；试题版第3页、印刷版第3/17页、解析版第23页均放大复核通过。历史 Markdown PNG `images/2025-2-t17-翻折四边形.png` 不在当前 Git 树，本批未声称重建该PNG；ISSUE-0070记录为源代码修正及PDF验证已完成。
+- 按规范解析稿重刷三份派生含解析 Markdown（2024新高考Ⅱ、2025全国1、2025全国2）；其中2025全国1旧合并稿的数值近似与枚举表同步为规范正文现值。`solution_sources check-batch` 对四卷19题逐题对照通过。
+- 四条 Underfull 均逐项映射并记录视觉豁免：2024新高考Ⅰ印刷版第10页（`answers.tex:517--518`）、解析版第37页（`answers.tex:854--855`）；2025全国2简答版第6页（`answers_short.tex:36--37`）、解析版第20页（`answers.tex:857`）。2024新高考Ⅱ既有 ISSUE-0981—0983 继续保留。
+- 验证：`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`（四卷各19题）、`provenance check-batch`（4卷）、source manifest 与 issues 校验通过。`review_receipts finalize-batch` 实际返回 `FINALIZED`，manifest revision `5516`；四卷 build=`succeeded`、review=`passed`，批次为 `closed_with_blockers`。`build_projects validate-receipts --require-final` 和 `review_receipts check-batch` 均通过。刷新并校验全量报告投影；`manifest.csv` 当前且775行。未运行测试套件。
+- 阻塞：2025全国1卷Q11来源答案冲突 ISSUE-0048 仍为 open / blocks_completion，故批次关闭但该卷内容仍 blocked。来源出版者、版次及官方答案属性未因构建/视觉通过而改变；本批不代表1952—2026题库完成。
+- 正式报告：`reports/phase0-b05.md`。

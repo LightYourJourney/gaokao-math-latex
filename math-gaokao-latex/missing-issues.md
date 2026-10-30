@@ -1322,14 +1322,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面核对判 passed（与 b04 ISSUE-0040 的辅助虚实线差异同级，不阻断），但其 evidence 原写「虚实线归属一致」系正面假断言，经三路互证证伪：一、上游源 PDF 第 2 页 1200 dpi 渲染视读——C 与 B 之间有一条清晰的虚线段（与实线 A′B 近乎平行、在其下方，于 B 点交汇），即源图 C—B 为虚线；二、仓库件 images/2025-2-t17-翻折四边形.png（718×363）裁剪区 (430,150)-(700,320) 做 7 倍最近邻放大——C 到 B 是一条连续实线、全程无断口，而同图的 E—F—C 与 F—D′ 仍显示为虚线，可排除「虚线在缩放中被糊成实线」的解释；三、TikZ 源 f2025g2_t17_fold.tex 第 19 行为 \\draw (C) -- (B);，是实线指令，与第 21/22/24 行的 \\draw[dashed] 形成对照——虚实翻转在图形源头即已存在。影响：C—B 是被遮挡棱，画成实线会误导遮挡关系的读取；但八个标注 A/B/C/D/E/F/A′/D′ 全在、其余虚实归属正确、四边无墨迹触边、无裁切，两小问的作答不依赖该棱的虚实，故维持 passed。孤例核验：本批其余三张含图 PNG（2024-t11、2024-t17、2024-Ⅱ-t17、2025-t17）未见同类翻转。",
+  "current_evidence": "既有三路证据确认题源 PDF 的 C—B 为虚线而旧 TikZ 源误画为实线。现 canonical 项目图源 math-gaokao-latex/2025_全国2卷/figures/f2025g2_t17_fold.tex 与共享图源 math-gaokao-2017-2026/figures/f2025g2_t17_fold.tex 均已改为 \\draw[dashed] (C) -- (B);。phase0-b05 当前正式构建的试题版第3页、印刷版第3/17页、解析版第23页以120dpi复核，C—B均显示为虚线，标注完整且未见裁切。原 Markdown 引用的 images/2025-2-t17-翻折四边形.png 当前不在 Git 树中（此前已移除）；本次修正并验证的是 canonical TikZ 源及 PDF 输出，不声称该 PNG 已重建。",
   "fingerprint": "4b1782752dd28caa4cc8c219a32b2f94a82f051b3811a6b7667961fce19fe84b",
   "impact": "non_blocking",
   "paper_id": "gk-2025-regular-national-2",
   "question_id": "gk-2025-regular-national-2-q17",
-  "resume_action": "重绘 images/2025-2-t17-翻折四边形.png：把 C—B 段由实线改回虚线。TikZ 源 math-gaokao-latex/2025_全国2卷/figures/f2025g2_t17_fold.tex 第 19 行现为 \\draw (C) -- (B);（实线指令），应改为 \\draw[dashed] (C) -- (B);——同文件第 21、22、24 行已用 \\draw[dashed]，改法与之一致；共享副本 math-gaokao-2017-2026/figures/f2025g2_t17_fold.tex 与本文件逐字节相同，须同步改",
+  "resume_action": "已修正两份共享 TikZ 源并在当前正式 PDF 中复核 C—B 虚线；历史 Markdown PNG 不在仓库中，未在本阶段重建。",
   "source_id": "src-63d8cf8aeded86d1dc644b80483c817de4f9ba7d312f117942a408b916bcc94d",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
