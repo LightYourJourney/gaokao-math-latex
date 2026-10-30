@@ -706,14 +706,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "题面核对判 passed（200 dpi 渲染复核）：4 门体育类 + 4 门艺术类共 8 门、选修 2 门或 3 门、每类至少 1 门、「(用数字作答)」均一致，唯末尾漏一「课」字，不改题意与答案。本题无配图。",
+  "evidence": "固定 source_id `src-7fdec764fe31e143cd6daf81734e2df4d142dc09b0a3ad696d522aacbefa7f63` 的 PDF 第 1 页文字层及页面渲染均印作“学生需从这 8 门课中选修 2 门或 3 门课”；规范题面现已补回末尾“课”，与固定源一致，答案 64 不变。",
   "fingerprint": "91a1212be76d82c368ff795020cee10c2a1a48e38d2c170342806d8457fc4f66",
   "impact": "non_blocking",
   "paper_id": "gk-2023-regular-new-gaokao-1",
   "question_id": "gk-2023-regular-new-gaokao-1-q13",
-  "resume_action": "补回漏字：PDF 作「学生需从这 8 门课中选修 2 门或 3 门课」，规范源作「选修 2 门或 3 门」，末尾漏一「课」字；纯转录漏字，可直接补",
+  "resume_action": "已按固定源 PDF 第 1 页补回漏字，并同步更新规范题面、派生稿、provenance 与四版；无需后续核查。",
   "source_id": "src-7fdec764fe31e143cd6daf81734e2df4d142dc09b0a3ad696d522aacbefa7f63",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```

@@ -9,7 +9,7 @@
 - 正式复核门禁：FINALIZED 214，VISUAL_FAILED 1
 - 已编译版本：1428/1428；构建回执状态：compiled_pending_review 4，succeeded 353
 - review 回执状态：failed 1，passed 356
-- 问题总账：1263 条，未解决问题：229，阻塞完成 165。
+- 问题总账：1263 条，未解决问题：228，阻塞完成 165。
 - 回执日志警告汇总（包含待复核回执）：Overfull 24，Underfull 88，豁免记录 112。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 门禁未通过批次：phase0-b02。

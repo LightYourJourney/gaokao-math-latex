@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2023 新高考Ⅰ卷：Q13 漏字纠正与 phase0-b04 视觉收口（2026-10-30）
+
+- 固定 source `src-7fdec764fe31e143cd6daf81734e2df4d142dc09b0a3ad696d522aacbefa7f63`，SHA-256 `84e40d21b4c15900d9ccc97668c553cea1ca84fa677f742c45ba278aa9ca468f`。PDF 第1页文字层与页面渲染均印有“选修 2 门或 3 门课”；规范题面原漏末尾“课”，现已补回。答案 64 未改，`ISSUE-0036` 记为 `resolved`；provenance Q13 题面哈希刷新为 `465c9b44335675f3bc343f9dddd103b01a0fe45c4f8f13619b235b1026aa5ae9`。本次不认证来源发布者、版次或官方身份。
+- 由规范题面/答案/解析源重生成派生含解析稿与 TeX。正式 build attempt `7eb14663-da74-4d58-9b11-7eff28e575f4` 使用 manifest revision 5511，完成时间约17秒；四版分别4/39/6/30页，共79页，编译错误、缺字、overfull 均为0。PDF SHA 与页数记录在项目 build receipt。
+- 新旧页面渲染的79页均有像素差异，因此没有继承旧页视觉结论；四版79页逐页复核，8项检查共632项全通过、失败0。finalizer 于 manifest revision 5513 将 `phase0-b04` 关闭为 `closed`；该批共4卷355页，其他非阻断问题 `ISSUE-0980` 仍保留。
+- `source_manifest`、issues、4卷 provenance、4卷生成物 currentness、build receipts 4/4、review finalizer、全量 report currentness 与775行 CSV 检查通过。未运行测试套件。构建耗时约17秒；模型/费用未知。此记录只关闭 `phase0-b04`，不代表整个语料库完成。
+
 ### 2006 北京理科候选卷：四版视觉复核与批次关闭（2026-10-30）
 
 - 当前正式构建 attempt `01470e69-89d4-4299-883f-517a2a237658`，输入 manifest revision 5508，构建后 revision 5509；视觉 finalizer 将 `phase1-b61` 关闭于 revision 5510。四版依次5/19/7/15页，均构建成功，缺字、错误、overfull 与未定义引用均为0；PDF SHA-256 见 `reports/2006-beijing-science-formal-build.md`。
