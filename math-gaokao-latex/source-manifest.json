@@ -1864,6 +1864,14 @@
         "gk-2006-regular-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b62",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-spring-shanghai"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1873,7 +1881,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0901736b-53ee-4def-a624-dc0a19c5ae53",
+  "last_transaction_id": "69a1c836-5ffc-4b9d-ac95-017f43d7455b",
   "papers": [
     {
       "blocked_from": null,
@@ -25363,9 +25371,81 @@
       "title": "2006 年·北京卷·理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q06_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q08_patterns.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q11_pascal.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q20_oblique_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2004_shanghai_spring",
+        "id": "gk-2004-spring-shanghai",
+        "note": "固定来源为2页XeTeX重排题面，印刷页157–158；内部canonical只绑定固定字节，不认证出版者、版次、上游来源链及官方身份。固定PDF无答案页，答案与解析为本库非官方推导，official_answer=null。Q14包含关系允许相等，Q18条件变量x/p不一致，两题均待核并阻断完成。四幅既有TikZ图已迁入项目并登记；逐题provenance、正式构建与视觉复核待完成。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "不分文理",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1264",
+        "ISSUE-1265"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2004_春季上海卷",
+      "question_count": 22,
+      "resume_action": "取得可追溯同版原卷或明确勘误，核实包含条件；在此之前保留条件性答案和待核状态。；取得可追溯同版原卷或明确勘误，核对条件变量；在此之前保留原文与待核答案。",
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_春季上海_含解析.md",
+        "questions": "2004/2004_数学真题_春季上海_试题.md",
+        "solution_body": "2004/2004_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f"
+      ],
+      "title": "2004 年·春季上海卷",
+      "track": "none",
+      "year": 2004
     }
   ],
-  "revision": 5516,
+  "revision": 5519,
   "schema_version": 1,
   "sources": [
     {
@@ -25670,8 +25750,8 @@
       "exam_type": "spring",
       "git_blob_oid": "9b0a866d9930b3f8ec47339a168a26248e980f96",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004春季上海.pdf",
       "regions": [],
       "source_id": "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f",

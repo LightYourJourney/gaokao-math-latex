@@ -12,10 +12,10 @@ ROOT = Path(__file__).resolve().parents[4]
 PROJECT = ROOT / "math-gaokao-latex"
 TRANSCRIPT = ROOT / "2004/2004_数学真题_春季上海_试题.md"
 FIGURES = ROOT / "2004/2004_数学真题_春季上海_图表清单.md"
-Q11_FIGURE = ROOT / "2004/figures/gaokao_2004_shanghai_spring_q11_pascal.tex"
-Q6_FIGURE = ROOT / "2004/figures/gaokao_2004_shanghai_spring_q06_pyramid.tex"
-Q8_FIGURE = ROOT / "2004/figures/gaokao_2004_shanghai_spring_q08_patterns.tex"
-Q20_FIGURE = ROOT / "2004/figures/gaokao_2004_shanghai_spring_q20_oblique_prism.tex"
+Q11_FIGURE = PROJECT / "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q11_pascal.tex"
+Q6_FIGURE = PROJECT / "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q06_pyramid.tex"
+Q8_FIGURE = PROJECT / "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q08_patterns.tex"
+Q20_FIGURE = PROJECT / "2004_春季上海卷/figures/gaokao_2004_shanghai_spring_q20_oblique_prism.tex"
 SOURCE_ID = "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f"
 SOURCE_SHA256 = "e09d135e7814d1d5dd658ac51829a170edae1267b408f30a4edfa44d2312ca8a"
 
@@ -27,15 +27,20 @@ class ShanghaiSpring2004TranscriptionTests(unittest.TestCase):
         cls.figures = FIGURES.read_text(encoding="utf-8")
         cls.manifest = json.loads((PROJECT / "source-manifest.json").read_text(encoding="utf-8"))
 
-    def test_fixed_source_identity_matches_manifest_and_stays_unbound(self):
+    def test_fixed_source_identity_matches_internal_binding(self):
         source = next(item for item in self.manifest["sources"] if item["source_id"] == SOURCE_ID)
         self.assertEqual(source["artifact"]["sha256"], SOURCE_SHA256)
         self.assertEqual(source["artifact"]["page_count"], 2)
         self.assertEqual(source["upstream_path"], "春季高考/2004/2004春季上海.pdf")
-        self.assertIsNone(source["paper_id"])
+        self.assertEqual(source["paper_id"], "gk-2004-spring-shanghai")
+        self.assertEqual(source["paper_relation"], "canonical")
+        paper = next(item for item in self.manifest["papers"] if item["paper_id"] == source["paper_id"])
+        self.assertEqual(paper["production_state"], "blocked")
+        self.assertEqual(set(paper["issue_ids"]), {"ISSUE-1264", "ISSUE-1265"})
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
-        self.assertIn("paper_id 未绑定", self.transcript)
+        self.assertIn("内部 paper_id 绑定", self.transcript)
+        self.assertIn("不代表官方身份认证", self.transcript)
 
     def test_question_numbers_sections_and_math_delimiters_are_complete(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]

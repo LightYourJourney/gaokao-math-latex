@@ -21099,3 +21099,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1264
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面印作 M⊆N，允许 M=N；真包含时为B，相等时为C，不能据当前题面唯一确定。",
+  "fingerprint": "b826ffa9d2b4cfeaf9a187aa4dc20708e1081ce6e5d7b22c181d8fd1a9a140b0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-spring-shanghai",
+  "question_id": "gk-2004-spring-shanghai-q14",
+  "resume_action": "取得可追溯同版原卷或明确勘误，核实包含条件；在此之前保留条件性答案和待核状态。",
+  "source_id": "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1265
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面称实数p满足不等式，但不等式使用变量x；现按印文保留并区分字面与条件性解释。",
+  "fingerprint": "936605f92fcd5939988e9995c108c8b91a2edb31b1965830d35403107facc725",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-spring-shanghai",
+  "question_id": "gk-2004-spring-shanghai-q18",
+  "resume_action": "取得可追溯同版原卷或明确勘误，核对条件变量；在此之前保留原文与待核答案。",
+  "source_id": "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
