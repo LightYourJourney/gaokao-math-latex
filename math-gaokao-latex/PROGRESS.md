@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1989 广东文科候选卷：四版视觉审查与阻断收口（2026-10-30）
+
+- 正式 build attempt `06a36244-5d74-4489-a485-35f38b76391a` 绑定当前四版 PDF；题面/解析/简答/印刷分别6/24/8/19页，共57页。逐页八项检查共456项：410 pass、46 not_applicable、0 fail；所有not_applicable均为无需核验独立图形标注的页面。Q12图像标签、Q28几何标注清楚，未发现视觉缺陷。
+- `review_receipts.py finalize-batch-checked` 返回`FINALIZED`，manifest revision `5478→5479`；review receipt顶层`status=passed`，batch为`closed_with_blockers`，paper仍`blocked`。正式视觉审查记录：`reports/1989-guangdong-arts-formal-review.md`；批次报告：`reports/phase1-b59.md`。
+- source manifest、issue ledger、provenance、三种生成器`--check`、30题解析来源对齐、`review_receipts check-batch`及`build_projects validate-receipts --require-final --require-current-inputs`均通过。全库报告/CSV投影待按提交后的Git状态刷新；本阶段未运行测试套件。
+- 来源身份及`official_answer`仍未认证；`ISSUE-1259`—`ISSUE-1263`继续开放，Q9/Q16/Q21保持存疑并阻断整卷完成。固定扫描未见Q29（2）最终解集及Q30解答。本阶段仅收口构建与视觉验收，不表示单卷内容或长期语料库完成。
+
 ### 1989 广东文科候选卷：四版正式构建（2026-10-30）
 
 - 正式 build attempt `06a36244-5d74-4489-a485-35f38b76391a`，输入 manifest revision `5477`，当前 revision `5478`；四版试题/解析/简答/印刷为6/24/8/19页，共57页。PDF SHA、工具链与输入指纹见 `reports/1989-guangdong-arts-formal-build.md` 及 build receipt。

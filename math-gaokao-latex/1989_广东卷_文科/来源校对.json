@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source_id": "src-ff04f7f2223009c3c15fc98a35cc99ba9f03d8be55457e6551b982fbb17f2766",
-  "source_manifest_revision": 5478,
+  "source_manifest_revision": 5479,
   "upstream_path": "普通高考/1989/1989广东文.pdf",
   "pdf_sha256": "e0b112f4d4576e791844332f7ffb465c65f3a3ba6516467a7888f9333ca7169f",
   "git_blob_oid": "ee0f4dfcd5af015b510348df03671c224630d9e4",
@@ -476,12 +476,12 @@
     },
     "formal_build": {
       "status": "succeeded",
-      "review_status": "pending",
+      "review_status": "passed",
       "review_date": "2026-10-30",
       "batch_id": "phase1-b59",
       "attempt_id": "06a36244-5d74-4489-a485-35f38b76391a",
       "input_manifest_revision": 5477,
-      "current_manifest_revision": 5478,
+      "current_manifest_revision": 5479,
       "edition_page_counts": {
         "试题版": 6,
         "解析版": 24,
@@ -495,6 +495,42 @@
         "overfull": 0
       },
       "report": "reports/1989-guangdong-arts-formal-build.md"
+    },
+    "visual_review": {
+      "status": "passed",
+      "reviewed_at": "2026-10-30T08:02:50+08:00",
+      "batch_id": "phase1-b59",
+      "attempt_id": "06a36244-5d74-4489-a485-35f38b76391a",
+      "build_input_manifest_revision": 5477,
+      "review_input_manifest_revision": 5478,
+      "final_manifest_revision": 5479,
+      "page_count": 57,
+      "check_counts": {
+        "pass": 410,
+        "not_applicable": 46,
+        "fail": 0,
+        "total": 456
+      },
+      "edition_page_counts": {
+        "试题版": 6,
+        "解析版": 24,
+        "简答版": 8,
+        "印刷版": 19
+      },
+      "edition_check_counts": {
+        "试题版": {"pass": 44, "not_applicable": 4},
+        "解析版": {"pass": 172, "not_applicable": 20},
+        "简答版": {"pass": 57, "not_applicable": 7},
+        "印刷版": {"pass": 137, "not_applicable": 15}
+      },
+      "pdf_sha256": {
+        "试题版": "f5d741566bea5bb33afb3833a45a70e84ea7105edc9458bb0152bf1f5a87cf30",
+        "解析版": "e277929eb42fe65191a4cadf934bde72c52804aefd989060f0fa285b1b836a6b",
+        "简答版": "5cd46777b1d94bc217477716ed83c7a9193ccbb17c63879b8fa199805067b886",
+        "印刷版": "9021c717c74bd21bc7199a9b029b717cc2c37ad0aa01dbddcb37152cf40adbf7"
+      },
+      "receipt": "1989_广东卷_文科/receipts/review.json",
+      "report": "reports/1989-guangdong-arts-formal-review.md"
     }
   }
 }
