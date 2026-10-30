@@ -1848,6 +1848,14 @@
         "gk-1989-regular-guangdong-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b60",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-beijing-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1857,7 +1865,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ae9872e4-6cd2-4a10-901d-a67792b75ba8",
+  "last_transaction_id": "f3b94229-83a3-43d4-a6a4-9e717f33c53b",
   "papers": [
     {
       "blocked_from": null,
@@ -25217,9 +25225,61 @@
       "title": "1989 年·广东卷文科候选卷",
       "track": "arts",
       "year": 1989
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2006_beijing_arts",
+        "id": "gk-2006-regular-beijing-arts",
+        "note": "固定候选 PDF source ID src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347，SHA-256 476c44dd673847bcf6b5a3f940cdf464720fcf89d4a7096d8c531b27327813ec，Git blob eb7cc18947cc89b7759f2a15b56f8a05d2c0a0d8，2页（印刷页282–283）。仅作本库内部 canonical 固定字节绑定，不认证发布者、版次、来源链或官方身份。PDF无答案页，答案为本库独立推导、非官方，official_answer=null。Q8、Q16、Q17题图仍为位置说明，图稿待重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-beijing-arts",
+      "production_state": "planned",
+      "project_dir": "2006_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_北京文_含解析.md",
+        "questions": "2006/2006_数学真题_北京文_试题.md",
+        "solution_body": "2006/2006_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347"
+      ],
+      "title": "2006 年·北京卷·文科",
+      "track": "arts",
+      "year": 2006
     }
   ],
-  "revision": 5479,
+  "revision": 5480,
   "schema_version": 1,
   "sources": [
     {
@@ -32508,8 +32568,8 @@
       "exam_type": "regular",
       "git_blob_oid": "eb7cc18947cc89b7759f2a15b56f8a05d2c0a0d8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006北京文.pdf",
       "regions": [],
       "source_id": "src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347",

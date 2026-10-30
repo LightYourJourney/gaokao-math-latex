@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 北京文科候选卷：内部来源绑定与确定性项目装配（2026-10-30）
+
+- 注册 dry-run 返回 `OK` 后，按固定 source `src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347` 登记 `gk-2006-regular-beijing-arts` / `phase1-b60`，manifest revision `5479→5480`，事务 `f3b94229-83a3-43d4-a6a4-9e717f33c53b`。`canonical` 仅表示本库固定字节输入绑定；source authenticity、发布者、版次、来源链与官方身份未核，答案 `official_answer=null`。paper/batch 均为 `planned`，无逐题 issues；Q8/Q16/Q17 图稿待重绘，`figure_files=[]`。
+- 新增选择题速查行 A/B/C/B/D/B/C/C，与逐题答案行的生成检查通过。`generate_projects` 生成索引及 `questions.tex`、`answers.tex`；`make_short_answers` 生成速查稿；`make_editions` 生成四版入口壳。三种生成器 `--check` 均通过，`solution_sources check-batch` 对齐20题。含解析稿现为14,911 bytes，SHA-256 `53ad420e30e50d3c28d0f40c8628a53fb4ea872c85c7380a874ee783cd2857ce`。
+- `manifest.csv` 775行并通过当前性检查；全库六个报告目标经 `report.py render --all` 原子刷新，`report.py check --all` 通过。项目总计356卷、214批；本批因尚无build/review receipts，汇总门禁显示 `INVALID_OR_STALE`，这不是构建或验收结论。manifest 与 issues 校验、`git diff --check` 通过。
+- 尚未导入逐题 provenance、绘制题图、生成正式 PDF、构建或视觉审查，也未运行测试。阶段报告：`reports/2006-beijing-arts-registration.md`。下一步：依固定源重绘 Q8/Q16/Q17，并同步更新图稿、Markdown映射、manifest和provenance，再进入正式构建与校样。
+
 ### 2006 北京文科候选卷：规范源对齐与确定性合并稿（2026-10-30）
 
 - 修正题面 frontmatter 的答案状态为“本库独立推导并交叉复核；非官方”，删除已过时的“答案与解析尚未整理”尾注。为符合解析器锚点，题面 Q15—Q20 小问标记保留 PDF 中的间隔，答案 Q16 按原两小问拆分，解析 Q1—Q20 标题及 Q15—Q20 小问标题规范化；Q20（2）参数族只调整 Markdown 答案块格式，数学条件不变。
