@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 北京理科候选卷：四版正式构建与缺字告警订正（2026-10-30）
+
+- 首次正式构建 attempt ee722b21-675c-436a-9687-e98e714f367b 的四版编译均成功，但解析版和印刷版各报30条缺字告警；逐条证据对应规范解析正文中30个显示公式内的全角逗号/句号。已从显示公式内部移除这些行尾标点，重生成派生 Markdown 与 TeX；后续状态说明同步为“已构建、逐页视觉待验”。
+- 最终正式构建 attempt c7eb4a45-455a-49ac-b4e4-02678eb9bf4b，前序 attempt 0e5ec32a-7461-4aa8-b116-e125ff89aa96；输入 manifest revision 5501，构建完成后 revision 5502。TeX Live 2026；试题/解析/简答/印刷版分别5/19/7/15页，共46页。
+- 最终四版均 succeeded，error、missing character、overfull 与 undefined reference 均为0；receipt 与当前输入一致。初次带缺字的 attempt 被后续源修订取代，细节与最终 PDF SHA-256 见 reports/2006-beijing-science-formal-build.md。
+- 当前 paper/batch 为 compiled_pending_review。四版 PDF 尚未逐页目视，尚无 review receipt；下一阶段须检查全部46页与三幅图形并写入对应视觉回执。来源身份仍未核，答案仍为本库非官方推导、official_answer=null。
+
 ### 2006 北京理科候选卷：Q8/Q16/Q17 图稿、三角色 provenance 与项目装配（2026-10-30）
 
 - 依固定 PDF 第1页（印刷页280）绘制Q8环岛流量图、Q16导函数图和Q17四棱锥图，替换题面位置说明并形成项目内本地 TikZ 链接。三图各在规范题面与含解析稿引用一次，manifest `figure_files.expected_occurrences=2`；生成器据链接确定映射。
