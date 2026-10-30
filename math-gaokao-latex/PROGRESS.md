@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 北京文科候选卷：45页逐页视觉校样与批次关闭（2026-10-30）
+
+- 对正式 build attempt `d3bf6424-8f6d-45c0-92e7-5be594f3a9bc` 的试题/解析/简答/印刷四版逐页复核，共45页、360项检查；329项通过，31项 `figure_label` 对无图页标记为 `not_applicable` 并写明理由，失败项为0。候选页复查锚点为试题/简答/印刷版第1页、解析版第19页。
+- 未见缺字、题号或页眉页脚错误、图文碰撞及图形标签裁切；印刷版第12页从Q17（2）答案框续页开始，内容与编号完整，已在分页检查中注明。正式 review receipt 为 `2006_北京卷_文科/receipts/review.json`，审查时间 `2026-10-30T10:15:58+08:00`；批次报告为 `reports/phase1-b60.md`。
+- `review_receipts.py check-batch` 返回 `FINALIZED`；`build_projects.py validate-receipts --require-current-inputs` 返回 `OK`，0 missing/invalid/stale/pending。manifest revision `5489→5490`，批次 `phase1-b60` 为 `closed`，该卷 `production_state=complete`；本结论只覆盖这一候选卷及其四版交付，不表示其他年份或整个语料库完成。
+- 固定 PDF source `src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347` 的发布者、版次、来源链及官方身份仍未认证；答案为本库独立推导、非官方，`official_answer=null`。未运行测试套件；视觉复核工时未单独计时。
+
 ### 2006 北京文科候选卷：四版正式构建（2026-10-30）
 
 - 正式 build attempt `d3bf6424-8f6d-45c0-92e7-5be594f3a9bc` 取代旧目录注记对应的首轮 attempt `47d7ac49-05f4-4dfc-a156-83e9b488bf1e`；输入 manifest revision `5488`，当前 revision `5489`。四版为5/19/7/14页，共45页，构建 wall time 约11.8秒。PDF SHA、工具链及输入指纹见 `reports/2006-beijing-arts-formal-build.md` 与 build receipt。
