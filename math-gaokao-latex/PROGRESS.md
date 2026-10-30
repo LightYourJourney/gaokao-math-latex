@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 北京文科候选卷：Q8/Q16/Q17 图稿、20题 provenance 与确定性装配（2026-10-30）
+
+- 依据固定候选 PDF source src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347（SHA-256 476c44dd673847bcf6b5a3f940cdf464720fcf89d4a7096d8c531b27327813ec）第1页（印刷页282）重绘 Q8 环岛流量图、Q16 导函数图、Q17 正四棱柱图。三份 TikZ 源、题面映射及确定性含解析稿已生成；manifest figure_files 登记每图两次引用。
+- 三角色 provenance 覆盖20题，绑定 source ID/SHA/页码及规范题面、答案哈希；答案证据均为 D 级本库非官方推导，official_answer=null。姓名未记录，角色字符串仅代表工作职责。Q8/Q16/Q17 新图稿暂未由第二读者专项复核，来源身份仍未核。
+- manifest 从 revision 5480 推进到5484：先登记三图，再导入 provenance、更新目录注记，并在生成 TeX 后将状态投影对齐为 paper editions_generated、batch provenance_verified。题面/答案/解析派生稿、项目 TeX、index、四版壳已刷新。
+- provenance、20题 source 对齐、三生成器 --check 均通过。CSV 在 revision 更新后短暂失效，已重生成775行；report.py check --all、manifest_csv.py --check 与 source_manifest.py validate 均通过，全库报告投影当前。未生成正式 PDF 或 build/review 回执，未运行测试；尚需四版构建及逐页视觉校样。详见 reports/2006-beijing-arts-figures-provenance.md。此阶段不表示本卷验收或1952—2026语料库完成。
+
 ### 2006 北京文科候选卷：内部来源绑定与确定性项目装配（2026-10-30）
 
 - 注册 dry-run 返回 `OK` 后，按固定 source `src-48c4e852d76caf4118f9d92691883137983f1f132326a07ee8d5da7707668347` 登记 `gk-2006-regular-beijing-arts` / `phase1-b60`，manifest revision `5479→5480`，事务 `f3b94229-83a3-43d4-a6a4-9e717f33c53b`。`canonical` 仅表示本库固定字节输入绑定；source authenticity、发布者、版次、来源链与官方身份未核，答案 `official_answer=null`。paper/batch 均为 `planned`，无逐题 issues；Q8/Q16/Q17 图稿待重绘，`figure_files=[]`。
