@@ -1,0 +1,18 @@
+% 2018 天津文科第17题四面体示意图（据固定源第2页重绘）
+\begin{tikzpicture}[line cap=round, line join=round, thick, every node/.style={font=\small}]
+  \coordinate (A) at (1.2, 2.2);
+  \coordinate (B) at (0, 0.6);
+  \coordinate (C) at (0.8, -0.2);
+  \coordinate (D) at (4.0, 1.0);
+  \coordinate (M) at ($(A)!0.5!(B)$);
+  % 实线可见棱
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D) (C) -- (D);
+  % 虚线不可见棱及 MD
+  \draw[dashed] (B) -- (D) (M) -- (D);
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above left] at (M) {$M$};
+\end{tikzpicture}
