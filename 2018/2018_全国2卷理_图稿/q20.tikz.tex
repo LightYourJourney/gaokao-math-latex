@@ -1,0 +1,27 @@
+% 2018 全国Ⅱ卷理科第20题三棱锥示意图（据固定源第2页重绘）
+\begin{tikzpicture}[line cap=round, line join=round, thick, scale=1.1, every node/.style={font=\small}]
+  \coordinate (O) at (0, 0);
+  \coordinate (A) at (-2.2, 0);
+  \coordinate (C) at (2.2, 0);
+  \coordinate (B) at (-0.8, -1.3);
+  \coordinate (P) at (0, 2.8);
+  % M 在 BC 上，MC = 2 MB，即 M 分向量 BC 为 1:2
+  \coordinate (M) at ($(B)!0.333!(C)$);
+
+  % 实线可见轮廓
+  \draw (P) -- (A) -- (B) -- (C) -- (P);
+  \draw (P) -- (B);
+
+  % 虚线不可见及辅助线
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (P) -- (O);
+  \draw[dashed] (O) -- (M);
+
+  % 顶点标注
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[right] at (C) {$C$};
+  \node[below left] at (B) {$B$};
+  \node[above right] at (O) {$O$};
+  \node[below right] at (M) {$M$};
+\end{tikzpicture}
