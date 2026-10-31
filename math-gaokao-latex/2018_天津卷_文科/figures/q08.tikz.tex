@@ -1,0 +1,17 @@
+% 2018 天津文科第8题平面几何示意图（据固定源第1页重绘）
+\begin{tikzpicture}[font=\small, line cap=round, line join=round]
+  \coordinate (A) at (0, 2.2);
+  \coordinate (B) at (-2.2, -0.6);
+  \coordinate (C) at (2.4, -0.2);
+  \coordinate (M) at ($(A)!0.333!(B)$);
+  \coordinate (N) at ($(A)!0.333!(C)$);
+  \coordinate (O) at (-0.3, 0.9);
+  \draw[thick] (B) -- (C) -- (A) -- cycle;
+  \draw[thick] (M) -- (O) -- (N);
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[left] at (M) {$M$};
+  \node[above right] at (N) {$N$};
+  \node[below] at (O) {$O$};
+\end{tikzpicture}
