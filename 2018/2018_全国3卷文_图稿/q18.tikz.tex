@@ -1,0 +1,23 @@
+% 2018 全国Ⅲ卷文科/理科第18题第一种与第二种生产方式工时茎叶图
+\begin{tikzpicture}[font=\footnotesize, line width=0.6pt, baseline=(current bounding box.center)]
+  % 表头
+  \node[anchor=base] at (-2.4, 0.35) {第一种生产方式};
+  \node[anchor=base] at (2.4, 0.35) {第二种生产方式};
+  % 表头下横线
+  \draw (-4.5, 0.15) -- (4.5, 0.15);
+  % 茎区两侧竖线
+  \draw (-0.35, 0.5) -- (-0.35, -2.1);
+  \draw (0.35, 0.5) -- (0.35, -2.1);
+
+  % 逐行填入叶与茎
+  \foreach \y/\stem/\leftleaves/\rightleaves in {
+    -0.2/6/{8}/{5\ 5\ 6\ 8\ 9},
+    -0.7/7/{9\ 7\ 6\ 2}/{0\ 1\ 2\ 2\ 3\ 4\ 5\ 6\ 6\ 8},
+    -1.2/8/{9\ 8\ 7\ 7\ 6\ 5\ 4\ 3\ 3\ 2}/{1\ 4\ 4\ 5},
+    -1.7/9/{2\ 1\ 1\ 0\ 0}/{0}}
+  {
+    \node[anchor=east] at (-0.5, \y) {\leftleaves};
+    \node at (0, \y) {\stem};
+    \node[anchor=west] at (0.5, \y) {\rightleaves};
+  }
+\end{tikzpicture}
