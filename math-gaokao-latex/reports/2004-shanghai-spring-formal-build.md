@@ -13,3 +13,7 @@
 - Q13/Q14 仅添加选项换行；删除过时状态句。Q22（3）解析把重复显示公式改写为逐区间距离的文字及行内表达式，完整分段函数继续保留在答案要点和生成答案框；数学结论未改。Q13/Q14 当前题面哈希已重导入 provenance，既有来源核对的时间边界仍记录。
 - 新 attempt `7de1258f-7b9c-4b52-9416-e295824edbc2` 输入 manifest revision 5531，完成后 revision 5532；四版依次 4/18/6/15 页，共43页，均 succeeded，error、missing character、undefined reference、Overfull 与 Underfull 为0。PDF SHA-256 依次为 `74ad932993dd143ae2a22cf480afe308bcd207e569cd47880aeebdbe6f515e41`、`3b82e24feedf5294c19990b55be149fd1432f36e7300e4addf47ce4f510b8455`、`bfe7a957e3765206a602543a8867fc0e5ebc73524b6d393920d0e53486274`、`9d3ed1d3f0f2f36f428bbd6c44fc8d0fc3ad391e16a2df19cda7c28bbb3db6c0`。
 - 主流程目视新试题版第1、3页及解析版第18页：过时说明已去除，Q13/Q14 选项完整换行，Q22 三个答案框同页且分段函数完整。其余页面及四版完整八项检查仍待完成；build receipt 当前、review pending，`ISSUE-1264`—`ISSUE-1266` 保持开放阻断。
+
+## 最终回执更新
+
+卷目注记改为引用正式回执，避免视觉完成后仍写“待完成”；最终 attempt `3c1f0efa-edf1-4344-8272-2cfda8606be9` 以 revision 5535 构建，四版仍为 4/18/6/15 页。其43页90 dpi PNG 与已实际审查的 attempt `7de1258f` 逐页字节相同，最终 review 绑定新 attempt 并继承实际视觉结论；`phase1-b62` 在 revision 5537 收口为 `closed_with_blockers`。详见 `reports/2004-shanghai-spring-formal-review.md` 与机器可读回执。
