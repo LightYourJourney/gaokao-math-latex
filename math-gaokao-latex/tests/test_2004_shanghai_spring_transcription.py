@@ -36,10 +36,10 @@ class ShanghaiSpring2004TranscriptionTests(unittest.TestCase):
         self.assertEqual(source["paper_relation"], "canonical")
         paper = next(item for item in self.manifest["papers"] if item["paper_id"] == source["paper_id"])
         self.assertEqual(paper["production_state"], "blocked")
-        self.assertEqual(set(paper["issue_ids"]), {"ISSUE-1264", "ISSUE-1265", "ISSUE-1266"})
+        self.assertTrue({"ISSUE-1264", "ISSUE-1265", "ISSUE-1266"}.issubset(paper["issue_ids"]))
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
-        self.assertIn("内部 paper_id 绑定", self.transcript)
+        self.assertIn("内部卷件标识绑定", self.transcript)
         self.assertIn("不代表官方身份认证", self.transcript)
 
     def test_provenance_preserves_pending_interpretations(self):
