@@ -1,0 +1,62 @@
+% 2018 全国Ⅱ卷文科第3题函数图象选项（据固定源第1页重绘）
+\begin{tikzpicture}[line cap=round, line join=round, line width=0.6pt, font=\small]
+% (A) 偶函数向上
+\begin{scope}[shift={(0,3.8)}, x=0.55cm, y=0.45cm]
+  \draw[->] (-3.2,0) -- (3.2,0) node[below] {$x$};
+  \draw[->] (0,-1.2) -- (0,3.8) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+  \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+  \begin{scope}
+    \clip (-3,-1) rectangle (3,3.5);
+    \draw[thick, domain=0.45:3, samples=60] plot (\x, {(exp(\x)+exp(-\x)-1.5)/(\x^2)});
+    \draw[thick, domain=-3:-0.45, samples=60] plot (\x, {(exp(-\x)+exp(\x)-1.5)/(\x^2)});
+  \end{scope}
+  \node at (0,-2.0) {(A)};
+\end{scope}
+
+% (B) 奇函数：x>0为正（正确选项）
+\begin{scope}[shift={(4.8,3.8)}, x=0.55cm, y=0.45cm]
+  \draw[->] (-3.2,0) -- (3.2,0) node[below] {$x$};
+  \draw[->] (0,-3.2) -- (0,3.5) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+  \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+  \begin{scope}
+    \clip (-3,-3) rectangle (3,3.3);
+    \draw[thick, domain=0.55:3, samples=60] plot (\x, {(exp(\x)-exp(-\x))/(\x^2)});
+    \draw[thick, domain=-3:-0.55, samples=60] plot (\x, {(exp(\x)-exp(-\x))/(\x^2)});
+  \end{scope}
+  \node at (0,-3.8) {(B)};
+\end{scope}
+
+% (C) 偶函数向下
+\begin{scope}[shift={(0,-2.5)}, x=0.55cm, y=0.45cm]
+  \draw[->] (-3.2,0) -- (3.2,0) node[below] {$x$};
+  \draw[->] (0,-3.8) -- (0,1.2) node[left] {$y$};
+  \node[above left] at (0,0) {$O$};
+  \draw (1,0.08) -- (1,-0.08) node[above] {$1$};
+  \draw (0.08,-1) -- (-0.08,-1) node[left] {$-1$};
+  \begin{scope}
+    \clip (-3,-3.5) rectangle (3,1);
+    \draw[thick, domain=0.45:3, samples=60] plot (\x, {-(exp(\x)+exp(-\x)-1.5)/(\x^2)});
+    \draw[thick, domain=-3:-0.45, samples=60] plot (\x, {-(exp(-\x)+exp(\x)-1.5)/(\x^2)});
+  \end{scope}
+  \node at (0,-4.5) {(C)};
+\end{scope}
+
+% (D) 奇函数：x>0为负
+\begin{scope}[shift={(4.8,-2.5)}, x=0.55cm, y=0.45cm]
+  \draw[->] (-3.2,0) -- (3.2,0) node[below] {$x$};
+  \draw[->] (0,-3.2) -- (0,3.5) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+  \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+  \begin{scope}
+    \clip (-3,-3) rectangle (3,3.3);
+    \draw[thick, domain=0.55:3, samples=60] plot (\x, {-(exp(\x)-exp(-\x))/(\x^2)});
+    \draw[thick, domain=-3:-0.55, samples=60] plot (\x, {-(exp(\x)-exp(-\x))/(\x^2)});
+  \end{scope}
+  \node at (0,-3.8) {(D)};
+\end{scope}
+\end{tikzpicture}

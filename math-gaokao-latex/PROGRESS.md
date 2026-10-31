@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅱ卷文科候选卷：项目 TeX 装配与四版壳生成（2026-11-01）
+
+- 复制 4 幅 TikZ 矢量图到 `2018_全国Ⅱ卷_文科/figures/`，`sync-figure-registry` 成功登记并写入 revision 5590；
+- `generate_projects --write` 顺利生成 `questions.tex`、`answers.tex` 并更新全局 `index.json`；
+- `make_short_answers --write` 生成 `answers_short.tex`，选择/填空/解答速查格式对齐；
+- `make_editions --write` 生成试题版、解析版、简答版、印刷版四个入口文件；
+- 三项生成器 `--check` 交叉校验全部通过。
+
 ### 2018 全国Ⅱ卷文科候选卷：正式登记与计划批次（2026-11-01）
 
 - 经预检通过后，使用 `source_manifest.py register-papers` 单一事务登记 `gk-2018-regular-national-2-arts` 与批次 `phase0-b11`，manifest revision 5589。
