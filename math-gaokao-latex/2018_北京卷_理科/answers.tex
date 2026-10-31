@@ -1,0 +1,692 @@
+% answers.tex —— 2018 年·北京卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2018/2018_数学真题_北京卷理_试题.md + 2018/2018_数学真题_北京卷理_解析正文.md + 2018/2018_数学真题_北京卷理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+\textbf{来源与结论边界}：固定源 PDF 只有题面，没有官方答案页。以下为依据固定题面所作的非官方推导，不能称作官方答案。第 16 题固定源印作“三棱锥 $ABC-A_1B_1C_1$”，同时列有六个顶点；该矛盾无法由现有材料消解，因此第 16 题三问只在明确假设“原图实际表示直三棱柱，且侧棱长为 $2$”下给出条件性推导，不能据此宣称原题已解。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A=\{x\mid |x|<2\}$，$B=\{-2,0,1,2\}$，则 $A\cap B=$（　）
+
+（A）$\{0,1\}$　（B）$\{-1,0,1\}$　（C）$\{-2,0,1,2\}$　（D）$\{-1,0,1,2\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+$A=(-2,2)$，集合 $B$ 的四个元素中，只有 $0,1$ 属于 $A$，故
+\nopagebreak[4]
+\[
+A\cap B=\{0,1\}.
+\]
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+在复平面内，复数 $\dfrac{1}{1-\mathrm i}$ 的共轭复数对应的点位于（　）
+
+（A）第一象限　（B）第二象限　（C）第三象限　（D）第四象限
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+\frac1{1-\mathrm i}=\frac{1+\mathrm i}{(1-\mathrm i)(1+\mathrm i)}=\frac{1+\mathrm i}{2},
+\]
+其共轭复数为 $(1-\mathrm i)/2$，实部为正、虚部为负，对应点在第四象限。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+执行如图所示的程序框图，输出的 $s$ 值为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/q03.tikz}\end{center}
+\nopagebreak[4]
+（A）$\dfrac12$　（B）$\dfrac56$　（C）$\dfrac76$　（D）$\dfrac7{12}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+程序从 $k=1,s=1$ 开始。第一次循环后
+\nopagebreak[4]
+\[
+s=1+\frac{(-1)^1}{1+1}=\frac12,\qquad k=2.
+\]
+\Needspace{5\baselineskip}
+此时 $k<3$，继续循环；第二次循环后
+\nopagebreak[4]
+\[
+s=\frac12+\frac{(-1)^2}{1+2}=\frac56,\qquad k=3.
+\]
+此时满足停止条件，输出 $s=5/6$。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+“十二平均律”是通用的音律体系，明代朱载堉最早用数学方法计算出半音比例，为这个理论的发展做出了重要贡献。十二平均律将一个纯八度音程分成十二份，依次得到十三个单音，从第二个单音起，每一个单音的频率与它的前一个单音的频率的比都等于 $\sqrt[12]{2}$。若第一个单音的频率为 $f$，则第八个单音的频率为（　）
+
+（A）$\sqrt[3]{2}f$　（B）$\sqrt[3]{2^2}f$　（C）$\sqrt[12]{2^5}f$　（D）$\sqrt[12]{2^7}f$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+相邻两个单音的频率比为 $\sqrt[12]{2}$。从第一个单音到第八个单音共经过七次相乘，因此第八个单音的频率为
+\nopagebreak[4]
+\[
+f\left(\sqrt[12]{2}\right)^7=\sqrt[12]{2^7}f.
+\]
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+某四棱锥的三视图如图所示，在此四棱锥的侧面中，直角三角形的个数为（　）
+\nopagebreak[4]
+\begin{center}\input{figures/q05.tikz}\end{center}
+\nopagebreak[4]
+（A）$1$　（B）$2$　（C）$3$　（D）$4$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+按三视图取顶点坐标：顶点 $S=(0,0,2)$，底面四顶点依次为 $A=(0,0,0),B=(0,2,0),C=(2,2,0),D=(1,0,0)$。这与主视图的底边分点、左视图的高和深度、俯视图的梯形轮廓相符。四个侧面中，$SAB$ 在 $A$ 处直角（$SA\perp AB$）；$SBC$ 在 $B$ 处直角（$SB\perp BC$）；$SDA$ 在 $A$ 处直角（$SA\perp AD$）。而 $SCD$ 在 $C,D,S$ 处的相邻边点积依次为 $6,-1,6$，均非零，故不是直角三角形。因此侧面中的直角三角形有 $3$ 个。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设 $a,b$ 均为单位向量，则“$|a-3b|=|3a+b|$”是“$a\perp b$”的（　）
+
+（A）充分而不必要条件　（B）必要而不充分条件\\
+（C）充分必要条件　（D）既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+两边均非负，平方后比较：
+\nopagebreak[4]
+\[
+|a-3b|^2-|3a+b|^2
+=(|a|^2+9|b|^2-6a\cdot b)-(9|a|^2+|b|^2+6a\cdot b)
+=-12a\cdot b,
+\]
+其中用了 $|a|=|b|=1$。所以两模相等当且仅当 $a\cdot b=0$，即 $a\perp b$，为充要条件。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+在平面直角坐标系中，记 $d$ 为点 $P(\cos\theta,\sin\theta)$ 到直线 $x-my-2=0$ 的距离。当 $\theta,m$ 变化时，$d$ 的最大值为（　）
+
+（A）$1$　（B）$2$　（C）$3$　（D）$4$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+点到直线的距离为
+\nopagebreak[4]
+\[
+d=\frac{|\cos\theta-m\sin\theta-2|}{\sqrt{1+m^2}}.
+\]
+\Needspace{5\baselineskip}
+固定 $m$，表达式 $\cos\theta-m\sin\theta$ 的取值范围为 $[-\sqrt{1+m^2},\sqrt{1+m^2}]$，故
+\nopagebreak[4]
+\[
+\max_\theta d=\frac{2+\sqrt{1+m^2}}{\sqrt{1+m^2}}
+=1+\frac2{\sqrt{1+m^2}}\leqslant3.
+\]
+取 $m=0$ 可取到 $3$，所以最大值为 $3$。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设集合 $A=\{(x,y)\mid x-y\geqslant1,\ ax+y>4,\ x-ay\leqslant2\}$，则（　）
+
+（A）对任意实数 $a$，$(2,1)\in A$　（B）对任意实数 $a$，$(2,1)\notin A$\\
+（C）当且仅当 $a<0$ 时，$(2,1)\notin A$　（D）当且仅当 $a\leqslant\dfrac32$ 时，$(2,1)\notin A$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+代入 $(x,y)=(2,1)$，第一个不等式成为 $1\geqslant1$，恒成立；第二个不等式要求 $2a+1>4$，即 $a>3/2$；第三个不等式要求 $2-a\leqslant2$，即 $a\geqslant0$。因此
+\nopagebreak[4]
+\[
+(2,1)\in A\quad\Longleftrightarrow\quad a>\frac32.
+\]
+也就是当且仅当 $a\leqslant3/2$ 时 $(2,1)\notin A$，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+设 $\{a_n\}$ 是等差数列，且 $a_1=3$，$a_2+a_5=36$，则 $\{a_n\}$ 的通项公式为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设公差为 $d$。则 $a_2=3+d$，$a_5=3+4d$，由 $a_2+a_5=36$ 得
+\nopagebreak[4]
+\[
+6+5d=36,\qquad d=6.
+\]
+所以 $a_n=3+6(n-1)=6n-3$。
+
+\gkanswer{答案：$a_n=6n-3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+在极坐标系中，直线 $\rho\cos\theta+\rho\sin\theta=a\ (a>0)$ 与圆 $\rho=2\cos\theta$ 相切，则 $a=$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+将极坐标化为直角坐标，圆 $\rho=2\cos\theta$ 化为
+\nopagebreak[4]
+\[
+x^2+y^2=2x,
+\]
+\Needspace{5\baselineskip}
+即圆心 $(1,0)$、半径 $1$ 的圆。直线为 $x+y=a$。相切条件是圆心到直线的距离等于半径：
+\nopagebreak[4]
+\[
+\frac{|1-a|}{\sqrt2}=1,
+\]
+故 $a=1\pm\sqrt2$。结合 $a>0$，得 $a=1+\sqrt2$。
+
+\gkanswer{答案：$1+\sqrt2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\cos\left(\omega x-\dfrac\pi6\right)\ (\omega>0)$。若 $f(x)\leqslant f\left(\dfrac\pi4\right)$ 对任意的实数 $x$ 都成立，则 $\omega$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+要使 $f(x)\leqslant f(\pi/4)$ 对所有实数 $x$ 成立，右端必须是余弦函数的最大值 $1$。因此
+\nopagebreak[4]
+\[
+\cos\left(\frac{\omega\pi}{4}-\frac\pi6\right)=1,
+\]
+从而 $\omega\pi/4-\pi/6=2k\pi$，即 $\omega=2/3+8k$。在 $\omega>0$ 中最小者为 $2/3$。
+
+\gkanswer{答案：$2/3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+若 $x,y$ 满足 $x+1\leqslant y\leqslant2x$，则 $2y-x$ 的最小值是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由 $x+1\leqslant y\leqslant2x$ 可知 $x+1\leqslant2x$，所以 $x\geqslant1$。又 $y\geqslant x+1$，故
+\nopagebreak[4]
+\[
+2y-x\geqslant2(x+1)-x=x+2\geqslant3.
+\]
+在 $(x,y)=(1,2)$ 处两条下界同时取等，最小值为 $3$。
+
+\gkanswer{答案：$3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+能够说明“若 $f(x)>f(0)$ 对任意的 $x\in(0,2]$ 都成立，则 $f(x)$ 在 $[0,2]$ 上是增函数”为假命题的一个函数是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+当 $0<x\leqslant2$ 时，$f(x)=x(3-x)>0=f(0)$，满足题设前件。但 $f'(x)=3-2x$，在 $(3/2,2]$ 上为负，故 $f$ 在 $[0,2]$ 上不是增函数。该函数可说明原命题为假。
+
+\gkanswer{答案：例如 $f(x)=x(3-x)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知椭圆 $M:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\ (a>b>0)$，双曲线 $N:\dfrac{x^2}{m^2}-\dfrac{y^2}{n^2}=1$。若双曲线 $N$ 的两条渐近线与椭圆 $M$ 的四个交点及椭圆 $M$ 的两个焦点恰为一个正六边形的顶点，则椭圆 $M$ 的离心率为\gkblank{}；双曲线 $N$ 的离心率为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+椭圆焦点为 $(-c,0),(c,0)$。由于椭圆与两条对称渐近线的四个交点和这两个焦点构成正六边形，正六边形的另外四个顶点可写作
+\nopagebreak[4]
+\[
+\left(\pm\frac c2,\ \pm\frac{\sqrt3c}{2}\right).
+\]
+\Needspace{5\baselineskip}
+将其中一点代入椭圆方程，并用 $c^2=a^2-b^2$：
+\nopagebreak[4]
+\[
+\frac{c^2}{4a^2}+\frac{3c^2}{4b^2}=1.
+\]
+\Needspace{5\baselineskip}
+令 $e=c/a$，且 $b^2=a^2(1-e^2)$，化简得 $e^2=4-2\sqrt3$，故 $e=\sqrt3-1$。由正六边形顶点的方向可知渐近线斜率的绝对值为 $\sqrt3$，即 $n/m=\sqrt3$。双曲线离心率因此为
+\nopagebreak[4]
+\[
+\sqrt{1+\frac{n^2}{m^2}}=2.
+\]
+
+\gkanswer{答案：椭圆 $\sqrt3-1$；双曲线 $2$}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，$a=7$，$b=8$，$\cos B=-\dfrac17$。
+
+(1) 求 $\angle A$；
+
+(2) 求 $AC$ 边上的高。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\textbf{(1) 解析} 由余弦定理
+\nopagebreak[4]
+\[
+b^2=a^2+c^2-2ac\cos B.
+\]
+\Needspace{5\baselineskip}
+代入 $a=7,b=8,\cos B=-1/7$，得
+\nopagebreak[4]
+\[
+64=49+c^2+2c,
+\]
+\Needspace{5\baselineskip}
+即 $(c+5)(c-3)=0$。边长为正，故 $c=3$。再由余弦定理
+\nopagebreak[4]
+\[
+\cos A=\frac{b^2+c^2-a^2}{2bc}
+=\frac{64+9-49}{48}=\frac12,
+\]
+所以 $\angle A=60^\circ$。
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 三角形面积为
+\nopagebreak[4]
+\[
+S_{\triangle ABC}=\frac12bc\sin A
+=\frac12\cdot8\cdot3\cdot\frac{\sqrt3}{2}=6\sqrt3.
+\]
+\Needspace{5\baselineskip}
+$AC=b=8$，以 $AC$ 为底的高为
+\nopagebreak[4]
+\[
+h=\frac{2S}{AC}=\frac{12\sqrt3}{8}=\frac{3\sqrt3}{2}.
+\]
+
+\gkanswer{答案（1）：$\angle A=\pi/3$}
+
+\gkanswer{答案（2）：$3\sqrt3/2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+如图，在三棱锥 $ABC-A_1B_1C_1$ 中，$CC_1\perp$ 平面 $ABC$，$D,E,F,G$ 分别为 $AA_1,AC,A_1C_1,BB_1$ 的中点，$AB=BC=\sqrt5$，$AC=AA_1=2$。
+
+(1) 求证：$AC\perp$ 平面 $BEF$；
+
+(2) 求二面角 $B-CD-C_1$ 的余弦值；
+
+(3) 证明：直线 $FG$ 与平面 $BCD$ 相交。
+\nopagebreak[4]
+\begin{center}\input{figures/q16.tikz}\end{center}
+\nopagebreak[4]
+\begin{gktip}
+固定源题干印为“三棱锥”，但记号和原图有六个顶点；保留原文并待核，不推定官方题意。
+\end{gktip}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+固定源文字称该几何体为“三棱锥 $ABC-A_1B_1C_1$”，但该记号包含六个顶点，配图也为上下两个三角形及对应连线。现有固定源没有足够信息确认原题是否意在“三棱柱”。以下\textbf{仅假设图形应为直三棱柱、侧棱长为 $2$}，并在此假设下计算；这些结论不构成对原题的无条件解答。
+
+\Needspace{5\baselineskip}
+取底面坐标
+\nopagebreak[4]
+\[
+A=(0,0,0),\quad C=(2,0,0),\quad B=(1,2,0),
+\]
+\Needspace{5\baselineskip}
+令上底各点在对应底点正上方，高为 $2$，于是 $A_1=(0,0,2),B_1=(1,2,2),C_1=(2,0,2)$。这些坐标满足 $AB=BC=\sqrt5$、$AC=2$、$CC_1\perp$ 平面 $ABC$。中点坐标为
+\nopagebreak[4]
+\[
+D=(0,0,1),\quad E=(1,0,0),\quad F=(1,0,2),\quad G=(1,2,1).
+\]
+
+\textbf{(1) 解析} $B,E,F$ 三点均满足 $x=1$，故平面 $BEF$ 的方程为 $x=1$。直线 $AC$ 的方向向量为 $(1,0,0)$，是平面 $BEF$ 的法向量，因此 $AC\perp$ 平面 $BEF$。
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 二面角 $B-CD-C_1$ 沿棱 $CD$，其两半平面分别包含射线 $CB$ 和 $CC_1$。令
+\nopagebreak[4]
+\[
+\boldsymbol d=\overrightarrow{CD}=(-2,0,1),\quad
+\boldsymbol u=\overrightarrow{CB}=(-1,2,0),\quad
+\boldsymbol v=\overrightarrow{CC_1}=(0,0,2).
+\]
+\Needspace{5\baselineskip}
+将 $\boldsymbol u,\boldsymbol v$ 正交投影到垂直于棱 $CD$ 的平面。投影向量的点积为
+\nopagebreak[4]
+\[
+\boldsymbol u\cdot\boldsymbol v-
+\frac{(\boldsymbol u\cdot\boldsymbol d)(\boldsymbol v\cdot\boldsymbol d)}{|\boldsymbol d|^2}
+=0-\frac{2\cdot2}{5}=-\frac45.
+\]
+\Needspace{5\baselineskip}
+两投影向量长度分别为 $\sqrt{21/5}$ 与 $4/\sqrt5$，故按题目两条射线所确定的半平面，二面角余弦为
+\nopagebreak[4]
+\[
+\frac{-4/5}{(\sqrt{21/5})(4/\sqrt5)}=-\frac1{\sqrt{21}}.
+\]
+这里的负号来自所指定的射线半平面；仅对两个平面的法向量取锐角会丢失这个符号。
+
+\Needspace{5\baselineskip}
+\textbf{(3) 解析} 直线 $FG$ 可参数化为
+\nopagebreak[4]
+\[
+(x,y,z)=(1,2t,2-t).
+\]
+由 $B,C,D$ 三点求得平面 $BCD$ 方程为 $2x+y+4z=4$。代入直线参数式得 $10-2t=4$，故 $t=3$ 时相交。因而在上述附加假设下，$FG$ 与平面 $BCD$ 相交。
+
+\gkanswer{答案（1）：待核；若假设直三棱柱且侧棱长2，则条件性结论成立}
+
+\gkanswer{答案（2）：待核；若假设直三棱柱且侧棱长2，则余弦为 $-1/\sqrt{21}$}
+
+\gkanswer{答案（3）：待核；若假设直三棱柱且侧棱长2，则条件性结论成立}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+电影公司随机收集了电影的有关数据，经分类整理得到下表：
+
+\begin{center}
+\begin{tabular}{lrrrrrr}
+\toprule
+电影类型 & 第一类 & 第二类 & 第三类 & 第四类 & 第五类 & 第六类 \\
+\midrule
+电影部数 & 140 & 50 & 300 & 200 & 800 & 510 \\
+好评率 & 0.4 & 0.2 & 0.15 & 0.25 & 0.2 & 0.1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+好评率是指：一类电影中获得好评的部数与该类电影的部数的比值。假设所有电影是否获得好评相互独立。
+
+(1) 从电影公司收集的电影中随机选取 $1$ 部，求这部电影是获得好评的第四类电影的概率；
+
+(2) 从第四类电影和第五类电影中各随机选取 $1$ 部，估计恰有 $1$ 部获得好评的概率；
+
+(3) 假设每类电影得到人们喜欢的概率与表格中该类电影的好评率相等。用“$\xi_k=1$”表示第 $k$ 类电影得到人们喜欢，“$\xi_k=0$”表示第 $k$ 类电影没有得到人们喜欢（$k=1,2,3,4,5,6$）。写出方差 $D\xi_1,D\xi_2,D\xi_3,D\xi_4,D\xi_5,D\xi_6$ 的大小关系。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\textbf{(1) 解析} 电影总数为
+\nopagebreak[4]
+\[
+140+50+300+200+800+510=2000.
+\]
+\Needspace{5\baselineskip}
+第四类电影有 $200$ 部，其中好评电影占 $0.25$，所以好评的第四类电影数为 $200\times0.25=50$。所求概率为
+\nopagebreak[4]
+\[
+\frac{50}{2000}=\frac1{40}.
+\]
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 第四类、第五类电影获得好评的概率分别为 $0.25$ 和 $0.2$。两次抽取相互独立，恰有一部好评的概率为
+\nopagebreak[4]
+\[
+0.25(1-0.2)+(1-0.25)0.2=0.2+0.15=0.35=\frac7{20}.
+\]
+
+\Needspace{5\baselineskip}
+\textbf{(3) 解析} 伯努利随机变量取值为 $1$ 的概率为 $p$ 时，方差为 $p(1-p)$。依表格，各类方差依次为
+\nopagebreak[4]
+\[
+\begin{aligned}
+0.4\times0.6&=0.24,&\quad 0.2\times0.8&=0.16,&\quad 0.15\times0.85&=0.1275,\\
+0.25\times0.75&=0.1875,&\quad 0.2\times0.8&=0.16,&\quad 0.1\times0.9&=0.09.
+\end{aligned}
+\]
+\Needspace{5\baselineskip}
+故
+\nopagebreak[4]
+\[
+D\xi_1>D\xi_4>D\xi_2=D\xi_5>D\xi_3>D\xi_6.
+\]
+
+\gkanswer{答案（1）：$1/40$}
+
+\gkanswer{答案（2）：$7/20$}
+
+\gkanswer{答案（3）：$D\xi_1>D\xi_4>D\xi_2=D\xi_5>D\xi_3>D\xi_6$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\left[ax^2-(4a+1)x+4a+3\right]\mathrm e^x$。
+
+(1) 若曲线 $y=f(x)$ 在点 $(1,f(1))$ 处的切线与 $x$ 轴平行，求 $a$；
+
+(2) 若 $f(x)$ 在 $x=2$ 处取得极小值，求 $a$ 的取值范围。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $g(x)=ax^2-(4a+1)x+4a+3$，则 $f(x)=g(x)\mathrm e^x$，从而
+\nopagebreak[4]
+\[
+f'(x)=\mathrm e^x(g(x)+g'(x))=\mathrm e^x(x-2)(ax-1).
+\]
+
+\textbf{(1) 解析} 在 $x=1$ 处切线平行于 $x$ 轴，等价于 $f'(1)=0$。于是 $-\mathrm e( a-1)=0$，故 $a=1$。
+
+\textbf{(2) 解析} $\mathrm e^x>0$，所以 $f'$ 的符号由 $(x-2)(ax-1)$ 决定。要使 $x=2$ 为极小值点，$f'$ 须在 $2$ 的左侧为负、右侧为正；这要求 $2a-1>0$，即 $a>1/2$。当 $a=1/2$ 时，$f'(x)=\tfrac12\mathrm e^x(x-2)^2$，穿过 $x=2$ 不变号，故不取极小值。答案为 $a>1/2$。
+
+\gkanswer{答案（1）：$a=1$}
+
+\gkanswer{答案（2）：$a>1/2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知抛物线 $C:y^2=2px$ 经过点 $P(1,2)$。过点 $Q(0,1)$ 的直线 $l$ 与抛物线 $C$ 有两个不同的交点 $A,B$，且直线 $PA$ 交 $y$ 轴于点 $M$，直线 $PB$ 交 $y$ 轴于点 $N$。
+
+(1) 求直线 $l$ 的斜率的取值范围；
+
+(2) 设 $O$ 为原点，$\overrightarrow{QM}=\lambda\overrightarrow{QO}$，$\overrightarrow{QN}=\mu\overrightarrow{QO}$，求证：$\dfrac1\lambda+\dfrac1\mu$ 为定值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 $P(1,2)$ 在 $y^2=2px$ 上，得 $4=2p$，即抛物线为 $y^2=4x$。
+
+\Needspace{5\baselineskip}
+\textbf{(1) 解析} 设直线 $l$ 的斜率为 $k$，则 $l:y=kx+1$。与抛物线联立：
+\nopagebreak[4]
+\[
+k^2x^2+(2k-4)x+1=0.
+\]
+\Needspace{5\baselineskip}
+要有两个不同交点，需 $k\ne0$ 且判别式为正：
+\nopagebreak[4]
+\[
+(2k-4)^2-4k^2=16(1-k)>0.
+\]
+因此，仅要求两个不同交点时有 $k<1$ 且 $k\ne0$。题设还要求 $PA,PB$ 均与 $y$ 轴相交，故须排除某个交点横坐标 $x=1$ 的情形。将 $x=1$ 代入交点方程得 $(k-1)(k+3)=0$；$k=1$ 已排除，$k=-3$ 时交点 $(1,-2)$ 与 $P=(1,2)$ 所连直线为 $x=1$，不与 $y$ 轴相交。所以最终范围为 $k<1$ 且 $k\ne0,-3$。
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 设两交点横坐标为 $x_1,x_2$，对应点为 $A_i=(x_i,kx_i+1)$。由韦达定理，
+\nopagebreak[4]
+\[
+x_1+x_2=\frac{4-2k}{k^2},\qquad x_1x_2=\frac1{k^2}.
+\]
+\Needspace{5\baselineskip}
+由第（1）问的范围知 $x_i\ne1$，设 $PA_i$ 的斜率为 $r_i$。直线 $PA_i$ 与 $y$ 轴交于 $M_i$，由 $P=(1,2)$ 可知 $M_i$ 的纵坐标为 $2-r_i$。又 $Q=(0,1)$、$\overrightarrow{QO}=(0,-1)$，所以 $\overrightarrow{QM_i}=\lambda_i\overrightarrow{QO}$ 给出 $\lambda_i=r_i-1$。因此
+\nopagebreak[4]
+\[
+\lambda_i=\frac{kx_i-1}{x_i-1}-1=\frac{(k-1)x_i}{x_i-1}.
+\]
+\Needspace{5\baselineskip}
+于是
+\nopagebreak[4]
+\[
+\frac1\lambda+\frac1\mu
+=\frac1{k-1}\left(2-\frac1{x_1}-\frac1{x_2}\right)
+=\frac1{k-1}\left(2-\frac{x_1+x_2}{x_1x_2}\right)
+=\frac{2k-2}{k-1}=2,
+\]
+为定值。
+
+\gkanswer{答案（1）：$k<1$ 且 $k\ne0,-3$}
+
+\gkanswer{答案（2）：$1/\lambda+1/\mu=2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+设 $n$ 为正整数，集合 $A=\{\alpha\mid\alpha=(t_1,t_2,\cdots,t_n),\ t_k\in\{0,1\},\ k=1,2,\cdots,n\}$。对于集合 $A$ 的任意元素 $\alpha=(x_1,x_2,\cdots,x_n)$ 和 $\beta=(y_1,y_2,\cdots,y_n)$，记
+
+\nopagebreak[4]
+\[
+M(\alpha,\beta)=\dfrac12\left[(x_1+y_1-|x_1-y_1|)+(x_2+y_2-|x_2-y_2|)+\cdots+(x_n+y_n-|x_n-y_n|)\right].
+\]
+
+(1) 当 $n=3$ 时，若 $\alpha=(1,1,0)$，$\beta=(0,1,1)$，求 $M(\alpha,\alpha)$ 和 $M(\alpha,\beta)$ 的值；
+
+(2) 当 $n=4$ 时，设 $B$ 是 $A$ 的子集，且满足：对于 $B$ 中的任意元素 $\alpha,\beta$，当 $\alpha,\beta$ 相同时，$M(\alpha,\beta)$ 是奇数；当 $\alpha,\beta$ 不同时，$M(\alpha,\beta)$ 是偶数。求集合 $B$ 中元素个数的最大值；
+
+(3) 给定不小于 $2$ 的 $n$，设 $B$ 是 $A$ 的子集，且满足：对于 $B$ 中的任意两个不同的元素 $\alpha,\beta$，$M(\alpha,\beta)=0$。写出一个集合 $B$，使其元素个数最多，并说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+对 $x_i,y_i\in\{0,1\}$，有
+\nopagebreak[4]
+\[
+\frac12(x_i+y_i-|x_i-y_i|)=\begin{cases}1,&x_i=y_i=1,\\0,&\text{\text{其他情况}}\text{。}\end{cases}
+\]
+所以 $M(\alpha,\beta)$ 等于两个 $0$-1 向量中同时为 $1$ 的坐标数，也就是它们支集的交集大小。
+
+\textbf{(1) 解析} $M(\alpha,\alpha)$ 等于 $\alpha$ 中 $1$ 的个数，故 $M(\alpha,\alpha)=2$。$\alpha=(1,1,0)$ 与 $\beta=(0,1,1)$ 只有第二个坐标同时为 $1$，故 $M(\alpha,\beta)=1$。
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 条件要求每个 $\alpha\in B$ 的 $1$ 的个数为奇数；任意两个不同元素的支集交集大小为偶数。把 $0$-1 向量看作 $\mathbb F_2^4$ 中的向量，则条件分别为 $\alpha\cdot\alpha=1$ 和 $\alpha\cdot\beta=0$（$\alpha\ne\beta$）。若 $B$ 中向量线性相关，取非空子集 $S\subseteq B$ 使 $\sum_{\alpha\in S}\alpha=0$。与其中任意一个 $\beta\in S$ 作内积，有
+\nopagebreak[4]
+\[
+0=\left(\sum_{\alpha\in S}\alpha\right)\cdot\beta=\beta\cdot\beta=1,
+\]
+矛盾。因此 $B$ 中向量线性无关，$|B|\leqslant4$。取 $B=\{(1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1)\}$ 可达到 $4$，故最大值为 $4$。
+
+\Needspace{5\baselineskip}
+\textbf{(3) 解析} 条件 $M(\alpha,\beta)=0$ 表示不同元素的支集两两不交。可取
+\nopagebreak[4]
+\[
+B=\{(0,\ldots,0), (1,0,\ldots,0), (0,1,\ldots,0),\ldots,(0,\ldots,0,1)\},
+\]
+该集合有 $n+1$ 个元素，任意两个不同元素的支集交为空。反过来，除零向量外，两两不交的非空支集至多有 $n$ 个，因为每个至少占用一个不同坐标。因此 $|B|\leqslant n+1$，上面的构造达到最大值。
+
+\gkanswer{答案（1）：$2,1$}
+
+\gkanswer{答案（2）：最大 $4$}
+
+\gkanswer{答案（3）：例如 $\{0,e_1,\ldots,e_n\}$，最大 $n+1$}
+
+\end{answer}
