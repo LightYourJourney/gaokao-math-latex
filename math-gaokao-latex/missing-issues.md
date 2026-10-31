@@ -21257,3 +21257,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1273
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定PDF第1页第16题印“三棱锥 ABC-A1B1C1”，同时题干和配图标有六个顶点；现有证据不足以确认原题几何体名称。",
+  "fingerprint": "d4af2ef692f39740a1992892f3c0ced4ad68ba47d83f74bf3713650993172640",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-beijing-science",
+  "question_id": "gk-2018-regular-beijing-science-q16",
+  "resume_action": "取得可追溯的原卷或明确勘误，核对第16题几何体名称和结构后复核各问；核实前保留原文及条件性推导。",
+  "source_id": "src-4396cf65cb605774e43cd50dea8acaa02c88603173808a5d3fa88e52bcf502d4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1274
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第16题解答仅在假设直三棱柱且侧棱长为2的条件下推导；固定源无答案页，原文名称与六顶点图冲突，无法确定无条件答案。",
+  "fingerprint": "c913fc7a9b26f3c730540f8cd64254ee944596e810624797246b231ec9963218",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-beijing-science",
+  "question_id": "gk-2018-regular-beijing-science-q16",
+  "resume_action": "取得可追溯的原卷或明确勘误，核对第16题几何体名称和结构后复核各问；核实前保留原文及条件性推导。",
+  "source_id": "src-4396cf65cb605774e43cd50dea8acaa02c88603173808a5d3fa88e52bcf502d4",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
