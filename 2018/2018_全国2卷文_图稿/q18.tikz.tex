@@ -1,0 +1,57 @@
+% 2018 全国Ⅱ卷文科第18题环境基础设施投资额折线图（据固定源第1页重绘）
+\begin{tikzpicture}[line cap=round, line join=round, font=\scriptsize]
+  % 坐标轴与范围
+  % x 范围 1..17，每单位 0.54cm；y 范围 0..240，每 20 单位 0.38cm
+  \def\xstep{0.54}
+  \def\yscale{0.019}
+
+  % 背景水平网格线（虚线）
+  \foreach \y in {20,40,60,80,100,120,140,160,180,200,220,240} {
+    \draw[gray!30, dashed] (0, \y*\yscale) -- (17.6*\xstep, \y*\yscale);
+    \node[left, inner sep=2pt] at (0, \y*\yscale) {\tiny $\y$};
+  }
+  \node[left, inner sep=2pt] at (0,0) {\tiny $0$};
+
+  % 坐标轴
+  \draw[->, thick] (0,0) -- (18.2*\xstep, 0) node[right=2pt] {年份};
+  \draw[->, thick] (0,0) -- (0, 255*\yscale) node[above=2pt] {投资额 (亿元)};
+
+  % 横轴刻度与年份
+  \foreach \t/\yr in {
+    1/{00}, 2/{01}, 3/{02}, 4/{03}, 5/{04}, 6/{05}, 7/{06}, 8/{07},
+    9/{08}, 10/{09}, 11/{10}, 12/{11}, 13/{12}, 14/{13}, 15/{14}, 16/{15}, 17/{16}%
+  } {
+    \draw (\t*\xstep, 0.05) -- (\t*\xstep, -0.05);
+    \node[below, inner sep=1pt] at (\t*\xstep, -0.05) {\tiny $\begin{matrix} 20 \\ \yr \end{matrix}$};
+  }
+
+  % 折线与数据点
+  \draw[thick]
+    (1*\xstep, 11*\yscale) --
+    (2*\xstep, 19*\yscale) --
+    (3*\xstep, 25*\yscale) --
+    (4*\xstep, 35*\yscale) --
+    (5*\xstep, 37*\yscale) --
+    (6*\xstep, 42*\yscale) --
+    (7*\xstep, 42*\yscale) --
+    (8*\xstep, 47*\yscale) --
+    (9*\xstep, 53*\yscale) --
+    (10*\xstep, 56*\yscale) --
+    (11*\xstep, 122*\yscale) --
+    (12*\xstep, 129*\yscale) --
+    (13*\xstep, 148*\yscale) --
+    (14*\xstep, 171*\yscale) --
+    (15*\xstep, 184*\yscale) --
+    (16*\xstep, 209*\yscale) --
+    (17*\xstep, 220*\yscale);
+
+  \foreach \t/\val/\pos in {
+    1/11/above,2/19/above,3/25/above,4/35/above,5/37/{above left},%
+    6/42/above,7/42/{above right},8/47/above,9/53/above,10/56/above,%
+    11/122/{above left},12/129/{above right},13/148/above,14/171/{above left},%
+    15/184/above,16/209/{above left},17/220/above%
+  } {
+    \fill (\t*\xstep, \val*\yscale) circle (1.3pt);
+    \node[\pos, inner sep=1pt] at (\t*\xstep, \val*\yscale) {\tiny $\val$};
+  }
+\end{tikzpicture}
