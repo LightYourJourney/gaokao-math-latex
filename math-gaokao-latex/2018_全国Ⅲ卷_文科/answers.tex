@@ -1,0 +1,804 @@
+% answers.tex —— 2018 年·全国Ⅲ卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2018/2018_数学真题_全国3文_试题.md + 2018/2018_数学真题_全国3文_解析正文.md + 2018/2018_数学真题_全国3文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定源没有答案页；以下为非官方推导，不能称为官方答案。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A = \{x \mid x - 1 \geqslant 0\}$，$B = \{0, 1, 2\}$，则 $A \cap B =$（ ）。
+
+(A) $\{0\}$　(B) $\{1\}$　(C) $\{1, 2\}$　(D) $\{0, 1, 2\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由不等式 $x - 1 \geqslant 0$ 得 $x \geqslant 1$，故集合 $A = \{x \mid x \geqslant 1\}$。
+又集合 $B = \{0, 1, 2\}$，所以 $A \cap B = \{1, 2\}$。
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+$(1 + \mathrm i)(2 - \mathrm i) =$（ ）。
+
+(A) $-3 - \mathrm i$　(B) $-3 + \mathrm i$　(C) $3 - \mathrm i$　(D) $3 + \mathrm i$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由复数的乘法运算法则可得：
+\nopagebreak[4]
+\[(1 + \mathrm i)(2 - \mathrm i) = 2 - \mathrm i + 2\mathrm i - \mathrm i^2 = 2 + \mathrm i - (-1) = 3 + \mathrm i.\]
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+中国古建筑借助榫卯将木构件连接起来，构件的凸出部分叫榫头，凹进部分叫卯眼，图中木构件右边的小长方体是榫头。若如图摆放的木构件与某一带卯眼的木构件咬合成长方体，则咬合时带卯眼的木构件的俯视图可以是（ ）。
+\nopagebreak[4]
+\begin{center}\input{figures/q03.tikz}\end{center}
+\nopagebreak[4]
+(A) 见图 (A)　(B) 见图 (B)　(C) 见图 (C)　(D) 见图 (D)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由题意可知，原木构件右侧凸出的榫头是长方体的一部分，其前后各留有边距，上下也均未到达构件的上下表面。
+带有卯眼的木构件与原构件咬合成一个完整的长方体，因此该构件在榫头对应位置处凹进，且在其上方有木构件覆盖。
+从俯视方向投影观察该带有卯眼的木构件，其顶面为完整的长方体上底面，凹进的卯眼在顶面下方被遮挡，故其边界轮廓线应画为虚线；
+又由于榫头前后均留有边距，未与构件前后侧面贯通，因此凹进部分的虚线轮廓不与俯视图的前后边框重合。
+综合上述，俯视图可以是选项 A。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+若 $\sin\alpha = \dfrac13$，则 $\cos 2\alpha =$（ ）。
+
+(A) $\dfrac89$　(B) $\dfrac79$　(C) $-\dfrac79$　(D) $-\dfrac89$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由二倍角余弦公式得：
+\nopagebreak[4]
+\[\cos 2\alpha = 1 - 2\sin^2\alpha = 1 - 2\times \left(\dfrac13\right)^2 = 1 - \dfrac29 = \dfrac79.\]
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+若某群体中的成员只用现金支付的概率为 $0.45$，既用现金支付也用非现金支付的概率为 $0.15$，则不用现金支付的概率为（ ）。
+
+(A) $0.3$　(B) $0.4$　(C) $0.6$　(D) $0.7$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设事件 $A$ 为“只用现金支付”，事件 $B$ 为“既用现金支付也用非现金支付”。
+由题意可知，$P(A) = 0.45$，$P(B) = 0.15$。
+使用现金支付包含“只用现金支付”与“既用现金支付也用非现金支付”两种互斥情形，
+所以使用现金支付的概率为 $P(A) + P(B) = 0.45 + 0.15 = 0.60$。
+因此不用现金支付的概率为 $1 - 0.60 = 0.40$。
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+函数 $f(x) = \dfrac{\tan x}{1 + \tan^2 x}$ 的最小正周期为（ ）。
+
+(A) $\dfrac\pi4$　(B) $\dfrac\pi2$　(C) $\pi$　(D) $2\pi$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由三角恒等变换可得：
+\nopagebreak[4]
+\[f(x) = \dfrac{\tan x}{1 + \tan^2 x} = \dfrac{\frac{\sin x}{\cos x}}{\frac{1}{\cos^2 x}} = \sin x\cos x = \dfrac12\sin 2x.\]
+所以函数 $f(x)$ 的最小正周期为 $T = \dfrac{2\pi}{2} = \pi$。
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+下列函数中，其图象与函数 $y = \ln x$ 的图象关于直线 $x = 1$ 对称的是（ ）。
+
+(A) $y = \ln(1 - x)$　(B) $y = \ln(2 - x)$　(C) $y = \ln(1 + x)$　(D) $y = \ln(2 + x)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+平面直角坐标系中，点 $(x, y)$ 关于直线 $x = 1$ 的对称点坐标为 $(2 - x, y)$。
+将对称点坐标代入函数 $y = \ln x$，可得所求图象对应的函数解析式为 $y = \ln(2 - x)$。
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+直线 $x + y + 2 = 0$ 分别与 $x$ 轴，$y$ 轴交于 $A, B$ 两点，点 $P$ 在圆 $(x - 2)^2 + y^2 = 2$ 上，则 $\triangle ABP$ 面积的取值范围是（ ）。
+
+(A) $[2, 6]$　(B) $[4, 8]$　(C) $[\sqrt2, 3\sqrt2]$　(D) $[2\sqrt2, 3\sqrt2]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+直线 $x + y + 2 = 0$ 分别与 $x$ 轴、$y$ 轴交于点 $A(-2, 0)$ 和 $B(0, -2)$。
+两点间距离为 $|AB| = \sqrt{(-2 - 0)^2 + (0 - (-2))^2} = 2\sqrt2$。
+圆 $(x - 2)^2 + y^2 = 2$ 的圆心为 $C(2, 0)$，半径为 $r = \sqrt2$。
+\Needspace{5\baselineskip}
+圆心 $C$ 到直线 $x + y + 2 = 0$ 的距离为
+\nopagebreak[4]
+\[d = \dfrac{|2 + 0 + 2|}{\sqrt{1^2 + 1^2}} = \dfrac{4}{\sqrt2} = 2\sqrt2.\]
+\Needspace{5\baselineskip}
+因为点 $P$ 在圆上，所以点 $P$ 到直线的距离 $h$ 的取值范围为
+\nopagebreak[4]
+\[[d - r, d + r] = [2\sqrt2 - \sqrt2, 2\sqrt2 + \sqrt2] = [\sqrt2, 3\sqrt2].\]
+$\triangle ABP$ 的面积为 $S = \dfrac12|AB|h = \dfrac12\times 2\sqrt2\times h = \sqrt2 h$。
+当 $h = \sqrt2$ 时，$S_{\min} = \sqrt2\times\sqrt2 = 2$；
+当 $h = 3\sqrt2$ 时，$S_{\max} = \sqrt2\times 3\sqrt2 = 6$。
+所以 $\triangle ABP$ 面积的取值范围是 $[2, 6]$。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+函数 $y = -x^4 + x^2 + 2$ 的图象大致为（ ）。
+\nopagebreak[4]
+\begin{center}\input{figures/q09.tikz}\end{center}
+\nopagebreak[4]
+(A) 见图 (A)　(B) 见图 (B)　(C) 见图 (C)　(D) 见图 (D)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+函数 $y = f(x) = -x^4 + x^2 + 2$ 满足 $f(-x) = -(-x)^4 + (-x)^2 + 2 = -x^4 + x^2 + 2 = f(x)$，为偶函数，其图象关于 $y$ 轴对称。
+当 $x \to \pm\infty$ 时，$y \to -\infty$，图象两端向下无限延伸，排除 A、B。
+求导数得 $f'(x) = -4x^3 + 2x = -2x(2x^2 - 1)$。
+令 $f'(x) = 0$，解得驻点 $x = 0$ 或 $x = \pm\dfrac{\sqrt2}{2}$。
+当 $x \in \left(0, \dfrac{\sqrt2}{2}\right)$ 时，$f'(x) > 0$，$f(x)$ 单调递增；
+当 $x \in \left(\dfrac{\sqrt2}{2}, +\infty\right)$ 时，$f'(x) < 0$，$f(x)$ 单调递减。
+所以在 $x = \pm\dfrac{\sqrt2}{2}$ 处取得极大值 $f\left(\pm\dfrac{\sqrt2}{2}\right) = -\dfrac14 + \dfrac12 + 2 = \dfrac94 = 2.25$；
+在 $x = 0$ 处取得极小值 $f(0) = 2 > 1$。
+图象呈双峰向下的“M”形且在原点上方有凹陷，与选项 D 一致。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+已知双曲线 $C: \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ ($a > 0, b > 0$) 的离心率为 $\sqrt2$，则点 $(4, 0)$ 到 $C$ 的渐近线的距离为（ ）。
+
+(A) $\sqrt2$　(B) $2$　(C) $\dfrac{3\sqrt2}{2}$　(D) $2\sqrt2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线 $C: \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ 的离心率为 $e = \dfrac{c}{a} = \sqrt2$。
+由 $c^2 = a^2 + b^2 = 2a^2$ 得 $b^2 = a^2$，即 $b = a > 0$。
+双曲线为等轴双曲线，其渐近线方程为 $y = \pm x$，即 $x - y = 0$ 与 $x + y = 0$。
+\Needspace{5\baselineskip}
+点 $(4, 0)$ 到渐近线 $x \pm y = 0$ 的距离为
+\nopagebreak[4]
+\[d = \dfrac{|4 \pm 0|}{\sqrt{1^2 + (\pm 1)^2}} = \dfrac{4}{\sqrt2} = 2\sqrt2.\]
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+$\triangle ABC$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$，若 $\triangle ABC$ 的面积为 $\dfrac{a^2 + b^2 - c^2}{4}$，则 $C =$（ ）。
+
+(A) $\dfrac\pi2$　(B) $\dfrac\pi3$　(C) $\dfrac\pi4$　(D) $\dfrac\pi6$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在 $\triangle ABC$ 中，由余弦定理知 $a^2 + b^2 - c^2 = 2ab\cos C$。
+代入题设面积表达式得 $S = \dfrac{2ab\cos C}{4} = \dfrac12 ab\cos C$。
+又由三角形面积公式可得 $S = \dfrac12 ab\sin C$。
+从而 $\dfrac12 ab\sin C = \dfrac12 ab\cos C \implies \sin C = \cos C \implies \tan C = 1$。
+因为 $C \in (0, \pi)$，所以 $C = \dfrac\pi4$。
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设 $A, B, C, D$ 是同一个半径为 $4$ 的球的球面上四点，$\triangle ABC$ 为等边三角形且其面积为 $9\sqrt3$，则三棱锥 $D - ABC$ 体积的最大值为（ ）。
+
+(A) $12\sqrt3$　(B) $18\sqrt3$　(C) $24\sqrt3$　(D) $54\sqrt3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设等边三角形 $ABC$ 的边长为 $a$。
+其面积为 $S = \dfrac{\sqrt3}{4}a^2 = 9\sqrt3 \implies a^2 = 36 \implies a = 6$。
+由正弦定理，$\triangle ABC$ 外接圆的半径为 $r = \dfrac{a}{2\sin 60^\circ} = \dfrac{6}{2\times \frac{\sqrt3}{2}} = 2\sqrt3$。
+已知球的半径为 $R = 4$。
+球心到底面 $\triangle ABC$ 所在平面的距离为 $d = \sqrt{R^2 - r^2} = \sqrt{4^2 - (2\sqrt3)^2} = \sqrt{16 - 12} = 2$。
+三棱锥 $D - ABC$ 的底面 $\triangle ABC$ 面积固定，当顶点 $D$ 到平面 $ABC$ 的距离最大时体积取得最大值。
+因为点 $D$ 在球面上，所以点 $D$ 到底面 $ABC$ 的最大高度为 $h_{\max} = R + d = 4 + 2 = 6$。
+\Needspace{5\baselineskip}
+因此三棱锥 $D - ABC$ 体积的最大值为
+\nopagebreak[4]
+\[V_{\max} = \dfrac13 S h_{\max} = \dfrac13 \times 9\sqrt3 \times 6 = 18\sqrt3.\]
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\par\medskip
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知向量 $\boldsymbol a = (1, 2)$，$\boldsymbol b = (2, -2)$，$\boldsymbol c = (1, \lambda)$。若 $\boldsymbol c \parallel (2\boldsymbol a + \boldsymbol b)$，则 $\lambda =$ \underline{\hspace{2cm}}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由向量线性运算得：
+\nopagebreak[4]
+\[2\boldsymbol a + \boldsymbol b = 2(1, 2) + (2, -2) = (2, 4) + (2, -2) = (4, 2).\]
+\Needspace{5\baselineskip}
+因为 $\boldsymbol c = (1, \lambda) \parallel (2\boldsymbol a + \boldsymbol b)$，所以两向量对应坐标成比例：
+\nopagebreak[4]
+\[1\times 2 - 4\times \lambda = 0 \implies 2 - 4\lambda = 0 \implies \lambda = \dfrac12.\]
+答案为 $\dfrac12$。
+
+\gkanswer{答案：$\dfrac12$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+某公司有大量客户，且不同龄段客户对其服务的评价有较大差异。为了解客户的评价，该公司准备进行抽样调查，可供选择的抽样方法有简单随机抽样、分层抽样和系统抽样，则最合适的抽样方法是 \underline{\hspace{2cm}}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+当总体由差异明显的几部分（不同龄段客户对其服务评价有较大差异）组成时，为了使样本能充分反映总体结构，最合适的抽样方法是分层抽样。
+答案为分层抽样。
+
+\gkanswer{答案：分层抽样}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若变量 $x, y$ 满足约束条件
+\nopagebreak[4]
+\[
+\begin{cases}
+2x + y + 3 \geqslant 0, \\
+x - 2y + 4 \geqslant 0, \\
+x - 2 \leqslant 0,
+\end{cases}
+\]
+则 $z = x + \dfrac13 y$ 的最大值是 \underline{\hspace{2cm}}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+绘制不等式组表示的可行域：
+\begin{itemize}
+\item 直线 $l_1: 2x + y + 3 = 0$；
+\item 直线 $l_2: x - 2y + 4 = 0$；
+\item 直线 $l_3: x = 2$。
+\end{itemize}
+联立各直线方程求可行域各顶点坐标：
+\begin{itemize}
+\item 联立 $l_1, l_2$：解得交点 $A(-2, 1)$；
+\item 联立 $l_1, l_3$：令 $x = 2$ 代入 $2x + y + 3 = 0$，解得 $y = -7$，交点为 $B(2, -7)$；
+\item 联立 $l_2, l_3$：令 $x = 2$ 代入 $x - 2y + 4 = 0$，解得 $y = 3$，交点为 $C(2, 3)$。
+\end{itemize}
+可行域是以 $A(-2, 1)$、$B(2, -7)$、$C(2, 3)$ 为顶点的三角形闭区域。
+将目标函数变形为 $y = -3x + 3z$。截距越大 $z$ 越大。
+分别计算各顶点的目标函数值：
+\begin{itemize}
+\item $A(-2, 1)$ 时，$z = -2 + \dfrac13\times 1 = -\dfrac53$；
+\item $B(2, -7)$ 时，$z = 2 + \dfrac13\times(-7) = -\dfrac13$；
+\item $C(2, 3)$ 时，$z = 2 + \dfrac13\times 3 = 3$。
+\end{itemize}
+因此 $z$ 的最大值是 $3$。
+
+\gkanswer{答案：$3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知函数 $f(x) = \ln(\sqrt{1 + x^2} - x) + 1$，$f(a) = 4$，则 $f(-a) =$ \underline{\hspace{2cm}}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+记 $g(x) = f(x) - 1 = \ln(\sqrt{1 + x^2} - x)$。
+\Needspace{5\baselineskip}
+则
+\nopagebreak[4]
+\[g(-x) = \ln(\sqrt{1 + (-x)^2} - (-x)) = \ln(\sqrt{1 + x^2} + x).\]
+因为 $(\sqrt{1 + x^2} - x)(\sqrt{1 + x^2} + x) = (1 + x^2) - x^2 = 1$，
+所以 $\sqrt{1 + x^2} + x = \dfrac{1}{\sqrt{1 + x^2} - x} = (\sqrt{1 + x^2} - x)^{-1}$。
+从而 $g(-x) = \ln((\sqrt{1 + x^2} - x)^{-1}) = -\ln(\sqrt{1 + x^2} - x) = -g(x)$。
+因此 $g(x)$ 为奇函数。
+由 $f(a) = 4$ 得 $g(a) = f(a) - 1 = 3$。
+由奇函数性质可得 $g(-a) = -g(a) = -3$。
+所以 $f(-a) = g(-a) + 1 = -3 + 1 = -2$。
+
+\gkanswer{答案：$-2$}
+
+\par\medskip
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+等比数列 $\{a_n\}$ 中，$a_1 = 1$，$a_5 = 4a_3$。
+(1) 求 $\{a_n\}$ 的通项公式；
+(2) 记 $S_n$ 为 $\{a_n\}$ 的前 $n$ 项和。若 $S_m = 63$，求 $m$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 设等比数列 $\{a_n\}$ 的公比为 $q$。
+由题意得 $a_5 = a_1 q^4 = q^4$，$a_3 = a_1 q^2 = q^2$。
+由 $a_5 = 4a_3$ 得 $q^4 = 4q^2$。
+因为等比数列各项不为零，所以 $q^2 = 4$，解得 $q = 2$ 或 $q = -2$。
+当 $q = 2$ 时，$a_n = 1\times 2^{n-1} = 2^{n-1}$；
+当 $q = -2$ 时，$a_n = 1\times (-2)^{n-1} = (-2)^{n-1}$。
+所以 $\{a_n\}$ 的通项公式为 $a_n = 2^{n-1}$ 或 $a_n = (-2)^{n-1}$。
+
+\textbf{(2) 解析}
+若 $q = 2$，则 $S_m = \dfrac{1\times(1 - 2^m)}{1 - 2} = 2^m - 1$。
+由 $S_m = 63$ 得 $2^m - 1 = 63 \implies 2^m = 64 = 2^6$，解得 $m = 6$。
+若 $q = -2$，则 $S_m = \dfrac{1\times(1 - (-2)^m)}{1 - (-2)} = \dfrac{1 - (-2)^m}{3}$。
+由 $S_m = 63$ 得 $1 - (-2)^m = 189 \implies (-2)^m = -188$。
+由于 $-188$ 不是 $-2$ 的整数次幂，该方程无正整数解。
+综上所述，$m = 6$。
+
+\gkanswer{答案（1）：$a_n = 2^{n-1}$ 或 $a_n = (-2)^{n-1}$}
+
+\gkanswer{答案（2）：$m = 6$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+某工厂为提高生产效率，开展技术创新活动，提出了完成某项生产任务的两种新的生产方式。为比较两种生产方式的效率，选取 40 名工人，将他们随机分成两组，每组 20 人，第一组工人用第一种生产方式，第二组工人用第二种生产方式。根据工人完成生产任务的工作时间（单位：min）绘制了如图茎叶图：
+\nopagebreak[4]
+\begin{center}\input{figures/q18.tikz}\end{center}
+\nopagebreak[4]
+(1) 根据茎叶图判断哪种生产方式的效率更高？并说明理由；
+(2) 求 40 名工人完成生产任务所需时间的中位数 $m$，并将完成生产任务所需时间超过 $m$ 和不超过 $m$ 的工人数填入下面的列联表：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+ & 超过 $m$ & 不超过 $m$ \\
+\midrule
+第一种生产方式 &  &  \\
+第二种生产方式 &  &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(3) 根据 (2) 中的列联表，能否有 99\% 的把握认为两种生产方式的效率有差异？
+
+\Needspace{10\baselineskip}
+附：$K^2 = \dfrac{n(ad - bc)^2}{(a + b)(c + d)(a + c)(b + d)}$，
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+$P(K^2 \geqslant k)$ & 0.050 & 0.010 & 0.001 \\
+\midrule
+$k$ & 3.841 & 6.635 & 10.828 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 由茎叶图可知，第二种生产方式工人的工作时间主要集中在 $65\sim 78\text{ min}$ 之间（有 15 人），且大部分低于 $80\text{ min}$；
+第一种生产方式工人的工作时间主要集中在 $82\sim 92\text{ min}$ 之间（有 15 人），大部分在 $80\text{ min}$ 以上。
+完成相同的生产任务所需时间越短表明效率越高，因此第二种生产方式的效率更高。
+
+\textbf{(2) 解析} 40 名工人完成生产任务所需时间按从小到大排序如下：
+65, 65, 66, 68, 68, 69, 70, 71, 72, 72, 72, 73, 74, 75, 76, 76, 76, 77, 78, 79, 81, 82, 83, 83, 84, 84, 84, 85, 85, 86, 87, 87, 88, 89, 90, 90, 90, 91, 91, 92。
+其中第 20 位工人的工时为 $79\text{ min}$，第 21 位工人的工时为 $81\text{ min}$。
+\Needspace{5\baselineskip}
+所以 40 名工人完成生产任务所需时间的中位数是
+\nopagebreak[4]
+\[m = \dfrac{79 + 81}{2} = 80.\]
+超过 $80\text{ min}$ 的人数：第一种生产方式有 15 人，第二种生产方式有 5 人；
+不超过 $80\text{ min}$ 的人数：第一种生产方式有 5 人，第二种生产方式有 15 人。
+填入列联表如下：
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+ & 超过 $m$ & 不超过 $m$ & 合计 \\
+\midrule
+第一种生产方式 & 15 & 5 & 20 \\
+第二种生产方式 & 5 & 15 & 20 \\
+合计 & 20 & 20 & 40 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{5\baselineskip}
+\textbf{(3) 解析} 由 (2) 中列联表数据可得：
+\nopagebreak[4]
+\[K^2 = \dfrac{40\times(15\times 15 - 5\times 5)^2}{20\times 20\times 20\times 20} = \dfrac{40\times(225 - 25)^2}{160000} = \dfrac{40\times 40000}{160000} = 10.\]
+因为 $K^2 = 10 > 6.635$，
+所以有 99\% 的把握认为两种生产方式的效率有差异。
+
+\gkanswer{答案（1）：第二种生产方式的效率更高。理由：由茎叶图知，第二种生产方式工人的工作时间大部分在 80 min 以下（65～78 min 之间有 15 人），第一种生产方式工人的工作时间大部分在 80 min 以上（82～92 min 之间有 15 人）。完成相同生产任务所需时间越短效率越高，故第二种生产方式的效率更高。}
+
+\gkanswer{答案（2）：中位数 $m = 80$。完成生产任务所需时间列联表如下：}
+
+\gkanswer{答案（3）：计算得 $K^2 = 10$。因为 $K^2 = 10 > 6.635$，所以有 99\% 的把握认为两种生产方式的效率有差异。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+如图，矩形 $ABCD$ 所在平面与半圆弧 $\wideparen{CD}$ 所在平面垂直，$M$ 是 $\wideparen{CD}$ 上异于 $C, D$ 的点。
+\nopagebreak[4]
+\begin{center}\input{figures/q19.tikz}\end{center}
+\nopagebreak[4]
+(1) 证明：平面 $AMD \perp$ 平面 $BMC$；
+(2) 在线段 $AM$ 上是否存在点 $P$，使得 $MC \parallel$ 平面 $PBD$？说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 证明：因为 $CD$ 是半圆弧 $\wideparen{CD}$ 的直径，$M$ 是半圆弧上异于 $C, D$ 的点，
+所以由直径所对的圆周角是直角可知 $DM \perp CM$。
+因为矩形 $ABCD$ 所在平面垂直于半圆弧 $\wideparen{CD}$ 所在平面，两平面的交线为 $CD$。
+在矩形 $ABCD$ 中，$BC \perp CD$。
+因为 $BC \subset$ 平面 $ABCD$ 且 $BC \perp CD$，所以由面面垂直的性质定理可得 $BC \perp$ 半圆弧 $\wideparen{CD}$ 所在平面。
+又 $DM \subset$ 半圆弧 $\wideparen{CD}$ 所在平面，所以 $DM \perp BC$。
+因为 $DM \perp CM$，$DM \perp BC$，$CM \cap BC = C$，$CM, BC \subset$ 平面 $BMC$，
+所以 $DM \perp$ 平面 $BMC$。
+又 $DM \subset$ 平面 $AMD$，
+所以平面 $AMD \perp$ 平面 $BMC$。
+
+\textbf{(2) 解析} 解：在线段 $AM$ 上存在点 $P$（为线段 $AM$ 的中点），使得 $MC \parallel$ 平面 $PBD$。理由如下：
+连接 $AC$ 交 $BD$ 于点 $O$。
+因为四边形 $ABCD$ 是矩形，所以对角线互相平分，点 $O$ 为线段 $AC$ 的中点。
+取线段 $AM$ 的中点 $P$，连接 $OP$。
+在 $\triangle ACM$ 中，因为点 $O$ 是 $AC$ 的中点，点 $P$ 是 $AM$ 的中点，
+所以 $OP$ 是 $\triangle ACM$ 的中位线，故 $OP \parallel MC$。
+因为 $MC \not\subset$ 平面 $PBD$，$OP \subset$ 平面 $PBD$，
+所以由线面平行的判定定理可得 $MC \parallel$ 平面 $PBD$。
+因此在线段 $AM$ 上存在点 $P$（为线段 $AM$ 的中点），使得 $MC \parallel$ 平面 $PBD$。
+
+\gkanswer{答案（1）：证明见解析版。}
+
+\gkanswer{答案（2）：在线段 $AM$ 上存在点 $P$（为线段 $AM$ 的中点），使得 $MC \parallel$ 平面 $PBD$。理由见解析版。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+已知斜率为 $k$ 的直线 $l$ 与椭圆 $C: \dfrac{x^2}{4} + \dfrac{y^2}{3} = 1$ 交于 $A, B$ 两点。线段 $AB$ 的中点为 $M(1, m)$ ($m > 0$)。
+(1) 证明：$k < -\dfrac12$；
+(2) 设 $F$ 为 $C$ 的右焦点，$P$ 为 $C$ 上一点，且 $\vec{FP} + \vec{FA} + \vec{FB} = \vec{0}$。证明：$2|\vec{FP}| = |\vec{FA}| + |\vec{FB}|$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 证明：设直线 $l$ 与椭圆相交的两点坐标分别为 $A(x_1, y_1)$，$B(x_2, y_2)$。
+\Needspace{5\baselineskip}
+因为点 $A, B$ 在椭圆 $C$ 上，所以
+\nopagebreak[4]
+\[\dfrac{x_1^2}{4} + \dfrac{y_1^2}{3} = 1, \quad \dfrac{x_2^2}{4} + \dfrac{y_2^2}{3} = 1.\]
+\Needspace{5\baselineskip}
+两式相减可得：
+\nopagebreak[4]
+\[\dfrac{(x_1 - x_2)(x_1 + x_2)}{4} + \dfrac{(y_1 - y_2)(y_1 + y_2)}{3} = 0.\]
+因为线段 $AB$ 的中点为 $M(1, m)$，所以 $x_1 + x_2 = 2$，$y_1 + y_2 = 2m$。
+又直线 $l$ 的斜率 $k = \dfrac{y_1 - y_2}{x_1 - x_2}$，
+\Needspace{5\baselineskip}
+代入上式得：
+\nopagebreak[4]
+\[\dfrac{2}{4} + \dfrac{2km}{3} = 0 \implies \dfrac12 + \dfrac{2km}{3} = 0 \implies k = -\dfrac{3}{4m}.\]
+\Needspace{5\baselineskip}
+因为线段 $AB$ 是椭圆的弦，其中点 $M(1, m)$ 必在椭圆内部，所以
+\nopagebreak[4]
+\[\dfrac{1^2}{4} + \dfrac{m^2}{3} < 1 \implies \dfrac{m^2}{3} < \dfrac34 \implies m^2 < \dfrac94.\]
+又已知 $m > 0$，所以 $0 < m < \dfrac32$。
+由 $0 < m < \dfrac32$ 可得 $4m < 6 \implies \dfrac{1}{4m} > \dfrac16 \implies -\dfrac{3}{4m} < -\dfrac{3}{6} = -\dfrac12$。
+故 $k < -\dfrac12$。
+
+\textbf{(2) 解析} 证明：在椭圆 $C: \dfrac{x^2}{4} + \dfrac{y^2}{3} = 1$ 中，$a^2 = 4$，$b^2 = 3$，$c = \sqrt{a^2 - b^2} = 1$。
+所以右焦点坐标为 $F(1, 0)$，离心率 $e = \dfrac{c}{a} = \dfrac12$。
+由 $\vec{FP} + \vec{FA} + \vec{FB} = \vec{0}$ 得 $\vec{FA} + \vec{FB} = -\vec{FP}$。
+\Needspace{5\baselineskip}
+设 $P(x_0, y_0)$。因为 $F(1, 0)$，所以
+\nopagebreak[4]
+\[\vec{FA} + \vec{FB} = (x_1 - 1, y_1) + (x_2 - 1, y_2) = (x_1 + x_2 - 2, y_1 + y_2) = (2 - 2, 2m) = (0, 2m).\]
+因此 $-\vec{FP} = (0, 2m) \implies \vec{FP} = (0, -2m)$。
+因为 $\vec{FP} = (x_0 - 1, y_0)$，所以 $x_0 - 1 = 0 \implies x_0 = 1$，$y_0 = -2m$。
+\Needspace{5\baselineskip}
+又点 $P(1, -2m)$ 在椭圆 $C$ 上，代入椭圆方程得：
+\nopagebreak[4]
+\[\dfrac{1}{4} + \dfrac{(-2m)^2}{3} = 1 \implies \dfrac{4m^2}{3} = \dfrac34 \implies m^2 = \dfrac{9}{16}.\]
+因为 $m > 0$，所以 $m = \dfrac34$。
+由椭圆的焦半径公式，对于右焦点 $F(c, 0)$，椭圆上任意点 $(x, y)$ 到右焦点的距离为 $a - ex = 2 - \dfrac12 x$。
+\Needspace{5\baselineskip}
+因此：
+\nopagebreak[4]
+\[|\vec{FP}| = 2 - \dfrac12 x_0 = 2 - \dfrac12\times 1 = \dfrac32 \implies 2|\vec{FP}| = 3.\]
+\Needspace{5\baselineskip}
+又
+\nopagebreak[4]
+\[|\vec{FA}| + |\vec{FB}| = \left(2 - \dfrac12 x_1\right) + \left(2 - \dfrac12 x_2\right) = 4 - \dfrac12(x_1 + x_2) = 4 - \dfrac12\times 2 = 3.\]
+所以 $2|\vec{FP}| = |\vec{FA}| + |\vec{FB}|$。
+
+\gkanswer{答案（1）：证明见解析版。}
+
+\gkanswer{答案（2）：证明见解析版。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+已知函数 $f(x) = \dfrac{ax^2 + x - 1}{\mathrm e^x}$。
+(1) 求曲线 $y = f(x)$ 在点 $(0, -1)$ 处的切线方程；
+(2) 证明：当 $a \geqslant 1$ 时，$f(x) + \mathrm e \geqslant 0$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 函数 $f(x) = \dfrac{ax^2 + x - 1}{\mathrm e^x}$。
+\Needspace{5\baselineskip}
+求导数得：
+\nopagebreak[4]
+\[f'(x) = \dfrac{(2ax + 1)\mathrm e^x - (ax^2 + x - 1)\mathrm e^x}{(\mathrm e^x)^2} = \dfrac{-ax^2 + (2a - 1)x + 2}{\mathrm e^x}.\]
+在点 $(0, -1)$ 处的切线斜率为 $k = f'(0) = \dfrac{2}{\mathrm e^0} = 2$。
+由点斜式可得切线方程为 $y - (-1) = 2(x - 0)$，即 $y = 2x - 1$（或 $2x - y - 1 = 0$）。
+
+\textbf{(2) 解析} 证明：要证明当 $a \geqslant 1$ 时，$f(x) + \mathrm e \geqslant 0$，即证当 $a \geqslant 1$ 时，$f(x) \geqslant -\mathrm e$。
+因为 $a \geqslant 1$，$x^2 \geqslant 0$，所以 $ax^2 + x - 1 \geqslant x^2 + x - 1$。
+\Needspace{5\baselineskip}
+又 $\mathrm e^x > 0$，所以
+\nopagebreak[4]
+\[f(x) = \dfrac{ax^2 + x - 1}{\mathrm e^x} \geqslant \dfrac{x^2 + x - 1}{\mathrm e^x}.\]
+设函数 $g(x) = \dfrac{x^2 + x - 1}{\mathrm e^x}$。
+\Needspace{5\baselineskip}
+求导得：
+\nopagebreak[4]
+\[g'(x) = \dfrac{(2x + 1)\mathrm e^x - (x^2 + x - 1)\mathrm e^x}{\mathrm e^{2x}} = \dfrac{-x^2 + x + 2}{\mathrm e^x} = -\dfrac{(x - 2)(x + 1)}{\mathrm e^x}.\]
+令 $g'(x) = 0$，解得驻点 $x_1 = -1$，$x_2 = 2$。
+\begin{itemize}
+\item 当 $x \in (-\infty, -1)$ 时，$g'(x) < 0$，$g(x)$ 单调递减；
+\item 当 $x \in (-1, 2)$ 时，$g'(x) > 0$，$g(x)$ 单调递增；
+\item 当 $x \in (2, +\infty)$ 时，$g'(x) < 0$，$g(x)$ 单调递减。
+\end{itemize}
+当 $x \to +\infty$ 时，由洛必达法则可知 $g(x) \to 0$；
+当 $x \to -\infty$ 时，$x^2 + x - 1 \to +\infty$，$\mathrm e^x \to 0^+$，故 $g(x) \to +\infty$。
+\Needspace{5\baselineskip}
+比较极小值与端点趋势可知，$g(x)$ 在 $x = -1$ 处取得极小值，也是全局最小值：
+\nopagebreak[4]
+\[g(-1) = \dfrac{(-1)^2 + (-1) - 1}{\mathrm e^{-1}} = \dfrac{-1}{\mathrm e^{-1}} = -\mathrm e.\]
+\Needspace{5\baselineskip}
+因此对任意 $x \in \mathbb R$，恒有
+\nopagebreak[4]
+\[f(x) \geqslant g(x) \geqslant g(-1) = -\mathrm e.\]
+所以 $f(x) + \mathrm e \geqslant 0$ 得证。
+
+\gkanswer{答案（1）：$y = 2x - 1$（或 $2x - y - 1 = 0$）}
+
+\gkanswer{答案（2）：证明见解析版。}
+
+\par\medskip
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}[选修 4-4：坐标系与参数方程]（本小题满分 10 分）：
+
+\Needspace{5\baselineskip}
+在平面直角坐标系 $xOy$ 中，$\odot O$ 的参数方程为
+\nopagebreak[4]
+\[
+\begin{cases}
+x = \cos\theta, \\
+y = \sin\theta
+\end{cases}
+\]
+（$\theta$ 为参数），过点 $(0, -\sqrt2)$ 且倾斜角为 $\alpha$ 的直线 $l$ 与 $\odot O$ 交于 $A, B$ 两点。
+(1) 求 $\alpha$ 的取值范围；
+(2) 求 $AB$ 中点 $P$ 的轨迹的参数方程。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} $\odot O$ 的参数方程消去参数 $\theta$ 可得其普通方程为 $x^2 + y^2 = 1$。
+所以 $\odot O$ 是以原点 $O(0, 0)$ 为圆心，半径 $r = 1$ 的圆。
+直线 $l$ 过定点 $M(0, -\sqrt2)$，其倾斜角为 $\alpha \in [0, \pi)$。
+当 $\alpha = \dfrac\pi2$ 时，直线 $l$ 为 $y$ 轴，方程为 $x = 0$。此时圆心在直线上，直线与圆交于 $(0, 1)$ 和 $(0, -1)$ 两点，满足题意。
+当 $\alpha \neq \dfrac\pi2$ 时，直线 $l$ 的斜率 $k = \tan\alpha$，其方程为 $y - (-\sqrt2) = k(x - 0)$，即 $kx - y - \sqrt2 = 0$。
+因为直线 $l$ 与 $\odot O$ 相交于不同的两点 $A, B$，所以圆心 $O(0, 0)$ 到直线 $l$ 的距离 $d < r = 1$。
+\Needspace{5\baselineskip}
+由点到直线距离公式得：
+\nopagebreak[4]
+\[d = \dfrac{|-\sqrt2|}{\sqrt{k^2 + 1}} < 1 \implies \sqrt2 < \sqrt{k^2 + 1} \implies k^2 + 1 > 2 \implies k^2 > 1.\]
+解得 $k > 1$ 或 $k < -1$。
+结合 $k = \tan\alpha$ 及 $\alpha \in [0, \pi)$：
+\begin{itemize}
+\item 当 $k > 1$ 时，$\alpha \in \left(\dfrac\pi4, \dfrac\pi2\right)$；
+\item 当 $k < -1$ 时，$\alpha \in \left(\dfrac\pi2, \dfrac{3\pi}{4}\right)$。
+\end{itemize}
+结合 $\alpha = \dfrac\pi2$ 的情形，$\alpha$ 的取值范围是 $\left(\dfrac\pi4, \dfrac{3\pi}{4}\right)$。
+
+\Needspace{5\baselineskip}
+\textbf{(2) 解析} 直线 $l$ 过点 $M(0, -\sqrt2)$ 且倾斜角为 $\alpha$，其参数方程可设为
+\nopagebreak[4]
+\[\begin{cases} x = t\cos\alpha, \\ y = -\sqrt2 + t\sin\alpha \end{cases}\quad (t\text{ \text{为参数}}).\]
+\Needspace{5\baselineskip}
+将直线的参数方程代入圆的普通方程 $x^2 + y^2 = 1$，得：
+\nopagebreak[4]
+\[(t\cos\alpha)^2 + (-\sqrt2 + t\sin\alpha)^2 = 1 \implies t^2 - 2\sqrt2\sin\alpha\cdot t + 1 = 0.\]
+设点 $A, B$ 对应的参数分别为 $t_1, t_2$。
+由韦达定理可知 $t_1 + t_2 = 2\sqrt2\sin\alpha$。
+\Needspace{5\baselineskip}
+因为 $P$ 为线段 $AB$ 的中点，由参数 $t$ 的几何意义可知中点 $P$ 对应的参数为
+\nopagebreak[4]
+\[t_P = \dfrac{t_1 + t_2}{2} = \sqrt2\sin\alpha.\]
+\Needspace{5\baselineskip}
+代入直线 $l$ 的参数方程，可得中点 $P$ 的坐标满足：
+\nopagebreak[4]
+\[\begin{cases} x = \sqrt2\sin\alpha\cos\alpha, \\ y = -\sqrt2 + \sqrt2\sin^2\alpha \end{cases}\quad \left(\alpha \in \left(\dfrac\pi4, \dfrac{3\pi}{4}\right)\right).\]
+（或利用二倍角公式化简为 $\begin{cases} x = \dfrac{\sqrt2}{2}\sin 2\alpha, \\ y = -\dfrac{\sqrt2}{2} - \dfrac{\sqrt2}{2}\cos 2\alpha \end{cases} \quad \left(\alpha \in \left(\dfrac\pi4, \dfrac{3\pi}{4}\right)\right)$）。
+
+\gkanswer{答案（1）：$\alpha \in \left(\dfrac\pi4, \dfrac{3\pi}{4}\right)$}
+
+\gkanswer{答案（2）：$\begin{cases} x = \sqrt2\sin\alpha\cos\alpha, \\ y = -\sqrt2 + \sqrt2\sin^2\alpha \end{cases} \quad \left(\alpha \in \left(\dfrac\pi4, \dfrac{3\pi}{4}\right)\right)$（或 $\begin{cases} x = \dfrac{\sqrt2}{2}\sin 2\alpha, \\ y = -\dfrac{\sqrt2}{2} - \dfrac{\sqrt2}{2}\cos 2\alpha \end{cases} \quad \left(\alpha \in \left(\dfrac\pi4, \dfrac{3\pi}{4}\right)\right)$）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}[选修 4-5：不等式选讲]（本小题满分 10 分）：
+
+设函数 $f(x) = |2x + 1| + |x - 1|$。
+(1) 画出 $y = f(x)$ 的图象；
+\nopagebreak[4]
+\begin{center}\input{figures/q23.tikz}\end{center}
+\nopagebreak[4]
+(2) 当 $x \in [0, +\infty)$ 时，$f(x) \leqslant ax + b$，求 $a + b$ 的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析} 函数 $f(x) = |2x + 1| + |x - 1|$。
+零点为 $x = -\dfrac12$ 和 $x = 1$。
+分段去绝对值：
+\begin{itemize}
+\item 当 $x < -\dfrac12$ 时，$f(x) = -(2x + 1) - (x - 1) = -3x$；
+\item 当 $-\dfrac12 \leqslant x \leqslant 1$ 时，$f(x) = (2x + 1) - (x - 1) = x + 2$；
+\item 当 $x > 1$ 时，$f(x) = (2x + 1) + (x - 1) = 3x$。
+\end{itemize}
+\Needspace{5\baselineskip}
+综上可得分段解析式为：
+\nopagebreak[4]
+\[f(x) = \begin{cases} -3x, & x < -\dfrac12, \\ x + 2, & -\dfrac12 \leqslant x \leqslant 1, \\ 3x, & x > 1\text{。} \end{cases}\]
+图象由三条射线/线段组成，拐点坐标分别为 $\left(-\dfrac12, \dfrac32\right)$ 和 $(1, 3)$，连接各点即可得到分段折线图象。
+
+\textbf{(2) 解析} 当 $x \in [0, +\infty)$ 时，
+\begin{itemize}
+\item 当 $x \in [0, 1]$ 时，$f(x) = x + 2$；
+\item 当 $x \in (1, +\infty)$ 时，$f(x) = 3x$。
+\end{itemize}
+由题意，对任意 $x \in [0, +\infty)$ 均有 $ax + b \geqslant f(x)$。
+特别地：
+\begin{itemize}
+\item 取 $x = 0 \in [0, +\infty)$，代入得 $b \geqslant f(0) = 2$；
+\item 当 $x \to +\infty$ 时，$ax + b \geqslant 3x \implies a + \dfrac{b}{x} \geqslant 3 \implies a \geqslant 3$。
+\end{itemize}
+所以 $a + b \geqslant 3 + 2 = 5$。
+下面验证当 $a = 3, b = 2$ 时不等式恒成立：
+此时 $ax + b = 3x + 2$。
+\begin{itemize}
+\item 当 $x \in [0, 1]$ 时，$3x + 2 - f(x) = 3x + 2 - (x + 2) = 2x \geqslant 0$，满足 $f(x) \leqslant 3x + 2$；
+\item 当 $x > 1$ 时，$3x + 2 - f(x) = 3x + 2 - 3x = 2 > 0$，满足 $f(x) \leqslant 3x + 2$。
+\end{itemize}
+综上所述，当且仅当 $a = 3, b = 2$ 时等号成立，$a + b$ 的最小值为 $5$。
+
+\gkanswer{答案（1）：$f(x) = \begin{cases} -3x, & x < -\dfrac12, \\ x + 2, & -\dfrac12 \leqslant x \leqslant 1, \\ 3x, & x > 1\text{。} \end{cases}$ 图象为连接点 $\left(-\dfrac12, \dfrac32\right)$、$(1, 3)$ 的分段折线图象。}
+
+\gkanswer{答案（2）：$a + b$ 的最小值为 $5$。}
+
+\end{answer}
