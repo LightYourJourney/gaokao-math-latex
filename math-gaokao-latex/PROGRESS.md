@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅲ卷文科候选卷：四版本正式编译构建（2026-11-01）
+
+- 修复第 19 题弧记号 `\wideparen{CD}` 为全库标准 `\overset{\frown}{CD}`，修复第 22 题 (2) 简答版长行 Overfull；
+- provenance 重新核验与导入（manifest revision 5612）；
+- 执行 `build_projects.py build --formal --paper gk-2018-regular-national-3-arts`，试题版（6页）、解析版（26页）、简答版（8页）、印刷版（19页）共 59 页全量编译成功；
+- 0 errors, 0 undefined references, 0 missing characters, 0 Overfull；
+- `validate-receipts` 验证通过，构建收据成功落盘。
+
 ### 2018 全国Ⅲ卷文科候选卷：逐题来源证据与 provenance 导入（2026-11-01）
 
 - 23 题绑定固定源及题面和答案哈希：源 PDF 第 1 页为第 1—18 题，第 2 页为第 19—23 题；
