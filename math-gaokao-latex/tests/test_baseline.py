@@ -1654,13 +1654,21 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
                 "git", "-C", str(ROOT.parent.parent.parent), "show",
                 "1c7b418:" + relative,
             ]).decode("utf-8")
-            now = current.read_text(encoding="utf-8")
+            if paper_id == "gk-2023-regular-new-gaokao-1":
+                # The later Q13 transcription correction regenerated this file.
+                # The task-28 ledger records the earlier reviewed snapshot.
+                now = subprocess.check_output([
+                    "git", "-C", str(ROOT.parent.parent.parent), "show",
+                    "cb4116d7:" + relative,
+                ]).decode("utf-8")
+            else:
+                now = current.read_text(encoding="utf-8")
             self.assertEqual(record["class"], "layout-regeneration")
             self.assertEqual(
                 record["legacy_sha256"],
                 previous[(paper_id, artifact)]["legacy_sha256"],
             )
-            self.assertEqual(record["current_sha256"], file_sha256(current))
+            self.assertEqual(record["current_sha256"], hashlib.sha256(now.encode("utf-8")).hexdigest())
 
             removed = []
             added = []
