@@ -1,0 +1,23 @@
+% 2018 北京卷文第3题：程序框图（据固定源第1063页重绘）
+\begin{tikzpicture}[>=stealth, font=\small, node distance=5mm and 12mm]
+  \tikzset{
+    term/.style={draw, rounded corners=2pt, minimum width=12mm, minimum height=6mm, align=center},
+    proc/.style={draw, minimum width=19mm, minimum height=7mm, align=center},
+    test/.style={draw, diamond, aspect=2.5, inner sep=1pt, align=center},
+    io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=14mm, minimum height=6mm, align=center}
+  }
+  \node[term] (start) {开始};
+  \node[proc, below=of start] (init) {$k=1,\ s=1$};
+  \node[proc, below=of init, minimum width=31mm, minimum height=10mm] (sum) {$s=s+(-1)^k\cdot\dfrac{1}{1+k}$};
+  \node[proc, below=of sum] (inc) {$k=k+1$};
+  \node[test, below=of inc, minimum width=17mm, minimum height=7mm] (cond) {$k\ge3$};
+  \node[io, below=of cond] (out) {输出 $s$};
+  \node[term, below=of out] (end) {结束};
+  \draw[->] (start)--(init);
+  \draw[->] (init)--(sum);
+  \draw[->] (sum)--(inc);
+  \draw[->] (inc)--(cond);
+  \draw[->] (cond)--node[right]{是}(out);
+  \draw[->] (out)--(end);
+  \draw[->] (cond.east)--node[above]{否} ++(12mm,0)|-(sum.east);
+\end{tikzpicture}

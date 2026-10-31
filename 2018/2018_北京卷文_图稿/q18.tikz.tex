@@ -1,0 +1,28 @@
+% 2018 北京卷文第18题：四棱锥与中点（据固定源第1064页重绘）
+\begin{tikzpicture}[font=\small, line cap=round, line join=round]
+  % 投影位置按原图透视关系布置
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.5,-0.35);
+  \coordinate (C) at (4.2,0.05);
+  \coordinate (D) at (2.7,0.55);
+  \coordinate (P) at (1.25,3.0);
+  \coordinate (E) at ($(A)!0.5!(D)$);
+  \coordinate (F) at ($(P)!0.5!(B)$);
+  % 矩形底面：后边 AD、DC 为虚线，前侧为实线
+  \draw (A)--(B)--(C);
+  \draw[dashed] (C)--(D)--(A);
+  % 侧棱：遮挡棱以虚线表示
+  \draw (P)--(A) (P)--(B) (P)--(C);
+  \draw[dashed] (P)--(D);
+  % 原图标示 P--E 为虚线；不绘制 E--F
+  \draw[dashed] (P)--(E);
+  \fill (A) circle (1.1pt) (B) circle (1.1pt) (C) circle (1.1pt) (D) circle (1.1pt)
+        (P) circle (1.1pt) (E) circle (1.1pt) (F) circle (1.1pt);
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[below left] at (E) {$E$};
+  \node[right] at (F) {$F$};
+\end{tikzpicture}
