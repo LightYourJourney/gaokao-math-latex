@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅱ卷理科候选卷：四版本正式编译构建完成（2026-11-01）
+
+- 使用 `build_projects.py build --formal --paper gk-2018-regular-national-2-science` 触发正式构建；
+- 试题版（5页）、解析版（23页）、简答版（7页）、印刷版（19页）共 54 页全部通过 XeLaTeX 编译，0 error，0 undefined reference，0 overfull；
+- 生成构建回执 `receipts/build.json`（attempt `74bcdc9d-2b53-45bf-9961-d0f8a24a601b`），更新 manifest revision 5601（生产状态置为 compiled，批次状态置为 compiled_pending_review）；
+- `validate-receipts` 与 `provenance.py check-batch` 交叉校验全部通过。
+
 ### 2018 全国Ⅱ卷理科候选卷：逐题来源证据与 provenance 导入（2026-11-01）
 
 - 23 题绑定固定源及题面和答案哈希：源 PDF 第 1 页为第 1—18 题，第 2 页为第 19—23 题。
