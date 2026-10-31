@@ -1,0 +1,32 @@
+% 2018 全国Ⅱ卷理科第7题程序框图（据固定源第1页重绘）
+\begin{tikzpicture}[>=stealth, font=\small, node distance=5mm and 12mm]
+  \tikzset{
+    term/.style={draw, rounded corners=3pt, minimum width=14mm, minimum height=6mm, align=center},
+    proc/.style={draw, minimum width=22mm, minimum height=6.5mm, align=center},
+    test/.style={draw, diamond, aspect=2.4, inner sep=1pt, align=center},
+    io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=16mm, minimum height=6mm, align=center}
+  }
+  \node[term] (start) {开始};
+  \node[proc, below=of start] (init) {$N=0,\ T=0$};
+  \node[proc, below=of init] (set_i) {$i=1$};
+  \node[test, below=of set_i, minimum width=24mm, minimum height=8mm] (cond) {$i<100$};
+  \node[proc, below=of cond] (step1) {$N=N+\dfrac{1}{i}$};
+  \node[proc, below=of step1] (step2) {$T=T+\dfrac{1}{i+1}$};
+  \node[proc, below=of step2, minimum width=22mm, minimum height=7mm] (blank) {};
+  
+  \node[proc, right=14mm of cond] (calc) {$S=N-T$};
+  \node[io, below=of calc] (output) {输出 $S$};
+  \node[term, below=of output] (end) {结束};
+
+  \draw[->] (start) -- (init);
+  \draw[->] (init) -- (set_i);
+  \draw[->] (set_i) -- (cond);
+  \draw[->] (cond) -- node[left] {是} (step1);
+  \draw[->] (step1) -- (step2);
+  \draw[->] (step2) -- (blank);
+  \draw[->] (blank.west) -- ++(-12mm,0) |- (cond.north west);
+
+  \draw[->] (cond) -- node[above] {否} (calc);
+  \draw[->] (calc) -- (output);
+  \draw[->] (output) -- (end);
+\end{tikzpicture}
