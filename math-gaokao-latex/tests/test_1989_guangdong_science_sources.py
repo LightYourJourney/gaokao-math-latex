@@ -177,8 +177,15 @@ class GuangdongScience1989CanonicalSourceTests(unittest.TestCase):
         self.assertIn('(-2,2)--(2,-2)', choices)
         self.assertIn('(-2,2.5)--(3,0)', choices)
         self.assertIn('(-2,0)--(0,1.5)', choices)
-        self.assertIn('(-2,0)--(0,-2)', choices)
-        self.assertIn('(3,0)', choices)
+        # The D lines were extended beyond their intercepts to match the scan.
+        # Check the line through (-2, 0) and (0, -2) geometrically.
+        d_scope = choices.split(r"\begin{scope}[xshift=9.62cm", 1)[1]
+        lines = re.findall(r"\\draw\[graph\] \(([-\d.]+),([-\d.]+)\)--\(([-\d.]+),([-\d.]+)\);", d_scope)
+        self.assertEqual(len(lines), 2)
+        for line, points in zip(lines, (((-2, 0), (0, -2)), ((3, 0), (0, 1.5)))):
+            x1, y1, x2, y2 = map(float, line)
+            for x, y in points:
+                self.assertAlmostEqual((y - y1) * (x2 - x1), (y2 - y1) * (x - x1))
         self.assertIn(r'\draw[graph] (0,1.5) circle', choices)
 
     def test_q30_locus_curve_endpoint_precedes_horizontal_axis_arrow(self):
