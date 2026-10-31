@@ -21240,3 +21240,20 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1272
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源第9题在向量 b 与坐标之间缺等号；若补入等号可推得 m=-1，但无官方答案或足以确认题意的原卷证据。",
+  "fingerprint": "f416f9a743e8644bf47d60188b94229cbd59a3b270bb693ad9d1fde543f25b92",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-beijing-arts",
+  "question_id": "gk-2018-regular-beijing-arts-q09",
+  "resume_action": "取得可追溯原卷或勘误，确认第9题向量条件后重新核算答案；确认前保持条件性结论。",
+  "source_id": "src-7d1c1c70745a459a191b9d84445af35384cd41488151cdd836b110015b0091fa",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
