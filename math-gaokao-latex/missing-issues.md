@@ -21223,3 +21223,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1271
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第1页第9题中向量 b 与 (-1,m) 之间未印等号；题面保留原样，解析仅在补入等号的假设下得到条件性结果，原题条件及答案待核。",
+  "fingerprint": "550598e0dd05d7c17dbd9563493a19186cd65fd11050bd58d30c4d3aa56e35ac",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-beijing-arts",
+  "question_id": "gk-2018-regular-beijing-arts-q09",
+  "resume_action": "取得可追溯的原卷或明确勘误，核对第9题向量条件后复核答案；核实前保留原貌和条件性结论。",
+  "source_id": "src-7d1c1c70745a459a191b9d84445af35384cd41488151cdd836b110015b0091fa",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

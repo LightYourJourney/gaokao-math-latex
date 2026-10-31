@@ -1872,6 +1872,14 @@
         "gk-2004-spring-shanghai"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase0-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2018-regular-beijing-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1881,7 +1889,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "82b1c5b2-0224-444b-a165-aa9c744f478c",
+  "last_transaction_id": "8cd28e6e-5f59-4868-9dff-c0bb7815edda",
   "papers": [
     {
       "blocked_from": null,
@@ -25448,9 +25456,63 @@
       "title": "2004 年·春季上海卷",
       "track": "none",
       "year": 2004
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2018_gaokao_beijing_arts",
+        "id": "gk-2018-regular-beijing-arts",
+        "note": "固定来源为两页重排题面，内部绑定只固定输入字节，不认证出版者、版次、上游来源链及官方身份。固定源无答案页，答案与解析为本库非官方推导。第9题向量b与坐标之间未印等号，条件及答案待核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京卷文"
+      },
+      "issue_ids": [
+        "ISSUE-1271"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2018_北京卷_文科",
+      "question_count": 20,
+      "resume_action": "取得可追溯的原卷或明确勘误，核对第9题向量条件后复核答案；核实前保留原貌和条件性结论。",
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_北京卷文_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_北京卷文_含解析.md",
+        "questions": "2018/2018_数学真题_北京卷文_试题.md",
+        "solution_body": "2018/2018_数学真题_北京卷文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7d1c1c70745a459a191b9d84445af35384cd41488151cdd836b110015b0091fa"
+      ],
+      "title": "2018 年·北京卷·文科",
+      "track": "arts",
+      "year": 2018
     }
   ],
-  "revision": 5537,
+  "revision": 5538,
   "schema_version": 1,
   "sources": [
     {
@@ -42199,8 +42261,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e373ba7369db8f1c9aa615503253f2e8b1529b65",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018北京文.pdf",
       "regions": [],
       "source_id": "src-7d1c1c70745a459a191b9d84445af35384cd41488151cdd836b110015b0091fa",
