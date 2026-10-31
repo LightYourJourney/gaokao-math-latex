@@ -1,0 +1,24 @@
+% 2018 北京卷文第6题：四棱锥三视图（据固定源第1063页重绘）
+\begin{tikzpicture}[font=\small, line cap=round, line join=round]
+  % 正（主）视图：高2，底边分为两个单位段，投影线从顶点落至分点
+  \begin{scope}
+    \draw (0,0)--(2,0)--(0,2)--cycle;
+    \draw (0,2)--(1,0);
+    \draw[<->] (-0.18,0)--(-0.18,2) node[midway,left] {$2$};
+    \draw[<->] (0,-0.18)--(1,-0.18) node[midway,below] {$1$};
+    \draw[<->] (1,-0.18)--(2,-0.18) node[midway,below] {$1$};
+    \node[below=7mm] at (1,0) {正（主）视图};
+  \end{scope}
+  % 侧（左）视图
+  \begin{scope}[xshift=3.4cm]
+    \draw (0,0)--(2,0)--(0,2)--cycle;
+    \draw[<->] (0,-0.18)--(2,-0.18) node[midway,below] {$2$};
+    \node[below=7mm] at (1,0) {侧（左）视图};
+  \end{scope}
+  % 俯视图：梯形外轮廓，底边收敛为下方中点及左下点
+  \begin{scope}[yshift=-2.9cm]
+    \draw (0,0)--(0,1.5)--(2,1.5)--(1,0)--cycle;
+    \draw (0,1.5)--(1,0);
+    \node[below=2mm] at (1,0) {俯视图};
+  \end{scope}
+\end{tikzpicture}
