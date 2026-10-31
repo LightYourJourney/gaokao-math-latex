@@ -1,0 +1,28 @@
+% 2018 天津理科第3题程序框图（据固定源第1页重绘）
+\begin{tikzpicture}[>=stealth, font=\small, node distance=5mm and 12mm]
+  \tikzset{
+    term/.style={draw, rounded corners=2pt, minimum width=12mm, minimum height=6mm, align=center},
+    proc/.style={draw, minimum width=22mm, minimum height=7mm, align=center},
+    test/.style={draw, diamond, aspect=2.7, inner sep=1pt, align=center},
+    io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=17mm, minimum height=6mm, align=center}
+  }
+  \node[term] (start) {开始};
+  \node[io, below=of start] (input) {输入 $N$};
+  \node[proc, below=of input] (init) {$i=2,\ T=0$};
+  \node[test, below=of init, minimum width=29mm, minimum height=9mm] (div) {$\dfrac{N}{i}$ 是整数?};
+  \node[proc, below=of div] (add) {$T=T+1$};
+  \node[test, below=of add, minimum width=20mm, minimum height=8mm] (inc) {$i=i+1$};
+  \node[test, below=of inc, minimum width=17mm, minimum height=7mm] (done) {$i\ge5$};
+  \node[io, below=of done] (output) {输出 $T$};
+  \node[term, below=of output] (end) {结束};
+  \draw[->] (start)--(input);
+  \draw[->] (input)--(init);
+  \draw[->] (init)--(div);
+  \draw[->] (div)--node[right]{是}(add);
+  \draw[->] (add)--(inc);
+  \draw[->] (div.east)--node[above]{否} ++(13mm,0)|-(inc.east);
+  \draw[->] (inc)--(done);
+  \draw[->] (done)--node[right]{是}(output);
+  \draw[->] (output)--(end);
+  \draw[->] (done.west)--node[above]{否} ++(-15mm,0)|-(div.west);
+\end{tikzpicture}
