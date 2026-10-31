@@ -1,0 +1,16 @@
+% 2018 天津理科第8题几何示意图（据固定源第1页重绘）
+\begin{tikzpicture}[font=\small, line cap=round, line join=round]
+  % AB=AD=1, angle BAD=120 degrees; perpendicularities determine C.
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (1.8,0);
+  \coordinate (D) at (-0.9,1.559);
+  \coordinate (C) at (1.8,3.118);
+  \coordinate (E) at ($(D)!0.48!(C)$);
+  \draw (A)--(D)--(C)--(B)--(A);
+  \draw (A)--(E)--(B);
+  \node[below] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[left] at (E) {$E$};
+\end{tikzpicture}
