@@ -1888,6 +1888,14 @@
         "gk-2018-regular-beijing-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase0-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2018-regular-tianjin-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1897,7 +1905,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a1436a34-2350-474f-9907-76644e187ac5",
+  "last_transaction_id": "b73e7e01-4b8a-4a1e-a993-fde55ef88ca5",
   "papers": [
     {
       "blocked_from": null,
@@ -25604,9 +25612,61 @@
       "title": "2018 年·北京卷·理科",
       "track": "science",
       "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2018_gaokao_tianjin_science",
+        "id": "gk-2018-regular-tianjin-science",
+        "note": "固定来源为两页重排题面，内部绑定只固定输入字节，不认证出版者、版次、来源链及官方身份；固定源无答案页，答案与解析为非官方推导。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "天津卷理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-tianjin-science",
+      "production_state": "planned",
+      "project_dir": "2018_天津卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_天津卷理_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_天津卷理_含解析.md",
+        "questions": "2018/2018_数学真题_天津卷理_试题.md",
+        "solution_body": "2018/2018_数学真题_天津卷理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b54c1f405f04d10ea49371a82709c57473ca05b33377871187817ee222d692b2"
+      ],
+      "title": "2018 年·天津卷·理科",
+      "track": "science",
+      "year": 2018
     }
   ],
-  "revision": 5559,
+  "revision": 5560,
   "schema_version": 1,
   "sources": [
     {
@@ -42427,8 +42487,8 @@
       "exam_type": "regular",
       "git_blob_oid": "bdd2e6ec234e1029751cff1a9e77e3272d7546ab",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018天津理.pdf",
       "regions": [],
       "source_id": "src-b54c1f405f04d10ea49371a82709c57473ca05b33377871187817ee222d692b2",
