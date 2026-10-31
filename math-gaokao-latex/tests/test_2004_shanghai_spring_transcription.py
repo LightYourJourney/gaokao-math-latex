@@ -36,11 +36,26 @@ class ShanghaiSpring2004TranscriptionTests(unittest.TestCase):
         self.assertEqual(source["paper_relation"], "canonical")
         paper = next(item for item in self.manifest["papers"] if item["paper_id"] == source["paper_id"])
         self.assertEqual(paper["production_state"], "blocked")
-        self.assertEqual(set(paper["issue_ids"]), {"ISSUE-1264", "ISSUE-1265"})
+        self.assertEqual(set(paper["issue_ids"]), {"ISSUE-1264", "ISSUE-1265", "ISSUE-1266"})
         self.assertIn(SOURCE_ID, self.transcript)
         self.assertIn(SOURCE_SHA256, self.transcript)
         self.assertIn("内部 paper_id 绑定", self.transcript)
         self.assertIn("不代表官方身份认证", self.transcript)
+
+    def test_provenance_preserves_pending_interpretations(self):
+        path = PROJECT / "2004_春季上海卷/provenance.json"
+        document = json.loads(path.read_text(encoding="utf-8"))
+        questions = {item["question_order"]: item for item in document["questions"]}
+        self.assertEqual(set(questions), set(range(1, 23)))
+        self.assertEqual(questions[14]["answer_evidence"]["grade"], "U")
+        self.assertEqual(questions[14]["conflict_status"], "unresolved")
+        self.assertEqual(set(questions[14]["issue_ids"]), {"ISSUE-1264", "ISSUE-1266"})
+        self.assertEqual(questions[18]["answer_evidence"]["grade"], "U")
+        self.assertEqual(questions[18]["conflict_status"], "resolved")
+        self.assertIn("ISSUE-1265", questions[18]["issue_ids"])
+        self.assertIn("早期第二盲解将 x 误作 p", questions[18]["answer_evidence"]["evidence"])
+        self.assertEqual(questions[19]["source_pages"], [1])
+        self.assertEqual(questions[20]["source_pages"], [2])
 
     def test_question_numbers_sections_and_math_delimiters_are_complete(self):
         numbers = [int(number) for number in re.findall(r"^\*\*(\d+)．", self.transcript, re.M)]

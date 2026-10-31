@@ -21133,3 +21133,20 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1266
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "独立盲解按对所有允许集合的全称判断选择 B，同时指出固定 M=N 时两命题等价为 C；现稿保留两种条件性结论。原题量词解释尚未核定。",
+  "fingerprint": "196af8a3a6e34beadcf634f616731d037f811414e8eaa85a23e53d042f50a8e4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-spring-shanghai",
+  "question_id": "gk-2004-spring-shanghai-q14",
+  "resume_action": "取得同版可靠答案、勘误或题意说明，核对全称判断与固定集合解释；在此之前保留两种条件结论及完成阻断。",
+  "source_id": "src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

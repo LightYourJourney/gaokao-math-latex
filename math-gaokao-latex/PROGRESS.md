@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 上海春季卷：逐题 provenance 与独立盲核（2026-10-30）
+
+- Q1—Q22 三角色 provenance 已导入；固定 PDF 第1页对应 Q1—Q19、第2页对应 Q20—Q22。历史题面独立复核与后续格式调整的时序已写入证据，来源身份仍未认证、官方答案未取得。
+- Q14 新盲解提出全称判断选 B 并指出固定集合相等时为 C，解释分歧登记 `ISSUE-1266`，与 `ISSUE-1264` 同为 open / blocks_completion；Q14 答案等级 U、盲核分歧 unresolved。Q18 早期盲解曾误将 x 当作 p，本轮新盲解保留原文并确认字面判别式条件；历史误读记 resolved，但 `ISSUE-1265` 的原题变量疑点仍开放、答案等级 U。
+- 问题、provenance、目录注记事务依次将 manifest revision 5519→5520→5521→5522；paper 为 blocked、batch 为 provenance_verified。下一步完成正式四版构建和逐页视觉复核；不把本阶段当作整卷或全库完成。详见 `reports/2004-shanghai-spring-provenance.md`。
+- 校验：provenance、22题规范源、三个生成器、source manifest、issues 与 775 行 CSV 检查通过；本卷定向测试 18 项通过，含 Q14/Q18 等级、分歧、问题关联和第19/20题源页边界。
+
 ### 2004 上海春季卷：候选来源登记与两项阻断（2026-10-30）
 
 - 固定源 `src-eda3090af4489c2848005279f9f1f65a561d4fa54daf91ccd574cfbff213be4f` / SHA-256 `e09d135e7814d1d5dd658ac51829a170edae1267b408f30a4edfa44d2312ca8a` 以内部 canonical 绑定到 `gk-2004-spring-shanghai` / `phase1-b62`，manifest revision 5516→5517；该绑定只固定本库输入字节，出版者、版次、来源链及官方身份仍未核，`official_answer=null`。
