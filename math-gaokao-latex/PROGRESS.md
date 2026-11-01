@@ -11523,6 +11523,20 @@
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b16` 验证通过（`OK：1 卷`），manifest 批次状态进入 `compiled_pending_review`。
 
 
+### phase0-b16 2018 江苏卷：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（5页）、解析版（35页）、简答版（7页）、印刷版（27页）共 74 页，592 项检查全部通过（`pass`）；
+  - 全卷 8 处 TikZ 矢量图（茎叶图、流程图、正八面体几何体、六面体、温室大棚截面、椭圆切线、选考几何圆切线、正三棱柱）在四版中渲染清晰完整，图文混排无遮挡、无溢出；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b16 --output-report math-gaokao-latex/reports/phase0-b16.md`，返回 `FINALIZED：phase0-b16`；
+  - manifest revision 推进至 `5641`，`phase0-b16` 状态关闭为 `closed`，`gk-2018-regular-jiangsu` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b16 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b16` 验证通过（`FINALIZED：phase0-b16`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
+
 
 
 
