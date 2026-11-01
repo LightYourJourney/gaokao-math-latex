@@ -12073,3 +12073,11 @@
 - 运行 `make_short_answers.py --batch phase0-b22 --write`，生成 `answers_short.tex`；
 - 运行 `make_editions.py --batch phase0-b22 --write`，生成试题版、解析版、简答版、印刷版四套独立入口壳文件；
 - 分别运行三工具的 `--check` 比对模式，全部 100% 确定性校验通过。
+
+### phase0-b22 2019 北京卷理科：录入 Provenance（2026-11-01）
+
+- 运行 `provenance.py init-batch --batch phase0-b22 --work-dir math-gaokao-latex/.work` 初始化三角色事实工作结构；
+- 填充 20 题来源页码映射（1–16 题对应原卷第 1 页，17–20 题对应第 2 页）、固定 artifact 来源哈希（`5dbe0df2...`）与现场计算的 `question_text_sha256` 及 `answer_sha256`；
+- 登记 `answer-solve` 为 D 级非官方独立推导证据，`answer-review` 冲突状态为 `none`，双向哈希校验无分歧；
+- 执行 `provenance.py import-batch --batch phase0-b22 --write` 正式入库，生成 `math-gaokao-latex/2019_北京卷_理科/provenance.json`，manifest revision 推进至 `5685`；
+- 执行 `provenance.py check-batch --batch phase0-b22` 验证通过（`OK：1 卷`）。
