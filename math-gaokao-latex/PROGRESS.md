@@ -23,6 +23,12 @@
 - 规范题面以相对 Markdown 链接绑定本卷 `.tex` 文件，manifest `figure_files` 与合并题面/解析中的复用数一致（每图2次）。manifest revision 经图稿登记、provenance 哈希刷新、occurrence 同步及状态重算到 `5788`；文科当前 `editions_generated`，理科因 Q5/Q10 blocker 仍为 `blocked`，批次 `provenance_verified`。
 - 生成器、简答、四版壳均已写入并通过 `--check`；`solution_sources check-batch`、`provenance check-batch`、`source_manifest validate` 与 `issues validate` 通过。未构建正式四版 PDF，未生成 build/review receipt，未作整页视觉校样或批次收口。本阶段不表示两卷闭环或长期语料完成。
 
+### 2006 山东文理候选卷：正式四版构建（2026-11-02）
+
+- XeLaTeX 正式构建两卷四版共8份 PDF、93页，工具链 TeX Live 2026；attempt：文科 `9dde3ace-2511-417f-bb68-e936959ef013`、理科 `8a4d85d5-9003-4979-a2b2-f0a100159b2b`。二者均绑定输入 manifest revision `5789`，完成后 revision 为 `5790`，批次状态 `compiled_pending_review`。
+- 8 个 edition 均成功、无编译错误、缺字或未解析引用。文科四版无排版告警；理科解析版有 1 条 25.69281pt overfull（TeX line 333），印刷版有 1 条 underfull（TeX lines 141–142）；需要依据当前 PDF 页定位和视觉审查决定是否修正。
+- 回执校验 `validate-receipts --manifest source-manifest.json --batch phase1-b68 --json` 返回 `OK`，无 stale/invalid/missing/failure。下一步使用正式 PDF 完成逐页视觉审查，必要时修复并重建。未形成视觉回执、未批次收口；不表示卷件完成或长期语料完成。
+
 ### 2006 山东文科候选卷：独立答案与解析草稿（2026-11-02）
 
 - 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东文_答案要点.md` 与 `2006/2006_数学真题_山东文_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分页，来源发布者、版次、来源链与官方身份仍未核。
