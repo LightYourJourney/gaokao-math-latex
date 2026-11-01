@@ -11,6 +11,12 @@
 - 登记后将 paper_id 写入两卷规范源，并经 `solution_sources.extract-batch --write` 重生成4个派生目标。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase1-b68` 和 `git diff --check` 均通过。
 - 逐题 provenance、题图、项目 TeX/简答、正式 PDF 构建及视觉审查未完成。详情见 `reports/2006-shandong-registration.md`；本阶段不表示任一卷闭环或长期语料完成。
 
+### 2006 山东文理候选卷：逐题 provenance 导入（2026-11-02）
+
+- 批次 `phase1-b68` 完成两卷 `question-review`、`answer-solve`、`answer-review` 三角色共六份工作记录的逐题导入；source 页面定位为每卷 PDF 第1页 Q1–Q17、第2页 Q18–Q22，题面与答案摘要由 `provenance.py` 规范函数现场计算。未把固定候选副本表述成官方来源或官方答案。
+- manifest revision `5782→5783`，批次状态 `provenance_verified`；文科为 `answers_verified`，理科仍为 `blocked`。理科 Q5、Q10 保持 U / unresolved，并分别关联 `ISSUE-1294`–`ISSUE-1297` 四条 open / `blocks_completion` blocker。
+- `provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase1-b68`、`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b68` 均通过。尚未登记/绘制题图、生成项目 TeX/简答、正式构建 PDF 或形成视觉回执；下阶段先处理题图与项目生成。本阶段不表示两卷闭环或长期语料完成。
+
 ### 2006 山东文科候选卷：独立答案与解析草稿（2026-11-02）
 
 - 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东文_答案要点.md` 与 `2006/2006_数学真题_山东文_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分页，来源发布者、版次、来源链与官方身份仍未核。
