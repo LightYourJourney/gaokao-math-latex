@@ -69,6 +69,13 @@
 - `provenance.py check-batch` 返回 `OK：4 卷`；`source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch --batch phase1-b69` 四卷通过。角色范围、逐题状态和 source/official 边界见 `reports/2006-four-candidates-provenance.md`。
 - 尚未绘制/登记题图、生成项目 TeX/简答版、构建四版 PDF 或逐页视觉校样；本阶段不表示试卷闭环或长期语料完成。
 
+### 2006 广东、江苏、江西文、浙江文：题图登记与项目生成（2026-11-02）
+
+- 四卷依固定候选 PDF 重绘并登记17幅 TikZ 图：广东4、江苏4、江西文4、浙江文5。主会话对固定原页图位复核，并用临时 XeLaTeX standalone wrapper 编译、渲染全部17幅；均成功，联系页及重点图放大检查未发现缺字、裁切。江西文 Q15 绕行线端点有局部与棱线重合，图稿明确为示意，不把低置信端点当作精确转录。
+- 规范题面改为本卷 `.tex` 图链；manifest `figure_files` 与四份题面/解析正文的图链登记同步，17幅均为两处复用。刷新受图链影响的 question-review 哈希并重新导入 provenance。为符合简答生成器的速查表核对，广东 Q6、江西文 Q4/Q8 的速查表 token 记为 `U`，详细答案的 U/PENDING 说明及 blockers 不变。
+- `solution_sources extract-batch --write`、项目生成、简答生成及四版 shell 生成完成。source manifest revision `5805`，`phase1-b69` 状态 `provenance_verified`；广东与江西文继续 `blocked`，江苏与浙江为 `editions_generated`。
+- `source_manifest validate`、`issues validate`、`provenance check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`manifest_csv --check`（775行）及 `git diff --check` 通过。未构建正式四版 PDF、未做整页视觉 review 或 finalize。详见 `reports/2006-four-candidates-figures.md`；本阶段不表示来源认证、四卷闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。

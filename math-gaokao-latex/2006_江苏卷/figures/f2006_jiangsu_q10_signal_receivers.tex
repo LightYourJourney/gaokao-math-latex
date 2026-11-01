@@ -1,0 +1,13 @@
+% Source-relative PDF page 1, Q10 (printed page 302).
+\begin{tikzpicture}[line cap=round,line join=round,thick]
+  \foreach \y in {0,-0.62,-1.24,-1.86,-2.48,-3.10} {
+    \draw (0,\y)--(4.4,\y);
+    \fill (0,\y) circle (1.15pt);
+    \fill (4.4,\y) circle (1.15pt);
+  }
+  \draw (2.2,0) circle (0.24);
+  \draw (2.2,0) circle (0.085);
+  \node[above=5pt] at (2.2,0.24) {信号源};
+  \foreach \y in {-0.62,-1.24,-1.86,-2.48,-3.10}
+    \draw (1.82,\y-0.15) rectangle (2.58,\y+0.15);
+\end{tikzpicture}

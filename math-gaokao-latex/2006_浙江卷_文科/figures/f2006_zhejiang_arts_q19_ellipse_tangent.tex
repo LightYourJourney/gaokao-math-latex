@@ -1,0 +1,21 @@
+% Source: 2006浙江文.pdf, source-relative PDF page 2, Q19.
+% Preserve the labelled ellipse, axes, foci, A/B and the straight line AB through T.
+\begin{tikzpicture}[line cap=round,line join=round,x=0.85cm,y=0.85cm]
+  \draw[->] (-3.8,0)--(4.2,0) node[right] {$x$};
+  \draw[->] (0,-2.7)--(0,2.7) node[above] {$y$};
+  \draw[thick] (0,0) ellipse (2.45 and 1.225);
+  \coordinate (A) at (3.4,0);
+  \coordinate (B) at (0,1.7);
+  \coordinate (T) at (1.7,0.85);
+  \coordinate (Fone) at (-2.121,0);
+  \coordinate (Ftwo) at (2.121,0);
+  \draw[thick] (B)--(A);
+  \fill (Fone) circle (1.4pt);
+  \fill (Ftwo) circle (1.4pt);
+  \node[above left] at (B) {$B$};
+  \node[above right] at (T) {$T$};
+  \node[below] at (A) {$A$};
+  \node[below left] at (Fone) {$F_1$};
+  \node[below right] at (Ftwo) {$F_2$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
