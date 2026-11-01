@@ -2,13 +2,13 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**369**；生产状态：blocked 77，compiled 3，complete 289
-- 批次总数：**227**；manifest 状态：closed 167，closed_with_blockers 59，compiled_pending_review 1
-- 正式复核门禁：FINALIZED 226，VISUAL_FAILED 1
-- 已编译版本：1476/1476；构建回执状态：compiled_pending_review 4，succeeded 365
-- review 回执状态：failed 1，passed 368
+- 试卷总数：**370**；生产状态：blocked 77，compiled 3，complete 290
+- 批次总数：**228**；manifest 状态：closed 168，closed_with_blockers 59，compiled_pending_review 1
+- 正式复核门禁：FINALIZED 227，VISUAL_FAILED 1
+- 已编译版本：1480/1480；构建回执状态：compiled_pending_review 4，succeeded 366
+- review 回执状态：failed 1，passed 369
 - 问题总账：1278 条，未解决问题：234，阻塞完成 172。
-- 回执日志警告汇总（包含待复核回执）：Overfull 24，Underfull 103，豁免记录 127。
+- 回执日志警告汇总（包含待复核回执）：Overfull 24，Underfull 106，豁免记录 130。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
 - 门禁未通过批次：phase0-b02。
 
@@ -243,3 +243,4 @@
 | phase0-b15 | 1 | closed | FINALIZED | validated |
 | phase0-b16 | 1 | closed | FINALIZED | validated |
 | phase0-b17 | 1 | closed | FINALIZED | validated |
+| phase0-b18 | 1 | closed | FINALIZED | validated |
