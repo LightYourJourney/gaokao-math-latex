@@ -12289,6 +12289,15 @@
   - `review_receipts.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase0-b24` 验证通过（`FINALIZED：phase0-b24`）；
   - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
 
+### phase0-b25 2019 天津卷文科：题面转录与 TikZ 占位符标定（2026-11-01）
+
+- 锚定固定源 `src-58906e1ab0a3396177c115038497d19ff72892256c2c8d7289a29eae9410939b`（`普通高考/2019/2019天津文.pdf`，原卷印刷页 1109—1110，SHA-256: `1a8c0f5be0d9372ff6b9ac0853b1c3656c4babf02b9d4e6bf819a5b3e2ebf78e`）；
+- 转录生成规范题面 `2019/2019_数学真题_天津卷文_试题.md`：
+  - 覆盖全部 20 道题目（选择题 1–8、填空题 9–14、解答题 15–20）；
+  - 严格标定 2 处 TikZ 矢量图稿占位符：第 4 题程序框图（`q4.tikz.tex`）、第 17 题四棱锥立体结构图（`q17.tikz.tex`）；
+  - 经 `parse_question_blocks` 校验，20 道题结构完整无误，小问层级完全吻合。
+
+
 
 
 
