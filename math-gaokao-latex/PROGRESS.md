@@ -17,6 +17,12 @@
 - 规范题面、答案要点和解析正文已落盘，`solution_sources extract-batch --write` 生成含解析稿；答案为独立推导，`official_answer=null`，Q14保留U。Q13/Q19/Q22图稿已复制到 canonical figures 目录并在题面映射，manifest 各登记 `expected_occurrences=2`。
 - 通过登记预检与 `solution_sources extract-batch` 写事务；详细记录及图稿指纹见 `reports/2006-tianjin-arts-registration.md`。项目 TeX / 简答 / 版本壳、三角色 provenance、正式构建、视觉校样和整卷验收未完成；本阶段不表示本卷或全语料完成。下一步继续确定性装配与 provenance。
 
+### 2006 天津文科候选卷：确定性 TeX / 版本入口装配（2026-11-02）
+
+- 生成项目 `questions.tex`、`answers.tex` 与 `index.json` 投影，生成 `answers_short.tex` 及试题/解析/简答/印刷四版入口壳。
+- `generate_projects`、`make_short_answers`、`make_editions` 的单卷 `--check` 均通过；`solution_sources check-batch` 确认22题题面、答案和解析锚点对齐。详细记录见 `reports/2006-tianjin-arts-project-generation.md`。
+- provenance、正式 XeLaTeX 构建、receipt、视觉复核及批次关闭尚未完成；Q14 的 `ISSUE-1287` 仍 open / blocks_completion，paper blocked，batch planned。本阶段不表示整卷验收或全语料完成。
+
 ### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
 
 - 修正规范题面 TeX 中数学模式的中文分隔标点：使用 `\text{、}`、`\text{。}` 等保留标点字形且不将句末标点挪出公式；更新后重新生成四版及答案材料、重算题面哈希并导入 provenance，manifest revision 推进至 `5755`。先前尝试把标点移到显示公式外造成页面左侧游离标点，未接受，已修复并以最终构建复核。
