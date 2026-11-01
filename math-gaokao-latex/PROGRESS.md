@@ -12328,6 +12328,18 @@
 - 执行 `source_manifest.py register-papers --write` 注册入库，manifest revision 推进至 `5705`；
 - 执行 `source_manifest.py validate` 全量校验通过。
 
+### phase0-b25 2019 天津卷文科：项目装配与四版生成（2026-11-01）
+
+- 建立项目目录 `math-gaokao-latex/2019_天津卷_文科/`：
+  - 拷贝 TikZ 矢量图稿至 `figures/` 目录（`q4.tikz.tex`、`q17.tikz.tex`）；
+  - 执行 `source_manifest.py sync-figure-registry --paper gk-2019-regular-tianjin-arts --write` 同步图稿注册表，revision 推进至 `5706`；
+- 自动化生成三入口内容及四版入口壳文件：
+  - 执行 `generate_projects.py --batch phase0-b25 --write` 生成 `questions.tex`、`answers.tex` 及 `index.json`；
+  - 执行 `make_short_answers.py --batch phase0-b25 --write` 生成 `answers_short.tex`；
+  - 执行 `make_editions.py --batch phase0-b25 --write` 生成试题版、解析版、简答版、印刷版四个编译入口壳文件；
+  - 经各工具 `--check` 比对模式验证，生成结果与源文件 100% 一致。
+
+
 
 
 
