@@ -76,6 +76,13 @@
 - `solution_sources extract-batch --write`、项目生成、简答生成及四版 shell 生成完成。source manifest revision `5805`，`phase1-b69` 状态 `provenance_verified`；广东与江西文继续 `blocked`，江苏与浙江为 `editions_generated`。
 - `source_manifest validate`、`issues validate`、`provenance check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`manifest_csv --check`（775行）及 `git diff --check` 通过。未构建正式四版 PDF、未做整页视觉 review 或 finalize。详见 `reports/2006-four-candidates-figures.md`；本阶段不表示来源认证、四卷闭环或长期语料完成。
 
+### phase1-b69 2006 四卷候选批次：正式构建（2026-11-02）
+
+- 正式构建四卷共 16 个版式全部成功：广东 46 页、江苏 43 页、江西文科 47 页、浙江文科 42 页，总计 178 页。每份收据中的 PDF SHA-256 与落盘 PDF 一致；`validate-receipts --require-current-inputs` 返回 `OK`（4 卷、无缺失/失效/过期收据）。
+- 江苏解析正文 Q21 的集合数学定界符已修正，并重新生成解析正文投影与项目答案 TeX；首次构建记录的两个江苏编译问题 `ISSUE-1311/1312` 均已在成功构建后标为 resolved。
+- 广东解析版构建收据记录 1 条 Overfull 与 1 条 Underfull 排版告警；其他 15 版没有 Overfull/Underfull 告警。需在即将进行的逐页视觉复核中检查广东解析版对应位置，不据构建成功推定版面通过。
+- `source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775 行）通过；逐页八项 review 尚未完成，批次仍为 `compiled_pending_review`，详见 `reports/2006-four-candidates-formal-build.md`。不表示来源认证、四卷闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。
