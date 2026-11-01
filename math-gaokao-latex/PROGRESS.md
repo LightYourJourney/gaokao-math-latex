@@ -15,6 +15,12 @@
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
 - 实际全量测试结果 `Ran 1749 tests in 559.497s`、`OK (skipped=13)`；测试在全国Ⅲ理科题面草稿提交前启动，不表示该新草稿完成正式校验。
 
+### 2018 全国Ⅲ卷理科候选卷：逐题来源证据与 provenance 导入（2026-11-01）
+
+- 23 题绑定固定源及题面和答案哈希：源 PDF 第 1 页为第 1—18 题，第 2 页为第 19—23 题；
+- 固定源无答案页，答案证据均为 D 级非官方推导；复核者已见答案和解析，非盲核；
+- 执行 `provenance.py import-batch --write` 导入生成 `2018_全国Ⅲ卷_理科/provenance.json`，manifest revision 更新为 `5624`，`check-batch` 验证通过。
+
 ### 2018 全国Ⅲ卷理科候选卷：项目 TeX 装配与四版壳生成（2026-11-01）
 
 - 复制 5 幅 TikZ 矢量图到 `2018_全国Ⅲ卷_理科/figures/`，`sync-figure-registry` 成功登记并写入 revision `5623`；
