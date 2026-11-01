@@ -12195,6 +12195,20 @@
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b23` 验证通过（`OK：1 卷`）；
 - manifest revision 推进至 `5695`，批次推进至 `compiled_pending_review`。
 
+### phase0-b23 2019 北京卷文科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（5页）、解析版（25页）、简答版（7页）、印刷版（18页）共 55 页，440 项检查全部通过（`pass`）；
+  - 全卷 4 处 TikZ 矢量图（`q4.tikz.tex` 流程框图、`q8.tikz.tex` 圆与阴影面积、`q12.tikz.tex` 三视图、`q18.tikz.tex` 四棱锥立体图）在四版中渲染清晰完整，图文混排无遮挡、0 致命 Overfull；
+  - 8 处段尾两端对齐松散 Underfull 警告按 schema 规范登记豁免并核验通过；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b23 --output-report math-gaokao-latex/reports/phase0-b23.md`，返回 `FINALIZED：phase0-b23`；
+  - manifest revision 推进至 `5696`，`phase0-b23` 状态关闭为 `closed`，`gk-2019-regular-beijing-arts` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b23 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b23` 验证通过（`FINALIZED：phase0-b23`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
 
 
 
