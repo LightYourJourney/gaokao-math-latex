@@ -17,6 +17,12 @@
 - 两页逐页渲染目视：题签为“2006 普通高等学校招生考试（天津卷理）”，共 22 题（10 选择、8 填空、4 解答），题图在 Q9、Q13、Q17、Q19、Q22。固定件未见答案、解析或评分页。来源身份与版次未认证；本阶段没有登记 paper/batch 或转录题面。
 - 页面清点、文件指纹与来源边界见 `reports/2006-tianjin-science-source-intake.md`。题面阶段另完成 Q1–Q22 转录，详见 `reports/2006-tianjin-science-question-transcription.md` 和 `../2006/2006_数学真题_天津理_试题.md`；Q7 下标记号已按原页订正。Q2 两条渐近线相交而选项无 0，题面照录并标 U / 待核。答案、解析、图稿、provenance 和 paper/batch 登记仍未完成；来源身份与版次未认证。本阶段不表示来源认证、答案完成或整卷/全语料完成。
 
+### 2006 天津理科候选卷：Q19 题面订正与答案盲核（2026-11-02）
+
+- 逐题独立答案复核覆盖 Q1–Q22，依据固定 PDF 重新推导后对照盲解稿；除 Q2 保持 U 外，其余结论已复核，发现盲解 Q8 误选 C，应为 D。修订后的答案层尚未建立。
+- 复核回看 PDF 第 2 页（印刷页 337）发现 Q19(1) 原文为 `FO∥平面 CDE`，规范题面源先前误录为垂直，已纠正；Q7 `C_n=a_{b_n}` 下标也按 PDF 第 1 页复核。详情见 `reports/2006-tianjin-science-question-transcription.md` 与忽略工作稿 `.work/phase1-next/2006-tianjin-science-answer-review.md`。
+- 本阶段仅订正题面源和记录答案复核；Q2 的题面/选项冲突未解决，未认证答案为官方材料，答案要点、解析正文、题图、provenance、paper/batch、TeX 与构建仍未完成。下一步依修订结论建立独立答案源并登记 Q2 阻断，不表示整卷或全语料完成。
+
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。
