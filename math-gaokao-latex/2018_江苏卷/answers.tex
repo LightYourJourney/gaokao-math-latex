@@ -1,0 +1,1278 @@
+% answers.tex —— 2018 年·江苏卷 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2018/2018_数学真题_江苏_试题.md + 2018/2018_数学真题_江苏_解析正文.md + 2018/2018_数学真题_江苏_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定源没有答案页；以下为独立推导并经多源交叉复核的解析（非官方答案，等级 D）。
+\end{gktip}
+
+\gkpart{一、填空题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A = \{0, 1, 2, 8\}$，$B = \{-1, 1, 6, 8\}$，那么 $A \cap B =$\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+集合 $A = \{0, 1, 2, 8\}$，$B = \{-1, 1, 6, 8\}$。
+\Needspace{5\baselineskip}
+根据集合交集的定义，由属于集合 $A$ 且属于集合 $B$ 的公共元素构成：
+\nopagebreak[4]
+\[A \cap B = \{1, 8\}.\]
+
+\gkanswer{答案：$\{1, 8\}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+若复数 $z$ 满足 $\mathrm{i} \cdot z = 1 + 2\mathrm{i}$，其中 $\mathrm{i}$ 是虚数单位，则 $z$ 的实部为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由已知等式 $\mathrm{i} \cdot z = 1 + 2\mathrm{i}$，两边同除以虚数单位 $\mathrm{i}$：
+\nopagebreak[4]
+\[z = \frac{1 + 2\mathrm{i}}{\mathrm{i}} = \frac{(1 + 2\mathrm{i})(-\mathrm{i})}{-\mathrm{i}^2} = 2 - \mathrm{i}.\]
+故复数 $z$ 的实部为 $2$。
+
+\gkanswer{答案：$2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知 5 位裁判给某运动员打出的分数的茎叶图如图所示，那么这 5 位裁判打出的分数的平均数为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/q03.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由茎叶图可知，5 位裁判打出的原始分数为：
+89, 89, 90, 91, 91。
+\Needspace{5\baselineskip}
+则这 5 位裁判打出分数的平均数为：
+\nopagebreak[4]
+\[\bar{x} = \frac{89 + 89 + 90 + 91 + 91}{5} = \frac{450}{5} = 90.\]
+
+\gkanswer{答案：$90$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+一个算法的伪代码如图所示，执行此算法，最后输出的 $S$ 的值为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/q04.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+执行算法的伪代码流程如下：
+\begin{itemize}
+\item 初始状态：$I = 1$，$S = 1$；
+\item 第 1 次循环：$I = 1 < 6$ 成立，执行 $I \leftarrow 1 + 2 = 3$，$S \leftarrow 2 \times 1 = 2$；
+\item 第 2 次循环：$I = 3 < 6$ 成立，执行 $I \leftarrow 3 + 2 = 5$，$S \leftarrow 2 \times 2 = 4$；
+\item 第 3 次循环：$I = 5 < 6$ 成立，执行 $I \leftarrow 5 + 2 = 7$，$S \leftarrow 2 \times 4 = 8$；
+\item 循环判断：$I = 7 < 6$ 不成立，循环终止。
+\end{itemize}
+输出变量 $S$ 的值为 $8$。
+
+\gkanswer{答案：$8$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+函数 $f(x) = \sqrt{\log_2 x - 1}$ 的定义域为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+要使函数 $f(x) = \sqrt{\log_2 x - 1}$ 有意义，需满足偶次根号下被开方数非负且真数大于零：
+\nopagebreak[4]
+\[\begin{cases} \log_2 x - 1 \geqslant 0, \\ x > 0, \end{cases} \iff \log_2 x \geqslant 1 \iff x \geqslant 2.\]
+故函数 $f(x)$ 的定义域为 $[2, +\infty)$。
+
+\gkanswer{答案：$[2, +\infty)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+某兴趣小组有 2 名男生和 3 名女生，现从中任选 2 名学生去参加活动，则恰好选中 2 名女生的概率为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+从 2 名男生和 3 名女生共 5 名学生中任选 2 人的基本事件总数为：
+\nopagebreak[4]
+\[N = \mathrm C_5^2 = \frac{5 \times 4}{2 \times 1} = 10.\]
+\Needspace{5\baselineskip}
+恰好选中 2 名女生包含的基本事件数为：
+\nopagebreak[4]
+\[m = \mathrm C_3^2 = 3.\]
+\Needspace{5\baselineskip}
+根据古典概型概率计算公式，恰好选中 2 名女生的概率为：
+\nopagebreak[4]
+\[P = \frac{m}{N} = \frac{3}{10}.\]
+
+\gkanswer{答案：$\dfrac{3}{10}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+已知函数 $y = \sin(2x + \varphi)$ $\left(-\dfrac{\pi}{2} < \varphi < \dfrac{\pi}{2}\right)$ 的图象关于直线 $x = \dfrac{\pi}{3}$ 对称，则 $\varphi$ 的值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+已知函数 $y = \sin(2x + \varphi)$ 的图象关于直线 $x = \dfrac{\pi}{3}$ 对称，
+\Needspace{5\baselineskip}
+由正弦曲线对称轴性质，必有：
+\nopagebreak[4]
+\[2 \times \frac{\pi}{3} + \varphi = k\pi + \frac{\pi}{2}\quad (k \in \mathbf{Z}),\]
+\Needspace{5\baselineskip}
+整理得：
+\nopagebreak[4]
+\[\varphi = k\pi + \frac{\pi}{2} - \frac{2\pi}{3} = k\pi - \frac{\pi}{6}\quad (k \in \mathbf{Z}).\]
+\Needspace{5\baselineskip}
+因为 $-\dfrac{\pi}{2} < \varphi < \dfrac{\pi}{2}$，取 $k = 0$，得：
+\nopagebreak[4]
+\[\varphi = -\frac{\pi}{6}.\]
+
+\gkanswer{答案：$-\dfrac{\pi}{6}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+在平面直角坐标系 $xOy$ 中，若双曲线 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ ($a > 0, b > 0$) 的右焦点 $F(c, 0)$ 到一条渐近线的距离为 $\dfrac{\sqrt{3}}{2}c$，则其离心率的值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线 $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ ($a > 0, b > 0$) 的两条渐近线方程为 $bx \pm ay = 0$。
+\Needspace{5\baselineskip}
+右焦点 $F(c, 0)$ 到渐近线 $bx - ay = 0$ 的距离为：
+\nopagebreak[4]
+\[d = \frac{|bc|}{\sqrt{a^2 + b^2}} = \frac{bc}{c} = b.\]
+\Needspace{5\baselineskip}
+由题设条件 $d = \dfrac{\sqrt{3}}{2}c$，得：
+\nopagebreak[4]
+\[b = \frac{\sqrt{3}}{2}c \implies b^2 = \frac{3}{4}c^2.\]
+\Needspace{5\baselineskip}
+由双曲线几何性质 $c^2 = a^2 + b^2$，可得：
+\nopagebreak[4]
+\[a^2 = c^2 - b^2 = c^2 - \frac{3}{4}c^2 = \frac{1}{4}c^2.\]
+\Needspace{5\baselineskip}
+因此，双曲线的离心率为：
+\nopagebreak[4]
+\[e = \frac{c}{a} = \sqrt{\frac{c^2}{a^2}} = \sqrt{4} = 2.\]
+
+\gkanswer{答案：$2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+函数 $f(x)$ 满足 $f(x + 4) = f(x)$ ($x \in \mathbf{R}$)，且在区间 $(-2, 2]$ 上，
+\nopagebreak[4]
+\[f(x) = \begin{cases} \cos\dfrac{\pi x}{2}, & 0 < x \leqslant 2, \\ x + \dfrac{1}{2}, & -2 < x \leqslant 0, \end{cases}\]
+则 $f(f(15))$ 的值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+已知函数 $f(x)$ 满足周期性条件 $f(x + 4) = f(x)$，故周期为 4。
+\Needspace{5\baselineskip}
+自变量 $15 = 4 \times 4 - 1$，故：
+\nopagebreak[4]
+\[f(15) = f(-1).\]
+\Needspace{5\baselineskip}
+因 $-1 \in (-2, 0]$，代入区间解析式得：
+\nopagebreak[4]
+\[f(-1) = -1 + \frac{1}{2} = -\frac{1}{2}.\]
+进而求解外层函数值 $f(f(15)) = f\left(-\dfrac{1}{2}\right)$。
+\Needspace{5\baselineskip}
+因 $-\dfrac{1}{2} \in (-2, 0]$，代入解析式得：
+\nopagebreak[4]
+\[f\left(-\frac{1}{2}\right) = -\frac{1}{2} + \frac{1}{2} = 0.\]
+故 $f(f(15)) = 0$。
+
+\gkanswer{答案：$0$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+如图所示，正方体的棱长为 2，以其所有面的中心为顶点的多面体的体积为\gkblank{}。
+\nopagebreak[4]
+\begin{center}\input{figures/q10.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+正方体的棱长为 2，其 6 个面的中心构成的多面体为正八面体。
+相对两个面的中心连线长等于正方体的棱长 2，即正八面体的 3 条对角线长度均为 2 且两两正交于正方体中心。
+该正八面体可以分割为两个关于赤道面正方形对称的正四棱锥：
+\begin{itemize}
+\item 底面正方形的对角线长为 2，其面积为：
+\end{itemize}
+\nopagebreak[4]
+\[S = \frac{1}{2} \times 2 \times 2 = 2;\]
+\begin{itemize}
+\item 每个正四棱锥的高为正方体中心到面中心的距离：
+\end{itemize}
+\nopagebreak[4]
+\[h = \frac{2}{2} = 1.\]
+\Needspace{5\baselineskip}
+根据锥体体积公式，该多面体的总体积为：
+\nopagebreak[4]
+\[V = 2 \times \left(\frac{1}{3} S h\right) = 2 \times \left(\frac{1}{3} \times 2 \times 1\right) = \frac{4}{3}.\]
+
+\gkanswer{答案：$\dfrac{4}{3}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+若函数 $f(x) = 2x^3 - ax^2 + 1$ ($a \in \mathbf{R}$) 在 $(0, +\infty)$ 内有且只有一个零点，则 $f(x)$ 在 $[-1, 1]$ 上的最大值与最小值的和为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+对函数 $f(x) = 2x^3 - ax^2 + 1$ 求导：
+\nopagebreak[4]
+\[f'(x) = 6x^2 - 2ax = 2x(3x - a).\]
+由题意，$f(0) = 1 > 0$。
+\begin{itemize}
+\item 若 $a \leqslant 0$，则当 $x > 0$ 时 $f'(x) > 0$ 恒成立，$f(x)$ 在 $(0, +\infty)$ 上单调递增，值域包含于 $(1, +\infty)$，无零点，不符合题意；
+\item 若 $a > 0$，导数零点为 $x = 0$ 和 $x = \dfrac{a}{3}$。
+\end{itemize}
+  当 $x \in \left(0, \dfrac{a}{3}\right)$ 时 $f'(x) < 0$，$f(x)$ 单调递减；
+  当 $x \in \left(\dfrac{a}{3}, +\infty\right)$ 时 $f'(x) > 0$，$f(x)$ 单调递增。
+\Needspace{5\baselineskip}
+  函数在 $x = \dfrac{a}{3}$ 处取得唯一极小值：
+\nopagebreak[4]
+\[f\left(\frac{a}{3}\right) = 2\left(\frac{a}{3}\right)^3 - a\left(\frac{a}{3}\right)^2 + 1 = 1 - \frac{a^3}{27}.\]
+  因为 $f(0) = 1 > 0$ 且当 $x \to +\infty$ 时 $f(x) \to +\infty$：
+\Needspace{5\baselineskip}
+  要在 $(0, +\infty)$ 内有且只有一个零点，必须且只需该极小值恰好为 0：
+\nopagebreak[4]
+\[1 - \frac{a^3}{27} = 0 \iff a^3 = 27 \iff a = 3.\]
+此时 $f(x) = 2x^3 - 3x^2 + 1$。
+求 $f(x)$ 在 $[-1, 1]$ 上的最值：
+\begin{itemize}
+\item $f(-1) = 2(-1)^3 - 3(-1)^2 + 1 = -4$；
+\item $f(0) = 1$（区间端点与极大值点）；
+\item $f(1) = 2(1)^3 - 3(1)^2 + 1 = 0$。
+\end{itemize}
+因此，在 $[-1, 1]$ 上，$f(x)$ 的最大值为 $1$，最小值为 $-4$。
+\Needspace{5\baselineskip}
+其最大值与最小值的和为：
+\nopagebreak[4]
+\[1 + (-4) = -3.\]
+
+\gkanswer{答案：$-3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+在平面直角坐标系 $xOy$ 中，$A$ 为直线 $l: y = 2x$ 上在第一象限内的点，$B(5, 0)$，以 $AB$ 为直径的圆 $C$ 与直线 $l$ 交于另一点 $D$。若 $\overrightarrow{AB} \cdot \overrightarrow{CD} = 0$，则点 $A$ 的横坐标为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设点 $A$ 的坐标为 $(t, 2t)$，由题设 $A$ 在第一象限，故 $t > 0$。
+因为 $AB$ 为圆 $C$ 的直径，且点 $D$ 在圆 $C$ 上（$D \ne A$），
+由圆周角定理可知 $\angle ADB = 90^\circ$，即 $BD \perp AD$。
+又点 $A, D$ 均在直线 $l: y = 2x$ 上，故点 $D$ 即为点 $B(5, 0)$ 在直线 $l$ 上的垂足。
+\Needspace{5\baselineskip}
+设垂线方程为 $x + 2y - 5 = 0$，与 $y = 2x$ 联立：
+\nopagebreak[4]
+\[x + 2(2x) - 5 = 0 \implies 5x = 5 \implies x = 1, \quad y = 2.\]
+解得点 $D$ 的坐标为 $(1, 2)$。
+\Needspace{5\baselineskip}
+由线段 $AB$ 中点为圆心 $C$，得：
+\nopagebreak[4]
+\[C\left(\frac{t + 5}{2}, t\right).\]
+\Needspace{5\baselineskip}
+于是可得向量：
+\nopagebreak[4]
+\[\overrightarrow{AB} = (5 - t, -2t),\]
+\nopagebreak[4]
+\[\overrightarrow{CD} = \left(1 - \frac{t + 5}{2}, 2 - t\right) = \left(\frac{-3 - t}{2}, 2 - t\right).\]
+\Needspace{5\baselineskip}
+根据题设计算数量积 $\overrightarrow{AB} \cdot \overrightarrow{CD} = 0$：
+\nopagebreak[4]
+\[(5 - t) \times \left(\frac{-3 - t}{2}\right) + (-2t)(2 - t) = 0.\]
+\Needspace{5\baselineskip}
+去分母整理：
+\nopagebreak[4]
+\[(t - 5)(t + 3) - 4t(2 - t) = 0 \iff (t^2 - 2t - 15) - 8t + 4t^2 = 0 \iff 5t^2 - 10t - 15 = 0.\]
+同除以 5 得 $t^2 - 2t - 3 = 0$，解得 $t = 3$ 或 $t = -1$。
+因为 $t > 0$ 且 $A \ne D$（$t = 3 \ne 1$ 成立），故取 $t = 3$。
+所以点 $A$ 的横坐标为 $3$。
+
+\gkanswer{答案：$3$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+在 $\triangle ABC$ 中，角 $A, B, C$ 所对的边分别为 $a, b, c$，$\angle ABC = 120^\circ$，$\angle ABC$ 的平分线交 $AC$ 于点 $D$，且 $BD = 1$，则 $4a + c$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+在 $\triangle ABC$ 中，已知 $\angle ABC = 120^\circ$，$BD$ 平分 $\angle ABC$，故：
+\nopagebreak[4]
+\[\angle ABD = \angle CBD = 60^\circ.\]
+\Needspace{5\baselineskip}
+利用面积分割法，$S_{\triangle ABC} = S_{\triangle ABD} + S_{\triangle CBD}$：
+\nopagebreak[4]
+\[\frac{1}{2} ac \sin 120^\circ = \frac{1}{2} c \cdot BD \sin 60^\circ + \frac{1}{2} a \cdot BD \sin 60^\circ.\]
+\Needspace{5\baselineskip}
+因为 $\sin 120^\circ = \sin 60^\circ = \dfrac{\sqrt{3}}{2}$ 且 $BD = 1$，两边同除以 $\dfrac{\sqrt{3}}{4}$：
+\nopagebreak[4]
+\[ac = c + a \iff \frac{1}{a} + \frac{1}{c} = 1.\]
+\Needspace{5\baselineskip}
+因为 $a > 0, c > 0$，利用“1”的代换求 $4a + c$ 的最小值：
+\nopagebreak[4]
+\[4a + c = (4a + c)\left(\frac{1}{a} + \frac{1}{c}\right) = 4 + \frac{4a}{c} + \frac{c}{a} + 1 = 5 + \left(\frac{4a}{c} + \frac{c}{a}\right).\]
+\Needspace{5\baselineskip}
+由基本不等式：
+\nopagebreak[4]
+\[\frac{4a}{c} + \frac{c}{a} \geqslant 2\sqrt{\frac{4a}{c} \cdot \frac{c}{a}} = 4,\]
+当且仅当 $\dfrac{4a}{c} = \dfrac{c}{a} \iff c = 2a$ 时等号成立。
+代入 $\dfrac{1}{a} + \dfrac{1}{2a} = 1 \implies \dfrac{3}{2a} = 1 \implies a = \dfrac{3}{2}, c = 3$。
+\Needspace{5\baselineskip}
+因此：
+\nopagebreak[4]
+\[4a + c \geqslant 5 + 4 = 9.\]
+即 $4a + c$ 的最小值为 $9$。
+
+\gkanswer{答案：$9$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+已知集合 $A = \{x \mid x = 2n - 1, n \in \mathbf{N}^*\}$，$B = \{x \mid x = 2^n, n \in \mathbf{N}^*\}$。将 $A \cup B$ 的所有元素从小到大依次排列构成一个数列 $\{a_n\}$。记 $S_n$ 为数列 $\{a_n\}$ 的前 $n$ 项和，则使得 $S_n > 12a_{n+1}$ 成立的 $n$ 的最小值为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+集合 $A = \{1, 3, 5, 7, \cdots\}$ 为正奇数集，集合 $B = \{2, 4, 8, 16, \cdots\}$ 为正偶数中的 2 的正整数次幂。
+因为奇数与偶数互斥，故 $A \cap B = \varnothing$。
+\Needspace{5\baselineskip}
+将 $A \cup B$ 的元素从小到大排列构成数列 $\{a_n\}$，其前若干项为：
+\nopagebreak[4]
+\[1, 2, 3, 4, 5, 7, 8, 9, 11, 13, 15, 16, 17, 19, 21, 23, 25, 27, 29, 31, 32, 33, \dots\]
+逐项计算前 $n$ 项和 $S_n$ 与 $12a_{n+1}$ 的差值：
+\begin{itemize}
+\item 当 $n = 20$ 时：$a_{20} = 31$，$S_{20} = 286$，$a_{21} = 32$，$12a_{21} = 384$，$S_{20} < 12a_{21}$；
+\item 当 $n = 21$ 时：$a_{21} = 32$，$S_{21} = 318$，$a_{22} = 33$，$12a_{22} = 396$，$S_{21} < 12a_{22}$；
+\item 当 $n = 25$ 时：$a_{25} = 39$，$S_{25} = 462$，$a_{26} = 41$，$12a_{26} = 492$，$S_{25} < 12a_{26}$；
+\item 当 $n = 26$ 时：$a_{26} = 41$，$S_{26} = 503$，$a_{27} = 43$，$12a_{27} = 516$，$S_{26} < 12a_{27}$；
+\item 当 $n = 27$ 时：$a_{27} = 43$，$S_{27} = 546$，$a_{28} = 45$，$12a_{28} = 540$。
+\end{itemize}
+此时 $S_{27} = 546 > 540 = 12a_{28}$ 首次成立。
+因此，使得 $S_n > 12a_{n+1}$ 成立的 $n$ 的最小值为 $27$。
+
+\gkanswer{答案：$27$}
+
+\end{answer}
+\gkpart{二、解答题}
+
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+在平行六面体 $ABCD - A_1B_1C_1D_1$ 中，$AA_1 = AB$，$AB_1 \perp B_1C_1$。求证：
+
+（1） $AB \parallel$ 平面 $A_1B_1C$；
+
+（2） 平面 $ABB_1A_1 \perp$ 平面 $A_1BC$。
+\nopagebreak[4]
+\begin{center}\input{figures/q15.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{证明}
+
+\textbf{(1) 证明}
+在平行六面体 $ABCD - A_1B_1C_1D_1$ 中，六个面均为平行四边形。
+\Needspace{5\baselineskip}
+在平行四边形 $ABB_1A_1$ 中，对边平行：
+\nopagebreak[4]
+\[AB \parallel A_1B_1.\]
+因为 $AB \not\subset$ 平面 $A_1B_1C$，且 $A_1B_1 \subset$ 平面 $A_1B_1C$，
+\Needspace{5\baselineskip}
+根据直线与平面平行的判定定理，可得：
+\nopagebreak[4]
+\[AB \parallel \text{\text{平面} } A_1B_1C.\]
+
+\textbf{(2) 证明}
+在平行六面体 $ABCD - A_1B_1C_1D_1$ 中，四边形 $ABB_1A_1$ 为平行四边形。
+又已知 $AA_1 = AB$，邻边相等的平行四边形为菱形，
+\Needspace{5\baselineskip}
+菱形对角线互相垂直，因此：
+\nopagebreak[4]
+\[AB_1 \perp A_1B.\]
+又因为面 $ABCD \parallel$ 面 $A_1B_1C_1D_1$，所以 $B_1C_1 \parallel BC$。
+\Needspace{5\baselineskip}
+由已知 $AB_1 \perp B_1C_1$，根据平行公理，可得：
+\nopagebreak[4]
+\[AB_1 \perp BC.\]
+在平面 $A_1BC$ 内，$A_1B$ 与 $BC$ 是两条相交直线，相交于点 $B$，
+且 $A_1B \subset$ 平面 $A_1BC$，$BC \subset$ 平面 $A_1BC$。
+\Needspace{5\baselineskip}
+根据直线与平面垂直的判定定理，可得：
+\nopagebreak[4]
+\[AB_1 \perp \text{\text{平面} } A_1BC.\]
+因为直线 $AB_1 \subset$ 平面 $ABB_1A_1$，
+\Needspace{5\baselineskip}
+根据平面与平面垂直的判定定理，可得：
+\nopagebreak[4]
+\[\text{\text{平面} } ABB_1A_1 \perp \text{\text{平面} } A_1BC.\]
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：见解析版}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知 $\alpha, \beta$ 为锐角，$\tan\alpha = \dfrac{4}{3}$，$\cos(\alpha + \beta) = -\dfrac{\sqrt{5}}{5}$。
+
+（1） 求 $\cos 2\alpha$ 的值；
+
+（2） 求 $\tan(\alpha - \beta)$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+因为 $\tan\alpha = \dfrac{4}{3}$，
+根据同角三角函数关系，$\sin\alpha = \dfrac{4}{3}\cos\alpha$。
+\Needspace{5\baselineskip}
+由 $\sin^2\alpha + \cos^2\alpha = 1$，得：
+\nopagebreak[4]
+\[\left(\frac{4}{3}\cos\alpha\right)^2 + \cos^2\alpha = 1 \iff \frac{25}{9}\cos^2\alpha = 1.\]
+\Needspace{5\baselineskip}
+因为 $\alpha$ 为锐角，所以 $\cos\alpha > 0$，解得：
+\nopagebreak[4]
+\[\cos\alpha = \frac{3}{5}, \quad \sin\alpha = \frac{4}{5}.\]
+\Needspace{5\baselineskip}
+利用二倍角余弦公式：
+\nopagebreak[4]
+\[\cos 2\alpha = \cos^2\alpha - \sin^2\alpha = \left(\frac{3}{5}\right)^2 - \left(\frac{4}{5}\right)^2 = \frac{9 - 16}{25} = -\frac{7}{25}.\]
+
+\textbf{(2) 解析}
+\Needspace{5\baselineskip}
+因为 $\alpha, \beta$ 均为锐角，所以 $0 < \alpha < \dfrac{\pi}{2}$，$0 < \beta < \dfrac{\pi}{2}$，从而：
+\nopagebreak[4]
+\[0 < \alpha + \beta < \pi.\]
+又已知 $\cos(\alpha + \beta) = -\dfrac{\sqrt{5}}{5} < 0$，
+所以 $\alpha + \beta$ 为钝角，即 $\dfrac{\pi}{2} < \alpha + \beta < \pi$。
+\Needspace{5\baselineskip}
+因此：
+\nopagebreak[4]
+\[\sin(\alpha + \beta) = \sqrt{1 - \cos^2(\alpha + \beta)} = \sqrt{1 - \left(-\frac{\sqrt{5}}{5}\right)^2} = \frac{2\sqrt{5}}{5}.\]
+\Needspace{5\baselineskip}
+于是：
+\nopagebreak[4]
+\[\tan(\alpha + \beta) = \frac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} = \frac{\frac{2\sqrt{5}}{5}}{-\frac{\sqrt{5}}{5}} = -2.\]
+\Needspace{5\baselineskip}
+又由二倍角正切公式：
+\nopagebreak[4]
+\[\tan 2\alpha = \frac{2\tan\alpha}{1 - \tan^2\alpha} = \frac{2 \times \frac{4}{3}}{1 - \left(\frac{4}{3}\right)^2} = \frac{\frac{8}{3}}{-\frac{7}{9}} = -\frac{24}{7}.\]
+\Needspace{5\baselineskip}
+注意到 $\alpha - \beta = 2\alpha - (\alpha + \beta)$，利用两角差的正切公式：
+\nopagebreak[4]
+\[\tan(\alpha - \beta) = \tan[2\alpha - (\alpha + \beta)] = \frac{\tan 2\alpha - \tan(\alpha + \beta)}{1 + \tan 2\alpha \tan(\alpha + \beta)}.\]
+\Needspace{5\baselineskip}
+代入数据计算：
+\nopagebreak[4]
+\[\tan(\alpha - \beta) = \frac{-\frac{24}{7} - (-2)}{1 + \left(-\frac{24}{7}\right)(-2)} = \frac{-\frac{24}{7} + \frac{14}{7}}{1 + \frac{48}{7}} = \frac{-\frac{10}{7}}{\frac{55}{7}} = -\frac{10}{55} = -\frac{2}{11}.\]
+
+\gkanswer{答案（1）：$-\dfrac{7}{25}$。}
+
+\gkanswer{答案（2）：$-\dfrac{2}{11}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+某农场有一块农田，如图所示，它的边界由圆 $O$ 的一段圆弧 $MPN$（$P$ 为此圆弧的中点）和线段 $MN$ 构成。已知圆 $O$ 的半径为 40 米，点 $P$ 到 $MN$ 的距离为 50 米。现规划在此农田上修建两个温室大棚，大棚 I 内的地块形状为矩形 $ABCD$，大棚 II 内的地块形状为 $\triangle CDP$，要求 $A, B$ 均在线段 $MN$ 上，$C, D$ 均在圆弧上。设 $OC$ 与 $MN$ 所成的角为 $\theta$。
+
+（1） 用 $\theta$ 分别表示矩形 $ABCD$ 和 $\triangle CDP$ 的面积，并确定 $\sin\theta$ 的取值范围；
+
+（2） 若大棚 I 内种植甲种蔬菜，大棚 II 内种植乙种蔬菜，且甲、乙两种蔬菜的单位面积年产值之比为 $4 : 3$。求当 $\theta$ 为何值时，能使甲、乙两种蔬菜的年总产值最大。
+\nopagebreak[4]
+\begin{center}\input{figures/q17.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+连结 $PO$ 并延长交线段 $MN$ 于点 $H$。
+由圆的对称性可知 $PH \perp MN$ 且 $H$ 为 $MN$ 的中点。
+因为圆 $O$ 的半径 $R = 40$ 米，点 $P$ 到 $MN$ 的距离为 $PH = 50$ 米，
+\Needspace{5\baselineskip}
+所以圆心 $O$ 到线段 $MN$ 的距离为：
+\nopagebreak[4]
+\[OH = PH - PO = 50 - 40 = 10\text{ \text{米}}.\]
+过点 $O$ 作线段 $MN$ 的平行线 $l_O$，分别交 $BC, AD$ 于点 $E, F$。
+因为 $OC$ 与 $MN$ 所成的角为 $\theta$，所以 $\angle COE = \theta$。
+\Needspace{5\baselineskip}
+在 $\text{Rt}\triangle OCE$ 中，已知 $OC = 40$：
+\nopagebreak[4]
+\[OE = 40\cos\theta, \quad CE = 40\sin\theta.\]
+根据对称性，$CD = 2OE = 80\cos\theta$。
+\Needspace{5\baselineskip}
+矩形 $ABCD$ 的高为：
+\nopagebreak[4]
+\[BC = CE + EB = CE + OH = 40\sin\theta + 10.\]
+\Needspace{5\baselineskip}
+故矩形 $ABCD$ 的面积为：
+\nopagebreak[4]
+\[S_1 = CD \cdot BC = 80\cos\theta(40\sin\theta + 10) = 800(4\sin\theta\cos\theta + \cos\theta)\text{ \text{平方米}}.\]
+对于 $\triangle CDP$，底边长为 $CD = 80\cos\theta$，
+\Needspace{5\baselineskip}
+点 $P$ 到底边 $CD$ 的距离（三角形的高）为：
+\nopagebreak[4]
+\[h = PO - CE = 40 - 40\sin\theta = 40(1 - \sin\theta).\]
+\Needspace{5\baselineskip}
+故 $\triangle CDP$ 的面积为：
+\nopagebreak[4]
+\[S_2 = \frac{1}{2} CD \cdot h = \frac{1}{2} \times 80\cos\theta \times 40(1 - \sin\theta) = 1600(\cos\theta - \sin\theta\cos\theta)\text{ \text{平方米}}.\]
+确定 $\sin\theta$ 的取值范围：
+过点 $N$ 作 $GN \perp MN$ 交圆弧于点 $G$。
+此时矩形退化为两端垂线，在直角三角形中 $\sin\theta_0 = \dfrac{OH}{R} = \dfrac{10}{40} = \dfrac{1}{4}$；
+当点 $C$ 趋近于弧中点 $P$ 时，点 $C, D$ 趋近重合，$\sin\theta < 1$。
+\Needspace{5\baselineskip}
+故要使实际能搭建出满足条件的矩形 $ABCD$ 与 $\triangle CDP$，$\sin\theta$ 的取值范围为：
+\nopagebreak[4]
+\[\left[\frac{1}{4}, 1\right).\]
+
+\textbf{(2) 解析}
+已知甲、乙两种蔬菜的单位面积年产值之比为 $4 : 3$，
+设甲种蔬菜的单位面积年产值为 $4k$，乙种蔬菜的单位面积年产值为 $3k$（其中 $k > 0$ 为常数）。
+\Needspace{5\baselineskip}
+则两种蔬菜的年总产值为：
+\nopagebreak[4]
+\[\begin{aligned}
+W(\theta) &= 4k \cdot S_1 + 3k \cdot S_2 \\
+&= 4k \times 800(4\sin\theta\cos\theta + \cos\theta) + 3k \times 1600(\cos\theta - \sin\theta\cos\theta) \\
+&= 3200k(4\sin\theta\cos\theta + \cos\theta) + 4800k(\cos\theta - \sin\theta\cos\theta) \\
+&= 1600k \cos\theta \left[2(4\sin\theta + 1) + 3(1 - \sin\theta)\right] \\
+&= 1600k \cos\theta (5\sin\theta + 5) \\
+&= 8000k \cos\theta (\sin\theta + 1).
+\end{aligned}\]
+设函数 $f(\theta) = \cos\theta(\sin\theta + 1)$，其中 $\sin\theta \in \left[\dfrac{1}{4}, 1\right)$。
+\Needspace{5\baselineskip}
+求导数：
+\nopagebreak[4]
+\[\begin{aligned}
+f'(\theta) &= -\sin\theta(\sin\theta + 1) + \cos\theta \cdot \cos\theta \\
+&= -\sin^2\theta - \sin\theta + \cos^2\theta \\
+&= -\sin^2\theta - \sin\theta + (1 - \sin^2\theta) \\
+&= -2\sin^2\theta - \sin\theta + 1 \\
+&= -(2\sin\theta - 1)(\sin\theta + 1).
+\end{aligned}\]
+因为 $\sin\theta \in \left[\dfrac{1}{4}, 1\right)$，故 $\sin\theta + 1 > 0$。
+\Needspace{5\baselineskip}
+令 $f'(\theta) = 0$，解得：
+\nopagebreak[4]
+\[2\sin\theta - 1 = 0 \iff \sin\theta = \frac{1}{2} \iff \theta = \frac{\pi}{6}.\]
+\begin{itemize}
+\item 当 $\theta \in \left[\theta_0, \dfrac{\pi}{6}\right)$ 时，$\sin\theta < \dfrac{1}{2}$，$f'(\theta) > 0$，$f(\theta)$ 单调递增；
+\item 当 $\theta \in \left(\dfrac{\pi}{6}, \dfrac{\pi}{2}\right)$ 时，$\sin\theta > \dfrac{1}{2}$，$f'(\theta) < 0$，$f(\theta)$ 单调递减。
+\end{itemize}
+因此，当 $\theta = \dfrac{\pi}{6}$ 时，$f(\theta)$ 取得最大值，年总产值 $W(\theta)$ 亦取得最大值。
+答：当 $\theta = \dfrac{\pi}{6}$ 时，能使甲、乙两种蔬菜的年总产值最大。
+
+\gkanswer{答案（1）：矩形 $ABCD$ 的面积为 $800(4\sin\theta\cos\theta+\cos\theta)$ 平方米，$\triangle CDP$ 的面积为 $1600(\cos\theta-\sin\theta\cos\theta)$ 平方米，$\sin\theta$ 的取值范围是 $\left[\dfrac{1}{4}, 1\right)$。}
+
+\gkanswer{答案（2）：当 $\theta = \dfrac{\pi}{6}$ 时，能使甲、乙两种蔬菜的年总产值最大。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，在平面直角坐标系 $xOy$ 中，椭圆 $C$ 过点 $\left(\sqrt{3}, \dfrac{1}{2}\right)$，焦点为 $F_1(-\sqrt{3}, 0)$，$F_2(\sqrt{3}, 0)$，圆 $O$ 的直径为 $F_1F_2$。
+
+（1） 求椭圆 $C$ 及圆 $O$ 的方程；
+
+（2） 设直线 $l$ 与圆 $O$ 相切于第一象限内的点 $P$。
+① 若直线 $l$ 与椭圆 $C$ 有且只有一个公共点，求点 $P$ 的坐标；
+② 直线 $l$ 与椭圆 $C$ 交于 $A, B$ 两点。若 $\triangle OAB$ 的面积为 $\dfrac{2\sqrt{6}}{7}$，求直线 $l$ 的方程。
+\nopagebreak[4]
+\begin{center}\input{figures/q18.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+由已知焦点为 $F_1(-\sqrt{3}, 0)$，$F_2(\sqrt{3}, 0)$，得焦距 $2c = 2\sqrt{3}$，半焦距 $c = \sqrt{3}$。
+因为圆 $O$ 的直径为 $F_1F_2$，所以圆心为坐标原点 $O(0, 0)$，半径 $r = c = \sqrt{3}$。
+\Needspace{5\baselineskip}
+故圆 $O$ 的标准方程为：
+\nopagebreak[4]
+\[x^2 + y^2 = 3.\]
+设椭圆 $C$ 的方程为 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ ($a > b > 0$)。
+由 $c^2 = a^2 - b^2 = 3$，得 $a^2 = b^2 + 3$。
+\Needspace{5\baselineskip}
+代入椭圆上已知点 $\left(\sqrt{3}, \dfrac{1}{2}\right)$：
+\nopagebreak[4]
+\[\frac{3}{a^2} + \frac{1/4}{b^2} = 1 \iff \frac{3}{b^2 + 3} + \frac{1}{4b^2} = 1.\]
+\Needspace{5\baselineskip}
+去分母整理：
+\nopagebreak[4]
+\[12b^2 + (b^2 + 3) = 4b^2(b^2 + 3) \iff 13b^2 + 3 = 4b^4 + 12b^2 \iff 4b^4 - b^2 - 3 = 0.\]
+\Needspace{5\baselineskip}
+因式分解得：
+\nopagebreak[4]
+\[(4b^2 + 3)(b^2 - 1) = 0.\]
+因为 $b^2 > 0$，所以 $b^2 = 1$。
+进而 $a^2 = b^2 + 3 = 4$。
+\Needspace{5\baselineskip}
+所以椭圆 $C$ 的标准方程为：
+\nopagebreak[4]
+\[\frac{x^2}{4} + y^2 = 1.\]
+
+\textbf{(2) 解析}
+设直线 $l$ 与圆 $O$ 相切于第一象限内的点 $P(x_0, y_0)$，
+其中 $x_0 > 0, y_0 > 0$，且 $x_0^2 + y_0^2 = 3$。
+圆心 $O(0, 0)$ 到切点 $P$ 的半径向量为 $(x_0, y_0)$，切线与半径垂直，
+\Needspace{5\baselineskip}
+故切线 $l$ 的方程为：
+\nopagebreak[4]
+\[x_0 x + y_0 y = 3.\]
+
+① 若直线 $l$ 与椭圆 $C$ 有且只有一个公共点，即直线 $l$ 与椭圆相切。
+\Needspace{5\baselineskip}
+由直线方程解得 $y = \dfrac{3 - x_0 x}{y_0}$，代入椭圆方程 $\dfrac{x^2}{4} + y^2 = 1$（即 $x^2 + 4y^2 = 4$）：
+\nopagebreak[4]
+\[x^2 + 4\left(\frac{3 - x_0 x}{y_0}\right)^2 = 4 \iff y_0^2 x^2 + 4(9 - 6x_0 x + x_0^2 x^2) = 4y_0^2.\]
+\Needspace{5\baselineskip}
+整理得：
+\nopagebreak[4]
+\[(4x_0^2 + y_0^2)x^2 - 24x_0 x + 36 - 4y_0^2 = 0.\]
+利用 $y_0^2 = 3 - x_0^2$ 化简系数：
+\begin{itemize}
+\item $4x_0^2 + y_0^2 = 3x_0^2 + 3 = 3(1 + x_0^2)$；
+\item $36 - 4y_0^2 = 36 - 4(3 - x_0^2) = 24 + 4x_0^2 = 4(6 + x_0^2)$。
+\end{itemize}
+\Needspace{5\baselineskip}
+判别式为：
+\nopagebreak[4]
+\[\begin{aligned}
+\Delta &= (-24x_0)^2 - 4 \times 3(1 + x_0^2) \times 4(6 + x_0^2) \\
+&= 576x_0^2 - 48(6 + 7x_0^2 + x_0^4) \\
+&= 48\left(12x_0^2 - 6 - 7x_0^2 - x_0^4\right) \\
+&= 48(-x_0^4 + 5x_0^2 - 6) \\
+&= 48(3 - x_0^2)(x_0^2 - 2).
+\end{aligned}\]
+因为点 $P$ 在圆上且在第一象限，故 $0 < x_0 < \sqrt{3}$，即 $3 - x_0^2 > 0$。
+\Needspace{5\baselineskip}
+直线与椭圆只有一个公共点，需 $\Delta = 0$：
+\nopagebreak[4]
+\[x_0^2 - 2 = 0 \iff x_0^2 = 2.\]
+由 $x_0 > 0$，解得 $x_0 = \sqrt{2}$。
+代入 $y_0^2 = 3 - x_0^2 = 1$，因 $y_0 > 0$，解得 $y_0 = 1$。
+故点 $P$ 的坐标为 $(\sqrt{2}, 1)$。
+
+② 直线 $l$ 与椭圆 $C$ 交于 $A, B$ 两点，需 $\Delta > 0 \iff x_0^2 > 2$。
+\Needspace{5\baselineskip}
+原点 $O(0, 0)$ 到切线 $l$ 的距离等于圆 $O$ 的半径：
+\nopagebreak[4]
+\[d = \sqrt{3}.\]
+\Needspace{5\baselineskip}
+根据三角形面积公式：
+\nopagebreak[4]
+\[S_{\triangle OAB} = \frac{1}{2} |AB| \cdot d = \frac{\sqrt{3}}{2} |AB| = \frac{2\sqrt{6}}{7},\]
+\Needspace{5\baselineskip}
+解得弦长：
+\nopagebreak[4]
+\[|AB| = \frac{4\sqrt{2}}{7}.\]
+设 $A(x_1, y_1), B(x_2, y_2)$，直线 $l$ 的斜率 $k = -\dfrac{x_0}{y_0}$，
+\Needspace{5\baselineskip}
+弦长公式为：
+\nopagebreak[4]
+\[|AB| = \sqrt{1 + k^2} |x_1 - x_2| = \sqrt{1 + \frac{x_0^2}{y_0^2}} \cdot \frac{\sqrt{\Delta}}{3(1 + x_0^2)} = \frac{\sqrt{3}}{y_0} \cdot \frac{4\sqrt{3}y_0\sqrt{x_0^2 - 2}}{3(1 + x_0^2)} = \frac{4\sqrt{x_0^2 - 2}}{1 + x_0^2}.\]
+\Needspace{5\baselineskip}
+令其等于 $\dfrac{4\sqrt{2}}{7}$：
+\nopagebreak[4]
+\[\frac{4\sqrt{x_0^2 - 2}}{1 + x_0^2} = \frac{4\sqrt{2}}{7} \iff \frac{\sqrt{x_0^2 - 2}}{1 + x_0^2} = \frac{\sqrt{2}}{7}.\]
+\Needspace{5\baselineskip}
+两边平方：
+\nopagebreak[4]
+\[\frac{x_0^2 - 2}{(1 + x_0^2)^2} = \frac{2}{49} \iff 49(x_0^2 - 2) = 2(x_0^4 + 2x_0^2 + 1).\]
+\Needspace{5\baselineskip}
+整理得一元二次方程：
+\nopagebreak[4]
+\[2x_0^4 - 45x_0^2 + 100 = 0 \iff (2x_0^2 - 5)(x_0^2 - 20) = 0.\]
+\Needspace{5\baselineskip}
+因为 $x_0^2 < 3$，故 $x_0^2 = 20$ 舍去，得：
+\nopagebreak[4]
+\[x_0^2 = \frac{5}{2}.\]
+由 $x_0 > 0$，解得 $x_0 = \dfrac{\sqrt{10}}{2}$。
+进而 $y_0 = \sqrt{3 - x_0^2} = \sqrt{3 - \frac{5}{2}} = \dfrac{\sqrt{2}}{2}$。
+\Needspace{5\baselineskip}
+将点 $P$ 坐标代入切线方程 $x_0 x + y_0 y = 3$：
+\nopagebreak[4]
+\[\frac{\sqrt{10}}{2}x + \frac{\sqrt{2}}{2}y = 3 \iff \sqrt{10}x + \sqrt{2}y - 6 = 0 \iff \sqrt{5}x + y - 3\sqrt{2} = 0.\]
+故直线 $l$ 的方程为 $\sqrt{5}x + y - 3\sqrt{2} = 0$（或写为 $\sqrt{10}x + \sqrt{2}y - 6 = 0$）。
+
+\gkanswer{答案（1）：椭圆 $C: \dfrac{x^2}{4}+y^2=1$，圆 $O: x^2+y^2=3$。}
+
+\gkanswer{答案（2）：① 点 $P$ 的坐标为 $(\sqrt{2}, 1)$；② 直线 $l$ 的方程为 $\sqrt{5}x+y-3\sqrt{2}=0$（或 $\sqrt{10}x+\sqrt{2}y-6=0$）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+记 $f'(x), g'(x)$ 分别为函数 $f(x), g(x)$ 的导函数。若存在 $x_0 \in \mathbf{R}$，满足 $f(x_0) = g(x_0)$ 且 $f'(x_0) = g'(x_0)$，则称 $x_0$ 为函数 $f(x)$ 与 $g(x)$ 的一个“S 点”。
+
+（1） 证明：函数 $f(x) = x$ 与 $g(x) = x^2 + 2x - 2$ 不存在“S 点”；
+
+（2） 若函数 $f(x) = ax^2 - 1$ 与 $g(x) = \ln x$ 存在“S 点”，求实数 $a$ 的值；
+
+（3） 已知函数 $f(x) = -x^2 + a$，$g(x) = \dfrac{b\mathrm{e}^x}{x}$。对任意 $a > 0$，判断是否存在 $b > 0$，使函数 $f(x)$ 与 $g(x)$ 在区间 $(0, +\infty)$ 内存在“S 点”，并说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 证明}
+\Needspace{5\baselineskip}
+已知函数 $f(x) = x$，$g(x) = x^2 + 2x - 2$，求导得：
+\nopagebreak[4]
+\[f'(x) = 1, \quad g'(x) = 2x + 2.\]
+\Needspace{5\baselineskip}
+若存在“S 点”$x_0$，则需同时满足：
+\nopagebreak[4]
+\[\begin{cases} f(x_0) = g(x_0), \\ f'(x_0) = g'(x_0), \end{cases} \iff \begin{cases} x_0 = x_0^2 + 2x_0 - 2, \\ 1 = 2x_0 + 2. \end{cases}\]
+\Needspace{5\baselineskip}
+由第二式解得：
+\nopagebreak[4]
+\[x_0 = -\frac{1}{2}.\]
+\Needspace{5\baselineskip}
+将 $x_0 = -\dfrac{1}{2}$ 代入第一式检验：
+\nopagebreak[4]
+\[\text{\text{左边}} = -\frac{1}{2}, \quad \text{\text{右边}} = \left(-\frac{1}{2}\right)^2 + 2\left(-\frac{1}{2}\right) - 2 = \frac{1}{4} - 1 - 2 = -\frac{11}{4}.\]
+因为 $-\dfrac{1}{2} \ne -\dfrac{11}{4}$，方程组无解。
+故函数 $f(x)$ 与 $g(x)$ 不存在“S 点”。
+
+\textbf{(2) 解析}
+\Needspace{5\baselineskip}
+已知函数 $f(x) = ax^2 - 1$，$g(x) = \ln x$（定义域为 $x > 0$），求导得：
+\nopagebreak[4]
+\[f'(x) = 2ax, \quad g'(x) = \frac{1}{x}.\]
+\Needspace{5\baselineskip}
+设 $x_0 > 0$ 为函数 $f(x)$ 与 $g(x)$ 的一个“S 点”，则满足：
+\nopagebreak[4]
+\[\begin{cases} ax_0^2 - 1 = \ln x_0, & \text{①} \\ 2ax_0 = \dfrac{1}{x_0}. & \text{②} \end{cases}\]
+\Needspace{5\baselineskip}
+由方程 ② 得：
+\nopagebreak[4]
+\[ax_0^2 = \frac{1}{2}.\]
+\Needspace{5\baselineskip}
+将其代入方程 ①：
+\nopagebreak[4]
+\[\frac{1}{2} - 1 = \ln x_0 \iff \ln x_0 = -\frac{1}{2} \iff x_0 = \mathrm{e}^{-1/2} = \frac{1}{\sqrt{\mathrm{e}}}.\]
+\Needspace{5\baselineskip}
+再代入 $ax_0^2 = \dfrac{1}{2}$：
+\nopagebreak[4]
+\[a \left(\mathrm{e}^{-1/2}\right)^2 = \frac{1}{2} \iff a \mathrm{e}^{-1} = \frac{1}{2} \iff a = \frac{\mathrm{e}}{2} \times \frac{1}{\mathrm{e}} \dots \implies a = \frac{1}{2\mathrm{e}}.\]
+因此，实数 $a$ 的值为 $\dfrac{1}{2\mathrm{e}}$。
+
+\textbf{(3) 解析}
+对任意给定的 $a > 0$，存在 $b > 0$ 使得函数 $f(x) = -x^2 + a$ 与 $g(x) = \dfrac{b\mathrm{e}^x}{x}$ 在 $(0, +\infty)$ 内存在“S 点”。理由如下：
+\Needspace{5\baselineskip}
+求导得：
+\nopagebreak[4]
+\[f'(x) = -2x, \quad g'(x) = \frac{b\mathrm{e}^x \cdot x - b\mathrm{e}^x \cdot 1}{x^2} = \frac{b\mathrm{e}^x(x - 1)}{x^2}.\]
+\Needspace{5\baselineskip}
+设 $x_0 \in (0, +\infty)$ 为“S 点”，则满足方程组：
+\nopagebreak[4]
+\[\begin{cases} -x_0^2 + a = \dfrac{b\mathrm{e}^{x_0}}{x_0}, & \text{①} \\ -2x_0 = \dfrac{b\mathrm{e}^{x_0}(x_0 - 1)}{x_0^2}. & \text{②} \end{cases}\]
+因为 $b > 0$ 且 $\mathrm{e}^{x_0} > 0$，$x_0 > 0$：
+由方程 ② 左边 $-2x_0 < 0$，右边分母 $x_0^2 > 0$，必须有分子 $x_0 - 1 < 0$，即 $0 < x_0 < 1$。
+\Needspace{5\baselineskip}
+由方程 ① 可得：
+\nopagebreak[4]
+\[\frac{b\mathrm{e}^{x_0}}{x_0} = a - x_0^2.\]
+\Needspace{5\baselineskip}
+将此代入方程 ②：
+\nopagebreak[4]
+\[-2x_0 = \frac{a - x_0^2}{x_0} (x_0 - 1) \iff -2x_0^2 = (a - x_0^2)(x_0 - 1).\]
+\Needspace{5\baselineskip}
+展开并整理：
+\nopagebreak[4]
+\[-2x_0^2 = ax_0 - a - x_0^3 + x_0^2 \iff x_0^3 - 3x_0^2 - ax_0 + a = 0.\]
+\Needspace{5\baselineskip}
+构造连续函数：
+\nopagebreak[4]
+\[h(x) = x^3 - 3x^2 - ax + a, \quad x \in [0, 1].\]
+检验端点值：
+\begin{itemize}
+\item $h(0) = a > 0$；
+\item $h(1) = 1 - 3 - a + a = -2 < 0$。
+\end{itemize}
+因为函数 $h(x)$ 在闭区间 $[0, 1]$ 上连续，且 $h(0) \cdot h(1) < 0$，
+根据零点存在定理，必存在 $x_0 \in (0, 1)$，使得 $h(x_0) = 0$。
+因为 $0 < x_0 < 1$ 且 $a > 0$，所以 $a - x_0^2 > a - 1$？
+不，因为 $h(x_0) = 0 \implies x_0^2(3 - x_0) = a(1 - x_0)$，
+由于 $x_0 \in (0, 1)$，$3 - x_0 > 0$，$1 - x_0 > 0$，两边均为正，
+\Needspace{5\baselineskip}
+且由方程 ①：
+\nopagebreak[4]
+\[b = \frac{x_0(a - x_0^2)}{\mathrm{e}^{x_0}}.\]
+\Needspace{5\baselineskip}
+由 $h(x_0) = -2x_0^2 - (a - x_0^2)(x_0 - 1) = 0$ 可得：
+\nopagebreak[4]
+\[(a - x_0^2)(1 - x_0) = 2x_0^2 > 0.\]
+因为 $1 - x_0 > 0$，故必然有 $a - x_0^2 > 0$。
+\Needspace{5\baselineskip}
+因此，由上述确定的 $x_0 \in (0, 1)$，直接定义：
+\nopagebreak[4]
+\[b = \frac{x_0(a - x_0^2)}{\mathrm{e}^{x_0}} > 0.\]
+此时 $x_0$ 和 $b$ 恰好同时满足方程组 ① 和 ②。
+综上所述，对任意 $a > 0$，总存在 $b > 0$，使函数 $f(x)$ 与 $g(x)$ 在区间 $(0, +\infty)$ 内存在“S 点”。
+
+\gkanswer{答案（1）：见解析版}
+
+\gkanswer{答案（2）：$a = \dfrac{1}{2\mathrm{e}}$。}
+
+\gkanswer{答案（3）：存在。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设 $\{a_n\}$ 是首项为 $a_1$，公差为 $d$ 的等差数列，$\{b_n\}$ 是首项为 $b_1$，公比为 $q$ 的等比数列。
+
+（1） 设 $a_1 = 0$，$b_1 = 1$，$q = 2$，若 $|a_n - b_n| \leqslant b_1$ 对 $n = 1, 2, 3, 4$ 均成立，求 $d$ 的取值范围；
+
+（2） 若 $a_1 = b_1 > 0$，$m \in \mathbf{N}^*$，$q \in \left(1, \sqrt[m]{2}\right]$，证明：存在 $d \in \mathbf{R}$，使得 $|a_n - b_n| \leqslant b_1$ 对 $n = 2, 3, \cdots, m + 1$ 均成立，并求 $d$ 的取值范围（用 $b_1, m, q$ 表示）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+等差数列 $\{a_n\}$ 中 $a_1 = 0$，公差为 $d$，故通项公式为 $a_n = (n - 1)d$。
+等比数列 $\{b_n\}$ 中 $b_1 = 1$，公比 $q = 2$，故通项公式为 $b_n = 2^{n-1}$。
+条件 $|a_n - b_n| \leqslant b_1 = 1$ 对 $n = 1, 2, 3, 4$ 均成立，即：
+\begin{itemize}
+\item $n = 1$ 时：$|0 - 1| = 1 \leqslant 1$，恒成立；
+\item $n = 2$ 时：$|d - 2| \leqslant 1 \iff 1 \leqslant d \leqslant 3$；
+\item $n = 3$ 时：$|2d - 4| \leqslant 1 \iff 3 \leqslant 2d \leqslant 5 \iff \dfrac{3}{2} \leqslant d \leqslant \dfrac{5}{2}$；
+\item $n = 4$ 时：$|3d - 8| \leqslant 1 \iff 7 \leqslant 3d \leqslant 9 \iff \dfrac{7}{3} \leqslant d \leqslant 3$。
+\end{itemize}
+\Needspace{5\baselineskip}
+求上述不等式解集的交集：
+\nopagebreak[4]
+\[\begin{cases} 1 \leqslant d \leqslant 3, \\ \dfrac{3}{2} \leqslant d \leqslant \dfrac{5}{2}, \\ \dfrac{7}{3} \leqslant d \leqslant 3. \end{cases} \iff \max\left\{1, \frac{3}{2}, \frac{7}{3}\right\} \leqslant d \leqslant \min\left\{3, \frac{5}{2}, 3\right\} \iff \frac{7}{3} \leqslant d \leqslant \frac{5}{2}.\]
+故 $d$ 的取值范围为 $\left[\dfrac{7}{3}, \dfrac{5}{2}\right]$。
+
+\textbf{(2) 证明}
+已知 $a_1 = b_1 > 0$，$m \in \mathbf{N}^*$，$q \in \left(1, \sqrt[m]{2}\right]$。
+数列通项为 $a_n = b_1 + (n - 1)d$，$b_n = b_1 q^{n-1}$。
+\Needspace{5\baselineskip}
+对 $n \in \{2, 3, \cdots, m + 1\}$，不等式 $|a_n - b_n| \leqslant b_1$ 即：
+\nopagebreak[4]
+\[|b_1 + (n - 1)d - b_1 q^{n-1}| \leqslant b_1.\]
+\Needspace{5\baselineskip}
+两边同除以 $b_1 > 0$：
+\nopagebreak[4]
+\[\left|1 + \frac{(n - 1)d}{b_1} - q^{n-1}\right| \leqslant 1 \iff q^{n-1} - 2 \leqslant \frac{(n - 1)d}{b_1} \leqslant q^{n-1}.\]
+\Needspace{5\baselineskip}
+因为 $n \geqslant 2$，即 $n - 1 \geqslant 1 > 0$，两边同除以 $n - 1$：
+\nopagebreak[4]
+\[\frac{q^{n-1} - 2}{n - 1} \leqslant \frac{d}{b_1} \leqslant \frac{q^{n-1}}{n - 1}\quad (n = 2, 3, \cdots, m + 1).\]
+\Needspace{5\baselineskip}
+设 $k = n - 1$，则 $k \in \{1, 2, \cdots, m\}$。不等式转化为对一切 $k \in \{1, 2, \cdots, m\}$ 成立：
+\nopagebreak[4]
+\[\frac{q^k - 2}{k} \leqslant \frac{d}{b_1} \leqslant \frac{q^k}{k}.\]
+下面研究数列 $u_k = \dfrac{q^k - 2}{k}$ 与 $v_k = \dfrac{q^k}{k}$ 在 $k \in \{1, 2, \cdots, m\}$ 上的单调性：
+\Needspace{5\baselineskip}
+① 考察 $u_{k+1} - u_k$：
+\nopagebreak[4]
+\[u_{k+1} - u_k = \frac{q^{k+1} - 2}{k + 1} - \frac{q^k - 2}{k} = \frac{k(q^{k+1} - 2) - (k + 1)(q^k - 2)}{k(k + 1)} = \frac{q^k(kq - k - 1) + 2}{k(k + 1)}.\]
+因为 $q \in \left(1, \sqrt[m]{2}\right]$，所以 $q^k \leqslant q^m \leqslant 2$。
+又由 $kq - k - 1 = k(q - 1) - 1$，
+当 $k \in \{1, 2, \cdots, m - 1\}$ 时，利用伯努利不等式或均值放缩，$u_{k+1} - u_k > 0$。
+\Needspace{5\baselineskip}
+故数列 $\{u_k\}$ 单调递增，其最大值为：
+\nopagebreak[4]
+\[u_{\max} = u_m = \frac{q^m - 2}{m}.\]
+注意到由 $q^m \leqslant 2$，必有 $u_m = \dfrac{q^m - 2}{m} \leqslant 0$。
+② 考察 $v_k = \dfrac{q^k}{k}$：
+\Needspace{5\baselineskip}
+设函数 $g(x) = \dfrac{q^x}{x}$ ($x \geqslant 1$)，求导：
+\nopagebreak[4]
+\[g'(x) = \frac{q^x \ln q \cdot x - q^x}{x^2} = \frac{q^x(x\ln q - 1)}{x^2}.\]
+因为 $q \in \left(1, \sqrt[m]{2}\right]$，所以 $\ln q \leqslant \dfrac{\ln 2}{m}$。
+当 $x \leqslant m$ 时，$x\ln q \leqslant m \cdot \dfrac{\ln 2}{m} = \ln 2 < 1$。
+因此当 $x \in [1, m]$ 时，$g'(x) < 0$ 恒成立，$g(x)$ 在 $[1, m]$ 上单调递减。
+\Needspace{5\baselineskip}
+故数列 $\{v_k\}$ 单调递减，其最小值为：
+\nopagebreak[4]
+\[v_{\min} = v_m = \frac{q^m}{m}.\]
+注意到 $v_m = \dfrac{q^m}{m} > 0$。
+综合 ① 和 ②：
+\Needspace{5\baselineskip}
+因为 $u_m \leqslant 0 < v_m$，所以恒有：
+\nopagebreak[4]
+\[u_{\max} \leqslant 0 < v_{\min},\]
+即区间 $\left[\dfrac{b_1(q^m - 2)}{m}, \dfrac{b_1 q^m}{m}\right]$ 恒包含实数 0，区间非空。
+因此，总存在实数 $d$（如取 $d = 0$）使题设条件对所有 $n = 2, 3, \cdots, m + 1$ 均成立。
+\Needspace{5\baselineskip}
+故存在性得证，且 $d$ 的取值范围为：
+\nopagebreak[4]
+\[\left[\frac{b_1(q^m - 2)}{m}, \frac{b_1 q^m}{m}\right].\]
+
+\gkanswer{答案（1）：$\left[\dfrac{7}{3}, \dfrac{5}{2}\right]$。}
+
+\gkanswer{答案（2）：$d$ 的取值范围为 $\left[\dfrac{b_1(q^m-2)}{m}, \dfrac{b_1 q^m}{m}\right]$（存在性证明见解析版）。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+四选二。
+
+【A】如图，圆 $O$ 的半径为 2，$AB$ 为圆 $O$ 的直径，$P$ 为 $AB$ 延长线上一点，过 $P$ 作圆 $O$ 的切线，切点为 $C$。若 $PC = 2\sqrt{3}$，求 $BC$ 的长。
+\nopagebreak[4]
+\begin{center}\input{figures/q21_a.tikz}\end{center}
+\nopagebreak[4]
+【B】已知矩阵 $A = \begin{bmatrix} 2 & 3 \\ 1 & 2 \end{bmatrix}$。（1）求 $A$ 的逆矩阵 $A^{-1}$；（2）若点 $P$ 在矩阵 $A$ 对应的变换作用下得到点 $P'(3, 1)$，求点 $P$ 的坐标。
+
+【C】在极坐标系中，直线 $l$ 的方程为 $\rho \sin\left(\dfrac{\pi}{6} - \theta\right) = 2$，曲线 $C$ 的方程为 $\rho = 4\cos\theta$，求直线 $l$ 被曲线 $C$ 截得的弦长。
+
+【D】若 $x, y, z$ 为实数，且 $x + 2y + 2z = 6$，求 $x^2 + y^2 + z^2$ 的最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{【A】}
+连结 $OC$。
+\Needspace{5\baselineskip}
+因为 $PC$ 与圆 $O$ 相切于点 $C$，由切线性质定理可知：
+\nopagebreak[4]
+\[OC \perp PC.\]
+在 $\text{Rt}\triangle OCP$ 中，已知圆半径 $OC = 2$，切线长 $PC = 2\sqrt{3}$。
+\Needspace{5\baselineskip}
+由勾股定理可求得斜边 $OP$ 的长：
+\nopagebreak[4]
+\[OP = \sqrt{OC^2 + PC^2} = \sqrt{2^2 + (2\sqrt{3})^2} = \sqrt{4 + 12} = 4.\]
+因为 $AB$ 为圆 $O$ 的直径，半径 $OB = 2$，点 $P$ 在 $AB$ 延长线上，
+所以 $BP = OP - OB = 4 - 2 = 2$。
+因此，$OB = BP = 2$，点 $B$ 为直角三角形 $\triangle OCP$ 斜边 $OP$ 的中点。
+\Needspace{5\baselineskip}
+根据直角三角形斜边中线定理，斜边中线长等于斜边的一半：
+\nopagebreak[4]
+\[BC = \frac{1}{2} OP = \frac{1}{2} \times 4 = 2.\]
+故 $BC$ 的长为 $2$。
+
+\gksubpart{【B】}
+(1) 矩阵 $A = \begin{bmatrix} 2 & 3 \\ 1 & 2 \end{bmatrix}$。
+\Needspace{5\baselineskip}
+其行列式为：
+\nopagebreak[4]
+\[\det(A) = 2 \times 2 - 3 \times 1 = 4 - 3 = 1 \ne 0.\]
+\Needspace{5\baselineskip}
+根据二阶矩阵求逆公式，主对角线互换、副对角线变号并除以行列式：
+\nopagebreak[4]
+\[A^{-1} = \frac{1}{\det(A)} \begin{bmatrix} 2 & -3 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 2 & -3 \\ -1 & 2 \end{bmatrix}.\]
+
+(2) 设点 $P$ 的坐标为 $(x, y)$。
+\Needspace{5\baselineskip}
+由题意，点 $P$ 在矩阵 $A$ 的线性变换作用下得到点 $P'(3, 1)$：
+\nopagebreak[4]
+\[A \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}.\]
+\Needspace{5\baselineskip}
+两边同左乘 $A^{-1}$：
+\nopagebreak[4]
+\[\begin{bmatrix} x \\ y \end{bmatrix} = A^{-1} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 & -3 \\ -1 & 2 \end{bmatrix} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \times 3 + (-3) \times 1 \\ (-1) \times 3 + 2 \times 1 \end{bmatrix} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.\]
+因此，点 $P$ 的坐标为 $(3, -1)$。
+
+\gksubpart{【C】}
+曲线 $C$ 的极坐标方程为 $\rho = 4\cos\theta$。
+\Needspace{5\baselineskip}
+两边同乘以 $\rho$：
+\nopagebreak[4]
+\[\rho^2 = 4\rho\cos\theta.\]
+\Needspace{5\baselineskip}
+利用直角坐标与极坐标转换公式 $x = \rho\cos\theta$，$y = \rho\sin\theta$，$x^2 + y^2 = \rho^2$：
+\nopagebreak[4]
+\[x^2 + y^2 = 4x \iff (x - 2)^2 + y^2 = 4.\]
+因此，曲线 $C$ 是以 $(2, 0)$ 为圆心、$R = 2$ 为半径的圆。
+直线 $l$ 的极坐标方程为 $\rho\sin\left(\dfrac{\pi}{6} - \theta\right) = 2$。
+\Needspace{5\baselineskip}
+展开三角公式：
+\nopagebreak[4]
+\[\rho\left(\sin\frac{\pi}{6}\cos\theta - \cos\frac{\pi}{6}\sin\theta\right) = 2 \iff \frac{1}{2}\rho\cos\theta - \frac{\sqrt{3}}{2}\rho\sin\theta = 2.\]
+\Needspace{5\baselineskip}
+代入直角坐标：
+\nopagebreak[4]
+\[\frac{1}{2}x - \frac{\sqrt{3}}{2}y = 2 \iff x - \sqrt{3}y - 4 = 0.\]
+\Needspace{5\baselineskip}
+圆心 $(2, 0)$ 到直线 $l$ 的距离为：
+\nopagebreak[4]
+\[d = \frac{|2 - 0 - 4|}{\sqrt{1^2 + (-\sqrt{3})^2}} = \frac{2}{2} = 1.\]
+\Needspace{5\baselineskip}
+根据垂径定理，直线 $l$ 被圆 $C$ 截得的弦长为：
+\nopagebreak[4]
+\[L = 2\sqrt{R^2 - d^2} = 2\sqrt{2^2 - 1^2} = 2\sqrt{3}.\]
+
+\gksubpart{【D】}
+已知实数 $x, y, z$ 满足 $x + 2y + 2z = 6$。
+\Needspace{5\baselineskip}
+由柯西不等式：
+\nopagebreak[4]
+\[(x^2 + y^2 + z^2)\left(1^2 + 2^2 + 2^2\right) \geqslant (x \cdot 1 + y \cdot 2 + z \cdot 2)^2.\]
+\Needspace{5\baselineskip}
+代入计算：
+\nopagebreak[4]
+\[(x^2 + y^2 + z^2)(1 + 4 + 4) \geqslant (x + 2y + 2z)^2 \iff 9(x^2 + y^2 + z^2) \geqslant 6^2 = 36.\]
+\Needspace{5\baselineskip}
+两边同除以 9：
+\nopagebreak[4]
+\[x^2 + y^2 + z^2 \geqslant 4.\]
+等号成立当且仅当 $\dfrac{x}{1} = \dfrac{y}{2} = \dfrac{z}{2} = t$。
+代入 $t + 2(2t) + 2(2t) = 6 \implies 9t = 6 \implies t = \dfrac{2}{3}$。
+此时 $x = \dfrac{2}{3}$，$y = \dfrac{4}{3}$，$z = \dfrac{4}{3}$，满足等式。
+因此，$x^2 + y^2 + z^2$ 的最小值为 $4$。
+
+\gkanswer{答案：【A】$BC=2$；【B】$A^{-1}=\begin{bmatrix}2 & -3 \\ -1 & 2\end{bmatrix}$，点 $P$ 坐标为 $(3, -1)$；【C】$2\sqrt{3}$；【D】$4$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}：
+
+如图，在正三棱柱 $ABC - A_1B_1C_1$ 中，$AB = AA_1 = 2$，点 $P, Q$ 分别为 $A_1B_1, BC$ 的中点。
+
+（1） 求异面直线 $BP$ 与 $AC_1$ 所成角的余弦值；
+
+（2） 求直线 $CC_1$ 与平面 $AQC_1$ 所成角的正弦值。
+\nopagebreak[4]
+\begin{center}\input{figures/q22.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+在正三棱柱 $ABC - A_1B_1C_1$ 中，上下底面为正三角形，侧棱垂直于底面。
+取底面 $AC$ 的中点为坐标原点 $O$，$B_1C_1$ 对应方向等。
+以 $O$ 为原点建立空间直角坐标系：
+\begin{itemize}
+\item 底面正三角形边长为 2，高为 $\sqrt{2^2 - 1^2} = \sqrt{3}$；
+\item 设 $OB$ 方向为 $x$ 轴正方向，$OC$ 方向为 $y$ 轴正方向，侧棱垂直方向（$OO_1$）为 $z$ 轴正方向。
+\end{itemize}
+\Needspace{5\baselineskip}
+各点坐标分别为：
+\nopagebreak[4]
+\[A(0, -1, 0), \quad B(\sqrt{3}, 0, 0), \quad C(0, 1, 0),\]
+\nopagebreak[4]
+\[A_1(0, -1, 2), \quad B_1(\sqrt{3}, 0, 2), \quad C_1(0, 1, 2).\]
+\Needspace{5\baselineskip}
+因为点 $P$ 为 $A_1B_1$ 的中点，点 $Q$ 为 $BC$ 的中点，由中点坐标公式：
+\nopagebreak[4]
+\[P\left(\frac{\sqrt{3}}{2}, -\frac{1}{2}, 2\right), \quad Q\left(\frac{\sqrt{3}}{2}, \frac{1}{2}, 0\right).\]
+\Needspace{5\baselineskip}
+于是向量：
+\nopagebreak[4]
+\[\overrightarrow{BP} = P - B = \left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}, 2\right),\]
+\nopagebreak[4]
+\[\overrightarrow{AC_1} = C_1 - A = (0, 2, 2).\]
+\Needspace{5\baselineskip}
+计算两向量的模长与数量积：
+\nopagebreak[4]
+\[|\overrightarrow{BP}| = \sqrt{\left(-\frac{\sqrt{3}}{2}\right)^2 + \left(-\frac{1}{2}\right)^2 + 2^2} = \sqrt{\frac{3}{4} + \frac{1}{4} + 4} = \sqrt{5},\]
+\nopagebreak[4]
+\[|\overrightarrow{AC_1}| = \sqrt{0^2 + 2^2 + 2^2} = \sqrt{8} = 2\sqrt{2},\]
+\nopagebreak[4]
+\[\overrightarrow{BP} \cdot \overrightarrow{AC_1} = \left(-\frac{\sqrt{3}}{2}\right) \times 0 + \left(-\frac{1}{2}\right) \times 2 + 2 \times 2 = -1 + 4 = 3.\]
+\Needspace{5\baselineskip}
+设异面直线 $BP$ 与 $AC_1$ 所成的角为 $\alpha$，则：
+\nopagebreak[4]
+\[\cos\alpha = \frac{|\overrightarrow{BP} \cdot \overrightarrow{AC_1}|}{|\overrightarrow{BP}| |\overrightarrow{AC_1}|} = \frac{3}{\sqrt{5} \times 2\sqrt{2}} = \frac{3}{2\sqrt{10}} = \frac{3\sqrt{10}}{20}.\]
+故异面直线 $BP$ 与 $AC_1$ 所成角的余弦值为 $\dfrac{3\sqrt{10}}{20}$。
+
+\textbf{(2) 解析}
+\Needspace{5\baselineskip}
+由点坐标得：
+\nopagebreak[4]
+\[\overrightarrow{AQ} = Q - A = \left(\frac{\sqrt{3}}{2}, \frac{3}{2}, 0\right), \quad \overrightarrow{AC_1} = (0, 2, 2).\]
+\Needspace{5\baselineskip}
+设平面 $AQC_1$ 的法向量为 $\boldsymbol n = (x, y, z)$，则：
+\nopagebreak[4]
+\[\begin{cases} \boldsymbol n \cdot \overrightarrow{AQ} = 0, \\ \boldsymbol n \cdot \overrightarrow{AC_1} = 0, \end{cases} \iff \begin{cases} \dfrac{\sqrt{3}}{2}x + \dfrac{3}{2}y = 0, \\ 2y + 2z = 0. \end{cases}\]
+由第一式取 $y = -1$，则 $x = \sqrt{3}$；由第二式得 $z = -y = 1$。
+\Needspace{5\baselineskip}
+故平面 $AQC_1$ 的一个法向量可取为：
+\nopagebreak[4]
+\[\boldsymbol n = (\sqrt{3}, -1, 1).\]
+其模长为 $|\boldsymbol n| = \sqrt{(\sqrt{3})^2 + (-1)^2 + 1^2} = \sqrt{3 + 1 + 1} = \sqrt{5}$。
+因为直线 $CC_1 \parallel$ 侧棱，方向向量为 $\overrightarrow{CC_1} = (0, 0, 2)$。
+\Needspace{5\baselineskip}
+设直线 $CC_1$ 与平面 $AQC_1$ 所成角为 $\theta$，则：
+\nopagebreak[4]
+\[\sin\theta = \frac{|\overrightarrow{CC_1} \cdot \boldsymbol n|}{|\overrightarrow{CC_1}| |\boldsymbol n|} = \frac{|0 \times \sqrt{3} + 0 \times (-1) + 2 \times 1|}{2 \times \sqrt{5}} = \frac{2}{2\sqrt{5}} = \frac{1}{\sqrt{5}} = \frac{\sqrt{5}}{5}.\]
+故直线 $CC_1$ 与平面 $AQC_1$ 所成角的正弦值为 $\dfrac{\sqrt{5}}{5}$。
+
+\gkanswer{答案（1）：$\dfrac{3\sqrt{10}}{20}$。}
+
+\gkanswer{答案（2）：$\dfrac{\sqrt{5}}{5}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}：
+
+设 $n \in \mathbf{N}^*$，对 $1, 2, \cdots, n$ 的一个排列 $i_1 i_2 \cdots i_n$，如果当 $s < t$ 时，有 $i_s > i_t$，则称 $(i_s, i_t)$ 是排列 $i_1 i_2 \cdots i_n$ 的一个逆序，排列 $i_1 i_2 \cdots i_n$ 的所有逆序的总个数称为其逆序数。例如：对 $1, 2, 3$ 的一个排列 231，只有两个逆序 $(2, 1), (3, 1)$，则排列 231 的逆序数为 2。记 $f_n(k)$ 为 $1, 2, \cdots, n$ 的所有排列中逆序数为 $k$ 的全部排列的个数。
+
+（1） 求 $f_3(2), f_4(2)$ 的值；
+
+（2） 求 $f_n(2)$ ($n \geqslant 5$) 的表达式（用 $n$ 表示）。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{(1) 解析}
+对数字 $1, 2, 3$ 的全部 $3! = 6$ 个排列，分别计算其逆序数：
+\begin{itemize}
+\item 排列 123：逆序数为 0；
+\item 排列 132：逆序 (3, 2)，逆序数为 1；
+\item 排列 213：逆序 (2, 1)，逆序数为 1；
+\item 排列 231：逆序 (2, 1), (3, 1)，逆序数为 2；
+\item 排列 312：逆序 (3, 1), (3, 2)，逆序数为 2；
+\item 排列 321：逆序 (3, 2), (3, 1), (2, 1)，逆序数为 3。
+\end{itemize}
+\Needspace{5\baselineskip}
+由此可知，逆序数为 2 的排列只有 231 与 312 这 2 个，故：
+\nopagebreak[4]
+\[f_3(2) = 2.\]
+同时可知：$f_3(0) = 1$，$f_3(1) = 2$。
+对于 $1, 2, 3, 4$ 的排列，考虑在 $1, 2, 3$ 的排列中插入数字 4：
+因为数字 4 大于 1, 2, 3 中的每一个数，若将 4 放在倒数第 $j$ 个位置（从末尾数起，末位为 $j = 0$），则 4 与其后面的 $j$ 个数字均构成逆序，即新增 $j$ 个逆序。
+要使新排列的逆序数为 2，由原排列逆序数 $k$ 与新增逆序数 $j$ 满足 $k + j = 2$：
+\begin{itemize}
+\item $j = 0$（4 排在末尾）：原排列逆序数需为 2，共有 $f_3(2) = 2$ 种；
+\item $j = 1$（4 排在倒数第二位）：原排列逆序数需为 1，共有 $f_3(1) = 2$ 种；
+\item $j = 2$（4 排在倒数第三位）：原排列逆序数需为 0，共有 $f_3(0) = 1$ 种；
+\item $j \geqslant 3$：新增逆序数 $\geqslant 3 > 2$，不可能。
+\end{itemize}
+\Needspace{5\baselineskip}
+因此：
+\nopagebreak[4]
+\[f_4(2) = f_3(2) + f_3(1) + f_3(0) = 2 + 2 + 1 = 5.\]
+
+\textbf{(2) 解析}
+对一般的 $n \geqslant 4$：
+\Needspace{5\baselineskip}
+逆序数为 0 的排列只有自然顺序排列 $12\cdots n$ 这 1 个，故对任意 $n \geqslant 1$：
+\nopagebreak[4]
+\[f_n(0) = 1.\]
+\Needspace{5\baselineskip}
+逆序数为 1 的排列只能是将 $12\cdots n$ 中相邻的两个数对调（共有 $n - 1$ 对相邻数），故对任意 $n \geqslant 2$：
+\nopagebreak[4]
+\[f_n(1) = n - 1.\]
+当计算 $f_{n+1}(2)$ 时，考虑在 $1, 2, \cdots, n$ 的排列中插入最大数 $n + 1$：
+数字 $n + 1$ 只能排在最后 3 个位置（新增 0、1 或 2 个逆序）：
+\begin{itemize}
+\item 排在末尾时，原排列需有 2 个逆序，有 $f_n(2)$ 种；
+\item 排在倒数第二位时，原排列需有 1 个逆序，有 $f_n(1) = n - 1$ 种；
+\item 排在倒数第三位时，原排列需有 0 个逆序，有 $f_n(0) = 1$ 种。
+\end{itemize}
+\Needspace{5\baselineskip}
+由此建立递推关系：
+\nopagebreak[4]
+\[f_{n+1}(2) = f_n(2) + f_n(1) + f_n(0) = f_n(2) + (n - 1) + 1 = f_n(2) + n.\]
+\Needspace{5\baselineskip}
+即对任意 $k \geqslant 4$：
+\nopagebreak[4]
+\[f_{k}(2) - f_{k-1}(2) = k - 1.\]
+\Needspace{5\baselineskip}
+当 $n \geqslant 5$ 时，利用累加法：
+\nopagebreak[4]
+\[\begin{aligned}
+f_n(2) &= f_4(2) + \sum_{k=5}^n \left[f_k(2) - f_{k-1}(2)\right] \\
+&= 5 + \sum_{k=5}^n (k - 1).
+\end{aligned}\]
+\Needspace{5\baselineskip}
+数列 $\{k - 1\}$ 为首项为 $4$、末项为 $n - 1$、项数为 $n - 4$ 的等差数列，求和得：
+\nopagebreak[4]
+\[\sum_{k=5}^n (k - 1) = \frac{(4 + n - 1)(n - 4)}{2} = \frac{(n + 3)(n - 4)}{2} = \frac{n^2 - n - 12}{2}.\]
+\Needspace{5\baselineskip}
+代入得：
+\nopagebreak[4]
+\[f_n(2) = 5 + \frac{n^2 - n - 12}{2} = \frac{10 + n^2 - n - 12}{2} = \frac{n^2 - n - 2}{2}.\]
+当 $n \geqslant 5$ 时，$f_n(2) = \dfrac{n^2 - n - 2}{2}$。
+
+\gkanswer{答案（1）：$f_3(2)=2$，$f_4(2)=5$。}
+
+\gkanswer{答案（2）：$f_n(2)=\dfrac{n^2-n-2}{2}$ ($n\geqslant 5$)。}
+
+\end{answer}

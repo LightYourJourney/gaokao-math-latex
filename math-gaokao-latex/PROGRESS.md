@@ -11493,6 +11493,17 @@
 - 执行 `source_manifest.py validate` 验证通过，数据结构与全库 775 份来源保持一致。
 
 
+### phase0-b16 2018 江苏卷：项目装配与四版生成（2026-11-01）
+
+- 复制 8 份 TikZ 图稿至 `math-gaokao-latex/2018_江苏卷/figures/`；
+- 执行 `source_manifest.py sync-figure-registry --paper gk-2018-regular-jiangsu --write`，成功注册 8 张图稿（各引用 2 次），manifest revision 推进至 `5639`；
+- 执行 `generate_projects.py --paper gk-2018-regular-jiangsu --write`，成功生成 `questions.tex`（9.2K）、`answers.tex`（53.5K）及更新 `index.json`；
+- 执行 `make_short_answers.py --paper gk-2018-regular-jiangsu --write`，成功生成 `answers_short.tex`（2.3K）；
+- 执行 `make_editions.py --paper gk-2018-regular-jiangsu --write`，成功生成四版入口壳文件（试题版、解析版、简答版、印刷版）；
+- 运行三大生成器 `--check` 只读比对验证，全卷试题、答案、简答与四版模板渲染结果 100% 一致。
+
+
+
 
 
 
