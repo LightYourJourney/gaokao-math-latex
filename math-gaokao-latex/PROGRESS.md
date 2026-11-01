@@ -12339,6 +12339,17 @@
   - 执行 `make_editions.py --batch phase0-b25 --write` 生成试题版、解析版、简答版、印刷版四个编译入口壳文件；
   - 经各工具 `--check` 比对模式验证，生成结果与源文件 100% 一致。
 
+### phase0-b25 2019 天津卷文科：录入 Provenance（2026-11-01）
+
+- 执行 `provenance.py init-batch --batch phase0-b25` 初始化三角色审计工作区；
+- 填充 3 角色证据：
+  - `question-review`：20 题对照原卷 PDF 印刷页 1109–1110 审读通过，题面 SHA-256 吻合；
+  - `answer-solve`：录入非官方推导 D 级评级与答案 SHA-256；
+  - `answer-review`：知情复核无冲突（`conflict_status: "none"`）；
+- 执行 `provenance.py import-batch --batch phase0-b25 --write` 导入入库，manifest revision 推进至 `5707`；
+- 执行 `provenance.py check-batch --batch phase0-b25` 校验通过（`OK：1 卷`）。
+
+
 
 
 
