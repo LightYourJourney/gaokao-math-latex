@@ -11,6 +11,13 @@
 - 补全解析正文 Q18 的（1）（2）小问锚点。针对性验证：`parse_question_blocks`、`parse_answer_points`、`validate_solution_body` 均识别22题；三层题号及小问集合逐题一致；`git diff --check` 通过。
 - 当前阶段未登记 paper/source/batch，未写 manifest/provenance，未整理图稿，未生成 TeX/含解析稿、未构建正式 PDF 或生成回执。下一步登记逐题 provenance，重绘 Q3、Q16、Q20 图稿并完成项目登记；来源疑点及官方答案缺失的边界继续保留。本阶段不表示本卷验收或长期语料库完成。
 
+### 2006 山东理科候选卷：独立答案与解析草稿（2026-11-02）
+
+- 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东理_答案要点.md` 与 `2006/2006_数学真题_山东理_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分材料，来源身份及来源链仍未核。
+- 两轮只读独立求解覆盖全卷，并由主会话逐题复核。Q5 闭合所需向量为 $(-2,-12)$，不在四个选项中；Q10 系数比给出 $n=10$，而常数项要求 $k=60/7$ 非整数。这两题继续 U/PENDING，不猜答案。Q20 第二轮复核纠正首轮对 $E(\xi)$ 的算术误差，分布不变，期望为 $13/3$。
+- 针对性验证：`parse_question_blocks`、`parse_answer_points`、`validate_solution_body` 均识别22题；题面、答案、解析三层小问集合逐题一致；`git diff --check` 通过。
+- 当前未登记 paper/source/batch/issue，未写 manifest/provenance，未绘图，未生成 TeX/含解析稿或正式 PDF、未生成回执。下一步登记已确认的 Q5/Q10 阻断并完成逐题 provenance，再绘制 Q2/Q12/Q15/Q16/Q19 图稿及项目登记。本阶段不表示来源认证、整卷验收或长期语料完成。
+
 ### 2006 山东理科候选卷：Q1–Q22 题面转录与独立复核（2026-11-02）
 
 - 依据固定 source `src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947` 转录题面并写入 `2006/2006_数学真题_山东理_试题.md`。SHA-256 `8cd7733727ed4ff238dedc4a1c7cb42773260de88f1d516f0416cbaa3976393b`、Git blob `6e8be14e134daf900d6610fea79e4e7629e68fd7`、532,271 bytes、2页 A3，与 manifest/来源接收记录一致；印刷页320覆盖 Q1–Q17，页321覆盖 Q18–Q22。
