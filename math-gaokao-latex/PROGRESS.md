@@ -12208,6 +12208,15 @@
   - `review_receipts.py check-batch --batch phase0-b23` 验证通过（`FINALIZED：phase0-b23`）；
   - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
 
+### phase0-b24 2019 天津卷理科：题面转录与 TikZ 占位符标定（2026-11-01）
+
+- 锚定固定源 `src-6266612a7ec070d21a24172f28c0f92cba14d68bd7f0fe6da69fbb4aeeec1000`（`普通高考/2019/2019天津理.pdf`，原卷印刷页 1107—1108，SHA-256: `75a3b182f027d9071319a851d1b1abcdb17b2ea9e422b118e0543ddd48d4f351`）；
+- 转录生成规范题面 `2019/2019_数学真题_天津卷理_试题.md`：
+  - 覆盖全部 20 道题目（选择题 1–8、填空题 9–14、解答题 15–20）；
+  - 严格标定 2 处 TikZ 矢量图稿占位符：第 4 题程序框图（`q4.tikz.tex`）、第 17 题立体几何多面体图（`q17.tikz.tex`）；
+  - 经 `parse_question_blocks` 校验，20 道题结构完整无误，小问层级完全吻合。
+
+
 
 
 
