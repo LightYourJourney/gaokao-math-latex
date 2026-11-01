@@ -12313,6 +12313,14 @@
   - 绘制 `q17.tikz.tex`：四棱锥 $P-ABCD$ 立体几何图（底面平行四边形，实线外轮廓、内部虚线边 $PA, AB, AD, AC$ 及中位线 $GH$，顶点标注清晰准确）；
 - 执行 XeLaTeX 独立 Smoke Test 编译，两处图稿均通过且 0 错误 0 警告，渲染验证几何构图准确。
 
+### phase0-b25 2019 天津卷文科：规范源建立与检查（2026-11-01）
+
+- 运行 `solution_sources.build_paper_targets` 自动化装配生成展示文档 `2019/2019_数学真题_天津卷文_含解析.md`（34491 字节）；
+- 运行 `solution_sources.check_paper` 完整校验：
+  - 20 道题目双向哈希匹配完整，无缺失小问，无重复题号；
+  - 零结构性错误（`problems: []`，`ok: True`），四份 Markdown 规范源全量一致。
+
+
 
 
 
