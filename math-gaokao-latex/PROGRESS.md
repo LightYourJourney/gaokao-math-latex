@@ -11980,3 +11980,15 @@
 - 登记 `answer-solve` 为 D 级非官方独立推导证据，`answer-review` 冲突状态为 `none`，双向哈希校验无分歧；
 - 执行 `provenance.py import-batch --batch phase0-b21 --write` 正式入库，生成 `math-gaokao-latex/2019_全国Ⅲ卷_文科/provenance.json`，manifest revision 推进至 `5679`；
 - 执行 `provenance.py check-batch --batch phase0-b21` 验证通过（`OK：1 卷`）。
+
+### phase0-b21 2019 全国Ⅲ卷文科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --manifest math-gaokao-latex/source-manifest.json --batch phase0-b21 --formal` 调用 XeLaTeX + latexmk 进行全量编译；
+- 全卷四版 0 错误、0 Overfull 完美编译：
+  - 试题版：6 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 解析版：31 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 简答版：8 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 印刷版：24 页，0 errors，0 overfull，0 underfull；
+- 全卷四版总计 69 页全部顺利输出，生成 `math-gaokao-latex/2019_全国Ⅲ卷_文科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b21` 验证通过（`OK：1 卷`）；
+- manifest revision 推进至 `5681`，批次推进至 `compiled_pending_review`。
