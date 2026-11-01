@@ -34,7 +34,8 @@
 - 复核发现规范源及初版构建把 Q21 递推式和待证和式的正号误录为负号；固定 PDF 第 2 页（印刷页 339）显示两处均为正号。同步修正试题、答案要点、解析正文、生成的含解析稿、项目 TeX 与 provenance 题面哈希；解析中正项求和与现题面一致。固定源身份未因此升级，Q14 的 U / `ISSUE-1287` 保留。
 - 正式构建 attempt `a7cac3fa-ec15-4120-9dd8-abf0446e875e`，manifest revision `5764`；试题版 4 页、解析版 16 页、简答版 6 页、印刷版 14 页，共 40 页。四版均 0 编译错误、缺字、overfull 与未定义引用；构建回执的输入树与输出 PDF 指纹已记录。
 - 对四版 40/40 页检查缩略渲染，并对 Q13、Q19、Q22 图形出现页作高分辨率检查。逐页 320 项检查输入中 291 项为 pass，29 个无图页面的 `figure_label` 为 `not_applicable`；未见缺字、公式/选项错位、页眉页码异常、裁切或答案串版。印刷版末页仅收尾 Q22(2)，留白属文档结束。
-- 该提交阶段的确定性检查通过：source manifest、provenance、22 题 solution source、三个生成器 `--check`、775 行 manifest CSV 和构建当前输入校验。正式 review receipt 与事务式批次收口仍待下一阶段；Q14 阻断未解除，本条不表示本卷完成或全语料完成。
+- 正式视觉回执通过并与构建 attempt / PDF 指纹绑定；`finalize-batch-checked` 返回 `FINALIZED`，manifest revision `5766`，`phase1-b66` 为 `closed_with_blockers`。最终 build 与 review currentness、provenance 状态、问题账及 775 行 CSV 检查通过；全库报告投影回读一致，保留本卷阻断信息。
+- 全库测试实际结果：`Ran 1749 tests in 850.934s`，`OK (skipped=13)`。Q14 的 `ISSUE-1287` 仍 open / blocks_completion，paper 仍 blocked；该批次闭环不代表来源认证、本卷无阻断完成或 1952–2026 全语料完成。
 
 ### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
 
