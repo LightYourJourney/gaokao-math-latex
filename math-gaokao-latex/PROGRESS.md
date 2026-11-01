@@ -11399,6 +11399,17 @@
 - 运行三大生成器 `--check` 比对一致。
 
 
+### phase0-b15 2018 浙江卷：录入 Provenance（2026-11-01）
+
+- 在 `math-gaokao-latex/.work/phase0-b15` 下初始化并填充三角色数据：
+  - `question-review`：22 题绑定固定源页（1–19 题为第 1 页，20–22 题为第 2 页）、来源 SHA-256（`8f311ad...`）及现场计算的试题文本 SHA-256；
+  - `answer-solve`：22 题登记 D 级非官方推导证据与答案 SHA-256；
+  - `answer-review`：冲突状态为 `none`，答案 SHA-256 双向校验一致；
+- 执行 `provenance.py import-batch --batch phase0-b15 --write` 正式入库，生成 `math-gaokao-latex/2018_浙江卷/provenance.json`，manifest revision 更新为 `5632`；
+- 执行 `provenance.py check-batch --batch phase0-b15` 验证通过（`OK：1 卷`）。
+
+
+
 
 
 
