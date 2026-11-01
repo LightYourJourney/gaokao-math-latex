@@ -1936,6 +1936,14 @@
         "gk-2018-regular-national-3-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase0-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-2018-regular-zhejiang"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1945,7 +1953,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a07aca03-9e8c-49d2-b86c-e3604e8d93fe",
+  "last_transaction_id": "7c09ef4c-49c7-43e8-871e-0e2ff22f787b",
   "papers": [
     {
       "blocked_from": null,
@@ -26095,9 +26103,61 @@
       "title": "2018 年·全国Ⅲ卷·理科",
       "track": "science",
       "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2018_gaokao_zhejiang",
+        "id": "gk-2018-regular-zhejiang",
+        "note": "固定来源为两页重排题面，内部绑定只固定输入字节，不认证出版者、版次、来源链及官方身份；固定源无答案页，答案与解析为非官方推导与公开资料核验。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "不分文理",
+        "variant": "浙江卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-zhejiang",
+      "production_state": "planned",
+      "project_dir": "2018_浙江卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_浙江_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_浙江_含解析.md",
+        "questions": "2018/2018_数学真题_浙江_试题.md",
+        "solution_body": "2018/2018_数学真题_浙江_解析正文.md"
+      },
+      "source_ids": [
+        "src-1dea114bc61a98aeedb195d0b903e192d79b25f77de513dfd08ca9d3467eac54"
+      ],
+      "title": "2018 年·浙江卷",
+      "track": "none",
+      "year": 2018
     }
   ],
-  "revision": 5629,
+  "revision": 5630,
   "schema_version": 1,
   "sources": [
     {
@@ -42966,8 +43026,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a4ead1ae3135d1d841355e21df240a7f58c9f02b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-zhejiang",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018浙江.pdf",
       "regions": [],
       "source_id": "src-1dea114bc61a98aeedb195d0b903e192d79b25f77de513dfd08ca9d3467eac54",

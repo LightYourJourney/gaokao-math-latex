@@ -11380,5 +11380,15 @@
 - 调用 `solution_sources.render_combined` 确定性生成派生源 `2018/2018_数学真题_浙江_含解析.md`（22 题，28972 字符）；经 `extract_solution_blocks` 往返一致性校验通过。
 
 
+### phase0-b15 2018 浙江卷：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规格 `.work/register_phase0_b15.json`：
+  - `batch_id`: `phase0-b15`，`paper_id`: `gk-2018-regular-zhejiang`，`project_dir`: `2018_浙江卷`；
+  - `track`: `none`（`不分文理`），题数 22（选择 1–10、填空 11–17、解答 18–22）；
+  - 绑定固定来源 `src-1dea114bc61a98aeedb195d0b903e192d79b25f77de513dfd08ca9d3467eac54`。
+- 执行 `source_manifest.py register-papers --write`，manifest revision 更新为 `5630`。
+
+
+
 
 
