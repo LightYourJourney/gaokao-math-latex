@@ -12005,3 +12005,9 @@
   - `build_projects.py validate-receipts --batch phase0-b21 --require-final` 验证通过（`OK：1 卷`）；
   - `review_receipts.py check-batch --batch phase0-b21` 验证通过（`FINALIZED：phase0-b21`）；
   - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+### phase0-b22 2019 北京卷理科：题面草稿转录（2026-11-01）
+
+- 锚定固定上游源 `src-609b807cb98571ab293872b8ef4e75c1ccf4571ac23d8e8b6e49e0366ae07211`（`普通高考/2019/2019北京理.pdf`，原卷印刷页 1087—1088，SHA-256: `5dbe0df21bb8343808540733ea467cd4824ff0e2b3d087586f3c31ef9d40d508`）；
+- 转录生成 `2019/2019_数学真题_北京卷理_试题.md`，包含全卷 20 题（选择 8 题、填空 6 题、解答 6 题）完整题面与选项；
+- 标定 4 处 TikZ 矢量图形引用占位符（第 2 题程序框图、第 8 题心形曲线、第 11 题网格几何体三视图、第 16 题四棱锥空间几何模型）。
