@@ -11682,6 +11682,17 @@
 - 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
 
 
+### phase0-b18 2019 全国Ⅱ卷理科：项目装配与四版生成（2026-11-01）
+
+- 建立项目目录 `math-gaokao-latex/2019_全国Ⅱ卷_理科/`，复制图稿 `q16.tikz.tex` 与 `q17.tikz.tex` 到 `figures/`；
+- 运行 `source_manifest.py sync-figure-registry --write`，登记 2 处 TikZ 矢量图形引用，manifest revision 推进至 `5653`；
+- 运行 `generate_projects.py --batch phase0-b18 --write`，由规范源生成 `questions.tex`（9.6KB）与 `answers.tex`（38.7KB）；
+- 运行 `make_short_answers.py --batch phase0-b18 --write`，生成 `answers_short.tex`（2.1KB）；
+- 运行 `make_editions.py --batch phase0-b18 --write`，生成试题版、解析版、简答版、印刷版四套入口壳文件；
+- 分别运行三工具的 `--check` 比对模式，全部 100% 确定性校验通过。
+
+
+
 
 
 
