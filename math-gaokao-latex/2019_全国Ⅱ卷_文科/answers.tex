@@ -1,0 +1,933 @@
+% answers.tex —— 2019 年·全国Ⅱ卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2019/2019_数学真题_全国2文_试题.md + 2019/2019_数学真题_全国2文_解析正文.md + 2019/2019_数学真题_全国2文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定源没有答案页；以下为非官方推导，不能称为官方答案。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A = \{x \mid x > -1\}$, $B = \{x \mid x < 2\}$, 则 $A \cap B =$（ ）。
+
+(A) $(-1, +\infty)$　(B) $(-\infty, 2)$　(C) $(-1, 2)$　(D) $\varnothing$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+集合 $A = \{x \mid x > -1\} = (-1, +\infty)$，集合 $B = \{x \mid x < 2\} = (-\infty, 2)$。
+则 $A \cap B = \{x \mid -1 < x < 2\} = (-1, 2)$。
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设 $z = \mathrm{i}(2 + \mathrm{i})$, 则 $\bar{z} =$（ ）。
+
+(A) $1 + 2\mathrm{i}$　(B) $-1 + 2\mathrm{i}$　(C) $1 - 2\mathrm{i}$　(D) $-1 - 2\mathrm{i}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 $z = \mathrm{i}(2 + \mathrm{i}) = 2\mathrm{i} + \mathrm{i}^2 = -1 + 2\mathrm{i}$。
+根据共轭复数定义，$\bar{z} = -1 - 2\mathrm{i}$。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+已知向量 $\vec{a} = (2, 3)$, $\vec{b} = (3, 2)$, 则 $|\vec{a} - \vec{b}| =$（ ）。
+
+(A) $\sqrt{2}$　(B) 2　(C) $5\sqrt{2}$　(D) 50
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由已知 $\vec{a} = (2, 3), \vec{b} = (3, 2)$，得：
+\nopagebreak[4]
+\[\vec{a} - \vec{b} = (2 - 3, 3 - 2) = (-1, 1).\]
+\Needspace{5\baselineskip}
+所以模长为：
+\nopagebreak[4]
+\[|\vec{a} - \vec{b}| = \sqrt{(-1)^2 + 1^2} = \sqrt{2}.\]
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+生物实验室有 5 只兔子, 其中只有 3 只测量过某项指标, 若从这 5 只兔子中随机取出 3 只, 则恰有 2 只测量过该指标的概率为（ ）。
+
+(A) $\frac{2}{3}$　(B) $\frac{3}{5}$　(C) $\frac{2}{5}$　(D) $\frac{1}{5}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+从 5 只兔子中随机选出 3 只，样本空间基本事件总数为：
+\nopagebreak[4]
+\[N = \mathrm{C}_5^3 = 10.\]
+5 只兔子中恰有 3 只测量过指标，2 只未测量过指标。
+\Needspace{5\baselineskip}
+从 3 只测量过的兔子中选出 2 只且从 2 只未测量过的兔子中选出 1 只的基本事件数为：
+\nopagebreak[4]
+\[m = \mathrm{C}_3^2 \mathrm{C}_2^1 = 3 \times 2 = 6.\]
+\Needspace{5\baselineskip}
+因此所求概率为：
+\nopagebreak[4]
+\[P = \frac{6}{10} = \frac{3}{5}.\]
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+在“一带一路”知识测验后, 甲、乙、丙三人对成绩进行预测.
+甲: 我的成绩比乙高.
+乙: 丙的成绩比我和甲的都高.
+丙: 我的成绩比乙高.
+成绩公布后, 三人成绩互不相同且只有一个人预测正确, 那么三人按成绩由高到低的次序为（ ）。
+
+(A) 甲、乙、丙　(B) 乙、甲、丙　(C) 丙、乙、甲　(D) 甲、丙、乙
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设甲、乙、丙三人的成绩分别为 $x_\text{甲}, x_\text{乙}, x_\text{丙}$，三人成绩互不相同。
+题目给出三人预测内容为：
+\begin{itemize}
+\item 甲：“$x_\text{甲} > x_\text{乙}$”；
+\item 乙：“$x_\text{丙} > x_\text{乙}$ 且 $x_\text{丙} > x_\text{甲}$”；
+\item 丙：“$x_\text{丙} > x_\text{乙}$”。
+\end{itemize}
+因为三人成绩互不相同且只有一个人预测正确：
+若乙预测正确，则必定有 $x_\text{丙} > x_\text{乙}$，此时丙也预测正确，导致有两人预测正确，产生矛盾。故乙必预测错误。
+因此只能是甲正确或丙正确：
+\begin{itemize}
+\item 若丙预测正确，则甲必定预测错误。由丙正确得 $x_\text{丙} > x_\text{乙}$，由甲错误得 $x_\text{甲} < x_\text{乙}$，综合可得 $x_\text{丙} > x_\text{乙} > x_\text{甲}$。此时丙比甲和乙的成绩都高，乙的预测“丙的成绩比我和甲的都高”也成立，这与只有一人预测正确矛盾。
+\item 若甲预测正确，则乙、丙均预测错误。由甲正确得 $x_\text{甲} > x_\text{乙}$，由丙错误得 $x_\text{丙} < x_\text{乙}$。综合可得 $x_\text{甲} > x_\text{乙} > x_\text{丙}$。此时丙的成绩最低，乙的预测为假，符合题意。
+\end{itemize}
+因此三人按成绩由高到低的次序为甲、乙、丙。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+设 $f(x)$ 为奇函数, 且当 $x \geqslant 0$ 时, $f(x) = \mathrm{e}^x - 1$, 则当 $x < 0$ 时, $f(x) =$（ ）。
+
+(A) $\mathrm{e}^{-x} - 1$　(B) $\mathrm{e}^{-x} + 1$　(C) $-\mathrm{e}^{-x} - 1$　(D) $-\mathrm{e}^{-x} + 1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+因为 $f(x)$ 为奇函数，所以对定义域内任意 $x$ 均有 $f(-x) = -f(x)$，即 $f(x) = -f(-x)$。
+当 $x < 0$ 时，$-x > 0$。
+\Needspace{5\baselineskip}
+因为当 $t \geqslant 0$ 时，$f(t) = \mathrm{e}^t - 1$，所以：
+\nopagebreak[4]
+\[f(-x) = \mathrm{e}^{-x} - 1.\]
+\Needspace{5\baselineskip}
+代入奇函数性质可得：
+\nopagebreak[4]
+\[f(x) = -f(-x) = -(\mathrm{e}^{-x} - 1) = -\mathrm{e}^{-x} + 1.\]
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+设 $\alpha, \beta$ 为两个平面, 则 $\alpha \parallel \beta$ 的充要条件是（ ）。
+
+(A) $\alpha$ 内有无数条直线与 $\beta$ 平行　(B) $\alpha$ 内有两条相交直线与 $\beta$ 平行
+(C) $\alpha, \beta$ 平行于同一条直线　(D) $\alpha, \beta$ 垂直于同一平面
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+根据立体几何面面平行的判定定理：如果一个平面内有两条相交直线与另一个平面平行，则这两个平面平行。
+反之，根据面面平行的性质定理：如果两个平面平行，则其中一个平面内的任意两条相交直线均与另一个平面平行。
+因此，“$\alpha$ 内有两条相交直线与 $\beta$ 平行”是 $\alpha \parallel \beta$ 的充要条件。
+对于其余选项：
+\begin{itemize}
+\item A 中无数条直线可能互相平行，不能判定两平面平行；
+\item C 中若两平面相交，交线平行于某一条直线，则两个平面也平行于该直线；
+\item D 中垂直于同一平面的两个平面可以相交。
+\end{itemize}
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+若 $x_1 = \frac{\pi}{4}, x_2 = \frac{3\pi}{4}$ 是函数 $f(x) = \sin\omega x$ ($\omega > 0$) 两个相邻的极值点, 则 $\omega =$（ ）。
+
+(A) 2　(B) $\frac{3}{2}$　(C) 1　(D) $\frac{1}{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+函数 $f(x) = \sin\omega x$ ($\omega > 0$)。
+因为 $x_1 = \dfrac{\pi}{4}$ 与 $x_2 = \dfrac{3\pi}{4}$ 是相邻的两个极值点，
+\Needspace{5\baselineskip}
+所以半周期为：
+\nopagebreak[4]
+\[\frac{T}{2} = |x_2 - x_1| = \frac{3\pi}{4} - \frac{\pi}{4} = \frac{\pi}{2}.\]
+由此得周期 $T = \pi$。
+由周期公式 $T = \dfrac{2\pi}{\omega} = \pi$，解得 $\omega = 2$。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+若抛物线 $y^2 = 2px$ ($p > 0$) 的焦点是椭圆 $\frac{x^2}{3p} + \frac{y^2}{p} = 1$ 的一个焦点, 则 $p =$（ ）。
+
+(A) 2　(B) 3　(C) 4　(D) 8
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+抛物线方程为 $y^2 = 2px$ ($p > 0$)，其焦点在 $x$ 轴正半轴上，坐标为 $(\dfrac{p}{2}, 0)$。
+椭圆方程为 $\dfrac{x^2}{3p} + \dfrac{y^2}{p} = 1$。
+因为 $3p > p > 0$，所以椭圆焦点落在 $x$ 轴上。
+\Needspace{5\baselineskip}
+椭圆半焦距 $c$ 满足：
+\nopagebreak[4]
+\[c^2 = a^2 - b^2 = 3p - p = 2p.\]
+所以椭圆的正半轴焦点坐标为 $(\sqrt{2p}, 0)$。
+\Needspace{5\baselineskip}
+由题意，抛物线的焦点与椭圆的一个焦点重合，故：
+\nopagebreak[4]
+\[\frac{p}{2} = \sqrt{2p} \implies \frac{p^2}{4} = 2p.\]
+因为 $p > 0$，两边同除以 $p$，得 $\dfrac{p}{4} = 2 \implies p = 8$。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+曲线 $y = 2\sin x + \cos x$ 在点 $(\pi, -1)$ 处的切线方程为（ ）。
+
+(A) $x - y - \pi - 1 = 0$　(B) $2x - y - 2\pi - 1 = 0$
+(C) $2x + y - 2\pi + 1 = 0$　(D) $x + y - \pi + 1 = 0$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+对曲线方程 $y = 2\sin x + \cos x$ 求导，得：
+\nopagebreak[4]
+\[y' = 2\cos x - \sin x.\]
+\Needspace{5\baselineskip}
+在点 $(\pi, -1)$ 处的切线斜率为：
+\nopagebreak[4]
+\[k = y'(\pi) = 2\cos\pi - \sin\pi = 2(-1) - 0 = -2.\]
+\Needspace{5\baselineskip}
+根据点斜式方程，切线方程为：
+\nopagebreak[4]
+\[y - (-1) = -2(x - \pi) \implies y + 1 = -2x + 2\pi \implies 2x + y - 2\pi + 1 = 0.\]
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知 $\alpha \in (0, \frac{\pi}{2})$, $2\sin 2\alpha = \cos 2\alpha + 1$, 则 $\sin\alpha =$（ ）。
+
+(A) $\frac{1}{5}$　(B) $\frac{\sqrt{5}}{5}$　(C) $\frac{\sqrt{3}}{3}$　(D) $\frac{2\sqrt{5}}{5}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由二倍角公式可知：
+\nopagebreak[4]
+\[\cos 2\alpha + 1 = 2\cos^2\alpha, \quad \sin 2\alpha = 2\sin\alpha\cos\alpha.\]
+\Needspace{5\baselineskip}
+将它们代入已知等式 $2\sin 2\alpha = \cos 2\alpha + 1$，得：
+\nopagebreak[4]
+\[4\sin\alpha\cos\alpha = 2\cos^2\alpha.\]
+\Needspace{5\baselineskip}
+因为 $\alpha \in (0, \dfrac{\pi}{2})$，所以 $\cos\alpha > 0$。两边同除以 $2\cos\alpha$，得：
+\nopagebreak[4]
+\[2\sin\alpha = \cos\alpha \implies \tan\alpha = \frac{1}{2}.\]
+\Needspace{5\baselineskip}
+由同角三角函数关系：
+\nopagebreak[4]
+\[\sin^2\alpha = \frac{\tan^2\alpha}{1 + \tan^2\alpha} = \frac{(1/2)^2}{1 + (1/2)^2} = \frac{1/4}{5/4} = \frac{1}{5}.\]
+\Needspace{5\baselineskip}
+因为 $\alpha \in (0, \dfrac{\pi}{2})$，所以 $\sin\alpha > 0$，因此：
+\nopagebreak[4]
+\[\sin\alpha = \frac{\sqrt{5}}{5}.\]
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设 $F$ 为双曲线 $C: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ ($a > 0, b > 0$) 的右焦点, $O$ 为坐标原点, 以 $OF$ 为直径的圆与圆 $x^2 + y^2 = a^2$ 交于 $P, Q$ 两点. 若 $|PQ| = |OF|$, 则 $C$ 的离心率为（ ）。
+
+(A) $\sqrt{2}$　(B) $\sqrt{3}$　(C) 2　(D) $\sqrt{5}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+双曲线 $C: \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ 的右焦点为 $F(c, 0)$，坐标原点为 $O(0, 0)$。
+\Needspace{5\baselineskip}
+以线段 $OF$ 为直径的圆，其圆心为 $(\dfrac{c}{2}, 0)$，半径为 $\dfrac{c}{2}$，圆方程为：
+\nopagebreak[4]
+\[\left(x - \frac{c}{2}\right)^2 + y^2 = \frac{c^2}{4} \implies x^2 + y^2 - cx = 0.\]
+圆 $O$ 的方程为 $x^2 + y^2 = a^2$。
+\Needspace{5\baselineskip}
+两式相减，得到两圆的公共弦 $PQ$ 所在的直线方程为：
+\nopagebreak[4]
+\[cx = a^2 \implies x = \frac{a^2}{c}.\]
+\Needspace{5\baselineskip}
+由圆的几何性质，公共弦长为：
+\nopagebreak[4]
+\[|PQ| = 2\sqrt{a^2 - x^2} = 2\sqrt{a^2 - \frac{a^4}{c^2}} = \frac{2a}{c}\sqrt{c^2 - a^2} = \frac{2ab}{c}.\]
+\Needspace{5\baselineskip}
+由题设 $|PQ| = |OF| = c$，得：
+\nopagebreak[4]
+\[\frac{2ab}{c} = c \implies 2ab = c^2.\]
+\Needspace{5\baselineskip}
+两边平方，得：
+\nopagebreak[4]
+\[4a^2 b^2 = c^4 \implies 4a^2(c^2 - a^2) = c^4.\]
+\Needspace{5\baselineskip}
+两边同除以 $a^4$，设离心率 $e = \dfrac{c}{a} > 1$：
+\nopagebreak[4]
+\[4(e^2 - 1) = e^4 \implies e^4 - 4e^2 + 4 = 0 \implies (e^2 - 2)^2 = 0.\]
+解得 $e^2 = 2$。
+因为 $e > 1$，所以 $e = \sqrt{2}$。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\par\medskip
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+若变量 $x, y$ 满足约束条件 $\begin{cases} 2x + 3y - 6 \geqslant 0, \\ x + y - 3 \leqslant 0, \\ y - 2 \leqslant 0, \end{cases}$ 则 $z = 3x - y$ 的最大值是 $\underline{\hspace{2cm}}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+作出可行域，其由以下三条直线围成：
+\nopagebreak[4]
+\[l_1: 2x + 3y - 6 = 0, \quad l_2: x + y - 3 = 0, \quad l_3: y - 2 = 0.\]
+求出可行域各边界直线的交点：
+\begin{itemize}
+\item 联立 $l_1$ 与 $l_3$：由 $y = 2$ 得 $2x + 6 - 6 = 0 \implies x = 0$，交点为 $A(0, 2)$；
+\item 联立 $l_2$ 与 $l_3$：由 $y = 2$ 得 $x + 2 = 3 \implies x = 1$，交点为 $B(1, 2)$；
+\item 联立 $l_1$ 与 $l_2$：由 $x + y = 3$ 得 $2x + 2y = 6$，代入 $2x + 3y = 6$ 得 $y = 0, x = 3$，交点为 $C(3, 0)$。
+\end{itemize}
+可行域是以 $A(0, 2), B(1, 2), C(3, 0)$ 为顶点的三角形区域及其内部。
+目标函数为 $z = 3x - y$，分别代入三个顶点坐标检验：
+\begin{itemize}
+\item 在点 $A(0, 2)$ 处：$z = 3 \times 0 - 2 = -2$；
+\item 在点 $B(1, 2)$ 处：$z = 3 \times 1 - 2 = 1$；
+\item 在点 $C(3, 0)$ 处：$z = 3 \times 3 - 0 = 9$。
+\end{itemize}
+因此 $z$ 的最大值是 9。
+
+\gkanswer{答案：$9$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+我国高铁发展迅速, 技术先进. 经统计, 在经停某站的高铁列车中, 有 10 个车次的正点率为 0.97, 有 20 个车次的正点率为 0.98, 有 10 个车次的正点率为 0.99, 则经停该站高铁列车所有车次的平均正点率的估计值为 $\underline{\hspace{2cm}}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+经停该站的高铁列车总车次数为：
+\nopagebreak[4]
+\[N = 10 + 20 + 10 = 40.\]
+\Needspace{5\baselineskip}
+根据加权平均数公式，所有车次的平均正点率估计值为：
+\nopagebreak[4]
+\[\bar{p} = \frac{10 \times 0.97 + 20 \times 0.98 + 10 \times 0.99}{40} = \frac{9.70 + 19.60 + 9.90}{40} = \frac{39.20}{40} = 0.98.\]
+
+\gkanswer{答案：$0.98$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+$\triangle ABC$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$. 已知 $b\sin A + a\cos B = 0$, 则 $B =$ $\underline{\hspace{2cm}}$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+在 $\triangle ABC$ 中，由正弦定理可知：
+\nopagebreak[4]
+\[a = 2R\sin A, \quad b = 2R\sin B.\]
+\Needspace{5\baselineskip}
+代入已知条件 $b\sin A + a\cos B = 0$ 中，得：
+\nopagebreak[4]
+\[2R\sin B\sin A + 2R\sin A\cos B = 0.\]
+\Needspace{5\baselineskip}
+因为 $\triangle ABC$ 中 $\sin A > 0$ 且外接圆半径 $R > 0$，两边同除以 $2R\sin A$，得：
+\nopagebreak[4]
+\[\sin B + \cos B = 0 \implies \tan B = -1.\]
+又因为 $B \in (0, \pi)$，所以 $B = \dfrac{3\pi}{4}$。
+
+\gkanswer{答案：$\dfrac{3\pi}{4}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+中国有悠久的金石文化, 印信是金石文化的代表之一. 印信的形状多为长方体、正方体或圆柱体, 但南北朝时期的官员独孤信的印信形状是“半正多面体”(图 1). 半正多面体是由两种或两种以上的正多边形围成的多面体. 半正多面体体现了数学的对称美. 图 2 是一个棱数为 48 的半正多面体, 它的所有顶点都在同一个正方体的表面上, 且此正方体的棱长为 1. 则该半正多面体共有 $\underline{\hspace{2cm}}$ 个面, 其棱长为 $\underline{\hspace{2cm}}$。
+\nopagebreak[4]
+\begin{center}\input{figures/q16.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+图 2 所示半正多面体为小斜方截半立方体，所有顶点均在棱长为 1 的正方体表面上。
+该多面体由正方体每个面上保留 1 个正方形（共 6 个正方形）、8 个顶点截去后形成的 8 个正三角形、以及 12 条棱处切出的 12 个正方形围成。
+因此该半正多面体共有 $6 + 8 + 12 = 26$ 个面。
+设多面体的棱长为 $x$。正方体各个表面上保留一个边长为 $x$ 的正方形，四个角处截去等腰直角三角形，其斜边为多面体棱长 $x$，故直角边长为 $\dfrac{\sqrt{2}}{2}x$。
+\Needspace{5\baselineskip}
+正方体棱长为 1，故：
+\nopagebreak[4]
+\[x + 2 \times \frac{\sqrt{2}}{2}x = 1 \implies (\sqrt{2} + 1)x = 1 \implies x = \sqrt{2} - 1.\]
+所以该半正多面体共有 26 个面，其棱长为 $\sqrt{2} - 1$。
+
+\gkanswer{答案：$26$；$\sqrt{2}-1$}
+
+\par\medskip
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+如图, 长方体 $ABCD-A_1B_1C_1D_1$ 的底面 $ABCD$ 是正方形, 点 $E$ 在棱 $AA_1$ 上, $BE \perp EC_1$.
+\nopagebreak[4]
+\begin{center}\input{figures/q17.tikz}\end{center}
+\nopagebreak[4]
+(1) 证明: $BE \perp \text{\text{平面} } EB_1C_1$;
+(2) 若 $AE = A_1E, AB = 3$, 求四棱锥 $E - BB_1C_1C$ 的体积.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+长方体 $ABCD-A_1B_1C_1D_1$ 的底面 $ABCD$ 为正方形，点 $E$ 在棱 $AA_1$ 上，$BE \perp EC_1$。
+
+\textbf{(1) 解析}
+在长方体 $ABCD-A_1B_1C_1D_1$ 中，$B_1C_1 \perp$ 平面 $ABB_1A_1$。
+因为 $BE \subset$ 平面 $ABB_1A_1$，所以 $B_1C_1 \perp BE$。
+又已知 $BE \perp EC_1$，且 $B_1C_1 \cap EC_1 = C_1$，$B_1C_1, EC_1 \subset$ 平面 $EB_1C_1$。
+所以 $BE \perp$ 平面 $EB_1C_1$。
+
+\textbf{(2) 解析}
+由 (1) 知 $BE \perp$ 平面 $EB_1C_1$。
+因为 $EB_1 \subset$ 平面 $EB_1C_1$，所以 $BE \perp EB_1$。
+在侧面矩形 $ABB_1A_1$ 中，底面正方形边长 $AB = 3$。
+因为 $AE = A_1E$，设 $AE = A_1E = h$，则高 $AA_1 = BB_1 = 2h$。
+在直角 $\triangle ABE$ 中，$BE^2 = AB^2 + AE^2 = 9 + h^2$。
+在直角 $\triangle A_1B_1E$ 中，$EB_1^2 = A_1B_1^2 + A_1E^2 = 9 + h^2$。
+\Needspace{5\baselineskip}
+在直角 $\triangle BEB_1$ 中，由勾股定理：
+\nopagebreak[4]
+\[BE^2 + EB_1^2 = BB_1^2 \implies (9 + h^2) + (9 + h^2) = (2h)^2 \implies 18 + 2h^2 = 4h^2 \implies h = 3.\]
+所以 $BB_1 = 2h = 6$。
+\Needspace{5\baselineskip}
+四棱锥 $E - BB_1C_1C$ 的底面 $BB_1C_1C$ 是边长为 $3$ 与 $6$ 的矩形，底面面积为：
+\nopagebreak[4]
+\[S_{BB_1C_1C} = 3 \times 6 = 18.\]
+因为棱 $AA_1 \parallel BB_1$，且 $AA_1 \subset$ 平面 $ADD_1A_1 \parallel$ 平面 $BCC_1B_1$，
+所以棱 $AA_1$ 上任意一点到平面 $BB_1C_1C$ 的距离均等于 $AB = 3$。
+点 $E$ 在棱 $AA_1$ 上，故点 $E$ 到平面 $BB_1C_1C$ 的高 $d = 3$。
+\Needspace{5\baselineskip}
+四棱锥的体积为：
+\nopagebreak[4]
+\[V = \frac{1}{3} S_{BB_1C_1C} \times d = \frac{1}{3} \times 18 \times 3 = 18.\]
+
+\gkanswer{答案（1）：证明见解析}
+
+\gkanswer{答案（2）：$18$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+已知 $\{a_n\}$ 是各项均为正数的等比数列, $a_1 = 2, a_3 = 2a_2 + 16$.
+(1) 求 $\{a_n\}$ 的通项公式;
+(2) 设 $b_n = \log_2 a_n$, 求数列 $\{b_n\}$ 的前 $n$ 项和.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+等比数列 $\{a_n\}$ 的各项均为正数，$a_1 = 2, a_3 = 2a_2 + 16$。
+
+\textbf{(1) 解析}
+设各项均为正数的等比数列 $\{a_n\}$ 的公比为 $q > 0$。
+\Needspace{5\baselineskip}
+由 $a_1 = 2, a_3 = 2a_2 + 16$，得：
+\nopagebreak[4]
+\[2q^2 = 4q + 16 \implies q^2 - 2q - 8 = 0.\]
+分解因式得 $(q - 4)(q + 2) = 0$。
+因为 $q > 0$，所以 $q = 4$。
+\Needspace{5\baselineskip}
+因此数列 $\{a_n\}$ 的通项公式为：
+\nopagebreak[4]
+\[a_n = a_1 q^{n-1} = 2 \times 4^{n-1} = 2 \times 2^{2n-2} = 2^{2n-1}.\]
+
+\textbf{(2) 解析}
+\Needspace{5\baselineskip}
+由 (1) 得：
+\nopagebreak[4]
+\[b_n = \log_2 a_n = \log_2(2^{2n-1}) = 2n - 1.\]
+所以数列 $\{b_n\}$ 是首项 $b_1 = 1$、公差 $d = 2$ 的等差数列。
+\Needspace{5\baselineskip}
+其前 $n$ 项和为：
+\nopagebreak[4]
+\[S_n = \frac{n(b_1 + b_n)}{2} = \frac{n(1 + 2n - 1)}{2} = n^2.\]
+
+\gkanswer{答案（1）：$a_n = 2^{2n-1}$}
+
+\gkanswer{答案（2）：$S_n = n^2$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+某行业主管部门为了解本行业中小企业的生产情况, 随机调查了 100 个企业, 得到这些企业第一季度相对于前一年第一季度产值增长率 $y$ 的频数分布表.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$y$ 的分组 \& $[-0.20, 0)$ \& $[0, 0.20)$ \& $[0.20, 0.40)$ \& $[0.40, 0.60)$ \& $[0.60, 0.80)$ \\
+\hline
+企业数 \& 2 \& 24 \& 53 \& 14 \& 7 \\
+\hline
+\end{tabular}
+\end{center}
+(1) 分别估计这类企业中产值增长率不低于 40\% 的企业比例、产值负增长的企业比例;
+(2) 求这类企业产值增长率的平均数与标准差的估计值 (同一组中的数据用该组区间的中点值为代表). (精确到 0.01)
+附: $\sqrt{74} \approx 8.602$.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+调查样本容量为 100。
+
+\textbf{(1) 解析}
+\Needspace{5\baselineskip}
+产值增长率不低于 40\% 的企业包含 $[0.40, 0.60)$ 和 $[0.60, 0.80)$ 两组，企业总数为：
+\nopagebreak[4]
+\[14 + 7 = 21.\]
+所以这类企业中产值增长率不低于 40\% 的企业比例估计为 $\dfrac{21}{100} = 21\%$（或 0.21）。
+产值负增长的企业对应区间 $[-0.20, 0)$，企业总数为 2。
+所以产值负增长的企业比例估计为 $\dfrac{2}{100} = 2\%$（或 0.02）。
+
+\textbf{(2) 解析}
+各组区间中点值及对应频数如下：
+\begin{itemize}
+\item 第 1 组 $[-0.20, 0)$：中点 $x_1 = -0.10$，频数 $f_1 = 2$；
+\item 第 2 组 $[0, 0.20)$：中点 $x_2 = 0.10$，频数 $f_2 = 24$；
+\item 第 3 组 $[0.20, 0.40)$：中点 $x_3 = 0.30$，频数 $f_3 = 53$；
+\item 第 4 组 $[0.40, 0.60)$：中点 $x_4 = 0.50$，频数 $f_4 = 14$；
+\item 第 5 组 $[0.60, 0.80)$：中点 $x_5 = 0.70$，频数 $f_5 = 7$。
+\end{itemize}
+\Needspace{5\baselineskip}
+产值增长率的平均数估计值为：
+\nopagebreak[4]
+\[\bar{x} = \frac{1}{100}\sum_{i=1}^5 f_i x_i = \frac{1}{100}[2(-0.10) + 24(0.10) + 53(0.30) + 14(0.50) + 7(0.70)].\]
+\Needspace{5\baselineskip}
+计算得：
+\nopagebreak[4]
+\[\bar{x} = \frac{1}{100}[-0.20 + 2.40 + 15.90 + 7.00 + 4.90] = \frac{30.00}{100} = 0.30.\]
+\Needspace{5\baselineskip}
+方差估计值为：
+\nopagebreak[4]
+\[s^2 = \frac{1}{100}\sum_{i=1}^5 f_i (x_i - \bar{x})^2.\]
+其中：
+\begin{itemize}
+\item $x_1 - \bar{x} = -0.10 - 0.30 = -0.40$，$(x_1 - \bar{x})^2 = 0.16$；
+\item $x_2 - \bar{x} = 0.10 - 0.30 = -0.20$，$(x_2 - \bar{x})^2 = 0.04$；
+\item $x_3 - \bar{x} = 0.30 - 0.30 = 0$，$(x_3 - \bar{x})^2 = 0$；
+\item $x_4 - \bar{x} = 0.50 - 0.30 = 0.20$，$(x_4 - \bar{x})^2 = 0.04$；
+\item $x_5 - \bar{x} = 0.70 - 0.30 = 0.40$，$(x_5 - \bar{x})^2 = 0.16$。
+\end{itemize}
+\Needspace{5\baselineskip}
+代入得：
+\nopagebreak[4]
+\[s^2 = \frac{1}{100}[2(0.16) + 24(0.04) + 53(0) + 14(0.04) + 7(0.16)] = \frac{1}{100}[9 \times 0.16 + 38 \times 0.04].\]
+\nopagebreak[4]
+\[s^2 = \frac{1}{100}[1.44 + 1.52] = \frac{2.96}{100} = 0.0296.\]
+\Needspace{5\baselineskip}
+标准差估计值为：
+\nopagebreak[4]
+\[s = \sqrt{0.0296} = \frac{\sqrt{2.96}}{10} = \frac{\sqrt{296}}{100} = \frac{2\sqrt{74}}{100} = \frac{\sqrt{74}}{50}.\]
+\Needspace{5\baselineskip}
+代入已知条件 $\sqrt{74} \approx 8.602$：
+\nopagebreak[4]
+\[s \approx \frac{8.602}{50} = 0.17204 \approx 0.17.\]
+因此，平均数的估计值为 0.30，标准差的估计值为 0.17。
+
+\gkanswer{答案（1）：产值增长率不低于 40\% 的企业比例估计为 21\%；产值负增长的企业比例估计为 2\%}
+
+\gkanswer{答案（2）：平均数估计值为 0.30；标准差估计值为 0.17}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+已知 $F_1, F_2$ 是椭圆 $C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ ($a > b > 0$) 的两个焦点, $P$ 为 $C$ 上一点, $O$ 为坐标原点.
+(1) 若 $\triangle POF_2$ 为等边三角形, 求 $C$ 的离心率;
+(2) 如果存在点 $P$, 使得 $PF_1 \perp PF_2$, 且 $\triangle F_1PF_2$ 的面积等于 16, 求 $b$ 的值和 $a$ 的取值范围.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+椭圆 $C: \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ ($a > b > 0$)，焦点为 $F_1(-c, 0), F_2(c, 0)$。
+
+\textbf{(1) 解析}
+$\triangle POF_2$ 为等边三角形，边长为 $|OF_2| = c$。
+由对称性，不妨设点 $P$ 在第一象限。
+\Needspace{5\baselineskip}
+根据等边三角形的性质，点 $P$ 的坐标为：
+\nopagebreak[4]
+\[x_P = c\cos 60^\circ = \frac{c}{2}, \quad y_P = c\sin 60^\circ = \frac{\sqrt{3}}{2}c.\]
+\Needspace{5\baselineskip}
+将点 $P$ 坐标代入椭圆方程，得：
+\nopagebreak[4]
+\[\frac{(c/2)^2}{a^2} + \frac{(\sqrt{3}c/2)^2}{b^2} = 1 \implies \frac{c^2}{4a^2} + \frac{3c^2}{4b^2} = 1.\]
+\Needspace{5\baselineskip}
+将 $b^2 = a^2 - c^2$ 代入，两边同除以 $a^2$，记离心率 $e = \dfrac{c}{a} \in (0, 1)$：
+\nopagebreak[4]
+\[\frac{e^2}{4} + \frac{3e^2}{4(1 - e^2)} = 1.\]
+\Needspace{5\baselineskip}
+去分母化简：
+\nopagebreak[4]
+\[e^2(1 - e^2) + 3e^2 = 4(1 - e^2) \implies e^4 - 8e^2 + 4 = 0.\]
+\Needspace{5\baselineskip}
+解此一元二次方程：
+\nopagebreak[4]
+\[e^2 = \frac{8 \pm \sqrt{64 - 16}}{2} = 4 \pm 2\sqrt{3}.\]
+因为 $0 < e < 1$，所以 $0 < e^2 < 1$。
+\Needspace{5\baselineskip}
+由于 $4 + 2\sqrt{3} > 1$（舍去），故：
+\nopagebreak[4]
+\[e^2 = 4 - 2\sqrt{3} = (\sqrt{3} - 1)^2.\]
+因此离心率 $e = \sqrt{3} - 1$。
+
+\textbf{(2) 解析}
+设 $|PF_1| = r_1, |PF_2| = r_2$。
+\Needspace{5\baselineskip}
+由椭圆的定义：
+\nopagebreak[4]
+\[r_1 + r_2 = 2a.\]
+\Needspace{5\baselineskip}
+因为 $PF_1 \perp PF_2$，所以 $\triangle F_1PF_2$ 是直角三角形，由勾股定理：
+\nopagebreak[4]
+\[r_1^2 + r_2^2 = |F_1F_2|^2 = (2c)^2 = 4c^2.\]
+\Needspace{5\baselineskip}
+又已知 $\triangle F_1PF_2$ 的面积等于 16：
+\nopagebreak[4]
+\[S = \frac{1}{2} r_1 r_2 = 16 \implies r_1 r_2 = 32.\]
+\Needspace{5\baselineskip}
+由完全平方公式：
+\nopagebreak[4]
+\[(r_1 + r_2)^2 = r_1^2 + r_2^2 + 2r_1 r_2 \implies 4a^2 = 4c^2 + 64 \implies a^2 - c^2 = 16.\]
+\Needspace{5\baselineskip}
+因为 $b^2 = a^2 - c^2$，所以：
+\nopagebreak[4]
+\[b^2 = 16 \implies b = 4.\]
+下面求 $a$ 的取值范围：
+由于 $PF_1 \perp PF_2$，点 $P$ 在以 $F_1F_2$ 为直径的圆 $x^2 + y^2 = c^2$ 上。
+点 $P$ 的纵坐标绝对值满足 $|y_P| \leqslant c$。
+同时点 $P$ 在椭圆上，椭圆上点的纵坐标范围为 $[-b, b]$。
+要使得圆与椭圆存在交点 $P$，圆的半径必须满足 $c \geqslant b$。
+\Needspace{5\baselineskip}
+将 $b = 4$ 及 $c^2 = a^2 - b^2 = a^2 - 16$ 代入，得：
+\nopagebreak[4]
+\[a^2 - 16 \geqslant 16 \implies a^2 \geqslant 32 \implies a \geqslant 4\sqrt{2}.\]
+（亦可由 $r_1, r_2$ 满足方程 $t^2 - 2at + 32 = 0$，由判别式 $\Delta = 4a^2 - 128 \geqslant 0$ 得 $a \geqslant 4\sqrt{2}$）。
+因此 $b = 4$，$a$ 的取值范围为 $[4\sqrt{2}, +\infty)$。
+
+\gkanswer{答案（1）：$\sqrt{3}-1$}
+
+\gkanswer{答案（2）：$b = 4$；$a$ 的取值范围为 $[4\sqrt{2}, +\infty)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}（本小题满分 12 分）：
+
+已知函数 $f(x) = (x - 1)\ln x - x - 1$. 证明:
+(1) $f(x)$ 存在唯一的极值点;
+(2) $f(x) = 0$ 有且仅有两个实根, 且两个实根互为倒数.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+函数 $f(x) = (x - 1)\ln x - x - 1$，定义域为 $(0, +\infty)$。
+\Needspace{5\baselineskip}
+求导得：
+\nopagebreak[4]
+\[f'(x) = 1 \cdot \ln x + (x - 1) \cdot \frac{1}{x} - 1 = \ln x + 1 - \frac{1}{x} - 1 = \ln x - \frac{1}{x}.\]
+
+\textbf{(1) 解析}
+令 $g(x) = f'(x) = \ln x - \dfrac{1}{x}$。
+在 $(0, +\infty)$ 上，$\ln x$ 与 $-\dfrac{1}{x}$ 均为严格单调递增函数，故 $g(x)$ 在 $(0, +\infty)$ 上严格单调递增。
+又 $g(1) = \ln 1 - 1 = -1 < 0$，$g(\mathrm{e}) = \ln\mathrm{e} - \dfrac{1}{\mathrm{e}} = 1 - \dfrac{1}{\mathrm{e}} > 0$。
+\Needspace{5\baselineskip}
+因为 $g(x)$ 在 $[1, \mathrm{e}]$ 上连续，由零点存在定理可知，存在唯一的 $x_0 \in (1, \mathrm{e})$，使得 $g(x_0) = 0$，即：
+\nopagebreak[4]
+\[\ln x_0 = \frac{1}{x_0}.\]
+当 $x \in (0, x_0)$ 时，$g(x) < 0 \implies f'(x) < 0$，$f(x)$ 单调递减；
+当 $x \in (x_0, +\infty)$ 时，$g(x) > 0 \implies f'(x) > 0$，$f(x)$ 单调递增。
+因此 $x_0$ 是 $f(x)$ 唯一的极值点（且为极小值点）。
+
+\textbf{(2) 解析}
+首先证明实根成对且互为倒数：
+\Needspace{5\baselineskip}
+对任意 $x > 0$，
+\nopagebreak[4]
+\[f\left(\frac{1}{x}\right) = \left(\frac{1}{x} - 1\right)\ln\left(\frac{1}{x}\right) - \frac{1}{x} - 1 = \frac{1 - x}{x}(-\ln x) - \frac{1}{x} - 1 = \frac{(x - 1)\ln x - x - 1}{x} = \frac{f(x)}{x}.\]
+因此，若 $x$ 满足 $f(x) = 0$，则必定有 $f\left(\dfrac{1}{x}\right) = \dfrac{f(x)}{x} = 0$。
+即若 $x$ 是方程 $f(x) = 0$ 的实根，则 $\dfrac{1}{x}$ 也必是其方程的实根。
+接下来证明 $f(x) = 0$ 恰有两个实根：
+由 (1) 知 $f(x)$ 的极小值为 $f(x_0)$。
+\Needspace{5\baselineskip}
+因为 $\ln x_0 = \dfrac{1}{x_0}$，所以：
+\nopagebreak[4]
+\[f(x_0) = (x_0 - 1)\ln x_0 - x_0 - 1 = (x_0 - 1)\frac{1}{x_0} - x_0 - 1 = 1 - \frac{1}{x_0} - x_0 - 1 = -\left(x_0 + \frac{1}{x_0}\right).\]
+因为 $x_0 \in (1, \mathrm{e})$，所以 $x_0 + \dfrac{1}{x_0} > 2$，从而 $f(x_0) < -2 < 0$。
+在区间 $(x_0, +\infty)$ 上，$f(x)$ 严格单调递增。
+\Needspace{5\baselineskip}
+取 $x = \mathrm{e}^2$，有：
+\nopagebreak[4]
+\[f(\mathrm{e}^2) = (\mathrm{e}^2 - 1) \cdot 2 - \mathrm{e}^2 - 1 = \mathrm{e}^2 - 3 > 2.7^2 - 3 > 0.\]
+由零点存在定理可知，$f(x)$ 在 $(x_0, +\infty)$ 上有且仅有一个实根，记为 $x_1$（显然 $x_1 > x_0 > 1$）。
+令 $x_2 = \dfrac{1}{x_1}$。因为 $x_1 > 1$，所以 $0 < x_2 < 1 < x_0$。
+由前面推导可知 $f(x_2) = \dfrac{f(x_1)}{x_1} = 0$，故 $x_2$ 是区间 $(0, x_0)$ 上的一个实根。
+又因为 $f(x)$ 在 $(0, x_0)$ 上严格单调递减，所以在 $(0, x_0)$ 上有且仅有一个实根 $x_2$。
+显然 $x_1 \neq x_2$，且两实根互为倒数：$x_1 x_2 = 1$。
+综上所述，$f(x) = 0$ 有且仅有两个实根，且两个实根互为倒数。
+
+\gkanswer{答案（1）：证明见解析}
+
+\gkanswer{答案（2）：证明见解析}
+
+\par\medskip
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}[选修 4-4：坐标系与参数方程]（本小题满分 10 分）：
+
+在极坐标系中, $O$ 为极点, 点 $M(\rho_0, \theta_0)$ ($\rho_0 > 0$) 在曲线 $C: \rho = 4\sin\theta$ 上, 直线 $l$ 过点 $A(4, 0)$ 且与 $OM$ 垂直, 垂足为 $P$.
+(1) 当 $\theta_0 = \frac{\pi}{3}$ 时, 求 $\rho_0$ 及 $l$ 的极坐标方程;
+(2) 当 $M$ 在 $C$ 上运动且 $P$ 在线段 $OM$ 上时, 求 $P$ 点轨迹的极坐标方程.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+极坐标系中，$O$ 为极点，$M(\rho_0, \theta_0)$ 在曲线 $C: \rho = 4\sin\theta$ 上，直线 $l$ 过点 $A(4, 0)$ 且 $l \perp OM$，垂足为 $P$。
+
+\textbf{(1) 解析}
+\Needspace{5\baselineskip}
+当 $\theta_0 = \dfrac{\pi}{3}$ 时，因为点 $M(\rho_0, \theta_0)$ 在曲线 $C: \rho = 4\sin\theta$ 上，所以：
+\nopagebreak[4]
+\[\rho_0 = 4\sin\frac{\pi}{3} = 4 \times \frac{\sqrt{3}}{2} = 2\sqrt{3}.\]
+射线 $OM$ 的极角为 $\dfrac{\pi}{3}$。
+因为直线 $l$ 经过点 $A(4, 0)$ 且与 $OM$ 垂直于点 $P$，在 $\text{Rt}\triangle OAP$ 中，$\angle AOP = \dfrac{\pi}{3}$，
+\Needspace{5\baselineskip}
+所以垂足 $P$ 到极点的距离为：
+\nopagebreak[4]
+\[|OP| = OA\cos\frac{\pi}{3} = 4 \times \frac{1}{2} = 2.\]
+故点 $P$ 的极坐标为 $(2, \dfrac{\pi}{3})$。
+\Needspace{5\baselineskip}
+因为直线 $l$ 垂直于极径 $OP$ 于点 $P$，所以直线 $l$ 的极坐标方程为：
+\nopagebreak[4]
+\[\rho\cos\left(\theta - \frac{\pi}{3}\right) = 2.\]
+
+\textbf{(2) 解析}
+设点 $P$ 的极坐标为 $(\rho, \theta)$。
+因为点 $P$ 在线段 $OM$ 上，所以点 $P$ 的极角 $\theta = \theta_0$，且 $0 \leqslant \rho \leqslant \rho_0$。
+在 $\text{Rt}\triangle OAP$ 中，$OA = 4, \angle APO = 90^\circ, \angle AOP = \theta$，
+\Needspace{5\baselineskip}
+由三角函数定义可得：
+\nopagebreak[4]
+\[\rho = 4\cos\theta.\]
+因为 $\rho > 0$，所以 $\cos\theta > 0$。
+又点 $M(\rho_0, \theta)$ 在曲线 $C: \rho = 4\sin\theta$ 上，且 $\rho_0 > 0$，所以 $\sin\theta > 0$。
+结合得 $\theta \in (0, \dfrac{\pi}{2})$。
+\Needspace{5\baselineskip}
+因为点 $P$ 在线段 $OM$ 上，必须满足 $\rho \leqslant \rho_0$，即：
+\nopagebreak[4]
+\[4\cos\theta \leqslant 4\sin\theta \implies \tan\theta \geqslant 1.\]
+因为 $\theta \in (0, \dfrac{\pi}{2})$，所以 $\dfrac{\pi}{4} \leqslant \theta < \dfrac{\pi}{2}$。
+当 $\theta = \dfrac{\pi}{2}$ 时，$\rho = 4\cos\dfrac{\pi}{2} = 0$，此时点 $P$ 与极点 $O$ 重合，对应线段端点极限。
+\Needspace{5\baselineskip}
+因此点 $P$ 轨迹的极坐标方程为：
+\nopagebreak[4]
+\[\rho = 4\cos\theta \quad \left(\frac{\pi}{4} \leqslant \theta \leqslant \frac{\pi}{2}\right).\]
+
+\gkanswer{答案（1）：$\rho_0 = 2\sqrt{3}$；$l$ 的极坐标方程为 $\rho\cos\left(\theta - \dfrac{\pi}{3}\right) = 2$}
+
+\gkanswer{答案（2）：$\rho = 4\cos\theta$ $\left(\dfrac{\pi}{4} \leqslant \theta \leqslant \dfrac{\pi}{2}\right)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}[选修 4-5：不等式选讲]（本小题满分 10 分）：
+
+已知 $f(x) = |x - a|x + |x - 2|(x - a)$.
+(1) 当 $a = 1$ 时, 求不等式 $f(x) < 0$ 的解集;
+(2) 若 $x \in (-\infty, 1]$ 时, $f(x) < 0$, 求 $a$ 的取值范围.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+已知函数 $f(x) = |x - a|x + |x - 2|(x - a)$。
+
+\textbf{(1) 解析}
+当 $a = 1$ 时，$f(x) = |x - 1|x + |x - 2|(x - 1)$。
+分区间讨论解不等式 $f(x) < 0$：
+\begin{itemize}
+\item 当 $x < 1$ 时，$|x - 1| = 1 - x, |x - 2| = 2 - x$。
+\end{itemize}
+\nopagebreak[4]
+\[f(x) = -(x - 1)x + (2 - x)(x - 1) = (x - 1)[-x + 2 - x] = -2(x - 1)^2.\]
+  因为 $x < 1$ 时 $(x - 1)^2 > 0$，所以 $f(x) = -2(x - 1)^2 < 0$ 恒成立。
+\begin{itemize}
+\item 当 $x = 1$ 时，$f(1) = 0$，不等式 $f(1) < 0$ 不成立。
+\item 当 $1 < x < 2$ 时，$|x - 1| = x - 1, |x - 2| = 2 - x$。
+\end{itemize}
+\nopagebreak[4]
+\[f(x) = x(x - 1) + (2 - x)(x - 1) = (x - 1)[x + 2 - x] = 2(x - 1).\]
+  因为 $x > 1$，所以 $2(x - 1) > 0$，$f(x) < 0$ 无解。
+\begin{itemize}
+\item 当 $x \geqslant 2$ 时，$|x - 1| = x - 1, |x - 2| = x - 2$。
+\end{itemize}
+\nopagebreak[4]
+\[f(x) = x(x - 1) + (x - 2)(x - 1) = (x - 1)[x + x - 2] = 2(x - 1)^2 > 0.\]
+  $f(x) < 0$ 无解。
+综上所述，当 $a = 1$ 时，不等式 $f(x) < 0$ 的解集为 $\{x \mid x < 1\}$。
+
+\textbf{(2) 解析}
+原卷字面条件为：若 $x \in (-\infty, 1]$ 时，$f(x) < 0$ 恒成立。
+\Needspace{5\baselineskip}
+检验区间右端点 $x = 1$ 处的函数值：
+\nopagebreak[4]
+\[f(1) = |1 - a| \times 1 + |1 - 2|(1 - a) = |1 - a| + (1 - a).\]
+设 $t = 1 - a$。由绝对值的基本性质，恒有 $|t| \geqslant -t$，从而 $|t| + t \geqslant 0$：
+\begin{itemize}
+\item 当 $a \leqslant 1$ 时，$t \geqslant 0$，$f(1) = t + t = 2(1 - a) \geqslant 0$；
+\item 当 $a > 1$ 时，$t < 0$，$f(1) = -t + t = 0$。
+\end{itemize}
+因此对任意实数 $a$，恒有 $f(1) \geqslant 0$。
+故在原卷字面的闭区间 $(-\infty, 1]$ 条件下，严格不存在任何实数 $a$ 使得 $f(x) < 0$ 恒成立，字面解集为空集 $\varnothing$。
+若根据命题逻辑与第 (1) 问的结论，将设问修正为开区间 $x \in (-\infty, 1)$：
+当 $x < 1$ 时，$x < 2$，必有 $|x - 2| = 2 - x$。
+\Needspace{5\baselineskip}
+此时：
+\nopagebreak[4]
+\[f(x) = |x - a|x + (2 - x)(x - a).\]
+\begin{itemize}
+\item 若 $a \geqslant 1$，则对任意 $x < 1$ 均有 $x < a$，故 $|x - a| = a - x$。
+\end{itemize}
+\nopagebreak[4]
+\[f(x) = (a - x)x + (2 - x)(x - a) = (a - x)[x - (2 - x)] = 2(a - x)(x - 1).\]
+  因为 $a \geqslant 1 > x$，所以 $a - x > 0$；又 $x < 1 \implies x - 1 < 0$，
+  所以 $f(x) = 2(a - x)(x - 1) < 0$ 恒成立。
+\begin{itemize}
+\item 若 $a < 1$，当 $x \in (a, 1)$ 时，$x > a$，故 $|x - a| = x - a$。
+\end{itemize}
+\nopagebreak[4]
+\[f(x) = (x - a)x + (2 - x)(x - a) = (x - a)[x + 2 - x] = 2(x - a) > 0,\]
+  这与 $f(x) < 0$ 矛盾。
+综上所述：按原卷字面闭区间条件推导无解（$\varnothing$）；若按命题意图修正为开区间 $x \in (-\infty, 1)$，则 $a$ 的取值范围为 $[1, +\infty)$。
+
+\gkanswer{答案（1）：$\{x \mid x < 1\}$}
+
+\gkanswer{答案（2）：按原卷字面条件无解（$\varnothing$）；若勘误为开区间 $x \in (-\infty, 1)$ 则 $a$ 的取值范围为 $[1, +\infty)$}
+
+\end{answer}
