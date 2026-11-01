@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=latex, font=\small, scale=1.1]
+  \coordinate (A) at (0, 0);
+  \coordinate (P) at (0, 2.5);
+  \coordinate (B) at (-2.0, -1.0);
+  \coordinate (D) at (2.6, 0);
+  \coordinate (C) at (0.6, -1.0);
+  \coordinate (E) at (1.6, -0.5);
+
+  % 虚线：不可见棱与辅助线
+  \draw[dashed, thin] (P) -- (A);
+  \draw[dashed, thin] (A) -- (B);
+  \draw[dashed, thin] (A) -- (D);
+  \draw[dashed, thin] (A) -- (C);
+  \draw[dashed, thin] (B) -- (D);
+  \draw[dashed, thin] (A) -- (E);
+
+  % 实线：可见棱与外轮廓
+  \draw[thick] (B) -- (C) -- (D);
+  \draw[thick] (P) -- (B);
+  \draw[thick] (P) -- (C);
+  \draw[thick] (P) -- (D);
+  \draw[thick] (P) -- (E);
+
+  % 顶点标签
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[below right] at (E) {$E$};
+\end{tikzpicture}
