@@ -9,7 +9,7 @@
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。
 - 对两页 A3 横向 PDF 逐页渲染检查：题签为“2006 普通高等学校招生考试（天津卷文）”，印刷页 338–339；共 22 题（选择 1–10、填空 11–16、解答 17–22）。Q13、Q19、Q22 含需重绘的图形。可见页只有题面，无答案、解析或评分标准。详情见 `reports/2006-tianjin-arts-source-intake.md`。
 - 新增 reports/2006-tianjin-arts-question-transcription.md，覆盖 Q1–Q22 并逐页对照固定 PDF 渲染图；将 Q19 第（1）问按原页更正为 FO ∥ 平面 CDE。Q14 原文要求“这两个圆”，但按现有射线条件只核得一个满足切点范围的圆，先忠实转录并登记题面疑点，不补造第二个。
-- 本阶段新增题面转录报告和独立推导报告 reports/2006-tianjin-arts-independent-solutions.md；Q1–Q22 关键结论经独立复核，Q20(3) 已纳入区间非空条件 a<1，Q22(2) 已补参数法证明。Q14 数量疑点继续保留 U。推导并非官方答案，尚未与官方材料比较；规范题面/答案源、图稿、provenance、paper/batch 及正式 LaTeX 构建均未完成。下一步继续复核并修整三幅图稿，再进入规范源及 issue/manifest 登记。本阶段不表示来源认证、答案权威性、整卷验收或语料库完成。
+- 本阶段新增题面转录报告、独立推导报告和三幅题图重绘复核报告（见 reports/2006-tianjin-arts-question-transcription.md、reports/2006-tianjin-arts-independent-solutions.md、reports/2006-tianjin-arts-figure-review.md）。Q1–Q22 关键结论经独立复核，Q20(3) 已纳入区间非空条件 a<1，Q22(2) 已补参数法证明；Q13/Q19/Q22 图稿 smoke 编译和逐页目视检查通过。Q14 数量疑点继续保留 U。推导并非官方答案，尚未与官方材料比较；规范题面/答案源、正式图稿登记、provenance、paper/batch 及正式卷面 LaTeX 构建均未完成。下一步将题面、答案与图稿接入规范源并同步 issue/manifest/provenance。本阶段不表示来源认证、答案权威性、整卷验收或语料库完成。
 
 ### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
 
