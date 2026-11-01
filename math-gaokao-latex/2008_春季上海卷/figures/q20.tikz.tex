@@ -1,0 +1,21 @@
+% Q20：折叠凳结构示意，投影和长度均不按比例。
+\begin{tikzpicture}[line cap=round,line join=round]
+  % 三角形凳面 ABC 的透视轮廓。
+  \coordinate (A) at (0,2.4);
+  \coordinate (B) at (1.45,1.65);
+  \coordinate (C) at (3.2,2.45);
+  \coordinate (O) at (1.65,0.9);
+  \draw[thick] (A)--(B)--(C)--cycle;
+  \node[above left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  % 三根钢管由凳面顶点延至交点 O，并向地面方向伸出。
+  \draw[thick] (A)--(O)--(2.8,-0.45);
+  \draw[thick] (B)--(O)--(0.1,-0.5);
+  \draw[thick] (C)--(O)--(2.05,-0.65);
+  \fill (O) circle (1.5pt);
+  \node[right] at (O) {$O$};
+  \draw[dashed] (O)--(1.65,0.2);
+  \draw (0,-0.55)--(3.1,-0.55);
+  \node[right] at (3.1,-0.55) {地面};
+\end{tikzpicture}
