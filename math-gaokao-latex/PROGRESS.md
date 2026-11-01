@@ -37,6 +37,12 @@
 - 规范题面、答案要点、解析正文已写入 paper/source 绑定；兼容项目解析器的题号与小问 heading 已规范化。solution_sources extract-batch --write 已确定性生成含解析稿；source manifest、问题账和 22 题 solution source 对齐检查通过。登记记录见 reports/2006-tianjin-science-registration.md。
 - 图稿、三角色 provenance、项目 TeX/简答/版本入口、正式构建与全页视觉审查尚未完成；本阶段不表示本卷验收或全语料完成。
 
+### 2006 天津理科候选卷：三角色逐题 provenance（2026-11-02）
+
+- Q1–Q22 三角色 provenance 写入 manifest revision 5769。题面对照由主会话直接核 PDF；盲解角色 /root/intake_2006_tianjin_science；答案复核角色 /root/intake_2006_shandong_arts。provenance check-batch 返回 OK，status 为 provenance_verified phase1-b67。
+- 固定 PDF 不含答案页，非 U 题答案均为 D 级本库推导，非官方。Q8 初始盲解错误 C 已由独立复核改正为 D。Q2 答案保持 U，并关联 ISSUE-1288（answer-conflict）和 ISSUE-1289（answer-missing），paper 仍 blocked。
+- 本阶段通过 source/answer hash 现场重算绑定角色记录；报告见 reports/2006-tianjin-science-provenance.md。图题 TikZ、确定性项目生成、四版构建及视觉验收尚待完成；不表示全语料完成。
+
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。

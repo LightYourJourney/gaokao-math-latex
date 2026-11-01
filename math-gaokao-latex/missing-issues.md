@@ -21539,3 +21539,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1289
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，没有答案或评分材料；Q2 题面与选项冲突，现有可追溯来源不能确认预期答案。答案源因此保留 U。该缺失答案问题与 ISSUE-1288 的题面/选项冲突是不同问题。",
+  "fingerprint": "5d4f56e3f15ef2573d84cbfd675059b485fc0c63672dbdcca7296d736a721c3f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-tianjin-science",
+  "question_id": "gk-2006-regular-tianjin-science-q02",
+  "resume_action": "取得同版可靠答案或正式勘误；在此之前答案继续记 U，并保留 ISSUE-1288 对题面/选项冲突的记录。",
+  "source_id": "src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
