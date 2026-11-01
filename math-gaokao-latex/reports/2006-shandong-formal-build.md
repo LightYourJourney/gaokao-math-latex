@@ -11,6 +11,10 @@
 
 合计 93 页。八个 edition 均 `succeeded`，没有 TeX errors、missing characters 或 undefined references。文科无 Overfull/Underfull；理科解析版有一项 `Overfull \\hbox (25.69281pt too wide)`，TeX line 333；印刷版有一项 `Underfull \\hbox (badness 1009)`，TeX lines 141–142。后两条在逐页视觉复核前保留为当前回执告警，不先行静默消除。
 
-`build_projects.py validate-receipts --manifest source-manifest.json --batch phase1-b68 --json` 返回 `code=OK`、`failed=0`、`invalid=0`、`missing=0`、`stale=0`；两卷各待视觉复核。回执完整列出四版页数、PDF SHA-256、输入树、工具链与日志诊断。
+`build_projects.py validate-receipts --manifest source-manifest.json --batch phase1-b68 --json` 返回 `code=OK`、`failed=0`、`invalid=0`、`missing=0`、`stale=0`；回执完整列出四版页数、PDF SHA-256、输入树、工具链与日志诊断。
 
-本阶段未创建 review receipt、未逐页审阅 93 页，也未 finalize 批次。山东理科仍有 Q5/Q10 U blocker，固定候选来源身份与官方答案仍未核。本报告不表示任一卷闭环或长期语料完成。
+## 后续视觉审查与批次结论
+
+- 两卷四版共 93 页全部通过逐页八项视觉复核。文科无构建警告；理科解析版 Overfull 对应 PDF 第 13 页，印刷版 Underfull 对应第 7 页，均在回执中记录警告豁免，逐页检查确认公式/段落完整、可读且未被裁切。
+- `review_receipts.py finalize-batch` 于 manifest revision 5791 完成；批次状态 `closed_with_blockers`。阻塞仅来自理科 Q5、Q10 尚未解决的 `ISSUE-1294`–`ISSUE-1297`；文科候选内容状态 `eligible_complete`，来源身份与官方答案仍未认证。
+- 逐页和批次汇总见 `phase1-b68.md`。本次结束的是固定候选件的构建与视觉验收阶段，不表示来源认证或长期语料库完成。

@@ -29,6 +29,14 @@
 - 8 个 edition 均成功、无编译错误、缺字或未解析引用。文科四版无排版告警；理科解析版有 1 条 25.69281pt overfull（TeX line 333），印刷版有 1 条 underfull（TeX lines 141–142）；需要依据当前 PDF 页定位和视觉审查决定是否修正。
 - 回执校验 `validate-receipts --manifest source-manifest.json --batch phase1-b68 --json` 返回 `OK`，无 stale/invalid/missing/failure。下一步使用正式 PDF 完成逐页视觉审查，必要时修复并重建。未形成视觉回执、未批次收口；不表示卷件完成或长期语料完成。
 
+### 2006 山东文理候选卷：逐页视觉审查与批次闭环（2026-11-02）
+
+- 对文科试题版/解析版/简答版/印刷版 45 页与理科四版 48 页逐页完成八项检查，共 93 页、744 项检查；正式 review receipts 与当次 build attempt、PDF 字节和工具链绑定。文科 0 条构建告警；理科解析版 Q15 坐标公式的 25.69281pt Overfull 位于 PDF 第 13 页，印刷版 Q5 段落有 Underfull（TeX 行 141–142，PDF 第 7 页）；两处均确认无裁切或可读性损害，并逐项记录视觉豁免，原构建告警保留。
+- 复核中确认文科解析版第 4 页 Q21 题干完整、页脚留白充分；文科若干解析页及印刷版页眉均完整可见。理科简答版末页承载第 17–22 题完整答案，按分部独立起页判通过，未拆分答案。未发现视觉问题。
+- 执行 `review_receipts.py finalize-batch`，产出 `reports/phase1-b68.md`，manifest revision `5790→5791`；批次 `phase1-b68` 为 `closed_with_blockers`，文科审查通过且内容候选 `eligible_complete`，理科审查通过但因 Q5/Q10 的 `ISSUE-1294`–`ISSUE-1297` 维持 `eligible_blocked`。官方答案仍为 null，固定候选副本不认证来源身份或发布链。
+- `validate-receipts`、provenance、问题账、manifest、解答来源层、项目 TeX/简答/版本壳 currentness 均通过；全量报告投影六项目标已刷新并回读，manifest CSV 775 行已刷新。本轮未运行全量测试套件。详情见 `reports/2006-shandong-formal-build.md` 与 `reports/phase1-b68.md`。
+- 本阶段完成的是两份固定候选卷的构建和视觉审查批次，不表示来源认证、理科 blocker 解除、单卷内容全部完成或长期语料库完成。
+
 ### 2006 山东文科候选卷：独立答案与解析草稿（2026-11-02）
 
 - 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东文_答案要点.md` 与 `2006/2006_数学真题_山东文_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分页，来源发布者、版次、来源链与官方身份仍未核。
