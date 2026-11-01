@@ -11337,3 +11337,13 @@
 - 验证：`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`（四卷各19题）、`provenance check-batch`（4卷）、source manifest 与 issues 校验通过。`review_receipts finalize-batch` 实际返回 `FINALIZED`，manifest revision `5516`；四卷 build=`succeeded`、review=`passed`，批次为 `closed_with_blockers`。`build_projects validate-receipts --require-final` 和 `review_receipts check-batch` 均通过。刷新并校验全量报告投影；`manifest.csv` 当前且775行。未运行测试套件。
 - 阻塞：2025全国1卷Q11来源答案冲突 ISSUE-0048 仍为 open / blocks_completion，故批次关闭但该卷内容仍 blocked。来源出版者、版次及官方答案属性未因构建/视觉通过而改变；本批不代表1952—2026题库完成。
 - 正式报告：`reports/phase0-b05.md`。
+
+
+### phase0-b15 2018 浙江卷：题面草稿转录（2026-11-01）
+
+- 确认上游来源：`普通高考/2018/2018浙江.pdf`（印刷页 1085–1086，SHA-256：`080c102a90ee9a98efb04ee0c1a93b4a2f2efd1fa7dcfb2bb48c66e2c3886574`）。试卷全名《2018 普通高等学校招生考试（浙江卷）》，结构为 10 选择 + 7 填空 + 5 解答（共 22 题，新高考综合，不分文理）。
+- 完成 `2018/2018_数学真题_浙江_试题草稿.md`：
+  - 核实第 6 题原卷打印缺失的两个符号为空白，根据逻辑与官方真题确认为平行符号 `\parallel`；
+  - 填空题中第 11、12、13、15 题为双空题，已保留双下划线规范标记；
+  - 记录第 3 题三视图、第 5 题函数图象选项、第 7 题分布列表格、第 19 题多面体、第 21 题抛物线中点几何图等全部图形与表格要素。
+
