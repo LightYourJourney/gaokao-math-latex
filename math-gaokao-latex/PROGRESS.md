@@ -11483,6 +11483,17 @@
 - 调用 `solution_sources.check_paper` 完成 23 题全量小问结构、题号、图稿引用及往返提取一致性校验，结果为 `PASSED`。
 
 
+### phase0-b16 2018 江苏卷：登记 Paper 与批次（2026-11-01）
+
+- 编写 `.work/register_phase0_b16.json` 登记规范：
+  - `batch_id`: `phase0-b16`，状态为 `planned`；
+  - `paper_id`: `gk-2018-regular-jiangsu`，`project_dir`: `2018_江苏卷`，`track`: `none`，题量 23，题型结构映射为 14 填空 + 6 解答 + 3 附加题；
+  - 绑定固定来源 `src-b98d418cc401881ac96eba763226a8709b29e353718dc5dfb35fd7929bbf57af`（`普通高考/2018/2018江苏.pdf`，印刷页 1065–1066）；
+- 运行 `source_manifest.py register-papers --write` 顺利入库，manifest revision 推进至 `5638`；
+- 执行 `source_manifest.py validate` 验证通过，数据结构与全库 775 份来源保持一致。
+
+
+
 
 
 

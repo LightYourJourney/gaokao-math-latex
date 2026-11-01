@@ -1944,6 +1944,14 @@
         "gk-2018-regular-zhejiang"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase0-b16",
+      "issues": [],
+      "paper_ids": [
+        "gk-2018-regular-jiangsu"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -1953,7 +1961,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "aaddf82b-a2d7-4bd5-887c-e0426d66f6b4",
+  "last_transaction_id": "e73d7773-4063-46af-8437-efc1ed202710",
   "papers": [
     {
       "blocked_from": null,
@@ -26172,9 +26180,61 @@
       "title": "2018 年·浙江卷",
       "track": "none",
       "year": 2018
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2018_gaokao_jiangsu",
+        "id": "gk-2018-regular-jiangsu",
+        "note": "固定来源为两页题面，内部绑定只固定输入字节，不认证出版者、版次、来源链及官方身份；固定源无答案页，答案与解析为非官方推导与公开资料核验。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            1,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "附加题": [
+            21,
+            23
+          ]
+        },
+        "track": "不分文理",
+        "variant": "江苏卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2018-regular-jiangsu",
+      "production_state": "planned",
+      "project_dir": "2018_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2018/2018_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2018/2018_数学真题_江苏_含解析.md",
+        "questions": "2018/2018_数学真题_江苏_试题.md",
+        "solution_body": "2018/2018_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-b98d418cc401881ac96eba763226a8709b29e353718dc5dfb35fd7929bbf57af"
+      ],
+      "title": "2018 年·江苏卷",
+      "track": "none",
+      "year": 2018
     }
   ],
-  "revision": 5637,
+  "revision": 5638,
   "schema_version": 1,
   "sources": [
     {
@@ -43019,8 +43079,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c3a585c8e836252d9c843b64b0f43989fe721e4a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2018-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2018江苏.pdf",
       "regions": [],
       "source_id": "src-b98d418cc401881ac96eba763226a8709b29e353718dc5dfb35fd7929bbf57af",
