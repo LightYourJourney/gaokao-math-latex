@@ -12183,6 +12183,19 @@
 - 执行 `provenance.py import-batch --batch phase0-b23 --write` 正式入库，生成 `math-gaokao-latex/2019_北京卷_文科/provenance.json`，manifest revision 推进至 `5693`；
 - 执行 `provenance.py check-batch --batch phase0-b23` 验证通过（`OK：1 卷`）。
 
+### phase0-b23 2019 北京卷文科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --manifest math-gaokao-latex/source-manifest.json --batch phase0-b23 --formal` 调用 XeLaTeX + latexmk 进行全量编译；
+- 全卷四版 0 错误、0 Overfull、0 Underfull 完美编译：
+  - 试题版：5 页，0 errors，0 overfull，0 underfull；
+  - 解析版：25 页，0 errors，0 overfull，0 underfull；
+  - 简答版：7 页，0 errors，0 overfull，0 underfull；
+  - 印刷版：18 页，0 errors，0 overfull，0 underfull；
+- 全卷四版总计 55 页全部顺利输出，生成 `math-gaokao-latex/2019_北京卷_文科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b23` 验证通过（`OK：1 卷`）；
+- manifest revision 推进至 `5695`，批次推进至 `compiled_pending_review`。
+
+
 
 
 
