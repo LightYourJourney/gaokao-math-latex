@@ -12064,3 +12064,12 @@
   - 建立批次 `phase0-b22`（包含 1 套试卷）；
 - 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5683`；
 - 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
+### phase0-b22 2019 北京卷理科：项目装配与四版生成（2026-11-01）
+
+- 建立项目目录 `math-gaokao-latex/2019_北京卷_理科/`，复制 4 处 TikZ 图稿至 `figures/`；
+- 运行 `source_manifest.py sync-figure-registry --write`，成功登记 4 处矢量图，manifest revision 推进至 `5684`；
+- 运行 `generate_projects.py --batch phase0-b22 --write`，由规范源生成 `questions.tex` 与 `answers.tex`；
+- 运行 `make_short_answers.py --batch phase0-b22 --write`，生成 `answers_short.tex`；
+- 运行 `make_editions.py --batch phase0-b22 --write`，生成试题版、解析版、简答版、印刷版四套独立入口壳文件；
+- 分别运行三工具的 `--check` 比对模式，全部 100% 确定性校验通过。
