@@ -1,0 +1,1106 @@
+% answers.tex —— 2019 年·全国Ⅲ卷·理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2019/2019_数学真题_全国3理_试题.md + 2019/2019_数学真题_全国3理_解析正文.md + 2019/2019_数学真题_全国3理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+\begin{gktip}
+固定源没有答案页；以下为非官方推导，不能称为官方答案。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+已知集合 $A = \{-1, 0, 1, 2\}$, $B = \{x \mid x^2 \leqslant 1\}$, 则 $A \cap B =$（ ）。
+
+(A) $\{-1, 0, 1\}$　(B) $\{0, 1\}$　(C) $\{-1, 1\}$　(D) $\{0, 1, 2\}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+集合 $A = \{-1, 0, 1, 2\}$。
+集合 $B = \{x \mid x^2 \leqslant 1\} = [-1, 1]$。
+则 $A \cap B = \{-1, 0, 1\}$。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+若 $z(1 + \mathrm{i}) = 2\mathrm{i}$, 则 $z =$（ ）。
+
+(A) $-1 - \mathrm{i}$　(B) $-1 + \mathrm{i}$　(C) $1 - \mathrm{i}$　(D) $1 + \mathrm{i}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+由已知 $z(1 + \mathrm{i}) = 2\mathrm{i}$，得：
+\nopagebreak[4]
+\[z = \frac{2\mathrm{i}}{1 + \mathrm{i}} = \frac{2\mathrm{i}(1 - \mathrm{i})}{(1 + \mathrm{i})(1 - \mathrm{i})} = \frac{2\mathrm{i} + 2}{2} = 1 + \mathrm{i}.\]
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+《西游记》《三国演义》《水浒传》和《红楼梦》是中国古典文学瑰宝, 并称为中国古典小说四大名著. 某中学为了解本校学生阅读四大名著的情况, 随机调查了 100 位学生, 其中阅读过《西游记》或《红楼梦》的学生共有 90 位, 阅读过《红楼梦》的学生共有 80 位, 阅读过《西游记》且阅读过《红楼梦》的学生共有 60 位, 则该校阅读过《西游记》的学生人数与该校学生总数比值的估计值为（ ）。
+
+(A) $0.5$　(B) $0.6$　(C) $0.7$　(D) $0.8$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设全校随机调查的学生集合为全集 $U$，总人数为 $|U| = 100$。
+记阅读过《西游记》的学生为集合 $X$，阅读过《红楼梦》的学生为集合 $H$。
+由题意，$|X \cup H| = 90$，$|H| = 80$，$|X \cap H| = 60$。
+\Needspace{5\baselineskip}
+根据集合的容斥原理：
+\nopagebreak[4]
+\[|X \cup H| = |X| + |H| - |X \cap H| \implies 90 = |X| + 80 - 60 \implies |X| = 70.\]
+\Needspace{5\baselineskip}
+因此该校阅读过《西游记》的学生人数与该校学生总数比值的估计值为：
+\nopagebreak[4]
+\[\frac{|X|}{|U|} = \frac{70}{100} = 0.7.\]
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+$(1 + 2x^2)(1 + x)^4$ 的展开式中 $x^3$ 的系数为（ ）。
+
+(A) $12$　(B) $16$　(C) $20$　(D) $24$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$(1 + x)^4$ 的二项展开式通项为 $T_{k+1} = \binom{4}{k} x^k$ ($k = 0, 1, 2, 3, 4$)。
+展开式为 $(1 + x)^4 = 1 + 4x + 6x^2 + 4x^3 + x^4$。
+在 $(1 + 2x^2)(1 + x)^4$ 中，含 $x^3$ 的项由两部分产生：
+\begin{itemize}
+\item $1 \times 4x^3 = 4x^3$；
+\item $2x^2 \times 4x = 8x^3$。
+\end{itemize}
+两项合并为 $4x^3 + 8x^3 = 12x^3$。
+因此 $x^3$ 的系数为 $12$。
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+已知各项均为正数的等比数列 $\{a_n\}$ 的前 4 项和为 15, 且 $a_5 = 3a_3 + 4a_1$, 则 $a_3 =$（ ）。
+
+(A) $16$　(B) $8$　(C) $4$　(D) $2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设各项均为正数的等比数列 $\{a_n\}$ 的公比为 $q$ ($q > 0$)。
+\Needspace{5\baselineskip}
+由 $a_5 = 3a_3 + 4a_1$，得：
+\nopagebreak[4]
+\[a_1 q^4 = 3a_1 q^2 + 4a_1.\]
+\Needspace{5\baselineskip}
+因为 $a_1 > 0$，两边同除以 $a_1$，得：
+\nopagebreak[4]
+\[q^4 - 3q^2 - 4 = 0 \implies (q^2 - 4)(q^2 + 1) = 0.\]
+因为 $q > 0$，所以 $q^2 = 4 \implies q = 2$。
+\Needspace{5\baselineskip}
+由前 4 项和为 $15$，得：
+\nopagebreak[4]
+\[S_4 = a_1(1 + q + q^2 + q^3) = a_1(1 + 2 + 4 + 8) = 15a_1 = 15 \implies a_1 = 1.\]
+故 $a_3 = a_1 q^2 = 1 \times 4 = 4$。
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+已知曲线 $y = a\mathrm{e}^x + x \ln x$ 在点 $(1, a\mathrm{e})$ 处的切线方程为 $y = 2x + b$, 则（ ）。
+
+(A) $a = \mathrm{e}, b = -1$　(B) $a = \mathrm{e}, b = 1$　(C) $a = \mathrm{e}^{-1}, b = 1$　(D) $a = \mathrm{e}^{-1}, b = -1$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+对曲线方程 $y = a\mathrm{e}^x + x \ln x$ 求导，得：
+\nopagebreak[4]
+\[y^\prime = a\mathrm{e}^x + \ln x + 1.\]
+\Needspace{5\baselineskip}
+在切点 $(1, a\mathrm{e})$ 处的切线斜率为：
+\nopagebreak[4]
+\[k = y^\prime(1) = a\mathrm{e} + \ln 1 + 1 = a\mathrm{e} + 1.\]
+\Needspace{5\baselineskip}
+已知切线方程为 $y = 2x + b$，其斜率为 $2$，故：
+\nopagebreak[4]
+\[a\mathrm{e} + 1 = 2 \implies a\mathrm{e} = 1 \implies a = \mathrm{e}^{-1}.\]
+切点纵坐标为 $y = a\mathrm{e} = 1$，即切点坐标为 $(1, 1)$。
+\Needspace{5\baselineskip}
+将切点 $(1, 1)$ 代入切线方程 $y = 2x + b$，得：
+\nopagebreak[4]
+\[1 = 2 \times 1 + b \implies b = -1.\]
+综上，$a = \mathrm{e}^{-1}, b = -1$。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+函数 $y = \dfrac{2x^3}{2^x + 2^{-x}}$ 在 $[-6, 6]$ 的图象大致为（ ）。
+\nopagebreak[4]
+\begin{center}\input{figures/q7.tikz}\end{center}
+\nopagebreak[4]
+(A) 见题图 A　(B) 见题图 B　(C) 见题图 C　(D) 见题图 D
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设函数 $f(x) = \dfrac{2x^3}{2^x + 2^{-x}}$，定义域为 $\mathbb{R}$。
+\Needspace{5\baselineskip}
+由于：
+\nopagebreak[4]
+\[f(-x) = \frac{2(-x)^3}{2^{-x} + 2^x} = -\frac{2x^3}{2^x + 2^{-x}} = -f(x),\]
+故 $f(x)$ 为奇函数，其图象关于坐标原点中心对称，排除选项 C、D。
+当 $x > 0$ 时，$f(x) > 0$；
+当 $x \to +\infty$ 时，分母 $2^x$ 呈指数爆炸式增长，远快于分子的多项式 $2x^3$，故 $\lim_{x \to +\infty} f(x) = 0$。
+计算特殊点值：
+$f(1) = \dfrac{2}{2.5} = 0.8$；
+$f(2) = \dfrac{16}{4.25} \approx 3.76$；
+$f(4) = \dfrac{128}{16 + 1/16} = \dfrac{2048}{257} \approx 7.97 < 8$；
+$f(6) = \dfrac{432}{64 + 1/64} \approx 6.75$。
+可见函数值在 $x \approx 4$ 附近达到峰值后逐渐下降趋于 0，选项 A 中函数在 $x > 0$ 单调递增无界，与事实不符；选项 B 的图象特征完全契合。
+故选 \textbf{B}。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+如图, 点 $N$ 为正方形 $ABCD$ 的中心, $\triangle ECD$ 为正三角形, 平面 $ECD \perp$ 平面 $ABCD$, $M$ 是线段 $ED$ 的中点, 则（ ）。
+\nopagebreak[4]
+\begin{center}\input{figures/q8.tikz}\end{center}
+\nopagebreak[4]
+(A) $BM = EN$, 且直线 $BM, EN$ 是相交直线  
+(B) $BM \neq EN$, 且直线 $BM, EN$ 是相交直线  
+(C) $BM = EN$, 且直线 $BM, EN$ 是异面直线  
+(D) $BM \neq EN$, 且直线 $BM, EN$ 是异面直线
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设正方形 $ABCD$ 的边长为 2。
+取 $CD$ 的中点为坐标原点 $O$。
+因为平面 $ECD \perp$ 平面 $ABCD$，交线为 $CD$，
+在平面 $ABCD$ 内过 $O$ 作垂直于 $CD$ 向内的射线为 $y$ 轴正方向；
+在平面 $ECD$ 内过 $O$ 垂直于 $CD$ 向上的射线为 $z$ 轴正方向；
+射线 $OD$ 为 $x$ 轴正方向。
+则各点坐标为：
+$D(1, 0, 0)$，$C(-1, 0, 0)$，$A(1, 2, 0)$，$B(-1, 2, 0)$。
+正方形中心 $N$ 为 $(0, 1, 0)$。
+$\triangle ECD$ 为边长为 2 的正三角形，其高为 $\sqrt{3}$，顶点 $E$ 在底面投影为 $O$，故 $E(0, 0, \sqrt{3})$。
+\Needspace{5\baselineskip}
+$M$ 为线段 $ED$ 的中点，由中点坐标公式得：
+\nopagebreak[4]
+\[M = \left(\frac{1+0}{2}, \frac{0+0}{2}, \frac{0+\sqrt{3}}{2}\right) = \left(\frac{1}{2}, 0, \frac{\sqrt{3}}{2}\right).\]
+\Needspace{5\baselineskip}
+计算向量 $\vec{BM}$ 与 $\vec{EN}$：
+\nopagebreak[4]
+\[\vec{BM} = M - B = \left(\frac{1}{2} - (-1), 0 - 2, \frac{\sqrt{3}}{2} - 0\right) = \left(\frac{3}{2}, -2, \frac{\sqrt{3}}{2}\right),\]
+\nopagebreak[4]
+\[|\vec{BM}|^2 = \left(\frac{3}{2}\right)^2 + (-2)^2 + \left(\frac{\sqrt{3}}{2}\right)^2 = \frac{9}{4} + 4 + \frac{3}{4} = 7 \implies BM = \sqrt{7}.\]
+\nopagebreak[4]
+\[\vec{EN} = N - E = (0 - 0, 1 - 0, 0 - \sqrt{3}) = (0, 1, -\sqrt{3}),\]
+\nopagebreak[4]
+\[|\vec{EN}|^2 = 0^2 + 1^2 + (-\sqrt{3})^2 = 4 \implies EN = 2.\]
+因为 $\sqrt{7} \neq 2$，故 $BM \neq EN$。
+再检验两直线的位置关系：
+向量 $\vec{BE} = E - B = (1, -2, \sqrt{3})$。
+\Needspace{5\baselineskip}
+计算混合积 $(\vec{BM}, \vec{EN}, \vec{BE})$：
+\nopagebreak[4]
+\[\begin{vmatrix} 3/2 & -2 & \sqrt{3}/2 \\ 0 & 1 & -\sqrt{3} \\ 1 & -2 & \sqrt{3} \end{vmatrix} = \frac{3}{2}(\sqrt{3} - 2\sqrt{3}) - (-2)(0 - (-\sqrt{3})) + \frac{\sqrt{3}}{2}(0 - 1) = -\frac{3\sqrt{3}}{2} - 2\sqrt{3} - \frac{\sqrt{3}}{2} = -4\sqrt{3} \neq 0.\]
+混合积不为 0，表明向量 $\vec{BM}, \vec{EN}, \vec{BE}$ 不共面，因此直线 $BM$ 与 $EN$ 为异面直线。
+综上，$BM \neq EN$，且直线 $BM, EN$ 是异面直线。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+执行如图的程序框图, 如果输入的 $\varepsilon$ 为 $0.01$, 则输出 $s$ 的值等于（ ）。
+\nopagebreak[4]
+\begin{center}\input{figures/q9.tikz}\end{center}
+\nopagebreak[4]
+(A) $2 - \dfrac{1}{2^4}$　(B) $2 - \dfrac{1}{2^5}$　(C) $2 - \dfrac{1}{2^6}$　(D) $2 - \dfrac{1}{2^7}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+运行程序框图：
+输入 $\varepsilon = 0.01$。
+初始状态：$x = 1, s = 0$。
+\begin{itemize}
+\item 第 1 次循环：$s = 0 + 1 = 1$，$x = \dfrac{1}{2} = 0.5$；判断 $0.5 < 0.01$ 不成立；
+\item 第 2 次循环：$s = 1 + \dfrac{1}{2}$，$x = \dfrac{1}{4} = 0.25$；判断 $0.25 < 0.01$ 不成立；
+\item 第 3 次循环：$s = 1 + \dfrac{1}{2} + \dfrac{1}{4}$，$x = \dfrac{1}{8} = 0.125$；判断 $0.125 < 0.01$ 不成立；
+\item 第 4 次循环：$s = \dots$，$x = \dfrac{1}{16} = 0.0625$；判断 $0.0625 < 0.01$ 不成立；
+\item 第 5 次循环：$s = \dots$，$x = \dfrac{1}{32} = 0.03125$；判断 $0.03125 < 0.01$ 不成立；
+\item 第 6 次循环：$s = \dots$，$x = \dfrac{1}{64} = 0.015625$；判断 $0.015625 < 0.01$ 不成立；
+\item 第 7 次循环：$s = 1 + \dfrac{1}{2} + \dfrac{1}{4} + \dfrac{1}{8} + \dfrac{1}{16} + \dfrac{1}{32} + \dfrac{1}{64}$，$x = \dfrac{1}{128} = 0.0078125$；
+\end{itemize}
+此时 $x = \dfrac{1}{128} < 0.01$ 成立，退出循环，输出 $s$。
+\Needspace{5\baselineskip}
+利用等比数列求和公式：
+\nopagebreak[4]
+\[s = \frac{1 - (1/2)^7}{1 - 1/2} = 2\left(1 - \frac{1}{128}\right) = 2 - \frac{1}{64} = 2 - \frac{1}{2^6}.\]
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+双曲线 $C: \dfrac{x^2}{4} - \dfrac{y^2}{2} = 1$ 的右焦点为 $F$, 点 $P$ 在 $C$ 的一条渐近线上, $O$ 为坐标原点, 若 $|PO| = |PF|$, 则 $\triangle PFO$ 的面积为（ ）。
+
+(A) $\dfrac{3\sqrt{2}}{4}$　(B) $\dfrac{3\sqrt{2}}{2}$　(C) $2\sqrt{2}$　(D) $3\sqrt{2}$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由双曲线方程 $C: \dfrac{x^2}{4} - \dfrac{y^2}{2} = 1$，得：
+$a^2 = 4, b^2 = 2 \implies c^2 = a^2 + b^2 = 6 \implies c = \sqrt{6}$。
+右焦点为 $F(\sqrt{6}, 0)$。
+渐近线方程为 $y = \pm \dfrac{b}{a} x = \pm \dfrac{\sqrt{2}}{2} x$。
+不妨设点 $P$ 在渐近线 $y = \dfrac{\sqrt{2}}{2} x$ 上。
+在 $\triangle PFO$ 中，已知 $|PO| = |PF|$，故点 $P$ 在线段 $OF$ 的垂直平分线上。
+线段 $OF$ 的中点坐标为 $\left(\dfrac{\sqrt{6}}{2}, 0\right)$，由于垂直平分线垂直于 $x$ 轴，故点 $P$ 的横坐标为 $x_P = \dfrac{\sqrt{6}}{2}$。
+\Needspace{5\baselineskip}
+代入渐近线方程，得点 $P$ 的纵坐标为：
+\nopagebreak[4]
+\[y_P = \frac{\sqrt{2}}{2} x_P = \frac{\sqrt{2}}{2} \times \frac{\sqrt{6}}{2} = \frac{\sqrt{12}}{4} = \frac{\sqrt{3}}{2}.\]
+故 $\triangle PFO$ 以 $OF$ 为底边的高为 $h = |y_P| = \dfrac{\sqrt{3}}{2}$。
+底边长为 $|OF| = c = \sqrt{6}$。
+\Needspace{5\baselineskip}
+因此 $\triangle PFO$ 的面积为：
+\nopagebreak[4]
+\[S = \frac{1}{2} |OF| \cdot h = \frac{1}{2} \times \sqrt{6} \times \frac{\sqrt{3}}{2} = \frac{\sqrt{18}}{4} = \frac{3\sqrt{2}}{4}.\]
+故选 \textbf{A}。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+设 $f(x)$ 是定义域为 $\mathbb{R}$ 的偶函数, 且在 $(0, +\infty)$ 单调递减, 则（ ）。
+
+(A) $f\left(\log_3 \dfrac{1}{4}\right) > f\left(2^{-\frac{2}{3}}\right) > f\left(2^{-\frac{3}{2}}\right)$  
+(B) $f\left(\log_3 \dfrac{1}{4}\right) > f\left(2^{-\frac{3}{2}}\right) > f\left(2^{-\frac{2}{3}}\right)$  
+(C) $f\left(2^{-\frac{3}{2}}\right) > f\left(2^{-\frac{2}{3}}\right) > f\left(\log_3 \dfrac{1}{4}\right)$  
+(D) $f\left(2^{-\frac{2}{3}}\right) > f\left(2^{-\frac{3}{2}}\right) > f\left(\log_3 \dfrac{1}{4}\right)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+因为 $f(x)$ 是定义在 $\mathbb{R}$ 上的偶函数，所以 $f(x) = f(|x|)$。
+又 $f(x)$ 在 $(0, +\infty)$ 上单调递减，自变量绝对值越大，函数值越小。
+分别考查三个自变量的绝对值：
+\begin{itemize}
+\item $x_1 = \log_3 \dfrac{1}{4} = -\log_3 4$，$|x_1| = \log_3 4$。
+\end{itemize}
+  因为 $3^1 < 4 < 3^{1.5} = 3\sqrt{3} \approx 5.196$，所以 $1 < \log_3 4 < 1.5$；
+\begin{itemize}
+\item $x_2 = 2^{-\frac{2}{3}} = \dfrac{1}{2^{2/3}} = \dfrac{1}{\sqrt[3]{4}}$。
+\end{itemize}
+  因为 $1 < 4 < 8 \implies 1 < \sqrt[3]{4} < 2$，所以 $\dfrac{1}{2} < 2^{-\frac{2}{3}} < 1$；
+\begin{itemize}
+\item $x_3 = 2^{-\frac{3}{2}} = \dfrac{1}{2^{3/2}} = \dfrac{1}{2\sqrt{2}} = \dfrac{\sqrt{2}}{4} \approx 0.3535$。
+\end{itemize}
+\Needspace{5\baselineskip}
+显然有：
+\nopagebreak[4]
+\[0 < 2^{-\frac{3}{2}} < 2^{-\frac{2}{3}} < 1 < \log_3 4.\]
+\Needspace{5\baselineskip}
+即：
+\nopagebreak[4]
+\[|x_3| < |x_2| < |x_1|.\]
+\Needspace{5\baselineskip}
+由 $f(x)$ 在 $(0, +\infty)$ 上单调递减，得：
+\nopagebreak[4]
+\[f\left(2^{-\frac{3}{2}}\right) > f\left(2^{-\frac{2}{3}}\right) > f\left(\log_3 \frac{1}{4}\right).\]
+故选 \textbf{C}。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+设函数 $f(x) = \sin\left(\omega x + \dfrac{\pi}{5}\right)$ $(\omega > 0)$, 已知 $f(x)$ 在 $[0, 2\pi]$ 有且仅有 5 个零点. 下述四个结论:  
+① $f(x)$ 在 $(0, 2\pi)$ 有且仅有 3 个极大值点;  
+② $f(x)$ 在 $(0, 2\pi)$ 有且仅有 2 个极小值点;  
+③ $f(x)$ 在 $\left(0, \dfrac{\pi}{10}\right)$ 单调递增;  
+④ $\omega$ 的取值范围是 $\left[\dfrac{12}{5}, \dfrac{29}{10}\right)$.  
+其中所有正确结论的编号是（ ）。
+
+(A) ①④　(B) ②③　(C) ①②③　(D) ①③④
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令 $\theta = \omega x + \dfrac{\pi}{5}$。当 $x \in [0, 2\pi]$ 时，$\theta \in \left[\dfrac{\pi}{5}, 2\pi\omega + \dfrac{\pi}{5}\right]$。
+正弦函数 $\sin\theta = 0$ 的零点为 $\theta = k\pi$ ($k \in \mathbb{Z}$)。
+因为区间左端点 $\dfrac{\pi}{5} \in (0, \pi)$，所以在区间内的前 5 个零点依次为 $\pi, 2\pi, 3\pi, 4\pi, 5\pi$。
+\Needspace{5\baselineskip}
+已知 $f(x)$ 在 $[0, 2\pi]$ 上有且仅有 5 个零点，因此右端点必须满足：
+\nopagebreak[4]
+\[5\pi \leqslant 2\pi\omega + \frac{\pi}{5} < 6\pi.\]
+\Needspace{5\baselineskip}
+解此不等式：
+\nopagebreak[4]
+\[5 - \frac{1}{5} \leqslant 2\omega < 6 - \frac{1}{5} \implies \frac{24}{5} \leqslant 2\omega < \frac{29}{5} \implies \frac{12}{5} \leqslant \omega < \frac{29}{10}.\]
+因此结论 ④ 正确。
+再分析极大值点：
+正弦函数的极大值点满足 $\theta = 2k\pi + \dfrac{\pi}{2}$ ($k \in \mathbb{Z}$)。
+在区间 $\left(\dfrac{\pi}{5}, 2\pi\omega + \dfrac{\pi}{5}\right)$ 内，因为：
+$\dfrac{\pi}{5} < \dfrac{\pi}{2} < \dfrac{5\pi}{2} < \dfrac{9\pi}{2} = 4.5\pi < 5\pi \leqslant 2\pi\omega + \dfrac{\pi}{5} < 6\pi < \dfrac{13\pi}{2} = 6.5\pi$，
+故在 $(0, 2\pi)$ 内恰有 3 个极大值点（对应 $\theta = \dfrac{\pi}{2}, \dfrac{5\pi}{2}, \dfrac{9\pi}{2}$），结论 ① 正确。
+再分析极小值点：
+极小值点满足 $\theta = 2k\pi + \dfrac{3\pi}{2}$。区间内必然包含 $\dfrac{3\pi}{2}$ 与 $\dfrac{7\pi}{2}$；
+但第三个可能极小值点为 $\dfrac{11\pi}{2} = 5.5\pi$。
+由于右端点 $2\pi\omega + \dfrac{\pi}{5} \in [5\pi, 5.8\pi)$，当 $\omega > 2.65$ 时右端点超过 $5.5\pi$，极小值点达到 3 个；当 $\omega \leqslant 2.65$ 时为 2 个。因此极小值点不一定仅有 2 个，结论 ② 错误。
+最后考查区间 $\left(0, \dfrac{\pi}{10}\right)$ 的单调性：
+当 $x \in \left(0, \dfrac{\pi}{10}\right)$ 时，$\omega x + \dfrac{\pi}{5} \in \left(\dfrac{\pi}{5}, \dfrac{\omega\pi}{10} + \dfrac{\pi}{5}\right)$。
+\Needspace{5\baselineskip}
+因为 $\omega < \dfrac{29}{10} = 2.9$，所以右端点满足：
+\nopagebreak[4]
+\[\frac{\omega\pi}{10} + \frac{\pi}{5} < \frac{2.9\pi}{10} + \frac{2\pi}{10} = \frac{4.9\pi}{10} < \frac{\pi}{2}.\]
+正弦函数在 $\left(0, \dfrac{\pi}{2}\right)$ 上单调递增，故 $f(x)$ 在 $\left(0, \dfrac{\pi}{10}\right)$ 单调递增，结论 ③ 正确。
+综上，正确结论为 ①③④。
+故选 \textbf{D}。
+
+\gkanswer{答案：D}
+
+\par\medskip
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+已知 $\boldsymbol{a}, \boldsymbol{b}$ 为单位向量, 且 $\boldsymbol{a} \cdot \boldsymbol{b} = 0$, 若 $\boldsymbol{c} = 2\boldsymbol{a} - \sqrt{5}\boldsymbol{b}$, 则 $\cos\langle\boldsymbol{a}, \boldsymbol{c}\rangle =$\gkblank{}.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+因为 $\boldsymbol{a}, \boldsymbol{b}$ 为单位向量，且 $\boldsymbol{a} \cdot \boldsymbol{b} = 0$，所以：
+\nopagebreak[4]
+\[|\boldsymbol{a}| = 1, \quad |\boldsymbol{b}| = 1, \quad \boldsymbol{a} \cdot \boldsymbol{b} = 0.\]
+\Needspace{5\baselineskip}
+由 $\boldsymbol{c} = 2\boldsymbol{a} - \sqrt{5}\boldsymbol{b}$，得：
+\nopagebreak[4]
+\[\boldsymbol{a} \cdot \boldsymbol{c} = \boldsymbol{a} \cdot (2\boldsymbol{a} - \sqrt{5}\boldsymbol{b}) = 2|\boldsymbol{a}|^2 - \sqrt{5}(\boldsymbol{a} \cdot \boldsymbol{b}) = 2 \times 1 - 0 = 2.\]
+\nopagebreak[4]
+\[|\boldsymbol{c}|^2 = (2\boldsymbol{a} - \sqrt{5}\boldsymbol{b})^2 = 4|\boldsymbol{a}|^2 - 4\sqrt{5}(\boldsymbol{a} \cdot \boldsymbol{b}) + 5|\boldsymbol{b}|^2 = 4 + 0 + 5 = 9 \implies |\boldsymbol{c}| = 3.\]
+\Needspace{5\baselineskip}
+因此：
+\nopagebreak[4]
+\[\cos\langle\boldsymbol{a}, \boldsymbol{c}\rangle = \frac{\boldsymbol{a} \cdot \boldsymbol{c}}{|\boldsymbol{a}||\boldsymbol{c}|} = \frac{2}{1 \times 3} = \frac{2}{3}.\]
+故答案为 $\dfrac{2}{3}$。
+
+\gkanswer{答案：$\dfrac{2}{3}$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+记 $S_n$ 为等差数列 $\{a_n\}$ 的前 $n$ 项和, 若 $a_1 \neq 0$, $a_2 = 3a_1$, 则 $\dfrac{S_{10}}{S_5} =$\gkblank{}.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设等差数列 $\{a_n\}$ 的公差为 $d$。
+由 $a_2 = 3a_1$，得 $a_1 + d = 3a_1 \implies d = 2a_1$。
+\Needspace{5\baselineskip}
+则前 $n$ 项和为：
+\nopagebreak[4]
+\[S_n = na_1 + \frac{n(n-1)}{2} d = na_1 + \frac{n(n-1)}{2}(2a_1) = na_1 + n(n-1)a_1 = n^2 a_1.\]
+\Needspace{5\baselineskip}
+所以：
+\nopagebreak[4]
+\[S_{10} = 10^2 a_1 = 100a_1, \quad S_5 = 5^2 a_1 = 25a_1.\]
+\Needspace{5\baselineskip}
+因为 $a_1 \neq 0$，所以：
+\nopagebreak[4]
+\[\frac{S_{10}}{S_5} = \frac{100a_1}{25a_1} = 4.\]
+故答案为 $4$。
+
+\gkanswer{答案：$4$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+设 $F_1, F_2$ 为椭圆 $C: \dfrac{x^2}{36} + \dfrac{y^2}{20} = 1$ 的两个焦点, $M$ 为 $C$ 上一点且在第一象限. 若 $\triangle MF_1F_2$ 为等腰三角形, 则 $M$ 的坐标为\gkblank{}.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在椭圆 $C: \dfrac{x^2}{36} + \dfrac{y^2}{20} = 1$ 中，$a^2 = 36 \implies a = 6$，$b^2 = 20$，
+$c = \sqrt{a^2 - b^2} = \sqrt{36 - 20} = 4$。
+焦点为 $F_1(-4, 0), F_2(4, 0)$，焦距 $|F_1F_2| = 2c = 8$。
+由椭圆定义，对于椭圆上任意点 $M$，恒有 $|MF_1| + |MF_2| = 2a = 12$。
+设点 $M(x, y)$ 在第一象限，即 $x > 0, y > 0$。
+因为 $x > 0$，所以点 $M$ 到左焦点 $F_1$ 的距离严格大于到右焦点 $F_2$ 的距离，即 $|MF_1| > |MF_2|$。
+$\triangle MF_1F_2$ 为等腰三角形，有两种可能情形：
+\begin{itemize}
+\item 若 $|MF_1| = |MF_2|$，则点 $M$ 在线段 $F_1F_2$ 的垂直平分线（$y$ 轴）上，横坐标 $x = 0$，与点 $M$ 在第一象限矛盾；
+\item 若 $|MF_2| = |F_1F_2| = 8$，则 $|MF_1| = 12 - 8 = 4$，此时 $|MF_1| < |MF_2|$，与 $x > 0$ 矛盾；
+\item 若 $|MF_1| = |F_1F_2| = 8$，则 $|MF_2| = 12 - 8 = 4$。
+\end{itemize}
+\Needspace{5\baselineskip}
+由椭圆焦半径公式，对于右焦点 $F_2$：
+\nopagebreak[4]
+\[|MF_2| = a - ex = 6 - \frac{4}{6} x = 6 - \frac{2}{3} x.\]
+\Needspace{5\baselineskip}
+代入 $|MF_2| = 4$，解得：
+\nopagebreak[4]
+\[6 - \frac{2}{3} x = 4 \implies \frac{2}{3} x = 2 \implies x = 3.\]
+\Needspace{5\baselineskip}
+将 $x = 3$ 代入椭圆方程：
+\nopagebreak[4]
+\[\frac{3^2}{36} + \frac{y^2}{20} = 1 \implies \frac{1}{4} + \frac{y^2}{20} = 1 \implies \frac{y^2}{20} = \frac{3}{4} \implies y^2 = 15.\]
+因为点 $M$ 在第一象限，所以 $y = \sqrt{15}$。
+检验三角形三边长为 $8, 8, 4$，满足两边之和大于第三边，构成等腰三角形。
+故 $M$ 的坐标为 $(3, \sqrt{15})$。
+故答案为 $(3, \sqrt{15})$。
+
+\gkanswer{答案：$(3, \sqrt{15})$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+学生到工厂劳动实践, 利用 3D 打印技术制作模型. 如图, 该模型为长方体 $ABCD - A_1B_1C_1D_1$ 挖去四棱锥 $O - EFGH$ 后所得的几何体, 其中 $O$ 为长方体的中心, $E, F, G, H$ 分别为所在棱的中点, $AB = BC = 6\text{ cm}$, $AA_1 = 4\text{ cm}$, 3D 打印所用原料密度为 $0.9\text{ g/cm}^3$, 不考虑打印损耗, 制作该模型所需原料的质量为\gkblank{}$\text{g}$.
+\nopagebreak[4]
+\begin{center}\input{figures/q16.tikz}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+长方体 $ABCD - A_1B_1C_1D_1$ 的底面 $ABCD$ 为边长为 $6\text{ cm}$ 的正方形，高 $AA_1 = 4\text{ cm}$。
+\Needspace{5\baselineskip}
+长方体的体积为：
+\nopagebreak[4]
+\[V_{\text{\text{长方体}}} = 6 \times 6 \times 4 = 144\text{ cm}^3.\]
+由题意，挖去的四棱锥为 $O - EFGH$，$O$ 为长方体的中心，底面 $EFGH$ 的四个顶点分别位于右侧面矩形 $BCC_1B_1$ 的四条边中点。
+矩形 $BCC_1B_1$ 的长为 $BC = 6\text{ cm}$，高为 $BB_1 = 4\text{ cm}$，其面积为 $S_{\text{\text{矩形}}} = 6 \times 4 = 24\text{ cm}^2$。
+\Needspace{5\baselineskip}
+由顺次连接矩形四边中点所得四边形性质，底面四边形 $EFGH$ 为菱形，其面积为矩形面积的一半：
+\nopagebreak[4]
+\[S_{EFGH} = \frac{1}{2} \times 6 \times 4 = 12\text{ cm}^2.\]
+\Needspace{5\baselineskip}
+四棱锥的顶点 $O$ 为长方体中心，它到右侧面矩形 $BCC_1B_1$ 的距离即为四棱锥的高：
+\nopagebreak[4]
+\[h = \frac{1}{2} AB = \frac{1}{2} \times 6 = 3\text{ cm}.\]
+\Needspace{5\baselineskip}
+因此挖去的四棱锥 $O - EFGH$ 的体积为：
+\nopagebreak[4]
+\[V_{\text{\text{锥}}} = \frac{1}{3} S_{EFGH} \cdot h = \frac{1}{3} \times 12 \times 3 = 12\text{ cm}^3.\]
+\Needspace{5\baselineskip}
+所得几何体的体积为：
+\nopagebreak[4]
+\[V = V_{\text{\text{长方体}}} - V_{\text{\text{锥}}} = 144 - 12 = 132\text{ cm}^3.\]
+\Needspace{5\baselineskip}
+根据密度 $\rho = 0.9\text{ g/cm}^3$，制作该模型所需原料的质量为：
+\nopagebreak[4]
+\[m = \rho V = 0.9 \times 132 = 118.8\text{ g}.\]
+故答案为 $118.8$。
+
+\gkanswer{答案：$118.8$}
+
+\par\medskip
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}（12 分）：
+
+为了解甲、乙两种离子在小鼠体内的残留程度, 进行如下试验: 将 200 只小鼠随机分成 $A, B$ 两组, 每组 100 只, 其中 $A$ 组小鼠给服甲离子溶液, $B$ 组小鼠给服乙离子溶液. 每只小鼠给服的溶液体积相同、摩尔浓度相同. 经过一段时间后用某种科学方法测算出残留在小鼠体内离子的百分比. 根据试验数据分别得到如下直方图:
+\nopagebreak[4]
+\begin{center}\input{figures/q17.tikz}\end{center}
+\nopagebreak[4]
+记 $C$ 为事件: “乙离子残留在体内的百分比不低于 5.5”, 根据直方图得到 $P(C)$ 的估计值为 $0.70$.
+
+(1) 求乙离子残留百分比直方图中 $a, b$ 的值;  
+(2) 分别估计甲、乙离子残留百分比的平均值 (同一组中的数据用该组区间的中点值为代表).
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+试验测算甲、乙两组各 100 只小鼠体内的残留百分比，组距均为 1。
+
+\textbf{(1) 解析}
+由直方图可知，乙离子残留百分比不低于 5.5 的区间包含 $[5.5, 6.5)$、$[6.5, 7.5)$ 和 $[7.5, 8.5]$ 三组。
+因为组距为 1，对应组的频率等于高乘以组距。
+\Needspace{5\baselineskip}
+已知事件 $C$ 的概率估计值为 $P(C) = 0.70$，故：
+\nopagebreak[4]
+\[a \times 1 + 0.20 \times 1 + 0.15 \times 1 = 0.70 \implies a + 0.35 = 0.70 \implies a = 0.35.\]
+\Needspace{5\baselineskip}
+又因为乙离子残留百分比直方图中所有小矩形的面积之和为 1，即各组频率之和为 1：
+\nopagebreak[4]
+\[(0.05 + b + 0.15 + a + 0.20 + 0.15) \times 1 = 1.\]
+\Needspace{5\baselineskip}
+代入 $a = 0.35$：
+\nopagebreak[4]
+\[0.05 + b + 0.15 + 0.70 = 1 \implies b + 0.90 = 1 \implies b = 0.10.\]
+综上，$a = 0.35, b = 0.10$。
+
+\textbf{(2) 解析}
+以各区间的中点值作为代表值：
+甲离子各组区间中点值依次为：$2, 3, 4, 5, 6, 7$，对应频率依次为 $0.15, 0.20, 0.30, 0.20, 0.10, 0.05$。
+\Needspace{5\baselineskip}
+甲离子残留百分比的平均值估计值为：
+\nopagebreak[4]
+\[\bar{x}_{\text{\text{甲}}} = 2 \times 0.15 + 3 \times 0.20 + 4 \times 0.30 + 5 \times 0.20 + 6 \times 0.10 + 7 \times 0.05\]
+\nopagebreak[4]
+\[= 0.30 + 0.60 + 1.20 + 1.00 + 0.60 + 0.35 = 4.05.\]
+乙离子各组区间中点值依次为：$3, 4, 5, 6, 7, 8$，对应频率依次为 $0.05, 0.10, 0.15, 0.35, 0.20, 0.15$。
+\Needspace{5\baselineskip}
+乙离子残留百分比的平均值估计值为：
+\nopagebreak[4]
+\[\bar{x}_{\text{\text{乙}}} = 3 \times 0.05 + 4 \times 0.10 + 5 \times 0.15 + 6 \times 0.35 + 7 \times 0.20 + 8 \times 0.15\]
+\nopagebreak[4]
+\[= 0.15 + 0.40 + 0.75 + 2.10 + 1.40 + 1.20 = 6.\]
+因此，甲、乙离子残留百分比的平均值估计值分别为 $4.05$ 和 $6$。
+
+\gkanswer{答案（1）：$a = 0.35, b = 0.10$}
+
+\gkanswer{答案（2）：甲离子残留百分比的平均值估计值为 $4.05$，乙离子残留百分比的平均值估计值为 $6$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}（12 分）：
+
+$\triangle ABC$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$. 已知 $a \sin \dfrac{A+C}{2} = b \sin A$.
+
+(1) 求 $B$;  
+(2) 若 $\triangle ABC$ 为锐角三角形, 且 $c = 1$, 求 $\triangle ABC$ 面积的取值范围.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+在 $\triangle ABC$ 中，内角 $A, B, C$ 的对边分别为 $a, b, c$。
+
+\textbf{(1) 解析}
+因为 $A + B + C = \pi$，所以 $\dfrac{A+C}{2} = \dfrac{\pi - B}{2} = \dfrac{\pi}{2} - \dfrac{B}{2}$。
+从而 $\sin\dfrac{A+C}{2} = \cos\dfrac{B}{2}$。
+\Needspace{5\baselineskip}
+已知条件 $a \sin \dfrac{A+C}{2} = b \sin A$ 可化为：
+\nopagebreak[4]
+\[a \cos\frac{B}{2} = b \sin A.\]
+\Needspace{5\baselineskip}
+由正弦定理 $\dfrac{a}{\sin A} = \dfrac{b}{\sin B}$，得 $a = \dfrac{b \sin A}{\sin B}$。代入上式得：
+\nopagebreak[4]
+\[\frac{b \sin A}{\sin B} \cos\frac{B}{2} = b \sin A.\]
+\Needspace{5\baselineskip}
+因为在 $\triangle ABC$ 中，$b > 0, \sin A > 0$，两边同除以 $b \sin A$，得：
+\nopagebreak[4]
+\[\frac{\cos\frac{B}{2}}{\sin B} = 1 \implies \sin B = \cos\frac{B}{2}.\]
+\Needspace{5\baselineskip}
+由二倍角公式 $\sin B = 2\sin\dfrac{B}{2}\cos\dfrac{B}{2}$，得：
+\nopagebreak[4]
+\[2\sin\frac{B}{2}\cos\frac{B}{2} = \cos\frac{B}{2}.\]
+因为 $B \in (0, \pi)$，所以 $\dfrac{B}{2} \in \left(0, \dfrac{\pi}{2}\right)$，故 $\cos\dfrac{B}{2} > 0$。
+\Needspace{5\baselineskip}
+两边除以 $\cos\dfrac{B}{2}$，得：
+\nopagebreak[4]
+\[2\sin\frac{B}{2} = 1 \implies \sin\frac{B}{2} = \frac{1}{2}.\]
+所以 $\dfrac{B}{2} = \dfrac{\pi}{6} \implies B = \dfrac{\pi}{3}$。
+
+\textbf{(2) 解析}
+由 (1) 知 $B = \dfrac{\pi}{3}$，故 $A + C = \dfrac{2\pi}{3}$，即 $C = \dfrac{2\pi}{3} - A$。
+\Needspace{5\baselineskip}
+因为 $\triangle ABC$ 为锐角三角形，所以：
+\nopagebreak[4]
+\[0 < A < \frac{\pi}{2}, \quad 0 < C < \frac{\pi}{2} \implies 0 < \frac{2\pi}{3} - A < \frac{\pi}{2} \implies \frac{\pi}{6} < A < \frac{2\pi}{3}.\]
+综合得 $A$ 的取值范围为 $\left(\dfrac{\pi}{6}, \dfrac{\pi}{2}\right)$。
+\Needspace{5\baselineskip}
+由正弦定理 $\dfrac{a}{\sin A} = \dfrac{c}{\sin C}$ 及 $c = 1$，得：
+\nopagebreak[4]
+\[a = \frac{\sin A}{\sin C} = \frac{\sin A}{\sin\left(\frac{2\pi}{3} - A\right)}.\]
+\Needspace{5\baselineskip}
+$\triangle ABC$ 的面积为：
+\nopagebreak[4]
+\[S = \frac{1}{2}ac \sin B = \frac{1}{2} \cdot \frac{\sin A}{\sin\left(\frac{2\pi}{3} - A\right)} \cdot 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{4} \cdot \frac{\sin A}{\sin\left(\frac{2\pi}{3} - A\right)}.\]
+\Needspace{5\baselineskip}
+展开分母：
+\nopagebreak[4]
+\[\sin\left(\frac{2\pi}{3} - A\right) = \sin\frac{2\pi}{3}\cos A - \cos\frac{2\pi}{3}\sin A = \frac{\sqrt{3}}{2}\cos A + \frac{1}{2}\sin A.\]
+\Needspace{5\baselineskip}
+因为 $A \in \left(\dfrac{\pi}{6}, \dfrac{\pi}{2}\right)$，$\sin A > 0$，分子分母同除以 $\sin A$：
+\nopagebreak[4]
+\[\frac{\sin A}{\sin\left(\frac{2\pi}{3} - A\right)} = \frac{1}{\frac{\sqrt{3}}{2}\cot A + \frac{1}{2}}.\]
+当 $A \in \left(\dfrac{\pi}{6}, \dfrac{\pi}{2}\right)$ 时，$\cot A$ 单调递减，且 $\cot A \in (0, \sqrt{3})$。
+\Needspace{5\baselineskip}
+分母 $\dfrac{\sqrt{3}}{2}\cot A + \dfrac{1}{2}$ 随 $A$ 增大单调递减，其取值范围为：
+\nopagebreak[4]
+\[\left(\frac{\sqrt{3}}{2} \times 0 + \frac{1}{2}, \frac{\sqrt{3}}{2} \times \sqrt{3} + \frac{1}{2}\right) = \left(\frac{1}{2}, 2\right).\]
+因此倒数函数 $\dfrac{1}{\frac{\sqrt{3}}{2}\cot A + \frac{1}{2}}$ 单调递增，取值范围为 $\left(\dfrac{1}{2}, 2\right)$。
+\Needspace{5\baselineskip}
+代入面积公式：
+\nopagebreak[4]
+\[S = \frac{\sqrt{3}}{4} \cdot \frac{1}{\frac{\sqrt{3}}{2}\cot A + \frac{1}{2}} \in \left(\frac{\sqrt{3}}{4} \times \frac{1}{2}, \frac{\sqrt{3}}{4} \times 2\right) = \left(\frac{\sqrt{3}}{8}, \frac{\sqrt{3}}{2}\right).\]
+故 $\triangle ABC$ 面积的取值范围为 $\left(\dfrac{\sqrt{3}}{8}, \dfrac{\sqrt{3}}{2}\right)$。
+
+\gkanswer{答案（1）：$B = \dfrac{\pi}{3}$}
+
+\gkanswer{答案（2）：$\left(\dfrac{\sqrt{3}}{8}, \dfrac{\sqrt{3}}{2}\right)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}（12 分）：
+
+图 1 是由矩形 $ADEB$, $\text{Rt}\triangle ABC$ 和菱形 $BFGC$ 组成的一个平面图形, 其中 $AB = 1$, $BE = BF = 2$, $\angle FBC = 60^\circ$. 将其沿 $AB, BC$ 折起使得 $BE$ 与 $BF$ 重合, 连接 $DG$, 如图 2.
+\nopagebreak[4]
+\begin{center}\input{figures/q19.tikz}\end{center}
+\nopagebreak[4]
+(1) 证明: 图 2 中的 $A, C, G, D$ 四点共面, 且平面 $ABC \perp$ 平面 $BCGE$;  
+(2) 求图 2 中的二面角 $B - CG - A$ 的大小.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+图 1 中，矩形 $ADEB$，$AB = 1, BE = 2$；$\text{Rt}\triangle ABC$ 中，$\angle ABC = 90^\circ$；菱形 $BFGC$ 中，$BF = BC = 2, \angle FBC = 60^\circ$。
+折起后 $BE$ 与 $BF$ 重合为同一线段。
+
+\textbf{(1) 解析}
+在矩形 $ADEB$ 中，$AD \parallel BE$ 且 $AD = BE$。
+在菱形 $BFGC$ 中，$CG \parallel BF$ 且 $CG = BF$。
+折起后 $BE$ 与 $BF$ 重合，故 $AD \parallel BE$ 且 $CG \parallel BE$，从而 $AD \parallel CG$。
+又 $AD = BE = CG = 2$，四边形 $ADGC$ 有一组对边平行且相等，因此四边形 $ADGC$ 为平行四边形。
+故 $A, C, G, D$ 四点共面。
+在折起前，矩形 $ADEB$ 中 $AB \perp BE$；在图 2 中仍有 $AB \perp BE$。
+在 $\text{Rt}\triangle ABC$ 中，$\angle ABC = 90^\circ$，即 $AB \perp BC$。
+因为 $BE \subset$ 平面 $BCGE$，$BC \subset$ 平面 $BCGE$，且 $BE \cap BC = B$。
+所以 $AB \perp$ 平面 $BCGE$。
+又因为 $AB \subset$ 平面 $ABC$，
+所以平面 $ABC \perp$ 平面 $BCGE$。
+
+\textbf{(2) 解析}
+由 (1) 知 $AB \perp$ 平面 $BCGE$。
+以 $B$ 为坐标原点建立空间直角坐标系：
+设射线 $BC$ 为 $x$ 轴正方向，射线 $BA$ 为 $z$ 轴正方向。
+在平面 $BCGE$ 内，过 $B$ 作垂直于 $BC$ 的射线为 $y$ 轴正方向。
+因为 $AB = 1$，所以 $A(0, 0, 1)$。
+因为 $BC = 2$，所以 $C(2, 0, 0)$。
+\Needspace{5\baselineskip}
+在菱形 $BCGE$ 中，$BE = 2, \angle EBC = 60^\circ$，故点 $E$ 在平面 $BCGE$ 内的坐标为：
+\nopagebreak[4]
+\[x_E = 2\cos 60^\circ = 1, \quad y_E = 2\sin 60^\circ = \sqrt{3}, \quad z_E = 0.\]
+即 $E(1, \sqrt{3}, 0)$。
+\Needspace{5\baselineskip}
+因为 $\vec{CG} = \vec{BE} = (1, \sqrt{3}, 0)$，所以点 $G$ 的坐标为：
+\nopagebreak[4]
+\[G = C + \vec{BE} = (2 + 1, 0 + \sqrt{3}, 0) = (3, \sqrt{3}, 0).\]
+\Needspace{5\baselineskip}
+半平面 $BCG$ 即平面 $BCGE$，$z$ 轴垂直于该平面，故平面 $BCG$ 的法向量可取为：
+\nopagebreak[4]
+\[\boldsymbol{n}_1 = (0, 0, 1).\]
+设平面 $ACG$ 的法向量为 $\boldsymbol{n}_2 = (x, y, z)$。
+\Needspace{5\baselineskip}
+由各点坐标得：
+\nopagebreak[4]
+\[\vec{CA} = A - C = (-2, 0, 1), \quad \vec{CG} = G - C = (1, \sqrt{3}, 0).\]
+\Needspace{5\baselineskip}
+法向量满足：
+\nopagebreak[4]
+\[\begin{cases} \boldsymbol{n}_2 \cdot \vec{CG} = x + \sqrt{3}y = 0, \\ \boldsymbol{n}_2 \cdot \vec{CA} = -2x + z = 0. \end{cases}\]
+取 $y = 1$，则 $x = -\sqrt{3}$，$z = 2x = -2\sqrt{3}$。
+故可取 $\boldsymbol{n}_2 = (-\sqrt{3}, 1, -2\sqrt{3})$。
+模长为 $|\boldsymbol{n}_2| = \sqrt{(-\sqrt{3})^2 + 1^2 + (-2\sqrt{3})^2} = \sqrt{3 + 1 + 12} = 4$。
+\Needspace{5\baselineskip}
+计算两法向量夹角余弦值：
+\nopagebreak[4]
+\[\cos\langle\boldsymbol{n}_1, \boldsymbol{n}_2\rangle = \frac{\boldsymbol{n}_1 \cdot \boldsymbol{n}_2}{|\boldsymbol{n}_1||\boldsymbol{n}_2|} = \frac{-2\sqrt{3}}{1 \times 4} = -\frac{\sqrt{3}}{2}.\]
+\Needspace{5\baselineskip}
+由图 2 几何位置可知，二面角 $B - CG - A$ 为锐角，设其大小为 $\theta$，则：
+\nopagebreak[4]
+\[\cos\theta = |\cos\langle\boldsymbol{n}_1, \boldsymbol{n}_2\rangle| = \frac{\sqrt{3}}{2}.\]
+所以 $\theta = 30^\circ$ (即 $\dfrac{\pi}{6}$)。
+故二面角 $B - CG - A$ 的大小为 $30^\circ$ (或 $\dfrac{\pi}{6}$)。
+
+\gkanswer{答案（1）：证明见解析}
+
+\gkanswer{答案（2）：$30^\circ$（或 $\dfrac{\pi}{6}$）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}（12 分）：
+
+已知函数 $f(x) = 2x^3 - ax^2 + b$.
+
+(1) 讨论 $f(x)$ 的单调性;  
+(2) 是否存在 $a, b$, 使得 $f(x)$ 在区间 $[0, 1]$ 的最小值为 $-1$ 且最大值为 $1$? 若存在, 求出 $a, b$ 的所有值; 若不存在, 说明理由.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+已知函数 $f(x) = 2x^3 - ax^2 + b$。
+
+\textbf{(1) 解析}
+\Needspace{5\baselineskip}
+求导得：
+\nopagebreak[4]
+\[f^\prime(x) = 6x^2 - 2ax = 2x(3x - a).\]
+令 $f^\prime(x) = 0$，得驻点 $x_1 = 0, x_2 = \dfrac{a}{3}$。
+\begin{itemize}
+\item 若 $a = 0$，则 $f^\prime(x) = 6x^2 \geqslant 0$ 恒成立，仅在 $x = 0$ 时导数为 0，故 $f(x)$ 在 $\mathbb{R}$ 上单调递增；
+\item 若 $a > 0$，则 $\dfrac{a}{3} > 0$。
+\end{itemize}
+  当 $x \in (-\infty, 0)$ 和 $\left(\dfrac{a}{3}, +\infty\right)$ 时，$f^\prime(x) > 0$；当 $x \in \left(0, \dfrac{a}{3}\right)$ 时，$f^\prime(x) < 0$。
+  故 $f(x)$ 在 $(-\infty, 0)$ 和 $\left(\dfrac{a}{3}, +\infty\right)$ 上单调递增，在 $\left(0, \dfrac{a}{3}\right)$ 上单调递减；
+\begin{itemize}
+\item 若 $a < 0$，则 $\dfrac{a}{3} < 0$。
+\end{itemize}
+  当 $x \in \left(-\infty, \dfrac{a}{3}\right)$ 和 $(0, +\infty)$ 时，$f^\prime(x) > 0$；当 $x \in \left(\dfrac{a}{3}, 0\right)$ 时，$f^\prime(x) < 0$。
+  故 $f(x)$ 在 $\left(-\infty, \dfrac{a}{3}\right)$ 和 $(0, +\infty)$ 上单调递增，在 $\left(\dfrac{a}{3}, 0\right)$ 上单调递减。
+
+\textbf{(2) 解析}
+假设存在实数 $a, b$，使得 $f(x)$ 在区间 $[0, 1]$ 上的最小值为 $-1$，最大值为 $1$。
+考查区间 $[0, 1]$ 上的导数符号与极值分布：
+\begin{itemize}
+\item \textbf{情形 1：$\dfrac{a}{3} \leqslant 0$，即 $a \leqslant 0$}。
+\end{itemize}
+  此时在区间 $(0, 1)$ 上 $f^\prime(x) > 0$ 恒成立，函数 $f(x)$ 在 $[0, 1]$ 上单调递增。
+  最小值为 $f(0) = b = -1$；
+  最大值为 $f(1) = 2 - a + b = 1 \implies 2 - a - 1 = 1 \implies a = 0$。
+  经验证 $a = 0 \leqslant 0$，满足条件。此时 $a = 0, b = -1$。
+\begin{itemize}
+\item \textbf{情形 2：$\dfrac{a}{3} \geqslant 1$，即 $a \geqslant 3$}。
+\end{itemize}
+  此时在区间 $(0, 1)$ 上 $f^\prime(x) < 0$ 恒成立，函数 $f(x)$ 在 $[0, 1]$ 上单调递减。
+  最大值为 $f(0) = b = 1$；
+  最小值为 $f(1) = 2 - a + b = -1 \implies 2 - a + 1 = -1 \implies a = 4$。
+  经验证 $a = 4 \geqslant 3$，满足条件。此时 $a = 4, b = 1$。
+\begin{itemize}
+\item \textbf{情形 3：$0 < \dfrac{a}{3} < 1$，即 $0 < a < 3$}。
+\end{itemize}
+  此时 $f(x)$ 在 $\left[0, \dfrac{a}{3}\right]$ 上单调递减，在 $\left[\dfrac{a}{3}, 1\right]$ 上单调递增。
+\Needspace{5\baselineskip}
+  函数在 $x = \dfrac{a}{3}$ 处取得极小值，也是 $[0, 1]$ 上的最小值：
+\nopagebreak[4]
+\[f\left(\frac{a}{3}\right) = 2\left(\frac{a}{3}\right)^3 - a\left(\frac{a}{3}\right)^2 + b = b - \frac{a^3}{27} = -1 \implies b = \frac{a^3}{27} - 1.\]
+  最大值必在端点处取得，即 $\max\{f(0), f(1)\} = 1$。
+  因为 $0 < a < 3$，所以 $0 < \dfrac{a^3}{27} < 1$，进而 $-1 < b < 0$。
+\Needspace{5\baselineskip}
+  因此 $f(0) = b < 0$，最大值只能在 $x = 1$ 处取得：
+\nopagebreak[4]
+\[f(1) = 2 - a + b = 1 \implies b = a - 1.\]
+\Needspace{5\baselineskip}
+  联立得：
+\nopagebreak[4]
+\[\frac{a^3}{27} - 1 = a - 1 \implies \frac{a^3}{27} = a.\]
+  因为 $a > 0$，两边除以 $a$ 得 $a^2 = 27 \implies a = 3\sqrt{3}$。
+  但 $3\sqrt{3} > 3$，与假设 $0 < a < 3$ 矛盾，此情形无解。
+综上所述，存在实数 $a, b$ 满足题意，其值为 $a = 0, b = -1$ 或 $a = 4, b = 1$。
+
+\gkanswer{答案（1）：若 $a \leqslant 0$，$f(x)$ 在 $\mathbb{R}$ 上单调递增；若 $a > 0$，$f(x)$ 在 $(-\infty, 0)$ 和 $\left(\dfrac{a}{3}, +\infty\right)$ 单调递增，在 $\left(0, \dfrac{a}{3}\right)$ 单调递减}
+
+\gkanswer{答案（2）：存在，$a = 0, b = -1$ 或 $a = 4, b = 1$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}（12 分）：
+
+已知曲线 $C: y = \dfrac{x^2}{2}$, $D$ 为直线 $y = -\dfrac{1}{2}$ 上的动点, 过 $D$ 作 $C$ 的两条切线, 切点分别为 $A, B$.
+
+(1) 证明: 直线 $AB$ 过定点;  
+(2) 若以 $E\left(0, \dfrac{5}{2}\right)$ 为圆心的圆与直线 $AB$ 相切, 且切点为线段 $AB$ 的中点, 求四边形 $ADBE$ 的面积.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+曲线 $C: y = \dfrac{x^2}{2}$，动点 $D\left(t, -\dfrac{1}{2}\right)$。
+
+\textbf{(1) 解析}
+对 $y = \dfrac{x^2}{2}$ 求导得 $y^\prime = x$。
+设过点 $D$ 的切线的切点为 $P\left(x_0, \dfrac{x_0^2}{2}\right)$。
+\Needspace{5\baselineskip}
+切线方程为：
+\nopagebreak[4]
+\[y - \frac{x_0^2}{2} = x_0(x - x_0) \implies y = x_0 x - \frac{x_0^2}{2}.\]
+\Needspace{5\baselineskip}
+因为切线经过动点 $D\left(t, -\dfrac{1}{2}\right)$，代入得：
+\nopagebreak[4]
+\[-\frac{1}{2} = x_0 t - \frac{x_0^2}{2} \implies x_0^2 - 2tx_0 - 1 = 0.\]
+设切点分别为 $A\left(x_1, \dfrac{x_1^2}{2}\right)$ 与 $B\left(x_2, \dfrac{x_2^2}{2}\right)$，则 $x_1, x_2$ 为方程 $x_0^2 - 2tx_0 - 1 = 0$ 的两根。
+\Needspace{5\baselineskip}
+由根与系数的关系：
+\nopagebreak[4]
+\[x_1 + x_2 = 2t, \quad x_1 x_2 = -1.\]
+\Needspace{5\baselineskip}
+直线 $AB$ 的斜率为：
+\nopagebreak[4]
+\[k_{AB} = \frac{\frac{x_1^2}{2} - \frac{x_2^2}{2}}{x_1 - x_2} = \frac{x_1 + x_2}{2} = t.\]
+\Needspace{5\baselineskip}
+直线 $AB$ 的方程为：
+\nopagebreak[4]
+\[y - \frac{x_1^2}{2} = t(x - x_1) \implies y = tx - tx_1 + \frac{x_1^2}{2}.\]
+\Needspace{5\baselineskip}
+因为 $x_1^2 - 2tx_1 - 1 = 0 \implies \dfrac{x_1^2}{2} - tx_1 = \dfrac{1}{2}$，代入得直线 $AB$ 的方程为：
+\nopagebreak[4]
+\[y = tx + \frac{1}{2}.\]
+令 $x = 0$，得 $y = \dfrac{1}{2}$，该值与参数 $t$ 无关。
+因此，直线 $AB$ 恒过定点 $\left(0, \dfrac{1}{2}\right)$。
+
+\textbf{(2) 解析}
+设线段 $AB$ 的中点为 $M$。
+由韦达定理，$x_M = \dfrac{x_1 + x_2}{2} = t$。
+将 $x_M = t$ 代入直线 $AB$ 的方程 $y = tx + \dfrac{1}{2}$，得 $y_M = t^2 + \dfrac{1}{2}$。
+故中点坐标为 $M\left(t, t^2 + \dfrac{1}{2}\right)$。
+已知以 $E\left(0, \dfrac{5}{2}\right)$ 为圆心的圆与直线 $AB$ 相切于切点 $M$，故半径 $EM \perp AB$。
+向量 $\vec{EM} = \left(t - 0, t^2 + \dfrac{1}{2} - \dfrac{5}{2}\right) = (t, t^2 - 2)$。
+直线 $AB$ 的方向向量为 $(1, t)$。
+\Needspace{5\baselineskip}
+由 $\vec{EM} \perp AB$，数量积为 0：
+\nopagebreak[4]
+\[t \times 1 + (t^2 - 2) \times t = 0 \implies t(t^2 - 1) = 0.\]
+解得 $t = 0$ 或 $t = \pm 1$。
+\begin{itemize}
+\item \textbf{若 $t = 0$}：
+\end{itemize}
+  此时点 $D\left(0, -\dfrac{1}{2}\right)$，直线 $AB$ 为水平线 $y = \dfrac{1}{2}$，中点 $M\left(0, \dfrac{1}{2}\right)$。
+  方程 $x_0^2 - 1 = 0$ 的两根为 $x = \pm 1$，切点为 $A\left(-1, \dfrac{1}{2}\right), B\left(1, \dfrac{1}{2}\right)$，线段长 $|AB| = 2$。
+  线段 $DE$ 在 $y$ 轴上，长度为 $|DE| = \dfrac{5}{2} - \left(-\dfrac{1}{2}\right) = 3$。
+\Needspace{5\baselineskip}
+  因为 $AB \perp DE$ 且对角线相交于 $M$，四边形 $ADBE$ 的面积为：
+\nopagebreak[4]
+\[S = \frac{1}{2} |AB| \cdot |DE| = \frac{1}{2} \times 2 \times 3 = 3.\]
+\begin{itemize}
+\item \textbf{若 $t = \pm 1$}：
+\end{itemize}
+\Needspace{5\baselineskip}
+  不妨设 $t^2 = 1$。由韦达定理：
+\nopagebreak[4]
+\[|x_1 - x_2| = \sqrt{(x_1 + x_2)^2 - 4x_1 x_2} = \sqrt{4t^2 + 4} = \sqrt{8} = 2\sqrt{2}.\]
+  弦长 $|AB| = \sqrt{1 + t^2} |x_1 - x_2| = \sqrt{2} \times 2\sqrt{2} = 4$。
+\Needspace{5\baselineskip}
+  点 $E$ 到直线 $AB$ 的距离为线段 $|EM|$ 的长度：
+\nopagebreak[4]
+\[|EM| = \sqrt{t^2 + (t^2 - 2)^2} = \sqrt{1 + (1 - 2)^2} = \sqrt{2}.\]
+\Needspace{5\baselineskip}
+  点 $D\left(t, -\dfrac{1}{2}\right)$ 到直线 $tx - y + \dfrac{1}{2} = 0$ 的距离为：
+\nopagebreak[4]
+\[d_D = \frac{|t^2 - (-1/2) + 1/2|}{\sqrt{t^2 + 1}} = \frac{t^2 + 1}{\sqrt{t^2 + 1}} = \sqrt{t^2 + 1} = \sqrt{2}.\]
+\Needspace{5\baselineskip}
+  四边形 $ADBE$ 分割为 $\triangle DAB$ 与 $\triangle EAB$，有公共底边 $AB$：
+\nopagebreak[4]
+\[S = \frac{1}{2} |AB| (d_D + |EM|) = \frac{1}{2} \times 4 \times (\sqrt{2} + \sqrt{2}) = 4\sqrt{2}.\]
+综上所述，四边形 $ADBE$ 的面积为 $3$ 或 $4\sqrt{2}$。
+
+\gkanswer{答案（1）：证明见解析，定点坐标为 $\left(0, \dfrac{1}{2}\right)$}
+
+\gkanswer{答案（2）：$3$ 或 $4\sqrt{2}$}
+
+\par\medskip
+
+\end{answer}
+\begin{answer}
+\gksolhead{22}{}
+
+\textbf{题目}[选修 4—4：坐标系与参数方程]（10 分）：
+
+如图, 在极坐标系 $Ox$ 中, $A(2, 0)$, $B\left(\sqrt{2}, \dfrac{\pi}{4}\right)$, $C\left(\sqrt{2}, \dfrac{3\pi}{4}\right)$, $D(2, \pi)$, 弧 $\wideparen{AB}, \wideparen{BC}, \wideparen{CD}$ 所在圆的圆心分别是 $(1, 0)$, $\left(1, \dfrac{\pi}{2}\right)$, $(1, \pi)$, 曲线 $M_1$ 是弧 $\wideparen{AB}$, 曲线 $M_2$ 是弧 $\wideparen{BC}$, 曲线 $M_3$ 是弧 $\wideparen{CD}$.
+\nopagebreak[4]
+\begin{center}\input{figures/q22.tikz}\end{center}
+\nopagebreak[4]
+(1) 分别写出 $M_1, M_2, M_3$ 的极坐标方程;  
+(2) 曲线 $M$ 由 $M_1, M_2, M_3$ 构成, 若点 $P$ 在 $M$ 上, 且 $|OP| = \sqrt{3}$, 求 $P$ 的极坐标.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+极坐标系 $Ox$ 中，$A(2, 0)$, $B\left(\sqrt{2}, \dfrac{\pi}{4}\right)$, $C\left(\sqrt{2}, \dfrac{3\pi}{4}\right)$, $D(2, \pi)$。
+
+\textbf{(1) 解析}
+\begin{itemize}
+\item 弧 $\wideparen{AB}$ 所在圆的圆心极坐标为 $(1, 0)$，直角坐标为 $(1, 0)$。
+\end{itemize}
+  圆过极点 $O(0, 0)$ 及点 $A(2, 0)$，半径为 $R = 1$。
+  圆的极坐标方程为 $\rho = 2\cos\theta$。
+  弧 $\wideparen{AB}$ 从点 $A(\theta = 0)$ 到点 $B\left(\theta = \dfrac{\pi}{4}\right)$。
+\Needspace{5\baselineskip}
+  故曲线 $M_1$ 的极坐标方程为：
+\nopagebreak[4]
+\[\rho = 2\cos\theta \quad \left(0 \leqslant \theta \leqslant \frac{\pi}{4}\right).\]
+\begin{itemize}
+\item 弧 $\wideparen{BC}$ 所在圆的圆心极坐标为 $\left(1, \dfrac{\pi}{2}\right)$，直角坐标为 $(0, 1)$。
+\end{itemize}
+  圆过点 $B(1, 1)$、点 $C(-1, 1)$ 及极点 $O(0, 0)$，半径为 $R = 1$。
+  圆的极坐标方程为 $\rho = 2\sin\theta$。
+  弧 $\wideparen{BC}$ 从点 $B\left(\theta = \dfrac{\pi}{4}\right)$ 到点 $C\left(\theta = \dfrac{3\pi}{4}\right)$。
+\Needspace{5\baselineskip}
+  故曲线 $M_2$ 的极坐标方程为：
+\nopagebreak[4]
+\[\rho = 2\sin\theta \quad \left(\frac{\pi}{4} \leqslant \theta \leqslant \frac{3\pi}{4}\right).\]
+\begin{itemize}
+\item 弧 $\wideparen{CD}$ 所在圆的圆心极坐标为 $(1, \pi)$，直角坐标为 $(-1, 0)$。
+\end{itemize}
+  圆过极点 $O(0, 0)$ 及点 $D(-2, 0)$，半径为 $R = 1$。
+  圆的极坐标方程为 $\rho = -2\cos\theta$。
+  弧 $\wideparen{CD}$ 从点 $C\left(\theta = \dfrac{3\pi}{4}\right)$ 到点 $D(\theta = \pi)$。
+\Needspace{5\baselineskip}
+  故曲线 $M_3$ 的极坐标方程为：
+\nopagebreak[4]
+\[\rho = -2\cos\theta \quad \left(\frac{3\pi}{4} \leqslant \theta \leqslant \pi\right).\]
+
+\textbf{(2) 解析}
+由点 $P$ 在曲线 $M$ 上，且 $|OP| = \rho = \sqrt{3}$：
+\begin{itemize}
+\item 若点 $P$ 在曲线 $M_1$ 上，则 $2\cos\theta = \sqrt{3} \implies \cos\theta = \dfrac{\sqrt{3}}{2}$。
+\end{itemize}
+  因为 $0 \leqslant \theta \leqslant \dfrac{\pi}{4}$，所以 $\theta = \dfrac{\pi}{6}$。
+  此时点 $P$ 的极坐标为 $\left(\sqrt{3}, \dfrac{\pi}{6}\right)$；
+\begin{itemize}
+\item 若点 $P$ 在曲线 $M_2$ 上，则 $2\sin\theta = \sqrt{3} \implies \sin\theta = \dfrac{\sqrt{3}}{2}$。
+\end{itemize}
+  因为 $\dfrac{\pi}{4} \leqslant \theta \leqslant \dfrac{3\pi}{4}$，解得 $\theta = \dfrac{\pi}{3}$ 或 $\theta = \dfrac{2\pi}{3}$。
+  此时点 $P$ 的极坐标为 $\left(\sqrt{3}, \dfrac{\pi}{3}\right)$ 或 $\left(\sqrt{3}, \dfrac{2\pi}{3}\right)$；
+\begin{itemize}
+\item 若点 $P$ 在曲线 $M_3$ 上，则 $-2\cos\theta = \sqrt{3} \implies \cos\theta = -\dfrac{\sqrt{3}}{2}$。
+\end{itemize}
+  因为 $\dfrac{3\pi}{4} \leqslant \theta \leqslant \pi$，所以 $\theta = \dfrac{5\pi}{6}$。
+  此时点 $P$ 的极坐标为 $\left(\sqrt{3}, \dfrac{5\pi}{6}\right)$。
+综上所述，点 $P$ 的极坐标为 $\left(\sqrt{3}, \dfrac{\pi}{6}\right)$，$\left(\sqrt{3}, \dfrac{\pi}{3}\right)$，$\left(\sqrt{3}, \dfrac{2\pi}{3}\right)$，$\left(\sqrt{3}, \dfrac{5\pi}{6}\right)$。
+
+\gkanswer{答案（1）：$M_1: \rho = 2\cos\theta\ (0 \leqslant \theta \leqslant \dfrac{\pi}{4})$，$M_2: \rho = 2\sin\theta\ (\dfrac{\pi}{4} \leqslant \theta \leqslant \dfrac{3\pi}{4})$，$M_3: \rho = -2\cos\theta\ (\dfrac{3\pi}{4} \leqslant \theta \leqslant \pi)$}
+
+\gkanswer{答案（2）：$\left(\sqrt{3}, \dfrac{\pi}{6}\right)$，$\left(\sqrt{3}, \dfrac{\pi}{3}\right)$，$\left(\sqrt{3}, \dfrac{2\pi}{3}\right)$，$\left(\sqrt{3}, \dfrac{5\pi}{6}\right)$}
+
+\end{answer}
+\begin{answer}
+\gksolhead{23}{}
+
+\textbf{题目}[选修 4—5：不等式选讲]（10 分）：
+
+设 $x, y, z \in \mathbb{R}$, 且 $x + y + z = 1$.
+
+(1) 求 $(x - 1)^2 + (y + 1)^2 + (z + 1)^2$ 的最小值;  
+(2) 若 $(x - 2)^2 + (y - 1)^2 + (z - a)^2 \geqslant \dfrac{1}{3}$ 成立, 证明: $a \leqslant -3$ 或 $a \geqslant -1$.
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+已知实数 $x, y, z \in \mathbb{R}$，且 $x + y + z = 1$。
+
+\textbf{(1) 解析}
+\Needspace{5\baselineskip}
+由柯西不等式：
+\nopagebreak[4]
+\[[(x - 1)^2 + (y + 1)^2 + (z + 1)^2](1^2 + 1^2 + 1^2) \geqslant [(x - 1) + (y + 1) + (z + 1)]^2.\]
+\Needspace{5\baselineskip}
+因为 $x + y + z = 1$，所以：
+\nopagebreak[4]
+\[(x - 1) + (y + 1) + (z + 1) = x + y + z + 1 = 1 + 1 = 2.\]
+\Needspace{5\baselineskip}
+代入得：
+\nopagebreak[4]
+\[3[(x - 1)^2 + (y + 1)^2 + (z + 1)^2] \geqslant 2^2 = 4 \implies (x - 1)^2 + (y + 1)^2 + (z + 1)^2 \geqslant \frac{4}{3}.\]
+当且仅当 $x - 1 = y + 1 = z + 1 = \dfrac{2}{3}$，即 $x = \dfrac{5}{3}, y = -\dfrac{1}{3}, z = -\dfrac{1}{3}$ 时，等号成立。
+故 $(x - 1)^2 + (y + 1)^2 + (z + 1)^2$ 的最小值为 $\dfrac{4}{3}$。
+
+\textbf{(2) 证明}
+\Needspace{5\baselineskip}
+同理，由柯西不等式：
+\nopagebreak[4]
+\[[(x - 2)^2 + (y - 1)^2 + (z - a)^2](1^2 + 1^2 + 1^2) \geqslant [(x - 2) + (y - 1) + (z - a)]^2.\]
+\Needspace{5\baselineskip}
+其中：
+\nopagebreak[4]
+\[(x - 2) + (y - 1) + (z - a) = (x + y + z) - (3 + a) = 1 - 3 - a = -(a + 2).\]
+\Needspace{5\baselineskip}
+所以：
+\nopagebreak[4]
+\[3[(x - 2)^2 + (y - 1)^2 + (z - a)^2] \geqslant (a + 2)^2 \implies (x - 2)^2 + (y - 1)^2 + (z - a)^2 \geqslant \frac{(a + 2)^2}{3}.\]
+当且仅当 $x - 2 = y - 1 = z - a = -\dfrac{a+2}{3}$ 时等号成立，即其最小值为 $\dfrac{(a+2)^2}{3}$。
+\Needspace{5\baselineskip}
+由题设 $(x - 2)^2 + (y - 1)^2 + (z - a)^2 \geqslant \dfrac{1}{3}$ 恒成立，等价于其最小值不小于 $\dfrac{1}{3}$：
+\nopagebreak[4]
+\[\frac{(a + 2)^2}{3} \geqslant \frac{1}{3} \implies (a + 2)^2 \geqslant 1.\]
+\Needspace{5\baselineskip}
+解得：
+\nopagebreak[4]
+\[|a + 2| \geqslant 1 \implies a + 2 \geqslant 1 \text{ \text{或} } a + 2 \leqslant -1.\]
+即 $a \geqslant -1$ 或 $a \leqslant -3$。
+证毕。
+
+\gkanswer{答案（1）：$\dfrac{4}{3}$}
+
+\gkanswer{答案（2）：证明见解析}
+
+\end{answer}

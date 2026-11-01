@@ -1,0 +1,51 @@
+\begin{tikzpicture}[>=latex, scale=0.7]
+  % (A)
+  \begin{scope}[shift={(0,0)}]
+    \draw[->] (-2.2,0) -- (2.5,0) node[below] {$x$};
+    \draw[->] (0,-2.2) -- (0,2.5) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[dotted] (1.33,0) -- (1.33,1.8) -- (0,1.8);
+    \node[below] at (1.33,0) {\scriptsize $4$};
+    \node[left] at (0,1.8) {\scriptsize $8$};
+    \draw[thick, domain=-1.5:1.5, samples=50] plot (\x, {0.6*\x^3});
+    \node[below] at (0,-2.3) {(A)};
+  \end{scope}
+
+  % (B) 正解
+  \begin{scope}[shift={(5.5,0)}]
+    \draw[->] (-2.2,0) -- (2.5,0) node[below] {$x$};
+    \draw[->] (0,-2.2) -- (0,2.5) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[dotted] (1.33,0) -- (1.33,1.8) -- (0,1.8);
+    \node[below] at (1.33,0) {\scriptsize $4$};
+    \node[left] at (0,1.8) {\scriptsize $8$};
+    \draw[thick, domain=0:2.2, samples=60] plot (\x, {1.8*((\x/1.33)^3)*exp(1 - (\x/1.33)^2)});
+    \draw[thick, domain=-2.2:0, samples=60] plot (\x, {-1.8*((-1*\x/1.33)^3)*exp(1 - (\x/1.33)^2)});
+    \node[below] at (0,-2.3) {(B)};
+  \end{scope}
+
+  % (C)
+  \begin{scope}[shift={(11,0)}]
+    \draw[->] (-2.2,0) -- (2.5,0) node[below] {$x$};
+    \draw[->] (0,-0.5) -- (0,2.5) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[dotted] (1.33,0) -- (1.33,1.8) -- (0,1.8);
+    \node[below] at (1.33,0) {\scriptsize $4$};
+    \node[left] at (0,1.8) {\scriptsize $8$};
+    \draw[thick, domain=-2.2:2.2, samples=60] plot (\x, {1.8*((\x/1.33)^2)*exp(1 - (\x/1.33)^2)});
+    \node[below] at (0,-2.3) {(C)};
+  \end{scope}
+
+  % (D)
+  \begin{scope}[shift={(16.5,0)}]
+    \draw[->] (-2.2,0) -- (2.5,0) node[below] {$x$};
+    \draw[->] (0,-2.2) -- (0,2.5) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[dotted] (1.33,0) -- (1.33,1.8) -- (0,1.8);
+    \node[below] at (1.33,0) {\scriptsize $4$};
+    \node[left] at (0,1.8) {\scriptsize $8$};
+    \draw[thick, domain=0:2.2, samples=60] plot (\x, {-1.8*((\x/1.33)^3)*exp(1 - (\x/1.33)^2)});
+    \draw[thick, domain=-2.2:0, samples=60] plot (\x, {1.8*((-1*\x/1.33)^3)*exp(1 - (\x/1.33)^2)});
+    \node[below] at (0,-2.3) {(D)};
+  \end{scope}
+\end{tikzpicture}
