@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2008 上海春季卷：登记、三角色 provenance 与项目生成（2026-11-02）
+
+- 注册 `gk-2008-spring-shanghai` / `phase1-b65`，manifest revision `5748→5749`；paper 绑定固定候选 source，但不认证发布者、版次、来源链或官方身份。Q8 的题面/印载答案冲突和正式答案缺失分别保留为 `ISSUE-1285`、`ISSUE-1286`，paper 状态为 `blocked`。
+- 三角色工作记录完成 22 题导入：题面角色对照 PDF 第 1–2 页；求解角色为只看题面的独立盲解，答案 Q1–7、Q9–22 记 D，Q8 记 U；第三角色按题面复核盲解，Q8 `conflict_status=unresolved`。哈希均由工具从当前规范题面、答案及固定 source 现场计算；角色不相互冒充。
+- 确定性生成 22 题 TeX、简答、解析、印刷四版壳及 `含解析`；规范解析正文经 `solution_sources extract-batch` 标准化。Q8 仍明示 U，`official_answer=null`，未将候选副本答案定为官方答案。
+- 验证：provenance dry-run/import 与 `check-batch`、`source_manifest validate`、issues 校验、`solution_sources check-batch`（22 题）、`generate_projects` / `make_short_answers` / `make_editions` currentness、`manifest.csv --check`（775 行）、全库 `report.py check --all`、`git diff --check` 均通过；全库报告渲染后六个投影一致。未运行全量测试或正式 PDF 构建。报告渲染/检查耗时较长，外部模型和 API 成本不可见。
+- 下一步：先提交本阶段；再执行本卷四版正式构建、检查构建回执和全部页面视觉质量并登记结果。Q8 的来源/答案冲突继续阻断卷级完成；本阶段不代表来源认证、整卷验收或语料库完成。
+
 ### 2008 上海春季卷候选：固定来源接收（2026-11-02）
 
 - 固定 source `src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e`，路径 `春季高考/2008/2008春季上海.pdf`；SHA-256 `11b8987221585bfaf21fe3c7785852470a3f50de6ebf91235bac71fecbd1dcfe`、Git blob `5c86ee264295233737ae6d6e8b82cdf7aca5d2d0` 与 manifest 一致。4 页扫描件已逐页目视检查，题签显示上海春季招生考试，另载期刊参考答案与推导。

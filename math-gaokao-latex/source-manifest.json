@@ -2040,6 +2040,14 @@
         "gk-2006-regular-sichuan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b65",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-spring-shanghai"
+      ],
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -2049,7 +2057,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "071ee2fa-427d-4cbd-91a4-1cb5cd3cc5fc",
+  "last_transaction_id": "08100a7e-72b2-4fae-9ece-491046ae8407",
   "papers": [
     {
       "blocked_from": null,
@@ -27120,9 +27128,80 @@
       "title": "2006 年·四川卷·理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_春季上海卷/figures/q08.tikz.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_春季上海卷/figures/q11.tikz.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_春季上海卷/figures/q20.tikz.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2008_spring_shanghai",
+        "id": "gk-2008-spring-shanghai",
+        "note": "固定内部候选 PDF source ID src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e，SHA-256 11b8987221585bfaf21fe3c7785852470a3f50de6ebf91235bac71fecbd1dcfe，4 页；题面为 PDF 第1–2页，副本印载参考答案为第3–4页。固定输入只识别本库工作字节，不认证出版者、版次、来源链或官方身份；official_answer=null。Q8题面‘凹多面体’与副本印载体积符号冲突，独立推导按题面得1−√2/6，答案保持U并阻断整卷完成。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": [
+          3,
+          4
+        ],
+        "paper": "春季上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "春季高考",
+        "variant": "春季上海"
+      },
+      "issue_ids": [
+        "ISSUE-1285",
+        "ISSUE-1286"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-spring-shanghai",
+      "production_state": "blocked",
+      "project_dir": "2008_春季上海卷",
+      "question_count": 22,
+      "resume_action": "取得可追溯同版原件或可靠正式勘误，核定‘凹多面体’题面与印载答案符号的冲突；此前保留答案 U 与两种证据并列，不改题面、不将副本答案称官方答案，并保持整卷完成阻断。",
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_春季上海_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_春季上海_含解析.md",
+        "questions": "2008/2008_数学真题_春季上海_试题.md",
+        "solution_body": "2008/2008_数学真题_春季上海_解析正文.md"
+      },
+      "source_ids": [
+        "src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e"
+      ],
+      "title": "2008 年·春季上海卷",
+      "track": "none",
+      "year": 2008
     }
   ],
-  "revision": 5747,
+  "revision": 5749,
   "schema_version": 1,
   "sources": [
     {
@@ -27667,8 +27746,8 @@
       "exam_type": "spring",
       "git_blob_oid": "5c86ee264295233737ae6d6e8b82cdf7aca5d2d0",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-spring-shanghai",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008春季上海.pdf",
       "regions": [],
       "source_id": "src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e",

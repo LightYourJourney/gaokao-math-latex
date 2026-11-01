@@ -21471,3 +21471,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1285
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF SHA-256 11b8987221585bfaf21fe3c7785852470a3f50de6ebf91235bac71fecbd1dcfe 的第 1 页（印刷页 2-35）第 8 题题面明确写‘凹多面体’，按其展开图作向内凹入的方锥腔体积计算得到 1−√2/6；同一副本第 3 页参考答案印载 1+√2/6。Chrome 远程调试检索未找到可裁决的同版版本或勘误，且该扫描副本的出版者、版次、来源链及答案官方身份未认证。",
+  "fingerprint": "cd0d7728793fe54baa3e5b6be1bc55270d77f9ea3fbf2a6a7bd7381b8b406e04",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2008-spring-shanghai",
+  "question_id": "gk-2008-spring-shanghai-q08",
+  "resume_action": "取得可追溯同版原件或可靠正式勘误，核定‘凹多面体’题面与印载答案符号的冲突；此前保留答案 U 与两种证据并列，不改题面、不将副本答案称官方答案，并保持整卷完成阻断。",
+  "source_id": "src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1286
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF SHA-256 11b8987221585bfaf21fe3c7785852470a3f50de6ebf91235bac71fecbd1dcfe 的第 1 页题面写“凹多面体”，按题面独立推导为 1−√2/6；第 3 页同一副本答案页印载 1+√2/6。未找到可裁决的同版版本或勘误，且答案发布归属与官方身份未核。正式答案保持 U。",
+  "fingerprint": "bf0c3af089233a52377f26fe88b2681db4b14113b0a49955ffdb412ff219dde0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2008-spring-shanghai",
+  "question_id": "gk-2008-spring-shanghai-q08",
+  "resume_action": "取得可追溯同版原件或可靠正式勘误，裁定 Q8 的可接受答案；在此之前保持答案 U，不将副本印载值认证为官方答案并阻断整卷完成。",
+  "source_id": "src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
