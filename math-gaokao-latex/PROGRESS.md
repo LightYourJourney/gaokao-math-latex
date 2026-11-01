@@ -12277,6 +12277,19 @@
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b24` 验证通过（`OK：1 卷`）；
 - manifest revision 推进至 `5701`，批次推进至 `compiled_pending_review`。
 
+### phase0-b24 2019 天津卷理科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（5页）、解析版（29页）、简答版（7页）、印刷版（21页）共 62 页，496 项检查全部通过（`pass`）；
+  - 全卷 2 处 TikZ 矢量图（`q4.tikz.tex` 流程框图、`q17.tikz.tex` 立体几何图）在四版中渲染清晰完整，图文混排无遮挡、0 致命 Overfull、0 Underfull、0 编译错误；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase0-b24 --output-report math-gaokao-latex/reports/phase0-b24.md`，返回 `FINALIZED：phase0-b24`；
+  - manifest revision 推进至 `5702`，`phase0-b24` 状态关闭为 `closed`，`gk-2019-regular-tianjin-science` 进入 `complete`；
+  - `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b24 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase0-b24` 验证通过（`FINALIZED：phase0-b24`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
 
 
 
