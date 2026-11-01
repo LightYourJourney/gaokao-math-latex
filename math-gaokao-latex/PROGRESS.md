@@ -20,7 +20,7 @@
 ### 2006 天津文科候选卷：确定性 TeX / 版本入口装配（2026-11-02）
 
 - 生成项目 `questions.tex`、`answers.tex` 与 `index.json` 投影，生成 `answers_short.tex` 及试题/解析/简答/印刷四版入口壳。
-- `generate_projects`、`make_short_answers`、`make_editions` 的单卷 `--check` 均通过；`solution_sources check-batch` 确认22题题面、答案和解析锚点对齐。详细记录见 `reports/2006-tianjin-arts-project-generation.md`。
+- `generate_projects`、`make_short_answers`、`make_editions` 的单卷 `--check` 均通过；`solution_sources check-batch` 确认22题题面、答案和解析锚点对齐。初始装配后检查实际答案内容发现 Q8 速查表录入选项与推导不一致，已按解析更正为 D 并重生成派生物；详见 `reports/2006-tianjin-arts-project-generation.md` 与 `reports/2006-tianjin-arts-answer-key-correction.md`。
 - provenance、正式 XeLaTeX 构建、receipt、视觉复核及批次关闭尚未完成；Q14 的 `ISSUE-1287` 仍 open / blocks_completion，paper blocked，batch planned。本阶段不表示整卷验收或全语料完成。
 
 ### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
