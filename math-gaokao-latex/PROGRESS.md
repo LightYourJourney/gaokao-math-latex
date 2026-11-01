@@ -18,6 +18,12 @@
 - 针对性验证：`parse_question_blocks`、`parse_answer_points`、`validate_solution_body` 均识别22题；题面、答案、解析三层小问集合逐题一致；`git diff --check` 通过。
 - 当前未登记 paper/source/batch/issue，未写 manifest/provenance，未绘图，未生成 TeX/含解析稿或正式 PDF、未生成回执。下一步登记已确认的 Q5/Q10 阻断并完成逐题 provenance，再绘制 Q2/Q12/Q15/Q16/Q19 图稿及项目登记。本阶段不表示来源认证、整卷验收或长期语料完成。
 
+### 2006 山东文理候选卷：登记前确定性含解析稿（2026-11-02）
+
+- 为满足 `register-papers` 对 `combined_rendered` 源文件的前置检查，用 `solution_sources.render_combined` 从两卷现有试题、答案要点和解析正文生成 `_含解析.md`。文科508行，理科530行；这是派生稿，不作为新事实源。
+- 逐卷重新调用同一函数比对磁盘输出，并由 `parse_question_blocks` 确认均为22题；`git diff --check` 通过。注册批次尚未建立；后续正式登记后仍须执行批次 `extract-batch --write` 再做 currentness 校验。
+- 详见 `reports/2006-shandong-combined-drafts.md`。本阶段不表示 source/paper/batch 登记、provenance 导入、项目 TeX、正式 PDF 构建或视觉验收已完成。
+
 ### 2006 山东理科候选卷：Q1–Q22 题面转录与独立复核（2026-11-02）
 
 - 依据固定 source `src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947` 转录题面并写入 `2006/2006_数学真题_山东理_试题.md`。SHA-256 `8cd7733727ed4ff238dedc4a1c7cb42773260de88f1d516f0416cbaa3976393b`、Git blob `6e8be14e134daf900d6610fea79e4e7629e68fd7`、532,271 bytes、2页 A3，与 manifest/来源接收记录一致；印刷页320覆盖 Q1–Q17，页321覆盖 Q18–Q22。
