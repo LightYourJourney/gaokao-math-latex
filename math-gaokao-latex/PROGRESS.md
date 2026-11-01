@@ -55,6 +55,13 @@
 - 审阅者曾提出 Q21 差分疑问，重新按题面定义展开后确认 $c_{n+1}-c_n=d_n+2d_{n+1}+3d_{n+2}$，原解析论证成立；先前错误异议与反例已撤回。
 - 这补全了四卷答案数学内容的第二人全卷核对记录。江苏题签未标文理，变体仍未知；source identity 未核、official_answer 仍为 null。四卷尚无逐题 provenance 或正式项目构建/视觉收据，本补记不表示卷级验收或长期语料完成。
 
+### 2006 广东、江苏、江西文、浙江文：paper/source 登记与逐题 blocker 入账（2026-11-02）
+
+- 通过 `register-papers` 登记批次 `phase1-b69`，paper 分别为 `gk-2006-regular-guangdong`、`gk-2006-regular-jiangsu`、`gk-2006-regular-jiangxi-arts`、`gk-2006-regular-zhejiang-arts`；注册及浙江印刷页码注记订正后 manifest revision `5791→5793`。四个 source 均按固定 SHA 绑定为本库 canonical 输入字节，不认证发布者、版次、来源链或官方身份；四卷 `official_answer=null`。江苏题签未标文理，variant 保持未知。
+- 广东 open / `blocks_completion` issues：Q6 `ISSUE-1298`、Q16 `ISSUE-1299`、Q19 `ISSUE-1300`、Q20(1) `ISSUE-1301`、Q20(3) `ISSUE-1302`。江西文科 Q4 `ISSUE-1303` 与 Q8 `ISSUE-1304` 同为 open / `blocks_completion`，对应答案继续 U/PENDING。广东、江西 paper 状态 blocked；江苏、浙江为 planned。
+- 四卷题面、答案、解析正文 frontmatter 已绑定 paper_id；`solution_sources.extract-batch --write` 生成四份 `_解析正文.md` 投影和四份 `_含解析.md`。`source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch --batch phase1-b69`（4卷全部通过）及 `git diff --check` 均通过。
+- 尚无逐题三角色 provenance、图稿、项目 TeX/简答版、正式构建或视觉回执。未决项和卷级门禁见 `reports/2006-four-candidates-registration.md`；本阶段不表示卷件闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。

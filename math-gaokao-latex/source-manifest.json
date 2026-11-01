@@ -2073,6 +2073,17 @@
         "gk-2006-regular-shandong-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b69",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-guangdong",
+        "gk-2006-regular-jiangsu",
+        "gk-2006-regular-jiangxi-arts",
+        "gk-2006-regular-zhejiang-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2082,7 +2093,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5fe268a3-4ec9-4436-bb6f-6be136f39f27",
+  "last_transaction_id": "1518607c-736f-4ab9-81ee-e5adf6886439",
   "papers": [
     {
       "blocked_from": null,
@@ -27514,9 +27525,226 @@
       "title": "2006 年·普通高等学校招生考试·山东卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_guangdong",
+        "id": "gk-2006-regular-guangdong",
+        "note": "固定候选题面 PDF source ID src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24，SHA-256 46542e3594530e351f1f9812d0543cc5cd3c223ee9275d98bdc1dd802d3242aa；PDF第1—2页、印刷页292—293，题签可见‘2006 普通高等学校招生考试（广东卷）’。发布者、出版者、版次、来源链及官方身份未核，固定 PDF 未见答案、解析或评分材料。Q6对象名称缺失，Q16随机变量与联合模型未定义，Q19条件矛盾，Q20(1)(3)按字面存在定义域/存在性问题，详见逐题 issue。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "广东卷"
+      },
+      "issue_ids": [
+        "ISSUE-1298",
+        "ISSUE-1299",
+        "ISSUE-1300",
+        "ISSUE-1301",
+        "ISSUE-1302"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-guangdong",
+      "production_state": "blocked",
+      "project_dir": "2006_广东卷",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版完整题面、正式勘误或其他可裁决材料；核明对象后再独立求解并更新题面、答案和逐题 provenance。；取得可追溯的同版完整题面、正式勘误或可裁决的变量/联合分布条件；此前不增添独立性假设或填造答案。；取得可追溯的同版可靠复本或正式勘误，核明矛盾条件；在此之前不改题面、不选择任何猜测性答案。；取得可追溯的同版完整题面或正式勘误，核明区间或函数自变量；未核前不改写。；取得可追溯的同版可靠复本或正式勘误，确认迭代方向/存在性条件；未核前保留原文及 U/PENDING。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_广东_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_广东_含解析.md",
+        "questions": "2006/2006_数学真题_广东_试题.md",
+        "solution_body": "2006/2006_数学真题_广东_解析正文.md"
+      },
+      "source_ids": [
+        "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24"
+      ],
+      "title": "2006 年·普通高等学校招生考试·广东卷",
+      "track": "none",
+      "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_jiangsu",
+        "id": "gk-2006-regular-jiangsu",
+        "note": "固定候选题面 PDF source ID src-25169d2a434a7b2533aeaf510aa9ee6406808e72e43f9bc75d95c2737c09de13，SHA-256 a2eb12dcb9ef4ea50908436bf15619674a7e263b8455569163ab183cf2a0cfa0；PDF第1—2页、印刷页302—303，题签可见‘2006 普通高等学校招生考试（江苏卷）’。题签未标文理，候选变体未知；发布者、版次、来源链及官方身份未核，固定 PDF 未见答案、解析或评分材料。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考江苏卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "江苏卷（科类未知）"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-jiangsu",
+      "production_state": "planned",
+      "project_dir": "2006_江苏卷",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_江苏_含解析.md",
+        "questions": "2006/2006_数学真题_江苏_试题.md",
+        "solution_body": "2006/2006_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-25169d2a434a7b2533aeaf510aa9ee6406808e72e43f9bc75d95c2737c09de13"
+      ],
+      "title": "2006 年·普通高等学校招生考试·江苏卷",
+      "track": "none",
+      "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_jiangxi_arts",
+        "id": "gk-2006-regular-jiangxi-arts",
+        "note": "固定候选题面 PDF source ID src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2，SHA-256 2550b886dff3865452708e5e163681924784ec9b7289ff650bedb910a29e51fe；PDF第1—2页、印刷页306—307，题签可见‘2006 普通高等学校招生考试（江西卷文）’。发布者、出版者、版次、来源链及官方身份未核，固定 PDF 未见答案、解析或评分材料。Q4选项逻辑未匹配题问，Q8选项未包含按比例分层抽样配置，答案均保持 U/PENDING。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考江西卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "江西卷文科"
+      },
+      "issue_ids": [
+        "ISSUE-1303",
+        "ISSUE-1304"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-jiangxi-arts",
+      "production_state": "blocked",
+      "project_dir": "2006_江西卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版可靠复本、正式勘误或可裁决答案材料；在此之前不推定应改题干、选项或逻辑方向。；取得可追溯的同版可靠复本或正式勘误以核对选项；未获得前不改写选项或猜选答案。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_江西文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_江西文_含解析.md",
+        "questions": "2006/2006_数学真题_江西文_试题.md",
+        "solution_body": "2006/2006_数学真题_江西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2"
+      ],
+      "title": "2006 年·普通高等学校招生考试·江西卷文科",
+      "track": "arts",
+      "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_zhejiang_arts",
+        "id": "gk-2006-regular-zhejiang-arts",
+        "note": "固定候选题面 PDF source ID src-59546e1a9f2fb01cc7a4ae820d82001a86aa1ee61cc2eb5320aab728375c8e1b，SHA-256 b53d9923107e7030a296fcace329efc61c6af454014c3ea94464acaf5a46b5c4；PDF第1—2页、印刷页342—343，题签可见‘2006 普通高等学校招生考试（浙江卷文）’。发布者、出版者、版次、来源链及官方身份未核，固定 PDF 未见答案、解析或评分材料。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考浙江卷文科",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "浙江卷文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-zhejiang-arts",
+      "production_state": "planned",
+      "project_dir": "2006_浙江卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_浙江文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_浙江文_含解析.md",
+        "questions": "2006/2006_数学真题_浙江文_试题.md",
+        "solution_body": "2006/2006_数学真题_浙江文_解析正文.md"
+      },
+      "source_ids": [
+        "src-59546e1a9f2fb01cc7a4ae820d82001a86aa1ee61cc2eb5320aab728375c8e1b"
+      ],
+      "title": "2006 年·普通高等学校招生考试·浙江卷文科",
+      "track": "arts",
+      "year": 2006
     }
   ],
-  "revision": 5791,
+  "revision": 5793,
   "schema_version": 1,
   "sources": [
     {
@@ -35045,8 +35273,8 @@
       "exam_type": "regular",
       "git_blob_oid": "830fccbcc97eb73651731b42b062ddfc9903e12a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-guangdong",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006广东.pdf",
       "regions": [],
       "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
@@ -35069,8 +35297,8 @@
       "exam_type": "regular",
       "git_blob_oid": "98b98a18f2946f1c12a17936ac99564ea41a9e13",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006江苏.pdf",
       "regions": [],
       "source_id": "src-25169d2a434a7b2533aeaf510aa9ee6406808e72e43f9bc75d95c2737c09de13",
@@ -35093,8 +35321,8 @@
       "exam_type": "regular",
       "git_blob_oid": "606e3da79f954c133008fcbbc68ee37642399fba",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-jiangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006江西文.pdf",
       "regions": [],
       "source_id": "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2",
@@ -35141,8 +35369,8 @@
       "exam_type": "regular",
       "git_blob_oid": "400f381a16f11302d15a4ac1c11c21de0acc039c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-zhejiang-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006浙江文.pdf",
       "regions": [],
       "source_id": "src-59546e1a9f2fb01cc7a4ae820d82001a86aa1ee61cc2eb5320aab728375c8e1b",

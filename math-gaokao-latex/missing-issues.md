@@ -21697,3 +21697,122 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1298
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q6 的题干缺少对象名称，规范题面忠实保留该缺失。现有文字不足以确定所谈对象，答案层因此标为 U/PENDING；不能补猜对象或答案。",
+  "fingerprint": "1cb9d195295a5b9f14e8488c9586b050157026b5ebf811e288014a3096f31ecf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q06",
+  "resume_action": "取得可追溯的同版完整题面、正式勘误或其他可裁决材料；核明对象后再独立求解并更新题面、答案和逐题 provenance。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1299
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q16 给出边缘概率，但未定义随机变量 ξ，也未给出联合模型；(1)仅在另加独立性假设时可算为0.04，(2)(3)无从确定。题面照录，三问保留 U/PENDING。",
+  "fingerprint": "5ea876a56b25253482a97fac81b1410022a9b5c6994359f210ff7397bac99b50",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q16",
+  "resume_action": "取得可追溯的同版完整题面、正式勘误或可裁决的变量/联合分布条件；此前不增添独立性假设或填造答案。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1300
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第2页 Q19 同时要求正项等比数列全体和为9、偶数项子列和为81/5；正公比下偶数项和严格小于全体和，两个条件互相矛盾，依赖该数列的各问无法成立。题面照录，答案保留 U/PENDING。",
+  "fingerprint": "63dc2745b7b1b82a0c2ae25b039cd7a2d76e154ddd797c890cbacf27db6d9d32",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q19",
+  "resume_action": "取得可追溯的同版可靠复本或正式勘误，核明矛盾条件；在此之前不改题面、不选择任何猜测性答案。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1301
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第2页 Q20(1)按题面把 x∈[2,4] 代入定义域为[2,4]的 φ(2x)，自变量超出定义域；规范题面照录，答案标 U/PENDING。",
+  "fingerprint": "4ea538deedd0d82fd446f4d28f77a114d3577c024095d96db9ff66074808eb0b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q20",
+  "resume_action": "取得可追溯的同版完整题面或正式勘误，核明区间或函数自变量；未核前不改写。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1302
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第2页 Q20(3)按字面要求从任意给定初值反向求收缩迭代的原像，但题设不保证该原像存在。若无限迭代确实存在，有界性可推出其为不动点；不能据此证明任意初值均可逆推，结论仍为 U/PENDING。",
+  "fingerprint": "fa2b8a393c3bc7ffad28c3e6be742446826ab1a1610e6dded3d4eebb24103c1f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q20",
+  "resume_action": "取得可追溯的同版可靠复本或正式勘误，确认迭代方向/存在性条件；未核前保留原文及 U/PENDING。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1303
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q4 按当前转录，四组选项中 A 两命题互不蕴含，B 等价，C 与 D 均为充分不必要；题问所需的必要不充分关系没有对应选项。题面照录，无法判断原卷题干或选项是否有误，答案保留 U/PENDING。",
+  "fingerprint": "50bca6a2010f41483437d7322e443044e540e4c03c946e4c66ca04b9fa74bc72",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-jiangxi-arts",
+  "question_id": "gk-2006-regular-jiangxi-arts-q04",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或可裁决答案材料；在此之前不推定应改题干、选项或逻辑方向。",
+  "source_id": "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1304
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q8 的比例分层配额应为红4、蓝3、白2、黄1，现有四个选项均不对应该配置。题面照录，无法确定预期答案，答案保留 U/PENDING。",
+  "fingerprint": "9b42fd1219dee7cc4fdc0e393530919c97f1953560b8323284614277e8a209e6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-jiangxi-arts",
+  "question_id": "gk-2006-regular-jiangxi-arts-q08",
+  "resume_action": "取得可追溯的同版可靠复本或正式勘误以核对选项；未获得前不改写选项或猜选答案。",
+  "source_id": "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
