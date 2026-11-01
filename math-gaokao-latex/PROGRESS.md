@@ -11597,6 +11597,16 @@
 - 运行三大生成器 `--check` 只读比对验证，全卷试题、答案、简答与四版模板渲染结果 100% 一致。
 
 
+### phase0-b17 2018 上海卷：录入 Provenance（2026-11-01）
+
+- 运行 `provenance.py init-batch --batch phase0-b17 --work-dir math-gaokao-latex/.work` 初始化三角色工作结构；
+- 填充 21 题来源页码映射（1–18 题对应原卷第 1 页，19–21 题对应第 2 页）、固定 artifact 来源哈希（`457e05bd...`）与现场计算的 `question_text_sha256` 及 `answer_sha256`；
+- 登记 `answer-solve` 为 D 级非官方独立推导证据，`answer-review` 冲突状态为 `none`，双向哈希校验无分歧；
+- 执行 `provenance.py import-batch --batch phase0-b17 --write` 正式入库，生成 `math-gaokao-latex/2018_上海卷/provenance.json`，manifest revision 推进至 `5646`；
+- 执行 `provenance.py check-batch --batch phase0-b17` 验证通过（`OK：1 卷`）。
+
+
+
 
 
 
