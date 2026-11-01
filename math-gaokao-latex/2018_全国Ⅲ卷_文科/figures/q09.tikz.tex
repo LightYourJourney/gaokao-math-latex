@@ -10,7 +10,7 @@
   \draw (0.08, 1) -- (-0.08, 1) node[left] {$1$};
   \begin{scope}
     \clip (-2.0, -1.8) rectangle (2.0, 2.2);
-    \draw[thick, domain=-1.55:1.55, samples=60] plot (\x, {1.8*\x^2 - 1.5});
+    \draw[thick, domain=-1.55:1.55, samples=60] plot (\x, {1.8*(\x)^2 - 1.5});
   \end{scope}
   \node at (0, -2.5) {(A)};
 \end{scope}
@@ -24,7 +24,7 @@
   \draw (0.08, 1) -- (-0.08, 1) node[left] {$1$};
   \begin{scope}
     \clip (-2.0, -1.8) rectangle (2.0, 2.2);
-    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {1.2*\x^4 - 2.0*\x^2 - 0.7});
+    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {1.2*(\x)^4 - 2.0*(\x)^2 - 0.7});
   \end{scope}
   \node at (0, -2.5) {(B)};
 \end{scope}
@@ -38,7 +38,7 @@
   \draw (0.08, 1) -- (-0.08, 1) node[left] {$1$};
   \begin{scope}
     \clip (-2.0, -1.8) rectangle (2.0, 2.5);
-    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {-1.2*\x^2 + 2.0});
+    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {-1.2*(\x)^2 + 2.0});
   \end{scope}
   \node at (0, -2.5) {(C)};
 \end{scope}
@@ -52,7 +52,7 @@
   \draw (0.08, 1) -- (-0.08, 1) node[left] {$1$};
   \begin{scope}
     \clip (-2.0, -1.8) rectangle (2.0, 2.5);
-    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {-\x^4 + \x^2 + 2.0});
+    \draw[thick, domain=-1.6:1.6, samples=60] plot (\x, {-(\x)^4 + (\x)^2 + 2.0});
   \end{scope}
   \node at (0, -2.5) {(D)};
 \end{scope}

@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 全国Ⅲ卷文科：TikZ 防御性括号修正与视觉复核最终闭环（2026-11-01）
+
+- 修正 `q09.tikz.tex` 中绘图域负数幂运算防御性括号 `(\x)^2` / `(\x)^4`，重新编译构建 attempt `df7d8048-2670-4ad1-8e02-ce4a9e3f0c8d`（四版共59页，0 overfull）；
+- 4 条标准 underfull 登记豁免并通过目视复核，执行 `review_receipts.py finalize-batch` 闭环批次（revision 5621），输出 `reports/phase0-b13.md`；
+- 全量刷新项目报告与 `manifest.csv`，`report.py check --all` 与 `review_receipts check-batch` 校验全部通过。
+
 ### phase0-b13：汇总与全量回归（2026-11-01）
 
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
