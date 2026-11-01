@@ -11765,6 +11765,17 @@
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True`，格式 100% 闭环无分歧。
 
 
+### phase0-b19 2019 全国Ⅱ卷文科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b19.json`：
+  - 注册试卷 `gk-2019-regular-national-2-arts`，绑定上游来源 `src-941cd8415e68669fd67b0393106819cbd73ce582e16841b63a12d1ada9e4d24d`；
+  - 设置项目目录 `2019_全国Ⅱ卷_文科`、题数 23 题、题型结构（选择 1–12、填空 13–16、解答 17–21、选做 22–23）；
+  - 建立批次 `phase0-b19`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5658`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
+
+
 
 
 
