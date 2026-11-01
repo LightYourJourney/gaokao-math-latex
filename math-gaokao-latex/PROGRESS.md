@@ -11954,3 +11954,12 @@
   - `2019/2019_数学真题_全国3文_解析正文.md`（23 题详尽严密推导，严格遵循总解析与各小问解析分层规范）；
 - 调用 `solution_sources.build_paper_targets` 确定性渲染生成 `2019/2019_数学真题_全国3文_含解析.md`（39708 字节）；
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True problems: []`，格式 100% 闭环无分歧。
+
+### phase0-b21 2019 全国Ⅲ卷文科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b21.json`：
+  - 注册试卷 `gk-2019-regular-national-3-arts`，绑定上游来源 `src-cb365dba61804e1418864f0052286c48833d76ed7bda8d1d39af87d4cda09462`；
+  - 设置项目目录 `2019_全国Ⅲ卷_文科`、题数 23 题、题型结构（选择 1–12、填空 13–16、解答 17–21、选做 22–23）；
+  - 建立批次 `phase0-b21`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5677`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
