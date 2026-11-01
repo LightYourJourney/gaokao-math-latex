@@ -11577,6 +11577,17 @@
 - 调用 `solution_sources.check_paper` 完成 21 题全量小问结构、题号、图稿引用及往返提取一致性校验，结果为 `ALL CHECKS PASSED`（`ok: True`）。
 
 
+### phase0-b17 2018 上海卷：登记 Paper 与批次（2026-11-01）
+
+- 编写 `.work/register_phase0_b17.json` 登记规范：
+  - `batch_id`: `phase0-b17`，状态为 `planned`；
+  - `paper_id`: `gk-2018-regular-shanghai`，`project_dir`: `2018_上海卷`，`track`: `none`，题量 21，题型结构映射为 12 填空 + 4 选择 + 5 解答；
+  - 绑定固定来源 `src-7478954a9412fcc53652887c80364a398c68a73b12d42a3f087dc6260a7558cc`（`普通高考/2018/2018上海.pdf`，印刷页 1079–1080）；
+- 运行 `source_manifest.py register-papers --write` 顺利入库，manifest revision 推进至 `5644`；
+- 执行 `source_manifest.py validate` 验证通过，数据结构与全库 775 份来源保持一致。
+
+
+
 
 
 
