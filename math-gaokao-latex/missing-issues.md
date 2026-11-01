@@ -21816,3 +21816,105 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1305
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析、评分材料或勘误；Q6 对象名称缺失导致现有条件不足以形成可核答案，答案层保持 U/PENDING。",
+  "fingerprint": "e0c987360b950ab4c7763c9b19b97e13a0e67470b8a50dfcc48fcd20b49073c3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q06",
+  "resume_action": "取得可追溯的同版完整题面、正式勘误或可靠答案材料；核明对象并独立求解后再更新。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1306
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析或评分材料；Q16 未定义随机变量 ξ 且缺联合模型，(2)(3) 无法确定，答案层保持 U/PENDING。",
+  "fingerprint": "f4ebf90d3358dea4729dcdd2fafd7a88f8f672c7b09151889abff92a30e9bf7b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q16",
+  "resume_action": "取得可追溯的变量定义、联合分布条件或可靠勘误/答案材料；此前不补加独立性假设。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1307
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析、评分材料或勘误；Q19 给定正项等比数列总和与偶数项和互相矛盾，依赖该数列的答案均无法成立，答案层保持 U/PENDING。",
+  "fingerprint": "a22ad660bac227c3fe42221c3e53b202569970e712531365ad743f49f1f71088",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q19",
+  "resume_action": "取得可追溯的同版可靠复本或正式勘误后核明题意，再重算并更新答案。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1308
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析、评分材料或勘误；Q20(1) 自变量超出所定义域，(3) 未保证任意初值可逆推，未决小问答案保持 U/PENDING。",
+  "fingerprint": "e7724168844dc11330260b5b25e9798579432ebbd9425762df7acccbdec53e89",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-guangdong",
+  "question_id": "gk-2006-regular-guangdong-q20",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或可裁决答案材料，核明定义域与迭代存在性条件；此前不猜答案。",
+  "source_id": "src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1309
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析、评分材料或勘误；Q4 按现有选项无符合题问的逻辑关系，答案无法确认并保持 U/PENDING。",
+  "fingerprint": "baad0df9895dc583d529b9efdc3094f1e9dc0660a8c0bbba9f07501e3943eb80",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-jiangxi-arts",
+  "question_id": "gk-2006-regular-jiangxi-arts-q04",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或可靠答案材料；未核前不改题干、选项或关系方向。",
+  "source_id": "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1310
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 只含题面，未见答案、解析、评分材料或勘误；Q8 四选项均不含按比例分层抽样对应的红4、蓝3、白2、黄1配置，答案无法确认并保持 U/PENDING。",
+  "fingerprint": "74ae7155a8b63d3864defb3f2f9ffabee973509991e5fb8da308b6cfc0f6eb3a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-jiangxi-arts",
+  "question_id": "gk-2006-regular-jiangxi-arts-q08",
+  "resume_action": "取得可追溯的同版可靠复本或正式勘误核对选项；未获得前不猜选答案。",
+  "source_id": "src-6eedba8c015f6631959cccdffc0f2b5e63fbc71b424490f1ea554ea6ed7b3be2",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

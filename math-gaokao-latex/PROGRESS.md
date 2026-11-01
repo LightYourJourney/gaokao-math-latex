@@ -62,6 +62,13 @@
 - 四卷题面、答案、解析正文 frontmatter 已绑定 paper_id；`solution_sources.extract-batch --write` 生成四份 `_解析正文.md` 投影和四份 `_含解析.md`。`source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch --batch phase1-b69`（4卷全部通过）及 `git diff --check` 均通过。
 - 尚无逐题三角色 provenance、图稿、项目 TeX/简答版、正式构建或视觉回执。未决项和卷级门禁见 `reports/2006-four-candidates-registration.md`；本阶段不表示卷件闭环或长期语料完成。
 
+### 2006 广东、江苏、江西文、浙江文：三角色逐题 provenance（2026-11-02）
+
+- 为使 U/PENDING 答案在逐题 provenance 中有有效答案问题关联，先以状态事务新增广东 Q6/Q16/Q19/Q20 与江西文科 Q4/Q8 六条 `answer-missing`：`ISSUE-1305`–`ISSUE-1310`，与既有题面或答案冲突 issue 配对；所有 issue 继续 open / `blocks_completion`。manifest revision `5793→5794`。
+- `provenance.py init-batch/import-batch` 建立并导入四卷 83 题、249 条三角色记录；题面 SHA、答案 SHA、固定 source SHA 及页码由工具按当前文件核验。各题 `question-review` 通过；独立推导标 D，未决题标 U；盲核未决项关联真实 blocker。manifest revision `5794→5795`、批次 `provenance_verified`。江苏及浙江卷为 `answers_verified`，广东及江西文科继续 `blocked`。
+- `provenance.py check-batch` 返回 `OK：4 卷`；`source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch --batch phase1-b69` 四卷通过。角色范围、逐题状态和 source/official 边界见 `reports/2006-four-candidates-provenance.md`。
+- 尚未绘制/登记题图、生成项目 TeX/简答版、构建四版 PDF 或逐页视觉校样；本阶段不表示试卷闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。

@@ -21,6 +21,8 @@
 - 江西文科：`ISSUE-1303`（Q4 选项逻辑关系与题问不匹配）及 `ISSUE-1304`（Q8 选项不含比例分层配置），均为 open / `blocks_completion`，答案保持 U/PENDING。
 - 江苏、浙江文科本次无已知逐题 blocker；此状态只代表当前题面与非官方推导草稿没有发现未决答案冲突，不证明来源身份，也不表示正式验收。
 
+为满足逐题 provenance 对 U 答案必须关联 `answer-missing` blocker 的门禁，后续状态事务另增 `ISSUE-1305`–`ISSUE-1310`：广东 Q6/Q16/Q19/Q20 分别一条、江西文科 Q4/Q8 各一条。它们与既有题面/答案冲突 issue 配对，不替代、不关闭原 issue；追加后 manifest revision 为 `5794`，provenance 导入再推进至 `5795`。完整逐题记录见 `reports/2006-four-candidates-provenance.md`。
+
 ## 规范源绑定与验证
 
 将 paper_id 写入四卷规范题面、答案要点和解析正文。依 `solution_sources` 确定性生成四份 `_含解析.md` 和四份 `_解析正文.md` 投影。登记字段由固定源指纹、原页可见结构与逐题复核证据组成，并经 `register-papers` dry-run 校验后写入。
