@@ -12359,6 +12359,20 @@
 - 生成 `math-gaokao-latex/2019_天津卷_文科/receipts/build.json`，manifest revision 推进至 `5709`，状态推进为 `compiled_pending_review`；
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b25` 验证通过（`OK：1 卷`）。
 
+### phase0-b25 2019 天津卷文科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核与公式精修：
+  - 针对解析版第 18 题长公式换行优化，将错位相减展开式整理为 `aligned` 多行环境，消除唯一 Overfull 隐患，全卷四版达到 0 Overfull、0 Underfull、0 警告、0 错误；
+  - 覆盖试题版（4页）、解析版（28页）、简答版（6页）、印刷版（20页）共 58 页，464 项逐页检查全部通过（`pass`）；
+  - 全卷 2 处 TikZ 矢量图（`q4.tikz.tex` 流程框图、`q17.tikz.tex` 四棱锥立体图）在四版中渲染清晰完整，0 警告豁免；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase0-b25 --output-report math-gaokao-latex/reports/phase0-b25.md`，返回 `FINALIZED：phase0-b25`；
+  - manifest revision 推进至 `5711`，`phase0-b25` 状态关闭为 `closed`，`gk-2019-regular-tianjin-arts` 进入 `complete`；
+  - `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b25 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --manifest math-gaokao-latex/source-manifest.json --issues math-gaokao-latex/missing-issues.md --batch phase0-b25` 验证通过（`FINALIZED：phase0-b25`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
 
 
 
