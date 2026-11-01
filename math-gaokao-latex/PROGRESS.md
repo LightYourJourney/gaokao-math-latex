@@ -11805,3 +11805,16 @@
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b19` 验证通过（`OK：1 卷`）；
 - manifest revision 推进至 `5662`，批次推进至 `compiled_pending_review`。
 
+### phase0-b19 2019 全国Ⅱ卷文科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（4页）、解析版（26页）、简答版（6页）、印刷版（18页）共 54 页，432 项检查全部通过（`pass`）；
+  - 全卷 2 处 TikZ 矢量图（`q16.tikz.tex` 独孤信半正多面体线框投影、`q17.tikz.tex` 长方体与截面示意图）在四版中渲染清晰完整，图文混排无遮挡、无溢出；
+  - 3 处段首两端对齐松散 Underfull 警告（试题版、解析版、简答版各 1 处）在 `warning_exemptions` 逐项按 schema 规范登记豁免并核验通过；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b19 --output-report math-gaokao-latex/reports/phase0-b19.md`，返回 `FINALIZED：phase0-b19`；
+  - manifest revision 推进至 `5663`，`phase0-b19` 状态关闭为 `closed`，`gk-2019-regular-national-2-arts` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b19 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b19` 验证通过（`FINALIZED：phase0-b19`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
