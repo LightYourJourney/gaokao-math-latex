@@ -15,6 +15,14 @@
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
 - 实际全量测试结果 `Ran 1749 tests in 559.497s`、`OK (skipped=13)`；测试在全国Ⅲ理科题面草稿提交前启动，不表示该新草稿完成正式校验。
 
+### 2018 全国Ⅲ卷理科：公式折行优化、视觉复核通过与批次最终闭环（2026-11-01）
+
+- 针对第 21 题 (2) 泰勒展开长行公式进行折行优化，彻底消除 14.76pt Overfull；
+- 重新编译构建 attempt `387697ce-15b7-426f-a973-ec560c68fff6`（四版共68页：试题版6页、解析版31页、简答版8页、印刷版23页，0 Overfull）；
+- 3 条标准 Underfull（源卷声明框 `questions.tex:5--7`）登记豁免并通过目视复核；
+- 四版 68 页逐页八项视觉复核全部 pass，执行 `review_receipts.py finalize-batch` 闭环批次（revision 5625），输出 `reports/phase0-b14.md`；
+- 刷新全量报告投影与 `manifest.csv`（775行），`report.py check --all`、`review_receipts check-batch` 与 `validate-receipts --require-final` 校验全部通过；批次状态为 `closed`，试卷状态为 `complete`。
+
 ### 2018 全国Ⅲ卷理科候选卷：四版本正式编译构建（2026-11-01）
 
 - 执行 `build_projects.py build --formal --paper gk-2018-regular-national-3-science`，试题版（6页）、解析版（31页）、简答版（8页）、印刷版（23页）共 68 页全量编译成功；
