@@ -249,7 +249,13 @@ $M$ 为线段 $ED$ 的中点，由中点坐标公式得：
 \Needspace{5\baselineskip}
 计算混合积 $(\vec{BM}, \vec{EN}, \vec{BE})$：
 \nopagebreak[4]
-\[\begin{vmatrix} 3/2 & -2 & \sqrt{3}/2 \\ 0 & 1 & -\sqrt{3} \\ 1 & -2 & \sqrt{3} \end{vmatrix} = \frac{3}{2}(\sqrt{3} - 2\sqrt{3}) - (-2)(0 - (-\sqrt{3})) + \frac{\sqrt{3}}{2}(0 - 1) = -\frac{3\sqrt{3}}{2} - 2\sqrt{3} - \frac{\sqrt{3}}{2} = -4\sqrt{3} \neq 0.\]
+\[
+\begin{aligned}
+\begin{vmatrix} 3/2 & -2 & \sqrt{3}/2 \\ 0 & 1 & -\sqrt{3} \\ 1 & -2 & \sqrt{3} \end{vmatrix}
+&= \frac{3}{2}(\sqrt{3} - 2\sqrt{3}) - (-2)(0 - (-\sqrt{3})) + \frac{\sqrt{3}}{2}(0 - 1) \\
+&= -\frac{3\sqrt{3}}{2} - 2\sqrt{3} - \frac{\sqrt{3}}{2} = -4\sqrt{3} \neq 0.
+\end{aligned}
+\]
 混合积不为 0，表明向量 $\vec{BM}, \vec{EN}, \vec{BE}$ 不共面，因此直线 $BM$ 与 $EN$ 为异面直线。
 综上，$BM \neq EN$，且直线 $BM, EN$ 是异面直线。
 故选 \textbf{D}。
@@ -621,7 +627,7 @@ $\triangle MF_1F_2$ 为等腰三角形，有两种可能情形：
 \[\bar{x}_{\text{\text{甲}}} = 2 \times 0.15 + 3 \times 0.20 + 4 \times 0.30 + 5 \times 0.20 + 6 \times 0.10 + 7 \times 0.05\]
 \nopagebreak[4]
 \[= 0.30 + 0.60 + 1.20 + 1.00 + 0.60 + 0.35 = 4.05.\]
-乙离子各组区间中点值依次为：$3, 4, 5, 6, 7, 8$，对应频率依次为 $0.05, 0.10, 0.15, 0.35, 0.20, 0.15$。
+乙离子各组区间中点值依次为 $3, 4, 5, 6, 7, 8$；对应频率依次为 $0.05, 0.10, 0.15, 0.35, 0.20, 0.15$。
 \Needspace{5\baselineskip}
 乙离子残留百分比的平均值估计值为：
 \nopagebreak[4]
@@ -776,9 +782,11 @@ $\triangle ABC$ 的面积为：
 法向量满足：
 \nopagebreak[4]
 \[\begin{cases} \boldsymbol{n}_2 \cdot \vec{CG} = x + \sqrt{3}y = 0, \\ \boldsymbol{n}_2 \cdot \vec{CA} = -2x + z = 0. \end{cases}\]
-取 $y = 1$，则 $x = -\sqrt{3}$，$z = 2x = -2\sqrt{3}$。
-故可取 $\boldsymbol{n}_2 = (-\sqrt{3}, 1, -2\sqrt{3})$。
-模长为 $|\boldsymbol{n}_2| = \sqrt{(-\sqrt{3})^2 + 1^2 + (-2\sqrt{3})^2} = \sqrt{3 + 1 + 12} = 4$。
+取 $y = 1$，得 $x = -\sqrt{3}$，$z = -2\sqrt{3}$。
+\Needspace{5\baselineskip}
+故可取 $\boldsymbol{n}_2 = (-\sqrt{3}, 1, -2\sqrt{3})$，其模长为：
+\nopagebreak[4]
+\[|\boldsymbol{n}_2| = \sqrt{(-\sqrt{3})^2 + 1^2 + (-2\sqrt{3})^2} = 4.\]
 \Needspace{5\baselineskip}
 计算两法向量夹角余弦值：
 \nopagebreak[4]
@@ -975,7 +983,7 @@ $\triangle ABC$ 的面积为：
 
 \textbf{题目}[选修 4—4：坐标系与参数方程]（10 分）：
 
-如图, 在极坐标系 $Ox$ 中, $A(2, 0)$, $B\left(\sqrt{2}, \dfrac{\pi}{4}\right)$, $C\left(\sqrt{2}, \dfrac{3\pi}{4}\right)$, $D(2, \pi)$, 弧 $\wideparen{AB}, \wideparen{BC}, \wideparen{CD}$ 所在圆的圆心分别是 $(1, 0)$, $\left(1, \dfrac{\pi}{2}\right)$, $(1, \pi)$, 曲线 $M_1$ 是弧 $\wideparen{AB}$, 曲线 $M_2$ 是弧 $\wideparen{BC}$, 曲线 $M_3$ 是弧 $\wideparen{CD}$.
+如图, 在极坐标系 $Ox$ 中, $A(2, 0)$, $B\left(\sqrt{2}, \dfrac{\pi}{4}\right)$, $C\left(\sqrt{2}, \dfrac{3\pi}{4}\right)$, $D(2, \pi)$, 弧 $\overset{\frown}{AB}, \overset{\frown}{BC}, \overset{\frown}{CD}$ 所在圆的圆心分别是 $(1, 0)$, $\left(1, \dfrac{\pi}{2}\right)$, $(1, \pi)$, 曲线 $M_1$ 是弧 $\overset{\frown}{AB}$, 曲线 $M_2$ 是弧 $\overset{\frown}{BC}$, 曲线 $M_3$ 是弧 $\overset{\frown}{CD}$.
 \nopagebreak[4]
 \begin{center}\input{figures/q22.tikz}\end{center}
 \nopagebreak[4]
@@ -989,31 +997,31 @@ $\triangle ABC$ 的面积为：
 
 \textbf{(1) 解析}
 \begin{itemize}
-\item 弧 $\wideparen{AB}$ 所在圆的圆心极坐标为 $(1, 0)$，直角坐标为 $(1, 0)$。
+\item 弧 $\overset{\frown}{AB}$ 所在圆的圆心极坐标为 $(1, 0)$，直角坐标为 $(1, 0)$。
 \end{itemize}
   圆过极点 $O(0, 0)$ 及点 $A(2, 0)$，半径为 $R = 1$。
   圆的极坐标方程为 $\rho = 2\cos\theta$。
-  弧 $\wideparen{AB}$ 从点 $A(\theta = 0)$ 到点 $B\left(\theta = \dfrac{\pi}{4}\right)$。
+  弧 $\overset{\frown}{AB}$ 从点 $A(\theta = 0)$ 到点 $B\left(\theta = \dfrac{\pi}{4}\right)$。
 \Needspace{5\baselineskip}
   故曲线 $M_1$ 的极坐标方程为：
 \nopagebreak[4]
 \[\rho = 2\cos\theta \quad \left(0 \leqslant \theta \leqslant \frac{\pi}{4}\right).\]
 \begin{itemize}
-\item 弧 $\wideparen{BC}$ 所在圆的圆心极坐标为 $\left(1, \dfrac{\pi}{2}\right)$，直角坐标为 $(0, 1)$。
+\item 弧 $\overset{\frown}{BC}$ 所在圆的圆心极坐标为 $\left(1, \dfrac{\pi}{2}\right)$，直角坐标为 $(0, 1)$。
 \end{itemize}
   圆过点 $B(1, 1)$、点 $C(-1, 1)$ 及极点 $O(0, 0)$，半径为 $R = 1$。
   圆的极坐标方程为 $\rho = 2\sin\theta$。
-  弧 $\wideparen{BC}$ 从点 $B\left(\theta = \dfrac{\pi}{4}\right)$ 到点 $C\left(\theta = \dfrac{3\pi}{4}\right)$。
+  弧 $\overset{\frown}{BC}$ 从点 $B\left(\theta = \dfrac{\pi}{4}\right)$ 到点 $C\left(\theta = \dfrac{3\pi}{4}\right)$。
 \Needspace{5\baselineskip}
   故曲线 $M_2$ 的极坐标方程为：
 \nopagebreak[4]
 \[\rho = 2\sin\theta \quad \left(\frac{\pi}{4} \leqslant \theta \leqslant \frac{3\pi}{4}\right).\]
 \begin{itemize}
-\item 弧 $\wideparen{CD}$ 所在圆的圆心极坐标为 $(1, \pi)$，直角坐标为 $(-1, 0)$。
+\item 弧 $\overset{\frown}{CD}$ 所在圆的圆心极坐标为 $(1, \pi)$，直角坐标为 $(-1, 0)$。
 \end{itemize}
   圆过极点 $O(0, 0)$ 及点 $D(-2, 0)$，半径为 $R = 1$。
   圆的极坐标方程为 $\rho = -2\cos\theta$。
-  弧 $\wideparen{CD}$ 从点 $C\left(\theta = \dfrac{3\pi}{4}\right)$ 到点 $D(\theta = \pi)$。
+  弧 $\overset{\frown}{CD}$ 从点 $C\left(\theta = \dfrac{3\pi}{4}\right)$ 到点 $D(\theta = \pi)$。
 \Needspace{5\baselineskip}
   故曲线 $M_3$ 的极坐标方程为：
 \nopagebreak[4]

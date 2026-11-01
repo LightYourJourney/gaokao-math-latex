@@ -11885,3 +11885,15 @@
 - 执行 `provenance.py import-batch --batch phase0-b20 --write` 正式入库，生成 `math-gaokao-latex/2019_全国Ⅲ卷_理科/provenance.json`，manifest revision 推进至 `5666`；
 - 执行 `provenance.py check-batch --batch phase0-b20` 验证通过（`OK：1 卷`）。
 
+### phase0-b20 2019 全国Ⅲ卷理科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --manifest math-gaokao-latex/source-manifest.json --batch phase0-b20 --formal` 调用 XeLaTeX + latexmk 进行全量编译；
+- 将弧记号按全库规范统一为 `\\overset{\\frown}{}`，并微调 3 处长公式与段落排版，四版本全部达成 0 Overfull 完美编译：
+  - 试题版：7 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 解析版：34 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 简答版：9 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 印刷版：24 页，0 errors，0 overfull，0 underfull；
+- 全卷四版总计 74 页全部顺利输出，生成 `math-gaokao-latex/2019_全国Ⅲ卷_理科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b20` 验证通过（`OK：1 卷`）；
+- manifest revision 推进至 `5673`，批次推进至 `compiled_pending_review`。
+
