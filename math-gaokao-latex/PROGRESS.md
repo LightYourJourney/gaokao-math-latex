@@ -15,7 +15,7 @@
 
 - 固定候选 source `src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307`，路径 `普通高考/2006/2006天津理.pdf`；SHA-256 `b38a31042aaadb71d602486419cd5f999ff607dfd5ae3f01eb95f5fd8c253039`，522,059 bytes，2 页 A3 横向，印刷页码 336–337。manifest 记录的 Git blob OID 与对固定文件运行 `git hash-object` 的结果一致；blob 未从当前项目 worktree 对象库独立取回。
 - 两页逐页渲染目视：题签为“2006 普通高等学校招生考试（天津卷理）”，共 22 题（10 选择、8 填空、4 解答），题图在 Q9、Q13、Q17、Q19、Q22。固定件未见答案、解析或评分页。来源身份与版次未认证；本阶段没有登记 paper/batch 或转录题面。
-- 页面清点、文件指纹与来源边界见 `reports/2006-tianjin-science-source-intake.md`。下一步按原页完成题面转录并记录存疑项；本阶段不表示来源认证、答案完成或整卷/全语料完成。
+- 页面清点、文件指纹与来源边界见 `reports/2006-tianjin-science-source-intake.md`。题面阶段另完成 Q1–Q22 转录，详见 `reports/2006-tianjin-science-question-transcription.md` 和 `../2006/2006_数学真题_天津理_试题.md`；Q7 下标记号已按原页订正。Q2 两条渐近线相交而选项无 0，题面照录并标 U / 待核。答案、解析、图稿、provenance 和 paper/batch 登记仍未完成；来源身份与版次未认证。本阶段不表示来源认证、答案完成或整卷/全语料完成。
 
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
