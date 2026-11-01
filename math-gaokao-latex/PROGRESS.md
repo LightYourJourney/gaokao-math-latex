@@ -49,6 +49,12 @@
 - 图形只表达源图拓扑，不声称比例还原；Q19 部分虚线的几何语义保留不确定。Q22 的 P、Q 依据所选满足题设关系的归一化参数计算为实际交点。
 - 图稿入库后重新绑定受题面哈希影响的 provenance，manifest revision 5772；provenance 与题源/答案锚点检查通过。项目 TeX/简答/版本入口、正式构建及视觉校样仍待完成。Q2 保持 U 与 ISSUE-1288/1289，paper blocked；本阶段不表示本卷完成或全语料完成。
 
+### 2006 天津理科候选卷：确定性项目生成（2026-11-02）
+
+- 题源题号改用 `**N．**`、小问改用行内编号，匹配批量 Markdown→TeX 转换器；原题面事实未改，逐题 provenance 摘要已重算。Q2 的 U/PENDING 仅规范化标点，简答版显式输出 U 与待核说明。
+- 确定性生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 及四版入口壳。项目/简答/版本 `--check`、source manifest、issues、22 题 solution source 和三角色 provenance 检查全部通过；详见 reports/2006-tianjin-science-project-generation.md。
+- 四版 XeLaTeX 正式构建、构建收据和成品页视觉审查尚未完成。Q2 仍为 U、ISSUE-1288/1289 开放，paper blocked；本阶段不表示本卷完成或全语料完成。
+
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。
