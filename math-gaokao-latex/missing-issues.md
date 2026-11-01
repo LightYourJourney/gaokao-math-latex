@@ -21364,3 +21364,76 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1279
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "a9250be4e7ad79837eca43322e292d67e1938e325590cb386ddb6007e6d96563",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2019-regular-national-3-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1280
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "b424c9bce680ac50f6da53a4dc642e8b2960b11753c61216c03ce58eddf06e6a",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2019-regular-national-3-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1281
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "e47f03eb93a782739f24388f6bdfdcef2f045c86a0541e7c6cfcc9b7b46ee28e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2019-regular-national-3-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1282
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "589b1a716194729aee1e46e1022d1f57c8ecd62f7230441c7f96f29ac5f2c73e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2019-regular-national-3-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
