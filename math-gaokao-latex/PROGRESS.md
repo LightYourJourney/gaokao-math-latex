@@ -12157,6 +12157,16 @@
 - 调用 `solution_sources.build_paper_targets` 确定性渲染生成 `2019/2019_数学真题_北京卷文_含解析.md`（29038 字节）；
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True problems: []`，格式 100% 闭环无分歧。
 
+### phase0-b23 2019 北京卷文科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b23.json`：
+  - 注册试卷 `gk-2019-regular-beijing-arts`，绑定上游来源 `src-7f7753913867f6f28d3a208c66f0a0a0beea9ece56504daff36cc2faab5de57e`；
+  - 设置项目目录 `2019_北京卷_文科`、题数 20 题、题型结构（选择 1–8、填空 9–14、解答 15–20）；
+  - 建立批次 `phase0-b23`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5691`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
+
 
 
 
