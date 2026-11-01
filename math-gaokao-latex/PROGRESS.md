@@ -664,6 +664,12 @@
 - 新旧页面渲染的79页均有像素差异，因此没有继承旧页视觉结论；四版79页逐页复核，8项检查共632项全通过、失败0。finalizer 于 manifest revision 5513 将 `phase0-b04` 关闭为 `closed`；该批共4卷355页，其他非阻断问题 `ISSUE-0980` 仍保留。
 - `source_manifest`、issues、4卷 provenance、4卷生成物 currentness、build receipts 4/4、review finalizer、全量 report currentness 与775行 CSV 检查通过。未运行测试套件。构建耗时约17秒；模型/费用未知。此记录只关闭 `phase0-b04`，不代表整个语料库完成。
 
+### 2006 四川文科候选卷：固定来源接收（2026-11-01）
+
+- 固定 source `src-99302e23c3dd69f99321844a08e849534fada59a8035aba9d52884db5921f1e7`，文件 `普通高考/2006/2006四川文.pdf`；实测 SHA-256 `b5188fc07294c3c5d5a554c9d2c540d2205ef78c000038e62488f1e9be7c42f6`、Git blob `413627ca525d58ab84687e0feff463b102e59906`，与 manifest 一致。固定副本为2页 A3，印刷页334–335，题签为“2006 普通高等学校招生考试（四川卷文）”；可见22题，五题有图。
+- source 保持 ready 且未绑定 paper；未登记试卷或批次，未修改 manifest/issues/provenance。PDF 页面已渲染目视；题面分段转录草稿与独立盲解已派发，待主会话逐题整合复核。出版者、版次、来源链、官方身份及答案来源均未核；固定 PDF 未见答案页。
+- 接收报告：`reports/2006-sichuan-arts-source-intake.md`。下一阶段完成规范题面及五幅 TikZ 图并与固定原页复核，答案需独立求解、复核后再决定注册。此阶段不表示该卷完成或1952–2026语料库完成。
+
 ### 2006 北京理科候选卷：四版视觉复核与批次关闭（2026-10-30）
 
 - 当前正式构建 attempt `01470e69-89d4-4299-883f-517a2a237658`，输入 manifest revision 5508，构建后 revision 5509；视觉 finalizer 将 `phase1-b61` 关闭于 revision 5510。四版依次5/19/7/15页，均构建成功，缺字、错误、overfull 与未定义引用均为0；PDF SHA-256 见 `reports/2006-beijing-science-formal-build.md`。
