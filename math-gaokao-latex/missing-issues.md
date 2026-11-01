@@ -21522,3 +21522,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1288
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页印刷页336第2题写明双曲线焦点为 F1(-3,0)、F2(3,0)，并给出一条渐近线 y=√2x，问“两条渐近线间的距离”；该双曲线另一个渐近线为 y=-√2x，两条直线相交于原点，按直线间最小距离为0，选项却为6√3、4、2、1。固定 PDF 仅有题面，没有答案或勘误，无法确定预期问题或答案。",
+  "fingerprint": "f35f501908305998ea7b439e837478987c42f21ba6c86d17eb1fc2decd538cd5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-tianjin-science",
+  "question_id": "gk-2006-regular-tianjin-science-q02",
+  "resume_action": "查找并核对同版可靠复本、正式勘误或可追溯答案材料；未取得可核来源前，题面保持原样，Q2答案记 U，不选择不匹配选项。",
+  "source_id": "src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

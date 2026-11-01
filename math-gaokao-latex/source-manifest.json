@@ -2056,6 +2056,14 @@
         "gk-2006-regular-tianjin-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b67",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-tianjin-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2065,7 +2073,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "42414173-a74d-4bd4-89dc-2a0c7bad363c",
+  "last_transaction_id": "129fc79b-1f12-40fa-8d13-c95b3cd82322",
   "papers": [
     {
       "blocked_from": null,
@@ -27274,9 +27282,63 @@
       "title": "2006 年·普通高等学校招生考试·天津卷文科",
       "track": "arts",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_tianjin_science",
+        "id": "gk-2006-regular-tianjin-science",
+        "note": "固定候选题面 PDF source ID src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307，SHA-256 b38a31042aaadb71d602486419cd5f999ff607dfd5ae3f01eb95f5fd8c253039；PDF第1—2页、印刷页336—337，题签可见“2006 普通高等学校招生考试（天津卷理）”。发布者、版次、来源链与官方身份未核；PDF未见答案、解析或评分材料。Q2原文问两渐近线间距离，已知渐近线相交而选项不含0，题面和预期答案冲突，待核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考天津卷理科",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "天津卷理科"
+      },
+      "issue_ids": [
+        "ISSUE-1288"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-tianjin-science",
+      "production_state": "blocked",
+      "project_dir": "2006_天津卷_理科",
+      "question_count": 22,
+      "resume_action": "查找并核对同版可靠复本、正式勘误或可追溯答案材料；未取得可核来源前，题面保持原样，Q2答案记 U，不选择不匹配选项。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_天津理_含解析.md",
+        "questions": "2006/2006_数学真题_天津理_试题.md",
+        "solution_body": "2006/2006_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307"
+      ],
+      "title": "2006 年·普通高等学校招生考试·天津卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5766,
+  "revision": 5767,
   "schema_version": 1,
   "sources": [
     {
@@ -34685,8 +34747,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a1a31a3911ff0ca1901e5c96dea353245495067f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006天津理.pdf",
       "regions": [],
       "source_id": "src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307",

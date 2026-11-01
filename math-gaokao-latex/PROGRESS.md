@@ -30,6 +30,13 @@
 - Q2 两条渐近线相交，按通常距离为 0，但固定题面选项没有 0；题面与选项冲突继续标 U，待有可靠同版材料再裁决。Q13 点面距 3/4 经截面角和法向量计算确认；Q22 的解析曾误留另一数列题内容、速查表也重复列 Q22(1)，均已修正为与本卷椭圆题相符。
 - 当前仍未登记 paper/source/batch，尚缺题图矢量稿、Q2 blocking issue 与逐题三角色 provenance、确定性项目生成、正式构建及逐页视觉校样。此阶段仅完成答案/解析源及独立复核，不表示整卷或 1952–2026 语料完成。
 
+### 2006 天津理科候选卷：paper/source 登记（2026-11-02）
+
+- gk-2006-regular-tianjin-science / phase1-b67 绑定固定候选 source src-634ea48d3fc77ee048d2cf8418a3afb0d6b18c347365c36d8a8e15b53796d307；register-papers dry-run 与写入通过，manifest revision 5767。该绑定不认证来源发布者、版次、来源链或官方身份。
+- Q2 作为 ISSUE-1288（answer-conflict，open / blocks_completion）登记：两条渐近线相交，按通常两直线距离为 0，固定题面选项却无 0；保留 U，不猜命题意图。paper 为 blocked。
+- 规范题面、答案要点、解析正文已写入 paper/source 绑定；兼容项目解析器的题号与小问 heading 已规范化。solution_sources extract-batch --write 已确定性生成含解析稿；source manifest、问题账和 22 题 solution source 对齐检查通过。登记记录见 reports/2006-tianjin-science-registration.md。
+- 图稿、三角色 provenance、项目 TeX/简答/版本入口、正式构建与全页视觉审查尚未完成；本阶段不表示本卷验收或全语料完成。
+
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。
