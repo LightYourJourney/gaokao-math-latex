@@ -1,0 +1,35 @@
+% 2018 上海卷第17题：圆锥与截面三角形
+\begin{tikzpicture}[font=\small, line cap=round, line join=round, >=stealth, scale=1.3]
+  % 几何关键点
+  \coordinate (O) at (0, 0);
+  \coordinate (P) at (0, 3.5);
+  \coordinate (B) at (2.4, 0);
+  \coordinate (L) at (-2.4, 0);
+  % A 点位于底面椭圆前侧弧线，对应空间垂直半径在透视下的投影
+  \coordinate (A) at (-1.0, -0.50);
+  % M 为线段 AB 中点
+  \coordinate (M) at ($(A)!0.5!(B)$);
+
+  % 底面椭圆隐藏弧（后半圆，虚线）
+  \draw[dashed, thin] (B) arc (0:180:2.4cm and 0.55cm);
+
+  % 内部线段（全虚线）
+  \draw[dashed, thin] (P) -- (O);
+  \draw[dashed, thin] (O) -- (B);
+  \draw[dashed, thin] (O) -- (A);
+  \draw[dashed, thin] (A) -- (B);
+  \draw[dashed, thin] (P) -- (M);
+
+  % 底面椭圆可见弧（前半圆，粗实线）
+  \draw[thick] (L) arc (180:360:2.4cm and 0.55cm);
+
+  % 侧面母线轮廓（实线）
+  \draw[thick] (L) -- (P) -- (B);
+
+  % 顶点标签
+  \node[above] at (P) {$P$};
+  \node[left] at (O)  {$O$};
+  \node[below left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above left] at (M) {$M$};
+\end{tikzpicture}
