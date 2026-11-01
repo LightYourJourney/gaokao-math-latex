@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>=latex, scale=1.5]
+  \draw[->, thick] (-1.7, 0) -- (1.7, 0) node[below] {$x$};
+  \draw[->, thick] (0, -1.5) -- (0, 1.6) node[left] {$y$};
+  \node[below right] at (0, 0) {$O$};
+
+  \draw[thick, domain=0:360, samples=200, smooth]
+    plot ({1/sqrt(1 - abs(cos(\x))*sin(\x)) * cos(\x)}, {1/sqrt(1 - abs(cos(\x))*sin(\x)) * sin(\x)});
+\end{tikzpicture}

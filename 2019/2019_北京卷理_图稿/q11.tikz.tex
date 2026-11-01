@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=latex, scale=0.45, font=\small]
+  % 网格底图
+  \draw[step=1, gray!50, very thin] (0, -1) grid (14, 10);
+
+  % 正 (主) 视图
+  \draw[thick] (2, 5) rectangle (6, 9);
+  \draw[thick] (2, 6) -- (6, 6);
+  \node[below] at (4, 4.8) {正 (主) 视图};
+
+  % 侧 (左) 视图
+  \draw[thick] (9, 5) -- (13, 5) -- (13, 6) -- (11, 6) -- (9, 9) -- cycle;
+  \node[below] at (11, 4.8) {侧 (左) 视图};
+
+  % 俯视图
+  \draw[thick] (2, 0) rectangle (6, 4);
+  \draw[thick] (2, 2) -- (6, 2);
+  \node[below] at (4, -0.2) {俯视图};
+\end{tikzpicture}
