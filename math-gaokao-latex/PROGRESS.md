@@ -15,6 +15,12 @@
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
 - 实际全量测试结果 `Ran 1749 tests in 559.497s`、`OK (skipped=13)`；测试在全国Ⅲ理科题面草稿提交前启动，不表示该新草稿完成正式校验。
 
+### 2018 全国Ⅲ卷理科候选卷：正式登记与计划批次（2026-11-01）
+
+- 调用 `source_manifest.py register-papers` 单一事务登记 `gk-2018-regular-national-3-science` 与批次 `phase0-b14`，manifest revision 更新为 `5622`；
+- 项目目录为 `2018_全国Ⅲ卷_理科`，题量 23，结构为 12 选择 + 4 填空 + 5 必做解答 + 2 选做解答，卷种属性设为 `planned`；
+- 固定来源反向绑定 `src-d4cfa7d96fddac79dddeea4aadd9c96efa1cf1371d483b6acd3759eed3516767`。
+
 ### 2018 全国Ⅲ卷理科候选卷：四份规范源文档（2026-11-01）
 
 - 依固定来源原卷第 1—2 页（印刷页 1075—1076）整理出四份规范 Markdown：
