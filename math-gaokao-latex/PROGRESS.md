@@ -12239,6 +12239,16 @@
   - 20 道题目双向哈希匹配完整，无缺失小问，无重复题号；
   - 零结构性错误（`problems: []`，`ok: True`），四份 Markdown 规范源全量一致。
 
+### phase0-b24 2019 天津卷理科：试卷与批次注册（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b24.json`：
+  - 注册试卷 `gk-2019-regular-tianjin-science`，绑定上游来源 `src-6266612a7ec070d21a24172f28c0f92cba14d68bd7f0fe6da69fbb4aeeec1000`；
+  - 设置项目目录 `2019_天津卷_理科`、题数 20 题、题型结构（选择 1–8、填空 9–14、解答 15–20）；
+  - 建立批次 `phase0-b24`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5697`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
+
 
 
 
