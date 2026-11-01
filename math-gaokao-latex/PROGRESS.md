@@ -12349,6 +12349,17 @@
 - 执行 `provenance.py import-batch --batch phase0-b25 --write` 导入入库，manifest revision 推进至 `5707`；
 - 执行 `provenance.py check-batch --batch phase0-b25` 校验通过（`OK：1 卷`）。
 
+### phase0-b25 2019 天津卷文科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --manifest math-gaokao-latex/source-manifest.json --batch phase0-b25 --formal`；
+- 全卷四版（试题版、解析版、简答版、印刷版）一次性实现：
+  - 0 编译错误（`errors: 0`）；
+  - 0 致命排版溢出（`overfull: 0`）；
+  - 0 未解析引用或未定义命令（`warnings: 0`）；
+- 生成 `math-gaokao-latex/2019_天津卷_文科/receipts/build.json`，manifest revision 推进至 `5709`，状态推进为 `compiled_pending_review`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b25` 验证通过（`OK：1 卷`）。
+
+
 
 
 
