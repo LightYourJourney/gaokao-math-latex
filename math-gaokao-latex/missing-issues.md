@@ -16324,7 +16324,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "第8题题面未给跳绳决赛人数。反例 a=55,b=50，跳绳前7名为3、6、7、10、1、5、4号，与跳远前8名重合6人，而9号不入选。D仅在补充两项目决赛均8人的条件下成立，当前无可靠来源支持补充条件，答案待核。",
+  "current_evidence": "第8题题面未给跳绳决赛人数。反例 a=55,b=50，跳绳前7名为3、6、7、10、1、5、4号，与跳远前8名重合6人，而9号不入选。D仅在补充两项目决赛均8人的条件下成立。2026-11-02复查发现中国教育在线的2016试题页及答案页（https://gaokao.eol.cn/shiti/zhenti/201606/t20160607_1409236.shtml；https://gaokao.eol.cn/shiti/zhenti/201606/t20160607_1409440.shtml）仅作媒体分发线索；Google索引另可下载一份第三方托管的7页题目与答案PDF（https://download.s21i.co99.net/17094505/0/0/ABUIABA9GAAggrKh6QUoyrXD4wQ.pdf?f=YKT%EF%BC%88%E6%96%87%E6%95%B0%EF%BC%892016%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E9%AB%98%E8%80%83%E6%96%87%E7%A7%91%E6%95%B0%E5%AD%A6%E8%AF%95%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88.pdf&v=1562925314），SHA-256 8b6b9cd176310db003814475d8aa5d98a127821087aa5d8e725afa4ca4c98580；PDF元数据作者为 ran.ping、Creator 为 WPS 文字、创建日期为2019-07-12。该副本答案键1—8为 C、A、B、D、C、B、C、B，第8题列B；其题面仍未写跳绳决赛人数，且无考试机构发布链或勘误说明，不能补足条件或认证为官方答案。该非官方答案与在“两项目各8人”假设下得到的D不一致，答案继续待核。",
   "fingerprint": "f4d63b3066e0ac6c09d9680121c3dc79afae777ca84ccb92058d15981337a0f3",
   "impact": "blocks_completion",
   "paper_id": "gk-2016-regular-beijing-arts",
