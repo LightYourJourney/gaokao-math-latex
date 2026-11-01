@@ -11672,6 +11672,17 @@
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True`，格式 100% 闭环无分歧。
 
 
+### phase0-b18 2019 全国Ⅱ卷理科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b18.json`：
+  - 注册试卷 `gk-2019-regular-national-2-science`，绑定上游来源 `src-02261fd2b17291d1a966a4a57836c696e862c7a17bb80844a84d2c2c4b3c4412`；
+  - 设置项目目录 `2019_全国Ⅱ卷_理科`、题数 23 题、题型结构（选择 1–12、填空 13–16、解答 17–21、选做 22–23）；
+  - 建立批次 `phase0-b18`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5652`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
+
+
 
 
 
