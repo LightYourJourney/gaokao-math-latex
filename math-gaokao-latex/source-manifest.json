@@ -2064,6 +2064,15 @@
         "gk-2006-regular-tianjin-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b68",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-shandong-arts",
+        "gk-2006-regular-shandong-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2073,7 +2082,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "567781ab-fa08-4de2-9b49-77eb6a955d2e",
+  "last_transaction_id": "3bfd5034-fb2b-4865-a4af-247559bd6d44",
   "papers": [
     {
       "blocked_from": null,
@@ -27362,9 +27371,118 @@
       "title": "2006 年·普通高等学校招生考试·天津卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_shandong_arts",
+        "id": "gk-2006-regular-shandong-arts",
+        "note": "固定候选题面 PDF source ID src-a957620ac8adeec8abc02ef4bf8beb3bb89a7288cc7f086069fac46ed7dd63f2，SHA-256 dfa18cc6724fb66fe5f8f2fbc84e309d2ea709b3c91e6675acea06c2be05cf42；PDF第1—2页、印刷页322—323，题签显示“2006 普通高等学校招生考试（山东卷文）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q3、Q16、Q20 图稿尚待重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考山东卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "山东卷文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-shandong-arts",
+      "production_state": "planned",
+      "project_dir": "2006_山东卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_山东文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_山东文_含解析.md",
+        "questions": "2006/2006_数学真题_山东文_试题.md",
+        "solution_body": "2006/2006_数学真题_山东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a957620ac8adeec8abc02ef4bf8beb3bb89a7288cc7f086069fac46ed7dd63f2"
+      ],
+      "title": "2006 年·普通高等学校招生考试·山东卷文科",
+      "track": "arts",
+      "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_shandong_science",
+        "id": "gk-2006-regular-shandong-science",
+        "note": "固定候选题面 PDF source ID src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947，SHA-256 8cd7733727ed4ff238dedc4a1c7cb42773260de88f1d516f0416cbaa3976393b；PDF第1—2页、印刷页320—321，题签显示“2006 普通高等学校招生考试（山东卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q5 闭合向量不在选项内；Q10 按题面表达式没有常数项，均保持 U/PENDING。Q2、Q12、Q15、Q16、Q19 图稿尚待重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考山东卷理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "山东卷理科"
+      },
+      "issue_ids": [
+        "ISSUE-1294",
+        "ISSUE-1295",
+        "ISSUE-1296",
+        "ISSUE-1297"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-shandong-science",
+      "production_state": "blocked",
+      "project_dir": "2006_山东卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。；取得具有可信来源链的答案或正式勘误；此前答案继续为 U/PENDING，不推定官方答案。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_山东理_含解析.md",
+        "questions": "2006/2006_数学真题_山东理_试题.md",
+        "solution_body": "2006/2006_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947"
+      ],
+      "title": "2006 年·普通高等学校招生考试·山东卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5781,
+  "revision": 5782,
   "schema_version": 1,
   "sources": [
     {
@@ -34845,8 +34963,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5306b737a7c3ed9638f52386f1d2195b22b17855",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-shandong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006山东文.pdf",
       "regions": [],
       "source_id": "src-a957620ac8adeec8abc02ef4bf8beb3bb89a7288cc7f086069fac46ed7dd63f2",
@@ -34869,8 +34987,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6e8be14e134daf900d6610fea79e4e7629e68fd7",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006山东理.pdf",
       "regions": [],
       "source_id": "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947",

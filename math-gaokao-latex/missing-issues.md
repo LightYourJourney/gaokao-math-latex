@@ -21629,3 +21629,71 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1294
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页（印刷页320）第5题给出 a=(1,-2)、b=(-2,4)、c=(-1,-2)，要求 4a、4b-2c、2(a-c)、d 首尾相接构成四边形。前三个向量之和为 (2,12)，故闭合要求 d=(-2,-12)，而四个选项为 (2,6)、(-2,6)、(2,-6)、(-2,-6)，均不符。固定 PDF 仅含题面，未见答案、勘误或可追溯裁决材料。",
+  "fingerprint": "2dd203c2f8fdb009be3e781c6781c54a5825e8a0b26a523597ce9e1ee072b55f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shandong-science",
+  "question_id": "gk-2006-regular-shandong-science-q05",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。",
+  "source_id": "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1295
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q5 按固定题面推导与全部选项冲突，现有材料无法确认可用答案。答案层据此保留 U/PENDING。",
+  "fingerprint": "b38cf6a9cd9edbeabb695251e56acfbfd41f74cbe14075c04afcf2e2706f9cf6",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shandong-science",
+  "question_id": "gk-2006-regular-shandong-science-q05",
+  "resume_action": "取得具有可信来源链的答案或正式勘误；此前答案继续为 U/PENDING，不推定官方答案。",
+  "source_id": "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1296
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页（印刷页320）第10题印作 (x^3-i/sqrt(x))^n，第三、第五项系数之比为 -3/14，i^2=-1，并问常数项。由系数比得 n=10；通项 x 指数为 3n-7k/2，常数项要求 k=60/7 非整数。因此固定题面所述展开式不存在常数项，与选项冲突。固定 PDF 仅含题面，未见答案或勘误。",
+  "fingerprint": "30ba5f77c0821e5e70422dcf397044ecbe3bb2abb6bf6c953fc1494b4f41e55a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shandong-science",
+  "question_id": "gk-2006-regular-shandong-science-q10",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。",
+  "source_id": "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1297
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q10 按固定题面推导不存在题目所称的常数项，现有材料无法确认预期题意或可用答案。答案层据此保留 U/PENDING。",
+  "fingerprint": "fda5cbdaa2116c458e2bff4514278fa55f1d66b099a4303b51530bcd231ff172",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shandong-science",
+  "question_id": "gk-2006-regular-shandong-science-q10",
+  "resume_action": "取得具有可信来源链的答案或正式勘误；此前答案继续为 U/PENDING，不推定官方答案。",
+  "source_id": "src-58e17c4f7678bc58e38a926d939e980fac0868d781ca9da87efeeed6bf6c6947",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

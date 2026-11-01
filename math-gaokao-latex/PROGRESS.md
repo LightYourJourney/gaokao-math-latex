@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
+
+- 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。
+- 理科 Q5、Q10 各建立 `answer-conflict` 与 `answer-missing` open / `blocks_completion` 问题 `ISSUE-1294`–`ISSUE-1297`。理科 paper 状态 `blocked`；文科无已知题面/答案 blocker，当前 `planned`。答案均非官方，`official_answer=null`。
+- 登记后将 paper_id 写入两卷规范源，并经 `solution_sources.extract-batch --write` 重生成4个派生目标。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase1-b68` 和 `git diff --check` 均通过。
+- 逐题 provenance、题图、项目 TeX/简答、正式 PDF 构建及视觉审查未完成。详情见 `reports/2006-shandong-registration.md`；本阶段不表示任一卷闭环或长期语料完成。
+
 ### 2006 山东文科候选卷：独立答案与解析草稿（2026-11-02）
 
 - 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东文_答案要点.md` 与 `2006/2006_数学真题_山东文_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分页，来源发布者、版次、来源链与官方身份仍未核。
