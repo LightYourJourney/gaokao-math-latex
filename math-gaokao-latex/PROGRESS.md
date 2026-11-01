@@ -12320,6 +12320,15 @@
   - 20 道题目双向哈希匹配完整，无缺失小问，无重复题号；
   - 零结构性错误（`problems: []`，`ok: True`），四份 Markdown 规范源全量一致。
 
+### phase0-b25 2019 天津卷文科：试卷与批次注册（2026-11-01）
+
+- 编写注册规范 `math-gaokao-latex/.work/register_phase0_b25.json`：
+  - 注册试卷 ID `gk-2019-regular-tianjin-arts`，绑定上游来源 `src-58906e1ab0a3396177c115038497d19ff72892256c2c8d7289a29eae9410939b`；
+  - 设定项目目录 `2019_天津卷_文科`、文科赛道、总题数 20 题，规划入批次 `phase0-b25`；
+- 执行 `source_manifest.py register-papers --write` 注册入库，manifest revision 推进至 `5705`；
+- 执行 `source_manifest.py validate` 全量校验通过。
+
+
 
 
 

@@ -2016,6 +2016,14 @@
         "gk-2019-regular-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase0-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2019-regular-tianjin-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2025,7 +2033,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b4bb1f24-f050-4ed6-b17b-6a3809bed182",
+  "last_transaction_id": "e929280f-26a9-4f4b-9a3f-a3c7230850de",
   "papers": [
     {
       "blocked_from": null,
@@ -26890,9 +26898,61 @@
       "title": "2019 年·天津卷·理科",
       "track": "science",
       "year": 2019
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2019_gaokao_tianjin_arts",
+        "id": "gk-2019-regular-tianjin-arts",
+        "note": "固定来源为两页重排题面，内部绑定只固定输入字节，不认证出版者、版次、来源链及官方身份；固定源无答案页，答案与解析为非官方推导与公开资料核验。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "天津卷文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2019-regular-tianjin-arts",
+      "production_state": "planned",
+      "project_dir": "2019_天津卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2019/2019_数学真题_天津卷文_答案要点.md",
+        "combined_rendered": "2019/2019_数学真题_天津卷文_含解析.md",
+        "questions": "2019/2019_数学真题_天津卷文_试题.md",
+        "solution_body": "2019/2019_数学真题_天津卷文_解析正文.md"
+      },
+      "source_ids": [
+        "src-58906e1ab0a3396177c115038497d19ff72892256c2c8d7289a29eae9410939b"
+      ],
+      "title": "2019 年·天津卷·文科",
+      "track": "arts",
+      "year": 2019
     }
   ],
-  "revision": 5704,
+  "revision": 5705,
   "schema_version": 1,
   "sources": [
     {
@@ -44001,8 +44061,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7d46d9c13a1954ad37f9d99fc03f1ff5737b2913",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2019-regular-tianjin-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2019天津文.pdf",
       "regions": [],
       "source_id": "src-58906e1ab0a3396177c115038497d19ff72892256c2c8d7289a29eae9410939b",
