@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=latex, font=\small, scale=0.9]
+  \tikzstyle{startstop} = [draw, rounded corners=8pt, minimum width=2cm, minimum height=0.7cm, text centered]
+  \tikzstyle{io} = [draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=0.7cm, text centered]
+  \tikzstyle{process} = [draw, minimum width=2.2cm, minimum height=0.7cm, text centered]
+  \tikzstyle{decision} = [draw, diamond, aspect=2, minimum width=2cm, minimum height=0.8cm, text centered]
+  \tikzstyle{arrow} = [thick, ->]
+
+  \node (start) [startstop] at (0, 0) {开始};
+  \node (in) [io] at (0, -1.0) {输入 $\varepsilon$};
+  \node (init) [process] at (0, -2.0) {$x = 1,\ s = 0$};
+  \node (p1) [process] at (0, -3.0) {$s = s + x$};
+  \node (p2) [process] at (0, -4.0) {$x = \dfrac{x}{2}$};
+  \node (dec) [decision] at (0, -5.2) {$x < \varepsilon$};
+  \node (out) [io] at (0, -6.6) {输出 $s$};
+  \node (stop) [startstop] at (0, -7.6) {结束};
+
+  \draw[arrow] (start) -- (in);
+  \draw[arrow] (in) -- (init);
+  \draw[arrow] (init) -- (p1);
+  \draw[arrow] (p1) -- (p2);
+  \draw[arrow] (p2) -- (dec);
+  \draw[arrow] (dec) -- node[right] {是} (out);
+  \draw[arrow] (out) -- (stop);
+
+  \draw[arrow] (dec.east) -- ++(1.2,0) node[above right] {否} |- (p1.east);
+\end{tikzpicture}

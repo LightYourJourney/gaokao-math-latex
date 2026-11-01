@@ -1,0 +1,63 @@
+\begin{tikzpicture}[>=latex, scale=0.95]
+  % 图 1
+  \begin{scope}[shift={(0,0)}]
+    % 矩形 ADEB
+    \coordinate (E) at (0,0);
+    \coordinate (B) at (2.4,0);
+    \coordinate (A) at (2.4,1.4);
+    \coordinate (D) at (0,1.4);
+    \draw[thick] (D) -- (A) -- (B) -- (E) -- cycle;
+
+    % Rt\triangle ABC
+    \coordinate (C) at (4.8,0);
+    \draw[thick] (A) -- (C) -- (B);
+
+    % 菱形 BFGC
+    \coordinate (F) at (3.6,-1.8);
+    \coordinate (G) at (6.0,-1.8);
+    \draw[thick] (B) -- (F) -- (G) -- (C);
+
+    % 标签
+    \node[above left] at (D) {$D$};
+    \node[above] at (A) {$A$};
+    \node[below left] at (E) {$E$};
+    \node[above right] at (B) {$B$};
+    \node[above right] at (C) {$C$};
+    \node[below left] at (F) {$F$};
+    \node[below right] at (G) {$G$};
+
+    \node at (2.8,-2.6) {\small 图 1};
+  \end{scope}
+
+  % 图 2
+  \begin{scope}[shift={(8.2,0)}]
+    % 空间多面体
+    \coordinate (B) at (0.6,0);
+    \coordinate (C) at (3.2,0);
+    \coordinate (G) at (4.6,1.4);
+    \coordinate (E) at (2.0,1.4); % 即 E(F)
+
+    % 底面菱形 BCGE
+    \draw[thick] (B) -- (C) -- (G) -- (E) -- cycle;
+
+    % 侧向顶点 A (直立在 B 上方偏左)
+    \coordinate (A) at (0,0.3);
+    \draw[thick] (B) -- (A);
+    \draw[dashed, thick] (A) -- (C);
+
+    % 顶点 D
+    \coordinate (D) at ($(A)+(E)-(B)$);
+    \draw[thick] (A) -- (D) -- (E);
+    \draw[thick] (D) -- (G);
+
+    % 标签
+    \node[below] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[right] at (G) {$G$};
+    \node[below right] at (E) {$E(F)$};
+    \node[left] at (A) {$A$};
+    \node[above left] at (D) {$D$};
+
+    \node at (2.4,-1.0) {\small 图 2};
+  \end{scope}
+\end{tikzpicture}
