@@ -18,5 +18,5 @@
 ## 确定性验证与未完成事项
 
 - `parse_question_blocks`、`parse_answer_points`、`validate_solution_body` 分别识别22题；逐题比较后，题面、答案要点和解析正文的小问集合一致；`git diff --check` 通过。
-- Q3、Q16、Q20 图稿未绘制；未登记项目、source、batch、issue 或 provenance，未更新 manifest；未生成项目 TeX 和含解析稿，未构建 PDF、未生成构建/视觉回执、未运行全库测试。
+- 后续阶段已完成 Q3、Q16、Q20 图稿与 provenance 登记，并生成项目 TeX/简答/四版壳；正式 PDF、构建/视觉回执和全库测试尚未完成，阶段现状见 `reports/2006-shandong-figure-generation.md`。
 - 下一阶段应完成逐题 provenance 与项目登记，再处理图稿和确定性生成。固定来源身份与官方答案仍未认证；不据此宣称本卷闭环或 1952–2026 语料完成。

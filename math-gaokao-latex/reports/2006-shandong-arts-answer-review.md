@@ -17,5 +17,5 @@
 ## 状态与门禁
 
 - 数学差异已复核；答案要点和解析正文仍保持非官方独立推导，`official_answer: null`。未将盲核者的错误结果导入答案稿。
-- 题面、答案、解析三层均由 `solution_sources` 识别为22题，逐题小问集合一致；窄校验与 `git diff --check` 已通过（命令及输出在工作记录中）。Q3/Q16/Q20 图稿、逐题 provenance、manifest 项目登记、正式 TeX/PDF 构建与视觉回执尚未完成。
+- 题面、答案、解析三层均由 `solution_sources` 识别为22题，逐题小问集合一致；题图、逐题 provenance、manifest 登记和项目 TeX/简答/四版壳已完成。正式 PDF 构建、视觉回执及整页审查仍待办理，详见 `reports/2006-shandong-figure-generation.md`。
 - 本记录不构成来源认证、官方答案核验、卷级闭环或长期语料完成声明。

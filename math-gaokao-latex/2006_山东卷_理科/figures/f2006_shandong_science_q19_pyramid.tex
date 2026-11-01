@@ -1,0 +1,10 @@
+% 来源：固定候选 PDF，山东理科，PDF 第2页（印刷页321），Q19。
+\begin{tikzpicture}[x=1cm,y=0.78cm,line cap=round,line join=round]
+\coordinate (A) at (0,0); \coordinate (B) at (2.3,-0.35); \coordinate (C) at (3.1,0.45); \coordinate (V) at (1.15,3.1);
+\coordinate (A1) at ($(V)!0.58!(A)$); \coordinate (B1) at ($(V)!0.58!(B)$); \coordinate (C1) at ($(V)!0.58!(C)$);
+\draw (A)--(B)--(C) (A)--(V) (B)--(V) (C)--(V);
+\draw (A1)--(B1)--(C1);
+\draw[dashed] (A)--(C) (A1)--(C1);
+\node[below left] at (A) {$A$}; \node[below] at (B) {$B$}; \node[right] at (C) {$C$};
+\node[above] at (V) {$V$}; \node[left] at (A1) {$A_1$}; \node[below right] at (B1) {$B_1$}; \node[right] at (C1) {$C_1$};
+\end{tikzpicture}

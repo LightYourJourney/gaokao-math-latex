@@ -18,5 +18,5 @@
 ## 确定性验证与未完成事项
 
 - `parse_question_blocks`、`parse_answer_points`、`validate_solution_body` 分别识别22题；逐题比较后，题面、答案要点和解析正文的小问集合一致；`git diff --check` 通过。
-- 尚未创建 Q5、Q10 issue 或登记 U blocker，未登记 paper/source/batch、未更新 manifest/provenance、未绘制 Q2/Q12/Q15/Q16/Q19 图稿，未生成项目 TeX 和含解析稿，未构建 PDF、未生成构建/视觉回执、未运行全库测试。
-- 下一阶段按实际题面冲突建立具体 issue，再完成逐题 provenance、项目登记及图稿。来源身份与官方答案仍未认证；本阶段不表示本卷闭环或 1952–2026 语料完成。
+- 后续阶段已为 Q5/Q10 建立四条阻断 issue 并保持 U/PENDING，完成逐题 provenance、Q2/Q12/Q15/Q16/Q19 图稿和项目 TeX/简答/四版壳；正式 PDF、构建/视觉回执和全库测试尚未完成。当前状态见 `reports/2006-shandong-figure-generation.md`。
+- 来源身份与官方答案仍未认证；本阶段不表示本卷闭环或 1952–2026 语料完成。

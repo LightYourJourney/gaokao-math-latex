@@ -23,6 +23,6 @@
 - 登记前已有两卷规范题面、答案要点、解析正文及以 `solution_sources.render_combined` 生成的初始 `_含解析.md`。
 - 登记后将 `paper_id` 写入两卷三层规范源，并运行 `solution_sources.py extract-batch --manifest source-manifest.json --batch phase1-b68 --write`，实际提交4个派生目标。
 - `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b68` 和 `git diff --check` 均通过。
-- 六份三角色工作记录已导入两个卷级 `provenance.json`。`provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase1-b68`、`source_manifest.py validate`、`issues.py validate` 与 `solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b68` 均通过。理科 Q5/Q10 的 U / unresolved 记录分别关联现有四条 blocker。仍未登记题图文件、未生成 TeX/简答/印刷项目，未构建正式 PDF 或生成构建/视觉回执；下一步办理图稿与项目生成。
+- 六份三角色工作记录已导入两个卷级 `provenance.json`。随后完成8幅题图登记与 TeX/简答/四版壳生成；相关实做、manifest revision、门禁及待完成正式构建详见 `reports/2006-shandong-figure-generation.md`。理科 Q5/Q10 的 U / unresolved 记录分别关联现有四条 blocker。正式 PDF、构建/视觉回执及批次收口尚未完成。
 
 本阶段不表示来源认证、两卷完成或 1952–2026 长期语料完成。

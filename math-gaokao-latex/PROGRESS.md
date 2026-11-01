@@ -17,6 +17,12 @@
 - manifest revision `5782→5783`，批次状态 `provenance_verified`；文科为 `answers_verified`，理科仍为 `blocked`。理科 Q5、Q10 保持 U / unresolved，并分别关联 `ISSUE-1294`–`ISSUE-1297` 四条 open / `blocks_completion` blocker。
 - `provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase1-b68`、`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b68` 均通过。尚未登记/绘制题图、生成项目 TeX/简答、正式构建 PDF 或形成视觉回执；下阶段先处理题图与项目生成。本阶段不表示两卷闭环或长期语料完成。
 
+### 2006 山东文理候选卷：题图登记与项目 TeX 生成（2026-11-02）
+
+- 按固定候选 PDF 重绘文科 Q3/Q16/Q20、理科 Q2/Q12/Q15/Q16/Q19 共8幅 TikZ 图。每图含源 PDF 页与题号注释；8份 standalone XeLaTeX 均编译成功，渲染后逐幅目视检查。报告记录图面边界及剩余正式版面复核。
+- 规范题面以相对 Markdown 链接绑定本卷 `.tex` 文件，manifest `figure_files` 与合并题面/解析中的复用数一致（每图2次）。manifest revision 经图稿登记、provenance 哈希刷新、occurrence 同步及状态重算到 `5788`；文科当前 `editions_generated`，理科因 Q5/Q10 blocker 仍为 `blocked`，批次 `provenance_verified`。
+- 生成器、简答、四版壳均已写入并通过 `--check`；`solution_sources check-batch`、`provenance check-batch`、`source_manifest validate` 与 `issues validate` 通过。未构建正式四版 PDF，未生成 build/review receipt，未作整页视觉校样或批次收口。本阶段不表示两卷闭环或长期语料完成。
+
 ### 2006 山东文科候选卷：独立答案与解析草稿（2026-11-02）
 
 - 按固定题面形成 Q1–Q22 非官方答案要点及逐题推导，分别写入 `2006/2006_数学真题_山东文_答案要点.md` 与 `2006/2006_数学真题_山东文_解析正文.md`。答案层明确 `official_answer: null`；固定 PDF 未见答案、解析或评分页，来源发布者、版次、来源链与官方身份仍未核。
