@@ -1,0 +1,27 @@
+% 2018 浙江卷第3题：三视图
+\begin{tikzpicture}[font=\small, line cap=round, line join=round, >=stealth]
+  % 正视图
+  \begin{scope}
+    \draw[thick] (0, 0) rectangle (2, 2);
+    \draw[thick] (1, 0) -- (1, 2);
+    % 尺寸标注
+    \draw[<->] (0, -0.2) -- (1, -0.2) node[midway, fill=white, inner sep=1pt] {$1$};
+    \draw[<->] (1, -0.2) -- (2, -0.2) node[midway, fill=white, inner sep=1pt] {$1$};
+    \draw[<->] (2.2, 0) -- (2.2, 2) node[midway, fill=white, inner sep=1pt] {$2$};
+    \node[below=5mm] at (1, 0) {正视图};
+  \end{scope}
+
+  % 侧视图
+  \begin{scope}[xshift=3.2cm]
+    \draw[thick] (0, 0) rectangle (2, 2);
+    % 尺寸标注
+    \draw[<->] (0, -0.2) -- (2, -0.2) node[midway, fill=white, inner sep=1pt] {$2$};
+    \node[below=5mm] at (1, 0) {侧视图};
+  \end{scope}
+
+  % 俯视图（位于正视图下方）
+  \begin{scope}[yshift=-2.6cm]
+    \draw[thick] (0, 2) -- (2, 2) -- (2, 0) -- (1, 0) -- cycle;
+    \node[below=3mm] at (1, 0) {俯视图};
+  \end{scope}
+\end{tikzpicture}
