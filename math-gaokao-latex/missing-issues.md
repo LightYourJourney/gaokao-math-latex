@@ -21505,3 +21505,20 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1287
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页印刷页338题14清晰写“若半径为1的圆分别与 y 轴的正半轴和射线 y=√3/3 x (x≥0) 相切，则这两个圆的方程为”。按一个圆同时与两条指定射线相切且切点位于射线上解释，当前只能确定一个候选圆方程；题干所称两个与条件不相符。固定 PDF 只有题面，无答案或勘误，无法确认原题文字是否有误。",
+  "fingerprint": "024038cb8fec1e51a608afc97e42998d15c081cffe374d11e10f0c12e3252f04",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-tianjin-arts",
+  "question_id": "gk-2006-regular-tianjin-arts-q14",
+  "resume_action": "查找并核对同版可靠复本、正式勘误或可追溯的答案材料；未取得可核来源前，Q14答案继续记 U，不补造第二个方程，保留题面原文。",
+  "source_id": "src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
