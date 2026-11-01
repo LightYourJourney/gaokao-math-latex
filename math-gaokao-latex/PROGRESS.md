@@ -11419,6 +11419,23 @@
 - 执行 `build_projects.py validate-receipts --paper gk-2018-regular-zhejiang` 验证通过（`OK：1 卷`），manifest 批次状态进入 `compiled_pending_review`。
 
 
+### phase0-b15 2018 浙江卷：视觉复核与批次闭环（2026-11-01）
+
+- 发现并消除 Overfull：
+  - 首轮构建在解析版第 605 行（Q17 椭圆与二次函数最值推导展开式）产生 24.62pt Overfull；
+  - 在 `2018/2018_数学真题_浙江_解析正文.md` 中将展开等式以 `aligned` 拆分为两行，重新刷新 `含解析.md` 并生成 `answers.tex`；
+  - 重新构建后，四版 Overfull 降至 0（试题版 0、解析版 0、简答版 0、印刷版 0），Underfull 亦为 0；
+- 逐页八项视觉复核：
+  - 覆盖试题版（5页）、解析版（30页）、简答版（7页）、印刷版（22页）共 64 页，512 项检查全部通过（`pass`）；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b15 --output-report math-gaokao-latex/reports/phase0-b15.md`，返回 `FINALIZED`；
+  - manifest revision 推进，`phase0-b15` 状态关闭为 `closed`，`gk-2018-regular-zhejiang` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b15 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b15` 验证通过（`FINALIZED：phase0-b15`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
+
 
 
 
