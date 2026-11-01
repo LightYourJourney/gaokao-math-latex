@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
+
+- 修正规范题面 TeX 中数学模式的中文分隔标点：使用 `\text{、}`、`\text{。}` 等保留标点字形且不将句末标点挪出公式；更新后重新生成四版及答案材料、重算题面哈希并导入 provenance，manifest revision 推进至 `5755`。先前尝试把标点移到显示公式外造成页面左侧游离标点，未接受，已修复并以最终构建复核。
+- 正式构建 attempt `2f24b17d-9a77-4f9f-89c0-c1b0cdcda9cc` 成功：试题版 6 页、解析版 20 页、简答版 8 页、印刷版 16 页，共 50 页；四版均 0 编译错误、0 缺字、0 overfull/underfull 与 0 未定义引用。`validate-receipts` 对最终构建回执及当前输入检查通过。
+- 对最终构建的四版全页渲染逐页视觉检查，并对图页、密集页及长解析页检查高分辨率图像。回执覆盖 50/50 页、400 项检查：360 项 `pass`，40 项因页面无图而 `not_applicable`，0 项 `fail`；图形页标签/线条清晰，未见截断、公式错位、答案串版或分页溢出。视觉回执绑定上述 attempt、PDF 指纹与工具链。
+- `review_receipts.py finalize-batch` 实际返回 `FINALIZED`，manifest revision `5758`；`phase1-b65` 结论 `closed_with_blockers`，卷仍受 `ISSUE-1285`、`ISSUE-1286` 阻塞。Q8 凹多面体按题面条件复算为 `1-\sqrt2/6`，固定副本印载为 `1+\sqrt2/6`；未找到可裁决的同版勘误/官方答案，继续记 U，不指定官方答案。
+- 阶段门禁：`source_manifest validate`、issues validate、provenance `check-batch`、solution source `check-batch`（22 题）、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、构建 `validate-receipts --require-final --require-current-inputs`、视觉 `check-batch` 均通过；`manifest_csv --write` 确认 775 行无需改动；全量报告 render 回读和 `report check --all` 均通过，未完成状态保留在报告中。未运行全量测试套件。
+- 本阶段只覆盖 2008 上海春季卷，不代表其他年份或全语料完成；下一步按新任务范围继续处理其他卷，Q8 阻塞需在发现可靠同版裁决证据后再更新。
+
 ### 2008 上海春季卷：登记、三角色 provenance 与项目生成（2026-11-02）
 
 - 注册 `gk-2008-spring-shanghai` / `phase1-b65`，manifest revision `5748→5749`；paper 绑定固定候选 source，但不认证发布者、版次、来源链或官方身份。Q8 的题面/印载答案冲突和正式答案缺失分别保留为 `ISSUE-1285`、`ISSUE-1286`，paper 状态为 `blocked`。
