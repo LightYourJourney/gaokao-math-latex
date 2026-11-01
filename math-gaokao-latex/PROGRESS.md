@@ -12055,3 +12055,12 @@
   - `2019/2019_数学真题_北京卷理_解析正文.md`（20 题详尽严密推导，严格遵循总解析与各小问解析分层规范）；
 - 调用 `solution_sources.build_paper_targets` 确定性渲染生成 `2019/2019_数学真题_北京卷理_含解析.md`（37658 字节）；
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True problems: []`，格式 100% 闭环无分歧。
+
+### phase0-b22 2019 北京卷理科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b22.json`：
+  - 注册试卷 `gk-2019-regular-beijing-science`，绑定上游来源 `src-609b807cb98571ab293872b8ef4e75c1ccf4571ac23d8e8b6e49e0366ae07211`；
+  - 设置项目目录 `2019_北京卷_理科`、题数 20 题、题型结构（选择 1–8、填空 9–14、解答 15–20）；
+  - 建立批次 `phase0-b22`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5683`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
