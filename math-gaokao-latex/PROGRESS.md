@@ -11793,45 +11793,15 @@
 - 执行 `provenance.py import-batch --batch phase0-b19 --write` 正式入库，生成 `math-gaokao-latex/2019_全国Ⅱ卷_文科/provenance.json`，manifest revision 推进至 `5660`；
 - 执行 `provenance.py check-batch --batch phase0-b19` 验证通过（`OK：1 卷`）。
 
+### phase0-b19 2019 全国Ⅱ卷文科：正式编译构建（2026-11-01）
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 运行 `build_projects.py --batch phase0-b19 --write` 调用 XeLaTeX + latexmk 进行全量编译；
+- 四版本全部一次编译成功：
+  - 试题版：4 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 解析版：26 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 简答版：6 页，0 errors，0 overfull（含 1 处段首两端对齐松散 underfull）；
+  - 印刷版：18 页，0 errors，0 overfull，0 underfull；
+- 全卷四版总计 54 页全部输出，生成 `math-gaokao-latex/2019_全国Ⅱ卷_文科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b19` 验证通过（`OK：1 卷`）；
+- manifest revision 推进至 `5662`，批次推进至 `compiled_pending_review`。
 
