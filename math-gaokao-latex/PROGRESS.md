@@ -10,6 +10,12 @@
 - PDF 为 2 页 A3 横向，印刷页 332—333；页眉题签“2006 普通高等学校招生考试（四川卷理）”，共 22 题（12 选择、4 填空、6 解答）；可见图形在第 5、7、15、19 题。原件未见答案、解析、评分标准或完整书目信息。规范题面及四图尚未落盘；已有只读转录候选，待主会话对照定稿。
 - 仅按 manifest 现有 `ready` 候选和可见题签固定本轮输入；不能据此认证发布者、出版者、版次、来源链或官方身份。尚未登记 paper/batch、未修改 manifest、题目源、provenance、TeX、PDF 或正式回执。逐页与图形清点见 `reports/2006-sichuan-science-source-intake.md`。
 
+### 2006 四川理科：规范转录、答案复核与四版收口（2026-11-02）
+
+- `gk-2006-regular-sichuan-science` / `phase1-b64`：22 题、4 幅 TikZ 图；固定候选 SHA-256 `8f7abac384684941ea36bf1def602b99aba4ff0cf97ce5afff3b212194156961`。主会话逐题对照，独立答案可见复核确认答案与推导无数学错误；该源 PDF 无答案页，答案为 D 级非官方推导，`official_answer=null`。出版社、版次、来源链与官方身份仍未认证。
+- 四版 XeLaTeX 构建通过，attempt `09f05409-4455-4c4c-b65b-3fc19613e1ff`，页数为试题 5、解析 19、简答 7、印刷 15，共 46 页；逐页视觉审查通过，回执 current，finalize 于 manifest revision 5747 将批次置为 `closed`、试卷 `complete`。保留构建日志中的 Latin Modern 中文标点缺字警告；解析版一处 Underfull hbox 已登记豁免并对对应页目视通过。详情见 `reports/2006-sichuan-science-transcription-and-solutions.md` 与 `reports/phase1-b64.md`。
+- 定向来源、生成器、问题账、manifest、receipt、CSV 与全库报告投影检查通过。全量测试：`Ran 1749 tests in 513.609s`，`OK (skipped=13)`。此状态仅指这套固定候选卷，不认证来源身份，也不代表 1952–2026 语料库完成。
+
 ### 2016 北京文科 Q8：第三方答案副本复查，来源冲突仍待核（2026-11-02）
 
 - 延续 `ISSUE-1005` 的原卷/勘误来源核查。中国教育在线保存有 2016-06-07 试题页及答案页，但页面说明属于媒体考试内容汇总；本轮未发现考试机构发布链或勘误。另下载并检查一份 Google 索引到的第三方托管 7 页 PDF，SHA-256 `8b6b9cd176310db003814475d8aa5d98a127821087aa5d8e725afa4ca4c98580`；元数据作者 `ran.ping`、Creator `WPS 文字`、创建时间 2019-07-12。其题面仍没有跳绳决赛人数，答案键第 8 题为 B；它与“两项目决赛均 8 人”条件下推得的 D 不同。
