@@ -15,6 +15,13 @@
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
 - 实际全量测试结果 `Ran 1749 tests in 559.497s`、`OK (skipped=13)`；测试在全国Ⅲ理科题面草稿提交前启动，不表示该新草稿完成正式校验。
 
+### 2018 全国Ⅲ卷理科候选卷：四版本正式编译构建（2026-11-01）
+
+- 执行 `build_projects.py build --formal --paper gk-2018-regular-national-3-science`，试题版（6页）、解析版（31页）、简答版（8页）、印刷版（23页）共 68 页全量编译成功；
+- 0 errors, 0 undefined references, 0 missing characters, 0 Overfull, 0 Underfull；
+- attempt `4ad3809c-b6e6-4342-a99a-7a91b6a3cc73`，`validate-receipts` 校验通过，构建回执成功落盘；
+- 批次状态更新为 `compiled_pending_review`。
+
 ### 2018 全国Ⅲ卷理科候选卷：逐题来源证据与 provenance 导入（2026-11-01）
 
 - 23 题绑定固定源及题面和答案哈希：源 PDF 第 1 页为第 1—18 题，第 2 页为第 19—23 题；
