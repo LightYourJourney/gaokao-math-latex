@@ -1,0 +1,29 @@
+% Q9: qualitative graph of y=f'(x); topology follows the 2006 Tianjin science source.
+% Input inside a TikZ picture. Coordinates are schematic, not numerical data.
+\begin{scope}[line cap=round,line join=round,>=stealth]
+  % Axes
+  \draw[->] (-1.05,0) -- (4.35,0) node[below right] {$x$};
+  \draw[->] (1.48,-1.7) -- (1.48,2.85) node[above] {$y$};
+  \node[below left] at (1.48,0) {$O$};
+  \node[above right] at (1.05,2.38) {$y=f'(x)$};
+
+  % Open interval endpoints and their projections to the x-axis
+  \draw[dashed] (-0.78,0) -- (-0.78,2.12);
+  \draw[dashed] (3.72,0) -- (3.72,-1.12);
+  \draw[fill=white] (-0.78,0) circle (1.35pt);
+  \draw[fill=white] (-0.78,2.12) circle (1.35pt);
+  \draw[fill=white] (3.72,0) circle (1.35pt);
+  \draw[fill=white] (3.72,-1.12) circle (1.35pt);
+  \node[below] at (-0.78,-0.06) {$a$};
+  \node[above left] at (3.72,0.03) {$b$};
+
+  % Smooth derivative graph: three transverse zeros and a tangency at O.
+  \draw[thick]
+    (-0.78,2.12)
+      .. controls (-0.55,1.45) and (-0.38,-0.72) .. (-0.05,-1.28)
+      .. controls (0.23,-1.70) and (0.48,-0.15) .. (0.78,0.68)
+      .. controls (1.02,1.38) and (1.24,0.10) .. (1.48,0)
+      .. controls (1.71,0.02) and (1.95,1.88) .. (2.35,2.08)
+      .. controls (2.72,2.27) and (3.04,0.52) .. (3.34,0)
+      .. controls (3.48,-0.48) and (3.62,-0.95) .. (3.72,-1.12);
+\end{scope}

@@ -43,6 +43,12 @@
 - 固定 PDF 不含答案页，非 U 题答案均为 D 级本库推导，非官方。Q8 初始盲解错误 C 已由独立复核改正为 D。Q2 答案保持 U，并关联 ISSUE-1288（answer-conflict）和 ISSUE-1289（answer-missing），paper 仍 blocked。
 - 本阶段通过 source/answer hash 现场重算绑定角色记录；报告见 reports/2006-tianjin-science-provenance.md。图题 TikZ、确定性项目生成、四版构建及视觉验收尚待完成；不表示全语料完成。
 
+### 2006 天津理科候选卷：五题图稿登记（2026-11-02）
+
+- Q9、Q13、Q17、Q19、Q22 图稿已逐页对照固定 PDF 并登记到规范卷目录；Markdown 图链、manifest `figure_files`、生成映射及含解析稿同步，每图预期引用 2 次。图稿 SHA 与线型核对见 reports/2006-tianjin-science-figures.md。
+- 图形只表达源图拓扑，不声称比例还原；Q19 部分虚线的几何语义保留不确定。Q22 的 P、Q 依据所选满足题设关系的归一化参数计算为实际交点。
+- 图稿入库后重新绑定受题面哈希影响的 provenance，manifest revision 5772；provenance 与题源/答案锚点检查通过。项目 TeX/简答/版本入口、正式构建及视觉校样仍待完成。Q2 保持 U 与 ISSUE-1288/1289，paper blocked；本阶段不表示本卷完成或全语料完成。
+
 ### 2006 天津文科候选卷：固定来源接收与 Q1–Q22 转录（2026-11-02）
 
 - 固定 manifest source `src-14a9fbe59a503a78a1e7f2d2cdf99e546574bda3fe11f37a5f17eaee39a4af70`，路径 `普通高考/2006/2006天津文.pdf`；SHA-256 `5500d9997d4710817516ad6d73104b93f1ac657dcf5a06a8d6b5717566dd98fa`、Git blob `74908ff2f4075e3342b6fead2b2f17ffd172cb9e`、540890 bytes、两页均与 manifest 一致。固定副本只绑定本库字节，不认证发布者、版次、来源链或官方身份。
