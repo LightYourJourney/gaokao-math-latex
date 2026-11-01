@@ -12094,3 +12094,17 @@
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b22` 验证通过（`OK：1 卷`）；
 - manifest revision 推进至 `5689`，批次推进至 `compiled_pending_review`。
 
+### phase0-b22 2019 北京卷理科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（5页）、解析版（28页）、简答版（7页）、印刷版（20页）共 60 页，480 项检查全部通过（`pass`）；
+  - 全卷 4 处 TikZ 矢量图（`q2.tikz.tex` 流程框图、`q8.tikz.tex` 心形曲线、`q11.tikz.tex` 三视图、`q16.tikz.tex` 四棱锥立体图）在四版中渲染清晰完整，图文混排无遮挡、0 致命 Overfull、0 Underfull；
+  - 警告豁免 0 项，版面零瑕疵；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b22 --output-report math-gaokao-latex/reports/phase0-b22.md`，返回 `FINALIZED：phase0-b22`；
+  - manifest revision 推进至 `5690`，`phase0-b22` 状态关闭为 `closed`，`gk-2019-regular-beijing-science` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b22 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b22` 验证通过（`FINALIZED：phase0-b22`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
+
+
