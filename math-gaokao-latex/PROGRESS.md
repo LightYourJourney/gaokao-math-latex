@@ -9,6 +9,12 @@
 - 固定 source `src-66d8e0b462eb08b09996bc94059c5e2083a6a84040cd7167072ede89b8e98a1e`，路径 `春季高考/2008/2008春季上海.pdf`；SHA-256 `11b8987221585bfaf21fe3c7785852470a3f50de6ebf91235bac71fecbd1dcfe`、Git blob `5c86ee264295233737ae6d6e8b82cdf7aca5d2d0` 与 manifest 一致。4 页扫描件已逐页目视检查，题签显示上海春季招生考试，另载期刊参考答案与推导。
 - 此候选仍未绑定 paper/batch；期刊题签与 `ready` 状态不证明出版链、考试机构身份或答案官方性。本阶段未修改 manifest 或题库内容。页内清点和边界见 `reports/2008-spring-shanghai-source-intake.md`；来源尚待后续决定是否逐题转录。
 
+### 2008 上海春季卷：题面与印载参考答案转录草稿（2026-11-02）
+
+- 按固定件前两页整理 22 题题面、分值、卷首说明、三幅题图与一张表格的页内描述；按后两页摘录参考答案键及解答结论。题面草稿与印载答案摘录分别见 `reports/2008-shanghai-spring-question-transcription.md`、`reports/2008-shanghai-spring-printed-reference.md`。
+- 主会话以高分辨率页图对读并校正初步转录中的 Q2 分母、Q3 分式分母、Q7 渐近线、Q8“凹多面体”、Q20 凳子条件及 Q21/Q22 答案页下标与表格内容。此步骤记录的是副本上可见文字，不将期刊参考答案称为官方答案。
+- 仍未生成规范 `_试题.md`、答案/解析源、图稿、paper/batch 或 provenance；独立盲解及与印载答案的逐题数学对照待完成，未修改 manifest、issues、TeX 或正式回执。
+
 ### 2006 四川理科候选卷：固定来源接收（2026-11-02）
 
 - 固定来源候选 `src-816a1d2b69a0d5a2d89e7d76846ddccb2e1a9773e2d681c203b420d5f3e5d323`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006四川理.pdf`；SHA-256 `8f7abac384684941ea36bf1def602b99aba4ff0cf97ce5afff3b212194156961`、Git blob `6f186efff9a001fdddc131438460782a6ddd2138` 均与 revision 5742 manifest 一致。上游 checkout HEAD 为 `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。
