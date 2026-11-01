@@ -11409,6 +11409,17 @@
 - 执行 `provenance.py check-batch --batch phase0-b15` 验证通过（`OK：1 卷`）。
 
 
+### phase0-b15 2018 浙江卷：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --formal --paper gk-2018-regular-zhejiang`：
+  - 试题版、解析版、简答版、印刷版四套版本全部 XeLaTeX 严格编译通过；
+  - Overfull warnings: 0（试题版 0、解析版 0、简答版 0、印刷版 0）；
+  - Underfull warnings: 0；
+  - 生成 `math-gaokao-latex/2018_浙江卷/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --paper gk-2018-regular-zhejiang` 验证通过（`OK：1 卷`），manifest 批次状态进入 `compiled_pending_review`。
+
+
+
 
 
 
