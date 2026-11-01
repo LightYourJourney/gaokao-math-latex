@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=latex, font=\small, scale=0.9]
+  \tikzstyle{startstop} = [draw, rounded corners=6pt, minimum width=1.6cm, minimum height=0.6cm, text centered]
+  \tikzstyle{io} = [draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1.8cm, minimum height=0.6cm, text centered]
+  \tikzstyle{process} = [draw, minimum width=2.0cm, minimum height=0.6cm, text centered]
+  \tikzstyle{decision} = [draw, diamond, aspect=2.2, minimum width=2.4cm, minimum height=0.7cm, text centered]
+  \tikzstyle{arrow} = [thick, ->]
+
+  \node (start) [startstop] at (0, 0) {开始};
+  \node (init) [process] at (0, -0.95) {$i = 1,\ S = 0$};
+  \node (dec1) [decision] at (0, -2.15) {$i$ 为偶数?};
+  \node (proc1) [process] at (0, -3.35) {$j = \dfrac{i}{2}$};
+  \node (proc2) [process] at (0, -4.35) {$S = S + i \cdot 2^j$};
+  \node (odd) [process] at (2.2, -3.35) {$S = S + i$};
+  \node (inc) [process] at (0, -5.35) {$i = i + 1$};
+  \node (dec2) [decision] at (0, -6.45) {$i \geqslant 4$?};
+  \node (out) [io] at (0, -7.6) {输出 $S$};
+  \node (stop) [startstop] at (0, -8.45) {结束};
+
+  \draw[arrow] (start) -- (init);
+  \draw[arrow] (init) -- (dec1);
+  \draw[arrow] (dec1) -- node[right] {是} (proc1);
+  \draw[arrow] (proc1) -- (proc2);
+  \draw[arrow] (proc2) -- (inc);
+  \draw[arrow] (dec1.east) -| node[above, pos=0.3] {否} (odd.north);
+  \draw[arrow] (odd.south) |- ([yshift=0.25cm]inc.north);
+  \draw[arrow] (inc) -- (dec2);
+  \draw[arrow] (dec2) -- node[right] {是} (out);
+  \draw[arrow] (out) -- (stop);
+
+  \draw[arrow] (dec2.west) -- node[above] {否} ++(-1.6, 0) |- ([yshift=0.2cm]dec1.north);
+\end{tikzpicture}
