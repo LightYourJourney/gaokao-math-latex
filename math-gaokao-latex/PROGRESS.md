@@ -15,6 +15,14 @@
 - CSV 775行通过当前性检查，六份项目报告刷新后 `report.py check --all` 通过。
 - 实际全量测试结果 `Ran 1749 tests in 559.497s`、`OK (skipped=13)`；测试在全国Ⅲ理科题面草稿提交前启动，不表示该新草稿完成正式校验。
 
+### 2018 全国Ⅲ卷理科候选卷：项目 TeX 装配与四版壳生成（2026-11-01）
+
+- 复制 5 幅 TikZ 矢量图到 `2018_全国Ⅲ卷_理科/figures/`，`sync-figure-registry` 成功登记并写入 revision `5623`；
+- 执行 `generate_projects.py --write`，基于规范源生成全局 `index.json`、`questions.tex` 及 `answers.tex`；
+- 执行 `make_short_answers.py --write` 生成 `answers_short.tex`；
+- 执行 `make_editions.py --write` 生成试题版、解析版、简答版、印刷版四个独立编译壳文件；
+- 三项生成器及 `solution_sources check-batch` 校验全部通过，无格式与对齐缺陷。
+
 ### 2018 全国Ⅲ卷理科候选卷：正式登记与计划批次（2026-11-01）
 
 - 调用 `source_manifest.py register-papers` 单一事务登记 `gk-2018-regular-national-3-science` 与批次 `phase0-b14`，manifest revision 更新为 `5622`；
