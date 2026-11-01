@@ -509,12 +509,15 @@
     },
     {
       "answer_evidence": {
-        "evidence": "固定PDF无答案页；本库非官方推导，复核者已见答案和解析，非盲核。",
-        "grade": "D"
+        "evidence": "固定源无答案页且未给定矩形长宽比例；正弦依赖边长比，先前引入正方形的数值无来源，已撤销。",
+        "grade": "U"
       },
-      "answer_sha256": "8375436ad5afe912981111571fd8461db924722f1cce7844aeee6921bbcf4330",
+      "answer_sha256": "bf2391ca560939990a4f967ff5d3ab8345001fceaa6c919b98f5370a36382a35",
       "conflict_status": "none",
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1283",
+        "ISSUE-1284"
+      ],
       "printed_label": "19",
       "printed_number": 19,
       "question_id": "gk-2018-regular-national-3-science-q19",
@@ -530,7 +533,7 @@
       },
       "source_sha256": "64f871113708c879061b89a73677620d3b0ed7e15b3eeae04846a48fc8f0875c",
       "transcription_review": {
-        "evidence": "独立审读对照固定PDF原页；规范源调整公式界定、题号样式及图稿链接。来源出版者、版次及官方身份未核。",
+        "evidence": "固定PDF印作矩形，未见长宽比例；来源身份未认证，待另找原卷或勘误。",
         "result": "passed",
         "role": "review-2018-national-3-science-original-pdf"
       }

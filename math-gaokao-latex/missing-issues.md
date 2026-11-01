@@ -21437,3 +21437,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1283
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定PDF第2页第19题印作矩形，未给定宽长比例；现有解析无来源地附加正方形条件。",
+  "fingerprint": "1d726e6068cc17d37399de104aa90932611dc5b7d0439b44d342afc1ef68991d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-national-3-science",
+  "question_id": "gk-2018-regular-national-3-science-q19",
+  "resume_action": "取得可追溯原卷或勘误核对第19题矩形边长条件，再复核第（2）问；核实前保留依边长的表达式及待核状态。",
+  "source_id": "src-d4cfa7d96fddac79dddeea4aadd9c96efa1cf1371d483b6acd3759eed3516767",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1284
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "第19题第（2）问的正弦值依赖矩形边长比；现有数值依赖固定源未给出的正方形假设，无法据此确定无条件数值。",
+  "fingerprint": "728bd99f3aa166946f53365ce02501153d75d2f9e09a5166ae71fe220a278e3d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2018-regular-national-3-science",
+  "question_id": "gk-2018-regular-national-3-science-q19",
+  "resume_action": "取得可追溯原卷或勘误核对第19题矩形边长条件，再复核第（2）问；核实前保留依边长的表达式及待核状态。",
+  "source_id": "src-d4cfa7d96fddac79dddeea4aadd9c96efa1cf1371d483b6acd3759eed3516767",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
