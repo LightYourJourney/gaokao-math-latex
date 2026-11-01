@@ -11992,3 +11992,16 @@
 - 全卷四版总计 69 页全部顺利输出，生成 `math-gaokao-latex/2019_全国Ⅲ卷_文科/receipts/build.json`；
 - 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b21` 验证通过（`OK：1 卷`）；
 - manifest revision 推进至 `5681`，批次推进至 `compiled_pending_review`。
+
+### phase0-b21 2019 全国Ⅲ卷文科：视觉复核与批次闭环（2026-11-01）
+
+- 逐页八项视觉复核：
+  - 覆盖试题版（6页）、解析版（31页）、简答版（8页）、印刷版（24页）共 69 页，552 项检查全部通过（`pass`）；
+  - 全卷 6 处 TikZ 矢量图（`q8.tikz.tex` 空间多面体、`q9.tikz.tex` 流程框图、`q16.tikz.tex` 挖孔长方体、`q17.tikz.tex` 双直方图、`q19.tikz.tex` 折纸展开与立体图、`q22.tikz.tex` 极坐标系圆弧）在四版中渲染清晰完整，图文混排无遮挡、0 致命 Overfull；
+  - 3 处段首两端对齐松散 Underfull 警告（试题版、解析版、简答版各 1 处）在 `warning_exemptions` 逐项按 schema 规范登记豁免并核验通过；
+- 批次闭环与全量校验：
+  - 执行 `review_receipts.py finalize-batch --batch phase0-b21 --output-report math-gaokao-latex/reports/phase0-b21.md`，返回 `FINALIZED：phase0-b21`；
+  - manifest revision 推进至 `5682`，`phase0-b21` 状态关闭为 `closed`，`gk-2019-regular-national-3-arts` 进入 `complete`；
+  - `build_projects.py validate-receipts --batch phase0-b21 --require-final` 验证通过（`OK：1 卷`）；
+  - `review_receipts.py check-batch --batch phase0-b21` 验证通过（`FINALIZED：phase0-b21`）；
+  - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
