@@ -11859,3 +11859,12 @@
 - 调用 `solution_sources.build_paper_targets` 确定性渲染生成 `2019/2019_数学真题_全国3理_含解析.md`（43226 字节）；
 - 执行 `solution_sources.check_paper` 往返一致性与规范校验，返回 `Check paper ok: True problems: []`，格式 100% 闭环无分歧。
 
+### phase0-b20 2019 全国Ⅲ卷理科：登记 Paper 与批次（2026-11-01）
+
+- 编写注册规范 `.work/register_phase0_b20.json`：
+  - 注册试卷 `gk-2019-regular-national-3-science`，绑定上游来源 `src-b3430231b60e95ef8f8c93ad9b5f3fb87cfb0db62cbe13c062c1d36328a1ecd1`；
+  - 设置项目目录 `2019_全国Ⅲ卷_理科`、题数 23 题、题型结构（选择 1–12、填空 13–16、解答 17–21、选做 22–23）；
+  - 建立批次 `phase0-b20`（包含 1 套试卷）；
+- 执行 `source_manifest.py register-papers --write` 成功入库，manifest revision 推进至 `5664`；
+- 执行 `source_manifest.py validate` 验证通过，全局数据模型无冲突。
+
