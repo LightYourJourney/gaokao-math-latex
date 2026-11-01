@@ -30,7 +30,17 @@
 - 固定候选 source `src-59546e1a9f2fb01cc7a4ae820d82001a86aa1ee61cc2eb5320aab728375c8e1b`，路径 `普通高考/2006/2006浙江文.pdf`，SHA-256 `b53d9923107e7030a296fcace329efc61c6af454014c3ea94464acaf5a46b5c4`；2 页 A3 横向，印刷页 342–343。固定字节指纹已重算一致，但发布者、版次、来源链及官方身份未认证。
 - 题面稿 `2006/2006_数学真题_浙江文_试题.md` 覆盖 Q1–Q20：选择 10、填空 4、解答 6；Q8/Q14/Q16/Q17/Q19 图位已记，未重绘。逐题复核后，Q8 题干多录“为”字已据原页删除；原图及四个根式选项经高分辨率核对。
 - 针对性验证：`parse_question_blocks` 识别连续 20 题及全部解答题小问；原有小问编号后补分隔空格以满足解析器。PDF SHA-256 重算匹配；题面零尾随空白。详情见 `reports/2006-zhejiang-arts-source-intake.md` 与 `reports/2006-zhejiang-arts-question-transcription.md`。成本数据不可见，记未知。
-- Q16（2）未指定取哪两个交点，忠实保留并标待核。未登记 paper/source/batch，未录答案、解析或 provenance，未绘图、构建或视觉校样；下一步做答案独立推导并按来源事实登记。本回执不表示来源认证、本卷验收或长期语料完成。
+- Q16（2）题干未写明 M、N 的选取，但原图清楚标出 P 两侧相邻零点 M、N 并画出 PM、PN；答案草稿据图取这两个相邻交点，不再将该题标为 U。未登记 paper/source/batch，尚无逐题 provenance，未绘图、构建或视觉校样；本回执不表示来源认证、本卷验收或长期语料完成。
+
+### 2006 广东、江苏、江西文、浙江文候选卷：独立答案与解析草稿（2026-11-02）
+
+- 四卷均按各自已固定的候选题面与 PDF SHA-256 形成非官方答案要点和逐题解析；四份答案均将 official_answer 设为 null，不主张官方答案、评分标准或来源身份已认证。江苏题签未标科类，文理变体仍未知。
+- 广东 Q6（对象名称缺失）、Q16（随机变量未定义/缺联合模型）、Q19（给定和式条件矛盾）、Q20（1）（自变量超出定义域）及（3）（任意初值的反向原像未必存在）照录并保留 U/PENDING；江西文科 Q8（选项不含比例分配对应组合）与 Q18（2）（原文指代残缺）保留 U/PENDING。未补造题意或答案。
+- 江苏 Q1–Q21 均已形成推导；Q4 答案修正为 C，Q16 加入对数真数约束并修正解集，Q21 补足必要性差分证明。独立求解补完 Q9 连续方位角构造、Q10 完美匹配计数（$8/15$）及 Q19 三问（垂直、$60^\circ$、$\arccos(-7/8)$）；另一解题者只读复核以上推导及 Q4/Q16/Q21，未发现错误。
+- 浙江文科 Q1–Q20 均已形成推导；答案复核修正 Q6 内点极值、Q18（2）互补事件计数、Q19（1）椭圆切线条件及参数。Q16（2）据固定 PDF 图示所标 P 两侧相邻零点 M/N，确定为 $\arccos(15/17)$，不再误标 U。
+- 江西文科 Q21（2）代数条件经独立审阅发现并纠正为 $a^2=3b^2$，相应答案与解析同步。广东进行了选题/图题复算审阅；江西、浙江全卷盲核仍未完成。各卷报告记录本次修正与审阅范围。
+- 结构验证：parse_question_blocks、parse_answer_points、validate_solution_body 与 render_combined 对四卷均通过；广东20题、江苏21题、江西文22题、浙江文20题，题号及逐题小问锚点集合完全一致。暂存后的 git diff --cached --check 已通过。详情见 reports/2006-guangdong-independent-solutions.md、reports/2006-jiangsu-independent-solutions.md、reports/2006-jiangxi-arts-independent-solutions.md、reports/2006-zhejiang-arts-independent-solutions.md。
+- 四卷仍未绑定 paper/source/batch，未建立逐题 answer-solve/answer-review provenance，未登记图稿及图映射，未生成项目 TeX/短答案/四版入口，未正式构建、作页级视觉审阅或运行收口门禁。下一阶段先完成独立盲核、按真实阻断更新 issues 和登记策略；本回执不表示来源认证、卷级验收或长期语料完成。
 
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
