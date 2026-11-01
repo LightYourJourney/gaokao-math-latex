@@ -12081,3 +12081,16 @@
 - 登记 `answer-solve` 为 D 级非官方独立推导证据，`answer-review` 冲突状态为 `none`，双向哈希校验无分歧；
 - 执行 `provenance.py import-batch --batch phase0-b22 --write` 正式入库，生成 `math-gaokao-latex/2019_北京卷_理科/provenance.json`，manifest revision 推进至 `5685`；
 - 执行 `provenance.py check-batch --batch phase0-b22` 验证通过（`OK：1 卷`）。
+
+### phase0-b22 2019 北京卷理科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --manifest math-gaokao-latex/source-manifest.json --batch phase0-b22 --formal` 调用 XeLaTeX + latexmk 进行全量编译；
+- 优化长公式多行对齐与段落缩进后，全卷四版达成 0 错误、0 Overfull 完美编译：
+  - 试题版：5 页，0 errors，0 overfull，0 underfull；
+  - 解析版：28 页，0 errors，0 overfull，0 underfull；
+  - 简答版：7 页，0 errors，0 overfull，0 underfull；
+  - 印刷版：20 页，0 errors，0 overfull，0 underfull；
+- 全卷四版总计 60 页全部顺利输出，生成 `math-gaokao-latex/2019_北京卷_理科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b22` 验证通过（`OK：1 卷`）；
+- manifest revision 推进至 `5689`，批次推进至 `compiled_pending_review`。
+
