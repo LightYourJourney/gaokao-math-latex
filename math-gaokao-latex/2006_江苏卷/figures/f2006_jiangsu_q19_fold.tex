@@ -3,7 +3,7 @@
   % 图1: equilateral triangle ABC, with E,F,P on the indicated sides.
   \begin{scope}
     \coordinate (A) at (1.25,2.45); \coordinate (B) at (0,0); \coordinate (C) at (2.5,0);
-    \coordinate (E) at (0.42,0.82); \coordinate (F) at (1.67,0.82);
+    \coordinate (E) at (0.42,0.82); \coordinate (F) at (2.08,0.82);
     \coordinate (P) at (1.67,0);
     \draw (A)--(B)--(C)--cycle (E)--(F) (P)--(F);
     \foreach \p/\pos in {A/above,B/below left,C/below right,E/left,F/above right,P/below}
@@ -13,13 +13,14 @@
   \node at (3.15,1.15) {$\Longrightarrow$};
   % 图2: folded solid; hidden edges and the EF hinge continuation are dashed.
   \begin{scope}[xshift=3.8cm]
-    \coordinate (B) at (0,0); \coordinate (P) at (1.5,0.48); \coordinate (C) at (2.6,0);
-    \coordinate (E) at (1.02,0.87); \coordinate (F) at (2.03,0.92);
-    \coordinate (A1) at (1.48,2.3);
-    \draw (B)--(P)--(C) (B)--(A1)--(C) (A1)--(F)--(C) (A1)--(P) (A1)--(E) (E)--(B) (E)--(F) (F)--(P);
-    \draw[dashed] (B)--(F) (E)--(P);
-    \foreach \p/\pos in {A1/above,B/below left,C/below right,E/left,F/right,P/below}
+    \coordinate (B) at (0,0); \coordinate (P) at (1.5,0); \coordinate (C) at (2.6,0);
+    \coordinate (Aone) at (1.48,1.65); \coordinate (E) at (1.42,0.70);
+    \coordinate (F) at (2.23,0.54);
+    \draw (B)--(P)--(C) (B)--(Aone)--(C) (Aone)--(P) (P)--(F)--(C);
+    \draw[dashed] (Aone)--(E) (B)--(E)--(F) (E)--(P);
+    \foreach \p/\pos in {B/below left,C/below right,E/left,F/right,P/below}
       \fill (\p) circle (0.9pt) node[\pos] {$\p$};
+    \fill (Aone) circle (0.9pt) node[above] {$A_1$};
     \node[below=5pt] at (1.3,-0.3) {图 2};
   \end{scope}
 \end{tikzpicture}
