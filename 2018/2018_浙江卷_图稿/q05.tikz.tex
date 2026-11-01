@@ -1,0 +1,60 @@
+% 2018 浙江卷第5题：函数图象选项
+\begin{tikzpicture}[line cap=round, line join=round, line width=0.6pt, font=\small]
+
+% (A) 偶函数图象
+\begin{scope}[shift={(0, 3.2)}, x=0.8cm, y=0.5cm]
+  \draw[->] (-3.8, 0) -- (3.8, 0) node[below] {$x$};
+  \draw[->] (0, -2.2) -- (0, 3.2) node[left] {$y$};
+  \node[below right] at (0, 0) {$O$};
+  \draw (-3.14, 0.08) -- (-3.14, -0.08) node[below left] {$-\pi$};
+  \draw (3.14, 0.08) -- (3.14, -0.08) node[below right] {$\pi$};
+  \begin{scope}
+    \clip (-3.6, -2.0) rectangle (3.6, 3.0);
+    \draw[thick, domain=-3.5:3.5, samples=120] plot (\x, {2.2 * sin(deg(abs(\x)))});
+  \end{scope}
+  \node at (0, -2.7) {(A)};
+\end{scope}
+
+% (B) 偶函数双峰双谷图象
+\begin{scope}[shift={(6.8, 3.2)}, x=0.8cm, y=0.5cm]
+  \draw[->] (-3.8, 0) -- (3.8, 0) node[below] {$x$};
+  \draw[->] (0, -2.6) -- (0, 3.2) node[left] {$y$};
+  \node[below right] at (0, 0) {$O$};
+  \draw (-3.14, 0.08) -- (-3.14, -0.08) node[below left] {$-\pi$};
+  \draw (3.14, 0.08) -- (3.14, -0.08) node[below right] {$\pi$};
+  \begin{scope}
+    \clip (-3.6, -2.4) rectangle (3.6, 3.0);
+    \draw[thick, domain=-3.5:3.5, samples=120] plot (\x, {1.2 * cos(2*deg(\x)) - 1.2 * abs(\x)/3.14 + 0.3});
+  \end{scope}
+  \node at (0, -2.7) {(B)};
+\end{scope}
+
+% (C) 奇函数单正峰单负谷图象
+\begin{scope}[shift={(0, -3.2)}, x=0.8cm, y=0.5cm]
+  \draw[->] (-3.8, 0) -- (3.8, 0) node[below] {$x$};
+  \draw[->] (0, -2.6) -- (0, 3.2) node[left] {$y$};
+  \node[below right] at (0, 0) {$O$};
+  \draw (-3.14, 0.08) -- (-3.14, -0.08) node[below left] {$-\pi$};
+  \draw (3.14, 0.08) -- (3.14, -0.08) node[below right] {$\pi$};
+  \begin{scope}
+    \clip (-3.6, -2.4) rectangle (3.6, 3.0);
+    \draw[thick, domain=-3.5:3.5, samples=100] plot (\x, {2.0 * sin(deg(\x))});
+  \end{scope}
+  \node at (0, -2.7) {(C)};
+\end{scope}
+
+% (D) 正确选项：y = 2^{|x|} \sin 2x
+\begin{scope}[shift={(6.8, -3.2)}, x=0.8cm, y=0.5cm]
+  \draw[->] (-3.8, 0) -- (3.8, 0) node[below] {$x$};
+  \draw[->] (0, -2.8) -- (0, 3.2) node[left] {$y$};
+  \node[below right] at (0, 0) {$O$};
+  \draw (-3.14, 0.08) -- (-3.14, -0.08) node[below left] {$-\pi$};
+  \draw (3.14, 0.08) -- (3.14, -0.08) node[below right] {$\pi$};
+  \begin{scope}
+    \clip (-3.6, -2.6) rectangle (3.6, 2.8);
+    \draw[thick, domain=-3.4:3.4, samples=140] plot (\x, {0.35 * pow(2, abs(\x)) * sin(2*deg(\x))});
+  \end{scope}
+  \node at (0, -2.7) {(D)};
+\end{scope}
+
+\end{tikzpicture}
