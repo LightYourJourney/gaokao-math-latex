@@ -2024,6 +2024,14 @@
         "gk-2019-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b63",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-sichuan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2033,7 +2041,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bbb5a660-de1f-4b9e-9de3-bb5660404eba",
+  "last_transaction_id": "6b46e8c2-4f6a-4f02-a090-c30af90e2636",
   "papers": [
     {
       "blocked_from": null,
@@ -26962,9 +26970,82 @@
       "title": "2019 年·天津卷·文科",
       "track": "arts",
       "year": 2019
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2006_四川卷_文科/figures/f2006_sichuan_arts_q04_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_四川卷_文科/figures/f2006_sichuan_arts_q06_trig_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_四川卷_文科/figures/f2006_sichuan_arts_q09_sphere_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_四川卷_文科/figures/f2006_sichuan_arts_q15_ellipse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_四川卷_文科/figures/f2006_sichuan_arts_q20_cuboid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2006_sichuan_arts",
+        "id": "gk-2006-regular-sichuan-arts",
+        "note": "固定候选 PDF source ID src-99302e23c3dd69f99321844a08e849534fada59a8035aba9d52884db5921f1e7，SHA-256 b5188fc07294c3c5d5a554c9d2c540d2205ef78c000038e62488f1e9be7c42f6，Git blob 413627ca525d58ab84687e0feff463b102e59906，2页A3（印刷页334–335）。canonical 仅固定本库输入字节，不认证发布者、版次、来源链或官方身份。PDF无答案页；答案为独立推导并交叉复核的非官方结论，official_answer=null。22题题面、五幅TikZ图与三角色逐题provenance已登记；四版正式构建、43页视觉复核通过，批次 phase1-b63 已 closed。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "四川文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-sichuan-arts",
+      "production_state": "complete",
+      "project_dir": "2006_四川卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_四川文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_四川文_含解析.md",
+        "questions": "2006/2006_数学真题_四川文_试题.md",
+        "solution_body": "2006/2006_数学真题_四川文_解析正文.md"
+      },
+      "source_ids": [
+        "src-99302e23c3dd69f99321844a08e849534fada59a8035aba9d52884db5921f1e7"
+      ],
+      "title": "2006 年·四川卷·文科",
+      "track": "arts",
+      "year": 2006
     }
   ],
-  "revision": 5717,
+  "revision": 5742,
   "schema_version": 1,
   "sources": [
     {
@@ -34301,8 +34382,8 @@
       "exam_type": "regular",
       "git_blob_oid": "413627ca525d58ab84687e0feff463b102e59906",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-sichuan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006四川文.pdf",
       "regions": [],
       "source_id": "src-99302e23c3dd69f99321844a08e849534fada59a8035aba9d52884db5921f1e7",
