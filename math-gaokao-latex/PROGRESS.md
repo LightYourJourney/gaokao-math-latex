@@ -11701,6 +11701,17 @@
 - 执行 `provenance.py check-batch --batch phase0-b18` 验证通过（`OK：1 卷`）。
 
 
+### phase0-b18 2019 全国Ⅱ卷理科：正式编译构建（2026-11-01）
+
+- 运行 `build_projects.py build --formal --paper gk-2019-regular-national-2-science`：
+  - 试题版（5页）、解析版（26页）、简答版（7页）、印刷版（20页）四套版本共 58 页全部 XeLaTeX 严格编译通过；
+  - Overfull warnings: 0（全版本 0 Overfull）；
+  - errors: []，missing_characters: []，undefined_references: []，problems: []（全版本 0 问题）；
+  - 生成 `math-gaokao-latex/2019_全国Ⅱ卷_理科/receipts/build.json`；
+- 执行 `build_projects.py validate-receipts --manifest math-gaokao-latex/source-manifest.json --batch phase0-b18` 验证通过（`OK：1 卷`），manifest 批次状态进入 `compiled_pending_review`。
+
+
+
 
 
 
