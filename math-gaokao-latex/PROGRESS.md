@@ -11818,3 +11818,9 @@
   - `review_receipts.py check-batch --batch phase0-b19` 验证通过（`FINALIZED：phase0-b19`）；
   - 执行 `report.py render --all` 刷新全量报告，回读校验一致；执行 `manifest_csv.py --write` 刷新，775 行校验通过。
 
+### phase0-b20 2019 全国Ⅲ卷理科：题面草稿转录（2026-11-01）
+
+- 核验固定上游来源 `src-b3430231b60e95ef8f8c93ad9b5f3fb87cfb0db62cbe13c062c1d36328a1ecd1`（`普通高考/2019/2019全国3理(云南,广西,贵州,西藏,四川).pdf`，原卷印刷页 1101—1102）；
+- 严格对照 2 页 A3 版面逐字提取并校准数学公式、符号及排版；
+- 全卷 23 题完整录入 `2019/2019_数学真题_全国3理_试题.md`，规范标注各题分值、选项与 7 处矢量图稿占位符（`q7.tikz.tex`, `q8.tikz.tex`, `q9.tikz.tex`, `q16.tikz.tex`, `q17.tikz.tex`, `q19.tikz.tex`, `q22.tikz.tex`）。
+
