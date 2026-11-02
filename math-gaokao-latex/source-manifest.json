@@ -2094,6 +2094,14 @@
         "gk-2006-regular-hubei-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b71",
+      "issues": [],
+      "paper_ids": [
+        "gk-1997-regular-national-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2103,7 +2111,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c987bd1f-be9f-42d0-9ef7-9aed4f26a923",
+  "last_transaction_id": "5d732336-95f4-45a0-8813-38c6e0145198",
   "papers": [
     {
       "blocked_from": null,
@@ -28057,9 +28065,73 @@
       "title": "2006 年·普通高等学校招生考试·湖北卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1997_全国卷_文科/figures/f1997_national_arts_q03_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1997_全国卷_文科/figures/f1997_national_arts_q23_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1997_regular_national_arts",
+        "id": "gk-1997-regular-national-arts",
+        "note": "固定候选题面 PDF source ID src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9，SHA-256 16fdb675583e09b4e3353e9903365aa152e21e3327b24a56b0101dbff5ceb6e9；1页 A3，印刷页55，题签为‘1997 普通高等学校招生考试（全国卷文）’。题面 Q1–Q25 已与固定副本独立对照；Q23（3）原件缺关系符号，保留来源占位并阻断完成。固定 PDF 不含答案、解析或评分材料；官方答案为 null。出版者、版次、复制链与官方身份未核。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "普通高考全国卷文科",
+        "structure": {
+          "填空题": [
+            16,
+            19
+          ],
+          "解答题": [
+            20,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "全国卷文科"
+      },
+      "issue_ids": [
+        "ISSUE-1321",
+        "ISSUE-1322"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1997-regular-national-arts",
+      "production_state": "blocked",
+      "project_dir": "1997_全国卷_文科",
+      "question_count": 25,
+      "resume_action": "取得可追溯的同版完整题面或可信勘误；此前保留【原卷缺关系符号】占位及原题其他文字，不补猜关系。；取得可裁决题面关系符号的同版来源或可信勘误后再求解并复核；此前 Q23（3）答案保持 U/PENDING。",
+      "source_files": {
+        "answer_key": "1997/1997_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1997/1997_数学真题_全国文_含解析.md",
+        "questions": "1997/1997_数学真题_全国文_试题.md",
+        "solution_body": "1997/1997_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9"
+      ],
+      "title": "1997 年·普通高等学校招生考试·全国卷文科",
+      "track": "arts",
+      "year": 1997
     }
   ],
-  "revision": 5897,
+  "revision": 5898,
   "schema_version": 1,
   "sources": [
     {
@@ -32756,8 +32828,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4286e6a839b38588201998d82cf335a813fba4b2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1997-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1997全国文.pdf",
       "regions": [],
       "source_id": "src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9",

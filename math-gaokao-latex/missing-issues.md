@@ -22107,3 +22107,37 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1321
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 第1页（印刷页55）第23题（3）印作‘证明：面 AED 面 A1FD1’，两平面名之间未印关系符号。独立题面复核确认这是固定副本原件缺项，不是转录漏字；不依据可证出的垂直关系补猜原题。",
+  "fingerprint": "b479ae57e23ac3a2f7c7fb44693f4ca4430c9bba2153f2c252e72a8b812798fb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1997-regular-national-arts",
+  "question_id": "gk-1997-regular-national-arts-q23",
+  "resume_action": "取得可追溯的同版完整题面或可信勘误；此前保留【原卷缺关系符号】占位及原题其他文字，不补猜关系。",
+  "source_id": "src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1322
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q23（3）缺少待证关系符号，现有独立解析只能提供条件推论，不能给出该小问的无条件答案；答案要点明确标为未决，official_answer=null。",
+  "fingerprint": "540f6c05a1c91809fc80ebde8b47b3c8e2a434b589f35c8b585621d4d46ae68a",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1997-regular-national-arts",
+  "question_id": "gk-1997-regular-national-arts-q23",
+  "resume_action": "取得可裁决题面关系符号的同版来源或可信勘误后再求解并复核；此前 Q23（3）答案保持 U/PENDING。",
+  "source_id": "src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

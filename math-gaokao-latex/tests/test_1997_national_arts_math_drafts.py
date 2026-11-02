@@ -6,9 +6,12 @@ import json
 from fractions import Fraction
 from pathlib import Path
 import unittest
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
+from solution_sources import parse_answer_points
 PAPER = ROOT / '1997_全国卷_文科'
 DRAFTS = ROOT.parent / '1997'
 ANSWER = DRAFTS / '1997_数学真题_全国文_答案要点.md'
@@ -33,18 +36,20 @@ class NationalArts1997MathDraftTests(unittest.TestCase):
         self.assertEqual(self.record['artifacts']['independent_solution_draft']['sha256'], hashlib.sha256(INDEPENDENT_DRAFT.read_bytes()).hexdigest())
 
     def test_answer_key_covers_all_questions_and_keeps_source_gap(self):
-        for number in range(1, 23):
-            self.assertIn(f'| {number} |', self.answer)
-        self.assertIn('| 24(1) |', self.answer)
-        self.assertIn('| 24(2) |', self.answer)
-        self.assertIn('| 25 |', self.answer)
-        self.assertIn('| 23(3) |', self.answer)
+        points = parse_answer_points(self.answer)
+        self.assertEqual([item.number for item in points], list(range(1, 26)))
+        self.assertEqual(points[21].subparts, (1, 2))
+        self.assertEqual(points[22].subparts, (1, 2, 3, 4))
+        self.assertEqual(points[22].answer_for(3), '未决')
+        self.assertEqual(points[23].subparts, (1, 2))
+        self.assertIn('答案速查表', self.answer)
+        self.assertIn('**(3) 答案：未决**', self.answer)
         self.assertIn('未决', self.answer)
         self.assertIn('Q23(3)', self.answer)
         self.assertIn('Q23(3)', self.solution)
         self.assertIn('不是官方', self.answer)
         self.assertIsNone(self.record['official_answer'])
-        self.assertIsNone(self.record['paper_id'])
+        self.assertEqual(self.record['paper_id'], 'gk-1997-regular-national-arts')
         self.assertFalse(self.record['canonical_question_source_ready'])
         self.assertEqual(self.record['transcription_status'], 'incomplete-source-gap-q23-relation')
 
@@ -89,7 +94,7 @@ class NationalArts1997MathDraftTests(unittest.TestCase):
         issue, = self.record['source_issues']
         self.assertEqual((issue['question_number'], issue['subpart'], issue['status']), (23, 3, 'unresolved'))
         self.assertIn('若关系为垂直', self.solution)
-        self.assertNotIn('official_answer', self.solution)
+        self.assertIn('official_answer: null', self.solution)
 
 
 if __name__ == '__main__':

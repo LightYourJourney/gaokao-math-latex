@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1997 全国文科：登记与确定性项目生成（phase1-b71，2026-11-02）
+
+- 已登记 `gk-1997-regular-national-arts`，固定 source `src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9`，source-manifest revision 5898；索引与 missing-issues 同步。Q23（3）产生 ISSUE-1321（transcription-ambiguous）和 ISSUE-1322（answer-missing），均 `blocks_completion`；试卷 production state 为 blocked，答案 official_answer=null。
+- 三份规范 Markdown 已按生成器锚点对齐：试题 Q22–Q24 小问编号加入解析器要求的空格；答案要点由表格重排为逐题/小问答案块，并加入 Q1–Q15 答案速查表；解析正文为 Q22–Q24 补齐小问锚点。题面字词与数学内容未因此改写；Q23（3）仍未决。`_含解析.md` 为确定性生成物。
+- 已生成项目 `questions.tex`、`answers.tex`、`answers_short.tex` 与四个 edition 壳。门禁：`provenance check-batch`、`generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch` 均通过；1997 来源与数学草稿定向测试 15 项通过。
+- 这些是登记与源文件生成阶段；尚未正式构建四版 PDF、审阅页面、生成视觉收据或完成批次 finalize。Q23（3）来源缺符号且缺同版补源，批次维持 planned/blocked，不得标记为卷级完成；下一步若无新来源，只记录 blocked closeout，不猜关系符号。
+
 ### 1997 全国文科：固定来源全卷题面复核与数学复算（2026-11-02）
 
 - 固定来源 `src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9`，SHA-256 `16fdb675583e09b4e3353e9903365aa152e21e3327b24a56b0101dbff5ceb6e9`，Git blob `4286e6a839b38588201998d82cf335a813fba4b2`，与上游记录一致；单页 A3，印刷页55。独立审阅者对照固定扫描全页 Q1–Q25，未发现题面、公式、选项、图序或编号转录差异；Q3 图序匹配 A。Q23（3）两平面间原件缺关系符号，保持原貌并列为来源缺口。

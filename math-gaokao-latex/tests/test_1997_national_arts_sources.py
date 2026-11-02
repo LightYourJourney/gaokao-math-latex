@@ -33,10 +33,10 @@ class NationalArts1997SourceTests(unittest.TestCase):
         self.assertEqual(source['artifact']['sha256'], SOURCE_SHA)
         self.assertEqual(source['artifact']['page_count'], 1)
         self.assertEqual(source['git_blob_oid'], self.record['git_blob_oid'])
-        self.assertIsNone(source['paper_id'])
+        self.assertEqual(source['paper_id'], 'gk-1997-regular-national-arts')
         self.assertEqual(self.record['source_id'], SOURCE_ID)
         self.assertEqual(self.record['pdf_sha256'], SOURCE_SHA)
-        self.assertIsNone(self.record['paper_id'])
+        self.assertEqual(self.record['paper_id'], 'gk-1997-regular-national-arts')
         self.assertFalse(self.record['canonical_question_source_ready'])
         self.assertEqual(self.record['review_status'], 'needs-review')
 
