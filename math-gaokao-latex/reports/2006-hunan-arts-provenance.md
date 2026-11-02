@@ -13,7 +13,7 @@
 
 - Q17（3）通过 `ISSUE-1338` 记录为 `U`，`conflict_status=none`：没有相互冲突的确定答案，问题在于题面没有明确跨矿整改复查结果的联合关系。$0.41$ 只作为假设各矿从初检到复查结果相互独立时的条件值。
 - `provenance.json` 含 21 条题目记录；每条记录绑定 source ID、源 PDF SHA、源页、规范题面哈希、答案哈希、题面复核结果、答案推导等级、求解/盲核角色及 issue IDs。来源绑定仅是 manifest 内部输入映射，不认证发布者、版次、来源链或官方身份。
-- 导入后 manifest revision 为 `5941`，batch `phase1-b74` 为 `provenance_verified`，paper 仍为 `blocked`（`ISSUE-1338`）。
+- 初次导入使 manifest revision `5940→5941`。答案速查表补齐后刷新角色工作件摘要并重导，当前 revision 为 `5942`；batch `phase1-b74` 为 `provenance_verified`，paper 仍为 `blocked`（`ISSUE-1338`）。
 
 ## 验证及边界
 

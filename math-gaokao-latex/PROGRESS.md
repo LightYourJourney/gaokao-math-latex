@@ -13074,3 +13074,9 @@
 - 两名独立只读源页复核者分别核对 Q1–Q10 与 Q11–Q21，均直接查看固定 PDF 渲染页并确认题面逐题一致；Q20 的 `1≤i≤j≤m` 按原页保留。Q17（3）最终 U/PENDING 表述经独立答案复核确认；在完整初检/复查结果相互独立假设下，条件值 $1-0.9^5=0.40951\ldots\to0.41$ 正确。
 - `provenance.py init-batch/import-batch` 生成并导入21题、三角色 provenance；源页映射 Q1–Q18→PDF p.1、Q19–Q21→p.2，每题记录题面/答案 SHA、source SHA、复核结果、答案等级和角色。Q17为 U 并关联 `ISSUE-1338`；manifest revision `5940→5941`，batch 状态 `provenance_verified`，paper 仍 `blocked`。
 - `provenance.py check-batch --batch phase1-b74`、source manifest、issue ledger 与 775 行 CSV 校验通过。详情见 `reports/2006-hunan-arts-provenance.md`。项目 TeX、四版正式构建和页面视觉验收未完成；不表示来源认证、卷级验收或长期语料完成。
+
+### 2006 湖南文科候选卷：共享 TeX 与四版入口生成（phase1-b74，2026-11-02）
+
+- 补齐答案要点的 Q1–Q10 答案速查表（D、C、D、A、A、B、C、B、D、C），使简答表生成器第三路核对有明确输入；速查表与逐题答案一致。含解析稿由 `render_combined()` 重生成，角色答案摘要刷新后 provenance 再导入，manifest revision 为 `5942`。
+- 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。`generate_projects`、`make_short_answers`、`make_editions` 的写入和 currentness 检查均通过；provenance、manifest、issue ledger 与 775 行 CSV 校验通过。
+- 正式 XeLaTeX 四版构建、PDF 页数核对和逐页视觉复核尚未完成；Q17（3）仍由 `ISSUE-1338` 阻断。本阶段不表示卷级验收或长期语料完成。详见 `reports/2006-hunan-arts-project-generation.md`。
