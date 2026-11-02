@@ -44,7 +44,7 @@
 - 标题：2020 年·全国Ⅰ卷·文科
 - 项目目录：`2020_全国Ⅰ卷_文科`
 - 构建状态：`compiled_pending_review`；attempt `f59a2fbd-f3c2-4464-8d61-2f6655926f04`
-- 复核状态：`failed`；时间 2026-10-20T08:51:59+08:00
+- 复核状态：`failed`；时间 2026-11-02T20:48:33+08:00
 - 试题版：5 页；PDF SHA-256 `5861a1abda69fe65624da5af31b7cd57dc9a29d3bb4e4d5b5338eb13ecbb424f`
 - 解析版：32 页；PDF SHA-256 `af51bdc37bd90816a379b87711ded5990f69ca340625cd0092a04b25bf0924fd`
 - 简答版：7 页；PDF SHA-256 `4f7e1272266d76dbd1765a51c678ae0b92648bafd49c25337db3befda5478db0`
