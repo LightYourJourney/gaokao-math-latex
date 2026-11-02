@@ -12781,5 +12781,13 @@
 - 单卷生成检查发现 `answers.tex` 的 4 处中文句号仍由旧转换结果输出为 `\text{。}`，与权威答案要点中当前解析结果 `\mbox{。}` 不一致；`answers_short.tex` 的 Q23(1) 同样过期。按当前生成器同步两项生成物；两项句号转换测试断言同步改为现行输出，答案一致性定向测试通过。
 - 经 `provenance.py import-batch` 更新 Q23 的规范答案哈希；未改题面、答案内容、来源证据或 ISSUE-1283/1284。`provenance.py check-batch` 通过（1卷）。
 - 首次构建 attempt `0e8bf060-9993-414e-9cec-2123a8983c25` 因发现简答生成物仍旧而作废；最终正式构建 attempt `d61be2b4-d5d5-42b4-806d-12d98fe64485`：试题版 6 页、解析版 31 页、简答版 8 页、印刷版 23 页；无编译错误、缺字、未定义引用。三份含题目版各有一条行 5–7 的 Underfull，来源说明框经目视检查可读、无碰撞或裁切，并在视觉回执中列出豁免。
-- 新 attempt 四版 68 页完成视觉检查：解析版 31 页、印刷版 23 页重新逐页复核；试题版 6 页与简答版 8 页的逐页 PNG 与前一 attempt 字节一致，继承其逐页结论；无视觉失败页。待该批次最终回执事务写入后再报告最终状态。
+- 新 attempt 四版 68 页完成视觉检查：解析版 31 页、印刷版 23 页重新逐页复核；试题版 6 页与简答版 8 页的逐页 PNG 与前一 attempt 字节一致，继承其逐页结论；无视觉失败页。`finalize-batch-checked` 返回 `FINALIZED`，批次状态 `closed_with_blockers`，manifest revision `5842`；review、四版 final/current build receipt、provenance 和本卷三个生成器检查均通过。
+- ISSUE-1283/1284 继续 open 并阻断整卷完成；答案与来源边界未改为官方认证。本批的四版视觉闭环不代表 Q19 来源问题已解决或长期语料完成。
+
+### 全库 currentness 审计快照（manifest revision 5842，2026-11-02）
+
+- 只读运行 `provenance.check_batch` 覆盖当前 388 卷，返回 `INVALID`、26 项缓存状态差异：11 卷的旧 `complete` 缓存已分别派生为 `answers_verified`（1999 全国理科、2016 全国Ⅱ文科、2017 全国Ⅱ理科、2015 安徽理科、2015 浙江文科、2005 上海春季、2006 四川理科）或 `compiled`（2017 全国Ⅲ文科、2017 北京文科/理科、2017 天津文科）；另有 15 个旧 `closed`/`closed_with_blockers` 批次派生为 `provenance_verified`：phase2-b72、phase2-b05、phase2-b07、phase2-b08、phase3-b13、phase1-b24、phase3-b18、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64。
+- 按 status 派生语义，这些卷/批的当前输入、build 或 review 证据不足以支持缓存中的旧完成状态；本次不直接回写状态。phase0-b14 已于 revision 5842 正式闭环，不在这 26 项中。后续按批核查 stale 输入与回执，只在证据链补齐后刷新状态。
+- 本轮全量 unittest `Ran 1749 tests in 845.787s`，当时 4 项失败、13 项跳过：两项句号宏测试契约及 2018 全国Ⅲ理科答案生成漂移已修正，相关 3 项定向测试通过；余下缓存状态测试在当时快照报 28 项。全量套件未在这些修正后重跑；本 revision 的只读状态探针当前为 26 项，故不能报告全套通过。
+- `generate_projects.py --all --check` 发现的 26 个生成目标差异中，2018 全国Ⅲ理科 `answers.tex` 已同步，当前还有 25 个目标待逐批核查；不以全库写入代替相关卷的正式构建和视觉复核。
 - `generate_projects.py --all --check` 在含本卷的快照发现 26 个旧生成目标不一致；本卷已同步，另有 25 个目标留待逐批审计，不以全库写入绕过各卷构建与视觉复核。
