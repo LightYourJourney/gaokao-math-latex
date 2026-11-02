@@ -21363,7 +21363,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1279
 
 ```json
