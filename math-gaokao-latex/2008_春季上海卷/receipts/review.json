@@ -1,7 +1,7 @@
 {
   "batch_id": "phase1-b65",
-  "build_attempt_id": "2f24b17d-9a77-4f9f-89c0-c1b0cdcda9cc",
-  "dependency_tree_sha256": "cd17a02a2291ee82de9e5e985e62eba06514644676b087f6e58bbaae6e0cbee1",
+  "build_attempt_id": "230e4e37-dc7e-404e-b552-8c03435d43a6",
+  "dependency_tree_sha256": "bf13afa08a3920b915cd3137db91212225cf36c460005e80b75aa9ba612131fc",
   "editions": [
     {
       "candidate_override": null,
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "卷首中文、数字、标点与数学字形清楚；未见缺字或异常替代字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "卷名、试题版、卷首题型说明层级清楚；此页无题号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "卷首说明页，无选择题选项或题目公式。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "卷首说明页，无插图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉两端文字、分隔线及底部“第1页”居中且完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "单独卷首页；下半页留白均匀，无内容被挤切或孤行。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "标题、来源说明和题型文字层级分明，正文可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "仅有来源与待核状态说明，未印答案或解题过程。",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第1–7题中文及集合、极限、根式、三角与双曲线符号清晰。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "填空题第1–7题按序出现，题号及4分标记清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为填空题，无选择题选项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页第1–7题无图形。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉标题/版别、横线与底部“第2页”均完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第7题完整落页，题间距稳定，底部留白充足。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "题干与行间公式大小协调，分式、根号上下标可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "第1–7题答案空格均保留，未见答案文本。",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第8–11题公式与文字清楚；展开图线条和坐标图字符可辨。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第8、9、10、11题题号顺序正确且与题干分隔清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为填空题，无选择题选项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q8 展开图与 Q11 柱形示意图线条及标注清楚，均未裁切。",
+              "note": "第8题展开图线段连续；第11题坐标轴、x/y、a_i、b_i 标注清楚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 3 页顶部可见卷名、试题版标识及页眉横线；底部页码完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第10题题干跨行后续接自然；第11题及图形完整，未截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "密集公式及图中小标注仍清晰，题干字号一致。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "第8–11题均保留作答空白，无填入答案或解析。",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第12–16题文字、向量、椭圆分式与复数符号显示完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第12题后接选择题标题及第13–16题，编号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第13–16题 A–D 选项与对应题干分组清晰，公式基线无碰撞。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页第12–16题无插图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉标题/版别、横线与底部“第4页”均完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "选择题说明和第13–16题完整排入本页，题间留白均匀。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "选项字号与题干协调，分式及上下标可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "各题括号为空，选项未标示正确答案。",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第17–21题三角函数、反函数、向量及中文字符清楚。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "解答题标题及第17–21题编号、分值标记清晰连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为解答题，无选择题选项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q20 立体图顶点与地面标注清楚，线条未裁切。",
+              "note": "第20题凳子示意图 A、B、C、O 与“地面”标注可辨。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 5 页顶部可见卷名、试题版标识及页眉横线；底部页码完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第21题在页末自然续至下一页，题干未被裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "题干、公式和示意图标签大小可读且协调。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "第17–21题只呈题干与子问，未出现解答内容。",
               "result": "pass"
             }
           ],
@@ -245,42 +245,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第21题续文及第22题复数、圆方程和向量符号清晰。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第21题(2)(3)续文后接第22题，子问编号与题号明确。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为解答题，无选择题选项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无插图；表一标题与三行内容清楚。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 6 页顶部可见卷名、试题版标识及页眉横线；底部页码完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第21题跨页续接连贯；第22题表格完整，无底部裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "密集公式与表格字样仍清楚，未见过小文字。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版本页仅呈题面和作答空位，未混入答案或解析。",
+              "note": "第21、22题及表一均未填答案或提供解题过程。",
               "result": "pass"
             }
           ],
@@ -288,13 +288,13 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "c16f3305d1ed905d2711a855271b9390b75526ad8aa1cb79e965fd2766e5267d",
+      "pdf_sha256": "bd0a314a330069e452c75161eeba6ec8be9938f86bead0c949629bc76cf79b9f",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        19
+        18
       ],
       "edition": "解析版",
       "page_count": 20,
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 1 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 2 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q11 柱形示意图坐标、柱形和标签清楚，未裁切。",
+              "note": "第8题展开图与标注完整。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 3 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第13–16题选项符号、文字和公式基线对齐。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
-              "result": "not_applicable"
+              "note": "页内无图形；折线/坐标对象不涉及图标注。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 4 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 5 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 6 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题目与解析版答案区分明确，未见答案意外泄入试题内容。",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 7 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 8 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 9 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q8 展开图线条完整；题面及解析对 U 状态的说明可辨。",
+              "note": "第8题展开示意图线条与题干对应。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 10 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
-            },
-            {
-              "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无选择题选项；该项不适用。",
               "result": "not_applicable"
             },
             {
+              "check": "figure_label",
+              "note": "第11题阶梯图的坐标轴及 a、b 标注可辨。",
+              "result": "pass"
+            },
+            {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 11 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q11 柱形示意图坐标、柱形和标签清楚，未裁切。",
-              "result": "pass"
+              "note": "本页无需检查的图表；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 12 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 13 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第14–15题选项标记与公式排列整齐。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 14 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第16题选项标记与数字公式对齐。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 15 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 16 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -1039,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q20 立体图顶点与地面标注清楚，线条未裁切。",
+              "note": "第20题示意图中 A、B、C、O 与地面标注可辨。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 17 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "中文、数字及数学符号均正常显示，未见缺字或方框。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "标题层级与题号连续清楚，未见错位或重复。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项；该项不适用。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无需检查的图表；该项不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉显示卷名与“解析版”，页脚页码为第 18 页，位置完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "段落与公式分页完整，未见内容裁切或异常空白。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、题注和页眉字号清晰可读，未见局部异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为解析版答案内容，答案框属于预期内容；无跨入试题区的泄漏。",
               "result": "pass"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 19 页中文、数学符号与上下标完整清晰。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 19 页 Q22 小问编号连续，解析及答案编号对应清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 19 页行间公式、文字及答案框排布清楚，无重叠。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无题图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 19 页页眉、解析版标识和页码可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 19 页含 Q22 题面、表格及第 (1) 小问解析；内容结束后留白适中，分页处无孤立题头。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 19 页正文、公式和答案框字号稳定可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "解析版按设计包含推导与最终答案，未见超出本题的错版内容。",
               "result": "pass"
             }
           ],
@@ -1177,42 +1177,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 20 页中文、数学符号与上下标完整清晰。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 20 页 Q22 小问编号连续，解析及答案编号对应清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 20 页行间公式、文字及答案框排布清楚，无重叠。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无题图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 20 页页眉、解析版标识和页码可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 20 页承接 Q22 第 (2)(3) 小问解析，并完整排入答案 (1)–(3)；答案框未拆页或裁切，分页均衡。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 20 页正文、公式和答案框字号稳定可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "解析版按设计包含推导与最终答案，未见超出本题的错版内容。",
               "result": "pass"
             }
           ],
@@ -1220,7 +1220,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "743e79053dfa729d4a5c91bd2bfcdb47c38462b9a5c176fda63d4a7e7558bdb2",
+      "pdf_sha256": "f771000facb27ba42262456bf6770283a031019ecc0f919a79129e1ff7d0509d",
       "result": "pass"
     },
     {
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：标题、来源框及计分说明中文字形完整，未见方框或缺字。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "卷首标题与“卷首与题型说明”层级清楚；本页无题号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "卷首说明页，无选项或作答公式。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉标识“简答版”清晰，页脚“第1页”居中完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "卷首信息集中在上半页，留白均匀；未见溢出或截切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "标题层级和说明框正文在120 dpi下均清楚可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "仅含卷面说明和题型计分信息，未见答案或解析。",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：填空题1–7的汉字、上下标及根式显示完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "填空题1–7题号连续，题干与答题横线对应清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为填空题，无选择项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页脚“第2页”居中完整，未见页边裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "题目顺排且末题完整落在本页；下方留白充足，无挤压。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "题干及较小的上下标、分式在120 dpi下仍可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "仅显示题面和答题位置，未见答案或解析。",
               "result": "pass"
             }
           ],
@@ -1327,42 +1327,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "200 dpi复核：题文、数学符号及图中文字标记均完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "题8–11连续；题10跨页提示明确，题11公式与图2对应。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页无选择题选项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q8 展开图与 Q11 柱形示意图线条及标注清楚，均未裁切。",
+              "note": "图1展开图线条完整；图2坐标轴、O及a_i、b_i标签清楚，图未触及页脚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉“简答版”与页脚“第3页”在200 dpi图中均完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "题10跨页说明可见；图2与页脚间留白明确，无截切或拥挤。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文、公式和图中标签在200 dpi下清晰可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题面含作答横线，无答案或解析内容。",
               "result": "pass"
             }
           ],
@@ -1373,42 +1373,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：题干、向量符号、分式及选项文字显示完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "题12及选择题13–16顺序连续；“一、选择题”标题位置清晰。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "13–16的A–D选项与各题干分组清楚，公式基线和间距正常。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉版本标识及页脚“第4页”完整可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "题16及其选项完整；页末留白充足，无跨页截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "正文和选项在120 dpi下清楚，无明显过小内容。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页只含选择题题面与选项，未见标答。",
               "result": "pass"
             }
           ],
@@ -1419,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：解答题17–21开头的文字、公式和图中标签均完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "解答题17–21依次排列，题20分问与题21续文层次清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为解答题，无选择项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q20 立体图顶点与地面标注清楚，线条未裁切。",
+              "note": "图3中的A、B、C、O及“地面”标记清楚，示意线未与题文重叠。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页脚“第5页”完整；页首为解答题分节起始，标题未被裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "图3与题20分问完整；题21在页末自然续到下一页，无压线。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "题文、公式与图示标记在120 dpi下均可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页只有试题和作答要求，无答案或解析。",
               "result": "pass"
             }
           ],
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：续页中的点列符号、下标、圆方程及表格文字完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "题21续文接续自然，题22及其(1)–(3)分问可辨。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为解答题续页，无选择项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页为方程与对应关系表，无独立图形。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉版本标识及页脚“第6页”完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "题22表格完整收在页内，表格下方与页脚间距充足。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "续文、公式和表格内容在120 dpi下清晰可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "题21、22均为题面内容，无答案或解析泄漏。",
               "result": "pass"
             }
           ],
@@ -1511,42 +1511,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "120 dpi：答案速查标题、提示框和填空题答案符号完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "填空答案1–12按题号连续排列，分节标题清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
-              "result": "pass"
+              "note": "本页为填空题答案，无选择项。",
+              "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页无图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页眉“简答版”与页脚“第7页”均完整可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "答案1–12均在页内，留白充分，无溢出或截切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "答案编号及分式在120 dpi下可读，层次分明。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本版本为简答版，页面明确标注“答案速查”；内容符合版本范围。",
               "result": "pass"
             }
           ],
@@ -1557,42 +1557,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "200 dpi复核：选择题答案表及解答题17–22答案文字、公式完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "选择题答案表列13–16对齐；解答答案17–22顺序连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "题号与C/D/A/B答案在表格中逐列对齐；答案20换行后仍清楚接续。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页为答案表和文字答案，无图。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "页脚“第8页”居中完整；本页为分节续页，正文标题未裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "答案22完整落在页内；各答案换行后未被截断，页脚留白充足。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "200 dpi下答案20–22的密集文字、上下标与公式仍清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "本页为简答版答案速查内容，所示答案符合该版本内容边界。",
               "result": "pass"
             }
           ],
@@ -1600,7 +1600,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "6b542099ddf6ff7d89c4d60206f9a1fe12679ce49c31bb694250a7e7312f68b8",
+      "pdf_sha256": "a55cec0525f4bf007d7db712f51f7e5e6b015c794db499dd1c24546d889e5ae2",
       "result": "pass"
     },
     {
@@ -1615,42 +1615,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 1 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 1 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 1 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 1 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 1 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 1 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 1 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1661,42 +1661,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 2 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 2 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 2 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q8 展开图与 Q11 柱形示意图线条及标注清楚，均未裁切。",
+              "note": "第 2 页图形线条、坐标/顶点标签清楚，未被版心裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 2 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 2 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 2 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 2 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1707,42 +1707,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 3 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 3 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 3 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 3 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 3 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 3 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 3 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1753,42 +1753,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 4 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 4 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 4 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q20 立体图顶点与地面标注清楚，线条未裁切。",
+              "note": "第 4 页图形线条、坐标/顶点标签清楚，未被版心裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 4 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 4 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 4 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 4 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1799,42 +1799,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 5 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 5 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 5 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 5 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 5 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 5 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 5 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1845,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 6 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 6 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 6 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 6 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 6 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 6 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 6 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 7 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 7 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 7 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 7 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 7 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 7 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 7 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1937,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 8 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 8 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 8 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
-              "result": "not_applicable"
+              "note": "第 8 页图形线条、坐标/顶点标签清楚，未被版心裁切。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 8 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 8 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 8 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 8 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -1983,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 9 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 9 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 9 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 9 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 9 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 9 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 9 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2029,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 10 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 10 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 10 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
-              "result": "not_applicable"
+              "note": "第 10 页图形线条、坐标/顶点标签清楚，未被版心裁切。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 10 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 10 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 10 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 10 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2075,42 +2075,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 11 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 11 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 11 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 11 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 11 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 11 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 11 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2121,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 12 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 12 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 12 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 12 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 12 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 12 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 12 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2167,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 13 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 13 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 13 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 13 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 13 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 13 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 13 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2213,42 +2213,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 14 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 14 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 14 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
-              "result": "not_applicable"
+              "note": "第 14 页图形线条、坐标/顶点标签清楚，未被版心裁切。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 14 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 14 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 14 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 14 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2259,42 +2259,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 15 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 15 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 15 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 15 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 15 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 15 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 15 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2305,42 +2305,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最终构建 attempt 2f24b17d 的全页渲染可见字形及中文标点完整；构建日志缺字事件为 0。",
+              "note": "第 16 页中文、数学符号与上下标清晰，无缺字或异常字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号、分节层级及（解析版）题面页码标注清楚，与相邻题目顺序连续。",
+              "note": "第 16 页题号、分节标题及题目顺序清楚。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项、行间公式与正文间距清楚，未见挤压、重叠或错位。",
+              "note": "第 16 页正文、选项和行间公式对齐自然，无重叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页不含图形；该项不适用。",
+              "note": "本页不含题图或数据图，无图标签需要检查。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉版名及页脚页码清楚，未见截断。",
+              "note": "第 16 页卷名、印刷版标识、页眉横线与页码均可见。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页正文完整落在版心内，页间分页连续；留白未造成内容截断或孤立溢出。",
+              "note": "第 16 页内容完整、分页连续；留白与本页题量相称，无孤立溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "按该版本用途查看页面渲染，正文、公式及注释可辨；未见字号异常跳变。",
+              "note": "第 16 页正文与公式字号稳定、适于打印阅读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页答案/解析内容与该版本用途一致，未见其他版本内容串入。",
+              "note": "第 16 页题面/解析/答案按印刷版结构出现，未见错版串入。",
               "result": "pass"
             }
           ],
@@ -2348,15 +2348,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "4f5e08b2749a46a93b7119523d9f502ff57740d6cdf8ed7fbe43e63f6cb475b4",
+      "pdf_sha256": "74f6680cf832dbe4b7c36d243eca215481c2295a8406282f9ff2a1e112b5dbe8",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "7b058494deb4801ea68a2881b49a487884fe04bb0a25f4b396a6dd7be491cbbd",
+  "generation_input_tree_sha256": "f2983e52fe2b78ed8882774d08eb9909954ceeda6fb247fd94abebce4226a5db",
   "input_projection": "8ab3fa2a29d480342eabfe3df34756d79ad73af6183735564e440769dfc6c0a9",
   "paper_id": "gk-2008-spring-shanghai",
   "project_dir": "2008_春季上海卷",
-  "reviewed_at": "2026-11-02T02:23:02+08:00",
+  "reviewed_at": "2026-11-02T09:31:20+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {

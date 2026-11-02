@@ -12769,3 +12769,9 @@
 - 当前 manifest revision 5828 的 388 条 papers、775 条 sources 中均没有 1966–1976 记录；本地 `gaokaomath-src` 同样无该区间年度目录或年份路径文件。
 - 国家林业和草原局政府网记载 1977 年恢复高校招生考试制度；湖南省政府门户转载的《湖南日报》历史回顾称此前停滞 11 年。两者支持这段空档与高考中断期相吻合，但不提供逐年数学试卷清单；结论边界和链接见 `reports/coverage-gap-audit-1952-2006-20261101.md`。
 - 不创建空白 paper/source 记录，不根据空档推定其他选拔考试不存在；若出现逐年档案或试卷原件，再按可核验材料登记。本次不代表长期语料库完成。
+
+### phase1-b65 2008 春季上海卷：视觉回执最终化（2026-11-02）
+
+- 为 Q22 解析分页调整后的正式构建 attempt `230e4e37-dc7e-404e-b552-8c03435d43a6` 完成视觉回执最终化；试题版 6 页、解析版 20 页、简答版 8 页、印刷版 16 页，共 50 页均通过，回执绑定各版 PDF SHA-256 与新 attempt。
+- `review_receipts.py finalize-batch-checked` 将 `phase1-b65` 关闭为 `closed_with_blockers`，manifest revision `5836`；`check-batch`、四版 `validate-receipts --require-final --require-current-inputs`、`provenance.py check-batch`、manifest 与 issue 格式校验通过。
+- ISSUE-1285/1286 继续开放并阻断 Q8 完成；固定候选答案身份未认证，答案保持 U。该卷批次闭环不表示答案冲突已裁决，也不表示长期语料完成。
