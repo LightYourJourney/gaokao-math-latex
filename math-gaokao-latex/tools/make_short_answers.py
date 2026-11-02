@@ -57,6 +57,56 @@ CHOICE_GROUPS = ("选择题", "单选题", "多选题")
 SEE_SOLUTION = "见解析版"
 SHORT_ANSWER_OVERRIDES = {
     ("gk-2023-regular-new-gaokao-1", 19, 1): SEE_SOLUTION,
+    # 2006 重庆、陕西四卷的答案正文含 Unicode 数学符号；简答版将数学部分显式置于
+    # 数学模式，避免 Latin Modern 文本字体缺少希腊字母及 Unicode 上下标字形。
+    ("gk-2006-regular-chongqing-arts", 18, 1): r"$\omega=\frac12$",
+    ("gk-2006-regular-chongqing-arts", 20, 1): (
+        r"$\frac{\pi}{6}$（即 $\arccos\left(\frac{\sqrt3}{2}\right)$）"
+    ),
+    ("gk-2006-regular-chongqing-arts", 22, 1): r"$x_ns_n=-4$",
+    ("gk-2006-regular-chongqing-science", 14, None): r"$a_n=2^{n+1}-3$",
+    ("gk-2006-regular-chongqing-science", 17, 1): r"$\omega=\frac12$",
+    ("gk-2006-regular-chongqing-science", 18, 1): (
+        r"$\xi\sim\operatorname{Bin}(5,\frac13)$，"
+        r"$P(\xi=k)=\binom{5}{k}(\frac13)^k(\frac23)^{5-k}$，"
+        r"$k=0,\ldots,5$"
+    ),
+    ("gk-2006-regular-chongqing-science", 18, 2): r"$E\xi=\frac53$",
+    ("gk-2006-regular-chongqing-science", 22, 1): r"$b_n\le\frac{\sqrt3}{2}$",
+    ("gk-2006-regular-chongqing-science", 22, 2): (
+        r"$S_1<S_2$ 且 $S_n>S_{n+1}$（$n\ge3$）"
+    ),
+    ("gk-2006-regular-shaanxi-arts", 18, 1): r"最小正周期 $\pi$",
+    ("gk-2006-regular-shaanxi-arts", 18, 2): (
+        r"$x=\frac{5\pi}{12}+k\pi$，$k\in\mathbb{Z}$"
+    ),
+    ("gk-2006-regular-shaanxi-arts", 19, 1): (
+        r"直线 $AB$ 与 $\alpha$、$\beta$ 的夹角依次为 "
+        r"$\frac\pi4$、$\frac\pi6$"
+    ),
+    ("gk-2006-regular-shaanxi-arts", 19, 2): r"$\arccos(1/\sqrt3)$",
+    ("gk-2006-regular-shaanxi-arts", 20, None): r"$a_n=5n-3$",
+    ("gk-2006-regular-shaanxi-arts", 21, 1): r"动直线斜率范围为 $[-1,1]$",
+    ("gk-2006-regular-shaanxi-arts", 21, 2): r"$y=\frac{x^2}{4}$，$-2\le x\le2$",
+    ("gk-2006-regular-shaanxi-science", 17, 1): r"$T=\pi$",
+    ("gk-2006-regular-shaanxi-science", 17, 2): (
+        r"$x=\frac{5\pi}{12}+k\pi$，$k\in\mathbb{Z}$"
+    ),
+    ("gk-2006-regular-shaanxi-science", 18, 2): (
+        r"$P(\xi=k)=\binom{3}{k}(\frac25)^k(\frac35)^{3-k}$，"
+        r"$k=0,1,2,3$；$E\xi=\frac65$"
+    ),
+    ("gk-2006-regular-shaanxi-science", 19, 1): (
+        r"与 $\alpha$ 成 $\frac\pi4$，与 $\beta$ 成 $\frac\pi6$"
+    ),
+    ("gk-2006-regular-shaanxi-science", 19, 2): r"$\arccos(1/\sqrt3)$",
+    ("gk-2006-regular-shaanxi-science", 20, None): r"$a_n=5n-3$",
+    ("gk-2006-regular-shaanxi-science", 22, 2): (
+        r"$x_n<x_{n+1}<x_0<y_{n+1}<y_n$"
+    ),
+    ("gk-2006-regular-shaanxi-science", 22, 3): (
+        r"$\frac{y_{n+1}-x_{n+1}}{y_n-x_n}<\frac12$"
+    ),
 }
 SHORT_ANSWER_NOTICE_OVERRIDES = {
     "gk-1990-regular-guangdong-science": (
