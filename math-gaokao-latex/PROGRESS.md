@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：项目 TeX 与四版入口生成（phase1-b77，2026-11-03）
+
+- 按 manifest 生成 questions.tex、answers.tex 和顶层 index.json；再生成 answers_short.tex 与试题版、解析版、简答版、印刷版四个入口壳。Q16/Q18/Q20 均链接到已登记图稿，合并题解稿保留题面和解析各自对应的图链。
+- generate_projects、make_short_answers、make_editions 的 batch write 后，各自 batch check 均退出0；图稿引用与数学答案由 facts 源及生成器带入，没有手改生成 TeX。
+- 本阶段只完成 TeX 来源和版本入口，尚未执行正式 PDF 构建、页数/哈希回执或改动页视觉验收。下一阶段逐版正式构建并按 receipt 流程检查。成本未知。详见本报告。
+
 ### 2006 福建理科候选卷：三角色逐题 provenance 导入（phase1-b77，2026-11-03）
 
 - 按当前规范题面和答案要点现场计算逐题哈希，为 Q1–Q22 建立 question-review、answer-solve、answer-review 三角色记录。题源均绑定固定 source ID；Q1–Q19 对应 PDF 第1页，Q20–Q22 对应第2页。
