@@ -21633,7 +21633,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定候选 PDF 第1页（印刷页320）第5题给出 a=(1,-2)、b=(-2,4)、c=(-1,-2)，要求 4a、4b-2c、2(a-c)、d 首尾相接构成四边形。前三个向量之和为 (2,12)，故闭合要求 d=(-2,-12)，而四个选项为 (2,6)、(-2,6)、(2,-6)、(-2,-6)，均不符。固定 PDF 仅含题面，未见答案、勘误或可追溯裁决材料。",
+  "current_evidence": "固定候选 PDF 第1页（印刷页320）第5题给出 a=(1,-2)、b=(-2,4)、c=(-1,-2)，要求 4a、4b-2c、2(a-c)、d 首尾相接构成四边形。前三个向量之和为 (2,12)，故闭合要求 d=(-2,-12)，而四个选项为 (2,6)、(-2,6)、(2,-6)、(-2,-6)，均不符。固定 PDF 仅含题面，未见答案、勘误或可追溯裁决材料。 新增来源线索：EOL 2006-06-12 页面《2006年高考山东卷数学（理）试题答案》的第1页扫描图圈选 D=(-2,-6)（https://www.eol.cn/include/cer.net/gaokao/2006shiti/shandong/shandong_shuxuel_daan1.jpg）。扫描图带“天星 / tesoon.com”水印，但出版者、编者、版次及复制链未核，不能作为裁决；与固定题面推导仍冲突。详见 reports/2006-shandong-science-answer-source-recheck.md。",
   "fingerprint": "2dd203c2f8fdb009be3e781c6781c54a5825e8a0b26a523597ce9e1ee072b55f",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-shandong-science",
@@ -21650,7 +21650,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q5 按固定题面推导与全部选项冲突，现有材料无法确认可用答案。答案层据此保留 U/PENDING。",
+  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q5 按固定题面推导与全部选项冲突，现有材料无法确认可用答案。答案层据此保留 U/PENDING。 新增 EOL 历史答案页面及扫描件线索（页面：https://gaokao.eol.cn/huodong/2006zt/200606/t20060612_183252.shtml；扫描图带“天星 / tesoon.com”水印），但无可追溯出版链或官方身份，尚不满足可信答案来源门槛。固定题面 PDF 本身仍不含答案、解析、评分材料或正式勘误；答案保持 U/PENDING。详见 reports/2006-shandong-science-answer-source-recheck.md。",
   "fingerprint": "b38cf6a9cd9edbeabb695251e56acfbfd41f74cbe14075c04afcf2e2706f9cf6",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-shandong-science",
@@ -21667,7 +21667,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定候选 PDF 第1页（印刷页320）第10题印作 (x^3-i/sqrt(x))^n，第三、第五项系数之比为 -3/14，i^2=-1，并问常数项。由系数比得 n=10；通项 x 指数为 3n-7k/2，常数项要求 k=60/7 非整数。因此固定题面所述展开式不存在常数项，与选项冲突。固定 PDF 仅含题面，未见答案或勘误。",
+  "current_evidence": "固定候选 PDF 第1页（印刷页320）第10题印作 (x^3-i/sqrt(x))^n，第三、第五项系数之比为 -3/14，i^2=-1，并问常数项。由系数比得 n=10；通项 x 指数为 3n-7k/2，常数项要求 k=60/7 非整数。因此固定题面所述展开式不存在常数项，与选项冲突。固定 PDF 仅含题面，未见答案或勘误。 新增来源线索：EOL 2006-06-12 页面《2006年高考山东卷数学（理）试题答案》的第2页扫描图圈选 B=45i（https://www.eol.cn/include/cer.net/gaokao/2006shiti/shandong/shandong_shuxuel_daan2.jpg）。扫描图带“天星 / tesoon.com”水印，但出版者、编者、版次及复制链未核，不能作为裁决；与固定题面推导仍冲突。详见 reports/2006-shandong-science-answer-source-recheck.md。",
   "fingerprint": "30ba5f77c0821e5e70422dcf397044ecbe3bb2abb6bf6c953fc1494b4f41e55a",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-shandong-science",
@@ -21684,7 +21684,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q10 按固定题面推导不存在题目所称的常数项，现有材料无法确认预期题意或可用答案。答案层据此保留 U/PENDING。",
+  "current_evidence": "固定候选 PDF 仅含试题，未见答案、解析、评分材料或正式勘误；Q10 按固定题面推导不存在题目所称的常数项，现有材料无法确认预期题意或可用答案。答案层据此保留 U/PENDING。 新增 EOL 历史答案页面及扫描件线索（页面：https://gaokao.eol.cn/huodong/2006zt/200606/t20060612_183252.shtml；扫描图带“天星 / tesoon.com”水印），但无可追溯出版链或官方身份，尚不满足可信答案来源门槛。固定题面 PDF 本身仍不含答案、解析、评分材料或正式勘误；答案保持 U/PENDING。详见 reports/2006-shandong-science-answer-source-recheck.md。",
   "fingerprint": "fda5cbdaa2116c458e2bff4514278fa55f1d66b099a4303b51530bcd231ff172",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-shandong-science",
