@@ -12808,3 +12808,9 @@
 - 当前 attempt 四版 67 页共 536 项视觉检查：423 pass、113 not_applicable、0 fail；回执绑定当前 attempt 与 PDF SHA。解析版末页仅余第 21 题两个答案框，曾按旧正式 PDF 同版明确接受；本次复核确认内容相同、完整且未裁切，因此沿用该具体既有视觉结论，不将大留白泛化为无条件豁免。
 - `finalize-batch-checked` 返回 `FINALIZED`，`phase3-b13` 关闭，revision `5848`；本卷 final/current build receipt、review、provenance、生成器、规范解析源、问题总账和来源 manifest 定向校验通过。全量报告投影已重渲染；CSV 为 775 行且 current。Q14/Q21 公式周围空白同步没有改变答案来源等级，不据此声称官方答案认证。
 - 后续全库 `generate_projects.py --all --check` 尚报 24 个生成目标差异、涉及 16 卷；未做全库写入。安徽卷相关漂移已从清单移除。本批阶段收口不代表 1952—2026 长期语料完成。
+
+### phase3-b13 收口后全量测试结果（2026-11-02）
+
+- 在安徽批次 finalization 与全量报告更新后运行 `python3 -B -m unittest discover -s tests`：`Ran 1749 tests in 691.533s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，断言全库缓存状态与现场派生不一致，共 22 项；测试错误来自既有其他卷/批次的 currentness 漂移，不是安徽批次定向检查失败。
+- 22 项由 9 卷与 13 批组成：5 卷派生 `answers_verified`（1999 全国理科、2016 全国Ⅱ文科、2017 全国Ⅱ理科、2005 上海春季、2006 四川理科）；4 卷派生 `compiled`（2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；13 个批次派生 `provenance_verified`（phase2-b72、phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64）。未批量回写这些缓存状态。
+- 除上述 live cache 检查外，测试运行输出没有其他 unittest failure；中途 argparse 错误文本属于 CLI 非法参数测试夹具。该次测试不通过，不能报告全库测试通过。
