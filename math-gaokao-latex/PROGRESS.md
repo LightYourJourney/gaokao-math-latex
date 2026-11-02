@@ -16,6 +16,12 @@
 - Q1–Q10 与 Q11–Q20 分段独立形成草稿；主会话逐题对照两页 220 dpi 原页图核校。`parse_question_blocks()` 识别连续 20 题；解答小问结构为 Q15–Q18 各 2 问、Q19–Q20 各 3 问。PDF 文字层只用作定位，未调用 OCR 模型或外部 API。
 - 题面独立复核尚未开始；尚未形成答案、解析、逐题 provenance、题图、paper/batch 登记或 TeX。来源发布者、版次和官方身份仍未核，`official_answer=null`。阶段报告见 [题面转录报告](reports/2007-beijing-arts-question-transcription.md)；下一阶段独立核对固定原页，不表示来源认证、整卷验收或长期语料完成。
 
+### 2007 北京文科候选卷：独立题面复核（2026-11-03）
+
+- 独立复核者 `/root/review_2007_beijing_arts_transcription`（Luna/high）未参与分段转录，只依据固定 PDF 两页和规范题面复核 Q1–Q20；20 题全部 PASS，0 处题面差异。题面当前 SHA-256 `ba1a775fe5aae82b95e260fd68e99b43f3b8c909f67103fdd867f9c3561e63a0`。重点复核 Q5 组合记号、Q7 空间关系符号、Q11 向量印式、Q16 的 `+cn` 和 Q20 切线/交点定义。
+- 主会话复核了逐题覆盖与实际文件；只更新题面 frontmatter 的核校状态，没有修改题干。复核者未读取答案或解析；Q13/Q17/Q19 图位与原卷对应，但图稿细节尚未重绘和验收。
+- 详情见 [题面独立复核报告](reports/2007-beijing-arts-question-review.md)。source 发布者、版次、来源链和官方身份仍未核，`official_answer=null`；答案/解析、provenance、图稿、paper/batch 登记、TeX 和构建均未完成。本阶段只完成题面复核，不表示来源认证、整卷完成或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。
