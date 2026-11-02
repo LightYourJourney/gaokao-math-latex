@@ -14,6 +14,7 @@
 
 - 依据固定 source `src-af4cc84c7c2f6c2c1ed0bef598d5a51f57d65a1b25926d7a02631cc6c5387d75` 转录题面，写入 `2006/2006_数学真题_湖北文_试题.md`。SHA-256 `b7de4b974a9d512908f6104f3acfdd3785328cd6a1a7ca7ea4578e2fa0d37379`、Git blob `fe05ce5c6f114025c3315a47da95297f77e19dec`；两页 A3 横向，印刷页296覆盖 Q1–Q18，页297覆盖 Q19–Q21。
 - 两位独立转录者分段覆盖 Q1–Q10、Q11–Q21；主会话对照240 dpi渲染图复核全部题目、公式、选项、数值、小问与编号，未发现差异。Q1–Q10为选择题，Q11–Q15为填空题，Q16–Q21为解答题。Q18唯一题图暂以源页定位标注，矢量重绘待办。
+- 后续独立 provenance 复核对照 PDF 原页发现 Q16（2）末字多录“合”（原件“取值集”），已据第1页图像更正并重生成含解析稿；该轮其余 Q1–Q15、Q17–Q21 对照未发现差异。
 - 针对性解析器、答案/解析源文件生成与检查、paper/batch/provenance登记、图稿、四版TeX、正式构建和视觉验收均未完成。来源发布者、版次、复制链和官方身份未核。详情见 `reports/2006-hubei-arts-question-transcription.md`。本阶段不表示本卷验收或长期语料库完成。
 
 ### 2006 湖北文科候选卷：独立答案与解析草稿（2026-11-02）
@@ -33,6 +34,13 @@
 - 依据固定 PDF 第1页 Q18 图绘制 `2006_湖北卷_文科/figures/f2006hubei_arts_q18_prism.tex`，SHA-256 `2a3bcf11868faba17ed0e6d3d74c5628cf476123d4c2db05d702959efe4b64b8`。逐项对照源图记录：实线棱/辅助线为 BC、BB1、B1C1、CC1、B1A1、A1C1、B1M、MN；虚线为 BA、AC、AA1、B1C、AM。投影为示意，不按图像比例推导长度。
 - 规范题面与确定性含解析稿各有一条本地 TikZ 图稿链接；`sync-figure-registry` 将该图登记到 `figure_files`，expected_occurrences=2，manifest revision `5931→5932`。隔离单图经 XeLaTeX 编译为一页并以 240 dpi 渲染目视核对，线型、标签清晰且无裁切/遮挡；正式 PDF 页面仍待验收。
 - 本阶段验证 `source_manifest.py validate`、`solution_sources.py check-batch --batch phase1-b73`、issue ledger 与 CSV 投影均通过后提交。逐题 provenance、项目 TeX/edition 生成、正式构建及页面视觉验收仍待完成；Q12 的 `ISSUE-1333` 继续阻断 paper/batch 完成。详见 `reports/2006-hubei-arts-q18-figure.md`；不表示来源认证、卷级验收或长期语料库完成。
+
+### 2006 湖北文科：Q16 修正、逐题 provenance 与项目文件生成（phase1-b73）
+
+- 两名独立审阅者分段复核 Q1–Q10 与 Q11–Q21：首审发现 Q16（2）原页为“取值集”，题面多录“合”；修订后由第二审阅者确认一致，其余题面和 Q18 图结构通过。题面及含解析稿已同步修正。
+- `provenance.json` 为21题记录 fixed source ID、SHA-256 与页码；转录审阅、分段独立求解、独立答案复核三角色均登记。Q1–Q11、Q13–Q21 为 D 级本库推导，非官方；Q12 为 U/PENDING 并关联 `ISSUE-1333`，卷仍 blocked。provenance 写入 manifest revision 5933，batch 状态为 `provenance_verified`。
+- 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。定向门禁：provenance、题答21题锚点、项目共享文件、简答及四版入口的 currentness 检查通过；source manifest、issue ledger 与 775 行 CSV 校验通过。正式 XeLaTeX 四版构建及输出页视觉复核尚未完成。
+- 详情见 `reports/2006-hubei-arts-provenance-project-generation.md`。Q12 联合模型缺失继续阻断纸卷完成；来源身份未认证。本阶段不表示正式构建、卷级验收或长期语料库完成。
 
 ### 1999 广东卷：固定来源初查（2026-11-02）
 
