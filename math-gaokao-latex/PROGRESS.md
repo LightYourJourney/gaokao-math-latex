@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建文科候选卷：固定来源接收（phase1-b76，2026-11-02）
+
+- 固定候选 source `src-88a71372c96b05a58058a4446824a5aa14004ffa91901212088621a6b41d0346`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006福建文.pdf`；现场 SHA-256 `8984913f8b9b4927361dc042f0d78b4ff9fe6b4b9b7b898d7184c1f4cea05432`、Git blob `c2b67b68498ac92eb9d864180678ca19725d42e8` 与 manifest 当前候选记录一致。source checkout HEAD 为 `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。
+- 固定 PDF 为 2 页 A3 横向，印刷页 290–291；首页题签为“2006 普通高等学校招生考试（福建卷文）”。目视清点共 22 题：选择 Q1–Q12、填空 Q13–Q16、解答 Q17–Q22；Q19 和 Q20 有图。固定 PDF 仅见题面，未见答案、解析或评分标准。
+- 来源在 manifest 中仍为 `ready`、`paper_id=null`、`track=null`；文件绑定只标识本库固定候选字节，不认证发布者、版次、来源链或官方身份。此阶段仅完成来源指纹与题签/题量/图位 intake；逐题转录和复核进行中，答案/解析、paper 登记、provenance、图稿、四版构建与视觉验收均未完成。成本数据未知；本阶段未运行测试。详见 `reports/2006-fujian-arts-source-intake.md`。
+
 ### 2006 湖南理科候选卷：paper/source 登记与 Q17 blocker（phase1-b75，2026-11-02）
 
 - `source_manifest.py register-papers` 将 `gk-2006-regular-hunan-science` 与 `phase1-b75` 登记，固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb` 内部绑定为 canonical；manifest revision `5951→5952`。该绑定只表示本库固定输入关系，不认证发布者、版次、来源链或官方身份。
