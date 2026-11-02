@@ -12822,3 +12822,9 @@
 - 四版当前 attempt 共 65 页、520 项检查：422 pass、98 not_applicable、0 fail。主会话抽查纠正了试题/简答版第 3、5 页页眉误判（图上运行页眉和页脚均清楚完整）；印刷版末页复核为第 25 题的自然收尾，推导和两个答案框完整，无裁切或碰撞，末页留白记 pass。
 - `finalize-batch-checked` 返回 `FINALIZED`，`phase2-b72` 关闭，manifest revision `5851`；本卷四版 final/current build receipt、review、provenance、生成器、规范源、issue 与 manifest 定向检查通过。全量报告渲染/回读及 report check 通过，manifest CSV 775 行且 current。
 - `generate_projects.py --all --check` 仍报 23 个漂移目标、分布于 15 卷；未批量写入。上一轮全量单元测试发生在本批关闭前，不能作为 revision 5851 后的测试结论。本卷收口不代表长期语料完成。
+
+### phase2-b72 收口后全量测试结果（2026-11-02）
+
+- 在 1999 全国理科 finalization、全量报告和 CSV 校验后运行 `python3 -B -m unittest discover -s tests`：`Ran 1749 tests in 661.122s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，全库缓存状态与现场派生仍有 20 项差异；phase2-b72 与 1999 全国理科不再出现在差异中。
+- 20 项来自 8 卷与 12 批：4 卷派生 `answers_verified`（2016 全国Ⅱ文科、2017 全国Ⅱ理科、2005 上海春季、2006 四川理科）；4 卷派生 `compiled`（2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；12 个批次派生 `provenance_verified`（phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64）。未批量回写这些缓存状态。
+- 其他 unittest 未报告失败；中途 argparse 与临时夹具错误输出属于预期的负向测试。全库测试未通过，唯一阻断是以上未逐卷闭环的缓存 currentness 差异。
