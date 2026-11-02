@@ -12800,3 +12800,11 @@
 - 更新全量报告投影并回读校验；`manifest.csv` current，775 行。阶段提交：生成物与正式构建 `3f83b5f`；本次回执、批次报告、总账与进度记录待阶段提交。该卷答案为无官方答案页情况下的 D 级编者独立推导，不得描述为官方答案认证。
 - 全量单元测试 `Ran 1749 tests in 841.754s`，`FAILED (failures=1, skipped=13)`；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，当前 388 卷探针为 `INVALID 388 24`。剩余 10 卷缓存状态差异（6 `answers_verified`：1999 全国理科、2016 全国Ⅱ文科、2017 全国Ⅱ理科、2015 安徽理科、2005 上海春季、2006 四川理科；4 `compiled`：2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；另有 14 个旧批次缓存派生为 `provenance_verified`：phase2-b72、phase2-b05、phase2-b07、phase2-b08、phase3-b13、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64。未批量改写缓存。
 - `generate_projects.py --all --check` 仍报告 25 个目标漂移，分布在 17 卷；不以全库写入绕过逐卷构建与视觉复核。2015 浙江文科已从旧清单移除；其他生成漂移与状态 currentness 缺口继续分批处理。本次单卷完成不代表 1952—2026 语料库完成。
+
+### phase3-b13 2015 安徽卷理科：答案生成同步与四版复审收口（2026-11-02）
+
+- 全库生成漂移清单中的本卷只有 `answers.tex` 与当前生成器不一致，差异限于 Q14、Q21(1) 行间公式定界符周围空白；未改题面、答案语义或解析正文。按当前规范源同步生成物后，试题、答案、简答、四版入口壳、解析规范源及 manifest 定向检查通过。
+- 正式构建 attempt `95239584-4c3f-4edc-87f1-50a51813e1a4`，manifest revision `5846`；试题版 5 页、解析版 32 页、简答版 7 页、印刷版 23 页，日志均无错误、缺字、Overfull 或未定义引用。四版现行 PDF SHA 分别记录于 build receipt。
+- 当前 attempt 四版 67 页共 536 项视觉检查：423 pass、113 not_applicable、0 fail；回执绑定当前 attempt 与 PDF SHA。解析版末页仅余第 21 题两个答案框，曾按旧正式 PDF 同版明确接受；本次复核确认内容相同、完整且未裁切，因此沿用该具体既有视觉结论，不将大留白泛化为无条件豁免。
+- `finalize-batch-checked` 返回 `FINALIZED`，`phase3-b13` 关闭，revision `5848`；本卷 final/current build receipt、review、provenance、生成器、规范解析源、问题总账和来源 manifest 定向校验通过。全量报告投影已重渲染；CSV 为 775 行且 current。Q14/Q21 公式周围空白同步没有改变答案来源等级，不据此声称官方答案认证。
+- 后续全库 `generate_projects.py --all --check` 尚报 24 个生成目标差异、涉及 16 卷；未做全库写入。安徽卷相关漂移已从清单移除。本批阶段收口不代表 1952—2026 长期语料完成。
