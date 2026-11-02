@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：paper/source 登记与规范源绑定（phase1-b77，2026-11-03）
+
+- 以 `register-papers` 事务登记 `gk-2006-regular-fujian-science` 与 `phase1-b77`，manifest revision `5970→5971`；固定候选 source `src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27` 内部绑定为 canonical。该关系仅指本库中的卷/文件对应，不认证发布者、出版者、版次、来源链或官方身份。
+- 题面、答案、解析正文 frontmatter 已绑定 paper ID；`_含解析.md` 通过确定性生成器重建。卷状态 `planned`，Q1–Q22、题面与答案小问结构保持一致，未建立额外 blocker。`official_answer=null`。
+- 定向检查：`source_manifest validate`、`issues validate`、`solution_sources check-batch --batch phase1-b77`（22题）和 `manifest_csv --check`（775行）均退出0。OCR doctor 显示三引擎 ready，本阶段复用既有候选与核校成果，未重复推理。
+- Q16/Q18/Q20 矢量题图、三角色逐题 provenance、项目 TeX、四版正式构建及逐页视觉验收待完成；详见 `reports/2006-fujian-science-registration.md`。本阶段不是整卷验收或长期语料完成。
+
 ### 2006 福建理科候选卷：Q1–Q22 解析正文独立推导与证明复核（2026-11-03）
 
 - 新增 `2006/2006_数学真题_福建理_解析正文.md`，按已复核答案逐题写出 22 题解析，六道解答题小问结构为 2/3/2/2/2/3；Q16、Q18、Q20 只依题面文字和数值，不从待重绘图形补条件。题面、答案、解析正文解析器识别题号和小问完全一致。解析正文 SHA-256 `dc4e1cea6390b4bedc7cc782714c2f712f1c423ef880097056cf0201fdbda1bf`。

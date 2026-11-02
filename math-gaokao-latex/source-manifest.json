@@ -2142,6 +2142,14 @@
         "gk-2006-regular-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b77",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-fujian-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2151,7 +2159,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "36b0566a-dde5-4eaa-a9f0-697aedf6d887",
+  "last_transaction_id": "11b85170-d423-4a26-93b3-da00443a679e",
   "papers": [
     {
       "blocked_from": null,
@@ -28514,9 +28522,61 @@
       "title": "2006 年·普通高等学校招生考试·福建卷文科",
       "track": "arts",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_fujian_science",
+        "id": "gk-2006-regular-fujian-science",
+        "note": "固定候选 PDF source ID src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27，SHA-256 50d17546b94af82fb2cee653942752914cd387fe72792d74ffa5f75e7a301d83，Git blob b05111b956dc556d6905036d1d5d0da3d9a9e5b3；两页 A3 横向（印刷页 288–289），题签显示“2006 普通高等学校招生考试（福建卷理）”。固定 PDF 仅含题面；本库答案为独立推导草稿，official_answer 为 null。发布者、出版者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考福建卷理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "福建卷理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-fujian-science",
+      "production_state": "planned",
+      "project_dir": "2006_福建卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_福建理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_福建理_含解析.md",
+        "questions": "2006/2006_数学真题_福建理_试题.md",
+        "solution_body": "2006/2006_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27"
+      ],
+      "title": "2006 年·普通高等学校招生考试·福建卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5970,
+  "revision": 5971,
   "schema_version": 1,
   "sources": [
     {
@@ -36309,8 +36369,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b05111b956dc556d6905036d1d5d0da3d9a9e5b3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006福建理.pdf",
       "regions": [],
       "source_id": "src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27",
