@@ -13068,3 +13068,9 @@
 - `register-papers` 将 `gk-2006-regular-hunan-arts` 与 `phase1-b74` 登记，固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 内部绑定为 canonical；revision `5938→5939`。`sync-figure-registry` 登记 Q10、Q18 两图，各有 3 处规范题面/含解析引用，revision `5939→5940`。绑定不认证发布者、版次、来源链或官方身份；`official_answer=null`。
 - 建立 `ISSUE-1338`：题面未明确跨矿整改复查结果的联合独立关系，Q17（3）规范答案保持 `U/PENDING`；$0.41$ 只列为独立性假设下条件值。paper 为 `blocked`（`blocked_from=planned`），batch `phase1-b74` 为 `planned`。
 - 规范 Markdown 已绑定 paper ID，含解析稿按 `render_combined()` 重生成；`source_manifest.py validate`、issue ledger 校验、775 行 CSV 投影与 `solution_sources.py check-batch --batch phase1-b74` 均通过。逐题 provenance、项目 TeX、正式四版构建与视觉验收仍未完成。详见 `reports/2006-hunan-arts-registration.md`；不表示来源认证、卷级验收或长期语料完成。
+
+### 2006 湖南文科候选卷：逐题 provenance 导入与核对（phase1-b74，2026-11-02）
+
+- 两名独立只读源页复核者分别核对 Q1–Q10 与 Q11–Q21，均直接查看固定 PDF 渲染页并确认题面逐题一致；Q20 的 `1≤i≤j≤m` 按原页保留。Q17（3）最终 U/PENDING 表述经独立答案复核确认；在完整初检/复查结果相互独立假设下，条件值 $1-0.9^5=0.40951\ldots\to0.41$ 正确。
+- `provenance.py init-batch/import-batch` 生成并导入21题、三角色 provenance；源页映射 Q1–Q18→PDF p.1、Q19–Q21→p.2，每题记录题面/答案 SHA、source SHA、复核结果、答案等级和角色。Q17为 U 并关联 `ISSUE-1338`；manifest revision `5940→5941`，batch 状态 `provenance_verified`，paper 仍 `blocked`。
+- `provenance.py check-batch --batch phase1-b74`、source manifest、issue ledger 与 775 行 CSV 校验通过。详情见 `reports/2006-hunan-arts-provenance.md`。项目 TeX、四版正式构建和页面视觉验收未完成；不表示来源认证、卷级验收或长期语料完成。
