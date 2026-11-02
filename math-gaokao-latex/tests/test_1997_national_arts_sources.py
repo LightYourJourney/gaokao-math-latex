@@ -106,6 +106,24 @@ class NationalArts1997SourceTests(unittest.TestCase):
         self.assertFalse(self.record['canonical_question_source_ready'])
         self.assertEqual(self.record['review_status'], 'needs-review')
 
+    def test_full_transcription_review_is_recorded_without_closing_q23_gap(self):
+        review = self.record['verification']['full_transcription_review']
+        self.assertEqual(review['status'], 'passed-with-open-source-gap')
+        self.assertEqual(review['source_sha256'], SOURCE_SHA)
+        self.assertEqual(review['questions_checked'], list(range(1, 26)))
+        self.assertEqual(review['confirmed_transcription_differences'], [])
+        self.assertEqual(review['open_source_gap']['question_number'], 23)
+        self.assertEqual(review['open_source_gap']['subpart'], 3)
+        self.assertEqual(review['q03_option_mapping'], 'A')
+        self.assertEqual(review['q24_literal'], '与函数的 y=log_2 x 的图象')
+        self.assertEqual(review['q25_literal_tail'], '求该的圆的方程')
+        rows = self.record['question_sources']
+        self.assertEqual([r['review_status'] for r in rows if r['question_number'] != 23],
+                         ['independently-source-reviewed'] * 24)
+        self.assertEqual(rows[22]['review_status'], 'needs-source-recovery')
+        self.assertFalse(self.record['canonical_question_source_ready'])
+        self.assertEqual(self.record['transcription_status'], 'incomplete-source-gap-q23-relation')
+
     def test_registered_figures_are_self_contained_vectors_and_convert_strictly(self):
         figures = self.record['figure_files']
         self.assertEqual([f['question_number'] for f in figures], [3, 23])

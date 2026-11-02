@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1997 全国文科：固定来源全卷题面复核与数学复算（2026-11-02）
+
+- 固定来源 `src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9`，SHA-256 `16fdb675583e09b4e3353e9903365aa152e21e3327b24a56b0101dbff5ceb6e9`，Git blob `4286e6a839b38588201998d82cf335a813fba4b2`，与上游记录一致；单页 A3，印刷页55。独立审阅者对照固定扫描全页 Q1–Q25，未发现题面、公式、选项、图序或编号转录差异；Q3 图序匹配 A。Q23（3）两平面间原件缺关系符号，保持原貌并列为来源缺口。
+- 放大复核确认 Q24 的“与函数的 $y=\log_2x$ 的图象”及 Q25 的“求该的圆的方程”均与原件字面一致；不按语感删字。来源记录将其余24题记为 independently-source-reviewed，Q23（3）维持 needs-source-recovery；`transcription_status=incomplete-source-gap-q23-relation`、`canonical_question_source_ready=false`、`paper_id=null` 不变。
+- 第二位审阅者按题面独立复算 Q1–Q25 并对照答案/解析，未发现实质性数学计算错误；Q15 为 33 组，Q16 得 $a=4$。Q21 保留“等比中项”定义分支，Q22 保留成本参数正值条件，Q23（3）不补猜关系符号。固定 PDF 无答案页，答案仍为项目独立推导且 `official_answer=null`。
+- 报告：`reports/1997-national-arts-full-transcription-review-2026-11-02.md`、`reports/1997-national-arts-independent-math-review.md`。该阶段只完成全卷题面忠实度与项目推导复核，不认证来源出版者/版次/官方身份，不代表该卷已登记、可打印验收或长期题库完成；后续应先为 Q23（3）记录正式 blocking issue，再绑定 paper 并进入项目生成门禁。
+
 ### 2006 广东候选卷：Q1–Q20 题面转录
 
 - 固定候选 source `src-e0c5020a85c6b155cb454ed921b44ba51adb3067a3998d7ee6020674ed5b4e24`，路径 `普通高考/2006/2006广东.pdf`，SHA-256 `46542e3594530e351f1f9812d0543cc5cd3c223ee9275d98bdc1dd802d3242aa`；2 页 A3 横向，印刷页 292–293。固定字节指纹已重算一致，但发布者、版次、来源链及官方身份未认证。
