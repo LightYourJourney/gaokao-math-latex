@@ -43,6 +43,13 @@
 - Q18 两问只记录独立假设下的条件计算，并明确题面缺少联合独立性、无条件概率未定；`U/PENDING` 与答案要点一致。Q13/Q17/Q19 的矢量图仍未绘制，来源及官方身份边界不变。
 - 解析尚未经过独立复核，`_含解析.md` 尚未生成；paper/batch 登记、issue 事务、逐题 provenance、TeX、正式构建和视觉回执均未完成。本阶段只完成解析初稿，不构成整卷验收。
 
+### 2007 北京文科候选卷：解析正文独立复核（2026-11-03）
+
+- 独立审稿者 `/root/audit_2007_beijing_arts_solutions`（Luna/high）逐项对照题面、答案要点、解析稿和固定 PDF；Q1–Q20 推导、题号及小问覆盖通过。主会话采纳措辞建议，将 Q18（2）明确为“在相互独立的额外假设下”计算的概率。
+- 审稿者对 Q19 左支顶点担心零半径圆。主会话重算顶点 $P=(-\sqrt2,0)$ 到定点 $N=(-2,0)$ 的半径为 $2-\sqrt2>0$，确认端点有效；现有 $x\leq-\sqrt2$ 范围保留。详细记录见 [解析复核报告](reports/2007-beijing-arts-solution-review.md)。
+- `solution_sources.validate_solution_body()` 仍识别 Q1–Q20 连续题目及正确子问集合；答案要点 Q18 两问继续为 `U/PENDING`。解析稿状态更新为独立复核通过但 Q18 未决。
+- 本阶段只完成解析独立复核和一处措辞澄清；来源/paper/batch 登记及 Q18 issue、题图、provenance、`_含解析.md`、TeX、正式构建和视觉回执尚未完成，不表示整卷验收。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。
