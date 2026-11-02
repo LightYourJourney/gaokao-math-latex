@@ -1,0 +1,24 @@
+% Source-faithful schematic draft: src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec
+% Source SHA-256 ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221; PDF p.1, Q19.
+% Diagram topology only; no measurements, angle, or additional incidence claims beyond visible projections.
+\begin{tikzpicture}[line join=round, line cap=round]
+  % Plane alpha, shown as a vertical parallelogram, and its lower edge l.
+  \draw (0,0) -- (3.5,0) -- (3.5,2.4) -- (0,2.4) -- cycle;
+  \node at (3.18,2.16) {$\alpha$};
+  % Plane beta, shown receding below l; shared edge is the intersection l.
+  \draw (0,0) -- (3.5,0) -- (2.25,-1.2) -- (-1.1,-1.2) -- cycle;
+  \node at (-0.72,-0.83) {$\beta$};
+  \node[below left] at (0,0) {$l$};
+  % A and B with their visible projections A_1 and B_1 onto l.
+  \coordinate (A) at (0.95,1.98);
+  \coordinate (Aone) at (0.95,0);
+  \coordinate (B) at (2.30,-0.98);
+  \coordinate (Bone) at (2.50,0);
+  \draw (A)--(B);
+  \draw (A)--(Aone);
+  \draw (B)--(Bone);
+  \fill (A) circle (0.7pt) node[above] {$A$};
+  \fill (B) circle (0.7pt) node[below] {$B$};
+  \fill (Aone) circle (0.7pt) node[below] {$A_1$};
+  \fill (Bone) circle (0.7pt) node[above] {$B_1$};
+\end{tikzpicture}

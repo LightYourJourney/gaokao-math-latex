@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：10 幅题图矢量重绘与登记（2026-11-03）
+
+- 四卷 10 个图位已依据各自固定候选 PDF 重绘为带 source ID、源 PDF SHA-256、PDF 页码和题号注释的本卷 TikZ 源；规范题面用相对 Markdown 链接映射，确定性含解析稿已重生成。manifest `figure_files` 通过 `sync-figure-registry` 逐卷事务登记，revision `5996→6000`，10 图各预期题面/合并稿引用 2 次；manifest CSV 当前 775 行。
+- 独立预览核对中更正了重庆文 Q20 平面迹与 G 所在线，Q22 焦点弦/切线几何；重庆理 Q6 断轴及首柱 [54.5,56.5) 和 Q19 中点 E；陕西文理 Q21 同一参数 t 的点位关系。柱高、投影比例、选项曲线与示例点布局按规范标示为示意，不推导题设未给条件。
+- `source_manifest.py validate`、`issues.py validate`、四卷 `solution_sources.py check-batch`、`manifest_csv.py --check` 与 `git diff --check` 均通过。图稿、页码、hash、预览边界与近似边界详见 `reports/2006-chongqing-shaanxi-figures.md`。
+- 四卷完整逐题 provenance、TeX 项目、正式构建 PDF 和构建/视觉回执仍未完成；原四个 issue 与 U/PENDING、`official_answer=null` 和来源身份未认证均保持。当前阶段不是批次闭环或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：paper/source 登记与确定性合并稿（2026-11-03）
 
 - `register-papers` dry-run 通过后以一个事务登记四卷和 `phase1-b80`，manifest revision `5995→5996`；固定候选 source 绑定为仓库内部 canonical 输入，不代表来源身份认证。题面、答案、解析正文 frontmatter 均已绑定 paper ID，`extract-batch --write` 生成四份 `_含解析.md`，内存重渲染与文件逐字节一致。
