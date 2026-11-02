@@ -13044,3 +13044,9 @@
 - 固定候选 `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南文.pdf`；SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9` 与 manifest 一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页 303–304；题签为“2006 普通高等学校招生考试（湖南卷文）”，共 21 题，Q10、Q18 有题图。
 - 本阶段只完成固定来源 intake、PDF 指纹核对和两页渲染图目视检查。原件无答案、解析、评分标准或完整出版信息；出版者、版次、来源链和官方身份未认证。Q20 原页条件 `1≤i≤j≤m` 按字面保留，未做推测性修订。
 - 未登记 paper/batch，未转录、求解，未改 manifest、问题账、provenance、TeX 或构建/视觉回执。细节见 `reports/2006-hunan-arts-source-intake.md`；后续阶段如启动，应逐题转录核对并矢量重绘 Q10/Q18 图。本记录不表示本卷验收或长期语料完成。成本数据未知；未运行测试。
+
+### 2006 湖南文科候选卷：Q1–Q21 题面转录与复核（2026-11-02）
+
+- 依据固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 转录 Q1–Q21，规范题面写入 `2006/2006_数学真题_湖南文_试题.md`。PDF SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9`；PDF 第 1 页（印刷页303）含 Q1–Q18，第 2 页（印刷页304）含 Q19–Q21。题型为选择 Q1–Q10、填空 Q11–Q15、解答 Q16–Q21。
+- 两份独立分段转录覆盖 Q1–Q10、Q11–Q21；只读逐题复核发现 Q20 漏录 `P_i>P_j` 后的括号说明“即前面某数大于后面某数”，现已补入。原页条件 `1≤i≤j≤m` 按字面保留。Q10 选项及图位、Q16 三角式、Q18 高和边长、Q21 圆锥曲线式经重点复核，其余题目未发现转录差异。
+- `solution_sources.parse_question_blocks` 识别连续 21 题；题面无行尾空白，`git diff --check` 通过。详情见 `reports/2006-hunan-arts-question-transcription.md`。Q10、Q18 图稿、答案/解析、provenance、paper/batch 绑定、manifest 登记、正式构建和视觉验收均待办；来源身份未认证。成本数据未知；未运行测试。本记录不表示本卷闭环或长期语料完成。
