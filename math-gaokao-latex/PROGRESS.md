@@ -12968,4 +12968,4 @@
 - 新登记 `gk-1999-regular-guangdong`，绑定固定 source `src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019`；manifest revision `5898→5899`。题量 22，题面物理页 1–6，答案/解析材料页 6–13。卷种 track 记为未标注。
 - Q10、Q13、Q21 的题面/答案未决共登记六条 `blocks_completion` 问题 `ISSUE-1323`–`ISSUE-1328`；paper `blocked`（`blocked_from=planned`），batch `phase1-b72` 为 `planned`。候选扫描件发布身份未核，官方答案继续 null，A/B 对应关系未知。
 - 生成规范 `_含解析.md`、`questions.tex`、`answers.tex`、`answers_short.tex` 和四版入口；五幅 TikZ 图登记且题面/合并稿各出现一次。`source_manifest validate`、`issues validate`、`solution_sources check-batch`、三个生成器的 `--check` 均通过，规范题面/答案/解析/合成稿均识别 22 题。答案解析数学复核另见 `reports/1999-guangdong-answer-math-review-2026-11-02.md`，登记生成细节见 `reports/1999-guangdong-registration-generation-2026-11-02.md`。
-- 尚无逐题 provenance 导入、正式四版 PDF、全页视觉审查或构建/审阅收据。可见成本/消耗数据未知。本阶段不表示单卷闭环或长期题库完成。
+- 三角色 Q1–Q22 provenance 已导入，66 条记录绑定来源页码、source SHA、题面/答案哈希；`provenance.py check-batch` 返回 `OK：1 卷`。Q10/Q13/Q21 的六条 open blocker 未解除，paper 仍 blocked，batch 为 `provenance_verified`。报告见 `reports/1999-guangdong-provenance-2026-11-02.md`。尚未正式构建四版 PDF、全页视觉审查或生成构建/审阅收据。可见成本/消耗数据未知；本阶段不表示单卷闭环或长期题库完成。
