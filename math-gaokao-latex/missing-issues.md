@@ -22141,3 +22141,105 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1323
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "Q10 原题按固定扫描字面为“EF 与面 AC 的距离”，无法据文字确定“面 AC”对应的完整平面；图稿不补猜关系。",
+  "fingerprint": "b951127a666830d77741262fb3e8015a9ba5ff4b09f7d88eca0a6859aee9bcb7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q10",
+  "resume_action": "取得可核验的同版完整题面、勘误或更清晰原页，确认该距离所指平面；此前题面保留字面，答案维持 U。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1324
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定副本 A 型答案栏印 Q10 为 D，但题面几何条件指称不全，无法独立推导或确认体积答案。",
+  "fingerprint": "82574256c208a68cfc0267a193cecbc400d614743056a905532fbcb7a7ee7dfe",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q10",
+  "resume_action": "取得可以消除 Q10 几何歧义的同版完整题面或可靠勘误，再独立复算答案；此前不把源内 D 作为已验证答案。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1325
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面定义右焦点为 F1，却随后写“经过 F”，并在句尾重复“的距离，则椭圆的离心率是”；扫描字形可辨但原意未明。",
+  "fingerprint": "3b55183be1a454cc492739c132aa9c9d47427b10ec8c27e0c6e11e50af357068",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q13",
+  "resume_action": "取得可追溯的同版题面或勘误，确认 F 与 F1 及重复句的原文；此前照录并保留标疑。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1326
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "e=1/2 只在将题面的 F 解释成 F1 时成立；固定 A 型答案栏的 1/2 不能消除题面文字歧义。",
+  "fingerprint": "512a85502942be27dcb8aeeda57e7eb03e7df6e4e1ac703a62a5845f9ba4cc75",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q13",
+  "resume_action": "取得可靠来源确认题意后再将条件推导判为最终答案；此前答案保持条件性。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1327
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题面字面为 x(x_n)=n，小问（Ⅰ）为“x1、x2x 和 xn”；两处均可辨但原意未明。",
+  "fingerprint": "5939f9ec6766cc1b89e7fe23ca5e2fb613182ee9581425999fafe6efd897553c",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q21",
+  "resume_action": "取得可追溯的同版题面或勘误确认函数记号与小问列式；此前保留原字样和待核标记。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1328
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "数列及函数答案依赖将原文条件性复原为 f(x_n)=n，不能据此认定为原题无条件答案。",
+  "fingerprint": "7c0313ab8b334625afa7fbcf08ed7b6546a0a5a7314e4e67a82e2758984b7ca4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1999-regular-guangdong",
+  "question_id": "gk-1999-regular-guangdong-q21",
+  "resume_action": "取得可靠来源确认定义和小问内容后再复核数列、极限、分段式及定义域；此前仅保留条件答案。",
+  "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

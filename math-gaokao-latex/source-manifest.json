@@ -2102,6 +2102,14 @@
         "gk-1997-regular-national-arts"
       ],
       "status": "planned"
+    },
+    {
+      "batch_id": "phase1-b72",
+      "issues": [],
+      "paper_ids": [
+        "gk-1999-regular-guangdong"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2111,7 +2119,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5d732336-95f4-45a0-8813-38c6e0145198",
+  "last_transaction_id": "482bf541-e829-4adc-bd9b-9397b9eebaf2",
   "papers": [
     {
       "blocked_from": null,
@@ -28129,9 +28137,92 @@
       "title": "1997 年·普通高等学校招生考试·全国卷文科",
       "track": "arts",
       "year": 1997
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1999_广东卷/figures/f1999_guangdong_q01_venn.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1999_广东卷/figures/f1999_guangdong_q10_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1999_广东卷/figures/f1999_guangdong_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1999_广东卷/figures/f1999_guangdong_q20_rollers.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1999_广东卷/figures/f1999_guangdong_q22_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1999_regular_guangdong",
+        "id": "gk-1999-regular-guangdong",
+        "note": "固定扫描源为 1999 广东卷候选 PDF（source ID src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019；SHA-256 4b06d14df005ea33c6661282ba2afc4adbab26d33d15590f823b7adc5000f05d），13 页，题面 PDF 第 1–6 页、答案与解析材料第 6–13 页。发布身份未认证；A/B 卷型关系未核。Q10“面 AC”、Q13 F/F1 与重复语句、Q21 函数记号与列式歧义保留并阻断完成。",
+        "pages_q": [
+          1,
+          6
+        ],
+        "pages_s": [
+          6,
+          13
+        ],
+        "paper": "普通高考广东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "广东卷"
+      },
+      "issue_ids": [
+        "ISSUE-1323",
+        "ISSUE-1324",
+        "ISSUE-1325",
+        "ISSUE-1326",
+        "ISSUE-1327",
+        "ISSUE-1328"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1999-regular-guangdong",
+      "production_state": "blocked",
+      "project_dir": "1999_广东卷",
+      "question_count": 22,
+      "resume_action": "取得可核验的同版完整题面、勘误或更清晰原页，确认该距离所指平面；此前题面保留字面，答案维持 U。；取得可以消除 Q10 几何歧义的同版完整题面或可靠勘误，再独立复算答案；此前不把源内 D 作为已验证答案。；取得可追溯的同版题面或勘误，确认 F 与 F1 及重复句的原文；此前照录并保留标疑。；取得可靠来源确认题意后再将条件推导判为最终答案；此前答案保持条件性。；取得可追溯的同版题面或勘误确认函数记号与小问列式；此前保留原字样和待核标记。；取得可靠来源确认定义和小问内容后再复核数列、极限、分段式及定义域；此前仅保留条件答案。",
+      "source_files": {
+        "answer_key": "1999/1999_数学真题_广东_答案要点.md",
+        "combined_rendered": "1999/1999_数学真题_广东_含解析.md",
+        "questions": "1999/1999_数学真题_广东_试题.md",
+        "solution_body": "1999/1999_数学真题_广东_解析正文.md"
+      },
+      "source_ids": [
+        "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019"
+      ],
+      "title": "1999 年·普通高等学校招生全国统一考试·广东卷",
+      "track": "none",
+      "year": 1999
     }
   ],
-  "revision": 5898,
+  "revision": 5899,
   "schema_version": 1,
   "sources": [
     {
@@ -33068,8 +33159,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f63a116f58acd4eedf57769b146f1a17038da643",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1999-regular-guangdong",
+      "paper_relation": "canonical",
       "raw_paper_name": "1999广东.pdf",
       "regions": [],
       "source_id": "src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019",
