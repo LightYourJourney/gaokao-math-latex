@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：四版正式构建（phase1-b77，2026-11-03）
+
+- 正式构建 attempt fc90f3fa-ea1c-4f4e-a821-15153cfd3503，输入 manifest revision 5976；运行/结果状态事务后 revision 5978，批次进入 compiled_pending_review。
+- 四版均编译 succeeded、0 warnings，共51页：试题版5、解析版21、简答版7、印刷版18。PDF 指纹见 reports/2006-fujian-science-build.md 与本卷 receipts/build.json。
+- build_projects.py validate-receipts --paper gk-2006-regular-fujian-science --json 返回 code OK、1 pending、0 failed/invalid/missing/stale、无 problems。此回执只证明构建产物当前，不代表视觉审查完成。
+- 本阶段没有 OCR 或外部模型调用；成本未知。下一阶段逐页检查51页并准备/完成 review receipt；当前来源身份与 official_answer 状态继续未核。详见本报告。
+
 ### 2006 福建理科候选卷：项目 TeX 与四版入口生成（phase1-b77，2026-11-03）
 
 - 按 manifest 生成 questions.tex、answers.tex 和顶层 index.json；再生成 answers_short.tex 与试题版、解析版、简答版、印刷版四个入口壳。Q16/Q18/Q20 均链接到已登记图稿，合并题解稿保留题面和解析各自对应的图链。
