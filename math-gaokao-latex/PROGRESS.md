@@ -12912,3 +12912,12 @@
 
 - `phase1-b70` 完成 63 题的 question-review、answer-solve、answer-review 共 189 条角色记录，manifest revision 5879→5881。provenance 现场绑定固定 Source/PDF SHA、源页映射及题面/答案哈希；题面结论只针对固定副本可见文字。江西、浙江状态为 `answers_verified`（非官方独立推导及盲核），湖北 Q17（2）为 U/PENDING 并关联 ISSUE-1319/1320，paper 仍 `blocked`；批次 `provenance_verified`。
 - `provenance.py check-batch`、source manifest、issues ledger 与 solution source batch 校验均通过。图稿、项目 TeX、正式 PDF 构建和视觉检查尚未完成。详见 `reports/2006-three-science-provenance.md`。
+
+
+### phase1-b70 2006 江西、浙江、湖北理科：题图登记与四版初次正式构建（2026-11-02）
+
+- 完成江西 Q11/Q12/Q15/Q19/Q20/Q21、浙江 Q9/Q14/Q15/Q17/Q19/Q20、湖北 Q15/Q18 共 14 幅 TikZ 图稿，逐题 Markdown 图链和 manifest `figure_files` 注册同步。图稿按固定候选 PDF 绘制；未标尺寸的空间关系和曲线按示意处理，来源身份仍未认证。湖北 Q18 保持源图未标 P 的事实，Q17（2）仍为 U/PENDING，并继续受 ISSUE-1319/1320 阻断。
+- 生成器、简答表和四版壳定向检查通过；规范题面/答案哈希更新后，63 题的三类 provenance 重新导入并通过 `provenance.py check-batch`。江西 Q6 速查项误抄为 Q16 的“②④”，按题面重算后更正为 C（$-5/2$）；江西 Q3 速查项也从 A 更正为 D，与逐题答案及解析一致。
+- 正式构建 attempt：江西 `1a75c317-6e62-4f58-bce3-dd38a50c5b61`，浙江 `ad74a82a-5c3d-467c-bec2-c673ec07e561`，湖北 `cb4a5749-2126-4d27-bd4e-c004284d1476`；最新构建输入 manifest revision 5889，当前 revision 5890。首次构建后修正文档来源说明导致输入树变化，旧 attempts 已 superseded 并重建。四版分别为江西 6/21/8/16 页、浙江 5/18/7/13 页、湖北 5/19/7/14 页，共 139 页。12 个 PDF 的 SHA-256、工具链和构建日志均记录在各卷 `receipts/build.json`；无错误、缺字、Overfull 或未定义引用。存在 5 条 Underfull hbox：江西印刷版 1 条，湖北四版各至少 1 条，须结合相应页面视觉检查判断。
+- 三卷 `build.json` 均为 `compiled_pending_review`；`validate-receipts --batch phase1-b70` 返回 3 pending、0 failed/stale/invalid。虽已预览抽查江西若干题面/答案/解析/印刷页面，目前尚未完成 139 页的逐页八项视觉检查，故未将检查项标 pass、未 finalize；视觉收据仍待逐页完成。全库单元测试未运行。
+- 此阶段仅提交图稿、登记、生成与正式编译回执，不代表三卷视觉验收或批次关闭；官方答案仍 null，来源发布者/版次/来源链未核，也不代表长期语料完成。详情见 `reports/2006-three-science-figures.md`。

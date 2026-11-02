@@ -1,0 +1,21 @@
+% Source: fixed 2006 Zhejiang science scan, PDF page 1, Q14.
+% Schematic projection; solid and hidden tetrahedron edges follow the scan.
+\begin{tikzpicture}[line cap=round,line join=round,x=0.9cm,y=0.9cm]
+  \coordinate (C) at (0,2.5);
+  \coordinate (D) at (3.2,2.5);
+  \coordinate (A) at (1.6,0.25);
+  % AB is parallel to the slanted side direction of the alpha plane.
+  \coordinate (B) at (2.5,1.25);
+  \coordinate (L) at (-0.75,1.35);
+  \coordinate (R) at (4.25,1.35);
+  \coordinate (Lb) at (-1.65,0.35);
+  \coordinate (Rb) at (3.35,0.35);
+  \draw[thick] (L)--(R)--(Rb)--(Lb)--cycle;
+  \draw[thick] (C)--(D) (C)--(A) (D)--(A);
+  \draw[thick,dashed] (C)--(B) (D)--(B) (A)--(B);
+  \node[above left] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[below] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below left] at (Lb) {$\alpha$};
+\end{tikzpicture}

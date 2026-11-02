@@ -2093,7 +2093,7 @@
         "gk-2006-regular-zhejiang-science",
         "gk-2006-regular-hubei-science"
       ],
-      "status": "provenance_verified"
+      "status": "compiled_pending_review"
     }
   ],
   "inventory": {
@@ -2103,7 +2103,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5c9fdf0a-3576-417b-be6c-662a7f756084",
+  "last_transaction_id": "045ade94-8df5-46fd-9815-ce55b1e3cdb1",
   "papers": [
     {
       "blocked_from": null,
@@ -27842,11 +27842,36 @@
     },
     {
       "blocked_from": null,
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q11_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q12_temperature_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q19_triangle_section.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q20_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_江西卷_理科/figures/f2006_jiangxi_science_q21_ellipse_chord.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2006_regular_jiangxi_science",
         "id": "gk-2006-regular-jiangxi-science",
-        "note": "固定候选题面 PDF source ID src-087e91818b6473a217dd7dda423b4d033dad9f20e1e6f77e162d3dce4d896817，SHA-256 ce0ea3a16a1b5d1a74b01b8581766563cec4d7b77b2fca4f8ae3eec30b19dd38；PDF第1—2页、印刷页307–308，题签显示“2006 普通高等学校招生考试（江西卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q12四个选项图稿尚待重绘。",
+        "note": "固定候选题面 PDF source ID src-087e91818b6473a217dd7dda423b4d033dad9f20e1e6f77e162d3dce4d896817，SHA-256 ce0ea3a16a1b5d1a74b01b8581766563cec4d7b77b2fca4f8ae3eec30b19dd38；PDF第1—2页、印刷页307–308，题签显示“2006 普通高等学校招生考试（江西卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q11、Q12、Q15、Q19、Q20、Q21 已按固定候选 PDF 重绘并登记 TikZ 矢量图；未标尺寸的曲线和空间比例为示意。",
         "pages_q": [
           1,
           2
@@ -27875,7 +27900,7 @@
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2006-regular-jiangxi-science",
-      "production_state": "answers_verified",
+      "production_state": "compiled",
       "project_dir": "2006_江西卷_理科",
       "question_count": 22,
       "resume_action": null,
@@ -27894,11 +27919,36 @@
     },
     {
       "blocked_from": null,
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q09_sphere_arcs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q14_tetrahedron_projection.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q15_sine_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q17_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q19_ellipse_tangent.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_浙江卷_理科/figures/f2006_zhejiang_science_q20_curve_tangent.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2006_regular_zhejiang_science",
         "id": "gk-2006-regular-zhejiang-science",
-        "note": "固定候选题面 PDF source ID src-5f9ed6381f35350f76a93adb34b280d596a9d44d2b40366565ac3df18645ab6a，SHA-256 adb6fd06af66efb8cd957004efc3e4278a4df5cb87d4f5e79ad215e548c11cb8；PDF第1—2页、印刷页340–341，题签显示“2006 普通高等学校招生考试（浙江卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q9、Q14、Q15、Q17、Q19、Q20图稿尚待重绘。",
+        "note": "固定候选题面 PDF source ID src-5f9ed6381f35350f76a93adb34b280d596a9d44d2b40366565ac3df18645ab6a，SHA-256 adb6fd06af66efb8cd957004efc3e4278a4df5cb87d4f5e79ad215e548c11cb8；PDF第1—2页、印刷页340–341，题签显示“2006 普通高等学校招生考试（浙江卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q9、Q14、Q15、Q17、Q19、Q20 已按固定候选 PDF 重绘并登记 TikZ 矢量图；未标尺寸的空间比例为示意。",
         "pages_q": [
           1,
           2
@@ -27927,7 +27977,7 @@
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2006-regular-zhejiang-science",
-      "production_state": "answers_verified",
+      "production_state": "compiled",
       "project_dir": "2006_浙江卷_理科",
       "question_count": 20,
       "resume_action": null,
@@ -27946,11 +27996,20 @@
     },
     {
       "blocked_from": "planned",
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2006_湖北卷_理科/figures/f2006hubei_t15_leibniz_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2006_湖北卷_理科/figures/f2006hubei_t18_cube.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2006_regular_hubei_science",
         "id": "gk-2006-regular-hubei-science",
-        "note": "固定候选题面 PDF source ID src-3e4d37728fe026360081acff678b849c40c747cd67ac478230a0040ead794c42，SHA-256 670cd03dc447662d02befbf06b3e5ee8573cede1d4da521a9c03a104569e18e9；PDF第1—2页、印刷页294–295，题签显示“2006 普通高等学校招生考试（湖北卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q15莱布尼茨三角形示例、Q18图稿尚待重绘；Q17（2）题面与约束矛盾，保持 U/PENDING。",
+        "note": "固定候选题面 PDF source ID src-3e4d37728fe026360081acff678b849c40c747cd67ac478230a0040ead794c42，SHA-256 670cd03dc447662d02befbf06b3e5ee8573cede1d4da521a9c03a104569e18e9；PDF第1—2页、印刷页294–295，题签显示“2006 普通高等学校招生考试（湖北卷理）”。发布者、出版者、版次、来源链及官方身份未核；固定 PDF 未见答案、解析或评分材料。Q15莱布尼茨三角形与Q18正方体示意已重绘并登记为TikZ矢量图；源图未标点P，图稿未补入。Q17（2）题面与约束矛盾，保持 U/PENDING。",
         "pages_q": [
           1,
           2
@@ -28000,7 +28059,7 @@
       "year": 2006
     }
   ],
-  "revision": 5881,
+  "revision": 5890,
   "schema_version": 1,
   "sources": [
     {

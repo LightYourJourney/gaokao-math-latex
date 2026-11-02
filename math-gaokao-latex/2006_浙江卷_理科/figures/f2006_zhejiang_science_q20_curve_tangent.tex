@@ -1,0 +1,17 @@
+% Source: fixed 2006 Zhejiang science scan, PDF page 2, Q20.
+% Schematic graph of y=x^3+x^2 with a secant from O to x_n and a parallel
+% tangent at x_{n+1}; vertical guides identify both abscissae.
+\begin{tikzpicture}[line cap=round,line join=round,x=1.15cm,y=0.8cm]
+  \draw[->] (-0.8,0)--(3.5,0) node[right] {$x$};
+  \draw[->] (0,-0.7)--(0,4.9) node[above] {$y$};
+  \draw[thick] plot[domain=0:1.62,samples=100] (\x,{\x^3+\x^2});
+  % s=0.6 and t=(-1+sqrt(10.12))/2 make f(t)/t=f'(s)=2.28.
+  \coordinate (Q) at (0.6,0.576);
+  \coordinate (R) at (1.090597372,2.486562008);
+  \draw (0,0)--(R);
+  \draw (0.18,-0.3816)--(1.02,1.5336);
+  \draw[dashed] (0.6,0)--(Q) (1.090597372,0)--(R);
+  \node[below left] at (0,0) {$O$};
+  \node[below] at (0.6,0) {$x_{n+1}$};
+  \node[below] at (1.090597372,0) {$x_n$};
+\end{tikzpicture}

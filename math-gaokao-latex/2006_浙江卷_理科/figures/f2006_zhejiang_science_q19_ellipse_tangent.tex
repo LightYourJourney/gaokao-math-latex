@@ -1,0 +1,26 @@
+% Source: fixed 2006 Zhejiang science scan, PDF page 2, Q19.
+% Schematic coordinate drawing; retain ellipse, foci, A/B, tangent point T,
+% and the midpoint M of AF_2 with the labelled line segments shown in the scan.
+\begin{tikzpicture}[line cap=round,line join=round,x=1.05cm,y=1.05cm]
+  \draw[->] (-3.8,0)--(4.2,0) node[right] {$x$};
+  \draw[->] (0,-2.25)--(0,2.35) node[above] {$y$};
+  % Coordinates follow the stem: a^2=2, b^2=1/2, and c=sqrt(3/2).
+  % The tangent AB touches at T=(1,1/2), and M is midpoint of AF_2.
+  \draw[thick] (0,0) ellipse (1.41421 and 0.70711);
+  \coordinate (A) at (2,0);
+  \coordinate (B) at (0,1);
+  \coordinate (T) at (1,0.5);
+  \coordinate (Fone) at (-1.224745,0);
+  \coordinate (Ftwo) at (1.224745,0);
+  \coordinate (M) at (1.6123725,0);
+  \draw[thick] (B)--(A);
+  \draw (Fone)--(T) (T)--(M);
+  \fill (Fone) circle (1.3pt) (Ftwo) circle (1.3pt);
+  \node[above left] at (B) {$B$};
+  \node[above right] at (T) {$T$};
+  \node[below] at (A) {$A$};
+  \node[below left] at (Fone) {$F_1$};
+  \node[below right] at (Ftwo) {$F_2$};
+  \node[below right] at (M) {$M$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}
