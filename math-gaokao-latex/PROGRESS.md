@@ -12907,3 +12907,8 @@
 - 批次 `phase1-b70` 登记三卷及固定 Source 绑定，manifest revision 5878→5879。江西、浙江为 `planned`；湖北 Q17（2）按 $a_1=1,a_2=7$ 得 $T_1=m/7$，与题设 $T_1<m/20$ 冲突，因此登记为 `blocked`，保留题面原文和 U/PENDING。问题账新增 ISSUE-1319（题面冲突）、ISSUE-1320（答案缺失/冲突），均为 open / blocks_completion。
 - 三份题面、答案要点及解析正文已登记 paper_id；确定性生成三份 `_含解析.md`。source manifest、issue ledger 校验通过，`solution_sources.py check-batch` 三卷全部通过（22/20/21 题）。Source SHA 绑定固定候选 PDF 字节，不认证发布者、版次、来源链或官方身份；`official_answer` 继续为 null。
 - 三卷图稿尚未制作或登记；未建立逐题 provenance、生成项目 TeX/简答版、正式构建或视觉检查。详见 `reports/2006-three-science-registration.md`。
+
+### 2006 江西、浙江、湖北理科候选卷：逐题 provenance（2026-11-02）
+
+- `phase1-b70` 完成 63 题的 question-review、answer-solve、answer-review 共 189 条角色记录，manifest revision 5879→5881。provenance 现场绑定固定 Source/PDF SHA、源页映射及题面/答案哈希；题面结论只针对固定副本可见文字。江西、浙江状态为 `answers_verified`（非官方独立推导及盲核），湖北 Q17（2）为 U/PENDING 并关联 ISSUE-1319/1320，paper 仍 `blocked`；批次 `provenance_verified`。
+- `provenance.py check-batch`、source manifest、issues ledger 与 solution source batch 校验均通过。图稿、项目 TeX、正式 PDF 构建和视觉检查尚未完成。详见 `reports/2006-three-science-provenance.md`。
