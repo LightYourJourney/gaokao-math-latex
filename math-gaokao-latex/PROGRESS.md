@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1999 广东卷：固定来源初查（2026-11-02）
+
+- canonical worktree `feat/gaokao-phase0` 中已有候选 source `src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019`，固定上游 `普通高考/1999/1999广东.pdf`，SHA-256 `4b06d14df005ea33c6661282ba2afc4adbab26d33d15590f823b7adc5000f05d`，Git blob `f63a116f58acd4eedf57769b146f1a17038da643`，13 页，印刷页 155–167。上游文件和 manifest 指纹逐项吻合；文本层无可用字符，需目视扫描页转录。
+- 首面明确为 1999 年普通高等学校招生全国统一考试数学试题（广东卷），总分 150、时间 120 分钟；第 6 页后转入“答案要点及评分标准”，扫描件含逐题解答。当前不把源件中的答案/解答称为官方版本：扫描未见出版者、版次、版权或官方署名，A/B 卷型答案对应也待核。
+- 初查风险点：Q13 有重复/不通顺字样且 F/F1 记号可能冲突；Q19 “如图”所指图未在题目页清晰出现；Q21 数列定义疑似印作 `x(x_n)=n`。均保留待复核，不依题意修文或用淡色透印补图。详情见 `reports/1999-guangdong-source-intake-2026-11-02.md`。
+- 题面转录尚在进行，代理临时稿只存在 ignored `.work/phase1-b72/`；尚未拼合、独立复核、登记 paper、录入答案解析、生成 LaTeX、构建或视觉审阅。本回执不表示该卷或长期题库完成。
+
 ### 1997 全国文科：登记与确定性项目生成（phase1-b71，2026-11-02）
 
 - 已登记 `gk-1997-regular-national-arts`，固定 source `src-c2f96b8723b85758e1407771ee05f1bb5c457c71a0bc567c01f84ea8c3fadbd9`，source-manifest revision 5898；索引与 missing-issues 同步。Q23（3）产生 ISSUE-1321（transcription-ambiguous）和 ISSUE-1322（answer-missing），均 `blocks_completion`；试卷 production state 为 blocked，答案 official_answer=null。
