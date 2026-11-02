@@ -42,6 +42,13 @@
 - 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。定向门禁：provenance、题答21题锚点、项目共享文件、简答及四版入口的 currentness 检查通过；source manifest、issue ledger 与 775 行 CSV 校验通过。正式 XeLaTeX 四版构建及输出页视觉复核尚未完成。
 - 详情见 `reports/2006-hubei-arts-provenance-project-generation.md`。Q12 联合模型缺失继续阻断纸卷完成；来源身份未认证。本阶段不表示正式构建、卷级验收或长期语料库完成。
 
+### phase1-b73 2006 湖北文科：四版正式构建与视觉收口（2026-11-02）
+
+- 为规范题面、答案和解析 Markdown 补齐 frontmatter 起始分隔符，修复首轮构建把 metadata 当成正文导致的 TeX 错误。失败 attempt 记录为已解决的 ISSUE-1334–1337；成功 attempt `a8702651-0443-4db9-b52d-a00dc1acd265`，输入 manifest revision 5936，四版 4/17/6/13 页，共 40 页。四份 PDF 分别为 试题版 `90c89deafb5bf0705549065a6a0a6d78eae888cd54bd7154c1dd839faa6091d3`、解析版 `2ef1cf21d86a58ad3466a2bf18bc829e2064ee11c059b8167d6c8124ee1a8e5d`、简答版 `3eb95eb8809f271ead4dcc9e9bb4a791ae732fc7e4d358403790311a1fb61ecb`、印刷版 `b9e013620c3edcd946dd7ec019d9846793785fa7aa8c8d04a3aaba070a3f014f`；构建日志无错误、缺字、Overfull 或未解析引用。
+- 当前构建 40 页逐页完成八项视觉审查，共 320 项：285 pass、35 not_applicable、0 fail、0 pending、0 警告豁免。Q18 图在各版对应页面原尺寸复核；页眉页码、字形、公式排布、分页与字号均通过。`finalize-batch` 返回 `FINALIZED`，报告 `reports/phase1-b73.md`，batch 为 `closed_with_blockers`，manifest revision 5938。
+- `validate-receipts --require-current-inputs`、`review_receipts check-batch`、`provenance check-batch`、题答生成/简答/四版壳 currentness、21 题解答源、manifest 与 issue ledger 检查均通过。Q12 联合概率模型缺失仍由 ISSUE-1333 阻断，答案保持 U/PENDING，0.94 仅为独立假设下条件结果；来源发布者、版次、来源链与官方身份仍未核，`official_answer` 仍为 null。全库测试本阶段未运行。
+- 本阶段仅完成该卷四版构建和视觉收口，不表示内容无阻塞、来源认证或长期语料完成。
+
 ### 1999 广东卷：固定来源初查（2026-11-02）
 
 - canonical worktree `feat/gaokao-phase0` 中已有候选 source `src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019`，固定上游 `普通高考/1999/1999广东.pdf`，SHA-256 `4b06d14df005ea33c6661282ba2afc4adbab26d33d15590f823b7adc5000f05d`，Git blob `f63a116f58acd4eedf57769b146f1a17038da643`，13 页，印刷页 155–167。上游文件和 manifest 指纹逐项吻合；文本层无可用字符，需目视扫描页转录。
