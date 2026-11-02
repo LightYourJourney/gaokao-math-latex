@@ -16,6 +16,27 @@
 - 原页核对纠正文科 Q9、Q19 及理科 Q6 的平行关系符号，并纠正理科 Q22 分母导数 $f'_{k-1}(1)$。文科 Q21（2）原页印作 APCD、P 未定义，照录并保留待核 blocker；题图待矢量重绘。
 - 两卷均尚未登记 paper/batch、答案、解析、逐题 provenance 或项目 TeX；发布者/版次/来源链和官方身份仍未核，`official_answer=null`。题稿 parser、diff check 与阶段细节见 `reports/2006-liaoning-question-transcription.md`。未调用 OCR 模型或付费 API，成本未知；本阶段不是卷级验收或长期语料库完成。
 
+### 2006 辽宁文理候选卷：独立答案与解析、盲核复核（2026-11-03）
+
+- 文理两卷 Q1–Q22 的非官方独立答案要点与解析正文已分别写入对应规范源层。文科 Q21(2) 原页写“四边形 APCD”但未定义 P，答案保留 U/PENDING；Q21(1) 仍可答 $x_0=-1$。来源身份未知且官方答案仍为 null。
+- 两份独立盲解及对规范稿的独立复核仅保存在 ignored scratch。主会话逐题对照固定原页并重算分歧：文科 Q2 并集条件本身排除额外元素、答案为 4；Q6 四项全假；Q9 原图符号为平行并得 $C=\pi/3$；Q17、Q19、Q20、Q22 已复算。理科 Q8 焦距相等；Q17、Q18、Q19、Q21、Q22 已逐项校核，其中 Q21 面积条件给 $a=3\sqrt3,d=3$，Q22 在 $n=1$ 时右端为 1，不构成反例。
+- 题面/答案/解析 parser 各卷识别 22 题，小问编号对齐；内存调用 `render_combined` 成功。本阶段未写入派生含解析稿，未登记 paper/batch、issues 或 provenance，未画题图、生成 TeX、构建 PDF 或做页面验收。
+- 题面与阶段细节见 `reports/2006-liaoning-answer-solve.md`。后续登记阶段已将两卷 source/paper 纳入 `phase1-b78`，并为文科 Q21 建立 blocking issue `ISSUE-1340`；随后逐题 provenance 和题图阶段。本阶段不等于卷级闭环或长期语料完成。成本未知。
+
+### phase1-b78 2006 辽宁文理候选卷：来源登记与确定性合并稿（2026-11-03）
+
+- 将固定候选 PDF 登记为两个 canonical source，并新增 `gk-2006-regular-liaoning-arts` 与 `gk-2006-regular-liaoning-science`；manifest revision `5982→5983`。两卷各 22 题，题面页均为 PDF 第 1–2 页，答案页缺失，`official_answer=null`。来源发布者、版次、来源链及官方身份仍未核实。
+- 批次 `phase1-b78` 当前为 `planned`；文科卷因 Q21(2) 源文“四边形 APCD”中的 P 未定义而 `blocked`，登记 open issue `ISSUE-1340`。未把 APCD 擅改为 ABCD，Q21(2) 继续保留 U/PENDING；理科卷为 `planned`。
+- `solution_sources.py extract-batch --write` 确定性生成两卷 `_含解析.md` 并规范化两份 `_解析正文.md`；随后 `check-batch` 识别两卷各 22 题并全部通过。`source_manifest.py validate` 与 `issues.py validate` 通过。
+- 下一阶段为两卷 Q1–Q22 导入三角色 provenance，再登记文科 Q15/Q19、理科 Q18 图稿。尚未生成项目 TeX、正式构建 PDF、制作视觉回执或关闭批次；本阶段不代表长期语料完成。
+
+### phase1-b78 2006 辽宁文理候选卷：三角色逐题 provenance（2026-11-03）
+
+- 文科、理科各 Q1–Q22 导入 question-review、answer-solve、answer-review 三角色记录，共 132 条；每题绑定固定 source ID、SHA 与题面页。Q1–Q19 对应 PDF 第1页，Q20–Q22 对应第2页，题面字面复核均通过。
+- 独立非官方答案为 D 级；文科 Q21(2) 因源文 APCD 中 P 未定义，整题答案保留 U/PENDING 并关联 ISSUE-1340。原字面可确认，故该 blocker 在本阶段按 answer-convention-ambiguous 分类；未推测改字或补解。盲核的文科 Q2/Q6/Q9/Q17/Q19/Q20、理科 Q8/Q16/Q17/Q18/Q19/Q21/Q22 分歧已裁定，provenance 标为 resolved。
+- `provenance.py import-batch` dry-run/写入通过，manifest revision 5983→5984；`provenance.py check-batch`、source manifest、issue ledger、solution source 检查通过。文科 paper 为 blocked，理科为 answers_verified，batch 为 provenance_verified。
+- 尚未生成题图、项目 TeX、正式 PDF 或视觉回执。官方答案与来源身份仍未核实；详见 `reports/2006-liaoning-provenance.md`。本阶段不代表卷级闭环或长期语料完成。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
@@ -13287,17 +13308,3 @@
 - 构建收据 final/current 检查、review `check-batch`、provenance、solution sources、项目生成器、简答、版本壳、CSV（775 行）、source manifest 与 issue ledger 校验全部通过。来源发布者、出版者、版次、来源链和官方身份仍未核实；固定题面 PDF 不含答案，`official_answer` 继续为 null。内容包状态 complete 不代表来源认证。
 - 最终内容更新后重跑全量 unittest `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1754 tests in 550.376s`，`FAILED (failures=2, skipped=13)`。失败一为 `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：未改动的 `2017_全国Ⅰ卷_理科/answers.tex` 当前 SHA 与 adjudicated drift ledger 中的钉定 SHA 不符；失败二为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库 79 条历史 paper/batch 缓存状态与现场派生不一致。本批定向检查均通过；未批量修改这两类全库历史基线。
 - 分支卫生核对：`主工作树` 的 `main` 与 `origin/main` 同步且干净；本批正式输出只在 `仓库根` 的 `feat/gaokao-phase0`。本记录仅表示福建文科单卷批次收口，不表示长期语料完成。
-
-### 2006 辽宁文理候选卷：独立答案与解析、盲核复核（2026-11-03）
-
-- 文理两卷 Q1–Q22 的非官方独立答案要点与解析正文已分别写入对应规范源层。文科 Q21(2) 原页写“四边形 APCD”但未定义 P，答案保留 U/PENDING；Q21(1) 仍可答 $x_0=-1$。来源身份未知且官方答案仍为 null。
-- 两份独立盲解及对规范稿的独立复核仅保存在 ignored scratch。主会话逐题对照固定原页并重算分歧：文科 Q2 并集条件本身排除额外元素、答案为 4；Q6 四项全假；Q9 原图符号为平行并得 $C=\pi/3$；Q17、Q19、Q20、Q22 已复算。理科 Q8 焦距相等；Q17、Q18、Q19、Q21、Q22 已逐项校核，其中 Q21 面积条件给 $a=3\sqrt3,d=3$，Q22 在 $n=1$ 时右端为 1，不构成反例。
-- 题面/答案/解析 parser 各卷识别 22 题，小问编号对齐；内存调用 `render_combined` 成功。本阶段未写入派生含解析稿，未登记 paper/batch、issues 或 provenance，未画题图、生成 TeX、构建 PDF 或做页面验收。
-- 题面与阶段细节见 `reports/2006-liaoning-answer-solve.md`。后续登记阶段已将两卷 source/paper 纳入 `phase1-b78`，并为文科 Q21 建立 blocking issue `ISSUE-1340`；随后逐题 provenance 和题图阶段。本阶段不等于卷级闭环或长期语料完成。成本未知。
-
-### phase1-b78 2006 辽宁文理候选卷：来源登记与确定性合并稿（2026-11-03）
-
-- 将固定候选 PDF 登记为两个 canonical source，并新增 `gk-2006-regular-liaoning-arts` 与 `gk-2006-regular-liaoning-science`；manifest revision `5982→5983`。两卷各 22 题，题面页均为 PDF 第 1–2 页，答案页缺失，`official_answer=null`。来源发布者、版次、来源链及官方身份仍未核实。
-- 批次 `phase1-b78` 当前为 `planned`；文科卷因 Q21(2) 源文“四边形 APCD”中的 P 未定义而 `blocked`，登记 open issue `ISSUE-1340`。未把 APCD 擅改为 ABCD，Q21(2) 继续保留 U/PENDING；理科卷为 `planned`。
-- `solution_sources.py extract-batch --write` 确定性生成两卷 `_含解析.md` 并规范化两份 `_解析正文.md`；随后 `check-batch` 识别两卷各 22 题并全部通过。`source_manifest.py validate` 与 `issues.py validate` 通过。
-- 下一阶段为两卷 Q1–Q22 导入三角色 provenance，再登记文科 Q15/Q19、理科 Q18 图稿。尚未生成项目 TeX、正式构建 PDF、制作视觉回执或关闭批次；本阶段不代表长期语料完成。

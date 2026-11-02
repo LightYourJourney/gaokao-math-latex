@@ -22448,13 +22448,13 @@
 {
   "affected_paper_ids": [],
   "current_evidence": "固定来源 PDF 第2页 Q21(2) 印作“四边形 APCD”，但此前定义的点只有 A、B、C、D，未说明 P；当前只确认固定副本字面，无法判定 P 是否为排印错误。",
-  "fingerprint": "b14d4d8c5fcc9b4cda864ec8ab295f04a1da4133a6ebaa8eaa7ec5df0b943b1a",
+  "fingerprint": "37828a86e1df7bda6ad37e632e9ed187eb01f2a8f2e329e11cc79587c4396aa7",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-liaoning-arts",
   "question_id": "gk-2006-regular-liaoning-arts-q21",
   "resume_action": "取得可追溯的同版完整复本、正式勘误或其他能说明 P 定义的可靠材料后再裁定；此前保留 APCD 原字样和 U/PENDING，不推测改为 ABCD，也不据此求 a,d。",
   "source_id": "src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3",
   "status": "open",
-  "type": "transcription-ambiguous"
+  "type": "answer-convention-ambiguous"
 }
 ```
