@@ -22,6 +22,14 @@
 - 规范答案与解析分别写入 `2006/2006_数学真题_福建文_答案要点.md`、`2006/2006_数学真题_福建文_解析正文.md`；`_含解析.md` 由 `solution_sources.render_combined` 生成。Q1–Q22 连续，题面/解析/答案小问锚点一致，`solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b76` 通过。`register-papers` 事务登记 paper `gk-2006-regular-fujian-arts`，把固定候选 source 内部绑定为 canonical，并登记 batch；manifest revision `5958→5959`。此绑定仅表示仓库内输入关系，不认证发布者、版次、来源链或官方身份；`official_answer=null`，未发现需要建立逐题阻断 issue 的数学歧义。
 - `source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775 行）均通过。paper 当前为 `planned`；逐题 provenance、图稿重绘与登记、项目 TeX、四版独立构建、回执和页面视觉审查均未完成。详见 `reports/2006-fujian-arts-independent-solutions.md`；不表示来源认证、卷级验收或长期语料库完成。
 
+### 2006 福建文科候选卷：盲核校正、题图、provenance 与共享 TeX（phase1-b76，2026-11-02）
+
+- 全卷独立盲核后订正 Q17：$f(x)=\frac32+\sin(2x+\frac\pi6)$，递增区间为 $[-\frac\pi3+k\pi,\frac\pi6+k\pi]$，图象由 $y=\sin2x$ 左移 $\frac\pi{12}$ 再上移 $\frac32$ 得到。Q10 按线面平行的严格无公共点定义，排除 A 的“线落在平面内”边界情形，确认唯一真项为 C。答案要点和解析已同步更正。
+- Q19 四面体、Q20 椭圆坐标图均按固定 PDF 图示拓扑重绘为 TikZ 并链接到题面、解析和确定性含解析稿；`sync-figure-registry` 登记两图，各预期 3 处源稿引用。两幅图分别经 XeLaTeX 单图编译、渲染并目视核对；线型、标签与边界清晰，未见裁切。
+- `provenance.py import-batch` 导入 22 题三角色逐题记录并写入 `2006_福建卷_文科/provenance.json`；Q10、Q17 的复核过程记录为已解决冲突，最终答案无 U 级项、无开放逐题 issue。revision `5960→5961`；来源仍未认证，`official_answer=null`。
+- 已生成 `questions.tex`、`answers.tex`、`answers_short.tex` 和试题版/解析版/简答版/印刷版四个入口。source manifest、solution、provenance、共享源 currentness、简答、四版入口和 775 行 CSV 投影检查通过；paper 状态为 `editions_generated`。详见 `reports/2006-fujian-arts-figures-provenance-generation.md`。
+- 尚未正式编译四版 PDF、建立构建/视觉回执或逐页审查；题库全量测试也未运行。本阶段不表示本卷验收或长期语料完成。
+
 ### 2006 湖南理科候选卷：paper/source 登记与 Q17 blocker（phase1-b75，2026-11-02）
 
 - `source_manifest.py register-papers` 将 `gk-2006-regular-hunan-science` 与 `phase1-b75` 登记，固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb` 内部绑定为 canonical；manifest revision `5951→5952`。该绑定只表示本库固定输入关系，不认证发布者、版次、来源链或官方身份。
