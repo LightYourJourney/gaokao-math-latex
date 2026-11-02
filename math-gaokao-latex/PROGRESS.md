@@ -19,6 +19,13 @@
 - 四幅图分别单独 XeLaTeX smoke 编译并渲染 PNG 目检；均为 1 页、标签和线型清楚、未见裁切。项目 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 均确认当前；`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`（21 题）和 `provenance.py check-batch`（1 卷 OK）通过。
 - 以上不是正式四版 PDF 构建或版面验收；尚未生成正式 build/review receipts，也未执行全量测试。来源发布者、版次、来源链和官方身份未认证，`official_answer` 仍为 null。详见 `reports/2006-hunan-science-figures-provenance.md`。
 
+### phase1-b75 2006 湖南理科候选卷：四版正式构建与视觉收口（2026-11-02）
+
+- 正式构建 attempt `6b037b94-c67c-424a-aaa6-73bc4d60e176` 成功，manifest revision `5957`；试题版、解析版、简答版、印刷版分别为 5、19、7、15 页，共 46 页。PDF SHA-256 与逐版构建输入见 `2006_湖南卷_理科/receipts/build.json`。
+- 四版 46 页均完成八项视觉检查：332 pass、36 not_applicable、0 fail；12 条构建日志行宽告警逐项记录视觉豁免。曾被初审标记缺失的运行页眉和顶部留白，经直接查看对应实际渲染页确认均为正常版心，已据图更正审查项。`review_receipts.py finalize-batch` 成功，batch 为 `closed_with_blockers`，报告 `reports/phase1-b75.md`，manifest revision `5958`。
+- `validate-receipts --require-final --require-current-inputs`、`provenance.py check-batch`、`solution_sources.py check-batch`、source manifest、issues、TeX/简答/四版入口 currentness 及 `report.py check --all` 均通过。全量测试套件本阶段未重跑。
+- Q17（3）继续由 `ISSUE-1339` 阻断并保持 `U/PENDING`；$0.41$ 仅为跨矿独立假设下的条件值。来源发布者、版次、来源链与官方身份仍未核，`official_answer=null`。本阶段只完成四版构建与视觉收口，不表示无阻塞卷级完成或长期语料库完成。
+
 ### 2006 湖南理科候选卷：独立答案推导与分段盲核（2026-11-02）
 
 - 依据固定题面与题图独立推导 Q1–Q21，写入 `2006/2006_数学真题_湖南理_答案要点.md`、`_解析正文.md`，并由 `solution_sources.render_combined()` 生成 `_含解析.md`。两名分段盲核者分别覆盖 Q1–Q10、Q11–Q21；Q14 复核者初次把奇偶系数条件写反，按原式复核后确认应取 $a+b=0$，本库答案为 $(1,-1)$。Q9 图示按一条棱及其对棱中点的截面解释；Q18 的 $P,Q$ 异侧依据原图，文字本身未明说。
