@@ -21959,7 +21959,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "1fdf62f6-244a-4261-8c4b-e9900a14e7ce",
+  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
   "check_code": "pagination_whitespace",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -21968,13 +21968,12 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "bbdefc82a428f4ee1e00d4a6e5071af19715cf524777b14a4ba3dacd0955a247",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 3 页 pagination_whitespace（第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "f33d9955757d25ca8a9fff595cdf302625aefadb888430907cf72977f3a320b6",
+  "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1314
 
 ```json
@@ -21985,23 +21984,22 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "0570d0d01aa10c4ea47398484c1fc5d762db4cf1f5d21d6eff9f181947a99335",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "bbdefc82a428f4ee1e00d4a6e5071af19715cf524777b14a4ba3dacd0955a247",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 5 页 pagination_whitespace（第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1315
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "1fdf62f6-244a-4261-8c4b-e9900a14e7ce",
+  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
   "check_code": "pagination_whitespace",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -22010,13 +22008,12 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "bb9cfba80a0ec50d7c915a8b5561dabf3449da9534e272e7c6a36bda028493e4",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 解析版 第 3 页 pagination_whitespace（第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "0580f714803e57b97595c122e1c65cf189caedf2874c1e1e56c43115c4a3dd55",
+  "resume_action": "修正 gk-2006-regular-jiangsu 的 解析版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1316
 
 ```json
@@ -22027,23 +22024,22 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "7f95d8f94231cae76b5d24eff1c5ba806f60799f8e1a4c441da9e4b327810d73",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "bb9cfba80a0ec50d7c915a8b5561dabf3449da9534e272e7c6a36bda028493e4",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 解析版 第 5 页 pagination_whitespace（第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1317
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "1fdf62f6-244a-4261-8c4b-e9900a14e7ce",
+  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
   "check_code": "pagination_whitespace",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -22052,13 +22048,12 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "5b9100b5e06e1a4c70af0ca72d02da6ec78e5d6c921dcd26722675aa64947f03",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 试题版 第 3 页 pagination_whitespace（第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。）后重跑 build --formal 并重新全页审查",
+  "pdf_sha256": "3abd3cba9a4adcd733ece3f9663a5008a89a5b06653295ca6d0456457c34a3e8",
+  "resume_action": "修正 gk-2006-regular-jiangsu 的 试题版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1318
 
 ```json
@@ -22069,13 +22064,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "a12868931f6a7a229cb6be4c2350fea5796bddf7428fe4fe5b8b60604df010ae",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "5b9100b5e06e1a4c70af0ca72d02da6ec78e5d6c921dcd26722675aa64947f03",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 试题版 第 5 页 pagination_whitespace（第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```

@@ -3,8 +3,8 @@
 - 当前结论：`VISUAL_FAILED`
 - 批次闭环：未完成；本诊断不得作为 `closed` 或 `closed_with_blockers` 报告
 - 试卷数：4
-- 审查页数：178
-- 失败检查数：6
+- 审查页数：175
+- 失败检查数：3
 
 ## gk-2006-regular-guangdong
 
@@ -21,12 +21,12 @@
 
 - 标题：2006 年·普通高等学校招生考试·江苏卷
 - 项目目录：`2006_江苏卷`
-- 构建状态：`compiled_pending_review`；attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`
-- 复核状态：`failed`；时间 2026-11-02T07:47:24+08:00
-- 试题版：5 页；PDF SHA-256 `5b9100b5e06e1a4c70af0ca72d02da6ec78e5d6c921dcd26722675aa64947f03`
-- 解析版：18 页；PDF SHA-256 `bb9cfba80a0ec50d7c915a8b5561dabf3449da9534e272e7c6a36bda028493e4`
-- 简答版：7 页；PDF SHA-256 `bbdefc82a428f4ee1e00d4a6e5071af19715cf524777b14a4ba3dacd0955a247`
-- 印刷版：13 页；PDF SHA-256 `00ab01c5fd92de54cc0471e19d1d049b6b348a90f9401d9de91e5861617795ca`
+- 构建状态：`compiled_pending_review`；attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`
+- 复核状态：`failed`；时间 2026-11-02T09:04:51+08:00
+- 试题版：4 页；PDF SHA-256 `3abd3cba9a4adcd733ece3f9663a5008a89a5b06653295ca6d0456457c34a3e8`
+- 解析版：17 页；PDF SHA-256 `0580f714803e57b97595c122e1c65cf189caedf2874c1e1e56c43115c4a3dd55`
+- 简答版：6 页；PDF SHA-256 `f33d9955757d25ca8a9fff595cdf302625aefadb888430907cf72977f3a320b6`
+- 印刷版：13 页；PDF SHA-256 `3f20024244937c3695cdd14c01e87d5cf4fb87de1d946d0365032a9101fa85e3`
 
 ## gk-2006-regular-jiangxi-arts
 
@@ -52,9 +52,6 @@
 
 ## 失败检查
 
-- gk-2006-regular-jiangsu｜试题版 第 3 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。
-- gk-2006-regular-jiangsu｜试题版 第 5 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。
-- gk-2006-regular-jiangsu｜解析版 第 3 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。
-- gk-2006-regular-jiangsu｜解析版 第 5 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。
-- gk-2006-regular-jiangsu｜简答版 第 3 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。
-- gk-2006-regular-jiangsu｜简答版 第 5 页｜`pagination_whitespace`｜attempt `1fdf62f6-244a-4261-8c4b-e9900a14e7ce`｜第 5 页目视检查：仅页首放置 Q21 题干（约版心上部 1/5），其余近 4/5 页面空白；题目单独分页导致明显空白。 可见内容锚点：21．设数列 {an }, {bn }, {cn } 满足：bn = an − an+2 ，cn = an + 2an+1 + 3an+2（n = 1, 2, 3, · · · ） / 。。
+- gk-2006-regular-jiangsu｜试题版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
+- gk-2006-regular-jiangsu｜解析版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
+- gk-2006-regular-jiangsu｜简答版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
