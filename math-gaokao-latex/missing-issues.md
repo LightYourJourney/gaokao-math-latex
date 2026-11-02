@@ -22073,3 +22073,37 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1319
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选题面 Q17（2）给出 a₁=1、a₂=7，故 T₁=m/7；题设要求对所有 n∈N 有 Tₙ<m/20，取 n=1 即对任意正整数 m 均有 m/7>m/20，与题设矛盾。固定 PDF 仅含题面，未见正式勘误或可追溯裁决材料。",
+  "fingerprint": "b1b8564c5da6b701ecd6b72a51cdf356d17a2ad964f034629613888cc824692d",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-hubei-science",
+  "question_id": "gk-2006-regular-hubei-science-q17",
+  "resume_action": "取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。",
+  "source_id": "src-3e4d37728fe026360081acff678b849c40c747cd67ac478230a0040ead794c42",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1320
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 仅含题面，未见答案、解析、评分材料或正式勘误；Q17（2）按题面推出的 T₁=m/7 与约束 T₁<m/20 矛盾，现有材料无法确认该问的预期题意或答案。答案层据此保留 U/PENDING，official_answer 为空。",
+  "fingerprint": "4bb1ae1c7fed2ccf533eb0a8c124cd845204a8ffef0539019ed4f4f9ea6d5a25",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-hubei-science",
+  "question_id": "gk-2006-regular-hubei-science-q17",
+  "resume_action": "取得具有可信来源链的答案或正式勘误；此前答案继续为 U/PENDING，不推定官方答案。",
+  "source_id": "src-3e4d37728fe026360081acff678b849c40c747cd67ac478230a0040ead794c42",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
