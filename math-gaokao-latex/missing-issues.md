@@ -21963,13 +21963,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "9e667a1d7ab4249bc7510dd35aad51a14b813d49cb58f254bf6914f1dd4d8407",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "22677c17c09af0ca8cedf3b4c5dd4335854bea267dc347b501bb7a26c8e213b5",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -22003,13 +22003,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "c1527c1cdac2312e4524e57ad0e5e9db8b7736941e3edb2589b749455160fbc1",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "93c54492c98bb27c1be75bb81f5ca4f112a48db0428cd39fd248a3e5540a4c9f",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 解析版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -22043,13 +22043,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "c9381c202486fe89eaabfcff4a3220d2e46afe5d6d4d28478ea21f6f935655de",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
   "pdf_sha256": "c476bdc47c7e2f2a7c901e319ffa901a6c305a2b629a93f97259723ce0cb1523",
-  "resume_action": "修正 gk-2006-regular-jiangsu 的 试题版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```

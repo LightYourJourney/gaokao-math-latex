@@ -103,6 +103,14 @@
 - 新增生成器解析、范围及未匹配检查；3 项针对性单测通过。`generate_projects.py --batch phase1-b69 --write/--check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`source_manifest validate` 均通过。`provenance check-batch` 报批次缓存 `compiled_pending_review` 与当前派生 `provenance_verified` 不一致，暂未改缓存状态。
 - 本阶段尚未正式重建江苏四版 PDF，也未更新/复核视觉回执；旧回执绑定变更前输入，三项第3页留白问题仍为 open。详见后续正式构建及视觉复核回执。本阶段仅完成局部规则实现，不表示 `phase1-b69` 或相关试卷收口。
 
+### phase1-b69 2006 四卷：复建、全页复核与批次收口（2026-11-02）
+
+- 在 manifest revision 5876 正式重建广东、江苏、江西文科、浙江文科四卷的16个版本；总计175页，四卷各版 build attempt、PDF SHA-256 与页数均和 review work item 一致，`validate-receipts --require-final --require-current-inputs` 返回4卷全部 OK。
+- 四卷每页八项检查全部完成。独立复核发现先前填写的页眉缺失与顶边留白失败项和当前 PDF 不符：逐页页眉、版本名及页码均可见；江西印刷版第5页实际含 Q21–Q22 与来源说明；相应误报已更正。广东解析版第15、17页两条 Overfull/Underfull 告警均完成实页检查并记录无可见版面损害的豁免。
+- `review_receipts.py finalize-batch` 在 manifest revision `5877→5878` 成功；`phase1-b69` 为 `closed_with_blockers`。广东与江西文科的既有 U/PENDING 问题继续阻塞内容完成；江苏与浙江为 `eligible_complete`。四卷来源发布者、版次、来源链和官方身份仍未认证，官方答案仍为 null；江苏卷文理变体仍未知。
+- `source_manifest`、issues、provenance、项目/简答/版本生成 currentness、solution sources、manifest CSV 及 final/current build receipts 均通过。全量测试 `python3 -B -m unittest discover -s tests -q` 运行1752项、13项跳过，但有1项失败：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报告仓库内16个非本批 paper 的缓存 `complete` 与现场派生 `answers_verified` 不一致；phase1-b69 四卷本身的收据和派生状态通过。
+- 批次报告见 `reports/phase1-b69.md`。本阶段只闭合四卷的构建与视觉审查事务，不表示广东/江西答案 blocker 已解决、来源身份认证或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。
