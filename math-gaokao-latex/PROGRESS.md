@@ -43,6 +43,14 @@
 - 三张图登记入 manifest 的 `figure_files`（每图 `expected_occurrences=3`），manifest revision `5984→5986`；`provenance.py import-batch` 重新绑定上述三题题面哈希并写入 revision `5986→5987`，其他 41 题角色哈希未变。
 - `provenance.py check-batch`、`solution_sources.py check-batch`、`source_manifest.py validate`、`issues.py validate` 与 `sync-figure-occurrences` 均通过。文科 Q21(2) 的 P 未定义问题仍阻断完成，未推测修正文源。尚未生成项目 TeX、正式 PDF 或视觉回执；下一步生成项目与四版入口。
 
+### phase1-b78 2006 辽宁文理候选卷：共享 TeX、简答与四版入口生成（2026-11-03）
+
+- 两卷各生成 `questions.tex`、`answers.tex`、`answers_short.tex` 和试题/解析/简答/印刷四版入口，共享索引 `index.json` 更新；所有图稿引用均解析到已登记 TikZ 文件。
+- 简答生成器首轮因速查行不符合第三路核对格式而拒绝；补入与逐题答案完全相同的 Q1–Q12 横向字母行后通过，未修改答案值或推导。详细缘由见 `reports/2006-liaoning-project-generation.md`。
+- generation 状态同步后 manifest revision `5987→5988`；修正索引中已过时的“图位待重绘”备注并重生成，revision 到 `5989`。`manifest.csv` 投影为775行且当前。
+- `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate`、`sync-figure-occurrences`、`manifest_csv.py --check` 均通过。文科 Q21(2) 仍因 P 未定义被阻断，理科为 `editions_generated`，批次为 `provenance_verified`。
+- 尚未正式构建 XeLaTeX PDF、逐页视觉审查或生成回执；下一阶段构建并准备两卷四版视觉审查。本阶段不代表批次闭环或长期语料库完成。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
