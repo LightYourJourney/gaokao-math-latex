@@ -22533,16 +22533,15 @@
   "edition": "解析版",
   "figure_id": "formal-build",
   "fingerprint": "cd51753fcbe21682f7ba36bddd5e3dcd22f5308042540fb8f31f35a8d430aa6e",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-chongqing-arts",
-  "resume_action": "修正 gk-2006-regular-chongqing-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1346
 
 ```json
@@ -22552,16 +22551,15 @@
   "edition": "印刷版",
   "figure_id": "formal-build",
   "fingerprint": "b22f5ab7f7ee8529e4cf074b80b0259c2a7dc83a335459f442da12559003fb14",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-chongqing-arts",
-  "resume_action": "修正 gk-2006-regular-chongqing-arts 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1347
 
 ```json
@@ -22580,7 +22578,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1348
 
 ```json
@@ -22590,16 +22587,15 @@
   "edition": "简答版",
   "figure_id": "formal-build",
   "fingerprint": "271329074a0bde6d20255433bf8db8e65c55b6c1ce6e566e6b7a5ed6de0db034",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-chongqing-science",
-  "resume_action": "修正 gk-2006-regular-chongqing-science 的 简答版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1349
 
 ```json
@@ -22618,7 +22614,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1350
 
 ```json
@@ -22628,16 +22623,15 @@
   "edition": "解析版",
   "figure_id": "formal-build",
   "fingerprint": "dd593622199707c9b912b631eefa583414c82f68a663c9e11a05fb5942d72ce6",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-shaanxi-arts",
-  "resume_action": "修正 gk-2006-regular-shaanxi-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1351
 
 ```json
@@ -22647,16 +22641,15 @@
   "edition": "印刷版",
   "figure_id": "formal-build",
   "fingerprint": "991832fbe92a52714083872dc454fec6435c3135170eea7c3864ec89b4ea51c4",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-shaanxi-arts",
-  "resume_action": "修正 gk-2006-regular-shaanxi-arts 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1352
 
 ```json
@@ -22675,7 +22668,6 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1353
 
 ```json
@@ -22685,16 +22677,15 @@
   "edition": "简答版",
   "figure_id": "formal-build",
   "fingerprint": "fb09d8d58be1c0df5f9e680d0629fe41b0ad21ddc5cd03e3e9cb01f28f409187",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-shaanxi-science",
-  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 简答版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1354
 
 ```json
