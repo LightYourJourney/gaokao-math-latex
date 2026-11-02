@@ -51,6 +51,13 @@
 - `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate`、`sync-figure-occurrences`、`manifest_csv.py --check` 均通过。文科 Q21(2) 仍因 P 未定义被阻断，理科为 `editions_generated`，批次为 `provenance_verified`。
 - 尚未正式构建 XeLaTeX PDF、逐页视觉审查或生成回执；下一阶段构建并准备两卷四版视觉审查。本阶段不代表批次闭环或长期语料库完成。
 
+### phase1-b78 2006 辽宁文理候选卷：题面标点修正与四版正式构建（2026-11-03）
+
+- 文科首轮构建发现 U+3001 顿号位于 Q19、Q22 数学模式内，导致字体缺字。仅将数学模式边界移到顿号之前，保留题面字词和符号；重生成含解析稿、项目 TeX，并为 Q19、Q22 重绑题面哈希，未更改答案或推导。
+- 正式构建输入 manifest revision 5993；文科 attempt `44453959-c03c-402c-bb83-d37dde0b062f`，理科 attempt `b866e00c-224e-47c1-a8a7-1a7babec1df9`。四版全部 `succeeded`，0 编译问题、0 缺字、0 overfull，共91页（文科6/20/8/16页，理科4/18/6/13页）。结果状态事务将 manifest 更新到 revision 5994；PDF SHA 及构建指纹见 `reports/2006-liaoning-formal-build.md` 和两卷 `receipts/build.json`。
+- `build_projects.py validate-receipts --require-current-inputs` 返回 OK、2 pending、0 stale/invalid/missing。四版 PDF 已渲染，视觉审查另作下一阶段；当前仍为 `compiled_pending_review`。
+- 来源身份与 `official_answer=null` 仍未核实。文科 Q21(2) 原文 APCD 中 P 未定义，继续保留 `U/PENDING` 与 `ISSUE-1340` 阻断，本阶段不是批次验收或长期语料完成。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
