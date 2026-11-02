@@ -13062,3 +13062,9 @@
 - 据固定 PDF 第 1 页重绘 Q10 向量阴影区域与 Q18 共底正四棱锥，图稿分别为 `2006_湖南卷_文科/figures/f2006hunan_arts_q10_vector_region.tex`、`f2006hunan_arts_q18_pyramids.tex`；题面与解析稿使用本地 TikZ 链接，未嵌入原卷截图。
 - 两图合并的 smoke 文档由 XeLaTeX 编译成功，生成 2 页 A4 临时 PDF；220 dpi 渲染并目视核对灰区、标签、可见/隐藏棱和裁切。报告见 `reports/2006-hunan-arts-figures.md`。Q10 选项按固定源图的阴影范围判定，不将示意图像素视作精确比例；Q18 原图确认 P/Q 在底面两侧。
 - 题源尚未绑定 paper/batch，manifest `figure_files` 与 expected occurrence 未登记，未进行正式四版装配、构建或页面审查。来源身份未核。本阶段只完成两幅图稿和隔离渲染检查，不表示本卷闭环或长期语料完成。
+
+### 2006 湖南文科候选卷：paper/source 登记与 Q17 blocker 入账（phase1-b74，2026-11-02）
+
+- `register-papers` 将 `gk-2006-regular-hunan-arts` 与 `phase1-b74` 登记，固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 内部绑定为 canonical；revision `5938→5939`。`sync-figure-registry` 登记 Q10、Q18 两图，各有 3 处规范题面/含解析引用，revision `5939→5940`。绑定不认证发布者、版次、来源链或官方身份；`official_answer=null`。
+- 建立 `ISSUE-1338`：题面未明确跨矿整改复查结果的联合独立关系，Q17（3）规范答案保持 `U/PENDING`；$0.41$ 只列为独立性假设下条件值。paper 为 `blocked`（`blocked_from=planned`），batch `phase1-b74` 为 `planned`。
+- 规范 Markdown 已绑定 paper ID，含解析稿按 `render_combined()` 重生成；`source_manifest.py validate`、issue ledger 校验、775 行 CSV 投影与 `solution_sources.py check-batch --batch phase1-b74` 均通过。逐题 provenance、项目 TeX、正式四版构建与视觉验收仍未完成。详见 `reports/2006-hunan-arts-registration.md`；不表示来源认证、卷级验收或长期语料完成。

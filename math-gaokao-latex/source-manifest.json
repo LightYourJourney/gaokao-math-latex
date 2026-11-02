@@ -2118,6 +2118,14 @@
         "gk-2006-regular-hubei-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b74",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-hunan-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2127,7 +2135,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "59fa0503-2318-4359-8c45-cfd84c1c33c8",
+  "last_transaction_id": "8c2a1b5a-dc1d-4a59-a60a-49267b351e08",
   "papers": [
     {
       "blocked_from": null,
@@ -28295,9 +28303,72 @@
       "title": "2006 年·普通高等学校招生考试·湖北卷文科",
       "track": "arts",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2006_湖南卷_文科/figures/f2006hunan_arts_q10_vector_region.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2006_湖南卷_文科/figures/f2006hunan_arts_q18_pyramids.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2006_regular_hunan_arts",
+        "id": "gk-2006-regular-hunan-arts",
+        "note": "固定候选 PDF source ID src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d，SHA-256 64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2，Git blob c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9；两页 A3 横向（印刷页303–304），题签显示“2006 普通高等学校招生考试（湖南卷文）”。固定 PDF 仅有题面；本库答案为独立推导草稿，official_answer 为 null；Q17（3）因跨矿复查联合独立范围未明保持 U/PENDING。发布者、版次、来源链与官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考湖南卷文科",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南卷文科"
+      },
+      "issue_ids": [
+        "ISSUE-1338"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-hunan-arts",
+      "production_state": "blocked",
+      "project_dir": "2006_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": "取得可追溯的明确跨矿复查独立性条件、正式答案/勘误或其他可裁定同版材料；此前保持第17题（3）为 U/PENDING，不把 0.41 写成无条件答案。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_湖南文_含解析.md",
+        "questions": "2006/2006_数学真题_湖南文_试题.md",
+        "solution_body": "2006/2006_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d"
+      ],
+      "title": "2006 年·普通高等学校招生考试·湖南卷文科",
+      "track": "arts",
+      "year": 2006
     }
   ],
-  "revision": 5938,
+  "revision": 5940,
   "schema_version": 1,
   "sources": [
     {
@@ -36018,8 +36089,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006湖南文.pdf",
       "regions": [],
       "source_id": "src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d",

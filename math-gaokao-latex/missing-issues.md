@@ -22407,3 +22407,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1338
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面第17题只说明“每家煤矿安检是否合格是相互独立的”，但未明确不同煤矿整改复查结果的联合独立关系。至少关闭一家煤矿的概率不能仅由单家复查边缘概率推出；0.41 仅在把独立性扩展到初检及复查结果时成立，规范答案保留 U/PENDING。",
+  "fingerprint": "121d2b229e6d2bc6044cc74cff00af213e572151728143081c94df284bbbd4b3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-hunan-arts",
+  "question_id": "gk-2006-regular-hunan-arts-q17",
+  "resume_action": "取得可追溯的明确跨矿复查独立性条件、正式答案/勘误或其他可裁定同版材料；此前保持第17题（3）为 U/PENDING，不把 0.41 写成无条件答案。",
+  "source_id": "src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
