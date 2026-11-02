@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2007 北京文科候选卷：固定来源接收（2026-11-03）
+
+- 从 ready 且未绑定 paper 的来源中接收 `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`，固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。文件 SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5`、Git blob `3207132ef37ec52e6dfd19ffac856388f4c053f1`、511024 bytes 与 manifest 一致；来源仓库 HEAD 即该固定 commit，工作区干净。
+- 原 PDF 为两页 A3 横向题面（印刷页 353–354），题签显示“2007 普通高等学校招生考试（北京卷文）”。可见 Q1–Q20：选择题 8、填空题 8、解答题 4；图位为 Q13 弦图、Q17 立体几何图、Q19 矩形坐标图。PDF 未见答案、解析或评分页。`analyze_pdf.py --no-cache --include-text` 将第 1 页列为 `review`（1418 非空白字符、7 个可疑字符），第 2 页列为 `text_candidate`（471 字符）；两页均有文字层，`model_calls=0`、`ocr_calls=0`。关键公式、关系符号和图示以固定原页为准。
+- 当前项目无 2007 北京文科 paper 或规范题面；来源仍为 `paper_id=null`、`paper_relation=null`、`source_state=ready`。本阶段不改 manifest/issues，不登记 paper，不将候选副本认证为官方来源；发布者、版次、复制/扫描链和官方身份未核。详情见 [来源接收报告](reports/2007-beijing-arts-source-intake.md)。下一阶段转录 Q1–Q20 并逐题对照原页；本阶段不代表题面转录完成或整卷验收。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。
