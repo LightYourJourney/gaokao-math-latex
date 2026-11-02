@@ -13154,3 +13154,10 @@
 - 2017 理科四版当前构建 attempt `5b22b184-42ea-4948-935d-619241068003`，页数 7/43/9/32；2018 理科四版 attempt `80efdf9c-aaa7-431f-bffa-a0d5c9a2438a`，页数 5/36/7/28。两卷当前共 167 页均逐页目视复核，回执各 4 版本 × 8 项检查覆盖完成；全批 `phase0-b01` 共 319 页、16 版本，正式报告为 `closed`。
 - `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`review_receipts check-batch`、`validate-receipts --require-final --require-current-inputs`、`provenance check-batch` 与 `issues validate` 均通过。未运行全库测试。
 - 修改范围仅在 `feat/gaokao-phase0` worktree；同机 `main` worktree 核对为干净且与 `origin/main` 同步。本条记录仅说明 ISSUE-0008 与 phase0-b01 收口，不代表长期语料完成。
+
+### phase1-b76 收口后全量测试与 worktree 核对（2026-11-02）
+
+- 2006 福建文科 phase1-b76 正式收口：首次构建发现转录说明中的 Unicode `α` 被当作文本字形而缺失；改为数学模式，并同步更新 Q19/Q20 图稿状态说明。最终构建 attempt `9543e350-388c-41a5-8d3e-c3689fa6e723`，manifest revision 5967；试题版/解析版/简答版/印刷版为 4/17/6/13 页，共 40 页。四版全部页面经本轮渲染核验，4 个第 1 页重新目视，其余 36 页栅格与前次已目视页面逐像素一致；日志缺字数为 0。视觉回执 `passed`，266 项 pass、54 项 not_applicable、0 fail，1 条 `Underfull \hbox`（answers.tex 367–368）在解析版第 13 页视觉确认后逐项豁免。批次 `phase1-b76` 为 `closed`，正式报告 `reports/phase1-b76.md`。
+- 构建收据 final/current 检查、review `check-batch`、provenance、solution sources、项目生成器、简答、版本壳、CSV（775 行）、source manifest 与 issue ledger 校验全部通过。来源发布者、出版者、版次、来源链和官方身份仍未核实；固定题面 PDF 不含答案，`official_answer` 继续为 null。内容包状态 complete 不代表来源认证。
+- 最终内容更新后重跑全量 unittest `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1754 tests in 550.376s`，`FAILED (failures=2, skipped=13)`。失败一为 `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：未改动的 `2017_全国Ⅰ卷_理科/answers.tex` 当前 SHA 与 adjudicated drift ledger 中的钉定 SHA 不符；失败二为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库 79 条历史 paper/batch 缓存状态与现场派生不一致。本批定向检查均通过；未批量修改这两类全库历史基线。
+- 分支卫生核对：`主工作树` 的 `main` 与 `origin/main` 同步且干净；本批正式输出只在 `仓库根` 的 `feat/gaokao-phase0`。本记录仅表示福建文科单卷批次收口，不表示长期语料完成。
