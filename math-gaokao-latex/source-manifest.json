@@ -2093,7 +2093,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e3381079-6e84-42ea-a447-eb0ad42eab83",
+  "last_transaction_id": "8a04c8ca-93cb-42cf-94c2-8274c6d4bed6",
   "papers": [
     {
       "blocked_from": null,
@@ -27606,7 +27606,7 @@
       "year": 2006
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -27654,16 +27654,22 @@
       },
       "issue_ids": [
         "ISSUE-1311",
-        "ISSUE-1312"
+        "ISSUE-1312",
+        "ISSUE-1313",
+        "ISSUE-1314",
+        "ISSUE-1315",
+        "ISSUE-1316",
+        "ISSUE-1317",
+        "ISSUE-1318"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2006-regular-jiangsu",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2006_江苏卷",
       "question_count": 21,
-      "resume_action": null,
+      "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 3 页 pagination_whitespace（第 3 页目视检查：仅填空题 Q11–Q16 排在页面上部，约下方 2/3 版心留空；题组提前断页造成明显空白。 可见内容锚点：二、填空题 / 11．在 △ABC 中，已知 BC = 12，A = 60◦ ，B = 45◦ ，则 AC = 。。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2006/2006_数学真题_江苏_答案要点.md",
         "combined_rendered": "2006/2006_数学真题_江苏_含解析.md",
@@ -27825,7 +27831,7 @@
       "year": 2006
     }
   ],
-  "revision": 5810,
+  "revision": 5823,
   "schema_version": 1,
   "sources": [
     {

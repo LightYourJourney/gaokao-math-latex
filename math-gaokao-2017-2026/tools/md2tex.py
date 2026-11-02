@@ -277,7 +277,7 @@ def _wrap_ideographic_full_stops_outside_text(source: str) -> str:
             cursor = text_end
             continue
         if source.startswith("。", cursor):
-            output.append(r"\text{。}")
+            output.append(r"\mbox{。}")
             cursor += 1
             continue
 
@@ -548,16 +548,21 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
         if ln.strip().startswith(r"\["):
             s = ln.strip()
             if s.startswith(r"\[") and r"\]" in s[2:]:
+                close = s.find(r"\]", 2)
+                body = _wrap_ideographic_full_stops_outside_text(s[2:close])
+                tail = s[close + 2:]
                 out.append(r"\nopagebreak[4]")
-                out.append(ln)
+                out.append(r"\[" + body + r"\]" + tail)
                 i += 1
                 continue
             j = i + 1
             while j < n and lines[j].strip() != r"\]":
                 j += 1
             if j < n:
+                body = "\n".join([s[2:], *lines[i + 1:j]])
+                body = _wrap_ideographic_full_stops_outside_text(body)
                 out.append(r"\nopagebreak[4]")
-                out.extend(lines[i:j + 1])
+                out.extend([r"\[" + body, r"\]"])
             else:
                 sink.warnings.append(f"未闭合的 \\[ 块：{s[:50]}")
                 out.append(conv_inline(ln, sink))
