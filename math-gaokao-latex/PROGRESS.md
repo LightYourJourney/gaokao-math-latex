@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：最终答案数学模式修正（2026-11-03）
+
+- TeX 日志显示四卷最终答案块以普通粗体文本保留 π、ω、ξ、希腊字母及 Unicode 上下标/关系符号，重庆理 Q18(1)、陕西理 Q18(2) 的裸幂次还触发 Missing $ inserted。四份《答案要点》对22题的最终答案公式改为显式数学模式，逐项对照修改前的解析结果，答案事实、答案等级与 U/PENDING 均未改变。
+- answer-solve 与 answer-review 的 scratch 记录仅对这22题更新 answer_sha256；provenance import-batch 更新后 check-batch（4卷）通过。四份含解析稿、answers.tex 和必要的简答输出已确定性重生；另为重庆理 Q20(2) 与陕西理 Q21(2) 增加 \le 简答 override，短答 override 总计26条。
+- generate_projects、make_short_answers、make_editions、solution_sources check-batch（4×22）、provenance（4卷）、source manifest、issues、775行 CSV、54项简答测试及最终答案原始数学字符扫描均通过。manifest revision 为6011；重庆文为 editions_generated，其余三卷因原存疑项仍 blocked，official_answer=null。
+- attempt 02 的 receipts 因答案源输入变化已过期；尚未重新正式构建，也未做 PDF 视觉审查。修正明细见 reports/2006-chongqing-shaanxi-answer-typesetting.md；下一步是新的四卷四版正式构建。
+
 ### 2006 重庆、陕西文理候选卷：第二次四版正式构建（2026-11-03）
 
 - attempt 02 运行四卷共16版，12版生成 PDF、4版失败；重庆文、陕西文四版均 `compiled_pending_review`，重庆理、陕西理的解析版和印刷版失败。失败尝试分别为重庆文 `f0c3bf4b-245b-4d07-8a0a-4feb3a9588ed`、重庆理 `924de287-97d4-4a44-bc14-d6574049dd7a`、陕西文 `847e3956-1697-4e47-b072-5194aa124ba3`、陕西理 `df8b6a85-712b-43de-b42a-2941dc118da4`；attempt receipts 绑定 manifest revision 6006，构建事务后总账 revision 为 6007。各版页数、PDF SHA-256、工具链指纹和日志摘要均记在卷级 `receipts/build.json`。

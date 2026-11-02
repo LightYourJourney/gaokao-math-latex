@@ -107,6 +107,10 @@ SHORT_ANSWER_OVERRIDES = {
     ("gk-2006-regular-shaanxi-science", 22, 3): (
         r"$\frac{y_{n+1}-x_{n+1}}{y_n-x_n}<\frac12$"
     ),
+    ("gk-2006-regular-chongqing-science", 20, 2): r"$-6\le b\le2$",
+    ("gk-2006-regular-shaanxi-science", 21, 2): (
+        r"$y=\frac{x^2}{4}$，$-2\le x\le2$"
+    ),
 }
 SHORT_ANSWER_NOTICE_OVERRIDES = {
     "gk-1990-regular-guangdong-science": (
