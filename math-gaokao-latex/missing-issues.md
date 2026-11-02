@@ -20266,7 +20266,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定副本第1页 Q2 印 1/x<1/2，解集为 (-∞,0)∪(2,+∞)，所列四个选项均不相等；固定副本未附答案。 新增 EOL 2006-06-10 安徽文科“标准答案”扫描图（https://www.eol.cn/include/cer.net/gaokao/2006shiti/anhui/anhui_shuxuewenda1.jpg）将第（2）题标作 D；该字母不能证明固定副本 D 项是否漏印 0，固定副本题干与现录选项仍不匹配。EOL 为第三方分发，非正式勘误，来源边界见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
+  "current_evidence": "固定副本第1页 Q2 印 1/x<1/2，解集为 (-∞,0)∪(2,+∞)，所列四个选项均不相等；固定副本未附答案。 新增 EOL 2006-06-10 安徽文科答案图将第（2）题标作 D；Quick Look 对照 6月9日 Word 试题件，确认该件 D 项同样印为 (-∞,2)∪(2,+∞)，其解答列出 x(2-x)<0 后仍选 D。同期 EOL 材料也存在选项/答案冲突，不能据字母 D 改写固定副本或确定原卷应有选项。详见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
   "fingerprint": "2dcc9b93e3e35d167539aa68a13a22c69f338b477c32f6d6d3d96597b9732749",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-anhui-arts",
@@ -20283,7 +20283,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定副本第1页 Q5 椭圆式仅见 x²/6+y²/2，之后直接接右焦点，未见等号及右侧；两次源页核对一致。 新增 EOL 2006-06-09 文科试题及答案 Word 复本；其 Q5 解答称椭圆右焦点为 (2,0)，推出 p=4，但方程作为 OLE 对象无法由文本提取直接核定等号右端；同型安徽理科 EOL 题面图显示右端 1，但固定文科副本与 EOL 文件之间未建立同版链。不得据此补写固定题面。详见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
+  "current_evidence": "固定副本第1页 Q5 椭圆式仅见 x²/6+y²/2，之后直接接右焦点，未见等号及右侧；两次源页核对一致。 新增 EOL 2006-06-09 文科 Word 试题件；Quick Look 视觉复核清楚显示其 Q5 椭圆式为 x²/6+y²/2=1，解答给出右焦点 (2,0)。这是 EOL 所载文科版本的直接证据；固定两页副本未见等号及右端，两者的同版/复制来源链未建立，故不能把 EOL 版本回写为固定副本原文。详见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
   "fingerprint": "07a30ace92e8d26d373685a11dfc70b03d5794c3c314c4e0dd026dba40e038a3",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-anhui-arts",
@@ -20300,7 +20300,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定副本 Q5 椭圆式缺少可见等号及右侧，不能确定椭圆焦点或参数 p；固定副本未附答案。 新增 EOL 2006-06-10 安徽文科答案图将第（5）题标作 D，6月9日 Word 复本解答给出 p=4；但其题目公式文本提取缺失且副本来源链、版本及官方身份未核，仍不足以作为固定题面的可信裁决答案。答案继续 U/PENDING。详见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
+  "current_evidence": "固定副本 Q5 椭圆式缺少可见等号及右侧，不能确定椭圆焦点或参数 p；固定副本未附答案。 新增 EOL 文科参考答案扫描图标记 Q5 为 D，配套 Word 文档视觉可读 Q5 方程 x²/6+y²/2=1，并解得 p=4；但文件出版/编者身份与固定候选源版本关系均未核。可支持 EOL 版本答案 D，不足以认证固定副本的答案来源，固定副本答案继续 U/PENDING。详见 reports/2006-anhui-arts-eol-answer-recheck-2026-11-02.md。",
   "fingerprint": "2ffc2d9a776c9f6d8cf78be2a2bbc132a79b4d08c2b90055f86ce5743e11eb53",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-anhui-arts",
