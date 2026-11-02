@@ -58,6 +58,12 @@
 - manifest / issues / `solution_sources check-batch` / `generate_projects --check` / `make_short_answers --check` / `make_editions --check` 均通过；`report.py render --all` 后 `report.py check --all` 返回“报告输出与全量 manifest 当前一致”；manifest CSV 刷新为775行并记录新来源关联。
 - 正式 PDF 构建、页面视觉验收、三角色 provenance、题图、OCR 候选导入与全套测试尚未完成。详情见 [内部登记报告](reports/2007-beijing-arts-registration.md)。本阶段只完成本库 source/paper 绑定和确定性项目装配，不表示来源官方认证、整卷闭环或长期语料完成。
 
+### 2007 北京文科候选卷：Q13/Q17/Q19 题图矢量重绘与独立核对（2026-11-03）
+
+- 按固定 PDF 第1页 Q13/Q17、第2页 Q19 重绘三张本地 TikZ 图；Q13 不增加原图未见的 θ 角标，Q17 保留 `AO/OB/OC/OD` 虚线、`CD` 实线和 `O` 处直角标记，Q19 保留矩形、`AD` 延长线、坐标轴及 `N/M/T/O` 标注。独立 Luna/high 图稿复核三图均 PASS，未读取答案或解析；证据见 [题图复核报告](reports/2007-beijing-arts-figure-review.md)。
+- `_试题.md` 独立段落图链、确定性 `_含解析.md`、`questions.tex`/`answers.tex` 与 manifest `figure_files` 已同步；三图各登记两次引用。首次在刷新合并稿前同步导致生成器发现引用计数 1/2 不同，刷新合并稿后重同步至 2/2 并通过；同步顺序已写入 `docs/OCR_WORKFLOW.md`。manifest revision 当前为 6019。
+- 来源清单、问题清单、`solution_sources`、项目生成、简答及四版入口检查通过。正式 PDF 构建与逐页视觉验收、三角色 provenance 和批次闭环待后续阶段；Q18 `ISSUE-1355` 继续 open / `blocks_completion`，来源官方身份仍未核。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。

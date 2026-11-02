@@ -87,7 +87,7 @@ python3 tools/local_ocr.py batch .work/ocr-local/jobs.json \
 2. 三个事实源层分别为 `_试题.md`、`_答案要点.md`、`_解析正文.md`；`_含解析.md` 仅由规范源确定性生成。来源附答案、编者推导和官方答案身份分别记证，不混同。
 3. 题目生成与独立复核分离。独立逐题核题、盲解和答案复核使用非重叠任务；按用户偏好使用 Luna/high 子代理。代理自述不作为验收证据，主代理核查实际文件、原图和差异。
 4. 缺源或存疑保留 U/PENDING、来源冲突和 blocker；OCR 一致不能解除 blocker。来源无充分证据时 `official_answer=null`。
-5. 题图按来源矢量重绘，登记 generator、figure_files、Markdown 映射与 provenance。OCR 图片块不是已完成图稿。
+5. 题图按来源矢量重绘，登记 generator、`figure_files`、Markdown 映射与 provenance。将图稿 `.tex` 链接独立成段写入规范 `_试题.md` 后，先运行 `solution_sources.py extract-batch --write` 刷新确定性 `_含解析.md`，再运行 `source_manifest.py sync-figure-registry --write` 生成引用次数；该计数覆盖 `_试题.md` 与当前 `_含解析.md`，不得手工填写或在合并稿刷新前同步。题面、图稿或答案要点定稿后再导入 provenance，使现场题面/答案摘要与最终事实源一致。OCR 图片块不是已完成图稿。
 6. 使用既有来源/答案/provenance 验证工具和事务登记；生成 TeX、简答、四版入口。正式构建与逐页视觉检查继续走既有回执流程，OCR 成功不替代构建或视觉验收。
 7. 批次报告列出已完成内容、尚未核实内容、测试、当前回执和剩余步骤；每阶段提交，结尾核实工作区干净。单卷/一批完成不表示长期语料库完成。
 
