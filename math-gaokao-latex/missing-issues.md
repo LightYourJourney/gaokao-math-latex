@@ -20317,7 +20317,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定副本 Q3 只印出 x^2/6 + y^2/2，随后直接接“的右焦点”，未见等号和右侧。题面照录且经独立复核确认忠实；仅凭当前副本无法确定右焦点或 p，答案为 U/PENDING。",
+  "current_evidence": "固定副本 Q3 只印出 x^2/6 + y^2/2，随后直接接“的右焦点”，未见等号和右侧。中国教育在线关联题面图及互联网档案馆保存的 2006 年四页文章快照对应 2006 安徽理科卷 Q1–Q22；EOL 图中 Q3 明确写 x^2/6 + y^2/2=1，独立复核据此推导 p=4（D）。但 EOL JPG 无历史字节快照，且与固定 A3 PDF 的版次/底本/扫描链未证实，EOL 也非考试机构原卷认证；因此该线索不能证明固定副本漏印前的原文或官方答案。固定副本题面仍忠实照录，答案保持 U/PENDING，需取得可追溯同版完整题面或可靠勘误裁决。",
   "fingerprint": "5ffa2f8307ff0aa516cdbce8c8245ca876255336e9587e8a5283ff46401d3014",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-anhui-science",
