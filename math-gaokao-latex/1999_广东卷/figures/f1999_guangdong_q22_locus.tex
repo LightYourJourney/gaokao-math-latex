@@ -1,0 +1,17 @@
+\begin{tikzpicture}[font=\small]
+  \draw[->] (-1.35,0)--(3.1,0) node[right] {$x$};
+  \draw[->] (0,-1.05)--(0,2.65) node[above] {$y$};
+  \draw (-0.82,-1.05)--(-0.82,2.35) node[above] {$l$};
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (2.55,0);
+  \coordinate (B) at (-0.82,1.55);
+  \coordinate (C) at (0.86,0.78);
+  \draw (B)--(A);
+  \draw (B)--(O);
+  \draw (O)--(C);
+  \fill (O) circle (0.7pt);
+  \node[below left] at (O) {$O$};
+  \node[below] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+\end{tikzpicture}

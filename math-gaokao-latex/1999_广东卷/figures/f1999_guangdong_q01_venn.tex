@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line join=round, line cap=round]
+  % Shade M intersect P outside S.
+  \begin{scope}
+    \clip (-0.12,0.20) ellipse (1.08 and 1.14);
+    \clip (0.62,0.56) ellipse (0.99 and 1.10);
+    \fill[gray!35,even odd rule] (-1.70,-1.65) rectangle (2.30,2.10)
+      (0.58,-0.50) ellipse (1.04 and 1.02);
+  \end{scope}
+
+  \draw[line width=0.7pt] (-1.65,-1.55) rectangle (2.15,2.05);
+  \draw[line width=0.7pt] (-0.12,0.20) ellipse (1.08 and 1.14);
+  \draw[line width=0.7pt] (0.62,0.56) ellipse (0.99 and 1.10);
+  \draw[line width=0.7pt] (0.58,-0.50) ellipse (1.04 and 1.02);
+
+  \node at (-0.88,0.13) {$M$};
+  \node at (0.77,1.25) {$P$};
+  \node at (0.55,-1.02) {$S$};
+  \node at (1.78,-1.18) {$I$};
+\end{tikzpicture}

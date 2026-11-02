@@ -1,0 +1,28 @@
+\begin{tikzpicture}[font=\small]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.5,0);
+  \coordinate (C) at (3.35,0.75);
+  \coordinate (D) at (0.85,0.75);
+  \coordinate (A1) at (0,2.75);
+  \coordinate (B1) at (2.5,2.75);
+  \coordinate (C1) at (3.35,3.5);
+  \coordinate (D1) at (0.85,3.5);
+  \draw (A)--(B)--(C);
+  \draw[dashed] (C)--(D)--(A);
+  \draw (A)--(A1) (B)--(B1) (C)--(C1);
+  \draw[dashed] (D)--(D1);
+  \draw (A1)--(B1)--(C1)--(D1)--cycle;
+  \draw (A)--(B1) (B1)--(C);
+  \node at (1.05,1.95) {$E$};
+  \node at (2.05,1.65) {$P$};
+  \node at (1.55,1.05) {$Q$};
+  \node at (1.52,0.18) {$O$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below left] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[below right] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[font=\small]
+  \draw[->] (-0.35,0)--(0,0);
+  \draw[->] (8.15,0)--(8.55,0);
+  \foreach \x in {0.45,1.45,2.45} {
+    \draw (\x,0.48) circle (0.34);
+    \draw (\x,-0.48) circle (0.34);
+  }
+  \foreach \x in {5.25,6.25} {
+    \draw (\x,0.48) circle (0.34);
+    \draw (\x,-0.48) circle (0.34);
+  }
+  \draw[line width=1.1pt] (0.08,0)--(3.0,0);
+  \draw[line width=1.1pt] (4.88,0)--(6.62,0);
+  \foreach \x in {0.15,0.42,...,2.88} {
+    \draw (\x,-0.09)--++(0.16,0.18);
+  }
+  \foreach \x in {4.95,5.22,...,6.5} {
+    \draw (\x,-0.09)--++(0.16,0.18);
+  }
+\end{tikzpicture}
