@@ -50,6 +50,14 @@
 - `solution_sources.validate_solution_body()` 仍识别 Q1–Q20 连续题目及正确子问集合；答案要点 Q18 两问继续为 `U/PENDING`。解析稿状态更新为独立复核通过但 Q18 未决。
 - 本阶段只完成解析独立复核和一处措辞澄清；来源/paper/batch 登记及 Q18 issue、题图、provenance、`_含解析.md`、TeX、正式构建和视觉回执尚未完成，不表示整卷验收。
 
+### 2007 北京文科候选卷：paper/source 登记与确定性装配（2026-11-03）
+
+- 以 `gk-2007-regular-beijing-arts` 登记 paper、单卷批次 `phase1-b81` 和固定 source `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`。登记前 `register-papers` dry-run 通过；状态事务 revision `6014→6015`，transaction ID `d9b970d8-0667-4f16-bbaf-1d3768da7eb8`。来源记录改为本库内部 `canonical` 绑定，不认证官方来源身份。
+- 同一事务建立 `ISSUE-1355`（Q18，`answer-convention-ambiguous`，open / `blocks_completion`）。paper 状态为 `blocked`、`blocked_from=planned`；batch `phase1-b81` 仍为 `planned`。Q13/Q17/Q19 尚未入图稿登记，当前 `figure_files=[]`。
+- 三份事实源已写入 paper ID；确定性合并稿 SHA-256 `c57bbb2a4bb4c51312f4e66655cbb1f44a8fbdb8c1646f10cf1ffad1fcedbeff`，14,934 bytes。`solution_sources extract-batch` 返回目标已最新。`generate_projects --write` 写入 3 项、`make_short_answers --write` 写入1份简答、`make_editions --write` 写入4版入口壳。
+- manifest / issues / `solution_sources check-batch` / `generate_projects --check` / `make_short_answers --check` / `make_editions --check` 均通过；`report.py render --all` 后 `report.py check --all` 返回“报告输出与全量 manifest 当前一致”；manifest CSV 刷新为775行并记录新来源关联。
+- 正式 PDF 构建、页面视觉验收、三角色 provenance、题图、OCR 候选导入与全套测试尚未完成。详情见 [内部登记报告](reports/2007-beijing-arts-registration.md)。本阶段只完成本库 source/paper 绑定和确定性项目装配，不表示来源官方认证、整卷闭环或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。

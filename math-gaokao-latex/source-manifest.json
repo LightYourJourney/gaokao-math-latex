@@ -2170,6 +2170,14 @@
         "gk-2006-regular-shaanxi-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b81",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-regular-beijing-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2179,7 +2187,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ff33fc2a-08a2-4d07-9144-43cd4e2a2b81",
+  "last_transaction_id": "d9b970d8-0667-4f16-bbaf-1d3768da7eb8",
   "papers": [
     {
       "blocked_from": null,
@@ -28997,9 +29005,63 @@
       "title": "2006 年·普通高等学校招生考试·陕西卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2007_beijing_arts",
+        "id": "gk-2007-regular-beijing-arts",
+        "note": "固定候选 PDF 为2页 A3 题面（印刷页353–354），仅作本库内部固定字节绑定；不认证发布者、版次、复制链或官方身份。PDF无答案页，答案与解析为本库独立推导，official_answer=null。Q18联合独立性未由题面明确，保留U/PENDING。Q13、Q17、Q19待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            16
+          ],
+          "解答题": [
+            17,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [
+        "ISSUE-1355"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2007_北京卷_文科",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版材料，明确六位乘客下车选择之间的联合独立性，或取得可裁定的正式答案/勘误；此前保持 Q18 两问为 U/PENDING，不将独立模型条件值写作无条件答案。",
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_北京文_含解析.md",
+        "questions": "2007/2007_数学真题_北京文_试题.md",
+        "solution_body": "2007/2007_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9"
+      ],
+      "title": "2007 年·北京卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 6014,
+  "revision": 6015,
   "schema_version": 1,
   "sources": [
     {
@@ -37056,8 +37118,8 @@
       "exam_type": "regular",
       "git_blob_oid": "3207132ef37ec52e6dfd19ffac856388f4c053f1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007北京文.pdf",
       "regions": [],
       "source_id": "src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9",

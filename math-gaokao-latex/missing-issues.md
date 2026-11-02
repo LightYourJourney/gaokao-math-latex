@@ -22704,3 +22704,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1355
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定来源 PDF 第2页 Q18 说明沿线11站包括起点站、6位乘客在起点站之外各站下车等可能；未说明六位乘客的选择联合独立。相同的均匀边缘分布既可对应独立模型，也可对应所有乘客共用一个均匀站点的完全相关模型，两个所求事件概率因此不唯一。189/1250 与 729/50000 仅在额外的乘客间相互独立假设下成立；规范答案两问均为 U/PENDING。",
+  "fingerprint": "e4ea458412933cd6bdebaa9c760d9e92bb1b7bd84c73b27d534d6b17fc94184b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-beijing-arts",
+  "question_id": "gk-2007-regular-beijing-arts-q18",
+  "resume_action": "取得可追溯的同版材料，明确六位乘客下车选择之间的联合独立性，或取得可裁定的正式答案/勘误；此前保持 Q18 两问为 U/PENDING，不将独立模型条件值写作无条件答案。",
+  "source_id": "src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
