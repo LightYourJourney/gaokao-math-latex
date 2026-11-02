@@ -31,8 +31,8 @@
 ### 2006 湖北文科候选卷：Q18 图稿重绘与登记（2026-11-02）
 
 - 依据固定 PDF 第1页 Q18 图绘制 `2006_湖北卷_文科/figures/f2006hubei_arts_q18_prism.tex`，SHA-256 `2a3bcf11868faba17ed0e6d3d74c5628cf476123d4c2db05d702959efe4b64b8`。逐项对照源图记录：实线棱/辅助线为 BC、BB1、B1C1、CC1、B1A1、A1C1、B1M、MN；虚线为 BA、AC、AA1、B1C、AM。投影为示意，不按图像比例推导长度。
-- 规范题面与确定性含解析稿各有一条本地 TikZ 图稿链接；`sync-figure-registry` 将该图登记到 `figure_files`，expected_occurrences=2，manifest revision `5931→5932`。图稿只完成源页结构对照与登记，未进行独立 XeLaTeX 编译、成图目视检查或正式 PDF 版面验收。
-- 本阶段验证 `source_manifest.py validate`、`solution_sources.py check-batch --batch phase1-b73`、issue ledger 与 CSV 投影均通过后提交。逐题 provenance、项目 TeX/edition 生成、构建及视觉验收仍待完成；Q12 的 `ISSUE-1333` 继续阻断 paper/batch 完成。详见 `reports/2006-hubei-arts-q18-figure.md`；不表示来源认证、卷级验收或长期语料库完成。
+- 规范题面与确定性含解析稿各有一条本地 TikZ 图稿链接；`sync-figure-registry` 将该图登记到 `figure_files`，expected_occurrences=2，manifest revision `5931→5932`。隔离单图经 XeLaTeX 编译为一页并以 240 dpi 渲染目视核对，线型、标签清晰且无裁切/遮挡；正式 PDF 页面仍待验收。
+- 本阶段验证 `source_manifest.py validate`、`solution_sources.py check-batch --batch phase1-b73`、issue ledger 与 CSV 投影均通过后提交。逐题 provenance、项目 TeX/edition 生成、正式构建及页面视觉验收仍待完成；Q12 的 `ISSUE-1333` 继续阻断 paper/batch 完成。详见 `reports/2006-hubei-arts-q18-figure.md`；不表示来源认证、卷级验收或长期语料库完成。
 
 ### 1999 广东卷：固定来源初查（2026-11-02）
 
