@@ -336,7 +336,12 @@ def conv_text(s: str) -> str:
 
 
 # ---------- 选项组 ----------
-OPT_SPLIT = re.compile(r"(?:　+|\s{2,})(?=[A-D]．)")
+OPT_LABEL = r"(?:[A-D]．|（[A-D]）)"
+OPT_SPLIT = re.compile(r"(?:　+|\s{2,})(?=" + OPT_LABEL + r")")
+PAREN_CHOICE_LINE = re.compile(
+    r"^\s{0,4}（A）.*?(?<!　)　(?!　)（B）"
+    r".*?(?<!　)　(?!　)（C）.*?(?<!　)　(?!　)（D）"
+)
 
 def emit_options(lines: List[str], sink: _Sink) -> List[str]:
     merged = "　　".join(x.strip() for x in lines)
@@ -453,6 +458,13 @@ TEX_FIGURE_LINK_ANY = re.compile(
     r"(?<!!)\[[^\]]*\]\(([^)\s]+\.tex)(?:\s+(?:\"[^\"]*\"|'[^']*'))?\)"
 )
 OPTLINE = re.compile(r"^\s{0,4}[A-D]．")
+
+
+def is_option_line(line: str) -> bool:
+    # Historical parenthesized choices are kept as authored unless all four
+    # labels occur inline with single ideographic separators. This covers the
+    # 2006 Hunan source without reflowing older multi-line choice layouts.
+    return bool(OPTLINE.match(line) or PAREN_CHOICE_LINE.match(line))
 # 内容允许单个 *（如 $\mathbf N^{*}$ 的上标星号），仅排除成对 ** 以免与包裹标记歧义；
 # 修前 [^*] 字符类遇星即失配，含星答案行退化为 \textbf（2017 北京文 / 2019 全国Ⅰ文 /
 # 2021 新高考Ⅱ卷 / b07 各现一处，视觉上缺绿答案框）。
@@ -640,14 +652,14 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             continue
 
         # --- 选项组 ---
-        if OPTLINE.match(ln):
+        if is_option_line(ln):
             j = i
             grp = []
             while j < n:
-                if OPTLINE.match(lines[j]):
+                if is_option_line(lines[j]):
                     grp.append(lines[j])
                     j += 1
-                elif not lines[j].strip() and j + 1 < n and OPTLINE.match(lines[j + 1]):
+                elif not lines[j].strip() and j + 1 < n and is_option_line(lines[j + 1]):
                     j += 1        # 选项行之间的空行
                 else:
                     break

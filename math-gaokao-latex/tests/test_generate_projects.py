@@ -625,6 +625,18 @@ class ConversionInterfaceTests(unittest.TestCase):
         self.assertEqual(result.text.count(r"$\bigcirc$"), 2)
         self.assertNotIn("○", result.text)
 
+    def test_parenthesized_chinese_choice_labels_are_structured_options(self):
+        result = md2tex.convert_markdown(
+            "**2．** 选择题题干（　　）\n\n"
+            "（A）$t_1=-4,\\ t_2=-1$　（B）$t_1=-4,\\ t_2=1$　"
+            "（C）$t_1=4,\\ t_2=-1$　（D）$t_1=4,\\ t_2=1$\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"\begin{gkopts}(2)", result.text)
+        self.assertEqual(result.text.count(r"\task"), 4)
+        self.assertIn(r"\task （D）$t_1=4,\ t_2=1$", result.text)
+
     def test_explicit_math_open_circle_is_safe_in_a_number_line(self):
         result = md2tex.convert_markdown(
             "-4 --- $\\bigcirc$ --- 4\n",

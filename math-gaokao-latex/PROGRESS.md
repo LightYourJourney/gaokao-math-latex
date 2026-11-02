@@ -13080,3 +13080,11 @@
 - 补齐答案要点的 Q1–Q10 答案速查表（D、C、D、A、A、B、C、B、D、C），使简答表生成器第三路核对有明确输入；速查表与逐题答案一致。含解析稿由 `render_combined()` 重生成，角色答案摘要刷新后 provenance 再导入，manifest revision 为 `5942`。
 - 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。`generate_projects`、`make_short_answers`、`make_editions` 的写入和 currentness 检查均通过；provenance、manifest、issue ledger 与 775 行 CSV 校验通过。
 - 正式 XeLaTeX 四版构建、PDF 页数核对和逐页视觉复核尚未完成；Q17（3）仍由 `ISSUE-1338` 阻断。本阶段不表示卷级验收或长期语料完成。详见 `reports/2006-hunan-arts-project-generation.md`。
+
+### 2006 湖南文科候选卷：四版构建、逐页视觉回执与阶段收口（phase1-b74，2026-11-02）
+
+- 正式构建 attempt `6aaa4ba0-3861-4ea1-a96a-c458c1b55025` 成功：试题版 5 页、解析版 19 页、简答版 7 页、印刷版 12 页，共 43 页。四版逐页完成视觉检查，8 项页面检查均通过；4 条 Underfull hbox 仅对应完整且无溢出的来源说明框，已逐条记录警告豁免，未发现视觉问题。
+- `review_receipts.py finalize-batch --batch phase1-b74` 生成四版正式回执和 `reports/phase1-b74.md`；batch 状态 `closed_with_blockers`，manifest revision `5949→5950`。`validate-receipts --require-final --require-current-inputs` 通过（failed/invalid/missing/stale 均为 0），provenance、解答来源与 TeX/简答/四版入口 currentness 检查通过。
+- 修正 `md2tex.py` 的括号选项识别：仅将四个选项同处一行且由单个全角空格分隔的 `（A）…（D）` 结构化，避免改写其他试卷既有选项排版。新增转换回归及 1990 全国理科、2006 上海文科两项受影响用例均通过。
+- 全库 unittest 曾运行 1754 项，报告 5 项失败、13 项跳过；其中两项为上述解析器回归，已由收窄规则和定向测试修复。另 3 项失败为 1986 广东理科分页断言、baseline 中既有文件 SHA 断言、以及全库 provenance 缓存状态与现场派生状态不一致；未修改其无关试卷或基线数据。未声称全库测试通过。
+- Q17（3）继续标为 `U/PENDING` 并由 `ISSUE-1338` 阻断，$0.41$ 只作为独立性假设下条件值。本阶段完成 2006 湖南文科候选卷四版构建和视觉验收回执，不认证来源身份、不构成无阻塞卷级闭环，也不表示长期语料完成。
