@@ -2179,7 +2179,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "86078259-2628-49dc-9fca-02332faec7ea",
+  "last_transaction_id": "6916224c-e60b-4ed9-aa03-3f0b172a9726",
   "papers": [
     {
       "blocked_from": null,
@@ -28729,7 +28729,7 @@
       "year": 2006
     },
     {
-      "blocked_from": null,
+      "blocked_from": "editions_generated",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -28767,15 +28767,18 @@
         "track": "普通高考文科",
         "variant": "重庆卷文科"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1345",
+        "ISSUE-1346"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2006-regular-chongqing-arts",
-      "production_state": "editions_generated",
+      "production_state": "blocked",
       "project_dir": "2006_重庆卷_文科",
       "question_count": 22,
-      "resume_action": null,
+      "resume_action": "修正 gk-2006-regular-chongqing-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
       "source_files": {
         "answer_key": "2006/2006_数学真题_重庆文_答案要点.md",
         "combined_rendered": "2006/2006_数学真题_重庆文_含解析.md",
@@ -28837,7 +28840,10 @@
         "variant": "重庆卷理科"
       },
       "issue_ids": [
-        "ISSUE-1341"
+        "ISSUE-1341",
+        "ISSUE-1347",
+        "ISSUE-1348",
+        "ISSUE-1349"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -28901,7 +28907,9 @@
       },
       "issue_ids": [
         "ISSUE-1342",
-        "ISSUE-1343"
+        "ISSUE-1343",
+        "ISSUE-1350",
+        "ISSUE-1351"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -28964,7 +28972,10 @@
         "variant": "陕西卷理科"
       },
       "issue_ids": [
-        "ISSUE-1344"
+        "ISSUE-1344",
+        "ISSUE-1352",
+        "ISSUE-1353",
+        "ISSUE-1354"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -28988,7 +28999,7 @@
       "year": 2006
     }
   ],
-  "revision": 6002,
+  "revision": 6004,
   "schema_version": 1,
   "sources": [
     {

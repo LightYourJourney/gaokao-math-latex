@@ -22523,3 +22523,193 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1345
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "cd51753fcbe21682f7ba36bddd5e3dcd22f5308042540fb8f31f35a8d430aa6e",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-chongqing-arts",
+  "resume_action": "修正 gk-2006-regular-chongqing-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1346
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "b22f5ab7f7ee8529e4cf074b80b0259c2a7dc83a335459f442da12559003fb14",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-chongqing-arts",
+  "resume_action": "修正 gk-2006-regular-chongqing-arts 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1347
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "264c64ca5f7fedd9d6f4774d2896e29df4cb7cf7ca78492c899afce91c19bd53",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-chongqing-science",
+  "resume_action": "修正 gk-2006-regular-chongqing-science 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1348
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "271329074a0bde6d20255433bf8db8e65c55b6c1ce6e566e6b7a5ed6de0db034",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-chongqing-science",
+  "resume_action": "修正 gk-2006-regular-chongqing-science 的 简答版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1349
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "8fdf13aa11cb544b8f0c1e3ad7b2f4d6f75dd2eed204a906ec5ca0dcdc03ad2e",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-chongqing-science",
+  "resume_action": "修正 gk-2006-regular-chongqing-science 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1350
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "dd593622199707c9b912b631eefa583414c82f68a663c9e11a05fb5942d72ce6",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-shaanxi-arts",
+  "resume_action": "修正 gk-2006-regular-shaanxi-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1351
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "991832fbe92a52714083872dc454fec6435c3135170eea7c3864ec89b4ea51c4",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-shaanxi-arts",
+  "resume_action": "修正 gk-2006-regular-shaanxi-arts 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1352
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "ada84511dbbda508767c402cc3b461cd69642a8de1e7e12e6d44259ca0c79488",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-shaanxi-science",
+  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1353
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "fb09d8d58be1c0df5f9e680d0629fe41b0ad21ddc5cd03e3e9cb01f28f409187",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-shaanxi-science",
+  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 简答版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```
+
+## ISSUE-1354
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "c9500666c313b51fc89b836e1bd484869cfa098cb4933fb9da0f282a3db08bbe",
+  "impact": "blocks_completion",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2006-regular-shaanxi-science",
+  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
+  "status": "open",
+  "type": "compile-error"
+}
+```

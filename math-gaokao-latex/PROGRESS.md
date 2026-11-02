@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：四版正式构建首次尝试（2026-11-03）
+
+- 16 个版本首次正式构建中，6 个命令成功、10 个 `latexmk` 退出码12；成功返回版本也有缺字告警，全部暂停视觉验收。日志根因包括 `paper_id=null` 被生成为非法文本下划线、重庆理 Q19 与陕西文题面数学模式内中文标点缺字，以及四卷简答答案中的希腊字母/上下标等缺字。
+- 新登记 `ISSUE-1345`—`ISSUE-1354` 为正式构建 compile-error blocker；manifest revision `6002→6004`，四卷状态均 `blocked`，批次仍 `provenance_verified`。旧 `ISSUE-1341`—`ISSUE-1344` 保持 open。source manifest、issue ledger、批次 provenance 与775行 manifest CSV 校验通过。
+- attempt ID、版本分项、错误和修复计划见 `reports/2006-chongqing-shaanxi-build-attempt-01.md`。下一步先修正说明文案和数学符号排版，再重生成并重建；此次不构成正式 PDF 验收、批次闭环或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：共享 TeX、简答表与四版入口生成（2026-11-03）
 
 - 四卷各生成 `questions.tex`、`answers.tex`、`answers_short.tex` 与试题/解析/简答/印刷四版入口，共28个卷级 TeX 文件；共享 `index.json` 与 manifest CSV 同步。三项生成器 check、四卷 provenance/答案来源检查、775行 CSV 检查通过。
