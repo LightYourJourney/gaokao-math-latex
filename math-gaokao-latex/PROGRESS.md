@@ -12828,3 +12828,11 @@
 - 在 1999 全国理科 finalization、全量报告和 CSV 校验后运行 `python3 -B -m unittest discover -s tests`：`Ran 1749 tests in 661.122s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，全库缓存状态与现场派生仍有 20 项差异；phase2-b72 与 1999 全国理科不再出现在差异中。
 - 20 项来自 8 卷与 12 批：4 卷派生 `answers_verified`（2016 全国Ⅱ文科、2017 全国Ⅱ理科、2005 上海春季、2006 四川理科）；4 卷派生 `compiled`（2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；12 个批次派生 `provenance_verified`（phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64）。未批量回写这些缓存状态。
 - 其他 unittest 未报告失败；中途 argparse 与临时夹具错误输出属于预期的负向测试。全库测试未通过，唯一阻断是以上未逐卷闭环的缓存 currentness 差异。
+
+### phase4-b11 2005 春季上海卷：答案投影同步与四版复审收口（2026-11-02）
+
+- 全库生成清单中的本卷仅 `answers.tex` 漂移：17 处 display math 中的中文句号包装由 `\text{。}` 改为 `\mbox{。}`，逐字逆向归一后与旧投影完全一致；答案、题面和解析内容均未改变。同步后本卷生成器、简答、四版入口壳与 22 题规范解析源检查通过。
+- 正式构建 attempt `2acf7562-0410-43ef-bb90-555f8c52565a`，manifest revision `5852`；试题版 4 页、解析版 18 页、简答版 6 页、印刷版 14 页，构建日志无错误、缺字、Overfull 或未定义引用。
+- 当前 attempt 共 42 页、336 项视觉检查：268 pass、68 not_applicable、0 fail。解析版第 18 页单独留有第 22 题（3）答案框，印刷版第 14 页留有同题（2）（3）两个答案框；两页当前 PNG 均直接复核，并有旧正式回执对相同末页形态的具体接受记录，按已接受「孤儿尾框」记 pass，不扩大为一般空白豁免。
+- `finalize-batch-checked` 返回 `FINALIZED`，`phase4-b11` 关闭，manifest revision `5854`；本卷 final/current build、review、provenance、生成器、规范源、issues 与 manifest 定向检查通过。全量报告渲染/回读和 report check 均通过；manifest CSV 775 行且 current。
+- 全库生成漂移尚有 22 个目标、分布于 14 卷；未批量写入。revision `5854` 后的完整单元测试待运行；本卷收口不代表长期语料完成。
