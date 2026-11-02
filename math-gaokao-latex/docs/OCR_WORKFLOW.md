@@ -94,13 +94,13 @@ python3 tools/local_ocr.py batch .work/ocr-local/jobs.json \
 来源与批次登记之后按实际阶段执行既有门禁（`BATCH_ID` / `PAPER_ID` 替换为当前登记值）：
 
 ```bash
-python3 tools/source_manifest.py validate
-python3 tools/issues.py validate
-python3 tools/solution_sources.py check-batch --batch BATCH_ID
-python3 tools/provenance.py check-batch --batch BATCH_ID
+python3 tools/source_manifest.py validate --manifest source-manifest.json
+python3 tools/issues.py validate --file missing-issues.md
+python3 tools/solution_sources.py check-batch --manifest source-manifest.json --batch BATCH_ID
+python3 tools/provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch BATCH_ID
 python3 tools/build_projects.py validate-receipts --manifest source-manifest.json \
   --paper PAPER_ID --require-final --require-current-inputs
-python3 tools/review_receipts.py check-batch --batch BATCH_ID
+python3 tools/review_receipts.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch BATCH_ID
 python3 tools/report.py check --all --manifest source-manifest.json --issues missing-issues.md
 ```
 
