@@ -2159,6 +2159,17 @@
         "gk-2006-regular-liaoning-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b80",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-chongqing-arts",
+        "gk-2006-regular-chongqing-science",
+        "gk-2006-regular-shaanxi-arts",
+        "gk-2006-regular-shaanxi-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2168,7 +2179,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6884f9a5-fe26-4cd6-9f6b-38b649d7ec75",
+  "last_transaction_id": "6ffb00b5-4c16-4b46-9337-cdfb51eafebd",
   "papers": [
     {
       "blocked_from": null,
@@ -28716,9 +28727,224 @@
       "title": "2006 年·普通高等学校招生考试·辽宁卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_chongqing_arts",
+        "id": "gk-2006-regular-chongqing-arts",
+        "note": "固定候选 PDF source ID src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5，SHA-256 fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e，Git blob 5859ce734213873592927f067a30ce9761d10f07；两页 A3 横向（印刷页 286–287），题签显示“2006 普通高等学校招生考试（重庆卷文）”。PDF 仅见题面，答案为本库独立推导；official_answer=null。发布者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考重庆卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "重庆卷文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-chongqing-arts",
+      "production_state": "planned",
+      "project_dir": "2006_重庆卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_重庆文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_重庆文_含解析.md",
+        "questions": "2006/2006_数学真题_重庆文_试题.md",
+        "solution_body": "2006/2006_数学真题_重庆文_解析正文.md"
+      },
+      "source_ids": [
+        "src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5"
+      ],
+      "title": "2006 年·普通高等学校招生考试·重庆卷文科",
+      "track": "arts",
+      "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_chongqing_science",
+        "id": "gk-2006-regular-chongqing-science",
+        "note": "固定候选 PDF source ID src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351，SHA-256 211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3，Git blob 105617a088307e1c0ed5835dd8b5574a204d5a25；两页 A3 横向（印刷页 284–285），题签显示“2006 普通高等学校招生考试（重庆卷理）”。PDF 仅见题面，答案为本库独立推导；official_answer=null。发布者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考重庆卷理科",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "重庆卷理科"
+      },
+      "issue_ids": [
+        "ISSUE-1341"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-chongqing-science",
+      "production_state": "blocked",
+      "project_dir": "2006_重庆卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版勘误或独立题面版本，确认 Q20(1) 条件中的字母；在证据出现前保留原印 a 与 U/PENDING，不推测改为 c，也不据此补解。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_重庆理_含解析.md",
+        "questions": "2006/2006_数学真题_重庆理_试题.md",
+        "solution_body": "2006/2006_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351"
+      ],
+      "title": "2006 年·普通高等学校招生考试·重庆卷理科",
+      "track": "science",
+      "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_shaanxi_arts",
+        "id": "gk-2006-regular-shaanxi-arts",
+        "note": "固定候选 PDF source ID src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec，SHA-256 ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221，Git blob d6c030e20533617af42063a0418377799ef00c50；两页 A3 横向（印刷页 326–327），题签显示“2006 普通高等学校招生考试（陕西卷文）”。PDF 仅见题面，答案为本库独立推导；official_answer=null。发布者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考陕西卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "陕西卷文科"
+      },
+      "issue_ids": [
+        "ISSUE-1342",
+        "ISSUE-1343"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-shaanxi-arts",
+      "production_state": "blocked",
+      "project_dir": "2006_陕西卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版题面、勘误或能确认遗漏条件的独立材料；此前保留 U/PENDING，不从选项反推条件或选择唯一答案。；取得可追溯的独立题面或明确勘误，消除“甲和乙不同去”的语义歧义；此前不按猜测确定选派关系或方案数。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_陕西文_含解析.md",
+        "questions": "2006/2006_数学真题_陕西文_试题.md",
+        "solution_body": "2006/2006_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec"
+      ],
+      "title": "2006 年·普通高等学校招生考试·陕西卷文科",
+      "track": "arts",
+      "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_shaanxi_science",
+        "id": "gk-2006-regular-shaanxi-science",
+        "note": "固定候选 PDF source ID src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999，SHA-256 32093147448a616af26055d81831b7028e661e5138d8546f803a6c6a1a42bc43，Git blob 6d54ed804980dead46c822a2c3f5e231daced72b；两页 A3 横向（印刷页 324–325），题签显示“2006 普通高等学校招生考试（陕西卷理）”。PDF 仅见题面，答案为本库独立推导；official_answer=null。发布者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考陕西卷理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "陕西卷理科"
+      },
+      "issue_ids": [
+        "ISSUE-1344"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-shaanxi-science",
+      "production_state": "blocked",
+      "project_dir": "2006_陕西卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的独立题面或明确勘误，消除“甲和乙不同去”的语义歧义；此前保留原字，不推断选派关系或给唯一方案数。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_陕西理_含解析.md",
+        "questions": "2006/2006_数学真题_陕西理_试题.md",
+        "solution_body": "2006/2006_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999"
+      ],
+      "title": "2006 年·普通高等学校招生考试·陕西卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5995,
+  "revision": 5996,
   "schema_version": 1,
   "sources": [
     {
@@ -36583,8 +36809,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5859ce734213873592927f067a30ce9761d10f07",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-chongqing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006重庆文.pdf",
       "regions": [],
       "source_id": "src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5",
@@ -36607,8 +36833,8 @@
       "exam_type": "regular",
       "git_blob_oid": "105617a088307e1c0ed5835dd8b5574a204d5a25",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006重庆理.pdf",
       "regions": [],
       "source_id": "src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351",
@@ -36631,8 +36857,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d6c030e20533617af42063a0418377799ef00c50",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006陕西文.pdf",
       "regions": [],
       "source_id": "src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec",
@@ -36655,8 +36881,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6d54ed804980dead46c822a2c3f5e231daced72b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006陕西理.pdf",
       "regions": [],
       "source_id": "src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999",

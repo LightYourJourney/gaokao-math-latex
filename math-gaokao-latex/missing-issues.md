@@ -22458,3 +22458,71 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1341
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原页 Q20(1) 印作 b²>4(a−1)，而题目前定义的函数参数只有 b、c；题面照录原字母 a，答案与解析保留 U/PENDING。",
+  "fingerprint": "e1c3d91d5fb20e635283dbb1ab6a39d8c288ce09a1bb927e9b9fce9bfa0e9da7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-chongqing-science",
+  "question_id": "gk-2006-regular-chongqing-science-q20",
+  "resume_action": "取得可追溯的同版勘误或独立题面版本，确认 Q20(1) 条件中的字母；在证据出现前保留原印 a 与 U/PENDING，不推测改为 c，也不据此补解。",
+  "source_id": "src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1342
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面只给等差数列 a₁+a₈=8 并询问 S₉。满足条件的正项数列 (a₁,d)=(4,0) 与 (1/2,1) 分别给出 S₉=36 与 81/2，条件不足；答案与解析保留 U/PENDING。",
+  "fingerprint": "f5a4fb3b06a9ffe13f2dcf7b07051aa9bf42089a0c6c89c7f037998abb80c666",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shaanxi-arts",
+  "question_id": "gk-2006-regular-shaanxi-arts-q03",
+  "resume_action": "取得可追溯的同版题面、勘误或能确认遗漏条件的独立材料；此前保留 U/PENDING，不从选项反推条件或选择唯一答案。",
+  "source_id": "src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1343
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原页可见字样“甲和乙不同去”，转录已按原字保留；这句话的选派语义不能唯一确定，可能对应不同计数条件，答案与解析保留 U/PENDING。",
+  "fingerprint": "585ee1fca66df5a65ed3e1431d6454bbd80c0544c517daae6c0a4995a4751390",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shaanxi-arts",
+  "question_id": "gk-2006-regular-shaanxi-arts-q15",
+  "resume_action": "取得可追溯的独立题面或明确勘误，消除“甲和乙不同去”的语义歧义；此前不按猜测确定选派关系或方案数。",
+  "source_id": "src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1344
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面原句为“甲和乙不同去”，文字可辨但语义存在歧义；答案与解析保留 U/PENDING，不据猜测给方案数。",
+  "fingerprint": "f50f3b1cb3e97ce6e1bf3faba3960ad34d3091ea747c9c500337e1a6a8d949d8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-shaanxi-science",
+  "question_id": "gk-2006-regular-shaanxi-science-q16",
+  "resume_action": "取得可追溯的独立题面或明确勘误，消除“甲和乙不同去”的语义歧义；此前保留原字，不推断选派关系或给唯一方案数。",
+  "source_id": "src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：paper/source 登记与确定性合并稿（2026-11-03）
+
+- `register-papers` dry-run 通过后以一个事务登记四卷和 `phase1-b80`，manifest revision `5995→5996`；固定候选 source 绑定为仓库内部 canonical 输入，不代表来源身份认证。题面、答案、解析正文 frontmatter 均已绑定 paper ID，`extract-batch --write` 生成四份 `_含解析.md`，内存重渲染与文件逐字节一致。
+- 将四个逐题问题随登记事务写入 `missing-issues.md`：重庆理 Q20(1) `ISSUE-1341`（原印未定义字母 a）、陕西文 Q3 `ISSUE-1342`（条件不足）、陕西文 Q15 `ISSUE-1343` 与陕西理 Q16 `ISSUE-1344`（“甲和乙不同去”语义歧义）。相应答案/解析继续 U/PENDING；重庆文无逐题 blocker，其余三卷 production state 为 blocked。四卷 `official_answer=null`、来源身份未认证。
+- `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`（4 卷 × 22 题）、`manifest_csv.py --check`（775 行）及 `git diff --check` 均通过。详见 `reports/2006-chongqing-shaanxi-registration.md`。
+- 后续仍需逐题 provenance、10 个题图重绘和登记、TeX 项目、正式构建与视觉验收；本阶段不是批次收口或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：独立解析正文与复核收口（2026-11-03）
 
 - 四卷各 Q1–Q22 的非官方独立解析正文分别写入 `2006/2006_数学真题_{重庆文,重庆理,陕西文,陕西理}_解析正文.md`。两位独立复核者覆盖 88 题及小问；依意见将重庆文 Q17(1) 概率和由误算的 1/8 更正为 1/6，并补齐陕西理 Q20 的首项求解，得 `aₙ=5n−3`。陕西文 Q9 对应答案要点已于前一独立提交 `6a828b8` 从 B 更正为 A。
