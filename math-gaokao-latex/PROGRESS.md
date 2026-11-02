@@ -13293,4 +13293,11 @@
 - 文理两卷 Q1–Q22 的非官方独立答案要点与解析正文已分别写入对应规范源层。文科 Q21(2) 原页写“四边形 APCD”但未定义 P，答案保留 U/PENDING；Q21(1) 仍可答 $x_0=-1$。来源身份未知且官方答案仍为 null。
 - 两份独立盲解及对规范稿的独立复核仅保存在 ignored scratch。主会话逐题对照固定原页并重算分歧：文科 Q2 并集条件本身排除额外元素、答案为 4；Q6 四项全假；Q9 原图符号为平行并得 $C=\pi/3$；Q17、Q19、Q20、Q22 已复算。理科 Q8 焦距相等；Q17、Q18、Q19、Q21、Q22 已逐项校核，其中 Q21 面积条件给 $a=3\sqrt3,d=3$，Q22 在 $n=1$ 时右端为 1，不构成反例。
 - 题面/答案/解析 parser 各卷识别 22 题，小问编号对齐；内存调用 `render_combined` 成功。本阶段未写入派生含解析稿，未登记 paper/batch、issues 或 provenance，未画题图、生成 TeX、构建 PDF 或做页面验收。
-- 题面与阶段细节见 `reports/2006-liaoning-answer-solve.md`。下一步登记两卷 source/paper 与 phase2-b80，并为文科 Q21 建立 blocking issue；随后逐题 provenance 和题图阶段。本阶段不等于卷级闭环或长期语料完成。成本未知。
+- 题面与阶段细节见 `reports/2006-liaoning-answer-solve.md`。后续登记阶段已将两卷 source/paper 纳入 `phase1-b78`，并为文科 Q21 建立 blocking issue `ISSUE-1340`；随后逐题 provenance 和题图阶段。本阶段不等于卷级闭环或长期语料完成。成本未知。
+
+### phase1-b78 2006 辽宁文理候选卷：来源登记与确定性合并稿（2026-11-03）
+
+- 将固定候选 PDF 登记为两个 canonical source，并新增 `gk-2006-regular-liaoning-arts` 与 `gk-2006-regular-liaoning-science`；manifest revision `5982→5983`。两卷各 22 题，题面页均为 PDF 第 1–2 页，答案页缺失，`official_answer=null`。来源发布者、版次、来源链及官方身份仍未核实。
+- 批次 `phase1-b78` 当前为 `planned`；文科卷因 Q21(2) 源文“四边形 APCD”中的 P 未定义而 `blocked`，登记 open issue `ISSUE-1340`。未把 APCD 擅改为 ABCD，Q21(2) 继续保留 U/PENDING；理科卷为 `planned`。
+- `solution_sources.py extract-batch --write` 确定性生成两卷 `_含解析.md` 并规范化两份 `_解析正文.md`；随后 `check-batch` 识别两卷各 22 题并全部通过。`source_manifest.py validate` 与 `issues.py validate` 通过。
+- 下一阶段为两卷 Q1–Q22 导入三角色 provenance，再登记文科 Q15/Q19、理科 Q18 图稿。尚未生成项目 TeX、正式构建 PDF、制作视觉回执或关闭批次；本阶段不代表长期语料完成。

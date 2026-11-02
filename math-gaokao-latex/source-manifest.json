@@ -2150,6 +2150,15 @@
         "gk-2006-regular-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase1-b78",
+      "issues": [],
+      "paper_ids": [
+        "gk-2006-regular-liaoning-arts",
+        "gk-2006-regular-liaoning-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2159,7 +2168,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1cdbf251-d2b7-4992-bb0f-f9b4e53cef43",
+  "last_transaction_id": "02f71599-2a8d-4046-96ce-05261ab52c66",
   "papers": [
     {
       "blocked_from": null,
@@ -28587,9 +28596,115 @@
       "title": "2006 年·普通高等学校招生考试·福建卷理科",
       "track": "science",
       "year": 2006
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_liaoning_arts",
+        "id": "gk-2006-regular-liaoning-arts",
+        "note": "固定候选 PDF source ID src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3，SHA-256 bbb83af465d4650c594f23a879d82dea43a86f805b6fc8712d25809aac7fda22，Git blob ec6b1416c0054c34d9f4ea82b922188fbfd76a53；2页A3横向（印刷页310–311），题签为“辽宁卷文”。固定 PDF 仅含题面；官方答案与身份未核，official_answer=null。Q15、Q19图位待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考辽宁卷文科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考文科",
+        "variant": "辽宁卷文科"
+      },
+      "issue_ids": [
+        "ISSUE-1340"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-liaoning-arts",
+      "production_state": "blocked",
+      "project_dir": "2006_辽宁卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版完整复本、正式勘误或其他能说明 P 定义的可靠材料后再裁定；此前保留 APCD 原字样和 U/PENDING，不推测改为 ABCD，也不据此求 a,d。",
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_辽宁文_含解析.md",
+        "questions": "2006/2006_数学真题_辽宁文_试题.md",
+        "solution_body": "2006/2006_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3"
+      ],
+      "title": "2006 年·普通高等学校招生考试·辽宁卷文科",
+      "track": "arts",
+      "year": 2006
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2006_regular_liaoning_science",
+        "id": "gk-2006-regular-liaoning-science",
+        "note": "固定候选 PDF source ID src-db3cbfe3d2c96ec3cbe88c45ad7986cf79f4899fd76a3a73b7c64721f0e67569，SHA-256 f680814a4fc5835d805772711f91c5921f12fb92b1740b9c0e9279fa6def427a，Git blob 130d6a55003fe33977ff2091dfdd2ff26110bb42；2页A3横向（印刷页308–309），题签为“辽宁卷理”。固定 PDF 仅含题面；官方答案与身份未核，official_answer=null。Q18图位待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "普通高考辽宁卷理科",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "普通高考理科",
+        "variant": "辽宁卷理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2006-regular-liaoning-science",
+      "production_state": "planned",
+      "project_dir": "2006_辽宁卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2006/2006_数学真题_辽宁理_答案要点.md",
+        "combined_rendered": "2006/2006_数学真题_辽宁理_含解析.md",
+        "questions": "2006/2006_数学真题_辽宁理_试题.md",
+        "solution_body": "2006/2006_数学真题_辽宁理_解析正文.md"
+      },
+      "source_ids": [
+        "src-db3cbfe3d2c96ec3cbe88c45ad7986cf79f4899fd76a3a73b7c64721f0e67569"
+      ],
+      "title": "2006 年·普通高等学校招生考试·辽宁卷理科",
+      "track": "science",
+      "year": 2006
     }
   ],
-  "revision": 5982,
+  "revision": 5983,
   "schema_version": 1,
   "sources": [
     {
@@ -36406,8 +36521,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ec6b1416c0054c34d9f4ea82b922188fbfd76a53",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006辽宁文.pdf",
       "regions": [],
       "source_id": "src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3",
@@ -36430,8 +36545,8 @@
       "exam_type": "regular",
       "git_blob_oid": "130d6a55003fe33977ff2091dfdd2ff26110bb42",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2006-regular-liaoning-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2006辽宁理.pdf",
       "regions": [],
       "source_id": "src-db3cbfe3d2c96ec3cbe88c45ad7986cf79f4899fd76a3a73b7c64721f0e67569",
