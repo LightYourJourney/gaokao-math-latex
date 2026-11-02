@@ -21953,13 +21953,12 @@
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1313
 
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
+  "build_attempt_id": "422efd28-f04f-480b-aaa2-32a211acd5fe",
   "check_code": "pagination_whitespace",
   "edition": "简答版",
   "figure_id": "visual-review",
@@ -21968,7 +21967,7 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "f33d9955757d25ca8a9fff595cdf302625aefadb888430907cf72977f3a320b6",
+  "pdf_sha256": "22677c17c09af0ca8cedf3b4c5dd4335854bea267dc347b501bb7a26c8e213b5",
   "resume_action": "修正 gk-2006-regular-jiangsu 的 简答版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -21999,7 +21998,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
+  "build_attempt_id": "422efd28-f04f-480b-aaa2-32a211acd5fe",
   "check_code": "pagination_whitespace",
   "edition": "解析版",
   "figure_id": "visual-review",
@@ -22008,7 +22007,7 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "0580f714803e57b97595c122e1c65cf189caedf2874c1e1e56c43115c4a3dd55",
+  "pdf_sha256": "93c54492c98bb27c1be75bb81f5ca4f112a48db0428cd39fd248a3e5540a4c9f",
   "resume_action": "修正 gk-2006-regular-jiangsu 的 解析版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"
@@ -22039,7 +22038,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "build_attempt_id": "d57f5af7-beae-493d-af28-ee4107f6bad8",
+  "build_attempt_id": "422efd28-f04f-480b-aaa2-32a211acd5fe",
   "check_code": "pagination_whitespace",
   "edition": "试题版",
   "figure_id": "visual-review",
@@ -22048,7 +22047,7 @@
   "origin": "visual-review",
   "page": 3,
   "paper_id": "gk-2006-regular-jiangsu",
-  "pdf_sha256": "3abd3cba9a4adcd733ece3f9663a5008a89a5b06653295ca6d0456457c34a3e8",
+  "pdf_sha256": "c476bdc47c7e2f2a7c901e319ffa901a6c305a2b629a93f97259723ce0cb1523",
   "resume_action": "修正 gk-2006-regular-jiangsu 的 试题版 第 3 页 pagination_whitespace（第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。）后重跑 build --formal 并重新全页审查",
   "status": "open",
   "type": "layout-warning"

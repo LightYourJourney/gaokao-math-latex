@@ -90,6 +90,13 @@
 - `generate_projects.py --check`、`provenance.py check-batch` 与 `build_projects.py validate-receipts --require-current-inputs` 通过；事务式全页审查于 manifest revision 5831 写入当前 review、问题账与 `reports/phase1-b69.md`。来源发布者、版次、来源链与官方身份仍未核实，江苏卷种变体仍未知。
 - 分页调整与正式构建阶段提交 `a34fd583`；视觉复核结果与报告在本阶段单独提交。本记录仅覆盖该卷分页阶段，不表示 `phase1-b69` 四卷闭环或长期语料完成。
 
+### phase1-b69 2006 江苏卷：分页试验与基线复建（2026-11-02）
+
+- 尝试在 Q11 添加现有 `question-needspace: 0.05` 元数据，期望把一行填空题移至第 2 页，为后续解答题标题释放版心；正式构建显示 Q11 仍在第 3 页，三个相关版本留白未变。移除无效提示，规范题面与生成的 `questions.tex` 均恢复原章节和排版输入，题目文字、数字、选项及答案未改。
+- 基线重建 attempt `422efd28-f04f-480b-aaa2-32a211acd5fe`，manifest revision `5871`；与前一份已复核构建的 generation-input tree `f5d4c0e1…`、dependency tree `bb71c073…`、input projection 及工具链一致。四版为 4/17/6/13 页，无缺字、Overfull、编译错误或未解析引用。第 3 页试题、解析、简答 PDF 栅格分别与先前已复核 attempt 相同；沿用不变页面的实际视觉结论并将工作项绑定到新 attempt。
+- 当前视觉事务重写 `reports/phase1-b69.md` 与 review receipt：仍有试题版、解析版、简答版第 3 页三条 `pagination_whitespace` 失败，manifest revision `5873`；批次仍为 `compiled_pending_review`，不是关闭状态。来源身份未核、江苏卷种变体未知；广东及江西文科答案待核 blocker 保持不变。
+- `validate-receipts --require-current-inputs` 与 `provenance check-batch` 对四卷通过。第 3 页根因仍在共享 `\gkpart` 起始预留；本次未改共享宏或生成器。需另找不破坏其他卷回执的内容版式调整，再重建并复审。本阶段不表示来源认证、四卷闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。

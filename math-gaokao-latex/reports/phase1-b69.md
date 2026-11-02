@@ -21,12 +21,12 @@
 
 - 标题：2006 年·普通高等学校招生考试·江苏卷
 - 项目目录：`2006_江苏卷`
-- 构建状态：`compiled_pending_review`；attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`
-- 复核状态：`failed`；时间 2026-11-02T09:04:51+08:00
-- 试题版：4 页；PDF SHA-256 `3abd3cba9a4adcd733ece3f9663a5008a89a5b06653295ca6d0456457c34a3e8`
-- 解析版：17 页；PDF SHA-256 `0580f714803e57b97595c122e1c65cf189caedf2874c1e1e56c43115c4a3dd55`
-- 简答版：6 页；PDF SHA-256 `f33d9955757d25ca8a9fff595cdf302625aefadb888430907cf72977f3a320b6`
-- 印刷版：13 页；PDF SHA-256 `3f20024244937c3695cdd14c01e87d5cf4fb87de1d946d0365032a9101fa85e3`
+- 构建状态：`compiled_pending_review`；attempt `422efd28-f04f-480b-aaa2-32a211acd5fe`
+- 复核状态：`failed`；时间 2026-11-02T13:08:10+08:00
+- 试题版：4 页；PDF SHA-256 `c476bdc47c7e2f2a7c901e319ffa901a6c305a2b629a93f97259723ce0cb1523`
+- 解析版：17 页；PDF SHA-256 `93c54492c98bb27c1be75bb81f5ca4f112a48db0428cd39fd248a3e5540a4c9f`
+- 简答版：6 页；PDF SHA-256 `22677c17c09af0ca8cedf3b4c5dd4335854bea267dc347b501bb7a26c8e213b5`
+- 印刷版：13 页；PDF SHA-256 `aded758d03c4ea56b6a88476f99885224bfee2f3dacf7f68af995d71165dc4ec`
 
 ## gk-2006-regular-jiangxi-arts
 
@@ -52,6 +52,6 @@
 
 ## 失败检查
 
-- gk-2006-regular-jiangsu｜试题版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
-- gk-2006-regular-jiangsu｜解析版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
-- gk-2006-regular-jiangsu｜简答版 第 3 页｜`pagination_whitespace`｜attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
+- gk-2006-regular-jiangsu｜试题版 第 3 页｜`pagination_whitespace`｜attempt `422efd28-f04f-480b-aaa2-32a211acd5fe`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
+- gk-2006-regular-jiangsu｜解析版 第 3 页｜`pagination_whitespace`｜attempt `422efd28-f04f-480b-aaa2-32a211acd5fe`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
+- gk-2006-regular-jiangsu｜简答版 第 3 页｜`pagination_whitespace`｜attempt `422efd28-f04f-480b-aaa2-32a211acd5fe`｜第 3 页仅含填空题 Q11–Q16；Q16 后至页脚留有明显大块空白，源于后续解答题分节被共享 Needspace 门槛整体移页。
