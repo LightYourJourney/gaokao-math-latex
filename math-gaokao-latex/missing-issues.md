@@ -22424,3 +22424,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1339
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第 1 页 Q17 给出整改前合格概率 0.5、整改后复查合格概率 0.8，并称每家煤矿安检是否合格相互独立；题干未明确该独立性是否覆盖不同煤矿整改复查结果及其与初检结果的联合关系。至少关闭一家只有在关闭事件独立时才能由 1-0.9^5 算为 0.41。",
+  "fingerprint": "af0e2c3aa8587fa8c0414de09fdc38670c9206e6f74cb9827079d89d082392bc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-hunan-science",
+  "question_id": "gk-2006-regular-hunan-science-q17",
+  "resume_action": "取得同版权威答案、勘误或明确适用于整改复查阶段的跨矿联合独立性材料后裁定；此前保留 Q17（3）为 U/PENDING，不把 0.41 写成无条件答案。",
+  "source_id": "src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

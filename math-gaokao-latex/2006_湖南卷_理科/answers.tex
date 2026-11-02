@@ -1,0 +1,572 @@
+% answers.tex —— 2006 年·普通高等学校招生考试·湖南卷理科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2006/2006_数学真题_湖南理_试题.md + 2006/2006_数学真题_湖南理_解析正文.md + 2006/2006_数学真题_湖南理_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+以下解答仅依据固定候选题面与原页图示独立推导。固定 PDF 不含答案、解析或评分标准；未引用外部答案。来源发布者、版次、来源链及官方身份未核。Q17（3）保留联合独立性条件。
+\end{gktip}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+函数 $y=\sqrt{\log_2 x-2}$ 的定义域是\mbox{（　　）}
+
+(A) $(3,+\infty)$　(B) $[3,+\infty)$　(C) $(4,+\infty)$　(D) $[4,+\infty)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+定义域要求 $x>0$ 且 $\log_2x-2\ge0$。因底数 $2>1$，得 $x\ge4$。
+
+\gkanswer{答案：D，$[4,+\infty)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若数列 $\{a_n\}$ 满足：$a_1=\dfrac13$，且对任意正整数 $m,n$ 都有 $a_{m+n}=a_m\cdot a_n$，则
+\nopagebreak[4]
+\[
+\lim_{n\to+\infty}(a_1+a_2+\cdots+a_n)=\qquad（　　）
+\]
+
+(A) $\dfrac12$　(B) $\dfrac23$　(C) $\dfrac32$　(D) $2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取 $m=n=1$ 得 $a_2=a_1^2$。归纳可得 $a_n=(1/3)^n$。于是
+\nopagebreak[4]
+\[
+\sum_{k=1}^n a_k=\sum_{k=1}^n\left(\frac13\right)^k
+=\frac12\left(1-3^{-n}\right)\longrightarrow\frac12.
+\]
+
+\gkanswer{答案：A，$\dfrac12$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+过平行六面体 $ABCD-A_1B_1C_1D_1$ 任意两条棱的中点作直线，其中与平面 $DBB_1D_1$ 平行的直线共有\mbox{（　　）}
+
+(A) 4 条　(B) 6 条　(C) 8 条　(D) 12 条
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+作仿射坐标 $A=(0,0,0),B=(1,0,0),C=(1,1,0),D=(0,1,0)$，上底面顶点的第三坐标取 $1$。平面 $DBB_1D_1$ 的方程为 $x+y=1$，其平行方向满足 $\Delta x+\Delta y=0$。12 条棱的中点按 $x+y$ 分层：$x+y=1/2$ 与 $3/2$ 的两层各有 4 点，各自两两连线给出 6 条与平面不相交的平行直线；$x+y=1$ 的另外两个点连成的直线落在该平面内，不按“直线与平面平行”计。合计 $6+6=12$ 条。
+
+\gkanswer{答案：D，12 条。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+“$a=1$”是“函数 $f(x)=|x-a|$ 在区间 $[1,+\infty)$ 上为增函数”的\mbox{（　　）}
+
+(A) 充分不必要条件　(B) 必要不充分条件
+
+(C) 充要条件　(D) 既不充分也不必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$f(x)=|x-a|$ 在 $[1,+\infty)$ 上递增当且仅当折点 $a\le1$。$a=1$ 足以保证递增，但 $a<1$ 时也递增，故它是充分不必要条件。
+
+\gkanswer{答案：A，充分不必要条件。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知 $|\vec a|=2|\vec b|\ne0$，且关于 $x$ 的方程
+\nopagebreak[4]
+\[
+x^2+|\vec a|x+\vec a\cdot\vec b=0
+\]
+有实根，则 $\vec a$ 与 $\vec b$ 的夹角的取值范围是\mbox{（　　）}
+
+(A) $\left[0,\dfrac\pi6\right]$　(B) $\left[\dfrac\pi3,\pi\right]$　(C) $\left[\dfrac\pi3,\dfrac{2\pi}3\right]$　(D) $\left[\dfrac\pi6,\pi\right]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+二次方程有实根的条件为
+\nopagebreak[4]
+\[
+|\vec a|^2-4\vec a\cdot\vec b\ge0.
+\]
+令夹角为 $\theta$，利用 $|\vec a|=2|\vec b|$ 得 $4|\vec b|^2-8|\vec b|^2\cos\theta\ge0$，即 $\cos\theta\le1/2$。故 $\theta\in[\pi/3,\pi]$。
+
+\gkanswer{答案：B，$\left[\dfrac\pi3,\pi\right]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+某外商计划在 4 个候选城市投资 3 个不同的项目，且在同一个城市投资的项目不超过 2 个，则该外商不同的投资方案有\mbox{（　　）}
+
+(A) 16 种　(B) 36 种　(C) 42 种　(D) 60 种
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+3 个不同项目分别选择 4 个城市，共有 $4^3$ 种。违反条件的方案只有 3 个项目全投在同一城市，共 4 种。因此方案数为 $4^3-4=60$。
+
+\gkanswer{答案：D，60 种。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+过双曲线 $M:x^2-\dfrac{y^2}{b^2}=1$ 的左顶点 $A$ 作斜率为 1 的直线 $l$，若 $l$ 与双曲线 $M$ 的两条渐近线分别相交于点 $B,C$，且 $|AB|=|BC|$，则双曲线 $M$ 的离心率是\mbox{（　　）}
+
+(A) $\sqrt{10}$　(B) $\sqrt5$　(C) $\dfrac{\sqrt{10}}3$　(D) $\dfrac{\sqrt5}2$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令 $b_0=|b|>0$，双曲线渐近线为 $y=\pm b_0x$。直线 $l$ 参数化为 $(x,y)=(-1+t,t)$。与两渐近线的交点参数为
+\nopagebreak[4]
+\[
+t_1=\frac{b_0}{b_0-1},\qquad t_2=\frac{b_0}{b_0+1}.
+\]
+\Needspace{5\baselineskip}
+当 $0<b_0<1$ 时两交点在 $A$ 两侧，不能满足 $|AB|=|BC|$；当 $b_0>1$ 时两点在 $A$ 同侧，较远点到 $A$ 的距离须为较近点的两倍。故
+\nopagebreak[4]
+\[
+\frac{b_0}{b_0-1}=2\frac{b_0}{b_0+1},
+\]
+解得 $b_0=3$。离心率 $e=\sqrt{1+b_0^2}=\sqrt{10}$。
+
+\gkanswer{答案：A，$\sqrt{10}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+设函数 $f(x)=\dfrac{x-a}{x-1}$，集合 $M=\{x\mid f(x)<0\}$，$P=\{x\mid f'(x)>0\}$，若 $M\subsetneq P$，则实数 $a$ 的取值范围是\mbox{（　　）}
+
+(A) $(-\infty,1)$　(B) $(0,1)$　(C) $(1,+\infty)$　(D) $[1,+\infty)$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+当 $a>1$ 时，$f'(x)=(a-1)/(x-1)^2>0$（$x\ne1$），所以 $P=\mathbb R\setminus\{1\}$；且 $M=(1,a)\subsetneq P$。当 $a<1$ 时 $P=\varnothing$ 而 $M=(a,1)$ 非空；当 $a=1$ 时 $M=P=\varnothing$，不满足严格包含。故 $a\in(1,+\infty)$。
+
+\gkanswer{答案：C，$(1,+\infty)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+棱长为 2 的正四面体的四个顶点都在同一个球面上，若过该球球心的一个截面如图，则图中三角形（正四面体的截面）的面积是\mbox{（　　）}
+
+(A) $\dfrac{\sqrt2}{2}$　(B) $\dfrac{\sqrt3}{2}$　(C) $\sqrt2$　(D) $\sqrt3$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按原图所示，截面三角形的底边为正四面体的一条棱 $AB$，顶点为其对棱 $CD$ 的中点 $M$；该平面经过球心。底边 $AB=2$。正四面体两条对棱间的公垂线长为 $\sqrt2$，且 $M$ 到 $AB$ 的距离正是这段公垂线长，因此截面积
+\nopagebreak[4]
+\[
+\frac12\cdot2\cdot\sqrt2=\sqrt2.
+\]
+
+\gkanswer{答案：C，$\sqrt2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+若圆 $x^2+y^2-4x-4y-10=0$ 上至少有三个不同的点到直线 $l:ax+by=0$ 的距离为 $2\sqrt2$，则直线 $l$ 的倾斜角的取值范围是\mbox{（　　）}
+
+(A) $\left[\dfrac\pi{12},\dfrac\pi4\right]$　(B) $\left[\dfrac\pi{12},\dfrac{5\pi}{12}\right]$　(C) $\left[\dfrac\pi6,\dfrac\pi3\right]$　(D) $\left[0,\dfrac\pi2\right]$
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+圆心 $C=(2,2)$，半径 $r=3\sqrt2$。令 $d$ 为圆心到直线 $l$ 的距离。与 $l$ 平行且距 $l$ 为 $2\sqrt2$ 的两条直线到 $C$ 的有向距离对应 $|d-2\sqrt2|$ 与 $|d+2\sqrt2|$。两者都与圆相交至少需 $d\le\sqrt2$；当等号成立时一条相切、另一条相割，共 3 个交点，故条件等价于 $d\le\sqrt2$。
+
+\Needspace{5\baselineskip}
+设 $l$ 的倾斜角为 $\varphi$，其单位法向量可取 $(-\sin\varphi,\cos\varphi)$，所以
+\nopagebreak[4]
+\[
+d=|2(\cos\varphi-\sin\varphi)|.
+\]
+不等式 $d\le\sqrt2$ 化为 $|\cos(\varphi+\pi/4)|\le1/2$。取 $0\le\varphi<\pi$，得 $\varphi\in[\pi/12,5\pi/12]$。
+
+\gkanswer{答案：B，$\left[\dfrac\pi{12},\dfrac{5\pi}{12}\right]$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+若 $(ax-1)^5$ 的展开式中 $x^3$ 的系数是 $-80$，则实数 $a$ 的值是 \gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+$(ax-1)^5$ 中 $x^3$ 项系数为 $\binom53a^3(-1)^2=10a^3$。令 $10a^3=-80$，得 $a=-2$。
+
+\gkanswer{答案：$-2$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+已知
+\nopagebreak[4]
+\[
+\begin{cases}
+x\ge1,\\
+x-y+1\le0,\\
+2x-y-2\le0,
+\end{cases}
+\]
+则 $x^2+y^2$ 的最小值是 \gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+约束化为 $x\ge1$、$y\ge x+1$、$y\ge2x-2$。当 $1\le x\le3$ 时最小可行 $y=x+1$，此时 $x^2+y^2=x^2+(x+1)^2$ 随 $x$ 增大；当 $x\ge3$ 时最小可行 $y=2x-2$，目标值也大于其在 $x=1$ 时的值。最小值在 $(x,y)=(1,2)$ 取得，为 $5$。
+
+\gkanswer{答案：$5$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+曲线 $y=\dfrac1x$ 和 $y=x^2$ 在它们交点处的两条切线与 $x$ 轴所围成的三角形的面积是 \gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+两曲线交于 $(1,1)$。切线分别为 $y-1=-(x-1)$ 与 $y-1=2(x-1)$，与 $x$ 轴交于 $x=2$ 和 $x=1/2$。三角形底长为 $3/2$，高为 $1$，面积为 $3/4$。
+
+\gkanswer{答案：$\dfrac34$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+若 $f(x)=a\sin\left(x+\dfrac\pi4\right)+b\sin\left(x-\dfrac\pi4\right)$（$ab\ne0$）是偶函数，则有序实数对 $(a,b)$ 可以是 \gkblank{}。（写出你认为正确的一组数字即可）
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+展开得
+\nopagebreak[4]
+\[
+f(x)=\frac{a+b}{\sqrt2}\sin x+\frac{a-b}{\sqrt2}\cos x.
+\]
+偶函数要求奇函数项系数 $a+b=0$。取 $a=1,b=-1$ 即可，且满足 $ab\ne0$。
+
+\gkanswer{答案：例如 $(a,b)=(1,-1)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+如图，$OM\parallel AB$，点 $P$ 在由射线 $OM$、线段 $OB$ 及 $AB$ 的延长线围成的区域内（不含边界）运动，且
+\nopagebreak[4]
+\[
+\overrightarrow{OP}=x\overrightarrow{OA}+y\overrightarrow{OB},
+\]
+则 $x$ 的取值范围是 \gkblank{}；当 $x=-\dfrac12$ 时，$y$ 的取值范围是 \gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取 $\overrightarrow{OA},\overrightarrow{OB}$ 为基底。由 $OM\parallel AB$，边界射线 $OM$ 的点可写为 $t(\overrightarrow{OB}-\overrightarrow{OA})$，$t\ge0$；区域中与 $OB$ 平行的截线由 $OB$ 与 $AB$ 的延长线界定。故内部点可表示为
+\nopagebreak[4]
+\[
+\overrightarrow{OP}=t(\overrightarrow{OB}-\overrightarrow{OA})+s\overrightarrow{OB},\qquad t>0,\quad0<s<1.
+\]
+因此 $x=-t<0$，$y=t+s=-x+s$。当 $x=-1/2$ 时，$1/2<y<3/2$。
+
+\gkanswer{答案：$x\in(-\infty,0)$；当 $x=-\dfrac12$ 时，$y\in\left(\dfrac12,\dfrac32\right)$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+如图，$D$ 是直角 $\triangle ABC$ 斜边 $BC$ 上一点，$AB=AD$，记 $\angle CAD=\alpha$，$\angle ABC=\beta$。
+
+（1） 证明：$\sin\alpha+\cos2\beta=0$；
+
+（2） 若 $AC=\sqrt3\,DC$，求 $\beta$ 的值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{（1）} $AB=AD$，故 $\triangle ABD$ 为等腰三角形，$\angle ABD=\angle ADB=\beta$，从而 $\angle BAD=\pi-2\beta$。又 $\angle BAC=\pi/2$，所以 $\alpha=\angle CAD=2\beta-\pi/2$。于是 $\sin\alpha=\sin(2\beta-\pi/2)=-\cos2\beta$，结论成立。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 设 $AB=AD=s$。等腰三角形 $ABD$ 中 $BD=2s\cos\beta$；直角三角形 $ABC$ 中 $AC=s\tan\beta$、$BC=s\sec\beta$，故 $DC=s(\sec\beta-2\cos\beta)$。条件化为
+\nopagebreak[4]
+\[
+\tan\beta=\sqrt3(\sec\beta-2\cos\beta),
+\]
+即 $\sin\beta=-\sqrt3\cos2\beta$。令 $u=\sin\beta$，且 $\cos2\beta=1-2u^2$，得 $2\sqrt3u^2-u-\sqrt3=0$。在 $0<\beta<\pi/2$ 下，唯一可行根为 $u=\sqrt3/2$，故 $\beta=\pi/3$。
+
+\gkanswer{答案（1）：证明见解析。}
+
+\gkanswer{答案（2）：$\beta=\dfrac\pi3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+某安全生产监督部门对 5 家小型煤矿进行安全检查（简称安检）。若安检不合格，则必须整改。若整改后经复查仍不合格，则强制关闭。设每家煤矿安检是否合格是相互独立的，且每家煤矿整改前安检合格的概率是 0.5，整改后安检合格的概率是 0.8，计算（结果精确到 0.01）：
+
+（1） 恰好有两家煤矿必须整改的概率；
+
+（2） 平均有多少家煤矿必须整改；
+
+（3） 至少关闭一家煤矿的概率。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{（1）} 每家整改前不合格概率为 $0.5$，且各家整改前安检相互独立。恰有两家须整改的概率为 $\binom52(0.5)^2(0.5)^3=0.3125$，精确到 $0.01$ 为 $0.31$。
+
+\textbf{（2）} 令 $X$ 为须整改的家数，则 $X\sim\operatorname{Bin}(5,0.5)$，故 $E[X]=5\cdot0.5=2.5$。
+
+\textbf{（3）} 若进一步假设不同煤矿的整改复查结果也联合独立，则单家被关闭的概率为 $0.5\cdot0.2=0.1$，五家均未关闭的概率为 $0.9^5$，至少关闭一家为 $1-0.9^5=0.40951\ldots\approx0.41$。题面仅明确安检是否合格相互独立，未明确跨矿整改复查结果的联合关系，因此这一数值只能作为附加独立假设下的条件结果；规范答案保留 U/PENDING。
+
+\gkanswer{答案（1）：$0.31$。}
+
+\gkanswer{答案（2）：$2.5$ 家。}
+
+\gkanswer{答案（3）：U/PENDING。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+如图，已知两个正四棱锥 $P-ABCD$ 与 $Q-ABCD$ 的高分别为 1 和 2，$AB=4$。
+
+（1） 证明：$PQ\perp$ 平面 $ABCD$；
+
+（2） 求异面直线 $AQ$ 与 $PB$ 所成的角；
+
+（3） 求点 $P$ 到平面 $QAD$ 的距离。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+按原页图示，$P,Q$ 位于底面两侧。取底面中心为原点、底面为 $z=0$，设
+\nopagebreak[4]
+\[
+A=(-2,-2,0),\quad B=(2,-2,0),\quad C=(2,2,0),\quad D=(-2,2,0),\quad P=(0,0,1),\quad Q=(0,0,-2).
+\]
+\textbf{（1）} $PQ$ 平行于 $z$ 轴，而 $z$ 轴垂直于底面，故 $PQ\perp$ 平面 $ABCD$。
+
+\textbf{（2）} 可取方向向量 $\overrightarrow{AQ}=(2,2,-2)$、$\overrightarrow{PB}=(2,-2,-1)$。内积为 $2$，长度分别为 $2\sqrt3$ 与 $3$，故两直线所成锐角 $\theta$ 满足 $\cos\theta=1/(3\sqrt3)$。
+
+\Needspace{5\baselineskip}
+\textbf{（3）} 平面 $QAD$ 的方程为 $x+z=-2$。点 $P$ 到该平面的距离为
+\nopagebreak[4]
+\[
+\frac{|0+1+2|}{\sqrt{1^2+1^2}}=\frac3{\sqrt2}.
+\]
+
+\gkanswer{答案（1）：$PQ\perp$ 平面 $ABCD$。}
+
+\gkanswer{答案（2）：$\arccos\dfrac1{3\sqrt3}$。}
+
+\gkanswer{答案（3）：$\dfrac3{\sqrt2}$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+已知函数 $f(x)=x-\sin x$，数列 $\{a_n\}$ 满足：$0<a_1<1$，$a_{n+1}=f(a_n)$，$n=1,2,3,\cdots$。证明：
+
+（1） $0<a_{n+1}<a_n<1$；
+
+（2） $a_{n+1}<\dfrac16a_n^3$。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{（1）} 对 $0<x<1$，有 $0<\sin x<x$，所以 $0<x-\sin x<x$。因此若 $0<a_n<1$，则 $0<a_{n+1}<a_n<1$，从 $0<a_1<1$ 归纳即得。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 又
+\nopagebreak[4]
+\[
+x-\sin x=\int_0^x(1-\cos t)\,dt<\int_0^x\frac{t^2}{2}\,dt=\frac{x^3}{6},
+\]
+其中对 $t>0$ 使用 $1-\cos t<t^2/2$。
+
+将积分不等式取 $x=a_n$，即得 $a_{n+1}<a_n^3/6$。
+
+\gkanswer{答案（1）：$0<a_{n+1}<a_n<1$。}
+
+\gkanswer{答案（2）：$a_{n+1}<\dfrac16a_n^3$。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+对 1 个单位质量的含污物体进行清洗，清洗前其清洁度（含污物体的清洁度定义为：$1-\dfrac{\text{\text{污物质量}}}{\text{\text{物体质量}（\text{含污物}）}}$）为 0.8，要求洗完后的清洁度是 0.99。有两种方案可供选择，方案甲：一次清洗；方案乙：两次清洗。该物体初次清洗后受残留水等因素影响，其质量变为 $a$（$1\le a\le3$）。设用 $x$ 单位质量的水初次清洗后的清洁度是
+\nopagebreak[4]
+\[
+\dfrac{x+0.8}{x+1}\quad(x>a-1),
+\]
+\Needspace{5\baselineskip}
+用 $y$ 单位质量的水第二次清洗后的清洁度是
+\nopagebreak[4]
+\[
+\dfrac{y+ac}{y+a},
+\]
+其中 $c$（$0.8<c<0.99$）是该物体初次清洗后的清洁度。
+
+（1） 分别求出方案甲以及 $c=0.95$ 时方案乙的用水量，并比较哪一种方案用水量较少；
+
+（2） 若采用方案乙，当 $a$ 为某定值时，如何安排初次与第二次清洗的用水量，使总用水量最少？并讨论 $a$ 取不同数值时对最少总用水量多少的影响。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+\textbf{（1）} 方案甲令
+\nopagebreak[4]
+\[
+\frac{x+0.8}{x+1}=0.99,
+\]
+解得 $x=19$。
+
+\Needspace{5\baselineskip}
+方案乙中，第一洗后清洁度为 $c$，由 $c=(x+0.8)/(x+1)$ 得
+\nopagebreak[4]
+\[
+x=\frac{c-0.8}{1-c}.
+\]
+第二次清洗满足 $(y+ac)/(y+a)=0.99$，故 $y=100a(0.99-c)$。取 $c=0.95$，得 $x=3,y=4a$。因 $1\le a\le3$，方案乙总用水 $3+4a\le15<19$，且 $x=3>a-1$，符合题设。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 固定 $a$ 后，总用水量关于中间清洁度 $c$ 为
+\nopagebreak[4]
+\[
+S(c)=\frac{c-0.8}{1-c}+100a(0.99-c).
+\]
+\Needspace{5\baselineskip}
+设 $t=1-c$，则 $S=0.2/t-1+100a(t-0.01)$。在 $0.01<t<0.2$ 上，导数为 $-0.2/t^2+100a$，唯一极小点满足 $t=\sqrt{0.002/a}=1/\sqrt{500a}$。对应
+\nopagebreak[4]
+\[
+c=1-\frac1{\sqrt{500a}},\quad x=\sqrt{20a}-1,\quad y=\sqrt{20a}-a.
+\]
+\Needspace{5\baselineskip}
+该点满足 $0.8<c<0.99$ 且 $x>a-1$（对 $1\le a\le3$ 有 $1/\sqrt{500a}<0.2/a$），因此是可行的全局最小点。最小总用水量为
+\nopagebreak[4]
+\[
+S_{\min}(a)=2\sqrt{20a}-a-1.
+\]
+其导数 $\sqrt{20/a}-1>0$ 对 $1\le a\le3$ 成立，所以残留质量参数 $a$ 增大时最少总用水量严格增加。
+
+\gkanswer{答案（1）：方案甲用水 $19$ 单位；当 $c=0.95$ 时，方案乙初洗用水 $3$ 单位、二次用水 $4a$ 单位，总用水 $3+4a$ 单位，少于方案甲。}
+
+\gkanswer{答案（2）：令 $c=1-\dfrac1{\sqrt{500a}}$；初洗用水 $x=\sqrt{20a}-1$，二次用水 $y=\sqrt{20a}-a$，最少总用水为 $2\sqrt{20a}-a-1$。该最少值在 $1\le a\le3$ 上随 $a$ 严格增加。}
+
+\end{answer}
+\begin{answer}
+\gksolhead{21}{}
+
+\textbf{题目}：
+
+已知椭圆 $C_1:\dfrac{x^2}{4}+\dfrac{y^2}{3}=1$，抛物线 $C_2:(y-m)^2=2px$（$p>0$），且 $C_1$、$C_2$ 的公共弦 $AB$ 过椭圆 $C_1$ 的右焦点。
+
+（1） 当 $AB\perp x$ 轴时，求 $m$、$p$ 的值，并判断抛物线 $C_2$ 的焦点是否在直线 $AB$ 上；
+
+（2） 是否存在 $m$、$p$ 的值，使抛物线 $C_2$ 的焦点恰在直线 $AB$ 上？若存在，求出符合条件的 $m$、$p$ 的值；若不存在，请说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+椭圆右焦点为 $F=(1,0)$。
+
+\textbf{（1）} $AB\perp x$ 轴且过 $F$，故 $AB:x=1$。椭圆交点为 $(1,\pm3/2)$。两点同在抛物线上要求 $(3/2-m)^2=(-3/2-m)^2$，所以 $m=0$；代入得 $2p=9/4$，即 $p=9/8$。抛物线焦点为 $(p/2,m)=(9/16,0)$，不在 $x=1$ 上。
+
+\Needspace{5\baselineskip}
+\textbf{（2）} 设非垂直公共弦为 $y=k(x-1)$。若 $k\ne0$，将其代入椭圆并清分母，得
+\nopagebreak[4]
+\[
+(3+4k^2)x^2-8k^2x+4k^2-12=0.
+\]
+\Needspace{5\baselineskip}
+代入抛物线得
+\nopagebreak[4]
+\[
+k^2x^2+(-2k^2-2mk-2p)x+k^2+2mk+m^2=0.
+\]
+\Needspace{5\baselineskip}
+两交点构成公共弦，故两二次式成比例。若抛物线焦点 $(p/2,m)$ 在弦上，则 $m=k(p/2-1)$。代入后，抛物线二次式的一次项系数为 $-p(k^2+2)$，常数项为 $k^2p^2/4$。与椭圆二次式按首项系数成比例，得到
+\nopagebreak[4]
+\[
+p=\frac{8k^4}{(3+4k^2)(k^2+2)},\qquad p^2=\frac{16(k^2-3)}{3+4k^2}.
+\]
+令 $z=k^2$，联立化为 $(z-6)(7z^2+13z+6)=0$。因 $z>0$ 且 $p>0$，只取 $z=6$，故 $k=\pm\sqrt6$、$p=4/3$、$m=k(p/2-1)=-k/3$。即 $m=\pm\sqrt6/3$，公共弦 $y=-3m(x-1)$。
+
+若 $k=0$，弦为 $y=0$，椭圆交点横坐标为 $\pm2$。同一抛物线需同时满足 $m^2=4p$ 与 $m^2=-4p$，这与 $p>0$ 矛盾。垂直弦 $x=1$ 已在（1）中排除其焦点在弦上。故唯一可行的斜率平方为 $k^2=6$，并得到上述两组 $m,p$。
+
+\gkanswer{答案（1）：$m=0,\ p=\dfrac98$；抛物线焦点为 $\left(\dfrac9{16},0\right)$，不在 $AB:x=1$ 上。}
+
+\gkanswer{答案（2）：存在：$m=\pm\dfrac{\sqrt6}3$、$p=\dfrac43$；公共弦为 $y=-3m(x-1)$。}
+
+\end{answer}

@@ -4,6 +4,19 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 湖南理科候选卷：paper/source 登记与 Q17 blocker（phase1-b75，2026-11-02）
+
+- `source_manifest.py register-papers` 将 `gk-2006-regular-hunan-science` 与 `phase1-b75` 登记，固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb` 内部绑定为 canonical；manifest revision `5951→5952`。该绑定只表示本库固定输入关系，不认证发布者、版次、来源链或官方身份。
+- 登记建立 `ISSUE-1339`（`answer-convention-ambiguous`）：Q17（3）题干未明确跨矿整改复查结果的联合独立性，答案保持 `U/PENDING`，不把独立性假设下的 $0.41$ 写成无条件答案。paper 为 `blocked`、`blocked_from=planned`；batch `phase1-b75` 为 `planned`。
+- Q1–Q21 题面、独立答案要点、解析正文与确定性生成的含解析 Markdown 已绑定 paper ID。固定 PDF 两页题面被选为 Q 页；Q9、Q15、Q16、Q18 仍只有源图定位标记，TikZ 图尚未制作或登记。
+- `source_manifest.py validate`、`issues.py validate` 与 `solution_sources.py check-batch --batch phase1-b75` 通过；解析器识别题面/解析/答案各 21 题。随后 `generate_projects.py` 为新卷生成 `questions.tex`、`answers.tex` 并更新全库静态 `index.json`；`make_short_answers.py` 生成简答表，`make_editions.py` 生成四个版本壳文件。逐题 provenance、矢量图稿、XeLaTeX 构建及视觉审查尚未完成。详见 `reports/2006-hunan-science-registration.md`；本阶段不表示卷级验收。
+
+### 2006 湖南理科候选卷：独立答案推导与分段盲核（2026-11-02）
+
+- 依据固定题面与题图独立推导 Q1–Q21，写入 `2006/2006_数学真题_湖南理_答案要点.md`、`_解析正文.md`，并由 `solution_sources.render_combined()` 生成 `_含解析.md`。两名分段盲核者分别覆盖 Q1–Q10、Q11–Q21；Q14 复核者初次把奇偶系数条件写反，按原式复核后确认应取 $a+b=0$，本库答案为 $(1,-1)$。Q9 图示按一条棱及其对棱中点的截面解释；Q18 的 $P,Q$ 异侧依据原图，文字本身未明说。
+- 自查修正 Q7 渐近线交点参数符号与 Q21（2）抛物线代入展开；盲核结果与修正后答案一致。Q17（3）因复查结果跨矿联合独立性未明继续标 `U/PENDING`，随后登记为 `ISSUE-1339`。`official_answer` 保持 `null`，所有结论均为非官方独立推导。
+- 项目解析器识别题面、解析、答案各 21 题，编号连续 1–21；含解析稿确定性生成成功，`git diff --check` 通过。尚未导入逐题 provenance、绘制/登记题图、生成共享 TeX 和四版入口、构建 PDF 或视觉验收；未运行全量测试。详情见 `reports/2006-hunan-science-answer-derivation.md`。
+
 ### 2006 湖南理科候选卷：固定来源接收与 Q1–Q21 题面转录（2026-11-02）
 
 - 固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南理.pdf`；SHA-256 `ae341d81af084449fe66f2e737553001cf04fd1781ad5f47f1a4f5b5da1bbb09`、Git blob `0e7fdec5b934366efe430a192955195c9a82bad4` 与现场重算一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页码 298–299，题签为“2006 普通高等学校招生考试（湖南卷理）”，共 21 题；PDF 不含答案、解析或评分标准。
