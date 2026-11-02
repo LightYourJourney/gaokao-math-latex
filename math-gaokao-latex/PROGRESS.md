@@ -58,6 +58,13 @@
 - `build_projects.py validate-receipts --require-current-inputs` 返回 OK、2 pending、0 stale/invalid/missing。四版 PDF 已渲染，视觉审查另作下一阶段；当前仍为 `compiled_pending_review`。
 - 来源身份与 `official_answer=null` 仍未核实。文科 Q21(2) 原文 APCD 中 P 未定义，继续保留 `U/PENDING` 与 `ISSUE-1340` 阻断，本阶段不是批次验收或长期语料完成。
 
+### phase1-b78 2006 辽宁文理候选卷：四版逐页视觉审查与批次收口（2026-11-03）
+
+- 文理四版共91页完成八项逐页检查：569 pass、159 not_applicable、0 fail、0 pending；159项不适用为含答案版本的 answer_leak 项与无题图页的 figure_label 项。两卷均无构建警告豁免或视觉问题。逐卷/逐版本细目见两份 `receipts/review.json` 和 `reports/phase1-b78.md`。
+- `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，manifest revision 5995，批次状态 `closed_with_blockers`。理科 paper `complete`；文科 paper `blocked`，其 Q21(2) 的 P 未定义问题仍由 `ISSUE-1340` 阻断，原文 APCD 与答案 `U/PENDING` 保持不变。
+- `build_projects.py validate-receipts --require-final --require-current-inputs`、`provenance.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`、`review_receipts.py check-batch`、source manifest 与 issue ledger 校验均通过；`report.py render/check --all` 与 `manifest_csv.py --check` 通过，CSV 当前为775行。
+- 本批次全量 unittest 本阶段未运行。候选 PDF 的发布者、出版者、版次、来源链与官方身份仍未核实，`official_answer=null`；本批次不是长期语料库完成。成本未知。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
