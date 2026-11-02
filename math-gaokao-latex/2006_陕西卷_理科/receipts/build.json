@@ -1,14 +1,14 @@
 {
-  "attempt_id": "df8b6a85-712b-43de-b42a-2941dc118da4",
+  "attempt_id": "1b167565-090e-4aa7-9f5b-968d2996076a",
   "dependency_tree": {
     "files": [
       {
         "path": "math-gaokao-latex/2006_陕西卷_理科/answers.tex",
-        "sha256": "42c52780c4639d77b3d01baf6d4e3353f4268efd48257ad46562ac7cb9b2b2f7"
+        "sha256": "337cd5d1010f23369f294f44c5d6a5c6014499a81a06b4ef8bb8cb5788a6efcf"
       },
       {
         "path": "math-gaokao-latex/2006_陕西卷_理科/answers_short.tex",
-        "sha256": "251d1ef6e140f310c5f91e4622baa6f6cb15d10020bed5091c6485d775573f6f"
+        "sha256": "c0679f1797e8133c33edf5dd245bf370221683eccfdf0c9232cb136f6e5bfbdd"
       },
       {
         "path": "math-gaokao-latex/2006_陕西卷_理科/figures/f2006_shaanxi_science_q19_two_planes.tex",
@@ -51,7 +51,7 @@
         "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
       }
     ],
-    "tree_sha256": "b4435c51034c0a97b273ba8c9bcca6fb5444e02a6aed4d4899636cf86e36d67e"
+    "tree_sha256": "b74829a8e65bb07a0c7f7a6627c4c469a455cfd5fb3cb6ea8cf78b8ed4862fe8"
   },
   "editions": [
     {
@@ -71,7 +71,7 @@
       "pdf": {
         "page_count": 4,
         "path": "math-gaokao-latex/2006_陕西卷_理科/build/试题版.pdf",
-        "sha256": "2a2820146aa97f9e5c9bf788c2e8ff4fc85a5954fd45bdefb440bfe27c934660",
+        "sha256": "7a7938c974f6401b55e35fea0a7d8da853d88f0c5919e0e40ddb29f33875e01f",
         "size_bytes": 126697
       },
       "problems": [],
@@ -82,54 +82,31 @@
       "edition": "解析版",
       "log": {
         "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ₁ (U+2081) in font [lmroman12-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no ₂ (U+2082) in font [lmroman12-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman12-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman12-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman12-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no ξ (U+03BE) in font [lmroman12-bold]:mapping=tex-"
-          }
-        ],
+        "missing_characters": [],
         "overfull": [],
         "undefined_references": []
       },
       "passes": [
         {
-          "exit_code": 12,
+          "exit_code": 0,
           "pass": 1
         }
       ],
-      "pdf": null,
-      "problems": [
-        "latexmk 退出码 12"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 18,
+        "path": "math-gaokao-latex/2006_陕西卷_理科/build/解析版.pdf",
+        "sha256": "3a6c541fc8d76e501f23b7b24a948244e851626348c0e0e3bb527de3cb55f908",
+        "size_bytes": 212949
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2006_陕西卷_理科/解析版.tex"
     },
     {
       "edition": "简答版",
       "log": {
         "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ≤ (U+2264) in font [lmroman12-regular]:mapping=t"
-          },
-          {
-            "text": "Missing character: There is no ≤ (U+2264) in font [lmroman12-regular]:mapping=t"
-          }
-        ],
+        "missing_characters": [],
         "overfull": [],
         "undefined_references": []
       },
@@ -142,8 +119,8 @@
       "pdf": {
         "page_count": 6,
         "path": "math-gaokao-latex/2006_陕西卷_理科/build/简答版.pdf",
-        "sha256": "d031553c38394f8327ef824aac3a012cb23ec1b5cdb8a70cf878d6a772798af0",
-        "size_bytes": 142218
+        "sha256": "3ba2ed88701cac63ac44a4252b6fa3a018008af5c302674a7aafe6fe472e13e4",
+        "size_bytes": 141933
       },
       "problems": [],
       "result": "succeeded",
@@ -153,49 +130,33 @@
       "edition": "印刷版",
       "log": {
         "errors": [],
-        "missing_characters": [
-          {
-            "text": "Missing character: There is no ₁ (U+2081) in font [lmroman10-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no ₂ (U+2082) in font [lmroman10-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman10-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman10-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no π (U+03C0) in font [lmroman10-bold]:mapping=tex-"
-          },
-          {
-            "text": "Missing character: There is no ξ (U+03BE) in font [lmroman10-bold]:mapping=tex-"
-          }
-        ],
+        "missing_characters": [],
         "overfull": [],
         "undefined_references": []
       },
       "passes": [
         {
-          "exit_code": 12,
+          "exit_code": 0,
           "pass": 1
         }
       ],
-      "pdf": null,
-      "problems": [
-        "latexmk 退出码 12"
-      ],
-      "result": "failed",
+      "pdf": {
+        "page_count": 12,
+        "path": "math-gaokao-latex/2006_陕西卷_理科/build/印刷版.pdf",
+        "sha256": "dd5d2cf79aee12183c522df33a83bb315398375abd7c1330a963e2cab0adeaab",
+        "size_bytes": 209728
+      },
+      "problems": [],
+      "result": "succeeded",
       "source": "math-gaokao-latex/2006_陕西卷_理科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-11-03T05:57:20+08:00",
+  "finished_at": "2026-11-03T06:07:16+08:00",
   "generation_input_tree": {
     "files": [
       {
         "path": "2006/2006_数学真题_陕西理_答案要点.md",
-        "sha256": "f360bc0d6ee0c743e2b30bcc44f76abe218bb2ee8fbe04bf3d0debdbc82cea45"
+        "sha256": "c554f7cb1611b3ce6e41c3b322ece1ad0d9e9c0dd08f730eaf14be5c66bb9922"
       },
       {
         "path": "2006/2006_数学真题_陕西理_解析正文.md",
@@ -263,23 +224,23 @@
       },
       {
         "path": "math-gaokao-latex/tools/make_short_answers.py",
-        "sha256": "aeead6c1839054eb547bb28dcfd9c66afb642c4d6ce47f5079352a6bea163b11"
+        "sha256": "660feeac925af2012a656f4ccebdfd2d476cf09158afedaa935654e1dfa578cb"
       },
       {
         "path": "math-gaokao-latex/tools/solution_sources.py",
         "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
       }
     ],
-    "tree_sha256": "fa6d45b0c38619d4d99c5c5cf8fa13e9e1662d3fa7581da57170db029c149bbb"
+    "tree_sha256": "eb584d8cc70d1fda246ec965f155056f4e3d38f7d6900faa65fe35230f0a9250"
   },
   "input_projection": "d0fd01f2232b25b7cf0be6d6f3b7a99897353b4af88c39aff127d903bac08808",
-  "manifest_revision": 6006,
+  "manifest_revision": 6012,
   "paper_id": "gk-2006-regular-shaanxi-science",
-  "previous_attempt_id": "21eb9806-b898-4da1-8770-58f6075904fa",
+  "previous_attempt_id": "df8b6a85-712b-43de-b42a-2941dc118da4",
   "project_dir": "2006_陕西卷_理科",
   "schema_version": 1,
-  "started_at": "2026-11-03T05:56:46+08:00",
-  "status": "failed",
+  "started_at": "2026-11-03T06:06:44+08:00",
+  "status": "compiled_pending_review",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [

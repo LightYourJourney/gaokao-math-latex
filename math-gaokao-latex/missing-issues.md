@@ -22569,12 +22569,12 @@
   "edition": "解析版",
   "figure_id": "formal-build",
   "fingerprint": "264c64ca5f7fedd9d6f4774d2896e29df4cb7cf7ca78492c899afce91c19bd53",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-chongqing-science",
-  "resume_action": "修正 gk-2006-regular-chongqing-science 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
@@ -22605,12 +22605,12 @@
   "edition": "印刷版",
   "figure_id": "formal-build",
   "fingerprint": "8fdf13aa11cb544b8f0c1e3ad7b2f4d6f75dd2eed204a906ec5ca0dcdc03ad2e",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-chongqing-science",
-  "resume_action": "修正 gk-2006-regular-chongqing-science 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
@@ -22659,12 +22659,12 @@
   "edition": "解析版",
   "figure_id": "formal-build",
   "fingerprint": "ada84511dbbda508767c402cc3b461cd69642a8de1e7e12e6d44259ca0c79488",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-shaanxi-science",
-  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
@@ -22695,12 +22695,12 @@
   "edition": "印刷版",
   "figure_id": "formal-build",
   "fingerprint": "c9500666c313b51fc89b836e1bd484869cfa098cb4933fb9da0f282a3db08bbe",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2006-regular-shaanxi-science",
-  "resume_action": "修正 gk-2006-regular-shaanxi-science 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
