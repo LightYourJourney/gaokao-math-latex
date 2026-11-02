@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：逐题原页复核与三角色 provenance（2026-11-03）
+
+- 四卷 Q1–Q22 共 88 题完成独立固定原页逐题复核，四份候选 PDF 八页均渲染目视检查；未发现需修订的题面转录差异。逐题记录和 source hash 见 `reports/2006-chongqing-shaanxi-question-review.md`。
+- `provenance.py import-batch` 事务将 264 条三角色记录写入四卷 `provenance.json`，manifest revision `6000→6001`；question/answer hash 由工具按规范源现场计算。重庆文 22 题全部 D 级并为 `answers_verified`；其余三卷各保留一个/两个 U 级项目，分别为重庆理 Q20、陕西文 Q3/Q15、陕西理 Q16。
+- 两名独立盲核者覆盖四卷所有题目及小问；重庆文 Q17/Q20、重庆理 Q22、陕西文 Q9/Q22、陕西理 Q20 的既有答案/证明差异标为 resolved。四项 U/PENDING 与 open/blocking issue 继续保留，`official_answer=null`。
+- 将 `ISSUE-1341`—`ISSUE-1344` 统一重分类为 `answer-convention-ambiguous`，稳定 ID 与阻断状态不变；四处均是固定原文忠实转录，但题意/答案欠定，不属于 OCR 字形不确定。
+- `provenance.py check-batch`（4 卷）、source manifest/issues 校验、`solution_sources.py check-batch`、`manifest_csv.py --check`（775 行）均通过。阶段细节见 `reports/2006-chongqing-shaanxi-provenance.md`。
+- 后续仍需四卷项目 TeX 生成、四版正式 PDF 构建与逐页视觉复核/回执，再按保留 blockers 结批。本阶段不构成来源认证、四卷闭环或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：10 幅题图矢量重绘与登记（2026-11-03）
 
 - 四卷 10 个图位已依据各自固定候选 PDF 重绘为带 source ID、源 PDF SHA-256、PDF 页码和题号注释的本卷 TikZ 源；规范题面用相对 Markdown 链接映射，确定性含解析稿已重生成。manifest `figure_files` 通过 `sync-figure-registry` 逐卷事务登记，revision `5996→6000`，10 图各预期题面/合并稿引用 2 次；manifest CSV 当前 775 行。
