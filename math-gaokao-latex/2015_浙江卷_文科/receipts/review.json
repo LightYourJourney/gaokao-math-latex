@@ -1,7 +1,7 @@
 {
   "batch_id": "phase3-b18",
-  "build_attempt_id": "cfebfeda-fe54-4fd7-aeb7-0845085ce69c",
-  "dependency_tree_sha256": "50d3e8fd4e86dd214a4ab98d83caa6bcbac361ef46a073bc5bb281857b933719",
+  "build_attempt_id": "5a44f1e6-7755-4dbe-b999-54019ed174b8",
+  "dependency_tree_sha256": "267caf15f342461fa6b51a9f48610dc231b805d4990ab56925ae466ff4ff20a3",
   "editions": [
     {
       "candidate_override": null,
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "p1 文本层 0 个 U+FFFD；构建日志 0 条 Missing character；150dpi 目视无豆腐块、缺字或错误回退字体；∥、⩾、⩽、a/b、b/2、x²、x+6/x−6 及 e1,e2,b、N*、R 均正常渲染。",
+              "note": "中文、数学符号与向量字形完整；来源说明框内的字体也清晰，无缺字或叠印。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页眉「2015 年·浙江卷·文科·数学／试题版」、标题「2015 年·浙江卷·文科／数学·试题版」、节头「数学」齐全且层级正确；正文引用的第 2/4/5/8/12/13 题编号与所指内容对应，无错号。",
+              "note": "卷名、版次与“数学”节头层级清楚；本页为来源说明，没有题目编号序列需判定。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "p1 为来源说明页，无选项行、无独立公式行；仅行内出现分式与分段函数引用，已并入 glyph 项核对。",
+              "note": "来源说明页没有选项行或独立公式行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "p1 无插图、坐标轴或图标签，仅在文字中提及第 5 题图象选项的分栏位置，无图可检。",
+              "note": "本页没有题图或坐标标签，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左书名、右版次齐全且版次正确；页脚「——第 1 页——」完整居中，无重复页码或错页。",
+              "note": "页眉左侧卷名、右侧“试题版”及第 1 页页脚均完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "来源说明整块收在带框文本框内，框底线至页脚留白充分，无溢出、裁切或重复；p1 单页承接全部说明，分页正常。版式源（试题版.tex、preamble、macros）本轮未改，questions.tex 仅第①条单行文字替换，结构未变。",
+              "note": "来源说明框完整落在页面内，未压到页脚；标题与框之间、框后留白均清楚。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "标题两行、节头「数学」与框内正文三级字号层次与既有版式一致，无局部缩字号、无挤压行距。",
+              "note": "标题、节头和说明正文层次清楚，框中文字可读，无异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案：/故选/应选/答案为/【答案】等模式均 0 命中；「固定源不附参考答案」为来源说明，第 4/8/12 题相关文字仅描述源文本转录异常，未给出正确选项或答案值。",
+              "note": "仅陈述来源核对与转录情况，没有呈现选项答案或解答。",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "中文与数学字形完整；Q1 的 ⩾、Q4 选项的 ∥ 正常显示；无缺字、无重叠。",
+              "note": "题干、区间端点及关系符号可辨，无缺字。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「一、选择题」与题号 1–4 连续；选项 (A)–(D) 编号齐全。",
+              "note": "选择题节头与第 1–4 题编号连续，选项标号完整。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q2 四选项同基线：分式后 cm³ 与 (A)/(B) 的 cm³ 同为 y 455.8–467.8pt，分式上下探出属显示分式正常；Q3/Q4 的 (D) 折行属模板选项断行。",
+              "note": "各题选项行可辨；第 3、4 题 D 项折行仍能明确归属。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q2 三视图「正视图/侧视图/俯视图」标签齐全；尺寸「2」共 4 处（正视图 2+2、俯视图宽 2 与高 2），位置与源 PDF 一致。",
+              "note": "第 2 题正视图、侧视图、俯视图标签与尺寸标注清楚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全册一致，页码「第 2 页」正确。",
+              "note": "本页未重复页眉；第 2 页页脚页码正确，符合页间排版。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈594pt，底部约 206pt 空白；Q5 题图块整体移至 p3，属 Needspace 留白，接受。",
+              "note": "题目块之间留白均匀，底部留白明显但没有孤行或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5–10.7pt、节头 15.6pt，与全册一致。",
+              "note": "题干、选项与图中标注字号协调，细部数学符号仍清楚。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与选项无答案值、无正确项标记。",
+              "note": "题面与选项没有答案值或正确项标记。",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q5 坐标标签 −π/O/π/x/y、Q7 的 ∠PAB 与 α、Q8 的 |sin b|、b²、a²+2a 均正常；无缺字。",
+              "note": "函数式、坐标轴、π、角符号与图中标记均完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 5–8 连续；Q5 图象标号 (A)–(D) 与文字说明一一对应。",
+              "note": "第 5–8 题编号连续；第 5 题图选项标号与四幅图一一对应。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q5 图象说明行四栏对齐；Q6/Q7 选项同行；Q8 (C) 跨行（「若 t 确定，」/「则 sin b/2 唯一确定」）属模板选项断行，接受。",
+              "note": "第 5 题图下位置说明及第 6–8 题选项行清楚；第 8 题选项折行后仍可辨。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q5 四图 2×2：(A) 左上、(B) 右上、(C) 左下、(D) 右下，与「左上/右上/左下/右下」说明一致，形状与源 (A)–(D) 逐一对应；Q7 图 A/α/P/B 标签与源一致。",
+              "note": "第 5 题四图位置及第 7 题 A、B、P、α 标记均清楚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全册一致，页码「第 3 页」正确。",
+              "note": "页眉与第 3 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈690pt，底部约 110pt 空白；Q8 完整留在本页，无孤行。",
+              "note": "页面内容未触及页脚；题图与后续题目间距充足，无内容被分页截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5–10.7pt、节头 15.6pt，与全册一致。",
+              "note": "题干、图中文字和选项大小一致，标记清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与图注无答案；Q5 选项说明仅为位置指引，不含正确项判断。",
+              "note": "没有出现正确选项提示或答案值。",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "分段函数大括号、Q13 粗斜体 e₁/e₂/b、Q15 的 b/c 分式均正常；无缺字。",
+              "note": "对数、分段函数、向量及分式符号完整清楚。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、填空题」与题号 9–15 连续，作答横线齐全。",
+              "note": "“二、填空题”节头与第 9–15 题编号连续，填空线齐全。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为填空题，无选项行。",
+              "note": "本页为填空题，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
+              "note": "本页无题图，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全册一致，页码「第 4 页」正确。",
+              "note": "页眉和第 4 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈387pt，底部约 414pt 空白；由 \\gkpart 的 \\Needspace{0.6\\textheight} 触发整节移至 p5，属设计留白，接受（留白量请复核版式预期）。",
+              "note": "题目集中在上半页，下方留白较多；本页题目完整，无孤行或溢出。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5–10.7pt，与全册一致。",
+              "note": "正文及显示公式字号协调，分段函数与向量符号可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "9–15 作答横线均空白，未印答案值；Q12 仅印分段函数题设。",
+              "note": "各填空处均为空白，没有预印答案。",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "数学字形完整；Q16 分式、Q17 关系符断行、Q18 下标标签均无缺字或重叠。",
+              "note": "三角、数列和立体几何符号完整，未见缺字或公式重叠。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」与 16–18 题连续，小问 (1)(2) 编号齐全。",
+              "note": "“三、解答题”节头与第 16–18 题编号、小问标记连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页无选项行。",
+              "note": "本页为解答题，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q18 三棱柱 A₁/C₁/D/B₁/C/A/B 标签与虚线 A₁C、CC₁、CB 均与源 PDF 一致。",
+              "note": "第 18 题三棱柱图的顶点标记与虚线均清晰，无明显遮挡。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全册一致，页码「第 5 页」正确。",
+              "note": "页眉与第 5 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈503pt，底部约 297pt 空白；Q19 题图块移至 p6，属 Needspace 留白，接受。",
+              "note": "正文和题图完整收在本页，底部留白充足，无截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5–10.7pt、节头 15.6pt，与全册一致。",
+              "note": "正文、上下标与题图标签清晰，未见局部字号异常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "仅印题设与小问，未印解答或答案值。",
+              "note": "仅包含题设与所求内容，没有答案或推导泄漏。",
               "result": "pass"
             }
           ],
@@ -245,42 +245,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q19 图 y/O/P/A/B/x 标签、Q20 的 a²/4 分式与 R 粗正体均正常；无缺字。",
+              "note": "抛物线、圆、坐标轴及函数中的数学符号均清晰完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q19–20 题号连续，小问 (1)(2) 齐全。",
+              "note": "第 19–20 题及各自小问编号齐全，题号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页无选项行。",
+              "note": "本页为解答题，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "Q19 抛物线与圆图：O/P/A/B 标签、切线 PA/PB 与源的相对位置一致。",
+              "note": "第 19 题图中 O、P、A、B、x、y 标签清楚，曲线和切线可辨。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全册一致，页码「第 6 页」正确。",
+              "note": "页眉与第 6 页页脚完整，末页页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈382pt，其后为卷末留白（约 419pt），正常。",
+              "note": "题干和图形完整，末页留白自然，无裁切或孤行。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5–10.7pt，与全册一致。",
+              "note": "正文和图中文字清晰，公式比例正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "仅印题设，未印答案值或解答。",
+              "note": "题面只列条件和问题，没有呈现答案或解答。",
               "result": "pass"
             }
           ],
@@ -288,7 +288,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "0f08e48843c8543c48d1eba6c9ae2b4cbb139d3803184c6f0d731fc78dc1be50",
+      "pdf_sha256": "a2d911809e78fe690e3c856aada0588592aee220bfa46b09377358cc90d8fe9f",
       "result": "pass"
     },
     {
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "p1 文本层 0 个 U+FFFD；构建日志 0 条 Missing character；150dpi 目视无豆腐块、缺字或错误回退字体；∥、⩾、⩽、a/b、b/2、x²、x+6/x−6 及 e1,e2,b、N*、R 均正常渲染。",
+              "note": "来源说明与排版约定：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页眉「2015 年·浙江卷·文科·数学／解析版」、标题「2015 年·浙江卷·文科／数学·解析版」、节头「数学」齐全且层级正确；正文引用的第 2/4/5/8/12/13 题编号与所指内容对应，无错号。",
+              "note": "来源说明与排版约定：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "p1 为来源说明页，无选项行、无独立公式行；仅行内出现分式与分段函数引用，已并入 glyph 项核对。",
-              "result": "not_applicable"
+              "note": "来源说明与排版约定：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p1 无插图、坐标轴或图标签，仅在文字中提及第 5 题图象选项的分栏位置，无图可检。",
-              "result": "not_applicable"
+              "note": "来源说明与排版约定页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左书名、右版次齐全且版次正确；页脚「——第 1 页——」完整居中，无重复页码或错页。",
+              "note": "页眉卷名/版本名与页脚“第1页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "来源说明整块收在带框文本框内，框底线至页脚留白充分，无溢出、裁切或重复；p1 单页承接全部说明，分页正常。版式源（解析版.tex、preamble、macros）本轮未改，questions.tex 仅第①条单行文字替换，结构未变。",
+              "note": "来源说明与排版约定内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "标题两行、节头「数学」与框内正文三级字号层次与既有版式一致，无局部缩字号、无挤压行距。",
+              "note": "来源说明与排版约定：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案：/故选/应选/答案为/【答案】等模式均 0 命中；「固定源不附参考答案」为来源说明，第 4/8/12 题相关文字仅描述源文本转录异常，未给出正确选项或答案值。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q1–Q4；∩、⩾、⊂、∥ 等符号均有墨迹（Q4 平行号可见，pdftotext 文本层亦已含 ∥），cm³ 上标正常。",
+              "note": "选择题1–4及三视图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「一、选择题」与题号 1–4 连续，题号后全角点号一致。",
+              "note": "选择题1–4及三视图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1/Q2 选项单行对齐；Q3 (D)、Q4 (D) 因行宽断行、续行齐左，属选项断行模板行为；Q2 分数选项垂直居中。",
+              "note": "选择题1–4及三视图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q2 三视图：正视图/侧视图/俯视图标签居中，尺寸「2」仅 4 处（正视图 2+2、俯视图 2+2），无标签重叠，与源图一致。",
+              "note": "三视图尺寸标注完整；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 2 页」。",
+              "note": "页眉卷名/版本名与页脚“第2页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "底部约 1/4 留白，Q5 整组图象移至下页（Needspace 行为）。",
+              "note": "选择题1–4及三视图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与选项字号统一，标题层级一致。",
+              "note": "选择题1–4及三视图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区（Q1–Q4）未出现答案或解析。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q5–Q8；四图象坐标轴与 π、O 标注清晰，Q8 行内分式 b/2 正常，无缺字。",
+              "note": "选择题5–8及函数图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 5–8 连续，无跳号。",
+              "note": "选择题5–8及函数图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q5 四图象以「见题图左上」等文字选项行呈现，与图下 (A)–(D) 标签对应；Q7 图后选项行齐左；Q8 选项断行续行齐左，均属已接受类。",
+              "note": "选择题5–8及函数图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q5 四图 (A)–(D) 分置各图左下，与源图四图象形态一致（(D) 曲线两侧渐近行为正确）；Q7 图中 A、B、P、α 标签清晰，P 位于平面内。",
+              "note": "四幅函数图的坐标与选项标号齐全；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 3 页」。",
+              "note": "页眉卷名/版本名与页脚“第3页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "底部约 1/5 留白，Q8 后正常换页。",
+              "note": "选择题5–8及函数图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、选项与图注字号统一。",
+              "note": "选择题5–8及函数图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区未出现答案；四图象本身为选项内容，非答案泄漏。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q9–Q15；根号、对数下标、分段函数大括号、⩽、∈、N* 均正常，填空横线约 2.2em。",
+              "note": "填空题9–15：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、填空题」与题号 9–15 连续。",
+              "note": "填空题9–15：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选择题选项；填空横线与行内公式对齐，Q12 分段函数两支及条件列对齐正常。",
+              "note": "填空题9–15：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页为填空题，无插图。",
-              "result": "not_applicable"
+              "note": "填空题9–15页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 4 页」。",
+              "note": "页眉卷名/版本名与页脚“第4页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "填空题末页，底部约半页留白，「三、解答题」另起页，属分节换页。",
+              "note": "填空题9–15内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与公式字号统一，无异常放大/缩小。",
+              "note": "填空题9–15：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区（Q9–Q15）未出现答案。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q16–Q18；tan(π/4+A) 括号、分式、⊥/∥、下标 A₁B₁C₁、N* 均正常。",
+              "note": "解答题16–18及棱柱图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」与题号 16–18 连续，小问 (1)(2) 标号一致。",
+              "note": "解答题16–18及棱柱图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "无选择题选项；Q17 行内公式在「+」后断行、续行合法；小问标号齐左。",
+              "note": "解答题16–18及棱柱图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 三棱柱图 A、B、C、A₁、B₁、C₁、D 标签清晰，D 标在 B₁C₁ 中点处，隐藏棱虚线正确，与源图一致。",
+              "note": "棱柱顶点及虚实线辨识清楚；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 5 页」。",
+              "note": "页眉卷名/版本名与页脚“第5页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "底部约 1/3 留白，Q19 整图移至下页（Needspace 行为）。",
+              "note": "解答题16–18及棱柱图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、公式与图注字号统一。",
+              "note": "解答题16–18及棱柱图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区（Q16–Q18）未出现答案或解析。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q19–Q20；抛物线/圆方程、分式 a²/4、⩽、∈ R 均正常。",
+              "note": "解答题19–20题面及抛物线图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 19–20 连续，小问 (1)(2) 正常。",
+              "note": "解答题19–20题面及抛物线图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "无选择题选项；小问标号与行内公式对齐正常。",
+              "note": "解答题19–20题面及抛物线图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q19 图中 y、x、O、P、A、B 标签清晰，切点 A 在抛物线、B 在圆上，与源图一致。",
+              "note": "抛物线、圆、切点与坐标标记完整；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 6 页」。",
+              "note": "页眉卷名/版本名与页脚“第6页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "解答题末页，底部约半页留白，答案部分另起页。",
+              "note": "解答题19–20题面及抛物线图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与公式字号统一。",
+              "note": "解答题19–20题面及抛物线图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区（Q19–Q20）未出现答案或解析。",
+              "note": "本页为题面区；未出现答案框或解析内容。",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "答案部分；∩、∪、∞、区间、⩾、∈ 等符号正常，无缺字。",
+              "note": "解析引言与第1题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「参考答案与详细解析」居中；「第 1 题（集合运算）」编号正确。",
+              "note": "解析引言与第1题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解析内显示公式居中；「故 P=…」「P∩Q=…」独立成行对齐正常。",
+              "note": "解析引言与第1题：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 1 题解析无插图。",
-              "result": "not_applicable"
+              "note": "解析引言与第1题页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚正常，页码「第 7 页」。",
+              "note": "页眉卷名/版本名与页脚“第7页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页仅第 1 题解析，底部留白，后续按题分页（Needspace）。",
+              "note": "解析引言与第1题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "解析正文与「答案：A」框内字号一致。",
+              "note": "解析引言与第1题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版允许答案与解析；「答案：A」框位于解析末尾，无题面误印。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "宋体/公式字体全部内嵌，日志 0 条 Missing character；cm³ 上标、⩽、∈ 等符号渲染正常，无缺字或方框。",
+              "note": "第2题三视图与体积推导：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 2 题（三视图与体积）」与规范源解析正文第 2 题标题一致；「题目见第 2 页」与试题版第 2 页对应。",
+              "note": "第2题三视图与体积推导：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "四个选项单行排布，(C)(D) 的 32/3、40/3 分式基线与 cm³ 对齐，间距均匀，无挤压。",
+              "note": "第2题三视图与体积推导：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "正视图/侧视图/俯视图标签居中于各图下方；三处尺寸「2」的标注与箭头位置正确，无重叠或裁切。",
+              "note": "三视图尺寸及图名完整；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」、右「解析版」，页脚「——第 8 页——」居中，与前页位置一致。",
+              "note": "页眉卷名/版本名与页脚“第8页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页底至页脚约 123pt 留白，Q3 整体移至下页；属题级 keep 的接受类 Needspace 留白，无孤行或孤框。",
+              "note": "第2题三视图与体积推导内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、注释「题目见…」10.7pt、上下标 8/6pt，字号层级一致；标题以同字号黑体加粗区分。",
+              "note": "第2题三视图与体积推导：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案 C 仅出现在解析后的「答案」框内；题目与选项区无答案标记，符合解析版预期。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⊂、⊥、∥、α/β 等符号及行内公式完整，无缺字或替换字符。",
+              "note": "第3–4题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 3、4 题编号连续，标题与规范源一致；两处「题目见第 2 页」均与试题版第 2 页对应。",
+              "note": "第3–4题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 3 题 (D) 与第 4 题 (D) 在行末折行，续行「必要条件」「若 α∥β，则 l∥m」齐左；属既定选项断行模板行为，未越右缘。",
+              "note": "第3–4题：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图，无图注、图号或坐标标签可查。",
-              "result": "not_applicable"
+              "note": "第3–4题页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右分置、页脚「——第 9 页——」居中，位置与第 8 页一致。",
+              "note": "页眉卷名/版本名与页脚“第9页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页底留白约 165pt，Q5 整体移至下页；属题级 keep 的接受类留白。",
+              "note": "第3–4题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、注释 10.7pt；第 3、4 题解析字号与相邻页一致。",
+              "note": "第3–4题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "两题答案 D、A 仅在各题解析后的答案框内，题目与选项区未泄露。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "函数式、分式、π/⩽/≠ 等符号完整；四幅图象的曲线与坐标标签无缺字或方框。",
+              "note": "第5题函数图与第6题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 5 题（函数图象）」与规范源一致；「题目见第 3 页」与试题版第 3 页对应。",
+              "note": "第5题函数图与第6题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项行「(A)（见题图左上）…(D)（见题图右下）」四列等距单行；分图标签 A/B 同列、C/D 同列，与选项所述图位一致。",
+              "note": "第5题函数图与第6题：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "四幅分图均带 (A)–(D) 标签，A/B 在上排、C/D 在下排，列内标签 x 坐标一致；坐标轴 y、x、O、−π、π 与 ±π 虚线完整，无标签压线或遮挡。",
+              "note": "四幅函数图与选项对应标记齐全；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右分置、页脚「——第 10 页——」居中，位置与前页一致。",
+              "note": "页眉卷名/版本名与页脚“第10页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页底留白约 173pt（Q6 移至下页）；行末全角「，」墨迹右缘 533.76pt，相对 532.91pt 行宽为 0.85pt 悬挂，在 ≤1pt 容差内，非溢出。",
+              "note": "第5题函数图与第6题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、图象标签 10.7pt；公式与正文基线一致。",
+              "note": "第5题函数图与第6题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案 D 仅在解析末尾与答案框出现；图注与选项区未提前标注正确项。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠、°、α 及排序不等式中的乘积符号完整，叙述文字无缺字。",
+              "note": "第6–7题及空间图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 6、7 题编号连续且与规范源标题一致；两处「题目见第 3 页」均正确。",
+              "note": "第6–7题及空间图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 6 题四个乘积式与第 7 题四个选项均单行等距排布，基线与右缘正常。",
+              "note": "第6–7题及空间图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 7 题图注 A、α、P、B 齐全；A 在平面上方，P、B 位于 α 平面内，α 标注在平面内，无重叠或裁切。",
+              "note": "空间示意图点名和虚实线清楚；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右分置、页脚「——第 11 页——」居中，位置与前页一致。",
+              "note": "页眉卷名/版本名与页脚“第11页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q7 解析末句「故选 (C)。」落在页底（距页脚约 49pt），「验证＋答案：C」整体转至次页顶部形成孤儿尾块；分页位于段落边界，属接受类。",
+              "note": "第6–7题及空间图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、图注 10.7pt，与前后页一致。",
+              "note": "第6–7题及空间图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q6、Q7 答案 B、C 仅在解析后的答案框；题干与选项无答案痕迹。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "【内容修复】Q8 验证段逐字核对：「取 t=1/2，由 |a+1|=1/2 得 a=−1/2 或 a=−3/2，此时 a²=1/4 或 9/4、a²+a=−1/4 或 3/4，均不唯一；而 a²+2a=t²−1=−3/4 唯一确定，故选 (B)」；符号、数值与规范源 2015_数学真题_浙江文_解析正文.md 第 131 行完全一致。复核：a=−1/2→a²=1/4、a²+a=−1/4；a=−3/2→a²=9/4、a²+a=3/4；t²−1=−3/4。修正已落实。；STSong/LMRoman/CM 数学字体全部内嵌（pdffonts 全 emb=yes），构建日志 0 条 Missing character；本页无 U+FFFD/□，a²、√、±、|a+1|、分式均正常。",
+              "note": "第8题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 8 题（绝对值与三角）」编号与规范源一致；「题目见第 3 页」与该版试题区 Q8 所在页对应（p13 紧接第 9 题，序号连续）。",
+              "note": "第8题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "(A)(B)(C) 同行排布，续行「则 sin b/2 唯一确定」齐左、(D) 紧随同段；分式 b/2 未压上下行，选项基线一致。",
+              "note": "第8题：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图，无图注、图号或坐标标签可查。",
-              "result": "not_applicable"
+              "note": "第8题页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」、右「解析版」，页脚「——第 12 页——」居中；位置与相邻页一致。",
+              "note": "页眉卷名/版本名与页脚“第12页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q8 在页内结束，正文末行墨迹至 y≈497pt，页底留白约 283pt；第 9 题整体起于 p13，属题级 keep 的接受类留白，无孤行/孤框；修复段行数与原文段相同，未改变分页。",
+              "note": "第8题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt（字形高 10.7）、注释 10.7pt、上下标 8/6pt；本页字形高主峰 10.7/12.0 与相邻页一致，无越级字号。",
+              "note": "第8题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案 B 仅见于解析结论「故选 (B)」与末尾「答案：B」框；题目重述区未标注答案，符合解析版预期。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "log 下标、√、分式与不等号完整；填空题下划线为连续 2.2em 横线，无断裂或错位。",
+              "note": "第9–10题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 9、10 题编号连续，标题与规范源一致；两处「题目见第 4 页」与试题版第 4 页对应。",
+              "note": "第9–10题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 9、10 题为填空题，无 (A)–(D) 选项可查。",
-              "result": "not_applicable"
+              "note": "第9–10题：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图，无图注或坐标标签可查。",
-              "result": "not_applicable"
+              "note": "第9–10题页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右分置、页脚「——第 13 页——」居中，位置与前页一致。",
+              "note": "页眉卷名/版本名与页脚“第13页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页底留白约 94pt；两题答案框完整落在本页，无孤框或断框。",
+              "note": "第9–10题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、答案框 10.7pt；对数下标与分式字号协调。",
+              "note": "第9–10题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案「−1/2；3√3」「a₁＝2/3，d＝−1」仅出现在各自解析后的答案框，题目空白处未填值。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "sin²x、√2、分段函数大括号、⩽/⟹ 等符号完整；无缺字或方框。",
+              "note": "第10–12题：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 11、12 题编号连续且与规范源标题一致；两处「题目见第 4 页」均正确。",
+              "note": "第10–12题：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 11、12 题为填空题/解答题，无选项可查。",
-              "result": "not_applicable"
+              "note": "第10–12题：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图，仅公式与分段函数式。",
-              "result": "not_applicable"
+              "note": "第10–12题页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右分置、页脚「——第 14 页——」居中，位置与前页一致。",
+              "note": "页眉卷名/版本名与页脚“第14页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q12 解析在页末公式「…≥2√6−6，」处于段落边界转下页，页底留白约 111pt；无孤行或断式。",
+              "note": "第10–12题内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、答案框 10.7pt；分段函数两行与条件列字号一致。",
+              "note": "第10–12题：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q11 答案「π；(3−√2)/2」在解析后答案框；Q12 题干未出现答案，题目区无泄答。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "全页无缺字/豆腐块；√、⩽、·、⟹ 等符号正常；e1、e2、b 粗斜体一致",
+              "note": "第13题平面向量：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首为第 12 题解析末段（无标题，属跨页续排）；第 13 题（平面向量）编号与标题正确",
+              "note": "第13题平面向量：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为第 12–13 题填空题，无选择题选项可查",
-              "result": "not_applicable"
+              "note": "第13题平面向量：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
-              "result": "not_applicable"
+              "note": "第13题平面向量页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉“2015 年·浙江卷·文科·数学 / 解析版”与页脚“——第 15 页——”齐全，位置与字号一致",
+              "note": "页眉卷名/版本名与页脚“第15页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第 12 题解析跨页续排，页首 2 行后即接答案框；页末留白约 1/5 页，属题块整体换页",
+              "note": "第13题平面向量内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 18 单位、眉脚 16、上下标 12，全页无字号跳变",
+              "note": "第13题平面向量：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 13 题题面仅有填空横线，无答案；答案只出现在绿色答案框",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "x²+y²⩽1、绝对值、柯西不等式、√ 等符号渲染正常，无缺字",
+              "note": "第14题绝对值最值：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 14 题（绝对值与最值）编号与标题正确",
+              "note": "第14题绝对值最值：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为第 14 题填空题，无选择题选项",
-              "result": "not_applicable"
+              "note": "第14题绝对值最值：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
-              "result": "not_applicable"
+              "note": "第14题绝对值最值页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚齐全，页码“第 16 页”正确",
+              "note": "页眉卷名/版本名与页脚“第16页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案框后页末留白约 2/5 页，属第 15 题题块整体移至下页的 Needspace 留白；无孤儿标题",
+              "note": "第14题绝对值最值内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文字号统一，验证段与答案框无字号异常",
+              "note": "第14题绝对值最值：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面填空处为横线，未印答案；答案 15 仅见于绿色框",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1039,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "分式、根式、⟹、⩾ 等符号正常；无缺字或错位",
+              "note": "第15题椭圆：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 15 题（椭圆的离心率）编号与标题正确",
+              "note": "第15题椭圆：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为第 15 题填空题，无选择题选项",
-              "result": "not_applicable"
+              "note": "第15题椭圆：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
-              "result": "not_applicable"
+              "note": "第15题椭圆页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚齐全，页码“第 17 页”正确",
+              "note": "页眉卷名/版本名与页脚“第17页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "验证行 bbox 右缘 541.12pt 系伪影；600dpi 墨迹未越过 532.91pt 右缘；页末留白约 1/4 页",
+              "note": "第15题椭圆内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、分式上下标字号一致，无局部放大缩小",
+              "note": "第15题椭圆：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面“离心率是____”未印答案；答案 √2/2 仅在绿色框",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "三角公式、分式、√、△ 等符号渲染正常，无缺字",
+              "note": "第16题解三角形：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 16 题（解三角形）编号与标题正确",
+              "note": "第16题解三角形：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项",
-              "result": "not_applicable"
+              "note": "第16题解三角形：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
-              "result": "not_applicable"
+              "note": "第16题解三角形页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚齐全，页码“第 18 页”正确",
+              "note": "页眉卷名/版本名与页脚“第18页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末两个答案框完整、无孤框；下方留白约 1/8 页",
+              "note": "第16题解三角形内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与两个答案框字号统一",
+              "note": "第16题解三角形：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面未印 (1)(2) 答案；2/5 与 9 仅见于绿色答案框",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "求和号、上下标、N*、∈ 等符号正常，无缺字",
+              "note": "第17题数列（首段）：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 17 题（数列）编号与标题正确",
+              "note": "第17题数列（首段）：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项",
-              "result": "not_applicable"
+              "note": "第17题数列（首段）：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
-              "result": "not_applicable"
+              "note": "第17题数列（首段）页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚齐全，页码“第 19 页”正确",
+              "note": "页眉卷名/版本名与页脚“第19页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "推导在“2Tn=…”后自然跨页，页末留白约 1/5 页；下一页页首承接“两式相减”，无孤儿标题",
+              "note": "第17题数列（首段）内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与求和号上下限字号统一",
+              "note": "第17题数列（首段）：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面无答案；本页解析未结束，答案框在下一页，属正常",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1177,42 +1177,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "坐标、叉积、平行号、根式渲染正常，无缺字",
+              "note": "第17题续解与第18题题面图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 18 题（立体几何）编号与标题正确，位于第 17 题答案框之后",
+              "note": "第17题续解与第18题题面图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项",
-              "result": "not_applicable"
+              "note": "第17题续解与第18题题面图：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "三棱柱图 A、B、C、A1、B1、C1、D 标签齐全清晰；虚线 CC1、A1C（及 BC）与源图一致，无遮挡",
+              "note": "棱柱图顶点、截面与虚实线齐全；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚齐全，页码“第 20 页”正确",
+              "note": "页眉卷名/版本名与页脚“第20页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第 17 题答案框后紧接第 18 题题块；图后“解析”齐左；页末无孤行",
+              "note": "第17题续解与第18题题面图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、图形标签与答案框字号协调，无跳变",
+              "note": "第17题续解与第18题题面图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 18 题题面与图内无答案；第 17 题答案框未侵入第 18 题题面",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1223,42 +1223,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "【内容修复】Q18 叉积与验证段逐字核对：n=BC×BA1=(0,4√7,0)∥(0,1,0)；n2=BC×BB1=(0,4√7,4)；验证段「|n2|=√(112+16)=8√2，点积 A1B·n2=(−√14)·4=−4√14，取绝对值后结果 √7/8<1」。独立复算：BC×BA1=(0,4√7,0)、BC×BB1=(0,4√7,4)、|n2|=√128=8√2、点积=−4√14、sinθ=√7/8，全部吻合。修正已落实。；√14、√7、∥、⊥、×、−√14 等符号完整；字体全内嵌，日志 0 条 Missing character，无 U+FFFD/□。",
+              "note": "第18题立体几何续解：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 18 题续页（题头与解析 (1) 开头在 p20），(2) 小问编号接续正确；p22 起为第 19 题，序号衔接。",
+              "note": "第18题立体几何续解：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页，无选项行，故不适用。",
-              "result": "not_applicable"
+              "note": "第18题立体几何续解：题文、选项与行间公式排列清楚，无挤压或错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图，故不适用。",
-              "result": "not_applicable"
+              "note": "第18题立体几何续解页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左题名、右「解析版」，页脚「——第 21 页——」居中；位置与相邻页一致。",
+              "note": "页眉卷名/版本名与页脚“第21页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文与答案框排至 y≈776pt，页底余量正常，无溢出；两个答案框完整、未裁切、未跨页。",
+              "note": "第18题立体几何续解内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt（字形高 10.7），分式与根式显示数学的字形盒 15.6 属排版正常；上下标 7.1，无异常缩放。",
+              "note": "第18题立体几何续解：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案（1）（2）仅出现在末尾两个答案框；解析正文内为推导结论，题目区未泄露。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1269,42 +1269,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "中英文、数学符号（⟹、√、△、上下标）均正常渲染，无缺字或豆腐块；pdffonts 显示字体全部嵌入，LaTeX 日志无 Missing character。",
+              "note": "第19题抛物线与圆题面及图：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "『第 19 题（抛物线与圆）』题号连续、标题正确；『解析』标题在题图后齐左（x=62.36pt），属『题图后段落齐左』模板行为。",
+              "note": "第19题抛物线与圆题面及图：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项；显示公式均居中，行内分式与关系符未断行或越界。",
+              "note": "第19题抛物线与圆题面及图：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "题图含 y、x、O、P、A、B 全部标签，位置清晰无重叠；切线与圆/抛物线相切关系与题干一致。",
+              "note": "抛物线、圆、切点及坐标标记齐全；未见缺图、裁边、标签遮叠或游离标记。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉『2015 年·浙江卷·文科·数学』（左）/『解析版』（右）与横线完整；页脚『——第 22 页——』居中。",
+              "note": "页眉卷名/版本名与页脚“第22页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末止于 k(2t+k(t²−1))=0.，底部约 90pt 留白为下一个不可拆显示公式所需（Needspace 留白，接受类）。",
+              "note": "第19题抛物线与圆题面及图内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 STSong 与标题 STHeiti 层级稳定，数学字体 LM/CMMI 一致；『题目见第 6 页』为灰色小字+蓝色链接，属模板样式。",
+              "note": "第19题抛物线与圆题面及图：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析版按设计含答案；本页题目区未提前出现答案值。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1315,42 +1315,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "向量箭头、×、t³/2 等符号渲染正常；字体嵌入完整，无缺字。",
+              "note": "第19题续解与第20题题面：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "『第 20 题（二次函数）』题号与标题正确；『解析』缩进与无题图题一致。",
+              "note": "第19题续解与第20题题面：题号与小问层级可辨，并与前后页顺接。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项；显示公式居中，第19题两个答案框内公式对齐正常。",
+              "note": "第19题续解与第20题题面：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图；第20题为纯代数题，无图可查。",
-              "result": "not_applicable"
+              "note": "第19题续解与第20题题面页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉、横线、页脚『——第 23 页——』均完整且位置一致。",
+              "note": "页眉卷名/版本名与页脚“第23页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第19题两答案框完整（未拆分）；页末 g(a)=1. 距页脚约 23pt，无孤行或孤框。",
+              "note": "第19题续解与第20题题面内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、标题、答案标签字号一致；无异常字号或字体回退。",
+              "note": "第19题续解与第20题题面：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第19题答案框位于其解析之后；第20题题目区无答案值泄露。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1361,42 +1361,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "分段函数大括号、⩽/⩾、≠、→、下标等渲染正常；无缺字。",
+              "note": "第20题分段函数推导：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第20题解析续页，无新题号或标题。",
-              "result": "not_applicable"
+              "note": "第20题分段函数推导：题号与小问层级可辨，并与前后页顺接。",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项；g(a) 分段式三行条件左对齐、表达式列对齐正常，显示公式居中。",
+              "note": "第20题分段函数推导：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（纯代数解析续页）。",
-              "result": "not_applicable"
+              "note": "第20题分段函数推导页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉、横线、页脚『——第 24 页——』完整一致。",
+              "note": "页眉卷名/版本名与页脚“第24页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末 b∈[−3,0). 后自然续页，底部约 70pt 留白；无孤行或孤框。",
+              "note": "第20题分段函数推导内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、数学公式、下标字号层级一致；无字体回退。",
+              "note": "第20题分段函数推导：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页推导结果属解析正文，解析版设计允许；题目区（第23页）未受影响。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1407,42 +1407,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "并集、√、区间括号、分段式大括号与 √5 上划线均正常；无缺字。",
+              "note": "第20题结论与答案框：中文、数字及数学符号边缘清楚，无缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "末页无新题号或标题；为第20题解析与答案收尾。",
-              "result": "not_applicable"
+              "note": "第20题结论与答案框：题号与小问层级可辨，并与前后页顺接。",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项；并集区间显示公式居中，答案框内 g(a) 分段式对齐正常。",
+              "note": "第20题结论与答案框：题文、选项与行间公式排列清楚，无挤压或错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "第20题结论与答案框页无图；未见缺图、裁边、标签遮叠或游离标记。",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉、横线、页脚『——第 25 页——』完整一致。",
+              "note": "页眉卷名/版本名与页脚“第25页”均完整，位置正常。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页内容止于约 1/3 页高处，其后为文档自然结束留白；答案框完整、未被拆分（孤儿尾框，接受类）。",
+              "note": "第20题结论与答案框内容未被裁切；与相邻页的续接清楚，留白未妨碍阅读。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、答案标签、数学公式字号一致；无异常缩放。",
+              "note": "第20题结论与答案框：正文、公式及层级标题大小协调，字迹清晰可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最终答案框位于解析之后，符合解析版设计；无提前泄露。",
+              "note": "解析版答案框与推导均处于对应题目下，未见越界渗入。",
               "result": "pass"
             }
           ],
@@ -1450,7 +1450,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "ed5753d4e66887d291a8f595feb181a9152a3f8998cb57dc9e6551a46dacb22c",
+      "pdf_sha256": "3037fd7fcee30228fabf5b554104a6211806d6ea8414822bf8c856e035720b74",
       "result": "pass"
     },
     {
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "p1 文本层 0 个 U+FFFD；构建日志 0 条 Missing character；150dpi 目视无豆腐块、缺字或错误回退字体；∥、⩾、⩽、a/b、b/2、x²、x+6/x−6 及 e1,e2,b、N*、R 均正常渲染。",
+              "note": "中文、数学符号与向量字形完整；说明框中文字清晰，无缺字或叠印。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页眉「2015 年·浙江卷·文科·数学／简答版」、标题「2015 年·浙江卷·文科／数学·简答版」、节头「数学」齐全且层级正确；正文引用的第 2/4/5/8/12/13 题编号与所指内容对应，无错号。",
+              "note": "卷名、版次与“数学”节头层级清楚；本页为来源说明，没有题目编号序列需判定。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "p1 为来源说明页，无选项行、无独立公式行；仅行内出现分式与分段函数引用，已并入 glyph 项核对。",
+              "note": "来源说明页没有选项行或独立公式行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "p1 无插图、坐标轴或图标签，仅在文字中提及第 5 题图象选项的分栏位置，无图可检。",
+              "note": "本页没有题图或坐标标签，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左书名、右版次齐全且版次正确；页脚「——第 1 页——」完整居中，无重复页码或错页。",
+              "note": "页眉左侧卷名、右侧“简答版”及第 1 页页脚均完整。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "来源说明整块收在带框文本框内，框底线至页脚留白充分，无溢出、裁切或重复；p1 单页承接全部说明，分页正常。版式源（简答版.tex、preamble、macros）本轮未改，questions.tex 仅第①条单行文字替换，结构未变。",
+              "note": "来源说明框完整落在页面内，未压到页脚；标题、框体和页脚间留白清楚。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "标题两行、节头「数学」与框内正文三级字号层次与既有版式一致，无局部缩字号、无挤压行距。",
+              "note": "标题、节头和说明正文层级清楚，框中文字可读，无异常缩小。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案：/故选/应选/答案为/【答案】等模式均 0 命中；「固定源不附参考答案」为来源说明，第 4/8/12 题相关文字仅描述源文本转录异常，未给出正确选项或答案值。",
+              "note": "本页只陈述来源和转录信息，没有提供答案或解答。",
               "result": "pass"
             }
           ],
@@ -1511,42 +1511,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "题干与选项符号（⩾、∩、⊂、⊥、∥）渲染完整，无缺字。",
+              "note": "题干、区间端点与关系符号完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「试题」「一、选择题」层级正确；题号 1–4 连续。",
+              "note": "“试题”“一、选择题”层级清楚，第 1–4 题编号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项整体左对齐；第 3、4 题 (D) 项末字换行，属既定选项断行模板行为。",
+              "note": "选项标号和文本清楚；第 3、4 题 D 项换行后归属明确。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 2 题三视图含「正视图／侧视图／俯视图」标签，尺寸「2」共 4 处（正视图 2+2、俯视图宽高各 2），与源约定一致。",
+              "note": "第 2 题三视图及正视图、侧视图、俯视图标签清楚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 2 页——」齐全。",
+              "note": "页眉与第 2 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末约 40% 留白，为第 5 题带图 Needspace 前移所致，属接受范围。",
+              "note": "页面下部留白较多，为后续图题分页；当前题目完整且无孤行。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "题干与选项字号一致，数学式无明显缩放。",
+              "note": "题干、选项及图中尺寸字号协调，符号清楚。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案或解析内容。",
+              "note": "题目页没有答案或解析内容。",
               "result": "pass"
             }
           ],
@@ -1557,42 +1557,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第 5 题四图象坐标轴与第 7 题立体图符号渲染完整。",
+              "note": "函数式、图象坐标轴及立体图中的符号完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 5–8 连续（承前页），无重复或跳号。",
+              "note": "第 5–8 题编号连续，图象标号与题目文字顺序一致。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 5 题以「见题图左上／右上／左下／右下」对应图象选项；第 8 题 (C)(D) 跨行属模板断行行为。",
+              "note": "第 5 题图象位置说明清楚；第 8 题选项有折行但仍保持对应关系。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 5 题四图下方 (A)–(D) 标号齐全；第 7 题 α、A、B、P 标签齐全。",
+              "note": "第 5 题 (A)–(D) 标号和第 7 题 A、B、P、α 标记清楚。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 3 页——」齐全。",
+              "note": "页眉与第 3 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末余白约 15%，版面充实正常。",
+              "note": "图题和后续题目均完整落在本页，页末无裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文、选项、图注字号一致。",
+              "note": "正文、选项和图注字号协调，数学符号清楚。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案或解析内容。",
+              "note": "本页为题目内容，没有显示答案或解析。",
               "result": "pass"
             }
           ],
@@ -1603,42 +1603,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "填空答案横线与全部数学式（根式、分式、分段函数、粗体向量）渲染完整。",
+              "note": "填空题的根式、分式、分段函数和向量符号完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、填空题」层级正确；题号 9–15 连续。",
+              "note": "“二、填空题”节头及第 9–15 题编号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页全为填空题，无选项。",
+              "note": "本页没有选择题选项，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
+              "note": "本页无题图，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 4 页——」齐全。",
+              "note": "页眉与第 4 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末约 50% 留白，因「三、解答题」分节另起页，属分节留白接受范围。",
+              "note": "下半页留白较多；题目均完整，分节换页没有造成孤行或断题。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "题干与填空横线字号一致，分段函数显示式无异常缩放。",
+              "note": "题干、填空线和显示公式大小协调，分段函数可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案或解析内容。",
+              "note": "所有填空位置留空，未显示答案。",
               "result": "pass"
             }
           ],
@@ -1649,42 +1649,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "解答题题干、数列式与三棱柱图符号渲染完整。",
+              "note": "解答题题干、数列符号与三棱柱图字形完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」层级正确；题号 16–18 连续，小问 (1)(2) 编号正确。",
+              "note": "“三、解答题”节头及第 16–18 题、小问编号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项。",
+              "note": "本页为解答题，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "第 18 题三棱柱图标签 A、B、C、A₁、B₁、C₁、D 齐全。",
+              "note": "第 18 题三棱柱图各顶点及虚线清楚，无明显重叠。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 5 页——」齐全。",
+              "note": "页眉与第 5 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末约 35% 留白，第 18 题图后自然收页，接受。",
+              "note": "题目与图形完整收在本页，图后留白自然。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与图注字号一致。",
+              "note": "正文和图中文字大小协调，细小上下标可辨。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案或解析内容。",
+              "note": "本页只有试题，没有答案或解析。",
               "result": "pass"
             }
           ],
@@ -1695,42 +1695,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第 19 题抛物线／圆图与第 20 题函数式渲染完整。",
+              "note": "抛物线、圆图及函数公式符号完整清楚。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 19–20 连续，小问 (1)(2) 齐全；第 19 题「注」段完整。",
+              "note": "第 19–20 题及小问标号齐全；第 19 题注释完整。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项。",
+              "note": "本页为解答题，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "第 19 题图标签 O、P、A、B、x、y 齐全。",
+              "note": "第 19 题 O、P、A、B、x、y 标签齐全且可辨。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 6 页——」齐全。",
+              "note": "页眉与第 6 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末约 50% 留白，为试题部分收尾、答案速查另起页所致，接受。",
+              "note": "试题内容完整；末尾留白与后续答案速查另起页的结构相符。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与图注字号一致。",
+              "note": "公式、正文和图中文字大小协调，均清楚可读。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案或解析内容。",
+              "note": "本页只有题目，没有答案或解析内容。",
               "result": "pass"
             }
           ],
@@ -1741,42 +1741,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "速查表与填空答案符号（√、π、分式）渲染完整，无缺字。",
+              "note": "答案速查表格、根式和分式字形完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「答案速查」下选择题题号 1–8、填空题 9–15 连续，与正文一致。",
+              "note": "答案速查中的选择题 1–8、填空题 9–15 编号连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为答案速查，无选项。",
+              "note": "本页为答案速查，无选项行，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
+              "note": "本页无题图，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 7 页——」齐全。",
+              "note": "页眉与第 7 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "填空题列表后页末留白大于 50%，速查分节留白为既定版式。",
+              "note": "答案速查内容完整；末页留白充足，未出现表格或文字截断。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "表格与填空答案字号一致，分式无异常缩放。",
+              "note": "答案表格与填空答案字号清楚，分式显示正常。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "仅含最终答案值；选择 8 项、填空 7 项与答案要点逐项一致，无解析正文。",
+              "note": "本页标明“答案速查”，所列答案集中在速查区域；没有混入题目页或解析正文。",
               "result": "pass"
             }
           ],
@@ -1787,42 +1787,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "解答答案的分式、根式、向量箭头与分段函数大括号渲染完整。",
+              "note": "解答题答案中的分式、根式、向量箭头和分段函数符号完整。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「解答题」下题号 16–20 连续，逐小问 (1)(2) 齐全。",
+              "note": "解答题答案第 16–20 题编号及小问标记连续。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题答案，无选项。",
+              "note": "本页为解答题答案，无选择题选项，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
+              "note": "本页没有题图，不适用。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉与页脚「——第 8 页——」齐全。",
+              "note": "页眉与第 8 页页脚完整，页码正确。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "文档末页留白大于 60%，属正常收尾。",
+              "note": "答案完整收在末页，末页留白较多但无跨页截断或孤行。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "答案行字号一致，分段函数显示式无异常缩放。",
+              "note": "分段函数、答案行与正文大小协调，数学标记清晰。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案与答案要点逐项一致（含 20(1) 分段函数）；第 18(1) 仅一句建系提示，与答案要点原文一致，非解析正文。",
+              "note": "本页属于简答版的明确答案区；答案集中在对应题号下，未混入试题区或解析过程。",
               "result": "pass"
             }
           ],
@@ -1830,7 +1830,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "8d7675e98da92c376ac2edd6a541bfce06eb4e8343c1fed93b5872ccb12e1e6b",
+      "pdf_sha256": "e581b88b082e7b583b8c3a2be9df170ec98b2b547ea7054a03d83a859f270c15",
       "result": "pass"
     },
     {
@@ -1845,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "p1 文本层 0 个 U+FFFD；构建日志 0 条 Missing character；150dpi 目视无豆腐块、缺字或错误回退字体；∥、⩾、⩽、a/b、b/2、x²、x+6/x−6 及 e1,e2,b、N*、R 均正常渲染。文本层中分式 a/b 的分子分母因上下标定位被提取到不同行序，属 pdftotext 阅读序现象，目视位置正确。",
+              "note": "当前页 卷名、来源说明框 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页眉「2015 年·浙江卷·文科·数学／印刷版」、标题「2015 年·浙江卷·文科／数学·印刷版」、节头「数学」齐全且层级正确；正文引用的第 2/4/5/8/12/13 题编号与所指内容对应，无错号。",
+              "note": "卷名、来源说明框：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "p1 为来源说明页，无选项行、无独立公式行；仅行内出现分式与分段函数引用，已并入 glyph 项核对。",
-              "result": "not_applicable"
+              "note": "卷名、来源说明框：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p1 无插图、坐标轴或图标签，仅在文字中提及第 5 题图象选项的分栏位置，无图可检。",
+              "note": "仅卷名与来源说明，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左书名、右版次齐全且版次正确；页脚「——第 1 页——」完整居中，无重复页码或错页。",
+              "note": "卷名、来源说明框：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 1 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "来源说明整块收在带框文本框内，本版按既定宽文本块排印、行数相应减少，框底线至页脚留白充分，无溢出、裁切或重复。印刷版.tex、preamble、macros 本轮未改，questions.tex 仅第①条单行文字替换，结构未变。",
+              "note": "卷名、来源说明框：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "标题两行、节头「数学」与框内正文的字号层次与本版既定设定一致，无局部缩字号、无挤压行距。",
+              "note": "卷名、来源说明框：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案：/故选/应选/答案为/【答案】等模式均 0 命中；「固定源不附参考答案」为来源说明，第 4/8/12 题相关文字仅描述源文本转录异常，未给出正确选项或答案值。",
+              "note": "卷名、来源说明框：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "中文与数学字形完整：⩾、∩、π、≠、√、分式、cm³ 均正常；无缺字方框、无 U+FFFD。",
+              "note": "当前页 选择题1–5；Q2三视图与Q5图象 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「试题」「一、选择题」层次正确；题号 1–5 连续，选项标号 (A)–(D) 完整且与题面对应。",
+              "note": "选择题1–5；Q2三视图与Q5图象：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项行基线一致；Q2 图后选项行与分式 32/3、40/3 对齐正常。注：Q2 选项行起于 x=45.36pt、Q5 文字指引行起于 45.36pt，而 Q1/Q3/Q4 为 66.36pt（2em 首行缩进）——图后段落无首行缩进的模板行为，不影响判读。",
+              "note": "选择题1–5；Q2三视图与Q5图象：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q2 三视图「正视图/侧视图/俯视图」及尺寸「2」无压线；Q5 四图象 2×2 排布，(A)–(D) 与 −π/O/π/x/y 标签清晰，无重叠。",
+              "note": "选择题1–5；Q2三视图与Q5图象：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」(x=45.355pt)、右「印刷版」(右缘 515.906pt)，页眉盒较版心右缘窄 34.02bp；页脚「——第 2 页——」中心 280.63pt，正居页眉盒中心（较页面中心左偏 17.0pt）。全库同构留档。",
+              "note": "选择题1–5；Q2三视图与Q5图象：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 2 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q1–Q5 同页排下，无孤行/孤框；页底仅页脚区留白。",
+              "note": "选择题1–5；Q2三视图与Q5图象：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt；Q2 分式选项、Q5 四图象及轴标 10.5pt，在五号紧凑排版下可读。",
+              "note": "选择题1–5；Q2三视图与Q5图象：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面页无答案标记（答案/解析/故选/验证 零命中）；答案区自第 5 页起。",
+              "note": "选择题1–5；Q2三视图与Q5图象：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -1937,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "大括号分段函数、6/x 分式、√2/2、log 下标、粗斜体 e₁/e₂/b 均正常；无缺字。",
+              "note": "当前页 选择题6–8及填空题9–15；Q7示意图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、填空题」层次正确；题号 6–15 连续；选项/小问标号完整。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q6/Q7 选项行基线一致；Q8 (D) 因行宽换至第二行、与 (A) 同缩进，属选项断行模板行为；Q8 分式 b/2 未压上下行。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q7 图标签 A/α/P/B 清晰；P 与 B 相邻约 2pt 但各指其点，无压线。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」(x=45.355pt)、右「印刷版」(右缘 515.906pt)，页眉盒较版心右缘窄 34.02bp；页脚「——第 3 页——」中心 280.63pt，正居页眉盒中心（较页面中心左偏 17.0pt）。全库同构留档。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 3 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q15 后留白约 20% 页高，系「三、解答题」节头前 Needspace 0.6\\textheight；无孤行。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；Q12 分段函数显示式与 Q15 行内 b/c 分式未破坏行距。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面页无答案标记；答案区未开始。",
+              "note": "选择题6–8及填空题9–15；Q7示意图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -1983,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "△、∠、⊥、⊂、⩾、π/4、a²/4、N* 等字形完整；无缺字。",
+              "note": "当前页 解答题16–20；Q18棱柱图、Q19曲线图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」层次正确；题号 16–20 连续，各题 (1)(2) 小问编号完整。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页，无选择题选项行，故不适用。",
-              "result": "not_applicable"
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 三棱柱标签 A/B/C/A₁/B₁/C₁/D 完整；C 位于两条虚线夹角内，1200dpi 实测最小间隙约 0.4–0.6pt，未压线但偏紧（源图坐标照录，建议后续左移约 0.5pt）；Q19 图 O/P/A/B 清晰，B 距圆弧约 1pt，未压线。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」(x=45.355pt)、右「印刷版」(右缘 515.906pt)，页眉盒较版心右缘窄 34.02bp；页脚「——第 4 页——」中心 280.63pt，正居页眉盒中心（较页面中心左偏 17.0pt）。全库同构留档。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 4 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q20 后 \\hrule 分隔线位于版心内 y≈735pt、距页脚约 84pt；分隔线单独留在题面末页、解析标题移至第 5 页，属 Needspace 模板行为，非孤框。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；各小问显示式与行内分式正常。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面末页仅题目；分隔线后第 5 页才出现解析，无泄漏。",
+              "note": "解答题16–20；Q18棱柱图、Q19曲线图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2029,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "解析正文、分数、⩾、∈、3.5² 等正常；「答案：A」徽标字形完整。",
+              "note": "当前页 解析Q1–2及Q2三视图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「参考答案与详细解析」居中标题正确；「第 1 题（集合运算）」「第 2 题（三视图与体积）」编号与题面一致；「（题目见第 2 页）」交叉引用正确。",
+              "note": "解析Q1–2及Q2三视图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解析内复现的 Q1/Q2 选项行基线一致；Q2 分式选项对齐正常。",
+              "note": "解析Q1–2及Q2三视图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q2 三视图复现图标签与尺寸清晰，无压线。",
+              "note": "解析Q1–2及Q2三视图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」(x=45.355pt)、右「印刷版」(右缘 515.906pt)，页眉盒较版心右缘窄 34.02bp；页脚「——第 5 页——」中心 280.63pt，正居页眉盒中心（较页面中心左偏 17.0pt）。全库同构留档。",
+              "note": "解析Q1–2及Q2三视图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 5 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "解析区首页；Q2 解析续至第 6 页，断点自然；页底留白约 15% 页高。",
+              "note": "解析Q1–2及Q2三视图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；「第 N 题」标题 10.5pt 加粗；提示框 9pt；答案徽标 10.5pt。",
+              "note": "解析Q1–2及Q2三视图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为设计内解析区；题面页 2–4 已核无答案标记。",
+              "note": "解析Q1–2及Q2三视图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2075,42 +2075,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "V₁/V₂ 显示式、cm³、故选 (C) 等字形完整；无缺字。",
+              "note": "当前页 解析Q3 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 3 题（充分必要条件）」编号正确，接续第 5 页 Q2 解析；答案徽标 C/D 与题面一致。",
+              "note": "解析Q3：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解析内复现的 Q3 选项行 (A)–(D) 同基线、单行排完，对齐正常。",
+              "note": "解析Q3：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图，故不适用。",
+              "note": "仅Q3文字解析，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·浙江卷·文科·数学」(x=45.355pt)、右「印刷版」(右缘 515.906pt)，页眉盒较版心右缘窄 34.02bp；页脚「——第 6 页——」中心 280.63pt，正居页眉盒中心（较页面中心左偏 17.0pt）。全库同构留档。",
+              "note": "解析Q3：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 6 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第 3 题解析后留白约 55% 页高；系下一答案块 \\begin{answer} 前 Needspace 0.5\\textheight（Q4 解析整体移至第 7 页）的模板行为，无孤行/孤框。",
+              "note": "解析Q3：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；显示式正常。",
+              "note": "解析Q3：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析区，无越界答案泄漏。",
+              "note": "解析Q3：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2121,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⊥、∥、⊂、∈、⩽ 等符号完整，无豆腐块；构建日志 0 Missing character、0 Overfull/Underfull。",
+              "note": "当前页 解析Q4–5及四个函数图象 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 4、5 题编号连续，题名与内容相符；Q4/Q5「题目见第 2 页」指向正确（题面 PDF p2）。页码链接为深蓝 #00008c，全段一致。",
+              "note": "解析Q4–5及四个函数图象：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q4 四选项同行，列距 126.6/128.9/120.5pt，无重叠；Q5 图选项 (A)–(D) 居各面板正下方，另有文字映射行，未压线。",
+              "note": "解析Q4–5及四个函数图象：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q5 四面板均含 x/y 轴箭头、−π/O/π 标签与 (A)–(D) 面板标号，无遮挡；曲线/虚线为矢量，与解析所用 (D) 奇对称形态一致。",
+              "note": "解析Q4–5及四个函数图象：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左 45.355pt、右缘 515.906pt（盒宽 470.55pt，较版心窄 34.01bp）；页脚中心恒为 280.63pt，较版心中心左偏 17.01bp，与全库留档一致；页脚页码与 PDF 页一致。",
+              "note": "解析Q4–5及四个函数图象：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 7 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "整页排至 768.2pt，无孤儿标题或断框；末行距页脚 50.5pt。",
+              "note": "解析Q4–5及四个函数图象：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 STSong 五号 10.5pt；标题 STHeiti 10.5pt；页眉/页脚及「题目见第 N 页」9pt；数学上下标约 7pt 可读。 行内分式 x−1/x 与显示式 f(−x)=… 清晰。",
+              "note": "解析Q4–5及四个函数图象：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版按设计含解析与答案框；题目复述段未提前出现答案，答案仅见于「答案：」框与解析。",
+              "note": "解析Q4–5及四个函数图象：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2167,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠、⊥、∥、√、× 及上标 m²/cm² 均正常，无豆腐块。",
+              "note": "当前页 解析Q6–8及Q7示意图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 6、7 题编号连续，题名相符；两题「题目见第 3 页」指向正确（题面 PDF p3）。",
+              "note": "解析Q6–8及Q7示意图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q6 四选项同行（段首缩进 21pt）；Q7 因题图后另起段而选项齐左（45.36pt），属「题图后段落齐左」留档行为；均无重叠。",
+              "note": "解析Q6–8及Q7示意图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q7 图含 A、α、P、B 标签及 A–P/A–B 两线段；P 与 B 相邻但间距可辨，无压线或遮挡。",
+              "note": "解析Q6–8及Q7示意图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左 45.355pt、右缘 515.906pt（盒宽 470.55pt，较版心窄 34.01bp）；页脚中心恒为 280.63pt，较版心中心左偏 17.01bp，与全库留档一致；页脚页码与 PDF 页一致。",
+              "note": "解析Q6–8及Q7示意图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 8 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q7 答案框后留白 183.8pt 至页脚，系 Q8 整块不拆分（Needspace）所致，无孤儿/断框。",
+              "note": "解析Q6–8及Q7示意图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 STSong 五号 10.5pt；标题 STHeiti 10.5pt；页眉/页脚及「题目见第 N 页」9pt；数学上下标约 7pt 可读。 Q6 选项内 ax+by+cz 等行内式可读。",
+              "note": "解析Q6–8及Q7示意图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案仅在「答案：B/C」框与解析中；题目复述段无答案。",
+              "note": "解析Q6–8及Q7示意图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2213,42 +2213,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "【内容修复】Q8 验证段与解析版/规范源逐字一致：「取 t=1/2，由 |a+1|=1/2 得 a=−1/2 或 a=−3/2，此时 a²=1/4 或 9/4、a²+a=−1/4 或 3/4，均不唯一；而 a²+2a=t²−1=−3/4 唯一确定，故选 (B)」。符号、数值核对无误，修正已落实。；STSong/LMRoman/CM 全内嵌（pdffonts 全 emb=yes），日志 0 条 Missing character；−、±、√、²、分式均正常，无 U+FFFD/□。",
+              "note": "当前页 解析Q9 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 8 题（绝对值与三角）」「第 9 题（对数运算）」编号连续；两处「题目见第 3 页」与该版试题区 Q6–Q15 所在 p3 对应。",
+              "note": "解析Q9：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "(A)(B)(C) 同行、(D) 折行至第二行并与 (A) 同缩进；sin b/2 分式未压上下行，选项行基线与题干一致。",
+              "note": "解析Q9：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图，无图注或坐标标签可查。",
+              "note": "仅Q9文字解析，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左题名、右「印刷版」，页脚「——第 9 页——」居中；位置与相邻页一致。",
+              "note": "解析Q9：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 9 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q9 在本页结束，正文末行墨迹至 y≈544pt，页底留白约 236pt；第 10 题整体起于 p10（题级 keep），无孤行/孤框；修复段未改变行数与分页。",
+              "note": "解析Q9：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt（字形高 9.3）、题头 13.7pt、上下标 6.2pt；与相邻页分布一致。",
+              "note": "解析Q9：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q8 答案 B、Q9 答案 −1/2；3√3 仅出现在各自「答案」框内；题目与选项区无答案标记。",
+              "note": "解析Q9：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2259,42 +2259,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⟹、√、⩽、上标 a₁/a² 等完整；无豆腐块、无缺字。",
+              "note": "当前页 解析Q10 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 10、11 题编号连续，题名相符；两题「题目见第 3 页」正确。",
+              "note": "解析Q10：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "全为填空题，无选项；行间公式居中，关系符 ⟹ 未断行；两处作答横线对齐。",
+              "note": "解析Q10：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q10、Q11 均为纯公式填空）。",
+              "note": "仅Q10数列推导，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左 45.355pt、右缘 515.906pt（盒宽 470.55pt，较版心窄 34.01bp）；页脚中心恒为 280.63pt，较版心中心左偏 17.01bp，与全库留档一致；页脚页码与 PDF 页一致。",
+              "note": "解析Q10：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 10 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末留白 243.4pt；Q12 整块移至下页（Needspace），无孤儿或断框。",
+              "note": "解析Q10：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；行间分式 2d/3、sin(2x−π/4)、√ 等笔画清晰，上下标可读。",
+              "note": "解析Q10：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案仅在答案框与解析；题目行 a₁=____、d=____ 保持空白。",
+              "note": "解析Q10：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2305,42 +2305,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "分段函数左花括号（CMEX10）完整覆盖两行；√、⩾、上标均正常，无豆腐块。",
+              "note": "当前页 解析Q11 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 12、13 题编号连续，题名相符；两题「题目见第 3 页」正确。",
+              "note": "解析Q11：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "填空题无选项；行间公式居中，分段函数两支基线对齐；Q13 的 b·e₁ 与 b·e₂ 双式同排未重叠。",
+              "note": "解析Q11：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q12 为分段函数、Q13 为向量计算）。",
+              "note": "仅Q11三角恒等变形，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左 45.355pt、右缘 515.906pt（盒宽 470.55pt，较版心窄 34.01bp）；页脚中心恒为 280.63pt，较版心中心左偏 17.01bp，与全库留档一致；页脚页码与 PDF 页一致。",
+              "note": "解析Q11：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 11 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末留白 140.4pt；无跨页断框或孤儿答案框。",
+              "note": "解析Q11：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；分段函数 x²、x+6/x−6 与 √6 上下标可读；答案框内分式 2√3/3 完整。",
+              "note": "解析Q11：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案仅在答案框与解析；题目填空处无预填。",
+              "note": "解析Q11：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2351,42 +2351,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "绝对值竖线、√、⩽、分式与上标均完整，无豆腐块、无缺字。",
+              "note": "当前页 解析Q12 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 14、15 题编号连续，题名相符；两题「题目见第 3 页」正确。",
+              "note": "解析Q12：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "填空题无选项；行间公式居中；Q15 的 (u−1/2)(4u²+2u+2) 单行未溢出，关系符未断行。",
+              "note": "解析Q12：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q14 为绝对值最值、Q15 为椭圆离心率）。",
+              "note": "仅Q12分段函数解析，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉左 45.355pt、右缘 515.906pt（盒宽 470.55pt，较版心窄 34.01bp）；页脚中心恒为 280.63pt，较版心中心左偏 17.01bp，与全库留档一致；页脚页码与 PDF 页一致。",
+              "note": "解析Q12：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 12 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末内容止于 790.9pt（版心底 796.5pt，余 5.6pt；距页脚 27.8pt），未压页脚，无断框。",
+              "note": "解析Q12：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；Q15 验证行嵌套分式 0/(2c²)+c²/c² 处于脚本尺度（约 7pt），600dpi 下可辨，属五号版可读性下限但未糊。",
+              "note": "解析Q12：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案仅在答案框与解析；题目填空处无预填。",
+              "note": "解析Q12：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2397,42 +2397,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入（STSong/STHeiti/LMRoman/CM 系/MSAM10），构建日志 0 Missing character；π、△、⟹、√、° 等均正常出字，无方框或丢字",
+              "note": "当前页 解析Q16 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题「第 16 题（解三角形）」；子问 (1)(2) 与答案（1）（2）一一对应，无跳号",
+              "note": "解析Q16：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无 (A)(B)(C)(D) 选项；行间公式居中，不适用选项对齐判据",
-              "result": "not_applicable"
+              "note": "解析Q16：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
+              "note": "仅Q13向量公式推导，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉文字 9.5–19.0pt、横线 y≈20.4pt 且右端止于 515.92pt（较版心右缘窄 34.02bp）；页脚「——第 13 页——」中心 280.6pt（居页眉盒中心，较页心左偏 17.1bp）——全库同构留档",
+              "note": "解析Q16：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 13 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末答案框下留白约 219pt，系第 17 题整体 Needspace 换页；答案框完整，无孤儿尾框",
+              "note": "解析Q16：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt（STSong/LMRoman10）；「题目见第 4 页」与验证行为小五 9pt；题号与答案框字号层级一致",
+              "note": "解析Q16：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「题目：」块至「解析」前未出现结论或数值；答案仅出现在独立绿色答案框内",
+              "note": "解析Q16：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2443,42 +2443,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∈、N*、⩾、∑、上标/下标均正常出字；0 Missing character，无缺字方框",
+              "note": "当前页 解析Q17 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "标题「第 17 题（数列）」；(1)(2) 与答案（1）（2）一一对应，无跳号",
+              "note": "解析Q17：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项；不适用选项对齐判据",
-              "result": "not_applicable"
+              "note": "解析Q17：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
+              "note": "仅Q17数列推导，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉/横线/页脚位置与全库同构；页脚「——第 14 页——」，页码连续",
+              "note": "解析Q17：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 14 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末留白约 107pt，答案框收尾完整；无跨页断框、无孤行",
+              "note": "解析Q17：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt，答案框同号；验证行为小五 9pt，与全库一致",
+              "note": "解析Q17：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目块仅含条件与所求，无结论泄露；答案限于绿色答案框",
+              "note": "解析Q17：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2489,42 +2489,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "【内容修复】Q18 叉积逐字核对：平面 A1BC 法向量 n=BC×BA1=(0,4√7,0)∥(0,1,0)；平面 BB1C1C 法向量 n2=BC×BB1=(0,4√7,4)。独立复算 BC=(−2√2,0,0)、BA1=(−√2,0,√14)、BB1=(0,−√2,√14)，叉积结果吻合；点积验证与 sinθ=√7/8 见 p16。修正已落实。；√、⊥、∥、×、∠、∘ 及上下标完整；字体全内嵌，日志 0 条 Missing character，无 U+FFFD/□。",
+              "note": "当前页 解析Q18及棱柱图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 18 题（立体几何）」与规范源一致；「题目见第 4 页」与该版试题区解答题 p4 对应；(1)(2) 小问齐全。",
+              "note": "解析Q18及棱柱图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页，无选项行，故不适用。",
-              "result": "not_applicable"
+              "note": "解析Q18及棱柱图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "三棱柱图标签 A、B、C、A1、B1、C1、D 齐全，D 位于 B1C1 中点，无重叠或裁切；与题干「A1 在底面 ABC 的射影为 BC 的中点」相符。",
+              "note": "解析Q18及棱柱图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左题名、右「印刷版」，页脚「——第 15 页——」居中；位置与相邻页一致。",
+              "note": "解析Q18及棱柱图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 15 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文在「n2=(0,4√7,4)」处自然断页，p16 以「又 A1B=…」续接，属段间分页，无孤行；行末全角逗号墨迹右缘 550.68pt，相对 549.93pt 行宽悬挂 0.75pt，在 ≤1pt 容差内。",
+              "note": "解析Q18及棱柱图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt（字形高 9.3）、题头 13.6pt、数学上下标 6.2pt；与相邻页一致。",
+              "note": "解析Q18及棱柱图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页仅有题干与解析推导，答案框在 p16；题面区无答案标记。",
+              "note": "解析Q18及棱柱图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2535,42 +2535,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "【内容修复】Q18 验证段逐字核对：「|n2|=√(112+16)=8√2，点积 A1B·n2=(−√14)·4=−4√14，取绝对值后结果 √7/8<1」，且公式行 sinθ=4√14/(4·8√2)=√7/8。独立复算结果一致，负号与绝对值处理正确；修正已落实。；√、·、×、θ 及上下标完整；字体全内嵌，日志 0 条 Missing character，无 U+FFFD/□。",
+              "note": "当前页 解析Q18续页、Q19开头及曲线图 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 18 题续页（题头在 p15），答案编号（1）（2）完整；「第 19 题（抛物线与圆）」接续，序号连续；「题目见第 4 页」与该版试题区对应。",
+              "note": "解析Q18续页、Q19开头及曲线图：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解答题页，无选项行，故不适用。",
-              "result": "not_applicable"
+              "note": "解析Q18续页、Q19开头及曲线图：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q19 抛物线/圆图标签 A、B、O、P、x、y 齐全，切点 A/B 位置与题干一致，无重叠或裁切。",
+              "note": "解析Q18续页、Q19开头及曲线图：图中坐标、几何点名及图题标签可辨，未见遮挡或错配。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左题名、右「印刷版」，页脚「——第 16 页——」居中；位置与相邻页一致。",
+              "note": "解析Q18续页、Q19开头及曲线图：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 16 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q18 两个答案框完整、未跨页；Q19 题面、图、解析连续排至 y≈769pt，无溢出；行末最大墨迹 549.24pt ≤ 549.93pt 行宽。",
+              "note": "解析Q18续页、Q19开头及曲线图：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt（字形高 9.3）、题头 13.6pt、上下标 6.2pt；与相邻页一致。",
+              "note": "解析Q18续页、Q19开头及曲线图：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 18 题答案（1）（2）仅在两个答案框内；Q19 尚未给出答案，题面区无答案泄漏。",
+              "note": "解析Q18续页、Q19开头及曲线图：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2581,42 +2581,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∈、⩽、分段大括号、√ 均正常；0 Missing character",
+              "note": "当前页 解析Q19续页及Q20开头 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 20 题（二次函数）」；第 19 题答案（1）（2）与子问对应；g(a) 三支与 a⩽−2／−2<a<2／a⩾2 分界一致",
+              "note": "解析Q19续页及Q20开头：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选择题选项；不适用选项对齐判据",
-              "result": "not_applicable"
+              "note": "解析Q19续页及Q20开头：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
+              "note": "仅Q19续解及Q20题面，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚位置同全库；页脚「——第 17 页——」，页码连续",
+              "note": "解析Q19续页及Q20开头：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 17 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页末止于第 20 题 (2) 的 a 表达式，留白约 50pt，续页自然；无孤儿框",
+              "note": "解析Q19续页及Q20开头：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文五号 10.5pt；分段函数与答案框字号一致，无跳变",
+              "note": "解析Q19续页及Q20开头：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 20 题题目块无答案；页首答案框归属第 19 题",
+              "note": "解析Q19续页及Q20开头：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2627,42 +2627,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "√、∈、∪、⩽、区间括号均正常；0 Missing character，无缺字",
+              "note": "当前页 解析Q20续页 中中文、题号及可见数学符号均完整清晰；未见豆腐块、缺字或错误字形。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 20 题续页，无新题标题；题号链止于第 20 题，全段 16→20 连续无跳号",
-              "result": "not_applicable"
+              "note": "解析Q20续页：题目/解析层级与题号顺序清楚；未见缺号、重号或标题错层。",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题续页，无选择题选项；不适用选项对齐判据",
-              "result": "not_applicable"
+              "note": "解析Q20续页：本页选项、行内/行间公式与题文基线关系清楚；未见公式侵入邻行或选项错位。",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图",
+              "note": "仅Q20续解，无独立图稿。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚位置同全库；页脚「——第 18 页——」，末页页码正确",
+              "note": "解析Q20续页：页眉左侧卷名、右侧「印刷版」齐全；页脚页码为第 18 页且位置居中。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页正文止于约 519pt，其后约 275pt 为文末留白；两个答案框完整、未跨页，无孤儿尾框",
+              "note": "解析Q20续页：内容块完整落在页界内；段落/题目承接自然，页底留白与本页内容量相称，无孤行、重复或裁切。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "答案框内分段函数、区间与小五验证行字号一致；无异常跳变",
+              "note": "解析Q20续页：正文、题号/节头、公式及解析框的字号层次可辨，细小上标/下标仍清楚；未见局部过小或拥挤。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "全页为第 20 题解析续与答案框；最终结论仅出现在绿色答案框内，题目区无泄露",
+              "note": "解析Q20续页：题面与解析边界符合印刷版编排；解析答案仅出现在相应题目的解析区，未见提前串入其他题面或错题答案。",
               "result": "pass"
             }
           ],
@@ -2670,15 +2670,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "637bd3c7a71f5a0a3f610f84f31b64837cb0b2d5461ce87312ecd05a6d36085b",
+      "pdf_sha256": "b5af68c24f652579f3aded719a8101a23645db7e3615554f70477027a8d609c1",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "60abb143a8838b9e5a97591e01fd0c04137858cbd5b6c730bd5f79eab783731e",
+  "generation_input_tree_sha256": "3ae71492c25b958ef294b9a3cb1f56c5f3e48a72d38a989e93bb260d755edc6c",
   "input_projection": "0b98f2a72123df47c5c0457f20d4cf3caf2d4d1cc2bbda7fe225edca74fc0b17",
   "paper_id": "gk-2015-regular-zhejiang-arts",
   "project_dir": "2015_浙江卷_文科",
-  "reviewed_at": "2026-10-19T04:39:25+08:00",
+  "reviewed_at": "2026-11-02T10:19:49+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {

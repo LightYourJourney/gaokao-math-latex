@@ -12791,3 +12791,12 @@
 - 本轮全量 unittest `Ran 1749 tests in 845.787s`，当时 4 项失败、13 项跳过：两项句号宏测试契约及 2018 全国Ⅲ理科答案生成漂移已修正，相关 3 项定向测试通过；余下缓存状态测试在当时快照报 28 项。全量套件未在这些修正后重跑；本 revision 的只读状态探针当前为 26 项，故不能报告全套通过。
 - `generate_projects.py --all --check` 发现的 26 个生成目标差异中，2018 全国Ⅲ理科 `answers.tex` 已同步，当前还有 25 个目标待逐批核查；不以全库写入代替相关卷的正式构建和视觉复核。
 - `generate_projects.py --all --check` 在含本卷的快照发现 26 个旧生成目标不一致；本卷已同步，另有 25 个目标留待逐批审计，不以全库写入绕过各卷构建与视觉复核。
+
+
+### phase3-b18 2015 浙江卷文科：答案生成同步与四版复审收口（2026-11-02）
+
+- 从全库生成检查中选定该卷：revision 5842 的 `answers.tex` 与当前生成器差异仅为 Q20 三个行间公式定界符前后的缩进空格；题面、答案要点、解析正文未改。运行 `generate_projects.py --batch phase3-b18 --write` 后，题目/答案投影和 index projection 均 current；简答、四版壳、规范解析源及 manifest 校验通过。
+- 正式构建 attempt `5a44f1e6-7755-4dbe-b999-54019ed174b8`，四版为 6/25/8/18 页；日志均为 0 errors、0 missing characters、0 overfull、0 undefined references。完整检查当前构建后的 57 页、456 项视觉判据：430 pass、26 not_applicable、0 fail；四版 PDF SHA 与复核工作项绑定一致。`finalize-batch-checked` 返回 `FINALIZED`，批次 `closed`，manifest revision `5845`；四版 current/final receipt、provenance、生成器与规范源检查均通过。
+- 更新全量报告投影并回读校验；`manifest.csv` current，775 行。阶段提交：生成物与正式构建 `3f83b5f`；本次回执、批次报告、总账与进度记录待阶段提交。该卷答案为无官方答案页情况下的 D 级编者独立推导，不得描述为官方答案认证。
+- 全量单元测试 `Ran 1749 tests in 841.754s`，`FAILED (failures=1, skipped=13)`；唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，当前 388 卷探针为 `INVALID 388 24`。剩余 10 卷缓存状态差异（6 `answers_verified`：1999 全国理科、2016 全国Ⅱ文科、2017 全国Ⅱ理科、2015 安徽理科、2005 上海春季、2006 四川理科；4 `compiled`：2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；另有 14 个旧批次缓存派生为 `provenance_verified`：phase2-b72、phase2-b05、phase2-b07、phase2-b08、phase3-b13、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64。未批量改写缓存。
+- `generate_projects.py --all --check` 仍报告 25 个目标漂移，分布在 17 卷；不以全库写入绕过逐卷构建与视觉复核。2015 浙江文科已从旧清单移除；其他生成漂移与状态 currentness 缺口继续分批处理。本次单卷完成不代表 1952—2026 语料库完成。
