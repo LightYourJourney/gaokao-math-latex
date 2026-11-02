@@ -10,6 +10,12 @@
 - 本阶段只完成固定来源 intake 与逐页题签/题量/图位清点；题源文件无答案、解析、评分标准或完整出版信息。未登记 paper/batch，未转录、求解、改 manifest、provenance、TeX 或构建/视觉回执。出版社、版次、来源链及官方身份未认证。
 - 细节见 `reports/2006-hubei-arts-source-intake.md`。下一阶段若选入正式工作，先逐题转录并对照原页，再独立求解与复核；不以文件名或题意补造来源与答案。
 
+### 2006 湖北文科候选卷：Q1–Q21 题面转录与独立复核（2026-11-02）
+
+- 依据固定 source `src-af4cc84c7c2f6c2c1ed0bef598d5a51f57d65a1b25926d7a02631cc6c5387d75` 转录题面，写入 `2006/2006_数学真题_湖北文_试题.md`。SHA-256 `b7de4b974a9d512908f6104f3acfdd3785328cd6a1a7ca7ea4578e2fa0d37379`、Git blob `fe05ce5c6f114025c3315a47da95297f77e19dec`；两页 A3 横向，印刷页296覆盖 Q1–Q18，页297覆盖 Q19–Q21。
+- 两位独立转录者分段覆盖 Q1–Q10、Q11–Q21；主会话对照240 dpi渲染图复核全部题目、公式、选项、数值、小问与编号，未发现差异。Q1–Q10为选择题，Q11–Q15为填空题，Q16–Q21为解答题。Q18唯一题图暂以源页定位标注，矢量重绘待办。
+- 针对性解析器、答案/解析源文件生成与检查、paper/batch/provenance登记、图稿、四版TeX、正式构建和视觉验收均未完成。来源发布者、版次、复制链和官方身份未核。详情见 `reports/2006-hubei-arts-question-transcription.md`。本阶段不表示本卷验收或长期语料库完成。
+
 ### 1999 广东卷：固定来源初查（2026-11-02）
 
 - canonical worktree `feat/gaokao-phase0` 中已有候选 source `src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019`，固定上游 `普通高考/1999/1999广东.pdf`，SHA-256 `4b06d14df005ea33c6661282ba2afc4adbab26d33d15590f823b7adc5000f05d`，Git blob `f63a116f58acd4eedf57769b146f1a17038da643`，13 页，印刷页 155–167。上游文件和 manifest 指纹逐项吻合；文本层无可用字符，需目视扫描页转录。
