@@ -245,6 +245,13 @@
 - 正式视觉回执通过并与构建 attempt / PDF 指纹绑定；`finalize-batch-checked` 返回 `FINALIZED`，manifest revision `5766`，`phase1-b66` 为 `closed_with_blockers`。最终 build 与 review currentness、provenance 状态、问题账及 775 行 CSV 检查通过；全库报告投影回读一致，保留本卷阻断信息。
 - 全库测试实际结果：`Ran 1749 tests in 850.934s`，`OK (skipped=13)`。Q14 的 `ISSUE-1287` 仍 open / blocks_completion，paper 仍 blocked；该批次闭环不代表来源认证、本卷无阻断完成或 1952–2026 全语料完成。
 
+### 2008 上海春季卷：Q22 分析分页修复与复建（2026-11-02）
+
+- 修复后以规范 `_解析正文.md` 中现有支持的局部 `\Needspace{0.4\textheight}` 将 Q22 第（2）（3）小问解析与三条最终答案排在同一页；不改数学结论、题面或答案。重新提取 `_含解析.md` 并生成项目 TeX，solution source、项目、简答与版本壳 currentness 检查通过。
+- 正式构建 attempt `230e4e37-dc7e-404e-b552-8c03435d43a6`、manifest revision `5834`：试题版 6 页、解析版 20 页、简答版 8 页、印刷版 16 页，共 50 页；四版均 0 编译错误、缺字、overfull 与未定义引用。构建回执输入现已 current。
+- 本次全页审阅发现上次回执漏掉解析版第 20 页仅有两条答案框的明显留白。修复前后以相同渲染设置逐页 PNG 哈希对照，只有解析版第 19–20 页变化，另 48 页图像字节完全一致。新 attempt 的 50 页八项复核工作项均完成且无失败；changed pages 19–20 已重新目视，其他页继承同图像的实际审查结论。
+- 当前阶段提交仅含规范解析源、确定性投影、项目 TeX/构建回执、manifest 状态与本记录；`review_receipts.py finalize-batch-checked` 需要在本阶段提交后以干净 tracked worktree 重跑。Q8 `ISSUE-1285/1286` 来源/答案疑问继续保留，本阶段不表示来源认证、无阻断闭环或长期语料完成。
+
 ### 2008 上海春季卷：正式构建、逐页视觉复核与阻塞闭环（2026-11-02）
 
 - 修正规范题面 TeX 中数学模式的中文分隔标点：使用 `\text{、}`、`\text{。}` 等保留标点字形且不将句末标点挪出公式；更新后重新生成四版及答案材料、重算题面哈希并导入 provenance，manifest revision 推进至 `5755`。先前尝试把标点移到显示公式外造成页面左侧游离标点，未接受，已修复并以最终构建复核。
