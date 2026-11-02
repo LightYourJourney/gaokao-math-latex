@@ -16,5 +16,5 @@
 ## 状态与下一步
 
 - Manifest 当前把 source 记为 `ready`，但尚未关联 paper，`paper_id=null`、`track=null`。此处“固定候选”仅表示仓库内固定字节输入，不等于认证来源。
-- 题签、页数、题号范围、题型和图位已完成 intake；Q1–Q22 分段转录草稿正在独立准备，随后由主会话逐题对照固定 PDF 核校。之后再完成独立答案/解析推导、疑点登记与适当的 paper/source/provenance 流程。
+- 本 intake 阶段只完成题签、页数、题号范围、题型和图位清点。后续 Q1–Q22 转录及主会话逐题核校见 `reports/2006-fujian-arts-question-transcription.md`；答案/解析、paper 登记、provenance 与图稿仍按后续阶段推进。
 - 本阶段未创建规范题面或答案，不改 manifest、issues、provenance、TeX 或构建回执；未运行测试。耗时和 token 成本未知。本报告不表示题面转录完成、来源认证、卷级验收或长期语料库完成。
