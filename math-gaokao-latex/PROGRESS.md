@@ -37,6 +37,12 @@
 - `provenance.py import-batch` dry-run/写入通过，manifest revision 5983→5984；`provenance.py check-batch`、source manifest、issue ledger、solution source 检查通过。文科 paper 为 blocked，理科为 answers_verified，batch 为 provenance_verified。
 - 尚未生成题图、项目 TeX、正式 PDF 或视觉回执。官方答案与来源身份仍未核实；详见 `reports/2006-liaoning-provenance.md`。本阶段不代表卷级闭环或长期语料完成。
 
+### phase1-b78 2006 辽宁文理候选卷：题图矢量重绘与登记（2026-11-03）
+
+- 文科 Q15、Q19 与理科 Q18 已按固定来源页手绘 TikZ 示意图，链接写入规范题面和解析源；坐标不表示比例。三个预览均编译、渲染并对照原页目检。来源 ID、SHA、图形要素和复核范围见 `reports/2006-liaoning-figures.md`。
+- 三张图登记入 manifest 的 `figure_files`（每图 `expected_occurrences=3`），manifest revision `5984→5986`；`provenance.py import-batch` 重新绑定上述三题题面哈希并写入 revision `5986→5987`，其他 41 题角色哈希未变。
+- `provenance.py check-batch`、`solution_sources.py check-batch`、`source_manifest.py validate`、`issues.py validate` 与 `sync-figure-occurrences` 均通过。文科 Q21(2) 的 P 未定义问题仍阻断完成，未推测修正文源。尚未生成项目 TeX、正式 PDF 或视觉回执；下一步生成项目与四版入口。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
