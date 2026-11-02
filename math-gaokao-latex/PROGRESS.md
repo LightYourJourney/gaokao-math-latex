@@ -13038,3 +13038,9 @@
 - 2017 理科四版当前构建 attempt `5b22b184-42ea-4948-935d-619241068003`，页数 7/43/9/32；2018 理科四版 attempt `80efdf9c-aaa7-431f-bffa-a0d5c9a2438a`，页数 5/36/7/28。两卷当前共 167 页均逐页目视复核，回执各 4 版本 × 8 项检查覆盖完成；全批 `phase0-b01` 共 319 页、16 版本，正式报告为 `closed`。
 - `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`review_receipts check-batch`、`validate-receipts --require-final --require-current-inputs`、`provenance check-batch` 与 `issues validate` 均通过。未运行全库测试。
 - 修改范围仅在 `feat/gaokao-phase0` worktree；同机 `main` worktree 核对为干净且与 `origin/main` 同步。本条记录仅说明 ISSUE-0008 与 phase0-b01 收口，不代表长期语料完成。
+
+### 2006 湖南文科候选卷：固定来源接收（2026-11-02）
+
+- 固定候选 `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南文.pdf`；SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9` 与 manifest 一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页 303–304；题签为“2006 普通高等学校招生考试（湖南卷文）”，共 21 题，Q10、Q18 有题图。
+- 本阶段只完成固定来源 intake、PDF 指纹核对和两页渲染图目视检查。原件无答案、解析、评分标准或完整出版信息；出版者、版次、来源链和官方身份未认证。Q20 原页条件 `1≤i≤j≤m` 按字面保留，未做推测性修订。
+- 未登记 paper/batch，未转录、求解，未改 manifest、问题账、provenance、TeX 或构建/视觉回执。细节见 `reports/2006-hunan-arts-source-intake.md`；后续阶段如启动，应逐题转录核对并矢量重绘 Q10/Q18 图。本记录不表示本卷验收或长期语料完成。成本数据未知；未运行测试。
