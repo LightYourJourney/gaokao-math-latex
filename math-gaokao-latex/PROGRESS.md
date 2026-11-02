@@ -10,6 +10,12 @@
 - 原 PDF 为两页 A3 横向题面（印刷页 353–354），题签显示“2007 普通高等学校招生考试（北京卷文）”。可见 Q1–Q20：选择题 8、填空题 8、解答题 4；图位为 Q13 弦图、Q17 立体几何图、Q19 矩形坐标图。PDF 未见答案、解析或评分页。`analyze_pdf.py --no-cache --include-text` 将第 1 页列为 `review`（1418 非空白字符、7 个可疑字符），第 2 页列为 `text_candidate`（471 字符）；两页均有文字层，`model_calls=0`、`ocr_calls=0`。关键公式、关系符号和图示以固定原页为准。
 - 当前项目无 2007 北京文科 paper 或规范题面；来源仍为 `paper_id=null`、`paper_relation=null`、`source_state=ready`。本阶段不改 manifest/issues，不登记 paper，不将候选副本认证为官方来源；发布者、版次、复制/扫描链和官方身份未核。详情见 [来源接收报告](reports/2007-beijing-arts-source-intake.md)。下一阶段转录 Q1–Q20 并逐题对照原页；本阶段不代表题面转录完成或整卷验收。
 
+### 2007 北京文科候选卷：Q1–Q20 题面转录（2026-11-03）
+
+- 据固定 source `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`、PDF SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5` 完成 Q1–Q20 题面稿，写入 `2007/2007_数学真题_北京文_试题.md`；题稿 SHA-256 `7d78a6773910495d14aaa16e3121d713d6ec01516a79a8af584c507a5813be2e`。范围为选择 Q1–Q8、填空 Q9–Q16、解答 Q17–Q20；Q13、Q17、Q19 原图仍标为待矢量重绘占位。
+- Q1–Q10 与 Q11–Q20 分段独立形成草稿；主会话逐题对照两页 220 dpi 原页图核校。`parse_question_blocks()` 识别连续 20 题；解答小问结构为 Q15–Q18 各 2 问、Q19–Q20 各 3 问。PDF 文字层只用作定位，未调用 OCR 模型或外部 API。
+- 题面独立复核尚未开始；尚未形成答案、解析、逐题 provenance、题图、paper/batch 登记或 TeX。来源发布者、版次和官方身份仍未核，`official_answer=null`。阶段报告见 [题面转录报告](reports/2007-beijing-arts-question-transcription.md)；下一阶段独立核对固定原页，不表示来源认证、整卷验收或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。
