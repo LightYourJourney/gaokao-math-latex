@@ -12986,3 +12986,10 @@
 - 当前 attempt 的 43 页 × 8 项视觉检查均通过，0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`，`phase1-b71` 为 `closed_with_blockers`。Q23(3) 的来源符号缺失及答案未决保留，卷状态仍 blocked。批次专属 provenance、生成器、简答、四版壳、解答源、final/current build receipt 与 review receipt 检查通过。
 - 全库报告 render/check 完成，`manifest.csv` 为 775 行且 current。全量 unittest `Ran 1753 tests in 523.816s`，`FAILED (failures=2, skipped=13)`：一项是本次解析 SHA 未更新，之后更新 `来源校对.json` 并定向复测 `Ran 5 tests ... OK`；另一项是 16 卷/批历史缓存状态与现场派生不一致（与前次报告的 currentness 阻断相同）。指纹定向回归已通过，但该全库测试未在记录文件修正后重跑，不能称全量测试通过。
 - 本批完成四版构建和视觉审查，不表示来源认证、内容无阻塞或 1952—2026 长期语料库完成。
+
+### phase0-b01：2017/2018 全国Ⅰ卷理科论证补足与批次视觉收口（2026-11-02）
+
+- 补齐 ISSUE-0008 三处答案论证：2017 理 Q12 由 $N>100$ 推出 $k\ge13$ 后证明 $k+3=2^m$ 的唯一性；2018 理 Q19(2) 补入垂直弦 $l:x=1$ 的对称情形；2018 理 Q22(2) 补足 $k$ 的符号/位置分类并核对相切分支。规范答案、解析、TeX 与确定性 Markdown 投影已同步，ISSUE-0008 状态更新为 resolved。
+- 2017 理科四版当前构建 attempt `5b22b184-42ea-4948-935d-619241068003`，页数 7/43/9/32；2018 理科四版 attempt `80efdf9c-aaa7-431f-bffa-a0d5c9a2438a`，页数 5/36/7/28。两卷当前共 167 页均逐页目视复核，回执各 4 版本 × 8 项检查覆盖完成；全批 `phase0-b01` 共 319 页、16 版本，正式报告为 `closed`。
+- `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`review_receipts check-batch`、`validate-receipts --require-final --require-current-inputs`、`provenance check-batch` 与 `issues validate` 均通过。未运行全库测试。
+- 修改范围仅在 `feat/gaokao-phase0` worktree；同机 `main` worktree 核对为干净且与 `origin/main` 同步。本条记录仅说明 ISSUE-0008 与 phase0-b01 收口，不代表长期语料完成。

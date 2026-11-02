@@ -682,11 +682,13 @@ $25<32\Rightarrow\ln25<\ln32\Rightarrow\dfrac2{\ln2}<\dfrac5{\ln5}$，即
 
 \textbf{注意到一个显然的解：若 $k+3=2^{m}$，则 $S_N=2^{k+1}$，正是 $2$ 的幂。}
 
+由 $m\le k+1$，若 $k\le12$，则 $N=\dfrac{k(k+1)}2+m\le\dfrac{(k+1)(k+2)}2\le91$，与 $N>100$ 矛盾，故 $k\ge13$。
+
 下面说明\textbf{只有这种情况}：
 
 \begin{itemize}
 \item 若 $t\ge k+2$：则 $2^{t}-2^{k+1}\ge2^{k+1}$，需 $2^{m}-(k+3)\ge2^{k+1}$。但 $m\le k+1$ 给出 $2^{m}\le2^{k+1}$，故 $2^{m}-(k+3)<2^{k+1}$，矛盾。
-\item 若 $t\le k$：则 $2^{t}\le2^{k}$。而 $S_N\ge2^{k+1}+2^{0}-(k+3)=2^{k+1}-k-2$，对 $k\ge2$ 有 $2^{k+1}-k-2>2^{k}$，矛盾。
+\item 若 $t\le k$：则 $2^{t}\le2^{k}$。而 $S_N\ge2^{k+1}+2^{0}-(k+3)=2^{k+1}-k-2$，对 $k\ge13$ 有 $2^{k+1}-k-2>2^{k}$，矛盾。
 \item 故只能 $t=k+1$，此时 $2^{m}=k+3$。
 \end{itemize}
 

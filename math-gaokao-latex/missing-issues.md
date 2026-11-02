@@ -208,12 +208,13 @@
     "gk-2018-regular-national-1-science"
   ],
   "conflict_code": "answer-key-argument-gaps",
-  "current_evidence": "b01 答案独立求解角色在 A 级判定的比对说明中记录了这三处要点论证缺口（结论一致、过程跳步）。",
+  "current_evidence": "2017 理 Q12、2018 理 Q19(2) 与 Q22(2) 的原论证缺口已补齐；2017/2018 理科四版当前构建与逐页视觉复核均通过，phase0-b01 已正式关闭。",
   "fingerprint": "48c04c30c3aea79e39d6c78bc09fdcd7dfa0f0e82ae4ae5068361602e6fa53b4",
   "impact": "non_blocking",
   "paper_id": null,
-  "resume_action": "补齐三处论证：2017 理 Q12 要点中「只能 k+3=2^m」未给证明；2018 理 Q22(2) 只由相切距离方程解出 k=-4/3，缺 k>0 / -4/3<k<0 / k<-4/3 的分类讨论；2018 理 Q19(2) 设 l:y=k(x-1)，未覆盖斜率不存在（垂直）情形。三处结论均已由独立求解角色复核为正确，缺的是论证。",
-  "status": "open",
+  "resume_action": "已完成：2017 理 Q12 补足唯一性与整数范围论证；2018 理 Q19(2) 补入垂直线情形；2018 理 Q22(2) 补足斜率符号与位置分类。",
+  "resolution": "2017 理 Q12 补足由 N>100 推出 k≥13、比较相邻整数幂并唯一确定 k+3=2^m 的过程；2018 理 Q19(2) 补入垂直弦 l:x=1 的对称情形，并在斜率存在时用韦达定理完成斜率和为零的证明；2018 理 Q22(2) 补足 k>0、-4/3<k<0、k<-4/3 的交点数分类及相切位置验证。两卷四版当前构建与视觉审查收据均通过，phase0-b01 正式关闭。",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
