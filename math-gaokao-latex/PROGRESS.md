@@ -4,6 +4,68 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 湖南理科候选卷：固定来源接收与 Q1–Q21 题面转录（2026-11-02）
+
+- 固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南理.pdf`；SHA-256 `ae341d81af084449fe66f2e737553001cf04fd1781ad5f47f1a4f5b5da1bbb09`、Git blob `0e7fdec5b934366efe430a192955195c9a82bad4` 与现场重算一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页码 298–299，题签为“2006 普通高等学校招生考试（湖南卷理）”，共 21 题；PDF 不含答案、解析或评分标准。
+- 依据固定 PDF 逐题转录 Q1–Q21 到 `2006/2006_数学真题_湖南理_试题.md`：PDF 第 1 页含 Q1–Q18（选择10、填空5、解答3），第 2 页含 Q19–Q21（解答3）。两名独立转录者分段准备草稿，主会话对照 300 dpi 原页与 PDF 文本层复核；Q8 关系符号据原页及 U+2ACB 字符映射确认为严格子集非等 `⫋`，已纠正草稿误读并按 `\subsetneq` 转录。
+- Q9、Q15、Q16、Q18 的原图位置已标记，矢量图稿待绘。source 仍为未绑定 paper 的 `ready` 候选；来源身份、发布者、版次和扫描来源链未认证。答案/解析、provenance、issue、paper/batch 登记、图稿、项目 TeX、构建及视觉回执均待后续阶段。本阶段不表示来源认证、答案完成或卷级验收。详见 `reports/2006-hunan-science-source-intake.md`。
+
+### phase0-b02：当前构建视觉诊断回执刷新（2026-11-02）
+
+- 对 2019/2020 全国Ⅰ卷文理四套当前正式 attempt 重新绑定并保存视觉结论：2019 文科 `99021ceb-1365-4a3e-b2ab-d9d3de2b52fe`、2019 理科 `e5a9e821-27ed-4f98-ad83-612a8928a4a0`、2020 文科 `98d762e5-02e8-4480-828c-75d4b4aed0d9`、2020 理科 `4245576d-9f44-451e-9dd9-c65d206aadee`。当前 16 版共 299 页、2392 项检查：2131 pass、256 not_applicable、5 fail、0 pending。
+- `finalize-batch-checked` 返回 `VISUAL_FAILED` 并保存四卷 build/review 回执、manifest、问题账和 `reports/phase0-b02.md`；manifest revision `5950→5951`，批次仍为 `compiled_pending_review`。五项失败均为 2020 文科已取消 Q23 的 `heading_number`，分别位于试题版 p5、解析版 p5/p32、简答版 p5、印刷版 p23；依既定裁定保留原文和失败状态，不改写为视觉通过。
+- 当前验证：四卷 build receipt currentness `OK`，provenance=`OK：4卷`；`report.py render/check --all` 完成且全量报告与 manifest 一致，`manifest.csv` 当前且 775 行。`review_receipts.py check-batch` 仍按预期返回 `VISUAL_FAILED`。未修改规范题源、PDF 或生成 TeX；本批依取消题裁定继续保持未关闭状态。
+
+### 2006 湖南文科候选卷：固定来源接收（2026-11-02）
+
+- 固定候选 `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南文.pdf`；SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9` 与 manifest 一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页 303–304；题签为“2006 普通高等学校招生考试（湖南卷文）”，共 21 题，Q10、Q18 有题图。
+- 本阶段只完成固定来源 intake、PDF 指纹核对和两页渲染图目视检查。原件无答案、解析、评分标准或完整出版信息；出版者、版次、来源链和官方身份未认证。Q20 原页条件 `1≤i≤j≤m` 按字面保留，未做推测性修订。
+- 未登记 paper/batch，未转录、求解，未改 manifest、问题账、provenance、TeX 或构建/视觉回执。细节见 `reports/2006-hunan-arts-source-intake.md`；后续阶段如启动，应逐题转录核对并矢量重绘 Q10/Q18 图。本记录不表示本卷验收或长期语料完成。成本数据未知；未运行测试。
+
+### 2006 湖南文科候选卷：Q1–Q21 题面转录与复核（2026-11-02）
+
+- 依据固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 转录 Q1–Q21，规范题面写入 `2006/2006_数学真题_湖南文_试题.md`。PDF SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9`；PDF 第 1 页（印刷页303）含 Q1–Q18，第 2 页（印刷页304）含 Q19–Q21。题型为选择 Q1–Q10、填空 Q11–Q15、解答 Q16–Q21。
+- 两份独立分段转录覆盖 Q1–Q10、Q11–Q21；只读逐题复核发现 Q20 漏录 `P_i>P_j` 后的括号说明“即前面某数大于后面某数”，现已补入。原页条件 `1≤i≤j≤m` 按字面保留。Q10 选项及图位、Q16 三角式、Q18 高和边长、Q21 圆锥曲线式经重点复核，其余题目未发现转录差异。
+- `solution_sources.parse_question_blocks` 识别连续 21 题；题面无行尾空白，`git diff --check` 通过。详情见 `reports/2006-hunan-arts-question-transcription.md`。Q10、Q18 图稿、答案/解析、provenance、paper/batch 绑定、manifest 登记、正式构建和视觉验收均待办；来源身份未认证。成本数据未知；未运行测试。本记录不表示本卷闭环或长期语料完成。
+
+### 2006 湖南文科候选卷：独立答案与解析草稿（2026-11-02）
+
+- 依据固定题面完成 Q1–Q21 非官方答案要点和解析草稿，分别写入 `2006/2006_数学真题_湖南文_答案要点.md` 与 `2006/2006_数学真题_湖南文_解析正文.md`。三个独立求解分段覆盖 Q1–Q10、Q11–Q15、Q16–Q21；两名独立复核者分段复算全部答案与推导。
+- 复核纠正 Q21 答案要点的整题错配，并纠正 Q21（1）椭圆交点纵坐标及参数：当 $x=1$ 时 $y=\pm3/2$，从而 $m=0,p=9/8$。Q21（2）为 $m=\pm\sqrt6/3$、$AB:y=-3m(x-1)$。同时补全 Q11 等比和与 Q17（2）概率数值。Q17（3）依跨矿检查结果联合独立的通常解释为 0.41，解析明示该解释前提；Q18 按原图 $P,Q$ 位于底面两侧计算。
+- `parse_question_blocks` 对题面与解析正文各识别 21 题，`parse_answer_points` 识别答案要点 21 题；编号均为 1–21 连续。三份 Markdown 无行尾空白，`git diff --check` 通过。`official_answer` 保持 null。尚未登记 paper/batch、逐题 provenance、manifest、图稿、生成物、四版构建或视觉回执；未运行测试。详情见 `reports/2006-hunan-arts-answer-derivation.md`。本阶段不表示来源认证、本卷闭环或长期语料完成。
+
+### 2006 湖南文科候选卷：Q10、Q18 图稿矢量重绘（2026-11-02）
+
+- 据固定 PDF 第 1 页重绘 Q10 向量阴影区域与 Q18 共底正四棱锥，图稿分别为 `2006_湖南卷_文科/figures/f2006hunan_arts_q10_vector_region.tex`、`f2006hunan_arts_q18_pyramids.tex`；题面与解析稿使用本地 TikZ 链接，未嵌入原卷截图。
+- 两图合并的 smoke 文档由 XeLaTeX 编译成功，生成 2 页 A4 临时 PDF；220 dpi 渲染并目视核对灰区、标签、可见/隐藏棱和裁切。报告见 `reports/2006-hunan-arts-figures.md`。Q10 选项按固定源图的阴影范围判定，不将示意图像素视作精确比例；Q18 原图确认 P/Q 在底面两侧。
+- 题源尚未绑定 paper/batch，manifest `figure_files` 与 expected occurrence 未登记，未进行正式四版装配、构建或页面审查。来源身份未核。本阶段只完成两幅图稿和隔离渲染检查，不表示本卷闭环或长期语料完成。
+
+### 2006 湖南文科候选卷：paper/source 登记与 Q17 blocker 入账（phase1-b74，2026-11-02）
+
+- `register-papers` 将 `gk-2006-regular-hunan-arts` 与 `phase1-b74` 登记，固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 内部绑定为 canonical；revision `5938→5939`。`sync-figure-registry` 登记 Q10、Q18 两图，各有 3 处规范题面/含解析引用，revision `5939→5940`。绑定不认证发布者、版次、来源链或官方身份；`official_answer=null`。
+- 建立 `ISSUE-1338`：题面未明确跨矿整改复查结果的联合独立关系，Q17（3）规范答案保持 `U/PENDING`；$0.41$ 只列为独立性假设下条件值。paper 为 `blocked`（`blocked_from=planned`），batch `phase1-b74` 为 `planned`。
+- 规范 Markdown 已绑定 paper ID，含解析稿按 `render_combined()` 重生成；`source_manifest.py validate`、issue ledger 校验、775 行 CSV 投影与 `solution_sources.py check-batch --batch phase1-b74` 均通过。逐题 provenance、项目 TeX、正式四版构建与视觉验收仍未完成。详见 `reports/2006-hunan-arts-registration.md`；不表示来源认证、卷级验收或长期语料完成。
+
+### 2006 湖南文科候选卷：逐题 provenance 导入与核对（phase1-b74，2026-11-02）
+
+- 两名独立只读源页复核者分别核对 Q1–Q10 与 Q11–Q21，均直接查看固定 PDF 渲染页并确认题面逐题一致；Q20 的 `1≤i≤j≤m` 按原页保留。Q17（3）最终 U/PENDING 表述经独立答案复核确认；在完整初检/复查结果相互独立假设下，条件值 $1-0.9^5=0.40951\ldots\to0.41$ 正确。
+- `provenance.py init-batch/import-batch` 生成并导入21题、三角色 provenance；源页映射 Q1–Q18→PDF p.1、Q19–Q21→p.2，每题记录题面/答案 SHA、source SHA、复核结果、答案等级和角色。Q17为 U 并关联 `ISSUE-1338`；manifest revision `5940→5941`，batch 状态 `provenance_verified`，paper 仍 `blocked`。
+- `provenance.py check-batch --batch phase1-b74`、source manifest、issue ledger 与 775 行 CSV 校验通过。详情见 `reports/2006-hunan-arts-provenance.md`。项目 TeX、四版正式构建和页面视觉验收未完成；不表示来源认证、卷级验收或长期语料完成。
+
+### 2006 湖南文科候选卷：共享 TeX 与四版入口生成（phase1-b74，2026-11-02）
+
+- 补齐答案要点的 Q1–Q10 答案速查表（D、C、D、A、A、B、C、B、D、C），使简答表生成器第三路核对有明确输入；速查表与逐题答案一致。含解析稿由 `render_combined()` 重生成，角色答案摘要刷新后 provenance 再导入，manifest revision 为 `5942`。
+- 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。`generate_projects`、`make_short_answers`、`make_editions` 的写入和 currentness 检查均通过；provenance、manifest、issue ledger 与 775 行 CSV 校验通过。
+- 正式 XeLaTeX 四版构建、PDF 页数核对和逐页视觉复核尚未完成；Q17（3）仍由 `ISSUE-1338` 阻断。本阶段不表示卷级验收或长期语料完成。详见 `reports/2006-hunan-arts-project-generation.md`。
+
+### 2006 湖南文科候选卷：四版构建、逐页视觉回执与阶段收口（phase1-b74，2026-11-02）
+
+- 正式构建 attempt `6aaa4ba0-3861-4ea1-a96a-c458c1b55025` 成功：试题版 5 页、解析版 19 页、简答版 7 页、印刷版 12 页，共 43 页。四版逐页完成视觉检查，8 项页面检查均通过；4 条 Underfull hbox 仅对应完整且无溢出的来源说明框，已逐条记录警告豁免，未发现视觉问题。
+- `review_receipts.py finalize-batch --batch phase1-b74` 生成四版正式回执和 `reports/phase1-b74.md`；batch 状态 `closed_with_blockers`，manifest revision `5949→5950`。`validate-receipts --require-final --require-current-inputs` 通过（failed/invalid/missing/stale 均为 0），provenance、解答来源与 TeX/简答/四版入口 currentness 检查通过。
+- 修正 `md2tex.py` 的括号选项识别：仅将四个选项同处一行且由单个全角空格分隔的 `（A）…（D）` 结构化，避免改写其他试卷既有选项排版。新增转换回归及 1990 全国理科、2006 上海文科两项受影响用例均通过。
+- 全库 unittest 曾运行 1754 项，报告 5 项失败、13 项跳过；其中两项为上述解析器回归，已由收窄规则和定向测试修复。另 3 项失败为 1986 广东理科分页断言、baseline 中既有文件 SHA 断言、以及全库 provenance 缓存状态与现场派生状态不一致；未修改其无关试卷或基线数据。未声称全库测试通过。
+- Q17（3）继续标为 `U/PENDING` 并由 `ISSUE-1338` 阻断，$0.41$ 只作为独立性假设下条件值。本阶段完成 2006 湖南文科候选卷四版构建和视觉验收回执，不认证来源身份、不构成无阻塞卷级闭环，也不表示长期语料完成。
+
 ### 2006 湖北文科候选卷：固定来源接收（2026-11-02）
 
 - 固定候选 `src-af4cc84c7c2f6c2c1ed0bef598d5a51f57d65a1b25926d7a02631cc6c5387d75`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖北文.pdf`；SHA-256 `b7de4b974a9d512908f6104f3acfdd3785328cd6a1a7ca7ea4578e2fa0d37379`、Git blob `fe05ce5c6f114025c3315a47da95297f77e19dec` 均与 manifest 一致。PDF 为两页 A3 横向，印刷页 296–297；题签明确为“2006 普通高等学校招生考试（湖北卷文）”，共 21 题，Q18 有空间几何图。
@@ -13038,53 +13100,3 @@
 - 2017 理科四版当前构建 attempt `5b22b184-42ea-4948-935d-619241068003`，页数 7/43/9/32；2018 理科四版 attempt `80efdf9c-aaa7-431f-bffa-a0d5c9a2438a`，页数 5/36/7/28。两卷当前共 167 页均逐页目视复核，回执各 4 版本 × 8 项检查覆盖完成；全批 `phase0-b01` 共 319 页、16 版本，正式报告为 `closed`。
 - `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`review_receipts check-batch`、`validate-receipts --require-final --require-current-inputs`、`provenance check-batch` 与 `issues validate` 均通过。未运行全库测试。
 - 修改范围仅在 `feat/gaokao-phase0` worktree；同机 `main` worktree 核对为干净且与 `origin/main` 同步。本条记录仅说明 ISSUE-0008 与 phase0-b01 收口，不代表长期语料完成。
-
-### 2006 湖南文科候选卷：固定来源接收（2026-11-02）
-
-- 固定候选 `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006湖南文.pdf`；SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9` 与 manifest 一致。来源 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。PDF 两页 A3 横向，印刷页 303–304；题签为“2006 普通高等学校招生考试（湖南卷文）”，共 21 题，Q10、Q18 有题图。
-- 本阶段只完成固定来源 intake、PDF 指纹核对和两页渲染图目视检查。原件无答案、解析、评分标准或完整出版信息；出版者、版次、来源链和官方身份未认证。Q20 原页条件 `1≤i≤j≤m` 按字面保留，未做推测性修订。
-- 未登记 paper/batch，未转录、求解，未改 manifest、问题账、provenance、TeX 或构建/视觉回执。细节见 `reports/2006-hunan-arts-source-intake.md`；后续阶段如启动，应逐题转录核对并矢量重绘 Q10/Q18 图。本记录不表示本卷验收或长期语料完成。成本数据未知；未运行测试。
-
-### 2006 湖南文科候选卷：Q1–Q21 题面转录与复核（2026-11-02）
-
-- 依据固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 转录 Q1–Q21，规范题面写入 `2006/2006_数学真题_湖南文_试题.md`。PDF SHA-256 `64440e801d805005344489ec905572a72a1dd31ffc8206f59867d344bd5b9ce2`、Git blob `c031a5e9f5d5cd83eaa2278036de1e8a3e19bce9`；PDF 第 1 页（印刷页303）含 Q1–Q18，第 2 页（印刷页304）含 Q19–Q21。题型为选择 Q1–Q10、填空 Q11–Q15、解答 Q16–Q21。
-- 两份独立分段转录覆盖 Q1–Q10、Q11–Q21；只读逐题复核发现 Q20 漏录 `P_i>P_j` 后的括号说明“即前面某数大于后面某数”，现已补入。原页条件 `1≤i≤j≤m` 按字面保留。Q10 选项及图位、Q16 三角式、Q18 高和边长、Q21 圆锥曲线式经重点复核，其余题目未发现转录差异。
-- `solution_sources.parse_question_blocks` 识别连续 21 题；题面无行尾空白，`git diff --check` 通过。详情见 `reports/2006-hunan-arts-question-transcription.md`。Q10、Q18 图稿、答案/解析、provenance、paper/batch 绑定、manifest 登记、正式构建和视觉验收均待办；来源身份未认证。成本数据未知；未运行测试。本记录不表示本卷闭环或长期语料完成。
-
-### 2006 湖南文科候选卷：独立答案与解析草稿（2026-11-02）
-
-- 依据固定题面完成 Q1–Q21 非官方答案要点和解析草稿，分别写入 `2006/2006_数学真题_湖南文_答案要点.md` 与 `2006/2006_数学真题_湖南文_解析正文.md`。三个独立求解分段覆盖 Q1–Q10、Q11–Q15、Q16–Q21；两名独立复核者分段复算全部答案与推导。
-- 复核纠正 Q21 答案要点的整题错配，并纠正 Q21（1）椭圆交点纵坐标及参数：当 $x=1$ 时 $y=\pm3/2$，从而 $m=0,p=9/8$。Q21（2）为 $m=\pm\sqrt6/3$、$AB:y=-3m(x-1)$。同时补全 Q11 等比和与 Q17（2）概率数值。Q17（3）依跨矿检查结果联合独立的通常解释为 0.41，解析明示该解释前提；Q18 按原图 $P,Q$ 位于底面两侧计算。
-- `parse_question_blocks` 对题面与解析正文各识别 21 题，`parse_answer_points` 识别答案要点 21 题；编号均为 1–21 连续。三份 Markdown 无行尾空白，`git diff --check` 通过。`official_answer` 保持 null。尚未登记 paper/batch、逐题 provenance、manifest、图稿、生成物、四版构建或视觉回执；未运行测试。详情见 `reports/2006-hunan-arts-answer-derivation.md`。本阶段不表示来源认证、本卷闭环或长期语料完成。
-
-### 2006 湖南文科候选卷：Q10、Q18 图稿矢量重绘（2026-11-02）
-
-- 据固定 PDF 第 1 页重绘 Q10 向量阴影区域与 Q18 共底正四棱锥，图稿分别为 `2006_湖南卷_文科/figures/f2006hunan_arts_q10_vector_region.tex`、`f2006hunan_arts_q18_pyramids.tex`；题面与解析稿使用本地 TikZ 链接，未嵌入原卷截图。
-- 两图合并的 smoke 文档由 XeLaTeX 编译成功，生成 2 页 A4 临时 PDF；220 dpi 渲染并目视核对灰区、标签、可见/隐藏棱和裁切。报告见 `reports/2006-hunan-arts-figures.md`。Q10 选项按固定源图的阴影范围判定，不将示意图像素视作精确比例；Q18 原图确认 P/Q 在底面两侧。
-- 题源尚未绑定 paper/batch，manifest `figure_files` 与 expected occurrence 未登记，未进行正式四版装配、构建或页面审查。来源身份未核。本阶段只完成两幅图稿和隔离渲染检查，不表示本卷闭环或长期语料完成。
-
-### 2006 湖南文科候选卷：paper/source 登记与 Q17 blocker 入账（phase1-b74，2026-11-02）
-
-- `register-papers` 将 `gk-2006-regular-hunan-arts` 与 `phase1-b74` 登记，固定候选 source `src-6387f1664484c2d0ee3ea1a27f673d6624df685f465bfd701fb8e95c0a8b856d` 内部绑定为 canonical；revision `5938→5939`。`sync-figure-registry` 登记 Q10、Q18 两图，各有 3 处规范题面/含解析引用，revision `5939→5940`。绑定不认证发布者、版次、来源链或官方身份；`official_answer=null`。
-- 建立 `ISSUE-1338`：题面未明确跨矿整改复查结果的联合独立关系，Q17（3）规范答案保持 `U/PENDING`；$0.41$ 只列为独立性假设下条件值。paper 为 `blocked`（`blocked_from=planned`），batch `phase1-b74` 为 `planned`。
-- 规范 Markdown 已绑定 paper ID，含解析稿按 `render_combined()` 重生成；`source_manifest.py validate`、issue ledger 校验、775 行 CSV 投影与 `solution_sources.py check-batch --batch phase1-b74` 均通过。逐题 provenance、项目 TeX、正式四版构建与视觉验收仍未完成。详见 `reports/2006-hunan-arts-registration.md`；不表示来源认证、卷级验收或长期语料完成。
-
-### 2006 湖南文科候选卷：逐题 provenance 导入与核对（phase1-b74，2026-11-02）
-
-- 两名独立只读源页复核者分别核对 Q1–Q10 与 Q11–Q21，均直接查看固定 PDF 渲染页并确认题面逐题一致；Q20 的 `1≤i≤j≤m` 按原页保留。Q17（3）最终 U/PENDING 表述经独立答案复核确认；在完整初检/复查结果相互独立假设下，条件值 $1-0.9^5=0.40951\ldots\to0.41$ 正确。
-- `provenance.py init-batch/import-batch` 生成并导入21题、三角色 provenance；源页映射 Q1–Q18→PDF p.1、Q19–Q21→p.2，每题记录题面/答案 SHA、source SHA、复核结果、答案等级和角色。Q17为 U 并关联 `ISSUE-1338`；manifest revision `5940→5941`，batch 状态 `provenance_verified`，paper 仍 `blocked`。
-- `provenance.py check-batch --batch phase1-b74`、source manifest、issue ledger 与 775 行 CSV 校验通过。详情见 `reports/2006-hunan-arts-provenance.md`。项目 TeX、四版正式构建和页面视觉验收未完成；不表示来源认证、卷级验收或长期语料完成。
-
-### 2006 湖南文科候选卷：共享 TeX 与四版入口生成（phase1-b74，2026-11-02）
-
-- 补齐答案要点的 Q1–Q10 答案速查表（D、C、D、A、A、B、C、B、D、C），使简答表生成器第三路核对有明确输入；速查表与逐题答案一致。含解析稿由 `render_combined()` 重生成，角色答案摘要刷新后 provenance 再导入，manifest revision 为 `5942`。
-- 已生成 `questions.tex`、`answers.tex`、`answers_short.tex`、`index.json` 与试题/解析/简答/印刷四版入口。`generate_projects`、`make_short_answers`、`make_editions` 的写入和 currentness 检查均通过；provenance、manifest、issue ledger 与 775 行 CSV 校验通过。
-- 正式 XeLaTeX 四版构建、PDF 页数核对和逐页视觉复核尚未完成；Q17（3）仍由 `ISSUE-1338` 阻断。本阶段不表示卷级验收或长期语料完成。详见 `reports/2006-hunan-arts-project-generation.md`。
-
-### 2006 湖南文科候选卷：四版构建、逐页视觉回执与阶段收口（phase1-b74，2026-11-02）
-
-- 正式构建 attempt `6aaa4ba0-3861-4ea1-a96a-c458c1b55025` 成功：试题版 5 页、解析版 19 页、简答版 7 页、印刷版 12 页，共 43 页。四版逐页完成视觉检查，8 项页面检查均通过；4 条 Underfull hbox 仅对应完整且无溢出的来源说明框，已逐条记录警告豁免，未发现视觉问题。
-- `review_receipts.py finalize-batch --batch phase1-b74` 生成四版正式回执和 `reports/phase1-b74.md`；batch 状态 `closed_with_blockers`，manifest revision `5949→5950`。`validate-receipts --require-final --require-current-inputs` 通过（failed/invalid/missing/stale 均为 0），provenance、解答来源与 TeX/简答/四版入口 currentness 检查通过。
-- 修正 `md2tex.py` 的括号选项识别：仅将四个选项同处一行且由单个全角空格分隔的 `（A）…（D）` 结构化，避免改写其他试卷既有选项排版。新增转换回归及 1990 全国理科、2006 上海文科两项受影响用例均通过。
-- 全库 unittest 曾运行 1754 项，报告 5 项失败、13 项跳过；其中两项为上述解析器回归，已由收窄规则和定向测试修复。另 3 项失败为 1986 广东理科分页断言、baseline 中既有文件 SHA 断言、以及全库 provenance 缓存状态与现场派生状态不一致；未修改其无关试卷或基线数据。未声称全库测试通过。
-- Q17（3）继续标为 `U/PENDING` 并由 `ISSUE-1338` 阻断，$0.41$ 只作为独立性假设下条件值。本阶段完成 2006 湖南文科候选卷四版构建和视觉验收回执，不认证来源身份、不构成无阻塞卷级闭环，也不表示长期语料完成。

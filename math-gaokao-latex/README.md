@@ -4,15 +4,15 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**394**；生产状态：blocked 88，compiled 3，complete 303
-- 批次总数：**246**；manifest 状态：closed 176，closed_with_blockers 69，compiled_pending_review 1
-- 正式复核门禁：FINALIZED 235，INVALID_OR_STALE 10，VISUAL_FAILED 1
-- 已编译版本：1576/1576；构建回执状态：compiled_pending_review 4，succeeded 390
-- review 回执状态：failed 1，passed 393
-- 问题总账：1337 条，未解决问题：268，阻塞完成 207。
-- 回执日志警告汇总（包含待复核回执）：Overfull 26，Underfull 132，豁免记录 158。
+- 试卷总数：**395**；生产状态：blocked 89，compiled 3，complete 303
+- 批次总数：**247**；manifest 状态：closed 176，closed_with_blockers 70，compiled_pending_review 1
+- 正式复核门禁：FINALIZED 204，INVALID_OR_STALE 42，VISUAL_FAILED 1
+- 已编译版本：1580/1580；构建回执状态：compiled_pending_review 4，succeeded 391
+- review 回执状态：failed 1，passed 394
+- 问题总账：1338 条，未解决问题：269，阻塞完成 208。
+- 回执日志警告汇总（包含待复核回执）：Overfull 26，Underfull 136，豁免记录 162。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
-- 门禁未通过批次：phase0-b02、phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08。
+- 门禁未通过批次：phase0-b02、phase2-b01、phase2-b05、phase2-b07、phase2-b08、phase2-b11、phase2-b12、phase2-b13、phase2-b15、phase2-b16、phase2-b17、phase2-b18、phase2-b19、phase2-b20、phase2-b21、phase2-b22、phase3-b01、phase1-b24、phase4-b12、phase4-b14、phase4-b20、phase4-b21、phase4-b22、phase4-b24、phase4-b25、phase4-b26、phase4-b28、phase4-b29、phase4-b35、phase1-b36、phase4-b36、phase1-b39、phase1-b40、phase1-b42、phase1-b45、phase1-b46、phase1-b50、phase1-b53、phase4-b41、phase0-b07、phase0-b08、phase1-b69、phase1-b70。
 
 ## 交付物与校验
 
