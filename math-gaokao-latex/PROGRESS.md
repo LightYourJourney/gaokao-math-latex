@@ -11,6 +11,14 @@
 - Q1–Q21 题面、独立答案要点、解析正文与确定性生成的含解析 Markdown 已绑定 paper ID。固定 PDF 两页题面被选为 Q 页；Q9、Q15、Q16、Q18 仍只有源图定位标记，TikZ 图尚未制作或登记。
 - `source_manifest.py validate`、`issues.py validate` 与 `solution_sources.py check-batch --batch phase1-b75` 通过；解析器识别题面/解析/答案各 21 题。随后 `generate_projects.py` 为新卷生成 `questions.tex`、`answers.tex` 并更新全库静态 `index.json`；`make_short_answers.py` 生成简答表，`make_editions.py` 生成四个版本壳文件。逐题 provenance、矢量图稿、XeLaTeX 构建及视觉审查尚未完成。详见 `reports/2006-hunan-science-registration.md`；本阶段不表示卷级验收。
 
+### 2006 湖南理科候选卷：四幅题图矢量重绘与逐题 provenance（phase1-b75，2026-11-02）
+
+- 依固定候选 PDF 第 1 页重绘 Q9、Q15、Q16、Q18 四幅 TikZ 题图，分别位于 `2006_湖南卷_理科/figures/`。题面和解析正文各加入本地 `.tex` 图稿链接；`_含解析.md` 由规范源确定性重建。Q15 原图未见平行刻痕，图中平行关系来自题干明文 `OM∥AB`；Q18 的 P/Q 两侧位置按原页图示保留。图稿坐标只表结构，未把示意比例写成题目数据。
+- `source_manifest.py sync-figure-registry` 与 `sync-figure-occurrences` 登记四幅图，每幅在生成项目中预期引用 3 次（试题版 1 次、解析版 2 次）；未改共享图映射，按规范 Markdown 中的本地 `.tex` 链接动态解析。
+- `provenance.py import-batch --write` 导入 21 题三角色记录，manifest revision `5953→5955`；角色分别为固定 PDF 题面复核、非官方独立求解和分段独立盲核。Q1–Q18 绑定 PDF 第 1 页，Q19–Q21 绑定第 2 页。Q17 因复查结果联合独立性不明继续关联 `ISSUE-1339`、答案为 U/PENDING；paper 仍 blocked，batch 派生状态为 `provenance_verified`。
+- 四幅图分别单独 XeLaTeX smoke 编译并渲染 PNG 目检；均为 1 页、标签和线型清楚、未见裁切。项目 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 均确认当前；`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`（21 题）和 `provenance.py check-batch`（1 卷 OK）通过。
+- 以上不是正式四版 PDF 构建或版面验收；尚未生成正式 build/review receipts，也未执行全量测试。来源发布者、版次、来源链和官方身份未认证，`official_answer` 仍为 null。详见 `reports/2006-hunan-science-figures-provenance.md`。
+
 ### 2006 湖南理科候选卷：独立答案推导与分段盲核（2026-11-02）
 
 - 依据固定题面与题图独立推导 Q1–Q21，写入 `2006/2006_数学真题_湖南理_答案要点.md`、`_解析正文.md`，并由 `solution_sources.render_combined()` 生成 `_含解析.md`。两名分段盲核者分别覆盖 Q1–Q10、Q11–Q21；Q14 复核者初次把奇偶系数条件写反，按原式复核后确认应取 $a+b=0$，本库答案为 $(1,-1)$。Q9 图示按一条棱及其对棱中点的截面解释；Q18 的 $P,Q$ 异侧依据原图，文字本身未明说。

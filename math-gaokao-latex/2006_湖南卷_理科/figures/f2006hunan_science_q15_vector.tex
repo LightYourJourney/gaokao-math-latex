@@ -1,0 +1,26 @@
+% 2006 湖南理科第15题：按候选原卷第1页可见线型重绘；图形不按比例。
+\begin{tikzpicture}[x=1cm, y=1cm, font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3.0,0);
+  \coordinate (B) at (1.65,2.05);
+  \coordinate (M) at (-1.35,2.05);
+  \coordinate (P) at (0.75,2.72);
+  \coordinate (Bext) at (0.45,3.88);
+
+  % 原图中 OM 与 AB 的外延用虚线表示。
+  \draw[dashed] (O) -- (M);
+  \draw[dashed] (B) -- (Bext);
+
+  % 向量箭线与 AB。
+  \draw[->] (O) -- (A);
+  \draw[->] (O) -- (B);
+  \draw[->] (O) -- (P);
+  \draw (B) -- (A);
+
+  \node[below left] at (O) {$O$};
+  \node[below right] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[above] at (P) {$P$};
+  \node[above left] at (M) {$M$};
+  \node[below=7mm] at (1.35,0) {$OM\parallel AB$};
+\end{tikzpicture}

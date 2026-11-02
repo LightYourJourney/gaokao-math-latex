@@ -1,0 +1,28 @@
+% 2006 湖南理科候选卷 Q16；据固定源 PDF 第 1 页重绘，坐标仅示意结构，不表示比例。
+\begin{tikzpicture}[line cap=round,line join=round,thick]
+  \coordinate (A) at (0,2.3);
+  \coordinate (B) at (-1.8,0);
+  \coordinate (C) at (2.93,0);
+  \coordinate (D) at (0.72,0);
+
+  % 三角形边界与斜边上的线段 AD。
+  \draw (A)--(B)--(C)--cycle;
+  \draw (A)--(D);
+
+  % 直角标记：在 A 两边各取等长短段构成方形角标。
+  \coordinate (rAB) at ($(A)!0.11!(B)$);
+  \coordinate (rAC) at ($(A)!0.11!(C)$);
+  \coordinate (rCorner) at ($(rAB)+(rAC)-(A)$);
+  \draw (rAB)--(rCorner)--(rAC);
+
+  % 原题角标：alpha = angle CAD, beta = angle ABC。
+  \pic[draw,angle radius=0.28cm,angle eccentricity=2.7,"$\alpha$"]
+    {angle=D--A--C};
+  \pic[draw,angle radius=0.34cm,angle eccentricity=1.5,"$\beta$"]
+    {angle=C--B--A};
+
+  \node[above] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[below] at (D) {$D$};
+\end{tikzpicture}
