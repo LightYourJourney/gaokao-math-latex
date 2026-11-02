@@ -64,6 +64,14 @@
 - `_试题.md` 独立段落图链、确定性 `_含解析.md`、`questions.tex`/`answers.tex` 与 manifest `figure_files` 已同步；三图各登记两次引用。首次在刷新合并稿前同步导致生成器发现引用计数 1/2 不同，刷新合并稿后重同步至 2/2 并通过；同步顺序已写入 `docs/OCR_WORKFLOW.md`。manifest revision 当前为 6019。
 - 来源清单、问题清单、`solution_sources`、项目生成、简答及四版入口检查通过。正式 PDF 构建与逐页视觉验收、三角色 provenance 和批次闭环待后续阶段；Q18 `ISSUE-1355` 继续 open / `blocks_completion`，来源官方身份仍未核。
 
+
+### 2007 北京文科候选卷：三角色 provenance 导入（2026-11-03）
+
+- 为 Q1–Q20 导入 question-review、answer-solve、answer-review 三角色记录；question-review 结合独立题面复核和图稿复核，answer-solve 记录编者推导，answer-review 记录最终盲核结论。题面和答案摘要由 provenance 工具对当前规范源现场重算。
+- Q18 记录 `answer_evidence.grade=U` 并关联 `ISSUE-1355`；盲核与 U/PENDING 一致，故 `conflict_status=none`，不虚构 answer-conflict。官方答案仍为 null，来源官方身份未认证。
+- provenance transaction ID `a1953505-a933-4884-966d-6da17a39d4f3`，manifest revision `6019→6020`；batch 状态 `provenance_verified`，paper 因 Q18 blocker 保持 `blocked`。来源、issues、provenance、题解、项目、简答和四版入口检查均通过。详见 [三角色 provenance 报告](reports/2007-beijing-arts-provenance.md)。
+- 正式四版构建、PDF逐页视觉回执和批次收口仍待完成；本阶段只完成来源/答案角色证据导入，不表示整卷完成。
+
 ### 2006 重庆、陕西文理候选卷：第三次四版正式构建（2026-11-03）
 
 - attempt 03 四卷16版全部生成，169页 PDF；16版均为 succeeded，日志零编译错误、零缺字、零 overfull、零未定义引用。四卷 build receipts 按 manifest revision 6012 记录输入树、工具链、页数与 PDF SHA-256；构建后 manifest revision 6013。
