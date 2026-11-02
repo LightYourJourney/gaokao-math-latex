@@ -12814,3 +12814,11 @@
 - 在安徽批次 finalization 与全量报告更新后运行 `python3 -B -m unittest discover -s tests`：`Ran 1749 tests in 691.533s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，断言全库缓存状态与现场派生不一致，共 22 项；测试错误来自既有其他卷/批次的 currentness 漂移，不是安徽批次定向检查失败。
 - 22 项由 9 卷与 13 批组成：5 卷派生 `answers_verified`（1999 全国理科、2016 全国Ⅱ文科、2017 全国Ⅱ理科、2005 上海春季、2006 四川理科）；4 卷派生 `compiled`（2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；13 个批次派生 `provenance_verified`（phase2-b72、phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b11、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64）。未批量回写这些缓存状态。
 - 除上述 live cache 检查外，测试运行输出没有其他 unittest failure；中途 argparse 错误文本属于 CLI 非法参数测试夹具。该次测试不通过，不能报告全库测试通过。
+
+### phase2-b72 1999 全国卷理科：答案投影同步与四版复审收口（2026-11-02）
+
+- `generate_projects.py --all --check` 清单中的本卷仅 `answers.tex` 漂移：第 24 题一处行间公式定界符前后缩进空白；题面、答案和解析语义未改。生成器同步后，题目/答案投影、简答、四版入口壳及 25 题规范解析源检查通过。
+- 正式构建 attempt `a57f1fff-704a-42b0-83c3-486d76297466`，manifest revision `5849`；试题版 5 页、解析版 30 页、简答版 7 页、印刷版 23 页，四版均无编译错误、缺字、Overfull 或未定义引用。当前 build receipt 记录各版 PDF SHA。
+- 四版当前 attempt 共 65 页、520 项检查：422 pass、98 not_applicable、0 fail。主会话抽查纠正了试题/简答版第 3、5 页页眉误判（图上运行页眉和页脚均清楚完整）；印刷版末页复核为第 25 题的自然收尾，推导和两个答案框完整，无裁切或碰撞，末页留白记 pass。
+- `finalize-batch-checked` 返回 `FINALIZED`，`phase2-b72` 关闭，manifest revision `5851`；本卷四版 final/current build receipt、review、provenance、生成器、规范源、issue 与 manifest 定向检查通过。全量报告渲染/回读及 report check 通过，manifest CSV 775 行且 current。
+- `generate_projects.py --all --check` 仍报 23 个漂移目标、分布于 15 卷；未批量写入。上一轮全量单元测试发生在本批关闭前，不能作为 revision 5851 后的测试结论。本卷收口不代表长期语料完成。
