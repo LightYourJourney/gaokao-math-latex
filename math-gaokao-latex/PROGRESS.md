@@ -13287,3 +13287,10 @@
 - 构建收据 final/current 检查、review `check-batch`、provenance、solution sources、项目生成器、简答、版本壳、CSV（775 行）、source manifest 与 issue ledger 校验全部通过。来源发布者、出版者、版次、来源链和官方身份仍未核实；固定题面 PDF 不含答案，`official_answer` 继续为 null。内容包状态 complete 不代表来源认证。
 - 最终内容更新后重跑全量 unittest `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1754 tests in 550.376s`，`FAILED (failures=2, skipped=13)`。失败一为 `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：未改动的 `2017_全国Ⅰ卷_理科/answers.tex` 当前 SHA 与 adjudicated drift ledger 中的钉定 SHA 不符；失败二为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库 79 条历史 paper/batch 缓存状态与现场派生不一致。本批定向检查均通过；未批量修改这两类全库历史基线。
 - 分支卫生核对：`主工作树` 的 `main` 与 `origin/main` 同步且干净；本批正式输出只在 `仓库根` 的 `feat/gaokao-phase0`。本记录仅表示福建文科单卷批次收口，不表示长期语料完成。
+
+### 2006 辽宁文理候选卷：独立答案与解析、盲核复核（2026-11-03）
+
+- 文理两卷 Q1–Q22 的非官方独立答案要点与解析正文已分别写入对应规范源层。文科 Q21(2) 原页写“四边形 APCD”但未定义 P，答案保留 U/PENDING；Q21(1) 仍可答 $x_0=-1$。来源身份未知且官方答案仍为 null。
+- 两份独立盲解及对规范稿的独立复核仅保存在 ignored scratch。主会话逐题对照固定原页并重算分歧：文科 Q2 并集条件本身排除额外元素、答案为 4；Q6 四项全假；Q9 原图符号为平行并得 $C=\pi/3$；Q17、Q19、Q20、Q22 已复算。理科 Q8 焦距相等；Q17、Q18、Q19、Q21、Q22 已逐项校核，其中 Q21 面积条件给 $a=3\sqrt3,d=3$，Q22 在 $n=1$ 时右端为 1，不构成反例。
+- 题面/答案/解析 parser 各卷识别 22 题，小问编号对齐；内存调用 `render_combined` 成功。本阶段未写入派生含解析稿，未登记 paper/batch、issues 或 provenance，未画题图、生成 TeX、构建 PDF 或做页面验收。
+- 题面与阶段细节见 `reports/2006-liaoning-answer-solve.md`。下一步登记两卷 source/paper 与 phase2-b80，并为文科 Q21 建立 blocking issue；随后逐题 provenance 和题图阶段。本阶段不等于卷级闭环或长期语料完成。成本未知。
