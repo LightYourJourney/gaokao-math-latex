@@ -148,6 +148,8 @@ def convert_run(run: Dict[str, Any], manifest: Dict[str, Any]) -> Dict[str, Any]
         "engine": engine,
         "engine_version": engine_version,
         "candidate_text": output,
+        "model_evidence": metadata.get("model_evidence"),
+        "recognition_completion": metadata.get("completion"),
         "candidate_text_sha256": text_sha,
         "question_id": None,
         "assignment_status": "unassigned-page-level",

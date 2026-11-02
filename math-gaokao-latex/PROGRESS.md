@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 本机 OCR 部署与统一入口：环境、模型和规范阶段（2026-11-03）
+
+- 用户选定并授权部署 Xiaomi-OCR-0 首选、PaddleOCR-VL-1.6 交叉验证、MinerU 批量 PDF；要求完整流程验收后恢复转录。规范写入 `docs/OCR_WORKFLOW.md`，阶段计划见 `docs/OCR_DEPLOYMENT_PLAN.md`。
+- 三套独立环境/权重位于 ignored `.work/ocr-local/`。固定版本、原始模型仓库 revision、依赖和模型树指纹见 `tools/ocr-local-models.json`、`tools/ocr-locks/` 与 `benchmarks/ocr-local-assets.json`；实际模型文件合计约4.69 GB（不含环境/缓存）。Xiaomi 使用 Transformers 5.17.0 / Torch 2.14.0 / Python 3.13.18 / MPS，Paddle 使用 PaddleOCR 3.7.0 / PaddlePaddle 3.2.1 / Python 3.11.18 / CPU，MinerU 4.1.4 使用 Basic ONNX CPU。
+- `local_ocr.py doctor` 和 `deploy_local_ocr.py --verify-only` 均确认三套安装/权重与固定清单一致。1977 新疆理科原始固定扫描 PDF SHA 与 manifest 一致；同一公式裁片真实运行 Xiaomi 和 Paddle，输出分别为 `\\[x ^ {2} - 2 x + L g a = 0\\]` 与 `$$ x^{2}-2x+Lga=0 $$`。Xiaomi 首次模型加载47.40秒、识别22.46秒；Paddle冷启动总耗时46.46秒，未暴露停止/截断原因。原始执行记录与 source/crop/model 哈希见 `benchmarks/ocr-local-smoke.json`。这不是准确率测评，gold 仍待人工核定。
+- 新入口提供单图、已登记 PDF、批量 PDF、独立引擎交叉输出与既有页级候选 IR 对接；保持 `question_id=null` / `needs-review` / `not_verified`。加入输入、模型、环境、参数和 worker 指纹缓存、进程锁、超时/中断组清理、源 SHA/页码检查；未写入任何规范题稿或解除来源 blocker。
+- 独立代码审查指出中断可能遗留 worker 与 Python 版本未纳入身份，两项已修正并新增针对性回归。当前真实 PDF 整页/交叉/批处理接入验收正在进行，尚未放行恢复转录；后续单独记录端到端结果和失败边界。
+
 ### 2006 福建文科候选卷：固定来源接收（2026-11-02）
 
 - 固定候选 source `src-88a71372c96b05a58058a4446824a5aa14004ffa91901212088621a6b41d0346`，上游只读 PDF `gaokaomath-src/普通高考/2006/2006福建文.pdf`；现场 SHA-256 `8984913f8b9b4927361dc042f0d78b4ff9fe6b4b9b7b898d7184c1f4cea05432`、Git blob `c2b67b68498ac92eb9d864180678ca19725d42e8` 与 manifest 当前候选记录一致。source checkout HEAD 为 `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。

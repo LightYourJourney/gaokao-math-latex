@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-02T16:29:06.924157+00:00",
+  "host": {
+    "chip": "Apple M3",
+    "unified_memory_bytes": 17179869184,
+    "platform": "macOS arm64"
+  },
+  "input": {
+    "source_id": "src-605e4cd51a110ede8ab4edb9fc5aea099d44b1dd9cb8b9462a2ee3105110a734",
+    "source_sha256": "d6b42603b7f2ed9a8557d9d93ef9e5f08ae147f3d349145473229fabb183cb4e",
+    "source_page": 1,
+    "render_dpi": 150,
+    "bbox_pixels_top_left_xywh": [
+      441,
+      875,
+      179,
+      40
+    ],
+    "crop_scale": 4,
+    "crop_size_px": [
+      716,
+      160
+    ],
+    "crop_sha256": "1983dd2574542f68879541eec493fac5a249578ee5dd3b99c8bede2974a6ed8f"
+  },
+  "runs": {
+    "xiaomi": {
+      "output": "\\[x ^ {2} - 2 x + L g a = 0\\]",
+      "device": "mps",
+      "model_load_seconds": 47.401044,
+      "inference_seconds": 22.464456,
+      "generated_tokens": 20,
+      "truncated": false
+    },
+    "paddle": {
+      "ok": true,
+      "model": "PaddlePaddle/PaddleOCR-VL-1.6",
+      "pipeline_version": "v1.6",
+      "task": "formula",
+      "max_tokens": 256,
+      "device": "cpu",
+      "paddle_version": "3.2.1",
+      "paddleocr_version": "3.7.0",
+      "inference_seconds": 46.46,
+      "output": " $$ x^{2}-2x+Lga=0 $$ ",
+      "completion_status": "unknown",
+      "truncation_status": "not_exposed_by_official_pipeline_api"
+    }
+  },
+  "model_tree_sha256": {
+    "xiaomi": "a56facd25f7bfcc85db843f7dfca353ff3f0c4095974b7638f9ea23f97058210",
+    "paddle": "8060c2c8c26bfdb9e84105951390c5792bdf2208b70749479d3bb9fd30ff6c5e",
+    "mineru": "9c8592fda806b08b4789d83cf3d92bcba06bef5057fc71e29e91c9b7ee3630aa"
+  },
+  "review_status": "needs-review",
+  "gold_status": "pending_human_review",
+  "accuracy_score": null,
+  "limitation": "One shared formula crop is a functional smoke check, not an accuracy benchmark. Paddle completion reason is not exposed. Whole-page and batch acceptance are recorded separately."
+}

@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "engines": {
+    "xiaomi": {
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "54f2dbecfe9aa354da5a568ec555f2ca5c2d9b06ec2c8cd54b882af516625d46",
+          "bytes": 24683
+        },
+        {
+          "path": "chat_template.jinja",
+          "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+          "bytes": 7755
+        },
+        {
+          "path": "config.json",
+          "sha256": "2eb95982069a24336fe66b3a0869ea5a711aba7566787d4a599654907ecc070c",
+          "bytes": 2747
+        },
+        {
+          "path": "model.safetensors",
+          "sha256": "d4551e9f6127ac9e35cff7b4f7a72a90410e03e6c8676a36f0e2b7eaeb5d5348",
+          "bytes": 1746937856
+        },
+        {
+          "path": "processor_config.json",
+          "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+          "bytes": 1191
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+          "bytes": 19989325
+        },
+        {
+          "path": "tokenizer_config.json",
+          "sha256": "792fa3f0cb88b111e54ef3134c873531008c4df471d108da17903426e308aa7b",
+          "bytes": 1165
+        }
+      ],
+      "total_bytes": 1766964722,
+      "model_tree_sha256": "a56facd25f7bfcc85db843f7dfca353ff3f0c4095974b7638f9ea23f97058210",
+      "downloads": [
+        {
+          "repo_id": "xiaomi-research/Xiaomi-OCR-0",
+          "revision": "bbd8cf8d21f256b3644b44cb860f3a7cecb93c30",
+          "local_dir": ".work/ocr-local/xiaomi/model",
+          "allow_patterns": [
+            "*.json",
+            "*.safetensors",
+            "*.jinja",
+            "*.txt",
+            "*.model",
+            "README.md",
+            "LICENSE*"
+          ]
+        }
+      ]
+    },
+    "paddle": {
+      "files": [
+        {
+          "path": "PP-DocLayoutV3/README.md",
+          "sha256": "08b60d8d7a14ddfbe29bcef9e2c2c75bf012bb0412f4e41a2bdfe5687a741dc7",
+          "bytes": 12092
+        },
+        {
+          "path": "PP-DocLayoutV3/inference.json",
+          "sha256": "2b68367c5b312a03de5a6e1642c597c8f95165a7e40cd59c6700cf4a5042f4fd",
+          "bytes": 1196890
+        },
+        {
+          "path": "PP-DocLayoutV3/inference.pdiparams",
+          "sha256": "70bd316b0582769ec968829fd1feb1a6a58b7c941b938327e551b6b12b45c137",
+          "bytes": 130806572
+        },
+        {
+          "path": "PP-DocLayoutV3/inference.yml",
+          "sha256": "506fcfac13b3b546ae40d7886b44126420f392adb694e3f8bb6a6286a1f90fdc",
+          "bytes": 1482
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/LICENSE",
+          "sha256": "b8c4d7deccd236af023af1c88c4d4e8f0fc2f41914e0fb23a3ec9678fb5a8456",
+          "bytes": 11376
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/README.md",
+          "sha256": "d6c5b77a660577f6e18021defccd835bdc93a8c6538f5a479d597f3e94288abf",
+          "bytes": 21424
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/added_tokens.json",
+          "sha256": "f59f889088e0fe21c523e7cf121bb6dca3b0bb148cb7159fbb4572c74dfc5644",
+          "bytes": 25381
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/chat_template.jinja",
+          "sha256": "2f27812dab7f333e471884e0c803d807f11953d5453140dfb1aaba234f872bc8",
+          "bytes": 1474
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/config.json",
+          "sha256": "ce7f4565f8b1db78532ad5d1b9ebe55c2139d49bd4cb04778b580a08a598f171",
+          "bytes": 2059
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/configuration_paddleocr_vl.py",
+          "sha256": "753dd93654c3a9c8c85a3eaee1e3092dd12591b0f2dce0305e1abfb7a41ff160",
+          "bytes": 8104
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/generation_config.json",
+          "sha256": "a6701d78ab3b4d972307cdec3b69d4c13f46e0d5140514f50ab7d84259324b94",
+          "bytes": 133
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/image_processing_paddleocr_vl.py",
+          "sha256": "a4fa521b9cb16e207f94b7f2d16427771776dfc634420d319fc4916ee58049ec",
+          "bytes": 25032
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/inference.yml",
+          "sha256": "1587aece2d6442366efce34161d5f7d5f67f09ebfbf043168e5fade892c2780e",
+          "bytes": 43
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/model.safetensors",
+          "sha256": "85a479d506a11e724e7285d395c551be69f41dbc16b6342d3cacfb189aed71db",
+          "bytes": 1917255968
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/modeling_paddleocr_vl.py",
+          "sha256": "c5013dff57ca8b87dc1de64d0fd839a44313de09d230a4fb2d08289d2cad5111",
+          "bytes": 103889
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/preprocessor_config.json",
+          "sha256": "111872ab1e8bb7fd040ac5087bfced7ab8f011f02139b088cba294964c3b1d0e",
+          "bytes": 641
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/processing_paddleocr_vl.py",
+          "sha256": "e29cb1e5f275f2bd3ce051bd5c9983a33894e693b2823a0e13d4c07c8c4f9e13",
+          "bytes": 12253
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/processor_config.json",
+          "sha256": "1568858960a9760c54431dae693a6152e601ff55cdf6d2eab97a4a99958faea0",
+          "bytes": 137
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/special_tokens_map.json",
+          "sha256": "d3a125c03103deb2acaf7730791bdbbf196f620e5a2213b664511ff9b4b25bab",
+          "bytes": 1151
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/tokenizer.json",
+          "sha256": "c8a215a59183d0d0781adc33bacd3ce6162716f7fd568fb30234a74d69803a7d",
+          "bytes": 11189060
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/tokenizer.model",
+          "sha256": "34ef7db83df785924fb83d7b887b6e822a031c56e15cff40aaf9b982988180df",
+          "bytes": 1614363
+        },
+        {
+          "path": "PaddleOCR-VL-1.6/tokenizer_config.json",
+          "sha256": "1f979337347cc0cb72a6282d8a23ed183539aa81a87a906f022aee2bab83c7c5",
+          "bytes": 186947
+        }
+      ],
+      "total_bytes": 2062476471,
+      "model_tree_sha256": "8060c2c8c26bfdb9e84105951390c5792bdf2208b70749479d3bb9fd30ff6c5e",
+      "downloads": [
+        {
+          "repo_id": "PaddlePaddle/PaddleOCR-VL-1.6",
+          "revision": "c5630abae1d940eafe0697512a0325494b02ab42",
+          "local_dir": ".work/ocr-local/paddle/models/PaddleOCR-VL-1.6",
+          "allow_patterns": [
+            "*"
+          ]
+        },
+        {
+          "repo_id": "PaddlePaddle/PP-DocLayoutV3",
+          "revision": "241f8bdfc77a7c7bee915a5057aaee58c235a8d3",
+          "local_dir": ".work/ocr-local/paddle/models/PP-DocLayoutV3",
+          "allow_patterns": [
+            "README.md",
+            "inference.json",
+            "inference.pdiparams",
+            "inference.yml"
+          ]
+        }
+      ]
+    },
+    "mineru": {
+      "files": [
+        {
+          "path": "Layout/PP-DocLayoutV2/inference.onnx",
+          "sha256": "cd540dc296ff3115fe78efa65b68501e6a8dc74b198acc9834a725ffaa095aac",
+          "bytes": 213963712
+        },
+        {
+          "path": "Layout/PP-DocLayoutV2/inference.yml",
+          "sha256": "93100e0fb2cd76b9d246a853deea85e191d8333b2cfca7be76e82e4c4ebfa819",
+          "bytes": 1482
+        },
+        {
+          "path": "MFR/pp_formulanet_plus_m/PP-FormulaNet_plus-M.onnx",
+          "sha256": "20a32595c2b30282dcd069e6295e9fad96115697beb66acb9b681b814006d193",
+          "bytes": 591263297
+        },
+        {
+          "path": "MFR/pp_formulanet_plus_m/PP-FormulaNet_plus-M_inference.yml",
+          "sha256": "87b5f3d7f2b2fe553627d77b37f496608ca150ebd0ef62d362591edca47b5538",
+          "bytes": 2244564
+        },
+        {
+          "path": "OCR/paddleocr/ch_PP-OCRv6_small_rec_infer.onnx",
+          "sha256": "5435fd747c9e0efe15a96d0b378d5bd157e9492ed8fd80edf08f30d02fa24634",
+          "bytes": 21159378
+        },
+        {
+          "path": "OCR/paddleocr/ch_PP-OCRv6_small_rec_inference.yml",
+          "sha256": "c0541b06832948d7d3052e9ac6b572c6063d79ecd800493f4ec14d1b901c16d7",
+          "bytes": 150752
+        },
+        {
+          "path": "OCR/paddleocr/ch_PP-OCRv6_tiny_det_infer.onnx",
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "bytes": 1780590
+        },
+        {
+          "path": "OCR/paddleocr/ch_PP-OCRv6_tiny_det_inference.yml",
+          "sha256": "a1fa68ab31e29252936328e728633180908f997023d9eacb81f175e326676554",
+          "bytes": 1068
+        },
+        {
+          "path": "OCR/paddleocr/seal_PP-OCRv4_det_infer.onnx",
+          "sha256": "3e190df84542c2756975febe8f73603b587a23c7f7badfdd3fc8a986540d5bc0",
+          "bytes": 4769171
+        },
+        {
+          "path": "OCR/paddleocr/seal_PP-OCRv4_det_inference.yml",
+          "sha256": "e5b8dd5a727602bdd526d9db152cc767bc761198c453460df7c8f7ae59d2ea3c",
+          "bytes": 711
+        },
+        {
+          "path": "Table/PP-LCNet_x1_0_table_cls.onnx",
+          "sha256": "c84bf1d79c1c74d534b5b12adb14dd12151c42f7ae3e4be4f1042b830f80b949",
+          "bytes": 6776877
+        },
+        {
+          "path": "Table/slanet-plus.onnx",
+          "sha256": "d57a942af6a2f57d6a4a0372573c696a2379bf5857c45e2ac69993f3b334514b",
+          "bytes": 7758305
+        },
+        {
+          "path": "Table/unet.onnx",
+          "sha256": "0ea48d3a17e35ef5c2e498a5e799566073234d39b1079ca21d9f4fafe73c6d20",
+          "bytes": 8335007
+        }
+      ],
+      "total_bytes": 858204914,
+      "model_tree_sha256": "9c8592fda806b08b4789d83cf3d92bcba06bef5057fc71e29e91c9b7ee3630aa",
+      "downloads": [
+        {
+          "repo_id": "opendatalab/MinerU-4_models_onnx",
+          "revision": "358310b4f64b95f9fefc372ad899356e4111f376",
+          "local_dir": ".work/ocr-local/mineru/mineru-home/models/MinerU-4_models_onnx",
+          "allow_patterns": [
+            "Layout/PP-DocLayoutV2/inference.onnx",
+            "Layout/PP-DocLayoutV2/inference.yml",
+            "MFR/pp_formulanet_plus_m/PP-FormulaNet_plus-M.onnx",
+            "MFR/pp_formulanet_plus_m/PP-FormulaNet_plus-M_inference.yml",
+            "OCR/paddleocr/ch_PP-OCRv6_small_rec_infer.onnx",
+            "OCR/paddleocr/ch_PP-OCRv6_small_rec_inference.yml",
+            "OCR/paddleocr/ch_PP-OCRv6_tiny_det_infer.onnx",
+            "OCR/paddleocr/ch_PP-OCRv6_tiny_det_inference.yml",
+            "OCR/paddleocr/seal_PP-OCRv4_det_infer.onnx",
+            "OCR/paddleocr/seal_PP-OCRv4_det_inference.yml",
+            "Table/PP-LCNet_x1_0_table_cls.onnx",
+            "Table/slanet-plus.onnx",
+            "Table/unet.onnx"
+          ]
+        }
+      ]
+    }
+  }
+}
