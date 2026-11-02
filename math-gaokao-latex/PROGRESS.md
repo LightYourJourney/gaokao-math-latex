@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 辽宁文理候选卷：固定来源接收（2026-11-03）
+
+- 固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 下的 2006 辽宁文、理 PDF，source ID 分别为 `src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3` 与 `src-db3cbfe3d2c96ec3cbe88c45ad7986cf79f4899fd76a3a73b7c64721f0e67569`。现场 SHA 与 Git blob 均匹配 manifest。两卷各 22 题；文科 PDF 印刷页 310–311、图位 Q15/Q19，理科印刷页 308–309、图位 Q18。
+- 四页原件均有可用文字层；两卷第1页被分析为 `review`（各28个可疑字符），第2页为 `text_candidate`。四页均已渲染并目视，暂不调用 OCR 模型，后续人工转录须对可疑公式和符号回看原页。三套本机模型 doctor 均为 ready，但这不是本批次模型推理证据。
+- 仅完成候选来源接收、题签/页码/题数/图位及文件指纹核对。source 尚未绑定 paper；发布者、出版者、版次、来源链与官方身份均未认证。未转录、未登记 paper/batch、未改 manifest 或 issues。细节见 `reports/2006-liaoning-source-intake.md`；下一步独立转录两卷 Q1–Q22 并对原页逐题核校。成本未知。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
