@@ -232,6 +232,14 @@ def render_outputs(facts: Mapping[str, Any]) -> Dict[str, str]:
         OUTPUT_TARGETS[4]: "# 高考数学 2017—2026\n\n## 题库工程状态\n\n" + summary + "本目录保存 2017—2026 年转录与来源材料；统一 LaTeX 项目目录及完整批次清单位于相邻的 `math-gaokao-latex/`。\n",
         OUTPUT_TARGETS[5]: "# 高考数学 LaTeX 全量状态快照\n\n" + summary + "## 批次明细\n\n" + batches,
     }
+    bodies[OUTPUT_TARGETS[3]] += (
+        "\n### 本地 OCR 与转录规范\n\n"
+        "部署、模型下载、路由、交叉核对、人工校对和阶段提交统一遵循 "
+        "[OCR_WORKFLOW.md](docs/OCR_WORKFLOW.md)。首选 Xiaomi-OCR-0，"
+        "复杂文档与公式用 PaddleOCR-VL-1.6 交叉验证，批量 PDF 使用 MinerU。"
+        "统一入口为 `python3 tools/local_ocr.py --help`；"
+        "模型与依赖固定记录在 `tools/ocr-local-models.json`，运行资产放在忽略目录 `.work/ocr-local/`。\n"
+    )
     return {path: text if text.endswith("\n") else text + "\n" for path, text in bodies.items()}
 
 

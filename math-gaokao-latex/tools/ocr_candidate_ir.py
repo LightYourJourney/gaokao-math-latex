@@ -159,6 +159,8 @@ def convert_run(run: Dict[str, Any], manifest: Dict[str, Any]) -> Dict[str, Any]
         "mathematical_verification_status": "not_verified",
         "cost_evidence": {
             "cache_hit": metadata.get("cache_hit", run.get("cache_hit")),
+            "model_calls_this_run": metadata.get("model_calls_this_run"),
+            "elapsed_seconds_scope": metadata.get("elapsed_seconds_scope"),
             "render_cache_hit": run.get("render_cache_hit"),
             "elapsed_seconds": timing,
             "model_init_seconds": metadata.get("model_init_seconds"),

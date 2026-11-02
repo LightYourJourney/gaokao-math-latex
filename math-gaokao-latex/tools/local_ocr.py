@@ -92,7 +92,7 @@ def invoke(spec, image, *, task='document', max_tokens=4096, timeout=900, pages=
             record = load(cache)
             body = record['body']
             if body['key'] == key and record['sha256'] == hashlib.sha256(analyze_pdf.canonical(body).encode()).hexdigest():
-                return dict(body['result'], cache_hit=True)
+                return dict(body['result'], cache_hit=True, model_calls_this_run=0)
         except (ValueError, KeyError, TypeError):
             pass
     with tempfile.TemporaryDirectory(prefix='ocr-worker-') as directory:
@@ -153,7 +153,7 @@ def invoke(spec, image, *, task='document', max_tokens=4096, timeout=900, pages=
         result['elapsed_seconds'] = round(time.monotonic()-started, 6)
         body = {'key': key, 'result': result}
         save(cache, {'body': body, 'sha256': hashlib.sha256(analyze_pdf.canonical(body).encode()).hexdigest()})
-        return dict(result, cache_hit=False)
+        return dict(result, cache_hit=False, model_calls_this_run=1)
 
 
 def make_run(spec, result, metadata):
@@ -168,6 +168,8 @@ def make_run(spec, result, metadata):
                          'output_sha256': hashlib.sha256(output.encode()).hexdigest(),
                          'elapsed_seconds': result.get('elapsed_seconds'),
                          'cache_hit': result.get('cache_hit'), 'device': result.get('device'),
+                         'model_calls_this_run': result.get('model_calls_this_run'),
+                         'elapsed_seconds_scope': 'recorded_worker_execution_including_startup',
                          'completion': {k: result.get(k) for k in
                                         ('truncated', 'completion_status', 'truncation_status', 'generated_tokens')}}}
 

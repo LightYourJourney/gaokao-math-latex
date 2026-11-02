@@ -1,5 +1,7 @@
 """Routing, integrity and error boundaries; no model downloads or inference."""
 import hashlib
+import contextlib
+import io
 import json
 import os
 from pathlib import Path
@@ -48,6 +50,8 @@ Path(a.output).write_text(json.dumps({'output':'candidate '+a.max_tokens}))
         changed = ocr.invoke(self.spec, self.image, max_tokens=32)
         self.assertFalse(first['cache_hit'])
         self.assertTrue(second['cache_hit'])
+        self.assertEqual(first['model_calls_this_run'], 1)
+        self.assertEqual(second['model_calls_this_run'], 0)
         self.assertFalse(changed['cache_hit'])
         self.assertEqual(changed['output'], 'candidate 32')
 
@@ -167,6 +171,35 @@ a=p.parse_args();Path(a.output).write_text(json.dumps({'pages':[{'page':1,'outpu
 ''')
         with self.assertRaisesRegex(ValueError, 'source page'):
             ocr.invoke(self.spec, self.image, pages=[2])
+
+    def test_cli_never_overwrites_its_input(self):
+        before = self.image.read_bytes()
+        with contextlib.redirect_stderr(io.StringIO()):
+            code = ocr.main(['image', str(self.image), '--output', str(self.image)])
+        self.assertEqual(code, 1)
+        self.assertEqual(self.image.read_bytes(), before)
+
+    def test_batch_retains_success_after_a_failed_job_and_returns_failure(self):
+        jobs = self.root/'jobs.json'
+        jobs.write_text(json.dumps([{'pdf':'a.pdf','source_id':'a'}, {'pdf':'b.pdf','source_id':'b'}]))
+        output = self.root/'result.json'
+        with patch.object(ocr, 'process_pdf', side_effect=[ValueError('source mismatch'), {'candidates': []}]):
+            code = ocr.main(['batch', str(jobs), '--output', str(output)])
+        self.assertEqual(code, 1)
+        self.assertEqual([r['status'] for r in json.loads(output.read_text())['jobs']], ['failed','succeeded'])
+
+    def test_matching_cross_engine_outputs_still_require_review(self):
+        manifest = self.manifest()
+        analysis = {'page_count':2, 'pages':[
+            {'page':2,'classification':'needs_ocr_or_blank','content_evidence':'raster_only'}]}
+        with patch.object(ocr.analyze_pdf,'analyze',return_value=analysis), \
+             patch.object(ocr,'engine_config',side_effect=lambda name, config: dict(self.spec,engine_name=name)), \
+             patch.object(ocr.ocr_pdf,'_executable',return_value=({'path':'pdftoppm'},'version')), \
+             patch.object(ocr.ocr_pdf,'render_page',return_value=(self.image,(300,400),False,None)):
+            result = ocr.process_pdf(self.pdf,'source',manifest=manifest,cross_check=True)
+        self.assertEqual([r['engine'] for r in result['runs']], ['xiaomi','paddle'])
+        self.assertTrue(result['comparisons'][0]['exact_match'])
+        self.assertTrue(all(c['review_status']=='needs-review' and c['question_id'] is None for c in result['candidates']))
 
 
 if __name__ == '__main__':

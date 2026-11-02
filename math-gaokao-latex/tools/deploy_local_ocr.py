@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from local_ocr import CONFIG, ROOT, engine_config
+from local_ocr import CONFIG, ROOT, engine_config, model_tree
 
 
 def main():
@@ -30,11 +30,16 @@ def main():
             subprocess.run(install, check=True)
             env = dict(os.environ, HF_HOME=str(ROOT/'.work/ocr-local'/name/'hf-cache'))
             env.pop('HF_HUB_OFFLINE', None)
+            if (ROOT/spec['model_dir']).is_dir() and model_tree(ROOT/spec['model_dir']) == spec['model_tree_sha256']:
+                print(f'{name}: existing model assets match the pinned content; no download needed')
+                sources = []
+            else:
+                sources = spec['downloads']
             code = ('import json,sys; from huggingface_hub import snapshot_download; '
                     'd=json.loads(sys.argv[1]); '
                     'snapshot_download(d["repo_id"], revision=d["revision"], '
                     'local_dir=d["local_dir"], allow_patterns=d["allow_patterns"],max_workers=2)')
-            for source in spec['downloads']:
+            for source in sources:
                 source = dict(source, local_dir=str(ROOT/source['local_dir']))
                 subprocess.run([str(python), '-c', code, json.dumps(source)], check=True, env=env)
         verified = engine_config(name)
