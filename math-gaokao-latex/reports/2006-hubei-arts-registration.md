@@ -14,4 +14,4 @@
 
 题面、答案要点、解析正文的 frontmatter 已绑定新的 paper ID，含解析稿由 `solution_sources.render_combined` 重新生成。`source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`manifest_csv.py --check` 和 `solution_sources.py check-batch --batch phase1-b73` 均通过；CSV 投影为775行。
 
-本阶段尚无逐题三角色 provenance、Q18 TikZ 图、项目 TeX、正式构建或视觉验收。下阶段先绘制并复核 Q18 图，随后补齐 provenance 与项目装配；Q12 blocker 继续阻断卷级完成。本阶段不表示来源认证、卷级验收或长期语料库完成。
+登记后已完成 Q18 TikZ 图稿阶段，见 `2006-hubei-arts-q18-figure.md`；逐题三角色 provenance、项目 TeX、正式构建与视觉验收仍未完成。Q12 blocker 继续阻断卷级完成。本阶段不表示来源认证、卷级验收或长期语料库完成。
