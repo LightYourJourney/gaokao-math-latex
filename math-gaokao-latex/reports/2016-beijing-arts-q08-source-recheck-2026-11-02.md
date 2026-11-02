@@ -27,3 +27,9 @@
 
 - 通过已启用的 Chrome CDP 新建后台标签，对精确短语 `site:bjeea.cn "学生进入30 秒跳绳决赛"` 做发现性查询，Google 未返回北京教育考试院结果；对 `site:web.archive.org/web/ site:bjeea.cn 2016 北京 数学 文科 试题` 也未返回可读档案线索。普通精确题干查询仍返回第三方 PDF 与二手解析。
 - 搜索引擎无结果只表示本次索引查询未发现可用链接，不证明原卷或勘误不存在；这些结果不是官方来源证据，也不改变官方归档分析的证据边界。未取得新的原卷、答案键或勘误，故 `ISSUE-1005` 维持 open / blocks_completion，答案继续 `U` / `needs-review`。
+
+## 官方报归档目录范围复查（2026-11-02）
+
+- 为避免只依赖站内搜索或搜索引擎索引，使用互联网档案馆 CDX 查询北京考试院“北京考试报·高考版”2016 年 6 月归档 URL：[`CDX 目录查询`](https://web.archive.org/cdx/search/cdx?url=www.bjeea.cn%2Fhtml%2Fksb%2Fgaozhaozhuanban%2F2016%2F06%2A&output=json&fl=original,timestamp,statuscode&filter=statuscode%3A200&collapse=urlkey)。2016-06-15 目录覆盖 23 篇文章；逐篇提取标题与正文后，数学相关项仍只有已核的《对数学卷（文、理科）的初步分析》（62329）和《2016年高考数学北京卷试题解析》（62330），没有原卷、答案键或勘误。其余文章标题为招生、考试及其他学科内容。
+- 对 2016-06-22 目录的 27 篇归档文章定向匹配“跳绳、30秒、第8题、第八题、数学北京卷、勘误、试题答案”等词，未发现相关命中。该关键词匹配只说明这批归档页未出现可检出的相关文本，不证明其他官方材料不存在。
+- 本轮未取得可补足跳绳决赛人数的官方原卷、答案键或勘误；第三方 B 与条件推导 D 的冲突仍不能裁决。`ISSUE-1005` 继续 open / `blocks_completion`，第 8 题继续 `U` / `needs-review`；未改题面、答案、解析、provenance、manifest 或构建/视觉回执。
