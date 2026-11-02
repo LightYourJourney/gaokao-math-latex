@@ -12836,3 +12836,9 @@
 - 当前 attempt 共 42 页、336 项视觉检查：268 pass、68 not_applicable、0 fail。解析版第 18 页单独留有第 22 题（3）答案框，印刷版第 14 页留有同题（2）（3）两个答案框；两页当前 PNG 均直接复核，并有旧正式回执对相同末页形态的具体接受记录，按已接受「孤儿尾框」记 pass，不扩大为一般空白豁免。
 - `finalize-batch-checked` 返回 `FINALIZED`，`phase4-b11` 关闭，manifest revision `5854`；本卷 final/current build、review、provenance、生成器、规范源、issues 与 manifest 定向检查通过。全量报告渲染/回读和 report check 均通过；manifest CSV 775 行且 current。
 - 全库生成漂移尚有 22 个目标、分布于 14 卷；未批量写入。revision `5854` 后的完整单元测试待运行；本卷收口不代表长期语料完成。
+
+### phase4-b11 收口后全量测试结果（2026-11-02）
+
+- 在 2005 春季上海卷 finalization 与报告/CSV 校验后运行 `python3 -B -m unittest discover -s tests`：`Ran 1749 tests in 593.100s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`；全库尚有 18 项缓存状态差异，phase4-b11 与该卷已不在差异中。
+- 18 项来自 7 卷与 11 批：3 卷派生 `answers_verified`（2016 全国Ⅱ文科、2017 全国Ⅱ理科、2006 四川理科）；4 卷派生 `compiled`（2017 全国Ⅲ文科、2017 北京文理、2017 天津文科）；11 个批次派生 `provenance_verified`（phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08、phase1-b64）。不批量回写这些状态。
+- 其他 unittest 未报告失败；中途 CLI 参数错误与临时 fixture 输出属于预期负向测试。全库测试未通过，唯一失败为以上 currentness 差异。
