@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
+
+- `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
+- 四版共51页×8项检查：377 pass、31个无图页 `figure_label=not_applicable`，0 fail、0 pending；48页通过同版本同页 PNG SHA-256 相同继承此前实际目检，3个变化页重新查看。0警告豁免、0视觉问题、0阻塞问题。Q10答案框现与推导同页。
+- `source_manifest validate`、`issues validate`、`solution_sources check-batch`、`provenance check-batch`、`build_projects validate-receipts --require-final --require-current-inputs`、`review_receipts check-batch`、`manifest_csv --check` 与 `report.py check --all` 均通过；全库报告投影已按 revision 5982 刷新。
+- 本批次的题面、答案、解析转录与四版构建/视觉门禁已闭环；这不认证固定候选 PDF 的发布者、出版者、版次、来源链或答案官方身份，`official_answer=null`。成本未知。详见 `reports/phase1-b77.md`。
+
 ### 2006 福建理科候选卷：Q10 分页修订后重建（phase1-b77，2026-11-03）
 
 - 正式重建 attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7`，输入 manifest revision `5980`，结果事务 revision `5981`。试题版5页、解析版21页、简答版7页、印刷版18页，四版 succeeded、0 构建警告，共51页；SHA 与校验详情见 `reports/2006-fujian-science-rebuild.md`。
