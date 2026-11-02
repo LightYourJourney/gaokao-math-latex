@@ -1,7 +1,7 @@
 # 2006 重庆文科候选卷：固定来源接收
 
 - 日期：2026-11-03。
-- 固定候选 source：`src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe367938f1f187729e5`。
+- 固定候选 source：`src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5`。
 - 清单路径：`普通高考/2006/2006重庆文.pdf`。
 - 只读来源仓：`gaokaomath-src`；核对时 HEAD 为 `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，工作区状态为 `main...origin/main` 且无改动。
 - PDF SHA-256：`fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e`；Git blob：`5859ce734213873592927f067a30ce9761d10f07`；大小：521957 bytes；页数：2。

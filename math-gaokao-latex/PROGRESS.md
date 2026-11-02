@@ -4,11 +4,32 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆文科候选卷：Q1–Q22 题面文字转录与原页复核（2026-11-03）
+
+- 据固定 source `src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5`（SHA-256 `fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e`）完成 22 题文字转录，写入 `2006/2006_数学真题_重庆文_试题.md`。PDF 印刷页286–287；选择 Q1–Q12、填空 Q13–Q16、解答 Q17–Q22。独立原页复核发现首轮题面候选 Q10 首项角误读，已按原页改为 `cos(α−β/2)`。
+- 依上游路径回查 manifest 后发现上一阶段重庆文科 source ID 少录了 `69` 两字符；本次将进度和来源接收报告统一更正为 `src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5`。PDF SHA-256 与 Git blob 未变化且再次核对匹配。
+- 题目解析器识别 22 题、题号连续。Q20、Q22 题图保留原页图位注释，尚未矢量重绘；答案、解析、provenance、paper/batch 登记及正式构建均未完成。发布者、出版者、版次、来源链和官方身份未核，`official_answer=null`。
+
+### 2006 重庆理科候选卷：Q1–Q22 题面文字转录与原页复核（2026-11-03）
+
+- 据固定 source `src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351`（SHA-256 `211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3`）完成 22 题文字转录，写入 `2006/2006_数学真题_重庆理_试题.md`。PDF 印刷页284–285；选择 Q1–Q10、填空 Q11–Q16、解答 Q17–Q22。原页逐题复核确认 Q09 四个图象选项中的 (B)–(D) 有虚线参考线，已记录于图位注释。Q20(1) 原印 `b²>4(a−1)`，函数定义参数为 b、c；照录可见字母 a 并标为原文存疑，不擅改为 c。
+- 题目解析器识别 22 题、题号连续。Q06、Q09、Q19、Q22 题图仍待矢量重绘；答案、解析、provenance、paper/batch 登记及正式构建均未完成。发布者、出版者、版次、来源链和官方身份未核，`official_answer=null`。
+
+### 2006 陕西文科候选卷：Q1–Q22 题面文字转录与原页复核（2026-11-03）
+
+- 据固定 source `src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec`（SHA-256 `ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221`）完成 22 题文字转录，写入 `2006/2006_数学真题_陕西文_试题.md`。PDF 印刷页326–327；选择 Q1–Q12、填空 Q13–Q16、解答 Q17–Q22。Q15 原文“甲和乙不同去”按原字照录，不替它解释选派关系。
+- 题目解析器识别 22 题、题号连续。Q19、Q21 题图待矢量重绘；答案、解析、provenance、paper/batch 登记及正式构建均未完成。发布者、出版者、版次、来源链和官方身份未核，`official_answer=null`。
+
+### 2006 陕西理科候选卷：Q1–Q22 题面文字转录与原页复核（2026-11-03）
+
+- 据固定 source `src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999`（SHA-256 `32093147448a616af26055d81831b7028e661e5138d8546f803a6c6a1a42bc43`）完成 22 题文字转录，写入 `2006/2006_数学真题_陕西理_试题.md`。PDF 印刷页324–325；选择 Q1–Q12、填空 Q13–Q16、解答 Q17–Q22。独立复核未发现 Q1–Q22 可见文字差异；Q16 原文“甲和乙不同去”照录，不作语义裁定。
+- 题目解析器识别 22 题、题号连续。Q19、Q21 题图待矢量重绘；答案、解析、provenance、paper/batch 登记及正式构建均未完成。发布者、出版者、版次、来源链和官方身份未核，`official_answer=null`。
+
 ### 2006 重庆、陕西文理候选卷：四份固定来源接收（2026-11-03）
 
-- 本阶段选取 manifest 中四份 `ready` 且尚未绑定 paper 的 2006 来源，并从只读 `gaokaomath-src` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 逐一核对原件。重庆文科 `src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe367938f1f187729e5`：SHA-256 `fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e`、blob `5859ce734213873592927f067a30ce9761d10f07`、521957 bytes、印刷页286–287；重庆理科 `src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351`：SHA-256 `211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3`、blob `105617a088307e1c0ed5835dd8b5574a204d5a25`、547070 bytes、印刷页284–285；陕西文科 `src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec`：SHA-256 `ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221`、blob `d6c030e20533617af42063a0418377799ef00c50`、504168 bytes、印刷页326–327；陕西理科 `src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999`：SHA-256 `32093147448a616af26055d81831b7028e661e5138d8546f803a6c6a1a42bc43`、blob `6d54ed804980dead46c822a2c3f5e231daced72b`、505173 bytes、印刷页324–325。四份对应报告：`reports/2006-chongqing-arts-source-intake.md`、`reports/2006-chongqing-science-source-intake.md`、`reports/2006-shaanxi-arts-source-intake.md`、`reports/2006-shaanxi-science-source-intake.md`。
+- 本阶段选取 manifest 中四份 `ready` 且尚未绑定 paper 的 2006 来源，并从只读 `gaokaomath-src` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 逐一核对原件。重庆文科 `src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe36769938f1f187729e5`：SHA-256 `fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e`、blob `5859ce734213873592927f067a30ce9761d10f07`、521957 bytes、印刷页286–287；重庆理科 `src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351`：SHA-256 `211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3`、blob `105617a088307e1c0ed5835dd8b5574a204d5a25`、547070 bytes、印刷页284–285；陕西文科 `src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec`：SHA-256 `ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221`、blob `d6c030e20533617af42063a0418377799ef00c50`、504168 bytes、印刷页326–327；陕西理科 `src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999`：SHA-256 `32093147448a616af26055d81831b7028e661e5138d8546f803a6c6a1a42bc43`、blob `6d54ed804980dead46c822a2c3f5e231daced72b`、505173 bytes、印刷页324–325。四份对应报告：`reports/2006-chongqing-arts-source-intake.md`、`reports/2006-chongqing-science-source-intake.md`、`reports/2006-shaanxi-arts-source-intake.md`、`reports/2006-shaanxi-science-source-intake.md`。
 - 四份均为2页A3题面 PDF，题签分别可读为 2006 重庆/陕西文理卷；每卷可见 Q1–Q22，原件未见答案、解析或评分页。四份现场 SHA、Git blob、大小和上游 commit 均与 manifest/接收记录相符。逐页 `analyze_pdf.py --no-cache --include-text` 显示所有页面均有文字层，模型与 OCR 调用均为0；重庆文科、陕西文理科第一页标记 `review`，其余页为 `text_candidate`，文字层仅作未核候选。原页已逐页渲染并检查题签、印刷页码、题号范围、题型和图位；未将图像对象计数为0误判成页面无图。
-- 本阶段新增四份来源接收报告和上述进度回执；未改 `source-manifest.json`、`missing-issues.md`、规范题面、答案、provenance 或登记 paper/batch。发布者、出版者、版次、复制/扫描来源链及官方身份未认证；OCR/API/模型成本未知。下一步由主代理依据四份接收记录登记 paper 与批次，再分别进入题面转录和原页逐题复核；本阶段不表示转录、解答或卷级验收完成。
+- 本阶段新增四份来源接收报告和上述进度回执；未改 `source-manifest.json`、`missing-issues.md`、规范题面、答案、provenance 或登记 paper/batch。发布者、出版者、版次、复制/扫描来源链及官方身份未认证；OCR/API/模型成本未知。后续先完成题面文字及题图源层；`register-papers` 入口要求 `_试题.md`、`_答案要点.md`、`_含解析.md` 均已存在，本阶段未有答案/解析事实源，故不写占位内容、不提前登记，待相应规范源和确定性输出具备后再事务登记。
 
 ### 2006 辽宁文理候选卷：固定来源接收（2026-11-03）
 
