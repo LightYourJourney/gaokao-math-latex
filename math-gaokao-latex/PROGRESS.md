@@ -10,6 +10,12 @@
 - 四页原件均有可用文字层；两卷第1页被分析为 `review`（各28个可疑字符），第2页为 `text_candidate`。四页均已渲染并目视，暂不调用 OCR 模型，后续人工转录须对可疑公式和符号回看原页。三套本机模型 doctor 均为 ready，但这不是本批次模型推理证据。
 - 仅完成候选来源接收、题签/页码/题数/图位及文件指纹核对。source 尚未绑定 paper；发布者、出版者、版次、来源链与官方身份均未认证。未转录、未登记 paper/batch、未改 manifest 或 issues。细节见 `reports/2006-liaoning-source-intake.md`；下一步独立转录两卷 Q1–Q22 并对原页逐题核校。成本未知。
 
+### 2006 辽宁文理候选卷：Q1–Q22 题面转录与原页复核（2026-11-03）
+
+- 文科、理科各 Q1–Q22 已写入 `2006/2006_数学真题_辽宁文_试题.md` 与 `2006/2006_数学真题_辽宁理_试题.md`。两份独立盲转录后由主代理对照固定 PDF 原页逐项核校；解析器各识别连续 22 题，题号和题型分区完整。
+- 原页核对纠正文科 Q9、Q19 及理科 Q6 的平行关系符号，并纠正理科 Q22 分母导数 $f'_{k-1}(1)$。文科 Q21（2）原页印作 APCD、P 未定义，照录并保留待核 blocker；题图待矢量重绘。
+- 两卷均尚未登记 paper/batch、答案、解析、逐题 provenance 或项目 TeX；发布者/版次/来源链和官方身份仍未核，`official_answer=null`。题稿 parser、diff check 与阶段细节见 `reports/2006-liaoning-question-transcription.md`。未调用 OCR 模型或付费 API，成本未知；本阶段不是卷级验收或长期语料库完成。
+
 ### 2006 福建理科候选卷：四版视觉审查与批次闭环（phase1-b77，2026-11-03）
 
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，batch `closed`，manifest revision `5982`；build attempt `20ccbb69-b92e-4820-9276-929a9e02e4e7` 状态 `succeeded`，正式 review receipt 为 `passed` 并与其绑定。批次报告为 `reports/phase1-b77.md`。
