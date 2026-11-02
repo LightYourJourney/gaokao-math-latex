@@ -22317,3 +22317,20 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1333
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第1页 Q12 只给每人出现发热反应的边缘概率0.80和人数5，未声明个体反应相互独立或给出联合模型。完全同动且边缘概率均为0.80时，至少3人发热的概率为0.80；独立模型下为0.94208，精确到0.01为0.94。故边缘概率不足以唯一确定题目所求，答案保持U/PENDING；0.94仅为独立假设下条件值。",
+  "fingerprint": "5e5047efe733503125a26a82ccd7f8ac4a2eb67cd18607bcdab7e14fa3546026",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2006-regular-hubei-arts",
+  "question_id": "gk-2006-regular-hubei-arts-q12",
+  "resume_action": "取得可追溯的明确独立性条件、正式答案/勘误或其他可裁定材料；此前保持Q12为U/PENDING，不把二项独立假设当作原题条件。",
+  "source_id": "src-af4cc84c7c2f6c2c1ed0bef598d5a51f57d65a1b25926d7a02631cc6c5387d75",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

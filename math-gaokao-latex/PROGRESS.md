@@ -22,6 +22,12 @@
 - Q12 未明示五人发热反应相互独立。完全同动且边缘概率0.80时所求概率0.80；独立模型下为0.94208，按题目精度为0.94。现将 Q12 记为 U/PENDING，0.94 仅作独立假设下条件值；下阶段通过注册事务把它加入问题总账并阻断完成。
 - 规范答案、解析正文及 `solution_sources.render_combined` 生成的含解析稿均识别21题；题面/答案/解析小问锚点对齐，针对性结构校验通过。暂未登记 paper/batch/issue、逐题 provenance、Q18 图稿、项目 TeX、PDF 构建或视觉验收。详情见 `reports/2006-hubei-arts-independent-solutions.md`；本阶段不表示本卷完成或长期语料库完成。
 
+### 2006 湖北文科候选卷：paper/source 登记与 Q12 blocker 入账（2026-11-02）
+
+- `register-papers` 登记 `gk-2006-regular-hubei-arts` / `phase1-b73`，固定 source `src-af4cc84c7c2f6c2c1ed0bef598d5a51f57d65a1b25926d7a02631cc6c5387d75` 内部绑定为 canonical；manifest revision `5930→5931`。该绑定不认证发布者、版次、来源链或官方身份，`official_answer=null`。
+- 注册事务同时写入 `ISSUE-1333`：Q12 缺少五人反应联合模型，答案保持 U/PENDING；0.94 仅在相互独立假设下成立。paper 为 `blocked`（blocked_from `planned`），batch `phase1-b73` 为 `planned`。
+- 更新题面、答案、解析正文 paper ID 并重生成含解析稿；`source_manifest.py validate`、issue ledger 校验、`manifest_csv.py --check`（775行）及 `solution_sources.py check-batch --batch phase1-b73` 均通过。Q18 图稿、逐题 provenance、项目 TeX、构建及视觉审查未完成。详见 `reports/2006-hubei-arts-registration.md`；本阶段不表示卷级或长期语料完成。
+
 ### 1999 广东卷：固定来源初查（2026-11-02）
 
 - canonical worktree `feat/gaokao-phase0` 中已有候选 source `src-3ad60523830b820fe8f81c5fdba2bda567b74a0b40597731f417050de3b7c019`，固定上游 `普通高考/1999/1999广东.pdf`，SHA-256 `4b06d14df005ea33c6661282ba2afc4adbab26d33d15590f823b7adc5000f05d`，Git blob `f63a116f58acd4eedf57769b146f1a17038da643`，13 页，印刷页 155–167。上游文件和 manifest 指纹逐项吻合；文本层无可用字符，需目视扫描页转录。
