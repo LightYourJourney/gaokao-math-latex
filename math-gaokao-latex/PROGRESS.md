@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：四份固定来源接收（2026-11-03）
+
+- 本阶段选取 manifest 中四份 `ready` 且尚未绑定 paper 的 2006 来源，并从只读 `gaokaomath-src` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 逐一核对原件。重庆文科 `src-bfaf1f0ca2f3b8edd4a2455d39b464722513d2bb05efe367938f1f187729e5`：SHA-256 `fca2f5abda4a5e4982176417bf2f33b6b248847bffb0dcd09ae089c4f6a85b6e`、blob `5859ce734213873592927f067a30ce9761d10f07`、521957 bytes、印刷页286–287；重庆理科 `src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351`：SHA-256 `211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3`、blob `105617a088307e1c0ed5835dd8b5574a204d5a25`、547070 bytes、印刷页284–285；陕西文科 `src-d3bb569fc2c589e075c748b1494aaadeaae67bbe0e3926306e123e08de2a5fec`：SHA-256 `ef53636f75f8cef48067ff22478f699a5ac7d3dee4a42f06e01e640bc906d221`、blob `d6c030e20533617af42063a0418377799ef00c50`、504168 bytes、印刷页326–327；陕西理科 `src-6914e1c400640e0c3ef3785cb187876891213e18557a04ba0e97c2f4dae5a999`：SHA-256 `32093147448a616af26055d81831b7028e661e5138d8546f803a6c6a1a42bc43`、blob `6d54ed804980dead46c822a2c3f5e231daced72b`、505173 bytes、印刷页324–325。四份对应报告：`reports/2006-chongqing-arts-source-intake.md`、`reports/2006-chongqing-science-source-intake.md`、`reports/2006-shaanxi-arts-source-intake.md`、`reports/2006-shaanxi-science-source-intake.md`。
+- 四份均为2页A3题面 PDF，题签分别可读为 2006 重庆/陕西文理卷；每卷可见 Q1–Q22，原件未见答案、解析或评分页。四份现场 SHA、Git blob、大小和上游 commit 均与 manifest/接收记录相符。逐页 `analyze_pdf.py --no-cache --include-text` 显示所有页面均有文字层，模型与 OCR 调用均为0；重庆文科、陕西文理科第一页标记 `review`，其余页为 `text_candidate`，文字层仅作未核候选。原页已逐页渲染并检查题签、印刷页码、题号范围、题型和图位；未将图像对象计数为0误判成页面无图。
+- 本阶段新增四份来源接收报告和上述进度回执；未改 `source-manifest.json`、`missing-issues.md`、规范题面、答案、provenance 或登记 paper/batch。发布者、出版者、版次、复制/扫描来源链及官方身份未认证；OCR/API/模型成本未知。下一步由主代理依据四份接收记录登记 paper 与批次，再分别进入题面转录和原页逐题复核；本阶段不表示转录、解答或卷级验收完成。
+
 ### 2006 辽宁文理候选卷：固定来源接收（2026-11-03）
 
 - 固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 下的 2006 辽宁文、理 PDF，source ID 分别为 `src-b784613ebc50375b17eb4a91083b447879ebb9ed75bb6a76227bb74345cfbfd3` 与 `src-db3cbfe3d2c96ec3cbe88c45ad7986cf79f4899fd76a3a73b7c64721f0e67569`。现场 SHA 与 Git blob 均匹配 manifest。两卷各 22 题；文科 PDF 印刷页 310–311、图位 Q15/Q19，理科印刷页 308–309、图位 Q18。
