@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：三角色逐题 provenance 导入（phase1-b77，2026-11-03）
+
+- 按当前规范题面和答案要点现场计算逐题哈希，为 Q1–Q22 建立 question-review、answer-solve、answer-review 三角色记录。题源均绑定固定 source ID；Q1–Q19 对应 PDF 第1页，Q20–Q22 对应第2页。
+- 题面复核引用独立复核表（22 pass）；Q16/Q18/Q20 图链与新图在独立图稿阶段另行核对，未把早先的图位复核冒充为图稿验收。答案为非官方独立推导，证据等级 D。两名盲核者覆盖 Q1–Q11、Q12–Q22，Q1、Q17、Q20 的初稿差异最终均已重推并解决；其余题无未解冲突。
+- provenance.py import-batch 先 dry-run，再事务导入至 provenance.json，manifest revision 5973→5975。定向 provenance check-batch 返回1卷通过；source_manifest validate 与 manifest_csv --check（775行）退出0。项目状态派生为 answers_verified / provenance_verified；没有正式构建或视觉回执。
+- 来源发布者、出版者、版次、来源链和官方身份仍未核；固定 PDF 不含答案页，official_answer=null。下一阶段生成项目 TeX 与简答/版本壳，再进入正式构建和逐页视觉验收。成本未知。详见本报告。
+
 ### 2006 福建理科候选卷：Q16/Q18/Q20 矢量题图与图稿登记（phase1-b77，2026-11-03）
 
 - 对照固定候选 PDF（source ID src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27，SHA-256 50d17546b94af82fb2cee653942752914cd387fe72792d74ffa5f75e7a301d83）重绘 Q16 中点三角形、Q18 四面体中点和 Q20 椭圆弦图，保存于 2006_福建卷_理科/figures/。图源注释绑定 PDF 指纹与页码；示意图只表达题面标注和拓扑，不新增条件。
