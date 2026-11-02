@@ -12849,3 +12849,9 @@
 - 规范生成和 provenance 检查通过。最终正式构建 attempt `c86097fe-86c8-453e-aa08-d2a9558096ce`、manifest revision `5866`：试题版 5 页、解析版 19 页、简答版 7 页、印刷版 15 页，共 46 页；四版日志均无编译错误、缺字、Overfull 或未定义引用。解析版另有与旧回执相同的 Underfull `\hbox` badness 2189（answers.tex 145–146）；当前页视觉核对无异常松散、碰撞或裁切，按具体警告记为视觉通过。
 - 当前 attempt 四版页图全部重渲染并逐页检查；回执与 attempt / PDF SHA / 页数绑定一致。合计 368 项检查：336 pass、32 not_applicable、0 fail。主会话抽查解析版 Q17 公式标点、Q7 图与 Underfull 页、末页解答及试题版长方体图；视觉错误标记均经原 PNG 复核纠正，最终各版 work item 结构检查通过。
 - `finalize-batch-checked` 返回 `FINALIZED`，`phase1-b64` closed，revision `5868`。当前 final/current build receipt、review、provenance、生成器、简答、版本壳、22 题解析源、全量报告一致性检查均通过；`manifest.csv` 为 775 行且 current。全库生成检查仍报 20 个其他旧投影漂移目标，未批量写入。该卷答案仍为依据来源题面独立推导、非官方 D 级；固定 PDF 来源身份未核，本卷收口不代表长期语料完成。
+
+### phase1-b64 收口后全量测试结果（2026-11-02）
+
+- 在 2006 四川理科批次 finalization 与全量报告/CSV 校验后运行 `python3 -B -m unittest discover -s math-gaokao-latex/tests`：`Ran 1749 tests in 515.018s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`；现场探针返回 16 项全库缓存状态差异。
+- 16 项来自 6 卷与 10 批：2 卷缓存 `complete`、现场派生 `answers_verified`（2016 全国Ⅱ文科、2017 全国Ⅱ理科）；4 卷缓存 `complete`、现场派生 `compiled`（2017 全国Ⅲ文科、2017 北京文科/理科、2017 天津文科）；10 个批次缓存 `closed_with_blockers`、现场派生 `provenance_verified`（phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08）。`gk-2006-regular-sichuan-science` 与 phase1-b64 不在差异中；未批量改写其他卷/批缓存状态。
+- 其余 unittest 未报告失败；测试夹具中的 argparse 用法错误、非法输入和临时 2099 数据输出为预期负向测试。当前全库测试未通过，唯一阻断为以上 16 项缓存状态 currentness 差异。
