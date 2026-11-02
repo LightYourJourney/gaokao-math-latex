@@ -12886,3 +12886,10 @@
 - 在 2006 四川理科批次 finalization 与全量报告/CSV 校验后运行 `python3 -B -m unittest discover -s math-gaokao-latex/tests`：`Ran 1749 tests in 515.018s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`；现场探针返回 16 项全库缓存状态差异。
 - 16 项来自 6 卷与 10 批：2 卷缓存 `complete`、现场派生 `answers_verified`（2016 全国Ⅱ文科、2017 全国Ⅱ理科）；4 卷缓存 `complete`、现场派生 `compiled`（2017 全国Ⅲ文科、2017 北京文科/理科、2017 天津文科）；10 个批次缓存 `closed_with_blockers`、现场派生 `provenance_verified`（phase2-b05、phase2-b07、phase2-b08、phase1-b24、phase4-b12、phase4-b21、phase4-b22、phase4-b36、phase1-b40、phase0-b08）。`gk-2006-regular-sichuan-science` 与 phase1-b64 不在差异中；未批量改写其他卷/批缓存状态。
 - 其余 unittest 未报告失败；测试夹具中的 argparse 用法错误、非法输入和临时 2099 数据输出为预期负向测试。当前全库测试未通过，唯一阻断为以上 16 项缓存状态 currentness 差异。
+
+### 2006 江西、浙江、湖北理科候选卷：题面转录阶段（2026-11-02）
+
+- 固定候选来源均可在本地 source manifest 中定位，`paper_id` 均为空且未绑定 batch；SHA-256 与 manifest 记录一致：江西 `src-087e91818b6473a217dd7dda423b4d033dad9f20e1e6f77e162d3dce4d896817` / `ce0ea3a16a1b5d1a74b01b8581766563cec4d7b77b2fca4f8ae3eec30b19dd38`（2页，印刷页307–308），浙江 `src-5f9ed6381f35350f76a93adb34b280d596a9d44d2b40366565ac3df18645ab6a` / `adb6fd06af66efb8cd957004efc3e4278a4df5cb87d4f5e79ad215e548c11cb8`（2页，印刷页340–341），湖北 `src-3e4d37728fe026360081acff678b849c40c747cd67ac478230a0040ead794c42` / `670cd03dc447662d02befbf06b3e5ee8573cede1d4da521a9c03a104569e18e9`（2页，印刷页294–295）。指纹绑定固定副本字节，不认证发布者、版次、扫描来源链或官方身份。
+- 三份题面分别覆盖江西选择12/填空4/解答6共22题，浙江10/4/6共20题，湖北10/6/5共21题。主会话逐页对照固定 PDF 目视复核，修正浙江 Q15 参数范围上界（`<` 改为 `≤`）与湖北 Q21（2）$g(x)$ 的括号范围。江西 Q12 原四项相同的图位说明已按可见曲线特征分别标记；它们仍是文字定位占位，四幅图待重绘与逐图复核。
+- 图位：江西 Q11/Q12/Q15/Q19/Q20/Q21，浙江 Q9/Q14/Q15/Q17/Q19/Q20，湖北 Q18；湖北 Q15 莱布尼茨三角形示例留图位，Q19 标准正态表按印刷值转录。各图尚未重绘。`parse_question_blocks` 分别识别连续22、20、21题；报告详见 `reports/2006-{jiangxi,zhejiang,hubei}-science-source-intake.md` 及对应 `*-question-transcription.md`。源 PDF 均无答案、解析或评分页，官方答案保持空缺，来源身份未核。
+- 本阶段仅完成候选源页 intake 与题面转录；未登记 paper/batch/provenance，未求解答案、重绘图稿、生成项目 TeX、正式构建或视觉验收。成本数据未知。下一步需先确定候选卷与目标 paper 的登记关系，再按逐题来源、独立求解与图稿门禁推进；本回执不表示这些卷完成或长期语料完成。
