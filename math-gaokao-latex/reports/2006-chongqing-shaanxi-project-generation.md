@@ -1,0 +1,9 @@
+# 2006 重庆、陕西文理候选卷：共享 TeX、简答表与四版入口生成
+
+- 日期：2026-11-03；批次 `phase1-b80`；四卷各 22 题，共 88 题。固定候选来源、题面逐题复核、图稿和三角色 provenance 分别见同批前序报告。
+- 四卷各生成 `questions.tex`、`answers.tex`、`answers_short.tex` 与试题/解析/简答/印刷四版入口，共 28 个卷级 TeX 文件；共享 `index.json` 与 manifest CSV 同步。`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过。
+- 简答生成首轮发现解析器两处待核值归一化缺口：`U/PENDING。` 未被识别为选择题待核值；横向速查表中的 `U/PENDING` 没有归一成 `U`，与逐题答案行不一致。分别增加回归测试、观察 RED 后仅修正解析器边界识别和横向表归一规则；未改动任何答案、题面或推导。`python3 -m unittest tests.test_short_answers` 最终 `Ran 55 tests ... OK`。
+- 项目文件生成后，现场派生状态由重庆文 `answers_verified` 前进为 `editions_generated`。对 `.work/phase1-b80-provenance` 现存 264 条三角色记录 dry-run 通过后，以原批次事务重算缓存状态；manifest revision `6001→6002`，仅将重庆文状态更新为 `editions_generated`。其余三卷保持 `blocked`，批次为 `provenance_verified`，四项 issue 与 U/PENDING 均未更动。
+- `provenance.py check-batch`（4 卷）、`solution_sources.py check-batch`（4×22）、三项生成器 check、`manifest.csv --check`（775 行）、`source_manifest.py validate --manifest source-manifest.json` 与 `issues.py validate --file missing-issues.md` 均通过。
+- 全库 `python3 -m unittest discover -s tests` 首轮耗时 533.704 秒，`Ran 1768 tests`，结果 `FAILED (failures=2, errors=1, skipped=13)`。当时的 wrapper 不存在错误在生成后用 `test_editions.LiveShellsAreByteIdenticalTests.test_every_repository_shell_is_reproducible_from_the_templates` 定向复测通过；`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 的既有 SHA 快照不符，以及 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 的全库缓存漂移仍未解决（定向复测列出 80 项，首项为 2012 全国卷）。本批自身的 `provenance.py check-batch` 当前通过；本报告不把全库测试失败归因于本批，也不更新其它试卷状态。
+- 四卷尚未进行正式 XeLaTeX 构建、逐页视觉审查或建立 build/review 回执。重庆理 Q20、陕西文 Q3/Q15、陕西理 Q16 的 `ISSUE-1341`—`ISSUE-1344` 继续为 U/PENDING 阻断项；答案非官方，`official_answer=null`，来源身份未认证。下一阶段是四卷四版正式构建并逐页检查。本阶段不表示批次闭环或长期语料库完成。

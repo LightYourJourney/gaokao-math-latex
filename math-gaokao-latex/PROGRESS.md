@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 重庆、陕西文理候选卷：共享 TeX、简答表与四版入口生成（2026-11-03）
+
+- 四卷各生成 `questions.tex`、`answers.tex`、`answers_short.tex` 与试题/解析/简答/印刷四版入口，共28个卷级 TeX 文件；共享 `index.json` 与 manifest CSV 同步。三项生成器 check、四卷 provenance/答案来源检查、775行 CSV 检查通过。
+- 修复两处 `U/PENDING` 简答解析归一问题：中文句号后的待核答案可被识别；横向答案速查表的待核标记归一为 `U`，与逐题解析一致。测试先红后绿；简答生成器55项测试通过。答案与题面内容均未因修复而改写。
+- 264 条三角色 provenance 记录 dry-run 通过后，以原批次事务同步现场派生状态，manifest revision `6001→6002`；重庆文为 `editions_generated`，其余三卷仍 `blocked`，批次 `provenance_verified`。四项 blocker 保持原状。
+- 全库测试首轮 `Ran 1768 tests in 533.704s`，2 failures、1 error、13 skipped。生成后 wrapper 可复现性定向测试通过；旧 baseline SHA 快照与全库缓存状态漂移仍失败，详情见 `reports/2006-chongqing-shaanxi-project-generation.md`。本批专项 provenance 检查通过。
+- 正式 XeLaTeX 构建、逐页视觉审查和 build/review 回执尚未完成；下一步四卷四版构建。来源身份未认证、`official_answer=null`，Q20 重庆理、Q3/Q15 陕西文、Q16 陕西理的 U/PENDING blockers 持续。阶段报告见 `reports/2006-chongqing-shaanxi-project-generation.md`；不构成批次闭环或长期语料完成。
+
 ### 2006 重庆、陕西文理候选卷：逐题原页复核与三角色 provenance（2026-11-03）
 
 - 四卷 Q1–Q22 共 88 题完成独立固定原页逐题复核，四份候选 PDF 八页均渲染目视检查；未发现需修订的题面转录差异。逐题记录和 source hash 见 `reports/2006-chongqing-shaanxi-question-review.md`。

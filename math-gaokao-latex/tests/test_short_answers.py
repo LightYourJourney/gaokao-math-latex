@@ -320,6 +320,13 @@ class AnswerFormatTests(unittest.TestCase):
 """
         self.assertEqual(parse_quick_table(quick_table, 3), ("A", "U", "D"))
 
+    def test_horizontal_quick_table_normalizes_pending_choice_marker(self):
+        quick_table = """| 题号 | 1 | 2 |
+| --- | --- | --- |
+| 答案 | A | U/PENDING |
+"""
+        self.assertEqual(parse_quick_table(quick_table, 2), ("A", "U"))
+
     def test_pending_choice_answer_matches_independent_u_evidence(self):
         quick_table = """| 题号 | 答案 | 证据 |
 |---|---|---|
@@ -396,6 +403,16 @@ class RenderTests(unittest.TestCase):
             ANSWER_KEY_PATH,
             {"选择题": [1, 2], "解答题": [3, 3]},
             {1: "U/PENDING；源题面条件不唯一", 2: "A", 3: "$1$"},
+        )
+        self.assertIn("答案 & U & A", text)
+        self.assertIn("U 表示待核", text)
+
+    def test_pending_choice_followed_by_chinese_period_is_shown_as_u(self):
+        text = render_short_answers(
+            TITLE,
+            ANSWER_KEY_PATH,
+            {"选择题": [1, 2], "解答题": [3, 3]},
+            {1: "U/PENDING。原题条件不唯一", 2: "A", 3: "$1$"},
         )
         self.assertIn("答案 & U & A", text)
         self.assertIn("U 表示待核", text)

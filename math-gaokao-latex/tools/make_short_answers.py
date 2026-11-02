@@ -144,7 +144,7 @@ _ANSWER_TEX = re.compile(
     r"^\\(?:gkanswer|textbf)\{答案(?:[（(](\d+)[）)])?[：:](.*)\}$"
 )
 _CHOICE_LETTERS = re.compile(r"^([A-D]+)")
-_PENDING_CHOICE = re.compile(r"^U/PENDING(?:$|[；;])")
+_PENDING_CHOICE = re.compile(r"^U/PENDING(?:$|[；;。])")
 _QUICK_ROW = "| 答案"
 # 行内转换不碰配图，故映射为空；严格模式让未配对 $ 之类的告警直接失败。
 _INLINE_CONTEXT = md2tex.ConversionContext(figure_map={}, strict=True)
@@ -332,7 +332,8 @@ def parse_quick_table(answer_key_text: str, count: int) -> Optional[Tuple[str, .
                 if token is not None:
                     question_answers[number] = token
         if stripped.startswith(_QUICK_ROW):
-            cells += [cell.strip() for cell in stripped.strip("|").split("|")][1:]
+            values = [cell.strip() for cell in stripped.strip("|").split("|")][1:]
+            cells += [(_choice_token(value) or value) for value in values]
     if saw_question_table:
         if all(number in question_answers for number in range(1, count + 1)):
             return tuple(question_answers[number] for number in range(1, count + 1))
