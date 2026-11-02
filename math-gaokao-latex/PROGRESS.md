@@ -83,6 +83,13 @@
 - 广东解析版构建收据记录 1 条 Overfull 与 1 条 Underfull 排版告警；其他 15 版没有 Overfull/Underfull 告警。需在即将进行的逐页视觉复核中检查广东解析版对应位置，不据构建成功推定版面通过。
 - `source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`、`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775 行）通过；逐页八项 review 尚未完成，批次仍为 `compiled_pending_review`，详见 `reports/2006-four-candidates-formal-build.md`。不表示来源认证、四卷闭环或长期语料完成。
 
+### phase1-b69 2006 江苏卷：Q21 分页调整与复核（2026-11-02）
+
+- 在规范题面 Q21 题块内添加既有生成器支持的 `question-needspace: 0.05` 元数据，未改题目、答案或解析内容；重新生成 `questions.tex` 后，Q21 从独占末页前移至解答题所在页。
+- 正式重建 attempt `d57f5af7-beae-493d-af28-ee4107f6bad8`：试题版 4 页、解析版 17 页、简答版 6 页、印刷版 13 页。此前三个版本第 5 页的留白失败 `ISSUE-1314/1316/1318` 已解决；全页复核仍发现试题版、解析版、简答版第 3 页填空题后有明显留白，`ISSUE-1313/1315/1317` 继续 open / `blocks_completion`。批次保持 `VISUAL_FAILED` / `compiled_pending_review`，不是已结批状态。
+- `generate_projects.py --check`、`provenance.py check-batch` 与 `build_projects.py validate-receipts --require-current-inputs` 通过；事务式全页审查于 manifest revision 5831 写入当前 review、问题账与 `reports/phase1-b69.md`。来源发布者、版次、来源链与官方身份仍未核实，江苏卷种变体仍未知。
+- 分页调整与正式构建阶段提交 `a34fd583`；视觉复核结果与报告在本阶段单独提交。本记录仅覆盖该卷分页阶段，不表示 `phase1-b69` 四卷闭环或长期语料完成。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。
