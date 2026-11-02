@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 福建理科候选卷：Q16/Q18/Q20 矢量题图与图稿登记（phase1-b77，2026-11-03）
+
+- 对照固定候选 PDF（source ID src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27，SHA-256 50d17546b94af82fb2cee653942752914cd387fe72792d74ffa5f75e7a301d83）重绘 Q16 中点三角形、Q18 四面体中点和 Q20 椭圆弦图，保存于 2006_福建卷_理科/figures/。图源注释绑定 PDF 指纹与页码；示意图只表达题面标注和拓扑，不新增条件。
+- 三张图均以独立 XeLaTeX 预览编译、转成 PNG 并目视检查；标签、实虚线和示意关系清晰。题面与解析正文各有一处引用，solution_sources.py extract-batch --write 生成的含解析稿中每图两处（题面、解析）引用。解析正文事实源现在保留图链；提取器的只读诊断也确认规范化会保留放在解析标记后的链接。
+- sync-figure-registry --write 将 manifest revision 5972→5973，三项 figure_files.expected_occurrences 均为 3。source manifest validate、solution_sources.py check-batch --batch phase1-b77（22题）、issues validate、manifest_csv.py --check（775行）均退出0。
+- 本阶段只完成题图和来源链接登记，不表示逐题 provenance、项目 TeX、正式 PDF、逐页视觉回执或卷级验收完成；成本未知。下一阶段写入三角色逐题 provenance，并保留 official_answer=null 和候选来源身份未核状态。详见本报告。
+
 ### 2006 福建理科候选卷：paper/source 登记与规范源绑定（phase1-b77，2026-11-03）
 
 - 以 `register-papers` 事务登记 `gk-2006-regular-fujian-science` 与 `phase1-b77`，manifest revision `5970→5971`；固定候选 source `src-ab0f2729ee4a24495e653b44c14438b4130f8b38b11362bf84251f3595a09d27` 内部绑定为 canonical。该关系仅指本库中的卷/文件对应，不认证发布者、出版者、版次、来源链或官方身份。
