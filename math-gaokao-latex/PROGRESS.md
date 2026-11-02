@@ -12977,3 +12977,12 @@
 - `review_receipts.py finalize-batch` 在 revision 5913 返回 `FINALIZED`，批次状态 `closed_with_blockers`；报告 `reports/phase1-b72.md`。Q10、Q13、Q21 的 ISSUE-1323–1328 仍 open / `blocks_completion`，来源出版身份与 A/B 卷答案关系未核，`official_answer` 仍为 null；该批仅完成构建及视觉审查，不表示本卷内容闭环或长期语料完成。
 - 本次 Q22 增加局部 `question-needspace: 0.05` 以防题块被拆页；题面哈希按当前规范题面重新导入 provenance。规范生成、provenance、简答、版本壳、解答来源、manifest、issue ledger 与 final/current build/review receipt 检查均通过。全量报告 `report.py render/check --all` 一致，`manifest.csv` current 且 775 行。成本数据未知。
 - 全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1753 tests in 525.049s`，`FAILED (failures=1, skipped=13)`。唯一失败仍是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告 16 项既有历史 paper/batch 缓存状态与现场派生状态不一致；phase1-b72 与 1999 广东卷不在失败差异中。其余测试通过；测试中 CLI 错误参数、未知 ID 与 2099 临时数据输出是负向夹具。未批量回写历史缓存状态。
+
+### phase1-b71 1997 全国卷文科：Q24 校正、四版构建与视觉收口（2026-11-02）
+
+- 修正 Q24(2) 的退化情形说明：若 $p=1$，则 $q=1$ 且 $A=B=(1,0)$，应以两交点重合为由排除；同步解析正文、含解析投影和 `answers.tex`。更新 `来源校对.json` 中解析草稿 SHA 与正式四版生成标记。题面、答案结论及题面哈希未因该说明修订而改变。
+- 正式导入 Q1–Q25 三角色逐题 provenance，共 75 条角色记录。固定来源报告支持 Q1–Q22、Q24–Q25 的题面对照；Q23(3) 仍记 `uncertain`，答案为 `U`，关联 ISSUE-1321/1322。固定 PDF 不含答案页，官方答案保持 null；来源发布者、版次、复制链和官方身份未核。
+- 正式构建 attempt `864657c5-acff-4538-9d09-d3ae5e26eea9`：试题版 4 页、解析版 18 页、简答版 6 页、印刷版 15 页，共 43 页。四版均无 TeX 错误、缺字、Overfull 或未解析引用，PDF SHA 与工具链记录在 `1997_全国卷_文科/receipts/build.json`。曾因来源说明中的未转义下划线导致四版失败；改用普通中文表述后重建成功，失败尝试及其 compile-error 问题已按新构建解决。
+- 当前 attempt 的 43 页 × 8 项视觉检查均通过，0 fail、0 豁免；`finalize-batch` 返回 `FINALIZED`，`phase1-b71` 为 `closed_with_blockers`。Q23(3) 的来源符号缺失及答案未决保留，卷状态仍 blocked。批次专属 provenance、生成器、简答、四版壳、解答源、final/current build receipt 与 review receipt 检查通过。
+- 全库报告 render/check 完成，`manifest.csv` 为 775 行且 current。全量 unittest `Ran 1753 tests in 523.816s`，`FAILED (failures=2, skipped=13)`：一项是本次解析 SHA 未更新，之后更新 `来源校对.json` 并定向复测 `Ran 5 tests ... OK`；另一项是 16 卷/批历史缓存状态与现场派生不一致（与前次报告的 currentness 阻断相同）。指纹定向回归已通过，但该全库测试未在记录文件修正后重跑，不能称全量测试通过。
+- 本批完成四版构建和视觉审查，不表示来源认证、内容无阻塞或 1952—2026 长期语料库完成。
