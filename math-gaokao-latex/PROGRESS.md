@@ -12921,3 +12921,12 @@
 - 正式构建 attempt：江西 `1a75c317-6e62-4f58-bce3-dd38a50c5b61`，浙江 `ad74a82a-5c3d-467c-bec2-c673ec07e561`，湖北 `cb4a5749-2126-4d27-bd4e-c004284d1476`；最新构建输入 manifest revision 5889，当前 revision 5890。首次构建后修正文档来源说明导致输入树变化，旧 attempts 已 superseded 并重建。四版分别为江西 6/21/8/16 页、浙江 5/18/7/13 页、湖北 5/19/7/14 页，共 139 页。12 个 PDF 的 SHA-256、工具链和构建日志均记录在各卷 `receipts/build.json`；无错误、缺字、Overfull 或未定义引用。存在 5 条 Underfull hbox：江西印刷版 1 条，湖北四版各至少 1 条，须结合相应页面视觉检查判断。
 - 三卷 `build.json` 均为 `compiled_pending_review`；`validate-receipts --batch phase1-b70` 返回 3 pending、0 failed/stale/invalid。虽已预览抽查江西若干题面/答案/解析/印刷页面，目前尚未完成 139 页的逐页八项视觉检查，故未将检查项标 pass、未 finalize；视觉收据仍待逐页完成。全库单元测试未运行。
 - 此阶段仅提交图稿、登记、生成与正式编译回执，不代表三卷视觉验收或批次关闭；官方答案仍 null，来源发布者/版次/来源链未核，也不代表长期语料完成。详情见 `reports/2006-three-science-figures.md`。
+
+### phase1-b70 2006 江西、浙江、湖北理科：视觉收口与报告刷新（2026-11-02）
+
+- 浙江图稿首轮复核发现 Q14 的 B、Q19 的 F₂/M、Q20 的 x_{n+1}/x_n 标签在个别版次间距不足；调整后重新正式构建。浙江最终 attempt `a82bc906-c4d2-4546-83cc-a34b9ba0ddb3`（manifest revision 5895），四版页数 5/18/7/13；其他两卷 attempt 与 PDF 字节未变。三卷 12 个 build receipt 最终均为 succeeded。
+- 对当前 attempt 的 139 页逐页完成八项视觉检查：1112 项中 1038 pass、74 not_applicable、0 fail、0 pending。Underfull 警告共 6 条（江西印刷版 1、湖北四版 5），均已复核所在页并登记豁免；没有编译错误、缺字、Overfull 或未定义引用。
+- `finalize-batch-checked` 返回 `FINALIZED`，phase1-b70 状态 `closed_with_blockers`，manifest revision 5897。江西与浙江为 `complete`；湖北保持 `blocked`，Q17（2）U/PENDING 及 ISSUE-1319/1320 未解除。Source SHA 仅绑定固定 PDF 字节，来源身份未认证，官方答案仍为 null。
+- receipt currentness、review batch、provenance、生成器、简答表、四版壳、逐题解析源、source manifest、issue ledger 检查通过。全量报告 render/check 通过，manifest.csv 775 行且 current；全库状态现为 391 卷（complete 303 / blocked 85 / compiled 3）、243 批（closed 176 / closed_with_blockers 66 / compiled_pending_review 1）。
+- 全量 unittest：`Ran 1752 tests in 562.100s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_the_cached_states_match_the_recomputed_ones`，重现 16 项既有缓存状态差异：6 卷 production_state、10 个历史批次 status；phase1-b70 不在差异中，未改写其他历史状态。
+- 本批 3 卷完成构建与视觉收口，但湖北卷仍有内容阻断；不认证来源身份，不代表长期语料完成。详细 PDF SHA 与回执数据见 `reports/phase1-b70.md` 和 `reports/2006-three-science-figures.md`。
