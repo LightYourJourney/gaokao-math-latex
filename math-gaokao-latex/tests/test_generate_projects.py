@@ -1026,6 +1026,41 @@ class WrapBoundaryTests(unittest.TestCase):
             self.assertIn("\\gkpart{二、填空题}", wrapped)
             self.assertNotIn("\\gkpart{二、填空题}\n\\end{", wrapped)
 
+    def test_part_needspace_override_is_scoped_to_matching_heading(self):
+        text = (
+            "\\gkti{1}第一题\n\\gkpart{二、填空题}\n"
+            "\\gkti{2}第二题\n\\gkpart{三、解答题}\n\\gkti{3}第三题\n"
+        )
+        wrapped, numbers = wrap(
+            text,
+            "questions",
+            part_needspace={"三、解答题": "0.4"},
+        )
+        self.assertEqual([1, 2, 3], numbers)
+        self.assertIn(
+            "\\begingroup\n"
+            "\\renewcommand{\\gkpart}[1]{\\Needspace{0.4\\textheight}"
+            "\\subsection*{#1}\\nopagebreak}\n"
+            "\\gkpart{三、解答题}\n\\endgroup",
+            wrapped,
+        )
+        self.assertIn("\\gkpart{二、填空题}", wrapped)
+
+    def test_part_needspace_directive_is_parsed_from_heading_comment(self):
+        source = (
+            "## 一、选择题\n\n## 三、解答题\n"
+            "<!-- part-needspace: 0.4 -->\n"
+        )
+        self.assertEqual(
+            {"三、解答题": "0.4"},
+            generate_projects._part_needspace_overrides(source),
+        )
+
+    def test_malformed_part_needspace_directive_is_rejected(self):
+        source = "## 三、解答题\n<!-- part-needspace: 0.9 -->\n"
+        with self.assertRaisesRegex(GenerationError, "0.05 到 0.5"):
+            generate_projects._part_needspace_overrides(source)
+
     def test_question_needspace_override_is_scoped_to_one_question(self):
         text = "\\gkti{1}第一题\n\\gkti{2}附加题\n\\gkti{3}第三题\n"
         wrapped, numbers = wrap(

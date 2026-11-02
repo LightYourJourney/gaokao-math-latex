@@ -74,6 +74,9 @@ _WRAP_MODES = {
     "questions": (Q_HEAD, STRUCT_Q, "question"),
     "answers": (S_HEAD, STRUCT_S, "answer"),
 }
+_MARKDOWN_HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*$")
+_LATEX_PART_HEADING = re.compile(r"^\\gkpart\{([^{}]*)\}")
+_PART_NEEDSPACE_DIRECTIVE = re.compile(r"^<!--\s*part-needspace:\s*(0\.\d+)\s*-->$")
 # 生成答案块转成 LaTeX 后的两种形态：`**答案：X**` 独立段落走 \gkanswer；答案值里含
 # `*`（如 $\mathbf N^{*}$）时转换器的 ANSLINE 认不出，退化成 \textbf。两种都算数——
 # 数的是「这一题的最终答案有没有落地」，不是转换器把它归到了哪一类。
@@ -354,6 +357,7 @@ def wrap(
     mode: str,
     printed_labels: Optional[Mapping[int, str]] = None,
     question_needspace: Optional[Mapping[int, str]] = None,
+    part_needspace: Optional[Mapping[str, str]] = None,
 ) -> Tuple[str, List[int]]:
     """按行首题头切分并包裹环境；保留内部顺序号与原卷显示题号的映射。"""
     try:
@@ -361,6 +365,7 @@ def wrap(
     except KeyError:
         raise GenerationError(f"未知包裹模式：{mode}")
     question_needspace = question_needspace or {}
+    part_needspace = part_needspace or {}
     if mode != "questions" and question_needspace:
         raise GenerationError("question-needspace 只适用于试题块")
     for number, fraction in question_needspace.items():
@@ -373,6 +378,7 @@ def wrap(
     nums: List[int] = []
     in_block = False
     in_needspace_group = False
+    used_part_overrides: set = set()
     for line in text.split("\n"):
         match = head_re.match(line)
         if match:
@@ -410,7 +416,20 @@ def wrap(
                     out.append(r"\endgroup")
                     in_needspace_group = False
                 in_block = False
-            out.append(line)
+            heading_match = _LATEX_PART_HEADING.match(line)
+            heading = heading_match.group(1) if heading_match else None
+            fraction = part_needspace.get(heading) if heading else None
+            if fraction is not None:
+                out.append(r"\begingroup")
+                out.append(
+                    r"\renewcommand{\gkpart}[1]{\Needspace{%s\textheight}"
+                    r"\subsection*{#1}\nopagebreak}" % fraction
+                )
+                out.append(line)
+                out.append(r"\endgroup")
+                used_part_overrides.add(heading)
+            else:
+                out.append(line)
         else:
             out.append(line)
     if in_block:
@@ -422,7 +441,37 @@ def wrap(
         raise GenerationError(
             "question-needspace 指向不存在的试题：%s" % missing_overrides
         )
+    missing_part_overrides = sorted(set(part_needspace) - used_part_overrides)
+    if missing_part_overrides:
+        raise GenerationError(
+            "part-needspace 指向不存在的结构标题：%s" % missing_part_overrides
+        )
     return "\n".join(out), nums
+
+
+def _part_needspace_overrides(question_text: str) -> Dict[str, str]:
+    """读取紧跟 Markdown 结构标题的局部分页预留指令。"""
+    lines = question_text.splitlines()
+    overrides: Dict[str, str] = {}
+    for index, line in enumerate(lines):
+        if "part-needspace:" not in line:
+            continue
+        if index == 0:
+            raise GenerationError("part-needspace 指令必须紧跟 Markdown 结构标题")
+        heading_match = _MARKDOWN_HEADING.fullmatch(lines[index - 1].strip())
+        if heading_match is None:
+            raise GenerationError("part-needspace 指令必须紧跟 Markdown 结构标题")
+        match = _PART_NEEDSPACE_DIRECTIVE.fullmatch(line.strip())
+        if match is None:
+            raise GenerationError("part-needspace 指令格式无效")
+        heading = heading_match.group(1).strip()
+        if heading in overrides:
+            raise GenerationError(f"结构标题 {heading!r} 只能声明一个 part-needspace 指令")
+        fraction = match.group(1)
+        if not 0.05 <= float(fraction) <= 0.5:
+            raise GenerationError("part-needspace 必须在 0.05 到 0.5 之间")
+        overrides[heading] = fraction
+    return overrides
 
 
 def _question_needspace_overrides(
@@ -547,6 +596,7 @@ def generate_project(
     try:
         question_blocks = parse_question_blocks(questions_text)
         question_needspace = _question_needspace_overrides(question_blocks)
+        part_needspace = _part_needspace_overrides(questions_text)
         printed_labels = {
             block.number: md2tex.convert_inline(block.printed_label, context).text
             for block in question_blocks
@@ -558,9 +608,12 @@ def generate_project(
         "questions",
         printed_labels,
         question_needspace=question_needspace,
+        part_needspace=part_needspace,
     )
     wrapped_answers, answer_numbers = wrap(
-        converted_answers.text, "answers", printed_labels
+        converted_answers.text,
+        "answers",
+        printed_labels,
     )
 
     questions_target = "%s/%s/questions.tex" % (PROJECT_RELATIVE, sources.project_dir)

@@ -97,6 +97,12 @@
 - 当前视觉事务重写 `reports/phase1-b69.md` 与 review receipt：仍有试题版、解析版、简答版第 3 页三条 `pagination_whitespace` 失败，manifest revision `5873`；批次仍为 `compiled_pending_review`，不是关闭状态。来源身份未核、江苏卷种变体未知；广东及江西文科答案待核 blocker 保持不变。
 - `validate-receipts --require-current-inputs` 与 `provenance check-batch` 对四卷通过。第 3 页根因仍在共享 `\gkpart` 起始预留；本次未改共享宏或生成器。需另找不破坏其他卷回执的内容版式调整，再重建并复审。本阶段不表示来源认证、四卷闭环或长期语料完成。
 
+### phase1-b69 2006 江苏卷：解答题章节局部留白覆盖实现（2026-11-02）
+
+- 为避免公共 `\gkpart` 的 `0.6\textheight` 门槛把整个解答题章节推至下一页，在江苏题面“三、解答题”结构标题后增加 `part-needspace: 0.4` 局部元数据；生成器仅对匹配标题在局部 TeX group 内覆盖该次 `\gkpart`，共享宏默认值不变。题面结构由试题版、解析版、简答版共用；`answers.tex` 不含该结构标题，不应用这项覆盖。
+- 新增生成器解析、范围及未匹配检查；3 项针对性单测通过。`generate_projects.py --batch phase1-b69 --write/--check`、`make_short_answers --check`、`make_editions --check`、`solution_sources check-batch`、`source_manifest validate` 均通过。`provenance check-batch` 报批次缓存 `compiled_pending_review` 与当前派生 `provenance_verified` 不一致，暂未改缓存状态。
+- 本阶段尚未正式重建江苏四版 PDF，也未更新/复核视觉回执；旧回执绑定变更前输入，三项第3页留白问题仍为 open。详见后续正式构建及视觉复核回执。本阶段仅完成局部规则实现，不表示 `phase1-b69` 或相关试卷收口。
+
 ### 2006 山东文理候选卷：paper/source 登记与 blocker 入账（2026-11-02）
 
 - 登记批次 `phase1-b68`，卷件 `gk-2006-regular-shandong-arts` 与 `gk-2006-regular-shandong-science`；manifest revision `5781→5782`。两 source 分别绑定为本库 canonical 输入字节，不代表发布者、版次、来源链或官方身份认证。
