@@ -12969,3 +12969,11 @@
 - Q10、Q13、Q21 的题面/答案未决共登记六条 `blocks_completion` 问题 `ISSUE-1323`–`ISSUE-1328`；paper `blocked`（`blocked_from=planned`），batch `phase1-b72` 为 `planned`。候选扫描件发布身份未核，官方答案继续 null，A/B 对应关系未知。
 - 生成规范 `_含解析.md`、`questions.tex`、`answers.tex`、`answers_short.tex` 和四版入口；五幅 TikZ 图登记且题面/合并稿各出现一次。`source_manifest validate`、`issues validate`、`solution_sources check-batch`、三个生成器的 `--check` 均通过，规范题面/答案/解析/合成稿均识别 22 题。答案解析数学复核另见 `reports/1999-guangdong-answer-math-review-2026-11-02.md`，登记生成细节见 `reports/1999-guangdong-registration-generation-2026-11-02.md`。
 - 三角色 Q1–Q22 provenance 已导入，66 条记录绑定来源页码、source SHA、题面/答案哈希；`provenance.py check-batch` 返回 `OK：1 卷`。Q10/Q13/Q21 的六条 open blocker 未解除，paper 仍 blocked，batch 为 `provenance_verified`。报告见 `reports/1999-guangdong-provenance-2026-11-02.md`。尚未正式构建四版 PDF、全页视觉审查或生成构建/审阅收据。可见成本/消耗数据未知；本阶段不表示单卷闭环或长期题库完成。
+
+#### phase1-b72 1999 广东卷：四版正式构建与视觉收口（2026-11-02）
+
+- 试题版、解析版、简答版、印刷版正式构建成功，attempt `87d97192-0169-45f1-8da0-ac7397915a15`，manifest revision 5912；页数分别为 5/19/7/12，共 43 页。TeX Live 2026；四版均无编译错误、缺字、Overfull 或未定义引用。PDF SHA-256、工具链和输入指纹记录在 `1999_广东卷/receipts/build.json`。
+- 四版当前 PDF 均按 110dpi 逐页渲染并目视检查；43 页 × 8 项均通过，0 失败、0 告警豁免。页面检查覆盖字形、题号层级、公式/选项排布、图形标注、页眉页脚、分页留白、字号和答案泄漏。试题版末页为 Q22 独立题页、留白较多但题干和图完整；简答版末页承载解答题结尾，均按终页结构记录，没有拆题或内容丢失。当前 PNG 与最终构建绑定且与前次目视检查的 43 页栅格逐页一致。
+- `review_receipts.py finalize-batch` 在 revision 5913 返回 `FINALIZED`，批次状态 `closed_with_blockers`；报告 `reports/phase1-b72.md`。Q10、Q13、Q21 的 ISSUE-1323–1328 仍 open / `blocks_completion`，来源出版身份与 A/B 卷答案关系未核，`official_answer` 仍为 null；该批仅完成构建及视觉审查，不表示本卷内容闭环或长期语料完成。
+- 本次 Q22 增加局部 `question-needspace: 0.05` 以防题块被拆页；题面哈希按当前规范题面重新导入 provenance。规范生成、provenance、简答、版本壳、解答来源、manifest、issue ledger 与 final/current build/review receipt 检查均通过。全量报告 `report.py render/check --all` 一致，`manifest.csv` current 且 775 行。成本数据未知。
+- 全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1753 tests in 525.049s`，`FAILED (failures=1, skipped=13)`。唯一失败仍是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告 16 项既有历史 paper/batch 缓存状态与现场派生状态不一致；phase1-b72 与 1999 广东卷不在失败差异中。其余测试通过；测试中 CLI 错误参数、未知 ID 与 2099 临时数据输出是负向夹具。未批量回写历史缓存状态。
