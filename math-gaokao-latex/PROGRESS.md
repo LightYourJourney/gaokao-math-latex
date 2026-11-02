@@ -16,6 +16,12 @@
 - 规范题面为 `2006/2006_数学真题_福建文_试题.md`；`solution_sources.parse_question_blocks` 识别连续 Q1–Q22，`git diff --check` 通过。详见 `reports/2006-fujian-arts-question-transcription.md`。
 - 尚未独立推导答案/解析、复算、登记问题、绑定 paper/source/provenance、重绘题图、生成项目 TeX 或正式构建。固定 PDF 未见答案或评分页，官方身份未认证。本阶段只完成题面转录与核校，不代表本卷或长期语料完成。
 
+### 2006 福建文科候选卷：独立答案解析与 paper/source 登记（phase1-b76，2026-11-02）
+
+- 三位独立推导者分别覆盖 Q1–Q8、Q9–Q16、Q17–Q22；主会话逐题复算并审阅其独立草稿。Q3 按实数变量通常约定得 B；Q10 按两直线共面、直线与平面平行取严格无交定义得 C，并以反例排除 A。Q19、Q20 仅从题面文字建立坐标推导，不依赖待重绘图。复核独立草稿时订正 Q20(1) 圆心纵坐标及 Q20(2) 弦中点横坐标的系数，规范答案为圆心纵坐标 ±√2、直线 $x-2y+1=0$。
+- 规范答案与解析分别写入 `2006/2006_数学真题_福建文_答案要点.md`、`2006/2006_数学真题_福建文_解析正文.md`；`_含解析.md` 由 `solution_sources.render_combined` 生成。Q1–Q22 连续，题面/解析/答案小问锚点一致，`solution_sources.py check-batch --manifest source-manifest.json --batch phase1-b76` 通过。`register-papers` 事务登记 paper `gk-2006-regular-fujian-arts`，把固定候选 source 内部绑定为 canonical，并登记 batch；manifest revision `5958→5959`。此绑定仅表示仓库内输入关系，不认证发布者、版次、来源链或官方身份；`official_answer=null`，未发现需要建立逐题阻断 issue 的数学歧义。
+- `source_manifest.py validate`、`issues.py validate --file missing-issues.md`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775 行）均通过。paper 当前为 `planned`；逐题 provenance、图稿重绘与登记、项目 TeX、四版独立构建、回执和页面视觉审查均未完成。详见 `reports/2006-fujian-arts-independent-solutions.md`；不表示来源认证、卷级验收或长期语料库完成。
+
 ### 2006 湖南理科候选卷：paper/source 登记与 Q17 blocker（phase1-b75，2026-11-02）
 
 - `source_manifest.py register-papers` 将 `gk-2006-regular-hunan-science` 与 `phase1-b75` 登记，固定候选 source `src-74bd6a8b302120c812e3aa287309cf3d3a0cf6217761cc4637696bf4d12817cb` 内部绑定为 canonical；manifest revision `5951→5952`。该绑定只表示本库固定输入关系，不认证发布者、版次、来源链或官方身份。
