@@ -13056,3 +13056,9 @@
 - 依据固定题面完成 Q1–Q21 非官方答案要点和解析草稿，分别写入 `2006/2006_数学真题_湖南文_答案要点.md` 与 `2006/2006_数学真题_湖南文_解析正文.md`。三个独立求解分段覆盖 Q1–Q10、Q11–Q15、Q16–Q21；两名独立复核者分段复算全部答案与推导。
 - 复核纠正 Q21 答案要点的整题错配，并纠正 Q21（1）椭圆交点纵坐标及参数：当 $x=1$ 时 $y=\pm3/2$，从而 $m=0,p=9/8$。Q21（2）为 $m=\pm\sqrt6/3$、$AB:y=-3m(x-1)$。同时补全 Q11 等比和与 Q17（2）概率数值。Q17（3）依跨矿检查结果联合独立的通常解释为 0.41，解析明示该解释前提；Q18 按原图 $P,Q$ 位于底面两侧计算。
 - `parse_question_blocks` 对题面与解析正文各识别 21 题，`parse_answer_points` 识别答案要点 21 题；编号均为 1–21 连续。三份 Markdown 无行尾空白，`git diff --check` 通过。`official_answer` 保持 null。尚未登记 paper/batch、逐题 provenance、manifest、图稿、生成物、四版构建或视觉回执；未运行测试。详情见 `reports/2006-hunan-arts-answer-derivation.md`。本阶段不表示来源认证、本卷闭环或长期语料完成。
+
+### 2006 湖南文科候选卷：Q10、Q18 图稿矢量重绘（2026-11-02）
+
+- 据固定 PDF 第 1 页重绘 Q10 向量阴影区域与 Q18 共底正四棱锥，图稿分别为 `2006_湖南卷_文科/figures/f2006hunan_arts_q10_vector_region.tex`、`f2006hunan_arts_q18_pyramids.tex`；题面与解析稿使用本地 TikZ 链接，未嵌入原卷截图。
+- 两图合并的 smoke 文档由 XeLaTeX 编译成功，生成 2 页 A4 临时 PDF；220 dpi 渲染并目视核对灰区、标签、可见/隐藏棱和裁切。报告见 `reports/2006-hunan-arts-figures.md`。Q10 选项按固定源图的阴影范围判定，不将示意图像素视作精确比例；Q18 原图确认 P/Q 在底面两侧。
+- 题源尚未绑定 paper/batch，manifest `figure_files` 与 expected occurrence 未登记，未进行正式四版装配、构建或页面审查。来源身份未核。本阶段只完成两幅图稿和隔离渲染检查，不表示本卷闭环或长期语料完成。
