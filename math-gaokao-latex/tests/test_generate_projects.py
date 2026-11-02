@@ -703,7 +703,7 @@ class ConversionInterfaceTests(unittest.TestCase):
             md2tex.ConversionContext(figure_map={}),
         )
 
-        self.assertIn(r"x=1\text{。}", result.text)
+        self.assertIn(r"x=1\mbox{。}", result.text)
         self.assertNotIn("x=1。", result.text)
 
     def test_display_math_does_not_nest_existing_cjk_text_commands(self):
@@ -748,7 +748,7 @@ class ConversionInterfaceTests(unittest.TestCase):
             md2tex.ConversionContext(figure_map={}),
         )
 
-        self.assertIn(r"\text{\text{中文}}\text{。}", result.text)
+        self.assertIn(r"\text{\text{中文}}\mbox{。}", result.text)
 
     def test_raw_display_math_keeps_the_introducing_line_with_the_formula(self):
         result = md2tex.convert_markdown(

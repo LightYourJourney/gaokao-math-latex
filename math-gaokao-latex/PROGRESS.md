@@ -12775,3 +12775,10 @@
 - 为 Q22 解析分页调整后的正式构建 attempt `230e4e37-dc7e-404e-b552-8c03435d43a6` 完成视觉回执最终化；试题版 6 页、解析版 20 页、简答版 8 页、印刷版 16 页，共 50 页均通过，回执绑定各版 PDF SHA-256 与新 attempt。
 - `review_receipts.py finalize-batch-checked` 将 `phase1-b65` 关闭为 `closed_with_blockers`，manifest revision `5836`；`check-batch`、四版 `validate-receipts --require-final --require-current-inputs`、`provenance.py check-batch`、manifest 与 issue 格式校验通过。
 - ISSUE-1285/1286 继续开放并阻断 Q8 完成；固定候选答案身份未认证，答案保持 U。该卷批次闭环不表示答案冲突已裁决，也不表示长期语料完成。
+
+### phase0-b14 2018 全国Ⅲ理科：答案生成物同步与重建（2026-11-02）
+
+- 单卷生成检查发现 `answers.tex` 的 4 处中文句号仍由旧转换结果输出为 `\text{。}`，与权威答案要点中当前解析结果 `\mbox{。}` 不一致。按当前生成器重写该卷 `answers.tex`；两项句号转换测试断言同步改为现行输出，答案一致性定向测试通过。
+- 经 `provenance.py import-batch` 更新 Q23 的规范答案哈希；未改题面、答案内容、来源证据或 ISSUE-1283/1284。`provenance.py check-batch` 通过（1卷）。
+- 正式构建 attempt `0e8bf060-9993-414e-9cec-2123a8983c25`：试题版 6 页、解析版 31 页、简答版 8 页、印刷版 23 页；无编译错误、缺字、未定义引用。试题/解析/简答版各有一条行 5–7 的 Underfull，声明框经逐页视觉检查清楚，无碰撞或裁切；四版全页复核正在收口。
+- `generate_projects.py --all --check` 在含本卷的快照发现 26 个旧生成目标不一致；本卷已同步，另有 25 个目标留待逐批审计，不以全库写入绕过各卷构建与视觉复核。
