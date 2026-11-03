@@ -23003,3 +23003,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1372
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第2页 Q21 的函数指数清楚印为2；按字面推导后（3）不存在最大项。固定 PDF 没有同版答案、解析或勘误，无法核定原卷版本是否存在排印差异或预期指数约定。题面照录2，确定答案暂缺。",
+  "fingerprint": "d7ce4a294bc7e8c9ab36c9b1efa7204479109793845b97ecb993caf36cd9a086",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-science",
+  "question_id": "gk-2000-regular-shanghai-science-q21",
+  "resume_action": "取得可追溯的同版答案、勘误或可靠同版副本，核定 Q21 指数2是否为本版预期题意；此前按固定原页保留指数2，整题答案维持 U/PENDING，不推测改为 n。",
+  "source_id": "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

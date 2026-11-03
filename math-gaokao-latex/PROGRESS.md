@@ -13960,3 +13960,9 @@
 - provenance 导入预检要求 U 级答案关联答案类/约定类 blocker；原有 `ISSUE-1369` 只标识源字面异常，不能单独满足该语义门禁。因此补记 `ISSUE-1371`（`answer-convention-ambiguous`，open / `blocks_completion`），明确“等此数列”按字面无法确定数列类型与答案。没有改题面、答案或将条件性等比推导升级为确定答案。
 - 经 `issues.question_issue()`、`issues.upsert_issue()` 和 `build_projects.commit_state()` 单一 state transaction 写入；transaction `3a875335-c3c7-452c-bca9-35ee3a4b02d2`，manifest revision `6089→6090`。问题及原因详见[Q12 blocker 补充登记报告](reports/2000-shanghai-science-q12-answer-issue.md)。
 - 事务后 `source_manifest validate` 与 `issues validate` 均通过；Q12 的 `ISSUE-1369`、`ISSUE-1371` 与 Q21 的 `ISSUE-1370` 继续 open / `blocks_completion`，paper 仍 blocked，batch 仍 planned。下一步填充三角色 provenance 工作文件并先 dry-run 导入。
+
+### 2000 上海理科候选卷：Q21 答案约定 blocker 补充登记（2026-11-03）
+
+- provenance 导入预检要求 U 级答案和 unresolved conflict 分别满足 blocker 类型门禁。Q21 的 `ISSUE-1370`（`answer-conflict`）记录题设与字面推导冲突，但不能替代答案约定类 blocker；故补记 `ISSUE-1372`（`answer-convention-ambiguous`，open / `blocks_completion`），记录固定 PDF 无同版答案/勘误，无法核定原卷意图。详情见[Q21 blocker 补充登记报告](reports/2000-shanghai-science-q21-answer-issue.md)。
+- 使用 `issues.question_issue()`、`issues.upsert_issue()` 与 `build_projects.commit_state()` 单一 state transaction 写入，transaction `d5f8ce73-0fd3-4a99-8770-27de1ab77942`，manifest revision `6090→6091`。原题指数2、字面推导及 U/PENDING 均未变。
+- `source_manifest validate` 与 `issues validate` 均通过。Q21 的 `ISSUE-1370`、`ISSUE-1372` 继续 open / `blocks_completion`；paper 仍 blocked，batch planned。随后再运行三角色 provenance dry-run。
