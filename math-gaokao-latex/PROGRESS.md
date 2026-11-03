@@ -23,6 +23,12 @@
 - 题面复核前 SHA-256 为 `de2d20276d5df99c3c170cd4ef74bf3cd9af7b8249338da5401b9b139808944b`；主会话只更新 frontmatter 核校状态，当前题面 SHA-256 为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`。报告见[独立题面复核](reports/2007-shanghai-arts-question-review.md)。
 - 仍未核实来源发布者、版次、复制链和官方身份；`paper_id=null`、`official_answer=null`。四处原图待重绘；答案、解析、provenance、paper/batch登记、TeX、构建和视觉回执尚未开始。下一阶段独立推导答案要点；本阶段不表示来源认证、整卷完成或长期语料库完成。
 
+### 2007 上海文科候选卷：答案要点初稿（2026-11-03）
+
+- 按已独立复核题面新增 2007/2007_数学真题_上海文_答案要点.md，覆盖 Q1–Q21；答案稿 SHA-256 41405397e30f4b1a09f5c7c06b2d0abfc6d984e50872b33915b1c26a449498bd。固定 PDF 只有题面，所有结论均为本库推导、非官方；paper_id=null、official_answer=null。
+- 两名 Luna/high 解题者分段提交独立草稿，主会话逐题复算。纠正 Q11 小弧面积中弓形符号（范围 $0<S\le2-\pi/2$）及 Q21(1) 焦点间距误读（$a=\sqrt7/2,b=1,c=\sqrt3/2$）；Q21(3) 参数分段与两组推导已复核。Q18 得到 2006 年产量 2499.8 兆瓦、四年安装量平均复合增长率至少61.5%。解答题小问结构与题面解析对齐；OCR/API调用为0，模型成本未知。
+- 详情见[答案要点初稿报告](reports/2007-shanghai-arts-answer-key.md)。独立答案盲核尚未开始；目前无 U/PENDING 答案项，但答案均非官方。来源、paper/batch、issue/provenance、解析、图稿、TeX、正式构建与视觉验收均待后续阶段。本阶段不代表来源认证、整卷完成或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
