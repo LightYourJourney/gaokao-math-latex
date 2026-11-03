@@ -2194,6 +2194,14 @@
         "gk-2007-regular-shanghai-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase3-b24",
+      "issues": [],
+      "paper_ids": [
+        "gk-2015-regular-fujian-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2203,7 +2211,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e785f213-4672-4f16-9a64-8fe6e822c2ca",
+  "last_transaction_id": "3318c07d-0e88-4b8f-b37e-9219059c5e19",
   "papers": [
     {
       "blocked_from": null,
@@ -29231,9 +29239,82 @@
       "title": "2007 年·上海卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2015_福建卷_文科/figures/f2015fj_arts_q04_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_福建卷_文科/figures/f2015fj_arts_q08_shaded_region.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_福建卷_文科/figures/f2015fj_arts_q09_three_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_福建卷_文科/figures/f2015fj_arts_q19_parabola_geometry.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2015_福建卷_文科/figures/f2015fj_arts_q20_solid_geometry.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2015_fujian_arts",
+        "id": "gk-2015-regular-fujian-arts",
+        "note": "固定候选副本：2015 普通高考福建文科，2 页 A3 横向（印刷页 945–946），22 题，无答案页。答案与解析为本项目独立推导、非官方；来源发布者、版次与复制链未核。Q12 条件关系为必要不充分，答案 B。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "arts",
+        "variant": "福建文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2015-regular-fujian-arts",
+      "production_state": "planned",
+      "project_dir": "2015_福建卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2015/2015_数学真题_福建文_答案要点.md",
+        "combined_rendered": "2015/2015_数学真题_福建文_含解析.md",
+        "questions": "2015/2015_数学真题_福建文_试题.md",
+        "solution_body": "2015/2015_数学真题_福建文_解析正文.md"
+      },
+      "source_ids": [
+        "src-1a7c18ef934f5ef3b6afbb819418e905cbfa4bf8a6b9d7a784c676fd3ad7132f"
+      ],
+      "title": "2015 年·福建卷·文科",
+      "track": "arts",
+      "year": 2015
     }
   ],
-  "revision": 6060,
+  "revision": 6062,
   "schema_version": 1,
   "sources": [
     {
@@ -44854,8 +44935,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b91e92a997699d6fdb3cb9785f11222badf9b1e2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2015-regular-fujian-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2015福建文.pdf",
       "regions": [],
       "source_id": "src-1a7c18ef934f5ef3b6afbb819418e905cbfa4bf8a6b9d7a784c676fd3ad7132f",
