@@ -28,6 +28,12 @@
 - Q11保留U/PENDING：最佳四棱柱表面积为$24a^2+28$，与三棱柱比较得严格较小时$0<a<\sqrt{5/3}$；等号时两类并列，题干未明确是否允许并列。Q20(1)按“中低价房”解释条件计算为2013年底，但固定题面印作“中低价层”，故仍为U/PENDING；Q20(2)为2009年底。
 - 固定PDF无答案页，所有答案均为本库独立推导、非官方，`paper_id=null`、`official_answer=null`；来源身份未核。阶段报告见[答案与解析初稿](reports/2005-shanghai-science-answer-draft.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、图稿或TeX，未构建。下一阶段独立盲核答案并处理Q11/Q20证据；本阶段不表示来源认证、整卷验收或长期语料完成。
 
+### 2005 上海理科普通卷：独立答案复核（2026-11-03）
+
+- 三名`gpt-6-luna/high`只读复核者先独立推导再对照提交`c20bee9c`：Q1–Q11、Q12–Q18、Q19–Q22 分段覆盖。Q1–Q22最终答案均一致；发现初稿Q1反函数推导文字不成立，虽最终式正确，已修正。另修正解析正文Q3两个漏掉反斜杠的向量命令；数学含义未变。
+- 复核后解析正文 SHA-256 `5b97f869c067589927ccde5aa7599492c0600d21e436d46a0c4548564d29c02d`；答案要点 SHA-256 `b8614bc2574afe564a6c8ff82a7d9f9abd638b208c7835afdc68a857ae593044`。`solution_sources.render_combined` 只读预演通过，22题对齐且U/PENDING仍保留。
+- Q11端点并列范围和Q20(1)“中低价层/中低价房”仍U/PENDING。详情见[独立答案复核报告](reports/2005-shanghai-science-answer-review.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、题图或TeX，未构建；`official_answer=null`、来源身份未核。本阶段不表示来源认证或整卷验收。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
