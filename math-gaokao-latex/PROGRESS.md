@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 上海文科普通卷：固定来源接收（2026-11-03）
+
+- 固定 source `src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`，SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`，Git blob `302ee6023a26b028cf7c89f24359ba818a2a7b3b`，527431 bytes；与 manifest revision 6117 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页200–201，题签为“2004 普通高等学校招生考试 (上海卷文)”，共22题；可见图稿位Q5、Q18、Q20、Q21。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
+- `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`，两页都有文字层且无图像对象：第1页 `review`（1444非空白字符、7可疑字符），第2页 `text_candidate`（714字符、0可疑字符）。两页150/300 DPI渲染均已目视检查；第1页继续人工路由，转录按原页核对。依路由规范，本阶段没有调用OCR（`model_calls=0`、`ocr_calls=0`）。
+- `local_ocr.py doctor` 显示三引擎部署资产均 `ready`；source manifest 校验通过，manifest CSV 当前且775行。来源发布者、出版者、版次、复制链和官方身份未核，PDF无答案或解析页；`official_answer`未知。详情见[固定来源接收报告](reports/2004-shanghai-arts-source-intake.md)。下一阶段逐题转录Q1–Q22并对照原图，随后独立复核题面。本阶段不表示来源认证、答案验证、整卷验收或长期语料完成。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
