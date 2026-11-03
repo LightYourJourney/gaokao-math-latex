@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
+
+- 新增 `tests/test_2004_shanghai_arts_transcription.py`：对 `gk-2004-regular-shanghai-arts` 的规范来源绑定（`src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`、SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`）、22 道题面覆盖、原卷存疑符号（Q14(D) $x = k\pi + (-1)^k$、Q17 $(1+\mathrm{i})z_1 = -1+5\mathrm{i}$ 与 $(a-4)^2 < -3$、Q18 $8\text{ cm}^2$、Q19(2) $B \subseteq A$）、4 幅 TikZ 图稿独立性（Q5、Q18、Q20、Q21）及三角色 provenance / 回执进行端到端自动化测试，5 项用例全部通过。
+- 修复前次提交遗留的报告漂移：`report.py render --all` 将已入库批次的 ownership 状态从 `validated` 同步至 `committed`，回读校验通过。
+- 针对性验证门禁全量通过：`python3 -m unittest tests/test_2004_shanghai_arts_transcription.py`（5/5 通过）、`python3 tools/source_manifest.py validate --manifest source-manifest.json`、`python3 tools/issues.py validate --file missing-issues.md`、`python3 tools/provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase4-b45`、`python3 tools/solution_sources.py check-batch --manifest source-manifest.json --batch phase4-b45`、`python3 tools/build_projects.py validate-receipts --manifest source-manifest.json --paper gk-2004-regular-shanghai-arts --require-final --require-current-inputs`、`python3 tools/review_receipts.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase4-b45`、`python3 tools/manifest_csv.py --check`。
+
 ### 2004 上海文科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`，SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`，Git blob `302ee6023a26b028cf7c89f24359ba818a2a7b3b`，527431 bytes；与 manifest revision 6117 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页200–201，题签为“2004 普通高等学校招生考试 (上海卷文)”，共22题；可见图稿位Q5、Q18、Q20、Q21。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
