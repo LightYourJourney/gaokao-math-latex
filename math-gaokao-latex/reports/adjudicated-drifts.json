@@ -18,6 +18,7 @@
     "  5. T25 修复 md2tex 图片块并经全页视觉审查确认 phase0-b01 四卷的 8 个 questions.tex/answers.tex 漂移，记 visual-layout-repair；T26 用当前生成器恢复尚待新全页审查的 phase0-b02 四卷 8 个派生物，机械证明只传导 \\nopagebreak[4]、\\Needspace{0.4\\textheight} 与空行收敛且内容不变量成立，记 layout-regeneration，不声称视觉确认。common/macros.tex 的答案框修复不改变生成物哈希。",
     "  6. T28 提交 a8bdf08 修复 2023 新高考Ⅰ卷简答版答案泄露：answers_short.tex 第 19 题 (1) 的完整推导改为“见解析版”，独立核对该提交前后仅此一处替换，记 short-answer-safety-repair；该裁定独立于同批次的 layout-regeneration。",
     "放行判据是**双哈希精确匹配**：legacy_sha256 与 current_sha256 都要与实测漂移逐字相等。",
+    "phase0-b01 全国Ⅰ理科答案在 T25 后由 2eb87b98 审定补充证明；该记录的 current_sha256 绑定现文件，layout_review_snapshot 单独固定 T25 版式审查时的字节，follow_up_commit 指向后续内容修订。",
     "  5. T25 修复 md2tex 图片块并经全页视觉审查确认 phase0-b01 四卷的 8 个 questions.tex/answers.tex 漂移，记 visual-layout-repair；T26 用当前生成器恢复尚待新全页审查的 phase0-b02 四卷 8 个派生物，机械证明只传导 \\nopagebreak[4]、\\Needspace{0.4\\textheight} 与空行收敛且内容不变量成立，记 layout-regeneration，不声称视觉确认。common/macros.tex 的答案框修复不改变生成物哈希。",
     "本表由脚本自 legacy-baseline.json 与工作树落盘现值机械生成（T13 提交 ee6e79e、T14 追加 21 条），不手编。",
     "class：migration=内容迁移（答案/题面改由规范源供给）；header=仅生成头注变化；",
@@ -52,9 +53,14 @@
       "adjudicated_by": "task-25-visual-review",
       "artifact": "answers.tex",
       "class": "visual-layout-repair",
-      "current_sha256": "9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30",
+      "current_sha256": "8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233",
       "legacy_sha256": "26cfdcb0b49f2117f47c5cf785ebc4671167a20d7893109d8ef0d40ecf6d80bb",
-      "paper_id": "gk-2017-regular-national-1-science"
+      "layout_review_snapshot": {
+        "commit": "b5083769b5b49d186455e31aeaca0c6c380b711e",
+        "sha256": "9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30"
+      },
+      "paper_id": "gk-2017-regular-national-1-science",
+      "follow_up_commit": "2eb87b98b46f6959f0fdf2d4580df04056f1d967"
     },
     {
       "adjudicated_by": "task-14-review",

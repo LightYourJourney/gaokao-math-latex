@@ -1865,10 +1865,32 @@ class AdjudicatedDriftLedgerTests(unittest.TestCase):
             ]).decode("utf-8")
             now = current.read_text(encoding="utf-8")
             head_for_layout_diff = _normalize_post_baseline_repairs(relative, head)
-            now_for_layout_diff = _normalize_post_baseline_repairs(relative, now)
             self.assertEqual(record["class"], "visual-layout-repair")
             self.assertEqual(record["current_sha256"], file_sha256(current))
             self.assertNotEqual(hashlib.sha256(head.encode()).hexdigest(), record["current_sha256"])
+
+            # 个别答案在 T25 视觉裁定后又有单独审定的证明内容修补。版式测试
+            # 比较 T25 当时的快照；current_sha256 仍必须绑定当前文件。
+            layout_text = now
+            snapshot = record.get("layout_review_snapshot")
+            if snapshot is not None:
+                snapshot_bytes = subprocess.check_output([
+                    "git", "-C", str(ROOT.parent.parent.parent), "show",
+                    snapshot["commit"] + ":" + relative,
+                ])
+                self.assertEqual(
+                    hashlib.sha256(snapshot_bytes).hexdigest(), snapshot["sha256"]
+                )
+                follow_up = subprocess.check_output([
+                    "git", "-C", str(ROOT.parent.parent.parent), "show",
+                    record["follow_up_commit"] + ":" + relative,
+                ])
+                self.assertEqual(
+                    hashlib.sha256(follow_up).hexdigest(), record["current_sha256"]
+                )
+                self.assertEqual(follow_up.decode("utf-8"), now)
+                layout_text = snapshot_bytes.decode("utf-8")
+            now_for_layout_diff = _normalize_post_baseline_repairs(relative, layout_text)
 
             removed = []
             added = []

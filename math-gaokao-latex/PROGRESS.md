@@ -9,6 +9,12 @@
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
 - 仅更新该测试的 `paper_id` 期望值。`python3 -B -m unittest discover -s tests -p 'test_2015_fujian_arts_transcription.py' -v`：8项全部通过。上一轮全量测试的另两项失败（T25 漂移记录与79条全库缓存状态不一致）仍待各自核因；本阶段不声称全量测试通过，也不改变本卷事实源或 manifest。
 
+### 全量测试维护：T25 版式快照与后续证明修订分开核验（2026-11-03）
+
+- `test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 的历史意图是证明 T25 对 phase0-b01 四卷八份共享 TeX 的差异仅属版式。全国Ⅰ理科 `answers.tex` 后由已审定提交 `2eb87b98` 增补第17题证明：由 $m\le k+1$ 与 $N>100$ 推出 $k\ge13$，并相应收紧后续不等式条件；这项内容修订不应改写成 T25 版式变化。
+- 漂移账本现将 `current_sha256` 更新到工作树当前摘要 `8ea128…f233`，并单独固定 T25 后、证明补正前的 `layout_review_snapshot`（提交 `b5083769…`，SHA-256 `9318dc…b3a30`），`follow_up_commit` 指向 `2eb87b98`。回归测试仍以历史快照判定 T25 的 layout-only 差异，同时核验当前文件和后续提交哈希。
+- `python3 -B -m unittest discover -s tests -p 'test_baseline.py' -v`：35项运行、13项因既定 legacy 清理状态跳过，失败0。全量测试尚未重跑；79条缓存状态不一致仍需按批次核验，不能直接批量回写。
+
 ### 2005 上海文科普通卷：Q22 版面修正与四版视觉复核（2026-11-03）
 
 - 首次正式构建 attempt `e365d302-3044-43d4-88c8-5bd1d171bac1` 的视觉检查发现解析版末页（第19页）仅剩 Q22 两个答案框，属于不合理的稀疏尾页。仅调整解析正文 Q22（1）、（3）的公式呈现：将可读的等式并入文字行，保留分段函数的独立展示；数学内容不变。首次构建结果与修正前状态仍记录在[正式构建报告](reports/2005-shanghai-arts-formal-build.md)。
