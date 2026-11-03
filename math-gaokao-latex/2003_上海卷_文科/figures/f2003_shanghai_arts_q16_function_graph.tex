@@ -1,0 +1,28 @@
+% Generator: hand-authored TikZ schematic traced from the source-visible graph; coordinates are illustrative only.
+% Source ID: src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4
+% PDF SHA-256: ffd59c395a0c675118f6da576e48842549c4afa031d923448f26f33087bc7e85
+% PDF page 1; printed page 140; question 16.
+\begin{tikzpicture}[x=0.85cm,y=0.75cm,line width=0.45pt,>=stealth,every node/.style={inner sep=1pt}]
+  % Axes and reference levels.
+  \draw[->] (-3.9,0) -- (3.9,0) node[below right] {$x$};
+  \draw[->] (0,-3.2) -- (0,3.35) node[above left] {$y$};
+  \draw[dashed] (-3,0) -- (-3,2.85);
+  \draw[dashed] (3,0) -- (3,-2.85);
+  \draw[dashed] (0,2) -- (1.5,2);
+  \draw[dashed] (-1.5,-2) -- (0,-2);
+
+  % Odd curve: outer roots lie between the printed +/-2 marks and +/-c.
+  \draw[smooth] plot coordinates {
+    (-3,2.85) (-2.55,0) (-1.5,-2) (0,0)
+    (1.5,2) (2.55,0) (3,-2.85)
+  };
+
+  \node[above left] at (-3.45,3.05) {$y=f(x)$};
+  \node[below left] at (0.12,-0.35) {$O$};
+  \node[below] at (-3,0) {$-c$};
+  \node[below] at (-2,0) {$-2$};
+  \node[below] at (2,0) {$2$};
+  \node[below] at (3,0) {$c$};
+  \node[left] at (0,2) {$2$};
+  \node[left] at (0,-2) {$-2$};
+\end{tikzpicture}
