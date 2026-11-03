@@ -22828,3 +22828,20 @@
   "type": "answer-missing"
 }
 ```
+
+## ISSUE-1362
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "题首将满足 a^2=b^2+c^2、a>0、b>c>0 的一般曲线定义为果圆；第（1）问另加等边焦点条件，而第（3）问仅称 P 为果圆上任意一点，没有明确是否承接该特例。一般参数读法下，令 t=c/a：0<t<=1/2 时最小横坐标为 -c 与 a；1/2<t<1/sqrt(2) 时为 a^2(a-c)/(2c^2)。若承接（1）的参数，则横坐标为 7(sqrt(7)-sqrt(3))/12。固定 PDF 仅有题面，无答案、解析或勘误页可裁定本问参数作用域；规范答案和解析均保留 U/PENDING。",
+  "fingerprint": "bcd8d5c1e1843d0a680cd2a8dcab57c9c5a169a7e6527ca23ce1a237884c5a0f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-shanghai-arts",
+  "question_id": "gk-2007-regular-shanghai-arts-q21",
+  "resume_action": "取得可追溯的同版答案、解析或勘误以明确 Q21(3) 是否承接（1）的等边焦点条件；在此之前保留两种条件结果和 U/PENDING，不把特例写成一般答案。",
+  "source_id": "src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

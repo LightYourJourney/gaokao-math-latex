@@ -53,6 +53,13 @@
 - 输入题面/答案/解析 SHA-256 分别为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`、`350d0a81e8c7f0bf9b064b5b935f116d03cd31b9a8e12c6ea691185c7e75f688`、`70dc00b3e738d521380ce18af98de0123d95c73f279777121b8ae84c2b3657af`。U/PENDING 保留在答案层；本文件仅为派生展示输出，不作为事实来源。
 - 生成报告见 [含解析生成记录](reports/2007-shanghai-arts-combined-generation.md)。本阶段未登记 paper/batch 或 issue/provenance，未生成 TeX/PDF，也未进行图稿与视觉验收；本阶段不代表整卷验收或长期语料库完成。
 
+### 2007 上海文科候选卷：paper/batch 登记与 Q21(3) 阻断项（2026-11-03）
+
+- `source_manifest.py register-papers` 依注册规格登记 paper `gk-2007-regular-shanghai-arts`、批次 `phase1-b83`，将固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789` 绑定为本库 canonical 来源关系。manifest revision `6047→6048`，transaction `a9e4b010-d1cb-497f-a112-8d5df5c75fbc`。
+- 登记时创建 `ISSUE-1362`（`answer-convention-ambiguous`，open / blocks_completion），定位 Q21(3) 是否承接（1）等边焦点特例的参数范围歧义。paper `production_state=blocked`、`blocked_from=planned`；batch 暂为 `planned`，待逐题 provenance 导入后汇总。source publication/edition/copy lineage 与官方身份仍未知；canonical 关系只表达本库固定绑定，不代表官方认证。
+- 规范题面、答案、解析 frontmatter 的 `paper_id` 由 null 绑定为该内部 paper ID，数学内容未改；按更新后的三份事实源重跑 `render_combined()`。当前 Q/A/S/combined SHA-256 依次为 `bbcd8ad5864eabf2f2ffd24ffc2c11bf2b8b730e7025fde6b3841eb19132d225`、`2f646079faf5b54878e8d00b0d4a64d10e3d7c13c4f9ef2faebb90f4be914f35`、`01b8f561bb483e27235b580a5b4435b75219dbeba88ac3d1b5ea1947ce23172c`、`b39454ec05d5617277372a64a041bd9af92cf6324e6de2f7b3d5d89b3ca4bc06`。
+- 按源 manifest 重新投影 `manifest.csv`（775 行）。`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check` 和题面/答案/解析结构对齐定向验证均通过。详情见 [登记回执](reports/2007-shanghai-arts-registration.md)。逐题 provenance、生成项目索引/TeX、图稿、正式构建与视觉复核仍待后续阶段。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
