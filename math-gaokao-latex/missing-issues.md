@@ -22794,3 +22794,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1360
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面原式为 x^2+y^2-2x-2y+8=0，配方得 (x-1)^2+(y-1)^2=-6，实数范围内无圆上点；题目所称圆、切点及面积因而无法定义。固定 PDF 不附答案页或同版勘误。题面逐字保留，答案 U/PENDING，未推测或改写系数。",
+  "fingerprint": "1bb8735af0506b236f6ecae5d4d2d0aafdb78f7a86ffc3b71f1b30cbe9dfdaf7",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2002-regular-beijing-science",
+  "question_id": "gk-2002-regular-beijing-science-q16",
+  "resume_action": "取得可追溯的同版勘误或更强来源后，核定原题意并重算；在此之前保持题面原式、U/PENDING 与 blocker。",
+  "source_id": "src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690",
+  "status": "open",
+  "type": "answer-missing"
+}
+```
+
+## ISSUE-1361
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 的 Q19 开头及第（3）问称数列为 {a_n}，递推式、前两问和所求极限均使用 x_n；独立转录复核确认这组符号差异确为原件印文。按原文保留，未将 {a_n} 改写为 {x_n}；依据递推可证明 x_n 的极限为 √a，但无法确认题面预期符号。",
+  "fingerprint": "9a8b808b35f1ee16fa5f0f34380627b0e4b7c05c42fce190970a91208a8c444f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2002-regular-beijing-science",
+  "question_id": "gk-2002-regular-beijing-science-q19",
+  "resume_action": "取得可追溯同版勘误或权威同版材料核明数列符号；未核前保留原印文与针对递推数列 x_n 的条件性结论，并保持问题未决。",
+  "source_id": "src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690",
+  "status": "open",
+  "type": "answer-missing"
+}
+```

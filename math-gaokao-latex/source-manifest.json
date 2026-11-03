@@ -2178,6 +2178,14 @@
         "gk-2007-regular-beijing-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase1-b82",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-regular-beijing-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2187,7 +2195,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d3e82c31-3007-45f5-91c0-756fb83d785a",
+  "last_transaction_id": "ef5f6a92-8d8c-4716-ad87-61dc3a240310",
   "papers": [
     {
       "blocked_from": null,
@@ -29076,9 +29084,64 @@
       "title": "2007 年·北京卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "gk_2002_beijing_science",
+        "id": "gk-2002-regular-beijing-science",
+        "note": "固定来源为 2 页 A3 题面，原件印刷页 100–101；PDF 不附答案与解析，答案及解析为本项目独立推导且非官方。Q11 函数图、Q12 四函数图、Q18 多面体图待依据固定源重绘。Q15③④在原件中重复，Q16 圆方程无实点并保持未决，Q19 数列符号不一致照录。来源发布者、版次、来源链及官方身份未核。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理"
+      },
+      "issue_ids": [
+        "ISSUE-1360",
+        "ISSUE-1361"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-beijing-science",
+      "production_state": "blocked",
+      "project_dir": "2002_北京卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版勘误或更强来源后，核定原题意并重算；在此之前保持题面原式、U/PENDING 与 blocker。；取得可追溯同版勘误或权威同版材料核明数列符号；未核前保留原印文与针对递推数列 x_n 的条件性结论，并保持问题未决。",
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_北京理_含解析.md",
+        "questions": "2002/2002_数学真题_北京理_试题.md",
+        "solution_body": "2002/2002_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690"
+      ],
+      "title": "2002 年·北京卷·理科",
+      "track": "science",
+      "year": 2002
     }
   ],
-  "revision": 6034,
+  "revision": 6035,
   "schema_version": 1,
   "sources": [
     {
@@ -34543,8 +34606,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e6b19791b1fe3ca2e49404428b746bb36c460f12",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002北京理.pdf",
       "regions": [],
       "source_id": "src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690",

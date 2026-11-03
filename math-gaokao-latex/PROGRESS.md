@@ -13561,3 +13561,10 @@
 - 两名互不读取答案事实源的复核者依据固定题面与 PDF 核查答案；完整盲核者对 Q11/Q12 另看原页图，窄范围复核者独立重建 Q18 坐标和 Q22 幂次递推。首轮代理输出有内部矛盾及 Q18/Q22 推导错误，主会话拒绝采纳；经回看原页和第二名独立复核后逐项裁定，错误复核过程记录于[复核报告](reports/2002-beijing-science-answer-review.md)。
 - Q1–Q15、Q17、Q19–Q22 的确定答案与独立核定一致；Q16 圆方程无实点，继续 U/PENDING。Q18(1) 沿底面边 $AB$ 的水平分量不进入垂直截面，二面角由 $b-d$ 决定；Q22 得 $f(2^k)=k2^k$、$f(2^{-k})=-k2^{-k}$，故 $S_n=2^{-n}-1$。规范答案、解析事实无需更改。
 - Q5/Q15/Q18/Q19 原文疑点照录，Q11/Q12/Q18 图仍待重绘；答案非官方，`official_answer=null`，来源身份未核。未调用 OCR，未做图稿、TeX、构建、视觉验收或 provenance；下一阶段通过单一 `register-papers` 事务登记候选 paper/source/batch 与 Q16 blocker。本阶段不表示本卷验收或长期语料完成。
+
+### phase1-b82 2002 北京理科候选卷：paper/source 登记（2026-11-03）
+
+- `register-papers` dry-run 后以事务 `ef5f6a92-8d8c-4716-ad87-61dc3a240310` 登记 `gk-2002-regular-beijing-science` 与 `phase1-b82`，manifest revision `6034→6035`；固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690` 绑定为本库内部 `canonical` 输入，不据此认证来源身份。题量22，题面页 `[1,2]`、来源答案页 `null`。
+- 登记 `ISSUE-1360`（Q16 无实圆，`answer-missing`）与 `ISSUE-1361`（Q19 `{a_n}` / `x_n` 符号不一致，`answer-missing`），均为 open / `blocks_completion`；paper `blocked`，batch `planned`。Q16 保留 U/PENDING，Q19 只针对明确递推的 $x_n$ 给出条件性结论，均不修改源文；`official_answer=null`。
+- 规范三源绑定 paper ID；确定性重建 `_含解析.md`。`source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）通过；manifest CSV 更新为775行。图稿登记暂为空，Q11、Q12、Q18 待矢量绘制。
+- 本阶段没有 provenance、共享 TeX/简答/版本入口、正式 PDF 构建、视觉回执或 OCR 调用；固定源已有文字层，OCR doctor 对 Xiaomi/Paddle/MinerU 返回 ready。详细登记与剩余事项见[阶段报告](reports/2002-beijing-science-registration.md)。本阶段只完成内部来源登记，不表示来源认证、整卷闭环或长期语料完成。
