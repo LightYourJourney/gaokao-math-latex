@@ -17,6 +17,12 @@
 - 主会话逐题对照固定 PDF 180 DPI 原页渲染图；Q10 明确保留原文“非零实数”前提与末句“非零复数”判断范围的差异。`solution_sources.parse_question_blocks()` 识别连续21题，解答小问为Q18/Q19各2问、Q20/Q21各3问。原件有文字层仅辅助定位；未调用 OCR 模型/API（`ocr_calls=0`），模型及子代理成本未知。
 - 新增[题面转录报告](reports/2007-shanghai-arts-question-transcription.md)。题面独立复核尚未开始；来源发布者、版次、复制链和官方身份仍未核，`paper_id=null`、`official_answer=null`。答案、解析、provenance、图稿、paper/batch登记、TeX、正式构建和视觉验收均未开始；下一阶段进行独立题面复核。本阶段不代表来源认证、整卷完成或长期语料库完成。
 
+### 2007 上海文科候选卷：独立题面复核（2026-11-03）
+
+- 独立复核者 `/root/review_2007_shanghai_arts_transcription`（gpt-6-luna/high）仅据固定 PDF SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212` 与转录稿逐题比对 Q1–Q21；全部 21 题 PASS，0 处差异。题型数、Q18–Q21小问结构和Q7/Q11/Q16/Q21图位均与原页一致；复核者未读答案/解析，未修改文件。
+- 题面复核前 SHA-256 为 `de2d20276d5df99c3c170cd4ef74bf3cd9af7b8249338da5401b9b139808944b`；主会话只更新 frontmatter 核校状态，当前题面 SHA-256 为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`。报告见[独立题面复核](reports/2007-shanghai-arts-question-review.md)。
+- 仍未核实来源发布者、版次、复制链和官方身份；`paper_id=null`、`official_answer=null`。四处原图待重绘；答案、解析、provenance、paper/batch登记、TeX、构建和视觉回执尚未开始。下一阶段独立推导答案要点；本阶段不表示来源认证、整卷完成或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
