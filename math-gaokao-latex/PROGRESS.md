@@ -14409,3 +14409,10 @@
 - `source_manifest.py register-papers` dry-run 通过后，以单一事务登记 `phase4-b48` 与 `gk-2003-regular-beijing-arts`、`gk-2003-regular-beijing-science`，manifest revision `6146→6148`：登记事务 `64dcd398-3bfb-4f1b-a521-ade459556c4f` 完成注册，随后证据引文校正事务 `07dc5eb5-d429-43ec-925a-40df590146cd` 修正 ISSUE-1400 并推进 revision。文科 Q18 建立 `ISSUE-1398`（来源记号）及 `ISSUE-1399`（答案约定）；理科 Q17 建立 `ISSUE-1400`（源文缺字疑点）及 `ISSUE-1401`（答案约定）。四项均 open / `blocks_completion`，paper 为 blocked，batch 为 planned。
 - `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 均通过；题面、答案和解析各20题，答案块与解析小问集合对齐。`manifest.csv` 当前且775行。全量报告投影 currentness 检查通过，结果为“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
 - 文科 Q18 继续保留原页 A1/A2 与 A 标记不一致；理科 Q17 保留“底面边长的 3”，未添“为”。两题均为 U/PENDING；官方答案仍未认证。下一阶段开始题图重绘、登记与 provenance；本登记不表示题源身份核验、正式构建或批次验收完成。
+
+### 2003 北京普通文理候选卷：题图矢量重绘与图登记（2026-11-04）
+
+- 文科 Q5/Q17/Q18/Q19、理科 Q13/Q17/Q18/Q19 共完成8张 TikZ 示意图。各源文件记录固定 source ID、PDF SHA-256、PDF 页/印刷页与题号；逐图 SHA-256、实虚线与原图核对细节见[题图阶段报告](reports/2003-beijing-regular-figures.md)。两名独立复核者按固定原页逐图核对，未调用 OCR。
+- 两份规范题面已由图占位替换为 TikZ 链接；`solution_sources.py extract-batch --write` 重新生成两份 `_含解析.md`。manifest `figure_files` 每卷登记4张、每张 `expected_occurrences=2`，revision `6148→6150`。规范题面、派生稿、生成器图映射与图稿内来源证据保持一致。
+- 八图合并 XeLaTeX 预览编译成功，共8页并经 Poppler 渲染目视检查。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775行）及报告投影 currentness 检查通过；完整命令/预览指纹见阶段报告。未生成正式四版 PDF，未运行全量测试。
+- 文科 Q18 的 `A_1/A_2/A` 原页记号冲突与理科 Q17“底面边长的 3”继续照录；`ISSUE-1398`–`ISSUE-1401` 均保持 open / `blocks_completion`，两 paper 仍 blocked、batch 未关闭。下一阶段导入逐题三角色 provenance，再生成项目与四版入口。本阶段不认证来源、答案或整卷验收。
