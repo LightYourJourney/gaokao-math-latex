@@ -66,6 +66,14 @@
 - 生成文件包括 `questions.tex`、`answers.tex`、`answers_short.tex`、`试题版.tex`、`解析版.tex`、`简答版.tex`、`印刷版.tex` 及 `index.json` 更新。详情见[项目生成报告](reports/2004-shanghai-science-project-generation.md)。
 - 本阶段尚未编译正式 PDF、建立 build/review 回执、逐页视觉验收或运行全库测试；Q19/Q22 blocker 继续阻断。本阶段不表示本卷闭环或长期语料完成。
 
+### 2004 上海理科普通卷：四版正式构建与视觉复核（2026-11-04）
+
+- 成功 attempt `87a158c7-753a-45f3-8290-d99265d00824` 使用 manifest revision 6126，构建后 revision 6128；试题版 5 页、解析版 27 页、简答版 7 页、印刷版 19 页全部 `succeeded`，共 58 页。errors、missing characters、overfull hboxes、undefined references 均为 0。
+- 逐页 8 项视觉复核全部通过（0 溢出警告、0 视觉问题）。`review_receipts.py finalize-batch` 聚合回执并封存批次状态为 `closed_with_blockers`，paper 状态为 `blocked`。
+- `report.py render --all` 刷新全量基线与 6 个全量报告目标；门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`、`review_receipts.py check-batch`、`manifest_csv.py --check`（775行）。
+- 详情见[正式构建报告](reports/2004-shanghai-science-formal-build.md)与[批次报告](reports/phase4-b46.md)。Q19/ISSUE-1386 与 Q22/ISSUE-1387 继续阻断。本阶段不表示整卷无阻塞完成或长期语料完成。
+
+
 
 
 
