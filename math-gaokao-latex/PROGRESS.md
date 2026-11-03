@@ -13686,3 +13686,10 @@
 - 当前 attempt `f8997e0e-2c2d-4a29-a7fc-c35519b32d9a` 的试题/解析/简答/印刷四版共 42 页完成正式视觉复核。40 页与前一 attempt 的 110dpi PNG SHA-256 一致，沿用此前逐页直接目检结论；解析版第 17 页、印刷版第 15 页分别重新以 110/300dpi 检查。合计 336 项页级判据：288 pass、48 not_applicable、0 fail、0 pending；无视觉问题或警告豁免。印刷版从 16 页缩为 15 页，Q21 全题、解答及三个答案框同页。
 - review receipt 为 `passed`；`finalize-batch-checked` 返回 `FINALIZED`，事务 `e785f213-4672-4f16-9a64-8fe6e822c2ca` 将 manifest 从 revision 6059 推进至 6060，batch `phase1-b83` 为 `closed_with_blockers`。四版 final/current build receipts、视觉复核、provenance、项目/简答/版本入口生成、规范来源和 manifest/issues 校验均通过；全量汇总报告投影与 775 行 manifest CSV 已检查为 current。
 - `ISSUE-1362` 仍 open / `blocks_completion`：Q21(3) 是否继承 Q21(1) 的等焦条件未有证据裁定，继续标记 U/PENDING；paper 仍 `blocked`，`official_answer=null`，固定来源的出版身份未核。本批只完成有阻塞的视觉收口，不表示来源认证、整卷无阻或长期语料完成。未运行测试套件。
+
+### 2015 福建文科候选卷：预登记来源与 Q12 复核（2026-11-03）
+
+- 固定候选源 `src-1a7c18ef934f5ef3b6afbb819418e905cbfa4bf8a6b9d7a784c676fd3ad7132f`，PDF SHA-256 `4ca0fbac9967c9a73bdb0bc00eceb3d0181c57285ee72fc260a02c9c24172383`，Git blob `b91e92a997699d6fdb3cb9785f11222badf9b1e2`，516,715 bytes；来源库 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，工作树干净。来源为 2 页 A3 横向、印刷页 945–946。当前 manifest revision 6060，来源仍 `ready` 且未绑定 paper；出版者、版次、复制链与官方身份未核，`official_answer=null`。
+- 复查 Q12 固定原页及 300 dpi 裁切，原式为 $k\sin x\cos x<x$，没有 $x^2$。令 $P$ 为此前半句、$Q$ 为 $k<1$，由 $\sin x\cos x/x\to1$（$x\to0^+$）得 $P\iff k\le1$。因此 $Q\Rightarrow P$、$P\nRightarrow Q$（$k=1$），答案是“必要而不充分”B。旧交接文档中的 A 结论是蕴含方向倒置，已由[预登记复核报告](reports/2015-fujian-arts-preregistration-review.md)更正；题面、答案与解析内容无需修改。
+- 独立题面复核反馈对照 Q1–Q22 未报告差异；独立图稿复核反馈覆盖 5 幅 TikZ 图，记录 Q4 合流布局差异及 Q19/Q20 示意比例边界，详见报告。既有 `analyze_pdf.py --no-cache` 分类为 mixed candidates；本轮复看原页图。未调用 OCR（`ocr_calls=0`、`model_calls=0`），成本数据未知。
+- 规范题面、答案要点、解析正文当前 SHA-256 分别为 `fe153bfcfefff2c0dbbfc64aa5e08edefebe4ff0f7e605155bb0cf8baafc0c44`、`bf087ac4f96c698828e6d263fce2cd38a2d9ecfa61cc5f1a57e08fb0cad95d89`、`e996a1c2a657673825794d5d85c568876d624201d6d4801c25622e9f84ec95d3`；未改写题面/答案/解析层。本阶段未运行测试，未登记 paper/batch、provenance 或 issues，未做项目 TeX、正式四版构建及视觉回执。下一步先核 `register-papers` 参数与 batch 序号，再进入登记阶段；本阶段不表示来源认证、整卷验收或长期语料完成。

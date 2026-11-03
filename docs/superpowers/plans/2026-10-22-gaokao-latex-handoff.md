@@ -210,6 +210,7 @@ git log -1 --oneline --decorate
 - 21 题 D 级（选 1–10／填 11–15／解 16–21），四版 5/25/7/21 页、零告警，batch closed、paper complete，revision 5369。
 - 盲解全一致；Q20(2) 图取 BC=3（另一解 3√3 已在答案披露）；Q8 框图分式改 `rac`，Q20/Q21 图标签已避让。
 - 注意：2015 福建文已有另一会话的 22 题草稿（未登记，Q12 选择答案疑为 B，独立核算应为 A，宜复核后再登记）。
+- **纠正（2026-11-03）**：见[2015 福建文科预登记复核报告](../../exams/math-gaokao-latex/reports/2015-fujian-arts-preregistration-review.md)。固定原页 Q12 是 $k\sin x\cos x<x$（末项没有平方），令 $P$ 为该命题、$Q$ 为 $k<1$，有 $P\iff k\le1$；$Q\Rightarrow P$ 而 $P\nRightarrow Q$，故答案 B“必要而不充分”。前一行的 A 判断倒置了“P 是 Q 的条件”的蕴含方向，应视为已被本条取代。
 
 ## 2026-10-28 接续：phase4-b39（2015 重庆理工农医类）已 FINALIZED
 
