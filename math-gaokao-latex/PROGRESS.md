@@ -11,6 +11,13 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`：第1页 `text_candidate`（1401个非空白字符、0个可疑字符），第2页 `review`（623个字符、7个可疑字符）；两页均有文字层、无嵌入图像对象。两页150 DPI渲染均已目视检查；文字层只作定位候选，后续逐题以固定原页核对。本阶段 `model_calls=0`、`ocr_calls=0`、外部API调用0。
 - 本阶段只接收并核查固定来源，未登记paper/batch、未修改manifest/issues、未转录或求解。`paper_id=null`、`official_answer=null`；人工耗时未知。详情见[2005上海文科普通卷来源接收报告](reports/2005-shanghai-arts-source-intake.md)。下一阶段转录Q1–Q22并逐题对照原页，之后独立复核题面。本回执不表示来源认证、答案验证、整卷验收或长期语料完成。
 
+### 2005 上海文科普通卷：Q1–Q22 题面转录（2026-11-03；复核补正待确认）
+
+- 按固定 source `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`、SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1` 转录题面草稿 `2005/2005_数学真题_上海文_试题.md`，填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；原件为2页A3横向，印刷页264–265。
+- 逐题对照300 DPI原页分栏渲染；`pdftotext -layout`仅作定位候选。Q16数阵按原序转写；Q12、Q17、Q21保留待重绘图位。没有补充分值/总分，也未把题面推导混入转录。
+- 首轮独立复核发现印刷页265 Q20(1)原文“中低价层”被初稿录作“中低价房”；现已照录原字并在题稿内标注其与前文/第(2)问用词不一致。复核者称其余Q1–Q22文字、公式、选项、小问、Q16数阵和图位均无差异；修正行待该复核者最终确认。
+- 本阶段未调用OCR或外部API；`model_calls=0`、`ocr_calls=0`，人工耗时未知。来源出版身份未核，`paper_id=null`、`official_answer=null`。详情见[题面转录报告](reports/2005-shanghai-arts-question-transcription.md)。最终独立复核完成前不记录“题面复核通过”；答案、解析、图稿、登记和构建尚未开始。本回执不表示来源认证或整卷验收。
+
 ### 2000 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`，SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`，Git blob `91ece8675e9cd47367f547bd9b0b6b4979b77d0e`，597723 bytes；与 manifest revision 6066 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。PDF 固定副本和页面渲染保存在忽略目录 `.work/ocr-local/`。
