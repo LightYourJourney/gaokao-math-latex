@@ -48,6 +48,12 @@
 - `solution_sources check-batch`、`provenance.py check-batch`、三个生成器 `--check`、manifest/issues 校验、CSV `--check`（775行）均通过。batch 仍为 `provenance_verified`，两卷因 Q14 blocker 为 `blocked`。
 - 此阶段尚未执行 XeLaTeX 正式构建、PDF 页面检查、build/review 回执或批次关闭；来源身份与官方答案仍未核。下一步先核对构建输入与工具链，再构建四版并逐页复核。
 
+### 2003 上海普通卷文理科：四版正式构建（2026-11-04）
+
+- 修正数学模式中的中文顿号、分号字形缺失，并重生成派生稿、TeX 与 provenance 题面摘要；修正只调整标点的文字模式，不改变原题或数学结论。登记报告已更新八份事实源 SHA-256。
+- 文理两卷各四版正式构建成功，共92页；8份回执均无编译错误、缺字、overfull 或未定义引用。attempt、页数与 PDF SHA-256 见[正式构建报告](reports/phase4-b47-formal-build.md)。正式构建后 manifest revision 为6145。
+- 已准备8个全页视觉审查工作项，视觉检查尚未完成；batch 当前 `compiled_pending_review`。Q14 `ISSUE-1388`/`ISSUE-1389` 仍为 U/PENDING 阻塞项，来源身份与官方答案未核。下一步完成逐页视觉回执、批次关闭门禁与交接更新。
+
 ### 2003 上海普通卷理科：Q1–Q22 独立题面复核（2026-11-04）
 
 - 一名未参与转录的独立复核者直接渲染固定 PDF，逐题核对 Q1–Q22；主会话另行查看第1页 Q16/Q18/Q19 和第2页 Q20/Q22 原图。最终 Q1–Q22 题干、公式、符号和小问全部与可见页图相符，0处未决文字/符号差异、0处影响判断的模糊像素。
