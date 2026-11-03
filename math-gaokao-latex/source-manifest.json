@@ -2218,6 +2218,14 @@
         "gk-2015-regular-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b42",
+      "issues": [],
+      "paper_ids": [
+        "gk-2000-regular-shanghai-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2227,7 +2235,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "7dd6b81e-68e9-4098-865f-43e6525783e9",
+  "last_transaction_id": "1a368a14-9815-44c0-9bd0-34c7eb42c9af",
   "papers": [
     {
       "blocked_from": null,
@@ -29473,9 +29481,64 @@
       "title": "2015 年·福建卷·理科",
       "track": "science",
       "year": 2015
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2000_shanghai_science",
+        "id": "gk-2000-regular-shanghai-science",
+        "note": "固定候选 PDF 为 A3 横向两页题面（印刷页70–71），与来源的绑定仅固定本库输入字节；发布者、版次、复制链及官方身份未核。PDF 无答案页，答案与解析为本库独立推导，official_answer=null。Q12“等此数列”及Q21指数2按源字面保留并分别保持U/PENDING；Q8、Q18、Q20图稿待矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [
+        "ISSUE-1369",
+        "ISSUE-1370"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2000-regular-shanghai-science",
+      "production_state": "blocked",
+      "project_dir": "2000_上海卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版清晰副本、勘误或可靠同期材料，核定 Q12 原字及数列类型；此前按固定 PDF 保留“等此数列”，答案维持 U/PENDING，不按惯用表述替换。；取得可追溯的同版答案、解析、勘误或可靠同版副本，确认 Q21 是否存在原卷印刷或版本差异；此前保留指数2并按字面说明无最大项，整题答案保持 U/PENDING，不推测替换成 n。",
+      "source_files": {
+        "answer_key": "2000/2000_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2000/2000_数学真题_上海理_含解析.md",
+        "questions": "2000/2000_数学真题_上海理_试题.md",
+        "solution_body": "2000/2000_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8"
+      ],
+      "title": "2000 年·上海卷·理科",
+      "track": "science",
+      "year": 2000
     }
   ],
-  "revision": 6087,
+  "revision": 6088,
   "schema_version": 1,
   "sources": [
     {
@@ -34460,8 +34523,8 @@
       "exam_type": "regular",
       "git_blob_oid": "493b64433fdd83bb4f13a587a8e12a53b2a447e9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2000-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2000上海理.pdf",
       "regions": [],
       "source_id": "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8",

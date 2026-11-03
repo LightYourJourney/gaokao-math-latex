@@ -13942,3 +13942,9 @@
 
 - 按 `solution_sources` 输入约定整理答案要点独立答案块、试题与解析小问锚点；题面字词与数学内容不变。调用 `render_combined()` 生成 `_含解析.md` 并现场重算逐字节一致；三源解析器均识别 22 题且小问集合对齐。详情与哈希见[规范答案块与含解析稿生成报告](reports/2000-shanghai-science-combined-generation.md)。
 - Q12、Q21 在生成稿中仍显示 U/PENDING；manifest 与问题总账未变。下一步执行 `phase4-b42` paper/source/issue 登记事务，再同步 paper ID 并运行批次级检查。
+
+### 2000 上海理科候选卷：paper/source/issues 登记（2026-11-03）
+
+- `register-papers` dry-run 与正式单一事务通过，manifest revision `6087→6088`，绑定候选 source 到 `gk-2000-regular-shanghai-science`，batch `phase4-b42`。登记 `ISSUE-1369`（Q12 transcription-ambiguous）和 `ISSUE-1370`（Q21 answer-conflict），均 open / blocks_completion；paper blocked，batch planned。登记细节、事务 ID 和文件哈希见[登记报告](reports/2000-shanghai-science-registration.md)。
+- 已将 paper ID 同步到四个规范事实层；批次 `extract-batch --write` 规范化解析标记并刷新 `_含解析.md`，`manifest.csv` 更新且保持 775 行。source manifest、issue ledger、solution source、CSV 四项检查通过。
+- 仍待逐题 provenance、Q8/Q18/Q20 TikZ 图稿及登记、项目 TeX/简答/四版入口、正式构建与逐页视觉验收。下一阶段开始题图重绘与 provenance 准备；Q12/Q21 blocker 不解除。

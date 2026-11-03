@@ -22952,3 +22952,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1369
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q12 在300 dpi原页及局部放大均读作“等此数列”，未发现答案或勘误页。“等此数列”无法确定数列类型；若条件性假设为等比数列可以推出乘积恒等式，但这不能证明源字或本题原意。",
+  "fingerprint": "8fbecaaadd8614cf771e6e8aaa4bc9c9359fd0634876cc14ddbdae6fea9039b0",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-science",
+  "question_id": "gk-2000-regular-shanghai-science-q12",
+  "resume_action": "取得可追溯的同版清晰副本、勘误或可靠同期材料，核定 Q12 原字及数列类型；此前按固定 PDF 保留“等此数列”，答案维持 U/PENDING，不按惯用表述替换。",
+  "source_id": "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1370
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第2页 Q21 函数排印指数清楚为数字2。按字面，等腰条件给 a_n=n+1/2、b_n=20a^2；Q21（2）允许全部 0<a<10，最小整数 a=1 时 B_n=20^n 严格递增，没有最大项，与（3）设问不相容。固定 PDF 未附答案、解析或勘误页。",
+  "fingerprint": "05ee88924d958a85ff7db0bcf5f720bdc891c568c5f8e57e8c5910bb44fe17ae",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-science",
+  "question_id": "gk-2000-regular-shanghai-science-q21",
+  "resume_action": "取得可追溯的同版答案、解析、勘误或可靠同版副本，确认 Q21 是否存在原卷印刷或版本差异；此前保留指数2并按字面说明无最大项，整题答案保持 U/PENDING，不推测替换成 n。",
+  "source_id": "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
