@@ -41,6 +41,13 @@
 - 将复核后的题面转录草稿固定为 `2004/2004_数学真题_上海文_试题.md`，SHA-256 `752a56c8eb0a6b91d24282686f682dd3f3084dffdaa8daaa4fbb1bc063094d4b`；答案与解析元数据绑定内部候选 `paper_id=gk-2004-regular-shanghai-arts`，绑定后答案要点 SHA-256 `6b2938f6841a70b3eea3775713fbe8a2914fa3d65dfd6a52b30d5a91b94aaad2`，解析正文 SHA-256 `61ec23b36e7d8e8d5ba051f35a28c015d73309f0cdd6fb42150b7a05eca25ac5`；确定性生成 `_含解析.md`，SHA-256 `3129a581881e143a9273dea0658a0cbc11099ccd3eb26b20d93debfaf0092d74`。
 - `source_manifest.py register-papers --write` 新建批次 `phase4-b45` 与 paper，manifest revision 6117→6118；source `src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290` 关联为内部 canonical。Q17/Q19 阻塞项分别是 `ISSUE-1384`、`ISSUE-1385`，paper `blocked`、batch `planned`。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py extract-batch --write` / `check-batch` 及 `manifest_csv.py --write` / `--check` 均通过。详情见[规范事实源与内部卷登记报告](reports/2004-shanghai-arts-paper-registration.md)。
 
+### 2004 上海文科普通卷：Q5/Q18/Q20/Q21 题图重绘与登记（2026-11-03）
+
+- 依据固定来源第1–2页（印刷页200–201）原图完成Q5、Q18、Q20、Q21共4张TikZ矢量重绘：Q5 函数在$[0, 5]$上图象（SHA-256 `2517fdebec6048cca898d7ee1b9c54a49e2727040cd25a6df340f2214ff41a98`）；Q18 矩形与等腰直角三角形组合框架（SHA-256 `e4954761a2c30dc2a40f552a22c0b95a985e53e30fb8076152b93a0b50edb33b`）；Q20 抛物线、直线与垂直平分线交点Q示意图（SHA-256 `7119d5819693a011c1794aa573760a5dcef829d23ef34bc7767c9e8deca6f3bb`）；Q21 正三棱锥及平行截面棱台示意图（SHA-256 `06a607d751412ac6fb4538eb5609a94295a5e12252df27eded59c7163eb4e031`）。
+- 4张图稿在 `.work/ocr-local/2004-shanghai-arts/figure-preview/` 下经 XeLaTeX 编译单页 PDF 并导出 180 DPI PNG，与原卷原图逐幅目视比对，全部通过。
+- 规范题面 `2004/2004_数学真题_上海文_试题.md` 插入4处图链（SHA-256 `a3dc62b9bfcb6b148ef8742fb9d4257791648d462ff2f591e1a2e7f768956e28`）；`solution_sources.py extract-batch --write` 刷新确定性含解析稿（SHA-256 `435ec8e4406b0e9a16314d2c98c3507b928f37f09738909534a99c2b2aec4187`）。
+- `source_manifest.py sync-figure-registry --write` 更新 manifest revision 6118→6119，4张图预期引用均正确建立；`check-batch`、`validate` 及 `manifest_csv.py --check` 均通过。详情见[题图重绘与登记报告](reports/2004-shanghai-arts-figures-provenance.md)。未导入provenance，未生成TeX/四版，未构建。本阶段不表示整卷验收。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。

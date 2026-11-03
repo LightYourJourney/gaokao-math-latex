@@ -1,0 +1,22 @@
+% Candidate source: src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290
+% Source PDF SHA-256: 4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad
+% PDF page 1 (printed page 200), question 5.
+% Redraw follows visible relations; point placement is schematic, not a scale claim.
+\begin{tikzpicture}[line cap=round,line join=round,>=latex,x=0.8cm,y=0.8cm]
+  % Axes
+  \draw[->] (-0.6,0) -- (5.8,0) node[right] {$x$};
+  \draw[->] (0,-2.2) -- (0,2.2) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % Function curve on [0, 5]
+  \draw[thick] (0,0) .. controls (0.7,1.8) and (1.3,1.8) .. (2,0)
+                     .. controls (2.7,-1.8) and (4.2,-1.8) .. (5,-1.3);
+
+  % Dashed vertical line to endpoint and solid dot
+  \draw[dashed] (5,0) -- (5,-1.3);
+  \fill (5,-1.3) circle (1.5pt);
+
+  % Labels on x-axis
+  \node[below] at (2,0) {$2$};
+  \node[above] at (5,0) {$5$};
+\end{tikzpicture}

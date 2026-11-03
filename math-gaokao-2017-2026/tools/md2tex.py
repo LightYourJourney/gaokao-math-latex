@@ -31,7 +31,7 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Mapping, Sequence, Tuple
+from typing import List, Mapping, Optional, Sequence, Tuple
 from urllib.parse import unquote, urlsplit
 
 # ---------- 配图映射：MD 图片基名 -> figures/ 下的 TikZ 文件名 ----------
