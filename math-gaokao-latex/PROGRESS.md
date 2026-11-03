@@ -13816,3 +13816,9 @@
 - 新增四个 TikZ 图稿并在规范题面用独立段落链接；依据固定来源 PDF SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`，Q8/Q11/Q18 位于 PDF p.1（印刷页72），Q20 位于 PDF p.2（印刷页73）。单独 4 页 XeLaTeX 预览以 Poppler 180 dpi 渲染，四幅均与原页目视对照通过。Q11 源图核查报告中误写的“三角形”已更正为顶点 (0,0)、(0,5)、(1,4)、(3,0) 的四边形。
 - `solution_sources.py extract-batch --write` 重建合并稿；manifest 登记四幅图且每幅预期引用 2 次，revision `6067→6068`。项目 TeX 与 `index.json` 重新生成。逐题三角色 provenance 导入 revision `6068→6069`，Q1–Q22 transcription 全部 passed，答案证据 D 级 21 题、U 级 1 题。Q21 保留 U/PENDING 与 unresolved；`ISSUE-1363` answer-conflict 和新增 `ISSUE-1364` answer-convention-ambiguous 均为 open / blocks_completion，paper 仍 blocked、batch 为 provenance_verified。
 - 定向门禁通过：`solution_sources check-batch`、`source_manifest validate`、`issues validate`、`provenance check-batch`、本卷三项生成器 `--check`、`manifest_csv --check`（775 行）。阶段报告见[四图与 provenance 回执](reports/2000-shanghai-arts-figures-and-provenance.md)。本阶段未调用 OCR、未运行测试套件或四版正式 PDF 构建；来源身份与官方答案未核。下一阶段处理正式试卷构建及视觉回执，仍需保留 Q21 blocker；不表示本卷闭环或长期语料完成。
+
+### 2000 上海文科候选卷：修正正式构建发现的来源说明 TeX 错误（2026-11-03）
+
+- 首次四版正式构建 attempt `f413ab0f-05e0-4cca-bc0e-010aecee0f02` 在四版均以 latexmk exit code 12 失败，没有产出 PDF；构建输入 manifest revision `6070`，失败事务后为 `6071`。原始 XeLaTeX 日志定位到题面来源说明行内代码 `official_answer` 被生成为含裸下划线的 `\texttt{official_answer}`，触发 `Missing $ inserted`。答案要点和解析正文说明也含同类 `paper_id`/`official_answer` 标识。
+- 只将三个事实源文件的说明文字改为普通中文，保留 front matter 中的内部 `paper_id` 和 `official_answer: null`；题目、答案与解析数学内容未改。重生 `_含解析.md`、`questions.tex`、`answers.tex`，检查生成的题面/答案 TeX 不再含这些裸下划线标识。provenance、source、issue、solution 与三个生成器门禁通过；manifest CSV 已按失败构建事务刷新且 775 行 current。
+- 首次失败的原始回执及自动登记的 `ISSUE-1365`–`ISSUE-1368` 已保留，等待成功构建时由正式事务对账。Q21 的 `ISSUE-1363`/`ISSUE-1364` 仍 open / `blocks_completion`，paper 仍 blocked、batch 仍为 `provenance_verified`。本阶段修正报告见[正式构建来源说明修正](reports/2000-shanghai-arts-tex-source-note-fix.md)。尚未重跑四版构建，未产出可审阅 PDF，也未进行视觉复核；未运行测试或 OCR。
