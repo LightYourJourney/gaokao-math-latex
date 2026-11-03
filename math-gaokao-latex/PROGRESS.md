@@ -47,6 +47,12 @@
 - 复核报告见 [解析正文独立复核](reports/2007-shanghai-arts-solution-review.md)。其中记录盲稿曾出现且已查明的 Q11 面积区域误读、Q15 蕴含方向、Q17 三角形角度、Q18 增长乘数、Q20(2) 中心项及 Q21(3) 顶点阈值问题；这些错误没有保留在规范正文中。Q21(3) 按一般参数得到 $c/a\le1/2$ 时横坐标 $-c,a$，$c/a>1/2$ 时为 $a^2(a-c)/(2c^2)$；若承接（1）则为 $7(\sqrt7-\sqrt3)/12$，来源无答案页不能裁定意图。
 - `parse_question_blocks()` 与 `validate_solution_body()` 再次通过，题号和小问集合一致。答案及解析均为本库独立推导，非官方；`paper_id=null`、`official_answer=null`。`_含解析.md`、来源/paper/batch与issue/provenance登记、图稿、TeX、正式构建及视觉回执尚未开始。本阶段不代表来源认证、整卷验收或长期语料库完成。
 
+### 2007 上海文科候选卷：生成 `_含解析.md`（2026-11-03）
+
+- 使用 `solution_sources.render_combined()` 从唯一事实源 `_试题.md`、`_解析正文.md`、`_答案要点.md` 确定性生成 `2007/2007_数学真题_上海文_含解析.md`，UTF-8 字节数 18,718，SHA-256 `b6a23a72811ec9f06bb74d96b34db050079d8d0ad0d39d97aa6f365efb775c88`。第二次内存重渲染与磁盘字节完全一致。
+- 输入题面/答案/解析 SHA-256 分别为 `caf07d9df666be9e439471d623ac395214a9fdd5e37eea876970e1487ce9c17e`、`350d0a81e8c7f0bf9b064b5b935f116d03cd31b9a8e12c6ea691185c7e75f688`、`70dc00b3e738d521380ce18af98de0123d95c73f279777121b8ae84c2b3657af`。U/PENDING 保留在答案层；本文件仅为派生展示输出，不作为事实来源。
+- 生成报告见 [含解析生成记录](reports/2007-shanghai-arts-combined-generation.md)。本阶段未登记 paper/batch 或 issue/provenance，未生成 TeX/PDF，也未进行图稿与视觉验收；本阶段不代表整卷验收或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
