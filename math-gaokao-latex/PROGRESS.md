@@ -10,6 +10,13 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`，两页都有文字层且无图像对象：第1页 `review`（1444非空白字符、7可疑字符），第2页 `text_candidate`（714字符、0可疑字符）。两页150/300 DPI渲染均已目视检查；第1页继续人工路由，转录按原页核对。依路由规范，本阶段没有调用OCR（`model_calls=0`、`ocr_calls=0`）。
 - `local_ocr.py doctor` 显示三引擎部署资产均 `ready`；source manifest 校验通过，manifest CSV 当前且775行。来源发布者、出版者、版次、复制链和官方身份未核，PDF无答案或解析页；`official_answer`未知。详情见[固定来源接收报告](reports/2004-shanghai-arts-source-intake.md)。下一阶段逐题转录Q1–Q22并对照原图，随后独立复核题面。本阶段不表示来源认证、答案验证、整卷验收或长期语料完成。
 
+### 2004 上海文科普通卷：Q1–Q22 题面转录（2026-11-03）
+
+- 按固定 source `src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`、PDF SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad` 完成填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；草稿位于 `2004/2004_数学真题_上海文_题面转录草稿.md`，SHA-256 `2af7dc88429f3902449b261bc09272d58a46a0c1b1bf94ef0811b610320cb81d`。题面分节与题号连续，共22题。
+- 分段对照PDF第1–2页150/300 DPI原图。Q5/Q18/Q20/Q21图位待矢量重绘；Q16前5行业应聘与招聘人数表按Markdown表格转录。
+- 存疑照录：Q14(D)原卷印载公式 `x = k\pi + (-1)^k` 漏印项，经Xiaomi与Paddle双引擎及原卷300 DPI图像确认，原卷字面确为 `(-1)^k` 之后直接接逗号，忠实照录；Q18 面积单位印作 `8 cm^2`，与边长单位 `m`、计算精度 `0.001 m` 存在量纲不一致，忠实照录；Q19 题干定义集合 $D$，但小问 (2) 提问条件作 $B \subseteq A$，忠实照录原卷用词，不擅自统一。
+- 定向结构解析识别Q1–Q22及解答小问Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。独立题面复核、答案/解析、paper登记、图稿及构建仍待后续。详情见[题面转录报告](reports/2004-shanghai-arts-question-transcription.md)。本阶段不表示来源认证、答案验证或整卷验收。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
