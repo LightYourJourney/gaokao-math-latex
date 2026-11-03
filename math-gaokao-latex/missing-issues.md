@@ -23093,3 +23093,55 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1377
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "Q12表面积计算表明四棱柱严格小于三棱柱时0<a<sqrt(5/3)，a=sqrt(5/3)时两者并列最小；固定题面只写“四棱柱全面积最小”，未说明是否允许并列或要求唯一最小，端点结论不能无依据裁定。",
+  "fingerprint": "b6c9e5411e2bb5dc2805bb668938734589defc7579fd34765eb178c702a5faeb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-shanghai-arts",
+  "question_id": "gk-2005-regular-shanghai-arts-q12",
+  "resume_action": "取得可追溯同版答案、解析或勘误以确认“最小”是否允许并列；在此之前保留U/PENDING，不替来源补充唯一性条件。",
+  "source_id": "src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1378
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原页Q20(1)清楚印作“中低价层”，与题目前文及第(2)问的“中低价房”冲突。题面照录来源；仅按“房”解释时条件计算为2013年底，不能据上下文静默改字并冒充确定答案。",
+  "fingerprint": "7809e71ee548c3038ed5b21f5d4046e6d2e1561ecdfb622cf7dc133450cbd632",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-shanghai-arts",
+  "question_id": "gk-2005-regular-shanghai-arts-q20",
+  "resolved_evidence": "固定 PDF 原页清楚印作“中低价层”，规范题面已忠实照录；字形转录本身无歧义。答案能否按上下文解释为“中低价房”属于解释/答案约定未决，另由 ISSUE-1379 阻断。",
+  "resume_action": "核对可靠同版印本、勘误或可追溯官方说明，确认“层”是否为原字或误植；在此之前保留原文及U/PENDING，条件结果不得写成确定答案。",
+  "source_id": "src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846",
+  "status": "resolved",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1379
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定原页 Q20(1) 清楚印作“中低价层”，与前文及第(2)问“中低价房”冲突。题面忠实照录；仅在按“房”解释时条件计算为2013年底，现有证据不能裁定原题意。",
+  "fingerprint": "e1e23364a33286802a5685b59675ec7483c567bc6552e869be78f4e2db8e6569",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-shanghai-arts",
+  "question_id": "gk-2005-regular-shanghai-arts-q20",
+  "resume_action": "取得可追溯同版答案、勘误或可靠说明以确认“中低价层”是否应按“中低价房”解释；在此之前将 Q20(1) 保留 U/PENDING，条件性年份不写为确定答案。",
+  "source_id": "src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

@@ -1,7 +1,7 @@
 # 2005 上海文科普通卷：Q1–Q22 题面转录
 
 - 日期：2026-11-03。
-- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`，PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`，上游路径 `普通高考/2005/2005上海文.pdf`，原件印刷页264–265。
+- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846`，PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`，上游路径 `普通高考/2005/2005上海文.pdf`，原件印刷页264–265。
 - 独立题面复核时稿件 SHA-256 为 `ae5110faab02d08bf64daaf62f41a23bf86953f166505437487cd9ca98944fc3`；为满足解析器小问锚点规则，之后仅在Q19–Q22小问编号后加入分隔空格。当前稿件 SHA-256 `946ad0a766b1b8b24ceb6955433ac663f03b039b72eea216b738007bb41bc6c2`；无题目事实改动，见[小问结构锚点规范化报告](2005-shanghai-arts-anchor-normalization.md)。
 
 ## 转录范围与方法

@@ -2,7 +2,7 @@
 
 - 日期：2026-11-03。
 - 复核者：`candidate_audit_1952_2006`（gpt-6-luna/high）；只读复核，未改稿、未运行测试。
-- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`，SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`，共2页，印刷页264–265。
+- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846`，SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`，共2页，印刷页264–265。
 - 最终复核题稿 SHA-256：`ae5110faab02d08bf64daaf62f41a23bf86953f166505437487cd9ca98944fc3`。
 
 ## 复核范围与结果

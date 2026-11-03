@@ -1,7 +1,7 @@
 # 2005 上海文科普通卷：独立答案复核
 
 - 日期：2026-11-03。
-- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`，PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`。原PDF仅有题面，没有答案、解析或评分页。
+- 固定来源：`src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846`，PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`。原PDF仅有题面，没有答案、解析或评分页。
 - 复核者：`candidate_audit_2017_2026`（gpt-6-luna/high），未参与原解答稿撰写；依据固定题面独立核算Q1–Q22，未修改文件。
 - 答案要点 SHA-256 `76cd6dfb3997102579179ee70a778e2f75f3798f81c73f20abffc78acffbd044`。复核时解析正文 SHA-256 `ee4024a840189c824eb0c082d71cade323ed4c6c287f1810bef844e6e2cb29d7`；后续结构规范化后当前 SHA-256 为 `614b466129cc08ce08427bfa5e3b698f150bac2e7076c1056de5eb45250a04bf`。
 
