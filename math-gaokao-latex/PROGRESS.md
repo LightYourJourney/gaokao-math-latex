@@ -13948,3 +13948,9 @@
 - `register-papers` dry-run 与正式单一事务通过，manifest revision `6087→6088`，绑定候选 source 到 `gk-2000-regular-shanghai-science`，batch `phase4-b42`。登记 `ISSUE-1369`（Q12 transcription-ambiguous）和 `ISSUE-1370`（Q21 answer-conflict），均 open / blocks_completion；paper blocked，batch planned。登记细节、事务 ID 和文件哈希见[登记报告](reports/2000-shanghai-science-registration.md)。
 - 已将 paper ID 同步到四个规范事实层；批次 `extract-batch --write` 规范化解析标记并刷新 `_含解析.md`，`manifest.csv` 更新且保持 775 行。source manifest、issue ledger、solution source、CSV 四项检查通过。
 - 仍待逐题 provenance、Q8/Q18/Q20 TikZ 图稿及登记、项目 TeX/简答/四版入口、正式构建与逐页视觉验收。下一阶段开始题图重绘与 provenance 准备；Q12/Q21 blocker 不解除。
+
+### 2000 上海理科候选卷：Q8/Q18/Q20 题图重绘与登记（2026-11-03）
+
+- 按固定 source `src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8`（SHA-256 `b798af61afdac624589769db5bbafe734aa9a0016973bd00b3f5bc8028ab3a40`）重绘三张 TikZ 矢量图。Q8 保留线段与轴刻度；Q18 只保留原图拓扑/虚实线；Q20 只保留坐标轴及刻度。图稿源信息、generator 与目视边界见[题图阶段报告](reports/2000-shanghai-science-figures.md)。
+- 三个独立 Markdown 图稿链接已写入规范题面；`extract-batch --write` 刷新 `_含解析.md`；`sync-figure-registry --write` 单一事务将三张图登记到 manifest，revision `6088→6089`，每张图 expected occurrences 为2。XeLaTeX 3页预览构建成功并逐页以180 dpi对照固定原页检查；预览不作为正式 PDF 或回执。
+- `source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）、`manifest_csv --check` 均通过，CSV 仍为775行。题源有文字层，本阶段未调用 OCR。provenance 导入、项目 TeX/简答/四版生成、正式构建和页面回执未开始；Q12/Q21 blocker 仍在，答案 U/PENDING，`official_answer=null`，本卷仍 blocked。
