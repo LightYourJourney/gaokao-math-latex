@@ -13801,3 +13801,12 @@
 
 - 直接查看固定 PDF source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`（SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`）两页 180dpi 渲染及局部放大。Q8 的线段端点为 A(0,2)、B(1,1)；Q11 的坐标轴、阴影可行域与标注点 (1,4) 可辨；Q18 原图为含 A、B、C、D、E 标记的四面体示意，E 位于 AC；Q20 只画坐标轴与 x=4、x=17、y=4 刻度，未标出机器人或小球符号。
 - 四处图位说明与原图相符，未发现需改写题面或新增事实的问题。原页图形关系清单见[原图目视核查报告](reports/2000-shanghai-arts-figure-source-review.md)。此阶段只核查原图，尚未重绘或修改题稿；TikZ 图稿、Markdown 映射、项目图稿生成入口、manifest `figure_files`、provenance 和正式构建均待后续同步。未调用 OCR、未运行测试或构建；不表示整卷验收或长期语料完成。
+
+
+### 2000 上海文科候选卷：规范事实层、登记与确定性装配（2026-11-03）
+
+- 重验本地 OCR 资产：`deploy_local_ocr.py --verify-only` 与 `local_ocr.py doctor` 通过，Xiaomi-OCR-0、PaddleOCR-VL-1.6、MinerU 三个安装与模型树指纹均 verified。本阶段不需重跑 OCR，未发生模型推理调用。
+- 新增规范 `_试题.md`、`_答案要点.md`、`_解析正文.md` 并生成 `_含解析.md`；Q1–Q22 对齐，小问 Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3) 在题面/答案/解析均一致。答案层已按解析器标准化并补单选速查 C/A/A/D；解析数学内容未因格式规范化改变。四份规范文件 SHA-256 与阶段报告 `reports/2000-shanghai-arts-registration.md` 所列一致。
+- `register-papers` 登记 `gk-2000-regular-shanghai-arts` / `phase3-b25`，manifest revision `6066→6067`，source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5` 仅内部绑定。Q21 创建 `ISSUE-1363` (`answer-conflict`，open / `blocks_completion`)；固定 PDF 印式照录，答案保留 U/PENDING，paper `blocked`，batch `planned`，`official_answer=null`。
+- 全局 `index.json`、本卷题面/答案 TeX、简答表与四版入口均已生成。`solution_sources check-batch`、三个生成器的 `--check`、`source_manifest validate` 和 `issues validate` 通过。未运行测试、OCR 推理或正式 PDF 构建；未做视觉回执。
+- 图稿 Q8/Q11/Q18/Q20、题面映射、manifest `figure_files`、三角色 provenance、四版构建与逐页审查仍待完成。来源发布者、版次、复制链与官方答案未核，人工耗时未知；不表示单卷验收或长期语料完成。下一阶段按固定原图矢量重绘四图并同步所有图稿面。

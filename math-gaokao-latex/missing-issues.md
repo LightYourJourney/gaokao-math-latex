@@ -22845,3 +22845,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1363
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第 2 页（印刷页 73）Q21 印作 y=2000(a/10)^2，不含 x；按常值函数字面解释与“函数图象”及（3）问存在最大项数的设问冲突。新浪 2000-07-11 同期答案/评分副本按指数 x 推导，但页面未证明发布链、官方身份或与固定 PDF 同版。题面照录，Q21 答案保留 U/PENDING。",
+  "fingerprint": "ca7878be3e1caaa7f4548f2522cae934e19f95cd88c4e0cd31369a2fe7d3c893",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-arts",
+  "question_id": "gk-2000-regular-shanghai-arts-q21",
+  "resume_action": "取得可追溯且能与本卷版本绑定的原始出版页、正式答案或勘误；核实指数后再更新题面/答案与三角色 provenance。未取得前保持固定印式照录、U/PENDING 和 blocks_completion，不将同期副本当作官方裁定。",
+  "source_id": "src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

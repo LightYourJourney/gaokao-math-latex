@@ -2202,6 +2202,14 @@
         "gk-2015-regular-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase3-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2000-regular-shanghai-arts"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2211,7 +2219,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "33b427cd-dec4-4804-9a37-a01dc3055d06",
+  "last_transaction_id": "18da61c6-14f6-43be-b7a0-6318fbed23cc",
   "papers": [
     {
       "blocked_from": null,
@@ -29312,9 +29320,63 @@
       "title": "2015 年·福建卷·文科",
       "track": "arts",
       "year": 2015
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2000_shanghai_arts",
+        "id": "gk-2000-regular-shanghai-arts",
+        "note": "固定候选 PDF source ID src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5，SHA-256 35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1；2页A3题面，印刷页72–73。发布者、版次、复制链与官方身份未核，PDF无答案页，official_answer=null。Q21固定印式与同期答案副本指数存在冲突，保留U/PENDING。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [
+        "ISSUE-1363"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2000-regular-shanghai-arts",
+      "production_state": "blocked",
+      "project_dir": "2000_上海卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯且能与本卷版本绑定的原始出版页、正式答案或勘误；核实指数后再更新题面/答案与三角色 provenance。未取得前保持固定印式照录、U/PENDING 和 blocks_completion，不将同期副本当作官方裁定。",
+      "source_files": {
+        "answer_key": "2000/2000_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2000/2000_数学真题_上海文_含解析.md",
+        "questions": "2000/2000_数学真题_上海文_试题.md",
+        "solution_body": "2000/2000_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5"
+      ],
+      "title": "2000 年·上海卷·文科",
+      "track": "arts",
+      "year": 2000
     }
   ],
-  "revision": 6066,
+  "revision": 6067,
   "schema_version": 1,
   "sources": [
     {
@@ -34275,8 +34337,8 @@
       "exam_type": "regular",
       "git_blob_oid": "91ece8675e9cd47367f547bd9b0b6b4979b77d0e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2000-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2000上海文.pdf",
       "regions": [],
       "source_id": "src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5",
