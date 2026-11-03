@@ -36,6 +36,13 @@
 - 确认存疑与关键推导：Q17 经300 DPI图像确认原卷字面明确印有共轭横杠作 $|z_1 - \overline{z_2}| < |z_1|$，推导解得 $1 < a < 7$；Q18 均值不等式极值 $x = 8 - 4\sqrt{2} \approx 2.343\text{ m},\; y = 2\sqrt{2} \approx 2.828\text{ m}$；Q19(1) $A = (-\infty, -1) \cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 未定义集合 $B$，按题干函数定义域 $D$ 理解解得 $(-\infty, -2] \cup [\frac{1}{2}, 1)$，维持 U/PENDING；Q20(1) $f(x) = x^2 + \frac{8}{x}$，(2) $a > 3$ 时三互异实根证明成立；Q21(1) $l = 1$ 正四面体，(2) 二面角 $\arccos\frac{\sqrt{6}}{3}$，(3) 存在且构造 $\alpha = \arcsin(8V)$ 直平行六面体；Q22(1) 原卷字面 $P_1(3, 0)$ 不在椭圆上且无实数解，维持 U/PENDING，(2) 最小值 $\frac{n(a^2 + b^2)}{2}$，(3) 选抛物线充要条件 $d > 0$。
 - 答案文件 SHA-256 `7b7a439ae54c1d4cbc8b233ac344b30c2e5c3183391342560108a6787db30492`，解析文件 SHA-256 `b592496af198f42aa84285293461232018cc76f2214e21233c94633669a1969c`。`solution_sources.render_combined` 预演通过。详情见[独立答案复核报告](reports/2004-shanghai-science-answer-review.md)。`official_answer=null`，未登记paper/batch/issues/provenance，未制作图稿与TeX。下一阶段推进内部试卷与规范事实源登记。本阶段不表示来源认证、官方答案确认或整卷验收。
 
+### 2004 上海理科普通卷：规范事实源与内部卷登记（2026-11-04）
+
+- 规范题面 `2004/2004_数学真题_上海理_试题.md` SHA-256 `1238628877a236c72f70d4a5b9ccdfbff45d39dfa501a584d3bc04ad9136b2cb`；答案要点 SHA-256 `4325b1a3193de2075d6fc26fea9fbd566a5217e1c6c465c63d0eb1a327c686d6`；解析正文 SHA-256 `aff77054a2fccffdc1fe231e6335a18e7369372877f9fbaf50acceca30b39726`；派生含解析稿 SHA-256 `aab6475202e5ff82de8a652be7836ff9e18f6c2770de74c69dd4592a07cee90d`（22题）。
+- `source_manifest.py register-papers --write` 登记内部试卷 `gk-2004-regular-shanghai-science`、批次 `phase4-b46`，manifest revision 6123→6124；来源 `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a` 登记为 canonical 绑定；试卷状态 `blocked`，批次状态 `planned`。自动创建并关联阻塞问题 `ISSUE-1386`（Q19(2) 提问条件作 $B \subseteq A$ 未定义集合 $B$ 疑点）与 `ISSUE-1387`（Q22(1) 点 $P_1(3, 0)$ 不在椭圆上且无实数解疑点），维持 U/PENDING。
+- 门禁校验通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[试卷登记报告](reports/2004-shanghai-science-paper-registration.md)。图稿待重绘与登记，provenance/TeX/四版构建待后续。本阶段不表示来源认证或整卷验收。
+
+
 
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
 

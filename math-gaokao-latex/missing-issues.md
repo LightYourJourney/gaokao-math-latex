@@ -23250,3 +23250,37 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+
+## ISSUE-1386
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q19 题干定义函数 g(x) 的定义域为 D，但在第 (2) 问提问中印作“若 B ⊆ A，求实数 a 的取值范围”，题面通篇未定义集合 B。若按常理将 B 视为 g(x) 的定义域 D 则可解得 a <= -2 或 1/2 <= a < 1。",
+  "fingerprint": "c6d0171ae9dc54b482b7016de640062becff58c1b7bb29340667338e8930dbf8",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-regular-shanghai-science",
+  "question_id": "gk-2004-regular-shanghai-science-q19",
+  "resume_action": "取得可追溯官方试题、同版答案或勘误确认原题第 (2) 问集合符号；在此之前将 Q19(2) 保留 U/PENDING，条件性解集不写为确定结论。",
+  "source_id": "src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+## ISSUE-1387
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q22(1) 印载点 P1(3, 0)，代入椭圆方程 x^2/100 + y^2/25 = 1 得 9/100 != 1，点 P1 不在椭圆上。若依字面 a1 = 9 与 S3 = 255 推算得 a3 = 161，超出椭圆上点到原点距离平方的最大值 100，在实数范围内无对应曲线上的点 P3。",
+  "fingerprint": "492d9f8ef3d71a97ee1330849f61d61a392e5ec65ec61664a062b28d0d3add47",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-regular-shanghai-science",
+  "question_id": "gk-2004-regular-shanghai-science-q22",
+  "resume_action": "取得可追溯官方权威真题、答案或勘误以确认 Q22(1) 椭圆方程或点 P1/S3 之字面；在此之前将 Q22(1) 保留 U/PENDING，不擅自修改题面数值。",
+  "source_id": "src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
