@@ -18,6 +18,12 @@
 - Q21固定源印作 $y=2000(\frac{a}{10})^2$，照录。该式按字面不含$x$，与函数图象描述及后续条件关系异常，未静默改写；答案/解析待核。来源尚未注册为paper，此疑点待后续建立关联阻断issue。Q8、Q11、Q18、Q20图稿待重绘。
 - 本阶段仅形成题面草稿；发布者、出版者、版次、复制链及官方身份未核，`paper_id=null`、`official_answer=null`。答案、解析、独立盲核、paper/batch/issue/provenance登记、图稿、TeX构建与视觉回执均未完成。详情见[题面转录报告](reports/2000-shanghai-arts-question-transcription.md)，下一阶段独立复核原页。本回执不表示来源认证、整卷验收或长期语料完成。
 
+### 2000 上海文科候选卷：独立题面复核（2026-11-03）
+
+- 复核者 `/root/review_2000_shanghai_arts_transcription`（gpt-6-luna/high）独立渲染并目视核对固定 PDF 两页，逐题复核Q1–Q22，22题全部PASS、0处差异；复核者未读取答案/解析、未修改文件。四处图位Q8、Q11、Q18、Q20的位置及内容对应原页。
+- Q21 源式 $y=2000(\frac{a}{10})^2$ 在固定 PDF 中确实如此打印，草稿保留原式及疑点，未推测修订。其题意异常仍待可靠同版证据；来源/paper登记时需设阻断issue。
+- 题面frontmatter状态更新为“独立逐题复核通过；候选稿待登记”；题面当前SHA-256 `4cd3b1f167bb54adcd5ea6b60425e72dd33ece52731b493bb67d98d98f905975`。详情见[独立题面复核报告](reports/2000-shanghai-arts-question-review.md)。来源发布者、版次、来源链和官方身份未核，`paper_id=null`、`official_answer=null`；答案、解析、登记、图稿、构建与视觉回执尚未完成。下一阶段建立答案要点，Q21保持待核。本阶段不表示来源认证或整卷验收。
+
 ### 2007 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
