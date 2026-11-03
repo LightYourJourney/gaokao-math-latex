@@ -11,6 +11,12 @@
 - 39页逐页完成八项视觉检查：31页 PNG 与已审 attempt `8fc8f771-e322-40fc-930d-ccccb222f9b1` 同版页完全一致并沿用原结论，8页重新目视；无视觉问题、无警告豁免。review receipt 为 `passed`，最终批次事务 revision 6034，状态 `closed_with_blockers`，报告见 [phase1-b81 视觉审查报告](reports/phase1-b81.md)。
 - 来源发布者、版次、复制链和官方身份仍未核，`official_answer=null`；Q18 的 `ISSUE-1355` 仍为 open / `blocks_completion`。本阶段只完成正式构建和视觉复核，不表示该卷无阻塞完成或长期语料库完成。
 
+### phase1-b81 2007 北京文科候选卷：全库报告与来源清单投影（2026-11-03）
+
+- 状态事务完成后刷新来源 CSV：`manifest.csv` 为当前投影，共775个来源记录；CSV currentness 检查通过。
+- 重新生成并校验全库报告投影；`report.py check --all` 返回“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。全库显示405套试卷、253个批次，回执完整性为 build 缺失0/无效0、review 缺失0/无效0；新增本批的回执与阻塞状态已反映在报告中。
+- 此为报告与 CSV 投影阶段，不改动其他试卷事实源。phase1-b81 仍为 `closed_with_blockers`，Q18 `ISSUE-1355` 仍阻止该卷完成；全库投影也不代表长期语料库完成。
+
 ### 2007 北京文科候选卷：固定来源接收（2026-11-03）
 
 - 从 ready 且未绑定 paper 的来源中接收 `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`，固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。文件 SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5`、Git blob `3207132ef37ec52e6dfd19ffac856388f4c053f1`、511024 bytes 与 manifest 一致；来源仓库 HEAD 即该固定 commit，工作区干净。
