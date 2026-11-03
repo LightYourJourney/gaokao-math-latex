@@ -2,45 +2,43 @@
 
 更新时间：2026-11-04（中国标准时间）
 
-> **当前接续以本节为准。** 下方旧的 HEAD、全库统计、候选批次与状态记录均为历史快照，不能覆盖当前 manifest、回执和最新 PROGRESS 记录。
+> **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：phase4-b46 已封存，保留阻塞
+## 2026-11-04 当前状态：2003 上海文理普通卷题面转录与独立复核完成
 
 ### 工作位置与分支
 
-- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。
-- 本次交接更新前的 HEAD：`2b6cde29`（2004 上海理科单元测试补齐与全量报告状态同步 [已核]）；当时工作区干净且与 upstream 同步。交接文档提交会在该提交之上新增一个本地提交；新对话启动时仍须重新读取实际 HEAD/status。没有切换到 `main`，没有 push。
-- manifest revision `6132`。当前全库状态见下面统计与 `math-gaokao-latex/reports/baseline.md`；具体记录以 `source-manifest.json`、批次报告和收据为准。
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次交接更新前 HEAD 为 `5de51f51`；复核阶段提交后工作区干净，领先 `origin/feat/gaokao-phase0` 6 个提交。交接更新会另加一个本地提交；新会话仍须重新读取 HEAD/status。没有切换到 `main`，没有 push。
+- manifest revision `6132`；本批没有写 manifest/issues，也没有注册 `phase4-b47` 或任何 paper。文理来源目前仍是 `ready/unbound`，`official_answer=null`。
+- 最新卷级阶段日志在 `math-gaokao-latex/PROGRESS.md` 顶部。当前全库统计读取 `math-gaokao-latex/reports/baseline.md`；以该文件与 live manifest 为准。
 
-### 最近完成：2004 上海理科普通卷
+### 当前批次：2003 上海普通卷文科与理科
 
-- `phase4-b46` / `gk-2004-regular-shanghai-science` 已完成构建和视觉审查，终结器返回 `FINALIZED`，批次状态 `closed_with_blockers`；试卷仍为 `blocked`。本批不表示 1952–2026 语料目标完成。
-- 固定候选来源：`src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`，PDF SHA-256 `9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e`。来源发布者、出版者、版次、复制链和官方身份未核；`official_answer=null`。来源有文字层，转录过程没有调用 OCR。
-- Q1–Q22、三张图（Q5/Q18/Q21）、三角色 provenance、规范源、TeX 项目与四版均已完成。正式构建 attempt `87a158c7-753a-45f3-8290-d99265d00824` 共 58 页（试题 5、解析 27、简答 7、印刷 19）；编译错误、缺字、溢出警告和未定义引用均为 0。所有 58 页八项视觉检查通过，视觉问题 0。详情见 [`phase4-b46.md`](../../exams/math-gaokao-latex/reports/phase4-b46.md)、[正式构建与视觉报告](../../exams/math-gaokao-latex/reports/2004-shanghai-science-formal-build.md) 与试卷 `receipts/`。
-- 关键突破与必须保留的未决项：
-  - Q17 经 300 DPI 高清原卷核验确认字面印有共轭横杠 $|z_1 - \overline{z_2}| < |z_1|$，推导解得 $1 < a < 7$ 完全有解，非阻塞项；
-  - Q19(2) 提问条件作 $B \subseteq A$ 但题干未定义集合 $B$（`ISSUE-1386`）；
-  - Q22(1) 点 $P_1(3, 0)$ 不在椭圆 $\frac{x^2}{100} + \frac{y^2}{25} = 1$ 上且由 $S_3 = 255$ 推出 $a_3 = 161 > 100$ 在实数范围内无对应曲线上的点 $P_3$，原题字面无解（`ISSUE-1387`）。
-  - 两项均为 open / `blocks_completion`，答案维持 U/PENDING；除非取得可追溯权威同版官方资料、评分标准或勘误，否则不得补写条件、改题面或擅自解除阻塞。
-- 本批阶段提交依序为：来源接收 `f072fcd1`、题面转录 `b817ac3b`、题面复核 `d22eb42a`、答案初稿 `cd59c08c`、答案复核 `c67908bd`、卷登记 `e1f1dbb4`、题图重绘登记 `d2c19f0c`、provenance 导入 `ebed06fb`、TeX 项目生成 `c6d707e1`、正式构建与视觉复核 `2d8ea64d`、单元测试与报告同步 `2b6cde29`。专属单元测试 `tests/test_2004_shanghai_science_transcription.py` 5/5 全部通过。详细步骤与本批 validation 记录见 `math-gaokao-latex/PROGRESS.md`。
+| 科类 | source_id / PDF SHA-256 | 最终题面草稿 SHA-256 | 进度 |
+|---|---|---|---|
+| 文科 | `src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4` / `ffd59c395a0c675118f6da576e48842549c4afa031d923448f26f33087bc7e85` | `a10f4ad830247154400d028d1e8b0921814266e3200a4dedc132cda37da5a225` | Q1–Q22 转录和独立题面复核通过 |
+| 理科 | `src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0` / `88b72fea05d331215504bb89257e375d07c18ba21e830cf9e6288461e88ccf8d` | `be8799e20f184a93be2cea5f201d2487db44c1fc6aa9d72e948b3de0d389b56d` | Q1–Q22 转录和独立题面复核通过 |
+
+- 固定来源都来自 `gaokaomath-src/普通高考/2003/`，与 manifest rev6132 的 PDF SHA、Git blob 及上游 checkout commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 相符；发布者、出版者、版次、复制/扫描链和官方身份尚未核实。
+- 文科来源接收、草稿和复核记录分别见 `math-gaokao-latex/reports/2003-shanghai-arts-source-intake.md`、`2003/2003_数学真题_上海文_题面转录草稿.md`、`math-gaokao-latex/reports/2003-shanghai-arts-question-review.md`。理科对应记录见 `math-gaokao-latex/reports/2003-shanghai-science-source-intake.md`、`math-gaokao-latex/reports/2003-shanghai-science-question-transcription.md`、`2003/2003_数学真题_上海理_题面转录草稿.md`、`math-gaokao-latex/reports/2003-shanghai-science-question-review.md`。
+- 两名未参与各自转录的独立复核者逐题对照可见 PDF 页图；主会话复查并补齐 Q16/Q18/Q20 图注，均无剩余题干、公式、选项或符号差异。转录和复核提交依序为 `976f23b2`（理科来源接收）、`820666b1`（文科转录）、`75938e68`（理科转录）、`5de51f51`（文理题面复核）。
+- **理科文字层有明显整题错配：**第2页可见 Q22 是集合 `M` 的函数题；同页文字抽取在 Q22 位置却输出等比数列组合和题，该题可见于第1页 Q19。Q20 的“最小”也被文字层重复为“最最小”，Q13(D)绝对值线及若干平行符号/向量箭头有抽取缺陷；均按可见页面转录，不以文字层替代。
+- 本轮没有 OCR、外部 API 或项目测试/构建；token 成本未知。没有生成答案、解析、图形矢量稿或四版 TeX/PDF。本批仍只是题面层工作，不表示 1952–2026 语料完成。
+
+### 下一阶段
+
+- 从已复核的文理题面开始答案要点与解析草稿；必须标为本库独立推导、非官方答案，并分别完成独立盲解核对。若没有可追溯的同版答案/勘误证据，保留 U/unknown 与 source identity 不确定性。
+- 按 Q16/Q18/Q20 原页重绘文理两套题图；图稿、manifest 映射和出处必须一起登记。随后才评估 paper/batch 注册、逐题 provenance、确定性合并、四版构建与逐页视觉验收。
+- 任何问题不得因文字层输出或题目看似重复而擅改源稿；尤其理科 Q22 必须以 PDF 可见渲染页为准。每完成一个阶段单独提交；不 push、不切 `main`。
+
+### 先前已登记批次：2004 上海理科普通卷 `phase4-b46`
+
+- `gk-2004-regular-shanghai-science` 已完成构建与视觉审查，终结器返回 `FINALIZED`，批次 `closed_with_blockers`、paper `blocked`。Q19(2) 未定义集合 B 与 Q22(1) 椭圆点位无解分别保留为 `ISSUE-1386` / `ISSUE-1387`，答案维持 U/PENDING；无同版权威证据时不得补条件或解除阻塞。
+- 四版共58页，编译错误/缺字/溢出/未定义引用为0，58页八项视觉检查通过。过程、构建与视觉回执见 `math-gaokao-latex/reports/phase4-b46.md`、`math-gaokao-latex/reports/2004-shanghai-science-formal-build.md` 与试卷 `receipts/`。
 
 ### 当前全库快照
 
-依据 manifest revision 6132 和当前 baseline 投影：
-
-- 775 个来源（普通 734、春季 41）；415 套试卷（complete 309、compiled 3、blocked 103）；263 批（closed 180、closed_with_blockers 82、compiled_pending_review 1）。
-- 正式复核门禁：FINALIZED 220、INVALID_OR_STALE 42、VISUAL_FAILED 1；1660/1660 个版本有编译记录。
-- build 回执：succeeded 411、compiled_pending_review 4；review 回执：passed 414、failed 1；问题总账 1387 条，未解决 293 条，其中 blocks_completion 232 条。
-- phase4-b46 的 build receipt 验证为 `OK`（succeeded 1，failed/invalid/missing/stale 均 0），review 检查为 `FINALIZED`（problems 空）；source manifest、issues、provenance、solution sources、三个生成 currentness 检查、CSV 775 行及 `report.py check --all` 均通过。
-
-### 下一对话的执行入口
-
-- 先核对本 worktree、分支、HEAD、Git 状态；读取本节、`PROGRESS.md` 最新记录、当前 source manifest、baseline、issues 和对应回执。不要重做 phase4-b46 的转录、构图、provenance、构建或视觉复核。
-- 下一候选卷推荐：
-  1. **2003 年·上海卷·理科** 或 **文科**（来源位于 `gaokaomath-src/普通高考/2003/`）；
-  2. 或 **2006 年·福建卷·理科** / **文科**；
-  3. 或从 live manifest 中挑选未绑定且有固定可核来源的候选卷，先核查已有草稿与目录，避免重复登记。
-- 按当前项目门禁逐阶段推进：保存来源与不确定性、题面和答案分层、独立复核、三角色 provenance、确定性生成、四版构建、逐页八项视觉复核、finalize、刷新并检查报告/CSV；每完成一阶段提交独立规范 commit，不 push。
+manifest rev6132 的 baseline 当前记录：775来源；415试卷（complete 309、compiled 3、blocked 103）；263批；正式复核门禁 FINALIZED 219、INVALID_OR_STALE 43、VISUAL_FAILED 1；1660/1660 版本有编译记录；未解决问题293条、其中 blocks_completion 232。baseline 的全部 build/review/issue 计数见 `math-gaokao-latex/reports/baseline.md`。不要沿用此前交接中的 FINALIZED 220 / INVALID_OR_STALE 42 旧投影。
 
 
 
