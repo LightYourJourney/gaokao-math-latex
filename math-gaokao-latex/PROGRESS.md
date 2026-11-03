@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2003 上海理科普通卷：固定来源接收（2026-11-04）
+
+- 固定 source `src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0`，SHA-256 `88b72fea05d331215504bb89257e375d07c18ba21e830cf9e6288461e88ccf8d`，Git blob `d8679fb9dee874be062e92b436dbabbbcb41eb85`，594899 bytes；与 manifest revision 6132 和固定上游 checkout commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页138–139，题签“2003 普通高等学校招生考试（上海卷理）”，共22题；图位Q16、Q18、Q20。来源仍为 `ready`、未绑定，尚无普通卷 paper/batch。
+- `analyze_pdf.py --no-cache --include-text` 判为 `text_layer_candidate`，两页均为 `text_candidate`：第1页1583个、第2页530个非空白字符，均0可疑字符、无嵌入图像对象。150/300 DPI整页图均已目视检查，文字层只作定位。未调用OCR或模型（`model_calls=0`、`ocr_calls=0`）。
+- 固定来源与核验细节见[来源接收报告](reports/2003-shanghai-science-source-intake.md)。来源发布者、出版者、版次、复制链及官方身份未核；题面PDF没有答案/解析，`official_answer`未认证。本阶段未登记 paper/batch、未改 manifest/issues。下一阶段转录Q1–Q22并逐题核对原页，再做独立题面复核。
+
 ### 2004 上海理科普通卷：固定来源接收（2026-11-04）
 
 - 固定 source `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`，SHA-256 `9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e`，Git blob `9bfec0f8159c4aac8d9991979f2afd760fb0c11b`，510791 bytes；与 manifest revision 6122 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页198–199，题签为“2004 普通高等学校招生考试 (上海卷理)”，共22题；可见图稿位Q5、Q18、Q21。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
