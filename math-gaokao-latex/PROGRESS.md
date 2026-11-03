@@ -13667,3 +13667,9 @@
 - 正式构建 attempt `9a6f2b2e-45da-4851-a97e-beef2fc9f00b`，输入 manifest revision 6055，输出 revision 6056。试题版、解析版、简答版、印刷版分别 4/17/6/16 页，共 43 页；PDF SHA-256、工具链及完整输入投影见 [构建报告](reports/2007-shanghai-arts-build.md) 与 `2007_上海卷_文科/receipts/build.json`。
 - 四版均一次 XeLaTeX 成功，TeX error、缺字、Overfull、undefined reference 均为 0。`validate-receipts --batch phase1-b83` 返回 `code=OK`，0 failed/invalid/missing/stale，1 pending 等待视觉审查。
 - 本阶段尚未检查正式 PDF 页面或生成 review receipt；batch 为 `compiled_pending_review`。Q21(3) 仍 U/PENDING / ISSUE-1362，paper `blocked`，来源身份未核、`official_answer=null`。下一阶段检查 43 页并登记视觉回执；本记录不表示本卷闭环或长期语料完成。
+
+### phase1-b83 2007 上海卷文科：Q21 印刷版分页修正（2026-11-03）
+
+- 首轮正式 PDF 目检发现印刷版第 16 页只剩 Q21(2)、Q21(3) 答案框，造成明显尾页留白。压缩权威解析正文 Q21(3) 的重复措辞，保留参数域、分段最小点论证、左右候选比较及（1）特例条件边界；不改题面和答案要点，Q21 答案哈希不变，U/PENDING 与 ISSUE-1362 保持。
+- 重建 `_含解析.md`、`answers.tex`；provenance 事务将 manifest 从 revision 6056 更新至 6057，batch 回到 `provenance_verified`，旧 build attempt 已失效。当前确定性生成、简答、版本壳、解答来源、provenance、manifest、issues、CSV（775 行）及 diff 检查通过。
+- 这次重排尚未由新正式 PDF 验证；未运行测试套件。下一阶段重建四版并复查印刷版末页，必要时按 PNG 哈希复用真正未变化页面的视觉结论。来源出版身份仍未核、`official_answer=null`；本阶段不表示单卷闭环或长期语料完成。详见 [分页修正报告](reports/2007-shanghai-arts-q21-reflow.md)。
