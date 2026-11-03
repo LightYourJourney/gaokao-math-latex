@@ -22,6 +22,13 @@
 - `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1769 tests in 541.255s`，结果 `FAILED (failures=2, skipped=13)`。失败分别为旧 task25 视觉漂移记录中 2017 全国Ⅰ理科 `answers.tex` 的 SHA 不一致，以及全库79套旧卷的 provenance 缓存状态与现场派生状态不一致。
 - 两项失败均与本批文件无关；同一 SHA 漂移此前已记录在 [2006 福建文科 Q11 纠错报告](reports/2006-fujian-arts-q11-correction.md)。本批 `provenance.py check-batch`、正式构建和 review 回执均通过。未改动跨卷缓存或测试基线；完整证据和哈希见 [phase1-b81 收口报告](reports/phase1-b81.md)。因此不宣称全库测试全通过或该卷无阻塞完成。
 
+### 2002 北京理科候选卷：固定来源接收（2026-11-03）
+
+- 选择 manifest 中 ready 且未绑定的 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`，与既有 `gk-2002-regular-beijing-arts` 文理配对。固定上游 `deekur/gaokaomath` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`，路径 `普通高考/2002/2002北京理.pdf`；现场 SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73`、Git blob `e6b19791b1fe3ca2e49404428b746bb36c460f12`、620623 bytes 均与 manifest 相符。来源仓库该 commit 为 HEAD 且工作区干净；原件及页图缓存于忽略目录 `.work/ocr-local/sources/`。
+- PDF 两页 A3 横向，印刷页100–101，题签显示“2002 普通高等学校招生考试（北京卷理）”；Q1–Q22 连续，选择12题、填空4题、解答6题，第一页含Q1–Q19、第二页含Q20–Q22。题图位为Q11函数图、Q12四函数图、Q18多面体图，Q20含表格。无答案、解析或评分页。出版者、版次、复制链及官方身份未核。
+- `analyze_pdf.py --no-cache --include-text` 将两页均分为 `text_candidate`：非空白字符分别2002、687，疑似字符均0，图像对象均0；检查 `model_calls=0`、`ocr_calls=0`。主会话目视两页150 DPI图，并以300 DPI局部复核。明确保留三处原文疑点：Q5 印作“长度单位不便变”；Q15 第④项与第③项均印“可能是直角”；Q16 圆方程印作 $x^2+y^2-2x-2y+8=0$，配方得 $(x-1)^2+(y-1)^2=-6$，没有实圆。未改字、未据此推答案；Q16 转录时需作为阻断疑点记录。
+- 本阶段只完成候选来源固定、题签/页序/结构清点与原页疑点登记，尚未登记 paper/batch、修改 manifest/issues、转录规范题稿、调用 OCR 或推导答案。详细证据见 [2002 北京理科来源接收报告](reports/2002-beijing-science-source-intake.md)；下一阶段按规范转录 Q1–Q22 并逐题对照原页。本阶段不代表官方来源认证或卷级完成。
+
 ### 2007 北京文科候选卷：固定来源接收（2026-11-03）
 
 - 从 ready 且未绑定 paper 的来源中接收 `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`，固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。文件 SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5`、Git blob `3207132ef37ec52e6dfd19ffac856388f4c053f1`、511024 bytes 与 manifest 一致；来源仓库 HEAD 即该固定 commit，工作区干净。
