@@ -13880,3 +13880,9 @@
 - 两位独立复核者按题号拆分，分别只据固定题面、解析正文与 PDF 审阅 Q1–Q15 和 Q16–Q23，未读取答案要点或推导报告；两段共 23 题均未发现实质性推导错误，未遗留差异或 U/PENDING 项。
 - 复核开始时解析稿 SHA-256 为 0f44aa12b8d313949da3bcf6e12521a09cb6e518d2119ea0b9ec170de67134f6。按复核建议澄清 Q3 负距离候选及 Q16 的 X=3 对应位置后，当前 SHA-256 为 f0b5660174d04f2bba92fff5b74e830654bb477a211f962b284a1c8577431d52；状态改为 draft-independent-solutions-cross-verified-pending-formal-acceptance。详情见[解析正文盲审报告](reports/2015-fujian-science-solution-review.md)。
 - 固定 PDF SHA-256 为 a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700。来源发布身份及官方答案仍未核；图稿、paper/batch/issues/provenance、确定性生成、正式排版与视觉回执仍未完成。本阶段不表示单卷闭环或长期语料完成。
+
+### 2015 福建理科候选卷：固定来源与规范事实层登记（2026-11-03）
+
+- register-papers dry-run 后登记 gk-2015-regular-fujian-science / phase3-b26，manifest revision 6074→6075；transaction_id 5a11cade-a7ba-4b00-828b-00bbdf2dd670。source 固定 SHA 与 Git blob 保持一致，source_state=ready、paper_relation=canonical；publisher/版次/来源链与官方身份未认证。paper/batch planned，无 ISSUE。
+- 创建规范试题、答案要点、解析正文；Q16 解析结构补齐 (1)/(2) 标题，不改推导。extract-batch 生成含解析稿；generate_projects 写入 questions.tex、answers.tex、index.json。规范层 SHA 与结果见[登记报告](reports/2015-fujian-science-registration.md)。
+- source_manifest validate、issues validate、solution_sources check-batch（23题）、generate_projects --check 通过；manifest.csv 已写为 775 行。四幅图稿、provenance、简答版、四版入口、正式构建与视觉回执仍待完成。official_answer=null；本条不表示来源认证、单卷验收或长期语料完成。
