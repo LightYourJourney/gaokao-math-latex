@@ -13886,3 +13886,10 @@
 - register-papers dry-run 后登记 gk-2015-regular-fujian-science / phase3-b26，manifest revision 6074→6075；transaction_id 5a11cade-a7ba-4b00-828b-00bbdf2dd670。source 固定 SHA 与 Git blob 保持一致，source_state=ready、paper_relation=canonical；publisher/版次/来源链与官方身份未认证。paper/batch planned，无 ISSUE。
 - 创建规范试题、答案要点、解析正文；Q16 解析结构补齐 (1)/(2) 标题，不改推导。extract-batch 生成含解析稿；generate_projects 写入 questions.tex、answers.tex、index.json。规范层 SHA 与结果见[登记报告](reports/2015-fujian-science-registration.md)。
 - source_manifest validate、issues validate、solution_sources check-batch（23题）、generate_projects --check 通过；manifest.csv 已写为 775 行。四幅图稿、provenance、简答版、四版入口、正式构建与视觉回执仍待完成。official_answer=null；本条不表示来源认证、单卷验收或长期语料完成。
+
+### 2015 福建理科候选卷：四幅题图与逐题来源记录（phase3-b26，2026-11-03）
+
+- Q6 程序框图、Q13 抛物线阴影、Q17 空间几何、Q18 椭圆弦图依据固定 PDF p.1/p.2 矢量重绘；源页局部以 350 dpi 对照。Q17 保留原图虚实线；Q18 割线斜率仅作示意，不从图上反推数值。TeX 中记录 source ID、PDF SHA、页码和题号。
+- 题面与确定性含解析稿分别链接四个图稿；generate_projects 生成题目版与解析版 TeX。figure registry 登记 4 张图，每张预期出现 2 次；manifest revision 6075→6076。
+- 导入三角色逐题 provenance，绑定固定 source ID、SHA、题面页码和逐题题面/答案哈希；Q1–Q23 题面复核 passed、答案冲突 none、ISSUE 0。manifest revision 6076→6077，batch 状态 provenance_verified。`official_answer=null`。
+- source manifest、issues、provenance、solution_sources、generate_projects、manifest.csv 检查通过；四版 PDF、正式版面视觉复核、简答版与 receipt 仍未完成。详情见[图稿与provenance报告](reports/2015-fujian-science-figures-provenance.md)。本阶段不表示来源认证或整卷验收。
