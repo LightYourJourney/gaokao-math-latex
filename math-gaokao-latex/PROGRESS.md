@@ -17,6 +17,11 @@
 - 重新生成并校验全库报告投影；`report.py check --all` 返回“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。全库显示405套试卷、253个批次，回执完整性为 build 缺失0/无效0、review 缺失0/无效0；新增本批的回执与阻塞状态已反映在报告中。
 - 此为报告与 CSV 投影阶段，不改动其他试卷事实源。phase1-b81 仍为 `closed_with_blockers`，Q18 `ISSUE-1355` 仍阻止该卷完成；全库投影也不代表长期语料库完成。
 
+### phase1-b81 2007 北京文科候选卷：全库测试结果（2026-11-03）
+
+- `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1769 tests in 541.255s`，结果 `FAILED (failures=2, skipped=13)`。失败分别为旧 task25 视觉漂移记录中 2017 全国Ⅰ理科 `answers.tex` 的 SHA 不一致，以及全库79套旧卷的 provenance 缓存状态与现场派生状态不一致。
+- 两项失败均与本批文件无关；同一 SHA 漂移此前已记录在 [2006 福建文科 Q11 纠错报告](reports/2006-fujian-arts-q11-correction.md)。本批 `provenance.py check-batch`、正式构建和 review 回执均通过。未改动跨卷缓存或测试基线；完整证据和哈希见 [phase1-b81 收口报告](reports/phase1-b81.md)。因此不宣称全库测试全通过或该卷无阻塞完成。
+
 ### 2007 北京文科候选卷：固定来源接收（2026-11-03）
 
 - 从 ready 且未绑定 paper 的来源中接收 `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`，固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。文件 SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5`、Git blob `3207132ef37ec52e6dfd19ffac856388f4c053f1`、511024 bytes 与 manifest 一致；来源仓库 HEAD 即该固定 commit，工作区干净。
