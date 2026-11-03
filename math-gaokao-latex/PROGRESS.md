@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 上海文科普通卷：项目 TeX 与四版入口生成（2026-11-03）
+
+- `generate_projects.py --batch phase4-b43 --write` 生成题面/答案 TeX 与全局 `index.json` 条目；`make_short_answers.py --write` 生成简答速查；`make_editions.py --write` 生成试题、解析、简答、印刷四版入口。
+- `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`（22题）、`provenance.py check-batch`（1卷）均通过。manifest revision 保持6104；paper `blocked`、batch `provenance_verified`。
+- 本阶段尚未编译正式 PDF、建立 build/review 回执、逐页视觉验收或运行全库测试；Q12/Q20 blocker 继续阻断。详情见 [项目生成报告](reports/2005-shanghai-arts-project-generation.md)。本阶段不表示本卷闭环或长期语料完成。
+
 ### 2005 上海文科普通卷：题图与三角色 provenance（2026-11-03）
 
 - 修正先前数份文档中手工抄错的 source ID：错误值 `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846` 改为 manifest 所列 `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d0288e2d0bdb1638bb8d17846`。核对来源 PDF SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1`、Git blob `d3849e9bf2f21c95b4823be90b24669b74ee1685`、512658 bytes、2页均未变化；更正细节见 [source ID 更正记录](reports/2005-shanghai-arts-source-id-correction.md)。
