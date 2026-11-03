@@ -13874,3 +13874,9 @@
 - 新增解析正文草稿 2015/2015_数学真题_福建理_解析正文草稿.md，SHA-256 0f44aa12b8d313949da3bcf6e12521a09cb6e518d2119ea0b9ec170de67134f6；front matter 状态为 draft-independent-solutions-pending-cross-check、paper_id=null、official_answer=null。固定 PDF 在本地忽略缓存缺失，本阶段从上游固定 commit 34c13a6cf632c0b69c95f89b9b923bbc4a08924d 重新取回，SHA-256 与 Git blob 均匹配 manifest。
 - 题面、答案要点、解析正文三个解析器均识别连续 Q1–Q23；validate_solution_body 通过，数学分隔符成对。p.1/p.2 140 dpi 渲染目视确认 Q6 程序框图、Q13 阴影图及 Q17/Q18 图位。解析推导重点和过程记录见[解析正文推导报告](reports/2015-fujian-science-solution-derivation.md)。
 - 本阶段未矢量重绘题图、未登记 paper/batch/issues/provenance，未生成 TeX、未构建 PDF、未调用 OCR 或运行完整测试套件。解析正文待独立盲审；下一阶段按题面逐题审阅推导。本条不表示来源认证、官方答案确认、单卷验收或长期语料完成。
+
+### 2015 福建理科候选卷：Q1–Q23 解析正文独立盲审（2026-11-03）
+
+- 两位独立复核者按题号拆分，分别只据固定题面、解析正文与 PDF 审阅 Q1–Q15 和 Q16–Q23，未读取答案要点或推导报告；两段共 23 题均未发现实质性推导错误，未遗留差异或 U/PENDING 项。
+- 复核开始时解析稿 SHA-256 为 0f44aa12b8d313949da3bcf6e12521a09cb6e518d2119ea0b9ec170de67134f6。按复核建议澄清 Q3 负距离候选及 Q16 的 X=3 对应位置后，当前 SHA-256 为 f0b5660174d04f2bba92fff5b74e830654bb477a211f962b284a1c8577431d52；状态改为 draft-independent-solutions-cross-verified-pending-formal-acceptance。详情见[解析正文盲审报告](reports/2015-fujian-science-solution-review.md)。
+- 固定 PDF SHA-256 为 a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700。来源发布身份及官方答案仍未核；图稿、paper/batch/issues/provenance、确定性生成、正式排版与视觉回执仍未完成。本阶段不表示单卷闭环或长期语料完成。
