@@ -13842,3 +13842,10 @@
 - `analyze_pdf.py --no-cache --include-text` 分类 `mixed_candidates`：p.1 `review`（1,806非空白字符、14可疑字符），p.2 `text_candidate`（775非空白字符、0可疑字符）；两页均有文字层且无图像对象。200 dpi 原页已目视检查；文本层有跨栏错序，不作为规范题稿。
 - 按人工路由对 p.1 运行 Xiaomi-OCR-0 与 PaddleOCR-VL-1.6。Xiaomi 输出 2,107 tokens，MPS、97.137秒，完成状态为未截断；Paddle CPU、258.610秒，停止/截断信息不由接口暴露，故状态未知。候选均留在忽略目录 `.work/ocr-local/`，为页级 `recognized_unverified` / `needs-review`，未分配题号。两引擎字节输出不同；Q9 中 Xiaomi 将固定原页的 `1/t` 识为 `1/l`，Paddle 识别为 `1/t`，已由高分辨率原页确认。没有外部 OCR/API 调用。
 - 详情见[固定来源接收与 OCR 路由报告](reports/2015-fujian-science-source-intake.md)。本阶段没有登记 paper/batch/issues，没有转录题面、推导答案、画图或构建。人工与子代理费用未知；本地 OCR worker 时间合计355.747秒。下一步转录Q1–Q23并逐题对照原页，之后安排独立题面复核。本回执不表示来源认证、答案验证、整卷验收或长期语料完成。
+
+### 2015 福建理科候选卷：Q1–Q23 题面转录（2026-11-03）
+
+- 据固定 source src-c47985c709ff8ae42e6e192879d604223c58a53c4358056d28f78ad5a9736e3c、PDF SHA-256 a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700，完成题面草稿 2015/2015_数学真题_福建理_题面转录草稿.md：选择Q1–Q10、填空Q11–Q15、解答Q16–Q23；草稿SHA-256 ef07c75b220a984d223ca05313953d43e5f26f9dad2456a945a4fdf667caf76b。
+- 主会话逐题对照固定 PDF 两页 200 dpi 原图；Q4 数据表已文字录入，Q6/Q13/Q17/Q18 原图保留待重绘标记。Q9 照录经 400 dpi 原页确认的 |AB|=1/t，Q22 保留原印 √2 ρ sin(θ−π/4)=m。OCR 候选仅作线索，未导入规范题稿。
+- parse_question_blocks() 识别连续23题；解答小问集合与原卷结构一致（Q16–Q19、Q21–Q23 各两问，Q20 三问），选择题选项及数学定界符结构检查通过。独立题面复核尚待完成。
+- 详情见[题面转录报告](reports/2015-fujian-science-question-transcription.md)。目前仅有题面草稿；未登记 paper/batch/issues/provenance，未写答案、解析、图稿或 TeX，未构建 PDF。paper_id=null、official_answer=null；来源发布者、版次、复制链与官方身份未核。人工时间及子代理成本未知。下一阶段为独立逐题题面复核；本条不表示来源认证、答案验证、整卷验收或长期语料完成。
