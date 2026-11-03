@@ -52,7 +52,15 @@
 
 - 修正数学模式中的中文顿号、分号字形缺失，并重生成派生稿、TeX 与 provenance 题面摘要；修正只调整标点的文字模式，不改变原题或数学结论。登记报告已更新八份事实源 SHA-256。
 - 文理两卷各四版正式构建成功，共92页；8份回执均无编译错误、缺字、overfull 或未定义引用。attempt、页数与 PDF SHA-256 见[正式构建报告](reports/phase4-b47-formal-build.md)。正式构建后 manifest revision 为6145。
-- 已准备8个全页视觉审查工作项，视觉检查尚未完成；batch 当前 `compiled_pending_review`。Q14 `ISSUE-1388`/`ISSUE-1389` 仍为 U/PENDING 阻塞项，来源身份与官方答案未核。下一步完成逐页视觉回执、批次关闭门禁与交接更新。
+- 本构建阶段止于正式构建；逐页视觉回执、批次关闭与全库报告更新在下方的独立收尾阶段完成。Q14 `ISSUE-1388`/`ISSUE-1389` 仍为 U/PENDING 阻塞项，来源身份与官方答案未核。
+
+### 2003 上海普通卷文理科：全页视觉复核与批次封存（2026-11-04）
+
+- 文理两卷四版共92页，八项视觉检查逐页通过或按无关项记为 `not_applicable`。理科复核工作项最初有31页、53项页眉/页首留白失败标记；对照正式 PDF 整页渲染复核后确认是预览裁切造成的误判，已按各页正式渲染路径改正为通过。未改 PDF 或试题内容。
+- `review_receipts.py finalize-batch` 正常封存 `phase4-b47` 为 `closed_with_blockers`，manifest revision `6145→6146`；文理卷分别保留 `ISSUE-1388`、`ISSUE-1389`。批次审查报告见[phase4-b47](reports/phase4-b47.md)。两卷 Q14 仍为 U/PENDING；固定 PDF 无答案页，来源发布链和官方答案仍未核，paper 不标为完成。
+- 封存后 `review_receipts.py check-batch` 为 `FINALIZED`；`build_projects.py validate-receipts --require-final --require-current-inputs` 为 `OK`（2卷成功、0 stale/invalid/missing）；source manifest、issues、provenance、答案/TeX 生成器检查及 775 行 `manifest.csv` 均通过。`report.py render --all` 以单个 content 事务更新六份全量报告并回读校验成功。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 实际结果：`Ran 1779 tests in 571.857s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库报告80项缓存状态漂移；抽查 `phase2-b01` 可复现其4卷缓存 `complete`、现场派生 `answers_verified`，批次缓存 `closed`、现场派生 `provenance_verified`。本次 manifest diff 仅改变 `phase4-b47` 批次状态及 revision，此项不属于2003批次，未在本阶段批量改写其他试卷状态。测试结果未通过，不作为整库状态一致的证明。
+- 本阶段准确结论为两卷四版视觉与构建回执闭合、批次 `closed_with_blockers`；不代表来源认证、官方答案确认或长期语料完成。下一步仅提交本批封存和对应报告/进度变更；全库缓存状态漂移需另开范围处理。
 
 ### 2003 上海普通卷理科：Q1–Q22 独立题面复核（2026-11-04）
 
