@@ -73,6 +73,13 @@
 - `report.py render --all` 刷新全量基线与 6 个全量报告目标；门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`、`review_receipts.py check-batch`、`manifest_csv.py --check`（775行）。
 - 详情见[正式构建报告](reports/2004-shanghai-science-formal-build.md)与[批次报告](reports/phase4-b46.md)。Q19/ISSUE-1386 与 Q22/ISSUE-1387 继续阻断。本阶段不表示整卷无阻塞完成或长期语料完成。
 
+### 2004 上海理科普通卷：单元测试补齐与全量报告状态同步（2026-11-04）
+
+- 新增 `tests/test_2004_shanghai_science_transcription.py`：对 `gk-2004-regular-shanghai-science` 的规范来源绑定（`src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`、SHA-256 `9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e`）、22 道题面覆盖、原卷存疑符号（Q14(D) $x = k\pi + (-1)^k$、Q17 共轭模不等式 $|z_1 - \overline{z_2}| < |z_1|$、Q18 $8\text{ cm}^2$、Q19(2) $B \subseteq A$、Q22(1) $P_1(3, 0)$）、3 幅 TikZ 图稿独立性（Q5、Q18、Q21）及三角色 provenance / 构建与视觉回执进行端到端自动化测试，5 项用例全部通过。
+- `report.py render --all` 将批次 ownership 状态同步至 `committed`，回读校验通过。
+- 针对性验证门禁全量通过：`python3 -m unittest tests/test_2004_shanghai_science_transcription.py`（5/5 通过）、`python3 tools/source_manifest.py validate --manifest source-manifest.json`、`python3 tools/issues.py validate --file missing-issues.md`、`python3 tools/provenance.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase4-b46`、`python3 tools/solution_sources.py check-batch --manifest source-manifest.json --batch phase4-b46`、`python3 tools/review_receipts.py check-batch --manifest source-manifest.json --issues missing-issues.md --batch phase4-b46`、`python3 tools/manifest_csv.py --check`。
+
+
 
 
 
