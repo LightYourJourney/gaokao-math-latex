@@ -34,6 +34,12 @@
 - 复核后解析正文 SHA-256 `5b97f869c067589927ccde5aa7599492c0600d21e436d46a0c4548564d29c02d`；答案要点 SHA-256 `b8614bc2574afe564a6c8ff82a7d9f9abd638b208c7835afdc68a857ae593044`。`solution_sources.render_combined` 只读预演通过，22题对齐且U/PENDING仍保留。
 - Q11端点并列范围和Q20(1)“中低价层/中低价房”仍U/PENDING。详情见[独立答案复核报告](reports/2005-shanghai-science-answer-review.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、题图或TeX，未构建；`official_answer=null`、来源身份未核。本阶段不表示来源认证或整卷验收。
 
+### 2005 上海理科普通卷：规范事实源与内部卷登记（2026-11-03）
+
+- 将复核后的题面转录草稿固定为 2005/2005_数学真题_上海理_试题.md，SHA-256 2af066bb79bf8296a8aea3710d656bf5ee91020fe00941d55d6a97651aaf27c5；答案与解析元数据绑定内部候选 paper_id=gk-2005-regular-shanghai-science，不代表官方身份认证。
+- source_manifest.py register-papers --write 新建批次 phase4-b44 与 paper，manifest revision 6109→6110；source src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e 关联为内部 canonical。Q11/Q20 阻塞项分别是 ISSUE-1380、ISSUE-1381，paper blocked、batch planned。source_manifest.py validate、issues.py validate、solution_sources.extract-batch --write / check-batch 及 manifest_csv.py --write / --check 均通过。
+- 详情见[内部卷登记报告](reports/2005-shanghai-science-paper-registration.md)。当前尚无逐题 provenance、Q11/Q17/Q19图稿、TeX、正式PDF及视觉回执；official_answer=null，来源发布者/版次/复制链未核。本阶段不表示来源认证或整卷验收。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。

@@ -23145,3 +23145,37 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1380
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q11 给出两种相同直三棱柱，高为 2/a，底边为 3a、4a、5a，并称“全面积最小的是一个四棱柱”。按表面积比较，最佳四棱柱与三棱柱面积差为 12a^2-20；a=sqrt(5/3) 时两类并列最小，题面未说明是否要求唯一最小。",
+  "fingerprint": "b51e2e4671dc178fbeedd3f9bbb74e044e3f7eec5b4283dce5b05b4f4fbf04bd",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-shanghai-science",
+  "question_id": "gk-2005-regular-shanghai-science-q11",
+  "resume_action": "取得可追溯同版答案、解析或勘误以确认“最小的是一个四棱柱”是否要求唯一最小；在此之前保留 U/PENDING，不替来源补充唯一性条件。",
+  "source_id": "src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1381
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q20(1) 清楚印作“中低价层”，与前文及第(2)问“中低价房”不一致。只有按“房”解释时累计面积的条件计算结果才是 2013 年底，现有证据不能确定原题意。",
+  "fingerprint": "8316b7dbaea5b4ffcaa77cc1bf273396dd462f1e12fd8158ace966eff550a17f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2005-regular-shanghai-science",
+  "question_id": "gk-2005-regular-shanghai-science-q20",
+  "resume_action": "取得可追溯同版答案、勘误或可靠说明以确认“中低价层”是否应按“中低价房”解释；在此之前将 Q20(1) 保留 U/PENDING，条件性年份不写为确定答案。",
+  "source_id": "src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
