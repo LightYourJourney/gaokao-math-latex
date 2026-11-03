@@ -60,6 +60,12 @@
 - 串行执行 `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`，三项均与生成结果完全一致；`solution_sources.py check-batch`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate` 均通过。详情见[项目 TeX 生成报告](reports/2004-shanghai-arts-project-generation.md)。
 - 尚未正式编译四版 PDF 或写入构建/视觉回执；下一阶段进行正式构建与逐页视觉复核。本阶段不表示整卷验收。
 
+### 2004 上海文科普通卷：四版正式构建与视觉复核（2026-11-03）
+
+- 修复存疑提示中的数学公式模式，运行 `build_projects.py build --formal` 完成四版正式编译（attempt `8b744c4d-7552-4e73-ad42-64582389e90d`）：试题版 5 页、解析版 24 页、简答版 7 页、印刷版 19 页，四版共 55 页，XeLaTeX 均为 0 错误、0 缺字、0 未定义引用。
+- 逐页执行 8 项视觉复核规范；7 处微小 Overfull hbox（Q14 选项行与 Q20 面积公式）经高分辨率核验确认无裁切、无溢出版心并登记豁免。
+- `review_receipts.py finalize-batch` 聚合审查回执并封存批次 `phase4-b45` 为 `closed_with_blockers`；Q17 实数无解 `ISSUE-1384` 与 Q19 集合符号脱节 `ISSUE-1385` 继续 open / blocks_completion，试卷 `production_state=blocked`。`report.py render --all` 原子刷新并校验全量报告，`source_manifest.py validate`、`issues.py validate`、`provenance.py check-batch`、`review_receipts.py check-batch`、`manifest_csv.py --check`（775行）均通过。详情见[正式构建与视觉复核报告](reports/2004-shanghai-arts-formal-build.md)与[批次审查报告](reports/phase4-b45.md)。本阶段不表示来源认证或整卷无阻塞完成。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
