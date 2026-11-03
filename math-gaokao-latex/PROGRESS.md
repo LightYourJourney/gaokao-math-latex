@@ -13576,3 +13576,11 @@
 - 22 题 question-review、answer-solve、answer-review provenance 事务导入，manifest revision `6035→6041`。Q16 保留 U/PENDING 并关联 ISSUE-1360；Q19 原文 `{a_n}`/`x_n` 差异照录并关联 ISSUE-1361；两条 issue 均 open / `blocks_completion`。`official_answer=null`，来源发布者、版次、复制链和官方身份仍未核。
 - `source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）、`provenance check-batch`（1卷）、`generate_projects --check`、简答/版本壳 `--check` 通过；`manifest.csv` 为 775 行且 current。图稿、同步表面、provenance、门禁与剩余项见[阶段报告](reports/2002-beijing-science-figures.md)。
 - 本阶段尚未构建正式四版 PDF、建立 build/review receipt、逐页视觉检查或 finalization；paper 保持 `blocked`，batch 为 `provenance_verified`。下一阶段继续正式构建与逐页视觉收口，本记录不表示本卷闭环或长期语料完成。
+
+### phase1-b82 2002 北京理科候选卷：正式构建与逐页视觉复核（2026-11-03）
+
+- Q20 八列表头在首次正式构建中产生严重 Overfull；按原页全称与单元格数据不变的原则，改为「1 读」「1 果」等排印缩写，并在题干说明其对应原页全称，确定性重建题面与解析。首次 attempt `4103de29-49fb-4345-967a-0522f6f590a8` 作废；最终 attempt `c62807e4-de9d-4308-a9c6-7cd26097b807`，构建输入 manifest revision 6045，finalization revision 6047，四版零 TeX error、缺字、Overfull、undefined reference。
+- 当前 PDF：试题版 5 页 SHA-256 `4280402bbfecfeb3eb385b265261d61f2873f37577e62002f600cf3b9ad383af`；解析版 21 页 `156ef530ea3d6e385775ed977df613842a31b71e3a25fe789308e303353a58e3`；简答版 7 页 `0dd31701eb490f05142008973a5a83e9921cef78cf1183baaa979c30b0dccb1a`；印刷版 17 页 `e2a03f03a66602be8250d868edd5e152a9f5243e954e66cc9293ec27b721ba2e`。
+- 对当前 attempt 的 50 页逐页渲染并目视检查，每页八项检查齐全，共 400 项：316 pass、84 not_applicable、0 fail；四版 review 均 passed。`build_projects.py validate-receipts --require-final --require-current-inputs`、provenance、项目生成、简答、版本壳、solution sources、source manifest 与 issues 校验全部通过；manifest CSV current（775 行）。
+- 视觉与构建收口不消除内容阻塞：`ISSUE-1360`（Q16 原方程无实圆）与 `ISSUE-1361`（Q19 `{a_n}` / `x_n` 记号不一致）仍 open / `blocks_completion`；Q16 继续 U/PENDING，Q19 只保留对明确定义的 `x_n` 的条件性解答。批次为 `closed_with_blockers`，不代表官方来源认证或长期语料完成。
+- 全量项目汇总报告已通过检查，六份全局投影与 manifest 一致；全量 unittest 将作为独立验证阶段执行并记录。
