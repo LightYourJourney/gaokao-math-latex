@@ -34,6 +34,12 @@
 - 新复核者 `/root/review_2000_shanghai_arts_transcription_final`（gpt-6-luna/high）重新渲染固定 PDF 两页并对照Q1–Q22，最终22/22通过、无剩余题面差异；未读答案源、未改文件。明确核对Q8端点$A(0,2)$、$B(1,1)$，Q11标点$(1,4)$，Q20刻度$x=4,17$、$y=4$，及Q22双重共轭关系。
 - 题面frontmatter状态更新为“Q1–Q22独立逐题复核通过；候选稿待登记”。Q21原印式已核实并照录，但其含义仍异常，答案保持待核。当前题面SHA-256 `54891a67b34a71e061eb4f21df090d31a8afee2dee3af532bdf6c41cb2323b2b`；详情见[复核记录](reports/2000-shanghai-arts-question-review.md)。Q1–Q22题面可进入答案推导阶段；来源身份、paper登记、答案、解析、图稿、构建与视觉回执仍未完成。本阶段不表示来源认证或整卷验收。
 
+### 2000 上海文科候选卷：答案要点初稿（2026-11-03）
+
+- 按已独立复核题面新增 `2000/2000_数学真题_上海文_答案要点草稿.md`，独立推导Q1–Q20、Q22；Q21为U/PENDING。两段Luna/high独立解题结果由主会话逐题复算；纠正Q3中心平移并用Q8原图端点坐标确定$f(x)=x$，按Q22已补正双重共轭公式重新计算。
+- Q21按原印常值函数解释时，（3）前n项和无界增长、没有最大项数，不能据此猜修正意图；暂不写成确定答案，待可靠同版来源。题面源没有答案页，所有本稿答案均为非官方独立推导，`official_answer=null`、`paper_id=null`。
+- 答案稿SHA-256 `a07261a0e07b464152abc70b0d9cc08e34c9929e30328261f8ee908dcf62d79a`；结构解析识别连续Q1–Q22及Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。答案盲核尚未开始；Q8、Q11、Q18、Q20图稿待重绘。来源/paper/batch和Q21 issue/provenance登记、解析、`_含解析.md`、TeX构建与视觉回执均未完成。详细范围见[答案要点报告](reports/2000-shanghai-arts-answer-key.md)；下一阶段先由未参与解题者盲解复核。本阶段不表示官方答案认证或整卷验收。
+
 ### 2007 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
