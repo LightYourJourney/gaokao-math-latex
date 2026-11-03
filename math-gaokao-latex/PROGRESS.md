@@ -13822,3 +13822,9 @@
 - 首次四版正式构建 attempt `f413ab0f-05e0-4cca-bc0e-010aecee0f02` 在四版均以 latexmk exit code 12 失败，没有产出 PDF；构建输入 manifest revision `6070`，失败事务后为 `6071`。原始 XeLaTeX 日志定位到题面来源说明行内代码 `official_answer` 被生成为含裸下划线的 `\texttt{official_answer}`，触发 `Missing $ inserted`。答案要点和解析正文说明也含同类 `paper_id`/`official_answer` 标识。
 - 只将三个事实源文件的说明文字改为普通中文，保留 front matter 中的内部 `paper_id` 和 `official_answer: null`；题目、答案与解析数学内容未改。重生 `_含解析.md`、`questions.tex`、`answers.tex`，检查生成的题面/答案 TeX 不再含这些裸下划线标识。provenance、source、issue、solution 与三个生成器门禁通过；manifest CSV 已按失败构建事务刷新且 775 行 current。
 - 首次失败的原始回执及自动登记的 `ISSUE-1365`–`ISSUE-1368` 已保留，等待成功构建时由正式事务对账。Q21 的 `ISSUE-1363`/`ISSUE-1364` 仍 open / `blocks_completion`，paper 仍 blocked、batch 仍为 `provenance_verified`。本阶段修正报告见[正式构建来源说明修正](reports/2000-shanghai-arts-tex-source-note-fix.md)。尚未重跑四版构建，未产出可审阅 PDF，也未进行视觉复核；未运行测试或 OCR。
+
+### 2000 上海文科候选卷：四版正式构建（2026-11-03）
+
+- 正式 build attempt `e858985f-d0d6-4452-aed8-6f85b2acd2cc` 成功，`previous_attempt_id` 指向失败尝试 `f413ab0f-05e0-4cca-bc0e-010aecee0f02`；构建输入 manifest revision `6072`，完成后 revision `6073`。工具链为 XeTeX / TeX Live 2026、latexmk 4.88、Poppler 26.10.0。
+- 试题版 5 页、解析版 23 页、简答版 7 页、印刷版 17 页，共 52 页；四份 PDF 的本地 SHA-256、字节数和 `pdfinfo` 页数均与正式回执相符。四版 errors、missing characters、overfull、undefined references 均为 0。`validate-receipts --require-current-inputs` 返回 `OK`（1 pending review）；首次构建生成的 `ISSUE-1365`–`ISSUE-1368` 已 resolved。
+- `source_manifest`、issues、solution、provenance、三项生成器 currentness 和 manifest CSV 检查通过。batch 为 `compiled_pending_review`；paper 仍 `blocked`，Q21 的 `ISSUE-1363`/`ISSUE-1364` 继续 open / `blocks_completion`，题面和答案仍 U/PENDING。构建回执见[四版正式构建报告](reports/2000-shanghai-arts-formal-build.md)。视觉审查尚未开始；未运行测试或 OCR，不表示本卷完成或长期语料完成。

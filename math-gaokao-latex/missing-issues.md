@@ -22889,16 +22889,15 @@
   "edition": "试题版",
   "figure_id": "formal-build",
   "fingerprint": "e4f59b15f3c22a784cf78b64b9baab2e3fd5b2c562dc3ca036cef4966df0a66f",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2000-regular-shanghai-arts",
-  "resume_action": "修正 gk-2000-regular-shanghai-arts 的 试题版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1366
 
 ```json
@@ -22908,16 +22907,15 @@
   "edition": "解析版",
   "figure_id": "formal-build",
   "fingerprint": "dc3f1367ecbde5ca017a0ec037b0d1103b528d2ce20bb0154a871deb8dcbaa2d",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2000-regular-shanghai-arts",
-  "resume_action": "修正 gk-2000-regular-shanghai-arts 的 解析版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1367
 
 ```json
@@ -22927,16 +22925,15 @@
   "edition": "简答版",
   "figure_id": "formal-build",
   "fingerprint": "baa54ff3ee08efecaf35699fbe7f82ee5200431f3d129f969703bd8f0af82556",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2000-regular-shanghai-arts",
-  "resume_action": "修正 gk-2000-regular-shanghai-arts 的 简答版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
-
 ## ISSUE-1368
 
 ```json
@@ -22946,12 +22943,12 @@
   "edition": "印刷版",
   "figure_id": "formal-build",
   "fingerprint": "f702d245c1700d2da082f72546908d660b073ca0cea9eb06400f2aa2896e4480",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "formal-build",
   "page": 1,
   "paper_id": "gk-2000-regular-shanghai-arts",
-  "resume_action": "修正 gk-2000-regular-shanghai-arts 的 印刷版 后重跑 build --formal（latexmk 退出码 12）",
-  "status": "open",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
   "type": "compile-error"
 }
 ```
