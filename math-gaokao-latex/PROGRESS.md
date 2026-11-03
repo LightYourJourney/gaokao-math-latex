@@ -11,12 +11,18 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`：第1页 `text_candidate`（1401个非空白字符、0个可疑字符），第2页 `review`（623个字符、7个可疑字符）；两页均有文字层、无嵌入图像对象。两页150 DPI渲染均已目视检查；文字层只作定位候选，后续逐题以固定原页核对。本阶段 `model_calls=0`、`ocr_calls=0`、外部API调用0。
 - 本阶段只接收并核查固定来源，未登记paper/batch、未修改manifest/issues、未转录或求解。`paper_id=null`、`official_answer=null`；人工耗时未知。详情见[2005上海文科普通卷来源接收报告](reports/2005-shanghai-arts-source-intake.md)。下一阶段转录Q1–Q22并逐题对照原页，之后独立复核题面。本回执不表示来源认证、答案验证、整卷验收或长期语料完成。
 
-### 2005 上海文科普通卷：Q1–Q22 题面转录（2026-11-03；复核补正待确认）
+### 2005 上海文科普通卷：Q1–Q22 题面转录（2026-11-03）
 
 - 按固定 source `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`、SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1` 转录题面草稿 `2005/2005_数学真题_上海文_试题.md`，填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；原件为2页A3横向，印刷页264–265。
 - 逐题对照300 DPI原页分栏渲染；`pdftotext -layout`仅作定位候选。Q16数阵按原序转写；Q12、Q17、Q21保留待重绘图位。没有补充分值/总分，也未把题面推导混入转录。
-- 首轮独立复核发现印刷页265 Q20(1)原文“中低价层”被初稿录作“中低价房”；现已照录原字并在题稿内标注其与前文/第(2)问用词不一致。复核者称其余Q1–Q22文字、公式、选项、小问、Q16数阵和图位均无差异；修正行待该复核者最终确认。
-- 本阶段未调用OCR或外部API；`model_calls=0`、`ocr_calls=0`，人工耗时未知。来源出版身份未核，`paper_id=null`、`official_answer=null`。详情见[题面转录报告](reports/2005-shanghai-arts-question-transcription.md)。最终独立复核完成前不记录“题面复核通过”；答案、解析、图稿、登记和构建尚未开始。本回执不表示来源认证或整卷验收。
+- 独立复核首轮发现印刷页265 Q20(1)原文“中低价层”被初稿误录为“中低价房”；已照录原字并标明其与前文/第(2)问用词不一致。复核者二次确认修正正确，且不影响其他题目；详情见[独立题面复核报告](reports/2005-shanghai-arts-transcription-review.md)。最终Q1–Q22逐题核对通过，Q20原件用词疑点仍保留。
+- 本阶段未调用OCR或外部API；`model_calls=0`、`ocr_calls=0`，人工耗时未知；子代理token/费用不可见。来源出版身份未核，`paper_id=null`、`official_answer=null`。详情见[题面转录报告](reports/2005-shanghai-arts-question-transcription.md)。答案、解析、图稿、登记和构建尚未开始。本回执不表示来源认证或整卷验收。
+
+### 2005 上海文科普通卷：独立题面复核（2026-11-03）
+
+- 独立复核者 `candidate_audit_1952_2006`（gpt-6-luna/high）对固定 source `src-88b71f0fa7eccf6a3db8fdf7ce80e432fa2c3d5d028e2d0bdb1638bb8d17846`、SHA-256 `952989a262e3f7b34a425ccb6e2132af7e88408a387edae50f59a9505ebe46a1` 的两页原图复核Q1–Q22，最终全部通过。核对范围含题号/分节、正文、公式符号、选项、区间/指数/分母、小问、Q16数阵和Q12/Q17/Q21图位。
+- 首轮发现并报告Q20(1)“中低价层/中低价房”单字差异；主稿照录来源“中低价层”并标注原件内部用词不一致。复核者二次核对修正后的题稿 SHA-256 `ae5110faab02d08bf64daaf62f41a23bf86953f166505437487cd9ca98944fc3`，确认该处正确、其他题面不受影响。最终无剩余转录差异。
+- 复核者只读、未改稿或运行测试；本阶段未调用OCR或外部API，子代理token/费用不可见。详情见[独立题面复核报告](reports/2005-shanghai-arts-transcription-review.md)。来源出版身份未核，`paper_id=null`、`official_answer=null`；本阶段不代表来源认证、答案数学验证或整卷验收。
 
 ### 2000 上海文科候选卷：固定来源接收（2026-11-03）
 
