@@ -52,6 +52,13 @@
 - `source_manifest.py sync-figure-registry --manifest source-manifest.json --paper gk-2004-regular-shanghai-science --write` 更新 manifest revision 6124→6125，三图引用计数均正确建立为 2。
 - 门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[题图重绘与登记报告](reports/2004-shanghai-science-figures-provenance.md)。provenance/TeX/四版构建待后续。本阶段不表示来源认证或整卷验收。
 
+### 2004 上海理科普通卷：逐题 provenance 导入（2026-11-04）
+
+- `tools/provenance.py init-batch` 在忽略目录生成三角色工作文档；导入三角色独立核验结果：独立题面复核员（22 题全部 passed）、Codex 编者独立推导（20 题 D 级、2 题 U 级）与 gpt-6-luna/high 独立分段盲解（22 题 conflict_status 全部 none）。
+- 阻塞问题关联：Q19 提问条件 $B \subseteq A$ 符号脱节疑点维持 U/PENDING 并关联 `ISSUE-1386`；Q22(1) 点 $P_1(3, 0)$ 不在椭圆上且无实数解疑点维持 U/PENDING 并关联 `ISSUE-1387`。
+- `provenance.json` 落盘于 `2004_上海卷_理科/provenance.json`（SHA-256 `63767f42c111533b256cd705528a9d5310df2e7721cbfb8d1c2f6a61c0a83b1d`）；更新 manifest revision 6125→6126，批次状态更新为 `provenance_verified`，试卷状态维持 `blocked`。
+- 门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`provenance.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[逐题 provenance 导入报告](reports/2004-shanghai-science-provenance.md)。项目 TeX 生成与四版构建待后续。本阶段不表示来源认证或整卷验收。
+
 
 
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
