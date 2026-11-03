@@ -24,6 +24,12 @@
 - 更新题稿 front matter 标注独立复核通过，最终题面草稿 SHA-256 为 `81505c01d06d752a3da7c6804e4d045796831c9de51f88b8ee69f65c856cd8ac`（转录提交时为 `8630a4d7dbd23ca060fa29fa9783dd96827d21befd21f0fd5a78e5a816600fe5`）。
 - 结构解析连续识别Q1–Q22及解答小问。`paper_id=null`、`official_answer=null`，未调用OCR。详情见[独立题面复核报告](reports/2004-shanghai-science-question-review.md)。题图、答案、解析、登记、构建与视觉验收仍待后续；本阶段不表示来源认证或整卷验收。
 
+### 2004 上海理科普通卷：非官方答案与解析初稿（2026-11-04）
+
+- 据已复核题面形成Q1–Q22答案要点及逐题解析：`2004/2004_数学真题_上海理_答案要点.md` SHA-256 `7b7a439ae54c1d4cbc8b233ac344b30c2e5c3183391342560108a6787db30492`；`2004/2004_数学真题_上海理_解析正文.md` SHA-256 `29e6b65c7dcf8b1b1b584f30c256e5087f16a2fb475d4e13c15308cf1b204541`。分段独立求解覆盖Q1–Q12、Q13–Q16、Q17–Q22，系统核算三角、解析几何、复数共轭不等式与空间多面体体积。`solution_sources.render_combined` 只读预演成功，22题题号及小问结构完全对齐。
+- Q17 经300 DPI图像确认原卷字面明确印有共轭横杠作 $|z_1 - \overline{z_2}| < |z_1|$，推导解得 $1 < a < 7$；Q18 框架总面积 $S = xy + \frac{1}{4}x^2 = 8$，由均值不等式解得 $x = 8 - 4\sqrt{2} \approx 2.343\text{ m},\; y = 2\sqrt{2} \approx 2.828\text{ m}$，保留面积量纲说明；Q19(1) $A = (-\infty, -1) \cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 但未定义集合 $B$，按题干函数定义域 $D$ 理解解得 $(-\infty, -2] \cup [\frac{1}{2}, 1)$，因原卷字面符号脱节保留 U/PENDING 并给出说明；Q20(1) $f(x) = x^2 + \frac{8}{x}$，(2) 判别式与根检验严格成立；Q21(1) 棱台棱长和相等解得 $l = 1$ 正四面体，(2) 二面角 $\arccos\frac{\sqrt{6}}{3}$，(3) 存在且构造 $\alpha = \arcsin(8V)$ 直平行六面体；Q22(1) 原卷字面 $P_1(3, 0)$ 不在椭圆上且无实数解，保留 U/PENDING 并给出推测分析，(2) 最小值 $\frac{n(a^2 + b^2)}{2}$，(3) 选抛物线充要条件 $d > 0$。
+- 固定PDF无答案页，所有答案均为本库独立推导、非官方，`paper_id=null`、`official_answer=null`；来源身份未核。阶段报告见[答案与解析初稿](reports/2004-shanghai-science-answer-draft.md)。未登记paper/batch/issues/provenance，未生成派生含解析稿、图稿或TeX，未构建。下一阶段推进独立盲核答案；本阶段不表示来源认证、整卷验收或长期语料完成。
+
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
 
 - 新增 `tests/test_2004_shanghai_arts_transcription.py`：对 `gk-2004-regular-shanghai-arts` 的规范来源绑定（`src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`、SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`）、22 道题面覆盖、原卷存疑符号（Q14(D) $x = k\pi + (-1)^k$、Q17 $(1+\mathrm{i})z_1 = -1+5\mathrm{i}$ 与 $(a-4)^2 < -3$、Q18 $8\text{ cm}^2$、Q19(2) $B \subseteq A$）、4 幅 TikZ 图稿独立性（Q5、Q18、Q20、Q21）及三角色 provenance / 回执进行端到端自动化测试，5 项用例全部通过。
