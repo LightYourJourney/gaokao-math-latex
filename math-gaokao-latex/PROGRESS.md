@@ -13810,3 +13810,9 @@
 - `register-papers` 登记 `gk-2000-regular-shanghai-arts` / `phase3-b25`，manifest revision `6066→6067`，source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5` 仅内部绑定。Q21 创建 `ISSUE-1363` (`answer-conflict`，open / `blocks_completion`)；固定 PDF 印式照录，答案保留 U/PENDING，paper `blocked`，batch `planned`，`official_answer=null`。
 - 全局 `index.json`、本卷题面/答案 TeX、简答表与四版入口均已生成。`solution_sources check-batch`、三个生成器的 `--check`、`source_manifest validate` 和 `issues validate` 通过。未运行测试、OCR 推理或正式 PDF 构建；未做视觉回执。
 - 图稿 Q8/Q11/Q18/Q20、题面映射、manifest `figure_files`、三角色 provenance、四版构建与逐页审查仍待完成。来源发布者、版次、复制链与官方答案未核，人工耗时未知；不表示单卷验收或长期语料完成。下一阶段按固定原图矢量重绘四图并同步所有图稿面。
+
+### 2000 上海文科候选卷：Q8/Q11/Q18/Q20 矢量图与三角色 provenance（2026-11-03）
+
+- 新增四个 TikZ 图稿并在规范题面用独立段落链接；依据固定来源 PDF SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`，Q8/Q11/Q18 位于 PDF p.1（印刷页72），Q20 位于 PDF p.2（印刷页73）。单独 4 页 XeLaTeX 预览以 Poppler 180 dpi 渲染，四幅均与原页目视对照通过。Q11 源图核查报告中误写的“三角形”已更正为顶点 (0,0)、(0,5)、(1,4)、(3,0) 的四边形。
+- `solution_sources.py extract-batch --write` 重建合并稿；manifest 登记四幅图且每幅预期引用 2 次，revision `6067→6068`。项目 TeX 与 `index.json` 重新生成。逐题三角色 provenance 导入 revision `6068→6069`，Q1–Q22 transcription 全部 passed，答案证据 D 级 21 题、U 级 1 题。Q21 保留 U/PENDING 与 unresolved；`ISSUE-1363` answer-conflict 和新增 `ISSUE-1364` answer-convention-ambiguous 均为 open / blocks_completion，paper 仍 blocked、batch 为 provenance_verified。
+- 定向门禁通过：`solution_sources check-batch`、`source_manifest validate`、`issues validate`、`provenance check-batch`、本卷三项生成器 `--check`、`manifest_csv --check`（775 行）。阶段报告见[四图与 provenance 回执](reports/2000-shanghai-arts-figures-and-provenance.md)。本阶段未调用 OCR、未运行测试套件或四版正式 PDF 构建；来源身份与官方答案未核。下一阶段处理正式试卷构建及视觉回执，仍需保留 Q21 blocker；不表示本卷闭环或长期语料完成。

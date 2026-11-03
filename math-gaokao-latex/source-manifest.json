@@ -2209,7 +2209,7 @@
       "paper_ids": [
         "gk-2000-regular-shanghai-arts"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -2219,7 +2219,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "18da61c6-14f6-43be-b7a0-6318fbed23cc",
+  "last_transaction_id": "5fa1dd39-e06e-49ec-a73e-7969dea7b98b",
   "papers": [
     {
       "blocked_from": null,
@@ -29323,7 +29323,24 @@
     },
     {
       "blocked_from": "planned",
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2000_上海卷_文科/figures/f2000_shanghai_arts_q08_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_上海卷_文科/figures/f2000_shanghai_arts_q11_linear_programming.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_上海卷_文科/figures/f2000_shanghai_arts_q18_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2000_上海卷_文科/figures/f2000_shanghai_arts_q20_robot_axes.tex"
+        }
+      ],
       "index_metadata": {
         "base": "2000_shanghai_arts",
         "id": "gk-2000-regular-shanghai-arts",
@@ -29352,7 +29369,8 @@
         "variant": "上海文科"
       },
       "issue_ids": [
-        "ISSUE-1363"
+        "ISSUE-1363",
+        "ISSUE-1364"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -29376,7 +29394,7 @@
       "year": 2000
     }
   ],
-  "revision": 6067,
+  "revision": 6069,
   "schema_version": 1,
   "sources": [
     {

@@ -22862,3 +22862,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1364
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 PDF 第 2 页（印刷页 73）将函数写为 y=2000(a/10)^2，未出现 x；按字面为常值函数，而同期未认证、未证同版副本按 x 指数解释，现有证据无法判定原题所需变量与答案约定。固定答案层 Q21(1)–(3) 保留 U/PENDING。",
+  "fingerprint": "5b012906b10a75e4b9036b0d67887f9469e96a555ff2211b8857ef949580377b",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-arts",
+  "question_id": "gk-2000-regular-shanghai-arts-q21",
+  "resume_action": "取得可追溯且能与本卷版本绑定的原始出版页、正式答案或勘误，确认 Q21 指数变量；在此之前保留题面字面式与各问 U/PENDING，不用未经绑定的同期副本裁定。",
+  "source_id": "src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

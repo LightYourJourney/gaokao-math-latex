@@ -5,7 +5,7 @@
 \begin{gktip}
 \textbf{来源说明}：固定 PDF 第 1 页题签自题“2000 普通高等学校招生考试（上海卷文）”。当前固定 PDF 仅见两页题面，没有答案、解析或评分页。题面转录以固定原页为准；文字层只辅助定位，不代表内容已核。发布者、出版物、版次、来源链及官方身份未核，仅作本库内部固定字节绑定，来源身份未认证；\texttt{official_answer} 保持 \texttt{null}。
 
-\textbf{图稿说明}：Q8、Q11、Q18、Q20 含原卷图，图稿尚待按固定原页矢量重绘；以下标记仅定位图位，不以扫描截图代替图稿。
+\textbf{图稿说明}：Q8、Q11、Q18、Q20 的图像已按固定原页重绘为 TikZ 矢量源；各图链接位于相应题目后。Q18 仅示拓扑关系，不据示意透视推断题干未给出的长度、角度或垂直关系。
 \end{gktip}
 
 \gkpart{一、填空题}
@@ -39,12 +39,13 @@
 \begin{question}
 \gkti{7}命题 A：底面为正三角形，且顶点在底面的射影为底面中心的三棱锥是正三棱锥。命题 A 的等价题 B 可以是：底面为正三角形，且 $\underline{\qquad}$ 的三棱锥是正三棱锥。
 
+\Needspace{0.4\textheight}
 \end{question}
 \begin{question}
 \gkti{8}设函数 $y=f(x)$ 是最小正周期为 2 的偶函数，它在区间 $[0,1]$ 上的图象为如图所示的线段 $AB$，则在区间 $[1,2]$ 上 $f(x)=\underline{\qquad}$。
-
-【原卷图：坐标系中的线段 $AB$，端点 $A(0,2)$、$B(1,1)$，待矢量重绘】
-
+\nopagebreak[4]
+\begin{center}\input{figures/f2000_shanghai_arts_q08_graph}\end{center}
+\nopagebreak[4]
 \end{question}
 \begin{question}
 \gkti{9}在二项式 $(x-1)^{11}$ 的展开式中，系数最小的项的系数为 $\underline{\qquad}$。（结果用数值表示）
@@ -53,6 +54,7 @@
 \begin{question}
 \gkti{10}有红、黄、蓝三种颜色的旗帜各 3 面，在每种颜色的 3 面旗帜上分别标上号码 1、2 和 3。现任取出 3 面，它们的颜色与号码均不相同的概率是 $\underline{\qquad}$。
 
+\Needspace{0.4\textheight}
 \end{question}
 \begin{question}
 \gkti{11}图中阴影部分的点满足不等式组
@@ -67,9 +69,9 @@ x\geq 0,\quad y\geq 0,
 \]
 
 在这些点中，使目标函数 $k=6x+8y$ 取得最大值的点的坐标是 $\underline{\qquad}$。
-
-【原卷图：坐标系中的约束边界与阴影可行域，交点标注 $(1,4)$，待矢量重绘】
-
+\nopagebreak[4]
+\begin{center}\input{figures/f2000_shanghai_arts_q11_linear_programming}\end{center}
+\nopagebreak[4]
 \end{question}
 \begin{question}
 \gkti{12}在等差数列 $\{a_n\}$ 中，若 $a_{10}=0$，则有等式
@@ -127,12 +129,13 @@ a_1+a_2+\cdots+a_n=a_1+a_2+\cdots+a_{19-n}\quad(n<19,\ n\in\mathbb{N}^{*})
 \begin{question}
 \gkti{17}已知椭圆 $C$ 的焦点分别为 $F_1(-2\sqrt{2},0)$ 和 $F_2(2\sqrt{2},0)$，长轴长为 6，设直线 $y=x+2$ 交椭圆 $C$ 于 $A$、$B$ 两点，求线段 $AB$ 的中点坐标。
 
+\Needspace{0.4\textheight}
 \end{question}
 \begin{question}
 \gkti{18}如图所示四面体 $ABCD$ 中，$AB$、$BC$、$BD$ 两两互相垂直，且 $AB=BC=2$，$E$ 是 $AC$ 中点，异面直线 $AD$ 与 $BE$ 所成的角的大小为 $\arccos\dfrac{\sqrt{10}}{10}$，求四面体 $ABCD$ 的体积。
-
-【原卷图：四面体 $ABCD$，待矢量重绘】
-
+\nopagebreak[4]
+\begin{center}\input{figures/f2000_shanghai_arts_q18_tetrahedron}\end{center}
+\nopagebreak[4]
 \end{question}
 \begin{question}
 \gkti{19}已知函数 $f(x)=\dfrac{x^2+2x+a}{x}$，$x\in[1,+\infty)$。
@@ -141,6 +144,7 @@ a_1+a_2+\cdots+a_n=a_1+a_2+\cdots+a_{19-n}\quad(n<19,\ n\in\mathbb{N}^{*})
 
 （2） 若对任意 $x\in[1,+\infty)$，$f(x)>0$ 恒成立，试求实数 $a$ 的取值范围。
 
+\Needspace{0.4\textheight}
 \end{question}
 \begin{question}
 \gkti{20}根据指令 $(r,\theta)$（$r\geq 0$，$-180^\circ\leq\theta\leq180^\circ$），机器人在平面上能完成下列动作：先原地旋转角度 $\theta$（$\theta$ 为正时，按逆时针方向旋转 $\theta$；$\theta$ 为负时，按顺时针方向旋转 $-\theta$），再朝其面对的方向沿直线行走距离 $r$。
@@ -148,9 +152,9 @@ a_1+a_2+\cdots+a_n=a_1+a_2+\cdots+a_{19-n}\quad(n<19,\ n\in\mathbb{N}^{*})
 （1） 现机器人在直角坐标系的坐标原点，且面对 $x$ 轴正方向，试给机器人下一个指令，使其移动到点 $(4,4)$；
 
 （2） 机器人在完成该指令后，发现在点 $(17,0)$ 处有一小球正向坐标原点作匀速直线滚动。已知小球滚动的速度为机器人直线行走速度的 2 倍，若忽略机器人原地旋转所需的时间，问机器人最快可在何处截住小球？并给出机器人截住小球所需的指令。（结果精确到小数点后两位）
-
-【原卷图：坐标轴刻度 $x=4,17$、$y=4$，待矢量重绘】
-
+\nopagebreak[4]
+\begin{center}\input{figures/f2000_shanghai_arts_q20_robot_axes}\end{center}
+\nopagebreak[4]
 \end{question}
 \begin{question}
 \gkti{21}在 $xOy$ 平面上有一点列 $P_1(a_1,b_1)$、$P_2(a_2,b_2)$、$\cdots$、$P_n(a_n,b_n)$、$\cdots$。对每个自然数 $n$，点 $P_n$ 位于函数
