@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2007 上海文科候选卷：固定来源接收（2026-11-03）
+
+- 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
+- 两页 A3 横向，题签为“2007 普通高等学校招生考试（上海卷文）”，印刷页407–408；共21题：填空Q1–Q11、选择Q12–Q15、解答Q16–Q21。原页可见图位为Q7、Q11、Q16、Q21；未见答案、解析或评分页。
+- `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`：PDF第1页为 `review`（1566个非空白字符、5个可疑字符），第2页为 `text_candidate`（722个非空白字符、0个可疑字符）；两页均有文字层、`image_objects=0`。两页220 DPI渲染均已目视检查；文字层中的向量箭头等符号以原页为准。本阶段人工复核后未启动OCR（`model_calls=0`、`ocr_calls=0`），没有将文本提取结果当作规范题稿。
+- 当前 manifest revision 6047；来源仍为 `ready`、`paper_id=null`、`paper_relation=null`、`track=null`。本阶段未登记 paper/batch、未修改 manifest/issues/provenance、未转录题面、求解答案或创建图稿。来源发布者、出版者、版次、复制链和官方身份未核；成本数据未知。下一阶段转录Q1–Q21并逐题核对原页，再做独立题面复核；本回执不表示来源认证、整卷验收或长期语料完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
