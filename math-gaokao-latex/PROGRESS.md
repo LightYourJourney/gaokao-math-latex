@@ -48,6 +48,12 @@
 - 规范题面 `2004/2004_数学真题_上海文_试题.md` 插入4处图链（SHA-256 `a3dc62b9bfcb6b148ef8742fb9d4257791648d462ff2f591e1a2e7f768956e28`）；`solution_sources.py extract-batch --write` 刷新确定性含解析稿（SHA-256 `435ec8e4406b0e9a16314d2c98c3507b928f37f09738909534a99c2b2aec4187`）。
 - `source_manifest.py sync-figure-registry --write` 更新 manifest revision 6118→6119，4张图预期引用均正确建立；`check-batch`、`validate` 及 `manifest_csv.py --check` 均通过。详情见[题图重绘与登记报告](reports/2004-shanghai-arts-figures-provenance.md)。未导入provenance，未生成TeX/四版，未构建。本阶段不表示整卷验收。
 
+### 2004 上海文科普通卷：三角色逐题 provenance 导入（2026-11-03）
+
+- `provenance.py init-batch` 为 Q1–Q22 建立三角色工作记录：独立题面复核22/22通过、Codex 编者推导20题D级/2题U级、gpt-6-luna/high 分段盲解复核者检查最终答案。最终题面摘要已包含Q5/Q18/Q20/Q21图稿链接；来源页路由为Q1–Q19对应PDF第1页（印刷页200）、Q20–Q22对应第2页（印刷页201）。
+- 导入事务 ID `b3d294ea-a025-4180-baa9-57240d95b581`，manifest revision `6119→6120`，phase4-b45 更新为 `provenance_verified`；Q17/Q19 保留 `ISSUE-1384`/`ISSUE-1385` 和 U/PENDING，paper 仍 blocked。`provenance.py check-batch`、source manifest、issues、solution sources、CSV（775行）均通过。详情及记录哈希见[provenance 导入报告](reports/2004-shanghai-arts-provenance.md)。
+- PDF 无答案页，`official_answer=null`；本阶段没有生成项目 TeX、正式PDF、构建或视觉回执。下一阶段生成四版 TeX 入口后再正式构建并逐页复核。本阶段不表示来源认证、整卷完成或长期语料完成。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
