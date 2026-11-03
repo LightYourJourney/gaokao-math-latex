@@ -30,7 +30,7 @@ class FujianArtsTranscriptionTests(unittest.TestCase):
         )
         self.assertEqual(self.review["source"]["page_count"], 2)
         self.assertEqual(self.review["source"]["printed_pages"], [945, 946])
-        self.assertIsNone(self.review["paper_id"])
+        self.assertEqual(self.review["paper_id"], "gk-2015-regular-fujian-arts")
         self.assertIsNone(self.review["official_answer"])
         self.assertEqual(
             hashlib.sha256(TRANSCRIPT.read_bytes()).hexdigest(),

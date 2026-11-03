@@ -4,6 +4,11 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
+
+- `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
+- 仅更新该测试的 `paper_id` 期望值。`python3 -B -m unittest discover -s tests -p 'test_2015_fujian_arts_transcription.py' -v`：8项全部通过。上一轮全量测试的另两项失败（T25 漂移记录与79条全库缓存状态不一致）仍待各自核因；本阶段不声称全量测试通过，也不改变本卷事实源或 manifest。
+
 ### 2005 上海文科普通卷：Q22 版面修正与四版视觉复核（2026-11-03）
 
 - 首次正式构建 attempt `e365d302-3044-43d4-88c8-5bd1d171bac1` 的视觉检查发现解析版末页（第19页）仅剩 Q22 两个答案框，属于不合理的稀疏尾页。仅调整解析正文 Q22（1）、（3）的公式呈现：将可读的等式并入文字行，保留分段函数的独立展示；数学内容不变。首次构建结果与修正前状态仍记录在[正式构建报告](reports/2005-shanghai-arts-formal-build.md)。
