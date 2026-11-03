@@ -54,6 +54,12 @@
 - 导入事务 ID `b3d294ea-a025-4180-baa9-57240d95b581`，manifest revision `6119→6120`，phase4-b45 更新为 `provenance_verified`；Q17/Q19 保留 `ISSUE-1384`/`ISSUE-1385` 和 U/PENDING，paper 仍 blocked。`provenance.py check-batch`、source manifest、issues、solution sources、CSV（775行）均通过。详情及记录哈希见[provenance 导入报告](reports/2004-shanghai-arts-provenance.md)。
 - PDF 无答案页，`official_answer=null`；本阶段没有生成项目 TeX、正式PDF、构建或视觉回执。下一阶段生成四版 TeX 入口后再正式构建并逐页复核。本阶段不表示来源认证、整卷完成或长期语料完成。
 
+### 2004 上海文科普通卷：项目 TeX 生成、简答与四版入口（2026-11-03）
+
+- 运行 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `2004_上海卷_文科/` 目录下 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口（`试题版.tex`、`解析版.tex`、`简答版.tex`、`印刷版.tex`），并更新 `index.json`。四张 TikZ 图均已正常引用入 TeX 源码。
+- 串行执行 `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`，三项均与生成结果完全一致；`solution_sources.py check-batch`、`provenance.py check-batch`、`source_manifest.py validate`、`issues.py validate` 均通过。详情见[项目 TeX 生成报告](reports/2004-shanghai-arts-project-generation.md)。
+- 尚未正式编译四版 PDF 或写入构建/视觉回执；下一阶段进行正式构建与逐页视觉复核。本阶段不表示整卷验收。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
