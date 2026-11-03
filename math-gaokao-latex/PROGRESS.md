@@ -13708,3 +13708,10 @@
 - 三角色工作稿置于 ignored `.work/phase3-b24/provenance/`；`provenance.py import-batch` dry-run 与正式写入通过，写入 22 题 provenance，manifest revision 为 6063。答案全为 D 级非官方推导，未新增 issues；首轮分歧经复算已解决，Q5、Q6、Q9、Q11、Q12、Q14、Q17、Q19、Q20、Q22 记作 resolved，无 unresolved。
 - 最终答案交叉核验见[三角色 provenance 报告](reports/2015-fujian-arts-provenance.md)。`provenance.py check-batch`、source manifest、issues、solution sources、项目 TeX currentness 与 775 行 CSV 检查通过。
 - 本阶段未调用 OCR，未运行测试套件；简答版、四版入口、正式构建和逐页视觉回执仍待完成。paper 为 `answers_verified`、batch 为 `provenance_verified`，下一阶段生成简答和版面入口；不表示来源认证、单卷闭环或长期语料完成。
+
+### phase3-b24 2015 福建文科：简答/四版入口与正式构建（2026-11-03）
+
+- make_short_answers.py 生成 answers_short.tex 并通过 --check；make_editions.py 生成试题版、解析版、简答版、印刷版入口，--check 与四份模板渲染一致。
+- 正式 XeLaTeX 构建 attempt `ab1a008e-7f4c-4c10-9e04-2dd3d06e2ae2` 成功，四版共 53 页，日志无警告、缺字或未定义引用。build receipt 绑定 manifest revision 6064、输入树与工具链；事务后 revision 6065，paper 为 `compiled`、batch 为 `compiled_pending_review`。
+- `validate-receipts --require-current-inputs` 返回 OK（failed/invalid/missing/stale 均为 0，pending 1）。PDF 指纹与阶段边界见[正式构建报告](reports/2015-fujian-arts-formal-build.md)。
+- 本阶段尚未逐页视觉复核或 finalize；未调用 OCR，未运行测试套件。下一阶段复用当前四版 PDF 准备 review 回执并检查全部页面；不表示来源认证、单卷闭环或长期语料完成。
