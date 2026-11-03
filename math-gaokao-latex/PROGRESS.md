@@ -14381,3 +14381,10 @@
 - 在 `feat/gaokao-phase0`、manifest revision 6146 固定两份未绑定候选：北京文科 source `src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f`，SHA-256 `7fc0fd289fc486a0ae1c16a9ab5b4f0561830897df6e8897c50666f03d511913`、Git blob `098d2daa4a08a3ef69b98b656842324f4819ece6`；北京理科 source `src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306`，SHA-256 `d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702`、Git blob `1f3cde756f4b417da80d0bb4b7cf2501e1ffad37`。两份均为 2 页 A3 横向，candidate source 在 manifest 仍为 `ready`、`paper_id=null`；本阶段未改 manifest。
 - 原页题签分别可见“北京卷文”“北京卷理”，题号范围均为 Q1–Q20（不是 Q1–Q22）：文科印刷页126–127，理科124–125。文科文字层页级分类为 `text_candidate`、可疑字符0；理科虽有文字层，文档级为 `text_layer_candidate`、页级均为 `review`，每页7个可疑字符。按 OCR 工作规范直接核看完整页面图；本批没有调用 OCR 模型（`ocr_calls=0`、`model_calls=0`）。
 - 原页题签不认证发布者、出版者、版次、复制/扫描链或官方身份。理科 Q17 可见“底面边长的 3”语句异常，未据语义补字，需在转录稿中保留并标记待核。固定来源接收详情见[文科记录](reports/2003-beijing-arts-source-intake.md)与[理科记录](reports/2003-beijing-science-source-intake.md)。题面盲核已完成，题面和复核报告将在下一阶段纳入跟踪目录；此条只记录来源接收，不表示题面或整卷完成。
+
+### 2003 北京普通文理候选卷：Q1–Q20 题面转录与独立复核（2026-11-04）
+
+- 固定来源、SHA/blob、页码和 OCR 路由见[文科来源接收](reports/2003-beijing-arts-source-intake.md)、[理科来源接收](reports/2003-beijing-science-source-intake.md)。跟踪转录草稿为 `2003/2003_数学真题_北京文_题面转录草稿.md` 与 `2003/2003_数学真题_北京理_题面转录草稿.md`，均仅含 PDF 原页可见 Q1–Q20；两份 PDF 均没有可见 Q21、Q22。
+- 未参与转录的复核者逐题比对原页：文科 Q1–Q20 20/20 无实质转录差异，见[文科独立复核](reports/2003-beijing-arts-question-transcription-review.md)；理科 Q1–Q16、Q18–Q20 与原页一致，Q17 字面“底面边长的 3”在原图中确实如此、没有可见“为”，故照录并在题干旁标注待核，见[理科独立复核](reports/2003-beijing-science-question-transcription-review.md)。该疑点未通过语义推断修正。
+- 来源身份、发布者/出版者、版次、复制或扫描链仍未核实；manifest 保持 revision 6146，两 source 仍为 `ready`、`paper_id=null`。PDF 含文字层；按工作规范以完整原页图复核，OCR 与模型调用均为0。
+- 本阶段只提交题面草稿和独立转录复核记录；未注册 paper/batch/issues，未写规范 `_试题.md`、答案或解析事实源，未重绘题图、生成 TeX/PDF 或构建视觉回执。下一步先按规范建立可追踪的候选 paper/batch 与 Q17 来源字面 blocker，再推进独立解题；答案保持非官方，`official_answer=null`。本阶段不表示试卷或长期语料库完成。
