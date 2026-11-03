@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### phase1-b81 2007 北京文科候选卷：正式构建与逐页视觉复核（2026-11-03）
+
+- 修正题稿中的来源说明排版、Q12 公式断行及 Q18 答案摘要长度；答案事实不变，Q18 两问继续标记 `U/PENDING`，独立模型数值仅为条件结果。更新受题面/答案摘要影响的 provenance 后，导入事务 revision 为 6031；ISSUE-1356—ISSUE-1359 的旧编译错误均在成功重建后登记为 resolved/non_blocking。
+- 正式构建 attempt `6b6ea9af-ae99-4a10-9d45-6910e2ef7fae` 成功，build receipt 绑定 manifest revision 6032；试题版4页、解析版16页、简答版6页、印刷版13页，共39页。日志无编译错误、缺字、overfull 或未定义引用。四份 PDF 的 SHA-256 见卷目录 `receipts/build.json`。
+- 39页逐页完成八项视觉检查：31页 PNG 与已审 attempt `8fc8f771-e322-40fc-930d-ccccb222f9b1` 同版页完全一致并沿用原结论，8页重新目视；无视觉问题、无警告豁免。review receipt 为 `passed`，最终批次事务 revision 6034，状态 `closed_with_blockers`，报告见 [phase1-b81 视觉审查报告](reports/phase1-b81.md)。
+- 来源发布者、版次、复制链和官方身份仍未核，`official_answer=null`；Q18 的 `ISSUE-1355` 仍为 open / `blocks_completion`。本阶段只完成正式构建和视觉复核，不表示该卷无阻塞完成或长期语料库完成。
+
 ### 2007 北京文科候选卷：固定来源接收（2026-11-03）
 
 - 从 ready 且未绑定 paper 的来源中接收 `src-71817304e261efb7deaf51c2a5f400421a95ac91a90313d8f558bee701a624f9`，固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。文件 SHA-256 `e5356797259eb22cc2b4f23019ad7ab044f282bdfc2a65df94dbbdcc502cfff5`、Git blob `3207132ef37ec52e6dfd19ffac856388f4c053f1`、511024 bytes 与 manifest 一致；来源仓库 HEAD 即该固定 commit，工作区干净。
