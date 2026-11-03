@@ -13673,3 +13673,10 @@
 - 首轮正式 PDF 目检发现印刷版第 16 页只剩 Q21(2)、Q21(3) 答案框，造成明显尾页留白。压缩权威解析正文 Q21(3) 的重复措辞，保留参数域、分段最小点论证、左右候选比较及（1）特例条件边界；不改题面和答案要点，Q21 答案哈希不变，U/PENDING 与 ISSUE-1362 保持。
 - 重建 `_含解析.md`、`answers.tex`；provenance 事务将 manifest 从 revision 6056 更新至 6057，batch 回到 `provenance_verified`，旧 build attempt 已失效。当前确定性生成、简答、版本壳、解答来源、provenance、manifest、issues、CSV（775 行）及 diff 检查通过。
 - 这次重排尚未由新正式 PDF 验证；未运行测试套件。下一阶段重建四版并复查印刷版末页，必要时按 PNG 哈希复用真正未变化页面的视觉结论。来源出版身份仍未核、`official_answer=null`；本阶段不表示单卷闭环或长期语料完成。详见 [分页修正报告](reports/2007-shanghai-arts-q21-reflow.md)。
+
+### phase1-b83 2007 上海卷文科：分页修正后正式重建（2026-11-03）
+
+- 新 attempt `f8997e0e-2c2d-4a29-a7fc-c35519b32d9a`，输入 manifest revision 6058、构建完成 revision 6059。试题/解析/简答/印刷版分别 4/17/6/15 页，共 42 页；日志 0 TeX error、缺字、Overfull、未解析引用。PDF SHA 与工具指纹见[构建报告](reports/2007-shanghai-arts-build.md)及本卷 `receipts/build.json`。
+- 新旧 110dpi 渲染逐页比对：40 页 PNG SHA-256 完全一致，沿用上一轮对同页的直接八项目检结论；解析版第 17 页与印刷版第 15 页变化，已各以 110/300 dpi 目视复查。印刷版从 16 页缩为 15 页，Q21 全题解及三个答案框同页，旧的孤立末页不再出现。
+- `validate-receipts --require-current-inputs` 返回 OK（0 failed/invalid/missing/stale）；42 页×8 项已写入当前 attempt 工作回执，共 288 pass、48 not_applicable、0 fail/pending，待 `finalize-batch-checked` 聚合。未运行测试套件。
+- Q21(3) 仍 U/PENDING / ISSUE-1362，paper `blocked`，来源出版身份未核，`official_answer=null`；该阶段只重建并检查本卷，不表示整卷无阻或长期语料完成。
