@@ -13907,3 +13907,9 @@
 - `finalize-batch` 返回 `FINALIZED`，manifest revision `6086→6087`，`phase3-b26` 状态 `closed`，该卷 `production_state=complete`。publisher、版次、复制链和官方身份仍未核，`official_answer=null`；所有答案与解析仍标记为本库独立推导、非官方。本卷收口不表示1952–2026长期语料完成。
 - source manifest、issues、provenance、solution_sources（23题）、题目/简答/版本壳生成 currentness、4张图注册、775行 manifest CSV、build `--require-final --require-current-inputs` 与 review `check-batch` 均通过。
 - 全量命令 `python3 -B -m unittest discover -s tests -q` 实际运行 `Ran 1769 tests in 610.111s`，结果 `FAILED (failures=3, skipped=13)`。三项为：`test_2015_fujian_arts_transcription.FujianArtsTranscriptionTests.test_source_identity_and_transcription_hash`（旧断言期待 `paper_id=null`，当前已登记为 `gk-2015-regular-fujian-arts`）；`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`（2017全国Ⅰ理科 `answers.tex` 漂移台账 SHA `9318dce…`，当前文件 SHA `8ea128d…`）；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（79项既有 paper/batch 缓存状态与现场派生不符，首项为2012全国大纲文科 `complete` 与 `answers_verified` 不符）。本收口未改动这些历史测试对象，不借本批次改写旧账。
+
+### 2000 上海理科候选卷：固定来源接收与文字层路由（2026-11-03）
+
+- 固定候选 source `src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8`；PDF SHA-256 `b798af61afdac624589769db5bbafe734aa9a0016973bd00b3f5bc8028ab3a40`、Git blob `493b64433fdd83bb4f13a587a8e12a53b2a447e9`，596,831 bytes、A3 横向两页，印刷页70–71。题签为“2000 普通高等学校招生考试（上海卷理）”，含Q1–Q22；PDF仅含题面，无答案或解析。发布者、版次、来源链和官方身份未认证。来源已在 manifest 以 `ready` 候选登记但未绑定 paper；本阶段未改 manifest。
+- `analyze_pdf.py` 分类 `text_layer_candidate`；两页分别含1,478/823个非空白文字字符、可疑字符0、图像对象0，均需内容复核。120 dpi 原页渲染逐页目视确认可读。`pdftotext -layout` 存在三栏交错和公式拆行，故仅作为定位候选；按路由规则未调用 OCR 模型。`local_ocr.py doctor` 显示 Xiaomi-OCR-0、PaddleOCR-VL-1.6、MinerU 部署资产均 ready；本 PDF 的模型调用为0。
+- 固定副本、页渲染、triage 与文字层候选保存在忽略目录 `.work/ocr-local/sources/2000-shanghai-science/`。阶段详情见[固定来源接收与文字层路由报告](reports/2000-shanghai-science-source-intake.md)。下一阶段按原 PDF 逐题转录Q1–Q22并保留无法确认项；本阶段未登记卷/批次、答案、provenance 或构建回执。
