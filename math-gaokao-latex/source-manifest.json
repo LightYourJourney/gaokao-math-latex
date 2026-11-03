@@ -2267,6 +2267,15 @@
         "gk-2003-regular-shanghai-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b48",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-regular-beijing-arts",
+        "gk-2003-regular-beijing-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2276,7 +2285,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "bf553c80-7b03-41bf-8858-e5525c05c19a",
+  "last_transaction_id": "07dc5eb5-d429-43ec-925a-40df590146cd",
   "papers": [
     {
       "blocked_from": null,
@@ -30017,9 +30026,119 @@
       "title": "2003 年·上海卷·理科",
       "track": "science",
       "year": 2003
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2003_beijing_arts",
+        "id": "gk-2003-regular-beijing-arts",
+        "note": "固定候选 PDF source_id=src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f，SHA-256 7fc0fd289fc486a0ae1c16a9ab5b4f0561830897df6e8897c50666f03d511913，2页题面（印刷页126–127），题签“2003 普通高等学校招生考试（北京卷文）”。发布者、出版者、版次、复制/扫描链与官方身份未核；PDF无答案页，official_answer=null，答案与解析为本库独立推导。Q18原页首句与后文/图示顶点记号不一致，答案保持U/PENDING；Q5/Q17/Q18/Q19题图为示意重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "北京文科"
+      },
+      "issue_ids": [
+        "ISSUE-1398",
+        "ISSUE-1399"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-beijing-arts",
+      "production_state": "blocked",
+      "project_dir": "2003_北京卷_文科",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版勘误、答案材料或独立同版原件，确认 Q18 顶点记号的原卷意图；在此之前继续照录原文和图示，不静默统一字母。；取得可追溯的同版答案、勘误或可靠同期材料以确认题目构造所指顶点，并据新证据重审 Q18；此前保持 U/PENDING，条件性推导与确定答案分开。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_北京文_含解析.md",
+        "questions": "2003/2003_数学真题_北京文_试题.md",
+        "solution_body": "2003/2003_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f"
+      ],
+      "title": "2003 年·北京卷·文科",
+      "track": "arts",
+      "year": 2003
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [],
+      "index_metadata": {
+        "base": "2003_beijing_science",
+        "id": "gk-2003-regular-beijing-science",
+        "note": "固定候选 PDF source_id=src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306，SHA-256 d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702，2页题面（印刷页124–125），题签“2003 普通高等学校招生考试（北京卷理）”。发布者、出版者、版次、复制/扫描链与官方身份未核；PDF无答案页，official_answer=null，答案与解析为本库独立推导。Q17原页边长文字不完整，答案保持U/PENDING；Q13/Q17/Q18/Q19题图为示意重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [
+        "ISSUE-1400",
+        "ISSUE-1401"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-beijing-science",
+      "production_state": "blocked",
+      "project_dir": "2003_北京卷_理科",
+      "question_count": 20,
+      "resume_action": "取得可追溯的同版勘误、答案材料或独立同版原件以确认 Q17 边长原文；在此之前保留“底面边长的 3”的字面，不增补缺字。；取得可追溯的同版答案、勘误或可靠同期材料以确认 Q17 底面边长；此前保持整题 U/PENDING，不将 s=3 条件性结果升级为确定答案。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_北京理_含解析.md",
+        "questions": "2003/2003_数学真题_北京理_试题.md",
+        "solution_body": "2003/2003_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306"
+      ],
+      "title": "2003 年·北京卷·理科",
+      "track": "science",
+      "year": 2003
     }
   ],
-  "revision": 6146,
+  "revision": 6148,
   "schema_version": 1,
   "sources": [
     {
@@ -35676,8 +35795,8 @@
       "exam_type": "regular",
       "git_blob_oid": "098d2daa4a08a3ef69b98b656842324f4819ece6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003北京文.pdf",
       "regions": [],
       "source_id": "src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f",
@@ -35700,8 +35819,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1f3cde756f4b417da80d0bb4b7cf2501e1ffad37",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003北京理.pdf",
       "regions": [],
       "source_id": "src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306",

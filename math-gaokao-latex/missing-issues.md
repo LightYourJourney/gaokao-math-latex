@@ -23463,3 +23463,70 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1398
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第2页（印刷页127）Q18 首句称顶点为 A1、A2，后文使用 OA、A1P、AP1；原图标左端 A1(-5,0)、右端 A(5,0)，没有 A2。300 dpi 原页复看与独立题面复核确认该差异确在原件；题面忠实保留各处原字并作待核注，不是转录漏改。",
+  "fingerprint": "dabbd97eba1b6861c574e702cb84bfc8b59aae40df98f2be8657ca01762d5bc2",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-beijing-arts",
+  "question_id": "gk-2003-regular-beijing-arts-q18",
+  "resume_action": "取得可追溯的同版勘误、答案材料或独立同版原件，确认 Q18 顶点记号的原卷意图；在此之前继续照录原文和图示，不静默统一字母。",
+  "source_id": "src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1399
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "Q18 字面同时出现 A1、A2 和后文的 A，无法仅凭固定题面唯一确定构造所用右顶点。答案要点与解析因此标 U/PENDING；按图示 A=(5,0) 的推导只作为条件性结果，不能当作已核定答案或官方答案。",
+  "fingerprint": "f59e73479110d23cd9a8bb289a60af044c17a6a8d531f95c194da2bfaaf0e126",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-beijing-arts",
+  "question_id": "gk-2003-regular-beijing-arts-q18",
+  "resume_action": "取得可追溯的同版答案、勘误或可靠同期材料以确认题目构造所指顶点，并据新证据重审 Q18；此前保持 U/PENDING，条件性推导与确定答案分开。",
+  "source_id": "src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1400
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF 第2页（印刷页125）Q17 可见原文为“底面边长的 3”，其后紧接逗号和“侧棱”，3 后没有可见“为”；300 dpi 源页复看和独立题面复核均确认如此。规范题面照录并标注待核，未按语义补字。",
+  "fingerprint": "9ed886cb05969987b28f6b8b1112e6c3a14220530fac1eb184ce5b777767d954",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-beijing-science",
+  "question_id": "gk-2003-regular-beijing-science-q17",
+  "resume_action": "取得可追溯的同版勘误、答案材料或独立同版原件以确认 Q17 边长原文；在此之前保留“底面边长的 3”的字面，不增补缺字。",
+  "source_id": "src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+## ISSUE-1401
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "原页未能确定正三棱柱底面边长。Q17(1) 可独立证明；Q17(2)(3) 依赖未知边长，答案要点与解析将整题标 U/PENDING，并只在显式假设边长为3时列条件性结果。",
+  "fingerprint": "051248b1687d9bd5477e0eb99bf16ff9d6ce3ef76bf8beb1038f69a19fc6745f",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-beijing-science",
+  "question_id": "gk-2003-regular-beijing-science-q17",
+  "resume_action": "取得可追溯的同版答案、勘误或可靠同期材料以确认 Q17 底面边长；此前保持整题 U/PENDING，不将 s=3 条件性结果升级为确定答案。",
+  "source_id": "src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

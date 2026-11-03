@@ -14402,3 +14402,10 @@
 - 理科 Q17 原页字面“底面边长的 3”未补“为”：(1) 仍可证明，(2)(3) 依赖缺失边长，条件性结果与确定答案分开，整题 U/PENDING。文科 Q18 顶点字母不统一，仍为 U/PENDING；仅按图示顶点作条件性推导。两项后续须登记 blocker。
 - `solution_sources` 解析器对答案与解析源作只读结构检查：文理两卷各识别 20 题，答案块完整，答案/解析小问锚点一致。此阶段未登记 paper/batch/issues/provenance，未生成确定性 `_含解析.md`、题图、项目 TeX 或 PDF；没有调用 OCR、联网或外部答案。所有答案为非官方推导，`official_answer=null`，来源身份仍未核。
 - 下一阶段将把两份题面草稿固化为规范事实源并按固定原页重绘图题，再进行 `phase4-b48` 的候选 paper/batch 与问题事务登记；之后按流程导入逐题 provenance、生成四版并继续正式构建与逐页视觉复核。本阶段不代表整卷闭环或长期语料完成。
+
+### 2003 北京普通文理候选卷：规范事实源与内部卷登记（2026-11-04）
+
+- 将已复核的 Q1–Q20 文理题面规范化；答案要点与解析绑定登记后的 `paper_id`，规范化答案/解析块，并以 `solution_sources.py extract-batch --write` 生成两份 `_含解析.md`。八份规范源与派生稿哈希、固定 PDF source/SHA/blob 见[内部卷登记报告](reports/2003-beijing-regular-paper-registration.md)。
+- `source_manifest.py register-papers` dry-run 通过后，以单一事务登记 `phase4-b48` 与 `gk-2003-regular-beijing-arts`、`gk-2003-regular-beijing-science`，manifest revision `6146→6148`：登记事务 `64dcd398-3bfb-4f1b-a521-ade459556c4f` 完成注册，随后证据引文校正事务 `07dc5eb5-d429-43ec-925a-40df590146cd` 修正 ISSUE-1400 并推进 revision。文科 Q18 建立 `ISSUE-1398`（来源记号）及 `ISSUE-1399`（答案约定）；理科 Q17 建立 `ISSUE-1400`（源文缺字疑点）及 `ISSUE-1401`（答案约定）。四项均 open / `blocks_completion`，paper 为 blocked，batch 为 planned。
+- `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 均通过；题面、答案和解析各20题，答案块与解析小问集合对齐。`manifest.csv` 当前且775行。全量报告投影 currentness 检查通过，结果为“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
+- 文科 Q18 继续保留原页 A1/A2 与 A 标记不一致；理科 Q17 保留“底面边长的 3”，未添“为”。两题均为 U/PENDING；官方答案仍未认证。下一阶段开始题图重绘、登记与 provenance；本登记不表示题源身份核验、正式构建或批次验收完成。
