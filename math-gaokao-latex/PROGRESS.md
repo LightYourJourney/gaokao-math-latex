@@ -10,6 +10,13 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `text_layer_candidate`，两页都有文字层且无图像对象：第1页 `text_candidate`（1475非空白字符、0可疑字符），第2页 `text_candidate`（730字符、0可疑字符）。两页150/300 DPI渲染均已目视检查；第1–2页继续人工路由，转录按原页核对。依路由规范，本阶段没有调用OCR（`model_calls=0`、`ocr_calls=0`）。
 - `local_ocr.py doctor` 显示三引擎部署资产均 `ready`；source manifest 校验通过，manifest CSV 当前且775行。来源发布者、出版者、版次、复制链和官方身份未核，PDF无答案或解析页；`official_answer`未知。详情见[固定来源接收报告](reports/2004-shanghai-science-source-intake.md)。下一阶段逐题转录Q1–Q22并对照原图，随后独立复核题面。本阶段不表示来源认证、答案验证、整卷验收或长期语料完成。
 
+### 2004 上海理科普通卷：Q1–Q22 题面转录（2026-11-04）
+
+- 按固定 source `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`、PDF SHA-256 `9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e` 完成填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；草稿位于 `2004/2004_数学真题_上海理_题面转录草稿.md`，SHA-256 `8630a4d7dbd23ca060fa29fa9783dd96827d21befd21f0fd5a78e5a816600fe5`。题面分节与题号连续，共22题。
+- 分段对照PDF第1–2页150/300 DPI原图。Q5/Q18/Q21图位待矢量重绘；Q16前5行业应聘与招聘人数表按Markdown表格转录。
+- 存疑与高保真核验：Q14(D)原卷印载公式 `x = k\pi + (-1)^k` 漏印项，忠实照录；Q17 经300 DPI放大确认原卷字面明确印有共轭横杠作 $|z_1 - \overline{z_2}| < |z_1|$，忠实照录；Q18 面积单位印作 `8 cm^2`，与边长单位 `m`、计算精度 `0.001 m` 存在量纲不一致，忠实照录；Q19 题干定义函数 $g(x)$ 定义域为集合 $D$，但小问 (2) 提问条件作 $B \subseteq A$，忠实照录原卷用词；Q22(1) 原卷印载点作 $P_1(3, 0)$，不在椭圆上且推导无解，忠实照录原卷事实。
+- 结构识别覆盖连续Q1–Q22及解答小问Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。独立题面复核、答案/解析、paper登记、图稿及构建仍待后续。详情见[题面转录报告](reports/2004-shanghai-science-question-transcription.md)。本阶段不表示来源认证、答案验证或整卷验收。
+
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
 
 - 新增 `tests/test_2004_shanghai_arts_transcription.py`：对 `gk-2004-regular-shanghai-arts` 的规范来源绑定（`src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`、SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`）、22 道题面覆盖、原卷存疑符号（Q14(D) $x = k\pi + (-1)^k$、Q17 $(1+\mathrm{i})z_1 = -1+5\mathrm{i}$ 与 $(a-4)^2 < -3$、Q18 $8\text{ cm}^2$、Q19(2) $B \subseteq A$）、4 幅 TikZ 图稿独立性（Q5、Q18、Q20、Q21）及三角色 provenance / 回执进行端到端自动化测试，5 项用例全部通过。
