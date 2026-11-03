@@ -13966,3 +13966,10 @@
 - provenance 导入预检要求 U 级答案和 unresolved conflict 分别满足 blocker 类型门禁。Q21 的 `ISSUE-1370`（`answer-conflict`）记录题设与字面推导冲突，但不能替代答案约定类 blocker；故补记 `ISSUE-1372`（`answer-convention-ambiguous`，open / `blocks_completion`），记录固定 PDF 无同版答案/勘误，无法核定原卷意图。详情见[Q21 blocker 补充登记报告](reports/2000-shanghai-science-q21-answer-issue.md)。
 - 使用 `issues.question_issue()`、`issues.upsert_issue()` 与 `build_projects.commit_state()` 单一 state transaction 写入，transaction `d5f8ce73-0fd3-4a99-8770-27de1ab77942`，manifest revision `6090→6091`。原题指数2、字面推导及 U/PENDING 均未变。
 - `source_manifest validate` 与 `issues validate` 均通过。Q21 的 `ISSUE-1370`、`ISSUE-1372` 继续 open / `blocks_completion`；paper 仍 blocked，batch planned。随后再运行三角色 provenance dry-run。
+
+### 2000 上海理科候选卷：Q1–Q22 provenance 导入（2026-11-03）
+
+- `provenance.py init-batch` 建立三角色 ignored 工作文件；复核、求解、复核角色及转录复查范围如[provenance 报告](reports/2000-shanghai-science-provenance.md)。题面证据逐题通过；答案证据 D 级20题、U级2题，均声明为本库推导而非官方答案。
+- Q12 的 U/PENDING 关联 `ISSUE-1369`、`ISSUE-1371`，`conflict_status=none`；Q21 的 U/PENDING 关联 `ISSUE-1370`、`ISSUE-1372`，`conflict_status=unresolved`。四条问题均保持 open / `blocks_completion`，`official_answer=null`。
+- provenance 导入单事务 `ea8a5f52-121e-4985-b334-da4ffabde061`，manifest revision `6091→6092`。`provenance check-batch`、source manifest、issues、solution sources（22题）检查通过；CSV current、775行。batch 为 `provenance_verified`，paper 仍 `blocked`。
+- 尚未生成项目 TeX、简答与四版入口；正式 PDF、页面视觉回执未开始。下一阶段生成项目产物并验证 currentness，Q12/Q21 blocker 保持。
