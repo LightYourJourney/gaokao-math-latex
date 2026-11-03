@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 上海文科普通卷：四版正式构建（2026-11-03）
+
+- build attempt `e365d302-3044-43d4-88c8-5bd1d171bac1` 使用 manifest revision 6105，构建后 revision 6106；试题版4页、解析版19页、简答版6页、印刷版15页全部 `succeeded`，errors、missing characters、overfull、undefined references 均为0。PDF SHA-256 与文件页数均已独立核对；build receipt `validate-receipts --require-current-inputs` 返回 `OK`。
+- 来源 CSV 当前775行。全库报告 render/check 均通过；`manifest_csv.py --check` 通过。全库快照为412套试卷、260批次，门禁216 `FINALIZED` / 43 `INVALID_OR_STALE` / 1 `VISUAL_FAILED`；本次只刷新派生报告，没有更改其他批次事实状态。
+- 本阶段只完成正式构建，不含逐页视觉验收或全库测试。批次 `phase4-b43` 为 `compiled_pending_review`，paper 仍 `blocked`；Q12、Q20(1) 的 U/PENDING 不变。详情见[正式构建报告](reports/2005-shanghai-arts-formal-build.md)。下一步以当前构建回执准备并逐页完成视觉复核，本阶段不表示本卷闭环或长期语料完成。
+
 ### 2005 上海文科普通卷：项目 TeX 与四版入口生成（2026-11-03）
 
 - `generate_projects.py --batch phase4-b43 --write` 生成题面/答案 TeX 与全局 `index.json` 条目；`make_short_answers.py --write` 生成简答速查；`make_editions.py --write` 生成试题、解析、简答、印刷四版入口。
