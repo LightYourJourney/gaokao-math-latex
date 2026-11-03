@@ -22986,3 +22986,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1371
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选 PDF 第1页 Q12 在原页及局部放大均读作“等此数列”，固定副本没有答案、解析或勘误页。转录按字面通过，但无法据此确定 b_n 的数列类型和确定答案；“若为等比数列”的乘积式仅属条件性推导，不作为答案。",
+  "fingerprint": "eac81cb1071c79f3385d531f1ad7763b7973531daca8cb6824439c2a4022ee70",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2000-regular-shanghai-science",
+  "question_id": "gk-2000-regular-shanghai-science-q12",
+  "resume_action": "取得可追溯的同版清晰副本、答案、勘误或可靠同期材料，核定 Q12“等此数列”对应的数列类型；此前按原页字面保留题面，答案维持 U/PENDING，不以常见术语补字。",
+  "source_id": "src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

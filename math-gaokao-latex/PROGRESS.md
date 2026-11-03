@@ -13954,3 +13954,9 @@
 - 按固定 source `src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8`（SHA-256 `b798af61afdac624589769db5bbafe734aa9a0016973bd00b3f5bc8028ab3a40`）重绘三张 TikZ 矢量图。Q8 保留线段与轴刻度；Q18 只保留原图拓扑/虚实线；Q20 只保留坐标轴及刻度。图稿源信息、generator 与目视边界见[题图阶段报告](reports/2000-shanghai-science-figures.md)。
 - 三个独立 Markdown 图稿链接已写入规范题面；`extract-batch --write` 刷新 `_含解析.md`；`sync-figure-registry --write` 单一事务将三张图登记到 manifest，revision `6088→6089`，每张图 expected occurrences 为2。XeLaTeX 3页预览构建成功并逐页以180 dpi对照固定原页检查；预览不作为正式 PDF 或回执。
 - `source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）、`manifest_csv --check` 均通过，CSV 仍为775行。题源有文字层，本阶段未调用 OCR。provenance 导入、项目 TeX/简答/四版生成、正式构建和页面回执未开始；Q12/Q21 blocker 仍在，答案 U/PENDING，`official_answer=null`，本卷仍 blocked。
+
+### 2000 上海理科候选卷：Q12 答案约定 blocker 补充登记（2026-11-03）
+
+- provenance 导入预检要求 U 级答案关联答案类/约定类 blocker；原有 `ISSUE-1369` 只标识源字面异常，不能单独满足该语义门禁。因此补记 `ISSUE-1371`（`answer-convention-ambiguous`，open / `blocks_completion`），明确“等此数列”按字面无法确定数列类型与答案。没有改题面、答案或将条件性等比推导升级为确定答案。
+- 经 `issues.question_issue()`、`issues.upsert_issue()` 和 `build_projects.commit_state()` 单一 state transaction 写入；transaction `3a875335-c3c7-452c-bca9-35ee3a4b02d2`，manifest revision `6089→6090`。问题及原因详见[Q12 blocker 补充登记报告](reports/2000-shanghai-science-q12-answer-issue.md)。
+- 事务后 `source_manifest validate` 与 `issues validate` 均通过；Q12 的 `ISSUE-1369`、`ISSUE-1371` 与 Q21 的 `ISSUE-1370` 继续 open / `blocks_completion`，paper 仍 blocked，batch 仍 planned。下一步填充三角色 provenance 工作文件并先 dry-run 导入。
