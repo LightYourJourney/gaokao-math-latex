@@ -218,8 +218,11 @@ a_{ij}=\begin{cases}
 \begin{center}\input{figures/f2003_beijing_arts_q19_city_triangle}\end{center}
 \nopagebreak[4]
 \end{question}
+\begingroup
+\renewenvironment{question}{\Needspace{0.25\textheight}}{}
 \begin{question}
 \gkti{20}
+
 设 \(y=f(x)\) 是定义在区间 \([-1,1]\) 上的函数，且满足条件：
 
 ① \(f(-1)=f(1)=0\)；
@@ -242,3 +245,4 @@ g(x)=\begin{cases}
 (3) 在区间 \([-1,1]\) 上是否存在满足题设条件的函数 \(y=f(x)\)，且使得对任意的 \(u,v\in[-1,1]\)，都有 \(|f(u)-f(v)|=u-v\)，若存在，请举一例；若不存在，请说明理由。
 
 \end{question}
+\endgroup

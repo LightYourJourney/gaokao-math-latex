@@ -14441,6 +14441,15 @@
 ### 2003 北京普通文理候选卷：四版正式构建（2026-11-04）
 
 - 首次构建因两类 TeX 标记错误失败：文科答案说明的 `official_answer=null` 下划线出现在 `\texttt{}` 内；理科 Q1 的 `(A\cap B)` 缺数学定界。失败 attempt、自动登记并由成功重跑解决的 `ISSUE-1402`–`ISSUE-1407`、source-only 修正和当前源哈希见[正式构建报告](reports/phase4-b48-formal-build.md)及[更新后的登记指纹](reports/2003-beijing-regular-paper-registration.md)。
-- 第二次正式构建的两卷四版全部通过，共95页；8份回执均无错误、缺字或未定义引用。理科解析版仅有一处 `0.66212pt` Overfull，待视觉核查。回执 current-input 校验、源账、issues、provenance、逐题答案层、三类生成器及775行 CSV 检查通过。
+- 第二次正式构建的两卷四版全部通过，共95页；两份 build receipt 中的8个版本记录均无错误、缺字或未定义引用。理科解析版仅有一处 `0.66212pt` Overfull，待视觉核查。回执 current-input 校验、源账、issues、provenance、逐题答案层、三类生成器及775行 CSV 检查通过。
 - `review_receipts.py prepare-batch` 已建立8个版本工作项，逐页视觉复核待完成；batch 为 `compiled_pending_review`，两卷仍 `blocked`。文科 Q18 与理科 Q17 的 `ISSUE-1398`–`ISSUE-1401` 继续 open / `blocks_completion`；官方答案与来源发布链未核。
 - 下一阶段检查95页所有输出，并为 Overfull 对应页与其余页面写入视觉回执；本阶段不表示整卷验收或长期语料完成。
+
+### 2003 北京普通文理候选卷：Q20 分页修正、95页视觉复核与批次封存（2026-11-04）
+
+- 视觉复核时发现文科试题版与简答版的 Q20 被拆到相邻页。仅在规范题源 Q20 题号后增加生成器支持的 `question-needspace: 0.25` 排版元数据，重生成 `questions.tex` 并正式重建文科四版；新版试题版和简答版均把 Q20 完整放在第5页，第4页结束于 Q19。文科正式构建 attempt `f9610c85-0f98-4a5e-b753-881850f8d6b0` 成功，5/19/7/13 页；理科复用 attempt `d43c5ef7-3c6f-41b0-ac17-6c2a37a7130d`，6/21/8/16 页。两份当前 build receipt 中的8个版本记录共95页，PDF SHA、工具链与输入树绑定见各卷 `receipts/build.json` 及[正式构建报告](reports/phase4-b48-formal-build.md)。
+- 文理95页均完成八项视觉检查，fail 0。文科8张改变的页图逐页重审；36张未改变页图仅在 PNG 字节相同后沿用既有结论；理科51页在 build attempt、PDF SHA 与视觉工具指纹均相同的前提下沿用已通过复核。此前 contact sheet 缩放造成的页眉误判，已用原始 PNG 顶部/底部图像复核更正。文科 Q20 的整题分页通过；解析版 Q20 在完整小问边界续页，末页较疏但题目、推导和答案框连贯。理科解析版第17页 `answers.tex` 第450行 `0.66212pt` Overfull 经原页检查确认未出版心、无裁切，作为1条 `visual_result=pass` 豁免。详见[批次视觉审查报告](reports/phase4-b48.md)和两卷 `receipts/review.json`。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，无 problems；manifest revision `6159`，batch `phase4-b48` 为 `closed_with_blockers`。文科 Q18 的 `ISSUE-1398`（A1/A2/A 题图记号不统一）和 `ISSUE-1399`（答案约定）及理科 Q17 的 `ISSUE-1400`（原页“底面边长的 3”疑点）和 `ISSUE-1401`（答案约定）继续 open / `blocks_completion`；两卷 production state 仍 `blocked`，`official_answer=null`。没有按语义补字、改题图记号或认证来源身份。
+- 收口确定性校验通过：manifest、issues、review `check-batch`、build `--require-final --require-current-inputs`（2 succeeded，failed/invalid/missing/stale/pending 均0）、本批 provenance、两卷各20题 solution sources、project/short-answer/edition currentness、775行 `manifest.csv` 均通过。六个全量报告投影已刷新，`report.py check --all` 返回“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1779 tests in 576.337s`、`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：80卷缓存状态与现场派生状态不一致，首项为 `gk-2012-regular-national-outline-arts`（缓存 `complete`、现场 `answers_verified`）。本批单独的 `provenance.py check-batch --batch phase4-b48` 通过，故这项全库缓存漂移不属于本批；未刷新无关卷状态。
+- 后续只在取得可追溯同版资料、勘误或可靠同期来源后处理 Q18 与 Q17 blocker：不得据椭圆图静默改写文科顶点字母，也不得为理科“底面边长的 3”补字。答案仍为编者推导、非官方。来源发布者、出版者、版次、扫描/复制链和官方身份尚未认证。本批已封存但两卷未完成；本条不代表长期语料库完成。
