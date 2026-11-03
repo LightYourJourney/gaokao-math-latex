@@ -13568,3 +13568,11 @@
 - 登记 `ISSUE-1360`（Q16 无实圆，`answer-missing`）与 `ISSUE-1361`（Q19 `{a_n}` / `x_n` 符号不一致，`answer-missing`），均为 open / `blocks_completion`；paper `blocked`，batch `planned`。Q16 保留 U/PENDING，Q19 只针对明确递推的 $x_n$ 给出条件性结论，均不修改源文；`official_answer=null`。
 - 规范三源绑定 paper ID；确定性重建 `_含解析.md`。`source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）通过；manifest CSV 更新为775行。图稿登记暂为空，Q11、Q12、Q18 待矢量绘制。
 - 本阶段没有 provenance、共享 TeX/简答/版本入口、正式 PDF 构建、视觉回执或 OCR 调用；固定源已有文字层，OCR doctor 对 Xiaomi/Paddle/MinerU 返回 ready。详细登记与剩余事项见[阶段报告](reports/2002-beijing-science-registration.md)。本阶段只完成内部来源登记，不表示来源认证、整卷闭环或长期语料完成。
+
+### phase1-b82 2002 北京理科候选卷：源图重绘、provenance 与项目生成（2026-11-03）
+
+- 按固定 PDF 原页重绘 Q11、Q12、Q18 三张 TikZ 图，SHA-256 分别为 `d2c099aef2e4b7d9b6a94319496d709ee793a49ca24c72c4087fbd93e9f123de`、`0e0f106268d7a646bf3b365059d96b8b0f053a2ac93f832f139ce946cb855f3b`、`b0398a12b2abdf4da3bad9572285d7eff9d7ef474376d1ead142b6c4ba36ba88`。Q12 虚线只保留在 f₂/f₃/f₄；Q18 保留 E/F 延长交点、棱线可见性及 a,b,c,d 标签，不补入 h 或尺寸箭头。三图独立 XeLaTeX 预览并目视检查；此检查不替代正式四版 PDF 验收。
+- 题面三处图位改为独立段落 Markdown 图链，重建确定性 `_含解析.md`；manifest 三个 `figure_files` 各登记两次引用，索引注记不再标图稿待办。项目 `questions.tex`、`answers.tex`、`index.json`、简答稿及四版入口均生成。
+- 22 题 question-review、answer-solve、answer-review provenance 事务导入，manifest revision `6035→6041`。Q16 保留 U/PENDING 并关联 ISSUE-1360；Q19 原文 `{a_n}`/`x_n` 差异照录并关联 ISSUE-1361；两条 issue 均 open / `blocks_completion`。`official_answer=null`，来源发布者、版次、复制链和官方身份仍未核。
+- `source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）、`provenance check-batch`（1卷）、`generate_projects --check`、简答/版本壳 `--check` 通过；`manifest.csv` 为 775 行且 current。图稿、同步表面、provenance、门禁与剩余项见[阶段报告](reports/2002-beijing-science-figures.md)。
+- 本阶段尚未构建正式四版 PDF、建立 build/review receipt、逐页视觉检查或 finalization；paper 保持 `blocked`，batch 为 `provenance_verified`。下一阶段继续正式构建与逐页视觉收口，本记录不表示本卷闭环或长期语料完成。

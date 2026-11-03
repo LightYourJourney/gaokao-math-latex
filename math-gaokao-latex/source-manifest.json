@@ -2185,7 +2185,7 @@
       "paper_ids": [
         "gk-2002-regular-beijing-science"
       ],
-      "status": "planned"
+      "status": "provenance_verified"
     }
   ],
   "inventory": {
@@ -2195,7 +2195,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ef5f6a92-8d8c-4716-ad87-61dc3a240310",
+  "last_transaction_id": "6223f759-c9a8-4c39-a9e5-a183ca66a775",
   "papers": [
     {
       "blocked_from": null,
@@ -29087,11 +29087,24 @@
     },
     {
       "blocked_from": "planned",
-      "figure_files": [],
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_北京卷_理科/figures/2002_beijing_science_q11_sign_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_北京卷_理科/figures/2002_beijing_science_q12_convexity_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_北京卷_理科/figures/2002_beijing_science_q18_polyhedron.tex"
+        }
+      ],
       "index_metadata": {
         "base": "gk_2002_beijing_science",
         "id": "gk-2002-regular-beijing-science",
-        "note": "固定来源为 2 页 A3 题面，原件印刷页 100–101；PDF 不附答案与解析，答案及解析为本项目独立推导且非官方。Q11 函数图、Q12 四函数图、Q18 多面体图待依据固定源重绘。Q15③④在原件中重复，Q16 圆方程无实点并保持未决，Q19 数列符号不一致照录。来源发布者、版次、来源链及官方身份未核。",
+        "note": "固定来源为 2 页 A3 题面，原件印刷页 100–101；PDF 不附答案与解析，答案及解析为本项目独立推导且非官方。Q11 函数图、Q12 四函数图、Q18 多面体图已按固定源重绘。Q15③④在原件中重复，Q16 圆方程无实点并保持未决，Q19 数列符号不一致照录。来源发布者、版次、来源链及官方身份未核。",
         "pages_q": [
           1,
           2
@@ -29126,7 +29139,7 @@
       "production_state": "blocked",
       "project_dir": "2002_北京卷_理科",
       "question_count": 22,
-      "resume_action": "取得可追溯的同版勘误或更强来源后，核定原题意并重算；在此之前保持题面原式、U/PENDING 与 blocker。；取得可追溯同版勘误或权威同版材料核明数列符号；未核前保留原印文与针对递推数列 x_n 的条件性结论，并保持问题未决。",
+      "resume_action": "取得可追溯的同版勘误或更强来源后，核定原题意并重算；在此之前保持题面原式、U/PENDING 与 blocker。",
       "source_files": {
         "answer_key": "2002/2002_数学真题_北京理_答案要点.md",
         "combined_rendered": "2002/2002_数学真题_北京理_含解析.md",
@@ -29141,7 +29154,7 @@
       "year": 2002
     }
   ],
-  "revision": 6035,
+  "revision": 6041,
   "schema_version": 1,
   "sources": [
     {
