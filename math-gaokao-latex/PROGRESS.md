@@ -22,6 +22,12 @@
 - Q12两处标点首轮被发现与原页不符：“可得数阵如图”后的句号及计算结果“−24”后的句号均修为逗号；复核者复查修订稿通过。最终题稿 SHA-256 `6a83dae6a2b0979126bc47f2a43618c5801af8e0b09c066e48000b04d1c6e609`，转录阶段提交指纹为 `5b5a73ae5b49d9d8b31c1866557e59804ffb1882e89322ab2ead4749f64c3d29`。
 - 定向结构解析仍识别连续Q1–Q22及Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)小问；Q20(1)“中低价层”与其他位置“中低价房”按原卷保留。无答案或解析补写，`paper_id=null`、`official_answer=null`。题面阶段未调用OCR，`model_calls=0`、`ocr_calls=0`；耗时及代理token成本未知。详情见[独立题面复核报告](reports/2005-shanghai-science-question-review.md)。题图、答案、解析、登记、构建与视觉验收仍待后续；本阶段不表示来源认证或整卷验收。
 
+### 2005 上海理科普通卷：非官方答案与解析初稿（2026-11-03）
+
+- 据已复核题面形成Q1–Q22答案要点及逐题解析：`2005/2005_数学真题_上海理_答案要点.md` SHA-256 `b8614bc2574afe564a6c8ff82a7d9f9abd638b208c7835afdc68a857ae593044`；`2005/2005_数学真题_上海理_解析正文.md` SHA-256 `e65328a14d3c1c470fd0e561d62932ae3a467be9bcee9a5e08f9a01665a3b24c`。分段独立求解覆盖Q1–Q11、Q12–Q18、Q19–Q22；初轮答案错误已在整合时复核并纠正，当前整合稿仍待独立盲核。`solution_sources.render_combined` 只读预演得到22题，题面/答案/解析题号集合连续对齐。
+- Q11保留U/PENDING：最佳四棱柱表面积为$24a^2+28$，与三棱柱比较得严格较小时$0<a<\sqrt{5/3}$；等号时两类并列，题干未明确是否允许并列。Q20(1)按“中低价房”解释条件计算为2013年底，但固定题面印作“中低价层”，故仍为U/PENDING；Q20(2)为2009年底。
+- 固定PDF无答案页，所有答案均为本库独立推导、非官方，`paper_id=null`、`official_answer=null`；来源身份未核。阶段报告见[答案与解析初稿](reports/2005-shanghai-science-answer-draft.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、图稿或TeX，未构建。下一阶段独立盲核答案并处理Q11/Q20证据；本阶段不表示来源认证、整卷验收或长期语料完成。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
