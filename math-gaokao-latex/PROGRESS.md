@@ -29,6 +29,11 @@
 - 答案推导前的400dpi源页放大复查发现Q22漏录：原页印作 $\omega=\overline{z_0}\cdot\overline{z}$，题稿首轮少了第二个共轭横线。首轮复核所报Q1–Q22全部通过已被推翻；复核者确认此处漏查。Q1–Q21之前的逐题核对结论保留，Q22待补正复核。
 - 已按固定源修正Q22，并将Q8端点标注$A(0,2)$、$B(1,1)$及Q11图中$(1,4)$写入待重绘图位说明。补正后题面SHA-256 `a0988a40bdc0b3aa2915788f33c09671b595373da023155387027cfbac4c8a99`。待独立复核者再次核对修正行与图位细节；详情见[复核补正记录](reports/2000-shanghai-arts-question-review.md)。答案阶段暂停至题面状态厘清；Q21源式疑点未变。
 
+### 2000 上海文科候选卷：补正稿最终独立题面复核（2026-11-03）
+
+- 新复核者 `/root/review_2000_shanghai_arts_transcription_final`（gpt-6-luna/high）重新渲染固定 PDF 两页并对照Q1–Q22，最终22/22通过、无剩余题面差异；未读答案源、未改文件。明确核对Q8端点$A(0,2)$、$B(1,1)$，Q11标点$(1,4)$，Q20刻度$x=4,17$、$y=4$，及Q22双重共轭关系。
+- 题面frontmatter状态更新为“Q1–Q22独立逐题复核通过；候选稿待登记”。Q21原印式已核实并照录，但其含义仍异常，答案保持待核。当前题面SHA-256 `54891a67b34a71e061eb4f21df090d31a8afee2dee3af532bdf6c41cb2323b2b`；详情见[复核记录](reports/2000-shanghai-arts-question-review.md)。Q1–Q22题面可进入答案推导阶段；来源身份、paper登记、答案、解析、图稿、构建与视觉回执仍未完成。本阶段不表示来源认证或整卷验收。
+
 ### 2007 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
