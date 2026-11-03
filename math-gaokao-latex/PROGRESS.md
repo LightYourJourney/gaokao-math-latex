@@ -29,6 +29,12 @@
 - 两名 Luna/high 解题者分段提交独立草稿，主会话逐题复算。纠正 Q11 小弧面积中弓形符号（范围 $0<S\le2-\pi/2$）及 Q21(1) 焦点间距误读（$a=\sqrt7/2,b=1,c=\sqrt3/2$）；Q21(3) 参数分段与两组推导已复核。Q18 得到 2006 年产量 2499.8 兆瓦、四年安装量平均复合增长率至少61.5%。解答题小问结构与题面解析对齐；OCR/API调用为0，模型成本未知。
 - 详情见[答案要点初稿报告](reports/2007-shanghai-arts-answer-key.md)。独立答案盲核尚未开始；目前无 U/PENDING 答案项，但答案均非官方。来源、paper/batch、issue/provenance、解析、图稿、TeX、正式构建与视觉验收均待后续阶段。本阶段不代表来源认证、整卷完成或长期语料库完成。
 
+### 2007 上海文科候选卷：答案要点独立复核（2026-11-03）
+
+- 盲核者 /root/blind_review_2007_shanghai_arts_answers（Luna/high）先独立作答再比对；Q1–Q20 未发现规范稿最终答案差异。其草稿记录了 Q17、Q18(2)、Q20(3) 初算错误后自查更正；Q19(2) 有一处“a=0 奇”的草稿笔误，复核者后续按定义更正。主会话及分段独立解题稿另行复算这些结论。
+- Q21(1)(2) 已核对；新盲解者 /root/blind_solve_2007_shanghai_arts_q21 未读答案稿独立完成三问。Q21(3) 对“是否承接（1）的等边焦点条件”有一般参数与特例两种读法，固定 PDF 无答案页，不能裁定官方意图；答案稿现将此项标记 U/PENDING，保留条件结果。答案稿当前 SHA-256 为 350d0a81e8c7f0bf9b064b5b935f116d03cd31b9a8e12c6ea691185c7e75f688。
+- 复核报告见 reports/2007-shanghai-arts-answer-review.md。当前答案非官方，official_answer=null；来源、paper/batch和issue/provenance登记、解析、图稿、TeX、正式构建与视觉回执均未开始。后续登记时需为 Q21(3) 建立关联阻断项。本阶段不代表来源认证、整卷完成或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
