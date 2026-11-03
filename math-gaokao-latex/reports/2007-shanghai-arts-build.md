@@ -2,7 +2,7 @@
 
 - 日期：2026-11-03。
 - Paper：`gk-2007-regular-shanghai-arts`；batch：`phase1-b83`。
-- Build attempt：`f8997e0e-2c2d-4a29-a7fc-c35519b32d9a`；输入 manifest revision `6058`；构建完成后 revision `6059`，事务 `b9048be7-c32a-4789-ae33-df976d226469`。
+- Build attempt：`f8997e0e-2c2d-4a29-a7fc-c35519b32d9a`；输入 manifest revision `6058`；构建完成后 revision `6059`，构建事务 `b9048be7-c32a-4789-ae33-df976d226469`；视觉复核 finalization 后 revision `6060`，事务 `e785f213-4672-4f16-9a64-8fe6e822c2ca`。
 - 上一 attempt `9a6f2b2e-45da-4851-a97e-beef2fc9f00b` 因 Q21(3) 解析源的分页回流而失效。现印刷版 15 页，原先只剩两条答案框的第 16 页已消失。
 - Toolchain：TeX Live 2026；XeTeX `3.141592653-2.6-0.999998`；Poppler 26.10.0。完整工具指纹与输入树哈希保存在 `2007_上海卷_文科/receipts/build.json`。
 
@@ -17,10 +17,10 @@
 | 简答版 | 6 | `cac2135d37f39c585cd8f80c4ac8ac8e6b88ef2ee5ef0a5389853c8bb0fc8379` |
 | 印刷版 | 15 | `203ca7edd496b12d261d9682d9ec48ec14f8fe5939203d14a92752d4fd64ccd6` |
 
-PDF 位于忽略目录 `2007_上海卷_文科/build/`，构建回执位于 `2007_上海卷_文科/receipts/build.json`。`build_projects.py validate-receipts --manifest source-manifest.json --batch phase1-b83 --require-current-inputs --json` 返回 `code=OK`、0 failed、0 invalid、0 missing、0 stale；批次有 1 卷 pending，等待正式视觉回执聚合。
+PDF 位于忽略目录 `2007_上海卷_文科/build/`，构建回执位于 `2007_上海卷_文科/receipts/build.json`。`build_projects.py validate-receipts --manifest source-manifest.json --batch phase1-b83 --require-final --require-current-inputs --json` 返回 `code=OK`、0 failed、0 invalid、0 missing、0 stale、0 pending；正式视觉复核已聚合。
 
 ## 阶段边界
 
-新四版共 42 页渲染：40 页 PNG 与修正前 attempt 的直接目检图像 SHA-256 完全一致，沿用原八项目检结论；解析版第 17 页、印刷版第 15 页重新以 110/300 dpi 检查。印刷版 16 页的新末页问题已消除，所有答案框与 Q21 完整解答同页。逐页回执已填写，尚待批次聚合提交。
+新四版共 42 页渲染：40 页 PNG 与修正前 attempt 的直接目检图像 SHA-256 完全一致，沿用原八项目检结论；解析版第 17 页、印刷版第 15 页重新以 110/300 dpi 检查。42 页逐页回执覆盖 336 项：288 pass、48 not_applicable、0 fail、0 pending；无视觉问题、无警告豁免。印刷版 16 页的新末页问题已消除，所有答案框与 Q21 完整解答同页。批次 `review.json` 为 `passed`，`finalize-batch-checked` 返回 `FINALIZED`，`phase1-b83` 状态 `closed_with_blockers`；详细页级结论见 `reports/phase1-b83.md`。
 
 Q21(3) 仍为 U/PENDING / ISSUE-1362，paper `blocked`，`official_answer=null`，固定来源出版身份未核。本阶段只完成重建与页面检查，不表示本卷闭环或长期语料完成。

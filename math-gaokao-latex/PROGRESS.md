@@ -13680,3 +13680,9 @@
 - 新旧 110dpi 渲染逐页比对：40 页 PNG SHA-256 完全一致，沿用上一轮对同页的直接八项目检结论；解析版第 17 页与印刷版第 15 页变化，已各以 110/300 dpi 目视复查。印刷版从 16 页缩为 15 页，Q21 全题解及三个答案框同页，旧的孤立末页不再出现。
 - `validate-receipts --require-current-inputs` 返回 OK（0 failed/invalid/missing/stale）；42 页×8 项已写入当前 attempt 工作回执，共 288 pass、48 not_applicable、0 fail/pending，待 `finalize-batch-checked` 聚合。未运行测试套件。
 - Q21(3) 仍 U/PENDING / ISSUE-1362，paper `blocked`，来源出版身份未核，`official_answer=null`；该阶段只重建并检查本卷，不表示整卷无阻或长期语料完成。
+
+### phase1-b83 2007 上海卷文科：视觉复核与批次收口（2026-11-03）
+
+- 当前 attempt `f8997e0e-2c2d-4a29-a7fc-c35519b32d9a` 的试题/解析/简答/印刷四版共 42 页完成正式视觉复核。40 页与前一 attempt 的 110dpi PNG SHA-256 一致，沿用此前逐页直接目检结论；解析版第 17 页、印刷版第 15 页分别重新以 110/300dpi 检查。合计 336 项页级判据：288 pass、48 not_applicable、0 fail、0 pending；无视觉问题或警告豁免。印刷版从 16 页缩为 15 页，Q21 全题、解答及三个答案框同页。
+- review receipt 为 `passed`；`finalize-batch-checked` 返回 `FINALIZED`，事务 `e785f213-4672-4f16-9a64-8fe6e822c2ca` 将 manifest 从 revision 6059 推进至 6060，batch `phase1-b83` 为 `closed_with_blockers`。四版 final/current build receipts、视觉复核、provenance、项目/简答/版本入口生成、规范来源和 manifest/issues 校验均通过；全量汇总报告投影与 775 行 manifest CSV 已检查为 current。
+- `ISSUE-1362` 仍 open / `blocks_completion`：Q21(3) 是否继承 Q21(1) 的等焦条件未有证据裁定，继续标记 U/PENDING；paper 仍 `blocked`，`official_answer=null`，固定来源的出版身份未核。本批只完成有阻塞的视觉收口，不表示来源认证、整卷无阻或长期语料完成。未运行测试套件。
