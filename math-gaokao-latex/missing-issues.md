@@ -13500,7 +13500,7 @@
 {
   "affected_paper_ids": [],
   "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
-  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42。中国教育在线 2013-06-08 页面（https://gaokao.eol.cn/shiti/zhenti/201306/t20130608_957718.shtml）DOM 关联的第1页影像标为全国统考文科数学试题 A；同目录第5页影像（https://img.eol.cn/html/g/2013gkst/xkb/sxwa5.jpg）显示 22–24 三题任选一题，题目内容与固定源相符。此为第三方同期转载影像，未确认考试机构发布链或与固定源的版本关系，故规则旁证尚不足以关闭本问题。",
   "fingerprint": "e019ad164bd21d8c4dbe41f7fbb02ff3ae334e3f1cd8c6715c9204fe6aee1902",
   "impact": "blocks_completion",
   "origin": "phase2-b02-source-rule",
@@ -13518,7 +13518,7 @@
 {
   "affected_paper_ids": [],
   "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
-  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42。中国教育在线 2013-06-08 页面（https://gaokao.eol.cn/shiti/zhenti/201306/t20130608_957718.shtml）DOM 关联的第1页影像标为全国统考文科数学试题 A；同目录第5页影像（https://img.eol.cn/html/g/2013gkst/xkb/sxwa5.jpg）显示 22–24 三题任选一题，题目内容与固定源相符。此为第三方同期转载影像，未确认考试机构发布链或与固定源的版本关系，故规则旁证尚不足以关闭本问题。",
   "fingerprint": "9ebc77bec64e16bdc610f4f259d8f8a0cf16da885f7fcf576dbfe461bf798bf7",
   "impact": "blocks_completion",
   "origin": "phase2-b02-source-rule",
@@ -13536,7 +13536,7 @@
 {
   "affected_paper_ids": [],
   "detail": "缺少作答规则，不影响本库已给的逐题独立解答，但阻断规则完整性验收。",
-  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；研究报告及Task 2源核验记录；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42",
+  "evidence": "固定源 普通高考/2013/2013新课标1文(河南,河北,山西).pdf PDF 第2页，仅连续编号22–24，无选考标题或任选/必答规则；SHA f726a1784cfa2eff4ebf812ea5e5a89f753bbcfd152c18066242a7bd22093f42。中国教育在线 2013-06-08 页面（https://gaokao.eol.cn/shiti/zhenti/201306/t20130608_957718.shtml）DOM 关联的第1页影像标为全国统考文科数学试题 A；同目录第5页影像（https://img.eol.cn/html/g/2013gkst/xkb/sxwa5.jpg）显示 22–24 三题任选一题，题目内容与固定源相符。此为第三方同期转载影像，未确认考试机构发布链或与固定源的版本关系，故规则旁证尚不足以关闭本问题。",
   "fingerprint": "4b057749012b897bffdf2c345aac0b56b322a79592b35d466bfee98bcf068f7b",
   "impact": "blocks_completion",
   "origin": "phase2-b02-source-rule",
