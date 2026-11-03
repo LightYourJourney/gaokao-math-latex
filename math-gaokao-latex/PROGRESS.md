@@ -24,6 +24,12 @@
 - 更新题稿 front matter 标注独立复核通过，最终题面草稿 SHA-256 为 `4d8e9a27d4b06685edda9c16784ca4cb77937c9e8ac436c22b1182806e5a1d3d`（转录提交时为 `2af7dc88429f3902449b261bc09272d58a46a0c1b1bf94ef0811b610320cb81d`）。
 - 定向结构解析仍识别连续Q1–Q22及Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)小问。`paper_id=null`、`official_answer=null`，未调用OCR。详情见[独立题面复核报告](reports/2004-shanghai-arts-question-review.md)。题图、答案、解析、登记、构建与视觉验收仍待后续；本阶段不表示来源认证或整卷验收。
 
+### 2004 上海文科普通卷：非官方答案与解析初稿（2026-11-03）
+
+- 据已复核题面形成Q1–Q22答案要点及逐题解析：`2004/2004_数学真题_上海文_答案要点.md` SHA-256 `8121eb5cb75390b7907b8f6a5e0850767b79c3381d7ad620cbcc2aa4d64562cf`；`2004/2004_数学真题_上海文_解析正文.md` SHA-256 `5e68195fafbec6fc0b38505c21700b28111ce3ea21188690ebc83ea842f04f92`。分段独立求解覆盖Q1–Q12、Q13–Q16、Q17–Q22，系统核算三角、解析几何、复数不等式与空间多面体体积。`solution_sources.render_combined` 只读预演成功，22题题号及小问结构完全对齐。
+- Q17 条件 $(1+\mathrm{i})z_1=-1+5\mathrm{i} \implies z_1=2+3\mathrm{i}$，不等式 $|z_1-z_2|<|z_1| \iff (a-4)^2<-3$，在实数范围内无解（$a \in \varnothing$），保留 U/PENDING 并给出说明；Q18 框架总面积 $S=xy+\frac{1}{4}x^2=8$，由均值不等式解得 $x=8-4\sqrt{2}\approx 2.343\text{ m},\; y=2\sqrt{2}\approx 2.828\text{ m}$，保留面积量纲说明；Q19(1) $A=(-\infty, -1)\cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 但未定义集合 $B$，按题干函数定义域 $D=(2a, a+1)$ 理解解得 $(-\infty, -2]\cup [\frac{1}{2}, 1)$，因原卷字面符号脱节保留 U/PENDING 并给出说明。
+- 固定PDF无答案页，所有答案均为本库独立推导、非官方，`paper_id=null`、`official_answer=null`；来源身份未核。阶段报告见[答案与解析初稿](reports/2004-shanghai-arts-answer-draft.md)。未登记paper/batch/issues/provenance，未生成派生含解析稿、图稿或TeX，未构建。下一阶段推进独立盲核答案；本阶段不表示来源认证、整卷验收或长期语料完成。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
