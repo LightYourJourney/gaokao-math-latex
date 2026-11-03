@@ -12,6 +12,8 @@
 | 文科 | `a5eedc70a0915edc1536df2633a34a00c1d065f4280078553cfcffb53690aec2` | `39e816a594f85ea2151c7e0cd250cd2ed3818c6b07008940be402bbc96fdc243` |
 | 理科 | `2125c2c5d88c8252b3b80493197fd8a3d847f934574d81217e347f48b0923858` | `6e9a9d3a669f4ace2944e255c8fa40d4d4235bfb598d42b85e8eb9786bb042af` |
 
+以上为公式分隔修正提交时的阶段指纹。随后正式构建发现两卷来源说明中的行内代码下划线和理科 Q1 数学定界会导致 TeX 编译失败；只调整 Markdown 排版标记与说明写法，未改变内容。正式构建所用现行源及派生稿哈希见[登记报告](2003-beijing-regular-paper-registration.md)，对应 PDF / 输入树见[正式构建报告](phase4-b48-formal-build.md)。
+
 ## 验证与下一步
 
 - `solution_sources.py check-batch`：两卷各 20 题通过；`provenance.py check-batch`：`OK：2 卷`。

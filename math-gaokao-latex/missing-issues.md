@@ -23530,3 +23530,112 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1402
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "dd4f8a8539acc8fd08f12d437f7e0fbf89bcfd5ab6d47f5d620071d4685ba606",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1403
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "c1b71a71d3d6a9080343624250ac279033580fb870a2e1a666e16e4530667822",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-arts",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1404
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "试题版",
+  "figure_id": "formal-build",
+  "fingerprint": "dbf00fe1bfe6f2d7d542abcb7f336ca72fc909695451b4f55d4adcf85ba7fe20",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1405
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "解析版",
+  "figure_id": "formal-build",
+  "fingerprint": "623915af9172f47c0d2b3d2ba42b183ab7d3a619be7efafce7df970933aa76a3",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1406
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "简答版",
+  "figure_id": "formal-build",
+  "fingerprint": "4f3cb69bc61d0fbf411a62c11660b9288cb92dc949da637e87d389f4af6f63d1",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```
+## ISSUE-1407
+
+```json
+{
+  "affected_paper_ids": [],
+  "check_code": "formal-build",
+  "edition": "印刷版",
+  "figure_id": "formal-build",
+  "fingerprint": "b703bcc67be1f3c72b50b1714d326e0f0151738a59dd4a1a702be96978b2a20e",
+  "impact": "non_blocking",
+  "origin": "formal-build",
+  "page": 1,
+  "paper_id": "gk-2003-regular-beijing-science",
+  "resume_action": "已在新一次正式构建中通过，无需动作",
+  "status": "resolved",
+  "type": "compile-error"
+}
+```

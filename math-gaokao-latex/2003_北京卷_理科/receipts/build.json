@@ -1,0 +1,308 @@
+{
+  "attempt_id": "d43c5ef7-3c6f-41b0-ac17-6c2a37a7130d",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/answers.tex",
+        "sha256": "fcd7a8619aececc02d9a6d448e7a8f7c8fb091c44dc668a483aba8619c33851e"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/answers_short.tex",
+        "sha256": "a71d360ec027fe1457722dd9ff32a06e4ca2b6edc120ae167bbe8e525d65f2d6"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q13_oblique_cylinder.tex",
+        "sha256": "8511c56ab73ab64a560cd16a581d5c09ad91f1a5007109ff82bedcf4a1808c77"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q17_triangular_prism.tex",
+        "sha256": "8ef4b8ad1044fa9b584ded4a345c16b35795476db87c1068261bd0e6f2eba27a"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q18_shifted_ellipse_chords.tex",
+        "sha256": "bf99d13da4a7f784a409a23bb6cbe860c3111f3e6fe6624621f20691b44597be"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q19_city_triangle.tex",
+        "sha256": "60546a39487a9fb4f41bc0369662da1be0e35abdffd8bf7f944a8e45f3615165"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/questions.tex",
+        "sha256": "08e5817533b9de90a339b1e213d3e64cd6f604e40c78686f2d5787042b81347e"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/印刷版.tex",
+        "sha256": "723c591fef959915edbb07a1ab397306d3b0fdf5ff6109937e8880db34d5f1d6"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/简答版.tex",
+        "sha256": "02071f083d68c22af23154cac81eac3a8d9bad74ec9d82481c86b99b2324b667"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/解析版.tex",
+        "sha256": "edfce8c9dd9637399b43ca6270d1b0a041a59dd98e90a13cae2fdcfc6114b917"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/试题版.tex",
+        "sha256": "276d9551748806de2ea117c728f4e0a879401946c3c843820092f25ed90b87b4"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "e948739756a3cf13120e427e2bcc140c3c8e196b47c257c989cc865a6e25d5e7"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2003_北京卷_理科/build/试题版.pdf",
+        "sha256": "a17a237bf7f82130f9b77fc891bdd97d72f5fba8195bfa75a7615dbb6bb2c9f5",
+        "size_bytes": 127024
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2003_北京卷_理科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "450",
+            "text": "Overfull \\hbox (0.66212pt too wide) detected at line 450",
+            "width_pt": "0.66212"
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 21,
+        "path": "math-gaokao-latex/2003_北京卷_理科/build/解析版.pdf",
+        "sha256": "ef27cefed0b662a675fe86ee6b6485ab57ec1c2b8e0bbacd17c308035b750eab",
+        "size_bytes": 214661
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2003_北京卷_理科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 8,
+        "path": "math-gaokao-latex/2003_北京卷_理科/build/简答版.pdf",
+        "sha256": "c1535b093a082a2ef36ba7be160a22cb04b7af80d7e32b4dd1141945edc20e25",
+        "size_bytes": 139092
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2003_北京卷_理科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 16,
+        "path": "math-gaokao-latex/2003_北京卷_理科/build/印刷版.pdf",
+        "sha256": "ff40b616e4c665f47cf73e1dfc96be6a07f1f6e6262573eacaddbdba915380a8",
+        "size_bytes": 213363
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2003_北京卷_理科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-11-04T05:13:34+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2003/2003_数学真题_北京理_答案要点.md",
+        "sha256": "b065d8e75af8d18fb7fd2aae4e56ea3509571549d62d13b7f4e387a9174292e5"
+      },
+      {
+        "path": "2003/2003_数学真题_北京理_解析正文.md",
+        "sha256": "c75753769abd1ed1bf7451a635856e9f0815dadbf977b687ca22eaa936aa6001"
+      },
+      {
+        "path": "2003/2003_数学真题_北京理_试题.md",
+        "sha256": "954c1afb3f06b4834a07ca389acd11543233c4dc027c68f92ec9114b6ba7a815"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "8dec263c90fbfa8082c97749c561198c3ec6a0e9be1861cf6d8077ab561d339d"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q13_oblique_cylinder.tex",
+        "sha256": "8511c56ab73ab64a560cd16a581d5c09ad91f1a5007109ff82bedcf4a1808c77"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q17_triangular_prism.tex",
+        "sha256": "8ef4b8ad1044fa9b584ded4a345c16b35795476db87c1068261bd0e6f2eba27a"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q18_shifted_ellipse_chords.tex",
+        "sha256": "bf99d13da4a7f784a409a23bb6cbe860c3111f3e6fe6624621f20691b44597be"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/figures/f2003_beijing_science_q19_city_triangle.tex",
+        "sha256": "60546a39487a9fb4f41bc0369662da1be0e35abdffd8bf7f944a8e45f3615165"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/印刷版.tex",
+        "sha256": "723c591fef959915edbb07a1ab397306d3b0fdf5ff6109937e8880db34d5f1d6"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/简答版.tex",
+        "sha256": "02071f083d68c22af23154cac81eac3a8d9bad74ec9d82481c86b99b2324b667"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/解析版.tex",
+        "sha256": "edfce8c9dd9637399b43ca6270d1b0a041a59dd98e90a13cae2fdcfc6114b917"
+      },
+      {
+        "path": "math-gaokao-latex/2003_北京卷_理科/试题版.tex",
+        "sha256": "276d9551748806de2ea117c728f4e0a879401946c3c843820092f25ed90b87b4"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "8e0ecbb1bea5b1237c08b291e5c1013074706970c15d45d3619592603bb355c6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "660feeac925af2012a656f4ccebdfd2d476cf09158afedaa935654e1dfa578cb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
+      }
+    ],
+    "tree_sha256": "a2e0d145bf0583a5df56d0b2d69f94e557cf021a74c186225f30622ae507eb09"
+  },
+  "input_projection": "a259dcf6a533b4f15e88193ee22f1bdb3c3e600ce27e00189236430617f31732",
+  "manifest_revision": 6155,
+  "paper_id": "gk-2003-regular-beijing-science",
+  "previous_attempt_id": "607cef33-4290-4608-855c-ff6fb4810dd2",
+  "project_dir": "2003_北京卷_理科",
+  "schema_version": 1,
+  "started_at": "2026-11-04T05:13:11+08:00",
+  "status": "compiled_pending_review",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

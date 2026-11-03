@@ -9,20 +9,22 @@
 - 理科 source `src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306`，PDF SHA-256 `d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702`，Git blob `1f3cde756f4b417da80d0bb4b7cf2501e1ffad37`；固定两页题面，印刷页124–125，可见 Q1–Q20。
 - 两份固定 PDF 均无答案或解析页。发布者、出版者、版次、复制/扫描链和官方身份未认证；两卷 `official_answer=null`，答案与解析是本库独立推导。
 
-## 规范源与派生稿指纹
+## 当前规范源与派生稿指纹（2026-11-04）
 
-Q1–Q20 题面由已复核草稿规范化。答案与解析保持上游已复核内容；只把 `paper_id` 绑定到登记卷，并由 `extract-batch --write` 补齐解析块标记。`_含解析.md` 由三份规范源确定性生成。
+Q1–Q20 题面由已复核草稿规范化。答案与解析保持上游已复核内容；只把 `paper_id` 绑定到登记卷，并由 `extract-batch --write` 补齐解析块标记。`_含解析.md` 由三份规范源确定性生成。下表哈希已按正式构建采用的现行文件刷新；构建修正只改说明文字和数学模式定界，不改变题意、答案或解析结论。
 
 | 文件 | SHA-256 |
 |---|---|
-| 文科 `_试题.md` | `d3f322321d096520e5f0eabddfefe42ba2eabbffc508d72d566050133ac8b17b` |
-| 文科 `_答案要点.md` | `ba2eb09ff74acc97b885246234779afd5272fb7cdd5c36557f9dee24d5cc2b07` |
-| 文科 `_解析正文.md` | `83862d86c874566059857de879113fe34570f5399d679ce073afa176abef080c` |
-| 文科 `_含解析.md` | `637f61cc8d84b4c136c0de6bd0cea8b77834dbab90245c87eeb9ecb2f135ec6b` |
-| 理科 `_试题.md` | `2d2b571f9a7f57df773927bc259c6806029542053d35d6356e8515c81123d376` |
-| 理科 `_答案要点.md` | `c40a648dacbe231d1bbd292cf9ef73cc0c124ae2e73ba4407b6acc0c09368655` |
-| 理科 `_解析正文.md` | `c16df257c7af7676d26e587c33969a39175ac78b8d7b9d17d58eb4806e601bf2` |
-| 理科 `_含解析.md` | `f3d759dcfe94e33cea4b44400bfbef0dc6a68fc0224b7a015c5e5369460321b8` |
+| 文科 `_试题.md` | `2ea786dfb9041f45566bbd22d4c7777b6651ed18cee08148a3bd4833094b322c` |
+| 文科 `_答案要点.md` | `2e73f3ea37bee73d9b182d5bfdb89cd3a0e751e6008e775ddbaffff00d3ebc0a` |
+| 文科 `_解析正文.md` | `d4e45c7164b125fabdbb0803ff03a1dc513735e65499ef946709532438fdfc94` |
+| 文科 `_含解析.md` | `11e572f0ad3da92fb537d2461b3ed6d11d99039c6d87efb352ea1942e26a90c4` |
+| 理科 `_试题.md` | `954c1afb3f06b4834a07ca389acd11543233c4dc027c68f92ec9114b6ba7a815` |
+| 理科 `_答案要点.md` | `b065d8e75af8d18fb7fd2aae4e56ea3509571549d62d13b7f4e387a9174292e5` |
+| 理科 `_解析正文.md` | `c75753769abd1ed1bf7451a635856e9f0815dadbf977b687ca22eaa936aa6001` |
+| 理科 `_含解析.md` | `d286d83d8e5adc0269998f92c8516399dd299028c0d38d9a0289b3a8854bc4f4` |
+
+两卷当前四版 TeX 的完整输入树、工具链与 PDF SHA-256 由[正式构建报告](phase4-b48-formal-build.md)及 `receipts/build.json` 绑定。
 
 ## 登记与 blockers
 

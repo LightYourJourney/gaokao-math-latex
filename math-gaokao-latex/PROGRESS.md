@@ -14437,3 +14437,10 @@
 - `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 的 `--write` 与随后 `--check` 均成功，两卷生成结果一致。
 - 两卷仍为 `blocked`，batch 为 `provenance_verified`；`ISSUE-1398`–`ISSUE-1401` 继续 open / `blocks_completion`。尚未做正式四版构建、PDF 回执、逐页视觉审查、批次封存或全量测试；本阶段不表示整卷验收或长期语料完成。
 - 下一阶段进行正式四版构建并建立当前构建回执，再逐页视觉复核。
+
+### 2003 北京普通文理候选卷：四版正式构建（2026-11-04）
+
+- 首次构建因两类 TeX 标记错误失败：文科答案说明的 `official_answer=null` 下划线出现在 `\texttt{}` 内；理科 Q1 的 `(A\cap B)` 缺数学定界。失败 attempt、自动登记并由成功重跑解决的 `ISSUE-1402`–`ISSUE-1407`、source-only 修正和当前源哈希见[正式构建报告](reports/phase4-b48-formal-build.md)及[更新后的登记指纹](reports/2003-beijing-regular-paper-registration.md)。
+- 第二次正式构建的两卷四版全部通过，共95页；8份回执均无错误、缺字或未定义引用。理科解析版仅有一处 `0.66212pt` Overfull，待视觉核查。回执 current-input 校验、源账、issues、provenance、逐题答案层、三类生成器及775行 CSV 检查通过。
+- `review_receipts.py prepare-batch` 已建立8个版本工作项，逐页视觉复核待完成；batch 为 `compiled_pending_review`，两卷仍 `blocked`。文科 Q18 与理科 Q17 的 `ISSUE-1398`–`ISSUE-1401` 继续 open / `blocks_completion`；官方答案与来源发布链未核。
+- 下一阶段检查95页所有输出，并为 Overfull 对应页与其余页面写入视觉回执；本阶段不表示整卷验收或长期语料完成。
