@@ -40,6 +40,12 @@
 - source_manifest.py register-papers --write 新建批次 phase4-b44 与 paper，manifest revision 6109→6110；source src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e 关联为内部 canonical。Q11/Q20 阻塞项分别是 ISSUE-1380、ISSUE-1381，paper blocked、batch planned。source_manifest.py validate、issues.py validate、solution_sources.extract-batch --write / check-batch 及 manifest_csv.py --write / --check 均通过。
 - 详情见[内部卷登记报告](reports/2005-shanghai-science-paper-registration.md)。当前尚无逐题 provenance、Q11/Q17/Q19图稿、TeX、正式PDF及视觉回执；official_answer=null，来源发布者/版次/复制链未核。本阶段不表示来源认证或整卷验收。
 
+### 2005 上海理科普通卷：Q11/Q17/Q19 题图重绘与登记（2026-11-03）
+
+- 按固定候选 PDF 第1页（印刷页262）矢量重绘三张 TikZ 图。Q11 保留两幅完全相同的原图线形；Q17 保留隐藏棱及虚线 `BC_1`；Q19 绘出椭圆、坐标轴、点标记和 `AP/PF` 线段。图稿逐项 SHA-256、原页映射及预览说明见[题图重绘与登记报告](reports/2005-shanghai-science-figures-provenance.md)。
+- 三张 XeLaTeX 独立预览均成功；导出 PNG 后与固定来源裁片目视比较。三个 TikZ 链接已独立写入规范 `_试题.md`，`extract-batch --write` 更新 `_含解析.md`；图登记事务将 manifest revision `6110→6111`，三图 `expected_occurrences=2`。source manifest、issues、solution sources（22题）、manifest CSV（775行）及全库报告一致性检查通过，报告投影已刷新。
+- 固定 PDF 有文字层，本阶段 OCR 调用为0。Q11 `ISSUE-1380` 与 Q20(1) `ISSUE-1381` 继续 U/PENDING；来源身份未核、`official_answer=null`。本阶段没有导入 provenance、生成项目 TeX、正式 PDF 或构建/视觉回执；下一阶段完成 provenance 后再生成正式项目。此项不表示来源认证、整卷完成或长期语料完成。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
