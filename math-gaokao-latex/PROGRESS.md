@@ -13555,3 +13555,9 @@
 - 构建收据 final/current 检查、review `check-batch`、provenance、solution sources、项目生成器、简答、版本壳、CSV（775 行）、source manifest 与 issue ledger 校验全部通过。来源发布者、出版者、版次、来源链和官方身份仍未核实；固定题面 PDF 不含答案，`official_answer` 继续为 null。内容包状态 complete 不代表来源认证。
 - 最终内容更新后重跑全量 unittest `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1754 tests in 550.376s`，`FAILED (failures=2, skipped=13)`。失败一为 `test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`：未改动的 `2017_全国Ⅰ卷_理科/answers.tex` 当前 SHA 与 adjudicated drift ledger 中的钉定 SHA 不符；失败二为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：全库 79 条历史 paper/batch 缓存状态与现场派生不一致。本批定向检查均通过；未批量修改这两类全库历史基线。
 - 分支卫生核对：`主工作树` 的 `main` 与 `origin/main` 同步且干净；本批正式输出只在 `仓库根` 的 `feat/gaokao-phase0`。本记录仅表示福建文科单卷批次收口，不表示长期语料完成。
+
+### 2002 北京理科候选卷：独立答案与解析盲核（2026-11-03）
+
+- 两名互不读取答案事实源的复核者依据固定题面与 PDF 核查答案；完整盲核者对 Q11/Q12 另看原页图，窄范围复核者独立重建 Q18 坐标和 Q22 幂次递推。首轮代理输出有内部矛盾及 Q18/Q22 推导错误，主会话拒绝采纳；经回看原页和第二名独立复核后逐项裁定，错误复核过程记录于[复核报告](reports/2002-beijing-science-answer-review.md)。
+- Q1–Q15、Q17、Q19–Q22 的确定答案与独立核定一致；Q16 圆方程无实点，继续 U/PENDING。Q18(1) 沿底面边 $AB$ 的水平分量不进入垂直截面，二面角由 $b-d$ 决定；Q22 得 $f(2^k)=k2^k$、$f(2^{-k})=-k2^{-k}$，故 $S_n=2^{-n}-1$。规范答案、解析事实无需更改。
+- Q5/Q15/Q18/Q19 原文疑点照录，Q11/Q12/Q18 图仍待重绘；答案非官方，`official_answer=null`，来源身份未核。未调用 OCR，未做图稿、TeX、构建、视觉验收或 provenance；下一阶段通过单一 `register-papers` 事务登记候选 paper/source/batch 与 Q16 blocker。本阶段不表示本卷验收或长期语料完成。
