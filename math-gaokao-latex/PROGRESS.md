@@ -46,6 +46,12 @@
 - 三张 XeLaTeX 独立预览均成功；导出 PNG 后与固定来源裁片目视比较。三个 TikZ 链接已独立写入规范 `_试题.md`，`extract-batch --write` 更新 `_含解析.md`；图登记事务将 manifest revision `6110→6111`，三图 `expected_occurrences=2`。source manifest、issues、solution sources（22题）、manifest CSV（775行）及全库报告一致性检查通过，报告投影已刷新。
 - 固定 PDF 有文字层，本阶段 OCR 调用为0。Q11 `ISSUE-1380` 与 Q20(1) `ISSUE-1381` 继续 U/PENDING；来源身份未核、`official_answer=null`。本阶段没有导入 provenance、生成项目 TeX、正式 PDF 或构建/视觉回执；下一阶段完成 provenance 后再生成正式项目。此项不表示来源认证、整卷完成或长期语料完成。
 
+### 2005 上海理科普通卷：三角色逐题 provenance 导入（2026-11-03）
+
+- `provenance.py init-batch` 为 Q1–Q22 建立三角色工作记录：独立题面复核22/22通过、Codex 编者推导20题D级/2题U级、三个 gpt-6-luna/high 分段盲核者检查最终答案。最终题面摘要已包含Q11/Q17/Q19图稿链接；来源页路由为Q1–Q19对应PDF第1页、Q20–Q22对应第2页。
+- 导入事务 ID `e31ef415-23ad-49e8-b0e2-4a77e16d9c13`，manifest revision `6111→6112`，phase4-b44 更新为 `provenance_verified`；Q11/Q20 保留 `ISSUE-1380`/`ISSUE-1381` 和 U/PENDING，paper 仍 blocked。`provenance.py check-batch`、source manifest、issues、solution sources、CSV（775行）和 `report.py check --all` 均通过。详情及记录哈希见[provenance 导入报告](reports/2005-shanghai-science-provenance.md)。
+- PDF 无答案页，`official_answer=null`；本阶段没有生成项目 TeX、正式PDF、构建或视觉回执。下一阶段生成四版 TeX 入口后再正式构建并逐页复核。本阶段不表示来源认证、整卷完成或长期语料完成。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
