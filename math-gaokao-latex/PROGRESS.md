@@ -13899,3 +13899,11 @@
 - make_short_answers 生成 answers_short.tex；make_editions 生成试题版、解析版、简答版、印刷版四个模板入口。短答案按规范答案要点核对，仍为非官方推导。
 - 生成壳后纸卷现场状态为 editions_generated；provenance 首次检查提示缓存旧值 answers_verified，随后以 import-batch 事务同步 manifest revision 6077→6078（transaction_id c98d5db6-2796-42e5-a306-7175874d8740）。批次状态 provenance_verified，ISSUE 0；manifest.csv 仍为 775 行。
 - 简答、四版入口、project TeX、provenance、manifest 与 issues 检查均通过。XeLaTeX 构建、最终 PDF 视觉复核、build/review receipts 尚未完成。详情见[四版入口报告](reports/2015-fujian-science-editions.md)。本阶段不表示单卷闭环或长期语料完成。
+
+### 2015 福建理科候选卷：四版正式构建与视觉收口（phase3-b26，2026-11-03）
+
+- Q6 流程图按固定源页恢复原图纵横尺寸与回路拓扑：循环回边从判断框左侧接回累加框左侧，不再穿越节点。正式构建 attempt `d9a54ff2-527d-494a-a495-c0577cfaaca8`，输入 manifest revision `6085`；试题版5页 SHA-256 `a1521a7555505de6671b965cda26693077293f4ea0719b0b3d1291fcfa16f271`，解析版23页 `6870400c3d7f8690bd6cda39c4d960fade028be05e8121a7660ce62eec39f4fe`，简答版7页 `bdeb69e072ce0d7384fea2ac666635d0f2afef80c9873a82338499e3bac5fe2d`，印刷版19页 `29b3278c5022ccee35fcbfd334b180497ae93bba3ad26edb9703fbf3d933b859`；54页构建日志均无缺字、溢出、未定义引用或编译错误。完整 build 细节见项目 `receipts/build.json`。
+- 与此前逐页检查过的栅格比对，6页发生变化：试题版第2页、简答版第2页、解析版第2/9页、印刷版第2/7页；逐页以125 dpi复核。其余48页PNG逐字节相同，沿用此前实际视觉结论。四版54页的八项页面检查全部通过；`receipts/review.json` 状态 `passed`，零警告豁免、零视觉问题。批次报告见[phase3-b26 视觉审查报告](reports/phase3-b26.md)。
+- `finalize-batch` 返回 `FINALIZED`，manifest revision `6086→6087`，`phase3-b26` 状态 `closed`，该卷 `production_state=complete`。publisher、版次、复制链和官方身份仍未核，`official_answer=null`；所有答案与解析仍标记为本库独立推导、非官方。本卷收口不表示1952–2026长期语料完成。
+- source manifest、issues、provenance、solution_sources（23题）、题目/简答/版本壳生成 currentness、4张图注册、775行 manifest CSV、build `--require-final --require-current-inputs` 与 review `check-batch` 均通过。
+- 全量命令 `python3 -B -m unittest discover -s tests -q` 实际运行 `Ran 1769 tests in 610.111s`，结果 `FAILED (failures=3, skipped=13)`。三项为：`test_2015_fujian_arts_transcription.FujianArtsTranscriptionTests.test_source_identity_and_transcription_hash`（旧断言期待 `paper_id=null`，当前已登记为 `gk-2015-regular-fujian-arts`）；`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs`（2017全国Ⅰ理科 `answers.tex` 漂移台账 SHA `9318dce…`，当前文件 SHA `8ea128d…`）；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`（79项既有 paper/batch 缓存状态与现场派生不符，首项为2012全国大纲文科 `complete` 与 `answers_verified` 不符）。本收口未改动这些历史测试对象，不借本批次改写旧账。

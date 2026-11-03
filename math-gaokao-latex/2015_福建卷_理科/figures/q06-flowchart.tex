@@ -2,8 +2,8 @@
 % Source PDF SHA-256: a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700
 % Source page 1 (printed page 943), question 6. Shape and branch labels follow the fixed page.
 \begin{tikzpicture}[
-  x=0.44cm,
-  y=0.44cm,
+  x=0.82cm,
+  y=0.82cm,
   >=stealth,
   every node/.style={font=\small,align=center,inner sep=2pt},
   line width=0.45pt
@@ -15,7 +15,6 @@
   {$S=S+\cos\dfrac{i\pi}{2}$};
 \node[draw,minimum width=2.05cm,minimum height=0.56cm] (increment) at (0,-4.62) {$i=i+1$};
 \node[draw,diamond,aspect=2.6,minimum width=2.6cm,minimum height=0.92cm,inner sep=1pt] (condition) at (0,-5.80) {$i>5?$};
-\coordinate (loopjoin) at (0,-2.65);
 \coordinate (outputtop) at (0,-6.84);
 \coordinate (outputbottom) at (0,-7.44);
 \draw (-0.88,-6.84)--(-1.12,-7.44)--(0.88,-7.44)--(1.12,-6.84)--cycle;
@@ -29,7 +28,7 @@
 \draw[->] (increment.south)--(condition.north);
 \draw[->] (condition.south)--(outputtop);
 \draw[->] (outputbottom)--(end.north);
-\draw[->] (condition.west)--(-2.10,-5.80)--(-2.10,-2.65)--(loopjoin);
+\draw[->] (condition.west)--(-2.10,-5.80)--(-2.10,-3.32)--(accumulate.west);
 \node at (-1.65,-6.08) {否};
 \node at (0.42,-6.50) {是};
 \end{tikzpicture}
