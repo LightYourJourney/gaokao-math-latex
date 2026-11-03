@@ -60,6 +60,13 @@
 - 规范题面、答案、解析 frontmatter 的 `paper_id` 由 null 绑定为该内部 paper ID，数学内容未改；按更新后的三份事实源重跑 `render_combined()`。当前 Q/A/S/combined SHA-256 依次为 `bbcd8ad5864eabf2f2ffd24ffc2c11bf2b8b730e7025fde6b3841eb19132d225`、`2f646079faf5b54878e8d00b0d4a64d10e3d7c13c4f9ef2faebb90f4be914f35`、`01b8f561bb483e27235b580a5b4435b75219dbeba88ac3d1b5ea1947ce23172c`、`b39454ec05d5617277372a64a041bd9af92cf6324e6de2f7b3d5d89b3ca4bc06`。
 - 按源 manifest 重新投影 `manifest.csv`（775 行）。`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check` 和题面/答案/解析结构对齐定向验证均通过。详情见 [登记回执](reports/2007-shanghai-arts-registration.md)。逐题 provenance、生成项目索引/TeX、图稿、正式构建与视觉复核仍待后续阶段。
 
+### 2007 上海文科候选卷：逐题 provenance 登记（2026-11-03）
+
+- 按固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`（PDF SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`）导入 question-review、answer-solve、answer-review 三角色的 Q1–Q21 provenance。事务 `e3e50387-4d28-4680-a61c-af95ca124639` 将 manifest revision `6048→6049`；跟踪文件 `2007_上海卷_文科/provenance.json` SHA-256 `89a8d1d2c1b412e3876151162ef4ac1093b3f7387f7a618a95dd0da8748d61e8`。
+- 题面复核 21/21 passed；Q1–Q18 对应 PDF 第1页（印刷页407），Q19–Q21 对应第2页（印刷页408）。答案证据 Q1–Q20 为 D，Q21 为 U；`ISSUE-1362` 继续关联 Q21，固定题面 PDF 无答案页，答案仍为非官方、`official_answer=null`。paper 保持 `production_state=blocked`，batch `phase1-b83` 更新为 `provenance_verified`。来源发布者、版次、复制链与官方身份未核。
+- `solution_sources.py check-batch` 首轮指出解析正文 Q18–Q21 缺少与确定性合成稿一致的 `**解析**` 标记；已补齐四处结构标记并重新渲染 `_含解析.md`，其 SHA-256 仍为 `b39454ec05d5617277372a64a041bd9af92cf6324e6de2f7b3d5d89b3ca4bc06`，数学内容未改。解析正文当前 SHA-256 为 `0f8d354c77c764bc8d45682b1896cb9f25dfedccf3cf47209d896677f43b8554`。
+- 最终定向门禁通过：`provenance.py check-batch`（1卷）、`solution_sources.py check-batch`（21题）、`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check`（775行且 current）及 `git diff --check`。阶段详情见[逐题 provenance 登记报告](reports/2007-shanghai-arts-provenance.md)。此阶段尚未重绘 Q7/Q11/Q16/Q21、生成项目 TeX、正式构建四版 PDF、建立构建/视觉回执或逐页目视检查；下一阶段继续题图与项目生成，本记录不表示本卷闭环或长期语料完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
