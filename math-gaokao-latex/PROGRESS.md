@@ -14120,3 +14120,10 @@
 - source manifest、issues、provenance、solution sources（22题）、四版生成 currentness、最终 build/review receipts、批次报告与 `manifest.csv`（775行）检查通过；刷新全库报告后 `report.py check --all` 返回“报告输出与全量 manifest 当前一致”。
 - 全库命令 `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1769 tests in 636.784s`，结果 `FAILED (failures=3, skipped=13)`。三项为：2015福建文科来源测试仍断言 `paper_id=null`，而当前记录已绑定 `gk-2015-regular-fujian-arts`；task25 漂移台账记录的 2017全国Ⅰ理科 `answers.tex` SHA `9318dce…` 与当前 `8ea128d…` 不一致；全库 provenance 测试发现79卷历史缓存状态与现场派生状态不符，首项为 2012全国大纲文科。两项定向失败针对其他试卷；全库 provenance 失败涉及79卷历史缓存，本批自身的 `provenance check-batch` 通过。本收尾未改写这些旧测试对象。
 - 构建阶段与视觉复核阶段已分别提交（`6261ac87`、`c60e5930`）。本条记录本次自动化测试终态；下一步需要取得可追溯同版资料、勘误或可靠同期材料，核定 Q12/Q21 后再解除 blocker。本卷及本批均不表示长期语料库完成。
+
+### 2005 上海理科候选卷：四版正式构建（2026-11-03）
+
+- 首次正式构建 attempt `36420edc-3229-4dfb-8fa5-9c6bde1c0d91` 因解析说明中的行内代码 `paper_id=null` 被转换成带未转义下划线的 `\texttt` 而导致解析版、印刷版失败；根因说明也与已登记 paper 状态不符。修正文案并确定性重建后提交 `0083d4e`，不更改官方答案未认证及 Q11/Q20(1) U/PENDING 边界；`ISSUE-1382`、`ISSUE-1383` 随成功构建解除。
+- 成功构建 attempt `7d9374a1-88f0-44d8-98d2-ac55372ab14f` 完成四版共49页；errors、missing characters、overfull、undefined references 均为0。页数、SHA、manifest revision、事务及首次失败细节见[正式构建报告](reports/2005-shanghai-science-formal-build.md)。
+- `build_projects validate-receipts --require-final --require-current-inputs` 返回 `PENDING_REVIEW`，failed/invalid/missing/stale 均为0。`manifest.csv` 775行，全量六个报告投影已刷新；正式 build 阶段尚待本次视觉审查终结器封存。
+- Q11 的 `ISSUE-1380` 与 Q20(1) 的 `ISSUE-1381` 继续 open / blocks_completion；paper 仍 blocked。来源发布者、出版者、版次、复制链和官方身份未核，`official_answer=null`。本阶段仅覆盖 `phase4-b44`，不代表长期语料库完成。
