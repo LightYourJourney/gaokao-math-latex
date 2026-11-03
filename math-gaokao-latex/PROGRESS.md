@@ -16,6 +16,12 @@
 - 两段Luna/high转录按Q1–Q12、Q13–Q22拆分，主代理再逐题对照PDF第1–2页原图。Q11/Q17/Q19图位待矢量重绘；Q12六行数阵已按原序作为数组转写。Q20(1)照录“中低价层”，题干与(2)照录“中低价房”，保留原卷差异；Q12没有补入原文不存在的字。
 - 定向结构解析识别Q1–Q22及解答小问Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。原PDF文字层只作定位参考，本阶段未调用OCR（`model_calls=0`、`ocr_calls=0`）。独立题面复核、答案/解析、paper登记、图稿及构建仍待后续。详情见[题面转录报告](reports/2005-shanghai-science-question-transcription.md)。本阶段不表示来源认证、答案验证或整卷验收。
 
+### 2005 上海理科普通卷：Q1–Q22 独立题面复核（2026-11-03）
+
+- 两名未参与转录的复核者分段核对原始页图：Q1–Q12 12/12通过，Q13–Q22 10/10通过。主代理复看两页高分辨率原图与最终草稿；复核依据为源页图，不用PDF文字层裁决。
+- Q12两处标点首轮被发现与原页不符：“可得数阵如图”后的句号及计算结果“−24”后的句号均修为逗号；复核者复查修订稿通过。最终题稿 SHA-256 `6a83dae6a2b0979126bc47f2a43618c5801af8e0b09c066e48000b04d1c6e609`，转录阶段提交指纹为 `5b5a73ae5b49d9d8b31c1866557e59804ffb1882e89322ab2ead4749f64c3d29`。
+- 定向结构解析仍识别连续Q1–Q22及Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)小问；Q20(1)“中低价层”与其他位置“中低价房”按原卷保留。无答案或解析补写，`paper_id=null`、`official_answer=null`。题面阶段未调用OCR，`model_calls=0`、`ocr_calls=0`；耗时及代理token成本未知。详情见[独立题面复核报告](reports/2005-shanghai-science-question-review.md)。题图、答案、解析、登记、构建与视觉验收仍待后续；本阶段不表示来源认证或整卷验收。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
