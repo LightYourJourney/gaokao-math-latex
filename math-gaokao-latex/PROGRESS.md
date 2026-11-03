@@ -30,6 +30,12 @@
 - Q17 条件 $(1+\mathrm{i})z_1=-1+5\mathrm{i} \implies z_1=2+3\mathrm{i}$，不等式 $|z_1-z_2|<|z_1| \iff (a-4)^2<-3$，在实数范围内无解（$a \in \varnothing$），保留 U/PENDING 并给出说明；Q18 框架总面积 $S=xy+\frac{1}{4}x^2=8$，由均值不等式解得 $x=8-4\sqrt{2}\approx 2.343\text{ m},\; y=2\sqrt{2}\approx 2.828\text{ m}$，保留面积量纲说明；Q19(1) $A=(-\infty, -1)\cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 但未定义集合 $B$，按题干函数定义域 $D=(2a, a+1)$ 理解解得 $(-\infty, -2]\cup [\frac{1}{2}, 1)$，因原卷字面符号脱节保留 U/PENDING 并给出说明。
 - 固定PDF无答案页，所有答案均为本库独立推导、非官方，`paper_id=null`、`official_answer=null`；来源身份未核。阶段报告见[答案与解析初稿](reports/2004-shanghai-arts-answer-draft.md)。未登记paper/batch/issues/provenance，未生成派生含解析稿、图稿或TeX，未构建。下一阶段推进独立盲核答案；本阶段不表示来源认证、整卷验收或长期语料完成。
 
+### 2004 上海文科普通卷：独立答案复核（2026-11-03）
+
+- 独立分段推导与盲解校验覆盖Q1–Q12、Q13–Q16、Q17–Q22。逐题核验代数、诱导公式、解析几何方程联立、向量叉积、均值不等式取等、立体几何线面垂直与二面角、二次曲线模平方等差性质。Q1–Q22最终答案与逐题数学推导全部一致通过。
+- Q17 再次核算复数模不等式 $(a-4)^2 < -3$ 在实数范围内恒无解（$a \in \varnothing$），原卷字面无解事实确认无误，维持 U/PENDING；Q18 均值不等式极值 $x = 8-4\sqrt{2} \approx 2.343\text{ m},\; y = 2\sqrt{2} \approx 2.828\text{ m}$ 验证无误；Q19(1) $A=(-\infty, -1)\cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 未定义集合 $B$，按题干函数定义域 $D$ 理解解得 $(-\infty, -2]\cup [\frac{1}{2}, 1)$，维持 U/PENDING。
+- 答案要点 SHA-256 `8121eb5cb75390b7907b8f6a5e0850767b79c3381d7ad620cbcc2aa4d64562cf`，解析正文 SHA-256 `5e68195fafbec6fc0b38505c21700b28111ce3ea21188690ebc83ea842f04f92`，推导严密成立。`solution_sources.render_combined` 只读预演成功，22题对齐。详情见[独立答案复核报告](reports/2004-shanghai-arts-answer-review.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、图稿或TeX，未构建；`official_answer=null`，来源身份未核。本阶段不表示来源认证或整卷验收。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
