@@ -42,6 +42,16 @@
 - `source_manifest.py register-papers --write` 登记内部试卷 `gk-2004-regular-shanghai-science`、批次 `phase4-b46`，manifest revision 6123→6124；来源 `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a` 登记为 canonical 绑定；试卷状态 `blocked`，批次状态 `planned`。自动创建并关联阻塞问题 `ISSUE-1386`（Q19(2) 提问条件作 $B \subseteq A$ 未定义集合 $B$ 疑点）与 `ISSUE-1387`（Q22(1) 点 $P_1(3, 0)$ 不在椭圆上且无实数解疑点），维持 U/PENDING。
 - 门禁校验通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[试卷登记报告](reports/2004-shanghai-science-paper-registration.md)。图稿待重绘与登记，provenance/TeX/四版构建待后续。本阶段不表示来源认证或整卷验收。
 
+### 2004 上海理科普通卷：Q5/Q18/Q21 题图重绘与登记（2026-11-04）
+
+- 三幅矢量 TikZ 图稿重绘并保存于 `2004_上海卷_理科/figures/`：
+  - Q5 函数图象：`f2004_shanghai_science_q05_function_graph.tex`（SHA-256 `055d4d475c724c396b0de371bdbadbc3912b44b53cdedcff072cdbf635b4f8cc`）；
+  - Q18 框架几何示意：`f2004_shanghai_science_q18_frame_geometry.tex`（SHA-256 `3310da6e5d8715473ecf18ccd305d09a80513cbb7659d97c3f234ed782f8bc55`）；
+  - Q21 棱台截面立体图：`f2004_shanghai_science_q21_pyramid_frustum.tex`（SHA-256 `d7857340a6c0c4b79740f976a8a04b0c3e7e2daa2209d70be712575a5ee65dc2`）。
+- 规范试题 `2004/2004_数学真题_上海理_试题.md` SHA-256 `6df3a7e97adba0ca5fada413be2df4fbb8b296e48bc5f284f343b6ee277170e9`；`solution_sources.py extract-batch --manifest source-manifest.json --batch phase4-b46 --write` 刷新派生含解析稿 `2004/2004_数学真题_上海理_含解析.md` SHA-256 `e20b6c1c7d562eab51b90e057cd59db56a43f5c8e833a02f16279a5216305ab9`。
+- `source_manifest.py sync-figure-registry --manifest source-manifest.json --paper gk-2004-regular-shanghai-science --write` 更新 manifest revision 6124→6125，三图引用计数均正确建立为 2。
+- 门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[题图重绘与登记报告](reports/2004-shanghai-science-figures-provenance.md)。provenance/TeX/四版构建待后续。本阶段不表示来源认证或整卷验收。
+
 
 
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）

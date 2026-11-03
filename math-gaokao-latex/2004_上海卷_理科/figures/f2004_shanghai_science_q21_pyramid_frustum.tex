@@ -1,0 +1,43 @@
+% Candidate source: src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a
+% Source PDF SHA-256: 9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e
+% PDF page 2 (printed page 199), question 21.
+% Redraw follows visible/hidden edges; perspective is schematic, not to scale.
+\begin{tikzpicture}[line cap=round,line join=round,x=0.85cm,y=0.85cm]
+  \coordinate (P) at (2.4,4.2);
+  \coordinate (A) at (0,0.5);
+  \coordinate (B) at (1.8,-1.2);
+  \coordinate (C) at (4.8,0.5);
+
+  % Points on lateral edges for section DEF
+  \coordinate (D) at (1.25,2.42);
+  \coordinate (E) at (2.11,1.61);
+  \coordinate (F) at (3.55,2.42);
+
+  % Hidden edges (back edges and internal auxiliary line DC)
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (D) -- (F);
+  \draw[dashed] (D) -- (C);
+
+  % Visible edges: pyramid lateral edges
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+
+  % Base front edges
+  \draw (A) -- (B) -- (C);
+
+  % Section front edges
+  \draw (D) -- (E) -- (F);
+
+  % Visible auxiliary line DB
+  \draw (D) -- (B);
+
+  % Labels
+  \node[above] at (P) {$P$};
+  \node[above left] at (D) {$D$};
+  \node[below right] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+\end{tikzpicture}

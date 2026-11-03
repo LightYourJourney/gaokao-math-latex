@@ -1,0 +1,22 @@
+% Candidate source: src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a
+% Source PDF SHA-256: 9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e
+% PDF page 1 (printed page 198), question 18.
+% Redraw follows visible relations; point placement is schematic, not a scale claim.
+\begin{tikzpicture}[line cap=round,line join=round,x=0.9cm,y=0.9cm]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.2,0);
+  \coordinate (C) at (3.2,2.2);
+  \coordinate (D) at (0,2.2);
+  \coordinate (E) at (1.6,3.8);
+
+  % Frame structure: lower rectangle with top horizontal bar, and upper triangle
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (D) -- (E) -- (C);
+
+  % Right angle mark at E
+  \draw (1.45,3.65) -- (1.6,3.5) -- (1.75,3.65);
+
+  % Labels
+  \node[below] at (1.6,0) {$x$};
+  \node[left] at (0,1.1) {$y$};
+\end{tikzpicture}
