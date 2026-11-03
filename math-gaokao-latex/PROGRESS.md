@@ -13653,3 +13653,11 @@
 - 执行 `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1769 tests in 542.593s`，`FAILED (failures=2, skipped=13)`。
 - 两项失败均为既有全库基线：`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 `9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30`，当前文件为 `8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233`；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报出 79 条历史 paper/batch 缓存状态与现场派生不符。
 - 失败路径不属于本批改动；该布局基线文件及其 adjudicated ledger 在本批均未改动，未顺手重写历史快照。phase1-b82 定向 build/review currentness、provenance、确定性生成、来源/问题清单、manifest CSV 与全量汇总报告检查均已通过。本卷仍为 `closed_with_blockers`，阻塞为 ISSUE-1360、ISSUE-1361。
+
+### phase1-b83 2007 上海卷文科：题图重绘、provenance 与项目生成（2026-11-03）
+
+- 按固定题面重绘 Q7、Q11、Q16、Q21 四张 TikZ 图；SHA-256、保留的线型/点位及示意边界见 [阶段报告](reports/2007-shanghai-arts-figures.md)。四图分别用 XeLaTeX 独立编译为 1 页预览并逐张目视检查；Q7 另经 600dpi 放大检查。Q11 仅画源图所示弧形示意，不作半径测量；Q21 的示意参数不代表题设数值。
+- 规范题面四处图位替换为独立段落图稿链接，确定性重建 `_含解析.md`。manifest 登记四张 `figure_files`，每张在题面与合成稿中各出现两次。答案要点速查表增加 Q12–Q15 的独立字母行 A/C/B/D，逐题答案事实不变；同步生成 questions/answers、简答稿和四版入口。
+- Q7/Q11/Q16/Q21 题面哈希及图稿 evidence 更新后，provenance 事务将 manifest 推进至 revision 6054；paper `blocked`，batch `provenance_verified`。Q21 保持 U/PENDING 与 ISSUE-1362，`official_answer=null`；固定来源的出版身份未核。
+- `solution_sources`、`provenance`、source manifest、issues、项目/简答/版本壳生成器 `--check`、manifest CSV（775 行且 current）与 `git diff --check` 均通过。未运行测试套件。
+- 尚未进行正式四版 PDF 构建、build/review receipts 或整页视觉检查；下一阶段继续正式构建与逐页视觉收口。本阶段不表示单卷闭环或长期语料完成。
