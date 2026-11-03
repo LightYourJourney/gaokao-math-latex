@@ -2258,6 +2258,15 @@
         "gk-2004-regular-shanghai-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b47",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-regular-shanghai-arts",
+        "gk-2003-regular-shanghai-science"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2267,7 +2276,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "eb02b653-5482-4047-a49a-59f1e74fce92",
+  "last_transaction_id": "19f7cbdc-6b1a-4ff1-91b5-cef6b264bf4f",
   "papers": [
     {
       "blocked_from": null,
@@ -29866,9 +29875,143 @@
       "title": "2004 年·上海卷·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_文科/figures/f2003_shanghai_arts_q16_function_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_文科/figures/f2003_shanghai_arts_q18_parallelepiped.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_文科/figures/f2003_shanghai_arts_q20_tunnel_cross_section.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_shanghai_arts",
+        "id": "gk-2003-regular-shanghai-arts",
+        "note": "固定候选 PDF source_id=src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4，SHA-256 ffd59c395a0c675118f6da576e48842549c4afa031d923448f26f33087bc7e85，2页题面（印刷页140–141），题签“2003 普通高等学校招生考试（上海卷文）”。发布者、出版者、版次、复制/扫描链与官方身份未核；PDF无答案页，official_answer=null，答案与解析为本库独立推导。Q14未说明两平面互异，严格面面平行定义下可能重合，答案保持U/PENDING。Q16/Q18/Q20题图为比例示意重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "文科",
+        "variant": "上海文科"
+      },
+      "issue_ids": [
+        "ISSUE-1388"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-shanghai-arts",
+      "production_state": "blocked",
+      "project_dir": "2003_上海卷_文科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PENDING，不把预期选项 D 写成确定答案或官方答案。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_上海文_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_上海文_含解析.md",
+        "questions": "2003/2003_数学真题_上海文_试题.md",
+        "solution_body": "2003/2003_数学真题_上海文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4"
+      ],
+      "title": "2003 年·上海卷·文科",
+      "track": "arts",
+      "year": 2003
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_理科/figures/f2003_shanghai_science_q16_function_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_理科/figures/f2003_shanghai_science_q18_parallelepiped.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_上海卷_理科/figures/f2003_shanghai_science_q20_tunnel_cross_section.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "2003_shanghai_science",
+        "id": "gk-2003-regular-shanghai-science",
+        "note": "固定候选 PDF source_id=src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0，SHA-256 88b72fea05d331215504bb89257e375d07c18ba21e830cf9e6288461e88ccf8d，2页题面（印刷页138–139），题签“2003 普通高等学校招生考试（上海卷理）”。发布者、出版者、版次、复制/扫描链与官方身份未核；PDF无答案页，official_answer=null，答案与解析为本库独立推导。Q14未说明两平面互异，严格面面平行定义下可能重合，答案保持U/PENDING。Q16/Q18/Q20题图为比例示意重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            12
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            13,
+            16
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [
+        "ISSUE-1389"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-shanghai-science",
+      "production_state": "blocked",
+      "project_dir": "2003_上海卷_理科",
+      "question_count": 22,
+      "resume_action": "取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PENDING，不把预期选项 D 写成确定答案或官方答案。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_上海理_含解析.md",
+        "questions": "2003/2003_数学真题_上海理_试题.md",
+        "solution_body": "2003/2003_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0"
+      ],
+      "title": "2003 年·上海卷·理科",
+      "track": "science",
+      "year": 2003
     }
   ],
-  "revision": 6132,
+  "revision": 6135,
   "schema_version": 1,
   "sources": [
     {
@@ -35381,8 +35524,8 @@
       "exam_type": "regular",
       "git_blob_oid": "19a5b96cd5d9aa9a9a2d74021cd47067e531f51b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-shanghai-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003上海文.pdf",
       "regions": [],
       "source_id": "src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4",
@@ -35405,8 +35548,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d8679fb9dee874be062e92b436dbabbbcb41eb85",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003上海理.pdf",
       "regions": [],
       "source_id": "src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0",

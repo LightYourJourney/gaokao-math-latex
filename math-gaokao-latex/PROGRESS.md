@@ -28,6 +28,12 @@
 - 文理两卷各新增 Q16 函数图、Q18 平行六面体、Q20 隧道截面三张 TikZ 源码，共6张；均记录 source ID、PDF SHA-256、页码/印刷页码和 Generator。六图经 XeLaTeX 独立编译及源 PDF 对照，Q16 位置关系纠错、Q18 实虚棱与 `B_1D` 对角线、Q20 单位/尺寸/车道线/`h` 顶部引线均复核可见。完整文件 SHA-256 与边界见[图稿报告](reports/2003-shanghai-regular-figures.md)。
 - 图形几何与比例是示意值；图链、manifest `figure_files`/出现次数、生成器、provenance 及正式 PDF 尚未登记/构建。来源身份和官方答案仍未核，Q14 继续 U/PENDING。未调用 OCR、网络或模型；未运行测试套件。
 
+### 2003 上海普通卷文理科：规范事实源、图引用与内部卷登记（2026-11-04）
+
+- 已把复核题面规范化至[文科规范题面](../2003/2003_数学真题_上海文_试题.md)与[理科规范题面](../2003/2003_数学真题_上海理_试题.md)，插入六张图的相对 Markdown 链接；统一答案/解析 front matter 与机器可读题号锚点，并按 `solution_sources.py` 生成两份 `_含解析.md`。每卷 Q1–Q22 题号对齐，小问结构对齐。
+- 通过 `register-papers --write` 登记 `gk-2003-regular-shanghai-arts`、`gk-2003-regular-shanghai-science` 与 batch `phase4-b47`，manifest revision 6132→6133；两卷 Q14 阻塞项为 `ISSUE-1388`、`ISSUE-1389`，paper `blocked`、batch `planned`。随后 `sync-figure-registry --write` 为每卷登记 Q16/Q18/Q20 图及 `expected_occurrences=2`，revision 到 6135。详情与八份事实源/派生稿 SHA-256 见[内部卷登记报告](reports/2003-shanghai-regular-paper-registration.md)。
+- `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 和 `manifest_csv.py --write/--check` 均通过；CSV 775 行。未建逐题 provenance、未生成 TeX/PDF，未做正式构建或视觉回执。来源身份和官方答案仍未知，Q14 保持 U/PENDING；未调用 OCR/联网/模型或运行测试套件。
+
 ### 2003 上海普通卷理科：Q1–Q22 独立题面复核（2026-11-04）
 
 - 一名未参与转录的独立复核者直接渲染固定 PDF，逐题核对 Q1–Q22；主会话另行查看第1页 Q16/Q18/Q19 和第2页 Q20/Q22 原图。最终 Q1–Q22 题干、公式、符号和小问全部与可见页图相符，0处未决文字/符号差异、0处影响判断的模糊像素。

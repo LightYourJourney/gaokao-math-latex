@@ -23284,3 +23284,37 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1388
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面在Q14列出四个判断条件，但没有声明平面 α 与 β 互异。严格将面面平行定义为两平面无交点时，选项 D 只能推出两平面方向相同，仍允许 α=β；其余选项不足以推出平行。固定 PDF 仅含题面，无可追溯答案、勘误或评分页据以裁决，因此题面下的答案仍为 U/PENDING；若另行假定两平面互异，预期选项 D。",
+  "fingerprint": "03104f7445d4f00aa81826249d7fd6ff926cd39db26b0f6f16b3e0e525505e60",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-shanghai-arts",
+  "question_id": "gk-2003-regular-shanghai-arts-q14",
+  "resume_action": "取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PENDING，不把预期选项 D 写成确定答案或官方答案。",
+  "source_id": "src-a2453dc34b5026e77f4d0739bc0db2e578931f651c2edf799310ddb5ccc483c4",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1389
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面在Q14列出四个判断条件，但没有声明平面 α 与 β 互异。严格将面面平行定义为两平面无交点时，选项 D 只能推出两平面方向相同，仍允许 α=β；其余选项不足以推出平行。固定 PDF 仅含题面，无可追溯答案、勘误或评分页据以裁决，因此题面下的答案仍为 U/PENDING；若另行假定两平面互异，预期选项 D。",
+  "fingerprint": "c1d30cac22494ed065227e8fdb45850cafe8e39f1d7f81ceb0a5638524da4cbc",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-shanghai-science",
+  "question_id": "gk-2003-regular-shanghai-science-q14",
+  "resume_action": "取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PENDING，不把预期选项 D 写成确定答案或官方答案。",
+  "source_id": "src-1c1b7702523f8dab3f1fb274ae6d8c631a291090d33ddb6e3d9f3d8de897a1d0",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
