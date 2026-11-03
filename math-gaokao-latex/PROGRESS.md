@@ -13913,3 +13913,9 @@
 - 固定候选 source `src-b46bf909434f6686413681f206c6f1c3566760d6e574f4799dc8b1e0658f9ee8`；PDF SHA-256 `b798af61afdac624589769db5bbafe734aa9a0016973bd00b3f5bc8028ab3a40`、Git blob `493b64433fdd83bb4f13a587a8e12a53b2a447e9`，596,831 bytes、A3 横向两页，印刷页70–71。题签为“2000 普通高等学校招生考试（上海卷理）”，含Q1–Q22；PDF仅含题面，无答案或解析。发布者、版次、来源链和官方身份未认证。来源已在 manifest 以 `ready` 候选登记但未绑定 paper；本阶段未改 manifest。
 - `analyze_pdf.py` 分类 `text_layer_candidate`；两页分别含1,478/823个非空白文字字符、可疑字符0、图像对象0，均需内容复核。120 dpi 原页渲染逐页目视确认可读。`pdftotext -layout` 存在三栏交错和公式拆行，故仅作为定位候选；按路由规则未调用 OCR 模型。`local_ocr.py doctor` 显示 Xiaomi-OCR-0、PaddleOCR-VL-1.6、MinerU 部署资产均 ready；本 PDF 的模型调用为0。
 - 固定副本、页渲染、triage 与文字层候选保存在忽略目录 `.work/ocr-local/sources/2000-shanghai-science/`。阶段详情见[固定来源接收与文字层路由报告](reports/2000-shanghai-science-source-intake.md)。下一阶段按原 PDF 逐题转录Q1–Q22并保留无法确认项；本阶段未登记卷/批次、答案、provenance 或构建回执。
+
+### 2000 上海理科候选卷：Q1–Q22 题面转录草稿（2026-11-03）
+
+- 两名 Luna/high 转录者按不重叠范围目视转录Q1–Q12、Q13–Q22；主代理以固定 PDF 两页及 300 dpi 易混字样裁片对照整合，题号连续1–22。草稿位于 `2000/2000_数学真题_上海理_题面转录草稿.md`，SHA-256 `ed26b6c0894daf388d168040bf571d9640af525bf09a85cfcfcfb2950bca52e0`；尚待另一个复核者盲核。
+- 保留源页字面：Q6 注释行首为“按：”，Q7 为“等价题 B”；Q12 原页为“等此数列”，标为待核，不改成“等比”；Q21 指数按原页保留为2，疑似与后续小问不一致，待独立内容复核；Q22 依 300 dpi 原页记为 `ω=\overline{z_0}·\overline z`。Q18 `AB=BC=2`、Q19 分母 `x` 均已放大核对。
+- 尚未开始三幅 TikZ 图稿、paper/batch/issue 注册、答案与解析、provenance、TeX 项目或 PDF 构建。原 PDF 有可读文字层，无 raster-only 页面，本阶段未调用 OCR 模型。详情见[题面转录阶段报告](reports/2000-shanghai-science-transcription.md)；下一步独立盲核全卷并核查 Q12、Q21 疑点。本草稿不表示来源认证或卷级验收。
