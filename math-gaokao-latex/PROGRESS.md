@@ -11,6 +11,12 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`：PDF第1页为 `review`（1566个非空白字符、5个可疑字符），第2页为 `text_candidate`（722个非空白字符、0个可疑字符）；两页均有文字层、`image_objects=0`。两页220 DPI渲染均已目视检查；文字层中的向量箭头等符号以原页为准。本阶段人工复核后未启动OCR（`model_calls=0`、`ocr_calls=0`），没有将文本提取结果当作规范题稿。
 - 当前 manifest revision 6047；来源仍为 `ready`、`paper_id=null`、`paper_relation=null`、`track=null`。本阶段未登记 paper/batch、未修改 manifest/issues/provenance、未转录题面、求解答案或创建图稿。来源发布者、出版者、版次、复制链和官方身份未核；成本数据未知。下一阶段转录Q1–Q21并逐题核对原页，再做独立题面复核；本回执不表示来源认证、整卷验收或长期语料完成。
 
+### 2007 上海文科候选卷：Q1–Q21 题面转录（2026-11-03）
+
+- 据固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`、PDF SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212` 完成填空 Q1–Q11、选择 Q12–Q15、解答 Q16–Q21，规范题面 `2007/2007_数学真题_上海文_试题.md` 的 SHA-256 为 `de2d20276d5df99c3c170cd4ef74bf3cd9af7b8249338da5401b9b139808944b`。两页原件对应印刷页407–408；Q7、Q11、Q16、Q21 的原图仍为待重绘占位。
+- 主会话逐题对照固定 PDF 180 DPI 原页渲染图；Q10 明确保留原文“非零实数”前提与末句“非零复数”判断范围的差异。`solution_sources.parse_question_blocks()` 识别连续21题，解答小问为Q18/Q19各2问、Q20/Q21各3问。原件有文字层仅辅助定位；未调用 OCR 模型/API（`ocr_calls=0`），模型及子代理成本未知。
+- 新增[题面转录报告](reports/2007-shanghai-arts-question-transcription.md)。题面独立复核尚未开始；来源发布者、版次、复制链和官方身份仍未核，`paper_id=null`、`official_answer=null`。答案、解析、provenance、图稿、paper/batch登记、TeX、正式构建和视觉验收均未开始；下一阶段进行独立题面复核。本阶段不代表来源认证、整卷完成或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
