@@ -13973,3 +13973,9 @@
 - Q12 的 U/PENDING 关联 `ISSUE-1369`、`ISSUE-1371`，`conflict_status=none`；Q21 的 U/PENDING 关联 `ISSUE-1370`、`ISSUE-1372`，`conflict_status=unresolved`。四条问题均保持 open / `blocks_completion`，`official_answer=null`。
 - provenance 导入单事务 `ea8a5f52-121e-4985-b334-da4ffabde061`，manifest revision `6091→6092`。`provenance check-batch`、source manifest、issues、solution sources（22题）检查通过；CSV current、775行。batch 为 `provenance_verified`，paper 仍 `blocked`。
 - 尚未生成项目 TeX、简答与四版入口；正式 PDF、页面视觉回执未开始。下一阶段生成项目产物并验证 currentness，Q12/Q21 blocker 保持。
+
+### 2000 上海理科候选卷：TeX、简答与四版入口生成（2026-11-03）
+
+- 为满足选择题摘要格式，将答案要点 Q13–Q16 的选择字母规范为 C/A/A/D，并补入与逐题答案一致的速查表；答案含义未变。`solution_sources.py extract-batch --write` 刷新合并稿。
+- 生成 `questions.tex`、`answers.tex`、`index.json`，简答 `answers_short.tex`，并生成试题版/解析版/简答版/印刷版入口壳。provenance 因 Q13–Q16 答案摘要字节变化而按当前规范源重导入，revision `6092→6093`，transaction `64167f83-3b41-4160-a734-a8bba08e964d`。详情见[项目生成报告](reports/2000-shanghai-science-project-generation.md)。
+- `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、provenance、manifest、issues、solution sources（22题）与 `manifest.csv` 检查通过；CSV current、775行。paper 仍 `blocked`、batch 为 `provenance_verified`，Q12/Q21 blocker 继续。下一步正式构建并按回执流程逐页视觉检查。
