@@ -14416,3 +14416,10 @@
 - 两份规范题面已由图占位替换为 TikZ 链接；`solution_sources.py extract-batch --write` 重新生成两份 `_含解析.md`。manifest `figure_files` 每卷登记4张、每张 `expected_occurrences=2`，revision `6148→6150`。规范题面、派生稿、生成器图映射与图稿内来源证据保持一致。
 - 八图合并 XeLaTeX 预览编译成功，共8页并经 Poppler 渲染目视检查。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`、`manifest_csv.py --check`（775行）及报告投影 currentness 检查通过；完整命令/预览指纹见阶段报告。未生成正式四版 PDF，未运行全量测试。
 - 文科 Q18 的 `A_1/A_2/A` 原页记号冲突与理科 Q17“底面边长的 3”继续照录；`ISSUE-1398`–`ISSUE-1401` 均保持 open / `blocks_completion`，两 paper 仍 blocked、batch 未关闭。下一阶段导入逐题三角色 provenance，再生成项目与四版入口。本阶段不认证来源、答案或整卷验收。
+
+### 2003 北京普通文理候选卷：三角色逐题 provenance 导入（2026-11-04）
+
+- 文科 Q1–Q20、理科 Q1–Q20 共 40 道题建立 question-review、answer-solve、answer-review 三角色记录。页码按固定候选 PDF 登记：文科 Q1–Q17 / Q18–Q20 对应 PDF 第 1 / 2 页（印刷页126 / 127）；理科 Q1–Q17 / Q18–Q20 对应 PDF 第 1 / 2 页（印刷页124 / 125）。详见[provenance 阶段报告](reports/2003-beijing-regular-provenance.md)。
+- 文科仅 Q18、理科仅 Q17 的题面复核记为 `uncertain`、答案证据记为 U/PENDING；各自其余 19 题题面 `passed`、答案为 D 级编者推导。所有题目的 `conflict_status=none`。原件异常均照录并挂接 `ISSUE-1398`–`ISSUE-1401`；不推定答案或原文意图。PDF 无答案页，`official_answer=null`。
+- 事务 `a8b24b50-c43e-45cc-9f10-a83d47ee736c` 将 manifest revision `6150→6151`，批次为 `provenance_verified`，两 paper 继续 blocked。`provenance.py check-batch`、manifest / issue ledger 校验及 `solution_sources.py check-batch` 均通过。原始 ignored `.work/phase4-b48` 已不存在，本轮据 tracked 报告和规范源重建角色记录，不猜测原始代理或模型身份。
+- 项目 TeX、四版构建、逐页视觉回执、批次封存与全量测试仍待后续；本阶段不表示题源认证、整卷完成或长期语料完成。
