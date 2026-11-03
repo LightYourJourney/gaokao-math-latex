@@ -11,6 +11,13 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `mixed_candidates`：第1页 `review`（1437个非空白字符、7个可疑字符），第2页 `text_candidate`（800个字符、0个可疑字符）；两页均有文字层且无嵌入图像对象。页级渲染均已目视检查。本阶段 `model_calls=0`、`ocr_calls=0`，文字层仅作候选，题面须逐题对照原页。
 - 来源当前仍为 `ready`、`paper_id=null`、`paper_relation=null`、`track=null`。本阶段只接收并检查固定来源，未登记paper/batch、未修改manifest/issues、未转录或求解。详情见[2000上海文科来源接收报告](reports/2000-shanghai-arts-source-intake.md)。下一阶段转录Q1–Q22并逐题核对原页，之后独立复核题面。来源身份与官方答案状态未认证；人工耗时未知。本回执不表示题面转录完成、来源认证或长期语料库完成。
 
+### 2000 上海文科候选卷：Q1–Q22 题面转录（2026-11-03）
+
+- 据固定 source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`、PDF SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1` 完成题面草稿 `2000/2000_数学真题_上海文_题面转录草稿.md`：填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；草稿SHA-256 `a6bcdd4557d6430a265ff5d4c328e08259e7c2768ef1a1a35178281e0b3b8eca`。题面独立复核尚未完成。
+- 主会话逐题对照两页180dpi渲染原图；结构解析识别连续22题，小问集合Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。PDF文字层只作候选；无模型调用、OCR调用或外部API。
+- Q21固定源印作 $y=2000(\frac{a}{10})^2$，照录。该式按字面不含$x$，与函数图象描述及后续条件关系异常，未静默改写；答案/解析待核。来源尚未注册为paper，此疑点待后续建立关联阻断issue。Q8、Q11、Q18、Q20图稿待重绘。
+- 本阶段仅形成题面草稿；发布者、出版者、版次、复制链及官方身份未核，`paper_id=null`、`official_answer=null`。答案、解析、独立盲核、paper/batch/issue/provenance登记、图稿、TeX构建与视觉回执均未完成。详情见[题面转录报告](reports/2000-shanghai-arts-question-transcription.md)，下一阶段独立复核原页。本回执不表示来源认证、整卷验收或长期语料完成。
+
 ### 2007 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
