@@ -14375,3 +14375,9 @@
 - `finalize-batch-checked` 返回 `FINALIZED`，无 problems；manifest revision `6116→6117`，事务 `4bd942ec-6b2d-4539-b8a4-eee66cc39d3a`。批次现为 `closed_with_blockers`，paper 仍 `blocked`。build receipt currentness 返回 `OK`（1 succeeded，failed/invalid/missing/stale均0），review `check-batch` 返回 `FINALIZED`。
 - source manifest、issues、provenance、solution sources（22题）、项目/简答/四版生成 currentness、manifest CSV（775行）与 `report.py check --all` 均通过；六个全量报告投影与 phase4-b44 批次报告已刷新。
 - Q11 `ISSUE-1380` 与 Q20(1) `ISSUE-1381` 继续 open / `blocks_completion`，答案维持 U/PENDING；来源身份与 `official_answer` 仍未认证。phase4-b44 本阶段没有重跑全库 unittest；不要把 phase4-b42 条目的历史测试结果当作本批结果。视觉阶段提交 `6d4ba261`，未 push。
+
+### 2003 北京普通文理候选卷：固定来源接收与文字层路由（2026-11-04）
+
+- 在 `feat/gaokao-phase0`、manifest revision 6146 固定两份未绑定候选：北京文科 source `src-dcc6a2c21c7b8e7b8f23f5188f34d7f542f94e40f4219b54cfb85a0d7004bc0f`，SHA-256 `7fc0fd289fc486a0ae1c16a9ab5b4f0561830897df6e8897c50666f03d511913`、Git blob `098d2daa4a08a3ef69b98b656842324f4819ece6`；北京理科 source `src-120ea104f8cb373f5731039fa9d36469df457869849f27420831962ef1ad2306`，SHA-256 `d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702`、Git blob `1f3cde756f4b417da80d0bb4b7cf2501e1ffad37`。两份均为 2 页 A3 横向，candidate source 在 manifest 仍为 `ready`、`paper_id=null`；本阶段未改 manifest。
+- 原页题签分别可见“北京卷文”“北京卷理”，题号范围均为 Q1–Q20（不是 Q1–Q22）：文科印刷页126–127，理科124–125。文科文字层页级分类为 `text_candidate`、可疑字符0；理科虽有文字层，文档级为 `text_layer_candidate`、页级均为 `review`，每页7个可疑字符。按 OCR 工作规范直接核看完整页面图；本批没有调用 OCR 模型（`ocr_calls=0`、`model_calls=0`）。
+- 原页题签不认证发布者、出版者、版次、复制/扫描链或官方身份。理科 Q17 可见“底面边长的 3”语句异常，未据语义补字，需在转录稿中保留并标记待核。固定来源接收详情见[文科记录](reports/2003-beijing-arts-source-intake.md)与[理科记录](reports/2003-beijing-science-source-intake.md)。题面盲核已完成，题面和复核报告将在下一阶段纳入跟踪目录；此条只记录来源接收，不表示题面或整卷完成。
