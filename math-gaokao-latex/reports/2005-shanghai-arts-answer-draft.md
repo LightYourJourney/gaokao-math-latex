@@ -16,6 +16,6 @@
 
 ## 阶段状态与下一步
 
-本阶段形成Q1–Q22答案和解析草稿；整合稿的独立答案复核仍待完成。Q12、Q20(1)尚待可靠同版答案/勘误或语义裁定；`official_answer=null`。尚未登记paper/batch/issue/provenance，未生成确定性含解析稿、图稿或TeX，未构建PDF。
+本阶段形成Q1–Q22答案和解析草稿。整合稿后续已由独立复核者逐题核验，结果见[独立答案复核记录](2005-shanghai-arts-answer-review.md)。Q12、Q20(1)尚待可靠同版答案/勘误或语义裁定；`official_answer=null`。尚未登记paper/batch/issue/provenance，未生成确定性含解析稿、图稿或TeX，未构建PDF。
 
-没有调用OCR或外部API；模型/API token与费用不可见。下一阶段由未参与求解的复核者独立核对整份答案稿，保持两项U/PENDING，不以推导替代官方答案。本报告不表示数学验收、来源认证或整卷闭环。
+没有调用OCR或外部API；模型/API token与费用不可见。本报告记录初稿阶段；答案独立复核与后续锚点格式调整分阶段记录。本报告不表示来源认证或整卷闭环。
