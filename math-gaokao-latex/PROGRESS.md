@@ -59,6 +59,14 @@
 - `provenance.json` 落盘于 `2004_上海卷_理科/provenance.json`（SHA-256 `63767f42c111533b256cd705528a9d5310df2e7721cbfb8d1c2f6a61c0a83b1d`）；更新 manifest revision 6125→6126，批次状态更新为 `provenance_verified`，试卷状态维持 `blocked`。
 - 门禁校验全量通过：`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch --batch phase4-b46`、`provenance.py check-batch --batch phase4-b46`、`manifest_csv.py --check`（当前且775行）。详情见[逐题 provenance 导入报告](reports/2004-shanghai-science-provenance.md)。项目 TeX 生成与四版构建待后续。本阶段不表示来源认证或整卷验收。
 
+### 2004 上海理科普通卷：项目 TeX 生成、简答与四版入口（2026-11-04）
+
+- `generate_projects.py --manifest source-manifest.json --paper gk-2004-regular-shanghai-science --write` 生成题面/答案 TeX 与全局 `index.json` 条目；`make_short_answers.py --write` 生成简答速查；`make_editions.py --write` 生成试题、解析、简答、印刷四版入口。
+- `generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、`solution_sources.py check-batch`（22题）、`provenance.py check-batch`（1卷）全量通过。
+- 生成文件包括 `questions.tex`、`answers.tex`、`answers_short.tex`、`试题版.tex`、`解析版.tex`、`简答版.tex`、`印刷版.tex` 及 `index.json` 更新。详情见[项目生成报告](reports/2004-shanghai-science-project-generation.md)。
+- 本阶段尚未编译正式 PDF、建立 build/review 回执、逐页视觉验收或运行全库测试；Q19/Q22 blocker 继续阻断。本阶段不表示本卷闭环或长期语料完成。
+
+
 
 
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
