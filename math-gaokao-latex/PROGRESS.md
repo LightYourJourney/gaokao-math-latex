@@ -13701,3 +13701,10 @@
 - `sync-figure-registry` 登记 5 幅 TikZ 图，每项题面与合成稿预期引用 2 次；manifest revision `6061→6062`。Q18 频数表是 Markdown 表，不计入 TikZ 清单。为消除转换器对 `\]。` 的未闭合告警，Q21 句内公式改用行内数学记法，数学内容不变。
 - `generate_projects --write` 更新题面/答案 TeX 与共享 `index.json`。登记后先前生成状态会因共享索引未同步而显示 artifacts stale；索引重建后，抽查 `phase1-b83` 与 `phase3-b23` 的批次复核门禁均恢复 `FINALIZED`。`source_manifest validate`、`issues validate`、`solution_sources check-batch`（22题）、`generate_projects --check` 与 `manifest_csv --check`（775行）通过。
 - 阶段报告见[paper/source 登记报告](reports/2015-fujian-arts-registration.md)。尚未导入逐题 provenance，未生成简答和四版入口、未正式构建或逐页视觉复核，未运行测试套件；下一阶段继续 provenance 与版面准备。本条不表示来源认证、单卷闭环或长期语料完成。
+
+### phase3-b24 2015 福建文科：三角色逐题 provenance 与答案盲核（2026-11-03）
+
+- 独立题面复核 Q1–Q22 全部通过：Q1–Q18 对应固定 PDF 第1页，Q19–Q22 对应第2页；无转录差异。固定来源 PDF 无答案页，`official_answer=null`，来源身份链未核。
+- 三角色工作稿置于 ignored `.work/phase3-b24/provenance/`；`provenance.py import-batch` dry-run 与正式写入通过，写入 22 题 provenance，manifest revision 为 6063。答案全为 D 级非官方推导，未新增 issues；首轮分歧经复算已解决，Q5、Q6、Q9、Q11、Q12、Q14、Q17、Q19、Q20、Q22 记作 resolved，无 unresolved。
+- 最终答案交叉核验见[三角色 provenance 报告](reports/2015-fujian-arts-provenance.md)。`provenance.py check-batch`、source manifest、issues、solution sources、项目 TeX currentness 与 775 行 CSV 检查通过。
+- 本阶段未调用 OCR，未运行测试套件；简答版、四版入口、正式构建和逐页视觉回执仍待完成。paper 为 `answers_verified`、batch 为 `provenance_verified`，下一阶段生成简答和版面入口；不表示来源认证、单卷闭环或长期语料完成。
