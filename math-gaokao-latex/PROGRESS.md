@@ -10,6 +10,12 @@
 - `analyze_pdf.py --no-cache --include-text` 判为 `text_layer_candidate`，两页都有文字层且无图像对象：第1页 `text_candidate`（1503非空白字符、0可疑字符），第2页 `review`（699字符、7可疑字符）。两页150 DPI渲染均已目视检查；第2页继续人工路由，转录按原页核对。依路由规范，本阶段没有调用OCR（`model_calls=0`、`ocr_calls=0`）。
 - `local_ocr.py doctor` 显示三引擎部署资产均 `ready`；source manifest 校验通过，manifest CSV 当前且775行。来源发布者、出版者、版次、复制链和官方身份未核，PDF无答案或解析页；`official_answer`未知。详情见[固定来源接收报告](reports/2005-shanghai-science-source-intake.md)。下一阶段逐题转录Q1–Q22并对照原图，随后独立复核题面。本阶段不表示来源认证、答案验证、整卷验收或长期语料完成。
 
+### 2005 上海理科普通卷：Q1–Q22 题面转录（2026-11-03）
+
+- 按固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`、PDF SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31` 完成填空Q1–Q12、选择Q13–Q16、解答Q17–Q22；草稿位于 `2005/2005_数学真题_上海理_题面转录草稿.md`，SHA-256 `5b5a73ae5b49d9d8b31c1866557e59804ffb1882e89322ab2ead4749f64c3d29`。题面分节与题号连续，共22题。
+- 两段Luna/high转录按Q1–Q12、Q13–Q22拆分，主代理再逐题对照PDF第1–2页原图。Q11/Q17/Q19图位待矢量重绘；Q12六行数阵已按原序作为数组转写。Q20(1)照录“中低价层”，题干与(2)照录“中低价房”，保留原卷差异；Q12没有补入原文不存在的字。
+- 定向结构解析识别Q1–Q22及解答小问Q19(1–2)、Q20(1–2)、Q21(1–3)、Q22(1–3)。原PDF文字层只作定位参考，本阶段未调用OCR（`model_calls=0`、`ocr_calls=0`）。独立题面复核、答案/解析、paper登记、图稿及构建仍待后续。详情见[题面转录报告](reports/2005-shanghai-science-question-transcription.md)。本阶段不表示来源认证、答案验证或整卷验收。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
