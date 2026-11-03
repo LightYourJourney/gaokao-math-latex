@@ -13661,3 +13661,9 @@
 - Q7/Q11/Q16/Q21 题面哈希及图稿 evidence 更新后，provenance 事务将 manifest 推进至 revision 6054；paper `blocked`，batch `provenance_verified`。Q21 保持 U/PENDING 与 ISSUE-1362，`official_answer=null`；固定来源的出版身份未核。
 - `solution_sources`、`provenance`、source manifest、issues、项目/简答/版本壳生成器 `--check`、manifest CSV（775 行且 current）与 `git diff --check` 均通过。未运行测试套件。
 - 尚未进行正式四版 PDF 构建、build/review receipts 或整页视觉检查；下一阶段继续正式构建与逐页视觉收口。本阶段不表示单卷闭环或长期语料完成。
+
+### phase1-b83 2007 上海卷文科：四版正式构建（2026-11-03）
+
+- 正式构建 attempt `9a6f2b2e-45da-4851-a97e-beef2fc9f00b`，输入 manifest revision 6055，输出 revision 6056。试题版、解析版、简答版、印刷版分别 4/17/6/16 页，共 43 页；PDF SHA-256、工具链及完整输入投影见 [构建报告](reports/2007-shanghai-arts-build.md) 与 `2007_上海卷_文科/receipts/build.json`。
+- 四版均一次 XeLaTeX 成功，TeX error、缺字、Overfull、undefined reference 均为 0。`validate-receipts --batch phase1-b83` 返回 `code=OK`，0 failed/invalid/missing/stale，1 pending 等待视觉审查。
+- 本阶段尚未检查正式 PDF 页面或生成 review receipt；batch 为 `compiled_pending_review`。Q21(3) 仍 U/PENDING / ISSUE-1362，paper `blocked`，来源身份未核、`official_answer=null`。下一阶段检查 43 页并登记视觉回执；本记录不表示本卷闭环或长期语料完成。
