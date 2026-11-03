@@ -14423,3 +14423,10 @@
 - 文科仅 Q18、理科仅 Q17 的题面复核记为 `uncertain`、答案证据记为 U/PENDING；各自其余 19 题题面 `passed`、答案为 D 级编者推导。所有题目的 `conflict_status=none`。原件异常均照录并挂接 `ISSUE-1398`–`ISSUE-1401`；不推定答案或原文意图。PDF 无答案页，`official_answer=null`。
 - 事务 `a8b24b50-c43e-45cc-9f10-a83d47ee736c` 将 manifest revision `6150→6151`，批次为 `provenance_verified`，两 paper 继续 blocked。`provenance.py check-batch`、manifest / issue ledger 校验及 `solution_sources.py check-batch` 均通过。原始 ignored `.work/phase4-b48` 已不存在，本轮据 tracked 报告和规范源重建角色记录，不猜测原始代理或模型身份。
 - 项目 TeX、四版构建、逐页视觉回执、批次封存与全量测试仍待后续；本阶段不表示题源认证、整卷完成或长期语料完成。
+
+### 2003 北京普通文理候选卷：解析显示公式分隔修正（2026-11-04）
+
+- 首次项目生成发现两卷解析正文多行显示公式的结束符 `\\]` 接在公式行末，而严格转换器要求结束符独占一行；首轮因告警在原子写入前停止，没有生成半成品。按既有转换规范修正文科 19 个、理科 22 个公式块；39 个闭合符独占成行，源中已有的 24 个句点移到下一行。数学表达式和题目文字保持不变；将分隔格式反向归并后与修正前 HEAD 逐字相同。
+- 以 `solution_sources.py extract-batch --write` 重生成两份 `_含解析.md`；都与当前 `render_combined` 输出相同。最终解析正文/含解析 SHA-256 与验证记录见[分隔修正报告](reports/2003-beijing-regular-math-delimiters.md)。
+- `solution_sources.py check-batch`、`provenance.py check-batch` 均通过；内存项目生成逐卷得到试题/解析 Q1–Q20，8 张登记图各出现两次，project result 门禁无问题。manifest、题面、答案与 issues 未改；尚未写正式 TeX 或四版入口。
+- 下一阶段重新运行项目 TeX 与四版生成，再进入正式构建和逐页视觉审查。本阶段不表示正式构建、批次封存或长期语料完成。
