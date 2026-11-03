@@ -14453,3 +14453,9 @@
 - 收口确定性校验通过：manifest、issues、review `check-batch`、build `--require-final --require-current-inputs`（2 succeeded，failed/invalid/missing/stale/pending 均0）、本批 provenance、两卷各20题 solution sources、project/short-answer/edition currentness、775行 `manifest.csv` 均通过。六个全量报告投影已刷新，`report.py check --all` 返回“报告输出与全量 manifest 当前一致；未完成状态已在报告中保留”。
 - 完整测试 `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1779 tests in 576.337s`、`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：80卷缓存状态与现场派生状态不一致，首项为 `gk-2012-regular-national-outline-arts`（缓存 `complete`、现场 `answers_verified`）。本批单独的 `provenance.py check-batch --batch phase4-b48` 通过，故这项全库缓存漂移不属于本批；未刷新无关卷状态。
 - 后续只在取得可追溯同版资料、勘误或可靠同期来源后处理 Q18 与 Q17 blocker：不得据椭圆图静默改写文科顶点字母，也不得为理科“底面边长的 3”补字。答案仍为编者推导、非官方。来源发布者、出版者、版次、扫描/复制链和官方身份尚未认证。本批已封存但两卷未完成；本条不代表长期语料库完成。
+
+### 2026 北京高考数学回忆版候选卷：固定来源接收与文字层路由（2026-11-04）
+
+- 在 manifest revision `6159` 检查未绑定的 2026 北京候选 source `src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`，固定文件 `普通高考/2026/2026北京.pdf`。现场 SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`、Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`、5页及365,585字节均与 manifest 一致；`paper_id=null`，本阶段未绑定 paper 或 batch。
+- 首页题签自称“2026 年北京高考数学真题（回忆版）”。5页只见题面 Q1–Q21；Q10选项跨第1–2页，Q21在第5页。未见答案或解析页。页面按 `analyze_pdf.py` 判为 `text_candidate`，含第2–3页图形和第5页数阵表；原页结构已逐页查看。依 OCR 工作规范不重复 OCR，`ocr_calls=0`、`model_calls=0`。发布者、版次、来源链与官方身份未核。
+- 详情见[固定来源接收报告](reports/2026-beijing-recall-source-intake.md)。下一阶段为该回忆版建立独立范围并转录 Q1–Q21；不得与全国 I 回忆版合并或推断与正式卷一致。本阶段不表示题面、整卷或长期语料完成。
