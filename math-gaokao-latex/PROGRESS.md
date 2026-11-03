@@ -36,6 +36,11 @@
 - Q17 再次核算复数模不等式 $(a-4)^2 < -3$ 在实数范围内恒无解（$a \in \varnothing$），原卷字面无解事实确认无误，维持 U/PENDING；Q18 均值不等式极值 $x = 8-4\sqrt{2} \approx 2.343\text{ m},\; y = 2\sqrt{2} \approx 2.828\text{ m}$ 验证无误；Q19(1) $A=(-\infty, -1)\cup [1, +\infty)$，(2) 题面字面条件作 $B \subseteq A$ 未定义集合 $B$，按题干函数定义域 $D$ 理解解得 $(-\infty, -2]\cup [\frac{1}{2}, 1)$，维持 U/PENDING。
 - 答案要点 SHA-256 `8121eb5cb75390b7907b8f6a5e0850767b79c3381d7ad620cbcc2aa4d64562cf`，解析正文 SHA-256 `5e68195fafbec6fc0b38505c21700b28111ce3ea21188690ebc83ea842f04f92`，推导严密成立。`solution_sources.render_combined` 只读预演成功，22题对齐。详情见[独立答案复核报告](reports/2004-shanghai-arts-answer-review.md)。未登记paper/batch/issues/provenance，未生成含解析派生稿、图稿或TeX，未构建；`official_answer=null`，来源身份未核。本阶段不表示来源认证或整卷验收。
 
+### 2004 上海文科普通卷：规范事实源与内部卷登记（2026-11-03）
+
+- 将复核后的题面转录草稿固定为 `2004/2004_数学真题_上海文_试题.md`，SHA-256 `752a56c8eb0a6b91d24282686f682dd3f3084dffdaa8daaa4fbb1bc063094d4b`；答案与解析元数据绑定内部候选 `paper_id=gk-2004-regular-shanghai-arts`，绑定后答案要点 SHA-256 `6b2938f6841a70b3eea3775713fbe8a2914fa3d65dfd6a52b30d5a91b94aaad2`，解析正文 SHA-256 `61ec23b36e7d8e8d5ba051f35a28c015d73309f0cdd6fb42150b7a05eca25ac5`；确定性生成 `_含解析.md`，SHA-256 `3129a581881e143a9273dea0658a0cbc11099ccd3eb26b20d93debfaf0092d74`。
+- `source_manifest.py register-papers --write` 新建批次 `phase4-b45` 与 paper，manifest revision 6117→6118；source `src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290` 关联为内部 canonical。Q17/Q19 阻塞项分别是 `ISSUE-1384`、`ISSUE-1385`，paper `blocked`、batch `planned`。`source_manifest.py validate`、`issues.py validate`、`solution_sources.py extract-batch --write` / `check-batch` 及 `manifest_csv.py --write` / `--check` 均通过。详情见[规范事实源与内部卷登记报告](reports/2004-shanghai-arts-paper-registration.md)。
+
 ### 2005 上海理科普通卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`，Git blob `a76d7aa8877b7fa25ac09cb596b440c0545f4fa6`，505945 bytes；与 manifest revision 6109 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页262–263，题签为“2005 普通高等学校招生考试（上海卷理）”，共22题；可见图稿位Q11、Q12、Q17、Q19。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。

@@ -23216,3 +23216,37 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1384
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q17 给出复数条件 (1+i)z1 = -1+5i 与 z2 = a-2-i，并要求 |z1 - z2| < |z1|。代数化简得 (a-4)^2 < -3，在实数范围内无解。部分外部版本作 |z1/z2| < |z1|（对应 a != 2）。因固定原卷字面确为减号，原题条件在实数范围内无解。",
+  "fingerprint": "9a9a56a5131e2b62e70a6be070afb1e5862f95158628e2862612c9adaa8b4f99",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-regular-shanghai-arts",
+  "question_id": "gk-2004-regular-shanghai-arts-q17",
+  "resume_action": "取得可追溯官方权威答案、评分标准或同期勘误以确认原题是否为除法或确系无解试题；在此之前将 Q17 保留 U/PENDING，不擅自修改题面符号。",
+  "source_id": "src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
+
+## ISSUE-1385
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定题面 Q19 题干定义函数 g(x) 的定义域为 D，但在第 (2) 问提问中印作“若 B ⊆ A，求实数 a 的取值范围”，题面通篇未定义集合 B。若按常理将 B 视为 g(x) 的定义域 D 则可解得 a <= -2 或 1/2 <= a < 1。",
+  "fingerprint": "cdad28bd43a5bd39e94c9d52274bf003dbf10622c22b01762a9a401e1cc02529",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2004-regular-shanghai-arts",
+  "question_id": "gk-2004-regular-shanghai-arts-q19",
+  "resume_action": "取得可追溯官方试题、同版答案或勘误确认原题第 (2) 问集合符号；在此之前将 Q19(2) 保留 U/PENDING，条件性解集不写为确定结论。",
+  "source_id": "src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```
