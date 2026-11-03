@@ -1,6 +1,40 @@
 # 高考数学 LaTeX 项目交接
 
-更新时间：2026-10-22（中国标准时间）
+更新时间：2026-11-03（中国标准时间）
+
+> **当前接续以本节为准。** 下方旧的 HEAD、全库统计、候选批次与状态记录均为历史快照，不能覆盖当前 manifest、回执和最新 PROGRESS 记录。
+
+## 2026-11-03 当前状态：phase4-b44 已封存，保留阻塞
+
+### 工作位置与分支
+
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。
+- 本次交接更新前的 HEAD：`6d4ba261157a040946107c0470969eb6dbfc57ee`（2005 上海理科视觉审查）；当时工作区干净且与 upstream 同步。交接文档提交会在该提交之上新增一个本地提交；新对话启动时仍须重新读取实际 HEAD/status。没有切换到 `main`，没有 push。
+- manifest revision `6117`。当前全库状态见下面统计与 `math-gaokao-latex/reports/baseline.md`；具体记录以 `source-manifest.json`、批次报告和收据为准。
+
+### 最近完成：2005 上海理科普通卷
+
+- `phase4-b44` / `gk-2005-regular-shanghai-science` 已完成构建和视觉审查，终结器返回 `FINALIZED`，批次状态 `closed_with_blockers`；试卷仍为 `blocked`。本批不表示 1952–2026 语料目标完成。
+- 固定候选来源：`src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，PDF SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`。来源发布者、出版者、版次、复制链和官方身份未核；`official_answer=null`。来源有文字层，转录过程没有调用 OCR。
+- Q1–Q22、三张图（Q11/Q17/Q19）、三角色 provenance、规范源、TeX 项目与四版均已完成。正式构建 attempt `7d9374a1-88f0-44d8-98d2-ac55372ab14f` 共49页（试题5、解析20、简答7、印刷17）；编译错误、缺字、溢出和未定义引用为0。所有49页八项视觉检查通过，视觉问题0。详情见 [`phase4-b44.md`](../../exams/math-gaokao-latex/reports/phase4-b44.md)、[正式构建报告](../../exams/math-gaokao-latex/reports/2005-shanghai-science-formal-build.md) 与试卷 `receipts/`。
+- 必须保留的未决项：Q11 “最小的是一个四棱柱”是否要求唯一最小（`ISSUE-1380`）；Q20(1) 原文“中低价层”与上下文“中低价房”不一致（`ISSUE-1381`）。两项均为 open / `blocks_completion`，答案维持 U/PENDING；除非取得可追溯同版资料、勘误或可靠同期证据，否则不得补写唯一性条件、改题面或解除阻塞。
+- 本批阶段提交依序为：来源接收 `9df9602a`、题面转录 `b5ddd1b5`、题面复核 `c3193247`、答案初稿 `c20bee9c`、答案复核 `1c68cf8b`、卷登记 `e04e1b77`、题图 `c30de29a`、provenance `412ca9a7`、报告投影 `a48e536b`、TeX 生成 `38f2c997`、解析提示修复 `0083d4eb`、正式构建 `ac961cd2`、视觉封存 `6d4ba261`。详细步骤与本批 validation 记录见 `math-gaokao-latex/PROGRESS.md`。
+
+### 当前全库快照
+
+依据 manifest revision 6117 和当前 baseline 投影：
+
+- 775 个来源（普通 734、春季 41）；413 套试卷（complete 309、compiled 3、blocked 101）；261 批（closed 180、closed_with_blockers 80、compiled_pending_review 1）。
+- 正式复核门禁：FINALIZED 218、INVALID_OR_STALE 42、VISUAL_FAILED 1；1652/1652 个版本有编译记录。
+- build 回执：succeeded 409、compiled_pending_review 4；review 回执：passed 412、failed 1；问题总账 1383 条，未解决 289 条，其中 blocks_completion 228 条。
+- phase4-b44 的 build receipt 验证为 `OK`（succeeded 1，failed/invalid/missing/stale 均0），review 检查为 `FINALIZED`（problems 空）；source manifest、issues、provenance、solution sources、三个生成 currentness 检查、CSV 775行及 `report.py check --all` 均通过。
+- phase4-b44 没有重跑全库 unittest。PROGRESS 中 phase4-b42 的历史测试结果为 1769 tests、3 failures、13 skipped；它不是 b44 的测试结果，后续如需全库测试应先核实该记录中的已知失败是否仍存在。
+
+### 下一对话的执行入口
+
+- 先核对本 worktree、分支、HEAD、Git 状态；读取本节、`PROGRESS.md` 最新记录、当前 source manifest、baseline、issues 和对应回执。不要重做 phase4-b44 的转录、构图、provenance、构建或视觉复核。
+- 本交接没有预选下一批。应从 live manifest 与来源文件中重新挑选尚未绑定且有固定可核来源的候选，先检查已有草稿、项目目录、历史与 issues，避免重复登记或覆盖其他会话成果。
+- 按当前项目门禁逐阶段推进：保存来源与不确定性、题面和答案分层、独立复核、三角色 provenance、确定性生成、四版构建、逐页八项视觉复核、finalize、刷新并检查报告/CSV；每完成一阶段提交窄范围内容，不 push。
 
 
 ## 2026-10-26 后续（十二）：1995 全国文科接续验收
@@ -120,7 +154,7 @@ canonical worktree与分支仍为`phase0-wt` / `feat/gaokao-phase0`。
   `tests/test_1996_shanghai_science_sources.py`；此次只读定位，未重验源PDF哈希。
 - 保留全部未提交成果；未获授权不Git提交，不push；不用旧PNG或旧QC作为当前验收证据。
 
-## 状态摘要
+## 2026-10-22 历史状态摘要（已被文首当前接续取代）
 
 题库仍在持续建设，1952—2026 全范围目标尚未完成。请在 `feat/gaokao-phase0` 分支和 canonical worktree 继续；不要切到 `main`，不要 push，也不要覆盖既存未提交文件。
 
@@ -142,7 +176,7 @@ git status --short --branch
 git log -1 --oneline --decorate
 ```
 
-## 全库快照
+## 2026-10-22 历史全库快照（统计已被文首与 live baseline 取代）
 
 依据 manifest revision **4611** 及生成的 `math-gaokao-latex/reports/baseline.md`（2026-10-22）：
 
@@ -157,7 +191,7 @@ git log -1 --oneline --decorate
 
 这些是登记/批次计数，不代表全卷均逐题人工复核，更不代表全项目完成。
 
-## 最近完成
+## 截至 2026-10-28 的历史完成记录
 
 ### 2016 上海文理科，phase2-b14
 
@@ -178,7 +212,7 @@ git log -1 --oneline --decorate
 - 题面来源无答案页，解析是编者推导且有标注；出版社/版次/原件身份未认证。
 - 不重做26题转录、独立盲核或视觉审查；只有取得同版权威证据后再处理阻断。
 
-## 现存失败 / 可能的下一项
+## 2026-10-22 的历史失败项与候选（必须重新核对）
 
 - phase0-b02：2020全国Ⅰ文科原卷标记取消的第23题按既定决定仍保留，造成5处 heading_number fail。不要擅自删题或将失败改判通过。
 - phase2-b58 / b59：1986广东两卷固定来源缺选项图/字形；未找到可逐页核对同版来源。不可借全国卷或异版图补绘，不可凭推测填补。
@@ -226,4 +260,4 @@ git log -1 --oneline --decorate
 
 ## 给新对话的启动提示
 
-> 请从 `仓库根` 的 `feat/gaokao-phase0` 分支继续高考数学 LaTeX 项目。先读 `docs/superpowers/plans/2026-10-22-gaokao-latex-handoff.md`，核对 git status/branch/HEAD；再读 `PROGRESS.md` 末尾、当前 manifest、baseline、相关报告和 issues。`typography/` 的排版治理改动属于 main 分支，勿合并或 stage 到题库分支；不切 main、不 push、不重复已完成工作。选择有固定、可核来源且尚未完成的下一项，按本仓库门禁推进。提交前检查实际 diff 并限定 staging 范围。
+> 请从 `仓库根` 的 `feat/gaokao-phase0` 分支继续高考数学 LaTeX 项目。先读本交接文档最前面的“2026-11-03 当前状态”，核对 Git status/branch/HEAD；再读 `math-gaokao-latex/PROGRESS.md` 最新记录、live manifest、baseline、相关报告和 issues。phase4-b44（2005 上海理科）已 `FINALIZED` / `closed_with_blockers`，不要重做；Q11/Q20(1) blockers 与官方来源身份未认证边界继续保留。本交接没有预选下一批，需依据 live manifest、固定来源和已有文件重新评估。`typography/` 的排版治理改动属于 main 分支，勿合并或 stage 到题库分支；不切 main、不 push、不覆盖未提交成果。每完成一阶段提交前检查实际 diff、限定 staging 范围并运行 `git diff --cached --check`。

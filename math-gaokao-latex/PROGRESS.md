@@ -14125,5 +14125,12 @@
 
 - 首次正式构建 attempt `36420edc-3229-4dfb-8fa5-9c6bde1c0d91` 因解析说明中的行内代码 `paper_id=null` 被转换成带未转义下划线的 `\texttt` 而导致解析版、印刷版失败；根因说明也与已登记 paper 状态不符。修正文案并确定性重建后提交 `0083d4e`，不更改官方答案未认证及 Q11/Q20(1) U/PENDING 边界；`ISSUE-1382`、`ISSUE-1383` 随成功构建解除。
 - 成功构建 attempt `7d9374a1-88f0-44d8-98d2-ac55372ab14f` 完成四版共49页；errors、missing characters、overfull、undefined references 均为0。页数、SHA、manifest revision、事务及首次失败细节见[正式构建报告](reports/2005-shanghai-science-formal-build.md)。
-- `build_projects validate-receipts --require-final --require-current-inputs` 返回 `PENDING_REVIEW`，failed/invalid/missing/stale 均为0。`manifest.csv` 775行，全量六个报告投影已刷新；正式 build 阶段尚待本次视觉审查终结器封存。
+- 构建阶段的 `build_projects validate-receipts --require-final --require-current-inputs` 返回 `PENDING_REVIEW`，failed/invalid/missing/stale 均为0；这是视觉复核前的阶段状态。`manifest.csv` 775行，全量六个报告投影已刷新。随后视觉阶段与最终封存见下条。
 - Q11 的 `ISSUE-1380` 与 Q20(1) 的 `ISSUE-1381` 继续 open / blocks_completion；paper 仍 blocked。来源发布者、出版者、版次、复制链和官方身份未核，`official_answer=null`。本阶段仅覆盖 `phase4-b44`，不代表长期语料库完成。
+
+### 2005 上海理科普通卷：49页视觉审查与批次封存（2026-11-03）
+
+- 复用成功构建 attempt `7d9374a1-88f0-44d8-98d2-ac55372ab14f` 绑定的 PDF、manifest 输入投影和工具指纹，逐页复核试题版5页、解析版20页、简答版7页、印刷版17页；49页全部完成八项检查并通过，视觉问题0、警告豁免0。review receipt `passed`，详见[批次视觉审查报告](reports/phase4-b44.md)与 `2005_上海卷_理科/receipts/review.json`。
+- `finalize-batch-checked` 返回 `FINALIZED`，无 problems；manifest revision `6116→6117`，事务 `4bd942ec-6b2d-4539-b8a4-eee66cc39d3a`。批次现为 `closed_with_blockers`，paper 仍 `blocked`。build receipt currentness 返回 `OK`（1 succeeded，failed/invalid/missing/stale均0），review `check-batch` 返回 `FINALIZED`。
+- source manifest、issues、provenance、solution sources（22题）、项目/简答/四版生成 currentness、manifest CSV（775行）与 `report.py check --all` 均通过；六个全量报告投影与 phase4-b44 批次报告已刷新。
+- Q11 `ISSUE-1380` 与 Q20(1) `ISSUE-1381` 继续 open / `blocks_completion`，答案维持 U/PENDING；来源身份与 `official_answer` 仍未认证。phase4-b44 本阶段没有重跑全库 unittest；不要把 phase4-b42 条目的历史测试结果当作本批结果。视觉阶段提交 `6d4ba261`，未 push。
