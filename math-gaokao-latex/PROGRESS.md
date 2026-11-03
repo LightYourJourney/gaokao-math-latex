@@ -34,6 +34,13 @@
 - 通过 `register-papers --write` 登记 `gk-2003-regular-shanghai-arts`、`gk-2003-regular-shanghai-science` 与 batch `phase4-b47`，manifest revision 6132→6133；两卷 Q14 阻塞项为 `ISSUE-1388`、`ISSUE-1389`，paper `blocked`、batch `planned`。随后 `sync-figure-registry --write` 为每卷登记 Q16/Q18/Q20 图及 `expected_occurrences=2`，revision 到 6135。详情与八份事实源/派生稿 SHA-256 见[内部卷登记报告](reports/2003-shanghai-regular-paper-registration.md)。
 - `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 和 `manifest_csv.py --write/--check` 均通过；CSV 775 行。未建逐题 provenance、未生成 TeX/PDF，未做正式构建或视觉回执。来源身份和官方答案仍未知，Q14 保持 U/PENDING；未调用 OCR/联网/模型或运行测试套件。
 
+### 2003 上海普通卷文理科：逐题 provenance 导入（2026-11-04）
+
+- 依独立题面复核报告和盲解/答案复核报告，为两卷各 22 题导入 question-review、answer-solve、answer-review 三角色 provenance；固定 source ID、PDF SHA、逐题页码，以及规范题面/答案要点哈希均由工具现场核验。正式记录位于文理项目 `provenance.json`。
+- 两卷各自 Q14 的答案等级保留 `U`，其余 42 题记为本库独立推导 `D`；Q14 分别关联 `ISSUE-1388`、`ISSUE-1389`。transcription review 的 `passed` 只确认转录忠实于固定 PDF 可见页，不表示来源认证或官方答案。
+- manifest revision `6135→6136`。`provenance.py import-batch` dry-run / write、`provenance.py check-batch`（2卷）、`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check`（775行）均通过；状态为 paper `blocked`、batch `provenance_verified`。
+- 本阶段未调用 OCR、联网或模型，未生成项目 TeX / 四版 PDF、正式构建回执、视觉回执或批次关闭回执。来源身份与官方答案仍未核，Q14 blockers 保持打开；下一步按规范生成项目并先跑确定性检查，再正式构建与逐页复核。
+
 ### 2003 上海普通卷理科：Q1–Q22 独立题面复核（2026-11-04）
 
 - 一名未参与转录的独立复核者直接渲染固定 PDF，逐题核对 Q1–Q22；主会话另行查看第1页 Q16/Q18/Q19 和第2页 Q20/Q22 原图。最终 Q1–Q22 题干、公式、符号和小问全部与可见页图相符，0处未决文字/符号差异、0处影响判断的模糊像素。
