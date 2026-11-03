@@ -13893,3 +13893,9 @@
 - 题面与确定性含解析稿分别链接四个图稿；generate_projects 生成题目版与解析版 TeX。figure registry 登记 4 张图，每张预期出现 2 次；manifest revision 6075→6076。
 - 导入三角色逐题 provenance，绑定固定 source ID、SHA、题面页码和逐题题面/答案哈希；Q1–Q23 题面复核 passed、答案冲突 none、ISSUE 0。manifest revision 6076→6077，batch 状态 provenance_verified。`official_answer=null`。
 - source manifest、issues、provenance、solution_sources、generate_projects、manifest.csv 检查通过；四版 PDF、正式版面视觉复核、简答版与 receipt 仍未完成。详情见[图稿与provenance报告](reports/2015-fujian-science-figures-provenance.md)。本阶段不表示来源认证或整卷验收。
+
+### 2015 福建理科候选卷：简答版与四版入口生成（phase3-b26，2026-11-03）
+
+- make_short_answers 生成 answers_short.tex；make_editions 生成试题版、解析版、简答版、印刷版四个模板入口。短答案按规范答案要点核对，仍为非官方推导。
+- 生成壳后纸卷现场状态为 editions_generated；provenance 首次检查提示缓存旧值 answers_verified，随后以 import-batch 事务同步 manifest revision 6077→6078（transaction_id c98d5db6-2796-42e5-a306-7175874d8740）。批次状态 provenance_verified，ISSUE 0；manifest.csv 仍为 775 行。
+- 简答、四版入口、project TeX、provenance、manifest 与 issues 检查均通过。XeLaTeX 构建、最终 PDF 视觉复核、build/review receipts 尚未完成。详情见[四版入口报告](reports/2015-fujian-science-editions.md)。本阶段不表示单卷闭环或长期语料完成。
