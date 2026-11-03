@@ -13937,3 +13937,8 @@
 
 - 从已盲核草稿建立规范 `_试题.md`、`_答案要点.md`、`_解析正文.md`；题面各题正文未变，题首说明同步为本库答案属于独立推导；答案与解析仅整理 front matter、标题和来源说明，数学内容、`paper_id: null`、`official_answer: null` 与 U/PENDING 保持不变。哈希、逐题结构和定界符检查记录于[规范事实源文件报告](reports/2000-shanghai-science-canonical-sources.md)。
 - 未修改 manifest、问题总账或生成 `_含解析.md`。下一步通过唯一 `register-papers` 事务登记 `phase4-b42`、候选 paper 与 Q12/Q21 阻断项，然后同步 paper ID 与派生合并稿。
+
+### 2000 上海理科候选卷：规范答案块与含解析稿生成（2026-11-03）
+
+- 按 `solution_sources` 输入约定整理答案要点独立答案块、试题与解析小问锚点；题面字词与数学内容不变。调用 `render_combined()` 生成 `_含解析.md` 并现场重算逐字节一致；三源解析器均识别 22 题且小问集合对齐。详情与哈希见[规范答案块与含解析稿生成报告](reports/2000-shanghai-science-combined-generation.md)。
+- Q12、Q21 在生成稿中仍显示 U/PENDING；manifest 与问题总账未变。下一步执行 `phase4-b42` paper/source/issue 登记事务，再同步 paper ID 并运行批次级检查。
