@@ -14430,3 +14430,10 @@
 - 以 `solution_sources.py extract-batch --write` 重生成两份 `_含解析.md`；都与当前 `render_combined` 输出相同。最终解析正文/含解析 SHA-256 与验证记录见[分隔修正报告](reports/2003-beijing-regular-math-delimiters.md)。
 - `solution_sources.py check-batch`、`provenance.py check-batch` 均通过；内存项目生成逐卷得到试题/解析 Q1–Q20，8 张登记图各出现两次，project result 门禁无问题。manifest、题面、答案与 issues 未改；尚未写正式 TeX 或四版入口。
 - 下一阶段重新运行项目 TeX 与四版生成，再进入正式构建和逐页视觉审查。本阶段不表示正式构建、批次封存或长期语料完成。
+
+### 2003 北京普通文理候选卷：项目 TeX 与四版入口生成（2026-11-04）
+
+- 在 manifest revision `6151` 下，文理两卷生成项目题目、完整答案、简答答案和四版入口，共14个 TeX 文件，并登记进 `index.json`；详见[TeX 生成阶段报告](reports/2003-beijing-regular-tex-generation.md)。
+- `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 的 `--write` 与随后 `--check` 均成功，两卷生成结果一致。
+- 两卷仍为 `blocked`，batch 为 `provenance_verified`；`ISSUE-1398`–`ISSUE-1401` 继续 open / `blocks_completion`。尚未做正式四版构建、PDF 回执、逐页视觉审查、批次封存或全量测试；本阶段不表示整卷验收或长期语料完成。
+- 下一阶段进行正式四版构建并建立当前构建回执，再逐页视觉复核。

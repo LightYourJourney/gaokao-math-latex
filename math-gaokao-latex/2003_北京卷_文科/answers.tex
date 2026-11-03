@@ -1,0 +1,616 @@
+% answers.tex —— 2003 年·北京卷·文科 · 参考答案与详细解析片段
+% 由 tools/generate_projects.py 依来源总账自 2003/2003_数学真题_北京文_试题.md + 2003/2003_数学真题_北京文_解析正文.md + 2003/2003_数学真题_北京文_答案要点.md 生成，勿手改（改源 MD 后重跑）
+
+
+\begin{gktip}
+固定候选 PDF 仅含题面；以下解析依据已复核题面独立推导，属于本库非官方内容。来源身份与官方答案未核，\texttt{official_answer=null}。Q18 顶点字母在原题文字和图示之间不统一；相关几何结论仅按图示顶点 \(A=(5,0)\) 作条件推导，继续保留 U/PENDING。
+\end{gktip}
+
+\gkpart{一、选择题}
+
+\begin{answer}
+\gksolhead{1}{}
+
+\textbf{题目}：
+
+设集合 \(A=\{x\mid x^2-1>0\}\)，\(B=\{x\mid \log_2x>0\}\)，\(A\cap B\) 等于（　）
+
+    (A) \(\{x\mid x>1\}\)
+    (B) \(\{x\mid x>0\}\)
+    (C) \(\{x\mid x<-1\}\)
+    (D) \(\{x\mid x<-1\text{ 或 }x>1\}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(x^2-1>0\) 得 \(x<-1\) 或 \(x>1\)；由 \(\log_2x>0\) 得 \(x>1\)。故交集为 \(\{x:x>1\}\)，选 A。
+
+\gkanswer{答案：A}
+
+\end{answer}
+\begin{answer}
+\gksolhead{2}{}
+
+\textbf{题目}：
+
+设 \(y_1=4^{0.9}\)，\(y_2=8^{0.44}\)，\(y_3=\left(\frac12\right)^{-1.5}\)，则（　）
+
+    (A) \(y_3>y_1>y_2\)
+    (B) \(y_2>y_1>y_3\)
+    (C) \(y_1>y_2>y_3\)
+    (D) \(y_1>y_3>y_2\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+y_1=2^{1.8},\qquad y_2=2^{1.32},\qquad y_3=2^{1.5}
+\]
+。
+因 \(1.8>1.5>1.32\)，故 \(y_1>y_3>y_2\)，选 D。
+
+\gkanswer{答案：D}
+
+\end{answer}
+\begin{answer}
+\gksolhead{3}{}
+
+\textbf{题目}：
+
+“\(\cos 2\alpha=-\frac{\sqrt3}{2}\)”是“\(\alpha=k\pi+\frac{5\pi}{12},\ k\in\mathbb Z\)”的（　）
+
+    (A) 必要非充分条件
+    (B) 充分非必要条件
+    (C) 充分必要条件
+    (D) 既非充分又非必要条件
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+令命题 \(P\) 为 \(\cos2\alpha=-\sqrt3/2\)，命题 \(Q\) 为 \(\alpha=k\pi+5\pi/12\)。由 Q 可得 \(\cos2\alpha=\cos(2k\pi+5\pi/6)=-\sqrt3/2\)，所以 \(Q\Rightarrow P\)。但 P 还允许 \(\alpha=k\pi+7\pi/12\)，故 \(P\nRightarrow Q\)。因此 P 是 Q 的必要非充分条件，选 A。
+
+\gkanswer{答案：A（必要非充分条件）}
+
+\end{answer}
+\begin{answer}
+\gksolhead{4}{}
+
+\textbf{题目}：
+
+已知 \(\alpha,\beta\) 是平面，\(m,n\) 是直线。下列命题中不正确的是（　）
+
+    (A) 若 \(m\parallel n\)，\(m\perp\alpha\)，则 \(n\perp\alpha\)
+    (B) 若 \(m\parallel\alpha\)，\(\alpha\cap\beta=n\)，则 \(m\parallel n\)
+    (C) 若 \(m\perp\alpha\)，\(m\perp\beta\)，则 \(\alpha\parallel\beta\)
+    (D) 若 \(m\perp\alpha\)，\(m\subset\beta\)，则 \(\alpha\perp\beta\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+命题 B 不成立：\(m\parallel\alpha\) 只要求直线方向平行于平面 \(\alpha\)，不要求平行于特定交线 \(n=\alpha\cap\beta\)。其余三项分别由平行直线保持线面垂直、两平面法向量平行，以及含有平面法向方向的线面垂直性质成立。故选 B。
+
+\gkanswer{答案：B}
+
+\end{answer}
+\begin{answer}
+\gksolhead{5}{}
+
+\textbf{题目}：
+
+如图，直线 \(l:x-2y+2=0\) 过椭圆的左焦点 \(F_1\) 和一个顶点 \(B\)，该椭圆的离心率是（　）
+
+    (A) \(\frac15\)
+    (B) \(\frac25\)
+    (C) \(\frac{\sqrt5}{5}\)
+    (D) \(\frac{2\sqrt5}{5}\)
+\nopagebreak[4]
+\begin{center}\input{figures/f2003_beijing_arts_q05_ellipse_focus}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+直线与 \(y\) 轴交于 \((0,1)\)，故椭圆上顶点 \(B=(0,1)\)，短半轴 \(b=1\)。直线与 \(x\) 轴交于 \((-2,0)\)，故左焦点横坐标为 \(-2\)，焦距参数 \(c=2\)。于是 \(a^2=b^2+c^2=5\)，离心率 \(e=c/a=2/\sqrt5=2\sqrt5/5\)，选 D。
+
+\gkanswer{答案：D，\(e=\dfrac{2\sqrt5}{5}\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{6}{}
+
+\textbf{题目}：
+
+若 \(z\in\mathbb C\) 且 \(|z+2-2i|=1\)，则 \(|z-2-2i|\) 的最小值是（　）
+
+    (A) 2
+    (B) 3
+    (C) 4
+    (D) 5
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+条件表示点 \(z\) 在圆心 \((-2,2)\)、半径 1 的圆上；所求是它到 \((2,2)\) 的距离。两圆心距为 4，故最小值为 \(4-1=3\)，选 B。
+
+\gkanswer{答案：B，最小值为 \(3\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{7}{}
+
+\textbf{题目}：
+
+如果圆台的母线与底面成 \(60^\circ\) 角，那么这个圆台的侧面积与轴截面面积的比为（　）
+
+    (A) \(2\pi\)
+    (B) \(\frac32\pi\)
+    (C) \(\frac{2\sqrt3}{3}\pi\)
+    (D) \(\frac12\pi\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+设圆台上、下底半径为 \(r,R\)，母线长为 \(l\)，高为 \(h\)。母线与底面成 \(60^\circ\)，故 \(h=l\sin60^\circ=\sqrt3l/2\)。轴截面面积为 \((R+r)h\)，侧面积为 \(\pi(R+r)l\)，两者之比为 \(\pi l/h=2\sqrt3\pi/3\)，选 C。
+
+\gkanswer{答案：C，\(\dfrac{2\sqrt3}{3}\pi\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{8}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+若数列 \(\{a_n\}\) 的通项公式是
+\nopagebreak[4]
+\[
+a_n=\frac{3^{-n}+(-1)^n3^{-n}}2,\quad n=1,2,\ldots,
+\]
+则 \(\displaystyle\lim_{n\to\infty}(a_1+a_2+\cdots+a_n)\) 等于（　）
+
+    (A) \(\frac1{24}\)
+    (B) \(\frac18\)
+    (C) \(\frac16\)
+    (D) \(\frac12\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+奇数 \(n\) 时 \(a_n=0\)，偶数 \(n=2k\) 时 \(a_{2k}=3^{-2k}\)。因此
+\nopagebreak[4]
+\[
+\lim_{n\to\infty}\sum_{j=1}^n a_j=\sum_{k=1}^{\infty}3^{-2k}=\frac{1/9}{1-1/9}=\frac18,
+\]
+选 B。
+
+\gkanswer{答案：B，\(\dfrac18\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{9}{}
+
+\textbf{题目}：
+
+从黄瓜、白菜、油菜、扁豆 4 种蔬菜品种中选出 3 种，分别种在不同土质的三块土地上，其中黄瓜必须种植，不同的种植方法共有（　）
+
+    (A) 24 种
+    (B) 18 种
+    (C) 12 种
+    (D) 6 种
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+先从黄瓜以外三种蔬菜中选两种，有 \(\binom32=3\) 种；再将三种蔬菜安排到三块不同土地上，有 \(3!=6\) 种。共 \(3\cdot6=18\) 种，选 B。
+
+\gkanswer{答案：B，18 种}
+
+\end{answer}
+\begin{answer}
+\gksolhead{10}{}
+
+\textbf{题目}：
+
+\Needspace{5\baselineskip}
+某班试用电子投票系统选举班干部候选人。全班 \(k\) 名同学都有选举权和被选举权，他们的编号分别为 \(1,2,\ldots,k\)，规定：同意按“1”，不同意（含弃权）按“0”，令
+\nopagebreak[4]
+\[
+a_{ij}=\begin{cases}
+1,&\text{第 }i\text{ 号同学同意第 }j\text{ 号同学当选，}\\
+0,&\text{第 }i\text{ 号同学不同意第 }j\text{ 号同学当选，}
+\end{cases}
+\]
+其中 \(i=1,2,\ldots,k\)，且 \(j=1,2,\ldots,k\)，则同时同意第 1、2 号同学当选的人数为（　）
+
+    (A) \(a_{11}+a_{12}+\cdots+a_{1k}+a_{21}+a_{22}+\cdots+a_{2k}\)
+    (B) \(a_{11}+a_{21}+\cdots+a_{1k}+a_{12}+a_{22}+\cdots+a_{k2}\)
+    (C) \(a_{11}a_{12}+a_{21}a_{22}+\cdots+a_{k1}a_{k2}\)
+    (D) \(a_{11}a_{21}+a_{12}a_{22}+\cdots+a_{1k}a_{2k}\)
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+第 \(i\) 位同学同时同意 1、2 号当选的指示量为 \(a_{i1}a_{i2}\)，故同时同意的人数为
+\nopagebreak[4]
+\[
+\sum_{i=1}^k a_{i1}a_{i2},
+\]
+对应选项 C。
+
+\gkanswer{答案：C}
+
+\end{answer}
+\gkpart{二、填空题}
+
+\begin{answer}
+\gksolhead{11}{}
+
+\textbf{题目}：
+
+已知某球体的体积与其表面积的数值相等，则此球体的半径为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+令球半径为 \(r>0\)。由体积与表面积数值相等，
+\nopagebreak[4]
+\[
+\frac43\pi r^3=4\pi r^2,
+\]
+约去正数 \(4\pi r^2\)，得 \(r=3\)。
+
+\gkanswer{答案：3}
+
+\end{answer}
+\begin{answer}
+\gksolhead{12}{}
+
+\textbf{题目}：
+
+函数 \(f(x)=\lg(1+x^2)\)，\(g(x)=2-|x|\)，\(h(x)=\tan 2x\) 中，\gkblank{}是偶函数。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\nopagebreak[4]
+\[
+f(-x)=\lg(1+(-x)^2)=f(x),\qquad g(-x)=2-|-x|=g(x)
+\]
+。
+因此 \(f,g\) 均为偶函数；\(h(-x)=\tan(-2x)=-h(x)\)，故 \(h\) 为奇函数。题面单空可填 \(f\) 与 \(g\)。
+
+\gkanswer{答案：\(f(x)\) 与 \(g(x)\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{13}{}
+
+\textbf{题目}：
+
+以双曲线 \(\frac{x^2}{16}-\frac{y^2}{9}=1\) 右顶点为顶点，左焦点为焦点的抛物线的方程是\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+双曲线的右顶点为 \((4,0)\)，焦点为 \((\pm5,0)\)，左焦点为 \((-5,0)\)。抛物线顶点为 \((4,0)\)、焦点为 \((-5,0)\)，故有向参数 \(p=-9\)，从而
+\nopagebreak[4]
+\[
+y^2=4p(x-4)=-36(x-4)
+\]
+。
+
+\gkanswer{答案：\(y^2=-36(x-4)\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{14}{}
+
+\textbf{题目}：
+
+将长度为 1 的铁丝分成两段，分别围成一个正方形和一个圆形，要使正方形与圆的面积之和最小，正方形的周长应为\gkblank{}。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+设正方形周长为 \(x\)，则圆周长为 \(1-x\)，面积和为
+\nopagebreak[4]
+\[
+S(x)=\frac{x^2}{16}+\frac{(1-x)^2}{4\pi},\qquad 0\le x\le1
+\]
+。
+令 \(S'(x)=x/8-(1-x)/(2\pi)=0\)，得 \(x=4/(\pi+4)\)。又 \(S''(x)>0\)，此值使面积和最小。
+
+\gkanswer{答案：\(\dfrac4{\pi+4}\)}
+
+\end{answer}
+\gkpart{三、解答题}
+
+\begin{answer}
+\gksolhead{15}{}
+
+\textbf{题目}：
+
+已知函数 \(f(x)=\cos^4x-2\sin x\cos x-\sin^4x\)。
+
+(1) 求 \(f(x)\) 的最小正周期；
+
+(2) 求 \(f(x)\) 的最大值、最小值。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 最小正周期}
+
+\nopagebreak[4]
+\[
+f(x)=\cos^4x-\sin^4x-2\sin x\cos x=\cos2x-\sin2x=\sqrt2\cos(2x+\pi/4)
+\]
+。
+所以最小正周期为 \(\pi\)。
+
+\gksubpart{(2) 最大值与最小值}
+
+由 \(f(x)=\sqrt2\cos(2x+\pi/4)\)，最大值为 \(\sqrt2\)，最小值为 \(-\sqrt2\)。
+
+\gkanswer{答案（1）：最小正周期为 \(\pi\)}
+
+\gkanswer{答案（2）：最大值为 \(\sqrt2\)，最小值为 \(-\sqrt2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{16}{}
+
+\textbf{题目}：
+
+已知数列 \(\{a_n\}\) 是等差数列，且 \(a_1=2\)，\(a_1+a_2+a_3=12\)。
+
+(1) 求数列 \(\{a_n\}\) 的通项公式；
+
+(2) 令 \(b_n=a_n\cdot3^n\)。求数列 \(\{b_n\}\) 前 \(n\) 项和的公式。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 求通项}
+
+设等差数列公差为 \(d\)。由前三项和得 \(3a_1+3d=12\)，代入 \(a_1=2\) 得 \(d=2\)，所以 \(a_n=2n\)，\(b_n=2n3^n\)。
+
+\gksubpart{(2) 求前 n 项和}
+
+\Needspace{5\baselineskip}
+对 \(b_k=2k3^k\)，利用
+\nopagebreak[4]
+\[
+\sum_{k=1}^n kr^k=\frac{r-(n+1)r^{n+1}+nr^{n+2}}{(1-r)^2}
+\]
+\Needspace{5\baselineskip}
+并取 \(r=3\)，得到
+\nopagebreak[4]
+\[
+\sum_{k=1}^n b_k=\frac{3-(n+1)3^{n+1}+n3^{n+2}}2=\frac{3+(2n-1)3^{n+1}}2
+\]
+。
+
+\gkanswer{答案（1）：\(a_n=2n\)}
+
+\gkanswer{答案（2）：\(\displaystyle\sum_{k=1}^{n}b_k=\frac{3+(2n-1)3^{n+1}}2\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{17}{}
+
+\textbf{题目}：
+
+如图，正三棱柱 \(ABC-A_1B_1C_1\) 中，\(D\) 是 \(BC\) 的中点，\(AB=a\)。
+
+(1) 求证：直线 \(A_1D\perp B_1C_1\)；
+
+(2) 求点 \(D\) 到平面 \(ACC_1\) 的距离；
+
+(3) 判断 \(A_1B\) 与平面 \(ADC_1\) 的位置关系，并证明你的结论。
+\nopagebreak[4]
+\begin{center}\input{figures/f2003_beijing_arts_q17_triangular_prism}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\Needspace{5\baselineskip}
+取底面位于 \(z=0\)，令
+\nopagebreak[4]
+\[
+B=(-a/2,0,0),\quad C=(a/2,0,0),\quad A=(0,\sqrt3a/2,0),\quad D=(0,0,0),
+\]
+上底对应点的 \(z\) 坐标均为棱柱高 \(h>0\)。
+
+\gksubpart{(1) 证明垂直}
+
+\(\overrightarrow{A_1D}=(0,-\sqrt3a/2,-h)\)，\(\overrightarrow{B_1C_1}=(a,0,0)\)，点积为 0，故 \(A_1D\perp B_1C_1\)。
+
+\gksubpart{(2) 求点到平面的距离}
+
+\Needspace{5\baselineskip}
+平面 \(ACC_1\) 垂直于底面，其底面迹线 \(AC\) 的方程为 \(\sqrt3x+y-\sqrt3a/2=0\)。点 \(D\) 到该平面的距离等于原点到直线 \(AC\) 的距离：
+\nopagebreak[4]
+\[
+\frac{\sqrt3a/2}{\sqrt{3+1}}=\frac{\sqrt3a}{4}
+\]
+。
+
+\gksubpart{(3) 判断线面关系}
+
+\Needspace{5\baselineskip}
+平面 \(ADC_1\) 的法向量可取
+\nopagebreak[4]
+\[
+\overrightarrow{DA}\times\overrightarrow{DC_1}=(\sqrt3ah/2,0,-\sqrt3a^2/4)
+\]
+。
+直线 \(A_1B\) 的方向向量为 \((-a/2,-\sqrt3a/2,-h)\)，与该法向量点积为 0，故直线方向平行于平面。点 \(A_1\) 不在平面 \(ADC_1\) 上，因为法向量与 \(\overrightarrow{DA_1}\) 的点积为 \(-\sqrt3a^2h/4\ne0\)。所以 \(A_1B\parallel\) 平面 \(ADC_1\)。
+
+\gkanswer{答案（1）：\(A_1D\perp B_1C_1\)}
+
+\gkanswer{答案（2）：点 \(D\) 到平面 \(ACC_1\) 的距离为 \(\dfrac{\sqrt3a}{4}\)}
+
+\gkanswer{答案（3）：\(A_1B\parallel\) 平面 \(ADC_1\)}
+
+\end{answer}
+\begin{answer}
+\gksolhead{18}{}
+
+\textbf{题目}：
+
+\begin{gktip}
+原页记号疑点（待核）：首句称椭圆顶点为 \(A_1,A_2\)，后文使用 \(OA\)、\(A_1P\)、\(AP_1\)；原图左顶点标为 \(A_1(-5,0)\)，右顶点标为 \(A(5,0)\)，没有标出 \(A_2\)。题干与图中的顶点字母不统一。本稿保留题干原字和图中原标记，不将 \(A\) 静默改成 \(A_2\)。
+\end{gktip}
+
+如图，\(A_1,A_2\) 为椭圆的两个顶点，\(F_1,F_2\) 为椭圆的两个焦点。
+
+(1) 写出椭圆的方程及准线方程；
+
+\Needspace{5\baselineskip}
+(2) 过线段 \(OA\) 上异于 \(O,A\) 的任一点 \(K\) 作 \(OA\) 的垂线，交椭圆于 \(P,P_1\) 两点，直线 \(A_1P\) 与 \(AP_1\) 交于点 \(M\)。求证：点 \(M\) 在双曲线
+\nopagebreak[4]
+\[
+\frac{x^2}{25}-\frac{y^2}{9}=1
+\]
+上。
+\nopagebreak[4]
+\begin{center}\input{figures/f2003_beijing_arts_q18_ellipse_notation}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\textbf{U/PENDING。} 原题文字称椭圆顶点为 \(A_1,A_2\)，后文使用 \(OA\)、\(A_1P\)、\(AP_1\)；图中却标出左顶点 \(A_1(-5,0)\)、右顶点 \(A(5,0)\)，未标 \(A_2\)。以下只按图示端点作为题干所指顶点作条件推导，不替原题统一字母。
+
+\gksubpart{(1) 椭圆方程与准线}
+
+\Needspace{5\baselineskip}
+按图示，半长轴 \(a=5\)、焦距参数 \(c=4\)，故半短轴平方 \(b^2=a^2-c^2=9\)。椭圆为
+\nopagebreak[4]
+\[
+\frac{x^2}{25}+\frac{y^2}{9}=1,
+\]
+焦点为 \((\pm4,0)\)，准线为 \(x=\pm a^2/c=\pm25/4\)，离心率为 \(4/5\)。
+
+\gksubpart{(2) 证明交点在双曲线上}
+
+\Needspace{5\baselineskip}
+令 \(K=(t,0)\)，\(0<t<5\)，并设 \(P=(t,q)\)、\(P_1=(t,-q)\)，其中 \(q=3\sqrt{1-t^2/25}\)。直线 \(A_1P\) 与 \(AP_1\) 的方程分别为
+\nopagebreak[4]
+\[
+Y=\frac{q}{t+5}(X+5),\qquad Y=\frac{q}{5-t}(X-5)
+\]
+。
+\Needspace{5\baselineskip}
+联立得交点 \(M=(25/t,5q/t)\)。于是
+\nopagebreak[4]
+\[
+\frac{x_M^2}{25}-\frac{y_M^2}{9}=\frac{25}{t^2}-\frac{25q^2}{9t^2}=1,
+\]
+故按上述图示对应关系，M 在题给双曲线上。
+
+\gkanswer{答案（1）：U/PENDING；按图示顶点对应时，椭圆为 \(\dfrac{x^2}{25}+\dfrac{y^2}{9}=1\)，准线为 \(x=\pm\dfrac{25}{4}\)}
+
+\gkanswer{答案（2）：U/PENDING；按图示 \(A=(5,0)\) 对应题干右顶点时，交点 \(M\) 在题给双曲线上}
+
+\end{answer}
+\begin{answer}
+\gksolhead{19}{}
+
+\textbf{题目}：
+
+有三个新兴城镇，分别位于 \(A,B,C\) 三点处，且 \(AB=AC=13\text{ km}\)，\(BC=10\text{ km}\)。今计划合建一个中心医院，为同时方便三镇，准备建在 \(BC\) 的垂直平分线上的 \(P\) 点处。（建立坐标系如图）
+
+(1) 若希望点 \(P\) 到三镇距离的平方和为最小，点 \(P\) 应位于何处？
+
+(2) 若希望点 \(P\) 到三镇的最远距离为最小，点 \(P\) 应位于何处？
+\nopagebreak[4]
+\begin{center}\input{figures/f2003_beijing_arts_q19_city_triangle}\end{center}
+\nopagebreak[4]
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+由 \(AB=AC=13\)、\(BC=10\)，取 \(B=(-5,0)\)、\(C=(5,0)\)，则 \(A=(0,12)\)。设垂直平分线上的点为 \(P=(0,p)\)。
+
+\gksubpart{(1) 距离平方和最小}
+\nopagebreak[4]
+\[
+PA^2+PB^2+PC^2=(p-12)^2+2(p^2+25)=3(p-4)^2+146,
+\]
+故在 \(p=4\) 时最小。
+
+\gksubpart{(2) 最远距离最小}
+
+\Needspace{5\baselineskip}
+有 \(PB=PC=\sqrt{p^2+25}\)、\(PA=|p-12|\)。在 \(0<p<12\) 上，前者递增、后者递减；平衡两者得
+\nopagebreak[4]
+\[
+12-p=\sqrt{p^2+25}\quad\Longrightarrow\quad p=\frac{119}{24}
+\]
+。
+该处最大距离最小。若 \(p\le0\)，则 \(PA\ge12\)；若 \(p\ge12\)，到 B、C 的距离更大，均不优于上述点。因此最优点为 \(P=(0,119/24)\)。
+
+\gkanswer{答案（1）：\(P=(0,4)\) km}
+
+\gkanswer{答案（2）：\(P=(0,\dfrac{119}{24})\) km}
+
+\end{answer}
+\begin{answer}
+\gksolhead{20}{}
+
+\textbf{题目}：
+
+设 \(y=f(x)\) 是定义在区间 \([-1,1]\) 上的函数，且满足条件：
+
+① \(f(-1)=f(1)=0\)；
+
+② 对任意的 \(u,v\in[-1,1]\)，都有 \(|f(u)-f(v)|\leq|u-v|\)。
+
+(1) 证明：对任意的 \(x\in[-1,1]\)，\(x-1\leq f(x)\leq1-x\)；
+
+\Needspace{5\baselineskip}
+(2) 判断函数
+\nopagebreak[4]
+\[
+g(x)=\begin{cases}
+1+x,&x\in[-1,0),\\
+1-x,&x\in[0,1],
+\end{cases}
+\]
+是否满足题设条件；
+
+(3) 在区间 \([-1,1]\) 上是否存在满足题设条件的函数 \(y=f(x)\)，且使得对任意的 \(u,v\in[-1,1]\)，都有 \(|f(u)-f(v)|=u-v\)，若存在，请举一例；若不存在，请说明理由。
+
+\Needspace{4\baselineskip}
+\textbf{解析}
+
+\gksubpart{(1) 证明函数值范围}
+
+在条件②中取 \(u=x,v=1\)，并用 \(f(1)=0\)，得 \(|f(x)|\le1-x\)，所以 \(x-1\le f(x)\le1-x\)。
+
+\gksubpart{(2) 判断给定函数}
+
+\Needspace{5\baselineskip}
+给定函数 \(g(x)=1-|x|\)，且 \(g(-1)=g(1)=0\)。由反三角不等式
+\nopagebreak[4]
+\[
+|g(u)-g(v)|=\big||v|-|u|\big|\le|u-v|,
+\]
+故它满足条件。
+
+\gksubpart{(3) 判断是否存在}
+
+按原题“对任意 \(u,v\in[-1,1]\)”逐字理解，取 \(u=-1,v=1\) 时等式右侧为 \(-2\)，左侧绝对值非负，矛盾。因此不存在满足该等式要求的函数。保留原式，不改为 \(|u-v|\)。
+
+\gkanswer{答案（1）：\(x-1\le f(x)\le1-x\)}
+
+\gkanswer{答案（2）：给定函数满足题设条件}
+
+\gkanswer{答案（3）：按原页等式逐字理解，不存在满足条件的函数}
+
+\end{answer}
