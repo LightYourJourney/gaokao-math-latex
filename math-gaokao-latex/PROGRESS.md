@@ -13715,3 +13715,11 @@
 - 正式 XeLaTeX 构建 attempt `ab1a008e-7f4c-4c10-9e04-2dd3d06e2ae2` 成功，四版共 53 页，日志无警告、缺字或未定义引用。build receipt 绑定 manifest revision 6064、输入树与工具链；事务后 revision 6065，paper 为 `compiled`、batch 为 `compiled_pending_review`。
 - `validate-receipts --require-current-inputs` 返回 OK（failed/invalid/missing/stale 均为 0，pending 1）。PDF 指纹与阶段边界见[正式构建报告](reports/2015-fujian-arts-formal-build.md)。
 - 本阶段尚未逐页视觉复核或 finalize；未调用 OCR，未运行测试套件。下一阶段复用当前四版 PDF 准备 review 回执并检查全部页面；不表示来源认证、单卷闭环或长期语料完成。
+
+
+### phase3-b24 2015 福建文科：四版视觉复核与批次收口（2026-11-03）
+
+- 对正式构建 attempt `ab1a008e-7f4c-4c10-9e04-2dd3d06e2ae2` 的试题版、解析版、简答版、印刷版全部 53 页完成 120 dpi 渲染及逐页目视复核。八项页级判据共 424 项：353 pass、71 not_applicable、0 fail、0 pending；未见版面缺陷，无新增视觉 issue 或警告豁免。
+- `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，manifest revision `6065→6066`，`phase3-b24` 状态 `closed`，paper 状态 `complete`。build 与 review 回执 currentness 均通过；四版页数为 6/21/8/18。
+- source manifest、issues、provenance（22题）、solution sources、项目 TeX／简答／四版壳 currentness、775 行 manifest CSV 与全量报告 render/check 均通过。视觉详情见[复核报告](reports/2015-fujian-arts-visual-review.md)，批次状态见[phase3-b24报告](reports/phase3-b24.md)。
+- 固定来源出版者、版次、复制链与官方身份仍未核实，原 PDF 无答案页，未登记官方答案；逐题答案保持 D 级非官方独立推导。本批只收口 2015 福建文科，不表示来源认证或长期语料整体完成。本阶段未调用 OCR、未运行测试套件。
