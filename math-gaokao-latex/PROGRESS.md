@@ -35,6 +35,12 @@
 - Q21(1)(2) 已核对；新盲解者 /root/blind_solve_2007_shanghai_arts_q21 未读答案稿独立完成三问。Q21(3) 对“是否承接（1）的等边焦点条件”有一般参数与特例两种读法，固定 PDF 无答案页，不能裁定官方意图；答案稿现将此项标记 U/PENDING，保留条件结果。答案稿当前 SHA-256 为 350d0a81e8c7f0bf9b064b5b935f116d03cd31b9a8e12c6ea691185c7e75f688。
 - 复核报告见 reports/2007-shanghai-arts-answer-review.md。当前答案非官方，official_answer=null；来源、paper/batch和issue/provenance登记、解析、图稿、TeX、正式构建与视觉回执均未开始。后续登记时需为 Q21(3) 建立关联阻断项。本阶段不代表来源认证、整卷完成或长期语料库完成。
 
+### 2007 上海文科候选卷：解析正文初稿（2026-11-03）
+
+- 新增 `2007/2007_数学真题_上海文_解析正文.md`，据固定来源 PDF `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212` 及已独立复核题面，完成 Q1–Q21 编者推导。解析正文为独立事实源，不复制题面块或单独加粗最终答案；`paper_id=null`、`official_answer=null`，非官方答案/解析。
+- `parse_question_blocks` 与 `validate_solution_body` 对解析正文识别连续21题；与规范题面逐题题号、小问集合一致。Q11 按原图所示两段短弧和线段 AB 直接积分；Q21(3) 参数作用域不明，保留一般参数与承接（1）特例两种条件结果并标 `U/PENDING`。
+- 独立盲核尚待完成；不生成 `_含解析.md`。来源、paper/batch和issue/provenance登记、图稿、TeX、正式构建和视觉回执未开始。本阶段不代表来源认证、整卷验收或长期语料库完成。
+
 ### 2002 北京理科候选卷：题面转录阶段（2026-11-03）
 
 - 按固定 source `src-6b6e5d61614e04d9b61330de2c085ab84c2f6fddfca9e6f357695a7ba074e690`、SHA-256 `4e19a0d37e74a41655156769e6cb72c2532ec2939cb6fe4d7b18db205123de73` 转录 Q1–Q22；原件为 2 页 A3 横向、印刷页 100–101。新增 `2002/2002_数学真题_北京理_试题.md` 及 [转录报告](reports/2002-beijing-science-question-transcription.md)。
