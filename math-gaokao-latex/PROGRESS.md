@@ -13583,4 +13583,10 @@
 - 当前 PDF：试题版 5 页 SHA-256 `4280402bbfecfeb3eb385b265261d61f2873f37577e62002f600cf3b9ad383af`；解析版 21 页 `156ef530ea3d6e385775ed977df613842a31b71e3a25fe789308e303353a58e3`；简答版 7 页 `0dd31701eb490f05142008973a5a83e9921cef78cf1183baaa979c30b0dccb1a`；印刷版 17 页 `e2a03f03a66602be8250d868edd5e152a9f5243e954e66cc9293ec27b721ba2e`。
 - 对当前 attempt 的 50 页逐页渲染并目视检查，每页八项检查齐全，共 400 项：316 pass、84 not_applicable、0 fail；四版 review 均 passed。`build_projects.py validate-receipts --require-final --require-current-inputs`、provenance、项目生成、简答、版本壳、solution sources、source manifest 与 issues 校验全部通过；manifest CSV current（775 行）。
 - 视觉与构建收口不消除内容阻塞：`ISSUE-1360`（Q16 原方程无实圆）与 `ISSUE-1361`（Q19 `{a_n}` / `x_n` 记号不一致）仍 open / `blocks_completion`；Q16 继续 U/PENDING，Q19 只保留对明确定义的 `x_n` 的条件性解答。批次为 `closed_with_blockers`，不代表官方来源认证或长期语料完成。
-- 全量项目汇总报告已通过检查，六份全局投影与 manifest 一致；全量 unittest 将作为独立验证阶段执行并记录。
+- 全量项目汇总报告已通过检查，六份全局投影与 manifest 一致；全量 unittest 结果见下节。
+
+### phase1-b82 全库 unittest 验证（2026-11-03）
+
+- 执行 `python3 -B -m unittest discover -s math-gaokao-latex/tests -p 'test_*.py'`：`Ran 1769 tests in 542.593s`，`FAILED (failures=2, skipped=13)`。
+- 两项失败均为既有全库基线：`test_baseline.AdjudicatedDriftLedgerTests.test_task25_updates_exactly_eight_existing_keys_with_layout_only_diffs` 期待 `2017_全国Ⅰ卷_理科/answers.tex` SHA-256 `9318dce3313b0575c1382eb225301dfec145683d59b54367fa13a81f3f0b3a30`，当前文件为 `8ea128d4aba0a2bed8897d4719a8df3d99c119c7bc3a15b98ee8c6f5d797f233`；`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报出 79 条历史 paper/batch 缓存状态与现场派生不符。
+- 失败路径不属于本批改动；该布局基线文件及其 adjudicated ledger 在本批均未改动，未顺手重写历史快照。phase1-b82 定向 build/review currentness、provenance、确定性生成、来源/问题清单、manifest CSV 与全量汇总报告检查均已通过。本卷仍为 `closed_with_blockers`，阻塞为 ISSUE-1360、ISSUE-1361。
