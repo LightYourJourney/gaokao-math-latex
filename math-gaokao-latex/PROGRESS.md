@@ -52,6 +52,12 @@
 - 导入事务 ID `e31ef415-23ad-49e8-b0e2-4a77e16d9c13`，manifest revision `6111→6112`，phase4-b44 更新为 `provenance_verified`；Q11/Q20 保留 `ISSUE-1380`/`ISSUE-1381` 和 U/PENDING，paper 仍 blocked。`provenance.py check-batch`、source manifest、issues、solution sources、CSV（775行）和 `report.py check --all` 均通过。详情及记录哈希见[provenance 导入报告](reports/2005-shanghai-science-provenance.md)。
 - PDF 无答案页，`official_answer=null`；本阶段没有生成项目 TeX、正式PDF、构建或视觉回执。下一阶段生成四版 TeX 入口后再正式构建并逐页复核。本阶段不表示来源认证、整卷完成或长期语料完成。
 
+### 2005 上海理科普通卷：解析转义修复与项目 TeX 生成（2026-11-03）
+
+- 首轮项目转换在解析正文 Q4/Q5 发现未配对 `$`。逐字节检查定位1个退格符和5个换页符，替代了 `\binom`/`\frac` 命令反斜杠；对照答案要点与既有推导后恢复，题目和答案数值不变。随后 `solution_sources.py extract-batch --write` 更新含解析稿；题面、答案源均无控制字符。详情、源哈希与生成物 SHA-256 见[项目生成报告](reports/2005-shanghai-science-project-generation.md)。
+- 按 phase4-b44 生成 `questions.tex`、`answers.tex`、`index.json`、`answers_short.tex` 与试题/解析/简答/印刷四版壳；索引列出22题及Q11/Q17/Q19三图。`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check`、solution sources、provenance、source manifest、issues 批次检查全部通过。RepoLock 共享锁导致首轮并行 currentness 检查争锁，改为串行后通过。
+- 尚未编译正式PDF或写 build/review 回执。Q11 `ISSUE-1380` 与 Q20 `ISSUE-1381` 仍 U/PENDING，paper blocked、`official_answer=null`；下一阶段执行正式构建与逐页视觉复核。本阶段不表示来源认证、整卷完成或长期语料完成。
+
 ### 全量测试维护：2015 福建文科来源绑定断言（2026-11-03）
 
 - `test_2015_fujian_arts_transcription.test_source_identity_and_transcription_hash` 仍断言来源校对 JSON 的 `paper_id` 为 `null`；但后续提交 `aa0c0d56` 已将内部候选卷 `gk-2015-regular-fujian-arts` 与同一 `source_id` 登记为 canonical，JSON 与 source manifest 一致。该内部关联不代表来源发布者、版次、复制链或官方答案已认证。
