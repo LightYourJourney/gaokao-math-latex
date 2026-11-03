@@ -13862,3 +13862,9 @@
 - 选择题 Q1–Q10 为 C/D/B/B/B/C/B/D/A/C；填空 Q11–Q15 为 80、7、5/12、$1<a\leqslant2$、5。Q16–Q23 结果见答案稿与[答案推导报告](reports/2015-fujian-science-answer-key.md)。
 - Q22 首轮解答的系数错误已由固定原页 400 dpi 放大纠正：原式为 √2ρsin(θ−π/4)=m，因此直角坐标式 y−x=m，m=−3±2√2；错误候选未进入答案稿。Q7 答案说明按高中立体几何“直线位于平面内不视作平行”约定保留。
 - 本阶段未进行最终答案盲核；Q17/Q18/Q19/Q22 等结果仍需另一复核者核验。未写解析正文、登记 paper/batch/issues/provenance、绘制图稿、生成TeX或构建PDF。人工/模型成本未知。下一阶段独立盲核后逐项比对，不确定项须保留 U/PENDING；本条不表示官方答案验证或整卷验收。
+
+### 2015 福建理科候选卷：Q1–Q23 答案要点独立盲核（2026-11-03）
+
+- 复核者 `/root/audit_2007_2016`（Luna/high）先只据固定题面独立解答，再与答案草稿逐题比较；Q1–Q23 最终答案全部一致，剩余差异 0，`U/PENDING` 答案项 0。固定源 PDF SHA-256 `a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700`，复核开始时答案稿 SHA-256 `8ea53c6c3f548d62e44a4d583e6f63c8cfa3f2323dbbcb253a37c281ccd349fe`。
+- Q4 首条复核消息把答案标签暂写为 A/11.4，但同条计算为 B/11.8，随后明确更正为 B；主会话依据原题表格独立复算一致。Q22 早期另一推导的极坐标系数错误已按 400 dpi 固定原页纠正，本次盲核独立确认 `y−x=m`、`m=−3±2√2`，错误候选未进入答案稿。
+- 答案稿状态改为 `draft-independent-solutions-cross-verified-pending-formal-acceptance`，`official_answer=null`。详情见[答案盲核报告](reports/2015-fujian-science-answer-review.md)。解析正文、图稿、paper/batch/issues/provenance、TeX、正式构建及视觉复核仍未完成；下一阶段编写解析正文。本条不表示来源认证、官方答案验证、整卷验收或长期语料完成。
