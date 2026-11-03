@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 上海理科普通卷：固定来源接收（2026-11-04）
+
+- 固定 source `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`，SHA-256 `9f6c7f71c18bcdc3dd863fc846636661eacc03b4d3837feeaafcd36258c2be5e`，Git blob `9bfec0f8159c4aac8d9991979f2afd760fb0c11b`，510791 bytes；与 manifest revision 6122 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。两页 A3 横向，印刷页198–199，题签为“2004 普通高等学校招生考试 (上海卷理)”，共22题；可见图稿位Q5、Q18、Q21。尚无对应paper/项目目录，来源仍为 `ready`、未绑定。
+- `analyze_pdf.py --no-cache --include-text` 判为 `text_layer_candidate`，两页都有文字层且无图像对象：第1页 `text_candidate`（1475非空白字符、0可疑字符），第2页 `text_candidate`（730字符、0可疑字符）。两页150/300 DPI渲染均已目视检查；第1–2页继续人工路由，转录按原页核对。依路由规范，本阶段没有调用OCR（`model_calls=0`、`ocr_calls=0`）。
+- `local_ocr.py doctor` 显示三引擎部署资产均 `ready`；source manifest 校验通过，manifest CSV 当前且775行。来源发布者、出版者、版次、复制链和官方身份未核，PDF无答案或解析页；`official_answer`未知。详情见[固定来源接收报告](reports/2004-shanghai-science-source-intake.md)。下一阶段逐题转录Q1–Q22并对照原图，随后独立复核题面。本阶段不表示来源认证、答案验证、整卷验收或长期语料完成。
+
 ### 2004 上海文科普通卷：单元测试补齐与全量报告状态同步（2026-11-03）
 
 - 新增 `tests/test_2004_shanghai_arts_transcription.py`：对 `gk-2004-regular-shanghai-arts` 的规范来源绑定（`src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`、SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`）、22 道题面覆盖、原卷存疑符号（Q14(D) $x = k\pi + (-1)^k$、Q17 $(1+\mathrm{i})z_1 = -1+5\mathrm{i}$ 与 $(a-4)^2 < -3$、Q18 $8\text{ cm}^2$、Q19(2) $B \subseteq A$）、4 幅 TikZ 图稿独立性（Q5、Q18、Q20、Q21）及三角色 provenance / 回执进行端到端自动化测试，5 项用例全部通过。
