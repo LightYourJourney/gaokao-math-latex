@@ -24,6 +24,11 @@
 - Q21 源式 $y=2000(\frac{a}{10})^2$ 在固定 PDF 中确实如此打印，草稿保留原式及疑点，未推测修订。其题意异常仍待可靠同版证据；来源/paper登记时需设阻断issue。
 - 题面frontmatter状态更新为“独立逐题复核通过；候选稿待登记”；题面当前SHA-256 `4cd3b1f167bb54adcd5ea6b60425e72dd33ece52731b493bb67d98d98f905975`。详情见[独立题面复核报告](reports/2000-shanghai-arts-question-review.md)。来源发布者、版次、来源链和官方身份未核，`paper_id=null`、`official_answer=null`；答案、解析、登记、图稿、构建与视觉回执尚未完成。下一阶段建立答案要点，Q21保持待核。本阶段不表示来源认证或整卷验收。
 
+### 2000 上海文科候选卷：题面复核补正（2026-11-03）
+
+- 答案推导前的400dpi源页放大复查发现Q22漏录：原页印作 $\omega=\overline{z_0}\cdot\overline{z}$，题稿首轮少了第二个共轭横线。首轮复核所报Q1–Q22全部通过已被推翻；复核者确认此处漏查。Q1–Q21之前的逐题核对结论保留，Q22待补正复核。
+- 已按固定源修正Q22，并将Q8端点标注$A(0,2)$、$B(1,1)$及Q11图中$(1,4)$写入待重绘图位说明。补正后题面SHA-256 `a0988a40bdc0b3aa2915788f33c09671b595373da023155387027cfbac4c8a99`。待独立复核者再次核对修正行与图位细节；详情见[复核补正记录](reports/2000-shanghai-arts-question-review.md)。答案阶段暂停至题面状态厘清；Q21源式疑点未变。
+
 ### 2007 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-51aa9840dc7a866be37ded966d4a337c999cacd912ce0118e07b3e6c768c5789`，SHA-256 `1d43489e28ce9c305faa753519800b9184e40cc40fbd8343f7fd287b4ec70212`，Git blob `3d32cf193380f6a892827ef7f9931942839d9ad2`，507465 bytes。只读来源库 `gaokaomath-src` 的 HEAD 与 manifest 固定 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致，源库工作树干净；现场 Git tree、PDF SHA、大小与 manifest 一致。PDF 副本及渲染输出位于忽略目录 `.work/ocr-local/`。
