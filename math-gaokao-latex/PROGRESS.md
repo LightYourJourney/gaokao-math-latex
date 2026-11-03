@@ -13979,3 +13979,12 @@
 - 为满足选择题摘要格式，将答案要点 Q13–Q16 的选择字母规范为 C/A/A/D，并补入与逐题答案一致的速查表；答案含义未变。`solution_sources.py extract-batch --write` 刷新合并稿。
 - 生成 `questions.tex`、`answers.tex`、`index.json`，简答 `answers_short.tex`，并生成试题版/解析版/简答版/印刷版入口壳。provenance 因 Q13–Q16 答案摘要字节变化而按当前规范源重导入，revision `6092→6093`，transaction `64167f83-3b41-4160-a734-a8bba08e964d`。详情见[项目生成报告](reports/2000-shanghai-science-project-generation.md)。
 - `generate_projects --check`、`make_short_answers --check`、`make_editions --check`、provenance、manifest、issues、solution sources（22题）与 `manifest.csv` 检查通过；CSV current、775行。paper 仍 `blocked`、batch 为 `provenance_verified`，Q12/Q21 blocker 继续。下一步正式构建并按回执流程逐页视觉检查。
+
+### 2000 上海理科候选卷：四版正式构建、视觉封存与全库报告/测试（2026-11-03）
+
+- 正式构建 attempt `b3ec5bf3-c1f1-421b-8d2c-d51b3a2117f5` 成功；试题版5页、解析版19页、简答版7页、印刷版16页，共47页。首轮发现来源说明中的行内代码导致四版编译失败，改为不改变含义的普通文字后通过，ISSUE-1373—ISSUE-1376 已登记为 resolved/non_blocking。Q22 的短公式改为行内排版以避免答案独占末页；同时将不变直线推导的二次项符号校正为 `√3k²+2k−√3=0`，与系数比较及后列两根一致。
+- 四版逐页完成八项视觉检查，共376项均通过。与之前实际审阅页图逐字节一致的页面继承原视觉结论，其余页面重新目视；解析版 Q12 的 `answers.tex` 257–258 行产生一条 Underfull 警告，直接检查 PDF 第12页后记录为可接受豁免。review 回执 `passed`，警告豁免1条、视觉问题0。正式回执绑定四版 PDF SHA 与页数，详见[phase4-b42 视觉审查报告](reports/phase4-b42.md)及卷目录 `receipts/`。
+- `finalize-batch-checked` 返回 `FINALIZED`，manifest revision `6099→6100`，批次 `phase4-b42` 为 `closed_with_blockers`，试卷仍 `blocked`。Q12 的 `ISSUE-1369`/`ISSUE-1371` 和 Q21 的 `ISSUE-1370`/`ISSUE-1372` 继续 open / `blocks_completion`；不将“等此数列”改为“等比数列”，不将原页指数2推改为 n。出版者、版次、复制链和官方身份未认证，`official_answer=null`。
+- source manifest、issues、provenance、solution sources（22题）、四版生成 currentness、最终 build/review receipts、批次报告与 `manifest.csv`（775行）检查通过；刷新全库报告后 `report.py check --all` 返回“报告输出与全量 manifest 当前一致”。
+- 全库命令 `python3 -B -m unittest discover -s tests -q` 结束于 `Ran 1769 tests in 636.784s`，结果 `FAILED (failures=3, skipped=13)`。三项为：2015福建文科来源测试仍断言 `paper_id=null`，而当前记录已绑定 `gk-2015-regular-fujian-arts`；task25 漂移台账记录的 2017全国Ⅰ理科 `answers.tex` SHA `9318dce…` 与当前 `8ea128d…` 不一致；全库 provenance 测试发现79卷历史缓存状态与现场派生状态不符，首项为 2012全国大纲文科。两项定向失败针对其他试卷；全库 provenance 失败涉及79卷历史缓存，本批自身的 `provenance check-batch` 通过。本收尾未改写这些旧测试对象。
+- 构建阶段与视觉复核阶段已分别提交（`6261ac87`、`c60e5930`）。本条记录本次自动化测试终态；下一步需要取得可追溯同版资料、勘误或可靠同期材料，核定 Q12/Q21 后再解除 blocker。本卷及本批均不表示长期语料库完成。
