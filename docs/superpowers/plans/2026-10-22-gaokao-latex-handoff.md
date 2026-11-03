@@ -4,37 +4,36 @@
 
 > **当前接续以本节为准。** 下方旧的 HEAD、全库统计、候选批次与状态记录均为历史快照，不能覆盖当前 manifest、回执和最新 PROGRESS 记录。
 
-## 2026-11-03 当前状态：phase4-b44 已封存，保留阻塞
+## 2026-11-03 当前状态：phase4-b45 已封存，保留阻塞
 
 ### 工作位置与分支
 
 - canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。
-- 本次交接更新前的 HEAD：`6d4ba261157a040946107c0470969eb6dbfc57ee`（2005 上海理科视觉审查）；当时工作区干净且与 upstream 同步。交接文档提交会在该提交之上新增一个本地提交；新对话启动时仍须重新读取实际 HEAD/status。没有切换到 `main`，没有 push。
-- manifest revision `6117`。当前全库状态见下面统计与 `math-gaokao-latex/reports/baseline.md`；具体记录以 `source-manifest.json`、批次报告和收据为准。
+- 本次交接更新前的 HEAD：`51b5764f`（2004 上海文科四版正式构建与视觉复核）；当时工作区干净且与 upstream 同步。交接文档提交会在该提交之上新增一个本地提交；新对话启动时仍须重新读取实际 HEAD/status。没有切换到 `main`，没有 push。
+- manifest revision `6122`。当前全库状态见下面统计与 `math-gaokao-latex/reports/baseline.md`；具体记录以 `source-manifest.json`、批次报告和收据为准。
 
-### 最近完成：2005 上海理科普通卷
+### 最近完成：2004 上海文科普通卷
 
-- `phase4-b44` / `gk-2005-regular-shanghai-science` 已完成构建和视觉审查，终结器返回 `FINALIZED`，批次状态 `closed_with_blockers`；试卷仍为 `blocked`。本批不表示 1952–2026 语料目标完成。
-- 固定候选来源：`src-22a421a422f050bc84accae7bf41feb6903c62df04bd83f34d8267d28f49ee2e`，PDF SHA-256 `092e8e90dc1430ab2fa8b8ce79e072e317559e6bef29f1cb7461e9423925ec31`。来源发布者、出版者、版次、复制链和官方身份未核；`official_answer=null`。来源有文字层，转录过程没有调用 OCR。
-- Q1–Q22、三张图（Q11/Q17/Q19）、三角色 provenance、规范源、TeX 项目与四版均已完成。正式构建 attempt `7d9374a1-88f0-44d8-98d2-ac55372ab14f` 共49页（试题5、解析20、简答7、印刷17）；编译错误、缺字、溢出和未定义引用为0。所有49页八项视觉检查通过，视觉问题0。详情见 [`phase4-b44.md`](../../exams/math-gaokao-latex/reports/phase4-b44.md)、[正式构建报告](../../exams/math-gaokao-latex/reports/2005-shanghai-science-formal-build.md) 与试卷 `receipts/`。
-- 必须保留的未决项：Q11 “最小的是一个四棱柱”是否要求唯一最小（`ISSUE-1380`）；Q20(1) 原文“中低价层”与上下文“中低价房”不一致（`ISSUE-1381`）。两项均为 open / `blocks_completion`，答案维持 U/PENDING；除非取得可追溯同版资料、勘误或可靠同期证据，否则不得补写唯一性条件、改题面或解除阻塞。
-- 本批阶段提交依序为：来源接收 `9df9602a`、题面转录 `b5ddd1b5`、题面复核 `c3193247`、答案初稿 `c20bee9c`、答案复核 `1c68cf8b`、卷登记 `e04e1b77`、题图 `c30de29a`、provenance `412ca9a7`、报告投影 `a48e536b`、TeX 生成 `38f2c997`、解析提示修复 `0083d4eb`、正式构建 `ac961cd2`、视觉封存 `6d4ba261`。详细步骤与本批 validation 记录见 `math-gaokao-latex/PROGRESS.md`。
+- `phase4-b45` / `gk-2004-regular-shanghai-arts` 已完成构建和视觉审查，终结器返回 `FINALIZED`，批次状态 `closed_with_blockers`；试卷仍为 `blocked`。本批不表示 1952–2026 语料目标完成。
+- 固定候选来源：`src-cb0092e0533abc5b37a4e6843ba9688dfd851d0597a8dd9d44a827bd35e58290`，PDF SHA-256 `4ffc26d1ee893834e7cdf6a1b6ab3385fb97dd791d838d2630538461026ca7ad`。来源发布者、出版者、版次、复制链和官方身份未核；`official_answer=null`。来源有文字层，转录过程没有调用 OCR。
+- Q1–Q22、四张图（Q5/Q18/Q20/Q21）、三角色 provenance、规范源、TeX 项目与四版均已完成。正式构建 attempt `8b744c4d-7552-4e73-ad42-64582389e90d` 共55页（试题5、解析24、简答7、印刷19）；编译错误、缺字和未定义引用为0。7 处微小 Overfull hbox（Q14 选项行与 Q20 面积公式）经高分辨率核验确认无裁切并登记豁免。所有55页八项视觉检查通过，视觉问题0。详情见 [`phase4-b45.md`](../../exams/math-gaokao-latex/reports/phase4-b45.md)、[正式构建与视觉报告](../../exams/math-gaokao-latex/reports/2004-shanghai-arts-formal-build.md) 与试卷 `receipts/`。
+- 必须保留的未决项：Q17 条件推导在实数范围内恒无解（`ISSUE-1384`）；Q19(2) 提问条件作 $B \subseteq A$ 但题干未定义集合 $B$（`ISSUE-1385`）。两项均为 open / `blocks_completion`，答案维持 U/PENDING；除非取得可追溯权威同版官方资料、评分标准或勘误，否则不得补写条件、改题面或擅自解除阻塞。
+- 本批阶段提交依序为：来源接收 `0d1bf7a6`、题面转录 `79fa85b1`、题面复核 `d33849d8`、答案初稿 `e8f0eaf1`、答案复核 `1b110627`、卷登记 `f0564ef9`、题图重绘登记 `05a29b88`、provenance 导入 `39096360`、TeX 项目生成 `8cf435a5`、存疑提示公式模式修复 `03622f92`、正式构建与视觉复核 `51b5764f`。详细步骤与本批 validation 记录见 `math-gaokao-latex/PROGRESS.md`。
 
 ### 当前全库快照
 
-依据 manifest revision 6117 和当前 baseline 投影：
+依据 manifest revision 6122 和当前 baseline 投影：
 
-- 775 个来源（普通 734、春季 41）；413 套试卷（complete 309、compiled 3、blocked 101）；261 批（closed 180、closed_with_blockers 80、compiled_pending_review 1）。
-- 正式复核门禁：FINALIZED 218、INVALID_OR_STALE 42、VISUAL_FAILED 1；1652/1652 个版本有编译记录。
-- build 回执：succeeded 409、compiled_pending_review 4；review 回执：passed 412、failed 1；问题总账 1383 条，未解决 289 条，其中 blocks_completion 228 条。
-- phase4-b44 的 build receipt 验证为 `OK`（succeeded 1，failed/invalid/missing/stale 均0），review 检查为 `FINALIZED`（problems 空）；source manifest、issues、provenance、solution sources、三个生成 currentness 检查、CSV 775行及 `report.py check --all` 均通过。
-- phase4-b44 没有重跑全库 unittest。PROGRESS 中 phase4-b42 的历史测试结果为 1769 tests、3 failures、13 skipped；它不是 b44 的测试结果，后续如需全库测试应先核实该记录中的已知失败是否仍存在。
+- 775 个来源（普通 734、春季 41）；414 套试卷（complete 309、compiled 3、blocked 102）；262 批（closed 180、closed_with_blockers 81、compiled_pending_review 1）。
+- 正式复核门禁：FINALIZED 219、INVALID_OR_STALE 42、VISUAL_FAILED 1；1656/1656 个版本有编译记录。
+- build 回执：succeeded 410、compiled_pending_review 4；review 回执：passed 413、failed 1；问题总账 1385 条，未解决 291 条，其中 blocks_completion 230 条。
+- phase4-b45 的 build receipt 验证为 `OK`（succeeded 1，failed/invalid/missing/stale 均0），review 检查为 `FINALIZED`（problems 空）；source manifest、issues、provenance、solution sources、三个生成 currentness 检查、CSV 775行及 `report.py check --all` 均通过。
 
 ### 下一对话的执行入口
 
-- 先核对本 worktree、分支、HEAD、Git 状态；读取本节、`PROGRESS.md` 最新记录、当前 source manifest、baseline、issues 和对应回执。不要重做 phase4-b44 的转录、构图、provenance、构建或视觉复核。
-- 本交接没有预选下一批。应从 live manifest 与来源文件中重新挑选尚未绑定且有固定可核来源的候选，先检查已有草稿、项目目录、历史与 issues，避免重复登记或覆盖其他会话成果。
-- 按当前项目门禁逐阶段推进：保存来源与不确定性、题面和答案分层、独立复核、三角色 provenance、确定性生成、四版构建、逐页八项视觉复核、finalize、刷新并检查报告/CSV；每完成一阶段提交窄范围内容，不 push。
+- 先核对本 worktree、分支、HEAD、Git 状态；读取本节、`PROGRESS.md` 最新记录、当前 source manifest、baseline、issues 和对应回执。不要重做 phase4-b45 的转录、构图、provenance、构建或视觉复核。
+- 下一候选卷推荐接续处理 **2004 年·上海卷·理科**（来源 `src-f8969b851ca75536af43f98ea865a04b66de9068f24bdec2c3790cd1351bed0a`，路径 `普通高考/2004/2004上海理.pdf`，目前状态 `ready`、未绑定试卷），或从 live manifest 中挑选未绑定且有固定来源的候选卷，先核查已有草稿与目录，避免重复登记。
+- 按当前项目门禁逐阶段推进：保存来源与不确定性、题面和答案分层、独立复核、三角色 provenance、确定性生成、四版构建、逐页八项视觉复核、finalize、刷新并检查报告/CSV；每完成一阶段提交独立规范 commit，不 push。
 
 
 ## 2026-10-26 后续（十二）：1995 全国文科接续验收
