@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 上海文科普通卷：Q22 版面修正与四版视觉复核（2026-11-03）
+
+- 首次正式构建 attempt `e365d302-3044-43d4-88c8-5bd1d171bac1` 的视觉检查发现解析版末页（第19页）仅剩 Q22 两个答案框，属于不合理的稀疏尾页。仅调整解析正文 Q22（1）、（3）的公式呈现：将可读的等式并入文字行，保留分段函数的独立展示；数学内容不变。首次构建结果与修正前状态仍记录在[正式构建报告](reports/2005-shanghai-arts-formal-build.md)。
+- 修正后正式构建 attempt `0a9ae90f-d1bc-4768-8bc9-d6a0fde10c67`（输入 manifest revision 6107，最终复核 revision 6109）成功：试题版4页 SHA-256 `726e5af21f41aa1f1de65cf29102d2a0a5454ad582b7e4a7fcff38d2b5f91662`；解析版18页 `b1dc87c86503026a226af8e861426614f7dc49eadd2b19d45de78522303d64ce`；简答版6页 `7ed88d8abca369eaae41433ae72d9a26937cea0679b21192fb864ad97756fe9b`；印刷版15页 `5bf59296d975f983e3911f896087b9d83cbdc3a91ffc2afc71aa71220af62b7f`。TeX errors、missing characters、overfull 与 undefined references 均为0；当前输入回执校验通过。
+- 四版共43页完成逐页视觉复核，每页8项、共344项，无失败。41页图像与已实际审阅页面完全一致并沿用原视觉结论；解析版第18页和印刷版第15页因分页紧凑发生变化，均在120 dpi下单页检查通过。`review_receipts.py check-batch`、`build_projects.py validate-receipts`、`provenance.py check-batch` 通过；批次回执为 `closed_with_blockers`。审查报告见[phase4-b43 视觉审查报告](reports/phase4-b43.md)，修正与测试记录见[版面修正及收口报告](reports/2005-shanghai-arts-visual-closeout.md)。
+- 全量 unittest：1769 tests，3 failures、13 skipped。失败分别为2015福建文科来源身份断言、2017全国Ⅰ理科答案文件与 drift ledger SHA 不符、以及全库79条缓存状态与重算值不符；前两项文件不在本批改动中，第三项是全库一致性失败。2005上海文科的定向校验通过；不将全量测试结果表述为通过。Q12 `ISSUE-1377` 与 Q20(1) `ISSUE-1379` 仍为 U/PENDING，paper `blocked`，本批仅 `closed_with_blockers`，不代表整卷完成或长期语料完成。
+
 ### 2005 上海文科普通卷：四版正式构建（2026-11-03）
 
 - build attempt `e365d302-3044-43d4-88c8-5bd1d171bac1` 使用 manifest revision 6105，构建后 revision 6106；试题版4页、解析版19页、简答版6页、印刷版15页全部 `succeeded`，errors、missing characters、overfull、undefined references 均为0。PDF SHA-256 与文件页数均已独立核对；build receipt `validate-receipts --require-current-inputs` 返回 `OK`。
