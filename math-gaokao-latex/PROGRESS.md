@@ -13723,3 +13723,10 @@
 - `review_receipts.py finalize-batch-checked` 返回 `FINALIZED`，manifest revision `6065→6066`，`phase3-b24` 状态 `closed`，paper 状态 `complete`。build 与 review 回执 currentness 均通过；四版页数为 6/21/8/18。
 - source manifest、issues、provenance（22题）、solution sources、项目 TeX／简答／四版壳 currentness、775 行 manifest CSV 与全量报告 render/check 均通过。视觉详情见[复核报告](reports/2015-fujian-arts-visual-review.md)，批次状态见[phase3-b24报告](reports/phase3-b24.md)。
 - 固定来源出版者、版次、复制链与官方身份仍未核实，原 PDF 无答案页，未登记官方答案；逐题答案保持 D 级非官方独立推导。本批只收口 2015 福建文科，不表示来源认证或长期语料整体完成。本阶段未调用 OCR、未运行测试套件。
+
+### 2006 重庆理科 Q20(1)：独立流传题面字母冲突复核（2026-11-03）
+
+- 复核固定 source `src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351`：在只读 `gaokaomath-src` commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 中，PDF SHA-256 与 manifest 一致；第 2 页（卷面页码 285）清楚印作 `b²>4(a−1)`。
+- 核查到中国教育在线 2006-06-09 的《2006年高考重庆卷理科数学试题》分页题面，第 5 页影像中同一 Q20(1) 印作 `b²>4(c−1)`。两图的函数定义、题号及周边内容相符，但页面为第三方承载，无法确认出版版次、官方性或与固定来源的版本关系。
+- 已将两份异文及来源限制记入 `ISSUE-1341` 与专门报告。固定转录不变，答案/解析继续 U/PENDING，问题仍 open / `blocks_completion`，paper 与 manifest revision 不变；不按数学合理性改成 `c`。
+- 详情见 `reports/2006-chongqing-science-q20-source-conflict-2026-11-03.md`。本阶段未调用 OCR、未运行测试或构建；仅形成来源冲突证据，不表示该卷或长期语料完成。

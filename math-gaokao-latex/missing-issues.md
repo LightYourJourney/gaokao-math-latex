@@ -22464,7 +22464,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定原页 Q20(1) 印作 b²>4(a−1)，而题目前定义的函数参数只有 b、c；题面照录原字母 a，答案与解析保留 U/PENDING。",
+  "current_evidence": "固定候选源 src-5abd831561d7d4fa968c5bf0deb634e0d666376fd8cc90967cf30d301e77a351（SHA-256 211d79b8676187c7e4a98c71d7eae5eadd28b2e5aaf9237fefd55a791241faa3，上游 commit 34c13a6cf632c0b69c95f89b9b923bbc4a08924d）第2页 Q20(1) 印作 b²>4(a−1)。中国教育在线 2006-06-09 题面分页影像（https://gaokao.eol.cn/huodong/2006zt/200606/t20060609_182836.shtml；第5页图 https://www.eol.cn/include/cer.net/gaokao/2006shiti/chongqing/chongqing_shuxue5.jpg）同题印作 b²>4(c−1)。该转载影像不能确认官方性、版次或与固定源的版本关系；固定题面照录 a，答案与解析保留 U/PENDING。",
   "fingerprint": "3c2a52e3a97e95482ac046a78a9752396fc546d07e15a3b76aa372c87195284a",
   "impact": "blocks_completion",
   "paper_id": "gk-2006-regular-chongqing-science",
