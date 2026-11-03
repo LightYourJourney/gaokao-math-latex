@@ -41,6 +41,13 @@
 - manifest revision `6135→6136`。`provenance.py import-batch` dry-run / write、`provenance.py check-batch`（2卷）、`source_manifest.py validate`、`issues.py validate`、`manifest_csv.py --check`（775行）均通过；状态为 paper `blocked`、batch `provenance_verified`。
 - 本阶段未调用 OCR、联网或模型，未生成项目 TeX / 四版 PDF、正式构建回执、视觉回执或批次关闭回执。来源身份与官方答案仍未核，Q14 blockers 保持打开；下一步按规范生成项目并先跑确定性检查，再正式构建与逐页复核。
 
+### 2003 上海普通卷文理科：TeX 项目与四版入口生成（2026-11-04）
+
+- 从答案速查表门禁发现两份答案要点格式不符：文科标题/表格结构不被解析器识别，理科 Q14 单元格混入条件说明导致与逐题 U 标记不等。统一为标准横向答案速查表，Q14 表格值保持 U，条件说明仍保留在表后和逐题答案中；数学结论未变，并同步更新登记报告中的两份答案源 SHA-256。
+- `generate_projects.py --write` 为两卷生成 `questions.tex`、`answers.tex` 并更新 `index.json`；`make_short_answers.py --write` 生成两份简答；`make_editions.py --write` 生成八个题目/解析/简答/印刷版入口。`solution_sources extract-batch --write` 检查后确认 `_含解析.md` 无需刷新。
+- `solution_sources check-batch`、`provenance.py check-batch`、三个生成器 `--check`、manifest/issues 校验、CSV `--check`（775行）均通过。batch 仍为 `provenance_verified`，两卷因 Q14 blocker 为 `blocked`。
+- 此阶段尚未执行 XeLaTeX 正式构建、PDF 页面检查、build/review 回执或批次关闭；来源身份与官方答案仍未核。下一步先核对构建输入与工具链，再构建四版并逐页复核。
+
 ### 2003 上海普通卷理科：Q1–Q22 独立题面复核（2026-11-04）
 
 - 一名未参与转录的独立复核者直接渲染固定 PDF，逐题核对 Q1–Q22；主会话另行查看第1页 Q16/Q18/Q19 和第2页 Q20/Q22 原图。最终 Q1–Q22 题干、公式、符号和小问全部与可见页图相符，0处未决文字/符号差异、0处影响判断的模糊像素。
