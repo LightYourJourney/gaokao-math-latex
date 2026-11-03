@@ -13868,3 +13868,9 @@
 - 复核者 `/root/audit_2007_2016`（Luna/high）先只据固定题面独立解答，再与答案草稿逐题比较；Q1–Q23 最终答案全部一致，剩余差异 0，`U/PENDING` 答案项 0。固定源 PDF SHA-256 `a33455d27abdf2c4b344a5b90395bd71269f6fbefdef350375aba074e47ef700`，复核开始时答案稿 SHA-256 `8ea53c6c3f548d62e44a4d583e6f63c8cfa3f2323dbbcb253a37c281ccd349fe`。
 - Q4 首条复核消息把答案标签暂写为 A/11.4，但同条计算为 B/11.8，随后明确更正为 B；主会话依据原题表格独立复算一致。Q22 早期另一推导的极坐标系数错误已按 400 dpi 固定原页纠正，本次盲核独立确认 `y−x=m`、`m=−3±2√2`，错误候选未进入答案稿。
 - 答案稿状态改为 `draft-independent-solutions-cross-verified-pending-formal-acceptance`，`official_answer=null`。详情见[答案盲核报告](reports/2015-fujian-science-answer-review.md)。解析正文、图稿、paper/batch/issues/provenance、TeX、正式构建及视觉复核仍未完成；下一阶段编写解析正文。本条不表示来源认证、官方答案验证、整卷验收或长期语料完成。
+
+### 2015 福建理科候选卷：Q1–Q23 解析正文初稿（2026-11-03）
+
+- 新增解析正文草稿 2015/2015_数学真题_福建理_解析正文草稿.md，SHA-256 0f44aa12b8d313949da3bcf6e12521a09cb6e518d2119ea0b9ec170de67134f6；front matter 状态为 draft-independent-solutions-pending-cross-check、paper_id=null、official_answer=null。固定 PDF 在本地忽略缓存缺失，本阶段从上游固定 commit 34c13a6cf632c0b69c95f89b9b923bbc4a08924d 重新取回，SHA-256 与 Git blob 均匹配 manifest。
+- 题面、答案要点、解析正文三个解析器均识别连续 Q1–Q23；validate_solution_body 通过，数学分隔符成对。p.1/p.2 140 dpi 渲染目视确认 Q6 程序框图、Q13 阴影图及 Q17/Q18 图位。解析推导重点和过程记录见[解析正文推导报告](reports/2015-fujian-science-solution-derivation.md)。
+- 本阶段未矢量重绘题图、未登记 paper/batch/issues/provenance，未生成 TeX、未构建 PDF、未调用 OCR 或运行完整测试套件。解析正文待独立盲审；下一阶段按题面逐题审阅推导。本条不表示来源认证、官方答案确认、单卷验收或长期语料完成。
