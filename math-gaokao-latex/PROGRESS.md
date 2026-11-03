@@ -31,6 +31,12 @@
 - Q12保留U/PENDING：端点 $a=\sqrt{5/3}$ 时三棱柱与四棱柱并列最小，原句未说明是否允许并列。Q20(1)保留U/PENDING：原件印“中低价层”，若按上下文理解为“中低价房”，条件计算为2013年底；没有改写固定原文。Q7按标准椭圆方程通常的原点中心约定给出方程。
 - 详情见[非官方答案与解析初稿报告](reports/2005-shanghai-arts-answer-draft.md)。整合稿独立数学复核尚未完成；`official_answer=null`、`paper_id=null`。本阶段未登记issue/provenance、生成含解析派生稿、制作图稿/TeX或正式构建。OCR与外部API调用0；子代理token/费用不可见。本回执不表示数学验收或整卷完成。
 
+### 2005 上海文科普通卷：小问结构锚点规范化（2026-11-03）
+
+- `solution_sources.render_combined` 只读预检发现题面Q19–Q22的小问标记与正文相连，未识别题面小问锚点；解析正文对应小问也缺少 `#### （k）` 锚点。按项目既有格式在题面编号后加入分隔空格，并将解析正文小问标题改为结构锚点；没有改题目事实或推导。
+- 当前题面 SHA-256 `946ad0a766b1b8b24ceb6955433ac663f03b039b72eea216b738007bb41bc6c2`，解析正文 `614b466129cc08ce08427bfa5e3b698f150bac2e7076c1056de5eb45250a04bf`。再次调用 `solution_sources.render_combined` 后，题号/小问/答案解析结构预检通过；内存预览16267字节，SHA-256 `98a2505f84f82a6ac58bc8ab1ee1531546ceb8684e72826a55b3545e5850bb15`，未写出派生文件。
+- 详情见[小问结构锚点规范化报告](reports/2005-shanghai-arts-anchor-normalization.md)。两位独立复核者按当前题面及解析正文哈希确认仅有结构格式变化，原逐题结论仍适用；Q12与Q20(1)仍为U/PENDING。未注册paper/batch、未修改manifest/issues、未运行测试。本阶段不表示正式含解析生成或整卷验收。
+
 ### 2000 上海文科候选卷：固定来源接收（2026-11-03）
 
 - 固定 source `src-8d14b1f9f511665ea10dbda45959a3b445a17806415be6b034f816bec663d7f5`，SHA-256 `35e5d6f6bf052fcd9a2b91a1aa4215766fd4121425cfec7a62cfc4cdc7ab02a1`，Git blob `91ece8675e9cd47367f547bd9b0b6b4979b77d0e`，597723 bytes；与 manifest revision 6066 及固定上游 commit `34c13a6cf632c0b69c95f89b9b923bbc4a08924d` 一致。PDF 固定副本和页面渲染保存在忽略目录 `.work/ocr-local/`。
