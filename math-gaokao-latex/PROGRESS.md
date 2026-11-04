@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海理科：确定性 TeX 选项排版刷新、四版重建与视觉回执（phase4-b26，2026-11-05；批次已关闭）
+
+- 对象：`gk-1998-regular-shanghai-science`，22题；固定来源 `src-0965cb55b028616d561b059acccc3e23188f14aab4f25bd949c2c170a29d5d66`，上游 PDF SHA-256 `9abf8273c0bc577e5a8a6df9c72dd9ba5040ad11bb3d470918ce7bcf48168a0f`。固定扫描副本含题面及卷内答案、评分；来源发布者、版次与答案官方身份仍未认证。
+- `generate_projects.py --check` 显示 Q12、Q13、Q15、Q16 的 `questions.tex` / `answers.tex` 仍使用旧行内选项串；按现行生成器改为 `gkopts` 分项排版。独立只读复核对照题面、答案要点、解析正文和固定 PDF（题面 PDF 第1–2页、卷内答案第4页）确认四题题干、选项顺序、答案及解析均未改变。
+- 正式 build attempt `6254c954-d4a1-466c-8d30-5d3c820e766b`，输入 manifest revision `6240`，最终 revision `6242`。试题/解析/简答/印刷版分别 4/16/6/12 页，共38页；四版均 succeeded，errors、missing characters、overfull、undefined references、problems 均为空。PDF SHA-256：试题版 `edfa72b97cedc32cffc45cb548e8330556aeb0752aa28545cc3275688655aaac`；解析版 `f75e22b2057a5c1dcca2e6df405d93facf45fa3e99b948697bdd0c577fb746e9`；简答版 `57a5e5983e71c0d075b16fc7afd27050725b199426534b5a803584644f32e80d`；印刷版 `4979e123172c0d2d5ecd8b3d9bb758c10a86d7bd4183c40070718fd0896ba85e`。
+- 从提交前 HEAD 的旧 TeX 与同一工具链重建视觉基线，以150 dpi逐页栅格比较：38页中28页 PNG 字节一致并继承既有逐项结论；10个变化页（试题版 p2；解析版 p2、p10–12；简答版 p2；印刷版 p2、p7–9）均重新目视检查八项，共304项（224项继承、80项重审），全部 pass 或 not_applicable。无视觉失败、无警告豁免。`finalize-batch` 返回 `FINALIZED`，review passed、batch closed、paper `complete`；`phase4-b26` build/review/provenance、确定性 TeX、简答、版本壳、solution sources 均通过。
+- 全库 `manifest.csv` 当前775行；`report.py check --all` 确认六个报告投影与 live manifest 一致。完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1779 tests in 735.593s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones`，报告59项跨卷 paper/batch 缓存状态漂移；本批已由 transactional finalizer 重新派生，不批量改写其他卷缓存。
+- 本阶段只重建既有确定性排版投影并刷新四版/回执，未改动规范题面、数学结论、答案、解析、图稿或 provenance；未使用 OCR 或外部来源，token/运行成本不可见。当前 `generate_projects.py --all --check` 仍有79个文件、41卷、32批次过期；最早下一项为1998上海文史类 `phase4-b29`。本批关闭不表示1952—2026总题库完成。
+
 ### 1997 上海理科：确定性 TeX 重建与四版视觉回执刷新（phase4-b25，2026-11-05；批次已关闭）
 
 - 对象：`gk-1997-regular-shanghai-science`，22题；固定来源 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`，上游 `普通高考/1997/1997上海理.pdf`，7页，SHA-256 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`。本阶段只重建现行确定性 TeX 投影并刷新正式四版/视觉回执；题面文字、数学结论、答案、解析、来源身份与逐题 provenance 未改。固定扫描件仍不认证发布者、版次或官方答案身份。
