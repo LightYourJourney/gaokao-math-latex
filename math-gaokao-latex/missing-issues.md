@@ -23469,7 +23469,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定 PDF 第2页（印刷页127）Q18 首句称顶点为 A1、A2，后文使用 OA、A1P、AP1；原图标左端 A1(-5,0)、右端 A(5,0)，没有 A2。300 dpi 原页复看与独立题面复核确认该差异确在原件；题面忠实保留各处原字并作待核注，不是转录漏改。",
+  "current_evidence": "固定 PDF 第2页（印刷页127）Q18 首句称顶点为 A1、A2，后文使用 OA、A1P、AP1；原图标左端 A1(-5,0)、右端 A(5,0)，没有 A2。300 dpi 原页复看与独立题面复核确认该差异确在原件。新查到新浪教育 2003-06-09 北京文科试题扫描（page 45210，扫描页17）右端标 A2(5,0)，同期答案扫描（page 45213，扫描页20）也以 A2 推导；页图 SHA-256 分别为 a544751f475d112fe87850cc81aefc6bff795206f7a2e9d2b220c724e031226f 与 9c91358e1c72e74e57ff7737defa6ba8cf09843bbf1ac3c299a508090c1c6150。该材料来自精华听课网经新浪教育发布，带有新浪“仅供参考、以权威部门为准”声明；其独立分页、未认证的发布链不能证明与固定 PDF SHA 7fc0fd289fc486a0ae1c16a9ab5b4f0561830897df6e8897c50666f03d511913 为同一版，也不是官方勘误。详情见 reports/2003-beijing-contemporaneous-source-corroboration-20261104.md。",
   "fingerprint": "dabbd97eba1b6861c574e702cb84bfc8b59aae40df98f2be8657ca01762d5bc2",
   "impact": "blocks_completion",
   "paper_id": "gk-2003-regular-beijing-arts",
@@ -23486,7 +23486,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "Q18 字面同时出现 A1、A2 和后文的 A，无法仅凭固定题面唯一确定构造所用右顶点。答案要点与解析因此标 U/PENDING；按图示 A=(5,0) 的推导只作为条件性结果，不能当作已核定答案或官方答案。",
+  "current_evidence": "固定题面字面同时出现 A1、A2 和后文的 A，仍无法从该固定副本本身唯一确定构造所用右顶点。新浪教育 2003-06-09 的同期北京文科答案扫描（page 45213）用 A2(5,0) 并据此给出椭圆与准线结果，提供非官方同期答案材料支持；但其不能认证固定 PDF 的精确版本或官方答案。答案要点与解析继续标 U/PENDING；按 A2 的推导只作为条件性结果，不能当作官方答案。详见 reports/2003-beijing-contemporaneous-source-corroboration-20261104.md。",
   "fingerprint": "f59e73479110d23cd9a8bb289a60af044c17a6a8d531f95c194da2bfaaf0e126",
   "impact": "blocks_completion",
   "paper_id": "gk-2003-regular-beijing-arts",
@@ -23503,7 +23503,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定 PDF 第2页（印刷页125）Q17 可见原文为“底面边长的 3”，其后紧接逗号和“侧棱”，3 后没有可见“为”；300 dpi 源页复看和独立题面复核均确认如此。规范题面照录并标注待核，未按语义补字。",
+  "current_evidence": "固定 PDF 第2页（印刷页125）Q17 可见原文为“底面边长的 3”，其后紧接逗号和“侧棱”，3 后没有可见“为”；300 dpi 源页复看和独立题面复核均确认如此。新浪教育 2003-06-09 北京理科试题同期扫描（page 45222，扫描页42）同题写“底面边长为3”，页图 SHA-256 a000900a4b021a3a275c3d80006648009cc4a8257f816f8dc41f7f80b8312199；同期答案扫描（page 45226，扫描页45）以 BD=BC=AB、BE=1/2 AC=3/2 求解，页图 SHA-256 c5669185cdd2049d89f225b6257d2e4254391ffa1447aa5e93bc4c6568fdfdab。材料由精华听课网经新浪教育发布，新浪注明仅供参考；分页不同且来源链未认证，不能证明与固定 PDF SHA d0081500bd56d03199ddcf232fe8e870f2ecd7e9c41ba849417af9af79fbb702 同版，也不是官方勘误。详情见 reports/2003-beijing-contemporaneous-source-corroboration-20261104.md。",
   "fingerprint": "9ed886cb05969987b28f6b8b1112e6c3a14220530fac1eb184ce5b777767d954",
   "impact": "blocks_completion",
   "paper_id": "gk-2003-regular-beijing-science",
@@ -23519,7 +23519,7 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "原页未能确定正三棱柱底面边长。Q17(1) 可独立证明；Q17(2)(3) 依赖未知边长，答案要点与解析将整题标 U/PENDING，并只在显式假设边长为3时列条件性结果。",
+  "current_evidence": "固定原页仍不能确定正三棱柱底面边长是否应为3。新浪教育 2003-06-09 的同期北京理科试题扫描写“底面边长为3”，对应答案扫描支持 s=3 的后续计算；这是一条非官方同期材料，未认证为固定 PDF 的精确版本或官方答案。Q17(1) 可独立证明；Q17(2)(3) 继续标 U/PENDING，并只在显式假设边长为3时列条件性结果。详情见 reports/2003-beijing-contemporaneous-source-corroboration-20261104.md。",
   "fingerprint": "051248b1687d9bd5477e0eb99bf16ff9d6ce3ef76bf8beb1038f69a19fc6745f",
   "impact": "blocks_completion",
   "paper_id": "gk-2003-regular-beijing-science",

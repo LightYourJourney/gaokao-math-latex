@@ -14528,3 +14528,9 @@
 - 提交前复看每页图形适用性时发现 attempt `6cf10a91-a876-4dd5-b001-068521eb80c8` 的解析版第12页 Q10、 第18页 Q18 含图，却被误列为 `figure_label: not_applicable`。不手改已封账 receipt，改以 attempt `312cdaea-4916-49de-aedd-0d683c00949f` 重建并重走 `prepare-batch` / 视觉回执事务；新 attempt 的56张110dpi PNG与前次已审页面逐字节一致，复核确认这两页的图形与标注通过。
 - 修正四版图形适用页后，重新完成448项检查：408项通过、40项无图页图形检查为 `not_applicable`。两条 Q17 盒宽警告绑定当前 build 并分别复核解析版第17页、印刷版第16页，通过逐字段豁免。
 - 新 build receipt SHA-256 `27b06bfba5b5fddf78ace6825f2588104a7b0269421d3f5b1d1e36bfb5ee88ea`，review receipt SHA-256 `d9bd5da8ee2bf0283ecc4001483ba73e38ba63c79e8724ac6e5d7356259a7590`；PDF 哈希和逐版信息见[四版正式构建与视觉复核报告](reports/2026-beijing-recall-formal-build.md)。终结器返回 `FINALIZED`，manifest revision `6178`，batch 仍为 `closed_with_blockers`，未认证来源、`official_answer=null` 及 ISSUE-1408–1410、1414–1416 阻塞项均保持原状。
+
+### 2003 北京普通文理卷：同期扫描与答案交叉核查（2026-11-04）
+
+- 在新浪教育 2003-06-09 北京文理科题面/答案分页中找到与固定卷对应的同期材料。文科 Q18 的扫描将右端标为 A2，答案页按 A2 推导；理科 Q17 的扫描写“底面边长为3”，答案页按边长3计算。所有页图及 SHA-256、来源时间、贡献者、对照范围和限制见[同期来源交叉核查报告](reports/2003-beijing-contemporaneous-source-corroboration-20261104.md)。
+- 新浪页面将材料归于精华听课网并声明仅供参考。它们是可追溯的同期二手扫描，不认证为固定 PDF 的精确版本、教育考试机构原件或官方答案；定向查找北京教育考试院、北京市政府和教育部域名未定位这两题的官方扫描/勘误，但不据此声称官方材料不存在。
+- 更新 `ISSUE-1398`–`ISSUE-1401` 的 `current_evidence`；四项仍 open / `blocks_completion`，固定题面、答案正文、provenance 和回执未改，Q18/Q17 继续 `U/PENDING`，`official_answer=null`。本阶段仅增加证据，不解除来源异文或答案阻塞。
