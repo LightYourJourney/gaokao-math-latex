@@ -14489,3 +14489,10 @@
 - 通过 `register-papers --write` 登记 `gk-2026-regular-beijing-recall` 和 `phase4-b49`，manifest revision `6159→6160`。paper 状态 `blocked`、`blocked_from=planned`；batch 为 `planned`。`ISSUE-1408`–`ISSUE-1414` 均 open / `blocks_completion`：Q10/Q13/Q15 异文，Q10/Q14/Q18 图缺失，Q18(2) 条件③不足以唯一确定。相应答案继续 U/PENDING，不裁定候选版与第三方版谁正确。
 - `solution_sources.py check-batch`（21题）、source manifest、issues、775行 CSV 与 `report.py check --all` 报告投影当前性检查通过。全量报告当前显示 `INVALID_OR_STALE 265`、`VISUAL_FAILED 1`；经 `phase4-b48` 只读核验，历史 build/review 回执未改，降级源于 manifest 新增本卷后共享生成投影 `index.json` 尚未更新，故生成物探针暂报 stale。下一次本卷项目生成将刷新全局 index，再复核旧批次门禁；报告检查通过表示投影与当前账本一致，不表示批次全部验收通过。
 - 本阶段尚未导入逐题 provenance、登记/重绘图稿、生成项目 TeX/PDF、正式构建或视觉复核。未额外调用 OCR/模型；模型 token 与费用不可见，记未知。下一阶段按固定 PDF 重绘并核验 Q10/Q14/Q18 图，更新图链、生成器、`figure_files` 和图稿 provenance，再导入逐题 provenance。本记录不表示来源认证、整卷验收或长期语料完成。
+
+### 2026 北京高考数学回忆版候选卷：Q10/Q14/Q18 题图重绘与登记（2026-11-04）
+
+- 按固定 PDF 第2、3页重绘三张 TikZ 图，逐张与 300 DPI 原页视觉对照。图稿保留 source ID、PDF SHA-256、页码与题号；投影比例只作示意。局部预览 PDF、源页渲染及检查日志位于忽略目录 `.work/ocr-local/2026-beijing-recall/figure-preview/`。图稿和预览指纹、线型约束详见[题图阶段报告](reports/2026-beijing-recall-figures.md)。
+- 规范题面的三个图位改为独立 Markdown 图链，重新生成 `_含解析.md`；manifest `figure_files` 登记三图且每图 `expected_occurrences=2`，revision `6160→6161`。`generate_projects.py` 刷新 `questions.tex`、`answers.tex` 与共享 `index.json`，两份 TeX 均各引用三图。
+- `ISSUE-1411`–`ISSUE-1413` 的缺图问题已解决并保留历史条目；Q10/Q13/Q15 来源异文 `ISSUE-1408`–`ISSUE-1410` 与 Q18(2) 条件③歧义 `ISSUE-1414` 仍 open。paper 仍 `blocked`、batch 仍 `planned`，官方身份与答案未核。
+- source manifest、issues、21题 solution sources、项目生成器检查和 775 行 manifest CSV 校验通过；未跑测试套件或 OCR，未生成正式卷 PDF 或视觉回执。下一步导入逐题三角色 provenance，再继续生成/检查四版与正式构建。

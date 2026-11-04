@@ -23696,14 +23696,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "规范题面仍含 Q10 原图待矢量重绘占位；固定候选 PDF 第2页的四杆机构图结构已在 reports/2026-beijing-recall-figure-source-review.md 复核，但尚无 TikZ 图稿、Markdown 图链、manifest figure_files 登记或图稿 provenance。",
+  "current_evidence": "固定候选 PDF 第2页的四杆闭合结构及以 A 为视觉中心的完整圆已按 reports/2026-beijing-recall-figure-source-review.md 重绘为 2026_北京卷_回忆版/figures/f2026_beijing_recall_q10_fourbar_linkage.tex；图稿头绑定 source_id src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee、PDF SHA-256 7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9、第2页和 Q10。规范题面有独立 Markdown 链接，确定性 _含解析.md 已刷新，manifest figure_files 登记 expected_occurrences=2，生成的 questions.tex 与 answers.tex 均引用图稿；三页 XeLaTeX 局部预览已逐图对照固定原页检查。圆未标成可达轨迹，投影比例仍仅作示意。",
   "fingerprint": "93a530d35aef8eafb13f201aad34382d2c4f787dde291c5c7c4ad07c2e02a699",
   "impact": "blocks_completion",
   "paper_id": "gk-2026-regular-beijing-recall",
   "question_id": "gk-2026-regular-beijing-recall-q10",
-  "resume_action": "依据固定候选 PDF 第2页绘制并目视复核 TikZ 图，再同步规范题面图链、生成器、figure_files 与图稿 provenance；保持原图示意比例不作为数学事实。",
+  "resume_action": "已完成 TikZ 重绘、固定原页目视复核、规范题面图链、确定性生成映射与 figure_files 登记；本图缺失问题已解决。正式试卷排版若发现具体图形问题，应另行登记，不从示意比例推断数学条件。",
   "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
@@ -23713,14 +23713,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "规范题面仍含 Q14 原图待矢量重绘占位；固定候选 PDF 第2页仅 DC 为隐藏棱的结构已在来源复核报告记录，尚无矢量图及四面登记。",
+  "current_evidence": "固定候选 PDF 第2页三棱锥 A-BCD 已按 reports/2026-beijing-recall-figure-source-review.md 重绘为 2026_北京卷_回忆版/figures/f2026_beijing_recall_q14_tetrahedron.tex；图稿头绑定 source_id src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee、PDF SHA-256 7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9、第2页和 Q14。仅 DC 画为虚线，规范题面有独立 Markdown 链接，确定性 _含解析.md 已刷新，manifest figure_files 登记 expected_occurrences=2，生成的 questions.tex 与 answers.tex 均引用图稿；三页 XeLaTeX 局部预览已逐图对照固定原页检查。未添加垂直、长度或中点标记。",
   "fingerprint": "c70f602216b2fd2d2bf2597f5caa3361c9afd640d80b1e753db1f4fc62ce3140",
   "impact": "blocks_completion",
   "paper_id": "gk-2026-regular-beijing-recall",
   "question_id": "gk-2026-regular-beijing-recall-q14",
-  "resume_action": "依据固定候选 PDF 第2页重绘并核对虚实棱，随后同步规范题面图链、生成器、figure_files 与图稿 provenance。",
+  "resume_action": "已完成 TikZ 重绘、固定原页目视复核、规范题面图链、确定性生成映射与 figure_files 登记；本图缺失问题已解决。正式试卷排版若发现具体图形问题，应另行登记。",
   "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
@@ -23730,14 +23730,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "规范题面仍含 Q18 原图待矢量重绘占位；固定候选 PDF 第3页的隐藏棱、辅助线及 D/E/P 位置边界已有来源复核记录，尚无 TikZ 图稿及四面登记。",
+  "current_evidence": "固定候选 PDF 第3页三棱柱及辅助线已按 reports/2026-beijing-recall-figure-source-review.md 重绘为 2026_北京卷_回忆版/figures/f2026_beijing_recall_q18_triangular_prism.tex；图稿头绑定 source_id src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee、PDF SHA-256 7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9、第3页和 Q18。实虚侧棱、底棱及 EP/ED/PD 线型按固定原页重绘；D、E 为题干给定中点，P 的位置仍为示意。规范题面有独立 Markdown 链接，确定性 _含解析.md 已刷新，manifest figure_files 登记 expected_occurrences=2，生成的 questions.tex 与 answers.tex 均引用图稿；三页 XeLaTeX 局部预览已逐图对照固定原页检查。",
   "fingerprint": "65cea86524ae4cfc2051a8977a68bec8dd3d7f4de7cab4b47c20a50892c41ff5",
   "impact": "blocks_completion",
   "paper_id": "gk-2026-regular-beijing-recall",
   "question_id": "gk-2026-regular-beijing-recall-q18",
-  "resume_action": "依据固定候选 PDF 第3页矢量重绘并目视检查隐藏棱和辅助线，随后同步规范题面图链、生成器、figure_files 与图稿 provenance。",
+  "resume_action": "已完成 TikZ 重绘、固定原页目视复核、规范题面图链、确定性生成映射与 figure_files 登记；本图缺失问题已解决。正式试卷排版若发现具体图形问题，应另行登记；P 的比例位置不作为题设。",
   "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
-  "status": "open",
+  "status": "resolved",
   "type": "figure-missing"
 }
 ```
