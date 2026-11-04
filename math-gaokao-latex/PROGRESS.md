@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1997 上海文史类：确定性 TeX 重建与四版视觉回执更新（phase4-b24，2026-11-05；批次已关闭）
+
+- 对象：`gk-1997-regular-shanghai-arts`，22题；固定来源 `src-a9a7c39b5916052fa3afb91395913a6018084816eb8c8996044eb9a5b475d6ef`，上游路径 `普通高考/1997/1997上海文.pdf`，8页，PDF SHA-256 `843b55901dacb8cea8d37ff0cedd6a2d00b54d7176bc2096edb1ce773dfd5250`。本轮只处理确定性生成投影及正式复核；规范题面、答案、解析、图稿和逐题 provenance 未改。来源固定副本仍不等于发布者/版次或答案官方身份认证。
+- `generate_projects.py --check` 发现原 `questions.tex`、`answers.tex` 的 Q1、Q5 仍是旧内联选项排布；按现行生成器重写为 `gkopts(4)` 四列结构，题干、选项文字及数学内容不变。两文件生成检查通过。
+- 正式四版 build attempt `9af7045a-b614-441a-b1c1-92714c694386`，构建输入 manifest revision `6234`，最终 manifest revision `6236`。试题/解析/简答/印刷版分别 5/20/7/15 页，共47页；PDF SHA-256 依次为 `2f519fe2c769bffdb30496f4e68a8d5853b56f4e144b4671ca90e2e7fd1a1144`、`97515633aa150da8c3414fed335968569b697c48933dbc413ebcdbb6c9f6dd2a`、`665bc3c030d5ec6cb574be8a85f9086536058c08325702dff778fe708b9e42be`、`e1f93aff72703cfab1e9f5274eaac421d46072eff84428df28b3b3c52a7a0673`。四版均 succeeded，errors、missing characters、Overfull、undefined references 与 problems 均为空。
+- 视觉复核：150 dpi 当前渲染与旧 attempt 的逐页图像比较，36页 PNG 完全一致并逐项继承旧实审结论；11页变化（试题版1–2页、解析版1/2/6/8页、简答版1–2页、印刷版1/5/6页）全部重新目视检查；印刷版第6页另以300 dpi检查 Q5 的分数选项间距。47页共376项八类检查均为 pass 或 not_applicable，无警告豁免。`finalize-batch` 返回 `FINALIZED`；review passed、批次 closed、paper `production_state=complete`，17条关联 issue 均 resolved。
+- 收尾校验：build receipts `OK`（1 succeeded、0 pending/stale/invalid）；review `FINALIZED`；provenance `OK：1卷`；确定性 TeX、solution sources（22题）、简答、版本壳、source manifest、issues 均通过；`manifest.csv` 为当前775行；`report.py render --all` 单事务写入并回读六个全库目标，`report.py check --all` 确认投影当前。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 实跑：`Ran 1779 tests in 591.473s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones`，报告63项全库 paper/batch 缓存状态与现场推导不一致，首项 `gk-2016-regular-national-2-arts`；本卷独立 `provenance check-batch` 通过。本轮未批量改写无关卷的状态缓存。
+- 本阶段没有调用 OCR 或外部资料服务，也没有据模型记忆补录内容；仅重建既有排版投影、正式编译和复核。下一步重新检查生成器 currentness 队列，按年份与可核验证据选择下一套卷；本批关闭不代表1952—2026题库完成。
+
 ### 2012 全国大纲卷与普通卷文理四卷：正式重建与视觉封存（phase2-b01，2026-11-04；批次已关闭）
 
 - 对象为四卷：`gk-2012-regular-national-outline-arts`、`gk-2012-regular-national-outline-science`、`gk-2012-regular-national-new-arts`、`gk-2012-regular-national-new-science`，规范来源分别为对应 `_试题.md`、`_答案要点.md`、`_解析正文.md`；题数为22/22/24/24，批次 issues 为空。此次仅修正大纲理科 Q22 在“如下：”后的换行：把强制 `\\linebreak` 改成自然段落换行，题目文字、符号和数学内容未变。同步确定性 `_含解析.md` 与 TeX 投影；provenance 只更新 Q22 题面哈希及版式说明，答案哈希未变。
