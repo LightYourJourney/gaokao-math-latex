@@ -4,7 +4,33 @@
 
 > **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：2003 上海文理普通卷题面转录与独立复核完成
+## 2026-11-04 当前状态：phase4-b49 收口后完成 2003 北京同期来源核查
+
+### 工作位置与 Git
+
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。更新本交接前 HEAD 为 `dff40f2f`（`[已核] docs(gaokao): record 2003 Beijing source corroboration`），当时工作树干净、领先 origin 8 个提交；本交接更新本身会另作一个本地提交。新会话以实时 Git 输出为准；没有切换到 `main`，没有 push。
+- 本轮先完成 `phase4-b49`（2026 北京回忆版候选卷）四版构建/视觉收口，随后提交 2003 北京来源交叉核查记录。每项提交独立；不要重做已闭合的构建或视觉审查。
+
+### Live manifest 概况
+
+- manifest revision `6178`：775 sources、420 papers（309 `complete`、108 `blocked`、3 `compiled`）、266 batches（180 `closed`、85 `closed_with_blockers`、1 `compiled_pending_review`）。全量报告投影与当前 manifest 一致；这些登记数不代表 1952–2026 目标已完成。
+- 唯一非终态批次为 `phase0-b02`（2019/2020 全国Ⅰ文理四卷），状态 `compiled_pending_review`。按既有用户裁定保留 2020 文科取消题及五项 `heading_number` 视觉失败；不要删除该题或将失败改判通过。
+- 最新批次 `phase4-b49`（`gk-2026-regular-beijing-recall`）为 `closed_with_blockers`；官方来源身份与答案未核，`official_answer=null`。`ISSUE-1408`–`1410`、`1414`–`1416` 继续阻塞，候选版与未认证副本之间的题面/答案差异不得择一消除。
+
+### 最近完成的来源核查
+
+- `phase4-b48`（2003 北京文理卷）已完成原卷忠实转录、构建和视觉封账，当前仍为 `closed_with_blockers`。新查到新浪教育保存的 2003-06-09 精华听课网文理题面/参考答案分页：文科 Q18 扫描图右顶点写 A2、理科 Q17 题面写“底面边长为3”。这些是同期二手材料，不认证为固定 PDF 同版或官方勘误。
+- 已更新 `ISSUE-1398`–`1401` 的 `current_evidence` 和[2003 北京来源交叉核查报告](../../exams/math-gaokao-latex/reports/2003-beijing-contemporaneous-source-corroboration-20261104.md)。四项仍 `open` / `blocks_completion`；原题面、答案、provenance、manifest 与回执均未因二手材料改写。定向查找未定位官方扫描/勘误，但这不表示其不存在。
+- 先前的 `phase4-b47`（2003 上海文理普通卷）已经完成答案/解析、盲核、图稿、provenance、四版构建及92页视觉复核；批次 `closed_with_blockers`，两卷 Q14 的 `ISSUE-1388`/`1389` 仍为 U/PENDING。原交接快照关于“下一步才开始答案”的文字已过时，细节以 [`PROGRESS.md`](../../exams/math-gaokao-latex/PROGRESS.md) 开头阶段记录及 live manifest 为准。
+- 本轮确定性校验：`issues.py validate`、source manifest validate、`manifest_csv.py --check`（775行）、`report.py check --all` 与 `git diff --cached --check` 均通过。只更新来源证据，没有改题面/答案/版面或 build 输入；本轮未重建 PDF、未运行测试套件。
+
+### 下一工作候选
+
+- 按年份顺序复核未绑定来源。1998 全国文科已有25题转录、独立数学复核及固定 PDF 原页复看，但来源仍 `ready/unbound`，出版身份未核，Q12/Q13/Q25 原件冲突仍在；本轮对教育部/学信网域名和题名的定向检索未定位到可直接核验的官方原卷或勘误，相关搜索命中仍是二手文档页。检索未命中不证明官方材料不存在；不要重做转录或把二手版本当裁定。
+- 当前较早的下一候选是 `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`（`普通高考/2002/2002广东,河南,江苏,广西.pdf`，2页，ready/unbound）。开工先固定并目视核对 PDF，确认各地区/课程版本及其与现有 2002 全国卷项目的关系；只有边界明确后再选 paper/batch，不按文件名拆分或重复登记。
+- 不要因大量未绑定来源、blocked papers 或 open issues 而批量清状态。每阶段核对固定来源、现有草稿、manifest、PROGRESS 与历史，保留来源不确定性，并在每个可审查阶段单独提交。
+
+## 历史快照：2003 上海普通卷文理科题面转录与独立复核完成
 
 ### 工作位置与分支
 
@@ -25,7 +51,7 @@
 - **理科文字层有明显整题错配：**第2页可见 Q22 是集合 `M` 的函数题；同页文字抽取在 Q22 位置却输出等比数列组合和题，该题可见于第1页 Q19。Q20 的“最小”也被文字层重复为“最最小”，Q13(D)绝对值线及若干平行符号/向量箭头有抽取缺陷；均按可见页面转录，不以文字层替代。
 - 本轮没有 OCR、外部 API 或项目测试/构建；token 成本未知。没有生成答案、解析、图形矢量稿或四版 TeX/PDF。本批仍只是题面层工作，不表示 1952–2026 语料完成。
 
-### 下一阶段
+### 当时计划的下一阶段（现已完成；勿按此快照重复开工）
 
 - 从已复核的文理题面开始答案要点与解析草稿；必须标为本库独立推导、非官方答案，并分别完成独立盲解核对。若没有可追溯的同版答案/勘误证据，保留 U/unknown 与 source identity 不确定性。
 - 按 Q16/Q18/Q20 原页重绘文理两套题图；图稿、manifest 映射和出处必须一起登记。随后才评估 paper/batch 注册、逐题 provenance、确定性合并、四版构建与逐页视觉验收。
