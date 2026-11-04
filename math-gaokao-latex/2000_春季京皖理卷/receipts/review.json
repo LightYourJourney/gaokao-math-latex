@@ -1,12 +1,24 @@
 {
   "batch_id": "phase4-b20",
-  "build_attempt_id": "5fb0e824-ad58-4878-bd32-3a04cc8f7a78",
-  "dependency_tree_sha256": "3dc61853f6e51748b395bbf04938d17021a3daf8b4fe0057f1eeb65500242e2b",
+  "build_attempt_id": "3327a32f-9123-4130-8d58-ef9451985bf3",
+  "dependency_tree_sha256": "2ea1284f3dfa6817ef292cc3c9be89a6a63e04ea60f315ed011b528024fc4809",
   "editions": [
     {
-      "candidate_override": null,
+      "candidate_override": {
+        "chosen_pages": [
+          1,
+          2,
+          3
+        ],
+        "original_pages": [
+          2
+        ],
+        "reason": "与既有 review attempt 5fb0e824-ad58-4878-bd32-3a04cc8f7a78 （review.json SHA-256 82b7faf83375f76dddccb5f7173dcb651ff482c047c0434c8628ad216ee3f15c，基线 PDF SHA-256 754aeefff7137a6988b7cfce0421f65d39fef0e569f5d6c37ea07c83c9b2b0b5）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [4, 5] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3] 已在当前 build attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
+      },
       "candidate_pages": [
-        1
+        1,
+        2,
+        3
       ],
       "edition": "试题版",
       "page_count": 5,
@@ -15,42 +27,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第1页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第1页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第1页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第1页：本页无图形。",
+              "note": "本次 attempt 第 1 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第1页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第1页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第1页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第1页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -61,42 +73,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第2页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第2页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第2页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第2页：本页无图形。",
+              "note": "本次 attempt 第 2 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第2页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第2页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第2页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第2页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -107,42 +119,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第3页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第3页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第3页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第3页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第3页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第3页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第3页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第3页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -242,13 +254,39 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "754aeefff7137a6988b7cfce0421f65d39fef0e569f5d6c37ea07c83c9b2b0b5",
+      "pdf_sha256": "1ad420f6e949c10bbdbbb60649c7f1803ebbfd23a6ed2efda94392c563db7280",
       "result": "pass"
     },
     {
-      "candidate_override": null,
+      "candidate_override": {
+        "chosen_pages": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13
+        ],
+        "original_pages": [
+          7
+        ],
+        "reason": "与既有 review attempt 5fb0e824-ad58-4878-bd32-3a04cc8f7a78 （review.json SHA-256 82b7faf83375f76dddccb5f7173dcb651ff482c047c0434c8628ad216ee3f15c，基线 PDF SHA-256 23bcfd579494d72cbf144f529f05fc8482a8d1082a51ce3ccd163976474a44ce）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [4, 5, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3, 6, 7, 8, 9, 10, 11, 13] 已在当前 build attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
+      },
       "candidate_pages": [
-        1
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
       ],
       "edition": "解析版",
       "page_count": 24,
@@ -257,42 +295,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第1页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第1页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第1页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第1页：本页无图形。",
+              "note": "本次 attempt 第 1 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第1页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第1页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第1页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第1页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -303,42 +341,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第2页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第2页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第2页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第2页：本页无图形。",
+              "note": "本次 attempt 第 2 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第2页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第2页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第2页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第2页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -349,42 +387,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第3页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第3页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第3页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第3页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第3页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第3页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第3页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第3页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -487,42 +525,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第6页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 6 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第6页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 6 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第6页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 6 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第6页：本页无图形。",
+              "note": "本次 attempt 第 6 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第6页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 6 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第6页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 6 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第6页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 6 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第6页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 6 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -533,42 +571,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第7页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 7 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第7页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 7 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第7页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 7 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第7页：本页无图形。",
+              "note": "本次 attempt 第 7 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第7页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 7 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第7页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 7 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第7页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 7 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第7页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 7 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -579,42 +617,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第8页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 8 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第8页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 8 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第8页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 8 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第8页：本页无图形。",
+              "note": "本次 attempt 第 8 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第8页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 8 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第8页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 8 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第8页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 8 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第8页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 8 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -625,42 +663,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第9页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 9 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第9页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 9 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第9页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 9 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第9页：本页无图形。",
+              "note": "本次 attempt 第 9 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第9页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 9 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第9页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 9 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第9页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 9 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第9页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 9 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -671,42 +709,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第10页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 10 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第10页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 10 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第10页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 10 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第10页：本页无图形。",
+              "note": "本次 attempt 第 10 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第10页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 10 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第10页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 10 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第10页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 10 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第10页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 10 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -717,42 +755,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第11页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 11 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第11页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 11 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第11页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 11 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第11页：本页无图形。",
+              "note": "本次 attempt 第 11 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第11页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 11 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第11页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 11 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第11页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 11 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第11页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 11 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -809,42 +847,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第13页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 13 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第13页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 13 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第13页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 13 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第13页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 13 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第13页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 13 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第13页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 13 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第13页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 13 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第13页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 13 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1358,13 +1396,25 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "23bcfd579494d72cbf144f529f05fc8482a8d1082a51ce3ccd163976474a44ce",
+      "pdf_sha256": "0dcb0db2a4db54f4faeafad29d58e29fb35c49fe3e589396e1e8c61c5276e9ad",
       "result": "pass"
     },
     {
-      "candidate_override": null,
+      "candidate_override": {
+        "chosen_pages": [
+          1,
+          2,
+          3
+        ],
+        "original_pages": [
+          1
+        ],
+        "reason": "与既有 review attempt 5fb0e824-ad58-4878-bd32-3a04cc8f7a78 （review.json SHA-256 82b7faf83375f76dddccb5f7173dcb651ff482c047c0434c8628ad216ee3f15c，基线 PDF SHA-256 2b5192efbd1f39793bfe4d1773e388b8582bd0442dd08877d72c805799cf4d9d）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [4, 5, 6, 7] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3] 已在当前 build attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
+      },
       "candidate_pages": [
-        1
+        1,
+        2,
+        3
       ],
       "edition": "简答版",
       "page_count": 7,
@@ -1373,42 +1423,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第1页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第1页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第1页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第1页：本页无图形。",
+              "note": "本次 attempt 第 1 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第1页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第1页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第1页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第1页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1419,42 +1469,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第2页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第2页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第2页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第2页：本页无图形。",
+              "note": "本次 attempt 第 2 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第2页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第2页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第2页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第2页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1465,42 +1515,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第3页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第3页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第3页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第3页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第3页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第3页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第3页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第3页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1692,12 +1742,38 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "2b5192efbd1f39793bfe4d1773e388b8582bd0442dd08877d72c805799cf4d9d",
+      "pdf_sha256": "2120282bbc152da8e35f5b466dd4a4a9581140b058f7d5d5fe82667f21ea153e",
       "result": "pass"
     },
     {
-      "candidate_override": null,
+      "candidate_override": {
+        "chosen_pages": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          17
+        ],
+        "original_pages": [
+          17
+        ],
+        "reason": "与既有 review attempt 5fb0e824-ad58-4878-bd32-3a04cc8f7a78 （review.json SHA-256 82b7faf83375f76dddccb5f7173dcb651ff482c047c0434c8628ad216ee3f15c，基线 PDF SHA-256 5331173834e12ccbcdc2131848a13c7084e37d81fffa387d2a79605b3443a3ba）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [3, 4, 12, 13, 14, 15, 16, 17, 18, 19] 继承旧八项实际检查结论；变化或新增页 [1, 2, 5, 6, 7, 8, 9, 10, 11] 已在当前 build attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
+      },
       "candidate_pages": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
         17
       ],
       "edition": "印刷版",
@@ -1707,42 +1783,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第1页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第1页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第1页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第1页：本页无图形。",
+              "note": "本次 attempt 第 1 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第1页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第1页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第1页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第1页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1753,42 +1829,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第2页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第2页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第2页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第2页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 2 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第2页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第2页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第2页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第2页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1891,42 +1967,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第5页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 5 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第5页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 5 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第5页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 5 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第5页：本页无图形。",
+              "note": "本次 attempt 第 5 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第5页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 5 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第5页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 5 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第5页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 5 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第5页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 5 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1937,42 +2013,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第6页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 6 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第6页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 6 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第6页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 6 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第6页：本页无图形。",
+              "note": "本次 attempt 第 6 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第6页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 6 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第6页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 6 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第6页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 6 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第6页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 6 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -1983,42 +2059,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第7页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 7 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第7页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 7 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第7页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 7 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第7页：本页无图形。",
+              "note": "本次 attempt 第 7 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第7页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 7 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第7页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 7 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第7页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 7 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第7页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 7 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -2029,42 +2105,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第8页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 8 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第8页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 8 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第8页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 8 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第8页：本页无图形。",
+              "note": "本次 attempt 第 8 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第8页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 8 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第8页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 8 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第8页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 8 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第8页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 8 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -2075,42 +2151,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第9页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 9 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第9页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 9 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第9页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 9 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第9页：本页无图形。",
+              "note": "本次 attempt 第 9 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第9页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 9 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第9页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 9 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第9页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 9 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第9页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 9 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -2121,42 +2197,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第10页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 10 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第10页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 10 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第10页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 10 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第10页：本页无图形。",
+              "note": "本次 attempt 第 10 页无图形或表格。",
               "result": "not_applicable"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第10页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 10 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第10页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 10 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第10页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 10 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第10页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 10 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -2167,42 +2243,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "最新PDF渲染第11页：字形、根号、分数线和上下标清晰，无缺字或异常回退。",
+              "note": "本次 attempt 3327a32f-9123-4130-8d58-ef9451985bf3 的 150 dpi 第 11 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "最新PDF渲染第11页：本页标题和题号与当前规范源、所属版本一致。",
+              "note": "本次 attempt 第 11 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "最新PDF渲染第11页：选项及公式完整位于版心内，对齐与间距可读。",
+              "note": "本次 attempt 第 11 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "最新PDF渲染第11页：本页矢量图曲线、实虚线与标签完整，无碰撞或裁切。",
+              "note": "本次 attempt 第 11 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "最新PDF渲染第11页：页眉版本、卷别及页脚页码完整。",
+              "note": "本次 attempt 第 11 页：页眉、版次标识与页脚页码完整，未见裁切。",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "最新PDF渲染第11页：内容连续，题组与续页可辨，无空白页或孤标题。",
+              "note": "本次 attempt 第 11 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "最新PDF渲染第11页：正文、公式、图标签字号可读且层级一致。",
+              "note": "本次 attempt 第 11 页：正文、选项及公式字级清楚，适合当前打印版面。",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "最新PDF渲染第11页：题目区无答案；答案仅出现在该版本规定的解析或速查区。",
+              "note": "本次 attempt 第 11 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
               "result": "pass"
             }
           ],
@@ -2578,15 +2654,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "5331173834e12ccbcdc2131848a13c7084e37d81fffa387d2a79605b3443a3ba",
+      "pdf_sha256": "ebe43d03b94b917e9a90f6468083a5e8ee988958b003c99f5dd0e2878ded64cb",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "d9df37aee94393fd3edf666052c95da73fa370b73b78843398c20f1a0458b863",
+  "generation_input_tree_sha256": "2219a495440fb875b21cbfdd41792a2b5ecfa91cf6727d6afd259039322fb2dc",
   "input_projection": "d2f9e26102e57fb2538f90e9c9a1d71f689b3d42b172a19b9be190aabca672c8",
   "paper_id": "gk-2000-spring-jingwan-science",
   "project_dir": "2000_春季京皖理卷",
-  "reviewed_at": "2026-10-23T12:01:27+08:00",
+  "reviewed_at": "2026-11-05T04:32:40+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {

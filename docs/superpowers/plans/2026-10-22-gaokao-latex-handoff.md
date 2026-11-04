@@ -4,25 +4,29 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b20 2000 春季京皖文理选项刷新（已构建，待视觉复核）
+## 2026-11-05 当前状态：phase4-b20 2000 春季京皖文理选项刷新与视觉结案
 
 ### 工作位置与 Git
 
-- 只在现有 canonical worktree `仓库根`、分支 `feat/gaokao-phase0` 工作；未新建 worktree、未进入 `main`、未 push。
-- 当前阶段已按现行 `generate_projects.py` 更新 phase4-b20 两卷的 `questions.tex` / `answers.tex`，并完成正式构建与全库报告投影刷新。提交包含四份 TeX、两卷 build receipt、manifest 和全量统计，以及 `PROGRESS.md` / 本交接记录。review/finalize 尚待完成，不能沿用旧 review 作为新 PDF 结论。
+- 仅在现有 canonical worktree `仓库根`、分支 `feat/gaokao-phase0` 工作；未新建 worktree、未进入 `main`、未 push。结案阶段与此交接、`PROGRESS.md` 同步提交；新会话先用 `git log -1` 和 `git status` 确认实际提交与干净状态。
+- 本阶段 `b14889cc` 已提交 build/TeX 阶段；当前变更是 phase4-b20 review/finalize、报告投影与交接文件。提交前仅暂存本批回执、全量报告投影及本交接相关文件，核查 staged diff 与 `git diff --cached --check`。不要顺手改写其他卷的缓存状态。
 
 ### Live manifest 与来源边界
 
-- manifest revision `6250`；`phase4-b20` 当前 `compiled_pending_review`，两卷生产状态 `compiled`。来源均为各2页的固定题面副本，无答案页，发布者身份未认证；`official_answer=null`，答案与解析是D级编者推导、非官方。
-- 文科 source SHA-256 `b9552b8354735296f6ea1ed051085e094e4af0c14ff97ada2dbd4e579b14287f`；理科 `37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce`。源文疑点继续照录：文科 Q18③「都有垂直」、Q24 两处缺标点；理科 Q18③同词、Q23 两处缺标点。独立数学与来源复核沿用此前阶段证据，不重复认定官方答案。
-- 选择题 TeX 由行内选项改为 `gkopts` 结构，两位只读复核确认题面、选项、顺序及数学表达未变；排版结构和分页改变。新 attempt：文科 `01008f5c-ceb0-453f-86d1-4febd6e4e543`，理科 `3327a32f-9123-4130-8d58-ef9451985bf3`，输入 revision 6249，当前6250。页数为文科5/19/7/16、理科5/24/7/19，共102页；八版日志无错误、缺字、overfull、未定义引用。旧四版 PDF SHA 已对照旧 build receipt，并存于忽略目录 `.work/phase4-b20/baseline/`。
-- `generate_projects --check`、简答、版本壳、solution sources 检查通过；`report.py render --all` 后 `check --all` 已通过。回执与 provenance 当前门禁应在 review/finalize 后重跑。
+- manifest revision `6251`；`phase4-b20` status `closed`，关联 `gk-2000-spring-jingwan-arts` / `gk-2000-spring-jingwan-science`，两卷 `production_state=complete`。正式报告：2卷、8版、102页，构建 succeeded、review passed，视觉问题0、警告豁免0、阻塞0。
+- 固定上游 PDF 分别是文科 source `src-6d9f6ee269b4dd80d69001f2f4399956b5d037bfbf1d383a78bfdb281c440e6b` / SHA-256 `b9552b8354735296f6ea1ed051085e094e4af0c14ff97ada2dbd4e579b14287f`，理科 `src-a0269cc0034b8f71793418f0abb911e424058f04f18389e6ff78004045ca1eba` / SHA-256 `37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce`。均为2页题面副本、不含答案页；发布者身份未认证，`official_answer=null`，答案/解析为D级编者推导、非官方。源文疑点照录：文科 Q18③「都有垂直」、Q24两处缺标点；理科 Q18③同词、Q23两处缺标点；未新增或移除 issue。
+- 排版仅将行内选择项投影同步为 `gkopts`；题面、选项、顺序及数学内容经两名只读复核确认未变，事实层 Markdown、答案、解析、图稿、provenance 未改。正式 build attempts：文科 `01008f5c-ceb0-453f-86d1-4febd6e4e543`、理科 `3327a32f-9123-4130-8d58-ef9451985bf3`，输入 revision 6249，finalizer revision 6251。页数文科5/19/7/16、理科5/24/7/19。四版 PDF SHA 及阶段细节见 `math-gaokao-latex/PROGRESS.md` 和 `reports/phase4-b20.md`。
+- 150 dpi、同一 Poppler 工具链逐页比较并复算 PNG SHA：30页像素一致，72页变化/新增；前者继承旧 review 的240项结论，后者重审576项。总计816项：753 pass、63 not_applicable、0 fail。候选页包含所有变化页，回执理由绑定旧 review/PDF SHA、旧 build attempt 与当前 build attempt。finalizer=`FINALIZED`。
 
-### 下一步
+### 校验与已知全库例外
 
-- 用相同 Poppler 工具链把旧 baseline 与新 PDF 逐页渲染、比像素；只对完全相同页继承旧八项检查，变化页全部重新目检并更新页级 review。之后 finalize phase4-b20、复跑 currentness/provenance/CSV/report/full tests，更新本节为最终结果并单独提交视觉与结案阶段。
-- 在上述 canonical worktree 继续，不新建 worktree、不切 `main`、不 push。全项目目标仍覆盖1952—2026，本批不是总库完成。
+- 本批 receipt currentness：2 succeeded、0 pending/stale/invalid；provenance、生成器、简答、版本壳、48题 solution sources、source manifest、issues 均通过。`manifest.csv` 775行且当前；全量报告 `render --all` 与 `check --all` 均通过。
+- 完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 583.025s`，13 skipped、1 failure。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报53卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批 provenance check-batch 单独通过。保持本批范围，不刷新其他卷缓存。
+- `generate_projects.py --all --check` 返回非零：仍有71个 TeX 文件、37卷过期；按年份最早下一项为2006上海文科 `phase4-b14`。完成当前批后先停在这里；下一轮接续前仍要检查 canonical worktree、branch、status 与 manifest。总项目仍覆盖1952—2026，本批关闭不表示题库整体完成。
 
+### 结案提交前检查
+
+- 检查完整 staged diff 只含 phase4-b20 receipts、被 report projection 刷新的全量报告、`PROGRESS.md` 与本交接文件；运行 `git diff --cached --check` 后提交。提交后确认 `feat/gaokao-phase0` 状态干净，不 push。
 ## 2026-11-05 历史快照：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
 
 ### 工作位置与 Git
