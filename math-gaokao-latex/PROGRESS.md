@@ -14502,3 +14502,10 @@
 - 为 Q1–Q21 导入固定候选 PDF 页码绑定、题面复核、两路盲解汇总和主会话独立复算/交叉核对记录。题面 `passed` 只确认忠实于固定候选字节；非官方独立推导记 D，Q18(2) 因条件③不能唯一确定而记 U。角色、页码、逐题证据及限制详见[provenance 阶段报告](reports/2026-beijing-recall-provenance.md)。
 - Q10 与 Q13 的固定候选条件推导分别给出候选版选项 B / `[5/16,73/80]` 和闭区间 `[700,4900]`；第三方未认证副本分别有选项映射、严格端点异文，最终均保留 U/PENDING 并登记 `ISSUE-1415`、`ISSUE-1416`。Q10/Q13/Q15 来源异文 `ISSUE-1408`–`ISSUE-1410`、Q18 条件歧义 `ISSUE-1414` 仍 open；缺图 `ISSUE-1411`–`ISSUE-1413` 已解决。官方身份与官方答案仍未核。
 - provenance SHA-256 `a9f4bc1505ec5756de513695596653625deb821236a07df9ed4803035a810de5`；manifest revision `6161→6162`，batch `planned→provenance_verified`，paper 保持 `blocked` / `blocked_from=planned`。provenance、manifest、issues、21题 solution sources、项目生成器及 775 行 CSV 的确定性检查通过。未跑测试套件或 OCR，未生成简答、四版入口、正式 PDF 或 build/review receipt；下一步按规范生成并核对简答和四版入口。
+
+### 2026 北京高考数学回忆版候选卷：简答速查与四版入口生成（2026-11-04）
+
+- 生成 `answers_short.tex` 与试题版、解析版、简答版、印刷版四个入口壳。抽查发现 Q13 答案要点中的数学闭合符号 `\\)` 重复一次；已在规范答案要点摘要和正文各修正一处，并确定性重生成 `_含解析.md`、`answers.tex` 与简答速查。Q13 的数学条件、两版端点结果及最终 U/PENDING 状态未改变。
+- 因 Q13 答案解析摘要随源格式修正变化，更新 ignored `.work` 中 answer-solve / answer-review 的 Q13 摘要绑定并重导入 provenance；manifest revision `6162→6163`，batch 仍 `provenance_verified`、paper 仍 `blocked`。当前 `provenance.json` SHA-256 为 `b46fef9e0dcbbe9aeef8259ad1b1e3ed419bba3f3799b52615178a66515f166b`。
+- `make_short_answers.py --check`、`make_editions.py --check`、`generate_projects.py --check`、`solution_sources.py check-batch`（21题）、`provenance.py check-batch`、source manifest、issues 和 775 行 CSV 检查全部通过。检查事务串行运行以遵守仓库共享锁。
+- 未跑测试套件或 OCR；未构建正式 PDF，也未建立 build/review receipt。下一阶段进行四版正式构建并按现有回执流程逐页视觉复核；Q10/Q13/Q15 来源异文、Q10/Q13 答案映射冲突和 Q18(2) 条件歧义继续阻断完成。

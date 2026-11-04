@@ -4,7 +4,7 @@
 - worktree：`仓库根`；分支：`feat/gaokao-phase0`。
 - paper/batch：`gk-2026-regular-beijing-recall` / `phase4-b49`。
 - 固定来源：`src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`；PDF SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`；Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`；5 页。来源首页自称回忆版，发布者、版次、复制链和官方身份未核，`official_answer=null`。
-- provenance 文件：`2026_北京卷_回忆版/provenance.json`；SHA-256 `a9f4bc1505ec5756de513695596653625deb821236a07df9ed4803035a810de5`。
+- 当前 provenance 文件：`2026_北京卷_回忆版/provenance.json`；SHA-256 `b46fef9e0dcbbe9aeef8259ad1b1e3ed419bba3f3799b52615178a66515f166b`。初次导入文件的 SHA-256 为 `a9f4bc1505ec5756de513695596653625deb821236a07df9ed4803035a810de5`，后续 Q13 答案排版修正与重新绑定见[简答与四版入口阶段报告](2026-beijing-recall-short-answers-editions.md)。
 
 ## 导入内容与边界
 
@@ -18,7 +18,7 @@
 
 ## 状态与检查
 
-- provenance 导入前 dry-run 通过后执行 `provenance.py import-batch --write`；manifest revision `6161→6162`，batch 从 `planned` 到 `provenance_verified`。paper 仍为 `blocked`、`blocked_from=planned`；来源仍为 `ready`，不是来源认证或试卷验收。
+- provenance 首次导入前 dry-run 通过，manifest revision `6161→6162`；随后因 Q13 答案源的多余数学闭合符号修正并刷新答案摘要，重新导入至 revision `6163`。当前 batch 为 `provenance_verified`；paper 仍为 `blocked`、`blocked_from=planned`；来源仍为 `ready`，不是来源认证或试卷验收。
 - 以下确定性/currentness 检查通过：`provenance.py check-batch`（1卷）；`source_manifest.py validate`；`issues.py validate`；`solution_sources.py check-batch`（21题）；`generate_projects.py --check`（1卷）；`manifest_csv.py --check`（775行）。CSV 检查从仓库根目录执行。
 - 已更新来源清单 CSV，并登记 `ISSUE-1415`、`ISSUE-1416` 两项阻断性答案冲突。报告投影需在本报告和进度日志落盘后重新渲染并校验。
 - 未运行测试套件或 OCR；未生成简答/四版入口，未构建正式 PDF，也没有正式 build/review receipt。本阶段只完成逐题 provenance 登记，不表示候选卷完成或长期语料完成。
