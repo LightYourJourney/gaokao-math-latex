@@ -2,10 +2,10 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**421**；生产状态：blocked 109，compiled 3，complete 309
-- 批次总数：**267**；manifest 状态：closed 180，closed_with_blockers 86，compiled_pending_review 1
+- 试卷总数：**421**；生产状态：blocked 109，compiled 4，complete 308
+- 批次总数：**267**；manifest 状态：closed 179，closed_with_blockers 86，compiled_pending_review 2
 - 正式复核门禁：FINALIZED 236，INVALID_OR_STALE 30，VISUAL_FAILED 1
-- 已编译版本：1684/1684；构建回执状态：compiled_pending_review 4，succeeded 417
+- 已编译版本：1684/1684；构建回执状态：compiled_pending_review 5，succeeded 416
 - review 回执状态：failed 1，passed 420
 - 问题总账：1421 条，未解决问题：306，阻塞完成 245。
 - 回执日志警告汇总（包含待复核回执）：Overfull 37，Underfull 142，豁免记录 179。
@@ -177,7 +177,7 @@
 | phase4-b11 | 1 | closed | FINALIZED | validated |
 | phase4-b12 | 1 | closed_with_blockers | INVALID_OR_STALE | validated |
 | phase4-b13 | 1 | closed_with_blockers | FINALIZED | validated |
-| phase4-b14 | 1 | closed | INVALID_OR_STALE | validated |
+| phase4-b14 | 1 | compiled_pending_review | INVALID_OR_STALE | validated |
 | phase4-b15 | 2 | closed | FINALIZED | validated |
 | phase4-b16 | 1 | closed | FINALIZED | validated |
 | phase4-b17 | 2 | closed | FINALIZED | validated |

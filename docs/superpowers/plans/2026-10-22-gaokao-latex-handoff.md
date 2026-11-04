@@ -4,7 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b20 2000 春季京皖文理选项刷新与视觉结案
+## 2026-11-05 当前状态：phase4-b14 2006 上海文科生成器同步（已构建，待视觉复核）
+
+### 工作位置与 Git
+
+- 只使用现有 canonical worktree `仓库根` 与 `feat/gaokao-phase0`；不新建 worktree、不切 `main`、不 push。当前 HEAD 是 phase4-b20 结案提交 `293d44f2`，进入本阶段时工作树干净。
+- 本阶段将生成 TeX 与 formal build 作为一个阶段提交；视觉复核、finalize、全量报告和交接更新作为随后独立提交。暂时的 `compiled_pending_review` 是视觉结案前的中间态，不可称卷级完成。
+
+### Live manifest、内容与构建状态
+
+- manifest revision `6253`；`phase4-b14` 当前 `compiled_pending_review`，paper `gk-2006-regular-shanghai-arts` 为 `compiled`。固定 source `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。此前完成的逐题来源、答案核对和数学复核按现有回执；考试身份及官方参考答案已核验，原出版版次/出版者与该固定副本的数字化来源链仍未知。
+- 本阶段仅将 Q14、Q16 选项从行内串转换为当前生成器 `gkopts` 结构；Q14 两列、Q16 四列。题面、选项文本/顺序、答案、解析、图稿、事实层 Markdown 与 provenance 均未改。`generate_projects.py --batch phase4-b14 --check`、简答、版本壳与 solution sources（22题）均通过；provenance、source manifest、issues 检查通过。
+- 旧 build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699` 的 receipts/PDF 已按 SHA 校验并保存在忽略目录 `.work/phase4-b14/baseline/2006_上海卷_文科/`。新 build attempt `934b8b2c-1165-4660-8c0f-2f86b1a7ab87`，输入 manifest revision 6252，当前 6253；试题/解析/简答/印刷版5/18/7/13页，共43页，四版均 succeeded。日志没有错误、缺字或未定义引用；解析版仍有一条 Underfull hbox（answers.tex 当前282–283行），要在视觉复核后更新豁免记录。
+- build receipts currentness：0 stale/invalid、1 pending（缺当前 attempt 的视觉 finalize）。旧版 review 的警告豁免和页级视觉结果不能直接声明为当前结论。 `reports/phase4-b14.md` 仍是旧 attempt 的最终报告，待本次 finalize 后再刷新；当前以 live manifest/build receipt 和本节为准。
+
+### 下一步
+
+- 在相同 Poppler 工具链和150 dpi下渲染旧/新四版，计算逐页 PNG SHA 并制作变化页校样。完全相同页可绑定旧 review attempt/PDF SHA 继承八项结论；变化页逐页复核。重点检查解析版第13页的 Underfull hbox 是否仍可豁免。
+- 完成 review work items 后运行 `review_receipts.py check-batch`、`finalize-batch`，再跑本批 currentness/provenance/generator/short/editions/solution-source 门禁，刷新 manifest.csv 与全量报告，运行全量 unittest。更新 PROGRESS 和本交接后提交视觉结案阶段；来源链未知必须继续标记。当前全库 generator 队列和 tests 的 live 状态需在结案时刷新。
+- 总项目仍覆盖1952—2026；本卷阶段完成不代表全库完成。
+
+## 2026-11-05 历史快照：phase4-b20 2000 春季京皖文理选项刷新与视觉结案
 
 ### 工作位置与 Git
 
@@ -24,9 +44,9 @@
 - 完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 583.025s`，13 skipped、1 failure。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报53卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批 provenance check-batch 单独通过。保持本批范围，不刷新其他卷缓存。
 - `generate_projects.py --all --check` 返回非零：仍有71个 TeX 文件、37卷过期；按年份最早下一项为2006上海文科 `phase4-b14`。完成当前批后先停在这里；下一轮接续前仍要检查 canonical worktree、branch、status 与 manifest。总项目仍覆盖1952—2026，本批关闭不表示题库整体完成。
 
-### 结案提交前检查
+### 结案提交
 
-- 检查完整 staged diff 只含 phase4-b20 receipts、被 report projection 刷新的全量报告、`PROGRESS.md` 与本交接文件；运行 `git diff --cached --check` 后提交。提交后确认 `feat/gaokao-phase0` 状态干净，不 push。
+- TeX/build 阶段提交 `b14889cc`；视觉结案及报告/交接提交 `293d44f2`。结束时 `feat/gaokao-phase0` 工作树干净、ahead 6，未 push。
 ## 2026-11-05 历史快照：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
 
 ### 工作位置与 Git
