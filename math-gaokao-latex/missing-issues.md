@@ -23639,3 +23639,122 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1408
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选回忆版 PDF（SHA-256 7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9）Q10 的四个选项分别为 [5/16,53/80]、[5/16,73/80]、[5/12,53/80]、[5/12,73/80]。第三方六页 PDF（SHA-256 3949ba57c1be0eb4fd4f9ff78dbad3bd65ab401599061659595d0fa6d6e15a5f）给出不同端点/区间，来源链未认证；候选版计算的数值区间不能确定正式卷选项字母。",
+  "fingerprint": "9726b290fac64d91c34bde0f712c3a2efe0d16b1acba8e4929d3cb1c386ad5a4",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q10",
+  "resume_action": "取得可追溯至考试机构的完整同版正式卷或勘误，逐项裁定 Q10 选项；之前保留固定来源字面、条件性区间和 U/PENDING，不选定版本。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1409
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选回忆版 PDF 第2页上限印为 y≤3lg2，第三方六页 PDF 作 y<3lg2；两份副本均未能认证为正式题面，端点不同会改变 f=4900 是否包含。",
+  "fingerprint": "f3664f5b851c316e50e02143d89e8b7f9aa6a09b7dac5e9e1367ac923f07d6b3",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q13",
+  "resume_action": "取得可验证的同版正式卷或勘误裁定上限端点；在此之前保留候选版与第三方版两种条件结果，并将最终端点答案标为 U/PENDING。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1410
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定候选回忆版 PDF 第2页把 c=1 陈述列为②、c=0 陈述列为③；第三方六页 PDF 将这两条陈述序号互换。现有证据不足以认证正式卷的陈述编号。",
+  "fingerprint": "b7a4cc5d392aa0282cd4a3b63d377a7a17b835dac7f3ccb0bb2ed4f2e5c98cdf",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q15",
+  "resume_action": "取得来源链可验证的完整正式卷或勘误，确认②③原文次序；保留固定候选版本并标出异文，不静默改题。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1411
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "规范题面仍含 Q10 原图待矢量重绘占位；固定候选 PDF 第2页的四杆机构图结构已在 reports/2026-beijing-recall-figure-source-review.md 复核，但尚无 TikZ 图稿、Markdown 图链、manifest figure_files 登记或图稿 provenance。",
+  "fingerprint": "93a530d35aef8eafb13f201aad34382d2c4f787dde291c5c7c4ad07c2e02a699",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q10",
+  "resume_action": "依据固定候选 PDF 第2页绘制并目视复核 TikZ 图，再同步规范题面图链、生成器、figure_files 与图稿 provenance；保持原图示意比例不作为数学事实。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1412
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "规范题面仍含 Q14 原图待矢量重绘占位；固定候选 PDF 第2页仅 DC 为隐藏棱的结构已在来源复核报告记录，尚无矢量图及四面登记。",
+  "fingerprint": "c70f602216b2fd2d2bf2597f5caa3361c9afd640d80b1e753db1f4fc62ce3140",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q14",
+  "resume_action": "依据固定候选 PDF 第2页重绘并核对虚实棱，随后同步规范题面图链、生成器、figure_files 与图稿 provenance。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1413
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "规范题面仍含 Q18 原图待矢量重绘占位；固定候选 PDF 第3页的隐藏棱、辅助线及 D/E/P 位置边界已有来源复核记录，尚无 TikZ 图稿及四面登记。",
+  "fingerprint": "65cea86524ae4cfc2051a8977a68bec8dd3d7f4de7cab4b47c20a50892c41ff5",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q18",
+  "resume_action": "依据固定候选 PDF 第3页矢量重绘并目视检查隐藏棱和辅助线，随后同步规范题面图链、生成器、figure_files 与图稿 provenance。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "figure-missing"
+}
+```
+
+## ISSUE-1414
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "在 EP∥B1C1 参数化 P=(1−t,t,√2) 下，独立推导显示条件③ BB1∥平面 PDE 对所有 t≠0 均成立；t=0 时 P=E，三点不确定平面。因此条件③不能唯一确定 P，条件①/②各给出 t=1/2。固定回忆版题面未说明该设计问题的勘误。",
+  "fingerprint": "80d53339b38fa74bfe3d4da0dd70a831358c9c3f284eab10e7e55f57b57eb236",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q18",
+  "resume_action": "取得可追溯的同版勘误或权威解释确认条件③是否漏限；在此之前仅保留条件①/②的条件性结果，Q18(2) 标为 U/PENDING。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

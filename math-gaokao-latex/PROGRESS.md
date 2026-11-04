@@ -14482,3 +14482,10 @@
 - 比对一份通过第三方用户资料托管页分发、文件名自称“考试院原版”的六页 PDF（SHA-256 `3949ba57c1be0eb4fd4f9ff78dbad3bd65ab401599061659595d0fa6d6e15a5f`）。页面有 xschu.com 水印，文件元数据的 Author 字段为“卡里姆阿卜杜尔贾巴尔”、Creator 为 WPS；这些副本特征不能认证来源。新华网报道确认北京卷考试及题目主题，但未提供完整原卷；定向检索北京教育考试院域名未定位完整官方试卷或勘误。
 - 六页原图对照固定回忆版转录：Q10 四个选项均有端点/区间异文；Q13 上限分别为 `≤ 3lg2` 与 `< 3lg2`；Q15 的②③为同两条陈述但编号互换。Q1–Q9、Q11–Q12、Q14、Q16–Q21 未见实质异文。初次文字层抽取造成的 Q16 绝对值、Q18 根号、Q19 绝对值、Q21 嵌套绝对值“差异”经原图核验均不存在。
 - 不裁定哪一版正确，不改题面/答案/解析，不把第三方 PDF 当成官方来源。转录草稿已标出来源冲突；详细材料见[第三方来源冲突复核报告](reports/2026-beijing-recall-source-conflict-review.md)。source 仍为 `ready`、`paper_id=null`，未新建 paper/batch、provenance 或 `official_answer`；manifest revision 仍6159。下一步需取得有可验证机构发布/复制链且能裁定 Q10、Q13、Q15 的完整原卷或勘误；图稿、规范化与构建仍待办。本阶段不表示单卷或长期语料完成。
+
+### 2026 北京高考数学回忆版候选卷：规范事实源与内部卷登记（2026-11-04）
+
+- 已固化 Q1–Q21 规范题面、非官方答案要点、解析正文，并由 `solution_sources.py extract-batch --write` 确定性生成含解析稿。来源固定为 `src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee`，SHA-256 `7e840dc5c259cf05138337178794a58b6593dc7f2bf0d693826489856da416e9`、Git blob `cf49aa3671ff4143e5c665c7bc53b5f08ab38fca`、5页；首页自称回忆版，发布者、版次、复制链和官方身份未核，官方答案为 null。规范文件指纹见[内部卷登记报告](reports/2026-beijing-recall-paper-registration.md)。
+- 通过 `register-papers --write` 登记 `gk-2026-regular-beijing-recall` 和 `phase4-b49`，manifest revision `6159→6160`。paper 状态 `blocked`、`blocked_from=planned`；batch 为 `planned`。`ISSUE-1408`–`ISSUE-1414` 均 open / `blocks_completion`：Q10/Q13/Q15 异文，Q10/Q14/Q18 图缺失，Q18(2) 条件③不足以唯一确定。相应答案继续 U/PENDING，不裁定候选版与第三方版谁正确。
+- `solution_sources.py check-batch`（21题）、source manifest、issues、775行 CSV 与 `report.py check --all` 报告投影当前性检查通过。全量报告当前显示 `INVALID_OR_STALE 265`、`VISUAL_FAILED 1`；经 `phase4-b48` 只读核验，历史 build/review 回执未改，降级源于 manifest 新增本卷后共享生成投影 `index.json` 尚未更新，故生成物探针暂报 stale。下一次本卷项目生成将刷新全局 index，再复核旧批次门禁；报告检查通过表示投影与当前账本一致，不表示批次全部验收通过。
+- 本阶段尚未导入逐题 provenance、登记/重绘图稿、生成项目 TeX/PDF、正式构建或视觉复核。未额外调用 OCR/模型；模型 token 与费用不可见，记未知。下一阶段按固定 PDF 重绘并核验 Q10/Q14/Q18 图，更新图链、生成器、`figure_files` 和图稿 provenance，再导入逐题 provenance。本记录不表示来源认证、整卷验收或长期语料完成。
