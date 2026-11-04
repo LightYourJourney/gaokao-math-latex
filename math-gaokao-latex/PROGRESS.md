@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1999 上海文史类：确定性 TeX 刷新、四版重建与视觉回执（phase4-b36，2026-11-05；批次带阻塞关闭）
+
+- 对象：`gk-1999-regular-shanghai-arts`；固定来源 `src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742`，上游 PDF SHA-256 `7a1c81dd9091426a8e524170336a9ba46e58fda3206e658233d6c14f5ea319e5`，10页。来源发布者、版次和卷内答案的官方身份仍未认证；题面与答案冲突、存疑处继续保留原标记。
+- 生成器仅发现 `questions.tex`、`answers.tex` 需刷新。先提交 `69bd608a` 更新 Q18 句号包装；随后 `cba7ff1` 修复共享 `md2tex.py`：数学模式中未处于 `\text{}` 的中文逗号、句号均包装为 `\mbox{}`，并增加逗号回归测试。规范题面、数学结论、答案、解析、图稿及 provenance 均未改；两次阶段提交分别为 `[已核] docs(gaokao): refresh 1999 Shanghai arts TeX` 与 `[已核] fix(gaokao): wrap CJK commas in display math`。
+- 正式 build attempt `5e0b86a5-8f8d-44af-8627-de1970871cc2`，输入 manifest revision 6246，finalizer 后 revision 6248。试题/解析/简答/印刷版分别 5/21/7/15 页，共48页；四版均成功，errors、missing characters、overfull、undefined references、problems 均为空。PDF SHA-256：试题版 `cc612b70016676c14a54005765fb21fc11ae2198cf296d3e2c5b8cd31e66312c`；解析版 `06e77d437c94e11679b150e3932836f302d1118862312a88b687119cc17ffadf`；简答版 `26294b3d703aadc121af475afc59032df9dc233ccf027a2f7aae5cb6a02f9a1b`；印刷版 `5d4ca3a843c2f233b82c3759418d6cf98f39d977fc050ffd9c0ea8e18b26fc0e`。
+- 在相同 Poppler 26.10、150 dpi 下与旧版逐页像素比较：48页中36页一致并继承此前实际视觉结论；12个变化页（试题版 p4–5；解析版 p4、p5、p15、p20；简答版 p4–5；印刷版 p3–4、p12、p15）重新目检。384项八类检查全部通过，其中288项继承、96项重审。`finalize-batch` 返回 `FINALIZED`，review passed；batch `closed_with_blockers`，paper `blocked`。`ISSUE-1188`–`1190` 仍 open 并阻塞完成，`ISSUE-1191`–`1194` 已 resolved。
+- 本批 source manifest、issues、provenance、build/review receipts、生成 TeX、简答、版本壳、solution sources、775行 manifest CSV、全量报告 `render --all` / `check --all` 均通过。完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 664.971s`，`FAILED (failures=1, skipped=13)`；唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告56项跨卷缓存状态漂移，首项 `gk-2016-regular-national-2-arts`。这是本批外的全库状态问题，本阶段未批量刷新其他卷缓存。OCR、外部来源和模型 token/费用未使用或不可见（成本记未知）。
+- `generate_projects.py --all --check` 仍有75个 TeX 文件、39卷、30批次过期；最早下一项为 `phase4-b20`（2000春季京皖文理卷）。本批关闭带阻塞，不代表1952—2026总题库完成。
+
 ### 1998 上海文史类：确定性 TeX 选项排版刷新、四版重建与视觉回执（phase4-b29，2026-11-05；批次已关闭）
 
 - 对象：`gk-1998-regular-shanghai-arts`，22题；固定来源 `src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`，上游 PDF SHA-256 `c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`，6页。来源发布者、版次和卷内答案的官方身份仍未认证。

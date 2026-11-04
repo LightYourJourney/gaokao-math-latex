@@ -4,7 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b29 1998 上海文史类排版刷新与视觉结案
+## 2026-11-05 当前状态：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
+
+### 工作位置与 Git
+
+- canonical worktree 是已存在的 `仓库根`，分支 `feat/gaokao-phase0`；本阶段没有新建 worktree、没有进入 `main`、没有 push。`主工作树` 是原有 `main` 工作树。
+- TeX 阶段提交 `69bd608a`、共享标点转换与回归测试提交 `cba7ff1` 已在该分支。当前 closeout 需包含本批构建/视觉回执、manifest/issues 与六个报告投影、`PROGRESS.md` 和本交接记录；提交前检查实际 staged diff 与 `git diff --cached --check`，提交后确认工作区干净。
+
+### Live manifest 与本卷
+
+- manifest revision `6248`：775 sources、421 papers、267 batches。paper 状态：blocked 109、compiled 3、complete 309；batch 状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
+- `phase4-b36` / `gk-1999-regular-shanghai-arts` 的 batch 为 `closed_with_blockers`，paper 为 `blocked`。固定 source `src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742`，PDF SHA-256 `7a1c81dd9091426a8e524170336a9ba46e58fda3206e658233d6c14f5ea319e5`，10页；来源发布者、版次、答案官方身份未认证。`ISSUE-1188`–`1190` 仍 open / blocks_completion；`ISSUE-1191`–`1194` 已 resolved。
+- 生成 TeX 只刷新确定性标点包装：`69bd608a` 处理 Q18 句号，`cba7ff1` 修复 `md2tex.py` 数学模式中文逗号/句号包装并增加回归测试。正式 build attempt `5e0b86a5-8f8d-44af-8627-de1970871cc2`（输入 revision 6246）四版成功，共48页（5/21/7/15）；无 errors、missing characters、overfull、undefined references 或 problems。PDF SHA-256：试题 `cc612b70016676c14a54005765fb21fc11ae2198cf296d3e2c5b8cd31e66312c`；解析 `06e77d437c94e11679b150e3932836f302d1118862312a88b687119cc17ffadf`；简答 `26294b3d703aadc121af475afc59032df9dc233ccf027a2f7aae5cb6a02f9a1b`；印刷 `5d4ca3a843c2f233b82c3759418d6cf98f39d977fc050ffd9c0ea8e18b26fc0e`。
+- 视觉比较中36页像素与基线一致并继承已有结论，12个变化页重新目检；384项八类检查全通过（288项继承、96项重审）。`finalize-batch`=`FINALIZED`，review passed，但 batch/paper 仍带阻塞。
+- 本批 provenance、build/review receipts、生成器、简答、版本壳、solution sources、manifest/issues/CSV 与 `report.py render --all` / `check --all` 均通过。完整测试运行1780项、13项跳过、1项失败：`test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报告56项跨卷缓存漂移，首项 `gk-2016-regular-national-2-arts`；本批外问题未在此阶段批量改写。
+
+### 下一次接续边界
+
+- `generate_projects.py --all --check` 仍有75个文件、39卷、30批次过期；最早下一批 `phase4-b20`（2000春季京皖文理卷）。本批只完成旧 TeX 的生成器同步、正式构建及视觉回执收口，不表示1952—2026总项目完成。
+- 继续只用上述现有 `仓库根` / `feat/gaokao-phase0`，不新建 worktree、不切 `main`、不 push。先核对 Git 状态和 live manifest；来源/答案存疑继续标记，不得补造。
+
+## 2026-11-05 历史快照：phase4-b29 1998 上海文史类排版刷新与视觉结案
 
 ### 工作位置与 Git
 
@@ -20,7 +40,7 @@
 - 视觉结论：从提交前 HEAD `73a12c22` 用相同工具链重建基线，41页中26页 PNG 像素相同；15个变化页逐页复看八项，共328项（208项继承、120项重审），274项 pass、54项 not_applicable。`finalize-batch`=`FINALIZED`，review `passed`、batch `closed`、paper `complete`。本批 build/review/provenance、生成器、简答、版本壳、solution sources、source manifest、issues、`manifest.csv`（775行）及全库 `report.py check --all` 均通过。
 - 全量测试 `Ran 1779 tests in 686.013s`，13 skipped、1 failure。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报57项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批已由 finalizer 重新派生，不批量改写其他卷缓存。
 
-### 下一次接续边界
+### 当时的接续边界（已由上方状态覆盖）
 
 - `report.py check --all` 通过，六个全库报告投影与 manifest 一致。`generate_projects.py --all --check` 仍有77个文件、40卷、31批次过期；最早下一项为1999上海文史类 `phase4-b36`。本批关闭不表示1952—2026总项目完成。
 - 不得新建 worktree；只用现有 `仓库根` / `feat/gaokao-phase0`。不要切 `main`、不要 push。提交时只 stage 当前阶段授权路径，并检查真实 staged diff、`git diff --cached --check`。
