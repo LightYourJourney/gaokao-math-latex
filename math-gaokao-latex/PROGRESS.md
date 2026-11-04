@@ -4,6 +4,12 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2002 苏豫粤桂卷：逐题三角色 provenance 导入（2026-11-04）
+
+- 依固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4` 为 Q1–Q22 建立 question-review、answer-solve、answer-review 记录。页码映射为 Q1–Q19 → PDF 第1页、Q20–Q22 → 第2页；现场题面/答案摘要和 source SHA 由导入器按当前规范源计算。证据及角色边界见[provenance 阶段报告](reports/2002-suyuyuegui-provenance-20261104.md)。
+- `provenance.json` SHA-256 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`；manifest revision `6180→6181`，batch `planned→provenance_verified`，paper 仍 `blocked`。Q1–Q22 题面复核通过，答案级别 D 21 题、U 1 题；Q18 关联 `ISSUE-1417`，未决约定与两个条件分支保留。
+- `provenance.py check-batch`、source manifest、issues 与 22 题 solution sources 检查通过。上一阶段全量报告对应 revision 6180；项目生成刷新共享 index 后再更新/检查全量报告与旧回执。未运行测试或 OCR；尚无 TeX/四版入口、正式 PDF build、视觉回执或批次关闭。
+
 ### 2002 苏豫粤桂卷：规范事实源、内部卷与题图登记（2026-11-04）
 
 - 按固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`（PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`）规范化 Q1–Q22 题面、非官方答案要点和解析正文，并生成确定性 `_含解析.md`。四份文件指纹见[内部卷登记报告](reports/2002-suyuyuegui-paper-registration-20261104.md)。
