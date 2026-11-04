@@ -1,0 +1,308 @@
+{
+  "attempt_id": "312cdaea-4916-49de-aedd-0d683c00949f",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/answers.tex",
+        "sha256": "4d87144be511948351b14171fba8fc628b7148aabaeddb1acb2f6f2a75ffed28"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/answers_short.tex",
+        "sha256": "1637d25462c864cc696c2ba17a431de2e594013adaf8e0333aa3cfa328e0d3bb"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q10_fourbar_linkage.tex",
+        "sha256": "a036339debed625516b8140161b76614bf77f1f0040f440fa030954c303652eb"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q14_tetrahedron.tex",
+        "sha256": "b1b5e6036587fb61a25785485f812e94e403e1930970628485bd3e0a615cf866"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q18_triangular_prism.tex",
+        "sha256": "b863e9faa26365491a467880d031fbc24e7a615506ae64343e1c205e9771b622"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/questions.tex",
+        "sha256": "6616e150de1896dd3d4fd101e37e5c83161658ff50288352cea7a4f0267ec07b"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/印刷版.tex",
+        "sha256": "4382d4b8ca645a29ac0581960871b51bb76d48bbcc563c8baa9abc6d30e39d4f"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/简答版.tex",
+        "sha256": "74d25d6e66849d8fa83a7d916583582a30c8a388bfdb32cb15cd952c08c5367e"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/解析版.tex",
+        "sha256": "b3da271319634499689f543a7631c2ac6261a2e0f7d584e117630dccfcad5212"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/试题版.tex",
+        "sha256": "fbf674b5b06b02fc0d9d16508e0ba83f4501fbd6f3821a6a446d4da45af47277"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "97692b4ddbcc0725f34ed35d0241a5974ff348c198f7285a944c40d5d9741a11"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 6,
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/build/试题版.pdf",
+        "sha256": "0093e62d71a2a28526df8563a1a566413fbbd965dfb3b0f6cf3163129ab4f9f5",
+        "size_bytes": 130484
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2026_北京卷_回忆版/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "501--503",
+            "text": "Underfull \\hbox (badness 6842) in paragraph at lines 501--503",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 22,
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/build/解析版.pdf",
+        "sha256": "1cdacfd46c1770ee4667c9c1092ceeee34b354b435c9fd509e4ecf75d8b185c9",
+        "size_bytes": 234544
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2026_北京卷_回忆版/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 8,
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/build/简答版.pdf",
+        "sha256": "9911692881a822df4bc289f1a0663f42187047c2223f23c216db142339ffa85b",
+        "size_bytes": 143458
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2026_北京卷_回忆版/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Overfull",
+            "lines": "501--503",
+            "text": "Overfull \\hbox (15.48851pt too wide) in paragraph at lines 501--503",
+            "width_pt": "15.48851"
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 20,
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/build/印刷版.pdf",
+        "sha256": "326265fa8758fa579b85122afb053f458716db3a394f44f26c27b9890a9243a0",
+        "size_bytes": 234585
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2026_北京卷_回忆版/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-11-04T11:59:12+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2026/2026_数学真题_北京回忆版_答案要点.md",
+        "sha256": "fea78c5c7044baca5f92706301ce7e9861eae7b86e846202ed8942f2492d8a27"
+      },
+      {
+        "path": "2026/2026_数学真题_北京回忆版_解析正文.md",
+        "sha256": "15589c34b98aab13fd297afd3003ca6409c4b150893bf9e4623bc0b2ad1ce5ea"
+      },
+      {
+        "path": "2026/2026_数学真题_北京回忆版_试题.md",
+        "sha256": "6debed5633ab5a50d65e5d88562784dbb955a8c115bca18992208e6af293e537"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "8dec263c90fbfa8082c97749c561198c3ec6a0e9be1861cf6d8077ab561d339d"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q10_fourbar_linkage.tex",
+        "sha256": "a036339debed625516b8140161b76614bf77f1f0040f440fa030954c303652eb"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q14_tetrahedron.tex",
+        "sha256": "b1b5e6036587fb61a25785485f812e94e403e1930970628485bd3e0a615cf866"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/figures/f2026_beijing_recall_q18_triangular_prism.tex",
+        "sha256": "b863e9faa26365491a467880d031fbc24e7a615506ae64343e1c205e9771b622"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/印刷版.tex",
+        "sha256": "4382d4b8ca645a29ac0581960871b51bb76d48bbcc563c8baa9abc6d30e39d4f"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/简答版.tex",
+        "sha256": "74d25d6e66849d8fa83a7d916583582a30c8a388bfdb32cb15cd952c08c5367e"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/解析版.tex",
+        "sha256": "b3da271319634499689f543a7631c2ac6261a2e0f7d584e117630dccfcad5212"
+      },
+      {
+        "path": "math-gaokao-latex/2026_北京卷_回忆版/试题版.tex",
+        "sha256": "fbf674b5b06b02fc0d9d16508e0ba83f4501fbd6f3821a6a446d4da45af47277"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "8e0ecbb1bea5b1237c08b291e5c1013074706970c15d45d3619592603bb355c6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "660feeac925af2012a656f4ccebdfd2d476cf09158afedaa935654e1dfa578cb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
+      }
+    ],
+    "tree_sha256": "47ad273335f2c5b09b4364d344920103aaa562fd1f293b233a915ab0ffb89701"
+  },
+  "input_projection": "9f1b60a7158fa045a62e80a6da7b71f8d4e9640869dab294da861c237dfc1f6c",
+  "manifest_revision": 6176,
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "previous_attempt_id": "6cf10a91-a876-4dd5-b001-068521eb80c8",
+  "project_dir": "2026_北京卷_回忆版",
+  "schema_version": 1,
+  "started_at": "2026-11-04T11:59:05+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
+        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
+        "version": "pdfinfo version 26.10.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
+        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
+        "version": "pdftoppm version 26.10.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
+        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
+        "version": "pdftotext version 26.10.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

@@ -14509,3 +14509,22 @@
 - 因 Q13 答案解析摘要随源格式修正变化，更新 ignored `.work` 中 answer-solve / answer-review 的 Q13 摘要绑定并重导入 provenance；manifest revision `6162→6163`，batch 仍 `provenance_verified`、paper 仍 `blocked`。当前 `provenance.json` SHA-256 为 `b46fef9e0dcbbe9aeef8259ad1b1e3ed419bba3f3799b52615178a66515f166b`。
 - `make_short_answers.py --check`、`make_editions.py --check`、`generate_projects.py --check`、`solution_sources.py check-batch`（21题）、`provenance.py check-batch`、source manifest、issues 和 775 行 CSV 检查全部通过。检查事务串行运行以遵守仓库共享锁。
 - 未跑测试套件或 OCR；未构建正式 PDF，也未建立 build/review receipt。下一阶段进行四版正式构建并按现有回执流程逐页视觉复核；Q10/Q13/Q15 来源异文、Q10/Q13 答案映射冲突和 Q18(2) 条件歧义继续阻断完成。
+
+### 2026 北京高考数学回忆版候选卷：四版正式构建（2026-11-04）
+
+- 使用 `build_projects.py build --formal --batch phase4-b49` 完成试题版、解析版、简答版、印刷版，四版均 `succeeded`；build attempt `923c576a-cbba-413f-9fb9-c202574f8b7f`，build receipt SHA-256 `e38cf65bddfbcb1eeeab16969f07136204ef7ee562280d58ed2f935ce9fb7b72`。各版页数、PDF SHA-256、缺字与版面 warning 详见[正式构建阶段报告](reports/2026-beijing-recall-formal-build.md)。
+- manifest revision `6163→6165`，batch `compiled_pending_review`，paper 仍 `blocked` / `blocked_from=planned`。`validate-receipts --require-current-inputs` 返回 code `OK`、failed/invalid/missing/stale 均为0、pending为1，唯一未决阶段是视觉 review。build log 无编译错误或未定义引用，但记录缺字 warning；解析版有 Underfull、印刷版有 Overfull，尚待逐页视觉判断，不豁免。
+- provenance、21题 solution sources、manifest 与 issues 检查通过；`manifest.csv` 检查为775行当前。未跑测试套件或 OCR。下一阶段按 `prepare-batch` 生成并检查四版全部页面的视觉回执。
+
+### 2026 北京高考数学回忆版候选卷：四版视觉复核与批次封账（2026-11-04）
+
+- 因中文数学标点缺字、Q9选项分页和Q21末页稀疏问题完成源层排版修正后，以 attempt `6cf10a91-a876-4dd5-b001-068521eb80c8` 作为当前正式构建，替代历史 attempt `923c576a-cbba-413f-9fb9-c202574f8b7f`。四版页数为6/22/8/20；构建无错误、缺字或未定义引用。详情与PDF哈希见[四版正式构建与视觉复核报告](reports/2026-beijing-recall-formal-build.md)。
+- 对56页完成448项视觉检查，其中408项通过、40项无图页面的图形检查为 `not_applicable`。解析版第22页、印刷版第20页为本次变更页，已直接查看；其余页与已审图像逐字节一致。Q17两条盒宽警告分别绑定 `answers.tex` 第501–503行及解析版第17页、印刷版第16页，视觉未见裁切/遮挡，按当前构建警告逐字段豁免。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，manifest revision 为6175；`phase4-b49` 与 paper 均仍受来源与答案问题阻塞。未认证固定回忆版来源身份，`official_answer` 保持 null；Q10/Q13/Q15异文、Q18条件③歧义与Q10/Q13答案冲突继续保留 `U/PENDING`，问题号为 `ISSUE-1408`–`1410`、`ISSUE-1414`–`1416`。
+- 当前 receipt、build 输入、PDF 指纹及 report/CSV 投影检查通过。全库报告刷新反映 `closed_with_blockers` 状态；未运行测试套件或 OCR。本阶段只完成该候选卷的构建与视觉复核，不代表来源认证、整卷完成或长期语料完成。
+
+### 2026 北京高考数学回忆版候选卷：图形适用性更正与重新封账（2026-11-04）
+
+- 提交前复看每页图形适用性时发现 attempt `6cf10a91-a876-4dd5-b001-068521eb80c8` 的解析版第12页 Q10、 第18页 Q18 含图，却被误列为 `figure_label: not_applicable`。不手改已封账 receipt，改以 attempt `312cdaea-4916-49de-aedd-0d683c00949f` 重建并重走 `prepare-batch` / 视觉回执事务；新 attempt 的56张110dpi PNG与前次已审页面逐字节一致，复核确认这两页的图形与标注通过。
+- 修正四版图形适用页后，重新完成448项检查：408项通过、40项无图页图形检查为 `not_applicable`。两条 Q17 盒宽警告绑定当前 build 并分别复核解析版第17页、印刷版第16页，通过逐字段豁免。
+- 新 build receipt SHA-256 `27b06bfba5b5fddf78ace6825f2588104a7b0269421d3f5b1d1e36bfb5ee88ea`，review receipt SHA-256 `d9bd5da8ee2bf0283ecc4001483ba73e38ba63c79e8724ac6e5d7356259a7590`；PDF 哈希和逐版信息见[四版正式构建与视觉复核报告](reports/2026-beijing-recall-formal-build.md)。终结器返回 `FINALIZED`，manifest revision `6178`，batch 仍为 `closed_with_blockers`，未认证来源、`official_answer=null` 及 ISSUE-1408–1410、1414–1416 阻塞项均保持原状。
