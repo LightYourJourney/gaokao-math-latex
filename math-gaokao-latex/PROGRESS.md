@@ -4,13 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
-### 2006 上海文科：现行生成器选项投影同步与四版重建（phase4-b14，2026-11-05；待视觉复核）
+### 2006 上海文科：生成器同步、四版构建与视觉结案（phase4-b14，2026-11-05；批次关闭）
 
-- 对象：`gk-2006-regular-shanghai-arts`，22题；固定来源 `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。来源与考试身份按既有核查登记；答案要点已在此前逐题对照考试院参考答案，但原出版版次、出版者及本地副本数字化来源链仍未知，不能称该 PDF 为官方原件。
-- `generate_projects.py --batch phase4-b14 --check` 发现 `questions.tex` 与 `answers.tex` 的 Q14、Q16 仍为行内选项。按现行生成器同步为结构化 `gkopts`：Q14 两列，Q16 四列；选项内容与顺序不变。题面、答案要点、解析正文、图稿及 provenance 均未修改。生成器、简答、四版入口、22题 solution sources 检查通过。
-- 旧基线 build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699` 的 receipts 和四版 PDF 已核对 SHA 并复制到忽略目录 `.work/phase4-b14/baseline/2006_上海卷_文科/`。新 build attempt `934b8b2c-1165-4660-8c0f-2f86b1a7ab87`，输入 revision 6252，当前 manifest revision 6253；试题/解析/简答/印刷版均为5/18/7/13页，共43页。四版 errors、missing characters、undefined references 为0；解析版仅有1条既有类型 Underfull hbox，当前行号282–283，对应 Q15 选项段，旧 review 豁免尚未用于当前 attempt。
-- 当前 batch 为 `compiled_pending_review`、paper 为 `compiled`。`build_projects.py validate-receipts` 显示 0 stale/invalid、1 pending（视觉结案前预期）；provenance、manifest、issues 校验通过。旧视觉回执不能代替新构建校样。
-- 下一步：以相同 Poppler 工具链将旧/新四版 PDF 渲染到150 dpi，逐页比较 PNG；仅像素完全相同页可继承旧八项结果，变化页重审八项。重点复核解析版第13页并为当前 warning 重新绑定或记录豁免；随后 finalize、刷新全量报告/CSV、跑完整测试、更新此记录并提交视觉结案阶段。模型 token 不可见，记未知。
+- 对象：`gk-2006-regular-shanghai-arts`，22题；固定来源 `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。来源与考试身份按既有核查登记；答案要点已逐题对照考试院参考答案，但原出版版次、出版者及本地副本数字化来源链仍未知，不能称该 PDF 为官方原件。
+- 仅将 `questions.tex`、`answers.tex` 中 Q14/Q16 的选项投影同步为结构化 `gkopts`：Q14 两列、Q16 四列；内容与顺序不变。题面、答案要点、解析正文、图稿及 provenance 均未修改。旧 build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699` 的 receipts/PDF 已核 SHA 并保存在忽略目录 `.work/phase4-b14/baseline/2006_上海卷_文科/`。
+- 正式 build attempt `934b8b2c-1165-4660-8c0f-2f86b1a7ab87`，输入 manifest revision 6252，finalize 后当前 revision 6254。试题/解析/简答/印刷版分别5/18/7/13页，共43页，均 succeeded；errors、missing characters、undefined references 为0。PDF SHA-256 依次为 `73778442001104a50a6ee04e9c4ca26608c14596216033c103fa644fa8793759`、`d9bdfa4a8597cea92899034b8a11ea5442267c63bf0f3d6d767e1faf1edfb2ef`、`997af489bf4db40bdf9798d4f054bd50e0144666955f56db76b5cb54f29fbc06`、`d980d38ba32175aae4c66a465bc3152db53920ae4bade18b6719d1ad2d71db29`。
+- 使用相同 Poppler 26.10.0、150 dpi 比较旧/新四版；43/43 页均有像素变化，旧 PDF 嵌入字体名为 STSong/STHeiti，当前为 STSongti-SC Regular/Bold。全部43页逐页检查，另放大检查选项、图形、解析版第13页告警和末页；344项八类检查为320 pass、24 not_applicable（无图页）、0 fail。Q14/Q16 新排布清楚。解析版第13页 Q15 题干末尾“的（　　）”在短续行，当前 Underfull hbox 行号282–283；已检查无重叠、越界或裁切，按可读短行豁免。批次报告 `reports/phase4-b14.md` 已刷新。
+- 本批 currentness（1 succeeded、0 pending/stale/invalid）、provenance、生成器、简答、版本壳、22题 solution sources、source manifest、issues 均通过；`manifest.csv` 为775行且当前。`report.py render --all` 成功刷新六个全量报告目标，`report.py check --all` 确认报告与全量 manifest 当前一致。
+- 完整测试 `python3 -m unittest discover -s tests`：`Ran 1780 tests in 585.216s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告51卷的缓存状态与现场派生状态不同，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、现场 `answers_verified`）；本批 provenance 检查通过，不批量刷新其他卷缓存。
+- 结案后 `generate_projects.py --all --check` 仍有69个生成文件、36卷待同步；按年份最早为2006上海理科 `phase1-b42`（`gk-2006-regular-shanghai-science`）。本批构建阶段提交 `49331ed4`；视觉结案阶段另行提交。全项目仍覆盖1952—2026，本批关闭不代表全库完成。成本为本地 XeLaTeX/Poppler；模型 token 不可见，记未知。
 
 ### 2000 春季京皖文理：按现行生成器刷新选项排版、重建及视觉结案（phase4-b20，2026-11-05；批次关闭）
 

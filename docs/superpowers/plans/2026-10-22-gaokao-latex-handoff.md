@@ -4,25 +4,24 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b14 2006 上海文科生成器同步（已构建，待视觉复核）
+## 2026-11-05 当前状态：phase4-b14 2006 上海文科（批次已关闭）
 
 ### 工作位置与 Git
 
-- 只使用现有 canonical worktree `仓库根` 与 `feat/gaokao-phase0`；不新建 worktree、不切 `main`、不 push。当前 HEAD 是 phase4-b20 结案提交 `293d44f2`，进入本阶段时工作树干净。
-- 本阶段将生成 TeX 与 formal build 作为一个阶段提交；视觉复核、finalize、全量报告和交接更新作为随后独立提交。暂时的 `compiled_pending_review` 是视觉结案前的中间态，不可称卷级完成。
+- 只使用现有 canonical worktree `仓库根` 与 `feat/gaokao-phase0`；不新建 worktree、不切 `main`、不 push。构建阶段提交 `49331ed4` 已在分支；视觉结案、全量投影、进度及本交接为本次待提交阶段。提交后核对分支干净。
+- `主工作树` 是既有 `main` 工作树，不是高考任务工作区；其中的用户改动不要触碰。下一会话先核对指定 worktree、branch、status、HEAD 与 live manifest，不根据旧快照切换工作目录。
 
 ### Live manifest、内容与构建状态
 
-- manifest revision `6253`；`phase4-b14` 当前 `compiled_pending_review`，paper `gk-2006-regular-shanghai-arts` 为 `compiled`。固定 source `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。此前完成的逐题来源、答案核对和数学复核按现有回执；考试身份及官方参考答案已核验，原出版版次/出版者与该固定副本的数字化来源链仍未知。
-- 本阶段仅将 Q14、Q16 选项从行内串转换为当前生成器 `gkopts` 结构；Q14 两列、Q16 四列。题面、选项文本/顺序、答案、解析、图稿、事实层 Markdown 与 provenance 均未改。`generate_projects.py --batch phase4-b14 --check`、简答、版本壳与 solution sources（22题）均通过；provenance、source manifest、issues 检查通过。
-- 旧 build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699` 的 receipts/PDF 已按 SHA 校验并保存在忽略目录 `.work/phase4-b14/baseline/2006_上海卷_文科/`。新 build attempt `934b8b2c-1165-4660-8c0f-2f86b1a7ab87`，输入 manifest revision 6252，当前 6253；试题/解析/简答/印刷版5/18/7/13页，共43页，四版均 succeeded。日志没有错误、缺字或未定义引用；解析版仍有一条 Underfull hbox（answers.tex 当前282–283行），要在视觉复核后更新豁免记录。
-- build receipts currentness：0 stale/invalid、1 pending（缺当前 attempt 的视觉 finalize）。旧版 review 的警告豁免和页级视觉结果不能直接声明为当前结论。 `reports/phase4-b14.md` 仍是旧 attempt 的最终报告，待本次 finalize 后再刷新；当前以 live manifest/build receipt 和本节为准。
+- live manifest revision `6254`；`phase4-b14` 为 `closed`，paper `gk-2006-regular-shanghai-arts` 为 `complete`，无关联 issue。固定 source `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。考试身份和官方参考答案已核验；原出版者、版次与本地 PDF 数字化来源链仍未知，不能称其为官方原件。
+- 本阶段仅将 Q14/Q16 选项投影同步为 `gkopts`：Q14 两列、Q16 四列，题干/选项内容与顺序不变。事实层 Markdown、答案、解析、图稿和 provenance 未修改。旧 build attempt `2f878927-d037-441f-b6ff-0c8b21ab3699` 留在忽略目录 `.work/phase4-b14/baseline/2006_上海卷_文科/`；当前正式 build attempt `934b8b2c-1165-4660-8c0f-2f86b1a7ab87`，输入 revision `6252`，四版共43页（5/18/7/13），均 succeeded。PDF SHA-256：试题版 `73778442001104a50a6ee04e9c4ca26608c14596216033c103fa644fa8793759`；解析版 `d9bdfa4a8597cea92899034b8a11ea5442267c63bf0f3d6d767e1faf1edfb2ef`；简答版 `997af489bf4db40bdf9798d4f054bd50e0144666955f56db76b5cb54f29fbc06`；印刷版 `d980d38ba32175aae4c66a465bc3152db53920ae4bade18b6719d1ad2d71db29`。
+- 同 Poppler 26.10.0、150 dpi 逐页比较时43页均出现像素变化；旧 PDF 嵌入 STSong/STHeiti，当前 PDF 嵌入 STSongti-SC Regular/Bold。逐页检查全部当前页面，接触表覆盖43页，重点页面另行全尺寸检查。八项共344项：320 pass、24 not_applicable（无图页）、0 fail。解析版第13页 Q15 的“的（　　）”短续行产生 Underfull hbox，当前源行282–283；已复核无重叠、越界或裁切，作为一条可读短行豁免。`reports/phase4-b14.md` 已更新。
 
-### 下一步
+### 校验、全库例外与下一步
 
-- 在相同 Poppler 工具链和150 dpi下渲染旧/新四版，计算逐页 PNG SHA 并制作变化页校样。完全相同页可绑定旧 review attempt/PDF SHA 继承八项结论；变化页逐页复核。重点检查解析版第13页的 Underfull hbox 是否仍可豁免。
-- 完成 review work items 后运行 `review_receipts.py check-batch`、`finalize-batch`，再跑本批 currentness/provenance/generator/short/editions/solution-source 门禁，刷新 manifest.csv 与全量报告，运行全量 unittest。更新 PROGRESS 和本交接后提交视觉结案阶段；来源链未知必须继续标记。当前全库 generator 队列和 tests 的 live 状态需在结案时刷新。
-- 总项目仍覆盖1952—2026；本卷阶段完成不代表全库完成。
+- 本批 receipt currentness、provenance、生成器、简答、版本壳、22题 solution sources、source manifest、issues 均通过。`manifest.csv` 775行当前；全量 report render 成功，`report.py check --all` 确认与 manifest 一致。主验证汇总见 `math-gaokao-latex/PROGRESS.md`。
+- 全量测试 `python3 -m unittest discover -s tests`：`Ran 1780 tests in 585.216s`，1 failure、13 skipped。唯一失败是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`：51卷缓存状态与现场派生状态不符，首项 `gk-2016-regular-national-2-arts`（缓存 `complete` / 派生 `answers_verified`）。本批单独 provenance 检查通过；不要批量刷新这些其他卷缓存。
+- `generate_projects.py --all --check` 仍有69个生成文件、36卷不同步；按年份下一项为 `phase1-b42` / `gk-2006-regular-shanghai-science`（2006上海理科，卷状态 complete，只有 TeX 投影过期）。用户要求干完这一批先停，因此此处停止；下一次继续前重读 live state，再按独立阶段构建和复核，不运行 `--all --write`。整个题库目标仍是1952—2026，当前批次关闭不表示全库完成。
 
 ## 2026-11-05 历史快照：phase4-b20 2000 春季京皖文理选项刷新与视觉结案
 
