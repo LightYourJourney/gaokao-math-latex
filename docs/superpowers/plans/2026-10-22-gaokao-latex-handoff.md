@@ -1,10 +1,32 @@
 # 高考数学 LaTeX 项目交接
 
-更新时间：2026-11-04（中国标准时间）
+更新时间：2026-11-05（中国标准时间）
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：phase1-b24 1994 上海卷视觉结案，Q25 仍阻塞
+## 2026-11-05 当前状态：phase4-b25 1997 上海理科四版重建与视觉结案
+
+### 工作位置与 Git
+
+- canonical worktree 仍为 `仓库根`，分支 `feat/gaokao-phase0`。本轮只在该已有 worktree 工作；未新建 worktree、未进入 `main`、未 push。`main` worktree 内已有用户改动保持原样。
+- phase4-b25 的 TeX、四版回执、全库投影、PROGRESS 与本交接记录随本阶段提交；精确提交号以 live `git log -1 --oneline` 为准，之后确认 `git status --short --branch` 干净。
+- 用户要求本批结束即停工；本会话不启动下一批。新会话须先核对工作树、分支、Git状态和live manifest，不依据历史快照推断当前状态。
+
+### Live manifest 与本卷
+
+- manifest revision `6239`：775 sources、421 papers、267 batches。paper production state：blocked 109、compiled 3、complete 309；batch状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
+- `phase4-b25` / `gk-1997-regular-shanghai-science` 当前 batch `closed`、paper `complete`。固定来源为 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`，SHA-256 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`，7页。固定副本不认证发布者、版次或答案官方身份；保持既有 provenance 与来源限制。
+- 本批只按当前生成器重建 Q1/Q5 的选项 TeX 排版；题面内容、答案/解析和数学结论未改。正式 attempt `c3aae2af-39a5-4f20-ba10-941e1a09e7be`，输入 manifest revision 6237；四版页数 6/21/8/15，共50页。PDF SHA依次为试题 `8bc72a43d7dfa6839b3bb5e1b8f4f3e1467cc2644a028031cb40234f9144462d`、解析 `16122e8e46cb86c135df34912bf63c805f8cfd581941d0f21c2f83f41e7cb012`、简答 `6bc3b03cb4f72053f66a7430136c26cf95a85776fa533411e95c06fbd306064f`、印刷 `a0f1710c96c6a06e9bd10ef5b0a1a1b4449687fbe0fa5024bd6c39f04cc907c5`。四版 errors、缺字、Overfull、undefined references、problems 均为0。
+- 视觉结论：50页中42页当前PNG与已实际审核的旧图字节相同；8个变化页全部重新完成8项检查，共400项，只有 pass/not_applicable。`finalize-batch`=`FINALIZED`，review `passed`，batch `closed`，`ISSUE-1165` resolved。`validate-receipts --require-final --require-current-inputs`、review check、provenance、生成器、简答、版本壳、source manifest、issues、`manifest.csv`（775行）和全库 `report.py check --all` 均通过。
+- 全量测试 `Ran 1779 tests in 612.736s`，13 skipped、1 failure。唯一失败为 `test_the_cached_states_match_the_recomputed_ones`：61个跨卷paper/batch缓存状态漂移，首项 `gk-2016-regular-national-2-arts`（缓存 complete、现场推导 answers_verified）。本批回执/provenance均通过；不要为了本批关闭而批量重写无关缓存。
+
+### 下一次接续边界
+
+- 本批完成后按用户要求停止；本轮不启动下一卷。恢复时重新核对生成器过期队列，选择有固定可核验来源且能形成独立批次的后续工作；“closed/complete”只描述本卷，不代表1952—2026总项目完成。
+- 不得新建 worktree；只用现有 `仓库根` / `feat/gaokao-phase0`。不要切 `main`、不要 push。提交时只 stage 当前阶段授权路径，并检查真实 staged diff、`git diff --cached --check`。
+- 全量缓存漂移是跨卷独立问题；需另立阶段按实时来源/derived state核查，不在此批扩大范围。任何来源缺失或答案存疑仍标记，不从模型记忆补造。
+
+## 2026-11-04 历史快照：phase1-b24 1994 上海卷视觉结案，Q25 仍阻塞
 
 ### 工作位置与 Git
 

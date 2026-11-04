@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1997 上海理科：确定性 TeX 重建与四版视觉回执刷新（phase4-b25，2026-11-05；批次已关闭）
+
+- 对象：`gk-1997-regular-shanghai-science`，22题；固定来源 `src-0e2bf157f22ee12de4476f01ef663e35478bb4366e2ac8259527ac0358956928`，上游 `普通高考/1997/1997上海理.pdf`，7页，SHA-256 `8bdb6c445fd984ff6e06d4fd9848af80c33f7de177e8aebcab51d4dad1b827e9`。本阶段只重建现行确定性 TeX 投影并刷新正式四版/视觉回执；题面文字、数学结论、答案、解析、来源身份与逐题 provenance 未改。固定扫描件仍不认证发布者、版次或官方答案身份。
+- `generate_projects.py --check` 显示 `questions.tex` / `answers.tex` 的 Q1、Q5 仍为旧内联选项结构；依生成器重写为四列结构。选项文字及顺序未变；检查通过。
+- 正式 build attempt `c3aae2af-39a5-4f20-ba10-941e1a09e7be`，输入 manifest revision `6237`，最终 revision `6239`。试题/解析/简答/印刷版分别 6/21/8/15 页，共50页；四版均 `succeeded`，errors、missing characters、Overfull、undefined references、problems 均为空。PDF SHA-256：试题版 `8bc72a43d7dfa6839b3bb5e1b8f4f3e1467cc2644a028031cb40234f9144462d`；解析版 `16122e8e46cb86c135df34912bf63c805f8cfd581941d0f21c2f83f41e7cb012`；简答版 `6bc3b03cb4f72053f66a7430136c26cf95a85776fa533411e95c06fbd306064f`；印刷版 `a0f1710c96c6a06e9bd10ef5b0a1a1b4449687fbe0fa5024bd6c39f04cc907c5`。
+- 当前150 dpi栅格与旧 attempt `2db5e79a-9d7b-4bc5-baae-3cc4d7facdb1`逐页比较：50页中42页PNG字节相同并继承原实审结论；8页变化（试题版p2、解析版p2/p7/p9、简答版p2、印刷版p1/p5/p6）逐页重新检查八项，共400项，全部为 `pass` 或 `not_applicable`。解析版p9的运行页眉由顶部栅格裁片和PDF bbox确认存在；Q5的(B)选项末端至(C)标号起点相距至少73.1pt，清楚可分。印刷版p6页眉也由顶部栅格裁片和PDF bbox确认存在。无警告豁免。
+- `finalize-batch` 返回 `FINALIZED`，review `passed`、batch `closed`、paper `production_state=complete`；`ISSUE-1165` 已 resolved。build currentness、review `check-batch`、provenance（22题）、生成器、简答、版本壳、source manifest、issues、manifest.csv（775行）均通过；`report.py render --all` 完成，`report.py check --all` 确认全库报告与manifest一致。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 实跑：`Ran 1779 tests in 612.736s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报61项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、现场派生 `answers_verified`）；本批 provenance/回执均通过，本阶段未改写无关卷状态。
+- 本轮未调用OCR、外部资料或模型补录，仅重建排版投影、正式编译和复核。本批已按用户要求收尾停工；后续接续须先复核生成器 currentness 队列再选批次。单卷关闭不表示1952—2026语料完成。
+
 ### 1997 上海文史类：确定性 TeX 重建与四版视觉回执更新（phase4-b24，2026-11-05；批次已关闭）
 
 - 对象：`gk-1997-regular-shanghai-arts`，22题；固定来源 `src-a9a7c39b5916052fa3afb91395913a6018084816eb8c8996044eb9a5b475d6ef`，上游路径 `普通高考/1997/1997上海文.pdf`，8页，PDF SHA-256 `843b55901dacb8cea8d37ff0cedd6a2d00b54d7176bc2096edb1ce773dfd5250`。本轮只处理确定性生成投影及正式复核；规范题面、答案、解析、图稿和逐题 provenance 未改。来源固定副本仍不等于发布者/版次或答案官方身份认证。

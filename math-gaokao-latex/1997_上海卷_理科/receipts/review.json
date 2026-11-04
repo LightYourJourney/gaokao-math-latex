@@ -1,7 +1,7 @@
 {
   "batch_id": "phase4-b25",
-  "build_attempt_id": "2db5e79a-9d7b-4bc5-baae-3cc4d7facdb1",
-  "dependency_tree_sha256": "ecab12810611d532aeecbfe8b0c3b13b49f98fdda637f26cd6a4a91fc8658da8",
+  "build_attempt_id": "c3aae2af-39a5-4f20-ba10-941e1a09e7be",
+  "dependency_tree_sha256": "903d02f161b067a4fc2fe162457a2ca267c09b1f11c8940153efca4688131df8",
   "editions": [
     {
       "candidate_override": null,
@@ -71,7 +71,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1/Q2/Q4/Q5/Q6 均为行内选项：相邻选项墨迹净距 Q1 15.91 pt（A xMax 129.10→B xMin 145.01）、Q2 16.42 pt、Q4 C→D 12.00 pt、Q5 ≥12 pt；Q6 标号「）」→分式左缘 1.19–1.20 pt（A 111.23→112.42、B 195.08→196.28、C 110.90→112.10、D 245.52→246.71），≥1 pt；Q6 上下两行分式墨迹净距 0.66 pt（1200 dpi 实测 y≈501.5 pt），属已知类 0.5–2 pt、无实碰。选项同基线、无压叠、无越界（全页墨迹右缘 532.91 pt）。",
+              "note": "Q1、Q5 的 A–D 现为单行四列，标号与选项公式基线整齐，列间空隙清楚；Q2、Q4 保持两行两列，Q6 分两行排列。全页选项无相碰、错位、折行或越界。",
               "result": "pass"
             },
             {
@@ -288,7 +288,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "d0956f20e721d53e7783b130b7ec91b41ff297c6ad5e17a23dd5fd359ad76cd6",
+      "pdf_sha256": "8bc72a43d7dfa6839b3bb5e1b8f4f3e1467cc2644a028031cb40234f9144462d",
       "result": "pass"
     },
     {
@@ -359,7 +359,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1–Q6 选项标号与公式基线对齐；最窄处为 Q6 (D) 两分式之间的减号，净距约 2–3pt；Q4/Q6 两列间距均≥10pt，无实碰。",
+              "note": "当前题面区 Q1、Q5 的 A–D 为单行四列，标号与公式基线一致且列间留白清楚；Q2、Q4、Q6 的多行选项完整对齐，无相碰、错位或越界。",
               "result": "pass"
             },
             {
@@ -589,7 +589,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 1 题四项同一行、第 2 题 2×2；标号与集合/不等式基线对齐，最窄列间净距≥8pt，无重叠。",
+              "note": "当前答案区第1题 A–D 单行四列、第2题两行两列；选项标号与集合/不等式基线齐，列间留白充分，无重叠。",
               "result": "pass"
             },
             {
@@ -681,7 +681,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 5 题单行四项、第 6 题 2×2；分式与减号净距≥2pt，列间净距≥10pt，无实碰。",
+              "note": "当前答案区第5题 A–D 单行四列、第6题两行两列；分式与标号基线一致。150 dpi 栅格可见列间留白；PDF bbox 中第5题（B）选项墨迹 x=197.400–244.917 pt，（C）标号从 x=318.038 pt 起，两者至少相隔 73.1 pt，无接触或重叠。",
               "result": "pass"
             },
             {
@@ -1266,7 +1266,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "4832a7067e994e83a1e14acb5c1c335269ccae816de941dd2be7abe26247f81d",
+      "pdf_sha256": "16122e8e46cb86c135df34912bf63c805f8cfd581941d0f21c2f83f41e7cb012",
       "result": "pass"
     },
     {
@@ -1337,7 +1337,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "（A）–（D）逐项对齐；Q5/Q6 的 dfrac 使行高增至约 52 px，Q6 上下两行分式净距约 1 px（≈0.5 pt），无实碰（已知可接受类）。",
+              "note": "当前 Q1、Q5 的 A–D 为单行四列，标号与选项公式基线一致，列间留白清楚；Q2、Q4 两行两列、Q6 两行分式完整，无相碰、错位或越界。",
               "result": "pass"
             },
             {
@@ -1646,7 +1646,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "aaf3d7af76cd3f785c928c42bec08752f39d9af9ef5eae3541e7fff2af06218a",
+      "pdf_sha256": "6bc3b03cb4f72053f66a7430136c26cf95a85776fa533411e95c06fbd306064f",
       "result": "pass"
     },
     {
@@ -1671,7 +1671,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1 选项净距 22.1/22.1/22.6 pt；Q2 22.1 pt；Q4 18.2/18.7 pt；Q5 22.6/21.6/22.6 pt；Q6 22.6/30.2/44.6 pt（150 dpi 墨迹实测，pt=px/2.0833）。四组选项均单行或两行同缩进，分式/根号与标号同基线，最小净距 18.2 pt ≥1 pt，无实碰。",
+              "note": "当前 Q1、Q5 的 A–D 单行四列，其他选项按原卷需要分行；分式/根式与标号对齐，选项均在版心内且相邻列留白清晰，无相碰或越界。",
               "result": "pass"
             },
             {
@@ -1855,7 +1855,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1 选项净距 22.1/22.1/22.6 pt；Q2 22.1 pt；Q3 (A)/(B) 24.0 pt、(C)/(D) 8.2 pt；均 ≥1 pt，基线一致，无实碰。",
+              "note": "当前第1题 A–D 单行四列，第2题两行两列、第3题选项分行；选项标号与集合/不等式基线齐，列间有清楚空隙，无压叠或越界。绿色答案框均位于各题解析之后。",
               "result": "pass"
             },
             {
@@ -1901,7 +1901,7 @@
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q4 选项净距 18.2/18.7 pt；Q5 22.6/21.6/22.6 pt；Q6 22.6/30.2/44.6 pt；两行选项同缩进，分式与标号同基线，最小 18.2 pt ≥1 pt，无实碰。",
+              "note": "当前第4题两行两列、第5题 A–D 单行四列、第6题两行两列；标号与分式/文字基线整齐，列间留白充分，无相碰、错位或越界。绿色答案框均位于各题解析之后。",
               "result": "pass"
             },
             {
@@ -2348,15 +2348,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "3a215b008e4f0f2414d5ceaa9ce5c15f479501ca5d79c828176787b2ff741132",
+      "pdf_sha256": "a0f1710c96c6a06e9bd10ef5b0a1a1b4449687fbe0fa5024bd6c39f04cc907c5",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "908a5d761abefcca6a1ec941225d098e9f7fe4cff1b086a55dbf372c818ca520",
+  "generation_input_tree_sha256": "41d773c6aee2a440200eae6d4a119cdf11256ac29b31197aef72a19c78175206",
   "input_projection": "01a193e73378ff175618e5e83203ccabc7410c6d6df132fa067b86696b6cfb19",
   "paper_id": "gk-1997-regular-shanghai-science",
   "project_dir": "1997_上海卷_理科",
-  "reviewed_at": "2026-10-25T03:11:03+08:00",
+  "reviewed_at": "2026-11-05T01:06:54+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {

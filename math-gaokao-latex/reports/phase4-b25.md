@@ -9,8 +9,8 @@
 
 - 标题：1997 年·上海卷·理工农医类
 - 项目目录：`1997_上海卷_理科`
-- 构建：`succeeded`（attempt `2db5e79a-9d7b-4bc5-baae-3cc4d7facdb1`）
-- 审查：`passed`（2026-10-25T03:11:03+08:00）
+- 构建：`succeeded`（attempt `c3aae2af-39a5-4f20-ba10-941e1a09e7be`）
+- 审查：`passed`（2026-11-05T01:06:54+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 6；解析版 21；简答版 8；印刷版 15
 - 警告豁免：0
