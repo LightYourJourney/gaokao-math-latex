@@ -23792,3 +23792,20 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1417
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF（SHA-256 4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91）第 2 页第 18 题只称 {b_n} 为等比数列，未说明公比非零；该 PDF 无答案或评分页，不能由同版答案材料核定零公比约定。依题面条件可得 q^2=0 或 1/2；答案要点与解析保留 q=0、q=±1/√2 的条件结果，标 U/PENDING。",
+  "fingerprint": "7654a62e41d55dabc9224fb6225963966645b8ec2a7804800886d6644dcfb0a9",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2002-regular-suyuyuegui",
+  "question_id": "gk-2002-regular-suyuyuegui-q18",
+  "resume_action": "取得可绑定到同一版次或同一固定 PDF 的答案、勘误或可追溯定义材料，核定零公比约定；核定前保留 U/PENDING 与条件分支，不把该卷标记为完成。",
+  "source_id": "src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

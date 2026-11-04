@@ -2284,6 +2284,14 @@
         "gk-2026-regular-beijing-recall"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b50",
+      "issues": [],
+      "paper_ids": [
+        "gk-2002-regular-suyuyuegui"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2293,7 +2301,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "52fc7cf2-d5a4-4d04-990f-bfe5d7b6f4db",
+  "last_transaction_id": "80e9c20b-7dea-4643-8aa5-0526d1611989",
   "papers": [
     {
       "blocked_from": null,
@@ -30259,9 +30267,80 @@
       "title": "2026 年·北京卷数学（回忆版，内部候选）",
       "track": "none",
       "year": 2026
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2002_苏豫粤桂卷/figures/2002_suyuyuegui_q10_polar_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_苏豫粤桂卷/figures/2002_suyuyuegui_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 1,
+          "path": "2002_苏豫粤桂卷/figures/2002_suyuyuegui_q21_answer_cuts.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2002_苏豫粤桂卷/figures/2002_suyuyuegui_q21_source_triangles.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2002_gaokao_suyuyuegui",
+        "id": "gk-2002-regular-suyuyuegui",
+        "note": "固定两页 A3 题面，原件印刷页 113–114；无答案或评分页。本库记录绑定本 PDF 字节，不认证题签来源、发布者、版次、复制/扫描链或官方身份；official_answer=null，答案与解析为本库独立推导。第18题“等比数列”未说明零公比约定，答案保留条件分支并以 U/PENDING 标记，问题阻断完成。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "苏豫粤桂卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "不分文理",
+        "variant": "苏豫粤桂"
+      },
+      "issue_ids": [
+        "ISSUE-1417"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2002-regular-suyuyuegui",
+      "production_state": "blocked",
+      "project_dir": "2002_苏豫粤桂卷",
+      "question_count": 22,
+      "resume_action": "取得可绑定到同一版次或同一固定 PDF 的答案、勘误或可追溯定义材料，核定零公比约定；核定前保留 U/PENDING 与条件分支，不把该卷标记为完成。",
+      "source_files": {
+        "answer_key": "2002/2002_数学真题_苏豫粤桂_答案要点.md",
+        "combined_rendered": "2002/2002_数学真题_苏豫粤桂_含解析.md",
+        "questions": "2002/2002_数学真题_苏豫粤桂_试题.md",
+        "solution_body": "2002/2002_数学真题_苏豫粤桂_解析正文.md"
+      },
+      "source_ids": [
+        "src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4"
+      ],
+      "title": "2002 年·苏豫粤桂卷",
+      "track": "none",
+      "year": 2002
     }
   ],
-  "revision": 6178,
+  "revision": 6180,
   "schema_version": 1,
   "sources": [
     {
@@ -35750,8 +35829,8 @@
       "exam_type": "regular",
       "git_blob_oid": "24ff45c0af6a8707358e31392c08cb4e2c96a32f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2002-regular-suyuyuegui",
+      "paper_relation": "canonical",
       "raw_paper_name": "2002广东,河南,江苏,广西.pdf",
       "regions": [],
       "source_id": "src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4",

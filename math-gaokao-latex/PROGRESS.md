@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2002 苏豫粤桂卷：规范事实源、内部卷与题图登记（2026-11-04）
+
+- 按固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`（PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`）规范化 Q1–Q22 题面、非官方答案要点和解析正文，并生成确定性 `_含解析.md`。四份文件指纹见[内部卷登记报告](reports/2002-suyuyuegui-paper-registration-20261104.md)。
+- 登记 `gk-2002-regular-suyuyuegui` 与 `phase4-b50`，manifest revision `6178→6179`；随后同步四张图的 `figure_files` 与引用次数至 revision `6180`。source 以 `canonical` 关系绑定；source 仍 `track=null`、`regions=[]`，来源身份和官方答案未认证，`official_answer=null`。
+- Q18 零公比约定未由题面/同版答案裁定，登记 `ISSUE-1417`，`open / blocks_completion`。保留 `q=0` 与 `q=±1/√2` 条件计算及 U/PENDING；paper `blocked`、batch `planned`。
+- `solution_sources.py check-batch`（22题）、source manifest 和 issues 校验通过；`manifest_csv.py --check` 为当前 775 行，`report.py check --all` 报告输出与 revision 6180 的 manifest 当前一致。全量门禁快照暂报 266 个 `INVALID_OR_STALE`、1 个历史 `VISUAL_FAILED`；新卷项目生成及共享 `index.json` 更新后须重跑回执验证，当前数字不是本卷最终门禁结论。下一阶段导入最终源摘要绑定的逐题 provenance，再生成项目 TeX、简答及四版入口；正式 PDF 构建、视觉回执和 batch 关闭仍未完成。未调用 OCR、未运行测试套件；token/费用未知。
+
 ### 2002 苏豫粤桂卷：Q10(B) 图位说明原页更正（2026-11-04）
 
 - 主会话按固定 PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91` 的第 1 页 180 dpi 图复看，并由独立题面复核者再次确认 Q10(B)：竖线通过圆心，与水平 $x$ 轴交于圆心；$O$ 在圆左端，$\tfrac12$ 标在竖线与 $x$ 轴交点下方，因此它是 $x=\tfrac12$，不是 $y$ 轴。

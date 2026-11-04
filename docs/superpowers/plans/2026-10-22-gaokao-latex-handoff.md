@@ -4,30 +4,30 @@
 
 > **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：2002 苏豫粤桂 Q1–Q22 答案复核与题图矢量转录完成
+## 2026-11-04 当前状态：2002 苏豫粤桂规范源与内部卷登记完成，Q18 仍阻塞
 
 ### 工作位置与 Git
 
-- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次接续开始时 HEAD 为 `eef9496f`，工作树干净，领先 `origin/feat/gaokao-phase0` 6 个提交。2002 本批先前阶段提交依次包括范围比对 `62c6a80d`、题面转录 `7030f2e4`、题面复核 `5db0e2a7`、Q10 原页图位更正 `9c3b19b0`、答案/解析初稿 `a6fc0508`、独立答案复核 `7b0a9b8b`、交接更新 `eef9496f`。本次图稿阶段的实际提交以最新 Git 历史为准；没有切换到 `main`，没有 push。
-- 本轮先完成 `phase4-b49`（2026 北京回忆版候选卷）四版构建/视觉收口，随后提交 2003 北京来源交叉核查记录。每项提交独立；不要重做已闭合的构建或视觉审查。
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次接续起点 HEAD 为图稿阶段提交 `cb402776`，工作树仅有本卷尚未提交的规范源与登记改动。此前 2002 阶段提交及本次图稿提交以 Git 历史为准；未切换到 `main`、未 push。
+- 当前规范源与登记回执：[内部卷登记报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-paper-registration-20261104.md)。阶段提交后以 live Git 状态确认结果。
 
 ### Live manifest 概况
 
-- live manifest revision `6178`；本轮未修改 manifest/issues。全库投影沿用上一节所记登记状态，不代表 1952–2026 目标已完成。
-- 唯一非终态批次为 `phase0-b02`（2019/2020 全国Ⅰ文理四卷），状态 `compiled_pending_review`。按既有用户裁定保留 2020 文科取消题及五项 `heading_number` 视觉失败；不要删除该题或将失败改判通过。
-- 最新批次 `phase4-b49`（`gk-2026-regular-beijing-recall`）为 `closed_with_blockers`；官方来源身份与答案未核，`official_answer=null`。`ISSUE-1408`–`1410`、`1414`–`1416` 继续阻塞，候选版与未认证副本之间的题面/答案差异不得择一消除。
+- live manifest revision `6180`；source 总数 775、paper 421、batch 267。登记产生 `ISSUE-1417`；CSV 775 行、全量报告投影 currentness 已通过。本次投影快照报 266 个 `INVALID_OR_STALE`、1 个历史 `VISUAL_FAILED`；2002 项目 TeX/index 与 provenance 尚未生成，后续刷新后须重新验证，当前数不是本卷最终门禁结论。本节后续全库统计以 live manifest/投影为准，不代表 1952–2026 目标已完成。
+- 当前未关闭批次包括 `phase0-b02`（2019/2020 全国Ⅰ文理四卷，`compiled_pending_review`）和新批 `phase4-b50`（2002 苏豫粤桂，`planned`）。保留 2020 文科取消题与五项 `heading_number` 视觉失败，不删除该题或将失败改判通过。
+- `phase4-b49`（2026 北京回忆版候选卷）仍为 `closed_with_blockers`；来源身份与官方答案未核，`ISSUE-1408`–`1410`、`1414`–`1416` 继续阻塞，候选版与未认证副本之间的题面/答案差异不得择一消除。`phase4-b50` 的 `gk-2002-regular-suyuyuegui` 为 `blocked`，唯一当前问题是 Q18 的零公比约定 `ISSUE-1417`。
 
 ### 最近完成的来源核查
 
 - `phase4-b48`（2003 北京文理卷）已完成原卷忠实转录、构建和视觉封账，当前仍为 `closed_with_blockers`。新查到新浪教育保存的 2003-06-09 精华听课网文理题面/参考答案分页：文科 Q18 扫描图右顶点写 A2、理科 Q17 题面写“底面边长为3”。这些是同期二手材料，不认证为固定 PDF 同版或官方勘误。
 - 已更新 `ISSUE-1398`–`1401` 的 `current_evidence` 和[2003 北京来源交叉核查报告](../../exams/math-gaokao-latex/reports/2003-beijing-contemporaneous-source-corroboration-20261104.md)。四项仍 `open` / `blocks_completion`；原题面、答案、provenance、manifest 与回执均未因二手材料改写。定向查找未定位官方扫描/勘误，但这不表示其不存在。
 - 先前的 `phase4-b47`（2003 上海文理普通卷）已经完成答案/解析、盲核、图稿、provenance、四版构建及92页视觉复核；批次 `closed_with_blockers`，两卷 Q14 的 `ISSUE-1388`/`1389` 仍为 U/PENDING。原交接快照关于“下一步才开始答案”的文字已过时，细节以 [`PROGRESS.md`](../../exams/math-gaokao-latex/PROGRESS.md) 开头阶段记录及 live manifest 为准。
-- 本轮确定性校验：`issues.py validate`、source manifest validate、`manifest_csv.py --check`（775行）、`report.py check --all` 与 `git diff --cached --check` 均通过。只更新来源证据，没有改题面/答案/版面或 build 输入；本轮未重建 PDF、未运行测试套件。
+- 上一轮来源证据更新的确定性校验与 Git 记录详见其阶段提交；本轮注册阶段的命令结果见下方新阶段及报告。
 
 ### 2002 苏豫粤桂卷来源接收
 
 - 已目视核对固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`：SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`、Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`、2 页 A3、印刷页 113–114，题签“2002 普通高等学校招生考试（苏豫粤桂）”。PDF 可见 Q1–Q22 及 Q10/Q19/Q21 图；没有答案或评分页。
-- 题签未标文理轨道；来源发布身份/复制链未核。本次仅记录单一固定文件，未拆为四套，也未注册 paper/batch；完整页图、范围和边界见[来源接收报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-source-intake.md)。
+- 题签未标文理轨道；来源发布身份/复制链未核。仍按单一固定文件处理，不拆成四套；现已登记内部 paper/batch，不据此认证来源身份。完整页图、范围和边界见[来源接收报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-source-intake.md)。
 - 后续与全国旧/新课程四卷的题面比对已完成，卷种与分类边界见下一小节及[比对报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-scope-comparison-20261104.md)。
 
 ### 2002 苏豫粤桂卷范围比对
@@ -52,12 +52,13 @@
 - 按固定来源 PDF SHA `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，重绘 Q10 四选项、Q19 四棱锥、Q21 三张空白题面图和答案剪线图；逐图报告见[题图矢量转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-figure-transcription-20261104.md)。
 - 四个独立 TikZ 文件位于 `2002_苏豫粤桂卷/figures/`。Q10、Q19、Q21 原题图分别链接在题面草稿；Q21 答案剪线图单独链接在解析草稿。Q10 片段首次审查发现 A/B 圆心误放原点，已按原页改为圆心 $(1/2,0)$、O 为左端点，并重新编译复看；Q21 片段只表示剪线，不能独自说明配对和平移。
 - 四图使用 XeLaTeX+CTeX scratch 编译成功并对渲染图做目视检查。scratch PDF/PNG 在忽略目录 `.work/2002-suyuyuegui-figure-review/`，不作为正式版本的构建回执或最终排版验收。
-- 当前 paper/batch 尚未注册；manifest `figure_files` 和 occurrence 计数未同步，确定性 `_含解析.md` 未生成，provenance 未导入，四版构建及正式视觉检查未做。来源仍 `ready/unbound`、`official_answer=null`，身份未核。
-- 来源仍 `ready/unbound`、`paper_id=null`、`paper_relation=null`、`track=null`、`regions=[]`；发布身份未认证。未导入规范题面/答案/解析事实源或 provenance，未注册 paper/batch，未生成 `_含解析.md`、TeX/PDF，也未做正式构建、视觉校验或项目测试。
+- 已建立规范题面、答案要点、解析正文，并确定性生成 `_含解析.md`。paper `gk-2002-regular-suyuyuegui` 与 batch `phase4-b50` 已登记；source 与 paper 的关系为 `canonical`，source `track=null`、`regions=[]` 保持不变。四图均登记，引用次数为 Q10/Q19/Q21 原图各2、Q21答案剪线图1。
+- `ISSUE-1417` 记录 Q18 零公比约定，状态 `open / blocks_completion`；答案要点保留 U/PENDING 和两个条件分支。paper `blocked`、batch `planned`；身份未认证且 `official_answer=null`。
+- 本阶段 `source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch`（22题）、CSV currentness 和全量报告 currentness 均须以提交前实际运行结果为准。逐题 provenance、项目 TeX/简答/四版入口、正式构建和视觉回执仍待完成。
 
 ### 下一工作候选
 
-- 当前下一步是将复核后的题面、答案和解析草稿规范化到 paper 事实源，保留题签轨道未标、来源身份未知、无卷内答案等边界；复制解析稿到规范目录时要重写 Q21 答案辅助图链接的相对路径。然后按 `OCR_WORKFLOW.md` 登记拟用 paper `gk-2002-regular-suyuyuegui` 和批次/provenance。paper 的 `track=none` 仅表示本库暂不分文理，source 继续 `track=null`、`regions=[]`；不得据题签或题目重合宣称官方共同卷身份。生成确定性输出前先 `solution_sources.py extract-batch --write`，随后同步 manifest `figure_files` 引用次数并导入与最终事实源相符的 provenance，再生成四版、正式构建并逐页视觉验收。2002 本卷尚未完成 paper/batch 登记或关闭；完成这一批之后按用户先前指示停工，不把单卷完成描述为 1952–2026 语料完成。
+- 下一步为逐题 provenance 导入，绑定固定 PDF SHA、已完成的题面复核、独立盲解/答案复核摘要和当前规范题面/答案摘要；Q18 继续 U/PENDING。之后生成 TeX、简答、四版入口，跑确定性检查，构建与逐页视觉复核并按回执流程关闭 `phase4-b50`。来源身份、发布链及官方答案不明时不得解除相关边界。完成 2002 这一批后按用户先前指示停工；不得把单卷/批次描述为 1952–2026 语料完成。
 - 完成 2002 苏豫粤桂后，再按年份顺序处理未绑定来源。1998 全国文科已有25题转录、独立数学复核及固定 PDF 原页复看，但来源仍 `ready/unbound`，出版身份未核，Q12/Q13/Q25 原件冲突仍在；本轮对教育部/学信网域名和题名的定向检索未定位到可直接核验的官方原卷或勘误，相关搜索命中仍是二手文档页。检索未命中不证明官方材料不存在；不要重做转录或把二手版本当裁定。
 - 不要因大量未绑定来源、blocked papers 或 open issues 而批量清状态。每阶段核对固定来源、现有草稿、manifest、PROGRESS 与历史，保留来源不确定性，并在每个可审查阶段单独提交；仍不 push。
 
