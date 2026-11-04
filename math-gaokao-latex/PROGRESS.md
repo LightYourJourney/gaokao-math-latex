@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2002 苏豫粤桂卷：项目生成、正式构建与视觉审查结案（2026-11-04）
+
+- 固定来源 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`，PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`；paper `gk-2002-regular-suyuyuegui`、batch `phase4-b50`。Q1–Q22 已生成题目、答案、解析、简答源与四版入口；Q16/Q17 公式只作无语义序列化修整，来源说明避开 TeX 中未转义下划线，`official_answer=null` 不变。详见[项目生成报告](reports/2002-suyuyuegui-project-generation-20261104.md)。
+- 最终正式 build attempt `99457b35-988d-486b-82bf-ee011d6982e2`，输入 manifest revision `6188`。试题/解析/简答/印刷版共 4/19/6/16 页，PDF SHA-256 依次为 `a6e46837b6c2035e3d6fc421b32575c5ccc89ef8b65510a393ce20b76d66b5c2`、`ae19d5e02b766abc59f94f23a0e0fa9170c5c115aeb270c44640bc95e25c0941`、`60df70de5d930f533142f2cac0c13dfef0d7fba046c40d262af4eeeeced44329`、`fcc644253685d16a91b427891b4f0a592f4c0a606389ce6608c5573707a246cb`。四版 TeX errors、missing characters、overfull、undefined references 均为 0。首次 TeX 错误所生 `ISSUE-1418`–`1421` 已 resolved；构建证据见[正式构建报告](reports/2002-suyuyuegui-formal-build-20261104.md)。
+- 四版 45 页全部逐页通过 glyph、heading_number、option_formula_alignment、figure_label、header_footer、pagination_whitespace、font_size、answer_leak 八项视觉检查。试题版第2、4页与此前实际目检 PNG 的 SHA-256 相同，按流程继承结论。`review_receipts.py finalize-batch` 返回 `closed_with_blockers`；视觉审查报告记录唯一阻塞 `ISSUE-1417`。
+- 最终 live manifest revision `6190`；batch `closed_with_blockers`，paper `blocked`。Q18 等比数列零公比约定未证，保持 U/PENDING 与条件分支；来源身份及官方答案未认证。项目生成、source manifest/issues、provenance/solution sources、CSV、全量报告、build 与 review 回执验证均通过。完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1779 tests in 582.882s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报告 80 卷缓存状态与现场 provenance 推导不同，首例为 2012 全国大纲文科；该卷在本批前 HEAD 与当前 manifest 均缓存 `complete`，source manifest 差异局限于 2002 苏豫粤桂批次/试卷字段。`provenance.py check-batch --batch phase4-b50` 通过。全库缓存状态漂移另行跟进；本批结案后按用户指示停工。
+
 ### 2002 苏豫粤桂卷：逐题三角色 provenance 导入（2026-11-04）
 
 - 依固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4` 为 Q1–Q22 建立 question-review、answer-solve、answer-review 记录。页码映射为 Q1–Q19 → PDF 第1页、Q20–Q22 → 第2页；现场题面/答案摘要和 source SHA 由导入器按当前规范源计算。证据及角色边界见[provenance 阶段报告](reports/2002-suyuyuegui-provenance-20261104.md)。

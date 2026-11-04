@@ -2,9 +2,37 @@
 
 更新时间：2026-11-04（中国标准时间）
 
-> **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
+> **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：2002 苏豫粤桂三角色 provenance 已导入，Q18 仍阻塞
+## 2026-11-04 当前状态：phase4-b50 视觉结案，Q18 仍阻塞
+
+### 工作位置与 Git
+
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本批最后一次提交后应为干净状态；未切换到 `main`、未 push。新会话先执行 `git status --short` 与 `git log -5 --oneline` 核实实际 HEAD，不以本文件中的提交号代替 live Git 证据。
+- 用户要求本批结案后停工，不启动下一卷；任何后续工作仍应只在该 worktree/分支内进行，并按“每阶段提交”执行。
+
+### 当前卷与批次
+
+- live manifest revision `6190`：775 sources、421 papers、267 batches。`phase4-b50` / `gk-2002-regular-suyuyuegui` 的 batch 为 `closed_with_blockers`，paper 为 `blocked`。
+- `ISSUE-1417` 仍 `open / blocks_completion`：固定 PDF 第2页 Q18 只称 `{b_n}` 为等比数列，未说明零公比约定。固定 PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91` 不含答案页；官方身份与答案均未核，`official_answer=null`。Q18 保留 U/PENDING 和 q=0、q=±1/√2 两种条件分支，不得擅自补定。
+- 早期编译失败生成的 `ISSUE-1418`–`ISSUE-1421` 已由成功正式构建自动标记 `resolved / non_blocking`；不得把它们与仍开放的 `ISSUE-1417` 混淆。
+
+### 项目生成、正式构建与视觉验收
+
+- 项目 TeX、简答源和四版入口已生成；`generate_projects.py --check`、`make_short_answers.py --check`、`make_editions.py --check` 均通过。题面序列化仅对 Q16/Q17 公式断行和句号位置作无语义调整；正文来源说明改为“官方答案未认证”，front matter `official_answer: null` 不变。三角色 provenance 当前 SHA-256：`458ecfb1e2aaba4dab8d3ab7e7e07e77dc62ce6a04bd7ee6ae2767c55993e662`。
+- 最终构建 attempt `99457b35-988d-486b-82bf-ee011d6982e2`（输入 manifest revision `6188`）四版成功、45 页；错误、缺字、overfull、未定义引用均为 0。PDF SHA-256：试题版 `a6e46837b6c2035e3d6fc421b32575c5ccc89ef8b65510a393ce20b76d66b5c2`；解析版 `ae19d5e02b766abc59f94f23a0e0fa9170c5c115aeb270c44640bc95e25c0941`；简答版 `60df70de5d930f533142f2cac0c13dfef0d7fba046c40d262af4eeeeced44329`；印刷版 `fcc644253685d16a91b427891b4f0a592f4c0a606389ce6608c5573707a246cb`。
+- 四版全部页面完成八项目检，视觉回执 `passed`；Q版第2、4页 PNG SHA 与前次已实际目检图逐字节相同，继承此前结论。`review_receipts.py finalize-batch` 返回 `FINALIZED`、`closed_with_blockers`；批次报告列出唯一阻塞 `ISSUE-1417`。详见[项目生成报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-project-generation-20261104.md)、[正式构建报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)与[视觉审查报告](../../exams/math-gaokao-latex/reports/phase4-b50.md)。
+- 最新门禁证据：`review_receipts.py check-batch` 无问题；`build_projects.py validate-receipts --require-final` 输出 `OK`（1 succeeded、0 pending、0 stale/invalid/failed）；`manifest_csv --check` 为当前 775 行；`report.py check --all` 报告输出与 manifest 一致。完整测试 `python3 -B -m unittest discover -s tests -q` 实际运行 `1779` 项、13 项跳过、1 项失败（582.882 秒）：`test_the_cached_states_match_the_recomputed_ones` 报告 80 卷的缓存 production_state 与现场推导不符。首例 2012 全国大纲文科在 Git 基线 revision 6181 与当前 revision 6190 中都缓存为 `complete`，现场推导为 `answers_verified`；本卷 `provenance.py check-batch --batch phase4-b50` 通过。完整结果及边界见[正式构建报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-formal-build-20261104.md)。
+
+### 下一位 Agent 的接续边界
+
+- 不要重复生成、编译或复核本卷；`ISSUE-1417` 只有在获得可绑定同版来源的零公比定义、答案或勘误证据时才可重审。在此之前继续保留 blocker 与全部条件分支。
+- 全库测试仍报告 80 卷的缓存 production_state 漂移；这是本批外问题，首例在基线 manifest 已存在。若要批量派生刷新，应另开授权阶段，并保留逐批证据。
+- 本批完成后本轮已按用户要求停止。新会话先核对 Git/manifest/回执与 `PROGRESS.md`，再从可用清单确认下一批；不据本卷的 `closed_with_blockers` 推断 1952–2026 语料完成。
+
+## 2026-11-04 历史阶段快照：来源接收到 provenance 导入时（revision 6181）
+
+> 以下当时的生成、构建与视觉验收状态已由上方最新小节覆盖；此处细节只用于追溯阶段依据。
 
 ### 工作位置与 Git
 
@@ -61,10 +89,10 @@
 - 已为 Q1–Q22 导入 question-review、answer-solve、answer-review 三角色 provenance，SHA-256 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`。题面复核均 passed，答案 D 21 题、U 1 题；Q18 的 U 与 `ISSUE-1417` 相连，答案复核没有另列计算冲突，未把定义约定误记作两解冲突。证据范围、页码映射及角色来源见[provenance 阶段报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-provenance-20261104.md)。
 - `provenance.py check-batch` 输出 `OK：1 卷`；source manifest、issues 与 22 题 solution sources 校验通过。revision `6180→6181`，batch `provenance_verified`、paper `blocked`。全量报告仍是 revision 6180 快照，项目生成刷新共享 index 后重新生成/核验。未生成项目 TeX/简答/四版入口，也未构建正式 PDF 或视觉审查。
 
-### 下一工作候选
+### 当时的下一阶段计划（已完成）
 
-- 下一步生成 `questions.tex`、`answers.tex`、简答速查和试题/解析/简答/印刷四版入口；先跑确定性门禁、刷新共享 `index.json` 和全量报告并检查旧批次回执，再正式构建 `phase4-b50` 四版、逐页做视觉检查及回执终结。Q18 继续 U/PENDING；来源身份、发布链和官方答案边界未解决时只能以 `closed_with_blockers` 收口。完成 2002 这一批后按用户先前指示停工，不把单卷/批次描述为 1952–2026 语料完成。
-- 完成 2002 苏豫粤桂后，再按年份顺序处理未绑定来源。1998 全国文科已有25题转录、独立数学复核及固定 PDF 原页复看，但来源仍 `ready/unbound`，出版身份未核，Q12/Q13/Q25 原件冲突仍在；本轮对教育部/学信网域名和题名的定向检索未定位到可直接核验的官方原卷或勘误，相关搜索命中仍是二手文档页。检索未命中不证明官方材料不存在；不要重做转录或把二手版本当裁定。
+- 当时计划生成 `questions.tex`、`answers.tex`、简答速查和四版入口，并完成构建与逐页视觉检查；以上工作已完成，当前状态见本文件最上方与 phase4-b50 报告。Q18 仍 U/PENDING，批次以 `closed_with_blockers` 收口。
+- 后续年份/来源候选须在新会话重读 live manifest 后确认；1998 全国文科曾列作候选，已有25题转录、独立数学复核及固定 PDF 原页复看，但来源 `ready/unbound`、出版身份未核、Q12/Q13/Q25 原件冲突仍在。旧的定向检索记录不能代替新的来源核验，也不能据未命中推断官方材料不存在。
 - 不要因大量未绑定来源、blocked papers 或 open issues 而批量清状态。每阶段核对固定来源、现有草稿、manifest、PROGRESS 与历史，保留来源不确定性，并在每个可审查阶段单独提交；仍不 push。
 
 ## 历史快照：2003 上海普通卷文理科题面转录与独立复核完成
