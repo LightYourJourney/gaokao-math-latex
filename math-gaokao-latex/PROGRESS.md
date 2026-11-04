@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1996 上海文理卷：同步当前确定性 TeX 投影（phase4-b21 / phase4-b22，2026-11-04；正式重建待完成）
+
+- 当前 `generate_projects.py --all --check` 实测有 97 个 TeX 投影、涉及 50 卷不一致；本阶段只处理当前最早的 1996 上海文史、理科两卷，不执行全库写入。内存重生成差异显示源 Markdown、答案、解析和数学结论未变：文史 Q16 B1、Q24 两处显示公式句号由 `\text{。}` 改为 `\mbox{。}`；理科 Q7、Q8 四选项由单行文字改成 `gkopts(4)`/`\task` 结构，Q16 B1、Q18 B1 两处句号也改为 `\mbox{。}`。选项布局和数学模式盒子可能影响分页/字距，需新 PDF 视觉复核。
+- 生成器已按两个 paper ID 分别写入，仅四份 `questions.tex` / `answers.tex` 改变；两卷 `generate_projects.py --paper ... --check` 均通过。1996 上海文史/理科来源专项 `test_1996_shanghai_*_sources.py` 为 14/14，生成器 `test_generate_projects.py` 为 122/122。没有修改规范题面、答案、解析、provenance、manifest 或图稿，也没有调用 OCR。
+- 变化来自共享 `md2tex.py` 更新：单行四选项识别由 `00ecf94d` 引入，显示公式中文句号处理由 `b2940a58` 引入；两卷原 TeX 生成于这些转换规则之前。旧 build receipt 校验仍 `OK`，但它只证明旧 TeX 对旧 PDF 的绑定；review/provenance 批次检查均因缓存 `closed_with_blockers` 与现场派生 `provenance_verified` 不一致而报 `INVALID`，旧视觉结论不能当作当前门禁。
+- 1996 理科 Q15 A1 的 `ISSUE-1136/1137`、文史 Q15 A1 的 `ISSUE-1138`–`1143` 继续阻塞；固定扫描件的发布者、版次及答案官方身份未认证，`official_answer=null`。下一步分别正式重建两卷四版、按新旧 PDF 差异复查页面，并用回执工具重建批次状态；预期仍是 `closed_with_blockers`，不得根据印载答案改写 Q15。完成这轮后再处理当前 stale 队列中的下一卷。
+
 ### 1995 上海文理卷：紧凑选项版式与 provenance 哈希同步（phase4-b35 / phase4-b28，2026-11-04；正式重建待完成）
 
 - 两卷 Q2、Q4 的规范题面将选项间隔恢复为原单行布局；只增加选项分隔空格，不改题目文字或数学内容。经 `solution_sources.py extract-batch --write`、`generate_projects.py --write` 同步 `_含解析.md` 与 `questions.tex` / `answers.tex`。文史前一阶段还将来源说明/解析引言中的 `A₁/B₁`、`A₂/B₂` 改为 LaTeX 数学下标，修复缺字；理科旧草稿 Q9 仍误写 `(2x+1)/(x+3)>1`、答案 `x>2`，规范题面/答案/解析和生成结果为 `(2x-1)/(x+3)>1`、`x<-3` 或 `x>4`，旧草稿未改。
