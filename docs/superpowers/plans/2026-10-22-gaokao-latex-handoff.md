@@ -4,7 +4,34 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：phase4-b50 视觉结案，Q18 仍阻塞
+## 2026-11-04 当前状态：phase1-b24 1994 上海卷视觉结案，Q25 仍阻塞
+
+### 工作位置与 Git
+
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次继续未进入 `main`、未 push。交接更新提交后先用 live `git status --short --branch` 和 `git log -5 --oneline` 核对工作区与 HEAD。
+- 最近阶段提交：`a869a2fc` 更新 1994 上海卷生成 TeX；`de13d706` 完成 phase1-b24 正式构建、视觉回执与全量投影；`1a168350` 同步该卷标点包装回归断言。交接文档的本次提交会位于其后。
+
+### Live manifest 与当前卷
+
+- manifest revision `6193`：775 sources、421 papers、267 batches。生产状态：blocked 109、compiled 3、complete 309；批次状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。全库回执投影当前为 FINALIZED 224、INVALID_OR_STALE 42、VISUAL_FAILED 1。
+- `phase1-b24` / `gk-1994-shanghai` 的 batch 为 `closed_with_blockers`，paper 为 `blocked`；source `src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65` 的 PDF SHA-256 为 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`。来源出版身份未认证，`official_answer=null`。
+- `ISSUE-1071` 仍 `open / blocks_completion`：固定印载 Q25 第二支为 `t≥2`，与项目推导中 `t≥1/2` 不一致，导致 `[1/2,2)` 未被印载分段覆盖。保留原文和区间缺口；项目推导不得标为官方答案。全 26 题局部复核已完成，不要重复盲核。
+
+### phase1-b24 正式构建与视觉复核
+
+- 生成 TeX 阶段提交 `a869a2fc` 只更新 `questions.tex`、`answers.tex` 中 5 处句号包装：由数学模式中的 `\text{。}` 改为 `\mbox{。}`，题面数学内容未改；`generate_projects.py --batch phase1-b24 --check` 通过。
+- 正式构建 attempt `4707ef56-8915-42e5-b940-b231a204f530`，输入 manifest revision `6191`；试题版 5 页、解析版 19 页、简答版 7 页、印刷版 16 页，共 47 页。四版均 `succeeded`，errors、missing characters、overfull、undefined references 均为 0。PDF SHA-256 依次为 `61e996a8bd086cb970f665e47a8c7b3aa30cac9cdccfeab9a47637d1361a9708`、`ebffaa45c4d4a74d27e009fd4a9cf020d82e83c0dd7462c786b54beec518b675`、`1b36a7c10ea9dde1f4a9ccb12e0e26b5e1f18371ffb45462aabc23922b4be89e`、`168b95d92e44558a37f5e1391603b2f5d7811ea762e4d38231ece3d806259e20`。
+- 旧 review attempt `334e6ca3-0bf1-40dd-aa2e-32f86a108949` 的 47 页均为逐项通过。将旧版 TeX 在临时目录重建后，以同一 Poppler 26.10、120 dpi 栅格和当前 attempt 逐页比对，47/47 页 PNG 字节相同，因此继承旧八项视觉结论；并抽看四版候选锚点页。当前 review 为 `passed`，`finalize-batch` 返回 `FINALIZED / closed_with_blockers`。build、review 回执及页级继承说明见卷目录 `receipts/`；批次报告见[phase1-b24 报告](../../exams/math-gaokao-latex/reports/phase1-b24.md)。
+- 局部门禁通过：source manifest、issues、三角色 provenance、26 题 solution sources、TeX/简答/四版入口 currentness、`validate-receipts --require-final --require-current-inputs`、`review_receipts.py check-batch`、`manifest_csv --check`（775 行）、`report.py check --all`。1994 专项 `tests.test_1994_shanghai_sources` 为 16/16 通过。
+- 全量测试末次结果：`Ran 1779 tests in 606.387s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 仍报告 79 卷 manifest 缓存 `production_state` 与现场 provenance 推导不一致；首例为 `gk-2012-regular-national-outline-arts`，缓存 `complete`、现场 `answers_verified`。此为跨卷状态缓存问题，不在 phase1-b24 内批量改写。
+
+### 后续接续
+
+- `python3 tools/generate_projects.py --all --check` 当前 exit 1：仍有 105 个生成 TeX 文件、54 卷、41 批次过期。下一项按年份最早的是 `phase1-b36`（1994 上海试验卷文理科）；逐批 `--write`、检查、构建与视觉结案，禁止直接对全库 `--all --write`。
+- 不要重复生成、构建或复核 phase1-b24；只有出现可绑定同版来源、答案或勘误证据时才重审 `ISSUE-1071`。全库 79 卷缓存漂移另开阶段处理。
+- 并行来源审计没有改变问题状态：2013 全国Ⅰ文科 Q22–Q24 作答规则及 Q21 公切线类型仍缺能绑定固定 PDF 版次的正式证据（`ISSUE-0851`—`0853`、`ISSUE-0879` 保持开放）；2025 全国Ⅰ Q11 的固定源印载 `2 sin C`，公开官方评析未呈现争议公式或勘误（`ISSUE-0048` 保持开放）。审计没有写入仓库文件，不能据此改题面或官方答案字段。
+
+## 2026-11-04 历史快照：phase4-b50 视觉结案，Q18 仍阻塞
 
 ### 工作位置与 Git
 

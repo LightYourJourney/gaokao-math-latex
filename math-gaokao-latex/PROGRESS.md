@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1994 上海卷：项目 TeX 刷新、正式构建与视觉审查结案（2026-11-04）
+
+- `phase1-b24` / `gk-1994-shanghai`，固定 source `src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65`，PDF SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`。生成器刷新只将题面/答案 TeX 中数学模式的 5 处 `\text{。}` 包装改为 `\mbox{。}`；数学内容与规范 Markdown 未改。提交 `a869a2fc`。
+- 最终 build attempt `4707ef56-8915-42e5-b940-b231a204f530`，输入 manifest revision `6191`；试题、解析、简答、印刷版分别 5、19、7、16 页，总计 47 页，均 succeeded。errors、missing characters、overfull 与 undefined references 为 0。PDF SHA-256 依次为 `61e996a8bd086cb970f665e47a8c7b3aa30cac9cdccfeab9a47637d1361a9708`、`ebffaa45c4d4a74d27e009fd4a9cf020d82e83c0dd7462c786b54beec518b675`、`1b36a7c10ea9dde1f4a9ccb12e0e26b5e1f18371ffb45462aabc23922b4be89e`、`168b95d92e44558a37f5e1391603b2f5d7811ea762e4d38231ece3d806259e20`。
+- 旧 build attempt `334e6ca3-0bf1-40dd-aa2e-32f86a108949` 对应的 47 页视觉结论均通过。用 TeX 基线重建后，在同一 Poppler 26.10、120 dpi 对比新旧页面 PNG，47/47 页字节相同；因此逐页继承既有八项检查结论，另抽看四版候选页。当前 review passed；`finalize-batch` 返回 `FINALIZED / closed_with_blockers`，manifest revision `6190→6193`。本阶段提交 `de13d706`。
+- `ISSUE-1071` 继续 open / blocks_completion：Q25 固定源第二支 `t≥2` 与项目推导的 `t≥1/2` 有区间缺口 `[1/2,2)`；保留印载原文，非官方推导不得升格为官方答案。source 身份未认证、paper blocked。提交 `1a168350` 同步生成输出句号包装回归测试；专项测试 16/16 通过。
+- 局部 source manifest、issues、provenance、solution sources（26题）、生成 TeX、简答、四版入口、正式构建/视觉回执、CSV（775行）及全量报告投影检查均通过。全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1779 tests in 606.387s`，`FAILED (failures=1, skipped=13)`；唯一失败 `test_the_cached_states_match_the_recomputed_ones`，79 卷缓存 production_state 与实时推导不符，首例 2012 全国大纲文科为 `complete` / `answers_verified`。这是本批外的全库漂移，不批量改写。
+- 当前复查 `generate_projects.py --all --check` 仍报 105 个生成文件、54 卷、41 批次过期。下一批按年份最早为 `phase1-b36`（1994 上海试验卷文理科）；逐批推进，不使用 `--all --write`。全库 manifest 当前 revision `6193`、775 sources、421 papers、267 batches。
+
 ### 2002 苏豫粤桂卷：项目生成、正式构建与视觉审查结案（2026-11-04）
 
 - 固定来源 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`，PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`；paper `gk-2002-regular-suyuyuegui`、batch `phase4-b50`。Q1–Q22 已生成题目、答案、解析、简答源与四版入口；Q16/Q17 公式只作无语义序列化修整，来源说明避开 TeX 中未转义下划线，`official_answer=null` 不变。详见[项目生成报告](reports/2002-suyuyuegui-project-generation-20261104.md)。
