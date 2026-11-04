@@ -119,7 +119,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
             with self.subTest(fragment=fragment):
                 self.assertIn(re.sub(r"\s+", "", fragment), normalized_questions)
 
-    def test_cjk_sentence_stops_in_generated_math_use_text_font(self):
+    def test_cjk_sentence_stops_in_generated_math_are_text_wrapped(self):
         math_spans = re.compile(
             r"\$\$.*?\$\$|\\\[.*?\\\]|\\\(.*?\\\)|"
             r"(?<!\\)\$(?!\$)(?:\\.|[^$])*?(?<!\\)\$(?!\$)",
@@ -130,7 +130,7 @@ class Shanghai1994SourceTests(unittest.TestCase):
         for path in sources:
             text = path.read_text(encoding="utf-8")
             for span in math_spans.finditer(text):
-                unwrapped = span.group().replace(r"\text{。}", "")
+                unwrapped = re.sub(r"\\(?:text|mbox)\{。\}", "", span.group())
                 for punctuation in re.finditer("。", unwrapped):
                     offset = span.start() + punctuation.start()
                     line = text.count("\n", 0, offset) + 1
