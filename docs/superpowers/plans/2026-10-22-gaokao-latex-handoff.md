@@ -4,25 +4,25 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b26 1998 上海理科排版刷新与视觉结案
+## 2026-11-05 当前状态：phase4-b29 1998 上海文史类排版刷新与视觉结案
 
 ### 工作位置与 Git
 
 - canonical worktree 为 `仓库根`，分支 `feat/gaokao-phase0`。本轮只使用该既有 worktree；未新建 worktree、未进入 `main`、未 push。主工作树 `主工作树` 保持原样。
-- phase4-b26 的 TeX、四版回执、全库报告投影、`PROGRESS.md` 与本交接记录纳入本阶段提交；提交号以 live `git log -1 --oneline` 为准。提交后核对 `git status --short --branch` 干净。
-- 本阶段收口后，从最早过期项 `phase4-b29` 接续；新会话仍须先核对 worktree、分支、Git 状态和 live manifest，不依据历史快照推断当前状态。
+- phase4-b29 的 TeX、四版 PDF 回执、复核回执、全库报告投影、`PROGRESS.md` 与本交接记录纳入本阶段提交；提交号以 live `git log -1 --oneline` 为准，提交后核对工作区干净。
+- 本批收口后，最早剩余生成器过期项是 `phase4-b36`（1999 上海文史类）；单卷关闭不等于完成1952—2026总项目。接续时仍须核对 worktree、分支、Git 状态与 live manifest。
 
 ### Live manifest 与本卷
 
-- manifest revision `6242`：775 sources、421 papers、267 batches。paper production state：blocked 109、compiled 3、complete 309；batch 状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
-- `phase4-b26` / `gk-1998-regular-shanghai-science` 当前 batch `closed`、paper `complete`。固定来源 `src-0965cb55b028616d561b059acccc3e23188f14aab4f25bd949c2c170a29d5d66`，PDF SHA-256 `9abf8273c0bc577e5a8a6df9c72dd9ba5040ad11bb3d470918ce7bcf48168a0f`。来源副本不认证发布者、版次或卷内答案的官方身份。
-- 本批只按当前生成器重建 Q12/Q13/Q15/Q16 的选项 TeX 排版；题干、选项、答案与解析内容未改。正式 attempt `6254c954-d4a1-466c-8d30-5d3c820e766b`，输入 manifest revision 6240；试题/解析/简答/印刷版分别4/16/6/12页，共38页。PDF SHA-256 依次为 `edfa72b97cedc32cffc45cb548e8330556aeb0752aa28545cc3275688655aaac`、`f75e22b2057a5c1dcca2e6df405d93facf45fa3e99b948697bdd0c577fb746e9`、`57a5e5983e71c0d075b16fc7afd27050725b199426534b5a803584644f32e80d`、`4979e123172c0d2d5ecd8b3d9bb758c10a86d7bd4183c40070718fd0896ba85e`。四版 errors、缺字、Overfull、undefined references、problems 均为空。
-- 视觉结论：38页中28页当前 PNG 与提交前旧图字节相同；10个变化页逐页复看八项，共304项（224项继承既有逐项结论、80项重新检查），均为 pass/not_applicable。`finalize-batch`=`FINALIZED`，review `passed`、batch `closed`、paper `complete`。build/review/provenance、确定性 TeX、简答、版本壳、solution sources、`manifest.csv`（775行）及全库 `report.py check --all` 均通过。
-- 全量测试 `Ran 1779 tests in 735.593s`，13 skipped、1 failure。唯一失败为 `test_the_cached_states_match_the_recomputed_ones`：59项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`。本批已由 finalizer 重新派生，不批量改写其他卷缓存。
+- manifest revision `6245`：775 sources、421 papers、267 batches。paper production state：blocked 109、compiled 3、complete 309；batch 状态：closed 180、closed_with_blockers 86、compiled_pending_review 1。
+- `phase4-b29` / `gk-1998-regular-shanghai-arts` 当前 batch `closed`、paper `complete`。固定来源 `src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`，PDF SHA-256 `c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`，6页。来源副本不认证发布者、版次或卷内答案的官方身份。
+- 本批只按当前生成器重建 Q12/Q13/Q15/Q16 的选项 TeX 排版；题干、选项、答案与解析内容未改。正式 attempt `75a696dc-1dea-46d4-8183-e687cf1c6177`，输入 manifest revision 6243；试题/解析/简答/印刷版分别4/17/6/14页，共41页。PDF SHA-256依次为 `040e61cc02967afa14bec732a13bd35c789b52e9d84f8ec3b1cea916789d7778`、`9fbd22ff749851b36e7ebb9beae43c66797113a674766c2012f6c823342c04fa`、`c1b59ec9d2790b27ae888bdd4774f084a370e8f2f7662d983697626d74cd6286`、`2049f4bb4e66bb3e2971545b688c83cc9ed4798d2b59555d6714e756b1f0ef56`。四版 errors、缺字、Overfull、undefined references、problems 均为空。
+- 视觉结论：从提交前 HEAD `73a12c22` 用相同工具链重建基线，41页中26页 PNG 像素相同；15个变化页逐页复看八项，共328项（208项继承、120项重审），274项 pass、54项 not_applicable。`finalize-batch`=`FINALIZED`，review `passed`、batch `closed`、paper `complete`。本批 build/review/provenance、生成器、简答、版本壳、solution sources、source manifest、issues、`manifest.csv`（775行）及全库 `report.py check --all` 均通过。
+- 全量测试 `Ran 1779 tests in 686.013s`，13 skipped、1 failure。唯一失败 `test_the_cached_states_match_the_recomputed_ones` 报57项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批已由 finalizer 重新派生，不批量改写其他卷缓存。
 
 ### 下一次接续边界
 
-- `report.py check --all` 通过，六个全库报告投影与 manifest 一致。`generate_projects.py --all --check` 仍报告79个文件、41卷、32批次过期；下一项为1998上海文史类 `phase4-b29`。本批关闭不表示1952—2026总项目完成。
+- `report.py check --all` 通过，六个全库报告投影与 manifest 一致。`generate_projects.py --all --check` 仍有77个文件、40卷、31批次过期；最早下一项为1999上海文史类 `phase4-b36`。本批关闭不表示1952—2026总项目完成。
 - 不得新建 worktree；只用现有 `仓库根` / `feat/gaokao-phase0`。不要切 `main`、不要 push。提交时只 stage 当前阶段授权路径，并检查真实 staged diff、`git diff --cached --check`。
 - 全量缓存漂移是跨卷独立问题；需另立阶段按实时来源/derived state核查，不在此批扩大范围。任何来源缺失或答案存疑仍标记，不从模型记忆补造。
 

@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1998 上海文史类：确定性 TeX 选项排版刷新、四版重建与视觉回执（phase4-b29，2026-11-05；批次已关闭）
+
+- 对象：`gk-1998-regular-shanghai-arts`，22题；固定来源 `src-8c86b3e592e594953609fe09d0c182d5252c944006503dfb10e8efa1962aeca7`，上游 PDF SHA-256 `c747bff56863a349aa9432b1616630a249cd7668ead997a5bbe1fefa2616f848`，6页。来源发布者、版次和卷内答案的官方身份仍未认证。
+- `generate_projects.py --check` 显示 Q12、Q13、Q15、Q16 的 `questions.tex` / `answers.tex` 仍使用旧行内选项串；按现行生成器改为 `gkopts` 分项排版。独立只读复核对照试题、答案要点、解析正文及固定来源，确认四题题干、选项顺序、答案与解析均未变化；Q15 原页读数 `11∈B` 及原有来源限制保留。
+- 正式 build attempt `75a696dc-1dea-46d4-8183-e687cf1c6177`，输入 manifest revision `6243`，finalizer 后 revision `6245`。试题/解析/简答/印刷版分别 4/17/6/14 页，共41页；四版均 succeeded，errors、missing characters、overfull、undefined references、problems 均为空。PDF SHA-256：试题版 `040e61cc02967afa14bec732a13bd35c789b52e9d84f8ec3b1cea916789d7778`；解析版 `9fbd22ff749851b36e7ebb9beae43c66797113a674766c2012f6c823342c04fa`；简答版 `c1b59ec9d2790b27ae888bdd4774f084a370e8f2f7662d983697626d74cd6286`；印刷版 `2049f4bb4e66bb3e2971545b688c83cc9ed4798d2b59555d6714e756b1f0ef56`。
+- 从提交前 HEAD `73a12c22` 的旧 TeX 在同一工具链指纹下重建视觉基线，以150 dpi逐页像素比较：41页中26页与基线一致并继承既有逐项结论；15个变化页（试题版 p2；解析版 p2、p10–12；简答版 p2；印刷版 p2、p7–14）全部重新目视检查八项，共328项（208项继承、120项重审），274项 pass、54项 not_applicable，失败0、警告豁免0。印刷版从13页增至14页，新增末页完整承载 Q22，不存在孤立答案框。`finalize-batch` 返回 `FINALIZED`，review passed、batch closed、paper `complete`。
+- `source_manifest.py validate`、`issues.py validate`、本批 provenance/build/review receipts、确定性 TeX、简答、版本壳、solution sources、manifest CSV（775行）均通过；全库 `report.py render --all` 完成，`report.py check --all` 确认六个投影与 live manifest 一致。完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1779 tests in 686.013s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones`，报告57项跨卷 paper/batch 缓存状态漂移，首项 `gk-2016-regular-national-2-arts`；本批由 finalizer 重新派生，不批量改写其他卷缓存。
+- 本阶段只重建既有确定性排版投影并刷新四版/回执，未改动规范题面、数学结论、答案、解析、图稿或 provenance；未使用 OCR 或外部来源，token/运行成本不可见。当前 `generate_projects.py --all --check` 仍有77个文件过期，最早下一项为1999上海文科 `phase4-b36`。本批关闭不表示1952—2026总题库完成。
+
 ### 1998 上海理科：确定性 TeX 选项排版刷新、四版重建与视觉回执（phase4-b26，2026-11-05；批次已关闭）
 
 - 对象：`gk-1998-regular-shanghai-science`，22题；固定来源 `src-0965cb55b028616d561b059acccc3e23188f14aab4f25bd949c2c170a29d5d66`，上游 PDF SHA-256 `9abf8273c0bc577e5a8a6df9c72dd9ba5040ad11bb3d470918ce7bcf48168a0f`。固定扫描副本含题面及卷内答案、评分；来源发布者、版次与答案官方身份仍未认证。
