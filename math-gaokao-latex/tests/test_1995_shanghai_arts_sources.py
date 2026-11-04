@@ -56,7 +56,7 @@ class ShanghaiArts1995SourceTests(unittest.TestCase):
         self.assertEqual(
             [q["question_number"] for q in self.record["question_sources"]], list(range(1, 26))
         )
-        for track in ("A₁", "B₁", "A₂", "B₂"):
+        for track in ("$A_1$", "$B_1$", "$A_2$", "$B_2$"):
             self.assertIn(track, self.questions)
         self.assertIn("附卷内「数学试卷答案及评分标准」", self.questions)
         self.assertIn("出版者、版次及答案是否为官方版本未核实", self.questions)

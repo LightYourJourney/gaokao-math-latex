@@ -13,7 +13,9 @@
 - 当前正式重建均成功：文史 attempt `170b4b35-f823-49ed-b0a5-4257ff64d568`（输入 revision 6213，版本页数 5/20/7/14，共46）；理科 attempt `2092f5b3-6106-4b32-8aa7-0a9b4be2752e`（输入 revision 6215，5/19/7/14，共45）。各四版 PDF SHA-256、日志和工具链指纹保存在对应 `receipts/build.json`；两卷均为 errors/missing characters/undefined references/Overfull = 0，印刷版各有一条 Underfull（文史 `answers.tex` 74–75 行，理科 68–69 行，均为 Q4 题干换行）。两卷印刷版现均14页，Q25答案位于末页；此分页与历史已通过版相同。
 - 按150 dpi逐页渲染后与历史已通过 attempt `8c299506-d8c2-4d31-bbd4-583215eaae3f`（文史）及 `0498e525-6bc4-40fd-9cd0-ae624f9e7e8d`（理科）逐页比对：91页中75页 PNG 字节相同并逐项继承旧回执；16个变化页（每卷试题版1页、解析版3页、简答版1页、印刷版3页）已整页目视通过，Q2/Q4 单行选项无重叠或换行；Q4 的 Underfull 位于印刷版第5页，完整复核后以页级理由记录豁免。两个批次的 `finalize-batch` 均返回 `FINALIZED`；文史 46 页/368项检查，理科45页/360项检查，均 `passed`，各有1条页级 Underfull 豁免。manifest revision 6218，两个批次 `closed`、两卷 `complete`；`review_receipts check-batch`、`validate-receipts --require-final --require-current-inputs`（每批1 succeeded，0 pending/stale/invalid）及 provenance/source/issues 校验通过。
 - 旧 review receipt 不可直接替代当前 attempt 的新 receipt。来源身份仍限固定副本，出版者/版次及答案官方性未核；`official_answer=null`。理科 Q6 图示无法独立排除 B、Q21 B₂ 坐标镜像依赖原图、Q24 卷内答案漏掉 $m=n$ 的区别均保持原记录，不因排版改动裁定。
-- `manifest.csv` 已检查为当前且775行；`report.py check --all` 确认全库报告投影与当前 manifest 一致。下一步运行完整适用测试并记录实际结果后提交审查阶段。本记录不表示其他试卷或长期题库完成。
+- `manifest.csv` 已检查为当前且775行；`report.py check --all` 确认全库报告投影与当前 manifest 一致。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 实跑结果为 `Ran 1779 tests in 628.212s`、`FAILED (failures=3, skipped=13)`。其中两项是本卷测试与已提交稿件不同步：来源校对记录的题面/解析 SHA 仍指向修改前文件，结构测试仍期待缺字修复前的 Unicode 下标。已同步 `来源校对.json` 的嵌套及摘要 SHA，并将结构断言改为当前 `$A_1$`、`$B_1$`、`$A_2$`、`$B_2$` 写法；文史来源专项 4/4 通过。完整测试在这两处修复后未重跑。
+- 该次全量测试第三项失败为 `test_the_cached_states_match_the_recomputed_ones`：72 卷缓存 `production_state` 与现场推导不一致，首项为 `gk-2012-regular-national-outline-arts`（缓存 `complete`、现场 `answers_verified`）；本轮不批量刷新无关卷缓存。修复后文史/理科 build receipts 均 `OK：1 卷`、review receipts 均 `FINALIZED`、provenance 各 `OK：1 卷`，source manifest 校验通过；本记录不表示其他试卷或长期题库完成。
 
 ### 1994 上海试点教材文理卷：Q25 断行修正、四版重建与批次封账（phase1-b36，2026-11-04）
 
