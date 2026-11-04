@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1994 上海试点教材文理卷：Q25 断行修正、四版重建与批次封账（phase1-b36，2026-11-04）
+
+- 完成对象：`gk-1994-shanghai-trial-arts` 与 `gk-1994-shanghai-trial-science`，各 26 题；固定来源分别为 `src-0f9a8b89c9bf7ed22dc5ae64998e78b78c7441e51015ed7aa91960ff27940666`（原 PDF SHA-256 `86d8bc7b9f5eb467d29f09bf1963eba0075fccc0ba4359e714549fed6f69c488`）和 `src-c88aa85f35f28d424cfa4bcd50562c1a0c04e5bffe7638bf04c2b4ab95bd3e01`（原 PDF SHA-256 `b7582351e09479e49306f4b59ee118955ad716fdde093f49f1f9ac3de8ee6234`）。两卷身份均以固定副本为界；发布者、出版者、版次与卷内答案官方性未核，`official_answer=null`。
+- 排版修正：理科 Q25 曾在顶点坐标 `Q(1−2t,2+t)` 后拆出短尾行；撤回无效的 `\allowbreak`，将完整 Q 坐标放入 `\mbox{}`，在坐标组之间保留换行点。去除版式包装后数学文字不变。同步更新题面 Markdown、确定性 `questions.tex` / `answers.tex`、含解析稿及 Q25 provenance 输入哈希。文科 Q26 印刷版第（3）问和答案框移至同页，避免前页仅放答案（1）、后页孤立答案（2）（3）。相关阶段提交：`8dd8106`、`04e8f4f`、`36ce19e`。
+- 最终构建输入 manifest revision `6204`；文科 attempt `462823e6-1ae2-497f-96ea-8a514d7e0d3e`，理科 attempt `b74bf908-1cf6-463a-b035-0285b7750a9f`。文科试题/解析/简答/印刷版为 5/21/7/17 页，总 50 页；PDF SHA-256 依次为 `f6cfb82d7e92307c0f0a9c208edec89aa4dc27c4a7241e67fb67a0907da19115`、`9f204c95d5fe8c12769aaf8de0b802c6d4e6e5f66958c7d4e88c0f39d87c2499`、`122e9581c296b1ff40fdd1f8e56fde30aeeefddba499373936a3af7d6d6858c0`、`5c9908cca3d15f66a164a5d0f9ee310f786608d88693de666607c4019a437a5d`。理科四版为 5/20/7/16 页，总 48 页；PDF SHA-256 依次为 `5ae0797d4a6f6e44a7cb89ce40f3d643c79aa007abae98d1a38ced38b1a1c578`、`e698df2664a04ee5d57569ac99ffc674e8be2cc17f5eb06e790b83011fb0e160`、`c673daf31bc0c68aa9997c07b51ef0ce5172bc298c8b1b3dcb056ddb45ef728a`、`54d258aeb2ce44f6eaf5b8ffc2566c778eb54f22be1e4f705b836a18f922083b`。八版 errors、missing characters、Overfull、undefined references 均为 0。
+- 视觉回执：共 98 页、784 项八类检查全部通过。与此前人工复核栅格逐像素相同的 90 页继承既有结论；8 页变化页（文科印刷版 16–17 页；理科试题版 5 页、解析版 5/19 页、简答版 5 页、印刷版 4/15 页）重新渲染并逐页目视通过。警告豁免为 0。`finalize-batch` 返回 `FINALIZED`，batch `closed`、两卷 `complete`，当前 manifest revision `6206`；批次报告为 `reports/phase1-b36.md`。
+- 本批 provenance、source manifest、issues、solution sources（两卷各 26 题）、项目 TeX、简答稿、四版入口、最终 build/review 回执、775 行 CSV、全量报告投影检查均通过；`validate-receipts --require-final --require-current-inputs` 返回 `OK`（2 succeeded、0 pending/stale/invalid）。完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1779 tests in 585.378s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones`，发现 76 卷缓存 `production_state` 与现场 provenance 推导不一致，首例 `gk-2012-regular-national-outline-arts`；这是全库状态漂移，本批验证未见关联，未批量改写其他卷。
+- 本阶段只做既有转录的排版修正、正式构建与视觉审查；未调用 OCR 或外部答案，模型 token 与费用不可见，记未知。
+- 最新全库 `generate_projects.py --all --check` 仍有 101 个生成 TeX 文件不一致，分布于 52 卷；本轮只处理 `phase1-b36`，未执行 `--all --write`。下一轮按年份最早的失效项是 1995 上海文史类 `phase4-b35` 与理工农医类 `phase4-b28`，两批 manifest 当前均为 `closed`；开始前仍须核对各自 source、build/review 回执与生成输入，不据此重开或覆盖整批。此处 `complete` 仅指这两份固定来源副本的项目交付，不表示官方来源认证或 1952–2026 长期题库完成。
+
 ### 1994 上海卷：项目 TeX 刷新、正式构建与视觉审查结案（2026-11-04）
 
 - `phase1-b24` / `gk-1994-shanghai`，固定 source `src-175369213dde711e3bba990974dca1216e7e4ef6ed65cbc9e197dc39d81eba65`，PDF SHA-256 `2321a1438961a48e8951b83cdb4b71e4afa127e1981420a6ba7d1a9e1eddc22d`。生成器刷新只将题面/答案 TeX 中数学模式的 5 处 `\text{。}` 包装改为 `\mbox{。}`；数学内容与规范 Markdown 未改。提交 `a869a2fc`。

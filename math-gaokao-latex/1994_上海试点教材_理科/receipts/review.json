@@ -1,7 +1,7 @@
 {
   "batch_id": "phase1-b36",
-  "build_attempt_id": "b9e3cc6f-f56b-45ca-bf12-c2325dcda338",
-  "dependency_tree_sha256": "885d28505d0b1e861fef135ef4672c53b2bccb98a471ea160e581a376bc17ffb",
+  "build_attempt_id": "b74bf908-1cf6-463a-b035-0285b7750a9f",
+  "dependency_tree_sha256": "f7d7471add66b9364574cc844c463ef4b577eced9cf0ea772e29a7560fd0f717",
   "editions": [
     {
       "candidate_override": null,
@@ -9,7 +9,7 @@
         3
       ],
       "edition": "试题版",
-      "page_count": 4,
+      "page_count": 5,
       "pages": [
         {
           "checks": [
@@ -194,18 +194,64 @@
           ],
           "page": 4,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "Q25 的 Q(1−2t,2+t) 坐标完整，续行不拆分坐标项；版面无溢出。",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 5,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "a6a44ccd35026eacc7d98533758a65cd7b535171d3499fd4e10959bdc6f046f7",
+      "pdf_sha256": "5ae0797d4a6f6e44a7cb89ce40f3d643c79aa007abae98d1a38ced38b1a1c578",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        19
+        20
       ],
       "edition": "解析版",
-      "page_count": 19,
+      "page_count": 20,
       "pages": [
         {
           "checks": [
@@ -420,7 +466,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "Q25 的 Q 坐标项保持完整，题面与后续 R 坐标可辨；本页留白与末页内容量相称。",
               "result": "pass"
             },
             {
@@ -855,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -1064,7 +1110,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "Q(1−2t,2+t) 坐标保持为整体，下一行从 R 坐标继续；公式、证明与答案框均未截断，页尾正常。",
               "result": "pass"
             },
             {
@@ -1080,18 +1126,64 @@
           ],
           "page": 19,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 20,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "16776e5630e2caccb91e35ae281bfa6ecd8a60b6ef6be55f6f1d54e44107c907",
+      "pdf_sha256": "e698df2664a04ee5d57569ac99ffc674e8be2cc17f5eb06e790b83011fb0e160",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        3
+        1
       ],
       "edition": "简答版",
-      "page_count": 6,
+      "page_count": 7,
       "pages": [
         {
           "checks": [
@@ -1306,7 +1398,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "Q25 坐标项显示完整且没有孤立尾字；末页留白清楚。",
               "result": "pass"
             },
             {
@@ -1368,18 +1460,64 @@
           ],
           "page": 6,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 7,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "adf5221624688bc3b8dc96eef2920117c28626e773a56329a9c9c458e02cf6ab",
+      "pdf_sha256": "c673daf31bc0c68aa9997c07b51ef0ce5172bc298c8b1b3dcb056ddb45ef728a",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        15
+        16
       ],
       "edition": "印刷版",
-      "page_count": 15,
+      "page_count": 16,
       "pages": [
         {
           "checks": [
@@ -1548,7 +1686,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "Q25 的 Q 坐标与后续顶点顺序完整可读，题干和小问没有溢出。",
               "result": "pass"
             },
             {
@@ -1891,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "新 attempt 栅格与旧页不同，已重新目视检查通过。",
+              "note": "",
               "result": "pass"
             }
           ],
@@ -2054,7 +2192,7 @@
             },
             {
               "check": "pagination_whitespace",
-              "note": "",
+              "note": "Q25 题干中的参数范围自然续行，解析与两项答案框完整，无重叠或裁切。",
               "result": "pass"
             },
             {
@@ -2070,17 +2208,63 @@
           ],
           "page": 15,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "",
+              "result": "pass"
+            }
+          ],
+          "page": 16,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "1106580d120db63328f3903e70bd94b90ff1943039b0533b148344b5fa4ad4d5",
+      "pdf_sha256": "54d258aeb2ce44f6eaf5b8ffc2566c778eb54f22be1e4f705b836a18f922083b",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "3741f12e0434167f250a54b2b292fda5c826765db6a8b1aefaf17cd5f7ba0fe7",
+  "generation_input_tree_sha256": "7ba04b0ccf5b65bddba03124ceadf654a26795ccd31fb4357d472fde031e4385",
   "input_projection": "927be67516a892f3faeb614bf203ad9a910013f3b56970bdad65fe9289d359f0",
   "paper_id": "gk-1994-shanghai-trial-science",
   "project_dir": "1994_上海试点教材_理科",
-  "reviewed_at": "2026-10-27T00:47:43+08:00",
+  "reviewed_at": "2026-11-04T18:31:29+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2141,17 +2325,5 @@
       }
     ]
   },
-  "warning_exemptions": [
-    {
-      "box": "hbox",
-      "edition": "解析版",
-      "kind": "Underfull",
-      "lines": "475--476",
-      "pdf_page": 19,
-      "reason": "第19页放大复核：Q25题干段落的行宽留白正常，文字清晰完整，无裁切、重叠或拥挤；此 Underfull 警告不影响阅读。",
-      "source_file": "math-gaokao-latex/1994_上海试点教材_理科/answers.tex",
-      "visual_result": "pass",
-      "width_pt": null
-    }
-  ]
+  "warning_exemptions": []
 }
