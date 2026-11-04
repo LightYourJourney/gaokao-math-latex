@@ -4,7 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b14 2006 上海文科（批次已关闭）
+## 2026-11-05 当前状态：phase1-b42 2006 上海理科（批次已关闭）
+
+### 工作位置与 Git
+
+- 只使用现有规范 worktree `仓库根` / `feat/gaokao-phase0`；不新建 worktree、不切 `main`、不 push。TeX/构建阶段提交 `7a728be1` 已在分支；本次视觉结案回执、全量报告投影、`PROGRESS.md` 与本交接为结案阶段提交范围。
+- `主工作树` 是原有 `main` 工作树，其中用户的 Lab3 文件仍有未提交改动；本任务未触碰。接续时先读 live Git 与 manifest，不凭历史快照切换目录。
+
+### Live manifest、来源与构建
+
+- manifest revision `6257`；`phase1-b42`=`closed`，`gk-2006-regular-shanghai-science`=`complete`，无 issue。固定题面 source `src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6` / SHA-256 `0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5`，2页题面、印刷页码328–329。发布者、版次、扫描链及官方身份未核；无答案页，答案与解析为独立编者推导、非官方。
+- 本批只把 Q13/Q15/Q16 的项目 TeX 选项投影同步到现行生成器；事实层 Markdown、图稿与 provenance 未改。正式 build attempt `e5c24644-d7fc-4170-8aea-bb54fc0139bb`，输入 revision 6255、finalizer revision 6257。试题/解析/简答/印刷版4/18/6/14页，共42页；四版均 succeeded，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `757e4288a3b876982ebd88b692d735d09c6d3653df3c20c4a8b8a95a93787bbe`；解析 `7e234170d3dfcf6f1c69b2b8736906be87358b7395329ec3d0f201a82a814d98`；简答 `352db78251b0987eee33fde11b5a92234fa840007787325336efe4f9a2d08546`；印刷 `38230c382ac802d304544fcc7d0067dd40b83b8db033f798662085a5013b04e9`。
+- 旧 build attempt `70f8a767-2970-451f-b10b-d1dfd9feb86d` 的旧 review SHA-256 为 `884318c180706ab9ffd8f0bd0d817f12c26bc12a39b8290e23b6506ebef46658`。旧 PDF/PNG 没有归档；旧版 TeX/依赖取自提交 `7536c577`，按相同工具链重建作基线，历史 PDF 字节哈希不一致，不能写成旧 PDF 原件比较。150 dpi 下28/42页栅格与重建基线相同并继承旧回执 pass；14个变化页（试题p2；解析p2、p11–18；简答p2；印刷p2、p9–10）全尺寸检查。336项八类检查：332 pass、4 not_applicable、0 fail；警告豁免0。视觉审查报告 `reports/phase1-b42.md` 已结案。
+
+### 校验、全库例外与接续点
+
+- 本批 build currentness、review `check-batch`、provenance、生成器、简答、版本壳、22题 solution sources、manifest、issues 均通过；`manifest.csv` 775行当前。全量报告 `render --all` 与 `check --all` 均通过，报告保留全库未完成状态。
+- 全量测试 `python3 -B -m unittest discover -s tests -q` 最终输出 `Ran 1780 tests in 582.123s`、13 skipped、1 failure。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，49项跨卷缓存状态漂移，首项 `gk-2016-regular-national-2-arts`（缓存 `complete` / 派生 `answers_verified`）；本批单独 provenance 检查通过，不批量刷新其他卷缓存。
+- `generate_projects.py --all --check` 仍有67个 TeX 文件、35卷待同步；manifest 顺序中下一批有过期投影的是 `phase1-b45`（2006安徽文科，批次 `closed_with_blockers`）。后续应先核对该批 live 状态并按源题/答案阻塞保留不确定性，只处理实际过期目标，不运行 `--all --write`。
+- 当前批结案提交后按“干完一批先停”停止。本批关闭不代表1952—2026总项目完成；下一会话先核对 branch、status、manifest 和此交接。
+
+## 2026-11-05 历史快照：phase4-b14 2006 上海文科（批次已关闭）
 
 ### 工作位置与 Git
 

@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 上海理科：生成器同步、四版重建与视觉结案（phase1-b42，2026-11-05；批次关闭）
+
+- 对象：`gk-2006-regular-shanghai-science`，22题。固定题面 PDF source `src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6`，SHA-256 `0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5`，2页题面、印刷页码328–329，无答案页。发布者、版次、扫描链及官方身份未核；答案和解析为独立编者推导，非官方。
+- 仅按现行确定性生成器刷新项目 `questions.tex` / `answers.tex` 中 Q13、Q15、Q16 的结构化选项投影；题干、选项文本与顺序未改，规范题面、答案要点、解析正文、图稿、provenance 和 issues 均未改。构建阶段提交 `7a728be1`。
+- 正式构建 attempt `e5c24644-d7fc-4170-8aea-bb54fc0139bb`，输入 manifest revision 6255，批次 finalizer 后 revision 6257。试题/解析/简答/印刷版分别4/18/6/14页，共42页，均 succeeded；errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题版 `757e4288a3b876982ebd88b692d735d09c6d3653df3c20c4a8b8a95a93787bbe`；解析版 `7e234170d3dfcf6f1c69b2b8736906be87358b7395329ec3d0f201a82a814d98`；简答版 `352db78251b0987eee33fde11b5a92234fa840007787325336efe4f9a2d08546`；印刷版 `38230c382ac802d304544fcc7d0067dd40b83b8db033f798662085a5013b04e9`。
+- 与旧回执绑定的 build attempt `70f8a767-2970-451f-b10b-d1dfd9feb86d`、review SHA-256 `884318c180706ab9ffd8f0bd0d817f12c26bc12a39b8290e23b6506ebef46658` 对照。旧 PDF/PNG 未归档；基线由提交 `7536c577` 的旧 TeX/依赖按相同工具链重建，不能声称与历史 PDF 字节相同。Poppler 26.10.0、150 dpi 下42页中28页与重建基线像素相同并沿用旧回执的已通过检查；14个变化页（试题版p2；解析版p2、p11–18；简答版p2；印刷版p2、p9–10）均重新全尺寸目检。336项八类检查共332 pass、4 not_applicable（无图页）、0 fail；警告豁免0。`finalize-batch`=`FINALIZED`，review passed，批次 closed、卷 complete。
+- 本批 build currentness（1 succeeded、0 pending/stale/invalid）、provenance、生成器、简答、版本壳、22题 solution sources、manifest、issues、review checks 均通过；manifest CSV 775行当前。`report.py render --all` 写入并回读六个报告目标，`report.py check --all` 确认与全量 manifest 一致。
+- 全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 582.123s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，发现49项跨卷缓存状态与现场推导不同，首项为 `gk-2016-regular-national-2-arts`（缓存 `complete`、现场 `answers_verified`）。本批 provenance 通过；没有批量刷新其他卷状态。
+- 结案后 `generate_projects.py --all --check` 仍有67个生成 TeX 文件、涉及35卷；按 manifest 顺序下一批有过期生成文件的是 `phase1-b45`（2006安徽文科，当前 `closed_with_blockers`），其题面/答案阻塞继续保留。当前批关闭不代表1952—2026总题库完成。成本为本地 XeLaTeX/Poppler；模型 token 与费用不可见，记未知。
+
 ### 2006 上海文科：生成器同步、四版构建与视觉结案（phase4-b14，2026-11-05；批次关闭）
 
 - 对象：`gk-2006-regular-shanghai-arts`，22题；固定来源 `src-99308f47f68d68564b8892365d9d5f2f0634fe95a4a3de74fa5be5fb5fcf9d23`，PDF SHA-256 `1881e13e917febc73882254c59200be192286802042d650c82956f8901c2d174`。来源与考试身份按既有核查登记；答案要点已逐题对照考试院参考答案，但原出版版次、出版者及本地副本数字化来源链仍未知，不能称该 PDF 为官方原件。
