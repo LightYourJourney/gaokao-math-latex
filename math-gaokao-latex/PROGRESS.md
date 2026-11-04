@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 1995 上海文理卷：生成器刷新与正式构建重建（phase4-b35 / phase4-b28，2026-11-04；视觉复核待完成）
+
+- `generate_projects.py` 依当前单空格括号选项规则刷新两卷 `questions.tex` / `answers.tex`；差异仅为 Q2–Q4 选项块改用 `gkopts`，规范题面、答案、解析及 provenance 未改。阶段提交：文史 `8f6c8ce7`，理科 `77468ca8`。项目目录另有未被 manifest 生成器读取的旧草稿：理科 Q9 仍误写 `(2x+1)/(x+3)>1`、答案 `x>2`；规范题面/答案/解析与生成结果均为 `(2x-1)/(x+3)>1`、`x<-3` 或 `x>4`。本阶段未改旧草稿。
+- 文史正式 build attempt `a4196006-789b-4ec0-8407-5f079404cc88`，输入 manifest revision 6207，页数 5/20/7/15（共47）。PDF SHA-256：试题 `c34eb511244dc7d7cee91ace93787d0e14f34871fb54e0e1b210d98b7898168a`；解析 `07bb5fbca0d4c5b09eb38b687448881c0ab22d9162ad57e1a66114757e58a1d2`；简答 `a198b1424aa076be8a3416df02eb3b8c31cd649fdfe517bc96e00626ff439a0e`；印刷 `248287fce1ff660bcf2c1d4da1d37eda38e43d0680238ff15188884fba6b946c`。编译错误与未定义引用均0；缺字日志4/8/4/8条，印刷版有1条 Underfull，均待逐页检查。
+- 理科正式 build attempt `33b51df5-e6d2-4964-b999-a9a34c95c1d2`，输入 manifest revision 6209，页数 5/19/7/15（共46）。PDF SHA-256：试题 `b678a2cafaf694db9df90ea601e907338678866b30de84774e49af3156e26aed`；解析 `f2eea5bea72771d95cd907ca326d597b0bd6230a5810a9b0874d4f542da53749`；简答 `cdf6aba1e0da441dfd19c9f4db642a3f985baf4b55a285cabeee4092402b02aa`；印刷 `7cf370de36d21af5fe5c03edfb587de0cabe9be5897f5ae78f2a2527c5dfcc7e`。编译错误、缺字、未定义引用均0；印刷版有1条 Underfull，待逐页检查。
+- 两批 `validate-receipts --require-final --require-current-inputs` 均为 `PENDING_REVIEW`（stale/invalid/failed均0）；`prepare-batch` 各生成4个工作项。新输出中印刷版均由旧记录的14页增至15页，Q25最终答案框独占第15页，视觉上不合格，尚未完成回执或 `finalize-batch`。当前等待版式选择；倾向恢复 Q2/Q4 原单行选项间距以消除累计增高，并用正式重建确认，不能手改生成的 TeX。
+- 旧 review receipt 仍绑定旧 attempt，不能直接用于新 build；旧 PDF 已按150 dpi留在临时目录仅作对照，尚未继承任何视觉结论。来源身份仍只限固定副本，出版者/版次及答案官方性未核；`official_answer=null`。理科 Q6图示无法独立排除 B、Q21 B₂坐标镜像依赖原图、Q24卷内答案漏掉 $m=n$ 的区别均保留原有记录，不据本次排版改动裁定。
+- 后续：按用户选择决定是否调整规范题面中的排版分隔符；如变更，重生成并重建两卷。完成两批全部新页面的视觉审查（包含 Q25分页及缺字/Underfull 判定）、回执封账、report/CSV currentness 和全量测试后再提交验收阶段。本记录不表示两卷重新验收或长期题库完成。
+
 ### 1994 上海试点教材文理卷：Q25 断行修正、四版重建与批次封账（phase1-b36，2026-11-04）
 
 - 完成对象：`gk-1994-shanghai-trial-arts` 与 `gk-1994-shanghai-trial-science`，各 26 题；固定来源分别为 `src-0f9a8b89c9bf7ed22dc5ae64998e78b78c7441e51015ed7aa91960ff27940666`（原 PDF SHA-256 `86d8bc7b9f5eb467d29f09bf1963eba0075fccc0ba4359e714549fed6f69c488`）和 `src-c88aa85f35f28d424cfa4bcd50562c1a0c04e5bffe7638bf04c2b4ab95bd3e01`（原 PDF SHA-256 `b7582351e09479e49306f4b59ee118955ad716fdde093f49f1f9ac3de8ee6234`）。两卷身份均以固定副本为界；发布者、出版者、版次与卷内答案官方性未核，`official_answer=null`。
