@@ -4,11 +4,11 @@
 
 > **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：phase4-b49 收口后完成 2003 北京同期来源核查
+## 2026-11-04 当前状态：2003 北京来源核查后完成 2002 苏豫粤桂来源接收
 
 ### 工作位置与 Git
 
-- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。更新本交接前 HEAD 为 `dff40f2f`（`[已核] docs(gaokao): record 2003 Beijing source corroboration`），当时工作树干净、领先 origin 8 个提交；本交接更新本身会另作一个本地提交。新会话以实时 Git 输出为准；没有切换到 `main`，没有 push。
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。开始本阶段前 HEAD 为 `a9e8740`（交接状态更新），当时工作树干净、领先 origin 9 个提交；本阶段的报告、进度和交接改动将作为一笔本地提交。新会话以实时 Git 输出为准；没有切换到 `main`，没有 push。
 - 本轮先完成 `phase4-b49`（2026 北京回忆版候选卷）四版构建/视觉收口，随后提交 2003 北京来源交叉核查记录。每项提交独立；不要重做已闭合的构建或视觉审查。
 
 ### Live manifest 概况
@@ -24,10 +24,16 @@
 - 先前的 `phase4-b47`（2003 上海文理普通卷）已经完成答案/解析、盲核、图稿、provenance、四版构建及92页视觉复核；批次 `closed_with_blockers`，两卷 Q14 的 `ISSUE-1388`/`1389` 仍为 U/PENDING。原交接快照关于“下一步才开始答案”的文字已过时，细节以 [`PROGRESS.md`](../../exams/math-gaokao-latex/PROGRESS.md) 开头阶段记录及 live manifest 为准。
 - 本轮确定性校验：`issues.py validate`、source manifest validate、`manifest_csv.py --check`（775行）、`report.py check --all` 与 `git diff --cached --check` 均通过。只更新来源证据，没有改题面/答案/版面或 build 输入；本轮未重建 PDF、未运行测试套件。
 
+### 2002 苏豫粤桂卷来源接收
+
+- 已目视核对固定 source `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`：SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`、Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`、2 页 A3、印刷页 113–114，题签“2002 普通高等学校招生考试（苏豫粤桂）”。PDF 可见 Q1–Q22 及 Q10/Q19/Q21 图；没有答案或评分页。
+- 题签未标文理轨道；来源发布身份/复制链未核。本次仅记录单一固定文件，未拆为四套，也未注册 paper/batch；完整页图、范围和边界见[来源接收报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-source-intake.md)。
+- 下一阶段先比较此卷与现有 2002 全国新/旧课程项目是否重复，并确定 `track`/命名；确认后再转录 Q1–Q22。不得凭文件名推断课程版或按地区复制题卷。
+
 ### 下一工作候选
 
 - 按年份顺序复核未绑定来源。1998 全国文科已有25题转录、独立数学复核及固定 PDF 原页复看，但来源仍 `ready/unbound`，出版身份未核，Q12/Q13/Q25 原件冲突仍在；本轮对教育部/学信网域名和题名的定向检索未定位到可直接核验的官方原卷或勘误，相关搜索命中仍是二手文档页。检索未命中不证明官方材料不存在；不要重做转录或把二手版本当裁定。
-- 当前较早的下一候选是 `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`（`普通高考/2002/2002广东,河南,江苏,广西.pdf`，2页，ready/unbound）。开工先固定并目视核对 PDF，确认各地区/课程版本及其与现有 2002 全国卷项目的关系；只有边界明确后再选 paper/batch，不按文件名拆分或重复登记。
+- 当前下一步是比较 `2002 苏豫粤桂` 固定题面与已登记的全国旧/新课程卷，判断内容重合、共同卷与课程轨道；来源接收已完成但纸卷身份/`track` 尚未定。`1998 全国文科`的来源核查仍因异版和原件内冲突待权威证据，不重复旧转录。
 - 不要因大量未绑定来源、blocked papers 或 open issues 而批量清状态。每阶段核对固定来源、现有草稿、manifest、PROGRESS 与历史，保留来源不确定性，并在每个可审查阶段单独提交。
 
 ## 历史快照：2003 上海普通卷文理科题面转录与独立复核完成
