@@ -14496,3 +14496,9 @@
 - 规范题面的三个图位改为独立 Markdown 图链，重新生成 `_含解析.md`；manifest `figure_files` 登记三图且每图 `expected_occurrences=2`，revision `6160→6161`。`generate_projects.py` 刷新 `questions.tex`、`answers.tex` 与共享 `index.json`，两份 TeX 均各引用三图。
 - `ISSUE-1411`–`ISSUE-1413` 的缺图问题已解决并保留历史条目；Q10/Q13/Q15 来源异文 `ISSUE-1408`–`ISSUE-1410` 与 Q18(2) 条件③歧义 `ISSUE-1414` 仍 open。paper 仍 `blocked`、batch 仍 `planned`，官方身份与答案未核。
 - source manifest、issues、21题 solution sources、项目生成器检查和 775 行 manifest CSV 校验通过；未跑测试套件或 OCR，未生成正式卷 PDF 或视觉回执。下一步导入逐题三角色 provenance，再继续生成/检查四版与正式构建。
+
+### 2026 北京高考数学回忆版候选卷：逐题三角色 provenance 导入（2026-11-04）
+
+- 为 Q1–Q21 导入固定候选 PDF 页码绑定、题面复核、两路盲解汇总和主会话独立复算/交叉核对记录。题面 `passed` 只确认忠实于固定候选字节；非官方独立推导记 D，Q18(2) 因条件③不能唯一确定而记 U。角色、页码、逐题证据及限制详见[provenance 阶段报告](reports/2026-beijing-recall-provenance.md)。
+- Q10 与 Q13 的固定候选条件推导分别给出候选版选项 B / `[5/16,73/80]` 和闭区间 `[700,4900]`；第三方未认证副本分别有选项映射、严格端点异文，最终均保留 U/PENDING 并登记 `ISSUE-1415`、`ISSUE-1416`。Q10/Q13/Q15 来源异文 `ISSUE-1408`–`ISSUE-1410`、Q18 条件歧义 `ISSUE-1414` 仍 open；缺图 `ISSUE-1411`–`ISSUE-1413` 已解决。官方身份与官方答案仍未核。
+- provenance SHA-256 `a9f4bc1505ec5756de513695596653625deb821236a07df9ed4803035a810de5`；manifest revision `6161→6162`，batch `planned→provenance_verified`，paper 保持 `blocked` / `blocked_from=planned`。provenance、manifest、issues、21题 solution sources、项目生成器及 775 行 CSV 的确定性检查通过。未跑测试套件或 OCR，未生成简答、四版入口、正式 PDF 或 build/review receipt；下一步按规范生成并核对简答和四版入口。

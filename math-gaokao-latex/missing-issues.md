@@ -23758,3 +23758,37 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1415
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定回忆版候选 PDF 第2页的选项 B 对应独立推导范围 [5/16,73/80]；来源冲突报告记录第三方未认证副本把同一区间列为选项 A，且其余选项也不同。来源链与正式卷身份均未核，最终选择字母保留 U/PENDING。",
+  "fingerprint": "295222f754496d5493eca85a5d2f5cf8542a0f519d40b6784b3f3ee8d31278c1",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q10",
+  "resume_action": "取得可追溯至考试机构的同版正式卷或勘误，裁定 Q10 的选项字母；在此之前保留条件性数值范围和 U/PENDING，不按副本身份择版。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1416
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定回忆版候选 PDF 第2页给出 lg2≤y≤3lg2，对应 f∈[700,4900]；第三方未认证副本将上界写为严格小于，对应 f∈[700,4900)。来源链与正式卷身份均未核，最终端点保留 U/PENDING。",
+  "fingerprint": "abdf24d689e0fafddc888154084213bbc34ca49a616e5761b671d79c75871589",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2026-regular-beijing-recall",
+  "question_id": "gk-2026-regular-beijing-recall-q13",
+  "resume_action": "取得可追溯至考试机构的同版正式卷或勘误，裁定 Q13 上界是否含等号；在此之前并列保留两种条件结果并维持 U/PENDING。",
+  "source_id": "src-96ac0e772a0483bbf7cf803b94b1a1d8d8e1d2ae16b936b196e6abc05d1251ee",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
