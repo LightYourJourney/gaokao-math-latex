@@ -4,7 +4,26 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
+## 2026-11-05 当前状态：phase4-b20 2000 春季京皖文理选项刷新（已构建，待视觉复核）
+
+### 工作位置与 Git
+
+- 只在现有 canonical worktree `仓库根`、分支 `feat/gaokao-phase0` 工作；未新建 worktree、未进入 `main`、未 push。
+- 当前阶段已按现行 `generate_projects.py` 更新 phase4-b20 两卷的 `questions.tex` / `answers.tex`，并完成正式构建与全库报告投影刷新。提交包含四份 TeX、两卷 build receipt、manifest 和全量统计，以及 `PROGRESS.md` / 本交接记录。review/finalize 尚待完成，不能沿用旧 review 作为新 PDF 结论。
+
+### Live manifest 与来源边界
+
+- manifest revision `6250`；`phase4-b20` 当前 `compiled_pending_review`，两卷生产状态 `compiled`。来源均为各2页的固定题面副本，无答案页，发布者身份未认证；`official_answer=null`，答案与解析是D级编者推导、非官方。
+- 文科 source SHA-256 `b9552b8354735296f6ea1ed051085e094e4af0c14ff97ada2dbd4e579b14287f`；理科 `37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce`。源文疑点继续照录：文科 Q18③「都有垂直」、Q24 两处缺标点；理科 Q18③同词、Q23 两处缺标点。独立数学与来源复核沿用此前阶段证据，不重复认定官方答案。
+- 选择题 TeX 由行内选项改为 `gkopts` 结构，两位只读复核确认题面、选项、顺序及数学表达未变；排版结构和分页改变。新 attempt：文科 `01008f5c-ceb0-453f-86d1-4febd6e4e543`，理科 `3327a32f-9123-4130-8d58-ef9451985bf3`，输入 revision 6249，当前6250。页数为文科5/19/7/16、理科5/24/7/19，共102页；八版日志无错误、缺字、overfull、未定义引用。旧四版 PDF SHA 已对照旧 build receipt，并存于忽略目录 `.work/phase4-b20/baseline/`。
+- `generate_projects --check`、简答、版本壳、solution sources 检查通过；`report.py render --all` 后 `check --all` 已通过。回执与 provenance 当前门禁应在 review/finalize 后重跑。
+
+### 下一步
+
+- 用相同 Poppler 工具链把旧 baseline 与新 PDF 逐页渲染、比像素；只对完全相同页继承旧八项检查，变化页全部重新目检并更新页级 review。之后 finalize phase4-b20、复跑 currentness/provenance/CSV/report/full tests，更新本节为最终结果并单独提交视觉与结案阶段。
+- 在上述 canonical worktree 继续，不新建 worktree、不切 `main`、不 push。全项目目标仍覆盖1952—2026，本批不是总库完成。
+
+## 2026-11-05 历史快照：phase4-b36 1999 上海文史类 TeX 刷新与视觉结案（带阻塞）
 
 ### 工作位置与 Git
 

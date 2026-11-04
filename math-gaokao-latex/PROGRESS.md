@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2000 春季京皖文理：按现行生成器刷新选项排版并重建四版（phase4-b20，2026-11-05；待视觉复核）
+
+- 对象：`gk-2000-spring-jingwan-arts` 与 `gk-2000-spring-jingwan-science`，各24题。固定上游 PDF 分别为 `src-6d9f6ee269b4dd80d69001f2f4399956b5d037bfbf1d383a78bfdb281c440e6b` / SHA-256 `b9552b8354735296f6ea1ed051085e094e4af0c14ff97ada2dbd4e579b14287f`，以及 `src-a0269cc0034b8f71793418f0abb911e424058f04f18389e6ff78004045ca1eba` / SHA-256 `37f07244497aa0a21be12d8a31eac78b61490f835f088719a5990463585a35ce`；均为2页题面副本、不含答案页，发布者未认证。工作区可读固定 PDF 的 SHA 与登记值一致；登记 Git blob OID 可由 `git hash-object` 重算，但对象当前不在该工作树的 Git 对象库。`official_answer=null`；答案/解析为D级编者推导、非官方。
+- 原项目内容和来源复核继续沿用2026-10-23已提交的独立转录、48题数学复核、答案图稿与四版验收。生成器检查发现两卷各自 `questions.tex` / `answers.tex` 仍是行内选择项，按当前生成器改为 `gkopts` 结构。两名只读复核分别比对权威题面、答案要点、解析正文，未发现选项文字、顺序或数学内容变化；此结构会改变排版与分页，旧 PDF/视觉回执不能用于新布局结案。没有修改事实层 Markdown、答案、解析、图稿或 provenance。旧 build/review 和四版 PDF 已按回执 SHA 校验并复制到忽略目录 `.work/phase4-b20/baseline/`，用于逐页差异复核。
+- 正式 build attempts：文科 `01008f5c-ceb0-453f-86d1-4febd6e4e543`，理科 `3327a32f-9123-4130-8d58-ef9451985bf3`；输入 manifest revision 6249，当前 revision 6250。文科试题/解析/简答/印刷版分别5/19/7/16页（47页），理科分别5/24/7/19页（55页），共102页。八版均 succeeded，errors、missing characters、overfull、undefined references 均为空；视觉复核及 `finalize-batch` 尚未完成，batch 当前 `compiled_pending_review`，两卷当前 `compiled`。
+- 源文疑点照录保留：文科 Q18③「都有垂直」、Q24 两处缺标点；理科 Q18③同样用语、Q23 两处缺标点。未新增或移除 issue，不将编辑答案说成官方答案。生成器、简答、版本壳、solution sources 检查均通过；报告 `render --all` 后 `check --all` 通过并与 manifest 一致。报告统计阶段性反映两卷 compiled-pending-review 状态。
+- 下一步：以同一 Poppler 工具链重渲染基线和新 PDF，逐页比较；旧 PNG 像素完全相同页才可继承此前八项结论，所有变化页需按八项目检并刷新 review receipts。随后 finalize、重跑回执/provenance/投影/currentness 门禁及全量测试，再更新本记录和交接。成本为本地 XeLaTeX/Poppler；模型 token 不可见、记未知。
+
 ### 1999 上海文史类：确定性 TeX 刷新、四版重建与视觉回执（phase4-b36，2026-11-05；批次带阻塞关闭）
 
 - 对象：`gk-1999-regular-shanghai-arts`；固定来源 `src-f45a72cc4b6fca6b3bb48f421c9320f7c17aa8c04d746f7ae368c40ef4875742`，上游 PDF SHA-256 `7a1c81dd9091426a8e524170336a9ba46e58fda3206e658233d6c14f5ea319e5`，10页。来源发布者、版次和卷内答案的官方身份仍未认证；题面与答案冲突、存疑处继续保留原标记。
