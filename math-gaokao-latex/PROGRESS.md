@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 安徽文科：确定性 TeX 同步、四版重建与视觉收口（phase1-b45，2026-11-05；批次 closed_with_blockers）
+
+- 对象：`gk-2006-regular-anhui-arts`，22题。固定副本 `src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7`，2页 PDF SHA-256 `631bacb1145ada877f0a40867668cd12bda3caf399cdcacec6543c2829ac32fa`，印刷页码278–279，无答案页。发布者、版次、来源链和官方身份未核；`official_answer=null`。
+- 仅按现行生成器刷新 `questions.tex` / `answers.tex` 中 Q1/Q2/Q5/Q6/Q7/Q10/Q12 的结构化选项布局；题目文字、数学内容与选项顺序未改，生成阶段已提交 `a0064a63`。规范题面、答案、解析、图稿、provenance 和 issues 未改。
+- 正式构建 attempt `cd343ee1-24e7-4ac4-b552-884dea40567f`，输入 manifest revision 6258，finalizer 后 revision 6260。试题/解析/简答/印刷版分别4/18/6/13页，共41页；均 succeeded。PDF SHA-256 依次为 `0c29fd7a9bb5d4a6ad2b0942461ead032d133fdefca31297cb5ff1dcb6c7a0e9`、`7ca61400c72d8d75e16b5318f54b502bd3115d9d84c100e41bed70adb23df6bf`、`957cd9787487f2bb35e429d189d68e9ee54e57caa0097d5cb84f201f338546a7`、`b52d0d8aee209a6e3e3e963b09460c14dff999f8b812df93f9dce5d47cbeefec`。无 errors、missing characters、undefined references；试题版、解析版、简答版各有1、2、1条 Underfull hbox，均对应 Q11 的短行并在视觉回执逐项豁免。
+- 当前 attempt 的41页均以150 dpi逐页实看，八项检查共328项：301 pass、27 not_applicable（该页无独立题图/标注）、0 fail；警告豁免4条。Q9/Q19/Q22 图稿完整清晰。`finalize-batch` 返回 `FINALIZED`，review `passed`、batch `closed_with_blockers`，paper 仍 `blocked`。
+- ISSUE-1216（Q2 选项与不等式解集不匹配）、ISSUE-1217（Q5 椭圆式缺等号及右端）、ISSUE-1218（Q5 答案仍待题面确认）继续 open。EOL 文科线索与固定副本的版次/复制来源链未建立，无法解除阻塞；未据此改写事实层。需取得可追溯的同版题页或可靠勘误后再复核。此批结案不表示1952–2026语料完成。
+- 本批 source manifest、issues、provenance、solution sources（22题）、生成器、简答、版本壳、build/review receipts 均通过；`report.py render --all` 后 `report.py check --all` 通过，manifest CSV 775行当前。全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 591.313s`，`FAILED (failures=1, skipped=13)`；唯一失败为 `test_the_cached_states_match_the_recomputed_ones`，48项跨卷缓存状态与现场派生不符，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、现场 `answers_verified`）。本批本地检查通过；未批量刷新其他卷缓存。模型/token 成本不可见，记未知。
+
 ### 2006 上海理科：生成器同步、四版重建与视觉结案（phase1-b42，2026-11-05；批次关闭）
 
 - 对象：`gk-2006-regular-shanghai-science`，22题。固定题面 PDF source `src-7f8706c4a44fd822ba2bb30b55a3f647f1fdf82d7805be1e62d4ee2030ebe4e6`，SHA-256 `0d035a931057065fdef8df4ae2019a97e9e95a04a98a6562df3cd02725e632b5`，2页题面、印刷页码328–329，无答案页。发布者、版次、扫描链及官方身份未核；答案和解析为独立编者推导，非官方。
