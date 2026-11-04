@@ -1,0 +1,18 @@
+% 第 21 题原页图：只重绘三块空白三角形轮廓；原卷没有预印剪线。
+\begin{tikzpicture}[x=0.78cm,y=0.78cm,line cap=round,line join=round,
+  outline/.style={draw=black,line width=0.55pt}]
+  % 图 1、图 2：正三角形轮廓。
+  \draw[outline] (1,1.732) -- (0,0) -- (2,0) -- cycle;
+  \node[below=2pt] at (1,-0.03) {图 1};
+
+  \begin{scope}[xshift=2.35cm]
+    \draw[outline] (1,1.732) -- (0,0) -- (2,0) -- cycle;
+    \node[below=2pt] at (1,-0.03) {图 2};
+  \end{scope}
+
+  % 图 3：按原页比例重绘任意三角形示意轮廓。
+  \begin{scope}[xshift=4.75cm]
+    \draw[outline] (0.75,1.75) -- (0,0) -- (4,0) -- cycle;
+    \node[below=2pt] at (2,-0.03) {图 3};
+  \end{scope}
+\end{tikzpicture}

@@ -4,11 +4,11 @@
 
 > **当前接续以本节为准。** 下方旧 HEAD、全库统计和候选批次是历史快照；新会话仍须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-04 当前状态：2002 苏豫粤桂 Q1–Q22 答案与解析独立复核完成
+## 2026-11-04 当前状态：2002 苏豫粤桂 Q1–Q22 答案复核与题图矢量转录完成
 
 ### 工作位置与 Git
 
-- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次交接更新前 HEAD 为 `7b0a9b8b`，工作树干净，领先 `origin/feat/gaokao-phase0` 5 个提交；交接文档本身将另行提交。2002 本批阶段提交依次包括范围比对 `62c6a80d`、题面转录 `7030f2e4`、题面复核 `5db0e2a7`、Q10 原页图位更正 `9c3b19b0`、答案/解析初稿 `a6fc0508`、独立答案复核 `7b0a9b8b`。新会话以实时 Git 输出为准；没有切换到 `main`，没有 push。
+- canonical worktree：`仓库根`；分支：`feat/gaokao-phase0`。本次接续开始时 HEAD 为 `eef9496f`，工作树干净，领先 `origin/feat/gaokao-phase0` 6 个提交。2002 本批先前阶段提交依次包括范围比对 `62c6a80d`、题面转录 `7030f2e4`、题面复核 `5db0e2a7`、Q10 原页图位更正 `9c3b19b0`、答案/解析初稿 `a6fc0508`、独立答案复核 `7b0a9b8b`、交接更新 `eef9496f`。本次图稿阶段的实际提交以最新 Git 历史为准；没有切换到 `main`，没有 push。
 - 本轮先完成 `phase4-b49`（2026 北京回忆版候选卷）四版构建/视觉收口，随后提交 2003 北京来源交叉核查记录。每项提交独立；不要重做已闭合的构建或视觉审查。
 
 ### Live manifest 概况
@@ -38,19 +38,26 @@
 
 ### 2002 苏豫粤桂卷题面转录
 
-- 已完成固定 PDF Q1–Q22 转录草稿，选择12题、填空4题、解答6题；报告与具体源内字形事项见[转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-transcription-20261104.md)。图位 Q10、Q19、Q21 尚未矢量重绘。
+- 已完成固定 PDF Q1–Q22 转录草稿，选择12题、填空4题、解答6题；报告与具体源内字形事项见[转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-transcription-20261104.md)。Q10、Q19、Q21 原页图现已矢量重绘并链接，细节见本节“图稿阶段”。
 - 当前题面草稿 SHA-256：`2b90924f6eedf37060b9925f3fa32a93a06d6b13c5ca696c4e97c4e990e0936b`。Q12“十·五”、Q14 指数 7、Q17 共轭横线按原页照录；来源 PDF 文字层只用于定位，未调用 OCR。
-- Q1–Q22 独立题面复核已完成，逐题结果见[复核报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-review-20261104.md)。Q10(B) 原先误称“竖直坐标轴”，现按原页更正为直线 $x=1/2$；它与圆心重合，对应题目方程。Q10、Q19、Q21 图仍未矢量重绘。
+- Q1–Q22 独立题面复核已完成，逐题结果见[复核报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-question-review-20261104.md)。Q10(B) 原先误称“竖直坐标轴”，现按原页更正为直线 $x=1/2$；它与圆心重合，对应题目方程。题面稿现已链接独立矢量图。
 
 ### 2002 苏豫粤桂卷答案与解析
 
 - 已形成 Q1–Q22 本库独立推导草稿：[答案要点](../../exams/math-gaokao-latex/drafts/2002-suyuyuegui/答案要点.md)、[解析正文](../../exams/math-gaokao-latex/drafts/2002-suyuyuegui/解析正文.md)。当前 SHA-256 分别为 `705c75965d6ff4f8893fd8e3c2fa8f21d86da18e66b57ff12b62a70e3a9efd1e` 与 `2be78cecb67a11310a408eab0c9cf2f588a13d93b4ed3df456c84e6b25d454c3`；逐题复核见[独立答案复核报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-answer-review-20261104.md)。
-- 固定 PDF 无答案/评分页；答案均为非官方推导、`official_answer=null`。独立复核未发现实质性数学错误；Q18 保留零公比约定两种口径，Q19 明确采用棱锥两侧面围成的内二面角，Q21 的文字剪拼方法通过面积/体积核算但图上虚线尚未绘制。盲解与主会话在 Q2、Q3、Q10、Q20 四项结论不同，均以重新推导和原页复看结果修正。
+- 固定 PDF 无答案/评分页；答案均为非官方推导、`official_answer=null`。独立复核未发现实质性数学错误；Q18 保留零公比约定两种口径，Q19 明确采用棱锥两侧面围成的内二面角。Q21 剪线虚线现已绘入独立答案辅助图，图稿不表示剪下后的配对、翻转、剪角平移或成品展开状态，操作由解析正文说明。盲解与主会话在 Q2、Q3、Q10、Q20 四项结论不同，均以重新推导和原页复看结果修正。
+
+### 2002 苏豫粤桂卷题图矢量转录
+
+- 按固定来源 PDF SHA `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`，重绘 Q10 四选项、Q19 四棱锥、Q21 三张空白题面图和答案剪线图；逐图报告见[题图矢量转录报告](../../exams/math-gaokao-latex/reports/2002-suyuyuegui-figure-transcription-20261104.md)。
+- 四个独立 TikZ 文件位于 `2002_苏豫粤桂卷/figures/`。Q10、Q19、Q21 原题图分别链接在题面草稿；Q21 答案剪线图单独链接在解析草稿。Q10 片段首次审查发现 A/B 圆心误放原点，已按原页改为圆心 $(1/2,0)$、O 为左端点，并重新编译复看；Q21 片段只表示剪线，不能独自说明配对和平移。
+- 四图使用 XeLaTeX+CTeX scratch 编译成功并对渲染图做目视检查。scratch PDF/PNG 在忽略目录 `.work/2002-suyuyuegui-figure-review/`，不作为正式版本的构建回执或最终排版验收。
+- 当前 paper/batch 尚未注册；manifest `figure_files` 和 occurrence 计数未同步，确定性 `_含解析.md` 未生成，provenance 未导入，四版构建及正式视觉检查未做。来源仍 `ready/unbound`、`official_answer=null`，身份未核。
 - 来源仍 `ready/unbound`、`paper_id=null`、`paper_relation=null`、`track=null`、`regions=[]`；发布身份未认证。未导入规范题面/答案/解析事实源或 provenance，未注册 paper/batch，未生成 `_含解析.md`、TeX/PDF，也未做正式构建、视觉校验或项目测试。
 
 ### 下一工作候选
 
-- 当前下一步是完成 Q10/Q19/Q21 题图矢量稿，并在 Q21 图上标出对应剪拼虚线；随后依 OCR_WORKFLOW 把复核后的题面与答案写入规范事实源、复核图引用，再登记拟用 paper `gk-2002-regular-suyuyuegui` 和批次/provenance。未来 paper 的 `track=none` 仅表示本库不分文理，source 仍保留 `track=null`、`regions=[]`；不得据题签或题目重合宣称正式共同卷身份。再按既有流程生成确定性输出、构建四版并逐页视觉验收。此批到答案复核阶段结束，遵照用户指令先停工。
+- 当前下一步是将复核后的题面、答案和解析草稿规范化到 paper 事实源，保留题签轨道未标、来源身份未知、无卷内答案等边界；复制解析稿到规范目录时要重写 Q21 答案辅助图链接的相对路径。然后按 `OCR_WORKFLOW.md` 登记拟用 paper `gk-2002-regular-suyuyuegui` 和批次/provenance。paper 的 `track=none` 仅表示本库暂不分文理，source 继续 `track=null`、`regions=[]`；不得据题签或题目重合宣称官方共同卷身份。生成确定性输出前先 `solution_sources.py extract-batch --write`，随后同步 manifest `figure_files` 引用次数并导入与最终事实源相符的 provenance，再生成四版、正式构建并逐页视觉验收。2002 本卷尚未完成 paper/batch 登记或关闭；完成这一批之后按用户先前指示停工，不把单卷完成描述为 1952–2026 语料完成。
 - 完成 2002 苏豫粤桂后，再按年份顺序处理未绑定来源。1998 全国文科已有25题转录、独立数学复核及固定 PDF 原页复看，但来源仍 `ready/unbound`，出版身份未核，Q12/Q13/Q25 原件冲突仍在；本轮对教育部/学信网域名和题名的定向检索未定位到可直接核验的官方原卷或勘误，相关搜索命中仍是二手文档页。检索未命中不证明官方材料不存在；不要重做转录或把二手版本当裁定。
 - 不要因大量未绑定来源、blocked papers 或 open issues 而批量清状态。每阶段核对固定来源、现有草稿、manifest、PROGRESS 与历史，保留来源不确定性，并在每个可审查阶段单独提交；仍不 push。
 

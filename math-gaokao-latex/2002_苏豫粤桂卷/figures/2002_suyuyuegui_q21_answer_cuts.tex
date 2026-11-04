@@ -1,0 +1,59 @@
+% 第 21 题答案辅助图：虚线仅标示原纸片剪线，不表示剪下后的拼合状态。
+% 数字 1、2 标出所选的两块三角形底面；侧面配对与平移步骤见解析正文。
+\begin{tikzpicture}[x=0.78cm,y=0.78cm,line cap=round,line join=round,
+  outline/.style={draw=black,line width=0.65pt},
+  cut/.style={draw=black,line width=0.55pt,densely dashed},
+  font=\scriptsize]
+  % 图 1：中点剪线将正三角形分成四个全等小三角形。
+  \draw[outline] (1,1.732) -- (0,0) -- (2,0) -- cycle;
+  \draw[cut]
+    (0.5,0.866) -- (1.5,0.866)
+    (0.5,0.866) -- (1,0)
+    (1.5,0.866) -- (1,0);
+  \node[below=2pt] at (1,-0.03) {图 1};
+
+  % 图 2：中点剪线后，另两块角三角形再按内心—顶点连线切分。
+  \begin{scope}[xshift=2.35cm]
+    \draw[outline] (1,1.732) -- (0,0) -- (2,0) -- cycle;
+    \draw[cut]
+      (0.5,0.866) -- (1.5,0.866)
+      (0.5,0.866) -- (1,0)
+      (1.5,0.866) -- (1,0)
+      (0.5,0.289) -- (0,0)
+      (0.5,0.289) -- (0.5,0.866)
+      (0.5,0.289) -- (1,0)
+      (1.5,0.289) -- (2,0)
+      (1.5,0.289) -- (1.5,0.866)
+      (1.5,0.289) -- (1,0);
+    \node at (1,0.58) {1};
+    \node at (1,1.16) {2};
+    \node[below=2pt] at (1,-0.03) {图 2};
+  \end{scope}
+
+  % 图 3：近似源图轮廓；两块底面与图 2 采用相同位置关系。
+  \begin{scope}[xshift=4.75cm]
+    \coordinate (A) at (0.75,1.75);
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (4,0);
+    \coordinate (Mab) at (0.375,0.875);
+    \coordinate (Mac) at (2.375,0.875);
+    \coordinate (Mbc) at (2,0);
+    \coordinate (IL) at (0.553,0.365);
+    \coordinate (IR) at (2.553,0.365);
+
+    \draw[outline] (A) -- (B) -- (C) -- cycle;
+    \draw[cut]
+      (Mab) -- (Mac)
+      (Mab) -- (Mbc)
+      (Mac) -- (Mbc)
+      (IL) -- (B)
+      (IL) -- (Mab)
+      (IL) -- (Mbc)
+      (IR) -- (C)
+      (IR) -- (Mac)
+      (IR) -- (Mbc);
+    \node at (1.583,0.583) {1};
+    \node at (1.25,1.167) {2};
+    \node[below=2pt] at (2,-0.03) {图 3};
+  \end{scope}
+\end{tikzpicture}
