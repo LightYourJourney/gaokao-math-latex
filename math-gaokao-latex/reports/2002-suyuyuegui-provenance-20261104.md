@@ -13,12 +13,12 @@
 
 ## 导入结果与状态
 
-- 三角色记录写在忽略目录 `.work/provenance/phase4-b50/`；正式 `provenance.json` SHA-256 为 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`。
+- 三角色记录写在忽略目录 `.work/provenance/phase4-b50/`；首次导入时正式 `provenance.json` SHA-256 为 `63bd83a95aed270e90d475115ca61314148cd5e175b784e6d3a58285188d28ef`。后续只因 Q16/Q17 题面显示公式的序列化调整而刷新相应角色哈希，当前正式文件 SHA-256 为 `458ecfb1e2aaba4dab8d3ab7e7e07e77dc62ce6a04bd7ee6ae2767c55993e662`。
 - Q1–Q22 的题面复核均为 `passed`；答案证据为 D 21 题、U 1 题（Q18）；所有 `conflict_status=none`。Q18 的 answer-solve 与 answer-review 记录均关联 `ISSUE-1417`。
-- `import-batch --write` 将 manifest revision `6180→6181`；batch 从 `planned` 到 `provenance_verified`，paper 保持 `blocked`。来源、Q18 blocker 和官方身份边界均未改变。
-- `provenance.py check-batch` 输出 `OK：1 卷`；`source_manifest.py validate`、`issues.py validate` 和 `solution_sources.py check-batch` 均通过，后者确认 22 题。未运行测试套件或 OCR；未生成项目 TeX、简答及四版入口，未正式构建 PDF 或建立视觉回执。
-- 上一阶段的全量报告投影对应 manifest revision `6180`，本次 revision 推进后须在项目生成刷新共享 `index.json` 后再生成并校验全量报告与所有回执；不要据旧快照推断当前全库门禁状态。
+- 首次 `import-batch --write` 将 manifest revision `6180→6181`；batch 从 `planned` 到 `provenance_verified`，paper 保持 `blocked`。当前复核时 `provenance.py check-batch` 输出 `OK：1 卷`；`source_manifest.py validate`、`issues.py validate`、`solution_sources.py check-batch` 与 `manifest_csv.py --check` 均通过，后者确认 22 题。项目生成、正式构建及视觉审查后，live manifest 为 revision `6190`，batch `closed_with_blockers`、paper 仍 `blocked`；来源、Q18 blocker 和官方身份边界均未改变。
+- provenance 导入后，Q16/Q17 display math 改为单行序列化，并将句号置于 `\text{。}` 内，避免公式后出现孤立标点；可见题意与数学事实不变，相应 question-review 摘要已刷新。两处正文来源说明也改为自然语言“官方答案未认证”，front matter 的 `official_answer: null` 未变。项目生成、正式构建与视觉复核结果见[项目生成报告](2002-suyuyuegui-project-generation-20261104.md)、[正式构建报告](2002-suyuyuegui-formal-build-20261104.md)和[批次视觉审查报告](phase4-b50.md)。
+- 全量报告与回执须以 live manifest revision `6190` 重验；revision `6180` 的全库计数只是历史快照，不代表当前门禁状态。未调用 OCR。
 
 ## 下一阶段
 
-生成本卷 `questions.tex`、`answers.tex`、简答版和四版入口；完成 determinism/currentness 检查后，正式构建四版并逐页视觉审查。Q18 继续 U/PENDING，纸卷与批次只能在最终门禁后以 `closed_with_blockers` 收口。
+本卷项目生成、四版构建与 45 页视觉审查现已完成，批次以 `closed_with_blockers` 收口。只有取得可绑定至同版来源的零公比约定证据后，才继续裁定 Q18 / `ISSUE-1417`；证据到位前保留 U/PENDING 与两种条件分支，不将 paper 改标完成。
