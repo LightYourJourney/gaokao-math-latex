@@ -4,12 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
-### 2012 全国大纲卷与普通卷文理四卷：确定性 TeX 投影同步（phase2-b01，2026-11-04；正式重建待完成）
+### 2012 全国大纲卷与普通卷文理四卷：正式重建与视觉封存（phase2-b01，2026-11-04；批次已关闭）
 
-- 当前 `generate_projects.py --all --check` 报 93 个 TeX 投影不一致；首批落在原有批次 `phase2-b01` 的四卷：`gk-2012-regular-national-outline-arts/science`、`gk-2012-regular-national-new-arts/science`。批次登记 `issues=[]`；规范题面/答案/解析及含解析稿未改，`solution_sources check-batch` 的 22/22/24/24 题全部通过。
-- `generate_projects.py --batch phase2-b01 --check` 初始报 8 项：四卷各自的 `questions.tex`、`answers.tex`。`generate_projects --write` 写入9个生成目标；Git diff 中仅8个 TeX 投影变化。旧行内四选项现按生成规则展开为 `gkopts(n)`/`\\task`，选项值、题干、答案与数学结论均由未变的规范 Markdown 确定性生成。更新后批次 `--check` 通过；`test_generate_projects.py` 为122/122，`git diff --check` 通过。
-- 重生成前四卷 build receipts 均为 `succeeded`，四份旧 review receipts 均 `passed`，但该批 review 报告当前已 `INVALID_OR_STALE`，不能将其作为新 TeX 的视觉证明。重生成后 `build_projects validate-receipts` 明确报4卷因 `questions.tex`/`answers.tex` 依赖改变而 stale；当前纸面缓存 `complete` 与现场 `editions_generated` 不符，批次缓存 `closed` 与现场 `provenance_verified` 不符。尚未写 build/review/provenance 或 manifest 状态。
-- 下一步正式重建四卷四版，备份旧 PDF 后按新旧页图差异逐页复核；刷新 build/review receipts 与 batch 报告，再校验当前状态并单独提交相应阶段。此前全量测试的唯一失败是70卷 `production_state` 缓存漂移（首项2012全国大纲文科）；本批目前不批量刷新其他卷缓存。
+- 对象为四卷：`gk-2012-regular-national-outline-arts`、`gk-2012-regular-national-outline-science`、`gk-2012-regular-national-new-arts`、`gk-2012-regular-national-new-science`，规范来源分别为对应 `_试题.md`、`_答案要点.md`、`_解析正文.md`；题数为22/22/24/24，批次 issues 为空。此次仅修正大纲理科 Q22 在“如下：”后的换行：把强制 `\\linebreak` 改成自然段落换行，题目文字、符号和数学内容未变。同步确定性 `_含解析.md` 与 TeX 投影；provenance 只更新 Q22 题面哈希及版式说明，答案哈希未变。
+- 四卷正式四版构建均为 `succeeded`，最终页数依次为：大纲文科 4/19/6/16（45页）、大纲理科 4/20/6/16（46页）、全国文科 5/22/7/18（52页）、全国理科 6/27/8/22（63页），共206页；构建 warnings 均为空。大纲理科最终 attempt 为 `ccda0971-986c-4618-9de5-58dfbbcac7df`。最终 manifest revision 为6233，四卷 `production_state=complete`，批次 `closed`。
+- 206页均完成八类页面检查（共1648项），视觉问题、阻塞问题和警告豁免均为0。大纲理科 Q22 修订后重新构建，最终版相较前版变化的6页（试题版p4、解析版p4/p19、简答版p4、印刷版p3/p16）重新渲染并目视检查；其余40页与已审版本字节相同并继承对应结论。`finalize-batch` 返回 `FINALIZED`，报告见 `reports/phase2-b01.md`。
+- 收尾门禁：build receipt currentness 4卷 succeeded、0 pending/stale/invalid；review `FINALIZED`；provenance `OK：4卷`；生成器、简答、版本壳、solution sources、source manifest、issues 均通过。`report.py render --all` 以一个 content 事务刷新并回读六个全量报告目标，随后 `report.py check --all` 确认投影与 manifest 当前状态一致。
+- 完整测试 `python3 -B -m unittest discover -s tests -q` 实跑为 `Ran 1779 tests in 695.016s`、`FAILED (failures=1, skipped=13)`。唯一失败 `test_the_cached_states_match_the_recomputed_ones`：421卷全库状态核对中有65项 paper/batch 缓存与现场推导不一致，首项为 `gk-2016-regular-national-2-arts`；单独 `provenance.py check-all` 重现相同漂移清单，且本批四卷不在其中。本批 check-batch 通过，未刷新其他卷的状态缓存。
+- 本阶段是既有转录的确定性排版修正、构建与视觉审查；未调用 OCR 或外部模型。下一步从年份/状态队列继续处理其他卷；不把本批关闭表述为1952–2026题库完成。
 
 ### 1996 上海文理卷：同步确定性 TeX、四版重建与视觉封存（phase4-b21 / phase4-b22，2026-11-04；来源阻塞仍在）
 
