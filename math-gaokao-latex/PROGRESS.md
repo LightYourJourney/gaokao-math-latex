@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2012 全国大纲卷与普通卷文理四卷：确定性 TeX 投影同步（phase2-b01，2026-11-04；正式重建待完成）
+
+- 当前 `generate_projects.py --all --check` 报 93 个 TeX 投影不一致；首批落在原有批次 `phase2-b01` 的四卷：`gk-2012-regular-national-outline-arts/science`、`gk-2012-regular-national-new-arts/science`。批次登记 `issues=[]`；规范题面/答案/解析及含解析稿未改，`solution_sources check-batch` 的 22/22/24/24 题全部通过。
+- `generate_projects.py --batch phase2-b01 --check` 初始报 8 项：四卷各自的 `questions.tex`、`answers.tex`。`generate_projects --write` 写入9个生成目标；Git diff 中仅8个 TeX 投影变化。旧行内四选项现按生成规则展开为 `gkopts(n)`/`\\task`，选项值、题干、答案与数学结论均由未变的规范 Markdown 确定性生成。更新后批次 `--check` 通过；`test_generate_projects.py` 为122/122，`git diff --check` 通过。
+- 重生成前四卷 build receipts 均为 `succeeded`，四份旧 review receipts 均 `passed`，但该批 review 报告当前已 `INVALID_OR_STALE`，不能将其作为新 TeX 的视觉证明。重生成后 `build_projects validate-receipts` 明确报4卷因 `questions.tex`/`answers.tex` 依赖改变而 stale；当前纸面缓存 `complete` 与现场 `editions_generated` 不符，批次缓存 `closed` 与现场 `provenance_verified` 不符。尚未写 build/review/provenance 或 manifest 状态。
+- 下一步正式重建四卷四版，备份旧 PDF 后按新旧页图差异逐页复核；刷新 build/review receipts 与 batch 报告，再校验当前状态并单独提交相应阶段。此前全量测试的唯一失败是70卷 `production_state` 缓存漂移（首项2012全国大纲文科）；本批目前不批量刷新其他卷缓存。
+
 ### 1996 上海文理卷：同步确定性 TeX、四版重建与视觉封存（phase4-b21 / phase4-b22，2026-11-04；来源阻塞仍在）
 
 - 当前 `generate_projects.py --all --check` 实测有 97 个 TeX 投影、涉及 50 卷不一致；本阶段只处理当前最早的 1996 上海文史、理科两卷，不执行全库写入。内存重生成差异显示源 Markdown、答案、解析和数学结论未变：文史 Q16 B1、Q24 两处显示公式句号由 `\text{。}` 改为 `\mbox{。}`；理科 Q7、Q8 四选项由单行文字改成 `gkopts(4)`/`\task` 结构，Q16 B1、Q18 B1 两处句号也改为 `\mbox{。}`。选项布局和数学模式盒子可能影响分页/字距，因此新构建必须逐页复核，不能沿用旧 attempt 的视觉结论；本阶段已完成该复核。
