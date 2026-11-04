@@ -4,8 +4,8 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**421**；生产状态：blocked 109，compiled 3，complete 307，editions_generated 2
-- 批次总数：**267**；manifest 状态：closed 178，closed_with_blockers 86，compiled_pending_review 1，provenance_verified 2
+- 试卷总数：**421**；生产状态：blocked 109，compiled 5，complete 307
+- 批次总数：**267**；manifest 状态：closed 178，closed_with_blockers 86，compiled_pending_review 3
 - 正式复核门禁：FINALIZED 225，INVALID_OR_STALE 41，VISUAL_FAILED 1
 - 已编译版本：1684/1684；构建回执状态：compiled_pending_review 6，succeeded 415
 - review 回执状态：failed 1，passed 420
