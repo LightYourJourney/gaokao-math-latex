@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2002 苏豫粤桂卷：全国旧/新课程范围比对（2026-11-04）
+
+- 将固定 PDF 与本库 2002 全国旧课程、新课程文理四份规范题面对照，确认至少十个题目在不同题号位置重合；苏豫粤桂 Q1 等题与四份全国卷不同，故不属于任一全国卷的整卷重复。细目见[范围比对报告](reports/2002-suyuyuegui-scope-comparison-20261104.md)。题目重合不证明共同编者、组卷关系、官方身份或各地区的实际适用范围。
+- 作为一个固定 22 题 PDF 处理，不按四个地区拆卷。拟用内部 paper ID `gk-2002-regular-suyuyuegui`；后续 paper 使用 `track=none` 仅表达本库当前未标文/理，不认定正式共同卷。source 仍 `ready/unbound`、`track=null`、`regions=[]`，尚未创建 paper/batch。
+- `analyze_pdf.py --no-cache`：两页 `text_candidate`、0 可疑字符、文档 `text_layer_candidate`；按 OCR_WORKFLOW 不重跑已有文字层 OCR，模型/OCR 调用均为 0。PDF 两页已 180 dpi 目视复看。
+- 本阶段仅完成卷种比对与分类边界记录，未改 manifest/issues 或试题内容，未运行测试或构建。下一阶段按固定 PDF 逐题转录 Q1–Q22，再独立复核题面。
+
 ### 2002 苏豫粤桂卷：固定来源接收与范围确认（2026-11-04）
 
 - 从 ready/unbound 来源 `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4` 核对上游 PDF：SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`、Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`、498,609 bytes，与 manifest 一致。上游 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。
