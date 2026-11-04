@@ -718,6 +718,15 @@ class ConversionInterfaceTests(unittest.TestCase):
         self.assertIn(r"x=1\mbox{。}", result.text)
         self.assertNotIn("x=1。", result.text)
 
+    def test_raw_display_math_routes_ideographic_comma_through_cjk_text_font(self):
+        result = md2tex.convert_markdown(
+            "\\[\nx=1，\n\\]\n",
+            md2tex.ConversionContext(figure_map={}),
+        )
+
+        self.assertIn(r"x=1\mbox{，}", result.text)
+        self.assertNotIn("x=1，", result.text)
+
     def test_display_math_does_not_nest_existing_cjk_text_commands(self):
         result = md2tex.convert_markdown(
             "$$\n\\right|\\text{。}\n$$\n",

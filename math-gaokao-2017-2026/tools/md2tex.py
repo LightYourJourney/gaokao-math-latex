@@ -266,8 +266,8 @@ def _text_argument_end(source: str, start: int) -> Optional[int]:
     return len(source)
 
 
-def _wrap_ideographic_full_stops_outside_text(source: str) -> str:
-    """把既有 ``\\text{...}`` 分组外的中文句号切到 CJK 文本字体。"""
+def _wrap_cjk_punctuation_outside_text(source: str) -> str:
+    """把既有 ``\\text{...}`` 分组外的中文逗号、句号切到 CJK 文本字体。"""
     output = []
     cursor = 0
     while cursor < len(source):
@@ -276,8 +276,8 @@ def _wrap_ideographic_full_stops_outside_text(source: str) -> str:
             output.append(source[cursor:text_end])
             cursor = text_end
             continue
-        if source.startswith("。", cursor):
-            output.append(r"\mbox{。}")
+        if source[cursor] in ("，", "。"):
+            output.append(r"\mbox{" + source[cursor] + "}")
             cursor += 1
             continue
 
@@ -293,7 +293,7 @@ def conv_math_display(s: str) -> str:
     for ch in EMOJI:
         s = s.replace(ch, "")
     s = CJK_IN_MATH.sub(r"\\text{\1}", s)
-    return _wrap_ideographic_full_stops_outside_text(s)
+    return _wrap_cjk_punctuation_outside_text(s)
 
 
 def conv_inline(s: str, sink: _Sink) -> str:
@@ -318,7 +318,7 @@ def conv_inline(s: str, sink: _Sink) -> str:
     for i, seg in enumerate(parts):
         if i % 2 == 1:               # 数学段：仅把裸中文包进 \text（西文数学字体缺 CJK 字形）
             seg = CJK_IN_MATH.sub(r"\\text{\1}", seg)
-            seg = _wrap_ideographic_full_stops_outside_text(seg)
+            seg = _wrap_cjk_punctuation_outside_text(seg)
             out.append(f"${seg}$")
         else:                        # 文本段
             out.append(conv_text(seg))
@@ -561,7 +561,7 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
             s = ln.strip()
             if s.startswith(r"\[") and r"\]" in s[2:]:
                 close = s.find(r"\]", 2)
-                body = _wrap_ideographic_full_stops_outside_text(s[2:close])
+                body = _wrap_cjk_punctuation_outside_text(s[2:close])
                 tail = s[close + 2:]
                 out.append(r"\nopagebreak[4]")
                 out.append(r"\[" + body + r"\]" + tail)
@@ -572,7 +572,7 @@ def convert_block(lines: List[str], sink: _Sink) -> List[str]:
                 j += 1
             if j < n:
                 body = "\n".join([s[2:], *lines[i + 1:j]])
-                body = _wrap_ideographic_full_stops_outside_text(body)
+                body = _wrap_cjk_punctuation_outside_text(body)
                 out.append(r"\nopagebreak[4]")
                 out.extend([r"\[" + body, r"\]"])
             else:
