@@ -9,14 +9,22 @@
 - 将固定 PDF 与本库 2002 全国旧课程、新课程文理四份规范题面对照，确认至少十个题目在不同题号位置重合；苏豫粤桂 Q1 等题与四份全国卷不同，故不属于任一全国卷的整卷重复。细目见[范围比对报告](reports/2002-suyuyuegui-scope-comparison-20261104.md)。题目重合不证明共同编者、组卷关系、官方身份或各地区的实际适用范围。
 - 作为一个固定 22 题 PDF 处理，不按四个地区拆卷。拟用内部 paper ID `gk-2002-regular-suyuyuegui`；后续 paper 使用 `track=none` 仅表达本库当前未标文/理，不认定正式共同卷。source 仍 `ready/unbound`、`track=null`、`regions=[]`，尚未创建 paper/batch。
 - `analyze_pdf.py --no-cache`：两页 `text_candidate`、0 可疑字符、文档 `text_layer_candidate`；按 OCR_WORKFLOW 不重跑已有文字层 OCR，模型/OCR 调用均为 0。PDF 两页已 180 dpi 目视复看。
-- 本阶段仅完成卷种比对与分类边界记录，未改 manifest/issues 或试题内容，未运行测试或构建。下一阶段按固定 PDF 逐题转录 Q1–Q22，再独立复核题面。
+- 本阶段仅完成卷种比对与分类边界记录，未改 manifest/issues 或试题内容，未运行测试或构建。此后已完成固定 PDF Q1–Q22 题面草稿；下一步独立复核，见下方转录阶段记录。
+
+### 2002 苏豫粤桂卷：Q1–Q22 题面转录草稿（2026-11-04）
+
+- 按固定来源 `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4`、PDF SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91` 转录选择 Q1–Q12、填空 Q13–Q16、解答 Q17–Q22；草稿 [题面转录草稿](../2002/2002_数学真题_苏豫粤桂_题面转录草稿.md) SHA-256 为 `cc1fd8f2cf4fc703eeb93316f5ace88596ac782a3c1cffd01010c6bd36782730`，题号结构连续 1–22。来源仍未认证、未绑定 paper。
+- Q10、Q19、Q21 仅保留原页图位说明，矢量图稿待做。Q12 原页印作“十·五”，Q14 指数为 7，Q17 共轭横线由局部图像确认；细节见[转录报告](reports/2002-suyuyuegui-question-transcription-20261104.md)。
+- 两页 `text_layer_candidate`；按 OCR_WORKFLOW 不调用 OCR，模型/OCR调用为0。已用 180 dpi 整页图和 Q10/Q12/Q17/Q19 局部放大复核题面。未运行测试、数学求解、答案核验、构建或视觉回执。
+- 下一步进行独立题面逐题复核；之后再开始答案求解/答案复核、图稿、登记与项目构建。本条只表示转录草稿完成，不代表来源认证或整卷验收。
+- Agent token/费用不可见，记未知；本阶段没有外部模型/OCR推理调用。
 
 ### 2002 苏豫粤桂卷：固定来源接收与范围确认（2026-11-04）
 
 - 从 ready/unbound 来源 `src-0daae2fa54742835e68d7f3b2cb647b26cee7c4d302f16958e53100e71e4bab4` 核对上游 PDF：SHA-256 `4dd869fb3bc24cda6947ab2c2069ed3f470b70f775c5679064f8c5a95f43bc91`、Git blob `24ff45c0af6a8707358e31392c08cb4e2c96a32f`、498,609 bytes，与 manifest 一致。上游 checkout HEAD `34c13a6cf632c0b69c95f89b9b923bbc4a08924d`。
 - 两页 A3 横向、印刷页 113–114，题签为“2002 普通高等学校招生考试（苏豫粤桂）”；可见 Q1–Q12 选择、Q13–Q16 填空、Q17–Q22 解答。Q10、Q19、Q21 有图。题签没有标文/理科，PDF 无答案、评分或总分页；不凭题签推断轨道，也不将一个 source 擅拆成四卷。来源出版身份未核。
 - 完整页图以 140 dpi 渲染并目视检查；`pdfinfo`、`pdftotext -layout`、SHA-256 和上游 Git blob 检查均符合上述来源身份与范围。细节见[2002 苏豫粤桂来源接收报告](reports/2002-suyuyuegui-source-intake.md)。没有逐题转录/盲核、OCR、构建或项目测试；未改 manifest、issues 或试题文件。
-- 下一步先与现存 2002 全国旧/新课程卷比对范围和命名，确定共同卷/track 边界，再开始忠实题面转录；来源身份、答案、图稿、provenance 和四版均未开始。
+- 下一阶段已先完成与四份全国旧/新课程卷的范围比对，见上方[范围比对报告](reports/2002-suyuyuegui-scope-comparison-20261104.md)；随后转录了 Q1–Q22，见本卷后续独立阶段记录。来源身份、答案、图稿、provenance 和四版仍未完成。
 
 ### 2003 上海普通卷文理科：非官方答案与解析初稿（2026-11-04）
 
