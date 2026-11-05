@@ -23960,3 +23960,54 @@
   "type": "layout-warning"
 }
 ```
+
+## ISSUE-1426
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF（SHA-256 dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b）第 1 页第 12 题设问为求点 M 的纵坐标，但所列选项印为“7倍/5倍/4倍/3倍”（实为理科第 12 题倍数选项），计算所得纵坐标 ±√3/4 落在第 13 题选项 A 中。原卷选项错位互换，答案标 U/PENDING。",
+  "fingerprint": "381fad38da14b45dda524868b98c4c317d80ed39671b465ba88e9b84df437548",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1998-regular-national-arts",
+  "question_id": "gk-1998-regular-national-arts-q12",
+  "resume_action": "取得可绑定到同一版次或官方勘误材料，核定原卷更正说明；核定前保留 U/PENDING，不把该卷标记为完成。",
+  "source_id": "src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1427
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF（SHA-256 dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b）第 1 页第 13 题设问为求球半径，但所列选项印为“±√3/4、±√2/2、±√3/2、±3/4”，带有正负号（实为第 12 题纵坐标选项）。依题意计算球半径为 2√3，选项中无对应值。答案标 U/PENDING。",
+  "fingerprint": "85f2bdc243cd587b4e22cf4081b4f9d457f975cb17acec2794f78d13adc9acda",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1998-regular-national-arts",
+  "question_id": "gk-1998-regular-national-arts-q13",
+  "resume_action": "取得可绑定到同一版次或官方勘误材料，核定原卷更正说明；核定前保留 U/PENDING，不把该卷标记为完成。",
+  "source_id": "src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1428
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF（SHA-256 dbf7bd3f4e11621d7d31e38ed304f3617f20ecb070e96ac0ec0fbc5a17b9748b）第 1 页第 25 题第 (2) 问通项印为 lg(1+1/b_n)，同句却残留理科条件‘其中 a>0, 且 a≠1’；且比较对象印为 1/2 lg b_n + 1，字形上 +1 未入下标。答案要点与解析正文对命题意图与字面含义均作完整讨论，答案标 U/PENDING。",
+  "fingerprint": "3e8dd29966db59ef78173e935ffeea949c48c5d4faf44ae21031ff49fdf6a2cb",
+  "impact": "blocks_completion",
+  "paper_id": "gk-1998-regular-national-arts",
+  "question_id": "gk-1998-regular-national-arts-q25",
+  "resume_action": "取得可绑定到同一版次的官方答案或编写约定，核定第 25 题第 (2) 问官方评卷口径；核定前保留两套分支说明，不把该卷标记为完成。",
+  "source_id": "src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5",
+  "status": "open",
+  "type": "answer-convention-ambiguous"
+}
+```

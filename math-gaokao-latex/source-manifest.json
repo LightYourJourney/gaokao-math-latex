@@ -2292,6 +2292,14 @@
         "gk-2002-regular-suyuyuegui"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b51",
+      "issues": [],
+      "paper_ids": [
+        "gk-1998-regular-national-arts"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -2301,7 +2309,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a7ddf81f-479d-49a7-a9ee-cf568f365a92",
+  "last_transaction_id": "ea1289a2-aeef-4e51-a275-a074cd60b716",
   "papers": [
     {
       "blocked_from": null,
@@ -30347,9 +30355,86 @@
       "title": "2002 年·苏豫粤桂卷",
       "track": "none",
       "year": 2002
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "1998_全国卷_文科/figures/f1998_national_arts_q11_bottle_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1998_全国卷_文科/figures/f1998_national_arts_q22_parabola_segment.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1998_全国卷_文科/figures/f1998_national_arts_q23_oblique_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1998_全国卷_文科/figures/f1998_national_arts_q24_settling_tank.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "1998_全国卷_文科/figures/f1998_national_arts_q2_graph_options.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_1998_gaokao_national_arts",
+        "id": "gk-1998-regular-national-arts",
+        "note": "固定源为 A3 横向单页题面，原卷印刷页码 57；PDF 不含答案或解析页，答案和解析均为本库独立复算。原卷第 12、13 题选项排版错位互换，第 25 题第 (2) 问含下标排印笔误与死文字残留，问题阻断完成。",
+        "pages_q": [
+          1,
+          1
+        ],
+        "pages_s": null,
+        "paper": "全国卷（文科）",
+        "structure": {
+          "填空题": [
+            16,
+            19
+          ],
+          "解答题": [
+            20,
+            25
+          ],
+          "选择题": [
+            1,
+            15
+          ]
+        },
+        "track": "文科",
+        "variant": "全国文科"
+      },
+      "issue_ids": [
+        "ISSUE-1426",
+        "ISSUE-1427",
+        "ISSUE-1428"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-1998-regular-national-arts",
+      "production_state": "blocked",
+      "project_dir": "1998_全国卷_文科",
+      "question_count": 25,
+      "resume_action": "取得可绑定到同一版次或官方勘误材料，核定原卷更正说明；核定前保留 U/PENDING，不把该卷标记为完成。",
+      "source_files": {
+        "answer_key": "1998/1998_数学真题_全国文_答案要点.md",
+        "combined_rendered": "1998/1998_数学真题_全国文_含解析.md",
+        "questions": "1998/1998_数学真题_全国文_试题.md",
+        "solution_body": "1998/1998_数学真题_全国文_解析正文.md"
+      },
+      "source_ids": [
+        "src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5"
+      ],
+      "title": "1998 年·全国卷·文科",
+      "track": "arts",
+      "year": 1998
     }
   ],
-  "revision": 6368,
+  "revision": 6374,
   "schema_version": 1,
   "sources": [
     {
@@ -35142,8 +35227,8 @@
       "exam_type": "regular",
       "git_blob_oid": "187701f7207338551455492be912749f669207e5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-1998-regular-national-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "1998全国文.pdf",
       "regions": [],
       "source_id": "src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5",
