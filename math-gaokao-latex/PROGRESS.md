@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 浙江理科：phase2-b21 过期投影刷新、四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-zhejiang-science`，20题；固定题面 source `src-44a16a20fae82c0cb6461848d1d9d8ed36a2759ca1d748e965bbd5605e9db0a5`，PDF SHA-256 `3f243e53bb72fc5e207e69071d91702d836e12026188fd65c552dd648de37e06`，2页、原卷印刷页1027–1028。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- b21 曾于2026-10-09收口（旧 build attempt `b7a52e51-35ed-4016-8084-12a9fcfb31c0`），但当前生成器检查发现 `questions.tex`、`answers.tex` 投影已过期（选项改为结构化 `gkopts`）。按确定性生成器刷新选项布局；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `10992af`。
+- 正式 build attempt `e6994a29-5b50-4a0d-ba97-3deb94619210`，输入 manifest revision 6336，build 提交 `9ac3599`。试题/解析/简答/印刷版分别 5/21/7/16 页，共49页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `158b6bab8090cac7b9f9318e20cf97bffc4b8ae4473a58512e275b3a221a4cbf`；解析 `5e677f1d0725c8673b1c8361dcae20469af4833966531de4571a0521243d7b4e`；简答 `006ba03528d69207ce10b9d402387a6b91d5c213b1dad873f99b0460f9fb774c`；印刷 `dfd3086ed1aabf6b9232ee3a528ea8b099b5415ce414936f709d937e5428b15d`。
+- 当前 attempt 的49页均完成八项视觉检查，共392项：307 `pass`、85 `not_applicable`、0 `fail`、0 pending。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6339，批次 `closed`、卷 `complete`，视觉收口提交 `352e63d`。
+- 本批题面/答案投影、简答、四版入口、20题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均通过。
+- 完整单元测试实跑 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q`：`Ran 1781 tests in 882.606s`，13 skipped、1 failure。唯一失败仍为跨卷缓存状态测试 `test_the_cached_states_match_the_recomputed_ones`，但本卷 `gk-2016-regular-zhejiang-science` 已成功闭环移出漂移名单，首项推进至下一批 phase2-b22（2016浙江文科 `gk-2016-regular-zhejiang-arts`）。
+- 下一批队列为 phase2-b22（2016浙江文科）；本轮只刷新并收口 b21，不提前开始下一批。b21 收口不代表2016年或1952–2026语料全部完成。
+
 ### 2016 山东文科：phase2-b20 过期投影刷新、四版构建与视觉复核重验（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-shandong-arts`，21题；固定题面 source `src-92fa540a5c2a79fc65e8dae18121e740b7400dffda8fa1f6f4902c1907e533fd`，PDF SHA-256 `a8a11b3efe18d0a484ccd6c8621fddd42d2a5e58b4eeaa6846c91b7224a71e72`，2页、原卷印刷页1013–1014。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。

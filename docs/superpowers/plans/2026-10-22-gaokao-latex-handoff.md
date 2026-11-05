@@ -4,19 +4,23 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase2-b17 2016 天津理科收口，下一批 phase2-b18
+## 2026-11-05 当前状态：phase2-b21 2016 浙江理科收口，下一批 phase2-b22
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b17 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。feature worktree 的 Git 管理目录记录创建时间为 2026-08-07，但 Git 不记录创建者；该工作目录按本项目既有规则承载指定 feature 分支。`main` 上用户已有的 `2026-midterm-my-answers.tex` 修改未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
-- 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。用户已选择 1995 上海文史/理科 Q2、Q4 恢复单行选项；此决定已落实在两个14页印刷版及对应回执中，不要误套到2016北京文科。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b21 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase2-b17
+### 最近完成：phase2-b21
 
-- `gk-2016-regular-tianjin-science`，20题；固定题面 source `src-b234202a2ba49eaa8c1a881cdd98336816e77c83a73dfc3d2cb077d8f44a4dd6`，固定 PDF SHA-256 `f636ae4f12cc458b39a6a1e4db5de651afe8bd82ccf60e6828fad935a869111b`、2页、印刷页1023–1024。来源只含题面；答案和解析为独立编者推导、非官方；无 issue。此前 Q15(2) 区间盲核已裁正，Q4 框图双菱形双汇入结构已记入 manifest，本阶段未改事实源、答案/解析或逐题 provenance。
-- 生成 TeX 投影提交 `67f5f849`，四版正式构建提交 `289f279a`。build attempt `b0d7c9f1-5742-47c8-8c3a-75abf63911cc`，输入 manifest revision 6323；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为6/23/8/17页，共54页；PDF SHA-256 依次为 `b8da41e959e7211e431862696c08acc2549158ef15f8d13676ca28d5426af96a`、`3bbc32dba34464c1d6fef347080f20d1c643c42b5cf51191f229aaac37cd2e75`、`6dac7e5f295291f9b9017b25f5de84ac8cece13e57d9047752c3600e5d8b286c`、`b7a309ed9d9bbd4a067ce5a7deebd47eb13e754370f4a8458c348a677cf566b3`。
-- 54页八类视觉检查432项：366 pass、66 not_applicable（31项无图、35项无选择题选项）、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6325，batch `closed`、paper `complete`、无 issue。两份初审报告称多页页眉/题号贴顶；主会话逐图核对本次构建 PNG，确认页眉文字、横线、页码和顶部留白均正常，未按误报改版。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均通过。
-- 完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1781 tests in 729.183s`，13 skipped、1 failure。唯一失败仍为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，有21项其他卷缓存状态漂移；首项已推进到 phase2-b18 `gk-2016-regular-tianjin-arts`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷缓存。`generate_projects.py --all --check` 当前有26个 TeX 投影不同步，下一批 phase2-b18（2016天津文科）；用户要求完成一批后停工，本轮止于 b17。
+- `gk-2016-regular-zhejiang-science`，20题；固定题面 source `src-44a16a20fae82c0cb6461848d1d9d8ed36a2759ca1d748e965bbd5605e9db0a5`，固定 PDF SHA-256 `3f243e53bb72fc5e207e69071d91702d836e12026188fd65c552dd648de37e06`、2页、原卷印刷页1027–1028。来源仅含题面；答案和解析为独立编者推导、非官方（等级 D）；无 issue。
+- 生成 TeX 投影提交 `10992af`，四版正式构建提交 `9ac3599`。build attempt `e6994a29-5b50-4a0d-ba97-3deb94619210`，输入 manifest revision 6336；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为 5/21/7/16 页，共49页；PDF SHA-256 依次为 `158b6bab8090cac7b9f9318e20cf97bffc4b8ae4473a58512e275b3a221a4cbf`、`5e677f1d0725c8673b1c8361dcae20469af4833966531de4571a0521243d7b4e`、`006ba03528d69207ce10b9d402387a6b91d5c213b1dad873f99b0460f9fb774c`、`dfd3086ed1aabf6b9232ee3a528ea8b099b5415ce414936f709d937e5428b15d`。
+- 49页八类视觉检查392项：307 pass、85 not_applicable、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6339，batch `closed`、paper `complete`、无 issue。视觉收口提交 `352e63d`。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均通过。
+- 完整测试 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q`：`Ran 1781 tests in 882.606s`，13 skipped、1 failure。唯一失败仍为跨卷缓存状态测试 `test_the_cached_states_match_the_recomputed_ones`，首项已推进至下一批 phase2-b22 `gk-2016-regular-zhejiang-arts`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷缓存。`generate_projects.py --all --check` 当前有18个 TeX 投影不同步，下一批 phase2-b22（2016浙江文科）。
+
+### 之前完成：phase2-b20 至 phase2-b17
+
+- 均已收口（包含2016山东文科 b20、山东理科 b19、天津文科 b18、天津理科 b17）。各批详情参见 `PROGRESS.md`。
 
 ### 之前完成：phase2-b16
 
