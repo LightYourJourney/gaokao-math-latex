@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 山东理科：phase2-b19 过期投影刷新、四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-shandong-science`，21题；固定题面 source `src-c45643782e80a9e1c992d47704ba32bdac2a07fce3acc8f067d67b85d524aee8`，PDF SHA-256 `e89ce45d9502c6dc5883648fc9b19332e5a4d6066f72401c0d7c80dec8175ae9`，2页、原卷印刷页1011–1012。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- b18 后的全库投影检查发现本卷 `questions.tex`、`answers.tex` 过期。本阶段只用生成器刷新这两个投影，布局调整为结构化选项；题干、选项文字及顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `026d447a`；正式构建提交 `e4188762`。
+- 正式 build attempt `3d4aa697-7c48-40bb-b721-cec990ac257a`，输入 manifest revision 6329；finalizer 后 revision 6331。试题/解析/简答/印刷版分别 5/22/7/19 页，共53页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `422d19a1e7f7abef2b53ce01b4e6e1bec0933aa8d6d60d364f5bf1365305c410`；解析 `e1c84926ee955e05827cbcf0b4935aa26ee448471ac1a2cde85f401eb5667a8e`；简答 `7b0c11e528d5805636d678b7d4ea50301aa29586cc388f82da7edb2cddc6f246`；印刷 `f66c289d7223163fb0fea2f721cfb44c6e2778cc6a5840e206108ebdabe9158`。
+- 当前 attempt 的53页均完成八项视觉检查，共424项：395 `pass`、29 `not_applicable`、0 `fail`、0 pending。初审对个别续页页眉的疑虑经对照本 attempt 原始 PNG 全尺寸复核，确认页眉与页码存在并修正回执；无视觉问题。`finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `complete`、无阻塞，报告见 `reports/phase2-b19.md`。
+- 本批题面/答案投影、简答、四版入口、21题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均通过。全量单元测试本轮未重跑；此前 b18 登记的跨卷缓存状态失败不作为本轮测试结论，待后续全库测试重新确认。模型/token 成本不可见，记未知。
+- 下一批队列为 phase2-b20（2016山东文科）；本次只收口 b19，不提前开始下一批。b19 收口不代表2016年或1952–2026语料全部完成。
+
 ### 2016 天津文科：phase2-b18 四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-tianjin-arts`，20题；固定题面 source `src-3550b3431ddf3fa2c508a3701034b9d01435e13701fd2209a98a43f047b2d841`，PDF SHA-256 `5453505cadbe42aef85a3f8089bb10128f53fa755d5ecc3afdc96bf835cb43a0`，2页，Git blob `de8a81c7e41013835fd732f3b69a9957628b327e`，上游 `普通高考/2016/2016天津文.pdf`。固定来源仅含题面；答案与解析为独立编者推导、非官方（等级 D），无 issue。源文第3题印作「长方形」（疑指长方体），按固定来源照录并保留待核注记；Q16 斜线表头表格使用 TikZ，未改事实层、答案解析或逐题 provenance。
