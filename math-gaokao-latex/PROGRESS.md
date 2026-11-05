@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 山东文科：phase2-b20 过期投影刷新、四版构建与视觉复核重验（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-shandong-arts`，21题；固定题面 source `src-92fa540a5c2a79fc65e8dae18121e740b7400dffda8fa1f6f4902c1907e533fd`，PDF SHA-256 `a8a11b3efe18d0a484ccd6c8621fddd42d2a5e58b4eeaa6846c91b7224a71e72`，2页、原卷印刷页1013–1014。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- b20 曾于2026-10-09收口（旧 build attempt `9a259456-a222-471b-a58e-335e19a0a04d`），但当前生成器检查发现 `questions.tex`、`answers.tex` 投影已过期，旧回执与当前投影不再形成有效闭环。仅按确定性生成器刷新选项布局；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `bf96323`。
+- 正式 build attempt `c90d427e-19f9-47dd-90ec-127470e157c6`，输入 manifest revision 6332；首次视觉 finalize 后 revision 6334，修正末页视觉证据备注后 report-only finalize 至 revision 6335。试题/解析/简答/印刷版分别 6/22/8/18 页，共54页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。构建提交 `6aaf487`。PDF SHA-256：试题 `a7274fe48a36643b00b15736f29740d50e569a75ca98aee4c737ed3727c7d701`；解析 `a24cd6311e8926da44fa7c4c0ba5350e24676243b2bd76f1cd00dd119f428bbe`；简答 `24e09180b8bd3523f1529cc170dadafbac155070c53fb6406748499f5a413b24`；印刷 `fb6137e34a8991be336f2d4c7b99e784da576b85fbd29cefc7e989d270db28da`。
+- 当前 attempt 的54页均完成八项视觉检查，共432项：402 `pass`、30 `not_applicable`、0 `fail`、0 pending。印刷版末页仅有第21题两个答案框：页面正文延至 y=116.5 pt/841.89 pt，约86%留白；前页解析正文已延至 y=779.5 pt/841.89 pt。确认答案完整且无法在前页容纳，按终页收束记录为 `pass`，具体数据已写入 review receipt。`finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `complete`，视觉收口提交 `358d58b`。
+- 本批题面/答案投影、简答、四版入口、21题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均通过。全量单元测试本轮未重跑。三名 Luna/high 子代理分别检查解析、简答、印刷版，token/费用不可见，记未知。
+- 下一批队列为 phase2-b21（2016浙江理科）；本轮只刷新并重验 b20，不提前开始下一批。b20 收口不代表2016年或1952–2026语料全部完成。
+
 ### 2016 山东理科：phase2-b19 过期投影刷新、四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-shandong-science`，21题；固定题面 source `src-c45643782e80a9e1c992d47704ba32bdac2a07fce3acc8f067d67b85d524aee8`，PDF SHA-256 `e89ce45d9502c6dc5883648fc9b19332e5a4d6066f72401c0d7c80dec8175ae9`，2页、原卷印刷页1011–1012。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
