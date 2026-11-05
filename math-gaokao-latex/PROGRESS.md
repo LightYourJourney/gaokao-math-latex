@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2017 上海普通卷：phase1-b50 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed`）
+
+- 对象：`gk-2017-regular-shanghai`，21题；固定题面 source `src-c3d312bc9f7e3c9febe5fe72352136e0d9b4db7d55986927da8fa8c6b6d510c4`，上游 `普通高考/2017/2017上海.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- 按确定性生成器同步 `questions.tex`、`answers.tex` 投影（题13–16选项改为结构化 `gkopts`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `3c49c72`。
+- 正式 build attempt `d5c92a90-445b-4c05-ac22-a5b16635c5dc`，输入 manifest revision 6354，构建提交 `0528f18`。试题/解析/简答/印刷版分别 5/19/7/15 页，共46页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。
+- 当前 attempt 的46页均完成八项视觉检查，共368项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6356，批次 `closed`、卷 `complete`，视觉收口提交 `67ebe51`。收口后工作树干净状态下的报告所有权状态刷新提交 `bd6aabe`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、21题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 下一批队列为 `2009_春季上海卷`（`phase1-b53`，待同步 2 项）或推进 2003 年上海卷；本轮收口 phase1-b50，不代表2017年或1952–2026语料全部完成。
+
 ### 2018 上海春考：phase1-b40 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
 
 - 对象：`gk-2018-spring-shanghai`，21题；固定题面 source `src-b19b233abb266d1b051ded3c332a399c1722d8192d07ce1bf2234dda57bd25bc`，上游 `上海春考/2018/2018上海春.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q17 $f(x)$ 题面未印出定义假设 blocker（ISSUE-1204，open / blocks_completion）。
