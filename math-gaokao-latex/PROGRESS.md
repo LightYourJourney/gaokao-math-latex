@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 天津文科：phase2-b18 四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-tianjin-arts`，20题；固定题面 source `src-3550b3431ddf3fa2c508a3701034b9d01435e13701fd2209a98a43f047b2d841`，PDF SHA-256 `5453505cadbe42aef85a3f8089bb10128f53fa755d5ecc3afdc96bf835cb43a0`，2页，Git blob `de8a81c7e41013835fd732f3b69a9957628b327e`，上游 `普通高考/2016/2016天津文.pdf`。固定来源仅含题面；答案与解析为独立编者推导、非官方（等级 D），无 issue。源文第3题印作「长方形」（疑指长方体），按固定来源照录并保留待核注记；Q16 斜线表头表格使用 TikZ，未改事实层、答案解析或逐题 provenance。
+- 投影提交 `b87edcbb`：只按确定性生成器将 Q1、Q2、Q4、Q7 的行内选项改为结构化选项，Q4 为单列；题干、选项文字和顺序未改。正式构建提交 `5c85513a`；build attempt `084721ab-b5db-4956-9ab4-c0b36e4352e7`，输入 manifest revision 6326，四版均 succeeded，无 errors、missing characters、overfull、undefined references 或 problems。试题/解析/简答/印刷版页数为 `5/23/7/18`，共53页。PDF SHA-256：试题 `b99266f9d36571916c7e578be85263836ad7e9a1c0d2ea996a3d9675dad3620a`；解析 `008316718dc5255d8c5563c8ceb4b4c17b7d2cef7576e3e5ed9f74c26fadf374`；简答 `9b647181b13ff9abe8c4fd75f8739de8ed52adc720c7aacf5f250786a72fb809`；印刷 `531545f3f46c55bca56b18cc24a08134c331d16d6b9010308b9bce220d6046b4`。
+- 新 attempt 的53页均完成八项视觉检查，共424项：335 `pass`、89 `not_applicable`、0 `fail`。三名 Luna/high 代理分别检查解析版、简答版和印刷版；初审把部分续页页眉、上边距及印刷版答案附录误报，主会话打开同一 attempt 的全页 PNG 后逐项复核并撤回误报，确认页眉/页码齐全，印刷版模板本来包含“参考答案与详细解析”附录；印刷版第2页留白较多但题块完整、分页自然。代理 token 与费用不可见，记未知。`finalize-batch` 返回 `FINALIZED`，manifest revision 6328；批次 `closed`、卷 `complete`、无阻塞。视觉收口、回执和报告投影提交 `eca9943d`，报告见 `reports/phase2-b18.md`。
+- 本批 build/review currentness、review `check-batch`、provenance、题面/答案生成器、简答生成、四版入口、20题 solution sources、source manifest、issues、全量 report render/check 及 `manifest.csv`（775行）currentness 均通过。完整单测 `python3 -B -m unittest discover -s tests -q`：`Ran 1781 tests in 713.776s`，13 skipped、1 failure；唯一失败仍是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，跨卷缓存状态漂移19项，首项为下一批 `gk-2016-regular-shandong-science`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷状态。`generate_projects.py --all --check` 仍有24个过期 TeX 投影，首项为 phase2-b19 的2016山东理科；下一批按当前队列先处理该卷。
+- b18 收口不代表2016年或1952—2026题库全部完成。继续前仍须确认规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 与工作树状态；本次没有新建或删除 worktree，也没有 push。
+
 ### 2016 天津理科：phase2-b17 四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-tianjin-science`，20题；固定题面 source `src-b234202a2ba49eaa8c1a881cdd98336816e77c83a73dfc3d2cb077d8f44a4dd6`，PDF SHA-256 `f636ae4f12cc458b39a6a1e4db5de651afe8bd82ccf60e6828fad935a869111b`、2页，印刷页1023–1024。manifest 注明固定源仅含题面，答案/解析为独立推导、非官方（等级 D）；本卷无 issue。此前已完成 Q15(2) 区间盲核裁正和 Q4 框图结构说明，本阶段没有更改事实源、答案解析或 provenance。
