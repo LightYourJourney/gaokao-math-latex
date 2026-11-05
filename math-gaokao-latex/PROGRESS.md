@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 四川文科：phase2-b16 四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-sichuan-arts`，21题；固定题面 source `src-18b75fe448bbe7811db6e6ba5fc5130b950fc40ba251c916bdbf940647ce5ac4`，manifest 记录 PDF SHA-256 `7bdfb3dd1a6547dea9e5e372f2538604a37fe44c5a4342f17367d5d035fff19f`、2页、印刷页1021–1022。原 PDF 当前不在 worktree/HEAD，故本阶段依据已登记来源元数据和现存事实源完成工作，未声称重新对照原 PDF。来源仅含题面，答案/解析为独立推导、非官方；题面转录疑点仍按 manifest 注记保留。
+- 正式 build attempt `6bbc0630-56ae-4720-912f-618874c191e1`，输入 manifest revision 6320，四版均 `succeeded`，页数为试题/解析/简答/印刷 `5/23/7/18`，共53页；PDF SHA-256：试题 `4acbd5f49ff2172f45db5086587489058b28600e9ec5d09ff726fdc76e2df575`、解析 `2d73d5f5558b2927f6e46a49fd7337b53dc0f2d477d7e13f6a631eed890d083a`、简答 `f87230a4152da2343af4b05c276f84fa1baf03f3ffc466062b1241e954430435`、印刷 `f412de7faf51e4882c33ebb33513656085c3187231f58a8b1e34cb27abe3a125`。构建 problems/warnings 均为空。
+- 四版53页完成424项视觉检查：384 `pass`、40 `not_applicable`（无图页）、0 `fail`。`review_receipts.py finalize-batch` 返回 `FINALIZED`，manifest revision 6322；batch `closed`、paper `complete`、无问题。当前 build/review receipts、provenance、题面/答案 TeX、简答、四版入口和21题 solution sources 检查通过。全量 report render/check 通过，`manifest.csv` 当前775行。
+- 完整单测 `python3 -B -m unittest discover -s tests -q`：`Ran 1781 tests in 729.733s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告23卷 `production_state` 缓存与现场派生状态不一致，首项为 `gk-2016-regular-tianjin-science`（缓存 `complete`、派生 `answers_verified`）；不是 b16 局部门禁失败，尚未批量改写这些缓存。
+- b16 收口不代表四川卷或1952—2026总库全部完成；下一项以 live 生成检查及 manifest 队列为准，继续处理 phase2-b17 的陈旧投影/回执。
+
 ### 2016 北京文科：phase2-b13 四版构建与视觉审查收口（2026-11-05；`closed_with_blockers`）
 
 - 对象：`gk-2016-regular-beijing-arts`，20题；固定题面 source `src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf`，PDF SHA-256 `f25691253d50ee9aae94243518695e8e7793e32e4b3f22077c9bf6407272d89e`，印刷页995–996。固定源仅含题面，答案/解析为独立编者推导、非官方；Q8 答案歧义继续保留 `U`，不猜测选项。

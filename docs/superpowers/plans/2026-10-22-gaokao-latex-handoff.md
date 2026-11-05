@@ -4,14 +4,20 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase2-b13 2016 北京文科收口，下一批先处理 phase2-b15/b16 陈旧投影
+## 2026-11-05 当前状态：phase2-b16 2016 四川文科收口，下一批 phase2-b17
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；本轮起点 HEAD 为 `c20f875`，之后按阶段提交。本轮 `git worktree list` 仅有既存的 `主工作树`（`main`）和规范 feature worktree，没有新建 worktree；对 `原仓库` 的检查为只读。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b16 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 仍只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新建 worktree；`main` 上用户已有的 `2026-midterm-my-answers.tex` 修改未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。用户已选择 1995 上海文史/理科 Q2、Q4 恢复单行选项；此决定已落实在两个14页印刷版及对应回执中，不要误套到2016北京文科。
 
-### 最近完成：phase2-b13
+### 最近完成：phase2-b16
+
+- `gk-2016-regular-sichuan-arts`，21题；source `src-18b75fe448bbe7811db6e6ba5fc5130b950fc40ba251c916bdbf940647ce5ac4`，manifest 记录 PDF SHA-256 `7bdfb3dd1a6547dea9e5e372f2538604a37fe44c5a4342f17367d5d035fff19f`、2页。原 PDF 当前不在 worktree/HEAD；本次未声称重新核对原 PDF。答案解析为非官方独立推导，题面疑点照 manifest 注记保留。
+- build attempt `6bbc0630-56ae-4720-912f-618874c191e1`，输入 manifest revision 6320，四版页数5/23/7/18，共53页。四版 PDF SHA-256 与逐页检查明细见 `math-gaokao-latex/2016_四川卷_文科/receipts/` 及 `reports/phase2-b16.md`。视觉检查424项：384 pass、40 not_applicable、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6322、batch `closed`、paper `complete`、无问题。
+- batch currentness、provenance、TeX/简答/四版入口生成、21题 solution sources、全量 report render/check、manifest CSV（775行）均通过。完整测试 `Ran 1781 tests in 729.733s`，13 skipped、1 failure：`test_the_cached_states_match_the_recomputed_ones` 报23卷缓存 `production_state` 漂移，首项 phase2-b17 `gk-2016-regular-tianjin-science`（缓存 complete、派生 answers_verified）；尚未修复或批量回写。
+
+### 之前完成：phase2-b13
 
 - `gk-2016-regular-beijing-arts`，20题；source `src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf`，固定 PDF SHA-256 `f25691253d50ee9aae94243518695e8e7793e32e4b3f22077c9bf6407272d89e`，印刷页995–996。固定源仅含题面，答案/解析为独立编者推导、非官方；Q8 的答案歧义仍标 `U`，ISSUE-1005 阻塞内容完成。
 - build attempt `961e27fb-5508-4457-ba18-e88b5dbe66f1`，输入 manifest revision 6312，build 后 6313，finalize 后 6314。试题/解析/简答/印刷版5/21/7/17页，共50页；均 succeeded，TeX errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：`6d2c5692ef44c5f00ccd41dcf0ff9119d1cf7701d84fd809ab6878a3871ef7b7`、`f0a9d823cb6e064cb4fcf58d81a8fafb0a12322868cf02933a33e58da6f617c7`、`564ca6b3777cd708ba5c551f55742dfdcf38e588e137b9a3c258b78f9ca3014e`、`f08fea745376bc49b88f18eb8cf1e62c8ef8e752c6f4c4b444ced3c7002d1bbf`。
@@ -19,9 +25,9 @@
 
 ### 当前门禁与接续
 
-- 最近完整测试 `Ran 1780 tests in 584.517s`，13 skipped、1 failure；唯一失败为全库缓存状态与现场 provenance 推导不一致，共27项，首项 `gk-2016-regular-sichuan-science`（缓存 `complete`、现场派生 `answers_verified`）。不要批量回写其他卷缓存。
-- `generate_projects.py --all --check` 尚有32个过期 TeX 投影；当前首批是 phase2-b15（2016四川理科）和 phase2-b16（2016四川文科）。phase2-b14 已 closed 且不在当前 stale 列表。下一步从 b15/b16 的生成 diff 开始，逐卷验证并分阶段提交，勿运行 `--all --write`。
-- 全量报告输出已由专用 CLI 刷新并通过 `report.py check --all`。本阶段批次专项 build/review currentness、provenance、solution sources、source manifest、issues 校验通过；单卷收口不代表1952—2026语料完成。
+- 最近完整测试 `Ran 1781 tests in 729.733s`，13 skipped、1 failure；唯一失败为全库23卷缓存状态与现场 provenance 推导不一致，首项 phase2-b17 `gk-2016-regular-tianjin-science`（缓存 `complete`、派生 `answers_verified`）。先只读审计状态派生规则，再决定如何修复；不要机械批量覆盖缓存。
+- `generate_projects.py --all --check` 当前有28个过期 TeX 投影；首批为 phase2-b17（2016天津理科），随后 phase2-b18（2016天津文科）。phase2-b15、b16 已关闭。下一步只处理 b17 并逐阶段提交，勿运行 `--all --write`。
+- 全量报告输出已由专用 CLI 刷新并通过 `report.py check --all`，`manifest.csv` 为当前775行。本阶段批次专项 build/review currentness、provenance、solution sources、source manifest、issues 校验通过；单卷收口不代表1952—2026语料完成。
 - 全项目继续按小阶段提交并在阶段间保持工作区干净；不要把单卷或某一批写成1952—2026全库完成。
 
 ## 2026-11-05 历史快照：phase1-b46 2006 安徽理科（批次已结案，阻塞保留）
