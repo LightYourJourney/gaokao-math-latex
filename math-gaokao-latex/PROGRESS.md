@@ -14767,3 +14767,11 @@
 - 新刷新的164页完成逐页八项视觉复核，共1,175项 `pass`、137项 `not_applicable`、0项 `fail`；全国Ⅱ理科既有56页审查保持当前并复用。全国Ⅰ文科初审的14项页眉/顶部空白疑点由主会话逐张检查原尺寸 PNG 后更正为通过；全国Ⅱ文科的“题目见第N页”是独立页码提示行，不构成题号碰撞。没有把缩放预览误差或页码提示写成版面失败。
 - `review_receipts.py finalize-batch` 返回 `FINALIZED`，manifest revision `6296`，批次仍为 `closed_with_blockers`：全国Ⅱ文科为 `eligible_complete`；另三卷仍受 ISSUE-0931–0936 阻塞，官方答案未获认证。批次范围的生成器、答案层、edition、provenance、receipt 与 issues 校验通过；全库报告投影已刷新，`report.py check --all` 通过。
 - 阶段提交：`536e113c`（确定性 TeX 投影）、`03a2d0fe`（正式构建回执）、`1813bed3`（视觉复核与批次封账）、`729fc4d4`（全量状态报告）。其后 `generate_projects.py --all --check` 的只读复查发现另有47个过期 TeX 投影、分属22个既有批次；尚未改写这些卷，须按 manifest 批次逐组处理。该检查不改变论文事实或未解决状态，也不表示其余语料完成。
+
+### 2017 全国Ⅱ/Ⅲ卷文理四卷（phase2-b07）：四版构建与视觉封账（2026-11-05）
+
+- 对四卷确定性 TeX 投影、四版构建和回执进行阶段化提交：TeX 投影 `4a30f330`，正式构建回执 `957371c1`。当前构建 attempt 分别为全国Ⅱ文科 `fce5251c-9a71-4e4e-b41f-fca80eab8b4c`、全国Ⅱ理科 `5991b09e-9ea2-4a63-80f1-b40e26ffb7d2`、全国Ⅲ文科 `4836d6b3-7aee-404a-b5e6-ef5271b4450e`、全国Ⅲ理科 `844af7be-66ce-481e-9754-e41b520688cc`。四版页数依次为6/21/8/15、5/20/7/15、5/20/7/16、5/20/7/15，共192页。
+- 完成192页、每页八项检查：1,427项 `pass`、109项无图页面 `not_applicable`、0项 `fail`。全国Ⅱ理科代理初审的32项页眉、页首留白、选项间距疑点，经主会话对16张原尺寸 PNG 逐页复核均为误报；正式工作项已写入具体复核依据。四份 review receipt 均绑定当前 build attempt 和 PDF SHA。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`、manifest revision 6299、批次 `closed_with_blockers`；封账提交 `dd89af1`。全国Ⅱ文科 Q17（`ISSUE-0952`、`ISSUE-0954`）有两个满足固定题面的公比/答案分支；全国Ⅲ理科 Q20（`ISSUE-0953`、`ISSUE-0955`）有两组满足题面的直线/圆解。均保留 `U/PENDING` 与 `blocks_completion`，未选定单一答案。全国Ⅱ理科与全国Ⅲ文科内容候选为 `eligible_complete`。
+- 批次 build/review receipts、provenance、题解来源、确定性题卷/简答/版本壳、source manifest、issues 与 775 行 CSV 校验通过；全量六个报告投影刷新后 `report.py check --all` 通过。批次范围校验没有修改题面、答案或解析事实层。
+- 全量测试 `python3 -B -m unittest discover -s tests -q` 实跑 `Ran 1780 tests in 585.447s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_the_cached_states_match_the_recomputed_ones`；`provenance.py check-all` 明列35个历史 paper/batch 缓存状态与现场派生值不一致，`phase2-b07` 不在其中。状态核对命令为只读；本批未手改这35项历史状态。全库生成 currentness 复查现有41个过期 TeX 文件、22个项目目录、分属21个批次；phase2-b07 已完全从过期清单消失。下一批从 `phase2-b08` 的2017天津理科投影和历史状态核验继续。该进度仅覆盖 phase2-b07，不表示2017年全部或1952–2026题库完成。
