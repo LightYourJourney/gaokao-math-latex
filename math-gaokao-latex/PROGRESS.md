@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2004 上海文科：phase4-b45 四版构建与视觉复核刷新（2026-11-05；`closed_with_blockers`）
+
+- 对象：`gk-2004-regular-shanghai-arts`，22题。本阶段只重建正式 PDF 并刷新视觉审查回执；规范题面、答案/解析事实、来源和逐题 provenance 未改。正式 build attempt `2990be7e-ea1b-4767-a61a-b24cb8827f76`，build 输入 manifest revision 6287，finalizer 后 revision 6289；试题/解析/简答/印刷版分别 5/24/7/19 页，共55页。PDF SHA-256：试题版 `921cc622cf13b1829da614a05133e29ae8cb1c313a382aab2932aedc524f5a08`；解析版 `d9f865d8cbd198176698ee4a3c09adec23fe78ae41bd450b1d1e1f4d7c1da721`；简答版 `d5b37f29f90cb3c9c5167b5ef31b744c625dcc23251f9b5d8339b3662a05e20d`；印刷版 `799bb89d021720863d98aa56dab1a237c15a7605f07c715f4b775ae2ca498968`。
+- 四版55页均完成八类视觉检查，共440项：385 pass、55 not_applicable、0 fail。7条 Overfull 警告（试题1、解析3、简答1、印刷2）均已在对应页逐条复核并录入匹配豁免。初审对页眉的缺失判断与实际页面图像不符；复核全部24页解析版页眉拼图及试题版第2/5页，确认卷名、版本名、页眉线均存在，并更正回执。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，review `passed`、batch `closed_with_blockers`、内容候选 `eligible_blocked`；Q17 的 ISSUE-1384 与 Q19(2) 的 ISSUE-1385 仍 open，答案/条件继续保留 U/PENDING，不据此推断官方答案。回执 currentness、provenance、项目/简答/版本壳生成检查、solution sources、source manifest、issues 验证均通过；全量报告投影经 `report.py render --all` 刷新后，`report.py check --all` 通过。
+- 完整测试 `python3 -m unittest discover -s tests`：`Ran 1780 tests in 583.048s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，列出40卷缓存状态与现场派生状态不符，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、派生 `answers_verified`）。上一批为41项；本批 finalizer 只派生本批状态，未批量改写其余卷。
+- 本批收口不代表全库或1952—2026语料完成。后续先处理40项缓存状态差异，再按已记录的年代分段继续；模型 token/费用不可见，记未知。
+
 ### 2006 江西、浙江、湖北理科：phase1-b70 四版复核刷新与收口（2026-11-05；`closed_with_blockers`）
 
 - 对象：`gk-2006-regular-jiangxi-science`、`gk-2006-regular-zhejiang-science`、`gk-2006-regular-hubei-science`。复建 build attempt 分别为 `2d9485cd-4479-46c1-b312-0802f8962c25`、`20b87741-0935-4661-a394-58485133f2f0`、`892fcbf1-5d25-4280-b600-6fbee394423c`；四版页数分别为 6/21/8/16、5/18/7/14、5/19/7/15，共 141 页。三卷 review 均 `passed`，逐页完成 1128 项视觉检查，无视觉失败；6 条构建警告均有对应豁免并复核。
