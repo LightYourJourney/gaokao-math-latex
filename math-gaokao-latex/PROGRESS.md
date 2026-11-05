@@ -4,6 +4,16 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2018 北京理科：phase0-b08 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
+
+- 对象：`gk-2018-regular-beijing-science`，20题；固定题面 source `src-c977114df3ea58ee0faec18353381e4b8a19280d465355a6bfcfb160b86a34dc`，上游 `普通高考/2018/2018北京理.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q16 三棱锥/三棱柱术语冲突 blocker（ISSUE-1319 / ISSUE-1320，open / blocks_completion）。
+- 按确定性生成器同步 `questions.tex`、`answers.tex` 投影（题1、2、3、4、5、7选项改为结构化 `gkopts`，Q20标点替换为 `\mbox{。}`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `34a554b`。
+- 正式 build attempt `8a40ba4a-b4a3-4efe-9e58-a25063413515`，输入 manifest revision 6366，构建提交 `c6c055c`。试题/解析/简答/印刷版分别 4/20/6/15 页，共45页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0，4处 Underfull 告警逐项核实并记录豁免。
+- 当前 attempt 的45页均完成八项视觉检查，共360项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6368，批次 `closed_with_blockers`、卷 `blocked`，视觉收口提交 `87c8a6a`。收口后工作树干净状态下的报告所有权状态刷新提交 `28a8133`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、20题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 全量 `generate_projects.py --all --check` 实测通过：**421套试卷全部与生成结果 100% 一致（待同步队列全部清零）**！
+- 下一批队列为推进 2003 年上海卷或待转录真题卷；本轮收口 phase0-b08，不代表2018年或1952–2026语料全部完成。
+
 ### 2018 北京文科：phase0-b07 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
 
 - 对象：`gk-2018-regular-beijing-arts`，20题；固定题面 source `src-cbf85d953fbda48fca7f79493f3c4db5e6db9a35e40e6945037ae6ba69bfaf22`，上游 `普通高考/2018/2018北京文.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q9 冲突 blocker（ISSUE-1316 / ISSUE-1317，open / blocks_completion）。
