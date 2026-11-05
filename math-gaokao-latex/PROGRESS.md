@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 北京理科：phase2-b12 四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-beijing-science`，20题；固定题面 source `src-03d7f3c6d16a4450d2a52c5514e867a9337005032fbdd6dee4d6cf3804ba11c2`，PDF SHA-256 `9be74675257a9c576c925b30d079b06834f2ea7fef941acafdbed8a816cc9aa9`，印刷页993–994。固定源没有答案页；答案和解析为独立编者推导、非官方，来源发布链和官方身份未认证。
+- 修订 Q5 解析，明确递减函数为 `g(t)=(1/2)^t`，去掉无效反例 `x=y=1/2`，保留有效反例 `x=1.1,y=1`。随后同步生成的 `questions.tex`、`answers.tex` 与 `_含解析.md`；确定性检查共20题通过，未把编者答案标成官方答案。
+- 正式 build attempt `d20cdc01-f7d4-4f00-80de-93071abaebef`，输入 manifest revision 6309，完成 review/finalize 后 revision 6311。试题/解析/简答/印刷版为5/21/7/17页，共50页，四版 succeeded；TeX errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `ea9023a8650c10c29887bfd5f5611bb82f4f3f077fa9618dd94b12967d65b220`；解析 `72aa3de448451fd60b98e1775cbb8dcfb982104ade696c4e7ed29b68d2524d18`；简答 `ab2197a108d9e1bddf8d978748ebc53506c2309fb3fc71aea7b2f04d96eb8b82`；印刷 `fb0a9132b49b4b41df476d32799e065df434a7a1a804d037e35ccf02f27eecd0`。
+- 四版50页全部复核，八类共400项：395 `pass`、5 `not_applicable`、0 `fail`。`finalize-batch` 返回 `FINALIZED`，批次 `closed`、paper `complete`、无阻塞。provenance、source manifest、issues、生成器、简答/版本壳、solution sources、本批 receipts 均通过；全量报告/CSV 投影已刷新并检查通过。
+- 全量测试最近一次实跑 `Ran 1780 tests`、13 skipped、1 failure；唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，当前列出28项跨卷缓存状态漂移，首项为 phase2-b13（缓存 `closed_with_blockers`、现场派生 `provenance_verified`）。本批 `provenance check-batch` 通过，未批量回写其他卷状态。当前 `generate_projects.py --all --check` 有34个过期 TeX 文件；下一批按当前队列为 phase2-b13（2016北京文科）。
+- 阶段提交：答案解析修正 `2ad760c`，TeX 投影 `d81d1cd`，含解析输出 `d558d45`，build `b27f258`，视觉结案 `2685db2`，全量报告投影 `a003f58`。本卷结案不表示2016年或1952—2026全库完成。
+
 ### 2016 全国Ⅲ卷文理科：phase2-b11 正式构建与四版视觉审查收口（2026-11-05；`closed_with_blockers`）
 
 - 对象：`gk-2016-regular-national-3-arts`（source `src-7b7f83ac42bfac1eb17a01ffcbd1dfe8b661bd4e91d6eaa50dbac5c98fe023d0`，PDF SHA-256 `d226bce4eb9076cace566fba1d9facc0a0007e40955b68875802bab1eab98e09`）与 `gk-2016-regular-national-3-science`（source `src-556d9ea992950bcd4952763e72a15a168bfe8a1928e42bf5d71bd2ddbacd3fe1`，PDF SHA-256 `a86ba3de1a6de798c7370e1b26a278c08d7d33d489184b6e12cf19c9af3dcb75`），各24题、固定 PDF 各2页。同步四个 generated `questions.tex`/`answers.tex` 后未改事实源、答案/解析或逐题 provenance。
