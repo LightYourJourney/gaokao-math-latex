@@ -25,3 +25,10 @@
 - 固定副本转录保持忠实原样，答案继续 `U/PENDING`；`ISSUE-1219` 保持 `open` / `blocks_completion`，纸卷保持 `blocked`，`phase1-b46` 保持 `closed_with_blockers`。不改题面、答案、解析、逐题 provenance、manifest 或既有构建/视觉回执。
 
 本次只增加独立来源证据记录，不改变构建输入；既有四版构建 attempt `ecde5ad1-87ea-4cb1-91ba-07468dd1e3c8` 与52页视觉回执继续绑定原输入，不重建、不重审。本记录不表示本卷完成或 1952–2026 长期语料库完成。
+
+
+## 补记：Wayback 图片快照可直接读取（2026-11-05）
+
+- 复查此前“CDX 未找到 JPG 历史字节快照”的表述时，Wayback 图片回放端点成功返回图像：请求的 [EOL 第 1 页图像归档地址](https://web.archive.org/web/20060617071014im_/http://www.eol.cn/include/cer.net/gaokao/2006shiti/anhui/anhui_shuxuel1.jpg) 重定向到 [2006-06-19 图像捕获](https://web.archive.org/web/20060619144900im_/http://www.eol.cn/include/cer.net/gaokao/2006shiti/anhui/anhui_shuxuel1.jpg)，HTTP 200，image/jpeg，600×744。下载字节 SHA-256 为 4b670066dbb0c0f0b4e7281147f6b6003925df9223d29b7baee5a88be3d8f895，与上文本轮取得的 EOL 第 1 页图像哈希相同。故旧结论应限于此前 CDX 查询未列出 JPG 记录；不能再写成“没有历史图像捕获”。
+- 该捕获中的 Q3 仍可见椭圆式右端 =1。本补记只确认 EOL 图像回放端点能提供带 2006-06-19 捕获时间的图像字节；不证明 EOL 图像与固定两页 A3 副本同版、同底本或来自同一扫描链，也不认证官方原卷或官方答案。此次只核验第 1 页捕获，未据此声称第 2–4 页均有可用历史图像快照。
+- ISSUE-1219 继续 open / blocks_completion；固定副本转录不变，Q3 答案仍为 U/PENDING，试卷仍为 blocked。

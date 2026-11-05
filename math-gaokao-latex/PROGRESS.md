@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 安徽理科：确定性 TeX 同步、四版重建与视觉收口（phase1-b46，2026-11-05；批次 closed_with_blockers）
+
+- 对象：`gk-2006-regular-anhui-science`，22题。固定题面 `src-3aed0bc3d5875c8ce734b5b97f95992307ff56fc580067083caea214e3028675`，PDF SHA-256 `dfdf163d47fa3f279288d7000e2dfb729c7d412c64f4aa3b082d242f6ca2b093`，2页题面、印刷页码276–277，无答案页。题签、发布者、版次、来源链和官方身份未核；`official_answer=null`。
+- 生成阶段提交 `413d6ef1` 只把既有行内选项投影同步为当前生成器的结构化布局；题干、选项文字、数学内容和顺序未改，规范题面、答案、解析、图稿与逐题 provenance 未改。正式构建 attempt `336a9737-b4a0-43c9-95d0-7413e37280f7`，输入 manifest revision 6265，finalizer 后 revision 6267。试题/解析/简答/印刷版分别5/22/7/18页，共52页，均 succeeded。PDF SHA-256：试题 `c1df0cf3686405d832b132601d7e8d508cac5bf092396358345ad384aca3c04b`；解析 `594042a5dd76e165870dd76dc5aa08d360f6e148f20b6c43268a28ec807f2c5d`；简答 `fc5f3d144aedd6ec81ef104b268830a752de528ce4728d2ea8af37ff0587baf5`；印刷 `e63cd809174ddd7605bddb9c7903eaf308027252d095375c02906c1b8b9715c0`。PDF 文件 SHA 与前一 attempt 不同；Poppler 26.10.0、150 dpi 下四版52页的 PNG 字节均与前一已审 attempt 相同，因此继承该次实际逐页检查结论。
+- 52页八类视觉检查共416项：315 pass、101 not_applicable、0 fail（28项无题图、47项答案版的“答案泄漏”检查不适用、26项无选择题页面的选项对齐不适用）。四条 Underfull hbox（试题p2、解析p2及p12、简答p2）均逐项检查并在回执豁免；未发现视觉缺陷。`finalize-batch` 返回 `FINALIZED`，review passed、batch `closed_with_blockers`，paper 仍 `blocked`。
+- `ISSUE-1219` 仍为 `open / blocks_completion`：Q3 固定副本的椭圆式缺可见等号及右侧，答案保持 `U/PENDING`，未猜填。Wayback 复查发现可访问的 2006-06-19 EOL 第1页图像捕获，HTTP 200，600×744，SHA-256 `4b670066dbb0c0f0b4e7281147f6b6003925df9223d29b7baee5a88be3d8f895`；只核对了第1页，不能证明与固定两页 A3 PDF 是同版或同一来源链，故不解除 issue。详细过程见 `reports/2006-anhui-science-q3-source-recheck-2026-11-02.md`。
+- 本批 source manifest、issues、provenance、solution sources（22题）、生成器（本批 `--check`）、build receipt currentness（1 succeeded、0 pending/stale/invalid）、review `check-batch`（`FINALIZED`）均通过。全量 `report.py render --all` 与 `check --all` 通过，六个报告投影与 manifest 一致；`manifest.csv` 775行当前。全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 584.074s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，报告47项跨卷 paper/batch 缓存状态与现场派生不一致，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、派生 `answers_verified`）；本批单独 provenance 检查通过，不批量改写其他卷状态。模型/token 成本不可见，记未知。
+
 ### 2006 安徽文科：确定性 TeX 同步、四版重建与视觉收口（phase1-b45，2026-11-05；批次 closed_with_blockers）
 
 - 对象：`gk-2006-regular-anhui-arts`，22题。固定副本 `src-c8cc6985576733188a535d25ee781c6c6b1b8de19855999d38d24a0e053810a7`，2页 PDF SHA-256 `631bacb1145ada877f0a40867668cd12bda3caf399cdcacec6543c2829ac32fa`，印刷页码278–279，无答案页。发布者、版次、来源链和官方身份未核；`official_answer=null`。

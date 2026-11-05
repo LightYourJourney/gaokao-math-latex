@@ -4,7 +4,26 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase1-b42 2006 上海理科（批次已关闭）
+## 2026-11-05 当前状态：phase1-b46 2006 安徽理科（批次已结案，阻塞保留）
+
+### 工作位置与 Git
+
+- 只使用既有规范 worktree `仓库根` / `feat/gaokao-phase0`；未新建 worktree、未切 `main`、未 push。生成 TeX 阶段提交 `413d6ef1`，复核输入 build 阶段提交 `a773fa4`；本次视觉结案、报告投影、进度及交接记录为后续阶段提交。`主工作树` 是既有 `main` 工作树，本轮仅做过只读核查，没有改动。
+- 用户要求本批完成后停工：phase1-b46 收口后不开始下一批。提交后确认 `feat/gaokao-phase0` 工作区干净，并确认 worktree 列表未新增项。
+
+### Live manifest、来源与构建
+
+- manifest revision `6267`；`phase1-b46`=`closed_with_blockers`，`gk-2006-regular-anhui-science`=`blocked`。固定题面 source `src-3aed0bc3d5875c8ce734b5b97f95992307ff56fc580067083caea214e3028675` / SHA-256 `dfdf163d47fa3f279288d7000e2dfb729c7d412c64f4aa3b082d242f6ca2b093`，2页题面、印刷页码276–277，无答案页；题签、发布者、版次、来源链及官方身份未核，`official_answer=null`。
+- 本批仅同步确定性 TeX 选项投影，事实层题面、答案、解析、图稿和 provenance 未改。正式 build attempt `336a9737-b4a0-43c9-95d0-7413e37280f7`，输入 revision 6265、finalizer 后 revision 6267。试题/解析/简答/印刷版5/22/7/18页，共52页，均 succeeded。PDF SHA-256：试题 `c1df0cf3686405d832b132601d7e8d508cac5bf092396358345ad384aca3c04b`；解析 `594042a5dd76e165870dd76dc5aa08d360f6e148f20b6c43268a28ec807f2c5d`；简答 `fc5f3d144aedd6ec81ef104b268830a752de528ce4728d2ea8af37ff0587baf5`；印刷 `e63cd809174ddd7605bddb9c7903eaf308027252d095375c02906c1b8b9715c0`。文件级 PDF SHA 与前一 attempt 不同；以 Poppler 26.10.0、150 dpi 比较四版52页 PNG，全部字节相同，因此继承此前针对同图像页面完成的逐页检查结论。
+- 当前52页八类视觉检查共416项：315 pass、101 not_applicable、0 fail（28项无题图、47项答案版的“答案泄漏”检查不适用、26项无选择题页面的选项对齐不适用）。四条 Underfull hbox 位于试题p2、解析p2/p12、简答p2，均已视觉检查并豁免；未发现视觉缺陷。`finalize-batch`=`FINALIZED`，review passed，但 batch/paper 因来源问题仍阻塞。
+
+### 问题、校验与停止点
+
+- `ISSUE-1219` 仍 `open / blocks_completion`：Q3 椭圆式在固定副本中缺可见等号及右侧，答案继续 `U/PENDING`。Wayback 可访问 EOL 2006-06-19 第1页图像捕获（HTTP 200，600×744，SHA-256 `4b670066dbb0c0f0b4e7281147f6b6003925df9223d29b7baee5a88be3d8f895`）；仅核对此第1页，未建立与固定两页 PDF 的同版关系或来源链。具体证据见 `reports/2006-anhui-science-q3-source-recheck-2026-11-02.md`。
+- source manifest、issues、provenance、22题 solution sources、本批生成器检查、build currentness 和 review `check-batch` 均通过；全量报告 `render --all` / `check --all` 通过，manifest CSV 775行当前。全量测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 584.074s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones` 报47项跨卷 paper/batch 缓存与现场派生状态不一致，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、派生 `answers_verified`）；本批 provenance 检查通过，不批量刷新其他卷缓存。
+- 当前结案 commit 后以 live `git status --short --branch`、`git log -1 --oneline` 和 `git worktree list` 为准。此批结束后停止，不继续剩余队列；单卷结案不表示1952—2026全库完成。
+
+## 2026-11-05 历史快照：phase1-b42 2006 上海理科（批次已关闭）
 
 ### 工作位置与 Git
 
