@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2003 粤桂卷：phase4-b52 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
+
+- 对象：`gk-2003-regular-yuegui`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-b832b045aa19322b4da5d7657c59eb6e57247c15149902598f68b5af3c8c59ff`，上游 `普通高考/2003/2003广东,广西.pdf`（两页 A3 横向扫描件，印刷页码 147、148，纯题面无官方答案页）。
+- 原卷排印瑕疵核实与 Blocker 登记：Q10 设问求 $f(x)=\sin x, x\in[\pi/2, 3\pi/2]$ 的反函数，严格推导表达式为 $f^{-1}(x) = \pi - \arcsin x, x\in[-1, 1]$（对照同年度全国理科第 10 题选项 D 为 $\pi - \arcsin x$）。但在本卷排版印刷中，选项 (D) 误印为 $-\pi - \arcsin x$，与选项 (B) 完全重复且四个选项中无正确项。正式登记 ISSUE-1429（`answer-conflict`，open / blocks_completion），答案要点保留 U/PENDING。
+- 规范事实层建立：编写并落地四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2003-yuegui-source-intake.md`；重绘并挂接 5 张高保真 TikZ 矢量图（`f2003_yuegui_q1_lines.tex`、`f2003_yuegui_q16_map_regions.tex`、`f2003_yuegui_q17_prism.tex`、`f2003_yuegui_q20_typhoon.tex`、`f2003_yuegui_q21_rectangle_locus.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计：通过三角色共 66 条记录确定性导入，Q10 标记 conflict_status=unresolved 与 issue_ids=[ISSUE-1429]，提交事务推进至 manifest revision 6377。
+- 正式构建与视觉审查：build attempt `ea8c18c4-f4ef-4fe9-81fb-2aafc406a4e7`，试题/解析/简答/印刷版分别为 4/32/6/20 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`、卷 `blocked`，生成报告 `reports/phase4-b52.md`，manifest revision 推进至 6384。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 423 套试卷 TeX 投影 100% 一致通过。
+- 下一批队列：推进 2003 年剩余未映射独立卷（如江苏卷 `2003江苏.pdf`、河南卷 `2003河南.pdf`、辽宁卷 `2003辽宁.pdf`）或后续年份真题。
+
 ### 1998 全国文科：phase4-b51 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
 
 - 对象：`gk-1998-regular-national-arts`，25 题（选择 1–15、填空 16–19、解答 20–25）；固定来源 `src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5`，上游 `1998全国文.pdf`（单页 A3 横向扫描件，印刷页码 57，无官方答案页）。此卷为 1952–2002 年 50 年真题全库中唯一未映射真题卷，本批完成后 1952–2002 年真题实现 100% 完整覆盖。

@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-06 当前状态：phase4-b51 1998 全国文科收口，1952–2002 历史真题全量 100% 覆盖，422 套试卷 TeX 投影 100% 一致
+## 2026-11-06 当前状态：phase4-b52 2003 粤桂卷收口，全库 423 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b51 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b52 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b51
+### 最近完成：phase4-b52
 
-- `gk-1998-regular-national-arts`，25 题（选择 1–15、填空 16–19、解答 20–25）；固定来源 `src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5`，上游 `1998全国文.pdf`（单页 A3 横向扫描件，印刷页码 57，无官方答案页）。此卷为 1952–2002 年 50 年真题全库中唯一未映射真题卷，本批完成后 1952–2002 年真题实现 100% 完整覆盖。
-- 原卷排印瑕疵核实与 Blocker 登记：Q12（设问求点 $M$ 纵坐标，选项印刷为“7倍/5倍/4倍/3倍”）与 Q13（设问求球半径，选项印刷为“$\pm\sqrt3/4$、$\pm\sqrt2/2$、$\pm\sqrt3/2$、$\pm3/4$”）在中栏排版时整块对调互换，登记 ISSUE-1426 与 ISSUE-1427（`answer-conflict`，open / blocks_completion）；Q25(2) 常用对数 $\lg$ 条件残留理科底数 $a$ 死文字且比较项下标印刷笔误 $\frac12\lg b_n + 1$，登记 ISSUE-1428（`answer-convention-ambiguous`，open / blocks_completion）。答案和解析均为独立复算，答案要点保留 U/PENDING。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/1998-national-arts-source-intake.md`；重绘并挂接 5 张 TikZ 矢量图。
+- `gk-2003-regular-yuegui`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-b832b045aa19322b4da5d7657c59eb6e57247c15149902598f68b5af3c8c59ff`，上游 `普通高考/2003/2003广东,广西.pdf`（两页 A3 横向扫描件，印刷页码 147、148，纯题面无官方答案页）。
+- 原卷排印瑕疵核实与 Blocker 登记：Q10 设问求 $f(x)=\sin x, x\in[\pi/2, 3\pi/2]$ 的反函数，严密推导反函数表达式为 $f^{-1}(x) = \pi - \arcsin x, x\in[-1, 1]$（对照 2003 全国理科第 10 题选项 D 为 $\pi - \arcsin x$）。但在本卷排版印刷中，选项 (D) 误印为 $-\pi - \arcsin x$，与选项 (B) 字面完全重复，且四个选项中无一与正确反函数表达式匹配。正式登记 ISSUE-1429（`answer-conflict`，open / blocks_completion），答案要点保留 U/PENDING。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2003-yuegui-source-intake.md`；重绘并挂接 5 张高保真 TikZ 矢量图（Q1 直线、Q16 地图着色、Q17 正四棱柱、Q20 台风路径、Q21 矩形动点轨迹）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计：通过三角色共 75 条记录的确定性导入，Q12/Q13 标记 conflict_status=unresolved，Q25 标记 grade=U，提交事务推进至 manifest revision 6371。
-- 正式构建与视觉审查：build attempt `54d341ff-8716-4309-8dbf-28f81034b94c`，试题/解析/简答/印刷版分别为 4/29/6/24 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`、卷 `blocked`，生成报告 `reports/phase4-b51.md`，manifest revision 推进至 6374。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 422 套试卷 `generate_projects.py --all --check` 100% 一致通过。
-- 下一步推进 2003 年及后续待转录真题卷。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，Q10 标记 conflict_status=unresolved 与 issue_ids=[ISSUE-1429]，提交事务推进至 manifest revision 6377。
+- 正式构建与视觉审查：build attempt `ea8c18c4-f4ef-4fe9-81fb-2aafc406a4e7`，试题/解析/简答/印刷版分别为 4/32/6/20 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`、卷 `blocked`，生成报告 `reports/phase4-b52.md`，manifest revision 推进至 6384。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 423 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进 2003 年剩余未映射真题（如江苏卷 `2003江苏.pdf`、河南卷 `2003河南.pdf`、辽宁卷 `2003辽宁.pdf`）或后续年份真题。
+
+### 之前完成：phase4-b51
+
+- `gk-1998-regular-national-arts`，25 题；详情参见 `PROGRESS.md`。四版共 63 页，`FINALIZED`，已闭环（保留 blocker）。1952–2002 年 50 年真题实现 100% 完整覆盖。
 
 ### 之前完成：phase0-b08
 
