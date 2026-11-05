@@ -6,13 +6,13 @@
 - 来源状态：ready 775
 - 试卷总数：**421**；生产状态：blocked 109，compiled 3，complete 309
 - 批次总数：**267**；manifest 状态：closed 180，closed_with_blockers 86，compiled_pending_review 1
-- 正式复核门禁：FINALIZED 257，INVALID_OR_STALE 9，VISUAL_FAILED 1
+- 正式复核门禁：FINALIZED 258，INVALID_OR_STALE 8，VISUAL_FAILED 1
 - 已编译版本：1684/1684；构建回执状态：compiled_pending_review 4，succeeded 417
 - review 回执状态：failed 1，passed 420
 - 问题总账：1425 条，未解决问题：306，阻塞完成 245。
 - 回执日志警告汇总（包含待复核回执）：Overfull 37，Underfull 142，豁免记录 179。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
-- 门禁未通过批次：phase0-b02、phase3-b01、phase4-b12、phase1-b39、phase1-b40、phase1-b50、phase1-b53、phase4-b41、phase0-b07、phase0-b08。
+- 门禁未通过批次：phase0-b02、phase4-b12、phase1-b39、phase1-b40、phase1-b50、phase1-b53、phase4-b41、phase0-b07、phase0-b08。
 
 ## 交付物与校验
 

@@ -1,7 +1,7 @@
 {
   "batch_id": "phase3-b01",
-  "build_attempt_id": "c93f4923-a63c-4778-849c-0c5b089391c3",
-  "dependency_tree_sha256": "48bbcea8f684069cafe8ee362a935c498102542768ed7ef1eab735e00f8e41be",
+  "build_attempt_id": "f3ab7a95-cdb3-41eb-9dc4-aa7bb263679a",
+  "dependency_tree_sha256": "617e27be87ca667e4c36e978fa9c13f5a7ad10b4854f8a6658d3406d8003c3c6",
   "editions": [
     {
       "candidate_override": null,
@@ -334,7 +334,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "a7dc05e083e5453a01a584218d3f43486bcfa4925611abc90fcce0792afd59c9",
+      "pdf_sha256": "c70e81a494b5d4555e757278c53223f45158be94554ca816571379a816da3ff1",
       "result": "pass"
     },
     {
@@ -1542,7 +1542,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "0dcd14bb0debedb97e041be56f6570c85f3f2638113ef2c018ddedab659793fe",
+      "pdf_sha256": "c2bcb544c2c3f276bf1bccd0dd16b4241602cfc399c4f246e3a0e100e2d784e1",
       "result": "pass"
     },
     {
@@ -1968,16 +1968,16 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "66557a61269cb096b73aee0786c76f185d57cfc06daf3de3fdb4611fa002669c",
+      "pdf_sha256": "ac82e8ed24730e8f268694b49609e583f252b7cf099f7c9544c687f1e4428513",
       "result": "pass"
     },
     {
       "candidate_override": null,
       "candidate_pages": [
-        18
+        19
       ],
       "edition": "印刷版",
-      "page_count": 21,
+      "page_count": 22,
       "pages": [
         {
           "checks": [
@@ -2944,17 +2944,63 @@
           ],
           "page": 21,
           "result": "pass"
+        },
+        {
+          "checks": [
+            {
+              "check": "glyph",
+              "note": "字体完全嵌入，Missing character 0，Overfull 0，无替代字符",
+              "result": "pass"
+            },
+            {
+              "check": "heading_number",
+              "note": "第36题解答续排完整，序号小问标明，无重号跳号",
+              "result": "pass"
+            },
+            {
+              "check": "option_formula_alignment",
+              "note": "符合排版规范",
+              "result": "pass"
+            },
+            {
+              "check": "figure_label",
+              "note": "符合排版规范",
+              "result": "pass"
+            },
+            {
+              "check": "header_footer",
+              "note": "页眉「2016 年·春季上海卷·数学」「印刷版」，页脚页码——第 22 页——居中无偏差",
+              "result": "pass"
+            },
+            {
+              "check": "pagination_whitespace",
+              "note": "终页第36题最终答案收束，留白均衡，无孤行或公式折断",
+              "result": "pass"
+            },
+            {
+              "check": "font_size",
+              "note": "符合排版规范",
+              "result": "pass"
+            },
+            {
+              "check": "answer_leak",
+              "note": "符合排版规范",
+              "result": "pass"
+            }
+          ],
+          "page": 22,
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "2aaea881bc2697f72e5c7fa8c8c2556446d374eedb96b3241a98a4ef4ddafd36",
+      "pdf_sha256": "aa65d6a7fde40c28d2b10f01527644638682785082e915dc270bb3e0ce861e79",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "fc6866abd77e0254aff1013f6d5d07ebfd825de011a73b13d8a2873f70949b94",
+  "generation_input_tree_sha256": "8c94b4c568fd572372a61b88e3181874b2ffd82bb220c0a666371506d6329dd6",
   "input_projection": "7c53f6d37a9060b5eac17000d8f048e8ecc8934c3130b588e965238bfdc68473",
   "paper_id": "gk-2016-spring-shanghai",
   "project_dir": "2016_春季上海卷",
-  "reviewed_at": "2026-10-09T12:45:11+08:00",
+  "reviewed_at": "2026-11-06T01:31:38+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
