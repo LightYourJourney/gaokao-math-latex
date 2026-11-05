@@ -4,14 +4,21 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase2-b16 2016 四川文科收口，下一批 phase2-b17
+## 2026-11-05 当前状态：phase2-b17 2016 天津理科收口，下一批 phase2-b18
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b16 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 仍只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新建 worktree；`main` 上用户已有的 `2026-midterm-my-answers.tex` 修改未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b17 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。feature worktree 的 Git 管理目录记录创建时间为 2026-08-07，但 Git 不记录创建者；该工作目录按本项目既有规则承载指定 feature 分支。`main` 上用户已有的 `2026-midterm-my-answers.tex` 修改未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。用户已选择 1995 上海文史/理科 Q2、Q4 恢复单行选项；此决定已落实在两个14页印刷版及对应回执中，不要误套到2016北京文科。
 
-### 最近完成：phase2-b16
+### 最近完成：phase2-b17
+
+- `gk-2016-regular-tianjin-science`，20题；固定题面 source `src-b234202a2ba49eaa8c1a881cdd98336816e77c83a73dfc3d2cb077d8f44a4dd6`，固定 PDF SHA-256 `f636ae4f12cc458b39a6a1e4db5de651afe8bd82ccf60e6828fad935a869111b`、2页、印刷页1023–1024。来源只含题面；答案和解析为独立编者推导、非官方；无 issue。此前 Q15(2) 区间盲核已裁正，Q4 框图双菱形双汇入结构已记入 manifest，本阶段未改事实源、答案/解析或逐题 provenance。
+- 生成 TeX 投影提交 `67f5f849`，四版正式构建提交 `289f279a`。build attempt `b0d7c9f1-5742-47c8-8c3a-75abf63911cc`，输入 manifest revision 6323；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为6/23/8/17页，共54页；PDF SHA-256 依次为 `b8da41e959e7211e431862696c08acc2549158ef15f8d13676ca28d5426af96a`、`3bbc32dba34464c1d6fef347080f20d1c643c42b5cf51191f229aaac37cd2e75`、`6dac7e5f295291f9b9017b25f5de84ac8cece13e57d9047752c3600e5d8b286c`、`b7a309ed9d9bbd4a067ce5a7deebd47eb13e754370f4a8458c348a677cf566b3`。
+- 54页八类视觉检查432项：366 pass、66 not_applicable（31项无图、35项无选择题选项）、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6325，batch `closed`、paper `complete`、无 issue。两份初审报告称多页页眉/题号贴顶；主会话逐图核对本次构建 PNG，确认页眉文字、横线、页码和顶部留白均正常，未按误报改版。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均通过。
+- 完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1781 tests in 729.183s`，13 skipped、1 failure。唯一失败仍为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，有21项其他卷缓存状态漂移；首项已推进到 phase2-b18 `gk-2016-regular-tianjin-arts`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷缓存。`generate_projects.py --all --check` 当前有26个 TeX 投影不同步，下一批 phase2-b18（2016天津文科）；用户要求完成一批后停工，本轮止于 b17。
+
+### 之前完成：phase2-b16
 
 - `gk-2016-regular-sichuan-arts`，21题；source `src-18b75fe448bbe7811db6e6ba5fc5130b950fc40ba251c916bdbf940647ce5ac4`，manifest 记录 PDF SHA-256 `7bdfb3dd1a6547dea9e5e372f2538604a37fe44c5a4342f17367d5d035fff19f`、2页。原 PDF 当前不在 worktree/HEAD；本次未声称重新核对原 PDF。答案解析为非官方独立推导，题面疑点照 manifest 注记保留。
 - build attempt `6bbc0630-56ae-4720-912f-618874c191e1`，输入 manifest revision 6320，四版页数5/23/7/18，共53页。四版 PDF SHA-256 与逐页检查明细见 `math-gaokao-latex/2016_四川卷_文科/receipts/` 及 `reports/phase2-b16.md`。视觉检查424项：384 pass、40 not_applicable、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6322、batch `closed`、paper `complete`、无问题。
@@ -25,9 +32,9 @@
 
 ### 当前门禁与接续
 
-- 最近完整测试 `Ran 1781 tests in 729.733s`，13 skipped、1 failure；唯一失败为全库23卷缓存状态与现场 provenance 推导不一致，首项 phase2-b17 `gk-2016-regular-tianjin-science`（缓存 `complete`、派生 `answers_verified`）。先只读审计状态派生规则，再决定如何修复；不要机械批量覆盖缓存。
-- `generate_projects.py --all --check` 当前有28个过期 TeX 投影；首批为 phase2-b17（2016天津理科），随后 phase2-b18（2016天津文科）。phase2-b15、b16 已关闭。下一步只处理 b17 并逐阶段提交，勿运行 `--all --write`。
-- 全量报告输出已由专用 CLI 刷新并通过 `report.py check --all`，`manifest.csv` 为当前775行。本阶段批次专项 build/review currentness、provenance、solution sources、source manifest、issues 校验通过；单卷收口不代表1952—2026语料完成。
+- 最近完整测试 `Ran 1781 tests in 729.183s`，13 skipped、1 failure；唯一失败为全库21卷缓存状态与现场 provenance 推导不一致，首项 phase2-b18 `gk-2016-regular-tianjin-arts`（缓存 `complete`、派生 `answers_verified`）。先只读审计状态派生规则，再决定如何修复；不要机械批量覆盖缓存。
+- `generate_projects.py --all --check` 当前有26个过期 TeX 投影；下一批为 phase2-b18（2016天津文科）。phase2-b15 至 b17 已收口。不要运行 `--all --write`；先只检查并处理 b18，然后依照“干完一批先停工”停在该批结案。
+- 全量报告输出由专用 CLI 刷新并通过 `report.py check --all`，`manifest.csv` 当前775行。b17 批次专项 build/review currentness、provenance、solution sources、source manifest、issues 校验通过；单卷收口不代表1952—2026语料完成。
 - 全项目继续按小阶段提交并在阶段间保持工作区干净；不要把单卷或某一批写成1952—2026全库完成。
 
 ## 2026-11-05 历史快照：phase1-b46 2006 安徽理科（批次已结案，阻塞保留）

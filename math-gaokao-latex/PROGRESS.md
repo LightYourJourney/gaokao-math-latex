@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 天津理科：phase2-b17 四版构建与视觉审查收口（2026-11-05；`closed`）
+
+- 对象：`gk-2016-regular-tianjin-science`，20题；固定题面 source `src-b234202a2ba49eaa8c1a881cdd98336816e77c83a73dfc3d2cb077d8f44a4dd6`，PDF SHA-256 `f636ae4f12cc458b39a6a1e4db5de651afe8bd82ccf60e6828fad935a869111b`、2页，印刷页1023–1024。manifest 注明固定源仅含题面，答案/解析为独立推导、非官方（等级 D）；本卷无 issue。此前已完成 Q15(2) 区间盲核裁正和 Q4 框图结构说明，本阶段没有更改事实源、答案解析或 provenance。
+- 生成投影阶段提交 `67f5f849`，正式构建阶段提交 `289f279a`。build attempt `b0d7c9f1-5742-47c8-8c3a-75abf63911cc`，输入 manifest revision 6323；四版均 `succeeded`、无 errors/missing characters/overfull/undefined references/problems，页数试题/解析/简答/印刷为 `6/23/8/17`，共54页。PDF SHA-256：试题 `b8da41e959e7211e431862696c08acc2549158ef15f8d13676ca28d5426af96a`；解析 `3bbc32dba34464c1d6fef347080f20d1c643c42b5cf51191f229aaac37cd2e75`；简答 `6dac7e5f295291f9b9017b25f5de84ac8cece13e57d9047752c3600e5d8b286c`；印刷 `b7a309ed9d9bbd4a067ce5a7deebd47eb13e754370f4a8458c348a677cf566b3`。
+- 四版54页完成432项视觉检查：366 `pass`、66 `not_applicable`（无题图页31项、无选择题选项页35项）、0 `fail`。两份初审对多页页眉缺失/题号贴顶的报告与对应 attempt 的 PNG 不符；主会话对照原图确认页眉文字、横线、页码与顶部留白均正常，未据误报修改版式。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6325；batch `closed`、paper `complete`、无问题。build/review currentness、review `check-batch`、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、report render/check 与 manifest CSV（775行）均通过。
+- 完整单测 `python3 -B -m unittest discover -s tests -q`：`Ran 1781 tests in 729.183s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，跨卷缓存状态漂移21项，首项为下一批 `gk-2016-regular-tianjin-arts`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷缓存。`generate_projects.py --all --check` 有26个过期 TeX 投影，下一批 phase2-b18（2016天津文科）；本阶段不启动下一批。
+- 本批收口不代表2016年或1952—2026总库完成。视觉报告见 `reports/phase2-b17.md`，回执与当前 manifest 为审计依据。
+
 ### 2016 四川文科：phase2-b16 四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-sichuan-arts`，21题；固定题面 source `src-18b75fe448bbe7811db6e6ba5fc5130b950fc40ba251c916bdbf940647ce5ac4`，manifest 记录 PDF SHA-256 `7bdfb3dd1a6547dea9e5e372f2538604a37fe44c5a4342f17367d5d035fff19f`、2页、印刷页1021–1022。原 PDF 当前不在 worktree/HEAD，故本阶段依据已登记来源元数据和现存事实源完成工作，未声称重新对照原 PDF。来源仅含题面，答案/解析为独立推导、非官方；题面转录疑点仍按 manifest 注记保留。
