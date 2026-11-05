@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 上海春考：phase3-b01 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed`）
+
+- 对象：`gk-2016-spring-shanghai`，36题；固定题面 source `src-c045b144ef33dd49733a4697ff59196b6534572c68c34440529d280c0587289f`，上游 `上海春考/2016/2016上海春.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- 按确定性生成器同步 `questions.tex`、`answers.tex` 投影（选项改为结构化 `gkopts`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `aa1dca7`。
+- 正式 build attempt `f3ab7a95-cdb3-41eb-9dc4-aa7bb263679a`，输入 manifest revision 6342，构建提交 `2f69fa7`。试题/解析/简答/印刷版分别 7/26/9/22 页，共64页（印刷版因排版延展自然由21页增至22页，第22页为第36题完整终极收束）；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。
+- 当前 attempt 的64页均完成八项视觉检查，共512项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6344，批次 `closed`、卷 `complete`，视觉收口提交 `15be0d6`。收口后工作树干净状态下的报告所有权状态刷新提交 `4d39cc4`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、36题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 下一批队列为 `2017_上海春季卷` 或 2003 年上海卷；本轮收口 phase3-b01，不代表2016年或1952–2026语料全部完成。
+
 ### 2016 浙江文科：phase2-b22 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed`）
 
 - 对象：`gk-2016-regular-zhejiang-arts`，20题；固定题面 source `src-973d154e68251389ce4f87ef329fd9501f0b006ce8d4fe451b3e1726131da557`，上游 `普通高考/2016/2016浙江文.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
