@@ -2308,6 +2308,14 @@
         "gk-2003-regular-yuegui"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b53",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-regular-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2317,7 +2325,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "f65ecb80-a461-47de-9795-24bdad8cc956",
+  "last_transaction_id": "f4d62957-60fc-4ae8-8def-f77d9fe14ec5",
   "papers": [
     {
       "blocked_from": null,
@@ -30515,9 +30523,78 @@
       "title": "2003 年·粤桂卷",
       "track": "none",
       "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_江苏卷/figures/f2003_jiangsu_q15_flowerbed.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_江苏卷/figures/f2003_jiangsu_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_江苏卷/figures/f2003_jiangsu_q1_region_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_江苏卷/figures/f2003_jiangsu_q22_staircase_iteration.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2003_gaokao_jiangsu",
+        "id": "gk-2003-regular-jiangsu",
+        "note": "固定源为 A3 两页横向题面，原卷印刷页码 131、132；PDF 不含答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文理不分",
+        "variant": "江苏卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2003_江苏卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_江苏_含解析.md",
+        "questions": "2003/2003_数学真题_江苏_试题.md",
+        "solution_body": "2003/2003_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-3b77acdf2b75cef688b2c3ce517243f5f94d5ed7dc7ddd91329406c28c0f0315"
+      ],
+      "title": "2003 年·江苏卷",
+      "track": "none",
+      "year": 2003
     }
   ],
-  "revision": 6384,
+  "revision": 6393,
   "schema_version": 1,
   "sources": [
     {
@@ -36246,8 +36323,8 @@
       "exam_type": "regular",
       "git_blob_oid": "da26a0ba19d9efc65f34bfabc7454878ffd0f0be",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003江苏.pdf",
       "regions": [],
       "source_id": "src-3b77acdf2b75cef688b2c3ce517243f5f94d5ed7dc7ddd91329406c28c0f0315",
