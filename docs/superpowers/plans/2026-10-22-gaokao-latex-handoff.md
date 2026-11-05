@@ -4,20 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-06 当前状态：phase0-b08 2018 北京理科收口，全部421套TeX投影同步清零，下一批推进2003上海卷
+## 2026-11-06 当前状态：phase4-b51 1998 全国文科收口，1952–2002 历史真题全量 100% 覆盖，422 套试卷 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase0-b08 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b51 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase0-b08
+### 最近完成：phase4-b51
 
-- `gk-2018-regular-beijing-science`，20题；固定题面 source `src-c977114df3ea58ee0faec18353381e4b8a19280d465355a6bfcfb160b86a34dc`，上游 `普通高考/2018/2018北京理.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q16 三棱锥/三棱柱术语冲突 blocker（ISSUE-1319 / ISSUE-1320，open / blocks_completion）。
-- 生成 TeX 投影提交 `34a554b`，四版正式构建提交 `c6c055c`。build attempt `8a40ba4a-b4a3-4efe-9e58-a25063413515`，输入 manifest revision 6366；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems，4处 Underfull 告警逐项核实并记录豁免。试题/解析/简答/印刷版为 4/20/6/15 页，共45页；PDF 字体全部嵌入、无未解析引用。
-- 45页八类视觉检查360项：全部 pass，0 fail，0 pending；`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6368，batch `closed_with_blockers`、paper `blocked`。视觉收口提交 `87c8a6a`。随后在干净工作树下执行 `report.py render --all` 将 267 批次的所有权 git 状态投影从 `validated` 刷新为 `committed` 并提交 `28a8133`（`report.md` 与 `baseline.md`），使 `report.py check --all` 在提交态下完全一致。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均实测通过。
-- 全量 `generate_projects.py --all --check` 实测通过：**421套试卷全部与生成结果 100% 一致（待同步队列全部清零）**！
-- 下一步推进 2003 年上海卷或待转录真题卷。
+- `gk-1998-regular-national-arts`，25 题（选择 1–15、填空 16–19、解答 20–25）；固定来源 `src-19546ffe511fd8607988e9153f3b24ef24704bd592b19f95cfcde2844ab83cc5`，上游 `1998全国文.pdf`（单页 A3 横向扫描件，印刷页码 57，无官方答案页）。此卷为 1952–2002 年 50 年真题全库中唯一未映射真题卷，本批完成后 1952–2002 年真题实现 100% 完整覆盖。
+- 原卷排印瑕疵核实与 Blocker 登记：Q12（设问求点 $M$ 纵坐标，选项印刷为“7倍/5倍/4倍/3倍”）与 Q13（设问求球半径，选项印刷为“$\pm\sqrt3/4$、$\pm\sqrt2/2$、$\pm\sqrt3/2$、$\pm3/4$”）在中栏排版时整块对调互换，登记 ISSUE-1426 与 ISSUE-1427（`answer-conflict`，open / blocks_completion）；Q25(2) 常用对数 $\lg$ 条件残留理科底数 $a$ 死文字且比较项下标印刷笔误 $\frac12\lg b_n + 1$，登记 ISSUE-1428（`answer-convention-ambiguous`，open / blocks_completion）。答案和解析均为独立复算，答案要点保留 U/PENDING。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/1998-national-arts-source-intake.md`；重绘并挂接 5 张 TikZ 矢量图。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计：通过三角色共 75 条记录的确定性导入，Q12/Q13 标记 conflict_status=unresolved，Q25 标记 grade=U，提交事务推进至 manifest revision 6371。
+- 正式构建与视觉审查：build attempt `54d341ff-8716-4309-8dbf-28f81034b94c`，试题/解析/简答/印刷版分别为 4/29/6/24 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`、卷 `blocked`，生成报告 `reports/phase4-b51.md`，manifest revision 推进至 6374。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 422 套试卷 `generate_projects.py --all --check` 100% 一致通过。
+- 下一步推进 2003 年及后续待转录真题卷。
+
+### 之前完成：phase0-b08
+
+- `gk-2018-regular-beijing-science`，20题；详情参见 `PROGRESS.md`。四版共45页，`FINALIZED`，已闭环（保留 blocker）。
 
 ### 之前完成：phase0-b07
 
