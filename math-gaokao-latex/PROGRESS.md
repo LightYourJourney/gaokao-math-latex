@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 北京文科：phase2-b13 四版构建与视觉审查收口（2026-11-05；`closed_with_blockers`）
+
+- 对象：`gk-2016-regular-beijing-arts`，20题；固定题面 source `src-ecf09b64f30a39442d38dc7cc78ae41e3b5138c23a4ddb059f098ac5816543bf`，PDF SHA-256 `f25691253d50ee9aae94243518695e8e7793e32e4b3f22077c9bf6407272d89e`，印刷页995–996。固定源仅含题面，答案/解析为独立编者推导、非官方；Q8 答案歧义继续保留 `U`，不猜测选项。
+- 按确定性生成器同步 `questions.tex`、`answers.tex`，题面/答案事实层、解析和 provenance 未改；投影检查及 solution sources（20题）、provenance、简答答案、四版入口均通过。用户关于1995上海卷 Q2/Q4 单行选项的决定未套用于本卷。
+- 正式 build attempt `961e27fb-5508-4457-ba18-e88b5dbe66f1`，输入 manifest revision 6312，build 后 revision 6313，视觉结案后 revision 6314。试题/解析/简答/印刷版为5/21/7/17页，共50页；四版均 succeeded，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `6d2c5692ef44c5f00ccd41dcf0ff9119d1cf7701d84fd809ab6878a3871ef7b7`；解析 `f0a9d823cb6e064cb4fcf58d81a8fafb0a12322868cf02933a33e58da6f617c7`；简答 `564ca6b3777cd708ba5c551f55742dfdcf38e588e137b9a3c258b78f9ca3014e`；印刷 `f08fea745376bc49b88f18eb8cf1e62c8ef8e752c6f4c4b444ced3c7002d1bbf`。
+- 四版50页、400项视觉检查：338 `pass`、62 `not_applicable`、0 `fail`。主会话抽查并更正了解析版页眉/留白误报及简答版第5页页眉误报；试题版审查 JSON 的总结果也从 pending 更新为 pass。`finalize-batch` 返回 `FINALIZED`，批次 `closed_with_blockers`，仅 ISSUE-1005 仍阻塞内容完成。批次 build/review currentness、全量报告投影 render/check 均通过；报告生成器更新六个全库汇总目标。
+- 完整单测 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 584.517s`，`FAILED (failures=1, skipped=13)`。唯一失败仍是 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，列出27项跨卷缓存漂移；首项 `gk-2016-regular-sichuan-science`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷的缓存状态。`generate_projects.py --all --check` 有32个过期 TeX 文件，首批为 phase2-b15（2016四川理科）与 phase2-b16（2016四川文科）；本阶段只处理 b13。
+- 来源与阻塞问题仍未完成，不代表2016北京文科或1952—2026总库全部结案。生成投影提交 `9d0d277`，正式构建提交 `c20f875`；本收口记录、回执与报告在本阶段单独提交。
+
 ### 2016 北京理科：phase2-b12 四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-beijing-science`，20题；固定题面 source `src-03d7f3c6d16a4450d2a52c5514e867a9337005032fbdd6dee4d6cf3804ba11c2`，PDF SHA-256 `9be74675257a9c576c925b30d079b06834f2ea7fef941acafdbed8a816cc9aa9`，印刷页993–994。固定源没有答案页；答案和解析为独立编者推导、非官方，来源发布链和官方身份未认证。
