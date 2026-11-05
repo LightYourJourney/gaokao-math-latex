@@ -23891,17 +23891,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "cf7a222a8a497279ba34905b9ab0c289f838ec5d38c4bc4f687b3f5940da4b3a",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2017-regular-beijing-arts",
   "pdf_sha256": "8d1e2924ea03b984b593fa870b428527db4a35f606bbb1c49357408b1645719c",
-  "resume_action": "修正 gk-2017-regular-beijing-arts 的 印刷版 第 1 页 pagination_whitespace（主会话复核确认真实分页缺陷：本页末尾出现第4题题干及选项A，选项B至D移到第2页。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1423
 
 ```json
@@ -23912,17 +23911,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "9f2a483784ce9719c38f2f301930981bec23761133e659153852d7d75d49a525",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-beijing-arts",
   "pdf_sha256": "8d1e2924ea03b984b593fa870b428527db4a35f606bbb1c49357408b1645719c",
-  "resume_action": "修正 gk-2017-regular-beijing-arts 的 印刷版 第 2 页 pagination_whitespace（主会话复核确认真实分页缺陷：本页顶部从第4题选项B至D接续上一页仅有的选项A，选项组被拆开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1424
 
 ```json
@@ -23933,17 +23931,16 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "2cc0445c18b29671e81546a01484a3a8ab0d6c32509f2eb2670b0d85611dedb9",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 1,
   "paper_id": "gk-2017-regular-tianjin-science",
   "pdf_sha256": "ab1e3030992dc0b617c3946a868deff863716fedd89e2dcc0f47369d28dc0de3",
-  "resume_action": "修正 gk-2017-regular-tianjin-science 的 印刷版 第 1 页 pagination_whitespace（主会话复核确认真实分页缺陷：第1页底部只有第3题选项A、B；第2页顶部以选项C、D接续，选项组被分页拆开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
-
 ## ISSUE-1425
 
 ```json
@@ -23954,13 +23951,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "50c50080ffc81c79fc86ba3c5300015c259e8349d64000823acb5c68636f9e4d",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 2,
   "paper_id": "gk-2017-regular-tianjin-science",
   "pdf_sha256": "ab1e3030992dc0b617c3946a868deff863716fedd89e2dcc0f47369d28dc0de3",
-  "resume_action": "修正 gk-2017-regular-tianjin-science 的 印刷版 第 2 页 pagination_whitespace（主会话复核确认真实分页缺陷：第1页底部只有第3题选项A、B；第2页顶部以选项C、D接续，选项组被分页拆开。）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
