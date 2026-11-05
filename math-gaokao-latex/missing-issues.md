@@ -24011,3 +24011,20 @@
   "type": "answer-convention-ambiguous"
 }
 ```
+
+## ISSUE-1429
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定 PDF（SHA-256 8fa242a22c63304be81479064cbba81281dba644d554c1a2b37b0f5840363575）第 1 页第 10 题设问求 f(x)=sin x, x∈[π/2, 3π/2] 的反函数，严密推导反函数表达式为 f^{-1}(x) = π - arcsin x, x∈[-1, 1]（对照 2003 全国理科第 10 题选项 D 为 π - arcsin x）。但在本卷排版印刷中，选项 (D) 误印为 -π - arcsin x，与选项 (B) 字面完全重复，且四个选项中无一与正确反函数表达式匹配。答案标 U/PENDING。",
+  "fingerprint": "e20959f567f11b4595814cb546c651e2af65629ac55eb4219d1e4d37c125c493",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2003-regular-yuegui",
+  "question_id": "gk-2003-regular-yuegui-q10",
+  "resume_action": "取得可绑定到同一版次或官方勘误材料，核定原卷选项勘误说明；核定前保留 U/PENDING，不把该卷标记为完成。",
+  "source_id": "src-b832b045aa19322b4da5d7657c59eb6e57247c15149902598f68b5af3c8c59ff",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```

@@ -2300,6 +2300,14 @@
         "gk-1998-regular-national-arts"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase4-b52",
+      "issues": [],
+      "paper_ids": [
+        "gk-2003-regular-yuegui"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -2309,7 +2317,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ea1289a2-aeef-4e51-a275-a074cd60b716",
+  "last_transaction_id": "f65ecb80-a461-47de-9795-24bdad8cc956",
   "papers": [
     {
       "blocked_from": null,
@@ -30432,9 +30440,84 @@
       "title": "1998 年·全国卷·文科",
       "track": "arts",
       "year": 1998
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2003_粤桂卷/figures/f2003_yuegui_q16_map_regions.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_粤桂卷/figures/f2003_yuegui_q17_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_粤桂卷/figures/f2003_yuegui_q1_lines.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_粤桂卷/figures/f2003_yuegui_q20_typhoon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2003_粤桂卷/figures/f2003_yuegui_q21_rectangle_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2003_gaokao_yuegui",
+        "id": "gk-2003-regular-yuegui",
+        "note": "固定源为 A3 两页横向题面，原卷印刷页码 147、148；PDF 不含答案或解析页，答案和解析均为本库独立复算。原卷第 10 题选项 (D) 排印笔误多印负号，与选项 (B) 完全重复且无正确项，问题阻断完成。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "粤桂卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文理不分",
+        "variant": "粤桂卷"
+      },
+      "issue_ids": [
+        "ISSUE-1429"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2003-regular-yuegui",
+      "production_state": "blocked",
+      "project_dir": "2003_粤桂卷",
+      "question_count": 22,
+      "resume_action": "取得可绑定到同一版次或官方勘误材料，核定原卷选项勘误说明；核定前保留 U/PENDING，不把该卷标记为完成。",
+      "source_files": {
+        "answer_key": "2003/2003_数学真题_粤桂_答案要点.md",
+        "combined_rendered": "2003/2003_数学真题_粤桂_含解析.md",
+        "questions": "2003/2003_数学真题_粤桂_试题.md",
+        "solution_body": "2003/2003_数学真题_粤桂_解析正文.md"
+      },
+      "source_ids": [
+        "src-b832b045aa19322b4da5d7657c59eb6e57247c15149902598f68b5af3c8c59ff"
+      ],
+      "title": "2003 年·粤桂卷",
+      "track": "none",
+      "year": 2003
     }
   ],
-  "revision": 6374,
+  "revision": 6384,
   "schema_version": 1,
   "sources": [
     {
@@ -36139,8 +36222,8 @@
       "exam_type": "regular",
       "git_blob_oid": "d911b468acc9c87c1f5ec60c2844d6401272cbe3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2003-regular-yuegui",
+      "paper_relation": "canonical",
       "raw_paper_name": "2003广东,广西.pdf",
       "regions": [],
       "source_id": "src-b832b045aa19322b4da5d7657c59eb6e57247c15149902598f68b5af3c8c59ff",
