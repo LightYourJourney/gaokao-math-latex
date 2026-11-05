@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 全国Ⅲ卷文理科：phase2-b11 正式构建与四版视觉审查收口（2026-11-05；`closed_with_blockers`）
+
+- 对象：`gk-2016-regular-national-3-arts`（source `src-7b7f83ac42bfac1eb17a01ffcbd1dfe8b661bd4e91d6eaa50dbac5c98fe023d0`，PDF SHA-256 `d226bce4eb9076cace566fba1d9facc0a0007e40955b68875802bab1eab98e09`）与 `gk-2016-regular-national-3-science`（source `src-556d9ea992950bcd4952763e72a15a168bfe8a1928e42bf5d71bd2ddbacd3fe1`，PDF SHA-256 `a86ba3de1a6de798c7370e1b26a278c08d7d33d489184b6e12cf19c9af3dcb75`），各24题、固定 PDF 各2页。同步四个 generated `questions.tex`/`answers.tex` 后未改事实源、答案/解析或逐题 provenance。
+- 正式 build manifest revision 6306；文科 attempt `674bd5ea-cbb9-4ab0-9e8f-1423641a2d10`，试题/解析/简答/印刷版7/23/9/19页；理科 attempt `4b2ad1c5-e9ec-4c77-8eab-251539ee1b80`，分别7/24/9/18页，共116页。两卷无 TeX error、missing character 或 undefined reference；文科 Q23 有4条 `Underfull` 提示（题面副本行258–260、解析副本行258–260与604–606、简答副本行258–260），已逐条对页复核并绑定豁免；理科无警告。
+- 新图共116页，使用 Poppler 26.10.0、120 dpi 渲染；876项 `pass`、52项 `not_applicable`、0 `fail`、0 pending。文科初审把印刷版第2、5、7、8、10、11、13、14、16、17、19页的页眉/页首留白误报为缺失；主会话逐页打开核对，页眉文字、版次标识、分隔线、页码和留白均正常，已将22项改为 pass 并留下复核说明。文科试题版末页仅含Q24、留白约85%，与旧版已验收的 `Needspace` 整题分页相同，作为自然末页保留。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，manifest revision 6308；两卷 build/review 均 succeeded/passed，batch `closed_with_blockers`。文科 Q12 的 ISSUE-0999、理科 Q11 的 ISSUE-1000 仍为 `open / blocks_completion`：原题允许 `M=F、E=O`，离心率不唯一；题面和答案继续保留 `U/PENDING`，等待可追溯勘误或明确非退化约定，不择定 e=1/3。全量报告 render/check、manifest CSV（775行）、source manifest、issues、phase2-b11 provenance、生成器与 solution sources 检查均通过。
+- 完整测试 `python3 -B -m unittest discover -s tests -q`：`Ran 1780 tests in 587.389s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`；现有缓存状态漂移共30项，首项已推进至 phase2-b12 的2016北京理科（缓存 `complete`、现场派生 `answers_verified`），phase2-b11 已不再列入。没有批量回写本批以外的缓存。全量 `generate_projects.py --all --check` 仍发现36个过期 generated TeX 文件、涉及18卷，下一批为 phase2-b12（2016北京理科），随后 phase2-b13（2016北京文科）；逐批处理，勿用 `--all --write`。
+- 阶段提交：generated projection `d71d074`，正式 build `24fe722`，视觉收口 `b6aada8`，全量报告投影 `35cbf0f`；本条进度回执随后单独提交。视觉审查使用2名 luna/high 子代理，主会话复核并更正误报；具体 token/费用未知。本轮未调用 OCR。两个试卷收口不表示2016年全部或1952—2026语料完成。
+
 ### 2017 北京、天津四卷：phase2-b08 正式构建与四版视觉收口（2026-11-05；`closed_with_blockers`）
 
 - 对象：`gk-2017-regular-beijing-arts`（`src-368b4a2cfb95e6a5feab0582f9a69651d69cfee116ee91eda6672e869906542d`）、`gk-2017-regular-beijing-science`（`src-b12d0ac9ff61fb686257e6f40f4e0f8b48903d715f411f1ef2c5bf5efb88aec2`）、`gk-2017-regular-tianjin-arts`（`src-af3f095940b31948670126c944affe8cfc461d99f7ee362a36ac314b08ed2ef0`）、`gk-2017-regular-tianjin-science`（`src-59000d9a683992059d4ab4804d370738dd2efd09e37ecfa36d726310ff84cfec`），每卷20题。此阶段完成四卷正式构建、所有变化页目视复核、批次回执结算及全量报告投影更新；固定来源、题面事实层、答案/解析事实层与逐题 provenance 未改。此前版式修正分别使北京文科 Q4 选项组与天津理科 Q3 选项组不再跨页；天津理科印刷版由14页变为15页。
