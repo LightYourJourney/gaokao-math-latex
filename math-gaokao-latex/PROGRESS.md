@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2016 浙江文科：phase2-b22 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed`）
+
+- 对象：`gk-2016-regular-zhejiang-arts`，20题；固定题面 source `src-973d154e68251389ce4f87ef329fd9501f0b006ce8d4fe451b3e1726131da557`，上游 `普通高考/2016/2016浙江文.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- 按确定性生成器同步 `questions.tex`、`answers.tex` 投影（选项改为结构化 `gkopts`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `7d6f46fe`。
+- 正式 build attempt `e85aac4c-863b-42d9-8f66-4ab3fc42683c`，输入 manifest revision 6339，构建提交 `59158e8`。试题/解析/简答/印刷版分别 4/18/6/14 页，共42页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。PDF SHA-256：试题 `edf10e6529fe7fab2710caa785fdcb8e93ca5dec972bb84b8d309c8721433ec3`；解析 `59ee9924193305cd74af13a66f708bec6ac54589c078f50c8a1fa5f930ae217d`；简答 `4c13bbbf3493ce229e8165c2360e883eaf7d0f46076a425cff6be98e7bd82201`；印刷 `b3f0299cac85d0c36c3a1fc29b2830e2070f16a3a903c1e9bfc0176cc636983e`。
+- 当前 attempt 的42页均完成八项视觉检查，共336项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6342，批次 `closed`、卷 `complete`，视觉收口提交 `a8ac597`。收口后工作树干净状态下的报告所有权状态刷新提交 `016756e`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、20题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 下一批队列为 2016 上海春考（`phase1-b48` / `gk-2016-spring-shanghai`，首项过期投影）或 2003 年上海卷；本轮收口 b22，不代表2016年或1952–2026语料全部完成。
+
 ### 2016 浙江理科：phase2-b21 过期投影刷新、四版构建与视觉审查收口（2026-11-05；`closed`）
 
 - 对象：`gk-2016-regular-zhejiang-science`，20题；固定题面 source `src-44a16a20fae82c0cb6461848d1d9d8ed36a2759ca1d748e965bbd5605e9db0a5`，PDF SHA-256 `3f243e53bb72fc5e207e69071d91702d836e12026188fd65c552dd648de37e06`，2页、原卷印刷页1027–1028。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。

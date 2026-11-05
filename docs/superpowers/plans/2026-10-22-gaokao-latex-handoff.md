@@ -1,22 +1,30 @@
 # 高考数学 LaTeX 项目交接
 
-更新时间：2026-11-05（中国标准时间）
+更新时间：2026-11-06（中国标准时间）
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-05 当前状态：phase2-b21 2016 浙江理科收口，下一批 phase2-b22
+## 2026-11-06 当前状态：phase2-b22 2016 浙江文科收口，下一批 phase1-b48 或 2003 上海卷
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b21 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase2-b22 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase2-b21
+### 最近完成：phase2-b22
 
-- `gk-2016-regular-zhejiang-science`，20题；固定题面 source `src-44a16a20fae82c0cb6461848d1d9d8ed36a2759ca1d748e965bbd5605e9db0a5`，固定 PDF SHA-256 `3f243e53bb72fc5e207e69071d91702d836e12026188fd65c552dd648de37e06`、2页、原卷印刷页1027–1028。来源仅含题面；答案和解析为独立编者推导、非官方（等级 D）；无 issue。
-- 生成 TeX 投影提交 `10992af`，四版正式构建提交 `9ac3599`。build attempt `e6994a29-5b50-4a0d-ba97-3deb94619210`，输入 manifest revision 6336；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为 5/21/7/16 页，共49页；PDF SHA-256 依次为 `158b6bab8090cac7b9f9318e20cf97bffc4b8ae4473a58512e275b3a221a4cbf`、`5e677f1d0725c8673b1c8361dcae20469af4833966531de4571a0521243d7b4e`、`006ba03528d69207ce10b9d402387a6b91d5c213b1dad873f99b0460f9fb774c`、`dfd3086ed1aabf6b9232ee3a528ea8b099b5415ce414936f709d937e5428b15d`。
-- 49页八类视觉检查392项：307 pass、85 not_applicable、0 fail；`finalize-batch`=`FINALIZED`，最终 manifest revision 6339，batch `closed`、paper `complete`、无 issue。视觉收口提交 `352e63d`。随后在干净工作树下执行 `report.py render --all` 将 267 批次的所有权 git 状态投影从 `validated` 刷新为 `committed` 并提交 `73636a9`（`report.md` 与 `baseline.md`），使 `report.py check --all` 在提交态下完全一致。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均实测通过。
-- 完整测试 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q`：`Ran 1781 tests in 882.606s`，13 skipped、1 failure。唯一失败仍为跨卷缓存状态测试 `test_the_cached_states_match_the_recomputed_ones`，首项已推进至下一批 phase2-b22 `gk-2016-regular-zhejiang-arts`（缓存 `complete`、现场派生 `answers_verified`）。未批量改写其他卷缓存。`generate_projects.py --all --check` 当前有18个 TeX 投影不同步，下一批 phase2-b22（2016浙江文科）。
+- `gk-2016-regular-zhejiang-arts`，20题；固定题面 source `src-973d154e68251389ce4f87ef329fd9501f0b006ce8d4fe451b3e1726131da557`，上游 `普通高考/2016/2016浙江文.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；无 issue。
+- 生成 TeX 投影提交 `7d6f46fe`，四版正式构建提交 `59158e8`。build attempt `e85aac4c-863b-42d9-8f66-4ab3fc42683c`，输入 manifest revision 6339；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为 4/18/6/14 页，共42页；PDF SHA-256 依次为：
+  - 试题版：`edf10e6529fe7fab2710caa785fdcb8e93ca5dec972bb84b8d309c8721433ec3`
+  - 解析版：`59ee9924193305cd74af13a66f708bec6ac54589c078f50c8a1fa5f930ae217d`
+  - 简答版：`4c13bbbf3493ce229e8165c2360e883eaf7d0f46076a425cff6be98e7bd82201`
+  - 印刷版：`b3f0299cac85d0c36c3a1fc29b2830e2070f16a3a903c1e9bfc0176cc636983e`
+- 42页八类视觉检查336项：全部 pass，0 fail，0 pending；`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6342，batch `closed`、paper `complete`、无 issue。视觉收口提交 `a8ac597`。随后在干净工作树下执行 `report.py render --all` 将 267 批次的所有权 git 状态投影从 `validated` 刷新为 `committed` 并提交 `016756e`（`report.md` 与 `baseline.md`），使 `report.py check --all` 在提交态下完全一致。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均实测通过。
+- `generate_projects.py --all --check` 当前待同步 TeX 投影从 18 项降至 16 项，下一批首项为 `2016_春季上海卷`（`phase1-b48`）或接续推进 2003 年上海卷。
+
+### 之前完成：phase2-b21
+
+- `gk-2016-regular-zhejiang-science`，20题；详情参见 `PROGRESS.md`。四版共49页，`FINALIZED`，已闭环。
 
 ### 之前完成：phase2-b20 至 phase2-b17
 
