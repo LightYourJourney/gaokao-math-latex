@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2015 陕西理科：phase4-b41 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
+
+- 对象：`gk-2015-regular-shaanxi-science`，24题；固定题面 source `src-c205391d871780820f4c0ceefcf0042456ea7ff0052d9a65d3ecdf73775b8ba1`，上游 `普通高考/2015/2015陕西理.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q11 / Q16 / Q19 冲突与答案缺失 blocker（ISSUE-1271 / ISSUE-1272 / ISSUE-1273 等，open / blocks_completion）。
+- 按确定性生成器同步 `questions.tex`、`answers.tex` 投影（题1–12选项改为结构化 `gkopts`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `19fa8ca`。
+- 正式 build attempt `c4ace5fd-d3c1-42dd-afce-9b146d9e5777`，输入 manifest revision 6360，构建提交 `91b1fce`。试题/解析/简答/印刷版分别 6/21/8/17 页，共52页；四版均 `succeeded`，errors、missing characters、overfull、undefined references、problems 均为0。
+- 当前 attempt 的52页均完成八项视觉检查，共416项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6362，批次 `closed_with_blockers`、卷 `blocked`，视觉收口提交 `f9166f2`。收口后工作树干净状态下的报告所有权状态刷新提交 `f870125`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、24题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 下一批队列为 `2018_北京卷_文科`（`phase0-b07`，待同步 2 项）或推进 2003 年上海卷；本轮收口 phase4-b41，不代表2015年或1952–2026语料全部完成。
+
 ### 2009 春季上海卷：phase1-b53 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
 
 - 对象：`gk-2009-spring-shanghai`，21题；固定题面 source `src-306adbf685e57e000a68f29eb9e85f4c3e0846f2c5b1f2b9e28d23d3635b629f`，上游 `上海春考/2009/2009上海春.pdf`，6页（试题第1–3页，非官方解答副本第4–6页）。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q16 $\angle A_1AC$ 印缺条件与体积多解冲突 blocker（ISSUE-1239 / ISSUE-1240，open / blocks_completion）。
