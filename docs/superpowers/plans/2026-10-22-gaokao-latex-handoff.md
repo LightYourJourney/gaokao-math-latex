@@ -4,19 +4,23 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-06 当前状态：phase4-b12 2017 上海春考收口，下一批 2007 北京理科 或 2003 上海卷
+## 2026-11-06 当前状态：phase1-b39 2007 北京理科收口，下一批 2018 上海春季卷 或 2003 上海卷
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b12 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase1-b39 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b12
+### 最近完成：phase1-b39
 
-- `gk-2017-spring-shanghai`，21题；固定题面 source `src-cbfd8e906c55122ea5d0be97e93da1823eb0059c3639912be2f5c78665b1bc89`，上游 `上海春考/2017/2017上海春.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q19 冲突 blocker（ISSUE-0931，open / blocks_completion，未乘圆周长）。
-- 生成 TeX 投影提交 `9124b5c`，四版正式构建提交 `ad0f774`。build attempt `e0320f14-54d4-4153-93c2-1e668a2dc956`，输入 manifest revision 6344；四版均 succeeded、0 errors/missing characters/overfull/undefined references/problems。试题/解析/简答/印刷版为 4/18/6/13 页，共41页；PDF 字体全部嵌入、无未解析引用。
-- 41页八类视觉检查328项：全部 pass，0 fail，0 pending；`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6346，batch `closed_with_blockers`、paper `blocked`。视觉收口提交 `c8cfb4c`。随后在干净工作树下执行 `report.py render --all` 将 267 批次的所有权 git 状态投影从 `validated` 刷新为 `committed` 并提交 `49aa9e6`（`report.md` 与 `baseline.md`），使 `report.py check --all` 在提交态下完全一致。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、21题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均实测通过。
-- `generate_projects.py --all --check` 当前待同步 TeX 投影从 14 项降至 13 项，下一批首项为 `2007_北京卷_理科`（`phase1-b46`）或推进 2003 年上海卷。
+- `gk-2007-regular-beijing-science`，20题；固定题面 source `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367`，2页 A3（印刷页码 351–352）。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q19 “半轴长”印刷术语歧义 blocker（ISSUE-1203，open / blocks_completion）。
+- 生成 TeX 投影提交 `ba9c763`，四版正式构建提交 `0be08ad`。build attempt `81b3f25c-c80f-46de-a0a1-9182ea7ea95a`，输入 manifest revision 6348；四版均 succeeded、0 errors/missing characters/undefined references/problems，印刷版 6 处 Underfull 告警逐项核实并记录豁免。试题/解析/简答/印刷版为 5/18/7/14 页，共44页；PDF 字体全部嵌入、无未解析引用。
+- 44页八类视觉检查352项：全部 pass，0 fail，0 pending；`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6350，batch `closed_with_blockers`、paper `blocked`。视觉收口提交 `31de676`。随后在干净工作树下执行 `report.py render --all` 将 267 批次的所有权 git 状态投影从 `validated` 刷新为 `committed` 并提交 `3df554e`（`report.md` 与 `baseline.md`），使 `report.py check --all` 在提交态下完全一致。批次 currentness、review、provenance、题面/答案生成器、简答、四版入口、20题 solution sources、全量 report render/check 与 `manifest.csv`（775行）均实测通过。
+- `generate_projects.py --all --check` 当前待同步 TeX 投影从 13 项降至 11 项，下一批首项为 `2018_上海春季卷`（`phase4-b41`，待同步 1 项）或推进 2003 年上海卷。
+
+### 之前完成：phase4-b12
+
+- `gk-2017-spring-shanghai`，21题；详情参见 `PROGRESS.md`。四版共41页，`FINALIZED`，已闭环（保留 blocker）。
 
 ### 之前完成：phase3-b01
 

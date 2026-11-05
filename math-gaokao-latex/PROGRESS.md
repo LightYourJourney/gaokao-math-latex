@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2007 北京理科：phase1-b39 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
+
+- 对象：`gk-2007-regular-beijing-science`，20题；固定题面 source `src-3612a22ce3848ad6ebbec4d94861dd64b009980e14e8c7a83efefb2ea39bd367`，2页 A3（印刷页码 351–352）。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q19 “半轴长”印刷术语歧义 blocker（ISSUE-1203，open / blocks_completion）。
+- 按确定性生成器同步 `questions.tex` 投影（选项转换为结构化 `\begin{gkopts}`）；题干、选项文字与顺序、规范事实层、答案解析和逐题 provenance 均未改。投影提交 `ba9c763`。
+- 正式 build attempt `81b3f25c-c80f-46de-a0a1-9182ea7ea95a`，输入 manifest revision 6348，构建提交 `0be08ad`。试题/解析/简答/印刷版分别 5/18/7/14 页，共44页；四版均 `succeeded`，errors、missing characters、undefined references、problems 均为0，印刷版 6 处 Underfull 告警逐项核实并记录豁免。
+- 当前 attempt 的44页均完成八项视觉检查，共352项：全部通过（0 fail、0 pending）。`finalize-batch` 返回 `FINALIZED`，最终 manifest revision 6350，批次 `closed_with_blockers`、卷 `blocked`，视觉收口提交 `31de676`。收口后工作树干净状态下的报告所有权状态刷新提交 `3df554e`（`report.md` 与 `baseline.md` 投影由 `validated` 同步为 `committed`，消除 `report.py check --all` 漂移）。
+- 本批题面/答案投影、简答、四版入口、20题 solution sources、source manifest、issues、build receipt currentness、review `check-batch`、provenance、`manifest.csv`（775行）及全量 `report.py check --all` 均实测通过。
+- 下一批队列为 `2018_上海春季卷`（`phase4-b41`，待同步 1 项）或推进 2003 年上海卷；本轮收口 phase1-b39，不代表2007年或1952–2026语料全部完成。
+
 ### 2017 上海春考：phase4-b12 过期投影刷新、四版构建与视觉审查收口（2026-11-06；`closed_with_blockers`）
 
 - 对象：`gk-2017-spring-shanghai`，21题；固定题面 source `src-cbfd8e906c55122ea5d0be97e93da1823eb0059c3639912be2f5c78665b1bc89`，上游 `上海春考/2017/2017上海春.pdf`，2页。来源仅含题面；答案与解析为独立编者推导、非官方（等级 D）；保留 Q19 应用题造价计价口径冲突 blocker（ISSUE-0931，open / blocks_completion，未乘圆周长）。
