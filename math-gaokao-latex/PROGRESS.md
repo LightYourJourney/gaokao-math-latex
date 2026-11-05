@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2006 江西、浙江、湖北理科：phase1-b70 四版复核刷新与收口（2026-11-05；`closed_with_blockers`）
+
+- 对象：`gk-2006-regular-jiangxi-science`、`gk-2006-regular-zhejiang-science`、`gk-2006-regular-hubei-science`。复建 build attempt 分别为 `2d9485cd-4479-46c1-b312-0802f8962c25`、`20b87741-0935-4661-a394-58485133f2f0`、`892fcbf1-5d25-4280-b600-6fbee394423c`；四版页数分别为 6/21/8/16、5/18/7/14、5/19/7/15，共 141 页。三卷 review 均 `passed`，逐页完成 1128 项视觉检查，无视觉失败；6 条构建警告均有对应豁免并复核。
+- `review_receipts.py finalize-batch` 返回 `FINALIZED`，manifest revision 6286，批次仍为 `closed_with_blockers`。湖北 `ISSUE-1319`、`ISSUE-1320` 仍阻塞内容完成；不据现有矛盾推定官方答案。江西、浙江内容候选为 `eligible_complete`，湖北为 `eligible_blocked`。
+- 批次 current build receipts（3 succeeded、0 pending/stale/invalid）、provenance、三卷生成器、简答、四版入口、solution sources、source manifest、issues、review `check-batch` 均通过。全量 `report.py render --all` / `check --all` 通过；`manifest.csv` 当前 775 行。六个报告投影已同步，正式复核门禁计数从 FINALIZED 240 / INVALID_OR_STALE 26 更新为 242 / 24。
+- 全量测试 `python3 -B -m unittest discover -s math-gaokao-latex/tests -q`：`Ran 1780 tests in 583.164s`，`FAILED (failures=1, skipped=13)`。唯一失败 `test_provenance.LiveRepositoryTests.test_the_cached_states_match_the_recomputed_ones`，列出 41 项跨卷缓存状态与现场派生不符，首项 `gk-2016-regular-national-2-arts`（缓存 `complete`、现场 `answers_verified`）。本批自身检查通过；未批量改写其他卷 manifest 状态。
+- 本阶段提交：`a5f77d3e04fca6698f557c067d0a1f90c244b979`（`[已核] review(gaokao): finalize phase1-b70 visuals`）。提交后工作树干净。下一步先复核 41 项 manifest 派生状态的来源与安全更新范围，再按 1952—2006、2007—2016、2017—2026 的原定范围继续；本批收口不代表整个语料完成。模型 token/费用不可见，记未知。
+
 ### 2006 安徽理科：确定性 TeX 同步、四版重建与视觉收口（phase1-b46，2026-11-05；批次 closed_with_blockers）
 
 - 对象：`gk-2006-regular-anhui-science`，22题。固定题面 `src-3aed0bc3d5875c8ce734b5b97f95992307ff56fc580067083caea214e3028675`，PDF SHA-256 `dfdf163d47fa3f279288d7000e2dfb729c7d412c64f4aa3b082d242f6ca2b093`，2页题面、印刷页码276–277，无答案页。题签、发布者、版次、来源链和官方身份未核；`official_answer=null`。
