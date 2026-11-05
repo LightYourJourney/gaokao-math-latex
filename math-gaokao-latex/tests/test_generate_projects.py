@@ -835,6 +835,29 @@ class ConversionInterfaceTests(unittest.TestCase):
         )
         self.assertNotIn(r"\Needspace", ordinary.text)
 
+    def test_sichuan_science_q18_analysis_heading_reserves_page_space(self):
+        manifest = load_manifest(ROOT / "source-manifest.json")
+        paper = next(
+            item for item in manifest["papers"]
+            if item["paper_id"] == "gk-2016-regular-sichuan-science"
+        )
+        result = generate_projects.generate_project(
+            ROOT.parents[2], paper_sources(paper)
+        )
+        answers = result.targets[
+            "math-gaokao-latex/2016_四川卷_理科/answers.tex"
+        ].decode("utf-8")
+        question_18 = answers.split(r"\gksolhead{18}{}", 1)[1].split(
+            r"\gksolhead{19}{}", 1
+        )[0]
+
+        self.assertRegex(
+            question_18,
+            r"\\Needspace\{10\\baselineskip\}\s*"
+            r"\\Needspace\{4\\baselineskip\}\s*"
+            r"\\textbf\{解析\}",
+        )
+
     def test_semantic_section_heading_uses_the_stronger_section_guard(self):
         result = md2tex.convert_markdown(
             "### 一、小题\n\n### 第 1 题\n\n题面。\n",
