@@ -2301,7 +2301,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "919d9073-4de7-4513-ab91-9e9d6d8aed92",
+  "last_transaction_id": "bb1d5a08-e3c5-405e-bf43-4881dac18de7",
   "papers": [
     {
       "blocked_from": null,
@@ -17128,7 +17128,7 @@
       "year": 2017
     },
     {
-      "blocked_from": null,
+      "blocked_from": "compiled",
       "figure_files": [
         {
           "expected_occurrences": 2,
@@ -17171,15 +17171,18 @@
         "track": "文科",
         "variant": "北京文"
       },
-      "issue_ids": [],
+      "issue_ids": [
+        "ISSUE-1422",
+        "ISSUE-1423"
+      ],
       "last_verified_hash": null,
       "legacy_ids": [],
       "legacy_source_files": [],
       "paper_id": "gk-2017-regular-beijing-arts",
-      "production_state": "compiled",
+      "production_state": "blocked",
       "project_dir": "2017_北京卷_文科",
       "question_count": 20,
-      "resume_action": null,
+      "resume_action": "修正 gk-2017-regular-beijing-arts 的 印刷版 第 1 页 pagination_whitespace（主会话复核确认真实分页缺陷：本页末尾出现第4题题干及选项A，选项B至D移到第2页。）后重跑 build --formal 并重新全页审查",
       "source_files": {
         "answer_key": "2017/2017_数学真题_北京文_答案要点.md",
         "combined_rendered": "2017/2017_数学真题_北京文_含解析.md",
@@ -17362,7 +17365,9 @@
         "ISSUE-0963",
         "ISSUE-0964",
         "ISSUE-0965",
-        "ISSUE-0992"
+        "ISSUE-0992",
+        "ISSUE-1424",
+        "ISSUE-1425"
       ],
       "last_verified_hash": null,
       "legacy_ids": [],
@@ -30344,7 +30349,7 @@
       "year": 2002
     }
   ],
-  "revision": 6301,
+  "revision": 6302,
   "schema_version": 1,
   "sources": [
     {
