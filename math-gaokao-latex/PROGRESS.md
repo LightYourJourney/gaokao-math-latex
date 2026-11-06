@@ -15054,3 +15054,12 @@
 - 逐题 Provenance 审计：三角色共 60 条记录确定性导入，20 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 5/28/7/20 页，共 60 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 60 页共 480 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b60.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 431 套试卷 TeX 投影 100% 一致。
+
+### 2004 北京卷理科（phase4-b61）：四版构建与视觉封账（2026-11-06）
+
+- 固定来源认证与范围确认：来源 `src-554bc0b59cb2d6e096a105d33bf9c6b7199928f7eb8883c04dcfac06f739d7e0`，上游路径 `普通高考/2004/2004北京理(旧课程).pdf`（SHA-256 `3832cebe09eb1614bc3d90204d0c19a961c5a86e4ecdafc515aafc47d092aedc`，2 页 A3 横向扫描排印，原卷印刷页码 156、157，共 20 题）。PDF 题面第 1 页（156 页）包含选择题 1–8、填空题 9–14、解答题 15–17；第 2 页（157 页）包含解答题 18–20。来源接收报告写入 `reports/2004-beijing-science-source-intake.md`。
+- 矢量重绘与图稿挂接：Q04 正方体截面动点轨迹图（`f2004_beijing_science_q04_cube.tex`）、Q16 正三棱柱折线最短路径与空间二面角图（`f2004_beijing_science_q16_prism.tex`）、Q17 抛物线坐标系与 $\triangle PAB$ 图（`f2004_beijing_science_q17_parabola.tex`），重绘为 TikZ 矢量图并在试卷各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 20 题题面、选项与分值严谨完备。Q08 单值函数映射公理分析 $0 \in P \cap M \implies f(0)=0 \in f(P) \cap f(M)$ 结论确切；Q16 空间二面角平面角精确值 $\arccos\frac{5\sqrt{41}}{41}$；Q18 级数求和与增函数定义域 $(0, 1]$ 最小值 $1/3$ 闭环；全卷经独立复算全部闭环，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 60 条记录确定性导入，20 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 5/30/7/21 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b61.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 432 套试卷 TeX 投影 100% 一致。
