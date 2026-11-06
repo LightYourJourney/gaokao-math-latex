@@ -15009,3 +15009,12 @@
 - `review_receipts.py finalize-batch` 返回 `FINALIZED`、manifest revision 6299、批次 `closed_with_blockers`；封账提交 `dd89af1`。全国Ⅱ文科 Q17（`ISSUE-0952`、`ISSUE-0954`）有两个满足固定题面的公比/答案分支；全国Ⅲ理科 Q20（`ISSUE-0953`、`ISSUE-0955`）有两组满足题面的直线/圆解。均保留 `U/PENDING` 与 `blocks_completion`，未选定单一答案。全国Ⅱ理科与全国Ⅲ文科内容候选为 `eligible_complete`。
 - 批次 build/review receipts、provenance、题解来源、确定性题卷/简答/版本壳、source manifest、issues 与 775 行 CSV 校验通过；全量六个报告投影刷新后 `report.py check --all` 通过。批次范围校验没有修改题面、答案或解析事实层。
 - 全量测试 `python3 -B -m unittest discover -s tests -q` 实跑 `Ran 1780 tests in 585.447s`，`FAILED (failures=1, skipped=13)`。唯一失败为 `test_the_cached_states_match_the_recomputed_ones`；`provenance.py check-all` 明列35个历史 paper/batch 缓存状态与现场派生值不一致，`phase2-b07` 不在其中。状态核对命令为只读；本批未手改这35项历史状态。全库生成 currentness 复查现有41个过期 TeX 文件、22个项目目录、分属21个批次；phase2-b07 已完全从过期清单消失。下一批从 `phase2-b08` 的2017天津理科投影和历史状态核验继续。该进度仅覆盖 phase2-b07，不表示2017年全部或1952–2026题库完成。
+
+### 2004 全国卷Ⅲ文科（phase4-b56）：四版构建与视觉封账（2026-11-06）
+
+- 固定来源认证与范围确认：来源 `src-ee52094bcb94471a2af695a6728d865037d5d33a2082042e5b68f207d8519cb2`，上游路径 `普通高考/2004/2004全国3文(广西,海南,西藏,陕西,内蒙古)(旧课程).pdf`（SHA-256 `16a35df8624ba3400e2a858d2fbe727ec16898c6d76a3690e57aa2a2e2585204`，2 页 A3 横向扫描排印，原卷印刷页码 192、193，共 22 题）。PDF 题面第 1 页（192 页）包含选择题 1–12、填空题 13–16、解答题 17–19；第 2 页（193 页）包含解答题 20–22。来源接收报告写入 `reports/2004-national-3-arts-source-intake.md`。
+- 矢量重绘与图稿挂接：Q21 空间立体几何三棱锥 $P-ABC$（面 $PAC \perp$ 面 $ABC$、$PA=PB=PC=3$）重绘为 TikZ 矢量图 `f2004_national_3_arts_q21_pyramid.tex`，挂接并在试题版与解析版中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备，经独立复算全部闭环，无排印错误或笔误阻断，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 3/23/5/16 页，共 47 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 47 页共 376 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b56.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 427 套试卷 TeX 投影 100% 一致。
