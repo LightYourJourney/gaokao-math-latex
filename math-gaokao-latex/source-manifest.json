@@ -2348,6 +2348,14 @@
         "gk-2004-regular-national-3-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b58",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-national-4-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2357,7 +2365,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "54f5fb09-1ddd-40fa-9e99-18adeb9f4013",
+  "last_transaction_id": "6d25de09-47f0-4dff-b4f3-24b99fcbbcd5",
   "papers": [
     {
       "blocked_from": null,
@@ -30868,9 +30876,66 @@
       "title": "2004 年·全国卷Ⅲ·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_全国卷Ⅳ_文科/figures/f2004_national_4_arts_q21_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_national_4_arts",
+        "id": "gk-2004-regular-national-4-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 196、197；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 21 题空间立体几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国卷Ⅳ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国卷Ⅳ"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-national-4-arts",
+      "production_state": "complete",
+      "project_dir": "2004_全国卷Ⅳ_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_全国4文_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_全国4文_含解析.md",
+        "questions": "2004/2004_数学真题_全国4文_试题.md",
+        "solution_body": "2004/2004_数学真题_全国4文_解析正文.md"
+      },
+      "source_ids": [
+        "src-8db48ae15eea152eaf412ab1ffa822783669156e560e0a96d7f56a5b62a6e494"
+      ],
+      "title": "2004 年·全国卷Ⅳ·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 6423,
+  "revision": 6429,
   "schema_version": 1,
   "sources": [
     {
@@ -36863,8 +36928,8 @@
       "exam_type": "regular",
       "git_blob_oid": "50bb5c815ecbe4d6f9c28737153c0d9539f863f1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-national-4-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004全国4文(甘肃,新疆,青海,宁夏,贵州).pdf",
       "regions": [],
       "source_id": "src-8db48ae15eea152eaf412ab1ffa822783669156e560e0a96d7f56a5b62a6e494",
