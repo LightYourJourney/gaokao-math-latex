@@ -15081,3 +15081,12 @@
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 5/33/7/23 页，共 68 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 68 页共 544 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b63.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 434 套试卷 TeX 投影 100% 一致。
+
+### 2004 广东卷（phase4-b64）：四版构建与视觉封账（2026-11-06）
+
+- 固定来源认证与范围确认：来源 `src-4f8250f1826d56d71a35fc21dbc3f1c4ad01505d442827bea27d5ae8233696d2`，上游路径 `普通高考/2004/2004广东.pdf`（SHA-256 `8d4a6bf1885d5b649f850608e3c611aa1c0bf15a35fd410bebfe324d8a063c32`，2 页 A3 横向扫描排印，原卷印刷页码 168、169，共 22 题，实行“3+X”统一卷，按 `track=none` 登记为 `gk-2004-regular-guangdong`）。PDF 题面第 1 页（168 页）包含选择题 1–12、填空题 13–16、解答题 17–19；第 2 页（169 页）包含解答题 20–22。来源接收报告写入 `reports/2004-guangdong-source-intake.md`。
+- 矢量重绘与图稿挂接：Q12 定圆在第二象限与坐标轴相交示意图（`f2004_guangdong_q12_circle_quadrant.tex`）、Q15 截线与截面面积体积比例类比双图（`f2004_guangdong_q15_analogy_volume.tex`）、Q18 长方体二面角与异面直线夹角连线图（`f2004_guangdong_q18_cuboid_dihedral.tex`），重绘为 TikZ 矢量图并在各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备。Q12 交点在第三象限（选 B）；Q13 概率 $\dfrac{5}{7}$；Q14 纯虚数 $-2\mathrm{i}$；Q15 四面体体积比 $\dfrac{PA' \cdot PB' \cdot PC'}{PA \cdot PB \cdot PC}$；Q16 反函数 $(\mathrm{e}^x+1)^2-1$；Q17 三角方程角 $\dfrac{2\pi}{3}$ 与 $\dfrac{4\pi}{3}$；Q18 二面角正切 $\dfrac{\sqrt{2}}{2}$，异面直线夹角余弦 $\dfrac{\sqrt{21}}{14}$；Q19 绝对值分式导数与切线三角形面积 $\dfrac{1}{2}(2-x_0)^2$；Q20 观测点声源双曲线交线定位西偏北 $45^\circ$、距中心 $680\sqrt{10}\text{ m}$；Q21 导数极值与介值定理双根存在性；Q22 椭圆与双曲线交点三等分线段方程 6 条直线解均独立闭环，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 4/27/6/19 页，共 56 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 56 页共 448 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b64.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 435 套试卷 TeX 投影 100% 一致。
