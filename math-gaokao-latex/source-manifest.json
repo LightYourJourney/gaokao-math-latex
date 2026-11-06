@@ -2332,6 +2332,14 @@
         "gk-2003-regular-liaoning"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b56",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-national-3-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2341,7 +2349,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e48f1e09-adf6-4fb9-9cf4-862364f02e67",
+  "last_transaction_id": "a582e7fb-afab-40b3-b78f-10005f8acacc",
   "papers": [
     {
       "blocked_from": null,
@@ -30738,9 +30746,66 @@
       "title": "2003 年·辽宁卷",
       "track": "none",
       "year": 2003
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_全国卷Ⅲ_文科/figures/f2004_national_3_arts_q21_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_national_3_arts",
+        "id": "gk-2004-regular-national-3-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 192、193；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 21 题空间立体几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国卷Ⅲ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "全国卷Ⅲ（旧课程）"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-national-3-arts",
+      "production_state": "complete",
+      "project_dir": "2004_全国卷Ⅲ_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_全国3文_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_全国3文_含解析.md",
+        "questions": "2004/2004_数学真题_全国3文_试题.md",
+        "solution_body": "2004/2004_数学真题_全国3文_解析正文.md"
+      },
+      "source_ids": [
+        "src-ee52094bcb94471a2af695a6728d865037d5d33a2082042e5b68f207d8519cb2"
+      ],
+      "title": "2004 年·全国卷Ⅲ·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 6405,
+  "revision": 6417,
   "schema_version": 1,
   "sources": [
     {
@@ -36685,8 +36750,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1082785df94c034084a21a8bdaed51ad5c0612d3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-national-3-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004全国3文(广西,海南,西藏,陕西,内蒙古)(旧课程).pdf",
       "regions": [],
       "source_id": "src-ee52094bcb94471a2af695a6728d865037d5d33a2082042e5b68f207d8519cb2",
