@@ -15036,3 +15036,12 @@
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 4/24/6/18 页，共 52 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 52 页共 416 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b58.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 429 套试卷 TeX 投影 100% 一致。
+
+### 2004 全国卷Ⅳ理科（phase4-b59）：四版构建与视觉封账（2026-11-06）
+
+- 固定来源认证与范围确认：来源 `src-71f794ec66ff748aa973f025e43c3124378682b0e6d7ff19e60ad3814e4a6e6f`，上游路径 `普通高考/2004/2004全国4理(甘肃,新疆,青海,宁夏,贵州).pdf`（SHA-256 `3e5ce6368f3638ddea3bcefac93d00c2d99c8d3a932523503442dce46b11c898`，2 页 A3 横向扫描排印，原卷印刷页码 194、195，共 22 题）。PDF 题面第 1 页（194 页）包含选择题 1–12、填空题 13–16、解答题 17–19；第 2 页（195 页）包含解答题 20–22。来源接收报告写入 `reports/2004-national-4-science-source-intake.md`。
+- 矢量重绘与图稿挂接：Q20 空间立体几何四棱锥 $P-ABCD$（矩形底面含对角线 $BD$、等边 $\triangle PAD$）重绘为 TikZ 矢量图 `f2004_national_4_science_q20_pyramid.tex`，挂接并在试题版与解析版中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备，经独立复算全部闭环，无排印错误或笔误阻断，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 4/27/6/18 页，共 55 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 55 页共 440 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b59.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 430 套试卷 TeX 投影 100% 一致。
