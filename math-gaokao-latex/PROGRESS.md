@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2003 辽宁卷：phase4-b55 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed`）
+
+- 对象：`gk-2003-regular-liaoning`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-1f755880100c0705cf352acda0e41385e6fe77af0fecb5a1367ad671c63856b1`，上游 `普通高考/2003/2003辽宁.pdf`（两页 A3 横向扫描排印，原卷印刷页码 132、133，纯题面无官方答案页）。此卷为 2003 年度最后一套未映射独立卷，收口后 1952–2003 年整整 52 年的高考数学真题实现 100% 全量覆盖。
+- 排印质量与独立复算：全卷 22 题题面、选项与分值严谨完备，无排印错误或笔误阻断，全卷 22 题经双角色交叉推导与复算全部独立闭环，内容候选评定为 `eligible_complete`（优质试卷）。
+- 规范事实层建立：编写并落地四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2003-liaoning-source-intake.md`；重绘并挂接 2 张高保真 TikZ 矢量图（`f2003_liaoning_q15_flowerbed.tex`、`f2003_liaoning_q17_prism.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计：通过三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]，提交事务推进至 manifest revision 6402。
+- 正式构建与视觉审查：build attempt 试题/解析/简答/印刷版分别为 3/29/5/21 页，共 58 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 58 页共 464 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b55.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 426 套试卷 TeX 投影 100% 一致通过。
+- 下一批队列：推进 2004 年未映射真题或后续年份真题。
+
 ### 2003 河南卷：phase4-b54 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed`）
 
 - 对象：`gk-2003-regular-henan`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-f312fca00748c47f2afb9d45f4dfe874a577da278e6ac697066c7f6a07e13fa6`，上游 `普通高考/2003/2003河南.pdf`（4 页 A4 纵向扫描排印，纯题面无官方答案页）。
