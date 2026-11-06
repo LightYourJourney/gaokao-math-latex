@@ -2388,6 +2388,14 @@
         "gk-2004-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b63",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2397,7 +2405,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0269d517-5c7a-4850-83ed-126f7837837a",
+  "last_transaction_id": "4e2e2f78-9875-4b97-981e-08ffe93080c0",
   "papers": [
     {
       "blocked_from": null,
@@ -31220,9 +31228,74 @@
       "title": "2004 年·天津卷·文科",
       "track": "arts",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_天津卷_理科/figures/f2004_tianjin_science_q06_cube_angle.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_天津卷_理科/figures/f2004_tianjin_science_q10_box_sections.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_天津卷_理科/figures/f2004_tianjin_science_q19_pyramid_dihedral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_tianjin_science",
+        "id": "gk-2004-regular-tianjin-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 202、203；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 6、10、19 题几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "天津卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2004_天津卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_天津理_含解析.md",
+        "questions": "2004/2004_数学真题_天津理_试题.md",
+        "solution_body": "2004/2004_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-94e48daa29a9bc737a251252e40d32c124e75d96877181e06f097e2eb673fa39"
+      ],
+      "title": "2004 年·天津卷·理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 6454,
+  "revision": 6459,
   "schema_version": 1,
   "sources": [
     {
@@ -37335,8 +37408,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e23fb41d1044b0a1fa4c9dea5475e8effb44f7b5",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004天津理.pdf",
       "regions": [],
       "source_id": "src-94e48daa29a9bc737a251252e40d32c124e75d96877181e06f097e2eb673fa39",

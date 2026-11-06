@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=stealth, scale=1.1]
+  % 顶点坐标
+  \coordinate (D) at (1.0, 0.8);
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (3.0, 0);
+  \coordinate (C) at (4.0, 0.8);
+  \coordinate (P) at (1.0, 3.6);
+
+  % 中点 E (PC 中点)
+  \coordinate (E) at (2.5, 2.2);
+
+  % 垂足 F (在 PB 上)
+  \coordinate (F) at (1.9, 2.0);
+
+  % 实线棱与辅助线
+  \draw[thick] (P) -- (A) -- (B) -- (C) -- (P);
+  \draw[thick] (P) -- (B);
+  \draw[thick] (E) -- (B);
+  \draw[thick] (E) -- (F);
+
+  % 虚线棱与辅助线
+  \draw[dashed, thick] (P) -- (D);
+  \draw[dashed, thick] (A) -- (D) -- (C);
+  \draw[dashed, thick] (D) -- (B);
+  \draw[dashed, thick] (D) -- (E);
+  \draw[dashed, thick] (D) -- (F);
+
+  % 节点标注
+  \node[above] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[above left] at (F) {$F$};
+\end{tikzpicture}
