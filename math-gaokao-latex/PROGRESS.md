@@ -15072,3 +15072,12 @@
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 5/30/7/21 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b62.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 433 套试卷 TeX 投影 100% 一致。
+
+### 2004 天津卷理科（phase4-b63）：四版构建与视觉封账（2026-11-06）
+
+- 固定来源认证与范围确认：来源 `src-94e48daa29a9bc737a251252e40d32c124e75d96877181e06f097e2eb673fa39`，上游路径 `普通高考/2004/2004天津理.pdf`（SHA-256 `71552d7bd05fefdfb2cd425dab7bf1cc289be34bc968bf20916977574a4991bb`，2 页 A3 横向扫描排印，原卷印刷页码 202、203，共 22 题）。PDF 题面第 1 页（202 页）包含选择题 1–12、填空题 13–16、解答题 17–19；第 2 页（203 页）包含解答题 20–22。来源接收报告写入 `reports/2004-tianjin-science-source-intake.md`。
+- 矢量重绘与图稿挂接：Q06 正方体与异面直线所成角图（`f2004_tianjin_science_q06_cube_angle.tex`）、Q10 长方体平行截面体积分割图（`f2004_tianjin_science_q10_box_sections.tex`）、Q19 四棱锥线面垂直与二面角 $C-PB-D$ 图（`f2004_tianjin_science_q19_pyramid_dihedral.tex`），重绘为 TikZ 矢量图并在试卷各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备。Q06 异面直线所成角余弦值 $\dfrac{\sqrt{15}}{5}$（选 B）；Q15 二项式系数求和 2004；Q16 计数原理 300；Q18 随机变量超几何分布期望 1；Q19 二面角 $60^\circ$；Q20 导数极值判定与切线 $9x-y+16=0$；Q21 递推数列通项与极限 $\dfrac{a_2-ka}{1-k}$；Q22 椭圆与极点极线调和共轭向量证明全部严密闭环，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 5/33/7/23 页，共 68 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 68 页共 544 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b63.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 434 套试卷 TeX 投影 100% 一致。
