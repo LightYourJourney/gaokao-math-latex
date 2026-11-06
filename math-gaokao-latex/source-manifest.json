@@ -2364,6 +2364,14 @@
         "gk-2004-regular-national-4-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b60",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-beijing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2373,7 +2381,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "582cece2-26da-4512-b732-6ed9b345d5ec",
+  "last_transaction_id": "0557253f-7c3c-4eb8-8ce5-4e390937f6bc",
   "papers": [
     {
       "blocked_from": null,
@@ -30998,9 +31006,74 @@
       "title": "2004 年·全国卷Ⅳ·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2004_北京卷_文科/figures/f2004_beijing_arts_q06_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_北京卷_文科/figures/f2004_beijing_arts_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2004_北京卷_文科/figures/f2004_beijing_arts_q17_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_beijing_arts",
+        "id": "gk-2004-regular-beijing-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 158、159；PDF 不含官方答案或解析页，全卷 20 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 6、16、17 题几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "文科",
+        "variant": "北京卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-beijing-arts",
+      "production_state": "complete",
+      "project_dir": "2004_北京卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_北京文_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_北京文_含解析.md",
+        "questions": "2004/2004_数学真题_北京文_试题.md",
+        "solution_body": "2004/2004_数学真题_北京文_解析正文.md"
+      },
+      "source_ids": [
+        "src-586231b4178f382133ef25d183041e0ffcf5459777d14cd97e2e13f431bfa3e4"
+      ],
+      "title": "2004 年·北京卷·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 6435,
+  "revision": 6441,
   "schema_version": 1,
   "sources": [
     {
@@ -37041,8 +37114,8 @@
       "exam_type": "regular",
       "git_blob_oid": "514d1a1023072c658a4e717e69710ee5dfbff2e8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-beijing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004北京文(旧课程).pdf",
       "regions": [],
       "source_id": "src-586231b4178f382133ef25d183041e0ffcf5459777d14cd97e2e13f431bfa3e4",
