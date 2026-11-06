@@ -2396,6 +2396,14 @@
         "gk-2004-regular-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b64",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-guangdong"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2405,7 +2413,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "4e2e2f78-9875-4b97-981e-08ffe93080c0",
+  "last_transaction_id": "3d5178f7-9bd3-40bd-a545-31e2dc904f45",
   "papers": [
     {
       "blocked_from": null,
@@ -31293,9 +31301,74 @@
       "title": "2004 年·天津卷·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_广东卷/figures/f2004_guangdong_q12_circle_quadrant.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_广东卷/figures/f2004_guangdong_q15_analogy_volume.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_广东卷/figures/f2004_guangdong_q18_cuboid_dihedral.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_guangdong",
+        "id": "gk-2004-regular-guangdong",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 168、169；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 12、15、18 题几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "广东卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-guangdong",
+      "production_state": "complete",
+      "project_dir": "2004_广东卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_广东_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_广东_含解析.md",
+        "questions": "2004/2004_数学真题_广东_试题.md",
+        "solution_body": "2004/2004_数学真题_广东_解析正文.md"
+      },
+      "source_ids": [
+        "src-4f8250f1826d56d71a35fc21dbc3f1c4ad01505d442827bea27d5ae8233696d2"
+      ],
+      "title": "2004 年·普通高等学校招生考试·广东卷",
+      "track": "none",
+      "year": 2004
     }
   ],
-  "revision": 6459,
+  "revision": 6464,
   "schema_version": 1,
   "sources": [
     {
@@ -37432,8 +37505,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6a13da6476a35a3a60e12e02318490ba7c77f2ca",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-guangdong",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004广东.pdf",
       "regions": [],
       "source_id": "src-4f8250f1826d56d71a35fc21dbc3f1c4ad01505d442827bea27d5ae8233696d2",
