@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2003 河南卷：phase4-b54 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed`）
+
+- 对象：`gk-2003-regular-henan`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-f312fca00748c47f2afb9d45f4dfe874a577da278e6ac697066c7f6a07e13fa6`，上游 `普通高考/2003/2003河南.pdf`（4 页 A4 纵向扫描排印，纯题面无官方答案页）。
+- 排印质量与独立复算：全卷 22 题题面、选项与分值严谨完备，无排印错误或笔误阻断，全卷 22 题经双角色交叉推导与复算全部独立闭环，内容候选评定为 `eligible_complete`（优质试卷）。
+- 规范事实层建立：编写并落地四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2003-henan-source-intake.md`；重绘并挂接 4 张高保真 TikZ 矢量图（`f2003_henan_q16_fields.tex`、`f2003_henan_q17_trig_grid.tex`、`f2003_henan_q17_trig_curve.tex`、`f2003_henan_q19_prism.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计：通过三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]，提交事务推进至 manifest revision 6396。
+- 正式构建与视觉审查：build attempt `98a2a5b4-753c-4fc5-bd65-d3a5a779f3b7`，试题/解析/简答/印刷版分别为 4/31/6/22 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b54.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 425 套试卷 TeX 投影 100% 一致通过。
+- 下一批队列：推进 2003 年最后一套未映射独立卷（辽宁卷 `2003辽宁.pdf`）或后续年份真题。
+
 ### 2003 江苏卷：phase4-b53 全新真题录入、四版构建与视觉审查收口（2026-11-06；`closed`）
 
 - 对象：`gk-2003-regular-jiangsu`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-3b77acdf2b75cef688b2c3ce517243f5f94d5ed7dc7ddd91329406c28c0f0315`，上游 `普通高考/2003/2003江苏.pdf`（两页 A3 横向扫描件，印刷页码 131、132，纯题面无官方答案页）。
