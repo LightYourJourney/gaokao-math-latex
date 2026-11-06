@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=stealth, scale=0.95]
+  % 顶点坐标
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (1.8, -1.0);
+  \coordinate (C) at (3.2, 0);
+  \coordinate (A1) at (0, 3.6);
+  \coordinate (B1) at (1.8, 2.6);
+  \coordinate (C1) at (3.2, 3.6);
+
+  % AA1 上的中点 M
+  \coordinate (M) at (0, 1.8);
+
+  % BC 上的点 P (BP:PC = 1:2)
+  \coordinate (P) at ($(B)!0.333!(C)$);
+
+  % CC1 上的交点 N (CN:C1N = 0.8:3.2 = 1:4)
+  \coordinate (N) at ($(C)!0.2!(C1)$);
+
+  % 虚线（底面后边 AC 与后侧连线 NM）
+  \draw[dashed, thin] (A) -- (C);
+  \draw[dashed, thick] (M) -- (N);
+
+  % 可见实线（棱与面）
+  \draw[thick] (A) -- (B) -- (C);
+  \draw[thick] (A1) -- (B1) -- (C1) -- cycle;
+  \draw[thick] (A) -- (A1);
+  \draw[thick] (B) -- (B1);
+  \draw[thick] (C) -- (C1);
+
+  % 最短路线的前半段 PN (实线，在侧面 BCC1B1 上)
+  \draw[thick] (P) -- (N);
+
+  % 点标注
+  \filldraw[black] (P) circle (1.2pt);
+  \filldraw[black] (N) circle (1.2pt);
+  \filldraw[black] (M) circle (1.2pt);
+
+  % 顶点标签
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below right] at (P) {$P$};
+  \node[right] at (N) {$N$};
+  \node[left] at (M) {$M$};
+  \node[above left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+\end{tikzpicture}
