@@ -2524,6 +2524,14 @@
         "gk-2005-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b80",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2533,7 +2541,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "68b752d3-4c4f-41a7-ac0d-236d65772d30",
+  "last_transaction_id": "3c4fdadf-bcb3-41d1-9697-310682d25cfe",
   "papers": [
     {
       "blocked_from": null,
@@ -32487,9 +32495,74 @@
       "title": "2005 年·普通高等学校招生考试·天津卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_理科/figures/f2005_tianjin_science_q12_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_理科/figures/f2005_tianjin_science_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_理科/figures/f2005_tianjin_science_q20_slope.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_tianjin_science",
+        "id": "gk-2005-regular-tianjin-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 266、267；全卷共 22 题（选 10、填 6、解 6，满分 150 分）。第 1 题绝对值与分式不等式交集选 D。第 2 题复数纯虚数 a=-6 选 C。第 6 题椭圆落在矩形内个数 72 选 B。第 8 题三角伸缩平移选 C。第 10 题对数复合单调性 [3/4, 1) 选 B。第 11 题二项式求和 (7^n-1)/6。第 12 题异面直线角正切 sqrt(2)。第 13 题分奇偶递推前百项和 2600。第 14 题角平分线向量 (-sqrt(10)/5, 3*sqrt(10)/5)。第 15 题投资收益期望 4760 元。第 16 题奇对称求和 0。第 17 题角 A 为 pi/3、tan B 为 1/2。第 18 题齐次求和与极限 max(a, b)。第 19 题斜三棱柱线面角 60 度、线面平行与外接球体积 4*sqrt(3)/27*pi*a^3。第 20 题山坡视角极值高度 60 米。第 21 题抛物线定比分点中点在 y 轴与钝角范围。第 22 题三角导数极值代数式化简与极值点跨度不等式。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2005_天津卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_天津理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_天津理科_含解析.md",
+        "questions": "2005/2005_数学真题_天津理科_试题.md",
+        "solution_body": "2005/2005_数学真题_天津理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-c497f6ca699aa6a4cbd40345b965ead11ce5f2c405ff2eecb0fd8962738252ec"
+      ],
+      "title": "2005 年·普通高等学校招生考试·天津卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6575,
+  "revision": 6587,
   "schema_version": 1,
   "sources": [
     {
@@ -39202,8 +39275,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c74829ca4d0f849bf9c8f8f9119c0abd06622d17",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005天津理.pdf",
       "regions": [],
       "source_id": "src-c497f6ca699aa6a4cbd40345b965ead11ce5f2c405ff2eecb0fd8962738252ec",
