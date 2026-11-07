@@ -2404,6 +2404,14 @@
         "gk-2004-regular-guangdong"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b65",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2413,7 +2421,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3d5178f7-9bd3-40bd-a545-31e2dc904f45",
+  "last_transaction_id": "ae875176-0688-4730-b840-ba7c075856c1",
   "papers": [
     {
       "blocked_from": null,
@@ -31366,9 +31374,70 @@
       "title": "2004 年·普通高等学校招生考试·广东卷",
       "track": "none",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_江苏卷/figures/f2004_jiangsu_q06_barchart.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_江苏卷/figures/f2004_jiangsu_q18_cube_projection.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_jiangsu",
+        "id": "gk-2004-regular-jiangsu",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 178、179；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 9 题题面漏印文字经公开权威资料考证补全。第 6 题条形图与第 18 题立体几何图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "江苏卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2004_江苏卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_江苏_含解析.md",
+        "questions": "2004/2004_数学真题_江苏_试题.md",
+        "solution_body": "2004/2004_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-b1c43a6876dfbf5bd59261aebdc075bc89fdb8e378c37febb2f1b3351ac7e509"
+      ],
+      "title": "2004 年·普通高等学校招生考试·江苏卷",
+      "track": "none",
+      "year": 2004
     }
   ],
-  "revision": 6464,
+  "revision": 6469,
   "schema_version": 1,
   "sources": [
     {
@@ -37529,8 +37598,8 @@
       "exam_type": "regular",
       "git_blob_oid": "50ac8814dead59b67dfa4f0320fd9b2208e1e1f6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004江苏.pdf",
       "regions": [],
       "source_id": "src-b1c43a6876dfbf5bd59261aebdc075bc89fdb8e378c37febb2f1b3351ac7e509",

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=stealth, xscale=1.5, yscale=0.18]
+  % 网格虚线
+  \draw[dashed, gray!50] (0, 5) -- (4.5, 5);
+  \draw[dashed, gray!50] (0, 10) -- (4.5, 10);
+  \draw[dashed, gray!50] (0, 15) -- (4.5, 15);
+  \draw[dashed, gray!50] (0, 20) -- (4.5, 20);
+
+  % 条形柱
+  \draw[fill=gray!30] (-0.15, 0) rectangle (0.15, 5);
+  \draw[fill=gray!30] (0.85, 0) rectangle (1.15, 20);
+  \draw[fill=gray!30] (1.85, 0) rectangle (2.15, 10);
+  \draw[fill=gray!30] (2.85, 0) rectangle (3.15, 10);
+  \draw[fill=gray!30] (3.85, 0) rectangle (4.15, 5);
+
+  % 坐标轴
+  \draw[->, thick] (-0.3, 0) -- (4.8, 0) node[right] {\small 时间\,(小时)};
+  \draw[->, thick] (0, 0) -- (0, 23) node[above] {\small 人数\,(人)};
+
+  % 纵轴刻度
+  \node[left] at (0, 0) {\small $0$};
+  \node[left] at (0, 5) {\small $5$};
+  \node[left] at (0, 10) {\small $10$};
+  \node[left] at (0, 15) {\small $15$};
+  \node[left] at (0, 20) {\small $20$};
+
+  % 横轴刻度与标签
+  \node[below] at (0, 0) {\small $0$};
+  \node[below] at (1, 0) {\small $0.5$};
+  \node[below] at (2, 0) {\small $1.0$};
+  \node[below] at (3, 0) {\small $1.5$};
+  \node[below] at (4, 0) {\small $2.0$};
+\end{tikzpicture}
