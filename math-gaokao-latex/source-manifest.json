@@ -2420,6 +2420,14 @@
         "gk-2004-regular-liaoning"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b67",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-zhejiang-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2429,7 +2437,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a7f4fbe2-441d-4a31-bceb-6355049c8fb2",
+  "last_transaction_id": "dd3ff8b2-32a1-4b48-8561-5f6094eb0447",
   "papers": [
     {
       "blocked_from": null,
@@ -31508,9 +31516,78 @@
       "title": "2004 年·普通高等学校招生考试·辽宁卷",
       "track": "none",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_浙江卷_理科/figures/f2004_zhejiang_science_q10_prism.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_浙江卷_理科/figures/f2004_zhejiang_science_q11_derivative.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_浙江卷_理科/figures/f2004_zhejiang_science_q19_polyhedron.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_浙江卷_理科/figures/f2004_zhejiang_science_q22_midpoints.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_zhejiang_science",
+        "id": "gk-2004-regular-zhejiang-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 206、207；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 10 题三棱柱图、第 11 题导函数图象、第 19 题多面体图与第 22 题直角三角形中点折线图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "浙江理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-zhejiang-science",
+      "production_state": "complete",
+      "project_dir": "2004_浙江卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_浙江理科_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_浙江理科_含解析.md",
+        "questions": "2004/2004_数学真题_浙江理科_试题.md",
+        "solution_body": "2004/2004_数学真题_浙江理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-e83c48821eaac4546df1607aa7bd47f8c49362fe9d091f3ff8accf356722e61c"
+      ],
+      "title": "2004 年·普通高等学校招生考试·浙江卷·理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 6482,
+  "revision": 6487,
   "schema_version": 1,
   "sources": [
     {
@@ -37719,8 +37796,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f478ae9edc4e7808ab646105a279a1d85b3fa432",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-zhejiang-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004浙江理.pdf",
       "regions": [],
       "source_id": "src-e83c48821eaac4546df1607aa7bd47f8c49362fe9d091f3ff8accf356722e61c",
