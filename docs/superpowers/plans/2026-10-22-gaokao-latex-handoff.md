@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-08 当前状态：phase4-b74 2004 湖南理科卷收口，全库 445 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b75 2004 重庆文科卷收口，全库 446 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b74 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b75 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b74
+### 最近完成：phase4-b75
 
-- `gk-2004-regular-hunan-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-9f80071b553ab4b942482c92509eda24ffc4990bd51cd38172372a29634438da`，上游 `普通高考/2004/2004湖南理.pdf`（两页 A3 扫描排印，原卷印刷页码 174、175，印刷题签“2004 普通高等学校招生考试 (湖南卷理)”，科类登记 `track=science`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q19，第 2 页包含 Q20–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 复数除法与乘方 $\left(1+\frac{1}{\mathrm{i}}\right)^4 = -4$（选 D）；Q02 双曲线第二定义右准线距离 $\frac{13}{5}$（选 A）；Q03 依据原卷清晰字迹校订题面为加号 $f(a+b)$，求得 $f(3) = 2$（选 B）；Q04 正方形折叠三棱锥体积最大线面角 $45^\circ$（选 C）；Q05 抽样方法依次为分层抽样法、简单随机抽样法（选 B）；Q06 分段函数求参 $b=4, c=2$ 方程 $f(x)=x$ 解个数 $3$ 个（选 C）；Q07 基本不等式不恒成立项 $a^3+b^3 \geqslant 2ab^2$（选 B）；Q08 相邻和等比数列通项与极限 $\frac{1}{4}$（选 C）；Q09 平面区域充要条件 $m > -1, n < 5$（选 A）；Q10 正方体顶点组合直角三角形个数 $56 - 8 = 48$（选 C）；Q11 农民人均收入增长估算介于 $4400$ 元 $\sim 4600$ 元（选 B）；Q12 奇偶函数导数性质解集 $(-\infty, -3) \cup (0, 3)$（选 D）；Q13 向量三角不等式最大值 $4$；Q14 掷硬币期望 $E\xi = \frac{3}{4}$；Q15 二项式展开式常数项求得 $n = 9$；Q16 椭圆焦半径等差数列公差上界分析 $d \in \left(0, \frac{2}{11}\right]$；Q17 三角积化和差与倍角化简求值 $\frac{5\sqrt{3}}{2}$；Q18 空间四棱锥线面垂直证明、二面角大小 $30^\circ$ 与中点平行判定；Q19 独立事件概率方程组求得甲 $\frac{1}{3}$、乙 $\frac{1}{4}$、丙 $\frac{2}{3}$ 与至少一个一等品概率 $\frac{5}{6}$；Q20 导数单调性分析与闭区间最值（$-2 \leqslant a \leqslant 0$ 时最大值 $\mathrm{e}^a$，$a < -2$ 时最大值 $\frac{4}{a^2 \mathrm{e}^2}$）；Q21 抛物线割线定比分点垂直证明与公切圆方程 $\left(x + \frac{3}{2}\right)^2 + \left(y - \frac{23}{2}\right)^2 = \frac{125}{2}$；Q22 直线交点阶梯点列等比递推证明、通项公式 $x_n = 1 - 2\left(\frac{1}{2k}\right)^n$ 与大小分类比较全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-hunan-science-source-intake.md`；重绘并挂接 3 张高保真 TikZ 纯矢量图（Q18 四棱锥立体几何图、Q21 抛物线切线公切圆图、Q22 阶梯垂线图）。
+- `gk-2004-regular-chongqing-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-8740ec31a416866bbb4486815be256dded62698124e78db56804308ae880dc2c`，上游 `普通高考/2004/2004重庆文.pdf`（两页 A3 扫描排印，原卷印刷页码 162、163，印刷题签“2004 普通高等学校招生考试 (重庆卷文)”，科类登记 `track=arts`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q19，第 2 页包含 Q20–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 对数定义域 $\left(\frac{2}{3}, 1\right]$（选 D）；Q02 函数值商 $\frac{f(2)}{f(1/2)} = -1$（选 B）；Q03 圆心到直线距离 $\sqrt{2}$（选 D）；Q04 分式不等式解集 $(-1, 0) \cup (1, +\infty)$（选 A）；Q05 三角诱导公式化简求值 $\frac{1}{2}$（选 B）；Q06 向量模方程解得 $|\vec{a}| = 6$（选 C）；Q07 充分必要条件逻辑链为充分不必要条件（选 A）；Q08 空间线面位置关系假命题 ②③④ 共 3 个（选 D）；Q09 等差数列前 $n$ 项和最值项数 $n = 4006$（选 B）；Q10 双曲线焦点三角形离心率最大值 $\frac{5}{3}$（选 B）；Q11 不放回抽样第 3 次才取到卡口概率 $\frac{7}{120}$（选 D）；Q12 正方体三向直通开孔表面积 $138 + (120 - 24) = 234$（选 B）；Q13 二项式系数方程解得 $a = -2$；Q14 基本不等式求得 $xy$ 最小值为 $15$；Q15 过点 $P(2, 4)$ 切线方程两条：$4x - y - 4 = 0$ 或 $x - y + 2 = 0$；Q16 球体体积比与火星大圆周长估算约 $4$ 万里；Q17 辅助角公式求得周期 $\pi$、最小值 $-2$、增区间 $\left[0, \frac{\pi}{3}\right]$ 与 $\left[\frac{5\pi}{6}, \pi\right]$；Q18 射击概率独立事件与伯努利模型（(1) 至少一人命中 $0.94$，恰有两人命中 $0.44$；(2) 甲三次恰中两次 $0.441$）；Q19 四棱锥线面公垂线证明及线面角正弦值 $\frac{\sqrt{5}}{10}$；Q20 三次多项式利润函数驻点分析，每月生产 $200$ 吨时最大利润 $315$ 万元；Q21 抛物线割线直径圆过原点证明 $\overrightarrow{OA}\cdot\overrightarrow{OB}=0$，面积最小时直线方程 $x = 2p$；Q22 递推数列经特征根权威考订为 $a_{n+2} = \frac{5}{3}a_{n+1} - \frac{2}{3}a_n$，首项 $a_1=2, a_2=\frac{5}{3}$，证明差等比数列 $b_n = -\frac{1}{3}\left(\frac{2}{3}\right)^{n-1}$，通项 $a_n = 1 + \left(\frac{2}{3}\right)^{n-1}$，错位相减求和得 $S_n = \frac{n(n+1)}{2} + 9 - (3n+9)\left(\frac{2}{3}\right)^n$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-chongqing-arts-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（Q12 正方体三向直通开孔网格图、Q19 四棱锥公垂线图）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2004_hunan_science_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/36/7/25 页，共 73 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 73 页共 584 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b74.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 445 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进 2004 年未录入自主命题真题（下一批次 `phase4-b75`：重庆文科卷 `2004重庆文.pdf`，之后重庆理科卷 `2004重庆理.pdf`，2004 年仅剩最后 2 套）。
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2004_chongqing_arts_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/31/6/23 页，共 64 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 64 页共 512 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b75.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 446 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进 2004 年最后 1 套未录入自主命题真题（下一批次 `phase4-b76`：重庆理科卷 `2004重庆理.pdf`，录入后 2004 年全部自主命题卷 100% 彻底收官大结局！）。
+
+### 之前完成：phase4-b74
+
+- `gk-2004-regular-hunan-science`，22 题；详情参见 `PROGRESS.md`。四版共 73 页，`FINALIZED`，已闭环。全量 445 套试卷 TeX 投影一致。
 
 ### 之前完成：phase4-b73
 
