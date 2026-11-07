@@ -2476,6 +2476,14 @@
         "gk-2004-regular-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b74",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2485,7 +2493,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c58410bc-c2e3-4364-acd9-d9e6f2c8e706",
+  "last_transaction_id": "0ba146bb-78bd-4763-8501-2d67ae59a517",
   "papers": [
     {
       "blocked_from": null,
@@ -32050,9 +32058,74 @@
       "title": "2004 年·普通高等学校招生考试·湖南卷·文科",
       "track": "arts",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_理科/figures/f2004_hunan_science_q18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_理科/figures/f2004_hunan_science_q21_parabola.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_理科/figures/f2004_hunan_science_q22_staircase.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_hunan_science",
+        "id": "gk-2004-regular-hunan-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 174、175；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 3 题原卷清晰印为加号 f(a+b)，已按真实字迹校订。第 16 题等差数列分析公差上界 2/11。第 18 题四棱锥图、第 21 题抛物线切线圆图、第 22 题阶梯垂线图均由 TikZ 纯矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2004_湖南卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_湖南理科_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_湖南理科_含解析.md",
+        "questions": "2004/2004_数学真题_湖南理科_试题.md",
+        "solution_body": "2004/2004_数学真题_湖南理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-9f80071b553ab4b942482c92509eda24ffc4990bd51cd38172372a29634438da"
+      ],
+      "title": "2004 年·普通高等学校招生考试·湖南卷·理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 6532,
+  "revision": 6540,
   "schema_version": 1,
   "sources": [
     {
@@ -38357,8 +38430,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cbd72f3e782decb56c59f3f084c0c1bf49dcd77f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004湖南理.pdf",
       "regions": [],
       "source_id": "src-9f80071b553ab4b942482c92509eda24ffc4990bd51cd38172372a29634438da",
