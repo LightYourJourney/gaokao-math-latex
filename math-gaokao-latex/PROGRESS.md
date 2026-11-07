@@ -15212,3 +15212,12 @@
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b77.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 448 套试卷 TeX 投影 100% 一致。
 
 
+
+### 2005 北京理科卷（phase4-b78）：四版构建与视觉封账（2026-11-08）
+
+- 固定来源认证与范围确认：来源 `src-f0ddb765f084ce6c1af531447a973cb8595d531721ee9b828b11a8a6e9af7809`，上游路径 `普通高考/2005/2005北京理.pdf`（SHA-256 `d30f41690977b3682009021e26659b6b575be781becee5243f5eabd1129636b9`，2 页 A3 扫描排印，原卷印刷页码 216、217，印刷题签“2005 普通高等学校招生考试 (北京卷理)”，共 20 题：选 8、填 6、解 6，按 `track=science` 登记为 `gk-2005-regular-beijing-science`）。PDF 题面第 1 页包含选择题 1–8、填空题 9–14、解答题 15–17；第 2 页包含解答题 18–20。来源接收报告写入 `reports/2005-beijing-science-source-intake.md`。
+- 矢量重绘与图稿挂接：Q16 直四棱柱立体几何图（`f2005_beijing_science_q16_prism.tex`）、Q18 双曲线渐近线阴影区域图（`f2005_beijing_science_q18_regions.tex`），全部重绘为 TikZ 纯矢量图并在各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 20 题题面、选项与分值严谨完备。Q01 集合真子集判定 $M \subsetneqq P$（选 C）；Q02 两直线垂直充分不必要条件判定（选 B）；Q03 向量垂直与夹角 $120^\circ$（选 C）；Q04 切线夹劣弧弧长 $2\pi$（选 B）；Q05 任意锐角不等关系恒成立判定 $\cos(\alpha+\beta) < \cos\alpha+\cos\beta$（选 D）；Q06 正四面体空间垂直命题不成立项判定（选 C）；Q07 志愿者分步排班计数 $\mathrm{C}_{14}^{12}\mathrm{C}_{12}^4\mathrm{C}_8^4$（选 A）；Q08 含绝对值三角函数单调递增递减区间判定（选 A）；Q09 复数纯虚数实数 $a = \frac{8}{3}$；Q10 二倍角与和角正切值 $-\frac{4}{3}$ 与 $-\frac{1}{7}$；Q11 二项式展开常数项 $-20$；Q12 指数函数切点 $(1, \mathrm{e})$ 与斜率 $\mathrm{e}$；Q13 对数函数性质与凹凸性结论 ②③；Q14 传统多项式求值与秦九韶算法运算量 $65$ 与 $20$；Q15 三次多项式导数减区间 $(-\infty, -1]$ 与 $[3, +\infty)$、闭区间最小值 $-7$；Q16 直四棱柱线面垂直证明、二面角平面角 $90^\circ$、异面直线所成角余弦值 $\frac{\sqrt{15}}{5}$；Q17 射击二项分布期望 $3/2$、乙至多中 2 次概率 $19/27$、甲比乙多中 2 次概率 $1/24$；Q18 区域不等式组、双曲线方程 $k^2 x^2 - y^2 = (k^2+1)d^2$、割线中点对称性证明三角形重心重合；Q19 分段递推数列通项与等比数列判定、极限和 $2a - \frac{1}{2}$；Q20 单峰函数区间收缩判定证明与缩短至 $0.34$ 的测试点构造（$x_1=0.34, x_2=0.66, x_3=0.32$）。全部独立推导闭环，评定为 `eligible_complete`。
+- 逐题 Provenance 审计与自动化回归：三角色共 60 条记录确定性导入，20 题全通过，conflict_status=none，0 issue；新增 `tests/test_2005_beijing_science_solutions.py` 自动化回归套件，全卷 20 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：四版页数为 5/30/7/21 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b78.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 449 套试卷 TeX 投影 100% 一致。

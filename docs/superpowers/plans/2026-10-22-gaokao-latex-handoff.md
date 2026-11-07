@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-08 当前状态：phase4-b77 2005 北京文科卷收口，2005 年自主命题试卷首战告捷，全库 448 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b78 2005 北京理科卷收口，2005 年北京卷文理全科大圆满封账，全库 449 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b77 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b78 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b77
+### 最近完成：phase4-b78
 
-- `gk-2005-regular-beijing-arts`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-fea4e73708ac3a85394b3698456c3244904a156c2ea4907c94a9bc9ed3e6cf8d`，上游 `普通高考/2005/2005北京文.pdf`（两页 A3 扫描排印，原卷印刷页码 218、219，印刷题签“2005 普通高等学校招生考试 (北京卷文)”，科类登记 `track=arts`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q17，第 2 页包含 Q18–Q20；全卷 20 题题面、选项与分值严谨完备。Q01 集合真子集判定 $M \subsetneqq P$（选 C）；Q02 指数函数图象平移变换（选 A）；Q03 两直线垂直充分不必要条件判定（选 B）；Q04 向量垂直与夹角 $120^\circ$（选 C）；Q05 原点引圆两切线夹角 $\frac{\pi}{3}$（选 B）；Q06 任意锐角不等关系恒成立判定 $\cos(\alpha+\beta) < \cos\alpha+\cos\beta$（选 D）；Q07 正四面体空间垂直命题不成立项判定（选 C）；Q08 限制条件元素分配方案数 $\mathrm{C}_4^1 \mathrm{A}_4^4$（选 B）；Q09 抛物线准线方程 $x = -1$、焦点坐标 $(1, 0)$；Q10 二项式展开常数项 $-20$；Q11 根式与分式定义域 $[-1, 2) \cup (2, +\infty)$；Q12 三角形正弦定理求边长 $\sqrt{2}$；Q13 对数函数性质与凹凸性结论 ②③；Q14 传统多项式求值与秦九韶算法运算量 $65$ 与 $20$；Q15 三角齐次式求值 (1) $-\frac{1}{7}$，(2) $\frac{7}{6}$；Q16 直三棱柱线面垂直与线面平行证明、异面直线所成角余弦值 $\frac{2\sqrt{2}}{5}$；Q17 递推数列分段等比通项 $a_n = \begin{cases} 1, & n = 1, \\ \frac{1}{3}(4/3)^{n-2}, & n \geqslant 2 \end{cases}$、偶数项和 $\frac{3}{7}[(16/9)^n - 1]$；Q18 射击概率独立事件与伯努利模型（(1) $\frac{3}{8}$，(2) $\frac{20}{27}$，(3) $\frac{1}{6}$）；Q19 三次多项式导数减区间 $(-\infty, -1]$ 与 $[3, +\infty)$、闭区间最小值 $-7$；Q20 双曲线方程 $k^2 x^2 - y^2 = (k^2+1)d^2$、割线中点对称性证明三角形重心重合。全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-beijing-arts-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（Q16 直三棱柱立体几何图、Q20 双曲线渐近线阴影区域图）。
+- `gk-2005-regular-beijing-science`，20 题（选择 1–8、填空 9–14、解答 15–20）；固定来源 `src-f0ddb765f084ce6c1af531447a973cb8595d531721ee9b828b11a8a6e9af7809`，上游 `普通高考/2005/2005北京理.pdf`（两页 A3 扫描排印，原卷印刷页码 216、217，印刷题签“2005 普通高等学校招生考试 (北京卷理)”，科类登记 `track=science`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q17，第 2 页包含 Q18–Q20；全卷 20 题题面、选项与分值严谨完备。Q01 集合真子集判定 $M \subsetneqq P$（选 C）；Q02 两直线垂直充分不必要条件判定（选 B）；Q03 向量垂直与夹角 $120^\circ$（选 C）；Q04 切线夹劣弧弧长 $2\pi$（选 B）；Q05 任意锐角不等关系恒成立判定 $\cos(\alpha+\beta) < \cos\alpha+\cos\beta$（选 D）；Q06 正四面体空间垂直命题不成立项判定（选 C）；Q07 志愿者分步排班计数 $\mathrm{C}_{14}^{12}\mathrm{C}_{12}^4\mathrm{C}_8^4$（选 A）；Q08 含绝对值三角函数单调递增递减区间判定（选 A）；Q09 复数纯虚数实数 $a = \frac{8}{3}$；Q10 二倍角与和角正切值 $-\frac{4}{3}$ 与 $-\frac{1}{7}$；Q11 二项式展开常数项 $-20$；Q12 指数函数切点 $(1, \mathrm{e})$ 与斜率 $\mathrm{e}$；Q13 对数函数性质与凹凸性结论 ②③；Q14 传统多项式求值与秦九韶算法运算量 $65$ 与 $20$；Q15 三次多项式导数减区间 $(-\infty, -1]$ 与 $[3, +\infty)$、闭区间最小值 $-7$；Q16 直四棱柱线面垂直证明、二面角平面角 $90^\circ$、异面直线所成角余弦值 $\frac{\sqrt{15}}{5}$；Q17 射击二项分布期望 $3/2$、乙至多中 2 次概率 $19/27$、甲比乙多中 2 次概率 $1/24$；Q18 区域不等式组、双曲线方程 $k^2 x^2 - y^2 = (k^2+1)d^2$、割线中点对称性证明三角形重心重合；Q19 分段递推数列通项与等比数列判定、极限和 $2a - \frac{1}{2}$；Q20 单峰函数区间收缩判定证明与缩短至 $0.34$ 的测试点构造（$x_1=0.34, x_2=0.66, x_3=0.32$）。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-beijing-science-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（Q16 直四棱柱立体几何图、Q18 双曲线渐近线阴影区域图）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 60 条记录确定性导入，20 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_beijing_arts_solutions.py` 自动化回归套件，全卷 20 题符号推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/27/6/21 页，共 58 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 58 页共 464 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b77.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 448 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进：2005 年北京理科卷 `2005北京理.pdf`（下一批次 `phase4-b78`，`gk-2005-regular-beijing-science`）。
+- 逐题 Provenance 审计与自动化回归：三角色共 60 条记录确定性导入，20 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_beijing_science_solutions.py` 自动化回归套件，全卷 20 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/30/7/21 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b78.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 449 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进：2005 年自主命题试卷继续推进，下一省份推荐 2005 天津卷（文理科）或山东卷（文理科）！
+
+### 之前完成：phase4-b77
+
+- `gk-2005-regular-beijing-arts`，20 题；详情参见 `PROGRESS.md`。四版共 58 页，`FINALIZED`，已闭环。全量 448 套试卷 TeX 投影一致。2005 年北京卷文理双科均已大圆满收口！
 
 ### 之前完成：phase4-b76
 
