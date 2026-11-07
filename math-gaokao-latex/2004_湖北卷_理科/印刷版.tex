@@ -1,0 +1,48 @@
+% !TeX program = xelatex
+% ============================================================
+% 2004 年·普通高等学校招生考试·湖北卷·理科 · 印刷版
+% 由 tools/make_editions.py 生成（重跑会覆盖本文件）；
+% 题目/解析内容在 questions.tex / answers*.tex，勿在本文件内写内容。
+% ============================================================
+\documentclass[zihao=5, a4paper]{ctexart}
+\input{../common/preamble}
+\input{../common/macros}
+\input{../common/questions_env}
+% 紧凑版式（印刷版）：五号字由文档类选项给定；除收窄边距与压缩列表/选项间距外，
+% 再压缩行距、行间公式留白与解析小标题间距。四项合计约省 11% 页数（打样卷 27 -> 24 页）。
+\geometry{a4paper, margin=1.6cm, headheight=14pt}
+\setlist{itemsep=1pt, topsep=2pt, parsep=0pt}
+\settasks{label={}, label-width=0pt, item-indent=1.2em,
+          column-sep=0.8em, after-item-skip=1pt, before-skip=1pt, after-skip=2pt}
+% 行距：ctex 默认 linespread 1.3 -> 1.2（基线 16.44pt -> 15.18pt），
+% 仍为字号的 1.44 倍，CJK 正文可读性不受影响。
+\linespread{1.2}
+% 行间公式留白：每卷解析含 150~250 个行间公式，此项是本版面最大的杠杆。
+% 用 \AtBeginDocument 是因为 ctex/amsmath 会在 \begin{document} 时重置这四个长度。
+\AtBeginDocument{%
+  \setlength{\abovedisplayskip}{3pt plus 2pt minus 1pt}%
+  \setlength{\belowdisplayskip}{3pt plus 2pt minus 1pt}%
+  \setlength{\abovedisplayshortskip}{1pt plus 1pt}%
+  \setlength{\belowdisplayshortskip}{2pt plus 1pt minus 1pt}}
+% 标题间距：\gkpart 用 \subsection*，\gksolhead 用 \subsubsection*（每卷约 22 个）。
+\ctexset{subsection/beforeskip={6pt plus 2pt minus 1pt}, subsection/afterskip={3pt plus 1pt},
+         subsubsection/beforeskip={5pt plus 2pt minus 1pt}, subsubsection/afterskip={2pt plus 1pt}}
+\renewcommand{\gkpaperid}{gk-2004-regular-hubei-science}
+\renewcommand{\gkheadL}{2004 年·普通高等学校招生考试·湖北卷·理科 · 数学}
+\renewcommand{\gkheadR}{印刷版}
+\hypersetup{pdftitle={2004 年·普通高等学校招生考试·湖北卷·理科 数学 · 印刷版}}
+\begin{document}
+\begin{center}
+  {\Large\bfseries 2004 年·普通高等学校招生考试·湖北卷·理科}\\[4pt]
+  {\large 数学 · 印刷版}
+\end{center}
+\medskip
+\pdfbookmark[1]{试题}{sec:q}
+\input{questions}
+\par\bigskip\hrule\bigskip
+\pdfbookmark[1]{参考答案与详细解析}{sec:s}
+\Needspace{8\baselineskip}
+\begin{center}{\large\bfseries 参考答案与详细解析}\end{center}
+\smallskip
+\input{answers}
+\end{document}
