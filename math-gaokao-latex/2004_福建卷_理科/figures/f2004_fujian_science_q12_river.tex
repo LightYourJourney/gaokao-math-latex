@@ -1,0 +1,35 @@
+% 来源：固定来源 PDF（2004福建理.pdf）第 1 页（印刷页 164）Q12 码头选址示意图
+\begin{tikzpicture}[scale=1.0, >=stealth, line cap=round, line join=round]
+  % 方向标
+  \begin{scope}[shift={(-2.2, 1.2)}]
+    \draw[->, thin] (0, 0) -- (0, 0.9) node[above] {\small 北};
+    \draw[->, thin] (0, 0) -- (0.9, 0) node[right] {\small 东};
+  \end{scope}
+
+  % 坐标定义
+  \coordinate (A) at (-2.3, -0.5);
+  \coordinate (B) at (0.8, -0.5);
+  \coordinate (C) at (1.8, 0.9);
+  \coordinate (M) at (-0.05, -0.05);
+  \coordinate (P) at (0.5, 1.4);
+  \coordinate (Q) at (0.3, -1.2);
+
+  % 线段 AB
+  \draw[thick] (A) -- (B);
+
+  % 河流沿岸曲线 PQ（双曲线右支一段）
+  \draw[thick] (P) to[out=245, in=75] (M) to[out=255, in=105] (Q);
+
+  % 三角形 MBC 公路连线
+  \draw (M) -- (B);
+  \draw (M) -- (C);
+  \draw (B) -- (C);
+
+  % 点标注
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[left] at (M) {$M$};
+  \node[right] at (P) {$P$};
+  \node[right] at (Q) {$Q$};
+\end{tikzpicture}

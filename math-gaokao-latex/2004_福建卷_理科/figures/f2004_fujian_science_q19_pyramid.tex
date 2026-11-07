@@ -1,0 +1,31 @@
+% 来源：固定来源 PDF（2004福建理.pdf）第 2 页（印刷页 165）Q19 三棱锥几何示意图
+\begin{tikzpicture}[scale=1.1, line cap=round, line join=round]
+  % 顶点坐标
+  \coordinate (S) at (0.2, 2.5);
+  \coordinate (A) at (-1.5, -0.6);
+  \coordinate (B) at (2.4, -0.2);
+  \coordinate (C) at (-0.3, 0.4);
+
+  % 中点坐标
+  \coordinate (M) at ($(A)!0.5!(B)$);
+  \coordinate (N) at ($(S)!0.5!(B)$);
+
+  % 虚线边（被遮挡的内侧棱与截面线）
+  \draw[dashed] (S) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (B) -- (C);
+  \draw[dashed] (C) -- (M);
+  \draw[dashed] (C) -- (N);
+
+  % 实线边（前侧可见棱）
+  \draw[thick] (S) -- (A) -- (B) -- cycle;
+  \draw[thick] (M) -- (N);
+
+  % 顶点标签
+  \node[above] at (S) {$S$};
+  \node[below left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[left] at (C) {$C$};
+  \node[below] at (M) {$M$};
+  \node[above right] at (N) {$N$};
+\end{tikzpicture}

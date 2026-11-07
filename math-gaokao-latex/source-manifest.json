@@ -2436,6 +2436,14 @@
         "gk-2004-regular-zhejiang-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b69",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2445,7 +2453,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "18689287-b8d1-4994-a143-f79f9b05156a",
+  "last_transaction_id": "612412e6-a597-4385-9dff-a7d911652975",
   "papers": [
     {
       "blocked_from": null,
@@ -31654,9 +31662,82 @@
       "title": "2004 年·普通高等学校招生考试·浙江卷·文科",
       "track": "arts",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_理科/figures/f2004_fujian_science_q07_options.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_理科/figures/f2004_fujian_science_q10_sphere.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_理科/figures/f2004_fujian_science_q12_river.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_理科/figures/f2004_fujian_science_q16_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_理科/figures/f2004_fujian_science_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_fujian_science",
+        "id": "gk-2004-regular-fujian-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 164、165；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 7 题函数选项图、第 10 题球面截面图、第 12 题双曲线河流图、第 16 题正六棱柱折纸图与第 19 题三棱锥图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2004_福建卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_福建理科_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_福建理科_含解析.md",
+        "questions": "2004/2004_数学真题_福建理科_试题.md",
+        "solution_body": "2004/2004_数学真题_福建理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-f2ac75e3c213b74a7e5492c0930e20e5c5537fc38791cfa163d00d94c7654483"
+      ],
+      "title": "2004 年·普通高等学校招生考试·福建卷·理科",
+      "track": "science",
+      "year": 2004
     }
   ],
-  "revision": 6495,
+  "revision": 6503,
   "schema_version": 1,
   "sources": [
     {
@@ -38009,8 +38090,8 @@
       "exam_type": "regular",
       "git_blob_oid": "35e5ed02925aaa2e1b2ebe6ece99009bd6af1a81",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004福建理.pdf",
       "regions": [],
       "source_id": "src-f2ac75e3c213b74a7e5492c0930e20e5c5537fc38791cfa163d00d94c7654483",
