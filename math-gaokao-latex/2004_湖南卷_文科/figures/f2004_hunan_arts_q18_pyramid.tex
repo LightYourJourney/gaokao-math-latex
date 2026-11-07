@@ -1,0 +1,35 @@
+% Source-faithful schematic draft: 2004 Hunan Arts Q18, PDF p.1 (printed p.176).
+% Source ID: src-69c1d502b386b3e69e4b98d9f5500c36d4b278d52aa54448a71182edf7c03358
+% Source SHA-256: dc0e39533bc2dd37833ae2dc4bdb93e31a39d08808c842611458bf0b844aaeed
+\begin{tikzpicture}[line width=0.6pt,scale=1.1,every node/.style={inner sep=1.5pt}]
+  % Coordinates of pyramid P-ABCD with rhombus base ABCD
+  % A is behind, PA is perpendicular to base ABCD
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (-1.8, -0.9);
+  \coordinate (C) at (0.2, -1.5);
+  \coordinate (D) at (2.0, 0);
+  \coordinate (P) at (0, 2.5);
+  \coordinate (E) at ($(P)!0.5!(D)$);
+
+  % Dashed interior lines
+  \draw[dashed, line width=0.5pt] (P) -- (A);
+  \draw[dashed, line width=0.5pt] (A) -- (B);
+  \draw[dashed, line width=0.5pt] (A) -- (D);
+  \draw[dashed, line width=0.5pt] (A) -- (C);
+  \draw[dashed, line width=0.5pt] (A) -- (E);
+
+  % Solid exterior edges and section lines
+  \draw (P) -- (B);
+  \draw (P) -- (D);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (E) -- (C);
+
+  % Vertex labels faithful to original layout
+  \node[above] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+\end{tikzpicture}

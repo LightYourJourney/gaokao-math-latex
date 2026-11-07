@@ -2468,6 +2468,14 @@
         "gk-2004-regular-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b73",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2477,7 +2485,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ed560b65-4bd4-4bf0-a49a-4daaefab5094",
+  "last_transaction_id": "c58410bc-c2e3-4364-acd9-d9e6f2c8e706",
   "papers": [
     {
       "blocked_from": null,
@@ -31973,9 +31981,78 @@
       "title": "2004 年·普通高等学校招生考试·湖北卷·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_文科/figures/f2004_hunan_arts_q09_options.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_文科/figures/f2004_hunan_arts_q18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_文科/figures/f2004_hunan_arts_q21_curves.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_湖南卷_文科/figures/f2004_hunan_arts_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_hunan_arts",
+        "id": "gk-2004-regular-hunan-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 176、177；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 15 题椭圆方程原卷误印为 x^2/8 + x^2/4 = 1，已按标准椭圆方程 x^2/8 + y^2/4 = 1 考订。第 9 题选项图、第 18 题四棱锥立体几何图、第 21 题曲线面积图、第 22 题抛物线切线圆图均由 TikZ 纯矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2004_湖南卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_湖南文科_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_湖南文科_含解析.md",
+        "questions": "2004/2004_数学真题_湖南文科_试题.md",
+        "solution_body": "2004/2004_数学真题_湖南文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-69c1d502b386b3e69e4b98d9f5500c36d4b278d52aa54448a71182edf7c03358"
+      ],
+      "title": "2004 年·普通高等学校招生考试·湖南卷·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 6526,
+  "revision": 6532,
   "schema_version": 1,
   "sources": [
     {
@@ -38256,8 +38333,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9a6f3c4e63f7c4aad5aefd05e95e3c26f0e6d14f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004湖南文.pdf",
       "regions": [],
       "source_id": "src-69c1d502b386b3e69e4b98d9f5500c36d4b278d52aa54448a71182edf7c03358",
