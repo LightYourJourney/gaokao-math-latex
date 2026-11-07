@@ -1,0 +1,44 @@
+% Source-faithful schematic draft: 2004 Chongqing Science Q19, PDF p.1 (printed p.160).
+% Source ID: src-f4f7a5339a68a3cbcf5ef54e4d3736a907b6de9c04c1ef9f3f8b8f7b718d56c4
+% Source SHA-256: ef3530a818ad893a36345110d6aa9588de3b793de24c4d6f80333cffa317e429
+\begin{tikzpicture}[line width=0.6pt, scale=1.1, every node/.style={inner sep=1.5pt}, baseline=(current bounding box.center)]
+  % Coordinates of pyramid P-ABCD with square base ABCD
+  % A is in the back, PA is perpendicular to base ABCD
+  \coordinate (A) at (0, 0);
+  \coordinate (D) at (2.4, 0.0);
+  \coordinate (B) at (-0.8, -1.1);
+  \coordinate (C) at ($(B)+(D)-(A)$); % (1.6, -1.1)
+  \coordinate (P) at (0, 3.8);
+
+  % Points E, F, M
+  \coordinate (E) at ($(P)!0.62!(D)$);
+  \coordinate (F) at ($(P)!0.62!(C)$);
+  \coordinate (M) at ($(A)!0.62!(B)$);
+
+  % Dashed internal edges
+  \draw[dashed, line width=0.5pt] (P) -- (A);
+  \draw[dashed, line width=0.5pt] (A) -- (B);
+  \draw[dashed, line width=0.5pt] (A) -- (D);
+  \draw[dashed, line width=0.5pt] (A) -- (C);
+  \draw[dashed, line width=0.5pt] (A) -- (E);
+  \draw[dashed, line width=0.5pt] (A) -- (F);
+  \draw[dashed, line width=0.5pt] (M) -- (F);
+
+  % Solid exterior edges
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (E) -- (F);
+
+  % Vertex labels faithful to original layout
+  \node[above] at (P) {$P$};
+  \node[above left] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above right] at (E) {$E$};
+  \node[below right] at (F) {$F$};
+  \node[left] at (M) {$M$};
+\end{tikzpicture}
