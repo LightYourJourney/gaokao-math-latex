@@ -2412,6 +2412,14 @@
         "gk-2004-regular-jiangsu"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b66",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-liaoning"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2421,7 +2429,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ae875176-0688-4730-b840-ba7c075856c1",
+  "last_transaction_id": "a7f4fbe2-441d-4a31-bceb-6355049c8fb2",
   "papers": [
     {
       "blocked_from": null,
@@ -31435,9 +31443,74 @@
       "title": "2004 年·普通高等学校招生考试·江苏卷",
       "track": "none",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_辽宁卷/figures/f2004_liaoning_q11_sine.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_辽宁卷/figures/f2004_liaoning_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_辽宁卷/figures/f2004_liaoning_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_liaoning",
+        "id": "gk-2004-regular-liaoning",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 180、181；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 11 题三角函数图象、第 15 题四棱柱图与第 17 题四棱锥图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "原卷未标注",
+        "variant": "辽宁卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-liaoning",
+      "production_state": "complete",
+      "project_dir": "2004_辽宁卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_辽宁_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_辽宁_含解析.md",
+        "questions": "2004/2004_数学真题_辽宁_试题.md",
+        "solution_body": "2004/2004_数学真题_辽宁_解析正文.md"
+      },
+      "source_ids": [
+        "src-2323f00197bbd8d5c8353a847fc0e7ccfc52169ca219272ee58990ae4b6ecba3"
+      ],
+      "title": "2004 年·普通高等学校招生考试·辽宁卷",
+      "track": "none",
+      "year": 2004
     }
   ],
-  "revision": 6469,
+  "revision": 6482,
   "schema_version": 1,
   "sources": [
     {
@@ -37814,8 +37887,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b7333b74ccf492674f7944f860982267f892846d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-liaoning",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004辽宁.pdf",
       "regions": [],
       "source_id": "src-2323f00197bbd8d5c8353a847fc0e7ccfc52169ca219272ee58990ae4b6ecba3",
