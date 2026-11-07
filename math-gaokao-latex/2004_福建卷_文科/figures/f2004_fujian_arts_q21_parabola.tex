@@ -1,0 +1,23 @@
+% 来源：固定来源 PDF（2004福建文.pdf）第 2 页（印刷页 167）Q21 抛物线法线与割线中点几何示意图
+\begin{tikzpicture}[scale=0.95, >=stealth, line cap=round, line join=round]
+  % 坐标轴
+  \draw[->, thin] (-3.2, 0) -- (3.2, 0) node[right] {$x$};
+  \draw[->, thin] (0, -0.6) -- (0, 3.8) node[above] {$y$};
+  \node[below left] at (0, 0) {$O$};
+
+  % 抛物线 y = 0.5 x^2
+  \draw[thick, domain=-2.6:2.6, samples=60] plot (\x, {0.5*\x*\x});
+
+  % 选取代表性割线点 P 与 Q
+  \coordinate (P) at (1.8, 1.62);
+  \coordinate (Q) at (-1.4, 0.98);
+  \coordinate (M) at ($(P)!0.5!(Q)$);
+
+  % 割线 l
+  \draw[thick] ($(Q)!-0.3!(P)$) -- ($(P)!-0.4!(Q)$) node[below right] {$l$};
+
+  % 标注点
+  \fill (P) circle (1.5pt) node[right] {$P$};
+  \fill (Q) circle (1.5pt) node[above left] {$Q$};
+  \fill (M) circle (1.8pt) node[above right] {$M$};
+\end{tikzpicture}

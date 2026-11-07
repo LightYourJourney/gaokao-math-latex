@@ -2444,6 +2444,14 @@
         "gk-2004-regular-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b70",
+      "issues": [],
+      "paper_ids": [
+        "gk-2004-regular-fujian-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2453,7 +2461,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "e4acb4b3-7354-4986-b8f2-5787b690559d",
+  "last_transaction_id": "78f2ef7f-05eb-461a-9e85-612917c36f60",
   "papers": [
     {
       "blocked_from": null,
@@ -31735,9 +31743,86 @@
       "title": "2004 年·普通高等学校招生考试·福建卷·理科",
       "track": "science",
       "year": 2004
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q07_options.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q10_sphere.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q12_river.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q16_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 3,
+          "path": "2004_福建卷_文科/figures/f2004_fujian_arts_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2004_gaokao_fujian_arts",
+        "id": "gk-2004-regular-fujian-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 166、167；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 7 题函数选项图、第 10 题球面截面图、第 12 题双曲线河流图、第 16 题正六棱柱折纸图、第 19 题三棱锥图与第 21 题抛物线图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "福建文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2004-regular-fujian-arts",
+      "production_state": "complete",
+      "project_dir": "2004_福建卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2004/2004_数学真题_福建文科_答案要点.md",
+        "combined_rendered": "2004/2004_数学真题_福建文科_含解析.md",
+        "questions": "2004/2004_数学真题_福建文科_试题.md",
+        "solution_body": "2004/2004_数学真题_福建文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-7e8d7b43cc8752b0e14feed038275f9fab54d84aafc072605f8684d6543566e4"
+      ],
+      "title": "2004 年·普通高等学校招生考试·福建卷·文科",
+      "track": "arts",
+      "year": 2004
     }
   ],
-  "revision": 6506,
+  "revision": 6511,
   "schema_version": 1,
   "sources": [
     {
@@ -38066,8 +38151,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0714c3d2df995e2c275b4425824f053dd46faef8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2004-regular-fujian-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2004福建文.pdf",
       "regions": [],
       "source_id": "src-7e8d7b43cc8752b0e14feed038275f9fab54d84aafc072605f8684d6543566e4",
