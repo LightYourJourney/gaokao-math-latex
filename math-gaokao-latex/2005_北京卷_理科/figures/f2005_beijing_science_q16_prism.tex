@@ -1,0 +1,56 @@
+% Source-faithful schematic draft: 2005 Beijing Science Q16, PDF p.1 (printed p.216).
+% Source ID: src-f0ddb765f084ce6c1af531447a973cb8595d531721ee9b828b11a8a6e9af7809
+% Source SHA-256: d30f41690977b3682009021e26659b6b575be781becee5243f5eabd1129636b9
+\begin{tikzpicture}[line width=0.6pt, scale=1.0, every node/.style={inner sep=1.5pt}, baseline=(current bounding box.center)]
+  % Height
+  \def\h{1.9}
+
+  % Coordinates of base ABCD matching original perspective
+  \coordinate (A) at (-2.2, -0.6);
+  \coordinate (D) at (-1.3, 0.0);
+  \coordinate (B) at (-0.1, -1.2);
+  \coordinate (C) at (2.4, -0.2);
+
+  % Intersection E of AC and BD
+  \coordinate (E) at (intersection of A--C and B--D);
+
+  % Coordinates of top face A1B1C1D1
+  \coordinate (A1) at ($(A)+(0,\h)$);
+  \coordinate (D1) at ($(D)+(0,\h)$);
+  \coordinate (B1) at ($(B)+(0,\h)$);
+  \coordinate (C1) at ($(C)+(0,\h)$);
+
+  % Dashed hidden base edges and diagonals
+  \draw[dashed, line width=0.5pt] (A) -- (D);
+  \draw[dashed, line width=0.5pt] (C) -- (D);
+  \draw[dashed, line width=0.5pt] (A) -- (C);
+  \draw[dashed, line width=0.5pt] (B) -- (D);
+  \draw[dashed, line width=0.5pt] (D) -- (D1);
+
+  % Dashed interior lines
+  \draw[dashed, line width=0.5pt] (A1) -- (D);
+  \draw[dashed, line width=0.5pt] (A1) -- (E);
+  \draw[dashed, line width=0.5pt] (A1) -- (C);
+  \draw[dashed, line width=0.5pt] (C1) -- (D);
+  \draw[dashed, line width=0.5pt] (C1) -- (E);
+
+  % Solid visible edges and lines
+  \draw (A) -- (B) -- (C);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+  \draw (A1) -- (B);
+  \draw (B) -- (C1);
+
+  % Labels
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[above=2pt] at (E) {$E$};
+  \node[left] at (A1) {$A_1$};
+  \node[above] at (B1) {$B_1$};
+  \node[above right] at (C1) {$C_1$};
+  \node[above left] at (D1) {$D_1$};
+\end{tikzpicture}
