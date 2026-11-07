@@ -87,10 +87,16 @@ class Fujian2004ScienceSolutionsTests(unittest.TestCase):
         self.assertEqual(ways, 90)
         self.assertEqual(0.5 * (6 * 5) * math.comb(4, 2), 90)
 
-        # Q10: Sphere R=2, distance d=1 -> small circle r = sqrt(3) -> side = sqrt(3)*r = 3
-        r_circle = math.sqrt(2**2 - 1**2)
-        side = math.sqrt(3) * r_circle
-        self.assertAlmostEqual(side, 3.0)
+        # Q10: Sphere surface 48*pi => R = sqrt(12) = 2*sqrt(3).
+        # Triangle ABC: AB=2, BC=4, angle B=60° => AC = sqrt(4 + 16 - 2*2*4*cos(60°)) = 2*sqrt(3).
+        # Right triangle with circumradius r = BC / 2 = 2.
+        # Line OA with plane ABC: cos(theta) = r / R = 2 / (2*sqrt(3)) = sqrt(3)/3.
+        R_sphere = math.sqrt(48 / 4)
+        ac_len = math.sqrt(2**2 + 4**2 - 2 * 2 * 4 * math.cos(math.radians(60)))
+        self.assertAlmostEqual(ac_len, 2 * math.sqrt(3))
+        r_circum = 4 / 2
+        cos_theta = r_circum / R_sphere
+        self.assertAlmostEqual(cos_theta, math.sqrt(3) / 3)
 
         # Q12: Hyperbola focal-directrix property gives min cost 5a
         # C is at (2 + 2*sin(30°), 2*cos(30°)) = (3, sqrt(3))
@@ -113,6 +119,71 @@ class Fujian2004ScienceSolutionsTests(unittest.TestCase):
             return 9.0 / 4.0 * (x**2 - x**3)
         self.assertGreater(v(2 / 3), v(2 / 3 - 0.01))
         self.assertGreater(v(2 / 3), v(2 / 3 + 0.01))
+
+        # Q18: Discrete distribution and expectation
+        total_comb = math.comb(10, 3)
+        p0 = math.comb(6, 0) * math.comb(4, 3) / total_comb
+        p1 = math.comb(6, 1) * math.comb(4, 2) / total_comb
+        p2 = math.comb(6, 2) * math.comb(4, 1) / total_comb
+        p3 = math.comb(6, 3) * math.comb(4, 0) / total_comb
+        self.assertAlmostEqual(p0 + p1 + p2 + p3, 1.0)
+        ex = 0 * p0 + 1 * p1 + 2 * p2 + 3 * p3
+        self.assertAlmostEqual(ex, 9 / 5)
+        p_a_fail = p0 + p1  # 40/120 = 1/3
+        self.assertAlmostEqual(p_a_fail, 1 / 3)
+        p_b_fail = (math.comb(8, 1) * math.comb(2, 2)) / total_comb  # 8/120 = 1/15
+        self.assertAlmostEqual(p_b_fail, 1 / 15)
+        p_at_least_one = 1 - p_a_fail * p_b_fail
+        self.assertAlmostEqual(p_at_least_one, 44 / 45)
+
+        # Q19: Pyramid dihedral angle and distance
+        # Normal CMN n2 = (sqrt(2), sqrt(6), -1)
+        # Normal base n1 = (0, 0, 1)
+        # cos(theta) = |-1| / (1 * 3) = 1/3
+        n2 = (math.sqrt(2), math.sqrt(6), -1)
+        norm_n2 = math.sqrt(sum(k**2 for k in n2))
+        self.assertAlmostEqual(norm_n2, 3.0)
+        cos_dihedral = abs(n2[2]) / norm_n2
+        self.assertAlmostEqual(cos_dihedral, 1 / 3)
+        # Vector CB = (-2, 2*sqrt(3), 0)
+        cb_dot_n2 = -2 * math.sqrt(2) + 2 * math.sqrt(3) * math.sqrt(6) + 0
+        dist_b = abs(cb_dot_n2) / norm_n2
+        self.assertAlmostEqual(dist_b, 4 * math.sqrt(2) / 3)
+
+        # Q20: Technical upgrade profit crossover year
+        # f(n) = n^2 + n - 10 - 50 / (2^n)
+        def f_n(n):
+            return n**2 + n - 10 - 50 / (2**n)
+        self.assertLess(f_n(1), 0)
+        self.assertLess(f_n(2), 0)
+        self.assertLess(f_n(3), 0)
+        self.assertGreater(f_n(4), 0)
+
+        # Q21: Root distance max over a in [-1, 1] is sqrt(1 + 8) = 3
+        # m^2 + t*m - 2 >= 0 for t in [-1, 1] requires m >= 2 or m <= -2
+        def h_val(m, t):
+            return m**2 + t * m - 2
+        for m_test in [2.0, 2.5, -2.0, -3.0]:
+            self.assertGreaterEqual(h_val(m_test, -1), 0)
+            self.assertGreaterEqual(h_val(m_test, 1), 0)
+        for m_test in [1.9, 0.0, -1.9]:
+            min_val = min(h_val(m_test, -1), h_val(m_test, 1))
+            self.assertLess(min_val, 0)
+
+        # Q22: Distance ratio sum = 2*(k^2 + b) / |b|
+        # For b > 0, 2*k^2/b + 2 > 2.
+        # For b < 0, let b = -B (B>0), k^2 > 2B => 2*(k^2 - B)/B = 2*k^2/B - 2 > 4 - 2 = 2.
+        for b_val in [1.0, 3.0, 0.5]:
+            for k_val in [0.1, 1.0, 5.0]:
+                ratio_sum = 2 * (k_val**2 + b_val) / abs(b_val)
+                self.assertGreater(ratio_sum, 2.0)
+        for b_neg in [-1.0, -2.0]:
+            # k^2 > -2*b_neg
+            min_k_sq = -2 * b_neg
+            for delta in [0.01, 1.0, 10.0]:
+                k_val = math.sqrt(min_k_sq + delta)
+                ratio_sum = 2 * (k_val**2 + b_neg) / abs(b_neg)
+                self.assertGreater(ratio_sum, 2.0)
 
 
 if __name__ == "__main__":
