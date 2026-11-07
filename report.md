@@ -2,11 +2,11 @@
 
 - 来源总数：**775**（普通高考 734，春季高考 41）。
 - 来源状态：ready 775
-- 试卷总数：**437**；生产状态：blocked 111，compiled 3，complete 323
-- 批次总数：**283**；manifest 状态：closed 194，closed_with_blockers 88，compiled_pending_review 1
-- 正式复核门禁：FINALIZED 2，INVALID_OR_STALE 281
-- 已编译版本：1748/1748；构建回执状态：compiled_pending_review 4，succeeded 433
-- review 回执状态：failed 1，passed 436
+- 试卷总数：**438**；生产状态：blocked 111，compiled 3，complete 324
+- 批次总数：**284**；manifest 状态：closed 195，closed_with_blockers 88，compiled_pending_review 1
+- 正式复核门禁：FINALIZED 3，INVALID_OR_STALE 281
+- 已编译版本：1752/1752；构建回执状态：compiled_pending_review 4，succeeded 434
+- review 回执状态：failed 1，passed 437
 - 问题总账：1431 条，未解决问题：310，阻塞完成 249。
 - 回执日志警告汇总（包含待复核回执）：Overfull 37，Underfull 142，豁免记录 179。
 - 回执完整性：build 缺失 0 / 无效 0；review 缺失 0 / 无效 0。
@@ -299,3 +299,4 @@
 | phase4-b64 | 1 | closed | INVALID_OR_STALE | committed |
 | phase4-b65 | 1 | closed | FINALIZED | committed |
 | phase4-b66 | 1 | closed | FINALIZED | committed |
+| phase4-b67 | 1 | closed | FINALIZED | committed |
