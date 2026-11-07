@@ -1,0 +1,41 @@
+% Source-faithful schematic draft: 2005 Beijing Arts Q16, PDF p.1 (printed p.218).
+% Source ID: src-fea4e73708ac3a85394b3698456c3244904a156c2ea4907c94a9bc9ed3e6cf8d
+% Source SHA-256: 9ee1bf91b64cd5e48bd6415909f82ef61e023a117a843043c0ca22435102b3a1
+\begin{tikzpicture}[line width=0.6pt, scale=0.95, every node/.style={inner sep=1.5pt}, baseline=(current bounding box.center)]
+  % Coordinates of right triangular prism ABC-A1B1C1
+  \coordinate (C) at (0, 0);
+  \coordinate (A) at (-1.8, -1.0);
+  \coordinate (B) at (2.2, -0.6);
+  \coordinate (D) at ($(A)!0.5!(B)$);
+
+  \coordinate (C1) at (0, 3.4);
+  \coordinate (A1) at (-1.8, 2.4);
+  \coordinate (B1) at (2.2, 2.8);
+
+  % Dashed interior lines
+  \draw[dashed, line width=0.5pt] (C) -- (A);
+  \draw[dashed, line width=0.5pt] (C) -- (B);
+  \draw[dashed, line width=0.5pt] (C) -- (C1);
+  \draw[dashed, line width=0.5pt] (C) -- (D);
+  \draw[dashed, line width=0.5pt] (C) -- (B1);
+  \draw[dashed, line width=0.5pt] (A) -- (C1);
+  \draw[dashed, line width=0.5pt] (B) -- (C1);
+
+  % Solid exterior edges and lines
+  \draw (A) -- (B);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (A1) -- (B1);
+  \draw (A1) -- (C1);
+  \draw (B1) -- (C1);
+  \draw (D) -- (B1);
+
+  % Labels
+  \node[left] at (C) {$C$};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (D) {$D$};
+  \node[above] at (C1) {$C_1$};
+  \node[left] at (A1) {$A_1$};
+  \node[above right] at (B1) {$B_1$};
+\end{tikzpicture}
