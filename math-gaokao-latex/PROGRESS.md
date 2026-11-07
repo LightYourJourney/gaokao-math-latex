@@ -15099,3 +15099,12 @@
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 4/25/6/19 页，共 54 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 54 页共 432 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b65.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 436 套试卷 TeX 投影 100% 一致。
+
+### 2004 辽宁卷（phase4-b66）：四版构建与视觉封账（2026-11-07）
+
+- 固定来源认证与范围确认：来源 `src-2323f00197bbd8d5c8353a847fc0e7ccfc52169ca219272ee58990ae4b6ecba3`，上游路径 `普通高考/2004/2004辽宁.pdf`（SHA-256 `be2accb36a086126db90ee7c5a217e08e55429053a4167df1ad58bbfb213de46`，2 页 A3 横向矢量排印，原卷印刷页码 180、181，共 22 题，实行自主命题统一数学卷，按 `track=none` 登记为 `gk-2004-regular-liaoning`）。PDF 题面第 1 页（180 页）包含选择题 1–12、填空题 13–16、解答题 17；第 2 页（181 页）包含解答题 18–22。来源接收报告写入 `reports/2004-liaoning-source-intake.md`。
+- 矢量重绘与图稿挂接：Q11 三角函数图象（`f2004_liaoning_q11_sine.tex`）、Q15 四棱柱底面正方形图（`f2004_liaoning_q15_prism.tex`）、Q17 四棱锥底面菱形图（`f2004_liaoning_q17_pyramid.tex`），重绘为 TikZ 纯矢量图并在各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备。Q01 象限判定第四象限（选 D）；Q02 对数与指数不等式②与④（选 D）；Q03 线面关系必要不充分条件（选 B）；Q04 复数模长 $\sqrt{2}$（选 C）；Q05 独立事件恰有一人解决 $p_1(1-p_2)+p_2(1-p_1)$（选 B）；Q06 向量轨迹抛物线 $y^2=x+6$（选 D）；Q07 周期 2 偶函数（选 B）；Q08 分布列参数 $1/3^9$（选 C）；Q09 双曲线点到原点距离 $\sqrt{6}/2$（选 A）；Q10 球面内接正方形与球体积 $8\sqrt{6}\pi$（选 A）；Q11 三角函数参数 $\omega=1/2, \varphi=\pi/6$（选 C）；Q12 排列组合不相邻排法 346 种（选 B）；Q13 切线截距 1；Q14 极限 $-2\sqrt{\pi}$；Q15 四棱柱线面距离 $a$；Q16 超几何概率 $13/63$；Q17 空间面面垂直与二面角平面角余弦值 $5\sqrt{7}/14$；Q18 含参绝对值不等式与三角零点交集范围 $(-1, 0]$；Q19 椭圆弦中点轨迹 $4x^2+(y-1/2)^2=1/4$ 与距离极值 $[1/4, \sqrt{21}/6]$；Q20 工厂农场赔付优化 $w(t)=2000\sqrt{t}-st$ 与最佳价格 $s=20$ 元；Q21 二次函数系数 $a=1$ 与非线性递推数列数学归纳法不等式证明；Q22 反函数 $\ln(\mathrm{e}^x-a)$、导数 $\mathrm{e}^x/(\mathrm{e}^x+a)$ 与参数范围 $(\ln(12a/5), \ln(8a/3))$ 全部独立推导闭环，评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 5/29/7/21 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b66.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 437 套试卷 TeX 投影 100% 一致。

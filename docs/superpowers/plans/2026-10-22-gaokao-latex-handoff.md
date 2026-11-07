@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-07 当前状态：phase4-b65 2004 江苏卷收口，全库 436 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-07 当前状态：phase4-b66 2004 辽宁卷收口，全库 437 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b65 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b66 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b65
+### 最近完成：phase4-b66
 
-- `gk-2004-regular-jiangsu`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-b1c43a6876dfbf5bd59261aebdc075bc89fdb8e378c37febb2f1b3351ac7e509`，上游 `普通高考/2004/2004江苏.pdf`（两页 A3 横向扫描排印，原卷印刷页码 178、179，首次自主命题不分文理统一数学卷，本库登记 `track=none`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q19，第 2 页包含 Q20–Q22；全卷 22 题题面、选项与分值严谨完备。Q06 平均阅读时间 0.9 小时（选 B）；Q09 题面漏印文字经公开权威资料考证补全（选 D）；Q12 映射方程证明实数对 0 个（选 A）；Q13 解集 $\{x \mid x < -2 \text{ 或 } x > 3\}$；Q14 圆方程 $(x - 1)^2 + (y - 2)^2 = 25$；Q15 首项 2；Q16 向量 $(4/5, -3/5)$；Q17 三角求值 $\sin(\alpha - \pi/3) = \dfrac{4-3\sqrt{3}}{10}$；Q18 直线与平面所成角 $\arctan\dfrac{4\sqrt{17}}{17}$，点到平面距离 $\dfrac{3\sqrt{2}}{2}$；Q19 线性规划最大盈利 7 万元；Q20 等差数列平方和充要解 $k=4$ 及三个恒等数列；Q21 椭圆方程 $\dfrac{x^2}{4m^2}+\dfrac{y^2}{3m^2}=1$ 与直线斜率 $\pm 2\sqrt{6}$；Q22 抽象函数不等式压轴三问证明全部独立闭环，内容候选评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-jiangsu-source-intake.md`；重绘并挂接 2 张高保真 TikZ 矢量图（Q06 学生课外阅读时间条形统计图、Q18 正方体空间射影与线面角图）。
+- `gk-2004-regular-liaoning`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-2323f00197bbd8d5c8353a847fc0e7ccfc52169ca219272ee58990ae4b6ecba3`，上游 `普通高考/2004/2004辽宁.pdf`（两页 A3 横向矢量排印，原卷印刷页码 180、181，实行自主命题统一数学卷，本库登记 `track=none`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q17，第 2 页包含 Q18–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 象限判定第四象限（选 D）；Q02 对数与指数不等式②与④（选 D）；Q03 线面关系必要不充分条件（选 B）；Q04 复数模长 $\sqrt{2}$（选 C）；Q05 独立事件恰有一人解决 $p_1(1-p_2)+p_2(1-p_1)$（选 B）；Q06 向量轨迹抛物线 $y^2=x+6$（选 D）；Q07 周期 2 偶函数（选 B）；Q08 分布列参数 $1/3^9$（选 C）；Q09 双曲线点到原点距离 $\sqrt{6}/2$（选 A）；Q10 球面内接正方形与球体积 $8\sqrt{6}\pi$（选 A）；Q11 三角函数参数 $\omega=1/2, \varphi=\pi/6$（选 C）；Q12 排列组合不相邻排法 346 种（选 B）；Q13 切线截距 1；Q14 极限 $-2\sqrt{\pi}$；Q15 四棱柱线面距离 $a$；Q16 超几何概率 $13/63$；Q17 空间面面垂直与二面角平面角余弦值 $5\sqrt{7}/14$；Q18 含参绝对值不等式与三角零点交集范围 $(-1, 0]$；Q19 椭圆弦中点轨迹 $4x^2+(y-1/2)^2=1/4$ 与距离极值 $[1/4, \sqrt{21}/6]$；Q20 工厂农场赔付优化 $w(t)=2000\sqrt{t}-st$ 与最佳价格 $s=20$ 元；Q21 二次函数系数 $a=1$ 与非线性递推数列数学归纳法不等式证明；Q22 反函数 $\ln(\mathrm{e}^x-a)$、导数 $\mathrm{e}^x/(\mathrm{e}^x+a)$ 与参数范围 $(\ln(12a/5), \ln(8a/3))$ 全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-liaoning-source-intake.md`；重绘并挂接 3 张高保真 TikZ 纯矢量图（Q11 三角函数波形图、Q15 斜四棱柱截面图、Q17 菱形底面四棱锥图）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/25/6/19 页，共 54 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 54 页共 432 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b65.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 436 套试卷 TeX 投影 100% 一致。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/29/7/21 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b66.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 437 套试卷 TeX 投影 100% 一致。
 - 下一步推荐推进 2004 年未录入自主命题真题（如浙江文理卷 `2004浙江文.pdf` / `2004浙江理.pdf`，福建文理卷 `2004福建文.pdf` / `2004福建理.pdf` 等）。
+
+### 之前完成：phase4-b65
+
+- `gk-2004-regular-jiangsu`，22 题；详情参见 `PROGRESS.md`。四版共 54 页，`FINALIZED`，已闭环。全量 436 套试卷 TeX 投影一致。
 
 ### 之前完成：phase4-b64
 
