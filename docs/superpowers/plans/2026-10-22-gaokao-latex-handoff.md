@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-08 当前状态：phase4-b80 2005 天津理科卷收口，全库 451 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b81 2005 山东文科卷收口，全库 452 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b80 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b81 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b80
+### 最近完成：phase4-b81
 
-- `gk-2005-regular-tianjin-science`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-c497f6ca699aa6a4cbd40345b965ead11ce5f2c405ff2eecb0fd8962738252ec`，上游 `普通高考/2005/2005天津理.pdf`（两页 A3 扫描排印，原卷印刷页码 266、267，印刷题签“2005 普通高等学校招生考试 (天津卷理)”，科类登记 `track=science`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 集合绝对值与分式不等式交集 $(-\infty, -3) \cup [\frac{5}{2}, +\infty)$（选 D）；Q02 复数除法纯虚数 $a = -6$（选 C）；Q03 不等式性质、均值不等式与两圆位置关系判定假命题数 1（选 B）；Q04 空间线面垂直充分条件辨析（选 D）；Q05 椭圆与双曲线几何性质、准线与渐近线斜率 $\pm \frac{1}{2}$（选 C）；Q06 椭圆方程系数、矩形区域约束与排列组合计数 72（选 B）；Q07 独立重复试验概率 $\frac{81}{125}$（选 A）；Q08 三角函数图象伸缩平移变换（选 C）；Q09 指数型反函数单调性不等式 $(\frac{a^2-1}{2a}, +\infty)$（选 A）；Q10 对数复合单调性与真数正值参数范围 $[\frac{3}{4}, 1)$（选 B）；Q11 二项式定理展开通项与求和 $\frac{7^n - 1}{6}$；Q12 三棱锥异面直线所成角正切值 $\sqrt{2}$；Q13 分奇偶递推数列通项与前百项和 $2600$；Q14 平面向量角平分线单位向量与定模长向量 $(-\frac{\sqrt{10}}{5}, \frac{3\sqrt{10}}{5})$；Q15 离散型随机变量期望值 $4760$ 元；Q16 奇函数与轴对称周期性及前五项求和 $0$；Q17 余弦定理、正弦定理求角 $A = \frac{\pi}{3}, \tan B = \frac{1}{2}$；Q18 齐次等比多项式错位相减求和与极限 $\max(a, b)$；Q19 斜三棱柱线面角 $60^\circ$、线面平行判定与三棱锥外接球体积 $\frac{4\sqrt{3}}{27}\pi a^3$；Q20 三角视角建模、向量数量积与基本不等式极值高度 $60$ 米；Q21 抛物线焦点准线、割线定比分点中点在 $y$ 轴与钝角纵坐标范围 $(-\infty, -1) \cup (-1, -\frac{1}{4})$；Q22 三角代数混合函数导数极值、代数式化简及极值点跨度不等式 $\frac{\pi}{2} < a_{n+1} - a_n < \pi$。全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-tianjin-science-source-intake.md`；重绘并挂接 3 张高保真 TikZ 纯矢量图（Q12、Q19、Q20）。
+- `gk-2005-regular-shandong-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-f0834e0cdd591d4a5f24d1ad278bc36d65575c096fbc9cea82e1d802f551460d`，上游 `普通高考/2005/2005山东文.pdf`（两页 A3 扫描排印，原卷印刷页码 260、261，印刷题签“2005 普通高等学校招生考试 (山东卷文)”，科类登记 `track=arts`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 等差数列项数 $669$（选 C）；Q02 指对大小比较 $\log_4 0.3 < 0.4^3 < 3^{0.4}$（选 C）；Q03 反函数图象双曲线两支识别（选 B）；Q04 三角倍角最小正周期 $\pi$ 与对称中心 $(\frac{\pi}{12}, 0)$（选 B）；Q05 奇函数且在 $[-1, 1]$ 单调递减（选 D）；Q06 二项式特定项系数 $21$（选 C）；Q07 分段函数方程解 $1$ 或 $-\frac{\sqrt{2}}{2}$（选 C）；Q08 向量共线三点 $A, B, D$（选 A）；Q09 经纬度大圆球面距离 $\frac{2\pi}{3}R$（选 D）；Q10 至少 1 人中奖概率 $\frac{11}{12}$（选 D）；Q11 集合真包含充分不必要条件（选 A）；Q12 直线对称与椭圆三角形面积点数恰为 $2$ 个（选 B）；Q13 分层抽样人数 $50$；Q14 等腰直角双曲线离心率 $\sqrt{2}$；Q15 简单线性规划最优解坐标 $(2, 3)$；Q16 空间线面位置关系真命题序号 ③④；Q17 向量模长与半角三角求值 $-\frac{4}{5}$；Q18 摸球概率模型 $3$ 个、$\frac{2}{7}$ 与 $\frac{22}{35}$；Q19 导数极值点关系式 $n = 3m + 6$ 与单调区间分类讨论；Q20 长方体异面直线角 $\arccos\frac{\sqrt{2}}{4}$、二面角 $\arccos\frac{\sqrt{15}}{5}$ 与点面距离 $\frac{2\sqrt{5}}{5}$；Q21 递推数列差分等比数列证明与错位相减求导值 $3(n-1)2^{n+1} + 6 - \frac{n(n+1)}{2}$；Q22 抛物线轨迹方程 $y^2 = 2px$ 与倾斜角和正切弦线恒过定点 $(-2p, 2p)$ 证明。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-shandong-arts-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（Q03、Q20）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_tianjin_science_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/33/7/22 页，共 67 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 67 页共 536 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b80.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 451 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进：2005 年山东文科卷 `2005山东文.pdf`（下一批次 `phase4-b81`，`gk-2005-regular-shandong-arts`）！2005 年天津卷文理双科均已大圆满收口！
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_shandong_arts_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/30/6/20 页，共 60 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 60 页共 480 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b81.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 452 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进：2005 年山东理科卷 `2005山东理.pdf`（下一批次 `phase4-b82`，`gk-2005-regular-shandong-science`）！
+
+### 之前完成：phase4-b80
+
+- `gk-2005-regular-tianjin-science`，22 题；详情参见 `PROGRESS.md`。四版共 67 页，`FINALIZED`，已闭环。全量 451 套试卷 TeX 投影一致。2005 年天津卷文理双科均已大圆满收口！
 
 ### 之前完成：phase4-b79
 
