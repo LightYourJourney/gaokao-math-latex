@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=stealth, scale=0.55]
+  % 坐标轴
+  \draw[->, thick] (-3.2, 0) -- (12.2, 0) node[below] {$x$};
+  \draw[->, thick] (0, -5.2) -- (0, 5.5) node[left] {$y$};
+  \node[above left] at (0, 0) {$O$};
+
+  % 曲线 y = -4*sin(pi/8*x + pi/4)
+  \draw[thick, domain=-2:11.2, samples=120, smooth] 
+    plot (\x, {-4*sin(((\x)*pi/8 + pi/4) r)});
+
+  % 零点
+  \node[below left] at (-2, 0) {$-2$};
+  \node[below right] at (6, 0) {$6$};
+
+  % 极值虚线
+  \draw[dashed] (0, 4) node[left] {$4$} -- (10, 4);
+  \draw[dashed] (0, -4) node[left] {$-4$} -- (2, -4);
+\end{tikzpicture}

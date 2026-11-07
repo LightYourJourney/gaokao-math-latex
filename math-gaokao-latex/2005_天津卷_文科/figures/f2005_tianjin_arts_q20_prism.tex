@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=stealth, scale=1.1]
+  % 底面顶点
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.2, 0);
+  \coordinate (C) at (1.8, 0.8);
+
+  % 侧棱向量: (1.2, 2.4)
+  \coordinate (A1) at (1.2, 2.4);
+  \coordinate (B1) at (3.4, 2.4);
+  \coordinate (C1) at (3.0, 3.2);
+
+  % 中点 F on A1A, E on B1C1
+  \coordinate (F) at (0.6, 1.2);
+  \coordinate (E) at (3.2, 2.8);
+
+  % 实线棱
+  \draw[thick] (A) -- (B) -- (B1) -- (A1) -- cycle;
+  \draw[thick] (A1) -- (C1) -- (B1);
+  \draw[thick] (A1) -- (B);
+  \draw[thick] (A1) -- (E);
+  \draw[thick] (B1) -- (F);
+
+  % 虚线棱与辅助线
+  \draw[dashed, thick] (A) -- (C) -- (B);
+  \draw[dashed, thick] (C) -- (C1);
+  \draw[dashed, thick] (F) -- (C);
+  \draw[dashed, thick] (B1) -- (C);
+
+  % 顶点标签
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[above left] at (A1) {$A_1$};
+  \node[right] at (B1) {$B_1$};
+  \node[above] at (C1) {$C_1$};
+  \node[above left] at (F) {$F$};
+  \node[above right] at (E) {$E$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth, scale=0.9]
+  % 三角形顶点
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (4.0, 0);
+  \coordinate (C) at (2.0, 3.464);
+
+  % 边
+  \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+  % 底边 3 个分点
+  \foreach \i in {1, 2, 3} {
+    \fill ($ (A) ! \i/4 ! (B) $) circle (1.8pt);
+  }
+
+  % 右边 3 个分点
+  \foreach \i in {1, 2, 3} {
+    \fill ($ (B) ! \i/4 ! (C) $) circle (1.8pt);
+  }
+
+  % 左边 3 个分点
+  \foreach \i in {1, 2, 3} {
+    \fill ($ (C) ! \i/4 ! (A) $) circle (1.8pt);
+  }
+\end{tikzpicture}

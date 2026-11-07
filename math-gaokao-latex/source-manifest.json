@@ -2516,6 +2516,14 @@
         "gk-2005-regular-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b79",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-tianjin-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2525,7 +2533,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cecc084b-9398-4919-8547-da86e9dd50f4",
+  "last_transaction_id": "68b752d3-4c4f-41a7-ac0d-236d65772d30",
   "papers": [
     {
       "blocked_from": null,
@@ -32406,9 +32414,82 @@
       "title": "2005 年·普通高等学校招生考试·北京卷·理科",
       "track": "science",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_文科/figures/f2005_tianjin_arts_q08_trig.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_文科/figures/f2005_tianjin_arts_q13_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_文科/figures/f2005_tianjin_arts_q17_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_文科/figures/f2005_tianjin_arts_q20_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_天津卷_文科/figures/f2005_tianjin_arts_q21_slope.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_tianjin_arts",
+        "id": "gk-2005-regular-tianjin-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 268、269；全卷共 23 题（选 10、填 7、解 6，满分 150 分）。第 8 题三角函数图象选 A。第 10 题按单调递减选 B。第 11 题二项式常数项 210。第 13 题三棱锥异面直线所成角正切值 sqrt(2)。第 17 题三角形分点构成三角形概率 1/3。第 18 题三角化简。第 19 题等比数列公比 1 或 -1/2 与错位相减求和。第 20 题斜三棱柱线面角 60 度、线面平行证明与外接球体积 4*sqrt(3)/27*pi*a^3。第 21 题山坡仰角最大化 60 米。第 22 题根差不等式与导数极值双命题。第 23 题抛物线定比分点与钝角范围。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            23
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "天津文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-tianjin-arts",
+      "production_state": "complete",
+      "project_dir": "2005_天津卷_文科",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_天津文科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_天津文科_含解析.md",
+        "questions": "2005/2005_数学真题_天津文科_试题.md",
+        "solution_body": "2005/2005_数学真题_天津文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-cd77c03d359b56a4bec7bfc3969c5fcf3df64a89b078dfac3b6776fb825af3c6"
+      ],
+      "title": "2005 年·普通高等学校招生考试·天津卷·文科",
+      "track": "arts",
+      "year": 2005
     }
   ],
-  "revision": 6567,
+  "revision": 6575,
   "schema_version": 1,
   "sources": [
     {
@@ -39097,8 +39178,8 @@
       "exam_type": "regular",
       "git_blob_oid": "94255cc8fe09a3c0ba3f6be0ab3151236a168a48",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-tianjin-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005天津文.pdf",
       "regions": [],
       "source_id": "src-cd77c03d359b56a4bec7bfc3969c5fcf3df64a89b078dfac3b6776fb825af3c6",
