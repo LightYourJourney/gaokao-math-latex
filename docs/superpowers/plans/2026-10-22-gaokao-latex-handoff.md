@@ -1,26 +1,30 @@
 # 高考数学 LaTeX 项目交接
 
-更新时间：2026-11-07（中国标准时间）
+更新时间：2026-11-08（中国标准时间）
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-07 当前状态：phase4-b68 2004 浙江文科卷收口，全库 439 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b69 2004 福建理科卷收口，全库 440 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b68 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b69 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b68
+### 最近完成：phase4-b69
 
-- `gk-2004-regular-zhejiang-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-0f11f5c9f471004d5361ba63a8cd76e404c5e126be072fcfb0e205938017cbb2`，上游 `普通高考/2004/2004浙江文.pdf`（两页 A3 扫描排印，原卷印刷题签“2004 普通高等学校招生考试 (浙江卷文)”，科类登记 `track=arts`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q19，第 2 页包含 Q20–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 集合并集补集 $\{4\}$（选 B）；Q02 直线夹角 $\pi/4$（选 A）；Q03 等差等比数列公差与项值 $a_2=-6$（选 B）；Q04 向量共线正切值 $\tan\alpha=3/4$（选 A）；Q05 单位圆逆时针终点坐标 $(-1/2, \sqrt{3}/2)$（选 A）；Q06 抛物线关于直线对称方程 $y^2=16-4x$（选 C）；Q07 二项式展开常数项 $n=10$（选 C）；Q08 三角形角与正弦必要不充分条件（选 B）；Q09 对数函数定义域值域参数 $a=2$（选 D）；Q10 正三棱柱线面角 $\arcsin(\sqrt{6}/4)$（选 D）；Q11 椭圆焦点分割离心率 $2\sqrt{5}/5$（选 D）；Q12 复合函数不动点实根判定（选 B）；Q13 分段函数不等式解集 $(-\infty, 3/2]$；Q14 向量三角形闭合模平方点积和 $-25$；Q15 垂直两平面空间点到交线距离 $\sqrt{5}$；Q16 质点沿坐标轴跳动方法数 $5$ 种；Q17 数列前 $n$ 项和递推 $a_1=-1/2, a_2=1/4$ 及等比数列证明；Q18 三角诱导降幂求值 $-1/9$ 与余弦定理乘积最大值 $9/4$；Q19 多面体线面平行、垂直证明及二面角大小 $60^\circ$（或 $\pi/3$）；Q20 工厂停电独立事件均星期日概率 $1/16807$ 与至少两工厂同一天概率 $2041/2401$；Q21 三次多项式导数 $3x^2-2ax-4$、区间最值 $9/2$ 和 $-50/27$ 与单调递增参数范围 $[-2, 2]$；Q22 双曲线点线距离斜率范围 $m \in [-1, 1 - 2\sqrt{3}/3] \cup [1 + 2\sqrt{3}/3, 3]$ 与内心确定双曲线方程 $x^2 - (2\sqrt{2}-1)y^2 = 1$ 全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-zhejiang-arts-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（Q10 正三棱柱线段图、Q19 正方形与矩形垂直多面体立体图）。
+- `gk-2004-regular-fujian-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-f2ac75e3c213b74a7e5492c0930e20e5c5537fc38791cfa163d00d94c7654483`，上游 `普通高考/2004/2004福建理.pdf`（两页 A3 扫描排印，原卷印刷页码 164、165，印刷题签“2004 普通高等学校招生考试 (福建卷理)”，科类登记 `track=science`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 复数除法与乘方 $-1$（选 A）；Q02 三角求值化简 $4$（选 C）；Q03 充分必要条件命题真假 $p$ 假 $q$ 真（选 D）；Q04 双曲线焦点到渐近线距离 $3$（选 B）；Q05 圆柱与圆锥全面积体积比 $V_1/V_2=3$（选 B）；Q06 六班级转入四学生分班分配法 $\frac{1}{2}\mathrm{A}_6^2\mathrm{C}_4^2$（选 B）；Q07 对数反函数平移图象对应（选 C）；Q08 无理函数反函数值域（选 B）；Q09 向量夹角与投影范围（选 A）；Q10 球面小圆正三角形边长 $3$（选 D）；Q11 三角偶函数单调性大小比较 $f(\cos 2) > f(\sin 2)$（选 D）；Q12 双曲线焦半径准线优化最低费用 $5a$ 万元（选 B）；Q13 直线被圆截得弦长 $4\sqrt{5}$；Q14 根式极限分段函数连续性参数 $a = 1/2$；Q15 独立射击概率结论判断 ①③；Q16 正六棱柱铁皮容积最大底边长 $2/3$；Q17 向量点积三角函数求角 $-\pi/4$ 与平移向量 $m=-\pi/12, n=1$；Q18 摸球离散型随机变量期望 $\mathrm{E}\xi = 9/5$ 与两次互斥概率 $44/45$；Q19 正四棱锥线面垂直证明、二面角 $\arccos(1/3)$ 与高 $4\sqrt{2}/3$；Q20 投资等差等比数列累计利润 $A_n=490n-10n^2$、$B_n=500n-100-500/2^n$ 与超额年限 $4$ 年；Q21 三次多项式导数导根、恒成立充要参数集合 $[-1, 1]$ 与对称区间单调性范围 $m \leqslant -2$ 或 $m \geqslant 2$；Q22 抛物线切线与对称轴交点轨迹方程 $y = x^2 + \frac{1}{2x^2} + 1$ 与垂直弦参数范围 $(2, +\infty)$ 全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2004-fujian-science-source-intake.md`；重绘并挂接 5 张高保真 TikZ 纯矢量图（Q07 反函数平移图象、Q10 球面截面正三角形立体图、Q12 双曲线河流公路最优化示意图、Q16 正六边形铁皮折叠无盖六棱柱、Q19 正四棱锥与空间角立体几何图）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2004_zhejiang_arts_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/27/6/21 页，共 58 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 58 页共 464 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b68.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 439 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进 2004 年未录入自主命题真题（如福建文理卷 `2004福建文.pdf` / `2004福建理.pdf`，湖北文理卷 `2004湖北文.pdf` / `2004湖北理.pdf`，湖南文理卷 `2004湖南文.pdf` / `2004湖南理.pdf` 等）。
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2004_fujian_science_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/31/7/23 页，共 66 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 66 页共 528 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b69.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 440 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进 2004 年未录入自主命题真题（如福建文科卷 `2004福建文.pdf`，湖北文理卷 `2004湖北文.pdf` / `2004湖北理.pdf`，湖南文理卷 `2004湖南文.pdf` / `2004湖南理.pdf` 等）。
+
+### 之前完成：phase4-b68
+
+- `gk-2004-regular-zhejiang-arts`，22 题；详情参见 `PROGRESS.md`。四版共 58 页，`FINALIZED`，已闭环。全量 439 套试卷 TeX 投影一致。
 
 ### 之前完成：phase4-b67
 
