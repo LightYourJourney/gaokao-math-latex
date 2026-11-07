@@ -15201,3 +15201,14 @@
 - 正式构建与视觉审查：四版页数为 4/30/6/22 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项八类视觉检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b76.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 447 套试卷 TeX 投影 100% 一致。2004 年全部自主命题卷 100% 彻底大圆满封账！
 
+
+### 2005 北京文科卷（phase4-b77）：四版构建与视觉封账（2026-11-08）
+
+- 固定来源认证与范围确认：来源 `src-fea4e73708ac3a85394b3698456c3244904a156c2ea4907c94a9bc9ed3e6cf8d`，上游路径 `普通高考/2005/2005北京文.pdf`（SHA-256 `9ee1bf91b64cd5e48bd6415909f82ef61e023a117a843043c0ca22435102b3a1`，2 页 A3 扫描排印，原卷印刷页码 218、219，印刷题签“2005 普通高等学校招生考试 (北京卷文)”，共 20 题：选 8、填 6、解 6，按 `track=arts` 登记为 `gk-2005-regular-beijing-arts`）。PDF 题面第 1 页包含选择题 1–8、填空题 9–14、解答题 15–17；第 2 页包含解答题 18–20。来源接收报告写入 `reports/2005-beijing-arts-source-intake.md`。
+- 矢量重绘与图稿挂接：Q16 直三棱柱立体几何图（`f2005_beijing_arts_q16_prism.tex`）、Q20 双曲线渐近线阴影区域图（`f2005_beijing_arts_q20_regions.tex`），全部重绘为 TikZ 纯矢量图并在各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 20 题题面、选项与分值严谨完备。Q01 集合真子集判定 $M \subsetneqq P$（选 C）；Q02 指数函数图象平移变换（选 A）；Q03 两直线垂直充分不必要条件判定（选 B）；Q04 向量垂直与夹角 $120^\circ$（选 C）；Q05 原点引圆两切线夹角 $\frac{\pi}{3}$（选 B）；Q06 任意锐角不等关系恒成立判定 $\cos(\alpha+\beta) < \cos\alpha+\cos\beta$（选 D）；Q07 正四面体空间垂直命题不成立项判定（选 C）；Q08 限制条件元素分配方案数 $\mathrm{C}_4^1 \mathrm{A}_4^4$（选 B）；Q09 抛物线准线方程 $x = -1$、焦点坐标 $(1, 0)$；Q10 二项式展开常数项 $-20$；Q11 根式与分式定义域 $[-1, 2) \cup (2, +\infty)$；Q12 三角形正弦定理求边长 $\sqrt{2}$；Q13 对数函数性质与凹凸性结论 ②③；Q14 传统多项式求值与秦九韶算法运算量 $65$ 与 $20$；Q15 三角齐次式求值 (1) $-\frac{1}{7}$，(2) $\frac{7}{6}$；Q16 直三棱柱线面垂直与线面平行证明、异面直线所成角余弦值 $\frac{2\sqrt{2}}{5}$；Q17 递推数列分段等比通项 $a_n = \begin{cases} 1, & n = 1, \\ \frac{1}{3}(4/3)^{n-2}, & n \geqslant 2 \end{cases}$、偶数项和 $\frac{3}{7}[(16/9)^n - 1]$；Q18 射击概率独立事件与伯努利模型（(1) $\frac{3}{8}$，(2) $\frac{20}{27}$，(3) $\frac{1}{6}$）；Q19 三次多项式导数减区间 $(-\infty, -1]$ 与 $[3, +\infty)$、闭区间最小值 $-7$；Q20 双曲线方程 $k^2 x^2 - y^2 = (k^2+1)d^2$、割线中点对称性证明三角形重心重合。全部独立推导闭环，评定为 `eligible_complete`。
+- 逐题 Provenance 审计与自动化回归：三角色共 60 条记录确定性导入，20 题全通过，conflict_status=none，0 issue；新增 `tests/test_2005_beijing_arts_solutions.py` 自动化回归套件，全卷 20 题符号推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：四版页数为 4/27/6/21 页，共 58 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 58 页共 464 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b77.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 448 套试卷 TeX 投影 100% 一致。
+
+
