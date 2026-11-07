@@ -15090,3 +15090,12 @@
 - 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
 - 正式构建与视觉审查：四版页数为 4/27/6/19 页，共 56 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 56 页共 448 项检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b64.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 435 套试卷 TeX 投影 100% 一致。
+
+### 2004 江苏卷（phase4-b65）：四版构建与视觉封账（2026-11-07）
+
+- 固定来源认证与范围确认：来源 `src-b1c43a6876dfbf5bd59261aebdc075bc89fdb8e378c37febb2f1b3351ac7e509`，上游路径 `普通高考/2004/2004江苏.pdf`（SHA-256 `1cba6fbcc53c8b4f7cfcea6ed043a00d6b8d47b5059fe8b35cde0c1b7fb87619`，2 页 A3 横向扫描排印，原卷印刷页码 178、179，共 22 题，实行首次自主命题统一数学卷，按 `track=none` 登记为 `gk-2004-regular-jiangsu`）。PDF 题面第 1 页（178 页）包含选择题 1–12、填空题 13–16、解答题 17–19；第 2 页（179 页）包含解答题 20–22。来源接收报告写入 `reports/2004-jiangsu-source-intake.md`。
+- 矢量重绘与图稿挂接：Q06 学生课外阅读时间条形统计图（`f2004_jiangsu_q06_barchart.tex`）、Q18 正方体空间射影与线面角图（`f2004_jiangsu_q18_cube_projection.tex`），重绘为 TikZ 矢量图并在各版本中准确复用。
+- 规范事实层与独立推导：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`）完成落盘。全卷 22 题题面、选项与分值严谨完备。Q06 平均阅读时间 0.9 小时（选 B）；Q09 题面漏印文字经公开权威资料考证补全（选 D）；Q12 映射方程证明实数对 0 个（选 A）；Q13 解集 $\{x \mid x < -2 \text{ 或 } x > 3\}$；Q14 圆方程 $(x - 1)^2 + (y - 2)^2 = 25$；Q15 首项 2；Q16 向量 $(4/5, -3/5)$；Q17 三角求值 $\sin(\alpha - \pi/3) = \dfrac{4-3\sqrt{3}}{10}$；Q18 直线与平面所成角 $\arctan\dfrac{4\sqrt{17}}{17}$，点到平面距离 $\dfrac{3\sqrt{2}}{2}$；Q19 线性规划最大盈利 7 万元；Q20 等差数列平方和充要解 $k=4$ 及三个恒等数列；Q21 椭圆方程 $\dfrac{x^2}{4m^2}+\dfrac{y^2}{3m^2}=1$ 与直线斜率 $\pm 2\sqrt{6}$；Q22 抽象函数不等式压轴三问证明全部独立闭环，内容候选评定为 `eligible_complete`。
+- 逐题 Provenance 审计：三角色共 66 条记录确定性导入，22 题全通过，grade=D，conflict_status=none，0 issue。
+- 正式构建与视觉审查：四版页数为 4/25/6/19 页，共 54 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 54 页共 432 项检查全部通过（0 fail、0 pending）。
+- 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b65.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 436 套试卷 TeX 投影 100% 一致。
