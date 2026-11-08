@@ -4,6 +4,13 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+## 2005 年封年（2026-11-09）
+
+- 全年 32 套：**29 套 `complete`**、3 套 `blocked`（`gk-2005-regular-national-1-science` ISSUE-0834；`gk-2005-regular-shanghai-arts` ISSUE-1377/1379；`gk-2005-regular-shanghai-science` ISSUE-1380/1381）。三套阻断均源于固定原页本身：前者第 4 题选项 C 印成空区间，后两者「最小的是一个四棱柱」的端点约定与「中低价层」用字无同版答案或勘误可裁定，按 U 政策不替来源补条件。
+- 本阶段新增 6 套端到端：辽宁（b94）、江苏（b95）、全国Ⅲ文（b96）、全国Ⅲ理（b97）、浙江文（b98）、浙江理（b99），均四版编译 0 error、全页 review pass、`finalize-batch` 返回 `FINALIZED`。
+- 春季 3 套（上海春季、北京春季文/理）复核：四版 `succeeded`、review 全页 `pass`、ISSUE-1255..1258 全部 `resolved`，无需重做。
+- 全量门禁：`generate_projects --all --check` 470 套投影一致；`manifest_csv --check` 775 行一致；`report.py render --all` 与 `check --all` 通过。`review_receipts check-all` 仍报 316 批次「视觉工具指纹变化」——属仓库既有失效面，超出本阶段范围，未重跑。
+
 ### 2005 浙江理科：phase4-b99 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
 
 - 对象：`gk-2005-regular-zhejiang-science`，20 题（选择 1–10、填空 11–14、解答 15–20）；固定来源 `src-216c3b98cde76aa00ef9438e3d25ba93e13bfc6f605279dcf1399de98457ac48`，上游 `普通高考/2005/2005浙江理.pdf`，SHA-256 `d552fffa21812b159fe5fd81fb5ee4376e6ad1992f364c2df121b84e40f5b884`，2 页 A3 横向，印面页码 270、271。
