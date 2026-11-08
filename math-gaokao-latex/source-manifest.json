@@ -2588,6 +2588,14 @@
         "gk-2005-regular-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b88",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2597,7 +2605,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5100a431-ef9a-41a0-83e1-e487eda3601e",
+  "last_transaction_id": "031fc8fc-688a-4892-bfd6-bb4c073d0bf7",
   "papers": [
     {
       "blocked_from": null,
@@ -33067,9 +33075,70 @@
       "title": "2005 年·普通高等学校招生考试·湖南卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖南卷_理科/figures/f2005_hunan_science_q05_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖南卷_理科/figures/f2005_hunan_science_q17_trapezoid_folding.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_hunan_science",
+        "id": "gk-2005-regular-hunan-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 234、235；全卷共 21 题（选 10、填 5、解 6，满分 150 分）。第 1 题复数虚数单位乘方和选 B。第 2 题偶次根式定义域选 A。第 3 题等差数列与裂项求和极限选 C。第 4 题线性规划可行域与最值选 C。第 5 题正方体中心到截面距离选 B。第 6 题导数周期性选 C。第 7 题双曲线渐近线与焦点三角形面积选 D。第 8 题充分条件与开区间交集非空选 D。第 9 题四人竞赛总分和排列组合选 B。第 10 题面积重心坐标凸组合判定选 A。第 11 题分层抽样与等差数列 5600 件。第 12 题二项展开式系数累加 35。第 13 题圆内接三角形边长与向量数量积 -1/2。第 14 题中心对称与反函数值 -2。第 15 题正弦函数面积积分 (1)4/3 (2)pi+2/3。第 16 题解三角形三角恒等变换 A=pi/4, B=pi/3, C=5pi/12。第 17 题等腰梯形折成直二面角空间向量垂直与二面角 arccos(sqrt(3)/4)。第 18 题游览景点离散分布列与期望 E=1.48。第 19 题椭圆切线与等腰三角形综合 lambda=2/3。第 20 题鱼群种群增长离散模型与数学归纳法。第 21 题导数压轴题单调区间与中点割线切线斜率比较。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2005_湖南卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_湖南理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_湖南理科_含解析.md",
+        "questions": "2005/2005_数学真题_湖南理科_试题.md",
+        "solution_body": "2005/2005_数学真题_湖南理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-a179919ac3fc551cfeb4d471c726456cb9c3c279873414a4ae54a7c93f28652d"
+      ],
+      "title": "2005 年·普通高等学校招生考试·湖南卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6632,
+  "revision": 6646,
   "schema_version": 1,
   "sources": [
     {
@@ -40070,8 +40139,8 @@
       "exam_type": "regular",
       "git_blob_oid": "23635befe497e27c9f3e0ff61cb52411b151b560",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005湖南理.pdf",
       "regions": [],
       "source_id": "src-a179919ac3fc551cfeb4d471c726456cb9c3c279873414a4ae54a7c93f28652d",

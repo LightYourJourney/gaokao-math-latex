@@ -1,0 +1,53 @@
+% 2005 年湖南卷理科第 17 题配图：等腰梯形折成直二面角（图 1 与图 2）
+\begin{tikzpicture}[>=latex, line cap=round, line join=round, scale=0.9]
+  % ----------------- 图 1 -----------------
+  \begin{scope}[shift={(0, 0)}]
+    \coordinate (O) at (0, 0);
+    \coordinate (A) at (-2.4, 0);
+    \coordinate (B) at (2.4, 0);
+    \coordinate (O1) at (0, 1.6);
+    \coordinate (D) at (-0.8, 1.6);
+    \coordinate (C) at (0.8, 1.6);
+
+    \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw[thick] (O) -- (O1);
+
+    \node[below left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[below] at (O) {$O$};
+    \node[above] at (O1) {$O_1$};
+    \node[above left] at (D) {$D$};
+    \node[above right] at (C) {$C$};
+
+    \node[below] at (0, -0.6) {图 1};
+  \end{scope}
+
+  % ----------------- 图 2 -----------------
+  \begin{scope}[shift={(5.5, 0)}]
+    \coordinate (O) at (0, 0);
+    \coordinate (O1) at (0, 2.0);
+    \coordinate (B) at (2.4, 0);
+    \coordinate (C) at (0.8, 2.0);
+    \coordinate (A) at (-0.7, -1.0);
+    \coordinate (D) at (-0.4, 1.7);
+
+    % 虚线：转折轴 OO1
+    \draw[dashed, thick] (O) -- (O1);
+
+    % 实线边与辅助线（AC 与 BO1）
+    \draw[thick] (O) -- (B) -- (C) -- (O1);
+    \draw[thick] (O) -- (A) -- (D) -- (O1);
+    \draw[thick] (B) -- (O1);
+    \draw[thick] (A) -- (C);
+
+    % 顶点标签
+    \node[below right] at (O) {$O$};
+    \node[above] at (O1) {$O_1$};
+    \node[right] at (B) {$B$};
+    \node[above right] at (C) {$C$};
+    \node[below left] at (A) {$A$};
+    \node[left] at (D) {$D$};
+
+    \node[below] at (0.8, -1.2) {图 2};
+  \end{scope}
+\end{tikzpicture}
