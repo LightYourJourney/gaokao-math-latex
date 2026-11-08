@@ -2644,6 +2644,14 @@
         "gk-2005-regular-liaoning"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b95",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2653,7 +2661,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "553cd9f7-35ef-4d2c-8a8b-b9c0a91e1eed",
+  "last_transaction_id": "718295fe-3462-4030-949f-92cd83bc9712",
   "papers": [
     {
       "blocked_from": null,
@@ -33593,9 +33601,70 @@
       "title": "2005 年·普通高等学校招生考试·辽宁卷",
       "track": "none",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江苏卷/figures/f2005_jiangsu_q19_circles.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江苏卷/figures/f2005_jiangsu_q21_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_jiangsu",
+        "id": "gk-2005-regular-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 238、239；PDF 只含题面、不含官方答案页，全卷 23 题答案由本库独立推导（非官方）。第 19 题两圆切线图与第 21 题五棱锥图由 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            13,
+            18
+          ],
+          "解答题": [
+            19,
+            23
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "无",
+        "variant": "江苏"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2005_江苏卷",
+      "question_count": 23,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_江苏_含解析.md",
+        "questions": "2005/2005_数学真题_江苏_试题.md",
+        "solution_body": "2005/2005_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-935f381a6fe96aa7c90e29bd5d55871232018e04915422713605b6843b981999"
+      ],
+      "title": "2005 年·普通高等学校招生考试·江苏卷",
+      "track": "none",
+      "year": 2005
     }
   ],
-  "revision": 6690,
+  "revision": 6695,
   "schema_version": 1,
   "sources": [
     {
@@ -40404,8 +40473,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c69c0dbf7ae103164d583aba87a06a3018dd72e1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005江苏.pdf",
       "regions": [],
       "source_id": "src-935f381a6fe96aa7c90e29bd5d55871232018e04915422713605b6843b981999",

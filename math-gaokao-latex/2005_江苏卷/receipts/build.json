@@ -1,0 +1,292 @@
+{
+  "attempt_id": "f2e01ab9-133b-46cc-8b89-aede95ad5a07",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/answers.tex",
+        "sha256": "71a82c75968ad9026985412ba28c657d0bacc06559f7351f2fedeb8354f0c82a"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/answers_short.tex",
+        "sha256": "f23274d91bceda177e4ddaa209f4523eb983d3ae8dfb2686eccc1db50730ab16"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/figures/f2005_jiangsu_q19_circles.tex",
+        "sha256": "31618c28decec56d4a2fdf910f0fe7199461d07b7094f1d4faf183b0145a1f93"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/figures/f2005_jiangsu_q21_pyramid.tex",
+        "sha256": "1910683337ec09b92b18ce26c80c183cecac055721fb82de88d04108186f2e34"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/questions.tex",
+        "sha256": "1cea69fed76ff7cb4d4b0f6cbd89e3640c0da935bfca919627110b25e53c8cbf"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/印刷版.tex",
+        "sha256": "ffccc35472bd003a5eb4f86b748c55b0753514531ef62ef042864d07f35b723c"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/简答版.tex",
+        "sha256": "55027e76365dd926583a76b9afaabf79f4fb521ca3a7de10790ea5c71d478af5"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/解析版.tex",
+        "sha256": "dbdecc830045f0247475c0f11bec072cedcd208adcd9a6c87453c72cf2479ba3"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/试题版.tex",
+        "sha256": "26641db4a096fde24769edc0ed9f8db5b924548355133075a1eb187444df8c42"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "f55b5a252d226f078307c726ddef34260b731682d320d624d7ef1c9fb3b8a19e"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 3,
+        "path": "math-gaokao-latex/2005_江苏卷/build/试题版.pdf",
+        "sha256": "2f3b5c750781ca017ae0164ab0535dc243e8d760a5a5cec9afe9ab476c891a02",
+        "size_bytes": 98675
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2005_江苏卷/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 17,
+        "path": "math-gaokao-latex/2005_江苏卷/build/解析版.pdf",
+        "sha256": "cd124591a6a8095817eea9d26b8c098cbc38fc433fcf3fee3757ef1a5376c87e",
+        "size_bytes": 185615
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2005_江苏卷/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 5,
+        "path": "math-gaokao-latex/2005_江苏卷/build/简答版.pdf",
+        "sha256": "ede6ac3bc2aa4410403688be834860673ba41b6ef45730571e6016935d6bc039",
+        "size_bytes": 114069
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2005_江苏卷/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "162--163",
+            "text": "Underfull \\hbox (badness 1122) in paragraph at lines 162--163",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 14,
+        "path": "math-gaokao-latex/2005_江苏卷/build/印刷版.pdf",
+        "sha256": "37a8d17da24991f617059831793b2a1875e128e4841add0647053d0a418d7042",
+        "size_bytes": 184258
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2005_江苏卷/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-11-09T01:10:04+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2005/2005_数学真题_江苏_答案要点.md",
+        "sha256": "11556a6484b69482d53d74af5aa4149fdcbb6cc47adcdb5f1112b5c1d90553ab"
+      },
+      {
+        "path": "2005/2005_数学真题_江苏_解析正文.md",
+        "sha256": "0bf01e9ca0ac3f2d93fa9b690728c9c0cd1161f04c04dd9af7cc918fdff84252"
+      },
+      {
+        "path": "2005/2005_数学真题_江苏_试题.md",
+        "sha256": "e78f1e8e56cf3a46a80cfbb1ae41887d75fe681d8891920b264dbc0d8d000b0d"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "e3d5def3a71fb3b2d0a42223bf102c1393b8488a103d0792d2a52047fef661bb"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/figures/f2005_jiangsu_q19_circles.tex",
+        "sha256": "31618c28decec56d4a2fdf910f0fe7199461d07b7094f1d4faf183b0145a1f93"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/figures/f2005_jiangsu_q21_pyramid.tex",
+        "sha256": "1910683337ec09b92b18ce26c80c183cecac055721fb82de88d04108186f2e34"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/印刷版.tex",
+        "sha256": "ffccc35472bd003a5eb4f86b748c55b0753514531ef62ef042864d07f35b723c"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/简答版.tex",
+        "sha256": "55027e76365dd926583a76b9afaabf79f4fb521ca3a7de10790ea5c71d478af5"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/解析版.tex",
+        "sha256": "dbdecc830045f0247475c0f11bec072cedcd208adcd9a6c87453c72cf2479ba3"
+      },
+      {
+        "path": "math-gaokao-latex/2005_江苏卷/试题版.tex",
+        "sha256": "26641db4a096fde24769edc0ed9f8db5b924548355133075a1eb187444df8c42"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "8e0ecbb1bea5b1237c08b291e5c1013074706970c15d45d3619592603bb355c6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "660feeac925af2012a656f4ccebdfd2d476cf09158afedaa935654e1dfa578cb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
+      }
+    ],
+    "tree_sha256": "40fe0e4cfc70e464d892add582e80b0b5d449c5b8ea3fa902ebf318ff718c2dc"
+  },
+  "input_projection": "464c07af303c930de45c6e9ccce94cc3e2d981db0f0a86a13d0aad00183172fd",
+  "manifest_revision": 6693,
+  "paper_id": "gk-2005-regular-jiangsu",
+  "previous_attempt_id": null,
+  "project_dir": "2005_江苏卷",
+  "schema_version": 1,
+  "started_at": "2026-11-09T01:09:50+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=1.0]
+  \draw (0,0) circle (0.9);
+  \draw (3.6,0) circle (0.9);
+  \fill (0,0) circle (1.2pt) node[below left] {$O_1$};
+  \fill (3.6,0) circle (1.2pt) node[below right] {$O_2$};
+  \draw[dashed] (0,0) -- (3.6,0);
+  \coordinate (P) at (1.8,2.6);
+  \coordinate (M) at (-0.702,0.563);
+  \coordinate (N) at (3.09,0.85);
+  \draw (P) -- (M) node[midway, left] {$M$};
+  \draw (P) -- (N) node[midway, right] {$N$};
+  \fill (P) circle (1.2pt) node[above] {$P$};
+  \draw (M) -- (0,0);
+  \draw (N) -- (3.6,0);
+\end{tikzpicture}
