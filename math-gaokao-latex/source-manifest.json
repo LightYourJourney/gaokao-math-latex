@@ -2628,6 +2628,14 @@
         "gk-2005-regular-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b93",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2637,7 +2645,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c8fa6ec0-d020-48cb-b1c4-dedf426d292a",
+  "last_transaction_id": "59a928df-a511-4003-876f-b2fcc857fc61",
   "papers": [
     {
       "blocked_from": null,
@@ -33427,9 +33435,81 @@
       "title": "2005 年·普通高等学校招生考试·福建卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_福建理科卷/figures/f2005_fujian_science_q05_exp.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_福建理科卷/figures/f2005_fujian_science_q06_trig.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_福建理科卷/figures/f2005_fujian_science_q08_cuboid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_福建理科卷/figures/f2005_fujian_science_q20_stereometry.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_regular_fujian_science",
+        "id": "gk-2005-regular-fujian-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 224、225；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 5 题指数函数图、第 6 题正弦函数图、第 8 题长方体异面直线图、第 20 题直二面角立体图均由 TikZ 纯矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [
+        "ISSUE-1438",
+        "ISSUE-1439"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2005_福建理科卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_福建理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_福建理科_含解析.md",
+        "questions": "2005/2005_数学真题_福建理科_试题.md",
+        "solution_body": "2005/2005_数学真题_福建理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-a3cf296b65edd3890eb214591c50e36784194dc86d9983c5b04b9c064455548f"
+      ],
+      "title": "2005 年·普通高等学校招生考试·福建卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6673,
+  "revision": 6683,
   "schema_version": 1,
   "sources": [
     {
@@ -40478,8 +40558,8 @@
       "exam_type": "regular",
       "git_blob_oid": "17a68b11b3cc387e397b996452cc96051caf56ba",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005福建理.pdf",
       "regions": [],
       "source_id": "src-a3cf296b65edd3890eb214591c50e36784194dc86d9983c5b04b9c064455548f",
