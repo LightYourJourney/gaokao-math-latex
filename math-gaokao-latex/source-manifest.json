@@ -2604,6 +2604,14 @@
         "gk-2005-regular-guangdong"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b90",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-chongqing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2613,7 +2621,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "116ffe59-813c-48b2-bb43-695ae08b2ec0",
+  "last_transaction_id": "1c7116b5-2e63-4acd-bbd7-1fc1a5e5a201",
   "papers": [
     {
       "blocked_from": null,
@@ -33217,9 +33225,73 @@
       "title": "2005 年·普通高等学校招生考试·广东卷",
       "track": "none",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_重庆文科卷/figures/f2005_chongqing_arts_q10_tower.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_重庆文科卷/figures/f2005_chongqing_arts_q20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_regular_chongqing_arts",
+        "id": "gk-2005-regular-chongqing-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 222、223；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 10 题塔形正方体立体构成图、第 20 题四棱锥图均由 TikZ 纯矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "重庆文科"
+      },
+      "issue_ids": [
+        "ISSUE-1436",
+        "ISSUE-1437"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-chongqing-arts",
+      "production_state": "complete",
+      "project_dir": "2005_重庆文科卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_重庆文科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_重庆文科_含解析.md",
+        "questions": "2005/2005_数学真题_重庆文科_试题.md",
+        "solution_body": "2005/2005_数学真题_重庆文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-83fc1dda815d62f6069113798cb957cd6b751aff24378b0f5932dbc2d8a3000d"
+      ],
+      "title": "2005 年·普通高等学校招生考试·重庆卷·文科",
+      "track": "arts",
+      "year": 2005
     }
   ],
-  "revision": 6654,
+  "revision": 6663,
   "schema_version": 1,
   "sources": [
     {
@@ -40316,8 +40388,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6f48a71e04f5ec69640c82acec5e65ccec76082b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-chongqing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005重庆文.pdf",
       "regions": [],
       "source_id": "src-83fc1dda815d62f6069113798cb957cd6b751aff24378b0f5932dbc2d8a3000d",

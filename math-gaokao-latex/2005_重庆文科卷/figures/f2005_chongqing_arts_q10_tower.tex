@@ -1,0 +1,52 @@
+\begin{tikzpicture}[x=1cm, y=1cm, line join=round, line cap=round, thick]
+  \def\dx{0.45}
+  \def\dy{0.38}
+
+  % ================= Layer 1 (Bottom cube) =================
+  \coordinate (A1) at (0, 0);
+  \coordinate (B1) at (1.6, 0);
+  \coordinate (C1) at ($(B1) + (\dx, \dy)$);
+  \coordinate (D1) at ($(A1) + (\dx, \dy)$);
+
+  \def\hOne{1.6}
+  \coordinate (A1t) at ($(A1) + (0, \hOne)$);
+  \coordinate (B1t) at ($(B1) + (0, \hOne)$);
+  \coordinate (C1t) at ($(C1) + (0, \hOne)$);
+  \coordinate (D1t) at ($(D1) + (0, \hOne)$);
+
+  \filldraw[fill=white] (A1t) -- (B1t) -- (C1t) -- (D1t) -- cycle;
+  \filldraw[fill=white] (A1) -- (B1) -- (B1t) -- (A1t) -- cycle;
+  \filldraw[fill=white] (B1) -- (C1) -- (C1t) -- (B1t) -- cycle;
+
+  % ================= Layer 2 (Middle cube) =================
+  \coordinate (M1) at ($(A1t)!0.5!(B1t)$);
+  \coordinate (M2) at ($(B1t)!0.5!(C1t)$);
+  \coordinate (M3) at ($(C1t)!0.5!(D1t)$);
+  \coordinate (M4) at ($(D1t)!0.5!(A1t)$);
+
+  \def\hTwo{1.13}
+  \coordinate (M1t) at ($(M1) + (0, \hTwo)$);
+  \coordinate (M2t) at ($(M2) + (0, \hTwo)$);
+  \coordinate (M3t) at ($(M3) + (0, \hTwo)$);
+  \coordinate (M4t) at ($(M4) + (0, \hTwo)$);
+
+  \filldraw[fill=white] (M1t) -- (M2t) -- (M3t) -- (M4t) -- cycle;
+  \filldraw[fill=white] (M4) -- (M1) -- (M1t) -- (M4t) -- cycle;
+  \filldraw[fill=white] (M1) -- (M2) -- (M2t) -- (M1t) -- cycle;
+
+  % ================= Layer 3 (Top cube) =================
+  \coordinate (N1) at ($(M4t)!0.5!(M1t)$);
+  \coordinate (N2) at ($(M1t)!0.5!(M2t)$);
+  \coordinate (N3) at ($(M2t)!0.5!(M3t)$);
+  \coordinate (N4) at ($(M3t)!0.5!(M4t)$);
+
+  \def\hThree{0.8}
+  \coordinate (N1t) at ($(N1) + (0, \hThree)$);
+  \coordinate (N2t) at ($(N2) + (0, \hThree)$);
+  \coordinate (N3t) at ($(N3) + (0, \hThree)$);
+  \coordinate (N4t) at ($(N4) + (0, \hThree)$);
+
+  \filldraw[fill=white] (N1t) -- (N2t) -- (N3t) -- (N4t) -- cycle;
+  \filldraw[fill=white] (N1) -- (N2) -- (N2t) -- (N1t) -- cycle;
+  \filldraw[fill=white] (N2) -- (N3) -- (N3t) -- (N2t) -- cycle;
+\end{tikzpicture}
