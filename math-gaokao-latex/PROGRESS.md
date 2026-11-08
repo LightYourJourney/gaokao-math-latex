@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 福建卷理科：phase4-b93 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
+
+- 对象：`gk-2005-regular-fujian-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-a3cf296b65edd3890eb214591c50e36784194dc86d9983c5b04b9c064455548f`，上游 `普通高考/2005/2005福建理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 224、225，印刷题签“2005 普通高等学校招生考试 (福建卷理)”，科类登记 `track=science`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与结构严谨完备。Q01 复数除法与共轭复数（选 B）；Q02 等差数列通项 $a_{12} = 15$（选 A）；Q03 直角三角形向量垂直求参数 $k = 5$（选 A）；Q04 空间线面平行垂直命题判定 2 个（②③，选 C）；Q05 指数函数图象递减与截距判断参数 $0 < a < 1, b < 0$（选 D）；Q06 正弦波峰与零点确定参数 $\omega = \frac{\pi}{4}, \varphi = \frac{\pi}{4}$（选 C）；Q07 绝对值不等式与二次不等式充要条件判定为充分不必要条件（选 A）；Q08 长方体建立坐标系计算异面直线垂直 $\frac{\pi}{2}$（选 D）；Q09 受限位置排列组合方案数 $240$ 种（选 B）；Q10 正三角形中点双曲线离心率 $e = \sqrt{3} + 1$（选 D）；Q11 柯西不等式求条件最值 $-3$（选 C）；Q12 奇函数周期性求区间零点最小个数 5 个（选 C）；Q13 二项式定理常数项 $240$；Q14 退化可行域目标函数最大值 $0$；Q15 等比数列和式极限 $\frac{1}{b-1}$；Q16 对称变换反函数真命题补充（关于 $y = x$ 对称得 $2^{x-3}$）；Q17 三角同角平方关系化简 $\sin x - \cos x = -\frac{7}{5}$ 与代数式求值 $-\frac{108}{125}$；Q18 离散随机变量数学期望 $\mathbf{E}\xi = \frac{9}{10}$ 与四次投球至少命中一次对立概率 $\frac{91}{100}$；Q19 分式函数切线待定系数解析式 $f(x) = \frac{2x - 6}{x^2 + 3}$ 与单调增减区间；Q20 直二面角性质定理证线面垂直、三垂线逆定理求二面角 $\arccos\frac{\sqrt{3}}{3}$、点面距离 $\frac{2\sqrt{3}}{3}$；Q21 椭圆焦点与对称点求标准方程 $\frac{x^2}{6} + \frac{y^2}{2} = 1$、割线三角形面积转化求直线方程唯一解 $x = -2$；Q22 分式递推数列逆推 $a_4 = 0 \iff a = -\frac{2}{3}$、逆向映射有穷数列证明、正向不变集归纳证明 $a > 0$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-fujian-science-source-intake.md`；重绘并挂接 4 张高保真 TikZ 纯矢量图（`f2005_fujian_science_q05_exp.tex`、`f2005_fujian_science_q06_trig.tex`、`f2005_fujian_science_q08_cuboid.tex`、`f2005_fujian_science_q20_stereometry.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_fujian_science_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/31/6/22 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b93.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 464 套试卷 TeX 投影 100% 一致。2005 年福建卷文理双科大圆满收口！
+- 下一步推荐推进：推进 2005 年辽宁卷（`2005辽宁.pdf`）或 2005 江苏卷（`2005江苏.pdf`，下一批次 `phase4-b94`）！
+
 ### 2005 福建卷文科：phase4-b92 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
 
 - 对象：`gk-2005-regular-fujian-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-ad451d91ee17f5133278a91e5c3760372bec9f649296523203eb09d500c60b60`，上游 `普通高考/2005/2005福建文.pdf`（两页 A3 横向扫描排印，原卷印刷页码 226、227，印刷题签“2005 普通高等学校招生考试 (福建卷文)”，科类登记 `track=arts`）。
