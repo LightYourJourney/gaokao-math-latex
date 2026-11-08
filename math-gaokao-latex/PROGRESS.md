@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 广东卷：phase4-b89 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
+
+- 对象：`gk-2005-regular-guangdong`，20 题（选择 1–10、填空 11–14、解答 15–20）；固定来源 `src-5805ca667fcfda4f30657b93d04ac499e8816d474543ae5a2d24d3c532b36499`，上游 `普通高考/2005/2005广东.pdf`（两页 A3 横向扫描排印，原卷印刷页码 228、229，印刷题签“2005 普通高等学校招生考试 (广东卷)”，当年不分文理科统一卷，科类登记 `track=none`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q17，第 2 页包含 Q18–Q20；全卷 20 题题面、选项与结构严谨完备。Q01 集合交集 $\{0\}$（选 B）；Q02 复数相等与平方和 $a^2+b^2=5$（选 D）；Q03 分式极限 $-\frac{1}{6}$（选 A）；Q04 直三棱柱体积与三棱锥体积 $\frac{\sqrt{3}}{4}$（选 D）；Q05 椭圆离心率 $m = \frac{3}{2}$（选 B）；Q06 三次函数减区间 $(0, 2)$（选 D）；Q07 空间线面命题辨析假命题 ③（选 C）；Q08 双骰子点数对数方程概率 $\frac{1}{12}$（选 C）；Q09 平移与反函数折线分段解析式（选 A）；Q10 差分数列级数求和极限 $x_1 = 3$（选 B）；Q11 定义域 $(-\infty, 0)$；Q12 向量共线 $x = 4$；Q13 二项展开式系数相等 $\cos\theta = \pm \frac{\sqrt{2}}{2}$；Q14 直线相交组合规律 $f(4) = 5, f(n) = \frac{n(n-1)}{2} - 1$；Q15 诱导公式三角恒等化简 $f(x) = 4\cos 2x$，值域 $[-4, 4]$，周期 $\pi$；Q16 四面体各侧面直角三角形高线垂直证明与二面角 $\arccos\frac{3\sqrt{34}}{34}$；Q17 抛物线垂直动点重心轨迹 $y = 3x^2 + \frac{2}{3}$ 与面积最小值 $1$；Q18 有放回摸球截断离散分布列与期望 $\mathbf{E}\xi = \frac{t}{s}[1 - (t/(s+t))^n]$；Q19 抽象函数排除奇偶性确定为非奇非偶函数、周期 10 与零点计数 802 个；Q20 矩形折痕直线方程 $y = kx + \frac{k^2+1}{2}$ 与最大长度 $2(\sqrt{6} - \sqrt{2})$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-guangdong-source-intake.md`；重绘并挂接 5 张高保真 TikZ 纯矢量图（`f2005_guangdong_q04_prism.tex`、`f2005_guangdong_q09_broken_line.tex`、`f2005_guangdong_q16_tetrahedron.tex`、`f2005_guangdong_q17_parabola.tex`、`f2005_guangdong_q20_rectangle_fold.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计与自动化回归：三角色共 60 条记录确定性导入，20 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_guangdong_solutions.py` 自动化回归套件，全卷 20 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/26/6/19 页，共 55 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 55 页共 440 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b89.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 460 套试卷 TeX 投影 100% 一致。
+- 下一批队列：推进 2006 年北京卷或全国卷（下一批次 `phase4-b90`）！
+
 ### 2005 湖南卷理科：phase4-b88 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
 
 - 对象：`gk-2005-regular-hunan-science`，21 题（选择 1–10、填空 11–15、解答 16–21）；固定来源 `src-a179919ac3fc551cfeb4d471c726456cb9c3c279873414a4ae54a7c93f28652d`，上游 `普通高考/2005/2005湖南理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 234、235，印刷题签“2005 普通高等学校招生考试 (湖南卷理)”，科类登记 `track=science`）。
