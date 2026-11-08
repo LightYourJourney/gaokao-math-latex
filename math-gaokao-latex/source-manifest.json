@@ -2548,6 +2548,14 @@
         "gk-2005-regular-shandong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b83",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-jiangxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2557,7 +2565,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "50bcd762-4755-471f-9f5d-03e7b051b397",
+  "last_transaction_id": "000c654f-add0-428c-8749-e9db72730ebd",
   "papers": [
     {
       "blocked_from": null,
@@ -32698,9 +32706,78 @@
       "title": "2005 年·普通高等学校招生考试·山东卷·理科",
       "track": "science",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_文科/figures/f2005_jiangxi_arts_q12_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_文科/figures/f2005_jiangxi_arts_q15_tetrahedron.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_文科/figures/f2005_jiangxi_arts_q20_cuboid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_文科/figures/f2005_jiangxi_arts_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_jiangxi_arts",
+        "id": "gk-2005-regular-jiangxi-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 244、245；全卷共 22 题（选 12、填 4、解 6，满分 150 分）。第 1 题集合并集交集补集运算选 D。第 2 题半角正切万能公式求余弦选 B。第 3 题二项展开式正整数幂项数选 B。第 4 题分式对数复合函数定义域选 A。第 5 题绝对值正弦函数周期性选 B。第 6 题向量数量积与夹角选 C。第 7 题平均分组组合计数选 A。第 8 题正弦定理与等边三角形充要条件选 C。第 9 题折叠直二面角外接球体积选 C。第 10 题指数对数关系式不可能成立辨析选 B。第 11 题坐标向量三角形面积最值选 D。第 12 题视力频率分布直方图等差等比数列应用选 A。第 13 题对数奇函数待定系数 sqrt(2)/2。第 14 题线性规划连线斜率最大值 3/2。第 15 题三棱锥线面角 60 度。第 16 题圆锥曲线真假命题序号 34。第 17 题解析式与不等式分类讨论。第 18 题三角诱导公式与最大值周期单调区间。第 19 题赌徒输光随机游走 7 次内终止概率 9/64。第 20 题长方体线面垂直、点面距离与二面角。第 21 题抛物线动弦斜率定值与重心轨迹方程。第 22 题差分递推关系数列通项。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "江西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-jiangxi-arts",
+      "production_state": "complete",
+      "project_dir": "2005_江西卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_江西文科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_江西文科_含解析.md",
+        "questions": "2005/2005_数学真题_江西文科_试题.md",
+        "solution_body": "2005/2005_数学真题_江西文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-81a1a2f6ece0d20a26525f61b07a5ae049461d469d4146d9801fef0cbade4a45"
+      ],
+      "title": "2005 年·普通高等学校招生考试·江西卷·文科",
+      "track": "arts",
+      "year": 2005
     }
   ],
-  "revision": 6601,
+  "revision": 6608,
   "schema_version": 1,
   "sources": [
     {
@@ -39533,8 +39610,8 @@
       "exam_type": "regular",
       "git_blob_oid": "9628504c7d4086dfa9589ac82059a68e52236198",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-jiangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005江西文.pdf",
       "regions": [],
       "source_id": "src-81a1a2f6ece0d20a26525f61b07a5ae049461d469d4146d9801fef0cbade4a45",
