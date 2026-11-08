@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 江西卷文科：phase4-b83 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
+
+- 对象：`gk-2005-regular-jiangxi-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-81a1a2f6ece0d20a26525f61b07a5ae049461d469d4146d9801fef0cbade4a45`，上游 `普通高考/2005/2005江西文.pdf`（两页 A3 横向扫描排印，原卷印刷页码 244、245，印刷题签“2005 普通高等学校招生考试 (江西卷文)”，科类登记 `track=arts`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 整数集合运算 $\{0, 1, 2\}$（选 D）；Q02 半角正切万能公式求余弦 $-\frac{4}{5}$（选 B）；Q03 二项展开式正整数幂项数 3 项（选 B）；Q04 分式对数复合函数定义域 $(1, 2) \cup (2, 3)$（选 A）；Q05 绝对值正弦函数周期 $\frac{2\pi}{3}$（选 B）；Q06 向量数量积与夹角 $120^\circ$（选 C）；Q07 包含特定元素的分组组合计数 70 种（选 A）；Q08 正弦定理与等边三角形充要条件（选 C）；Q09 折叠直二面角外接球体积 $\frac{125}{6}\pi$（选 C）；Q10 指数对数方程不可能成立关系式 2 个（选 B）；Q11 坐标向量三角形面积最大值 $\theta = \frac{\pi}{2}$（选 D）；Q12 视力频率分布直方图等差等比数列应用 $a = 0.27, b = 78$（选 A）；Q13 对数奇函数待定系数 $\frac{\sqrt{2}}{2}$；Q14 线性规划连线斜率最大值 $\frac{3}{2}$；Q15 三棱锥线面角 $60^\circ$（或 $\frac{\pi}{3}$）；Q16 圆锥曲线真命题序号 ③④；Q17 根与系数关系求解析式 $f(x) = \frac{x^2}{2-x}$ 与带参不等式分类讨论；Q18 向量数量积化简三角函数最大值 $\sqrt{2}$、周期 $2\pi$ 与单调区间；Q19 赌徒输光随机游走 7 次内终止概率 $\frac{9}{64}$；Q20 长方体线面垂直、点面距离 $\frac{1}{3}$ 与二面角参数 $2-\sqrt{3}$；Q21 抛物线动弦斜率定值 $-\frac{1}{2y_0}$ 与重心轨迹方程 $y^2 = \frac{1}{9}(x - \frac{2}{3})\ (y \neq 0)$；Q22 差分递推关系数列通项 $a_n = 4(-1)^{n-1} + 6(-\frac{1}{2})^n$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-jiangxi-arts-source-intake.md`；重绘并挂接 4 张高保真 TikZ 纯矢量图（`f2005_jiangxi_arts_q12_histogram.tex`、`f2005_jiangxi_arts_q15_tetrahedron.tex`、`f2005_jiangxi_arts_q20_cuboid.tex`、`f2005_jiangxi_arts_q21_parabola.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_jiangxi_arts_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/28/7/21 页，共 61 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 61 页共 488 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b83.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 454 套试卷 TeX 投影 100% 一致。
+- 下一批队列：推进 2005 年江西卷理科（`2005江西理.pdf`，下一批次 `phase4-b84`，`gk-2005-regular-jiangxi-science`）！
+
 ### 2005 山东卷理科：phase4-b82 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
 
 - 对象：`gk-2005-regular-shandong-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-ef42c35b64f737887b5e1662d3d020f59e9bf4cfefa075a73d4a5a014902e89f`，上游 `普通高考/2005/2005山东理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 258、259，印刷题签“2005 普通高等学校招生考试 (山东卷理)”，科类登记 `track=science`）。
