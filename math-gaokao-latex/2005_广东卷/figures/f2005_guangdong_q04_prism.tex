@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=stealth, scale=1.2]
+  % 顶点定义
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (0.8, -0.45);
+  \coordinate (C) at (1.8, 0);
+  \coordinate (A1) at (0, 2.5);
+  \coordinate (B1) at (0.8, 2.05);
+  \coordinate (C1) at (1.8, 2.5);
+
+  % 底面和侧棱
+  \draw[dashed, thick] (A) -- (C);
+  \draw[thick] (A) -- (B) -- (C);
+  \draw[thick] (A) -- (A1) -- (C1) -- (C);
+  \draw[thick] (B) -- (B1);
+  \draw[thick] (A1) -- (B1) -- (C1);
+
+  % 三棱锥 B'-ABC 内部连线
+  \draw[thick] (B1) -- (A);
+  \draw[thick] (B1) -- (C);
+
+  % 标签
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[above left] at (A1) {$A'$};
+  \node[left] at (B1) {$B'$};
+  \node[above right] at (C1) {$C'$};
+\end{tikzpicture}

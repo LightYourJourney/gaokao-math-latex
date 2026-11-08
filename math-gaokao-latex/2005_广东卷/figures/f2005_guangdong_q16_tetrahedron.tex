@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth, scale=1.1]
+  % 顶点坐标
+  \coordinate (P) at (0, 3.2);
+  \coordinate (A) at (0, 0);
+  \coordinate (C) at (2.6, 0);
+  \coordinate (B) at (3.4, 1.8);
+  \coordinate (F) at ($(P)!0.45!(B)$);
+  \coordinate (E) at ($(A)!0.6!(B)$);
+
+  % 轮廓实线
+  \draw[thick] (P) -- (A) -- (C) -- (B) -- (P);
+  \draw[thick] (P) -- (C);
+  \draw[thick] (C) -- (F);
+
+  % 内部虚线
+  \draw[dashed, thick] (A) -- (B);
+  \draw[dashed, thick] (E) -- (F);
+  \draw[dashed, thick] (C) -- (E);
+
+  % 顶点标签
+  \node[above] at (P) {$P$};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (B) {$B$};
+  \node[above right] at (F) {$F$};
+  \node[left] at (E) {$E$};
+\end{tikzpicture}
