@@ -2612,6 +2612,14 @@
         "gk-2005-regular-chongqing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b91",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2621,7 +2629,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "1c7116b5-2e63-4acd-bbd7-1fc1a5e5a201",
+  "last_transaction_id": "3f8eeee1-e8f3-41aa-ae68-ee745e1706e0",
   "papers": [
     {
       "blocked_from": null,
@@ -33289,9 +33297,66 @@
       "title": "2005 年·普通高等学校招生考试·重庆卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_重庆理科卷/figures/f2005_chongqing_science_q20_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_regular_chongqing_science",
+        "id": "gk-2005-regular-chongqing-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 220、221；PDF 不含官方答案或解析页，全卷 22 题均由本库独立推导复算并经双角色交叉核验，无排印阻断。第 20 题三棱柱立体几何图由 TikZ 纯矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2005_重庆理科卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_重庆理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_重庆理科_含解析.md",
+        "questions": "2005/2005_数学真题_重庆理科_试题.md",
+        "solution_body": "2005/2005_数学真题_重庆理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-2436f5bf746a5300fcb871c75fddd844998da5c7d465ce3615657d299ffa3c83"
+      ],
+      "title": "2005 年·普通高等学校招生考试·重庆卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6663,
+  "revision": 6668,
   "schema_version": 1,
   "sources": [
     {
@@ -40412,8 +40477,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e8470930c57bd938c55483594ddcd6dbaa6b8189",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005重庆理.pdf",
       "regions": [],
       "source_id": "src-2436f5bf746a5300fcb871c75fddd844998da5c7d465ce3615657d299ffa3c83",
