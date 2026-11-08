@@ -24284,3 +24284,88 @@
   "type": "compile-error"
 }
 ```
+
+## ISSUE-1444
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "固定源 PDF 文本层第 20 题印作「$a_2$ 是 $a_1$ 与 $a_4$ 的等差中项」并同时给出 $d\\neq0$；由 $2a_2=a_1+a_4$ 得 $2(a_1+d)=a_1+(a_1+3d)$ 即 $d=0$，与题设自相矛盾。文科、理科两卷此处字面相同。题库保留源面字面并在题下注记，解析按「等比中项」处理（此时 $a_1,a_3,a_{k}\\dots$ 成等比给出 $k_n=3^{n+1}$）。",
+  "fingerprint": "c89cf9e146384f483ce254ac8474a15377d37abe94f416511b7d4664ef8128e1",
+  "impact": "non_blocking",
+  "paper_id": "gk-2005-regular-national-3-arts",
+  "question_id": "gk-2005-regular-national-3-arts-q20",
+  "resume_action": "取得同版勘误或官方标准答案以确认原词为「等比」；未取得前题面保留字面、解析注明误植判断，不代改题面。",
+  "source_id": "src-de5ca92375a2c3f24affb84420f1c29a58928c8b50e638e46513944adb80431a",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1445
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "同 ISSUE-1444：固定源 PDF 文本层第 20 题印作「等差中项」又给 $d\\neq0$，字面自相矛盾；理科卷另有第 21(2) 端点问题已按开区间处理。题库保留字面并注记，解析按等比处理。",
+  "fingerprint": "52d2a4c1251f28114788bf7d433b6266c5eec50b16305fcaad652f1be89be270",
+  "impact": "non_blocking",
+  "paper_id": "gk-2005-regular-national-3-science",
+  "question_id": "gk-2005-regular-national-3-science-q20",
+  "resume_action": "同 ISSUE-1444：待同版勘误或官方答案确认用词。",
+  "source_id": "src-d83681afc201b87c3dbfcabe7dff39f6f9c3067b1e28f234307b994784eda1bc",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1446
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "2026-11-09 审计发现本库第一版解析把 $(A\\cap B)\\cup C=\\{1,2\\}\\cup\\{2,3,4\\}$ 误写成 $\\{2,3,4\\}$ 而答案写 D，等式与选项自相矛盾。已改正为 $\\{1,2,3,4\\}$（= D）并重跑生成、编译与审查，四层 Markdown 与四版 PDF 现一致。",
+  "fingerprint": "943cf9056c4b30b6847bfd47318e493d42f8faf84828b1f23aa84158ab7d7a6a",
+  "impact": "non_blocking",
+  "paper_id": "gk-2005-regular-jiangsu",
+  "question_id": "gk-2005-regular-jiangsu-q1",
+  "resume_action": "已修复：无需动作，保留记录供后续抽查同类并集运算。",
+  "source_id": "src-935f381a6fe96aa7c90e29bd5d55871232018e04915422713605b6843b981999",
+  "status": "resolved",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1447
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "2026-11-09 审计发现 Q12 折叠角误答 $45^\\circ$（误按平面中位线处理）。用坐标法复核：$E(0,0,0)$、$B(b,0,0)$、$D(0,d,0)$、$C(b,d,0)$、$A(b,0,b)$，$M(b/2,d/2,b/2)$、$N(b,d/2,0)$，$\\overrightarrow{MN}\\cdot\\overrightarrow{EA}=0$，故为 $90^\\circ$。已改正四层 Markdown 并重建。",
+  "fingerprint": "f7bc8fa9dea06dd80b4a6e083338ffe7033057d680a44ad3139690b51630bdae",
+  "impact": "non_blocking",
+  "paper_id": "gk-2005-regular-zhejiang-arts",
+  "question_id": "gk-2005-regular-zhejiang-arts-q12",
+  "resume_action": "已修复：无需动作。",
+  "source_id": "src-471caa672d0669c285806b64c504cc9694bcd51dd60b0a0b2a7a45178fb560cb",
+  "status": "resolved",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1448
+
+```json
+{
+  "affected_paper_ids": [],
+  "current_evidence": "同 ISSUE-1447：理科卷 Q12 同题同误，已由 $45^\\circ$ 订正为 $90^\\circ$（坐标法 $\\overrightarrow{MN}\\cdot\\overrightarrow{EA}=0$）并重建四版。",
+  "fingerprint": "2b5e00c1d8f93c01a8dc32115c1d1c9b37a70f9ca0ebb060c9bb3ddfe07446dd",
+  "impact": "non_blocking",
+  "paper_id": "gk-2005-regular-zhejiang-science",
+  "question_id": "gk-2005-regular-zhejiang-science-q12",
+  "resume_action": "已修复：无需动作。",
+  "source_id": "src-216c3b98cde76aa00ef9438e3d25ba93e13bfc6f605279dcf1399de98457ac48",
+  "status": "resolved",
+  "type": "answer-conflict"
+}
+```
