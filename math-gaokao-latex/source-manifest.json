@@ -2580,6 +2580,14 @@
         "gk-2005-regular-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b87",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2589,7 +2597,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cac17284-7d9a-47d5-a6a1-96ad9ee4fd18",
+  "last_transaction_id": "5100a431-ef9a-41a0-83e1-e487eda3601e",
   "papers": [
     {
       "blocked_from": null,
@@ -32998,9 +33006,70 @@
       "title": "2005 年·普通高等学校招生考试·湖北卷·理科",
       "track": "science",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖南卷_文科/figures/f2005_hunan_arts_q04_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖南卷_文科/figures/f2005_hunan_arts_q18_trapezoid_folding.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_hunan_arts",
+        "id": "gk-2005-regular-hunan-arts",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 236、237；全卷共 21 题（选 10、填 5、解 6，满分 150 分）。第 1 题集合交补运算选 C。第 2 题诱导公式与正切求值选 D。第 3 题偶次根式定义域选 A。第 4 题正方体中点到对角截面距离选 B。第 5 题正切型数列递推与周期选 B。第 6 题充要条件判定选 A。第 7 题平面网格两点斜率去重计数选 C。第 8 题双曲线渐近线与准线围成三角形面积选 D。第 9 题向量数量积与垂心判定选 D。第 10 题分段利润函数最值选 B。第 11 题弦垂直平分线方程 3x-2y-3=0。第 12 题分层抽样与等差数列 5600 件。第 13 题二项式定理系数累加 35。第 14 题中心对称与反函数值 -2。第 15 题空间线面关系符号辨析 (1)③⑤ (2)②⑤。第 16 题等差数列通项与裂项求和不等式。第 17 题解三角形三角恒等变换 A=pi/4, B=pi/3, C=5pi/12。第 18 题等腰梯形折成直二面角空间向量与二面角 arccos(sqrt(3)/4)。第 19 题三次曲线切线与函数单调性参数范围 (-infty,-9]U[3,+infty)。第 20 题古典概型与部门旅游景区选择。第 21 题椭圆切线、对称点与等腰三角形综合。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2005_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_湖南文科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_湖南文科_含解析.md",
+        "questions": "2005/2005_数学真题_湖南文科_试题.md",
+        "solution_body": "2005/2005_数学真题_湖南文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-aad0a429b27a0d6c2285a0bbd684d1eea33b6ce3da88e608c2570cdcd8c7646b"
+      ],
+      "title": "2005 年·普通高等学校招生考试·湖南卷·文科",
+      "track": "arts",
+      "year": 2005
     }
   ],
-  "revision": 6627,
+  "revision": 6632,
   "schema_version": 1,
   "sources": [
     {
@@ -39977,8 +40046,8 @@
       "exam_type": "regular",
       "git_blob_oid": "488a26ac30a9226fbe563fa1f25f9ee846b4aeec",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005湖南文.pdf",
       "regions": [],
       "source_id": "src-aad0a429b27a0d6c2285a0bbd684d1eea33b6ce3da88e608c2570cdcd8c7646b",
