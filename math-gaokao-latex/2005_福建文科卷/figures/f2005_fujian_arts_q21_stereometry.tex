@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth, scale=1.0]
+  % 顶点定义
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.8, 0);
+  \coordinate (C) at (2.8, 2.8);
+  \coordinate (D) at (0, 2.8);
+  \coordinate (E) at (1.0, -0.7);
+  \coordinate (F) at ($(C)!0.68!(E)$);
+
+  % 可见实线
+  \draw[thick] (D) -- (C) -- (B) -- (E) -- (A) -- (D);
+  \draw[thick] (D) -- (E);
+  \draw[thick] (C) -- (E);
+  \draw[thick] (B) -- (F);
+
+  % 不可见虚线
+  \draw[thick, dashed] (A) -- (B);
+  \draw[thick, dashed] (A) -- (C);
+
+  % 顶点标签
+  \node[above left] at (D) {$D$};
+  \node[above right] at (C) {$C$};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[below] at (E) {$E$};
+  \node[left] at (F) {$F$};
+\end{tikzpicture}
