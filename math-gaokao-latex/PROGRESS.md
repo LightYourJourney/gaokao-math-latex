@@ -4,6 +4,15 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 辽宁卷：phase4-b94 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
+
+- 对象：`gk-2005-regular-liaoning`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-d956cce9ca639f28df0742c6a5a46010506af0377eb63782e1cbc118b2f08c26`，上游 `普通高考/2005/2005辽宁.pdf`，SHA-256 `08a3f76c37665b93b985abe546c5a5b709d5445e6d00bc8340b743e87581a28a`，535787 字节，2 页 A3 横向，印面页码 244、245，题签无文理标识（`track=none`）。
+- 排印与转录口径：PDF 自带文本层，`pdftotext -layout` 可完整取题面，故以文本层为字面权威、不做图像识别；第 1 页含 Q1–Q18、第 2 页含 Q19–Q22（provenance `source_pages` 同此）。三处印面字面保留不改写：Q13 指数为字母 $n$（按奇偶分类作答，通行版 $n=6$ 时 $-160$ 仅作说明）、Q04 选项②按字面为假命题、Q22(3) 凹函数项为 $\frac{3}{2}x^{\frac{2}{3}}$。
+- 答案（独立推导，等级 A，非官方）：1B 2B 3D 4D 5C 6C 7C 8B 9A 10A 11B 12A；13 分类式；14 $\frac{2}{3}$；15 $576$；16 $(\pi,2\pi]$；17(2) $\frac{\sqrt{3}}{3}$、(3) $2\sqrt{2}$；18 $S=\sin2\theta-\sin^2\theta$、$\tan\theta=\frac{\sqrt{5}-1}{2}$、$S_{\max}=\frac{\sqrt{5}-1}{2}$；19 归纳界与 $S_n<\frac{2\sqrt{3}}{3}$；20 $0.68/0.6$、$E\xi=4.2$、$E\eta=2.1$、$(5,0)$ 或 $(4,2)$ 时 $21$ 万元；21 轨迹 $x^2+y^2=a^2$、$b^2\leqslant ac$ 时 $\tan\angle F_1MF_2=2$；22 $m=f(x_0)-x_0f'(x_0)$、$b\in[\frac{2-\sqrt{2}}{4},\frac{2+\sqrt{2}}{4}]$ 且 $b\geqslant\frac{1}{2a^2}$、$b\leqslant1-\frac{a^2}{4}$。
+- 图形：Q12 四候选图象、Q14 正方体截面、Q17 三棱锥、Q18 十字形、Q21 椭圆，全部 TikZ 纯矢量重绘（首版 Q12 误用未加载的 `\ifthenelse` 致 latexmk exit 12，改四段 `scope` 后通过）。
+- 生成链：`register-papers` → `solution_sources extract-batch` → `generate_projects` → `make_short_answers` → `provenance init-batch/import-batch` → `make_editions` → `build --formal` → `review_receipts prepare-batch/finalize-batch`。解析正文第 17–22 题须用 `#### (k)` 小问标题；`_答案要点.md` 不得残留无法归属的尾部小节，否则 extract-batch 拒绝。
+- 验收：四版 build 均 succeeded，0 error / 0 missing char / 0 undefined ref / 0 Overfull；review 回执逐页 `pass` 后 `finalize-batch` 返回 `FINALIZED`，批次 `closed`，paper `complete`；`tests/test_2005_liaoning_solutions.py` 13 项通过。遗留：`ISSUE-1440`–`ISSUE-1443` 为登记期自动生成的卷级问题位，需在后续巡检中核对是否可销项。
+
 ### 2005 福建卷理科：phase4-b93 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
 
 - 对象：`gk-2005-regular-fujian-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-a3cf296b65edd3890eb214591c50e36784194dc86d9983c5b04b9c064455548f`，上游 `普通高考/2005/2005福建理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 224、225，印刷题签“2005 普通高等学校招生考试 (福建卷理)”，科类登记 `track=science`）。
