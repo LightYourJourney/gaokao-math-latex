@@ -2660,6 +2660,14 @@
         "gk-2005-regular-national-3-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b97",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-national-3-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2669,7 +2677,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "12c4c60c-3591-4dc0-8f11-3852a972aa04",
+  "last_transaction_id": "a480ee8c-97b3-4d76-804a-9284e5f781aa",
   "papers": [
     {
       "blocked_from": null,
@@ -33731,9 +33739,66 @@
       "title": "2005 年·普通高等学校招生考试·全国卷Ⅲ·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_全国卷Ⅲ_理科/figures/f2005_national3_science_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_national3_science",
+        "id": "gk-2005-regular-national-3-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 254、255；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 18 题四棱锥图 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "全国卷Ⅲ",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "全国Ⅲ理"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-national-3-science",
+      "production_state": "complete",
+      "project_dir": "2005_全国卷Ⅲ_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_全国卷Ⅲ理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_全国卷Ⅲ理科_含解析.md",
+        "questions": "2005/2005_数学真题_全国卷Ⅲ理科_试题.md",
+        "solution_body": "2005/2005_数学真题_全国卷Ⅲ理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-d83681afc201b87c3dbfcabe7dff39f6f9c3067b1e28f234307b994784eda1bc"
+      ],
+      "title": "2005 年·普通高等学校招生考试·全国卷Ⅲ·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6700,
+  "revision": 6705,
   "schema_version": 1,
   "sources": [
     {
@@ -40350,8 +40415,8 @@
       "exam_type": "regular",
       "git_blob_oid": "54ef9cc7fcd82b9c12e3c6da5f28f3590eb706c4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-national-3-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005全国3理(四川,云南,贵州,甘肃,陕西,青海,西藏).pdf",
       "regions": [],
       "source_id": "src-d83681afc201b87c3dbfcabe7dff39f6f9c3067b1e28f234307b994784eda1bc",
