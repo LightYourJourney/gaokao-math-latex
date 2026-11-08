@@ -38,7 +38,7 @@
 
 - 对象：`gk-2005-regular-national-3-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-d83681afc201b87c3dbfcabe7dff39f6f9c3067b1e28f234307b994784eda1bc`，上游 `普通高考/2005/2005全国3理(四川,云南,贵州,甘肃,陕西,青海,西藏).pdf`，SHA-256 `a5c45d0c0d338915e398faf55e9662a294e21e02f22f97e0eb16da2ed2d7bb11`，2 页 A3 横向，印面页码 254、255。
 - 与文科卷的差异题已逐题另拟：第 5 题极限、第 13 题复数、第 15 题距离期望、第 19 题等比三角形、第 21 题（2）截距范围、第 22 题函数与恒等存在性。
-- 答案（独立推导，等级 A）：1D 2B 3B 4C 5A 6C 7C 8B 9C 10D 11D 12A；13 $z=1-\frac32\mathrm{i}$；14 $k=-\frac23$；15 $E\xi=\frac47$；16 $3$；17 $0.2/0.25/0.5$、$0.7$；18 $\arccos\frac{\sqrt{21}}{7}$；19 $\frac{4\sqrt7}{7}$、$a+c=3$；20 $k_n=3^{n+1}$；21 $[\frac{9}{32},+\infty)$；22 值域 $[-4,-3]$、$1\le a\le\frac32$。
+- 答案（独立推导，等级 A）：1D 2B 3B 4C 5A 6C 7C 8B 9C 10D 11D 12A；13 $z=1-\frac32\mathrm{i}$；14 $k=-\frac23$；15 $E\xi=\frac47$；16 $3$；17 $0.2/0.25/0.5$、$0.7$；18 $\arccos\frac{\sqrt{21}}{7}$；19 $\frac{4\sqrt7}{7}$、$a+c=3$；20 $k_n=3^{n+1}$；21 $(\frac{9}{32},+\infty)$；22 值域 $[-4,-3]$、$1\le a\le\frac32$。
 - 题面疑点（2026-11-09 订正）：第 20 题在文、理两卷的固定源文本层**均**印作“等差中项”（此前“理科等差、文科等比”的说法不实，已更正）。按等差将推出 $d=0$ 与题设 $d\neq0$ 矛盾，故印面应为“等比”之误植；题面保留源面字面并在题下注记，解析按等比处理，答案 $k_n=3^{n+1}$ 不变。
 - 验收：四版 build `COMPILED_PENDING_REVIEW`，0 error / 0 missing char / 0 undefined ref；4 条 Overfull hbox 逐项豁免；`finalize-batch` 返回 `FINALIZED`。
 
@@ -53,7 +53,7 @@
 
 - 对象：`gk-2005-regular-jiangsu`，23 题（选择 1–12、填空 13–18、解答 19–23）；固定来源 `src-935f381a6fe96aa7c90e29bd5d55871232018e04915422713605b6843b981999`，上游 `普通高考/2005/2005江苏.pdf`，SHA-256 `29ccab1b5b7d579a0e8e4124fa5f2f732ebb2436d570b7529e6dbce988cd4dde`，508805 字节，2 页 A3 横向，印面页码 238、239，无文理标识（`track=none`）。
 - 转录口径：PDF 自带文本层，`pdftotext -layout` 取值；第 1 页含 Q1–Q20、第 2 页含 Q21–Q23。第 2 题文本层把上标 $2^{1-x}$ 识别成 $x^{1-x}$，按四个选项与该卷通行版本取 $y = 2^{1-x}+3$ 并在解析正文注记。
-- 答案（独立推导，等级 A）：1C 2A 3C 4B 5D 6B 7D 8B 9C 10A 11A 12B；13 否命题；14 $y=4x-1$；15 $[-\frac14,0)\cup(\frac34,1]$；16 $k=-1$；17 $5a-b=2$；18 最小值 $-2$；19 轨迹 $(x-6)^2+y^2=33$；20 $\frac{65}{81}$、$\frac18$、$\frac{45}{1024}$；21 $\arccos\frac{\sqrt6}{4}$、$\arccos(-\frac{14+9\sqrt2}{34})$；22 解集 $\{0,1,1+\sqrt2\}$ 与分段最小值；23 $A=-20$、$B=-8$，$a_n=5n-4$，不等式成立。
+- 答案（独立推导，等级 A）：1D 2A 3C 4B 5D 6B 7D 8B 9C 10A 11A 12B；13 否命题；14 $y=4x-1$；15 $[-\frac14,0)\cup(\frac34,1]$；16 $k=-1$；17 $5a-b=2$；18 最小值 $-2$；19 轨迹 $(x-6)^2+y^2=33$；20 $\frac{65}{81}$、$\frac18$、$\frac{45}{1024}$；21 $\arccos\frac{\sqrt6}{4}$、$\arccos(-\frac{14+9\sqrt2}{34})$；22 解集 $\{0,1,1+\sqrt2\}$ 与分段最小值；23 $A=-20$、$B=-8$，$a_n=5n-4$，不等式成立。
 - 图形：Q19 两圆切线、Q21 五棱锥，TikZ 矢量重绘；`expected_occurrences` 应为 2（试题 + 含解析），登记为 3 会触发引用计数校验失败。
 - 验收：四版 build `COMPILED_PENDING_REVIEW`，0 error / 0 missing char / 0 undefined ref；印刷版 1 条 Underfull hbox（lines 162--163）按逐项豁免登记，`visual_result=pass`（枚举取自 `page_result`）；`finalize-batch` 返回 `FINALIZED`。
 
