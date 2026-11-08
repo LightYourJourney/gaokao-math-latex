@@ -2540,6 +2540,14 @@
         "gk-2005-regular-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b82",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2549,7 +2557,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0eeb66b4-bb91-4272-946e-35880c22b961",
+  "last_transaction_id": "50bcd762-4755-471f-9f5d-03e7b051b397",
   "papers": [
     {
       "blocked_from": null,
@@ -32629,9 +32637,70 @@
       "title": "2005 年·普通高等学校招生考试·山东卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_山东卷_理科/figures/f2005_shandong_science_q02_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_山东卷_理科/figures/f2005_shandong_science_q20_cuboid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_shandong_science",
+        "id": "gk-2005-regular-shandong-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 258、259；全卷共 22 题（选 12、填 4、解 6，满分 150 分）。第 1 题复数运算 -1 选 D。第 2 题反函数图象选 B。第 3 题三角倍角周期与对称中心选 B。第 4 题奇函数且在 [-1, 1] 递减选 D。第 5 题二项式特定项系数 21 选 C。第 6 题分段函数方程解 1 或 -sqrt(2)/2 选 C。第 7 题向量共线三点 ABD 选 A。第 8 题球面距离 2*pi/3*R 选 D。第 9 题至少 1 人中奖概率 11/12 选 D。第 10 题集合充要条件充分不必要选 A。第 11 题对数均值不等式选 A。第 12 题直线对称与椭圆三角形面积点数 2 个选 B。第 13 题组合数极限 3/2。第 14 题双曲线等腰直角三角形离心率 sqrt(2)。第 15 题线性规划最优解坐标 (2, 3)。第 16 题空间线面关系真命题序号 34。第 17 题向量三角求值 -4/5。第 18 题摸球分布列与甲中奖概率 22/35。第 19 题导数极值点 n=3m+6 与单调区间、切线斜率范围 (-4/3, 0)。第 20 题长方体异面直线角、二面角与点面距。第 21 题等比数列证明与错位相减求导值及比较大小。第 22 题抛物线轨迹方程 y^2=2px 与倾斜角和弦线过定点 (-2p, 2p*cot theta)。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2005_山东卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_山东理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_山东理科_含解析.md",
+        "questions": "2005/2005_数学真题_山东理科_试题.md",
+        "solution_body": "2005/2005_数学真题_山东理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-ef42c35b64f737887b5e1662d3d020f59e9bf4cfefa075a73d4a5a014902e89f"
+      ],
+      "title": "2005 年·普通高等学校招生考试·山东卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6594,
+  "revision": 6601,
   "schema_version": 1,
   "sources": [
     {
@@ -39392,8 +39461,8 @@
       "exam_type": "regular",
       "git_blob_oid": "e9c9c13043c6bc82a5786d95dc6332d9ab928f64",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005山东理.pdf",
       "regions": [],
       "source_id": "src-ef42c35b64f737887b5e1662d3d020f59e9bf4cfefa075a73d4a5a014902e89f",
