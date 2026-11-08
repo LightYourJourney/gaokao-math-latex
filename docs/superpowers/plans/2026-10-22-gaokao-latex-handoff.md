@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-08 当前状态：phase4-b85 2005 湖北文科卷收口，全库 456 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b86 2005 湖北理科卷收口，全库 457 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b85 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b86 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b85
+### 最近完成：phase4-b86
 
-- `gk-2005-regular-hubei-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-b636e12724f71a676e0c589b362ee665c12098faf74666c56ebffbccaa9c4967`，上游 `普通高考/2005/2005湖北文.pdf`（两页 A3 扫描排印，原卷印刷页码 232、233，印刷题签“2005 普通高等学校招生考试 (湖北卷文)”，科类登记 `track=arts`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 集合求和元素个数 8 个（选 B）；Q02 充要条件与代数命题真假 2 个（选 B）；Q03 向量模长范围 $[-6, 2]$（选 C）；Q04 绝对值对数函数分段图象识别（选 D）；Q05 球体相似体积比与表面积比 120 倍（选 C）；Q06 双曲线与抛物线焦点重合 $mn = \frac{3}{16}$（选 A）；Q07 Jensen 不等式上凸函数个数 1 个（选 B）；Q08 空间线面位置命题真假 1 个（选 A）；Q09 连续编号电影票分配方法 144 种（选 D）；Q10 三角方程根区间 $(\frac{\pi}{4}, \frac{\pi}{3})$（选 C）；Q11 切线倾斜角小于 $\frac{\pi}{4}$ 整点个数 0 个（选 D）；Q12 抽样方案机制辨析（选 D）；Q13 函数定义域 $[2, 3) \cup (3, 4)$；Q14 二项展开式常数项 38；Q15 绝对值三角函数周期与最值和 $2\pi - \frac{1}{2}$；Q16 整数规划购料最省 500 元；Q17 向量数量积与导数增函数参数范围 $[5, +\infty)$；Q18 解三角形面积 $6\sqrt{2} + 8\sqrt{3}$；Q19 等差等比数列通项 $a_n = 4n-2, b_n = \frac{1}{2^{2n-3}}$ 与错位相减求和 $T_n = \frac{(6n-5)4^n + 5}{9}$；Q20 长方体截面多面体 $BF = 2\sqrt{6}$ 与点面距离 $\frac{4\sqrt{33}}{11}$；Q21 灯泡更换概率模型 $p = 0.54$ 与二项分布至少 4 只概率 $0.24$；Q22 椭圆中点弦方程 $x+y-4=0$、$\lambda \in (12, +\infty)$ 及垂直平分线交点乘积恒等式 $|NA|\cdot|NB| = |NC|\cdot|ND| = \frac{\lambda-12}{2}$ 证明四点共圆。全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-hubei-arts-source-intake.md`；重绘并挂接 2 张高保真 TikZ 纯矢量图（`f2005_hubei_arts_q04_choices.tex`、`f2005_hubei_arts_q20_polyhedron.tex`）。
+- `gk-2005-regular-hubei-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-5657c134b525e7c5805869a0436142acc5dfe9ad0ae5fc5680fe3951ee3ddb83`，上游 `普通高考/2005/2005湖北理.pdf`（两页 A3 扫描排印，原卷印刷页码 230、231，印刷题签“2005 普通高等学校招生考试 (湖北卷理)”，科类登记 `track=science`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与分值严谨完备。Q01 集合求和元素个数 8 个（选 B）；Q02 充要条件与命题真假 2 个（选 B）；Q03 绝对值函数分段图象辨析（选 D）；Q04 球体相似体积比与表面积比 120 倍（选 C）；Q05 双曲线与抛物线公共焦点 $mn = \frac{3}{16}$（选 A）；Q06 Jensen 不等式上凸函数个数 1 个（选 B）；Q07 三角方程根区间 $(\frac{\pi}{4}, \frac{\pi}{3})$（选 C）；Q08 极限待定系数 $a = -2, b = -4$（选 C）；Q09 指数函数与三角函数区间大小比较（选 D）；Q10 三棱柱中点重心立体几何与平行棱数判定（选 C）；Q11 三次曲线切线倾斜角与整点判定 0 个（选 D）；Q12 平行六面体顶点三角形共面与不共面概率 $\frac{367}{385}$（选 A）；Q13 向量模长范围 $[-6, 2]$；Q14 三项多项式展开常数项 $\frac{63\sqrt{2}}{2}$；Q15 等比数列前 $n$ 项和等差性质求公比 $q = -2$；Q16 整数规划购料最省 500 元；Q17 向量数量积与导数增函数参数范围 $[5, +\infty)$；Q18 解三角形中线定理与正弦定理 $\sin A = \frac{\sqrt{70}}{14}$；Q19 驾照考试离散分布列与期望 $\mathbf{E}\xi = 1.544$、通过率 $0.9976$；Q20 四棱锥线面角余弦值 $\frac{3\sqrt{7}}{14}$、到 $AB$ 距离 1 及到 $AP$ 距离 $\frac{\sqrt{3}}{6}$；Q21 椭圆中点弦方程 $x+y-4=0$、$\lambda \in (12, +\infty)$ 与四点共圆恒等性证明；Q22 数列不等式倒数累加、极限值 0 与 $N = 1023$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-hubei-science-source-intake.md`；重绘并挂接 3 张高保真 TikZ 纯矢量图（`f2005_hubei_science_q03_choices.tex`、`f2005_hubei_science_q10_prism.tex`、`f2005_hubei_science_q20_pyramid.tex`）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_hubei_arts_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/32/7/20 页，共 64 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 64 页共 512 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b85.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 456 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进：2005 年湖北理科卷（`普通高考/2005/2005湖北理.pdf`，下一批次 `phase4-b86`，`gk-2005-regular-hubei-science`）！
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_hubei_science_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/30/7/21 页，共 63 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 63 页共 504 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b86.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 457 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进：2005 年湖南卷文科（`普通高考/2005/2005湖南文.pdf`，下一批次 `phase4-b87`，`gk-2005-regular-hunan-arts`）！
+
+### 之前完成：phase4-b85
+
+- `gk-2005-regular-hubei-arts`，22 题；详情参见 `PROGRESS.md`。四版共 64 页，`FINALIZED`，已闭环。全量 456 套试卷 TeX 投影一致。2005 年湖北卷文理双科大圆满收口！
 
 ### 之前完成：phase4-b84
 
