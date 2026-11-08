@@ -4,23 +4,27 @@
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
-## 2026-11-08 当前状态：phase4-b91 2005 重庆理科卷收口，全库 462 套试卷确定性 TeX 投影 100% 一致
+## 2026-11-08 当前状态：phase4-b92 2005 福建文科卷收口，全库 463 套试卷确定性 TeX 投影 100% 一致
 
 ### 工作位置与 Git
 
-- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b91 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
+- 只在规范 worktree `仓库根`、分支 `feat/gaokao-phase0` 继续；phase4-b92 已收口，接续时以 live `git log` 核对提交号。本轮 `git worktree list` 只有既存的 `主工作树`（`main`）和规范 feature worktree，没有新增项。`main` 上用户文件未触碰。不要新建 worktree、切到 `main` 或 push；接续时重新核对实时状态。
 - 当前续接目标是继续1952—2026题库，不以单卷结案替代总目标。
 
-### 最近完成：phase4-b91
+### 最近完成：phase4-b92
 
-- `gk-2005-regular-chongqing-science`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-2436f5bf746a5300fcb871c75fddd844998da5c7d465ce3615657d299ffa3c83`，上游 `普通高考/2005/2005重庆理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 220、221，印刷题签“2005 普通高等学校招生考试 (重庆卷理)”，科类登记 `track=science`）。
-- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与结构严谨完备。Q01 圆关于原点对称 $(x-2)^2 + y^2 = 5$（选 A）；Q02 虚数单位乘幂 $\mathrm{i}$（选 A）；Q03 偶函数区间单调性解不等式 $(-2, 2)$（选 D）；Q04 平面向量夹角反余弦值 $\arccos(-\frac{4}{5})$（选 C）；Q05 基本不等式配对求最值 $4$（选 C）；Q06 锐角充分必要条件判定为必要不充分条件（选 B）；Q07 空间线面平行命题辨析判定 2 个（②④，选 B）；Q08 二项式系数比例求项数 $n = 6$（选 B）；Q09 椭圆动点二次函数最大值分类讨论（选 A）；Q10 四面体重心坐标比例求体积比例 $\frac{1}{7}$（选 C）；Q11 集合不等式交集 $(0, 3)$；Q12 切线与坐标轴围成三角形面积求参数 $a = \pm 1$；Q13 锐角三角方程 $\tan\alpha = 1$；Q14 指数极限 $-3$；Q15 车厢分配概率 $\frac{45}{128}$；Q16 抛物线四边形命题辨析 ②③⑤；Q17 辅助角三角最值参数 $a = \pm\sqrt{15}$；Q18 抽奖概率 $\frac{2}{3}$、分布列与数学期望 $\mathbf{E}\xi = 16$；Q19 导数极值点讨论（$0 \leqslant a \leqslant 4$ 时 0 个，$a < 0$ 或 $a > 4$ 时 2 个）；Q20 三棱柱三垂线逆定理证垂直、公垂线段长 $1$、空间向量二面角正切值 $\frac{\sqrt{2}}{2}$；Q21 双曲线方程 $\frac{x^2}{3} - y^2 = 1$、割线向量数量积取值范围 $(-1, -\frac{\sqrt{195}}{15}) \cup (-\frac{\sqrt{3}}{3}, -\frac{1}{2}) \cup (\frac{1}{2}, \frac{\sqrt{3}}{3}) \cup (\frac{\sqrt{195}}{15}, 1)$；Q22 数学归纳法证明 $a_n \geqslant 2$ 与对数累乘裂项放缩求证 $a_n < \mathrm{e}^2$。全部独立推导闭环，评定为 `eligible_complete`。
-- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-chongqing-science-source-intake.md`；重绘并挂接 1 张高保真 TikZ 纯矢量图（`f2005_chongqing_science_q20_prism.tex`）。
+- `gk-2005-regular-fujian-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-ad451d91ee17f5133278a91e5c3760372bec9f649296523203eb09d500c60b60`，上游 `普通高考/2005/2005福建文.pdf`（两页 A3 横向扫描排印，原卷印刷页码 226、227，印刷题签“2005 普通高等学校招生考试 (福建卷文)”，科类登记 `track=arts`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与结构严谨完备。Q01 集合不等式交集 $\{0, 1, 2\}$（选 D）；Q02 分式不等式解集转化二次不等式（选 A）；Q03 等差数列中项性质求项值 $a_{12} = 15$（选 A）；Q04 余弦型函数区间单调减区间 $\left[0, \frac{\pi}{2}\right]$（选 C）；Q05 基本不等式成立条件与最值辨析（选 B）；Q06 指数函数图象递减与截距判断参数 $0 < a < 1, b > 0$（选 C）；Q07 空间线面平行垂直命题辨析判定 2 个（②③，选 C）；Q08 充分必要条件判定为必要不充分条件（选 B）；Q09 双曲线定义求焦点距离最小值 $\frac{7}{2}$（选 C）；Q10 受限位置排列组合方案数 $240$ 种（选 B）；Q11 长方体建立坐标系计算异面直线垂直 $\frac{\pi}{2}$（选 D）；Q12 偶函数周期性求区间零点最小个数 4 个（选 B）；Q13 二项式定理常数项 $240$；Q14 直角三角形向量垂直求参数 $k = 5$；Q15 退化可行域目标函数最大值 $0$；Q16 对称变换反函数真命题补充（关于 $y = x$ 对称得 $2^{x-3}$）；Q17 三角同角平方关系化简 $\sin x - \cos x = -\frac{7}{5}$ 与代数式求值 $-\frac{24}{175}$；Q18 离散随机变量数学期望 $\mathbf{E}\xi = \frac{9}{10}$ 与四次投球至少命中一次对立概率 $\frac{91}{100}$；Q19 等比数列等差中项公比 $q = 1$ 或 $-\frac{1}{2}$ 与分类比较 $S_n$ 与 $b_n$ 大小；Q20 三次多项式切线待定系数解析式 $f(x) = x^3 - 3x^2 - 3x + 2$ 与单调增减区间；Q21 直二面角性质定理证线面垂直、三垂线逆定理求二面角 $\arccos\frac{\sqrt{3}}{3}$、等体积法求点面距离 $\frac{2\sqrt{3}}{3}$；Q22 椭圆焦点与对称点求标准方程 $\frac{x^2}{6} + \frac{y^2}{2} = 1$、弦长三角形面积转化求直线方程 3 条（$x = -2$ 或 $x \pm \sqrt{3}y + 2 = 0$）。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-fujian-arts-source-intake.md`；重绘并挂接 3 张高保真 TikZ 纯矢量图（`f2005_fujian_arts_q06_exp.tex`、`f2005_fujian_arts_q11_cuboid.tex`、`f2005_fujian_arts_q21_stereometry.tex`）。
 - 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
-- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_chongqing_science_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
-- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/29/6/22 页，共 61 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 61 页共 488 项八类视觉检查全部通过（0 fail、0 pending）。
-- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b91.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 462 套试卷 TeX 投影 100% 一致。
-- 下一步推荐推进：推进 2005 年福建卷文理科或辽宁卷（下一批次 `phase4-b92`）！
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_fujian_arts_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 5/29/7/21 页，共 62 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 62 页共 496 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b92.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 463 套试卷 TeX 投影 100% 一致。
+- 下一步推荐推进：推进 2005 年福建理科卷（`2005福建理.pdf`，下一批次 `phase4-b93`）！
+
+### 之前完成：phase4-b91
+
+- `gk-2005-regular-chongqing-science`，22 题；详情参见 `PROGRESS.md`。四版共 61 页，`FINALIZED`，已闭环。全量 462 套试卷 TeX 投影一致。2005 年重庆卷文理双科大圆满收口！
 
 ### 之前完成：phase4-b90
 
