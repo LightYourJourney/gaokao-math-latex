@@ -2636,6 +2636,14 @@
         "gk-2005-regular-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b94",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-liaoning"
+      ],
+      "status": "planned"
     }
   ],
   "inventory": {
@@ -2645,7 +2653,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "59a928df-a511-4003-876f-b2fcc857fc61",
+  "last_transaction_id": "095b081f-c1aa-4388-a269-0429e1d31f62",
   "papers": [
     {
       "blocked_from": null,
@@ -33507,9 +33515,82 @@
       "title": "2005 年·普通高等学校招生考试·福建卷·理科",
       "track": "science",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_辽宁卷/figures/f2005_liaoning_q12_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_辽宁卷/figures/f2005_liaoning_q14_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_辽宁卷/figures/f2005_liaoning_q17_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_辽宁卷/figures/f2005_liaoning_q18_cross.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_辽宁卷/figures/f2005_liaoning_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_regular_liaoning",
+        "id": "gk-2005-regular-liaoning",
+        "note": "固定源为 2 页 A3 横向排印，原卷印刷页码 244、245；PDF 含文本层但无官方答案页，全卷 22 题由本库独立推导复算。第 12、14、17、18、21 题图由 TikZ 纯矢量重绘。第 13 题印面指数为字母 n，按字面作答并在答案要点中说明。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文理不分",
+        "variant": "辽宁卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-liaoning",
+      "production_state": "planned",
+      "project_dir": "2005_辽宁卷",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_辽宁_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_辽宁_含解析.md",
+        "questions": "2005/2005_数学真题_辽宁_试题.md",
+        "solution_body": "2005/2005_数学真题_辽宁_解析正文.md"
+      },
+      "source_ids": [
+        "src-d956cce9ca639f28df0742c6a5a46010506af0377eb63782e1cbc118b2f08c26"
+      ],
+      "title": "2005 年·普通高等学校招生考试·辽宁卷",
+      "track": "none",
+      "year": 2005
     }
   ],
-  "revision": 6683,
+  "revision": 6684,
   "schema_version": 1,
   "sources": [
     {
@@ -40582,8 +40663,8 @@
       "exam_type": "regular",
       "git_blob_oid": "949a68d2afea69bbaf52dad65d5274120c3a496e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-liaoning",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005辽宁.pdf",
       "regions": [],
       "source_id": "src-d956cce9ca639f28df0742c6a5a46010506af0377eb63782e1cbc118b2f08c26",
