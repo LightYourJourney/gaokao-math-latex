@@ -452,14 +452,20 @@ $\overrightarrow{BA}\cdot\overrightarrow{BC} = ca\cos B = \dfrac{3}{4}ac = \dfra
 
 \textbf{题目}：
 
-在等差数列 $\{a_n\}$ 中，公差 $d \neq 0$，$a_2$ 是 $a_1$ 与 $a_4$ 的等比中项．已知数列 $a_1, a_3, a_{k_1}, a_{k_2}, \cdots, a_{k_n}, \cdots$ 成等比数列，求数列 $\{k_n\}$ 的通项 $k_n$．
+在等差数列 $\{a_n\}$ 中，公差 $d \neq 0$，$a_2$ 是 $a_1$ 与 $a_4$ 的等差中项．已知数列 $a_1, a_3, a_{k_1}, a_{k_2}, \cdots, a_{k_n}, \cdots$ 成等比数列，求数列 $\{k_n\}$ 的通项 $k_n$．
+
+\begin{gktip}
+（源面注明：固定源 PDF 文本层在文、理两卷中此处均印作“$a_2$ 是 $a_1$ 与 $a_4$ 的\textbf{等差}中项”。若按字面理解，由 $2a_2 = a_1 + a_4$ 得 $2(a_1+d) = a_1 + (a_1+3d)$，即 $d = 0$，与题设 $d\neq 0$ 矛盾；故印面“等差”应为“等比”之误植。本卷题面保留源面字面，解析按使题目自洽的等比中项处理，该源缺陷登记于 \texttt{missing-issues.md}。）
+\end{gktip}
 
 \Needspace{4\baselineskip}
 \textbf{解析}
 
-按题设 $a_2$ 为 $a_1$ 与 $a_4$ 的等差中项将推出 $d = 0$，与 $d \neq 0$ 矛盾，故此处实际条件为等比中项（固定源文本层在文、理两卷中分别显示为“等比”“等差”，本卷按数学一致性取等比）。由 $(a_1 + d)^2 = a_1(a_1 + 3d)$ 得 $d^2 = a_1d$，即 $a_1 = d$。于是 $a_n = nd$，$a_1 = d$、$a_3 = 3d$，公比 $3$，故 $a_{k_n} = 3^{n+1}d$，即 $k_n = 3^{n+1}$。
+源面作“$a_2$ 是 $a_1$ 与 $a_4$ 的\textbf{等差}中项”，但等差数列且 $d \neq 0$ 时 $2a_2 = a_1 + a_4$ 即 $2(a_1 + d) = a_1 + (a_1 + 3d)$，推出 $d = 0$，与题设矛盾。故印面“等差”系“等比”之误植，本解析按使题目自洽的“等比中项”处理（源缺陷见 \texttt{missing-issues.md}）。
 
-\gkanswer{答案：$k_n = 3^{n+1}$。}
+由 $a_2$ 是 $a_1$ 与 $a_4$ 的等比中项得 $(a_1 + d)^2 = a_1(a_1 + 3d)$，即 $d^2 = a_1 d$，因 $d \neq 0$ 得 $a_1 = d$。于是 $a_n = nd$，$a_1 = d$，$a_3 = 3d$，公比 $q = 3$。故 $a_{k_n} = d \cdot 3^{n+1}$，即 $k_n d = 3^{n+1} d$，得 $k_n = 3^{n+1}$。
+
+\gkanswer{答案：$k_n = 3^{n+1}$。（源面印作“等差中项”，对 $d\neq0$ 自相矛盾，解析按“等比中项”处理，见解析正文与 \texttt{missing-issues.md}。）}
 
 \end{answer}
 \begin{answer}
@@ -494,11 +500,11 @@ $l$ 的斜率为 $2$ 即 $AB$ 的斜率为 $-\dfrac{1}{2}$，故 $2s = -\dfrac{1
 \[
 b = \frac{1}{16} - 2p + \frac{1}{4} = \frac{5}{16} - 2p.
 \]
-由 $x_1, x_2$ 为实数得 $s^2 - 4p \geqslant 0$，即 $p \leqslant \dfrac{1}{64}$，故 $b \geqslant \dfrac{5}{16} - \dfrac{2}{64} = \dfrac{9}{32}$。
+由 $x_1, x_2$ 为相异实数得 $s^2 - 4p > 0$（$x_1 = x_2$ 时 $A=B$，线段 $AB$ 及其垂直平分线均无意义），即 $p < \dfrac{1}{64}$，故 $b > \dfrac{5}{16} - \dfrac{2}{64} = \dfrac{9}{32}$。
 
 \gkanswer{答案（1）：当且仅当 $x_1 + x_2 = 0$ 时直线 $l$ 经过焦点 $F$。}
 
-\gkanswer{答案（2）：$\left[\dfrac{9}{32}, +\infty\right)$。}
+\gkanswer{答案（2）：$\left(\dfrac{9}{32}, +\infty\right)$。（必须 $A\neq B$：$p=\dfrac{1}{64}$ 时 $x_1=x_2=-\dfrac18$，线段 $AB$ 不存在，故端点取不到。）}
 
 \end{answer}
 \begin{answer}

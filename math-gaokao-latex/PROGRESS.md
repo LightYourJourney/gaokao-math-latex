@@ -8,8 +8,15 @@
 
 - 全年 32 套：**29 套 `complete`**、3 套 `blocked`（`gk-2005-regular-national-1-science` ISSUE-0834；`gk-2005-regular-shanghai-arts` ISSUE-1377/1379；`gk-2005-regular-shanghai-science` ISSUE-1380/1381）。三套阻断均源于固定原页本身：前者第 4 题选项 C 印成空区间，后两者「最小的是一个四棱柱」的端点约定与「中低价层」用字无同版答案或勘误可裁定，按 U 政策不替来源补条件。
 - 本阶段新增 6 套端到端：辽宁（b94）、江苏（b95）、全国Ⅲ文（b96）、全国Ⅲ理（b97）、浙江文（b98）、浙江理（b99），均四版编译 0 error、全页 review pass、`finalize-batch` 返回 `FINALIZED`。
-- 春季 3 套（上海春季、北京春季文/理）复核：四版 `succeeded`、review 全页 `pass`、ISSUE-1255..1258 全部 `resolved`，无需重做。
-- 全量门禁：`generate_projects --all --check` 470 套投影一致；`manifest_csv --check` 775 行一致；`report.py render --all` 与 `check --all` 通过。`review_receipts check-all` 仍报 316 批次「视觉工具指纹变化」——属仓库既有失效面，超出本阶段范围，未重跑。
+- 春季 3 套（上海春季、北京春季文/理）复核：工具链指纹变更后 build 回执与 review 均已失效，2026-11-09 返工中已重建并在现行指纹下重扫、`finalize-batch` 返回 `FINALIZED`（b11、phase1-b58）；ISSUE-1255..1258 保持 `resolved`。
+- 全量门禁：`generate_projects --all --check` 470 套投影一致；`manifest_csv --check` 775 行一致；`report.py render --all` 与 `check --all` 通过。`review_receipts check-all` 仍有「视觉工具指纹变化」的既有失效面（不属于 2005 年范围内），留待专项重扫。
+
+### 2005 年审计返工（2026-11-09）
+
+- 触发：首轮目标完成申请被独立审计驳回（江苏卷首题答案错、部分 review 回执与当前工具指纹不符、全国Ⅲ卷第 20 题源文口径描述不实、「未 push」声明不实）。
+- 内容订正（均已重建并重扫）：① 江苏 Q1 `(A∩B)∪C={1,2,3,4}` → **D**（原写 C，等式自相矛盾）；② 江苏 Q22(2) 补上 `1<a<2` 时 `f(a)=0` 的区间（分段改为 `a≤1:1−a`、`1<a<2:0`、`2≤a≤7/3:4a−8`、`a>7/3:a−1`）；③ 浙江文/理 Q12 由 `45°` 改为 **`90°`**（原误用平面中位线，折起后 `MN·EA=0`）；④ 全国Ⅲ文/理 Q20 题面恢复源面「**等差**中项」并加注（原误写等比、并在 PROGRESS 误称文理不同）；⑤ 全国Ⅲ理 Q21(2) 端点改开区间 `(9/32,+∞)`；⑥ 辽宁 Q20(3) 补「件数取非负整数」说明与连续松弛 `189/8` 对照。
+- 证据面：六批 + 春季三套全部 `import-batch`/`build --formal`/`prepare-batch`/`finalize-batch` 在当前工具链指纹下重跑；b94–b99、b11、phase1-b58 均返回 `FINALIZED`；b96/b97 的 4 条 Overfull 按重建后的行号逐项重新豁免（`pdf_page` 由 `pdftotext` 定位）。
+- 未解决/已知局限：本轮回执的逐页 `pass` 依据是「法律文本抽取 + 构建回执零缺字/零盒宽告警 + 全页接触印样（96dpi 缩略）」三重核对，不等同于逐页原分辨率目视；若需原分辨率复核，应从 `/tmp/sheets/` 之外的重新渲染开始。
 
 ### 2005 浙江理科：phase4-b99 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
 
@@ -32,13 +39,13 @@
 - 对象：`gk-2005-regular-national-3-science`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-d83681afc201b87c3dbfcabe7dff39f6f9c3067b1e28f234307b994784eda1bc`，上游 `普通高考/2005/2005全国3理(四川,云南,贵州,甘肃,陕西,青海,西藏).pdf`，SHA-256 `a5c45d0c0d338915e398faf55e9662a294e21e02f22f97e0eb16da2ed2d7bb11`，2 页 A3 横向，印面页码 254、255。
 - 与文科卷的差异题已逐题另拟：第 5 题极限、第 13 题复数、第 15 题距离期望、第 19 题等比三角形、第 21 题（2）截距范围、第 22 题函数与恒等存在性。
 - 答案（独立推导，等级 A）：1D 2B 3B 4C 5A 6C 7C 8B 9C 10D 11D 12A；13 $z=1-\frac32\mathrm{i}$；14 $k=-\frac23$；15 $E\xi=\frac47$；16 $3$；17 $0.2/0.25/0.5$、$0.7$；18 $\arccos\frac{\sqrt{21}}{7}$；19 $\frac{4\sqrt7}{7}$、$a+c=3$；20 $k_n=3^{n+1}$；21 $[\frac{9}{32},+\infty)$；22 值域 $[-4,-3]$、$1\le a\le\frac32$。
-- 题面疑点：第 20 题在理科文本层显示“等差中项”，与文科卷“等比中项”不一致；按等差将推出 $d=0$ 与题设矛盾，故取等比并在解析正文注明，另记入 intake 报告。
+- 题面疑点（2026-11-09 订正）：第 20 题在文、理两卷的固定源文本层**均**印作“等差中项”（此前“理科等差、文科等比”的说法不实，已更正）。按等差将推出 $d=0$ 与题设 $d\neq0$ 矛盾，故印面应为“等比”之误植；题面保留源面字面并在题下注记，解析按等比处理，答案 $k_n=3^{n+1}$ 不变。
 - 验收：四版 build `COMPILED_PENDING_REVIEW`，0 error / 0 missing char / 0 undefined ref；4 条 Overfull hbox 逐项豁免；`finalize-batch` 返回 `FINALIZED`。
 
 ### 2005 全国卷Ⅲ文科：phase4-b96 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
 
 - 对象：`gk-2005-regular-national-3-arts`，22 题（选择 1–12、填空 13–16、解答 17–22）；固定来源 `src-de5ca92375a2c3f24affb84420f1c29a58928c8b50e638e46513944adb80431a`，上游 `普通高考/2005/2005全国3文(四川,云南,贵州,甘肃,陕西,青海,西藏).pdf`，SHA-256 `0ccbff13e3d195ac7420ec7ccd0ee34064aef285217cfae4228d45fd051863e9`，2 页 A3 横向，印面页码 256、257。
-- 转录口径：PDF 文本层可用；第 1 页含 Q1–Q19，第 2 页含 Q20–Q22。Q20 题面「$a_2$ 是 $a_1$ 与 $a_4$ 的等比中项」按等比理解（若按等差中项则 $d = 0$ 与题设 $d \neq 0$ 矛盾），已在解析正文注明。
+- 转录口径：PDF 文本层可用；第 1 页含 Q1–Q19，第 2 页含 Q20–Q22。Q20 题面源面印作「$a_2$ 是 $a_1$ 与 $a_4$ 的**等差**中项」（2026-11-09 订正：此前记为“等比”，与源文不符）；按等差得 $d=0$ 与题设矛盾，故判为源面误植，题面保留字面并注记，解析按等比处理。
 - 答案（独立推导，等级 A）：1D 2B 3B 4C 5A 6C 7C 8B 9C 10D 11D 12A；13 $3$；14 $k=-\frac{2}{3}$；15 $x+y-2=0$；16 $3$；17 $(0,\frac{3\pi}{4})\cup(\pi,\frac{7\pi}{4})$；18 $0.2/0.25/0.5$、$0.7$；19 $\arccos\frac{\sqrt{21}}{7}$；20 $k_n=3^{n+1}$；21 高 $10\,\mathrm{cm}$、$19600\,\mathrm{cm}^3$；22 $x_1+x_2=0$、$x-4y+41=0$。
 - 生成链与坑：`含解析.md` 需先按「题目/答案/解析」三段拼好再 `register-papers`；figure `expected_occurrences` 取 2（试题 + 含解析）；build 出现 4 条 Overfull hbox（试题版/简答版各 1、解析版 2），按 `warning_exemption` 逐项登记（`edition/kind/box/width_pt/lines` 必须与回执逐字相同，`visual_result` 取 `page_result` 枚举）后 `finalize-batch` 返回 `FINALIZED`。
 
