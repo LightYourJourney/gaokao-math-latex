@@ -2556,6 +2556,14 @@
         "gk-2005-regular-jiangxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b84",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-jiangxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2565,7 +2573,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "000c654f-add0-428c-8749-e9db72730ebd",
+  "last_transaction_id": "62f9a359-5df2-4049-bdb1-a8a03df913c1",
   "papers": [
     {
       "blocked_from": null,
@@ -32775,9 +32783,82 @@
       "title": "2005 年·普通高等学校招生考试·江西卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_理科/figures/f2005_jiangxi_science_q07_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_理科/figures/f2005_jiangxi_science_q07_prompt.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_理科/figures/f2005_jiangxi_science_q15_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_理科/figures/f2005_jiangxi_science_q20_cuboid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_江西卷_理科/figures/f2005_jiangxi_science_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_jiangxi_science",
+        "id": "gk-2005-regular-jiangxi-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 240、241；全卷共 22 题（选 12、填 4、解 6，满分 150 分）。第 1 题集合交并补运算选 D。第 2 题复数运算选 A。第 3 题直线圆相切充要条件辨析选 D。第 4 题二项展开式正整数幂项数选 B。第 5 题绝对值正弦函数周期性选 B。第 6 题向量数量积求夹角选 C。第 7 题导数图象判断原函数单调极值选 C。第 8 题函数极限换元计算选 C。第 9 题折叠直二面角外接球体积选 C。第 10 题指数对数关系式不可能成立辨析选 B。第 11 题坐标向量三角形面积最值选 D。第 12 题9数划分成3个等差数列概率1/56选 A。第 13 题对数奇函数待定系数 sqrt(2)/2。第 14 题线性规划连线斜率最大值 3/2。第 15 题直三棱柱表面最短路径 3*sqrt(2)/2。第 16 题圆锥曲线真假命题序号 34。第 17 题解析式与带参不等式分类讨论。第 18 题三角诱导公式与定义域陷阱（无解）。第 19 题赌徒输光终止步数与数学期望 275/32。第 20 题长方体线面垂直、点面距离与二面角。第 21 题数学归纳法证明单调有界与平方递推通项。第 22 题抛物线切线重心轨迹与焦点角平分证明。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "江西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-jiangxi-science",
+      "production_state": "complete",
+      "project_dir": "2005_江西卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_江西理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_江西理科_含解析.md",
+        "questions": "2005/2005_数学真题_江西理科_试题.md",
+        "solution_body": "2005/2005_数学真题_江西理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-92a063e45b37046f0519e5d72cdb1ada88e4a8c2571a98104dd7ae57d9bfdf6f"
+      ],
+      "title": "2005 年·普通高等学校招生考试·江西卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6608,
+  "revision": 6615,
   "schema_version": 1,
   "sources": [
     {
@@ -39634,8 +39715,8 @@
       "exam_type": "regular",
       "git_blob_oid": "48866ab2e64ec010c9357711a4ba40063e072246",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-jiangxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005江西理.pdf",
       "regions": [],
       "source_id": "src-92a063e45b37046f0519e5d72cdb1ada88e4a8c2571a98104dd7ae57d9bfdf6f",
