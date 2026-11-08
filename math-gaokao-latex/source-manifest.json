@@ -2572,6 +2572,14 @@
         "gk-2005-regular-hubei-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b86",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-hubei-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2581,7 +2589,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9464e6a0-556a-4116-83ca-d47dc0ede5f4",
+  "last_transaction_id": "cac17284-7d9a-47d5-a6a1-96ad9ee4fd18",
   "papers": [
     {
       "blocked_from": null,
@@ -32925,9 +32933,74 @@
       "title": "2005 年·普通高等学校招生考试·湖北卷·文科",
       "track": "arts",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖北卷_理科/figures/f2005_hubei_science_q03_choices.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖北卷_理科/figures/f2005_hubei_science_q10_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_湖北卷_理科/figures/f2005_hubei_science_q20_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_hubei_science",
+        "id": "gk-2005-regular-hubei-science",
+        "note": "固定源为 2 页 A3 横向扫描排印，原卷印刷页码 230、231；全卷共 22 题（选 12、填 4、解 6，满分 150 分）。第 1 题集合加法新定义元素个数选 B。第 2 题充要条件与命题真假选 B。第 3 题绝对值函数分段图象选 D。第 4 题球体相似体积比与表面积比选 C。第 5 题双曲线与抛物线公共焦点选 A。第 6 题Jensen不等式上凸函数个数选 B。第 7 题三角方程根的区间估计选 C。第 8 题极限待定系数选 C。第 9 题指数函数与三角函数区间大小比较选 D。第 10 题三棱柱中点重心立体几何选 C。第 11 题三次曲线切线倾斜角与整点判定选 D。第 12 题平行六面体顶点三角形共面概率选 A。第 13 题向量线性运算模长不等式 [-6,2]。第 14 题三项多项式展开常数项 63*sqrt(2)/2。第 15 题等比数列前n项和等差性质求公比 -2。第 16 题整数规划购料最省 500 元。第 17 题向量数量积与导数增函数 [5,+infty)。第 18 题解三角形中线定理与正弦定理 sqrt(70)/14。第 19 题驾照考试离散分布列与期望。第 20 题四棱锥线面角与法向量垂直求点。第 21 题椭圆中点弦方程与四点共圆恒等性证明。第 22 题数列不等式倒数累加与极限压轴。全部配图纯 TikZ 矢量重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "湖北理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-hubei-science",
+      "production_state": "complete",
+      "project_dir": "2005_湖北卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_湖北理科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_湖北理科_含解析.md",
+        "questions": "2005/2005_数学真题_湖北理科_试题.md",
+        "solution_body": "2005/2005_数学真题_湖北理科_解析正文.md"
+      },
+      "source_ids": [
+        "src-5657c134b525e7c5805869a0436142acc5dfe9ad0ae5fc5680fe3951ee3ddb83"
+      ],
+      "title": "2005 年·普通高等学校招生考试·湖北卷·理科",
+      "track": "science",
+      "year": 2005
     }
   ],
-  "revision": 6622,
+  "revision": 6627,
   "schema_version": 1,
   "sources": [
     {
@@ -39880,8 +39953,8 @@
       "exam_type": "regular",
       "git_blob_oid": "0caf4caa08bec055a1e7611d1e5856154859eb6b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-hubei-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005湖北理.pdf",
       "regions": [],
       "source_id": "src-5657c134b525e7c5805869a0436142acc5dfe9ad0ae5fc5680fe3951ee3ddb83",
