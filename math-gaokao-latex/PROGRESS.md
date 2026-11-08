@@ -4,6 +4,17 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 重庆卷理科：phase4-b91 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
+
+- 对象：`gk-2005-regular-chongqing-science`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-2436f5bf746a5300fcb871c75fddd844998da5c7d465ce3615657d299ffa3c83`，上游 `普通高考/2005/2005重庆理.pdf`（两页 A3 横向扫描排印，原卷印刷页码 220、221，印刷题签“2005 普通高等学校招生考试 (重庆卷理)”，科类登记 `track=science`）。
+- 排印质量与独立复算：PDF 题面第 1 页包含 Q1–Q18，第 2 页包含 Q19–Q22；全卷 22 题题面、选项与结构严谨完备。Q01 圆关于原点对称 $(x-2)^2 + y^2 = 5$（选 A）；Q02 虚数单位乘幂 $\mathrm{i}$（选 A）；Q03 偶函数区间单调性解不等式 $(-2, 2)$（选 D）；Q04 平面向量夹角反余弦值 $\arccos(-\frac{4}{5})$（选 C）；Q05 基本不等式配对求最值 $4$（选 C）；Q06 锐角充分必要条件判定为必要不充分条件（选 B）；Q07 空间线面平行命题辨析判定 2 个（②④，选 B）；Q08 二项式系数比例求项数 $n = 6$（选 B）；Q09 椭圆动点二次函数最大值分类讨论（选 A）；Q10 四面体重心坐标比例求体积比例 $\frac{1}{7}$（选 C）；Q11 集合不等式交集 $(0, 3)$；Q12 切线与坐标轴围成三角形面积求参数 $a = \pm 1$；Q13 锐角三角方程 $\tan\alpha = 1$；Q14 指数极限 $-3$；Q15 车厢分配概率 $\frac{45}{128}$；Q16 抛物线四边形命题辨析 ②③⑤；Q17 辅助角三角最值参数 $a = \pm\sqrt{15}$；Q18 抽奖概率 $\frac{2}{3}$、分布列与数学期望 $\mathbf{E}\xi = 16$；Q19 导数极值点讨论（$0 \leqslant a \leqslant 4$ 时 0 个，$a < 0$ 或 $a > 4$ 时 2 个）；Q20 三棱柱三垂线逆定理证垂直、公垂线段长 $1$、空间向量二面角正切值 $\frac{\sqrt{2}}{2}$；Q21 双曲线方程 $\frac{x^2}{3} - y^2 = 1$、割线向量数量积取值范围 $(-1, -\frac{\sqrt{195}}{15}) \cup (-\frac{\sqrt{3}}{3}, -\frac{1}{2}) \cup (\frac{1}{2}, \frac{\sqrt{3}}{3}) \cup (\frac{\sqrt{195}}{15}, 1)$；Q22 数学归纳法证明 $a_n \geqslant 2$ 与对数累乘裂项放缩求证 $a_n < \mathrm{e}^2$。全部独立推导闭环，评定为 `eligible_complete`。
+- 规范事实层建立：四层 Markdown（`_试题.md`、`_答案要点.md`、`_解析正文.md`、`_含解析.md`），来源接收报告落盘至 `reports/2005-chongqing-science-source-intake.md`；重绘并挂接 1 张高保真 TikZ 纯矢量图（`f2005_chongqing_science_q20_prism.tex`）。
+- 确定性 TeX 投影与入口生成：通过 `generate_projects.py`、`make_short_answers.py`、`make_editions.py` 生成 `questions.tex`、`answers.tex`、`answers_short.tex` 及四版入口。
+- 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，issue_ids=[]；新增 `tests/test_2005_chongqing_science_solutions.py` 自动化回归套件，全卷 22 题推导与关键数学结论 100% 锁死。
+- 正式构建与视觉审查：试题/解析/简答/印刷版分别为 4/29/6/22 页，共 61 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 61 页共 488 项八类视觉检查全部通过（0 fail、0 pending）。
+- 批次封账与报告同步：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b91.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 462 套试卷 TeX 投影 100% 一致。
+- 下一批队列：推进 2005 年福建卷文理科或辽宁卷（下一批次 `phase4-b92`）！
+
 ### 2005 重庆卷文科：phase4-b90 全新真题录入、四版构建与视觉审查收口（2026-11-08；`closed`）
 
 - 对象：`gk-2005-regular-chongqing-arts`，22 题（选择 1–10、填空 11–16、解答 17–22）；固定来源 `src-83fc1dda815d62f6069113798cb957cd6b751aff24378b0f5932dbc2d8a3000d`，上游 `普通高考/2005/2005重庆文.pdf`（两页 A3 横向扫描排印，原卷印刷页码 222、223，印刷题签“2005 普通高等学校招生考试 (重庆卷文)”，科类登记 `track=arts`）。
