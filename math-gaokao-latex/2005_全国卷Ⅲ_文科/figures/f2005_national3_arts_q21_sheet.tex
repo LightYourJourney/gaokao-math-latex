@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.9]
+  \draw (0,0) rectangle (4.5,2.4);
+  \foreach \x/\y in {0.55/0.55, 3.95/0.55, 0.55/1.85, 3.95/1.85}
+    \draw[dashed] (\x,\y) rectangle ++(0.55,0.55);
+  \draw[->, thick] (2.25,2.55) -- (3.4,2.55);
+  \draw[thick] (3.55,1.1) -- (5.0,1.1) -- (5.9,1.85) -- (4.45,1.85) -- cycle;
+  \draw[thick] (5.0,1.1) -- (5.0,2.4);
+  \draw[thick,dashed] (5.9,1.85) -- (5.9,2.4);
+  \draw[thick] (4.45,1.85) -- (4.45,2.4) -- (5.9,2.4);
+  \node[below] at (2.25,0) {\small $90$};
+  \node[left] at (0,1.2) {\small $48$};
+  \node[below] at (4.7,1.1) {\small $x$};
+\end{tikzpicture}
