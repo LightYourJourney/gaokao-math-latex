@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=0.8]
+  \coordinate (A) at (0,0);
+  \coordinate (E) at (2.2,0);
+  \coordinate (B) at (3.2,0);
+  \coordinate (D) at (2.2,1.6);
+  \coordinate (C) at (4.0,1.6);
+  \draw (A) -- (B);
+  \draw (D) -- (C);
+  \draw (A) -- (D);
+  \draw (B) -- (C);
+  \draw[dashed] (E) -- (D);
+  \draw[thick] (D) -- (E) -- (B);
+  \coordinate (M) at ($(A)!0.5!(D)$);
+  \coordinate (N) at ($(B)!0.5!(C)$);
+  \fill (M) circle (1.2pt) node[above left] {\small $M$};
+  \fill (N) circle (1.2pt) node[above right] {\small $N$};
+  \node[below] at (A) {\small $A$};
+  \node[below] at (E) {\small $E$};
+  \node[below] at (B) {\small $B$};
+  \node[above] at (D) {\small $D$};
+  \node[above] at (C) {\small $C$};
+\end{tikzpicture}

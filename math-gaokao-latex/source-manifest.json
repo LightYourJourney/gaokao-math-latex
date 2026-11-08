@@ -2668,6 +2668,14 @@
         "gk-2005-regular-national-3-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase4-b98",
+      "issues": [],
+      "paper_ids": [
+        "gk-2005-regular-zhejiang-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2677,7 +2685,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a480ee8c-97b3-4d76-804a-9284e5f781aa",
+  "last_transaction_id": "8eac435e-28a4-4562-987c-f85f5f9dd2a7",
   "papers": [
     {
       "blocked_from": null,
@@ -33796,9 +33804,78 @@
       "title": "2005 年·普通高等学校招生考试·全国卷Ⅲ·理科",
       "track": "science",
       "year": 2005
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2005_浙江卷_文科/figures/f2005_zhejiang_arts_q10_regions.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_浙江卷_文科/figures/f2005_zhejiang_arts_q12_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_浙江卷_文科/figures/f2005_zhejiang_arts_q18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2005_浙江卷_文科/figures/f2005_zhejiang_arts_q19_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2005_gaokao_zhejiang_arts",
+        "id": "gk-2005-regular-zhejiang-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 272、273；PDF 只有题面、无官方答案页，20 题答案由本库独立推导（非官方）。第 10 题四个选项图、第 12 题折叠图、第 18 题三棱锥图、第 19 题椭圆图由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "浙江文"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2005-regular-zhejiang-arts",
+      "production_state": "complete",
+      "project_dir": "2005_浙江卷_文科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2005/2005_数学真题_浙江文科_答案要点.md",
+        "combined_rendered": "2005/2005_数学真题_浙江文科_含解析.md",
+        "questions": "2005/2005_数学真题_浙江文科_试题.md",
+        "solution_body": "2005/2005_数学真题_浙江文科_解析正文.md"
+      },
+      "source_ids": [
+        "src-471caa672d0669c285806b64c504cc9694bcd51dd60b0a0b2a7a45178fb560cb"
+      ],
+      "title": "2005 年·普通高等学校招生考试·浙江卷·文科",
+      "track": "arts",
+      "year": 2005
     }
   ],
-  "revision": 6705,
+  "revision": 6710,
   "schema_version": 1,
   "sources": [
     {
@@ -40679,8 +40756,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f0badf07c1eba07d4221aa4376d70e0ebfd708df",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2005-regular-zhejiang-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2005浙江文.pdf",
       "regions": [],
       "source_id": "src-471caa672d0669c285806b64c504cc9694bcd51dd60b0a0b2a7a45178fb560cb",

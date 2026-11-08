@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=0.95]
+  \coordinate (P) at (0.4,2.3);
+  \coordinate (A) at (-1.5,0);
+  \coordinate (B) at (0.2,0.55);
+  \coordinate (C) at (1.9,0);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  \coordinate (D) at ($(P)!0.5!(C)$);
+  \draw (P) -- (A) (P) -- (B) (P) -- (C);
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (P) -- (O);
+  \draw[dashed] (O) -- (D);
+  \node[above] at (P) {\small $P$};
+  \node[left] at (A) {\small $A$};
+  \node[right] at (B) {\small $B$};
+  \node[right] at (C) {\small $C$};
+  \node[below] at (O) {\small $O$};
+  \node[right] at (D) {\small $D$};
+\end{tikzpicture}

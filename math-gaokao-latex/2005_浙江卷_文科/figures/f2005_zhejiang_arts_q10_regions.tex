@@ -1,0 +1,63 @@
+\begin{tikzpicture}[scale=0.62]
+  % (A)
+  \begin{scope}
+    \draw[->] (-0.2,0) -- (1.25,0) node[right] {\small $x$};
+    \draw[->] (0,-0.2) -- (0,1.25) node[above] {\small $y$};
+    \node[below left] at (0,0) {\small $O$};
+    \draw[dashed] (0.5,0) -- (0.5,1.15);
+    \draw[dashed] (0,0.5) -- (1.15,0.5);
+    \draw[dashed] (0.5,0) -- (0,0.5);
+    \fill[gray!25] (0,0.5) -- (0.5,0.5) -- (0.5,0);
+    \node at (0.62,-0.42) {\small (A)};
+    \node[below] at (0.5,0) {\scriptsize $\frac{1}{2}$};
+    \node[left] at (0,0.5) {\scriptsize $\frac{1}{2}$};
+    \node[below] at (1,0) {\scriptsize $1$};
+    \node[left] at (0,1) {\scriptsize $1$};
+  \end{scope}
+  % (B)
+  \begin{scope}[xshift=2.1cm]
+    \draw[->] (-0.2,0) -- (1.25,0) node[right] {\small $x$};
+    \draw[->] (0,-0.2) -- (0,1.25) node[above] {\small $y$};
+    \node[below left] at (0,0) {\small $O$};
+    \draw[dashed] (0.5,0) -- (0,0.5);
+    \draw[dashed] (1.0,0) -- (0,1.0);
+    \fill[gray!25] (0,0) -- (0.5,0) -- (0,0.5);
+    \node at (0.62,-0.42) {\small (B)};
+    \node[below] at (0.5,0) {\scriptsize $\frac{1}{2}$};
+    \node[left] at (0,0.5) {\scriptsize $\frac{1}{2}$};
+    \node[below] at (1,0) {\scriptsize $1$};
+    \node[left] at (0,1) {\scriptsize $1$};
+  \end{scope}
+  % (C)
+  \begin{scope}[yshift=-2.0cm]
+    \draw[->] (-0.2,0) -- (1.25,0) node[right] {\small $x$};
+    \draw[->] (0,-0.2) -- (0,1.25) node[above] {\small $y$};
+    \node[below left] at (0,0) {\small $O$};
+    \draw[dashed] (0.5,-0.15) -- (0.5,1.2);
+    \draw[dashed] (0,0.5) -- (1.2,0.5);
+    \draw[dashed] (0,0.5) -- (1.0,1.0);
+    \draw[dashed] (0.5,0) -- (1.0,0.0);
+    \fill[gray!25] (0,0.5) -- (0.5,1.0) -- (0.5,0.5);
+    \node at (0.62,-0.42) {\small (C)};
+    \node[below] at (0.5,0) {\scriptsize $\frac{1}{2}$};
+    \node[left] at (0,0.5) {\scriptsize $\frac{1}{2}$};
+    \node[below] at (1,0) {\scriptsize $1$};
+    \node[left] at (0,1) {\scriptsize $1$};
+  \end{scope}
+  % (D)
+  \begin{scope}[xshift=2.1cm,yshift=-2.0cm]
+    \draw[->] (-0.2,0) -- (1.25,0) node[right] {\small $x$};
+    \draw[->] (0,-0.2) -- (0,1.25) node[above] {\small $y$};
+    \node[below left] at (0,0) {\small $O$};
+    \draw[dashed] (0.5,-0.15) -- (0.5,1.2);
+    \draw[dashed] (0,0.5) -- (1.2,0.5);
+    \draw[dashed] (0,1) -- (1,0);
+    \draw[dashed] (0,0.5) -- (1.1,0.9);
+    \fill[gray!25] (0,1) -- (1,0) -- (0.5,0.5);
+    \node at (0.62,-0.42) {\small (D)};
+    \node[below] at (0.5,0) {\scriptsize $\frac{1}{2}$};
+    \node[left] at (0,0.5) {\scriptsize $\frac{1}{2}$};
+    \node[below] at (1,0) {\scriptsize $1$};
+    \node[left] at (0,1) {\scriptsize $1$};
+  \end{scope}
+\end{tikzpicture}
