@@ -1,0 +1,63 @@
+% 2005 年湖北卷文科第 4 题选项图：函数 y = e^{|\ln x|} - |x-1| 的图象 4 个选项
+\begin{tikzpicture}[>=stealth,scale=0.9,line cap=round]
+  % 统一设置单图尺寸与间距
+  % (A)
+  \begin{scope}
+    \draw[->] (-0.8,0) -- (2.6,0) node[below] {$x$};
+    \draw[->] (0,-0.8) -- (0,2.6) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+    \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+    % (A): y = 1 for x in (0, 2.2], (0, 1) is empty circle
+    \draw[thick] (0.06,1) -- (2.2,1);
+    \draw[fill=white] (0,1) circle (1.5pt);
+    \node at (-0.6,-1.1) {(A)};
+  \end{scope}
+
+  % (B)
+  \begin{scope}[xshift=5.8cm]
+    \draw[->] (-0.8,0) -- (2.6,0) node[below] {$x$};
+    \draw[->] (0,-0.8) -- (0,2.6) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw (1,0.08) -- (1,-0.08) node[below left] {$1$};
+    \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+    % (B): x in [1, 2.2] is y=1; x in (0.3, 1) is increasing curve to (1, 0.4)
+    \draw[thick] (1,1) -- (2.2,1);
+    \draw[dashed] (1,0) -- (1,1);
+    \draw[dashed] (0,1) -- (1,1);
+    \draw[dashed] (1,0) -- (1,0.4);
+    \draw[thick,domain=0.35:0.96,samples=30] plot (\x,{0.4*sqrt(\x) + 0.8*(\x-1)});
+    \draw[fill=white] (1,0.4) circle (1.5pt);
+    \node at (-0.6,-1.1) {(B)};
+  \end{scope}
+
+  % (C)
+  \begin{scope}[yshift=-4.8cm]
+    \draw[->] (-0.8,0) -- (2.6,0) node[below] {$x$};
+    \draw[->] (0,-0.8) -- (0,2.6) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+    \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+    % (C): x in (0.35, 1) decreasing curve to (1, 1), x in [1, 2.0] increasing line
+    \draw[dashed] (1,0) -- (1,1);
+    \draw[dashed] (0,1) -- (1,1);
+    \draw[thick,domain=0.35:1,samples=30] plot (\x,{\x + 1/\x - 1});
+    \draw[thick] (1,1) -- (2.0,2.0);
+    \node at (-0.6,-1.1) {(C)};
+  \end{scope}
+
+  % (D) 正确选项
+  \begin{scope}[xshift=5.8cm,yshift=-4.8cm]
+    \draw[->] (-0.8,0) -- (2.6,0) node[below] {$x$};
+    \draw[->] (0,-0.8) -- (0,2.6) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw (1,0.08) -- (1,-0.08) node[below] {$1$};
+    \draw (0.08,1) -- (-0.08,1) node[left] {$1$};
+    % (D): x in (0.35, 1) decreasing convex curve y = x + 1/x - 1 to (1, 1), x in [1, 2.2] horizontal line y=1
+    \draw[dashed] (1,0) -- (1,1);
+    \draw[dashed] (0,1) -- (1,1);
+    \draw[thick,domain=0.35:1,samples=40] plot (\x,{\x + 1/\x - 1});
+    \draw[thick] (1,1) -- (2.2,1);
+    \node at (-0.6,-1.1) {(D)};
+  \end{scope}
+\end{tikzpicture}
