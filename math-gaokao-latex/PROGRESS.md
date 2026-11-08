@@ -4,6 +4,14 @@
 - “题面转录完成”只表示原题转录已完成；不得据此声称来源认证、答案/解析验证、盲核、正式构建、视觉校样或整卷验收完成。分别记录各阶段状态。
 - 恢复工作时先核对目标工作树/分支、Git diff 与本文件；以既有回执为准跳过已完成的转录、OCR和验证，只处理明确未完成或失效的阶段。发现题面差异时定位到题号和原页，增量修订并更新该卷回执，不重复整卷劳动。
 
+### 2005 浙江理科：phase4-b99 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
+
+- 对象：`gk-2005-regular-zhejiang-science`，20 题（选择 1–10、填空 11–14、解答 15–20）；固定来源 `src-216c3b98cde76aa00ef9438e3d25ba93e13bfc6f605279dcf1399de98457ac48`，上游 `普通高考/2005/2005浙江理.pdf`，SHA-256 `d552fffa21812b159fe5fd81fb5ee4376e6ad1992f364c2df121b84e40f5b884`，2 页 A3 横向，印面页码 270、271。
+- 答案（独立推导，等级 A）：1C 2D 3B 4B 5D 6D 7A 8A 9A 10C；11 $y=\frac{2x}{1-x}$；12 $45^\circ$；13 $e=2$；14 $8424$；15 $0$、$\frac{1+3\sqrt5}{8}$；16 $g(x)=-x^2+2x$、$[-1,\frac12]$；17 $\frac{x^2}{4}+\frac{y^2}{3}=1$、$Q(m,\pm\sqrt{m^2-1})$；18 $\arcsin\frac{\sqrt{210}}{30}$、$k=1$；19 $\frac{8}{81}$、$E\xi=\frac{131}{81}$、$p=\frac{13}{30}$；20 $x_2=3$、$y=x^2-7x+14$、$x_n=2n-1$。
+- 图形：第 7 题四选项区域图、第 12 题折叠图、第 17 题椭圆与 $l_1$ 图、第 18 题三棱锥共 4 个 TikZ 文件（按 `path` 字典序排列，`expected_occurrences` 均为 2）。
+- 坑：`register-papers` 要求 `figure_files` 按 `path` 唯一排序，乱序直接报 `figure_files 必须按 path 唯一排序` 并中止登记。
+- 验收：四版 build 无 Overfull/Underfull，0 error / 0 missing char / 0 undefined ref；`finalize-batch` 返回 `FINALIZED`。
+
 ### 2005 浙江文科：phase4-b98 全新真题录入、四版构建与视觉审查收口（2026-11-09；`closed`）
 
 - 对象：`gk-2005-regular-zhejiang-arts`，20 题（选择 1–10、填空 11–14、解答 15–20）；固定来源 `src-471caa672d0669c285806b64c504cc9694bcd51dd60b0a0b2a7a45178fb560cb`，上游 `普通高考/2005/2005浙江文.pdf`，SHA-256 `a61b752378b1a6670c3328d1e9b1aa19507cc51fd4fba66895f1976b779cdd6f`，2 页 A3 横向，印面页码 272、273。
