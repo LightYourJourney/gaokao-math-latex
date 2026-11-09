@@ -456,7 +456,7 @@ $f(T)=\cos(\omega T+\varphi)=\cos\varphi=\sqrt3/2$，由 $0<\varphi<\pi$ 得 $\v
 
 \textbf{题目}：
 
-已知 $x=x_1$ 和 $x=x_2$ 分别是函数 $f(x)=2a^x-e^{x^2}$（$a>0$ 且 $a\ne1$）的极小值点和极大值点。若 $x_1<x_2$，则 $a$ 的取值范围是 \gkblank{}。
+已知 $x=x_1$ 和 $x=x_2$ 分别是函数 $f(x)=2a^x-e\cdot x^2$（$a>0$ 且 $a\ne1$）的极小值点和极大值点。若 $x_1<x_2$，则 $a$ 的取值范围是 \gkblank{}。
 
 \begin{gktip}
 页码：PDF 第 1 页 / 纸面第 1165 页。
@@ -466,14 +466,58 @@ $f(T)=\cos(\omega T+\varphi)=\cos\varphi=\sqrt3/2$，由 $0<\varphi<\pi$ 得 $\v
 \textbf{解析}
 
 \Needspace{5\baselineskip}
-原卷函数为 $f(x)=2a^x-e^{x^2}$，$a>0,a\ne1$。若 $a>1$，令 $c=\ln a>0$。$f'(x)>0$ 对 $x\le0$；对 $x>0$，导数符号等于
+按固定源，函数为
+
 \nopagebreak[4]
 \[
-H(x)=\ln(c/x)+cx-x^2.
+f(x)=2a^x-e\cdot x^2,\qquad a>0,\ a\ne1,
 \]
-令 $r=x/c$，则 $H=-\ln r+c^2r(1-r)$，所以 $x<c$ 时 $H>0$，$x>c$ 时 $H<0$。因此唯一驻点为 $x=c$，且为极大值点。若 $0<a<1$，令 $c=-\ln a>0$。此时 $f'(x)<0$ 对 $x\ge0$；对 $x<0$ 令 $t=-x$，导数符号等于 $-H(t)$，故唯一驻点为 $x=-c$，同样为极大值点。又 $f(x)\to-\infty$ 当 $x\to\pm\infty$，故函数没有极小值点。题干同时要求极小值点 $x_1$ 与极大值点 $x_2$，与原式矛盾；保留原题，不猜填空答案。
 
-\gkanswer{答案：U/PENDING；原式对题设范围内的 $a$ 只有一个极大值点，没有极小值点}
+\Needspace{5\baselineskip}
+其中 $e$ 是常数，指数 $2$ 只作用在 $x$ 上。求导得
+
+\nopagebreak[4]
+\[
+f'(x)=2\left(a^x\ln a-ex\right).
+\]
+
+记 $g(x)=a^x\ln a-ex$。$f$ 有两个极值点当且仅当 $g$ 有两个零点。
+
+\Needspace{5\baselineskip}
+\textbf{当 $a>1$}：令 $c=\ln a>0$。$g'(x)=c^2a^x-e$ 单调递增，故 $g$ 有唯一极小点
+
+\nopagebreak[4]
+\[
+x_0=\frac{\ln(e/c^2)}{c},\qquad g(x_0)=\frac ec-ex_0.
+\]
+
+\Needspace{5\baselineskip}
+$x\to\pm\infty$ 时 $g\to+\infty$（$a^x$ 指数增长压过线性项），故 $g$ 有两个零点当且仅当 $g(x_0)<0$：
+
+\nopagebreak[4]
+\[
+\frac ec<ex_0\iff 1<cx_0=\ln\frac{e}{c^2}\iff c^2<1\iff a<e.
+\]
+
+\Needspace{5\baselineskip}
+\textbf{当 $0<a<1$}：令 $c=-\ln a>0$，则 $g(x)=-ce^{-cx}-ex$，$g''=c^3e^{-cx}>0$，$g$ 为凸函数，$x\to\pm\infty$ 时 $g\to-\infty$，故有两个零点当且仅当最大值 $g(x_0)>0$，其中 $x_0=-\frac{\ln(e/c^2)}{c}$：
+
+\nopagebreak[4]
+\[
+-\frac ec-ex_0>0\iff x_0<-\frac1c\iff -\ln\frac{e}{c^2}<-1\iff c^2<1\iff a>\frac1e.
+\]
+
+\Needspace{5\baselineskip}
+综上，两个极值点的充要条件是
+
+\nopagebreak[4]
+\[
+a\in\left(\frac1e,1\right)\cup(1,e).
+\]
+
+此时 $g$ 的两个零点中较小者为极大值点、较大者为极小值点，题设 $x_1<x_2$ 只是给这两点排序，不额外限制 $a$。
+
+\gkanswer{答案：$\left(\frac1e,1\right)\cup(1,e)$}
 
 \end{answer}
 \begin{answer}
