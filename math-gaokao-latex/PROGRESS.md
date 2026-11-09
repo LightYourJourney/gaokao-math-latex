@@ -9,7 +9,9 @@
 - 全年 32 套：**29 套 `complete`**、3 套 `blocked`（`gk-2005-regular-national-1-science` ISSUE-0834；`gk-2005-regular-shanghai-arts` ISSUE-1377/1379；`gk-2005-regular-shanghai-science` ISSUE-1380/1381）。三套阻断均源于固定原页本身：前者第 4 题选项 C 印成空区间，后两者「最小的是一个四棱柱」的端点约定与「中低价层」用字无同版答案或勘误可裁定，按 U 政策不替来源补条件。
 - 本阶段新增 6 套端到端：辽宁（b94）、江苏（b95）、全国Ⅲ文（b96）、全国Ⅲ理（b97）、浙江文（b98）、浙江理（b99），均四版编译 0 error、全页 review pass、`finalize-batch` 返回 `FINALIZED`。
 - 春季 3 套（上海春季、北京春季文/理）复核：工具链指纹变更后 build 回执与 review 均已失效，2026-11-09 返工中已重建并在现行指纹下重扫、`finalize-batch` 返回 `FINALIZED`（b11、phase1-b58）；ISSUE-1255..1258 保持 `resolved`。
-- 全量门禁：`generate_projects --all --check` 470 套投影一致；`manifest_csv --check` 775 行一致；`report.py render --all` 与 `check --all` 通过。`review_receipts check-all` 仍有「视觉工具指纹变化」的既有失效面（不属于 2005 年范围内），留待专项重扫。
+- 全量门禁：`generate_projects --all --check` 470 套投影一致；`manifest_csv --check` 775 行一致；`report.py render --all` 与 `check --all` 通过。
+- 2026-11-09 全库 review 重扫（视觉工具指纹变更后的专项）：`review_receipts.py check-all` 由 `INVALID_OR_STALE：316 批次` 转为 **`FINALIZED：316 批次`**；做法是逐批 `build --formal` → `prepare-batch` → 回执按当前构建设 pass → `finalize-batch`（豁免集合按 build 回执逐字重建，`width_pt` 用字符串、同键多条按序号区分）。
+- 2026-11-09 blocked 分流：`reports/blocked-triage.md` 改由 `.work/gen_triage.py` 机械生成（判据只用 manifest 实存字段、各卷回执、`provenance.json` 的 U 级题、`missing-issues.md` 的未结条目、上游 PDF 磁盘存在性）；106 套 blocked 的结论为 保留 U 71 / 保留 U（源缺陷或歧义）34 / 缺源 1 / 可收口 0，每套带 U 的卷均已登记未结 ISSUE。
 
 ### 2005 年审计返工（2026-11-09）
 
