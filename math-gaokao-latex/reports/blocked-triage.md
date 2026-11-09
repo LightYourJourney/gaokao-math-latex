@@ -1,6 +1,6 @@
 # blocked 卷逐条复核与分流（机械生成）
 
-本文件由 `.work/gen_triage.py` 从 manifest、各卷 `receipts/build.json`、`receipts/review.json`、
+本文件由 `tools/triage_blocked.py` 从 manifest、各卷 `receipts/build.json`、`receipts/review.json`、
 `provenance.json`、`missing-issues.md` 与上游 PDF 磁盘存在性机械生成，不手写判据。
 
 ## 分类规则（互斥，按序判定）

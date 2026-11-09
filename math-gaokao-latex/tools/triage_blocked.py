@@ -1,0 +1,128 @@
+"""从 manifest / 回执 / provenance / issues 机械生成 blocked 分流表。
+
+分类互斥且可按行复算：
+1 缺源   : source_ids 为空
+2 保留 U : provenance 存在 grade == "U" 的题
+3 保留 U（源缺陷/歧义）: 无 U 但有 status != resolved 的 issue
+4 可收口 : 无 U、无未结 issue
+"""
+import json
+import os
+import re
+from pathlib import Path
+
+PROJ = Path(__file__).resolve().parents[1]
+SRC = Path(os.environ.get("GAOKAOMATH_SRC", "gaokaomath-src"))
+
+
+def issue_table():
+    text = (PROJ / "missing-issues.md").read_text(encoding="utf-8")
+    out = {}
+    for block in re.split(r"\n(?=## ISSUE-)", text):
+        iid = re.match(r"## (ISSUE-\d+)", block)
+        if not iid:
+            continue
+        pid = re.search(r'"paper_id":\s*"(gk-[^"]+)"', block) or re.search(r"paper_id[:：]\s*`?(gk-[a-z0-9\-]+)", block)
+        typ = re.search(r'"type":\s*"([^"]+)"', block) or re.search(r"type[:：]\s*`?([a-z\-]+)", block)
+        st = re.search(r'"status":\s*"([^"]+)"', block) or re.search(r"status[:：]\s*`?([a-z\-]+)", block)
+        out[iid.group(1)] = {
+            "paper_id": pid.group(1) if pid else None,
+            "type": typ.group(1) if typ else "?",
+            "status": st.group(1) if st else "?",
+        }
+    return out
+
+
+def main():
+    manifest = json.loads((PROJ / "source-manifest.json").read_text(encoding="utf-8"))
+    issues = issue_table()
+    rows = []
+    for p in manifest["papers"]:
+        if p["production_state"] == "complete":
+            continue
+        prov = PROJ / p["project_dir"] / "provenance.json"
+        u_nums = []
+        if prov.exists():
+            data = json.loads(prov.read_text(encoding="utf-8"))
+            for q in data.get("questions", []):
+                if (q.get("answer_evidence") or {}).get("grade") == "U":
+                    u_nums.append(str(q.get("printed_number")))
+        ids = p.get("issue_ids") or []
+        open_ids = [i for i in ids if issues.get(i, {}).get("status") != "resolved"]
+        open_types = sorted({issues[i]["type"] for i in open_ids if i in issues})
+        build = PROJ / p["project_dir"] / "receipts/build.json"
+        review = PROJ / p["project_dir"] / "receipts/review.json"
+        bstat = json.loads(build.read_text(encoding="utf-8"))["status"] if build.exists() else "—"
+        rstat = json.loads(review.read_text(encoding="utf-8"))["status"] if review.exists() else "—"
+        on_disk = "—"
+        if p.get("source_ids"):
+            on_disk = "是"
+            src = next((s for s in manifest["sources"] if s["source_id"] in p["source_ids"]), None)
+            up = (src or {}).get("upstream_path")
+            if not up or not (SRC / up).exists():
+                on_disk = "否"
+
+        if not p.get("source_ids"):
+            cat = "缺源"
+        elif u_nums:
+            cat = "保留 U"
+        elif open_ids:
+            cat = "保留 U（源缺陷/歧义）"
+        else:
+            cat = "可收口"
+        rows.append((p["year"], p["paper_id"], p.get("blocked_from") or "—", bstat, rstat,
+                     ",".join(u_nums) or "—", ",".join(open_ids) or "—",
+                     ",".join(open_types) or "—", on_disk, cat))
+
+    counts = {}
+    for r in rows:
+        counts[r[-1]] = counts.get(r[-1], 0) + 1
+    out = [
+        "# blocked 卷逐条复核与分流（机械生成）",
+        "",
+        "本文件由 `tools/triage_blocked.py` 从 manifest、各卷 `receipts/build.json`、`receipts/review.json`、",
+        "`provenance.json`、`missing-issues.md` 与上游 PDF 磁盘存在性机械生成，不手写判据。",
+        "",
+        "## 分类规则（互斥，按序判定）",
+        "",
+        "1. **缺源**：`source_ids` 为空。",
+        "2. **保留 U**：`provenance.json` 中存在 `answer_evidence.grade == \"U\"` 的题（源文不足以唯一判定）。",
+        "3. **保留 U（源缺陷/歧义）**：无 U，但仍有 `status != resolved` 的 issue。",
+        "4. **可收口**：无 U、无未结 issue。",
+        "",
+        "机制约束：`tools/provenance.py` 把任一题 `grade == \"U\"` 记为 `provenance_unknown`，",
+        "`tools/status.py` 据此派生 `eligible_blocked`；构建本身可成功（回执 `succeeded`），但派生状态落为 blocked、不予封账——含 U 的卷只能按「保留 U 并登记 ISSUE」交付。",
+        "",
+        "## 与 objective 三分法的对应",
+        "",
+        "| objective 要求 | 本表分类 | 含义 |",
+        "|---|---|---|",
+        "| 补源后完成 | 保留 U（源缺陷/歧义） | 固定源在盘但印面有缺字/歧义，需外部勘误或独立扫描页重证；修好后可走完 build→review→finalize |",
+        "| 保留 U 并登记 ISSUE | 保留 U | 源文不足以唯一判定，按 U 政策不写确定答案，逐题 ISSUE 已登记 |",
+        "| 确认 missing-source | 缺源 | `source_ids` 为空，无任何固定上游（2026 回忆版） |",
+        "",
+        "## 口径对账（111 套从哪来）",
+        "",
+        "目标里的 111 套 blocked 是立项时（2026-11-09）的口径注记，**无法从当前仓库机械复算**；本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、",
+        "`gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`、`gk-2020-regular-national-1-arts`、",
+        "`gk-2022-regular-national-b-arts`；封账提交分别为 dceb1fde1 / fc0740f8d / 51ba8346a / 7ea5e8efb），",
+        "另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 51ba8346a）。",
+        "因此 111 = 本表 106 套 + 已封账 5 套。",
+        "",
+        "## 计数",
+        "",
+        f"- 复核总数：**{len(rows)}** 套（`production_state != complete`）",
+    ]
+    for k in ("可收口", "保留 U", "保留 U（源缺陷/歧义）", "缺源"):
+        out.append(f"- {k}：**{counts.get(k, 0)}** 套")
+    out += ["", "## 逐卷", "",
+            "| 年 | 试卷 | blocked_from | build | review | U 题号 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |",
+            "|---|---|---|---|---|---|---|---|---|---|"]
+    for r in rows:
+        out.append("| " + " | ".join(str(x) for x in r) + " |")
+    (PROJ / "reports/blocked-triage.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    print("rows", len(rows), counts)
+
+
+if __name__ == "__main__":
+    main()
