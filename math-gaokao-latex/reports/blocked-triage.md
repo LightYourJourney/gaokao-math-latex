@@ -1,150 +1,144 @@
-# blocked / compiled 分流盘点（2026-11-09）
+# blocked 卷逐条复核与分流（数据驱动版）
 
-范围：production_state ∈ {blocked, compiled} 共 114 套（complete 不在本表）。分流：保留 U 44，可补源 66，收口 3，真缺源 1
+生成时间：2026-11-09；数据源：`source-manifest.json`（revision 见文件）、各卷 `receipts/build.json`、`receipts/review.json`、`provenance.json`、`missing-issues.md`、`source.upstream_path` 与磁盘实际存在性。
 
-「上游文件」按 `source_ids` 查 `gaokaomath-src` 实存；「已物化」看 manifest 的 `materialized_path`。
+## 判据（只用真实存在的字段）
 
-| paper_id | 年 | 标题 | 状态 | blocked_from | 上游文件 | 已物化 | issue_ids | issue 类型 | resume_action | 结论 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| gk-1977-regular-fujian-arts | 1977 | 1977 年·福建卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0133,ISSUE-0134,ISSUE-0135,ISSUE-0136,ISSUE-0798 | answer-missing/transcription-ambiguous | 取得更清晰源卷或独立权威版本，确认第 3 题是否遗漏一月至十月产量规律；确认前保留第 3(1) 的条件式 10% 与第 3(2) 的不可唯一 | 可补源 |
-| gk-1977-regular-fujian-science | 1977 | 1977 年·福建卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0137,ISSUE-0138,ISSUE-0139,ISSUE-0799 | transcription-ambiguous | 取得更清晰源卷或权威答案，确认第 5 题一个角度、点位或图示是否存在排印错误；确认前不得补造 AP 距离。 | 可补源 |
-| gk-1977-regular-inner-mongolia-arts | 1977 | 1977 年·内蒙古卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0129,ISSUE-0130 | answer-conflict | 取得更清晰源卷或权威勘误，确认第 1(3) 根式的底数是否应为 1/16；确认后重做答案、盲核与 provenance，在确认前保留题面原式 | 可补源 |
-| gk-1977-regular-jiangsu | 1977 | 1977 年·江苏卷 | blocked | planned | 在盘 | 否 | ISSUE-0131,ISSUE-0132 | transcription-ambiguous | 取得更清晰源卷或权威勘误，确认第 1(1) 负数半次幂是否为排印误写；确认前保留题面原式，并不得擅自改成可计算表达式。 | 可补源 |
-| gk-1985-regular-guangdong-arts | 1985 | 1985 年·广东卷·文史类 | blocked | planned | 在盘 | 否 | ISSUE-0966,ISSUE-0967,ISSUE-0968,ISSUE-0969,ISSUE-0970,ISSUE-0975 | answer-conflict/answer-missing/transcription-ambiguous | 取得同版权威说明或勘误明确“垂直”的计数口径；之前保留两种读法并标 U。 | 可补源 |
-| gk-1985-regular-guangdong-science | 1985 | 1985 年·广东卷·理工农医类 | blocked | planned | 在盘 | 否 | ISSUE-0971,ISSUE-0972,ISSUE-0973,ISSUE-0974 | answer-conflict/answer-missing/source-mismatch/transcription-ambiguous | 取得同版可靠勘误或条件说明；之前保留 f(0) 未定并标 U。 | 保留 U |
-| gk-1986-regular-guangdong-arts | 1986 | 1986 年·广东卷·文史类 | blocked | planned | 在盘 | 否 | ISSUE-0774,ISSUE-0775,ISSUE-0776,ISSUE-0777,ISSUE-0793,ISSUE-0794,ISSUE-0795,ISSUE-0796,ISSUE-1039,ISSUE-1040,ISSUE-1041,ISSUE-1042,ISSUE-1043,ISSUE-1044,ISSUE-1045,ISSUE-1046,ISSUE-1047,ISSUE-1048,ISSUE-1049,ISSUE-1050,ISSUE-1081 | answer-conflict/answer-missing/layout-warning/transcription-ambiguous | 取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。 | 可补源 |
-| gk-1986-regular-guangdong-science | 1986 | 1986 年·广东卷·理工农医类 | blocked | planned | 在盘 | 否 | ISSUE-0778,ISSUE-0797,ISSUE-1053,ISSUE-1054,ISSUE-1055,ISSUE-1056,ISSUE-1057,ISSUE-1058,ISSUE-1059,ISSUE-1060,ISSUE-1061,ISSUE-1062,ISSUE-1063,ISSUE-1064,ISSUE-1082,ISSUE-1083,ISSUE-1084,ISSUE-1085,ISSUE-1086,ISSUE-1087,ISSUE-1088 | answer-conflict/layout-warning/transcription-ambiguous | 取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。 | 可补源 |
-| gk-1987-regular-guangdong-science | 1987 | 1987 年·广东卷·理工农医类 | blocked | planned | 在盘 | 否 | ISSUE-0781,ISSUE-0782,ISSUE-0783,ISSUE-0784,ISSUE-0791,ISSUE-0792 | answer-conflict/transcription-ambiguous | 取得同版更清晰题面或权威勘误，确认第 1(17) 题 C 选项是否漏印“m⊥β”或其他条件；确认前保留固定源文字与答案表冲突，禁止擅改题面。 | 可补源 |
-| gk-1987-regular-national-science | 1987 | 1987 年·全国卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0779,ISSUE-1065,ISSUE-1066,ISSUE-1067,ISSUE-1068,ISSUE-1069 | answer-conflict/layout-warning/transcription-ambiguous | 取得变量与极限下标一致的完整固定源或独立可核验扫描页，确认第 22 题应为 x 还是 n 后，更新题面/答案/解析并重跑生成、编译和复核。 | 可补源 |
-| gk-1988-regular-guangdong-science | 1988 | 1988 年·广东卷·理工农医类 | blocked | planned | 在盘 | 否 | ISSUE-0785,ISSUE-0786,ISSUE-0787,ISSUE-0788,ISSUE-0789 | compile-error/transcription-ambiguous | 取得包含第 23 小题右图的更完整固定源或独立可核验扫描页；在补齐前保留题面文字和固定源答案 A，不凭空补图。 | 可补源 |
-| gk-1989-regular-guangdong-arts | 1989 | 1989 年·广东卷文科候选卷 | blocked | planned | 在盘 | 否 | ISSUE-1259,ISSUE-1260,ISSUE-1261,ISSUE-1262,ISSUE-1263 | answer-conflict/answer-convention-ambiguous/answer-missing | 取得可追溯的同版勘误、独立版本或可靠出版资料以核对 Q9；在证据到位前保留题面推导 B 与扫描答案 C，并保持 U/PENDING 和完成阻 | 保留 U |
-| gk-1989-regular-guangdong-science | 1989 | 1989 年·广东卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1078,ISSUE-1079,ISSUE-1080 | answer-conflict/layout-warning | 取得固定来源版本对应说明、同版更清晰题面或权威勘误以确认原句意图；在证据到位前保留原文和条件性答案，不解除阻断。 | 可补源 |
-| gk-1990-regular-guangdong-science | 1990 | 1990 年·广东卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1070,ISSUE-1113,ISSUE-1114 | answer-conflict/answer-missing/figure-missing | 取得可核验的同版完整题图或独立同版来源后复核题意与答案；不得凭模型记忆重建图形。 | 可补源 |
-| gk-1990-regular-national-arts | 1990 | 1990 年·全国卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1124 | answer-convention-ambiguous | 取得能明确标示 V1/V2 与两侧对应关系的同版题页、权威答案或勘误；如始终无此证据，则继续保留无序比 7:5，并禁止给出唯一的 V1:V2 | 保留 U |
-| gk-1990-regular-national-science | 1990 | 1990 年·全国卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1131 | answer-convention-ambiguous | 取得同版权威答案、勘误或可核来源，确认V_1、V_2与两侧区域的对应关系后再登记有序比；未解决前保留无序比并维持阻塞。 | 保留 U |
-| gk-1990-regular-shanghai | 1990 | 1990 年上海卷数学 | blocked | planned | 在盘 | 否 | ISSUE-1111,ISSUE-1112 | transcription-ambiguous | 取得可回溯的同版书页或勘误，核定原变量及选项后更新转录/条件答案并复核。 | 可补源 |
-| gk-1991-regular-shanghai | 1991 | 1991 年·上海卷 | blocked | compiled | 在盘 | 否 | ISSUE-1178 | answer-conflict | 取得同版原页或勘误确认上标应为 6（则答案 60）或确为 8（则应改为“无常数项”）；此前保留题面 8、卷内 60 与独立结论“无常数项”三 | 可补源 |
-| gk-1994-shanghai | 1994 | 1994 年·上海卷 | blocked | planned | 在盘 | 否 | ISSUE-1071,ISSUE-1089,ISSUE-1090,ISSUE-1091,ISSUE-1092,ISSUE-1093,ISSUE-1094,ISSUE-1095,ISSUE-1096,ISSUE-1097,ISSUE-1098,ISSUE-1099,ISSUE-1100,ISSUE-1101,ISSUE-1102,ISSUE-1103,ISSUE-1104,ISSUE-1105 | answer-conflict/layout-warning | 继续正式provenance、四版构建与视觉回执流程，不重复已完成的26题盲核。保留固定来源t≥2原文与[1/2,2)差异记录，不得把项目推 | 可补源 |
-| gk-1996-regular-national-arts | 1996 | 1996 年·全国卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1179,ISSUE-1180,ISSUE-1185 | answer-convention-ambiguous | 取得当年等比数列定义或可靠同版答案/勘误以裁定零首项是否纳入；此前保留两种条件分支。 | 保留 U |
-| gk-1996-regular-national-science | 1996 | 1996 年·全国卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1181,ISSUE-1182,ISSUE-1183,ISSUE-1184,ISSUE-1186,ISSUE-1187 | answer-convention-ambiguous/compile-error/transcription-ambiguous | 取得同版原始题页或可靠勘误以裁定底数范围；此前保留两种合法底数分支。 | 保留 U |
-| gk-1996-regular-shanghai-arts | 1996 | 1996 年·上海卷·文史类 | blocked | compiled | 在盘 | 否 | ISSUE-1138,ISSUE-1139,ISSUE-1140,ISSUE-1141,ISSUE-1142,ISSUE-1143 | answer-conflict/answer-convention-ambiguous/compile-error | 取得同版原始题页、可靠勘误或当年明确有向长度约定后裁定 Q15 A1；此前保留源题「直线 OA」、印载单解 (4,2) 与完整推导两解，整卷 | 保留 U |
-| gk-1996-regular-shanghai-science | 1996 | 1996 年·上海卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1136,ISSUE-1137 | answer-conflict/answer-convention-ambiguous | 取得同版原始题页、可靠勘误或当年明确有向长度约定后裁定Q15 A1；此前保留源题、印载单解与完整推导两解，整卷保持blocked，不据答案补 | 保留 U |
-| gk-1997-regular-national-arts | 1997 | 1997 年·普通高等学校招生考试·全国卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1321,ISSUE-1322,ISSUE-1329,ISSUE-1330,ISSUE-1331,ISSUE-1332 | answer-missing/compile-error/transcription-ambiguous | 取得可追溯的同版完整题面或可信勘误；此前保留【原卷缺关系符号】占位及原题其他文字，不补猜关系。 | 可补源 |
-| gk-1997-regular-national-science | 1997 | 1997 年·全国卷·理科 | blocked | complete | 在盘 | 否 | ISSUE-0800,ISSUE-0801,ISSUE-0802,ISSUE-0803,ISSUE-1072,ISSUE-1073 | answer-missing/compile-error/transcription-ambiguous | 取得独立同版题面或权威勘误；此前保留缺符号并维持阻断。 | 可补源 |
-| gk-1998-regular-national-arts | 1998 | 1998 年·全国卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1426,ISSUE-1427,ISSUE-1428 | answer-conflict/answer-convention-ambiguous | 取得可绑定到同一版次或官方勘误材料，核定原卷更正说明；核定前保留 U/PENDING，不把该卷标记为完成。 | 保留 U |
-| gk-1999-regular-guangdong | 1999 | 1999 年·普通高等学校招生全国统一考试·广东卷 | blocked | planned | 在盘 | 否 | ISSUE-1323,ISSUE-1324,ISSUE-1325,ISSUE-1326,ISSUE-1327,ISSUE-1328 | answer-missing/transcription-ambiguous | 取得可核验的同版完整题面、勘误或更清晰原页，确认该距离所指平面；此前题面保留字面，答案维持 U。 | 可补源 |
-| gk-1999-regular-shanghai-arts | 1999 | 1999 年·上海卷·文史类 | blocked | planned | 在盘 | 否 | ISSUE-1188,ISSUE-1189,ISSUE-1190,ISSUE-1191,ISSUE-1192,ISSUE-1193,ISSUE-1194 | answer-conflict/compile-error/transcription-ambiguous | 取得同版可追溯原刊、勘误或可靠的题面/答案分开来源后复核；在此之前保留题面推导A与卷内C并列，不将任一方定为官方答案。 | 可补源 |
-| gk-2000-regular-guangdong-unspecified | 2000 | 2000 年·广东卷（科类未标） | blocked | planned | 在盘 | 否 | ISSUE-1198,ISSUE-1199,ISSUE-1200,ISSUE-1201,ISSUE-1202 | answer-conflict/answer-convention-ambiguous/answer-missing/transcription-ambiguous | 取得可追溯同版勘误或独立版本/可靠答案材料，确认题面或图示是否有缺漏；此前保留原文并将答案记为U/PENDING，不按选项猜填。 | 保留 U |
-| gk-2000-regular-national-new-science | 2000 | 2000 年·全国新课程卷·理科 | blocked | complete | 在盘 | 否 | ISSUE-1197 | answer-conflict | 取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。 | 可补源 |
-| gk-2000-regular-national-old-arts | 2000 | 2000 年·全国旧课程卷·文科 | blocked | complete | 在盘 | 否 | ISSUE-1195 | answer-conflict | 取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。 | 可补源 |
-| gk-2000-regular-national-old-science | 2000 | 2000 年·全国旧课程卷·理科 | blocked | complete | 在盘 | 否 | ISSUE-1196 | answer-conflict | 取得可追溯的同版勘误或可靠答案材料，确认题面是否漏字/图示是否另有解释；在此之前保留原题文字，将答案记为 U/PENDING，不选 A–D。 | 可补源 |
-| gk-2000-regular-shanghai-arts | 2000 | 2000 年·上海卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1363,ISSUE-1364,ISSUE-1365,ISSUE-1366,ISSUE-1367,ISSUE-1368 | answer-conflict/answer-convention-ambiguous/compile-error | 取得可追溯且能与本卷版本绑定的原始出版页、正式答案或勘误；核实指数后再更新题面/答案与三角色 provenance。未取得前保持固定印式照录 | 保留 U |
-| gk-2000-regular-shanghai-science | 2000 | 2000 年·上海卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1369,ISSUE-1370,ISSUE-1371,ISSUE-1372,ISSUE-1373,ISSUE-1374,ISSUE-1375,ISSUE-1376 | answer-conflict/answer-convention-ambiguous/compile-error/transcription-ambiguous | 取得可追溯的同版清晰副本、勘误或可靠同期材料，核定 Q12 原字及数列类型；此前按固定 PDF 保留“等此数列”，答案维持 U/PENDIN | 保留 U |
-| gk-2002-regular-beijing-science | 2002 | 2002 年·北京卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1360,ISSUE-1361 | answer-missing | 取得可追溯的同版勘误或更强来源后，核定原题意并重算；在此之前保持题面原式、U/PENDING 与 blocker。 | 可补源 |
-| gk-2002-regular-suyuyuegui | 2002 | 2002 年·苏豫粤桂卷 | blocked | planned | 在盘 | 否 | ISSUE-1417,ISSUE-1418,ISSUE-1419,ISSUE-1420,ISSUE-1421 | answer-convention-ambiguous/compile-error | 取得可绑定到同一版次或同一固定 PDF 的答案、勘误或可追溯定义材料，核定零公比约定；核定前保留 U/PENDING 与条件分支，不把该卷标 | 保留 U |
-| gk-2003-regular-beijing-arts | 2003 | 2003 年·北京卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1398,ISSUE-1399,ISSUE-1402,ISSUE-1403 | answer-convention-ambiguous/compile-error/transcription-ambiguous | 取得可追溯的同版勘误、答案材料或独立同版原件，确认 Q18 顶点记号的原卷意图；在此之前继续照录原文和图示，不静默统一字母。 | 保留 U |
-| gk-2003-regular-beijing-science | 2003 | 2003 年·北京卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1400,ISSUE-1401,ISSUE-1404,ISSUE-1405,ISSUE-1406,ISSUE-1407 | answer-convention-ambiguous/compile-error/transcription-ambiguous | 取得可追溯的同版勘误、答案材料或独立同版原件以确认 Q17 边长原文；在此之前保留“底面边长的 3”的字面，不增补缺字。 | 保留 U |
-| gk-2003-regular-shanghai-arts | 2003 | 2003 年·上海卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1388,ISSUE-1390,ISSUE-1391,ISSUE-1392,ISSUE-1393 | answer-convention-ambiguous/compile-error | 取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PEN | 保留 U |
-| gk-2003-regular-shanghai-science | 2003 | 2003 年·上海卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1389,ISSUE-1394,ISSUE-1395,ISSUE-1396,ISSUE-1397 | answer-convention-ambiguous/compile-error | 取得可追溯的同版答案、勘误或考试编写约定，确认“平面平行”是否包含重合或是否默认 α≠β；据新证据重新判断 Q14。在此之前保持 U/PEN | 保留 U |
-| gk-2003-regular-yuegui | 2003 | 2003 年·粤桂卷 | blocked | planned | 在盘 | 否 | ISSUE-1429 | answer-conflict | 取得可绑定到同一版次或官方勘误材料，核定原卷选项勘误说明；核定前保留 U/PENDING，不把该卷标记为完成。 | 可补源 |
-| gk-2003-spring-beijing-arts | 2003 | 2003 年·春季北京卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1229,ISSUE-1230,ISSUE-1231,ISSUE-1232,ISSUE-1233 | compile-error/transcription-ambiguous | 取得可追溯的同版高清题页或可靠勘误，核定 Q11 图中字形；在此之前保留题干照录、图中文字形 uncertain 与完成阻断。 | 可补源 |
-| gk-2003-spring-beijing-science | 2003 | 2003 年·春季北京卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1248,ISSUE-1249,ISSUE-1250 | answer-missing/transcription-ambiguous | 寻找可核验独立来源核实图文标记；保留固定副本原貌。 | 可补源 |
-| gk-2004-regular-shanghai-arts | 2004 | 2004 年·上海卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1384,ISSUE-1385 | answer-convention-ambiguous | 取得可追溯官方权威答案、评分标准或同期勘误以确认原题是否为除法或确系无解试题；在此之前将 Q17 保留 U/PENDING，不擅自修改题面符 | 保留 U |
-| gk-2004-regular-shanghai-science | 2004 | 2004 年·上海卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1386,ISSUE-1387 | answer-convention-ambiguous | 取得可追溯官方试题、同版答案或勘误确认原题第 (2) 问集合符号；在此之前将 Q19(2) 保留 U/PENDING，条件性解集不写为确定结 | 保留 U |
-| gk-2004-spring-anhui-arts | 2004 | 2004 年·普通高等学校春季招生考试·安徽卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1211,ISSUE-1212,ISSUE-1213,ISSUE-1214,ISSUE-1215 | answer-missing/compile-error | 取得可追溯的同版勘误或独立同期题面/答案材料，核实是否漏印了对 b_n 的符号或取值范围限制；核实前保留原题与非唯一推导，将整卷 produ | 可补源 |
-| gk-2004-spring-beijing-arts | 2004 | 2004 年·春季北京卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1238 | transcription-ambiguous | 取得可追溯的同版高清题页、原始扫描或可靠勘误，核定 Q20 尾问是否脱“式”及其完整原文；核实前继续照录“计算公以及”，保留转录标记并保持整 | 可补源 |
-| gk-2004-spring-shanghai | 2004 | 2004 年·春季上海卷 | blocked | planned | 在盘 | 否 | ISSUE-1264,ISSUE-1265,ISSUE-1266,ISSUE-1267,ISSUE-1268,ISSUE-1269,ISSUE-1270 | answer-conflict/answer-convention-ambiguous/answer-missing/compile-error | 取得可追溯同版原卷或明确勘误，核实包含条件；在此之前保留条件性答案和待核状态。 | 保留 U |
-| gk-2005-regular-national-1-science | 2005 | 2005 年·全国卷Ⅰ·理科 | blocked | planned | 在盘 | 否 | ISSUE-0834 | answer-missing | 取得清晰勘误或同版源确认第 4 题选项 C；在此之前保留固定源字面与独立计算结论。 | 可补源 |
-| gk-2005-regular-shanghai-arts | 2005 | 2005 年·上海卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1377,ISSUE-1378,ISSUE-1379 | answer-convention-ambiguous/transcription-ambiguous | 取得可追溯同版答案、解析或勘误以确认“最小”是否允许并列；在此之前保留U/PENDING，不替来源补充唯一性条件。 | 保留 U |
-| gk-2005-regular-shanghai-science | 2005 | 2005 年·上海卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1380,ISSUE-1381,ISSUE-1382,ISSUE-1383 | answer-convention-ambiguous/compile-error | 取得可追溯同版答案、解析或勘误以确认“最小的是一个四棱柱”是否要求唯一最小；在此之前保留 U/PENDING，不替来源补充唯一性条件。 | 保留 U |
-| gk-2006-regular-anhui-arts | 2006 | 2006 年·普通高考·安徽卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1216,ISSUE-1217,ISSUE-1218 | answer-missing/transcription-ambiguous | 取得可追溯的同版题页或可靠勘误核对 Q2 题干和选项，在此之前保留无匹配选项及阻断状态。 | 可补源 |
-| gk-2006-regular-anhui-science | 2006 | 2006 年·普通高考·安徽卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1219 | answer-missing | 取得可追溯的同版完整题面或可靠勘误，核明椭圆方程右侧后重新独立求解并更新答案及逐题来源记录。 | 可补源 |
-| gk-2006-regular-chongqing-science | 2006 | 2006 年·普通高等学校招生考试·重庆卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1341,ISSUE-1347,ISSUE-1348,ISSUE-1349 | answer-convention-ambiguous/compile-error | 取得可追溯的同版勘误或独立题面版本，确认 Q20(1) 条件中的字母；在证据出现前保留原印 a 与 U/PENDING，不推测改为 c，也不 | 保留 U |
-| gk-2006-regular-guangdong | 2006 | 2006 年·普通高等学校招生考试·广东卷 | blocked | planned | 在盘 | 否 | ISSUE-1298,ISSUE-1299,ISSUE-1300,ISSUE-1301,ISSUE-1302,ISSUE-1305,ISSUE-1306,ISSUE-1307,ISSUE-1308 | answer-conflict/answer-missing/transcription-ambiguous | 取得可追溯的同版完整题面、正式勘误或其他可裁决材料；核明对象后再独立求解并更新题面、答案和逐题 provenance。 | 可补源 |
-| gk-2006-regular-hubei-arts | 2006 | 2006 年·普通高等学校招生考试·湖北卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1333,ISSUE-1334,ISSUE-1335,ISSUE-1336,ISSUE-1337 | answer-missing/compile-error | 取得可追溯的明确独立性条件、正式答案/勘误或其他可裁定材料；此前保持Q12为U/PENDING，不把二项独立假设当作原题条件。 | 可补源 |
-| gk-2006-regular-hubei-science | 2006 | 2006 年·普通高等学校招生考试·湖北卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1319,ISSUE-1320 | answer-conflict/answer-missing | 取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。 | 可补源 |
-| gk-2006-regular-hunan-arts | 2006 | 2006 年·普通高等学校招生考试·湖南卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1338 | answer-convention-ambiguous | 取得可追溯的明确跨矿复查独立性条件、正式答案/勘误或其他可裁定同版材料；此前保持第17题（3）为 U/PENDING，不把 0.41 写成无 | 保留 U |
-| gk-2006-regular-hunan-science | 2006 | 2006 年·普通高等学校招生考试·湖南卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1339 | answer-convention-ambiguous | 取得同版权威答案、勘误或明确适用于整改复查阶段的跨矿联合独立性材料后裁定；此前保留 Q17（3）为 U/PENDING，不把 0.41 写成 | 保留 U |
-| gk-2006-regular-jiangxi-arts | 2006 | 2006 年·普通高等学校招生考试·江西卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1303,ISSUE-1304,ISSUE-1309,ISSUE-1310 | answer-conflict/answer-missing | 取得可追溯的同版可靠复本、正式勘误或可裁决答案材料；在此之前不推定应改题干、选项或逻辑方向。 | 可补源 |
-| gk-2006-regular-liaoning-arts | 2006 | 2006 年·普通高等学校招生考试·辽宁卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1340 | answer-convention-ambiguous | 取得可追溯的同版完整复本、正式勘误或其他能说明 P 定义的可靠材料后再裁定；此前保留 APCD 原字样和 U/PENDING，不推测改为 A | 保留 U |
-| gk-2006-regular-shaanxi-arts | 2006 | 2006 年·普通高等学校招生考试·陕西卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1342,ISSUE-1343,ISSUE-1350,ISSUE-1351 | answer-convention-ambiguous/compile-error | 取得可追溯的同版题面、勘误或能确认遗漏条件的独立材料；此前保留 U/PENDING，不从选项反推条件或选择唯一答案。 | 保留 U |
-| gk-2006-regular-shaanxi-science | 2006 | 2006 年·普通高等学校招生考试·陕西卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1344,ISSUE-1352,ISSUE-1353,ISSUE-1354 | answer-convention-ambiguous/compile-error | 取得可追溯的独立题面或明确勘误，消除“甲和乙不同去”的语义歧义；此前保留原字，不推断选派关系或给唯一方案数。 | 保留 U |
-| gk-2006-regular-shandong-science | 2006 | 2006 年·普通高等学校招生考试·山东卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1294,ISSUE-1295,ISSUE-1296,ISSUE-1297 | answer-conflict/answer-missing | 取得可追溯的同版可靠复本、正式勘误或其他可裁决材料；此前保留固定题面原文及 U/PENDING，不猜题面或答案。 | 可补源 |
-| gk-2006-regular-tianjin-arts | 2006 | 2006 年·普通高等学校招生考试·天津卷文科 | blocked | planned | 在盘 | 否 | ISSUE-1287 | answer-convention-ambiguous | 查找并核对同版可靠复本、正式勘误或可追溯的答案材料；未取得可核来源前，Q14答案继续记 U，不补造第二个方程，保留题面原文。 | 保留 U |
-| gk-2006-regular-tianjin-science | 2006 | 2006 年·普通高等学校招生考试·天津卷理科 | blocked | planned | 在盘 | 否 | ISSUE-1288,ISSUE-1289,ISSUE-1290,ISSUE-1291,ISSUE-1292,ISSUE-1293 | answer-conflict/answer-missing/compile-error | 查找并核对同版可靠复本、正式勘误或可追溯答案材料；未取得可核来源前，题面保持原样，Q2答案记 U，不选择不匹配选项。 | 可补源 |
-| gk-2007-regular-beijing-arts | 2007 | 2007 年·北京卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1355,ISSUE-1356,ISSUE-1357,ISSUE-1358,ISSUE-1359 | answer-convention-ambiguous/compile-error | 取得可追溯的同版材料，明确六位乘客下车选择之间的联合独立性，或取得可裁定的正式答案/勘误；此前保持 Q18 两问为 U/PENDING，不将 | 保留 U |
-| gk-2007-regular-beijing-science | 2007 | 2007 年·北京卷·理科 | blocked | transcription_draft | 在盘 | 否 | ISSUE-1203 | transcription-ambiguous | 找到可逐页比对的独立同期题面或清晰版本核实 Q19 术语；核实前保留“半轴长”原文，不静默改成“长半轴长”，并将依赖图示尺寸得到的公式明确标 | 可补源 |
-| gk-2007-regular-shanghai-arts | 2007 | 2007 年·上海卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1362 | answer-convention-ambiguous | 取得可追溯的同版答案、解析或勘误以明确 Q21(3) 是否承接（1）的等边焦点条件；在此之前保留两种条件结果和 U/PENDING，不把特例 | 保留 U |
-| gk-2008-regular-national-2-arts | 2008 | 2008 年·全国大纲卷Ⅱ·文科 | blocked | planned | 在盘 | 否 | ISSUE-0839 | answer-conflict | 取得同版官方答案或清晰勘误，确认是否隐含排除公差为零；在此之前保留两个合法值，并在解析中说明分支。 | 可补源 |
-| gk-2008-spring-shanghai | 2008 | 2008 年·春季上海卷 | blocked | planned | 在盘 | 否 | ISSUE-1285,ISSUE-1286 | answer-conflict/answer-missing | 取得可追溯同版原件或可靠正式勘误，核定‘凹多面体’题面与印载答案符号的冲突；此前保留答案 U 与两种证据并列，不改题面、不将副本答案称官方答 | 可补源 |
-| gk-2009-regular-national-1-arts | 2009 | 2009 年·全国大纲卷Ⅰ·文科 | blocked | planned | 在盘 | 否 | ISSUE-0840 | source-mismatch | 取得同版官方勘误或其他可靠版本，确认第 12、13 题是否确为重复题；在此之前保留固定源字面与两个相同的独立计算结果。 | 保留 U |
-| gk-2009-spring-shanghai | 2009 | 2009 年·春季上海卷 | blocked | planned | 在盘 | 否 | ISSUE-1239,ISSUE-1240 | answer-conflict/answer-missing | 取得可追溯的同版清晰题页或可靠正式勘误以核定 ∠A₁AC 条件，再重新求解并盲核；此前保留题面缺项、答案 U，并保持整卷完成阻断。 | 可补源 |
-| gk-2013-regular-national-1-arts | 2013 | 2013 年全国Ⅰ卷（文科） | blocked | planned | 在盘 | 否 | ISSUE-0851,ISSUE-0852,ISSUE-0853,ISSUE-0879 | answer-conflict/transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2013-regular-national-1-science | 2013 | 2013 年全国Ⅰ卷（理科） | blocked | planned | 在盘 | 否 | ISSUE-0854,ISSUE-0855,ISSUE-0856,ISSUE-0880 | answer-conflict/transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2013-regular-national-2-arts | 2013 | 2013 年全国Ⅱ卷（文科） | blocked | planned | 在盘 | 否 | ISSUE-0857,ISSUE-0858,ISSUE-0859 | transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2013-regular-national-2-science | 2013 | 2013 年全国Ⅱ卷（理科） | blocked | planned | 在盘 | 否 | ISSUE-0860,ISSUE-0861,ISSUE-0862 | transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2014-regular-national-1-arts | 2014 | 2014 年全国Ⅰ卷（文科） | blocked | planned | 在盘 | 否 | ISSUE-0863,ISSUE-0864,ISSUE-0865 | transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2014-regular-national-1-science | 2014 | 2014 年全国Ⅰ卷（理科） | blocked | planned | 在盘 | 否 | ISSUE-0866,ISSUE-0867,ISSUE-0868 | transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2014-regular-national-2-arts | 2014 | 2014 年全国Ⅱ卷（文科） | blocked | planned | 在盘 | 否 | ISSUE-0869,ISSUE-0870,ISSUE-0871 | transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2014-regular-national-2-science | 2014 | 2014 年全国Ⅱ卷（理科） | blocked | planned | 在盘 | 否 | ISSUE-0872,ISSUE-0873,ISSUE-0874,ISSUE-0875,ISSUE-0876,ISSUE-0877,ISSUE-0878 | compile-error/transcription-ambiguous | 取得可审计的原卷作答规则页，明确第22–24题作答属性后复核并结案；当前保留题面全部24题，不猜必答或选答。 | 可补源 |
-| gk-2015-regular-hunan-science | 2015 | 2015 年·湖南卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1106 | answer-convention-ambiguous | 取得适用于本卷的可追溯定义原页或授权答案后裁定定义约定，并独立复核Q14答案与解析。 | 保留 U |
-| gk-2015-regular-national-1-arts | 2015 | 2015 年·全国Ⅰ卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0976 | answer-missing | 取得明确勘误或官方说明；此前保留原题记号并将该小问标 U。 | 可补源 |
-| gk-2015-regular-national-1-science | 2015 | 2015 年·全国Ⅰ卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0977 | answer-missing | 取得明确勘误或官方说明；此前保留原题记号并将该小问标 U。 | 可补源 |
-| gk-2015-regular-shaanxi-science | 2015 | 2015 年·陕西卷·理工农医类 | blocked | planned | 在盘 | 否 | ISSUE-1245,ISSUE-1246,ISSUE-1247 | answer-convention-ambiguous/answer-missing | 寻找可追溯来源确认概率模型，或保留按均匀模型的条件结论。 | 保留 U |
-| gk-2016-regular-beijing-arts | 2016 | 2016 年·北京卷·文科 | blocked | complete | 在盘 | 否 | ISSUE-1001,ISSUE-1002,ISSUE-1003,ISSUE-1004,ISSUE-1005 | answer-missing/compile-error | 核验官方原卷或勘误中跳绳决赛名额；在此之前第8题答案按needs-review处理。 | 可补源 |
-| gk-2016-regular-national-1-arts | 2016 | 2016 年·全国Ⅰ卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0932,ISSUE-0934,ISSUE-0937,ISSUE-0938 | answer-conflict/answer-missing/compile-error | 查找该题官方答案或命题说明，确认“公共点都在”是否预设非空交集；消歧前保留惯常解读 a=1 但标 U，并阻止该卷完成。 | 可补源 |
-| gk-2016-regular-national-1-science | 2016 | 2016 年·全国Ⅰ卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0933,ISSUE-0935 | answer-conflict/answer-missing | 查找该题官方答案或命题说明，确认“公共点都在”是否预设非空交集；消歧前保留惯常解读 a=1 但标 U，并阻止该卷完成。 | 可补源 |
-| gk-2016-regular-national-2-science | 2016 | 2016 年·全国Ⅱ卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0931,ISSUE-0936,ISSUE-0939,ISSUE-0940 | answer-conflict/answer-missing/compile-error | 核对原卷组题说明或考试机构勘误，明确“高出60%”表示恰好还是至少；未消歧前保留 U 并阻止该卷完成。 | 可补源 |
-| gk-2016-regular-national-3-arts | 2016 | 2016 年·全国Ⅲ卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0999 | answer-missing | 原题允许 M=F、E=O，离心率任意；补充 E≠O 时才得到 e=1/3（选 A）。保留原题和 U；须取得来源勘误或明确的非退化约定后才可消 | 可补源 |
-| gk-2016-regular-national-3-science | 2016 | 2016 年·全国Ⅲ卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1000 | answer-missing | 原题允许 M=F、E=O，离心率任意；补充 E≠O 时才得到 e=1/3（选 A）。保留原题和 U；须取得来源勘误或明确的非退化约定后才可消 | 可补源 |
-| gk-2017-regular-national-2-arts | 2017 | 2017 年·全国Ⅱ卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0952,ISSUE-0954,ISSUE-0956,ISSUE-0957,ISSUE-0958,ISSUE-0987,ISSUE-0988 | answer-conflict/answer-missing/compile-error/layout-warning | 取得可追溯的同版官方勘误或可靠说明，确认原卷是否遗漏用于选定公比的条件；若无勘误，继续保留所有满足原题的分支并标为 U。 | 可补源 |
-| gk-2017-regular-national-3-science | 2017 | 2017 年·全国Ⅲ卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0953,ISSUE-0955,ISSUE-0991 | answer-conflict/answer-missing/layout-warning | 取得同版可靠勘误或来源说明以确认原题遗漏的选解条件；若无勘误，保留两组满足原题的解并标 U，不补造条件。 | 可补源 |
-| gk-2017-regular-tianjin-science | 2017 | 2017 年·天津卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0962,ISSUE-0963,ISSUE-0964,ISSUE-0965,ISSUE-0992,ISSUE-1424,ISSUE-1425 | answer-conflict/answer-missing/layout-warning | 取得同版官方勘误或可靠来源说明确认是否漏印条件；在此之前保留两值并标 U。 | 可补源 |
-| gk-2017-spring-shanghai | 2017 | 2017 年·上海春季卷 | blocked | planned | 在盘 | 否 | ISSUE-1125,ISSUE-1126,ISSUE-1127,ISSUE-1128,ISSUE-1129,ISSUE-1130 | answer-conflict/figure-missing | 查找官方勘误或独立同版原卷/答案以裁定差异；保持编者答案为非官方，不以模型推测改写。 | 可补源 |
-| gk-2018-regular-beijing-arts | 2018 | 2018 年·北京卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-1271,ISSUE-1272 | answer-missing/transcription-ambiguous | 取得可追溯的原卷或明确勘误，核对第9题向量条件后复核答案；核实前保留原貌和条件性结论。 | 可补源 |
-| gk-2018-regular-beijing-science | 2018 | 2018 年·北京卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-1273,ISSUE-1274 | answer-missing/transcription-ambiguous | 取得可追溯的原卷或明确勘误，核对第16题几何体名称和结构后复核各问；核实前保留原文及条件性推导。 | 可补源 |
-| gk-2018-regular-national-3-science | 2018 | 2018 年·全国Ⅲ卷·理科 | blocked | complete | 在盘 | 否 | ISSUE-1283,ISSUE-1284 | answer-missing/transcription-ambiguous | 取得可追溯原卷或勘误核对第19题矩形边长条件，再复核第（2）问；核实前保留依边长的表达式及待核状态。 | 可补源 |
-| gk-2018-spring-shanghai | 2018 | 2018 年上海市春季高考数学试卷 | blocked | planned | 在盘 | 否 | ISSUE-1204,ISSUE-1205,ISSUE-1206 | answer-convention-ambiguous | 寻找可追溯的独立同版题面或勘误，确认 y=cos x 是否对应未印出的 f(x) 定义；核实前保留原文及条件推导，答案保持U/PENDING | 保留 U |
-| gk-2019-regular-national-1-arts | 2019 | 2019 年·全国Ⅰ卷·文科 | compiled | - | 在盘 | 否 | ISSUE-0018,ISSUE-0020,ISSUE-0021,ISSUE-0022,ISSUE-0023 | answer-conflict/answer-missing/layout-warning/source-unavailable |  | 收口 |
-| gk-2019-regular-national-1-science | 2019 | 2019 年·全国Ⅰ卷·理科 | compiled | - | 在盘 | 否 | ISSUE-0009,ISSUE-0010,ISSUE-0020,ISSUE-0021,ISSUE-0022,ISSUE-0023 | answer-missing/layout-warning/source-unavailable/transcription-ambiguous |  | 收口 |
-| gk-2019-spring-shanghai | 2019 | 2019 年·上海春季招生数学试卷 | blocked | planned | 在盘 | 否 | ISSUE-1220,ISSUE-1221,ISSUE-1222,ISSUE-1223,ISSUE-1224,ISSUE-1225 | answer-conflict/answer-convention-ambiguous/transcription-ambiguous | 取得可追溯的同版题面或可靠勘误，确认五天是否必须每日有人参加；未确认前保留24与500两种条件分支及待核状态。 | 保留 U |
-| gk-2020-regular-national-1-arts | 2020 | 2020 年·全国Ⅰ卷·文科 | blocked | compiled | 在盘 | 否 | ISSUE-0014,ISSUE-0015,ISSUE-0019,ISSUE-0020,ISSUE-0021,ISSUE-0022,ISSUE-0023,ISSUE-0920,ISSUE-0921,ISSUE-0922,ISSUE-0923,ISSUE-0924,ISSUE-0925,ISSUE-0926,ISSUE-0927,ISSUE-0928,ISSUE-0929,ISSUE-0930,ISSUE-0978,ISSUE-0979 | answer-missing/layout-warning/source-mismatch/source-unavailable/transcription-ambiguous | 修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（原卷标明已取消 | 保留 U |
-| gk-2020-regular-national-1-science | 2020 | 2020 年·全国Ⅰ卷·理科 | compiled | - | 在盘 | 否 | ISSUE-0011,ISSUE-0012,ISSUE-0013,ISSUE-0016,ISSUE-0017,ISSUE-0019,ISSUE-0020,ISSUE-0022,ISSUE-0023 | answer-conflict/answer-missing/layout-warning/source-mismatch/source-unavailable/transcription-ambiguous |  | 收口 |
-| gk-2020-spring-shanghai | 2020 | 2020 年·上海春季招生数学试卷 | blocked | planned | 在盘 | 否 | ISSUE-1226,ISSUE-1227,ISSUE-1228 | answer-conflict/answer-convention-ambiguous/figure-missing | 取得可追溯的同版题面/勘误或明确采用的命题约定；确认前保留答案 U 与线段解释下的条件结论，不把该范围补写进原题。 | 保留 U |
-| gk-2021-regular-national-a-science | 2021 | 2021 年·全国甲卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0882,ISSUE-0885,ISSUE-0887,ISSUE-0888,ISSUE-0889,ISSUE-0890,ISSUE-0895 | compile-error/identity-ambiguous/source-mismatch/transcription-ambiguous | 取得同版官方勘误或其他权威同版文本，确认 B、D 重复是否为源卷印刷错误；在此之前保留选项原文与独立答案 A，不自行订正源卷。 | 保留 U |
-| gk-2021-regular-national-b-arts | 2021 | 2021 年·全国乙卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0881,ISSUE-0884 | identity-ambiguous/transcription-ambiguous | 取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题是否省略了“对任意 x 恒成立”等量词；在证据到位前保留题面原文，将 a>− | 保留 U |
-| gk-2021-regular-national-b-science | 2021 | 2021 年·全国乙卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0883,ISSUE-0886,ISSUE-0891,ISSUE-0892,ISSUE-0893,ISSUE-0894 | compile-error/identity-ambiguous/transcription-ambiguous | 取得该版官方答案、勘误或其他权威同版文本，确认第 23(2) 题省略量词是否为源卷原貌；在证据到位前保留题面原文，并将 a>−3/2 仅标作 | 保留 U |
-| gk-2021-spring-shanghai | 2021 | 2021 年·上海春季招生数学试卷 | blocked | planned | 在盘 | 否 | ISSUE-1251,ISSUE-1252,ISSUE-1253,ISSUE-1254 | answer-conflict/answer-convention-ambiguous/compile-error | 核对本卷采用的等比数列定义或可追溯命题约定；取得证据前保留两种范围与U/PENDING。 | 保留 U |
-| gk-2022-regular-national-b-arts | 2022 | 2022 年·全国乙卷·文科 | blocked | planned | 在盘 | 否 | ISSUE-0897,ISSUE-0908,ISSUE-0909,ISSUE-0910,ISSUE-0911 | answer-missing/compile-error | 核实是否排除 y=-2 水平边界或需补充 H≠N 条件，再裁定唯一答案。 | 可补源 |
-| gk-2022-regular-national-b-science | 2022 | 2022 年·全国乙卷·理科 | blocked | planned | 在盘 | 否 | ISSUE-0898,ISSUE-0899,ISSUE-0912,ISSUE-0913,ISSUE-0914,ISSUE-0915 | answer-missing/compile-error | 核实源题对 N 分支及 M、N 顺序的定义；补足条件后再确定选项。 | 可补源 |
-| gk-2025-regular-national-1 | 2025 | 2025 年·全国 1 卷 | blocked | legacy_unverified | 在盘 | 否 | ISSUE-0048,ISSUE-0049,ISSUE-0050,ISSUE-0056,ISSUE-0057,ISSUE-0058,ISSUE-0059 | answer-conflict/source-mismatch/source-unavailable/transcription-ambiguous | 对官方原卷该处做正面定向核查后二选一：若官方为 sin²C，则补一条与 2024 新高考Ⅱ Q19 同规格的勘误裁决（来源页 + 旧/新题面 | 保留 U |
-| gk-2026-regular-beijing-recall | 2026 | 2026 年·北京卷数学（回忆版，内部候选） | blocked | planned | 在盘 | 否 | ISSUE-1408,ISSUE-1409,ISSUE-1410,ISSUE-1411,ISSUE-1412,ISSUE-1413,ISSUE-1414,ISSUE-1415,ISSUE-1416 | answer-conflict/answer-convention-ambiguous/figure-missing/transcription-ambiguous | 取得可追溯至考试机构的完整同版正式卷或勘误，逐项裁定 Q10 选项；之前保留固定来源字面、条件性区间和 U/PENDING，不选定版本。 | 保留 U |
-| gk-2026-regular-national-1-recall | 2026 | 2026 年·全国 1 卷（回忆版） | blocked | legacy_unverified | 无源 | 无源 | ISSUE-0001,ISSUE-0060,ISSUE-0061,ISSUE-0062,ISSUE-0064,ISSUE-0065,ISSUE-0066,ISSUE-0067,ISSUE-0068,ISSUE-0069,ISSUE-0984,ISSUE-0985,ISSUE-0986 | answer-conflict/answer-missing/identity-ambiguous/layout-warning/source-mismatch/source-unavailable/transcription-ambiguous | 需从上游之外获得教育部考试院发布的 2026 全国 1 卷官方正式卷，方可解除本身份问题；上游件页眉自陈回忆版（对照件 sha256 f6f | 真缺源 |
+本表**不使用**上一版报告里的 `materialized_path`——该字段在 `source-manifest.json` 与 `schemas/source-manifest.schema.json` 中都不存在（全库仅出现在旧报告里），旧版 114 行的「已物化」列因此全部为「否」，是无效判据，已作废。现行判据：
 
-## 分组口径
+| 列 | 来源 |
+|---|---|
+| blocked_from | `papers[].blocked_from` |
+| build 回执 | `<project_dir>/receipts/build.json` 的 `status` |
+| review 回执 | `<project_dir>/receipts/review.json` 的 `status` |
+| U 题号 | `<project_dir>/provenance.json` 中 `answer_evidence.grade == "U"` 的 `printed_number` |
+| 未结 ISSUE | `missing-issues.md` 中 `paper_id` 相同且 `status != "resolved"` 的条目 |
+| 上游 PDF 在盘 | `sources[].upstream_path` 在 `gaokaomath-src` 下是否实际存在 |
 
-**收口**：已 compiled，补齐审查回执后 finalize。
+## 分类规则（互斥、可按行复算）
 
-**可补源**：上游文件在盘、未物化；按 物化→转录→生成→编译→审查 推进。
+1. **缺源**：`source_ids` 为空 ⇒ 无任何固定上游。
+2. **保留 U**：provenance 中存在 `grade == "U"` 的题（源文不足以唯一判定，不写确定答案）。
+3. **保留 U（源缺陷/歧义）**：无 U，但仍有未结 ISSUE（源面印错、术语歧义、选项空区间等，需外部勘误或独立扫描页）。
+4. **可收口**：无 U、无未结 ISSUE ⇒ 立即可走 build → review → finalize。
 
-**保留 U**：源在盘但 issue 属答案口径/身份/源不匹配，源内证据无法解决，须外部勘误。
+**机制硬约束**：`tools/provenance.py:687-691` 把任一题 `grade == "U"` 或 `transcription_review.result != "passed"` 记为 `provenance_unknown`；`tools/status.py` 据此派生 `eligible_blocked`，而 `blocked` 要求 blockers 非空 ⇒ `build_projects.py:1369` 直接拒绝正式构建。因此**含 U 的卷在现有工具链下无法通过正式构建**，它们只能按「保留 U 并登记 ISSUE」交付。
 
-**真缺源**：无 source_ids 或登记上游文件不存在，按 missing-source 披露。
+## 计数
 
-## 复核后的分流修订（task-3 执行结论）
+- 复核总数：**106** 套 blocked
+- 可收口：**1** 套
+- 保留 U：**71** 套
+- 保留 U（源缺陷/歧义）：**33** 套
+- 缺源：**1** 套
 
-初版按 `resume_action` 措辞把 66 套归为「可补源」，逐卷核源后修正如下（详见 `reports/u-retention-policy.md`）：
+## 逐卷
 
-| 试卷 | 结论 | 依据 |
-|---|---|---|
-| `gk-1986-regular-guangdong-arts` | 已 complete | 24/25 题原误录理工类内容，按源改为文史类（答案 A、C），链全跑并 finalize（phase2-b58） |
-| `gk-1987-regular-national-science` | 已 complete | 第 15 题斜高两底差 21√3/21=√3 cm（原 $3\pi$ 为硬错）；第 22 题抽取与源逐字一致、源缺陷留 ISSUE-1065（phase2-b61） |
-| `gk-2003-spring-beijing-science` | 已 complete | 第 8 题原图 L 即题干 I（BE 中点），判 B；第 14 题两空由相邻数据唯一锁定 140、85（phase1-b56） |
-| `gk-2022-regular-national-b-arts` | 保留 U | 第 11 题 A/C 两种构造均自洽，源文不排除任一 |
-| `gk-2022-regular-national-b-science` | 保留 U | 第 16 题已按源 `2a^x-e·x^2` 判定 D；第 11 题同乙文仍 U |
-| `gk-2015-regular-shaanxi-science` | 保留 U | 第 11 题判 D、第 16 题数值 6/5 已修正；第 19(2) 源文缺往返联合分布 |
-| `gk-1988-regular-guangdong-science` | 保留 U | 第 23 小题右图在固定源中缺失，需更完整源或独立扫描页 |
-| `gk-2015-regular-hunan-science` | 保留 U | 第 14 题依赖「定义域约定」原页，固定源无答案页 |
-| `gk-2007-regular-beijing-science` | 保留 U | 第 19 题「半轴长」术语需独立同期题面核实，不静默改写 |
-
-机制约束（决定后 6 套无法 finalize）：`tools/provenance.py:687-691` 把任一题 `grade=="U"` 或 `transcription_review.result!="passed"` 记为 `provenance_unknown`，`tools/status.py` 据此派生 `eligible_blocked`，而 `blocked` 要求 blockers 非空 ⇒ `build --formal` 直接拒绝（`build_projects.py:1369`）。**含 U 答案的卷在现有工具链下不可能通过正式构建**，因此它们只能归入 task-4 的保留 U 口径，不能计入 task-3。
+| 年 | 试卷 | blocked_from | build 回执 | review 回执 | U 题号 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1977 | `gk-1977-regular-fujian-arts` | planned | succeeded | passed | — | ISSUE-0133,ISSUE-0134,ISSUE-0135,ISSUE-0136 | answer-missing,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1977 | `gk-1977-regular-fujian-science` | planned | succeeded | passed | — | ISSUE-0137,ISSUE-0138,ISSUE-0139 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1977 | `gk-1977-regular-inner-mongolia-arts` | planned | succeeded | passed | — | ISSUE-0129,ISSUE-0130 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 1977 | `gk-1977-regular-jiangsu` | planned | succeeded | passed | — | ISSUE-0131,ISSUE-0132 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1985 | `gk-1985-regular-guangdong-arts` | planned | succeeded | passed | 11 | ISSUE-0966,ISSUE-0967,ISSUE-0968,ISSUE-0969,ISSUE-0970,ISSUE-0975 | answer-conflict,answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 1985 | `gk-1985-regular-guangdong-science` | planned | succeeded | passed | 2 | ISSUE-0971,ISSUE-0972,ISSUE-0973,ISSUE-0974 | answer-conflict,answer-missing,source-mismatch,transcription-ambiguous | 是 | 保留 U |
+| 1986 | `gk-1986-regular-guangdong-science` | planned | succeeded | passed | — | ISSUE-0778,ISSUE-0797,ISSUE-1053,ISSUE-1054,ISSUE-1055,ISSUE-1056,ISSUE-1082,ISSUE-1083,ISSUE-1084 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1987 | `gk-1987-regular-guangdong-science` | planned | succeeded | passed | — | ISSUE-0781,ISSUE-0782,ISSUE-0783,ISSUE-0784,ISSUE-0791,ISSUE-0792 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1988 | `gk-1988-regular-guangdong-science` | planned | succeeded | passed | — | ISSUE-0785 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1989 | `gk-1989-regular-guangdong-arts` | planned | succeeded | passed | 9,16,21 | ISSUE-1259,ISSUE-1260,ISSUE-1261,ISSUE-1262,ISSUE-1263 | answer-conflict,answer-convention-ambiguous,answer-missing | 是 | 保留 U |
+| 1989 | `gk-1989-regular-guangdong-science` | planned | succeeded | passed | — | ISSUE-1078 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 1990 | `gk-1990-regular-guangdong-science` | planned | succeeded | passed | 12 | ISSUE-1070,ISSUE-1113,ISSUE-1114 | answer-conflict,answer-missing,figure-missing | 是 | 保留 U |
+| 1990 | `gk-1990-regular-national-arts` | planned | succeeded | passed | 20 | ISSUE-1124 | answer-convention-ambiguous | 是 | 保留 U |
+| 1990 | `gk-1990-regular-national-science` | planned | succeeded | passed | 20 | ISSUE-1131 | answer-convention-ambiguous | 是 | 保留 U |
+| 1990 | `gk-1990-regular-shanghai` | planned | succeeded | passed | — | ISSUE-1111,ISSUE-1112 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1991 | `gk-1991-regular-shanghai` | compiled | succeeded | passed | — | ISSUE-1178 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 1994 | `gk-1994-shanghai` | planned | succeeded | passed | — | ISSUE-1071 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 1996 | `gk-1996-regular-national-arts` | planned | succeeded | passed | 7 | ISSUE-1180,ISSUE-1185 | answer-convention-ambiguous | 是 | 保留 U |
+| 1996 | `gk-1996-regular-national-science` | planned | succeeded | passed | — | ISSUE-1181,ISSUE-1182,ISSUE-1183,ISSUE-1184 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1996 | `gk-1996-regular-shanghai-arts` | compiled | succeeded | passed | — | ISSUE-1142,ISSUE-1143 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 1996 | `gk-1996-regular-shanghai-science` | planned | succeeded | passed | 15 | ISSUE-1136,ISSUE-1137 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
+| 1997 | `gk-1997-regular-national-arts` | planned | succeeded | passed | 23 | ISSUE-1321,ISSUE-1322 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 1997 | `gk-1997-regular-national-science` | complete | succeeded | passed | 23 | ISSUE-1072,ISSUE-1073 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 1998 | `gk-1998-regular-national-arts` | planned | succeeded | passed | 25 | ISSUE-1426,ISSUE-1427,ISSUE-1428 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
+| 1999 | `gk-1999-regular-guangdong` | planned | succeeded | passed | 10,13,21 | ISSUE-1323,ISSUE-1324,ISSUE-1325,ISSUE-1326,ISSUE-1327,ISSUE-1328 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 1999 | `gk-1999-regular-shanghai-arts` | planned | succeeded | passed | — | ISSUE-1188,ISSUE-1189,ISSUE-1190 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2000 | `gk-2000-regular-guangdong-unspecified` | planned | succeeded | passed | 12,19,22 | ISSUE-1198,ISSUE-1199,ISSUE-1200,ISSUE-1201,ISSUE-1202 | answer-conflict,answer-convention-ambiguous,answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2000 | `gk-2000-regular-national-new-science` | complete | succeeded | passed | 12 | ISSUE-1197 | answer-conflict | 是 | 保留 U |
+| 2000 | `gk-2000-regular-national-old-arts` | complete | succeeded | passed | 12 | ISSUE-1195 | answer-conflict | 是 | 保留 U |
+| 2000 | `gk-2000-regular-national-old-science` | complete | succeeded | passed | 12 | ISSUE-1196 | answer-conflict | 是 | 保留 U |
+| 2000 | `gk-2000-regular-shanghai-arts` | planned | succeeded | passed | 21 | ISSUE-1363,ISSUE-1364 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
+| 2000 | `gk-2000-regular-shanghai-science` | planned | succeeded | passed | 12,21 | ISSUE-1369,ISSUE-1370,ISSUE-1371,ISSUE-1372 | answer-conflict,answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2002 | `gk-2002-regular-beijing-science` | planned | succeeded | passed | 16 | ISSUE-1360,ISSUE-1361 | answer-missing | 是 | 保留 U |
+| 2002 | `gk-2002-regular-suyuyuegui` | planned | succeeded | passed | 18 | ISSUE-1417 | answer-convention-ambiguous | 是 | 保留 U |
+| 2003 | `gk-2003-regular-beijing-arts` | planned | succeeded | passed | 18 | ISSUE-1398,ISSUE-1399 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2003 | `gk-2003-regular-beijing-science` | planned | succeeded | passed | 17 | ISSUE-1400,ISSUE-1401 | answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2003 | `gk-2003-regular-shanghai-arts` | planned | succeeded | passed | 14 | ISSUE-1388 | answer-convention-ambiguous | 是 | 保留 U |
+| 2003 | `gk-2003-regular-shanghai-science` | planned | succeeded | passed | 14 | ISSUE-1389 | answer-convention-ambiguous | 是 | 保留 U |
+| 2003 | `gk-2003-regular-yuegui` | planned | succeeded | passed | — | ISSUE-1429 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 2003 | `gk-2003-spring-beijing-arts` | planned | succeeded | passed | — | ISSUE-1229 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2004 | `gk-2004-regular-shanghai-arts` | planned | succeeded | passed | 17,19 | ISSUE-1384,ISSUE-1385 | answer-convention-ambiguous | 是 | 保留 U |
+| 2004 | `gk-2004-regular-shanghai-science` | planned | succeeded | passed | 19,22 | ISSUE-1386,ISSUE-1387 | answer-convention-ambiguous | 是 | 保留 U |
+| 2004 | `gk-2004-spring-anhui-arts` | planned | succeeded | passed | 18 | ISSUE-1211 | answer-missing | 是 | 保留 U |
+| 2004 | `gk-2004-spring-beijing-arts` | planned | succeeded | passed | — | ISSUE-1238 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2004 | `gk-2004-spring-shanghai` | planned | succeeded | passed | 14,18 | ISSUE-1264,ISSUE-1265,ISSUE-1266 | answer-conflict,answer-convention-ambiguous,answer-missing | 是 | 保留 U |
+| 2005 | `gk-2005-regular-national-1-science` | planned | succeeded | passed | 4 | ISSUE-0834 | answer-missing | 是 | 保留 U |
+| 2005 | `gk-2005-regular-shanghai-arts` | planned | succeeded | passed | 12,20 | ISSUE-1377,ISSUE-1379 | answer-convention-ambiguous | 是 | 保留 U |
+| 2005 | `gk-2005-regular-shanghai-science` | planned | succeeded | passed | 11,20 | ISSUE-1380,ISSUE-1381 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-anhui-arts` | planned | succeeded | passed | 2,5 | ISSUE-1216,ISSUE-1217,ISSUE-1218 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-anhui-science` | planned | succeeded | passed | 3 | ISSUE-1219 | answer-missing | 是 | 保留 U |
+| 2006 | `gk-2006-regular-chongqing-science` | planned | succeeded | passed | 20 | ISSUE-1341 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-guangdong` | planned | succeeded | passed | 6,16,19,20 | ISSUE-1298,ISSUE-1299,ISSUE-1300,ISSUE-1301,ISSUE-1302,ISSUE-1305,ISSUE-1306,ISSUE-1307,ISSUE-1308 | answer-conflict,answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-hubei-arts` | planned | succeeded | passed | 12 | ISSUE-1333 | answer-missing | 是 | 保留 U |
+| 2006 | `gk-2006-regular-hubei-science` | planned | succeeded | passed | 17 | ISSUE-1319,ISSUE-1320 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2006 | `gk-2006-regular-hunan-arts` | planned | succeeded | passed | 17 | ISSUE-1338 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-hunan-science` | planned | succeeded | passed | 17 | ISSUE-1339 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-jiangxi-arts` | planned | succeeded | passed | 4,8 | ISSUE-1303,ISSUE-1304,ISSUE-1309,ISSUE-1310 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2006 | `gk-2006-regular-liaoning-arts` | planned | succeeded | passed | 21 | ISSUE-1340 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-shaanxi-arts` | planned | succeeded | passed | 3,15 | ISSUE-1342,ISSUE-1343 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-shaanxi-science` | planned | succeeded | passed | 16 | ISSUE-1344 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-shandong-science` | planned | succeeded | passed | 5,10 | ISSUE-1294,ISSUE-1295,ISSUE-1296,ISSUE-1297 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2006 | `gk-2006-regular-tianjin-arts` | planned | succeeded | passed | 14 | ISSUE-1287 | answer-convention-ambiguous | 是 | 保留 U |
+| 2006 | `gk-2006-regular-tianjin-science` | planned | succeeded | passed | 2 | ISSUE-1288,ISSUE-1289 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2007 | `gk-2007-regular-beijing-arts` | planned | succeeded | passed | 18 | ISSUE-1355 | answer-convention-ambiguous | 是 | 保留 U |
+| 2007 | `gk-2007-regular-beijing-science` | transcription_draft | succeeded | passed | — | ISSUE-1203 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2007 | `gk-2007-regular-shanghai-arts` | planned | succeeded | passed | 21 | ISSUE-1362 | answer-convention-ambiguous | 是 | 保留 U |
+| 2008 | `gk-2008-regular-national-2-arts` | planned | succeeded | passed | — | ISSUE-0839 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 2008 | `gk-2008-spring-shanghai` | planned | succeeded | passed | 8 | ISSUE-1285,ISSUE-1286 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2009 | `gk-2009-regular-national-1-arts` | planned | succeeded | passed | — | — | — | 是 | 可收口 |
+| 2009 | `gk-2009-spring-shanghai` | planned | succeeded | passed | 16 | ISSUE-1239,ISSUE-1240 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2013 | `gk-2013-regular-national-1-arts` | planned | compiled_pending_review | passed | — | ISSUE-0851,ISSUE-0852,ISSUE-0853,ISSUE-0879 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2013 | `gk-2013-regular-national-1-science` | planned | compiled_pending_review | passed | — | ISSUE-0854,ISSUE-0855,ISSUE-0856,ISSUE-0880 | answer-conflict,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2013 | `gk-2013-regular-national-2-arts` | planned | compiled_pending_review | passed | — | ISSUE-0857,ISSUE-0858,ISSUE-0859 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2013 | `gk-2013-regular-national-2-science` | planned | compiled_pending_review | passed | — | ISSUE-0860,ISSUE-0861,ISSUE-0862 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2014 | `gk-2014-regular-national-1-arts` | planned | compiled_pending_review | passed | — | ISSUE-0863,ISSUE-0864,ISSUE-0865 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2014 | `gk-2014-regular-national-1-science` | planned | compiled_pending_review | passed | — | ISSUE-0866,ISSUE-0867,ISSUE-0868 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2014 | `gk-2014-regular-national-2-arts` | planned | compiled_pending_review | passed | — | ISSUE-0869,ISSUE-0870,ISSUE-0871 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2014 | `gk-2014-regular-national-2-science` | planned | compiled_pending_review | passed | — | ISSUE-0872,ISSUE-0873,ISSUE-0874 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2015 | `gk-2015-regular-hunan-science` | planned | succeeded | passed | — | ISSUE-1106 | answer-convention-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2015 | `gk-2015-regular-national-1-arts` | planned | succeeded | passed | 23 | ISSUE-0976 | answer-missing | 是 | 保留 U |
+| 2015 | `gk-2015-regular-national-1-science` | planned | succeeded | passed | 23 | ISSUE-0977 | answer-missing | 是 | 保留 U |
+| 2015 | `gk-2015-regular-shaanxi-science` | planned | succeeded | passed | 11,16,19 | ISSUE-1245,ISSUE-1246,ISSUE-1247 | answer-convention-ambiguous,answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-beijing-arts` | complete | succeeded | passed | 8 | ISSUE-1005 | answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-national-1-arts` | planned | succeeded | passed | 23 | ISSUE-0932,ISSUE-0934 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-national-1-science` | planned | succeeded | passed | 23 | ISSUE-0933,ISSUE-0935 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-national-2-science` | planned | succeeded | passed | 18 | ISSUE-0931,ISSUE-0936 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-national-3-arts` | planned | succeeded | passed | 12 | ISSUE-0999 | answer-missing | 是 | 保留 U |
+| 2016 | `gk-2016-regular-national-3-science` | planned | succeeded | passed | 11 | ISSUE-1000 | answer-missing | 是 | 保留 U |
+| 2017 | `gk-2017-regular-national-2-arts` | planned | succeeded | passed | 17 | ISSUE-0952,ISSUE-0954 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2017 | `gk-2017-regular-national-3-science` | planned | succeeded | passed | 20 | ISSUE-0953,ISSUE-0955 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2017 | `gk-2017-regular-tianjin-science` | planned | succeeded | passed | 17,19 | ISSUE-0962,ISSUE-0963,ISSUE-0964,ISSUE-0965 | answer-conflict,answer-missing | 是 | 保留 U |
+| 2017 | `gk-2017-spring-shanghai` | planned | succeeded | passed | — | ISSUE-1125,ISSUE-1126,ISSUE-1127 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
+| 2018 | `gk-2018-regular-beijing-arts` | planned | succeeded | passed | 9 | ISSUE-1271,ISSUE-1272 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2018 | `gk-2018-regular-beijing-science` | planned | succeeded | passed | 16 | ISSUE-1273,ISSUE-1274 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2018 | `gk-2018-regular-national-3-science` | complete | succeeded | passed | 19 | ISSUE-1283,ISSUE-1284 | answer-missing,transcription-ambiguous | 是 | 保留 U |
+| 2018 | `gk-2018-spring-shanghai` | planned | succeeded | passed | 17,18 | ISSUE-1204,ISSUE-1205 | answer-convention-ambiguous | 是 | 保留 U |
+| 2019 | `gk-2019-spring-shanghai` | planned | succeeded | passed | 18 | ISSUE-1220,ISSUE-1221,ISSUE-1222,ISSUE-1223,ISSUE-1224,ISSUE-1225 | answer-conflict,answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2020 | `gk-2020-spring-shanghai` | planned | succeeded | passed | 19 | ISSUE-1227,ISSUE-1228 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
+| 2021 | `gk-2021-regular-national-a-science` | planned | succeeded | passed | — | ISSUE-0885,ISSUE-0895 | source-mismatch,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2021 | `gk-2021-regular-national-b-arts` | planned | succeeded | passed | — | ISSUE-0884 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2021 | `gk-2021-regular-national-b-science` | planned | succeeded | passed | — | ISSUE-0886 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2021 | `gk-2021-spring-shanghai` | planned | succeeded | passed | 9 | ISSUE-1251,ISSUE-1252 | answer-conflict,answer-convention-ambiguous | 是 | 保留 U |
+| 2022 | `gk-2022-regular-national-b-science` | planned | succeeded | passed | 11 | ISSUE-0898,ISSUE-0899 | answer-missing | 是 | 保留 U |
+| 2025 | `gk-2025-regular-national-1` | legacy_unverified | succeeded | passed | — | ISSUE-0048,ISSUE-0050 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
+| 2026 | `gk-2026-regular-beijing-recall` | planned | succeeded | passed | 18 | ISSUE-1408,ISSUE-1409,ISSUE-1410,ISSUE-1414,ISSUE-1415,ISSUE-1416 | answer-conflict,answer-convention-ambiguous,transcription-ambiguous | 是 | 保留 U |
+| 2026 | `gk-2026-regular-national-1-recall` | legacy_unverified | succeeded | passed | — | ISSUE-0001,ISSUE-0060,ISSUE-0061,ISSUE-0062 | answer-conflict,identity-ambiguous,transcription-ambiguous | — | 缺源 |

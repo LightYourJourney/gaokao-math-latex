@@ -14362,9 +14362,10 @@
   "impact": "blocks_completion",
   "paper_id": "gk-2022-regular-national-b-science",
   "question_id": "gk-2022-regular-national-b-science-q16",
+  "resolution": "乙理第 16 题按源面 2a^x-e·x^2 重推：a>1 得 a<e，0<a<1 得 a>1/e，答案 (1/e,1)∪(1,e)，数值扫描边界 0.368/2.718 一致",
   "resume_action": "回查源 PDF 中指数项及“极大/极小”文字；确认原题或转录后重解。",
   "source_id": "src-b0b51a3f8309bc89c893fda343f481ab5a6011f2ca1b1dc21be11436bd938da2",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
