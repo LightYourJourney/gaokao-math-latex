@@ -13,6 +13,22 @@
 机制约束：`tools/provenance.py` 把任一题 `grade == "U"` 记为 `provenance_unknown`，
 `tools/status.py` 据此派生 `eligible_blocked`，`build_projects.py` 拒绝正式构建——含 U 的卷只能按「保留 U 并登记 ISSUE」交付。
 
+## 与 objective 三分法的对应
+
+| objective 要求 | 本表分类 | 含义 |
+|---|---|---|
+| 补源后完成 | 保留 U（源缺陷/歧义） | 固定源在盘但印面有缺字/歧义，需外部勘误或独立扫描页重证；修好后可走完 build→review→finalize |
+| 保留 U 并登记 ISSUE | 保留 U | 源文不足以唯一判定，按 U 政策不写确定答案，逐题 ISSUE 已登记 |
+| 确认 missing-source | 缺源 | `source_ids` 为空，无任何固定上游（2026 回忆版） |
+
+## 口径对账（111 套从哪来）
+
+目标里的 111 套 blocked 是 2026-11-09 立项时的快照。本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、
+`gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`、`gk-2020-regular-national-1-arts`、
+`gk-2022-regular-national-b-arts`，提交 551e3da42 / fc0740f8d / 51ba8346a / 146a5e052），
+另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 51ba8346a）。
+因此 111 = 本表 106 套 + 已封账 5 套。
+
 ## 计数
 
 - 复核总数：**106** 套（`production_state != complete`）
