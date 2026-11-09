@@ -42,6 +42,26 @@ def issue_table():
     return out
 
 
+U_MARK = re.compile(r"U/PENDING|答案：\s*U\b|待核|待定")
+
+
+def md_u_numbers(p):
+    """答案要点里被标成 U/待核 的题号（与 provenance 判定互为独立来源）。"""
+    sf = p.get("source_files") or {}
+    path = sf.get("answer_key")
+    if not path:
+        return set()
+    f = PROJ.parents[2] / path
+    if not f.exists():
+        return set()
+    out = set()
+    for block in re.split(r"(?=\*\*\d+[．.]\*\*)", f.read_text(encoding="utf-8")):
+        m = re.match(r"\*\*(\d+)[．.]\*\*", block)
+        if m and U_MARK.search(block):
+            out.add(int(m.group(1)))
+    return out
+
+
 def main():
     manifest = json.loads((PROJ / "source-manifest.json").read_text(encoding="utf-8"))
     issues = issue_table()
@@ -57,6 +77,18 @@ def main():
             for q in data.get("questions", []):
                 if (q.get("answer_evidence") or {}).get("grade") == "U":
                     u_nums.append(str(q.get("printed_number")))
+        mdU = md_u_numbers(p)
+        provU = {int(x) for x in u_nums}
+        u_all = sorted(provU | mdU)
+        diverge = "—"
+        if provU != mdU:
+            extra_md, extra_prov = sorted(mdU - provU), sorted(provU - mdU)
+            bits = []
+            if extra_md:
+                bits.append("题面多 " + ",".join(map(str, extra_md)))
+            if extra_prov:
+                bits.append("provenance 多 " + ",".join(map(str, extra_prov)))
+            diverge = "；".join(bits)
         ids = p.get("issue_ids") or []
         open_ids = [i for i in ids if issues.get(i, {}).get("status") != "resolved"]
         open_types = sorted({issues[i]["type"] for i in open_ids if i in issues})
@@ -76,19 +108,20 @@ def main():
             cat = f"补源后完成（本轮封账，提交 {SEALED[p['paper_id']]}）"
         elif not p.get("source_ids"):
             cat = "缺源"
-        elif u_nums:
+        elif u_all:
             cat = "保留 U"
         elif open_ids:
             cat = "保留 U（源缺陷/歧义）"
         else:
             cat = "可收口"
         rows.append((p["year"], p["paper_id"], p.get("blocked_from") or "—", bstat, rstat,
-                     ",".join(u_nums) or "—", ",".join(open_ids) or "—",
+                     ",".join(map(str, u_all)) or "—", diverge, ",".join(open_ids) or "—",
                      ",".join(open_types) or "—", on_disk, cat))
 
     counts = {}
     for r in rows:
         counts[r[-1]] = counts.get(r[-1], 0) + 1
+    diverged = [r for r in rows if r[6] != "—"]
     out = [
         "# blocked 卷逐条复核与分流（机械生成）",
         "",
@@ -98,7 +131,7 @@ def main():
         "## 分类规则（互斥，按序判定）",
         "",
         "1. **缺源**：`source_ids` 为空。",
-        "2. **保留 U**：`provenance.json` 中存在 `answer_evidence.grade == \"U\"` 的题（源文不足以唯一判定）。",
+        "2. **保留 U**：`provenance.json` 的 `answer_evidence.grade == \"U\"` 或答案要点里标成 `U`/`待核` 的题（两个独立来源取并集；两者不一致时在「U 判定分歧」列逐卷列出）。",
         "3. **保留 U（源缺陷/歧义）**：无 U，但仍有 `status != resolved` 的 issue。",
         "4. **可收口**：无 U、无未结 issue。",
         "",
@@ -128,9 +161,13 @@ def main():
     for k in ("补源后完成", "可收口", "保留 U", "保留 U（源缺陷/歧义）", "缺源"):
         n = sum(v for kk, v in counts.items() if kk.startswith(k)) if k == "补源后完成" else counts.get(k, 0)
         out.append(f"- {k}：**{n}** 套")
+    out += ["", "## U 判定分歧", "",
+            f"- 存在分歧的卷：**{len(diverged)}** 套（题面标记与 provenance 判定不一致，按并集仍计为保留 U）", ""]
+    for r in diverged:
+        out.append(f"- `{r[1]}`：{r[6]}")
     out += ["", "## 逐卷", "",
-            "| 年 | 试卷 | blocked_from | build | review | U 题号 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |",
-            "|---|---|---|---|---|---|---|---|---|---|"]
+            "| 年 | 试卷 | blocked_from | build | review | U 题号 | U 判定分歧 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |",
+            "|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in rows:
         out.append("| " + " | ".join(str(x) for x in r) + " |")
     (PROJ / "reports/blocked-triage.md").write_text("\n".join(out) + "\n", encoding="utf-8")
