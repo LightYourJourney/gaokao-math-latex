@@ -12257,15 +12257,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源第 1(25) 题的 A—E 图形选项区域整段空白；题干和答案表 E 可见，但无法核对 E 对应的具体图形。独立推导的反函数图形为 (x−1)^2+y^2=1 的左下四分之一弧。",
+  "current_evidence": "独立核源（2026-11-09，.work/verify/1986-guangdong-arts-q1-25.md）：1986 广东文史类第 1(25) 题为纯文字命题题，固定源全卷无图形；原「图形选项缺失」实为理工类卷内容错位继承。已按源文改写第 24、25 题与解析，答案 24=A、25=C，与固定源答案表（书页 269）一致。",
   "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
   "fingerprint": "037ee492d77a54546001612bafa94aa7f7765fd3ede8c09cc772453c69986422",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q01-(25)",
-  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "resume_action": "已按固定源订正；理工类第 25 题图形区空白另案保留。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -12291,15 +12291,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 A3 单页第 22 题的极限下标印为 n→∞，但括号内写作 (1−1/(2x))^x；变量和极限指标不一致，按字面不能得到唯一数值。独立公开图文页《1987年理科数学高考题》所展示的原卷页图也逐字呈现同一形式（https://www.sohu.com/a/203375079_100047361），确认这不是本库转录或 OCR 错误；在没有同版勘误前不能擅改变量。",
+  "current_evidence": "独立核源（2026-11-09，.work/verify/1987-national-science.md）：600dpi 放大判读下标为 n→∞、底数与指数均为 x，文本层同；源卷自身指标与变量不一致，按字面该式不是确定的数。题库三处照录 x 并标注疑点，未擅自改写为 n，处置正确。",
   "external_evidence": "另直接核查公开整理页《1987年全国统一高考数学试卷及解答（理工农医类），满分120》（https://www.toutiao.com/article/7415485199338766883/）：其附加题图片仍显示题面为 lim(n→∞)(1−1/(2x))^x，但紧接的解答图片将求解步骤写成 lim(x→∞)(1−1/(2x))^x=e^(−1/2)，即把 x 视为极限变量。该页为二手整理而非官方原件，能支持“通常意图为 x→∞”，但单独不足以替代官方勘误，因此本条仍保持 open。",
   "fingerprint": "3076fd80ee19a575e9903091e424a6c13720b649e3d08c08eb17e1c25892ecc4",
   "impact": "blocks_completion",
   "paper_id": "gk-1987-regular-national-science",
   "question_id": "gk-1987-regular-national-science-q22",
-  "resume_action": "取得变量与极限下标一致的完整固定源或独立可核验扫描页，确认第 22 题应为 x 还是 n 后，更新题面/答案/解析并重跑生成、编译和复核。",
+  "resume_action": "保持按字面转录与疑点标注；若取得官方勘误页再更新题面与答案。",
   "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -12530,14 +12530,15 @@
 ```json
 {
   "affected_paper_ids": [],
-  "fingerprint": "499eb3d8a813d12ff1d9285777fb442ee800e62dc5fb0b04baee39c9881eef55",
+  "current_evidence": "同上：文史类第 25 题为空间命题判断（文字选项），答案 C；库内先前的反函数图象题与答案 E 属理工类内容，已替换为固定源原文。",
   "external_evidence": "百度题库公开页（https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1714381465704937476&fr=search）展示了完全相同的函数及定义域，并由解析得到反函数图形为 (x−1)^2+y^2=1 在 0≤x≤1、−1≤y≤0 的弧段；该页为四选项练习题，答案标为 C，未标识为 1986 年广东卷，不能映射固定源五选项中的 E，也不能补回 A—E 原图。",
+  "fingerprint": "499eb3d8a813d12ff1d9285777fb442ee800e62dc5fb0b04baee39c9881eef55",
   "impact": "blocks_completion",
   "paper_id": "gk-1986-regular-guangdong-arts",
   "question_id": "gk-1986-regular-guangdong-arts-q01",
-  "resume_action": "取得含有第 1(25) 题 A—E 图形的同版清晰源；确认前保留题干和答案表，禁止补画为源图。",
+  "resume_action": "已按固定源订正。",
   "source_id": "src-e473c445909eeafaf4432caa72be993d8ea68e9c79b5e236da41eb6ca67e3350",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -14324,13 +14325,14 @@
 ```json
 {
   "affected_paper_ids": [],
+  "current_evidence": "独立核源（2026-11-09，.work/verify/2022-b-arts-q21.md）：水平线 y=-2 与椭圆 x²/3+y²/4=1 相切于 A(0,-2)，只有一个交点，被题干「交 E 于 M,N 两点」排除；H=N 需两交点纵坐标相同即 u=w，仅切线（k=0 或 k=2）时发生。故题设下恒有 H≠N，定点为 A(0,-2)。已改答案要点、解析正文、含解析三处并把 U/PENDING 降为定论。",
   "fingerprint": "920c377a901ddafb396c348f4b98b91817080dda4f54d4bbf4708f6f358d63b5",
   "impact": "blocks_completion",
   "paper_id": "gk-2022-regular-national-b-arts",
   "question_id": "gk-2022-regular-national-b-arts-q21",
-  "resume_action": "核实是否排除 y=-2 水平边界或需补充 H≠N 条件，再裁定唯一答案。",
+  "resume_action": "已按独立复算给出唯一答案 A(0,-2)；如日后取得官方答案页可再比对。",
   "source_id": "src-e940ecc4f17429569b803de22ce16b6de7de5433e5e0c169584e3ed752288538",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -17447,14 +17449,14 @@
 ```json
 {
   "affected_paper_ids": [],
-  "current_evidence": "固定源 PDF 仅含题面。第15题题干要求斜高；本库解析正文由底面周长30、12得两底边长10、4，侧面积为21l，底面积差为 √3/4·(10²−4²)=21√3，故推导 l=√3 cm；但答案要点表、分题答案及简答版均记为 3π。既有 provenance 的盲核证据也同时写‘斜高为√3，体积为3π’，与题目所求和推导不一致。尚无新的独立盲核，故不擅自改答案或沿用旧无冲突结论。",
+  "current_evidence": "独立核源（2026-11-09，.work/verify/1987-national-science.md）：固定源仅题面；由下底周长 30、上底周长 12 得边长 10、4，三侧面梯形面积和 21l，两底面积差 √3/4·(10²−4²)=21√3，故 l=√3 cm；apothem 差恰为 √3 说明原题数据几何退化但解唯一。已把答案要点速查表与分题答案、含解析中的 3π 改为 √3 cm。",
   "fingerprint": "b4fe160c16c4b3919b84809194e242ef288686ccf18f13bc892458bbdf23a574",
   "impact": "blocks_completion",
   "paper_id": "gk-1987-regular-national-science",
   "question_id": "gk-1987-regular-national-science-q15",
-  "resume_action": "取得一次新的独立盲核，复核第15题正确斜高；确认后更正答案要点和短答输出、刷新逐题 provenance 与四版构建，并重新复核。",
+  "resume_action": "已按独立复算订正答案要点、含解析与短答生成链；若日后取得官方答案页可再比对。",
   "source_id": "src-1027abd4ab36c6d3535d5370b4fa98af66ccd38c7dbd2cc91c43a06b1154cff0",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-conflict"
 }
 ```
