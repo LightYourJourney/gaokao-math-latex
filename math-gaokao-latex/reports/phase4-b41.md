@@ -9,8 +9,8 @@
 
 - 标题：2015 年·陕西卷·理工农医类
 - 项目目录：`2015_陕西卷_理科`
-- 构建：`succeeded`（attempt `c4ace5fd-d3c1-42dd-afce-9b146d9e5777`）
-- 审查：`passed`（2026-11-06T04:20:11+08:00）
+- 构建：`succeeded`（attempt `9d5e4ddc-dfed-4be5-bde2-fef6d713a186`）
+- 审查：`passed`（2026-11-09T12:26:36+08:00）
 - 内容候选：`eligible_blocked`
 - 页数：试题版 6；解析版 21；简答版 8；印刷版 17
 - 警告豁免：0
