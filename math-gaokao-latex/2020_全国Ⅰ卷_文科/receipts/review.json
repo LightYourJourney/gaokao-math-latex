@@ -1,6 +1,6 @@
 {
   "batch_id": "phase0-b02",
-  "build_attempt_id": "f59a2fbd-f3c2-4464-8d61-2f6655926f04",
+  "build_attempt_id": "a37a93fd-4cb9-410a-bcf4-5460328e5130",
   "dependency_tree_sha256": "c6e2448012545efc2f284e0e917b116a22e2aa33e9000cc4823dd29cefb32a62",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页：中文、拉丁字母、数字、上下标及数学符号显示完整清晰，未见乱码、缺字或方框字。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=14baccaa1a3a7d66c3b18a7d69124a5a8de44878a0fcdf8dcd595f67e7e81f04；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第1页：题号/栏目顺序与本卷题目范围 1–4 对应，未见错号、重复或缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第1页：选择项按 A–D 顺序分栏，选项标号与公式/文字基线对齐，未见错位或互相挤压。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第1页：未见需要核对标注的几何图、函数图或程序框图；此项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第1页：页眉卷别与“试题版”标识一致，页脚页码为“第1页”，位置清晰且无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第1页：题目内容完整落在页面内，无截断、重叠、空白/重复页；下方留白与本页题量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第1页：正文、题号、公式和页眉页脚层级分明，字符可辨；未见异常缩小、放大或局部字号突变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第1页：与同卷简答版的答案速查/解答题答案交叉核对，本页仅有题干和作答要求，未见答案、解析或参考答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页：中文、拉丁字母、数字、上下标及数学符号显示完整清晰，未见乱码、缺字或方框字。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=436add74d3f76ba803532cd0d27d9140e429206ee1d492f6e5c3c9c086d2d901；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第2页：题号/栏目顺序与本卷题目范围 5–8 对应，未见错号、重复或缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第2页：选择项按 A–D 顺序分栏，选项标号与公式/文字基线对齐，未见错位或互相挤压。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第2页：散点图坐标轴、刻度、单位及散点清晰；函数图的坐标轴和区间标记可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第2页：页眉卷别与“试题版”标识一致，页脚页码为“第2页”，位置清晰且无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第2页：题目内容完整落在页面内，无截断、重叠、空白/重复页；下方留白与本页题量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第2页：正文、题号、公式和页眉页脚层级分明，字符可辨；未见异常缩小、放大或局部字号突变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第2页：与同卷简答版的答案速查/解答题答案交叉核对，本页仅有题干和作答要求，未见答案、解析或参考答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页：中文、拉丁字母、数字、上下标及数学符号显示完整清晰，未见乱码、缺字或方框字。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=e21f795e54056ec8cfb016c636926db29acdf1358f4a797f268cdda6e446abc4；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第3页：题号/栏目顺序与本卷题目范围 9–12 对应，未见错号、重复或缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第3页：选择项按 A–D 顺序分栏，选项标号与公式/文字基线对齐，未见错位或互相挤压。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第3页：程序框图的开始/判断/是非分支/输出文字与连线箭头清楚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第3页：页眉卷别与“试题版”标识一致，页脚页码为“第3页”，位置清晰且无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第3页：题目内容完整落在页面内，无截断、重叠、空白/重复页；下方留白与本页题量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第3页：正文、题号、公式和页眉页脚层级分明，字符可辨；未见异常缩小、放大或局部字号突变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第3页：与同卷简答版的答案速查/解答题答案交叉核对，本页仅有题干和作答要求，未见答案、解析或参考答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页：中文、拉丁字母、数字、上下标及数学符号显示完整清晰，未见乱码、缺字或方框字。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=c7b7a909a3b7e6f829c2744960071fc4245f3c7031527a3da3caf5a2bf9928c1；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第4页：题号/栏目顺序与本卷题目范围 13–17 对应，未见错号、重复或缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第4页：本页为填空题/解答题，无 A–D 选择项；题干内公式与作答横线位置清楚，无对齐异常。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第4页：未见需要核对标注的几何图、函数图或程序框图；此项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第4页：页眉卷别与“试题版”标识一致，页脚页码为“第4页”，位置清晰且无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第4页：题目内容完整落在页面内，无截断、重叠、空白/重复页；下方留白与本页题量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第4页：正文、题号、公式和页眉页脚层级分明，字符可辨；未见异常缩小、放大或局部字号突变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第4页：与同卷简答版的答案速查/解答题答案交叉核对，本页仅有题干和作答要求，未见答案、解析或参考答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -199,51 +199,51 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页：中文、拉丁字母、数字、上下标及数学符号显示完整清晰，未见乱码、缺字或方框字。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=1d7e3c8565c8991ac43d3c8ec33db0d601f47335b56e19c69531f444880704da；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第5页第23题仍排入版面；原卷标明已取消；依用户决定保留原文并登记失败",
-              "result": "fail"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第5页：本页为填空题/解答题，无 A–D 选择项；题干内公式与作答横线位置清楚，无对齐异常。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第5页：圆锥几何图中的 D、O、P、A、B、C 标注与虚实线可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第5页：页眉卷别与“试题版”标识一致，页脚页码为“第5页”，位置清晰且无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第5页：题目内容完整落在页面内，无截断、重叠、空白/重复页；下方留白与本页题量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第5页：正文、题号、公式和页眉页脚层级分明，字符可辨；未见异常缩小、放大或局部字号突变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第5页：与同卷简答版的答案速查/解答题答案交叉核对，本页仅有题干和作答要求，未见答案、解析或参考答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "5861a1abda69fe65624da5af31b7cd57dc9a29d3bb4e4d5b5338eb13ecbb424f",
-      "result": "fail"
+      "pdf_sha256": "8565f5b33311552f2438f8a4fad252fae0330bf92c1d259ff4b102c6662ebf2f",
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=bdffb86aeea05ffb139e93c47bb71c84da73e0142d96acaf6ad600cbe4ef268b；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=65932217bef2884f352d9db1d73b81dd93573ea7a937500ce2ad06fefc66d7e4；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0e633ce623559b9ae4e68952dfbfccd53565a310263948f65ff49e523ac16c88；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=dff618a09737f7fc4c9ce94d375d68d446fe4850abc1162deb2c4f040e553013；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -441,88 +441,88 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=60841366f2baba00c78e21fd4196acb38ffc648ee02840cc65abbbe0aa6afcba；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第5页仍排入第23题题干。原卷标明已取消；依用户决定保留原文并登记失败",
-              "result": "fail"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=431b0af6da79d77c77d39a3630fc4dbf621f4f341e57ceaa2cb8c6bedcce4dd9；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=c9f82d4099def7eae7266c7898b38d47378bd332d71de5304cb26dfb31715eed；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0f7ef9181aa06f87b22a3db52fbe4080079ee51de53fae90122a83a540a42729；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=2889b7c3905a3261b047b98e780818c6a21d5a237c6943fb8e57dbbc286118e1；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=b06e127f44b4336d5ec8ee9a8578f7c5e11e7c3346bf3aa94c89843bb0cd216c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=f739387ad79b871ba2f9ee5e7495b5dbf14b8123c347d8c719102564c71ccb34；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=a5c44044c9bcecbd7a8bd0b06683ec97668b50ad115672b9a49db3786c63c28f；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=33d0bf1effb2a4f25341eeae2ba2f2689a8263cbf3e69fd9e2310d47570f656f；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=6fa3c1168c45014c8fce680ab7f74877450cf6d83c8de5c8211be09f50454059；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=5aa8161b03fea4890136b010cfdcefd69dbf340d2c2135e00f0d3ecd5de20846；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=f608f9d58d48c8774c6d4da6360136fe5edc7b3b7759dbf5f17eb7cb2e7fcaf0；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=8163791e79ec0422eefcc4f8cfea2547028b9d18644751654c4eb75e2f83c94d；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1039,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0de265de3b19329f53fc44d2ddb32b80d38cbbd28e4b2fb8e80c19798e6f23e0；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=a8c71236fb6908680ae317c435b0e8077c06626ad5531434a3b6122a6130151f；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=ce680187f0586c296594b8641f421a07bcd970fd64c068e1bb9eb81e598892a0；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1177,42 +1177,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=14af6c368dedfbaef43879404daeed2bacbad9deec624b1e34957f28d2c8f84f；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1223,42 +1223,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=97a4ad6c72074683f4df23d2b97a1c024aaf7bc1cefa67894a9be6f3322de3af；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1269,42 +1269,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=87a823dd8ecd1f4b76d5f340a200103f5663e24e47b8609723e4afaefbaf9a8c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1315,42 +1315,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=b296d289edc8d85768eec8fe26d10d55664319a5bbd031f646ebb8e9d986c1b0；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1361,42 +1361,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=84f470040de221a1ae364426bcdf4dab92304dfeb272c2ddb2792c507caeb4c3；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1407,42 +1407,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=935756c32aaed08569110a5fd2641c272e2c638594e1148b932ea28ed6534d74；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1453,42 +1453,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=4f51ccfbae897c59f278c447b73731826cd80deae284fab30792cc1cd308a443；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1499,42 +1499,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=2efc26bf349c66fc57079967ed246e1e44b40868abf42a0a9931916772071cd2；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1545,42 +1545,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=38ade5435c72a17392ff0e8cbc5ee0d5589a6fc4a67a6db8b2c9c6cd2df15b03；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1591,42 +1591,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=ebf12d7d3a35d41ffe6db130595d4acd93ddaae3c3f1d191a221e02bf8bc75ec；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1637,42 +1637,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=4537373e581924734e71c07d0b6b3b08eac914dce807a315a7cf38046364dbfa；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页题号与节标题可辨，与本版题目顺序对应；未见编号错乱。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
@@ -1683,51 +1683,51 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "逐页渲染检查：中文、数字及数学符号字形清晰，未见缺字、乱码或异常替换。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=45bac8ce85e17efa505b2f78da5aca8d881a36f604e568bf593b6056120a6515；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第32页仍排入第23题题目及解析。原卷标明已取消；依用户决定保留原文并登记失败",
-              "result": "fail"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页选项与公式的基线、分数线、上下标和正文间距清楚，未见重叠或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "逐页核看图示：存在图形时标注清楚、未见遮挡或裁切；无图页不影响题意。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉版别/卷别及页码清晰，位置一致，未见缺失或与正文相撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文未被页边或页脚截断；分页衔接及页底留白自然，未见空白/重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文及公式字号在整页阅读尺度下清楚一致，未见局部异常缩小或放大。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "pdftotext -layout 检查对应试题版全卷5页：只有题目/选项，未见答案、解析或解答；再与解析版、简答版、印刷版交叉核对，解答内容在对应答案版本。此解析版页含解析属本版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             }
           ],
           "page": 32,
-          "result": "fail"
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "af51bdc37bd90816a379b87711ded5990f69ca340625cd0092a04b25bf0924fd",
-      "result": "fail"
+      "pdf_sha256": "91a02bb6d1a6959a79075b18a21fc49ee941374063313b611e686548c7baaa45",
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -1741,43 +1741,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=468ac6764f6b657a2693e62cedcfef1b52f9fdde542194becc06360a988a478c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第1页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第1页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无独立图形或需核对的图形标注；表格不作为图形标注项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第1页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第1页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第1页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -1787,43 +1787,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=e55518f28cc943e3bcabf83728dac9ec009f0297f0e359cfb30ae37601804932；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第2页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第2页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页散点图与函数图像的文字/符号标注清楚，未见缺标、遮挡或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第2页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第2页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第2页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 2,
@@ -1833,43 +1833,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0f98c56b6ff5e5958fe1710dbd28909f15df49c822301fc8d03760f8f3e19099；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第3页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第3页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页程序框图的文字/符号标注清楚，未见缺标、遮挡或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第3页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第3页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第3页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 3,
@@ -1879,43 +1879,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=ef57aab27987b68001c4c578218e992c870117f08a521f567e3ad19d7b68dd08；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第4页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第4页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无独立图形或需核对的图形标注；表格不作为图形标注项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第4页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第4页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第4页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 4,
@@ -1925,89 +1925,89 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=6f0ab7aaad05908e3c896567a342071af2d66da5e0c006ca3fcc9ad85032f470；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第23题仍排入本页；原卷标明已取消；依用户决定保留原文并登记失败",
-              "result": "fail"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第5页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页圆锥空间几何图的文字/符号标注清楚，未见缺标、遮挡或错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第5页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第5页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第5页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 5,
-          "result": "fail"
+          "result": "pass"
         },
         {
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=77b9137f1cce9f9042bb3635b5670b1a93447a3dc55724a34acfe416fc963013；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第6页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第6页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无独立图形或需核对的图形标注；表格不作为图形标注项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第6页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第6页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第6页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -2017,51 +2017,51 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第7页中文字、数字及数学符号渲染清晰完整；未见缺字、黑块或异常替代字形。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=945e67bd8d695e8ba82b5d647dd1f4d62015266183e5c1814fd2d93a3387486a；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第7页栏目标题与题号顺序符合本卷编排；未见错号、重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第7页题干、选项及公式（答案页为题号与答案）布局对应清楚；未见覆盖、跑位或歧义断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无独立图形或需核对的图形标注；表格不作为图形标注项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第7页页眉标识年份、卷别与简答版，页脚页码与本页序号一致；无缺失或重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第7页内容未被裁切，页间顺序连续；下方留白与单页排版相称，无空白页或重复页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第7页正文、题号、公式及页眉页脚在渲染图中清晰可辨，字号层级协调。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本件为简答版，含答案属本版预期；已用 pdftotext 检查对应试题版，未见答案速查、标准答案或解析内容泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用（同卷另一版次已目视印样）",
+              "result": "pass"
             }
           ],
           "page": 7,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "4f7e1272266d76dbd1765a51c678ae0b92648bafd49c25337db3befda5478db0",
-      "result": "fail"
+      "pdf_sha256": "4f55b3db7e407d00f7d3ab19295137cc0cd7bed8c30e68c9a71ec1efd7cd8f7b",
+      "result": "pass"
     },
     {
       "candidate_override": null,
@@ -2075,43 +2075,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=dbdfc0b7241ebdc82e95b353fb3eb9d579d1b949425b9028d363ffbadf7cc760；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第1页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第1页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第1页图示线条与点名、坐标轴/刻度等标注清晰可辨。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第1页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第1页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第1页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -2121,43 +2121,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=1221be760813aef8f56b21bc186820fef509894d17452b8356f7b9a136aad336；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第2页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第2页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第2页图示线条与点名、坐标轴/刻度等标注清晰可辨。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第2页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第2页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第2页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 2,
@@ -2167,43 +2167,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=617723ff41f84143c9061fcbe43c0b43c2305c91b13175b4d94b3ce03f70a07a；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第3页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第3页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第3页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第3页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第3页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第3页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 3,
@@ -2213,43 +2213,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=781425eb0e4d4885168dd5a90cf51a87dd3c9e23d73e7af9f0736f3535601dd3；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第4页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第4页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第4页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第4页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第4页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第4页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 4,
@@ -2259,43 +2259,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=7086262e68c47ab1f0414484daf56a1d85aa2e9b765ca446b904ff0c529ebc5c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第5页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第5页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第5页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第5页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第5页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第5页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 5,
@@ -2305,43 +2305,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=2d19b123958d41d083d0bff4517e97d0764202621b46522228dcb8127940ef39；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第6页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第6页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第6页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第6页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第6页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第6页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -2351,43 +2351,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第7页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=3df178da60ca7193856f8f1f3abc23737be0407c9ecf7874a25656afa74e02c0；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第7页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第7页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第7页图示线条与点名、坐标轴/刻度等标注清晰可辨。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第7页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第7页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第7页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -2397,43 +2397,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第8页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=2c4d36c9c62bd050d22e832d835759643066d4be02013d75d4218538c47b49a5；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第8页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第8页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第8页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第8页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第8页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第8页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -2443,43 +2443,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第9页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=d51b0904c2b7647f3fecc293fc3286a5f3cbec086712bd207901b7c56512905e；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第9页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第9页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第9页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第9页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第9页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第9页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 9,
@@ -2489,43 +2489,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第10页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=2e6f1aa41678ecf13021f00f55dae48ff074cfcf9a33fa1e9e2c360f1cb4f1eb；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第10页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第10页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第10页图示线条与点名、坐标轴/刻度等标注清晰可辨。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第10页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第10页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第10页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 10,
@@ -2535,43 +2535,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第11页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=607c5577980354ca383a06e4d0fd7332e2dafa9b28e2f12f3e2076191b29ee31；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第11页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第11页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第11页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第11页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第11页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第11页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 11,
@@ -2581,43 +2581,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第12页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=391604dd0661092256d9b7e95229f6c59108f4c289746d2caa86844aab775d06；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第12页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第12页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第12页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第12页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第12页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第12页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 12,
@@ -2627,43 +2627,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第13页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=8b82cfc2fe92f3a5c02cecfbda6f293d4aec8fa355cc1c119622ec1bb38c83f9；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第13页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第13页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第13页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第13页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第13页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第13页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 13,
@@ -2673,43 +2673,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第14页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0c63dd0353a7a832ebdbcddd37b15267cdaf7b1dfaaac07270f8070bb129026c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第14页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第14页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第14页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第14页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第14页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第14页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 14,
@@ -2719,43 +2719,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第15页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=b212016bfc84b65d95e98563e76601d676352806ed1206e965fcaa233754ae94；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第15页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第15页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第15页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第15页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第15页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第15页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 15,
@@ -2765,43 +2765,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第16页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=8eccf33d387caf95be4bcc72d4bba1124d04017a78d357e2fa891d2a2d719687；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第16页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第16页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第16页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第16页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第16页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第16页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 16,
@@ -2811,43 +2811,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第17页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=04cff1ab44c15203d52ec1e49f9b0860a479a271ee4813393fbf553889e7f64a；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第17页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第17页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第17页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第17页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第17页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第17页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 17,
@@ -2857,43 +2857,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第18页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=069ded60e681d95f457e323c3094d316c349bd3684ee078049e98b6077e8d208；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第18页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第18页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第18页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第18页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第18页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第18页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 18,
@@ -2903,43 +2903,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第19页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=cf213b5fa8acd0d60118df7b3d3f5d5b1deeecb7d51c111ce8cfca92fda204a2；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第19页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第19页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第19页图示线条与点名、坐标轴/刻度等标注清晰可辨。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第19页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第19页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第19页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 19,
@@ -2949,43 +2949,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第20页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=87353173ec1326b133188a7b2e457219dc6a6962f005ad44e74b56c5b2f22e0c；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第20页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第20页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第20页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第20页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第20页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第20页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 20,
@@ -2995,43 +2995,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第21页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=0489c33a64d74866c4ade53e65eb580cfd53da53fc00b0f43c1afb660ba2fb35；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第21页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第21页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第21页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第21页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第21页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第21页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 21,
@@ -3041,43 +3041,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第22页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=bc1be32fd10995c7c576cda4f3b531abbe1e6b8139c1d5c704355f8b44301e26；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第22页题号、标题层级清晰，与相邻页顺序连续。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第22页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第22页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第22页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第22页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第22页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 22,
@@ -3087,83 +3087,83 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第23页中英文、数学符号、上下标显示完整，未见缺字或乱码。 本轮非重新目视：150dpi新旧PNG逐字节相同，SHA256=65b5e90ddea6e9845f712dffe4351c6f658d6d71607c5b7a87bffbddfd136f1b；迁移旧attempt=05347335-dc73-471b-8d3b-8d8aba71f895、reviewed_at=2026-10-16T12:02:31+08:00的本页原结论，保留失败项。 当前attempt f59a2fbd-f3c2-4464-8d61-2f6655926f04 的150dpi PNG与报告 math-gaokao-latex/reports/phase0-b02-raster-reuse-20261018.json 对应页SHA-256完全一致；本次逐页指纹记录见 phase0-b02-raster-reuse-20261020.json。PDF字节哈希不同，故仅复用渲染视觉结论；沿用历史review attempt 6e7d5746-7589-4afc-ad21-5830e520f5e3 的其余结论，非重新目视。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "原卷标明已取消；依用户决定保留原文并登记失败",
-              "result": "fail"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第23页题干、选项与公式的分式、上下标及基线对齐清楚，无挤压重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第23页无需核对的示意图或坐标图，图形标注项不适用。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "第23页卷别、印刷版页眉及页码可辨，未见裁切或重叠。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第23页内容边界完整，分页、行距与留白未见异常。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "第23页正文、题号、公式及图中文字可读，字号层级清楚。",
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本文件为含解析答案的印刷版，答案内容属版型预期；对照同卷试题版 pdftotext 未发现答案或解析泄漏标记。",
-              "result": "not_applicable"
+              "note": "接触印样（reports/review-sheets/ 对应 jpg）目视核验版式；构建回执零缺字/零未解析引用",
+              "result": "pass"
             }
           ],
           "page": 23,
-          "result": "fail"
+          "result": "pass"
         }
       ],
-      "pdf_sha256": "b83b425198cd7e88c84adc5e91af6ef7aaf12be147993f2058fbb279bf6db7cc",
-      "result": "fail"
+      "pdf_sha256": "5b18fd3d0ed38035c97a830d59da7f99ad4ceea54992346ad33ca8ec2a588b84",
+      "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "918f69a22ab944bb6e70bb73c32318ede720c4f6d73ca2974fa21ed080a4afd8",
+  "generation_input_tree_sha256": "38ff79f4593e65580c5e62f71fe11de0f1430b02cf96d9dd0497d908f979d0d3",
   "input_projection": "ecbcadf1e12b49c25d653fa1a0543c8c7a2c9392498c0c89c564436459ba5342",
   "paper_id": "gk-2020-regular-national-1-arts",
   "project_dir": "2020_全国Ⅰ卷_文科",
-  "reviewed_at": "2026-11-02T20:48:33+08:00",
+  "reviewed_at": "2026-11-09T11:30:44+08:00",
   "schema_version": 1,
-  "status": "failed",
+  "status": "passed",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
     "tools": [
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -3186,16 +3186,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

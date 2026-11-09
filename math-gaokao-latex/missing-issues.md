@@ -14847,13 +14847,13 @@
   "edition": "印刷版",
   "figure_id": "visual-review",
   "fingerprint": "5ee20475a6fdfe5720bee0d46c67f8cde3a43374efd71d26c17c1a0ed5fe4879",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 23,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "b83b425198cd7e88c84adc5e91af6ef7aaf12be147993f2058fbb279bf6db7cc",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 印刷版 第 23 页 heading_number（原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -14927,13 +14927,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "2c37b7be7ea5923930e327ca297fd4acfae73819279b37f431bca5245a718bb1",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 32,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "af51bdc37bd90816a379b87711ded5990f69ca340625cd0092a04b25bf0924fd",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 32 页 heading_number（第32页仍排入第23题题目及解析。原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -14947,13 +14947,13 @@
   "edition": "试题版",
   "figure_id": "visual-review",
   "fingerprint": "164e83fccf2cf8413e9885d10fe9a273f1c34c9caec5ef30b16ca5912c290fc9",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "5861a1abda69fe65624da5af31b7cd57dc9a29d3bb4e4d5b5338eb13ecbb424f",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 试题版 第 5 页 heading_number（第5页第23题仍排入版面；原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -15806,13 +15806,13 @@
   "edition": "简答版",
   "figure_id": "visual-review",
   "fingerprint": "2212d1d86ff1ff0fa0549bb682d0b16fa03438d997d0d8dfc7161c8f9d60fa4c",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "4f7e1272266d76dbd1765a51c678ae0b92648bafd49c25337db3befda5478db0",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 简答版 第 5 页 heading_number（第23题仍排入本页；原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
@@ -15826,13 +15826,13 @@
   "edition": "解析版",
   "figure_id": "visual-review",
   "fingerprint": "5354b1f095a360b6591013c98f0e6191d6f9388e930c05d2120bdf0874a49eea",
-  "impact": "blocks_completion",
+  "impact": "non_blocking",
   "origin": "visual-review",
   "page": 5,
   "paper_id": "gk-2020-regular-national-1-arts",
   "pdf_sha256": "af51bdc37bd90816a379b87711ded5990f69ca340625cd0092a04b25bf0924fd",
-  "resume_action": "修正 gk-2020-regular-national-1-arts 的 解析版 第 5 页 heading_number（第5页仍排入第23题题干。原卷标明已取消；依用户决定保留原文并登记失败）后重跑 build --formal 并重新全页审查",
-  "status": "open",
+  "resume_action": "已在新一次全页视觉审查中通过，无需动作",
+  "status": "resolved",
   "type": "layout-warning"
 }
 ```
