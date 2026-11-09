@@ -37,7 +37,7 @@
 上游固定 commit：`34c13a6cf632c0b69c95f89b9b923bbc4a08924d`（`https://github.com/deekur/gaokaomath`）。
 上游文件读取自 `gaokaomath-src/`（只读；该目录被 main 的 `.gitignore` 忽略）。
 
-manifest 中这 6 个 source 的 `sha256`/`pages`/`bytes`/`materialized_path` 当前均为 `null`，需在各自批次里先物化并回填，不得手填未经实测的值。
+manifest 的 source 记录只有 `artifact`（含 `sha256`/`page_count`/`size_bytes`）与 `source_state`，没有独立的物化路径字段；本计划立项时这 6 个 source 均未登记 `artifact`，需在各自批次里先实测回填，不得手填未经实测的值。
 
 ## 3. 每套卷的固定流水线（沿用 phase4-b78…b93）
 
