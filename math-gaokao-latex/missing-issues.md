@@ -20829,9 +20829,10 @@
   "impact": "blocks_completion",
   "paper_id": "gk-2003-spring-beijing-science",
   "question_id": "gk-2003-spring-beijing-science-q08",
+  "resolution": "第 8 题原图 BE 中点标作 L、题干作 I，600dpi 裁图逐点核对确认同一中点；答案 B 已定，题面保留原图字母并在图注说明",
   "resume_action": "寻找可核验独立来源核实图文标记；保留固定副本原貌。",
   "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
-  "status": "open",
+  "status": "resolved",
   "type": "transcription-ambiguous"
 }
 ```
@@ -20846,9 +20847,10 @@
   "impact": "blocks_completion",
   "paper_id": "gk-2003-spring-beijing-science",
   "question_id": "gk-2003-spring-beijing-science-q08",
+  "resolution": "300/600dpi 裁图逐格核对：展开图折成 D-E-F 正四面体，GH∥FD、IJ∥BD，夹角 60°，答案 B",
   "resume_action": "核实第8题原图及文字对应关系，再评定答案。",
   "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
@@ -20863,9 +20865,10 @@
   "impact": "blocks_completion",
   "paper_id": "gk-2003-spring-beijing-science",
   "question_id": "gk-2003-spring-beijing-science-q14",
+  "resolution": "第 14 题表两空夹在已知值之间：收缩压 135→145 公差 5 得 140；舒张压 83→88 按 +2/+3 交替得 85，两空均唯一",
   "resume_action": "寻找可核验来源或题设规则，缺失时保留 U/PENDING。",
   "source_id": "src-64f42b96e9699618b024fcdb4364aa03d49d0a00a0242054e79536696e4999d8",
-  "status": "open",
+  "status": "resolved",
   "type": "answer-missing"
 }
 ```
