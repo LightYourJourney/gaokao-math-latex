@@ -130,3 +130,21 @@
 **保留 U**：源在盘但 issue 属答案口径/身份/源不匹配，源内证据无法解决，须外部勘误。
 
 **真缺源**：无 source_ids 或登记上游文件不存在，按 missing-source 披露。
+
+## 复核后的分流修订（task-3 执行结论）
+
+初版按 `resume_action` 措辞把 66 套归为「可补源」，逐卷核源后修正如下（详见 `reports/u-retention-policy.md`）：
+
+| 试卷 | 结论 | 依据 |
+|---|---|---|
+| `gk-1986-regular-guangdong-arts` | 已 complete | 24/25 题原误录理工类内容，按源改为文史类（答案 A、C），链全跑并 finalize（phase2-b58） |
+| `gk-1987-regular-national-science` | 已 complete | 第 15 题斜高两底差 21√3/21=√3 cm（原 $3\pi$ 为硬错）；第 22 题抽取与源逐字一致、源缺陷留 ISSUE-1065（phase2-b61） |
+| `gk-2003-spring-beijing-science` | 已 complete | 第 8 题原图 L 即题干 I（BE 中点），判 B；第 14 题两空由相邻数据唯一锁定 140、85（phase1-b56） |
+| `gk-2022-regular-national-b-arts` | 保留 U | 第 11 题 A/C 两种构造均自洽，源文不排除任一 |
+| `gk-2022-regular-national-b-science` | 保留 U | 第 16 题已按源 `2a^x-e·x^2` 判定 D；第 11 题同乙文仍 U |
+| `gk-2015-regular-shaanxi-science` | 保留 U | 第 11 题判 D、第 16 题数值 6/5 已修正；第 19(2) 源文缺往返联合分布 |
+| `gk-1988-regular-guangdong-science` | 保留 U | 第 23 小题右图在固定源中缺失，需更完整源或独立扫描页 |
+| `gk-2015-regular-hunan-science` | 保留 U | 第 14 题依赖「定义域约定」原页，固定源无答案页 |
+| `gk-2007-regular-beijing-science` | 保留 U | 第 19 题「半轴长」术语需独立同期题面核实，不静默改写 |
+
+机制约束（决定后 6 套无法 finalize）：`tools/provenance.py:687-691` 把任一题 `grade=="U"` 或 `transcription_review.result!="passed"` 记为 `provenance_unknown`，`tools/status.py` 据此派生 `eligible_blocked`，而 `blocked` 要求 blockers 非空 ⇒ `build --formal` 直接拒绝（`build_projects.py:1369`）。**含 U 答案的卷在现有工具链下不可能通过正式构建**，因此它们只能归入 task-4 的保留 U 口径，不能计入 task-3。
