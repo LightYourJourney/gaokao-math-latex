@@ -183,10 +183,10 @@ def _issue_summary(records: Sequence[Mapping[str, Any]]) -> Dict[str, int]:
     states = Counter(str(issue.get("status") or "unknown") for issue in records)
     return {
         "total": len(records),
-        "open": states["open"],
+        "open": sum(count for state, count in states.items() if state != "resolved"),
         "resolved": states["resolved"],
         "blocks_completion": sum(
-            issue.get("status") == "open" and issue.get("impact") == "blocks_completion"
+            issue.get("status") != "resolved" and issue.get("impact") == "blocks_completion"
             for issue in records
         ),
     }

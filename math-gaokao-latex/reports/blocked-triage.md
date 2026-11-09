@@ -11,7 +11,7 @@
 4. **可收口**：无 U、无未结 issue。
 
 机制约束：`tools/provenance.py` 把任一题 `grade == "U"` 记为 `provenance_unknown`，
-`tools/status.py` 据此派生 `eligible_blocked`，`build_projects.py` 拒绝正式构建——含 U 的卷只能按「保留 U 并登记 ISSUE」交付。
+`tools/status.py` 据此派生 `eligible_blocked`；构建本身可成功（回执 `succeeded`），但派生状态落为 blocked、不予封账——含 U 的卷只能按「保留 U 并登记 ISSUE」交付。
 
 ## 与 objective 三分法的对应
 
@@ -23,9 +23,9 @@
 
 ## 口径对账（111 套从哪来）
 
-目标里的 111 套 blocked 是 2026-11-09 立项时的快照。本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、
+目标里的 111 套 blocked 是立项时（2026-11-09）的口径注记，**无法从当前仓库机械复算**；本轮已封账 5 套（`gk-1986-regular-guangdong-arts`、
 `gk-1987-regular-national-science`、`gk-2003-spring-beijing-science`、`gk-2020-regular-national-1-arts`、
-`gk-2022-regular-national-b-arts`，提交 551e3da42 / fc0740f8d / 51ba8346a / 146a5e052），
+`gk-2022-regular-national-b-arts`；封账提交分别为 dceb1fde1 / fc0740f8d / 51ba8346a / 7ea5e8efb），
 另有 3 套原为 `compiled` 的已封账（`gk-2019-regular-national-1-{arts,science}`、`gk-2020-regular-national-1-science`，提交 51ba8346a）。
 因此 111 = 本表 106 套 + 已封账 5 套。
 
@@ -42,7 +42,7 @@
 | 年 | 试卷 | blocked_from | build | review | U 题号 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |
 |---|---|---|---|---|---|---|---|---|---|
 | 2025 | gk-2025-regular-national-1 | legacy_unverified | succeeded | passed | — | ISSUE-0048,ISSUE-0050,ISSUE-0056,ISSUE-0057,ISSUE-0058,ISSUE-0059 | source-mismatch,source-unavailable,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
-| 2026 | gk-2026-regular-national-1-recall | legacy_unverified | succeeded | passed | — | ISSUE-0001,ISSUE-0060,ISSUE-0061,ISSUE-0062,ISSUE-0064,ISSUE-0065,ISSUE-0066,ISSUE-0067,ISSUE-0068,ISSUE-0069 | answer-conflict,answer-missing,identity-ambiguous,source-mismatch,source-unavailable,transcription-ambiguous | 是 | 缺源 |
+| 2026 | gk-2026-regular-national-1-recall | legacy_unverified | succeeded | passed | — | ISSUE-0001,ISSUE-0060,ISSUE-0061,ISSUE-0062,ISSUE-0064,ISSUE-0065,ISSUE-0066,ISSUE-0067,ISSUE-0068,ISSUE-0069 | answer-conflict,answer-missing,identity-ambiguous,source-mismatch,source-unavailable,transcription-ambiguous | — | 缺源 |
 | 1977 | gk-1977-regular-inner-mongolia-arts | planned | succeeded | passed | — | ISSUE-0129,ISSUE-0130 | answer-conflict | 是 | 保留 U（源缺陷/歧义） |
 | 1977 | gk-1977-regular-jiangsu | planned | succeeded | passed | — | ISSUE-0131,ISSUE-0132 | transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |
 | 1977 | gk-1977-regular-fujian-arts | planned | succeeded | passed | — | ISSUE-0133,ISSUE-0134,ISSUE-0135,ISSUE-0136 | answer-missing,transcription-ambiguous | 是 | 保留 U（源缺陷/歧义） |

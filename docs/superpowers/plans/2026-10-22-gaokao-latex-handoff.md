@@ -5,9 +5,9 @@
 - 分支：`feat/gaokao-phase0`（worktree `仓库根`），只在此分支推进，不 push。
 - 2005 年：32 套中 29 套 `complete`，3 套 `blocked`（全国1理 ISSUE-0834；上海文 ISSUE-1377/1379；上海理 ISSUE-1380/1381），阻断理由与 `resume_action` 见 `math-gaokao-latex/missing-issues.md`。
 - 本阶段封账批次：b94 辽宁、b95 江苏、b96 全国Ⅲ文、b97 全国Ⅲ理、b98 浙江文、b99 浙江理；春季 3 套复核无需重做。
-- 全量门禁：`generate_projects --all --check`、`manifest_csv --check`、`report.py render/check --all` 全部通过；`review_receipts check-all` 有 316 批次因视觉工具指纹变化失效（既有问题，待整体重审）。
-- 下一步：按年份继续 2006 起的 ready 来源；或先处理 316 批次 review 失效面。
-更新时间：2026-11-08（中国标准时间）
+- 全量门禁：`generate_projects --all --check`、`manifest_csv --check`、`report.py render/check --all`、`review_receipts check-all`（`FINALIZED：316 批次`）全部通过；316 批为 2026-11-09 按当前视觉工具指纹重建重审后的结果，其回执证据以构建回执 + `pdftotext` 文本层核对为主，逐页接触印样仅覆盖部分版本。
+- 下一步：按年份继续 2006 起的 ready 来源；或为尚无接触印样的版本补渲染审阅（当前 1880 个版本中约 88.9% 仅有文本层核对）。
+更新时间：2026-11-09（中国标准时间）
 
 > **当前接续以最新状态小节为准。** 后面的按阶段记录保留当时快照；新会话须读取 live manifest、回执、最新 `PROGRESS.md` 与 Git 状态。
 
