@@ -1,6 +1,6 @@
 {
   "batch_id": "phase1-b71",
-  "build_attempt_id": "864657c5-acff-4538-9d09-d3ae5e26eea9",
+  "build_attempt_id": "19f12284-5845-4d6f-98c8-d424beda2803",
   "dependency_tree_sha256": "6e4af54699e8a132e0b2b4036574746cefb266b87ba568e769d3549b3dca4105",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只含题面及来源说明；未见答案或解析泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只含题面及来源说明；未见答案或解析泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只含题面及来源说明；未见答案或解析泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只含题面及来源说明；未见答案或解析泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -196,7 +196,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "065d7326dc223ed37af0082aafb8bf8b4d143e3fc9aa072e1e9c5cb919267982",
+      "pdf_sha256": "48b663b2b9e0956b4d2a8cfc8273d6a7321b6585ba17e2848f949fa580c1c583",
       "result": "pass"
     },
     {
@@ -211,42 +211,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目与解析配对顺序正确，结论对应；Q23(3) 保持来源未决，不把条件推论标成答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1036,7 +1036,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "fda1569c9a6b58a628bdf5d5df19c2fb0cc8447661a6d4b4b167f1ae123e9b32",
+      "pdf_sha256": "51925a6829e15896a45b544f5ea1fd8745520dd75446f2ce755b39aad3c30e4f",
       "result": "pass"
     },
     {
@@ -1051,42 +1051,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1097,42 +1097,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1143,42 +1143,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1189,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版本只列答案速查，不含详细解析；Q23(3) 明确保持未决，与解析版一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1324,7 +1324,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "673d76f1337ab1087e4daa0fb64a2533c62c4de279d17c4d83edf8df9289b037",
+      "pdf_sha256": "f857e114a58205a7e578abf5e422987a5f6a5c43ec4d39706be3e42e3d7c5665",
       "result": "pass"
     },
     {
@@ -1339,42 +1339,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1385,42 +1385,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1431,42 +1431,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1477,42 +1477,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1523,42 +1523,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1569,42 +1569,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1615,42 +1615,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1661,42 +1661,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1707,42 +1707,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1753,42 +1753,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1799,42 +1799,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1845,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1937,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1983,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "110 dpi 全页栅格逐页目视复核：正文、公式、特殊符号及题面未决标记清晰，未见缺字、乱码或异常替换。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号、标题层级及页内顺序清楚；跨页内容连续，未见重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "公式、选项与正文排布清楚，未见重叠、裁切或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "有图页的 TikZ 图线条与标注清楚、无遮挡；无图页本项不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "版本页眉与页脚页码完整可辨，均位于页面范围内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块未见裁切、跨页重复或不合理断裂；末页及留白与内容量相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "A4 页面上正文、公式和标注字号清晰可读，未见过小或拥挤。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与对应解析按版式呈现；Q23(3) 未决标记保留，未见答案错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2026,15 +2026,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "28f3af4eb523d1a096b159f15ba9ff1d4d42f01bc64f2e58bed733fe4a203160",
+      "pdf_sha256": "88111da13c3005004682a7087ce6b3a5c2bad05229dc8ade070a8c50b2dd3bb6",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "2701a728c2dbe520ccc1b3c2d425f1bfff8baf2d281aa801d36aed56189c8884",
+  "generation_input_tree_sha256": "8261754d32e0ce6104c73f870ba097733a8c52200132452d7323079a6c97ed58",
   "input_projection": "72ca2a6dd407d5b9daa07485a5a64a5714a6fffc768fad18db2dd7ebcf0f3a5f",
   "paper_id": "gk-1997-regular-national-arts",
   "project_dir": "1997_全国卷_文科",
-  "reviewed_at": "2026-11-02T17:49:35+08:00",
+  "reviewed_at": "2026-11-09T15:36:11+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2043,23 +2043,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -2082,16 +2082,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

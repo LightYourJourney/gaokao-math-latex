@@ -1,6 +1,6 @@
 {
   "batch_id": "phase4-b30",
-  "build_attempt_id": "de4967ac-00d4-4ea3-b40a-702454ffb45c",
+  "build_attempt_id": "1dcf4207-1e98-4f2b-8607-a456290c9e00",
   "dependency_tree_sha256": "ca01dd2a74f8b85e103595c499a7bec19015c8d18d9f7fa4865b83ca37c3703b",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "正文 12 pt；Q2 的 3/2、4/5、θ/2 分式，Q6 的 lim(n→∞) 下标，Q8 的 (2x²−1/x)^8 与 C_6^4 上下标，源疑点中的 16/3 分式均成型；build/试题版.log 0 处 Missing character；文本层零 U+FFFD、零 PUA。标题与副标题的「·」分隔符正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「一、（本大题满分 30 分）本大题共有 10 题…」位于 y 199.86–239.07 pt；题号 1–10 连续，均为加粗「N．」；无跳号/重号。标题块「1991 年·上海卷·数学」y 61.05–80.02 pt、副题「数学·试题版」y 86.33–101.33 pt，层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为填空题，无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图形对象。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页末墨迹 y=614.89 pt；版心底 779.53 pt（A4 841.89 − 2.2 cm 下边距）；留白 164.64 pt（58.1 mm）。成因：「二、」的 \\gkpart 带 \\Needspace{0.6\\textheight}=430.30 pt，大于剩余 164.64 pt，整块下移至 p2；属规则化断页，非孤立标题或异常空洞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0 pt；「一、」节标题 15.0 pt；主标题 18 pt、副题 15 pt；提示框 \\small 10.5 pt；页眉页脚 10.5 pt；Q8 源疑点与正文同为 12.0 pt（未缩小，视觉上与题干同权，见 answer_leak）。各层级一致，无局部缩放或异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q8 源疑点段已从试题/简答/印刷题面区删除，仅保留在答案与解析；当前 questions.tex 无「无常数项」。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "正文 12 pt；Q11 的 A∩B̄ 上划线、∅，Q13 的 32/72 分式，Q14 的 x^{−1/3} 堆叠指数，Q17 的 arccos 与高括号，π/θ/√/≤/≠/∘ 均成型；log 0 处 Missing character；文本层零替换符、零 PUA。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、（本大题满分 30 分）本大题共有 10 题…」y 61.42–146.62 pt；题号 11–17 连续（衔接 p1 的 1–10 与 p3 的 18–20）；各题 A/B/C/D 选项标号齐备，无跳号/重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项标号一律左缘 x=78.42 pt；Q11/Q12/Q16 单行四项，Q13 单行四项（(A) 标号右缘 111.23 pt、分式左缘 112.42 pt，净距 1.19 pt ≥1 pt；分式顶端距上一行墨迹 0.60–0.72 pt，无实碰，属可接受 0.5–2 pt 带），Q15 一行一项，Q17 一行一项。Q17 相邻选项墨迹净距 1.20/1.20/1.44/1.44 pt，均 ≥1 pt，高括号无重叠；各行最右墨迹 532.56 pt ≤ 版心右缘 532.92 pt，无溢出。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q14 四联图四组 y/x/O 轴标与 (A)(B)(C)(D) 标号齐备；(A)–(D) 中心 x=161.8/249.7/337.6/425.4 pt，间距 87.9/87.9/87.8 pt，与四图中心对齐；曲线依次为 x^{1/3}、偶函数 1/x² 型、x^{−1/3} 型、S 型，与 figures/f1991_shanghai_q14_choices.tex 一致；标号与轴/曲线无重叠、无压字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页末墨迹 y=778.69 pt，距版心底 779.53 pt 仅 0.84 pt；排满而无溢出；页脚文字 y 800.39–811.45 pt，与末行净距 21.70 pt；Q17(D) 完整落在页内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/选项 12.0 pt；「二、」节标题 15.0 pt；Q13/Q14 注记与图内标号 12 pt；页眉页脚 10.5 pt；无局部缩放或异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "各选择题作答括号均为空「（　）」；全页无「答案/解析/故选/解得/综上」字样，绿色像素 0。附：Q13 源疑点称选项（A）「数值异常」，属源内勘误提示，未给出正确选项（答案要点为 B），不构成答案值泄露，但会排除 A；若要求试题版零提示，建议移除或改为中性表述。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "正文 12 pt；Q19 四组 cases 大括号、Q20 的 x′/y′ 撇号、Q18 的 ∠/∩ 均成型；log 0 处 Missing character。文本层把 Q19 的 4 组大括号映射为 PUA U+F8F1–F8F3（各 4 次、共 12 个），视觉渲染正确，复制粘贴会得到私用区码位，属全库系统性伪影；文本层零 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 18–20 连续（衔接 p2 的 11–17 与 p4 的 21–25）；本页无节标题（续页结构，非缺号）；Q18–Q20 的 A/B/C/D 选项标号齐备，无跳号/重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q18/Q20 一行一项，Q19 一行一组 cases；标号一律 x=78.42 pt；Q19 相邻选项墨迹净距 2.88/4.32/4.32 pt，均 ≥1 pt；Q20 的 x′/y′ 撇号不压线；各行最右墨迹 532.4 pt ≤ 版心右缘 532.92 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图形对象。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页末墨迹 y=479.34 pt；版心底 779.53 pt；留白 300.19 pt（105.9 mm）。成因：「三、」的 \\gkpart 带 \\Needspace{0.6\\textheight}=430.30 pt，大于剩余 300.19 pt，整块移至 p4；Q18–20 完整、无孤行/孤图；属规则化断页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/选项 12.0 pt；cases 内分式数字仍为 12 pt（显示式），局部行高随分式增至约 24 pt，非字号异常；页眉页脚 10.5 pt；无局部缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q18–20 选项为待选结论，未标正确项；作答括号为空；全页无答案字样，绿色像素 0；无答案值或解法结论。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "正文 12 pt；△、∠、ω、θ、≠、|z−i|、z²−zi、Q21 的 3π/4 与 π/4 分式、Q24 图内 A/B/C/D 均成型；log 0 处 Missing character；文本层零 U+FFFD、零 PUA。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、（本大题满分 30 分）本大题共有 3 题。」y 61.42–77.23 pt；「四、（本大题满分 60 分）本大题共有 4 题。」y 281.96–297.77 pt；题号 21–25 连续（衔接 p3 的 18–20 与 p5 的 26–27）；Q24（1）（2）（3）、Q25（1）（2）齐备，分值 6+3+5=14、6+8=14 与题头一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q24 四面体 A/B/C/D 四顶点标号齐备，△ABC 与 △DBC 共 BC 边；B 标号右缘距 AB 线约 5 pt，C/D 标号与线划分离，无压字；图块 y 456.69–600.16 pt，题干末行 443.84 pt、Q25 首行 626.17 pt，上下留白均 >12 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页末墨迹 y=713.70 pt；版心底 779.53 pt；留白 65.83 pt（23.2 mm）。成因：Q26 的 question 环境带 \\Needspace{0.15\\textheight}=107.58 pt，大于剩余 65.83 pt，Q26 整题移至 p5；Q24 图与 Q25 未被拆页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0 pt；「三、」「四、」节标题 15.0 pt；Q21/Q25(2) 行内 \\dfrac 使局部行高增至约 28–32 pt，字号未缩放；Q25(2) 分母 ω−2i 与下一行「由」净距 1.68 pt，无实碰；页眉页脚 10.5 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q21–25 均无答案值；Q24 图只含题干给定要素（两三角形共用 BC 与四个顶点），无辅助线或结论标注；全页无答案字样，绿色像素 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "正文 12 pt；Q26 的 B′/C′ 撇号、y=x²+2、Q27 的 V1/V2/V3 下标与 [π/3,π) 区间均成型；log 0 处 Missing character；文本层零 U+FFFD、零 PUA。附：Q27(2)「最大值 u」的 u 在文本层被映射为「hu」（多出一个 h，U+0068，bbox x 149.84–155.50 pt 与 u 重叠），视觉实渲只有 u、无重影，属 ToUnicode 映射伪影。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 26–27 连续（全卷 1–27 至此闭合）；Q27（1）（2）（3）齐备，分值 3+10+3=16 与题头一致；本页无节标题（卷末续页结构，非缺号）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q26 抛物线 L、C、B、P、Q、C′、B′、O、A(2,0)、x、y、y=x²+2 全部齐备；Q 与 B′ 标号纵向净距 7.3 pt，Q 标号不被 B–B′ 虚线穿过；A(2,0) 与 x 标号纵向分离 5.9 pt 无重叠；L/C 两标号最小净距约 1.25 pt 但不重叠。Q27 三角形 A/B/C、a/b/c、θ 齐备；θ 位于 CA 与 CB 之间、弧内，未压线；b 标号与 AC 线净距约 8.9 pt，其余顶点/边标号与线划无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本页末墨迹 y=681.37 pt；版心底 779.53 pt；卷末留白 98.16 pt（34.6 mm），属卷末正常低填充；Q26/Q27 题干与图均未被拆页。附：Q27(1) 分式 V3/(V1+V2) 与上一行墨迹净距 0.36–0.60 pt，无实碰，位于可接受 0.5–2 pt 带下沿。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0 pt；Q26/Q27 题干与图内标号 12 pt；Q27(1) 行内 \\dfrac 使局部行高约 28 pt，字号未缩放；页眉页脚 10.5 pt；无局部缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q26/Q27 无答案值；Q26 图的 Q 为题干定义的 △POA 重心，非轨迹结论；Q27 图只含三角形与 θ，无旋转体或最值标注；全页无答案字样，绿色像素 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "44f8376fa40cbd67e2c221728cbb8d84101697bc42a20e727c2e902bcf833733",
+      "pdf_sha256": "5d5f4d0cc0c168e598cff086e945a2c79c3ec4cb1b53739f92133991e6e6107c",
       "result": "pass"
     },
     {
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行构建 484fe5（build 019b10fa）：Q1–Q10 全字符成型（3^x、√3、π/θ、lim_{n→∞} 下标、⋯、≤/≥ 均出字形；第 8 题源疑点注已移至答案区，p1 不再含 16−3k、C_6^4、16/3 等注内字形）。build/解析版.log：0 Missing character、0 Overfull/Underfull、0 LaTeX Warning；pdffonts 全字体嵌入（STSongti-SC/LM/CMMI/CMSY/CMEX/MSBM/MSAM），无 PUA/豆腐块。所给 08:02 图像（旧构建）除页眉/标题块与 Q8 注外与现行版逐像素同（页 1 差异 bbox x122–1035、y49–1196）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「一、（本大题满分 30 分）本大题共有 10 题，只要求直接填写结果…」节头 + 题号 1．–10．连续齐全，与 ../1991/1991_上海_试题.md 逐条一致；题号后全角「．」；10×3=30 分自洽。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "not_applicable：本页为填空题 1–10，无 A/B/C/D 选项行；作答横线 \\gkblank 统一 2.2em（约 26.4pt）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "not_applicable：本页无插图（全页无图元）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」，下压横线 y73px；标题块主标题「1991 年·上海卷」+副题「数学 · 解析版」；页脚「——第 1 页——」居中 x297.2pt、页码正确。所给 08:02 图像（旧构建）页眉/标题块作「数学·数学」（重复一段约 30pt），已在 08:19:57 重建的 484fe5 修复——该重复是旧图像唯一 fail，现行版不复现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "现行 484fe5：正文末墨迹 y1086px（558.7pt），至版心底 y1557px（800.8pt）留白 470px＝241.7pt＝85.3mm；由「二、」\\gkpart 的 \\Needspace{0.6\\textheight}（≈151.8mm）触发整节后移，属 common/macros.tex 既有设计；较 08:02 图像（末行 y1196px，尾白 360px＝65.3mm）增大 110px＝20.0mm，系第 8 题源疑点注移至答案区所致；无截断/重叠/越界，日志 0 Overfull/Underfull。观察：第 6 题第 2 行仅「____。」（x62.2–92.6pt，行宽 30.4pt≈6.5%），为长公式换行后的段末短行，非分页缺陷。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt（CTeX zihao=-4）；书名 18pt、副题/节头 15.3pt、编者按框 10.5pt（\\small）、上下标 8pt；层级一致，无局部缩放/行距异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "现行 484fe5：p1 无答案框/答案值（彩色像素仅编者按蓝框 2045px，绿色 0）；第 8 题源疑点注（含「故无常数项」「卷内所给结果为 60」）已从题面移至答案区（p8+，本文件 1–7 页范围外），旧图像的潜在泄漏不复存在。注：md 试题.md 仍把该注放在题面，属 md-页面位置差异（内容未丢，见报告）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：Q11–Q17 全字符成型（√、≤、∅、B̄ 上划线、60°、x^{−1/3}、arccos/tg、≠、lg 均出字形；Q14 四图矢量线条无缺）。日志 0 Missing character、0 Overfull/Underfull、0 LaTeX Warning；pdffonts 全嵌入，无 PUA。本页与 08:02 图像仅页眉 331px 差异（y49–68、x341–392px）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、（本大题满分 30 分）本大题共有 10 题…」节头 + 题号 11．–17．连续（18．起 p3）；与 ../1991/1991_上海_试题.md 一致；10×3=30 自洽。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q11–Q17 选项标号/文字基线对齐、顺序与 _试题.md 一致；净距实测：Q17 相邻选项分式行 2px＝1.03pt（x130–900px 行剖面），第 13 题选项 (A) 分式与下一条「源疑点」行 1.03pt（x112–124pt 列剖面），均在 0.5–2pt 可接受区间、无实碰；Q11/Q12/Q16 单行选项无错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q14 四幅函数图 (A)–(D) 标号居中置于各图下方（图块 x134.7–455.7pt，中心 295.2≈版心 297.6）；每图 x/y 轴箭头与 O 标号齐全；(C) 右支 x 轴上方递减、左支下方递减、y 轴渐近，与 y=x^{−1/3} 相符（答案 C）；无标号遮挡/误配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 2 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（本页与旧图像仅此 331px 差异）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y1514px（778.6pt），页尾留白 42px＝21.6pt＝7.6mm；Q14 图块底 y853px 至 Q15 题头 y911px 留 29.3pt；全页无重叠/裁切；日志 0 Overfull/Underfull。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；节头 15.3pt；第 13 题源疑点注 10.5pt；Q14 图内标号 12pt；数学 CMMI12/CMR12；无局部缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案框（彩色像素 0）；「答案/故选/解：」0 命中；第 13 题源疑点仅指选项 (A) 分式 32/72 数值异常，未点正确项（B），属来源校勘注记。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：Q18–Q20 全字符成型（|t|、cos²t、tg、cases 大括号、分式、O′/x′/y′ 撇号、4x²−y²、60° 均出字形）。日志 0 Missing character/0 Overfull/Underfull；pdffonts 全嵌入；本页与 08:02 图像仅页眉 331px 差异（y49–68）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 18．–20．连续（承 p2 的 17．、接 p4 的 21．），无跳号重号；与 _试题.md 逐条一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q18 四选项分行、Q19 cases 选项、Q20 四选项均对齐；净距：Q19 相邻块 8px＝4.11pt，Q20 选项行 7.2–8.23pt，题干→(A) 2.57pt，无实碰；Q19 标号与 cases 首行基线对齐（四块一致）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "not_applicable：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 3 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（本页与旧图像仅此 331px 差异）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y927px（476.8pt），至版心底留白 629px＝323.5pt＝114.1mm；由「三、」\\gkpart 的 \\Needspace{0.6\\textheight}（≈151.8mm）触发整节后移（余量 114.1mm＜151.8mm），属既有设计；Q20 完整收尾、无孤行标题；日志 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；数学 CMMI12/CMR12/CMSY10；cases 分式上下标 8pt；无局部缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯题面 Q18–Q20；彩色像素 0；无答案框/「答案/故选」等关键词。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：Q21–Q25 全字符成型（∠、△、≠、|(log_a x)²−1|、θ、ω、i、z²−zi、分式/根号、60°/120° 均出字形）。日志 0 Missing character/0 Overfull/Underfull；pdffonts 全嵌入；本页与 08:02 图像差异 521px：页眉 y49–68 + Q24 的 B 标号 x480–541、y1000–1051。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、（本大题满分 30 分）本大题共有 3 题」+21．–23．；「四、（本大题满分 60 分）本大题共有 4 题」+24．–25．；小问 (1)(2)(3) 齐全；分值 8+10+12=30、14+14+16+16=60 自洽。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "not_applicable：本页为解答题 21–25，无 A/B/C/D 选项行；行内/显示公式居中。Q25(2) 分式行分母底 y703.2pt 与下一行「为实数」顶 y701.1pt 垂直重叠 2.1pt，但 x 分离（分母 x513.5–518.9、下一行 x62.4–157.6），无实碰。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "现行 484fe5：Q24 四面体 A/B/C/D 四标号齐全；B 标号由旧图顶点左上移至顶点右下（差异 bbox x480–541、y1000–1051px），距顶点与 BC/BD 边均无重叠；实线 AB/AC/BC/BD/CD 与固定扫描件一致（AD 未画，扫描件同样未画，属源图拓扑）；图块 x237.6–370.3pt、中心 303.9（版心 297.6，偏右 6.3pt，可接受）；图顶距上文字 3.6pt、图底距「25．」3.09pt，均无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 4 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（差异见本页 glyph/fig 注）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y1386px（712.8pt），页尾留白 170px＝87.4pt＝30.8mm；Q24 图上下净距 3.6pt/3.09pt（紧但不碰）；Q25(2) 分式行与下一行 x 分离无碰；无重叠/越界；日志 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；节头 15.3pt；图内标号 12pt；分式上下标 8pt；无异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯题面 Q21–Q25；彩色像素 0；无答案框/「答案/故选」等关键词。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：Q26–Q27 全字符成型（△、∠ACB、θ、B′/C′ 撇号、V₁/V₂/V₃、[π/3, π) 区间括号、|BB′/CC′| 均出字形）。日志 0 Missing character/0 Overfull/Underfull；pdffonts 全嵌入；本页与 08:02 图像仅页眉 331px 差异（y49–68）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 26．–27．连续（承 p4 的 25．）；第 27 题 (1)(2)(3) 齐全；分值 16、16（3+10+3）自洽；与 _试题.md 一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "not_applicable：本页无 A/B/C/D 选项行；Q26 的 BP/PC 分式行与上一行净距 2px＝1.03pt（x130–500px 行剖面），在 0.5–2pt 可接受区间、无实碰。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q26：L/C/B/P/Q/A(2,0)/C′/B′/O/x/y 及「y=x²+2」齐备；Q 点位于 BB′ 虚线左侧 0.9pt（标号 Q 在虚线右 3.6pt，无重叠）；抛物线方程标号与曲线净距约 1.0–1.5pt（无实碰）。Q27：A/B/C/a/b/c/θ 齐备，θ 弧在 ∠ACB 内，无标号遮挡；图块中心 297.0≈版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 5 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（本页与旧图像仅此 331px 差异）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y1320px（678.8pt），页尾留白 236px＝121.4pt＝42.8mm（p6 起为解析节、\\clearpage 分隔）；Q26 图上下净距 14.9pt/23.1pt，Q27 图上下净距 25.7pt/14.9pt，均无碰；日志 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；图内标号 12pt；V 的 CJK 下标 8pt；无异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯题面 Q26–Q27；彩色像素 0；图内仅 L/C/B/P/Q/A(2,0)/B′/C′ 等标号，无答案数值；无答案框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：「参考答案与详细解析」「一、填空题」、第 1/2 题解析全字符成型（log₃、≥、√、嵌套分式 √((1−4/5)/2)、√10/10 均出字形；回链页号「1」为 hyperref 链接色，已知接受类）。日志 0 Missing character/0 Overfull/Underfull；pdffonts 全嵌入；本页与 08:02 图像仅页眉 331px 差异（y49–68）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「参考答案与详细解析」（18pt）+「一、填空题（第 1—10 题）」（15.3pt）+「第 1 题」「第 2 题」；回链「（题目见第 1 页）」均指 p1（Q1/Q2 实排于 p1），正确。解析部分另起「一、」编号，与题面 一、二、三、四 为分部重启，非重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "not_applicable：本页无 A/B/C/D 选项行；第 2 题显示公式居中，无重叠。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "not_applicable：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 6 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（本页与旧图像仅此 331px 差异）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y1153px（593.0pt），页尾留白 403px＝207.3pt＝73.1mm；第 3 题整块因 answer 环境 \\Needspace{0.5\\textheight}（≈126mm）>余量而整块后移至 p7，属 common/questions_env.tex 既有设计；两枚绿框（y635–679px、1081–1154px）完整在页内；日志 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；「参考答案与详细解析」18pt、「一、填空题」15.3pt、「第 N 题」12pt 粗体；回链 10.5pt 灰字+蓝色页码；答案框 12pt；层级稳定。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为「参考答案与详细解析」起始（设计上即解析区，题面区 p1–p5）；第 1 题答案 y=log₃x（x≥1）、第 2 题 −√10/10，与 ../1991/1991_上海_答案要点.md 逐字相符；绿框 2 枚；回链页号 1 正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 484fe5：「第 3 题」「第 4 题」解析全字符成型（V_柱/V_球 CJK 下标 8pt、πD³/4、πD³/6、复合分式、3/2、ω=π、2π/π 均出字形）。日志 0 Missing character/0 Overfull/Underfull；pdffonts 全嵌入；本页与 08:02 图像仅页眉 331px 差异（y49–68）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 3 题」「第 4 题」连续；回链「（题目见第 1 页）」均指 p1（Q3/Q4 实排于 p1），正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "not_applicable：本页无 A/B/C/D 选项行；第 3 题显示公式居中，无重叠。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "not_applicable：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 484fe5：页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」；页脚「——第 7 页——」居中 x297.2pt、页码正确。所给 08:02 图像页眉重复「数学」，已修复（本页与旧图像仅此 331px 差异）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y959px（493.2pt），页尾留白 597px＝307.0pt＝108.3mm；第 5 题整块因 answer 环境 \\Needspace{0.5\\textheight} 后移至 p8（与 p6 同设计）；两枚绿框（y554–621px、917–959px）完整；日志 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；「第 N 题」12pt 粗体；回链 10.5pt；答案框 12pt；V_柱/V_球 下标 8pt；无异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析区续；第 3 题 3/2、第 4 题 2，与 _答案要点.md 逐字相符；绿框 2 枚；回链页号 1 正确；无题面混排。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q5 的 √(a²−b²)、√(1−1/4) 根号上划线完整覆盖被开方式；Q6 的 lim 下标 n→∞、{a_n} 下标、√3 与分式均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；pdffonts 全部子集内嵌（STSongti-SC、Latin Modern、CM 数学字体），无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 5、6 题连续（5→6），无重号/跳号；「（题目见第 1 页）」与试题部分 p1 的 5．6． 题序对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为填空题第 5、6 题，无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q6 答案框）止于 y 546.2pt，版心底 779.5pt（\\textheight 719.85 TeX pt），留白 233.3pt（32.5%）。下一块 Q7 高约 224pt（p9 y 64.00–288.0）＋题块间距 27.3pt＝251.3pt > 233.3pt，无法容纳，属整块保序的必然换页，非可避免留白。附记：Q6 题干末行以「=」收尾、「____。」单独起行（y 371.2–383.2），系长公式触底后的自然断行，非页面空白异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 字号恒 12.0pt（小四，词框高 12.64pt）；「第 N 题」12.0pt 粗体；「（题目见第 N 页）」10.95pt 灰 \\small；页眉页脚 \\small≈10.5pt；答案框 12.0pt 粗体；无异常缩放或字距拉伸。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，Q5/Q6 的解析与绿框「答案：」属本版预期；题面区保留「____」空白（y 127.9–140.6、371.2–383.2），答案未渗入题面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q7 的 S_侧 下标、Q8 的 (2x²−1/x)⁸、C₈ᵏ、x^{16−3k}、k=16/3 与拉丁串「ISSUE-1178」均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；pdffonts 全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 7、8 题连续（7→8）；两处「（题目见第 1 页）」与试题部分 p1 的 7．8． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为填空题第 7、8 题，无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q8 答案框）止于 y 649.2pt，留白 130.3pt（18.2%）。下一块 Q9 高约 296pt（p10 y 64.00–361.0）＋题块间距 27.3pt＝323.3pt > 130.3pt，无法容纳；正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt），「第 N 题」12.0pt 粗体，「（题目见第 N 页）」10.95pt 灰 \\small，答案框 12.0pt 粗体；源疑点注同正文 12.0pt，无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期。Q8 题面区含「源疑点」注（y 423.5–455.9），其中「卷内所给结果为 60」是来源矛盾说明；最终答案「无常数项」只出现在解析末句与绿框（y 631.8–644.4），不判题面泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q9 的 (2−x)²、x²−4x+5；Q10 的 ρ、θ、π、(x+4)²+y²=16、ρ=−8cosθ 均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；字体全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 9、10 题连续（9→10）；两处「（题目见第 1 页）」与试题部分 p1 的 9．10． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为填空题第 9、10 题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q10 答案框）止于 y 554.4pt，留白 225.1pt（31.4%）。下一块为「二、选择题」分节标题＋第 11 题，高约 245pt（p11 y 61.4–307.0）＋题块间距 27.3pt＝272.3pt > 225.1pt，无法容纳；正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt），题头 12.0pt 粗体，「（题目见第 N 页）」10.95pt 灰 \\small，答案框 12.0pt 粗体；无异常缩放或字距拉伸。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期；答案 ρ=−8cosθ 只出现在解析末句与绿框内，题面「____」（y 253.0–265.0）保留空白。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：A∩B̄（B 上划线完整）、∅、√(x+1) 根号上划线、{a_n} 下标、≤/≥/≠ 与 lg 直立均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；字体全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "分节标题「二、选择题（第 11—20 题）」（y 61.4–77.2，\\large 粗体）与第 11、12 题一致，区间 11—20 与题号对应；「（题目见第 2 页）」与试题部分 p2 的 11．12． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 11、12 题选项均单行（Q11 y 154.4–166.4；Q12 y 209.5–225.1），左缘 x=78.42pt 对齐，行内无分式；选项与题干净距 6.07–6.72pt（≥1pt），无碰叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q12 答案框）止于 y 511.0pt，留白 268.5pt（37.4%）。下一块 Q13 含四联图与长选项，高约 296pt（p12 y 64.00–360.0）＋题块间距 27.3pt＝323.3pt > 268.5pt，无法容纳；正常（Q13 为含图整块下移）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt）；分节标题 \\large\\bfseries（字框高 13.2pt）；题头 12.0pt 粗体；「（题目见第 N 页）」10.95pt 灰 \\small；答案框 12.0pt 粗体；层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期；答案 B、C 只出现在解析末句与绿框内，题面「（　）」空白（y 127.9–140.6、397.0–412.6）保留。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q13 的 32/72√3、60°、c=2√2；Q14 的 x^(−1/3)、∛x（根指数 3 正确落在根号钩上）、→、+∞；图内 y/x/O 与 (A)–(D) 均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；字体全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 13、14 题连续（13→14）；「（题目见第 2 页）」与试题部分 p2 的 13．14． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q13 选项行（A）含行内分式 32/72：分子「32」顶 159.23pt，前一行文字底 158.63pt（em 框），实墨净距 1.20pt；分母「72」底 183.84pt，下一行「（源疑点…」实墨顶 185.04pt，净距 1.20pt，均无实碰，属「相邻分式净距 0.5–2pt」可接受类。四项基线一致（y 165.4–178.0），左缘 x=78.42pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 14 题四联图（y 476.4–556.3）：四个子图等距 87.9pt（y 轴文字中心 154.3/242.2/330.1/417.9pt），标号（A）–（D）中心 161.8/249.7/337.6/425.4pt（恒定 +7.5pt，四图一致），y/x/O 标号清晰无裁切；（C）为奇函数双支渐近线图，与解析结论「只有（C）符合」一致。图稿仅画拓扑、不按比例（figures/f1991_shanghai_q14_choices.tex 首行声明）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q14 答案框）止于 y 714.0pt，留白 65.5pt（9.1%）；下一块 Q15 高约 290pt，无法容纳；正常。居中图后「解析」小标题齐左（x 62.36pt）属既知可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt）；图内 y/x/O 与 (A)–(D) 标号 12.0pt；题头 12.0pt 粗体；答案框 12.0pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期；答案 B、C 只出现在解析末句与绿框内。Q13 的「源疑点」只复述选项（A）的分式 32/72，并非答案；题面「（　）」与选项未标出正误。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q15 的 ≠、α/β、cos(α+β)；Q16 的 C₅²、3![1−1/1!+1/2!−1/3!]=2 均正常。build/解析版.log Missing character=0、Overfull/Underfull=0；字体全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 15、16 题连续（15→16）；「（题目见第 2 页）」与试题部分 p2 的 15．16． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q15 四选项各占一行（y 146.6–159.3 / 165.4–178.0 / 183.0–198.6 / 201.7–217.3），行间净距 6.07/4.99/3.12pt；Q16 选项单行（y 501.8–513.8）；均无分式，左缘 x=78.42pt 对齐，无碰叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（Q16 答案框）止于 y 661.7pt，留白 117.8pt（16.4%）；下一块 Q17 含四个高选项，高约 400.6pt（p14 y 64.00–464.6），无法容纳；正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt）；题头 12.0pt 粗体；答案框 12.0pt 粗体；无异常缩放或字距拉伸。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期；答案 B、A 只出现在解析末句与绿框内，题面「（　）」空白保留。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页＋局部放大：Q17 的 arccos、\\left[\\right] 大括号、−2/3 与 −1/3 分式、tg 直立、π/2 均正常；相邻行大括号无接触。build/解析版.log Missing character=0、Overfull/Underfull=0；字体全部子集内嵌，无 PUA/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 17 题编号正确；「（题目见第 2 页）」与试题部分 p2 的 17． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "四个选项各含两组行内 \\dfrac；基线间距 29.79pt（148.39/178.18/207.98/237.78pt），分式分子顶与上一行分母底净距 2.79pt；渲染目检相邻大括号/圆括号无接触，最近处 C→D 净距约 1.2pt，落在「相邻分式净距 0.5–2pt」接受区间。选项左缘 x=78.42pt 对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "answer/分节 \\Needspace 预留造成的整块下移，属共享宏既有排版类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt（词框高 12.64pt）；选项分式增高但字号未变；题头 12.0pt 粗体；答案框 12.0pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为解析版，属本版预期；答案 D 只出现在解析末句与绿框内，四个选项均为待判命题，未标出正误。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 全页目检＋800 dpi 局部放大：∥、⊂、≥、|t|、t²、cos²t、ctg²t、1/x² 均正常，无豆腐块或 PUA 残留；build/解析版.log 的 Missing character=0、Overfull=0，字体全部内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 18、19 题连续（18→19）；「（题目见第 3 页）」与试题部分 p3 的 18．19．20． 题序对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 18 题四选项左缘 x=78.418pt 对齐；第 19 题 (A)–(D) 左缘同为 78.418pt，标签墨迹右缘 103.2pt 与 cases 左花括号 112.3–113.3pt 的净距 9.1–10.1pt（≥1pt）；(C)/(D) 两组间距 5.1pt，无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图；第 19 题为参数方程选择题，图形仅在选项括号内，非题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（第 19 题答案框）止于 y 772.3pt，距版心底 781.85pt 余 9.5pt，满页；无孤行、无截断、无异常空白。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 词高恒为 12.0pt（小四），页眉 10.5pt，题头 12.0pt 粗体，答案框 12.0pt；第 19 题 (C)/(D) 分式增高但字号未变，无跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 18、19 题题面完整，无答案痕迹；答案 A、D 只出现在各自「解析」末句与绿色答案框内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 目检：2x′−y′+10=0 的撇号、⟹、渐近线分式 x²/1−y²/4=1、±2x 均正常；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 20 题编号正确；「（题目见第 3 页）」与试题部分 p3 的 20． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 20 题 (A)–(D) 左缘统一 x=78.418pt，行距 18.72pt；标签墨迹右缘 103.6pt 与公式墨迹起 112.2pt 的净距 8.6pt（≥1pt），四行无碰叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案框止于 y 380.2pt，页底留白 401.7pt（约 56% 版心高）。成因已回源：\\gkpart{三、解答题} 的 \\Needspace{0.6\\textheight}=431.9pt > 余量 401.7pt，整节下移至 p17；属模板级断页（同批 phase3-b05 p4 的 406.1pt 先例），非内容缺失，页内无孤标题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt、页眉 10.5pt、题头 12.0pt、答案框 12.0pt；居中公式为 10pt 数学字号，层级正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 20 题题面四选项完整，未标正确项；「取 A」与答案框均在解析之后。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 目检：大号 \\left(\\right)、3π/4、1/4、|MF|、30°、F(p/2,0) 等均成形，根号与分式横线完整；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题（第 21—23 题）」与第 21、22 题题号一致；两处「（题目见第 4 页）」与试题部分 p4 的 21．22．23． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题（21、22 题），无选项行可比对。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y 733.4pt，余 48.4pt；第 22 题在居中公式（d²/4=2p(…)=p²±√3pd）后自然续至 p18，无孤标题、无半截公式。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt；节标题「三、解答题」15.0pt，题头 12.0pt 粗体，答案框 12.0pt；层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 21 题答案 cos4x=1/2 只出现在解析末与绿框内；第 22 题题面无答案，其答案落在 p18。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1039,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "400 dpi 局部放大：嵌套根式/指数 a^{±√(2a)}、a^{±√(2(1−a))}、±、≠、≥ 均成形，根号横线完整无裁切；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 23 题编号正确；「（题目见第 4 页）」与试题部分 p4 的 23． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y 780.0pt，距版心底 781.85pt 仅 1.85pt，满页；页末为完整列表项「• 0<a<1/2 时，解集为 (0,+∞)；」，列表续 p19，断点在项界，无孤行、无截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt；指数上标约 8pt 属数学层级，非字号跳变；答案框内分式同正文 12pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "页首 Q22 答案框属 p17 第 22 题，位于第 23 题题面之前但不在其题面内；第 23 题题面无答案痕迹。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300 dpi 目检＋400 dpi 答案框放大：△、∠、⊥、⊂ 均正常；答案框内 a^{√(2a)}、a^{±√(2(1−a))} 成形；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「四、解答题（第 24—27 题）」与第 24 题题号一致；「（题目见第 4 页）」与 p4 的 24．25． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 24 题含 (1)(2)(3) 小问，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图标签已修：Q24 B 右下、Q27 θ 移出角弧、Q19 图无压线；300–600 dpi 复核可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y 721.9pt，余 59.9pt；第 24 题 (1) 段在本页以「就是 AD 与平面 BCD 所成的角。」完整收句后续 p20，无孤行、无截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt；图标签 10.66pt（与同库 10.95pt 图标签同级），答案框 12.0pt；无异常跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q23 答案框位于页首且在全卷「四、解答题」标题之前；第 24 题题面与图中无答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "400/800 dpi 放大：∠ADH、∠ARH、tg、嵌套分式 (√3/2·a)/(√3/4·a)、45°、arctg2 均正常；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 24 题解析续页，页首直接接「设 AB=BC=BD=a」，无新题号或标题可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图（第 24 题图在 p19）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案框止于 y 437.3pt，页底留白 344.6pt（约 48% 版心高）。成因：第 25 题 answer 块需 \\Needspace{0.5\\textheight}=359.9pt > 余量，整块移至 p21；属已接受 Needspace 留白，页内无孤行、无截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt、页眉 10.5pt、答案框 12.0pt；嵌套分式增高但字号未变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页仅第 24 题解析与答案框，无题面；答案框内容完整，未混入下一题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1177,42 +1177,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "300/400 dpi 目检：ω、z²−zi、Im、复数分式、\\left[\\right] 大括号、根式均成形；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 25 题编号正确；「（题目见第 4 页）」与试题部分 p4 的 25． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y 776.2pt，距版心底余 5.7pt，满页；第 25 题答案框因余量不足整框下移至 p22 页首（孤儿尾框，同批 b07/b10/b11 已定型为接受类），框体完整、未拆分、未混入第 26 题题面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt、页眉 10.5pt；居中公式与行内分式层级正常，无字号跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 25 题题面完整，无答案；本页解析末句为结论性说明，答案框在 p22，未在题面区泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1223,42 +1223,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 build/解析版.pdf（sha 8b878b4c…）300 dpi 全页目检＋600/2400 dpi 局部放大：π、θ、∈、Z、△、B′/C′ 撇号、≥、λ、x²、BP/PC 与 |BB′/CC′| 均成形；build/解析版.log Missing character=0、Overfull=0、Underfull=0，字体全部内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 26 题编号正确；「（题目见第 5 页）」与试题部分 p5 实测含「26．」及本题题干（动直线 L、抛物线 y=x²+2）一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题（第 26 题），无 A/B/C/D 选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 26 题抛物线图：A(2,0)、B、C、B′、C′、O、P、Q、L、x/y 轴与 y=x²+2 均可辨。2400 dpi 连通域：C 与曲线/割线（同一连通域）净距 0.38pt（临界但未实碰）；L 与割线端点 4.17pt；「y=x²+2」左缘距抛物线 0.81pt；Q 标签距虚线约 4.8pt；无标签压线或互碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 PDF 页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」，页脚居中「——第 22 页——」y 801.1–810.7pt，页码正确。注：所给 08:02 图像页眉为「1991 年·上海卷·数学·数学」（重复「数学」），已于 08:19 重建修复；本页与旧图像仅页眉一处差异，正文一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y 682.1pt，版心底 781.85pt，页尾留白 99.8pt（13.9%）。下一页首块「故 y₁+y₂=…」＋式①实测高约 57pt，由 \\Needspace{5\\baselineskip}≈90.5pt 触发整块下移（式①与引导句不拆）；无孤行、无截断、无越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt、页眉/页脚 10.5pt；题头与「解析」粗体层级正常；图内标签约 10.7pt 且彼此一致；答案框 12.0pt；无字号跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "页首绿框为第 25 题答案（整框自 p21 下移的孤儿尾框，已定为接受类）；第 26 题题面至「并说明轨迹是什么图形。」无答案，轨迹结论只出现在解析与 p23 绿框内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1269,42 +1269,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 PDF 300 dpi 目检：①/②/③ 圈号、√6、±、∪、∞、⟹、Δ、≠ 均成形；Missing character=0、Overfull=0。注：08:02 快照缺「（卷内原文此处作…见答案要点注。）」两行，现行 PDF 已补，字形正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 26 题解析续页，页首接「故 y₁+y₂=…」，无新题号或标题可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题解析续页，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图（第 26 题图在 p22）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 PDF 页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」，页脚居中「——第 23 页——」y 801.1–810.7pt，页码正确。注：所给 08:02 图像页眉重复「数学」，已修复；该快照另缺本页注记，现行 PDF 与 08:19 重建一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "绿框下边界 y 677.8pt，版心底 781.85pt，页尾留白 104.1pt（14.5%）。下一页首块为第 27 题（题号＋5 行题干＋三角形图，整块远大于余量），无法容纳，属整题保序换页；框体完整、未拆分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 12.0pt、页眉/页脚 10.5pt；圈号、分式与上下标层级正常，无字号跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 26 题最终结论只出现在页末绿框；解析正文按步骤推导，本页无题面，未在绿框外提前给出最终答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1315,42 +1315,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 PDF 300 dpi 全页＋2400 dpi 局部：△、∠、θ、π、V₁/V₂/V₃、sin²θ、分式与下标均成形；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 27 题编号正确；「（题目见第 5 页）」与试题部分 p5 实测含「27．」及本题题干一致（p5 同页含 26．27．）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题（第 27 题），无 A/B/C/D 选项行；(1)(2)(3) 为小问标号，左缘一致，不属选项行对齐。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图标签已修：Q24 B 右下、Q27 θ 移出角弧、Q19 图无压线；300–600 dpi 复核可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 PDF 页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」，页脚居中「——第 24 页——」y 801.1–810.7pt，页码正确。注：所给 08:02 图像页眉重复「数学」，已修复；本页与旧图像仅页眉差异，图形/正文一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末墨迹 y 688.8pt，版心底 781.85pt，页尾留白 93.1pt（12.9%）。下一页首块「令 (a+b)/c=x，则」＋T 连等式实测高约 65pt，由 \\Needspace{5\\baselineskip}≈90.5pt 触发下移（引导句与式不拆）；无孤行、无截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt、页眉/页脚 10.5pt；图内标签约 10.7pt（θ 实测 10.66pt）且彼此一致；公式上下标层级正常，无跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 27 题题面（至「求 u 的最大值。」）无答案；V₁/V₂/V₃ 与 T 的推导属解析区，最终答案只出现在 p25 绿框，未提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1361,42 +1361,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "现行 PDF 300 dpi 全页＋局部放大：∈、[π/3,π)、√(2/(1−cosθ)) 嵌套根式、cos θ、≤/≥、1/2 均成形；Missing character=0、Overfull=0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 27 题解析续页，页首接「令 (a+b)/c=x，则」，无新题号或标题可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题解析续页，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图（第 27 题图在 p24）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "现行 PDF 页眉左「1991 年·上海卷·数学」（单一「数学」）、右「解析版」，页脚居中「——第 25 页——」y 801.1–810.7pt，页码正确。注：所给 08:02 图像页眉重复「数学」，已修复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案框下边界 y 515.8pt，页尾至版心底 266.1pt。本页为全文末页，绿框后无后续内容，属正常收尾空白；框体完整、未拆分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.0pt、页眉/页脚 10.5pt；答案框 12.0pt，行内大分式仅增高不放大字号，无字号跳变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 27 题最终答案（T、定义域、u、1/2）集中在页中绿框；本页无题面，解析已完整，绿框属解析版预期。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1404,7 +1404,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "bcf2996d0224c920d0eebee0d8638f5f0b4329673f1cb8bd6532d7ba2ea948dc",
+      "pdf_sha256": "a27b959fbaaa5a62074b7dd64e829c351adbef5264bf4177ce2c2b11d71e9cba",
       "result": "pass"
     },
     {
@@ -1419,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "标题、提示框、1–10 题与源疑点段逐字核对：无缺字/方框，√、∞、π、θ、≤、C_6^4 等字形完整；编译日志 Missing character 计数为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「一、」与题号 1–10 连续，标题声明的 10 题与题号数一致，无重号或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选择题选项；填空题行内公式（3/2、4/5、θ/2、lim_{n→∞}）与文字基线一致，未见错位或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第 10 题末行止于 y≈906px，页脚前留白 295px≈197pt；系「二、」分节 \\gkpart 的 0.6\\textheight 预留导致分节整块下移，属可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、节标题 15pt、标题 18pt、页眉/页脚约 11pt、上下标 8pt，层级一致，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q8 源疑点段已从试题/简答/印刷题面区删除，仅保留在答案与解析；当前 questions.tex 无「无常数项」。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "11–17 题及 Q14 图内文字逐字核对：∩、B̄（上划线）、∅、√、arccos、tg、x^{−1/3} 均正常，无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「二、」与题号 11–17 连续，各题 (A)–(D) 齐全，无重号或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q11/Q12/Q13/Q16 同行选项顶线分别同为 y=279/344/437/936px；Q13(A) 分式轴心与「(A)」中心差≈1pt，分式上沿距上一行 1px≈0.7pt（0.5–2pt 可接受类）；Q17 大括号与分式无相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q14 四图 (A)–(D) 同基线 y=640px，标号中心间距 131.7px（=5 TikZ 单位），各自对准 y 轴原点；y/x/O 标号齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q17(D) 止于 y≈1155px，页脚前留白 63px≈42pt；无拆题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、选项与公式 12pt、上下标 8pt，与第 1 页一致，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页无答案；Q13 源疑点仅指出选项 (A) 印刷分式 32/72 异常，未给出正确选项。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1511,42 +1511,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "18–20 题逐字核对：tg、cos²、|t|、∅ 均正常，cases 大括号与 x′/y′ 撇号完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 18–20 连续，Q19 四组 (A)–(D) 齐全，无重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q18/Q20 选项左端统一 x=136px；Q19 的 cases 块与 (A)–(D) 中心差 ≤1.7pt，四组左端一致，括号配对正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q20 止于 y≈700px，页脚前留白 501px≈334pt；系「三、」分节 0.6\\textheight 预留导致分节整块下移，属可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt，与前后页一致，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页无答案或答案提示。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1557,42 +1557,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "21–25 题及 Q24 图逐字核对：∠、°、|·|、log_a、≠、π、arctg、z²−zi 等均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、」21–23、「四、」24–25 连续；24 的 (1)(2)(3)、25 的 (1)(2) 编号正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项；(1)(2)(3) 子问左端统一 x=136px，Q25 分式与文字基线齐平，未见遮挡。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q24 图 A/B/C/D 齐全；B 标号右缘距 AB 棱线约 15px@300dpi≈3.6pt，未相碰；C 在顶点右侧、D 在下方，与题面一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q25(2) 止于 y≈1052px，页脚前留白 149px≈99pt；无拆题，Q24 图与 (3) 间距正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt，分式与上下标正常，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页无答案或答案提示。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1603,42 +1603,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "26–27 题及两图逐字核对：V₁/V₂/V₃、θ、π/3、|BB′/CC′|、BC=a 等均正常，无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 26、27 连续；27 的 (1)(2)(3) 编号正确，无重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项；(1)(2)(3) 左端统一 x=136px，BP/PC 分式与大括号对齐，无遮挡。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q26 的 L/C/B/P/Q/A(2,0)/B′/C′/O/x/y 齐全，Q 点与 B–B′ 虚线净距≈3pt；Q27 的 A/B/C/a/b/c/θ 齐全，a/b/c 分别对应 BC/AC/AB，θ 落在 C 角内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q27(3) 止于 y≈1006px，页脚前留白 195px≈130pt；为本题自然收尾（答案另页起排），无拆题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt，图内标号与正文协调，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页无答案或答案提示。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1649,42 +1649,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "答案速查页逐字核对：log₃、√10、√3、ρ、θ、cos、ISSUE-1178 均正常，无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「填空题」1–10 连续，与题面 1–10 对应；「答案速查」标题层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "答案列表编号右缘统一、内容左端约 x=140px；各分式轴心与行基线一致，Q2 负号与分式同轴。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "第 10 题答案止于 y≈607px，页脚前留白 594px≈396pt；系「选择题」分节 0.6\\textheight 预留，整块移至第 7 页，属可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt，与题面页一致，无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页即答案区，答案出现属预期；未见题面混入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1695,42 +1695,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "选择题表与 21–27 答案逐字核对：arctg、∈Z、√ 及 a^{√(2(1−a))} 等上标根式完整可辨，无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "选择题 11–20 表头/答案两行对齐；「解答题」21–27 连续，与题面一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "题号与答案两行列内偏差 ≤2px≈1.3pt；解答答案分式与编号基线一致；Q27 定义域根式右括号成对。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q27 末行止于 y≈685px，页脚前留白 516px≈344pt，为文档自然收尾；无拆行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；上标根式内为 8pt（scriptscript），正常；无异常字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页即答案区，答案出现属预期；未见题面混入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1738,7 +1738,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "adc57ae935eceb77838a279dc3fec89157fe8fb602a2ae63e4492576b2d0fa2e",
+      "pdf_sha256": "9b9ef47cfbb8010b006ed265738455bed6eabf14ef0a1a9844c34b144159d8e4",
       "result": "pass"
     },
     {
@@ -1753,42 +1753,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1799,42 +1799,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项净距 ≥1pt，无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1845,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项净距 ≥1pt，无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q24 图 B 标号已移至顶点右下，AB 棱线不穿字；Q19 选项 C/D 分式改行内 \\frac，花括号净距 >1pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项净距 ≥1pt，无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q14 四选项图象标号与原点对齐；Q24/Q26 图标签无压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1937,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1983,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2029,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "日志 Missing character/Overfull 均为 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号连续，题—解析—答案块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「1991 年·上海卷 · 数学」单次、页脚页码居中；页眉框宽为共享 preamble 基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "\\Needspace 0.6\\textheight 分节整块下移留白，属既有设计；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案；Q8 源疑点注已移出题面版。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2075,42 +2075,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "无缺字/豆腐块：√、C_8^k、x^{16−3k}、16/3、ISSUE-1178 均完整；build/印刷版.log Missing character=0、Overfull/Underfull=0，字体子集内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 7、8 题连续（7→8），无重号/跳号；两处「（题目见第 1 页）」与试题部分 p1 的 7．8． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 7、8 题为填空题，无 A/B/C/D 选项行；Q8 题面大括号分式与相邻行净距约 1.8pt，无碰叠。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "answer/分节 \\Needspace 预留造成的整块下移，属共享宏既有排版类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 10.5pt（fontspec 16@1.5x），题头 10.5pt 粗体，「（题目见第 N 页）」9.3pt 灰，页眉/页脚 9.3pt，答案框 10.5pt 粗体；层级一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q8 源疑点段已从试题/简答/印刷题面区删除，仅保留在答案与解析；当前 questions.tex 无「无常数项」。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2121,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "无缺字：f(2−x)、(x+4)²+y²=16、ρ(ρ+8cosθ)、ρ=−8cosθ 完整；Missing character=0，字体子集内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 9、10 题连续（9→10）；两处「（题目见第 1 页）」与 p1 的 9．10． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "第 9、10 题为填空题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（答案框）止于 y≈384pt，版心底 796.5pt，留白约 412pt（54.9%）。下一块为「二、选择题」分节（\\gkpart，\\Needspace{0.6\\textheight}=450.7pt > 余量 412pt），整节下移至 p10；属「分节整块下移」可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt、题头 10.5pt 粗体、灰注 9.3pt、答案框 10.5pt 粗体；无异常缩放或字距拉伸。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q9 的「y=____」、Q10 的「方程是____」空白保留；答案只在解析末句与绿框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2167,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "A∩B̄（B 上划线完整）、∅、√(x+1) 上划线、{a_n}、60°、32/72√3、4²−2²−2² 均正常；Missing character=0，字体内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "分节「二、选择题（第 11—20 题）」与 Q11–13 一致；题号 11→12→13 连续；「（题目见第 2 页）」与 p2 的 11．12．13． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q11/Q12 选项单行；Q13 选项行含 32/72 分式：分子顶与前一行文字底、分母底与「源疑点」行的实墨净距均约 0.5pt，处在「相邻分式 0.5–2pt 无实碰」下限，未见实碰；四项左缘对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（答案框）止于 y≈621pt，留白约 175pt（23.3%）。下一块 Q14 含四联图，高约 260.6pt＋题块间距 19.7pt＝280.3pt > 175pt，无法容纳；属「题图整块下移」可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；分节标题 12pt 粗体；题头 10.5pt 粗体；灰注 9.3pt；答案框 10.5pt 粗体；层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q13 题面区「源疑点」只复述选项（A）的分式 32/72，未给出答案；选项未标正误，答案 B 只在解析末句与绿框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2213,42 +2213,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "x^{−1/3}、∛x（根指数 3 落在根号钩上）、→、0⁺/0⁻、±∞、tg 直立均正常；Missing character=0，字体内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 14、15 题连续（14→15）；「（题目见第 2 页）」与 p2 的 14．15． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q15 四选项行距 4.06/3.10/1.47pt（均 ≥1pt），左缘对齐，无分式碰叠；Q14 的 (A)–(D) 为图下标，另在 figure_label 检查。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 14 题四联图：标号 (A)–(D) 中心 x=162.24/250.11/337.99/425.86pt，等距 87.9pt，均与各自 y 轴对齐；y/x/O 标注齐全，无裁切；(C) 为奇函数双支递减图，与解析结论一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "answer/分节 \\Needspace 预留造成的整块下移，属共享宏既有排版类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；图内 y/x/O 与 (A)–(D) 标号 10.5pt；题头 10.5pt 粗体；答案框 10.5pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q14/Q15 题面只有选项与空白；答案 C、B 只在解析末句与绿框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2259,42 +2259,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "C_5^2、D_3=3!(1−1/1!+1/2!−1/3!)=2、arccos/tg 直立、\\left(\\right)/\\left[\\right] 括号完整、2/3 与 1/3 分式正常；Missing character=0，字体内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 16、17 题连续（16→17）；「（题目见第 2 页）」与 p2 的 16．17． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q16 选项单行；Q17 四选项行距约 26pt，C→D 两组分式净距约 1.2pt，D 组下方「解析」标题在另一列、无水平重叠；均在「相邻分式 0.5–2pt 无实碰」例外内，左缘对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（答案框）止于 y≈609pt，留白约 188pt（25.0%）。下一题 Q18 块高约 198.0pt＋题块间距 19.7pt＝217.7pt > 188pt，无法容纳；正常。附记：Q16 行间公式后以缩进段首「种。故…」续句，属段落切分瑕疵，非页面留白异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；选项分式增高但字号未变；题头 10.5pt 粗体；答案框 10.5pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q16/Q17 题面选项未标正误；答案 A、D 只在解析末句与绿框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2305,42 +2305,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∥、⊂、|t|、t²、cos²t、ctg²t、1/x²、cases 花括号均正常；Missing character=0，字体内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 18、19 题连续（18→19）；「（题目见第 2 页）」与 p2 的 18．19． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q19 选项 C/D 分式改行内 \\frac，花括号净距 >1pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "answer/分节 \\Needspace 预留造成的整块下移，属共享宏既有排版类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；选项分式/cases 增高但字号未变；题头 10.5pt 粗体；答案框 10.5pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q18/Q19 题面选项未标正误；答案 A、D 只在解析末句与绿框；孤行「D。」是排版残留，不是题面泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2351,42 +2351,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "x′/y′/O′ 撇号、⟹、±2x、x²/1−y²/4、sin(x−3π/4)cos(x−π/4)=−1/4、cos4x 均正常；Missing character=0，字体内嵌。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 20 题编号正确；「三、解答题（第 21—23 题）」与第 21 题一致；「（题目见第 3 页）」与 p3 的 20．21． 对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q20 四选项行距 1.01/1.01/2.64pt（均 ≥1pt），左缘对齐，无分式碰叠；无异常压缩。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹（答案框）止于 y≈581pt，留白约 215pt（28.6%）。下一题 Q22 为跨页长块（p15 起），远大于余量，无法容纳；正常。附记：Q20 解析「取 A。」独占一缩进段（完整句），非孤字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；选项分式增高但字号未变；分节标题 12pt 粗体；题头 10.5pt 粗体；答案框 10.5pt 粗体；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q20/Q21 题面选项与「求 cos4x 的值」未给答案；答案 A、1/2 只在解析末句与绿框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2397,42 +2397,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第 22 题题面与解析逐行核对，并对行间公式做 3–7 倍局部放大：ρ、π、±、≥、√3（根线完整）、d²/4、p²±√3pd、p/2=(2±√3)d/4 字形完整，无方框或缺字；上下标与分式嵌套正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 22 题」题序连续（承 p14 第 21 题）；「（题目见第 3 页）」与 p3 的 22．题对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题解析，无 (A)–(D) 选项行可比对。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文（绿框底 y=893px=459.3pt）至版心底 1550px（797.1pt）余 337.8pt；下一块第 23 题需 \\Needspace{0.5\\textheight}≈375.6pt > 337.8pt，整块下移至 p16，属已接受的 Needspace 留白；页内无孤行、无截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt（五号）；「第 22 题」与「题目：」「解析」为同号加粗；「（题目见第 3 页）」9pt 灰、页眉页脚 9pt；绿框内文字与正文同为 10.5pt，无异常跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本版为印刷版（题目＋解析＋答案属预期）；第 22 题题面与图中无答案痕迹，答案 (2±√3)d/4 只出现在解析末句与绿框内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2443,42 +2443,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "绝对值竖线 |(log_a x)²−1|、log_a x、√(2a)、a^{±√(2(1−a))} 的嵌套根式、∪、∞、1°/2° 均完整；答案框内 a^{√(2a)} 与 a^{√(2(1−a))} 根线范围正确，无方框缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 23 题」题序连续（22→23）；「（题目见第 3 页）」与 p3 的 23．题对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题解析，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "绿框底 y=968px（497.8pt）至版心底余 299.3pt；下一块为「四、解答题（第 24—27 题）」分节，需 \\Needspace{0.6\\textheight}≈450.7pt，整节下移至 p17，属可接受的分节整块下移；无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；题号加粗同号；「（题目见第 3 页）」9pt 灰；答案框两行因内联 \\dfrac 抬高行距，但字号仍为 10.5pt，无跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 23 题题面无答案；解集只出现在解析合并列表与绿框内，未渗入题面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2489,42 +2489,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠ADH、∠CBA、∠HBD、⊥、tg、arctg、√3/2·a、a/2、π−arctg2 字形完整，无方框缺字；三垂线与二面角表述中的符号均可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「四、解答题（第 24—27 题）」节标题与「第 24 题」题号正确；「（题目见第 4 页）」与 p4 的 24．题对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题（含 (1)(2)(3) 小问），无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "图标签已修：Q24 B 右下、Q27 θ 移出角弧、Q19 图无压线；300–600 dpi 复核可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "绿框底 y=1361px（700.0pt）至版心底余 97.2pt；第 25 题块需 \\Needspace{0.5\\textheight}≈375.6pt，整块移至 p18，页内无孤行或半截公式。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "节标题约 12pt 加粗、「第 24 题」加粗 10.5pt、正文 10.5pt；「（题目见第 4 页）」9pt 灰；图中标号与正文同号，层级一致无异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 24 题题面与图中无答案；45°、90°、π−arctg2 只出现在解析与绿框内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2535,42 +2535,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Im u、⟹、z²−zi、sin2θ−icos2θ、分式方括号 [x²+(y−2)²](a²+b²) 均完整；2kπ（k∈Z）与「圆」等中文无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 25 题」题序连续（24→25）；「（题目见第 4 页）」与 p4 的 25．题对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "绿框底 y=1252px（644.0pt）至版心底余 153.2pt；第 26 题块需 \\Needspace{0.5\\textheight}≈375.6pt，整块移至 p19，无孤行或截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；题号加粗同号；「（题目见第 4 页）」9pt 灰；行间公式与答案框字号与正文一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 25 题题面无答案；辐角式 (3θ−π/2)+2kπ 与「以 (0,1) 为圆心、1 为半径的圆，除去点 (0,2)」只出现在解析末与绿框内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2581,42 +2581,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Δ、(4k−k²)²−24k²、k²[(k−4)²−24]、√6、⟹、①（标签内）均正常；无方框缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 26 题」题序连续（25→26）；「（题目见第 4 页）」与 p4 的 26．题对应成立。附带观察：三处公式标签渲染为 (①)(②)(③)（amsmath \\tag 默认在圆圈数字外再套圆括号，正文引用作 ①），编号连续无误，属版式冗余而非编号错误。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 26 题图 L/C/B/P/A(2,0)/B′/C′/Q/O/x/y 与 y=x²+2 标号齐全、对位正确；标号与线的最小净距：B 2.24px≈1.15pt（180 阈值起与抗锯齿相连，压线通过）、P 2.24px≈1.15pt，其余 ≥2.3pt。观察：Q 的点标（\\fill 1pt，x 594–597px、y 603–606px）与 B–B′ 虚线重合（0 白隙，视觉上像一个加粗短划），但 Q 字本身距虚线约 3.6pt，不构成标号相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末行 y=1499px（771.0pt）距版心底 26.1pt，属满页；第 26 题解析在段末自然续至 p20（p20 首行为「又」＋行间公式），断点在段首，无孤行、无半截公式。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；题号加粗同号；「（题目见第 4 页）」9pt 灰；公式标签与正文同号，无跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 26 题题面（含图）无答案；轨迹结论只出现在解析后段（p20 绿框），未渗入题面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2627,42 +2627,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "ℓ（U+2113）正确渲染为手写体 l，sin²θ、V₁/V₂/V₃、a²b²/c、h₁h₂h₃ 与 π 均完整；无字体回落或方框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 27 题」题序连续（26→27）；「（题目见第 5 页）」与 p5 的 27．题对应成立。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题（含 (1)(2)(3)），无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 27 题图 A/B/C/a/b/c/θ 齐全，a=BC、b=CA、c=AB 对位正确，θ 弧位于 C 角内；实测 θ 标号距边线 4.1pt、b 4.7pt、c 6.3pt，A/C/B/a 均留白清楚，无相碰、无裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末行为行间公式 ab=((a+b)²−c²)/(2(1+cosθ))，其底 y=1443px（742.2pt），至版心底余 54.9pt；下一块「令 (a+b)/c=x」＋行间公式需 \\Needspace{5\\baselineskip}≈75.9pt > 54.9pt，自然下移至 p21，无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；「第 27 题」加粗 10.5pt；「（题目见第 5 页）」9pt 灰；答案框与正文同号，图形标号同号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "页首绿框属第 26 题，位于第 27 题题面之前但不侵入其题面；第 27 题题面与图中无答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2673,42 +2673,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "√(2/(1−cosθ)) 双层根式、4√(1−cosθ)、√2、∈、[π/3,π) 与 1/2 均完整，无方框缺字；答案框内根式嵌套正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 27 题解析续页与答案框，无题号或节标题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题续页，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉重复已修（登记标题去「·数学」，现为「1991 年·上海卷 · 数学」）；页眉框宽/页脚中心偏左为共享 preamble 既有基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案框底 y=799px（410.9pt），其后至版心底留白 386.2pt；末页自然收尾，无缺段、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；绿框内 (1)(2)(3) 与公式同号，无字号跳变；页眉页脚 9pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "第 27 题答案只在绿框内；本页无题面，无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2716,15 +2716,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "5b6fe03df6fd4b12e750a41c0279d21324cbe2c3a402e0993b3395715f45acae",
+      "pdf_sha256": "94ec615c1891a181edfbae4ec242a8aae3a1fcb42a348ec2ddd94d54a17cc0d6",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "61012aed806e640cf216991294f0e0db795be36cefb673f376f018588b846296",
+  "generation_input_tree_sha256": "c9d9a43de4296215e9027f70782c767d2e9f9a7a15e23d698ca0b1b2c22f5b1c",
   "input_projection": "9407330098a648b1772360ffc6556fa7109280566db1e4dda9ccd5a4f9713556",
   "paper_id": "gk-1991-regular-shanghai",
   "project_dir": "1991_上海卷",
-  "reviewed_at": "2026-10-25T08:47:55+08:00",
+  "reviewed_at": "2026-11-09T15:01:01+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2733,23 +2733,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -2772,16 +2772,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

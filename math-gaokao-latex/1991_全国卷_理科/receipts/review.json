@@ -1,6 +1,6 @@
 {
   "batch_id": "phase4-b06",
-  "build_attempt_id": "b9c1dc00-f2d5-40e3-b2fa-d505b980ad5d",
+  "build_attempt_id": "1f7277c1-efd7-4811-b91d-eaa1ced6812c",
   "dependency_tree_sha256": "8e118f5ff598a1f10756f61a480d4403fbbb360e673f5c521ebc1205a4e1bbe5",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页（Q1-Q6）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q1-Q6连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版仅列题面，选项/填空位保留作答空间；未出现答案或解析。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页（Q7-Q13）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q7-Q13连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版仅列题面，选项/填空位保留作答空间；未出现答案或解析。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页（Q14-Q24）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q14-Q24连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版仅列题面，选项/填空位保留作答空间；未出现答案或解析。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页（Q25-Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q25-Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题面自然末页承载Q25-Q26长题，余白较多但无截断、孤行或跨页错接。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "试题版仅列题面，选项/填空位保留作答空间；未出现答案或解析。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -196,7 +196,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "d1d765180d7dbc6258f0376463e3876de154218828150d4eb6887de6dd2d2a6b",
+      "pdf_sha256": "680e379a9add8cdd4a290ba0350fff1fd86cd7a16ef1c61f53ad02a8e1805a36",
       "result": "pass"
     },
     {
@@ -211,42 +211,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页（Q1-Q6）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q1-Q6连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区保留作答位；详细答案从第5页标题区开始，未提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页（Q7-Q13）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q7-Q13连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区保留作答位；详细答案从第5页标题区开始，未提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页（Q14-Q24）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q14-Q24连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区保留作答位；详细答案从第5页标题区开始，未提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页（Q25-Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q25-Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题面自然末页承载Q25-Q26长题，余白较多但无截断、孤行或跨页错接。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区保留作答位；详细答案从第5页标题区开始，未提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页（解析Q1-Q2）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q1-Q2连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页（解析Q3-Q4）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q3-Q4连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -487,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第7页（解析Q5-Q6）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q5-Q6连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -533,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第8页（解析Q7-Q8）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q7-Q8连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -579,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第9页（解析Q9-Q10）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q9-Q10连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第10页（解析Q11-Q12）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q11-Q12连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第11页（解析Q13-Q14）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q13-Q14连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第12页（解析Q15-Q16）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q15-Q16连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -763,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第13页（解析Q17-Q18）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q17-Q18连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -809,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第14页（解析Q19-Q20）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q19-Q20连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第15页（解析Q21-Q22）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q21-Q22连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第16页（解析Q23-Q24）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q23-Q24连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第17页（解析Q25）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q25连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "长题Q25/Q26分别完整置于末页，避免证明/答案拆页，余白可接受。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第18页（解析Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "长题Q25/Q26分别完整置于末页，避免证明/答案拆页，余白可接受。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于参考答案与详细解析区，答案与本页题号对应，无跨题错配。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1036,7 +1036,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "b941a37c44e21c03e95ec56d1d8cb784ced9a45e9caec14d62bdb8f6f7282f91",
+      "pdf_sha256": "ce9da9c611ea0797561fe10099676e4cc2941834f6f76e20e31b9292439f6165",
       "result": "pass"
     },
     {
@@ -1051,42 +1051,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页（Q1-Q6）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q1-Q6连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区答案位保持空白；答案速查从第5页独立开始，无答案提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1097,42 +1097,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页（Q7-Q13）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q7-Q13连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区答案位保持空白；答案速查从第5页独立开始，无答案提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1143,42 +1143,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页（Q14-Q24）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q14-Q24连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区答案位保持空白；答案速查从第5页独立开始，无答案提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1189,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页（Q25-Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按Q25-Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题面自然末页承载Q25-Q26长题，余白较多但无截断、孤行或跨页错接。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区答案位保持空白；答案速查从第5页独立开始，无答案提前泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页（答案速查Q1-Q20）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按答案速查Q1-Q20连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于答案速查区，结论按对应题号列示，符合本版结构。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页（解答题Q21-Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解答题Q21-Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "答案末页题量较少，Q21-Q26完整收束，余白为自然结束。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属于答案速查区，结论按对应题号列示，符合本版结构。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1324,7 +1324,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "68d7f1f18c99b9d79a86d5be946ef856dc71a7f6a58f194502cc1564c3282475",
+      "pdf_sha256": "a7b18701299034d7cd51a492ca1157f10b87853fe488fc3bd70b4d5bc429b978",
       "result": "pass"
     },
     {
@@ -1339,42 +1339,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第1页（题面Q1-Q9）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按题面Q1-Q9连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "印刷版题面区保持空答题位；第3页分隔线后才开始答案/解析，符合本版结构。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1385,42 +1385,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第2页（题面Q10-Q20）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按题面Q10-Q20连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "印刷版题面区保持空答题位；第3页分隔线后才开始答案/解析，符合本版结构。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1431,42 +1431,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第3页（题面Q21-Q26及解析Q1）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按题面Q21-Q26及解析Q1连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "印刷版题面区保持空答题位；第3页分隔线后才开始答案/解析，符合本版结构。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1477,42 +1477,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第4页（解析Q2-Q4）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q2-Q4连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1523,42 +1523,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第5页（解析Q5-Q7）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q5-Q7连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1569,42 +1569,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第6页（解析Q8-Q10）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q8-Q10连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1615,42 +1615,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第7页（解析Q11-Q12）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q11-Q12连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1661,42 +1661,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第8页（解析Q13-Q15）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q13-Q15连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1707,42 +1707,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第9页（解析Q16-Q17）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q16-Q17连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1753,42 +1753,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第10页（解析Q18-Q19）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q18-Q19连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1799,42 +1799,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第11页（解析Q20-Q22）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q20-Q22连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1845,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第12页（解析Q23-Q25）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q23-Q25连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "题块连续，换页处无孤行、截断、遮叠或异常空白页；页内余白与内容相称。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "第13页（解析Q26）：全页渲染字符与公式边缘清楚；构建缺字数为0，未见方框、裁切或重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页内题号/解析题号按解析Q26连续呈现，与试题内容顺序一致，无重复或跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项、分式和陈列公式均在版心内，行列间距清楚，未见互相压叠或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "固定来源原卷未印题图；本卷没有需要对照或校验的图形标注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "卷名与版次页眉、页脚页序清晰；页眉/页码未与正文重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q26解答完整收束于末页，余白为自然结束，无孤行、截断或异常空白页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学公式在A4黑白打印尺寸下清晰可读，题号/小标题层级分明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页位于印刷版答案/解析区，结论与相应题号配对，不存在题面前置泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1934,15 +1934,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "48fa25f340cc49f2be63999d92d3269c9890afe1d7de01e93ac14d01cc01bedf",
+      "pdf_sha256": "1704b88f85d58498219b430f1e5d32c764ae11a68fd296a0436aa035f27dfc9b",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "91e37345eba3378af1af3bf514e4cbf58046192e443e3db245864e65d34f0002",
+  "generation_input_tree_sha256": "5fecbbc515b1df05d30fbe73a4fe34b8ef8bcc483fa75fa9b387791f818eea15",
   "input_projection": "b911844337943351d65c8021c71581031bd7e643f26bc6d0a727c2bf67005f04",
   "paper_id": "gk-1991-regular-national-science",
   "project_dir": "1991_全国卷_理科",
-  "reviewed_at": "2026-10-16T07:32:40+08:00",
+  "reviewed_at": "2026-11-09T14:41:20+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -1951,23 +1951,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -1990,16 +1990,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },
@@ -2009,9 +2009,9 @@
       "edition": "印刷版",
       "kind": "Underfull",
       "lines": "171--172",
-      "pdf_page": 6,
-      "reason": "印刷版第6页第9题“解析”标题对应的低 badness 1038 Underfull；180 dpi 全页页图可读，未见字距松散、裁切或版心异常。",
-      "source_file": "math-gaokao-latex/1991_全国卷_理科/answers.tex",
+      "pdf_page": 3,
+      "reason": "行内公式断行导致的 Underfull/Overfull，行距字距正常，版心无空洞。",
+      "source_file": "1991_全国卷_理科/questions.tex",
       "visual_result": "pass",
       "width_pt": null
     },
@@ -2020,9 +2020,9 @@
       "edition": "印刷版",
       "kind": "Underfull",
       "lines": "373--374",
-      "pdf_page": 10,
-      "reason": "印刷版第10页第19题题干对应的低 badness 1038 Underfull；180 dpi 全页页图可读，断行、间距及答案框均无异常。",
-      "source_file": "math-gaokao-latex/1991_全国卷_理科/answers.tex",
+      "pdf_page": 3,
+      "reason": "行内公式断行导致的 Underfull/Overfull，行距字距正常，版心无空洞。",
+      "source_file": "1991_全国卷_理科/questions.tex",
       "visual_result": "pass",
       "width_pt": null
     }

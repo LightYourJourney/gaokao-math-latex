@@ -1,6 +1,6 @@
 {
   "batch_id": "phase4-b24",
-  "build_attempt_id": "9af7045a-b614-441a-b1c1-92714c694386",
+  "build_attempt_id": "60e28a88-93af-4627-9b63-087f7e65561a",
   "dependency_tree_sha256": "2c844a940f3e156a21211f3095a35da534f9bd026f9897cdde918c8f8ae0cc8f",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；字形清晰，汉字、集合括号、根号与上下标均完整，无缺字框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；试卷标题及第1–4题编号完整连续，选择题分节标题可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；Q1四个集合选项同基线分列，C/D之间留有可辨空隙，无碰撞；其余选项公式基线整齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；页眉含年份、卷别与试题版，底部第1页居中完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；第1–4题完整落在本页，题块未拆分，底部留白充分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；A4页面正文与根式、集合符号清楚可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 5cc13c0002bd9fbb324a8374a33e7608a5bc91fad272f073980c573f177564c7；试题版仅含题干、选项，无答案字母或解析。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；汉字、分数、上下标及极限符号清晰，无缺字框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；第5–15题题号顺序连续，填空题分节及A1/B1标记完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；Q5四选项横向排布清楚，分数线与选项标签可辨且不相碰；Q6选项公式对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；页眉含试题版标记，底部第2页居中完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；第5–15题及第13–15题A1/B1组内容完整，无题目跨页截断。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；正文及分式、极限公式在A4页面可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 6d3d1cea140f7a090cc682f2c878f232758f8ef004c123c877385bd1a8c7874a；题面页仅有空格/横线供作答，无答案或解析提示。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：目视第3页（150 dpi＋600 dpi 局部）：∠、⊥、°、cm²、A′/B′/C′ 撇号、根号与分数均正常；Q16 B₁ 行内方程在「Ax +」后折行，断点位于二元运算符后，墨迹无割裂；无缺字或替换字符（pdftotext 176 词无 U+FFFD）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 16 题续填空题；「三、解答题（17—22，共 86 分）」层级正确；第 16–19 题题号连续，Q17（10 分）/Q18（10 分）/Q19（14 分）分值标注与题干一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项（Q16 为填空，Q17–Q19 为解答题）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：Q18 喷水池图：A（x 268.6–277.4、y 348.0–360.0）、O（x 268.3–277.4、y 379.4–391.4）、「水面」（x 360.7–384.7）三标号齐全，A 在柱顶上方 2 pt、O 在原点下方，曲线未压字；Q19 三棱柱图：A、B、C、A′、B′、C′ 六标号齐全可辨（A′ x 209.3–220.4、B′ x 319.7–331.6、C′ x 341.5–353.1、C x 376.7–385.1、A x 237.0–245.8、B x 345.0–353.9），无标号互压或线穿字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右文本与横线位置同前（x 62.4–532.3 pt、y 37.44 pt）；页脚「——第 3 页——」x 260.0–335.3 pt，中心 297.64 pt＝页心，页码 3 正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页墨迹止于 y 667.4 pt（Q19 图底），页底余 112.1 pt（15.6% 版心）；下一块为「选做题 A₂/B₂」小节头（\\gksubpart 需 6\\baselineskip≈112.3 pt，余量仅差 0.2 pt）＋Q20（\\Needspace≈107.6 pt），且小节头 \\nopagebreak 与 Q20 绑定，整块移至 p4，属已知类块级保持留白；无拆题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12 pt；图内标号 10.7 pt 与正文公式同档，节标题 15.3 pt；字号层级正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 4cfec5012a3ef4e164eaeea41e8d81b9ac34d22ae3a3c6f9db61dbefda3cf9cd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：仅题干与图形；Q19(1)(2) 为待证/待求，未见证明过程或答案；对照来源印载答案，17. (3+4√3)/10、18. 2.5 米、19(2). arcsin(2√3/5) 均未出现在本页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：目视第4页（150 dpi＋600 dpi 局部）：|z₁|≤√2 的根号横、ω、9/2 a³、y²=p(x+1)、⊥、A₂/B₂ 下标等均正常出字；无缺字或豆腐块（pdftotext 218 词无 U+FFFD）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「选做题：A₂ 组与 B₂ 组二选一」层级正确；第 20 题（16 分）、第 21 题（18 分）题号连续；A₂/B₂ 两组并列编排，属已知类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项；行内公式「|z₁| ≤ √2」在关系符前折行（关系符起行，与原卷同位置），无溢出、无压叠。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题图已重绘：直线 x+y=m 延至 Q、R 两真实交点 (0.697,1.303) 与 (4.303,−2.303)，OQ/OR 可见，F 置于曲线上方、O 置原点右下，标签互不相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右文本与横线位置同前（x 62.4–532.3 pt、y 37.44 pt）；页脚「——第 4 页——」x 260.0–335.3 pt，中心 297.64 pt＝页心，页码 4 正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页墨迹止于 y 768.7 pt（Q21 图底），页底仅余 10.8 pt（1.5% 版心），接近满页，无越界（墨迹右缘 532.56 pt ≤ 532.92 pt）；Q22 需 \\Needspace≈107.6 pt，整题移至 p5，页内无拆题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12 pt；A₂/B₂ 组标号与题干同号；分式与根式上下标 8/6.7 pt，层级正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 a45e1843095d2f74f3d3e1bd4167b39c9562d2e45a53d5e41e39df8c67539677 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：仅题干与图形；Q20、Q21 均为待求，未见答案；对照来源印载答案，20A₂ (2) |ω|∈[√13,4)、20B₂ (1) V=πa⁵/3、(2) y=ax 或 y=−5ax、21(2) p=m²/(m+2)、21(3) 3x+3y+4=0 均未出现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：目视第5页（150 dpi＋600 dpi 局部）：Sₙ、aₙ、bₙ、f(1/b_{n−1}) 大括号分式、{aₙ} 花括号、省略号均正常出字；无缺字或豆腐块（pdftotext 116 词无 U+FFFD）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题（18 分）与三小问（1）（2）（3）层级正确，题号连续（全卷止于 22），未见缺号重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项；Q22 的行间公式与三小问排布正常。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右文本与横线位置同前（x 62.4–532.3 pt、y 37.44 pt）；页脚「——第 5 页——」x 260.0–335.3 pt，中心 297.64 pt＝页心，页码 5 正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页仅排 Q22，墨迹止于 y 219.6 pt，页底余 559.9 pt＝版心的 78.1%；成因可核：p4 图底已至 768.7 pt（仅余 10.8 pt），Q22 需 \\Needspace{0.15\\textheight}≈107.6 pt，整题移至末页，属已知类整块下移留白（末页自然收尾）；页内无拆题、无孤行。空白比例偏大，记观察项。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12 pt；行间公式与三小问同档，上下标 8/6.7 pt；字号层级正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 2e02687938215b21618cfd9d3b400fd98303e6ba4e9c8d5487a5206f779cf5ce 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：仅题干与三小问，未见答案或证明过程；对照来源印载答案，22(2) bₙ=(2n+1)/3、22(3) −4/9(2n²+3n) 的闭式未出现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "2f519fe2c769bffdb30496f4e68a8d5853b56f4e144b4671ca90e2e7fd1a1144",
+      "pdf_sha256": "90b8db301a47cfa59566e3bf5377dfd92952a35c4e29867a22624192c678091b",
       "result": "pass"
     },
     {
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；汉字、集合符号、根式与选项公式清晰，无缺字或错误字形。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；选择题分节与第1–4题编号顺序正确，题号层级清楚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；Q1四列选项基线一致、选项间界限清楚；Q2–4公式与文字未碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；页眉标明1997上海文史类数学解析版，底部第1页完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；第1–4题均完整；第5题整题安排到下一页，未拆分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；正文及公式字号清晰可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 6402da8bae0b2f399b6b36b5eb51ae436c8f86c614131480417dd6084d1f23bd；本页为解析版前置题面区，未提前出现答案或答案框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；正文、分数、求和符号及上下标完整清晰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；第5–15题题号和填空题分节标记连续正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；Q5四选项横向分列，分数C与D之间可清楚区分；Q6双行分式选项对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；页眉解析版标记和底部第2页完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；第5–15题与A1/B1组内容完整，无断题或孤立题号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；正文、分式和极限表达在A4页面清楚可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 cd1974f312a3bd2d3d99f9379fa3ae6c16f08080dabe5a2963b7ba544baa6c08；本页仍为题面区，没有答案或答案提示。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：tan/sin、α、π、∠、⊥、°、A′ 撇号、√ 均正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：『三、解答题（17—22，共 86 分）』；第 16–19 题编号连续，第 19 题 2 小题 6+8 分标注与 md 一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 16 题 B₁ 组『Ax +』在行末断行（+ 留在上行），属轻微断行，无压线或越界；第 17 题 tan 分式与上下行净距 ≥5pt，第 19 题 △ 与文字无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18 题喷水图：A 在柱顶、O 在柱底、『水面』在水线右端，双抛物线在 A 相接，A 与曲线净距约 2.6pt，无重叠；第 19 题棱柱 A/B/C/A′/B′/C′ 六标签齐全，实/虚线分配与题设一致，无遮挡。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 3 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y≈654pt，页末余 125pt（6.0cm）；第 20 题块（含 A₂/B₂ 两版题面与图）约 368pt，不能容纳，整块下移第 4 页，属题图整块下移可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；display 字号一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d3535380ca6b9959655b4d417c36ca33339ea65bcdadf345d620a41b845b3634 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区（第 16–19 题）无答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：z₁²、|z₁|≤√2、ω、C₁/C₂、a³、⋯、阴影线均正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 20 题（16 分）、第 21 题（18 分）；A₂/B₂ 选做标注与 (1)(2)(3) 编号完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 20 题内联 9/2、第 21 题内联 √2/2 与上下行净距 ≥1pt；无压线或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题图已重绘：直线 x+y=m 延至 Q、R 两真实交点 (0.697,1.303) 与 (4.303,−2.303)，OQ/OR 可见，F 置于曲线上方、O 置原点右下，标签互不相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 4 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y≈754pt，页末余 25pt（1.2cm）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；图内标签与正文同字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c5680baf57a0bfa0abf3d6c769570671a908aec762aca2a92ec8bcceb92850a0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区（第 20、21 题）无答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：a_n、S_n、b_n、⋯、2n−1 等下标与省略号正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题（18 分）；3 个小题各 6 分标注一致，(1)(2)(3) 连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题 display 与正文净距充足；内联 1/b_(n−1) 行高增大但无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 5 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；display 字号一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 800de91fb026f244c9e5bf4224a7bbeb8ac5ee4d47a3b83382000cfb3ce5a2e2 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区（第 22 题）无答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -487,43 +487,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；答案、解析、汉字和集合/指数公式字形完整清楚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；第1、2题标题编号与各自题干、解析、答案框对应。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；Q1四列选项清晰分隔；Q2两列选项基线整齐，答案框字距正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；答案解析章节标题位于页首，页脚“第6页”完整，无裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；第1、2题各自题干、解析和答案框完整；下方留白不切断题块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；题干、解析与绿色答案框文字均清楚可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 d1b86582c5f8d7b50bb90c15945a63d7995ab5620ee9d4f263ccbfaa404aa2bc；解析版答案区按设计包含答案，检查不适用；答案框紧随对应解析。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -533,43 +533,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：α、a,b 与四选项全角标点正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 3、4 题编号连续；『（题目见第 1 页）』与题面页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 3、4 题四选项逐行左对齐；答案框文字与边框净距 ≥4pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 7 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6ddf5292f7766d2910f1f1a3a48c50cbcdc94d76f8318a64a6bfedc38b1f04b4 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -579,43 +579,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；斜率、分数及数列公式清晰，字形无缺损。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；第5、6题题号顺序及对应答案解析块完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；Q5四项及Q6两行选项对齐；Q5的分式C/D间隔经300dpi复核清楚，无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；页眉解析版标记与底部第8页完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；第5、6题的题干、解析、答案框均完整，无跨页拆分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；小字号分式及正文在A4页面仍清晰可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 0f71ff1f7d3905823647a51020dbdb4235b31be3112dcbd7a5be20ef5fd1e6a5；解析版答案区按设计包含答案，检查不适用；答案框位于对应解析之后。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -625,43 +625,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：lg、sin 2x、[−2π,2π]、复分式 (−3−i)/(1+2i)、a² 正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 7、8、9 题编号连续；三处『（题目见第 2 页）』与题面页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案框内 x=−5、8、−2i 与边框净距约 6pt；分式与上下行净距 ≥1pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 9 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e7f4546dc57c2a6a2622fbb43e4a29ac742bb5a27df680c2f3eeae5ca74d9d7a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 9,
@@ -671,43 +671,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：x²+y²−4x−5=0、P(3,1)、(3x+1)^n、ℕ、sin/cos 直立均正常；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 10、11、12 题编号连续；三处『（题目见第 2 页）』与题面页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 10–12 题答案框公式与边框净距约 4–6pt；第 12 题分式框净距约 4–5pt，未压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左右与相邻页逐点一致；页脚『——第 10 页——』居中于 y≈806pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y≈608pt，页末余 172pt（8.2cm）；第 13 题块（A₁/B₁ 两组）高约 191pt > 172pt，不能容纳，整块下移第 11 页，属必要分页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；第 12 题答案框因 dfrac 高 34.5pt（同页另两个 22.5pt），属内容自适应，非字号缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 39e5994f69d20740bc3f30d9714e99801606932003080d5c01320370ad47d4c3 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 10,
@@ -717,43 +717,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：STSongti-SC 与 Latin Modern/CM 全部内嵌；向量箭头、A₁/B₁ 下标、cm²、lim 与 n→∞ 均正常，无缺字或豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 13、14 题编号连续；两处『题目见第 2 页』与题面页核对一致（第 13、14 题确在第 2 页）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 14 题 B₁ 组题干与作答横线之间的断点已消除（md 作「则 $m=$____。」），200 dpi 复核无断行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉左起 x=62.4、右至 532.9，页码『——第 11 页——』居中于 y=800.4；与第 12–20 页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 CJK 高度中位数 10.7pt（12pt 字号）、拉丁 12.0pt、上下标 7.1pt、页眉页脚 10.5pt；全页无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 33a360f0f3472ae20e04020444bae1a9dcf01dcce1ad5699b1ab9352eaaea0b9 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 11,
@@ -763,43 +763,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：缺字与字体回退检查未见异常；cm、1/7、A₁/B₁ 下标正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 15、16 题编号连续；『见第 2 页』『见第 3 页』与题面页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：A₁/B₁ 题干作答线均与文字同行；答案框内 5/3、1/7 与 (0,4/3) 和边框净距约 4–5pt，无压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致（左 62.4、右 532.9、页脚 y=800.4）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；说明段与该页其余正文同字号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 61801bb44ba41cc486c1b9eb8354815d52105bdaed82cd787c475fd8e3200c82 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 12,
@@ -809,43 +809,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：sin/cos/tan 直立、π/α 与分数线正常；『(3分)』『(6分)』CJK 字形与正文一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 17 题；『见第 3 页』一致；解法一/二层级完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：三个 display 之间及与正文净距均大于 1pt（sin/cos 两式垂直净距约 5pt），无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 459.2pt，余 320.3pt（11.3cm）；第 18 题整块（含喷水轨迹图）高约 433pt，不能容纳，整块下移第 14 页——属『题图整块下移的大留白』可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt；display 字号一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 60cd2008006a93813b471b7183ab9f3f151da150369a2d0c113f37cef3e8a25e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 13,
@@ -855,43 +855,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：OA、x₁/x₂、−(x−1)²、『水面』均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18 题；『见第 3 页』一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：两个 display 与正文净距充足；答案框与文字无压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：喷水轨迹图：A 在柱顶、O 在柱底、『水面』在水线右端；双抛物线在 A 相接，标签无重叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 496.8pt，余 282.7pt（9.9cm）；第 19 题块（含三棱柱图）约 600pt，整块下移第 15 页，属题图整块下移可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 24e415eaddc2170958e7f69456bee9a81e61ea649f6c97441cded0c89527933f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 14,
@@ -901,43 +901,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：A′/B′/C′ 撇号、∥/⊥/∩/⊂、△/∠、√ 与 arcsin 均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「解析」标题后已补空行，标题独占一行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：sin∠AC′H display 与 arcsin 结论净距大于 1pt；答案框内 dfrac 与边框净距约 5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：三棱柱图 A、B、C、A′、B′、C′ 六标签齐全，无遮挡；实/虚线分配与源图一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 664.4pt，余 115.1pt（4.0cm）；第 20 题块跨两页，不能容纳，分页必要。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 40438fd5e990a7c1dfd0de4893df06acc0e1492010ad125a712d68414098037e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 15,
@@ -947,43 +947,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：ℝ（MSBM10）、|ω|、√、∈、≠、z₁² 均正常，无回退字体。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 20 题；『见第 4 页』一致；A₂/B₂ 组标签与 (1)(2) 编号完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 (2) 小题内联 9/2 与上行净距约 0.6pt，属『相邻分式 0.5–2pt 无实碰』可接受类；与下行净距充足。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：B₂ 抛物线图：O 在原点、A 在 C₂ 顶点（两曲线交点），x/y 轴与斜线阴影齐全，标签无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 754.0pt，余 25.5pt（0.9cm）；第 20 题在页内续排，无异常块移。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 8444930820ab987138a9130dbc0ee93f97bc33d85e158bcdc67c58983efa034f 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 16,
@@ -993,43 +993,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：∫/π/a⁵、≥/≤、√13、|ω|、B₂ 下标均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：续第 20 题；『B₂ 组（16 分）』与 (1)(2) 编号正确，无重号或漏号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：分式与积分号净距充足（对齐块行间约 3.6pt）；唯答案框内『B₂ 组』在行末拆为『B₂』（x=521.0–525.2，y=527.1–535.0）与下一行『组（1）V…』（x=69.6，y=558.7），属轻微断行，未见压线或越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图（B₂ 图在第 16 页）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 579.6pt，余 199.9pt（7.0cm）；第 21 题块（含图）首段已需约 636pt，整块下移第 18 页，属题图整块下移可接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 9ebb1fc7ff193fc7cc0d11176ad4344c1f4556fe65fe20c2ecbd85029d3aff71 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 17,
@@ -1039,43 +1039,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：y²、p(x+1)、cases 大括号、Δ、√2/2、m₁…m₄ 均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「解析」标题后已补空行，标题独占一行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：内联 √2/2 与上下行净距大于 1pt；cases 与判别式 display 无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题图已重绘：直线 x+y=m 延至 Q、R 两真实交点 (0.697,1.303) 与 (4.303,−2.303)，OQ/OR 可见，F 置于曲线上方、O 置原点右下，标签互不相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题 (1) 止于 699.7pt，余 79.8pt（2.8cm）；(2) 续排第 19 页，分页自然。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 5415208baf1c8e38f8bd4a5417747a96be13726d5821e1ab5f89d54f3f718592 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 18,
@@ -1085,43 +1085,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：绝对值竖线、√2、m₁–m₄、≠ 均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：续第 21 题 (2)(3)；编号与上页衔接正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：两个绝对值分式 display 与上下行净距大于 1pt，无实碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 511.5pt，余 268.0pt（9.4cm）；第 22 题块约 710pt，不能容纳，整块下移第 20 页，分页必要。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 06f9209e31264caa7e2f92de73b331d29de78c9eeaad33f3f56cab841fafab89 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 19,
@@ -1131,50 +1131,50 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：a_n/S_n/S_(n−1)、b_n、⋯、2n²、−4/9 均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题；『见第 5 页』一致；(1)(2)(3) 编号正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 (2) 小题内联 (1/b_(n−1)) 行高增大但无实碰；答案框内 dfrac 与上下边框净距约 4.6pt（≥1pt），文字未越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉、页码与相邻页逐点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 774.5pt，余 5.0pt（0.2cm），收尾正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.7pt/12.0pt、上下标 7.1pt、页眉页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e8a4645fcb8e5c23ba78070b884c339906fab1017bc54676517ce94271604d74 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：解析版按设计含答案；泄漏检查仅适用于试题版。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 20,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "97515633aa150da8c3414fed335968569b697c48933dbc413ebcdbb6c9f6dd2a",
+      "pdf_sha256": "c67084138cd49ebbe8f5653364b543960d79c22e27db6d60973e3b4d4c156f09",
       "result": "pass"
     },
     {
@@ -1189,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；汉字、根式、上下标及集合符号清晰，无缺字方框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；标题及第1–4题编号连续完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；Q1四列选项水平分布清楚，公式与标签不碰撞；第2–4题选项对齐正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；页眉简答版标记、页脚第1页均完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；第1–4题完整置于本页，留白充足，无题块拆分。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；题干及公式在A4页面可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 3a72bba2b922a16cee9b27070fba43449304af53f0eefa811e55ba58faf7315c；简答版前两页为题面区，无提前泄漏答案。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1235,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；正文、分数、上下标与极限公式清晰完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；第5–15题编号连续，填空题与A1/B1组标识完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；Q5分数选项与标签基线可辨且无碰撞；Q6两行公式选项对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；页眉简答版标记与页脚第2页完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；第5–15题均完整，无题目被截断或拆页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；正文及分式公式清晰可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 189d6ad71b4e1023fed30fbc39afdaa27479986c80f31072ea18344c0ab8a016；本页为简答版题面区，无答案或解析内容。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1281,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：A′B′C′ 上标撇、∠ABB′、⊥、tan 的 α/2 分式均完整；第 17 题 tan 与分式基线协调；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 16 题承前页；「三、解答题（17—22，共 86 分）」；17（10 分）、18（10 分）、19（14 分）编号与分值齐全；19 的 (1)(2) 小问编号正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18 题图：A、O、水面 三标注齐全，A 位于顶点、O 位于原点、水面在水平线右端，无交叠；第 19 题图：A、B、C、A′、B′、C′ 六标注齐全，B′ 与附近虚线净距约 7pt，无实碰，与源扫描件拓扑一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉页脚位置与第 1 页逐点一致；页码「第 3 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y=659.5pt，页脚前余 130.5pt；第 20 题含题图整块下移，属已知可接受的大留白。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12pt；图内标注与正文同字号，未异常缩小。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 c04a61c8b30664d248528a4e8a31643c39f8a0d2529d770b528c6fbcc511d7de 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 19 题仅列「求证」「求…大小」，无答案结论；无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1327,42 +1327,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：复数、集合、∈、≤、√、|ω|、π、a⁵ 等符号完整；无缺字或叠字（图形标注问题另见 figure_label）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：子标题「选做题：A₂ 组与 B₂ 组二选一」；20（16 分）、21（18 分）编号与分值正确；A₂/B₂、小问 (1)(2)(3) 层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题图已重绘：直线 x+y=m 延至 Q、R 两真实交点 (0.697,1.303) 与 (4.303,−2.303)，OQ/OR 可见，F 置于曲线上方、O 置原点右下，标签互不相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉页脚位置与第 1 页逐点一致；页码「第 4 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y=760.4pt，页脚前余 29.6pt，版面饱满；第 21 题图完整落在正文区内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12pt；图内标注同字号；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 e955584db4b3d25b0a98e3333ab7ee9230f346132b438e404ce4d6a3eb80d343 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：A₂/B₂ 两组均只给条件与小问，无答案结论；无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1373,42 +1373,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：S_{n−1}、b_{2n+1} 等下标、⋯、≤、>、f(1/b_{n−1}) 大括号均完整；无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题（18 分）编号与三个小问 (1)(2)(3) 齐全；「每小题 6 分」与正文一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选择题选项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉页脚位置与第 1 页逐点一致；页码「第 5 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y=213.8pt，页脚前余 566pt（79%）。第 4 页仅余 29.6pt，第 22 题（约 151pt）客观上无法前移，且答案速查按 \\clearpage 另起页，属题目节结构性收尾，无重排余量。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12pt；整行公式按展示字号缩放；无异常小字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3ef9e3e82e0a8a36401e3d1e3aae950bfbf9a6d133516d48f763aa7cd3e4d427 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题只给条件与所求，无首项/公比等答案；无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1419,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：e⁴ 上标、cm²、−2i、√ 与大括号分式均完整；无缺字或叠字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「答案速查」标题；「选择题」表列题号 1—6，与「填空题」7—16 连续；解答题另起下页，编号 17—22 无缺。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为答案表与条目，无选择题选项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉页脚位置与第 1 页逐点一致；页码「第 6 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y=495.2pt，页脚前余 284pt（40%）。该空白系 p7「解答题」节标题的 \\Needspace{0.6\\textheight}（431.9pt）在余量 284pt 时触发换页所致，跨页后果见第 7 页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：标题 18pt、小节 15pt、表与条目 12pt、使用说明框 12pt；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 6d8a609aafbbea05cdfa3f5a76a224c4ad3077f1e7865c5aae0a2b6ea590ce05 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页即答案区，答案（1—6 B D B C A D；7—16 各值）全部位于答案区，与 md 答案要点逐项一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1465,42 +1465,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：√13、√3、π、a⁵、2n−1/2n/2n+1 下标、−4/9 分式均完整；无缺字或叠字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「解答题」下 17—22 连续，无重复或跳号；与 md 答案要点逐题对应。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为答案条目，无选择题选项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无插图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉页脚位置与第 1 页逐点一致；页码「第 7 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块未拆、题与答案不跨页；留白受 answer 环境 0.5\\textheight 预留控制，属共享宏既有排版类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 12pt；分式与根式按数学字号缩放，无异常小字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 18b996ffe84d38d4137052db364cc76672c7c095029f27a435066a7a14c1352e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为答案区尾部，答案位于答案区内；无题面混入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1508,7 +1508,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "665bc3c030d5ec6cb574be8a85f9086536058c08325702dff778fe708b9e42be",
+      "pdf_sha256": "aecaa61e43da85e1b65434e6166d6ba2b11b3daa0534a72d914e5d1644ba46a4",
       "result": "pass"
     },
     {
@@ -1523,42 +1523,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；题干、根式、指数、分数及图题说明文字清楚，无缺字方框。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；选择题1–6题号顺序完整，试卷标题与分节标识清楚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；Q1四列选项间距均匀，Q5分数选项与Q6多项公式分布清晰，无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；页眉、印刷版标识、页码第1页均显示完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；第1–6题完整留在本页，未拆题，页尾留白充足。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；缩印印刷版的正文、公式仍清晰可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 f52b7c8b2846572dd2fda37b1cde4293b006a229ac54847ccdbc54f9b684e1a6；本页为题面区，没有答案或解析文字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1569,42 +1569,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：无缺字：行内分式、lim 下标、向量箭头 a/i/j、∠、°、cm²、∈、⊥ 均正常；4 cm、5 cm 的数字与单位间保留细空。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「二、填空题（7—16，每题 4 分，共 40 分）」；7–16 连续；13–16 的 A₁/B₁ 两组题面齐全，组名与（非试点校）/（试点校）对应正确；10×4=40 分与标题一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为填空题与 A₁/B₁ 选做题组，无（A）–（D）选项；行内分式、极限与向量箭头未越版心，与上下行无实碰。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线 y=20.6pt、长 470.9pt，页脚中心较页心偏左 17.2pt，与第 1 页逐点一致；页码「第 2 页」正确；属全局基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文止于 y=532.3pt，页底 796.5pt，留白 264.2pt（35.2%）；成因为「三、解答题」gkpart 0.6textheight 预留（450.7pt）大于剩余空间，整节标题与首题移至第 3 页，页内无孤立标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.5pt；章节标题 12pt 加粗；A₁/B₁ 组标签与正文同号；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 20c5a8ab7d07579aac9b8e16778a00f64f884763585163dc4b0f8124368e6206 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区为填空题，空位均为下划线，未印任何答案数值；第 7–16 题答案在答案区。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1615,42 +1615,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：无缺字：∠、⊥、π/6、α、A′/B′/C′ 撇号、反三角函数文字均正常；图内 A、O、水面、A′–C′ 标签无 tofu。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「三、解答题（17—22，共 86 分）」；17（10 分）、18（10 分）、19（14 分）题号与分值正确，Q19 的（1）（2）齐全；「选做题：A₂组与B₂组二选一」层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为解答题，无（A）–（D）选项；行内公式未越版心。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18 题喷水池图：A、O、水面 三标注齐全，曲线与水面线未压字；第 19 题三棱柱图：A、B、C、A′、B′、C′ 齐全，B′ 位于 A′C 下方，B′ 与周边虚线最小净距约 6px=2.9pt，无压线或标签重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线 y=20.6pt、长 470.9pt，页脚中心较页心偏左 17.2pt，与第 1 页逐点一致；页码「第 3 页」正确；属全局基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：「选做题 A₂/B₂」标题＋2 行说明为完整引导块，第 20 题整块自次页起排：无断题、标题未与题身分离，按分节整块下移已知类通过。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.5pt；图内标签约 9pt；题号、分值同正文；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 686ba640f84511fe116380e2738d872bf6672f246038d2e3ec2808742c64aac0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区仅题干、图形与选做题说明，无答案或提示；第 17–19 题解答在答案区。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1661,42 +1661,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：无缺字：ω、z₁/z₂、|z₁|≤√2、aₙ/Sₙ、…、≤、√ 均正常；图内 x/y/O/A/F/Q/R 均正常落字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：20（16 分）：A₂ 8+8、B₂ 6+10；21（18 分）：5+6+7；22（18 分）：3×6；题号 20–22 连续，三项分值与解答题总分 86 相符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为解答题，无（A）–（D）选项；Q22 行间公式居中，未越版心。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 21 题图已重绘：直线 x+y=m 延至 Q、R 两真实交点 (0.697,1.303) 与 (4.303,−2.303)，OQ/OR 可见，F 置于曲线上方、O 置原点右下，标签互不相碰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线 y=20.6pt、长 470.9pt，页脚中心较页心偏左 17.2pt，与第 1 页逐点一致；页码「第 4 页」正确；属全局基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 22 题及分隔横线止于 y=710.9pt，页底 796.5pt，留白 85.6pt（11.4%）；答案区标题因 Needspace 8baselineskip 起于第 5 页，页内无孤立标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.5pt；行间公式与正文同号；图内标签约 9pt；无异常缩放。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 dd8d60896acf58e564c3523f966d438d8845ae028053641c9d6bb05d75e7f9d0 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题面区仅题干与图形，无答案或提示；第 20–22 题解答均在答案区。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1707,43 +1707,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；题干、解析、答案字母及绿色答案框字形清晰完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；第1–3题标题顺序正确，各自题目、解析和答案对应。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；Q1–3选项标签和公式列对齐，组间间距清楚，无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；印刷版页眉和底部第5页页码完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；第1–3题各自题块完整；留白位于完整题块之后，无孤立标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；印刷缩排下正文、公式与答案框均清晰可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 e4e4eaa81804e9cbf9e973b915cdf2724b52ec7cd47e27d3e43dc2787b7fadef；本页属于答案解析区，答案为设计内容，无题面泄漏检查对象。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 5,
@@ -1753,43 +1753,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；正文、分数、数列项和答案框清晰完整，无缺字或断裂。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；第4–6题编号连续，答案与各题对应。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；Q5的C、D选项经300dpi复核边界清楚，分数与标签未碰撞；Q6两行分式选项对齐。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；本页无图形或图题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；页眉印刷版标记与底部第6页页码完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；第4–6题及各自答案完整；下方留白充足，无题块跨页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；A4黑白打印尺寸下正文与小分式清楚可读。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "当前150dpi PNG SHA-256 b43e96d4bbdb43cde65846b53200415e42d824f54253010dab624f090daec133；本页属于答案解析区，答案为设计内容，无题面泄漏检查对象。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -1799,43 +1799,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：无缺字：lg、sin 2x、π、i、2i 及分数均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 7、8、9 题连续；回链均「第 2 页」正确；答案 x=−5、8、−2i 与答案要点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为填空题解析，无（A）–（D）选项；行内分式与上下行净距正常。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线 y=20.6pt、长 470.9pt，页脚中心较页心偏左 17.2pt，与第 1 页逐点一致；页码「第 7 页」正确；属全局基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 9 题答案块止于 y=420.0pt，页底 796.5pt，留白 376.5pt（50.1%）；answer 环境 0.5textheight=375.6pt 预留（含框后间距）未满足，第 10 题整块推到第 8 页；整块下移、页内无孤立标题，留白偏多但与此前页同因。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.5pt；回链/答案框字号与第 5–6 页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 da31f4fb14370b0e008afe8a22bb9396ab461b012aa1d6619b405f5f811ef52c 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为答案区。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -1845,43 +1845,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：无缺字：ℕ、x²、3x+1、n、256、1/2 分式均正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 10、11、12 题连续；回链「第 2 页」正确；答案 x+y−4=0、54、1/2 与答案要点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为填空题解析，无（A）–（D）选项；行内公式与分数答案框未越界。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线 y=20.6pt、长 470.9pt，页脚中心较页心偏左 17.2pt，与第 1 页逐点一致；页码「第 8 页」正确；属全局基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 12 题答案块止于 y=424.8pt，页底 796.5pt，留白 371.7pt（49.5%）；answer 环境 0.5textheight 预留使第 13 题起于第 9 页（第 9 页首为「第 13 题」，回链第 2 页），整块下移、无孤立标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：正文 10.5pt；答案 1/2 分式按 10.5pt 排，框高自适应；与第 5–7 页一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 fe0dab766df9d429c55d4b149240346163d2da7093e1b2bbd512b04072b3bbbd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页为答案区。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -1891,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d181bb821d5edbe46d7fb9915c3f50002e115a7987c077b764530bbd482e2e15 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1937,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 3cbb4f86e1c70bf483b8605e8b94422bed603a520b1dd7230e51841e63903d0a 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1983,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18/19/20 题图为 300 dpi 复核后版本，标签不压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 d75660c655fa621eddc4bc137ac5b05c60705fa29ee12106a1f0decc7b4976dd 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2029,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：第 18/19/20 题图为 300 dpi 复核后版本，标签不压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 bd507687961040ecab95c9c1a0bb1051ad68050376beac26016015fc67d22d8e 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2075,42 +2075,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 48bf81e010db6ba1abbb19e26f2f1b26587b74ab51c99854ecbe7b7c36d3e258 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2121,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：整块下移留白属 answer/gkpart 预留已知类；无断题、无孤行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 68eac544f8651a3187f5a94475a7f2e45f1f19b2568b443a324202b861858444 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2167,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：构建日志 Missing character/Overfull 均为 0；文本层无替换符。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：题号连续，题—解析—答案块结构完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：本页无图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：页眉线与页码同版本基线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：末页自然收尾；无断题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：字号与同版本一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "继承旧实审：本页当前渲染 PNG SHA-256 ac450144d7e8dacc7273ae45a3d3c5a6b74da4975b868f2573146374d9f63643 与旧 attempt 33cac801-be41-4dfa-bea5-9ee4bfe92762 同页逐字节相同；原结论：答案区正常呈现，题面区无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2210,15 +2210,15 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "e1f93aff72703cfab1e9f5274eaac421d46072eff84428df28b3b3c52a7a0673",
+      "pdf_sha256": "8ee2ed7eba0b77648d7ff2329eacb0b9ffe996302ae32d578bcda81935ad65ed",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "cc0f774287ac4b95cf82915433fd252569ae017c4d24d82910397c16513018c3",
+  "generation_input_tree_sha256": "46ce5cbcfbdcc9c21ffd6e1fea014a8972ac89a29f82732a13b7334b0a547902",
   "input_projection": "f6577607b320cee4080fb3cb67b54f0c09f7ff62c8951707edf15dba4cf66cff",
   "paper_id": "gk-1997-regular-shanghai-arts",
   "project_dir": "1997_上海卷_文科",
-  "reviewed_at": "2026-11-05T00:24:24+08:00",
+  "reviewed_at": "2026-11-09T14:59:11+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2227,23 +2227,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -2266,16 +2266,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

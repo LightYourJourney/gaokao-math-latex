@@ -1,5 +1,5 @@
 {
-  "attempt_id": "f9610c85-0f98-4a5e-b753-881850f8d6b0",
+  "attempt_id": "70ba013b-6a78-4490-a836-c88f219c640e",
   "dependency_tree": {
     "files": [
       {
@@ -79,7 +79,7 @@
       "pdf": {
         "page_count": 5,
         "path": "math-gaokao-latex/2003_北京卷_文科/build/试题版.pdf",
-        "sha256": "071f85f451a522d880b71e07af9d583a7cc6046e6086506f1524f36424bd212f",
+        "sha256": "2cfe567fae8c3dd19e40ce33527dd411ccc22a1ac3c135755db5690c83b3f640",
         "size_bytes": 128972
       },
       "problems": [],
@@ -103,8 +103,8 @@
       "pdf": {
         "page_count": 19,
         "path": "math-gaokao-latex/2003_北京卷_文科/build/解析版.pdf",
-        "sha256": "c6e1ab86d9951d4962e7528c0f10bbcf5382bbd1f7a653bfa3af0343ab395204",
-        "size_bytes": 206813
+        "sha256": "4b63a4dc6f5d9f743c0eccabb0b277eeb192347c7a12bb4a6a9214a1c6f54dba",
+        "size_bytes": 206814
       },
       "problems": [],
       "result": "succeeded",
@@ -127,7 +127,7 @@
       "pdf": {
         "page_count": 7,
         "path": "math-gaokao-latex/2003_北京卷_文科/build/简答版.pdf",
-        "sha256": "7aa093ae2c91767156e7955849c63bb066e043401e3cb050c4ca44fdc9d003e4",
+        "sha256": "ae9ee6fba114bc63a0dc12a914775c36adc7a06de08487a60eb48ad253b55da0",
         "size_bytes": 139655
       },
       "problems": [],
@@ -151,7 +151,7 @@
       "pdf": {
         "page_count": 13,
         "path": "math-gaokao-latex/2003_北京卷_文科/build/印刷版.pdf",
-        "sha256": "61e5541fe941d06e65df20625ad18ce3aa57f1341ed38cb98f907e380ab8fc72",
+        "sha256": "e339d422ac351284a93d89371f1bfa6ef8915333098b155704abe558a56f9551",
         "size_bytes": 203923
       },
       "problems": [],
@@ -159,7 +159,7 @@
       "source": "math-gaokao-latex/2003_北京卷_文科/印刷版.tex"
     }
   ],
-  "finished_at": "2026-11-04T05:47:55+08:00",
+  "finished_at": "2026-11-09T15:43:36+08:00",
   "generation_input_tree": {
     "files": [
       {
@@ -176,7 +176,7 @@
       },
       {
         "path": "math-gaokao-2017-2026/tools/md2tex.py",
-        "sha256": "8dec263c90fbfa8082c97749c561198c3ec6a0e9be1861cf6d8077ab561d339d"
+        "sha256": "e3d5def3a71fb3b2d0a42223bf102c1393b8488a103d0792d2a52047fef661bb"
       },
       {
         "path": "math-gaokao-latex/2003_北京卷_文科/figures/f2003_beijing_arts_q05_ellipse_focus.tex",
@@ -247,15 +247,15 @@
         "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
       }
     ],
-    "tree_sha256": "68f997b9ccff62c8152708c29ec069410bd293e2236026b4fca60ac0dd67cdad"
+    "tree_sha256": "3bcc488ca941bd763ba6a47970f97aac923ccb9220ff50b6b5ddefe44e3f2007"
   },
   "input_projection": "c4671205c7016775b2944fc2cfa4018ca7a6fb2c0a32c52cd66dbae810b3b2cd",
-  "manifest_revision": 6157,
+  "manifest_revision": 7650,
   "paper_id": "gk-2003-regular-beijing-arts",
-  "previous_attempt_id": "c613dd52-166d-4f73-a9f5-913c37f198d5",
+  "previous_attempt_id": "f9610c85-0f98-4a5e-b753-881850f8d6b0",
   "project_dir": "2003_北京卷_文科",
   "schema_version": 1,
-  "started_at": "2026-11-04T05:47:45+08:00",
+  "started_at": "2026-11-09T15:43:23+08:00",
   "status": "succeeded",
   "toolchain_fingerprint": {
     "texlive_revision": "TeX Live 2026",
@@ -263,23 +263,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",

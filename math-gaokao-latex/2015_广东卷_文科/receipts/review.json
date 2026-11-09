@@ -1,6 +1,6 @@
 {
   "batch_id": "phase3-b16",
-  "build_attempt_id": "dc44c9a1-67c0-4955-ac09-4672a0748f72",
+  "build_attempt_id": "00d0463b-c397-4556-881d-655b34436c25",
   "dependency_tree_sha256": "a945d25701a913d9c41ba6b4bc33db03d9d3ff21a12a88ae235f4089f9428aea",
   "editions": [
     {
@@ -15,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 18 个字体全部 emb=yes/sub=yes/uni=yes，无未嵌入字体；600 dpi 检查题名、副题、说明框出字正常；①–⑨（U+2460–2468）、⩽/⩾（U+2A7D/2A7E）、√、∥（U+2225）、⊥、→、AB 长箭头及全角标点均正常，无 U+FFFD/豆腐块；说明框 CJK 序列与规范稿 blockquote 逐字一致（704/704 字符，difflib 无差异）。注：规范稿「则…」U+2026 在 PDF 文本层作 U+22EF（居中省略号），questions.tex 与规范稿同为 U+2026，属 xeCJK 字体映射而非改字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "封面页只有标题与来源说明框，无题号/节头编号；框内 949/950、1–10、11–15、13/14、16–21 均为参考叙述，不是编号项。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为封面＋说明框，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」起于 x=62.36pt，右「试题版」右缘 532.914pt（版心右缘 532.91，差 0.004pt）；页眉横线 y=37.44pt、x 62.40–532.80（470.40pt），未超版心；页脚「——第 1 页——」居中（x 260.0–335.3，y 800.4–811.5），页码 1 正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "说明框整体落在 p1（约 y=168–689.3pt），未跨页；页脚自 800.4pt 起，留白 111.1pt，无压盖；无空页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "实测 Tf：题名 18pt、副题 15pt、「数学」节头 15pt、说明框通篇 10.5pt（F3 10.5×128 等，log 第 1639 行『Calculating math sizes for size <10.5>』）、页眉 11pt；同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "说明框逐句通读：仅出现「第 5 题选项 (D) 的根号…按像素录 √3」「第 18 题 (1) 的 ∥…按语义排印 ∥」——均为题面/选项内容转写，不含答案值或选项判定；grep「答案/故选/解析」仅命中「固定源不附参考答案」这一来源说明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -61,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "600 dpi 逐区目检 Q1–Q8 与题头：中文（STSong）、西文/数学（LMRoman/CM/MSAM）字形齐全，无 tofu、缺笔、重影或字符重叠；⩽/⩾、∩、△、√、分式、cases 大括号均正确，Q5(D) 根号横线（矢量）完整。嵌字全部 emb=yes。Q8 分式分母（m²，最低墨点 y=656.16 pt）与选项行（最高墨点 y=660.60 pt）墨隙：600 dpi 边到边 4.44 pt、1200 dpi 复核 4.32 pt（同列分母 vs (B) 净白 4.50 pt），无相触/并连，远大于 1 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "层级「试题」→「一、选择题」；题号 1–8 连续，无缺号、重号或错序；节头与首题间距正常，无孤行标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "各题 (A)–(D) 标号左缘统一为 x=86.36 pt；同一选项行内标号与公式基线一致（bbox yMin 逐行相同，如 Q8 为 659.93 pt）；Q3 (C) 分式 1/2^x、Q5 根式选项与标号无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q15 圆图在 p3）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左起 62.36 pt，「试题版」墨迹右缘 532.56 pt（bbox 532.91 pt，符合右缘 532.91）；横线 x=62.40–532.80 pt、y=37.44–37.68 pt；页脚「——第 2 页——」居中（x 259.92–335.16 pt，中心 297.54 pt），y≈800.4–811.5 pt，与正文无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 Q8 选项 y=672.48 pt；页脚上方留白 128.64 pt（15.3%），为 Q9 Needspace 换页所致，接受。页顶正文起 62.28 pt；无空页、无压页脚、无跨页压盖；Q8 墨隙 4.44 pt（600 dpi）无并连。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "内容流 Tf 实测：正文 12 pt；节头「试题」「一、选择题」15 pt；页眉/页脚 10.5 pt；数学上下标 7.97 pt（12 pt 的 script 尺寸，正常）。本页无 18 pt 题名（题名在封面 p1）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无「答案/解析/故选/正确选项」等字样，选项无正确项标记或加粗；pdftotext 关键词扫描零命中。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -107,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "600 dpi 逐区目检 Q9–Q15 与题图：中文/西文/数学字形齐全，无 tofu、缺字、重影或重叠；overrightarrow 长箭头（Q9）、θ/ρ/⩽/√、粗正体 N、cases 大括号、Q15 圆图线条均正确。Q10 行末全角逗号悬挂，墨迹右缘 533.76 pt（详见 header_footer）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题号 9、10 续接 p2（p2 止于 8），无缺号/重号；其后「二、填空题」标题，11–15 连续；Q15 完整落在本页，未跨页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q9/Q10 选项 (A)–(D) 左缘统一 x=86.36 pt，同行基线一致（Q9 102.73 pt、Q10 183.59 pt）；Q10 三行题面换行后选项仍对齐；Q14 cases 与行内文字基线协调，无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q15 圆图页面级检查：标签 A/O/B/E/C/D 全部存在且清晰，x 218.5–376.6 pt、y 474.0–588.1 pt，居中于版心（中心 297.54 pt）；无裁切、无与圆或切线重叠；深层几何由图自查负责。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚与 p2 同构：页眉墨迹右缘 532.56 pt、横线至 532.80 pt；正文右缘最大 533.76 pt（Q10 行末全角逗号悬挂，超 532.91 仅 0.85 pt，≤1 pt 接受）；页脚「——第 3 页——」居中（中心 297.54 pt），y≈800.4–811.5 pt，无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文起 y=60.60 pt（Q9 箭头墨迹），止于 Q15 图底 y=588.12 pt；页脚上方留白 213.0 pt（25.3%），为 Q16 的 Needspace 换页留白（p4 起「三、解答题」第 16 题），接受；+3 pt 下移后无空页、无压页脚、无跨页压盖、无题号错位。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "内容流 Tf 实测：正文 12 pt；节头「二、填空题」15 pt；页眉/页脚 10.5 pt；图签 A/B/C/D/E/O 为 10.4608 pt（较 10.5 低 0.37%，源文件显式 \\fontsize{10.5pt}，视觉不可辨，判定在容差内）；数学 script 7.97 pt 正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案/解析字样与正确项标记；Q11–Q15 作答横线为空；pdftotext 关键词扫描零命中。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -153,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q16 的 tan/α/π 分式与 sin/cos、Q17 的区间 [160,180) 等、直方图数字与刻度全部正常；无 U+FFFD/缺字；CJK 与规范稿 Q16/Q17 一致（Q17 抽取多出的『频率组距月平均用电量度』为图内文字，正常）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」+ Q16（1)(2）+ Q17（1)(2)(3)，连续无跳号重号；与规范稿一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行（小问标号已在 heading_number 核对）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q17 频率分布直方图存在且与题对应；y 轴 0.0125/0.011/0.0095/x/0.005/0.0025/0.002、x 轴 0/160/…/300、轴题「频率/组距」「月平均用电量/度」全部可读；0.0025 与 0.002 基线仅差 8pt（墨迹间隙实测 1.2pt），紧而不重叠，与源图一致（figure-inventory FI-S8）；标签 10.46pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同前；页脚「——第 4 页——」正确；Q17 首行末全角逗号墨迹右缘 533.88pt（超 0.97pt），接受。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容 62.3–537.2pt（止于 Q17(3)）；页脚自 800.4pt，页底留白 264pt（31.4%），因 Q18＋立体图整体移至 p5（Needspace，接受）；无空页、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、节头 15pt、图标签 10.46pt、数学脚标 8pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q16/Q17 及直方图均无答案值：x 仅以字母标注未知柱高，未印数值；无众数/中位数等结果；无「答案/故选」。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -199,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q18 的 ∥（U+2225）与 ⊥（U+22A5）正常出字；Q19 分式、N*（U+2217）、下标；Q20 圆方程；Q21 绝对值/∞/⩽⩾ 全部正常；无 U+FFFD/缺字；CJK 与规范稿 Q18–Q21 一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q18–Q21 连续；Q18/Q19/Q20/Q21 各含（1)(2)(3)，无跳号重号；与规范稿一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页为解答题，无选项行。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 立体图存在且与题对应；P/D/C/A/B 五标签清晰无遮挡；DC 自 D 起短虚线段可见（隐藏棱画法，规范稿存疑⑤）；按规范稿⑥未画棱 PB；标签 10.46pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同前；页脚「——第 5 页——」正确；Q18 首行末「4，」逗号墨迹右缘 533.88pt（超 0.97pt），接受。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容 64.9–596.9pt（止于 Q21(3)）；页脚自 800.4pt，页底留白 204pt（24.2%）；无空页、无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt、图标签 10.46pt、数学脚标 8pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q18–Q21 及 Q18 图均无答案值；图仅几何字母标签；无「答案/故选」。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -242,7 +242,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "b9846988bb08dbb4e7a471ebd79bf2ceac15994b0ac30eab3157b230d0d7dc0b",
+      "pdf_sha256": "97e4d351e4a96631371d0e92f3384828d334065a52f2cab6b8f5ef170df92465",
       "result": "pass"
     },
     {
@@ -257,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 全部 emb=yes；600 dpi 目视无豆腐块/缺字；STSong、LMRoman10 与 CM 系符号（⩾、⩽、√3、∥、⊥、向量箭头）均正常出字；文本层无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "封面无题号；标题「2015 年·广东卷·文科」/「数学·解析版」与节标题「数学」齐全，层级正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "说明框内行内公式（a/b、√3、AB 向量箭头、⩾/⩽）均完整，无显示公式、无压盖；本页无选项行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "封面页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学」＋「解析版」，页脚「——第 1 页——」；均 10.5 pt；墨迹右缘 532.8 pt ≤ 532.91 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；说明框止于 y=681.6 pt，页脚 800.4–811.5 pt，留白 118.8 pt，无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "说明框正文/小标题 10.5 pt（bbox h=10.5），页眉页脚 10.5 pt；封面主标题 18 pt、副标题 15 pt；同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "说明框无答案；仅提到第 5 题选项 (D) 的 √3（题面已公开）与源格式说明，未指示正确选项。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -303,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "构建 md5 a8061ef5aaa513c1503e207073cb3eba 已核对。600 dpi 逐段核对 Q1–Q8：∩、√、分式 x²/25 与 y²/m²、cases 大括号、⩽、∈ 均正常出字；pdffonts 全 16 字体 emb=yes/uni=yes；解析版.log 中 Missing character=0、Overfull=0、Underfull=0；无豆腐块/缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「试题」「一、选择题」；题号 1–8 连续、均自 x=62.36pt 齐左，无缺号/重号；Q8 为椭圆题，与规范稿第 8 题一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q1–Q8 选项行均自 x=86.36pt 缩进；Q8 选项 (A)2 (B)3 (C)4 (D)9 单行排布、间距均匀、无重叠；Q3/Q6 双行选项与行内公式对齐正常。Q8 墨隙实测：分母 m²（x≈162.8–177.3pt）底缘 y=656.04pt 至选项行 (B) 顶缘 y=660.60pt，垂直净隙 4.44pt（600 dpi 37px；thr200/250 一致）；全 Q8 列带口径 4.20pt（35px，thr250）/4.32pt（36px，thr200）。均 ≥1pt，无相触/并连。【台账·修复闭环】本格首轮曾判 fail（Q9 的 \\overrightarrow{AD}=(2,1) 在等号处断行；同位置曾报 Q8 分式分母与选项近触）。主会话裁定：① 关系符后断行是 TeX 数学断行的合法断点，且**源件同一关系符处同样断行**（源文本层行末「AB =」、次行「(1, −2), AD = (2, 1)」）、试题版同位置渲染逐字相同 → 关系符断行降级 pass；② Q8 近触为真实缺陷 → 源级加 3pt 间距（`\\par\\vspace*{3pt}`，questions.tex:81 / answers.tex:270），重建后本页墨隙 4.44pt 转 pass。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q1–Q8 均为纯文本/公式题），无图注或图内标签可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学」＋「解析版」；600 dpi 实测页眉墨迹右缘 x=532.80pt（文字 bbox 右缘 532.914pt，与 532.91pt 基准一致），页眉横线 x=62.28–532.80pt；页脚「——第 2 页——」居中（墨迹 259.92–335.16pt，bbox 260.016–335.259pt），页码正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹 y=62.28–672.48pt；Q8 后页底留白 127.9pt（至页脚顶 800.39pt），为分页留白，无内容溢出、无孤儿行；Q8 题干与选项同页完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文汉字 bbox 高 12.0pt（「已知椭圆」638.220–650.220pt）；页眉汉字 10.5pt（24.645–35.145pt）、页脚 10.5pt（800.386–810.886pt）；pdftohtml fontspec 换算一致（正文 18/1.5=12pt，页眉页脚≈15.75/1.5=10.5pt）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "p2 为纯题面：pdftotext 全文检索「答案/故选/解析/正确选项」仅命中页眉「解析版」（版本名，非答案）；Q1–Q8 均以「（　）」留空，无答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -349,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "600 dpi 核对 Q9–Q15：Q9 向量箭头（AB/AD/AC）、Q10 ∈/⩽/花括号/card、Q14 ρ/θ/cases、Q15 √3 及圆切线图均正常；pdffonts 全字体 emb=yes/uni=yes；解析版.log Missing character=0、Overfull=0、Underfull=0；无豆腐块/缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q9、Q10 续「一、选择题」；「二、填空题」节头后 Q11–Q15 连续，题号均自 x=62.36pt 齐左，无缺号/重号；Q15 后为「三、解答题」分页，编号与规范稿一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q9 选项 (A)5 (B)4 (C)3 (D)2、Q10 选项 (A)200 (B)150 (C)100 (D)50 均单行、自 x=86.36pt 缩进，间距均匀；Q14 cases 两行左花括号对齐；公式与选项无重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页实有 Q15 题图（任务说明「四页无题图」与实况不符，特此标注）：600 dpi 核对圆、直径 AB、延长线 E、切线 EC、垂线 AD 均完整；标签 A/B/C/D/E/O 齐全，位置与 figures/f2015gdw_q15_circle.tex 源坐标一致，无重叠/遮挡；图形墨迹最低至 y=588.12pt，未越版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉墨迹右缘 x=532.80pt（bbox 532.914pt），横线 62.28–532.80pt；页脚「——第 3 页——」居中（墨迹 259.92–335.16pt），页码正确；与 p2 同基准。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹 y=60.60–588.12pt（顶端为 Q9 向量箭头上伸）；页底留白 212.3pt。+3pt 下移后 Q9 首行仍在标准版心顶部（汉字 bbox yMin=64.645pt、题号 65.293pt），无压页眉、无新增孤立行；Q15 图与页脚间距充裕（>212pt）。另测：Q10 行末全角逗号悬挂至 x=533.76pt，越右缘 0.85pt（≤1pt，属接受类）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文汉字 bbox 高 12.0pt（「在平面直角坐标系」65.293–77.293pt）；页眉 10.5pt、页脚 10.5pt；与 p2 完全一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "p3 为纯题面：检索「答案/故选/解析」仅命中页眉「解析版」；Q9–Q15 均以「（　）」或填空线留空，无答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -395,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q16 分式、Q17 直方图（虚线、zigzag、轴标签）均正常出字；无缺字/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」；Q16（1）（2）、Q17（1）（2）（3）连续齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q16 两个分式完整，跨行处无压盖；Q17 图与题文/小问不重叠；本页无选项行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q17 直方图在题后；轴标签 0.0125/0.011/0.0095/x/0.005/0.0025/0.002 与 0、160…300 可读；0.0025 与 0.002 墨迹行间隙仅 0.72 pt（偏紧但未遮挡）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚「——第 4 页——」；10.5 pt；右缘墨迹 533.76 pt = +0.85 pt，为 Q17 段行末「220)，」全角逗号悬挂，≤1 pt 接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=536.8 pt，页脚 800.4 pt，留白 263.6 pt（约 31%），为节末 Needspace 留白；无空页/压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；图标签/轴标题 10.5 pt（数字 bbox h=9.29，CJK h=10.46）；页眉页脚 10.5 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面页；直方图未给出 x=0.0075 或众数/中位数答案；无答案标记。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -441,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q18 立体图、Q19 集合大括号/分式、Q20 圆方程、Q21 绝对值/分式均正常出字；无缺字/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q18–Q21 连续；每题（1）（2）（3）齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q19 集合括号与分式完整；Q20/Q21 行内公式完整；Q18 图与文字不重叠；无公式压盖/跨页断裂。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 三角形 PDC 与长方形 ABCD 立体图在题后；P、D、C、A、B 可读、无遮挡；虚线 DC 与未画 PB 均照源；深层几何交由图自查代理。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚「——第 5 页——」；10.5 pt；右缘墨迹 533.76 pt = +0.85 pt，为 Q18 行末「BC=3．」全角句号悬挂，≤1 pt 接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=599.3 pt，页脚 800.4 pt，留白 201.1 pt（约 24%），为节末 Needspace 留白；无空页/压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；图标签 10.5 pt（bbox h=9.29）；页眉页脚 10.5 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解答题题面页；各小问均未含答案；无答案标记。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -487,43 +487,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "标题/正文/公式/∉/⊂/∪ 均正常出字；无缺字/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「参考答案与详细解析」节头；「第 1 题」对应 Q1，无小问；题号连续起点正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "显示公式 M∩N={1} 完整居中；答案框完整；无压盖/断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚「——第 6 页——」；10.5 pt；墨迹右缘 532.8 pt，无悬挂超界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=413.1 pt，页脚 800.4 pt，留白 387.3 pt（约 46%），属 Needspace 接受类；答案框为页内尾框、非孤儿；无空页/压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；「（题目见第 2 页）」10.5 pt 灰色、页码链接蓝色（链接色接受类）；页眉页脚 10.5 pt；答案框 12 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：答案框为内容本体；题面重述区与「题目见第 2 页」均不含答案，无泄漏可言。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -533,43 +533,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q2/Q3 解析中的分式、根式、∉、arg、π 均正常出字；无缺字/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 2 题」「第 3 题」连续；题面重述选项 (A)–(D) 齐全；无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q2 显示公式完整居中；Q3 选项重述 (C) 分式完整；答案框不压文字；无断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚「——第 7 页——」；10.5 pt；墨迹右缘 532.8 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=717.3 pt，页脚 800.4 pt，间距 83.1 pt；无空页/压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；注释「（题目见第 2 页）」10.5 pt；页眉页脚 10.5 pt；答案框 12 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：答案框为内容本体；题面重述无答案泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -579,43 +579,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q4 解析中的 cases 大括号、⩽/⩾、分式、× 均正常出字；无缺字/豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 4 题」与 Q4 对应；题号连续；无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "cases 块完整；三个 z 值显示式完整；行内分式 1−x/2 完整；无压盖/断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚「——第 8 页——」；10.5 pt；右缘墨迹 533.76 pt = +0.85 pt，为 Q4 验证段行末「：/；/]，」全角标点悬挂，≤1 pt 接受类。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=704.5 pt，页脚 800.4 pt，间距 95.9 pt；无空页/压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；注释「（题目见第 2 页）」10.5 pt；页眉页脚 10.5 pt；答案框 12 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：答案框为内容本体；题面重述无答案泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -625,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 18 款字体全部 emb=yes；log 中 Missing character 0 处；600 dpi 目检 STSong/STHeiti/LM/CM 出字正常，√、√3/2、≈、30◦、△ 均无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 5 题」y=64.0，与页↔内容表（p9=Q5）一致；本题为单选、无小问，无需小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项 (A)–(D) 同一基线 y=168.24–180.24，四项间隔均 19.8 pt 等距；行内 √3/2 分式与 √3 根号横线完整不断开；显示式左右缘在 105–455 pt 内，未越版心、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：pdfimages 对 p9–16 零命中，规范源 Q5 无 [题图]，页内亦无图标签可检。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉 10.5 pt（y=24.64–35.15，左起 x=62.36，右端 532.91＝版心右界）；页眉分隔线 y=37.44–37.68、x=62.4–532.8；页脚「——第 9 页——」10.5 pt，中心 297.64＝页宽中心，距页底 30.4 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无跨页压盖；正文最低墨迹 y=517.2（答案框底），距页脚顶 283.2 pt（底白 37.1%，属 Needspace 留白），未压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/解析 CJK 字框实测 12.00 pt；页眉、页脚与「（题目见第 2 页）」均 10.5 pt；题头 STHeiti 12 pt；同角色无混用（本段无来源说明框、本页无图标签）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：C（2）」位于解析末尾 y=500.4–512.4，属解析版本体内容；题面区无提前标答，与答案要点 C（2）一致，不构成泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -671,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；Missing character 0；600 dpi 目检 ⊂、∩、∥、α/β、粗体 𝐑 等符号正常，无缺字、无乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 6 题」y=64.0，编号连续（Q5→Q6）；单选无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项两行：A/B 基线 y=166.00–178.00、C/D y=184.72–196.72，行内 l、l₁、l₂ 完整不断开；显示集合式 l₁/l₂ 居中，Σ 无、无压盖，无跨页断点。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：Q6 为纯文字立体几何命题题，源无 [题图]，页内无图标签。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚布局同前；页眉右端 532.91＝版心右界，本页墨迹最大 532.80；页脚「——第 10 页——」居中（297.64）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文最低 y=696.1（答案框底），距页脚顶 104.3 pt（底白 13.7%）；无空页、无压页脚、无跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.00 pt；页眉页脚与题源注 10.5 pt；题头 12 pt；同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：D」位于解析末 y=674.9–696.1，为解析版本体；题面区无标答，与答案要点 D 一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -717,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；Missing character 0；600 dpi 目检组合数大括号、分式、根号横线、P=6/10 正常，无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 7 题」y=64.0，编号连续；单选无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项 (A)0.4 (B)0.6 (C)0.8 (D)1 同行基线 y=166.6–178.4 等距；三个显示式 C(5,2)=10、C(2,1)C(3,1)=2×3=6、P=6/10=0.6 居中无压盖；验证段行内 \\dfrac{1+3}{10} 与上下行无墨迹碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：Q7 为概率文字题，源无 [题图]，页内无图标签。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉 10.5 pt、右端 532.91；分隔线 62.4–532.8；页脚「——第 11 页——」10.5 pt、居中；本页墨迹最大 532.80，未越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文最低 y=511.9（答案框底），距页脚 288.5 pt（底白 37.8%）；无空页、无压脚、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.00 pt；页眉页脚与题源注 10.5 pt；题头 12 pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：B（0.6）」在解析末 y=490.2–511.9，属本体内容；与答案要点 B（0.6）一致，题面区无标答。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -763,43 +763,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "600 dpi 核对：Q8 重述分式、上标、负号及答案框「答案：B（3）」均正常；pdffonts 全字体 emb=yes/uni=yes；解析版.log Missing character=0、Overfull=0；无豆腐块/缺字，pdftotext 无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 8 题」与 p2 Q8 对应；「题目：」「解析」小标题层级正确；同页仅 Q8，无编号错位/重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "重述选项行 (A)2 (B)3 (C)4 (D)9 自 x=86.36pt 缩进、间距均匀；显示公式 a²=25、b²=m²、c²=a²−b² 与 16=25−m²、m²=9 居中且等号对齐，无重叠。Q8 墨隙实测（同一修复点）：分母 25（x≈139.5–151.2pt）底缘 y=146.64pt 至选项行 (B) 顶缘 y=150.84pt，垂直净隙 4.08pt（600 dpi 34px，thr250）/4.20pt（35px，thr200）；m² 列口径 4.32pt（36px）。均 ≥1pt，无相触/并连。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q8 解析全为文本/公式），无图注或图内标签可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉墨迹右缘 x=532.80pt（bbox 532.914pt），横线 62.28–532.80pt；页脚「——第 12 页——」居中（墨迹 257.28–337.80pt，bbox 257.391–337.884pt），页码正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹 y=64.56–426.36pt；页底留白 374.0pt（约占版心 47%，属接受类 Needspace 留白）；单页单题、答案框完整、无孤儿、无溢出。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文汉字 bbox 高 12.0pt（「已知椭圆」127.915–139.915pt）；答案框文字 12.0pt（409.452–421.452pt）；页眉/页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "p12 为解析版解答页，按版式含「故选 (B)」与「答案：B（3）」；答案的呈现是本版功能而非泄漏，故不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 12,
@@ -809,43 +809,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "600 dpi 核对：向量箭头（AC/AB/AD/BC）、点乘、负号、|AD|² 及答案框「答案：A（5）」均正常；pdffonts 全字体 emb=yes/uni=yes；解析版.log Missing character=0、Overfull=0；无豆腐块/缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 9 题」与 p3 Q9 对应；「题目：」「解析」层级正确；同页仅 Q9，无编号错位/重复。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "重述选项行 (A)5 (B)4 (C)3 (D)2 自 x=86.36pt 缩进、间距均匀；两个显示公式（AC 向量式、AD·AC 式）居中且等号对齐；无公式与选项重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q9 解析全为文本/公式），无图注或图内标签可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉墨迹右缘 x=532.80pt（bbox 532.914pt），横线 62.28–532.80pt；页脚「——第 13 页——」居中（墨迹 257.28–337.80pt，bbox 257.391–337.884pt），页码正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹 y=64.56–424.32pt；页底留白 376.1pt（约占版心 48%，接受类）；与 p12 同构。所述约 38px 亚像素差异在 600 dpi 复核中未见任何实质版式变化：无新增断行/压盖/孤儿，+3pt 下移未造成新问题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文汉字 bbox 高 12.0pt（「在平面直角坐标系」127.915–139.915pt，与 p12 同高）；答案框文字 12.0pt（407.513–419.513pt）；页眉/页脚 10.5pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "p13 为解析版解答页，按版式含「故选 (A)」与「答案：A（5）」；答案的呈现是本版功能而非泄漏，故不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 13,
@@ -855,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；Missing character 0；600 dpi 目检 ⩽（U+2A7D）、∈、Σ、粗体 𝐍、card 均正常，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 10 题」y=64.0，两位数编号排布正常，连续于 Q9；单选无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项 (A)200 (B)150 (C)100 (D)50 同行基线 y=184.72–196.72，项间均 19.85 pt；两组求和显示式 Σ_{s=1}^{4}s³=100 与验证式 Σ_{s=2}^{4}(s−1)³=36 上下限完整、居中无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：Q10 为集合计数文字题，源无 [题图]，页内无图标签。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同全库；本页两处行末全角逗号墨迹悬挂至 533.76 pt（超 532.91 仅 0.85 pt，≤1 pt，属接受类），其余右缘 532.80；分隔线与页脚位置不变。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文最低 y=690.0（答案框底），距页脚 110.4 pt（底白 14.5%）；无空页、无压脚、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.00 pt；页眉页脚与题源注 10.5 pt；题头 12 pt；无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：A（200）」y=668.4–690.0 在解析末，属本体；与答案要点 A（200）一致，题面区无标答。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -901,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；Missing character 0；600 dpi 目检 −x²−3x+4>0、区间 (−4,1)、不等号与因式分解括号正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 11 题」y=64.0，编号连续（Q10→Q11）；填空无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "填空题无选项行；题干作答横线连续完整；三个显示式 x²+3x−4<0、(x+4)(x−1)<0、−4<x<1 居中、完整、无压盖；无跨页断点。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：Q11 为一元二次不等式文字题，源无 [题图]，页内无图标签。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉 10.5 pt、右端 532.91；分隔线 62.4–532.8；页脚「——第 15 页——」居中；本页墨迹最大 532.80。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文最低 y=427.7（答案框底），距页脚 372.7 pt（底白 48.9%）；无空页、无压脚、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.00 pt；答案块同为 12 pt；页眉页脚与题源注 10.5 pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：(−4, 1)」y=404.5–427.7 在解析末，属本体；与答案要点 (−4,1) 一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -947,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；Missing character 0；600 dpi 目检 x̄/ȳ 上横线、Σ、√6、±1、⋯ 正常，无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 12 题」y=64.0，页内续「第 13 题」y=384.7；编号连续（Q11→Q12→Q13），两题均无小问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "两题均为填空、无选项行；显示式 ȳ=(1/n)Σ(2xᵢ+1)=…=2x̄+1、b²=ac、ac=…=1 完整居中；验证段行内分式 b/a=1/(5+2√6) 与下一行墨迹间隙 1.6 pt，可读无压盖；无跨页断点。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：Q12、Q13 均为填空题，源无 [题图]，页内无图标签。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉 10.5 pt、右端 532.91；分隔线 62.4–532.8；页脚「——第 16 页——」居中；本页墨迹最大 532.80。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "页内两题完整、无跨页断点；正文最低 y=713.4（Q13 答案框底），距页脚 87.0 pt（底白 11.4%），无压页脚、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12.00 pt；两个答案块 12 pt；页眉页脚与题源注 10.5 pt；无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "「答案：11」（y=335.2–356.4）与「答案：1」（y=692.2–713.4）分别位于 Q12/Q13 解析末，属本体；与答案要点 11、1 一致，题面区无标答。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -993,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts：本段 16 个字体全部 emb=yes（STSong/STHeiti/LMRoman12/CM 系），日志无 Missing character；ρ、θ、√、⩾、−、分式与 cases 花括号均正常出字，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 14 题」在页首，题号与全卷连续（上一题在 p16，下一题第 15 题在 p18）；Q14 为填空题，无小问标号，不存在缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "行内 cases 组 x=t²、y=2√2t 完整，花括号未断开；x+y=−2、y²=8x、(y+4)²=0 均单行完整；无跨页公式、无压盖。花括号较高使该行行距局部增大，属显示风格公式的已知代价，未与上下行相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p17 无题图；Q14 为极坐标/参数方程题，题面不含图形，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学…解析版」、页脚「——第 17 页——」齐全；文字 x 范围 62.36–532.91 pt，页眉横线止于 532.91 pt；页脚 y 约 801.6–811.45 pt，均未越出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 542.4 pt（150 dpi 实测 y≈1130 px），页脚文字顶部约 801.6 pt，底部留白约 31%，属 Needspace 留白接受类，未与页脚相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt（bbox 字高 12.0 pt）；灰色「（题目见第 3 页）」、页眉、页脚均 10.5 pt（bbox 字高 10.5 pt）；上标 8 pt；答案框文字 12 pt，同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "绿色「答案：(2, −4)」框是解析版本体，位于验证段之后；上方题面与解析过程未提前以答案块形式泄露，答案与答案要点一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1039,43 +1039,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠、⊥、√、·、∘、e² 等均正常出字；全部字体嵌入，日志无缺字；图中拉丁字母 D/C/A/O/B/E 为 10.5 pt 数学斜体，无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 15 题」在页首，题号连续；Q15 为填空题，无小问标号；「解析」小节完整位于题面与图之后。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "CE²=EB·EA、(2√3)²=e(e+4)、e²+4e−12=0、EA=6、OE=4、sin∠OEC=OC/OE=2/4=1/2 均单行完整；页末止于 ∠AEC=∠OEC=30°，无公式跨页或压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q15 圆与切线图存在：A、B 在圆上，O 为圆心（中心黑点可见），C 为切点，D 为 A 到 EC 的垂足，E 在 AB 延长线上；六个标签均可读、无重叠，与题面「AB 为直径、EC 为切线、AD⊥EC」对应。深层几何由专职图自查代理负责。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 18 页——」；文字与横线均在 62.36–532.91 pt 版心内，页脚 y≈801.6–811.45 pt，无越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 679.7 pt（150 dpi 实测 y≈1416 px），底部留白约 14.5%，未与页脚相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；图标签 10.5 pt（CMMI10，bbox 字高 10.5）；灰色「（题目见第 3 页）」、页眉、页脚 10.5 pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为 Q15 纯解析区，无「答案」块；Q15 的答案框「答案：3」在 p19 开头，故本页不适用答案块检查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 18,
@@ -1085,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠、√、π、α、∘、分式与全角标点均正常；所有字体嵌入、无 Missing character；Q16 题面与验证段的 sin/cos 公式出字正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 16 题」在页中，题号连续；题面（1）（2）齐全；解析（1）标号存在；解析（2）续至 p20，标号不丢。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "tan(α+π/4)=(tanα+1)/(1−tanα)=(2+1)/(1−2)=−3 完整；验证段 sin/cos 两式与「二者之比为 −3」完整；题面（2）的显示风格分式使该行行距增大，但与上行、下行均未相交，无公式跨页或压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p19 无题图；Q16 为三角函数求值题，题面不含图形，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 19 页——」；页眉右侧「解析版」止于 532.91 pt，页脚 y≈801.6–811.45 pt，均在版心内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 696.0 pt（150 dpi 实测 y≈1450 px），底部留白约 12.5%，未与页脚相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；灰色「（题目见第 4 页）」、页眉、页脚 10.5 pt；上标/下标 8 pt；无角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q15 绿色「答案：3」框是解析版本体，位于验证段之后；其下 Q16 题面与解析（1）未以答案块形式泄露 Q16 的答案（−3、1 在 p20 才出现）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1131,42 +1131,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q16（2）的分式、平方、负号与直方图全部数字/小数标签均正常出字；字体全部嵌入，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首为 Q16 解析（2），随后「答案（1）：−3」「答案（2）：1」，再出现「第 17 题」；题号与小问标号连续、齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q16（2）分母化简、同除 cos²α、代入 tanα=2 的公式均单行完整；Q17 题面的分组区间 [160,180)…[280,300) 完整，换行发生在区间之间，无公式断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q17 频率分布直方图存在，纵轴「频率/组距」、横轴「月平均用电量/度」、刻度 0/160/180/200/220/240/260/280/300 与纵轴 0.0125/0.011/0.0095/x/0.005/0.0025/0.002 均可读；0.0025 与 0.002 两标签墨迹间距仅约 5 px@600 dpi（0.6 pt），紧贴但未重叠、可辨认。深层几何由专职图自查代理负责。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 20 页——」；页眉横线止于 532.91 pt，页脚 y≈801.6–811.45 pt，无越界、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；直方图底部（横轴箭头/刻度）约 772.8 pt（150 dpi 实测 y≈1610 px），与页脚文字顶部约 801.6 pt 相距约 29 pt，未相交；该页几乎排满，属正常收页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；直方图纵/横轴标签、数字标签 10.5 pt；灰色「（题目见第 4 页）」、页眉、页脚 10.5 pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q16 的两个绿色答案框是解析版本体；其后的 Q17 题面（含直方图）未提前显示 x=0.0075、众数 230、中位数 224 或 5 户。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1177,43 +1177,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⟹、分式、频率/组距叠排、√、⩽ 等均正常出字；所有字体嵌入，无 Missing character、无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q17 题面（1）（2）（3）齐全，解析（1）（2）齐全，标号连续。注意：题面（1）标签 x=54.74 pt，而（2）（3）标签 x=78.74 pt，二者相差 24 pt（2 em）——这是直方图后首段的「题图后齐左」接受类（含小问标号），（1）的「（」悬出左版心 7.6 pt，属该类已知表现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "面积归一式 20(0.002+…+0.0025)=1、20(0.0425+x)=1 ⟹ 0.0425+x=0.05 ⟹ x=0.0075、频率序列、中位数方程 0.45+t/20×0.25=0.5 均单行完整；首行行内显示风格分式「频率/组距」使该行行距增大，但与上下行未相交，无公式断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p21 无题图；Q17 的直方图在 p20，本页只有题面小问与解析，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 21 页——」；首行内容顶部约 64 pt，页眉横线约 37.4 pt，间距约 26.6 pt；页脚 y≈801.6–811.45 pt，无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 771.8 pt（150 dpi 实测 y≈1608 px），与页脚文字顶部约 801.6 pt 相距约 30 pt，未相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；页眉、页脚 10.5 pt；本页无图标签；分式与上下标按数学字号规则（8/6 pt），无角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为 Q17 纯解析区（解析（1）（2）），无「答案」块；Q17 的答案（1）（2）（3）在 p22 才出现，故本页不适用答案块检查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 21,
@@ -1223,42 +1223,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∥、⊥、√、分式、全角括号与立体图字母均正常出字；字体全部嵌入，日志无缺字、无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首 Q17 解析（3）与答案（1）（2）（3）齐全，随后「第 18 题」题面（1）（2）（3）齐全，题号连续。注意：Q18（1）标签 x=54.74 pt，而（2）（3）标签 x=78.74 pt，相差 24 pt——同为立体图后首段的「题图后齐左」接受类（含小问标号）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q17（3）的 11/55=1/5、25×1/5=5 户与验证式完整；Q18 题面 PD=PC=4、AB=6、BC=3 完整；无公式跨页、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 立体图存在：P 在上，D/C 为 DC 两端，A/B 为长方形下边，P–D、P–C、P–A、A–D、A–B、B–C 可见；D 起有一小段虚线（照源的隐藏棱画法），未画棱 PB（照源）；P、D、C、A、B 标签均清晰、无遮挡。深层几何由专职图自查代理负责。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 22 页——」；页眉右侧与横线止于 532.91 pt，页脚 y≈801.6–811.45 pt，无越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 708.5 pt（150 dpi 实测 y≈1476 px），底部留白约 11%；Q17 答案框与 Q18 标题间距正常，无跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12 pt；Q18 图标签 10.5 pt；灰色「（题目见第 5 页）」、页眉、页脚 10.5 pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q17 的三个绿色答案框是解析版本体；其后的 Q18 题面（含立体图）未提前显示 Q18 的证明结论或 3√7/2。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1269,43 +1269,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "构建 md5 2abf4dc138a60c4a5fa13832fc924499 已核对。600 dpi 渲染逐段核对：STSong/STHeiti/LMRoman12/CMMI12/CMSY10/CMR12/CMR8 等 9 个字体 pdffonts 均 emb=yes、uni=yes；∥、⊥、∉（∈+/ 叠加）、⊂、⊄、√、向量箭头、∘ 均正常出字，无豆腐块/缺字，pdftotext 提取无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首为 Q18 解析标题「解析」（题目「第 18 题」及其 (1)(2)(3) 小问在 p22），本页小问标号 (1)(2)(3) 依次位于 y≈90.0/328.8/519.1 pt，连续无缺号、无重复；p24 续 (3) 正文且未重复标号，跨页标号连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "两处修复后的显示式居中性良好：BC∥平面 PDA 墨迹 x 252.84–342.00 pt（中心 297.42，版面中心 297.64，偏差 0.22 pt），BC⊥平面 PDC 墨迹 x 251.28–343.56 pt（中心 297.42）；行宽 89.16/92.28 pt，远小于正文宽 470.55 pt，未被压盖、未断行、未越界。与相邻行间距：前者上 19.68/下 13.44 pt，后者上 7.80/下 14.16 pt，无重叠。CJK–拉丁字距实测（600 dpi，1 px=0.12 pt，核心墨迹阈值 64–160）：「平面→PDA」5.04 pt、「平面→PDC」4.92 pt（阈值 200 时为 4.80/4.68 pt），与正文行内「平面 \\(PDA\\)」的 4.68 pt（阈值 200 时 4.44 pt）一致，确认尾随空格已生效、不再为 0。另记：行内 \\text{平面 }PDA 类写法（如 B∉平面PDA、PD⊂平面PDC）墨迹间隙仅 0.84–0.96 pt，属修复前既有现象、本次未触及，可读性未受影响。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p23 无图：pdfimages -list 本页 0 个图像对象，正文无「图 N」标签；Q18 的题图（长方形 ABCD 示意）在 p22，本页为纯解析，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学」+「解析版」墨迹 y 25.44–35.28 pt，页眉横线 y 37.44–37.68 pt；页脚「——第 23 页——」墨迹 y 801.24–811.08 pt、x 257.28–337.92 pt（居中）。右缘墨迹实测 532.92 pt（600 dpi 像素边界；pdftotext 名义值 532.914 pt，与 532.91 pt 一致），全页无墨迹越过 533.0 pt，无越界、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文最后墨迹 y 702.24 pt（坐标列表完整落在页内），页脚自 801.24 pt 起，间距 99.0 pt（页高 841.89 pt 的 11.8%），无压页脚、无跨页压盖；分页点在「则 + 坐标显示式」之后、p24「于是」之前，属完整显示式后的正常断页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 字面框高 12.00 pt（pdftotext bbox，如 y 110.404–122.404；pdftohtml fontspec 18 px ÷ 1.4985 px/pt = 12.0 pt）；页眉/页脚 10.5 pt（bbox 高 10.5 pt；16 px 取整前 10.5 pt）；上下标 CMR8 8 pt；显示式数学字体 CMMI12/CMR12 同为 12 pt，无异常字号或角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为 2015 广东文 Q18 的纯解析页（(1)(2)(3) 证明与「验证」段），无「答案」块、无答案汇总；解析版本身即含解答，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 23,
@@ -1315,42 +1315,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "向量长箭头（DA、DP、n）、√、×、≈、≠、∥、⊥ 均正常出字；字体全部嵌入，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q18 答案（1）（2）（3）齐全；本页不重复「第 18 题」标题，题号承接 p22/p23，连续无缺号；解析（3）的「于是」续段完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q18 推导逐行核：DA=(0,3,0)、DP=(3,0,√7)、n=DA×DP=(3√7,0,−9)、平面 √7x−3z=0、d=|6√7|/√((√7)²+(−3)²)=6√7/4=3√7/2 全部正确；体积法验证 VP-ACD=3√7、S△PDA=6、d=9√7/6=3√7/2≈3.969 与坐标法一致；无公式断开/压盖/跨页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "p24 无题图；Q18 的立体图在 p22，本页只有推导与答案，故本项不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚齐全，页脚为「——第 24 页——」；页眉横线与右侧文字止于 532.91 pt，页脚 y≈801.6–811.45 pt，无越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；内容底部约 517.4 pt（150 dpi 实测 y≈1078 px），底部留白约 34%，属 Needspace 留白接受类，未与页脚相交。页首仅「于是」一词引出下式，是公式前的自然分页，不是空页或跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与绿色答案框文字均 12 pt；页眉、页脚 10.5 pt；上标/下标 8/6 pt；答案（3）中的 3√7/2 分式按 12 pt 数学字号排印，无角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "页尾三只绿色答案框「答案（1）」「答案（2）」「答案（3）：3√7/2」是解析版本体；其上方解析过程与题面未以答案块形式提前泄露。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1361,42 +1361,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 显示 STSong/STHeiti/LMRoman/CMSY/CMMI/CMEX 共 18 款字体全部 emb=yes；逐字核对 {a_n}、4S_{n+2}+5S_n=8S_{n+1}+S_{n-1}、⩾、N*、⩽ 均正常出字，无豆腐块、无乱码、无未嵌入字体。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首「第 19 题」；题干（1）（2）（3）三小问齐全；解析 (1)(2) 起于本页，编号连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "S1/S2/S3 三个分式并列、4S4=8·15/4+1−5·5/2 展开链、a4=37/8−15/4 均单行完整不断开；右对齐公式标签 (i)(ii)(iii) 落在版心内（xMax 532.9 pt）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（pdfimages -list 第 25–32 页无任何图像对象；Q19 为纯数列题）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」、右「解析版」及横线；页脚「——第 25 页——」；页眉/正文墨迹右缘 532.3 pt ≤532.91 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文最后墨迹 730.9 pt（(iii) 式），页脚顶 800.4 pt，页底留白约 69 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与数学 12 pt（pdftohtml 18/1.5）；页眉页脚及灰色「题目见第 5 页」10.5 pt；标题 STHeiti 12 pt 粗体；同一角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题目重述块只含题干与三小问，无答案值；本页无答案框，未见答案泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1407,43 +1407,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "全部字体已嵌入；{b_n}、d_{n+1}=d_n、b1=3/2−1/2=1≠0（600 dpi 放大核对 ≠ 斜线贯穿等号）、(1/2)^{n−1} 均出字正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "(2) 续篇先给出 (iv) 并完成证明，随后 (3)；公式标签 (iv) 在右侧，三个小问编号连续无缺。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "(iv) 移项式、d1/d2 计算、4a_{n+2}−4a_{n+1}+a_n=0、b_n 递推与 b1、2^n 乘式、c_n 递推均单行完整；行内分式增高行距但无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q19(2)(3) 纯代数推导）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学／解析版」+横线、页脚「——第 26 页——」；墨迹右缘 532.3 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文止于 708.8 pt，页脚顶 800.4 pt，末行 c_n=2n−1 后留白约 92 pt（约 11%），属分页/Needspace 留白。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与公式 12 pt；页眉页脚 10.5 pt；同角色一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：无题目块、无答案框，答案泄漏检查不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 26,
@@ -1453,42 +1453,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；a_n=(2n−1)/2^{n−1}、答案框内大括号、⇔、⊥（600 dpi 核对，字形完整）、C_1(3,0) 均正常出字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "下半页「第 20 题」；题干（1）（2）（3）齐全；解析 (1)(2) 起于本页；Q19 的答案（1）（2）（3）三框齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "三个答案框内容（a4=7/8；含 1/2 分式的集合；a_n 分式）均在框内且距右边框约 4 pt；圆方程配方 x²+y²−6x+5=0 ⇔ (x−3)²+y²=4 与 C1M⊥OM 完整不断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q20 为解析几何，题目本身无配图）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与全段一致；页脚「——第 27 页——」；墨迹右缘 532.3 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文止于 750.5 pt（C1M⊥OM 行），页脚顶 800.4 pt；Q20 标题后有正常段距，无孤行标题。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "答案框标签与内容 12 pt（STHeiti 标签+STSong/数学 12 pt）；页眉页脚 10.5 pt；无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "三个绿色答案框为解析版设计本体，内容与答案要点逐条一致（a4=7/8、等比数列、a_n=(2n−1)/2^{n−1}）；题干块无答案值。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1499,43 +1499,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "全部字体嵌入；点积式、⇔、⩾、⩽、√、±、公式标签 (v)(vi) 均正常出字；600 dpi 复核行内 12±2√11 分数无缺笔。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q20(2) 续、Q20(3) 起于本页；公式编号 (v)(vi) 连续，小问层级清楚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "(x−3,y)·(x,y)=0、x²+y²−3x=0、配方 (v)、y²=3x−x²⇒0≤x≤3、OM²+d²=OC1²=9、3x=9−d²>5、d²=9−3x<4、轨迹方程与 (vi) 逐行完整，无断式/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（轨迹为解析式描述）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚正常；页脚「——第 28 页——」；墨迹右缘 532.3 pt（-bbox 中逗号 541 pt 为字形框，非实际墨迹）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文止于 719.2 pt，页脚顶 800.4 pt，页底留白约 81 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/公式 12 pt；页眉页脚 10.5 pt；一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：无题目块、无答案框，答案泄漏检查不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 28,
@@ -1545,42 +1545,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；600 dpi 核对 ∉、①—⑤、Δ、√、⩽、⩾、∈ 等符号均正常，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q20(3) 续；情形（i）（ii）（iii）齐全；页底答案（1）框，编号连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Δ=9−16k²、三种 |k| 情形、x=(3+8k²)/(2(1+k²))=12/5、f(5/3) 计算、49k²−20≤0 与 k 的并集范围逐行核，均完整；注意 (i)/(ii) 两行内联分式 3/4 上下间隙实测 0.72 pt，紧但无重叠、字形可辨。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚一致；页脚「——第 29 页——」；墨迹右缘 533.28 pt，为行末全角标点悬挂 0.37 pt（≤1 pt，接受类）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文最后墨迹 773.6 pt（答案(1)框底 778.6 pt），页脚顶 800.4 pt，间距 21.8 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/公式 12 pt；答案框内容 12 pt；页眉页脚 10.5 pt；无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案（1）：(3,0) 框为解析版本体；本页无题干块，无泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1591,42 +1591,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；f(x)=(x−a)²+|x−a|−a(a−1)、|a|、⩽、⩾、+∞、STSong/STHeiti 混排均正常出字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首续 Q20 答案（2）（3）；本页「第 21 题」；题干（1）（2）（3）齐全；解析 (1)(2) 起于本页，编号连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "答案（2）轨迹式+范围、答案（3）k 并集、f(0) 长等式链、|a|+a≤1、a≤1/2、f(x)=u²+|u|−a(a−1)、两段化简式均单行完整，无断式/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（Q21 为分段函数题）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚一致；页脚「——第 30 页——」；墨迹右缘 532.3 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文止于 708.8 pt（末行显示式），页脚顶 800.4 pt，留白约 92 pt（约 11%），属分页留白。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/数学 12 pt；答案框 12 pt；灰色「题目见第 5 页」与页眉页脚 10.5 pt；一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "答案（2）（3）框为解析版本体，与答案要点一致；Q21 题干块无答案值。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1637,43 +1637,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；分段函数大括号由 CMEX10 拼合（文本层 PUA 字形，渲染完整）、• 项目符号、∞、⩾ 均正常，无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q21(2) 续至 (3)；分段函数与七条区间讨论编号/层级完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "f′(x) 两式、f(x) 两行 cases（0<x<a 与 x⩾a）、七条 bullet、g′(x)=2x−(2a+1)−4/x²<2a−(2a+1)−4/x²=−1−4/x²<0 逐行核，无断式、无压盖；行内 4/(2a−1) 抬升行距正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚一致；页脚「——第 31 页——」；墨迹右缘 533.28 pt（标点悬挂 0.37 pt，接受类）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页、无压页脚；正文止于 730.2 pt，页脚顶 800.4 pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/公式 12 pt；页眉页脚 10.5 pt；无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "纯解析页：无题目块、无答案框，答案泄漏检查不适用。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 31,
@@ -1683,42 +1683,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；φ、φ′、g″、√2、≈、⩾、⩽、+∞、• 均正常出字；末页无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q21(3) 续；两条总结 bullet；答案（1）（2）（3）三框齐全；末页页脚为第 32 页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "g(1)/g(a)、φ(a) 与 φ′(a)<0、g′(x)/g″(x)、g′(a)⩾0、两段 bullet 总结、验证长段（含行内 (x−2)(x²−3x−2)/x 与 4/x、14/3 等分式）逐行核，无重叠；答案框内不等式完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学／解析版」与页脚「——第 32 页——」正常，页码与总页数 32 一致；墨迹右缘 533.28 pt（标点悬挂 0.37 pt，接受类）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页收尾正常：正文止于 776.2 pt（答案(3)框底），页脚顶 800.4 pt，无空白末页、无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文/数学 12 pt；答案框 12 pt；页眉页脚 10.5 pt；同角色一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "三个答案框为解析版本体，与答案要点逐字一致（a⩽1/2；单调性；a=2 时 1 个零点、a>2 时 2 个零点）；无题干泄漏。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1726,7 +1726,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "f62c2c7d9e95d640dc73ad62506d794e3a4366a0ab102f19ea52345f449461c1",
+      "pdf_sha256": "bf14c7afb1e36d2e365739075e5a09c12a5c77fd7053453defdce38e584ca955",
       "result": "pass"
     },
     {
@@ -1741,42 +1741,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 全部 18 个字体 emb=yes（STSong/STHeiti + LMRoman/CM 系）；150/600 dpi 目视 10.5pt 说明框内 ①–⑨、∥、⊥、√、∩ 均正常出字，无豆腐块/乱码；全文文本层无 U+FFFD（仅 cases 花括号构件的 CMEX 私有区码，本页无）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "封面页：题名「2015 年·广东卷·文科」＋副题「数学·简答版」＋「数学」节头，无题号；题号自 p2 起 1–21 连续（跨 7 页核对），无跳号/重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；说明框内示例分式 a/b 与向量长箭头 AB 基线正常、无断行。框右缘矢量墨迹 532.92pt，相对版心右缘 532.91pt 仅 0.01pt（取整级）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "封面/来源说明页无题图，无图标签可查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」（x 62.36–202.36pt）＋右「简答版」（右缘 532.91pt），页眉横线 y=34.35pt；页脚「——第 1 页——」居中（x 260.0–335.3，中心 297.6pt）；均未越版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "说明框边框止于 y≈689.5pt（文字末行 681.6），页脚顶 y=800.4pt，尾部留白约 111pt（16%）；无空页、无压页脚、无跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "内容流实测 Tf：题名 18pt、副题 15pt、「数学」节头 15pt、正文 12pt、说明框 10.5pt（流 8 0 R：/F5 18、/F3 15、/F7 15、/F1 10.5）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区无答案值/选项判定；说明框只述排印（提及第 5 题选项 (D) 的 √3 系题面已印选项内容，未出现答案 C=2 之类判定）。全文 p1–p5 grep「答案/故选」仅命中「不附参考答案」元说明。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1787,42 +1787,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 18 个字体全部 emb=yes（LMRoman/STSong/STHeiti + CMR/CMMI/CMSY/CMEX/MSAM）；600 dpi 目视 Q1–Q8 全部符号（∩、⩽/⩾ 斜体不等号、√、上下标、Q4 cases 大括号、△）正常出字，无豆腐块/乱码；文本层无 U+FFFD，PUA 仅 CMEX 花括号构件 U+F8F1–F8F4（视觉为完整 brace）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「试题」「一、选择题」下 Q1–Q8 连续，无跳号/重号。本页不含 Q9：+3pt 后 Q9 整题移至 p3（p3 首行为「9．」，见本页 pagination_whitespace 注），题号跨页仍连续 1→9。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "全部选项标签 (A)–(D) 缩进 x=86.4bp、同行基线一致（Q1 y147.2、Q2 y190.6、Q4 y401.2、Q5 y467.6、Q7 y610.6、Q8 y659.9）。Q8 选项行经 \\par\\vspace*{3pt} 整体下移后仍保持统一缩进/基线。**Q8 墨隙实测：分母「25」墨迹底 y=656.28bp ↔ 选项 (B)「(」墨迹顶 y=660.60bp，600 dpi 间隙 4.32bp（1200 dpi 复测 4.26bp），≥1bp 且无相触/并连**；分母 m² 底 656.16bp、与选项行最小间隙 4.44bp。Q3 分式 1/2^x 与 (D) 行仅纵向叠行、横向错开，Q5 行末 √3/2 与下行无 x 重叠，均未压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」（x62.4 起）、右「简答版」右缘墨迹 532.91bp（像素边界 532.92），页眉横线 y37.44–37.80、x62.40–532.92；页脚「——第 2 页——」x259.92–335.28（中心 297.60≈版心中心 297.64），y801.24–811.20。均未越版心，正文未压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文末行 Q8 选项墨迹止于 y=672.60bp，书版块底≈779.53bp，尾部留白 106.93bp（14.9%），页脚顶 801.24bp；无空页、无压页脚、无跨页拆题。**注：+3pt 使 Q9 起始处的 \\Needspace{0.15\\textheight}≈107.57bp 不再被满足（剩余≈106.9bp），Q9 整题由 p2 移入 p3**——与 seg1 复审记录（p2 含 Q9）相比本页现为 Q1–Q8、p3 为 Q9–Q15；编号连续、无孤行/拆题，属接受类 Needspace 留白，不判 fail。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "内容流实测（pdftohtml 1.5× 换算）：正文 12bp（LMRoman12/STSong/CMMI12/CMR12），节头「试题」「一、选择题」15bp（STHeiti），页眉/页脚 10.5bp，上下标 8/6bp；本页无 18bp 题名与 15bp 副题（均在封面 p1），故不再出现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面与选项区无答案值/判定标注；p2 文本 grep「答案/故选/解析/参考答案」零命中（答案速查自 p5 起）。Q8 的正确值 3 仅作为选项 (B) 出现，属题面本身。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1833,42 +1833,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "Q9–Q15 全符号正常出字：TeX-vect10 长箭头（AB/AD/AC）、⩽、∈、粗正体 N、√（Q13/Q15）、ρ/θ、card、集合花括号、Q14 cases 大括号；文本层无 U+FFFD，PUA 仅 CMEX 花括号构件 U+F8F1–F8F3；字体全部嵌入。Q15 图内 A/O/B/C/D/E 六标签无缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q9 居首（续 p2 的 1–8），随后 Q10、「二、填空题」、Q11–Q15；编号 9–15 连续，无跳号/重号；节头位于 Q10 选项之后（y220.9bp），顺序正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q9 选项 (A)5 (B)4 (C)3 (D)2 与 Q10 (A)200 (B)150 (C)100 (D)50 均单行，标签缩进 86.4bp、同行基线一致（y102.7 / y183.6）。Q9 的 AD=(2,1) 在关系符「=」后换行（行末 x532.9→下行首 62.4），属接受类「行内公式在关系符处换行」；Q10 集合式在逗号/句读处断行；Q14 cases 完整（左括号、x=t²、y=2√2t 齐全），与上下行无压盖；Q15 题干与图之间无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q15 圆图存在且完整：页面级墨迹 bbox x218.52–376.68（中心 297.60，与版心中心 297.64 差 0.04bp）、y474.00–588.24；A、O、B、C、D、E 六标签清晰无遮挡；AB 直径、E 在 AB 延长线、EC 切于 C、AD⊥EC 的页面级关系可辨；图顶端距题干末行 11.28bp，图底 588.24bp 距书版块底≈191bp，未越页、未裁切（深层几何一致性由图自查负责）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉同 p2：左「2015 年·广东卷·文科·数学」、右「简答版」右缘 532.91bp，横线 y37.44–37.80、x62.40–532.92；页脚「——第 3 页——」x259.92–335.28（居中 297.60），y801.24–811.20；图与正文均未压页脚。正文另有 Q10 行末全角逗号悬出 0.97bp（≤1bp，接受类），页眉/页脚本身不越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文首行 Q9 长箭头墨迹起于 y60.60bp（首行 accent 略高于书版块上缘 62.36，属正常），内容末为 Q15 圆图底 y588.24bp；书版块底≈779.53bp，尾部留白 191.29bp（26.7%），页脚顶 801.24bp；无空页、无压页脚、无跨页拆题。接受类说明：Q10 首行行末全角逗号墨迹悬出右版心至 x533.88bp（532.914+0.97bp，≤1bp）；Q9 系 +3pt 后由 p2 移入本页（见 p2 注），编号连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "内容流实测（1.5× 换算）：正文 12bp（LMRoman12/STSong/CMMI12/CMR12），节头「二、填空题」15bp（STHeiti），页眉/页脚 10.5bp，上下标 8/6bp；本页无题名/副题（封面 p1）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q9–Q15 题面与选项均无答案值/判定标注；「答案/故选/解析/参考答案」零命中。Q15 的 AD 为留空横线（______），未泄漏数值。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1879,42 +1879,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "tan/π/α、⩽、分式、直方图数字与汉字标签（频率/组距、月平均用电量/度）均正常出字；无缺字、无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「三、解答题」下 Q16、Q17 连续，无重号/跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；Q16(2) 宽分式完整可见（分母 −cos2α−1 未截断），与 Q17 行墨迹分离；公式无中途断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q17 频率分布直方图紧随题干；频率/组距、x、月平均用电量/度及 0.002/0.0025/0.005/0.0095/0.011/0.0125 标签均可读无遮挡；七柱与标签逐柱对应；图形墨迹 bbox 149.0–446.3pt，中心 297.65≈版心中心 297.6（居中）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右正常，页脚「——第 4 页——」居中（y 800.4–811.5pt）；右缘未越 532.91pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=537.4pt，页脚顶 800.4pt；Q17(3) 续行「分层抽样…」齐左，属「题图后段落齐左」接受类；无压页脚、无空页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；直方图标签 10.4608bp（10.5 TeX pt）；题头与正文层级正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面未出现答案；直方图中 x 保持字母未知量，未印 0.0075，Q17(1)(2)(3) 均为设问。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1925,42 +1925,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∥、⊥、⊂、∩、N*、|x−a|、大括号与分式均正常；图标签 P/D/C/A/B 无缺字；字体全部嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "Q18、Q19、Q20、Q21 连续编号，无重号/跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；Q19 的 3/2、5/4 与 Q20/Q21 分式均完整未断行；分式行距自动加大，与相邻行墨迹不重叠。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q18 立体图紧随题干；P、D、C、A、B 标签清晰无遮挡；未画棱 PB（照源）、DC 自 D 起虚线段（照源）；图墨迹中心 297.75pt≈版心中心（居中）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右正常，页脚「——第 5 页——」居中；均未越版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=597.0pt，页脚顶 800.4pt；Q18(1) 于图后齐左（接受类「题图后段落齐左」）；无压盖、无空页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；立体图标签 10.4608bp（10.5 TeX pt）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "无答案值或判定；Q18–Q21 全为设问，答案未提前出现。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1971,43 +1971,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "表格字母/数字、说明框汉字、填空答案 (−4,1)、(2,−4) 均正常出字；无缺字/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「答案速查」：选择题表题号 1–10 齐全、填空题 11–15 齐全；16–21 在 p7 续列，合起来 1–21 全覆盖，无重号/跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；选择题表「题号/答案」两行逐列共心（1↔B、2↔A…10↔A 的中心 x 逐一吻合），填空答案内联数学完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页为答案速查表与填空答案列表，无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」＋右「简答版」，页脚「——第 6 页——」居中；均在版心内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y=381.0pt，页脚顶 800.4pt，留白约 55%；系 \\gkpart{解答题} 的 Needspace{0.6\\textheight} 分节所致，属接受类「简答版速查分节>50%」；无压页脚、无空页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "「答案速查」18pt（题名角色）；「选择题」「填空题」节头 15pt；表格与速查正文 12pt（与正文角色一致）；使用说明框 10.5pt（流 104：/F7 18、/F7 15、/F19 12、/F3 10.5）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页即答案速查本体（选择题 B A D B C D B B A A 与填空 11–15 答案），按任务口径该区不适用泄漏检查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -2017,50 +2017,50 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∥、⊄、⊥、√、∪、⩽、分式与集合/区间括号均正常出字；无缺字、无豆腐块；字体嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「解答题」答案 16–21 齐全；与 p6 的 1–15 合并覆盖 1–21，无重号/跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；16.–21. 标签统一 x=70.32pt，答案分式/区间/并集完整未断开；Q19(3) 分式与 Q20 行高括号分处不同 x 区间，无碰撞。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页为解答题答案正文，无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左右正常，页脚「——第 7 页——」居中；均在版心内。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "末页正文止于 y=328.0pt，页脚顶 800.4pt；末页尾部留白正常，无压盖、无空页。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 12pt；「解答题」节头 15pt（流 107：/F7 15、/F19 12 为主）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解答题答案本体（16–21 全部最终答案），按任务口径不适用泄漏检查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 7,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "87696f886b4c10d24ae16785747309188043ff8969a5a70895f8d464866c0166",
+      "pdf_sha256": "338f16448b9de831753a09624603d532b99b9eaa49bed179bcb0af27497d927f",
       "result": "pass"
     },
     {
@@ -2075,43 +2075,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 全 20 款字体均 emb=yes（STSong/STHeiti＋LM/CM 系）；600 dpi 目视无豆腐块、无乱码；正文与说明框内 √、→、⩽、∈ 等出字正常；PUA U+F8F1–F8F4 为大括号拼件（用于 p2/p7 cases），渲染正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "封面页，无题号/小题号。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "封面与来源说明框，无选项行；说明框内行内公式未断裂。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉字 x 45.35–515.91、y 9.47–18.47，页眉横线 y 20.4、宽 470.4pt（版心 504.57pt，窄 34.0pt≈34.02bp，已知接受）；页脚 x 248.23–313.03、中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；第 1 页页脚正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "封面内容（标题＋说明框）止于 y≈457.9pt，距页脚上缘 818.68pt 有 360.8pt 留白（封面设计）；无空页、无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "题名 15.0pt（bbox h=15.00）、副题「数学·印刷版」12.0pt（h=12.00）、「数学」节标题 12.0pt；来源说明框 9.0pt（小五，说明框角色，全框一致）；页眉/页脚 9.0pt。同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "封面/来源说明，非题面区；说明框仅述源文件与选项 (D) 根号的排印来源，未给出任何答案值或选项判定。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 1,
@@ -2121,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "构建 md5 2558fe92a6c35cd1a152616b8acc81f2 已核对。pdffonts 全部字体 emb=yes（STSong/STHeiti＋LMRoman/CMMI/CMR/CMSY 系）；build/印刷版.diagnostics.json 的 missing_characters 为空；600 dpi 目视 x²/25、m²、F₁(−4,0)、⩽/∈/∩/√、向量箭头等出字正常，无豆腐块/乱码；pdftotext 全页替换字符 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「试题」下「一、选择题」节头正确；题号 1–10 连续无跳号，Q8 记为「8．」；各题选项标号 (A)–(D) 齐全；与规范稿 2015_数学真题_广东文_试题.md 的 Q8 题号/题面一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项行统一齐左 x≈66.36pt；Q8 选项行 (A) 2　(B) 3　(C) 4　(D) 9 同基线，行内公式未断开；Q3/Q6 的两行选项第二行同缩进；Q4 cases 与题面关系符成对，无压盖。修复后 Q8 题干与选项间距视觉合理（墨隙实测见本页 pagination_whitespace 条）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：pdfimages -list 第 2 页 0 个图像对象，Q1–Q10 均为纯文本题，无「图 N」标签可检。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉左「2015 年·广东卷·文科·数学」、右「印刷版」；页脚「——第 2 页——」齐全、页码正确。版心右缘：600 dpi 最右墨迹 549.84pt（灰度<250 抗锯齿边界；矢量/bbox 右缘 549.91pt≈549.92pt 设计值），无墨迹越出 549.92pt。页眉盒右缘 515.90pt＝549.92−34.02bp（盒窄 34.02bp，已知接受）；页脚中心 280.63pt＝页眉盒中心 280.63pt（已知接受）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q8 修复复核（原 fail 点）：600 dpi 同一裁切墨迹实测，分母「25」下缘→选项 (B) 上缘的空行间隙在阈值 50%/80%/92% 下分别为 2.88pt/2.88pt/3.00pt（分母墨行止于 503.76/503.76/503.64pt，选项墨行起于 506.76/506.76/506.76pt），无相触/并连，≥2pt 达标。全宽行带同测：题面行墨迹止于 503.72pt、选项行起于 506.72pt，最小墨隙 2.88pt，与定点测量一致。修复未引入新问题：题干与选项间距视觉合理，Q7 选项行底 473.96pt→Q8 分式上缘 480.80pt 间隙 6.72pt，无其它行叠行。页面底部留白 184.56pt（正文墨迹止于 634.80pt，页脚顶 819.36pt，约 22%），系「一、选择题」结束、p3 起「二、填空题」的天然分节断页，非孤儿/断行异常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文实测 10.5pt（CJK bbox 高 10.5pt；行内数学 bbox 9.32pt 同 10.5pt 设计），节标题 12.0pt；题名 15pt/副题 12pt 为卷首设计缩放（p1 实测 15.00/12.00pt），本页无同角色字号混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区 1–10 无「故选/答案/故填/解析」等判定文字（grep 无命中）；选项 (A)–(D) 同色同字重、无加粗/着色/下划线标记；第 2 页无 /Annots 链接对象，不存在跳转泄漏；Q8 的 (B) 3 仅为选项之一，未被标记。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2167,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "√、⩽、∈、→∞ 等出字正常；Q14 cases 大括号为 PUA U+F8F1–U+F8F3 拼件，渲染为完整大括号；无豆腐/乱码，字体全嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "填空题 11–15 连续、无缺号；各题作答横线齐全（实测 23.1pt≈23.16pt＝2.2em×10.5）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；Q14 行内 cases 块（x≈283–339、y≈136–179）与左右文字无交叠，两个参数方程及「（t 为参数）」完整；填空横线未被压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q15 圆与切线图存在且与题对应；D/C/A/O/B/E 六标签 10.5pt、无遮挡无重叠；切线 EC、垂线 AD 与圆心 O 关系清晰。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉横线宽 470.4pt（窄 34.0pt≈34.02bp，已知接受）；页脚中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；页脚「第 3 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈353.9pt，其下 464.8pt（约占文本区 60%）留白系「二、填空题」→「三、解答题」分节换页所致；无空页、无压页脚、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；节标题 12.0pt；图标签 10.5pt（bbox h=9.29，与正文数学同高）；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q11–15 题面（含 Q15「AD＝____」）无答案值、无「故选」等选项判定；图内无答案标注。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2213,42 +2213,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∥（Q18(1)，U+2225）与 ⊥（Q18(2)）均出字正常；√、∈、⩽ 正常；直方图数字与 CJK 均清晰；无豆腐/乱码，字体全嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "解答题 16–18 连续；(1)(2)(3) 小问标号齐全；「三、解答题」节头正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本页无选项行；Q16(2) 显示分数完整、分式横线与分子分母均未被压盖；Q17 直方图、Q18 立体图不压正文。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q17 直方图：y 轴「频率/组距」为带上横线的分式标签，刻度 0.0125/0.011/0.0095/x/0.005/0.0025/0.002/0 与 x 轴 0/160…300 全部可读（0.0025 与 0.002 墨迹间距 0.72pt，紧但可辨）；Q18：P/D/C/A/B 五标签 10.5pt 齐全，DC 自 D 起虚线段、未画棱 PB，均照源。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉横线宽 470.4pt（窄 34.0pt≈34.02bp，已知接受）；页脚中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；页脚「第 4 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈694.1pt，距页脚上缘 818.68pt 尚余 124.6pt；无压页脚/跨页压盖/行叠行（Q17 刻度与轴线 0.48pt 间隙在图形内部，不属正文行叠）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；图内刻度与标签 10.5pt（h=9.29）；Q16 题号与正文同 10.5pt；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "Q16–18 题面无答案值或选项判定；Q17 图中「x」仅为待求量标注，非答案；无「故选/答案」字样。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2259,42 +2259,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∈、∉（∈＋斜线矢量，实测呈 ∉）、∩、∞、⩾、N* 等出字正常；解析区根号、箭头、角标均清晰；无豆腐/乱码，字体全嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "19–21 连续，(1)(2)(3) 齐全；解析区「第 1 题」编号正确，「（题目见第 2 页）」指向正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q19 行内真分式 3/2、5/4 未断开；Q20/Q21 公式完整；解析区显示式 M∩N={1} 居中、无压盖；Q1 复现选项行齐 x=66.35pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉横线宽 470.4pt（窄 34.0pt≈34.02bp，已知接受）；页脚中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；页脚「第 5 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "Q21 末行墨迹止于 y≈286.3pt，与解析分隔线（y 296.2–296.4、x 45.4–549.8）间距≈9.9pt；正文止于 y≈590.4pt，无压页脚/叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；「参考答案与详细解析」12.0pt；「第 1 题」「题目：」「解析」10.5pt；「（题目见第 2 页）」9.0pt（链接注记角色）；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "题面区（Q19–21，y<296pt）无答案值、无选项判定；y≥296pt 起为第 1 题解析（含答案与「故选」），按口径不适用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2305,43 +2305,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "i²、√2、arg、π/4、π/2、∈、− 等出字正常；正文与解析符号清晰；无豆腐/乱码，字体全嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 2 题」「第 3 题」连续；均标「（题目见第 2 页）」且指向正确；题目复现的选项 (A)–(D) 齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "解析区选项行齐 x=66.35pt；第 3 题解析 (C) 行内分式分母 2^{-x} 与 (D) 行 sin(−x) 墨迹间距≈1.6pt，紧但未相接；无公式断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉横线宽 470.4pt（窄 34.0pt≈34.02bp，已知接受）；页脚中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；页脚「第 6 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈562.6pt，距页脚上缘 818.68pt 余 256.1pt；无压页脚/叠行/跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与解析 10.5pt；「第 N 题」10.5pt；「（题目见第 2 页）」9.0pt（链接注记）；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析区（第 2、3 题，含答案与「故选」），按口径不判。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 6,
@@ -2351,43 +2351,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⩽/⩾/×/∈ 等出字正常；Q4 复现的 cases 大括号 PUA 拼件渲染正确；无豆腐/乱码，字体全嵌入。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 4 题」编号正确、承接 p5–p6 的 1–3；「（题目见第 2 页）」正确；复现题 (1)(2)(3) 与选项 (A)–(D) 齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "选项行齐 x=66.35pt；cases 块与对齐显示式（z(−2,2) 等三行）完整、无压盖；行内公式未断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（第 4 题无图形）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉横线宽 470.4pt（窄 34.0pt≈34.02bp，已知接受）；页脚中心 280.63pt，居页眉盒中心（左偏 17.0pt≈17.1bp，已知接受）；页脚「第 7 页」正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文止于 y≈531.0pt，距页脚上缘 818.68pt 余 287.7pt；无压页脚/叠行/跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文与解析 10.5pt；「第 4 题」10.5pt；「（题目见第 2 页）」9.0pt（链接注记）；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "解析区（第 4 题，含答案与「故选」），按口径不判。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 7,
@@ -2397,43 +2397,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts 全部字体 emb=yes（STSong/STHeiti + LMRoman/CM 系），600dpi 渲染无豆腐块、无乱码；√、≈、∘、⊂、∥ 等符号出字正常，文本层无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 5 题、第 6 题连续且齐全，无缺号；两题均无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q5 选项 (A)3 (B)2√2 (C)2 (D)√3 与 Q6 两行选项均完整未断开、无压盖；Q5 题干末「（　）」因行末空间不足整体落到下一行左缘，墨迹仍在版心内（见可疑点）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（本卷题图仅 p14 Q15 圆图）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉文本 45.36–515.91pt、页眉横线 45.36–515.76pt（右端窄 34.02bp，已知接受）；页脚「——第 8 页——」中心 280.63pt，恰为页眉盒中心、比版心中心左偏 17.01bp（已知接受）；均未超版心右缘 549.92pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "满页无空页；末行墨迹底 797.2pt，页脚顶 818.68pt，净空 21.5pt，无压页脚；Q6 验证段在页末自然续至 p9，无跨页压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 字面高 10.5pt（STSong），「第 N 题」为同字号加粗（STHeiti 10.5pt）；本段无题名/副题角色，无同角色字号混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页全为解析正文（题目回引＋解析＋答案框），非试题版，无答案泄漏判定对象。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 8,
@@ -2443,43 +2443,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全嵌入；分式、二项式系数、√、∘、∥ 均正常出字，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 7 题连续；无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q7 选项 (A)0.4 (B)0.6 (C)0.8 (D)1 一行完整；行内 \\binom 与 \\dfrac{1+3}{10} 抬高行距但未压盖相邻行，公式未断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚与前页同版式；页眉盒窄 34.02bp、页脚居页眉盒中心（左偏 17.01bp）均为已知接受项；未超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容止于 469.72pt，下部余白 326.8pt≈43.6%（Needspace 留白 40–50%，接受）；无空页、无压页脚、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt，数学与 CJK 字号一致；「第 N 题」10.5pt 加粗；无题名/副题角色，无字号混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文，答案框属解析本体，非试题版泄漏。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 9,
@@ -2489,43 +2489,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "构建 md5 2558fe92a6c35cd1a152616b8acc81f2 已核对。字体全嵌入（与 p2 同套）；diagnostics missing_characters 为空；解析中 a²=25、b²=m²、c²=a²−b²、F₁(−4,0)、向量箭头等出字正常，无豆腐/乱码；pdftotext 全页替换字符 0。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 8 题」「第 9 题」顺序正确、与 p2 题面 Q8/Q9 一一对应；「（题目见第 2 页）」交叉引用正确（Q8/Q9 确在 p2）；「题目：」「解析」子标题层级正确，答案框「答案：B（3）」「答案：A（5）」与题号对应。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q8 修复复核（原 fail 点）：600 dpi 同一裁切墨迹实测，分母「25」下缘→选项 (B) 上缘的空行间隙在阈值 50%/80%/92% 下分别为 2.88pt/2.88pt/3.00pt（分母墨行止于 112.12/112.12/112.00pt，选项墨行起于 115.12/115.12/115.12pt），无相触/并连，≥2pt 达标。全宽行带同测：题目块墨迹止于 112.12pt、选项行起于 115.12pt，最小墨隙同为 2.88pt。Q8/Q9 选项行均齐左 x≈66.36pt、同基线，题面与选项间距视觉合理，无其它行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图：pdfimages -list 第 10 页 0 个图像对象；Q8/Q9 均为无图题，解析中亦无图注/标签可检。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科·数学」/「印刷版」、页脚「——第 10 页——」齐全，页码正确。版心右缘：600 dpi 最右墨迹 549.48pt（本页最长行末字带侧距，未触 549.92pt 设计右缘，亦无越界）。页眉盒窄 34.02bp（右缘 515.90＝549.92−34.02，已知接受）；页脚中心 280.63pt＝页眉盒中心（已知接受）；两条「题目见第 2 页」链接为红色链接注记，属已知可接受的链接色。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 639.48pt，页脚顶 819.36pt，底部留白 179.88pt（约 21%）；Q10 整块以 Needspace 移至 p11（已知接受），本页无孤儿标题：第 9 题标题下有题目+解析+答案框完整内容。Q8 块（题目+选项+解析+答案框）完整位于本页，无跨页割裂；选项行底 125.32pt→「解析」标题顶 129.40pt 间隙 3.84pt，未见叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文实测 10.5pt；「第 8 题」「题目：」「解析」及答案框均为 10.5pt 设计字号（subsubsection/加粗同级），无同角色字号混用；题名 15pt/副题 12pt 为卷首设计缩放（p1），本页不涉及。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为「参考答案与详细解析」解析区，答案与推导按设计呈现（答案：B（3）、故选 (B) 等），不适用题面答案泄漏检查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 10,
@@ -2535,43 +2535,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "⩽、∈、∑、card、粗体 N 均正常出字；CJK 与数学符号无缺口，无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 10 题连续；无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q10 选项 (A)200 (B)150 (C)100 (D)50 一行完整；长集合式换行处公式未断开，无压盖；题干末「（　）」单独落到下一行左缘（见可疑点）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同版式；页眉盒窄 34.02bp、页脚左偏 17.01bp 为已知接受项；页脚「——第 11 页——」正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容止于 530.40pt，余白 266pt≈35%，系 answer 环境 Needspace 0.5\\textheight 推题所致；无空页、无压页脚、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt，求和上下限/求和号随 10.5pt 数学字号；「第 N 题」10.5pt 加粗；无字号混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 11,
@@ -2581,43 +2581,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "x̄ 上横线、⋯、−、根号与不等式符号出字正常；填空题横线为矢量线，完整无缺口。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 11 题、第 12 题连续齐全；无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "无选择题选项；Q11/Q12 填空横线实测 23.10pt（规格 23.16pt 内）；Q12 行末全角「．」悬挂 ≤1pt（墨迹右缘 549.84pt）；公式未断开、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同版式；页眉盒窄 34.02bp、页脚左偏 17.01bp 为已知接受项；未超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容止于 511.83pt（余白 284.7pt≈38%）；无空页、无压页脚、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；分式与均值符号同字号；「第 N 题」10.5pt 加粗；无题名/副题角色。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 12,
@@ -2627,43 +2627,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "√、±、ρ、θ、⩾、分式均正常；CJK 无缺口，无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 13 题、第 14 题连续齐全；无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q14 行内 cases 大括号完整罩住 x=t^2 / y=2√2 t 两行，（t 为参数）与后文可读；公式未断开、无压盖（行距被撑大但无叠行）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同版式；页眉盒窄 34.02bp、页脚左偏 17.01bp 为已知接受项；未超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "内容止于 640.02pt（余白 156.5pt≈21%）；无空页、无压页脚、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；cases 内数学与正文同字号；「第 N 题」10.5pt 加粗；无字号混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 13,
@@ -2673,43 +2673,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "∠、⊥、√、∘、分式与图内 A/B/C/D/E/O 标签均正常出字（CMMI10 已嵌入），无豆腐块。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 15 题连续齐全；无小问标号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "无选项；填空横线实测 23.11pt（规格 23.16pt 内）；题干公式与解析公式均未断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "Q15 圆与切线图位于题干与解析之间且与题对应：A、B 在直径上，O 为圆心（带圆心点），C 为切点，E 在 AB 延长线上，D 为 A 到 EC 的垂足；六标签清晰可读、无遮挡；标签与正文数学同源同字号（CMMI10 10.5pt）。图后「解析」齐左，属接受项。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同版式；页眉文本止于 515.91pt（盒窄 34.02bp，已知接受）；页脚「——第 14 页——」中心 280.63pt（左偏 17.01bp，已知接受）；未超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "图与前后文无压盖：题干底 119.83pt、图顶 128.74pt、图底 212.32pt、解析顶 257.00pt；内容止于 660.85pt（余白 135.7pt≈18%）；无空页、无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；图标签 10.5pt（CMMI10，与正文数学同字号）；「第 N 题」10.5pt 加粗；本段无题名/副题角色。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文，答案框属解析本体。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 14,
@@ -2719,43 +2719,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts：20 个子集字体全部 emb=yes（STSong/STHeiti/LMRoman/CMMI/CMSY/CMEX 等），无未嵌入；150/600dpi 逐页目视无豆腐块、无乱码；pdftotext 提取文本无 U+FFFD；α、π、√、≠、−、· 等符号出字正常。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "题头「第 16 题」在页首，小问标号 (1)(2) 齐全，与规范稿 Q16 的两小问一致；本段题号序列 16→17→18→19 连续无跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "行内 tan(α+π/4) 与两处大分式显示式均完整、未断开、无压盖，显示式居中对齐；未出现行内公式被切半。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（第 16 题为三角求值，纯公式题），无图注/图内标签可查。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线墨迹 x=[45.36,515.76]pt、文字右缘 515.5pt，页眉盒右缘 515.9＝版心右缘 549.92−34.02bp（已知接受项）；页脚「——第 15 页——」墨迹居中 280.50pt，等于页眉盒中心 (45.355+515.906)/2=280.63，较版心中心 297.64 左偏 17.14bp（已知接受项）；均不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈619.8pt，页脚墨迹自 819.4pt 起，间距约 200pt，无压页脚；无空页、无跨页压盖；正文行距约 15.3pt，无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文实测 10.5pt（STSong 字身 10.5；LM 拉丁 bbox 高 9.32）；题头「第 16 题」为 10.5pt 黑体＋粗体拉丁，同角色一致；9/6.97pt 仅用于数学上下标；15/12pt 题名/副题仅见封面 p1，本段不涉及，无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本段属印刷版解析正文（解析章），页内「答案（1）：−3」等结论框是解析本体应收录内容，不是题册答案外泄；按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 15,
@@ -2765,43 +2765,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体嵌入同上（全 emb=yes）；x、频率/组距叠式、⇒、≠ 等出字正常；直方图刻度数字与汉字均无豆腐块；提取文本无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 17 题」题头存在，小问标号 (1)(2)(3) 齐全，与规范稿 Q17 三小问一致；题号 16→17→18 连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "行内叠式 频率/组距 与显示式 20(0.002+…+0.0025)=1、20(0.0425+x)=1 ⇒ … ⇒ x=0.0075 均完整，⇒ 链不断开、无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "频率分布直方图存在且与题对应：按组序实测柱高为 [160,180)=0.002、[180,200)=0.0095、[200,220)=0.011、[220,240)=0.0125、[240,260)=x=0.0075、[260,280)=0.005、[280,300)=0.0025，与解析数据七组逐一一致；纵轴刻度 0.0125…0.002、横轴 0/160…300、轴题「频率/组距」「月平均用电量/度」齐全，刻度与标签 bbox 高 9.29/10.46pt（即 10.5pt），可读无遮挡，虚线导引线位于刻度文字右侧、目视无相交。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线 x=[45.36,515.76]pt（右缘 515.9＝549.92−34.02bp，已知接受项）；页脚墨迹居中 280.50pt＝页眉盒中心，较版心中心左偏 17.14bp（已知接受项）；不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈751.0pt，页脚自 819.4pt 起，净距 68pt，无压页脚；无空页、无跨页压盖、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；图内拉丁刻度 bbox 高 9.29、汉字轴题 10.46（均对应 10.5pt）；上下标 9/6.97pt 属数学脚本；无同角色混用（15/12pt 题名/副题仅封面）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文，无题册答案外泄问题；页内结论框属解析章应有内容，按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 16,
@@ -2811,43 +2811,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；分式、×、⇒、∠ 类符号出字正常，无豆腐块/乱码；提取文本无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 17 题解析续页，无重复题头；续页出现小问标号 (3)（(2) 的标号在其起始页 p16，续页不重复属正常）；全段题号 16→17→18→19 连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "分式 0.45+(t/20)×0.25=0.5、11/55=1/5、25×(1/5)=5 均完整，无断开/压盖；公式在关系符处断行属合法断点。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（直方图位于 p16，本页为 Q17 解析续页）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线 x=[45.36,515.76]pt（窄 34.02bp，已知接受项）；页脚墨迹居中 280.50pt＝页眉盒中心，较版心中心左偏 17.14bp（已知接受项）；不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈438.4pt，页脚自 819.4pt 起；下部留白约 45%（按整页 841.89pt 计）／49%（按版心高计），属 Needspace 保第 18 题题图整块下移的已知接受留白（40–50% 档）；无空页、无压页脚、无压盖、无行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；分数上下标 9/6.97pt 属数学脚本；无同角色混用（15/12pt 题名/副题仅封面）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文续页，答案框属解析章应有内容，按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 17,
@@ -2857,43 +2857,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；∥、⊥、⊂、⊄、∈、∉、√ 及向量箭头等符号出字正常，无豆腐块/乱码；提取文本无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 18 题」题头存在，小问标号 (1)(2)(3) 齐全，与规范稿三小问一致；题号 17→18→19 连续。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "显示式 `BC ∥ 平面 PDA.` 与 `BC ⊥ 平面 PDC.` 均完整、未断开、无压盖。CJK–拉丁字距实测（600dpi 墨迹）：面→P 间隙 4.44pt（字形推进框 306.317→309.813 与 307.876→311.373，均 3.50pt），两式完全一致且非 0；与同页行内 CJK–拉丁 glue（「三角形|PDC」3.45pt、「长方形|ABCD」3.46pt）相符，属正常字距。较预期 5–6pt 偏小，已列入可疑点。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "立体图存在且与题对应：P 为顶点、D/C 为上边、A/B 为下边；D–C 近 D 段为虚线（被平面 PDA 遮挡），符合原图；P/D/C/A/B 标签 bbox 高 9.29pt（10.5pt），清晰可读、无遮挡、无压线。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线 x=[45.36,515.76]pt（窄 34.02bp，已知接受项）；页脚墨迹居中 280.50pt＝页眉盒中心，较版心中心左偏 17.14bp（已知接受项）；不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈756.7pt，页脚自 819.4pt 起，无压页脚；题图与上下文字间距正常；无空页/跨页压盖/行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；图内字母 bbox 高 9.29（10.5pt）；上下标 9/6.97pt 属数学脚本；无同角色混用（15/12pt 题名/副题仅封面）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文，无题册答案外泄问题，按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 18,
@@ -2903,43 +2903,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；∥、⊂、∉、√、N*、⩾ 等符号出字正常，无豆腐块/乱码；提取文本无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "第 18 题三个答案框后紧接「第 19 题」题头，题号连续；第 19 题小问标号 (1)(2)(3) 齐全。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "Q18(3) 距离式 d=|6√7|/√((√7)²+(−3)²)=…=3√7/2 与 Q19(1) 的 S1/S2/S3、4S4+5S2=8S3+S1 等显示式均完整，无断开/压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（第 18 题立体图在 p18）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线 x=[45.36,515.76]pt（窄 34.02bp，已知接受项）；页脚墨迹居中 280.50pt＝页眉盒中心，较版心中心左偏 17.14bp（已知接受项）；不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈779.3pt，与页脚墨迹（819.4pt 起）净距 40.1pt，无压页脚；答案框 (1) 末行仅「PDA）。」属孤儿尾框（已知接受项）；无空页/压盖/行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；分式上下标 9/6.97pt 属数学脚本；无同角色混用（15/12pt 题名/副题仅封面）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文（含 Q18 答案框与 Q19 解析），属解析章应有内容，按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 19,
@@ -2949,43 +2949,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；(i)–(iv) 编号、⩾、√、分式与上下标均出字正常，无豆腐块/乱码；提取文本无 U+FFFD。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本页为第 19 题解析续页，小问标号 (2)(3) 齐全；题号连续、无重复题头。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "带编号 (i)–(iv) 的显示式右缘墨迹 549.84pt ≤ 版心右缘 549.92pt，编号右对齐且不压正文；分式、括号、等比式均完整无断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图（本页为第 19 题解析续页）。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉规则线 x=[45.36,515.76]pt（窄 34.02bp，已知接受项）；页脚墨迹居中 280.50pt＝页眉盒中心，较版心中心左偏 17.14bp（已知接受项）；不超版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "正文墨迹止于 y≈772.2pt，页脚自 819.4pt 起，无压页脚；末行答案框完整；无空页/跨页压盖/行叠行。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；上下标 9/6.97pt 属数学脚本；无同角色混用（15/12pt 题名/副题仅封面）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析正文续页（末行含答案（1）框），属解析章应有内容，按本批口径记 not_applicable。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 20,
@@ -2995,43 +2995,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "pdffonts -f21 -l25：本段用到的 13 个字体全部 emb=yes、uni=yes（STSong/STHeiti/LMRoman/CMR/CMMI/CMSY/CMEX/MSAM），无 Type3；600 dpi 逐行检视无豆腐块/乱码，⇐⇒（y≈310.9）、⊥（y≈397.5、428.7）、·、⩽ 均正常出字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "「第 20 题」在版心左缘 x=45.355 起排，题号连续（上接第 19 题）；题目 (1)(2)(3) 与解析 (1)(2) 标号齐全、顺序正确；页首两个答案框为第 19 题答案(2)(3) 跨页续排，非缺号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本段无选项；行间公式 (v) 编号右缘 xMax=549.92pt，与版心右缘精确对齐；行内 5/3、1/2 与 (x−3/2)² 等分式无压盖（600 dpi 检视），bbox 重叠检测无实质碰撞；正文墨迹右缘 549.96pt（超 0.04pt，抗锯齿量级）。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 20 题为解析几何纯文字题，题面与解析均无图、无 figure 环境，本页没有图注可核。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉「2015 年·广东卷·文科 · 数学 / 印刷版」x 45.355–515.906：页眉盒比版心右缘窄 34.01pt（≈34.02bp，已知接受项），页眉横线同宽（45.36–515.90pt，y≈20.5pt）；页脚「——第 21 页——」x 245.917–315.343，中心 280.630＝页眉盒中心（已知接受项），y 818.7–828.2；未超版心右缘。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；正文（含答案框内公式）文本 y 41.0–732.8，页末在行间公式后自然分页，留白约 58pt（下一页接「故 d<2…」），页脚上方无压盖；无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 CJK 实测 10.5pt（如「答案（2）：成立（」y 56.775–67.275，高 10.5pt）；题头/小标题为 Heiti 10.5pt 加粗（第 20 题、题目：、解析、答案），灰色「（题目见第 5 页）」9pt；数学主体 10.5pt、上下标为 CMR7/CMMI7 档；题名 15/副题 12 角色只在 p1（实测 15.0/12.0pt），本段无该角色，同角色无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本段属「参考答案与详细解析」本体，答案框是设计组成部分，不存在题面页泄题问题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 21,
@@ -3041,43 +3041,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体与 p21 同一组（全部嵌入、uni 映射完整）；Δ、∈、∉、√、∪、⩽、⇐⇒、− 等符号均正常出字，600 dpi 检视无豆腐块/乱码/缺字。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "解析 (3) 续第 20 题；分支标号（i）（ii）（iii）齐全且顺序正确；页末答案(1)(2) 标号齐全；无缺号/重号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本段无选项；Q20(3) 三分支逐行核对：|k|>3/4（Δ<0 无交点）、|k|=3/4（Δ=0，切点 12/5）、|k|<3/4（x1⩽5/3<x2→f(5/3)⩽0→|k|⩽2√5/7）均完整；式 (vi) 编号右缘 549.92pt；最终 k 的区间∪点集无断开；行末全角标点仅字面推进超界（557.10pt），墨迹止于 549.96pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 20 题无题图，本页无图/图注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉页脚同全册：页眉盒 45.355–515.906（窄 34.01pt，接受项），页脚中心 280.630＝页眉盒中心（接受项）；页脚「——第 22 页——」正确；页末答案框底墨迹 796.6pt，距页脚墨迹顶 818.7pt 约 22pt，无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；正文文本 y 46.3–790.6，页末答案框完整显示（框底墨迹 796.6pt），不压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt、数学主体 10.5pt、上下标 CMR7/CMMI7 档；答案框文字与正文同号（10.5pt）；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析本体及第 20 题答案框，属答案区设计内容。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 22,
@@ -3087,43 +3087,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；⩽、⩾、∈、∪、√、− 等符号正常出字，无豆腐块/私用区乱码；页首答案框大括号与分式完整。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "页首第 20 题答案(3) 后接「第 21 题」；题目 (1)(2)(3) 与解析 (1)(2) 标号齐全；题号 21 连续、无跳号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本段无选项；本批修复的显示式 f(0)=(0−a)²+|0−a|−a(a−1)=a²+|a|−a²+a=|a|+a 全链 =/+/− 两侧间距正常（逐 token 量距无粘连/缺空格），|a|+a⩽1、a⩽1/2 等行间式居中；行末「，」悬挂墨迹 550.92pt，超版心 1.00pt，符合「全角标点悬挂 ≤1pt」接受项。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 21 题为分段函数代数题，题面与解析均无题图，本页无图注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉 x 45.355–515.906（窄 34.01pt，接受项），页眉横线同宽；页脚「——第 23 页——」中心 280.630＝页眉盒中心（接受项）；无越界。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；正文文本 y 41.0–723.7，页末自然留白约 67pt（下一页以解析 (3) 起头），不压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt；题头 Heiti 10.5pt；灰色题源指引「（题目见第 5 页）」9pt；数学主体 10.5pt、上下标 CMR7/CMMI7 档一致；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页属解析本体，页首答案框（第 20 题(3)）为答案区设计内容，不存在题面页泄题。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 23,
@@ -3133,43 +3133,43 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；分段函数大括号由 CMEX10 三段可延伸定界符拼成（文本层映射 U+F8F1–F8F3，属正常编码），视觉为完整大括号；φ、√、⩾、− 正常出字，无豆腐块/乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "解析 (3) 续第 21 题；7 条区间讨论 bullet 与「综上」后 2 条 bullet 顺序完整、无缺号；三小问收束齐备。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本段无选项；分段函数 cases 两行左对齐于大括号、行末逗号/句号齐全；g′(x) 与 g″(x) 同行以间距分隔不粘连；行内分式（4/x、4/x²、8/x³、4/(2a−1)）不压盖、无跨行断开。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "第 21 题无题图，本页无图/图注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉/页脚同全册：页眉盒窄 34.01pt（接受项）、页脚中心 280.630＝页眉盒中心（接受项）；页脚「——第 24 页——」正确；正文底墨迹 774.8pt，距页脚约 44pt。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；正文文本 y 46.9–775.2，页末校验段完整收束，无压页脚。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "正文 10.5pt、题头 Heiti 10.5pt、数学主体 10.5pt、上下标 CMR7/CMMI7 档；bullet 行内分式与正文同号；无同角色混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为解析本体，属答案区设计内容，无题面页泄题场景。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 24,
@@ -3179,58 +3179,58 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "字体全部嵌入；答案框内 1/2、⩽、∞、−、+ 等符号正常出字，无豆腐块/乱码；末页无缺字形。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "答案 (1)(2)(3) 三框齐全、顺序正确，对应第 21 题三小问；其后无第 22 题，属全卷自然收尾。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本段无选项；答案(1) 分式 1/2 完整落在框内（框高随分式增高），三框互不重叠、无裁切；答案(2)(3) 行内公式与文字基线一致。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本页无题图/图注。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "页眉同全册（x 45.355–515.906，窄 34.01pt 接受项）；页脚「——第 25 页——」中心 280.630＝页眉盒中心（接受项），为全册末页页码，正确。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "无空页；本页仅 3 个答案框（文本 y 50.1–128.6，框底墨迹 133.1pt），其后约 690pt 留白属「孤儿尾框」收尾——正文已在 p24 完整结束，答案框单独落尾，属已知接受项；页脚无压盖。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "答案框文字 10.5pt（与正文同号）、数学主体 10.5pt、上下标 CMR7/CMMI7 档；三框同角色同号，无混用。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本页为第 21 题答案框，属答案区设计内容。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             }
           ],
           "page": 25,
           "result": "pass"
         }
       ],
-      "pdf_sha256": "67a62fd06e97fad70e4e3e699ca8cbfcc721d7c6861e81eab62906a32a065a12",
+      "pdf_sha256": "b6e9b63254a8c3dde2d2ca1c917b19926209072c48c281d4a1a74a4b2413376f",
       "result": "pass"
     }
   ],
-  "generation_input_tree_sha256": "de9dba7cc82c170f773cec26f55b8613bfbb0c2e45235efba0977d98f5743cdb",
+  "generation_input_tree_sha256": "10988fc874c4ac810f9d3642d4b737b8755a761c12cff63e9c6ed4a440a924ef",
   "input_projection": "9c864ecb6ab68b269016527a015cf0f2e0c6f9c02f10ac3eeef57c262a4e1973",
   "paper_id": "gk-2015-regular-guangdong-arts",
   "project_dir": "2015_广东卷_文科",
-  "reviewed_at": "2026-10-19T03:16:16+08:00",
+  "reviewed_at": "2026-11-09T14:42:40+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -3239,23 +3239,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -3278,16 +3278,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

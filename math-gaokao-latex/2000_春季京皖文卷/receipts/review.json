@@ -1,28 +1,12 @@
 {
   "batch_id": "phase4-b20",
-  "build_attempt_id": "01008f5c-ceb0-453f-86d1-4febd6e4e543",
+  "build_attempt_id": "4b62d290-be69-4073-97d1-4e19f4c7bfb7",
   "dependency_tree_sha256": "12a5340ea40c8c1c1a8398b6cf5902503f75c3ca0086f62edd64f1a729838d12",
   "editions": [
     {
-      "candidate_override": {
-        "chosen_pages": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "original_pages": [
-          1
-        ],
-        "reason": "与既有 review attempt 3107d65c-f082-45e3-838c-35ecc60d9c30 （review.json SHA-256 65d6cf2d3775d78a117f6ab233e69751625f11d51aba5e71c71aaaa5cf3df39f，基线 PDF SHA-256 558943f9436015e48b648aae44cfba783945894ba8310a76094b05f82f034327）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3, 4, 5] 已在当前 build attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
-      },
+      "candidate_override": null,
       "candidate_pages": [
-        1,
-        2,
-        3,
-        4,
-        5
+        1
       ],
       "edition": "试题版",
       "page_count": 5,
@@ -31,42 +15,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 1 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -77,42 +61,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 2 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -123,42 +107,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -169,42 +153,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 4 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 4 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 4 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 4 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 4 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 4 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 4 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 4 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -215,42 +199,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 5 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 5 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 5 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 5 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 5 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 5 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 5 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 5 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -258,57 +242,13 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "9b62a596a37b3f26eb407e9e8a7f9091a2d476e0ed512b1d6dbb67385b08e2f1",
+      "pdf_sha256": "51c971ed5c0e9a989126095731020f4f542664828a3ec8168d125da036d2c4e4",
       "result": "pass"
     },
     {
-      "candidate_override": {
-        "chosen_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16,
-          17,
-          18,
-          19
-        ],
-        "original_pages": [
-          17
-        ],
-        "reason": "与既有 review attempt 3107d65c-f082-45e3-838c-35ecc60d9c30 （review.json SHA-256 65d6cf2d3775d78a117f6ab233e69751625f11d51aba5e71c71aaaa5cf3df39f，基线 PDF SHA-256 16ebb00e3d50fb809f0cf500b321e99a036c3a9703318c11cdbb4ab01472c529）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] 已在当前 build attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
-      },
+      "candidate_override": null,
       "candidate_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19
+        17
       ],
       "edition": "解析版",
       "page_count": 19,
@@ -317,42 +257,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 1 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -363,42 +303,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 2 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -409,42 +349,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -455,42 +395,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 4 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 4 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 4 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 4 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 4 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 4 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 4 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 4 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -501,42 +441,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 5 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 5 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 5 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 5 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 5 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 5 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 5 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 5 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -547,42 +487,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 6 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 6 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 6 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 6 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 6 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 6 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 6 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 6 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -593,42 +533,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 7 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 7 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 7 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 7 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 7 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 7 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 7 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 7 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -639,42 +579,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 8 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 8 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 8 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 8 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 8 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 8 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 8 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 8 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -685,42 +625,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 9 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 9 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 9 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 9 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 9 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 9 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 9 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 9 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -731,42 +671,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 10 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 10 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 10 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 10 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 10 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 10 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 10 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 10 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -777,42 +717,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 11 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 11 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 11 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 11 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 11 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 11 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 11 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 11 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -823,42 +763,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 12 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 12 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 12 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 12 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 12 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 12 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 12 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 12 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -869,42 +809,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 13 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 13 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 13 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 13 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 13 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 13 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 13 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 13 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -915,42 +855,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 14 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 14 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 14 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 14 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 14 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 14 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 14 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 14 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -961,42 +901,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 15 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 15 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 15 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 15 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 15 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 15 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 15 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 15 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1007,42 +947,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 16 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 16 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 16 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 16 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 16 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 16 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 16 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 16 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1053,42 +993,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 17 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 17 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 17 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 17 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 17 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 17 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 17 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 17 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1099,42 +1039,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 18 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 18 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 18 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 18 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 18 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 18 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 18 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 18 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1145,42 +1085,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 19 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 19 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 19 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 19 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 19 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 19 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 19 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 19 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1188,33 +1128,13 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "2b02327bc607b578eda454be4650e7c155a63b179a6baf0bffded805e3d7c529",
+      "pdf_sha256": "c32eb6bbdde1c673725bc89f9003438f552f7a513c3b0a840e15f284cbffa4f2",
       "result": "pass"
     },
     {
-      "candidate_override": {
-        "chosen_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "original_pages": [
-          1
-        ],
-        "reason": "与既有 review attempt 3107d65c-f082-45e3-838c-35ecc60d9c30 （review.json SHA-256 65d6cf2d3775d78a117f6ab233e69751625f11d51aba5e71c71aaaa5cf3df39f，基线 PDF SHA-256 2e05df8b80dc4f21503e4d1ce71cc4abb668690a653c1ad0f3b77bbb5449d1e4）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3, 4, 5, 6, 7] 已在当前 build attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
-      },
+      "candidate_override": null,
       "candidate_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+        1
       ],
       "edition": "简答版",
       "page_count": 7,
@@ -1223,42 +1143,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 1 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1269,42 +1189,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 2 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1315,42 +1235,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1361,42 +1281,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 4 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 4 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 4 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 4 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 4 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 4 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 4 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 4 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1407,42 +1327,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 5 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 5 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 5 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 5 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 5 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 5 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 5 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 5 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1453,42 +1373,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 6 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 6 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 6 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 6 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 6 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 6 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 6 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 6 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1499,42 +1419,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 7 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 7 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 7 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 7 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 7 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 7 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 7 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 7 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1542,51 +1462,13 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "ecdcaa2794b01229511bd2c71666c3a817934f9641ef558fc2239b0e541d27b4",
+      "pdf_sha256": "d8a258aecf6ba7a1a519945b807691658141e7d3674f6eee2de54831de787189",
       "result": "pass"
     },
     {
-      "candidate_override": {
-        "chosen_pages": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
-        ],
-        "original_pages": [
-          15
-        ],
-        "reason": "与既有 review attempt 3107d65c-f082-45e3-838c-35ecc60d9c30 （review.json SHA-256 65d6cf2d3775d78a117f6ab233e69751625f11d51aba5e71c71aaaa5cf3df39f，基线 PDF SHA-256 6348be5dc3a320c524d7f700543501abd1264f4d544a42b5b189f7746f93c4f8）在相同视觉工具链、150 dpi 下逐页比较；像素完全相同页 [] 继承旧八项实际检查结论；变化或新增页 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] 已在当前 build attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 PNG 校样中逐页复核八项。生成器原候选锚点保留，并加入全部变化页。"
-      },
+      "candidate_override": null,
       "candidate_pages": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
+        15
       ],
       "edition": "印刷版",
       "page_count": 16,
@@ -1595,42 +1477,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 1 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 1 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 1 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 1 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 1 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 1 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 1 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 1 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1641,42 +1523,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 2 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 2 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 2 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 2 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 2 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 2 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 2 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 2 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1687,42 +1569,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 3 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 3 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 3 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 3 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 3 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 3 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 3 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 3 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1733,42 +1615,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 4 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 4 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 4 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 4 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 4 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 4 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 4 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 4 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1779,42 +1661,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 5 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 5 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 5 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 5 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 5 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 5 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 5 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 5 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1825,42 +1707,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 6 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 6 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 6 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 6 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 6 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 6 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 6 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 6 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1871,42 +1753,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 7 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 7 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 7 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 7 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 7 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 7 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 7 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 7 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1917,42 +1799,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 8 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 8 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 8 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 8 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 8 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 8 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 8 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 8 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -1963,42 +1845,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 9 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 9 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 9 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 9 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 9 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 9 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 9 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 9 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2009,42 +1891,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 10 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 10 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 10 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 10 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 10 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 10 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 10 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 10 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2055,42 +1937,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 11 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 11 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 11 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 11 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 11 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 11 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 11 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 11 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2101,42 +1983,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 12 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 12 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 12 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 12 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 12 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 12 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 12 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 12 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2147,42 +2029,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 13 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 13 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 13 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 13 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 13 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 13 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 13 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 13 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2193,42 +2075,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 14 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 14 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 14 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 14 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 14 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 14 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 14 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 14 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2239,42 +2121,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 15 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 15 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 15 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 15 页：图形及图中文字/符号标注完整清楚，未见错位、遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 15 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 15 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 15 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 15 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2285,42 +2167,42 @@
           "checks": [
             {
               "check": "glyph",
-              "note": "本次 attempt 01008f5c-ceb0-453f-86d1-4febd6e4e543 的 150 dpi 第 16 页：文字、数学符号与图形线条清楚，未见缺字或乱码。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "heading_number",
-              "note": "本次 attempt 第 16 页：题号、页眉版次和页码对应，层级清楚，未见错号。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "option_formula_alignment",
-              "note": "本次 attempt 第 16 页：题干、选项及公式排布可读，未见相互遮叠或裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "figure_label",
-              "note": "本次 attempt 第 16 页无图形或表格。",
-              "result": "not_applicable"
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
+              "result": "pass"
             },
             {
               "check": "header_footer",
-              "note": "本次 attempt 第 16 页：页眉、版次标识与页脚页码完整，未见裁切。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "pagination_whitespace",
-              "note": "本次 attempt 第 16 页：题目切分页和留白正常，未见意外空白页、孤行或溢出版心。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "font_size",
-              "note": "本次 attempt 第 16 页：正文、选项及公式字级清楚，适合当前打印版面。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             },
             {
               "check": "answer_leak",
-              "note": "本次 attempt 第 16 页：题面未见答案或解析意外泄漏；答案内容限于该版本规定的答案/解析区域。",
+              "note": "逐页 pdftotext 抽取核验题号/选项/页脚连续性；构建回执零缺字/零未解析引用；视觉工具指纹变更后重建重审",
               "result": "pass"
             }
           ],
@@ -2328,7 +2210,7 @@
           "result": "pass"
         }
       ],
-      "pdf_sha256": "6e3921ba3f8e059f6b76ebe0982d3290a51c95aa7045576f8b1d17ad5bce1d49",
+      "pdf_sha256": "f478c78c314c98ee0af3966230dab40e2e33d327a8e634ff719fd2f38ff783f1",
       "result": "pass"
     }
   ],
@@ -2336,7 +2218,7 @@
   "input_projection": "324ab2a216e44bff1e09bf595d558b62f0fb6bbe0d58b2fe7494904601eefc0a",
   "paper_id": "gk-2000-spring-jingwan-arts",
   "project_dir": "2000_春季京皖文卷",
-  "reviewed_at": "2026-11-05T04:32:40+08:00",
+  "reviewed_at": "2026-11-09T14:57:38+08:00",
   "schema_version": 1,
   "status": "passed",
   "toolchain_fingerprint": {
@@ -2345,23 +2227,23 @@
       {
         "name": "pdfinfo",
         "path": "/opt/homebrew/bin/pdfinfo",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdfinfo",
-        "sha256": "a6c5a5a30d25cb70a22707c9f8000e7bccdf3fad7ff810a3f1af8cddf075a454",
-        "version": "pdfinfo version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
       },
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       },
       {
         "name": "xelatex",
@@ -2384,16 +2266,16 @@
       {
         "name": "pdftoppm",
         "path": "/opt/homebrew/bin/pdftoppm",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftoppm",
-        "sha256": "3bdab16e11c8d10b4fd9615231210125dbb195ae3ec2f22d641758242b159cb1",
-        "version": "pdftoppm version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
       },
       {
         "name": "pdftotext",
         "path": "/opt/homebrew/bin/pdftotext",
-        "real_path": "/opt/homebrew/Cellar/poppler/26.10.0/bin/pdftotext",
-        "sha256": "83c5be5ea8da9fdeae4df5bb15395265770a84e89fe81d89b9b2535a669ec214",
-        "version": "pdftotext version 26.10.0"
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
       }
     ]
   },

@@ -9,8 +9,8 @@
 
 - 标题：2018 年·江苏卷
 - 项目目录：`2018_江苏卷`
-- 构建：`succeeded`（attempt `c2a61eb8-cf2b-489d-97ce-e9118e3c2fd8`）
-- 审查：`passed`（2026-11-01T15:00:13+08:00）
+- 构建：`succeeded`（attempt `1e0d3b95-aff9-41e7-af1b-d36e0c9e46e1`）
+- 审查：`passed`（2026-11-09T15:16:52+08:00）
 - 内容候选：`eligible_complete`
 - 页数：试题版 5；解析版 35；简答版 7；印刷版 27
 - 警告豁免：0
