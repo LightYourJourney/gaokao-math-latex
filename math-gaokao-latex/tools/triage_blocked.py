@@ -12,6 +12,15 @@ import re
 from pathlib import Path
 
 PROJ = Path(__file__).resolve().parents[1]
+
+# 立项时属于 111 套 blocked、本轮补源/修源后已封账的 5 套（附封账提交）
+SEALED = {
+    "gk-1986-regular-guangdong-arts": "dceb1fde1",
+    "gk-1987-regular-national-science": "fc0740f8d",
+    "gk-2003-spring-beijing-science": "fc0740f8d",
+    "gk-2020-regular-national-1-arts": "51ba8346a",
+    "gk-2022-regular-national-b-arts": "7ea5e8efb",
+}
 SRC = Path(os.environ.get("GAOKAOMATH_SRC", "gaokaomath-src"))
 
 
@@ -38,7 +47,8 @@ def main():
     issues = issue_table()
     rows = []
     for p in manifest["papers"]:
-        if p["production_state"] == "complete":
+        sealed = p["paper_id"] in SEALED
+        if p["production_state"] == "complete" and not sealed:
             continue
         prov = PROJ / p["project_dir"] / "provenance.json"
         u_nums = []
@@ -62,7 +72,9 @@ def main():
             if not up or not (SRC / up).exists():
                 on_disk = "否"
 
-        if not p.get("source_ids"):
+        if sealed:
+            cat = f"补源后完成（本轮封账，提交 {SEALED[p['paper_id']]}）"
+        elif not p.get("source_ids"):
             cat = "缺源"
         elif u_nums:
             cat = "保留 U"
@@ -111,10 +123,11 @@ def main():
         "",
         "## 计数",
         "",
-        f"- 复核总数：**{len(rows)}** 套（`production_state != complete`）",
+        f"- 复核总数：**{len(rows)}** 套（106 套当前未完成 + 5 套本轮已封账）",
     ]
-    for k in ("可收口", "保留 U", "保留 U（源缺陷/歧义）", "缺源"):
-        out.append(f"- {k}：**{counts.get(k, 0)}** 套")
+    for k in ("补源后完成", "可收口", "保留 U", "保留 U（源缺陷/歧义）", "缺源"):
+        n = sum(v for kk, v in counts.items() if kk.startswith(k)) if k == "补源后完成" else counts.get(k, 0)
+        out.append(f"- {k}：**{n}** 套")
     out += ["", "## 逐卷", "",
             "| 年 | 试卷 | blocked_from | build | review | U 题号 | 未结 ISSUE | ISSUE 类型 | 上游 PDF 在盘 | 结论 |",
             "|---|---|---|---|---|---|---|---|---|---|"]
