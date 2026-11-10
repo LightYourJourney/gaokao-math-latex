@@ -1,0 +1,27 @@
+% 2007 年江西卷理科第 15 题：△ABC 中 O 为 BC 中点，过 O 的直线交 AB、AC 于 M、N。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007江西理.pdf
+% SHA-256：7c0b4b6681b5d98c71dcaab52445896ece61e7a8113032234967c415ef3c0ab1
+% 原页：2007江西理.pdf 第 1 页（A3 三栏）第 2 栏，书页码 385。
+% 重绘依据：按原页 A、B、C、O、M、N 的位置与直线 MON 重绘。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  \coordinate (A) at (1.5,4.0);
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (4.0,0);
+  \coordinate (O) at (2.0,0);
+  \coordinate (M) at (-0.675,-1.8);
+  \coordinate (N) at (3.41,0.95);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (C);
+  \draw (M) -- (N);
+  \fill (O) circle (1.2pt);
+
+  \node[above] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[below] at (O) {$O$};
+  \node[below left] at (M) {$M$};
+  \node[above right] at (N) {$N$};
+\end{tikzpicture}

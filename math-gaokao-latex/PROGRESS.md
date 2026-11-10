@@ -15605,3 +15605,15 @@
 - 正式构建 attempt `30932fc0-a00a-4f19-a6a4-c5e43c4721b0`：四版 6/27/8/20 页，共 61 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：61 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚实线与曲线；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b14.md`。
 - 门禁全通过：`review_receipts check-all`（330 批次）、`provenance check-all`（484 卷）、`solution_sources check-all`、`validate-receipts`（484 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（484 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b15：2007 江西理科正式封账
+
+- 固定来源 `src-40fa25e910d9f4388aba0f52da70adeeb1ab44fb73e189a8f21a19ca177d0479`（2 页 A3，印刷页 385–386，SHA-256 `7c0b4b66…3c0ab1`），21 题：选 12、填 4、解 5；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 六幅 TikZ 矢量图：Q7 正方体与平面 A1BD、Q8 四种酒杯、Q15 三角形与中点线、Q18 余弦曲线、Q20 截棱柱、Q21 双曲线焦点与 2θ；均登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 C B A C D C D A A B B B；填空 13=[5,+∞)、14=4、15=2、16=B、D；Q17 k=1、c=1/2，解集 (√2/4,5/8)；Q18 θ=π/6、ω=2，x0=2π/3 或 3π/4；Q19 0.38、Eξ=0.9；Q20 二面角 30°、体积 3/2；Q21 轨迹 x²/(1−λ)−y²/λ=1，λ∈((√5−1)/2,2/3)。
+- 关键推导：Q7 建系得 AH 方向 (1,1,1)，与 BB1 夹角 arccos(1/√3)≠45°，故选 D；Q12 用 g(x)=e^x+1/x+4x 的最小值 >5 判定 p 为 q 的必要不充分条件；Q15 由 O=(B+C)/2=(1−t)M+tN 比较系数得 m+n=2；Q16 圆心在 y=3x+3 上、半径无界，且 2k⁴−10k²+2k−1 无正整数根，真命题 B、D；Q21 余弦定理化为 |d1−d2|=2√(1−λ)，再由韦达定理与渐近线斜率条件得 λ 范围。
+- 源缺陷与警告：无内容性 issue；解析版 1 条 Underfull（第 20 题建系坐标行）已逐条豁免，其余 0 Overfull、0 缺字。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-jiangxi-science` / `phase5-b15`，live revision 7848；check-batch 通过。
+- 正式构建 attempt `e6f819f2-f88a-4793-9b66-3cb1fbfcce09`：四版 6/24/8/19 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、1 条豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b15.md`。
+- 门禁全通过：`review_receipts check-all`（331 批次）、`provenance check-all`（485 卷）、`solution_sources check-all`、`validate-receipts`（485 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（485 套）、`manifest_csv`（775 行）。

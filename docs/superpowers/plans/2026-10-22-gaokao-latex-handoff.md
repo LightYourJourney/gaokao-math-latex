@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 江西理科（phase5-b15）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 江西理科（21 题，`gk-2007-jiangxi-science`）`phase5-b15` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7848，attempt `e6f819f2-f88a-4793-9b66-3cb1fbfcce09`；四版 6/24/8/19 页共 57 页，0 errors、0 overfull、0 missing characters，1 条 Underfull 已豁免；报告 `reports/phase5-b15.md`。
+- 六幅 TikZ 图（Q7 正方体、Q8 酒杯、Q15 三角形、Q18 余弦曲线、Q20 截棱柱、Q21 双曲线焦点）均登记 `expected_occurrences=2`。
+- 关键结论：选择 C B A C D C D A A B B B；填空 13=[5,+∞)、14=4、15=2、16=B、D；Q17 k=1、c=1/2，解集 (√2/4,5/8)；Q18 θ=π/6、ω=2，x0=2π/3 或 3π/4；Q19 0.38、Eξ=0.9；Q20 30°、体积 3/2；Q21 x²/(1−λ)−y²/λ=1，λ∈((√5−1)/2,2/3)。
+- 门禁全通过：`review_receipts check-all`（331 批次）、`provenance check-all`（485 卷）、`solution_sources check-all`、`validate-receipts`（485 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（485 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 江西文科（phase5-b14）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

@@ -2796,6 +2796,14 @@
         "gk-2007-jiangxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b15",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-jiangxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2805,7 +2813,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "826058dc-d1fc-4b29-92eb-227385dbd96a",
+  "last_transaction_id": "517e326a-e96e-41b6-b161-cfe9a26a5127",
   "papers": [
     {
       "blocked_from": null,
@@ -35078,9 +35086,86 @@
       "title": "2007 年·普通高等学校招生考试·江西卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q07_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q08_glasses.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q15_triangle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q18_cosine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q20_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江西卷_理科/figures/f2007_jiangxi_science_q21_hyperbola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_jiangxi_science",
+        "id": "gk-2007-jiangxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 385、386；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 7 题正方体、第 8 题四种酒杯、第 15 题三角形与中点线、第 18 题余弦曲线、第 20 题截棱柱、第 21 题双曲线焦点与 2θ 图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "江西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-jiangxi-science",
+      "production_state": "complete",
+      "project_dir": "2007_江西卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_江西理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_江西理_含解析.md",
+        "questions": "2007/2007_数学真题_江西理_试题.md",
+        "solution_body": "2007/2007_数学真题_江西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-40fa25e910d9f4388aba0f52da70adeeb1ab44fb73e189a8f21a19ca177d0479"
+      ],
+      "title": "2007 年·普通高等学校招生考试·江西卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7844,
+  "revision": 7849,
   "schema_version": 1,
   "sources": [
     {
@@ -43573,8 +43658,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f351704e1b1d0c89902e1f00e0c43b64b7a50885",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-jiangxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007江西理.pdf",
       "regions": [],
       "source_id": "src-40fa25e910d9f4388aba0f52da70adeeb1ab44fb73e189a8f21a19ca177d0479",

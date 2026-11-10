@@ -1,0 +1,30 @@
+% 2007 年江西卷理科第 21 题：动点 P 到 A(-1,0)、B(1,0) 的距离 d1、d2，
+%   ∠APB=2θ；图中标出 d1、d2 与 2θ。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007江西理.pdf
+% SHA-256：7c0b4b6681b5d98c71dcaab52445896ece61e7a8113032234967c415ef3c0ab1
+% 原页：2007江西理.pdf 第 2 页（A3 三栏）第 2 栏，书页码 386。
+% 重绘依据：按原页 A、O、B、P 与两条距离线、角 2θ 的位置重绘。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  \draw[->,>=stealth] (-2.2,0) -- (3.0,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-1.8) -- (0,2.6) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  \coordinate (A) at (-1,0);
+  \coordinate (B) at (1,0);
+  \coordinate (P) at (1.8,1.5);
+
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \fill (A) circle (1.2pt);
+  \fill (B) circle (1.2pt);
+  \fill (P) circle (1.2pt);
+
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[above right] at (P) {$P$};
+  \node[left] at (0.35,0.85) {$d_1$};
+  \node[right] at (1.45,0.8) {$d_2$};
+  \node at (1.35,1.15) {$2\theta$};
+\end{tikzpicture}
