@@ -2748,6 +2748,14 @@
         "gk-2007-regular-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-regular-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2757,7 +2765,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "70992c5d-b68c-44f8-824c-89bf71957440",
+  "last_transaction_id": "e7d3dd18-3007-43ff-8758-e6d5b2376658",
   "papers": [
     {
       "blocked_from": null,
@@ -34576,9 +34584,86 @@
       "title": "2007 年·普通高等学校招生考试·山东卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q05_stgraph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q07_barchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q07_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q10_ring.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_广东卷_文科/figures/f2007_guangdong_arts_q17_rect.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_guangdong_arts",
+        "id": "gk-2007-regular-guangdong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 373、374；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 5 题四幅 s-t 图、第 7 题条形统计图与流程图、第 10 题环形分布图、第 15 题圆的切线图、第 17 题俯视图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2007_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_广东文_含解析.md",
+        "questions": "2007/2007_数学真题_广东文_试题.md",
+        "solution_body": "2007/2007_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-33398c57eceb18b4949e2b98af04887615aef63b78da19ee3d57f364867aa594"
+      ],
+      "title": "2007 年·普通高等学校招生考试·广东卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7779,
+  "revision": 7792,
   "schema_version": 1,
   "sources": [
     {
@@ -42927,8 +43012,8 @@
       "exam_type": "regular",
       "git_blob_oid": "ea4b9e79349eae268bef0486e914099515c9aeda",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-regular-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007广东文.pdf",
       "regions": [],
       "source_id": "src-33398c57eceb18b4949e2b98af04887615aef63b78da19ee3d57f364867aa594",

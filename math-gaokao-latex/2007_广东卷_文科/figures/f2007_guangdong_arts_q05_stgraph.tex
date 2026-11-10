@@ -1,0 +1,53 @@
+% 2007 年广东卷文科第 5 题：四个 s-t 图象选项（A）—（D）。
+%   客车：0—1 h 以 60 km/h 行驶（s: 0→60），1—1.5 h 停留（s=60），
+%   1.5—2.5 h 以 80 km/h 行驶（s: 60→140）。
+%   （A）第二段升到 160；（B）无停留段且两段断开；（D）第二段斜率偏小；
+%   （C）与解析式一致。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东文.pdf
+% SHA-256：6c8a7179f8b64b91f8f189f0aca7da3523d5d42dd5b8d2c8e9c0d3c6998459ee
+% 原页：2007广东文.pdf 第 1 页（A3 三栏）第 1 栏，书页码 373，图在第 5 题题干下方。
+% 重绘依据：按原页四个小图的折线顶点逐个比对；网格 0.25 h × 20 km，
+%   横轴 0—3 h、纵轴 0—160 km，各图第二段斜率差异按原图保留。
+\begin{tikzpicture}[x=1cm, y=0.032cm, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % ---------------- 单个小图的公共网格 ----------------
+  \newcommand{\stgrid}{%
+    \foreach \gx in {0.25,0.5,...,3.0} {\draw[gray!45,very thin] (\gx,0) -- (\gx,160);}%
+    \foreach \gy in {20,40,...,160} {\draw[gray!45,very thin] (0,\gy) -- (3.05,\gy);}%
+    \draw[->,>=stealth] (0,0) -- (3.55,0) node[below right=1pt] {$t$ (h)};%
+    \draw[->,>=stealth] (0,0) -- (0,178) node[left] {$s$ (km)};%
+    \foreach \tx in {1,2,3} {\node[below] at (\tx,0) {$\tx$};}%
+    \foreach \ty in {60,80,100,120,140,160} {\node[left] at (0,\ty) {$\ty$};}%
+    \node[below left] at (0,0) {$O$};%
+  }
+
+  % ---------------- （A） ----------------
+  \begin{scope}[shift={(0cm,0cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.5,60) -- (2.5,160);
+    \node at (1.7,-32) {（A）};
+  \end{scope}
+
+  % ---------------- （B） ----------------
+  \begin{scope}[shift={(5.6cm,0cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60);
+    \draw[line width=1.1pt] (1.15,62) -- (2.6,140);
+    \node at (1.7,-32) {（B）};
+  \end{scope}
+
+  % ---------------- （C） ----------------
+  \begin{scope}[shift={(0cm,-7.2cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.5,60) -- (2.5,140);
+    \node at (1.7,-32) {（C）};
+  \end{scope}
+
+  % ---------------- （D） ----------------
+  \begin{scope}[shift={(5.6cm,-7.2cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.6,60) -- (2.8,140);
+    \node at (1.7,-32) {（D）};
+  \end{scope}
+\end{tikzpicture}

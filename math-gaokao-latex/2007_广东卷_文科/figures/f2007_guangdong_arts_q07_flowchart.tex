@@ -1,0 +1,39 @@
+% 2007 年广东卷文科第 7 题：图 2 算法流程图。
+%   开始 → 输入 A1,A2,…,A10 → s=0,i=4 → 判断框（题目待填条件）→
+%   是 → s=s+A_i → i=i+1 → 回到判断框上方；
+%   否 → 输出 s → 结束。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东文.pdf
+% SHA-256：6c8a7179f8b64b91f8f189f0aca7da3523d5d42dd5b8d2c8e9c0d3c6998459ee
+% 原页：2007广东文.pdf 第 1 页（A3 三栏）第 2 栏，书页码 373。
+% 重绘依据：按原页流程与分支方向重绘；判断框内留空，对应题目要求填写的条件。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, rounded corners=2pt, minimum width=2.1cm,
+    minimum height=0.55cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70,
+    trapezium right angle=110, minimum width=2.9cm, minimum height=0.55cm,
+    align=center},
+  dec/.style={draw, diamond, aspect=2.6, minimum width=2.8cm,
+    minimum height=1.05cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[box]  (start) at (0,8.4) {开始};
+  \node[para] (in)    at (0,7.55) {输入 $A_1,A_2,\cdots,A_{10}$};
+  \node[box]  (init)  at (0,6.65) {$s=0,\ i=4$};
+  \node[dec]  (test)  at (0,5.35) {};
+  \node[box]  (add)   at (4.4,4.55) {$s=s+A_i$};
+  \node[box]  (inc)   at (4.4,5.75) {$i=i+1$};
+  \node[para] (out)   at (0,4.0) {输出 $s$};
+  \node[box]  (end)   at (0,3.15) {结束};
+
+  \draw[arr] (start) -- (in);
+  \draw[arr] (in) -- (init);
+  \draw[arr] (init) -- (test);
+  \draw[arr] (test.east) -- node[above] {是} (add.west);
+  \draw[arr] (add.north) -- (inc.south);
+  \draw[arr] (inc.west) -- ++(-2.9,0) |- (test.north);
+  \draw[arr] (test.south) -- node[left] {否} (out.north);
+  \draw[arr] (out) -- (end);
+
+  \node[below] at (2.2,2.8) {图 2};
+\end{tikzpicture}

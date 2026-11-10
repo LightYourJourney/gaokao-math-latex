@@ -1,0 +1,21 @@
+% 2007 年广东卷文科第 10 题：维修点环形分布图。
+%   A（左上）、D（右上）、C（右下）、B（左下）四点为环形相邻关系。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东文.pdf
+% SHA-256：6c8a7179f8b64b91f8f189f0aca7da3523d5d42dd5b8d2c8e9c0d3c6998459ee
+% 原页：2007广东文.pdf 第 1 页（A3 三栏）第 3 栏，书页码 373。
+% 重绘依据：四点以椭圆节点表示，相邻点之间用弧线连接成环，环序 A—D—C—B—A。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=1.5pt},
+  pt/.style={draw, ellipse, minimum width=0.72cm, minimum height=0.44cm,
+    align=center}]
+
+  \node[pt] (A) at (-1.5,0.95) {$A$};
+  \node[pt] (D) at (1.5,0.95)  {$D$};
+  \node[pt] (B) at (-1.5,-0.95) {$B$};
+  \node[pt] (C) at (1.5,-0.95) {$C$};
+
+  \draw (A.east) .. controls (-0.6,1.75) and (0.6,1.75) .. (D.west);
+  \draw (D.south) .. controls (2.15,0.3) and (2.15,-0.3) .. (C.north);
+  \draw (C.west) .. controls (0.6,-1.75) and (-0.6,-1.75) .. (B.east);
+  \draw (B.north) .. controls (-2.15,-0.3) and (-2.15,0.3) .. (A.south);
+\end{tikzpicture}

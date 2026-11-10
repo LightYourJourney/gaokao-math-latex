@@ -15531,3 +15531,16 @@
 - 正式构建 attempt `44cf07ad-161e-41eb-ad62-27e8a6dd41dc`：四版 5/24/7/18 页，共 54 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：54 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚实线与刻度；解析版第 8 题题干与直方图在第 11 页、四个选项在第 12 页页首（同一题内正常换页），简答版答案速查区按「选择/填空」与「解答题」分组换页，均已逐页登记说明；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b08.md`。
 - 门禁全通过：`review_receipts check-all`（324 批次）、`provenance check-all`（478 卷）、`solution_sources check-all`、`validate-receipts`（478 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（478 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b09：2007 广东文科正式封账
+
+- 固定来源 `src-33398c57eceb18b4949e2b98af04887615aef63b78da19ee3d57f364867aa594`（2 页 A3，印刷页 373–374，SHA-256 `6c8a7179…c6998459ee`），21 题：选 10、填 5、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 六幅 TikZ 矢量图：Q5 客车 s–t 四联图（A）—（D）、Q7 图 1 身高条形统计图（A₁—A₁₀ = 100/200/320/450/550/500/360/220/80/40）、Q7 图 2 算法流程图、Q10 维修点环形分布图、Q15 圆与切线图、Q17 俯视图（8×6 矩形带对角线）；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 21 题：选择 C D B B C D B A A C；填空 11 y²=8x、12 (1/e,+∞)、13 aₙ=2n−10 且 k=8、14 2、15 30°；Q16(1) c=25/3、(2) 2√5/5；Q17(1) V=64、(2) S=40+24√2；Q18 ŷ=0.7x+0.35、降低 19.65 吨；Q19(1) (x+2)²+(y−2)²=8、(2) Q(4/5,12/5)；Q20 α=(√5−1)/2、β=−(√5+1)/2、Sₙ=2(2ⁿ−1)ln((3+√5)/2)；Q21 a≤−(3+√7)/2 或 a≥1。
+- 图稿返工后复验：Q5 四图重叠加成「双线」，根因是 `shift` 写成无单位数值被 y 轴缩放（y=0.032cm），改为 `(0cm,-7.2cm)` 后四图分离；Q7 条形图柱改为 `[i,i+1]` 并与 145–195 共 11 个分界标签对齐；Q7 流程图 `i=i+1` 移到 `s=s+A_i` 上方并回接判断框上方，与原页分支方向一致。
+- 版式修正：试题版 Q8 选项曾被拆到相邻页，源 MD 题干后加 `<!-- question-needspace: 0.35 -->` 后整题回到同页；Q9 四个连续选项的 `\dfrac` 挤压下一行，改为 `\frac` 后行距正常（两处改动均重跑 provenance，revision 7786/7789）。
+- 源疑点：Q5 无文字选项、四幅图以单幅 2×2 图承载；Q19 原页「到椭圆两点的距离之和」按「两焦点」理解（2a=10），转录写「两焦点」，未登记 issue。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-regular-guangdong-arts` / `phase5-b09`，live revision 7791；check-batch 通过。
+- 正式构建 attempt `fc995812-f170-4a9c-88e2-c8b2f5e290ec`：四版 7/26/9/23 页，共 65 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：65 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对刻度、标签与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b09.md`。
+- 门禁全通过：`review_receipts check-all`（325 批次）、`provenance check-all`（479 卷）、`solution_sources check-all`、`validate-receipts`（479 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（479 套）、`manifest_csv`（775 行）。

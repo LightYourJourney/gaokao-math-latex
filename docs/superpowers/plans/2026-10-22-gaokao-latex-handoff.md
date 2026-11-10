@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 广东文科（phase5-b09）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 广东文科（21 题，`gk-2007-regular-guangdong-arts`）`phase5-b09` FINALIZED / `closed`，卷 `eligible_complete`，manifest live revision 7791，attempt `fc995812-f170-4a9c-88e2-c8b2f5e290ec`；四版 7/26/9/23 页共 65 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b09.md`。
+- 六幅 TikZ 图（Q5 四联 s–t 图、Q7 条形统计图与算法流程图、Q10 维修点环形图、Q15 圆与切线、Q17 俯视图）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256。
+- 关键结论：选择 C D B B C D B A A C；填空 11 y²=8x、12 (1/e,+∞)、13 aₙ=2n−10 且 k=8、14 2、15 30°；Q16 c=25/3、2√5/5；Q17 V=64、S=40+24√2；Q18 ŷ=0.7x+0.35、降低 19.65 吨；Q19 (x+2)²+(y−2)²=8、Q(4/5,12/5)；Q20 α=(√5−1)/2、β=−(√5+1)/2、Sₙ=2(2ⁿ−1)ln((3+√5)/2)；Q21 a≤−(3+√7)/2 或 a≥1。
+- 图稿三处返工：Q5 四联图 `shift` 必须写 `(0cm,-7.2cm)`（y 单位 0.032cm，无单位数值会被缩放导致四图重叠）；Q7 条形图柱区间改 `[i,i+1]` 并与 145–195 的 11 个分界标签对齐；Q7 流程图 `i=i+1` 移到 `s=s+A_i` 上方并回接判断框上方。Q10 环序为 A—D—C—B（与源图一致）。
+- 版式修正：试题版 Q8 曾被拆页，源 MD 加 `question-needspace: 0.35` 后整题同页；Q9 四个连续 `\dfrac` 选项改为 `\frac`，行距恢复。两次改动均重跑 provenance（revision 7786、7789）。
+- 门禁全通过：`review_receipts check-all`（325 批次）、`provenance check-all`（479 卷）、`solution_sources check-all`、`validate-receipts`（479 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（479 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（广东理、新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 山东文科（phase5-b08）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
