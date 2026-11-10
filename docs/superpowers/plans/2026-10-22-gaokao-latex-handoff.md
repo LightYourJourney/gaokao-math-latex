@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 江苏卷（phase5-b13）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 江苏卷（21 题，`gk-2007-jiangsu`）`phase5-b13` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7836，attempt `70687ebe-fca2-46a2-93dc-bffd2a8fcb42`；四版 4/25/6/19 页共 54 页，0 errors、0 overfull、0 underfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b13.md`。
+- 两幅 TikZ 图（Q18 正方体截面、Q19 抛物线与直线）均登记 `expected_occurrences=2`。
+- 关键结论：选择 D A A C D B B A C B；填空 11=1/2、12=75、13=32、14=6√5/5、15=5/4、16=10 sin(πt/60)；Q17 0.05、0.99、0.02；Q18 tanθ=√13；Q19 c=2 且逆命题成立；Q20 q=(√5−1)/2；Q21 d=0、0≤c<4、0≤c≤4。
+- 源疑点：Q21 未明说 b≠0，按二次函数作答并在解析内记 `【源疑点：…】`；若允许 b=0，第（2）问的 c 可任意非零。
+- 门禁全通过：`review_receipts check-all`（329 批次）、`provenance check-all`（483 卷）、`solution_sources check-all`、`validate-receipts`（483 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（483 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 新课标文科（phase5-b12）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

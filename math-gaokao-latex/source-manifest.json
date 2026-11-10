@@ -2780,6 +2780,14 @@
         "gk-2007-newcurriculum-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b13",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-jiangsu"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2789,7 +2797,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5fb28460-f708-4115-8f5e-70d610b76fbf",
+  "last_transaction_id": "816d2427-e567-4776-ab0e-9a206fd1d1ad",
   "papers": [
     {
       "blocked_from": null,
@@ -34932,9 +34940,70 @@
       "title": "2007 年·普通高等学校招生考试·新课标卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江苏卷/figures/f2007_jiangsu_q18_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_江苏卷/figures/f2007_jiangsu_q19_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_jiangsu",
+        "id": "gk-2007-jiangsu",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 383、384；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 18 题正方体截面图、第 19 题抛物线与直线图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江苏卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "none",
+        "variant": "江苏卷"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-jiangsu",
+      "production_state": "complete",
+      "project_dir": "2007_江苏卷",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_江苏_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_江苏_含解析.md",
+        "questions": "2007/2007_数学真题_江苏_试题.md",
+        "solution_body": "2007/2007_数学真题_江苏_解析正文.md"
+      },
+      "source_ids": [
+        "src-7a342f29a75e1f12736bcd3f53563f5aaf33aa8ea94e6cb929c6fbc60c24ae12"
+      ],
+      "title": "2007 年·普通高等学校招生考试·江苏卷",
+      "track": "none",
+      "year": 2007
     }
   ],
-  "revision": 7830,
+  "revision": 7837,
   "schema_version": 1,
   "sources": [
     {
@@ -43379,8 +43448,8 @@
       "exam_type": "regular",
       "git_blob_oid": "34fbba490ab1f938967748216fcdb6612b2f99a3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-jiangsu",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007江苏.pdf",
       "regions": [],
       "source_id": "src-7a342f29a75e1f12736bcd3f53563f5aaf33aa8ea94e6cb929c6fbc60c24ae12",

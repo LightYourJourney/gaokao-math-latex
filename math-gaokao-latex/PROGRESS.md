@@ -15580,3 +15580,15 @@
 - 正式构建 attempt `65e634c0-d4c0-4144-9417-3f09a50a2378`：四版 7/32/9/27 页，共 75 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：75 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚实线、刻度与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b12.md`。
 - 门禁全通过：`review_receipts check-all`（328 批次）、`provenance check-all`（482 卷）、`solution_sources check-all`、`validate-receipts`（482 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（482 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b13：2007 江苏卷正式封账
+
+- 固定来源 `src-7a342f29a75e1f12736bcd3f53563f5aaf33aa8ea94e6cb929c6fbc60c24ae12`（2 页 A3，印刷页 383–384，SHA-256 `7b4d43a1…c0e60bc0`），21 题：选 10、填 6、解 5；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 两幅 TikZ 矢量图：Q18 正方体截面图（E、F、G、M、H 与截面 EBFD1）、Q19 抛物线与直线图（A、B、C、P、Q、l）；均登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 D A A C D B B A C B；填空 11=1/2、12=75、13=32、14=6√5/5、15=5/4、16=10 sin(πt/60)；Q17 0.05、0.99、0.02；Q18(3) tanθ=√13；Q19 c=2、切线证明与逆命题成立；Q20 q=(√5−1)/2；Q21 d=0、0≤c<4、0≤c≤4。
+- 关键推导：Q18 以 A 为原点建系，截面法向量 (1,−2,3)、面 BCC1B1 法向量 (1,0,0)，cosθ=1/√14，tanθ=√13；Q19 由 x1x2=−c 得 OA·OB=c²−c=2，c=2，并用 x1²=kx1+c 证切线及逆命题；Q20 由 b3=a_i 得 (q−1)(q−i+2)=0，故 q=i−2 为整数，再构造 m 使 a_m=b_n；Q21 由 f 的实根代入得 d=0，再按 g(f)=f·(f²+bf−b) 讨论值域。
+- 源疑点：Q21 题面未明说 b≠0；按 f 为二次函数作答，并在解析内记 `【源疑点：…】`；若允许 b=0，第（2）问的 c 可任意非零，与二次函数情形不同。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-jiangsu` / `phase5-b13`，live revision 7836；check-batch 通过。
+- 正式构建 attempt `70687ebe-fca2-46a2-93dc-bffd2a8fcb42`：四版 4/25/6/19 页，共 54 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：54 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚实线与坐标；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b13.md`。
+- 门禁全通过：`review_receipts check-all`（329 批次）、`provenance check-all`（483 卷）、`solution_sources check-all`、`validate-receipts`（483 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（483 套）、`manifest_csv`（775 行）。
