@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 新课标文科（phase5-b12）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 新课标文科（24 题，`gk-2007-newcurriculum-arts`）`phase5-b12` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7829，attempt `65e634c0-d4c0-4144-9417-3f09a50a2378`；四版 7/32/9/27 页共 75 页，0 errors、0 overfull、0 underfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b12.md`。
+- 六幅 TikZ 图（Q3 正弦简图、Q5 程序框图、Q8 三视图、Q17 塔高测量、Q18 空间四点、Q22 圆与切线割线）均登记 `expected_occurrences=2`；Q3/Q5/Q8/Q17/Q22 与理科版同源，Q18 独立重绘。
+- 关键结论：选择 A C A D C B C B C D D B；填空 13=3、14=−1、15=4−4i、16=1/2；Q17 s sinβ tanθ / sin(α+β)；Q18 CD=2 且恒有 AB⊥CD；Q19 三段单调，最大值 ln(7/2)+1/16、最小值 ln2+1/4；Q20 3/4、2/3；Q21 −3/4<k<0 且不存在共线的 k；Q22 90°；Q23 x+y=0；Q24 x<−7 或 x>5/3、最小值 −9/2。
+- 图稿修正：Q17 河面灰带下移、C/D 移到近岸带外；Q18 按 D 顶点、A/B 轴端、C 底面点重绘，AB 画虚线。
+- 门禁全通过：`review_receipts check-all`（328 批次）、`provenance check-all`（482 卷）、`solution_sources check-all`、`validate-receipts`（482 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（482 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 新课标理科（phase5-b11）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
