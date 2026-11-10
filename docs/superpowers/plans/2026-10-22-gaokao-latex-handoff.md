@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 江西文科（phase5-b14）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 江西文科（21 题，`gk-2007-jiangxi-arts`）`phase5-b14` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7843，attempt `30932fc0-a00a-4f19-a6a4-c5e43c4721b0`；四版 6/27/8/20 页共 61 页，0 errors、0 overfull、0 underfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b14.md`。
+- 四幅 TikZ 图（Q11 四种酒杯、Q16 正方体与平面 A1BD、Q18 余弦曲线、Q20 截棱柱）均登记 `expected_occurrences=2`。
+- 关键结论：选择 B B A D A D B B C C A C；填空 13=1、14=7、15=(1,4)、16=A、B、C；Q17 c=1/2、解集 (√2/4,5/8)；Q18 θ=π/6、ω=2，x0=2π/3 或 3π/4；Q19 0.8、0.492；Q20 arctan(1/3)、体积 3/2；Q21 n=8、T2n=9/16[1−(8n+3)/3^{2n+1}]。
+- 图稿修正：Q20 初稿 O 与 C 投影重合，改为 C1=(1.4,1.0)、A/B/C 高度 4/2/3，O 与 C 分离。
+- 门禁全通过：`review_receipts check-all`（330 批次）、`provenance check-all`（484 卷）、`solution_sources check-all`、`validate-receipts`（484 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（484 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（江西理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 江苏卷（phase5-b13）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
