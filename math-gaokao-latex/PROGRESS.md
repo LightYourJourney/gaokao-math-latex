@@ -15448,3 +15448,11 @@
 - 逐题 Provenance 审计与自动化回归：三角色共 66 条记录确定性导入，22 题全通过，conflict_status=none，0 issue；新增 `tests/test_2005_tianjin_science_solutions.py` 自动化回归套件，全卷 22 题符号推导与关键数学结论 100% 锁死。
 - 正式构建与视觉审查：四版页数为 5/33/7/22 页，共 67 页；四版均 `succeeded`，0 errors、0 missing characters、0 overfull、0 undefined references、0 problems。全 67 页共 536 项八类视觉检查全部通过（0 fail、0 pending）。
 - 批次封账与一致性对账：`review_receipts.py finalize-batch` 返回 `FINALIZED`，批次 `closed`、卷 `eligible_complete`，生成报告 `reports/phase4-b80.md`。`report.py render --all` 更新 6 个全量报告，`report.py check --all` 校验通过，`manifest_csv.py` 生成 775 行并通过 check。全量 451 套试卷 TeX 投影 100% 一致。
+
+### 2026-11-10 phase5-b01：2007 上海理科正式封账
+
+- 固定PDF两页（印刷页405–406），21题，三张TikZ图；原件无答案及分值，不补造，解答为D级非官方独立推导，官方身份未核。
+- 三个真实独立角色完成题面复核、求解与答案审查；provenance current。Q20(3)明确选择奇峰形并给完整分段和式；Q21(3)仅k=0，非零斜率用短弦中点直线段反证。
+- 正式attempt `91828da8-7c50-474a-832e-e78cc5c677f8`：四版4/15/6/13页，共38页；实际逐页视觉审查完成，Q11标签与Q21答案孤页已修复。
+- finalize返回FINALIZED/closed，revision7719；当前输入回执验证OK，0 stale/invalid/missing/pending，CSV已刷新775行。
+- 全量报告刷新与完整测试正在执行，尚无通过结论；Git阶段提交未执行。四川文科候选仍needs-review，Q12/Q17/Q19/Q21源问题不得据常见题意修补。

@@ -1,0 +1,28 @@
+{
+  "status": "needs-review",
+  "formal_receipt": false,
+  "pdf": {
+    "edition": "解析版",
+    "sha256": "07b635fa216474f07aa548452ab2766793e59e031922c38f631887d95c95877e",
+    "pages": 16
+  },
+  "inspected_pages": [
+    14,
+    15,
+    16
+  ],
+  "findings": [
+    {
+      "page": 14,
+      "result": "no clipping observed; Q20 enumeration visible"
+    },
+    {
+      "page": 15,
+      "result": "Q20 prefix sum and Q21 proof readable; no clipping observed"
+    },
+    {
+      "page": 16,
+      "result": "layout issue: final Q21 answer alone on otherwise empty last page; needs pagination investigation"
+    }
+  ]
+}
