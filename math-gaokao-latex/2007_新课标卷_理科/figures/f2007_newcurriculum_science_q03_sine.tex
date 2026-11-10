@@ -1,0 +1,73 @@
+% 2007 年新课标卷理科第 3 题：函数 y=sin(2x-π/3) 在 [-π/2,π] 上的四个简图选项。
+%   （A）为正确图象；（B）（C）（D）为相位不同的干扰项。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007新课标理(海南,宁夏).pdf
+% SHA-256：c8ee1632ac3a7a28aab1150f047a2e1c74398ca2944701e9165237897ae724e2
+% 原页：2007新课标理(海南,宁夏).pdf 第 1 页（A3 三栏）第 1 栏，书页码 393。
+% 重绘依据：按原页四个小图的零点、极值位置与坐标轴标注重绘；横轴以 π 为单位。
+\begin{tikzpicture}[x=2.6cm, y=1.6cm, semithick,
+  every node/.style={inner sep=1pt, font=\small}]
+
+  % ================= （A）正确图象 =================
+  \begin{scope}[shift={(0cm,0cm)}]
+    \draw[->,>=stealth] (-0.66,0) -- (1.20,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.22) -- (0,1.38) node[above] {$y$};
+    \draw[domain=-0.5:1,samples=200,line width=1pt]
+      plot (\x,{sin(deg(2*pi*\x - pi/3))});
+    \draw[dashed] (-0.5,0) -- (-0.5,{sin(deg(-pi - pi/3))});
+    \draw[dashed] (1,0) -- (1,{sin(deg(2*pi - pi/3))});
+    \node[below] at (-0.5,0) {$-\frac{\pi}{2}$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \node[below] at (1,0) {$\pi$};
+    \node[left=2pt] at (0,1) {$1$};
+    \node[left=2pt] at (0,-1) {$-1$};
+    \node[below] at (0.55,-1.55) {（A）};
+  \end{scope}
+
+  % ================= （B） =================
+  \begin{scope}[shift={(7.2cm,0cm)}]
+    \draw[->,>=stealth] (-0.66,0) -- (1.20,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.22) -- (0,1.38) node[above] {$y$};
+    \draw[domain=-0.5:1,samples=200,line width=1pt]
+      plot (\x,{sin(deg(2*pi*\x + pi/3))});
+    \draw[dashed] (-0.5,0) -- (-0.5,{sin(deg(-pi + pi/3))});
+    \draw[dashed] (1,0) -- (1,{sin(deg(2*pi + pi/3))});
+    \node[below] at (-0.5,0) {$-\frac{\pi}{2}$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \node[below] at (1,0) {$\pi$};
+    \node[left=2pt] at (0,1) {$1$};
+    \node[left=2pt] at (0,-1) {$-1$};
+    \node[below] at (0.55,-1.55) {（B）};
+  \end{scope}
+
+  % ================= （C） =================
+  \begin{scope}[shift={(0cm,-5.35cm)}]
+    \draw[->,>=stealth] (-0.66,0) -- (1.20,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.22) -- (0,1.38) node[above] {$y$};
+    \draw[domain=-0.5:1,samples=200,line width=1pt]
+      plot (\x,{sin(deg(2*pi*\x - 2*pi/3))});
+    \draw[dashed] (-0.5,0) -- (-0.5,{sin(deg(-pi - 2*pi/3))});
+    \draw[dashed] (1,0) -- (1,{sin(deg(2*pi - 2*pi/3))});
+    \node[below] at (-0.5,0) {$-\frac{\pi}{2}$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \node[below] at (1,0) {$\pi$};
+    \node[left=2pt] at (0,1) {$1$};
+    \node[left=2pt] at (0,-1) {$-1$};
+    \node[below] at (0.55,-1.55) {（C）};
+  \end{scope}
+
+  % ================= （D） =================
+  \begin{scope}[shift={(7.2cm,-5.35cm)}]
+    \draw[->,>=stealth] (-0.66,0) -- (1.20,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.22) -- (0,1.38) node[above] {$y$};
+    \draw[domain=-0.5:1,samples=200,line width=1pt]
+      plot (\x,{sin(deg(2*pi*\x + 2*pi/3))});
+    \draw[dashed] (-0.5,0) -- (-0.5,{sin(deg(-pi + 2*pi/3))});
+    \draw[dashed] (1,0) -- (1,{sin(deg(2*pi + 2*pi/3))});
+    \node[below] at (-0.5,0) {$-\frac{\pi}{2}$};
+    \node[below left=1pt] at (0,0) {$O$};
+    \node[below] at (1,0) {$\pi$};
+    \node[left=2pt] at (0,1) {$1$};
+    \node[left=2pt] at (0,-1) {$-1$};
+    \node[below] at (0.55,-1.55) {（D）};
+  \end{scope}
+\end{tikzpicture}

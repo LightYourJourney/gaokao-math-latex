@@ -15556,3 +15556,15 @@
 - 正式构建 attempt `cf4f56a7-dcf6-42c1-a996-9a286fb84706`：四版 7/33/9/25 页，共 74 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：74 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚线、刻度与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b10.md`。
 - 门禁全通过：`review_receipts check-all`（326 批次）、`provenance check-all`（480 卷）、`solution_sources check-all`、`validate-receipts`（480 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（480 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b11：2007 新课标理科正式封账
+
+- 固定来源 `src-5dc5c9bec6c6051d3acc66f94267f607cd63620bf7790708b41fd125f9e807f5`（2 页 A3，印刷页 393–394，SHA-256 `c8ee1632…ae724e2`），24 题：选 12、填 4、解 6、选做 2；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 七幅 TikZ 矢量图：Q3 四幅正弦简图、Q5 程序框图、Q8 三视图、Q17 塔高测量图、Q18 三棱锥图、Q20 正方形与不规则图形 M、Q22 圆与切线割线图；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 24 题：选择 C D A D C C D B C D B B；填空 13=3、14=−1、15=1+2i、16=240；Q17 AB=s sinβ tanθ / sin(α+β)；Q18(2) √3/3；Q19 k<−√2/2 或 k>√2/2，且不存在使 OP+OQ 与 AB 共线的 k；Q20 EX=2500、概率 0.9147；Q21(1) a=3/2，增区间 (−3/2,−1)、( −1/2,+∞)，减区间 (−1,−1/2)，(2) a>√2 且极值之和大于 ln(e/2)；Q22(2) 90°；Q23 两圆方程与公共弦 x+y=0；Q24 x<−7 或 x>5/3、最小值 −9/2。
+- 图稿与版式修正：Q8 三视图的 scope 位移误用 cm 导致 674pt 超宽，改为 3.6cm/3.6cm 后归位；Q3 四幅简图放大并去掉与曲线重叠的内部零点刻度（保留端点、O 与 ±1），正确项 A 的零点与极值位置不变；Q11 三张频数表合并为一张「运动员/环数/频数」表，消除题干与表格跨页；Q17 河面改为水平灰带，C/D 与 B 分居两岸；Q22 切点、割线与中点位置按几何关系重算。
+- 源缺陷与警告：无内容性 issue；构建日志有 4 条 Underfull（Q20 附表行内公式），逐条豁免并在回执记明，无 Overfull、无缺字。
+- Provenance：三角色 72 条记录（24×3）导入，manifest 登记 `gk-2007-newcurriculum-science` / `phase5-b11`，live revision 7822；check-batch 通过。
+- 正式构建 attempt `f0db22d3-7d98-43ae-a205-34efb97df995`：四版 7/35/9/28 页，共 79 页，全部 succeeded，0 errors、0 overfull、0 missing characters；4 条 Underfull 已豁免。
+- 视觉审查：79 页八类检查逐页完成（0 fail、0 pending、4 条警告豁免），四版图页逐幅核对标签、虚实线、刻度与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b11.md`。
+- 门禁全通过：`review_receipts check-all`（327 批次）、`provenance check-all`（481 卷）、`solution_sources check-all`、`validate-receipts`（481 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（481 套）、`manifest_csv`（775 行）。

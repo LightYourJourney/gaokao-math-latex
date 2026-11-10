@@ -1,0 +1,34 @@
+% 2007 年新课标卷理科第 5 题：程序框图（k 从 1 到 50 累加 2k）。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007新课标理(海南,宁夏).pdf
+% SHA-256：c8ee1632ac3a7a28aab1150f047a2e1c74398ca2944701e9165237897ae724e2
+% 原页：2007新课标理(海南,宁夏).pdf 第 1 页（A3 三栏）第 1 栏，书页码 393。
+% 重绘依据：按原页流程与分支方向重绘；循环体为 S=S+2k、k=k+1。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, rounded corners=2pt, minimum width=1.9cm,
+    minimum height=0.55cm, align=center},
+  para/.style={draw, trapezium, trapezium left angle=70,
+    trapezium right angle=110, minimum width=2.4cm, minimum height=0.55cm,
+    align=center},
+  dec/.style={draw, diamond, aspect=2.4, minimum width=2.8cm,
+    minimum height=1.1cm, align=center},
+  arr/.style={->, >=stealth}]
+
+  \node[box]  (start) at (0,7.2) {开始};
+  \node[box]  (init)  at (0,6.3) {$k=1$};
+  \node[box]  (sum)   at (0,5.4) {$S=0$};
+  \node[dec]  (test)  at (0,4.2) {$k\leqslant50$?};
+  \node[box]  (add)   at (0,2.95) {$S=S+2k$};
+  \node[box]  (inc)   at (0,2.15) {$k=k+1$};
+  \node[para] (out)   at (4.6,4.2) {输出 $S$};
+  \node[box]  (end)   at (4.6,3.3) {结束};
+
+  \draw[arr] (start) -- (init);
+  \draw[arr] (init) -- (sum);
+  \draw[arr] (sum) -- (test);
+  \draw[arr] (test.south) -- node[left] {是} (add.north);
+  \draw[arr] (add) -- (inc);
+  \draw[arr] (inc.west) -- (-2.5,2.15) -- (-2.5,4.75) -- (0,4.75);
+  \draw[arr] (test.east) -- node[above] {否} (out.west);
+  \draw[arr] (out) -- (end);
+\end{tikzpicture}

@@ -2764,6 +2764,14 @@
         "gk-2007-regular-guangdong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b11",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-newcurriculum-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2773,7 +2781,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "24f178c8-4f28-4103-a784-59ec52956311",
+  "last_transaction_id": "1a9d2086-7a09-4a7d-8585-9972de2dcfc5",
   "papers": [
     {
       "blocked_from": null,
@@ -34750,9 +34758,94 @@
       "title": "2007 年·普通高等学校招生考试·广东卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q03_sine.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q05_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q08_views.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q17_tower.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q18_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q20_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_新课标卷_理科/figures/f2007_newcurriculum_science_q22_circle.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_newcurriculum_science",
+        "id": "gk-2007-newcurriculum-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 393、394；PDF 只有题面、无官方答案页，24 题答案由本库独立推导（非官方）。第 3 题四幅正弦简图、第 5 题程序框图、第 8 题三视图、第 17 题塔高测量图、第 18 题三棱锥图、第 20 题正方形与不规则图形 M、第 22 题圆与切线割线图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "新课标卷（琼、宁）",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选做题": [
+            23,
+            24
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "新课标理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-newcurriculum-science",
+      "production_state": "complete",
+      "project_dir": "2007_新课标卷_理科",
+      "question_count": 24,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_新课标理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_新课标理_含解析.md",
+        "questions": "2007/2007_数学真题_新课标理_试题.md",
+        "solution_body": "2007/2007_数学真题_新课标理_解析正文.md"
+      },
+      "source_ids": [
+        "src-5dc5c9bec6c6051d3acc66f94267f607cd63620bf7790708b41fd125f9e807f5"
+      ],
+      "title": "2007 年·普通高等学校招生考试·新课标卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7805,
+  "revision": 7823,
   "schema_version": 1,
   "sources": [
     {
@@ -43173,8 +43266,8 @@
       "exam_type": "regular",
       "git_blob_oid": "da952165223e4aed4c96627cc6a47d4cb70cf75d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-newcurriculum-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007新课标理(海南,宁夏).pdf",
       "regions": [],
       "source_id": "src-5dc5c9bec6c6051d3acc66f94267f607cd63620bf7790708b41fd125f9e807f5",

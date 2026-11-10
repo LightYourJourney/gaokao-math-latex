@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 新课标理科（phase5-b11）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 新课标理科（24 题，`gk-2007-newcurriculum-science`）`phase5-b11` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7822，attempt `f0db22d3-7d98-43ae-a205-34efb97df995`；四版 7/35/9/28 页共 79 页，0 errors、0 overfull、0 missing characters，4 条 Underfull 已逐条豁免，八类视觉检查逐页 0 fail / 0 pending；报告 `reports/phase5-b11.md`。
+- 七幅 TikZ 图（Q3 四幅正弦简图、Q5 程序框图、Q8 三视图、Q17 塔高测量、Q18 三棱锥、Q20 正方形与不规则图形 M、Q22 圆与切线割线）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256。
+- 关键结论：选择 C D A D C C D B C D B B；填空 13=3、14=−1、15=1+2i、16=240；Q17 AB=s sinβ tanθ / sin(α+β)；Q18(2) √3/3；Q19 k<−√2/2 或 k>√2/2 且不存在共线的 k；Q20 EX=2500、0.9147；Q21 a=3/2 与单调区间、a>√2 且极值之和大于 ln(e/2)；Q22 90°；Q23 两圆与公共弦 x+y=0；Q24 x<−7 或 x>5/3、最小值 −9/2。
+- 图稿与版式修正：Q8 的 scope 位移误用 38cm/34cm 造成 674pt 超宽，改为 3.6cm 后归位；Q3 四图放大并省略与曲线重叠的内部零点刻度（保留端点、O、±1）；Q11 三张频数表合并为一张，消除跨页；Q17 河面改为水平灰带、C/D 与 B 分居两岸；Q22 按几何关系重算切点与中点。
+- 门禁全通过：`review_receipts check-all`（327 批次）、`provenance check-all`（481 卷）、`solution_sources check-all`、`validate-receipts`（481 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（481 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（新课标文科、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 广东理科（phase5-b10）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
