@@ -1,0 +1,44 @@
+% 2007 年山东卷理科第 20 题：甲、乙两船航行方位图。
+%   甲船沿正北方向由 A1 航行到 A2；乙船自 B1 沿固定方向航行到 B2。
+%   A1B1=20 海里，方向北偏西 105°；A2B2=10√2 海里，方向北偏西 120°。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007山东理.pdf
+% SHA-256：4388fb6a3d728a0f289c751eba4ea096b5b256ed446bbec3d60c3240f53d7864
+% 原页：2007山东理.pdf 第 2 页（A3 三栏）第 2 栏，书页码 398。
+% 重绘依据：按题意取 A1(0,0)、A2(0,2.26)，B1=3.2(-sin105°,cos105°)、
+%   B2=A2+1.6√2(-sin120°,cos120°)；图中标出 105°、120° 两个方位角。
+\begin{tikzpicture}[scale=1.0, semithick,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (A1) at (0,0);
+  \coordinate (A2) at (0,2.26);
+  \coordinate (B1) at (-3.09,-0.83);
+  \coordinate (B2) at (-1.96,1.13);
+
+  % 正北方向线
+  \draw[->] (0,-1.05) -- (0,3.05) node[anchor=south] {北};
+
+  % 两船航线
+  \draw (A1) -- (B1);
+  \draw (A2) -- (B2);
+  \draw (B1) -- (B2);
+  \draw (A1) -- (A2);
+
+  % 方位角弧线（以两船位置为圆心，自正北顺时针扫到航线方向）
+  \draw (A2) ++(90:1.05) arc[start angle=90, end angle=210, radius=1.05];
+  \node[font=\scriptsize] at (-0.52,2.72) {$120^\circ$};
+  \draw (A1) ++(90:0.62) arc[start angle=90, end angle=195, radius=0.62];
+  \node[font=\scriptsize] at (-0.72,0.42) {$105^\circ$};
+
+  % 点与标签
+  \fill (A1) circle (0.045);
+  \fill (A2) circle (0.045);
+  \fill (B1) circle (0.045);
+  \fill (B2) circle (0.045);
+  \node[right] at (A1) {$A_1$};
+  \node[right] at (A2) {$A_2$};
+  \node[below left] at (B1) {$B_1$};
+  \node[above left] at (B2) {$B_2$};
+
+  % 甲、乙标注
+  \node[right] at (0.10,-0.62) {甲};
+  \node[left]  at (-2.55,-1.02) {乙};
+\end{tikzpicture}

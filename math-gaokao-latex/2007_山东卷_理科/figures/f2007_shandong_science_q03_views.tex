@@ -1,0 +1,79 @@
+% 2007 年山东卷理科第 3 题：四个几何体的直观图，自左至右为
+%   ①正方体 ②圆锥 ③三棱台 ④正四棱锥，题问“各自的三视图中仅有两个相同”的是哪几个。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007山东理.pdf
+% SHA-256：4388fb6a3d728a0f289c751eba4ea096b5b256ed446bbec3d60c3240f53d7864
+% 原页：2007山东理.pdf 第 1 页（A3 三栏）第 1 栏，书页码 397，图在第 3 题题干下方。
+% 重绘依据：按原页四个立体图形的位置与比例重绘，正方体、棱台、棱锥用斜投影，
+%   圆锥底面用椭圆；被遮棱画虚线。下方标注①②③④及几何体名称。
+\begin{tikzpicture}[scale=0.92, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % ① 正方体
+  \begin{scope}[shift={(0,0)}]
+    \coordinate (A) at (0,0.35);
+    \coordinate (B) at (1.25,0.35);
+    \coordinate (C) at (1.25,1.60);
+    \coordinate (D) at (0,1.60);
+    \coordinate (A2) at (0.40,0.75);
+    \coordinate (B2) at (1.65,0.75);
+    \coordinate (C2) at (1.65,2.00);
+    \coordinate (D2) at (0.40,2.00);
+    \draw[dashed] (A2) -- (A);
+    \draw[dashed] (A2) -- (B2);
+    \draw[dashed] (A2) -- (D2);
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw (A) -- (A2) -- (D2) -- (D);
+    \draw (D2) -- (C2) -- (B2);
+    \draw (C2) -- (C);
+    \draw (B2) -- (B);
+    \node[below] at (0.82,-0.12) {① 正方体};
+  \end{scope}
+
+  % ② 圆锥
+  \begin{scope}[shift={(3.3,0.35)}]
+    \draw (0,0) ellipse (0.78 and 0.22);
+    \draw[dashed] (-0.78,0) arc (180:360:0.78 and 0.22);
+    \draw (-0.78,0) -- (0,1.75) -- (0.78,0);
+    \draw[dashed] (0,0) -- (0,1.75);
+    \fill (0,0) circle (0.02);
+    \node[below] at (0.02,-0.40) {② 圆锥};
+  \end{scope}
+
+  % ③ 三棱台
+  \begin{scope}[shift={(6.3,0.0)}]
+    \coordinate (P) at (0,0);
+    \coordinate (Q) at (1.60,0);
+    \coordinate (R) at (0.80,0.55);
+    \coordinate (P1) at (0.28,1.30);
+    \coordinate (Q1) at (1.28,1.30);
+    \coordinate (R1) at (0.78,1.64);
+    \draw[dashed] (P) -- (R);
+    \draw[dashed] (R) -- (Q);
+    \draw[dashed] (R) -- (R1);
+    \draw (P) -- (Q);
+    \draw (P) -- (P1);
+    \draw (Q) -- (Q1);
+    \draw (P1) -- (Q1) -- (R1) -- cycle;
+    \draw (P1) -- (R1);
+    \draw (Q1) -- (R1);
+    \node[below] at (0.80,-0.12) {③ 三棱台};
+  \end{scope}
+
+  % ④ 正四棱锥
+  \begin{scope}[shift={(9.6,0.0)}]
+    \coordinate (A) at (0,0.35);
+    \coordinate (B) at (1.35,0.35);
+    \coordinate (C) at (1.75,0.85);
+    \coordinate (D) at (0.40,0.85);
+    \coordinate (S) at (0.88,2.05);
+    \draw[dashed] (A) -- (D);
+    \draw[dashed] (D) -- (C);
+    \draw[dashed] (S) -- (D);
+    \draw (A) -- (B) -- (C);
+    \draw (S) -- (A);
+    \draw (S) -- (B);
+    \draw (S) -- (C);
+    \node[below] at (0.85,0.02) {④ 正四棱锥};
+  \end{scope}
+
+\end{tikzpicture}

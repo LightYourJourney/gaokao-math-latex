@@ -1,0 +1,47 @@
+% 2007 年山东卷理科第 8 题：50 名学生百米成绩的频率分布直方图。
+%   组距 1 秒，六组 [13,14)–[18,19)，纵轴“频率/组距”，柱高依次
+%   0.02、0.18、0.36、0.34、0.06、0.04（面积和 = 1，与原图虚线标注一致）。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007山东理.pdf
+% SHA-256：4388fb6a3d728a0f289c751eba4ea096b5b256ed446bbec3d60c3240f53d7864
+% 原页：2007山东理.pdf 第 1 页（A3 三栏）第 2 栏，书页码 397，图在第 8 题题干下方。
+% 重绘依据：横轴在 0 与 13 之间画省略折断线，柱宽 1；各柱顶向左引虚线到纵轴并标数值。
+\begin{tikzpicture}[scale=1.15, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % 坐标轴
+  \draw[->] (0,0) -- (7.75,0) node[anchor=west] {秒};
+  \draw[->] (0,0) -- (0,4.35) node[anchor=south]
+    {$\dfrac{\text{频率}}{\text{组距}}$};
+
+  % 折断线（0 与 13 之间）
+  \draw (0.30,0) -- (0.42,0.10) -- (0.54,0) -- (0.66,0.10) -- (0.78,0);
+  \node[below] at (0.08,-0.02) {$0$};
+
+  % 柱子：宽度 1，依次从 x=1 到 x=7
+  \draw (1,0) rectangle (2,0.20);
+  \draw (2,0) rectangle (3,1.80);
+  \draw (3,0) rectangle (4,3.60);
+  \draw (4,0) rectangle (5,3.40);
+  \draw (5,0) rectangle (6,0.60);
+  \draw (6,0) rectangle (7,0.40);
+
+  % 柱高虚线及数值（相邻数值一上一下错开，避免行距重叠）
+  \draw[dashed] (0.10,3.60) -- (3,3.60);
+  \node[above left, font=\scriptsize] at (0.06,3.60) {$0.36$};
+  \draw[dashed] (0.10,3.40) -- (4,3.40);
+  \node[below left, font=\scriptsize] at (0.06,3.40) {$0.34$};
+  \draw[dashed] (0.10,1.80) -- (2,1.80);
+  \node[left, font=\scriptsize] at (0.06,1.80) {$0.18$};
+  \draw[dashed] (0.10,0.60) -- (5,0.60);
+  \node[above left, font=\scriptsize] at (0.06,0.60) {$0.06$};
+  \draw[dashed] (0.10,0.40) -- (6,0.40);
+  \node[below left, font=\scriptsize] at (0.06,0.40) {$0.04$};
+  \draw[dashed] (0.10,0.20) -- (1,0.20);
+  \node[below left, font=\scriptsize] at (0.06,0.20) {$0.02$};
+
+  % 横轴刻度 13–19
+  \foreach \x/\lab in {1/13,2/14,3/15,4/16,5/17,6/18,7/19}{
+    \draw (\x,0.04) -- (\x,-0.04);
+    \node[below] at (\x,-0.06) {$\lab$};
+  }
+\end{tikzpicture}

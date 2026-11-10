@@ -15508,3 +15508,15 @@
 - 正式构建 attempt `d51e753b-f41b-45a0-add3-a46b4466779b`：四版 5/25/7/18 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b06.md`。
 - 门禁全通过：`review_receipts check-all`（322 批次）、`provenance check-all`（476 卷）、`solution_sources check-all`、`validate-receipts`（476 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（476 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b07：2007 山东理科正式封账
+
+- 固定来源 `src-d43bf248683b681c3c19c3fea57269beff21bf43e07e70e2270e8c3f06da6979`（2 页 A3，印刷页 397–398，SHA-256 `4388fb6a…53d7864`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 五幅 TikZ 矢量图：Q3 四个几何体（正方体/圆锥/三棱台/正四棱锥）、Q8 频率分布直方图（0.02/0.18/0.36/0.34/0.06/0.04，面积和 1）、Q10 程序框图、Q19 直四棱柱、Q20 两船方位图；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 22 题：选择 D B D A A B C A D D C B；填空 13=√21 p/2、14=4√2、15=(x−2)²+(y−2)²=2、16=8；Q17 aₙ=3⁻ⁿ、Sₙ=(3+(2n−1)3ⁿ⁺¹)/4；Q18 19/36、Eξ=1、7/11；Q19(2) 二面角余弦 √3/3；Q20 30√2 海里/时；Q21 椭圆 x²/4+y²/3=1、定点 (2/7,0)；Q22 按 b 四段讨论极值点并以 g(x)=ln(1+x)−x²+x³ 证不等式。
+- 源缺陷照录并登记：`ISSUE-1458` 第 9 题①印作 $m<2$（按判别式应为 $m<-2$，漏负号，non_blocking），按选项设置与①的本意取 D，源疑点写进解析内，交付源无尾附录。
+- 首轮正式构建后逐页审查发现并修正三处版式问题：Q8 曾被分页拆开（选项 D 落到第 3 页），改用 `<!-- question-needspace: 0.5 -->` 并把直方图缩到 scale 1.15，整题回到试题版第 2 页；Q19 棱柱图放大到 1.35 并移动 A、B 标签避开棱线；Q17 判断要点中的行内分式跨行越出左版心，改为 $(3+1\cdot9)\div4=3$ 后消失。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-regular-shandong-science` / `phase5-b07`，live revision 7773；check-batch 通过。
+- 正式构建 attempt `d3183365-a84f-47fd-b2c4-85aa91ad9b1d`：四版 6/32/8/26 页，共 72 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：72 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；解析版第 8 题题干与直方图跨第 12/13 页，已按「同一题内图文换页」登记说明；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b07.md`。
+- 门禁全通过：`review_receipts check-all`（323 批次）、`provenance check-all`（477 卷）、`solution_sources check-all`、`validate-receipts`（477 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（477 套）、`manifest_csv`（775 行）。

@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 山东理科（phase5-b07）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 山东理科（22 题，`gk-2007-regular-shandong-science`）`phase5-b07` FINALIZED / `closed`，卷 `eligible_complete`，manifest live revision 7773，attempt `d3183365-a84f-47fd-b2c4-85aa91ad9b1d`；四版 6/32/8/26 页共 72 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b07.md`。
+- 五幅 TikZ 图（Q3 四个几何体、Q8 频率分布直方图、Q10 程序框图、Q19 直四棱柱、Q20 两船方位图）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256。
+- 关键结论：选择 D B D A A B C A D D C B；填空 13=√21 p/2、14=4√2、15=(x−2)²+(y−2)²=2、16=8；Q17 aₙ=3⁻ⁿ、Sₙ=(3+(2n−1)3ⁿ⁺¹)/4；Q18 19/36、Eξ=1、7/11；Q19(2) √3/3；Q20 30√2 海里/时；Q21 x²/4+y²/3=1、定点 (2/7,0)；Q22 按 b 四段讨论极值点。
+- 版式修正：Q8 用 `question-needspace: 0.5` + 直方图 scale 1.15 回到试题版第 2 页；Q19 图放大到 1.35 并移动 A/B 标签；Q17 判断要点的行内分式改为 `(3+1·9)÷4=3`。
+- 源缺陷照录并登记：`ISSUE-1458`（Q9① 印作 m<2，应为 m<−2，non_blocking），按选项设置取 D。
+- 门禁全通过：`review_receipts check-all`（323 批次）、`provenance check-all`（477 卷）、`solution_sources check-all`、`validate-receipts`（477 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（477 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（山东文、广东文理、新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 安徽文科（phase5-b06）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
