@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 四川理科（phase5-b04）封账，卷 blocked
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 四川理科（22 题，`gk-2007-regular-sichuan-science`）`phase5-b04` FINALIZED / `closed_with_blockers`，卷 `eligible_blocked`，manifest revision 7741，attempt `daf060bf-9bcb-42fe-a78a-0ef096602e5e`；四版 7/30/9/22 页共 68 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b04.md`。
+- 六幅 TikZ 图（Q2 四选项、Q4 正方体、Q6 球面、Q11 三平行线、Q14 正三棱柱、Q19 直角梯形）均登记 `expected_occurrences=2`，头注写明真实来源路径与 SHA-256。
+- 阻断项 `ISSUE-1450`：第 11 题四选项无一与独立推导 `2√21/3≈3.055` 相符（(C)≈0.089、(D)≈−0.861 为负或近零，(D) 疑漏根号），速查表记 `U`、不代选；另有「仅凭文字条件不唯一（同侧时 s=2），必须依赖原图」的第二层缺陷，已写入解析内 `【源疑点：…】`。非阻断项 `ISSUE-1449`（Q1 (B)(D) 均印作 1）、`ISSUE-1451`（Q12 (D) 印作 5/25 未约分）按原页照录。
+- 其他裁定：Q13 参数为 $u$ 不是 $a$；Q22(3) 题设已限定 $n>1$，故在 $n\ge2$ 上 $a=2$ 存在且唯一，$n=1$ 边界仅在括注说明。
+- 门禁全通过：`validate-receipts`、`provenance check-batch`、`solution_sources check-batch`、`report render/check --all`、`generate_projects --all --check`（474 套）、`make_short_answers --all --check`（474 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记：Q12 选项冲突、Q17 疑字、Q19 条件不足（有反例）、Q21 缺等号，均不得据常见题意修补。
+- 下一步：继续 2007 年其余 ready 来源（2006 尚有 15 套、2003 六套、2000 六套等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 天津文/理（phase5-b02、b03）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

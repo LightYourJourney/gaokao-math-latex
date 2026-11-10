@@ -24344,3 +24344,57 @@
   "type": "answer-conflict"
 }
 ```
+
+## ISSUE-1449
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "duplicate-option-bd",
+  "current_evidence": "固定源 PDF（SHA-256 6f3287a6…1395cc2d，印刷页 409）第 1 题选项 (B) 与 (D) 均印作 1，300 dpi 与 300% 局部放大两次核对均为同一字符，非渲染伪影。(1+i)/(1−i)+i³=0，答案取 (A)，两项重复不影响判分，但原页确实自相重复。",
+  "fingerprint": "5304f73fe9856343a7faec2fac18e3953c0c24853688b7cb1133c47e547ed127",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-sichuan-science",
+  "question_id": "gk-2007-regular-sichuan-science-q01",
+  "resume_action": "取得同版答案、勘误或更清晰的同期印刷件确认 (B)、(D) 中哪一项为原意干扰项；在此之前按原页照录两项同为 1，不擅自改选项，答案仍取 (A)。",
+  "source_id": "src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1450
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "no-valid-option",
+  "current_evidence": "固定源 PDF（印刷页 409）第 11 题四个选项按印面为 2√3≈3.464、4√6/3≈3.266、(3−√7)/4≈0.089、(2−√21)/3≈−0.861；按 l1–l2 距离 1、l2–l3 距离 2 且正三角形三顶点分居三线，独立推导（代数解与投影恒等式两条路径）得边长 2√21/3≈3.055，四个印刷选项无一吻合；(D) 与正解同分子 √21、同分母 3，仅差根号，疑为误印。",
+  "fingerprint": "676c4034ba9b1f4518fc43b4ddd2477cfde58db21dbbd9fe1b045df4bf5f0509",
+  "impact": "blocks_completion",
+  "paper_id": "gk-2007-regular-sichuan-science",
+  "question_id": "gk-2007-regular-sichuan-science-q11",
+  "resume_action": "取得同版答案、解析或勘误确认 (D) 是否应为 2√21/3；在此之前保留原页四个选项与独立推导结论，不擅自把 (D) 改成正解，也不把该题标作已完成。",
+  "source_id": "src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049",
+  "status": "open",
+  "type": "answer-conflict"
+}
+```
+
+## ISSUE-1451
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "unreduced-option-d",
+  "current_evidence": "固定源 PDF（印刷页 409）第 12 题选项 (A) 1/12、(B) 7/60、(C) 6/25、(D) 5/25；300 dpi 局部放大两次核对 (D) 的分子确为 5、分母确为 25（未约分）。独立推导正解为 7/60，即 (B)，(D) 是否原意如此不影响答案。",
+  "fingerprint": "f880eceb79f28e8f31f307c837aaa64e26feeda116576deca14d12305d3989d9",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-sichuan-science",
+  "question_id": "gk-2007-regular-sichuan-science-q12",
+  "resume_action": "取得同版材料确认 (D) 是否本应印作 5/25；在此之前按印面照录，不代为约分，也不改选项。",
+  "source_id": "src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

@@ -15474,3 +15474,14 @@
 - 首轮正式构建（attempt `d228b1ad-…-626a20fc74b2`）发现解析版 Q4 公式行超版心 **100.44pt**，属真实缺陷、不可豁免；改为 `aligned` 三行后重建（attempt `0e644cd1-c933-4206-b40c-bb941eb8060e`），该警告消失，仅剩 Q21 求导行 5.77pt 一条。
 - 正式构建四版 5/26/7/20 页共 58 页，全页八类视觉检查逐页完成（0 fail、0 pending）；解析版 1 条 Overfull（5.77pt，answers.tex:810，物理页 23）经全页查看后按既有 ≤10pt 口径逐项豁免。
 - 封账：`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b03.md`；`report.py render/check --all`、`generate_projects --all --check`、`make_short_answers --all --check`、`manifest_csv` 775 行均已刷新校验。
+
+### 2026-11-10 phase5-b04：2007 四川理科正式封账（blocked）
+
+- 固定来源 `src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049`（2 页 A3，印刷页 409–410），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 六幅 TikZ 矢量图：Q2 四选项坐标图（2×2）、Q4 正方体、Q6 球面、Q11 三平行线（间距 1:2）、Q14 正三棱柱、Q19 直角梯形 PCBM；图稿登记 expected_occurrences=2，头注写明真实来源路径与 SHA-256。
+- 三套独立结论一致：选择 A C D D A C A C B B【Q11 无正确选项】B；填空 13=1、14=π/6、15=x=3/2、16=①④；Q17 tan2α=−8√3/47、β=π/3；Q18 0.9984、Eξ=3/10、拒收 27/95；Q19 面面垂直、arctan(2√3/3)≈49.1°、√3/12；Q20 max 1 / min −2、k∈(−2,−√3/2)∪(√3/2,2)；Q21 x_{n+1}=(x_n²+4)/(2x_n)、x_n=2(3^{2^{n−1}}+1)/(3^{2^{n−1}}−1)；Q22 20/n³。Q22(3) 因题设已限定 n>1，在 n≥2 上 a=2 存在且唯一，n=1 边界以括注说明。
+- 源缺陷照录并登记：`ISSUE-1449` 第 1 题 (B)(D) 均印作 1（non_blocking）；`ISSUE-1450` 第 11 题四选项无一与正解 2√21/3 相符（blocks_completion，速查表记 U）；`ISSUE-1451` 第 12 题 (D) 印作 5/25 未约分（non_blocking）。第 11 题另有「仅凭文字条件不唯一、必须依赖原图」的第二层缺陷，已写入解析。
+- Provenance：三角色 66 条记录导入，manifest 登记 `gk-2007-regular-sichuan-science` / `phase5-b04`，live revision 7741；check-batch 通过。
+- 正式构建 attempt `daf060bf-9bcb-42fe-a78a-0ef096602e5e`：四版 7/30/9/22 页，共 68 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：68 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页逐幅核对标签与虚实线，`finalize-batch` 返回 FINALIZED，批次 `closed_with_blockers`、卷 `eligible_blocked`，报告 `reports/phase5-b04.md`。
+- 门禁全通过：`validate-receipts`、`provenance check-batch`、`solution_sources check-batch`、`report render/check --all`、`generate_projects --all --check`（474 套）、`make_short_answers --all --check`（474 套）、`manifest_csv`（775 行）。

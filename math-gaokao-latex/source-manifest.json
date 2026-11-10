@@ -2708,6 +2708,14 @@
         "gk-2007-regular-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-regular-sichuan-science"
+      ],
+      "status": "closed_with_blockers"
     }
   ],
   "inventory": {
@@ -2717,7 +2725,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "6d28117d-5f24-4e95-b17c-e426c51ba69d",
+  "last_transaction_id": "c5f1e58b-7162-45b6-882b-269c71d54302",
   "papers": [
     {
       "blocked_from": null,
@@ -34175,9 +34183,90 @@
       "title": "2007 年·普通高等学校招生考试·天津卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": "planned",
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q02_options.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q04_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q06_sphere.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q11_parallel.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q14_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_四川卷_理科/figures/f2007_sichuan_science_q19_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_sichuan_science",
+        "id": "gk-2007-regular-sichuan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 409、410；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方），并经两套独立解答交叉复核。第 1 题 (B)(D) 均印作 1、第 11 题四选项无一正确、第 12 题 (D) 印作 5/25 未约分，均照原页保留并登记问题。第 2 题四选项图、第 4 题正方体、第 6 题球面、第 11 题三平行线、第 14 题正三棱柱、第 19 题空间梯形由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理科"
+      },
+      "issue_ids": [
+        "ISSUE-1449",
+        "ISSUE-1450",
+        "ISSUE-1451"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-sichuan-science",
+      "production_state": "blocked",
+      "project_dir": "2007_四川卷_理科",
+      "question_count": 22,
+      "resume_action": "取得同版答案、解析或勘误确认 (D) 是否应为 2√21/3；在此之前保留原页四个选项与独立推导结论，不擅自把 (D) 改成正解，也不把该题标作已完成。",
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_四川理_含解析.md",
+        "questions": "2007/2007_数学真题_四川理_试题.md",
+        "solution_body": "2007/2007_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049"
+      ],
+      "title": "2007 年·普通高等学校招生考试·四川卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7736,
+  "revision": 7744,
   "schema_version": 1,
   "sources": [
     {
@@ -42310,8 +42399,8 @@
       "exam_type": "regular",
       "git_blob_oid": "29ae2195b818f4944e916d552681a72a6bb699d8",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-regular-sichuan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007四川理.pdf",
       "regions": [],
       "source_id": "src-7f0853b7bdbe811e775df7c347bf09950fb6409f271efff9afb08e8360cd9049",
