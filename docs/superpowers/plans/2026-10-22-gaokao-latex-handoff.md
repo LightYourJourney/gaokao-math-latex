@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 山东文科（phase5-b08）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 山东文科（22 题，`gk-2007-regular-shandong-arts`）`phase5-b08` FINALIZED / `closed`，卷 `eligible_complete`，manifest live revision 7778，attempt `44cf07ad-161e-41eb-ad62-27e8a6dd41dc`；四版 5/24/7/18 页共 54 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b08.md`。
+- 四幅 TikZ 图（Q3 四个几何体、Q8 频率分布直方图、Q10 程序框图、Q20 直四棱柱）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256；Q3/Q8/Q10 复用理科版结构、Q20 按文卷条件独立重绘。
+- 关键结论：选择 B B D A C B C A B A B D；填空 13=1/2007、14=4、15=m≤−5、16=(x−2)²+(y−2)²=2；Q17 cosC=1/8、c=6；Q18 aₙ=2ⁿ⁻¹、Tₙ=(3/2)n(n+1)ln2；Q19 甲 100 分钟、乙 200 分钟、最大收益 70 万元；Q20(2) E 为 DC 中点；Q21 ab>0 无极值、ab<0 唯一极值；Q22 x²/4+y²/3=1、定点 (2/7,0)。
+- 分页说明：解析版第 8 题题干+直方图在第 11 页、选项在第 12 页页首；简答版答案速查区分组换页（第 6 页选择/填空、第 7 页解答题）；均按模板正常换页登记。
+- 门禁全通过：`review_receipts check-all`（324 批次）、`provenance check-all`（478 卷）、`solution_sources check-all`、`validate-receipts`（478 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（478 套）、`manifest_csv`（775 行）。
+- 下一步：继续 2007 年其余 ready 来源（广东文理、新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 山东理科（phase5-b07）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

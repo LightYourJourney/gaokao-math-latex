@@ -15520,3 +15520,14 @@
 - 正式构建 attempt `d3183365-a84f-47fd-b2c4-85aa91ad9b1d`：四版 6/32/8/26 页，共 72 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：72 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；解析版第 8 题题干与直方图跨第 12/13 页，已按「同一题内图文换页」登记说明；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b07.md`。
 - 门禁全通过：`review_receipts check-all`（323 批次）、`provenance check-all`（477 卷）、`solution_sources check-all`、`validate-receipts`（477 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（477 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b08：2007 山东文科正式封账
+
+- 固定来源 `src-cdc927477b648798b8b6143e171687ce6d92a933961a29d7e5dbbdafba0264ee`（2 页 A3，印刷页 399–400，SHA-256 `64b760b7…fdebaf4af3`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 四幅 TikZ 矢量图：Q3 四个几何体、Q8 频率分布直方图（0.02/0.18/0.36/0.34/0.06/0.04，面积和 1）、Q10 程序框图、Q20 直四棱柱；其中 Q3/Q8/Q10 复用理科版图形结构并按文卷重绘，Q20 为文卷独立重绘；头注写明来源路径、SHA-256 与重绘依据，expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 B B D A C B C A B A B D；填空 13=1/2007、14=4、15=m≤−5、16=(x−2)²+(y−2)²=2；Q17 cosC=1/8、c=6；Q18 aₙ=2ⁿ⁻¹、Tₙ=(3/2)n(n+1)ln2；Q19 甲 100 分钟、乙 200 分钟、最大收益 70 万元；Q20(2) E 为 DC 中点；Q21 ab>0 无极值、ab<0 唯一极值 −b/2+(b/2)ln(−b/(2a))；Q22 椭圆 x²/4+y²/3=1、定点 (2/7,0)。
+- 无源缺陷需登记（原页题面完整可读），交付源无尾附录；与理卷共享的 Q22 定点结论、Q3 判定与 Q10 循环结论均已交叉复核。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-regular-shandong-arts` / `phase5-b08`，live revision 7778；check-batch 通过。
+- 正式构建 attempt `44cf07ad-161e-41eb-ad62-27e8a6dd41dc`：四版 5/24/7/18 页，共 54 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：54 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚实线与刻度；解析版第 8 题题干与直方图在第 11 页、四个选项在第 12 页页首（同一题内正常换页），简答版答案速查区按「选择/填空」与「解答题」分组换页，均已逐页登记说明；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b08.md`。
+- 门禁全通过：`review_receipts check-all`（324 批次）、`provenance check-all`（478 卷）、`solution_sources check-all`、`validate-receipts`（478 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（478 套）、`manifest_csv`（775 行）。
