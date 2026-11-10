@@ -1,0 +1,52 @@
+% 2007 年广东卷理科第 4 题：四个 s-t 图象选项（A）—（D）。
+%   客车：0—1 h 以 60 km/h 行驶（s: 0→60），1—1.5 h 停留（s=60），
+%   1.5—2.5 h 以 80 km/h 行驶（s: 60→140）。
+%   （A）第二段升到 160；（C）无停留段；（D）第二段斜率偏小、约 2.75 h 才到 140；
+%   （B）三段折线与解析式一致。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东理.pdf
+% SHA-256：655db04340f14b909d7f248531436d45dd8cbd71e69aca976c3bd2d1e568ceed
+% 原页：2007广东理.pdf 第 1 页（A3 三栏）第 1 栏，书页码 371，图在第 4 题题干下方。
+% 重绘依据：按原页四个小图的折线顶点逐个比对；网格 0.25 h × 20 km，
+%   横轴 0—3 h、纵轴 0—160 km，各图第二段斜率差异按原图保留。
+\begin{tikzpicture}[x=0.95cm, y=0.024cm, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % ---------------- 单个小图的公共网格 ----------------
+  \newcommand{\stgrid}{%
+    \foreach \gx in {0.25,0.5,...,3.0} {\draw[gray!45,very thin] (\gx,0) -- (\gx,160);}%
+    \foreach \gy in {20,40,...,160} {\draw[gray!45,very thin] (0,\gy) -- (3.05,\gy);}%
+    \draw[->,>=stealth] (0,0) -- (3.55,0) node[below right=1pt] {$t$ (h)};%
+    \draw[->,>=stealth] (0,0) -- (0,178) node[left] {$s$ (km)};%
+    \foreach \tx in {1,2,3} {\node[below] at (\tx,0) {$\tx$};}%
+    \foreach \ty in {60,80,100,120,140,160} {\node[left] at (0,\ty) {$\ty$};}%
+    \node[below left] at (0,0) {$O$};%
+  }
+
+  % ---------------- （A） ----------------
+  \begin{scope}[shift={(0cm,0cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.5,60) -- (2.5,160);
+    \node at (1.7,-32) {（A）};
+  \end{scope}
+
+  % ---------------- （B） ----------------
+  \begin{scope}[shift={(5.4cm,0cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.5,60) -- (2.5,140);
+    \node at (1.7,-32) {（B）};
+  \end{scope}
+
+  % ---------------- （C） ----------------
+  \begin{scope}[shift={(0cm,-5.8cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (2.5,140);
+    \node at (1.7,-32) {（C）};
+  \end{scope}
+
+  % ---------------- （D） ----------------
+  \begin{scope}[shift={(5.4cm,-5.8cm)}]
+    \stgrid
+    \draw[line width=1.1pt] (0,0) -- (1,60) -- (1.5,60) -- (2.75,140);
+    \node at (1.7,-32) {（D）};
+  \end{scope}
+\end{tikzpicture}

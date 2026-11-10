@@ -1,0 +1,39 @@
+% 2007 年广东卷理科第 15 题：圆 O、切线 l、垂线 AD，AD 与圆交于 E。
+%   直径 AB=6（半径 3），BC=3 给出圆心角 ∠BOC=60°，
+%   C=(1.5,2.598)，过 C 的切线垂直于 OC，A 到切线的垂足 D=(-0.75,3.897)，
+%   AD 与圆的另一个交点 E=(-1.5,2.598)。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东理.pdf
+% SHA-256：655db04340f14b909d7f248531436d45dd8cbd71e69aca976c3bd2d1e568ceed
+% 原页：2007广东理.pdf 第 1 页（A3 三栏）第 3 栏，书页码 371。
+% 重绘依据：按题设几何关系计算坐标后重绘；直角标记在 D 处，AB 直径水平。
+\begin{tikzpicture}[scale=0.95, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-3,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (1.5,2.598);
+  \coordinate (D) at (-0.75,3.897);
+  \coordinate (E) at (-1.5,2.598);
+
+  \draw[thick] (O) circle (3);
+  \fill (O) circle (1.2pt);
+  % 直径 AB、弦 AC、A 到切线的垂线 AD（经过 E）
+  \draw (A) -- (B);
+  \draw (A) -- (C);
+  \draw (A) -- (D);
+  % 过 C 的切线 l（沿 D→C 方向并向右下延长）
+  \draw (D) -- (C) -- (3.55,1.32);
+  % 直角标记（AD ⊥ l）
+  \coordinate (P1) at ($(D)!0.22cm!(C)$);
+  \coordinate (P2) at ($(D)!0.22cm!(A)$);
+  \draw (P1) -- ($(P1)+(P2)-(D)$) -- (P2);
+
+  \node[left]  at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[above right] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[below] at (O) {$O$};
+  \node[left] at (E) {$E$};
+  \node[right] at (3.55,1.32) {$l$};
+\end{tikzpicture}

@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 广东理科（phase5-b10）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 广东理科（21 题，`gk-2007-regular-guangdong-science`）`phase5-b10` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7804，attempt `cf4f56a7-dcf6-42c1-a996-9a286fb84706`；四版 7/33/9/25 页共 74 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b10.md`。
+- 七幅 TikZ 图（Q4 四联 s–t 图、Q6 条形统计图与算法流程图、Q7 环形分布图、Q12 五棱锥示意、Q15 圆与切线、Q19 折起四棱锥）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256。
+- 关键结论：选择 C A D B B C B A；填空 9=1/9、10=1/2、11 x=−5/4、12 直线 n(n+1)/2、f(4)=12、f(n)=n(n−1)(n−2)/2、13 (0,2) 与 2√2、14 6 与 [−1,1]、15 30° 与 3；Q16 sinA=2√5/5、c>25/3；Q17 ŷ=0.7x+0.35、降低 19.65 吨；Q18 (x+2)²+(y−2)²=8、Q(4/5,12/5)；Q19 V=3√6x−x³/(6√6)、x=6 时 Vmax=12√6、cos=1/7；Q20 a≤−(3+√7)/2 或 a≥1；Q21 α=(√5−1)/2、β=−(√5+1)/2、Sₙ=2(2ⁿ−1)ln((3+√5)/2)。
+- 图稿与版式修正：Q4 (D) 经像素比对确认第二段约 2.75 h 到 140，答案 B；四联图缩小并收紧行距，印刷版第 1 页题干与四图不再分页；Q6 流程图重画返回路径，消除“否”分支压输出框；Q12 隐藏顶点 E 重排并放大；Q15 直角标记改用单位向量作正方形；Q19 D 标签上移。印刷版第 6 题图 1 与图 2 分居第 9/10 页，已按“双图题块成组换页”登记。
+- 门禁全通过：`review_receipts check-all`（326 批次）、`provenance check-all`（480 卷）、`solution_sources check-all`、`validate-receipts`（480 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（480 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 广东文科（phase5-b09）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

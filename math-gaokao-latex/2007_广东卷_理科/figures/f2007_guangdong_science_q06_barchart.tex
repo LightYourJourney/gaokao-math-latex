@@ -1,0 +1,37 @@
+% 2007 年广东卷理科第 6 题：图 1 身高条形统计图。
+%   十组 [145,150)—[190,195)，人数依次 A1—A10 =
+%   100、200、320、450、550、500、360、220、80、40（按原页柱高读取）。
+%   原点处纵轴刻度由 0 折断到 50，图下 0 为人数原点，横轴标签为各柱左右分界。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东理.pdf
+% SHA-256：655db04340f14b909d7f248531436d45dd8cbd71e69aca976c3bd2d1e568ceed
+% 原页：2007广东理.pdf 第 1 页（A3 三栏）第 2 栏，书页码 371。
+% 重绘依据：横轴每格 5 cm、纵轴每格 50 人；0 与 50 之间按原图加折断线。
+\begin{tikzpicture}[x=0.75cm, y=0.0085cm, semithick,
+  every node/.style={inner sep=1.5pt, font=\small}]
+
+  % 纵轴网格与刻度
+  \foreach \gy in {50,100,...,600} {
+    \draw[gray!45, very thin] (0,\gy) -- (11,\gy);
+    \node[left] at (0,\gy) {\gy};
+  }
+  \draw[->,>=stealth] (0,0) -- (11.9,0) node[right] {身高/cm};
+  \draw[->,>=stealth] (0,0) -- (0,660) node[above] {人数/人};
+
+  % 原点折断线（0 与 50 之间）
+  \draw (0,0) -- (0,20);
+  \draw[white, line width=3pt] (-0.18,32) -- (0.18,32);
+  \draw (-0.22,42) -- (0,32) -- (0.22,42);
+
+  % 十根柱子：第 i 根覆盖 [145+5(i-1), 145+5i)
+  \foreach \i/\h in {1/100,2/200,3/320,4/450,5/550,6/500,7/360,8/220,9/80,10/40} {
+    \draw (\i,0) rectangle (\i+1,\h);
+  }
+
+  % 横轴标签：0 为原点，145—195 为各柱分界
+  \node[below] at (0,0) {$0$};
+  \foreach \i in {1,...,11} {
+    \node[below] at (\i,0) {$\the\numexpr 140+5*\i\relax$};
+  }
+
+  \node at (5.5,-105) {图 1};
+\end{tikzpicture}

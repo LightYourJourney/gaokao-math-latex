@@ -1,0 +1,44 @@
+% 2007 年广东卷理科第 19 题：等腰三角形沿 EF 折起后的四棱锥 P-ACFE。
+%   底面三角形 ABC 中 D 为 AB 中点，CD=3，AB=6√6；
+%   E 在 DB 上，F 在 BC 上，EF∥CD；△BEF 沿 EF 折起，B 的对应点为 P，
+%   P 在 E 正上方；虚线为被遮挡的底边 AE 与底面内的高 CD。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007广东理.pdf
+% SHA-256：655db04340f14b909d7f248531436d45dd8cbd71e69aca976c3bd2d1e568ceed
+% 原页：2007广东理.pdf 第 2 页（A3 三栏）第 2 栏，书页码 372。
+% 重绘依据：按原页折起后的投影关系重绘，保持 A、C、B、D、E、F、P 的相对位置。
+\begin{tikzpicture}[scale=0.95, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  \coordinate (A) at (-4.0,0);
+  \coordinate (B) at (4.0,0);
+  \coordinate (C) at (0,-2.6);
+  \coordinate (D) at (0,0);
+  \coordinate (E) at (1.8,0);
+  \coordinate (F) at (1.8,-1.43);
+  \coordinate (P) at (1.8,3.0);
+
+  % 原三角形 ABC 的底边与边
+  \draw[dashed] (A) -- (E);
+  \draw (E) -- (B);
+  \draw (A) -- (C);
+  \draw (C) -- (B);
+
+  % 底面内的高 CD（被遮挡）
+  \draw[dashed] (C) -- (D);
+
+  % 折痕与四棱锥的侧棱
+  \draw (E) -- (F);
+  \draw (P) -- (A);
+  \draw (P) -- (C);
+  \draw (P) -- (F);
+  \draw (P) -- (E);
+
+  % 标注
+  \node[left]  at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[above=1pt] at (D) {$D$};
+  \node[right] at (E) {$E$};
+  \node[below right] at (F) {$F$};
+  \node[above] at (P) {$P$};
+\end{tikzpicture}

@@ -15544,3 +15544,15 @@
 - 正式构建 attempt `fc995812-f170-4a9c-88e2-c8b2f5e290ec`：四版 7/26/9/23 页，共 65 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：65 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对刻度、标签与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b09.md`。
 - 门禁全通过：`review_receipts check-all`（325 批次）、`provenance check-all`（479 卷）、`solution_sources check-all`、`validate-receipts`（479 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（479 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b10：2007 广东理科正式封账
+
+- 固定来源 `src-b36c4bd60981bf6d4b50d68db5c92541008af141fdbf9709f0b66e9e6e52cbde`（2 页 A3，印刷页 371–372，SHA-256 `655db043…e568ceed`），21 题：选 8、填 7、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 七幅 TikZ 矢量图：Q4 客车 s–t 四联图（A）—（D）、Q6 图 1 身高条形统计图与图 2 算法流程图、Q7 维修点环形分布图、Q12 棱锥示意图（五棱锥）、Q15 圆与切线图（含 E 点）、Q19 折起四棱锥图；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 21 题：选择 C A D B B C B A；填空 9=1/9、10=1/2、11 x=−5/4、12 直线 n(n+1)/2、f(4)=12、f(n)=n(n−1)(n−2)/2、13 圆心 (0,2) 且距离 2√2、14 f(−2)=6 且 x∈[−1,1]、15 ∠DAC=30° 且 AE=3；Q16 sinA=2√5/5、c>25/3；Q17 ŷ=0.7x+0.35、降低 19.65 吨；Q18 (x+2)²+(y−2)²=8、Q(4/5,12/5)；Q19 V(x)=3√6x−x³/(6√6)、x=6 时 Vmax=12√6、cos=1/7；Q20 a≤−(3+√7)/2 或 a≥1；Q21 α=(√5−1)/2、β=−(√5+1)/2、Sₙ=2(2ⁿ−1)ln((3+√5)/2)。
+- 裁定与图稿修正：Q4 的 (D) 第二段斜率偏小、约 2.75 h 到 140（像素比对确认），答案取 B；四联图整体缩到 y=0.024、行距 5.8 cm，使印刷版第 1 页题干与四图不再分页；Q6 流程图重画返回路径（i=i+1 经上方水平线接回判断框上方），消除“否”分支压输出框；Q12 五棱锥重排隐藏顶点 E 并放大；Q15 直角标记改为沿 DC、DA 的单位向量作正方形；Q19 D 标签上移。
+- 版式说明：印刷版第 6 题题干与图 1 在第 9 页、图 2 与选项在第 10 页页首（双图题块成组换页）；试题版第 1–4 页选择题按“题干与图不拆”成组排布，留白已逐页登记。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-regular-guangdong-science` / `phase5-b10`，live revision 7804；check-batch 通过。
+- 正式构建 attempt `cf4f56a7-dcf6-42c1-a996-9a286fb84706`：四版 7/33/9/25 页，共 74 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：74 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签、虚线、刻度与分支方向；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b10.md`。
+- 门禁全通过：`review_receipts check-all`（326 批次）、`provenance check-all`（480 卷）、`solution_sources check-all`、`validate-receipts`（480 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（480 套）、`manifest_csv`（775 行）。
