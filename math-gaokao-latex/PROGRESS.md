@@ -15456,3 +15456,12 @@
 - 正式attempt `91828da8-7c50-474a-832e-e78cc5c677f8`：四版4/15/6/13页，共38页；实际逐页视觉审查完成，Q11标签与Q21答案孤页已修复。
 - finalize返回FINALIZED/closed，revision7719；当前输入回执验证OK，0 stale/invalid/missing/pending，CSV已刷新775行。
 - 全量报告刷新与完整测试正在执行，尚无通过结论；Git阶段提交未执行。四川文科候选仍needs-review，Q12/Q17/Q19/Q21源问题不得据常见题意修补。
+
+### 2026-11-10 phase5-b02：2007 天津理科正式封账
+
+- 固定来源 `src-48d8d69d7573bbc8e32736c808a5f8830a7e9e1d4ebe39b164da68c578e5e3a1`（2 页 A3，印刷页 413–414），22 题：选 10、填 6、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 三幅 TikZ 矢量图：Q15 三角形（AB=2、AC=1、120°、D 为 BC 三等分点）、Q16 四格斜置长条（1×4）、Q19 四棱锥 P–ABCD（E 为 PC 中点，虚实线照原卷）。图稿登记 expected_occurrences=2。
+- 转录后主代理逐题复核 22 题；确认 Q7 选 B、Q15 按连等式读作 AB=1、AC=1/2（答案 −2/3）、Q16 按 1×4 条读法为 390、Q19 二面角 arccos(√6/4)… 实测 arccos(√2/4)≈69.3°、Q22(2) 轨迹为圆 x²+y²=2b²/3。两处读法疑点另存 `.work/phase5-b02/2007-tianjin-science/verification-and-source-notes.md` 与 `source-notes.md`，交付源无尾附录。
+- Provenance：三角色 66 条记录导入（rev 7721，因试题图链接改写重算哈希后 rev 7722），check-batch 通过；manifest 登记 `gk-2007-regular-tianjin-science` / `phase5-b02`。
+- 正式构建 attempt `27ddfd9b-d753-421d-8f19-8ff81431194e`：四版 5/25/7/19 页，共 56 页，全部 succeeded。全 56 页八类视觉检查逐页完成（0 fail、0 pending）；解析版 2 条 Overfull（6.62pt、9.59pt）经全页查看后在版心内接受并逐项豁免。
+- 封账：`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b02.md`；`report.py render/check --all` 与 `manifest_csv` 775 行均已刷新校验。
