@@ -24398,3 +24398,75 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1452
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "hyperbola-y2-printed-r2",
+  "current_evidence": "固定源 PDF（印刷页 347）第 9 题双曲线方程第二项的分子印作 $r^2$，即 $\\frac{x^2}{a^2}-\\frac{r^2}{b^2}=1$；全题再无 $r$ 出现，按双曲线标准形式与题设（$a>0$，$b>0$，焦点在 $x$ 轴）只可能是 $y^2$。300% 局部放大两次核读，字形为无下伸笔画的 $r$，不是 $y$ 的字体变体。独立推导按 $y^2$ 计算得离心率 $1+\\sqrt3$，落在选项 (D)。",
+  "fingerprint": "58f8852437527ed9d36afad7352c96acb49b7658629b32e0fa1a5ae6a341f6e4",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-science",
+  "question_id": "gk-2007-regular-anhui-science-q09",
+  "resume_action": "取得同版答案或勘误确认该处是否为 $y^2$；在此之前按原页字形照录题面，解答按 $y^2$ 计算并在解析内标注源疑点，不改题面。",
+  "source_id": "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1453
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "vector-ab-printed-instead-of-oa",
+  "current_evidence": "固定源 PDF（印刷页 347）第 13 题首项印作 $\\overrightarrow{AB}=\\boldsymbol a$，而后两项 $\\overrightarrow{OB}=\\boldsymbol b$、$\\overrightarrow{OC}=\\boldsymbol c$ 均以 $O$ 为起点，所求为 $\\overrightarrow{OE}$；常见版本多作 $\\overrightarrow{OA}=\\boldsymbol a$。300% 局部放大确认字母为 $AB$ 而非 $OA$。按 $\\overrightarrow{AB}$ 推导得 $\\overrightarrow{OE}=-\\frac12\\boldsymbol a+\\frac34\\boldsymbol b+\\frac14\\boldsymbol c$；若按 $\\overrightarrow{OA}$ 读法则为 $\\frac12\\boldsymbol a+\\frac14\\boldsymbol b+\\frac14\\boldsymbol c$。",
+  "fingerprint": "3e7fb2e45c8d3b793335afcdd4713170fb4770d77b25ff01bba3a0fbaded28e5",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-science",
+  "question_id": "gk-2007-regular-anhui-science-q13",
+  "resume_action": "取得同版答案或勘误确认首项是 $\\overrightarrow{AB}$ 还是 $\\overrightarrow{OA}$；在此之前按原页 $\\overrightarrow{AB}$ 作答并在解析内标注两种读法的差异。",
+  "source_id": "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1454
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "latin-a-vs-greek-alpha",
+  "current_evidence": "固定源 PDF（印刷页 347）第 16 题题头「$0<a<\\frac{\\pi}{4}$」与 $\\tan\\left(a+\\frac{\\beta}{4}\\right)$ 使用拉丁斜体 $a$，而同题 $\\boldsymbol b=(\\cos\\alpha,2)$ 与所求分式使用希腊 $\\alpha$，且向量 $\\boldsymbol a$ 与标量 $a$ 仅靠字重区分。300% 局部放大确认两处字形不同，非同一字符的排版变体。解答按「两处为同一角」处理，得 $2m+4$；若视为两个独立角，题设条件不足以确定原式的值。",
+  "fingerprint": "34e65b372b77cd4510f92fa80d1b962c75b80a83a1f2f8f74d8c9957a5344bf8",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-science",
+  "question_id": "gk-2007-regular-anhui-science-q16",
+  "resume_action": "取得同版材料确认题头与 $\\tan$ 内的角是否应为 $\\alpha$；在此之前按原页字形照录，解答以「同一角」为工作假设并写明另一读法下条件不足。",
+  "source_id": "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1455
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "储备金-printed-储务金",
+  "current_evidence": "固定源 PDF（印刷页 348）第 21 题「历年所交纳的储务金数目」中「储务金」的「务」应为「备」，全题其余三处均作「储备金」。300% 局部放大确认印面为「务」字。不影响任何计算。",
+  "fingerprint": "4fb2d87c71c42ef19bde2da4a27586b2aee5dcf21f8660534cdc2054cd98d711",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-science",
+  "question_id": "gk-2007-regular-anhui-science-q21",
+  "resume_action": "取得同版材料确认该处是否为「储备金」；在此之前按原页字形照录题面，解答按「储备金」理解。",
+  "source_id": "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

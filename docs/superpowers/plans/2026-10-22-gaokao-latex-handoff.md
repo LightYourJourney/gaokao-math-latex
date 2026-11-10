@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 安徽理科（phase5-b05）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 安徽理科（21 题，`gk-2007-regular-anhui-science`）`phase5-b05` FINALIZED / `closed`，卷 `eligible_complete`，manifest live revision 7746，attempt `b4de5fcc-1707-435f-8bca-7d2871a7a142`；四版 6/27/8/21 页共 62 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b05.md`。
+- 四幅 TikZ 图（Q9 双曲线与圆、Q14 抛物线分点、Q17 六面体斜投影、Q19 抛物线 y²=2x 关系图）均登记 `expected_occurrences=2`，头注写明来源路径与 SHA-256。首轮审查发现 Q14 右端 `P_{n-1}` 标签被斜边穿过，把两个右端分点标签移到 x 轴下方后重建并复查改动页。
+- 关键裁定：Q2 为充分不必要条件（选 A，solve-b 的 B 属蕴含方向倒置）；Q13 按 300% 放大确认首项为 $\overrightarrow{AB}$，答案 $-\frac12\boldsymbol a+\frac34\boldsymbol b+\frac14\boldsymbol c$；Q16 按「同角」处理得 $2m+4$；Q17(3) 二面角 $\arccos(-1/5)\approx101.54^\circ$。
+- 源缺陷按原页照录并登记：`ISSUE-1452`（Q9 印作 r²）、`ISSUE-1453`（Q13 AB vs OA）、`ISSUE-1454`（Q16 拉丁 a 与希腊 α 混用）、`ISSUE-1455`（Q21「储务金」），全部 non_blocking，源疑点写进解析内。
+- 门禁全通过：`review_receipts check-all`（321 批次）、`provenance check-all`（475 卷）、`solution_sources check-all`、`validate-receipts`（475 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（475 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记：Q12 选项冲突、Q17 疑字、Q19 条件不足（有反例）、Q21 缺等号，均不得据常见题意修补。
+- 下一步：继续 2007 年其余 ready 来源（安徽文、山东文理、广东文理、新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 四川理科（phase5-b04）封账，卷 blocked
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

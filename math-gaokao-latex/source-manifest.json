@@ -2716,6 +2716,14 @@
         "gk-2007-regular-sichuan-science"
       ],
       "status": "closed_with_blockers"
+    },
+    {
+      "batch_id": "phase5-b05",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-regular-anhui-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2725,7 +2733,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "c5f1e58b-7162-45b6-882b-269c71d54302",
+  "last_transaction_id": "b6908ebf-1e4b-46d1-86d2-f14f43473025",
   "papers": [
     {
       "blocked_from": null,
@@ -34264,9 +34272,83 @@
       "title": "2007 年·普通高等学校招生考试·四川卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_理科/figures/f2007_anhui_science_q09_hyperbola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_理科/figures/f2007_anhui_science_q14_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_理科/figures/f2007_anhui_science_q17_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_理科/figures/f2007_anhui_science_q19_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_anhui_science",
+        "id": "gk-2007-regular-anhui-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 347、348；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 9 题双曲线与圆、第 14 题抛物线与直角三角形、第 17 题六面体、第 19 题抛物线与割线由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            12,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            11
+          ]
+        },
+        "track": "理科",
+        "variant": "安徽理科"
+      },
+      "issue_ids": [
+        "ISSUE-1452",
+        "ISSUE-1453",
+        "ISSUE-1454",
+        "ISSUE-1455"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-anhui-science",
+      "production_state": "complete",
+      "project_dir": "2007_安徽卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_安徽理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_安徽理_含解析.md",
+        "questions": "2007/2007_数学真题_安徽理_试题.md",
+        "solution_body": "2007/2007_数学真题_安徽理_解析正文.md"
+      },
+      "source_ids": [
+        "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4"
+      ],
+      "title": "2007 年·普通高等学校招生考试·安徽卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7744,
+  "revision": 7751,
   "schema_version": 1,
   "sources": [
     {
@@ -42543,8 +42625,8 @@
       "exam_type": "regular",
       "git_blob_oid": "122524fefbec12b0f60079ba8392f895bf9b3aaf",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-regular-anhui-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007安徽理.pdf",
       "regions": [],
       "source_id": "src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4",

@@ -15485,3 +15485,15 @@
 - 正式构建 attempt `daf060bf-9bcb-42fe-a78a-0ef096602e5e`：四版 7/30/9/22 页，共 68 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：68 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页逐幅核对标签与虚实线，`finalize-batch` 返回 FINALIZED，批次 `closed_with_blockers`、卷 `eligible_blocked`，报告 `reports/phase5-b04.md`。
 - 门禁全通过：`validate-receipts`、`provenance check-batch`、`solution_sources check-batch`、`report render/check --all`、`generate_projects --all --check`（474 套）、`make_short_answers --all --check`（474 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b05：2007 安徽理科正式封账
+
+- 固定来源 `src-3d9060a0d561c198ee84aa2f9257aac76855602149b18224d4302cae3ea426a4`（2 页 A3，印刷页 347–348，SHA-256 `3f85f741…`），21 题：选 11、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 四幅 TikZ 矢量图：Q9 双曲线与圆（等边三角形 F₂AB）、Q14 抛物线分点与三个阴影直角三角形、Q17 六面体斜投影、Q19 抛物线 y²=2x 与 A/B/C/D 关系图；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 21 题：选择 D A B B C C A C D B D；填空 12=7、13=−½a+¾b+¼c、14=1/3、15=①③④⑤；Q16=2m+4；Q17(3) 二面角 arccos(−1/5)≈101.54°（钝角，棱垂向量与法向量两法复核）；Q18 在 (0,2) 减、(2,+∞) 增，极小 2−2ln2+2a；Q19(1) c=a+2+√(2a+4)、(2) 斜率 −1；Q20 P(ξ=i)=(7−i)/28、Eξ=2、P(ξ≥Eξ)=15/28；Q21 递推式与 Aₙ/Bₙ 拆分均验算一致。
+- 题面与解法争议：第 2 题 solve-b 曾按蕴含方向倒置报 B，主代理以 m∥n 反例核定 A（充分不必要）；第 13 题 300% 放大确认首项为 $\overrightarrow{AB}$ 而非 $\overrightarrow{OA}$，按原页作答。
+- 源缺陷照录并登记：`ISSUE-1452` 第 9 题分母分子印作 r²（non_blocking）、`ISSUE-1453` 第 13 题首项 AB vs OA（non_blocking）、`ISSUE-1454` 第 16 题拉丁 a 与希腊 α 混用（non_blocking）、`ISSUE-1455` 第 21 题「储务金」应为「储备金」（non_blocking）；均写进解析内 `【源疑点：…】`，交付源无尾附录。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-regular-anhui-science` / `phase5-b05`，live revision 7746；check-batch 通过。
+- 正式构建 attempt `b4de5fcc-1707-435f-8bca-7d2871a7a142`：四版 6/27/8/21 页，共 62 页，全部 succeeded，0 errors、0 overfull、0 missing characters。首轮审查发现 Q14 图右端 $P_{n-1}$ 标签被三角形斜边穿过，把 $P_{n-2}$、$P_{n-1}$ 移置 x 轴下方后重建并复查改动页（试题/解析/简答/印刷四版共 6 页）。
+- 视觉审查：62 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b05.md`。
+- 门禁全通过：`check-all`（review 回执 321 批次）、`provenance check-all`（475 卷）、`solution_sources check-all`、`validate-receipts`（475 卷）、`report render/check --all`、`generate_projects --all --check`（475 套）、`make_short_answers --all --check`（475 套）、`make_editions --all --check`（475 套）、`manifest_csv`（775 行）。
