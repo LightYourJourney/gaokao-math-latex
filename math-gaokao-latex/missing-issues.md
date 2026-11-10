@@ -24470,3 +24470,39 @@
   "type": "transcription-ambiguous"
 }
 ```
+
+## ISSUE-1456
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "vector-ab-printed-instead-of-oa",
+  "current_evidence": "固定源 PDF（印刷页 349）第 13 题首项印作 $\\overrightarrow{AB}=\\boldsymbol a$，而后两项 $\\overrightarrow{OB}=\\boldsymbol b$、$\\overrightarrow{OC}=\\boldsymbol c$ 均以 $O$ 为起点，所求为 $\\overrightarrow{OE}$；常见版本多作 $\\overrightarrow{OA}=\\boldsymbol a$。300% 局部放大确认字母为 $AB$ 而非 $OA$。按 $\\overrightarrow{AB}$ 推导得 $\\overrightarrow{OE}=-\\frac12\\boldsymbol a+\\frac34\\boldsymbol b+\\frac14\\boldsymbol c$；若按 $\\overrightarrow{OA}$ 读法则为 $\\frac12\\boldsymbol a+\\frac14\\boldsymbol b+\\frac14\\boldsymbol c$。",
+  "fingerprint": "e876ae36946289cf92b80a816bfcdf3a11e3dc1f233742beed2cc2da38d5c6bb",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-arts",
+  "question_id": "gk-2007-regular-anhui-arts-q13",
+  "resume_action": "取得同版答案或勘误确认首项是 $\\overrightarrow{AB}$ 还是 $\\overrightarrow{OA}$；在此之前按原页 $\\overrightarrow{AB}$ 作答并在解析内标注两种读法的差异。",
+  "source_id": "src-3efb292c80b2029e9720e241726d066b603d10688f3a3f9c090ecf1bad6ff04b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```
+
+## ISSUE-1457
+
+```json
+{
+  "affected_paper_ids": [],
+  "conflict_code": "储备金-printed-储务金",
+  "current_evidence": "固定源 PDF（印刷页 350）第 21 题「历年所交纳的储务金数目」中「储务金」的「务」应为「备」，全题其余三处均作「储备金」。300% 局部放大确认印面为「务」字。不影响任何计算。",
+  "fingerprint": "9e482b03ffad1c747c223efc83b0ec2664e10d717b9c136e38a5c83807e16ffe",
+  "impact": "non_blocking",
+  "paper_id": "gk-2007-regular-anhui-arts",
+  "question_id": "gk-2007-regular-anhui-arts-q21",
+  "resume_action": "取得同版材料确认该处是否为「储备金」；在此之前按原页字形照录题面，解答按「储备金」理解。",
+  "source_id": "src-3efb292c80b2029e9720e241726d066b603d10688f3a3f9c090ecf1bad6ff04b",
+  "status": "open",
+  "type": "transcription-ambiguous"
+}
+```

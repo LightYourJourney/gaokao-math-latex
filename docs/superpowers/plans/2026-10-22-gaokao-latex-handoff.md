@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-10 接续：2007 安徽文科（phase5-b06）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 安徽文科（21 题，`gk-2007-regular-anhui-arts`）`phase5-b06` FINALIZED / `closed`，卷 `eligible_complete`，manifest live revision 7753，attempt `d51e753b-f41b-45a0-add3-a46b4466779b`；四版 5/25/7/18 页共 55 页，0 errors、0 overfull、0 missing characters，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b06.md`。
+- 两幅 TikZ 图（Q7 折线图象、Q17 六面体）均登记 `expected_occurrences=2`；Q17 与安徽理同源几何，按文科原页重绘。
+- 关键结论：选择 D A C D C A B B A C D；填空 12=−256、13=−½a+¾b+¼c、14=3/11、15=①②③；Q16=(0,2/3)；Q17(3)=arccos(−1/5)；Q18 切线 y=±2x−4 且面积最小值 32；Q19 1/28、3/28；Q20 g(t)=4t³−3t+3、极大 4 极小 2；Q21 递推式与等比/等差拆分（初稿第二项求和中间式已修正为 (qⁿ−nq+n−1)/(q−1)²）。
+- 源缺陷照录并登记：`ISSUE-1456`（Q13 首项 AB vs OA）、`ISSUE-1457`（Q21「储务金」），均 non_blocking，源疑点写进解析内。
+- 门禁全通过：`review_receipts check-all`（322 批次）、`provenance check-all`（476 卷）、`solution_sources check-all`、`validate-receipts`（476 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（476 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记：Q12 选项冲突、Q17 疑字、Q19 条件不足（有反例）、Q21 缺等号，均不得据常见题意修补。
+- 下一步：继续 2007 年其余 ready 来源（山东文理、广东文理、新课标文理、江苏、江西文理、浙江文理、湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-10 接续：2007 安徽理科（phase5-b05）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

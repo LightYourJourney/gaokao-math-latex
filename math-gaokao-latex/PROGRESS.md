@@ -15497,3 +15497,14 @@
 - 正式构建 attempt `b4de5fcc-1707-435f-8bca-7d2871a7a142`：四版 6/27/8/21 页，共 62 页，全部 succeeded，0 errors、0 overfull、0 missing characters。首轮审查发现 Q14 图右端 $P_{n-1}$ 标签被三角形斜边穿过，把 $P_{n-2}$、$P_{n-1}$ 移置 x 轴下方后重建并复查改动页（试题/解析/简答/印刷四版共 6 页）。
 - 视觉审查：62 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b05.md`。
 - 门禁全通过：`check-all`（review 回执 321 批次）、`provenance check-all`（475 卷）、`solution_sources check-all`、`validate-receipts`（475 卷）、`report render/check --all`、`generate_projects --all --check`（475 套）、`make_short_answers --all --check`（475 套）、`make_editions --all --check`（475 套）、`manifest_csv`（775 行）。
+
+### 2026-11-10 phase5-b06：2007 安徽文科正式封账
+
+- 固定来源 `src-3efb292c80b2029e9720e241726d066b603d10688f3a3f9c090ecf1bad6ff04b`（2 页 A3，印刷页 349–350，SHA-256 `dc00a80c…`），21 题：选 11、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 两幅 TikZ 矢量图：Q7 折线图象（三点 (0,0)、(1,3/2)、(2,0)，x=1 处虚线与 y 轴刻度）、Q17 六面体斜投影（与安徽理同源几何、按文科原页重绘）；图稿登记 expected_occurrences=2，头注写明来源路径、SHA-256 与重绘依据。
+- 主代理逐题复核 21 题：选择 D A C D C A B B A C D；填空 12=−256、13=−½a+¾b+¼c、14=3/11、15=①②③；Q16=(0,2/3)；Q17(3) 二面角 arccos(−1/5)≈101.54°；Q18 切线 y=±2x−4、面积最小值 32；Q19 1/28、3/28；Q20 g(t)=4t³−3t+3，极大 4、极小 2；Q21 递推式与 Aₙ/Bₙ 拆分经数值复核一致（修正了初稿第二项求和的中间式）。
+- 源缺陷照录并登记：`ISSUE-1456` 第 13 题首项 AB vs OA（non_blocking）、`ISSUE-1457` 第 21 题「储务金」应为「储备金」（non_blocking）；均写进解析内 `【源疑点：…】`，交付源无尾附录。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-regular-anhui-arts` / `phase5-b06`，live revision 7753；check-batch 通过。
+- 正式构建 attempt `d51e753b-f41b-45a0-add3-a46b4466779b`：四版 5/25/7/18 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对标签与虚实线；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b06.md`。
+- 门禁全通过：`review_receipts check-all`（322 批次）、`provenance check-all`（476 卷）、`solution_sources check-all`、`validate-receipts`（476 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（476 套）、`manifest_csv`（775 行）。

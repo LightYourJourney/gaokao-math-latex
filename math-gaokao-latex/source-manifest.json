@@ -2724,6 +2724,14 @@
         "gk-2007-regular-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-regular-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2733,7 +2741,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "b6908ebf-1e4b-46d1-86d2-f14f43473025",
+  "last_transaction_id": "ca8a2f42-09d1-4e45-b682-1f950c998fc6",
   "papers": [
     {
       "blocked_from": null,
@@ -34346,9 +34354,73 @@
       "title": "2007 年·普通高等学校招生考试·安徽卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_文科/figures/f2007_anhui_arts_q07_graph.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_安徽卷_文科/figures/f2007_anhui_arts_q17_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_anhui_arts",
+        "id": "gk-2007-regular-anhui-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 349、350；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 7 题折线图象、第 17 题六面体由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            12,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            11
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [
+        "ISSUE-1456",
+        "ISSUE-1457"
+      ],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-regular-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2007_安徽卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_安徽文_含解析.md",
+        "questions": "2007/2007_数学真题_安徽文_试题.md",
+        "solution_body": "2007/2007_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-3efb292c80b2029e9720e241726d066b603d10688f3a3f9c090ecf1bad6ff04b"
+      ],
+      "title": "2007 年·普通高等学校招生考试·安徽卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7751,
+  "revision": 7756,
   "schema_version": 1,
   "sources": [
     {
@@ -42601,8 +42673,8 @@
       "exam_type": "regular",
       "git_blob_oid": "979937f467a4e304e52e28ab97ebe35bf76b386d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-regular-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007安徽文.pdf",
       "regions": [],
       "source_id": "src-3efb292c80b2029e9720e241726d066b603d10688f3a3f9c090ecf1bad6ff04b",
