@@ -44,11 +44,27 @@ class ReportFactsTest(unittest.TestCase):
     def test_reports_every_batch_even_when_review_or_ownership_is_incomplete(self):
         facts = self.facts
         self.assertGreater(len(facts["batches"]), 6)
-        self.assertTrue(any(row["validation"] != "FINALIZED" for row in facts["batches"]))
+        self.assertEqual(
+            len(facts["batches"]), len({row["batch_id"] for row in facts["batches"]})
+        )
         self.assertTrue(all(
             row["git_state"] in {"validated", "committed", "unavailable"}
             for row in facts["batches"]
         ))
+        # 全库批次可能已全部 FINALIZED；用一条降级副本验证未完成批次仍进入报告，
+        # 不依赖 live 仓库恰好存在失败批次。
+        incomplete = dict(
+            facts["batches"][0], validation="VISUAL_FAILED", git_state="unavailable"
+        )
+        report_text = report.render_outputs(dict(facts, batches=[incomplete]))[
+            "report.md"
+        ]
+        self.assertIn(
+            f"| {incomplete['batch_id']} | {incomplete['paper_count']} | {incomplete['status']}"
+            " | VISUAL_FAILED | unavailable |",
+            report_text,
+        )
+        self.assertIn(f"门禁未通过批次：{incomplete['batch_id']}", report_text)
 
     def test_render_outputs_has_exactly_six_targets(self):
         outputs = report.render_outputs(self.facts)
