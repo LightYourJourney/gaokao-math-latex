@@ -15465,3 +15465,12 @@
 - Provenance：三角色 66 条记录导入（rev 7721，因试题图链接改写重算哈希后 rev 7722），check-batch 通过；manifest 登记 `gk-2007-regular-tianjin-science` / `phase5-b02`。
 - 正式构建 attempt `27ddfd9b-d753-421d-8f19-8ff81431194e`：四版 5/25/7/19 页，共 56 页，全部 succeeded。全 56 页八类视觉检查逐页完成（0 fail、0 pending）；解析版 2 条 Overfull（6.62pt、9.59pt）经全页查看后在版心内接受并逐项豁免。
 - 封账：`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b02.md`；`report.py render/check --all` 与 `manifest_csv` 775 行均已刷新校验。
+
+### 2026-11-10 phase5-b03：2007 天津文科正式封账
+
+- 固定来源 `src-7388b790edeea977539f33a19bb9abba8cf21feffcf8f9e0f4b974c8a4b7c063`（2 页 A3，印刷页 415–416），22 题：选 10、填 6、解 6；原件无答案、无分值，解答为 D 级非官方独立推导，官方身份未核。
+- 两幅 TikZ 矢量图：Q16 四格斜置长条（1×4，题面另要求两端不同色，按环 C₄ 计数 630，与理卷 390 的「最多 3 色」区别已在复核记录写明）、Q19 四棱锥 P–ABCD（与理卷几何一致）。图稿登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 B C C A C D D B A A；填空 70、84、14π、x+3y=0、5/2、630；Q19 二面角 arccos(√2/4)≈69.3°、Q20 通项 aₙ=n+4^{n−1}、Q22 t=√6b/3 均独立验算一致。三处源疑点（Q1 原页 x+1≥2 无绝对值、Q11 第 5 组「[130140)」缺逗号、Q12 指数 9 被裁切）按原页照录，写在解析内 `【源疑点：…】` 与 `.work/phase5-b03/2007-tianjin-arts/verification-and-source-notes.md`，交付源无尾附录。
+- 首轮正式构建（attempt `d228b1ad-…-626a20fc74b2`）发现解析版 Q4 公式行超版心 **100.44pt**，属真实缺陷、不可豁免；改为 `aligned` 三行后重建（attempt `0e644cd1-c933-4206-b40c-bb941eb8060e`），该警告消失，仅剩 Q21 求导行 5.77pt 一条。
+- 正式构建四版 5/26/7/20 页共 58 页，全页八类视觉检查逐页完成（0 fail、0 pending）；解析版 1 条 Overfull（5.77pt，answers.tex:810，物理页 23）经全页查看后按既有 ≤10pt 口径逐项豁免。
+- 封账：`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b03.md`；`report.py render/check --all`、`generate_projects --all --check`、`make_short_answers --all --check`、`manifest_csv` 775 行均已刷新校验。

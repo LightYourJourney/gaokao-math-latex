@@ -1,14 +1,14 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
-## 2026-11-10 接续：2007 天津理科（phase5-b02）封账，天津文科在制
+## 2026-11-10 接续：2007 天津文/理（phase5-b02、b03）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
 - 2007 上海理科（21题）`phase5-b01` 已封账（revision 7719，attempt `91828da8-…-66c677f8`，四版 4/15/6/13 页），全量 unittest 修复已提交 `b9e083d3d`。
-- 2007 天津理科（22题，`gk-2007-regular-tianjin-science`）已登记并完成三角色 provenance、四版正式构建与全部 56 页实际视觉审查，`phase5-b02` FINALIZED/closed，manifest revision 7722，attempt `27ddfd9b-d753-421d-8f19-8ff81431194e`；四版 5/25/7/19 页，0 fail/pending，解析版 2 条 Overfull 已逐项豁免。来源与解答仍为「官方身份未核 / 非官方独立推导」边界。
-- 天津理科两处读法已在 `.work/phase5-b02/2007-tianjin-science/` 留证：Q15 `AB=2AC=1` 读作 AB=1、AC=1/2（−2/3），Q16 按 1×4 长条读作 390；交付源不含附录段。
-- 天津文科（22题，`gk-2007-regular-tianjin-arts`）转录与独立解答草稿已完成，待主代理逐题复核、落盘规范 MD、绘制 Q16/Q19 两图后走同一流水线。
+- 2007 天津理科（22题，`gk-2007-regular-tianjin-science`）`phase5-b02` FINALIZED/closed，revision 7722，attempt `27ddfd9b-d753-421d-8f19-8ff81431194e`；四版 5/25/7/19 页共 56 页 0 fail/pending，解析版 2 条 Overfull 已逐项豁免。
+- 2007 天津文科（22题，`gk-2007-regular-tianjin-arts`）`phase5-b03` FINALIZED/closed，revision 7736，attempt `0e644cd1-c933-4206-b40c-bb941eb8060e`；四版 5/26/7/20 页共 58 页 0 fail/pending，解析版 1 条 5.77pt Overfull 已豁免。首轮构建的解析版 Q4 公式超版心 100.44pt 已改为 `aligned` 三行修掉（属真实缺陷，未走豁免）。
+- 两卷来源与解答均为「官方身份未核 / 非官方独立推导」边界。读法疑点留证：理卷 Q15 `AB=2AC=1` 读作 AB=1、AC=1/2（−2/3），Q16 按 1×4 长条读作 390；文卷 Q16 题面另要求两端不同色 → 按环 C₄ 得 630（与理卷 390 区分）。文卷另有三处源疑点（Q1、Q11 缺逗号、Q12 裁切）按原页照录。
 - 2007 四川文科草稿位于 `pending-intake/2007/sichuan-arts`，未登记；Q12选项冲突、Q17疑字、Q19条件不足（已核原页并构造反例）、Q21方程残缺均不得自行补写。
-- 下一步：完成天津文科（phase5-b03）并封账，再继续 2007 年尚未绑定来源。全库尚未完成，不以单卷替代 1952—2026 目标。
+- 下一步：继续 2007 年尚未绑定来源（四川文、其余省市），逐卷走同一流水线。全库尚未完成，不以单卷替代 1952—2026 目标。
 
 
 ## 当前状态（2026-11-09，2005 年封年后）
