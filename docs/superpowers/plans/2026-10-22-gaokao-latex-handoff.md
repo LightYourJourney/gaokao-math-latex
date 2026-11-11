@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2007 湖南理科（phase5-b27）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 湖南理科（21 题，`gk-2007-hunan-science`）`phase5-b27` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7994，attempt `92c8a36e-d12d-4408-a0bb-7e5729616c38`；四版 5/24/7/19 页共 55 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b27.md`。
+- 两幅 TikZ 图（Q18 矩形翻折双图、Q19 山坡公路示意图）各登记 `expected_occurrences=2`；Q15 的 0-1 三角表为数学排版。
+- 关键结论：选择 C D B A C B C D D B；填空 11 圆方程、12 150°、13 −16、14 b≥1 与 9/2、15 2^n−1 与 32；Q16 3/4 或 5/4 及单调区间；Q17 0.9 与 Eξ=2.7；Q18 面面垂直与 arcsin(12√2/25)；Q19 5/4、43a/16+√3a 与 1、67a/16，且不存在更优两点；Q20 (x−6)²−y²=4、C(1,0)、−1；Q21 e⁶、M=(9/4,15/4)、弦斜率递增。
+- 版式修正：Q18 图超版心 176pt，整体缩至 0.68 后消除；Q19 改绘示意图并分开 D/B 标注；Q19 解析首段去行间公式，消除孤立「解析」标题；Q19(3) 与设元并段。
+- 门禁全通过：`review_receipts check-all`（343 批次）、`provenance check-all`（497 卷）、`solution_sources check-all`、`validate-receipts`（497 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（497 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年剩余 ready 来源（湖南文理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2007 福建理科（phase5-b26）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

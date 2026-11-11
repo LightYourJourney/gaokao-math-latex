@@ -2892,6 +2892,14 @@
         "gk-2007-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b27",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2901,7 +2909,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9f59ad85-4132-48af-b6a6-18b4897f0eec",
+  "last_transaction_id": "eb7b0b41-94e5-4437-a175-2ea1d4115a95",
   "papers": [
     {
       "blocked_from": null,
@@ -35957,9 +35965,70 @@
       "title": "2007 年·普通高等学校招生考试·福建卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖南卷_理科/figures/f2007_hunan_science_q18_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖南卷_理科/figures/f2007_hunan_science_q19_road.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_hunan_science",
+        "id": "gk-2007-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 379、380；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 18 题为矩形翻折（图 1、图 2 合绘一幅）、第 19 题为山坡公路示意图，均由 TikZ 重绘；第 15 题的 0-1 三角表为数学排版。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2007_湖南卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_湖南理_含解析.md",
+        "questions": "2007/2007_数学真题_湖南理_试题.md",
+        "solution_body": "2007/2007_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b7f787634bcbdf7629b004bda49554c98b5ad4e5041c9f2bf034e265677fa293"
+      ],
+      "title": "2007 年·普通高等学校招生考试·湖南卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7975,
+  "revision": 7995,
   "schema_version": 1,
   "sources": [
     {
@@ -44596,8 +44665,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7f5271a885ea8e749b1b27a46b495836d990d2e1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007湖南理.pdf",
       "regions": [],
       "source_id": "src-b7f787634bcbdf7629b004bda49554c98b5ad4e5041c9f2bf034e265677fa293",

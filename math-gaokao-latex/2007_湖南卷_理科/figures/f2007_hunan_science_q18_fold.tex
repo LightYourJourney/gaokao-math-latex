@@ -1,0 +1,71 @@
+% 2007 年湖南卷理科第 18 题：矩形 ABCD 沿 AB、CD 翻折。
+%   图 1：E、F 为 AB、CD 中点，G 在 EF 上，EG=8（EF=25），画出 GA、GB、GC、GD。
+%   图 2：翻折后 G1、G2 分别为 G 的像，平面 G1AB⊥平面 ABCD，G1G2∥AD（G1G2=10）。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007湖南理.pdf
+% SHA-256：80aed7d118362bf1e1ad84e6fdbb7d2a10d0ca0d3148e2cbb9e934bba996e352
+% 原页：2007湖南理.pdf 第 1 页（A3 三栏）第 3 栏，书页码 379。
+% 重绘依据：图 2 按 AD 取 x 轴、AB 取 y 轴、竖直方向取 z 轴作图：
+%   A(0,0,0)、B(0,12,0)、C(25,12,0)、D(25,0,0)，G1(0,6,8)、G2(10,6,8)，
+%   斜投影取 X=0.5x+0.2y、Y=0.45y+0.5z。
+\begin{tikzpicture}[scale=0.68, semithick, every node/.style={inner sep=1.5pt, font=\small}]
+
+  % ---------- 图 1 ----------
+  \begin{scope}[shift={(0,0)}]
+    \coordinate (A) at (0,6);
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (4,0);
+    \coordinate (D) at (4,6);
+    \coordinate (E) at (0,3);
+    \coordinate (F) at (4,3);
+    \coordinate (G) at (1.28,3);
+
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw (E) -- (F);
+    \draw (G) -- (A);
+    \draw (G) -- (B);
+    \draw (G) -- (C);
+    \draw (G) -- (D);
+
+    \node[above left] at (A) {$A$};
+    \node[below left] at (B) {$B$};
+    \node[below right] at (C) {$C$};
+    \node[above right] at (D) {$D$};
+    \node[left] at (E) {$E$};
+    \node[right] at (F) {$F$};
+    \node[below=3pt] at (G) {$G$};
+    \node at (2,-0.9) {图 1};
+  \end{scope}
+
+  % ---------- 图 2 ----------
+  \begin{scope}[shift={(7,0)}]
+    \coordinate (A2) at (0,0);
+    \coordinate (B2) at (2.4,5.4);
+    \coordinate (C2) at (14.9,5.4);
+    \coordinate (D2) at (12.5,0);
+    \coordinate (E2) at (1.2,2.7);
+    \coordinate (F2) at (13.7,2.7);
+    \coordinate (G1) at (1.2,6.7);
+    \coordinate (G2) at (6.2,6.7);
+
+    \draw (A2) -- (B2) -- (C2) -- (D2) -- cycle;
+    \draw (E2) -- (F2);
+    \draw (G1) -- (A2);
+    \draw (G1) -- (B2);
+    \draw (G1) -- (E2);
+    \draw (G2) -- (C2);
+    \draw (G2) -- (D2);
+    \draw (G2) -- (F2);
+    \draw (G1) -- (G2);
+    \draw (B2) -- (G2);
+
+    \node[below left] at (A2) {$A$};
+    \node[below] at (B2) {$B$};
+    \node[right] at (C2) {$C$};
+    \node[above right] at (D2) {$D$};
+    \node[below left] at (E2) {$E$};
+    \node[below right] at (F2) {$F$};
+    \node[above] at (G1) {$G_1$};
+    \node[above] at (G2) {$G_2$};
+    \node at (7.5,-0.9) {图 2};
+  \end{scope}
+\end{tikzpicture}

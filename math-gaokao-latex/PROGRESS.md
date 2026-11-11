@@ -15759,3 +15759,15 @@
 - 正式构建 attempt `d65f464e-0a21-4b92-83a9-7f37b81abe3d`：四版 5/22/7/17 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版八处图页逐幅核对（试题 4/5、解析 4/5/16/18、简答 4/5、印刷 3/4/13/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b26.md`。
 - 门禁全通过：`review_receipts check-all`（342 批次）、`provenance check-all`（496 卷）、`solution_sources check-all`、`validate-receipts`（496 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（496 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase5-b27：2007 湖南理科正式封账
+
+- 固定来源 `src-b7f787634bcbdf7629b004bda49554c98b5ad4e5041c9f2bf034e265677fa293`（2 页 A3，印刷页 379–380，SHA-256 `80aed7d1…996e352`），21 题：选 10、填 5、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q18 矩形翻折（图 1 与图 2 合绘）、Q19 山坡公路示意图（α 平面、山坡面、PH 虚线、θ 角弧），各登记 expected_occurrences=2；Q15 的 0-1 三角表为数学排版。
+- 主代理逐题复核 21 题：选择 C D B A C B C D D B；填空 11=(x−1)²+(y−1)²=2、12=150°、13=−16、14 b≥1 与 b=9/2、15=2^n−1 与 32；Q16 3/4 或 5/4、[−5π/12+kπ,π/12+kπ]；Q17 0.9、分布列、Eξ=2.7；Q18 证面面垂直、线面角 arcsin(12√2/25)；Q19 AD=5/4、43a/16+√3a，AE=1、67a/16，不存在更优的两点；Q20 (x−6)²−y²=4，C(1,0) 使数量积恒为 −1；Q21 e⁶、M=(9/4,15/4)、弦斜率递增。
+- 关键推导：Q10 把 min{a/b,b/a} 化为既约分数 a/b，枚举得 11；Q14 由 |x−2|/2+|x| 最小值 1 得 b≥1，再用 x+2y≤2b 得 b=9/2；Q15 用 Lucas 定理，61=111101₂ 的 5 个 1 给出 32；Q18 建系得 G1(0,6,8)、G2(10,6,8)，平面 G1ADG2 法向量 (0,−4,3)，线面角正弦 12√2/25；Q19 以 PD²=1+(1.5−d)² 建造成价函数，对 d、e 分别求导得唯一极小 (5/4,1)；Q20 用韦达定理消 k 得轨迹与定点；Q21 由 S_n+S_{n−1}=3n² 得 a_{n+2}=a_n+6，并用 φ(t)=(eᵗ−1)/t 的 1<φ(t)<eᵗ 证斜率递增。
+- 版式修正：Q18 图初版超出版心 176pt（图 2 右端被裁），整体缩至 0.68 并调整 G 标注后消除；Q19 图由原页照片改绘为示意图（α + 山坡面 + 虚线 PH + θ 弧），D、B 标注错位后分开；Q19 解析首段改为不含行间公式的短段，消除「解析」标题孤立在页脚；Q19(3) 的「不存在」与设元并入同段，避免单行孤段。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-hunan-science` / `phase5-b27`，live revision 7994；check-batch 通过。
+- 正式构建 attempt `92c8a36e-d12d-4408-a0bb-7e5729616c38`：四版 5/24/7/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版八处图页逐幅核对（试题 4/5、解析 4/5/18/19、简答 4/5、印刷 4/14/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b27.md`。
+- 门禁全通过：`review_receipts check-all`（343 批次）、`provenance check-all`（497 卷）、`solution_sources check-all`、`validate-receipts`（497 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（497 套）、`manifest_csv`（775 行）。
