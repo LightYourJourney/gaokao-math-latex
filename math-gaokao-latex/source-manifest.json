@@ -2828,6 +2828,14 @@
         "gk-2007-hubei-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b19",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2837,7 +2845,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ad7882ac-2f0d-4c7d-8dc4-fd79aada1e53",
+  "last_transaction_id": "8c781863-299f-4768-b600-1ee5c1e9da4c",
   "papers": [
     {
       "blocked_from": null,
@@ -35394,9 +35402,74 @@
       "title": "2007 年·普通高等学校招生考试·湖北卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_陕西卷_文科/figures/f2007_shaanxi_arts_q08_inverse.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_陕西卷_文科/figures/f2007_shaanxi_arts_q16_vectors.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_陕西卷_文科/figures/f2007_shaanxi_arts_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_shaanxi_arts",
+        "id": "gk-2007-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 403、404；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 8 题反函数图象、第 16 题向量图、第 19 题直角梯形底面的四棱锥图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            21
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2007_陕西卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_陕西文_含解析.md",
+        "questions": "2007/2007_数学真题_陕西文_试题.md",
+        "solution_body": "2007/2007_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7ac45e0cdd77bcd8468f4f9d5fbd814fae3312b210149d320b9d09e465b21a01"
+      ],
+      "title": "2007 年·普通高等学校招生考试·陕西卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7869,
+  "revision": 7877,
   "schema_version": 1,
   "sources": [
     {
@@ -44201,8 +44274,8 @@
       "exam_type": "regular",
       "git_blob_oid": "08d5debda5c49aa05064a0bbde07a97256b26358",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007陕西文.pdf",
       "regions": [],
       "source_id": "src-7ac45e0cdd77bcd8468f4f9d5fbd814fae3312b210149d320b9d09e465b21a01",

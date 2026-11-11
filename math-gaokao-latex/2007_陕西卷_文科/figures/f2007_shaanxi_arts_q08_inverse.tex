@@ -1,0 +1,41 @@
+% 2007 年陕西卷文科第 8 题：反函数 y=log2(x-1) 的图象选项。
+%   （D）为正确图象，其余为定义域/平移不同的干扰项。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007陕西文.pdf
+% SHA-256：95abaa3050f33e9b9587ad186af8f173fbf40c31ebe3f2be710bbae607ed0ecb
+% 原页：2007陕西文.pdf 第 1 页（A3 三栏）第 2 栏，书页码 403。
+% 重绘依据：按原页四个小图的曲线、渐近线与截距重绘。
+\begin{tikzpicture}[scale=0.85, semithick,
+  every node/.style={inner sep=1pt, font=\small}]
+  % A：只画 x>=2 一支
+  \begin{scope}[shift={(0,0)}]
+    \draw[->,>=stealth] (-0.4,0) -- (2.6,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.4) -- (0,1.8) node[above] {$y$};
+    \draw[dashed] (1,-1.4) -- (1,1.8);
+    \draw[domain=2:2.5,samples=60] plot (\x,{ln(\x-1)/ln(2)});
+    \node[below] at (0.7,-1.8) {（A）};
+  \end{scope}
+  % B：平移错误
+  \begin{scope}[shift={(4.3,0)}]
+    \draw[->,>=stealth] (-0.4,0) -- (2.6,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.4) -- (0,1.8) node[above] {$y$};
+    \draw[dashed] (1,-1.4) -- (1,1.8);
+    \draw[domain=1.05:2.5,samples=60] plot (\x,{ln(\x)/ln(2)});
+    \node[below] at (0.7,-1.8) {（B）};
+  \end{scope}
+  % C：y=log2 x
+  \begin{scope}[shift={(0,-4.0)}]
+    \draw[->,>=stealth] (-0.4,0) -- (2.6,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.4) -- (0,1.8) node[above] {$y$};
+    \draw[dashed] (0,-1.4) -- (0,1.8);
+    \draw[domain=0.2:2.5,samples=60] plot (\x,{ln(\x)/ln(2)});
+    \node[below] at (0.7,-1.8) {（C）};
+  \end{scope}
+  % D：正确
+  \begin{scope}[shift={(4.3,-4.0)}]
+    \draw[->,>=stealth] (-0.4,0) -- (2.6,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.4) -- (0,1.8) node[above] {$y$};
+    \draw[dashed] (1,-1.4) -- (1,1.8);
+    \draw[domain=1.05:2.5,samples=60] plot (\x,{ln(\x-1)/ln(2)});
+    \node[below] at (0.7,-1.8) {（D）};
+  \end{scope}
+\end{tikzpicture}

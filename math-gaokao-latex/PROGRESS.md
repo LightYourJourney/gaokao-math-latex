@@ -15655,3 +15655,16 @@
 - 正式构建 attempt `61a91cc4-3c80-4720-bd8a-b22aa6a20a91`：四版 6/24/8/21 页，共 59 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：59 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b18.md`。
 - 门禁全通过：`review_receipts check-all`（334 批次）、`provenance check-all`（488 卷）、`solution_sources check-all`、`validate-receipts`（488 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（488 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b19：2007 陕西文科正式封账
+
+- 固定来源 `src-7ac45e0cdd77bcd8468f4f9d5fbd814fae3312b210149d320b9d09e465b21a01`（2 页 A3，印刷页 403–404，SHA-256 `95abaa30…07ed0ecb`），21 题：选 12、填 4、解 5；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 三幅 TikZ 矢量图：Q8 反函数图象四选项、Q16 向量 OA/OB/OC、Q19 直角梯形底面的四棱锥；均登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 C B B A C C D D B A C D；填空 13=40、14=8、15=60、16=6；Q17 m=1、最小值 1−√2；Q18 96/625、101/125；Q19 二面角 60°；Q20 a_n=2^{7−n}、S_n<128；Q21 f=−2x³+3x²、0<m≤1/2。
+- 关键推导：Q5 由 S2、S4−S2、S6−S4 成等差得 S6=24；Q19 建系 A(0,0,0)、B(2√3,0,0)、C(2√3,6,0)、D(0,2,0)、P(0,0,3)，BD·AC=0 且 BD·PA=0，平面 PBD 法向量 (3,3√3,2√3)，cos=1/2；Q21 由单调性设 f'=kx(1−x)，f'(1/2)=3/2 得 k=6，再解 f(x)≤x 得 m≤1/2。
+- 版式修正：Q8 为题图选项，删除图后多余的四行选项文字。
+- 源缺陷与警告：无内容性 issue；四版 0 Overfull、0 Underfull、0 缺字。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-shaanxi-arts` / `phase5-b19`，live revision 7874；check-batch 通过。
+- 正式构建 attempt `b449a230-8e10-427c-9b69-045785b36d8c`：四版 5/20/7/16 页，共 48 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：48 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b19.md`。
+- 门禁全通过：`review_receipts check-all`（335 批次）、`provenance check-all`（489 卷）、`solution_sources check-all`、`validate-receipts`（489 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（489 套）、`manifest_csv`（775 行）。
