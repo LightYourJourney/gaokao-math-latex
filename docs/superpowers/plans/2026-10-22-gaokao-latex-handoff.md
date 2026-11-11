@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 辽宁文科（phase5-b21）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 辽宁文科（22 题，`gk-2007-liaoning-arts`）`phase5-b21` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7902，attempt `d4333207-352d-4cfd-9873-b788c5f78deb`；四版 5/21/7/18 页共 51 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b21.md`。
+- 一幅 TikZ 图（Q18 直三棱柱与 M、D、E、C1 连线）登记 `expected_occurrences=2`。
+- 关键结论：选择 C A C D B B A A B D A B；填空 13=1、14=29、15=4√3π、16=2；Q17 频率表与 0.6、0.648；Q18 MA=√3a/6、距离 a/4；Q19 [-3,1]、ω=2 及单调区间；Q20 c_n=2n+1、a_n=n+1/2+2^{-n}、S_n=n(n+2)/2+1-2^{-n}；Q21 (x-4)²+y²=16、最大 -16/9 最小 -8；Q22 f=-2x²+8x+16、x∈[(7-√130)/3,3√2-3]。
+- 源疑点两处（解析内已记）：Q1 原页把 B 印作 N；Q22 题设只确定 g(2)=0，f 不唯一，取 cosα=1/3 一组。
+- 版式修正：Q8 约束条件改行间公式（否则印刷版第 2 页顶端悬空一个 cases）；Q10 概率式改行内，答案框不再跨页。
+- 门禁全通过：`review_receipts check-all`（337 批次）、`provenance check-all`（491 卷）、`solution_sources check-all`、`validate-receipts`（491 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（491 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（辽宁理、重庆文理、福建文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 陕西理科（phase5-b20）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

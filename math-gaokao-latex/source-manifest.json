@@ -2844,6 +2844,14 @@
         "gk-2007-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b21",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2853,7 +2861,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "d0b2f146-2f82-4681-b3ed-5186dd30b75d",
+  "last_transaction_id": "035e0828-a08f-4623-95f0-21b4cc7b72c2",
   "papers": [
     {
       "blocked_from": null,
@@ -35540,9 +35548,66 @@
       "title": "2007 年·普通高等学校招生考试·陕西卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_辽宁卷_文科/figures/f2007_liaoning_arts_q18_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_liaoning_arts",
+        "id": "gk-2007-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 391、392；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。仅第 18 题配图（直三棱柱与 M、D、E、C1 的连线），由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2007_辽宁卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_辽宁文_含解析.md",
+        "questions": "2007/2007_数学真题_辽宁文_试题.md",
+        "solution_body": "2007/2007_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-7d5e90766200548eeb7ff93b41d38b8a18a571daa02f26a48bba69f8529e5476"
+      ],
+      "title": "2007 年·普通高等学校招生考试·辽宁卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7885,
+  "revision": 7903,
   "schema_version": 1,
   "sources": [
     {
@@ -44251,8 +44316,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cf6f28405ef9146852d6fff3f34169cef83009b3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007辽宁文.pdf",
       "regions": [],
       "source_id": "src-7d5e90766200548eeb7ff93b41d38b8a18a571daa02f26a48bba69f8529e5476",

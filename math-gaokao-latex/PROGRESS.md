@@ -15681,3 +15681,16 @@
 - 正式构建 attempt `839412cb-b112-44f3-b239-f259a796d244`：四版 5/20/7/17 页，共 49 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：49 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b20.md`。
 - 门禁全通过：`review_receipts check-all`（336 批次）、`provenance check-all`（490 卷）、`solution_sources check-all`、`validate-receipts`（490 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（490 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b21：2007 辽宁文科正式封账
+
+- 固定来源 `src-7d5e90766200548eeb7ff93b41d38b8a18a571daa02f26a48bba69f8529e5476`（2 页 A3，印刷页 391–392，SHA-256 `dea57d96…3e3ae7c6`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ 矢量图：Q18 直三棱柱 ABC-A1B1C1（E、D 为 AB、BC 中点，M 在 AA1，C1—D、C1—E 虚线），登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 C A C D B B A A B D A B；填空 13=1、14=29、15=4√3π、16=2；Q17 频率 0.048/0.121/0.208/0.223/0.193/0.165/0.042，不足 1500 小时 0.6，至少 2 支 0.648；Q18 MA=√3a/6、点 C 到平面 MDE 距离 a/4；Q19 值域 [-3,1]，ω=2，增区间 [-π/6+kπ,π/3+kπ]，减区间 [π/3+kπ,5π/6+kπ]；Q20 c_n=2n+1，a_n=n+1/2+2^{-n}，S_n=n(n+2)/2+1-2^{-n}；Q21 (x-4)²+y²=16，CE·CF 最大 -16/9、最小 -8；Q22 f=-2x²+8x+16，x∈[(7-√130)/3, 3√2-3]。
+- 关键推导：Q5 由 S3、S6−S3、S9−S6 成等差得 S9=81，故 a7+a8+a9=45；Q8 三顶点 (1,3)、(1,6)、(5/2,9/2) 给出 y/x∈[9/5,6]；Q12 用容斥扣违规 15 个三元组，余 5×3!=30；Q18 建系后平面 MDE 法向量 (0,2t,a)，由二面角 30° 得 4t²=a²/3；Q21 圆心到 M 圆心距离恒为 7，故 |CP|∈[6,8]，CE·CF=512/d²−16；Q22 由 g(2)=0 得 g(x)=k(x−2)，f 取 cosα=1/3。
+- 源疑点：Q1 原页题干把第二个集合印作 N={2,3,4} 却问 A∩B，按选项判为 B={2,3,4}，解析内已记 `【源疑点：…】`；Q22 两个不等式只确定 g(2)=0，f 不唯一（cosα∈[1/9,1]），本库取 cosα=1/3 的标准一组并在解析内记 `【源疑点：…】`。
+- 版式修正：Q8 的约束条件由行内 cases 改为行间公式（行内版本使印刷版第 2 页顶端只剩一个悬空 cases）；Q10 解析的概率式改为行内，消除答案框跨页；Q18 图重绘两轮（初版 B 过低、M 与 A1 标签挤压），最终按源图 V 形底面 + 三条竖直棱排布。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-liaoning-arts` / `phase5-b21`，live revision 7902；check-batch 通过。
+- 正式构建 attempt `d4333207-352d-4cfd-9873-b788c5f78deb`：四版 5/21/7/18 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b21.md`。
+- 门禁全通过：`review_receipts check-all`（337 批次）、`provenance check-all`（491 卷）、`solution_sources check-all`、`validate-receipts`（491 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（491 套）、`manifest_csv`（775 行）。
