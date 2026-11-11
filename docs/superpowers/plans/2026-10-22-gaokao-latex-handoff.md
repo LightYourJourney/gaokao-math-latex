@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2007 福建文科（phase5-b25）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 福建文科（22 题，`gk-2007-fujian-arts`）`phase5-b25` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7969，attempt `acc844aa-fd64-4b39-8f26-2c30c0fdd70b`；四版 6/22/8/19 页共 55 页，0 errors、0 overfull、0 缺字，Underfull 4 条逐条豁免（Q12 定长引号串），八类视觉检查逐页 0 fail / 0 pending；报告 `reports/phase5-b25.md`。
+- 三幅 TikZ 图（Q6 正方体、Q19 正三棱柱、Q22 轨迹图）各登记 `expected_occurrences=2`。
+- 关键结论：选择 C C D A A B D B D B B C；填空 13=15、14=[−5,7]、15=1/2、16 举例；Q17 C=135°、BC=√2；Q18 0.063/0.88/0.3024；Q19 证 AB1⊥平面 A1BD、二面角 arccos(√6/4)；Q20 h(t)=−t³+t−1、m>1；Q21 a_n 分段式、T_n=((2n−1)3^n+3)/6；Q22 y²=4x、λ1+λ2=0、弦长积最小 16。
+- 源疑点两处（解析内已记）：Q9 原页（D）印作 n⊂α，按题意应为 n⊥α；Q19(2) 原页印作 A−AD₁−B，按图形与第（1）问判为 A−A1D−B。
+- 版式修正：Q6 图 D/B1 标注移位；Q19 图四个标注外移；Q12 解析孤立「个。」改行内；Q12 题干 4 条 Underfull 已逐条豁免。
+- 门禁全通过：`review_receipts check-all`（341 批次）、`provenance check-all`（495 卷）、`solution_sources check-all`、`validate-receipts`（495 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（495 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（福建理、湖南文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 重庆理科（phase5-b24）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

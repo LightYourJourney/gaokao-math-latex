@@ -15734,3 +15734,16 @@
 - 正式构建 attempt `0b17d8c2-e5ba-4dba-8339-0efbb406c6e0`：四版 5/23/7/19 页，共 54 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：54 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版六处图页逐幅核对（试题 3/5、解析 3/5/11/18/22、简答 3/5、印刷 2/3/4/10/15/19）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b24.md`。
 - 门禁全通过：`review_receipts check-all`（340 批次）、`provenance check-all`（494 卷）、`solution_sources check-all`、`validate-receipts`（494 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（494 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase5-b25：2007 福建文科正式封账
+
+- 固定来源 `src-0acf8b896755a0d49256b461de40195bda1eaf59a6358f4cc74746c4be6de93f`（2 页 A3，印刷页 369–370，SHA-256 `96ffeae7…e5e4e58d0`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 三幅 TikZ 矢量图：Q6 正方体（E、F、G、H 为四棱中点，EF 与 GH）、Q19 正三棱柱（D 为 CC1 中点）、Q22 轨迹图（坐标轴、l:x=−1、F(1,0)），均登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 C C D A A B D B D B B C；填空 13=15、14=[−5,7]、15=1/2、16=例如三角形的相似关系与整数的同余关系；Q17 C=135°、BC=√2；Q18 0.063、0.88、0.3024；Q19 证 AB1⊥平面 A1BD，二面角 A−A1D−B 为 arccos(√6/4)；Q20 h(t)=−t³+t−1、m>1；Q21 a1=1、a_n=2·3^{n−2}（n≥2），T_n=((2n−1)3^n+3)/6；Q22 y²=4x、λ1+λ2=0、|MA|·|MB| 最小值 16。
+- 关键推导：Q6 建系得 EF=(1,0,−1)、GH=(0,1,1)，夹角余弦 −1/2 取锐角 60°；Q9 由 n⊥α 与 m∥n 推出 m⊥α；Q10 双曲线 c=2、右准线 x=1，圆半径 1；Q12 用 8⁴ 补集得 5904；Q14 顶点 (2,0)、(5,3)、(−1,3) 给 z∈[−5,7]；Q19 法向量 n1∝(−√3,1,0)、n2=(1,0,1)，cosθ=√6/4；Q22 设 y=k(x−1) 得以 x1x2=1、x1+x2=2+4/k²，λ1+λ2 分子 2−2x1x2=0，弦长积 4(2+k²+1/k²)≥16。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q9 原页（D）印作「n∥m，n⊂α ⇒ m⊥α」，按字面无选项成立，按命题意图与选项排布应为 n⊥α，本库照 n⊥α 转录；Q19(2) 原页印作「二面角 A−AD₁−B」，但题设只定义 D（CC1 中点）、图中无 D₁，按图形与第（1）问判为 A−A1D−B。
+- 版式修正：Q6 图 D 标注下移、B1 标注上移，避开虚线 A—D 与上棱；Q19 图 C、A1、B1、D 标注分别外移，消除压线；Q12 解析的「个。」孤立单字行改为行内叙述；Q12 题干「×××××××0000」定长引号串造成的 4 条 Underfull（试题/简答/解析/印刷，badness 1430–1721）逐条豁免并写明保留源文的理由，无溢出。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-fujian-arts` / `phase5-b25`，live revision 7969；check-batch 通过。
+- 正式构建 attempt `acc844aa-fd64-4b39-8f26-2c30c0fdd70b`：四版 6/22/8/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 missing characters，Underfull 4 条全部豁免。
+- 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、4 条 Underfull 豁免、0 其他豁免），四版九处图页逐幅核对（试题 2/5/6、解析 2/5/6/10/18/21、简答 2/5/6、印刷 2/4/7/15/18）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b25.md`。
+- 门禁全通过：`review_receipts check-all`（341 批次）、`provenance check-all`（495 卷）、`solution_sources check-all`、`validate-receipts`（495 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（495 套）、`manifest_csv`（775 行）。

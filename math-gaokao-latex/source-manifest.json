@@ -2876,6 +2876,14 @@
         "gk-2007-chongqing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-fujian-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2885,7 +2893,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a429ef68-3efe-46c8-9337-e714d167b643",
+  "last_transaction_id": "0fe499f1-630e-4c1f-bd4f-dbfeb01ecf53",
   "papers": [
     {
       "blocked_from": null,
@@ -35815,9 +35823,74 @@
       "title": "2007 年·普通高等学校招生考试·重庆卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_福建卷_文科/figures/f2007_fujian_arts_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_福建卷_文科/figures/f2007_fujian_arts_q22_locus.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_福建卷_文科/figures/f2007_fujian_arts_q6_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_fujian_arts",
+        "id": "gk-2007-fujian-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 369、370；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 6 题正方体、第 19 题正三棱柱与第 22 题轨迹图（坐标轴、准线、焦点）均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "福建文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-fujian-arts",
+      "production_state": "complete",
+      "project_dir": "2007_福建卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_福建文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_福建文_含解析.md",
+        "questions": "2007/2007_数学真题_福建文_试题.md",
+        "solution_body": "2007/2007_数学真题_福建文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0acf8b896755a0d49256b461de40195bda1eaf59a6358f4cc74746c4be6de93f"
+      ],
+      "title": "2007 年·普通高等学校招生考试·福建卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7956,
+  "revision": 7970,
   "schema_version": 1,
   "sources": [
     {
@@ -44478,8 +44551,8 @@
       "exam_type": "regular",
       "git_blob_oid": "325bc6fac6f69cb0134cc8871eccdfcb9363d683",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-fujian-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007福建文.pdf",
       "regions": [],
       "source_id": "src-0acf8b896755a0d49256b461de40195bda1eaf59a6358f4cc74746c4be6de93f",
