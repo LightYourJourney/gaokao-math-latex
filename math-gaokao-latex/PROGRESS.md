@@ -15617,3 +15617,15 @@
 - 正式构建 attempt `e6f819f2-f88a-4793-9b66-3cb1fbfcce09`：四版 6/24/8/19 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、1 条豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b15.md`。
 - 门禁全通过：`review_receipts check-all`（331 批次）、`provenance check-all`（485 卷）、`solution_sources check-all`、`validate-receipts`（485 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（485 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b16：2007 浙江文科正式封账
+
+- 固定来源 `src-528bca83d1729c5e256c5704e2749392287db42c581b9d7e1d49fb32dd6d30b2`（2 页 A3，印刷页 419–420，SHA-256 `31c1d0d7…9cd06995`），21 题：选 10、填 7、解 4；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 三幅 TikZ 矢量图：Q5 正方形草坪与喷水圆面、Q20 EA/DB 垂直底面的几何体、Q21 椭圆与割线；均登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 B C A D C C B D B B；填空 11=[0,1)、12=−24/25、13=50、14=−5/3、15=y=−5x+2、16=266、17=45°；Q18 AB=1、C=60°；Q19 a1=2、a3=4、a5=8、a7=12、a2n=2^n（n≥4），S2n=3n(n+1)/2+2^{n+1}−2；Q20 tan=√2；Q21 Smax=1，y=±√2/2 x±√6/2。
+- 源疑点：Q9 原页 (A)(B) 均印作 |2b|<|a−2b|，按题设应为 |2b|>|a−2b|；按命题意图取 B，并在解析内记 `【源疑点：…】`。
+- 关键推导：Q10 由准线与 PF1⊥PF2 得 |PF1|²=2(a²+c²)、|PF2|²=2(c²−a²)，乘积条件化为 (e²−1)(e²−3)=0；Q20 建系 C(0,0,0)、A(2,0,0)、B(0,2,0)，平面 EMC 法向量 (−1,1,2)，线面角正切 √2；Q21 由 |AB|=2 与 S=1 相除得 b²=1+k²，再解得 k²=1/2。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-zhejiang-arts` / `phase5-b16`，live revision 7853；check-batch 通过。
+- 正式构建 attempt `70fcae86-9f94-4967-a4fd-c7163bb13b56`：四版 4/20/6/16 页，共 46 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：46 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b16.md`。
+- 门禁全通过：`review_receipts check-all`（332 批次）、`provenance check-all`（486 卷）、`solution_sources check-all`、`validate-receipts`（486 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（486 套）、`manifest_csv`（775 行）。
