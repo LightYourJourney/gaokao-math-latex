@@ -15694,3 +15694,16 @@
 - 正式构建 attempt `d4333207-352d-4cfd-9873-b788c5f78deb`：四版 5/21/7/18 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b21.md`。
 - 门禁全通过：`review_receipts check-all`（337 批次）、`provenance check-all`（491 卷）、`solution_sources check-all`、`validate-receipts`（491 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（491 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b22：2007 辽宁理科正式封账
+
+- 固定来源 `src-029d07e75952903e14026f48f2fb99fb22ff79a0cd4fc30476bb54d2bc7ca3b4`（2 页 A3，印刷页 389–390，SHA-256 `edddae69…b912bfc`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ 矢量图：Q18 直三棱柱（与文科卷第 18 题同题同图，理科卷重绘副本），登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 B C D B B A C A D A B C；填空 13=−1、14=2、15=4√3π、16=30；Q17 值域 [−3,1]，ω=2，增区间 [−π/6+kπ,π/3+kπ]；Q18 MA=√3a/6、距离 a/4；Q19 L1=−q³/3+144q−10、L2=−q³/3+81q−10、L3=−q³/3+50q−10，Eξ=−q³/3+100q−10，q=10 时最大 1970/3；Q20 (x−4)²+y²=16，CE·CF 最大 −16/9、最小 −8；Q21 t∈(−2,0)∪(0,2)、lim=2/(2−t)，并证 a_{n+1}<a_n；Q22 三问证明。
+- 关键推导：Q5 用辅助角判断实部为负、虚部为正得第二象限；Q11 由双曲线定义 3k−2k=2 得 k=2，三边 6、4、2√13，海伦公式或余弦定理给出面积 12；Q12 若 0 是 f 的极大值点则 g≤f≤0 亦在 0 取局部极大，故「f 极大而 g 非极值」不可能；Q19 利润＝pq−C 逐情形展开，期望线性组合后求导得 q=10；Q22 用 g'=2u²−tu+1（u=e^x）判别式判号，并把 f 配方为 2[t−(e^x+x)/2]²+(e^x−x)²/2+1 证 f≥3/2。
+- 版式修正：Q19 题干表格与三个小问原跨页割裂，源 MD 加 `question-needspace: 0.42` 后整题落在第 5 页；Q12 解析中「f=g=∓x²」改为分别举 f=g=x² 与 f=g=−x²。
+- 源缺陷与警告：无内容性 issue；四版 0 Overfull、0 Underfull、0 缺字。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-liaoning-science` / `phase5-b22`，live revision 7913；check-batch 通过。
+- 正式构建 attempt `3ae92ca6-2c52-4334-89a1-a30c726eefad`：四版 5/22/7/17 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b22.md`。
+- 门禁全通过：`review_receipts check-all`（338 批次）、`provenance check-all`（492 卷）、`solution_sources check-all`、`validate-receipts`（492 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（492 套）、`manifest_csv`（775 行）。

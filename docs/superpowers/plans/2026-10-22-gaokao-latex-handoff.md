@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 辽宁理科（phase5-b22）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 辽宁理科（22 题，`gk-2007-liaoning-science`）`phase5-b22` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7913，attempt `3ae92ca6-2c52-4334-89a1-a30c726eefad`；四版 5/22/7/17 页共 51 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b22.md`。
+- 一幅 TikZ 图（Q18 直三棱柱，与文科卷第 18 题同题）登记 `expected_occurrences=2`。
+- 关键结论：选择 B C D B B A C A D A B C；填空 13=−1、14=2、15=4√3π、16=30；Q17 [−3,1]、ω=2 及增区间；Q18 MA=√3a/6、距离 a/4；Q19 三个利润式与 Eξ=−q³/3+100q−10、q=10 时 1970/3；Q20 (x−4)²+y²=16、最大 −16/9 最小 −8；Q21 t∈(−2,0)∪(0,2)、lim=2/(2−t)、a_{n+1}<a_n；Q22 三问证明（含 f≥3/2 的配方）。
+- 版式修正：Q19 加 `question-needspace: 0.42`，题干表格与三个小问不再跨页割裂。
+- 门禁全通过：`review_receipts check-all`（338 批次）、`provenance check-all`（492 卷）、`solution_sources check-all`、`validate-receipts`（492 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（492 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（重庆文理、福建文理、湖南文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 辽宁文科（phase5-b21）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
