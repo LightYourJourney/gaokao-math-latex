@@ -1,0 +1,41 @@
+% 2007 年陕西卷理科第 8 题：f(x-1) 与 f^{-1}(x-1) 的图象四选项。
+%   （D）正确：两曲线关于 y=x-1 对称；其余为平移/对称错误的干扰项。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007陕西理.pdf
+% SHA-256：13d2ff59859300ff8372770c8d5877b5b9e8a81f4934dcc5481588f27cf745f7
+% 原页：2007陕西理.pdf 第 1 页（A3 三栏）第 1 栏，书页码 401。
+% 重绘依据：按原页四个小图的曲线、渐近线与对称关系重绘。
+\begin{tikzpicture}[scale=0.8, semithick,
+  every node/.style={inner sep=1pt, font=\small}]
+  % A
+  \begin{scope}[shift={(0,0)}]
+    \draw[->,>=stealth] (-0.5,0) -- (2.7,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-0.5) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0:1.5,samples=60] plot (\x,{0.6*exp(0.8*\x)});
+    \draw[domain=0.2:2.5,samples=60] plot (\x,{0.5*exp(0.8*(\x-1))});
+    \node[below] at (1,-0.8) {（A）};
+  \end{scope}
+  % B
+  \begin{scope}[shift={(4.4,0)}]
+    \draw[->,>=stealth] (-0.5,0) -- (2.7,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-0.5) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0:1.6,samples=60] plot (\x,{0.5*exp(0.9*\x)});
+    \draw[domain=1.05:2.5,samples=60] plot (\x,{ln(\x-1)/ln(2)+1});
+    \node[below] at (1,-0.8) {（B）};
+  \end{scope}
+  % C
+  \begin{scope}[shift={(0,-4.2)}]
+    \draw[->,>=stealth] (-0.5,0) -- (2.7,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-0.5) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0.2:2.5,samples=60] plot (\x,{ln(\x)/ln(2)+0.6});
+    \draw[domain=1.05:2.5,samples=60] plot (\x,{ln(\x-1)/ln(2)});
+    \node[below] at (1,-0.8) {（C）};
+  \end{scope}
+  % D 正确
+  \begin{scope}[shift={(4.4,-4.2)}]
+    \draw[->,>=stealth] (-0.5,0) -- (2.7,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-0.5) -- (0,2.2) node[above] {$y$};
+    \draw[domain=0:1.6,samples=60] plot (\x,{0.55*exp(0.9*\x)});
+    \draw[domain=1.05:2.5,samples=60] plot (\x,{ln(\x-1)/ln(2)+1});
+    \node[below] at (1,-0.8) {（D）};
+  \end{scope}
+\end{tikzpicture}

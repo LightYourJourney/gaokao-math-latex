@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 陕西理科（phase5-b20）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 陕西理科（22 题，`gk-2007-shaanxi-science`）`phase5-b20` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7884，attempt `839412cb-b112-44f3-b239-f259a796d244`；四版 5/20/7/17 页共 49 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b20.md`。
+- 三幅 TikZ 图（Q8 反函数图象、Q15 向量图、Q19 四棱锥）均登记 `expected_occurrences=2`。
+- 关键结论：选择 D C A B B C D D B D A C；填空 13=1/3、14=8、15=6、16=210；Q17 m=1、最小值 1−√2；Q18 101/125、Eξ=57/25；Q19 arccos(9/√93)；Q20 0<a<4 与分段减区间；Q21 x²/3+y²=1、√3/2；Q22 a_k=k、1/n。
+- 版式修正：Q8 为题图选项，删去图后多余的四行选项文字。
+- 门禁全通过：`review_receipts check-all`（336 批次）、`provenance check-all`（490 卷）、`solution_sources check-all`、`validate-receipts`（490 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（490 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（辽宁文理、重庆文理、福建文理、湖南文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 陕西文科（phase5-b19）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
