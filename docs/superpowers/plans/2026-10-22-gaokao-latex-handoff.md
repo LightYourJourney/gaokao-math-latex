@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 重庆文科（phase5-b23）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 重庆文科（22 题，`gk-2007-chongqing-arts`）`phase5-b23` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7928，attempt `623ebf52-f508-4592-9f48-a818bfd32203`；四版 5/25/7/18 页共 55 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b23.md`。
+- 两幅 TikZ 图（Q19 直三棱柱、Q21 抛物线与垂直平分线）登记 `expected_occurrences=2`。
+- 关键结论：选择 D D A B A B C A D C B C；填空 13=√3、14=9、15=288、16=2√2；Q17 3/20、193/400；Q18 定义域与 14/5；Q19 4/5 与 73/150；Q20 长 2、宽 1、高 3/2、Vmax=3；Q21 F(2,0)、l:x=−2、定值 8；Q22 a_n=3n−1 与对数不等式。
+- 源疑点两处（解析内已记）：Q1 原页 a2/a1 数值与选项矛盾，按选项取 q=8 (D)；Q11「√3b」按 √3·b 理解（按 √(3b) 得 5/4，不在选项内）。
+- 图稿修正：Q19 拉开斜投影深度使 D 脱离对角线 AC；Q21 重算垂直平分线端点，m 过 P(22/3,0)，A/F/P 标签移位消压线。
+- 门禁全通过：`review_receipts check-all`（339 批次）、`provenance check-all`（493 卷）、`solution_sources check-all`、`validate-receipts`（493 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（493 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（重庆理、福建文理、湖南文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 辽宁理科（phase5-b22）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

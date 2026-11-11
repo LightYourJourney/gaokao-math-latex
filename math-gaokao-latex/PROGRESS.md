@@ -15707,3 +15707,16 @@
 - 正式构建 attempt `3ae92ca6-2c52-4334-89a1-a30c726eefad`：四版 5/22/7/17 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b22.md`。
 - 门禁全通过：`review_receipts check-all`（338 批次）、`provenance check-all`（492 卷）、`solution_sources check-all`、`validate-receipts`（492 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（492 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b23：2007 重庆文科正式封账
+
+- 固定来源 `src-2fc64f61c33ef44b11aa02889437a20506aa070797fcbc333addf0d8ee620d0e`（2 页 A3，印刷页 357–358，SHA-256 `a647b602…cef633a6`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q19 直三棱柱（D 在 BB1 三分之一处、E 为垂足）、Q21 抛物线与垂直平分线（α=60° 作图的示意图）；均登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 D D A B A B C A D C B C；填空 13=√3、14=9、15=288、16=2√2；Q17 3/20、193/400；Q18 定义域 x≠π/2+kπ、f(α)=14/5；Q19 异面直线距离 4/5、四棱锥体积 73/150；Q20 长 2、宽 1、高 3/2，Vmax=3 m³；Q21 F(2,0)、l:x=−2，|FP|−|FP|cos2α=8；Q22 a_n=3n−1 且 3Tn+1>log2(3n+2)。
+- 关键推导：Q8 由弦心距 d=cos60°=1/2 得 k²=3；Q11 把 √3b 看作 √3·b，得 3b²=1−a²，三角换元后 a+3b≤2；Q12 用切线条件 a²+3b²=16 与 b²=a²−4 联立得 a=√7；Q19 把两异面直线投影到 xz 平面求距离，E 用 A1D 上的投影参数 9/25 求得，体积拆成 C-ABD 与 C-ADE 两个四面体；Q21 设斜率 t=tanα 求中点与 x 轴交点，得 |FP|=4/sin²α；Q22 用 (3k)³>(3k+2)(3k−1)² 逐项放缩并累乘出 (3n+2)/2。
+- 源疑点：Q1 原页印「a2=8，a1=64」，算得 q=1/8 与四选项（2/3/4/8）不符，按选项反推为 a1=8、a2=64（q=8），取 (D)，解析内已记 `【源疑点：…】`；Q11 中「√3b」的根号只覆盖 3，按 √3·b 理解（若按 √(3b) 则最大值为 5/4，与选项不符）。
+- 图稿修正：Q19 首版斜投影深度偏移与 D 点高度巧合，使 D 落在底面对角线 AC 上；改为 A/C 抬到 0.55、D 落到 1.18 后分离，D 标签移到左侧。Q21 首版垂直平分线端点未落在过中点、斜率 −1/√3 的直线上，已按 M(10/3,2√3) 重算两端点并让 m 过 P(22/3,0)；A、F、P 标签分别改到上左／右下／正下，消除压线。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-chongqing-arts` / `phase5-b23`，live revision 7928；check-batch 通过。
+- 正式构建 attempt `623ebf52-f508-4592-9f48-a818bfd32203`：四版 5/25/7/18 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b23.md`。
+- 门禁全通过：`review_receipts check-all`（339 批次）、`provenance check-all`（493 卷）、`solution_sources check-all`、`validate-receipts`（493 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（493 套）、`manifest_csv`（775 行）。

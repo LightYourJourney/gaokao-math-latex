@@ -2860,6 +2860,14 @@
         "gk-2007-liaoning-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-chongqing-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2869,7 +2877,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a3d0492c-84a6-436f-8c23-eecd81d2a36e",
+  "last_transaction_id": "2f47a11f-5cca-4c30-8794-a6acb6a7eeaf",
   "papers": [
     {
       "blocked_from": null,
@@ -35670,9 +35678,70 @@
       "title": "2007 年·普通高等学校招生考试·辽宁卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_重庆卷_文科/figures/f2007_chongqing_arts_q19_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_重庆卷_文科/figures/f2007_chongqing_arts_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_chongqing_arts",
+        "id": "gk-2007-chongqing-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 357、358；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题直三棱柱与第 21 题抛物线与垂直平分线均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "重庆文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-chongqing-arts",
+      "production_state": "complete",
+      "project_dir": "2007_重庆卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_重庆文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_重庆文_含解析.md",
+        "questions": "2007/2007_数学真题_重庆文_试题.md",
+        "solution_body": "2007/2007_数学真题_重庆文_解析正文.md"
+      },
+      "source_ids": [
+        "src-2fc64f61c33ef44b11aa02889437a20506aa070797fcbc333addf0d8ee620d0e"
+      ],
+      "title": "2007 年·普通高等学校招生考试·重庆卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7914,
+  "revision": 7929,
   "schema_version": 1,
   "sources": [
     {
@@ -44429,8 +44498,8 @@
       "exam_type": "regular",
       "git_blob_oid": "a36ccaafc049e805953284cab007b7ac5cfc3c2c",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-chongqing-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007重庆文.pdf",
       "regions": [],
       "source_id": "src-2fc64f61c33ef44b11aa02889437a20506aa070797fcbc333addf0d8ee620d0e",
