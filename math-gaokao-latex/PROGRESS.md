@@ -15720,3 +15720,17 @@
 - 正式构建 attempt `623ebf52-f508-4592-9f48-a818bfd32203`：四版 5/25/7/18 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b23.md`。
 - 门禁全通过：`review_receipts check-all`（339 批次）、`provenance check-all`（493 卷）、`solution_sources check-all`、`validate-receipts`（493 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（493 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b24：2007 重庆理科正式封账
+
+- 固定来源 `src-a2b274ecf6dd5d3ff58d67d801821d4e5dc2188b8d66f211089036722b71d122`（2 页 A3，印刷页 355–356，SHA-256 `83bfde9c…80c65c3e`），22 题：选 10、填 6、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 三幅 TikZ 矢量图：Q10 四边形、Q19 直三棱柱（D 在 BB1 的 4/5 处、E 为 B1 到 A1D 的垂足）、Q22 椭圆与右准线（P1/P2/P3 与 F 的连线两两成 120°），均登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A D C B A C B B D C；填空 11=4/5、12=7、13=[−1,0]、14=(3+3√3)/2、15=25、16=8√3/3；Q17 最大值 3+2√3、最小正周期 π、tan(4α/5)=√3；Q18 获赔 3/11，P(0)=8/11、P(9000)=121/495、P(18000)=3/110、P(27000)=1/990，Eξ=29900/11；Q19 异面直线距离 2√29/29、二面角正切 3√3/2；Q20 a=12、b=−3，减 (0,1) 增 (1,+∞)，c≤−1 或 c≥3/2；Q21 a_n=3n−1 且 3T_n+1>log₂(3n+2)；Q22 x²/36+y²/27=1、定值 2/3。
+- 关键推导：Q4 由 2^n=64 定 n=6、常数项 C(6,3)=20；Q7 令 |a|=cos t、2|b|=sin t，化为 (s−1/s)/2 在 s=√2 取 √2/4；Q8 由极限得 b=2a，分子分母同除 a^n 后由 2^{n−1}/2^{n+1} 得 1/4；Q10 由两垂直条件得 AB∥DC，用 a+d+c=4 与 d(a+c)=4 解出 d=2、a+c=2；Q13 由 2^{x²+2ax−a}≥1 恒成立得 Δ=4a²+4a≤0；Q16 以焦点为极点得 r=2/(1−√2cosθ)，θ=105°/285° 两向相乘得 4/(1−2cos²105°)=8√3/3；Q19 由体积比 3:5 反解 BD=8/5，投影到 xz 平面求距离，法向量 n1=(−√2,0,0)、n2∝(−2√2,−2,5√2) 得 tanθ=3√3/2；Q21 用 (3k)³>(3k+2)(3k−1)² 逐项放缩累乘；Q22 由 a²/c=12、c=3 得 a=6、b²=27，焦点极坐标 1/|FP|=(2+cosθ)/9，三向余弦和为零得 2/3。
+- 源疑点：无题面性矛盾需要改题；原卷未给分值，按约定不补。
+- 版式修正：Q10 加 `question-needspace: 0.48`，避免题干留在页 2、图与选项掉到页 3；Q10 解析首段拆为「结论句 + 取系设点」两段，消除「解析」标题孤立在页脚；Q19 图撤去多余的 E—C1 连线，B1 标注移到顶点右上、D 标注移到 C1D 线上方、E 标注左移，消除三标注互相压线；Q22 的 P3 标注由右侧改到内部上方，避免压椭圆曲线。
+- 参数稿两处笔误已改：Q8 极限式补齐分子分母同除 a^n 的中间式；Q16 极坐标方程由误写的 1+√2cosθ 改为正确的 1−√2cosθ（乘积不变，推导链恢复自洽）。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-chongqing-science` / `phase5-b24`，live revision 7955；check-batch 通过。
+- 正式构建 attempt `0b17d8c2-e5ba-4dba-8339-0efbb406c6e0`：四版 5/23/7/19 页，共 54 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：54 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版六处图页逐幅核对（试题 3/5、解析 3/5/11/18/22、简答 3/5、印刷 2/3/4/10/15/19）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b24.md`。
+- 门禁全通过：`review_receipts check-all`（340 批次）、`provenance check-all`（494 卷）、`solution_sources check-all`、`validate-receipts`（494 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（494 套）、`manifest_csv`（775 行）。

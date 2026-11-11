@@ -1,0 +1,36 @@
+% 2007 年重庆卷理科第 22 题：椭圆 x^2/36+y^2/27=1、右焦点 F(3,0)、右准线 l:x=12，
+%   P1、P2、P3 为椭圆上三点且两两与 F 的连线夹角都是 120°。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007重庆理.pdf
+% SHA-256：83bfde9cfb8071229219565245c08cf4481943489659cb0f050919c380c65c3e
+% 原页：2007重庆理.pdf 第 2 页（A3 三栏）第 3 栏，书页码 356。
+% 重绘依据：以焦点为极点取 r=4.5/(1+0.5cosθ)，θ 取 30°、150°、270° 得三点
+%   P1(5.72,1.57)、P2(-3.88,3.97)、P3(3,-4.5)，与原页三点方位一致。
+\begin{tikzpicture}[x=0.45cm, y=0.45cm, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % 坐标轴
+  \draw[->,>=stealth] (-8.4,0) -- (14.4,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-7.4) -- (0,7.4) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 椭圆 x^2/36+y^2/27=1
+  \draw[line width=1pt] (0,0) ellipse (6 and 5.196);
+
+  % 右准线 l：x=12
+  \draw (12,-6.6) -- (12,6.6) node[above] {$l$};
+
+  \coordinate (F)  at (3,0);
+  \coordinate (P1) at (5.72,1.57);
+  \coordinate (P2) at (-3.876,3.97);
+  \coordinate (P3) at (3,-4.5);
+
+  \draw (F) -- (P1);
+  \draw (F) -- (P2);
+  \draw (F) -- (P3);
+
+  \fill (F) circle (1.4pt);
+  \node[below right=1pt] at (F) {$F$};
+  \node[above right] at (P1) {$P_1$};
+  \node[above left] at (P2) {$P_2$};
+  \node[above left=2pt] at (P3) {$P_3$};
+\end{tikzpicture}

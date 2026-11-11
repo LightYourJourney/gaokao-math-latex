@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 重庆理科（phase5-b24）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 重庆理科（22 题，`gk-2007-chongqing-science`）`phase5-b24` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7955，attempt `0b17d8c2-e5ba-4dba-8339-0efbb406c6e0`；四版 5/23/7/19 页共 54 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b24.md`。
+- 三幅 TikZ 图（Q10 四边形、Q19 直三棱柱、Q22 椭圆与准线）各登记 `expected_occurrences=2`。
+- 关键结论：选择 A D C B A C B B D C；填空 11=4/5、12=7、13=[−1,0]、14=(3+3√3)/2、15=25、16=8√3/3；Q17 最大值 3+2√3、周期 π、tan(4α/5)=√3；Q18 3/11 与 Eξ=29900/11；Q19 2√29/29 与 3√3/2；Q20 a=12、b=−3、c≤−1 或 c≥3/2；Q21 a_n=3n−1 与对数不等式；Q22 x²/36+y²/27=1、定值 2/3。
+- 版式修正：Q10 加 `question-needspace: 0.48` 防题干与图分页；Q10 解析拆段消除孤立「解析」标题；Q19 图撤多余连线并重排 B1/D/E 标注；Q22 的 P3 标注移入椭圆内。
+- 门禁全通过：`review_receipts check-all`（340 批次）、`provenance check-all`（494 卷）、`solution_sources check-all`、`validate-receipts`（494 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（494 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（福建文理、湖南文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 重庆文科（phase5-b23）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
