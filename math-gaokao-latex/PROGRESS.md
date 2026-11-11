@@ -15642,3 +15642,16 @@
 - 正式构建 attempt `2c6ea94d-8d78-4282-89a9-16cb3115ec4b`：四版 6/22/8/17 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
 - 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b17.md`。
 - 门禁全通过：`review_receipts check-all`（333 批次）、`provenance check-all`（487 卷）、`solution_sources check-all`、`validate-receipts`（487 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（487 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b18：2007 湖北文科正式封账
+
+- 固定来源 `src-89f06095bb202a1311d01f8dd046d3e3209bf4e8337cecc50cc728594ac5f8d3`（2 页 A3，印刷页 377–378，SHA-256 `290a153d…f1b1cacb`），21 题：选 10、填 5、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 五幅 TikZ 矢量图：Q5 正方体与平面 D1EF、Q6 频率分布直方图、Q15 药物释放曲线、Q17 三棱锥 V-ABC、Q21 抛物线与割线；均登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 A D C A D B A C B B；填空 11=−3、12=8、13=3、14=15/128、15（1）分段式（2）0.6；Q16 最大值 3、最小值 2，1<m<4；Q17 θ=π/4；Q18 P(x)=(21−x)(432+6x²)，定价 18 元、最大利润 11664 元；Q19 0<a<3−2√2，f(0)f(1)−f(0)=2a²<1/16；Q20 证明与倒数和 (3/2)(1−q^{-2n})/(1−q^{-2})（q≠1）；Q21 面积最小 2√2p²，存在 l:y=p/2。
+- 关键推导：Q5 平面 D1EF 为 −y+2z−1=0，点 G 到面距离 √5/5 与 λ 无关；Q9 投影方程 7y²−96y−28=0 得 y=14 或 −2/7，由 |b|≤14 舍去 14；Q19 根的分布给出 0<a<3−2√2，再用 3−2√2<√2/8 得 2a²<1/16；Q21 弦长平方化为 (4m−2p)y1+4mp−4m²，令 4m−2p=0 得 m=p/2。
+- 图稿修正：Q17 初稿 C、D 标签重叠、VC 与底面关系不清，重画为 A(0,0)、B(4,0)、C(1.3,1.3)、V(1.3,4.2)、D(2,0)，VC 与 CD 虚线；Q5 截面加浅灰填充。
+- 源缺陷与警告：无内容性 issue；四版 0 Overfull、0 Underfull、0 缺字。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-hubei-arts` / `phase5-b18`，live revision 7866；check-batch 通过。
+- 正式构建 attempt `61a91cc4-3c80-4720-bd8a-b22aa6a20a91`：四版 6/24/8/21 页，共 59 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：59 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b18.md`。
+- 门禁全通过：`review_receipts check-all`（334 批次）、`provenance check-all`（488 卷）、`solution_sources check-all`、`validate-receipts`（488 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（488 套）、`manifest_csv`（775 行）。

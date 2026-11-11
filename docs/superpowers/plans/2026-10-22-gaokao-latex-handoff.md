@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 湖北文科（phase5-b18）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 湖北文科（21 题，`gk-2007-hubei-arts`）`phase5-b18` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7866，attempt `61a91cc4-3c80-4720-bd8a-b22aa6a20a91`；四版 6/24/8/21 页共 59 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b18.md`。
+- 五幅 TikZ 图（Q5 正方体截面、Q6 直方图、Q15 药物释放曲线、Q17 三棱锥、Q21 抛物线割线）均登记 `expected_occurrences=2`。
+- 关键结论：选择 A D C A D B A C B B；填空 11=−3、12=8、13=3、14=15/128、15（1）分段式（2）0.6；Q16 最大值 3、最小值 2，1<m<4；Q17 θ=π/4；Q18 定价 18 元、最大利润 11664 元；Q19 0<a<3−2√2 且 2a²<1/16；Q20 倒数和 (3/2)(1−q^{-2n})/(1−q^{-2})；Q21 面积最小 2√2p²、l:y=p/2。
+- 图稿修正：Q17 重画 V-ABC 的投影，VC 与 CD 虚线、C/D 标签分离；Q5 截面加浅灰填充。
+- 门禁全通过：`review_receipts check-all`（334 批次）、`provenance check-all`（488 卷）、`solution_sources check-all`、`validate-receipts`（488 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（488 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（湖北理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 浙江理科（phase5-b17）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

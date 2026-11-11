@@ -2820,6 +2820,14 @@
         "gk-2007-zhejiang-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b18",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-hubei-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2829,7 +2837,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "8c14df72-ed64-4850-b4be-aa1652db81d4",
+  "last_transaction_id": "ad7882ac-2f0d-4c7d-8dc4-fd79aada1e53",
   "papers": [
     {
       "blocked_from": null,
@@ -35313,9 +35321,82 @@
       "title": "2007 年·普通高等学校招生考试·浙江卷·理科",
       "track": "science",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖北卷_文科/figures/f2007_hubei_arts_q05_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖北卷_文科/figures/f2007_hubei_arts_q06_histogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖北卷_文科/figures/f2007_hubei_arts_q15_drug.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖北卷_文科/figures/f2007_hubei_arts_q17_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_湖北卷_文科/figures/f2007_hubei_arts_q21_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_hubei_arts",
+        "id": "gk-2007-hubei-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 377、378；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 5 题正方体与平面 D1EF、第 6 题频率分布直方图、第 15 题药物释放曲线、第 17 题三棱锥 V-ABC、第 21 题抛物线与割线均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖北文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-hubei-arts",
+      "production_state": "complete",
+      "project_dir": "2007_湖北卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_湖北文_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_湖北文_含解析.md",
+        "questions": "2007/2007_数学真题_湖北文_试题.md",
+        "solution_body": "2007/2007_数学真题_湖北文_解析正文.md"
+      },
+      "source_ids": [
+        "src-89f06095bb202a1311d01f8dd046d3e3209bf4e8337cecc50cc728594ac5f8d3"
+      ],
+      "title": "2007 年·普通高等学校招生考试·湖北卷·文科",
+      "track": "arts",
+      "year": 2007
     }
   ],
-  "revision": 7862,
+  "revision": 7869,
   "schema_version": 1,
   "sources": [
     {
@@ -43880,8 +43961,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f44035e4c360a5332effc89e4ed111e17a322683",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-hubei-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007湖北文.pdf",
       "regions": [],
       "source_id": "src-89f06095bb202a1311d01f8dd046d3e3209bf4e8337cecc50cc728594ac5f8d3",

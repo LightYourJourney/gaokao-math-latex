@@ -1,0 +1,18 @@
+% 2007 年湖北卷文科第 15 题：药物释放过程中含药量 y 与时间 t 的关系图。
+%   0—0.1 小时线性上升至 1 毫克，0.1 小时后按 (1/16)^(t-a) 衰减。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007湖北文.pdf
+% SHA-256：290a153da24ec0f3a3abb8bb916d9b7e06d203d3ef5bd7bb221c93f7f1b1cacb
+% 原页：2007湖北文.pdf 第 1 页（A3 三栏）第 3 栏，书页码 377。
+% 重绘依据：按原页折线—曲线衔接点 (0.1,1) 与衰减趋势重绘。
+\begin{tikzpicture}[x=4.2cm, y=1.5cm, semithick,
+  every node/.style={inner sep=1pt}]
+  \draw[->,>=stealth] (0,0) -- (1.25,0) node[right] {$t$ (小时)};
+  \draw[->,>=stealth] (0,0) -- (0,1.25) node[above] {$y$ (毫克)};
+  \node[below left] at (0,0) {$O$};
+  \draw (0,0) -- (0.1,1);
+  \draw[domain=0.1:1.15,samples=100] plot (\x,{(1/16)^(\x-0.1)});
+  \draw[dashed] (0.1,0) -- (0.1,1);
+  \draw[dashed] (0,1) -- (0.1,1);
+  \node[left] at (0,1) {$1$};
+  \node[below] at (0.1,0) {$0.1$};
+\end{tikzpicture}
