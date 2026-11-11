@@ -2812,6 +2812,14 @@
         "gk-2007-zhejiang-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b17",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-zhejiang-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2821,7 +2829,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "44bb94a6-a691-43d9-85fe-c8d9e04253ff",
+  "last_transaction_id": "8c14df72-ed64-4850-b4be-aa1652db81d4",
   "papers": [
     {
       "blocked_from": null,
@@ -35236,9 +35244,78 @@
       "title": "2007 年·普通高等学校招生考试·浙江卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_浙江卷_理科/figures/f2007_zhejiang_science_q04_square.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_浙江卷_理科/figures/f2007_zhejiang_science_q08_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_浙江卷_理科/figures/f2007_zhejiang_science_q19_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_浙江卷_理科/figures/f2007_zhejiang_science_q20_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_zhejiang_science",
+        "id": "gk-2007-zhejiang-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 417、418；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 4 题草坪喷水、第 8 题 f 与 f' 四组图象、第 19 题 EA/DB 垂直底面的几何体、第 20 题椭圆割线均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "浙江理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-zhejiang-science",
+      "production_state": "complete",
+      "project_dir": "2007_浙江卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_浙江理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_浙江理_含解析.md",
+        "questions": "2007/2007_数学真题_浙江理_试题.md",
+        "solution_body": "2007/2007_数学真题_浙江理_解析正文.md"
+      },
+      "source_ids": [
+        "src-a8e2b43295f590287ab6dfccd71eb9b2755147b7d847dbb0b5155c7f65248cd2"
+      ],
+      "title": "2007 年·普通高等学校招生考试·浙江卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7854,
+  "revision": 7862,
   "schema_version": 1,
   "sources": [
     {
@@ -43779,8 +43856,8 @@
       "exam_type": "regular",
       "git_blob_oid": "2e906a007338b051954a4b5d03eabf7829c86f23",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-zhejiang-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007浙江理.pdf",
       "regions": [],
       "source_id": "src-a8e2b43295f590287ab6dfccd71eb9b2755147b7d847dbb0b5155c7f65248cd2",

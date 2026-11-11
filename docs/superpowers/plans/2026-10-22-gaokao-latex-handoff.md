@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-11 接续：2007 浙江理科（phase5-b17）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 浙江理科（22 题，`gk-2007-zhejiang-science`）`phase5-b17` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7861，attempt `2c6ea94d-8d78-4282-89a9-16cb3115ec4b`；四版 6/22/8/17 页共 53 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b17.md`。
+- 四幅 TikZ 图（Q4 草坪喷水、Q8 f 与 f' 图象、Q19 垂直底面几何体、Q20 椭圆割线）均登记 `expected_occurrences=2`。
+- 关键结论：选择 A D D B A B C B B C；填空 11=i、12=−7/25、13=(0,2)、14=266、15=5/9、16=45°、17=[0,4/3]；Q18 AB=1、C=60°；Q19 45°；Q20 Smax=1、y=±√2/2 x±√6/2；Q21 S2n=3n(n+1)/2+2^{n+1}−2、1/6≤Tn≤5/24；Q22 单调区间与 x0=2。
+- 版式修正：Q8 删除图后多余的四行选项文字；Q19 调整 E 点高度（AE=1）并放大。
+- 门禁全通过：`review_receipts check-all`（333 批次）、`provenance check-all`（487 卷）、`solution_sources check-all`、`validate-receipts`（487 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（487 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（湖北文理、湖南文理、福建文理、辽宁文理、重庆文理、陕西文理等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-11 接续：2007 浙江文科（phase5-b16）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

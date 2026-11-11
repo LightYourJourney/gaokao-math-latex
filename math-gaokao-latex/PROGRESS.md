@@ -15629,3 +15629,16 @@
 - 正式构建 attempt `70fcae86-9f94-4967-a4fd-c7163bb13b56`：四版 4/20/6/16 页，共 46 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：46 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b16.md`。
 - 门禁全通过：`review_receipts check-all`（332 批次）、`provenance check-all`（486 卷）、`solution_sources check-all`、`validate-receipts`（486 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（486 套）、`manifest_csv`（775 行）。
+
+### 2026-11-11 phase5-b17：2007 浙江理科正式封账
+
+- 固定来源 `src-a8e2b43295f590287ab6dfccd71eb9b2755147b7d847dbb0b5155c7f65248cd2`（2 页 A3，印刷页 417–418，SHA-256 `3b1e5fbc…e5bd2d4`），22 题：选 10、填 7、解 5；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 四幅 TikZ 矢量图：Q4 草坪喷水、Q8 f 与 f' 四组图象、Q19 EA/DB 垂直底面的几何体、Q20 椭圆割线；均登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A D D B A B C B B C；填空 11=i、12=−7/25、13=(0,2)、14=266、15=5/9、16=45°、17=[0,4/3]；Q18 AB=1、C=60°；Q19(2) 45°；Q20 Smax=1、y=±√2/2 x±√6/2；Q21 a1=2,a3=4,a5=8,a7=12，S2n=3n(n+1)/2+2^{n+1}−2，1/6≤Tn≤5/24；Q22 增(−∞,−2),(2,∞)、减(−2,2)，x0=2。
+- 关键推导：Q17 可行域三顶点 (3,4)、(3,−3m)、(−5/(1+2m),5m/(1+2m))，逐一纳入圆得 0≤m≤4/3；Q19 平面 CDE 法向量 (1,2,−2)，CM 与平面成 45°；Q21(3) T1=1/6、第二项 1/24，其余项绝对值之和 <1/24，故 Tn∈(1/6,5/24)；Q22 令 u=t^{1/3}，h(u)=2u³/3−xu²+x³/3 在 u=x 取最小值 0，故唯一 x0=2（t=8=x³）。
+- 源缺陷与警告：无内容性 issue；四版 0 Overfull、0 Underfull、0 缺字。
+- 版式修正：Q8 为题图选项，删除题干后多余的四行选项文字；Q19 将 E 点高度改为 AE=1 的比例并放大图形。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-zhejiang-science` / `phase5-b17`，live revision 7861；check-batch 通过。
+- 正式构建 attempt `2c6ea94d-8d78-4282-89a9-16cb3115ec4b`：四版 6/22/8/17 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 missing characters。
+- 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b17.md`。
+- 门禁全通过：`review_receipts check-all`（333 批次）、`provenance check-all`（487 卷）、`solution_sources check-all`、`validate-receipts`（487 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（487 套）、`manifest_csv`（775 行）。
