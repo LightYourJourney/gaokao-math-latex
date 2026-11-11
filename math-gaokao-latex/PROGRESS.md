@@ -15747,3 +15747,15 @@
 - 正式构建 attempt `acc844aa-fd64-4b39-8f26-2c30c0fdd70b`：四版 6/22/8/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 missing characters，Underfull 4 条全部豁免。
 - 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、4 条 Underfull 豁免、0 其他豁免），四版九处图页逐幅核对（试题 2/5/6、解析 2/5/6/10/18/21、简答 2/5/6、印刷 2/4/7/15/18）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b25.md`。
 - 门禁全通过：`review_receipts check-all`（341 批次）、`provenance check-all`（495 卷）、`solution_sources check-all`、`validate-receipts`（495 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（495 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase5-b26：2007 福建理科正式封账
+
+- 固定来源 `src-ab2bcc25dfcca1789794a46f2e791944698bebbbfbc33afaf1d2a5749168b17d`（2 页 A3，印刷页 367–368，SHA-256 `e9ade36d…bcc5a1dc`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q18 正三棱柱（D 为 CC1 中点）、Q20 轨迹图（l:x=−1、F(1,0)），各登记 expected_occurrences=2；Q12 的三阶方阵为数学排版，不建图。
+- 主代理逐题复核 22 题：选择 D B C B A A C D D B B D；填空 13=[−5,7]、14=√2−1、15=2/3、16 例如三角形全等、相似、整数同余；Q17 C=135°、BC=√2；Q18 证 AB1⊥平面 A1BD、二面角 arccos(√6/4)、点 C 到平面距离 √2/2；Q19 L=(x−3−a)(12−x)²，3≤a≤9/2 时 x=9、Q=54−9a，9/2≤a≤5 时 x=6+2a/3、Q=4(9−a)³/27；Q20 y²=4x、λ1+λ2=0；Q21 a_n=2n−1+√2、S_n=n(n+√2)，并用 √2 无理性反证任意三项不成等比；Q22 减(−∞,1)增(1,+∞)、0<k<e、配对放缩证明不等式。
+- 关键推导：Q3 由 ∁B=(−∞,1]∪[2,∞) 得 a≥2；Q6 圆心 (5,0) 到渐近线 4x−3y=0 距离 4；Q9 系数和 a_n=2^{n+1}−1，极限 2；Q10 球半径 1、AC=√2，球心角 π/2；Q12 用 3!=6 个“不同行不同列”取法得 13/14；Q18 二次型法向量与 Q22 的 F(x)=e^x+e^{−x} 配对（e^{2k−n−1}+e^{n+1−2k}≥2）分别给出结论。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q8 原页（D）印作「n∥m，n⊂α ⇒ m⊥α」，按字面四选项无一成立，按命题意图应为 n⊥α，本库照 n⊥α 转录；Q18(2) 原页印作「二面角 A−AD₁−B」，题设无 D₁，按图形与第（1）问判为 A−A₁D−B。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2007-fujian-science` / `phase5-b26`，live revision 7974；check-batch 通过。
+- 正式构建 attempt `d65f464e-0a21-4b92-83a9-7f37b81abe3d`：四版 5/22/7/17 页，共 51 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：51 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版八处图页逐幅核对（试题 4/5、解析 4/5/16/18、简答 4/5、印刷 3/4/13/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b26.md`。
+- 门禁全通过：`review_receipts check-all`（342 批次）、`provenance check-all`（496 卷）、`solution_sources check-all`、`validate-receipts`（496 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（496 套）、`manifest_csv`（775 行）。

@@ -2884,6 +2884,14 @@
         "gk-2007-fujian-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase5-b26",
+      "issues": [],
+      "paper_ids": [
+        "gk-2007-fujian-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2893,7 +2901,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0fe499f1-630e-4c1f-bd4f-dbfeb01ecf53",
+  "last_transaction_id": "9f59ad85-4132-48af-b6a6-18b4897f0eec",
   "papers": [
     {
       "blocked_from": null,
@@ -35888,9 +35896,70 @@
       "title": "2007 年·普通高等学校招生考试·福建卷·文科",
       "track": "arts",
       "year": 2007
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2007_福建卷_理科/figures/f2007_fujian_science_q18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2007_福建卷_理科/figures/f2007_fujian_science_q20_locus.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2007_gaokao_fujian_science",
+        "id": "gk-2007-fujian-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 367、368；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 18 题正三棱柱与第 20 题轨迹图（坐标轴、准线、焦点）由 TikZ 重绘；第 12 题的三阶方阵为数学排版，非图形。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "福建理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2007-fujian-science",
+      "production_state": "complete",
+      "project_dir": "2007_福建卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2007/2007_数学真题_福建理_答案要点.md",
+        "combined_rendered": "2007/2007_数学真题_福建理_含解析.md",
+        "questions": "2007/2007_数学真题_福建理_试题.md",
+        "solution_body": "2007/2007_数学真题_福建理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ab2bcc25dfcca1789794a46f2e791944698bebbbfbc33afaf1d2a5749168b17d"
+      ],
+      "title": "2007 年·普通高等学校招生考试·福建卷·理科",
+      "track": "science",
+      "year": 2007
     }
   ],
-  "revision": 7970,
+  "revision": 7975,
   "schema_version": 1,
   "sources": [
     {
@@ -44575,8 +44644,8 @@
       "exam_type": "regular",
       "git_blob_oid": "cbf0558ddcd6ede6d5596f8384a1509c52a5d028",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2007-fujian-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2007福建理.pdf",
       "regions": [],
       "source_id": "src-ab2bcc25dfcca1789794a46f2e791944698bebbbfbc33afaf1d2a5749168b17d",

@@ -1,0 +1,25 @@
+% 2007 年福建卷理科第 20 题：定点 F(1,0)、直线 l:x=-1，P 为动点，Q 为 P 在 l 上的
+%   垂足，且 QP·QF = FP·FQ；第（2）问过 F 的直线交轨迹 C 于 A、B，交 l 于 M，求 λ1+λ2。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007福建理.pdf
+% SHA-256：e9ade36d1b1e3154a7e37226957037a45635faeedcfb823df216fceabcc5a1dc
+% 原页：2007福建理.pdf 第 2 页（A3 三栏）第 1 栏，书页码 368。
+% 重绘依据：按原页只画坐标轴、准线 l 与焦点 F，并在 x 轴上标出 -1 与 1。
+\begin{tikzpicture}[x=0.85cm, y=0.85cm, semithick,
+  every node/.style={inner sep=1.5pt}]
+
+  % 坐标轴
+  \draw[->,>=stealth] (-3.2,0) -- (4.2,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-2.4) -- (0,3.0) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 直线 l：x=-1
+  \draw (-1,-2.0) -- (-1,2.6) node[above] {$l$};
+
+  % 焦点 F
+  \fill (1,0) circle (1.3pt);
+  \node[above right=1pt] at (1,0) {$F$};
+
+  % x 轴上的刻度 -1、1
+  \node[below] at (-1,0) {$-1$};
+  \node[below] at (1,0) {$1$};
+\end{tikzpicture}

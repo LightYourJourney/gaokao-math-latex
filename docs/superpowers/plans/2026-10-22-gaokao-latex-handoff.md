@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2007 福建理科（phase5-b26）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 福建理科（22 题，`gk-2007-fujian-science`）`phase5-b26` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 7974，attempt `d65f464e-0a21-4b92-83a9-7f37b81abe3d`；四版 5/22/7/17 页共 51 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b26.md`。
+- 两幅 TikZ 图（Q18 正三棱柱、Q20 轨迹图）各登记 `expected_occurrences=2`；Q12 三阶方阵为数学排版。
+- 关键结论：选择 D B C B A A C D D B B D；填空 13=[−5,7]、14=√2−1、15=2/3、16 举例；Q17 C=135°、BC=√2；Q18 证 AB1⊥平面 A1BD、二面角 arccos(√6/4)、距离 √2/2；Q19 分段利润最大值 Q(a)；Q20 y²=4x、λ1+λ2=0；Q21 a_n=2n−1+√2、S_n=n(n+√2) 及反证；Q22 单调区间、0<k<e、配对放缩。
+- 源疑点两处（解析内已记）：Q8（D）印作 n⊂α，按题意应为 n⊥α；Q18(2) 印作 A−AD₁−B，按图形与第（1）问判为 A−A₁D−B。
+- 门禁全通过：`review_receipts check-all`（342 批次）、`provenance check-all`（496 卷）、`solution_sources check-all`、`validate-receipts`（496 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（496 套）、`manifest_csv`（775 行）。
+- 2007 四川文科候选仍为 `pending-intake/2007/sichuan-arts`，未登记。
+- 下一步：继续 2007 年其余 ready 来源（湖南文理、湖南理、湖北理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2007 福建文科（phase5-b25）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
