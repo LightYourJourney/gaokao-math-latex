@@ -15864,3 +15864,16 @@
 - 正式构建 attempt `3070d356-a255-4cc8-99a7-daf10a47aac9`：四版 5/22/7/16 页，共 50 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：50 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 4、解析 4/18、简答 4、印刷 3/13）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b07.md`。
 - 门禁全通过：`review_receipts check-all`（350 批次）、`provenance check-all`（504 卷）、`solution_sources check-all`、`validate-receipts`（504 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（504 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b08：2008 安徽理科正式封账
+
+- 固定来源 `src-4c8066c128faaf42a9c8553f1985fe6fddd15ef5b2fa99fb3f7ebcc2bb15b103`（2 页 A3，印刷页 421–422，SHA-256 `3493c8cb…95c564`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q10 两条正态密度曲线（含刻度与箭头标注）、Q18 四棱锥 O-ABCD（含 BC 中点 N 与 M—N、M—D 虚线），各登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A D B D C A B C B A D C；填空 13=[3,+∞)、14=1、15=7/4、16=4π/3；Q17 T=π、对称轴 x=π/3+kπ/2、值域 [−√3/2,1]；Q18 证 MN∥平面 OCD、60°、2/3；Q19 n=6、p=1/2、分布列 C(6,k)/64、补种概率 21/32；Q20 增(0,1/e) 减(1/e,1) 与 (1,+∞)、a>−e ln2；Q21 三问证明；Q22 x²/4+y²/2=1、Q 恒在 2x+y−2=0。
+- 关键推导：Q2 由 A=(0,+∞) 得 ∁_R A=(−∞,0]，与 B 取交得 {−2,−1}；Q5 令 a=(h,0) 化为 sin(2x+π/3−2h)，中心对称要求其为零点，得 h=π/12−kπ/2；Q7 用 a<0 时两根之积 1/a<0 判异号，并以 a=1 反例否掉必要性；Q9 先由对称得 g(x)=ln x、f(x)=ln(−x)；Q10 用峰值 1/(σ√(2π)) 判 σ；Q11 以 −x 代入联立解出 f=(e^x−e^{−x})/2、g=−(e^x+e^{−x})/2；Q16 由 ∠ACD=∠ABD=90° 判 AD 为直径；Q18 建系得 n=(0,2,√2/2)，n·MN=0 且 M 不在面内；Q20 把 2^{1/x}>x^a 化为 a>ln2/(x ln x)，用 x ln x 的最小值 −1/e；Q21(3) 用 1−a_{k+1}²≤3c(1−a_k²) 累乘，再由 c(2−c)<1+3c 收到 n+1−2/(1−3c)；Q22 以 x_Q 的韦达表达式化简得 (4k+1)/(k+2)，代回 2x_Q+y_Q=2。
+- 交叉印证：本卷 Q2 的选项与文科卷第 1 题同形（A 为 (0,+∞) 时答案为 (D)），说明文科卷题面“全体实数”确应为“全体负数”，与 phase6-b07 所记源疑点一致。
+- 版式修正：Q10 图的纵轴刻度数字原被曲线穿压，改为「先曲线、后白底遮断再写数字」并缩小字号，刻度 0.2～1.4 与两条曲线的峰位关系在 300 dpi 下清晰可辨；Q18 图重排 A、B、C、D、M、N 标注，避免压棱线与虚线。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-anhui-science` / `phase6-b08`，live revision 8092；check-batch 通过。
+- 正式构建 attempt `5494817a-df1f-415e-80a8-3e2d6c571f3c`：四版 5/23/7/18 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4、解析 3/4/12/18、简答 3/4、印刷 2/3/9/13）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b08.md`。
+- 门禁全通过：`review_receipts check-all`（351 批次）、`provenance check-all`（505 卷）、`solution_sources check-all`、`validate-receipts`（505 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（505 套）、`manifest_csv`（775 行）。

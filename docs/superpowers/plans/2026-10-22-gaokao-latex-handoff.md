@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2008 安徽理科（phase6-b08）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 安徽理科（22 题，`gk-2008-anhui-science`）`phase6-b08` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8092，attempt `5494817a-df1f-415e-80a8-3e2d6c571f3c`；四版 5/23/7/18 页共 53 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b08.md`。
+- 两幅 TikZ 图（Q10 两条正态密度曲线、Q18 四棱锥含 BC 中点 N）各登记 `expected_occurrences=2`。
+- 关键结论：选择 A D B D C A B C B A D C；填空 13=[3,+∞)、14=1、15=7/4、16=4π/3；Q17 T=π 与对称轴 x=π/3+kπ/2；Q18 证 MN∥平面 OCD、60°、2/3；Q19 n=6、p=1/2、21/32；Q20 单调区间与 a>−e ln2；Q21 三问证明；Q22 x²/4+y²/2=1 与定直线 2x+y−2=0。
+- 交叉印证：本卷 Q2 与文科卷第 1 题选项同形（A=(0,+∞) 时答案 (D)），坐实文科卷题面“全体实数”应为“全体负数”。
+- 门禁全通过：`review_receipts check-all`（351 批次）、`provenance check-all`（505 卷）、`solution_sources check-all`、`validate-receipts`（505 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（505 套）、`manifest_csv`（775 行）。
+- 下一步：继续 2008 年未绑定来源（山东文理、广东文理、浙江文理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2008 安徽文科（phase6-b07）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
