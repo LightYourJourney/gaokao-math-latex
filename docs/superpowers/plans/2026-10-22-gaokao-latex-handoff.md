@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2008 安徽文科（phase6-b07）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 安徽文科（22 题，`gk-2008-anhui-arts`）`phase6-b07` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8075，attempt `3070d356-a255-4cc8-99a7-daf10a47aac9`；四版 5/22/7/16 页共 50 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b07.md`。
+- 一幅 TikZ 图（Q19 四棱锥 O-ABCD）登记 `expected_occurrences=2`。
+- 关键结论：选择 A B B B A C A D A D C C；填空 13=[3,+∞)、14=4、15=−1、16=4π/3；Q17 周期 π、值域 [−√3/2,1]；Q18 27/1000 与 11/60；Q19 60° 与 2/3；Q20 a=1、x∈[−2,0]；Q21 通项分段式、S_n=2−(n+2)/2^n、0<c≤1；Q22 x²/8+y²/4=1 与最小值 16√2/3。
+- 源疑点两处（解析内已记）：Q1 题面“全体实数”与四个选项冲突，按选项 (A) 须读作“全体负实数”；Q6 的 (C)(D) 印作同一式，按答案取 (C)。
+- 决策差异：Q20(2) 由初稿的 `x<0` 更正为闭区间 `[−2,0]`（两端点均严格满足），以本轮推导为准。
+- 门禁全通过：`review_receipts check-all`（350 批次）、`provenance check-all`（504 卷）、`solution_sources check-all`、`validate-receipts`（504 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（504 套）、`manifest_csv`（775 行）。
+- 下一步：继续 2008 年未绑定来源（安徽理、山东文理、广东文理、浙江文理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2008 天津理科（phase6-b06）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

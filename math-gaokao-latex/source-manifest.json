@@ -2948,6 +2948,14 @@
         "gk-2008-tianjin-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b07",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-anhui-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2957,7 +2965,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "3b455a53-4ddd-4eb7-a5ae-e60ee2e70b2c",
+  "last_transaction_id": "b4687703-7a19-44da-afb1-af481694d412",
   "papers": [
     {
       "blocked_from": null,
@@ -36465,9 +36473,66 @@
       "title": "2008 年·普通高等学校招生考试·天津卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_安徽卷_文科/figures/f2008_anhui_arts_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_anhui_arts",
+        "id": "gk-2008-anhui-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 423、424；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题四棱锥 O-ABCD 由 TikZ 重绘。第 1 题题面印作「全体实数」但选项按「全体负实数」才成立，第 6 题 (C)(D) 印作同一式，两处源疑点已在解析内标注。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "安徽卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "安徽文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-anhui-arts",
+      "production_state": "complete",
+      "project_dir": "2008_安徽卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_安徽文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_安徽文_含解析.md",
+        "questions": "2008/2008_数学真题_安徽文_试题.md",
+        "solution_body": "2008/2008_数学真题_安徽文_解析正文.md"
+      },
+      "source_ids": [
+        "src-951c0a2bf123a71a3a3d44751472a6fa3723d25226f226e4c7bc5768ca4c7bb8"
+      ],
+      "title": "2008 年·普通高等学校招生考试·安徽卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8067,
+  "revision": 8076,
   "schema_version": 1,
   "sources": [
     {
@@ -45608,8 +45673,8 @@
       "exam_type": "regular",
       "git_blob_oid": "fdae0817b7d1b13992f4886c8243d59a40ab9eeb",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-anhui-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008安徽文.pdf",
       "regions": [],
       "source_id": "src-951c0a2bf123a71a3a3d44751472a6fa3723d25226f226e4c7bc5768ca4c7bb8",

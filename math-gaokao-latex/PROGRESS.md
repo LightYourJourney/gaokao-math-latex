@@ -15850,3 +15850,17 @@
 - 正式构建 attempt `01c0a45b-8103-46b9-9643-59ea6677ba13`：四版 5/24/7/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4、解析 3/4/15/19、简答 3/4、印刷 3/11/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b06.md`。
 - 门禁全通过：`review_receipts check-all`（349 批次）、`provenance check-all`（503 卷）、`solution_sources check-all`、`validate-receipts`（503 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（503 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b07：2008 安徽文科正式封账
+
+- 固定来源 `src-951c0a2bf123a71a3a3d44751472a6fa3723d25226f226e4c7bc5768ca4c7bb8`（2 页 A3，印刷页 423–424，SHA-256 `a7276afa…b545bb77`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ 矢量图：Q19 四棱锥 O-ABCD（菱形底、∠ABC=π/4、OA=2、M 为 OA 中点），登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A B B B A C A D A D C C；填空 13=[3,+∞)、14=4、15=−1、16=4π/3；Q17 周期 π、值域 [−√3/2,1]；Q18 27/1000、11/60；Q19 60°、2/3；Q20 a=1、x∈[−2,0]；Q21 通项分段式、S_n=2−(n+2)/2^n、0<c≤1；Q22 x²/8+y²/4=1、|AB|=4√2/(2−cos²θ)、最小值 16√2/3。
+- 关键推导：Q4 由 x²=−1/a 得 a<0 与“有负根”等价；Q7 奇系数个数 2^{s(8)}=2^1；Q9 用 |2x|+|1/x|≥2√2 得最大值 −2√2−1；Q10 圆心到直线距离 ≤1 得 |k|≤√3/3；Q11 用总面积 2 减去 x+y>1 的 1/4；Q12 C(8,2)A(6,2)=840；Q16 由 ∠ACD=∠ABD=90° 判定 AD 为球直径，R=4、BC=4 得球心角 π/3；Q19 建系得 n=(0,2,√2/2)，点面距 2/3；Q20 化为 a(x²+2)>x²+2x 对一切 a>0 成立，等价 x²+2x≤0；Q21 由 a_n−1=(a−1)c^{n−1} 与有界性得 0<c≤1；Q22 以 F₁ 为极点得 r=2√2/(2−√2cosθ)，两向相加得弦长，再令 u=cos²θ 求 g(u) 最小值 4/3。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q1 原页印作“若 A 为全体实数的集合”，按字面四个选项全错，按选项 (A) 须读作“全体负实数”；Q6 原页 (C)(D) 印作完全相同的式子 f⁻¹(x)=1−√(x−1)（x≥2），按答案取 (C)。
+- 版式修正：Q19 图初版 M 标注压虚线、A 标注压棱角，改为 M 右上、A 左侧后消除；四版 0 警告。
+- 与既有决策的差异：初稿曾拟 Q20(2) 取 `x<0`，复算后两端点 x=0、x=−2 均严格满足（x=0 时 2a>0，x=−2 时 6a>0），故取闭区间 [−2,0]，以本轮推导为准。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-anhui-arts` / `phase6-b07`，live revision 8075；check-batch 通过。
+- 正式构建 attempt `3070d356-a255-4cc8-99a7-daf10a47aac9`：四版 5/22/7/16 页，共 50 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：50 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 4、解析 4/18、简答 4、印刷 3/13）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b07.md`。
+- 门禁全通过：`review_receipts check-all`（350 批次）、`provenance check-all`（504 卷）、`solution_sources check-all`、`validate-receipts`（504 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（504 套）、`manifest_csv`（775 行）。
