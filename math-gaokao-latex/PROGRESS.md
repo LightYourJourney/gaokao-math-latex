@@ -15890,3 +15890,16 @@
 - 正式构建 attempt `b5fc7282-ce66-48a9-835d-0f129e5d0733`：四版 6/25/8/19 页，共 58 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：58 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 1/2/4/5、解析 1/2/4/5/8/10/15/16/20、简答 1/2/4/5、印刷 1/2/3/4/5/7/9/12/13/16）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b09.md`。
 - 门禁全通过：`review_receipts check-all`（352 批次）、`provenance check-all`（506 卷）、`solution_sources check-all`、`validate-receipts`（506 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（506 套）、`manifest_csv`（775 行）。
+
+### 2026-11-13 phase6-b10：2008 山东理科正式封账
+
+- 固定来源 `src-c3da847fb5ad50bf9854d103272901c89223193fbfca37866fe769b54621eed6`（2 页 A3，印刷页 471–472，SHA-256 `b4666951…503e6e3b`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 五幅 TikZ 矢量图：Q3 四个候选图象（图即选项）、Q6 三视图、Q13 程序框图、Q20 四棱锥（含 BC、PC 中点 E、F）、Q22 抛物线与两条切线，各登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 B D A A C C B B C A B C；填空 13=4、14=√3/3、15=π/6、16=(5,7)；Q17 √2 与 [2π/3+4kπ,8π/3+4kπ]；Q18 分布列与 Eξ=2、P(AB)=34/243；Q19 1/S_n 等差、b_n 分段、行和 −2(2^k−1)/(k(k+1))；Q20 证 AE⊥PD、二面角余弦 √15/5；Q21 极小值 (a/2)(1+ln(2/a)) 与不等式证明；Q22 横坐标成等差、x²=2y 或 x²=4y、对称点不存在。
+- 关键推导：Q4 由两折点 −1 与 a 的中点为 1 得 a=3；Q7 公差 3 的三元组 {k,k+3,k+6}（k≤12）共 12 组，概率 12/816=1/68；Q8 茎叶图 10 个数据求和 3036；Q9 令 12−4k/3=0 得 k=9，常数项 −C(12,9)=−220；Q11 用 |MP|=1 得最短弦 4√6，两对角线垂直故面积 20√6；Q12 在区域顶点比较 y^{1/x} 得 [2,9]；Q16 由整数解恰为 1,2,3 解出 5<b<7；Q18 乙队分布 (1,5,8,4)/18，再算 P(ξ+η=3, ξ>η)；Q20 证 n·EH=−√3 与 s、h 无关，把线面角最值化为 |EH| 最小，得 h=1 后求二面角；Q22(3) 把“D 在抛物线上”化为 8u²k+24uk²=0（u=m²>0，k=p²>0），矛盾故不存在。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q10 题面“长轴长为 25”与四个选项不相容（e=5/13 时 c=125/26，无选项匹配），按选项反推长轴长应为 26（a=13、c=5），本库照原页转录题面、作答按 26 理解。
+- 版式修正：`question-needspace` 指令首版写在题号行之前，绑定到上一题（Q2 拿到 0.42、Q5 拿到 0.5），造成第 1 页过早换页；改为写在题干之后并逐题设置（Q3 0.42、Q6 0.5、Q8 0.44、Q12 0.42、Q13 0.4、Q20 0.46、Q22 0.46）后，六页题面为 Q1–Q4 / Q5–Q7 / Q8–Q11 / Q12–Q16 / Q17–Q19 / Q20–Q22，无题内跨页割裂。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-shandong-science` / `phase6-b10`，live revision 8140；check-batch 通过。
+- 正式构建 attempt `82c27513-69f1-4364-a079-633f19ec98b4`：四版 6/25/8/23 页，共 62 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：62 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 1/2/4/6、解析 1/2/4/6/8/10/16/21/24、简答 1/2/4/6、印刷 1/2/4/5/6/8/10/14/19/22）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b10.md`。
+- 门禁全通过：`review_receipts check-all`（353 批次）、`provenance check-all`（507 卷）、`solution_sources check-all`、`validate-receipts`（507 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（507 套）、`manifest_csv`（775 行）。

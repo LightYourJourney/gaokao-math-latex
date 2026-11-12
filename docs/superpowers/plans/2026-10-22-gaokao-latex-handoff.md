@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：2008 山东理科（phase6-b10）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 山东理科（22 题，`gk-2008-shandong-science`）`phase6-b10` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8140，attempt `82c27513-69f1-4364-a079-633f19ec98b4`；四版 6/25/8/23 页共 62 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b10.md`。
+- 五幅 TikZ 图（Q3 四候选图象、Q6 三视图、Q13 程序框图、Q20 四棱锥、Q22 抛物线与两切线）各登记 `expected_occurrences=2`。
+- 关键结论：选择 B D A A C C B B C A B C；填空 13=4、14=√3/3、15=π/6、16=(5,7)；Q17 √2 与 [2π/3+4kπ,8π/3+4kπ]；Q18 Eξ=2、P(AB)=34/243；Q19 行和 −2(2^k−1)/(k(k+1))；Q20 二面角余弦 √15/5；Q21 极小值 (a/2)(1+ln(2/a))；Q22 x²=2y 或 x²=4y、对称点不存在。
+- 源疑点：Q10 题面「长轴长为 25」与选项不相容，按选项应为 26（a=13、c=5），已在解析内标注。
+- 工具经验（复述）：`question-needspace` 必须写在题干之后（属该题正文块），写在题号行之前会绑定到上一题。
+- 门禁全通过：`review_receipts check-all`（353 批次）、`provenance check-all`（507 卷）、`solution_sources check-all`、`validate-receipts`（507 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（507 套）、`manifest_csv`（775 行）。
+- 下一步：继续 2008 年未绑定来源（广东文理、浙江文理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2008 山东文科（phase6-b09）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

@@ -2972,6 +2972,14 @@
         "gk-2008-shandong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b10",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-shandong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2981,7 +2989,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "61593f29-1a19-4b4f-85e6-c01cc4c1eda4",
+  "last_transaction_id": "66daf109-28cf-45a9-808f-107899e8c409",
   "papers": [
     {
       "blocked_from": null,
@@ -36680,9 +36688,82 @@
       "title": "2008 年·普通高等学校招生考试·山东卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_理科/figures/f2008_shandong_science_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_理科/figures/f2008_shandong_science_q20_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_理科/figures/f2008_shandong_science_q22_parabola.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_理科/figures/f2008_shandong_science_q3_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_理科/figures/f2008_shandong_science_q6_views.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_shandong_science",
+        "id": "gk-2008-shandong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 471、472；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 3 题四个候选图象、第 6 题三视图、第 13 题程序框图、第 20 题四棱锥、第 22 题抛物线与两条切线均由 TikZ 重绘。第 10 题题面「长轴长为 25」与选项不相容，已在解析内记源疑点。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "山东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-shandong-science",
+      "production_state": "complete",
+      "project_dir": "2008_山东卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_山东理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_山东理_含解析.md",
+        "questions": "2008/2008_数学真题_山东理_试题.md",
+        "solution_body": "2008/2008_数学真题_山东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c3da847fb5ad50bf9854d103272901c89223193fbfca37866fe769b54621eed6"
+      ],
+      "title": "2008 年·普通高等学校招生考试·山东卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8133,
+  "revision": 8141,
   "schema_version": 1,
   "sources": [
     {
@@ -45895,8 +45976,8 @@
       "exam_type": "regular",
       "git_blob_oid": "c789674a69c04d069b8231ae19448f2ef34db961",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-shandong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008山东理.pdf",
       "regions": [],
       "source_id": "src-c3da847fb5ad50bf9854d103272901c89223193fbfca37866fe769b54621eed6",

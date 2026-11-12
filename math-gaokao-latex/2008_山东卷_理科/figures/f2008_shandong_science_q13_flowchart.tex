@@ -1,0 +1,32 @@
+% 2008 年山东卷理科第 13 题：程序框图。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008山东理.pdf
+% SHA-256：b4666951a0c2475fab098b837a343c7352003964f7811cedb1bdd610503e6e3b
+% 原页：2008山东理.pdf 第 1 页（A3 三栏）第 3 栏，书页码 471。
+\begin{tikzpicture}[>=stealth, semithick, font=\small,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=2.4cm, minimum height=0.7cm},
+  term/.style={draw, rounded corners=6pt, minimum width=1.6cm, minimum height=0.6cm},
+  io/.style={draw, trapezium, trapezium left angle=110, trapezium right angle=70,
+             minimum width=2.0cm, minimum height=0.7cm},
+  dec/.style={draw, diamond, aspect=1.7, minimum width=2.3cm, minimum height=1.0cm}]
+
+  \node[term] (s) at (0,0) {开始};
+  \node[io]   (in) at (0,-1.3) {输入 $p$};
+  \node[box]  (ini) at (0,-2.6) {$n=1$，$S=0$};
+  \node[dec]  (jud) at (0,-4.1) {$S<p$?};
+  \node[box]  (acc) at (0,-5.5) {$S=S+\dfrac1{2^n}$};
+  \node[box]  (inc) at (0,-6.7) {$n=n+1$};
+  \node[io]   (out) at (3.6,-4.1) {输出 $n$};
+  \node[term] (end) at (3.6,-5.3) {结束};
+
+  \draw[->] (s) -- (in);
+  \draw[->] (in) -- (ini);
+  \draw[->] (ini) -- (jud);
+  \draw[->] (jud) -- node[right] {是} (acc);
+  \draw[->] (acc) -- (inc);
+  \draw[->] (jud) -- node[above] {否} (out);
+  \draw[->] (out) -- (end);
+
+  % 回路上行：从 n=n+1 的左侧回到判定框上方
+  \draw[->] (inc.west) -- (-2.6,-6.7) -- (-2.6,-2.6) -- (ini.west);
+\end{tikzpicture}

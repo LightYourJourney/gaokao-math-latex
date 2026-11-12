@@ -1,0 +1,30 @@
+% 2008 年山东卷理科第 6 题：几何体的三视图（圆柱上放一个等径的球）。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008山东理.pdf
+% SHA-256：b4666951a0c2475fab098b837a343c7352003964f7811cedb1bdd610503e6e3b
+% 原页：2008山东理.pdf 第 1 页（A3 三栏）第 1 栏，书页码 471。
+% 重绘依据：正视图为宽 2、高 3 的矩形上切一个直径 2 的圆（球与圆柱同径，相切于上底），
+%   侧视图同形，俯视图为直径 2 的圆；尺寸 2、3、2 按原图标注。
+\begin{tikzpicture}[semithick, font=\small, every node/.style={inner sep=1.2pt}]
+  % 正（主）视图
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,0) rectangle (2,3);
+    \draw (1,4) circle (1);
+    \draw[<->] (2.35,0) -- (2.35,3) node[midway,right] {$3$};
+    \draw[<->] (0,-0.35) -- (2,-0.35) node[midway,below] {$2$};
+    \draw[<->] (2.35,3) -- (2.35,5) node[midway,right] {$2$};
+    \node at (1,-1.15) {正（主）视图};
+  \end{scope}
+  % 侧（左）视图
+  \begin{scope}[shift={(5.2,0)}]
+    \draw (0,0) rectangle (2,3);
+    \draw (1,4) circle (1);
+    \draw[<->] (0,-0.35) -- (2,-0.35) node[midway,below] {$2$};
+    \node at (1,-1.15) {侧（左）视图};
+  \end{scope}
+  % 俯视图
+  \begin{scope}[shift={(2.6,-4.4)}]
+    \draw (0,0) circle (1);
+    \draw[<->] (0,-1.4) -- (2,-1.4) node[midway,below] {$2$};
+    \node at (1,-2.15) {俯视图};
+  \end{scope}
+\end{tikzpicture}
