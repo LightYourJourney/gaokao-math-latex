@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2008 天津文科（phase6-b03）封账；北京文科记 pending
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 天津文科（22 题，`gk-2008-tianjin-arts`）`phase6-b03` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8048，attempt `fd46a3ca-0982-4037-b119-d37a06f78971`；四版 4/20/6/17 页共 47 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b03.md`。
+- 一幅 TikZ 图（Q19 四棱锥）登记 `expected_occurrences=2`。
+- 关键结论：选择 A D A B C C B A D B；填空 11=10、12=10、13=12π、14=8√2、15=x²+(y+1)²=18、16=432；Q17–Q22 见 PROGRESS。
+- 源缺陷：2008 北京文科 Q14 缺植树方案递推式，整卷未登记，见 `pending-intake/2008/beijing-arts/README.md`。
+- 门禁全通过：`review_receipts check-all`（347 批次）、`provenance check-all`（501 卷）、`solution_sources check-all`、`validate-receipts`（501 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（501 套）、`manifest_csv`（775 行）。
+- 下一步：继续 2008 其余 ready 来源（北京理科、大纲 1/2 文理、新课标文理、安徽、山东、广东等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2008 上海理科（phase6-b02）封账，全库 500 卷
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

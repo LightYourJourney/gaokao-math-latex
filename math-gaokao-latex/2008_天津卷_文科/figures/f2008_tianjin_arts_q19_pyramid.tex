@@ -1,0 +1,27 @@
+% 2008 年天津卷文科第 19 题：四棱锥 P-ABCD，底面 ABCD 是矩形，
+%   AB=3，AD=2，PA=2，PD=2√2，∠PAB=60°。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008天津文.pdf
+% SHA-256：4c8f1c998f95d805901f2e0d93fdbb5901ce4bc67fd7c3ca712083325837bb3d
+% 原页：2008天津文.pdf 第 1 页（A3 三栏）第 3 栏，书页码 489。
+\begin{tikzpicture}[scale=0.95, semithick,
+  every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (1.1,0.9);
+  \coordinate (B) at (0.0,0.2);
+  \coordinate (C) at (3.4,0.2);
+  \coordinate (D) at (4.5,0.9);
+  \coordinate (P) at (1.7,4.1);
+
+  \draw (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (P) -- (D);
+  \draw[dashed] (B) -- (D);
+  \draw[dashed] (A) -- (C);
+
+  \node[below left=1pt] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[above] at (P) {$P$};
+\end{tikzpicture}

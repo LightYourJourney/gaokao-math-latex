@@ -15811,3 +15811,16 @@
 - 正式构建 attempt `39938e4f-f60e-49e7-95ef-c273e721f023`：四版 4/19/6/15 页，共 44 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：44 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3、解析 2/3/12/13/14、简答 2/3、印刷 2/3/10/11）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b02.md`。
 - 门禁全通过：`review_receipts check-all`（346 批次）、`provenance check-all`（500 卷）、`solution_sources check-all`、`validate-receipts`（500 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（500 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b03：2008 天津文科正式封账；北京文科记为源缺陷
+
+- 固定来源 `src-1f106fae2b6e4fc6a6c7b3d3229170f1648fc6acb521aa2f9e6178a7633df4ac`（2 页 A3，印刷页 489–490，SHA-256 `4c8f1c99…5837bb3d`），22 题：选 10、填 6、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ 矢量图：Q19 四棱锥 P-ABCD（矩形底、PA=2、PD=2√2、∠PAB=60°），登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A D A B C C B A D B；填空 11=10、12=10、13=12π、14=8√2、15=x²+(y+1)²=18、16=432；Q17 ω=2、最大值 2+√2、x=π/16+kπ/2；Q18 3/4、3/4、11/32；Q19 arccos(2/√11)、arccos(4/√55)；Q20 b_n=q^{n−1}、a_n 分段公式、q=−∛2；Q21 单调区间、|a|≤8/3、b≤−4；Q22 x²/4−y²/5=1、k 的四个区间。
+- 关键推导：Q8 分段解 f≥x² 得 [−1,1]；Q16 数字和为 10 的多重集只有 {4,4,1,1}、{4,3,2,1}、{3,3,2,2}，计数 24+384+24=432；Q19 建系 P(1,0,√3)、C(3,2,0)，法向量 n2=(2√3,3√3,4)；Q21 由 f′=x(4x²+3ax+4) 与判别式得 |a|≤8/3，恒成立最坏情形 a=2,x=1 给 b≤−4；Q22 由中点 (4km/(5−4k²),5m/(5−4k²)) 得截距积 |XY|=81|k|m²/(5−4k²)²，联立 Δ>0 得 k 范围。
+- 版式修正：Q19 图的 A 标注由左侧移到左下，避开虚线 AC；其余四版无警告。
+- 源缺陷（新记）：2008 北京文科第 14 题在“条件序号是____。”后直接接“T(a)…按此方案，第 6 棵树…”，中间缺少植树方案递推式；`pdftotext` 与 300 dpi 图像均确认缺失。整卷未登记，记入 `pending-intake/2008/beijing-arts/README.md`。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-tianjin-arts` / `phase6-b03`，live revision 8048；check-batch 通过。
+- 正式构建 attempt `fd46a3ca-0982-4037-b119-d37a06f78971`：四版 4/20/6/17 页，共 47 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 4、解析 4/15、简答 4、印刷 3/14）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b03.md`。
+- 门禁全通过：`review_receipts check-all`（347 批次）、`provenance check-all`（501 卷）、`solution_sources check-all`、`validate-receipts`（501 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（501 套）、`manifest_csv`（775 行）。
