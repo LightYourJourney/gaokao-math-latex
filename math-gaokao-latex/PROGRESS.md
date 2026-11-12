@@ -15903,3 +15903,17 @@
 - 正式构建 attempt `82c27513-69f1-4364-a079-633f19ec98b4`：四版 6/25/8/23 页，共 62 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：62 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 1/2/4/6、解析 1/2/4/6/8/10/16/21/24、简答 1/2/4/6、印刷 1/2/4/5/6/8/10/14/19/22）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b10.md`。
 - 门禁全通过：`review_receipts check-all`（353 批次）、`provenance check-all`（507 卷）、`solution_sources check-all`、`validate-receipts`（507 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（507 套）、`manifest_csv`（775 行）。
+
+### 2026-11-13 phase6-b11：2008 广东文科正式封账
+
+- 固定来源 `src-58c5a86ec354fa8a07275e5b7299d68b6c53b840cad68eb9a879ba4aaedfa98b`（2 页 A3，印刷页 447–448，SHA-256 `1adedadb…9929373c`），21 题：选 10、填 5、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 五幅 TikZ 矢量图：Q7 截角棱柱（图 1 正三棱柱与截角线、图 2 截角后几何体、四个侧视图选项合绘一幅，图即选项）、Q11 频率分布直方图、Q13 程序框图、Q18 四棱锥与底面圆、Q20 椭圆与抛物线，各登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 D B C C D A A B A C；填空 11=13、12=70、13=a=12 且 i=3、14=(2√3, π/6)、15=√3；Q16 f(x)=cos x 与 56/65；Q17 建 15 层；Q18 PD=3R 与 (√3+1)R³/4；Q19 x=380、12 名、5/11；Q20 x²/2+y²=1 与 x²=8(y−1)、共 4 个点；Q21 a_n=8/5−(3/5)(−2/3)^{n−1}、b_n=(−1)^{n−1}、S_n 分段式。
+- 关键推导：Q5 用 2cos²x·sin²x=(1−cos4x)/4 定周期 π/2 与偶性；Q7 作沿侧视方向的正投影：底面 DEF 投影为长 (√3/2)a 的线段、顶面 ABC 投影为长 (√3/4)a 的线段且左端重合，得到左边竖直线、顶边半宽、右侧斜边、内部 E—B 的轮廓，四选项只有 (A) 符合；Q10 由 a>|b| 直接得 a+b>a−|b|>0；Q11 各矩形高×组距为 0.2/0.4/0.25/0.1/0.05，合计 1，[55,75) 频率 0.65，人数 13；Q12 顶点 (0,0)、(20,0)、(0,25)、(10,20) 处 z=0、60、50、70；Q13 依次 a=4、8、12，3∤4、3∤8、3|12，输出 a=12、i=3；Q14 极坐标化直角坐标得 (3,√3)；Q15 切割线定理 PA²=PB·PC 得 PC=4、BC=3，再由相似得 AB=R 并解出 R=√3；Q16 由最大值 1 定 A=1、由 M(π/3,1/2) 与 0<φ<π 定 φ=π/2；Q18 由 △ADP∽△BAD 得 PD=AD²/AB=3R，建系后由 PD⊥AD 与 |PC|=√11R 解出 P 在 D 正上方、高 3R，S△ABC=(√3+1)R²/4；Q19 用分层抽样比 500/2000；Q20 由切线 y=x+b−2 过 F1(b,0) 得 b=1，再按直角顶点分三类计数 1+1+2=4；Q21 特征方程 3r²=r+2 得 r=1、−2/3，b_n 由 k=0 与 k=1 的条件逼出 ±1 且相邻反号。
+- 版式修正：Q7 图初版把图 1 的 H—B、G—C 两段漏画、图 2 的棱线关系错画（截角平面实为 ABE、ACD、BCF，图 2 只剩 A—F 六个顶点），重绘后与源图一致，(B)、(D) 按原卷比例区分；Q11 直方图初版纵轴比例过小、刻度挤成一团，改为 0.005 一格并配虚线；Q13 回路原斜穿判定框，改为「右侧上行—左行—下行」进入 a=m×i 的东侧；Q18 初版椭圆全实线、C—D 误作虚线，改为前半实线后半虚线、AD/BD 虚线；Q20 初版纵轴比例过小导致椭圆压扁、F/F1/G 标注重叠，重设比例并调整标注。
+- 解析版曾出现「解析」标题孤立页脚（Q11），通过调整直方图纵轴比例使该页容纳不下标题，标题与正文一并落到次页，复查后全库无同类孤行。
+- 重要发现（待清理）：`{2007,2008}/*_试题.md` 中有 37 卷仍带首段「状态：needs-review；…正式构建与逐页验收待完成。」，该段会被排进四版 PDF，封账后与事实不符。本卷已删除该段；其余 37 卷需单独批次「删段—重生成—重构建—重审查」处理，未完成前不得声称全库文字无此残留。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2008-guangdong-arts` / `phase6-b11`，live revision 8165；check-batch 通过。
+- 正式构建 attempt `6591b14d-7fe3-47c2-abc4-0f526d3b8cda`：四版 6/24/8/19 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3/4/5/6、解析 2/3/4/5/6/11/13/15/19/22、简答 2/3/4/5/6、印刷 2/3/4/5/6/10/12/13/16/18）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b11.md`。
+- 门禁全通过：`review_receipts check-all`（354 批次）、`provenance check-all`（508 卷）、`solution_sources check-all`、`validate-receipts`（508 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（508 套）、`manifest_csv`（775 行）。

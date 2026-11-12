@@ -2980,6 +2980,14 @@
         "gk-2008-shandong-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b11",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-guangdong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2989,7 +2997,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "66daf109-28cf-45a9-808f-107899e8c409",
+  "last_transaction_id": "2079a2d5-04ec-4466-a207-43254e295ba8",
   "papers": [
     {
       "blocked_from": null,
@@ -36761,9 +36769,82 @@
       "title": "2008 年·普通高等学校招生考试·山东卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_文科/figures/f2008_guangdong_arts_q11_hist.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_文科/figures/f2008_guangdong_arts_q13_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_文科/figures/f2008_guangdong_arts_q18_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_文科/figures/f2008_guangdong_arts_q20_conic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_文科/figures/f2008_guangdong_arts_q7_solid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_guangdong_arts",
+        "id": "gk-2008-guangdong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 447、448；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 7 题截角棱柱（图 1、图 2 与四个侧视图选项合绘一幅）、第 11 题频率直方图、第 13 题程序框图、第 18 题四棱锥与底面圆、第 20 题椭圆与抛物线均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "广东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-guangdong-arts",
+      "production_state": "complete",
+      "project_dir": "2008_广东卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_广东文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_广东文_含解析.md",
+        "questions": "2008/2008_数学真题_广东文_试题.md",
+        "solution_body": "2008/2008_数学真题_广东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-58c5a86ec354fa8a07275e5b7299d68b6c53b840cad68eb9a879ba4aaedfa98b"
+      ],
+      "title": "2008 年·普通高等学校招生考试·广东卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8141,
+  "revision": 8165,
   "schema_version": 1,
   "sources": [
     {
@@ -46000,8 +46081,8 @@
       "exam_type": "regular",
       "git_blob_oid": "4e23fea2a8906423574b5407c51b96f2ba031a50",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-guangdong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008广东文.pdf",
       "regions": [],
       "source_id": "src-58c5a86ec354fa8a07275e5b7299d68b6c53b840cad68eb9a879ba4aaedfa98b",

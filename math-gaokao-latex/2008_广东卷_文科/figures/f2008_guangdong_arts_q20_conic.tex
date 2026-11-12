@@ -1,0 +1,30 @@
+% 2008 年广东卷文科第 20 题：椭圆与抛物线，过 F(0,b+2) 作 x 轴的平行线，与抛物线在
+%   第一象限的交点为 G，抛物线在 G 处的切线过椭圆的右焦点 F1(b,0)。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008广东文.pdf
+% SHA-256：1adedadb12b82b7b4d04721908bd686e747021593ec91da14b0e4e979929373c
+% 原页：2008广东文.pdf 第 2 页（A3 三栏）第 2 栏，书页码 448。
+% 重绘依据：取 b=1 画示意图：椭圆 x²/2+y²=1，抛物线 x²=8(y-1)，G(4,3)，
+%   切线 y=x-1 过 F1(1,0)；A、B 为椭圆长轴端点。
+\begin{tikzpicture}[x=1.05cm, y=1.05cm, semithick, font=\small,
+  every node/.style={inner sep=1.2pt}]
+  \draw[->,>=stealth] (-4.7,0) -- (5.6,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-1.4) -- (0,5.6) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 椭圆 x^2/2 + y^2 = 1
+  \draw[line width=0.9pt] (0,0) ellipse (1.414 and 1);
+  \node[below left] at (-1.414,0) {$A$};
+  \node[below right] at (1.414,0) {$B$};
+  \fill (1,0) circle (1.2pt) node[above left] {$F_1$};
+
+  % 抛物线 x^2 = 8(y-1)
+  \draw[line width=0.9pt, domain=-4.35:4.35, samples=140] plot (\x, {(\x*\x)/8+1});
+
+  % 过 F(0,3) 的水平线与 G(4,3)
+  \draw (-4.5,3) -- (5.2,3);
+  \node[above left=2pt] at (0,3) {$F$};
+  \fill (4,3) circle (1.2pt) node[above left=1pt] {$G$};
+
+  % 抛物线在 G 处的切线 y = x - 1
+  \draw (0.9,-0.1) -- (5.2,4.2);
+\end{tikzpicture}

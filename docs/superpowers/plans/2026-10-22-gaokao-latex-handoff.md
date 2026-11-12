@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：2008 广东文科（phase6-b11）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 广东文科（21 题，`gk-2008-guangdong-arts`）`phase6-b11` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8165，attempt `6591b14d-7fe3-47c2-abc4-0f526d3b8cda`；四版 6/24/8/19 页共 57 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b11.md`。
+- 五幅 TikZ 图（Q7 截角棱柱与四个侧视图选项、Q11 直方图、Q13 程序框图、Q18 四棱锥、Q20 椭圆与抛物线）各登记 `expected_occurrences=2`。
+- 关键结论：选择 D B C C D A A B A C；填空 11=13、12=70、13=a=12/i=3、14=(2√3,π/6)、15=√3；Q16 cos x 与 56/65；Q17 15 层；Q18 3R 与 (√3+1)R³/4；Q19 x=380、12、5/11；Q20 x²/2+y²=1、x²=8(y−1)、4 个点；Q21 S_n 分段式。
+- Q7 的正确答案 (A) 由正投影核验：底面投影长 (√3/2)a、顶面投影长 (√3/4)a 且左端重合，轮廓为左竖、上半宽顶边、右斜边，内部 E—B。
+- 已知缺陷（待清理批次）：2007/2008 两批共 37 卷的 `_试题.md` 首段仍为「状态：needs-review；…正式构建与逐页验收待完成。」，会被排进四版 PDF；本卷已删，其余需「删段—重生成—重构建—重审查」单独处理。
+- 门禁全通过：`review_receipts check-all`（354 批次）、`provenance check-all`（508 卷）、`solution_sources check-all`、`validate-receipts`（508 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（508 套）、`manifest_csv`（775 行）。
+- 下一步：① 清理上述 37 卷的状态段；② 继续 2008 未绑定来源（广东理、浙江文理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-13 接续：2008 山东理科（phase6-b10）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

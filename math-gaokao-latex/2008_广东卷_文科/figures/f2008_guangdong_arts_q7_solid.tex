@@ -1,0 +1,124 @@
+% 2008 年广东卷文科第 7 题：正三棱柱截去三个角前后的图 1、图 2，以及四个侧视图选项。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008广东文.pdf
+% SHA-256：1adedadb12b82b7b4d04721908bd686e747021593ec91da14b0e4e979929373c
+% 原页：2008广东文.pdf 第 1 页（A3 三栏）第 1 栏，书页码 447。
+% 重绘依据：图 1 为正三棱柱 GHI-EFD（H、G 在后，I 在前），A、B、C 分别是 HG、HI、GI 的中点，
+%   截角平面为 ABE、ACD、BCF，故新增棱 AB、AC、BC、BE、CD、BF、CF，被遮挡的 AE、AD、ED 用虚线；
+%   图 2 为截角后的几何体，只剩 A、B、C、D、E、F 六个顶点，实线为 AB、AC、BC、BE、CD、BF、CF、
+%   EF、FD，虚线为 AE、AD、ED。
+\begin{tikzpicture}[semithick, font=\small, every node/.style={inner sep=1.2pt}]
+
+  % ---------------- 图 1：正三棱柱 GHI-EFD 与截角线 ----------------
+  \begin{scope}[shift={(0,0)}]
+    \coordinate (H) at (0,3.45);
+    \coordinate (A) at (1.90,3.45);
+    \coordinate (G) at (3.80,3.45);
+    \coordinate (I) at (1.90,2.15);
+    \coordinate (B) at (0.95,2.80);
+    \coordinate (C) at (2.85,2.80);
+    \coordinate (E) at (0,0.40);
+    \coordinate (D) at (3.80,0.40);
+    \coordinate (F) at (1.90,-0.85);
+
+    % 可见棱
+    \draw (H) -- (G);
+    \draw (H) -- (B);
+    \draw (G) -- (C);
+    \draw (H) -- (E);
+    \draw (G) -- (D);
+    \draw (B) -- (I) -- (C);
+    \draw (I) -- (F);
+    \draw (E) -- (F) -- (D);
+    % 截角线（可见部分）
+    \draw (A) -- (B);
+    \draw (A) -- (C);
+    \draw (B) -- (C);
+    \draw (B) -- (E);
+    \draw (C) -- (D);
+    \draw (B) -- (F);
+    \draw (C) -- (F);
+    % 被遮挡的截角线与底边
+    \draw[dashed] (A) -- (E);
+    \draw[dashed] (A) -- (D);
+    \draw[dashed] (E) -- (D);
+
+    \node[above] at (H) {$H$};
+    \node[above] at (A) {$A$};
+    \node[above] at (G) {$G$};
+    \node[below left=1pt] at (B) {$B$};
+    \node[below right=1pt] at (C) {$C$};
+    \node[right=3pt] at (I) {$I$};
+    \node[left] at (E) {$E$};
+    \node[right] at (D) {$D$};
+    \node[below] at (F) {$F$};
+    \node at (1.90,-1.75) {图 1};
+  \end{scope}
+
+  % 侧视方向箭头
+  \draw[->,>=stealth] (4.45,1.55) -- (5.45,1.55);
+  \node[above] at (4.95,1.55) {侧视};
+
+  % ---------------- 图 2：截角后的几何体 ----------------
+  \begin{scope}[shift={(6.55,-0.05)}]
+    \coordinate (A2) at (1.90,3.35);
+    \coordinate (B2) at (0.95,2.62);
+    \coordinate (C2) at (2.85,2.62);
+    \coordinate (E2) at (0.10,0.30);
+    \coordinate (D2) at (3.70,0.30);
+    \coordinate (F2) at (1.90,-0.95);
+
+    % 可见棱
+    \draw (A2) -- (B2) -- (C2) -- cycle;
+    \draw (B2) -- (E2);
+    \draw (C2) -- (D2);
+    \draw (B2) -- (F2);
+    \draw (C2) -- (F2);
+    \draw (E2) -- (F2) -- (D2);
+    % 被遮挡的棱
+    \draw[dashed] (A2) -- (E2);
+    \draw[dashed] (A2) -- (D2);
+    \draw[dashed] (E2) -- (D2);
+
+    \node[above] at (A2) {$A$};
+    \node[below left=1pt] at (B2) {$B$};
+    \node[below right=1pt] at (C2) {$C$};
+    \node[left] at (E2) {$E$};
+    \node[right] at (D2) {$D$};
+    \node[below] at (F2) {$F$};
+    \node at (1.90,-1.75) {图 2};
+  \end{scope}
+
+  % ---------------- 四个侧视图选项 ----------------
+  % (A) 左边竖直、顶边半宽、右侧斜边，内部连 E—B
+  \begin{scope}[shift={(0,-6.10)}]
+    \draw (0,0) -- (0,2.60) -- (1.20,2.60) -- (2.60,0) -- cycle;
+    \draw (0,0) -- (1.20,2.60);
+    \node[above] at (1.20,2.60) {$B$};
+    \node[left] at (0,0) {$E$};
+    \node at (1.30,-0.55) {(A)};
+  \end{scope}
+  % (B) 两侧均为斜边，B 在顶边右端，内部连 E—B
+  \begin{scope}[shift={(4.60,-6.10)}]
+    \draw (0,0) -- (0.90,2.40) -- (1.55,2.40) -- (2.60,0) -- cycle;
+    \draw (0,0) -- (1.55,2.40);
+    \node[above] at (1.55,2.40) {$B$};
+    \node[left] at (0,0) {$E$};
+    \node at (1.30,-0.55) {(B)};
+  \end{scope}
+  % (C) 右边竖直、左侧斜边，内部连 E—右上角
+  \begin{scope}[shift={(0,-9.70)}]
+    \draw (0,0) -- (0.90,2.60) -- (2.60,2.60) -- (2.60,0) -- cycle;
+    \draw (0,0) -- (2.60,2.60);
+    \node[above left] at (0.90,2.60) {$B$};
+    \node[left] at (0,0) {$E$};
+    \node at (1.30,-0.55) {(C)};
+  \end{scope}
+  % (D) 两侧均为斜边、整体更窄，B 在顶边右端，内部连 E—B
+  \begin{scope}[shift={(4.60,-9.70)}]
+    \draw (0,0) -- (0.45,2.40) -- (1.05,2.40) -- (2.60,0) -- cycle;
+    \draw (0,0) -- (1.05,2.40);
+    \node[above] at (1.05,2.40) {$B$};
+    \node[left] at (0,0) {$E$};
+    \node at (1.30,-0.55) {(D)};
+  \end{scope}
+\end{tikzpicture}
