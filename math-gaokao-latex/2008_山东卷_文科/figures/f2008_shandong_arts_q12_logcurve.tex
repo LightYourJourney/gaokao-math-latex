@@ -1,0 +1,16 @@
+% 2008 年山东卷文科第 12 题：f(x)=log_a(2^x+b-1) 的图象，与 y 轴交点高于 y=-1。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008山东文.pdf
+% SHA-256：479a9abc0fe5954c5b717d8eb0f649966c1cee3cfabdab00f10cc5834668fd6f
+% 原页：2008山东文.pdf 第 1 页（A3 三栏）第 2 栏，书页码 473。
+\begin{tikzpicture}[x=1.7cm, y=1.05cm, semithick, font=\small,
+  every node/.style={inner sep=1.2pt}]
+  \draw[->,>=stealth] (-1.5,0) -- (1.9,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-1.55) -- (0,1.5) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \draw (0,-1) -- (-0.05,-1);
+  \node[left] at (-0.05,-1) {$-1$};
+  % 曲线：单调递增，与 y 轴交于 -0.45（高于 -1），与 x 轴交于正半轴
+  \draw[line width=0.9pt] (-1.15,-1.25)
+    .. controls (-0.60,-0.95) and (-0.28,-0.62) .. (0,-0.45)
+    .. controls (0.45,-0.17) and (1.00,0.28) .. (1.72,0.80);
+\end{tikzpicture}

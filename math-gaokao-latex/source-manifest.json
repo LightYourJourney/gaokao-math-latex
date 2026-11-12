@@ -2964,6 +2964,14 @@
         "gk-2008-anhui-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b09",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-shandong-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2973,7 +2981,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "f7aad039-0b70-4d69-9465-ad25a7179eb7",
+  "last_transaction_id": "61593f29-1a19-4b4f-85e6-c01cc4c1eda4",
   "papers": [
     {
       "blocked_from": null,
@@ -36599,9 +36607,82 @@
       "title": "2008 年·普通高等学校招生考试·安徽卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_文科/figures/f2008_shandong_arts_q12_logcurve.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_文科/figures/f2008_shandong_arts_q14_flowchart.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_文科/figures/f2008_shandong_arts_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_文科/figures/f2008_shandong_arts_q3_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_山东卷_文科/figures/f2008_shandong_arts_q6_views.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_shandong_arts",
+        "id": "gk-2008-shandong-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 473、474；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 3 题四个候选图象、第 6 题三视图、第 12 题对数曲线、第 14 题程序框图、第 19 题四棱锥均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "山东卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "山东文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-shandong-arts",
+      "production_state": "complete",
+      "project_dir": "2008_山东卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_山东文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_山东文_含解析.md",
+        "questions": "2008/2008_数学真题_山东文_试题.md",
+        "solution_body": "2008/2008_数学真题_山东文_解析正文.md"
+      },
+      "source_ids": [
+        "src-534328907654084b07b12fffa7db250a3cb00d33eb43003f0b76908154cce877"
+      ],
+      "title": "2008 年·普通高等学校招生考试·山东卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8093,
+  "revision": 8133,
   "schema_version": 1,
   "sources": [
     {
@@ -45790,8 +45871,8 @@
       "exam_type": "regular",
       "git_blob_oid": "37a546312c7db5ce474ba15a7e27313ebfb64699",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-shandong-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008山东文.pdf",
       "regions": [],
       "source_id": "src-534328907654084b07b12fffa7db250a3cb00d33eb43003f0b76908154cce877",

@@ -15877,3 +15877,16 @@
 - 正式构建 attempt `5494817a-df1f-415e-80a8-3e2d6c571f3c`：四版 5/23/7/18 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4、解析 3/4/12/18、简答 3/4、印刷 2/3/9/13）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b08.md`。
 - 门禁全通过：`review_receipts check-all`（351 批次）、`provenance check-all`（505 卷）、`solution_sources check-all`、`validate-receipts`（505 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（505 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b09：2008 山东文科正式封账
+
+- 固定来源 `src-534328907654084b07b12fffa7db250a3cb00d33eb43003f0b76908154cce877`（2 页 A3，印刷页 473–474，SHA-256 `479a9abc…4668fd6f`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 五幅 TikZ 矢量图：Q3 四个候选图象（图即选项）、Q6 三视图、Q12 对数型曲线、Q14 程序框图、Q19 四棱锥（AB∥DC 的梯形底），各登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 B D A C A C D C B C B A；填空 13=x²/4−y²/12=1、14=4、15=2008、16=11；Q17 √2 与 [π/6+kπ,2π/3+kπ]；Q18 1/3、5/6；Q19 证面面垂直、体积 16√3；Q20 1/S_n 等差、b_n 分段、行和 −2(2^k−1)/(k(k+1))；Q21 a=−1/3、b=−1、单调区间、f≥g；Q22 x²/5+y²/4=1、轨迹椭圆 x²/(4λ²)+y²/(5λ²)=1、面积最小 40/9。
+- 关键推导：Q2 由 z+z̄=4 与 |z|=2√2 得 z=2±2i，故 z̄/z=±i；Q4 逆否命题与原命题等价为真，逆命题用 y=eˣ 反例；Q6 圆柱侧面积 6π + 底面积 π + 球面积 4π；Q8 由 m⊥n 得 A=π/3，再由正弦定理化 a cosB+b cosA=c sinC 为 sinC=sin²C 得 C=π/2；Q12 由 −1<log_a b<0 与 a>1 得 0<a⁻¹<b<1；Q14 依次算到 S=7/8≥0.8 时 n=4；Q15 换元得 f(t)=4log₂t+233，求和 2008；Q19 由 AD²+BD²=AB² 得 AD⊥BD，结合面面垂直推出 BD⊥平面 PAD；Q20 由 2b_n=−S_nS_{n−1} 得 1/S_n 公差 1/2，再由 b₁₃=−1/91 与 a₈₁=b₁₃q² 定 q=2；Q22 用菱形面积 2ab=4√5 与内切圆半径 ab/√(a²+b²) 定 a²=5、b²=4。
+- 版式修正：Q3 四幅小图初版行列重叠，重排为 2×2（行距 5.6 单位、列距 4.3 单位）并统一坐标范围；Q6 三视图改为球与圆柱相切的标准画法，尺寸 2/3/2 标注外置；Q12 曲线改为三次贝塞尔，明确与 y 轴交于 −1 上方；Q14 回路补箭头；Q7 选项由 \dfrac 改为 \frac 并加 question-needspace 0.3，消除「(D) 单独掉页」的跨页割裂；Q22(2)② 的推导合并两处行间公式，使印刷版由 20 页收到 19 页、末页不再只剩三行。
+- 说明：`question-needspace` 指令必须写在题干之后（属该题正文），若写在题号行之前会落到上一题上（本轮首版即因此错位，已修正并按需逐题设置 0.3–0.5）。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-shandong-arts` / `phase6-b09`，live revision 8132；check-batch 通过。
+- 正式构建 attempt `b5fc7282-ce66-48a9-835d-0f129e5d0733`：四版 6/25/8/19 页，共 58 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：58 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 1/2/4/5、解析 1/2/4/5/8/10/15/16/20、简答 1/2/4/5、印刷 1/2/3/4/5/7/9/12/13/16）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b09.md`。
+- 门禁全通过：`review_receipts check-all`（352 批次）、`provenance check-all`（506 卷）、`solution_sources check-all`、`validate-receipts`（506 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（506 套）、`manifest_csv`（775 行）。
