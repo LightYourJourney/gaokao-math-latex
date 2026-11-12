@@ -2916,6 +2916,14 @@
         "gk-2008-shanghai-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b02",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-shanghai-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2925,7 +2933,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "cb8f4ae4-c505-41fb-b7ea-d5184c804b60",
+  "last_transaction_id": "c370ab8a-12c1-43dc-b70c-9e401db00b05",
   "papers": [
     {
       "blocked_from": null,
@@ -36181,9 +36189,74 @@
       "title": "2008 年·普通高等学校招生考试·上海卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_上海卷_理科/figures/f2008_shanghai_science_q15_circle.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_上海卷_理科/figures/f2008_shanghai_science_q16_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_上海卷_理科/figures/f2008_shanghai_science_q17_sector.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_shanghai_science",
+        "id": "gk-2008-shanghai-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 479、480；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 15 题圆与四等分点、第 16 题正方体、第 17 题扇形 AOB（CD∥BO）均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "上海卷",
+        "structure": {
+          "填空题": [
+            1,
+            11
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            12,
+            15
+          ]
+        },
+        "track": "理科",
+        "variant": "上海理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-shanghai-science",
+      "production_state": "complete",
+      "project_dir": "2008_上海卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_上海理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_上海理_含解析.md",
+        "questions": "2008/2008_数学真题_上海理_试题.md",
+        "solution_body": "2008/2008_数学真题_上海理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c4ee4894c96bc70b05a8ae9cd9cdaaf4054d2646a1621c5f70859ab751de69a2"
+      ],
+      "title": "2008 年·普通高等学校招生考试·上海卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8039,
+  "revision": 8044,
   "schema_version": 1,
   "sources": [
     {
@@ -45060,8 +45133,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6dc53a73105eadedb94899d10df99a82a31717da",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-shanghai-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008上海理.pdf",
       "regions": [],
       "source_id": "src-c4ee4894c96bc70b05a8ae9cd9cdaaf4054d2646a1621c5f70859ab751de69a2",
