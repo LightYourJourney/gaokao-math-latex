@@ -15771,3 +15771,16 @@
 - 正式构建 attempt `92c8a36e-d12d-4408-a0bb-7e5729616c38`：四版 5/24/7/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版八处图页逐幅核对（试题 4/5、解析 4/5/18/19、简答 4/5、印刷 4/14/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b27.md`。
 - 门禁全通过：`review_receipts check-all`（343 批次）、`provenance check-all`（497 卷）、`solution_sources check-all`、`validate-receipts`（497 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（497 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase5-b28：2007 湖北理科正式封账
+
+- 固定来源 `src-b4a8ae6ee1fbd6689a132ac50abb10e24533d29dee37cf323166a9f708b2ca8a`（2 页 A3，印刷页 375–376，SHA-256 `e767bc35…44b65d`），21 题：选 10、填 5、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 四幅 TikZ 矢量图：Q15 药量衰减曲线、Q17 频率直方图空白坐标系、Q18 三棱锥、Q19 抛物线与定点弦，各登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 B A B D C B A D A A；填空 11 a=6、b=1/2、12 (2,1)（不唯一）、13 −3/2、14 15/128、15 分段式与 0.6 小时；Q16 [π/4,π/2]、最大值 3 最小值 2；Q17 频率 0.04/0.25/0.30/0.29/0.10/0.02、0.69、0.44、1.41；Q18 面面垂直、线面角范围 (0,π/4)；Q19 面积最小 2√2p²、l:y=p/2 弦长 p；Q20 b=5a²/2−3a²ln a、最大值 (3/2)e^{2/3}、f≥g；Q21 伯努利归纳与指数不等式、方程解 n=2,3。
+- 关键推导：Q7 用双曲线第二定义与抛物线定义得 |MF1|=e|MF2|、|MF1|−|MF2|=2a，代入得 −1；Q8 用 a_n/b_n=A_{2n−1}/B_{2n−1}=7+12/(n+1)，n+1 整除 12 给出 5 个；Q10 圆上整点 12 个、C(12,2)=66 条弦，去掉 6 条过原点的直径得 60；Q16 由 6cotθ∈[0,6] 得 θ 范围，f=1+2sin(2θ−π/3)；Q18 建系得 n1=(ah,ah,a²)、n2∝(−1,1,0)，sinφ=sinθ/√2；Q19 用 x1+x2=2pk、x1x2=−2p² 求面积，弦长平方 (4m−2p)y1+4mp−4m² 定值条件给 m=p/2；Q20 公切线条件 x0=a，φ(a) 求导得 b 最大值；Q21 以 q=(1−1/(n+3))^n 与伯努利不等式控制等比级数。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q10 原页只印「横坐标均为整数」，按字面计数远超选项，按选项 60 与圆上整点计应为横、纵坐标均为整数；Q21(2) 原页指数印作 m，但 m=1,2 时命题不成立，按题意与第（3）问用法应为 n，本库按 n 转录。
+- 版式修正：Q19 图初版 B 点不在抛物线上（线在曲线内），按 y=x+1 与 x²=2y 的交点重算 A、B 并重画；A、B、N 标注移位避免压曲线与坐标轴；Q18 解析首段改为不含行间公式的短段，消除「解析」标题孤立在页脚；Q15 曲线与 Q17 直方图坐标轴按源图重绘。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2007-hubei-science` / `phase5-b28`，live revision 8006；check-batch 通过。
+- 正式构建 attempt `e68b15e0-7e22-471e-85fb-047512655cd9`：四版 5/25/7/20 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4/5、解析 3/4/5/16/18/19/21、简答 3/4/5、印刷 3/4/5/13/15/16/17）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b28.md`。
+- 门禁全通过：`review_receipts check-all`（344 批次）、`provenance check-all`（498 卷）、`solution_sources check-all`、`validate-receipts`（498 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（498 套）、`manifest_csv`（775 行）。

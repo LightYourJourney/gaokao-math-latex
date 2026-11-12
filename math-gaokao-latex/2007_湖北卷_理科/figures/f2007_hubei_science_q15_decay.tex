@@ -1,0 +1,16 @@
+% 2007 年湖北卷理科第 15 题：药物释放过程中 y 与 t 成正比，释放完毕后
+%   y=(1/16)^{t-a}，图中峰值 (0.1,1)，用于确定 a=0.1。
+% 来源 PDF：gaokaomath-src/普通高考/2007/2007湖北理.pdf
+% SHA-256：e767bc35f619e1cd5a96990bd14ba9415b3a440d7d9f5766e43aa6433844b65d
+% 原页：2007湖北理.pdf 第 1 页（A3 三栏）第 2 栏，书页码 375。
+\begin{tikzpicture}[x=13cm, y=3.6cm, semithick,
+  every node/.style={inner sep=1.5pt}]
+  \draw[->,>=stealth] (0,0) -- (0.72,0) node[right] {$t$（小时）};
+  \draw[->,>=stealth] (0,0) -- (0,1.25) node[above] {$y$（毫克）};
+  \node[below left] at (0,0) {$O$};
+  \draw (0.1,0) -- (0.1,1);
+  \draw[dashed] (0.1,1) -- (0,1);
+  \draw[line width=1pt] (0,0) -- (0.1,1) -- plot[domain=0.1:0.7,samples=80] (\x,{pow(0.0625,\x-0.1)});
+  \node[below] at (0.1,0) {$0.1$};
+  \node[left] at (0,1) {$1$};
+\end{tikzpicture}

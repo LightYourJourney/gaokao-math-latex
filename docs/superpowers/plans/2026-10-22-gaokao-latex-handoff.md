@@ -1,5 +1,17 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2007 湖北理科（phase5-b28）封账，卷 complete
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2007 湖北理科（21 题，`gk-2007-hubei-science`）`phase5-b28` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8006，attempt `e68b15e0-7e22-471e-85fb-047512655cd9`；四版 5/25/7/20 页共 57 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase5-b28.md`。
+- 四幅 TikZ 图（Q15 药量衰减、Q17 频率直方图空白坐标、Q18 三棱锥、Q19 抛物线与定点弦）各登记 `expected_occurrences=2`。
+- 关键结论：选择 B A B D C B A D A A；填空 11 a=6、b=1/2、12 (2,1)、13 −3/2、14 15/128、15 分段式与 0.6；Q16 [π/4,π/2] 与最值 3/2；Q17 0.69、0.44、1.41；Q18 (0,π/4)；Q19 2√2p² 与 l:y=p/2；Q20 b 最大值 (3/2)e^{2/3}；Q21 n=2,3。
+- 源疑点两处（解析内已记）：Q10 原页只印「横坐标」，按选项应为横、纵坐标；Q21(2) 原页指数 m，m=1,2 不成立，按题意应为 n。
+- 版式修正：Q19 图 B 点原不在抛物线上，按交点重画并移位标注；Q18 解析首段去行间公式，消除孤立标题。
+- 门禁全通过：`review_receipts check-all`（344 批次）、`provenance check-all`（498 卷）、`solution_sources check-all`、`validate-receipts`（498 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（498 套）、`manifest_csv`（775 行）。
+- 2007 年 ready 来源已全部处理；仅剩湖南文（Q20 题面与通项冲突）与四川文（Q12/Q19/Q21 源缺陷）两卷停在 `pending-intake/2007/`，未登记。
+- 下一步：复核上述两卷的源缺陷（可核验则补入流水线，否则在报告中标 pending），并转入其他年份批次；全库仍未完成。
+
 ## 2026-11-12 接续：2007 湖南理科（phase5-b27）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
