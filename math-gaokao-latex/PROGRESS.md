@@ -15837,3 +15837,16 @@
 - 正式构建 attempt `f135e82a-f681-4b7d-b433-7a54adfec6fd`：四版 5/20/7/15 页，共 47 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3/4、解析 2/3/4/10/12/14、简答 2/3/4、印刷 2/3/4/8/10/12）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b04.md`。
 - 门禁全通过：`review_receipts check-all`（348 批次）、`provenance check-all`（502 卷）、`solution_sources check-all`、`validate-receipts`（502 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（502 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b06：2008 天津理科正式封账
+
+- 固定来源 `src-bb5189cc55062929ef12751edd2349169c1081b83fbeb58d579a622bd571510d`（2 页 A3，印刷页 487–488，SHA-256 `e2442be3…3843f48b`），22 题：选 10、填 6、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q14 平行四边形（对角线 AC、BD）、Q19 四棱锥（同天津文科第 19 题），各登记 expected_occurrences=2。
+- 主代理逐题复核 22 题：选择 A D B C B A D C A B；填空 11=40、12=24、13=x²+(y−1)²=10、14=3、15=7/6、16={2}；Q17 sinx=4/5、sin(2x+π/3)=−(24+7√3)/50；Q18 p=3/4，ξ 分布 1/32、7/32、15/32、9/32，Eξ=2；Q19 arccos(2/√11)、arccos(4/√55)；Q20 a=−8、b=9，单调性分 a≤0 与 a>0，b≤7/4；Q21 x²/4−y²/5=1 与 k 的四个区间；Q22 a2=3、b2=9，a_n=n(n+1)/2、b_n=(n+1)²，|T_n|<2n²。
+- 关键推导：Q5 由椭圆定义 2a=4 得 a=2、c=1、e=1/2，准线距离 2；Q6 把 S∪T=R 化为 T 覆盖 [−1,5]；Q9 比较三个三角值的绝对值；Q10 中间行 4 种、余下排列 360 种，排除和 5 的 48 种，得 4×312=1248；Q14 由 u+v 与 v−u 解 v=(−1,2)，点积 3；Q16 由 2a²≤a^c≤a³ 与退化条件得 a=2；Q20 切线条件 a=−8、b=9，恒成立最坏 a=2 且 x=1/4 给 b≤7/4；Q22 由 nS_{n+1}=(n+3)S_n 累乘得 S_n=n(n+1)(n+2)/6，b_n=(n+1)²，按 a_k 奇偶 4 周期分组估计 T_n。
+- 版式修正：Q14 与 Q19 图按源图重绘；四版 0 警告。
+- 另：本轮尝试 2008 大纲卷 I 文科时发现该源已绑定 `gk-2008-regular-national-1-arts`（phase2-b97 已封账、project_dir `2008_全国Ⅰ卷_文科`），故未重复登记，临时转写产物已清理；大纲卷 I/II 文理四卷此前已覆盖。
+- Provenance：三角色 66 条记录（22×3）导入，manifest 登记 `gk-2008-tianjin-science` / `phase6-b06`，live revision 8066；check-batch 通过。
+- 正式构建 attempt `01c0a45b-8103-46b9-9643-59ea6677ba13`：四版 5/24/7/19 页，共 55 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：55 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4、解析 3/4/15/19、简答 3/4、印刷 3/11/15）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b06.md`。
+- 门禁全通过：`review_receipts check-all`（349 批次）、`provenance check-all`（503 卷）、`solution_sources check-all`、`validate-receipts`（503 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（503 套）、`manifest_csv`（775 行）。

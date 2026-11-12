@@ -2940,6 +2940,14 @@
         "gk-2008-beijing-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b06",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-tianjin-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2949,7 +2957,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0d5c5a8d-8834-4fcc-a93d-8248f7b35777",
+  "last_transaction_id": "3b455a53-4ddd-4eb7-a5ae-e60ee2e70b2c",
   "papers": [
     {
       "blocked_from": null,
@@ -36396,9 +36404,70 @@
       "title": "2008 年·普通高等学校招生考试·北京卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_天津卷_理科/figures/f2008_tianjin_science_q14_parallelogram.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_天津卷_理科/figures/f2008_tianjin_science_q19_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_tianjin_science",
+        "id": "gk-2008-tianjin-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 487、488；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 14 题平行四边形与第 19 题四棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "天津卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "天津理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-tianjin-science",
+      "production_state": "complete",
+      "project_dir": "2008_天津卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_天津理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_天津理_含解析.md",
+        "questions": "2008/2008_数学真题_天津理_试题.md",
+        "solution_body": "2008/2008_数学真题_天津理_解析正文.md"
+      },
+      "source_ids": [
+        "src-bb5189cc55062929ef12751edd2349169c1081b83fbeb58d579a622bd571510d"
+      ],
+      "title": "2008 年·普通高等学校招生考试·天津卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8062,
+  "revision": 8067,
   "schema_version": 1,
   "sources": [
     {
@@ -45515,8 +45584,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f4853c780f34c0478492a7a9a1badfcd90a5d345",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-tianjin-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008天津理.pdf",
       "regions": [],
       "source_id": "src-bb5189cc55062929ef12751edd2349169c1081b83fbeb58d579a622bd571510d",
