@@ -2932,6 +2932,14 @@
         "gk-2008-tianjin-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b04",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-beijing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2941,7 +2949,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "aa8d4f19-2227-4a4e-82f8-1bd8fa42cc69",
+  "last_transaction_id": "0d5c5a8d-8834-4fcc-a93d-8248f7b35777",
   "papers": [
     {
       "blocked_from": null,
@@ -36319,9 +36327,78 @@
       "title": "2008 年·普通高等学校招生考试·天津卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_理科/figures/f2008_beijing_science_q12_line.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_理科/figures/f2008_beijing_science_q16_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_理科/figures/f2008_beijing_science_q8_cube.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_北京卷_理科/figures/f2008_beijing_science_q8_options.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_beijing_science",
+        "id": "gk-2008-beijing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 425、426；PDF 只有题面、无官方答案页，20 题答案由本库独立推导（非官方）。第 8 题正方体与四个候选图象、第 12 题折线图、第 16 题三棱锥均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "北京卷",
+        "structure": {
+          "填空题": [
+            9,
+            14
+          ],
+          "解答题": [
+            15,
+            20
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "北京理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-beijing-science",
+      "production_state": "complete",
+      "project_dir": "2008_北京卷_理科",
+      "question_count": 20,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_北京理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_北京理_含解析.md",
+        "questions": "2008/2008_数学真题_北京理_试题.md",
+        "solution_body": "2008/2008_数学真题_北京理_解析正文.md"
+      },
+      "source_ids": [
+        "src-ba8c4c4d4294a11fbafff19986e14ed7f9dda2707956218900aa441727169b56"
+      ],
+      "title": "2008 年·普通高等学校招生考试·北京卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8051,
+  "revision": 8062,
   "schema_version": 1,
   "sources": [
     {
@@ -45246,8 +45323,8 @@
       "exam_type": "regular",
       "git_blob_oid": "b9b1b2893914daa09e29a4674d0486cb114a7c7a",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-beijing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008北京理.pdf",
       "regions": [],
       "source_id": "src-ba8c4c4d4294a11fbafff19986e14ed7f9dda2707956218900aa441727169b56",
