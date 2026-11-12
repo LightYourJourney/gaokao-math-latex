@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-12 接续：2008 上海文科（phase6-b01）封账，新年度批次启动
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 上海文科（21 题，`gk-2008-shanghai-arts`）`phase6-b01` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8038，attempt `4b5d8f7c-d3b7-4849-b459-9e2fade1b372`；四版 4/20/6/16 页共 46 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b01.md`。
+- 三幅 TikZ 图（Q15 圆、Q16 正方体、Q17 扇形）各登记 `expected_occurrences=2`。
+- 关键结论：填空 1–11 见 PROGRESS；选择 D B B D；Q16 arcsin(√6/6)；Q17 约 404 米；Q18 3/2 与 √3；Q19 log₂(1+√2)、m≥−5；Q20 渐近线、λ≤−1、分段 s(k)；Q21 r=4、T12n=−4n、r=1 与 T293/294/297/298。
+- 源疑点：Q17 原页未给圆心角，按图形 ∠AOC=120° 取 404 米（解析内已记）。
+- 门禁全通过：`review_receipts check-all`（345 批次）、`provenance check-all`（499 卷）、`solution_sources check-all`、`validate-receipts`（499 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（499 套）、`manifest_csv`（775 行）。
+- 2007 年 ready 来源已全部处理；湖南文、四川文仍因源缺陷停在 pending-intake。
+- 下一步：继续 2008 年其余 ready 来源（上海理、北京文理、大纲卷、新课标卷等），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-12 接续：2007 湖北理科（phase5-b28）封账，卷 complete
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

@@ -15784,3 +15784,17 @@
 - 正式构建 attempt `e68b15e0-7e22-471e-85fb-047512655cd9`：四版 5/25/7/20 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4/5、解析 3/4/5/16/18/19/21、简答 3/4/5、印刷 3/4/5/13/15/16/17）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase5-b28.md`。
 - 门禁全通过：`review_receipts check-all`（344 批次）、`provenance check-all`（498 卷）、`solution_sources check-all`、`validate-receipts`（498 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（498 套）、`manifest_csv`（775 行）。
+
+### 2026-11-12 phase6-b01：2008 上海文科正式封账（新年度批次）
+
+- 固定来源 `src-0b2fe8437db245d1636372e3195398834af79eaa08ed5e260f90a9c04fe44fc6`（2 页 A3，印刷页 481–482，SHA-256 `415d384f…7bae589a4`），21 题：填 11、选 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 三幅 TikZ 矢量图：Q15 圆与四等分点、Q16 正方体（E 为 BC1 中点）、Q17 扇形与小路（D 处 120°），各登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：填空 1=(0,2)、2=2、3=1+i、4=2^x、5=√7、6=−1、7=4、8=4/5、9=−2x²+4、10 a=10 b=11、11 (5/2,5)；选择 D B B D；Q16 arcsin(√6/6)；Q17 约 404 米；Q18 3/2 与 √3；Q19 log₂(1+√2) 与 m≥−5；Q20 y=±√2x/2、(−∞,−1]、分段 s(k)；Q21 r=4、T_{12n}=−4n、r=1 且 T293/T294/T297/T298。
+- 关键推导：Q7 用虚根共轭与 |z|²=p；Q8 用 10 个三点组中 2 组共线；Q9 偶函数定 b=−2、值域定 a²=2；Q10 中位数给 a+b=21、方差最小取 10 与 11；Q11 在 BC 上 x=5/2 得 25/2；Q17 余弦定理得 AC=700，按圆心角 120° 得 R=700/√3≈404.1；Q18 拆两步行间公式避免超宽；Q19 令 u=2^t 化为 (u²−1)(u²+1+m)≥0；Q20 用 x1x2 参数化求 λ 与截线段；Q21 用周期块与部分和表定位 100。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q17 原页文字未给圆心角，图中 D 在扇形内部，仅凭 AD、DC 与 ∠ADC 不能定半径；按图形（∠AOC=120°）与“精确到 1 米”的口径取 120°，得 404 米。
+- 版式修正：Q15 图放大至 1.15cm/单位、Q16 放大至 1.2 倍并补虚线（D—A、D—C、D—D1）、Q17 放大至 1.15 倍并把 120° 角弧改到 D 的上方；Q18(2) 的超宽行间公式拆成两段；Q17 解析重复的“于是”删去。
+- 另：`\\wideparen` 在本库字体链下不可用，弧记号统一改用 `\\widehat`。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2008-shanghai-arts` / `phase6-b01`，live revision 8038；check-batch 通过。
+- 正式构建 attempt `4b5d8f7c-d3b7-4849-b459-9e2fade1b372`：四版 4/20/6/16 页，共 46 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：46 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版八处图页逐幅核对（试题 2/3、解析 2/3/13/14/15、简答 2/3、印刷 2/3/10/11/12）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b01.md`。
+- 门禁全通过：`review_receipts check-all`（345 批次）、`provenance check-all`（499 卷）、`solution_sources check-all`、`validate-receipts`（499 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（499 套）、`manifest_csv`（775 行）。
