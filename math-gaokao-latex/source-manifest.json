@@ -3004,6 +3004,14 @@
         "gk-2008-zhejiang-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b14",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-zhejiang-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3013,7 +3021,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "836bdf70-7811-415a-94a8-174b50d865dd",
+  "last_transaction_id": "aa4401ca-39d8-425c-9a86-cae6dfc23e51",
   "papers": [
     {
       "blocked_from": null,
@@ -36988,9 +36996,78 @@
       "title": "2008 年·普通高等学校招生考试·浙江卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_浙江卷_理科/figures/f2008_zhejiang_science_q10_slant.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_浙江卷_理科/figures/f2008_zhejiang_science_q14_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_浙江卷_理科/figures/f2008_zhejiang_science_q18_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_浙江卷_理科/figures/f2008_zhejiang_science_q20_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_zhejiang_science",
+        "id": "gk-2008-zhejiang-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 491、492；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 10 题斜线段与平面、第 14 题球内接四面体、第 18 题矩形与梯形组合体、第 20 题抛物线与垂足示意图均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "浙江卷",
+        "structure": {
+          "填空题": [
+            11,
+            17
+          ],
+          "解答题": [
+            18,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "浙江理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-zhejiang-science",
+      "production_state": "complete",
+      "project_dir": "2008_浙江卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_浙江理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_浙江理_含解析.md",
+        "questions": "2008/2008_数学真题_浙江理_试题.md",
+        "solution_body": "2008/2008_数学真题_浙江理_解析正文.md"
+      },
+      "source_ids": [
+        "src-674cd64cd7ae5ef8085e782eaa9bcefd792c907f27e9f23e5ca50d06001a448d"
+      ],
+      "title": "2008 年·普通高等学校招生考试·浙江卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8193,
+  "revision": 8200,
   "schema_version": 1,
   "sources": [
     {
@@ -46467,8 +46544,8 @@
       "exam_type": "regular",
       "git_blob_oid": "47c7a1484ea0fc828a8c758e2c859619a4a258c9",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-zhejiang-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008浙江理.pdf",
       "regions": [],
       "source_id": "src-674cd64cd7ae5ef8085e782eaa9bcefd792c907f27e9f23e5ca50d06001a448d",

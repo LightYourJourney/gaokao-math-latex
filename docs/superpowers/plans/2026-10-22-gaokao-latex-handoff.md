@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：2008 浙江理科（phase6-b14）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 浙江理科（22 题，`gk-2008-zhejiang-science`）`phase6-b14` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8197，attempt `b01974a2-85f3-46e0-b90a-fae99b411da4`；四版 6/21/8/18 页共 53 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b14.md`。
+- 四幅 TikZ 图（Q10 斜线段与平面、Q14 球内接四面体、Q18 矩形与梯形组合体、Q20 抛物线与垂足）各登记 `expected_occurrences=2`。
+- 关键结论：选择 A D D A C C D B C B；填空 11=1+√2、12=8、13=√3/3、14=9π/2、15=1、16=40、17=1；Q18 9/2；Q19 5 与 3/2、红球最少；Q20 2x−y+2=0；Q21 [3, 2+3√2]；Q22 三问证明。
+- 已知缺陷（待清理批次）：2007/2008 共 37 卷的 `_试题.md` 首段仍为「状态：needs-review；…正式构建与逐页验收待完成。」，会被排进四版 PDF；需「删段—重生成—重构建—重审查」单独处理。
+- 门禁全通过：`review_receipts check-all`（357 批次）、`provenance check-all`（511 卷）、`solution_sources check-all`、`validate-receipts`（511 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（511 套）、`manifest_csv`（775 行）。
+- 下一步：① 清理 37 卷状态段；② 继续 2008 未绑定来源（福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）；③ 1952–2006 与 2017–2026 仍几乎未处理，全库仍未完成。
+
 ## 2026-11-13 接续：2008 浙江文科（phase6-b13）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

@@ -1,0 +1,29 @@
+% 2008 年浙江卷理科第 20 题：曲线 C 是到点 P(−1/2,3/8) 与直线 y=−5/8 距离相等的点的轨迹；
+%   l 过 Q(−1,0)，M 在 C 上，A、B 在 l 上，MA⊥l，MB⊥x 轴。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008浙江理.pdf
+% SHA-256：61b86d188443ba25020577365e293aa0999ec32fb32b9791690cec6ac85cf0db
+% 原页：2008浙江理.pdf 第 2 页（A3 三栏）第 1 栏，书页码 492。
+% 重绘依据：原图为示意图，仅画坐标轴、过 Q 的直线 l、M 及其到 l 的垂足 A、到 x 轴的垂足 B，
+%   曲线 C 本身不画出（与原图一致）。
+\begin{tikzpicture}[scale=1.1, semithick, font=\small, every node/.style={inner sep=1.2pt}]
+  \draw[->,>=stealth] (-2.6,0) -- (4.8,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-1.2) -- (0,4.4) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  % 直线 l：过 Q(-1,0)，斜率 0.45
+  \draw (-2.4,-0.63) -- (4.6,2.52) node[right] {$l$};
+  \fill (-1,0) circle (1.2pt);
+  \node[below right] at (-1,0) {$Q$};
+
+  % M、B、A
+  \coordinate (M) at (2.6,3.3);
+  \coordinate (B) at (2.6,1.62);
+  \coordinate (A) at (3.229,1.903);
+  \draw (M) -- (B);
+  \draw (M) -- (A);
+  % A 处的直角标记
+  \draw (3.09,1.80) -- (3.16,1.95) -- (3.32,1.86);
+  \node[above left] at (M) {$M$};
+  \node[below left] at (B) {$B$};
+  \node[right] at (A) {$A$};
+\end{tikzpicture}
