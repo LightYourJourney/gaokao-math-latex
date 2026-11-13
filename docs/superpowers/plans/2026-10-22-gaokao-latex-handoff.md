@@ -1,5 +1,13 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：队列 A 第二批（2008 上海文、上海理）
+
+- 两卷删 `_试题.md` 首段状态段后重生成—重构建—重审查—重封账：上海文 `phase6-b01`（4/20/6/16，46 页，attempt `45e71c41`）、上海理 `phase6-b02`（4/19/6/15，44 页，attempt `c1f59562`），均 FINALIZED / `closed`、0 errors / 0 overfull / 0 underfull / 0 缺字、八类检查 0 fail。
+- 版式修正：上海文第 11 题答案框原为跨页孤块，合并两处行间公式为行内式后回到解析同页。
+- 图稿：圆 Ω、正方体、扇形三幅与源图逐项核对一致（文科 ∠ADC=120° 在 D；理科圆心角 120° 在 O、CD∥BO），本轮未改动。
+- 门禁全通过：357 批次 FINALIZED、511 卷 provenance/solution_sources/validate-receipts、三套生成器 --all --check、report render/check、manifest_csv。
+- 状态段清理进度：41 → 37 卷。下一步继续队列 A（2007 年 27 卷、2008 年 5 卷、2006 年 5 卷），每轮 1–2 卷。
+
 ## 2026-11-13 接续：队列 A 首批（2008 天津文、天津理）状态段清理 + 图稿修正
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

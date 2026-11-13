@@ -15966,3 +15966,13 @@
 - 视觉审查：47 + 54 页八类检查逐页完成（0 fail、0 pending、0 豁免）；图页 110dpi 全页 + 350–400dpi 局部放大核对（天津文 试题 4、解析 4/15、简答 4、印刷 3/14；天津理 试题 3/4、解析 3/4/15/19、简答 3/4、印刷 3/11/15）。`finalize-batch` 两批均 FINALIZED、批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b03.md`（attempt `7761c4aa`）、`reports/phase6-b06.md`（attempt `64d9e61d`）。
 - 门禁全通过：`review_receipts check-all --require-current-build`（357 批次 FINALIZED）、`provenance check-all`（511 卷）、`solution_sources check-all`（511 卷）、`validate-receipts`（511 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（511 套）、`manifest_csv`（775 行，--check 一致）。
 - 剩余：清理前 complete 卷共 41 卷带同款状态段（2006 年 5、2007 年 27、2008 年 9），本轮清掉天津文理 2 卷后仍余 39 卷（2006 年 5、2007 年 27、2008 年 7）；blocked 卷 12 卷的同款段落随队列 D 一并处理。
+
+### 2026-11-13 phase6-b16：2008 上海文、上海理状态段清理
+
+- 队列 A 第二批：2008 上海文科（`gk-2008-shanghai-arts`，`phase6-b01`）、理科（`gk-2008-shanghai-science`，`phase6-b02`）。删 `_试题.md` 首段「状态：needs-review；…」后重生成四层 Markdown、重出壳、重构建、重审查、重封账；题面与解答内容未改。
+- 版式修正：上海文科第 11 题答案框原本被挤到下一页页首、与解析分离（孤行答案框），把「在 x=5/2 处取最大值」与「此时 y=…」两处行间公式并为一行内式后，答案框回到第 10 页与解析同页。
+- 图稿核查（无改动）：Q15 圆 Ω 与两轴相切图、Q16 正方体（D 处三条隐藏棱虚线、DE 与 BC₁ 实线）、Q17 扇形图（文科 ∠ADC=120° 标在 D，理科圆心角 120° 标在 O、CD∥BO）均与源图一致。
+- 上海文：四版 4/20/6/16 页，共 46 页（attempt `45e71c41`）；上海理：四版 4/19/6/15 页，共 44 页（attempt `c1f59562`）；全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：46 + 44 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350dpi 局部放大核对（文科 试题 2/3、解析 2/3/13/14/15、简答 2/3、印刷 2/3/10/11/12；理科 试题 2/3、解析 2/3/12/13/14、简答 2/3、印刷 2/3/10/11）；两批 `finalize-batch` FINALIZED、`closed`，报告 `reports/phase6-b01.md`、`reports/phase6-b02.md`。
+- 门禁全通过：`review_receipts check-all --require-current-build`（357 批次）、`provenance check-all`（511 卷）、`solution_sources check-all`、`validate-receipts`（511 卷）、`report render/check --all`、三套生成器 `--all --check`（511 套）。
+- 状态段清理进度：41 → 37 卷（已清天津文理、上海文理）。
