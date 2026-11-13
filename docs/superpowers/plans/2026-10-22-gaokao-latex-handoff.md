@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：2008 广东理科（phase6-b12）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 广东理科（21 题，`gk-2008-guangdong-science`）`phase6-b12` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8179，attempt `01580db5-5e39-4323-8624-9782656f650f`；四版 5/22/7/19 页共 53 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b12.md`。
+- 四幅 TikZ 图（Q5 截角棱柱、Q9 程序框图、Q18 椭圆与抛物线、Q20 四棱锥含 △EFG）各登记 `expected_occurrences=2`。
+- 关键结论：选择 C D C C A D B B；填空 9=a=12/i=3、10=1、11=x−y+1=0、12=π、13=(2√3,π/6)、14=[0,1/4]、15=√3；Q16 cos x 与 56/65；Q17 Eξ=4.34、3%；Q18 4 个点；Q19 三类单调性；Q20 tanθ=√30/5、直角在 G、4R²/9；Q21 S_n=3−(n+3)/2^n。
+- 工具经验（再次确认）：`question-needspace` 必须写在题号行之后（属该题正文块），写在题号行之前会绑定到上一题——本轮四处同时错位，已修正。
+- 已知缺陷（待清理批次）：2007/2008 两批共 37 卷的 `_试题.md` 首段仍为「状态：needs-review；…正式构建与逐页验收待完成。」，会被排进四版 PDF；需「删段—重生成—重构建—重审查」单独处理。
+- 门禁全通过：`review_receipts check-all`（355 批次）、`provenance check-all`（509 卷）、`solution_sources check-all`、`validate-receipts`（509 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（509 套）、`manifest_csv`（775 行）。
+- 下一步：① 清理 37 卷状态段；② 继续 2008 未绑定来源（浙江文理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-13 接续：2008 广东文科（phase6-b11）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

@@ -2988,6 +2988,14 @@
         "gk-2008-guangdong-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b12",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-guangdong-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -2997,7 +3005,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "2079a2d5-04ec-4466-a207-43254e295ba8",
+  "last_transaction_id": "40daaed4-5d0a-44f2-b4b8-51d9d3d5e9d8",
   "papers": [
     {
       "blocked_from": null,
@@ -36842,9 +36850,78 @@
       "title": "2008 年·普通高等学校招生考试·广东卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_理科/figures/f2008_guangdong_science_q18_conic.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_理科/figures/f2008_guangdong_science_q20_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_理科/figures/f2008_guangdong_science_q5_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_广东卷_理科/figures/f2008_guangdong_science_q9_flowchart.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_guangdong_science",
+        "id": "gk-2008-guangdong-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 445、446；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 5 题截角棱柱（图 1、图 2 与四个侧视图选项合绘一幅）、第 9 题程序框图、第 18 题椭圆与抛物线、第 20 题四棱锥均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "广东卷",
+        "structure": {
+          "填空题": [
+            9,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            8
+          ]
+        },
+        "track": "理科",
+        "variant": "广东理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-guangdong-science",
+      "production_state": "complete",
+      "project_dir": "2008_广东卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_广东理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_广东理_含解析.md",
+        "questions": "2008/2008_数学真题_广东理_试题.md",
+        "solution_body": "2008/2008_数学真题_广东理_解析正文.md"
+      },
+      "source_ids": [
+        "src-3b54c7f12948093453902a38c362b6d3c7184d2040a09cabe1e475a9fcf7b0a5"
+      ],
+      "title": "2008 年·普通高等学校招生考试·广东卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8165,
+  "revision": 8180,
   "schema_version": 1,
   "sources": [
     {
@@ -46105,8 +46182,8 @@
       "exam_type": "regular",
       "git_blob_oid": "93a3dde3a2ccf1b1eb30328e4c4bac7850cd178e",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-guangdong-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008广东理.pdf",
       "regions": [],
       "source_id": "src-3b54c7f12948093453902a38c362b6d3c7184d2040a09cabe1e475a9fcf7b0a5",

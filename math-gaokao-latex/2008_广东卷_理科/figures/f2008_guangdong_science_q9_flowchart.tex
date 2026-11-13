@@ -1,0 +1,34 @@
+% 2008 年广东卷理科第 13 题：程序框图。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008广东理.pdf
+% SHA-256：c395b9608135bcd958aa64c448dfc14a8ba00fbc84cd20c3f1ad316e94d549b3
+% 原页：2008广东理.pdf 第 1 页（A3 三栏）第 3 栏，书页码 445。
+% 逻辑：开始→输入 m,n→i=1→a=m×i→判断“n 整除 a?”；
+%   是→输出 a,i→结束；否→i=i+1→回到 a=m×i。
+\begin{tikzpicture}[>=stealth, semithick, font=\small,
+  every node/.style={inner sep=2pt},
+  box/.style={draw, minimum width=2.2cm, minimum height=0.7cm},
+  term/.style={draw, rounded corners=6pt, minimum width=1.6cm, minimum height=0.6cm},
+  io/.style={draw, trapezium, trapezium left angle=110, trapezium right angle=70,
+             minimum width=2.6cm, minimum height=0.7cm},
+  dec/.style={draw, diamond, aspect=1.9, minimum width=3.0cm, minimum height=1.0cm}]
+
+  \node[term] (s) at (0,0) {开始};
+  \node[io]   (in) at (0,-1.2) {输入 $m$，$n$};
+  \node[box]  (ini) at (0,-2.3) {$i=1$};
+  \node[box]  (mul) at (0,-3.5) {$a=m\times i$};
+  \node[dec]  (jud) at (0,-5.0) {$n$ 整除 $a$?};
+  \node[box]  (inc) at (3.6,-3.5) {$i=i+1$};
+  \node[io]   (out) at (0,-6.5) {输出 $a$，$i$};
+  \node[term] (end) at (0,-7.7) {结束};
+
+  \draw[->] (s) -- (in);
+  \draw[->] (in) -- (ini);
+  \draw[->] (ini) -- (mul);
+  \draw[->] (mul) -- (jud);
+  \draw[->] (jud) -- node[right] {是} (out);
+  \draw[->] (out) -- (end);
+  % 否：判断框右侧进入 i=i+1
+  \draw[->] (jud.east) -- node[above right] {否} (inc.west);
+  % 回路：i=i+1 → 上 → 左 → 下，从右侧回到 a=m×i
+  \draw[->] (inc.north) -- (3.6,-2.85) -- (1.35,-2.85) -- (1.35,-3.5) -- (mul.east);
+\end{tikzpicture}

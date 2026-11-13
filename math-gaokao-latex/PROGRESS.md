@@ -15917,3 +15917,16 @@
 - 正式构建 attempt `6591b14d-7fe3-47c2-abc4-0f526d3b8cda`：四版 6/24/8/19 页，共 57 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：57 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3/4/5/6、解析 2/3/4/5/6/11/13/15/19/22、简答 2/3/4/5/6、印刷 2/3/4/5/6/10/12/13/16/18）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b11.md`。
 - 门禁全通过：`review_receipts check-all`（354 批次）、`provenance check-all`（508 卷）、`solution_sources check-all`、`validate-receipts`（508 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（508 套）、`manifest_csv`（775 行）。
+
+### 2026-11-13 phase6-b12：2008 广东理科正式封账
+
+- 固定来源 `src-3b54c7f12948093453902a38c362b6d3c7184d2040a09cabe1e475a9fcf7b0a5`（2 页 A3，印刷页 445–446，SHA-256 `c395b960…4d549b3`），21 题：选 8、填 7（9–15）、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 四幅 TikZ 矢量图：Q5 截角棱柱（图 1、图 2 与四个侧视图选项合绘）、Q9 程序框图、Q18 椭圆与抛物线、Q20 四棱锥（含 E、F、G 与 △EFG），各登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 C D C C A D B B；填空 9=12（i=3）、10=1、11=x−y+1=0、12=π、13=(2√3, π/6)、14=[0, 1/4]、15=√3；Q16 cos x 与 56/65；Q17 分布列、Eξ=4.34、三等品率最多 3%；Q18 b=1、共 4 个点；Q19 分 k>0、k=0、k<0 讨论单调性；Q20 tanθ=√30/5、以 G 为直角顶点、面积 4R²/9；Q21 通项两种情形与 S_n=3−(n+3)/2^n。
+- 关键推导：Q3 由 x=380 得三年级 500 人，按 64/2000 抽 16 人；Q4 顶点 (0,0)、(20,0)、(0,25)、(10,20) 处 z=0、60、50、70；Q7 由 a<0 与驻点 x=(1/a)ln(−3/a)>0 得 a<−3；Q8 取 AB=u、AD=v 解出 u=(a−b)/2、v=(a+b)/2，再令 AF=λAE 并与 CD 上的点比较系数得 λ=4/3，AF=2a/3+b/3；Q10 由 15k⁴<120 得 k=1；Q14 判别式非负化为 |a−1/4|+|a|≤1/4，几何意义给出 [0,1/4]；Q17 三等品率 x 时 Eξ=4.76−x≥4.73；Q20(1) 平面 ABP 法向量 (√6,√2,√3) 与 BD 方向 (1,0,0) 得 sinθ=√6/√11、tanθ=√30/5；Q20(2) 以 λ=PE/EB=DF/FC 表出 E、F、G，证 GE·GF=0（因 B、C 在底面内而 P 在 z 轴上）；Q21(2) 特征根为 α、β，α≠β 时 x_n=(α^{n+1}−β^{n+1})/(α−β)，α=β 时 x_n=(n+1)α^n。
+- 版式修正：`question-needspace` 首版四处均写在题号行之前、被绑定到上一题，导致 Q5 图与 Q9 框图换页错位、试题版 6 页且多处大留白；改为写在题干之后（Q5 0.5、Q9 0.4、Q18 0.5、Q20 0.5）后试题版收到 5 页；Q20 图的 F 标注原压在 CD 弦上，改为置于基圆外侧下方；Q21 末段把两处行间公式并为一行内公式，解析版由 23 页收到 22 页，末页不再只剩三行。
+- 说明：本卷 Q5 与 2008 广东文科 Q7 同题（题面与选项一致），图稿按文科卷已验收版本复制并改写来源信息；Q9 框图与文科 Q13 同构，仅输入参数不同。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2008-guangdong-science` / `phase6-b12`，live revision 8179；check-batch 通过。
+- 正式构建 attempt `01580db5-5e39-4323-8624-9782656f650f`：四版 5/22/7/19 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3/4/5、解析 2/3/4/5/9/12/18/20、简答 2/3/4/5、印刷 2/3/4/5/8/11/16/17）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b12.md`。
+- 门禁全通过：`review_receipts check-all`（355 批次）、`provenance check-all`（509 卷）、`solution_sources check-all`、`validate-receipts`（509 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（509 套）、`manifest_csv`（775 行）。
