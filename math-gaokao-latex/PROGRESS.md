@@ -15930,3 +15930,16 @@
 - 正式构建 attempt `01580db5-5e39-4323-8624-9782656f650f`：四版 5/22/7/19 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 2/3/4/5、解析 2/3/4/5/9/12/18/20、简答 2/3/4/5、印刷 2/3/4/5/8/11/16/17）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b12.md`。
 - 门禁全通过：`review_receipts check-all`（355 批次）、`provenance check-all`（509 卷）、`solution_sources check-all`、`validate-receipts`（509 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（509 套）、`manifest_csv`（775 行）。
+
+### 2026-11-13 phase6-b13：2008 浙江文科正式封账
+
+- 固定来源 `src-91472de00e7476445b199f3a3c9c6045d31bb814c39016d6c3d77b3db6b5d61c`（2 页 A3，印刷页 493–494，SHA-256 `751204c1…39ecb63`），21 题：选 10、填 7（11–17）、解 4（18–21）；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 两幅 TikZ 矢量图：Q15 球内接四面体（DA⊥平面 ABC、AB⊥BC）、Q20 矩形与梯形组合体（面面垂直、BE∥CF），各登记 expected_occurrences=2。
+- 主代理逐题复核 21 题：选择 A B D D C A C D B C；填空 11=2、12=−7/25、13=8、14=√3/3、15=9π/2、16=[0,1]、17=40；Q18 p=q=1、S_n=2^{n+1}−2+n(n+1)/2；Q19 2/15 与 5；Q20 证 AE∥平面 DCF、AB=9/2；Q21 a=0、y=3x−2，a<2 时最大值 8−4a、a≥2 时 0。
+- 关键推导：Q3 用 a=−2,b=1 与 a=1,b=−2 双向反例；Q7 化 cos(x/2+3π/2)=sin(x/2)，在 [0,2π] 上两解；Q8 由 (c+a²/c):(c−a²/c)=3:2 得 c²=5a²；Q10 三角形上 ax+by 的最大值为 max{a,b}，条件等价于单位正方形；Q13 用 |AF1|+|AF2|=|BF1|+|BF2|=10 两式相加得 |AB|=8；Q15 建立坐标系，球心在过 △ABC 外心且垂直底面的直线上，由 |O'A|=|O'D| 得 h=√3/2、R=3/2；Q17 两种奇偶模式各 20 个；Q20(2) 平面 AEF 法向量 (−3√3, a, −a√3)，与平面 CEF 法向量 (1,0,0) 的夹角余弦为 1/2 得 a=9/2；Q21 分 a<0、0≤a<2、a≥2 讨论端点与驻点。
+- 源疑点（解析内已记 `【源疑点：…】`）：Q19 第 (1) 问原页印作“从中任意摸出 2 个球，得到的数是黑球的概率”，语句不通，按设问结构应为“两个球都是黑球”，作答按此理解。
+- 版式修正：`question-needspace` 首版仍写在题号行之前（第三次踩同一坑），四处全部绑定到上一题，试题版 5 页且第 4 页大片留白；改为写在题干之后（Q15 0.46、Q20 0.5）后试题版收到 4 页（1–5 / 6–10 / 11–17 / 18–21）；Q15 解析中四个坐标原为行内公式，印刷版出现 Underfull 警告，改为独立公式行；Q20 图初版四边形不满足 AB∥DC、AD∥BC 的投影平行关系，C 处四条虚线挤在标注上，按斜投影重建（AB 竖直、BC 略斜、BE 指向右下）后消失。
+- Provenance：三角色 63 条记录（21×3）导入，manifest 登记 `gk-2008-zhejiang-arts` / `phase6-b13`，live revision 8192；check-batch 通过。
+- 正式构建 attempt `1d55c5ce-65ef-4f1c-8480-21e6be6c6d05`：四版 4/17/6/15 页，共 42 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：42 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4、解析 3/4/12/16、简答 3/4、印刷 3/4/11/14）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b13.md`。
+- 门禁全通过：`review_receipts check-all`（356 批次）、`provenance check-all`（510 卷）、`solution_sources check-all`、`validate-receipts`（510 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（510 套）、`manifest_csv`（775 行）。

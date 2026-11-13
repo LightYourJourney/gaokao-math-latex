@@ -1,5 +1,16 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：2008 浙江文科（phase6-b13）封账
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 2008 浙江文科（21 题，`gk-2008-zhejiang-arts`）`phase6-b13` FINALIZED / `closed`，卷 `eligible_complete`，manifest revision 8192，attempt `1d55c5ce-65ef-4f1c-8480-21e6be6c6d05`；四版 4/17/6/15 页共 42 页，0 errors、0 overfull、0 underfull、0 缺字，八类视觉检查逐页 0 fail / 0 pending / 0 豁免；报告 `reports/phase6-b13.md`。
+- 两幅 TikZ 图（Q15 球内接四面体、Q20 矩形与梯形组合体）各登记 `expected_occurrences=2`。
+- 关键结论：选择 A B D D C A C D B C；填空 11=2、12=−7/25、13=8、14=√3/3、15=9π/2、16=[0,1]、17=40；Q18 S_n=2^{n+1}−2+n(n+1)/2；Q19 2/15 与 5；Q20 AB=9/2；Q21 分段最大值。
+- 源疑点：Q19(1) 原页“得到的数是黑球的概率”语句不通，按“两个都是黑球”理解并已标注。
+- 工具经验（第三次确认）：`question-needspace` 必须写在题号行之后（属该题正文块）。
+- 门禁全通过：`review_receipts check-all`（356 批次）、`provenance check-all`（510 卷）、`solution_sources check-all`、`validate-receipts`（510 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（510 套）、`manifest_csv`（775 行）。
+- 下一步：① 清理 2007/2008 共 37 卷的状态段（需删段—重生成—重构建—重审查）；② 继续 2008 未绑定来源（浙江理、福建文理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理），逐卷走同一流水线；全库仍未完成。
+
 ## 2026-11-13 接续：2008 广东理科（phase6-b12）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
