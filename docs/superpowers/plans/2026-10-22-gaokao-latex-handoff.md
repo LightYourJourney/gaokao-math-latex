@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-13 接续：队列 A 首批（2008 天津文、天津理）状态段清理 + 图稿修正
+
+- 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。
+- 两卷删除 `_试题.md` 首段「状态：needs-review；…正式构建与逐页验收待完成。」后走完「删段—重生成—重构建—重审查—重封账」：天津文科 `phase6-b03`（4/20/6/17 页、47 页、attempt `7761c4aa`）、天津理科 `phase6-b06`（5/23/7/19 页、54 页、attempt `64d9e61d`），两批 FINALIZED / `closed`、卷 `eligible_complete`，0 errors / 0 overfull / 0 underfull / 0 缺字，八类视觉检查 0 fail / 0 pending / 0 豁免。
+- 新发现并修复的图稿缺陷（两卷同题 Q19）：原 TikZ 底面四边全实线且多画 AC/BD 虚线对角线，与源图不符；改按源图重绘——P—B、P—C、P—D、B—C、C—D 实线，P—A、A—B、A—D、B—D 虚线，A 处加 PA⊥AD 直角标记，坐标按源图 300dpi 像素等比换算。
+- 版式修正：天津理解析版末页原只剩一行结论加答案框（第 24 页），把两处行间公式改为行内、四条估计并为两行后收到 23 页。
+- 门禁全通过：`review_receipts check-all --require-current-build`（357 批次）、`provenance check-all`（511 卷）、`solution_sources check-all`、`validate-receipts`（511 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（511 套）、`manifest_csv`（775 行）。
+- **工具经验（重要）**：`_解析正文.md` 才是解析的事实源，`_答案要点.md` 只供答案框/速查表；改推导必须改解析正文，改答案要点不会传播到 PDF（本轮先改错文件，重建两遍才定位）。另：清理已注册卷只能复用其原批次 id（manifest 规定一卷只属一个批次），`finalize-batch` 会按规范路径覆写 `reports/<batch>.md`。
+- 下一步：继续队列 A（余 39 卷：2006 年 5、2007 年 27、2008 年 7），每轮 1–2 卷；之后回队列 B（2008 剩余未绑定来源）。
+
 ## 2026-11-13 接续：2008 浙江理科（phase6-b14）封账
 
 - 工作树与分支保持 `phase0-wt` / `feat/gaokao-phase0`，未动 main、未 push。

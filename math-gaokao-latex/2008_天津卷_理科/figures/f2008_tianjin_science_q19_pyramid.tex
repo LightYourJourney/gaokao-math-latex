@@ -3,21 +3,32 @@
 % 来源 PDF：gaokaomath-src/普通高考/2008/2008天津理.pdf
 % SHA-256：e2442be3c0179c888e74b31dda58e749b6ab84ac8cccf86eae4677ab3843f48b
 % 原页：2008天津理.pdf 第 1 页（A3 三栏）第 3 栏，书页码 487。
-\begin{tikzpicture}[scale=0.95, semithick,
+% 重绘依据：原图底面为平行四边形 ABCD，A 为后侧顶点；P—B、P—C、P—D、
+%   B—C、C—D 实线，P—A、A—B、A—D、B—D 虚线，A 处有 PA⊥AD 的直角标记。
+%   坐标按原图 300dpi 像素位置等比换算（B(540,510)、C(825,515)、D(975,370)、
+%   A(685,370)、P(640,170)）。
+\begin{tikzpicture}[scale=1.0, semithick,
   every node/.style={inner sep=1.5pt}]
-  \coordinate (A) at (1.1,0.9);
-  \coordinate (B) at (0.0,0.2);
-  \coordinate (C) at (3.4,0.2);
-  \coordinate (D) at (4.5,0.9);
-  \coordinate (P) at (1.7,4.1);
+  \coordinate (B) at (0.00,0.00);
+  \coordinate (C) at (2.85,0.00);
+  \coordinate (D) at (4.35,1.45);
+  \coordinate (A) at (1.45,1.45);
+  \coordinate (P) at (1.00,3.45);
 
-  \draw (A) -- (B) -- (C) -- (D) -- cycle;
-  \draw (P) -- (A);
   \draw (P) -- (B);
   \draw (P) -- (C);
   \draw (P) -- (D);
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw[dashed] (P) -- (A);
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (D);
   \draw[dashed] (B) -- (D);
-  \draw[dashed] (A) -- (C);
+
+  % A 处 PA⊥AD 的直角标记
+  \coordinate (A1) at ($(A)!0.26cm!(P)$);
+  \coordinate (A2) at ($(A)!0.26cm!(D)$);
+  \draw (A1) -- ($(A1)+(A2)-(A)$) -- (A2);
 
   \node[below left=1pt] at (A) {$A$};
   \node[below left] at (B) {$B$};

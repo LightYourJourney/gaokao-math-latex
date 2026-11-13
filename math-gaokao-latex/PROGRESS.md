@@ -15956,3 +15956,13 @@
 - 正式构建 attempt `b01974a2-85f3-46e0-b90a-fae99b411da4`：四版 6/21/8/18 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），四版图页逐幅核对（试题 3/4/5/6、解析 3/4/5/6/12/14/16/18、简答 3/4/5/6、印刷 2/3/4/5/10/12/14/16）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b14.md`。
 - 门禁全通过：`review_receipts check-all`（357 批次）、`provenance check-all`（511 卷）、`solution_sources check-all`、`validate-receipts`（511 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（511 套）、`manifest_csv`（775 行）。
+
+### 2026-11-13 phase6-b15：2008 天津文、天津理状态段清理与图稿修正
+
+- 队列 A 首批两卷：2008 天津文科（`gk-2008-tianjin-arts`，`phase6-b03`）、天津理科（`gk-2008-tianjin-science`，`phase6-b06`）。删除 `_试题.md` 首段「状态：needs-review；…正式构建与逐页验收待完成。」后重生成四层 Markdown、重出壳、重构建、重审查、重封账；两卷正文内容未改。
+- 图稿缺陷（本轮新发现，两卷同题）：Q19 四棱锥原 TikZ 把底面四条边全画实线、并画了 AC/BD 两条虚线对角线，而源图（2008天津文.pdf 第 1 页第 3 栏 / 2008天津理.pdf 同栏）为 A 为后侧顶点的平行四边形底面：P—B、P—C、P—D、B—C、C—D 实线，P—A、A—B、A—D、B—D 虚线，A 处有 PA⊥AD 直角标记。按源图 300dpi 像素位置等比重绘（B(540,510)、C(825,515)、D(975,370)、A(685,370)、P(640,170)），两卷图稿文件各自改写并把勾稽写进文件头。
+- 版式修正：天津理解析版末页原只剩「故对一切…」一行加答案框（第 24 页），把「进一步」「故 (−1)^{a_k}=…」两处独立行间公式改为行内、四条估计合并为两行行间公式后，解析版由 24 页收到 23 页，末页收在答案框；试题版/简答版/印刷版页数不变。
+- 天津文：四版 4/20/6/17 页，共 47 页；天津理：四版 5/23/7/19 页，共 54 页；全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters（8 份 log 全 0）。
+- 视觉审查：47 + 54 页八类检查逐页完成（0 fail、0 pending、0 豁免）；图页 110dpi 全页 + 350–400dpi 局部放大核对（天津文 试题 4、解析 4/15、简答 4、印刷 3/14；天津理 试题 3/4、解析 3/4/15/19、简答 3/4、印刷 3/11/15）。`finalize-batch` 两批均 FINALIZED、批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b03.md`（attempt `7761c4aa`）、`reports/phase6-b06.md`（attempt `64d9e61d`）。
+- 门禁全通过：`review_receipts check-all --require-current-build`（357 批次 FINALIZED）、`provenance check-all`（511 卷）、`solution_sources check-all`（511 卷）、`validate-receipts`（511 卷）、`report render/check --all`、`generate_projects/make_short_answers/make_editions --all --check`（511 套）、`manifest_csv`（775 行，--check 一致）。
+- 剩余：清理前 complete 卷共 41 卷带同款状态段（2006 年 5、2007 年 27、2008 年 9），本轮清掉天津文理 2 卷后仍余 39 卷（2006 年 5、2007 年 27、2008 年 7）；blocked 卷 12 卷的同款段落随队列 D 一并处理。
