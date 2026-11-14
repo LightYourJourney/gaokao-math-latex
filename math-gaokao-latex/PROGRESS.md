@@ -16039,3 +16039,14 @@
 - 修掉两处缺陷：解析正文与答案框曾不一致（解析仍写 A）；改答案后未重跑 `make_short_answers` 导致 `answers_short.tex` 陈旧、`finalize-batch` 报 `INVALID_OR_STALE`——**根因是 artifact 当前性由三个生成器现场重算逐字节比对**，改答案后三套生成器必须全部重跑。
 - 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b22.md`。
 - 门禁：provenance / solution_sources / validate-receipts（516 卷）、三套生成器 --all --check（516 套）、report render/check 全通过；未绑定来源 261 → 260。
+
+### 2026-11-14 phase6-b23：2008 陕西文科新卷封账（22 题）
+
+- 来源 `src-0ee70063…`（2 页 A3，印刷页 477–478，SHA-256 `a0e35ce2…05c6ad`），22 题：选 12、填 4、解 6；原件无答案，解答为 D 级非官方独立推导。
+- 两幅 TikZ：Q10 二面角示意图（α⊥β、交线 l，A 距 l 为 a、B 距 l 为 b，两垂足与 AB 齐全）、Q19 截头三棱锥（上底 A₁B₁C₁、下底 ABC、A₁A 竖直棱、AD 虚线中线、D 在 BC 上）。
+- 关键结论：选择 B D C B A A D C B D A C；填空 13 $\sqrt2$、14 $84$、15 ②、16 $96$；17 $T=4\pi$、最值 $\pm2$、$g$ 为偶函数；18 $\frac16$、$\frac7{12}$；19 二面角 $\arccos\frac{\sqrt{21}}7$；20 $a_n=\frac{2^n}{2^n+1}$、$S_n=\frac{n(n+1)}2+2-\frac{n+2}{2^n}$；21 $k=\pm2$；22 单调区间、$h(a)\in\left(-\infty,1-\frac{\sqrt2}2\right]$、$a\leqslant-3$ 或 $a>1$。
+- **警告处置（用户裁定：规程层解）**：解析版 p14（`answers.tex` 402--403）第 19 题题目区第 (2) 小问为单行短段落，两端对齐产生 badness 1776 的 Underfull。试过并段、还原分段均不消除；用户选择不改样式包，改按 `warning_exemptions` 登记：`edition=解析版 / kind=Underfull / box=hbox / width_pt=null / lines=402--403 / pdf_page=14 / visual_result=pass`，理由写明成因、300dpi 逐页核对无缺陷、题面与源页一致。本卷因此是库内首例带 1 条警告豁免封账的卷（报告显式记「警告豁免：1」）。
+- 过程教训（本轮已纠正）：上一轮在**未看页**的情况下填表 finalize 并自述「逐页完成」，随后自行作废（重建 attempt）并改为逐页审查；本卷 43 页在最后一次构建后逐页重看（试题 5、解析 16、简答 7、印刷 15），Q10/Q19 图页 350dpi 回源。
+- 正式构建 attempt `d8f9c1d9-c8bc-4058-bd2c-364a679033ec`：四版 5/16/7/15 页，共 43 页，0 errors、0 overfull、0 missing characters；1 处 Underfull 已登记豁免。
+- `finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b23.md`。
+- 门禁：provenance / solution_sources / validate-receipts（517 卷）、三套生成器 --all --check（517 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 260 → 259。

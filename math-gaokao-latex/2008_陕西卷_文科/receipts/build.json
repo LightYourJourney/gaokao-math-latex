@@ -1,0 +1,292 @@
+{
+  "attempt_id": "d8f9c1d9-c8bc-4058-bd2c-364a679033ec",
+  "dependency_tree": {
+    "files": [
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/answers.tex",
+        "sha256": "5c0a20ecd5f9c05e6311d0a8cbcc7e2acb67a099e66cc8a274889fd2ca1b6f50"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/answers_short.tex",
+        "sha256": "3a60a656ba5f38c635cc7487346c4df606f29dc4912e3045d51140a84f2956e9"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/figures/f2008_shaanxi_arts_q10_dihedral.tex",
+        "sha256": "1627b7b6918a6adc2b150c7ef8df206d5f1878566a66db813f0444d233eea6a1"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/figures/f2008_shaanxi_arts_q19_prism.tex",
+        "sha256": "0f800c1a7642da5bdba4f778a7199f32727d15467c81fec62288037c4d0a1722"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/questions.tex",
+        "sha256": "5e5213308d8675699f7d4007f4e842948d010b1574126dcd33f157f4dc3e2242"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/印刷版.tex",
+        "sha256": "cb20a215bdc3af96b0a71754446c4c09341da6bcc384d918a1e442faed45cc0b"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/简答版.tex",
+        "sha256": "3cc116d74e8416c43da828c74300e6d9275b3a8ed03d198ae4f20284c12b37c9"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/解析版.tex",
+        "sha256": "90a50f8c49cd70c31ccb4b636b310220778c24a7aa8e4d3e25b6b17fb91750cb"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/试题版.tex",
+        "sha256": "be1681beff112c86d905c696bdfceefa365a4730a3831b73f23bd145bb3d1790"
+      },
+      {
+        "path": "math-gaokao-latex/common/macros.tex",
+        "sha256": "c6b843b8bda86c393e3f6de6bb6f7fa96c6a77f4fda0b5932573aa97db6a461b"
+      },
+      {
+        "path": "math-gaokao-latex/common/preamble.tex",
+        "sha256": "41032b599f927f9104740c2a0509cb397577399da3b16f8340b276f01cda575c"
+      },
+      {
+        "path": "math-gaokao-latex/common/questions_env.tex",
+        "sha256": "b7b1a71ea1f469ab681157016db15a31674e8a662a3d8680c9349e224951993f"
+      }
+    ],
+    "tree_sha256": "6f742295a4b934537f3c11958bcb805035452350ed96c05fc522fa649a617747"
+  },
+  "editions": [
+    {
+      "edition": "试题版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 5,
+        "path": "math-gaokao-latex/2008_陕西卷_文科/build/试题版.pdf",
+        "sha256": "c912b815d240c0d848de24b3dc8d181dc19e3257c83541e9db6a7e53b3c80652",
+        "size_bytes": 116351
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2008_陕西卷_文科/试题版.tex"
+    },
+    {
+      "edition": "解析版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [
+          {
+            "box": "hbox",
+            "kind": "Underfull",
+            "lines": "402--403",
+            "text": "Underfull \\hbox (badness 1776) in paragraph at lines 402--403",
+            "width_pt": null
+          }
+        ],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 16,
+        "path": "math-gaokao-latex/2008_陕西卷_文科/build/解析版.pdf",
+        "sha256": "6bb29cb2ccf0a45f9130a0b7f0ca98222fec0c96c580a4f0b835e6feef1a102a",
+        "size_bytes": 169964
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2008_陕西卷_文科/解析版.tex"
+    },
+    {
+      "edition": "简答版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 7,
+        "path": "math-gaokao-latex/2008_陕西卷_文科/build/简答版.pdf",
+        "sha256": "287e5bbbba4b30c7ee1fc343ce0849ca7f36df3faf4246d5f30f4cc9e14cdcf1",
+        "size_bytes": 129186
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2008_陕西卷_文科/简答版.tex"
+    },
+    {
+      "edition": "印刷版",
+      "log": {
+        "errors": [],
+        "missing_characters": [],
+        "overfull": [],
+        "undefined_references": []
+      },
+      "passes": [
+        {
+          "exit_code": 0,
+          "pass": 1
+        }
+      ],
+      "pdf": {
+        "page_count": 15,
+        "path": "math-gaokao-latex/2008_陕西卷_文科/build/印刷版.pdf",
+        "sha256": "308604693fcb0bec0ef51a09b11509c67b049dba2f3ab3992d3a8cdef474b6a2",
+        "size_bytes": 171535
+      },
+      "problems": [],
+      "result": "succeeded",
+      "source": "math-gaokao-latex/2008_陕西卷_文科/印刷版.tex"
+    }
+  ],
+  "finished_at": "2026-11-14T18:51:19+08:00",
+  "generation_input_tree": {
+    "files": [
+      {
+        "path": "2008/2008_数学真题_陕西文_答案要点.md",
+        "sha256": "a55e5c7cdcb07004031d2cdd31a8acac3e5f642327ec2e47a096ab39c613c3d3"
+      },
+      {
+        "path": "2008/2008_数学真题_陕西文_解析正文.md",
+        "sha256": "07f552147b3d001ee5e58c4778546c6c5c49f92f87c06a3352e1b1baa3a65156"
+      },
+      {
+        "path": "2008/2008_数学真题_陕西文_试题.md",
+        "sha256": "a0a0af2f475b8ac426ed2ec011cd6a1732fab9899dc0a294aa965b7b55f46437"
+      },
+      {
+        "path": "math-gaokao-2017-2026/tools/md2tex.py",
+        "sha256": "e3d5def3a71fb3b2d0a42223bf102c1393b8488a103d0792d2a52047fef661bb"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/figures/f2008_shaanxi_arts_q10_dihedral.tex",
+        "sha256": "1627b7b6918a6adc2b150c7ef8df206d5f1878566a66db813f0444d233eea6a1"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/figures/f2008_shaanxi_arts_q19_prism.tex",
+        "sha256": "0f800c1a7642da5bdba4f778a7199f32727d15467c81fec62288037c4d0a1722"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/印刷版.tex",
+        "sha256": "cb20a215bdc3af96b0a71754446c4c09341da6bcc384d918a1e442faed45cc0b"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/简答版.tex",
+        "sha256": "3cc116d74e8416c43da828c74300e6d9275b3a8ed03d198ae4f20284c12b37c9"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/解析版.tex",
+        "sha256": "90a50f8c49cd70c31ccb4b636b310220778c24a7aa8e4d3e25b6b17fb91750cb"
+      },
+      {
+        "path": "math-gaokao-latex/2008_陕西卷_文科/试题版.tex",
+        "sha256": "be1681beff112c86d905c696bdfceefa365a4730a3831b73f23bd145bb3d1790"
+      },
+      {
+        "path": "math-gaokao-latex/templates/印刷版.tex.tpl",
+        "sha256": "7e57b74de8ebe2c41f5aeda048cb51004bae77d8f881a85ae5e90c9ffd99051e"
+      },
+      {
+        "path": "math-gaokao-latex/templates/简答版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/解析版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/templates/试题版.tex.tpl",
+        "sha256": "d83365956ceeac65c3c18adc9eb2edeadaffe86794bd09cdafcc9699130baf7d"
+      },
+      {
+        "path": "math-gaokao-latex/tools/cli_common.py",
+        "sha256": "2e9544c14981330c08e7127a7df3242c1ef02125cca6f01fe0203e59d873cc38"
+      },
+      {
+        "path": "math-gaokao-latex/tools/generate_projects.py",
+        "sha256": "8e0ecbb1bea5b1237c08b291e5c1013074706970c15d45d3619592603bb355c6"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_editions.py",
+        "sha256": "ef01845ba2700ebccfcae1c01fab3076d04126b87c92602e4d75b4e027876051"
+      },
+      {
+        "path": "math-gaokao-latex/tools/make_short_answers.py",
+        "sha256": "660feeac925af2012a656f4ccebdfd2d476cf09158afedaa935654e1dfa578cb"
+      },
+      {
+        "path": "math-gaokao-latex/tools/solution_sources.py",
+        "sha256": "2bf136fa3e9cae0dbcd4ffa3f66eada5b5a0eba38be694b44b4f9230cd0eabae"
+      }
+    ],
+    "tree_sha256": "809eccdfcfb29fdfa71f295a4641dffbf172b23ee85af7db81a45ba3dfeaa1c6"
+  },
+  "input_projection": "e0cddb59224b1e9c96f2b3533d1a146d52e7780aad07f46f3c6f58ac91b23767",
+  "manifest_revision": 8319,
+  "paper_id": "gk-2008-shaanxi-arts",
+  "previous_attempt_id": "14d64aa7-a7ea-4a08-ab69-533fed268379",
+  "project_dir": "2008_陕西卷_文科",
+  "schema_version": 1,
+  "started_at": "2026-11-14T18:51:12+08:00",
+  "status": "succeeded",
+  "toolchain_fingerprint": {
+    "texlive_revision": "TeX Live 2026",
+    "tools": [
+      {
+        "name": "pdfinfo",
+        "path": "/opt/homebrew/bin/pdfinfo",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdfinfo",
+        "sha256": "fb0d6abb9fe621b52cb380b1062ecc80c15a6c9bc1c992651e10ddd5c2f16153",
+        "version": "pdfinfo version 26.11.0"
+      },
+      {
+        "name": "pdftoppm",
+        "path": "/opt/homebrew/bin/pdftoppm",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftoppm",
+        "sha256": "288b444a935b93998b5edc037701ab01f971d13af7a457bb7aecd84eeb9082a3",
+        "version": "pdftoppm version 26.11.0"
+      },
+      {
+        "name": "pdftotext",
+        "path": "/opt/homebrew/bin/pdftotext",
+        "real_path": "/opt/homebrew/Cellar/poppler/26.11.0/bin/pdftotext",
+        "sha256": "79a94ecf0454be0bcb92629fa81d848c2bd38d240e50e96828e97b9ee2d6d21c",
+        "version": "pdftotext version 26.11.0"
+      },
+      {
+        "name": "xelatex",
+        "path": "/Library/TeX/texbin/xelatex",
+        "real_path": "/usr/local/texlive/2026/bin/universal-darwin/xetex",
+        "sha256": "593df4b2c196aa1cdeabcb6b4fafd20af3b182e05a3cee030418f14707597f0e",
+        "version": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)"
+      },
+      {
+        "name": "latexmk",
+        "path": "/Library/TeX/texbin/latexmk",
+        "real_path": "/usr/local/texlive/2026/texmf-dist/scripts/latexmk/latexmk.pl",
+        "sha256": "c1b26a396bdeb975855afac668b2490652292dcaec958880bc87ce51295be13b",
+        "version": "Latexmk, John Collins, 9 March 2026. Version 4.88"
+      }
+    ]
+  }
+}

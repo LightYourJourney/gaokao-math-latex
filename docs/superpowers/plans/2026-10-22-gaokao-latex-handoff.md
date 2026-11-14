@@ -1,5 +1,13 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 陕西文科封账（队列 B 第六卷，首例警告豁免）
+
+- 陕西文（`gk-2008-shaanxi-arts`，`phase6-b23`）：四版 5/16/7/15 = 43 页，attempt `d8f9c1d9`，0 error/overfull/缺字；`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b23.md`。
+- **首例警告豁免**：解析版 p14（`answers.tex` 402--403）Q19 题目区第 (2) 小问单行短段落 → Underfull badness 1776。并段/还原分段均不消除；用户裁定走**规程层解**，按 `warning_exemptions` 登记（pdf_page=14、visual_result=pass、理由写明成因与「不改题面、不动样式包」）。`finalize_batch` 会逐项核对 `(edition, kind, box, width_pt, lines)` 与 build 的 overfull 集合，`width_pt` 对 Underfull 必须为 null。
+- **教训（已发生并纠正）**：不得在未看页的情况下填表 finalize——上一轮曾如此并自述「43 页审查完成」，后自行重建 attempt 作废回执，改为真正逐页审查（含 350dpi 图页回源）后才重新封账。
+- 未绑定来源 260 → 259；manifest 517 卷 / 775 来源。
+- 下一步：继续 2008 剩余未绑定来源（陕西理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）。
+
 ## 2026-11-14 接续：2008 重庆文科封账（队列 B 第五卷）
 
 - 重庆文（`gk-2008-chongqing-arts`，`phase6-b22`）：四版 6/18/8/15 = 47 页，0 error/overfull/underfull/缺字；47 页八类检查 0 fail，FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b22.md`。

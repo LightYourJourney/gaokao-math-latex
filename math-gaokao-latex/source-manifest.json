@@ -3052,6 +3052,14 @@
         "gk-2008-chongqing-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b23",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-shaanxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3061,7 +3069,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "93f59acb-363f-44c7-914a-1811e4c14d7b",
+  "last_transaction_id": "9c9064f6-82f5-4bd7-8f90-ed420098bd09",
   "papers": [
     {
       "blocked_from": null,
@@ -37431,9 +37439,70 @@
       "title": "2008 年·普通高等学校招生考试·重庆卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_陕西卷_文科/figures/f2008_shaanxi_arts_q10_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_陕西卷_文科/figures/f2008_shaanxi_arts_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_shaanxi_arts",
+        "id": "gk-2008-shaanxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 477、478；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 10 题二面角示意与第 19 题截头三棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "陕西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-shaanxi-arts",
+      "production_state": "complete",
+      "project_dir": "2008_陕西卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_陕西文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_陕西文_含解析.md",
+        "questions": "2008/2008_数学真题_陕西文_试题.md",
+        "solution_body": "2008/2008_数学真题_陕西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-0ee7006354b92096f224993baa511060def2a16e0d49961f585d542496dcd716"
+      ],
+      "title": "2008 年·普通高等学校招生考试·陕西卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8307,
+  "revision": 8321,
   "schema_version": 1,
   "sources": [
     {
@@ -47174,8 +47243,8 @@
       "exam_type": "regular",
       "git_blob_oid": "8830193f25b0b32b41a7210404f432ef30747ae3",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-shaanxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008陕西文.pdf",
       "regions": [],
       "source_id": "src-0ee7006354b92096f224993baa511060def2a16e0d49961f585d542496dcd716",
