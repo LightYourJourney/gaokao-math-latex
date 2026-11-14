@@ -16011,3 +16011,12 @@
 - 正式构建 attempt `bebc4222-e32f-4306-9c64-0acd9289b619`：四版 5/22/7/18 页，共 52 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：52 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350dpi 回源（试题 2/3/4/5、解析 2/3/4/5/9/13/17/20、简答 2/3/4/5、印刷 2/3/4/5/8/11/14/16）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b19.md`。
 - 门禁：provenance / solution_sources / validate-receipts（513 卷）、三套生成器 --all --check（513 套）、report render/check 全通过；未绑定来源 264 → 263。
+
+### 2026-11-14 phase6-b20：2008 辽宁文科新卷封账（22 题）
+
+- 来源 `src-eb4cb750acd8cfa32302f25f053ed8a7152924170f8588264a00a4c9bfe338bb`（2 页 A3，印刷页 465–466，SHA-256 `9f2a8aea…233a65`），22 题：选 12、填 4、解 6；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ：Q19 正方体双侧截面（P 在 AA′、Q 在 BB′、E 在 BC、F 在 AD、G 在 B′C′、H 在 A′D′，两截面闭合，A′D 与 AD′ 虚线）；首版 Q 标注压 D—C 虚线、F 标注压 A—A′ 棱，均已让开。
+- 关键结论：选择 D C B C A A C A B B D D；填空 13 $y=\frac12(\ln x-1)$、14 $\frac32$、15 $35$、16 $\sqrt3$；17 $a=b=2$、$\frac{2\sqrt3}{3}$；18 0.2/0.5/0.3、0.7599、0.0621；19 定值 $\sqrt2$、$\frac{\sqrt2}{2}$；20 $c_n=4$、和 $4n$；21 $x^2+\frac{y^2}{4}=1$、$k=\pm\frac12$、$\frac{4\sqrt{65}}{17}$；22 $b=0$ 与 $\left[-\frac{2\sqrt3}{3},\frac{2\sqrt3}{3}\right]$。
+- 正式构建 attempt（见 reports/phase6-b20.md）：四版 5/19/7/16 页，共 47 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免），Q19 图 350dpi 两轮核对；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
+- 门禁：provenance / solution_sources / validate-receipts（514 卷）、三套生成器 --all --check（514 套）、report render/check 全通过；未绑定来源 263 → 262。

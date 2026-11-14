@@ -1,5 +1,12 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 辽宁文科封账（队列 B 第三卷）
+
+- 辽宁文（`gk-2008-liaoning-arts`，`phase6-b20`）：四版 5/19/7/16 = 47 页，0 error/overfull/underfull/缺字；47 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b20.md`。
+- 一幅 TikZ（Q19 正方体双侧截面），两轮修正标注压线（Q 压 D—C 虚线、F 压 A—A′ 棱）。
+- 未绑定来源 263 → 262；manifest 514 卷。
+- 下一步：继续 2008 剩余未绑定来源（辽宁理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）。
+
 ## 2026-11-14 接续：2008 福建理科封账（队列 B 第二卷）
 
 - 福建理（`gk-2008-fujian-science`，`phase6-b19`）：四版 5/22/7/18 = 52 页，attempt `bebc4222`，0 error/overfull/underfull/缺字；52 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b19.md`。

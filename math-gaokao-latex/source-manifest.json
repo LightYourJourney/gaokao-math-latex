@@ -3028,6 +3028,14 @@
         "gk-2008-fujian-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b20",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-liaoning-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3037,7 +3045,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "542180c8-6a21-4ebe-ae53-cb26e83ecb42",
+  "last_transaction_id": "0ae35587-cc10-4792-a3fc-8d9c7a101f45",
   "papers": [
     {
       "blocked_from": null,
@@ -37219,9 +37227,66 @@
       "title": "2008 年·普通高等学校招生考试·福建卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_辽宁卷_文科/figures/f2008_liaoning_arts_q19_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_liaoning_arts",
+        "id": "gk-2008-liaoning-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 465、466；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题正方体双侧截面由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "辽宁文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-liaoning-arts",
+      "production_state": "complete",
+      "project_dir": "2008_辽宁卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_辽宁文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_辽宁文_含解析.md",
+        "questions": "2008/2008_数学真题_辽宁文_试题.md",
+        "solution_body": "2008/2008_数学真题_辽宁文_解析正文.md"
+      },
+      "source_ids": [
+        "src-eb4cb750acd8cfa32302f25f053ed8a7152924170f8588264a00a4c9bfe338bb"
+      ],
+      "title": "2008 年·普通高等学校招生考试·辽宁卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8264,
+  "revision": 8271,
   "schema_version": 1,
   "sources": [
     {
@@ -46866,8 +46931,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6a145f463afbb4b14adc1c3925e76a670fb40b4d",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-liaoning-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008辽宁文.pdf",
       "regions": [],
       "source_id": "src-eb4cb750acd8cfa32302f25f053ed8a7152924170f8588264a00a4c9bfe338bb",
