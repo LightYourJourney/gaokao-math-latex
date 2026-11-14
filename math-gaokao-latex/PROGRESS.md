@@ -16030,3 +16030,12 @@
 - 正式构建 attempt 见 `reports/phase6-b21.md`：四版 5/19/7/15 页，共 46 页，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：46 页八类检查逐页完成（0 fail、0 pending、0 豁免），Q19 图 350dpi 核对；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
 - 门禁：provenance / solution_sources / validate-receipts（515 卷）、三套生成器 --all --check（515 套）、report render/check 通过；未绑定来源 262 → 261。
+
+### 2026-11-14 phase6-b22：2008 重庆文科新卷封账（22 题）
+
+- 来源 `src-97e0fb2f…`（2 页 A3，印刷页 431–432，SHA-256 `a3f33211…55ce08`），22 题；原件无答案，解答为 D 级独立推导。
+- 四幅 TikZ：Q11 六模块（含 ⑥ = 3×3×2 缺 3 块）、Q16 三棱柱、Q20 二面角、Q21 双曲线；Q11 图经四轮迭代（模块错位 → 重叠 → 隐藏线消除 → 格点显式列举）才与源图一致。
+- **Q11 答案由 (A) 改判为 (B)**：⑥ 补齐需顶层 9 + 二层 3 块，只有 ①③⑤ 能同时铺顶层并补二层缺口；②④ 为平铺，补不了二层。此前按"3×3×3 挖角"读法得出的 (A) 不成立。
+- 修掉两处缺陷：解析正文与答案框曾不一致（解析仍写 A）；改答案后未重跑 `make_short_answers` 导致 `answers_short.tex` 陈旧、`finalize-batch` 报 `INVALID_OR_STALE`——**根因是 artifact 当前性由三个生成器现场重算逐字节比对**，改答案后三套生成器必须全部重跑。
+- 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b22.md`。
+- 门禁：provenance / solution_sources / validate-receipts（516 卷）、三套生成器 --all --check（516 套）、report render/check 全通过；未绑定来源 261 → 260。

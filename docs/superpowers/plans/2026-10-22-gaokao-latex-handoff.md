@@ -1,5 +1,13 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 重庆文科封账（队列 B 第五卷）
+
+- 重庆文（`gk-2008-chongqing-arts`，`phase6-b22`）：四版 6/18/8/15 = 47 页，0 error/overfull/underfull/缺字；47 页八类检查 0 fail，FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b22.md`。
+- **Q11 改判**：(A) → (B)。⑥ 为 3×3×2 缺 3 块（15 块），补齐需顶层 9 + 二层 3，只有 ①③⑤ 能同时满足；②④ 为平铺。
+- **踩坑（重要）**：`finalize-batch` 报 `INVALID_OR_STALE` 的根因是 `answers_short.tex` 陈旧——artifact 当前性由三套生成器现场重算逐字节比对，**改答案必须三套都重跑**（generate_projects / make_short_answers / make_editions）。
+- 未绑定来源 261 → 260；manifest 516 卷。
+- 下一步：继续 2008 剩余未绑定来源（陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）。
+
 ## 2026-11-14 接续：2008 辽宁理科封账（队列 B 第四卷）
 
 - 辽宁理（`gk-2008-liaoning-science`，`phase6-b21`）：四版 5/19/7/15 = 46 页，0 error/overfull/underfull/缺字；46 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b21.md`。

@@ -1,0 +1,69 @@
+% 2008 年重庆卷文科第 11 题：模块①～⑤ 各 4 个单位小正方体，模块⑥ 15 个。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008重庆文.pdf
+% SHA-256：a3f3321148dc97354de71daf028e7718ef3c3d89e634f94291448acc1f55ce08
+% 原页：2008重庆文.pdf 第 1 页（A3 三栏）第 2 栏，书页码 431。
+% 绘制依据：逐块判读原图并做隐藏线消除（只画外露面）：
+%   ① 三连排 + 右端上叠；② 2×2 平铺；③ 三连排 + 中上叠；④ 三连排 + 端部向里；
+%   ⑤ 三连排 + 中上叠且右端再抬升；⑥ 为 3×3×2 缺 3 块（前中上、右前上、右中上），共 15 块。
+\makeatletter
+\newcommand{\markcell}[3]{\expandafter\gdef\csname cell#1.#2.#3\endcsname{1}}
+\newcommand{\ifnocell}[4]{\ifcsname cell#1.#2.#3\endcsname\else#4\fi}
+\makeatother
+\newcommand{\cube}[3]{%
+  \pgfmathsetmacro{\cx}{#1*0.62+#2*0.30}%
+  \pgfmathsetmacro{\cy}{#3*0.62+#2*0.18}%
+  \ifnocell{#1}{\the\numexpr#2-1\relax}{#3}{%
+    \draw[fill=white] (\cx,\cy) rectangle ++(0.62,0.62);}%
+  \ifnocell{#1}{#2}{\the\numexpr#3+1\relax}{%
+    \draw[fill=white] (\cx,\cy+0.62) -- ++(0.30,0.18) -- ++(0.62,0) -- ++(-0.30,-0.18) -- cycle;}%
+  \ifnocell{\the\numexpr#1+1\relax}{#2}{#3}{%
+    \draw[fill=white] (\cx+0.62,\cy) -- ++(0.30,0.18) -- ++(0,0.62) -- ++(-0.30,-0.18) -- cycle;}%
+}
+\newcommand{\drawmodule}[1]{%
+  \foreach \c in {#1} { \markcell\c }%
+  \foreach \j in {2,1,0} { \foreach \c in {#1} { \expandafter\ifnum\expandafter`\c<0 \else\fi } }%
+}
+\begin{tikzpicture}[scale=0.60, semithick, font=\scriptsize, every node/.style={inner sep=1pt}]
+
+  % ---- 模块①：三连排 + 右端上叠 ----
+  \begin{scope}
+    \markcell{0}{0}{0}\markcell{1}{0}{0}\markcell{2}{0}{0}\markcell{2}{0}{1}
+    \cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{2}{0}{1}
+    \node at (0.93,-0.45) {模块①};
+  \end{scope}
+
+  % ---- 模块②：2×2 平铺 ----
+  \begin{scope}[shift={(2.9,0)}]
+    \markcell{0}{0}{0}\markcell{1}{0}{0}\markcell{0}{1}{0}\markcell{1}{1}{0}
+    \cube{0}{1}{0}\cube{1}{1}{0}\cube{0}{0}{0}\cube{1}{0}{0}
+    \node at (0.93,-0.45) {模块②};
+  \end{scope}
+
+  % ---- 模块③：三连排 + 中上叠 ----
+  \begin{scope}[shift={(5.8,0)}]
+    \markcell{0}{0}{0}\markcell{1}{0}{0}\markcell{2}{0}{0}\markcell{1}{0}{1}
+    \cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{1}{0}{1}
+    \node at (0.93,-0.45) {模块③};
+  \end{scope}
+
+  % ---- 模块④：三连排 + 端部向里 ----
+  \begin{scope}[shift={(8.7,0)}]
+    \markcell{0}{0}{0}\markcell{1}{0}{0}\markcell{2}{0}{0}\markcell{2}{1}{0}
+    \cube{2}{1}{0}\cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}
+    \node at (0.93,-0.45) {模块④};
+  \end{scope}
+
+  % ---- 模块⑤：三连排 + 中上叠 + 右端抬升 ----
+  \begin{scope}[shift={(11.6,0)}]
+    \markcell{0}{0}{0}\markcell{1}{0}{0}\markcell{2}{0}{0}\markcell{1}{0}{1}
+    \cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{1}{0}{1}
+    \node at (0.93,-0.45) {模块⑤};
+  \end{scope}
+
+  % ---- 模块⑥：3×3×2 缺 3 块（前中上、右前上、右中上） ----
+  \begin{scope}[shift={(14.8,0)}]
+    \markcell{0}{0}{0}\markcell{0}{0}{1}\markcell{0}{1}{0}\markcell{0}{1}{1}\markcell{0}{2}{0}\markcell{0}{2}{1}\markcell{1}{0}{0}\markcell{1}{1}{0}\markcell{1}{1}{1}\markcell{1}{2}{0}\markcell{1}{2}{1}\markcell{2}{0}{0}\markcell{2}{1}{0}\markcell{2}{2}{0}\markcell{2}{2}{1}
+    \cube{2}{2}{0}\cube{1}{2}{0}\cube{0}{2}{0}\cube{2}{2}{1}\cube{1}{2}{1}\cube{0}{2}{1}\cube{2}{1}{0}\cube{1}{1}{0}\cube{0}{1}{0}\cube{1}{1}{1}\cube{0}{1}{1}\cube{2}{0}{0}\cube{1}{0}{0}\cube{0}{0}{0}\cube{0}{0}{1}
+    \node at (1.24,-0.45) {模块⑥};
+  \end{scope}
+\end{tikzpicture}

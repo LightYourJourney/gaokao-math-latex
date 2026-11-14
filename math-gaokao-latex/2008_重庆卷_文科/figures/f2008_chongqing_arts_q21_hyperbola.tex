@@ -1,0 +1,22 @@
+% 2008 年重庆卷文科第 21 题：M(-2,0)、N(2,0)，动点 P 满足 ||PM|-|PN||=2；
+%   直线 l: x=1/2，d 为 P 到 l 的距离。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008重庆文.pdf
+% SHA-256：a3f3321148dc97354de71daf028e7718ef3c3d89e634f94291448acc1f55ce08
+% 原页：2008重庆文.pdf 第 2 页（A3 三栏）第 2 栏，书页码 432。
+% 重绘依据：按原页画 x、y 轴与 M、N 两点，l 为 x=1/2 的竖直线，P 在第一象限，
+%   PM、PN 为实线，O 标在原点。
+\begin{tikzpicture}[x=1.05cm, y=1.05cm, semithick, every node/.style={inner sep=1.5pt}]
+  \draw[->,>=stealth] (-3.2,0) -- (3.4,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-2.2) -- (0,2.4) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+
+  \coordinate (M) at (-2,0);
+  \coordinate (N) at (2,0);
+  \coordinate (P) at (1.35,1.6);
+
+  \draw (0.5,-2.1) -- (0.5,2.3) node[above] {$l:x=\dfrac12$};
+  \draw (M) -- (P) -- (N);
+  \fill (M) circle (1.2pt); \node[below] at (M) {$M(-2,0)$};
+  \fill (N) circle (1.2pt); \node[below] at (N) {$N(2,0)$};
+  \fill (P) circle (1.2pt); \node[above right=1pt] at (P) {$P$};
+\end{tikzpicture}
