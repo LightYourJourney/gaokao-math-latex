@@ -3036,6 +3036,14 @@
         "gk-2008-liaoning-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b21",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-liaoning-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3045,7 +3053,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "0ae35587-cc10-4792-a3fc-8d9c7a101f45",
+  "last_transaction_id": "ee688b8f-839b-4b95-b0ca-6628e6c171b8",
   "papers": [
     {
       "blocked_from": null,
@@ -37284,9 +37292,66 @@
       "title": "2008 年·普通高等学校招生考试·辽宁卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_辽宁卷_理科/figures/f2008_liaoning_science_q19_cube.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_liaoning_science",
+        "id": "gk-2008-liaoning-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 463、464；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题正方体双侧截面由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "辽宁卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "辽宁理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-liaoning-science",
+      "production_state": "complete",
+      "project_dir": "2008_辽宁卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_辽宁理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_辽宁理_含解析.md",
+        "questions": "2008/2008_数学真题_辽宁理_试题.md",
+        "solution_body": "2008/2008_数学真题_辽宁理_解析正文.md"
+      },
+      "source_ids": [
+        "src-80941286e7e37d64fc7cb451c3a2d4b021311bca85901005ca3e06d83b7732f7"
+      ],
+      "title": "2008 年·普通高等学校招生考试·辽宁卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8271,
+  "revision": 8280,
   "schema_version": 1,
   "sources": [
     {
@@ -46955,8 +47020,8 @@
       "exam_type": "regular",
       "git_blob_oid": "6081b3503000e670555696c6c2f155df2bc342d6",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-liaoning-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008辽宁理.pdf",
       "regions": [],
       "source_id": "src-80941286e7e37d64fc7cb451c3a2d4b021311bca85901005ca3e06d83b7732f7",

@@ -16020,3 +16020,13 @@
 - 正式构建 attempt（见 reports/phase6-b20.md）：四版 5/19/7/16 页，共 47 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：47 页八类检查逐页完成（0 fail、0 pending、0 豁免），Q19 图 350dpi 两轮核对；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
 - 门禁：provenance / solution_sources / validate-receipts（514 卷）、三套生成器 --all --check（514 套）、report render/check 全通过；未绑定来源 263 → 262。
+
+### 2026-11-14 phase6-b21：2008 辽宁理科新卷封账（22 题）
+
+- 来源 `src-80941286…`（2 页 A3，印刷页 463–464，SHA-256 `1de96dd8…25f2d2`），22 题；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 一幅 TikZ：Q19 正方体双侧截面（与文科卷同构图，理科第 (3) 问条件不同）。
+- 关键结论：选择 D B C B A A C A B A D C；填空 13 分段反函数、14 $\frac32$、15 $5$、16 $\frac{14}3$；17 $a=b=2$、$\frac{2\sqrt3}3$；18 分布列与 $E\xi=12.4$；19 定值 $\sqrt2$、$\frac{\sqrt2}6$；20 $x^2+\frac{y^2}4=1$、$k=\pm\frac12$ 与长度比较证明；21 $a_n=n(n+1)$、$b_n=(n+1)^2$ 与裂项不等式；22 极大 $\ln2$、"不存在"。
+- 构建期修掉两处缺陷：第 11 题解析三条直线集合改行间公式（消除 Underfull）；第 13 题补写反函数推导（原"解析"下无正文）。
+- 正式构建 attempt 见 `reports/phase6-b21.md`：四版 5/19/7/15 页，共 46 页，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：46 页八类检查逐页完成（0 fail、0 pending、0 豁免），Q19 图 350dpi 核对；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
+- 门禁：provenance / solution_sources / validate-receipts（515 卷）、三套生成器 --all --check（515 套）、report render/check 通过；未绑定来源 262 → 261。

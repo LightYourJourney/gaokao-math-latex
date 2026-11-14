@@ -1,5 +1,12 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 辽宁理科封账（队列 B 第四卷）
+
+- 辽宁理（`gk-2008-liaoning-science`，`phase6-b21`）：四版 5/19/7/15 = 46 页，0 error/overfull/underfull/缺字；46 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b21.md`。
+- 构建期修掉两处：第 11 题解析改行间公式（消 Underfull）、第 13 题补写反函数推导（消除"空解析"）。
+- 未绑定来源 262 → 261；manifest 515 卷。
+- 下一步：继续 2008 剩余未绑定来源（重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）。
+
 ## 2026-11-14 接续：2008 辽宁文科封账（队列 B 第三卷）
 
 - 辽宁文（`gk-2008-liaoning-arts`，`phase6-b20`）：四版 5/19/7/16 = 47 页，0 error/overfull/underfull/缺字；47 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b20.md`。
