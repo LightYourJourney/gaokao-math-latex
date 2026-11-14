@@ -16072,3 +16072,12 @@
 - 正式构建 attempt `3b27ed78-e23e-45fc-b66f-7d5876cfce60`：四版 5/20/7/17 页，共 49 页，0 errors、0 overfull、0 underfull、0 missing characters（无需豁免）。
 - 视觉审查：49 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b25.md`。
 - 门禁：provenance / solution_sources / validate-receipts（519 卷）、三套生成器 --all --check（519 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 258 → 257。
+
+### 2026-11-14 phase6-b26：2008 湖南文科新卷封账（21 题）
+
+- 来源 `src-a5d9ace2…`（2 页 A3，印刷页 455–456，SHA-256 `481d0aae…c0dbe`），21 题：选择 10、填空 5、解答 6（16–21）。
+- 一幅 TikZ：Q18 四棱锥（菱形底面、P 在 A 正上方、AD/DC/PD 虚线、E 标在 DC 上）；Q12 的列联表按源页转录为表格（表头原为斜线分割的「人数/性别」，无对应 LaTeX 写法，改记为「生活能否自理 | 男 | 女」，初版带反斜线的表头在构建后渲染错位，已修）。
+- 关键结论：选择 B A C B D A D C B C；填空 11=2、12=60、13=5、14 $(x-1)^2+y^2=1$ 与 $k=\pm\frac{\sqrt3}3$、15 $\frac{16}3$ 与 $\left(\frac{28}3,28\right]$；16 $\frac78$、$\frac38$；17 $T=2\pi$、$f\left(x_0+\frac{\pi}6\right)=\frac{2\sqrt6+2\sqrt2}5$；18 面面垂直证明与二面角 $60^\circ$；19 $\frac{x^2}\lambda+\frac{y^2}{\lambda-4}=1$、$\lambda\in\left(4,\frac{16}3\right]$；20 $a_{2k-1}=k$、$a_{2k}=2^k$，$W_k=\frac{k(k+1)}{2^{k+1}}<1$ 恒成立，故不存在使 $W_k>1$ 的 $k$；21 $-27<c<5$、$a\in(-5,-1)$。
+- 正式构建 attempt `b0468c09-e91d-40df-a134-579d3ffe1414`：四版 4/17/6/16 页，共 43 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：43 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），Q18 图页 350dpi 回源；表头修正后重编并重看全部 montage；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b26.md`。
+- 门禁：provenance / solution_sources / validate-receipts（520 卷）、三套生成器 --all --check（520 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 257 → 256。

@@ -3076,6 +3076,14 @@
         "gk-2008-hubei-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b26",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-hunan-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3085,7 +3093,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "617ad596-2c98-492c-b551-53e6110ada45",
+  "last_transaction_id": "5e823fcb-5a4b-4e5b-948b-7c5758287ddc",
   "papers": [
     {
       "blocked_from": null,
@@ -37646,9 +37654,66 @@
       "title": "2008 年·普通高等学校招生考试·湖北卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖南卷_文科/figures/f2008_hunan_arts_q18_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_hunan_arts",
+        "id": "gk-2008-hunan-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 455、456；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 18 题四棱锥由 TikZ 重绘；第 12 题的列联表按源页转录为表格。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖南文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-hunan-arts",
+      "production_state": "complete",
+      "project_dir": "2008_湖南卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_湖南文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_湖南文_含解析.md",
+        "questions": "2008/2008_数学真题_湖南文_试题.md",
+        "solution_body": "2008/2008_数学真题_湖南文_解析正文.md"
+      },
+      "source_ids": [
+        "src-a5d9ace2c01a45920df76f7d12148d25e089f8732464531558952241d300eabe"
+      ],
+      "title": "2008 年·普通高等学校招生考试·湖南卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8337,
+  "revision": 8345,
   "schema_version": 1,
   "sources": [
     {
@@ -47197,8 +47262,8 @@
       "exam_type": "regular",
       "git_blob_oid": "f4d058e0ce81b4303fd6e197befd67ae3e9bd609",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-hunan-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008湖南文.pdf",
       "regions": [],
       "source_id": "src-a5d9ace2c01a45920df76f7d12148d25e089f8732464531558952241d300eabe",
