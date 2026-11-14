@@ -16081,3 +16081,14 @@
 - 正式构建 attempt `b0468c09-e91d-40df-a134-579d3ffe1414`：四版 4/17/6/16 页，共 43 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：43 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），Q18 图页 350dpi 回源；表头修正后重编并重看全部 montage；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b26.md`。
 - 门禁：provenance / solution_sources / validate-receipts（520 卷）、三套生成器 --all --check（520 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 257 → 256。
+
+### 2026-11-14 phase6-b27：2008 江西文科新卷封账（22 题）
+
+- 来源 `src-871ed89c…`（2 页 A3，印刷页 461–462，SHA-256 `8505b08b…5945cda`），22 题：选择 12、填空 4、解答 6（17–22）。
+- 四幅 TikZ：Q10 四个候选图象（2×2）、Q16 正六边形、Q20 三棱锥与截面、Q22 抛物线与辅助点。
+- 图稿与版面修了两处（均由审查发现）：Q10 的 π/2、3π/2 标号压在虚线上 → 改为白底并统一刻度（π/2→1、π→2、3π/2→3）；解析版 Q10 的「解析」标题被挤到页底、正文另起一页（孤行标题）→ 把分段结论改写为一段文字、去掉紧跟标题的行间公式，解析版由 21 页降为 20 页。
+- 关键结论：选择 B D B C A A C D B D C C；填空 13 $[-3,1]$、14 $\frac{x^2}4-\frac{3y^2}4=1$、15 $5$、16 ABD；17 $\tan(\alpha+\beta)=1$、最大值 $\sqrt5$；18 $0.20$、$0.48$；19 $a_n=2n+1$、$b_n=8^{n-1}$、$\sum 1/S_k=\frac{n(3n+5)}{4(n+1)(n+2)}$；20 线面垂直证明与二面角 $\arccos\frac{\sqrt6}6$；21 单调区间与 $a\in(0,1)\cup\left(\sqrt[4]{\frac{12}7},+\infty\right)$；22 三点共线证明，$\lambda$ 型结论为「存在，$y_0>1$，距离 $1$」。
+- 源疑点：Q22 第 (2) 问原文写「A、B、M、N 四点共线」，其中 A、B、M 由「过 M 的直线交抛物线于 A、B」已共线，故该条件等价于 N 也在 AB 上（只能取水平弦），题面照录并在解析中说明这一读法。
+- 正式构建 attempt `2a124ee8-9407-444e-a109-39d5eea4f402`：四版 6/20/8/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：51 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b27.md`。
+- 门禁：provenance / solution_sources / validate-receipts（521 卷）、三套生成器 --all --check（521 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 256 → 255。

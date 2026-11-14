@@ -3084,6 +3084,14 @@
         "gk-2008-hunan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b27",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-jiangxi-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3093,7 +3101,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "5e823fcb-5a4b-4e5b-948b-7c5758287ddc",
+  "last_transaction_id": "4afd77be-752f-4b15-a7ab-5f502b989325",
   "papers": [
     {
       "blocked_from": null,
@@ -37711,9 +37719,78 @@
       "title": "2008 年·普通高等学校招生考试·湖南卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_文科/figures/f2008_jiangxi_arts_q10_graphs.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_文科/figures/f2008_jiangxi_arts_q16_hexagon.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_文科/figures/f2008_jiangxi_arts_q20_tetra.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_江西卷_文科/figures/f2008_jiangxi_arts_q22_parabola.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_jiangxi_arts",
+        "id": "gk-2008-jiangxi-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 461、462；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 10 题四个候选图象、第 16 题正六边形、第 20 题三棱锥与截面、第 22 题抛物线与辅助点均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "江西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "江西文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-jiangxi-arts",
+      "production_state": "complete",
+      "project_dir": "2008_江西卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_江西文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_江西文_含解析.md",
+        "questions": "2008/2008_数学真题_江西文_试题.md",
+        "solution_body": "2008/2008_数学真题_江西文_解析正文.md"
+      },
+      "source_ids": [
+        "src-871ed89c11d4f94e67a288b6c70b576bbf48c1db513277cd194e40828aa6b533"
+      ],
+      "title": "2008 年·普通高等学校招生考试·江西卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8345,
+  "revision": 8353,
   "schema_version": 1,
   "sources": [
     {
@@ -47118,8 +47195,8 @@
       "exam_type": "regular",
       "git_blob_oid": "95569e4e8b62942be9b13c6d4201c2c60ac1bd9b",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-jiangxi-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008江西文.pdf",
       "regions": [],
       "source_id": "src-871ed89c11d4f94e67a288b6c70b576bbf48c1db513277cd194e40828aa6b533",
