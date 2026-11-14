@@ -15976,3 +15976,14 @@
 - 视觉审查：46 + 44 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350dpi 局部放大核对（文科 试题 2/3、解析 2/3/13/14/15、简答 2/3、印刷 2/3/10/11/12；理科 试题 2/3、解析 2/3/12/13/14、简答 2/3、印刷 2/3/10/11）；两批 `finalize-batch` FINALIZED、`closed`，报告 `reports/phase6-b01.md`、`reports/phase6-b02.md`。
 - 门禁全通过：`review_receipts check-all --require-current-build`（357 批次）、`provenance check-all`（511 卷）、`solution_sources check-all`、`validate-receipts`（511 卷）、`report render/check --all`、三套生成器 `--all --check`（511 套）。
 - 状态段清理进度：41 → 37 卷（已清天津文理、上海文理）。
+
+### 2026-11-14 phase6-b17：2008 安徽文、安徽理状态段清理
+
+- 队列 A 第三批：2008 安徽文科（`gk-2008-anhui-arts`，`phase6-b07`）、理科（`gk-2008-anhui-science`，`phase6-b08`）。删 `_试题.md` 首段 needs-review 状态段后重生成四层 Markdown、重出壳、重构建、重审查、重封账。
+- 图稿修正（理科 Q10）：原 TikZ 两峰取 μ₁=−0.5、μ₂=0.4，与源图（左峰约 −0.28、右峰约 0.26）偏差明显；改取 μ₁=−0.3、μ₂=0.3（峰高 1.4 / 0.85 与 σ 不变），并把解析文字「峰在 x≈−0.5 / 0.4」同步改为「峰约在 x=−0.3 / 0.3」，避免图文互相矛盾；两支箭头重指到曲线上。
+- 图稿核对（未改动）：文科 Q19 / 理科 Q18 四棱锥（A 为后侧顶点，O—B、O—C、O—D、B—C、C—D 实线，O—A、A—B、A—D、M—D 虚线；理科另标 N 为 BC 中点）与源图一致。
+- 源疑点沿用并复核：文科 Q1 题面「全体实数的集合」与四个选项冲突，按选项读作「全体负实数的集合」，解析内已标【源疑点】；文科 Q6 的 (C)(D) 印作同一式，按答案取 (C)，同样已标注。
+- 安徽文：四版 5/22/7/16 页，共 50 页（attempt 见 reports/phase6-b07.md）；安徽理：5/23/7/18 页，共 53 页（attempt 见 reports/phase6-b08.md）；全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：50 + 53 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350dpi 回源核对（文科 试题 4、解析 4/18、简答 4、印刷 3/14；理科 试题 3/4、解析 3/4/12/18、简答 3/4、印刷 2/3/9/13）；两批 finalize 均 FINALIZED、`closed`。
+- 门禁：provenance / solution_sources / validate-receipts（511 卷）、三套生成器 --all --check（511 套）、report render/check 全通过。
+- 状态段清理进度：37 → 35 卷（已清天津文理、上海文理、安徽文理）。
