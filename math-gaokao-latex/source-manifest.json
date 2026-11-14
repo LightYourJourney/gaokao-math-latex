@@ -3012,6 +3012,14 @@
         "gk-2008-zhejiang-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b18",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-fujian-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3021,7 +3029,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "34fe3d12-ec2c-4211-9b05-5f62d1d3c403",
+  "last_transaction_id": "3eac1e80-547d-42d9-830d-ac10a34156c9",
   "papers": [
     {
       "blocked_from": null,
@@ -37065,9 +37073,78 @@
       "title": "2008 年·普通高等学校招生考试·浙江卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_福建卷_文科/figures/f2008_fujian_arts_q06_cuboid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_福建卷_文科/figures/f2008_fujian_arts_q11_derivative.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_福建卷_文科/figures/f2008_fujian_arts_q19_pyramid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_福建卷_文科/figures/f2008_fujian_arts_q22_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_fujian_arts",
+        "id": "gk-2008-fujian-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 443、444；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 6 题长方体、第 11 题 f 与 f′ 四候选图、第 19 题四棱锥、第 22 题椭圆与动弦均由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "福建卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "文科",
+        "variant": "福建文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-fujian-arts",
+      "production_state": "complete",
+      "project_dir": "2008_福建卷_文科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_福建文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_福建文_含解析.md",
+        "questions": "2008/2008_数学真题_福建文_试题.md",
+        "solution_body": "2008/2008_数学真题_福建文_解析正文.md"
+      },
+      "source_ids": [
+        "src-292cc3168912c675eb00ce27139e8021ea5be3c7f69441d1829b9d17afa5363f"
+      ],
+      "title": "2008 年·普通高等学校招生考试·福建卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8238,
+  "revision": 8249,
   "schema_version": 1,
   "sources": [
     {
@@ -46664,8 +46741,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1de449539d1d1835578f02cc93bef008b36618c2",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-fujian-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008福建文.pdf",
       "regions": [],
       "source_id": "src-292cc3168912c675eb00ce27139e8021ea5be3c7f69441d1829b9d17afa5363f",

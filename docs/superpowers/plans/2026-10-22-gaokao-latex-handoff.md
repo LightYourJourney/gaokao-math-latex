@@ -1,5 +1,14 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 福建文科新卷封账（队列 B 首卷）
+
+- 福建文科（`gk-2008-fujian-arts`，`phase6-b18`）从零转录封账：2 页 A3 六栏逐栏 view_image，22 题；四幅 TikZ（Q6 长方体、Q11 f/f′ 五面板、Q19 四棱锥、Q22 椭圆动弦）均回源 300dpi 对照并各自迭代 2–3 轮修标注与行距。
+- 四版 5/22/7/19 = 53 页，attempt `d2895d49`，0 error/overfull/underfull/缺字；53 页八类检查 0 fail，`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b18.md`。
+- 源疑点三处（解析内已标）：Q3 印面 `a_1=13` 与选项冲突（按 `a_7=13` 得 S₈=64）；Q13 `(x+1/x)^9` 的 x² 项不存在（系数 0）；Q16 原文「填填上」照录。
+- 未绑定来源 265 → 264（2008 年剩 21 个）；manifest 512 卷、revision 8250 起。
+- 工具经验：改图后必须重跑 `prepare-batch` 再 `fill_review`，否则 finalize 报 INVALID_OR_STALE（工作项绑定旧 attempt）。
+- 下一步：继续队列 B 的 2008 未绑定来源（福建理、辽宁文理、重庆文理、陕西文理、湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理，共 21 个），每卷走同一流水线；用户已指示 blocked 卷最后统一处理。
+
 ## 2026-11-14 接续：队列 A 第三批（2008 安徽文、安徽理）；用户指令转为未转录卷优先
 
 - 安徽文 `phase6-b07`（5/22/7/16，50 页）、安徽理 `phase6-b08`（5/23/7/18，53 页）删状态段后重封账，均 FINALIZED / `closed`、0 errors / 0 overfull / 0 underfull / 0 缺字、八类检查 0 fail。

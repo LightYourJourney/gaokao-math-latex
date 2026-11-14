@@ -1,0 +1,38 @@
+% 2008 年福建卷文科第 6 题：长方体 ABCD-A1B1C1D1，AB=BC=2，AA1=1，
+%   求 AC1 与平面 A1B1C1D1 所成角的正弦值。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008福建文.pdf
+% SHA-256：185dcb32c4f56c3bc8ad4f5266794a8debebe9835bd268753a54f0b8efb6492f
+% 原页：2008福建文.pdf 第 1 页（A3 三栏）第 1 栏，书页码 443。
+% 重绘依据：按原页斜投影：A 前左下、B 前右下、C 右侧、D 被遮挡（A—D、D—C、D—D1 虚线），
+%   A1、B1、C1、D1 为对应顶点；AC1 为体对角线，过内部，虚线。
+\begin{tikzpicture}[scale=0.95, semithick, every node/.style={inner sep=1.5pt}]
+  \coordinate (A) at (0.00,0.00);
+  \coordinate (B) at (3.60,0.00);
+  \coordinate (C) at (4.80,1.05);
+  \coordinate (D) at (1.20,1.05);
+  \coordinate (A1) at (0.00,1.05);
+  \coordinate (B1) at (3.60,1.05);
+  \coordinate (C1) at (4.80,2.10);
+  \coordinate (D1) at (1.20,2.10);
+
+  % 可见棱
+  \draw (A) -- (B) -- (C);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+
+  % 被遮挡棱与体对角线
+  \draw[dashed] (A) -- (D) -- (C);
+  \draw[dashed] (D) -- (D1);
+  \draw[dashed] (A) -- (C1);
+
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left=1pt] at (D) {$D$};
+  \node[left] at (A1) {$A_1$};
+  \node[below left] at (B1) {$B_1$};
+  \node[right] at (C1) {$C_1$};
+  \node[above] at (D1) {$D_1$};
+\end{tikzpicture}

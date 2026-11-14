@@ -1,0 +1,66 @@
+% 2008 年福建卷文科第 11 题：由 y=f(x) 的图象选 y=f'(x) 的图象。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008福建文.pdf
+% SHA-256：185dcb32c4f56c3bc8ad4f5266794a8debebe9835bd268753a54f0b8efb6492f
+% 原页：2008福建文.pdf 第 1 页（A3 三栏）第 2 栏，书页码 443。
+% 绘制依据：f 在 x≈-0.75 处极大、在 x=0 处极小（触 x 轴）、在 x≈0.8 处极大，
+%   故 f' 的符号依次为 +、-、+、-，有三个零点；四个候选按原页排成 2×2，
+%   (A) 为 + - + -，(B) 为其左右镜像，(C) 只在原点触轴，(D) 只有两个零点。
+\begin{tikzpicture}[x=1.05cm, y=0.95cm, semithick, font=\scriptsize,
+  every node/.style={inner sep=1.2pt}]
+
+  % ---- 题干图象 y=f(x)，居中置顶 ----
+  \begin{scope}[shift={(0,0)}]
+    \draw[->,>=stealth] (-2.4,0) -- (2.5,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.0) -- (0,1.15) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[line width=0.9pt, smooth, samples=110]
+      plot coordinates {(-2.10,-0.75) (-1.55,0.10) (-1.10,0.48) (-0.75,0.55)
+        (-0.35,0.22) (0.00,0.00) (0.40,0.28) (0.80,0.50) (1.20,0.30)
+        (1.65,-0.15) (2.10,-0.60)};
+    \node[right] at (0.55,0.95) {$y=f(x)$};
+  \end{scope}
+
+  % ---- (A) f'：+ - + -，三个零点 ----
+  \begin{scope}[shift={(-2.45,-4.40)}]
+    \draw[->,>=stealth] (-1.9,0) -- (2.0,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.0) -- (0,1.1) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[line width=0.9pt, smooth, samples=110]
+      plot coordinates {(-1.80,1.00) (-1.25,0.45) (-0.75,0.00) (-0.35,-0.38)
+        (-0.05,0.00) (0.35,0.33) (0.75,0.00) (1.20,-0.60) (1.70,-0.80)};
+    \node at (1.55,-1.25) {(A)};
+  \end{scope}
+
+  % ---- (B) 左右镜像：- + - + ----
+  \begin{scope}[shift={(2.45,-4.40)}]
+    \draw[->,>=stealth] (-1.9,0) -- (2.0,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.0) -- (0,1.1) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[line width=0.9pt, smooth, samples=110]
+      plot coordinates {(-1.80,-1.00) (-1.25,-0.60) (-0.75,0.00) (-0.35,0.33)
+        (0.05,0.00) (0.35,-0.38) (0.75,0.00) (1.20,0.45) (1.70,0.80)};
+    \node at (1.55,-1.25) {(B)};
+  \end{scope}
+
+  % ---- (C) 只在原点触轴 ----
+  \begin{scope}[shift={(-2.45,-9.20)}]
+    \draw[->,>=stealth] (-1.9,0) -- (2.0,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.0) -- (0,1.1) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[line width=0.9pt, smooth, samples=110]
+      plot coordinates {(-1.60,0.20) (-1.00,0.45) (-0.45,0.18) (0.00,0.00)
+        (0.45,0.18) (1.00,0.45) (1.60,0.20)};
+    \node at (1.55,-1.25) {(C)};
+  \end{scope}
+
+  % ---- (D) 只有两个零点 ----
+  \begin{scope}[shift={(2.45,-9.20)}]
+    \draw[->,>=stealth] (-1.9,0) -- (2.0,0) node[right] {$x$};
+    \draw[->,>=stealth] (0,-1.0) -- (0,1.1) node[above] {$y$};
+    \node[below left] at (0,0) {$O$};
+    \draw[line width=0.9pt, smooth, samples=110]
+      plot coordinates {(-1.60,0.60) (-1.05,0.20) (-0.55,-0.30) (-0.15,-0.25)
+        (0.30,0.00) (0.80,0.25) (1.35,0.45)};
+    \node at (1.55,-1.25) {(D)};
+  \end{scope}
+\end{tikzpicture}
