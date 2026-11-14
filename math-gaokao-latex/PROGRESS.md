@@ -15999,3 +15999,15 @@
 - 正式构建 attempt `d2895d49-1585-46d6-894e-e3815df330e6`：四版 5/22/7/19 页，共 53 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
 - 视觉审查：53 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350–400dpi 回源核对（试题 2/3/4/5、解析 2/3/4/5/9/12/18/21、简答 2/3/4/5、印刷 2/3/4/5/8/11/15/18）；`finalize-batch` 返回 FINALIZED，批次 `closed`、卷 `eligible_complete`，报告 `reports/phase6-b18.md`。
 - 门禁：provenance / solution_sources / validate-receipts（512 卷）、三套生成器 --all --check（512 套）、report render/check 全通过；未绑定来源 265 → 264。
+
+### 2026-11-14 phase6-b19：2008 福建理科新卷封账（22 题）
+
+- 来源 `src-5b372829950e7e443686c27a38990756b37043f235344e190ff94f5676ad803b`（2 页 A3，印刷页 441–442，SHA-256 `516e8ac8…73d452`），22 题：选 12、填 4（13–16）、解 6（17–22）；原件无答案、无分值，解答为 D 级非官方独立推导。
+- 四幅 TikZ：Q6 长方体（BC₁ 实线、A—D/D—C/D—D₁/B—D 虚线）、Q12 导函数五面板（f′ 递减、g′ 递增交于 x₀，四候选按相切位置与上下关系区分）、Q18 四棱锥（同文科卷几何体）、Q21 椭圆与过 F 的动弦。
+- 关键结论：选择 B A C B B D A C A D B C；填空 13=31、14=(−∞,0)∪(10,+∞)、15=9π、16=③④；17 A=π/3、值域 [−3,3/2]；18 (2) 60°、(3) 存在且 AQ/QD=1/3；19 增 (−∞,−2)(0,+∞)、减 (−2,0)，区间内极大 −2/3 / 极小 −2；20 1/3 与 Eξ=8/3；21 x²/4+y²/3=1、a>(1+√5)/2；22 ① c≤1、② 裂项求和证明。
+- 源疑点（解析内已标）：Q3 原页印 `a_1=7, a_5=16`，按此 S₇≈98.8 不在选项内，与选项自洽的是 `a_1=1`（S₇=127），照录＋按选项口径记 (C)；Q22 原页区间 `[0,π]`，与 `a_n=ln(1+n)-b_n`、`√(2a_n+1)` 不自洽，按 `[0,n]` 理解得 `a_n=n`，作答按此口径。
+- 图稿迭代（三处缺陷均由审查发现）：Q21 首版弦 AB 未绘出且 A、B 不在椭圆上、连线不过 F —— 改为解析算出共线点 A(1.99,1.13)、B(−0.51,−1.72) 显式绘制；Q12 的 `y=f′(x)`、`y=g′(x)` 标注压在曲线上 —— 移到交点右下与左上空白；Q6 的 D 标注与 Q18 的 A/O 标注逐个让开实线与轴。
+- Provenance：三角色 66 条（22×3）导入（revision 8251）。
+- 正式构建 attempt `bebc4222-e32f-4306-9c64-0acd9289b619`：四版 5/22/7/18 页，共 52 页，全部 succeeded，0 errors、0 overfull、0 underfull、0 missing characters。
+- 视觉审查：52 页八类检查逐页完成（0 fail、0 pending、0 豁免），图页 350dpi 回源（试题 2/3/4/5、解析 2/3/4/5/9/13/17/20、简答 2/3/4/5、印刷 2/3/4/5/8/11/14/16）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b19.md`。
+- 门禁：provenance / solution_sources / validate-receipts（513 卷）、三套生成器 --all --check（513 套）、report render/check 全通过；未绑定来源 264 → 263。
