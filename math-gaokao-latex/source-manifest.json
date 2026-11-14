@@ -3068,6 +3068,14 @@
         "gk-2008-shaanxi-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b25",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-hubei-arts"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3077,7 +3085,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "96bbce84-8d3e-48f0-9721-6d48f4b0e218",
+  "last_transaction_id": "617ad596-2c98-492c-b551-53e6110ada45",
   "papers": [
     {
       "blocked_from": null,
@@ -37569,9 +37577,78 @@
       "title": "2008 年·普通高等学校招生考试·陕西卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖北卷_文科/figures/f2008_hubei_arts_q05_region.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖北卷_文科/figures/f2008_hubei_arts_q10_orbits.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖北卷_文科/figures/f2008_hubei_arts_q18_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖北卷_文科/figures/f2008_hubei_arts_q19_ad.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_hubei_arts",
+        "id": "gk-2008-hubei-arts",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 451、452；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 5 题四个区域的候选图、第 10 题三条轨道示意、第 18 题直三棱柱、第 19 题广告版式由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖北卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "文科",
+        "variant": "湖北文科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-hubei-arts",
+      "production_state": "complete",
+      "project_dir": "2008_湖北卷_文科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_湖北文_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_湖北文_含解析.md",
+        "questions": "2008/2008_数学真题_湖北文_试题.md",
+        "solution_body": "2008/2008_数学真题_湖北文_解析正文.md"
+      },
+      "source_ids": [
+        "src-723c14191f3debbabce48792e95346b06f58f0ff1c843403455e8812a3765f81"
+      ],
+      "title": "2008 年·普通高等学校招生考试·湖北卷·文科",
+      "track": "arts",
+      "year": 2008
     }
   ],
-  "revision": 8328,
+  "revision": 8337,
   "schema_version": 1,
   "sources": [
     {
@@ -47072,8 +47149,8 @@
       "exam_type": "regular",
       "git_blob_oid": "56aeb719f95ebb65e4c24291e70017fe117334d1",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-hubei-arts",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008湖北文.pdf",
       "regions": [],
       "source_id": "src-723c14191f3debbabce48792e95346b06f58f0ff1c843403455e8812a3765f81",

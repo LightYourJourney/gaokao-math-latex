@@ -16061,3 +16061,14 @@
 - 正式构建 attempt `c7cfa8d1-da54-4e79-8736-8df6a67f6143`：四版 5/19/7/15 页，共 46 页，0 errors、0 overfull、0 missing characters；2 处 Underfull 已登记豁免。
 - 视觉审查：46 页逐页 110dpi 完成（0 fail、0 pending），Q9/Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b24.md`。
 - 门禁：provenance / solution_sources / validate-receipts（518 卷）、三套生成器 --all --check（518 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 259 → 258。
+
+### 2026-11-14 phase6-b25：2008 湖北文科新卷封账（21 题）
+
+- 来源 `src-723c1419…`（2 页 A3，印刷页 451–452，SHA-256 `e097163e…e76963`），21 题：选择 10（1–10）、填空 5（11–15）、解答 6（16–21）；本题结构与同期其他卷不同，题量按源页实数为 21。
+- 四幅 TikZ：Q5 四个区域的候选图（2×2，含 A/B/C/D 四面板）、Q10 三条以 F 为焦点并在 P 处相切的轨道（椭圆 I、II 与圆 III）、Q18 直三棱柱（A₁B 实线对角、A—C 虚线）、Q19 广告版式（两个等宽阴影栏目与留白）。
+- 图稿迭代：Q5 首版 (B) 的面板编号压在下一行 y 轴上，改为各行左下方标注并加大行距；Q10 首版两椭圆长短轴几乎相等、读作三个同心圆，改为 a₁=2.4/c₁=0.9、a₂=1.9/c₂=0.4（|PF|=1.5），编号移到右侧曲线外。
+- 关键结论：选择 C B A B C A A D B B；填空 11=10、12=30°、13=2、14=0.98、15 圆心 (3,−2)、C′:(x+2)²+(y−3)²=16；16 f(x)=√2/2·sin(x+π/4)−3/2、T=2π、最大值 −2、最小值 −(3+√2)/2；17 m=2、切线 y=−5x+1 与 y=−5x+23/27；18 两问证明（体积法/距离法得 sinθ=cosφ）；19 高 140 cm、宽 175 cm（最小面积 24500 cm²）；20 x²/2−y²/2=1、l:y=±√2x+2；21 (1)(2) 证明、(3) 存在且 λ<−6。
+- 源疑点（解析内已标）：原页第 21 题三个小问标成 (1)(2)(2)，第三问应为 (3)；题面照原页转录，解析按 (1)(2)(3) 作答。
+- 正式构建 attempt `3b27ed78-e23e-45fc-b66f-7d5876cfce60`：四版 5/20/7/17 页，共 49 页，0 errors、0 overfull、0 underfull、0 missing characters（无需豁免）。
+- 视觉审查：49 页逐页 110dpi 完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b25.md`。
+- 门禁：provenance / solution_sources / validate-receipts（519 卷）、三套生成器 --all --check（519 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 258 → 257。
