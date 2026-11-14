@@ -16050,3 +16050,14 @@
 - 正式构建 attempt `d8f9c1d9-c8bc-4058-bd2c-364a679033ec`：四版 5/16/7/15 页，共 43 页，0 errors、0 overfull、0 missing characters；1 处 Underfull 已登记豁免。
 - `finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b23.md`。
 - 门禁：provenance / solution_sources / validate-receipts（517 卷）、三套生成器 --all --check（517 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 260 → 259。
+
+### 2026-11-14 phase6-b24：2008 陕西理科新卷封账（22 题）
+
+- 来源 `src-b1b188e3…`（2 页 A3，印刷页 475–476，SHA-256 `b6b5dd72…36dec9`），22 题；原件无答案，解答为 D 级非官方独立推导。第 2 页只排了 20–22 题，其余为空白，照源页转录。
+- 两幅 TikZ：Q9 二面角示意（α⊥β、交线 l，A、B 到 l 的垂线段标 a、b，AB 连线）、Q19 截头三棱锥（A 为被遮挡顶点，AB、AC、AA₁、AD 全虚线，D 在 BC 上且 BD:DC=1:2）。
+- 关键结论：选择 D B D B C A A B D B C C；填空 13 $1$、14 $\frac12$、15 ②、16 $96$；17 $T=4\pi$、最值 $\pm2$、$g$ 为偶函数；18 恰两次 $0.16$、分布列 $0.8/0.16/0.032/0.008$、$E\xi=2.752$；19 二面角 $\arccos\frac{\sqrt{15}}5$；20 $k=\pm2$；21 另一极值点 $x=1$，$M$、$m$ 为 $\frac k2$ 与 $-\frac k{2c}$，$M-m\geqslant1$ 得 $k\in(-\infty,0)\cup[\sqrt2,+\infty)$；22 $a_n=\frac{3^n}{3^n+2}$，两问证明（第 (2) 问用 $t=\frac1{1+x}$ 化二次函数取最大值；第 (3) 问 $n\leqslant2$ 直接验证、$n\geqslant3$ 用 $\frac2{3^k+2}<\frac1{k(k+1)}$ 裂项）。
+- 警告处置（沿用用户对同类情形的「规程层解」裁定）：解析版 p16 有 2 处 Underfull（`answers.tex` 447--448 为 Q19 题目段落末尾的高分式 $\frac{BD}{DC}=\frac12$；460--461 为第 (2) 小问的独立短行），试过并段不消除，按 `warning_exemptions` 逐条登记（pdf_page=16、visual_result=pass、理由写明成因与「不改题面、不动样式包」）。
+- 图稿迭代：Q9 的 $a$ 原标在 l 左侧（易读成 l 的长度），改标到 A 的垂线段上方后再核对 350dpi。
+- 正式构建 attempt `c7cfa8d1-da54-4e79-8736-8df6a67f6143`：四版 5/19/7/15 页，共 46 页，0 errors、0 overfull、0 missing characters；2 处 Underfull 已登记豁免。
+- 视觉审查：46 页逐页 110dpi 完成（0 fail、0 pending），Q9/Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b24.md`。
+- 门禁：provenance / solution_sources / validate-receipts（518 卷）、三套生成器 --all --check（518 套）、report render/check 全通过；manifest.csv 775 行。未绑定来源 259 → 258。

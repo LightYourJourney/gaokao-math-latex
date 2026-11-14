@@ -1,5 +1,13 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-14 接续：2008 陕西理科封账（队列 B 第七卷）
+
+- 陕西理（`gk-2008-shaanxi-science`，`phase6-b24`）：四版 5/19/7/15 = 46 页，attempt `c7cfa8d1`，0 error/overfull/缺字；FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b24.md`，警告豁免 2。
+- 与陕西文同源缺陷（Q19 题目区行末高分式 + 第 (2) 问短行 → Underfull），按用户裁定的**规程层解**逐条登记豁免。
+- 源页第 2 页只印 20–22 题，其余空白；照源页转录，不补内容。
+- 未绑定来源 259 → 258；manifest 518 卷 / 775 来源。
+- 下一步：继续 2008 剩余未绑定来源（湖北文理、湖南文理、江西文理、江苏、四川文理、延考区文理、新课标文理）。
+
 ## 2026-11-14 接续：2008 陕西文科封账（队列 B 第六卷，首例警告豁免）
 
 - 陕西文（`gk-2008-shaanxi-arts`，`phase6-b23`）：四版 5/16/7/15 = 43 页，attempt `d8f9c1d9`，0 error/overfull/缺字；`finalize-batch` FINALIZED、`closed`、`eligible_complete`；报告 `reports/phase6-b23.md`。

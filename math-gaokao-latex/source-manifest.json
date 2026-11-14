@@ -3060,6 +3060,14 @@
         "gk-2008-shaanxi-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b24",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-shaanxi-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3069,7 +3077,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "9c9064f6-82f5-4bd7-8f90-ed420098bd09",
+  "last_transaction_id": "96bbce84-8d3e-48f0-9721-6d48f4b0e218",
   "papers": [
     {
       "blocked_from": null,
@@ -37500,9 +37508,70 @@
       "title": "2008 年·普通高等学校招生考试·陕西卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_陕西卷_理科/figures/f2008_shaanxi_science_q09_dihedral.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_陕西卷_理科/figures/f2008_shaanxi_science_q19_prism.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_shaanxi_science",
+        "id": "gk-2008-shaanxi-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 475、476；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 9 题二面角示意与第 19 题截头三棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "陕西卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "陕西理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-shaanxi-science",
+      "production_state": "complete",
+      "project_dir": "2008_陕西卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_陕西理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_陕西理_含解析.md",
+        "questions": "2008/2008_数学真题_陕西理_试题.md",
+        "solution_body": "2008/2008_数学真题_陕西理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b1b188e39989583a8e3ec786734a23b6d4924e8856972411fe5d6b1fd1d8c6b8"
+      ],
+      "title": "2008 年·普通高等学校招生考试·陕西卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8321,
+  "revision": 8328,
   "schema_version": 1,
   "sources": [
     {
@@ -47267,8 +47336,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5874bc0135d1ae034b50b3269a5ecaa4142690c4",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-shaanxi-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008陕西理.pdf",
       "regions": [],
       "source_id": "src-b1b188e39989583a8e3ec786734a23b6d4924e8856972411fe5d6b1fd1d8c6b8",
