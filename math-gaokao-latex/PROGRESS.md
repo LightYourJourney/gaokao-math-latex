@@ -16175,3 +16175,13 @@
 - 正式构建 attempt `b1b80c3f…`：四版 6/20/8/17 页，共 51 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：51 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b36.md`。
 - 门禁：provenance / solution_sources / validate-receipts（529 卷）、三套生成器 --all --check（529 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 248 → 247（2008 年剩 4 个：湖北理、湖南理、重庆理、北京文〔pending-intake〕）。
+
+### 2026-11-15 phase6-b37：2008 湖北理科新卷封账（21 题）
+
+- 来源 `src-925bae66…`（2 页 A3，印刷页 449–450，SHA-256 `54077e9a…98a112`），21 题：选择 10、填空 5、解答 16–21。
+- 三幅 TikZ：Q10 三轨道、Q18 直三棱柱（复用湖北文并改来源页）、Q19 半圆（A/O/B/D/P 与 OP）。
+- 关键结论：选择 C B B D A D C A C B；填空 11=1、12=61/2、13=∅、14=−6、15=k/12 与 0；16 $g=\sqrt2\sin(x+\frac\pi4)-2$、值域 $[-2-\sqrt2,-3)$；17 $E\xi=\frac32$、$D\xi=\frac{11}4$；18 $\theta<\varphi$；19 $\frac{x^2}3-y^2=1$、$k^2\leqslant\frac{1+\sqrt{105}}{12}$ 且 $k^2\neq\frac13$；20 枯水期 1、2、3、11、12 月，最大蓄水量 $8\mathrm e^2+50\approx108.32$；21 (3) 当 $b>3a$ 存在、$\lambda\in(-18-b,-18-3a)$。
+- Q9（整数弦长计数）口径：$L\in[10,26]$，$L=10$ 与 $L=26$ 各 1 条、$L=11\ldots25$ 各 2 条，共 32 条（选 C）。
+- 正式构建 attempt 见报告：四版 5/18/7/16 页，共 46 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：46 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b37.md`。
+- 门禁：provenance / solution_sources / validate-receipts（530 卷）、三套生成器 --all --check（530 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 247 → 246。
