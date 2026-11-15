@@ -1,5 +1,15 @@
 # 高考数学全量 LaTeX 工程 · 交接文档
 
+## 2026-11-15 接续：江苏卷、四川文、四川理连续封账（队列 B 第十八～二十卷）
+
+- 江苏（`gk-2008-jiangsu`，`phase6-b28`）：按用户裁定收录附加题，**23 题**，`structure={填空题:[1,14],解答题:[15,20],附加题:[21,23]}`、`track=none`（文理合卷）。四版 5/22/7/17 = 51 页，attempt `49d884f4`，无警告；报告 `reports/phase6-b28.md`。
+- 四川文（`gk-2008-sichuan-arts`，`phase6-b30`）：22 题，四版 4/16/6/14 = 40 页，attempt `416355de`，无警告。Q19 图投影由 $(x+0.5y,0.4y+z)$ 改为 $(x+0.8y,0.5y+z)$ 才让 $E$、$D$ 分离。
+- 四川理（`gk-2008-sichuan-science`，`phase6-b31`）：22 题，四版 5/17/7/15 = 44 页，attempt `628f705f`，无警告。Q19 与文卷同一几何体（理卷无 G/H）；Q21 椭圆。
+- **交叉印证**：理卷 Q21 印 $\overrightarrow{F_1M}\cdot\overrightarrow{F_2N}=0$，证明文卷 Q22(2) 印的 $F_2M$ 是笔误——文卷解析已标【源疑点】并按 $F_2N$ 作答。
+- 全库：`review_receipts check-all` = **FINALIZED：370 批次**；manifest **524 卷 / 775 来源**，未绑定 251。
+- 2008 仍未绑定（8 个）：延考区文、延考区理、新课标(海南,宁夏)文、新课标(海南,宁夏)理、江西理、湖北理、湖南理、重庆理；北京文已在 `pending-intake/2008/beijing-arts/`（两条源缺陷，不登记）。
+- 仍差：251 个未绑定来源、107 个 blocked 卷、35 卷状态段、最终 README / 缺失清单 / 构建报告；陕西文（1 条）、陕西理（2 条）以 `warning_exemptions` 封账。
+
 ## 2026-11-14 接续：2008 江西文科封账（队列 B 第十卷）
 
 - 江西文（`gk-2008-jiangxi-arts`，`phase6-b27`）：22 题，四版 6/20/8/17 = 51 页，attempt `2a124ee8`，0 error/overfull/underfull/缺字，无豁免；FINALIZED、`closed`、`eligible_complete`。

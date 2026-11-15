@@ -16112,3 +16112,12 @@
 - 正式构建 attempt `416355de-e03e-4a2e-bf7f-7817f0188693`：四版 4/16/6/14 页，共 40 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：40 页逐页完成（0 fail、0 pending、0 豁免），Q19 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b30.md`。
 - 门禁：provenance / solution_sources / validate-receipts（523 卷）、三套生成器 --all --check（523 套）通过；report render/check 与 review_receipts check-all 已后台启动，待确认。未绑定来源 253 → 252。
+
+### 2026-11-15 phase6-b31：2008 四川理科新卷封账（22 题）
+
+- 来源 `src-c19005f0…`（2 页 A3，印刷页 483–484，SHA-256 `dd251cfc…a3a9b`），22 题；四层 MD + 两幅 TikZ（Q19 与文卷同一几何体、理卷无 G/H；Q21 椭圆与右准线）。
+- 关键结论：选择 B A D A B C D D B D C B；填空 13 −6、14 √2、15 2、16 4；17 最大 10／最小 6；18 0.5／0.8／Eξ=2.4；19 四点共面与二面角 arccos(√10/5)；20 a_n=(n+1)2^{n−1}（附一般 b 的通式）；21 a=2、b=√2 与共线证明；22 a=16、单调区间、b∈(32ln2−21, 16ln2−9)。
+- 交叉印证：理卷 Q21 印的是 $\overrightarrow{F_1M}\cdot\overrightarrow{F_2N}=0$，说明文卷 Q22(2) 印的 $F_2M$ 确为笔误。
+- 正式构建 attempt `628f705f-f78f-4468-9fe7-44eb689dece5`：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b31.md`。
+- 门禁：provenance / solution_sources / validate-receipts（524 卷）、三套生成器 --all --check（524 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 252 → 251。

@@ -3108,6 +3108,14 @@
         "gk-2008-sichuan-arts"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b31",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-sichuan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3117,7 +3125,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "a4563552-8f7c-439a-8959-eac0e55ff1cc",
+  "last_transaction_id": "0dd4627d-8b4e-4653-8bcc-770b1bb5e02c",
   "papers": [
     {
       "blocked_from": null,
@@ -37938,9 +37946,70 @@
       "title": "2008 年·普通高等学校招生考试·四川卷·文科",
       "track": "arts",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川卷_理科/figures/f2008_sichuan_science_q19_solid.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_四川卷_理科/figures/f2008_sichuan_science_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_sichuan_science",
+        "id": "gk-2008-sichuan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 483、484；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 19 题与文科卷第 19 题为同一几何体（无 G、H），第 21 题椭圆与右准线由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "四川卷",
+        "structure": {
+          "填空题": [
+            13,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            12
+          ]
+        },
+        "track": "理科",
+        "variant": "四川理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-sichuan-science",
+      "production_state": "complete",
+      "project_dir": "2008_四川卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_四川理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_四川理_含解析.md",
+        "questions": "2008/2008_数学真题_四川理_试题.md",
+        "solution_body": "2008/2008_数学真题_四川理_解析正文.md"
+      },
+      "source_ids": [
+        "src-c19005f01288c053a5aba76c1e4da7c729b4d3a96f65872d88cd9ff5c0ad2a16"
+      ],
+      "title": "2008 年·普通高等学校招生考试·四川卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8369,
+  "revision": 8374,
   "schema_version": 1,
   "sources": [
     {
@@ -46913,8 +46982,8 @@
       "exam_type": "regular",
       "git_blob_oid": "5c0f1dde7d521d2dc889ff3330a8694d1d025a76",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-sichuan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008四川理.pdf",
       "regions": [],
       "source_id": "src-c19005f01288c053a5aba76c1e4da7c729b4d3a96f65872d88cd9ff5c0ad2a16",
