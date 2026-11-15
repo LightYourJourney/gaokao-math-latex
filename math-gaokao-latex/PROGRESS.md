@@ -16258,3 +16258,12 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase0-b16.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - `solution_sources`：2/532 → **1/532**（仅余 2018 浙江）。
+
+### 2026-11-16 phase0-b15（重封账）：2018 浙江卷消除 solution_sources 不一致 + 修三视图标注压图
+
+- `extract-batch --batch phase0-b15 --write` 规范化 `_解析正文.md`（去尾部空行）→ 三套生成器 `--batch --write` → `build --formal`。
+- **视觉审查发现真缺陷**：第 3 题三视图里「正视图」标注压在「俯视图」梯形顶边上（四条边被文字盖住）。成因：俯视图 `yshift=-2.6cm` 时梯形顶边落在 labels 的 `below=5mm` 位置。修法：俯视图下移到 `yshift=-3.4cm`，标注与图形留出 0.7cm 间隙。
+- **改动范围已量化**：改前/改后对四版逐页渲染 80dpi 取哈希，只有含该图的 6 个页面变化（试题 p1、解析 p1/p7、简答 p1、印刷 p1/p6），页数与其余 58 页完全不变；对变化页做 220dpi 复核，梯顶边不再被文字覆盖。
+- 最终 build attempt `e9dcc3b0`，四版 5/30/7/22 页，四 log 全 0；64 页逐页审查，八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase0-b15.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；**`solution_sources check-all` 532 套全部通过**；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 至此 4 套历史陈旧卷（2004 全国3理/文、2018 江苏/浙江）全部重封账，`solution_sources` 由 19/532 未通过归零。
