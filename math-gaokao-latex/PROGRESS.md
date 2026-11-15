@@ -16249,3 +16249,12 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase4-b57.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - `solution_sources`：3/532 → **2/532**（余 2018 江苏、2018 浙江）。
+
+### 2026-11-16 phase0-b16（重封账）：2018 江苏卷消除 solution_sources 不一致
+
+- `extract-batch --batch phase0-b16 --write` 规范化 `_解析正文.md`（第 15 题补 `**解析**` 锚点）→ 三套生成器 `--batch --write` → `build --formal`，attempt `42a38791`，四版 5/35/7/27 页、四 log 全 0。
+- 74 页逐页审查（试题 5、解析 35、简答 7、印刷 27）：八类检查 0 fail、0 豁免。八幅图逐一回源：茎叶图（89,89,90,91,91，均值 90）、伪代码、正方体内接正八面体、平行六面体、农田圆弧与矩形/三角形分区、椭圆与圆、圆与切线、正三棱柱。
+- 结构：23 题（填空 1–14、解答 15–20、附加题 21–23 四选二，21 分 A/B/C 三小问）；`track=none`（文理合卷）。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase0-b16.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- `solution_sources`：2/532 → **1/532**（仅余 2018 浙江）。
