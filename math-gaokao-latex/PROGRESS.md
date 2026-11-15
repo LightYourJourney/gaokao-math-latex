@@ -16303,3 +16303,13 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b26.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：26 → **25 卷**。
+
+### 2026-11-16 phase5-b21（重封账）：2007 辽宁文科状态段清理
+
+- 队列 A 第七轮：删去 `2007/2007_数学真题_辽宁文_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b21 --write` → `build --formal`：四版 5/21/7/18 页（51 页），attempt `b09feca3`，四 log 全 0。
+- 51 页逐页审查：八类检查 0 fail、0 豁免；一幅图（Q18 直三棱柱与中点 $D$、$E$、$M$）四版共 6 处 350dpi 回源。
+- 解析内已有三处源疑点标注（Q1 选项 B 集合印刷、Q10 计数口径、Q22 两解取舍），按「题面照录 + 解析说明」保留。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b21.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：25 → **24 卷**。
