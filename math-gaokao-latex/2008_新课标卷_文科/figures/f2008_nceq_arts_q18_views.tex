@@ -1,0 +1,69 @@
+% 2008 年新课标卷文科第 18 题：长方体截去一个角所得多面体的直观图，及它的正视图、侧视图
+%   （单位：cm）。长方体 6×4×4，顶点 A' 处沿三条棱各截去 2。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008新课标文(海南,宁夏).pdf
+% SHA-256：853bce8a468fcc18b76717db6aa6fc777781a4da61ecde6120c1c4cae51cebff
+% 原页：2008新课标文(海南,宁夏).pdf 第 1 页（A3 三栏）第 3 栏，书页码 469。
+% 绘制依据：A(0,0,0)、B(6,0,0)、C(6,4,0)、D(0,4,0)、A'(0,0,4)、B'(6,0,4)、C'(6,4,4)、D'(0,4,4)，
+%   截口点 E(2,0,4)、F(0,2,4)、G(0,0,2)；斜投影 (x,y,z)->(x+0.6y, z+0.35y)，取比例 0.42。
+%   可见棱按「前面五边形 + 上底五边形 + 右侧面」联结，被遮挡的 A—D、D—C、D—D' 用虚线。
+\begin{tikzpicture}[scale=1.0, semithick, every node/.style={inner sep=1.2pt, font=\small}]
+
+  % ---------- 直观图 ----------
+  \begin{scope}[shift={(0,0)}, scale=1.6]
+    \coordinate (A)  at (0.00,0.00);
+    \coordinate (B)  at (2.52,0.00);
+    \coordinate (C)  at (3.528,0.588);
+    \coordinate (D)  at (1.008,0.588);
+    \coordinate (Bp) at (2.52,1.68);
+    \coordinate (Cp) at (3.528,2.268);
+    \coordinate (Dp) at (1.008,2.268);
+    \coordinate (E)  at (0.84,1.68);
+    \coordinate (F)  at (0.504,1.974);
+    \coordinate (G)  at (0.00,0.84);
+
+    % 前面五边形 A-B-B'-E-G
+    \draw (A) -- (B) -- (Bp) -- (E) -- (G) -- cycle;
+    % 右侧面
+    \draw (B) -- (C) -- (Cp) -- (Bp);
+    % 上底五边形 B'-C'-D'-F-E
+    \draw (Bp) -- (Cp) -- (Dp) -- (F) -- (E);
+    % 截口三角形
+    \draw (E) -- (F) -- (G);
+
+    % 被遮挡的棱
+    \draw[dashed] (A) -- (D);
+    \draw[dashed] (D) -- (C);
+    \draw[dashed] (D) -- (Dp);
+
+    \node[below left] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[right] at (C) {$C$};
+    \node[left] at (D) {$D$};
+    \node[above left] at (Dp) {$D'$};
+    \node[right] at (Cp) {$C'$};
+    \node[right] at (Bp) {$B'$};
+    \node[below right=0.5pt] at (E) {$E$};
+    \node[right=1pt] at (F) {$F$};
+    \node[left=1pt] at (G) {$G$};
+  \end{scope}
+
+  % ---------- 正视图 ----------
+  \begin{scope}[shift={(0.5,-3.9)}, scale=0.34]
+    \draw (0,0) rectangle (6,4);
+    \draw (0,2) -- (2,4);
+    \draw[<->,>=stealth] (0,5.2) -- (6,5.2) node[midway, above, font=\scriptsize] {$6$};
+    \draw[<->,>=stealth] (0,4.4) -- (2,4.4) node[midway, above, font=\scriptsize] {$2$};
+    \draw[<->,>=stealth] (6.7,0) -- (6.7,4) node[midway, right, font=\scriptsize] {$4$};
+    \node[below, font=\small] at (3,-0.8) {（正视图）};
+  \end{scope}
+
+  % ---------- 侧视图 ----------
+  \begin{scope}[shift={(4.3,-3.9)}, scale=0.34]
+    \draw (0,0) rectangle (4,4);
+    \draw (2,4) -- (4,2);
+    \draw[<->,>=stealth] (0,-0.8) -- (4,-0.8) node[midway, below, font=\scriptsize] {$4$};
+    \draw[<->,>=stealth] (0,4.8) -- (2,4.8) node[midway, above, font=\scriptsize] {$2$};
+    \draw[<->,>=stealth] (4.7,4) -- (4.7,2) node[midway, right, font=\scriptsize] {$2$};
+    \node[below, font=\small] at (2,-1.5) {（侧视图）};
+  \end{scope}
+\end{tikzpicture}

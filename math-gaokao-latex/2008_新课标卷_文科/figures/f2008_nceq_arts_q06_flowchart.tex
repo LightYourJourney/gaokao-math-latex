@@ -1,0 +1,33 @@
+% 2008 年新课标卷文科第 6 题：输出三个数中最大值的程序框图（第二个判断框留空）。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008新课标文(海南,宁夏).pdf
+% SHA-256：853bce8a468fcc18b76717db6aa6fc777781a4da61ecde6120c1c4cae51cebff
+% 原页：2008新课标文(海南,宁夏).pdf 第 1 页（A3 三栏）第 1 栏，书页码 469。
+% 绘制依据：按原页流程：开始 → 输入 a,b,c → x←a → 判断 b>x（是则 x←b）→ 判断框（原页留空）
+%   （是则 x←c）→ 输出 x → 结束。
+\begin{tikzpicture}[node distance=0.42cm, semithick, every node/.style={inner sep=2.5pt, font=\small},
+  box/.style={draw, minimum width=1.9cm, minimum height=0.5cm},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+             minimum width=2.2cm, minimum height=0.5cm},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=1.9cm, minimum height=0.75cm}]
+
+  \node[box, rounded corners=2pt] (start) {开始};
+  \node[io, below=of start] (input) {输入 $a,b,c$};
+  \node[box, below=of input] (xa) {$x\leftarrow a$};
+  \node[dec, below=0.45cm of xa] (d1) {$b>x$};
+  \node[box, right=1.5cm of d1] (xb) {$x\leftarrow b$};
+  \node[dec, below=0.75cm of d1, minimum width=1.9cm, minimum height=0.75cm] (d2) {};
+  \node[box, right=1.5cm of d2] (xc) {$x\leftarrow c$};
+  \node[io, below=0.7cm of d2] (out) {输出 $x$};
+  \node[box, rounded corners=2pt, below=of out] (end) {结束};
+
+  \draw[->,>=stealth] (start) -- (input);
+  \draw[->,>=stealth] (input) -- (xa);
+  \draw[->,>=stealth] (xa) -- (d1);
+  \draw[->,>=stealth] (d1) -- node[above, font=\scriptsize] {是} (xb);
+  \draw (xb) |- ($(d1.south)!0.5!(d2.north)$);
+  \draw[->,>=stealth] (d1) -- node[left=4pt, font=\scriptsize] {否} (d2);
+  \draw[->,>=stealth] (d2) -- node[above, font=\scriptsize] {是} (xc);
+  \draw (xc) |- ($(d2.south)!0.5!(out.north)$);
+  \draw[->,>=stealth] (d2) -- node[left=4pt, font=\scriptsize] {否} (out);
+  \draw[->,>=stealth] (out) -- (end);
+\end{tikzpicture}

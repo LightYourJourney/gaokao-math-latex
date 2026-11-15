@@ -1,0 +1,45 @@
+% 2008 年新课标卷文科第 22 题：过圆 O 外一点 M 作切线 MA，过 A 作 AP ⊥ OM 于 P；
+%   N 在 AP 上，NB ⊥ ON 交圆于 B，过 B 的切线交 ON 于 K。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008新课标文(海南,宁夏).pdf
+% SHA-256：853bce8a468fcc18b76717db6aa6fc777781a4da61ecde6120c1c4cae51cebff
+% 原页：2008新课标文(海南,宁夏).pdf 第 2 页（A3 三栏）第 3 栏，书页码 470。
+% 绘制依据：取单位圆 O(0,0)、M(2,0)、A(1/2,√3/2)、P(1/2,0)、N(1/2,1/2)、B(0,1)、K(1,1)。
+\begin{tikzpicture}[scale=2.4, semithick, every node/.style={inner sep=1.3pt}]
+  \coordinate (O) at (0,0);
+  \coordinate (M) at (2,0);
+  \coordinate (A) at (0.5,0.866);
+  \coordinate (P) at (0.5,0);
+  \coordinate (N) at (0.5,0.5);
+  \coordinate (B) at (0,1);
+  \coordinate (K) at (1,1);
+
+  \draw (O) circle [radius=1];
+
+  % 半径 OA、切线 MA 与 OM
+  \draw (O) -- (A);
+  \draw (O) -- (M);
+  \draw (M) -- (A);
+
+  % AP、ON 及其延长到 K
+  \draw (A) -- (P);
+  \draw (O) -- (K);
+
+  % NB 与过 B 的切线 BK
+  \draw (N) -- (B);
+  \draw (B) -- (K);
+
+  % 直角标记：∠OAM 与 ∠OKM
+  \draw ($(A)!0.1!(O)$) -- ($(A)!0.1!(O)+($(A)!0.1!(M)-(A)$)$) -- ($(A)!0.1!(M)$);
+  \draw ($(K)!0.12!(O)$) -- ($(K)!0.12!(O)+($(K)!0.12!(M)-(K)$)$) -- ($(K)!0.12!(M)$);
+
+  \fill (P) circle (0.9pt);
+  \fill (N) circle (0.9pt);
+
+  \node[below left] at (O) {$O$};
+  \node[below] at (M) {$M$};
+  \node[anchor=west] at ($(A)+(0.14,0.03)$) {$A$};
+  \node[below] at (P) {$P$};
+  \node[anchor=west] at ($(N)+(0.13,-0.02)$) {$N$};
+  \node[anchor=south] at ($(B)+(0,0.12)$) {$B$};
+  \node[anchor=south west] at ($(K)+(0.04,0.06)$) {$K$};
+\end{tikzpicture}

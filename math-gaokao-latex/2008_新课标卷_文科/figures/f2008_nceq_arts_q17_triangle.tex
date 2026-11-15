@@ -1,0 +1,29 @@
+% 2008 年新课标卷文科第 17 题：△ACD 为等边三角形，△ABC 为等腰直角三角形（∠ACB=90°），
+%   BD 交 AC 于 E，AB=2。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008新课标文(海南,宁夏).pdf
+% SHA-256：853bce8a468fcc18b76717db6aa6fc777781a4da61ecde6120c1c4cae51cebff
+% 原页：2008新课标文(海南,宁夏).pdf 第 1 页（A3 三栏）第 3 栏，书页码 469。
+% 绘制依据：取 A(0,0)、B(2,0)、C(1,1)（∠ACB=90°、CA=CB=√2），
+%   等边三角形 ACD 的第三个顶点 D 位于 AC 的另一侧，D=(-0.366,1.366)；E 为 BD 与 AC 的交点。
+\begin{tikzpicture}[scale=2.0, semithick, every node/.style={inner sep=1.4pt}]
+  \coordinate (A) at (0.00,0.00);
+  \coordinate (B) at (2.00,0.00);
+  \coordinate (C) at (1.00,1.00);
+  \coordinate (D) at (-0.366,1.366);
+  \coordinate (E) at (0.732,0.732);
+
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (A) -- (D) -- (C);
+  \draw (B) -- (D);
+
+  % 直角标记
+  \draw ($(C)!0.12!(A)$) -- ($(C)!0.12!(A)+($(C)!0.12!(B)-(C)$)$) -- ($(C)!0.12!(B)$);
+
+  \fill (E) circle (0.7pt);
+
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above right=0.5pt] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below right=0.5pt] at (E) {$E$};
+\end{tikzpicture}

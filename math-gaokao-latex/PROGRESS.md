@@ -16143,3 +16143,14 @@
 - 正式构建 attempt `75671890-93b0-4abb-83c6-f722f2cf346d`：四版 5/18/7/15 页，共 45 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：45 页逐页完成（0 fail、0 pending、0 豁免），两幅图共 10 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b33.md`。
 - 门禁：provenance / solution_sources / validate-receipts（526 卷）、三套生成器 --all --check（526 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 251 → 250（2008 年 8 → 7）。
+
+### 2026-11-15 phase6-b34：2008 新课标（琼、宁）文科新卷封账（23 题，含两道选做题）
+
+- 来源 `src-e7baf9f2…`（2 页 A3，印刷页 469–470，SHA-256 `853bce8a…51cebff`），23 题：选择 12、填空 4、解答 5（17–21）、**选做 2（22 几何证明、23 坐标系与参数方程）**；`structure` 为 `{"选择题":[1,12],"填空题":[13,16],"解答题":[17,21],"选做题":[22,23]}`。
+- 四幅 TikZ：Q6 程序框图（第二个判断框留空，正是设问）、Q17 等边三角形与等腰直角三角形共边图、Q18 截角长方体的直观图 + 正视图 + 侧视图、Q22 圆与切线图。
+- 关键结论：选择 C B A B A A B C D B C D；填空 13 $15$、14 $\frac{4\pi}3$、15 $\frac53$、16 开放（乙平均数 319 > 甲 307.28；甲中位数 307 < 乙 318）；17 $\cos\angle CBE=\frac{\sqrt6+\sqrt2}4$、$AE=\sqrt6-\sqrt2$；18 俯视图为 $6\times4$ 矩形左上角切去直角边 2 的等腰直角三角形、$V=\frac{284}3$、$BC'\parallel$ 面 $EFG$（法向量 $(1,1,-1)$ 与 $\overrightarrow{BC'}=(0,4,4)$ 正交）；19 $7.5$、$\frac7{15}$；20 $k\in[-\frac12,\frac12]$、不能（需 $k=\pm\sqrt3$）；21 $f(x)=x-\frac3x$、定值 $6$；22 射影定理 + 相似三角形；23 圆与直线相切、压缩后仍相切。
+- 图稿迭代：Q6 的回流箭头原带箭头造成假分叉，改为无箭头汇入；Q18 的直观图首版把截口画成外凸三角、且 $E$ 与背棱 $D\!-\!D'$ 投影重合，改用 $(x+0.6y,\,z+0.35y)$ 并重排可见棱后消除；Q22 的 $A$、$B$ 标签与切线挤在一起，标签外移并补画半径 $OA$。
+- 版式修正：Q23(2) 的首段含行内 `cases` 环境，印刷版出现 Underfull（badness 1365），改为「参数方程写成分量形式」后四版 log 全 0。
+- 正式构建 attempt `3bf08890-45c3-4591-8ff1-84183016adc1`：四版 6/21/8/18 页，共 53 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：53 页逐页完成（0 fail、0 pending、0 豁免），四幅图共 13 处 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b34.md`。
+- 门禁：provenance / solution_sources / validate-receipts（527 卷）、三套生成器 --all --check（527 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 250 → 249（2008 年 7 → 6）。
