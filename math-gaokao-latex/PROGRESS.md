@@ -16267,3 +16267,10 @@
 - 最终 build attempt `e9dcc3b0`，四版 5/30/7/22 页，四 log 全 0；64 页逐页审查，八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase0-b15.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；**`solution_sources check-all` 532 套全部通过**；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 至此 4 套历史陈旧卷（2004 全国3理/文、2018 江苏/浙江）全部重封账，`solution_sources` 由 19/532 未通过归零。
+
+### 2026-11-16 收口：状态段台账更新 + 缺失清单 + 全库构建报告
+
+- `status-paragraph-ledger.md` 按实测重写：待清 **28 卷**（2007 年 26、2008 年 2），已清 9 卷；按四版总页数升序排期，首行是 2007 陕西文（48 页）与陕西理（49 页）。
+- `missing-sources.md`：244 个未绑定来源按年份列明；其中 2 个已有终局归属（2007 四川文进候选草稿、2008 北京文进 pending-intake），**242 个尚无归属**；并明确指出 2007–2008 区间唯一缺口是 `普通高考/2007/2007湖南文.pdf`。
+- `reports/full-library-build-report.md`：总量、本轮 4 套重封账与三视图修正、门禁实况（九条脚本输出）、已知例外（陕西两卷豁免经用户裁定）、下一步排序。
+- 门禁复跑：provenance / validate-receipts 532 卷 OK；solution_sources **532 套全部通过**；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
