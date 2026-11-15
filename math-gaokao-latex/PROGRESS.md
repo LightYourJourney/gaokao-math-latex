@@ -16274,3 +16274,12 @@
 - `missing-sources.md`：244 个未绑定来源按年份列明；其中 2 个已有终局归属（2007 四川文进候选草稿、2008 北京文进 pending-intake），**242 个尚无归属**；并明确指出 2007–2008 区间唯一缺口是 `普通高考/2007/2007湖南文.pdf`。
 - `reports/full-library-build-report.md`：总量、本轮 4 套重封账与三视图修正、门禁实况（九条脚本输出）、已知例外（陕西两卷豁免经用户裁定）、下一步排序。
 - 门禁复跑：provenance / validate-receipts 532 卷 OK；solution_sources **532 套全部通过**；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+
+### 2026-11-16 phase5-b19（重封账）：2007 陕西文科状态段清理
+
+- 队列 A 第四轮：删去 `2007/2007_数学真题_陕西文_试题.md` 的「状态：needs-review」整段（清理后四版 PDF 内 grep 计数全为 0）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b19 --write` → `build --formal`：四版 5/20/7/15 页（共 47 页），attempt `25d4a159`，四 log 全 0。
+- 47 页逐页审查：八类检查 0 fail、0 豁免；三幅图（Q8 四个反函数候选图象、Q16 空间向量图、Q19 五边形底四棱锥）在四版共 13 处 350dpi 回源。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b19.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：28 → **27 卷**。
