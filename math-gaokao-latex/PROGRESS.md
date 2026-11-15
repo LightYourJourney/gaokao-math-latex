@@ -16220,3 +16220,12 @@
 - 38 页逐页审查（试题 4、解析 15、简答 6、印刷 13），八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
 - 门禁：review_receipts check-all 378 批次、provenance/solution_sources/validate-receipts 532 卷、三套生成器 --all --check 532 套、report check 一致。
 - 台账同步更新：状态段待清 30 → **29 卷**（`status-paragraph-ledger.md` 已按实测重写）。
+
+### 2026-11-16 phase5-b16（重封账）：2007 浙江文科状态段清理
+
+- 队列 A 第三轮：删去 `2007/2007_数学真题_浙江文_试题.md` 的「状态：needs-review」整段（清理后四版 PDF 内 grep 计数全为 0）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b16 --write` → `build --formal`：四版 4/20/6/16 页，四 log 全 0。
+- 46 页逐页审查，八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
+- 门禁（本卷相关）：provenance 532 卷 OK、validate-receipts 532 卷 OK、三套生成器 --all --check 一致、review_receipts check-all 378 批次、report check 一致。
+- **发现的既有问题（本轮新增证据，需后续处理）**：`solution_sources check-all` 实测 **19/532 套未通过**（1958/1986/1987/1990/2005/2015/2026 等卷的 `_含解析.md` 与确定性生成结果不一致）。此前多轮只读该命令 `tail -1` 的 "ok …" 行，误记为「全绿」，此处更正：该门禁**不是**全绿的。
+- 台账同步：待清状态段 29 → **28 卷**。
