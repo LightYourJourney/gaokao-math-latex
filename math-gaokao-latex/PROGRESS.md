@@ -16185,3 +16185,12 @@
 - 正式构建 attempt 见报告：四版 5/18/7/16 页，共 46 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：46 页逐页完成（0 fail、0 pending、0 豁免）；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b37.md`。
 - 门禁：provenance / solution_sources / validate-receipts（530 卷）、三套生成器 --all --check（530 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 247 → 246。
+
+### 2026-11-15 phase6-b38：2008 湖南理科新卷封账（21 题）
+
+- 来源 `src-53cdb312…`（2 页 A3，印刷页 453–454，SHA-256 `a702a9a7…b913d7`），21 题：选择 10、填空 5、解答 16–21。
+- 一幅 TikZ：Q17 四棱锥（菱形底面、$PA\perp$ 底面、$E$ 在 $CD$ 上）。
+- 关键结论：选择 D B C B D C A B C D；填空 11=1/5、12=1/2、13=(−1,2)、14=(−∞,3/a] 与 (1,3]、15=4/(m(n−m)) 与 6；16 (1) 7/8、(2) 分布列 3/8、3/8、1/8、1/8，Eξ=1；17 (2) 二面角 arccos(√15/5)；18 a_{2k−1}=k、a_{2k}=2^k，|S_n−2|=(n+2)/2^n<1/n 由 n(n+2)<2^n 归纳；19 速度 15√5 海里/时、会进入警戒水域（最近距离 3√5<7）；20 中点横坐标恒为 x₀−2，x₀>3 时弦长最大值 2(x₀−1)、2<x₀≤3 时不存在；21 增 (−1,0)、减 (0,+∞)，α_max=1/ln2−1。
+- 正式构建 attempt 见报告：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免），Q17 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b38.md`。
+- 门禁：provenance / solution_sources / validate-receipts（531 卷）、三套生成器 --all --check（531 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 246 → 245。

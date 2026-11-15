@@ -3164,6 +3164,14 @@
         "gk-2008-hubei-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b38",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-hunan-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3173,7 +3181,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "81652731-d255-4207-95f8-500d6eca3430",
+  "last_transaction_id": "ba9130cd-6681-4868-9a98-a43528c06067",
   "papers": [
     {
       "blocked_from": null,
@@ -38466,9 +38474,66 @@
       "title": "2008 年·普通高等学校招生考试·湖北卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_湖南卷_理科/figures/f2008_hunan_science_q17_pyramid.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_hunan_science",
+        "id": "gk-2008-hunan-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 453、454；PDF 只有题面、无官方答案页，21 题答案由本库独立推导（非官方）。第 17 题四棱锥由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "湖南卷",
+        "structure": {
+          "填空题": [
+            11,
+            15
+          ],
+          "解答题": [
+            16,
+            21
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "湖南理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-hunan-science",
+      "production_state": "complete",
+      "project_dir": "2008_湖南卷_理科",
+      "question_count": 21,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_湖南理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_湖南理_含解析.md",
+        "questions": "2008/2008_数学真题_湖南理_试题.md",
+        "solution_body": "2008/2008_数学真题_湖南理_解析正文.md"
+      },
+      "source_ids": [
+        "src-53cdb312b690ff1b0d5ad669625aab55cec08778e792e6e481ffb9d6731da0c4"
+      ],
+      "title": "2008 年·普通高等学校招生考试·湖南卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8447,
+  "revision": 8452,
   "schema_version": 1,
   "sources": [
     {
@@ -48041,8 +48106,8 @@
       "exam_type": "regular",
       "git_blob_oid": "7e527dbd7acbf85935f32e916feb36a615010f5f",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-hunan-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008湖南理.pdf",
       "regions": [],
       "source_id": "src-53cdb312b690ff1b0d5ad669625aab55cec08778e792e6e481ffb9d6731da0c4",
