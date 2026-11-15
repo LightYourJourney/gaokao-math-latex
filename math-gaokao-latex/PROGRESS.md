@@ -16212,3 +16212,11 @@
 - 47 页逐页审查（试题 5、解析 20、简答 7、印刷 15），八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
 - 门禁：review_receipts check-all 378 批次、provenance/solution_sources/validate-receipts 532 卷、三套生成器 --all --check 532 套、report check 一致、manifest.csv 775 行。
 - 状态段台账进度：31 → **30 卷**（`status-paragraph-ledger.md` 需下一轮同步更新）。
+
+### 2026-11-16 phase5-b01（重封账）：2007 上海理科状态段清理
+
+- 队列 A 第二轮：删去 `2007/2007_数学真题_上海理_试题.md` 的「状态：needs-review」整段（清理后 `pdftotext | grep -c needs-review` = 0）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b01 --write` → `build --formal`：四版 4/15/6/13 页，四 log 全 0。
+- 38 页逐页审查（试题 4、解析 15、简答 6、印刷 13），八类检查 0 fail、0 豁免；`finalize-batch` FINALIZED、`closed`、`eligible_complete`。
+- 门禁：review_receipts check-all 378 批次、provenance/solution_sources/validate-receipts 532 卷、三套生成器 --all --check 532 套、report check 一致。
+- 台账同步更新：状态段待清 30 → **29 卷**（`status-paragraph-ledger.md` 已按实测重写）。
