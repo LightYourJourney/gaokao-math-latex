@@ -1,0 +1,17 @@
+% 2008 年重庆卷理科第 21 题：M(-2,0)、N(2,0)，动点 P 满足 |PM|+|PN|=6。
+% 来源 PDF：gaokaomath-src/普通高考/2008/2008重庆理.pdf
+% SHA-256：d3ca36cef73a00068b9c1a97ddb2f90bbc4f16b38459e380579090a02706d937
+% 原页：2008重庆理.pdf 第 2 页（A3 三栏）第 2 栏，书页码 430。
+% 绘制依据：按原页画坐标轴、M、N 与点 P，并连 PM、PN。
+\begin{tikzpicture}[scale=0.95, semithick, every node/.style={inner sep=1.2pt}]
+  \draw[->,>=stealth] (-3.4,0) -- (5.0,0) node[right] {$x$};
+  \draw[->,>=stealth] (0,-2.6) -- (0,2.6) node[above] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \coordinate (M) at (-2,0);
+  \coordinate (N) at (2,0);
+  \coordinate (P) at (3.4,1.6);
+  \draw (M) -- (P) -- (N);
+  \fill (M) circle (1.3pt); \node[below] at (M) {$M(-2,0)$};
+  \fill (N) circle (1.3pt); \node[below] at (N) {$N(2,0)$};
+  \fill (P) circle (1.3pt); \node[right] at (P) {$P$};
+\end{tikzpicture}

@@ -16194,3 +16194,13 @@
 - 正式构建 attempt 见报告：四版 5/17/7/15 页，共 44 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
 - 视觉审查：44 页逐页完成（0 fail、0 pending、0 豁免），Q17 图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b38.md`。
 - 门禁：provenance / solution_sources / validate-receipts（531 卷）、三套生成器 --all --check（531 套）通过；report render/check 与 review_receipts check-all 后台运行待确认。未绑定来源 246 → 245。
+
+### 2026-11-16 phase6-b39：2008 重庆理科新卷封账（22 题）——2008 年 11 个来源全部有归属
+
+- 来源 `src-b32f90d6…`（2 页 A3，印刷页 429–430，SHA-256 `d3ca36ce…06d937`），22 题：选择 10、填空 6、解答 17–22。
+- 四幅 TikZ：Q9 大球内四小球（半径 R/2、正方形顶点为球心）、Q16 三棱柱六顶点、Q19 折叠前后两图、Q21 椭圆与 M/N/P。
+- 关键结论：选择 A A B C D C A C D B；填空 11={2,5}、12=1/3、13=3、14=−72、15=y=x+1、16=216；17 √7/3 与 14√3/9；18 P(ξ=2)=1/2、P(ξ=3)=1/4、P(ξ=4)=1/8、P(ξ=5)=1/16、P(ξ=6)=1/16，Eξ=47/16；19 异面直线距离 2、二面角 arccos(3√34/34)；20 b=2a、c=2a+3，g 增(−2,2)、减(−∞,−2) 与 (2,+∞)；21 x²/9+y²/5=1 与四点 (±3√3/2,±√5/2)；22 a₃=16、a₄=1/256、a₂=√2、b_n=2^{2−2^{1−n}}。
+- Q16 计数口径：上三角 24 种 × 下三角 11 种 = 264，减去只用三色的 48 种，得 216。
+- 正式构建 attempt 见报告：四版 5/19/7/16 页，共 47 页，0 errors、0 overfull、0 underfull、0 missing characters（无豁免）。
+- 视觉审查：47 页逐页完成（0 fail、0 pending、0 豁免），四幅图页 350dpi 回源；`finalize-batch` FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase6-b39.md`。
+- 门禁：provenance / solution_sources / validate-receipts（532 卷）、三套生成器 --all --check（532 套）通过。未绑定来源 245 → 244；**2008 年 11 个未绑定来源至此全部有归属**（10 卷封账 + 北京文 pending-intake）。

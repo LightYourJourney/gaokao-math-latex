@@ -3172,6 +3172,14 @@
         "gk-2008-hunan-science"
       ],
       "status": "closed"
+    },
+    {
+      "batch_id": "phase6-b39",
+      "issues": [],
+      "paper_ids": [
+        "gk-2008-chongqing-science"
+      ],
+      "status": "closed"
     }
   ],
   "inventory": {
@@ -3181,7 +3189,7 @@
     },
     "total_sources": 775
   },
-  "last_transaction_id": "ba9130cd-6681-4868-9a98-a43528c06067",
+  "last_transaction_id": "b5464216-8dbc-4b5f-8d44-850a9b0800ea",
   "papers": [
     {
       "blocked_from": null,
@@ -38531,9 +38539,78 @@
       "title": "2008 年·普通高等学校招生考试·湖南卷·理科",
       "track": "science",
       "year": 2008
+    },
+    {
+      "blocked_from": null,
+      "figure_files": [
+        {
+          "expected_occurrences": 2,
+          "path": "2008_重庆卷_理科/figures/f2008_chongqing_science_q09_spheres.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_重庆卷_理科/figures/f2008_chongqing_science_q16_prism.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_重庆卷_理科/figures/f2008_chongqing_science_q19_fold.tex"
+        },
+        {
+          "expected_occurrences": 2,
+          "path": "2008_重庆卷_理科/figures/f2008_chongqing_science_q21_ellipse.tex"
+        }
+      ],
+      "index_metadata": {
+        "base": "gk_2008_gaokao_chongqing_science",
+        "id": "gk-2008-chongqing-science",
+        "note": "固定源为 2 页 A3 横向排印，印面页码 429、430；PDF 只有题面、无官方答案页，22 题答案由本库独立推导（非官方）。第 9 题小球相交图、第 16 题三棱柱、第 19 题折叠两图、第 21 题椭圆定点图由 TikZ 重绘。",
+        "pages_q": [
+          1,
+          2
+        ],
+        "pages_s": null,
+        "paper": "重庆卷",
+        "structure": {
+          "填空题": [
+            11,
+            16
+          ],
+          "解答题": [
+            17,
+            22
+          ],
+          "选择题": [
+            1,
+            10
+          ]
+        },
+        "track": "理科",
+        "variant": "重庆理科"
+      },
+      "issue_ids": [],
+      "last_verified_hash": null,
+      "legacy_ids": [],
+      "legacy_source_files": [],
+      "paper_id": "gk-2008-chongqing-science",
+      "production_state": "complete",
+      "project_dir": "2008_重庆卷_理科",
+      "question_count": 22,
+      "resume_action": null,
+      "source_files": {
+        "answer_key": "2008/2008_数学真题_重庆理_答案要点.md",
+        "combined_rendered": "2008/2008_数学真题_重庆理_含解析.md",
+        "questions": "2008/2008_数学真题_重庆理_试题.md",
+        "solution_body": "2008/2008_数学真题_重庆理_解析正文.md"
+      },
+      "source_ids": [
+        "src-b32f90d655e22dd3fe9bdded45cf3575786c2579e58b7915292edd0b439c5ac7"
+      ],
+      "title": "2008 年·普通高等学校招生考试·重庆卷·理科",
+      "track": "science",
+      "year": 2008
     }
   ],
-  "revision": 8452,
+  "revision": 8457,
   "schema_version": 1,
   "sources": [
     {
@@ -48250,8 +48327,8 @@
       "exam_type": "regular",
       "git_blob_oid": "1259dd7a76f37da20ffbc48371de15901c644e45",
       "issue_ids": [],
-      "paper_id": null,
-      "paper_relation": null,
+      "paper_id": "gk-2008-chongqing-science",
+      "paper_relation": "canonical",
       "raw_paper_name": "2008重庆理.pdf",
       "regions": [],
       "source_id": "src-b32f90d655e22dd3fe9bdded45cf3575786c2579e58b7915292edd0b439c5ac7",
