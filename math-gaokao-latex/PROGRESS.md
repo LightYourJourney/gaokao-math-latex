@@ -16313,3 +16313,12 @@
 - `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b21.md`。
 - 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
 - 状态段台账：25 → **24 卷**。
+
+### 2026-11-16 phase5-b22（重封账）：2007 辽宁理科状态段清理
+
+- 队列 A 第八轮：删去 `2007/2007_数学真题_辽宁理_试题.md` 的「状态：needs-review」整段（四版 PDF 内 grep 归零）。
+- 重生成解析正文/含解析 → 三套生成器 `--batch phase5-b22 --write` → `build --formal`：四版 5/22/7/17 页（51 页），attempt `94ade6af`，四 log 全 0。
+- 51 页逐页审查：八类检查 0 fail、0 豁免；一幅图（Q18 直三棱柱）四版共 6 处 350dpi 回源；Q19 的概率分布表与 Q18 立体几何解析逐页核对。
+- `finalize-batch` → FINALIZED、`closed`、`eligible_complete`，报告 `reports/phase5-b22.md`。
+- 门禁：provenance / validate-receipts 532 卷 OK；solution_sources 532 套全部通过；三套生成器 --all --check 一致；378 批次 FINALIZED；report check 一致；manifest.csv 775 行。
+- 状态段台账：24 → **23 卷**。
